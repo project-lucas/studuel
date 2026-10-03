@@ -1,0 +1,1887 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "0f9be187-1734-5639-b8fb-80c1b2ac2943",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Flaubert, de Croisset à l’Éducation",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur L’Éducation sentimentale. Place le roman dans la vie de Flaubert, puis retrouve qui est qui autour de Frédéric.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Flaubert et ses romans",
+     "debut": 1820,
+     "fin": 1880,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1821,
+       "nom": "Naissance"
+      },
+      {
+       "id": "bov",
+       "date": 1857,
+       "nom": "Madame Bovary"
+      },
+      {
+       "id": "sal",
+       "date": 1862,
+       "nom": "Salammbô"
+      },
+      {
+       "id": "edu",
+       "date": 1869,
+       "nom": "L’Éducation sentimentale"
+      },
+      {
+       "id": "mort",
+       "date": 1880,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "edu"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication de L’Éducation sentimentale.",
+     "aide": "Le roman paraît après Madame Bovary et Salammbô.",
+     "explication": "Le roman paraît en **1869**, douze ans après *Madame Bovary*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Madame Bovary de L’Éducation sentimentale ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1869 − 1857 = **12 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est pour Frédéric Moreau.",
+     "paires": [
+      [
+       "Arnoux",
+       "Le marchand d’art, mari de son idéal"
+      ],
+      [
+       "Deslauriers",
+       "L’ami d’enfance, ambitieux"
+      ],
+      [
+       "Rosanette",
+       "La courtisane"
+      ],
+      [
+       "Madame Dambreuse",
+       "La femme riche"
+      ]
+     ],
+     "aide": "Un seul est marié à Madame Arnoux ; un autre est l’ami de jeunesse.",
+     "explication": "**Arnoux** est le marchand d’art ; **Deslauriers** l’ami d’enfance ambitieux ; **Rosanette** la courtisane ; **Madame Dambreuse** la riche."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f9be187-1734-5639-b8fb-80c1b2ac2943",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un jeune homme qui n’achève rien",
+   "competence": "analyser-document",
+   "situation": "Suis le parcours de Frédéric Moreau, de la rencontre sur le bateau au dernier chapitre, en passant par l’Histoire de 1848 à 1851.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Frédéric",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Sur un bateau, Frédéric aperçoit Madame Arnoux"
+      },
+      {
+       "id": "n2",
+       "texte": "Il hérite et dépense"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Le coup d’État de 1851 : Dussardier est tué"
+      },
+      {
+       "id": "n5",
+       "texte": "Les deux amis se remémorent une visite ratée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il projette d’écrire, de peindre, de faire de la politique : rien n’aboutit",
+      "Il termine un grand tableau et l’expose avec succès à Paris",
+      "Il épouse Madame Arnoux après un long combat contre sa famille",
+      "Il s’engage corps et âme dans les combats de la révolution"
+     ],
+     "reponse": 0,
+     "aide": "Frédéric rêve beaucoup de choses, mais qu’en achève-t-il ?",
+     "explication": "Frédéric projette d’**écrire**, de **peindre**, de faire de la **politique** et n’**achève rien** : c’est le roman de l’échec."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape où l’Histoire frappe un ami de Frédéric.",
+     "aide": "Cherche une date de coup d’État.",
+     "explication": "Au coup d’État de décembre **1851**, **Sénécal**, devenu agent de police, tue **Dussardier**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois événements historiques qui traversent le roman.",
+     "items": [
+      "La révolution de février 1848",
+      "Les journées de Juin 1848",
+      "Le coup d’État de décembre 1851"
+     ],
+     "aide": "Une seule année pour les deux premiers : lequel est de février, lequel de juin ?",
+     "explication": "Février 1848 (révolution), juin 1848 (journées de Juin), décembre **1851** (coup d’État)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son destin.",
+     "paires": [
+      [
+       "Dussardier",
+       "Le commis généreux, tué par Sénécal"
+      ],
+      [
+       "Sénécal",
+       "Le républicain autoritaire devenu agent de police"
+      ],
+      [
+       "Madame Arnoux",
+       "L’idéal inaccessible, qui revient vieillie"
+      ],
+      [
+       "Frédéric Moreau",
+       "Le héros rêveur et velléitaire"
+      ]
+     ],
+     "aide": "Qui tue ? Qui est tué ? Qui rêve sans agir ?",
+     "explication": "**Dussardier** meurt, **Sénécal** change de camp, **Madame Arnoux** reste inaccessible, **Frédéric** rêve sans agir."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f9be187-1734-5639-b8fb-80c1b2ac2943",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une date, un mot : l’art de Flaubert",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu relèves dans deux passages célèbres les procédés qui font la signature de Flaubert : la précision de l’incipit, puis l’ellipse.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux passages du roman",
+     "blocs": [
+      "« Le [[d|15]] [[d|septembre]] [[d|1840]], vers six heures du matin, la *Ville-de-Montereau*, près de partir, fumait à gros tourbillons devant le quai Saint-Bernard. »",
+      "« Il [[v|voyagea]]. Il connut la mélancolie des paquebots… »"
+     ],
+     "source": "Gustave Flaubert, *L’Éducation sentimentale* (1869) : l’incipit, puis un passage célèbre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les trois mots qui donnent la date exacte de la scène.",
+     "aide": "Un jour, un mois, une année.",
+     "explication": "La date est donnée en entier : **15 septembre 1840**. Le roman s’ancre dans le réel dès sa première ligne."
+    },
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe qui résume plusieurs années de la vie de Frédéric en un seul mot.",
+     "aide": "Il est très court, au passé simple.",
+     "explication": "« Il **voyagea** » : une **ellipse** fait passer des années en deux syllabes, sans rien raconter."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Flaubert à son effet.",
+     "paires": [
+      [
+       "Une date et un lieu précis dès l’incipit",
+       "Le roman est ancré dans le réel"
+      ],
+      [
+       "L’ellipse « Il voyagea »",
+       "Des années passent en une phrase, sans récit"
+      ],
+      [
+       "L’ironie constante",
+       "Le lecteur est tenu à distance de l’émotion"
+      ]
+     ],
+     "aide": "L’ellipse joue sur le temps ; l’ironie joue sur le ton.",
+     "explication": "Précision de la date = **ancrage** ; ellipse = **temps condensé** ; ironie = **distance** : ce sont les outils de Flaubert."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume le mieux le roman ?",
+     "options": [
+      "Un roman de la désillusion où l’amour et la politique échouent ensemble",
+      "Un roman d’aventures où le héros change le cours de l’Histoire",
+      "Une chronique heureuse d’une jeunesse comblée par la réussite",
+      "Un plaidoyer enthousiaste pour l’engagement révolutionnaire"
+     ],
+     "reponse": 0,
+     "aide": "Frédéric n’achève rien et la révolution de 1848 débouche sur 1851.",
+     "explication": "C’est le grand roman de l’**échec** et de la **désillusion** : l’amour et la politique échouent ensemble."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b238bc1-e169-5470-94e8-28d890d14fed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La carte d’identité d’un éloge",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur L’Éloge de la folie. Lis la carte d’identité de l’œuvre, puis complète-la.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Éloge de la folie",
+     "sousTitre": "Érasme",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Titre latin",
+       "valeur": "Moriae encomium"
+      },
+      {
+       "texte": "Langue",
+       "valeur": "Latin"
+      },
+      {
+       "texte": "Écrit en",
+       "valeur": "1509",
+       "id": "ecr"
+      },
+      {
+       "texte": "Publié en",
+       "valeur": "1511",
+       "id": "pub"
+      },
+      {
+       "texte": "Dédié à",
+       "valeur": "?",
+       "id": "ded"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À qui l’œuvre est-elle dédiée (la case « ? ») ?",
+     "options": [
+      "À Thomas More, son ami anglais",
+      "À Martin Luther, le réformateur",
+      "À Hans Holbein, le peintre",
+      "À François Rabelais, l’écrivain"
+     ],
+     "reponse": 0,
+     "aide": "Le titre latin joue sur le nom de cet ami, auteur de L’Utopie.",
+     "explication": "L’œuvre est dédiée à **Thomas More**, chez qui Érasme l’a écrite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre l’écriture et la publication ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la fiche.",
+     "explication": "1511 − 1509 = **2 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le titre latin joue sur le nom de ___ : *moria* veut dire ___ en grec.",
+     "reponses": [
+      [
+       "More",
+       "Thomas More"
+      ],
+      [
+       "folie"
+      ]
+     ],
+     "banque": [
+      "More",
+      "Luther",
+      "folie",
+      "sagesse",
+      "Rotterdam"
+     ],
+     "aide": "Le titre se prononce presque comme le nom de l’ami d’Érasme.",
+     "explication": "*Moriae encomium* joue sur le nom de **More** : *moria* signifie **folie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b238bc1-e169-5470-94e8-28d890d14fed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du badinage à la satire",
+   "competence": "analyser-document",
+   "situation": "La Folie prononce un discours en trois temps. Remets-les en ordre, puis retrouve le ton de chacun.",
+   "documents": [
+    {
+     "id": "mvt",
+     "type": "tableau",
+     "titre": "Les trois temps du discours (en désordre)",
+     "colonnes": [
+      "Ce que fait la Folie",
+      "Son ton"
+     ],
+     "lignes": [
+      [
+       "Elle passe en revue grammairiens, juristes, moines, papes",
+       "Satirique, de plus en plus dur"
+      ],
+      [
+       "Elle se loue : sans elle, ni amour ni société ne tiendraient",
+       "?"
+      ],
+      [
+       "Elle retourne l’éloge : la vraie folie est celle de la foi",
+       "Folie aux yeux du monde, sagesse devant Dieu"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel est le ton du premier temps (la case « ? ») ?",
+     "options": [
+      "Badin",
+      "Tragique",
+      "Solennel",
+      "Mélancolique"
+     ],
+     "reponse": 0,
+     "aide": "La Folie se présente d’abord en s’amusant.",
+     "explication": "Le premier temps est **badin** : elle badine avant de devenir satirique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois temps du discours dans l’ordre où on les lit.",
+     "items": [
+      "La Folie se loue : sans elle, ni amour ni société",
+      "Elle passe en revue les états et professions",
+      "Elle retourne l’éloge : la vraie folie est celle de la foi"
+     ],
+     "aide": "On passe de l’éloge de soi à la critique des autres, puis au renversement.",
+     "explication": "Ordre : **éloge d’elle-même**, **satire des états**, **retournement** vers la foi."
+    },
+    {
+     "type": "zone",
+     "document": "mvt",
+     "multiple": false,
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche la case qui dit qui la satire prend pour cibles.",
+     "aide": "Cherche une liste de métiers et de fonctions.",
+     "explication": "La Folie passe en revue **grammairiens, juristes, moines, papes** : c’est le temps satirique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure à son rôle dans l’œuvre.",
+     "paires": [
+      [
+       "La Folie (Moria)",
+       "L’oratrice, fille de Plutus"
+      ],
+      [
+       "Philautie",
+       "L’amour-propre, sa compagne"
+      ],
+      [
+       "Thomas More",
+       "L’ami anglais, dédicataire"
+      ],
+      [
+       "Holbein le Jeune",
+       "L’artiste qui a illustré les marges d’un exemplaire"
+      ]
+     ],
+     "aide": "Trois figures sont dans le texte ; une est un peintre.",
+     "explication": "**Moria** parle ; **Philautie** incarne l’amour-propre ; **More** reçoit la dédicace ; **Holbein** dessine les marges."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b238bc1-e169-5470-94e8-28d890d14fed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui parle, et que faut-il croire ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : la Folie se moque des docteurs, donc Érasme serait-il contre la religion ? Lis un pastiche, puis tranche.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un discours à la manière de la Folie",
+     "blocs": [
+      "Écoutez-moi, mortels : je suis la Folie, et je me [[l|loue]] moi-même, car nul autre ne le ferait de si bon cœur. Ôtez-moi, et plus de mariage, plus d’amitié, plus de société : qui supporterait son prochain sans une bonne dose d’illusion ?",
+      "Voyez ces [[d|docteurs]] qui parlent si gravement du ciel : ils croient m’avoir chassée, et ils sont mes plus fidèles amis."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de L’Éloge de la folie d’Érasme"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "La Folie critique les docteurs et les moines : Érasme est donc contre la religion."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Pas du tout : il critique l’Église de l’intérieur et réclame un retour aux Évangiles."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Mais alors pourquoi faire parler la Folie ?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "Parce qu’elle peut dire des vérités que personne d’autre ne pourrait dire."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le verbe qui montre que la Folie fait elle-même son éloge.",
+     "aide": "Elle parle d’elle-même, à la première personne.",
+     "explication": "La Folie se **loue** : c’est le paradoxe d’un éloge prononcé par son propre objet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui lit juste, d’après le débat et le cours ?",
+     "options": [
+      "Sam : la satire vise des abus, sans rompre avec l’Église",
+      "Léa : la satire prouve qu’Érasme rejette toute religion",
+      "Sam : la Folie dit ce que pense l’Église officielle",
+      "Léa : Érasme rejoint Luther dans sa rupture avec Rome"
+     ],
+     "reponse": 0,
+     "aide": "Érasme veut réformer sans quitter l’Église.",
+     "explication": "Érasme critique **de l’intérieur** et ne **rompt jamais** ; il polémiquera même avec Luther."
+    },
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui nomme les gens visés par la satire dans le second paragraphe.",
+     "aide": "Ils parlent « gravement du ciel ».",
+     "explication": "Ce sont les **docteurs**, c’est-à-dire les théologiens, une cible de la satire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : Érasme le fait-il, ou ne le fait-il pas ?",
+     "categories": [
+      "Ce qu’Érasme fait",
+      "Ce qu’il ne fait pas"
+     ],
+     "items": [
+      [
+       "Critique l’Église de l’intérieur",
+       0
+      ],
+      [
+       "Réclame le retour aux Évangiles",
+       0
+      ],
+      [
+       "Fait parler la Folie elle-même",
+       0
+      ],
+      [
+       "Rompt avec Rome comme Luther",
+       1
+      ],
+      [
+       "Écrit son éloge en français",
+       1
+      ]
+     ],
+     "aide": "Pense à la langue du livre, et à sa relation à Luther.",
+     "explication": "Érasme **critique de l’intérieur**, **revient aux Évangiles**, fait parler la **Folie** ; il **ne rompt pas** et écrit en **latin**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Un discours prononcé par la Folie",
+       "Elle dit des vérités que nul ne pourrait dire"
+      ],
+      [
+       "Un éloge ironique",
+       "Le lecteur doit se demander qui parle et que croire"
+      ],
+      [
+       "Le retournement final",
+       "La folie de la foi devient sagesse devant Dieu"
+      ]
+     ],
+     "aide": "Le procédé crée un effet de lecture ou de sens.",
+     "explication": "**Folie qui parle** = liberté de ton ; **éloge ironique** = lecteur actif ; **retournement** = foi plus sage que le monde."
+    }
+   ]
+  },
+  {
+   "chapitre": "001fcedf-039a-50cd-b777-edb61a9da03f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui dans l’enquête d’Utterson",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur Jekyll et Hyde. Place le récit dans la vie de Stevenson, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Stevenson et ses récits",
+     "debut": 1850,
+     "fin": 1895,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1850,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ile",
+       "date": 1883,
+       "nom": "L’Île au trésor"
+      },
+      {
+       "id": "jek",
+       "date": 1886,
+       "nom": "Jekyll et Hyde"
+      },
+      {
+       "id": "mort",
+       "date": 1894,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Gabriel Utterson",
+       "Le notaire, ami fidèle et enquêteur"
+      ],
+      [
+       "Richard Enfield",
+       "Son cousin, qui raconte l’épisode de la porte"
+      ],
+      [
+       "Le docteur Lanyon",
+       "Ancien ami de Jekyll"
+      ],
+      [
+       "Poole",
+       "?"
+      ],
+      [
+       "Sir Danvers Carew",
+       "La victime du meurtre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "jek"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication du récit.",
+     "aide": "Le livre paraît trois ans après L’Île au trésor.",
+     "explication": "Le récit est publié en **1886**, après le succès de *L’Île au trésor* (1883)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rôle de Poole (la case « ? ») ?",
+     "options": [
+      "Le majordome de Jekyll, qui donne l’alerte",
+      "Le député assassiné par Hyde",
+      "Le cousin du notaire, témoin de la porte",
+      "L’ami qui meurt en voyant la transformation"
+     ],
+     "reponse": 0,
+     "aide": "Il travaille chez Jekyll.",
+     "explication": "**Poole** est le majordome de Jekyll : c’est lui qui donne l’alerte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le tableau.",
+     "texte": "Utterson est ___ ; Enfield est son ___ ; la victime du meurtre est sir Danvers ___.",
+     "reponses": [
+      [
+       "notaire"
+      ],
+      [
+       "cousin"
+      ],
+      [
+       "Carew"
+      ]
+     ],
+     "banque": [
+      "notaire",
+      "cousin",
+      "Carew",
+      "majordome",
+      "Lanyon",
+      "frère"
+     ],
+     "aide": "Les rôles sont écrits dans le tableau.",
+     "explication": "**Utterson** est notaire ; **Enfield** est son **cousin** ; la victime est sir Danvers **Carew**."
+    }
+   ]
+  },
+  {
+   "chapitre": "001fcedf-039a-50cd-b777-edb61a9da03f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les notes du notaire",
+   "competence": "analyser-texte",
+   "situation": "Utterson note ce qu’il apprend. Lis ses notes (écrites pour l’exercice), repère les indices, puis remets l’enquête en ordre.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les notes d’Utterson",
+     "blocs": [
+      "Notes d’Utterson, notaire à Londres. Le testament du docteur Jekyll lègue tout à un inconnu, un certain [[h|Hyde]].",
+      "Un témoin m’a décrit un petit homme repoussant qui a [[v|piétiné]] une fillette sans un regard. Plus tard, un député a été [[v|assassiné]] dans la rue.",
+      "Après la mort de Jekyll, deux [[d|documents]] ont été découverts : ils expliquent tout."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stevenson"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux mots qui désignent les violences attribuées à Hyde.",
+     "aide": "Une fillette, puis un député.",
+     "explication": "Hyde **piétine** une fillette puis **assassine** un député : il est repoussant, puis criminel."
+    },
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui nomme ce qui livre enfin l’explication.",
+     "aide": "Ils sont découverts après la mort de Jekyll.",
+     "explication": "Ce sont deux **documents** qui révèlent la vérité : le récit est construit comme une enquête."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces étapes de l’histoire dans l’ordre.",
+     "items": [
+      "Un testament intrigue Utterson",
+      "Hyde tue le député Carew",
+      "Jekyll, à court d’ingrédient, s’enferme",
+      "Jekyll se suicide"
+     ],
+     "aide": "Le testament est le premier indice ; la fin est la mort de Jekyll.",
+     "explication": "Testament, meurtre de Carew, Jekyll **à court d’ingrédient**, puis **suicide**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que cherche Jekyll avec sa potion ?",
+     "options": [
+      "Séparer chimiquement le bien et le mal en lui",
+      "Devenir invisible aux yeux de toute la ville",
+      "Guérir une maladie incurable de sa famille",
+      "Vivre bien plus longtemps que ses contemporains"
+     ],
+     "reponse": 0,
+     "aide": "Les deux documents expliquent son projet.",
+     "explication": "Jekyll veut **séparer chimiquement le bien et le mal** en lui : c’est le thème du double."
+    }
+   ]
+  },
+  {
+   "chapitre": "001fcedf-039a-50cd-b777-edb61a9da03f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Respectable le jour, un autre la nuit",
+   "competence": "argumenter",
+   "situation": "Pour la dissertation sur l’hypocrisie victorienne, lis un pastiche d’un portrait de notable, puis complète ton argument.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un notable de Londres",
+     "blocs": [
+      "Le docteur Aldous Wren, que toute la ville [[f|respecte]], donne chaque dimanche un dîner où l’on parle de [[f|charité]]. Mais chaque nuit, une petite [[p|porte]] sans enseigne, au fond de son jardin, s’ouvre pour un autre homme, que personne ne présente et que tous évitent."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stevenson"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le récit dénonce l’hypocrisie victorienne",
+       "La respectabilité de façade exige une part cachée",
+       "?"
+      ],
+      [
+       "Le récit relève du fantastique à narrateurs multiples",
+       "Le lecteur reconstitue la vérité à partir de témoignages",
+       "Utterson, Lanyon, puis les deux documents"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux mots qui montrent la façade honorable du docteur Wren.",
+     "aide": "Ce que la ville pense de lui, et ce dont on parle à son dîner.",
+     "explication": "Il est **respecté** et parle de **charité** : voilà la façade."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du récit faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Jekyll, respectable et généreux, cache Hyde",
+      "Poole, majordome fidèle, alerte les voisins",
+      "Enfield, qui raconte l’épisode de la porte",
+      "Carew, victime d’un meurtre en pleine rue"
+     ],
+     "reponse": 0,
+     "aide": "Quel personnage a une façade respectable et une part cachée ?",
+     "explication": "**Jekyll**, respectable et généreux, fabrique **Hyde** pour vivre sa part cachée."
+    },
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche l’objet qui cache la part secrète du docteur Wren.",
+     "aide": "Elle s’ouvre la nuit, au fond du jardin.",
+     "explication": "La **porte** sans enseigne symbolise la part cachée : le Londres de Stevenson est plein de portes closes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait du récit à son effet.",
+     "paires": [
+      [
+       "Narrateurs multiples (lettres, témoignages)",
+       "Le lecteur reconstitue la vérité lui-même"
+      ],
+      [
+       "Une construction en enquête",
+       "Les faits arrivent avant l’explication"
+      ],
+      [
+       "Un Londres de brouillard et de portes closes",
+       "L’impression d’une ville pleine de secrets"
+      ]
+     ],
+     "aide": "Pense à la place du lecteur face à ce qu’il lit.",
+     "explication": "Les **témoignages** font de lui un enquêteur ; l’**enquête** retarde la clé ; la **ville** porte le secret."
+    }
+   ]
+  },
+  {
+   "chapitre": "fff2d555-6b3b-5260-b91b-1affb8c53af9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Camus et son roman sous l’Occupation",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur L’Étranger. Place le roman dans la vie de Camus, puis retrouve les personnages qui entourent Meursault.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Albert Camus",
+     "debut": 1910,
+     "fin": 1960,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1913,
+       "nom": "Naissance"
+      },
+      {
+       "id": "etr",
+       "date": 1942,
+       "nom": "L’Étranger"
+      },
+      {
+       "id": "nob",
+       "date": 1957,
+       "nom": "Prix Nobel"
+      },
+      {
+       "id": "mort",
+       "date": 1960,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "etr"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication de L’Étranger.",
+     "aide": "Le roman paraît en pleine Occupation.",
+     "explication": "Le roman paraît en **1942**, chez Gallimard."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication de L’Étranger du prix Nobel ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1957 − 1942 = **15 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Marie",
+       "La collègue devenue sa maîtresse"
+      ],
+      [
+       "Raymond Sintès",
+       "Le voisin qui l’entraîne dans sa querelle"
+      ],
+      [
+       "Salamano",
+       "Le vieux voisin qui bat son chien puis le pleure"
+      ],
+      [
+       "Céleste",
+       "Le restaurateur qui témoigne en sa faveur"
+      ]
+     ],
+     "aide": "Deux voisins, une amie, un témoin.",
+     "explication": "**Marie** est sa maîtresse ; **Raymond** l’entraîne ; **Salamano** a un chien ; **Céleste** témoigne au procès."
+    }
+   ]
+  },
+  {
+   "chapitre": "fff2d555-6b3b-5260-b91b-1affb8c53af9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la plage au procès",
+   "competence": "analyser-document",
+   "situation": "Suis le roman de l’enterrement à la cellule : lis le tableau, retrouve la case manquante, puis remets la fin en ordre.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "L’histoire de Meursault",
+     "colonnes": [
+      "Moment",
+      "Ce que fait Meursault"
+     ],
+     "lignes": [
+      [
+       "Le deuil",
+       "Il enterre sa mère sans pleurer"
+      ],
+      [
+       "Le lendemain",
+       "Il retourne à la plage, puis se lie avec ?"
+      ],
+      [
+       "Le voisin",
+       "Il aide Raymond dans une histoire louche"
+      ],
+      [
+       "La plage",
+       "Il tue un homme, sous un soleil écrasant"
+      ],
+      [
+       "Le procès",
+       "On le juge surtout pour son indifférence"
+      ],
+      [
+       "La fin",
+       "Condamné à mort, il refuse l’aumônier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Avec qui Meursault se lie-t-il le lendemain (la case « ? ») ?",
+     "options": [
+      "Marie, une ancienne collègue",
+      "Lucie, une cousine d’Oran",
+      "Hélène, la logeuse de son voisin",
+      "Sylvie, une institutrice d’Alger"
+     ],
+     "reponse": 0,
+     "aide": "C’est une ancienne collègue de bureau.",
+     "explication": "Il commence une liaison avec **Marie**, son ancienne collègue."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la case qui dit ce qu’on lui reproche surtout au procès.",
+     "aide": "Le procureur parle plus de son caractère que de son acte.",
+     "explication": "On le juge surtout pour son **indifférence**, non pour le meurtre seul."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "On reproche moins à Meursault le meurtre que de n’avoir pas ___ à l’enterrement de sa mère : il est jugé pour son ___.",
+     "reponses": [
+      [
+       "pleuré"
+      ],
+      [
+       "indifférence"
+      ]
+     ],
+     "banque": [
+      "pleuré",
+      "prié",
+      "indifférence",
+      "violence",
+      "silence"
+     ],
+     "aide": "Regarde la case du procès et celle du deuil.",
+     "explication": "Il n’a pas **pleuré** et on le juge pour son **indifférence**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la fin du roman.",
+     "items": [
+      "Il refuse les consolations de l’aumônier",
+      "Il explose de colère",
+      "Il trouve la paix dans l’acceptation"
+     ],
+     "aide": "La colère précède l’apaisement.",
+     "explication": "Il **refuse l’aumônier**, **explose de colère**, puis **trouve la paix** dans l’acceptation."
+    }
+   ]
+  },
+  {
+   "chapitre": "fff2d555-6b3b-5260-b91b-1affb8c53af9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dire seulement ce qu’on ressent",
+   "competence": "argumenter",
+   "situation": "Deux élèves discutent : Meursault est-il insensible ? Lis un pastiche à la manière de Camus, puis tranche.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un court passage",
+     "blocs": [
+      "Le patron m’a demandé si j’avais du chagrin. J’ai répondu que j’étais fatigué. C’était [[v|vrai]]. Il a eu l’air [[d|déçu]]. Il a regardé ses mains, puis il est sorti. J’ai mangé mon pain."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de L’Étranger de Camus"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Il ne répond pas à la question : il est insensible."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Il répond, au contraire : il dit seulement ce qu’il ressent, rien de plus."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Mais le patron est déçu !"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Oui, parce que le narrateur refuse de jouer la comédie des sentiments."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot par lequel le narrateur souligne qu’il ne ment pas.",
+     "aide": "Il commente sa propre réponse en un seul mot.",
+     "explication": "« C’était **vrai** » : il ne dit que ce qui est vrai pour lui."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le texte et le débat confirment-ils ?",
+     "options": [
+      "Il refuse de mentir sur ce qu’il ressent, même si cela déçoit",
+      "Il ne ressent rien et ne s’en soucie absolument pas",
+      "Il cherche volontairement à choquer son patron",
+      "Il cache sa tristesse pour ne pas paraître faible"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse du narrateur et la réaction du patron.",
+     "explication": "Le narrateur **refuse de mentir** : c’est ce refus que la société ne pardonne pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : fait-il partie de l’écriture blanche, ou pas ?",
+     "categories": [
+      "Écriture blanche",
+      "Pas écriture blanche"
+     ],
+     "items": [
+      [
+       "Phrases courtes et neutres",
+       0
+      ],
+      [
+       "Première personne, passé composé",
+       0
+      ],
+      [
+       "Commentaires émus du narrateur",
+       1
+      ],
+      [
+       "Images appuyées et lyriques",
+       1
+      ]
+     ],
+     "aide": "Pense à un ton plat, sans effet ni émotion soulignée.",
+     "explication": "L’**écriture blanche** repose sur des phrases **courtes et neutres** au **passé composé** ; l’émotion appuyée et le lyrisme lui sont étrangers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Meursault est-il condamné, selon le cours ?",
+     "options": [
+      "Parce qu’il refuse de jouer la comédie des sentiments",
+      "Parce qu’il a avoué un meurtre prémédité à l’avance",
+      "Parce qu’aucun témoin ne vient parler en sa faveur",
+      "Parce qu’il a menti à la justice sur ses sentiments"
+     ],
+     "reponse": 0,
+     "aide": "Le procès juge un homme plus qu’un acte.",
+     "explication": "On le juge pour son **indifférence apparente** : il **refuse de mentir**, ce que la société ne pardonne pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "47081694-a530-5f50-b8be-f5b8ff6f09ff",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un essai de 1943",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur L’Être et le Néant. Place l’œuvre dans la vie de Sartre, puis retrouve deux notions de base.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Jean-Paul Sartre",
+     "debut": 1900,
+     "fin": 1980,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1905,
+       "nom": "Naissance"
+      },
+      {
+       "id": "etn",
+       "date": 1943,
+       "nom": "L’Être et le Néant"
+      },
+      {
+       "id": "hum",
+       "date": 1946,
+       "nom": "L’existentialisme…"
+      },
+      {
+       "id": "nob",
+       "date": 1964,
+       "nom": "Refus du Nobel"
+      },
+      {
+       "id": "mort",
+       "date": 1980,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "notions",
+     "type": "tableau",
+     "titre": "Deux notions de base",
+     "colonnes": [
+      "Notion",
+      "Ce que c’est"
+     ],
+     "lignes": [
+      [
+       "L’en-soi",
+       "?"
+      ],
+      [
+       "Le pour-soi",
+       "La conscience : jamais ce qu’elle est, toujours en projet"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "etn"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution de L’Être et le Néant.",
+     "aide": "L’ouvrage paraît sous l’Occupation.",
+     "explication": "L’essai paraît en **1943** chez Gallimard."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que l’en-soi (la case « ? ») ?",
+     "options": [
+      "L’être des choses : plein, identique à lui-même",
+      "La conscience : jamais ce qu’elle est",
+      "La liberté totale de l’homme face à ses choix",
+      "Le regard d’autrui qui fige en objet"
+     ],
+     "reponse": 0,
+     "aide": "Le pour-soi est la conscience ; l’en-soi est son contraire.",
+     "explication": "L’**en-soi** est l’être des **choses** : plein et identique à lui-même."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "L’ouvrage est sous-titré « Essai d’___ phénoménologique » ; Sartre refusera le prix Nobel en ___.",
+     "reponses": [
+      [
+       "ontologie"
+      ],
+      [
+       "1964"
+      ]
+     ],
+     "banque": [
+      "ontologie",
+      "morale",
+      "1957",
+      "1964",
+      "1946"
+     ],
+     "aide": "Le sous-titre est un mot de philosophie ; la date est sur la frise.",
+     "explication": "Le sous-titre est « Essai d’**ontologie** phénoménologique » ; le refus du Nobel date de **1964**."
+    }
+   ]
+  },
+  {
+   "chapitre": "47081694-a530-5f50-b8be-f5b8ff6f09ff",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le fil des notions",
+   "competence": "analyser-document",
+   "situation": "L’Être et le Néant est un essai : on le suit par le fil des notions. Retrouve la notion manquante, puis relie les exemples célèbres.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil des notions",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "L’existence précède l’essence"
+      },
+      {
+       "id": "n2",
+       "texte": "La liberté est totale, donc la responsabilité"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "La mauvaise foi : se mentir pour fuir sa liberté"
+      },
+      {
+       "id": "n5",
+       "texte": "Le regard d’autrui me fige en objet"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "donc"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "fait naître"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "tentation"
+      },
+      {
+       "de": "n4",
+       "a": "n5",
+       "texte": "et face à autrui"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle notion manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "L’angoisse : rien ne fonde mes choix",
+      "La nausée : le monde n’a aucun sens",
+      "L’engagement : je choisis un parti politique",
+      "La honte : on me surprend par un trou de serrure"
+     ],
+     "reponse": 0,
+     "aide": "Si ma liberté est totale, qu’est-ce qui justifie mes choix ?",
+     "explication": "Quand je découvre que **rien ne fonde mes choix**, c’est l’**angoisse**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche la notion qui décrit une fuite devant la liberté.",
+     "aide": "Elle consiste à se mentir à soi-même.",
+     "explication": "La **mauvaise foi** est un mensonge à soi-même pour **fuir sa liberté**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque exemple à ce qu’il montre.",
+     "paires": [
+      [
+       "Le garçon de café",
+       "La mauvaise foi : il joue son rôle pour se croire une chose"
+      ],
+      [
+       "La femme au rendez-vous",
+       "La mauvaise foi : elle refuse de choisir"
+      ],
+      [
+       "Le voyeur surpris par le trou de la serrure",
+       "La honte : je deviens objet sous le regard d’autrui"
+      ],
+      [
+       "Huis clos",
+       "L’illustration théâtrale du regard d’autrui"
+      ]
+     ],
+     "aide": "Trois exemples du livre, une pièce de théâtre.",
+     "explication": "**Café** et **rendez-vous** = mauvaise foi ; **voyeur** = honte ; **Huis clos** = regard d’autrui."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule célèbre.",
+     "texte": "Selon Sartre, nous sommes ___ à être ___.",
+     "reponses": [
+      [
+       "condamnés"
+      ],
+      [
+       "libres"
+      ]
+     ],
+     "banque": [
+      "condamnés",
+      "libres",
+      "sauvés",
+      "esclaves",
+      "heureux"
+     ],
+     "aide": "La liberté est vue comme une charge.",
+     "explication": "Nous sommes **condamnés** à être **libres** : la liberté est totale, et la responsabilité aussi."
+    }
+   ]
+  },
+  {
+   "chapitre": "47081694-a530-5f50-b8be-f5b8ff6f09ff",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La déléguée qui joue à être déléguée",
+   "competence": "argumenter",
+   "situation": "Pour ton oral sur la mauvaise foi, lis une scène inventée, puis départage deux élèves.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Au conseil de classe",
+     "blocs": [
+      "Au conseil de classe, la déléguée [[j|joue]] à être déléguée. Elle hoche la tête un peu trop souvent, sa voix est un peu trop sérieuse, ses notes sont un peu trop bien rangées. Elle s’applique à n’être rien d’autre que ce que l’on attend d’elle."
+     ],
+     "source": "Texte écrit pour l’exercice, pour illustrer une notion de Sartre (aucune citation)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samir",
+       "texte": "Elle est simplement sérieuse : il n’y a rien de plus à voir."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Non : elle se comporte comme si elle était une chose, la déléguée, au lieu de choisir qui elle est."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Mais elle n’a rien d’un menteur !"
+      },
+      {
+       "qui": "Jade",
+       "texte": "Elle se ment à elle-même : c’est cela, la mauvaise foi."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le verbe qui dit qu’elle interprète un rôle.",
+     "aide": "On le dit d’un comédien.",
+     "explication": "Elle **joue** à être déléguée : comme le garçon de café du cours, elle joue son rôle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture éclaire le mieux la notion de mauvaise foi ?",
+     "options": [
+      "Jade : elle se réduit à un rôle pour fuir sa liberté",
+      "Samir : son rôle exprime sa nature profonde, fixée d’avance",
+      "Jade : elle est honteuse, comme un voyeur surpris",
+      "Samir : elle est libre parce qu’elle joue bien son rôle"
+     ],
+     "reponse": 0,
+     "aide": "Sartre refuse une nature fixée d’avance.",
+     "explication": "Elle se réduit à une **chose**, la déléguée, pour **fuir sa liberté** : c’est la **mauvaise foi**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple : mauvaise foi, ou regard d’autrui ?",
+     "categories": [
+      "Mauvaise foi",
+      "Regard d’autrui"
+     ],
+     "items": [
+      [
+       "Le garçon de café qui joue à être garçon de café",
+       0
+      ],
+      [
+       "La femme qui feint de ne pas sentir sa main",
+       0
+      ],
+      [
+       "Se mentir à soi-même pour fuir sa liberté",
+       0
+      ],
+      [
+       "Le voyeur surpris devant un trou de serrure",
+       1
+      ],
+      [
+       "La honte de se savoir regardé",
+       1
+      ]
+     ],
+     "aide": "L’un concerne mon rapport à moi-même, l’autre mon rapport aux autres.",
+     "explication": "Les mensonges à soi-même relèvent de la **mauvaise foi** ; la **honte** sous le regard relève d’**autrui**."
+    },
+    {
+     "type": "choix",
+     "enonce": "« Sommes-nous ce que nous faisons ? » Pourquoi Sartre répond-il oui ?",
+     "options": [
+      "Parce que l’homme n’a pas de nature préalable : il se définit par ses actes",
+      "Parce que la nature humaine, donnée à la naissance, fixe nos actes d’avance",
+      "Parce que seules les choses se définissent par ce qu’elles font",
+      "Parce que la société décide seule de ce que nous devenons"
+     ],
+     "reponse": 0,
+     "aide": "L’existence précède l’essence.",
+     "explication": "Parce que « l’existence précède l’essence » : l’homme se définit **par ses actes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e717ad7-f0e2-5209-8295-7b35d5178626",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman écrit en exil",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur L’Homme qui rit. Place le roman dans la vie de Hugo, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Victor Hugo",
+     "debut": 1800,
+     "fin": 1890,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1802,
+       "nom": "Naissance"
+      },
+      {
+       "id": "exil",
+       "date": 1855,
+       "nom": "Exil à Guernesey"
+      },
+      {
+       "id": "hom",
+       "date": 1869,
+       "nom": "L’Homme qui rit"
+      },
+      {
+       "id": "mort",
+       "date": 1885,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "hom"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution du roman.",
+     "aide": "Hugo l’écrit depuis Guernesey.",
+     "explication": "Le roman paraît en **1869**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années Hugo vit-il en exil à Guernesey quand le roman paraît ?",
+     "reponse": 14,
+     "unite": "ans",
+     "aide": "Soustrais la date de l’exil à celle de la parution.",
+     "explication": "1869 − 1855 = **14 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est.",
+     "paires": [
+      [
+       "Gwynplaine",
+       "Le monstre au cœur pur, défiguré par des hommes"
+      ],
+      [
+       "Dea",
+       "La jeune aveugle qui l’aime"
+      ],
+      [
+       "Ursus",
+       "Le philosophe misanthrope et bon"
+      ],
+      [
+       "Josiane",
+       "La duchesse, demi-sœur de la reine"
+      ]
+     ],
+     "aide": "Une aveugle, un forain, une duchesse, un défiguré.",
+     "explication": "**Gwynplaine** est défiguré, **Dea** aveugle, **Ursus** forain philosophe, **Josiane** duchesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e717ad7-f0e2-5209-8295-7b35d5178626",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du rire taillé au rire des lords",
+   "competence": "analyser-texte",
+   "situation": "Lis un résumé du roman (écrit pour l’exercice), puis suis les grands moments de la vie de Gwynplaine.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le roman en bref",
+     "blocs": [
+      "Angleterre, fin du XVIIe siècle. Enfant, Gwynplaine est vendu à des [[c|comprachicos]] qui taillent son visage en un rire perpétuel. Abandonné dans la neige, il sauve un bébé aveugle, [[d|Dea]].",
+      "Le forain Ursus et son loup les recueillent, et le public vient rire de Gwynplaine. Un jour, un document prouve qu’il est lord Clancharlie. À la Chambre des lords, il parle de la misère du peuple, mais les lords éclatent de rire à cause de son visage.",
+      "Il renonce, retrouve la jeune aveugle mourante, et se jette à la mer."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui nomme ceux qui ont défiguré Gwynplaine.",
+     "aide": "Ils l’ont acheté enfant.",
+     "explication": "Les **comprachicos** ont taillé son visage en un rire perpétuel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les lords rient-ils pendant son discours ?",
+     "options": [
+      "À cause de son visage figé en rire",
+      "À cause d’une plaisanterie qu’il a préparée",
+      "Parce qu’ils l’ont pris pour un autre lord",
+      "Parce qu’Ursus a lancé une farce depuis la salle"
+     ],
+     "reponse": 0,
+     "aide": "Ils regardent son visage au lieu d’écouter ses mots.",
+     "explication": "Les lords rient à cause de son **visage**, pas de son discours sur la misère du peuple."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le prénom de l’enfant aveugle qu’il sauve dans la neige.",
+     "aide": "C’est le premier acte de bonté du récit.",
+     "explication": "Il sauve **Dea**, qui l’aimera sans voir son visage."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans l’intrigue.",
+     "paires": [
+      [
+       "Barkilphedro",
+       "L’intrigant jaloux qui déclenche la révélation"
+      ],
+      [
+       "Josiane",
+       "La duchesse attirée par la monstruosité de Gwynplaine"
+      ],
+      [
+       "Ursus",
+       "Le forain qui recueille les enfants"
+      ],
+      [
+       "Homo",
+       "Le loup d’Ursus"
+      ]
+     ],
+     "aide": "Un intrigant, une duchesse, un forain et son animal.",
+     "explication": "**Barkilphedro** révèle ; **Josiane** est attirée ; **Ursus** recueille ; **Homo** est son loup."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e717ad7-f0e2-5209-8295-7b35d5178626",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rire que les lords n’ont pas compris",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur la scène des lords. Lis les paroles de Gwynplaine, puis tranche.",
+   "documents": [
+    {
+     "id": "txt",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les paroles de Gwynplaine",
+     "blocs": [
+      "« Mylords, je viens vous [[a|apprendre]] une nouvelle. Le [[g|genre]] [[g|humain]] existe. »",
+      "« Je suis celui qui vient des profondeurs. »"
+     ],
+     "source": "Victor Hugo, *L’Homme qui rit* (1869) : paroles de Gwynplaine, citées par le cours"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nour",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nour",
+       "texte": "Les lords rient : Gwynplaine a donc échoué, son discours était ridicule."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Non : ce n’est pas son discours qu’ils trouvent comique, c’est son visage."
+      },
+      {
+       "qui": "Nour",
+       "texte": "Alors pourquoi le roman insiste-t-il sur ce rire ?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Parce que le rire figé symbolise le peuple, condamné à faire rire ceux qui le dominent."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "txt",
+     "multiple": true,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche les deux mots qui nomment ceux au nom de qui Gwynplaine parle.",
+     "aide": "Il ne parle pas seulement pour lui : il parle pour tous.",
+     "explication": "Il parle au nom du **genre humain**, c’est-à-dire du peuple que les lords ignorent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui lit juste, d’après le débat et le cours ?",
+     "options": [
+      "Nour : le rire vise son visage, et symbolise le peuple moqué",
+      "Tom : le discours échoue parce qu’il est mal construit",
+      "Nour : les lords rient parce qu’ils approuvent le discours",
+      "Tom : le rire montre que Gwynplaine est un faux lord"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Nour.",
+     "explication": "Le **rire figé** est une image : le peuple, quoi qu’il dise, **fait rire ceux qui le dominent**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque marque de Hugo à son exemple.",
+     "paires": [
+      [
+       "Les contrastes",
+       "Monstre et beauté, aveugle qui voit, rire et douleur"
+      ],
+      [
+       "Le style incantatoire",
+       "Les grandes tirades"
+      ],
+      [
+       "Les digressions historiques",
+       "Les pages sur l’Angleterre et ses lords"
+      ]
+     ],
+     "aide": "Une marque d’écriture, un exemple de roman.",
+     "explication": "**Contrastes**, **tirades incantatoires** et **digressions** sont trois signatures de Hugo."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel thème le discours devant les lords illustre-t-il ?",
+     "options": [
+      "La justice sociale, portée par un discours inutile",
+      "Le triomphe de l’aristocratie sur la misère",
+      "La victoire facile du peuple sur ses maîtres",
+      "Le pardon accordé aux comprachicos"
+     ],
+     "reponse": 0,
+     "aide": "Gwynplaine parle pour le peuple, mais personne ne l’écoute.",
+     "explication": "Le discours porte la **justice sociale**, mais il est **inutile** : on rit de celui qui parle."
+    }
+   ]
+  }
+ ]
+}

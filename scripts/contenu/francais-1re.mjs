@@ -837,7 +837,7 @@ Descriptions **saturées** — l’inventaire du magasin d’antiquités passe e
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'Colette — deux livres réunis, une même attention au monde',
-            cours: `Parcours associé : **la célébration du monde**. Le volume réunit **deux textes que quinze ans séparent** : *Les Vrilles de la vigne* (**1908**) et *Sido* (**1930**).
+            cours: `Parcours associé : **la célébration du monde**. Le volume réunit **deux textes que vingt-deux ans séparent** : *Les Vrilles de la vigne* (**1908**) et *Sido* (**1930**).
 
 ## Sido : trois parties, trois figures
 | Partie | Qui elle porte | Ce qu’on retient |

@@ -1,0 +1,2721 @@
+{
+ "niveau": "1re",
+ "matiere": "droit-economie",
+ "exercices": [
+  {
+   "chapitre": "32c42eb9-92a3-5667-b808-7103fc2e356d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Droit, morale ou les deux ?",
+   "competence": "analyser-document",
+   "situation": "Samir, délégué de classe, note cinq situations croisées dans la semaine. Il se demande lesquelles relèvent du droit, de la morale, ou des deux.",
+   "documents": [
+    {
+     "id": "sit",
+     "type": "tableau",
+     "titre": "Les situations de la semaine",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "n°",
+      "Situation"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1",
+       "Un automobiliste roule à 55 km/h dans une rue limitée à 50 km/h."
+      ],
+      [
+       "2",
+       "Une élève ment à son amie sur sa note de maths."
+      ],
+      [
+       "3",
+       "Un patron refuse d’embaucher un candidat à cause de son origine."
+      ],
+      [
+       "4",
+       "Un voisin frappe un autre voisin pendant une dispute."
+      ],
+      [
+       "5",
+       "Un passant ne dit pas merci à celui qui lui tient la porte."
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sit",
+     "enonce": "Touche la situation qui n’a rien d’immoral mais que l’autorité publique sanctionne d’une amende.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche une règle qui sert l’ordre social sans toucher à la conscience de chacun.",
+     "explication": "Rouler à 55 km/h en ville n’a rien d’immoral, mais la règle de droit est **sanctionnée par l’État** (amende) : **situation 1**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : règle de droit seulement, règle morale seulement, ou les deux ?",
+     "categories": [
+      "Droit seulement",
+      "Morale ou politesse seulement",
+      "Droit et morale à la fois"
+     ],
+     "items": [
+      [
+       "Situation 1 : 55 km/h en zone 50",
+       0
+      ],
+      [
+       "Situation 2 : mentir à son amie",
+       1
+      ],
+      [
+       "Situation 3 : refus d’embauche discriminatoire",
+       2
+      ],
+      [
+       "Situation 4 : coups entre voisins",
+       2
+      ],
+      [
+       "Situation 5 : ne pas dire merci",
+       1
+      ]
+     ],
+     "aide": "Pour le droit, demande-toi s’il existe une sanction prononcée par l’État.",
+     "explication": "Mentir à un ami ou oublier de dire merci n’est pas sanctionné par le droit. Discriminer et frapper sont **à la fois immoraux et punis par la loi**. L’excès de vitesse est puni sans être immoral."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel principe du droit français la situation 3, le refus d’embauche à cause de l’origine, viole-t-elle ?",
+     "options": [
+      "Le principe d’égalité",
+      "Le principe de laïcité",
+      "Le principe de solidarité",
+      "La liberté d’expression"
+     ],
+     "reponse": 0,
+     "aide": "Même règle pour tous ceux qui sont dans la même situation.",
+     "explication": "Les discriminations à l’embauche sont interdites par le principe d’**égalité**."
+    }
+   ]
+  },
+  {
+   "chapitre": "32c42eb9-92a3-5667-b808-7103fc2e356d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un salaire sous le SMIC",
+   "competence": "analyser-document",
+   "situation": "Léa, 18 ans, vient de signer son premier contrat de travail dans une boutique de Rouen. Sa grande sœur relit le document et fronce les sourcils.",
+   "documents": [
+    {
+     "id": "contrat",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Contrat de travail",
+     "sousTitre": "Boutique Mode & Co — Rouen",
+     "emoji": "📄",
+     "source": "Extrait imaginé pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Lieu de travail : boutique de Rouen",
+       "id": "lieu"
+      },
+      {
+       "texte": "Début du contrat : 1er septembre",
+       "id": "debut"
+      },
+      {
+       "texte": "Salaire : inférieur au SMIC, accepté par la salariée",
+       "id": "salaire"
+      },
+      {
+       "texte": "Tenue de travail fournie par la boutique",
+       "id": "tenue"
+      }
+     ],
+     "pied": "Lu et approuvé : Léa et la gérante",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "contrat",
+     "enonce": "Touche la clause que le droit refuse, même si les deux parties l’ont acceptée.",
+     "reponse": [
+      "salaire"
+     ],
+     "aide": "Une règle d’ordre public protège le salarié, quoi qu’il signe.",
+     "explication": "Le **SMIC** relève de l’**ordre public** : on ne peut pas y déroger par contrat. La clause de salaire est nulle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léa est d’accord avec cette clause. Que change son accord ?",
+     "options": [
+      "Rien : la règle d’ordre public s’impose malgré l’accord",
+      "Tout : la clause devient valable puisque Léa a signé",
+      "La clause devient valable si la gérante la relit en public",
+      "La clause est valable si un seul des deux est d’accord"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’exemple des voisins qui « achètent » l’impunité.",
+     "explication": "On ne peut pas écarter une règle d’**ordre public** par un accord : la clause est **nulle**, même signée par Léa."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque règle à la fonction du droit qu’elle illustre.",
+     "paires": [
+      [
+       "Interdire de payer sous le SMIC",
+       "Protéger les personnes"
+      ],
+      [
+       "Fixer le fonctionnement d’une société commerciale",
+       "Organiser la société"
+      ],
+      [
+       "Offrir un juge pour trancher un conflit entre voisins",
+       "Pacifier les relations"
+      ],
+      [
+       "Encadrer les données personnelles avec le RGPD",
+       "Faire évoluer la société"
+      ]
+     ],
+     "aide": "Le salarié est la partie la plus faible dans un contrat de travail.",
+     "explication": "Le SMIC **protège** le salarié ; le droit des sociétés **organise** ; le juge **pacifie** ; le RGPD **fait évoluer** le droit avec la technique."
+    }
+   ]
+  },
+  {
+   "chapitre": "32c42eb9-92a3-5667-b808-7103fc2e356d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le maire qui défie le juge",
+   "competence": "argumenter",
+   "situation": "Dans la ville imaginaire de Valmont, un arrêté du maire est annulé par un juge, mais le maire refuse d’obéir. Un lycéen en cours de droit doit dire en quoi cela menace l’État de droit.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’affaire de la piscine de Valmont",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Le 3 mars, le maire de Valmont interdit par arrêté l’entrée de la piscine municipale aux habitants d’une certaine origine.",
+      "Une association saisit le tribunal administratif.",
+      "Le 20 avril, le juge, indépendant du maire, annule l’arrêté.",
+      "Le maire déclare alors qu’il n’appliquera pas la décision : « Ici, c’est moi qui commande. »"
+     ]
+    },
+    {
+     "id": "principes",
+     "type": "tableau",
+     "titre": "Les grands principes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Principe",
+      "Ce qu’il signifie"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Liberté",
+       "Chacun agit tant qu’il ne nuit pas à autrui"
+      ],
+      [
+       "Égalité",
+       "Même règle pour tous ceux dans la même situation"
+      ],
+      [
+       "Solidarité",
+       "La collectivité protège les plus fragiles"
+      ],
+      [
+       "Laïcité",
+       "L’État est neutre et garantit la liberté de conscience"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "principes",
+     "enonce": "Touche le principe que l’arrêté du 3 mars méconnaît.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "L’arrêté traite des habitants différemment selon leur origine.",
+     "explication": "Traiter des personnes différemment selon leur origine, c’est violer le principe d’**égalité**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces faits : illustrent-ils l’État de droit ou l’arbitraire ?",
+     "categories": [
+      "État de droit",
+      "Arbitraire"
+     ],
+     "items": [
+      [
+       "Une association peut contester l’arrêté devant un juge",
+       0
+      ],
+      [
+       "Un juge indépendant annule l’arrêté",
+       0
+      ],
+      [
+       "Le maire refuse d’appliquer la décision du juge",
+       1
+      ],
+      [
+       "L’arrêté vise des habitants à cause de leur origine",
+       1
+      ]
+     ],
+     "aide": "Dans un État de droit, même celui qui écrit la règle y est soumis.",
+     "explication": "La **possibilité de contester** et le **juge indépendant** relèvent de l’État de droit. Le refus du maire et l’arrêté discriminatoire relèvent de l’**arbitraire**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit faire le maire après la décision du 20 avril ?",
+     "options": [
+      "Se conformer à la décision du juge, comme tout citoyen",
+      "Attendre que le préfet l’autorise à lui obéir",
+      "Appliquer l’arrêté tant qu’une loi ne l’interdit pas",
+      "Choisir librement s’il obéit ou non au jugement"
+     ],
+     "reponse": 0,
+     "aide": "Personne n’est au-dessus des règles, pas même celui qui les écrit.",
+     "explication": "Dans un **État de droit**, les gouvernants sont eux-mêmes soumis au droit et aux décisions du juge."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion.",
+     "texte": "L’État de droit est l’inverse de l’___ : le maire est soumis au ___ comme n’importe quel citoyen.",
+     "reponses": [
+      [
+       "arbitraire"
+      ],
+      [
+       "droit"
+      ]
+     ],
+     "banque": [
+      "arbitraire",
+      "droit",
+      "hasard",
+      "pouvoir"
+     ],
+     "aide": "Relis la citation du cours sur l’État de droit.",
+     "explication": "L’État de droit est l’inverse de l’**arbitraire** ; les gouvernants sont soumis au **droit**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b3ea662-ccfd-5020-8692-9f35bfb8506b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre règles, une seule règle de droit",
+   "competence": "analyser-document",
+   "situation": "Dans une petite ville, Yanis voit quatre règles affichées ou annoncées autour de lui. Une seule est une vraie règle de droit.",
+   "documents": [
+    {
+     "id": "regles",
+     "type": "tableau",
+     "titre": "Quatre règles",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "n°",
+      "Règle"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1",
+       "Un texte de loi : « Les salariés ont droit à des congés payés. »"
+      ],
+      [
+       "2",
+       "Le règlement du club de football : « Les crampons moulés sont obligatoires. »"
+      ],
+      [
+       "3",
+       "Une décision visant une seule personne : « Monsieur Durand paiera 300 € à Mme Petit. »"
+      ],
+      [
+       "4",
+       "Une affiche sans auteur connu : « Interdit de garer sa voiture ici. »"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regles",
+     "enonce": "Touche la règle qui réunit les trois caractères de la règle de droit.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Il faut une règle générale, obligatoire et légitime.",
+     "explication": "La loi sur les congés payés est **générale** (tous les salariés), **obligatoire** (sanctionnée par l’État) et **légitime** (le Parlement est compétent)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque règle au caractère qui lui manque, ou à sa conclusion.",
+     "paires": [
+      [
+       "La règle n° 1",
+       "Générale, obligatoire et légitime"
+      ],
+      [
+       "La règle n° 2",
+       "Non sanctionnée par l’État"
+      ],
+      [
+       "La règle n° 3",
+       "Non générale : elle vise une personne"
+      ],
+      [
+       "La règle n° 4",
+       "Non légitime : auteur inconnu"
+      ]
+     ],
+     "aide": "Pour chaque règle, demande-toi : à qui s’applique-t-elle ? Qui peut la sanctionner ? Qui l’a écrite ?",
+     "explication": "Le règlement d’un club n’est pas sanctionné par l’État ; la décision sur M. Durand est **individuelle** ; l’affiche n’émane d’**aucune autorité compétente**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel caractère de la règle garantit l’égalité devant la loi ?",
+     "options": [
+      "Le caractère général",
+      "Le caractère obligatoire",
+      "Le caractère légitime",
+      "Le caractère exécutoire"
+     ],
+     "reponse": 0,
+     "aide": "Une règle qui vise une catégorie de personnes traite chacun de la même façon.",
+     "explication": "Une règle **générale** vise une catégorie de personnes, pas un individu nommé : elle garantit l’**égalité**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b3ea662-ccfd-5020-8692-9f35bfb8506b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le vélo acheté sur internet",
+   "competence": "analyser-document",
+   "situation": "Karim, 19 ans et étudiant, a commandé un vélo de ville sur le site d’un magasin pour aller à ses cours et se balader. Il hésite maintenant à le garder.",
+   "documents": [
+    {
+     "id": "acheteurs",
+     "type": "tableau",
+     "titre": "Trois acheteurs",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Acheteur",
+      "Achat"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Karim, étudiant",
+       "Un vélo de ville pour ses trajets et ses loisirs"
+      ],
+      [
+       "Mme Roux, coiffeuse",
+       "Des ciseaux pour son salon"
+      ],
+      [
+       "Société Atelier Bois",
+       "Une scie pour son atelier"
+      ]
+     ]
+    },
+    {
+     "id": "bon",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Cycles Dubois",
+     "sousTitre": "Commande en ligne — client : Karim M.",
+     "emoji": "🚲",
+     "source": "Situation imaginée pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Vélo de ville",
+       "valeur": "380 €"
+      },
+      {
+       "texte": "Livraison",
+       "valeur": "20 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "400 €",
+       "gras": true
+      },
+      {
+       "texte": "Colis reçu le 4 mai",
+       "id": "recu"
+      }
+     ],
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "acheteurs",
+     "enonce": "Touche l’acheteur qui est un consommateur au sens du droit.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Un consommateur est une personne physique qui agit hors de son activité professionnelle.",
+     "explication": "Karim achète **pour ses loisirs**, hors activité professionnelle : c’est un **consommateur**. La coiffeuse et la société achètent pour leur métier."
+    },
+    {
+     "type": "association",
+     "enonce": "Qualifie juridiquement chaque élément du cas de Karim.",
+     "paires": [
+      [
+       "Karim, qui achète pour ses loisirs",
+       "Un consommateur"
+      ],
+      [
+       "Cycles Dubois, qui vend le vélo",
+       "Un professionnel"
+      ],
+      [
+       "L’accord vélo contre 400 €, conclu en ligne",
+       "Un contrat de vente à distance"
+      ],
+      [
+       "Le vélo livré",
+       "Un bien"
+      ]
+     ],
+     "aide": "Qualifier, c’est faire entrer des faits dans une catégorie juridique.",
+     "explication": "Karim est un **consommateur**, le magasin un **professionnel**, l’accord un **contrat de vente à distance**, le vélo un **bien**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Karim a reçu le colis le 4 mai (voir le bon de commande). Le délai de rétractation est de 14 jours à compter de la réception. Quel jour de mai se termine-t-il ?",
+     "reponse": 18,
+     "unite": "mai",
+     "aide": "Ajoute 14 au jour de réception.",
+     "explication": "4 + 14 = **18** : Karim peut renvoyer le vélo jusqu’au **18 mai**, sans se justifier."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la méthode du cas pratique.",
+     "items": [
+      "Les faits",
+      "La qualification",
+      "Le problème de droit",
+      "La règle",
+      "L’application",
+      "La solution"
+     ],
+     "aide": "On part des faits et on finit par une conclusion claire.",
+     "explication": "On résume les **faits**, on les **qualifie**, on pose le **problème de droit**, on cite la **règle**, on l’**applique**, on conclut par la **solution**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b3ea662-ccfd-5020-8692-9f35bfb8506b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux acheteurs, un même ordinateur",
+   "competence": "raisonner",
+   "situation": "Hugo, étudiant, et Mme Faure, gérante d’une boulangerie, commandent le même ordinateur portable sur un site de vente. Tous deux veulent le renvoyer. A-t-on le droit de se rétracter ?",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Les deux commandes",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Acheteur",
+      "Usage prévu",
+      "Réception"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Hugo, étudiant",
+       "Ses cours et ses loisirs",
+       "12 juin"
+      ],
+      [
+       "Mme Faure, gérante",
+       "La caisse de sa boulangerie",
+       "12 juin"
+      ]
+     ]
+    },
+    {
+     "id": "methode",
+     "type": "chaine",
+     "titre": "La méthode du cas pratique",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "faits",
+       "texte": "Faits"
+      },
+      {
+       "id": "qual",
+       "texte": "?"
+      },
+      {
+       "id": "prob",
+       "texte": "Problème de droit"
+      },
+      {
+       "id": "regle",
+       "texte": "Règle"
+      }
+     ],
+     "liens": [
+      {
+       "de": "faits",
+       "a": "qual"
+      },
+      {
+       "de": "qual",
+       "a": "prob"
+      },
+      {
+       "de": "prob",
+       "a": "regle"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "methode",
+     "enonce": "On écrit : « Hugo est un consommateur, le site est un professionnel ». Touche l’étape de la méthode correspondante.",
+     "reponse": [
+      "qual"
+     ],
+     "aide": "Cette étape nomme juridiquement les personnes et les faits.",
+     "explication": "Nommer Hugo « consommateur » et le site « professionnel », c’est la **qualification**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel énoncé formule correctement le problème de droit, qui se pose en termes généraux ?",
+     "options": [
+      "Hugo a-t-il le droit de renvoyer son ordinateur le 20 juin ?",
+      "Un consommateur peut-il revenir sur un achat conclu à distance ?",
+      "Le site doit-il rembourser 640 euros à cet étudiant ?",
+      "Hugo est-il plus protégé que la gérante d’une boulangerie ?"
+     ],
+     "reponse": 1,
+     "aide": "Pas de prénom ni de montant : on pose la question pour toute une catégorie de personnes.",
+     "explication": "Le problème de droit est **général** : « un consommateur peut-il revenir sur un achat conclu à distance avec un professionnel ? »"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Hugo a reçu l’ordinateur le 12 juin et dispose de 14 jours. Quel jour de juin se termine son délai ?",
+     "reponse": 26,
+     "unite": "juin",
+     "aide": "Ajoute 14 au 12.",
+     "explication": "12 + 14 = **26** : Hugo peut se rétracter jusqu’au **26 juin**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mme Faure ne peut-elle pas, en principe, invoquer ce délai de rétractation ?",
+     "options": [
+      "Elle agit pour son activité : ce n’est pas une consommatrice",
+      "Elle est majeure alors qu’un étudiant est protégé",
+      "Elle a reçu son colis après le 12 juin, donc trop tard",
+      "Elle est une personne physique, donc non protégée"
+     ],
+     "reponse": 0,
+     "aide": "Relis la définition du consommateur dans le cours.",
+     "explication": "Le délai protège le **consommateur**, qui agit **hors activité professionnelle**. Mme Faure achète pour sa boulangerie : elle n’en est pas une."
+    }
+   ]
+  },
+  {
+   "chapitre": "881b3fe6-71b0-573f-bf4a-ad9af5fc386a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui fait la loi, qui l’applique ?",
+   "competence": "analyser-document",
+   "situation": "Chloé prépare un exposé sur la séparation des pouvoirs théorisée par Montesquieu. Elle résume les trois pouvoirs dans un tableau.",
+   "documents": [
+    {
+     "id": "pouvoirs",
+     "type": "tableau",
+     "titre": "Les trois pouvoirs",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Pouvoir",
+      "Qui l’exerce",
+      "Ce qu’il produit"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Législatif",
+       "Le Parlement (Assemblée nationale et Sénat)",
+       "La loi"
+      ],
+      [
+       "Exécutif",
+       "Le Président et le Gouvernement",
+       "Les règlements"
+      ],
+      [
+       "Judiciaire",
+       "Les juges",
+       "La jurisprudence"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pouvoirs",
+     "enonce": "Touche qui vote la loi.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le pouvoir législatif écrit les lois.",
+     "explication": "Le **Parlement** (Assemblée nationale et Sénat) vote la loi."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acte à son auteur.",
+     "paires": [
+      [
+       "Une loi",
+       "Le Parlement"
+      ],
+      [
+       "Un décret",
+       "Le Gouvernement"
+      ],
+      [
+       "Un arrêté municipal",
+       "Le maire"
+      ],
+      [
+       "Un arrêt de la Cour de cassation",
+       "Les juges"
+      ]
+     ],
+     "aide": "Reprends les trois pouvoirs du tableau.",
+     "explication": "La loi vient du **Parlement**, le décret du **Gouvernement**, l’arrêté municipal du **maire** (pouvoir exécutif local), la jurisprudence des **juges**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi confier ces trois pouvoirs à des organes distincts ?",
+     "options": [
+      "Pour éviter qu’un seul organe abuse du pouvoir",
+      "Pour que les juges puissent voter les lois",
+      "Pour accélérer le vote des lois au Parlement",
+      "Pour que le Gouvernement écrive les jugements"
+     ],
+     "reponse": 0,
+     "aide": "Montesquieu craignait que celui qui détient tout le pouvoir en abuse.",
+     "explication": "Pour **éviter l’abus de pouvoir**, les trois pouvoirs sont séparés entre des organes distincts."
+    }
+   ]
+  },
+  {
+   "chapitre": "881b3fe6-71b0-573f-bf4a-ad9af5fc386a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La pyramide des normes",
+   "competence": "observer-schema",
+   "situation": "Noémie range quatre textes dans la pyramide des normes avant son contrôle de droit. Chaque marche doit respecter celle qui est au-dessus.",
+   "documents": [
+    {
+     "id": "pyramide",
+     "type": "schema",
+     "titre": "La hiérarchie des normes",
+     "largeur": 360,
+     "hauteur": 240,
+     "source": "D’après le cours.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 10,
+       "l": 220,
+       "h": 50,
+       "arrondi": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 31,
+       "texte": "Constitution",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 49,
+       "texte": "et bloc de constitutionnalité",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 66,
+       "l": 260,
+       "h": 50,
+       "arrondi": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "n2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 87,
+       "texte": "Traités et droit de l’UE",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 105,
+       "texte": "traités, règlements UE, directives",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 122,
+       "l": 300,
+       "h": 50,
+       "arrondi": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 143,
+       "texte": "Lois",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 161,
+       "texte": "votées par le Parlement",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 178,
+       "l": 340,
+       "h": 50,
+       "arrondi": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 199,
+       "texte": "Règlements nationaux",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 217,
+       "texte": "décrets, arrêtés",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pyramide",
+     "enonce": "Touche la marche où se range le décret pris par le Premier ministre.",
+     "reponse": [
+      "n4"
+     ],
+     "aide": "Un décret est un règlement pris par le Gouvernement.",
+     "explication": "Le décret est un **règlement national** : c’est la marche la plus basse, qui doit respecter toutes les autres."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces textes du plus haut au plus bas de la hiérarchie.",
+     "items": [
+      "La Déclaration des droits de l’homme de 1789",
+      "Le règlement européen RGPD",
+      "Une loi votée par le Parlement",
+      "L’arrêté du maire de Valmont"
+     ],
+     "aide": "La DDHC appartient au bloc de constitutionnalité.",
+     "explication": "La **DDHC** (bloc de constitutionnalité), puis le **RGPD** (droit de l’UE), puis la **loi**, puis l’**arrêté** (règlement)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lors d’un procès, Noémie soutient qu’une loi qu’on lui applique porte atteinte à un droit garanti par la Constitution. Quel mécanisme invoque-t-elle ?",
+     "options": [
+      "La question prioritaire de constitutionnalité",
+      "Le pourvoi devant la Cour de cassation",
+      "La transposition d’une directive européenne",
+      "Un référé devant le juge municipal"
+     ],
+     "reponse": 0,
+     "aide": "Depuis 2010, un justiciable peut contester une loi déjà en vigueur.",
+     "explication": "C’est la **QPC** : si le Conseil constitutionnel donne raison au justiciable, la loi est **abrogée**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution à son rôle.",
+     "paires": [
+      [
+       "Le Conseil constitutionnel",
+       "Vérifie qu’une loi respecte la Constitution"
+      ],
+      [
+       "La Cour de cassation",
+       "Unifie l’interprétation du droit par les juges"
+      ],
+      [
+       "La Commission européenne",
+       "Propose les textes de l’Union"
+      ],
+      [
+       "Le Parlement européen et le Conseil de l’UE",
+       "Adoptent les textes de l’Union"
+      ]
+     ],
+     "aide": "Pense à qui propose et qui décide dans l’Union européenne.",
+     "explication": "La Commission **propose**, le Parlement européen et le Conseil **adoptent** ; le Conseil constitutionnel contrôle la loi ; la Cour de cassation **unifie** la jurisprudence."
+    }
+   ]
+  },
+  {
+   "chapitre": "881b3fe6-71b0-573f-bf4a-ad9af5fc386a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Manifester à Valmont",
+   "competence": "argumenter",
+   "situation": "Le maire de Valmont interdit toute manifestation pendant un an. Un syndicat conteste l’arrêté. Qui a raison, et par quel moyen peut-on contester un texte ?",
+   "documents": [
+    {
+     "id": "arrete",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’arrêté municipal",
+     "source": "Extrait écrit pour l’exercice.",
+     "blocs": [
+      "Article 1 : [[a|toute]] manifestation sur la voie publique est interdite sur le territoire de la commune pendant [[a|un]] [[a|an]].",
+      "Article 2 : le présent arrêté entre en vigueur à compter de sa publication."
+     ]
+    },
+    {
+     "id": "jugement",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Tribunal administratif",
+     "sousTitre": "Jugement résumé — texte imaginé",
+     "emoji": "⚖️",
+     "lignes": [
+      {
+       "texte": "Demandeur : Syndicat des salariés de Valmont",
+       "id": "dem"
+      },
+      {
+       "texte": "Défendeur : Commune de Valmont",
+       "id": "def"
+      },
+      {
+       "texte": "Motif : interdiction générale d’une liberté garantie par la Constitution",
+       "id": "motif"
+      },
+      {
+       "texte": "Décision : arrêté annulé",
+       "id": "dec"
+      }
+     ],
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arrete",
+     "enonce": "Touche les mots qui rendent l’interdiction générale et disproportionnée.",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "aide": "Cherche l’étendue de l’interdiction et sa durée.",
+     "explication": "L’interdiction vise **toute** manifestation et dure **un an** : elle est générale et disproportionnée."
+    },
+    {
+     "type": "zone",
+     "document": "jugement",
+     "enonce": "Touche la ligne qui dit pourquoi le juge annule l’arrêté.",
+     "reponse": [
+      "motif"
+     ],
+     "aide": "Quelle norme supérieure l’arrêté ne respecte-t-il pas ?",
+     "explication": "Le **motif** : l’arrêté, norme inférieure, viole une **liberté garantie par la Constitution**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces actes selon leur source.",
+     "categories": [
+      "Loi (Parlement)",
+      "Règlement",
+      "Droit européen"
+     ],
+     "items": [
+      [
+       "Un décret du Premier ministre",
+       1
+      ],
+      [
+       "Un arrêté du préfet",
+       1
+      ],
+      [
+       "Une loi votée par l’Assemblée et le Sénat",
+       0
+      ],
+      [
+       "Le RGPD",
+       2
+      ],
+      [
+       "Une directive sur les droits des consommateurs",
+       2
+      ]
+     ],
+     "aide": "Les règlements viennent de l’exécutif, la loi du Parlement.",
+     "explication": "Les **décrets et arrêtés** sont des règlements ; la **loi** vient du Parlement ; le **RGPD** et les **directives** sont du droit européen."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le syndicat veut maintenant contester une loi déjà en vigueur qu’on lui applique dans un procès. Que doit-il invoquer ?",
+     "options": [
+      "Une question prioritaire de constitutionnalité",
+      "Un recours en annulation devant le maire",
+      "Un pourvoi devant le tribunal administratif",
+      "Une transposition par le Gouvernement"
+     ],
+     "reponse": 0,
+     "aide": "Contre un arrêté, le juge administratif ; contre une loi, un autre mécanisme.",
+     "explication": "Contre une **loi** déjà en vigueur, on soulève une **QPC** devant le Conseil constitutionnel ; l’arrêté, lui, est annulé par le juge administratif."
+    }
+   ]
+  },
+  {
+   "chapitre": "79f3480c-cc72-51cc-8cda-304df66aee3d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vitrine brisée par un ballon",
+   "competence": "analyser-document",
+   "situation": "Maëlle tient une boutique. Le ballon de Théo, 15 ans, a brisé sa vitrine. Elle lui adresse une demande écrite : voici son résumé.",
+   "documents": [
+    {
+     "id": "demande",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Demande de réparation",
+     "sousTitre": "Maëlle Roche contre Théo Garnier",
+     "emoji": "⚽",
+     "source": "Situation imaginée pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Demandeur : Maëlle Roche",
+       "id": "dem"
+      },
+      {
+       "texte": "Défendeur : Théo Garnier",
+       "id": "def"
+      },
+      {
+       "texte": "Faits : le ballon de Théo a brisé la vitrine le 5 mai",
+       "id": "faits"
+      },
+      {
+       "texte": "Prétention : paiement de 240 € pour la vitre",
+       "id": "pret"
+      },
+      {
+       "texte": "Preuves : photos et témoignage d’une voisine",
+       "id": "preuves"
+      }
+     ],
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "demande",
+     "enonce": "Touche ce que Maëlle demande à Théo, sa prétention.",
+     "reponse": [
+      "pret"
+     ],
+     "aide": "La prétention est ce que chaque partie demande : payer, livrer, réparer…",
+     "explication": "Maëlle réclame le **paiement de 240 €** : c’est sa **prétention**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le bris de la vitrine par un ballon est…",
+     "options": [
+      "Un fait juridique, un événement non voulu",
+      "Un acte juridique, une volonté d’agir",
+      "Un contrat conclu entre Maëlle et Théo",
+      "Un testament au profit de la boutique"
+     ],
+     "reponse": 0,
+     "aide": "Théo n’a pas voulu produire des effets de droit.",
+     "explication": "Un accident, une dégradation sont des **faits juridiques** : leurs effets de droit n’ont pas été voulus. Ils se prouvent **par tout moyen** (photos, témoignages)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque événement : acte juridique ou fait juridique ?",
+     "categories": [
+      "Acte juridique",
+      "Fait juridique"
+     ],
+     "items": [
+      [
+       "La signature d’un bail",
+       0
+      ],
+      [
+       "Un accident de trottinette",
+       1
+      ],
+      [
+       "Un testament",
+       0
+      ],
+      [
+       "La naissance d’un enfant",
+       1
+      ]
+     ],
+     "aide": "Un acte juridique est une volonté destinée à produire des effets de droit.",
+     "explication": "Le **bail** et le **testament** sont des actes voulus ; l’**accident** et la **naissance** sont des faits."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour les petits litiges civils, une tentative de règlement amiable est en principe obligatoire jusqu’à un certain montant. Cette demande de 240 € y est soumise. Quel est ce montant, en euros ?",
+     "reponse": 5000,
+     "unite": "€",
+     "aide": "Relis la partie sur l’accord amiable : négociation, conciliation, médiation.",
+     "explication": "Jusqu’à **5 000 €**, une tentative de règlement amiable est en principe obligatoire avant de saisir le juge."
+    }
+   ]
+  },
+  {
+   "chapitre": "79f3480c-cc72-51cc-8cda-304df66aee3d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prêt sans reconnaissance de dette",
+   "competence": "analyser-texte",
+   "situation": "Jade a prêté 2 400 € à son oncle Martin pour ouvrir un commerce. Rien n’a été signé. Aujourd’hui, Martin tarde à rembourser, mais Jade conserve un échange de SMS.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les SMS conservés par Jade",
+     "source": "Situation imaginée pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Martin",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Salut Martin, tu peux me rendre les 2 400 € ?"
+      },
+      {
+       "qui": "Martin",
+       "texte": "Oui, je te [[p|rends]] les 2 400 dès que possible."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot de Martin par lequel il reconnaît devoir l’argent.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche le verbe qui montre qu’il admet sa dette.",
+     "explication": "En écrivant qu’il **rend** les 2 400 €, Martin reconnaît sa dette : c’est un commencement de preuve par écrit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un acte juridique doit en principe être prouvé par écrit au-delà de 1 500 €. De combien d’euros le prêt dépasse-t-il ce seuil ?",
+     "reponse": 900,
+     "unite": "€",
+     "aide": "Soustrais le seuil de 1 500 € au montant du prêt.",
+     "explication": "2 400 − 1 500 = **900 €** : le prêt est un acte juridique qui dépasse le seuil, il devrait donc être prouvé par écrit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur qui pèse la charge de la preuve du prêt ?",
+     "options": [
+      "Sur Jade, qui réclame l’exécution de l’obligation",
+      "Sur Martin, qui doit prouver ne rien devoir",
+      "Sur le juge, qui enquête sur les faits",
+      "Sur la banque qui a ouvert le compte de Martin"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’article 1353 du Code civil cité dans le cours.",
+     "explication": "Celui qui réclame l’exécution d’une obligation doit la prouver : la charge pèse sur **Jade**, la demanderesse."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mode de preuve à sa définition.",
+     "paires": [
+      [
+       "L’acte authentique",
+       "Rédigé par un officier public, comme un notaire"
+      ],
+      [
+       "L’acte sous signature privée",
+       "Rédigé et signé par les parties elles-mêmes"
+      ],
+      [
+       "L’aveu",
+       "Reconnaissance d’un fait qui nous est défavorable"
+      ],
+      [
+       "La présomption irréfragable",
+       "Ne peut pas être combattue par la preuve contraire"
+      ]
+     ],
+     "aide": "Pense à qui rédige l’acte ou à ce qu’on reconnaît.",
+     "explication": "L’acte **authentique** vient d’un officier public ; l’acte **sous signature privée** des parties ; l’**aveu** est défavorable à son auteur ; une présomption **irréfragable** est sans retour."
+    }
+   ]
+  },
+  {
+   "chapitre": "79f3480c-cc72-51cc-8cda-304df66aee3d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois prétentions, trois preuves",
+   "competence": "raisonner",
+   "situation": "Sofiane voit trois personnes lui réclamer de l’argent. Pour chacune, il doit savoir comment la preuve peut être apportée avant de décider s’il paie.",
+   "documents": [
+    {
+     "id": "pretentions",
+     "type": "tableau",
+     "titre": "Les trois réclamations",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Réclamation",
+      "Nature",
+      "Montant"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "A : remboursement d’un prêt",
+       "Acte juridique",
+       "3 000 €"
+      ],
+      [
+       "B : paiement d’un scooter vendu",
+       "Acte juridique",
+       "1 200 €"
+      ],
+      [
+       "C : réparation d’une voiture rayée",
+       "Fait juridique",
+       "800 €"
+      ]
+     ]
+    },
+    {
+     "id": "pieces",
+     "type": "tableau",
+     "titre": "Les pièces du dossier de Sofiane",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "n°",
+      "Pièce"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1",
+       "Photos de la voiture rayée"
+      ],
+      [
+       "2",
+       "Message de Sofiane : « je te rembourse bientôt les 3 000 € »"
+      ],
+      [
+       "3",
+       "Témoignage d’un voisin sur la rayure"
+      ],
+      [
+       "4",
+       "Reconnaissance de dette de 3 000 € signée des deux parties"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Pour chaque réclamation, la preuve est-elle libre ou faut-il en principe un écrit ?",
+     "categories": [
+      "Écrit exigé",
+      "Preuve libre"
+     ],
+     "items": [
+      [
+       "A : prêt de 3 000 €",
+       0
+      ],
+      [
+       "B : scooter de 1 200 €",
+       1
+      ],
+      [
+       "C : voiture rayée",
+       1
+      ]
+     ],
+     "aide": "Compare le montant au seuil de 1 500 € pour un acte ; un fait se prouve par tout moyen.",
+     "explication": "Le prêt est un acte au-dessus de 1 500 € : **écrit**. Le scooter est un acte sous le seuil et la rayure un fait : **preuve libre**."
+    },
+    {
+     "type": "zone",
+     "document": "pieces",
+     "enonce": "Touche la pièce qui prouve à elle seule le prêt de 3 000 € : un acte sous signature privée.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Il faut un écrit signé par les parties.",
+     "explication": "La **reconnaissance de dette signée** est un acte sous signature privée : un écrit qui suffit pour un prêt de 3 000 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le message « je te rembourse bientôt les 3 000 € » ne suffit-il pas à lui seul ?",
+     "options": [
+      "C’est un commencement de preuve à compléter",
+      "C’est un acte authentique mais mal rédigé",
+      "C’est une présomption irréfragable",
+      "C’est un fait juridique qui se prouve par tout moyen"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’exemple de Hugo et de son cousin dans le cours.",
+     "explication": "Un message est un **commencement de preuve par écrit** : il doit être **complété** par d’autres éléments ou par un aveu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sofiane affirme qu’on le présume de bonne foi, donc qu’il n’a rien à prouver. Si cette présomption est simple, que peut faire la partie adverse ?",
+     "options": [
+      "Apporter la preuve contraire pour la combattre",
+      "Rien : une présomption ne se combat jamais",
+      "Seulement attendre l’avis du notaire",
+      "Demander au juge de l’effacer par décret"
+     ],
+     "reponse": 0,
+     "aide": "Distingue la présomption simple de la présomption irréfragable.",
+     "explication": "Une présomption **simple** peut être combattue par la **preuve contraire** ; une présomption irréfragable ne le peut pas."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle sur la preuve en matière pénale.",
+     "texte": "En matière pénale, la preuve est ___ et le juge se décide selon son ___ conviction.",
+     "reponses": [
+      [
+       "libre"
+      ],
+      [
+       "intime"
+      ]
+     ],
+     "banque": [
+      "libre",
+      "intime",
+      "écrite",
+      "publique"
+     ],
+     "aide": "Le juge forme sa conviction à partir de tous les éléments obtenus loyalement.",
+     "explication": "En matière pénale, la preuve est **libre** et le juge forme son **intime** conviction."
+    }
+   ]
+  },
+  {
+   "chapitre": "79707e66-04b8-5108-ba63-b6dfd5985ab8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel tribunal pour quel litige ?",
+   "competence": "analyser-document",
+   "situation": "Dans le hall du palais de justice, Inès compare quatre dossiers du jour. Elle doit deviner devant quelle juridiction chacun sera jugé.",
+   "documents": [
+    {
+     "id": "dossiers",
+     "type": "tableau",
+     "titre": "Les quatre dossiers du jour",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "n°",
+      "Litige"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1",
+       "Un salarié conteste son licenciement."
+      ],
+      [
+       "2",
+       "Deux commerçants se disputent le paiement d’une livraison."
+      ],
+      [
+       "3",
+       "Un habitant conteste une décision de sa commune."
+      ],
+      [
+       "4",
+       "Un homme est poursuivi pour un vol, un délit."
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossiers",
+     "enonce": "Touche le litige qui relève de l’ordre administratif.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche un litige avec l’administration, ici une commune.",
+     "explication": "Un litige entre un particulier et sa commune relève de l’ordre **administratif** : le **tribunal administratif**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dossier à sa juridiction.",
+     "paires": [
+      [
+       "Le salarié et son licenciement",
+       "Conseil de prud’hommes"
+      ],
+      [
+       "Le litige entre commerçants",
+       "Tribunal de commerce"
+      ],
+      [
+       "La décision de la commune",
+       "Tribunal administratif"
+      ],
+      [
+       "Le vol, un délit",
+       "Tribunal correctionnel"
+      ]
+     ],
+     "aide": "La compétence d’attribution dépend de la nature de l’affaire.",
+     "explication": "Salarié : **prud’hommes**. Commerçants : **tribunal de commerce**. Commune : **tribunal administratif**. Délit : **tribunal correctionnel**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les infractions de la moins grave à la plus grave.",
+     "items": [
+      "La contravention",
+      "Le délit",
+      "Le crime"
+     ],
+     "aide": "La cour d’assises juge les affaires les plus graves.",
+     "explication": "On classe les infractions de la **contravention** au **délit** puis au **crime**, de la moins grave à la plus grave."
+    }
+   ]
+  },
+  {
+   "chapitre": "79707e66-04b8-5108-ba63-b6dfd5985ab8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cuisinier qui a perdu aux prud’hommes",
+   "competence": "analyser-document",
+   "situation": "Mehdi, cuisinier, a été licencié. Il a perdu devant le conseil de prud’hommes et veut continuer. Un schéma résume le chemin des recours.",
+   "documents": [
+    {
+     "id": "recours",
+     "type": "chaine",
+     "titre": "Le chemin des recours",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "prud",
+       "texte": "Conseil de prud’hommes",
+       "emoji": "⚖️"
+      },
+      {
+       "id": "appel",
+       "texte": "Cour d’appel",
+       "emoji": "🏛️"
+      },
+      {
+       "id": "cass",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "prud",
+       "a": "appel",
+       "texte": "appel"
+      },
+      {
+       "de": "appel",
+       "a": "cass",
+       "texte": "pourvoi"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recours",
+     "enonce": "Touche la juridiction qui peut rejuger toute l’affaire, en fait et en droit.",
+     "reponse": [
+      "appel"
+     ],
+     "aide": "Le double degré de juridiction permet de rejuger l’affaire.",
+     "explication": "La **cour d’appel** rejuge l’affaire **en fait et en droit** : c’est le double degré de juridiction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le dernier maillon est la Cour de cassation. Que fait-elle de l’arrêt qu’on lui soumet ?",
+     "options": [
+      "Elle vérifie que le droit a été bien appliqué",
+      "Elle rejuge les faits comme la cour d’appel",
+      "Elle rejuge les preuves de chaque partie",
+      "Elle réécoute tous les témoins de l’affaire"
+     ],
+     "reponse": 0,
+     "aide": "Elle est juge du droit, pas des faits.",
+     "explication": "La Cour de cassation **ne rejuge pas les faits** : elle vérifie l’application du droit, puis **casse** la décision ou **rejette** le pourvoi."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes d’un procès civil.",
+     "items": [
+      "Assignation du défendeur",
+      "Mise en état du dossier",
+      "Audience et plaidoiries",
+      "Délibéré",
+      "Jugement"
+     ],
+     "aide": "On saisit le juge, on échange les pièces, on plaide, puis le juge décide.",
+     "explication": "On **assigne**, les parties échangent arguments et pièces (**mise en état**), on plaide, puis vient le **délibéré** et enfin le **jugement**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le rôle de la Cour de cassation.",
+     "texte": "La Cour de cassation est juge du ___ et non des ___.",
+     "reponses": [
+      [
+       "droit"
+      ],
+      [
+       "faits"
+      ]
+     ],
+     "banque": [
+      "droit",
+      "faits",
+      "preuves",
+      "peines"
+     ],
+     "aide": "Elle ne dira jamais qui a raison, seulement si la loi a été bien appliquée.",
+     "explication": "Elle est juge du **droit**, pas des **faits**."
+    }
+   ]
+  },
+  {
+   "chapitre": "79707e66-04b8-5108-ba63-b6dfd5985ab8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le scooter volé de Yanis",
+   "competence": "raisonner",
+   "situation": "Yanis, 20 ans, est poursuivi pour le vol d’un scooter. La victime, Mme Aubry, veut être indemnisée. Un avis de convocation et un tableau des juridictions pénales permettent de suivre l’affaire.",
+   "documents": [
+    {
+     "id": "convoc",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Avis de convocation",
+     "sousTitre": "Texte imaginé pour l’exercice",
+     "emoji": "📬",
+     "lignes": [
+      {
+       "texte": "Prévenu : Yanis K., 20 ans",
+       "id": "prev"
+      },
+      {
+       "texte": "Infraction reprochée : vol d’un scooter (délit)",
+       "id": "infra"
+      },
+      {
+       "texte": "Victime : Mme Aubry",
+       "id": "vict"
+      },
+      {
+       "texte": "Juridiction : à déterminer",
+       "id": "jur"
+      }
+     ],
+     "teinte": "violet"
+    },
+    {
+     "id": "juridictions",
+     "type": "tableau",
+     "titre": "Les juridictions pénales de première instance",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Gravité",
+      "Juridiction"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Contravention",
+       "Tribunal de police"
+      ],
+      [
+       "Délit",
+       "Tribunal correctionnel"
+      ],
+      [
+       "Crime",
+       "Cour d’assises ou cour criminelle"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "juridictions",
+     "enonce": "Touche la juridiction qui jugera Yanis, d’après l’infraction indiquée sur la convocation.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Relis la gravité de l’infraction sur la convocation.",
+     "explication": "Le vol est ici un **délit** : il relève du **tribunal correctionnel**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avant le jugement, comment la loi considère-t-elle Yanis ?",
+     "options": [
+      "Comme innocent tant que sa culpabilité n’est pas établie",
+      "Comme coupable tant qu’il n’a pas prouvé le contraire",
+      "Comme coupable puisque la police a constaté les faits",
+      "Comme innocent seulement s’il a un avocat"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la présomption d’innocence.",
+     "explication": "La **présomption d’innocence** : toute personne poursuivie est présumée innocente tant que sa culpabilité n’a pas été établie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur du procès pénal à son rôle.",
+     "paires": [
+      [
+       "Le ministère public",
+       "Décide de poursuivre l’auteur d’une infraction"
+      ],
+      [
+       "La partie civile",
+       "Demande réparation de son préjudice"
+      ],
+      [
+       "Le juge d’instruction",
+       "Enquête sur les affaires graves"
+      ],
+      [
+       "L’avocat",
+       "Assure l’assistance de la personne poursuivie"
+      ]
+     ],
+     "aide": "Mme Aubry peut se constituer partie civile.",
+     "explication": "Le **ministère public** poursuit ; la **partie civile** (ici Mme Aubry) demande réparation ; le **juge d’instruction** enquête ; l’**avocat** assiste la défense."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes possibles de cette affaire du début à la fin.",
+     "items": [
+      "Plainte ou constatation par la police",
+      "Mise en examen par le juge d’instruction",
+      "Jugement du tribunal correctionnel",
+      "Appel devant la cour d’appel",
+      "Pourvoi en cassation"
+     ],
+     "aide": "On commence par la plainte et on finit par le recours le plus haut.",
+     "explication": "Plainte, **enquête et mise en examen**, **jugement**, **appel**, puis **pourvoi** devant la Cour de cassation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet à Mme Aubry de se constituer partie civile ?",
+     "options": [
+      "Obtenir réparation dans le cadre du procès pénal",
+      "Décider elle-même de la peine de Yanis",
+      "Faire annuler le procès à sa seule demande",
+      "Remplacer le procureur à l’audience"
+     ],
+     "reponse": 0,
+     "aide": "Elle est victime d’un préjudice.",
+     "explication": "La victime qui se **constitue partie civile** obtient **réparation de son préjudice** dans le procès pénal."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5a62bc6-1d87-599f-a0aa-01977d564954",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est une personne aux yeux du droit ?",
+   "competence": "analyser-document",
+   "situation": "À la mairie de Valmont, un agent range cinq « entités » dans ses registres. Il doit trier celles qui sont des personnes morales.",
+   "documents": [
+    {
+     "id": "entites",
+     "type": "tableau",
+     "titre": "Les cinq entités du registre",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Entité",
+      "Précision"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Clara, 8 ans",
+       "Née vivante et viable"
+      ],
+      [
+       "Boulangerie Dupain SA",
+       "Société anonyme immatriculée"
+      ],
+      [
+       "Rex, un chien",
+       "Animal de compagnie"
+      ],
+      [
+       "Les Amis du parc",
+       "Association jamais déclarée en préfecture"
+      ],
+      [
+       "Commune de Valmont",
+       "Collectivité territoriale"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "entites",
+     "enonce": "Touche les deux entités qui sont des personnes morales.",
+     "reponse": [
+      "r1c0",
+      "r4c0"
+     ],
+     "multiple": true,
+     "aide": "Une personne morale est un groupement doté de la personnalité juridique.",
+     "explication": "La **société anonyme immatriculée** et la **commune** sont des personnes morales. L’association non déclarée n’a pas la personnalité morale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Rex n’est-il pas une personne juridique ?",
+     "options": [
+      "C’est un être sensible, mais soumis au régime des biens",
+      "C’est une personne physique d’un genre particulier",
+      "C’est une personne morale représentée par son maître",
+      "Il est une personne dès qu’il est déclaré en mairie"
+     ],
+     "reponse": 0,
+     "aide": "Depuis 2015, l’animal est protégé, mais ce n’est pas une personne.",
+     "explication": "L’article 515-14 du Code civil reconnaît l’animal comme **être vivant doué de sensibilité**, mais il reste soumis au **régime des biens**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à ce qu’elle désigne.",
+     "paires": [
+      [
+       "Le nom d’une personne morale",
+       "Sa dénomination sociale"
+      ],
+      [
+       "Le domicile d’une personne morale",
+       "Son siège social"
+      ],
+      [
+       "Le début d’une personne physique",
+       "La naissance, vivante et viable"
+      ],
+      [
+       "La fin d’une personne physique",
+       "Le décès"
+      ]
+     ],
+     "aide": "Pense à ce qui identifie une société, comme un nom et une adresse.",
+     "explication": "La société a une **dénomination** et un **siège** ; la personne physique existe de la **naissance** au **décès**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5a62bc6-1d87-599f-a0aa-01977d564954",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La carte d’identité d’une société",
+   "competence": "analyser-document",
+   "situation": "Aïcha Benali dirige une entreprise de vélos. Un extrait d’immatriculation permet de lire l’identité de la société. Elle s’en sert pour agir en justice.",
+   "documents": [
+    {
+     "id": "extrait",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Extrait d’immatriculation",
+     "sousTitre": "Document imaginé pour l’exercice",
+     "emoji": "🏢",
+     "lignes": [
+      {
+       "texte": "Dénomination : Atelier Vélo Nantais SA",
+       "id": "denom"
+      },
+      {
+       "texte": "Siège social : 12 quai de la Fosse, Nantes",
+       "id": "siege"
+      },
+      {
+       "texte": "Numéro SIREN : 000 000 000",
+       "id": "siren"
+      },
+      {
+       "texte": "Représentante légale : Aïcha Benali, présidente",
+       "id": "repr"
+      },
+      {
+       "texte": "Date d’immatriculation : 14 mars 2019",
+       "id": "date"
+      }
+     ],
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "extrait",
+     "enonce": "Touche la ligne qui joue pour la société le rôle du domicile d’une personne physique.",
+     "reponse": [
+      "siege"
+     ],
+     "aide": "C’est l’adresse officielle de la personne morale.",
+     "explication": "Le **siège social** est l’équivalent du domicile."
+    },
+    {
+     "type": "zone",
+     "document": "extrait",
+     "enonce": "Touche la ligne qui marque le début de la personnalité morale de la société.",
+     "reponse": [
+      "date"
+     ],
+     "aide": "Une société acquiert la personnalité morale à son immatriculation.",
+     "explication": "La société acquiert la personnalité morale à son **immatriculation**, ici le **14 mars 2019**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui peut agir en justice au nom de l’Atelier Vélo Nantais ?",
+     "options": [
+      "Sa représentante légale, Aïcha Benali",
+      "Le chef de l’atelier voisin de la société",
+      "Le premier client venu qui l’autorise",
+      "Le préfet de la Loire-Atlantique"
+     ],
+     "reponse": 0,
+     "aide": "Une personne morale agit par ses représentants.",
+     "explication": "Une personne morale agit par ses **représentants légaux** (gérant, président) : ici **Aïcha Benali**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces droits de la société et d’Aïcha.",
+     "categories": [
+      "Patrimonial",
+      "Extrapatrimonial"
+     ],
+     "items": [
+      [
+       "La propriété du local de l’atelier",
+       0
+      ],
+      [
+       "Une créance sur un client",
+       0
+      ],
+      [
+       "Le droit à l’image d’Aïcha",
+       1
+      ],
+      [
+       "Le droit au nom d’Aïcha",
+       1
+      ]
+     ],
+     "aide": "Un droit patrimonial s’évalue en argent et peut se transmettre ou se saisir.",
+     "explication": "La **propriété** et la **créance** sont patrimoniales. Le **droit à l’image** et le **droit au nom** sont extrapatrimoniaux : non évaluables en argent."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5a62bc6-1d87-599f-a0aa-01977d564954",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’association qui agit trop tôt",
+   "competence": "raisonner",
+   "situation": "L’association « Les Amis du parc » veut attaquer un promoteur dont les travaux abîment un espace vert. Mais a-t-elle déjà le droit d’agir ? Tom et Julie en discutent.",
+   "documents": [
+    {
+     "id": "chrono",
+     "type": "tableau",
+     "titre": "La chronologie de 2026",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "10 janvier",
+       "Dix habitants fondent l’association lors d’une réunion"
+      ],
+      [
+       "20 février",
+       "Le promoteur commence les travaux"
+      ],
+      [
+       "2 mars",
+       "L’association est déclarée en préfecture"
+      ]
+     ]
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages de Tom et Julie",
+     "source": "Situation imaginée pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Julie",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Mon chat est un être vivant sensible, donc c’est une personne juridique, il peut agir en justice !"
+      },
+      {
+       "qui": "Julie",
+       "texte": "Non : il reste un bien, même protégé."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chrono",
+     "enonce": "Touche l’événement à partir duquel l’association a la personnalité morale.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Une association l’acquiert après sa déclaration en préfecture.",
+     "explication": "L’association acquiert la personnalité morale à sa **déclaration en préfecture**, le **2 mars**, et non à la réunion de fondation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours séparent le début des travaux (20 février) de la déclaration en préfecture (2 mars 2026) ?",
+     "reponse": 10,
+     "unite": "jours",
+     "aide": "Février 2026 a 28 jours : compte jusqu’au 28 février, puis jusqu’au 2 mars.",
+     "explication": "Du 20 au 28 février : 8 jours, puis 2 jours jusqu’au 2 mars : **10 jours** pendant lesquels l’association n’avait pas la personnalité morale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le 20 février, que se passe-t-il si l’association essaie d’agir en justice ?",
+     "options": [
+      "Elle ne peut pas agir : pas de personnalité morale",
+      "Elle agit normalement, car la réunion de fondation suffit",
+      "Elle agit, mais seulement par l’intermédiaire du président",
+      "Elle agit pourvu que le promoteur l’accepte aussi"
+     ],
+     "reponse": 0,
+     "aide": "Pas de personnalité juridique, pas de droit d’agir en justice.",
+     "explication": "Avant sa déclaration, l’association **n’a pas la personnalité morale** : elle ne peut pas ester en justice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse corrige correctement Tom ?",
+     "options": [
+      "L’animal est protégé et sensible, mais n’est pas une personne",
+      "L’animal est une personne depuis 2015 et agit en justice",
+      "L’animal est une personne morale représentée par un maître",
+      "L’animal devient une personne s’il est déclaré"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’article 515-14 du Code civil dans le cours.",
+     "explication": "Depuis 2015, l’animal est un **être vivant doué de sensibilité** mais reste soumis au **régime des biens** : ce n’est pas une personne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque cas à son statut juridique.",
+     "paires": [
+      [
+       "Une société anonyme immatriculée",
+       "Une personne morale"
+      ],
+      [
+       "Un enfant né vivant et viable",
+       "Une personne physique"
+      ],
+      [
+       "Un chat",
+       "Un bien, mais un être sensible"
+      ],
+      [
+       "Une association non déclarée",
+       "Pas de personnalité juridique"
+      ]
+     ],
+     "aide": "Pense à ce qui donne la personnalité : naissance, immatriculation, déclaration.",
+     "explication": "Immatriculation : personne **morale**. Naissance : personne **physique**. L’animal reste un **bien**. Sans déclaration, l’association **n’a pas de personnalité**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b90b4995-a79d-50f5-af64-5ebc98df0f23",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les achats d’Enzo, 14 ans",
+   "competence": "analyser-document",
+   "situation": "Enzo a 14 ans et n’est pas émancipé. Il envisage quatre actes. Sa mère se demande lesquels il peut faire seul.",
+   "documents": [
+    {
+     "id": "actes",
+     "type": "tableau",
+     "titre": "Les quatre actes envisagés",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "n°",
+      "Acte"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "1",
+       "Acheter un sandwich à la boulangerie"
+      ],
+      [
+       "2",
+       "Acheter seul un scooter de 1 800 €"
+      ],
+      [
+       "3",
+       "Prendre un abonnement de bus"
+      ],
+      [
+       "4",
+       "Conclure seul un emprunt de 5 000 €"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "actes",
+     "enonce": "Touche les deux actes de la vie courante qu’Enzo peut accomplir seul.",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Un acte de la vie courante est un acte ordinaire et de faible valeur.",
+     "explication": "Le **sandwich** et l’**abonnement de bus** sont des actes de la vie courante. Le scooter et l’emprunt engagent trop : ses parents doivent agir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui agit pour Enzo dans les actes qu’il ne peut pas faire seul ?",
+     "options": [
+      "Ses représentants légaux, en principe ses parents",
+      "Le tuteur désigné pour tous les mineurs",
+      "Son professeur principal, par délégation",
+      "Le vendeur du magasin concerné"
+     ],
+     "reponse": 0,
+     "aide": "L’autorité parentale appartient en principe aux parents.",
+     "explication": "Le mineur non émancipé agit par ses **représentants légaux**, en principe ses **parents**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un mineur peut être émancipé par le juge à partir de 16 ans. Dans combien d’années Enzo pourra-t-il demander son émancipation ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais son âge à l’âge minimal.",
+     "explication": "16 − 14 = **2 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b90b4995-a79d-50f5-af64-5ebc98df0f23",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois adultes, trois protections",
+   "competence": "analyser-document",
+   "situation": "Le juge des tutelles examine trois dossiers de majeurs dont les facultés sont altérées. Il doit choisir la mesure la mieux adaptée à chacun.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les trois mesures",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Mesure",
+      "Protection",
+      "Qui agit ?"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Sauvegarde de justice",
+       "Légère, temporaire",
+       "La personne ; actes annulables s’ils lui nuisent"
+      ],
+      [
+       "Curatelle",
+       "Moyenne",
+       "La personne, assistée d’un curateur"
+      ],
+      [
+       "Tutelle",
+       "Forte",
+       "Le tuteur la représente"
+      ]
+     ]
+    },
+    {
+     "id": "dossiers",
+     "type": "tableau",
+     "titre": "Les trois dossiers",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Situation"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Mme Lemoine",
+       "Ses facultés sont gravement altérées : elle ne peut plus gérer seule ses affaires."
+      ],
+      [
+       "M. Petit",
+       "Il gère seul sa vie courante mais doit être conseillé pour les actes importants."
+      ],
+      [
+       "Mlle Colin",
+       "Trouble passager pendant une hospitalisation."
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à la mesure adaptée.",
+     "paires": [
+      [
+       "Mme Lemoine",
+       "La tutelle"
+      ],
+      [
+       "M. Petit",
+       "La curatelle"
+      ],
+      [
+       "Mlle Colin",
+       "La sauvegarde de justice"
+      ]
+     ],
+     "aide": "Plus l’altération est grave, plus la protection est forte.",
+     "explication": "Altération grave : **tutelle**. Besoin d’assistance pour les actes importants : **curatelle**. Trouble passager : **sauvegarde de justice**."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la mesure où la personne n’agit pas elle-même mais est représentée.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Représenter, c’est agir au nom et pour le compte d’autrui.",
+     "explication": "Dans la **tutelle**, le tuteur **représente** la personne protégée."
+    },
+    {
+     "type": "choix",
+     "enonce": "M. Petit veut vendre son appartement. Comment doit-il procéder, sous curatelle ?",
+     "options": [
+      "Il agit lui-même, assisté de son curateur",
+      "Son curateur agit seul à sa place",
+      "Il agit seul sans aucune assistance",
+      "Il demande à son voisin de signer"
+     ],
+     "reponse": 0,
+     "aide": "Sous curatelle, la personne agit, mais pas seule pour les actes importants.",
+     "explication": "En **curatelle**, la personne agit elle-même, **assistée** de son curateur pour les actes importants."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces actes : administration ou disposition ?",
+     "categories": [
+      "Acte d’administration",
+      "Acte de disposition"
+     ],
+     "items": [
+      [
+       "Encaisser des loyers",
+       0
+      ],
+      [
+       "Faire des réparations",
+       0
+      ],
+      [
+       "Vendre une maison",
+       1
+      ],
+      [
+       "Faire une donation",
+       1
+      ],
+      [
+       "Emprunter une grosse somme",
+       1
+      ]
+     ],
+     "aide": "Un acte de disposition engage durablement le patrimoine.",
+     "explication": "La **gestion courante** est un acte d’administration ; **vendre, donner, emprunter beaucoup** engagent durablement le patrimoine : actes de disposition."
+    }
+   ]
+  },
+  {
+   "chapitre": "b90b4995-a79d-50f5-af64-5ebc98df0f23",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le patrimoine de Mme Benoit",
+   "competence": "raisonner",
+   "situation": "Mme Benoit, 79 ans, est placée sous tutelle. Sa tutrice dresse l’inventaire de son patrimoine avant de décider s’il faut vendre la maison.",
+   "documents": [
+    {
+     "id": "inventaire",
+     "type": "tableau",
+     "titre": "L’inventaire de Mme Benoit",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Nature",
+      "Valeur"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Maison",
+       "Bien",
+       "180 000 €"
+      ],
+      [
+       "Voiture",
+       "Bien",
+       "7 500 €"
+      ],
+      [
+       "Épargne",
+       "Créance sur la banque",
+       "12 500 €"
+      ],
+      [
+       "Prêt immobilier restant",
+       "Dette",
+       "74 000 €"
+      ],
+      [
+       "Facture de garage à payer",
+       "Dette",
+       "1 200 €"
+      ],
+      [
+       "Droit à l’image",
+       "Droit de la personnalité",
+       "non évaluable"
+      ]
+     ]
+    },
+    {
+     "id": "decision",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Extrait de la décision",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Mme Benoit est placée sous [[a|tutelle]]. Sa tutrice la représente dans les actes de la vie civile ; elle ne peut pas vendre le logement sans l’autorisation du juge."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inventaire",
+     "enonce": "Touche la ligne qui n’entre pas dans le patrimoine de Mme Benoit.",
+     "reponse": [
+      "r5c0"
+     ],
+     "aide": "Le patrimoine ne comprend que ce qui s’évalue en argent.",
+     "explication": "Le **droit à l’image** est extrapatrimonial : il n’est pas évaluable en argent, donc hors du patrimoine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le montant de l’actif, c’est-à-dire des biens et créances, en euros ?",
+     "reponse": 200000,
+     "unite": "€",
+     "aide": "Additionne la maison, la voiture et l’épargne.",
+     "explication": "180 000 + 7 500 + 12 500 = **200 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le passif correspond aux dettes (prêt et facture de garage). Quelle est la valeur nette du patrimoine, actif moins passif, en euros ?",
+     "reponse": 124800,
+     "unite": "€",
+     "aide": "Passif = 74 000 + 1 200 = 75 200 €. Soustrais-le de l’actif de 200 000 €.",
+     "explication": "Passif : 74 000 + 1 200 = 75 200 €. Valeur nette : 200 000 − 75 200 = **124 800 €**."
+    },
+    {
+     "type": "zone",
+     "document": "decision",
+     "enonce": "Touche le mot qui désigne la mesure de protection de Mme Benoit.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est la mesure la plus protectrice : la personne est représentée.",
+     "explication": "Mme Benoit est sous **tutelle** : sa tutrice la représente."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la tutrice doit-elle demander l’autorisation du juge pour vendre la maison ?",
+     "options": [
+      "C’est un acte de disposition qui engage durablement le patrimoine",
+      "C’est un acte d’administration de gestion courante",
+      "C’est un acte de la vie courante pour une majeure",
+      "C’est un droit de la personnalité qu’on ne peut céder"
+     ],
+     "reponse": 0,
+     "aide": "Plus l’acte est grave, plus la protection est forte.",
+     "explication": "Vendre la maison est un **acte de disposition** : il engage durablement le patrimoine, donc le juge doit l’autoriser."
+    }
+   ]
+  },
+  {
+   "chapitre": "836bd40a-14f9-5594-982b-a6eff37d8489",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La photo de la soirée",
+   "competence": "analyser-document",
+   "situation": "Maëlys, 16 ans, découvre sur un réseau social une photo d’elle prise à une soirée privée, publiée par un camarade avec un commentaire moqueur.",
+   "documents": [
+    {
+     "id": "post",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Publication",
+     "sousTitre": "Réseau social — texte imaginé",
+     "emoji": "📱",
+     "lignes": [
+      {
+       "texte": "Auteur : Dylan, camarade de classe",
+       "id": "auteur"
+      },
+      {
+       "texte": "Photo : Maëlys à la soirée de Léa, sans son accord",
+       "id": "photo"
+      },
+      {
+       "texte": "Commentaire : une moquerie sur son apparence",
+       "id": "comm"
+      },
+      {
+       "texte": "Visible par tous les abonnés de Dylan",
+       "id": "vis"
+      }
+     ],
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "post",
+     "enonce": "Touche la ligne qui porte atteinte au droit à l’image de Maëlys.",
+     "reponse": [
+      "photo"
+     ],
+     "aide": "Le droit à l’image protège contre la diffusion sans consentement.",
+     "explication": "Publier la **photo** sans l’accord de Maëlys porte atteinte à son **droit à l’image** et à sa vie privée (une soirée privée)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maëlys est mineure. Quel consentement faut-il pour diffuser son image ?",
+     "options": [
+      "Celui de ses parents",
+      "Celui du directeur du lycée",
+      "Celui de Dylan seul",
+      "Aucun, une photo se diffuse librement"
+     ],
+     "reponse": 0,
+     "aide": "Pour un mineur, l’autorisation des parents est nécessaire.",
+     "explication": "Pour un **mineur**, l’**autorisation des parents** est nécessaire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque caractère des droits de la personnalité à sa signification.",
+     "paires": [
+      [
+       "Inaliénables",
+       "On ne peut ni les vendre ni y renoncer définitivement"
+      ],
+      [
+       "Insaisissables",
+       "Aucun créancier ne peut les saisir"
+      ],
+      [
+       "Imprescriptibles",
+       "On ne les perd pas en ne les utilisant pas"
+      ],
+      [
+       "Intransmissibles",
+       "Ils s’éteignent en principe au décès"
+      ]
+     ],
+     "aide": "Le préfixe « in- » exprime ce qui est impossible.",
+     "explication": "Ces droits sont **hors commerce** : on ne les vend pas, on ne les saisit pas, on ne les perd pas par le temps, ils s’éteignent avec la personne."
+    }
+   ]
+  },
+  {
+   "chapitre": "836bd40a-14f9-5594-982b-a6eff37d8489",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelles données sont personnelles ?",
+   "competence": "analyser-document",
+   "situation": "Un site de jeux demande aux nouveaux joueurs une série d’informations. Un lycéen doit repérer celles qui relèvent du RGPD et celles qui n’en relèvent pas.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Les informations demandées",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Information",
+      "Exemple"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Nom et prénom",
+       "Lina Moreau"
+      ],
+      [
+       "Adresse IP de l’ordinateur",
+       "192.168.4.12"
+      ],
+      [
+       "Nombre de joueurs inscrits dans le monde",
+       "1 200 000"
+      ],
+      [
+       "Numéro de téléphone",
+       "06 00 00 00 00"
+      ],
+      [
+       "Moyenne anonyme du temps de jeu de tous les joueurs",
+       "42 minutes par jour"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "donnees",
+     "enonce": "Touche les trois informations qui sont des données à caractère personnel.",
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Une donnée personnelle permet d’identifier une personne, directement ou non.",
+     "explication": "Le **nom**, l’**adresse IP** et le **numéro de téléphone** permettent d’identifier une personne. Les chiffres globaux et anonymes ne le permettent pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces traces numériques : formelles ou informelles ?",
+     "categories": [
+      "Traces formelles",
+      "Traces informelles"
+     ],
+     "items": [
+      [
+       "Le profil que je remplis",
+       0
+      ],
+      [
+       "Mes publications",
+       0
+      ],
+      [
+       "Mon historique de navigation",
+       1
+      ],
+      [
+       "Ma géolocalisation",
+       1
+      ]
+     ],
+     "aide": "Une trace formelle est volontairement publiée ; une trace informelle se crée sans qu’on y pense.",
+     "explication": "Le **profil** et les **publications** sont formels ; l’**historique** et la **géolocalisation** sont informels."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque droit RGPD à ce qu’il permet.",
+     "paires": [
+      [
+       "Le droit d’accès",
+       "Savoir quelles données sont détenues"
+      ],
+      [
+       "Le droit de rectification",
+       "Corriger une donnée inexacte"
+      ],
+      [
+       "Le droit à l’effacement",
+       "Faire supprimer ses données"
+      ],
+      [
+       "Le droit à la portabilité",
+       "Récupérer ses données pour les emporter ailleurs"
+      ]
+     ],
+     "aide": "Le droit à l’effacement est aussi appelé droit à l’oubli.",
+     "explication": "Le RGPD donne **accès**, **rectification**, **effacement** (droit à l’oubli), **opposition** et **portabilité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le site Jeuzone a un chiffre d’affaires mondial de 500 millions d’euros. La CNIL peut sanctionner jusqu’à 4 % du chiffre d’affaires mondial. Quel est le maximum, en millions d’euros ?",
+     "reponse": 20,
+     "unite": "M€",
+     "aide": "4 % de 500 = 0,04 × 500.",
+     "explication": "0,04 × 500 = **20 millions d’euros** au maximum."
+    }
+   ]
+  },
+  {
+   "chapitre": "836bd40a-14f9-5594-982b-a6eff37d8489",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le réseau social et Noé, 14 ans",
+   "competence": "argumenter",
+   "situation": "Noé, 14 ans, s’inscrit sur Chatzone, un réseau social imaginaire. Il n’a pas lu la politique de confidentialité, que sa grande sœur trouve très gourmande en données.",
+   "documents": [
+    {
+     "id": "politique",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Chatzone — politique de confidentialité",
+     "sousTitre": "Résumé imaginé pour l’exercice",
+     "emoji": "🔒",
+     "lignes": [
+      {
+       "texte": "Finalité : proposer un fil d’actualité des amis",
+       "id": "fin"
+      },
+      {
+       "texte": "Données collectées : nom, e-mail, date de naissance",
+       "id": "base"
+      },
+      {
+       "texte": "Collecte aussi : géolocalisation en continu et liste de contacts",
+       "id": "geo"
+      },
+      {
+       "texte": "Consentement : case déjà cochée à l’inscription",
+       "id": "cons"
+      },
+      {
+       "texte": "Durée de conservation : illimitée",
+       "id": "duree"
+      }
+     ],
+     "teinte": "bleu"
+    },
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Ce que Noé voudrait faire",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Souhait",
+      "Droit RGPD"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Voir tout ce que Chatzone détient sur lui",
+       "?"
+      ],
+      [
+       "Faire supprimer ses publications",
+       "?"
+      ],
+      [
+       "Faire corriger sa date de naissance",
+       "?"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "politique",
+     "enonce": "Touche la ligne qui contredit le principe de minimisation, vu la finalité annoncée.",
+     "reponse": [
+      "geo"
+     ],
+     "aide": "Pour un fil d’actualité, a-t-on besoin de suivre la position de l’utilisateur en continu ?",
+     "explication": "La minimisation impose de ne collecter que ce qui est **nécessaire à une finalité précise** : la **géolocalisation en continu** et les **contacts** ne le sont pas pour un simple fil."
+    },
+    {
+     "type": "zone",
+     "document": "politique",
+     "enonce": "Touche la ligne qui ne respecte pas l’exigence d’un consentement libre, éclairé et explicite.",
+     "reponse": [
+      "cons"
+     ],
+     "aide": "Une case déjà cochée demande-t-elle un geste volontaire ?",
+     "explication": "Une **case déjà cochée** n’est pas un consentement **explicite** : il faut un geste clair de l’utilisateur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Noé a 14 ans. Peut-il consentir seul au traitement de ses données par ce réseau social en France ?",
+     "options": [
+      "Non : il faut l’accord de ses parents avant 15 ans",
+      "Oui : à partir de 13 ans, sans rien demander",
+      "Oui, si la case est déjà cochée par le site",
+      "Non : seul le site peut décider pour lui"
+     ],
+     "reponse": 0,
+     "aide": "Le seuil en France est de 15 ans.",
+     "explication": "En France, un mineur peut consentir seul à partir de **15 ans** : Noé, 14 ans, a besoin de l’accord de ses **parents**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chatzone a un chiffre d’affaires mondial de 1 800 millions d’euros. Quelle est la sanction maximale de la CNIL, à 4 % de ce chiffre, en millions d’euros ?",
+     "reponse": 72,
+     "unite": "M€",
+     "aide": "4 % de 1 800 = 0,04 × 1 800.",
+     "explication": "0,04 × 1 800 = **72 millions d’euros** au maximum."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque souhait de Noé au droit RGPD correspondant.",
+     "paires": [
+      [
+       "Voir tout ce que Chatzone détient sur lui",
+       "Le droit d’accès"
+      ],
+      [
+       "Faire supprimer ses publications",
+       "Le droit à l’effacement"
+      ],
+      [
+       "Faire corriger sa date de naissance",
+       "Le droit de rectification"
+      ]
+     ],
+     "aide": "Accès, rectification, effacement : un nom pour chaque geste.",
+     "explication": "**Accès** pour consulter, **effacement** (droit à l’oubli) pour supprimer, **rectification** pour corriger."
+    }
+   ]
+  }
+ ]
+}

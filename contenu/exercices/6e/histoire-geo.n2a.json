@@ -1,0 +1,2795 @@
+{
+ "niveau": "6e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "f83d440f-a345-50f5-9c39-9a87c83109b3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Retrouver les villes romaines de la Gaule",
+   "competence": "lire-carte",
+   "situation": "Lina visite le sud-est de la France avec ses parents. Sur sa carte, des villes portent un nom latin : Lugdunum, Nemausus… Elle veut savoir où elles se trouvent aujourd’hui.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes de la Gaule romaine",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "lug",
+       "lieu": "lugdunum",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "nem",
+       "lieu": "nemausus",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "are",
+       "lieu": "arles",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "lut",
+       "lieu": "lutece",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "gard",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Le pont du Gard",
+     "sousTitre": "Panneau devant le monument",
+     "emoji": "🏛️",
+     "source": "Chiffres arrondis.",
+     "lignes": [
+      {
+       "texte": "Construit au Ier siècle de notre ère"
+      },
+      {
+       "texte": "Pont à 3 étages d’arcades",
+       "valeur": "3 étages",
+       "id": "etages"
+      },
+      {
+       "texte": "Hauteur",
+       "valeur": "environ 50 m"
+      },
+      {
+       "texte": "Il fait partie d’un aqueduc de 50 km qui amène l’eau à Nemausus (Nîmes)",
+       "id": "role"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "**Lugdunum** est devenue **Lyon**. Touche son repère sur la carte.",
+     "reponse": [
+      "lug"
+     ],
+     "aide": "Lyon est au nord du couloir du Rhône, au bord du fleuve.",
+     "explication": "Lugdunum est le repère **A** : c’est aujourd’hui Lyon, au confluent du Rhône et de la Saône."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "**Nemausus** est devenue **Nîmes**, tout près du Rhône. Touche son repère.",
+     "reponse": [
+      "nem"
+     ],
+     "aide": "Nîmes est dans le sud, à l’ouest d’Arles et pas loin de la mer Méditerranée.",
+     "explication": "Nemausus est le repère **B** : c’est aujourd’hui Nîmes. L’aqueduc du pont du Gard lui amenait l’eau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le panneau (Doc 2), combien d’**étages d’arcades** compte le pont du Gard ?",
+     "reponse": 3,
+     "unite": "étages",
+     "aide": "Lis la ligne qui parle des étages.",
+     "explication": "Le pont du Gard compte **3** étages d’arcades superposées."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi servait cet aqueduc ?",
+     "options": [
+      "À amener l’eau jusqu’à la ville",
+      "À défendre la ville contre les ennemis",
+      "À faire passer les chars de course",
+      "À stocker le blé pour l’hiver"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière ligne du panneau.",
+     "explication": "L’aqueduc **amène l’eau** jusqu’à Nemausus, pour les fontaines et les thermes."
+    }
+   ]
+  },
+  {
+   "chapitre": "f83d440f-a345-50f5-9c39-9a87c83109b3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Se promener dans une ville romaine",
+   "competence": "observer-schema",
+   "situation": "Julia, une petite Gauloise, arrive pour la première fois dans une ville bâtie par les Romains. Elle regarde le plan affiché à la porte et cherche où aller.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan d’une ville romaine de Gaule",
+     "largeur": 340,
+     "hauteur": 335,
+     "source": "Plan simplifié, imaginé pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 25,
+       "l": 300,
+       "h": 220,
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "rempart"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 25,
+       "l": 20,
+       "h": 220,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "cardo",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 125,
+       "l": 300,
+       "h": 20,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "decumanus",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 25,
+       "r": 7,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "porteN",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 245,
+       "r": 7,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "porteS",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 20,
+       "cy": 135,
+       "r": 7,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "porteO",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 320,
+       "cy": 135,
+       "r": 7,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "porteE",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 152,
+       "l": 80,
+       "h": 44,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "forum",
+       "zone": true,
+       "texte": "Forum"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 80,
+       "l": 64,
+       "h": 36,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "temple",
+       "zone": true,
+       "texte": "Temple"
+      },
+      {
+       "forme": "rect",
+       "x": 38,
+       "y": 154,
+       "l": 104,
+       "h": 56,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "thermes",
+       "zone": true,
+       "texte": "Thermes"
+      },
+      {
+       "forme": "chemin",
+       "d": "M45 118 A45 45 0 0 1 135 118 Z",
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "theatre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 108,
+       "texte": "Théâtre",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 292,
+       "rx": 84,
+       "ry": 28,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "amphi",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 296,
+       "texte": "Amphithéâtre",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 34,
+       "l": 30,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 224,
+       "y": 34,
+       "l": 30,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 260,
+       "y": 34,
+       "l": 40,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 38,
+       "y": 34,
+       "l": 30,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 74,
+       "y": 34,
+       "l": 30,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 280,
+       "y": 156,
+       "l": 30,
+       "h": 40,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 206,
+       "l": 40,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 206,
+       "l": 32,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        335,
+        85
+       ],
+       "a": [
+        292,
+        85
+       ],
+       "teinte": "bleu",
+       "fleche": "fin",
+       "style": "pointilles",
+       "id": "aqueduc",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 322,
+       "y": 76,
+       "texte": "Eau",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 36,
+       "y": 14,
+       "texte": "N ↑",
+       "taille": "petit",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Julia veut voir la **grande place** où l’on discute, où l’on fait des affaires et où l’on rend la justice. Touche-la.",
+     "reponse": [
+      "forum"
+     ],
+     "aide": "C’est la place publique, juste à côté de l’endroit où les deux grandes rues se croisent.",
+     "explication": "C’est le **forum** : le cœur de la ville, avec ses boutiques, ses affaires et ses discours."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche la grande rue qui va du **nord au sud** : le **cardo**.",
+     "reponse": [
+      "cardo"
+     ],
+     "aide": "Regarde la flèche N en haut du plan. Le cardo est vertical.",
+     "explication": "Le **cardo** va du nord au sud. Le **decumanus**, lui, va d’est en ouest."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "multiple": true,
+     "enonce": "Touche les **deux** lieux où l’on va voir des spectacles.",
+     "reponse": [
+      "theatre",
+      "amphi"
+     ],
+     "aide": "L’un a la forme d’un demi-cercle, l’autre d’un ovale, et il est hors des murs.",
+     "explication": "Le **théâtre** et l’**amphithéâtre** accueillent les spectacles : pièces, courses, combats."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Compte les **portes** dans le rempart de la ville (les ronds bruns).",
+     "reponse": 4,
+     "unite": "portes",
+     "aide": "Il y en a une au bout de chaque grande rue.",
+     "explication": "Il y a **4 portes** : une au nord, une au sud, une à l’est et une à l’ouest, aux bouts du cardo et du decumanus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les rues se croisent à angle droit, comme les cases d’une grille. On appelle ce plan un plan en…",
+     "options": [
+      "damier",
+      "spirale",
+      "étoile",
+      "cercle"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Pense à un jeu de dames.",
+     "explication": "C’est un plan en **damier** : les Romains bâtissent presque toutes leurs villes sur ce modèle."
+    }
+   ]
+  },
+  {
+   "chapitre": "f83d440f-a345-50f5-9c39-9a87c83109b3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tertius devient citoyen romain",
+   "competence": "analyser-texte",
+   "situation": "Trois générations d’une même famille de Lugdunum vivent-elles de la même façon ? En lisant la lettre de Tertius et un tableau, tu vas comprendre comment la romanisation a changé leur vie… et pourquoi elle n’a pas touché tout le monde.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La lettre de Tertius",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Lugdunum, l’an 213. Mon grand-père ne parlait que le gaulois. Mon père a appris le [[r|latin]] pour vendre son vin sur le [[r|forum]].",
+      "Moi, je vais aux [[r|thermes]] avec mes amis et au théâtre le dimanche. Et depuis l’édit de l’empereur Caracalla, l’an dernier, nous sommes tous citoyens romains.",
+      "Mon cousin, lui, vit dans un village de campagne. Il parle toujours gaulois et ne va jamais en ville."
+     ]
+    },
+    {
+     "id": "compar",
+     "type": "tableau",
+     "titre": "Ville de Gaule ou village de campagne ?",
+     "source": "Tableau écrit pour l’exercice, d’après le cours.",
+     "colonnes": [
+      "",
+      "Dans la ville",
+      "Dans la campagne"
+     ],
+     "lignes": [
+      [
+       "Langue",
+       "Latin et gaulois",
+       "Surtout gaulois"
+      ],
+      [
+       "Équipements",
+       "Forum, thermes, théâtre",
+       "Fermes et petits sanctuaires"
+      ],
+      [
+       "Dieux",
+       "Dieux gaulois et dieux romains associés",
+       "Dieux gaulois"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": true,
+     "portee": [
+      0,
+      1
+     ],
+     "enonce": "Touche les **trois mots** qui montrent que la famille de Tertius a adopté le mode de vie romain.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche une langue, un lieu pour les affaires et un lieu pour se baigner.",
+     "explication": "**Latin**, **forum** et **thermes** : la langue, la place publique et les bains romains."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces moments de l’histoire de la famille, du plus **ancien** au plus **récent**.",
+     "items": [
+      "Le grand-père ne parle que le gaulois",
+      "Le père apprend le latin pour vendre son vin",
+      "L’empereur Caracalla rend tous les hommes libres citoyens",
+      "Tertius écrit sa lettre à Lugdunum"
+     ],
+     "aide": "La lettre raconte les générations : grand-père, père, puis Tertius.",
+     "explication": "On suit **trois générations** : le grand-père gaulois, le père qui apprend le latin, puis l’édit de Caracalla en 212, et enfin Tertius qui écrit en 213."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, pourquoi le cousin de Tertius parle-t-il toujours gaulois ?",
+     "options": [
+      "La romanisation touche surtout les villes",
+      "Rome interdit le latin dans les campagnes",
+      "Les paysans refusent de payer des impôts",
+      "Il n’existe aucun village en Gaule"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne « Dans la campagne » à la colonne « Dans la ville ».",
+     "explication": "La romanisation touche **surtout les villes et les élites** : les campagnes gardent longtemps leurs langues et leurs coutumes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur l’édit de 212.",
+     "texte": "L’édit de ___ donne la citoyenneté romaine à tous les ___ de l’Empire.",
+     "reponses": [
+      [
+       "Caracalla"
+      ],
+      [
+       "hommes libres"
+      ]
+     ],
+     "banque": [
+      "Caracalla",
+      "Constantin",
+      "hommes libres",
+      "esclaves",
+      "soldats"
+     ],
+     "aide": "Tertius en parle dans le deuxième paragraphe de sa lettre.",
+     "explication": "L’édit de **Caracalla** (212) donne la citoyenneté à tous les **hommes libres** : un vaincu devient un citoyen."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ceb91e7-2feb-5970-8f1e-c1c588744cd2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur les routes de Paul de Tarse",
+   "competence": "lire-carte",
+   "situation": "Paul de Tarse est l’un des premiers à annoncer le message de Jésus hors de Judée. D’après les récits chrétiens, il voyage de ville en ville dans l’Empire romain. Suis-le sur la carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Des villes que Paul visite, d’après les récits chrétiens",
+     "fond": "mediterranee",
+     "cadrage": [
+      8,
+      31,
+      40,
+      44
+     ],
+     "source": "D’après les Actes des Apôtres. Les trajets exacts sont discutés.",
+     "lieux": [
+      {
+       "id": "jer",
+       "lieu": "jerusalem",
+       "symbole": "point",
+       "nom": "Jérusalem",
+       "teinte": "violet"
+      },
+      {
+       "id": "ant",
+       "lieu": "antioche",
+       "symbole": "point",
+       "nom": "Antioche",
+       "teinte": "violet"
+      },
+      {
+       "id": "eph",
+       "lieu": "ephese",
+       "symbole": "point",
+       "nom": "Éphèse",
+       "teinte": "violet"
+      },
+      {
+       "id": "rom",
+       "lieu": "rome",
+       "symbole": "point",
+       "nom": "Rome",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située **le plus à l’ouest** : c’est la capitale de l’Empire.",
+     "reponse": [
+      "rom"
+     ],
+     "aide": "Regarde du côté de la péninsule italienne, à gauche de la carte.",
+     "explication": "C’est **Rome**, tout à l’ouest. Elle est la capitale de l’Empire romain."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située **le plus au sud** : c’est là que Jésus a été crucifié.",
+     "reponse": [
+      "jer"
+     ],
+     "aide": "Elle se trouve au bord de l’Orient, loin de la mer Égée.",
+     "explication": "**Jérusalem** est la plus au sud, en Judée, une province de l’Empire romain."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui permet à Paul de voyager si loin et si vite ?",
+     "options": [
+      "Les routes et les ports de l’Empire romain",
+      "Des trains rapides entre les grandes villes",
+      "Une carte précise du monde entier",
+      "Une armée qui l’accompagne partout"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que Rome a construit partout dans l’Empire.",
+     "explication": "Les **routes** et les **ports** de l’Empire, plus sûrs depuis la paix romaine, permettent de circuler d’une ville à l’autre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Dans l’Orient romain, on parle ___ : c’est la langue commune, et Paul se fait comprendre.",
+     "reponses": [
+      [
+       "grec"
+      ]
+     ],
+     "banque": [
+      "grec",
+      "latin",
+      "gaulois",
+      "hébreu"
+     ],
+     "aide": "Ce n’est pas la langue de Rome, mais celle de l’Orient.",
+     "explication": "Le **grec** est la langue commune de l’Orient : il aide le message à se diffuser."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ceb91e7-2feb-5970-8f1e-c1c588744cd2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Que racontent les sources sur Jésus ?",
+   "competence": "analyser-document",
+   "situation": "Pour savoir ce qui s’est passé en Judée il y a 2 000 ans, les historiens n’ont pas de photos : ils ont des textes. Mais tous les textes ne se lisent pas de la même façon.",
+   "documents": [
+    {
+     "id": "tacite",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un historien romain parle des chrétiens",
+     "auteur": "D’après Tacite, Annales (vers 115) — texte adapté",
+     "blocs": [
+      "Les chrétiens tirent leur nom de Christ, qui avait été condamné à mort sous l’empereur Tibère par le gouverneur romain [[p|Ponce]] [[p|Pilate]].",
+      "Tacite n’aime pas ce mouvement : il le juge dangereux. Mais il prouve qu’il existe, à Rome, au début du IIe siècle."
+     ]
+    },
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Qui parle de Jésus et des premiers chrétiens ?",
+     "source": "Tableau de synthèse écrit pour l’exercice.",
+     "colonnes": [
+      "Source",
+      "Qui l’écrit ?",
+      "Elle est écrite…"
+     ],
+     "lignes": [
+      [
+       "Évangile de Marc",
+       "Un chrétien",
+       "Vers 70"
+      ],
+      [
+       "Évangile de Luc",
+       "Un chrétien",
+       "Entre 70 et 100"
+      ],
+      [
+       "Flavius Josèphe",
+       "Un historien juif, non chrétien",
+       "Vers 90"
+      ],
+      [
+       "Tacite",
+       "Un historien romain, non chrétien",
+       "Vers 115"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Des dates autour de Jésus",
+     "debut": 0,
+     "fin": 150,
+     "pas": 25,
+     "periodes": [
+      {
+       "id": "evang",
+       "debut": 70,
+       "fin": 100,
+       "nom": "Évangiles écrits",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "mort",
+       "date": 30,
+       "nom": "Mort de Jésus (vers 30)"
+      },
+      {
+       "id": "tacite",
+       "date": 115,
+       "nom": "Tacite écrit (vers 115)"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tacite",
+     "multiple": true,
+     "portee": [
+      0
+     ],
+     "enonce": "Touche **le nom du gouverneur romain** qui, selon Tacite, a condamné Jésus.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Il y a deux mots à toucher : un prénom romain et un nom de famille.",
+     "explication": "Il s’agit de **Ponce Pilate**, gouverneur de Judée sous l’empereur Tibère."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après la frise (Doc 3), combien d’années séparent la mort de Jésus (vers 30) du début de la rédaction des Évangiles (vers 70) ?",
+     "reponse": 40,
+     "unite": "ans",
+     "aide": "70 − 30.",
+     "explication": "70 − 30 = **40 ans** : les Évangiles sont écrits des décennies après les faits."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces auteurs d’après le tableau (Doc 2).",
+     "categories": [
+      "Auteur chrétien",
+      "Auteur non chrétien"
+     ],
+     "items": [
+      [
+       "Marc",
+       0
+      ],
+      [
+       "Luc",
+       0
+      ],
+      [
+       "Flavius Josèphe",
+       1
+      ],
+      [
+       "Tacite",
+       1
+      ]
+     ],
+     "aide": "Regarde la deuxième colonne du tableau.",
+     "explication": "**Marc** et **Luc** sont chrétiens ; **Flavius Josèphe** et **Tacite** ne le sont pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve le texte de Tacite pour un historien ?",
+     "options": [
+      "Que les premiers chrétiens existaient bien à Rome",
+      "Que tout ce que disent les Évangiles est exact",
+      "Que Tacite était lui-même chrétien",
+      "Que Jésus a écrit un livre"
+     ],
+     "reponse": 0,
+     "aide": "Tacite n’est pas chrétien et il n’aime pas le mouvement.",
+     "explication": "Un auteur **non chrétien** atteste que le mouvement **existait**. Les Évangiles, eux, disent ce que les chrétiens croyaient."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ceb91e7-2feb-5970-8f1e-c1c588744cd2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Thaïs et le voyageur d’Éphèse",
+   "competence": "analyser-document",
+   "situation": "À Corinthe, vers l’an 60, une tisserande entend parler de Jésus par un voyageur. En croisant son récit et la carte, tu vas comprendre pourquoi cette religion se diffuse si vite.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le récit de Thaïs",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Corinthe, vers l’an 60. Thaïs, tisserande, raconte : « Je ne suis pas juive. Un voyageur venu d’Éphèse par bateau nous a parlé d’un homme, Jésus, que ses disciples disent ressuscité.",
+      "Il parle [[g|grec]], comme nous tous ici : nous l’avons compris sans peine. Chaque semaine, nous nous réunissons dans la [[m|maison]] de Marcus. Nous lisons des textes de la Bible, que les juifs nous ont transmis, et nous partageons un repas.",
+      "Hier, trois nouveaux membres ont été baptisés. »"
+     ]
+    },
+    {
+     "id": "carte3",
+     "type": "carte",
+     "titre": "La mer Égée entre Éphèse et Corinthe",
+     "fond": "mediterranee",
+     "cadrage": [
+      18,
+      34,
+      32,
+      42
+     ],
+     "lieux": [
+      {
+       "id": "eph",
+       "lieu": "ephese",
+       "symbole": "point",
+       "nom": "Éphèse",
+       "teinte": "violet"
+      },
+      {
+       "id": "cor",
+       "lieu": "corinthe",
+       "symbole": "point",
+       "nom": "Corinthe",
+       "teinte": "violet"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        "ephese",
+        "corinthe"
+       ],
+       "style": "fleche",
+       "teinte": "corail"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "portee": [
+      1
+     ],
+     "enonce": "Touche le **mot** qui explique pourquoi Thaïs comprend le voyageur.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "C’est une langue.",
+     "explication": "Le **grec** : langue commune de l’Orient, elle permet à des gens de pays différents de se comprendre."
+    },
+    {
+     "type": "zone",
+     "document": "carte3",
+     "enonce": "Touche la ville **d’où vient** le voyageur.",
+     "reponse": [
+      "eph"
+     ],
+     "aide": "Relis le début du récit : le voyageur vient « d’Éphèse ».",
+     "explication": "Il vient d’**Éphèse**, de l’autre côté de la mer Égée, et traverse la mer par bateau."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque facteur à son effet.",
+     "paires": [
+      [
+       "Les routes et la paix de l’Empire",
+       "On circule facilement"
+      ],
+      [
+       "Le grec, langue commune",
+       "On se comprend"
+      ],
+      [
+       "L’ouverture aux non-juifs",
+       "La religion devient universelle"
+      ]
+     ],
+     "aide": "Un facteur = une cause. Cherche ce qu’elle permet.",
+     "explication": "Routes → on **circule** ; grec → on se **comprend** ; ouverture aux non-juifs → la religion devient **universelle**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ce que décrit Thaïs.",
+     "categories": [
+      "Hérité du judaïsme",
+      "Propre au christianisme"
+     ],
+     "items": [
+      [
+       "Lire des textes de la Bible",
+       0
+      ],
+      [
+       "Croire en un seul Dieu",
+       0
+      ],
+      [
+       "Croire que Jésus est ressuscité",
+       1
+      ],
+      [
+       "Être baptisé",
+       1
+      ]
+     ],
+     "aide": "Le baptême remplace la circoncision ; la Bible vient du judaïsme.",
+     "explication": "La **Bible** et le **monothéisme** viennent du judaïsme. La foi en **Jésus-Christ** et le **baptême** sont propres au christianisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Thaïs n’est pas juive. Pourquoi peut-elle pourtant rejoindre la communauté ?",
+     "options": [
+      "Le christianisme s’ouvre aussi aux non-juifs",
+      "Elle a reçu un ordre de l’empereur",
+      "Tout le monde devient chrétien à Corinthe",
+      "Elle a payé pour y entrer"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui change le christianisme d’un mouvement juif en religion universelle.",
+     "explication": "L’ouverture aux **non-juifs** est la décision majeure : elle fait du christianisme une religion **universelle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "319cde17-8032-5331-9e3e-728d758e3a99",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un magistrat inquiet",
+   "competence": "analyser-texte",
+   "situation": "Dans une ville de l’Empire, au IIIe siècle, un magistrat doit faire respecter l’ordre. Voici ce qu’il raconte sur des chrétiens. Pourquoi son rapport est-il si embarrassé ?",
+   "documents": [
+    {
+     "id": "rapport",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le rapport d’un magistrat",
+     "auteur": "Texte imaginé, écrit pour l’exercice",
+     "blocs": [
+      "Je suis magistrat dans une ville de province. Aujourd’hui, j’ai fait venir quelques personnes qui se disent chrétiennes.",
+      "Je leur ai demandé de verser un peu d’encens devant la [[s|statue]] de l’empereur, comme tous les habitants. Elles ont refusé. Je les ai interrogées : elles ne sont pas des voleurs, mais leur refus m’inquiète."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rapport",
+     "portee": [
+      1
+     ],
+     "enonce": "Touche l’**objet** devant lequel le magistrat demande un geste de respect.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Il représente l’empereur.",
+     "explication": "La **statue** de l’empereur : verser de l’encens devant elle, c’est montrer sa loyauté envers Rome."
+    },
+    {
+     "type": "choix",
+     "enonce": "Rome tolère presque tous les cultes. À quelle condition ?",
+     "options": [
+      "Honorer aussi l’empereur",
+      "Ne pas construire de temples",
+      "Payer un impôt spécial",
+      "Avoir au moins mille fidèles"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que le magistrat demande aux chrétiens.",
+     "explication": "Rome accepte les dieux des autres, **à condition** qu’on honore aussi l’**empereur**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication.",
+     "texte": "Pour Rome, le refus des chrétiens est un acte de ___ politique, et pas seulement une opinion religieuse.",
+     "reponses": [
+      [
+       "déloyauté"
+      ]
+     ],
+     "banque": [
+      "déloyauté",
+      "loyauté",
+      "fête",
+      "curiosité"
+     ],
+     "aide": "Refuser de saluer l’empereur, c’est refuser de lui être fidèle.",
+     "explication": "Le refus du culte impérial est lu comme de la **déloyauté** envers l’empereur : voilà pourquoi les chrétiens inquiètent."
+    }
+   ]
+  },
+  {
+   "chapitre": "319cde17-8032-5331-9e3e-728d758e3a99",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des traces et des dates",
+   "competence": "se-reperer-temps",
+   "situation": "Les chrétiens ont laissé des traces sous la ville de Rome et des textes sur l’édit qui a changé leur sort. Une frise et un panneau de musée t’aident à les situer.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Des persécutions à la religion officielle",
+     "debut": 50,
+     "fin": 400,
+     "pas": 25,
+     "periodes": [
+      {
+       "id": "dioc",
+       "debut": 303,
+       "fin": 311,
+       "nom": "Persécution de Dioclétien",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "neron",
+       "date": 64,
+       "nom": "Néron accuse les chrétiens"
+      },
+      {
+       "id": "milan",
+       "date": 313,
+       "nom": "Édit de Milan"
+      },
+      {
+       "id": "nicee",
+       "date": 325,
+       "nom": "Concile de Nicée"
+      },
+      {
+       "id": "thess",
+       "date": 380,
+       "nom": "Édit de Thessalonique"
+      }
+     ]
+    },
+    {
+     "id": "cata",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Les catacombes de Rome",
+     "sousTitre": "Panneau de visite",
+     "emoji": "🕯️",
+     "lignes": [
+      {
+       "texte": "Des galeries creusées sous la ville",
+       "id": "galeries"
+      },
+      {
+       "texte": "Les chrétiens y enterrent leurs morts",
+       "id": "morts"
+      },
+      {
+       "texte": "Peintures et inscriptions sur les murs",
+       "id": "peintures"
+      },
+      {
+       "texte": "Un signe discret : le poisson (en grec, ichthus)",
+       "id": "poisson"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’édit de Milan (313) de l’édit de Thessalonique (380) ?",
+     "reponse": 67,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "380 − 313 = **67 ans**. En moins d’un siècle, les persécutés deviennent la religion officielle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la persécution de Dioclétien, d’après la frise ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Regarde le début et la fin de la bande.",
+     "explication": "De 303 à 311 : 311 − 303 = **8 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel événement a lieu entre l’édit de Milan et l’édit de Thessalonique ?",
+     "options": [
+      "Le concile de Nicée",
+      "L’incendie de Rome sous Néron",
+      "La persécution de Dioclétien",
+      "La mort de Jésus"
+     ],
+     "reponse": 0,
+     "aide": "Cherche sur la frise ce qui se trouve entre 313 et 380.",
+     "explication": "Le **concile de Nicée** a lieu en 325, entre les deux édits."
+    },
+    {
+     "type": "zone",
+     "document": "cata",
+     "enonce": "Touche la ligne du panneau qui parle d’un **signe** que les chrétiens utilisaient pour se reconnaître.",
+     "reponse": [
+      "poisson"
+     ],
+     "aide": "Un animal aquatique.",
+     "explication": "Le **poisson** (en grec *ichthus*) est un signe discret de reconnaissance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce signe est-il « discret » ?",
+     "options": [
+      "Parce que les chrétiens étaient parfois persécutés",
+      "Parce qu’il est trop petit pour être dessiné",
+      "Parce que l’empereur l’avait choisi",
+      "Parce que les Romains le connaissaient tous"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la période où l’on pouvait être arrêté pour sa foi.",
+     "explication": "Pendant les persécutions, mieux valait ne pas se faire repérer : un **signe discret** permettait de se reconnaître."
+    }
+   ]
+  },
+  {
+   "chapitre": "319cde17-8032-5331-9e3e-728d758e3a99",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du refus au pouvoir : le tournant du IVe siècle",
+   "competence": "raisonner",
+   "situation": "Comment les chrétiens, persécutés, deviennent-ils en un siècle la religion de l’Empire ? Rapproche un tableau et un schéma pour suivre ce renversement.",
+   "documents": [
+    {
+     "id": "emp",
+     "type": "tableau",
+     "titre": "Quatre empereurs, quatre attitudes",
+     "source": "Tableau de synthèse écrit pour l’exercice.",
+     "colonnes": [
+      "Empereur",
+      "Année",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Néron",
+       "64",
+       "Accuse les chrétiens de l’incendie de Rome"
+      ],
+      [
+       "Dioclétien",
+       "303",
+       "Lance la persécution la plus violente"
+      ],
+      [
+       "Constantin",
+       "313",
+       "Accorde la liberté de culte à tous (édit de Milan)"
+      ],
+      [
+       "Théodose",
+       "380",
+       "Fait du christianisme la religion officielle"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "L’enchaînement des événements",
+     "noeuds": [
+      {
+       "id": "refus",
+       "texte": "Les chrétiens refusent le culte de l’empereur"
+      },
+      {
+       "id": "perse",
+       "texte": "Rome les persécute"
+      },
+      {
+       "id": "mart",
+       "texte": "Ceux qui meurent pour leur foi : les martyrs"
+      },
+      {
+       "id": "liberte",
+       "texte": "313 : liberté de culte"
+      }
+     ],
+     "liens": [
+      {
+       "de": "refus",
+       "a": "perse"
+      },
+      {
+       "de": "perse",
+       "a": "mart"
+      },
+      {
+       "de": "mart",
+       "a": "liberte"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "emp",
+     "enonce": "Touche la case qui donne **l’année** de l’édit de Milan.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "L’édit de Milan est la décision de Constantin.",
+     "explication": "Constantin accorde la liberté de culte en **313**."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche la **première cause** de l’enchaînement : ce qui déclenche les persécutions.",
+     "reponse": [
+      "refus"
+     ],
+     "aide": "C’est tout en haut du schéma.",
+     "explication": "Tout commence par le **refus** du culte de l’empereur, lu comme de la déloyauté."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mesures.",
+     "categories": [
+      "Contre les chrétiens",
+      "En faveur des chrétiens"
+     ],
+     "items": [
+      [
+       "Accuser les chrétiens de l’incendie de Rome",
+       0
+      ],
+      [
+       "Lancer la persécution de 303",
+       0
+      ],
+      [
+       "Accorder la liberté de culte à tous",
+       1
+      ],
+      [
+       "Faire du christianisme la religion officielle",
+       1
+      ]
+     ],
+     "aide": "Relis la colonne « Ce qu’il fait » du tableau.",
+     "explication": "Néron et Dioclétien **s’en prennent** aux chrétiens ; Constantin et Théodose **leur donnent** la liberté puis le premier rang."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre le début de la persécution de Dioclétien (303) et l’édit de Milan (313) ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "313 − 303.",
+     "explication": "313 − 303 = **10 ans** : la plus violente des persécutions est suivie, très vite, par la liberté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Les chrétiens tués pour leur foi sont vénérés comme des ___ , un mot grec qui signifie ___.",
+     "reponses": [
+      [
+       "martyrs"
+      ],
+      [
+       "témoin",
+       "témoins"
+      ]
+     ],
+     "banque": [
+      "martyrs",
+      "soldats",
+      "témoin",
+      "chef",
+      "prêtre"
+     ],
+     "aide": "Regarde le troisième maillon du schéma.",
+     "explication": "Ce sont des **martyrs**, mot grec qui veut dire **témoin** : ils témoignent de leur foi jusqu’au bout."
+    }
+   ]
+  },
+  {
+   "chapitre": "8090486b-a1d1-5e4f-9d10-f55838f83069",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Suivre la route de la soie",
+   "competence": "lire-carte",
+   "situation": "Mei est marchande à Chang’an, la capitale des Han. Elle prépare une caravane de soie pour l’Occident. Regarde la route qu’elle va suivre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Une route entre la Chine et la Méditerranée",
+     "fond": "monde",
+     "cadrage": [
+      28,
+      14,
+      122,
+      52
+     ],
+     "source": "Tracé très simplifié de la route de la soie.",
+     "lieux": [
+      {
+       "id": "chang",
+       "lieu": "changan",
+       "symbole": "point",
+       "nom": "Chang’an",
+       "teinte": "violet"
+      },
+      {
+       "id": "dun",
+       "lieu": "dunhuang",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "kac",
+       "lieu": "kachgar",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "sam",
+       "lieu": "samarcande",
+       "symbole": "point",
+       "nom": "Samarcande",
+       "teinte": "violet"
+      },
+      {
+       "id": "ant",
+       "lieu": "antioche",
+       "symbole": "point",
+       "nom": "Antioche",
+       "teinte": "violet"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        "changan",
+        "dunhuang",
+        "kachgar",
+        "samarcande",
+        "antioche"
+       ],
+       "style": "fleche",
+       "teinte": "ambre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où la route **commence**, tout à l’est : la capitale des Han.",
+     "reponse": [
+      "chang"
+     ],
+     "aide": "C’est le point le plus à droite de la carte.",
+     "explication": "**Chang’an** est la capitale des Han et le point de départ de la route de la soie."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où la route **s’arrête** à l’ouest, tout près de la Méditerranée.",
+     "reponse": [
+      "ant"
+     ],
+     "aide": "C’est le point le plus à gauche de la carte.",
+     "explication": "**Antioche** est tout à l’ouest, près de la Méditerranée : là, les marchandises arrivent dans l’Empire romain."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La route de la soie est un réseau de ___ caravanières qui relie la ___ à la Méditerranée.",
+     "reponses": [
+      [
+       "pistes"
+      ],
+      [
+       "Chine"
+      ]
+     ],
+     "banque": [
+      "pistes",
+      "autoroutes",
+      "Chine",
+      "Inde",
+      "rivières"
+     ],
+     "aide": "On y marche avec des chameaux, pas en voiture.",
+     "explication": "Ce sont des **pistes** caravanières qui relient la **Chine** à la Méditerranée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que transportent aussi les caravanes, en plus des marchandises ?",
+     "options": [
+      "Des idées et des techniques",
+      "Des armées de soldats",
+      "Des tonneaux de pétrole",
+      "Des cartes postales"
+     ],
+     "reponse": 0,
+     "aide": "Un voyage rapproche des gens qui échangent.",
+     "explication": "Les caravanes transportent aussi des **idées**, des **religions** et des **techniques**… et même des épidémies."
+    }
+   ]
+  },
+  {
+   "chapitre": "8090486b-a1d1-5e4f-9d10-f55838f83069",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Ciel est-il mécontent ?",
+   "competence": "analyser-document",
+   "situation": "Chaque dynastie chinoise tient son pouvoir du Ciel… tant qu’il le veut bien. Lis le récit de Wei et regarde le schéma du pouvoir pour comprendre ce que pensent les Chinois de leur empereur.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une année difficile",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chang’an, sous les Han. Cette année, une grande [[c|sécheresse]] a ruiné les récoltes. Dans plusieurs villages, des paysans se révoltent.",
+      "Wei, jeune lettré, a réussi le concours. Il travaille pour l’empereur. Il entend les vieux fonctionnaires murmurer : « Le Ciel est mécontent. »"
+     ]
+    },
+    {
+     "id": "pouvoir",
+     "type": "schema",
+     "titre": "Qui gouverne en Chine sous les Han ?",
+     "largeur": 320,
+     "hauteur": 300,
+     "source": "Schéma simplifié écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 20,
+       "l": 160,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "ciel",
+       "zone": true,
+       "texte": "Le Ciel"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 100,
+       "l": 160,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "empereur",
+       "zone": true,
+       "texte": "L’empereur"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 184,
+       "l": 160,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "lettres",
+       "zone": true,
+       "texte": "Fonctionnaires lettrés"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 260,
+       "l": 160,
+       "h": 34,
+       "arrondi": 8,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "peuple",
+       "zone": true,
+       "texte": "Le peuple"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        60
+       ],
+       "a": [
+        160,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        144
+       ],
+       "a": [
+        160,
+        184
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        228
+       ],
+       "a": [
+        160,
+        260
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 84,
+       "texte": "Mandat",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 168,
+       "texte": "Ordres",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 249,
+       "texte": "Impôts",
+       "taille": "petit"
+      },
+      {
+       "forme": "etiquette",
+       "x": 275,
+       "y": 118,
+       "texte": "Fils du Ciel",
+       "vers": [
+        240,
+        122
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "portee": [
+      0
+     ],
+     "enonce": "Touche le **mot** qui désigne le phénomène naturel qui ruine les récoltes.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est un manque de pluie.",
+     "explication": "La **sécheresse** a détruit les récoltes : pour les Chinois, ce genre de catastrophe peut être un signe."
+    },
+    {
+     "type": "zone",
+     "document": "pouvoir",
+     "enonce": "Touche celui qui reçoit du Ciel le **mandat céleste**, le droit de gouverner.",
+     "reponse": [
+      "empereur"
+     ],
+     "aide": "Regarde vers quoi pointe la flèche « Mandat ».",
+     "explication": "C’est l’**empereur**, appelé le **Fils du Ciel**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sécheresse et révoltes : que peuvent penser les Chinois ?",
+     "options": [
+      "Le Ciel retire peut-être son mandat",
+      "Les dieux grecs sont en colère",
+      "L’empereur doit devenir citoyen",
+      "Le papier a été mal fabriqué"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi : le mandat céleste peut se perdre.",
+     "explication": "Une catastrophe ou une révolte peut être lue comme le **retrait du mandat céleste**. Le pouvoir est absolu, mais jamais garanti."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à ce qu’elle désigne.",
+     "paires": [
+      [
+       "Le concours",
+       "Le recrutement des fonctionnaires"
+      ],
+      [
+       "Le mandat céleste",
+       "Le droit de gouverner donné par le Ciel"
+      ],
+      [
+       "Confucius",
+       "La morale de l’ordre et du respect des aînés"
+      ],
+      [
+       "Le Fils du Ciel",
+       "L’empereur"
+      ]
+     ],
+     "aide": "Reprends ce que Wei, le lettré, a passé pour travailler pour l’empereur.",
+     "explication": "Le **concours** recrute les fonctionnaires ; le **mandat céleste** est le droit de gouverner ; **Confucius** donne la morale ; le **Fils du Ciel** est l’empereur."
+    }
+   ]
+  },
+  {
+   "chapitre": "8090486b-a1d1-5e4f-9d10-f55838f83069",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rome et la Chine : deux empires, deux méthodes",
+   "competence": "raisonner",
+   "situation": "Vers l’an 100, deux empires de taille comparable se partagent un même continent, de part et d’autre d’une longue route. Comment gouvernent-ils ? Se connaissent-ils ?",
+   "documents": [
+    {
+     "id": "compar",
+     "type": "tableau",
+     "titre": "Rome et la Chine des Han, vers l’an 100",
+     "source": "Ordres de grandeur, estimations des historiens ; tableau écrit pour l’exercice.",
+     "colonnes": [
+      "",
+      "Rome",
+      "La Chine des Han"
+     ],
+     "lignes": [
+      [
+       "Habitants (ordre de grandeur)",
+       "50 à 60 millions",
+       "50 à 60 millions"
+      ],
+      [
+       "Comment on gouverne",
+       "Citoyenneté et droit",
+       "Fonctionnaires lettrés et morale de Confucius"
+      ],
+      [
+       "Chef",
+       "L’empereur",
+       "Le Fils du Ciel"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "empires",
+     "type": "carte",
+     "titre": "Deux grands empires aux deux bouts d’un continent",
+     "fond": "monde",
+     "cadrage": [
+      -15,
+      8,
+      130,
+      60
+     ],
+     "source": "Contours très simplifiés, vers l’an 120.",
+     "aires": [
+      {
+       "id": "rome",
+       "contour": [
+        [
+         -9,
+         37
+        ],
+        [
+         -9,
+         43
+        ],
+        [
+         -2,
+         47
+        ],
+        [
+         2,
+         51
+        ],
+        [
+         6,
+         52
+        ],
+        [
+         13,
+         48
+        ],
+        [
+         22,
+         48
+        ],
+        [
+         28,
+         45
+        ],
+        [
+         40,
+         41
+        ],
+        [
+         40,
+         36
+        ],
+        [
+         34,
+         31
+        ],
+        [
+         32,
+         30
+        ],
+        [
+         25,
+         32
+        ],
+        [
+         10,
+         33
+        ],
+        [
+         -6,
+         35
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Rome"
+      },
+      {
+       "id": "han",
+       "contour": [
+        [
+         98,
+         25
+        ],
+        [
+         100,
+         35
+        ],
+        [
+         106,
+         40
+        ],
+        [
+         118,
+         41
+        ],
+        [
+         124,
+         40
+        ],
+        [
+         122,
+         30
+        ],
+        [
+         117,
+         22
+        ],
+        [
+         108,
+         21
+        ],
+        [
+         102,
+         22
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "clair",
+       "etiquette": "Han"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "chang",
+       "lieu": "changan",
+       "symbole": "point",
+       "teinte": "encre"
+      },
+      {
+       "id": "antio",
+       "lieu": "antioche",
+       "symbole": "point",
+       "teinte": "encre"
+      }
+     ],
+     "traits": [
+      {
+       "id": "route",
+       "points": [
+        "changan",
+        "antioche"
+       ],
+       "style": "fleche",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "empires",
+     "enonce": "Touche l’empire dont la capitale est **Chang’an**.",
+     "reponse": [
+      "han"
+     ],
+     "aide": "Cherche le grand ensemble tout à l’est de la carte.",
+     "explication": "C’est l’empire des **Han**, à l’est de la carte. Rome occupe l’ouest, autour de la Méditerranée."
+    },
+    {
+     "type": "zone",
+     "document": "empires",
+     "enonce": "Touche le trait qui montre la **route de la soie**.",
+     "reponse": [
+      "route"
+     ],
+     "aide": "C’est la flèche qui relie les deux empires.",
+     "explication": "La **route de la soie** relie la Chine à la Méditerranée, mais presque personne ne la parcourt en entier."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces moyens d’unir un empire.",
+     "categories": [
+      "Rome",
+      "La Chine des Han"
+     ],
+     "items": [
+      [
+       "La citoyenneté",
+       0
+      ],
+      [
+       "Le droit romain",
+       0
+      ],
+      [
+       "Des fonctionnaires lettrés sur concours",
+       1
+      ],
+      [
+       "La morale de Confucius",
+       1
+      ]
+     ],
+     "aide": "Regarde la ligne « Comment on gouverne » du tableau.",
+     "explication": "Rome unit par la **citoyenneté** et le **droit** ; la Chine par une **administration lettrée** et la morale de **Confucius**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le Doc 1 sur la taille des deux empires ?",
+     "options": [
+      "Ils comptent à peu près autant d’habitants",
+      "Rome est dix fois plus peuplée",
+      "La Chine est dix fois plus peuplée",
+      "On ne sait rien sur leur taille"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux cases de la première ligne.",
+     "explication": "Les deux empires comptent chacun **50 à 60 millions** d’habitants, d’après les estimations des historiens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les Romains et les Chinois se connaissent-ils bien ?",
+     "options": [
+      "À peine : peu de gens font tout le trajet",
+      "Oui : ils échangent des ambassadeurs chaque semaine",
+      "Oui : ils font partie du même empire",
+      "Non : la route de la soie n’existe pas encore"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la longueur de la route sur la carte.",
+     "explication": "Ils se connaissent **à peine** : des marchandises circulent par des intermédiaires, mais pas de relation directe et régulière."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a0ce9e3-53ba-5f81-aef8-870f44c0bd5b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lagos : une ville qui ne cesse de grandir",
+   "competence": "lire-graphique",
+   "situation": "En 1950, Lagos, au Nigeria, était une ville moyenne. Aujourd’hui, c’est l’une des plus grandes villes d’Afrique. Observe sa croissance.",
+   "documents": [
+    {
+     "id": "lagos",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les habitants de Lagos (Nigeria)",
+     "source": "ONU, ordres de grandeur arrondis.",
+     "categories": [
+      "1950",
+      "1970",
+      "1990",
+      "2010",
+      "Aujourd’hui"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        0.3,
+        1.4,
+        4.8,
+        10.5,
+        15
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en millions",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lagos",
+     "enonce": "Touche la barre qui montre **le plus d’habitants**.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "C’est la barre la plus haute.",
+     "explication": "La barre **« Aujourd’hui »** est la plus haute : plus de 15 millions d’habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants Lagos compte-t-elle en 2010 ? Lis le graphique, au million près.",
+     "reponse": 10.5,
+     "unite": "millions",
+     "tolerance": 1,
+     "aide": "La barre 2010 se termine un peu au-dessus de 10 sur l’axe.",
+     "explication": "En 2010, Lagos compte environ **10 millions et demi** d’habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lagos compte 0,3 million d’habitants en 1950 et 15 millions aujourd’hui. Par combien sa population a-t-elle été multipliée ?",
+     "reponse": 50,
+     "tolerance": 1,
+     "aide": "Divise 15 par 0,3. Pense à 150 ÷ 3.",
+     "explication": "15 ÷ 0,3 = **50** : Lagos compte **50 fois** plus d’habitants qu’en 1950."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans une métropole qui grandit aussi vite, que se passe-t-il souvent pour les équipements ?",
+     "options": [
+      "Ils ne suivent pas : manque de logements, d’écoles, d’égouts",
+      "Ils sont construits avant l’arrivée des habitants",
+      "Ils sont toujours plus nombreux que nécessaire",
+      "On les supprime pour faire de la place"
+     ],
+     "reponse": 0,
+     "aide": "Pense au mot « décalage » du cours.",
+     "explication": "La croissance est **plus rapide** que les équipements : de là viennent les bidonvilles, les embouteillages et la pollution."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a0ce9e3-53ba-5f81-aef8-870f44c0bd5b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Asha, de son quartier au métro",
+   "competence": "analyser-document",
+   "situation": "Asha vit dans une métropole d’Inde. Entre un quartier surpeuplé, des trajets interminables et des projets de transports, elle voit les défis de sa ville de très près.",
+   "documents": [
+    {
+     "id": "quartier",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Un quartier de Mumbai (Inde)",
+     "sousTitre": "Fiche écrite pour l’exercice",
+     "emoji": "🏘️",
+     "source": "Ordres de grandeur, estimations variables selon les sources.",
+     "lignes": [
+      {
+       "texte": "Surface",
+       "valeur": "environ 2 km²"
+      },
+      {
+       "texte": "Habitants",
+       "valeur": "500 000"
+      },
+      {
+       "texte": "Logements",
+       "valeur": "auto-construits"
+      },
+      {
+       "texte": "Eau courante : une borne publique pour de nombreuses familles",
+       "id": "eau"
+      },
+      {
+       "texte": "Égouts : rares, les eaux sales coulent dans les ruelles",
+       "id": "egouts"
+      }
+     ]
+    },
+    {
+     "id": "asha",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La journée d’Asha",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Asha, 12 ans, vit dans une grande métropole d’Inde. Pour aller à l’école, elle prend le bus. Les [[p|embouteillages]] lui font perdre une heure chaque matin. L’[[p|air]] sent la fumée.",
+      "Mais la ville change : un nouveau [[r|métro]] vient d’ouvrir et des [[r|pistes cyclables]] sont tracées dans le centre."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quartier",
+     "multiple": true,
+     "enonce": "Touche les **deux lignes** qui montrent ce qui manque aux habitants du quartier.",
+     "reponse": [
+      "eau",
+      "egouts"
+     ],
+     "aide": "Cherche l’eau et l’évacuation des eaux sales.",
+     "explication": "Une borne pour de nombreuses familles et peu d’égouts : c’est le **manque d’équipements** des bidonvilles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la **densité** du quartier : 500 000 habitants sur 2 km². Combien d’habitants par km² ?",
+     "reponse": 250000,
+     "unite": "hab./km²",
+     "aide": "Densité = habitants ÷ surface.",
+     "explication": "500 000 ÷ 2 = **250 000 hab./km²** : c’est extrêmement dense."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ce que raconte Asha.",
+     "categories": [
+      "Un problème",
+      "Une réponse"
+     ],
+     "items": [
+      [
+       "Les embouteillages",
+       0
+      ],
+      [
+       "L’air qui sent la fumée",
+       0
+      ],
+      [
+       "Le nouveau métro",
+       1
+      ],
+      [
+       "Les pistes cyclables",
+       1
+      ]
+     ],
+     "aide": "Un problème gêne ; une réponse essaie de le résoudre.",
+     "explication": "Embouteillages et **pollution** sont des problèmes ; **métro** et **pistes cyclables** sont des réponses."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle l’habitat auto-construit, sans eau courante ni égouts, qui abrite environ un milliard de personnes dans le monde ?",
+     "options": [
+      "Un bidonville",
+      "Un écoquartier",
+      "Un lotissement",
+      "Un hameau"
+     ],
+     "reponse": 0,
+     "aide": "Le Doc 1 montre un exemple.",
+     "explication": "C’est un **bidonville**, souvent sans titre de propriété."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a0ce9e3-53ba-5f81-aef8-870f44c0bd5b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Séismes, cyclones, chaleur : les risques des métropoles",
+   "competence": "raisonner",
+   "situation": "Plus il y a d’habitants dans une ville, plus le nombre de personnes exposées à un risque est élevé. Cartographie quelques menaces et calcule un effet bien connu : la chaleur de la ville.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Cinq grandes métropoles et leurs risques",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -12,
+      155,
+      58
+     ],
+     "lieux": [
+      {
+       "id": "tokyo",
+       "lieu": "tokyo",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "manille",
+       "lieu": "manille",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "jakarta",
+       "lieu": "jakarta",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "lagos",
+       "lieu": "lagos",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      },
+      {
+       "id": "miami",
+       "lieu": "miami",
+       "symbole": "lettre",
+       "lettre": "E",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "risques",
+     "type": "tableau",
+     "titre": "Les risques des métropoles",
+     "source": "Tableau de synthèse écrit pour l’exercice.",
+     "colonnes": [
+      "Repère",
+      "Ville",
+      "Risque principal"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Tokyo",
+       "Séismes"
+      ],
+      [
+       "B",
+       "Manille",
+       "Cyclones"
+      ],
+      [
+       "C",
+       "Jakarta",
+       "Inondations et montée de la mer"
+      ],
+      [
+       "D",
+       "Lagos",
+       "Inondations et montée de la mer"
+      ],
+      [
+       "E",
+       "Miami",
+       "Cyclones et montée de la mer"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "chaleur",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Température à 22 h, une nuit d’été",
+     "source": "Relevé imaginé pour l’exercice.",
+     "categories": [
+      "Campagne",
+      "Banlieue",
+      "Centre-ville",
+      "Parc du centre"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        19,
+        21,
+        24,
+        21
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 0,
+      "max": 26,
+      "pas": 2
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la métropole menacée par les **séismes**.",
+     "reponse": [
+      "tokyo"
+     ],
+     "aide": "Cherche « Séismes » dans le tableau (Doc 2), puis la lettre sur la carte.",
+     "explication": "Tokyo (repère **A**) est menacée par les séismes."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les **deux métropoles d’Asie du Sud-Est** menacées par les cyclones ou la montée de la mer.",
+     "reponse": [
+      "manille",
+      "jakarta"
+     ],
+     "aide": "Elles sont au sud-est de l’Asie, à droite de la carte.",
+     "explication": "**Manille** (B) et **Jakarta** (C) sont en Asie du Sud-Est."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le Doc 3, de combien de degrés le centre-ville est-il plus chaud que la campagne ?",
+     "reponse": 5,
+     "unite": "°C",
+     "aide": "24 − 19.",
+     "explication": "24 − 19 = **5 °C** : c’est l’îlot de chaleur urbain."
+    },
+    {
+     "type": "zone",
+     "document": "chaleur",
+     "enonce": "Touche le lieu du **centre-ville** qui reste plus frais grâce à ses arbres.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre du centre qui est moins haute que celle du centre-ville.",
+     "explication": "Le **parc du centre** reste à 21 °C : les arbres rafraîchissent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication de l’îlot de chaleur.",
+     "texte": "Le béton et l’asphalte ___ la chaleur du jour et la rendent la nuit : la ville est plus ___ que la campagne.",
+     "reponses": [
+      [
+       "stockent"
+      ],
+      [
+       "chaude"
+      ]
+     ],
+     "banque": [
+      "stockent",
+      "repoussent",
+      "chaude",
+      "fraîche"
+     ],
+     "aide": "Les matériaux sombres emmagasinent le soleil.",
+     "explication": "Béton et asphalte **stockent** la chaleur ; la ville est plus **chaude** que la campagne voisine."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbca8654-757d-5463-84d4-a5ce5e0774fe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Vauban, un quartier presque sans voitures",
+   "competence": "analyser-document",
+   "situation": "À Fribourg, en Allemagne, un quartier entier a été pensé pour vivre autrement en ville. Lis son panneau et situe les écoquartiers européens.",
+   "documents": [
+    {
+     "id": "vauban",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Écoquartier Vauban",
+     "sousTitre": "Fribourg-en-Brisgau (Allemagne)",
+     "emoji": "🌳",
+     "source": "Fiche résumée écrite pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Les voitures se garent à l’entrée du quartier : les rues sont pour les piétons et les vélos",
+       "id": "voitures"
+      },
+      {
+       "texte": "Des bâtiments à énergie positive : ils produisent plus d’énergie qu’ils n’en consomment",
+       "id": "energie"
+      },
+      {
+       "texte": "Une ligne de tramway traverse le quartier",
+       "id": "tram"
+      },
+      {
+       "texte": "Des jardins partagés pour les habitants",
+       "id": "jardins"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre écoquartiers d’Europe",
+     "fond": "europe",
+     "lieux": [
+      {
+       "id": "fribourg",
+       "lon": 7.85,
+       "lat": 47.99,
+       "nom": "Fribourg",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "stockholm",
+       "lieu": "stockholm",
+       "nom": "Stockholm",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "londres",
+       "lieu": "londres",
+       "nom": "Londres",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "lyon",
+       "lieu": "lyon",
+       "nom": "Lyon",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vauban",
+     "enonce": "Touche la ligne qui explique comment le quartier réduit la **pollution** liée aux voitures.",
+     "reponse": [
+      "voitures"
+     ],
+     "aide": "Cherche la ligne où les rues sont réservées aux piétons et aux vélos.",
+     "explication": "Les voitures se garent à l’**entrée** : les rues sont pour les piétons et les vélos, donc moins de bruit et de pollution."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « bâtiment à énergie positive » ?",
+     "options": [
+      "Il produit plus d’énergie qu’il n’en use",
+      "Il consomme énormément d’énergie",
+      "Il n’utilise jamais d’électricité",
+      "Il est construit uniquement en bois"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la deuxième ligne du panneau.",
+     "explication": "Un bâtiment à **énergie positive** produit plus d’énergie qu’il n’en consomme, par exemple avec des panneaux solaires."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Parmi ces quatre villes, touche celle qui est **le plus au nord** : on y trouve l’écoquartier Hammarby.",
+     "reponse": [
+      "stockholm"
+     ],
+     "aide": "Plus on monte sur la carte, plus on va vers le nord.",
+     "explication": "**Stockholm**, en Suède, est la plus au nord des quatre villes."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbca8654-757d-5463-84d4-a5ce5e0774fe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Léa et le quartier du quart d’heure",
+   "competence": "raisonner",
+   "situation": "Léa veut tout trouver près de chez elle sans voiture. Sur le plan de son quartier, un cercle montre ce qu’elle peut atteindre en 15 minutes à pied. Mais ses parents hésitent entre deux projets pour la ville.",
+   "documents": [
+    {
+     "id": "quartier",
+     "type": "schema",
+     "titre": "Le quartier de Léa et le quart d’heure à pied",
+     "largeur": 330,
+     "hauteur": 300,
+     "source": "Plan imaginé pour l’exercice.",
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 130,
+       "cy": 150,
+       "rx": 120,
+       "ry": 120,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "cercle"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 36,
+       "texte": "15 minutes à pied",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "emoji",
+       "x": 130,
+       "y": 160,
+       "emoji": "🏠",
+       "taille": 36
+      },
+      {
+       "forme": "etiquette",
+       "x": 62,
+       "y": 280,
+       "texte": "Chez Léa",
+       "vers": [
+        120,
+        168
+       ]
+      },
+      {
+       "forme": "emoji",
+       "x": 70,
+       "y": 100,
+       "emoji": "🏫",
+       "taille": 32,
+       "id": "ecole",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 190,
+       "y": 90,
+       "emoji": "🥖",
+       "taille": 32,
+       "id": "boulangerie",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 190,
+       "emoji": "🌳",
+       "taille": 32,
+       "id": "parc",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 190,
+       "y": 200,
+       "emoji": "🚋",
+       "taille": 32,
+       "id": "tram",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 295,
+       "y": 150,
+       "emoji": "🏥",
+       "taille": 32,
+       "id": "hopital",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 290,
+       "y": 215,
+       "texte": "Hôpital",
+       "vers": [
+        295,
+        160
+       ]
+      },
+      {
+       "forme": "emoji",
+       "x": 280,
+       "y": 60,
+       "emoji": "🏭",
+       "taille": 32,
+       "id": "usine",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 275,
+       "y": 28,
+       "texte": "Usine",
+       "vers": [
+        280,
+        50
+       ]
+      }
+     ]
+    },
+    {
+     "id": "projets",
+     "type": "tableau",
+     "titre": "Deux projets pour la ville",
+     "source": "Tableau imaginé pour l’exercice.",
+     "colonnes": [
+      "",
+      "Projet A",
+      "Projet B"
+     ],
+     "lignes": [
+      [
+       "Où ?",
+       "Sur un champ cultivé",
+       "Sur une usine abandonnée"
+      ],
+      [
+       "Logements",
+       "40 maisons",
+       "40 appartements"
+      ],
+      [
+       "Transports",
+       "Tout en voiture",
+       "Tramway à 3 minutes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quartier",
+     "multiple": true,
+     "enonce": "Touche **tous les lieux** que Léa peut atteindre à pied en moins de 15 minutes : l’école, la boulangerie, le parc, le tram.",
+     "reponse": [
+      "ecole",
+      "boulangerie",
+      "parc",
+      "tram"
+     ],
+     "aide": "Ils sont tous à l’intérieur du grand cercle.",
+     "explication": "École, boulangerie, parc et arrêt de tram sont **dans le cercle** : c’est la ville du quart d’heure."
+    },
+    {
+     "type": "zone",
+     "document": "quartier",
+     "enonce": "Parmi les deux lieux **hors du cercle**, touche celui dont Léa a besoin en cas de maladie.",
+     "reponse": [
+      "hopital"
+     ],
+     "aide": "Il y a l’usine et l’autre lieu hors du cercle.",
+     "explication": "L’**hôpital** est hors du cercle : Léa n’y va qu’avec un transport."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel projet préserve le mieux les terres agricoles ?",
+     "options": [
+      "Le projet B, sur une friche",
+      "Le projet A, sur un champ",
+      "Les deux de la même façon",
+      "Aucun des deux projets"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Où ? » du tableau.",
+     "explication": "Le **projet B** réhabilite une friche : on n’abîme pas de terres agricoles."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Densifier plutôt que s’étaler permet de préserver les ___ agricoles et naturelles.",
+     "reponses": [
+      [
+       "terres"
+      ]
+     ],
+     "banque": [
+      "terres",
+      "voitures",
+      "usines",
+      "écoles"
+     ],
+     "aide": "Pense au projet A, qui prend la place d’un champ.",
+     "explication": "Densifier, c’est construire plus **serré** pour préserver les **terres** agricoles et naturelles."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbca8654-757d-5463-84d4-a5ce5e0774fe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Capteurs ou habitants : qui fait la ville durable ?",
+   "competence": "argumenter",
+   "situation": "La mairie veut moderniser la rue des Lilas. Entre capteurs, jardin partagé et logements, qu’est-ce qui rend vraiment une ville durable ?",
+   "documents": [
+    {
+     "id": "reunion",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une réunion d’habitants",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "La mairie veut équiper la rue des Lilas de capteurs qui mesurent le bruit, la circulation et la présence de passants. Sam, 14 ans, écoute les adultes.",
+      "« Ça économisera de l’énergie, dit un voisin : l’éclairage ne s’allume que si quelqu’un passe. » Une habitante répond : « Mais ils [[d|enregistrent]] aussi nos déplacements. Qui va lire ces [[d|données]] ? »",
+      "Finalement, la mairie propose aussi un jardin partagé, un atelier de réparation et des logements à loyer modéré, décidés avec les habitants."
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Ce que changent les mesures proposées",
+     "source": "Tableau imaginé pour l’exercice.",
+     "colonnes": [
+      "Mesure",
+      "Ce qu’elle change"
+     ],
+     "lignes": [
+      [
+       "Toitures végétalisées",
+       "Moins de chaleur en été, plus de nature"
+      ],
+      [
+       "Logements à loyer modéré",
+       "Des familles modestes peuvent rester dans le quartier"
+      ],
+      [
+       "Atelier de réparation",
+       "Dix emplois créés sur place"
+      ],
+      [
+       "Bâtiments à énergie positive",
+       "Moins d’énergie à acheter et à produire ailleurs"
+      ],
+      [
+       "Crèche ouverte à tous",
+       "Tous les parents ont accès à un mode de garde"
+      ],
+      [
+       "Commerces de proximité",
+       "Des emplois et des courses sans voiture"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reunion",
+     "multiple": true,
+     "portee": [
+      1
+     ],
+     "enonce": "Touche les **deux mots** qui montrent le risque posé par les capteurs.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "L’habitante s’inquiète de ce qui est mesuré et lu.",
+     "explication": "**Enregistrent** et **données** : tout ce qui est mesuré peut être suivi. La smart city pose une question de protection des données."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans le Doc 2, range ces mesures selon l’exigence de la ville durable à laquelle elles répondent.",
+     "categories": [
+      "Environnementale",
+      "Sociale",
+      "Économique"
+     ],
+     "items": [
+      [
+       "Des toitures végétalisées",
+       0
+      ],
+      [
+       "Des logements à loyer modéré",
+       1
+      ],
+      [
+       "Un atelier de réparation qui crée des emplois",
+       2
+      ],
+      [
+       "Des bâtiments à énergie positive",
+       0
+      ],
+      [
+       "Une crèche ouverte à tous",
+       1
+      ],
+      [
+       "Des commerces de proximité",
+       2
+      ]
+     ],
+     "aide": "Environnement = nature et énergie ; social = accès pour tous ; économique = emplois.",
+     "explication": "**Environnementale** : toitures végétalisées, énergie positive. **Sociale** : loyers modérés, crèche. **Économique** : atelier de réparation, commerces."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui rend une ville durable ?",
+     "options": [
+      "Ses habitants y vivent bien et longtemps",
+      "Elle est pleine de capteurs numériques",
+      "Elle est la plus grande ville de son pays",
+      "Elle interdit toutes les voitures"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi : les capteurs ne suffisent pas.",
+     "explication": "Une ville n’est pas durable parce qu’elle est équipée de capteurs, mais parce que ses **habitants** y vivent bien, **longtemps**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion du cours.",
+     "texte": "Une ville se fait ___ ceux qui y vivent, pas seulement ___ eux.",
+     "reponses": [
+      [
+       "avec"
+      ],
+      [
+       "pour"
+      ]
+     ],
+     "banque": [
+      "avec",
+      "pour",
+      "contre",
+      "sans"
+     ],
+     "aide": "Pense à la concertation et aux budgets participatifs.",
+     "explication": "Les projets réussis associent les habitants dès la conception : une ville se fait **avec** ceux qui y vivent, pas seulement **pour** eux."
+    }
+   ]
+  }
+ ]
+}

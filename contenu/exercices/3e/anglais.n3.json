@@ -1,0 +1,3410 @@
+{
+ "niveau": "3e",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "2fef5a53-98ef-5244-8993-d4d712f5c6bc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le samedi de Lily",
+   "competence": "comprendre-langue",
+   "situation": "Ben demande à sa copine Lily comment s’est passé son samedi. Elle lui répond par message.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Ben et de Lily",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lily",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Hi Lily! What did you do on Saturday?"
+      },
+      {
+       "qui": "Lily",
+       "texte": "I [[v|visited]] my grandma and we [[v|made]] a cake."
+      },
+      {
+       "qui": "Lily",
+       "texte": "Then we [[v|watched]] a film together."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Sounds lovely!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes au prétérit** qui racontent ce que Lily a fait.",
+     "aide": "Ce sont des verbes dans les messages de Lily, pas dans ceux de Ben.",
+     "explication": "**visited, made, watched** : ce sont les verbes de Lily, tous au prétérit. *Made* est irrégulier (make → made), les deux autres prennent **-ed**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « What did you do on Saturday? », pourquoi écrit-on **do** et non « did you did » ?",
+     "options": [
+      "Parce que did porte déjà la marque du passé",
+      "Parce que do n’a pas de forme au passé",
+      "Parce que la question parle du présent",
+      "Parce que Ben ne connaît pas la réponse"
+     ],
+     "reponse": 0,
+     "aide": "Regarde quel mot de la question est déjà au passé.",
+     "explication": "**Did porte déjà le passé** : le verbe qui suit revient à la base verbale (*do*), comme dans *Did you go ?*"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le message de Lily.",
+     "texte": "Then they ___ a film together.",
+     "reponses": [
+      [
+       "watched"
+      ]
+     ],
+     "banque": [
+      "watched",
+      "watch",
+      "watches",
+      "watching"
+     ],
+     "aide": "Lily raconte un fait passé et terminé.",
+     "explication": "**watched** : verbe régulier, base + **-ed**, pour un fait passé terminé."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fef5a53-98ef-5244-8993-d4d712f5c6bc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une carte postale de Cardiff",
+   "competence": "manier-langue",
+   "situation": "Nora écrit à sa correspondante Jade pour lui raconter une sortie scolaire au pays de Galles.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hi Jade",
+     "blocs": [
+      "Hi Jade,",
+      "Last Tuesday my class visited Cardiff. We [[i|took]] the train at seven and we [[i|saw]] the castle at noon. I didn’t buy any souvenirs, but my friend Sam [[i|bought]] a mug.",
+      "Did you go to Wales last year? Write soon!",
+      "Nora"
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes irréguliers** au prétérit dans le courriel.",
+     "aide": "Un verbe irrégulier ne prend pas -ed : il a sa propre forme.",
+     "explication": "**took, saw, bought** : ce sont les formes de la 2e colonne de la liste des verbes irréguliers (take → took, see → saw, buy → bought). *Visited* est régulier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Nora.",
+     "texte": "I ___ buy any souvenirs, but Sam bought a mug.",
+     "reponses": [
+      [
+       "didn’t"
+      ]
+     ],
+     "banque": [
+      "didn’t",
+      "don’t",
+      "wasn’t",
+      "hadn’t"
+     ],
+     "aide": "La phrase est négative et au passé.",
+     "explication": "**didn’t** : la négation du prétérit se fait avec *didn’t* + base verbale (*didn’t buy*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la question de Nora : « Es-tu allé au pays de Galles ? » La phrase commence par Did.",
+     "items": [
+      "Did",
+      "you",
+      "go",
+      "to",
+      "Wales"
+     ],
+     "aide": "Did est suivi du sujet, puis du verbe à la base verbale.",
+     "explication": "**Did you go to Wales ?** : did, le sujet, puis le verbe à la base verbale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur d’élève à sa correction.",
+     "paires": [
+      [
+       "I goed to Cardiff.",
+       "I went to Cardiff."
+      ],
+      [
+       "We didn’t took the bus.",
+       "We didn’t take the bus."
+      ],
+      [
+       "Did you visited it?",
+       "Did you visit it?"
+      ],
+      [
+       "I have visited it last year.",
+       "I visited it last year."
+      ]
+     ],
+     "aide": "Après *did* ou *didn’t*, le verbe est à la base verbale ; avec *last year*, on emploie le prétérit.",
+     "explication": "*Go* est irrégulier (**went**) ; après **did / didn’t** on garde la **base verbale** ; et un repère passé comme *last year* impose le **prétérit**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fef5a53-98ef-5244-8993-d4d712f5c6bc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les souvenirs de Mr Hill",
+   "competence": "analyser-texte",
+   "situation": "Chloé interroge son grand-père sur sa jeunesse et sur ses débuts de boulanger. Lis le récit de Mr Hill, puis leurs messages.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Mr Hill remembers",
+     "blocs": [
+      "When Mr Hill was young, he [[u|used]] to walk to school. Every summer his family played cards on the beach.",
+      "In 1985 he moved to Leeds. On his first day at the bakery he opened the shop, put on an apron and baked the first loaves.",
+      "He didn’t use to like bread, but now he loves it!"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Chloé et de son grand-père",
+     "participants": [
+      {
+       "nom": "Chloe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mr Hill",
+       "emoji": "👴",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloe",
+       "texte": "Grandpa, did you have a bike when you were young?"
+      },
+      {
+       "qui": "Mr Hill",
+       "texte": "No, I didn’t. I walked everywhere."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le mot qui annonce une **habitude passée** qui n’existe plus (forme affirmative).",
+     "aide": "Cherche la forme qui précède « to walk ».",
+     "explication": "**used** : *used to* + base verbale dit une habitude du passé qui n’a plus cours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon l’emploi du prétérit qu’elle illustre.",
+     "categories": [
+      "Action ponctuelle",
+      "Suite d’actions",
+      "Habitude passée"
+     ],
+     "items": [
+      [
+       "He moved to Leeds in 1985.",
+       0
+      ],
+      [
+       "He opened the shop, put on an apron and baked the first loaves.",
+       1
+      ],
+      [
+       "His family played cards on the beach every summer.",
+       2
+      ],
+      [
+       "He used to walk to school.",
+       2
+      ],
+      [
+       "She phoned him yesterday.",
+       0
+      ],
+      [
+       "She opened the window, took a photo and left.",
+       1
+      ]
+     ],
+     "aide": "Une date précise donne une action ponctuelle ; *every summer* annonce une habitude.",
+     "explication": "Une **date précise** = action ponctuelle ; plusieurs actions qui s’enchaînent = **suite d’actions** ; *every summer* ou *used to* = **habitude passée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « He didn’t use to like bread, but now he loves it » ?",
+     "options": [
+      "Il n’aimait pas avant, il aime maintenant",
+      "Il n’a jamais aimé le pain de sa vie",
+      "Il n’aime plus du tout le pain aujourd’hui",
+      "Il n’aimera pas le pain demain matin"
+     ],
+     "reponse": 0,
+     "aide": "Lis la fin de la phrase : « but now he loves it ».",
+     "explication": "**Avant il n’aimait pas le pain, maintenant oui** : *didn’t use to* décrit un état passé qui a changé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la réponse de Mr Hill : « Je n’avais pas de vélo. » La phrase commence par I.",
+     "items": [
+      "I",
+      "didn’t",
+      "have",
+      "a",
+      "bike"
+     ],
+     "aide": "La négation du prétérit se fait avec didn’t + base verbale.",
+     "explication": "**I didn’t have a bike.** : *didn’t* + base verbale, comme dans la question de Chloé (*did you have*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase d’après le récit.",
+     "texte": "In 1985 Mr Hill ___ to Leeds.",
+     "reponses": [
+      [
+       "moved"
+      ]
+     ],
+     "banque": [
+      "moved",
+      "move",
+      "used to move",
+      "was moving"
+     ],
+     "aide": "Une date précise impose un fait passé terminé.",
+     "explication": "**moved** : *in 1985* est un repère passé précis, donc le prétérit simple."
+    }
+   ]
+  },
+  {
+   "chapitre": "3055a332-e131-5e86-9f5c-31f982d631fc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Que faisaient-ils à huit heures ?",
+   "competence": "comprendre-langue",
+   "situation": "Mme Reed enquête sur une bêtise à la maison des élèves. Elle demande à trois élèves ce qu’ils faisaient hier soir.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Ms Reed et de ses élèves",
+     "participants": [
+      {
+       "nom": "Ms Reed",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ms Reed",
+       "texte": "What were you doing at eight last night?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "I was [[g|watching]] TV with my brother."
+      },
+      {
+       "qui": "Leo",
+       "texte": "I was [[g|cooking]] pasta."
+      },
+      {
+       "qui": "Zoe",
+       "texte": "I was [[g|reading]] a book in my room."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes en -ING** qui disent ce que faisaient les élèves.",
+     "aide": "Ils suivent « was » dans les réponses.",
+     "explication": "**watching, cooking, reading** : *was* + verbe en **-ING** décrit une action en cours à un moment du passé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le message de Mia.",
+     "texte": "Mia and her brother ___ watching TV.",
+     "reponses": [
+      [
+       "were"
+      ]
+     ],
+     "banque": [
+      "was",
+      "were",
+      "are",
+      "did"
+     ],
+     "aide": "Le sujet est pluriel : Mia and her brother.",
+     "explication": "**were** : avec un sujet pluriel (*Mia and her brother*), on emploie **were** devant le verbe en -ING."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la question de Mme Reed : « Que faisait Leo ? » La phrase commence par What.",
+     "items": [
+      "What",
+      "was",
+      "Leo",
+      "doing"
+     ],
+     "aide": "was se place avant le sujet.",
+     "explication": "**What was Leo doing ?** : mot interrogatif, *was*, le sujet, puis le verbe en -ING."
+    }
+   ]
+  },
+  {
+   "chapitre": "3055a332-e131-5e86-9f5c-31f982d631fc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le témoin du parc",
+   "competence": "analyser-texte",
+   "situation": "Un policier a recueilli la déposition d’un témoin qui rentrait chez lui à pied. Observe ce qui décrit le décor et ce qui survient.",
+   "documents": [
+    {
+     "id": "depo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Witness statement",
+     "blocs": [
+      "It was six o’clock and I was walking home. Rain was falling and the park was empty.",
+      "Suddenly a man [[e|ran]] out of the bushes and [[e|dropped]] his bag. I [[e|shouted]], and he [[e|disappeared]]."
+     ],
+     "source": "Déposition écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depo",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre verbes d’événement** au prétérit simple.",
+     "aide": "Cherche les actions courtes qui surviennent, pas celles qui décrivent le décor.",
+     "explication": "**ran, dropped, shouted, disappeared** : les événements brefs sont au prétérit simple ; le décor (*was walking, was falling*) est en BE + -ING."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque morceau du récit : décor ou événement ?",
+     "categories": [
+      "Décor (BE + -ING)",
+      "Événement (prétérit simple)"
+     ],
+     "items": [
+      [
+       "I was walking home",
+       0
+      ],
+      [
+       "Rain was falling",
+       0
+      ],
+      [
+       "A man ran out of the bushes",
+       1
+      ],
+      [
+       "He dropped his bag",
+       1
+      ],
+      [
+       "He disappeared",
+       1
+      ]
+     ],
+     "aide": "Le décor dure ; l’événement survient.",
+     "explication": "Le **décor** dure et encadre : BE + -ING. L’**événement** survient d’un coup : prétérit simple."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète comme dans la déposition.",
+     "texte": "I was walking home ___ it started to rain.",
+     "reponses": [
+      [
+       "when"
+      ]
+     ],
+     "banque": [
+      "when",
+      "while",
+      "because",
+      "until"
+     ],
+     "aide": "Quelle conjonction introduit l’événement court ?",
+     "explication": "**when** introduit l’action courte qui survient ; **while** s’emploie devant l’action longue."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "They was playing.",
+       "They were playing."
+      ],
+      [
+       "I was watch TV.",
+       "I was watching TV."
+      ],
+      [
+       "I was knowing the answer.",
+       "I knew the answer."
+      ],
+      [
+       "When I was arriving, he left.",
+       "When I arrived, he was leaving."
+      ]
+     ],
+     "aide": "Vérifie l’auxiliaire, le -ING, puis les verbes d’état.",
+     "explication": "**were** avec *they* ; **-ING** après was/were ; *know* est un verbe d’état (pas de -ING) ; l’arrivée brève est au prétérit simple."
+    }
+   ]
+  },
+  {
+   "chapitre": "3055a332-e131-5e86-9f5c-31f982d631fc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’alibi de la bibliothèque",
+   "competence": "argumenter",
+   "situation": "Un livre précieux a disparu de la bibliothèque. L’inspecteur Reed interroge deux élèves, puis compare avec le journal de la caméra de surveillance.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de l’inspecteur et des élèves",
+     "participants": [
+      {
+       "nom": "Inspector Reed",
+       "emoji": "🕵",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inspector Reed",
+       "texte": "Where were you at eight twenty last night?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "I was reading in the library. I stayed there until nine."
+      },
+      {
+       "qui": "Leo",
+       "texte": "I [[p|was]] [[p|playing]] football in the park."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "cam",
+     "type": "tableau",
+     "titre": "Camera log",
+     "colonnes": [
+      "Time",
+      "Place",
+      "What the camera shows"
+     ],
+     "lignes": [
+      [
+       "7.55",
+       "Library",
+       "Mia goes in"
+      ],
+      [
+       "8.10",
+       "Library",
+       "Mia leaves"
+      ],
+      [
+       "8.15",
+       "Park",
+       "Leo plays football"
+      ],
+      [
+       "8.30",
+       "Park",
+       "Leo and Zoe talk"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Journal écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "En croisant les deux documents, qui ne dit pas la vérité ?",
+     "options": [
+      "Mia",
+      "Leo",
+      "Mia et Leo",
+      "Aucun des deux"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’heure donnée par Mia avec ce que montre la caméra de la bibliothèque.",
+     "explication": "**Mia** : elle dit qu’elle lisait à la bibliothèque à 8 h 20, mais la caméra la montre sortant à 8 h 10. Leo joue au football au parc à 8 h 15, ce qui est compatible avec son récit."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui forment l’action en cours dans la réponse de Leo.",
+     "aide": "Le prétérit en BE + -ING = was / were + verbe en -ING.",
+     "explication": "**was playing** : *was* + verbe en **-ING** pour une action en cours à 8 h 20."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de l’inspecteur.",
+     "texte": "At 8.10 Mia ___ the library, so she ___ reading there at 8.20.",
+     "reponses": [
+      [
+       "left"
+      ],
+      [
+       "wasn’t"
+      ]
+     ],
+     "banque": [
+      "left",
+      "leaves",
+      "wasn’t",
+      "isn’t"
+     ],
+     "aide": "Le premier verbe raconte un fait passé daté ; le second nie une action en cours.",
+     "explication": "**left** : prétérit simple de *leave* (fait passé daté, 8 h 10) ; **wasn’t** reading : négation du prétérit en BE + -ING."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la question de l’inspecteur. La phrase commence par Where.",
+     "items": [
+      "Where",
+      "were",
+      "you",
+      "at",
+      "eight",
+      "twenty"
+     ],
+     "aide": "Après le mot interrogatif, were se place avant le sujet.",
+     "explication": "**Where were you at eight twenty ?** : mot interrogatif, *were*, le sujet, puis l’heure."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à ce qu’elle dit.",
+     "paires": [
+      [
+       "I watched a film.",
+       "Le film est terminé."
+      ],
+      [
+       "I was watching a film.",
+       "On ne dit pas si j’ai fini."
+      ],
+      [
+       "She was cooking while he was doing his homework.",
+       "Deux actions en même temps."
+      ]
+     ],
+     "aide": "Le prétérit simple clôt l’action ; BE + -ING la décrit en cours.",
+     "explication": "Le prétérit simple présente l’action comme **finie** ; BE + -ING la montre **en cours** ; *while* relie deux actions **simultanées**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d02a039-f2ca-5e68-affe-5f4f34deabb6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une carte postale de Rome",
+   "competence": "comprendre-langue",
+   "situation": "Hugo passe ses vacances en Italie. Il écrit à sa grand-mère ce qu’il a déjà fait.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Postcard from Rome",
+     "blocs": [
+      "Dear Granny,",
+      "I have [[p|arrived]] in Rome! I have already [[p|visited]] the Colosseum and I have [[p|eaten]] two ice creams. I haven’t [[p|seen]] the Vatican yet.",
+      "Love, Hugo"
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre participes passés** de la carte.",
+     "aide": "Ils suivent have / haven’t.",
+     "explication": "**arrived, visited, eaten, seen** : le present perfect = *have / has* + participe passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « I haven’t seen the Vatican yet » ?",
+     "options": [
+      "Je ne l’ai pas encore vu",
+      "Je ne l’ai jamais vu et je n’irai pas",
+      "Je ne l’ai pas vu hier",
+      "Je ne le verrai plus"
+     ],
+     "reponse": 0,
+     "aide": "*Yet* est placé à la fin d’une négation.",
+     "explication": "**Je ne l’ai pas encore vu** : *not … yet* = « pas encore »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après la carte.",
+     "texte": "Hugo has ___ visited the Colosseum.",
+     "reponses": [
+      [
+       "already"
+      ]
+     ],
+     "banque": [
+      "already",
+      "yet",
+      "ago",
+      "yesterday"
+     ],
+     "aide": "Le marqueur se place entre has et le participe passé.",
+     "explication": "**already** se place entre l’auxiliaire et le participe passé ; *ago* et *yesterday* sont des repères datés (prétérit)."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d02a039-f2ca-5e68-affe-5f4f34deabb6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les nouveaux voisins de Maple Street",
+   "competence": "manier-langue",
+   "situation": "Le journal de quartier présente les habitants de Maple Street et depuis quand ils y vivent. Aujourd’hui, nous sommes en 2025.",
+   "documents": [
+    {
+     "id": "rue",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Maple Street news",
+     "blocs": [
+      "New neighbours at last! Ava has lived at number 4 [[s|since]] 2020. Ben has lived at number 6 [[f|for]] three months.",
+      "Carla has had her flower shop on the corner [[s|since]] January, and Dev has repaired bikes in the street [[f|for]] ten years."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rue",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui introduisent un **point de départ**.",
+     "aide": "Ils sont suivis d’une date ou d’un mois.",
+     "explication": "**since** introduit un point de départ (*since 2020, since January*) ; **for** introduit une durée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Ava has lived here ___ 2020, but Ben has lived here ___ three months.",
+     "reponses": [
+      [
+       "since"
+      ],
+      [
+       "for"
+      ]
+     ],
+     "banque": [
+      "since",
+      "for",
+      "ago",
+      "from"
+     ],
+     "aide": "2020 est une date ; three months est une durée.",
+     "explication": "**since** 2020 (point de départ), **for** three months (durée)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Dev habite ici depuis 2015. » La phrase commence par Dev.",
+     "items": [
+      "Dev",
+      "has",
+      "lived",
+      "here",
+      "since 2015"
+     ],
+     "aide": "Le present perfect = has + participe passé.",
+     "explication": "**Dev has lived here since 2015.** : le français dit « habite » au présent, l’anglais emploie le present perfect."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "I live here since 2020.",
+       "I have lived here since 2020."
+      ],
+      [
+       "I am here since Monday.",
+       "I have been here since Monday."
+      ],
+      [
+       "She have finished.",
+       "She has finished."
+      ],
+      [
+       "I have seen him yesterday.",
+       "I saw him yesterday."
+      ]
+     ],
+     "aide": "Avec since / for, le présent français devient present perfect ; avec yesterday, c’est le prétérit.",
+     "explication": "**Depuis** se dit avec le **present perfect** (*have lived, have been*) ; **has** avec she/he/it ; un repère comme *yesterday* impose le **prétérit**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d02a039-f2ca-5e68-affe-5f4f34deabb6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Candidat pour le camp d’été",
+   "competence": "argumenter",
+   "situation": "Sam répond à une annonce qui recherche des animateurs pour un camp. Lis l’annonce, puis sa lettre de motivation.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Camp helpers wanted",
+     "sousTitre": "Sunny Bay Camp — July",
+     "emoji": "🏕",
+     "lignes": [
+      {
+       "texte": "Have you ever worked with children?",
+       "id": "q1"
+      },
+      {
+       "texte": "Have you ever taught a sport?",
+       "id": "q2"
+      },
+      {
+       "texte": "Can you start on 1 July?",
+       "id": "q3"
+      }
+     ],
+     "pied": "Write to Mr Evans",
+     "source": "Affiche écrite pour l’exercice"
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Sam’s letter",
+     "blocs": [
+      "Dear Mr Evans,",
+      "I [[s|saw]] your poster yesterday. I have worked with children since 2023: I have coached a football team for two years. Last summer I [[s|taught]] swimming at a pool. I have never been late for work.",
+      "I can start on 1 July. Best wishes, Sam"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes de Sam au prétérit** (repère passé précis).",
+     "aide": "Cherche *yesterday* et *last summer*.",
+     "explication": "**saw** (*yesterday*) et **taught** (*last summer*) : un repère passé précis impose le prétérit."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "q2"
+     ],
+     "enonce": "Sam écrit « Last summer I taught swimming ». Touche la question de l’affiche à laquelle cette phrase répond.",
+     "aide": "Nager est un sport.",
+     "explication": "**Have you ever taught a sport ?** : *swimming* est un sport que Sam a enseigné."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Sam.",
+     "texte": "Sam ___ your poster yesterday.",
+     "reponses": [
+      [
+       "saw"
+      ]
+     ],
+     "banque": [
+      "saw",
+      "has seen",
+      "have seen",
+      "sees"
+     ],
+     "aide": "Yesterday est un repère passé précis.",
+     "explication": "**saw** : avec *yesterday*, on emploie le prétérit, pas le present perfect."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il entraîne une équipe depuis deux ans. » La phrase commence par He.",
+     "items": [
+      "He",
+      "has",
+      "coached",
+      "a team",
+      "for two years"
+     ],
+     "aide": "Une action commencée dans le passé qui continue se dit au present perfect.",
+     "explication": "**He has coached a team for two years.** : *for* + durée avec le present perfect."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à ce qu’elle exprime.",
+     "paires": [
+      [
+       "I have lost my phone.",
+       "Résultat présent : je ne l’ai plus"
+      ],
+      [
+       "I lost my phone last night.",
+       "Fait daté, coupé du présent"
+      ],
+      [
+       "I have lived here for years.",
+       "Situation qui continue"
+      ]
+     ],
+     "aide": "Cherche le lien avec le présent, ou la date précise.",
+     "explication": "Le **present perfect** relie le passé au présent (résultat, durée) ; le **prétérit** raconte un fait daté, terminé."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfd40b71-74c1-5bb4-9270-f8341862c0ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le train de 8 heures",
+   "competence": "comprendre-langue",
+   "situation": "Nina arrive à la gare et rate son train. Elle prévient son père par message.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Nina et de son père",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dad",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "I arrived at the station at 8.05, but the train [[a|had]] already left!"
+      },
+      {
+       "qui": "Dad",
+       "texte": "Oh no! I thought you [[a|had]] bought a ticket for the 8.30 train."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux auxiliaires** du past perfect.",
+     "aide": "Il est identique à toutes les personnes.",
+     "explication": "**had** : le past perfect se forme avec *had* + participe passé (*had left, had bought*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle action s’est passée en premier ?",
+     "options": [
+      "Le train est parti avant l’arrivée de Nina",
+      "Nina est arrivée avant le départ du train",
+      "Les deux en même temps",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "aide": "L’action au past perfect est la plus ancienne.",
+     "explication": "**Le train est parti avant son arrivée** : le past perfect (*had left*) marque l’action antérieure."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "When Nina arrived, the train ___ already left.",
+     "reponses": [
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "had",
+      "has",
+      "was",
+      "is"
+     ],
+     "aide": "Le train est parti avant son arrivée.",
+     "explication": "**had** + participe passé pour une action antérieure à une autre action passée."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfd40b71-74c1-5bb4-9270-f8341862c0ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi Maya était bouleversée",
+   "competence": "analyser-texte",
+   "situation": "Maya arrive en retard à un contrôle. Observe l’ordre dans lequel les événements se sont déroulés.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Maya’s bad morning",
+     "blocs": [
+      "When Maya got to school, the test had already [[p|started]]. She had [[p|forgotten]] her alarm clock and she hadn’t [[p|studied]] enough.",
+      "After she had [[p|calmed]] down, she sat down and did her best."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre participes passés** du past perfect.",
+     "aide": "Cherche les verbes précédés de had ou hadn’t.",
+     "explication": "**started, forgotten, studied, calmed** : *had* + participe passé pour les actions antérieures."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : le plus ancien ou le plus récent ?",
+     "categories": [
+      "Action la plus ancienne (past perfect)",
+      "Action la plus récente (prétérit)"
+     ],
+     "items": [
+      [
+       "Maya gets to school.",
+       1
+      ],
+      [
+       "The test starts.",
+       0
+      ],
+      [
+       "Maya forgets her alarm clock.",
+       0
+      ],
+      [
+       "Maya sits down.",
+       1
+      ],
+      [
+       "Maya calms down.",
+       0
+      ],
+      [
+       "Maya does her best.",
+       1
+      ]
+     ],
+     "aide": "Le past perfect marque ce qui s’est passé avant.",
+     "explication": "Le **past perfect** (*had started, had forgotten, had calmed*) marque ce qui est arrivé **avant** ; le prétérit raconte la suite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le récit.",
+     "texte": "Maya was upset because she ___ studied enough.",
+     "reponses": [
+      [
+       "hadn’t"
+      ]
+     ],
+     "banque": [
+      "hadn’t",
+      "didn’t",
+      "wasn’t",
+      "hasn’t"
+     ],
+     "aide": "Elle n’avait pas étudié avant le contrôle.",
+     "explication": "**hadn’t** : la négation du past perfect se forme avec *hadn’t* + participe passé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "She was gone when I arrived.",
+       "She had gone when I arrived."
+      ],
+      [
+       "I had went.",
+       "I had gone."
+      ],
+      [
+       "He had finish.",
+       "He had finished."
+      ],
+      [
+       "I had never saw snow.",
+       "I had never seen snow."
+      ]
+     ],
+     "aide": "Après had, on met le participe passé.",
+     "explication": "Le plus-que-parfait français se traduit par **had** + **participe passé** (3e colonne : go → gone, see → seen), jamais par *was*."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfd40b71-74c1-5bb4-9270-f8341862c0ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vol à la bibliothèque",
+   "competence": "argumenter",
+   "situation": "Un matin, le bibliothécaire découvre un vol. Compare son témoignage avec le tableau reconstitué par la police.",
+   "documents": [
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Mr Brown’s statement",
+     "blocs": [
+      "When I opened the library at eight, someone had [[p|broken]] a window. The thief had [[p|taken]] two old maps, but he hadn’t [[p|touched]] the computers. A neighbour told me she had [[p|heard]] a noise at midnight."
+     ],
+     "source": "Témoignage écrit pour l’exercice"
+    },
+    {
+     "id": "nuit",
+     "type": "tableau",
+     "titre": "The night of the robbery",
+     "colonnes": [
+      "Time",
+      "What happened"
+     ],
+     "lignes": [
+      [
+       "8 a.m.",
+       "The librarian opens the door and sees the broken window"
+      ],
+      [
+       "10 p.m.",
+       "The librarian locks the door"
+      ],
+      [
+       "Midnight",
+       "A neighbour hears a noise"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temoin",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre participes passés** du past perfect dans le témoignage.",
+     "aide": "Ils suivent had ou hadn’t.",
+     "explication": "**broken, taken, touched, heard** : *had* + participe passé pour ce qui s’est passé avant 8 heures."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre chronologique les trois faits du tableau.",
+     "items": [
+      "The librarian locked the door.",
+      "A neighbour heard a noise.",
+      "The librarian saw the broken window."
+     ],
+     "aide": "8 a.m. est le matin suivant.",
+     "explication": "**10 p.m. → midnight → 8 a.m.** : le bibliothécaire ferme, le voisin entend un bruit, puis le matin le bibliothécaire voit la fenêtre brisée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après les deux documents.",
+     "texte": "When the librarian opened the door at eight, the thief ___ already left, but the police ___ arrived yet.",
+     "reponses": [
+      [
+       "had"
+      ],
+      [
+       "hadn’t"
+      ]
+     ],
+     "banque": [
+      "had",
+      "hadn’t",
+      "has",
+      "wasn’t"
+     ],
+     "aide": "Les deux actions précèdent 8 heures.",
+     "explication": "**had** already left (le voleur est parti avant) et **hadn’t** arrived (la police n’est pas encore arrivée) : *had* / *hadn’t* + participe passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mr Brown dit-il « someone had broken a window » ?",
+     "options": [
+      "Elle était cassée avant son arrivée",
+      "Il a cassé la fenêtre en ouvrant",
+      "Le past perfect remplace le futur",
+      "La fenêtre est cassée en ce moment"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’ordre : fenêtre cassée, puis il ouvre.",
+     "explication": "**La fenêtre était cassée avant qu’il ouvre** : le past perfect marque l’action antérieure."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à son sens.",
+     "paires": [
+      [
+       "When I arrived, the film started.",
+       "Le film a commencé à mon arrivée."
+      ],
+      [
+       "When I arrived, the film had started.",
+       "Le film avait déjà commencé."
+      ],
+      [
+       "He had just left when she phoned.",
+       "Il venait de partir quand elle a téléphoné."
+      ],
+      [
+       "I had never seen snow before.",
+       "Je n’avais jamais vu de neige avant."
+      ]
+     ],
+     "aide": "Le past perfect marque l’antériorité ; had just = venait de.",
+     "explication": "**Past perfect** : action déjà accomplie avant l’autre. *Had just* + participe = « venir de » au passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f715fe1-08d3-5632-adbb-436ee655a8cd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les projets du week-end",
+   "competence": "comprendre-langue",
+   "situation": "Ella et Jack parlent de leur samedi par message. Lis comment chacun parle de l’avenir.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ella et de Jack",
+     "participants": [
+      {
+       "nom": "Ella",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jack",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ella",
+       "texte": "What are you doing on Saturday?"
+      },
+      {
+       "qui": "Jack",
+       "texte": "I’m [[r|meeting]] Sam at five. We’re going to see a film."
+      },
+      {
+       "qui": "Ella",
+       "texte": "Nice! I’ll come with you!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe en **BE + -ING** qui exprime un **rendez-vous organisé**.",
+     "aide": "Cherche le verbe en -ING qui suit « I’m ».",
+     "explication": "**meeting** : *I’m meeting Sam at five* est un rendez-vous organisé avec une heure précise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Ella dit-elle « I’ll come with you! » ?",
+     "options": [
+      "Elle décide à l’instant de venir",
+      "Elle avait déjà tout organisé",
+      "Elle donne un horaire officiel",
+      "Elle prédit à partir d’un indice"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui s’est passé juste avant sa phrase.",
+     "explication": "**will** exprime une décision prise **au moment de parler**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le message de Jack.",
+     "texte": "We ___ going to see a film.",
+     "reponses": [
+      [
+       "are"
+      ]
+     ],
+     "banque": [
+      "are",
+      "is",
+      "will",
+      "am"
+     ],
+     "aide": "Le sujet est we.",
+     "explication": "**are** : *be going to* se conjugue avec le verbe *be* (*we are going to*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f715fe1-08d3-5632-adbb-436ee655a8cd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ruby part pour Édimbourg",
+   "competence": "manier-langue",
+   "situation": "Ruby prépare son voyage vers l’Écosse. Elle écrit à sa grand-mère, avec l’horaire de son train sous les yeux.",
+   "documents": [
+    {
+     "id": "horaire",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Train timetable",
+     "sousTitre": "London → Edinburgh",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "Leaves London",
+       "valeur": "7.15",
+       "id": "dep"
+      },
+      {
+       "texte": "Arrives Edinburgh",
+       "valeur": "11.50",
+       "id": "arr"
+      }
+     ],
+     "pied": "Daily service",
+     "source": "Horaire écrit pour l’exercice"
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Ruby’s message",
+     "blocs": [
+      "Hi Gran,",
+      "Next summer I’m going to visit Edinburgh! My train [[h|leaves]] very early, so I’m going to be tired. I’m meeting Aunt Meg at the station, and I’ll text you when I arrive.",
+      "Ruby"
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le verbe que Ruby met au **présent simple** pour parler d’un horaire.",
+     "aide": "Cherche le verbe qui parle de son train.",
+     "explication": "**leaves** : un horaire officiel se dit au présent simple."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon la forme du futur qu’elle illustre.",
+     "categories": [
+      "will",
+      "be going to",
+      "BE + -ING",
+      "Présent simple"
+     ],
+     "items": [
+      [
+       "The phone’s ringing — I’ll answer it!",
+       0
+      ],
+      [
+       "I think it will be sunny.",
+       0
+      ],
+      [
+       "Look at those clouds — it’s going to rain.",
+       1
+      ],
+      [
+       "I’m going to learn the guitar.",
+       1
+      ],
+      [
+       "I’m having lunch with Meg at noon.",
+       2
+      ],
+      [
+       "We’re leaving on Friday — the tickets are booked.",
+       2
+      ],
+      [
+       "The train leaves at 7.15.",
+       3
+      ],
+      [
+       "The film starts at eight.",
+       3
+      ]
+     ],
+     "aide": "Décision immédiate, intention ou indice, rendez-vous, horaire.",
+     "explication": "**will** : décision immédiate ou prédiction ; **be going to** : intention ou indice visible ; **BE + -ING** : rendez-vous organisé ; **présent simple** : horaire officiel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Ruby.",
+     "texte": "I’ll text you as soon as I ___ in Edinburgh.",
+     "reponses": [
+      [
+       "arrive"
+      ]
+     ],
+     "banque": [
+      "arrive",
+      "will arrive",
+      "arrived",
+      "am arriving"
+     ],
+     "aide": "Après une conjonction de temps, on emploie le présent.",
+     "explication": "**arrive** : après *as soon as*, *when*, *before*…, l’anglais emploie le **présent**, jamais *will*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la phrase de Ruby qui donne l’heure du train (voir l’horaire) : « Mon train part à 7 h 15. » La phrase commence par My.",
+     "items": [
+      "My",
+      "train",
+      "leaves",
+      "at",
+      "7.15"
+     ],
+     "aide": "L’heure vient de la fiche d’horaires.",
+     "explication": "**My train leaves at 7.15.** : présent simple pour un horaire officiel."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f715fe1-08d3-5632-adbb-436ee655a8cd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fête sous la pluie",
+   "competence": "argumenter",
+   "situation": "Zoé et Noé préparent une fête d’anniversaire. Lis leurs messages, puis la météo du samedi.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Zoé et de Noé",
+     "participants": [
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noah",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoe",
+       "texte": "My party starts at three on Saturday!"
+      },
+      {
+       "qui": "Noah",
+       "texte": "Great! I’m bringing the speakers."
+      },
+      {
+       "qui": "Zoe",
+       "texte": "Look at those black clouds: it’s [[i|going]] to rain."
+      },
+      {
+       "qui": "Noah",
+       "texte": "Then we’ll play inside. I can’t lift the speakers alone, though."
+      },
+      {
+       "qui": "Zoe",
+       "texte": "Don’t worry, I’ll help you."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "meteo",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Weather forecast",
+     "sousTitre": "Saturday",
+     "emoji": "🌦",
+     "lignes": [
+      {
+       "texte": "Morning: sunny",
+       "id": "m"
+      },
+      {
+       "texte": "Afternoon: heavy rain",
+       "id": "a"
+      },
+      {
+       "texte": "Evening: dry and cool",
+       "id": "e"
+      }
+     ],
+     "pied": "Source : prévisions écrites pour l’exercice",
+     "source": "Prévisions écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui montre que Zoé **prédit la pluie d’après un indice visible**.",
+     "aide": "Cherche la forme qui suit « it’s ».",
+     "explication": "**going** : *be going to* est la forme d’une prédiction fondée sur un indice présent (les nuages)."
+    },
+    {
+     "type": "zone",
+     "document": "meteo",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "La fête commence à 15 h. Touche la ligne de la météo qui justifie l’avertissement de Zoé.",
+     "aide": "Trois heures de l’après-midi, c’est quel moment de la journée ?",
+     "explication": "**Afternoon: heavy rain** : la fête a lieu l’après-midi, c’est donc le moment où la pluie est annoncée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase du dialogue à la forme du futur qu’elle illustre.",
+     "paires": [
+      [
+       "My party starts at three.",
+       "Présent simple : un horaire"
+      ],
+      [
+       "I’m bringing the speakers.",
+       "BE + -ING : une chose organisée"
+      ],
+      [
+       "It’s going to rain.",
+       "be going to : un indice visible"
+      ],
+      [
+       "I’ll help you.",
+       "will : une offre sur le moment"
+      ]
+     ],
+     "aide": "Horaire, organisation, indice, décision immédiate.",
+     "explication": "Chaque forme répond à un **degré de préparation** : horaire officiel, rendez-vous organisé, intention ou indice, décision sur le moment."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Zoé.",
+     "texte": "I’ll call you as soon as the rain ___.",
+     "reponses": [
+      [
+       "stops"
+      ]
+     ],
+     "banque": [
+      "stops",
+      "will stop",
+      "stopped",
+      "stopping"
+     ],
+     "aide": "Après as soon as, pas de will.",
+     "explication": "**stops** : après *as soon as*, le présent exprime l’avenir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Noah veut dire « J’allais apporter les enceintes, mais j’ai oublié. » Quelle phrase est correcte ?",
+     "options": [
+      "I was going to bring the speakers, but I forgot.",
+      "I will bring the speakers, but I forgot.",
+      "I am going to bring the speakers, but I forgot.",
+      "I bring the speakers, but I forgot."
+     ],
+     "reponse": 0,
+     "aide": "Une intention qui n’a pas eu lieu se dit au passé.",
+     "explication": "**I was going to … but I forgot** : *was / were going to* exprime une intention du passé qui n’a pas été réalisée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la demande de Noé : « Tu veux bien m’aider à porter les enceintes ? » La phrase commence par Will.",
+     "items": [
+      "Will",
+      "you",
+      "help",
+      "me",
+      "carry",
+      "the speakers"
+     ],
+     "aide": "Une demande se fait avec will, puis le sujet.",
+     "explication": "**Will you help me carry the speakers ?** : *will* sert aussi à faire une demande."
+    }
+   ]
+  },
+  {
+   "chapitre": "863ebe89-2a1a-53d5-8e0c-551fe22d9df9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Si demain il pleut…",
+   "competence": "comprendre-langue",
+   "situation": "La classe de Mina prépare son plan pour samedi : une activité s’il pleut, une autre s’il fait beau.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Our weather plan",
+     "blocs": [
+      "If it [[p|rains]] on Saturday, we will watch a film. If it [[p|is]] sunny, we will play outside."
+     ],
+     "source": "Plan écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes** qui suivent « if ».",
+     "aide": "Ils sont au présent.",
+     "explication": "**rains** et **is** : après *if*, on emploie le **présent simple**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle structure ce plan utilise-t-il ?",
+     "options": [
+      "if + présent, will + base verbale",
+      "if + prétérit, would + base verbale",
+      "if + will, would + base verbale",
+      "if + past perfect, would have + participe"
+     ],
+     "reponse": 0,
+     "aide": "Ce qui est envisagé peut vraiment arriver.",
+     "explication": "**if + présent, will + base verbale** : c’est la condition de type 1, le possible."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "If it ___ on Sunday, we will stay home.",
+     "reponses": [
+      [
+       "rains"
+      ]
+     ],
+     "banque": [
+      "rains",
+      "will rain",
+      "rained",
+      "would rain"
+     ],
+     "aide": "On ne met jamais will après if.",
+     "explication": "**rains** : présent simple après *if* ; le *will* est dans la principale."
+    }
+   ]
+  },
+  {
+   "chapitre": "863ebe89-2a1a-53d5-8e0c-551fe22d9df9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Si j’étais directrice…",
+   "competence": "manier-langue",
+   "situation": "Léna écrit au proviseur pour lui dire ce qu’elle changerait si elle dirigeait le collège.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lena’s letter",
+     "blocs": [
+      "Dear Mr Hall,",
+      "If I [[t|were]] the headteacher, I would build a swimming pool. If we [[t|had]] a longer lunch break, we would play football every day. I wish I could change the rules!",
+      "Yours, Lena"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "t"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes au prétérit** qui suivent « if ».",
+     "aide": "Après if, on n’écrit ni will ni would.",
+     "explication": "**were** et **had** : dans la condition de type 2, la proposition en *if* est au **prétérit** ; *were* à toutes les personnes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon son type de condition.",
+     "categories": [
+      "Type 1 : possible",
+      "Type 2 : irréel du présent",
+      "Type 3 : irréel du passé"
+     ],
+     "items": [
+      [
+       "If it snows, we will make a snowman.",
+       0
+      ],
+      [
+       "If I had a dog, I would walk it every day.",
+       1
+      ],
+      [
+       "If she had studied, she would have passed.",
+       2
+      ],
+      [
+       "If you come, we will play tennis.",
+       0
+      ],
+      [
+       "If I were you, I would apologise.",
+       1
+      ],
+      [
+       "If he had known, he would have come.",
+       2
+      ]
+     ],
+     "aide": "Regarde le temps du verbe après if.",
+     "explication": "**Présent / will** : possible ; **prétérit / would** : irréel du présent ; **past perfect / would have** : irréel du passé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Léna.",
+     "texte": "If I ___ the headteacher, I would build a pool.",
+     "reponses": [
+      [
+       "were"
+      ]
+     ],
+     "banque": [
+      "were",
+      "am",
+      "will be",
+      "would be"
+     ],
+     "aide": "Le prétérit de be se dit were à toutes les personnes dans cette structure.",
+     "explication": "**were** : avec *if*, on emploie *were* pour toutes les personnes dans la structure de l’irréel du présent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "If I would have money, I would buy it.",
+       "If I had money, I would buy it."
+      ],
+      [
+       "If it will rain, I stay home.",
+       "If it rains, I will stay home."
+      ],
+      [
+       "If I had known, I would come.",
+       "If I had known, I would have come."
+      ],
+      [
+       "If I was you…",
+       "If I were you…"
+      ]
+     ],
+     "aide": "Jamais will ni would après if.",
+     "explication": "On n’écrit jamais **will** ni **would** après *if* ; chaque type a sa structure ; à l’écrit on garde **were**."
+    }
+   ]
+  },
+  {
+   "chapitre": "863ebe89-2a1a-53d5-8e0c-551fe22d9df9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les regrets de Tom",
+   "competence": "argumenter",
+   "situation": "Tom a raté un examen. Il note ses regrets dans son journal, puis il en parle avec Inès.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Tom’s diary",
+     "blocs": [
+      "I didn’t study, so I failed the exam. If I [[h|had]] studied, I would have passed. If I [[h|hadn’t]] missed the bus, I would have arrived on time."
+     ],
+     "source": "Journal écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Tom et d’Inès",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ines",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "I failed again. What can I do?"
+      },
+      {
+       "qui": "Ines",
+       "texte": "If I were you, I would ask for another test."
+      },
+      {
+       "qui": "Tom",
+       "texte": "If the teacher says yes, I will study every night."
+      },
+      {
+       "qui": "Ines",
+       "texte": "Good! You will fail again unless you work."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux auxiliaires** qui suivent « if » dans le journal de Tom.",
+     "aide": "La condition de type 3 emploie le past perfect après if.",
+     "explication": "**had** et **hadn’t** : après *if*, l’irréel du passé emploie le **past perfect**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « If I had studied, I would have passed » ?",
+     "options": [
+      "Je n’ai pas étudié et j’ai échoué",
+      "J’ai étudié et j’ai réussi",
+      "Je n’étudie pas et j’échouerai",
+      "Je n’ai pas étudié mais j’ai réussi"
+     ],
+     "reponse": 0,
+     "aide": "L’irréel du passé exprime un regret.",
+     "explication": "**Je n’ai pas étudié et j’ai échoué** : le type 3 dit le contraire de ce qui s’est passé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après les messages.",
+     "texte": "If Ines ___ Tom, she would ask for another test. Tom will fail again ___ he works.",
+     "reponses": [
+      [
+       "were"
+      ],
+      [
+       "unless"
+      ]
+     ],
+     "banque": [
+      "were",
+      "am",
+      "unless",
+      "until"
+     ],
+     "aide": "Le premier blanc est une condition de type 2 ; le second veut dire « à moins que ».",
+     "explication": "**were** (type 2, à toutes les personnes) et **unless** = *if … not* : *unless he works* = *if he doesn’t work*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à son sens.",
+     "paires": [
+      [
+       "I would like a coffee.",
+       "Une demande polie"
+      ],
+      [
+       "I would rather stay.",
+       "Une préférence"
+      ],
+      [
+       "I wish I could come.",
+       "Un souhait irréel"
+      ],
+      [
+       "You will fail unless you work.",
+       "Tu échoueras si tu ne travailles pas"
+      ]
+     ],
+     "aide": "Would sert aussi hors des phrases en if.",
+     "explication": "*Would like* est poli ; *would rather* dit la préférence ; *wish* + modal dit un souhait irréel ; *unless* = *if … not*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Tom regrette d’avoir raté le bus. Quelle phrase est correcte ?",
+     "options": [
+      "If I hadn’t missed the bus, I would have arrived on time.",
+      "If I didn’t miss the bus, I would arrive on time.",
+      "If I wouldn’t have missed the bus, I would have arrived on time.",
+      "If I hadn’t missed the bus, I would arrive on time."
+     ],
+     "reponse": 0,
+     "aide": "Un regret sur le passé exige le past perfect puis would have + participe.",
+     "explication": "**If I hadn’t missed the bus, I would have arrived on time.** : past perfect après *if*, *would have* + participe passé dans la principale."
+    }
+   ]
+  },
+  {
+   "chapitre": "950a43bb-b76f-563d-98a4-dfb135154777",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un mot au tableau d’affichage",
+   "competence": "comprendre-langue",
+   "situation": "Une annonce est collée devant le collège. Observe les sujets des phrases anglaises.",
+   "documents": [
+    {
+     "id": "annonce",
+     "type": "texte",
+     "genre": "article",
+     "titre": "School notice",
+     "blocs": [
+      "Hello! [[s|There]] is a problem with the school bus.",
+      "[[s|It]] is raining, so the bus is late. Our teacher bought coffee for the driver."
+     ],
+     "source": "Annonce écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "annonce",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux sujets « vides »** (there, it).",
+     "aide": "Ils n’ont pas de sens propre mais sont obligatoires.",
+     "explication": "**There** et **It** : en anglais, le sujet est obligatoire, même quand il ne désigne rien (*There is…*, *It is raining*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Hier, j’ai pris le bus pour aller à l’école. » La phrase commence par Yesterday.",
+     "items": [
+      "Yesterday",
+      "I",
+      "took",
+      "the bus",
+      "to school"
+     ],
+     "aide": "Ordre de base : sujet, verbe, complément.",
+     "explication": "**Yesterday I took the bus to school.** : le repère de temps ouvre la phrase, puis sujet – verbe – complément."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la première phrase de l’annonce.",
+     "texte": "___ is a problem with the bus.",
+     "reponses": [
+      [
+       "There"
+      ]
+     ],
+     "banque": [
+      "There",
+      "She",
+      "Is",
+      "Have"
+     ],
+     "aide": "Il y a un problème = sujet vide.",
+     "explication": "**There** : « il y a » se dit *there is* ; le sujet ne peut pas être omis."
+    }
+   ]
+  },
+  {
+   "chapitre": "950a43bb-b76f-563d-98a4-dfb135154777",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre à tante Jo",
+   "competence": "manier-langue",
+   "situation": "Sam raconte à sa tante un dimanche passé à la maison. Observe comment il relie ses idées.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Sam’s letter",
+     "blocs": [
+      "Dear Aunt Jo,",
+      "I stayed home on Sunday [[c|because]] I was ill. It was raining, so I watched films. My brother wanted to play football, but he had a cold. Although it was late, we kept talking until Dad came."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui introduit la **cause** de la présence de Sam à la maison.",
+     "aide": "Cherche le « parce que ».",
+     "explication": "**because** introduit la cause ; **so** introduit la conséquence."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire « J’étais malade, donc je suis resté à la maison ».",
+     "texte": "I was ill, ___ I stayed home.",
+     "reponses": [
+      [
+       "so"
+      ]
+     ],
+     "banque": [
+      "so",
+      "because",
+      "but",
+      "although"
+     ],
+     "aide": "Il faut dire la conséquence.",
+     "explication": "**so** : *I was ill, so I stayed home* = *I stayed home because I was ill*, dans l’autre sens."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le bus était en retard parce qu’il pleuvait. » La phrase commence par The bus.",
+     "items": [
+      "The bus",
+      "was late",
+      "because",
+      "it",
+      "was raining"
+     ],
+     "aide": "Because introduit la cause en fin de phrase.",
+     "explication": "**The bus was late because it was raining.** : la proposition principale d’abord, puis la subordonnée de cause introduite par *because* (il pleuvait : *was raining*, une action en cours)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à son sens.",
+     "paires": [
+      [
+       "I’ll go unless it rains.",
+       "J’irai à moins qu’il pleuve."
+      ],
+      [
+       "Although it was late, he kept working.",
+       "Bien qu’il soit tard, il continuait."
+      ],
+      [
+       "I stayed home because I was ill.",
+       "Je suis resté parce que j’étais malade."
+      ],
+      [
+       "It’s small but comfortable.",
+       "C’est petit mais confortable."
+      ]
+     ],
+     "aide": "Unless = à moins que ; although = bien que.",
+     "explication": "**unless** : condition négative ; **although** : concession ; **because** : cause ; **but** : opposition."
+    }
+   ]
+  },
+  {
+   "chapitre": "950a43bb-b76f-563d-98a4-dfb135154777",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un message pour Tara",
+   "competence": "argumenter",
+   "situation": "Sam organise une rencontre à la gare avec Tara. Lis sa lettre et sa conversation avec elle.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Sam’s letter",
+     "blocs": [
+      "Hi Tara,",
+      "I think the trip will be great. When we arrive, I’ll call you. I’ll wait at the station [[u|unless]] it rains, and please bring the book that I lent you, because I need it.",
+      "Sam"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Tara et de Sam",
+     "participants": [
+      {
+       "nom": "Tara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tara",
+       "texte": "Thanks, Sam! I’ll bring sandwiches [[c|because]] I know you are always hungry."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Perfect. I didn’t see anybody at the station yesterday, so I’ll wait for you there."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche la conjonction qui introduit une **condition négative** (« à moins que »).",
+     "aide": "Elle est suivie de « it rains ».",
+     "explication": "**unless** = *if … not* : *I’ll wait unless it rains*."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la conjonction qui introduit la **cause** dans le message de Tara.",
+     "aide": "Cherche le « parce que ».",
+     "explication": "**because** introduit la subordonnée de cause."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque subordonnée selon sa nature.",
+     "categories": [
+      "Temps",
+      "Cause",
+      "Condition",
+      "Relative"
+     ],
+     "items": [
+      [
+       "When we arrive",
+       0
+      ],
+      [
+       "because I need it",
+       1
+      ],
+      [
+       "unless it rains",
+       2
+      ],
+      [
+       "that I lent you",
+       3
+      ],
+      [
+       "before we leave",
+       0
+      ],
+      [
+       "if you come",
+       2
+      ],
+      [
+       "since I was ill",
+       1
+      ]
+     ],
+     "aide": "When, before = temps ; because, since = cause ; if, unless = condition ; that, who, which = relative.",
+     "explication": "Le mot introducteur dit la nature de la subordonnée : **when / before** (temps), **because / since** (cause), **if / unless** (condition), **that / who / which** (relative)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "I’ll call you as soon as I ___.",
+     "reponses": [
+      [
+       "arrive"
+      ]
+     ],
+     "banque": [
+      "arrive",
+      "will arrive",
+      "arrived",
+      "am arriving"
+     ],
+     "aide": "Après une conjonction de temps, on emploie le présent.",
+     "explication": "**arrive** : présent après *as soon as* pour parler de l’avenir."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la phrase de Sam : « Je n’ai vu personne à la gare. » La phrase commence par I.",
+     "items": [
+      "I",
+      "didn’t",
+      "see",
+      "anybody",
+      "at the station"
+     ],
+     "aide": "Pas de double négation.",
+     "explication": "**I didn’t see anybody at the station.** : une seule négation (*didn’t*), donc *anybody* et non *nobody*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "Is raining.",
+       "It is raining."
+      ],
+      [
+       "I like very much football.",
+       "I like football very much."
+      ],
+      [
+       "I didn’t see nobody.",
+       "I didn’t see anybody."
+      ],
+      [
+       "Yesterday went I to the cinema.",
+       "Yesterday I went to the cinema."
+      ]
+     ],
+     "aide": "Sujet obligatoire, adverbe après l’objet, une seule négation, sujet avant le verbe.",
+     "explication": "En anglais, le sujet est **obligatoire**, l’adverbe ne s’intercale pas entre le verbe et l’objet, la négation est **unique** et l’ordre **sujet – verbe** est fixe."
+    }
+   ]
+  },
+  {
+   "chapitre": "a75442fe-af8e-5d13-b77d-f97abe6c463d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un coup de main en maths",
+   "competence": "comprendre-langue",
+   "situation": "Leo a du mal en maths. Il demande de l’aide à Emma par message. Observe les pronoms compléments.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Leo et d’Emma",
+     "participants": [
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leo",
+       "texte": "Can you help [[c|me]] with maths?"
+      },
+      {
+       "qui": "Emma",
+       "texte": "Sure! Tom is good at maths. I’ll ask [[c|him]] to come with [[c|us]]."
+      },
+      {
+       "qui": "Leo",
+       "texte": "Great! I’ll text [[c|them]]: Tom and his sister."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre pronoms compléments** des messages.",
+     "aide": "Ils suivent un verbe ou une préposition.",
+     "explication": "**me, him, us, them** : les pronoms compléments suivent le verbe (*help me, ask him*) ou une préposition (*with us*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Tom is good at maths, so Emma asks ___ for help.",
+     "reponses": [
+      [
+       "him"
+      ]
+     ],
+     "banque": [
+      "him",
+      "he",
+      "his",
+      "himself"
+     ],
+     "aide": "Tom est complément du verbe asks.",
+     "explication": "**him** : pronom complément correspondant à *he*, placé après le verbe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « with us » et non « with we » ?",
+     "options": [
+      "Après une préposition, pronom complément",
+      "Parce que we est un pronom réfléchi",
+      "Parce que with est toujours suivi de us",
+      "Parce que we ne peut pas être sujet"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le mot qui précède le pronom.",
+     "explication": "**Après une préposition (*with, for, to…*), on emploie le pronom complément** : *with us*, *for them*."
+    }
+   ]
+  },
+  {
+   "chapitre": "a75442fe-af8e-5d13-b77d-f97abe6c463d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le club d’échecs",
+   "competence": "manier-langue",
+   "situation": "Le journal du collège présente deux joueurs d’échecs, Anna et Ben. Observe les pronoms réfléchis et « each other ».",
+   "documents": [
+    {
+     "id": "club",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Chess club news",
+     "blocs": [
+      "Anna and Ben love chess. They play each other every Friday.",
+      "Last week Anna hurt [[r|herself]], so Ben wrote the club report by [[r|himself]]. « I did it [[r|myself]] ! » he said."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois pronoms réfléchis** de l’article.",
+     "aide": "Ils se terminent par -self.",
+     "explication": "**herself, himself, myself** : les pronoms réfléchis se terminent par -self ou -selves."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à son sens.",
+     "paires": [
+      [
+       "They play each other.",
+       "L’action est réciproque"
+      ],
+      [
+       "Ben did it by himself.",
+       "Il l’a fait tout seul"
+      ],
+      [
+       "I did it myself!",
+       "J’insiste : c’est moi"
+      ],
+      [
+       "Anna hurt herself.",
+       "L’action revient sur le sujet"
+      ]
+     ],
+     "aide": "Each other = l’un l’autre ; by + réfléchi = seul.",
+     "explication": "*Each other* = réciproque ; *by himself* = tout seul ; *myself* en fin de phrase = insistance ; *hurt herself* = action qui revient sur le sujet."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : réfléchi ou réciproque ?",
+     "categories": [
+      "Réfléchi (l’action revient sur le sujet)",
+      "Réciproque (each other)"
+     ],
+     "items": [
+      [
+       "They kissed each other.",
+       1
+      ],
+      [
+       "She cut herself.",
+       0
+      ],
+      [
+       "They help each other.",
+       1
+      ],
+      [
+       "I taught myself the guitar.",
+       0
+      ]
+     ],
+     "aide": "Chacun fait-il l’action à l’autre, ou à lui-même ?",
+     "explication": "**Each other** : deux personnes qui agissent l’une sur l’autre ; **réfléchi** : l’action revient sur celui qui la fait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « Je me lève à sept heures » ?",
+     "options": [
+      "I get up at seven.",
+      "I get myself up at seven.",
+      "I raise myself at seven.",
+      "I me get up at seven."
+     ],
+     "reponse": 0,
+     "aide": "Certains verbes pronominaux français n’ont pas de pronom réfléchi en anglais.",
+     "explication": "**I get up at seven.** : *get up* n’est pas pronominal en anglais, comme *wash* ou *feel*."
+    }
+   ]
+  },
+  {
+   "chapitre": "a75442fe-af8e-5d13-b77d-f97abe6c463d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a appelé Mia ?",
+   "competence": "argumenter",
+   "situation": "Jo écrit un mot à Mia. Elle consulte ensuite le tableau des pronoms de son cahier.",
+   "documents": [
+    {
+     "id": "mot",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Jo’s note",
+     "blocs": [
+      "Dear Mia,",
+      "Between you and me, I am worried. Someone called this morning, but [[t|they]] didn’t leave a message. My brother and I think it was Mr Lee.",
+      "Could you ask him? Love, Jo"
+     ],
+     "source": "Mot écrit pour l’exercice"
+    },
+    {
+     "id": "table",
+     "type": "tableau",
+     "titre": "Les pronoms personnels",
+     "colonnes": [
+      "Sujet",
+      "Complément",
+      "Adjectif possessif",
+      "Pronom possessif",
+      "Réfléchi"
+     ],
+     "lignes": [
+      [
+       "I",
+       "me",
+       "my",
+       "mine",
+       "myself"
+      ],
+      [
+       "you",
+       "you",
+       "your",
+       "yours",
+       "yourself"
+      ],
+      [
+       "he",
+       "him",
+       "his",
+       "his",
+       "himself"
+      ],
+      [
+       "she",
+       "her",
+       "her",
+       "hers",
+       "herself"
+      ],
+      [
+       "it",
+       "it",
+       "its",
+       "—",
+       "itself"
+      ],
+      [
+       "we",
+       "us",
+       "our",
+       "ours",
+       "ourselves"
+      ],
+      [
+       "they",
+       "them",
+       "their",
+       "theirs",
+       "themselves"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau récapitulatif"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mot",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le pronom qui désigne **une personne dont le genre est inconnu**.",
+     "aide": "Jo ne sait pas qui a téléphoné.",
+     "explication": "**they** s’emploie aussi comme pronom singulier neutre quand on ne connaît pas le genre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète en t’aidant du tableau.",
+     "texte": "These tickets are ___, not yours.",
+     "reponses": [
+      [
+       "ours"
+      ]
+     ],
+     "banque": [
+      "ours",
+      "our",
+      "us",
+      "ourselves"
+     ],
+     "aide": "Il faut un pronom possessif : colonne « Pronom possessif ».",
+     "explication": "**ours** : pronom possessif correspondant à *we* (*these tickets are ours*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Mon ami et moi sommes rentrés à la maison. » La phrase commence par My.",
+     "items": [
+      "My",
+      "friend",
+      "and",
+      "I",
+      "went home"
+     ],
+     "aide": "Sujet : I ; on se cite en dernier.",
+     "explication": "**My friend and I went home.** : *I* est sujet et on se nomme en dernier."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "Between you and I",
+       "Between you and me"
+      ],
+      [
+       "I him saw.",
+       "I saw him."
+      ],
+      [
+       "They kissed themselves.",
+       "They kissed each other."
+      ],
+      [
+       "We met ourselves at six.",
+       "We met at six."
+      ]
+     ],
+     "aide": "Après une préposition ou un verbe, le pronom est complément ; l’action réciproque = each other.",
+     "explication": "**Between you and me** (complément après préposition) ; le complément **suit** le verbe ; **each other** pour le réciproque ; pas de réfléchi pour *se retrouver*."
+    },
+    {
+     "type": "texte",
+     "enonce": "D’après le tableau, quel pronom sujet n’a **pas de pronom possessif** ? Écris-le.",
+     "reponse": [
+      "it",
+      "It"
+     ],
+     "aide": "Regarde la colonne « Pronom possessif ».",
+     "explication": "**it** : sa case est vide (—) ; on emploie l’adjectif *its*."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e047d4a-274b-5df5-a753-eeb28d43c615",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La classe de musique",
+   "competence": "comprendre-langue",
+   "situation": "Dans son journal, une élève présente sa classe de musique. Observe les mots qui relient les phrases.",
+   "documents": [
+    {
+     "id": "classe",
+     "type": "texte",
+     "genre": "article",
+     "titre": "My music class",
+     "blocs": [
+      "In my class there is a girl [[r|who]] plays the drums and a boy [[r|who]] writes songs.",
+      "The teacher [[r|whose]] name is Mr Cole loves music. We practise in the hall [[r|where]] we meet on Fridays."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "classe",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre pronoms relatifs** du texte.",
+     "aide": "Ils relient une information à un nom qui les précède.",
+     "explication": "**who, who, whose, where** : *who* pour une personne, *whose* pour la possession, *where* pour un lieu."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque antécédent au pronom relatif qui convient.",
+     "paires": [
+      [
+       "a person",
+       "who"
+      ],
+      [
+       "a thing",
+       "which"
+      ],
+      [
+       "a place",
+       "where"
+      ],
+      [
+       "possession",
+       "whose"
+      ]
+     ],
+     "aide": "Personne, chose, lieu, possession.",
+     "explication": "**who** : personne ; **which** : chose ; **where** : lieu ; **whose** : possession."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "I have a friend ___ speaks Chinese.",
+     "reponses": [
+      [
+       "who"
+      ]
+     ],
+     "banque": [
+      "who",
+      "which",
+      "whose",
+      "where"
+     ],
+     "aide": "L’antécédent est une personne.",
+     "explication": "**who** : l’antécédent *a friend* est une personne."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e047d4a-274b-5df5-a753-eeb28d43c615",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre de Londres",
+   "competence": "manier-langue",
+   "situation": "Ana écrit à sa mère. Observe où se placent les virgules autour des relatives.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Ana’s letter",
+     "blocs": [
+      "Dear Mum,",
+      "My brother, [[e|who]] lives in London, is a teacher. The book that I bought is about space. The girl whose father is a doctor is in my class.",
+      "Love, Ana"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le pronom qui introduit la **relative explicative** (entre virgules).",
+     "aide": "Cherche l’information entourée de virgules.",
+     "explication": "**who** : la relative *who lives in London* est entre virgules, elle ajoute une information non indispensable."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : relative déterminative ou explicative ?",
+     "categories": [
+      "Déterminative (indispensable)",
+      "Explicative (entre virgules)"
+     ],
+     "items": [
+      [
+       "The man who lives next door is a doctor.",
+       0
+      ],
+      [
+       "My sister, who lives in Rome, is a nurse.",
+       1
+      ],
+      [
+       "The film that I watched was great.",
+       0
+      ],
+      [
+       "London, which is the capital of the UK, is huge.",
+       1
+      ],
+      [
+       "The girl who sits next to me is my cousin.",
+       0
+      ]
+     ],
+     "aide": "Peut-on supprimer la relative sans changer le sens ?",
+     "explication": "La **déterminative** est indispensable, sans virgule ; l’**explicative** ajoute une information, entre virgules."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle phrase le pronom relatif peut-il être omis ?",
+     "options": [
+      "The film that I watched was great.",
+      "The man who called me was rude.",
+      "My brother, who lives in Rome, is a teacher.",
+      "The girl whose father is a doctor is my friend."
+     ],
+     "reponse": 0,
+     "aide": "Le pronom peut sauter quand il est complément d’une relative déterminative.",
+     "explication": "**The film (that) I watched was great.** : *that* est complément ; il peut être omis. Un pronom sujet ne s’omet jamais."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "My sister, ___ lives in Rome, is a nurse, and the girl ___ father is a doctor is my friend.",
+     "reponses": [
+      [
+       "who"
+      ],
+      [
+       "whose"
+      ]
+     ],
+     "banque": [
+      "who",
+      "whose",
+      "that",
+      "which"
+     ],
+     "aide": "Le premier est entre virgules ; le second marque la possession.",
+     "explication": "**who** (relative explicative : *that* est impossible) et **whose** (possession)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e047d4a-274b-5df5-a753-eeb28d43c615",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le match dont tout le monde parle",
+   "competence": "argumenter",
+   "situation": "Une élève parle de son livre préféré, puis deux amis commentent un match de football.",
+   "documents": [
+    {
+     "id": "livre",
+     "type": "texte",
+     "genre": "article",
+     "titre": "My favourite book",
+     "blocs": [
+      "This is the book [[o|that]] I read last summer. It was written by an author who lives in Wales, a country where it rains a lot."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Max et d’Ana",
+     "participants": [
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Max",
+       "texte": "Do you know what happened at the match?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Yes! The player who scored the goal is my cousin."
+      },
+      {
+       "qui": "Max",
+       "texte": "Is he the boy [[p|whose]] picture is in the newspaper?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Yes, he’s the one everybody talks about."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livre",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le pronom relatif qui pourrait être **omis** sans changer le sens.",
+     "aide": "Il est complément dans une relative déterminative.",
+     "explication": "**that** : *the book (that) I read* — il est complément et peut sauter. *Who* est sujet et *where* introduit un lieu."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Tout ce qu’il a dit était vrai. » La phrase commence par Everything.",
+     "items": [
+      "Everything",
+      "that",
+      "he",
+      "said",
+      "was",
+      "true"
+     ],
+     "aide": "Après everything, on emploie that.",
+     "explication": "**Everything that he said was true.** : *everything* est suivi de *that*, jamais de « what »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase relie correctement « This is the house. I grew up there. » ?",
+     "options": [
+      "This is the house where I grew up.",
+      "This is the house which I grew up there.",
+      "This is the house whose I grew up.",
+      "This is the house who I grew up."
+     ],
+     "reponse": 0,
+     "aide": "Un lieu appelle where.",
+     "explication": "**This is the house where I grew up.** : *where* remplace *there*."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le pronom relatif qui exprime la **possession** dans le message de Max.",
+     "aide": "Cherche « dont la photo ».",
+     "explication": "**whose** : *the boy whose picture…* = le garçon dont la photo…"
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "the man which lives here",
+       "the man who lives here"
+      ],
+      [
+       "the girl who her father is a doctor",
+       "the girl whose father is a doctor"
+      ],
+      [
+       "the book that I read it",
+       "the book that I read"
+      ],
+      [
+       "My sister, that lives in Rome, …",
+       "My sister, who lives in Rome, …"
+      ]
+     ],
+     "aide": "Personne, possession, pas de pronom en double, that impossible entre virgules.",
+     "explication": "*Who* pour une personne ; *whose* pour la possession ; pas de pronom en double ; *that* est impossible dans une relative explicative."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Tell me ___ happened at the match.",
+     "reponses": [
+      [
+       "what"
+      ]
+     ],
+     "banque": [
+      "what",
+      "that",
+      "which",
+      "who"
+     ],
+     "aide": "Il n’y a pas d’antécédent.",
+     "explication": "**what** : « ce qui » se dit *what*, sans antécédent."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b264862-f8ce-5efb-8d05-d96a023aab9a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au club de théâtre",
+   "competence": "comprendre-langue",
+   "situation": "Mia invite Tom au club de théâtre. Lis leurs questions et repère les auxiliaires.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Mia et de Tom",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Hi Tom! [[a|Do]] you like acting?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "I love it! Where [[a|do]] you rehearse?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "In the hall. We start at four."
+      },
+      {
+       "qui": "Tom",
+       "texte": "And when [[a|does]] the club finish?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "At five!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois auxiliaires** (do, do, does) qui ouvrent les questions.",
+     "aide": "Ils se placent devant le sujet.",
+     "explication": "**Do, do, does** : avec un temps simple, on introduit *do / does / did* devant le sujet."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot interrogatif à ce qu’il demande.",
+     "paires": [
+      [
+       "Where",
+       "Le lieu"
+      ],
+      [
+       "When",
+       "Le moment"
+      ],
+      [
+       "Why",
+       "La cause"
+      ],
+      [
+       "Who",
+       "La personne"
+      ]
+     ],
+     "aide": "Lieu, moment, cause, personne.",
+     "explication": "**where** : où ; **when** : quand ; **why** : pourquoi ; **who** : qui."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la question de Tom : « Quand le club finit-il ? » La phrase commence par When.",
+     "items": [
+      "When",
+      "does",
+      "the",
+      "club",
+      "finish"
+     ],
+     "aide": "Mot interrogatif, auxiliaire, sujet, verbe.",
+     "explication": "**When does the club finish ?** : mot interrogatif + auxiliaire + sujet + verbe à la base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b264862-f8ce-5efb-8d05-d96a023aab9a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’interview du nouveau",
+   "competence": "manier-langue",
+   "situation": "Un journaliste du collège interroge Jo, le nouvel élève. Observe les questions en « how ».",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Interview de Jo",
+     "participants": [
+      {
+       "nom": "Reporter",
+       "emoji": "🎤",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jo",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Reporter",
+       "texte": "How old are you, Jo?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "I’m twelve."
+      },
+      {
+       "qui": "Reporter",
+       "texte": "How far is your house from school?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "Two kilometres."
+      },
+      {
+       "qui": "Reporter",
+       "texte": "How [[f|often]] do you come by bike?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "Every day."
+      },
+      {
+       "qui": "Reporter",
+       "texte": "And how long have you lived here?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "For two years."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui demande une **fréquence**.",
+     "aide": "Jo répond « Every day ».",
+     "explication": "**often** : *how often* demande la fréquence."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque question à ce qu’elle demande.",
+     "paires": [
+      [
+       "How old are you?",
+       "L’âge"
+      ],
+      [
+       "How far is your house?",
+       "La distance"
+      ],
+      [
+       "How often do you come by bike?",
+       "La fréquence"
+      ],
+      [
+       "How long have you lived here?",
+       "La durée"
+      ]
+     ],
+     "aide": "Âge, distance, fréquence, durée.",
+     "explication": "**how old** : âge ; **how far** : distance ; **how often** : fréquence ; **how long** : durée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière question du journaliste.",
+     "texte": "How ___ have you lived here?",
+     "reponses": [
+      [
+       "long"
+      ]
+     ],
+     "banque": [
+      "long",
+      "far",
+      "often",
+      "old"
+     ],
+     "aide": "Jo répond « For two years ».",
+     "explication": "**long** : *how long* interroge sur une durée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « À quelle distance est ta maison ? » La phrase commence par How.",
+     "items": [
+      "How",
+      "far",
+      "is",
+      "your",
+      "house"
+     ],
+     "aide": "Avec be, l’auxiliaire passe avant le sujet.",
+     "explication": "**How far is your house ?** : *how far* + *is* + sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b264862-f8ce-5efb-8d05-d96a023aab9a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a cassé la fenêtre ?",
+   "competence": "argumenter",
+   "situation": "Une vitre du gymnase est brisée. Mr Hall interroge Tom, puis Jade lui envoie un petit mot.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Mr Hall et de Tom",
+     "participants": [
+      {
+       "nom": "Mr Hall",
+       "emoji": "👨",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mr Hall",
+       "texte": "Who [[s|broke]] the window?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "I don’t know. I was in the gym."
+      },
+      {
+       "qui": "Mr Hall",
+       "texte": "Who [[c|did]] you see near the gym?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "I saw Jade and her brother."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "mot",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Jade’s note",
+     "blocs": [
+      "Dear Mr Hall,",
+      "Do you know what time the match starts? Could you tell me where the gym is? Thank you, Jade"
+     ],
+     "source": "Mot écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le **verbe** de la question où **who est sujet** (sans do).",
+     "aide": "Dans cette question, le verbe est au prétérit.",
+     "explication": "**broke** : quand *who* est sujet, il n’y a pas de *did* et l’ordre reste celui de l’affirmative (*Who broke the window ?*)."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui montre que **who est complément** dans la deuxième question.",
+     "aide": "Cherche l’auxiliaire.",
+     "explication": "**did** : quand *who* est complément, on a l’ordre *who + auxiliaire + sujet + verbe*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le mot de Jade.",
+     "texte": "What time ___ the match start? Could you tell me what time it ___?",
+     "reponses": [
+      [
+       "does"
+      ],
+      [
+       "starts"
+      ]
+     ],
+     "banque": [
+      "does",
+      "do",
+      "starts",
+      "start"
+     ],
+     "aide": "La question directe prend un auxiliaire ; la question indirecte garde l’ordre de l’affirmative.",
+     "explication": "**does** dans la question directe ; **starts** dans la question indirecte (ordre de l’affirmative, sans auxiliaire)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la question indirecte : « Sais-tu où elle habite ? » La phrase commence par Do.",
+     "items": [
+      "Do",
+      "you",
+      "know",
+      "where",
+      "she",
+      "lives"
+     ],
+     "aide": "Après where, l’ordre redevient sujet puis verbe.",
+     "explication": "**Do you know where she lives ?** : dans la question enchâssée, on garde l’ordre sujet – verbe."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque question : who sujet ou who complément ?",
+     "categories": [
+      "Who sujet (sans do)",
+      "Who complément (avec do)"
+     ],
+     "items": [
+      [
+       "Who called you?",
+       0
+      ],
+      [
+       "Who did you call?",
+       1
+      ],
+      [
+       "Who broke the window?",
+       0
+      ],
+      [
+       "Who did she meet?",
+       1
+      ],
+      [
+       "Who wrote this letter?",
+       0
+      ],
+      [
+       "Who are you talking to?",
+       1
+      ]
+     ],
+     "aide": "Si who fait l’action, il n’y a pas d’auxiliaire.",
+     "explication": "**Who sujet** : pas de *do*, ordre de l’affirmative ; **who complément** : auxiliaire + sujet + verbe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa correction.",
+     "paires": [
+      [
+       "Where you live?",
+       "Where do you live?"
+      ],
+      [
+       "What did she said?",
+       "What did she say?"
+      ],
+      [
+       "How old have you?",
+       "How old are you?"
+      ],
+      [
+       "Who did call you?",
+       "Who called you?"
+      ]
+     ],
+     "aide": "Auxiliaire, base verbale, be pour l’âge, who sujet.",
+     "explication": "Il faut l’**auxiliaire** ; après *did* on revient à la **base verbale** ; l’âge se dit avec **be** ; avec *who* sujet, pas de *did*."
+    }
+   ]
+  }
+ ]
+}

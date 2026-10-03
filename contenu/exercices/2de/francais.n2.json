@@ -1,0 +1,4202 @@
+{
+ "niveau": "2de",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "67baaeb0-9df3-58be-85b7-89fe88eae630",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq romans sur trois siècles",
+   "competence": "se-reperer-temps",
+   "situation": "Au CDI, la professeure documentaliste a tendu une frise sur le mur : cinq romans, du siècle des Lumières à la Seconde Guerre mondiale. À toi de la lire comme un historien de la littérature.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le roman, de 1700 à 1950",
+     "debut": 1700,
+     "fin": 1950,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "s18",
+       "debut": 1700,
+       "fin": 1800,
+       "nom": "XVIIIe siècle",
+       "teinte": "ambre"
+      },
+      {
+       "id": "s19",
+       "debut": 1800,
+       "fin": 1900,
+       "nom": "XIXe siècle",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "s20",
+       "debut": 1900,
+       "fin": 1950,
+       "nom": "XXe siècle",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "candide",
+       "date": 1759,
+       "nom": "Candide"
+      },
+      {
+       "id": "liaisons",
+       "date": 1782,
+       "nom": "Les Liaisons dangereuses"
+      },
+      {
+       "id": "goriot",
+       "date": 1835,
+       "nom": "Le Père Goriot"
+      },
+      {
+       "id": "germinal",
+       "date": 1885,
+       "nom": "Germinal"
+      },
+      {
+       "id": "etranger",
+       "date": 1942,
+       "nom": "L’Étranger"
+      }
+     ],
+     "source": "Dates de première publication"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "liaisons"
+     ],
+     "enonce": "Touche le roman de la frise qui est écrit **entièrement par lettres**.",
+     "aide": "C’est un roman de Laclos.",
+     "explication": "Ce sont **Les Liaisons dangereuses** : un roman par lettres, genre à la mode au XVIIIe siècle."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "goriot",
+      "germinal"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux romans** de la frise publiés au **XIXe siècle**.",
+     "aide": "Repère la période colorée du XIXe siècle : quels titres y tombent ?",
+     "explication": "**Le Père Goriot** (1835) et **Germinal** (1885) sont publiés entre 1800 et 1900."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque siècle à ce que devient le roman.",
+     "paires": [
+      [
+       "XVIIIe siècle",
+       "Il se déguise pour conquérir sa légitimité"
+      ],
+      [
+       "XIXe siècle",
+       "Le personnage est déterminé par son milieu"
+      ],
+      [
+       "XXe siècle",
+       "Le récit doute de lui-même"
+      ],
+      [
+       "XXIe siècle",
+       "Retour du récit du réel"
+      ]
+     ],
+     "aide": "Pense aux mots clés du cours : déguiser, milieu, douter, réel.",
+     "explication": "Au XVIIIe, le roman se **déguise** (lettres, mémoires, conte) ; au XIXe, le **milieu** détermine le personnage ; au XXe, le récit **doute de lui-même** ; au XXIe, il revient au **réel**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution de **Candide** de celle de **L’Étranger** ?",
+     "reponse": 183,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1942 − 1759 = **183 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "67baaeb0-9df3-58be-85b7-89fe88eae630",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois regards sur Lina",
+   "competence": "analyser-texte",
+   "situation": "Pour son atelier d’écriture, Samia a raconté trois fois la même scène en changeant seulement le point de vue. Elle te demande d’identifier ses choix.",
+   "documents": [
+    {
+     "id": "scenes",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une scène, trois versions",
+     "blocs": [
+      "Lina referma la porte sans bruit. Elle [[p|savait]] que Paul avait menti depuis la veille, et cette certitude lui serrait la gorge.",
+      "Lina referma la porte sans bruit. Paul, assis à la table, ne leva pas la tête. Elle resta une minute debout, les mains dans les poches.",
+      "Lina referma la porte sans bruit. Elle ignorait que Paul préparait déjà son départ et que, dans trois jours, la maison serait vide."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "rythme",
+     "type": "tableau",
+     "titre": "Quatre phrases, quatre vitesses",
+     "colonnes": [
+      "Phrase"
+     ],
+     "lignes": [
+      [
+       "Pendant trois ans, il travailla à l’usine."
+      ],
+      [
+       "— Tu viens ? demanda-t-elle. — Non, répondit-il."
+      ],
+      [
+       "Trois ans plus tard, il rentra."
+      ],
+      [
+       "La maison était longue, grise, aux volets verts."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scenes",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans la **première version**, touche le verbe qui nous donne accès à la **pensée** de Lina.",
+     "aide": "Quel verbe dit ce que Lina sait en elle-même ?",
+     "explication": "Le verbe **savait** ouvre la conscience de Lina : on ne connaît que ce qu’elle sait, c’est la focalisation interne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque version au point de vue adopté.",
+     "paires": [
+      [
+       "Version 1",
+       "Focalisation interne"
+      ],
+      [
+       "Version 2",
+       "Focalisation externe"
+      ],
+      [
+       "Version 3",
+       "Point de vue zéro (le narrateur sait tout)"
+      ]
+     ],
+     "aide": "Qui connaît les pensées ? Qui ne voit que les gestes ? Qui sait plus que le personnage ?",
+     "explication": "V.1 : on ne sait que ce que Lina sait (**interne**). V.2 : on ne voit que des gestes (**externe**). V.3 : le narrateur sait ce que Lina ignore (**point de vue zéro**)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le rythme du récit qu’elle produit.",
+     "categories": [
+      "Sommaire",
+      "Scène",
+      "Ellipse",
+      "Pause"
+     ],
+     "items": [
+      [
+       "Pendant trois ans, il travailla à l’usine.",
+       0
+      ],
+      [
+       "— Tu viens ? demanda-t-elle. — Non, répondit-il.",
+       1
+      ],
+      [
+       "Trois ans plus tard, il rentra.",
+       2
+      ],
+      [
+       "La maison était longue, grise, aux volets verts.",
+       3
+      ]
+     ],
+     "aide": "Résumer, raconter au rythme réel, sauter, décrire : quelle phrase fait quoi ?",
+     "explication": "Le **sommaire** résume trois ans, la **scène** donne le dialogue en direct, l’**ellipse** saute un moment, la **pause** décrit pendant que l’histoire s’arrête."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le narrateur de la première version est-il l’auteur du texte, c’est-à-dire Samia ?",
+     "options": [
+      "Non : c’est une voix construite par le texte",
+      "Oui : le narrateur est toujours l’auteur",
+      "Oui, dès qu’il raconte à la troisième personne",
+      "Non, c’est toujours un des personnages cités"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de la règle de base : le narrateur n’est pas…",
+     "explication": "Le narrateur est une **voix construite par le texte** : ce n’est pas l’auteur, même quand le récit paraît très proche de lui."
+    }
+   ]
+  },
+  {
+   "chapitre": "67baaeb0-9df3-58be-85b7-89fe88eae630",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le logement du troisième",
+   "competence": "analyser-texte",
+   "situation": "Dans un blog littéraire, une lycéenne a imité le style du roman réaliste. Lis son extrait avec le tableau des trois siècles pour dire ce que fait un roman du XIXe siècle.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois siècles en un tableau",
+     "colonnes": [
+      "Le siècle",
+      "Ce que le roman y devient",
+      "Ses auteurs"
+     ],
+     "lignes": [
+      [
+       "XVIIIe",
+       "Il conquiert sa légitimité en se déguisant",
+       "Laclos, Prévost, Voltaire"
+      ],
+      [
+       "XIXe",
+       "Réalisme et naturalisme : le personnage est déterminé par son milieu",
+       "Balzac, Flaubert, Zola"
+      ],
+      [
+       "XXe",
+       "Le récit doute de lui-même",
+       "Proust, Céline, Camus, Nouveau Roman"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "logis",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un logement, un revenu",
+     "blocs": [
+      "Madame Rolland occupait au troisième un logement de deux pièces. Sur la table, une toile cirée [[d|recousue]] ; à la fenêtre, des rideaux trop courts ; dans le poêle, de la braise qu’on [[d|ménageait]].",
+      "Elle ne savait pas encore que l’huissier viendrait lundi. Dans cette rue, comme dans tant d’autres, on tombait vite et l’on ne remontait guère."
+     ],
+     "source": "Extrait écrit pour l’exercice, à la manière du roman réaliste"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "logis",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui disent, par une réparation ou une économie, que l’argent manque.",
+     "aide": "Cherche un objet réparé et un geste d’économie, dans le premier paragraphe.",
+     "explication": "Une toile cirée **recousue** et de la braise qu’on **ménageait** : ces détails matériels disent la gêne sans la nommer."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui annonce **la thèse** que ce texte illustre : la place sociale décide du sort du personnage.",
+     "aide": "Cherche la ligne du siècle de Balzac, Flaubert et Zola.",
+     "explication": "La case du **XIXe siècle** : le personnage y est déterminé par son milieu, ce que montrent le logement et l’huissier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le second paragraphe, « Elle ne savait pas encore que l’huissier viendrait lundi » : de quel point de vue s’agit-il ?",
+     "options": [
+      "Le point de vue zéro : le narrateur sait ce qu’elle ignore",
+      "La focalisation interne : on ne sait que ce qu’elle sait",
+      "La focalisation externe : on ne voit que ses gestes",
+      "Un monologue intérieur de Madame Rolland"
+     ],
+     "reponse": 0,
+     "aide": "Madame Rolland ignore quelque chose. Qui le sait alors ?",
+     "explication": "Le narrateur connaît l’avenir que le personnage **ignore** : c’est le **point de vue zéro**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Le roman du XIXe siècle raconte moins des aventures que des ___ : monter, tomber, tenir.",
+     "reponses": [
+      [
+       "places sociales"
+      ]
+     ],
+     "banque": [
+      "places sociales",
+      "voyages",
+      "batailles",
+      "duels"
+     ],
+     "aide": "Monter, tomber, tenir : de quoi parle-t-on ?",
+     "explication": "Il raconte des **places sociales** : monter, tomber, tenir dans la société."
+    }
+   ]
+  },
+  {
+   "chapitre": "30417519-e1db-5a1c-a8ec-25d7f3771ef0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Soirée Maupassant au CDI",
+   "competence": "analyser-document",
+   "situation": "Le club de lecture du lycée annonce quatre nouvelles de Maupassant, projetées à la suite. Sur l’affiche, chaque titre n’a qu’un indice. Retrouve ce que chaque nouvelle met en accusation.",
+   "documents": [
+    {
+     "id": "aff",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Soirée Maupassant",
+     "sousTitre": "Quatre nouvelles, une même plume",
+     "emoji": "📚",
+     "teinte": "violet",
+     "lignes": [
+      {
+       "texte": "Boule de suif",
+       "valeur": "Une diligence, la guerre de 1870",
+       "id": "bds"
+      },
+      {
+       "texte": "La Parure",
+       "valeur": "Un bal, un bijou prêté",
+       "id": "par"
+      },
+      {
+       "texte": "Aux champs",
+       "valeur": "Deux familles de paysans",
+       "id": "champs"
+      },
+      {
+       "texte": "Mon oncle Jules",
+       "valeur": "Un oncle qu’on croit riche",
+       "id": "jules"
+      }
+     ],
+     "pied": "Jeudi, au CDI — entrée libre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aff",
+     "reponse": [
+      "par"
+     ],
+     "enonce": "Touche la nouvelle qui met en accusation **la vanité** et le culte de l’apparence.",
+     "aide": "Un bijou prêté pour briller, cela rappelle quelle nouvelle ?",
+     "explication": "**La Parure** : dix ans de misère pour rembourser un bijou qui était faux."
+    },
+    {
+     "type": "zone",
+     "document": "aff",
+     "reponse": [
+      "champs",
+      "jules"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux nouvelles** où le cours voit l’hypocrisie familiale et l’argent.",
+     "aide": "Cherche les histoires de familles.",
+     "explication": "**Aux champs** et **Mon oncle Jules** mettent en scène l’hypocrisie familiale et l’argent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fiche de l’auteur.",
+     "texte": "Élève de ___, Maupassant a écrit environ ___ nouvelles, souvent terminées par une ___ qui retourne le sens.",
+     "reponses": [
+      [
+       "Flaubert"
+      ],
+      [
+       "trois cents",
+       "300"
+      ],
+      [
+       "chute"
+      ]
+     ],
+     "banque": [
+      "Flaubert",
+      "Zola",
+      "trois cents",
+      "cent",
+      "chute",
+      "morale"
+     ],
+     "aide": "Son maître était aussi un grand romancier du XIXe siècle.",
+     "explication": "Élève de **Flaubert**, il a écrit environ **trois cents** nouvelles, souvent avec une **chute**."
+    }
+   ]
+  },
+  {
+   "chapitre": "30417519-e1db-5a1c-a8ec-25d7f3771ef0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le manteau de Madame Lefort",
+   "competence": "analyser-texte",
+   "situation": "Pour le club de lecture, Rayan a écrit une nouvelle à la manière de Maupassant : un détail vrai, une ironie froide, une chute. Lis-la et repère chaque procédé.",
+   "documents": [
+    {
+     "id": "manteau",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le manteau",
+     "blocs": [
+      "Madame Lefort avait épousé un petit employé de la préfecture et ne le lui pardonnait pas. Chaque dimanche, elle passait son grand manteau de fourrure, ses gants [[d|reprisés]] et ses bottines [[d|éculées]], puis traversait la place d’un pas de duchesse.",
+      "Monsieur Lefort suivait, un pas derrière, flatté qu’on le crût marié à une dame. Quelle chance, après tout, d’avoir une femme si élégante !",
+      "Le jour de leur anniversaire, un voisin admira le manteau. « Du renard argenté, n’est-ce pas ? » Madame Lefort sourit sans répondre. Le soir, en le rangeant, elle déchira la doublure ; son mari la vit pâlir. Sous l’étiquette, on lisait : « [[c|lapin]] teint »."
+     ],
+     "source": "Nouvelle écrite pour l’exercice, à la manière de Maupassant"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "manteau",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui trahissent la gêne derrière l’élégance affichée.",
+     "aide": "Deux adjectifs disent l’usure des accessoires.",
+     "explication": "Des gants **reprisés** et des bottines **éculées** : un détail vrai suffit à dire la place sociale."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque phrase selon la façon dont les paroles ou pensées sont rapportées.",
+     "categories": [
+      "Discours direct",
+      "Discours indirect",
+      "Discours indirect libre"
+     ],
+     "items": [
+      [
+       "« Il fait froid, ce matin », dit le mari.",
+       0
+      ],
+      [
+       "Le mari dit qu’il faisait froid ce matin-là.",
+       1
+      ],
+      [
+       "Elle répondit qu’elle ne sortirait pas sans son manteau.",
+       1
+      ],
+      [
+       "Il faisait froid, bien sûr, mais jamais elle ne sortirait sans son manteau !",
+       2
+      ],
+      [
+       "Quelle chance, après tout, d’avoir une femme si élégante !",
+       2
+      ]
+     ],
+     "aide": "Guillemets ? Verbe introducteur et « que » ? Ni l’un ni l’autre ?",
+     "explication": "Au **direct** : guillemets. À l’**indirect** : verbe introducteur + « que ». Au **discours indirect libre** : les pensées passent dans le récit sans guillemets ni verbe introducteur."
+    },
+    {
+     "type": "zone",
+     "document": "manteau",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui **retourne le sens** de toute la nouvelle : la chute.",
+     "aide": "Cherche dans les toutes dernières lignes, sur l’étiquette.",
+     "explication": "Le mot **lapin** transforme le manteau de luxe en faux : c’est la chute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que **met en accusation** cette chute ?",
+     "options": [
+      "La vanité de Madame Lefort : son luxe n’était qu’un faux",
+      "La méchanceté du voisin, qui voulait la ridiculiser",
+      "La paresse du mari, qui refuse d’acheter mieux",
+      "Le goût du village pour les fourrures très chères"
+     ],
+     "reponse": 0,
+     "aide": "Dans La Parure aussi, un bijou faux accuse…",
+     "explication": "Comme dans La Parure, la chute **accuse la vanité** : le luxe n’était qu’une apparence."
+    }
+   ]
+  },
+  {
+   "chapitre": "30417519-e1db-5a1c-a8ec-25d7f3771ef0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Étienne descend à la fosse",
+   "competence": "analyser-texte",
+   "situation": "Un élève a rédigé une scène de roman et hésite : est-elle réaliste ou naturaliste ? Compare avec le tableau des deux courants et conclus.",
+   "documents": [
+    {
+     "id": "courants",
+     "type": "tableau",
+     "titre": "Deux courants",
+     "colonnes": [
+      "Le courant",
+      "Sa thèse"
+     ],
+     "lignes": [
+      [
+       "Le réalisme",
+       "Décrire le personnage dans son milieu"
+      ],
+      [
+       "Le naturalisme",
+       "Le personnage est le produit de son hérédité et de son milieu"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "mine",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le coron",
+     "blocs": [
+      "Étienne avait douze ans quand il descendit à la [[m|fosse]], comme son père, mort de la poussière, et comme son frère aîné.",
+      "Dans le [[m|coron]], personne ne s’était jamais demandé s’il pouvait faire autre chose : la [[m|mine]] vous prenait à la naissance et ne vous lâchait qu’au cimetière."
+     ],
+     "source": "Extrait écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mine",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois mots** qui désignent le **milieu** d’Étienne.",
+     "aide": "Le lieu de travail, le lieu de vie et l’industrie.",
+     "explication": "La **fosse**, le **coron** et la **mine** forment le milieu qui enferme le personnage."
+    },
+    {
+     "type": "zone",
+     "document": "courants",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Dans le tableau, touche la case de la thèse que **ce texte illustre**.",
+     "aide": "Le père mort de la poussière, le frère, la mine : ce destin est-il décrit ou expliqué ?",
+     "explication": "Le destin d’Étienne vient de sa famille et de son milieu : c’est la thèse du **naturalisme**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée dans le courant qui la défend.",
+     "categories": [
+      "Réalisme",
+      "Naturalisme"
+     ],
+     "items": [
+      [
+       "Le personnage est le produit de son hérédité et de son milieu",
+       1
+      ],
+      [
+       "Décrire le personnage dans son milieu",
+       0
+      ],
+      [
+       "Se réclamer d’une méthode dite expérimentale",
+       1
+      ],
+      [
+       "Accuser la société sans se réclamer d’une science",
+       0
+      ]
+     ],
+     "aide": "Le naturalisme ajoute une prétention scientifique.",
+     "explication": "Le **réalisme** décrit le personnage dans son milieu ; le **naturalisme** y ajoute l’hérédité et une méthode expérimentale (Zola)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Maupassant reste-t-il plus proche du réalisme que du naturalisme ?",
+     "options": [
+      "Il accuse la société sans se réclamer d’une science",
+      "Il refuse de décrire la réalité sociale de son temps",
+      "Il n’écrit que des romans et jamais de nouvelles",
+      "Il admire la noblesse et ignore tout milieu populaire"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’il ne revendique jamais, contrairement à Zola.",
+     "explication": "Il **accuse la société sans se réclamer d’une science** : c’est ce qui le tient plus près du réalisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6d6fbe4-1685-5f4f-903b-d158ed5f55ea",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche de lecture de L’Étranger",
+   "competence": "analyser-document",
+   "situation": "Avant de lire L’Étranger, Anaïs a préparé une fiche de lecture et un petit texte pour sentir le style du livre. Aide-la à repérer l’essentiel.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Fiche de lecture",
+     "colonnes": [
+      "Rubrique",
+      "Information"
+     ],
+     "lignes": [
+      [
+       "Auteur",
+       "Albert Camus"
+      ],
+      [
+       "Titre",
+       "L’Étranger"
+      ],
+      [
+       "Parution",
+       "1942"
+      ],
+      [
+       "Narrateur",
+       "Meursault, employé à Alger"
+      ],
+      [
+       "Narration",
+       "À la première personne"
+      ],
+      [
+       "Temps verbal dominant",
+       "Le passé composé"
+      ],
+      [
+       "Cycle",
+       "Le cycle de l’absurde"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "voix",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un petit texte pour sentir le style",
+     "blocs": [
+      "Hier, le facteur est [[p|passé]]. J’ai [[p|mangé]] à midi. Puis je suis [[p|allé]] à la plage. Il faisait chaud."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’une « voix blanche »"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "reponse": [
+      "r5c1"
+     ],
+     "enonce": "Touche la case qui donne le **temps verbal dominant** du roman.",
+     "aide": "Regarde la rubrique « Temps verbal ».",
+     "explication": "Le roman est écrit au **passé composé**, qui donne aux faits l’air de constats."
+    },
+    {
+     "type": "zone",
+     "document": "voix",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois participes passés** qui forment des passés composés.",
+     "aide": "Cherche « est … », « ai … », « suis … ».",
+     "explication": "**passé**, **mangé**, **allé** : trois passés composés. « Faisait » est à l’imparfait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit cette écriture courte, sans image ni explication ?",
+     "options": [
+      "Un malaise : le narrateur dit tout et n’explique rien",
+      "Une émotion forte, car le narrateur dit ce qu’il ressent",
+      "Un suspense d’aventure fondé sur de longues descriptions",
+      "Une poésie riche en métaphores et en comparaisons"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la « voix blanche ».",
+     "explication": "La **voix blanche** produit un **malaise** : rien n’est interprété pour le lecteur."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les grandes étapes du roman.",
+     "items": [
+      "La mort de la mère et l’enterrement",
+      "La liaison avec Marie et la vie ordinaire",
+      "Le meurtre sur la plage",
+      "Le procès et la condamnation à mort"
+     ],
+     "aide": "Le roman s’ouvre sur un deuil et se ferme sur un tribunal.",
+     "explication": "Enterrement, vie ordinaire avec Marie, **meurtre sur la plage**, puis **procès** et condamnation."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6d6fbe4-1685-5f4f-903b-d158ed5f55ea",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une cérémonie sans larmes",
+   "competence": "analyser-texte",
+   "situation": "Dans un atelier d’écriture, on imite la voix de Meursault. Voici le texte d’un élève : un narrateur qui assiste à une cérémonie sans jouer le rôle qu’on attend de lui.",
+   "documents": [
+    {
+     "id": "ceremonie",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le voisin",
+     "blocs": [
+      "Le voisin est mort mardi. Je suis allé à la cérémonie parce que le patron me l’avait demandé.",
+      "Tout le monde [[p|pleurait]]. Je n’ai pas pleuré. J’avais envie de [[f|fumer]].",
+      "La femme du voisin m’a regardé. Je lui ai dit que le cercueil était beau. Elle ne m’a plus parlé."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Camus"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ceremonie",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce que **tous les autres** font à la cérémonie.",
+     "aide": "Cherche dans le deuxième paragraphe.",
+     "explication": "**Pleurait** : tout le monde pleure, le narrateur non. Il refuse le rituel attendu."
+    },
+    {
+     "type": "zone",
+     "document": "ceremonie",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui montre à quoi pense le narrateur **pendant la cérémonie**.",
+     "aide": "Ce n’est pas une pensée de deuil.",
+     "explication": "**Fumer** : son envie banale détonne avec la solennité du moment."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la femme du voisin ne lui parle-t-elle plus ?",
+     "options": [
+      "Il ne joue pas le rôle attendu au deuil : on juge l’écart",
+      "Il a insulté le défunt devant toute la famille réunie",
+      "Il est arrivé en retard à la cérémonie et l’a gênée",
+      "Il lui doit de l’argent depuis plusieurs années déjà"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de ce qu’on reproche à Meursault au procès.",
+     "explication": "Comme Meursault, il est jugé sur son **écart avec les rituels** sociaux, pas sur un acte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque phrase selon l’écriture qu’elle illustre.",
+     "categories": [
+      "Voix blanche",
+      "Écriture expressive"
+     ],
+     "items": [
+      [
+       "Il faisait chaud. J’ai mangé.",
+       0
+      ],
+      [
+       "Un soleil cruel écrasait la plage comme un couperet.",
+       1
+      ],
+      [
+       "Je suis monté. J’ai ouvert la porte.",
+       0
+      ],
+      [
+       "Mon cœur, brisé de douleur, battait à se rompre.",
+       1
+      ]
+     ],
+     "aide": "Phrases courtes et factuelles, ou images et émotions ?",
+     "explication": "La **voix blanche** : phrases courtes, passé composé, aucune image. L’écriture **expressive** multiplie les images et dit l’émotion."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Ce n’est pas l’acte qui est jugé, c’est l’___.",
+     "reponses": [
+      [
+       "écart"
+      ]
+     ],
+     "banque": [
+      "écart",
+      "crime",
+      "aveu",
+      "rituel"
+     ],
+     "aide": "Ce qu’on reproche : ne pas se conformer.",
+     "explication": "Ce n’est pas l’acte qui est jugé, c’est l’**écart** : la société ne pardonne pas qu’on refuse ses rituels."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6d6fbe4-1685-5f4f-903b-d158ed5f55ea",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux récits d’une même matinée",
+   "competence": "argumenter",
+   "situation": "Un élève de seconde veut expliquer la seconde partie de L’Étranger. Il a écrit deux versions d’une même matinée, la sienne et celle d’un accusateur, et dressé un tableau des deux parties du roman.",
+   "documents": [
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Deux parties, deux temps",
+     "colonnes": [
+      "La partie",
+      "Ce qu’elle fait"
+     ],
+     "lignes": [
+      [
+       "Première",
+       "Elle suit une vie ordinaire jusqu’au meurtre"
+      ],
+      [
+       "Seconde",
+       "La prison et le procès relisent ces mêmes faits, et les déforment"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "versions",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une même matinée",
+     "blocs": [
+      "Version du narrateur : Ce matin-là, j’ai pris un café et fumé une cigarette. Puis je suis parti.",
+      "Version de l’accusation : Le matin même, l’accusé a pris [[i|tranquillement]] son café et fumé [[i|froidement]] une cigarette, sans un regard pour ceux qui l’entouraient."
+     ],
+     "source": "Textes écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "versions",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Dans la version de l’accusation, touche les **deux adverbes** qui interprètent des gestes banals.",
+     "aide": "Les mêmes faits, mais avec un jugement ajouté.",
+     "explication": "**Tranquillement** et **froidement** transforment un café et une cigarette en preuves de froideur."
+    },
+    {
+     "type": "zone",
+     "document": "parties",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui décrit ce que fait **la seconde partie**.",
+     "aide": "La seconde partie « relit » quoi ?",
+     "explication": "La **seconde partie** relit les mêmes faits et les déforme : on y voit se fabriquer une culpabilité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le contraste entre les deux versions ?",
+     "options": [
+      "Le roman démonte la fabrication d’une culpabilité",
+      "Le narrateur ment pour se défendre devant le juge",
+      "Les faits changent complètement d’une partie à l’autre",
+      "Le juge a découvert un meurtre que personne ne connaissait"
+     ],
+     "reponse": 0,
+     "aide": "Les faits sont les mêmes ; qu’est-ce qui change ?",
+     "explication": "Les faits sont identiques : seul le **regard** change. Le roman démonte la **fabrication d’une culpabilité**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque œuvre du cycle de l’absurde à son genre.",
+     "paires": [
+      [
+       "L’Étranger",
+       "Roman"
+      ],
+      [
+       "Le Mythe de Sisyphe",
+       "Essai"
+      ],
+      [
+       "Caligula",
+       "Théâtre"
+      ]
+     ],
+     "aide": "Un roman, un essai, une pièce de théâtre.",
+     "explication": "**L’Étranger** est un roman, **Le Mythe de Sisyphe** un essai, **Caligula** une pièce de théâtre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Racontés par d’autres, les mêmes faits deviennent des ___ de monstruosité.",
+     "reponses": [
+      [
+       "preuves"
+      ]
+     ],
+     "banque": [
+      "preuves",
+      "excuses",
+      "rêves",
+      "regrets"
+     ],
+     "aide": "Pense à ce que l’accusation veut démontrer.",
+     "explication": "Racontés par d’autres, les faits deviennent des **preuves** de monstruosité."
+    }
+   ]
+  },
+  {
+   "chapitre": "eabe54e2-2c91-5cfe-92c4-0244319af538",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une quatrième de couverture",
+   "competence": "analyser-texte",
+   "situation": "À la librairie du lycée, un élève hésite devant un livre : roman, mémoires, autobiographie ? La quatrième de couverture devrait le renseigner.",
+   "documents": [
+    {
+     "id": "quatrieme",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Quatrième de couverture",
+     "blocs": [
+      "Dans ce livre, Hélène Marchand, née à Roubaix en 1955, raconte son enfance dans le café de ses parents. Elle y dit « [[j|je]] » du début à la fin et n’a changé aucun nom."
+     ],
+     "source": "Quatrième de couverture imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quatrieme",
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le pronom qui signale un récit **à la première personne**.",
+     "aide": "Il est entre guillemets dans le texte.",
+     "explication": "Le pronom **je** : c’est la marque du récit autobiographique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition du pacte autobiographique.",
+     "texte": "Dans une autobiographie, l’auteur, le ___ et le personnage sont une seule et même ___.",
+     "reponses": [
+      [
+       "narrateur"
+      ],
+      [
+       "personne"
+      ]
+     ],
+     "banque": [
+      "narrateur",
+      "personne",
+      "époque",
+      "fiction"
+     ],
+     "aide": "Trois rôles : celui qui écrit, celui qui raconte, celui dont on parle.",
+     "explication": "L’**auteur**, le **narrateur** et le **personnage** coïncident : c’est le **pacte autobiographique** de Philippe Lejeune."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque genre voisin de l’autobiographie à ce qui le distingue.",
+     "paires": [
+      [
+       "Les Mémoires",
+       "Ils racontent une époque à travers un témoin"
+      ],
+      [
+       "Le journal intime",
+       "Il s’écrit au jour le jour, sans recul"
+      ],
+      [
+       "Le roman autobiographique",
+       "La fiction sert de paravent"
+      ],
+      [
+       "Le récit de filiation",
+       "Il part des parents ou grands-parents pour se comprendre soi"
+      ]
+     ],
+     "aide": "Pense au mot clé de chacun : époque, jour le jour, paravent, parents.",
+     "explication": "Mémoires : une **époque** ; journal : **au jour le jour** ; roman autobiographique : **paravent** ; filiation : on part des **parents**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la quatrième de couverture, ce livre est plutôt :",
+     "options": [
+      "Une autobiographie : une personne réelle y raconte sa vie",
+      "Un journal intime écrit chaque jour, sans aucun recul",
+      "Un roman autobiographique où la fiction cache la vie",
+      "Des Mémoires racontant surtout l’histoire d’une époque"
+     ],
+     "reponse": 0,
+     "aide": "Elle raconte son enfance, avec son vrai nom et sans rien changer.",
+     "explication": "Une personne réelle raconte **sa propre vie** à la première personne : c’est une **autobiographie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eabe54e2-2c91-5cfe-92c4-0244319af538",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le dimanche chez la grand-mère",
+   "competence": "analyser-texte",
+   "situation": "Une lycéenne s’exerce à écrire son enfance dans une langue simple, sans effets, comme certains auteurs contemporains. Étudie son texte : qui parle, et à quel moment ?",
+   "documents": [
+    {
+     "id": "dimanche",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le dimanche",
+     "blocs": [
+      "Le dimanche, nous allions chez ma grand-mère. Mon père portait sa veste des mariages. On mangeait du lapin.",
+      "[[w|Aujourd’hui]], en écrivant, je [[w|sais]] que ce lapin coûtait cher et que ma mère comptait. À l’époque, je croyais seulement que c’était dimanche."
+     ],
+     "source": "Texte écrit pour l’exercice, dans une langue volontairement plate"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dimanche",
+     "reponse": [
+      "w"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui signalent le « je » **qui écrit** aujourd’hui.",
+     "aide": "Un adverbe de temps, un verbe au présent.",
+     "explication": "**Aujourd’hui** et **sais** : le « je » qui écrit sait ce que le « je » d’enfant ignorait."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le « je » qui parle.",
+     "categories": [
+      "Le « je » qui a vécu",
+      "Le « je » qui écrit"
+     ],
+     "items": [
+      [
+       "Nous allions chez ma grand-mère.",
+       0
+      ],
+      [
+       "Je sais que ce lapin coûtait cher.",
+       1
+      ],
+      [
+       "Je croyais seulement que c’était dimanche.",
+       0
+      ],
+      [
+       "Aujourd’hui, en écrivant, je comprends ma mère.",
+       1
+      ]
+     ],
+     "aide": "L’enfant ignore ; l’adulte qui écrit sait.",
+     "explication": "Deux « je » cohabitent : celui qui **vécut** (il croit, il ignore) et celui qui **écrit** (il sait, il comprend)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « allions », « portait », « mangeait » sont-ils à l’imparfait ?",
+     "options": [
+      "Pour dire l’habitude, la répétition des dimanches",
+      "Pour dire un événement unique et très précis",
+      "Pour annoncer ce qui va se passer plus tard",
+      "Pour exprimer le bilan d’une vie déjà achevée"
+     ],
+     "reponse": 0,
+     "aide": "Le texte commence par « Le dimanche » : tous les dimanches ?",
+     "explication": "L’**imparfait de l’habitude** décrit ce qui se répétait ; le passé composé sert plutôt au bilan."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours sur le style.",
+     "texte": "Annie Ernaux écrit dans une langue volontairement ___, sans effets, pour ne pas trahir le ___ dont elle vient.",
+     "reponses": [
+      [
+       "plate"
+      ],
+      [
+       "milieu"
+      ]
+     ],
+     "banque": [
+      "plate",
+      "milieu",
+      "fleurie",
+      "pays"
+     ],
+     "aide": "Pas de belles images : un choix de style qui a un sens social.",
+     "explication": "Une langue **plate**, pour ne pas trahir le **milieu** dont elle vient : une décision politique autant qu’esthétique."
+    }
+   ]
+  },
+  {
+   "chapitre": "eabe54e2-2c91-5cfe-92c4-0244319af538",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi s’écrire ? L’étagère et le souvenir",
+   "competence": "argumenter",
+   "situation": "Sur l’étagère « Vies écrites » du CDI, trois livres : trois raisons de s’écrire. À côté, un échange de SMS entre un frère et une sœur qui se rappellent la même journée.",
+   "documents": [
+    {
+     "id": "etagere",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Vies écrites",
+     "sousTitre": "Trois livres à emprunter",
+     "emoji": "📖",
+     "teinte": "ambre",
+     "lignes": [
+      {
+       "texte": "Les Confessions",
+       "valeur": "Jean-Jacques Rousseau (1782)",
+       "id": "conf"
+      },
+      {
+       "texte": "Si c’est un homme",
+       "valeur": "Primo Levi",
+       "id": "levi"
+      },
+      {
+       "texte": "La Place",
+       "valeur": "Annie Ernaux",
+       "id": "ernaux"
+      }
+     ],
+     "pied": "CDI — rayon Autobiographies"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Le pique-nique, c’était en [[d|juillet]], tu portais ta robe jaune."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Mais non, c’était en [[d|août]], et il pleuvait !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etagere",
+     "reponse": [
+      "conf"
+     ],
+     "enonce": "Rousseau ouvre un livre en écrivant : « Je forme une entreprise qui n’eut jamais d’exemple… » (*Les Confessions*, 1782). Touche ce livre sur l’affiche.",
+     "aide": "Le titre dit déjà qu’on avoue tout.",
+     "explication": "**Les Confessions** : Rousseau promet de tout dire pour se justifier."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque auteur à la raison de s’écrire qu’il illustre.",
+     "paires": [
+      [
+       "Rousseau",
+       "Se justifier"
+      ],
+      [
+       "Primo Levi",
+       "Témoigner"
+      ],
+      [
+       "Annie Ernaux",
+       "Comprendre son parcours social"
+      ]
+     ],
+     "aide": "Se justifier, témoigner de la déportation, comprendre d’où l’on vient.",
+     "explication": "Rousseau veut se **justifier**, Primo Levi **témoigne** de la déportation, Annie Ernaux **comprend son parcours social**."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Dans les SMS, touche les **deux mois** qui se contredisent.",
+     "aide": "Un mois pour Léa, un autre pour Tom.",
+     "explication": "**Juillet** et **août** : deux souvenirs d’une même journée qui ne coïncident pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel problème de l’écriture autobiographique ce désaccord illustre-t-il ?",
+     "options": [
+      "La mémoire, qui trie, déforme et invente sans le vouloir",
+      "Le temps, qui fait cohabiter deux « je » différents",
+      "La distance, qui change de ton selon l’humeur",
+      "Le cadre, qui reste toujours une maison ou une classe"
+     ],
+     "reponse": 0,
+     "aide": "Les deux sont sincères, et pourtant…",
+     "explication": "Chacun est sincère, mais la **mémoire** trie, déforme et invente sans le vouloir."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La sincérité n’est pas la ___ : on ne se raconte jamais devant personne.",
+     "reponses": [
+      [
+       "vérité"
+      ]
+     ],
+     "banque": [
+      "vérité",
+      "mémoire",
+      "fiction",
+      "distance"
+     ],
+     "aide": "Léa et Tom sont sincères tous les deux.",
+     "explication": "La sincérité n’est pas la **vérité** : on peut être sincère et se tromper."
+    }
+   ]
+  },
+  {
+   "chapitre": "be439e77-0226-5502-80f3-2138e6b1cc4c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une vie sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Pour présenter *Qu’Allah bénisse la France* à ses camarades, Inès a tracé une frise des trois dates qu’elle retient de la vie d’Abd Al Malik.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois dates",
+     "debut": 1970,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1975,
+       "nom": "Sa naissance"
+      },
+      {
+       "id": "livre",
+       "date": 2004,
+       "nom": "Parution du livre"
+      },
+      {
+       "id": "film",
+       "date": 2014,
+       "nom": "Son film"
+      }
+     ],
+     "source": "Dates tirées du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "livre"
+     ],
+     "enonce": "Touche l’événement qui correspond à la publication du récit *Qu’Allah bénisse la France*.",
+     "aide": "C’est la date du milieu.",
+     "explication": "Le récit paraît en **2004**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent sa naissance de la parution du livre ?",
+     "reponse": 29,
+     "unite": "ans",
+     "aide": "Soustrais 1975 à 2004.",
+     "explication": "2004 − 1975 = **29 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la présentation de l’auteur.",
+     "texte": "Il a grandi à ___, dans le quartier du ___ ; sa famille est d’origine ___.",
+     "reponses": [
+      [
+       "Strasbourg"
+      ],
+      [
+       "Neuhof"
+      ],
+      [
+       "congolaise"
+      ]
+     ],
+     "banque": [
+      "Strasbourg",
+      "Neuhof",
+      "congolaise",
+      "Marseille",
+      "Mirail",
+      "algérienne"
+     ],
+     "aide": "Une ville d’Alsace, un quartier populaire, une famille venue d’Afrique centrale.",
+     "explication": "Il a grandi à **Strasbourg**, au **Neuhof**, dans une famille **congolaise**."
+    }
+   ]
+  },
+  {
+   "chapitre": "be439e77-0226-5502-80f3-2138e6b1cc4c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le jour du brevet",
+   "competence": "analyser-texte",
+   "situation": "Un atelier d’écriture imite le récit d’un jeune qui change de monde. À toi de repérer la langue mêlée, puis de remettre en ordre les étapes d’une trajectoire.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes du récit",
+     "colonnes": [
+      "L’étape",
+      "Ce qu’elle apporte"
+     ],
+     "lignes": [
+      [
+       "Une famille congolaise, la précarité",
+       "?"
+      ],
+      [
+       "L’école, où il réussit",
+       "?"
+      ],
+      [
+       "La délinquance, en parallèle",
+       "?"
+      ],
+      [
+       "La découverte du rap",
+       "?"
+      ],
+      [
+       "La conversion, puis un islam soufi de paix",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "brevet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le jour du brevet",
+     "blocs": [
+      "Le jour de mon brevet, ma mère a pleuré dans la cuisine. Le soir, au pied de la tour, un pote m’a lancé : « Alors, [[a|frérot]], tu vas faire l’intello ? » Je n’ai rien répondu. Dans ma chambre, j’ai ouvert un livre, et une [[r|prière]] m’est venue, la même que ma grand-mère murmurait avant de dormir."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’un récit de transfuge"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brevet",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot d’**argot** du quartier dans le texte.",
+     "aide": "Une façon familière d’appeler un copain.",
+     "explication": "**Frérot** est un mot d’argot : il fait entendre la voix réelle du quartier."
+    },
+    {
+     "type": "zone",
+     "document": "brevet",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui renvoie à la **quête intérieure** et à la religion.",
+     "aide": "Un moment de recueillement, le soir.",
+     "explication": "La **prière** est une référence religieuse : elle dit la quête intérieure."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque étape du tableau à ce qu’elle apporte au récit.",
+     "paires": [
+      [
+       "Une famille congolaise, la précarité",
+       "Le point de départ"
+      ],
+      [
+       "L’école, où il réussit",
+       "Une porte"
+      ],
+      [
+       "La délinquance, en parallèle",
+       "L’autre chemin, simultané"
+      ],
+      [
+       "La découverte du rap",
+       "Une langue à soi"
+      ],
+      [
+       "La conversion",
+       "Une discipline intérieure"
+      ]
+     ],
+     "aide": "Départ, porte, autre chemin, langue, discipline.",
+     "explication": "Précarité : le **point de départ** ; école : une **porte** ; délinquance : l’**autre chemin** ; rap : une **langue à soi** ; conversion : une **discipline intérieure**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on de la délinquance qu’elle est un chemin « simultané » ?",
+     "options": [
+      "Elle se vit en même temps que la réussite scolaire",
+      "Elle commence juste après la découverte du rap",
+      "Elle remplace complètement l’école à partir du brevet",
+      "Elle n’apparaît que dans la dernière partie du récit"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau dit : « en parallèle ».",
+     "explication": "L’école et la délinquance sont deux chemins **parallèles** : le héros « devient » ce qu’il raconte, il n’est pas exemplaire d’avance."
+    }
+   ]
+  },
+  {
+   "chapitre": "be439e77-0226-5502-80f3-2138e6b1cc4c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fait divers, chiffre ou récit ?",
+   "competence": "argumenter",
+   "situation": "Une classe compare trois façons de parler d’une même vie, puis s’interroge sur ce que le livre d’Abd Al Malik refuse.",
+   "documents": [
+    {
+     "id": "trois",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois façons de dire une même vie",
+     "blocs": [
+      "Fait divers : Un jeune homme d’une cité de l’est de la France a été interpellé hier soir, selon une source policière.",
+      "Statistique : Dans ce quartier, 4 jeunes sur 10 sortent de l’école sans diplôme.",
+      "Récit : [[p|Je]] m’appelle Karim. J’ai eu mon bac, et ma dette envers ma mère, mon frère et mon prof de français reste entière."
+     ],
+     "source": "Textes et chiffres écrits pour l’exercice"
+    },
+    {
+     "id": "refus",
+     "type": "tableau",
+     "titre": "Ce que le livre refuse",
+     "colonnes": [
+      "Le discours refusé",
+      "Pourquoi"
+     ],
+     "lignes": [
+      [
+       "Le quartier comme décor de misère",
+       "Il nie les personnes"
+      ],
+      [
+       "Le quartier idéalisé",
+       "Il nie les difficultés"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trois",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le pronom qui prouve que le troisième texte est **un récit à la première personne**.",
+     "aide": "Le premier mot du troisième texte.",
+     "explication": "**Je** : le sujet parle lui-même, ce que ne font ni le fait divers ni la statistique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque texte à ce qu’il fait de la personne.",
+     "paires": [
+      [
+       "Le fait divers",
+       "Il la réduit à un acte"
+      ],
+      [
+       "La statistique",
+       "Elle la réduit à un chiffre"
+      ],
+      [
+       "Le récit à la première personne",
+       "Il lui rend le droit de se définir elle-même"
+      ]
+     ],
+     "aide": "Un acte, un chiffre, une voix.",
+     "explication": "Le récit est le seul des trois à **rendre au sujet le droit de se définir lui-même**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon que le livre le défend ou le refuse.",
+     "categories": [
+      "Le livre le défend",
+      "Le livre le refuse"
+     ],
+     "items": [
+      [
+       "L’éducation, une issue réelle",
+       0
+      ],
+      [
+       "Le quartier idéalisé",
+       1
+      ],
+      [
+       "La spiritualité, un travail sur soi",
+       0
+      ],
+      [
+       "Le quartier comme décor de misère",
+       1
+      ],
+      [
+       "La parole, un moyen d’exister",
+       0
+      ]
+     ],
+     "aide": "Le tableau donne les deux discours refusés.",
+     "explication": "Le livre **refuse** le quartier-décor de misère et le quartier idéalisé ; il **défend** l’éducation, la spiritualité et la parole."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le titre.",
+     "texte": "Le titre est une provocation calculée : il accole deux mots que le débat public tient pour ___.",
+     "reponses": [
+      [
+       "incompatibles"
+      ]
+     ],
+     "banque": [
+      "incompatibles",
+      "inséparables",
+      "synonymes",
+      "identiques"
+     ],
+     "aide": "Allah et France : le débat public les oppose.",
+     "explication": "Le titre accole deux mots tenus pour **incompatibles**, et le livre montre qu’ils ne le sont pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "ddd36c06-79ee-5afe-9c04-f57c9b28c204",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois romans, trois lieux de Paris",
+   "competence": "analyser-document",
+   "situation": "Le club lecture a dressé un tableau : un lieu de ville par grand roman du XIXe siècle. Retrouve qui l’a écrit et pourquoi la ville n’est jamais un simple décor.",
+   "documents": [
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "Des lieux et des romans",
+     "colonnes": [
+      "Le lieu",
+      "Le roman"
+     ],
+     "lignes": [
+      [
+       "La pension Vauquer",
+       "Le Père Goriot"
+      ],
+      [
+       "Les égouts et les barricades",
+       "Les Misérables"
+      ],
+      [
+       "Le grand magasin",
+       "Au Bonheur des Dames"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lieux",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le lieu que **Balzac** oppose au faubourg Saint-Germain.",
+     "aide": "Une pension de famille.",
+     "explication": "La **pension Vauquer** s’oppose au faubourg Saint-Germain, quartier aristocratique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque roman à son auteur.",
+     "paires": [
+      [
+       "Le Père Goriot",
+       "Balzac"
+      ],
+      [
+       "Les Misérables",
+       "Hugo"
+      ],
+      [
+       "Au Bonheur des Dames",
+       "Zola"
+      ]
+     ],
+     "aide": "Trois grands noms du XIXe siècle.",
+     "explication": "**Balzac** écrit *Le Père Goriot*, **Hugo** *Les Misérables*, **Zola** *Au Bonheur des Dames*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Dans un récit réaliste, la ville n’est pas un décor : elle ___ les personnages.",
+     "reponses": [
+      [
+       "classe"
+      ]
+     ],
+     "banque": [
+      "classe",
+      "protège",
+      "ignore",
+      "amuse"
+     ],
+     "aide": "Dire où l’on habite, c’est dire ce qu’on peut espérer.",
+     "explication": "La ville **classe socialement** les personnages : où l’on habite dit ce qu’on peut espérer."
+    }
+   ]
+  },
+  {
+   "chapitre": "ddd36c06-79ee-5afe-9c04-f57c9b28c204",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La tour 4",
+   "competence": "analyser-texte",
+   "situation": "Dans un recueil de nouvelles de lycéens, trois scènes se passent dans une cité. Un auteur veut-il la montrer de l’intérieur, ou de loin ? Repère les procédés.",
+   "documents": [
+    {
+     "id": "tour",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La tour 4",
+     "blocs": [
+      "Nadia habite la tour 4 du quartier des Glycines. De sa fenêtre, elle voit le périphérique qui gronde jour et nuit et, loin derrière, les toits du centre.",
+      "Quand l’ambulance entra, toute la [[m|cité]] se mit aux fenêtres. Un gamin cria : « T’as vu les [[a|keufs]] derrière ? »",
+      "Un journaliste passait en voiture, vitres fermées. Il murmura à son photographe que « tout ça » faisait peur, puis il accéléra."
+     ],
+     "source": "Nouvelle écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tour",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot employé par **métonymie** pour désigner les habitants.",
+     "aide": "Le lieu pour ceux qui y vivent.",
+     "explication": "**Cité** désigne ici ses habitants, qui se mettent aux fenêtres : c’est une métonymie."
+    },
+    {
+     "type": "zone",
+     "document": "tour",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot de **verlan** qui fait entendre une langue réelle.",
+     "aide": "Le gamin désigne ainsi les policiers.",
+     "explication": "**Keufs** est du verlan (« flics ») : l’oralité fait entendre la parole du quartier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Depuis où le troisième paragraphe regarde-t-il la cité ?",
+     "options": [
+      "De l’extérieur, depuis une voiture qui passe sans s’arrêter",
+      "De l’intérieur, depuis la fenêtre d’une habitante",
+      "Depuis le toit de la tour, avec une vue d’ensemble",
+      "Depuis le centre-ville, loin du périphérique"
+     ],
+     "reponse": 0,
+     "aide": "Le journaliste a les vitres fermées et il accélère.",
+     "explication": "La cité est vue **de l’extérieur**, depuis une voiture qui passe : la focalisation produit la peur et la mise à distance."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à ce qu’il révèle.",
+     "paires": [
+      [
+       "La métonymie",
+       "« La cité » pour ses habitants"
+      ],
+      [
+       "L’opposition centre / périphérie",
+       "Une hiérarchie spatiale"
+      ],
+      [
+       "L’oralité",
+       "Une langue réelle, discours direct et argot"
+      ],
+      [
+       "Le champ lexical de l’espace",
+       "Béton, cage d’escalier, périph"
+      ]
+     ],
+     "aide": "Chaque procédé a son effet dans le tableau du cours.",
+     "explication": "Métonymie : **la cité** pour ses habitants ; opposition : une **hiérarchie spatiale** ; oralité : une **langue réelle** ; champ lexical : béton, escalier, périph."
+    }
+   ]
+  },
+  {
+   "chapitre": "ddd36c06-79ee-5afe-9c04-f57c9b28c204",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La même cité, deux regards",
+   "competence": "argumenter",
+   "situation": "Deux élèves ont décrit la même cité : l’un en visiteur de passage, l’autre en habitante. Compare leurs textes et demande-toi, à chaque phrase : qui parle ?",
+   "documents": [
+    {
+     "id": "visiteur",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Version A : un visiteur",
+     "blocs": [
+      "En traversant la cité, on se croirait sur une autre [[x|planète]] : des tours grises à perte de vue, des ombres qui [[x|rôdent]] au pied des immeubles, pas un arbre. On accélère, on verrouille les portières, on repart soulagé."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "habitante",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Version B : une habitante",
+     "blocs": [
+      "Chez nous, le dimanche, l’escalier sent le couscous de Mme Diallo et le gâteau de Mme Lopes. Au pied de la tour, les gamins jouent au foot jusqu’à la nuit, et personne ne ferme à clé."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "visiteur",
+     "reponse": [
+      "x"
+     ],
+     "multiple": true,
+     "enonce": "Dans la version A, touche les **deux mots** qui rendent la cité exotique ou inquiétante.",
+     "aide": "Une autre planète, des silhouettes menaçantes.",
+     "explication": "**Planète** et **rôdent** mettent la cité à distance : on la décrit comme un monde étranger et menaçant."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le regard qu’elle porte sur la cité.",
+     "categories": [
+      "Regard de l’extérieur",
+      "Regard de l’intérieur"
+     ],
+     "items": [
+      [
+       "On accélère, on verrouille les portières.",
+       0
+      ],
+      [
+       "L’escalier sent le couscous de Mme Diallo.",
+       1
+      ],
+      [
+       "Des ombres qui rôdent au pied des immeubles.",
+       0
+      ],
+      [
+       "Les gamins jouent au foot jusqu’à la nuit.",
+       1
+      ]
+     ],
+     "aide": "Qui connaît les habitants par leur nom ?",
+     "explication": "De l’extérieur, on voit des menaces ; de l’**intérieur**, on connaît les noms, les odeurs, les jeux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit la version B sur le lecteur ?",
+     "options": [
+      "De la sympathie : on entend la vie ordinaire du quartier",
+      "De la peur : la cité est décrite comme dangereuse",
+      "De l’indifférence : il ne s’y passe rien d’important",
+      "De la colère : l’autrice accuse directement la police"
+     ],
+     "reponse": 0,
+     "aide": "Mme Diallo, Mme Lopes, les gamins : des personnes, pas un décor.",
+     "explication": "La version B donne des noms et des gestes familiers : elle produit de la **sympathie**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion du cours.",
+     "texte": "Une représentation n’est jamais ___ : elle produit de la sympathie, de la peur ou de l’indifférence.",
+     "reponses": [
+      [
+       "neutre"
+      ]
+     ],
+     "banque": [
+      "neutre",
+      "inutile",
+      "fausse",
+      "ancienne"
+     ],
+     "aide": "Les deux textes décrivent la même cité…",
+     "explication": "Une représentation n’est jamais **neutre** : étudier les écritures urbaines, c’est se demander qui fabrique les images sociales."
+    }
+   ]
+  },
+  {
+   "chapitre": "15f19fce-8caf-52b0-a5f5-3e84c4e3f175",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un retard au lycée",
+   "competence": "analyser-texte",
+   "situation": "Pour le cours de théâtre, la classe a écrit une petite scène. Avant de la jouer, il faut distinguer ce qui se dit de ce qui se joue, et compter les scènes d’une autre pièce.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une salle de classe",
+     "blocs": [
+      {
+       "didascalie": "Une salle de classe, vide. Léo entre en courant. Nina range ses affaires."
+      },
+      {
+       "personnage": "Léo",
+       "replique": "Tu as vu l’heure ? On est en retard !"
+      },
+      {
+       "personnage": "Nina",
+       "replique": "Du calme. Le prof est malade."
+      },
+      {
+       "didascalie": "Nina, [[a|à]] [[a|part]], au public : elle sourit."
+      },
+      {
+       "personnage": "Nina",
+       "replique": "Il n’est pas malade du tout : j’ai caché ses clés."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "entrees",
+     "type": "tableau",
+     "titre": "Qui est sur scène ? (extrait d’une autre pièce)",
+     "colonnes": [
+      "Moment",
+      "Sur scène"
+     ],
+     "lignes": [
+      [
+       "Au lever de rideau",
+       "Léo, Nina"
+      ],
+      [
+       "Théo entre",
+       "Léo, Nina, Théo"
+      ],
+      [
+       "Léo sort",
+       "Nina, Théo"
+      ],
+      [
+       "Théo sort",
+       "Nina"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque ligne du texte selon sa nature.",
+     "categories": [
+      "Didascalie",
+      "Réplique"
+     ],
+     "items": [
+      [
+       "Léo entre en courant.",
+       0
+      ],
+      [
+       "Tu as vu l’heure ? On est en retard !",
+       1
+      ],
+      [
+       "Nina range ses affaires.",
+       0
+      ],
+      [
+       "Du calme. Le prof est malade.",
+       1
+      ]
+     ],
+     "aide": "Ce qui est dit par un personnage, ou ce qui est indiqué pour la scène ?",
+     "explication": "Les **didascalies** donnent les gestes, le décor, les entrées : on ne les prononce pas. Les **répliques** sont dites par les personnages."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** de la didascalie qui annoncent un **aparté**.",
+     "aide": "Nina parle au public, sans que Léo l’entende.",
+     "explication": "**À part** : l’aparté est dit au public sans être entendu des autres personnages."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans une pièce classique, une scène change dès qu’un personnage entre ou sort. Combien de **scènes** compte l’extrait du tableau ?",
+     "reponse": 4,
+     "unite": "scènes",
+     "aide": "Compte chaque ligne : chaque changement de personnages sur scène ouvre une scène.",
+     "explication": "**4 scènes** : le début, l’entrée de Théo, la sortie de Léo, la sortie de Théo."
+    }
+   ]
+  },
+  {
+   "chapitre": "15f19fce-8caf-52b0-a5f5-3e84c4e3f175",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Fil rouge, comédie en trois actes",
+   "competence": "analyser-document",
+   "situation": "Le programme de salle d’une comédie résume l’intrigue en cinq paragraphes. À toi de reconnaître le rôle de chacun dans la construction de la pièce.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le Fil rouge : le résumé",
+     "blocs": [
+      "Chez les Vallier, on prépare le mariage de Camille avec Armand, un riche voisin. Le valet Pascal apprend au public que la famille est ruinée.",
+      "Camille, qui aime en secret le jeune libraire Oscar, refuse ce mariage : le conflit est posé.",
+      "Pascal imagine plusieurs ruses pour retarder la noce ; chacune échoue et complique l’intrigue.",
+      "[[c|Soudain]], Armand avoue qu’il est lui-même sans un sou et qu’il courtisait Camille pour sa dot.",
+      "Les deux familles se réconcilient et Camille épouse Oscar."
+     ],
+     "source": "Résumé imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque paragraphe à son rôle dans la pièce.",
+     "paires": [
+      [
+       "Paragraphe 1",
+       "L’exposition"
+      ],
+      [
+       "Paragraphe 2",
+       "Le nœud"
+      ],
+      [
+       "Paragraphe 3",
+       "Les péripéties"
+      ],
+      [
+       "Paragraphe 4",
+       "Le coup de théâtre"
+      ],
+      [
+       "Paragraphe 5",
+       "Le dénouement"
+      ]
+     ],
+     "aide": "Informer, installer le conflit, le relancer, le renverser, le résoudre.",
+     "explication": "Exposition : informer. Nœud : installer le conflit. Péripéties : le relancer. Coup de théâtre : **renversement brutal**. Dénouement : le résoudre."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui annonce le **renversement brutal** de la situation.",
+     "aide": "Un adverbe qui marque la surprise, au début du paragraphe 4.",
+     "explication": "**Soudain** annonce le coup de théâtre : Armand est lui-même ruiné."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le valet Pascal « apprend-il au public » que la famille est ruinée ?",
+     "options": [
+      "Pour informer le spectateur de la situation : c’est l’exposition",
+      "Pour lancer un coup de théâtre qui renverse brutalement la pièce",
+      "Pour résoudre le conflit en révélant le secret de la famille",
+      "Pour interrompre l’action par un monologue sans rapport avec l’intrigue"
+     ],
+     "reponse": 0,
+     "aide": "Le rôle de l’exposition est dit dans le cours.",
+     "explication": "L’**exposition** informe le spectateur ; Pascal parle au public, c’est aussi un exemple de double énonciation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation selon le registre qu’elle illustre.",
+     "categories": [
+      "Comique",
+      "Tragique",
+      "Pathétique",
+      "Lyrique"
+     ],
+     "items": [
+      [
+       "Un valet glisse et renverse tout le dîner.",
+       0
+      ],
+      [
+       "Un roi comprend qu’il ne peut échapper à son destin.",
+       1
+      ],
+      [
+       "Une mère en larmes supplie qu’on lui rende son enfant.",
+       2
+      ],
+      [
+       "Un jeune homme chante sa joie d’aimer sous une fenêtre.",
+       3
+      ]
+     ],
+     "aide": "Rire, fatalité, émotion, sentiments.",
+     "explication": "**Comique** : le rire ; **tragique** : la fatalité ; **pathétique** : il émeut ; **lyrique** : il dit les sentiments."
+    }
+   ]
+  },
+  {
+   "chapitre": "15f19fce-8caf-52b0-a5f5-3e84c4e3f175",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Aldric : le prologue et la mise en scène",
+   "competence": "analyser-texte",
+   "situation": "Une troupe prépare une tragédie inventée, *Aldric*, et hésite entre deux mises en scène. Lis l’extrait, puis le tableau des choix de la troupe.",
+   "documents": [
+    {
+     "id": "tragedie",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Aldric, tragédie : le début",
+     "blocs": [
+      {
+       "didascalie": "Un palais, à l’aube. Le Chœur s’avance seul."
+      },
+      {
+       "personnage": "Le Chœur",
+       "replique": "Spectateurs, sachez-le : avant la fin du jour, le roi Aldric aura tué son propre fils sans le reconnaître."
+      },
+      {
+       "didascalie": "Le Chœur sort. Entre le roi Aldric, seul."
+      },
+      {
+       "personnage": "Aldric",
+       "replique": "Que mon fils revienne ! Je ne désire qu’une chose : le revoir [[i|vivant]] avant la nuit."
+      }
+     ],
+     "source": "Extrait écrit pour l’exercice"
+    },
+    {
+     "id": "mises",
+     "type": "tableau",
+     "titre": "Deux mises en scène du même extrait",
+     "colonnes": [
+      "Le choix",
+      "Mise en scène A",
+      "Mise en scène B"
+     ],
+     "lignes": [
+      [
+       "Décor",
+       "Un palais antique en pierre",
+       "Une salle de réunion moderne"
+      ],
+      [
+       "Costumes",
+       "Tuniques et couronnes",
+       "Costumes-cravates"
+      ],
+      [
+       "Lumière",
+       "Torches vacillantes",
+       "Néons blancs"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tragedie",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot d’Aldric qui prend, pour le spectateur averti par le Chœur, un sens **cruel que le roi ignore**.",
+     "aide": "Le spectateur sait ce qui attend le fils d’Aldric.",
+     "explication": "**Vivant** : Aldric veut revoir son fils vivant, et le spectateur sait qu’il le tuera. C’est l’**ironie tragique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le Chœur révèle-t-il la fin dès le début sans gâcher la pièce ?",
+     "options": [
+      "Le spectateur regarde comment cette fin devient inévitable",
+      "Le spectateur découvre qui va gagner entre les deux camps",
+      "Le spectateur se demande si le fils va s’enfuir à temps",
+      "Le spectateur oublie vite ce que le Chœur a annoncé"
+     ],
+     "reponse": 0,
+     "aide": "Dans Roméo et Juliette aussi, le prologue annonce la mort des amants.",
+     "explication": "Chaque scène rapproche d’une fin connue : le plaisir tragique tient à l’**inévitable**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque choix de mise en scène selon la bienséance classique.",
+     "categories": [
+      "Respecte la bienséance",
+      "Viole la bienséance"
+     ],
+     "items": [
+      [
+       "Un messager vient raconter la mort du fils.",
+       0
+      ],
+      [
+       "Le roi frappe son fils devant le public.",
+       1
+      ],
+      [
+       "La mort a lieu hors scène.",
+       0
+      ],
+      [
+       "Le meurtre est joué sur le plateau, sang à l’appui.",
+       1
+      ]
+     ],
+     "aide": "La bienséance interdit de montrer la mort et la violence.",
+     "explication": "La **bienséance** interdit de montrer la mort ou la violence : on la fait **raconter** ou se passer hors scène."
+    },
+    {
+     "type": "zone",
+     "document": "mises",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Dans le tableau, touche le **décor** de la mise en scène B.",
+     "aide": "Cherche la ligne « Décor », colonne B.",
+     "explication": "La mise en scène B choisit **une salle de réunion moderne**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau de deux mises en scène d’un même texte ?",
+     "options": [
+      "Elles peuvent dire des choses opposées sur le pouvoir",
+      "Elles disent forcément la même chose, car le texte est fixe",
+      "Elles changent le texte, donc les répliques sont modifiées",
+      "Elles sont toutes deux fausses si elles ne sont pas antiques"
+     ],
+     "reponse": 0,
+     "aide": "Le texte reste le même ; qu’est-ce qui change ?",
+     "explication": "La **mise en scène** interprète le texte : décor, costumes, lumière. Deux mises en scène peuvent dire des choses **opposées**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2ab6e85-5aef-581c-8bc2-33a954612de7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La distribution à Vérone",
+   "competence": "analyser-document",
+   "situation": "Pour la sortie théâtre, le professeur a affiché la distribution de *Roméo et Juliette* : cinq rôles, un indice chacun. Retrouve qui est qui.",
+   "documents": [
+    {
+     "id": "distrib",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Roméo et Juliette",
+     "sousTitre": "Shakespeare — Vérone, vers 1595",
+     "emoji": "🎭",
+     "teinte": "rose",
+     "lignes": [
+      {
+       "texte": "Roméo",
+       "valeur": "Un Montaigu",
+       "id": "romeo"
+      },
+      {
+       "texte": "Juliette",
+       "valeur": "Une Capulet",
+       "id": "juliette"
+      },
+      {
+       "texte": "Pâris",
+       "valeur": "Le prétendant choisi par la famille de Juliette",
+       "id": "paris"
+      },
+      {
+       "texte": "Mercutio",
+       "valeur": "Ami de Roméo",
+       "id": "mercutio"
+      },
+      {
+       "texte": "La nourrice",
+       "valeur": "Confidente de Juliette",
+       "id": "nourrice"
+      }
+     ],
+     "pied": "Sortie théâtre — jeudi"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "distrib",
+     "reponse": [
+      "paris"
+     ],
+     "enonce": "Touche le personnage à qui les parents de Juliette la destinent.",
+     "aide": "Un prétendant qu’elle n’a pas choisi.",
+     "explication": "**Pâris** : Juliette lui est promise sans qu’on lui demande son avis."
+    },
+    {
+     "type": "zone",
+     "document": "distrib",
+     "reponse": [
+      "mercutio",
+      "nourrice"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux personnages** qui apportent le registre comique à la pièce.",
+     "aide": "Un ami de Roméo et une confidente.",
+     "explication": "La **nourrice** et **Mercutio** apportent le comique, que Shakespeare mêle au tragique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé de l’ouverture.",
+     "texte": "Le prologue, dit par un ___, révèle dès l’ouverture que les deux amants vont ___.",
+     "reponses": [
+      [
+       "chœur",
+       "choeur"
+      ],
+      [
+       "mourir"
+      ]
+     ],
+     "banque": [
+      "chœur",
+      "mourir",
+      "messager",
+      "se marier"
+     ],
+     "aide": "C’est un personnage collectif qui parle au public.",
+     "explication": "Le prologue est dit par un **chœur** et annonce que les amants vont **mourir**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2ab6e85-5aef-581c-8bc2-33a954612de7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’enchaînement fatal",
+   "competence": "analyser-document",
+   "situation": "Sur un cahier de théâtre, une élève a résumé la pièce sous forme d’enchaînement. Retrouve, dans cette chaîne, le rôle du hasard, de la haine et du pouvoir des parents.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Du mariage secret à la mort",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le mariage secret"
+      },
+      {
+       "id": "n2",
+       "texte": "Roméo tue Tybalt et est exilé"
+      },
+      {
+       "id": "n3",
+       "texte": "Juliette boit un philtre de faux sommeil"
+      },
+      {
+       "id": "n4",
+       "texte": "Le message du frère Laurent n’arrive pas"
+      },
+      {
+       "id": "n5",
+       "texte": "Roméo croit Juliette morte"
+      },
+      {
+       "id": "n6",
+       "texte": "Les deux amants meurent"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’élément **très concret** qui précipite le dénouement.",
+     "aide": "Un détail ordinaire : quelque chose qui n’arrive pas à temps.",
+     "explication": "**Le message qui n’arrive pas** : la fatalité, chez Shakespeare, passe par des détails ordinaires."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque événement selon l’obstacle qu’il illustre.",
+     "categories": [
+      "Le hasard",
+      "La haine héritée",
+      "L’ordre patriarcal"
+     ],
+     "items": [
+      [
+       "Le message du frère Laurent n’arrive pas.",
+       0
+      ],
+      [
+       "Roméo tue Tybalt, cousin de Juliette.",
+       1
+      ],
+      [
+       "Les Capulet promettent Juliette à Pâris.",
+       2
+      ],
+      [
+       "Juliette se réveille quelques instants trop tard.",
+       0
+      ]
+     ],
+     "aide": "Trois obstacles : un accident, une vieille querelle, une décision des parents.",
+     "explication": "**Hasard** : message perdu, réveil tardif. **Haine héritée** : le combat entre familles. **Ordre patriarcal** : Juliette est promise sans qu’on lui demande son avis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le prologue annonce la mort des amants. Que regarde alors le spectateur ?",
+     "options": [
+      "Comment cette fin devient inévitable",
+      "Qui va gagner entre les deux familles",
+      "Si les amants vont s’enfuir à temps",
+      "Pourquoi le prologue a menti aux spectateurs"
+     ],
+     "reponse": 0,
+     "aide": "Il connaît déjà la fin.",
+     "explication": "Il sait déjà ce qui va arriver : il regarde **comment cela devient inévitable**. C’est l’ironie tragique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Dans la pièce, aimer devient un acte ___ : choisir l’autre camp, c’est trahir le sien.",
+     "reponses": [
+      [
+       "politique"
+      ]
+     ],
+     "banque": [
+      "politique",
+      "comique",
+      "secret",
+      "religieux"
+     ],
+     "aide": "Les deux camps sont des familles qui s’affrontent.",
+     "explication": "Aimer devient un acte **politique** : choisir l’autre camp, c’est trahir le sien."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2ab6e85-5aef-581c-8bc2-33a954612de7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Roméo et Juliette, de siècle en siècle",
+   "competence": "analyser-document",
+   "situation": "Un festival de théâtre propose une affiche autour de la pièce de Shakespeare, avec un tableau qui compare l’œuvre de 1595 et la comédie musicale. À toi de dire ce qui change, et ce qui reste.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Roméo et Juliette",
+     "sousTitre": "De siècle en siècle",
+     "emoji": "🎬",
+     "teinte": "bleu",
+     "lignes": [
+      {
+       "texte": "Vers 1595",
+       "valeur": "La pièce de Shakespeare, à Vérone",
+       "id": "orig"
+      },
+      {
+       "texte": "Comédie musicale",
+       "valeur": "West Side Story : deux gangs à New York",
+       "id": "wss"
+      },
+      {
+       "texte": "Adaptation en cité",
+       "valeur": "Deux immeubles rivaux",
+       "id": "cite"
+      },
+      {
+       "texte": "Adaptation en camp de réfugiés",
+       "valeur": "Deux communautés voisines",
+       "id": "camp"
+      },
+      {
+       "texte": "Adaptation en réseau social",
+       "valeur": "Deux groupes en ligne",
+       "id": "reseau"
+      }
+     ],
+     "pied": "Festival — cycle « Amours impossibles »"
+    },
+    {
+     "id": "transpo",
+     "type": "tableau",
+     "titre": "Ce qui se transpose",
+     "colonnes": [
+      "Dans la pièce",
+      "Dans West Side Story"
+     ],
+     "lignes": [
+      [
+       "Vérone",
+       "New York"
+      ],
+      [
+       "Les Montaigu et les Capulet",
+       "Deux gangs"
+      ],
+      [
+       "La haine héritée",
+       "La rivalité entre bandes"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "wss"
+     ],
+     "enonce": "Touche l’adaptation qui transpose l’intrigue dans les **gangs new-yorkais**.",
+     "aide": "Une comédie musicale.",
+     "explication": "**West Side Story** : une comédie musicale qui déplace l’intrigue à New York."
+    },
+    {
+     "type": "zone",
+     "document": "transpo",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Dans le tableau, touche ce qui **remplace Vérone** dans la comédie musicale.",
+     "aide": "Cherche la première ligne, colonne de droite.",
+     "explication": "**New York** remplace Vérone : le lieu change, la structure reste."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon qu’il change ou qu’il reste d’une version à l’autre.",
+     "categories": [
+      "Ce qui change",
+      "Ce qui reste"
+     ],
+     "items": [
+      [
+       "Le lieu de l’action",
+       0
+      ],
+      [
+       "Le nom des deux camps",
+       0
+      ],
+      [
+       "L’amour interdit entre deux camps",
+       1
+      ],
+      [
+       "La frontière entre les camps",
+       1
+      ],
+      [
+       "Les costumes",
+       0
+      ]
+     ],
+     "aide": "Regarde l’affiche : ce qui varie à chaque adaptation, et ce qui ne varie jamais.",
+     "explication": "Lieux, noms et costumes changent ; l’**amour interdit** et la **frontière entre deux camps** restent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la pièce peut-elle être transposée dans une cité, un camp de réfugiés ou un réseau social ?",
+     "options": [
+      "Elle fonctionne partout où existent deux camps et une frontière",
+      "Elle est écrite sans lieu précis, sans nom de famille",
+      "Elle ne contient aucun lien avec la politique ni l’époque",
+      "Elle est très courte, donc facile à raconter autrement"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que ces versions ont en commun.",
+     "explication": "La pièce fonctionne partout où existent **deux camps et une frontière**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Dans chaque version, deux ___ s’opposent et deux amants franchissent la ___ entre eux.",
+     "reponses": [
+      [
+       "camps"
+      ],
+      [
+       "frontière",
+       "frontiere"
+      ]
+     ],
+     "banque": [
+      "camps",
+      "frontière",
+      "saisons",
+      "gares"
+     ],
+     "aide": "Le cours parle de deux camps et d’une frontière.",
+     "explication": "Deux **camps** s’opposent et les amants franchissent la **frontière** entre eux."
+    }
+   ]
+  },
+  {
+   "chapitre": "dd0a2966-6d85-5160-88a4-3f696b3b51a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le triangle de Marianne",
+   "competence": "observer-schema",
+   "situation": "Pour préparer la lecture des *Caprices de Marianne* (1833), la classe a dessiné au tableau qui aime qui, et qui parle pour qui.",
+   "documents": [
+    {
+     "id": "triangle",
+     "type": "schema",
+     "titre": "Qui est lié à qui ?",
+     "largeur": 320,
+     "hauteur": 270,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 15,
+       "l": 100,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Claudio",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "claudio",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 100,
+       "l": 100,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Marianne",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "marianne",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 205,
+       "l": 100,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Cœlio",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "coelio",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 205,
+       "l": 100,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Octave",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "octave",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        49
+       ],
+       "a": [
+        160,
+        100
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 80,
+       "texte": "mari",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        205
+       ],
+       "a": [
+        120,
+        134
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 170,
+       "texte": "aime",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        205
+       ],
+       "a": [
+        200,
+        134
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 245,
+       "y": 162,
+       "texte": "plaide",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 245,
+       "y": 177,
+       "texte": "pour Cœlio",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        222
+       ],
+       "a": [
+        210,
+        222
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 255,
+       "texte": "deux amis",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "triangle",
+     "reponse": [
+      "claudio"
+     ],
+     "enonce": "Touche le personnage qui est **le mari** de Marianne.",
+     "aide": "Regarde ce que dit le trait entre deux personnages du haut.",
+     "explication": "**Claudio** est le vieux juge, mari de Marianne."
+    },
+    {
+     "type": "zone",
+     "document": "triangle",
+     "reponse": [
+      "octave"
+     ],
+     "enonce": "Touche le personnage à qui Cœlio demande de **plaider sa cause**.",
+     "aide": "Un ami timide délègue la parole.",
+     "explication": "**Octave** plaide la cause de Cœlio : c’est la parole déléguée, qui déplace le désir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rapport à l’amour.",
+     "paires": [
+      [
+       "Cœlio",
+       "L’idéaliste, qui préfère le rêve à la rencontre"
+      ],
+      [
+       "Octave",
+       "Le libertin cynique, qui se découvre incapable d’aimer"
+      ],
+      [
+       "Marianne",
+       "Enfermée dans un mariage : ses caprices sont ses seules libertés"
+      ]
+     ],
+     "aide": "Un rêveur, un cynique, une femme enfermée.",
+     "explication": "**Cœlio** est l’idéaliste, **Octave** le libertin cynique, **Marianne** est enfermée dans un mariage : ses « caprices » sont les seules libertés qu’on lui laisse."
+    }
+   ]
+  },
+  {
+   "chapitre": "dd0a2966-6d85-5160-88a4-3f696b3b51a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La dernière réplique d’Octave",
+   "competence": "analyser-texte",
+   "situation": "À la fin des *Caprices de Marianne*, une réplique rend la mort irréparable. Lis-la, replace la pièce sur une frise et compare avec les règles classiques.",
+   "documents": [
+    {
+     "id": "finale",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La réplique finale",
+     "blocs": [
+      {
+       "personnage": "Octave",
+       "replique": "Je ne vous aime pas, Marianne ; c’était Cœlio qui vous [[a|aimait]]."
+      }
+     ],
+     "auteur": "Alfred de Musset, Les Caprices de Marianne (1833), réplique finale d’Octave"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Autour de 1833",
+     "debut": 1820,
+     "fin": 1840,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "cromwell",
+       "date": 1827,
+       "nom": "Préface de Cromwell"
+      },
+      {
+       "id": "hernani",
+       "date": 1830,
+       "nom": "Bataille d’Hernani"
+      },
+      {
+       "id": "caprices",
+       "date": 1833,
+       "nom": "Les Caprices"
+      }
+     ],
+     "source": "Dates tirées du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "finale",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe à l’**imparfait** qui rejette l’amour dans le passé.",
+     "aide": "Cœlio est mort : un temps du passé.",
+     "explication": "**Aimait** : l’imparfait enferme l’amour de Cœlio dans un passé que rien ne peut réparer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit cette réplique finale ?",
+     "options": [
+      "Elle rend la mort irréparable, sans coupable désignable",
+      "Elle annonce un mariage heureux entre Octave et Marianne",
+      "Elle prouve que Claudio a tout organisé depuis le début",
+      "Elle fait rire le public par un retournement comique"
+     ],
+     "reponse": 0,
+     "aide": "Octave dit qu’il n’aime pas Marianne et que Cœlio, lui, l’aimait.",
+     "explication": "Octave refuse Marianne et rappelle que Cœlio l’aimait : plus rien n’est possible, et **personne n’est vraiment coupable**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cromwell"
+     ],
+     "enonce": "Sur la frise, touche le texte qui sert de **manifeste du drame romantique**.",
+     "aide": "C’est une préface de Victor Hugo.",
+     "explication": "La **préface de Cromwell** (1827) est le manifeste du drame romantique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la **bataille d’Hernani** de la publication des *Caprices* ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Soustrais 1830 à 1833.",
+     "explication": "1833 − 1830 = **3 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait selon le théâtre auquel il appartient.",
+     "categories": [
+      "Théâtre classique",
+      "Drame romantique"
+     ],
+     "items": [
+      [
+       "Respect des trois unités",
+       0
+      ],
+      [
+       "Mélange de fantaisie et de tragédie",
+       1
+      ],
+      [
+       "Séparation stricte des genres",
+       0
+      ],
+      [
+       "Place du hasard et de l’ironie",
+       1
+      ],
+      [
+       "Nécessité tragique",
+       0
+      ]
+     ],
+     "aide": "Le drame romantique refuse les règles du siècle de Louis XIV.",
+     "explication": "Les classiques séparent les genres et respectent les **trois unités** ; le drame romantique **mélange** les registres et fait place au **hasard**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dd0a2966-6d85-5160-88a4-3f696b3b51a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une mise en scène lycéenne",
+   "competence": "argumenter",
+   "situation": "Le club de théâtre d’un lycée a monté *Les Caprices de Marianne* en costumes modernes. Le journal du lycée en publie un compte rendu, accompagné d’un tableau des personnages.",
+   "documents": [
+    {
+     "id": "compte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Compte rendu du spectacle",
+     "blocs": [
+      "Dans la salle des fêtes du lycée, la troupe d’élèves a monté *Les Caprices de Marianne* dans un décor d’appartement moderne.",
+      "Marianne apparaît toujours à sa [[e|fenêtre]], jamais dans la rue. Ses refus d’Octave sont joués comme des cris, non comme des jeux.",
+      "Cœlio, en sweat, regarde le sol. Claudio [[e|surveille]] sur son téléphone les messages de sa femme. Octave porte une chemise ouverte et rit trop fort."
+     ],
+     "source": "Compte rendu imaginé pour l’exercice"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Le personnage",
+      "Son rapport à l’amour"
+     ],
+     "lignes": [
+      [
+       "Cœlio",
+       "L’idéaliste, qui préfère le rêve à la rencontre"
+      ],
+      [
+       "Octave",
+       "Le libertin cynique, qui se découvre incapable d’aimer"
+      ],
+      [
+       "Marianne",
+       "Enfermée dans un mariage : ses « caprices » sont les seules libertés qu’on lui laisse"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "compte",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui disent l’**enfermement** et la surveillance de Marianne.",
+     "aide": "Un lieu d’où l’on regarde dehors, un verbe de contrôle.",
+     "explication": "La **fenêtre** et le verbe **surveille** disent l’enfermement de Marianne dans son mariage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle question de la pièce cette mise en scène met-elle en avant ?",
+     "options": [
+      "La condition faite aux femmes mariées",
+      "Le mal du siècle d’une génération sans guerre",
+      "L’amitié entre hommes et ses aveuglements",
+      "Le conflit entre le devoir et la passion"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que fait Claudio et où se tient Marianne.",
+     "explication": "La fenêtre et la surveillance mettent en avant **la condition des femmes mariées**, sans issue."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait de mise en scène au rapport à l’amour du personnage.",
+     "paires": [
+      [
+       "Il rit trop fort, chemise ouverte",
+       "Le libertin cynique"
+      ],
+      [
+       "Il regarde le sol, en sweat",
+       "L’idéaliste"
+      ],
+      [
+       "Elle est toujours à sa fenêtre",
+       "Enfermée dans un mariage"
+      ]
+     ],
+     "aide": "Croise le compte rendu et le tableau.",
+     "explication": "Octave le **libertin**, Cœlio l’**idéaliste** timide, Marianne **enfermée** dans son mariage."
+    },
+    {
+     "type": "zone",
+     "document": "persos",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui explique ce que sont les « **caprices** » de Marianne.",
+     "aide": "Ce sont des libertés, pas des lubies.",
+     "explication": "Les caprices de Marianne sont **les seules libertés que sa condition lui laisse**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition du mal du siècle.",
+     "texte": "Le mal du siècle est celui d’une génération née après l’épopée ___, sans guerre à faire ni foi solide.",
+     "reponses": [
+      [
+       "napoléonienne",
+       "napoleonienne"
+      ]
+     ],
+     "banque": [
+      "napoléonienne",
+      "révolutionnaire",
+      "médiévale",
+      "coloniale"
+     ],
+     "aide": "Cœlio et Octave appartiennent à cette génération.",
+     "explication": "Une génération née après l’épopée **napoléonienne**, qui oscille entre le rêve (Cœlio) et le cynisme (Octave)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f38a5f57-b6f1-5392-8a2e-8cfc29d582d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche du spectacle",
+   "competence": "analyser-document",
+   "situation": "Le théâtre de la ville programme *Roberto Zucco*. Sa fiche technique et sa distribution sont affichées dans le hall : lis-les avant de réserver.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Fiche du spectacle",
+     "colonnes": [
+      "Rubrique",
+      "Information"
+     ],
+     "lignes": [
+      [
+       "Auteur",
+       "Bernard-Marie Koltès (1948-1989)"
+      ],
+      [
+       "Création",
+       "1990"
+      ],
+      [
+       "Source",
+       "Un fait divers : le parcours du criminel Roberto Succo"
+      ],
+      [
+       "Découpage",
+       "Quinze tableaux titrés"
+      ],
+      [
+       "Dernier tableau",
+       "Sur un toit, en plein soleil"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "distrib",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Roberto Zucco",
+     "sousTitre": "Distribution (extrait)",
+     "emoji": "🎭",
+     "teinte": "ambre",
+     "lignes": [
+      {
+       "texte": "Roberto Zucco",
+       "valeur": "Rôle 1",
+       "id": "zucco"
+      },
+      {
+       "texte": "La Gamine",
+       "valeur": "Rôle 2",
+       "id": "gamine"
+      },
+      {
+       "texte": "La Mère",
+       "valeur": "Rôle 3",
+       "id": "mere"
+      },
+      {
+       "texte": "La Sœur",
+       "valeur": "Rôle 4",
+       "id": "soeur"
+      },
+      {
+       "texte": "La Dame",
+       "valeur": "Rôle 5",
+       "id": "dame"
+      },
+      {
+       "texte": "Le Costaud",
+       "valeur": "Rôle 6",
+       "id": "costaud"
+      }
+     ],
+     "pied": "Théâtre de la ville"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui dit **comment la pièce est découpée**.",
+     "aide": "Pas en actes.",
+     "explication": "La pièce est découpée en **quinze tableaux titrés**, plutôt qu’en actes."
+    },
+    {
+     "type": "zone",
+     "document": "distrib",
+     "reponse": [
+      "zucco"
+     ],
+     "enonce": "Sur l’affiche de distribution, touche le seul personnage désigné par un **nom propre**.",
+     "aide": "Les autres rôles portent un article : la, le.",
+     "explication": "**Roberto Zucco** : les autres personnages sont désignés par leur fonction (la Gamine, la Mère…)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Koltès est mort en 1989 et la pièce est créée en 1990. Combien d’**années** les séparent ?",
+     "reponse": 1,
+     "unite": "an",
+     "aide": "Soustrais les deux dates de la fiche.",
+     "explication": "1990 − 1989 = **1 an**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi des « tableaux » plutôt que des actes ?",
+     "options": [
+      "Une progression par stations, comme un chemin, non une intrigue",
+      "Une intrigue très serrée en un seul lieu et un seul jour",
+      "Un grand nombre de personnages qui se répondent",
+      "Une série de scènes comiques sans rapport entre elles"
+     ],
+     "reponse": 0,
+     "aide": "La structure rappelle la tragédie antique et le chemin de croix.",
+     "explication": "Les tableaux forment un **chemin** : une progression par stations, qui rappelle la tragédie antique et le chemin de croix."
+    }
+   ]
+  },
+  {
+   "chapitre": "f38a5f57-b6f1-5392-8a2e-8cfc29d582d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sur le toit",
+   "competence": "analyser-texte",
+   "situation": "Pour son oral, Maëlle a écrit un monologue à la manière de Koltès : un homme, un toit, le soleil. Lis-le avec un tableau de ce que Koltès refuse et de ce qu’il donne à la place.",
+   "documents": [
+    {
+     "id": "toit",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un monologue",
+     "blocs": [
+      {
+       "didascalie": "Un toit, en plein soleil. L’Homme est debout, au bord."
+      },
+      {
+       "personnage": "L’Homme",
+       "replique": "Le [[s|soleil]] ne me regarde pas. C’est moi qui le regarde, et il ne dit rien. En bas, ils courent. Ils croient que courir, c’est comprendre. Moi, je ne cours pas : je passe."
+      }
+     ],
+     "source": "Monologue écrit pour l’exercice, à la manière de Koltès"
+    },
+    {
+     "id": "refus",
+     "type": "tableau",
+     "titre": "Ce que la pièce refuse, ce qu’elle donne",
+     "colonnes": [
+      "Ce que Koltès refuse",
+      "Ce qu’il donne à la place"
+     ],
+     "lignes": [
+      [
+       "Un mobile",
+       "?"
+      ],
+      [
+       "Une enfance analysée",
+       "?"
+      ],
+      [
+       "Une leçon",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "toit",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui fait entrer ce monologue dans le **mythe** (comme les monologues de Zucco).",
+     "aide": "Un astre, au début de la réplique.",
+     "explication": "Le **soleil** donne à l’homme une dimension mythique : la parole touche au symbole plus qu’à la psychologie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque refus de Koltès à ce qu’il donne à la place.",
+     "paires": [
+      [
+       "Un mobile",
+       "Une énergie qui passe et détruit"
+      ],
+      [
+       "Une enfance analysée",
+       "Rien"
+      ],
+      [
+       "Une leçon",
+       "Un regard"
+      ]
+     ],
+     "aide": "Il ne demande ni compréhension ni pardon.",
+     "explication": "Pas de mobile : une **énergie** qui passe et détruit. Pas d’enfance analysée : **rien**. Pas de leçon : un **regard**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi désigner les personnages par une fonction (la Gamine, la Mère, la Dame) ?",
+     "options": [
+      "Cela les rapproche des figures mythiques",
+      "Cela prouve qu’ils n’ont aucun rôle dans la pièce",
+      "Cela les rend plus drôles que des personnages nommés",
+      "Cela cache leur identité aux spectateurs de la salle"
+     ],
+     "reponse": 0,
+     "aide": "Pense à Œdipe ou à Médée : des figures plutôt que des portraits.",
+     "explication": "Désigner par une fonction rapproche les personnages des **figures mythiques**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Dans la tragédie moderne, la fatalité prend la forme d’un ___ social, d’une famille, d’une ville.",
+     "reponses": [
+      [
+       "déterminisme",
+       "determinisme"
+      ]
+     ],
+     "banque": [
+      "déterminisme",
+      "oracle",
+      "dieu",
+      "rêve"
+     ],
+     "aide": "Plus de dieux ni de rois : une force qui pèse sur le héros.",
+     "explication": "La fatalité y prend la forme d’un **déterminisme** social : le héros n’a plus de grandeur, seulement une trajectoire qu’il ne maîtrise pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "f38a5f57-b6f1-5392-8a2e-8cfc29d582d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peut-on mettre un criminel sur scène ?",
+   "competence": "argumenter",
+   "situation": "Au lycée, un débat sur *Roberto Zucco* est affiché dans le hall. Quatre élèves ont répondu à la question. À toi de départager objections et réponses de Koltès.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Débat",
+     "sousTitre": "Peut-on mettre un criminel sur scène ?",
+     "emoji": "💬",
+     "teinte": "turquoise",
+     "lignes": [
+      {
+       "texte": "Inès",
+       "valeur": "Un portrait donne envie de plaindre le criminel.",
+       "id": "a1"
+      },
+      {
+       "texte": "Malik",
+       "valeur": "Il n’est pas un portrait : c’est une figure.",
+       "id": "a2"
+      },
+      {
+       "texte": "Chloé",
+       "valeur": "Mettre un tueur sur scène, c’est lui faire de la publicité.",
+       "id": "a3"
+      },
+      {
+       "texte": "Sam",
+       "valeur": "La pièce vise la violence d’une société entière.",
+       "id": "a4"
+      }
+     ],
+     "pied": "Réponses imaginées pour l’exercice"
+    },
+    {
+     "id": "programme",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Extrait du programme de salle",
+     "blocs": [
+      "Roberto Zucco s’inspire d’un fait divers, mais Koltès n’en fait ni un portrait ni un procès : le personnage traverse quinze tableaux comme une énergie qui passe et détruit, sans qu’on explique jamais ses [[m|mobiles]]."
+     ],
+     "source": "Programme de salle imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque argument de l’affiche.",
+     "categories": [
+      "Objection au spectacle",
+      "Réponse de Koltès"
+     ],
+     "items": [
+      [
+       "Un portrait donne envie de plaindre le criminel.",
+       0
+      ],
+      [
+       "Il n’est pas un portrait : c’est une figure.",
+       1
+      ],
+      [
+       "Mettre un tueur sur scène, c’est lui faire de la publicité.",
+       0
+      ],
+      [
+       "La pièce vise la violence d’une société entière.",
+       1
+      ]
+     ],
+     "aide": "Koltès défend la figure et la société, pas le portrait.",
+     "explication": "Deux arguments sont des **objections** (portrait, publicité) ; deux reprennent la **réponse de Koltès** (figure, société entière)."
+    },
+    {
+     "type": "zone",
+     "document": "programme",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche ce que Koltès **refuse d’expliquer** à propos de son personnage.",
+     "aide": "Pas de psychologie : pourquoi agit-il ?",
+     "explication": "Les **mobiles** : Koltès refuse toute explication psychologique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi comparer Zucco à Œdipe ou à Médée ?",
+     "options": [
+      "Comme eux, c’est une figure et non un portrait",
+      "Comme eux, il est un roi tombé du pouvoir",
+      "Comme eux, il est raconté par un messager",
+      "Comme eux, il est condamné par les dieux grecs"
+     ],
+     "reponse": 0,
+     "aide": "Koltès répond à ceux qui l’accusent de glorifier un criminel.",
+     "explication": "Zucco n’est pas un **portrait** mais une **figure**, comme Œdipe ou Médée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vise la pièce, selon Koltès ?",
+     "options": [
+      "La violence d’une société entière, plus que la folie d’un homme",
+      "La défense d’un criminel réel face à une justice injuste",
+      "Une enquête policière sur la cavale d’un fugitif célèbre",
+      "Une satire des journalistes qui racontent les faits divers"
+     ],
+     "reponse": 0,
+     "aide": "L’objectif n’est pas l’individu.",
+     "explication": "La pièce vise la **violence d’une société entière**, plutôt que la folie d’un seul homme."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion.",
+     "texte": "La tragédie moderne se passe de dieux et de rois : le héros n’a plus de grandeur, seulement une ___ qu’il ne maîtrise pas.",
+     "reponses": [
+      [
+       "trajectoire"
+      ]
+     ],
+     "banque": [
+      "trajectoire",
+      "couronne",
+      "victoire",
+      "armée"
+     ],
+     "aide": "Un chemin, de tableau en tableau.",
+     "explication": "Le héros n’a plus de grandeur, seulement une **trajectoire** qu’il ne maîtrise pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e59af0a-263a-5ec1-afa2-3aeafdd00f7f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le récit du messager",
+   "competence": "analyser-texte",
+   "situation": "Dans une pièce classique inventée pour l’exercice, un messager vient annoncer la mort du roi. Observe comment elle est dite, puis situe ce traitement dans le tableau des quatre époques.",
+   "documents": [
+    {
+     "id": "messager",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le récit",
+     "blocs": [
+      {
+       "didascalie": "Une salle du palais. Un messager entre, hors d’haleine."
+      },
+      {
+       "personnage": "Le Messager",
+       "replique": "Seigneur, j’ai tout [[v|vu]]. Le roi marchait vers la rivière quand le pont a cédé. Il a lutté longtemps contre le courant ; puis les eaux se sont refermées. Je n’ai pu que revenir vous le dire."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "epoques",
+     "type": "tableau",
+     "titre": "Quatre époques",
+     "colonnes": [
+      "L’époque",
+      "Son moyen"
+     ],
+     "lignes": [
+      [
+       "Antiquité et classicisme",
+       "Le récit du messager, le hors-scène"
+      ],
+      [
+       "Théâtre élisabéthain et romantisme",
+       "La mort sur scène"
+      ],
+      [
+       "XXe siècle",
+       "L’attente remplace l’événement"
+      ],
+      [
+       "Aujourd’hui",
+       "Témoignage, chœur, liste de noms"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "messager",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe qui prouve que le messager a été **témoin** de la scène.",
+     "aide": "Il n’a pas entendu dire : il…",
+     "explication": "**Vu** : le messager a tout vu, donc sa parole fait voir au spectateur ce qu’il ne voit pas."
+    },
+    {
+     "type": "zone",
+     "document": "epoques",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui décrit **le moyen** utilisé par ce passage.",
+     "aide": "Un messager qui raconte, une mort hors scène.",
+     "explication": "Le **récit du messager** et le **hors-scène** sont les moyens de l’Antiquité et du classicisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la tragédie classique fait-elle raconter la mort plutôt que la montrer ?",
+     "options": [
+      "La bienséance interdit de montrer la mort et la violence",
+      "Les acteurs ne savaient pas jouer la mort de façon crédible",
+      "Le public de l’époque préférait les histoires courtes",
+      "Le roi interdisait toute pièce où quelqu’un mourrait"
+     ],
+     "reponse": 0,
+     "aide": "Une des règles du XVIIe siècle : bienséance.",
+     "explication": "La **bienséance** interdit de montrer la mort et la violence sur scène : on la **raconte**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque époque au traitement de la mort qu’elle privilégie.",
+     "paires": [
+      [
+       "Antiquité et classicisme",
+       "Raconter"
+      ],
+      [
+       "Théâtre élisabéthain et romantisme",
+       "Montrer"
+      ],
+      [
+       "XXe siècle",
+       "Suspendre"
+      ],
+      [
+       "Aujourd’hui",
+       "Documenter"
+      ]
+     ],
+     "aide": "Un verbe par époque : raconter, montrer, suspendre, documenter.",
+     "explication": "Classicisme : **raconter** ; élisabéthain et romantisme : **montrer** ; XXe : **suspendre** ; aujourd’hui : **documenter**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e59af0a-263a-5ec1-afa2-3aeafdd00f7f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Rose et Léon attendent",
+   "competence": "analyser-texte",
+   "situation": "Dans un petit théâtre de poche, on joue une saynète où deux vieillards attendent la mort. L’auteur est un élève : la scène est inventée pour l’exercice, dans l’esprit du théâtre de l’absurde.",
+   "documents": [
+    {
+     "id": "attente",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "L’attente",
+     "blocs": [
+      {
+       "didascalie": "Une cuisine. Deux vieillards, Rose et Léon, devant une table. Un téléphone qui ne sonne pas."
+      },
+      {
+       "personnage": "Rose",
+       "replique": "Il paraît qu’on doit s’y préparer."
+      },
+      {
+       "personnage": "Léon",
+       "replique": "À quoi ?"
+      },
+      {
+       "personnage": "Rose",
+       "replique": "À ce qui vient."
+      },
+      {
+       "personnage": "Léon",
+       "replique": "Ça vient depuis hier."
+      },
+      {
+       "personnage": "Rose",
+       "replique": "Depuis toujours, Léon."
+      },
+      {
+       "personnage": "Léon",
+       "replique": "Alors on attend."
+      },
+      {
+       "didascalie": "Ils attendent. La [[s|lumière]] baisse très lentement. Il ne reste bientôt sur la table que le [[o|chapeau]] de Léon. [[s|Silence]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "attente",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux procédés de mise en scène** qui suspendent le temps à la fin.",
+     "aide": "Ce qui baisse et ce qui tombe, dans la dernière didascalie.",
+     "explication": "La **lumière** qui baisse et le **silence** suspendent la scène : la mort devient durée."
+    },
+    {
+     "type": "zone",
+     "document": "attente",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche l’**objet qui reste** sur scène.",
+     "aide": "Il appartient à l’un des deux personnages.",
+     "explication": "Le **chapeau** : l’objet qui reste dit l’absence sans montrer la mort."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque auteur ou courant à ce qu’il fait de la mort.",
+     "paires": [
+      [
+       "Beckett",
+       "On n’en finit pas de mourir : l’attente est le sujet"
+      ],
+      [
+       "Ionesco, Le roi se meurt",
+       "Une cérémonie lente et absurde"
+      ],
+      [
+       "Le théâtre de l’absurde",
+       "La mort devient une durée plutôt qu’un coup de théâtre"
+      ]
+     ],
+     "aide": "Attente, cérémonie lente, durée.",
+     "explication": "**Beckett** : l’attente ; **Ionesco** : une cérémonie lente et absurde ; l’**absurde** transforme la mort en durée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient la mort dans cette saynète ?",
+     "options": [
+      "Une attente : elle est une durée, non un événement",
+      "Un coup de théâtre qui renverse brutalement la pièce",
+      "Un récit de messager qui raconte ce qu’il a vu",
+      "Une scène spectaculaire qui jonche le plateau de corps"
+     ],
+     "reponse": 0,
+     "aide": "Rien ne se passe, et pourtant tout se joue.",
+     "explication": "Au XXe siècle, la mort est **suspendue** : on attend, on ne la voit pas arriver."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e59af0a-263a-5ec1-afa2-3aeafdd00f7f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre spectacles, quatre morts",
+   "competence": "argumenter",
+   "situation": "Une critique de théâtre résume quatre spectacles d’un festival (inventés pour l’exercice). Un tableau rappelle quelques pièces célèbres. À toi de reconnaître les quatre façons de traiter la mort.",
+   "documents": [
+    {
+     "id": "critiques",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les quatre spectacles",
+     "blocs": [
+      "Le héros est mort [[h|derrière]] le mur du fond ; un homme essoufflé entre et raconte la scène en dix minutes.",
+      "À la dernière scène, huit corps jonchent le plateau ; l’orchestre se tait.",
+      "Le vieux roi ne meurt pas : il répète pendant deux heures qu’il va mourir, et la lumière baisse sans que rien n’arrive.",
+      "Les acteurs lisent à voix haute la liste des noms des victimes d’un attentat ; personne ne tombe."
+     ],
+     "source": "Résumés imaginés pour l’exercice"
+    },
+    {
+     "id": "pieces",
+     "type": "tableau",
+     "titre": "Quelques pièces",
+     "colonnes": [
+      "Auteur",
+      "Pièce",
+      "Époque"
+     ],
+     "lignes": [
+      [
+       "Racine",
+       "Phèdre",
+       "XVIIe siècle"
+      ],
+      [
+       "Shakespeare",
+       "Hamlet",
+       "Vers 1600"
+      ],
+      [
+       "Beckett",
+       "En attendant Godot",
+       "Années 1950"
+      ],
+      [
+       "Ionesco",
+       "Le roi se meurt",
+       "1962"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque spectacle au traitement de la mort.",
+     "paires": [
+      [
+       "Spectacle 1",
+       "Raconter"
+      ],
+      [
+       "Spectacle 2",
+       "Montrer"
+      ],
+      [
+       "Spectacle 3",
+       "Suspendre"
+      ],
+      [
+       "Spectacle 4",
+       "Documenter"
+      ]
+     ],
+     "aide": "Un messager, des corps, une attente, une liste de noms.",
+     "explication": "1 : un messager **raconte** ; 2 : on **montre** huit corps ; 3 : on **suspend** la mort dans l’attente ; 4 : on **documente** des morts réelles."
+    },
+    {
+     "type": "zone",
+     "document": "critiques",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Dans le premier spectacle, touche le mot qui indique que la mort a lieu **hors scène**.",
+     "aide": "Un adverbe de lieu : « derrière quoi ? »",
+     "explication": "**Derrière** le mur du fond : la mort est hors scène, comme dans la tragédie classique."
+    },
+    {
+     "type": "zone",
+     "document": "pieces",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Dans le tableau, touche la pièce de Racine où la **mort d’Hippolyte** est racontée par un récit.",
+     "aide": "Une tragédie du XVIIe siècle.",
+     "explication": "C’est ***Phèdre*** : le récit de la mort d’Hippolyte est un morceau de bravoure."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Montrée, la mort est un ___ ; racontée, c’est un événement de ___.",
+     "reponses": [
+      [
+       "fait"
+      ],
+      [
+       "langage"
+      ]
+     ],
+     "banque": [
+      "fait",
+      "langage",
+      "rêve",
+      "silence"
+     ],
+     "aide": "Cadavre sur scène, ou récit qui fait voir par les mots.",
+     "explication": "Montrée, la mort est un **fait** ; racontée, c’est un **événement de langage**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel spectacle cherche d’abord à ne pas transformer la mort d’autrui en spectacle ?",
+     "options": [
+      "Le spectacle 4 : il lit des noms, sans jouer la mort",
+      "Le spectacle 2 : il montre huit corps sur le plateau",
+      "Le spectacle 1 : il fait raconter une mort par un homme",
+      "Le spectacle 3 : il joue la mort d’un roi pendant deux heures"
+     ],
+     "reponse": 0,
+     "aide": "Le théâtre contemporain « documente ».",
+     "explication": "Le théâtre contemporain **documente** la mort réelle avec des formes (liste de noms, témoignages) qui ne la transforment pas en spectacle."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8d2a030-4cbd-5f79-8f1a-3e8d024c62da",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq pièces sur quatre siècles",
+   "competence": "se-reperer-temps",
+   "situation": "Le CDI a tendu une frise du théâtre, du Cid à Roberto Zucco. Lis-la et dis qui a écrit quoi.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le théâtre, de 1600 à 2000",
+     "debut": 1600,
+     "fin": 2000,
+     "pas": 100,
+     "periodes": [
+      {
+       "id": "s17",
+       "debut": 1600,
+       "fin": 1700,
+       "nom": "XVIIe siècle",
+       "teinte": "ambre"
+      },
+      {
+       "id": "s18",
+       "debut": 1700,
+       "fin": 1800,
+       "nom": "XVIIIe siècle",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "s19",
+       "debut": 1800,
+       "fin": 1900,
+       "nom": "XIXe siècle",
+       "teinte": "rose"
+      },
+      {
+       "id": "s20",
+       "debut": 1900,
+       "fin": 2000,
+       "nom": "XXe siècle",
+       "teinte": "bleu"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "cid",
+       "date": 1637,
+       "nom": "Le Cid"
+      },
+      {
+       "id": "phedre",
+       "date": 1677,
+       "nom": "Phèdre"
+      },
+      {
+       "id": "figaro",
+       "date": 1784,
+       "nom": "Le Mariage de Figaro"
+      },
+      {
+       "id": "hernani",
+       "date": 1830,
+       "nom": "Hernani"
+      },
+      {
+       "id": "zucco",
+       "date": 1990,
+       "nom": "Roberto Zucco"
+      }
+     ],
+     "source": "Dates de création"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cid",
+      "phedre"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux pièces** de la frise écrites au **XVIIe siècle**, le siècle de la règle classique.",
+     "aide": "Repère la période du XVIIe siècle.",
+     "explication": "**Le Cid** (1637) et **Phèdre** (1677) sont du XVIIe siècle, celui de la règle classique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque auteur du XVIIe siècle à son domaine.",
+     "paires": [
+      [
+       "Corneille",
+       "Le conflit du devoir et de la passion"
+      ],
+      [
+       "Racine",
+       "La fatalité amoureuse"
+      ],
+      [
+       "Molière",
+       "La comédie de caractère et de mœurs"
+      ]
+     ],
+     "aide": "Un conflit, une fatalité, une comédie.",
+     "explication": "**Corneille** : devoir contre passion ; **Racine** : fatalité amoureuse ; **Molière** : comédie de caractère et de mœurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la bataille d’**Hernani** de la création de **Roberto Zucco** ?",
+     "reponse": 160,
+     "unite": "ans",
+     "aide": "Soustrais 1830 à 1990.",
+     "explication": "1990 − 1830 = **160 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8d2a030-4cbd-5f79-8f1a-3e8d024c62da",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le programme du festival",
+   "competence": "analyser-document",
+   "situation": "Un festival présente quatre spectacles à la suite. Tu es chargé d’attribuer chacun à son siècle, d’après ce qu’on y voit.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "tableau",
+     "titre": "Le programme (spectacles inventés)",
+     "colonnes": [
+      "Le spectacle",
+      "Ce qu’on y voit"
+     ],
+     "lignes": [
+      [
+       "Spectacle A",
+       "Une tragédie en cinq actes, un seul lieu, la mort racontée par un messager"
+      ],
+      [
+       "Spectacle B",
+       "Un valet qui dénonce les privilèges de son maître"
+      ],
+      [
+       "Spectacle C",
+       "Un drame en prose qui mêle fantaisie et tragédie, sans unités"
+      ],
+      [
+       "Spectacle D",
+       "Un acteur interrompt la scène pour parler au public et empêcher qu’on s’attache au héros"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque spectacle au siècle qui lui correspond.",
+     "paires": [
+      [
+       "Spectacle A",
+       "XVIIe siècle"
+      ],
+      [
+       "Spectacle B",
+       "XVIIIe siècle"
+      ],
+      [
+       "Spectacle C",
+       "XIXe siècle"
+      ],
+      [
+       "Spectacle D",
+       "XXe siècle"
+      ]
+     ],
+     "aide": "Règle classique, critique sociale, rupture romantique, mise en question.",
+     "explication": "A : règle classique (XVIIe) ; B : critique sociale (XVIIIe) ; C : rupture romantique (XIXe) ; D : mise en question (XXe)."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche le spectacle qui utilise la **distanciation** chère à Brecht.",
+     "aide": "On empêche l’identification au héros pour faire réfléchir.",
+     "explication": "Le **spectacle D** : l’acteur interrompt la scène pour empêcher l’identification et faire réfléchir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le spectacle B rappelle quelle pièce ?",
+     "options": [
+      "Le Mariage de Figaro, de Beaumarchais",
+      "Phèdre, de Racine, au XVIIe siècle",
+      "Hernani, de Victor Hugo, en 1830",
+      "Roberto Zucco, de Koltès, en 1990"
+     ],
+     "reponse": 0,
+     "aide": "Un valet porte la critique politique.",
+     "explication": "**Le Mariage de Figaro** (Beaumarchais) met une critique politique dans la bouche d’un valet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Depuis quatre siècles, une pièce répond toujours aux mêmes trois questions : que montre-t-on, à ___, et depuis quel ___ ?",
+     "reponses": [
+      [
+       "qui"
+      ],
+      [
+       "point de vue"
+      ]
+     ],
+     "banque": [
+      "qui",
+      "point de vue",
+      "quand",
+      "décor"
+     ],
+     "aide": "On choisit un public, et une façon de regarder.",
+     "explication": "Que montre-t-on, à **qui**, et depuis quel **point de vue** ?"
+    }
+   ]
+  },
+  {
+   "chapitre": "b8d2a030-4cbd-5f79-8f1a-3e8d024c62da",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cinq extraits de programmes de salle",
+   "competence": "analyser-document",
+   "situation": "Un metteur en scène a collé sur son carnet cinq extraits de programmes, sans les dater. À toi de les remettre dans l’histoire du théâtre, avec le tableau des quatre siècles.",
+   "documents": [
+    {
+     "id": "siecles",
+     "type": "tableau",
+     "titre": "Quatre siècles",
+     "colonnes": [
+      "Le siècle",
+      "Son principe",
+      "Ses auteurs"
+     ],
+     "lignes": [
+      [
+       "XVIIe",
+       "La règle classique",
+       "Corneille, Racine, Molière"
+      ],
+      [
+       "XVIIIe",
+       "Le glissement vers le sentiment et la critique",
+       "Marivaux, Beaumarchais"
+      ],
+      [
+       "XIXe",
+       "La rupture romantique",
+       "Hugo, Musset, Vigny"
+      ],
+      [
+       "XXe-XXIe",
+       "La mise en question",
+       "Brecht, Beckett, Ionesco, Koltès"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "extraits",
+     "type": "tableau",
+     "titre": "Cinq extraits (inventés)",
+     "colonnes": [
+      "Extrait",
+      "Ce qu’il annonce"
+     ],
+     "lignes": [
+      [
+       "Extrait 1",
+       "Un père de famille ruiné, des personnages ordinaires, un sujet sérieux"
+      ],
+      [
+       "Extrait 2",
+       "Un palais, un seul jour : la passion contre le devoir"
+      ],
+      [
+       "Extrait 3",
+       "Un valet et une maîtresse brouillent les rangs en parlant d’amour"
+      ],
+      [
+       "Extrait 4",
+       "Un metteur en scène qui s’impose comme auteur du spectacle"
+      ],
+      [
+       "Extrait 5",
+       "Des documents et des témoignages lus sur un plateau nu"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque extrait dans le siècle qui lui correspond.",
+     "categories": [
+      "XVIIe siècle",
+      "XVIIIe siècle",
+      "XXe-XXIe siècles"
+     ],
+     "items": [
+      [
+       "Extrait 1 : un père de famille ruiné",
+       1
+      ],
+      [
+       "Extrait 2 : la passion contre le devoir",
+       0
+      ],
+      [
+       "Extrait 3 : un valet et une maîtresse",
+       1
+      ],
+      [
+       "Extrait 4 : un metteur en scène auteur",
+       2
+      ],
+      [
+       "Extrait 5 : des documents sur un plateau nu",
+       2
+      ]
+     ],
+     "aide": "Corneille, drame bourgeois, Marivaux, metteur en scène, réel.",
+     "explication": "Extrait 2 : **Corneille** (XVIIe). Extraits 1 et 3 : **drame bourgeois** et **Marivaux** (XVIIIe). Extraits 4 et 5 : **XXe-XXIe**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque extrait à ce qu’il illustre.",
+     "paires": [
+      [
+       "Extrait 1",
+       "Le drame bourgeois"
+      ],
+      [
+       "Extrait 2",
+       "Corneille"
+      ],
+      [
+       "Extrait 3",
+       "Marivaux"
+      ],
+      [
+       "Extrait 4",
+       "Le metteur en scène devenu auteur"
+      ],
+      [
+       "Extrait 5",
+       "Le départ du réel"
+      ]
+     ],
+     "aide": "Le drame bourgeois a des héros ordinaires.",
+     "explication": "**Drame bourgeois** : héros ordinaires. **Corneille** : devoir et passion. **Marivaux** : rangs brouillés. **Metteur en scène** auteur. **Réel** : témoignages et documents."
+    },
+    {
+     "type": "zone",
+     "document": "siecles",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Dans le tableau, touche la case qui regroupe les auteurs du siècle de la **bataille d’Hernani** (1830).",
+     "aide": "1830, c’est quel siècle ?",
+     "explication": "Hernani (1830) est au **XIXe siècle** : Hugo, Musset, Vigny."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "Au XXe siècle, le ___ devient un auteur à part entière, et le texte n’est plus la seule source du spectacle.",
+     "reponses": [
+      [
+       "metteur en scène"
+      ]
+     ],
+     "banque": [
+      "metteur en scène",
+      "souffleur",
+      "décorateur",
+      "spectateur"
+     ],
+     "aide": "Il interprète le texte : décor, lumière, costumes, jeu.",
+     "explication": "Le **metteur en scène** devient un auteur à part entière."
+    }
+   ]
+  }
+ ]
+}

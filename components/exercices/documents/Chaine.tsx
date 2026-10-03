@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp } from 'lucide-react'
 import type { DocChaine } from '@/lib/exercices/types'
 import { cn } from '@/lib/utils'
-import { couleur, etatCible, Inline, propsCible, type ZonesDoc } from '../commun'
+import { coord, couleur, etatCible, Inline, propsCible, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
 
 /**
@@ -77,8 +77,8 @@ export function Chaine({ doc, zones }: { doc: DocChaine; zones?: ZonesDoc }) {
             const t0 = (-90 + (360 * i) / n + 360 / n / 3.2) * (Math.PI / 180)
             const t1 = (-90 + (360 * (i + 1)) / n - 360 / n / 3.2) * (Math.PI / 180)
             const r = 70
-            const [x0, y0] = [r * Math.cos(t0), r * Math.sin(t0)]
-            const [x1, y1] = [r * Math.cos(t1), r * Math.sin(t1)]
+            const [x0, y0] = [coord(r * Math.cos(t0)), coord(r * Math.sin(t0))]
+            const [x1, y1] = [coord(r * Math.cos(t1)), coord(r * Math.sin(t1))]
             const d = l.de === a.id ? `M${x0} ${y0}A${r} ${r} 0 0 1 ${x1} ${y1}` : `M${x1} ${y1}A${r} ${r} 0 0 0 ${x0} ${y0}`
             return (
               <path
@@ -99,7 +99,7 @@ export function Chaine({ doc, zones }: { doc: DocChaine; zones?: ZonesDoc }) {
             <div
               key={nd.id}
               className="absolute -translate-x-1/2 -translate-y-1/2"
-              style={{ left: `${50 + 35 * Math.cos(t)}%`, top: `${50 + 35 * Math.sin(t)}%` }}
+              style={{ left: `${coord(50 + 35 * Math.cos(t))}%`, top: `${coord(50 + 35 * Math.sin(t))}%` }}
             >
               {noeud(nd)}
             </div>

@@ -1,0 +1,2806 @@
+{
+ "niveau": "5e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "5e261956-9f14-5c71-af61-e6c3c4bf7470",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le carnet de recettes de Zoé",
+   "competence": "lire-tableau",
+   "situation": "Zoé prépare un gâteau au chocolat pour l’anniversaire de sa sœur. Dans son carnet, elle a noté les masses des ingrédients en kilogrammes, avec une virgule.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Les ingrédients du gâteau",
+     "colonnes": [
+      "Ingrédient",
+      "Masse (kg)"
+     ],
+     "lignes": [
+      [
+       "Sucre",
+       "0,7"
+      ],
+      [
+       "Farine",
+       "3,45"
+      ],
+      [
+       "Levure",
+       "0,008"
+      ],
+      [
+       "Cacao",
+       "0,09"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Quantités inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche la masse qui s’écrit avec **trois chiffres** après la virgule.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compte les chiffres qui se trouvent à droite de la virgule, ligne par ligne.",
+     "explication": "La levure pèse **0,008 kg** : trois chiffres après la virgule, donc un dénominateur de 1 000 quand on passe à la fraction."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque masse du carnet à sa **fraction décimale**.",
+     "paires": [
+      [
+       "0,7",
+       "{{7/10}}"
+      ],
+      [
+       "3,45",
+       "{{345/100}}"
+      ],
+      [
+       "0,008",
+       "{{8/1000}}"
+      ],
+      [
+       "0,09",
+       "{{9/100}}"
+      ]
+     ],
+     "aide": "Le nombre de chiffres après la virgule donne le nombre de zéros du dénominateur.",
+     "explication": "Un chiffre après la virgule : dénominateur 10. Deux chiffres : 100. Trois chiffres : 1 000. Ainsi 0,7 = {{7/10}}, 3,45 = {{345/100}}, 0,008 = {{8/1000}} et 0,09 = {{9/100}}."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le lait de la recette pèse {{27/10}} kg. Écris cette masse en écriture décimale.",
+     "reponse": 2.7,
+     "unite": "kg",
+     "aide": "Il y a un seul zéro au dénominateur : la virgule recule d’un rang vers la gauche.",
+     "explication": "Pour passer d’une fraction décimale à un décimal, on recule la virgule d’autant de rangs qu’il y a de zéros : {{27/10}} = **2,7** kg."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e261956-9f14-5c71-af61-e6c3c4bf7470",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La course d’orientation du collège",
+   "competence": "calculer",
+   "situation": "Pour la course d’orientation, cinq balises sont posées sur le parcours. Le professeur a noté leur distance au départ en kilomètres et demande aux élèves de les écrire en fractions irréductibles.",
+   "documents": [
+    {
+     "id": "balises",
+     "type": "tableau",
+     "titre": "Distance de chaque balise au départ",
+     "colonnes": [
+      "Balise",
+      "Distance (km)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "0,25"
+      ],
+      [
+       "B",
+       "0,5"
+      ],
+      [
+       "C",
+       "0,75"
+      ],
+      [
+       "D",
+       "0,2"
+      ],
+      [
+       "E",
+       "1,25"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Parcours inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque distance à sa **fraction irréductible**.",
+     "paires": [
+      [
+       "0,25 km",
+       "{{1/4}}"
+      ],
+      [
+       "0,5 km",
+       "{{1/2}}"
+      ],
+      [
+       "0,75 km",
+       "{{3/4}}"
+      ],
+      [
+       "0,2 km",
+       "{{1/5}}"
+      ]
+     ],
+     "aide": "Écris d’abord la fraction décimale ({{25/100}}, {{5/10}}…), puis simplifie.",
+     "explication": "{{25/100}} = {{1/4}} (on divise par 25) ; {{5/10}} = {{1/2}} ; {{75/100}} = {{3/4}} ; {{2/10}} = {{1/5}}. On simplifie en divisant haut et bas par le même nombre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La balise E est à 1,25 km, soit {{125/100}} km. Quel est le **numérateur** de la fraction irréductible égale à 1,25 ?",
+     "reponse": 5,
+     "aide": "Divise 125 et 100 par 25.",
+     "explication": "On divise haut et bas par 25 : {{125/100}} = {{5/4}}. Le numérateur est **5**."
+    },
+    {
+     "type": "zone",
+     "document": "balises",
+     "enonce": "Touche la balise située à {{1/2}} km du départ.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Écris {{1/2}} avec un dénominateur égal à 10, puis en décimal.",
+     "explication": "{{1/2}} = {{5/10}} = 0,5 : c’est la **balise B**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les balises de la **plus proche** à la **plus lointaine** du départ.",
+     "items": [
+      "Balise D",
+      "Balise A",
+      "Balise B",
+      "Balise C",
+      "Balise E"
+     ],
+     "aide": "Compare d’abord les parties entières, puis les dixièmes. Pense que 0,2 = 0,20.",
+     "explication": "0,2 < 0,25 < 0,5 < 0,75 < 1,25 : D, A, B, C, E. Pour comparer, on complète par des zéros : 0,20 est plus petit que 0,25."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e261956-9f14-5c71-af61-e6c3c4bf7470",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un tiers de pizza, est-ce 0,33 ?",
+   "competence": "raisonner",
+   "situation": "Yanis et Lina se partagent une pizza et discutent : peut-on toujours écrire une fraction avec une virgule qui s’arrête ? Aide-les à trancher.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Yanis et Lina",
+     "participants": [
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Yanis",
+       "texte": "On est 3 et on partage la pizza : chacun a {{1/3}} = 0,33. Donc {{1/3}} est un nombre décimal !"
+      },
+      {
+       "qui": "Lina",
+       "texte": "Si {{1/3}} valait 0,33, alors 3 × 0,33 ferait 1. Or 3 × 0,33 = 0,99."
+      }
+     ]
+    },
+    {
+     "id": "denominateurs",
+     "type": "tableau",
+     "titre": "Décomposition des dénominateurs",
+     "colonnes": [
+      "Fraction",
+      "Dénominateur en facteurs premiers"
+     ],
+     "lignes": [
+      [
+       "{{1/8}}",
+       "2 × 2 × 2"
+      ],
+      [
+       "{{1/6}}",
+       "2 × 3"
+      ],
+      [
+       "{{3/20}}",
+       "2 × 2 × 5"
+      ],
+      [
+       "{{7/12}}",
+       "2 × 2 × 3"
+      ],
+      [
+       "{{9/25}}",
+       "5 × 5"
+      ],
+      [
+       "{{2/9}}",
+       "3 × 3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fractions choisies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel argument de Lina montre que Yanis se trompe ?",
+     "options": [
+      "3 × 0,33 = 0,99, qui n’est pas égal à 1",
+      "Une pizza ne peut pas se partager en trois parts",
+      "0,33 est trop petit pour être une fraction",
+      "Les fractions ne s’écrivent jamais avec une virgule"
+     ],
+     "reponse": 0,
+     "aide": "Si {{1/3}} = 0,33, que devrait donner 3 fois ce nombre ?",
+     "explication": "Trois tiers font 1 entier, alors que 3 × 0,33 = **0,99**. Donc 0,33 n’est qu’une valeur approchée de {{1/3}}, dont l’écriture décimale ne s’arrête jamais (0,3333…)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque fraction du tableau : son écriture décimale **s’arrête-t-elle** ?",
+     "categories": [
+      "Écriture décimale qui s’arrête",
+      "Écriture qui ne s’arrête pas"
+     ],
+     "items": [
+      [
+       "{{1/8}}",
+       0
+      ],
+      [
+       "{{1/6}}",
+       1
+      ],
+      [
+       "{{3/20}}",
+       0
+      ],
+      [
+       "{{7/12}}",
+       1
+      ],
+      [
+       "{{9/25}}",
+       0
+      ],
+      [
+       "{{2/9}}",
+       1
+      ]
+     ],
+     "aide": "Regarde la colonne de droite : un dénominateur avec un facteur autre que 2 ou 5 pose problème.",
+     "explication": "Seuls les dénominateurs qui n’ont que des facteurs **2 et 5** donnent un décimal : 8, 20 et 25. Un facteur 3 (dans 6, 12 et 9) empêche l’écriture de s’arrêter."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris {{3/20}} en écriture décimale.",
+     "reponse": 0.15,
+     "aide": "Multiplie le numérateur et le dénominateur par 5 pour obtenir un dénominateur 100.",
+     "explication": "{{3/20}} = {{15/100}} = **0,15** : on multiplie haut et bas par 5 pour avoir une fraction décimale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris {{13/40}} en écriture décimale.",
+     "reponse": 0.325,
+     "aide": "Par quel nombre faut-il multiplier 40 pour obtenir 1 000 ?",
+     "explication": "40 × 25 = 1 000, donc {{13/40}} = {{325/1000}} = **0,325**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b0f3c50-6f65-5f0d-930c-e8516b2a6f9a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le ticket de la boulangerie",
+   "competence": "calculer",
+   "situation": "Après le sport, Malo achète son goûter à la boulangerie. Il paie avec un billet de 10 € et regarde son ticket de caisse.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Boulangerie du coin",
+     "sousTitre": "Mercredi — 16:12",
+     "emoji": "🥖",
+     "lignes": [
+      {
+       "texte": "Baguette",
+       "valeur": "0,95 €",
+       "id": "bag"
+      },
+      {
+       "texte": "Pain au chocolat",
+       "valeur": "1,35 €",
+       "id": "pain"
+      },
+      {
+       "texte": "Jus d’orange",
+       "valeur": "2,10 €",
+       "id": "jus"
+      }
+     ],
+     "pied": "Merci de votre visite !",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ticket",
+     "enonce": "Touche l’article le plus cher du ticket.",
+     "reponse": [
+      "jus"
+     ],
+     "aide": "Compare les prix : le chiffre des unités d’abord, puis celui des dixièmes.",
+     "explication": "Le jus d’orange coûte **2,10 €**, plus que le pain au chocolat (1,35 €) et que la baguette (0,95 €)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **total** de ces trois articles ?",
+     "reponse": 4.4,
+     "unite": "€",
+     "aide": "Pose l’addition en alignant les virgules : 0,95 + 1,35 + 2,10.",
+     "explication": "On aligne les virgules : 0,95 + 1,35 + 2,10 = **4,40 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Malo paie avec un billet de 10 €. Combien la boulangère lui rend-elle ?",
+     "reponse": 5.6,
+     "unite": "€",
+     "aide": "Soustrais le total du billet : 10,00 − 4,40.",
+     "explication": "On aligne les virgules : 10,00 − 4,40 = **5,60 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b0f3c50-6f65-5f0d-930c-e8516b2a6f9a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plein du minibus de l’école",
+   "competence": "resoudre",
+   "situation": "Pour la sortie scolaire, le minibus fait le plein à la station. Le professeur garde le ticket et veut partager les frais entre 8 élèves.",
+   "documents": [
+    {
+     "id": "station",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Station Les Pins",
+     "sousTitre": "Gazole — pompe 4",
+     "emoji": "⛽",
+     "lignes": [
+      {
+       "texte": "Volume servi",
+       "valeur": "24,5 L",
+       "id": "vol"
+      },
+      {
+       "texte": "Prix au litre",
+       "valeur": "1,6 €",
+       "id": "prix"
+      }
+     ],
+     "pied": "Chiffres inventés pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix du plein ? (volume × prix au litre)",
+     "reponse": 39.2,
+     "unite": "€",
+     "aide": "Multiplie 245 × 16 sans les virgules, puis compte les chiffres après la virgule dans les deux facteurs.",
+     "explication": "245 × 16 = 3 920 ; il y a 1 + 1 = 2 décimales, donc 39,20 : le plein coûte **39,20 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève trouve 392 à la calculatrice. Quelle estimation montre qu’il y a une erreur de virgule ?",
+     "options": [
+      "25 × 2 = 50, donc le résultat est proche de 50",
+      "25 × 2 = 500, donc le résultat est proche de 500",
+      "25 + 2 = 27, donc le résultat est proche de 27",
+      "20 × 1 = 20, donc le résultat est proche de 20"
+     ],
+     "reponse": 0,
+     "aide": "Arrondis 24,5 et 1,6 à des nombres simples, puis multiplie.",
+     "explication": "24,5 ≈ 25 et 1,6 ≈ 2 : le produit est proche de **50**. Un résultat de 392 est dix fois trop grand : la virgule a été oubliée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les 8 élèves se partagent le prix du plein à parts égales. Combien paie chacun ?",
+     "reponse": 4.9,
+     "unite": "€",
+     "aide": "Divise 39,2 par 8, comme 392 ÷ 80.",
+     "explication": "39,2 ÷ 8 = **4,9 €** par élève."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec 12 € de carburant, combien de litres peut-on acheter à 1,6 € le litre ?",
+     "reponse": 7.5,
+     "unite": "L",
+     "aide": "On ne divise pas par un nombre à virgule : multiplie 12 et 1,6 par 10.",
+     "explication": "On multiplie le dividende **et** le diviseur par 10 : 12 ÷ 1,6 = 120 ÷ 16 = **7,5 L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b0f3c50-6f65-5f0d-930c-e8516b2a6f9a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un programme de calcul qui divise les avis",
+   "competence": "raisonner",
+   "situation": "En club de maths, Sacha et Maëlle calculent « 5 + 2 × 3 » et ne trouvent pas la même chose. Puis le club teste un programme de calcul avec des nombres décimaux.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le débat du club de maths",
+     "participants": [
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maëlle",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sacha",
+       "texte": "Je trouve 21 : 5 + 2 = 7, puis 7 × 3 = 21."
+      },
+      {
+       "qui": "Maëlle",
+       "texte": "Moi 11 : 2 × 3 = 6, puis 5 + 6 = 11."
+      }
+     ]
+    },
+    {
+     "id": "programme",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le programme de calcul",
+     "noeuds": [
+      {
+       "id": "n0",
+       "texte": "Départ : 2,5"
+      },
+      {
+       "id": "n1",
+       "texte": "× 4"
+      },
+      {
+       "id": "n2",
+       "texte": "− 1,5"
+      },
+      {
+       "id": "n3",
+       "texte": "÷ 0,5"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n0",
+       "a": "n1"
+      },
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, et pourquoi ?",
+     "options": [
+      "Maëlle : on effectue la multiplication avant l’addition",
+      "Sacha : on calcule toujours de gauche à droite",
+      "Sacha : l’addition est écrite en premier",
+      "Aucun : le résultat dépend de la calculatrice"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi l’ordre des priorités opératoires.",
+     "explication": "Les multiplications et divisions passent **avant** les additions et soustractions : 5 + 2 × 3 = 5 + 6 = **11**. Maëlle a raison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre obtient-on à la fin du programme de calcul, en partant de 2,5 ?",
+     "reponse": 17,
+     "aide": "Suis les étapes une à une : 2,5 × 4, puis − 1,5, puis ÷ 0,5.",
+     "explication": "2,5 × 4 = 10 ; 10 − 1,5 = 8,5 ; 8,5 ÷ 0,5 = 85 ÷ 5 = **17**. Pour diviser par 0,5, on multiplie les deux nombres par 10."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le club calcule ensuite 12 − 2 × (1,5 + 2,5). Que trouve-t-il ?",
+     "reponse": 4,
+     "aide": "Commence par la parenthèse, puis la multiplication, enfin la soustraction.",
+     "explication": "Parenthèse : 1,5 + 2,5 = 4 ; multiplication : 2 × 4 = 8 ; soustraction : 12 − 8 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour vérifier 19,8 × 4,9, Maëlle remplace 19,8 par 20 et 4,9 par 5. Quel ordre de grandeur obtient-elle ?",
+     "reponse": 100,
+     "aide": "Multiplie les deux nombres arrondis : 20 × 5.",
+     "explication": "20 × 5 = **100**. Si la calculatrice affiche 9,7 ou 970, une virgule a glissé : le vrai produit (97,02) est proche de 100."
+    }
+   ]
+  },
+  {
+   "chapitre": "0eb10cf5-2361-577a-9473-8508eadd3c86",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tableau de numération de Nina",
+   "competence": "lire-tableau",
+   "situation": "Nina a mesuré la longueur de son saut en longueur : 26,305 m. Elle la range dans un tableau de numération pour comprendre ce que vaut chaque chiffre.",
+   "documents": [
+    {
+     "id": "num",
+     "type": "tableau",
+     "titre": "Le nombre 26,305 dans le tableau de numération",
+     "colonnes": [
+      "dizaines",
+      "unités",
+      "dixièmes",
+      "centièmes",
+      "millièmes"
+     ],
+     "lignes": [
+      [
+       "2",
+       "6",
+       "3",
+       "0",
+       "5"
+      ]
+     ],
+     "source": "Mesure inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "num",
+     "enonce": "Touche le chiffre des **millièmes**.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Les rangs après la virgule se suivent : dixièmes, centièmes, millièmes.",
+     "explication": "Le chiffre des millièmes est le dernier : **5**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la décomposition de 26,305 avec le bon rang.",
+     "texte": "26,305 = 26 + {{3/10}} + 5 ___",
+     "reponses": [
+      [
+       "millièmes",
+       "millieme"
+      ]
+     ],
+     "banque": [
+      "dixièmes",
+      "centièmes",
+      "millièmes"
+     ],
+     "aide": "Le 5 est au rang des millièmes.",
+     "explication": "Le 3 vaut 3 dixièmes ({{3/10}}), le 0 vaut 0 centième et le 5 vaut 5 **millièmes**, soit {{5/1000}} : 26,305 = 26 + {{3/10}} + {{5/1000}}."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fraction décimale à son écriture décimale.",
+     "paires": [
+      [
+       "{{3/10}}",
+       "0,3"
+      ],
+      [
+       "{{47/100}}",
+       "0,47"
+      ],
+      [
+       "{{8/1000}}",
+       "0,008"
+      ],
+      [
+       "{{125/10}}",
+       "12,5"
+      ]
+     ],
+     "aide": "Autant de zéros au dénominateur, autant de rangs dont la virgule recule.",
+     "explication": "Un zéro : un rang ; deux zéros : deux rangs ; trois zéros : trois rangs. {{125/10}} s’écrit **12,5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0eb10cf5-2361-577a-9473-8508eadd3c86",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La marche solidaire de la semaine",
+   "competence": "calculer",
+   "situation": "Pendant une semaine, le collège organise une marche solidaire. Chaque jour, une classe parcourt une petite distance en kilomètres, notée sous forme de fraction décimale.",
+   "documents": [
+    {
+     "id": "marche",
+     "type": "tableau",
+     "titre": "Distances parcourues",
+     "colonnes": [
+      "Jour",
+      "Distance (km)"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       "{{3/10}}"
+      ],
+      [
+       "Mardi",
+       "{{47/100}}"
+      ],
+      [
+       "Mercredi",
+       "{{6/10}}"
+      ],
+      [
+       "Jeudi",
+       "{{25/100}}"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Distances inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "marche",
+     "enonce": "Touche la journée où la classe a parcouru la **plus grande** distance.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Mets les fractions au même dénominateur (100) avant de comparer.",
+     "explication": "{{6/10}} = {{60/100}} est plus grand que {{47/100}}, {{30/100}} et {{25/100}} : c’est le **mercredi**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance a été parcourue le lundi **et** le mardi ? Écris-la en décimal.",
+     "reponse": 0.77,
+     "unite": "km",
+     "aide": "Transforme {{3/10}} en centièmes avant d’additionner.",
+     "explication": "{{3/10}} + {{47/100}} = {{30/100}} + {{47/100}} = {{77/100}} = **0,77 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance a été parcourue le mercredi **et** le jeudi ? Écris-la en décimal.",
+     "reponse": 0.85,
+     "unite": "km",
+     "aide": "Mets {{6/10}} au dénominateur 100.",
+     "explication": "{{6/10}} + {{25/100}} = {{60/100}} + {{25/100}} = {{85/100}} = **0,85 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance totale a été parcourue sur les quatre jours ?",
+     "reponse": 1.62,
+     "unite": "km",
+     "aide": "Additionne les deux sous-totaux que tu viens de trouver.",
+     "explication": "0,77 + 0,85 = **1,62 km** (soit {{162/100}} km)."
+    }
+   ]
+  },
+  {
+   "chapitre": "0eb10cf5-2361-577a-9473-8508eadd3c86",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chocolat chaud de Karim",
+   "competence": "raisonner",
+   "situation": "Karim prépare du chocolat chaud pour toute la classe. Sa recette est écrite en fractions de litre, et il aimerait tout convertir en décimaux pour utiliser son verre doseur.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Chocolat chaud de la classe",
+     "sousTitre": "Pour toute la classe",
+     "emoji": "☕",
+     "lignes": [
+      {
+       "texte": "Lait",
+       "valeur": "{{3/5}} L",
+       "id": "lait"
+      },
+      {
+       "texte": "Crème",
+       "valeur": "{{1/4}} L",
+       "id": "creme"
+      },
+      {
+       "texte": "Sirop de chocolat",
+       "valeur": "{{7/8}} L",
+       "id": "sirop"
+      }
+     ],
+     "pied": "Recette inventée pour l’exercice",
+     "teinte": "brun"
+    },
+    {
+     "id": "verre",
+     "type": "tableau",
+     "titre": "Les graduations du verre doseur de Karim",
+     "colonnes": [
+      "Graduation",
+      "Écriture"
+     ],
+     "lignes": [
+      [
+       "Plus petite division",
+       "0,001 L"
+      ],
+      [
+       "Division utilisée",
+       "Millièmes de litre"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Verre doseur imaginaire"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Écris chaque fraction de la recette (et {{1/25}}) sous forme d’une **fraction décimale**.",
+     "paires": [
+      [
+       "{{1/4}}",
+       "{{25/100}}"
+      ],
+      [
+       "{{3/5}}",
+       "{{6/10}}"
+      ],
+      [
+       "{{7/8}}",
+       "{{875/1000}}"
+      ],
+      [
+       "{{1/25}}",
+       "{{4/100}}"
+      ]
+     ],
+     "aide": "Cherche par quel nombre multiplier le dénominateur pour obtenir 10, 100 ou 1 000.",
+     "explication": "4 × 25 = 100 ; 5 × 2 = 10 ; 8 × 125 = 1 000 ; 25 × 4 = 100. On multiplie haut et bas par le même nombre : {{1/4}} = {{25/100}}, {{3/5}} = {{6/10}}, {{7/8}} = {{875/1000}}, {{1/25}} = {{4/100}}."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de liquide font le lait et la crème ensemble ? Écris-la en décimal.",
+     "reponse": 0.85,
+     "unite": "L",
+     "aide": "Convertis {{3/5}} et {{1/4}} en centièmes, puis additionne.",
+     "explication": "{{3/5}} = 0,6 et {{1/4}} = 0,25 : 0,60 + 0,25 = **0,85 L**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces fractions : peuvent-elles s’écrire comme **fraction décimale** ?",
+     "categories": [
+      "Oui, c’est un décimal",
+      "Non, jamais"
+     ],
+     "items": [
+      [
+       "{{1/4}}",
+       0
+      ],
+      [
+       "{{1/3}}",
+       1
+      ],
+      [
+       "{{3/8}}",
+       0
+      ],
+      [
+       "{{2/7}}",
+       1
+      ],
+      [
+       "{{4/5}}",
+       0
+      ],
+      [
+       "{{5/6}}",
+       1
+      ]
+     ],
+     "aide": "Regarde les facteurs premiers du dénominateur : seuls 2 et 5 sont acceptés.",
+     "explication": "4, 8 et 5 n’ont que des facteurs 2 et 5 : on peut les ramener à 10, 100 ou 1 000. Les dénominateurs 3, 7 et 6 (qui contient 3) ne s’y ramènent jamais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Karim veut ajouter {{1/3}} L d’eau et l’écrire exactement avec son verre doseur gradué en millièmes. Que peut-on dire ?",
+     "options": [
+      "Impossible : 0,333 n’est qu’une valeur approchée de {{1/3}}",
+      "C’est possible : {{1/3}} = 0,333 exactement",
+      "C’est possible : il suffit d’ajouter un 3 de plus après la virgule",
+      "Impossible : le verre ne sait pas mesurer les fractions"
+     ],
+     "reponse": 0,
+     "aide": "Pense à 3 × 0,333 : fait-on bien 1 ?",
+     "explication": "Le dénominateur 3 n’est pas une puissance de 10 et ne s’y ramène pas : {{1/3}} = 0,3333… ne s’arrête jamais. Le verre ne peut donner que **0,333 L, une approximation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cc572e1-c45b-5a06-a419-e98582fa33a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une semaine de froid à Chamonix",
+   "competence": "lire-tableau",
+   "situation": "Léo passe ses vacances de février à Chamonix. Chaque matin, il note la température du thermomètre devant le chalet.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Températures du matin",
+     "colonnes": [
+      "Jour",
+      "Température (°C)"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       "−4"
+      ],
+      [
+       "Mardi",
+       "−9"
+      ],
+      [
+       "Mercredi",
+       "2"
+      ],
+      [
+       "Jeudi",
+       "−1"
+      ],
+      [
+       "Vendredi",
+       "−6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevé inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releve",
+     "enonce": "Touche le jour où il a fait le **plus froid**.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Parmi les nombres négatifs, le plus petit est celui qui est le plus loin de zéro.",
+     "explication": "Le mardi, il faisait **−9 °C**. Entre deux négatifs, le plus petit est celui dont la distance à zéro est la plus grande."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les jours du **plus froid** au **plus chaud**.",
+     "items": [
+      "Mardi",
+      "Vendredi",
+      "Lundi",
+      "Jeudi",
+      "Mercredi"
+     ],
+     "aide": "Place d’abord les températures négatives, puis la positive.",
+     "explication": "−9 < −6 < −4 < −1 < 2 : mardi, vendredi, lundi, jeudi, mercredi. Un nombre positif est toujours plus grand qu’un nombre négatif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance à zéro de la température de vendredi ? (le nombre sans son signe)",
+     "reponse": 6,
+     "aide": "La distance à zéro, c’est le nombre sans le signe −.",
+     "explication": "La température de vendredi est −6 °C : sa distance à zéro est **6**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cc572e1-c45b-5a06-a419-e98582fa33a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les records d’altitude de Maëlys",
+   "competence": "analyser-document",
+   "situation": "Maëlys prépare un exposé sur les points les plus bas et les plus hauts du monde. Elle a rassemblé quelques altitudes, par rapport au niveau de la mer.",
+   "documents": [
+    {
+     "id": "alt",
+     "type": "tableau",
+     "titre": "Quelques altitudes",
+     "colonnes": [
+      "Lieu",
+      "Altitude (m)"
+     ],
+     "lignes": [
+      [
+       "Mer Morte",
+       "−430"
+      ],
+      [
+       "Lac Assal (Djibouti)",
+       "−155"
+      ],
+      [
+       "Vallée de la Mort (États-Unis)",
+       "−86"
+      ],
+      [
+       "Mont Blanc",
+       "4 806"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Altitudes arrondies"
+    },
+    {
+     "id": "droite",
+     "type": "droite",
+     "titre": "Une droite graduée de −8 à 8",
+     "min": -8,
+     "max": 8,
+     "pas": 2,
+     "division": 2,
+     "points": [
+      {
+       "id": "e",
+       "valeur": 3,
+       "nom": "E"
+      },
+      {
+       "id": "f",
+       "valeur": -5,
+       "nom": "F"
+      }
+     ],
+     "graduationsCliquables": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alt",
+     "enonce": "Touche le lieu le **plus bas** du tableau.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le plus bas est celui dont l’altitude est la plus petite.",
+     "explication": "La mer Morte, à **−430 m**, est le lieu le plus bas : −430 est plus petit que −155, −86 et 4 806."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces lieux du plus **bas** au plus **haut**.",
+     "items": [
+      "Mer Morte",
+      "Lac Assal (Djibouti)",
+      "Vallée de la Mort (États-Unis)",
+      "Mont Blanc"
+     ],
+     "aide": "Attention : −86 est plus grand que −155, car il est plus proche de zéro.",
+     "explication": "−430 < −155 < −86 < 4 806. Chez les négatifs, plus la distance à zéro est grande, plus le nombre est petit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La droite graduée porte le point E à +3. Quelle est la distance à zéro du point F ?",
+     "reponse": 5,
+     "aide": "Lis l’abscisse de F, puis enlève le signe.",
+     "explication": "F est à −5 : sa distance à zéro est **5**."
+    },
+    {
+     "type": "zone",
+     "document": "droite",
+     "enonce": "Touche la graduation de l’**opposé** du point E.",
+     "reponse": [
+      "v-3"
+     ],
+     "aide": "Deux nombres opposés sont symétriques par rapport à zéro.",
+     "explication": "L’opposé de 3 est **−3** : il est de l’autre côté de zéro, à la même distance."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cc572e1-c45b-5a06-a419-e98582fa33a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La chasse au trésor du repère",
+   "competence": "se-reperer-espace",
+   "situation": "Pendant la chasse au trésor, l’équipe de Camille reçoit un plan quadrillé et un carnet d’indices donnés par coordonnées. Aide-la à retrouver les cachettes.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan de la chasse au trésor",
+     "cadre": {
+      "xmin": -5,
+      "xmax": 5,
+      "ymin": -5,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": -2,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 3,
+       "y": -2,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": -4,
+       "y": -1,
+       "position": "so"
+      },
+      {
+       "id": "D",
+       "x": 2,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "E",
+       "x": 0,
+       "y": -4,
+       "position": "e"
+      },
+      {
+       "id": "F",
+       "x": -3,
+       "y": -3,
+       "position": "so"
+      }
+     ]
+    },
+    {
+     "id": "indices",
+     "type": "tableau",
+     "titre": "Le carnet d’indices",
+     "colonnes": [
+      "Indice",
+      "Coordonnées"
+     ],
+     "lignes": [
+      [
+       "Le coffre",
+       "(3 ; −2)"
+      ],
+      [
+       "La clé",
+       "(−4 ; −1)"
+      ],
+      [
+       "La carte",
+       "(2 ; 3)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Plan et indices inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point où est caché **le coffre**. Aide-toi du carnet d’indices.",
+     "reponse": [
+      "B"
+     ],
+     "aide": "Pars de l’origine : l’abscisse se lit en premier (à l’horizontale), puis l’ordonnée.",
+     "explication": "Le coffre est en (3 ; −2) : on avance de 3 vers la droite, puis on descend de 2. C’est le point **B**."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche **tous les points** dont l’ordonnée est 3.",
+     "multiple": true,
+     "reponse": [
+      "A",
+      "D"
+     ],
+     "aide": "L’ordonnée se lit sur l’axe vertical : cherche à la hauteur 3.",
+     "explication": "A (−2 ; 3) et D (2 ; 3) sont tous deux à la hauteur **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée du point E ?",
+     "reponse": -4,
+     "aide": "Le point E est sur l’axe vertical, en dessous de l’origine.",
+     "explication": "E est en (0 ; −4) : son ordonnée est **−4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points se trouvent **à gauche** de l’axe vertical ?",
+     "reponse": 3,
+     "aide": "Un point à gauche de l’axe vertical a une abscisse négative.",
+     "explication": "A (−2), C (−4) et F (−3) ont une abscisse négative : **3 points**. E (0) est sur l’axe, B et D sont à droite."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a29e274-c9bd-5317-a564-a73bb4d3c07e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tableau des scores du jeu de société",
+   "competence": "calculer",
+   "situation": "Samedi soir, Inès joue à un jeu de société avec ses cousins. À chaque manche, elle gagne ou perd des points, et le score est noté dans un tableau.",
+   "documents": [
+    {
+     "id": "scores",
+     "type": "tableau",
+     "titre": "Points d’Inès à chaque manche",
+     "colonnes": [
+      "Manche",
+      "Points"
+     ],
+     "lignes": [
+      [
+       "1",
+       "+5"
+      ],
+      [
+       "2",
+       "−3"
+      ],
+      [
+       "3",
+       "−4"
+      ],
+      [
+       "4",
+       "+6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Scores inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scores",
+     "enonce": "Touche la manche où Inès a perdu **le plus de points**.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche les nombres négatifs, puis celui qui est le plus loin de zéro.",
+     "explication": "À la manche 3, elle perd **4 points** (−4), contre 3 à la manche 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le score d’Inès après les deux premières manches ? Calcule (+5) + (−3).",
+     "reponse": 2,
+     "aide": "Pense à un gain de 5 et une dette de 3 : que reste-t-il ?",
+     "explication": "Signes différents : on soustrait les distances à zéro (5 − 3 = 2) et on garde le signe du plus fort, +. Le score est **+2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le score total après les **quatre** manches ?",
+     "reponse": 4,
+     "aide": "Regroupe les gains d’un côté, les pertes de l’autre.",
+     "explication": "Gains : 5 + 6 = 11. Pertes : 3 + 4 = 7. Bilan : 11 − 7 = **4 points**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a29e274-c9bd-5317-a564-a73bb4d3c07e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’argent de poche d’Amina",
+   "competence": "resoudre",
+   "situation": "Amina note ses dépenses et ses gains dans un petit carnet. Elle commence le mois avec 8 € et finit par se retrouver dans le rouge.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Le carnet d’Amina",
+     "colonnes": [
+      "Opération",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Solde de départ",
+       "8"
+      ],
+      [
+       "Cadeau d’anniversaire",
+       "+20"
+      ],
+      [
+       "Jeu vidéo",
+       "−35"
+      ],
+      [
+       "Aide au ménage",
+       "+12"
+      ],
+      [
+       "Place de cinéma",
+       "−9"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Montants inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est son solde juste après l’achat du jeu vidéo ?",
+     "reponse": -7,
+     "unite": "€",
+     "aide": "Calcule 8 + 20, puis retire 35. Le résultat passe sous zéro.",
+     "explication": "8 + 20 = 28, puis 28 − 35 = **−7 €** : Amina a une dette de 7 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est son solde final, après l’aide au ménage et la place de cinéma ?",
+     "reponse": -4,
+     "unite": "€",
+     "aide": "Pars de −7 : ajoute 12, puis retire 9.",
+     "explication": "−7 + 12 = 5, puis 5 − 9 = **−4 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sa grand-mère annule la dépense du cinéma : cela revient à calculer (−4) − (−9). Quel est le nouveau solde ?",
+     "reponse": 5,
+     "unite": "€",
+     "aide": "Soustraire, c’est ajouter l’opposé de −9.",
+     "explication": "(−4) − (−9) = (−4) + (+9) = **+5 €**. Soustraire un nombre négatif revient à ajouter."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque calcul à son résultat.",
+     "paires": [
+      [
+       "5 − (−3)",
+       "8"
+      ],
+      [
+       "(−4) − (−7)",
+       "3"
+      ],
+      [
+       "(−6) + (+10)",
+       "4"
+      ],
+      [
+       "(+3) − (+8)",
+       "−5"
+      ]
+     ],
+     "aide": "Transforme chaque soustraction en addition de l’opposé.",
+     "explication": "5 + 3 = 8 ; (−4) + 7 = 3 ; 10 − 6 = 4 ; 3 + (−8) = −5. Une soustraction se transforme toujours en addition de l’opposé."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a29e274-c9bd-5317-a564-a73bb4d3c07e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a raison dans le club de maths ?",
+   "competence": "raisonner",
+   "situation": "Tom et Léa ne sont pas d’accord sur un calcul. Le club utilise ensuite un programme de calcul avec des nombres relatifs et une longue somme à simplifier.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Tom et Léa",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "5 − (−3), ça fait 2 : deux signes moins, ça se détruit."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Non ! 5 − (−3) = 5 + 3, parce que soustraire, c’est ajouter l’opposé."
+      }
+     ]
+    },
+    {
+     "id": "prog",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le programme de calcul du club",
+     "noeuds": [
+      {
+       "id": "n0",
+       "texte": "Départ : −3"
+      },
+      {
+       "id": "n1",
+       "texte": "+ (−5)"
+      },
+      {
+       "id": "n2",
+       "texte": "− (−12)"
+      },
+      {
+       "id": "n3",
+       "texte": "+ 4"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n0",
+       "a": "n1"
+      },
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Combien vaut 5 − (−3), et qui a raison ?",
+     "options": [
+      "8 : Léa a raison, car on ajoute l’opposé de −3",
+      "2 : Tom a raison, car les deux signes s’annulent",
+      "8 : Tom a raison, car 5 et 3 s’additionnent",
+      "2 : Léa a raison, car 5 est plus grand que 3"
+     ],
+     "reponse": 0,
+     "aide": "Transforme la soustraction en une addition.",
+     "explication": "5 − (−3) = 5 + (+3) = **8**. Soustraire un nombre négatif revient à ajouter : Léa a raison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre obtient-on à la fin du programme de calcul, en partant de −3 ?",
+     "reponse": 8,
+     "aide": "Avance étape par étape : −3 + (−5), puis − (−12), puis + 4.",
+     "explication": "−3 + (−5) = −8 ; −8 − (−12) = −8 + 12 = 4 ; 4 + 4 = **8**."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche l’étape qui fait **remonter** le résultat de −8 à 4.",
+     "reponse": [
+      "n2"
+     ],
+     "aide": "Cherche l’étape qui soustrait un nombre négatif.",
+     "explication": "L’étape « − (−12) » ajoute 12 : −8 + 12 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule 9 − 15 + 6 − 11 + 8.",
+     "reponse": -3,
+     "aide": "Regroupe tous les positifs, puis tous les négatifs, et fais le bilan.",
+     "explication": "Positifs : 9 + 6 + 8 = 23. Négatifs : 15 + 11 = 26. Bilan : 23 − 26 = **−3**."
+    }
+   ]
+  },
+  {
+   "chapitre": "71c00a27-1e6e-5ead-a387-bdb5b1e7cbaf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le gâteau d’anniversaire de Nora",
+   "competence": "lire-graphique",
+   "situation": "Nora a coupé son gâteau d’anniversaire en parts égales. Après le goûter, il ne reste que quelques parts sur le plat. Le gâteau entier pèse 1 200 g.",
+   "documents": [
+    {
+     "id": "gateau",
+     "type": "schema",
+     "titre": "Le gâteau après le goûter",
+     "largeur": 340,
+     "hauteur": 110,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 16,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "hachures"
+      },
+      {
+       "forme": "rect",
+       "x": 54,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "hachures"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "hachures"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 168,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 282,
+       "y": 20,
+       "l": 38,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 16,
+       "y": 90,
+       "texte": "Parts hachurées : déjà mangées",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma fait pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En combien de parts égales le gâteau est-il coupé ?",
+     "reponse": 8,
+     "aide": "Compte toutes les parts, mangées ou non : c’est le dénominateur.",
+     "explication": "Le gâteau est coupé en **8** parts égales : le dénominateur de la fraction est 8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction du gâteau a été mangée ?",
+     "options": [
+      "{{3/8}}",
+      "{{3/5}}",
+      "{{5/8}}",
+      "{{8/3}}"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le numérateur compte les parts mangées, le dénominateur toutes les parts.",
+     "explication": "3 parts mangées sur 8 : les **{{3/8}}** du gâteau ont été mangés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que pèsent les {{3/8}} du gâteau qui ont été mangés ?",
+     "reponse": 450,
+     "unite": "g",
+     "aide": "Pour prendre une fraction d’une quantité : divise par le dénominateur, puis multiplie par le numérateur.",
+     "explication": "1 200 ÷ 8 = 150 g pour une part ; 150 × 3 = **450 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "71c00a27-1e6e-5ead-a387-bdb5b1e7cbaf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les activités du club de sport",
+   "competence": "calculer",
+   "situation": "Le club de sport du collège compte 24 élèves. Chacun s’est inscrit à une seule activité cette année, et le président veut présenter les effectifs en fractions simples.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "tableau",
+     "titre": "Effectifs du club (24 élèves)",
+     "colonnes": [
+      "Activité",
+      "Nombre d’élèves"
+     ],
+     "lignes": [
+      [
+       "Football",
+       "12"
+      ],
+      [
+       "Danse",
+       "6"
+      ],
+      [
+       "Natation",
+       "4"
+      ],
+      [
+       "Judo",
+       "2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "enonce": "Touche l’activité qui accueille **la moitié** des élèves du club.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "La moitié de 24, c’est 24 ÷ 2.",
+     "explication": "24 ÷ 2 = 12 : le football réunit **12 élèves**, soit {{12/24}} = {{1/2}} du club."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque activité à la **fraction irréductible** d’élèves du club.",
+     "paires": [
+      [
+       "Football",
+       "{{1/2}}"
+      ],
+      [
+       "Danse",
+       "{{1/4}}"
+      ],
+      [
+       "Natation",
+       "{{1/6}}"
+      ],
+      [
+       "Judo",
+       "{{1/12}}"
+      ]
+     ],
+     "aide": "Écris d’abord l’effectif sur 24, puis simplifie en divisant par le même nombre.",
+     "explication": "{{12/24}} = {{1/2}} ; {{6/24}} = {{1/4}} ; {{4/24}} = {{1/6}} ; {{2/24}} = {{1/12}}. On divise le numérateur et le dénominateur par un même nombre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour le goûter, le club dispose d’un budget de 35 €. Les {{2/5}} servent à acheter des jus. Quelle somme cela représente-t-il ?",
+     "reponse": 14,
+     "unite": "€",
+     "aide": "Le mot « de » se traduit par une multiplication : 35 ÷ 5 × 2.",
+     "explication": "35 ÷ 5 = 7, puis 7 × 2 = **14 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces fractions, laquelle est **supérieure à 1** ?",
+     "options": [
+      "{{9/8}}",
+      "{{7/8}}",
+      "{{4/5}}",
+      "{{0/7}}"
+     ],
+     "reponse": 0,
+     "aide": "Une fraction est supérieure à 1 quand son numérateur dépasse son dénominateur.",
+     "explication": "9 > 8, donc {{9/8}} est plus grand que 1. Les autres ont un numérateur plus petit (ou nul) : elles sont inférieures à 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "71c00a27-1e6e-5ead-a387-bdb5b1e7cbaf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les recettes de farine de la classe",
+   "competence": "raisonner",
+   "situation": "Léo et Sofia préparent des gâteaux pour la classe. Les quantités de farine de chaque recette sont écrites sous forme de fractions de kilogramme, mais certaines semblent différentes sans l’être.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Léo et Sofia",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sofia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Ma recette demande {{3/4}} kg de farine, et la tienne {{6/8}} kg. Tu t’es trompée !"
+      },
+      {
+       "qui": "Sofia",
+       "texte": "Pas du tout : {{6/8}} = {{3/4}}, j’ai juste divisé les deux nombres par le même nombre."
+      }
+     ]
+    },
+    {
+     "id": "recettes",
+     "type": "tableau",
+     "titre": "Les quantités de farine",
+     "colonnes": [
+      "Élève",
+      "Farine (kg)"
+     ],
+     "lignes": [
+      [
+       "Léo",
+       "{{3/4}}"
+      ],
+      [
+       "Sofia",
+       "{{6/8}}"
+      ],
+      [
+       "Max",
+       "{{3/5}}"
+      ],
+      [
+       "Lina",
+       "{{12/16}}"
+      ],
+      [
+       "Yann",
+       "{{9/12}}"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Quantités inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Sofia.",
+     "texte": "Pour passer de {{6/8}} à {{3/4}}, on divise le numérateur et le dénominateur par ___.",
+     "reponses": [
+      [
+       "2",
+       "deux"
+      ]
+     ],
+     "banque": [
+      "2",
+      "3",
+      "4",
+      "6"
+     ],
+     "aide": "Compare 6 avec 3, et 8 avec 4.",
+     "explication": "6 ÷ 2 = 3 et 8 ÷ 2 = 4 : {{6/8}} = {{3/4}}. Diviser **ou** multiplier les deux termes par le même nombre non nul ne change pas la valeur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élève : sa quantité de farine est-elle **égale à {{3/4}} kg** ?",
+     "categories": [
+      "Même quantité que {{3/4}} kg",
+      "Quantité différente"
+     ],
+     "items": [
+      [
+       "Sofia",
+       0
+      ],
+      [
+       "Max",
+       1
+      ],
+      [
+       "Lina",
+       0
+      ],
+      [
+       "Yann",
+       0
+      ]
+     ],
+     "aide": "Simplifie chaque fraction : {{12/16}} par 4, {{9/12}} par 3.",
+     "explication": "{{6/8}}, {{12/16}} et {{9/12}} se simplifient tous en {{3/4}}. {{3/5}} est une fraction irréductible différente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Max utilise les {{3/5}} d’un bloc de 400 g de chocolat. Quelle masse de chocolat cela représente-t-il ?",
+     "reponse": 240,
+     "unite": "g",
+     "aide": "Divise 400 par 5, puis multiplie par 3.",
+     "explication": "400 ÷ 5 = 80, puis 80 × 3 = **240 g**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lina propose d’ajouter {{9/8}} L de lait. Que peut-on dire de cette quantité ?",
+     "options": [
+      "Elle dépasse 1 L, car le numérateur est plus grand que le dénominateur",
+      "Elle est inférieure à 1 L, car le dénominateur est plus grand",
+      "Elle vaut exactement 1 L, car 9 est proche de 8",
+      "On ne peut pas savoir sans calculatrice"
+     ],
+     "reponse": 0,
+     "aide": "Compare le numérateur et le dénominateur.",
+     "explication": "{{9/8}} = {{8/8}} + {{1/8}} = 1 + {{1/8}} : un peu **plus de 1 L**. Une fraction dont le numérateur dépasse le dénominateur est supérieure à 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe122bf7-3844-58f3-b627-977e58f5cf5c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pizza partagée de Noa, Eliott et Lila",
+   "competence": "lire-tableau",
+   "situation": "Trois amis commandent une pizza coupée en 8 parts égales. À la fin du repas, chacun dit quelle fraction de la pizza il a mangée.",
+   "documents": [
+    {
+     "id": "pizza",
+     "type": "tableau",
+     "titre": "La part de chacun",
+     "colonnes": [
+      "Prénom",
+      "Fraction de la pizza"
+     ],
+     "lignes": [
+      [
+       "Noa",
+       "{{3/8}}"
+      ],
+      [
+       "Eliott",
+       "{{5/8}}"
+      ],
+      [
+       "Lila",
+       "{{2/8}}"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Partage inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pizza",
+     "enonce": "Touche la fraction de **celui qui a mangé le plus**.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Les trois fractions ont le même dénominateur : compare les numérateurs.",
+     "explication": "Quand les dénominateurs sont égaux, la plus grande fraction est celle qui a le plus grand numérateur : **{{5/8}}** pour Eliott."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Noa et Eliott réunis ont mangé combien de huitièmes de la pizza ?",
+     "reponse": 8,
+     "aide": "Additionne les numérateurs et garde le dénominateur.",
+     "explication": "{{3/8}} + {{5/8}} = {{8/8}} : **8 huitièmes**, soit la pizza entière."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois amis de celui qui a mangé le **moins** à celui qui a mangé le **plus**.",
+     "items": [
+      "Lila",
+      "Noa",
+      "Eliott"
+     ],
+     "aide": "Compare les numérateurs : 2, 3 et 5.",
+     "explication": "{{2/8}} < {{3/8}} < {{5/8}} : Lila, Noa, Eliott."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe122bf7-3844-58f3-b627-977e58f5cf5c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cocktail de jus pour la fête",
+   "competence": "calculer",
+   "situation": "Pour la fête de fin d’année, Camille mélange trois liquides dans une carafe d’un litre. Sa recette donne les quantités en fractions de litre.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Cocktail de fête",
+     "sousTitre": "Carafe de 1 litre",
+     "emoji": "🍹",
+     "lignes": [
+      {
+       "texte": "Jus d’orange",
+       "valeur": "{{2/3}} L",
+       "id": "orange"
+      },
+      {
+       "texte": "Jus de pomme",
+       "valeur": "{{1/4}} L",
+       "id": "pomme"
+      },
+      {
+       "texte": "Eau pétillante",
+       "valeur": "{{1/6}} L",
+       "id": "eau"
+      }
+     ],
+     "pied": "Recette inventée pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel dénominateur commun faut-il choisir pour additionner {{2/3}}, {{1/4}} et {{1/6}} ? (le plus petit possible)",
+     "reponse": 12,
+     "aide": "Cherche le plus petit nombre dans lequel 3, 4 et 6 « rentrent » tous les trois.",
+     "explication": "12 est un multiple de 3, de 4 et de 6 ; il est plus léger que 24 ou 72. On écrit alors {{8/12}}, {{3/12}} et {{2/12}}."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que valent le jus d’orange et le jus de pomme ensemble ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.9166667,
+     "tolerance": 0.005,
+     "unite": "L",
+     "aide": "Écris {{2/3}} = {{8/12}} et {{1/4}} = {{3/12}}, puis additionne les numérateurs.",
+     "explication": "{{2/3}} + {{1/4}} = {{8/12}} + {{3/12}} = **{{11/12}}** L, soit environ 0,92 L."
+    },
+    {
+     "type": "choix",
+     "enonce": "La carafe de 1 L peut-elle contenir les trois liquides ?",
+     "options": [
+      "Non : le total est {{13/12}} L, ce qui dépasse 1 L",
+      "Oui : chaque quantité est inférieure à 1 L",
+      "Oui : le total est {{9/12}} L, il reste de la place",
+      "Non : on ne peut pas additionner des fractions"
+     ],
+     "reponse": 0,
+     "aide": "Ajoute les trois numérateurs une fois les fractions écrites sur 12.",
+     "explication": "{{8/12}} + {{3/12}} + {{2/12}} = {{13/12}} : le numérateur dépasse le dénominateur, le total est **supérieur à 1 L**. La carafe déborde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans un pichet, il reste {{5/6}} L de cocktail. Camille en sert {{1/2}} L. Que reste-t-il ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.3333333,
+     "tolerance": 0.005,
+     "unite": "L",
+     "aide": "Mets {{1/2}} au dénominateur 6, puis soustrais les numérateurs.",
+     "explication": "{{5/6}} − {{1/2}} = {{5/6}} − {{3/6}} = {{2/6}} = **{{1/3}}** L, soit environ 0,33 L."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe122bf7-3844-58f3-b627-977e58f5cf5c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le relais du cross du collège",
+   "competence": "raisonner",
+   "situation": "Cinq élèves se relaient pour un cross : à eux cinq, ils doivent parcourir tout le trajet. Dina et Tom comparent la part de trajet de chacun et se disputent sur une addition.",
+   "documents": [
+    {
+     "id": "relais",
+     "type": "tableau",
+     "titre": "Part du trajet parcourue par chaque coureur",
+     "colonnes": [
+      "Coureur",
+      "Part du trajet"
+     ],
+     "lignes": [
+      [
+       "Bilal",
+       "{{1/4}}"
+      ],
+      [
+       "Dina",
+       "{{1/12}}"
+      ],
+      [
+       "Axel",
+       "{{1/3}}"
+      ],
+      [
+       "Chloé",
+       "{{1/6}}"
+      ],
+      [
+       "Eli",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relais inventé pour l’exercice"
+    },
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Dina et Tom",
+     "participants": [
+      {
+       "nom": "Dina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Bilal + Chloé, c’est {{1/4}} + {{1/6}} = {{2/10}}, parce que 1 + 1 = 2 et 4 + 6 = 10."
+      },
+      {
+       "qui": "Dina",
+       "texte": "Impossible : {{2/10}} est plus petit que {{1/4}} alors qu’on a ajouté quelque chose !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’erreur de Tom ?",
+     "options": [
+      "Il additionne aussi les dénominateurs au lieu de réduire au même dénominateur",
+      "Il a oublié de simplifier la fraction obtenue à la fin",
+      "Il a additionné les numérateurs au lieu de les multiplier",
+      "Il ne devait pas additionner deux fractions de dénominateurs 4 et 6"
+     ],
+     "reponse": 0,
+     "aide": "Vérifie : le résultat d’une addition de fractions positives doit être plus grand que chacune des fractions.",
+     "explication": "On n’additionne **jamais** les dénominateurs : on réduit d’abord au même dénominateur. {{1/4}} + {{1/6}} = {{3/12}} + {{2/12}} = {{5/12}}."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Bilal, Dina, Axel et Chloé ont couru ensemble quelle part du trajet ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.8333333,
+     "tolerance": 0.005,
+     "aide": "Mets tout sur 12 : {{3/12}}, {{1/12}}, {{4/12}} et {{2/12}}.",
+     "explication": "{{3/12}} + {{1/12}} + {{4/12}} + {{2/12}} = {{10/12}} = **{{5/6}}** du trajet, soit environ 0,83."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du trajet reste-t-il à courir pour Eli ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.1666667,
+     "tolerance": 0.005,
+     "aide": "Le trajet entier vaut 1 = {{6/6}}. Soustrais {{5/6}}.",
+     "explication": "1 − {{5/6}} = {{6/6}} − {{5/6}} = **{{1/6}}** du trajet, soit environ 0,17."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les quatre premiers coureurs de **celui qui court le plus** à celui qui court le moins.",
+     "items": [
+      "Axel",
+      "Bilal",
+      "Chloé",
+      "Dina"
+     ],
+     "aide": "Les numérateurs sont tous égaux à 1 : plus le dénominateur est grand, plus la fraction est petite.",
+     "explication": "{{1/3}} > {{1/4}} > {{1/6}} > {{1/12}} : Axel, Bilal, Chloé, Dina. Même numérateur : le plus grand dénominateur donne la plus petite fraction."
+    }
+   ]
+  },
+  {
+   "chapitre": "b56ac3d8-82df-5d7c-87e8-d81acb14bc76",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les sachets de bonbons de la kermesse",
+   "competence": "calculer",
+   "situation": "À la kermesse, Inès tient le stand de bonbons. Elle veut remplir des sachets de 5 bonbons avec toutes les friandises qu’elle a reçues.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Stand de bonbons",
+     "sousTitre": "Kermesse du collège",
+     "emoji": "🍬",
+     "lignes": [
+      {
+       "texte": "Bonbons reçus",
+       "valeur": "47",
+       "id": "recus"
+      },
+      {
+       "texte": "Bonbons par sachet",
+       "valeur": "5",
+       "id": "sachet"
+      }
+     ],
+     "pied": "Quantités inventées pour l’exercice",
+     "teinte": "rose"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de sachets complets Inès peut-elle remplir ?",
+     "reponse": 9,
+     "unite": "sachets",
+     "aide": "Cherche le plus grand multiple de 5 qui ne dépasse pas 47.",
+     "explication": "5 × 9 = 45 et 5 × 10 = 50 dépasse 47 : le quotient est **9**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bonbons lui reste-t-il ?",
+     "reponse": 2,
+     "unite": "bonbons",
+     "aide": "Retire de 47 les bonbons déjà rangés dans les sachets.",
+     "explication": "47 − 45 = **2** : le reste est toujours plus petit que le diviseur 5."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris la division euclidienne de 47 par 5.",
+     "texte": "47 = 5 × ___ + ___",
+     "reponses": [
+      [
+       "9"
+      ],
+      [
+       "2"
+      ]
+     ],
+     "banque": [
+      "9",
+      "2",
+      "10",
+      "7"
+     ],
+     "aide": "Le quotient puis le reste, avec un reste plus petit que 5.",
+     "explication": "a = b × q + r avec 0 ≤ r < b : 47 = 5 × **9** + **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b56ac3d8-82df-5d7c-87e8-d81acb14bc76",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les dossards du cross",
+   "competence": "raisonner",
+   "situation": "Sur la ligne de départ du cross, six élèves portent un dossard numéroté. Le professeur veut former des équipes avec les critères de divisibilité qu’il a appris.",
+   "documents": [
+    {
+     "id": "dossards",
+     "type": "tableau",
+     "titre": "Les dossards",
+     "colonnes": [
+      "Coureur",
+      "Dossard"
+     ],
+     "lignes": [
+      [
+       "Sami",
+       "84"
+      ],
+      [
+       "Zoé",
+       "130"
+      ],
+      [
+       "Lou",
+       "105"
+      ],
+      [
+       "Tom",
+       "124"
+      ],
+      [
+       "Nora",
+       "132"
+      ],
+      [
+       "Axel",
+       "225"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Numéros inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque dossard : par quel(s) nombre(s) est-il divisible ?",
+     "categories": [
+      "Divisible par 3 seulement",
+      "Divisible par 5 seulement",
+      "Divisible par 3 et par 5",
+      "Ni par 3 ni par 5"
+     ],
+     "items": [
+      [
+       "84",
+       0
+      ],
+      [
+       "130",
+       1
+      ],
+      [
+       "105",
+       2
+      ],
+      [
+       "124",
+       3
+      ],
+      [
+       "132",
+       0
+      ],
+      [
+       "225",
+       2
+      ]
+     ],
+     "aide": "Par 3 : additionne les chiffres. Par 5 : regarde le dernier chiffre.",
+     "explication": "84 (8+4 = 12) et 132 (1+3+2 = 6) : par 3 seulement. 130 : par 5 seulement. 105 et 225 : par 3 et par 5. 124 : ni l’un ni l’autre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de la division euclidienne du dossard 124 par 5 ?",
+     "reponse": 4,
+     "aide": "Cherche le plus grand multiple de 5 inférieur à 124.",
+     "explication": "124 = 5 × 24 + **4** : le reste est 4, ce qui confirme que 124 n’est pas divisible par 5."
+    },
+    {
+     "type": "zone",
+     "document": "dossards",
+     "enonce": "Touche le **seul dossard** divisible par 9.",
+     "reponse": [
+      "r5c1"
+     ],
+     "aide": "Un nombre est divisible par 9 quand la somme de ses chiffres l’est.",
+     "explication": "On additionne les chiffres : 84 → 12, 130 → 4, 105 → 6, 124 → 7, 132 → 6, mais 225 → 2 + 2 + 5 = 9. Seul **225** est divisible par 9."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel dossard est divisible par 4 ?",
+     "options": [
+      "84",
+      "130",
+      "105",
+      "225"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les deux derniers chiffres : forment-ils un multiple de 4 ?",
+     "explication": "84 se termine par 84 = 4 × 21 : c’est un multiple de 4. 30, 05 et 25 ne sont pas des multiples de 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "b56ac3d8-82df-5d7c-87e8-d81acb14bc76",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Décomposer pour simplifier une fraction",
+   "competence": "raisonner",
+   "situation": "Maya veut simplifier la fraction {{84/90}}. Léo l’aide : il décompose les nombres en facteurs premiers. Ensemble, ils rangent les cartes « nombres » du club de maths.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Maya et Léo",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "J’ai décomposé 90 : 2 × 45. Et voilà, c’est fini !"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Non, 45 n’est pas un nombre premier."
+      }
+     ]
+    },
+    {
+     "id": "cartes",
+     "type": "tableau",
+     "titre": "Cartes nombres du club",
+     "colonnes": [
+      "Carte",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "A",
+       "29"
+      ],
+      [
+       "B",
+       "51"
+      ],
+      [
+       "C",
+       "91"
+      ],
+      [
+       "D",
+       "37"
+      ],
+      [
+       "E",
+       "1"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cartes inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la décomposition « 2 × 45 » de Maya n’est-elle pas terminée ?",
+     "options": [
+      "45 a d’autres diviseurs que 1 et lui-même, par exemple 3 et 5",
+      "45 est un nombre premier, mais 2 est trop petit pour le suivre",
+      "45 est plus grand que 2, donc on doit forcément continuer",
+      "2 n’est pas un nombre premier, donc il faut le remplacer"
+     ],
+     "reponse": 0,
+     "aide": "Dans une décomposition en facteurs premiers, chaque facteur doit n’avoir que deux diviseurs.",
+     "explication": "45 = 3 × 15 = 3 × 3 × 5 : il n’est pas premier, on continue. Au final 90 = **2 × 3² × 5**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les décompositions en facteurs premiers.",
+     "texte": "60 = 2 × 2 × ___ × 5 et 84 = 2 × 2 × 3 × ___",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "7"
+      ]
+     ],
+     "banque": [
+      "3",
+      "7",
+      "5",
+      "9"
+     ],
+     "aide": "Divise par 2 tant que c’est possible, puis par 3, puis par 5, par 7…",
+     "explication": "60 = 2 × 2 × **3** × 5 et 84 = 2 × 2 × 3 × **7**. Chaque entier supérieur à 1 se décompose d’une seule façon en facteurs premiers."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque carte du tableau : le nombre est-il **premier** ?",
+     "categories": [
+      "Nombre premier",
+      "Pas un nombre premier"
+     ],
+     "items": [
+      [
+       "29",
+       0
+      ],
+      [
+       "51",
+       1
+      ],
+      [
+       "91",
+       1
+      ],
+      [
+       "37",
+       0
+      ],
+      [
+       "1",
+       1
+      ]
+     ],
+     "aide": "Teste les petits diviseurs : 3 et 7 sont des pièges. Et rappelle-toi le cas de 1.",
+     "explication": "29 et 37 n’ont que deux diviseurs. 51 = 3 × 17 et 91 = 7 × 13. **1** n’est pas premier : il n’a qu’un seul diviseur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En utilisant les décompositions de 84 et de 90, quel est le **dénominateur** de la fraction irréductible égale à {{84/90}} ?",
+     "reponse": 15,
+     "aide": "Barre les facteurs communs en haut et en bas : 2 × 3.",
+     "explication": "En décomposant : 84 = 2 × 2 × 3 × 7 et 90 = 2 × 3 × 3 × 5. On barre le facteur commun 2 × 3 : il reste {{14/15}}, dont le dénominateur est **15**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e95b3a51-fe38-5927-a6b6-98dc5276e325",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tarif du cinéma pour toute la bande",
+   "competence": "modeliser",
+   "situation": "Léa organise une sortie cinéma avec ses amis. Elle regarde l’affiche du tarif et veut écrire une formule qui marche quel que soit le nombre de personnes.",
+   "documents": [
+    {
+     "id": "tarif",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ciné Lumière",
+     "sousTitre": "Tarif de la séance du samedi",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "Une place",
+       "valeur": "6 €",
+       "id": "place"
+      },
+      {
+       "texte": "Pop-corn géant pour tout le groupe",
+       "valeur": "5 €",
+       "id": "pop"
+      }
+     ],
+     "pied": "Tarifs inventés pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pour x places, quelle expression donne le prix à payer (en €) ?",
+     "options": [
+      "6x + 5",
+      "6 + 5x",
+      "11x",
+      "x + 11"
+     ],
+     "reponse": 0,
+     "aide": "Le prix des places dépend de x ; le pop-corn est acheté une seule fois.",
+     "explication": "Les x places coûtent 6 × x = 6x, et le pop-corn 5 € une seule fois : **6x + 5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien paie la bande pour x = 4 places ?",
+     "reponse": 29,
+     "unite": "€",
+     "aide": "Remplace x par 4 en rétablissant le signe × : 6 × 4 + 5.",
+     "explication": "6 × 4 + 5 = 24 + 5 = **29 €**. On calcule d’abord la multiplication."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris plus simplement, comme on le fait en calcul littéral.",
+     "texte": "3 × x s’écrit ___ et x × x s’écrit ___",
+     "reponses": [
+      [
+       "3x"
+      ],
+      [
+       "x²",
+       "x2"
+      ]
+     ],
+     "banque": [
+      "3x",
+      "x3",
+      "x²",
+      "2x"
+     ],
+     "aide": "On ne garde pas le signe × entre un nombre et une lettre ; deux lettres identiques font un carré.",
+     "explication": "3 × x s’écrit **3x** (le nombre devant la lettre) et x × x s’écrit **x²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e95b3a51-fe38-5927-a6b6-98dc5276e325",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le périmètre de l’enclos du jardin",
+   "competence": "geometrie",
+   "situation": "Dans le jardin de l’école, les élèves installent un enclos rectangulaire. Une longueur est notée x (en mètres) et l’autre mesure 3 m de plus : x + 3.",
+   "documents": [
+    {
+     "id": "enclos",
+     "type": "figure",
+     "titre": "L’enclos rectangulaire",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "x + 3"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "x"
+      },
+      {
+       "de": "C",
+       "a": "D",
+       "longueur": "x + 3"
+      },
+      {
+       "de": "D",
+       "a": "A",
+       "longueur": "x"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "source": "Figure non à l’échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Parmi ces expressions, laquelle est la **réduction** du périmètre x + (x + 3) + x + (x + 3) ?",
+     "options": [
+      "4x + 6",
+      "4x + 3",
+      "2x + 6",
+      "10x"
+     ],
+     "reponse": 0,
+     "aide": "Regroupe d’un côté les x, de l’autre les nombres.",
+     "explication": "Quatre x font 4x, et 3 + 3 = 6 : le périmètre vaut **4x + 6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le périmètre de l’enclos si x = 5 ?",
+     "reponse": 26,
+     "unite": "m",
+     "aide": "Remplace x par 5 : 4 × 5 + 6.",
+     "explication": "4 × 5 + 6 = 20 + 6 = **26 m**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Développe 2(x + 3).",
+     "texte": "2(x + 3) = 2x + ___",
+     "reponses": [
+      [
+       "6"
+      ]
+     ],
+     "banque": [
+      "5",
+      "6",
+      "3",
+      "2x"
+     ],
+     "aide": "Le facteur 2 multiplie chaque terme de la parenthèse.",
+     "explication": "k(a + b) = ka + kb : 2(x + 3) = 2x + 2 × 3 = 2x + **6**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque expression : peut-on la **réduire** ?",
+     "categories": [
+      "On peut la réduire",
+      "On ne peut pas la réduire"
+     ],
+     "items": [
+      [
+       "3x + 5x",
+       0
+      ],
+      [
+       "3x + 3x²",
+       1
+      ],
+      [
+       "4x + 3 − x + 2",
+       0
+      ],
+      [
+       "5 + 2x",
+       1
+      ],
+      [
+       "7a − 2a",
+       0
+      ],
+      [
+       "x + x²",
+       1
+      ]
+     ],
+     "aide": "On ne regroupe que les termes de même nature : même lettre, même puissance.",
+     "explication": "3x + 5x = 8x ; 4x + 3 − x + 2 = 3x + 5 ; 7a − 2a = 5a. Mais x et x² (ou un nombre et une lettre) ne se regroupent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "e95b3a51-fe38-5927-a6b6-98dc5276e325",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tour de magie de Sam",
+   "competence": "argumenter",
+   "situation": "Sam présente un tour de magie au club de maths : « Choisis un nombre, suis le programme, et tu trouveras toujours le même résultat ! » Ines doute qu’il l’ait vraiment prouvé.",
+   "documents": [
+    {
+     "id": "programme",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le programme de calcul de Sam",
+     "noeuds": [
+      {
+       "id": "n0",
+       "texte": "Choisis un nombre n"
+      },
+      {
+       "id": "n1",
+       "texte": "Ajoute 4"
+      },
+      {
+       "id": "n2",
+       "texte": "Multiplie par 3"
+      },
+      {
+       "id": "n3",
+       "texte": "Soustrais 3 × n"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n0",
+       "a": "n1"
+      },
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion de Sam et Ines",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "🧙",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ines",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "J’ai testé avec 2, 5 et 10 : toujours 12 ! C’est donc prouvé."
+      },
+      {
+       "qui": "Ines",
+       "texte": "Trois essais ne suffisent pas. Il faut le montrer avec une lettre."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Applique le programme en partant de n = 7. Quel résultat obtiens-tu ?",
+     "reponse": 12,
+     "aide": "Ajoute 4, multiplie par 3, puis soustrais 3 × 7.",
+     "explication": "(7 + 4) × 3 = 33 ; 33 − 3 × 7 = 33 − 21 = **12**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser de la conclusion de Sam ?",
+     "options": [
+      "Non : des essais ne couvrent pas tous les nombres possibles",
+      "Oui : trois essais différents suffisent à prouver le résultat",
+      "Oui : le résultat est toujours un nombre entier naturel",
+      "Non : en réalité on trouve parfois 13 au lieu de 12"
+     ],
+     "reponse": 0,
+     "aide": "Pour prouver une égalité vraie, que faut-il faire des deux membres ?",
+     "explication": "Des exemples ne **prouvent** rien : il faut développer et réduire l’expression avec la lettre. Un seul contre-exemple suffit, en revanche, pour montrer qu’une égalité est fausse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Développe la deuxième étape du programme.",
+     "texte": "3(n + 4) = 3n + ___",
+     "reponses": [
+      [
+       "12"
+      ]
+     ],
+     "banque": [
+      "4",
+      "7",
+      "12",
+      "3"
+     ],
+     "aide": "Le facteur 3 multiplie chaque terme de la parenthèse.",
+     "explication": "3(n + 4) = 3 × n + 3 × 4 = 3n + **12**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Réduis l’expression 3n + 12 − 3n. Quelle valeur obtiens-tu, quel que soit n ?",
+     "reponse": 12,
+     "aide": "Les termes 3n et −3n se regroupent.",
+     "explication": "3n − 3n = 0 : il reste **12**. Le tour marche pour tous les nombres, c’est une preuve."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la forme factorisée de 3n + 12 ?",
+     "options": [
+      "3(n + 4)",
+      "3(n + 12)",
+      "n(3 + 12)",
+      "3n(1 + 4)"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le facteur commun à 3n et à 12.",
+     "explication": "3n = 3 × n et 12 = 3 × 4 : on met 3 en facteur, d’où **3(n + 4)**."
+    }
+   ]
+  }
+ ]
+}

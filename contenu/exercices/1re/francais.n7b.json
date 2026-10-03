@@ -1,0 +1,1846 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "f05f8ecb-de8f-574a-b258-486900fabba2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un bac sur le Mékong, vers 1930",
+   "competence": "analyser-document",
+   "situation": "Tu fais la fiche de lecture de *L’Amant*. Lis l’affiche du livre, puis retrouve la famille de la jeune fille.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Amant",
+     "sousTitre": "Marguerite Duras",
+     "emoji": "⛴️",
+     "lignes": [
+      {
+       "texte": "Prix",
+       "valeur": "Goncourt 1984",
+       "id": "prix"
+      },
+      {
+       "texte": "Lieu et époque",
+       "valeur": "Indochine française, vers 1930",
+       "id": "lieu"
+      },
+      {
+       "texte": "Âge de la jeune fille",
+       "valeur": "Quinze ans et demi",
+       "id": "age"
+      },
+      {
+       "texte": "Tenue",
+       "valeur": "Feutre d’homme, chaussures de lamé"
+      },
+      {
+       "texte": "Traversée",
+       "valeur": "Le Mékong, sur un bac"
+      }
+     ],
+     "pied": "Entre autobiographie et fiction",
+     "teinte": "violet"
+    },
+    {
+     "id": "fam",
+     "type": "tableau",
+     "titre": "Quatre personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Le Chinois de Cholen",
+       "Riche, douze ans son aîné"
+      ],
+      [
+       "La mère",
+       "Ruinée par une concession incultivable"
+      ],
+      [
+       "Le frère aîné",
+       "Violent et voleur"
+      ],
+      [
+       "Le petit frère",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fi",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne de l’affiche qui situe le récit.",
+     "aide": "Cherche le lieu et l’époque.",
+     "explication": "Le récit se passe en **Indochine française, vers 1930**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Relève l’année du prix sur l’affiche : combien d’années la séparent du film de Jean-Jacques Annaud (1992) ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Le film date de 1992 ; l’affiche donne l’année du Goncourt.",
+     "explication": "1992 − 1984 = **8 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est le petit frère (la case « ? ») ?",
+     "options": [
+      "Le frère aimé, qui mourra",
+      "Le frère protecteur, qui part avec elle pour la France",
+      "Le frère complice du Chinois, qui lui doit de l’argent",
+      "Le frère médecin, qui soigne la mère"
+     ],
+     "reponse": 0,
+     "aide": "À côté du frère aîné violent, il est celui qu’on aime.",
+     "explication": "Le **petit frère** est aimé — et il mourra."
+    }
+   ]
+  },
+  {
+   "chapitre": "f05f8ecb-de8f-574a-b258-486900fabba2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la traversée du bac au coup de téléphone",
+   "competence": "se-reperer-temps",
+   "situation": "Le livre n’a pas de chronologie, mais l’histoire a un fil. Remets-le en ordre, puis range ce qui relève de l’histoire et de la manière de la raconter.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’histoire, dans l’ordre chronologique",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Une jeune fille traverse le Mékong sur un bac"
+      },
+      {
+       "id": "n2",
+       "texte": "Le Chinois de Cholen, riche, l’aborde"
+      },
+      {
+       "id": "n3",
+       "texte": "La liaison dure un an et demi à Cholen"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Des années plus tard, il lui téléphone"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle repart pour la France",
+      "Elle épouse le Chinois à Saigon",
+      "Elle s’installe à Cholen avec lui",
+      "Elle retrouve son petit frère"
+     ],
+     "reponse": 0,
+     "aide": "Elle n’est pas restée en Indochine : comment finit-elle par parler à l’homme au téléphone, « des années plus tard » ?",
+     "explication": "La jeune fille **repart pour la France** ; c’est des années plus tard que le Chinois lui téléphone."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui précède la liaison.",
+     "aide": "Il l’aborde sur le bac.",
+     "explication": "C’est la **rencontre** : le Chinois de Cholen aborde la jeune fille."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que raconte le livre, ou la manière dont il le raconte ?",
+     "categories": [
+      "Ce qui est raconté",
+      "La manière de raconter"
+     ],
+     "items": [
+      [
+       "Une garçonnière à Cholen",
+       0
+      ],
+      [
+       "La concession ruineuse de la mère",
+       0
+      ],
+      [
+       "L’alternance du « je » et du « elle »",
+       1
+      ],
+      [
+       "Un récit sans chronologie, fait d’images revenues",
+       1
+      ],
+      [
+       "Des phrases courtes, des répétitions, des blancs",
+       1
+      ]
+     ],
+     "aide": "Demande-toi s’il s’agit d’un lieu ou d’une histoire, ou d’un choix d’écriture.",
+     "explication": "Le **lieu** et la **mère** sont de l’histoire ; l’**alternance je/elle**, l’**absence de chronologie** et le **rythme** sont des choix d’écriture."
+    }
+   ]
+  },
+  {
+   "chapitre": "f05f8ecb-de8f-574a-b258-486900fabba2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Écrire à partir d’une photographie jamais prise",
+   "competence": "analyser-texte",
+   "situation": "Lis un court texte écrit à la manière de Duras, puis explique ce que ses choix d’écriture produisent.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur le bac",
+     "blocs": [
+      "Je suis sur le bac. Le [[f|fleuve]] est large. Le [[f|fleuve]] est lent.",
+      "[[e|Elle]] porte un chapeau d’homme. [[e|Elle]] ne sait pas encore qu’on la regarde.",
+      "Personne n’a pris la photographie. C’est de cette absence que viennent les phrases."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marguerite Duras"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux mots par lesquels la narratrice parle de la jeune fille à distance, comme d’une autre.",
+     "aide": "Le « je » du début laisse place à une troisième personne.",
+     "explication": "La narratrice passe du « je » au « **elle** » : la distance change de page en page."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot que le texte répète d’une phrase à l’autre.",
+     "aide": "Deux phrases courtes commencent par les mêmes mots.",
+     "explication": "Le mot **fleuve** revient : les répétitions donnent au texte un rythme obsédant."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait d’écriture de *L’Amant* à son effet.",
+     "paires": [
+      [
+       "Pas de chronologie",
+       "Un récit éclaté, fait de mémoire"
+      ],
+      [
+       "Alternance du « je » et du « elle »",
+       "La distance entre la narratrice et son personnage varie"
+      ],
+      [
+       "Phrases courtes, répétitions, blancs",
+       "Un rythme obsédant"
+      ],
+      [
+       "Une photographie jamais prise",
+       "L’absence qui autorise la littérature"
+      ]
+     ],
+     "aide": "Pense à ce que chaque procédé fait entendre ou voir.",
+     "explication": "L’**absence de chronologie** produit un récit éclaté ; l’**alternance** change la distance ; le **rythme** est obsédant ; la photographie manquante **autorise l’écriture**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère l’absence de photographie dans ce texte ?",
+     "options": [
+      "Que l’écriture reconstruit une scène qu’aucune image ne garde",
+      "Que la narratrice invente toute son enfance de A à Z",
+      "Que la narratrice refuse absolument de parler de sa jeunesse",
+      "Que le récit est un simple reportage sur le fleuve"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du texte.",
+     "explication": "Dans le livre, l’image jamais prise est une **absence qui autorise la littérature** : c’est l’écriture qui reconstruit la scène."
+    }
+   ]
+  },
+  {
+   "chapitre": "622dcc32-62db-512e-9a6b-b9e02c0dd5fa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman sur la Bourse",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *L’Argent* de Zola. Place le roman parmi les dates de l’auteur, puis retrouve ses principaux personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Zola et le krach",
+     "debut": 1835,
+     "fin": 1905,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1840,
+       "nom": "Naissance"
+      },
+      {
+       "id": "kra",
+       "date": 1882,
+       "nom": "Krach"
+      },
+      {
+       "id": "rom",
+       "date": 1891,
+       "nom": "L’Argent"
+      },
+      {
+       "id": "mor",
+       "date": 1902,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Quatre personnages",
+     "colonnes": [
+      "Personnage",
+      "Position"
+     ],
+     "lignes": [
+      [
+       "Aristide Saccard",
+       "Le spéculateur, génial et sans scrupule"
+      ],
+      [
+       "Madame Caroline",
+       "Maîtresse de Saccard, conscience du roman"
+      ],
+      [
+       "Gundermann",
+       "?"
+      ],
+      [
+       "Victor",
+       "Le fils naturel de Saccard, grandi dans la misère"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "kra"
+     ],
+     "enonce": "Touche l’événement réel qui inspire le roman.",
+     "aide": "C’est le krach de l’Union générale.",
+     "explication": "Le krach de l’Union générale, en **1882**, inspire le roman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le krach réel de la parution de *L’Argent* ?",
+     "reponse": 9,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1891 − 1882 = **9 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Gundermann (la case « ? ») ?",
+     "options": [
+      "Le grand banquier rival de Saccard, froid et méthodique",
+      "L’ingénieur honnête, porteur des projets en Orient",
+      "Un socialiste utopiste qui annonce un autre monde",
+      "Un journaliste qui fabrique l’enthousiasme des petits porteurs"
+     ],
+     "reponse": 0,
+     "aide": "Il attend, quand Saccard s’agite.",
+     "explication": "**Gundermann** est le banquier rival, froid et méthodique, inspiré de James de Rothschild : il attend."
+    }
+   ]
+  },
+  {
+   "chapitre": "622dcc32-62db-512e-9a6b-b9e02c0dd5fa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Monter une banque, la voir s’effondrer",
+   "competence": "se-reperer-temps",
+   "situation": "Saccard veut refaire fortune. Suis les étapes de l’ascension, puis de la chute de la Banque universelle.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du projet au krach",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Saccard, ruiné, fonde la Banque universelle"
+      },
+      {
+       "id": "n2",
+       "texte": "Une campagne de presse fabrique l’enthousiasme"
+      },
+      {
+       "id": "n3",
+       "texte": "Le cours est gonflé : tous achètent"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Saccard est condamné, mais il repart ailleurs"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Le cours s’effondre : ruine générale, suicides, procès",
+      "Le cours monte encore et enrichit tous les épargnants",
+      "Gundermann rachète la banque et en fait la plus sûre de Paris",
+      "Saccard donne sa fortune aux petits épargnants ruinés"
+     ],
+     "reponse": 0,
+     "aide": "Un cours gonflé sans raison finit par retomber.",
+     "explication": "Le cours **s’effondre** : ruine générale, suicides et procès ; Saccard, condamné, repartira pourtant ailleurs."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui montre l’alliance de la presse et de la finance.",
+     "aide": "Qui fabrique l’enthousiasme avant que le cours monte ?",
+     "explication": "La **campagne de presse** fabrique l’enthousiasme : la finance et la presse s’allient pour façonner l’opinion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’enchaînement « cours gonflé, puis effondrement » ?",
+     "options": [
+      "La valeur de l’action tient à la confiance fabriquée, pas à une richesse réelle",
+      "Une banque ne peut jamais réussir si elle finance des travaux à l’étranger",
+      "Les petits épargnants comprennent mieux la Bourse que les grands banquiers",
+      "La presse n’a aucune influence sur le cours des actions"
+     ],
+     "reponse": 0,
+     "aide": "Le cours monte « sans raison » : sur quoi repose-t-il ?",
+     "explication": "Le cours est gonflé **artificiellement** par la presse et l’enthousiasme : quand la confiance disparaît, tout s’effondre."
+    }
+   ]
+  },
+  {
+   "chapitre": "622dcc32-62db-512e-9a6b-b9e02c0dd5fa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le fumier de l’humanité de demain",
+   "competence": "argumenter",
+   "situation": "Zola condamne-t-il l’argent ? Lis une phrase célèbre du roman, puis le débat de deux élèves.",
+   "documents": [
+    {
+     "id": "q",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une phrase du roman",
+     "blocs": [
+      "« L’argent, jusqu’à ce jour, était le [[f|fumier]] dans lequel poussait l’humanité de demain. »"
+     ],
+     "source": "Émile Zola, *L’Argent* (1891), phrase donnée par le cours"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Zola condamne l’argent : il ruine les petits et pousse au suicide."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Ce n’est pas si simple : l’argent est aussi une force [[a|féconde]], il fait pousser l’avenir."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors il est à la fois bon et mauvais ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Il est [[a|ambivalent]] : destructeur, et pourtant fécondant."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "q",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui fait de l’argent à la fois une matière sale et un engrais.",
+     "aide": "C’est ce qu’on met dans la terre pour faire pousser les plantes.",
+     "explication": "Le **fumier** est sale mais nourrit la terre : l’image dit l’ambivalence de l’argent."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux mots de Yanis qui s’opposent à la lecture simple d’Inès.",
+     "aide": "L’un dit que l’argent fait pousser l’avenir, l’autre résume ses deux visages.",
+     "explication": "Yanis parle d’une force **féconde** et d’un argent **ambivalent** : destructeur et pourtant fécondant."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque image du roman à ce qu’elle dit de l’argent.",
+     "paires": [
+      [
+       "La Bourse, un temple",
+       "L’argent y est adoré comme un dieu"
+      ],
+      [
+       "La Bourse, un champ de bataille",
+       "On s’y affronte et on s’y ruine"
+      ],
+      [
+       "Le fumier",
+       "Une saleté qui fait pousser l’avenir"
+      ],
+      [
+       "La ruine des petits épargnants",
+       "La force destructrice de la spéculation"
+      ]
+     ],
+     "aide": "Pense au sens que l’image donne à la Bourse ou à l’argent.",
+     "explication": "Le **temple** dit l’adoration, le **champ de bataille** l’affrontement, le **fumier** l’ambivalence, la **ruine des petits** la destruction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture de la phrase de Zola est la mieux soutenue par les documents ?",
+     "options": [
+      "L’argent est une force ambivalente : il détruit et il féconde",
+      "L’argent n’est qu’une saleté dont il faut débarrasser le monde",
+      "L’argent est la seule vraie richesse que Zola admire",
+      "L’argent n’a aucun effet sur les hommes du roman"
+     ],
+     "reponse": 0,
+     "aide": "Un fumier est sale, mais il nourrit.",
+     "explication": "Le **fumier** est à la fois sale et fécond : Zola voit dans l’argent une force **ambivalente**."
+    }
+   ]
+  },
+  {
+   "chapitre": "135f8d04-c5a8-57d2-81f8-76b86da155e3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poème en quatre chants",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ta fiche sur *L’Art poétique*. Place le poème dans la vie de Boileau, puis range ses quatre chants.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "La vie de Boileau",
+     "debut": 1630,
+     "fin": 1715,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1636,
+       "nom": "Naissance"
+      },
+      {
+       "id": "sat",
+       "date": 1666,
+       "nom": "Satires"
+      },
+      {
+       "id": "art",
+       "date": 1674,
+       "nom": "Art poétique"
+      },
+      {
+       "id": "aca",
+       "date": 1684,
+       "nom": "Académie"
+      },
+      {
+       "id": "mor",
+       "date": 1711,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "ch",
+     "type": "tableau",
+     "titre": "Les quatre chants",
+     "colonnes": [
+      "Chant",
+      "Son objet"
+     ],
+     "lignes": [
+      [
+       "I",
+       "Les règles générales : clarté, travail, vraisemblance"
+      ],
+      [
+       "II",
+       "Les genres brefs : idylle, élégie, ode, sonnet, satire"
+      ],
+      [
+       "III",
+       "?"
+      ],
+      [
+       "IV",
+       "Les conseils au poète : intégrité, patience, refus de la flatterie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "art"
+     ],
+     "enonce": "Touche la parution de *L’Art poétique*.",
+     "aide": "Elle suit les *Satires* de 1666.",
+     "explication": "*L’Art poétique* paraît en **1674**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *L’Art poétique* de l’entrée de Boileau à l’Académie française ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1684 − 1674 = **10 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’objet du chant III (la case « ? ») ?",
+     "options": [
+      "Les grands genres : tragédie, épopée, comédie",
+      "La querelle des Anciens et des Modernes",
+      "L’histoire de la poésie, d’Horace à Malherbe",
+      "Les genres bas : fables, contes et chansons"
+     ],
+     "reponse": 0,
+     "aide": "Après les genres brefs viennent les genres majeurs, avec la règle des trois unités.",
+     "explication": "Le chant III traite des **grands genres** : tragédie, épopée, comédie, avec la règle des trois unités."
+    }
+   ]
+  },
+  {
+   "chapitre": "135f8d04-c5a8-57d2-81f8-76b86da155e3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des vers devenus des règles",
+   "competence": "analyser-texte",
+   "situation": "Deux célèbres préceptes de Boileau, en vers : lis-les, relève ce qu’ils demandent, puis relie chaque précepte à sa valeur.",
+   "documents": [
+    {
+     "id": "p1",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un précepte sur le travail",
+     "blocs": [
+      "Hâtez-vous lentement, et, sans perdre courage,",
+      "Vingt fois sur le métier remettez votre [[o|ouvrage]]."
+     ],
+     "source": "Nicolas Boileau, *L’Art poétique* (1674), chant I"
+    },
+    {
+     "id": "p2",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un précepte pour le théâtre",
+     "blocs": [
+      "Qu’en un [[u|lieu]], qu’en un [[u|jour]], un seul [[u|fait]] accompli",
+      "Tienne jusqu’à la fin le théâtre rempli."
+     ],
+     "source": "Nicolas Boileau, *L’Art poétique* (1674), chant III"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p1",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui désigne ce que le poète doit retravailler vingt fois.",
+     "aide": "C’est l’œuvre en cours.",
+     "explication": "Le poète doit remettre vingt fois sur le métier son **ouvrage** : le travail l’emporte sur l’inspiration."
+    },
+    {
+     "type": "zone",
+     "document": "p2",
+     "multiple": true,
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche les trois mots qui donnent les trois unités de la tragédie.",
+     "aide": "Un seul lieu, un seul jour, un seul…",
+     "explication": "Un seul **lieu**, un seul **jour**, un seul **fait** : unité de lieu, de temps et d’action."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque précepte de Boileau à ce qu’il impose.",
+     "paires": [
+      [
+       "« Ce que l’on conçoit bien s’énonce clairement »",
+       "La clarté comme preuve de pensée"
+      ],
+      [
+       "« Vingt fois sur le métier remettez votre ouvrage »",
+       "Le travail contre l’inspiration"
+      ],
+      [
+       "« Le vrai peut quelquefois n’être pas vraisemblable »",
+       "La primauté du vraisemblable sur le vrai"
+      ],
+      [
+       "« Qu’en un lieu, qu’en un jour… »",
+       "La règle des trois unités"
+      ]
+     ],
+     "aide": "Chaque citation correspond à une grande valeur classique.",
+     "explication": "La **clarté**, le **travail**, le **vraisemblable** et les **trois unités** sont les valeurs classiques que Boileau met en règles."
+    }
+   ]
+  },
+  {
+   "chapitre": "135f8d04-c5a8-57d2-81f8-76b86da155e3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Boileau a-t-il inventé le classicisme ?",
+   "competence": "argumenter",
+   "situation": "Camille et Rayan débattent de la place de Boileau. Lis leur échange et un célèbre éloge de Malherbe, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Rayan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Boileau a inventé le classicisme : avant lui, rien n’était réglé."
+      },
+      {
+       "qui": "Rayan",
+       "texte": "Il ne l’invente pas : il le [[f|formule]] après que Racine, Molière et La Fontaine l’ont pratiqué."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Alors pourquoi l’appelle-t-on « législateur du Parnasse » ?"
+      },
+      {
+       "qui": "Rayan",
+       "texte": "Parce qu’il met en règles ce que les œuvres faisaient déjà."
+      }
+     ]
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un éloge de Malherbe",
+     "blocs": [
+      "Enfin [[m|Malherbe]] vint, et, le premier en France,",
+      "Fit sentir dans les vers une juste cadence."
+     ],
+     "source": "Nicolas Boileau, *L’Art poétique* (1674), chant I"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le verbe de Rayan qui dit que Boileau codifie après coup.",
+     "aide": "Il ne crée pas : il met en forme ce qui existe.",
+     "explication": "Boileau **formule** le classicisme : il le met en règles après les grandes œuvres."
+    },
+    {
+     "type": "zone",
+     "document": "m",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le nom du poète que Boileau salue comme le premier à donner aux vers une juste cadence.",
+     "aide": "Son nom ouvre le premier vers, après « Enfin ».",
+     "explication": "Boileau salue **Malherbe**, qui a réformé la poésie : « Enfin Malherbe vint »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque époque à son regard sur Boileau.",
+     "paires": [
+      [
+       "Longtemps",
+       "Le législateur du Parnasse"
+      ],
+      [
+       "Chez les romantiques",
+       "Le symbole des règles à abattre"
+      ],
+      [
+       "Aujourd’hui",
+       "La meilleure porte d’entrée dans la doctrine classique"
+      ],
+      [
+       "Au moment de sa publication",
+       "Une mise en règles de ce que Racine et Molière pratiquent"
+      ]
+     ],
+     "aide": "Le regard sur Boileau change avec les époques.",
+     "explication": "Boileau fut le **législateur du Parnasse**, puis le symbole des règles rejetées par les **romantiques** ; il est aujourd’hui la **meilleure porte d’entrée** dans le classicisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sujet : « Les règles sont-elles un obstacle pour un écrivain ? » Quel argument Boileau fournit-il pour la défense des règles ?",
+     "options": [
+      "Il les formule après les chefs-d’œuvre : elles ne sont pas arbitraires",
+      "Il les invente avant tout le monde pour imposer sa propre manière",
+      "Il les juge inutiles, et défend l’inspiration spontanée du génie",
+      "Il les reprend toutes de Malherbe, sans y rien ajouter lui-même"
+     ],
+     "reponse": 0,
+     "aide": "Relis le débat : qui était là avant les règles ?",
+     "explication": "Boileau formule les règles **après** Racine, Molière et La Fontaine : elles résument ce que les chefs-d’œuvre font déjà."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7f5e2e7-dfbc-565e-a63c-dc6a42ea188d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La Goutte-d’Or de Gervaise",
+   "competence": "analyser-document",
+   "situation": "Tu prépares la fiche de lecture de *L’Assommoir*. Lis l’affiche du roman, puis retrouve ses principaux personnages.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Assommoir",
+     "sousTitre": "Émile Zola",
+     "emoji": "🍷",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1877, d’abord en feuilleton"
+      },
+      {
+       "texte": "Place dans la série",
+       "valeur": "Septième volume des Rougon-Macquart"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "La Goutte-d’Or, quartier populaire du nord de Paris",
+       "id": "lieu"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "Le Second Empire"
+      },
+      {
+       "texte": "Héroïne",
+       "valeur": "Gervaise Macquart, blanchisseuse boiteuse"
+      }
+     ],
+     "pied": "Roman naturaliste, premier grand succès de Zola",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fi",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne de l’affiche qui situe le roman dans Paris.",
+     "aide": "Cherche le quartier.",
+     "explication": "Le roman se passe à **la Goutte-d’Or**, quartier populaire du nord de Paris."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "*L’Assommoir* est le ___ volume des *Rougon-Macquart* ; son héroïne, ___, est blanchisseuse.",
+     "reponses": [
+      [
+       "septième",
+       "7e",
+       "7ème"
+      ],
+      [
+       "Gervaise"
+      ]
+     ],
+     "banque": [
+      "septième",
+      "dix-huitième",
+      "Gervaise",
+      "Nana"
+     ],
+     "aide": "Les deux informations sont sur l’affiche.",
+     "explication": "C’est le **septième** volume de la série, et l’héroïne est **Gervaise**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est.",
+     "paires": [
+      [
+       "Coupeau",
+       "Le zingueur que l’accident fait basculer"
+      ],
+      [
+       "Lantier",
+       "Le chapelier paresseux, parasite"
+      ],
+      [
+       "Goujet",
+       "Le forgeron qui aime Gervaise d’un amour discret"
+      ],
+      [
+       "Virginie",
+       "La rivale que Gervaise a fessée au lavoir"
+      ]
+     ],
+     "aide": "Pense au métier de chacun, ou à sa place dans la vie de Gervaise.",
+     "explication": "**Coupeau** est zingueur, **Lantier** chapelier et parasite, **Goujet** forgeron et amoureux discret, **Virginie** la rivale du lavoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7f5e2e7-dfbc-565e-a63c-dc6a42ea188d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la boutique à l’escalier",
+   "competence": "se-reperer-temps",
+   "situation": "Gervaise monte, puis tombe. Suis les étapes de son destin, puis retrouve les lieux où tout se joue.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le destin de Gervaise",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Lantier abandonne Gervaise"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle épouse Coupeau et ouvre sa boutique"
+      },
+      {
+       "id": "n3",
+       "texte": "La fête de l’oie marque l’apogée de Gervaise"
+      },
+      {
+       "id": "n4",
+       "texte": "Coupeau tombe d’un toit"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      },
+      {
+       "id": "n6",
+       "texte": "Gervaise meurt de misère sous un escalier"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Coupeau boit, Lantier s’installe et Gervaise glisse à son tour",
+      "Coupeau retrouve son métier et rembourse toutes les dettes",
+      "Gervaise quitte Paris et ouvre une boutique à la campagne",
+      "Goujet épouse Gervaise et la met à l’abri de la misère"
+     ],
+     "reponse": 0,
+     "aide": "Après la chute de Coupeau, qui boit à l’Assommoir ? Qui revient dans le ménage ?",
+     "explication": "Après l’accident, **Coupeau boit**, **Lantier s’installe** dans le ménage et Gervaise **glisse à son tour** dans l’alcool et la faim."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui marque le sommet de la réussite de Gervaise.",
+     "aide": "Un grand repas où tout le quartier est invité.",
+     "explication": "La **fête de l’oie** est l’apogée de Gervaise : après elle, tout descend."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à ce qui s’y passe.",
+     "paires": [
+      [
+       "Le lavoir",
+       "La bataille entre Gervaise et Virginie"
+      ],
+      [
+       "L’Assommoir",
+       "Le débit de boisson du père Colombe"
+      ],
+      [
+       "Sainte-Anne",
+       "Là où Coupeau meurt du delirium tremens"
+      ],
+      [
+       "La Goutte-d’Or",
+       "Le quartier populaire où vit Gervaise"
+      ]
+     ],
+     "aide": "Chaque lieu a sa scène dans le roman.",
+     "explication": "Le **lavoir** ouvre le roman par une bataille ; l’**Assommoir** est le débit de boisson ; **Sainte-Anne** voit mourir Coupeau ; la **Goutte-d’Or** est le quartier."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7f5e2e7-dfbc-565e-a63c-dc6a42ea188d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le peuple dans la voix du narrateur",
+   "competence": "analyser-texte",
+   "situation": "Zola a été accusé de salir le peuple. Lis un passage écrit à la manière du roman et la réponse de l’auteur dans sa préface.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la boutique de Gervaise",
+     "blocs": [
+      "Le fer était brûlant et Gervaise [[p|trimait]] depuis l’aube dans la vapeur de la boutique.",
+      "Pas de quoi en faire un plat : elle gagnait son pain, [[p|zut]] !, et ceux qui n’étaient pas contents n’avaient qu’à repasser leurs jupons eux-mêmes."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Émile Zola"
+    },
+    {
+     "id": "pre",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La réponse de Zola",
+     "blocs": [
+      "« C’est une œuvre de [[v|vérité]], le premier roman sur le peuple, qui ne mente pas et qui ait l’odeur du peuple. »"
+     ],
+     "source": "Émile Zola, préface de *L’Assommoir* (1877), citation donnée par le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots du langage populaire qui passent dans la narration elle-même.",
+     "aide": "Un verbe de travail familier, une interjection.",
+     "explication": "Les mots **trimait** et **zut** sont du langage populaire dans la narration : c’est la voix de Gervaise qui entre dans le récit."
+    },
+    {
+     "type": "zone",
+     "document": "pre",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot par lequel Zola répond à ceux qui l’accusent de salir le peuple.",
+     "aide": "Il revendique ce que son roman montre.",
+     "explication": "Zola répond par la **vérité** : son roman ne ment pas sur le peuple."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque nouveauté de *L’Assommoir* à son effet.",
+     "paires": [
+      [
+       "Le style indirect libre généralisé",
+       "La voix des personnages entre dans le récit"
+      ],
+      [
+       "Le langage populaire dans la narration",
+       "Le peuple n’est plus seulement cité dans les dialogues"
+      ],
+      [
+       "La thèse naturaliste",
+       "Le milieu et l’hérédité écrasent l’individu"
+      ],
+      [
+       "La compassion du narrateur",
+       "Le roman n’est pas un portrait méprisant du peuple"
+      ]
+     ],
+     "aide": "Pense à qui parle dans le récit, et à ce que le lecteur éprouve pour Gervaise.",
+     "explication": "Le **style indirect libre** et le **langage populaire** font entrer le peuple dans le récit ; la **thèse naturaliste** n’empêche pas la **compassion**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du roman les deux documents soutiennent-ils ?",
+     "options": [
+      "Il montre le peuple de l’intérieur, sans le mépriser",
+      "Il se moque des ouvriers pour amuser un lecteur bourgeois",
+      "Il censure tout langage populaire, jugé trop grossier",
+      "Il décrit un peuple heureux, à l’abri de toute misère"
+     ],
+     "reponse": 0,
+     "aide": "Zola parle de « vérité » et de « l’odeur du peuple » : est-ce du mépris ?",
+     "explication": "Zola veut un roman **vrai** sur le peuple ; la voix de Gervaise entre dans le récit, ce qui en fait un livre de compassion plus que de mépris."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d4c7b28-ddd5-59b8-b469-3c42ecd4cc1f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Harpagon, Cléante et la jeune Mariane",
+   "competence": "analyser-document",
+   "situation": "Tu prépares la fiche de lecture de *L’Avare*. Lis l’affiche de la pièce, puis démêle qui veut épouser qui.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Avare",
+     "sousTitre": "Molière (1622-1673)",
+     "emoji": "💰",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Comédie en cinq actes"
+      },
+      {
+       "texte": "Langue",
+       "valeur": "En prose",
+       "id": "prose"
+      },
+      {
+       "texte": "Création",
+       "valeur": "Septembre 1668, au Palais-Royal"
+      },
+      {
+       "texte": "Rôle de Molière",
+       "valeur": "Harpagon"
+      }
+     ],
+     "pied": "Inspirée de *L’Aulularia* de Plaute",
+     "teinte": "violet"
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Qui aime ou veut qui ?",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Cléante"
+      },
+      {
+       "id": "n2",
+       "texte": "Mariane"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "aime"
+      },
+      {
+       "de": "n3",
+       "a": "n2",
+       "texte": "veut épouser"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fi",
+     "multiple": false,
+     "reponse": [
+      "prose"
+     ],
+     "enonce": "Touche la ligne qui dit dans quelle langue la pièce est écrite.",
+     "aide": "Vers ou prose ?",
+     "explication": "La pièce est écrite **en prose**, et non en vers."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Molière vit-il encore après la création de *L’Avare* ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Lis l’année de la création et celle de sa mort sur l’affiche.",
+     "explication": "1673 − 1668 = **5 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Harpagon, père de Cléante, veuf riche et avare",
+      "Valère, intendant d’Harpagon et amoureux d’Élise",
+      "Anselme, vieil homme que le père destine à Élise",
+      "La Flèche, valet de Cléante qui vole la cassette"
+     ],
+     "reponse": 0,
+     "aide": "Père et fils aiment la même jeune fille.",
+     "explication": "C’est **Harpagon**, qui veut épouser la jeune Mariane, aimée de son fils Cléante."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d4c7b28-ddd5-59b8-b469-3c42ecd4cc1f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La cassette de dix mille écus",
+   "competence": "se-reperer-temps",
+   "situation": "Harpagon cache un trésor. Suis les étapes de l’intrigue, du jardin au dénouement.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’intrigue de *L’Avare*",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Harpagon enterre sa cassette dans son jardin"
+      },
+      {
+       "id": "n2",
+       "texte": "La Flèche, valet de Cléante, la vole"
+      },
+      {
+       "id": "n3",
+       "texte": "Harpagon, fou de douleur, crie : « Au voleur ! »"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Harpagon retrouve sa cassette"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Anselme se révèle être le père perdu de Valère et de Mariane",
+      "Harpagon renonce à son argent et marie ses enfants par amour",
+      "La Flèche est arrêté et la cassette est confisquée",
+      "Cléante épouse Élise et Valère épouse Frosine"
+     ],
+     "reponse": 0,
+     "aide": "Le dénouement est invraisemblable et assumé.",
+     "explication": "Le dénouement est **invraisemblable et assumé** : Anselme est le père perdu de Valère et de Mariane."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui déclenche la crise d’Harpagon.",
+     "aide": "Qui prend la cassette ?",
+     "explication": "Le **vol** de la cassette par La Flèche déclenche la crise : Harpagon devient fou de douleur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Frosine",
+       "L’entremetteuse, qui vit d’intrigues"
+      ],
+      [
+       "Maître Jacques",
+       "Cuisinier et cocher d’Harpagon"
+      ],
+      [
+       "La Flèche",
+       "Le valet de Cléante qui vole la cassette"
+      ],
+      [
+       "Valère",
+       "L’intendant qui flatte Harpagon pour rester près d’Élise"
+      ]
+     ],
+     "aide": "Chaque personnage a un métier ou une ruse.",
+     "explication": "**Frosine** intrigue, **Maître Jacques** cumule deux métiers, **La Flèche** vole, **Valère** flatte pour rester près d’Élise."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d4c7b28-ddd5-59b8-b469-3c42ecd4cc1f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une comédie plus noire qu’il n’y paraît",
+   "competence": "argumenter",
+   "situation": "Harpagon est-il seulement ridicule ? Lis son célèbre cri, puis le débat de deux élèves, et tranche.",
+   "documents": [
+    {
+     "id": "cri",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le cri d’Harpagon",
+     "blocs": [
+      {
+       "didascalie": "Harpagon découvre que sa cassette a disparu."
+      },
+      {
+       "personnage": "Harpagon",
+       "replique": "Au voleur ! au voleur ! à l’[[c|assassin]] ! au [[c|meurtrier]] !"
+      }
+     ],
+     "source": "Molière, *L’Avare* (1668), acte IV, scène 7"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Harpagon est juste un vieux fou très drôle."
+      },
+      {
+       "qui": "Max",
+       "texte": "Non, la pièce est bien plus noire : l’avarice [[d|détruit]] tous les liens de la famille."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cri",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots du cri qui font d’une perte d’argent un crime de sang.",
+     "aide": "Le simple « voleur » ne suffit pas à Harpagon : il parle de mort.",
+     "explication": "Pour une cassette, Harpagon crie à l’**assassin** et au **meurtrier** : l’argent est devenu une passion totale."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe de Max qui dit ce que l’avarice fait aux liens familiaux.",
+     "aide": "C’est le contraire de « construire ».",
+     "explication": "L’avarice **détruit** les liens de la famille : c’est ce qui rend la pièce noire."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque type de comique à son exemple.",
+     "paires": [
+      [
+       "Comique de caractère",
+       "L’avarice, passion totale qui contamine la famille"
+      ],
+      [
+       "Comique de répétition",
+       "« Sans dot ! »"
+      ],
+      [
+       "Comique de mots et de gestes",
+       "La fouille de La Flèche"
+      ]
+     ],
+     "aide": "Il y a un trait de personnage, une formule, un geste, une situation.",
+     "explication": "Le **caractère** (avarice), la **répétition** (« Sans dot ! »), les **gestes** (la fouille) et la **situation** (l’usurier est le père) font rire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le dénouement heureux (Anselme, père perdu) de la pièce ?",
+     "options": [
+      "Il est invraisemblable et assumé, et il n’efface pas la noirceur",
+      "Il prouve que tout est vraisemblable dans cette comédie",
+      "Il transforme la pièce en pure fantaisie sans portée",
+      "Il réconcilie sincèrement Harpagon avec ses enfants"
+     ],
+     "reponse": 0,
+     "aide": "Harpagon retrouve « la seule chose qu’il voulait ».",
+     "explication": "Le dénouement est **invraisemblable et assumé**, et Harpagon retrouve sa cassette : le dénouement heureux **n’efface rien** de l’avarice."
+    }
+   ]
+  },
+  {
+   "chapitre": "156e2251-d12b-5415-baf4-7e6ee92bbe59",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le roman de Colin et de Chloé",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *L’Écume des jours*. Place le roman dans la vie de Boris Vian, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "La vie de Boris Vian",
+     "debut": 1915,
+     "fin": 1960,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1920,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rom",
+       "date": 1947,
+       "nom": "L’Écume des jours"
+      },
+      {
+       "id": "mor",
+       "date": 1959,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Quatre personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Colin",
+       "Un jeune homme riche et oisif"
+      ],
+      [
+       "Nicolas",
+       "Son cuisinier"
+      ],
+      [
+       "Chick",
+       "Son ami, collectionneur de tout ce qui touche à Jean-Sol Partre"
+      ],
+      [
+       "Chloé",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Touche la parution de *L’Écume des jours*.",
+     "aide": "Elle se situe entre la naissance et la mort de Vian.",
+     "explication": "Le roman paraît en **1947**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du roman de la mort de Vian ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1959 − 1947 = **12 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Chloé (la case « ? ») ?",
+     "options": [
+      "La jeune femme que Colin rencontre et épouse",
+      "L’amie de Colin, qui le quitte pour Chick",
+      "La cuisinière qui sert dans la maison de Colin",
+      "La sœur de Chick, philosophe célèbre"
+     ],
+     "reponse": 0,
+     "aide": "Elle tombe malade, et Colin fait tout pour la soulager.",
+     "explication": "**Chloé** est la jeune femme que Colin rencontre et épouse ; elle tombe malade."
+    }
+   ]
+  },
+  {
+   "chapitre": "156e2251-d12b-5415-baf4-7e6ee92bbe59",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du pianocktail au nénuphar",
+   "competence": "se-reperer-temps",
+   "situation": "Le roman commence comme un conte et finit comme un cauchemar. Suis la chute de Colin, puis retrouve les objets et les noms qui font l’univers du livre.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La chute de Colin",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Colin, riche et oisif, épouse Chloé"
+      },
+      {
+       "id": "n2",
+       "texte": "Un nénuphar pousse dans le poumon de Chloé"
+      },
+      {
+       "id": "n3",
+       "texte": "Les fleurs la soulagent : Colin doit travailler"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Chloé meurt"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "L’appartement rétrécit et s’assombrit à mesure que Chloé décline",
+      "L’appartement grandit et s’éclaire grâce aux fleurs de Colin",
+      "Colin vend l’appartement et part avec Chloé pour le Sud",
+      "Colin gagne assez d’argent pour guérir Chloé grâce au travail"
+     ],
+     "reponse": 0,
+     "aide": "Le décor suit l’état de santé de Chloé.",
+     "explication": "L’appartement **rétrécit, s’assombrit et se déforme** à mesure que Chloé s’affaiblit : la forme du livre se contracte avec la maladie."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui force Colin à travailler.",
+     "aide": "Il lui faut payer quelque chose pour soulager Chloé.",
+     "explication": "Les **fleurs** coûtent cher : Colin doit travailler, dans des métiers absurdes et cruels."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à ce qu’il est.",
+     "paires": [
+      [
+       "Le pianocktail",
+       "Un piano qui fabrique des cocktails d’après la musique jouée"
+      ],
+      [
+       "Le nénuphar",
+       "La maladie qui pousse dans le poumon de Chloé"
+      ],
+      [
+       "Jean-Sol Partre",
+       "Le philosophe dont Chick collectionne tout"
+      ],
+      [
+       "Les fleurs",
+       "Ce qui soulage Chloé et ruine Colin"
+      ]
+     ],
+     "aide": "Certains éléments sont des inventions de Vian, d’autres des clins d’œil.",
+     "explication": "Le **pianocktail** est une invention, le **nénuphar** est la maladie, **Jean-Sol Partre** raille la mode intellectuelle (Sartre), les **fleurs** soulagent et ruinent."
+    }
+   ]
+  },
+  {
+   "chapitre": "156e2251-d12b-5415-baf4-7e6ee92bbe59",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand les murs se rapprochent",
+   "competence": "analyser-texte",
+   "situation": "Lis un court passage écrit à la manière de Vian, puis explique ce que ses inventions produisent.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un matin dans l’appartement",
+     "blocs": [
+      "Le réveil [[o|toussa]] deux fois avant de sonner, comme un vieillard qui s’excuse.",
+      "Dans la cuisine, la cafetière fredonnait une ritournelle d’ensoleillade pendant que le fauteuil [[o|bâillait]] sans retenue.",
+      "Puis, jour après jour, le plafond se [[r|rapprocha]] du sol et les murs se [[r|resserrèrent]] autour du lit."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Boris Vian"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux verbes qui donnent vie à des objets.",
+     "aide": "Un réveil et un fauteuil se comportent comme des êtres vivants.",
+     "explication": "Le réveil **toussa** et le fauteuil **bâillait** : les objets sont animés, comme chez Vian."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux verbes qui disent que l’espace se contracte.",
+     "aide": "Le plafond et les murs bougent peu à peu.",
+     "explication": "Le plafond se **rapprocha** et les murs se **resserrèrent** : l’espace rétrécit comme dans le roman."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "Les objets animés",
+       "Un univers de fantaisie qui peut basculer en cauchemar"
+      ],
+      [
+       "Les néologismes et les jeux de mots",
+       "Une invention verbale qui amuse"
+      ],
+      [
+       "L’espace qui se contracte",
+       "La forme du livre suit la maladie"
+      ],
+      [
+       "Le merveilleux mêlé au tragique",
+       "L’invention rend la douleur visible"
+      ]
+     ],
+     "aide": "Pense à ce que chaque invention fait sentir au lecteur.",
+     "explication": "Les **objets animés** et les **néologismes** forment le conte ; l’**espace qui rétrécit** suit la maladie ; le **merveilleux** rend la douleur visible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du passage est la mieux soutenue ?",
+     "options": [
+      "La fantaisie du début prépare un décor qui devient menaçant",
+      "Le passage est une description réaliste d’un vrai appartement",
+      "Le passage se moque de la musique de La Nouvelle-Orléans",
+      "Le passage n’a aucun lien avec la maladie ou la mort"
+     ],
+     "reponse": 0,
+     "aide": "Compare la première phrase (le réveil qui tousse) à la dernière (les murs qui se resserrent).",
+     "explication": "La fantaisie des débuts se retourne : plafond et murs se rapprochent, comme dans le roman où le **merveilleux** sert le **tragique**."
+    }
+   ]
+  }
+ ]
+}

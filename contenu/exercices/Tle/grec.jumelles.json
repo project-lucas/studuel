@@ -1,0 +1,1059 @@
+{
+ "niveau": "Tle",
+ "matiere": "grec",
+ "exercices": [
+  {
+   "chapitre": "c2bf4e3f-12b8-5481-83dc-1523dc053b6b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois mots grecs, deux cas",
+   "competence": "manier-langue",
+   "situation": "Théa ouvre sa première page de grec : un petit tableau avec trois mots de la langue d’Athènes. Avant de traduire quoi que ce soit, elle doit repérer leurs formes.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois noms au nominatif et au génitif",
+     "colonnes": [
+      "Déclinaison",
+      "Nominatif",
+      "Génitif",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "1re",
+       "ἡ τιμή",
+       "τῆς τιμῆς",
+       "l’honneur"
+      ],
+      [
+       "2e",
+       "ὁ λόγος",
+       "τοῦ λόγου",
+       "la parole"
+      ],
+      [
+       "2e (neutre)",
+       "τὸ δῶρον",
+       "τοῦ δώρου",
+       "le don"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche le nominatif du mot qui veut dire « le don ».",
+     "aide": "Regarde la colonne « Sens », puis lis la colonne « Nominatif » sur la même ligne.",
+     "explication": "Le don se dit à la troisième ligne ; son **nominatif** est la forme de la colonne « Nominatif », celle qui sert de sujet."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2",
+      "r2c2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux génitifs du tableau qui se terminent par la même finale « -ου ».",
+     "aide": "Les deux mots sont de la 2e déclinaison.",
+     "explication": "Les génitifs de **la parole** et de **le don** finissent tous deux par -ου : c’est la marque du génitif singulier de la 2e déclinaison."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque cas à sa fonction principale.",
+     "paires": [
+      [
+       "nominatif",
+       "sujet du verbe"
+      ],
+      [
+       "accusatif",
+       "complément d’objet direct"
+      ],
+      [
+       "génitif",
+       "complément du nom"
+      ],
+      [
+       "datif",
+       "complément d’objet indirect"
+      ]
+     ],
+     "aide": "Le génitif répond à la question « de qui ? ».",
+     "explication": "Le **nominatif** donne le sujet, l’**accusatif** le COD, le **génitif** le complément du nom et le **datif** le COI."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2bf4e3f-12b8-5481-83dc-1523dc053b6b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le citoyen, la parole : qui fait quoi ?",
+   "competence": "comprendre-langue",
+   "situation": "Dans son cahier, Théa lit deux phrases grecques écrites pour s’entraîner. Elle n’a pas le droit de traduire dans l’ordre des mots : elle doit d’abord trouver les cas.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux phrases à analyser",
+     "auteur": "Phrases écrites pour l’exercice",
+     "blocs": [
+      "ὁ πολίτης τὸ δῶρον λαμβάνει.",
+      "τὸν [[c|πολίτην]] ὁ [[s|λόγος]] τέρπει."
+     ]
+    },
+    {
+     "id": "voc",
+     "type": "tableau",
+     "titre": "Vocabulaire",
+     "colonnes": [
+      "Mot",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "ὁ πολίτης",
+       "le citoyen"
+      ],
+      [
+       "ὁ λόγος",
+       "la parole"
+      ],
+      [
+       "τὸ δῶρον",
+       "le don"
+      ],
+      [
+       "λαμβάνει",
+       "il reçoit"
+      ],
+      [
+       "τέρπει",
+       "il réjouit"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans la phrase 2, touche le sujet du verbe.",
+     "aide": "Le sujet est au nominatif : son article n’a pas de -ν final.",
+     "explication": "Le sujet est **« la parole »** : il est au nominatif, précédé de l’article du nominatif. Dans la phrase 2, c’est la parole qui réjouit."
+    },
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Dans la phrase 2, touche le complément d’objet direct.",
+     "aide": "Le COD est à l’accusatif : l’article se termine par -ν.",
+     "explication": "Le COD est **« le citoyen »**, à l’accusatif : l’ordre des mots est inversé, mais la terminaison dit la fonction."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’analyse de la phrase 2.",
+     "texte": "Dans la phrase 2, « le citoyen » est à l’___ et « la parole » au ___.",
+     "reponses": [
+      [
+       "accusatif"
+      ],
+      [
+       "nominatif"
+      ]
+     ],
+     "banque": [
+      "accusatif",
+      "nominatif",
+      "génitif",
+      "datif"
+     ],
+     "aide": "Le sujet est toujours au nominatif.",
+     "explication": "« Le citoyen » est à l’**accusatif** (COD) et « la parole » au **nominatif** (sujet) : la phrase se traduit « la parole réjouit le citoyen »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la phrase 1, comment sait-on que « le don » n’est pas le sujet ?",
+     "options": [
+      "Sa forme ne dit rien (nominatif = accusatif au neutre) ; le sens tranche",
+      "Sa terminaison est celle de l’accusatif, absente du nominatif",
+      "Il est en deuxième position, et l’ordre des mots fixe la fonction",
+      "Un nom neutre ne peut jamais être sujet d’un verbe en grec"
+     ],
+     "reponse": 0,
+     "aide": "Relis la règle du neutre dans le cours.",
+     "explication": "Au neutre, **nominatif et accusatif sont identiques** : la forme ne tranche pas, c’est le sens (un citoyen reçoit un don, pas l’inverse) qui le fait."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2bf4e3f-12b8-5481-83dc-1523dc053b6b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une offrande pour le dieu",
+   "competence": "comprendre-langue",
+   "situation": "Dans un exercice de version, Théa doit traduire deux phrases où l’ordre des mots ne l’aide pas. Elle dispose d’un tableau de déclinaison et d’un petit vocabulaire.",
+   "documents": [
+    {
+     "id": "decl",
+     "type": "tableau",
+     "titre": "Déclinaison de trois noms",
+     "colonnes": [
+      "Mot",
+      "Nominatif",
+      "Accusatif",
+      "Génitif",
+      "Datif"
+     ],
+     "lignes": [
+      [
+       "la parole",
+       "ὁ λόγος",
+       "τὸν λόγον",
+       "τοῦ λόγου",
+       "τῷ λόγῳ"
+      ],
+      [
+       "l’honneur",
+       "ἡ τιμή",
+       "τὴν τιμήν",
+       "τῆς τιμῆς",
+       "τῇ τιμῇ"
+      ],
+      [
+       "le don",
+       "τὸ δῶρον",
+       "τὸ δῶρον",
+       "τοῦ δώρου",
+       "τῷ δώρῳ"
+      ]
+     ]
+    },
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux phrases à traduire",
+     "auteur": "Phrases écrites pour l’exercice",
+     "blocs": [
+      "ὁ πολίτης τῷ [[d|θεῷ]] δῶρον φέρει.",
+      "ὁ λόγος τὴν [[t|τιμὴν]] τοῦ θεοῦ δείκνυσιν."
+     ],
+     "source": "Vocabulaire : θεός = dieu ; φέρει = il apporte ; δείκνυσιν = il montre ; δῶρον = un don."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "decl",
+     "reponse": [
+      "r2c1",
+      "r2c2"
+     ],
+     "multiple": true,
+     "enonce": "Dans le tableau, touche les deux formes du mot « le don » qui sont identiques.",
+     "aide": "C’est la règle du neutre.",
+     "explication": "Au neutre, le **nominatif et l’accusatif** sont identiques : c’est le cas de « le don », dont les deux premières cases se confondent."
+    },
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Dans la phrase 1, touche le mot au datif.",
+     "aide": "Le datif répond à « à qui ? » : qui reçoit le don ?",
+     "explication": "Le dieu reçoit le don : **« au dieu »** est au datif, comme l’indique la finale du nom, accompagnée de l’article."
+    },
+    {
+     "type": "association",
+     "enonce": "Dans la phrase 1, associe chaque groupe de mots à son cas.",
+     "paires": [
+      [
+       "le citoyen",
+       "nominatif"
+      ],
+      [
+       "un don",
+       "accusatif"
+      ],
+      [
+       "au dieu",
+       "datif"
+      ]
+     ],
+     "aide": "Cherche d’abord le sujet, puis le COD, puis le complément d’attribution.",
+     "explication": "**Le citoyen** est le sujet (nominatif), **un don** le COD (accusatif) et **au dieu** le complément d’attribution (datif)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Analyse la fin de la phrase 2.",
+     "texte": "Dans la phrase 2, « du dieu » est au ___ et complète le nom « ___ ».",
+     "reponses": [
+      [
+       "génitif"
+      ],
+      [
+       "honneur",
+       "l’honneur"
+      ]
+     ],
+     "banque": [
+      "génitif",
+      "datif",
+      "accusatif",
+      "honneur",
+      "parole",
+      "dieu"
+     ],
+     "aide": "Le génitif répond à « de qui ? ». Il est placé juste après le nom qu’il complète.",
+     "explication": "« Du dieu » est au **génitif** et complète **honneur**, qui le précède immédiatement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de la phrase 2 ?",
+     "options": [
+      "La parole montre l’honneur du dieu.",
+      "Le dieu montre l’honneur de la parole.",
+      "L’honneur du dieu montre la parole.",
+      "La parole du dieu montre l’honneur."
+     ],
+     "reponse": 0,
+     "aide": "Cherche le sujet au nominatif, puis le nom que le génitif suit.",
+     "explication": "**La parole montre l’honneur du dieu** : « la parole » est sujet, « l’honneur » COD, et le génitif « du dieu » est collé à « l’honneur », pas à « la parole »."
+    }
+   ]
+  },
+  {
+   "chapitre": "24a98f18-bfaf-50fe-beec-165271486547",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au théâtre de Dionysos",
+   "competence": "observer-schema",
+   "situation": "Aujourd’hui, Zoé visite un théâtre antique. Elle a le plan simplifié d’un théâtre grec, vu du dessus, et veut comprendre où se tenaient le public et le chœur.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan simplifié d’un théâtre grec",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M40 140 A120 120 0 0 1 280 140 L222 140 A62 62 0 0 0 98 140 Z",
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "gradins",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 140,
+       "r": 54,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "orchestra",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 205,
+       "l": 140,
+       "h": 28,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "skene",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 82,
+       "y": 24,
+       "texte": "gradins (théâtron)",
+       "vers": [
+        75,
+        110
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 250,
+       "y": 30,
+       "texte": "orchestra",
+       "vers": [
+        185,
+        130
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 255,
+       "y": 235,
+       "texte": "skènè",
+       "vers": [
+        225,
+        219
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 252,
+       "texte": "Vue du dessus, schéma simplifié",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "gradins"
+     ],
+     "enonce": "Des milliers de citoyens assistent au spectacle en plein jour. Touche l’endroit où ils sont assis.",
+     "aide": "Ces places forment un demi-cercle autour de la scène.",
+     "explication": "Le public s’installe sur les **gradins** (théâtron), en demi-cercle autour de l’orchestra."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "orchestra"
+     ],
+     "enonce": "Le chœur chante, danse et commente l’action. Touche l’endroit où il évolue.",
+     "aide": "C’est le cercle central.",
+     "explication": "Le chœur évolue dans l’**orchestra**, l’espace circulaire au centre, face au public."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le théâtre grec naît des fêtes d’un dieu et se joue dehors.",
+     "texte": "Le théâtre grec est né des fêtes de ___ ; il se joue en plein ___, à ciel ___.",
+     "reponses": [
+      [
+       "Dionysos"
+      ],
+      [
+       "jour"
+      ],
+      [
+       "ouvert"
+      ]
+     ],
+     "banque": [
+      "Dionysos",
+      "Athéna",
+      "jour",
+      "nuit",
+      "ouvert",
+      "couvert"
+     ],
+     "aide": "Le dieu du vin est aussi celui du théâtre.",
+     "explication": "Le théâtre naît des fêtes de **Dionysos** ; il se joue en plein **jour**, à ciel **ouvert**, comme institution civique devant des milliers de citoyens."
+    }
+   ]
+  },
+  {
+   "chapitre": "24a98f18-bfaf-50fe-beec-165271486547",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le roi qui se prenait pour un dieu",
+   "competence": "analyser-texte",
+   "situation": "Pour son exposé sur la tragédie, Zoé a écrit une petite scène imaginaire dans l’esprit du théâtre grec. Elle doit y retrouver les notions étudiées en cours.",
+   "documents": [
+    {
+     "id": "notions",
+     "type": "tableau",
+     "titre": "Les notions de la tragédie",
+     "colonnes": [
+      "Notion",
+      "Ce qu’elle désigne"
+     ],
+     "lignes": [
+      [
+       "L’hybris",
+       "La démesure : le héros franchit la limite humaine"
+      ],
+      [
+       "La némésis",
+       "Le châtiment que l’hybris appelle"
+      ],
+      [
+       "La catharsis",
+       "La purgation des passions éprouvée par le spectateur"
+      ],
+      [
+       "Le chœur",
+       "Il commente l’action et fait le lien avec le public"
+      ]
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Devant le palais",
+     "auteur": "Scène écrite pour l’exercice",
+     "blocs": [
+      {
+       "didascalie": "Un roi imaginaire, Eurymaque, a gagné toutes ses guerres. Devant son palais, il parle aux vieillards qui forment le chœur."
+      },
+      {
+       "personnage": "Eurymaque",
+       "replique": "Je suis un [[h|dieu]], et non un simple mortel ! Qui oserait me donner des ordres ?"
+      },
+      {
+       "personnage": "Le chœur",
+       "replique": "Ô roi, souviens-toi que tu es un homme. Les dieux punissent celui qui dépasse la mesure."
+      },
+      {
+       "personnage": "Eurymaque",
+       "replique": "Taisez-vous, vieillards ! Je ne vous écouterai pas."
+      },
+      {
+       "didascalie": "Un messager entre en courant."
+      },
+      {
+       "personnage": "Le messager",
+       "replique": "Ô roi, la foudre a frappé ton palais : tout est perdu."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot par lequel Eurymaque montre sa démesure.",
+     "aide": "Il se compare à ceux que les hommes doivent respecter.",
+     "explication": "En se disant **dieu**, Eurymaque franchit la limite humaine : c’est l’hybris."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les moments de la scène dans l’ordre.",
+     "items": [
+      "Le roi se croit l’égal des dieux",
+      "Le chœur l’avertit",
+      "Le roi refuse d’écouter",
+      "La foudre frappe son palais"
+     ],
+     "aide": "Hybris, avertissement, refus, puis châtiment.",
+     "explication": "La scène suit la mécanique tragique : **hybris**, avertissement du **chœur**, refus, puis **némésis**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moment de la scène à la notion de la tragédie qu’il illustre.",
+     "paires": [
+      [
+       "Le roi se dit dieu",
+       "l’hybris"
+      ],
+      [
+       "La foudre frappe le palais",
+       "la némésis"
+      ],
+      [
+       "Les vieillards avertissent le roi",
+       "le chœur"
+      ],
+      [
+       "Le public pleure puis se sent soulagé",
+       "la catharsis"
+      ]
+     ],
+     "aide": "Relis le tableau des notions.",
+     "explication": "Se dire dieu, c’est l’**hybris** ; le châtiment, la **némésis** ; les vieillards, le **chœur** ; le soulagement du public, la **catharsis**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le roi est-il puni ?",
+     "options": [
+      "Il a dépassé la mesure humaine en se prenant pour un dieu",
+      "Il a maltraité les vieillards qui forment le chœur",
+      "Il a perdu une guerre contre une cité voisine",
+      "Il a oublié d’offrir un sacrifice à Dionysos"
+     ],
+     "reponse": 0,
+     "aide": "Le héros tragique n’est pas puni parce qu’il est méchant.",
+     "explication": "Il est puni pour son **hybris** : il a dépassé la mesure humaine, pas parce qu’il serait cruel."
+    }
+   ]
+  },
+  {
+   "chapitre": "24a98f18-bfaf-50fe-beec-165271486547",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Socrate interroge, Platon et Aristote fondent",
+   "competence": "analyser-document",
+   "situation": "Dans la même cité, trois philosophes ont changé la manière de penser. Tu lis un dialogue imaginaire, puis tu replaces les trois hommes dans le temps.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Sur l’agora",
+     "auteur": "Dialogue imaginé pour l’exercice, à la manière des dialogues de Platon",
+     "blocs": [
+      {
+       "didascalie": "Socrate arrête un jeune Athénien."
+      },
+      {
+       "personnage": "Socrate",
+       "replique": "Léandre, qu’est-ce que la justice ?"
+      },
+      {
+       "personnage": "Léandre",
+       "replique": "C’est rendre à chacun ce qu’on lui doit."
+      },
+      {
+       "personnage": "Socrate",
+       "replique": "Un ami te confie son [[e|épée]]. Il devient fou furieux et te la réclame. La lui rends-tu ?"
+      },
+      {
+       "personnage": "Léandre",
+       "replique": "Non, ce serait trop dangereux !"
+      },
+      {
+       "personnage": "Socrate",
+       "replique": "Alors la justice n’est pas toujours de rendre ce qu’on a reçu. Cherchons ensemble une meilleure définition."
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois philosophes",
+     "debut": -480,
+     "fin": -300,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "naiss",
+       "date": -470,
+       "nom": "Naissance de Socrate"
+      },
+      {
+       "id": "mort",
+       "date": -399,
+       "nom": "Mort de Socrate"
+      },
+      {
+       "id": "acad",
+       "date": -387,
+       "nom": "Fondation Académie"
+      },
+      {
+       "id": "lycee",
+       "date": -335,
+       "nom": "Fondation du Lycée"
+      },
+      {
+       "id": "arist",
+       "date": -322,
+       "nom": "Mort d’Aristote"
+      }
+     ],
+     "source": "Dates des fondations approchées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche l’objet que Socrate imagine pour mettre en difficulté la définition de Léandre.",
+     "aide": "Un ami confie cet objet, puis devient dangereux.",
+     "explication": "Socrate invente le cas de l’**épée** rendue à un ami devenu fou pour montrer que la définition de Léandre a une limite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Socrate dans ce dialogue ?",
+     "options": [
+      "Il interroge son interlocuteur pour l’amener à repenser sa réponse",
+      "Il récite à Léandre un cours appris par cœur",
+      "Il dicte à Léandre un traité qu’il fera recopier",
+      "Il impose sa définition de la justice sans discussion"
+     ],
+     "reponse": 0,
+     "aide": "Socrate n’écrit rien : il parle.",
+     "explication": "Socrate **interroge** : c’est la maïeutique, qui fait accoucher les esprits. Il n’a laissé aucun écrit de sa main."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après la frise, combien d’années Socrate a-t-il vécu ?",
+     "reponse": 71,
+     "unite": "ans",
+     "aide": "Compare sa naissance et sa mort sur la frise.",
+     "explication": "470 − 399 = **71 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque philosophe à ce qu’il laisse.",
+     "paires": [
+      [
+       "Socrate",
+       "aucun écrit : il interroge"
+      ],
+      [
+       "Platon",
+       "l’Académie et les Dialogues"
+      ],
+      [
+       "Aristote",
+       "le Lycée et le classement des savoirs"
+      ]
+     ],
+     "aide": "Socrate meurt condamné par la cité.",
+     "explication": "**Socrate** n’écrit rien, **Platon** fonde l’Académie et écrit les Dialogues, **Aristote** fonde le Lycée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Socrate est condamné et meurt",
+      "Platon fonde l’Académie",
+      "Aristote fonde le Lycée",
+      "Aristote meurt"
+     ],
+     "aide": "Lis les dates sur la frise.",
+     "explication": "Mort de Socrate (399), Académie (vers 387), Lycée (vers 335), mort d’Aristote (322)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f255c2d4-229e-50cf-a1f6-93ed1b05f789",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui vote à Athènes ?",
+   "competence": "lire-tableau",
+   "situation": "Léa prépare un exposé sur la démocratie athénienne. Elle range les habitants d’Athènes dans un tableau, d’après leurs droits politiques.",
+   "documents": [
+    {
+     "id": "habitants",
+     "type": "tableau",
+     "titre": "Les habitants d’Athènes",
+     "colonnes": [
+      "Statut",
+      "Qui est-ce ?",
+      "Droits politiques"
+     ],
+     "lignes": [
+      [
+       "Citoyens",
+       "Hommes nés de deux parents athéniens (environ 40 000 sur 250 000 habitants)",
+       "Tous"
+      ],
+      [
+       "Femmes",
+       "Filles et épouses de citoyens",
+       "Aucun"
+      ],
+      [
+       "Métèques",
+       "Étrangers libres, souvent commerçants",
+       "Aucun"
+      ],
+      [
+       "Esclaves",
+       "Personnes non libres",
+       "Aucun"
+      ]
+     ],
+     "source": "Chiffres arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "habitants",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le statut dont les membres ont tous les droits politiques.",
+     "aide": "Cherche la ligne où la dernière colonne dit « Tous ».",
+     "explication": "Seuls les **citoyens** ont tous les droits politiques à Athènes."
+    },
+    {
+     "type": "zone",
+     "document": "habitants",
+     "reponse": [
+      "r1c2",
+      "r2c2",
+      "r3c2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois cases qui disent que le statut n’a aucun droit politique.",
+     "aide": "Ces cases sont dans la dernière colonne.",
+     "explication": "Les femmes, les métèques et les esclaves n’ont **aucun** droit politique : la démocratie athénienne est restreinte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien d’habitants y a-t-il pour un citoyen ? Arrondis à l’unité.",
+     "reponse": 6,
+     "unite": "habitants",
+     "aide": "Divise le nombre d’habitants par le nombre de citoyens.",
+     "explication": "250 000 ÷ 40 000 = 6,25, soit **6** habitants pour un citoyen : un habitant sur six seulement est citoyen."
+    }
+   ]
+  },
+  {
+   "chapitre": "f255c2d4-229e-50cf-a1f6-93ed1b05f789",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les rouages de la cité",
+   "competence": "se-reperer-temps",
+   "situation": "Pour comprendre qui décide quoi à Athènes, Léa étudie les institutions et la chronologie des grandes réformes.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "tableau",
+     "titre": "Les institutions d’Athènes",
+     "colonnes": [
+      "Institution",
+      "Qui y siège ?",
+      "Ce qu’elle fait"
+     ],
+     "lignes": [
+      [
+       "L’Ecclésia",
+       "Tous les citoyens",
+       "Vote les lois et la guerre"
+      ],
+      [
+       "La Boulè",
+       "500 membres tirés au sort",
+       "Prépare les décisions"
+      ],
+      [
+       "L’Héliée",
+       "Jurés tirés au sort",
+       "Juge : c’est le tribunal populaire"
+      ],
+      [
+       "Les stratèges",
+       "Dix, élus et rééligibles",
+       "Commandent l’armée"
+      ]
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les grandes réformes",
+     "debut": -600,
+     "fin": -400,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "ve",
+       "debut": -500,
+       "fin": -401,
+       "nom": "Ve siècle : Périclès",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "solon",
+       "date": -594,
+       "nom": "Réformes de Solon"
+      },
+      {
+       "id": "clisthene",
+       "date": -508,
+       "nom": "Clisthène : isonomie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "clisthene"
+     ],
+     "enonce": "Touche la réforme qui fonde l’isonomie.",
+     "aide": "L’isonomie est l’égalité devant la loi : c’est l’œuvre de celui qui réorganise le corps civique par dèmes.",
+     "explication": "C’est **Clisthène** (508 av. J.-C.) qui réorganise le corps civique par dèmes et fonde l’isonomie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les réformes de Solon de celles de Clisthène ?",
+     "reponse": 86,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "594 − 508 = **86 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "inst",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la seule institution dont les membres sont élus et non tirés au sort.",
+     "aide": "Regarde la colonne « Qui y siège ? ».",
+     "explication": "Les **stratèges** sont élus ; les membres de la Boulè et de l’Héliée sont tirés au sort, et tous les citoyens siègent à l’Ecclésia."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque rôle à l’institution qui l’exerce.",
+     "paires": [
+      [
+       "Voter la guerre",
+       "L’Ecclésia"
+      ],
+      [
+       "Préparer les décisions",
+       "La Boulè"
+      ],
+      [
+       "Juger un procès",
+       "L’Héliée"
+      ],
+      [
+       "Commander l’armée",
+       "Les stratèges"
+      ]
+     ],
+     "aide": "Relis la dernière colonne du tableau.",
+     "explication": "L’**Ecclésia** vote, la **Boulè** prépare, l’**Héliée** juge et les **stratèges** commandent l’armée."
+    }
+   ]
+  },
+  {
+   "chapitre": "f255c2d4-229e-50cf-a1f6-93ed1b05f789",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une matinée sur l’agora : directe, mais pour qui ?",
+   "competence": "analyser-document",
+   "situation": "Athènes se dit fière de sa démocratie. Mais qui, parmi les gens croisés un matin d’assemblée, a vraiment le droit d’y voter ?",
+   "documents": [
+    {
+     "id": "agora",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un matin d’assemblée",
+     "auteur": "Récit imaginé pour l’exercice",
+     "blocs": [
+      "Un matin d’assemblée, quatre personnes se croisent sur l’agora d’Athènes. [[c|Ariston]], citoyen né de deux parents athéniens, monte à l’Ecclésia. Sa femme [[f|Phanè]], fille d’un citoyen, part au marché. [[m|Philon]], marchand venu de Sidon et installé au Pirée depuis vingt ans, installe son étal. [[e|Sôsias]], esclave d’Ariston, porte les paniers."
+     ]
+    },
+    {
+     "id": "part",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "La population d’Athènes",
+     "categories": [
+      "Citoyens",
+      "Femmes, métèques et esclaves"
+     ],
+     "series": [
+      {
+       "nom": "Part des habitants",
+       "valeurs": [
+        16,
+        84
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "source": "Chiffres arrondis : 40 000 citoyens sur 250 000 habitants"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "agora",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la seule personne qui peut voter à l’Ecclésia.",
+     "aide": "Il faut être un homme né de deux parents athéniens.",
+     "explication": "**Ariston** est le seul citoyen : Phanè est une femme, Philon est un étranger, Sôsias est esclave."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à son statut.",
+     "paires": [
+      [
+       "Ariston",
+       "citoyen : tous les droits politiques"
+      ],
+      [
+       "Phanè",
+       "épouse de citoyen : aucun droit politique"
+      ],
+      [
+       "Philon",
+       "métèque : étranger libre, sans droit politique"
+      ],
+      [
+       "Sôsias",
+       "esclave : personne non libre"
+      ]
+     ],
+     "aide": "Relis ce que dit le texte de chacun.",
+     "explication": "Chaque statut est donné par le récit : seul **Ariston** possède des droits politiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après le graphique, combien d’habitants sur 250 000 n’avaient aucun droit politique ?",
+     "reponse": 210000,
+     "unite": "habitants",
+     "aide": "Calcule 84 % de 250 000.",
+     "explication": "84 % de 250 000 = 0,84 × 250 000 = **210 000** habitants (ou 250 000 − 40 000)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois réformes de la plus ancienne à la plus récente.",
+     "items": [
+      "Solon abolit l’esclavage pour dettes",
+      "Clisthène réorganise le corps civique par dèmes",
+      "Périclès instaure le misthos"
+     ],
+     "aide": "Solon : 594 ; Clisthène : 508-507 ; Périclès : Ve siècle.",
+     "explication": "Solon (594 av. J.-C.), Clisthène (508-507 av. J.-C.), puis Périclès (Ve siècle) : le **misthos** permet ensuite aux plus pauvres de siéger."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule décrit le mieux la démocratie athénienne ?",
+     "options": [
+      "Directe et restreinte",
+      "Représentative et universelle",
+      "Directe et universelle",
+      "Représentative et restreinte"
+     ],
+     "reponse": 0,
+     "aide": "Directe : le citoyen vote lui-même. Restreinte : combien d’habitants ont ce droit ?",
+     "explication": "Elle est **directe**, car chaque citoyen vote lui-même, et **restreinte**, puisque seul un habitant sur six est citoyen."
+    }
+   ]
+  }
+ ]
+}

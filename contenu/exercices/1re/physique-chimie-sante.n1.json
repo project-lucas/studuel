@@ -1,0 +1,3919 @@
+{
+ "niveau": "1re",
+ "matiere": "physique-chimie-sante",
+ "exercices": [
+  {
+   "chapitre": "f84cafe9-af75-5d71-9fd3-6f7d026ca15c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le flacon de sérum du cabinet infirmier",
+   "competence": "lire-tableau",
+   "situation": "Au cabinet infirmier, Nadia prépare un lavage de nez pour un nourrisson. Elle lit l’étiquette d’un flacon de sérum physiologique pour savoir ce qu’il contient.",
+   "documents": [
+    {
+     "id": "serum",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "SÉRUM PHYSIOLOGIQUE",
+     "sousTitre": "Flacon de 250 mL — solution aqueuse",
+     "emoji": "🧴",
+     "lignes": [
+      {
+       "texte": "Solvant",
+       "valeur": "eau purifiée",
+       "id": "solvant"
+      },
+      {
+       "texte": "Soluté",
+       "valeur": "chlorure de sodium NaCl",
+       "id": "solute"
+      },
+      {
+       "texte": "Concentration massique",
+       "valeur": "9,0 g/L",
+       "id": "conc"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Masse molaire du NaCl",
+       "valeur": "M = 58,5 g/mol",
+       "id": "masse-molaire"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serum",
+     "enonce": "Touche la ligne qui dit quelle masse de soluté on trouve dans chaque litre de solution.",
+     "reponse": [
+      "conc"
+     ],
+     "aide": "Une concentration massique s’exprime en grammes par litre.",
+     "explication": "La **concentration massique** (9,0 g/L) donne la masse de soluté par litre de solution : Cm = m / V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de chlorure de sodium contient le flacon de 250 mL ? Réponds en grammes.",
+     "reponse": 2.25,
+     "unite": "g",
+     "aide": "Convertis d’abord 250 mL en litres, puis utilise m = Cm × V.",
+     "explication": "V = 0,250 L, donc m = 9,0 × 0,250 = **2,25 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière de NaCl cela représente-t-il ? Réponds en millimoles (mmol), arrondie à l’unité.",
+     "reponse": 38,
+     "tolerance": 0.5,
+     "unite": "mmol",
+     "aide": "n = m / M, avec M = 58,5 g/mol ; 1 mol = 1 000 mmol.",
+     "explication": "n = 2,25 / 58,5 ≈ 0,0385 mol, soit **38 mmol** (arrondi à l’unité)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f84cafe9-af75-5d71-9fd3-6f7d026ca15c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois poches pour le service de perfusion",
+   "competence": "calculer",
+   "situation": "Dans un service hospitalier, Hugo prépare la tournée des perfusions. Il compare trois poches dont l’étiquette donne la concentration massique, le volume et le soluté.",
+   "documents": [
+    {
+     "id": "poches",
+     "type": "tableau",
+     "titre": "Les poches de la tournée",
+     "colonnes": [
+      "Poche",
+      "Soluté",
+      "Cm (g/L)",
+      "Volume (mL)",
+      "M (g/mol)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "glucose",
+       50,
+       500,
+       180
+      ],
+      [
+       "B",
+       "chlorure de sodium",
+       "9,0",
+       1000,
+       "58,5"
+      ],
+      [
+       "C",
+       "glucose",
+       100,
+       200,
+       180
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poches",
+     "enonce": "Touche la poche qui contient la plus grande masse de soluté.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Calcule m = Cm × V pour chaque poche, en litres.",
+     "explication": "A : 50 × 0,500 = 25 g ; B : 9,0 × 1,000 = 9 g ; C : 100 × 0,200 = 20 g. C’est la **poche A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration molaire en glucose de la poche A ? Réponds en mol/L, arrondie à 0,01.",
+     "reponse": 0.28,
+     "tolerance": 0.005,
+     "unite": "mol/L",
+     "aide": "Passe de Cm à C avec la masse molaire : C = Cm / M.",
+     "explication": "C = 50 / 180 ≈ **0,28 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière de glucose contient la poche C ? Réponds en mol, arrondie à 0,01.",
+     "reponse": 0.11,
+     "tolerance": 0.005,
+     "unite": "mol",
+     "aide": "Commence par la masse : m = Cm × V avec V en litres.",
+     "explication": "m = 100 × 0,200 = 20 g, puis n = 20 / 180 ≈ **0,11 mol**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Pour préparer une solution de glucose par dissolution, remets les gestes dans l’ordre.",
+     "items": [
+      "Calculer la masse à peser : m = Cm × V",
+      "Peser le glucose dans une coupelle",
+      "Introduire le solide dans la fiole jaugée avec un entonnoir et rincer",
+      "Remplir aux trois quarts avec de l’eau distillée et agiter",
+      "Compléter jusqu’au trait de jauge, boucher et homogénéiser"
+     ],
+     "aide": "On calcule avant de peser ; on ajuste le volume en dernier.",
+     "explication": "On **calcule**, on **pèse**, on **introduit** le solide, on dissout aux trois quarts, puis on **complète au trait de jauge** et on homogénéise."
+    }
+   ]
+  },
+  {
+   "chapitre": "f84cafe9-af75-5d71-9fd3-6f7d026ca15c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Diluer une solution mère à la pharmacie",
+   "competence": "resoudre",
+   "situation": "Camille, préparatrice en pharmacie, doit obtenir 250,0 mL d’une solution de glucose à 0,040 mol/L à partir d’une solution mère à 0,50 mol/L. Elle observe la verrerie de la paillasse et la liste du matériel disponible.",
+   "documents": [
+    {
+     "id": "verrerie",
+     "type": "schema",
+     "titre": "La verrerie de la paillasse",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 80,
+       "l": 44,
+       "h": 84,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "becher",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        28,
+        100
+       ],
+       "a": [
+        38,
+        100
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        28,
+        120
+       ],
+       "a": [
+        38,
+        120
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        28,
+        140
+       ],
+       "a": [
+        38,
+        140
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "chemin",
+       "d": "M118 50 L142 50 L142 162 L152 162 L152 170 L108 170 L108 162 L118 162 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "eprouvette",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        70
+       ],
+       "a": [
+        128,
+        70
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        90
+       ],
+       "a": [
+        128,
+        90
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        110
+       ],
+       "a": [
+        128,
+        110
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        130
+       ],
+       "a": [
+        128,
+        130
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "chemin",
+       "d": "M205 24 L215 24 L215 66 Q225 70 225 84 Q225 100 215 104 L215 158 L210 176 L205 158 L205 104 Q195 100 195 84 Q195 70 205 66 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "pipette",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        203,
+        40
+       ],
+       "a": [
+        217,
+        40
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        203,
+        130
+       ],
+       "a": [
+        217,
+        130
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "chemin",
+       "d": "M283 36 L297 36 L297 106 Q322 116 322 138 Q322 168 290 168 Q258 168 258 138 Q258 116 283 106 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "fiole",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        62
+       ],
+       "a": [
+        300,
+        62
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 196,
+       "texte": "A",
+       "gras": true,
+       "taille": "grand"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 196,
+       "texte": "B",
+       "gras": true,
+       "taille": "grand"
+      },
+      {
+       "forme": "texte",
+       "x": 210,
+       "y": 196,
+       "texte": "C",
+       "gras": true,
+       "taille": "grand"
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 196,
+       "texte": "D",
+       "gras": true,
+       "taille": "grand"
+      }
+     ],
+     "source": "Schéma simplifié, sans échelle"
+    },
+    {
+     "id": "materiel",
+     "type": "tableau",
+     "titre": "Le matériel disponible",
+     "colonnes": [
+      "Verrerie",
+      "Volume"
+     ],
+     "lignes": [
+      [
+       "Fiole jaugée",
+       "100,0 mL"
+      ],
+      [
+       "Fiole jaugée",
+       "250,0 mL"
+      ],
+      [
+       "Pipette jaugée",
+       "10,0 mL"
+      ],
+      [
+       "Pipette jaugée",
+       "20,0 mL"
+      ],
+      [
+       "Pipette jaugée",
+       "25,0 mL"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "verrerie",
+     "enonce": "Touche l’instrument qui permet de prélever avec précision le volume de solution mère.",
+     "reponse": [
+      "pipette"
+     ],
+     "aide": "Il est long et fin, avec un renflement et un trait de jauge.",
+     "explication": "La **pipette jaugée** prélève un volume précis. L’éprouvette est moins précise, le bécher encore moins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le facteur de dilution F = C mère / C fille ?",
+     "reponse": 12.5,
+     "aide": "Divise la concentration de la solution mère par celle de la solution fille.",
+     "explication": "F = 0,50 / 0,040 = **12,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de solution mère faut-il prélever ? Réponds en mL.",
+     "reponse": 20,
+     "unite": "mL",
+     "aide": "La quantité de soluté se conserve : C mère × V prélevé = C fille × V fille.",
+     "explication": "V prélevé = 0,040 × 250,0 / 0,50 = **20,0 mL** (ou V fille / F = 250,0 / 12,5)."
+    },
+    {
+     "type": "zone",
+     "document": "materiel",
+     "multiple": true,
+     "enonce": "Touche les deux cases du matériel à utiliser pour cette dilution.",
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "aide": "Il faut une fiole du volume de la solution fille et une pipette du volume prélevé.",
+     "explication": "La fiole jaugée de **250,0 mL** (volume fille) et la pipette jaugée de **20,0 mL** (volume prélevé)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la dilution.",
+     "items": [
+      "Prélever 20,0 mL de solution mère à la pipette jaugée",
+      "Verser ce volume dans la fiole jaugée de 250,0 mL",
+      "Ajouter de l’eau distillée jusqu’aux trois quarts et agiter",
+      "Compléter jusqu’au trait de jauge, boucher et homogénéiser"
+     ],
+     "aide": "La solution mère d’abord, l’eau ensuite, l’ajustement final au trait de jauge.",
+     "explication": "On **prélève**, on **verse** dans la fiole, on **ajoute l’eau**, puis on **complète au trait** et on homogénéise."
+    }
+   ]
+  },
+  {
+   "chapitre": "5022d177-3cf1-5936-8e27-4dbc203f4228",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le pH des produits de la maison",
+   "competence": "lire-tableau",
+   "situation": "Ilyès mesure le pH de six produits de la maison avec un pH-mètre et note ses résultats avant de les ranger.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "tableau",
+     "titre": "Les mesures d’Ilyès",
+     "colonnes": [
+      "Produit",
+      "pH à 25 °C"
+     ],
+     "lignes": [
+      [
+       "Suc gastrique",
+       2
+      ],
+      [
+       "Vinaigre",
+       3
+      ],
+      [
+       "Café",
+       5
+      ],
+      [
+       "Eau pure",
+       7
+      ],
+      [
+       "Savon liquide",
+       10
+      ],
+      [
+       "Déboucheur",
+       13
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ph",
+     "multiple": true,
+     "enonce": "Touche les valeurs de pH des solutions basiques.",
+     "reponse": [
+      "r4c1",
+      "r5c1"
+     ],
+     "aide": "À 25 °C, une solution basique a un pH supérieur à 7.",
+     "explication": "Le **savon liquide (10)** et le **déboucheur (13)** ont un pH supérieur à 7 : ils sont basiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en ions oxonium H₃O⁺ du vinaigre ? Réponds en mol/L (écris 0,001 pour 10⁻³).",
+     "reponse": 0.001,
+     "unite": "mol/L",
+     "aide": "Utilise [H₃O⁺] = 10⁻ᵖᴴ avec pH = 3.",
+     "explication": "[H₃O⁺] = 10⁻³ = **0,001 mol/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle solution du tableau contient le plus d’ions oxonium ?",
+     "options": [
+      "Le suc gastrique (pH 2)",
+      "Le vinaigre (pH 3)",
+      "L’eau pure (pH 7)",
+      "Le déboucheur (pH 13)"
+     ],
+     "reponse": 0,
+     "aide": "Plus le pH est bas, plus [H₃O⁺] est grande.",
+     "explication": "Le pH le plus bas est celui du **suc gastrique** : c’est lui qui a la plus grande [H₃O⁺]."
+    }
+   ]
+  },
+  {
+   "chapitre": "5022d177-3cf1-5936-8e27-4dbc203f4228",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le placard de la salle de bains",
+   "competence": "lire-graphique",
+   "situation": "Léa fait le tri dans le placard de la salle de bains avec son père. Elle mesure le pH de cinq produits et trace un diagramme pour les comparer.",
+   "documents": [
+    {
+     "id": "produits",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "pH de cinq produits (25 °C)",
+     "categories": [
+      "Détartrant",
+      "Eau pure",
+      "Savon",
+      "Ammoniaque",
+      "Déboucheur"
+     ],
+     "series": [
+      {
+       "nom": "pH",
+       "valeurs": [
+        1,
+        7,
+        10,
+        11,
+        13
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "pH",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Produit"
+     },
+     "valeurs": false,
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "produits",
+     "enonce": "Touche la barre du produit le plus acide.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Un produit acide a un pH inférieur à 7 ; le plus acide a le pH le plus bas.",
+     "explication": "Le **détartrant** a le pH le plus bas (1) : c’est le plus acide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La concentration en H₃O⁺ de l’eau pure est combien de fois plus grande que celle du savon ?",
+     "reponse": 1000,
+     "aide": "Compare les pH : chaque unité de pH correspond à un facteur 10.",
+     "explication": "De pH 10 à pH 7 : trois unités, donc un facteur 10³ = **1 000**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en ions HO⁻ de l’ammoniaque (pH 11) ? Réponds en mol/L (écris 0,001 pour 10⁻³). On rappelle Ke = [H₃O⁺] × [HO⁻] = 10⁻¹⁴.",
+     "reponse": 0.001,
+     "unite": "mol/L",
+     "aide": "Calcule d’abord [H₃O⁺] = 10⁻¹¹, puis divise Ke par cette valeur.",
+     "explication": "[HO⁻] = 10⁻¹⁴ / 10⁻¹¹ = 10⁻³ = **0,001 mol/L**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la réaction du vinaigre avec la soude.",
+     "texte": "CH₃COOH + HO⁻ → ___ + H₂O",
+     "reponses": [
+      [
+       "CH₃COO⁻"
+      ]
+     ],
+     "banque": [
+      "CH₃COO⁻",
+      "CH₃COOH",
+      "NH₃",
+      "H₃O⁺"
+     ],
+     "aide": "L’acide CH₃COOH cède un H⁺ à la base HO⁻ : que devient-il ?",
+     "explication": "CH₃COOH cède un H⁺ et devient sa base conjuguée : **CH₃COO⁻**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5022d177-3cf1-5936-8e27-4dbc203f4228",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un déboucheur à neutraliser",
+   "competence": "analyser-document",
+   "situation": "Samir, aide-soignant stagiaire, doit éliminer le fond d’un flacon de déboucheur. Il lit l’étiquette, puis suit la courbe d’une neutralisation faite en travaux pratiques.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "DÉBOUCHEUR GEL",
+     "sousTitre": "Usage domestique",
+     "emoji": "⚠️",
+     "lignes": [
+      {
+       "texte": "Contient de l’hydroxyde de sodium",
+       "id": "compo"
+      },
+      {
+       "texte": "pH de la solution : 13",
+       "id": "ph"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Provoque de graves brûlures de la peau",
+       "id": "danger"
+      },
+      {
+       "texte": "Ne jamais mélanger avec un autre produit",
+       "id": "melange"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "neutra",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "pH pendant l’ajout d’un acide",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+     ],
+     "series": [
+      {
+       "nom": "pH",
+       "valeurs": [
+        13,
+        12.7,
+        12,
+        7,
+        2.3,
+        1.8
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "pH",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Volume d’acide versé (mL)"
+     },
+     "source": "Courbe schématique écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la mention qui permet de savoir que la solution est basique.",
+     "reponse": [
+      "ph"
+     ],
+     "aide": "Regarde la grandeur mesurée au pH-mètre.",
+     "explication": "Le **pH de 13** est supérieur à 7 : la solution est fortement basique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en ions HO⁻ de la solution à pH 13 ? Réponds en mol/L (Ke = 10⁻¹⁴).",
+     "reponse": 0.1,
+     "unite": "mol/L",
+     "aide": "[H₃O⁺] = 10⁻¹³ ; [HO⁻] = Ke / [H₃O⁺].",
+     "explication": "[HO⁻] = 10⁻¹⁴ / 10⁻¹³ = 10⁻¹ = **0,1 mol/L**."
+    },
+    {
+     "type": "zone",
+     "document": "neutra",
+     "enonce": "Touche le point où la solution est neutre.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Une solution neutre a un pH de 7 à 25 °C.",
+     "explication": "Le pH vaut 7 après **15 mL** d’acide versé : la solution est neutre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la consigne de sécurité.",
+     "texte": "Avant de jeter ce déchet basique, on le ___ avec un acide jusqu’à un pH proche de ___ .",
+     "reponses": [
+      [
+       "neutralise"
+      ],
+      [
+       "7"
+      ]
+     ],
+     "banque": [
+      "neutralise",
+      "dilue",
+      "7",
+      "13"
+     ],
+     "aide": "Le but est de ramener le déchet près d’un pH neutre.",
+     "explication": "On **neutralise** le déchet jusqu’à un pH proche de **7** pour limiter son impact sur l’environnement."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Après une projection de ce déboucheur sur la peau, remets les gestes dans l’ordre.",
+     "items": [
+      "Rincer immédiatement et abondamment à l’eau",
+      "Retirer les vêtements souillés tout en continuant de rincer",
+      "Faire alerter les secours",
+      "Continuer le rinçage au moins 15 minutes en attendant les secours"
+     ],
+     "aide": "L’eau d’abord, sans perdre une seconde.",
+     "explication": "On **rince tout de suite**, on retire les vêtements souillés, on **alerte les secours** et on rince **au moins 15 minutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "940c2a7e-e115-54af-a76c-2f5e7dfd17bc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pharmacie ou placard à produits ?",
+   "competence": "lire-tableau",
+   "situation": "Inès range l’armoire à pharmacie et le placard à produits ménagers de la maison. Elle lit sur chaque flacon ce que contient le produit et ce qu’on en fait.",
+   "documents": [
+    {
+     "id": "produits",
+     "type": "tableau",
+     "titre": "Quatre produits du quotidien",
+     "colonnes": [
+      "Produit",
+      "Espèce active",
+      "Usage indiqué"
+     ],
+     "lignes": [
+      [
+       "Eau de Javel",
+       "ion hypochlorite ClO⁻",
+       "Nettoyer le carrelage et les sanitaires"
+      ],
+      [
+       "Eau oxygénée",
+       "peroxyde d’hydrogène H₂O₂",
+       "Nettoyer une écorchure"
+      ],
+      [
+       "Teinture d’iode",
+       "diiode I₂",
+       "Badigeonner la peau avant un soin"
+      ],
+      [
+       "Alcool à 70 %",
+       "éthanol",
+       "Désinfecter la peau avant une injection"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Informations simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "produits",
+     "enonce": "Touche l’espèce active de l’eau de Javel.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Lis la ligne de l’eau de Javel, dans la colonne « Espèce active ».",
+     "explication": "L’espèce active de l’eau de Javel est l’**ion hypochlorite ClO⁻**, un oxydant."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque produit selon l’endroit où on l’utilise.",
+     "categories": [
+      "Antiseptique (sur le vivant)",
+      "Désinfectant (sur l’inerte)"
+     ],
+     "items": [
+      [
+       "Eau de Javel",
+       1
+      ],
+      [
+       "Eau oxygénée",
+       0
+      ],
+      [
+       "Teinture d’iode",
+       0
+      ],
+      [
+       "Alcool à 70 %",
+       0
+      ]
+     ],
+     "aide": "Regarde la colonne « Usage indiqué » : peau ou surface ?",
+     "explication": "La **Javel** nettoie des surfaces inertes : désinfectant. Les trois autres s’appliquent sur la **peau** : antiseptiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ces produits détruisent les microbes parce que, pour la plupart, ce sont des…",
+     "options": [
+      "oxydants, capables de capter des électrons",
+      "réducteurs, capables de capter des électrons",
+      "acides, capables de capter des électrons",
+      "bases, capables de céder des électrons"
+     ],
+     "reponse": 0,
+     "aide": "Pense au rôle de l’oxydant dans un couple Ox/Red.",
+     "explication": "Un **oxydant** capte des électrons : c’est ce qui attaque les microbes."
+    }
+   ]
+  },
+  {
+   "chapitre": "940c2a7e-e115-54af-a76c-2f5e7dfd17bc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Doser la teinture d’iode au laboratoire",
+   "competence": "calculer",
+   "situation": "Au laboratoire de l’hôpital, Léa dose le diiode d’une solution de teinture d’iode avec une solution de thiosulfate. Elle recopie les couples mis en jeu.",
+   "documents": [
+    {
+     "id": "couples",
+     "type": "tableau",
+     "titre": "Les demi-équations du dosage",
+     "colonnes": [
+      "Couple Ox/Red",
+      "Demi-équation"
+     ],
+     "lignes": [
+      [
+       "I₂ / I⁻",
+       "I₂ + 2 e⁻ = 2 I⁻"
+      ],
+      [
+       "S₄O₆²⁻ / S₂O₃²⁻",
+       "S₄O₆²⁻ + 2 e⁻ = 2 S₂O₃²⁻"
+      ],
+      [
+       "Cl₂ / Cl⁻",
+       "Cl₂ + 2 e⁻ = 2 Cl⁻"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couples",
+     "enonce": "Touche la demi-équation du couple dont l’ion thiosulfate S₂O₃²⁻ est le réducteur.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Dans Ox + n e⁻ = Red, le réducteur est du côté droit.",
+     "explication": "Dans S₄O₆²⁻ + 2 e⁻ = 2 S₂O₃²⁻, **S₂O₃²⁻** est le réducteur (il est à droite)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le premier couple.",
+     "texte": "Dans I₂ + 2 e⁻ = 2 I⁻, I₂ est l’___ car il ___ des électrons.",
+     "reponses": [
+      [
+       "oxydant"
+      ],
+      [
+       "capte"
+      ]
+     ],
+     "banque": [
+      "oxydant",
+      "réducteur",
+      "capte",
+      "cède"
+     ],
+     "aide": "Un oxydant est capable de capter.",
+     "explication": "I₂ est l’**oxydant** : il **capte** deux électrons."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la méthode pour écrire l’équation de la réaction.",
+     "items": [
+      "Écrire les deux demi-équations dans le sens où elles se produisent",
+      "Multiplier pour avoir le même nombre d’électrons",
+      "Additionner les deux demi-équations",
+      "Simplifier : les électrons disparaissent de l’équation bilan"
+     ],
+     "aide": "On additionne seulement quand les électrons échangés sont en même nombre.",
+     "explication": "On **écrit**, on **égalise les électrons**, on **additionne**, puis on **simplifie** : les électrons ne figurent pas dans le bilan."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après I₂ + 2 S₂O₃²⁻ → 2 I⁻ + S₄O₆²⁻, combien d’ions thiosulfate réagissent avec une molécule de diiode ?",
+     "reponse": 2,
+     "aide": "Lis le nombre devant S₂O₃²⁻ dans l’équation bilan.",
+     "explication": "Le coefficient est **2** : deux ions thiosulfate pour une molécule I₂."
+    }
+   ]
+  },
+  {
+   "chapitre": "940c2a7e-e115-54af-a76c-2f5e7dfd17bc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un berlingot de Javel dans le cabinet médical",
+   "competence": "resoudre",
+   "situation": "Sonia entretient la salle d’attente d’un cabinet médical. Elle dilue un berlingot de Javel, puis elle lit l’étiquette et le récit de la matinée avant de commettre une erreur.",
+   "documents": [
+    {
+     "id": "berlingot",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "EAU DE JAVEL EN BERLINGOT",
+     "sousTitre": "Contenu : 250 mL",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Chlore actif",
+       "valeur": "9,6 %",
+       "id": "chlore"
+      },
+      {
+       "texte": "Espèce active : ion hypochlorite ClO⁻",
+       "id": "espece"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "À diluer avant usage",
+       "id": "diluer"
+      },
+      {
+       "texte": "Ne jamais mélanger avec un acide",
+       "id": "danger"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La matinée de Sonia",
+     "blocs": [
+      "Sonia verse le contenu d’un berlingot de 250 mL dans un seau, puis ajoute de l’eau pour obtenir 1,0 L de solution.",
+      "Plus tard, elle veut aussi détartrer les toilettes. Son collègue lui rappelle qu’un détartrant acide ne doit jamais rencontrer la Javel, car il se forme alors du dichlore, un gaz toxique : ClO⁻ + Cl⁻ + 2 H⁺ → Cl₂ + H₂O."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le facteur de dilution F de la solution préparée par Sonia (volume final / volume du berlingot) ?",
+     "reponse": 4,
+     "aide": "Convertis 1,0 L en mL avant de diviser.",
+     "explication": "F = 1 000 / 250 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le pourcentage de chlore actif de la solution diluée ? Réponds en %.",
+     "reponse": 2.4,
+     "unite": "%",
+     "aide": "La concentration est divisée par le facteur de dilution.",
+     "explication": "9,6 / 4 = **2,4 %**."
+    },
+    {
+     "type": "zone",
+     "document": "berlingot",
+     "enonce": "Touche la mention de l’étiquette qui aurait dû empêcher la seconde erreur de Sonia.",
+     "reponse": [
+      "danger"
+     ],
+     "aide": "Cherche la phrase qui parle d’un acide.",
+     "explication": "« **Ne jamais mélanger avec un acide** » : le détartrant des toilettes est acide."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan de l’incident évité.",
+     "texte": "Javel + détartrant acide libère du ___, un gaz ___ .",
+     "reponses": [
+      [
+       "dichlore"
+      ],
+      [
+       "toxique"
+      ]
+     ],
+     "banque": [
+      "dichlore",
+      "toxique",
+      "dioxygène",
+      "inoffensif"
+     ],
+     "aide": "Relis l’équation donnée dans le récit : quel gaz contient Cl₂ ?",
+     "explication": "Il se forme du **dichlore** Cl₂, un gaz **toxique**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces gestes selon qu’il faut les faire ou s’en abstenir.",
+     "categories": [
+      "À faire",
+      "À ne jamais faire"
+     ],
+     "items": [
+      [
+       "Porter gants et lunettes pour diluer",
+       0
+      ],
+      [
+       "Respecter la dose indiquée",
+       0
+      ],
+      [
+       "Mélanger Javel et détartrant",
+       1
+      ],
+      [
+       "Diluer dans un endroit aéré",
+       0
+      ],
+      [
+       "Ranger l’eau oxygénée en pleine lumière",
+       1
+      ]
+     ],
+     "aide": "Pense à la sécurité, à la dose et à la conservation du produit.",
+     "explication": "Gants, dose et aération sont de bons réflexes. **Ne jamais mélanger** deux produits ; l’eau oxygénée se range **au frais et à l’abri de la lumière**."
+    }
+   ]
+  },
+  {
+   "chapitre": "032398b2-25e2-5835-ae18-d59ea0f16244",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’oscillogramme de la prise de la cuisine",
+   "competence": "lire-graphique",
+   "situation": "Au lycée, Yanis observe à l’oscilloscope la tension d’une prise du secteur grâce à un transformateur de mesure. Il relève quelques points de la courbe.",
+   "documents": [
+    {
+     "id": "tension",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Une tension sinusoïdale du secteur",
+     "categories": [
+      "0",
+      "2,5",
+      "5",
+      "7,5",
+      "10",
+      "12,5",
+      "15",
+      "17,5",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        230,
+        325,
+        230,
+        0,
+        -230,
+        -325,
+        -230,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "en volts",
+      "min": -400,
+      "max": 400,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "source": "Relevé simplifié, écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tension",
+     "enonce": "Touche le point où la tension atteint sa valeur maximale.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le sommet est atteint à **5 ms** : c’est la tension maximale Umax."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la tension maximale Umax sur le graphique. Réponds en volts.",
+     "reponse": 325,
+     "tolerance": 5,
+     "unite": "V",
+     "aide": "Lis l’ordonnée du sommet de la courbe.",
+     "explication": "Umax ≈ **325 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période T de cette tension ? Réponds en millisecondes.",
+     "reponse": 20,
+     "unite": "ms",
+     "aide": "La période est la durée d’un motif complet, avant que la courbe ne se répète.",
+     "explication": "Le motif complet dure **20 ms** : la courbe revient à 0 V en se répétant à t = 20 ms."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la tension efficace Ueff = Umax / √2. Réponds en volts, arrondie à l’unité.",
+     "reponse": 230,
+     "tolerance": 0.5,
+     "unite": "V",
+     "aide": "Divise Umax par √2 ≈ 1,414.",
+     "explication": "Ueff = 325 / 1,414 ≈ **230 V**, la valeur du secteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "032398b2-25e2-5835-ae18-d59ea0f16244",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La multiprise du petit-déjeuner",
+   "competence": "raisonner",
+   "situation": "Ce matin, Nora branche trois appareils sur une même multiprise prévue pour 16 A au maximum. Elle relève l’intensité de chacun sur sa notice.",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Les appareils de la cuisine",
+     "colonnes": [
+      "Appareil",
+      "Intensité (A)"
+     ],
+     "lignes": [
+      [
+       "Bouilloire",
+       "9,0"
+      ],
+      [
+       "Grille-pain",
+       "4,0"
+      ],
+      [
+       "Four à micro-ondes",
+       "3,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité totale quand les trois appareils fonctionnent ensemble ? Réponds en ampères.",
+     "reponse": 16.5,
+     "unite": "A",
+     "aide": "Les intensités des appareils branchés ensemble s’additionnent.",
+     "explication": "9,0 + 4,0 + 3,5 = **16,5 A**, soit plus que les 16 A admis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le risque de cette situation ?",
+     "options": [
+      "Les fils s’échauffent et se détériorent",
+      "La tension du secteur passe à 325 V",
+      "L’appareil devient une prise de terre",
+      "Le courant se bloque dans le neutre"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arrive à un fil traversé par une intensité trop grande.",
+     "explication": "Une **surintensité** échauffe les fils : risque de détérioration et d’incendie."
+    },
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche l’appareil qu’il vaut mieux débrancher en premier pour réduire le plus l’intensité.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche la plus grande intensité.",
+     "explication": "La **bouilloire** (9,0 A) fait baisser l’intensité totale de 9,0 A d’un coup."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque dispositif selon ce qu’il protège avant tout.",
+     "categories": [
+      "Appareils et installation",
+      "Personnes"
+     ],
+     "items": [
+      [
+       "Disjoncteur divisionnaire",
+       0
+      ],
+      [
+       "Disjoncteur différentiel 30 mA",
+       1
+      ],
+      [
+       "Prise de terre",
+       1
+      ]
+     ],
+     "aide": "Le différentiel agit dès qu’un courant fuit à travers quelqu’un.",
+     "explication": "Le **disjoncteur** protège contre la surintensité (appareils, fils). Le **différentiel 30 mA** et la **terre** protègent les **personnes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "032398b2-25e2-5835-ae18-d59ea0f16244",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le lave-linge et le différentiel",
+   "competence": "analyser-document",
+   "situation": "Camille lance une lessive. Un fil de phase touche la carcasse du lave-linge. Un technicien a relevé les courants dans trois situations pour comprendre ce que fait le disjoncteur différentiel de 30 mA.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Courants relevés par le technicien",
+     "colonnes": [
+      "Situation",
+      "Courant dans la phase (A)",
+      "Courant dans le neutre (A)"
+     ],
+     "lignes": [
+      [
+       "1. Appareil sain",
+       "4,200",
+       "4,200"
+      ],
+      [
+       "2. Fuite à travers une personne",
+       "4,200",
+       "4,150"
+      ],
+      [
+       "3. Petite fuite par l’humidité",
+       "4,200",
+       "4,180"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés fictifs, écrits pour l’exercice"
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La buanderie",
+     "blocs": [
+      "Camille pose ses [[m|mains]] [[m|mouillées]] sur la carcasse métallique du lave-linge et sent un fourmillement dans les bras. Un instant plus tard, l’électricité de l’appartement se coupe."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dans la situation 2, de combien d’ampères le courant de la phase dépasse-t-il celui du neutre ? Réponds en mA.",
+     "reponse": 50,
+     "unite": "mA",
+     "aide": "Soustrais les deux courants, puis convertis les ampères en milliampères.",
+     "explication": "4,200 − 4,150 = 0,050 A, soit **50 mA** : ce courant « manquant » fuit, ici à travers Camille."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la situation dans laquelle le disjoncteur différentiel de 30 mA coupe le courant.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Le différentiel coupe quand l’écart dépasse 30 mA. Calcule l’écart de chaque ligne.",
+     "explication": "Écarts : 0 mA, **50 mA**, 20 mA. Seule la situation 2 dépasse 30 mA."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les mots qui désignent ce qui rend l’électrisation plus dangereuse.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "La peau mouillée conduit mieux.",
+     "explication": "Des **mains mouillées** réduisent la résistance de la peau : le courant traverse plus facilement le corps."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert ici le fil vert et jaune de la prise de terre ?",
+     "options": [
+      "À offrir un chemin autre que le corps",
+      "À augmenter la tension de l’appareil",
+      "À réduire la fréquence du secteur",
+      "À mesurer l’énergie consommée"
+     ],
+     "reponse": 0,
+     "aide": "Il relie la carcasse à la Terre.",
+     "explication": "La **terre** guide le courant de défaut hors de l’utilisateur : il ne passe plus par le corps."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Camille voit son frère collé à un fil électrique dénudé. Remets les gestes dans l’ordre.",
+     "items": [
+      "Couper le courant au disjoncteur ou débrancher sans toucher la victime",
+      "Appeler le 15, le 18 ou le 112",
+      "Rester auprès de la victime jusqu’à l’arrivée des secours"
+     ],
+     "aide": "Impossible d’approcher sans danger tant que le courant passe.",
+     "explication": "On **coupe d’abord le courant**, on **alerte** les secours, puis on **reste auprès de la victime**."
+    }
+   ]
+  },
+  {
+   "chapitre": "02f97f30-7923-5ed2-a048-644bff3b6edf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que voit l’œil, ce qu’il ne voit pas",
+   "competence": "lire-tableau",
+   "situation": "Maëlle prépare un exposé sur les rayonnements invisibles. Elle a relevé la longueur d’onde du maximum d’émission de quatre sources et dessiné l’échelle des domaines.",
+   "documents": [
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Longueurs d’onde du maximum d’émission",
+     "colonnes": [
+      "Source",
+      "Longueur d’onde"
+     ],
+     "lignes": [
+      [
+       "Lampe à bronzer",
+       "350 nm"
+      ],
+      [
+       "Pointeur laser",
+       "650 nm"
+      ],
+      [
+       "Télécommande",
+       "940 nm"
+      ],
+      [
+       "Corps humain",
+       "9,4 µm"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "spectre",
+     "type": "schema",
+     "titre": "Les domaines de longueur d’onde",
+     "largeur": 340,
+     "hauteur": 130,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 30,
+       "l": 100,
+       "h": 44,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "bande-a",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 30,
+       "l": 100,
+       "h": 44,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "bande-b",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 30,
+       "l": 100,
+       "h": 44,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "bande-c",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        80
+       ],
+       "a": [
+        120,
+        94
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        80
+       ],
+       "a": [
+        220,
+        94
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 108,
+       "texte": "400 nm",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 108,
+       "texte": "800 nm",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        18
+       ],
+       "a": [
+        320,
+        18
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 12,
+       "texte": "longueur d’onde dans le vide",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sources",
+     "enonce": "Touche la longueur d’onde qui appartient au domaine visible.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Le visible va de 400 nm à 800 nm.",
+     "explication": "**650 nm** est compris entre 400 nm et 800 nm : c’est une lumière visible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nanomètres représentent 9,4 µm ?",
+     "reponse": 9400,
+     "unite": "nm",
+     "aide": "1 µm = 1 000 nm.",
+     "explication": "9,4 × 1 000 = **9 400 nm**."
+    },
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Le corps humain émet surtout à 9 400 nm. Touche la bande de l’échelle qui contient ce rayonnement.",
+     "reponse": [
+      "bande-c"
+     ],
+     "aide": "Les longueurs d’onde augmentent vers la droite : compare 9 400 nm à 800 nm.",
+     "explication": "9 400 nm dépasse 800 nm : c’est un rayonnement **infrarouge**, dans la bande de droite."
+    }
+   ]
+  },
+  {
+   "chapitre": "02f97f30-7923-5ed2-a048-644bff3b6edf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le thermomètre frontal et la loi de Wien",
+   "competence": "lire-graphique",
+   "situation": "Une infirmière scolaire mesure la température d’élèves avec un thermomètre sans contact. Pour comprendre son fonctionnement, on trace la longueur d’onde du maximum d’émission d’un corps selon sa température.",
+   "documents": [
+    {
+     "id": "wien",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Loi de Wien : λmax en fonction de T",
+     "categories": [
+      "250",
+      "300",
+      "350",
+      "400",
+      "450",
+      "500"
+     ],
+     "series": [
+      {
+       "nom": "λmax",
+       "valeurs": [
+        11.6,
+        9.67,
+        8.29,
+        7.25,
+        6.44,
+        5.8
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "λmax",
+      "unite": "en µm",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Température T (K)"
+     },
+     "source": "Calculée avec λmax × T = 2,90 × 10⁻³ m·K"
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "THERMOMÈTRE FRONTAL",
+     "sousTitre": "Mesure sans contact",
+     "emoji": "🌡️",
+     "lignes": [
+      {
+       "texte": "Plage de mesure",
+       "valeur": "34,0 à 42,0 °C"
+      },
+      {
+       "texte": "Distance au front",
+       "valeur": "3 à 5 cm"
+      },
+      {
+       "texte": "Le capteur détecte les infrarouges émis par la peau",
+       "id": "capteur"
+      }
+     ],
+     "pied": "Notice écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notice",
+     "enonce": "Touche la ligne qui explique ce que mesure réellement le capteur.",
+     "reponse": [
+      "capteur"
+     ],
+     "aide": "Le capteur ne touche pas la peau : il reçoit un rayonnement.",
+     "explication": "Le capteur reçoit les **infrarouges** émis par la peau, puis en déduit la température."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la température du corps, 37 °C, en kelvins (T = θ + 273).",
+     "reponse": 310,
+     "unite": "K",
+     "aide": "Ajoute 273 à la valeur en degrés Celsius.",
+     "explication": "37 + 273 = **310 K**."
+    },
+    {
+     "type": "zone",
+     "document": "wien",
+     "enonce": "Touche le point de la courbe dont la température est la plus proche de celle du corps humain.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Le corps humain est à 310 K environ.",
+     "explication": "310 K est tout proche de **300 K**, point d’abscisse 300."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis sur la courbe la longueur d’onde du maximum d’émission à 300 K. Réponds en µm.",
+     "reponse": 9.7,
+     "tolerance": 0.3,
+     "unite": "µm",
+     "aide": "Lis l’ordonnée du point à 300 K.",
+     "explication": "On lit environ **9,7 µm**, dans l’infrarouge (au-delà de 0,8 µm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une élève a 40 °C de fièvre, soit 313 K. Calcule λmax avec λmax = 2,90 × 10⁻³ / T. Réponds en µm, arrondie au dixième.",
+     "reponse": 9.3,
+     "tolerance": 0.05,
+     "unite": "µm",
+     "aide": "Divise 2,90 × 10⁻³ par 313, puis multiplie par 10⁶ pour passer en µm.",
+     "explication": "λmax = 2,90 × 10⁻³ / 313 ≈ 9,27 × 10⁻⁶ m ≈ **9,3 µm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "02f97f30-7923-5ed2-a048-644bff3b6edf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du Soleil au filament : qui émet quoi ?",
+   "competence": "raisonner",
+   "situation": "Samir, pompier volontaire, apprend à se servir d’une caméra thermique. Son formateur lui montre que tout corps chaud émet un rayonnement dont le maximum dépend de la température.",
+   "documents": [
+    {
+     "id": "corps",
+     "type": "tableau",
+     "titre": "Quatre sources de rayonnement",
+     "colonnes": [
+      "Source",
+      "T (K)",
+      "λmax (µm)"
+     ],
+     "lignes": [
+      [
+       "Soleil (surface)",
+       "5 800",
+       "0,50"
+      ],
+      [
+       "Filament d’ampoule",
+       "3 000",
+       "?"
+      ],
+      [
+       "Braise",
+       "1 000",
+       "?"
+      ],
+      [
+       "Corps humain",
+       "310",
+       "9,4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Loi de Wien : λmax × T = 2,90 × 10⁻³ m·K"
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’exercice de nuit",
+     "blocs": [
+      "Dans un entrepôt sans lumière, Samir balaie la pièce avec sa caméra thermique. Sur l’écran, une silhouette apparaît nettement plus claire que les murs : un mannequin placé là par le formateur, chauffé à 37 °C."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule λmax pour la braise (1 000 K). Réponds en µm.",
+     "reponse": 2.9,
+     "tolerance": 0.05,
+     "unite": "µm",
+     "aide": "λmax = 2,90 × 10⁻³ / T, puis convertis en µm.",
+     "explication": "2,90 × 10⁻³ / 1 000 = 2,9 × 10⁻⁶ m = **2,9 µm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule λmax pour le filament de l’ampoule (3 000 K). Réponds en µm, arrondie au centième.",
+     "reponse": 0.97,
+     "tolerance": 0.005,
+     "unite": "µm",
+     "aide": "λmax = 2,90 × 10⁻³ / 3 000 ; 1 µm = 10⁻⁶ m.",
+     "explication": "2,90 × 10⁻³ / 3 000 ≈ 9,67 × 10⁻⁷ m ≈ **0,97 µm**."
+    },
+    {
+     "type": "zone",
+     "document": "corps",
+     "enonce": "Touche la source dont le maximum d’émission se situe dans le domaine visible.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Le visible va de 0,4 µm à 0,8 µm.",
+     "explication": "Seul le **Soleil** (0,50 µm) a son maximum dans le visible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une ampoule à filament chauffe-t-elle beaucoup en éclairant ?",
+     "options": [
+      "Son maximum d’émission est dans l’infrarouge, invisible mais chaud",
+      "Son maximum d’émission est dans les ultraviolets",
+      "Elle n’émet que de la lumière visible",
+      "Elle émet plus à basse température qu’à haute température"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,97 µm à la limite du visible (0,8 µm).",
+     "explication": "Avec **0,97 µm**, le maximum est dans l’infrarouge : l’essentiel du rayonnement est invisible et se ressent comme de la chaleur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la caméra thermique repère-t-elle le mannequin dans le noir ?",
+     "options": [
+      "Il émet des infrarouges que la caméra capte",
+      "Il réfléchit la lumière visible de la pièce",
+      "Il émet des ultraviolets dangereux",
+      "La caméra émet de la lumière visible"
+     ],
+     "reponse": 0,
+     "aide": "Le corps à 37 °C émet un rayonnement même sans lumière.",
+     "explication": "À 310 K, le corps émet surtout vers **9,4 µm** : des infrarouges que la caméra détecte, sans lumière."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5b17636-c520-5a19-a151-5293cdbc4c71",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les distances d’arrêt d’une voiture",
+   "competence": "lire-tableau",
+   "situation": "Lors d’une séance de prévention routière, un moniteur affiche les distances d’une voiture sur route sèche, avec un temps de réaction de 1 s.",
+   "documents": [
+    {
+     "id": "distances",
+     "type": "tableau",
+     "titre": "Distances sur route sèche",
+     "colonnes": [
+      "Vitesse (km/h)",
+      "Réaction DR (m)",
+      "Freinage DF (m)",
+      "Arrêt DA (m)"
+     ],
+     "lignes": [
+      [
+       50,
+       14,
+       14,
+       "?"
+      ],
+      [
+       90,
+       25,
+       45,
+       "?"
+      ],
+      [
+       130,
+       36,
+       95,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "distances",
+     "enonce": "Touche la distance de freinage à 90 km/h.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Repère la ligne 90 km/h, puis la colonne « Freinage DF ».",
+     "explication": "À 90 km/h, la distance de freinage est de **45 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance d’arrêt à 90 km/h ? Réponds en mètres.",
+     "reponse": 70,
+     "unite": "m",
+     "aide": "DA = DR + DF.",
+     "explication": "DA = 25 + 45 = **70 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "De 50 à 90 km/h, la vitesse est multipliée par 1,8. Par quel facteur environ la distance de freinage est-elle multipliée ?",
+     "options": [
+      "environ 1,8",
+      "environ 3",
+      "environ 5",
+      "environ 9"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Divise 45 m par 14 m.",
+     "explication": "45 / 14 ≈ 3,2 : **environ 3**. Elle varie comme le carré de la vitesse (1,8² ≈ 3,2)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5b17636-c520-5a19-a151-5293cdbc4c71",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’énergie d’une voiture en mouvement",
+   "competence": "calculer",
+   "situation": "Une conductrice conduit une voiture de 1 200 kg. Pour montrer ce que coûte la vitesse, on a calculé l’énergie cinétique du véhicule à trois vitesses.",
+   "documents": [
+    {
+     "id": "energie",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Énergie cinétique d’une voiture de 1 200 kg",
+     "categories": [
+      "30 km/h",
+      "50 km/h",
+      "70 km/h"
+     ],
+     "series": [
+      {
+       "nom": "Énergie cinétique",
+       "valeurs": [
+        41.7,
+        115.7,
+        226.9
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie cinétique",
+      "unite": "en kJ",
+      "min": 0,
+      "max": 250,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Vitesse"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées avec Ec = ½ × m × v²"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "energie",
+     "enonce": "Touche la barre qui correspond à l’énergie la plus grande à dissiper en cas de choc.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre de **70 km/h** est la plus haute : c’est là qu’il y a le plus d’énergie à dissiper."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis l’énergie cinétique à 50 km/h. Réponds en kJ.",
+     "reponse": 116,
+     "tolerance": 4,
+     "unite": "kJ",
+     "aide": "Lis l’ordonnée du sommet de la deuxième barre.",
+     "explication": "On lit environ **116 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie cinétique à 90 km/h (v = 25 m/s). Réponds en kJ.",
+     "reponse": 375,
+     "unite": "kJ",
+     "aide": "Ec = ½ × m × v² avec m = 1 200 kg et v en m/s ; 1 kJ = 1 000 J.",
+     "explication": "Ec = 0,5 × 1 200 × 25² = 375 000 J = **375 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La vitesse passe de 30 à 70 km/h. Par combien l’énergie cinétique est-elle multipliée, d’après le graphique ? Arrondis au dixième.",
+     "reponse": 5.4,
+     "tolerance": 0.3,
+     "aide": "Divise l’énergie à 70 km/h par celle à 30 km/h.",
+     "explication": "226,9 / 41,7 ≈ **5,4**. La vitesse est multipliée par 2,33, mais l’énergie par 2,33² ≈ 5,4."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5b17636-c520-5a19-a151-5293cdbc4c71",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un piéton à 80 mètres",
+   "competence": "modeliser",
+   "situation": "Sur une route de campagne, un piéton traverse à 80 m de trois voitures qui roulent à 90 km/h (25 m/s). Le conducteur A est sobre, le B a bu de l’alcool, la route est mouillée pour C.",
+   "documents": [
+    {
+     "id": "route",
+     "type": "schema",
+     "titre": "Trois voitures à 90 km/h face à un piéton",
+     "largeur": 340,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 4,
+       "y": 40,
+       "l": 20,
+       "h": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cas-a",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 40,
+       "l": 75,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 40,
+       "l": 135,
+       "h": 26,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 4,
+       "y": 85,
+       "l": 20,
+       "h": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cas-b",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 85,
+       "l": 150,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 85,
+       "l": 135,
+       "h": 26,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 4,
+       "y": 130,
+       "l": 20,
+       "h": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cas-c",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 130,
+       "l": 75,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 130,
+       "l": 204,
+       "h": 26,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        28
+       ],
+       "a": [
+        270,
+        168
+       ],
+       "style": "pointilles",
+       "teinte": "encre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "emoji",
+       "x": 270,
+       "y": 16,
+       "emoji": "🚶",
+       "taille": 20
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        176
+       ],
+       "a": [
+        332,
+        176
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        172
+       ],
+       "a": [
+        30,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 194,
+       "texte": "0",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        172
+       ],
+       "a": [
+        90,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 194,
+       "texte": "20",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        172
+       ],
+       "a": [
+        150,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 194,
+       "texte": "40",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        172
+       ],
+       "a": [
+        210,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 210,
+       "y": 194,
+       "texte": "60",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        172
+       ],
+       "a": [
+        270,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 194,
+       "texte": "80",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        330,
+        172
+       ],
+       "a": [
+        330,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 330,
+       "y": 194,
+       "texte": "100",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 208,
+       "texte": "distance (m)",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "jaune",
+       "motif": "plein",
+       "texte": "Distance de réaction"
+      },
+      {
+       "teinte": "corail",
+       "motif": "plein",
+       "texte": "Distance de freinage"
+      }
+     ],
+     "source": "Schéma à l’échelle, écrit pour l’exercice"
+    },
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Les trois cas",
+     "colonnes": [
+      "Cas",
+      "Conducteur",
+      "Route",
+      "Temps de réaction (s)",
+      "DF (m)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "sobre",
+       "sèche",
+       "1,0",
+       45
+      ],
+      [
+       "B",
+       "alcoolisé",
+       "sèche",
+       "2,0",
+       45
+      ],
+      [
+       "C",
+       "sobre",
+       "mouillée",
+       "1,0",
+       68
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "route",
+     "enonce": "Touche la voiture qui s’arrête avant d’atteindre le piéton.",
+     "reponse": [
+      "cas-a"
+     ],
+     "aide": "Compare la fin de chaque barre au trait pointillé du piéton.",
+     "explication": "Seule la voiture **A** s’arrête avant les 80 m : 25 + 45 = 70 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance d’arrêt de la voiture B ? Réponds en mètres.",
+     "reponse": 95,
+     "unite": "m",
+     "aide": "DR = v × tR avec v = 25 m/s et tR = 2,0 s, puis DA = DR + DF.",
+     "explication": "DR = 25 × 2,0 = 50 m ; DA = 50 + 45 = **95 m**, soit 15 m de trop."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur route mouillée, de combien de mètres la voiture C dépasse-t-elle la position du piéton quand elle s’arrête ?",
+     "reponse": 13,
+     "unite": "m",
+     "aide": "Calcule DA pour C puis retire 80 m.",
+     "explication": "DA = 25 + 68 = 93 m ; elle dépasse de 93 − 80 = **13 m**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication pour la voiture B.",
+     "texte": "Avec l’alcool, c’est le ___ de réaction qui double ; la distance de ___ ne change pas.",
+     "reponses": [
+      [
+       "temps"
+      ],
+      [
+       "freinage"
+      ]
+     ],
+     "banque": [
+      "temps",
+      "freinage",
+      "réaction",
+      "arrêt"
+     ],
+     "aide": "Compare les colonnes des cas A et B : qu’est-ce qui change ?",
+     "explication": "Le **temps** de réaction passe de 1,0 à 2,0 s ; la distance de **freinage** reste 45 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une distance de sécurité de 2 secondes à 25 m/s équivaut à combien de mètres ?",
+     "reponse": 50,
+     "unite": "m",
+     "aide": "Distance = vitesse × durée.",
+     "explication": "25 × 2 = **50 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a6fb2f2-dc7f-53ae-916a-27030f6ace4e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre sons autour de Nour",
+   "competence": "lire-tableau",
+   "situation": "Nour, élève infirmière, explique à un patient ce qu’est un son audible. Elle a noté la fréquence de quatre sons du quotidien.",
+   "documents": [
+    {
+     "id": "sons",
+     "type": "tableau",
+     "titre": "Fréquences de quatre sons",
+     "colonnes": [
+      "Son",
+      "Fréquence (Hz)"
+     ],
+     "lignes": [
+      [
+       "Grondement d’éléphant",
+       15
+      ],
+      [
+       "Voix parlée",
+       200
+      ],
+      [
+       "Note aiguë de violon",
+       1000
+      ],
+      [
+       "Sifflet à ultrasons",
+       25000
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sons",
+     "multiple": true,
+     "enonce": "Touche les fréquences que l’oreille humaine ne peut pas entendre.",
+     "reponse": [
+      "r0c1",
+      "r3c1"
+     ],
+     "aide": "Le domaine audible va de 20 Hz à 20 000 Hz.",
+     "explication": "**15 Hz** (infrasons) et **25 000 Hz** (ultrasons) sont hors du domaine audible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période de la note de violon à 1 000 Hz ? Réponds en millisecondes.",
+     "reponse": 1,
+     "unite": "ms",
+     "aide": "T = 1 / f, avec f en Hz et T en secondes ; 1 s = 1 000 ms.",
+     "explication": "T = 1 / 1 000 = 0,001 s = **1 ms**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi les sons audibles du tableau, lequel est le plus grave ?",
+     "options": [
+      "La voix parlée",
+      "La note aiguë de violon",
+      "Le grondement d’éléphant",
+      "Le sifflet à ultrasons"
+     ],
+     "reponse": 0,
+     "aide": "Un son grave a une basse fréquence, mais doit rester audible.",
+     "explication": "Parmi les sons audibles, la **voix parlée** (200 Hz) est la plus grave."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a6fb2f2-dc7f-53ae-916a-27030f6ace4e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’audiogramme de monsieur Garnier",
+   "competence": "lire-graphique",
+   "situation": "Monsieur Garnier, ouvrier du bâtiment, passe un audiogramme chez l’ORL. Le graphique indique, pour chaque fréquence, de combien de décibels son seuil d’audition est dégradé par rapport à une oreille normale.",
+   "documents": [
+    {
+     "id": "audiogramme",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Perte auditive de l’oreille droite",
+     "categories": [
+      "250",
+      "500",
+      "1000",
+      "2000",
+      "4000",
+      "8000"
+     ],
+     "series": [
+      {
+       "nom": "Perte",
+       "valeurs": [
+        10,
+        10,
+        15,
+        35,
+        60,
+        70
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Perte auditive",
+      "unite": "en dB",
+      "min": 0,
+      "max": 80,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Fréquence (Hz)"
+     },
+     "source": "Audiogramme fictif, écrit pour l’exercice. Une perte de 0 à 20 dB est considérée comme normale."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "audiogramme",
+     "enonce": "Touche la fréquence pour laquelle la perte est la plus forte.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "La perte est maximale à **8 000 Hz** : 70 dB."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la perte auditive à 2 000 Hz. Réponds en dB.",
+     "reponse": 35,
+     "tolerance": 2,
+     "unite": "dB",
+     "aide": "Repère la fréquence 2 000 Hz sur l’axe horizontal.",
+     "explication": "À 2 000 Hz, la perte est d’environ **35 dB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour combien de fréquences testées la perte dépasse-t-elle les 20 dB considérés comme normaux ?",
+     "reponse": 3,
+     "aide": "Compte les points situés au-dessus de 20 dB.",
+     "explication": "Les points à 2 000, 4 000 et 8 000 Hz dépassent 20 dB : **3 fréquences**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel son monsieur Garnier aura-t-il le plus de mal à entendre ?",
+     "options": [
+      "Un sifflement aigu à 8 000 Hz",
+      "Un tambour grave à 250 Hz",
+      "Une voix grave à 500 Hz",
+      "Un ronronnement à 250 Hz"
+     ],
+     "reponse": 0,
+     "aide": "Repère où la courbe est la plus haute : graves ou aigus ?",
+     "explication": "Sa perte touche surtout les **aigus** : le sifflement à 8 000 Hz est le plus difficile à entendre."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a6fb2f2-dc7f-53ae-916a-27030f6ace4e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De la discothèque à la cochlée",
+   "competence": "analyser-document",
+   "situation": "Hugo sort d’une soirée en discothèque avec des acouphènes. Son audioprothésiste lui explique comment le son arrive jusqu’au cerveau et pourquoi certains niveaux sonores abîment l’oreille.",
+   "documents": [
+    {
+     "id": "voie",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le trajet du son dans l’oreille",
+     "noeuds": [
+      {
+       "id": "pav",
+       "texte": "Pavillon"
+      },
+      {
+       "id": "n1",
+       "texte": "?"
+      },
+      {
+       "id": "oss",
+       "texte": "Osselets"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "nerf",
+       "texte": "Nerf auditif"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pav",
+       "a": "n1"
+      },
+      {
+       "de": "n1",
+       "a": "oss"
+      },
+      {
+       "de": "oss",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "nerf"
+      }
+     ]
+    },
+    {
+     "id": "niveaux",
+     "type": "tableau",
+     "titre": "Niveaux sonores relevés",
+     "colonnes": [
+      "Situation",
+      "Niveau (dB)"
+     ],
+     "lignes": [
+      [
+       "Conversation calme",
+       60
+      ],
+      [
+       "Tondeuse à gazon",
+       82
+      ],
+      [
+       "Casque à fond",
+       95
+      ],
+      [
+       "Discothèque",
+       100
+      ],
+      [
+       "Concert de rock",
+       105
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voie",
+     "enonce": "Touche le maillon où les cellules ciliées transforment la vibration en message nerveux.",
+     "reponse": [
+      "n2"
+     ],
+     "aide": "C’est le dernier organe avant le nerf auditif, dans l’oreille interne.",
+     "explication": "C’est le maillon de la **cochlée**, juste avant le nerf auditif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le trajet du son.",
+     "texte": "Le son fait vibrer le ___ , puis les osselets transmettent la vibration à la ___ .",
+     "reponses": [
+      [
+       "tympan"
+      ],
+      [
+       "cochlée",
+       "cochlee"
+      ]
+     ],
+     "banque": [
+      "tympan",
+      "cochlée",
+      "rétine",
+      "iris"
+     ],
+     "aide": "Les deux maillons « ? » de la chaîne sont avant et après les osselets.",
+     "explication": "Le **tympan** vibre, les osselets transmettent la vibration à la **cochlée**."
+    },
+    {
+     "type": "zone",
+     "document": "niveaux",
+     "multiple": true,
+     "enonce": "Touche les niveaux sonores qui dépassent 85 dB.",
+     "reponse": [
+      "r2c1",
+      "r3c1",
+      "r4c1"
+     ],
+     "aide": "Le risque apparaît à partir de 80–85 dB en exposition prolongée.",
+     "explication": "**95, 100 et 105 dB** dépassent 85 dB ; la tondeuse (82 dB) reste en dessous."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un enregistrement montre 5 motifs identiques en 10 ms. Quelle est la fréquence du son ? Réponds en Hz.",
+     "reponse": 500,
+     "unite": "Hz",
+     "aide": "Trouve d’abord la période T d’un motif, puis f = 1 / T.",
+     "explication": "T = 10 / 5 = 2 ms = 0,002 s ; f = 1 / 0,002 = **500 Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conseille l’audioprothésiste pour la prochaine soirée à 100 dB ?",
+     "options": [
+      "Porter des bouchons, faire des pauses et rester loin des enceintes",
+      "Rester près des enceintes pour s’habituer au bruit",
+      "Monter le volume pour couvrir les acouphènes",
+      "Ne rien changer car les cellules ciliées se régénèrent"
+     ],
+     "reponse": 0,
+     "aide": "Les cellules ciliées ne se régénèrent pas.",
+     "explication": "Il faut réduire **le niveau et la durée** d’exposition : bouchons, pauses, distance aux enceintes."
+    }
+   ]
+  },
+  {
+   "chapitre": "77fbf1c6-324d-5c1e-9c91-7498ad838ee3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le modèle de l’œil du TP",
+   "competence": "observer-schema",
+   "situation": "En TP, Lilou compare son œil à un appareil optique. Le professeur lui donne un schéma simplifié sur lequel la lumière arrive par la gauche.",
+   "documents": [
+    {
+     "id": "oeil",
+     "type": "schema",
+     "titre": "Un modèle simplifié de l’œil",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 115,
+       "rx": 120,
+       "ry": 85,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 115,
+       "rx": 12,
+       "ry": 34,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "cristallin",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 91,
+       "y": 57,
+       "l": 10,
+       "h": 23,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "iris-haut",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 91,
+       "y": 150,
+       "l": 10,
+       "h": 23,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "iris-bas",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M250 50 Q320 117 250 184 Q288 117 250 50 Z",
+       "ferme": true,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "retine",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 295,
+       "y": 108,
+       "l": 36,
+       "h": 14,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "nerf",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        115
+       ],
+       "a": [
+        78,
+        115
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 104,
+       "texte": "lumière",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oeil",
+     "enonce": "Touche l’élément qui joue le rôle d’écran dans le modèle.",
+     "reponse": [
+      "retine"
+     ],
+     "aide": "C’est au fond de l’œil, là où se forme l’image.",
+     "explication": "La **rétine** reçoit l’image : c’est l’écran du modèle."
+    },
+    {
+     "type": "zone",
+     "document": "oeil",
+     "multiple": true,
+     "enonce": "Touche les deux parties de l’élément qui règle la quantité de lumière entrant dans l’œil.",
+     "reponse": [
+      "iris-haut",
+      "iris-bas"
+     ],
+     "aide": "Il joue le rôle du diaphragme.",
+     "explication": "L’**iris** ouvre ou ferme la pupille : c’est le diaphragme du modèle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de l’œil à son équivalent dans le modèle.",
+     "paires": [
+      [
+       "Cornée et cristallin",
+       "Lentille convergente"
+      ],
+      [
+       "Iris",
+       "Diaphragme"
+      ],
+      [
+       "Rétine",
+       "Écran"
+      ]
+     ],
+     "aide": "Pense à un appareil photo.",
+     "explication": "Cornée et cristallin forment une **lentille convergente**, l’iris un **diaphragme**, la rétine un **écran**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une lentille convergente a une distance focale de 20 cm. Quelle est sa vergence ? Réponds en dioptries (δ).",
+     "reponse": 5,
+     "unite": "δ",
+     "aide": "V = 1 / f′ avec f′ en mètres.",
+     "explication": "f′ = 0,20 m ; V = 1 / 0,20 = **+5 δ**."
+    }
+   ]
+  },
+  {
+   "chapitre": "77fbf1c6-324d-5c1e-9c91-7498ad838ee3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’image d’une loupe sur le banc d’optique",
+   "competence": "experimenter",
+   "situation": "Sur un banc d’optique, Axel place un petit objet AB de 2 cm de haut devant une lentille convergente. Il trace deux rayons issus de B pour trouver où se forme l’image.",
+   "documents": [
+    {
+     "id": "banc",
+     "type": "schema",
+     "titre": "Un objet devant une lentille convergente (1 graduation = 1 cm)",
+     "largeur": 340,
+     "hauteur": 238,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        115
+       ],
+       "a": [
+        335,
+        115
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        210
+       ],
+       "a": [
+        290,
+        210
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        175
+       ],
+       "a": [
+        290,
+        210
+       ],
+       "style": "pointilles",
+       "teinte": "gris",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        122
+       ],
+       "a": [
+        170,
+        210
+       ],
+       "style": "pointilles",
+       "teinte": "gris",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        122
+       ],
+       "a": [
+        50,
+        210
+       ],
+       "style": "pointilles",
+       "teinte": "gris",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 236,
+       "texte": "distance à la lentille (cm)",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        112
+       ],
+       "a": [
+        20,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        207
+       ],
+       "a": [
+        20,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 226,
+       "texte": "-6",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        35,
+        112
+       ],
+       "a": [
+        35,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        35,
+        207
+       ],
+       "a": [
+        35,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        112
+       ],
+       "a": [
+        50,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        207
+       ],
+       "a": [
+        50,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 226,
+       "texte": "-4",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        112
+       ],
+       "a": [
+        65,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        207
+       ],
+       "a": [
+        65,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        112
+       ],
+       "a": [
+        80,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        207
+       ],
+       "a": [
+        80,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 226,
+       "texte": "-2",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        112
+       ],
+       "a": [
+        95,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        207
+       ],
+       "a": [
+        95,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        112
+       ],
+       "a": [
+        125,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        207
+       ],
+       "a": [
+        125,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        112
+       ],
+       "a": [
+        140,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        207
+       ],
+       "a": [
+        140,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 226,
+       "texte": "2",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        155,
+        112
+       ],
+       "a": [
+        155,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        155,
+        207
+       ],
+       "a": [
+        155,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        112
+       ],
+       "a": [
+        170,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        207
+       ],
+       "a": [
+        170,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 226,
+       "texte": "4",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        185,
+        112
+       ],
+       "a": [
+        185,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        185,
+        207
+       ],
+       "a": [
+        185,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        112
+       ],
+       "a": [
+        200,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        207
+       ],
+       "a": [
+        200,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 226,
+       "texte": "6",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        112
+       ],
+       "a": [
+        215,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        207
+       ],
+       "a": [
+        215,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        112
+       ],
+       "a": [
+        230,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        207
+       ],
+       "a": [
+        230,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 226,
+       "texte": "8",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        112
+       ],
+       "a": [
+        245,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        207
+       ],
+       "a": [
+        245,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        112
+       ],
+       "a": [
+        260,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        207
+       ],
+       "a": [
+        260,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 226,
+       "texte": "10",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        275,
+        112
+       ],
+       "a": [
+        275,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        275,
+        207
+       ],
+       "a": [
+        275,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        112
+       ],
+       "a": [
+        290,
+        118
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        207
+       ],
+       "a": [
+        290,
+        213
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 226,
+       "texte": "12",
+       "taille": "petit"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 110,
+       "cy": 115,
+       "rx": 8,
+       "ry": 72,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        115
+       ],
+       "a": [
+        20,
+        85
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 12,
+       "y": 80,
+       "texte": "B",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 12,
+       "y": 110,
+       "texte": "A",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        85
+       ],
+       "a": [
+        110,
+        85
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        85
+       ],
+       "a": [
+        290,
+        175
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        85
+       ],
+       "a": [
+        290,
+        175
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        115
+       ],
+       "a": [
+        290,
+        175
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 292,
+       "y": 190,
+       "texte": "B’",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 304,
+       "y": 110,
+       "texte": "A’",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 115,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "foyer-objet",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 115,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "foyer-image",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 48,
+       "y": 142,
+       "texte": "F",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 182,
+       "y": 106,
+       "texte": "F’",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 30,
+       "texte": "lentille",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma à l’échelle, écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "banc",
+     "enonce": "Touche le foyer image F′ de la lentille.",
+     "reponse": [
+      "foyer-image"
+     ],
+     "aide": "F′ est du côté opposé à l’objet, à la distance focale de la lentille.",
+     "explication": "F′ est le point **à droite** de la lentille, là où se coupent les rayons issus d’un faisceau parallèle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la distance focale f′ = OF′ sur le banc. Réponds en cm.",
+     "reponse": 4,
+     "unite": "cm",
+     "aide": "Compte les graduations entre la lentille et F′.",
+     "explication": "F′ est à 4 graduations : f′ = **4 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vergence de cette lentille. Réponds en dioptries (δ).",
+     "reponse": 25,
+     "unite": "δ",
+     "aide": "Convertis 4 cm en mètres avant de calculer V = 1 / f′.",
+     "explication": "f′ = 0,04 m ; V = 1 / 0,04 = **+25 δ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance de la lentille l’image A′B′ se forme-t-elle ? Réponds en cm.",
+     "reponse": 12,
+     "tolerance": 0.5,
+     "unite": "cm",
+     "aide": "Repère où se croisent les deux rayons issus de B.",
+     "explication": "Les rayons se coupent en B′, à **12 cm** de la lentille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment est l’image obtenue ?",
+     "options": [
+      "Réelle et renversée",
+      "Virtuelle et droite",
+      "Réelle et droite",
+      "Virtuelle et renversée"
+     ],
+     "reponse": 0,
+     "aide": "Elle se forme de l’autre côté de la lentille, et la flèche est inversée.",
+     "explication": "Les rayons se croisent réellement après la lentille et la flèche est inversée : image **réelle et renversée**, qu’on pourrait recueillir sur un écran."
+    }
+   ]
+  },
+  {
+   "chapitre": "77fbf1c6-324d-5c1e-9c91-7498ad838ee3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’ordonnance de l’opticien",
+   "competence": "raisonner",
+   "situation": "À l’opticien, Léo, Maya et monsieur Roux reçoivent chacun un verre correcteur. L’opticien montre à Léo un schéma de son œil, sans correction, quand il regarde un objet lointain.",
+   "documents": [
+    {
+     "id": "myope",
+     "type": "schema",
+     "titre": "L’œil de Léo, sans correction",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 115,
+       "rx": 120,
+       "ry": 85,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 115,
+       "rx": 12,
+       "ry": 34,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "cristallin",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 91,
+       "y": 57,
+       "l": 10,
+       "h": 23,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "iris-haut",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 91,
+       "y": 150,
+       "l": 10,
+       "h": 23,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "iris-bas",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M250 50 Q320 117 250 184 Q288 117 250 50 Z",
+       "ferme": true,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "retine",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 295,
+       "y": 108,
+       "l": 36,
+       "h": 14,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "nerf",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        90
+       ],
+       "a": [
+        100,
+        90
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        90
+       ],
+       "a": [
+        215,
+        115
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        115
+       ],
+       "a": [
+        268,
+        126.5
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        140
+       ],
+       "a": [
+        100,
+        140
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        140
+       ],
+       "a": [
+        215,
+        115
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        115
+       ],
+       "a": [
+        268,
+        103.5
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        115
+       ],
+       "a": [
+        268,
+        115
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 115,
+       "r": 7,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "image",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 210,
+       "texte": "faisceau venant d’un objet lointain",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "ordo",
+     "type": "tableau",
+     "titre": "Les ordonnances",
+     "colonnes": [
+      "Patient",
+      "Défaut",
+      "Verre prescrit (δ)"
+     ],
+     "lignes": [
+      [
+       "Léo",
+       "myopie",
+       "−3,0"
+      ],
+      [
+       "Maya",
+       "hypermétropie",
+       "+2,0"
+      ],
+      [
+       "M. Roux",
+       "presbytie",
+       "+1,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordonnances fictives, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "myope",
+     "enonce": "Touche l’endroit où se forme l’image d’un objet lointain pour l’œil de Léo.",
+     "reponse": [
+      "image"
+     ],
+     "aide": "Repère le point où les rayons se croisent.",
+     "explication": "Les rayons se croisent **avant la rétine** : l’image est floue sur la rétine."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque patient selon le type de lentille prescrite.",
+     "categories": [
+      "Lentille convergente",
+      "Lentille divergente"
+     ],
+     "items": [
+      [
+       "Léo",
+       1
+      ],
+      [
+       "Maya",
+       0
+      ],
+      [
+       "M. Roux",
+       0
+      ]
+     ],
+     "aide": "Le signe de la vergence indique le type de lentille.",
+     "explication": "Une vergence **négative** (Léo) correspond à une lentille divergente ; une vergence **positive** (Maya, M. Roux) à une convergente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance focale du verre de Léo ? Réponds en cm, arrondie à l’unité (valeur négative).",
+     "reponse": -33,
+     "tolerance": 0.5,
+     "unite": "cm",
+     "aide": "f′ = 1 / V ; garde le signe.",
+     "explication": "f′ = 1 / (−3,0) ≈ −0,33 m, soit **−33 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour fabriquer le verre de Maya, l’opticien dispose d’une lentille de +1,5 δ. Quelle vergence doit avoir la lentille accolée ? Réponds en δ.",
+     "reponse": 0.5,
+     "unite": "δ",
+     "aide": "Deux lentilles minces accolées : V = V₁ + V₂.",
+     "explication": "V₂ = 2,0 − 1,5 = **+0,5 δ**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une lentille divergente corrige-t-elle la myopie de Léo ?",
+     "options": [
+      "Elle diminue la convergence de l’œil, l’image recule vers la rétine",
+      "Elle augmente la convergence de l’œil, l’image avance vers le cristallin",
+      "Elle bloque la lumière avant la rétine",
+      "Elle remplace la rétine défectueuse"
+     ],
+     "reponse": 0,
+     "aide": "L’œil de Léo est trop convergent.",
+     "explication": "L’œil est trop convergent : la lentille **divergente** réduit cette convergence et ramène l’image **sur la rétine**."
+    }
+   ]
+  }
+ ]
+}

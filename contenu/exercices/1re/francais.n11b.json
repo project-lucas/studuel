@@ -1,0 +1,2206 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "64ce5f70-3206-5385-b6e6-6dab66cf3e0a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Werst, 1892 : un roman, une invention",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur *Le Château des Carpathes* de Jules Verne. Lis la carte du roman, puis le tableau de ses personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Château des Carpathes",
+     "sousTitre": "Jules Verne",
+     "emoji": "🏰",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1892",
+       "id": "pub"
+      },
+      {
+       "texte": "Collection",
+       "valeur": "Les Voyages extraordinaires, chez Hetzel"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Werst, en Transylvanie"
+      },
+      {
+       "texte": "Invention récente",
+       "valeur": "Le phonographe d’Edison, inventé en 1877",
+       "id": "ph"
+      }
+     ],
+     "pied": "Un château, une voix",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Quelques personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Rodolphe de Gortz",
+       "Le baron mélomane, obsédé par une voix"
+      ],
+      [
+       "Orfanik",
+       "?"
+      ],
+      [
+       "Franz de Télek",
+       "L’amant romantique, que la vérité brise"
+      ],
+      [
+       "Maître Koltz",
+       "Le premier magistrat du village, superstitieux"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Orfanik ?",
+     "options": [
+      "Le savant inventeur au service de Gortz, génie des machines",
+      "Le berger qui aperçoit de la fumée au-dessus du château",
+      "La cantatrice célèbre morte sur scène cinq ans plus tôt",
+      "Le forestier qui revient paralysé de sa première expédition"
+     ],
+     "reponse": 0,
+     "aide": "Il fabrique les machines dont le baron a besoin.",
+     "explication": "Orfanik est le **savant inventeur** au service de Gortz, un **génie des machines**."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case du personnage qui est superstitieux comme les villageois.",
+     "aide": "Cherche le premier magistrat du village.",
+     "explication": "**Maître Koltz**, premier magistrat de Werst, est superstitieux comme tous les villageois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’invention du phonographe de la parution du roman ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Utilise les deux dates de la fiche.",
+     "explication": "1892 − 1877 = **15 ans** : le phonographe est encore une merveille récente."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ce5f70-3206-5385-b6e6-6dab66cf3e0a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le fantôme qu’on démonte",
+   "competence": "analyser-document",
+   "situation": "Au début, le château de Werst semble hanté. À la fin, tout s’explique. Suis les étapes du roman, puis relie chaque apparence à sa vraie cause.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes du récit",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Les villageois de Werst redoutent le château"
+      },
+      {
+       "id": "n2",
+       "texte": "Nic Deck monte au château et revient paralysé"
+      },
+      {
+       "id": "n3",
+       "texte": "Franz monte et croit entendre La Stilla"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Le château saute ; Franz sombre dans la folie"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Gortz est démasqué : voix enregistrée, image projetée par des miroirs",
+      "Franz retrouve La Stilla vivante, cachée dans une chambre",
+      "Les villageois pillent le château et partagent un trésor",
+      "Un orage détruit les machines d’Orfanik avant la découverte"
+     ],
+     "reponse": 0,
+     "aide": "Avant l’explosion, le lecteur comprend d’où vient la voix.",
+     "explication": "La vérité éclate : Gortz a fait **enregistrer la voix** sur des phonographes et **projette l’image** par un jeu de **miroirs**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où l’amoureux de La Stilla paie le prix de la vérité.",
+     "aide": "Franz est brisé par ce qu’il découvre.",
+     "explication": "Le château saute et Franz **sombre dans la folie** avant de guérir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque apparence à sa cause technique ou humaine.",
+     "paires": [
+      [
+       "La voix de La Stilla",
+       "Un enregistrement sur phonographes"
+      ],
+      [
+       "L’image de La Stilla",
+       "Une projection par un jeu de miroirs"
+      ],
+      [
+       "Les machines du château",
+       "Orfanik, le génie des machines"
+      ],
+      [
+       "Tout le dispositif",
+       "L’obsession de Gortz pour une voix"
+      ]
+     ],
+     "aide": "Le roman remplace chaque mystère par une explication.",
+     "explication": "La **voix** vient des phonographes, l’**image** des miroirs, les **machines** d’Orfanik ; l’**obsession de Gortz** met tout en mouvement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du roman.",
+     "texte": "Franz sombre dans la ___ avant de ___.",
+     "reponses": [
+      [
+       "folie"
+      ],
+      [
+       "guérir"
+      ]
+     ],
+     "banque": [
+      "folie",
+      "colère",
+      "guérir",
+      "mourir"
+     ],
+     "aide": "La fin n’est pas tragique pour Franz.",
+     "explication": "Franz sombre dans la **folie**, puis **guérit**."
+    }
+   ]
+  },
+  {
+   "chapitre": "64ce5f70-3206-5385-b6e6-6dab66cf3e0a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pas fantastique, seulement romanesque",
+   "competence": "argumenter",
+   "situation": "Un roman peut-il faire peur et tout expliquer ? Lis un passage écrit pour l’exercice, à la manière de Verne, puis la phrase par laquelle le roman se commente.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la salle du château",
+     "blocs": [
+      "Franz s’était arrêté, le cœur battant. Une voix s’élevait, pure, plus belle que toutes celles qu’il avait entendues ; près de la fenêtre, une forme blanche se dessinait.",
+      "Il ignorait qu’un [[o|phonographe]], caché derrière la cloison, lui renvoyait cette voix, et qu’un [[o|miroir]] savamment placé composait l’apparition."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Jules Verne"
+    },
+    {
+     "id": "mot",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une phrase du roman",
+     "blocs": [
+      "Cette histoire n’est pas fantastique, elle n’est que romanesque."
+     ],
+     "source": "Jules Verne, *Le Château des Carpathes* (1892)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux objets qui produisent l’apparition.",
+     "aide": "L’un renvoie la voix, l’autre fabrique l’image.",
+     "explication": "Le **phonographe** produit la voix, le **miroir** l’image : la technique fabrique le surnaturel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Verne par « pas fantastique, seulement romanesque » ?",
+     "options": [
+      "Tout s’explique par la technique et par un amour fou",
+      "Les esprits existent mais le roman choisit de les taire",
+      "Le récit est invraisemblable et ne doit pas être cru",
+      "Le roman n’a rien de romanesque et relève du reportage"
+     ],
+     "reponse": 0,
+     "aide": "Reviens aux deux objets du passage : sont-ils magiques ?",
+     "explication": "Pour Verne, le fantastique est **démonté par la technique** : ni esprit ni fantôme, seulement des machines et un amour fou."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : relève-t-il de la superstition du village, ou de la science de Gortz ?",
+     "categories": [
+      "La superstition du village",
+      "La science de Gortz"
+     ],
+     "items": [
+      [
+       "Le château serait hanté",
+       0
+      ],
+      [
+       "Maître Koltz, premier magistrat superstitieux",
+       0
+      ],
+      [
+       "La voix enregistrée sur phonographes",
+       1
+      ],
+      [
+       "L’image projetée par un jeu de miroirs",
+       1
+      ],
+      [
+       "Orfanik, génie des machines",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : est-ce une croyance, ou un dispositif fabriqué ?",
+     "explication": "Les **villageois** croient aux esprits ; **Gortz et Orfanik** fabriquent le surnaturel avec phonographes et miroirs."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème du roman à ce qui l’illustre.",
+     "paires": [
+      [
+       "Le fantastique expliqué",
+       "Un décor gothique mais rationalisé"
+      ],
+      [
+       "Science et superstition",
+       "Le village croit aux esprits, le lecteur découvre des machines"
+      ],
+      [
+       "Le deuil et la reproduction",
+       "Aimer une voix enregistrée, c’est refuser la mort"
+      ],
+      [
+       "Une réflexion sur l’image",
+       "Elle survit à la personne, avant même le cinéma"
+      ]
+     ],
+     "aide": "Pense à ce que le roman montre dans chaque cas.",
+     "explication": "Verne **rationalise** le décor gothique, oppose **science et superstition**, lie le **deuil** à la reproduction, et annonce le **cinéma** par la réflexion sur l’image."
+    }
+   ]
+  },
+  {
+   "chapitre": "f05bd74c-60e2-57ca-9da8-9695dcaac366",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux pères, deux enfants, une gifle",
+   "competence": "analyser-document",
+   "situation": "Tu prépares la fiche du *Cid* de Corneille. Pour comprendre le conflit, repère d’abord qui est lié à qui.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les liens entre les personnages",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Don Diègue"
+      },
+      {
+       "id": "n2",
+       "texte": "Rodrigue"
+      },
+      {
+       "id": "n3",
+       "texte": "Chimène"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "père de"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "aime"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "fille de"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Don Gomès, le père de Chimène, qui gifle don Diègue",
+      "Don Fernand, le roi de Castille, arbitre qui temporise",
+      "Don Sanche, soupirant de Chimène et champion malheureux",
+      "L’Infante, qui aime Rodrigue mais y renonce"
+     ],
+     "reponse": 0,
+     "aide": "Le père de Chimène est celui qui commet l’affront.",
+     "explication": "Chimène est la fille de **don Gomès**, qui gifle don Diègue, père de Rodrigue : l’honneur d’un père s’oppose à l’amour de deux jeunes gens."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche le personnage qui, trop vieux pour se venger, demande à son fils de le faire.",
+     "aide": "C’est le père de Rodrigue.",
+     "explication": "**Don Diègue**, giflé et trop vieux pour se venger, demande à Rodrigue de laver l’affront."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son conflit.",
+     "paires": [
+      [
+       "Rodrigue",
+       "L’honneur de sa famille contre son amour"
+      ],
+      [
+       "Chimène",
+       "Le devoir de venger son père contre son amour"
+      ],
+      [
+       "L’Infante",
+       "Elle aime Rodrigue mais renonce : il n’est pas de son rang"
+      ],
+      [
+       "Don Fernand",
+       "Le roi de Castille, arbitre qui temporise"
+      ]
+     ],
+     "aide": "Chaque personnage est partagé entre deux forces, sauf le roi.",
+     "explication": "**Rodrigue** et **Chimène** sont écartelés entre devoir et amour ; l’**Infante** renonce à cause du rang ; **don Fernand** arbitre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le genre de la pièce.",
+     "texte": "À sa création en 1637, la pièce est une ___ ; elle devient ensuite une ___.",
+     "reponses": [
+      [
+       "tragi-comédie",
+       "tragicomédie"
+      ],
+      [
+       "tragédie"
+      ]
+     ],
+     "banque": [
+      "tragi-comédie",
+      "comédie",
+      "tragédie",
+      "farce"
+     ],
+     "aide": "Le cours précise le genre d’abord, puis le genre des éditions suivantes.",
+     "explication": "D’abord **tragi-comédie**, la pièce devient **tragédie** dans les éditions suivantes."
+    }
+   ]
+  },
+  {
+   "chapitre": "f05bd74c-60e2-57ca-9da8-9695dcaac366",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Percé jusques au fond du cœur",
+   "competence": "analyser-texte",
+   "situation": "Rodrigue vient d’apprendre que son père a été giflé. Lis le début de ses stances, puis le tableau des étapes de l’action.",
+   "documents": [
+    {
+     "id": "stances",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le début des stances",
+     "blocs": [
+      "Percé jusques au fond du cœur",
+      "D’une [[a|atteinte]] imprévue aussi bien que mortelle,"
+     ],
+     "source": "Pierre Corneille, *Le Cid* (1637), acte I, scène 6"
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les premières étapes",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "L’affront",
+       "Don Gomès gifle don Diègue, trop vieux pour se venger"
+      ],
+      [
+       "Le dilemme",
+       "?"
+      ],
+      [
+       "L’acte",
+       "Rodrigue tue le père de Chimène en duel"
+      ],
+      [
+       "Le devoir de Chimène",
+       "Elle réclame au roi la mort de Rodrigue, tout en l’aimant"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stances",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui nomme le coup qui frappe Rodrigue.",
+     "aide": "C’est un coup « imprévu et mortel ».",
+     "explication": "L’**atteinte** désigne le coup reçu : Rodrigue est frappé par la nouvelle de l’affront."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Don Diègue demande à son fils de laver l’affront",
+      "Don Fernand ordonne à Rodrigue de quitter la Castille",
+      "Chimène supplie Rodrigue de ne pas se battre en duel",
+      "L’Infante révèle à Rodrigue qu’elle l’aime en secret"
+     ],
+     "reponse": 0,
+     "aide": "Après l’affront, le père s’adresse à son fils.",
+     "explication": "Don Diègue **demande à son fils de laver l’affront** : Rodrigue hésite, et ses **stances** disent ce dilemme."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : pousse-t-il Rodrigue à frapper, ou le retient-il ?",
+     "categories": [
+      "Ce qui le pousse à frapper",
+      "Ce qui le retient"
+     ],
+     "items": [
+      [
+       "L’honneur de sa famille",
+       0
+      ],
+      [
+       "La gifle donnée à don Diègue",
+       0
+      ],
+      [
+       "Son amour pour Chimène",
+       1
+      ],
+      [
+       "Le fait que don Gomès est le père de Chimène",
+       1
+      ]
+     ],
+     "aide": "Cherche d’un côté ce qui touche son père, de l’autre ce qui touche Chimène.",
+     "explication": "L’**honneur** et l’**affront** poussent Rodrigue à frapper ; l’**amour** et le **lien avec Chimène** le retiennent : c’est le dilemme cornélien."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le sens des stances.",
+     "texte": "Dans les stances, Rodrigue ___ entre l’___ de sa famille et son amour.",
+     "reponses": [
+      [
+       "hésite"
+      ],
+      [
+       "honneur"
+      ]
+     ],
+     "banque": [
+      "hésite",
+      "triomphe",
+      "honneur",
+      "argent"
+     ],
+     "aide": "C’est un monologue de délibération.",
+     "explication": "Rodrigue **hésite** entre l’**honneur** de sa famille et son amour."
+    }
+   ]
+  },
+  {
+   "chapitre": "f05bd74c-60e2-57ca-9da8-9695dcaac366",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Va, je ne te hais point",
+   "competence": "argumenter",
+   "situation": "Chimène réclame la mort de Rodrigue et pourtant lui avoue qu’elle l’aime. Deux élèves en débattent ; tranche avec le vers de Chimène.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un vers de Chimène",
+     "blocs": [
+      "Va, je ne te [[h|hais]] point."
+     ],
+     "source": "Pierre Corneille, *Le Cid* (1637), Chimène à Rodrigue"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Élise",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élise",
+       "texte": "Chimène réclame sa mort : elle ne peut pas l’aimer."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Elle fait son [[d|devoir]] de fille sans cesser d’aimer : c’est le dilemme cornélien."
+      },
+      {
+       "qui": "Élise",
+       "texte": "Alors la pièce ne peut pas finir par un mariage."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Le roi diffère le mariage d’un an : la fin reste ouverte."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le verbe qui, nié, avoue l’amour de Chimène.",
+     "aide": "C’est le contraire d’« aimer ».",
+     "explication": "« Je ne te **hais** point » : en niant la haine, Chimène avoue qu’elle aime encore Rodrigue."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi Chimène réclame la mort de Rodrigue.",
+     "aide": "Noé le contraste avec l’amour.",
+     "explication": "Chimène agit par **devoir** : venger son père, même si elle aime l’assassin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le vers de Chimène ne contredit-il pas sa demande de mort ?",
+     "options": [
+      "Elle distingue son devoir de fille et son amour",
+      "Elle ne pense pas ce qu’elle dit devant le roi",
+      "Elle a changé d’avis entre les deux scènes",
+      "Elle joue un rôle pour tromper don Sanche"
+     ],
+     "reponse": 0,
+     "aide": "Chimène a deux obligations qui ne s’annulent pas.",
+     "explication": "Les deux valeurs coexistent : **devoir de fille** et **amour**. C’est le **dilemme cornélien**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : relève-t-il du devoir de Chimène, ou de son amour ?",
+     "categories": [
+      "Son devoir de fille",
+      "Son amour"
+     ],
+     "items": [
+      [
+       "Réclamer au roi la mort de Rodrigue",
+       0
+      ],
+      [
+       "Vouloir venger son père",
+       0
+      ],
+      [
+       "Dire « Va, je ne te hais point »",
+       1
+      ],
+      [
+       "Aimer toujours Rodrigue",
+       1
+      ]
+     ],
+     "aide": "D’un côté ce qu’elle doit à son père, de l’autre ce qu’elle ressent.",
+     "explication": "Réclamer la mort et venger son père relèvent du **devoir** ; l’aveu et l’amour relèvent du **cœur**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce qu’elle désigne.",
+     "paires": [
+      [
+       "Le dilemme cornélien",
+       "Deux valeurs également hautes et un choix qui coûte"
+      ],
+      [
+       "Le héros cornélien",
+       "Il se grandit en choisissant le devoir sans cesser d’aimer"
+      ],
+      [
+       "La fin ouverte",
+       "Le mariage est différé d’un an"
+      ],
+      [
+       "Le reproche de l’Académie",
+       "Chimène épouserait le meurtrier de son père"
+      ]
+     ],
+     "aide": "Chaque notion renvoie à un moment ou à un enjeu de la pièce.",
+     "explication": "Le **dilemme** oppose deux valeurs hautes ; le **héros** choisit le devoir ; la **fin** reste ouverte ; l’**Académie** reproche la bienséance enfreinte."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4661895-dbf5-5c08-adc0-c632c0f5dda2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Eylau, l’Empire, puis la Restauration",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Colonel Chabert* de Balzac. Place l’histoire dans son temps, puis repère les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "De l’Empire à la parution du récit",
+     "debut": 1800,
+     "fin": 1840,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "emp",
+       "debut": 1804,
+       "fin": 1814,
+       "nom": "Empire",
+       "teinte": "ambre"
+      },
+      {
+       "id": "res",
+       "debut": 1814,
+       "fin": 1830,
+       "nom": "Restauration",
+       "teinte": "bleu"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "eyl",
+       "date": 1807,
+       "nom": "Eylau"
+      },
+      {
+       "id": "par",
+       "date": 1832,
+       "nom": "Parution"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il représente"
+     ],
+     "lignes": [
+      [
+       "Chabert",
+       "?"
+      ],
+      [
+       "La comtesse Ferraud",
+       "Ancienne fille du Palais-Royal : l’ambition sans scrupules"
+      ],
+      [
+       "Le comte Ferraud",
+       "Noble de la Restauration, qui pourrait la répudier"
+      ],
+      [
+       "Derville",
+       "L’avoué honnête, qui voit tout et ne peut rien"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "eyl"
+     ],
+     "enonce": "Touche la bataille où Chabert est déclaré mort.",
+     "aide": "C’est la première date de la frise.",
+     "explication": "Chabert, héros d’**Eylau**, est déclaré mort en 1807."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la date où Chabert est déclaré mort de la parution du récit ?",
+     "reponse": 25,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1832 − 1807 = **25 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Chabert ?",
+     "options": [
+      "L’honneur militaire de l’Empire, naïf devant l’argent",
+      "L’ambition d’un noble de la Restauration",
+      "La justice, vue comme une machine à broyer",
+      "Le témoin lucide qui voit tout et ne peut rien"
+     ],
+     "reponse": 0,
+     "aide": "Chabert est un héros de l’Empire ; que lui manque-t-il face à la société ?",
+     "explication": "Chabert représente l’**honneur militaire de l’Empire**, naïf devant l’argent."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case de celui qui est le témoin lucide et honnête.",
+     "aide": "C’est l’avoué.",
+     "explication": "**Derville**, l’avoué honnête, a la fonction du témoin lucide."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4661895-dbf5-5c08-adc0-c632c0f5dda2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De l’étude de Derville à l’hospice",
+   "competence": "analyser-document",
+   "situation": "Chabert se bat pour retrouver son identité. Suis les étapes de sa procédure, puis relie ce qui le broie.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes du récit",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Un homme misérable se présente chez Derville"
+      },
+      {
+       "id": "n2",
+       "texte": "Derville, convaincu, engage la procédure"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Chabert comprend que sa femme le méprise"
+      },
+      {
+       "id": "n5",
+       "texte": "Il renonce à sa fortune, à son nom"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "La comtesse l’attendrit et l’attire à la campagne pour un désistement",
+      "La comtesse le reconnaît publiquement devant le tribunal",
+      "Le comte Ferraud lui rend sa fortune de bonne grâce",
+      "Derville abandonne l’affaire faute de preuves"
+     ],
+     "reponse": 0,
+     "aide": "La comtesse change d’attitude pour mieux le piéger.",
+     "explication": "La comtesse **attendrit** Chabert, l’**attire à la campagne** et lui fait presque **signer un désistement**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui provoque le renoncement de Chabert.",
+     "aide": "C’est ce qu’il découvre sur sa femme.",
+     "explication": "Il comprend **qu’elle le méprise** : écœuré, il renonce."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque force à ce qu’elle est pour Chabert.",
+     "paires": [
+      [
+       "La justice",
+       "Une machine"
+      ],
+      [
+       "L’argent et le mariage",
+       "Une comptabilité"
+      ],
+      [
+       "L’histoire",
+       "Un héros de l’Empire devenu inutile sous la Restauration"
+      ]
+     ],
+     "aide": "Chaque force broie Chabert à sa façon.",
+     "explication": "La **justice** est une machine, l’**argent et le mariage** une comptabilité, l’**histoire** rend inutile un héros de l’Empire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’épilogue.",
+     "texte": "Des années plus tard, Derville retrouve Chabert à l’hospice de ___, où il se fait appeler par un ___.",
+     "reponses": [
+      [
+       "Bicêtre"
+      ],
+      [
+       "numéro"
+      ]
+     ],
+     "banque": [
+      "Bicêtre",
+      "Charenton",
+      "numéro",
+      "prénom"
+     ],
+     "aide": "Un hospice parisien ; un nom remplacé par autre chose.",
+     "explication": "Derville le retrouve à l’hospice de **Bicêtre**, désigné par un **numéro**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4661895-dbf5-5c08-adc0-c632c0f5dda2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Légalement mort, enterré sous les vivants",
+   "competence": "analyser-texte",
+   "situation": "Un homme peut-il être vivant et pourtant n’avoir plus d’identité ? Lis deux phrases de Chabert, puis complète l’argumentation.",
+   "documents": [
+    {
+     "id": "mots",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux phrases de Chabert",
+     "blocs": [
+      "« Pas Chabert ! pas Chabert ! je me nomme [[h|Hyacinthe]]. »",
+      "« J’ai été enterré sous des [[o|morts]] ; mais maintenant je suis enterré sous des [[o|vivants]]. »"
+     ],
+     "source": "Honoré de Balzac, *Le Colonel Chabert* (1832)"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’identité tient au papier",
+       "On peut être vivant et légalement mort",
+       "?"
+      ],
+      [
+       "La société est un système d’intérêts",
+       "L’individu y pèse peu",
+       "La comtesse Ferraud sacrifie son premier mari à sa fortune"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mots",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le prénom que Chabert revendique à la place de son nom.",
+     "aide": "Il refuse de s’appeler Chabert.",
+     "explication": "À l’hospice, Chabert refuse son nom : « je me nomme **Hyacinthe** »."
+    },
+    {
+     "type": "zone",
+     "document": "mots",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots qui s’opposent dans la seconde phrase.",
+     "aide": "L’un désigne ceux qui ne sont plus, l’autre ceux qui sont encore là.",
+     "explication": "**Morts** et **vivants** : Chabert a quitté la fosse commune pour être enterré « sous des vivants »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Chabert, héros d’Eylau déclaré mort, ne peut pas retrouver son nom",
+      "Derville, avoué honnête, qui gagne tous ses procès",
+      "La comtesse Ferraud, qui reconnaît publiquement son mari",
+      "Le comte Ferraud, qui répudie sa femme pour devenir pair"
+     ],
+     "reponse": 0,
+     "aide": "Quel personnage est vivant sans exister aux yeux de la loi ?",
+     "explication": "Chabert illustre l’argument : il est **légalement mort** et ne peut pas retrouver son identité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du récit à ce qu’il met en lumière.",
+     "paires": [
+      [
+       "Le refus de son nom : « Pas Chabert ! »",
+       "Chabert renonce à toute identité"
+      ],
+      [
+       "L’avoué Derville",
+       "Un témoin lucide qui voit tout et ne peut rien"
+      ],
+      [
+       "Le comte Ferraud",
+       "Un noble de la Restauration qui pourrait répudier sa femme"
+      ],
+      [
+       "Le réalisme balzacien",
+       "La société est un système d’intérêts"
+      ]
+     ],
+     "aide": "Chaque élément éclaire la façon dont la société traite Chabert.",
+     "explication": "Le **refus du nom** dit le renoncement ; **Derville** est le témoin lucide ; **Ferraud** incarne l’ambition de la Restauration ; le **réalisme** montre un système d’intérêts."
+    }
+   ]
+  },
+  {
+   "chapitre": "50ee92fa-58bd-5673-912f-dba53cb9d687",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman-feuilleton en trois temps",
+   "competence": "analyser-document",
+   "situation": "Tu prépares la fiche du *Comte de Monte-Cristo*. Lis la carte du roman, puis repère les trois temps de son histoire.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Comte de Monte-Cristo",
+     "sousTitre": "Alexandre Dumas",
+     "emoji": "🗝️",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Alexandre Dumas, avec Auguste Maquet",
+       "id": "co"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "En feuilleton, dans le Journal des débats, de 1844 à 1846"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "De 1815 (retour de l’île d’Elbe) à la monarchie de Juillet"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "Edmond Dantès"
+      }
+     ],
+     "pied": "L’un des romans les plus lus au monde",
+     "teinte": "violet"
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les trois temps du roman",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Bonheur : Dantès va épouser Mercédès"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Vengeance : le comte détruit ses ennemis"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Injustice : dénoncé, Dantès passe quatorze ans au château d’If",
+      "Triomphe : Dantès est nommé capitaine et reçoit une médaille",
+      "Exil : Dantès quitte volontairement Marseille pour Paris",
+      "Mariage : Dantès épouse Mercédès et part en voyage"
+     ],
+     "reponse": 0,
+     "aide": "Entre le bonheur et la vengeance, il y a la prison.",
+     "explication": "Le deuxième temps est l’**injustice** : dénoncé, Dantès passe **quatorze ans au château d’If**, sans jugement."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "co"
+     ],
+     "enonce": "Touche la ligne qui dit avec qui Dumas a écrit le roman.",
+     "aide": "Dumas n’a pas écrit seul.",
+     "explication": "Dumas a écrit le roman avec **Auguste Maquet**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque ennemi de Dantès à son sort.",
+     "paires": [
+      [
+       "Fernand Mondego",
+       "Comte de Morcerf, démasqué, il se tue"
+      ],
+      [
+       "Danglars",
+       "Baron et banquier, ruiné par le comte"
+      ],
+      [
+       "Villefort",
+       "Procureur du roi, il finit fou"
+      ],
+      [
+       "Morrel",
+       "Armateur loyal, sauvé de la faillite"
+      ]
+     ],
+     "aide": "Morrel est un ami, pas un ennemi.",
+     "explication": "**Fernand** se tue, **Danglars** est ruiné, **Villefort** devient fou ; l’armateur **Morrel**, loyal, est sauvé."
+    }
+   ]
+  },
+  {
+   "chapitre": "50ee92fa-58bd-5673-912f-dba53cb9d687",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a fait emprisonner Dantès ?",
+   "competence": "analyser-document",
+   "situation": "Dantès est emprisonné par jalousie et par calcul. Lis le tableau des dénonciateurs, puis suis son parcours jusqu’au comte de Monte-Cristo.",
+   "documents": [
+    {
+     "id": "denonc",
+     "type": "tableau",
+     "titre": "Les dénonciateurs",
+     "colonnes": [
+      "Qui",
+      "Pourquoi"
+     ],
+     "lignes": [
+      [
+       "Danglars",
+       "Par jalousie"
+      ],
+      [
+       "Fernand",
+       "Par jalousie"
+      ],
+      [
+       "Villefort",
+       "Par calcul : la lettre bonapartiste était adressée à son propre père, Noirtier"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "De la prison à la vengeance",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Dantès est enfermé quatorze ans au château d’If"
+      },
+      {
+       "id": "n2",
+       "texte": "L’abbé Faria lui révèle le complot et un trésor"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il trouve un trésor sur l’île de Monte-Cristo"
+      },
+      {
+       "id": "n5",
+       "texte": "Sous plusieurs noms, il détruit ses ennemis"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "denonc",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui explique pourquoi le procureur fait disparaître Dantès.",
+     "aide": "Cherche le mot « calcul ».",
+     "explication": "Villefort agit **par calcul** : la lettre était adressée à son propre père, **Noirtier**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il s’évade en prenant la place du mort, dans un sac jeté à la mer",
+      "Il est gracié par le roi après une longue enquête",
+      "Il convainc ses geôliers de le laisser partir à Marseille",
+      "Il creuse seul un tunnel jusqu’à la terre ferme"
+     ],
+     "reponse": 0,
+     "aide": "Entre le château d’If et l’île de Monte-Cristo, il faut sortir de prison.",
+     "explication": "Dantès **prend la place du mort** dans un sac **jeté à la mer** : c’est son évasion."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où Dantès apprend qui l’a trahi.",
+     "aide": "Un compagnon de prison lui révèle le complot.",
+     "explication": "**Faria** lui révèle le complot et lui lègue le secret d’un trésor."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "L’abbé Faria",
+       "Le maître qui l’instruit et lui lègue un secret"
+      ],
+      [
+       "Mercédès",
+       "L’épouse de Fernand, qui a reconnu Dantès"
+      ],
+      [
+       "Haydée",
+       "Celle avec qui Dantès s’éloigne à la fin"
+      ],
+      [
+       "Noirtier",
+       "Le père de Villefort, destinataire de la lettre"
+      ]
+     ],
+     "aide": "Un personnage de chaque camp : maître, amour, avenir, famille d’un ennemi.",
+     "explication": "**Faria** instruit Dantès, **Mercédès** l’a reconnu, **Haydée** part avec lui, **Noirtier** est le père de Villefort."
+    }
+   ]
+  },
+  {
+   "chapitre": "50ee92fa-58bd-5673-912f-dba53cb9d687",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Jusqu’où la vengeance est-elle juste ?",
+   "competence": "argumenter",
+   "situation": "Lis un passage écrit pour l’exercice, à la manière de Dumas, où le comte doute pour la première fois, puis complète le tableau.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une nuit de doute",
+     "blocs": [
+      "Le comte regarda la maison de l’armateur qu’il avait sauvé de la faillite ; puis, dans la rue voisine, la fenêtre où dormait le fils d’un de ses ennemis.",
+      "« J’ai puni ceux qui m’avaient volé quatorze ans de ma vie, murmura-t-il ; mais cet enfant, qu’a-t-il fait ? » Il [[d|hésita]], pour la première fois depuis longtemps."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Alexandre Dumas"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La vengeance de Dantès est méthodique",
+       "Il détruit ses ennemis un à un",
+       "Ruine, déshonneur, folie, suicide"
+      ],
+      [
+       "Elle pose pourtant un doute moral",
+       "?",
+       "Il part avec Haydée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe qui montre que le comte commence à douter.",
+     "aide": "Il s’arrête avant de continuer.",
+     "explication": "Le comte **hésite** : sa vengeance atteint des innocents et il s’en trouble."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Elle atteint aussi des innocents, et il s’en trouble",
+      "Elle échoue complètement, faute d’argent et d’appuis",
+      "Elle déplaît à Mercédès, qui menace de le dénoncer",
+      "Elle est jugée par un tribunal qui condamne le comte"
+     ],
+     "reponse": 0,
+     "aide": "Reviens au passage : à qui pense le comte devant la fenêtre ?",
+     "explication": "La vengeance **atteint aussi des innocents** : il s’en trouble et finit par partir avec Haydée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : appartient-il à la vengeance, ou au trouble qui la suit ?",
+     "categories": [
+      "La vengeance",
+      "Le trouble"
+     ],
+     "items": [
+      [
+       "Ruiner Danglars",
+       0
+      ],
+      [
+       "Pousser Fernand à se tuer",
+       0
+      ],
+      [
+       "Voir que des innocents sont frappés",
+       1
+      ],
+      [
+       "Se demander jusqu’où la vengeance est juste",
+       1
+      ]
+     ],
+     "aide": "D’un côté ce que fait Dantès, de l’autre ce qu’il ressent ensuite.",
+     "explication": "**Ruiner** et **pousser au suicide** sont des actes de vengeance ; **voir des innocents frappés** et **se demander jusqu’où elle est juste** sont des doutes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque piste de la dissertation à son illustration.",
+     "paires": [
+      [
+       "Le héros-justicier",
+       "Il se croit l’instrument de la Providence, puis doute"
+      ],
+      [
+       "La métamorphose",
+       "Du naïf marin à l’homme tout-puissant, masqué, énigmatique"
+      ],
+      [
+       "Les habits du roman populaire",
+       "Ils portent une question morale sérieuse"
+      ],
+      [
+       "La société de 1830",
+       "L’argent, la presse, la Bourse"
+      ]
+     ],
+     "aide": "Chaque piste correspond à un aspect du roman.",
+     "explication": "Dantès se croit l’instrument de la **Providence** ; il se **métamorphose** ; le **roman populaire** pose une question morale ; la **société de 1830** est faite d’argent, de presse et de Bourse."
+    }
+   ]
+  },
+  {
+   "chapitre": "1bd614dd-7bf3-5936-815e-ba4745b99f30",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du condamné à l’abolition",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Dernier Jour d’un condamné* de Victor Hugo. Place le livre dans le temps, puis suis les étapes du récit.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "De la parution à l’abolition",
+     "debut": 1800,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "par",
+       "date": 1829,
+       "nom": "Parution anonyme"
+      },
+      {
+       "id": "abo",
+       "date": 1981,
+       "nom": "Abolition"
+      }
+     ]
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes du récit",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Bicêtre : l’attente"
+      },
+      {
+       "id": "n2",
+       "texte": "Le ferrement des forçats"
+      },
+      {
+       "id": "n3",
+       "texte": "La Conciergerie : le compte à rebours"
+      },
+      {
+       "id": "n4",
+       "texte": "La visite de sa fille de trois ans"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      },
+      {
+       "id": "n6",
+       "texte": "La place de Grève : la fin"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du livre de l’abolition de la peine de mort en France ?",
+     "reponse": 152,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1981 − 1829 = **152 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La toilette du condamné et la charrette",
+      "Le procès devant la cour d’assises",
+      "La grâce refusée par le roi",
+      "Le départ pour le bagne de Toulon"
+     ],
+     "reponse": 0,
+     "aide": "Juste avant la place de Grève, le condamné est préparé puis conduit.",
+     "explication": "Avant la place de Grève viennent la **toilette du condamné** et la **charrette** : c’est la mécanique de l’exécution."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape où la fille du condamné, qui ne le reconnaît plus, lui rend visite.",
+     "aide": "Elle a trois ans.",
+     "explication": "La visite de sa **fille de trois ans**, qui ne le reconnaît plus, bouleverse le condamné."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec ce que le cours dit du narrateur.",
+     "texte": "Le narrateur est un homme ___ ; on ne saura ni son ___ ni son crime.",
+     "reponses": [
+      [
+       "condamné"
+      ],
+      [
+       "nom"
+      ]
+     ],
+     "banque": [
+      "condamné",
+      "gracié",
+      "nom",
+      "âge"
+     ],
+     "aide": "Hugo veut que le lecteur ne puisse pas se rassurer.",
+     "explication": "C’est un homme **condamné** à mort dont on ne saura ni le **nom** ni le crime."
+    }
+   ]
+  },
+  {
+   "chapitre": "1bd614dd-7bf3-5936-815e-ba4745b99f30",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le temps haché d’un journal",
+   "competence": "analyser-texte",
+   "situation": "Le récit est un journal en chapitres très brefs. Lis le début et la fin du livre, puis ce que l’on sait — et ce que l’on ignore — du narrateur.",
+   "documents": [
+    {
+     "id": "mots",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le début et la fin du récit",
+     "blocs": [
+      "Condamné à mort ! Voilà cinq [[d|semaines]] que j’habite avec cette pensée.",
+      "QUATRE HEURES."
+     ],
+     "source": "Victor Hugo, *Le Dernier Jour d’un condamné* (1829), début et fin du récit"
+    },
+    {
+     "id": "sait",
+     "type": "tableau",
+     "titre": "Ce qu’on sait, ce qu’on ignore",
+     "colonnes": [
+      "Ce qu’on sait",
+      "Ce qu’on ignore"
+     ],
+     "lignes": [
+      [
+       "Il est condamné à mort",
+       "Son nom"
+      ],
+      [
+       "Il a une mère, une femme et une enfant",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mots",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui dit depuis combien de temps il vit avec cette pensée.",
+     "aide": "Cherche une unité de temps.",
+     "explication": "« Voilà cinq **semaines** » : le temps est compté dès la première phrase."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Son crime",
+      "Le prénom de sa fille",
+      "Le nom de la prison où il attend",
+      "La place où il sera exécuté"
+     ],
+     "reponse": 0,
+     "aide": "Hugo ne livre ni son nom ni cette information.",
+     "explication": "On ignore son **crime** : Hugo veut que le lecteur ne puisse pas se rassurer en jugeant le personnage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit un dernier chapitre réduit à ces deux mots ?",
+     "options": [
+      "Le récit s’arrête net, comme la vie du condamné",
+      "Le récit annonce une suite au chapitre suivant",
+      "Le narrateur se réveille et découvre qu’il rêvait",
+      "Le narrateur prend le temps d’expliquer son geste"
+     ],
+     "reponse": 0,
+     "aide": "Que devient la voix qui écrivait le journal ?",
+     "explication": "« QUATRE HEURES » : le récit **s’arrête net**, comme la vie du condamné."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix d’écriture à son effet.",
+     "paires": [
+      [
+       "Le journal à la première personne",
+       "Le lecteur vit l’attente de l’intérieur"
+      ],
+      [
+       "Les chapitres très brefs",
+       "Ils miment le temps haché de l’angoisse"
+      ],
+      [
+       "L’anonymat du condamné",
+       "Il devient n’importe qui : on ne peut plus se rassurer"
+      ],
+      [
+       "Le récit qui s’arrête net",
+       "L’exécution interrompt la voix"
+      ]
+     ],
+     "aide": "Chaque choix agit sur la façon dont le lecteur reçoit le récit.",
+     "explication": "Le **journal** fait vivre l’attente de l’intérieur ; les **chapitres brefs** mêment l’angoisse ; l’**anonymat** efface la distance ; l’**arrêt net** dit la mort."
+    }
+   ]
+  },
+  {
+   "chapitre": "1bd614dd-7bf3-5936-815e-ba4745b99f30",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Convaincre ou faire éprouver ?",
+   "competence": "argumenter",
+   "situation": "Le livre est un plaidoyer contre la peine de mort. Deux élèves se demandent comment il argumente ; complète leur tableau.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Adèle",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Adèle",
+       "texte": "Hugo n’apporte aucun argument de droit : ce livre ne prouve rien."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Son argument n’est pas juridique, il est [[e|expérimental]] : il fait éprouver l’attente au lecteur, minute par minute."
+      },
+      {
+       "qui": "Adèle",
+       "texte": "Mais pourquoi cacher le crime du narrateur ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Pour que le lecteur ne puisse pas se rassurer en jugeant le personnage."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Convaincre et persuader",
+     "colonnes": [
+      "Façon",
+      "Principe",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Convaincre",
+       "Démontrer par la raison",
+       "Des lois, des chiffres"
+      ],
+      [
+       "Persuader",
+       "?",
+       "Le journal du condamné fait ressentir l’attente"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche l’adjectif qui dit la nature de l’argument de Hugo.",
+     "aide": "Yanis oppose cet argument à un argument juridique.",
+     "explication": "L’argument de Hugo est **expérimental** : il faut éprouver l’attente de l’échafaud."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Toucher le lecteur en lui faisant éprouver ce que vit le condamné",
+      "Citer un article du Code pénal et des précédents",
+      "Opposer une statistique à une autre pour réfuter l’adversaire",
+      "Faire parler un juge qui explique les motifs de la loi"
+     ],
+     "reponse": 0,
+     "aide": "Quel effet Hugo cherche-t-il sur le lecteur ?",
+     "explication": "Persuader, c’est **toucher le lecteur** : l’argument passe par l’émotion plutôt que par la démonstration."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque moyen : relève-t-il de la raison, ou de l’émotion ?",
+     "categories": [
+      "La raison",
+      "L’émotion"
+     ],
+     "items": [
+      [
+       "Citer un article du Code pénal",
+       0
+      ],
+      [
+       "Aligner des statistiques sur les exécutions",
+       0
+      ],
+      [
+       "Faire vivre l’attente minute par minute",
+       1
+      ],
+      [
+       "Montrer une enfant qui ne reconnaît plus son père",
+       1
+      ]
+     ],
+     "aide": "Un argument de raison se démontre ; un argument d’émotion se ressent.",
+     "explication": "Le **Code pénal** et les **statistiques** relèvent de la raison ; l’**attente** et la **fille qui ne reconnaît plus son père** relèvent de l’émotion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Hugo cache-t-il le crime et le nom du condamné ?",
+     "options": [
+      "Pour qu’on ne puisse pas se rassurer en jugeant le héros",
+      "Pour garder le suspense jusqu’au dernier chapitre",
+      "Parce qu’il ne connaissait pas lui-même l’affaire",
+      "Parce que la censure lui interdisait de les écrire"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la dernière réplique de Yanis.",
+     "explication": "En cachant crime et nom, Hugo fait du condamné **n’importe qui** : le lecteur ne peut plus se tenir à distance."
+    }
+   ]
+  },
+  {
+   "chapitre": "07407d3b-5f37-5763-952c-76dc88fdc894",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un vaudeville de 1896 et son séducteur",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Dindon*. Place la pièce dans la carrière de Georges Feydeau, puis repère les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "La vie et les pièces de Feydeau",
+     "debut": 1860,
+     "fin": 1925,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1862,
+       "nom": "Naissance"
+      },
+      {
+       "id": "din",
+       "date": 1896,
+       "nom": "Le Dindon"
+      },
+      {
+       "id": "puce",
+       "date": 1907,
+       "nom": "La Puce à l’oreille"
+      },
+      {
+       "id": "mort",
+       "date": 1921,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son ressort comique"
+     ],
+     "lignes": [
+      [
+       "Pontagnac",
+       "Le séducteur de trottoir, pris à ses propres pièges"
+      ],
+      [
+       "Vatelin",
+       "Le mari honnête que son passé rattrape"
+      ],
+      [
+       "Lucienne",
+       "?"
+      ],
+      [
+       "Rédillon",
+       "Le jeune soupirant, épuisé au mauvais moment"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "din"
+     ],
+     "enonce": "Sur la frise, touche la pièce créée en 1896.",
+     "aide": "Elle porte le nom d’un animal.",
+     "explication": "*Le Dindon* est créé en **1896** au théâtre du Palais-Royal."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Le Dindon* de *La Puce à l’oreille* ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1907 − 1896 = **11 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Lucienne ?",
+     "options": [
+      "L’épouse vertueuse par principe, qui cherche un vengeur",
+      "La maîtresse anglaise de Vatelin, relancée à Paris",
+      "La cantatrice du Palais-Royal, adorée du public",
+      "La logeuse de l’hôtel Ultimus, complice des clients"
+     ],
+     "reponse": 0,
+     "aide": "Lucienne est la femme de Vatelin.",
+     "explication": "Lucienne est l’**épouse vertueuse par principe**, qui cherche un « vengeur »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le début de l’histoire.",
+     "texte": "Pontagnac suit Lucienne jusque chez elle et découvre qu’elle est la ___ de son ami ___.",
+     "reponses": [
+      [
+       "femme"
+      ],
+      [
+       "Vatelin"
+      ]
+     ],
+     "banque": [
+      "femme",
+      "sœur",
+      "Vatelin",
+      "Soldignac"
+     ],
+     "aide": "Le tableau t’aide à retrouver le prénom de l’ami.",
+     "explication": "Elle est la **femme** de son ami **Vatelin**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07407d3b-5f37-5763-952c-76dc88fdc894",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui trompe qui à l’hôtel Ultimus ?",
+   "competence": "analyser-document",
+   "situation": "Dans *Le Dindon*, celui qui manœuvre le plus est celui qui perd. Lis le tableau des étapes, puis remets les événements dans l’ordre.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes de la machine",
+     "colonnes": [
+      "Moment",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le serment",
+       "Lucienne ne cédera à Pontagnac que si son mari la trompe"
+      ],
+      [
+       "Le calcul",
+       "?"
+      ],
+      [
+       "Le rendez-vous",
+       "À l’hôtel Ultimus"
+      ],
+      [
+       "Le retour de bâton",
+       "Soldignac arrive avec un commissaire : on prend Pontagnac pour l’amant de Maggy"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du calcul ?",
+     "options": [
+      "Pontagnac conseille l’hôtel à Vatelin et prévient Lucienne",
+      "Vatelin avoue sa liaison à sa femme pour se faire pardonner",
+      "Lucienne prévient la police pour piéger son mari",
+      "Rédillon propose à Pontagnac un échange de rôles"
+     ],
+     "reponse": 0,
+     "aide": "Pontagnac veut que Lucienne surprenne son mari.",
+     "explication": "**Pontagnac conseille l’hôtel** à Vatelin et **prévient Lucienne**, pour qu’elle surprenne son mari."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case où Pontagnac est pris à son propre piège.",
+     "aide": "Cherche l’arrivée d’un commissaire.",
+     "explication": "Le **retour de bâton** : on prend Pontagnac pour l’amant de Maggy."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les événements dans l’ordre.",
+     "items": [
+      "Pontagnac découvre que Lucienne est la femme de son ami",
+      "Lucienne fait son serment",
+      "Pontagnac conseille l’hôtel Ultimus",
+      "Soldignac arrive avec un commissaire"
+     ],
+     "aide": "Tout part d’une poursuite dans la rue ; tout finit à l’hôtel.",
+     "explication": "D’abord la **découverte**, puis le **serment**, puis le **calcul** de Pontagnac, enfin le **retour de bâton**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le dénouement.",
+     "texte": "À la fin, personne n’a réussi à ___ personne ; Pontagnac est « le ___ » de la farce.",
+     "reponses": [
+      [
+       "tromper"
+      ],
+      [
+       "dindon"
+      ]
+     ],
+     "banque": [
+      "tromper",
+      "aimer",
+      "dindon",
+      "hibou"
+     ],
+     "aide": "Le titre de la pièce dit la morale.",
+     "explication": "Personne n’a réussi à **tromper** personne ; Pontagnac est « le **dindon** »."
+    }
+   ]
+  },
+  {
+   "chapitre": "07407d3b-5f37-5763-952c-76dc88fdc894",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le piège qui se retourne",
+   "competence": "analyser-texte",
+   "situation": "Lis une scène écrite pour l’exercice, à la manière de Feydeau, puis complète l’argumentation sur la morale du titre.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans une chambre d’hôtel",
+     "blocs": [
+      {
+       "didascalie": "Une chambre d’hôtel. Léopold a conseillé l’adresse à son rival pour que la femme de celui-ci le surprenne. Il s’est caché dans l’alcôve."
+      },
+      {
+       "personnage": "Léopold",
+       "replique": "Tout est réglé : la sonnerie, la porte, la police. Il ne me reste qu’à attendre."
+      },
+      {
+       "didascalie": "La sonnerie retentit. Mme Gontran entre avec le commissaire."
+      },
+      {
+       "personnage": "Mme Gontran",
+       "replique": "Monsieur le commissaire, voici l’homme que je cherchais : celui qui est derrière le [[r|rideau]]."
+      },
+      {
+       "personnage": "Léopold",
+       "replique": "Mais c’est Gontran qu’on devait surprendre !"
+      },
+      {
+       "personnage": "Le commissaire",
+       "replique": "Chacun son piège, monsieur : le [[d|dindon]], c’est celui qui l’a tendu."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Georges Feydeau"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Celui qui manœuvre le plus est celui qui perd",
+       "Le piège se retourne contre son auteur",
+       "?"
+      ],
+      [
+       "L’adultère est une convention sociale",
+       "Le mariage bourgeois est un décor",
+       "Une sonnerie électrique et un lit à ressorts dans un hôtel « discret »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui nomme la victime de la farce.",
+     "aide": "C’est aussi le titre de la pièce de Feydeau.",
+     "explication": "Le **dindon**, c’est celui qui a tendu le piège : Léopold est « l’arroseur arrosé »."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche l’objet derrière lequel Mme Gontran dit que se cache Léopold.",
+     "aide": "C’est une pièce de tissu.",
+     "explication": "Léopold est repéré **derrière le rideau**, au moment même où il croyait surprendre son rival."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Pontagnac, découvert par sa propre femme, est le dindon de la farce",
+      "Vatelin, qui gagne la confiance de sa femme grâce à l’hôtel",
+      "Lucienne, qui reconnaît publiquement sa faute devant tous",
+      "Rédillon, qui séduit Lucienne dès le premier acte"
+     ],
+     "reponse": 0,
+     "aide": "Quel personnage de la pièce se retrouve piégé par son propre calcul ?",
+     "explication": "**Pontagnac**, qui manœuvre le plus, se retrouve **dindon de la farce**, découvert par sa propre femme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Feydeau à son effet.",
+     "paires": [
+      [
+       "La sonnerie électrique et le lit à ressorts",
+       "Des objets qui déclenchent des catastrophes"
+      ],
+      [
+       "Les quiproquos et les portes",
+       "Une mécanique implacable"
+      ],
+      [
+       "Le titre « Le Dindon »",
+       "Celui qui manœuvre le plus est celui qui perd"
+      ],
+      [
+       "Le mariage bourgeois",
+       "L’adultère est moins un désir qu’une convention sociale"
+      ]
+     ],
+     "aide": "Chaque procédé nourrit la machine ou la satire.",
+     "explication": "Les **objets** déclenchent des catastrophes, les **portes** et **quiproquos** entretiennent la mécanique, le **titre** dit la morale, et le **mariage bourgeois** est satirisé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle problématique cet extrait permet-il le mieux d’appuyer ?",
+     "options": [
+      "Le rire naît d’un piège qui se retourne contre celui qui l’a tendu",
+      "Le rire naît de la psychologie complexe de personnages tragiques",
+      "Le rire naît de la parole libre, sans aucune construction",
+      "Le rire naît du refus du mariage comme institution"
+     ],
+     "reponse": 0,
+     "aide": "Qui est puni, dans la scène ?",
+     "explication": "Le comique de situation s’appuie sur l’**arroseur arrosé** : l’auteur du piège est pris dedans."
+    }
+   ]
+  }
+ ]
+}

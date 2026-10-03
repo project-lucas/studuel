@@ -1,0 +1,2162 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "e70c1290-bda0-50e8-a415-3960eb5ab28f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un intérieur nu, quatre personnages",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Fin de partie*. Lis la carte d’identité de la pièce et le tableau des personnages, puis réponds.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Fin de partie",
+     "sousTitre": "Samuel Beckett, 1957",
+     "emoji": "♟️",
+     "lignes": [
+      {
+       "texte": "Création",
+       "valeur": "1957, en français"
+      },
+      {
+       "texte": "Mise en scène",
+       "valeur": "Roger Blin"
+      },
+      {
+       "texte": "Succès précédent",
+       "valeur": "En attendant Godot (1953)",
+       "id": "godot"
+      },
+      {
+       "texte": "Structure",
+       "valeur": "Un acte unique"
+      },
+      {
+       "texte": "Courant",
+       "valeur": "Le théâtre de l’absurde",
+       "id": "courant"
+      }
+     ],
+     "pied": "Une pièce dépouillée, à l’humour noir",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Sa situation"
+     ],
+     "lignes": [
+      [
+       "Hamm",
+       "Aveugle et paralysé, dans un fauteuil à roulettes"
+      ],
+      [
+       "Clov",
+       "?"
+      ],
+      [
+       "Nagg et Nell",
+       "Les parents de Hamm, dans deux poubelles"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "courant"
+     ],
+     "enonce": "Touche la ligne qui dit à quel courant on rattache la pièce.",
+     "aide": "Beckett est rangé aux côtés de Ionesco.",
+     "explication": "La pièce relève du **théâtre de l’absurde**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *En attendant Godot* de *Fin de partie* ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la carte d’identité, puis soustrais.",
+     "explication": "1957 − 1953 = **4 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la situation de Clov, dont la case porte un « ? » ?",
+     "options": [
+      "Il est le serviteur de Hamm : il ne peut pas s’asseoir ni partir",
+      "Il est le fils de Hamm, qui hérite de la maison",
+      "Il est un voisin qui vient raconter le monde du dehors",
+      "Il est un médecin qui soigne les parents de Hamm"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, Hamm est dans son fauteuil et Clov va et vient autour de lui.",
+     "explication": "Clov est le **serviteur** de Hamm : il **ne peut pas s’asseoir** — et **ne peut pas partir**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e70c1290-bda0-50e8-a415-3960eb5ab28f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une journée qui ne finit pas",
+   "competence": "analyser-texte",
+   "situation": "Lis une scène écrite à la manière de Beckett, puis suis la journée de la pièce, de ses rituels à son dernier geste.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "À la manière de *Fin de partie*",
+     "blocs": [
+      {
+       "didascalie": "Un intérieur nu. Au centre, un fauteuil à roulettes. Un homme y est assis, immobile."
+      },
+      {
+       "personnage": "Hamm",
+       "replique": "Regarde par la [[f|fenêtre]]. Qu’est-ce que tu vois ?"
+      },
+      {
+       "personnage": "Clov",
+       "replique": "Rien. Zéro."
+      },
+      {
+       "personnage": "Hamm",
+       "replique": "Alors va-t’en."
+      },
+      {
+       "personnage": "Clov",
+       "replique": "J’y vais."
+      },
+      {
+       "didascalie": "Il ne bouge pas."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Beckett (aucune citation)"
+    },
+    {
+     "id": "jour",
+     "type": "chaine",
+     "titre": "La journée de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Rituels, histoires racontées"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Clov, prêt à partir, reste sur le seuil"
+      },
+      {
+       "id": "n4",
+       "texte": "Hamm se couvre le visage de son mouchoir"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui désigne l’ouverture par laquelle Clov regarde le monde.",
+     "aide": "Hamm ordonne à Clov de regarder « par la ... ».",
+     "explication": "Clov regarde par la **fenêtre** : dehors, il n’y a plus rien."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui vient entre les rituels et le seuil, case « ? » de la chaîne ?",
+     "options": [
+      "Les menaces de départ de Clov",
+      "La fuite de Nagg et Nell vers le lac de Côme",
+      "L’arrivée d’un visiteur du dehors",
+      "Le repas partagé par toute la famille"
+     ],
+     "reponse": 0,
+     "aide": "À la fin, Clov est « prêt à partir » : qu’a-t-il annoncé avant ?",
+     "explication": "Entre les rituels et la fin viennent les **menaces de départ** de Clov, qui finit par rester sur le seuil."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du décor à ce qu’il évoque.",
+     "paires": [
+      [
+       "Le fauteuil à roulettes",
+       "Hamm, aveugle et paralysé"
+      ],
+      [
+       "Les deux poubelles",
+       "Nagg et Nell, les parents de Hamm"
+      ],
+      [
+       "Les deux fenêtres hautes",
+       "Ce que Clov y voit : « zéro »"
+      ],
+      [
+       "L’escabeau",
+       "Clov, le serviteur"
+      ]
+     ],
+     "aide": "Le décor est presque vide : chaque objet appartient à quelqu’un.",
+     "explication": "Le **fauteuil** est celui de Hamm, les **poubelles** abritent Nagg et Nell, les **fenêtres** ouvrent sur le néant, l’**escabeau** est à Clov."
+    },
+    {
+     "type": "zone",
+     "document": "jour",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche le dernier geste de la pièce.",
+     "aide": "C’est le geste de Hamm avec son mouchoir.",
+     "explication": "La pièce s’achève sur Hamm qui **se couvre le visage** de son mouchoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "e70c1290-bda0-50e8-a415-3960eb5ab28f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une fin de partie aux échecs",
+   "competence": "argumenter",
+   "situation": "Un sujet possible : le théâtre peut-il représenter le néant ? Écoute deux élèves, lis le tableau, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Un titre emprunté aux échecs pour une pièce sans intrigue : je ne vois pas le rapport."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Aux échecs, la fin de partie est le moment où l’[[i|issue]] est connue, mais où il faut continuer à jouer."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Donc la pièce joue un jeu dont on connaît déjà la fin ?"
+      },
+      {
+       "qui": "Adam",
+       "texte": "Voilà : on répète les mêmes gestes en attendant que ça finisse."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La répétition remplace l’action",
+       "Les mêmes gestes, les mêmes demandes : le temps s’use",
+       "?"
+      ],
+      [
+       "Les noms disent un couple qui frappe et qui subit",
+       "Hamm évoque le marteau, Clov, Nagg et Nell les clous",
+       "Hamm domine un serviteur et ses deux parents"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui dit ce qui est déjà connu à la fin d’une partie d’échecs.",
+     "aide": "Elle est « connue » : de quoi s’agit-il ?",
+     "explication": "À la fin de partie, l’**issue** est connue : il faut pourtant continuer à jouer, comme dans la pièce."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Clov menace de partir, et reste sur le seuil",
+      "Hamm se lève de son fauteuil et sort",
+      "Clov trouve enfin un monde habité dehors",
+      "Nagg et Nell quittent leurs poubelles pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit d’un geste qui se répète sans jamais aboutir.",
+     "explication": "**Clov**, prêt à partir, **reste sur le seuil** : le geste annoncé n’aboutit jamais, la répétition remplace l’action."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la pièce à son effet.",
+     "paires": [
+      [
+       "Un dialogue qui tourne en rond",
+       "Pas d’intrigue au sens classique"
+      ],
+      [
+       "L’humour noir",
+       "On rit du malheur"
+      ],
+      [
+       "Un plateau presque vide",
+       "Une scène intensément théâtrale"
+      ],
+      [
+       "Un titre venu des échecs",
+       "L’issue est connue, il faut jouer"
+      ]
+     ],
+     "aide": "Chaque procédé donne une impression au spectateur.",
+     "explication": "Le **dialogue circulaire** supprime l’intrigue, l’**humour noir** fait rire du malheur, le **plateau vide** reste théâtral, le **titre** joue sur l’issue connue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation la pièce permet-elle le mieux d’appuyer ?",
+     "options": [
+      "Un plateau presque vide peut être intensément théâtral",
+      "Le théâtre ne peut pas se passer d’une intrigue complète",
+      "Le néant ne peut jamais être mis en scène",
+      "Le comique est incompatible avec le tragique"
+     ],
+     "reponse": 0,
+     "aide": "Reprends le sujet : le théâtre peut-il représenter le néant ?",
+     "explication": "Beckett montre qu’un **plateau presque vide** peut être **intensément théâtral** : le néant se joue."
+    }
+   ]
+  },
+  {
+   "chapitre": "d07b76f6-1eb3-52fd-a2dd-9d3f835e48f4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un moine devenu médecin",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur *Gargantua*. Lis la carte d’identité de l’œuvre et le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Gargantua",
+     "sousTitre": "François Rabelais, 1534",
+     "emoji": "🍷",
+     "lignes": [
+      {
+       "texte": "Pseudonyme",
+       "valeur": "Alcofribas Nasier",
+       "id": "pseudo"
+      },
+      {
+       "texte": "Métier de l’auteur",
+       "valeur": "Moine, puis médecin à Lyon"
+      },
+      {
+       "texte": "Livre précédent",
+       "valeur": "Pantagruel (1532)"
+      },
+      {
+       "texte": "Condamnation",
+       "valeur": "Par la Sorbonne"
+      }
+     ],
+     "pied": "Le père raconté après le fils",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Grandgousier",
+       "Le père, roi sage et pacifique"
+      ],
+      [
+       "Gargantua",
+       "?"
+      ],
+      [
+       "Picrochole",
+       "Le roi conquérant et ridicule"
+      ],
+      [
+       "Frère Jean",
+       "Le moine énergique, qui agit au lieu de prier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "pseudo"
+     ],
+     "enonce": "Touche la ligne qui donne le pseudonyme sous lequel Rabelais publie.",
+     "aide": "Cherche le nom qui n’est pas celui de l’auteur.",
+     "explication": "Rabelais publie sous le pseudonyme d’**Alcofribas Nasier**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel livre a été publié le premier ?",
+     "options": [
+      "Pantagruel, bien que Gargantua raconte la vie du père",
+      "Gargantua, qui raconte la vie du père avant celle du fils",
+      "Les deux paraissent la même année chez le même éditeur",
+      "Ni l’un ni l’autre : la carte ne le dit pas"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Livre précédent ».",
+     "explication": "*Pantagruel* paraît en **1532**, avant *Gargantua* (1534), bien que celui-ci raconte la vie du **père**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Gargantua, dont la case du tableau porte un « ? » ?",
+     "options": [
+      "Le géant, qui passe de l’ignorance au savoir",
+      "Le roi conquérant, qui rêve d’être empereur",
+      "Le moine énergique, qui défend l’abbaye",
+      "Le sophiste qui réclame les cloches de Notre-Dame"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, les autres lignes donnent le père, le roi conquérant, le moine.",
+     "explication": "Gargantua est le **géant** : il passe de l’ignorance au savoir grâce à sa nouvelle éducation."
+    }
+   ]
+  },
+  {
+   "chapitre": "d07b76f6-1eb3-52fd-a2dd-9d3f835e48f4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux manières d’éduquer un géant",
+   "competence": "analyser-texte",
+   "situation": "Gargantua a connu deux maîtres. Lis le tableau qui les compare, puis un résumé écrit pour l’exercice sur la méthode du second.",
+   "documents": [
+    {
+     "id": "maitres",
+     "type": "tableau",
+     "titre": "Deux éducations",
+     "colonnes": [
+      "Critère",
+      "Thubal Holoferne",
+      "Ponocrates"
+     ],
+     "lignes": [
+      [
+       "La méthode",
+       "Mémoire, latin, années perdues",
+       "Journée réglée, exercice physique, lectures commentées, observation directe"
+      ],
+      [
+       "Le courant",
+       "La scolastique",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "methode",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une journée avec Ponocrates",
+     "blocs": [
+      "Quand Ponocrates prend Gargantua en main, tout change : la journée est [[p|réglée]] heure par heure. On lit, mais le maître [[p|commente]] chaque page. Puis on sort : le corps s’exerce autant que l’esprit, et l’on [[p|observe]] le monde autour de soi."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après Gargantua de Rabelais"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À quel courant Ponocrates appartient-il, case « ? » du tableau ?",
+     "options": [
+      "À l’humanisme",
+      "À la scolastique",
+      "À la Sorbonne qui condamne les livres",
+      "À l’abbaye de Thélème"
+     ],
+     "reponse": 0,
+     "aide": "Thubal est scolastique : Ponocrates est son contraire.",
+     "explication": "Ponocrates est **humaniste**, par opposition à Thubal Holoferne, maître scolastique."
+    },
+    {
+     "type": "zone",
+     "document": "methode",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les trois verbes qui décrivent la méthode de Ponocrates.",
+     "aide": "Une journée, une lecture, un regard sur le monde.",
+     "explication": "La journée est **réglée**, la lecture est **commentée**, le monde est **observé** : c’est la méthode humaniste."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : à quel maître appartient-il ?",
+     "categories": [
+      "Thubal Holoferne",
+      "Ponocrates"
+     ],
+     "items": [
+      [
+       "La mémoire et le latin",
+       0
+      ],
+      [
+       "Les années perdues",
+       0
+      ],
+      [
+       "L’exercice physique",
+       1
+      ],
+      [
+       "L’observation directe",
+       1
+      ],
+      [
+       "Les lectures commentées",
+       1
+      ]
+     ],
+     "aide": "Retourne au tableau : chaque colonne est un maître.",
+     "explication": "**Thubal** : mémoire, latin, années perdues. **Ponocrates** : exercice physique, lectures commentées, observation directe."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre grands moments du récit.",
+     "items": [
+      "Gargantua naît par l’oreille de sa mère",
+      "Ponocrates réforme son éducation",
+      "La guerre picrocholine éclate",
+      "L’abbaye de Thélème est offerte en récompense"
+     ],
+     "aide": "Le géant naît avant d’être éduqué et la guerre se règle avant la récompense.",
+     "explication": "Ordre : la **naissance**, l’**éducation**, la **guerre picrocholine**, **Thélème** en récompense."
+    }
+   ]
+  },
+  {
+   "chapitre": "d07b76f6-1eb3-52fd-a2dd-9d3f835e48f4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rire pour dire sérieusement",
+   "competence": "argumenter",
+   "situation": "Le rire de Rabelais est-il un simple divertissement ? Lis les vers d’avertissement, écoute un débat, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Aux lecteurs",
+     "blocs": [
+      "Mieux est de ris que de larmes écrire,",
+      "Pour ce que rire est le [[p|propre]] de l’homme."
+     ],
+     "source": "Rabelais, Gargantua (1534), « Aux lecteurs » (orthographe modernisée)"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Paul",
+       "texte": "Rabelais veut seulement nous faire rire avec ses géants et ses banquets."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Son prologue invite à briser l’os pour en tirer la [[m|moelle]] : il y a un sens caché sous le comique."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Alors il faut chercher du sérieux partout ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Non : il se moque aussi de ceux qui cherchent trop loin."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le rire est une méthode",
+       "Il désacralise la scolastique, la guerre de conquête et la religion formaliste",
+       "?"
+      ],
+      [
+       "Thélème est une utopie élitiste",
+       "La liberté y suppose des gens bien nés, bien instruits",
+       "La règle « Fais ce que voudras »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit ce que le rire est pour l’homme.",
+     "aide": "Le rire n’appartient qu’à lui : il lui est...",
+     "explication": "Le rire est le **propre** de l’homme : ce qui le distingue des autres créatures."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui désigne le sens profond caché sous l’apparence comique.",
+     "aide": "On brise l’os pour en tirer la... quoi ?",
+     "explication": "La **moelle** (« substantifique moelle ») est le sens profond que l’on tire du livre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les années perdues de Thubal Holoferne, maître scolastique",
+      "La règle de Thélème : « Fais ce que voudras »",
+      "Le sage Grandgousier qui plaide la paix",
+      "La naissance de Gargantua en criant « À boire ! »"
+     ],
+     "reponse": 0,
+     "aide": "Cherche ce que le rire attaque : la scolastique, la guerre, la religion formaliste.",
+     "explication": "Le rire **désacralise la scolastique** : le maître Thubal Holoferne et ses **années perdues** en sont l’exemple."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de l’œuvre à ce qu’il montre.",
+     "paires": [
+      [
+       "Thélème",
+       "Un anti-monastère mixte, sans horloge"
+      ],
+      [
+       "La règle « Fais ce que voudras »",
+       "L’unique règle de l’abbaye"
+      ],
+      [
+       "La limite de Thélème",
+       "Une utopie élitiste : bien nés, bien instruits"
+      ],
+      [
+       "Le prologue",
+       "Il compare le livre aux Silènes"
+      ]
+     ],
+     "aide": "Chaque élément renvoie à une ligne du tableau ou du cours.",
+     "explication": "**Thélème** est un anti-monastère ; sa **règle** est « Fais ce que voudras » ; sa **limite** est son élitisme ; le **prologue** compare le livre aux Silènes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du prologue le débat autorise-t-il ?",
+     "options": [
+      "Un sens profond sous le comique, sans chercher trop loin",
+      "Un livre sans aucun sens, écrit pour faire rire",
+      "Un traité de médecine déguisé en roman comique",
+      "Un sermon grave qui interdit de rire"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les deux répliques d’Inès.",
+     "explication": "Rabelais invite à chercher la **moelle**, tout en se moquant de ceux qui **cherchent trop loin** : l’ambiguïté est volontaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "30b2699e-3e11-5152-a687-8af4abc73784",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au fond du Voreux",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Germinal*. Lis la carte d’identité du roman et le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Germinal",
+     "sousTitre": "Émile Zola, 1885",
+     "emoji": "⛏️",
+     "lignes": [
+      {
+       "texte": "Série",
+       "valeur": "Les Rougon-Macquart, vingt romans"
+      },
+      {
+       "texte": "Rang",
+       "valeur": "Treizième volume"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Le Voreux, une fosse du nord de la France",
+       "id": "lieu"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "Les années 1860, sous le Second Empire"
+      }
+     ],
+     "pied": "Un roman du collectif",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Étienne Lantier",
+       "Machineur au chômage, meneur de la grève"
+      ],
+      [
+       "Maheu et la Maheude",
+       "Le couple de mineurs, digne et affamé"
+      ],
+      [
+       "Catherine Maheu",
+       "?"
+      ],
+      [
+       "Souvarine",
+       "L’anarchiste russe, froid et destructeur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne qui dit où se déroule l’histoire.",
+     "aide": "Cherche le nom de la fosse.",
+     "explication": "L’histoire se passe au **Voreux**, une fosse du nord de la France."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de romans de la série *Les Rougon-Macquart* viennent après *Germinal* ?",
+     "reponse": 7,
+     "unite": "romans",
+     "aide": "La série compte vingt romans et *Germinal* est le treizième.",
+     "explication": "20 − 13 = **7 romans** viennent après."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Catherine Maheu, dont la case porte un « ? » ?",
+     "options": [
+      "La fille des Maheu, aimée d’Étienne",
+      "La femme du directeur de la Compagnie",
+      "La boutiquière que les femmes mutilent",
+      "L’épouse de Souvarine, venue de Russie"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, le couple Maheu est juste au-dessus.",
+     "explication": "Catherine est la **fille des Maheu** : Étienne l’aime, Chaval la brutalise, et elle meurt au fond de la mine."
+    }
+   ]
+  },
+  {
+   "chapitre": "30b2699e-3e11-5152-a687-8af4abc73784",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la grève à l’inondation",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ton oral, tu veux raconter la grève en cinq étapes. Complète la chaîne, puis lis une description écrite à la manière de Zola.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’histoire d’Étienne",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Étienne arrive au Voreux et se fait embaucher"
+      },
+      {
+       "id": "n2",
+       "texte": "Il pousse les mineurs à la grève"
+      },
+      {
+       "id": "n3",
+       "texte": "La troupe tire sur la foule"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Catherine meurt ; Étienne part au printemps"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "bete",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le Voreux à l’aube",
+     "blocs": [
+      "Au fond de la plaine, le Voreux est tapi comme une [[m|bête]]. Chaque matin, il [[m|avale]] des hommes et les rend le soir, plus las et plus maigres."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Zola (aucune citation)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il à l’étape « ? » de la chaîne ?",
+     "options": [
+      "Souvarine saborde le puits : l’eau envahit la mine",
+      "La Compagnie accepte toutes les revendications",
+      "Les Grégoire vendent leurs actions aux mineurs",
+      "Maigrat ouvre une coopérative pour les mineurs"
+     ],
+     "reponse": 0,
+     "aide": "Après la troupe, l’anarchiste russe passe à l’acte.",
+     "explication": "**Souvarine saborde le puits** : l’**eau envahit la mine** et fait de nouvelles victimes."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où la troupe tire sur la foule.",
+     "aide": "Cherche le mot « troupe ».",
+     "explication": "La troupe tire sur la foule : c’est le moment le plus violent de la grève."
+    },
+    {
+     "type": "zone",
+     "document": "bete",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui font de la fosse un monstre.",
+     "aide": "Un animal, et ce qu’il fait aux hommes.",
+     "explication": "La fosse est une **bête** qui **avale** les hommes : la mine est décrite comme un monstre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du roman.",
+     "texte": "Étienne quitte le pays au ___ ; le titre annonce une ___.",
+     "reponses": [
+      [
+       "printemps"
+      ],
+      [
+       "germination"
+      ]
+     ],
+     "banque": [
+      "printemps",
+      "automne",
+      "germination",
+      "inondation",
+      "défaite"
+     ],
+     "aide": "Relis la dernière étape de la chaîne, puis le titre : un mois du calendrier révolutionnaire.",
+     "explication": "Étienne part au **printemps**, et le titre annonce une **germination** : la révolte vaincue prépare l’avenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "30b2699e-3e11-5152-a687-8af4abc73784",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La foule est un personnage",
+   "competence": "argumenter",
+   "situation": "Dans *Germinal*, la foule est-elle un décor ? Lis la dernière image du roman, écoute le débat, puis range les deux camps.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La dernière image",
+     "blocs": [
+      "Des hommes poussaient, une [[a|armée]] noire, vengeresse, qui [[g|germait]] lentement dans les sillons…"
+     ],
+     "source": "Zola, Germinal (1885), dernière page (début de la dernière phrase)"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Dans *Germinal*, la foule, c’est juste un décor derrière Étienne."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Non : la foule y est un [[p|personnage]]. C’est un roman du collectif."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Comment on le voit ?"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Pendant l’émeute, elle scande d’une seule voix : « Du pain ! du pain ! du pain ! »"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le verbe qui fait écho au titre du roman.",
+     "aide": "Le titre annonce une germination.",
+     "explication": "Le verbe **germait** répond au titre : la révolte vaincue prépare une récolte future."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’image de l’« armée noire » qui germe ?",
+     "options": [
+      "La révolte, vaincue, prépare l’avenir",
+      "Les mineurs ont gagné et la mine est sauvée",
+      "Les mineurs reprennent le travail, résignés",
+      "Une vraie armée va envahir le pays"
+     ],
+     "reponse": 0,
+     "aide": "Une graine qui germe n’est pas encore une moisson.",
+     "explication": "L’image dit que la révolte, vaincue, **germe** : elle prépare l’avenir, comme une graine sous la terre."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot par lequel Nina contredit Tom sur le rôle de la foule.",
+     "aide": "Tom dit « un décor » : que dit Nina ?",
+     "explication": "Pour Nina, la foule est un **personnage** : *Germinal* est un roman du collectif."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait du roman à ce qu’il montre.",
+     "paires": [
+      [
+       "Le titre « Germinal »",
+       "Un mois du calendrier révolutionnaire, qui annonce une germination"
+      ],
+      [
+       "Le Voreux",
+       "Une bête qui dévore les hommes"
+      ],
+      [
+       "Anzin",
+       "Le lieu où Zola s’est documenté"
+      ],
+      [
+       "La foule",
+       "Un personnage collectif"
+      ]
+     ],
+     "aide": "Chaque trait renvoie à un point de la fiche : titre, symbole, enquête, collectif.",
+     "explication": "Le **titre** annonce la germination, le **Voreux** est un monstre, **Anzin** est le lieu d’enquête, la **foule** est un personnage."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage dans son camp.",
+     "categories": [
+      "Du côté de la Compagnie",
+      "Du côté des mineurs"
+     ],
+     "items": [
+      [
+       "Hennebeau, le directeur",
+       0
+      ],
+      [
+       "Les Grégoire, actionnaires rentiers",
+       0
+      ],
+      [
+       "Maheu",
+       1
+      ],
+      [
+       "La Maheude",
+       1
+      ],
+      [
+       "Catherine",
+       1
+      ]
+     ],
+     "aide": "Pense à qui détient la mine et à qui y descend.",
+     "explication": "La **Compagnie** : le directeur Hennebeau et les actionnaires Grégoire. Les **mineurs** : les Maheu et Catherine."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5786ac6-8401-552e-870a-c4db6fec8e3a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une servante, sa maîtresse, deux frères",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Germinie Lacerteux*. Place le roman dans la vie des Goncourt, puis lis le tableau des personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les Goncourt et leur roman",
+     "debut": 1860,
+     "fin": 1905,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "rom",
+       "date": 1865,
+       "nom": "Germinie Lacerteux"
+      },
+      {
+       "id": "jul",
+       "date": 1870,
+       "nom": "Mort de Jules"
+      },
+      {
+       "id": "edm",
+       "date": 1896,
+       "nom": "Mort d’Edmond"
+      },
+      {
+       "id": "prix",
+       "date": 1903,
+       "nom": "Prix Goncourt"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Germinie Lacerteux",
+       "La bonne dévouée le jour, déchirée la nuit"
+      ],
+      [
+       "Mademoiselle de Varandeuil",
+       "?"
+      ],
+      [
+       "Jupillon",
+       "Le fils d’une crémière, sans scrupule"
+      ],
+      [
+       "Madame Jupillon",
+       "La crémière, qui profite elle aussi de Germinie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution du roman.",
+     "aide": "C’est l’événement qui porte le titre du roman.",
+     "explication": "*Germinie Lacerteux* paraît en **1865**, sous le Second Empire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la mort d’Edmond de Goncourt et la création du prix Goncourt ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise, puis soustrais.",
+     "explication": "1903 − 1896 = **7 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Mademoiselle de Varandeuil, dont la case porte un « ? » ?",
+     "options": [
+      "La vieille demoiselle noble que Germinie sert",
+      "Une crémière qui profite de la servante",
+      "Une jeune servante qui travaille avec Germinie",
+      "Une infirmière de l’hôpital où Germinie meurt"
+     ],
+     "reponse": 0,
+     "aide": "C’est la maîtresse de Germinie.",
+     "explication": "Mademoiselle de Varandeuil est la **vieille demoiselle noble** que Germinie sert : bonne, mais **aveugle** sur sa servante."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5786ac6-8401-552e-870a-c4db6fec8e3a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le jour une servante, la nuit une inconnue",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu veux raconter la double vie de Germinie. Lis le tableau de ce qu’elle cache et un résumé écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "cache",
+     "type": "tableau",
+     "titre": "Ce que Germinie cache",
+     "colonnes": [
+      "Ce qu’elle cache",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "Un passé",
+       "Violée à quatorze ans, elle a perdu un enfant"
+      ],
+      [
+       "Un amant",
+       "?"
+      ],
+      [
+       "Une chute",
+       "L’alcool, la dette, les rencontres nocturnes"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "double",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une double vie",
+     "blocs": [
+      "Le jour, Germinie est la servante dévouée de la vieille demoiselle de Varandeuil. La nuit, elle retrouve Jupillon, un jeune homme veule qui la ruine, et l’[[c|alcool]] et la [[c|dette]] l’entraînent plus bas.",
+      "Quand elle meurt à l’hôpital, sa maîtresse découvre tout après coup : elle a vécu vingt ans à côté d’une inconnue."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le roman des Goncourt"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est l’amant de Germinie, case « ? » du tableau ?",
+     "options": [
+      "Jupillon, jeune homme veule qui la ruine",
+      "Chaval, le mineur qui la brutalise",
+      "Le docteur de l’hôpital où elle meurt",
+      "Un valet de la maison de Varandeuil"
+     ],
+     "reponse": 0,
+     "aide": "Le résumé nomme l’homme qu’elle retrouve la nuit.",
+     "explication": "L’amant est **Jupillon**, un jeune homme **veule** qui la **ruine**."
+    },
+    {
+     "type": "zone",
+     "document": "double",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui disent ce qui entraîne Germinie plus bas.",
+     "aide": "Un produit qui rend dépendant, et ce qu’on doit à quelqu’un.",
+     "explication": "L’**alcool** et la **dette** précipitent sa chute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années la maîtresse de Germinie a-t-elle vécu à côté d’une inconnue ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "La durée est écrite dans le second paragraphe du résumé.",
+     "explication": "Elle a vécu **vingt ans** à côté d’une inconnue : elle ne découvre tout qu’après la mort de Germinie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du roman.",
+     "texte": "Germinie meurt à l’___ ; sa maîtresse apprend tout après ___.",
+     "reponses": [
+      [
+       "hôpital"
+      ],
+      [
+       "coup"
+      ]
+     ],
+     "banque": [
+      "hôpital",
+      "église",
+      "coup",
+      "mort",
+      "procès"
+     ],
+     "aide": "Relis le début du second paragraphe du résumé.",
+     "explication": "Germinie meurt à l’**hôpital** ; sa maîtresse apprend tout **après coup**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5786ac6-8401-552e-870a-c4db6fec8e3a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un roman « vrai »",
+   "competence": "argumenter",
+   "situation": "Un sujet de dissertation : le roman peut-il être une enquête sur la société ? Lis la phrase célèbre de la préface, puis le tableau qui construit l’argument.",
+   "documents": [
+    {
+     "id": "preface",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La préface",
+     "blocs": [
+      "Le public aime les romans [[o|faux]] : ce roman est un roman [[o|vrai]]."
+     ],
+     "source": "Edmond et Jules de Goncourt, préface de Germinie Lacerteux (1865)"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman revendique la vérité sociale",
+       "Les « basses classes » ont droit au roman",
+       "?"
+      ],
+      [
+       "Le roman se veut scientifique",
+       "La préface parle d’une « clinique de l’Amour »",
+       "Le corps, la maladie, l’alcool décrits avec précision médicale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "preface",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux adjectifs que la préface oppose.",
+     "aide": "L’un qualifie ce que le public aime, l’autre le roman des Goncourt.",
+     "explication": "La préface oppose les romans **faux** que le public aime à ce roman **vrai**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Une servante, Germinie, devient l’héroïne du roman",
+      "Un noble de cour mène une intrigue d’amour",
+      "Un général raconte ses campagnes à l’armée",
+      "Un poète exilé chante la nature"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit de ceux à qui le roman donne enfin la parole : les basses classes.",
+     "explication": "Le roman fait entrer une **servante** au rang d’**héroïne** : c’est la preuve que les basses classes ont droit au roman."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément au rôle qu’il joue.",
+     "paires": [
+      [
+       "Rose Malingre",
+       "La bonne des Goncourt dont la double vie a inspiré le roman"
+      ],
+      [
+       "« Le document humain »",
+       "Expression qu’Edmond forgera plus tard pour cette méthode"
+      ],
+      [
+       "L’« écriture artiste »",
+       "Une écriture nerveuse qui influencera Zola"
+      ],
+      [
+       "Le naturalisme",
+       "Le mouvement que le roman annonce"
+      ]
+     ],
+     "aide": "Chaque élément appartient au contexte du roman : modèle, méthode, style, mouvement.",
+     "explication": "**Rose Malingre** est le modèle réel ; le **document humain** nomme la méthode ; l’**écriture artiste** est le style ; le **naturalisme** est le mouvement annoncé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation le roman permet-il le mieux d’appuyer ?",
+     "options": [
+      "Le roman peut être une enquête et élever une servante",
+      "Le roman doit rester un divertissement pour la haute société",
+      "Le roman n’a rien à voir avec la réalité sociale",
+      "Le roman ne peut décrire ni la maladie ni la misère"
+     ],
+     "reponse": 0,
+     "aide": "Relie « vrai », « basses classes » et « clinique ».",
+     "explication": "Le roman passe du **réalisme au naturalisme** : il se donne pour **vrai** et pour **enquête**, et il élève une **servante** au rang d’héroïne."
+    }
+   ]
+  },
+  {
+   "chapitre": "b82b2b58-cea6-577c-86ec-792afd699af7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un valet de vingt maîtres",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Gil Blas*. Place le roman dans la vie de Lesage, puis lis la carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Lesage et son roman",
+     "debut": 1700,
+     "fin": 1750,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "diable",
+       "date": 1707,
+       "nom": "Diable boiteux"
+      },
+      {
+       "id": "deb",
+       "date": 1715,
+       "nom": "Début de Gil Blas"
+      },
+      {
+       "id": "fin",
+       "date": 1735,
+       "nom": "Dernière partie"
+      },
+      {
+       "id": "mort",
+       "date": 1747,
+       "nom": "Mort de Lesage"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Gil Blas de Santillane",
+     "sousTitre": "Alain-René Lesage, 1715-1735",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Roman picaresque",
+       "id": "genre"
+      },
+      {
+       "texte": "Décor",
+       "valeur": "L’Espagne"
+      },
+      {
+       "texte": "Narrateur",
+       "valeur": "Gil Blas, à la première personne"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "Un valet de basse condition"
+      }
+     ],
+     "pied": "Une satire de la France de la Régence",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "deb"
+     ],
+     "enonce": "Sur la frise, touche l’année où commence la publication de *Gil Blas*.",
+     "aide": "C’est le premier repère qui porte le nom du roman.",
+     "explication": "La publication de *Gil Blas* commence en **1715**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années *Gil Blas* a-t-il été publié, de la première à la dernière partie ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais la date de la première partie à celle de la dernière.",
+     "explication": "1735 − 1715 = **20 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition du genre.",
+     "texte": "Gil Blas est un roman ___ : un héros de basse ___ qui sert plusieurs maîtres.",
+     "reponses": [
+      [
+       "picaresque"
+      ],
+      [
+       "condition"
+      ]
+     ],
+     "banque": [
+      "picaresque",
+      "épistolaire",
+      "condition",
+      "naissance",
+      "fortune"
+     ],
+     "aide": "Regarde les lignes « Genre » et « Héros » de la carte.",
+     "explication": "Le roman est **picaresque** : son héros est de basse **condition** et passe de maître en maître."
+    }
+   ]
+  },
+  {
+   "chapitre": "b82b2b58-cea6-577c-86ec-792afd699af7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’Oviedo à la cour d’Espagne",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu veux suivre la carrière de Gil Blas. Complète la chaîne, puis lis une scène résumée avec l’archevêque de Grenade.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La carrière de Gil Blas",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Il quitte Oviedo pour étudier à Salamanque"
+      },
+      {
+       "id": "n2",
+       "texte": "Aussitôt volé, il est pris par des brigands"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il devient secrétaire du duc de Lerme"
+      },
+      {
+       "id": "n5",
+       "texte": "Il se retire, fortune honnêtement acquise"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "archeveque",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’archevêque de Grenade",
+     "blocs": [
+      "Gil Blas est au service de l’archevêque de Grenade. Un jour, le prélat lui demande de lui [[s|signaler]] sans détour le déclin de ses sermons. Gil Blas s’exécute ; piqué, l’archevêque le [[c|chasse]] : « Je vous souhaite toutes sortes de prospérités avec un peu plus de goût. »"
+     ],
+     "source": "Résumé écrit pour l’exercice ; entre guillemets, la phrase de l’archevêque dans Gil Blas de Santillane (Lesage)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait Gil Blas à l’étape « ? » de la chaîne ?",
+     "options": [
+      "Il sert comme valet une vingtaine de maîtres",
+      "Il fonde une école de droit à Salamanque",
+      "Il devient le nouveau chef des brigands",
+      "Il part chercher fortune au Nouveau Monde"
+     ],
+     "reponse": 0,
+     "aide": "Entre les brigands et le duc de Lerme, il traverse de nombreuses maisons.",
+     "explication": "Gil Blas devient **valet** d’une **vingtaine de maîtres** : c’est la matière de la satire."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui marque le sommet de la carrière de Gil Blas.",
+     "aide": "Il approche le plus haut personnage du royaume.",
+     "explication": "Le sommet est celui de **secrétaire du duc de Lerme**, le premier ministre."
+    },
+    {
+     "type": "zone",
+     "document": "archeveque",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le verbe qui dit comment l’archevêque réagit à la vérité demandée.",
+     "aide": "Gil Blas n’est pas récompensé de son honnêteté.",
+     "explication": "L’archevêque le **chasse** : il a demandé la vérité, il ne la supporte pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cet épisode des maîtres que sert Gil Blas ?",
+     "options": [
+      "La vanité d’un homme d’Église qui n’aime pas la vérité demandée",
+      "La sagesse d’un prélat qui récompense la franchise",
+      "La pauvreté d’un maître qui ne peut payer son valet",
+      "L’affection d’un maître pour son jeune secrétaire"
+     ],
+     "reponse": 0,
+     "aide": "L’archevêque demande une critique, puis punit celui qui la fait.",
+     "explication": "L’archevêque incarne la **vanité** : il réclame la vérité, puis chasse celui qui la lui dit."
+    }
+   ]
+  },
+  {
+   "chapitre": "b82b2b58-cea6-577c-86ec-792afd699af7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ni bon ni méchant : il s’adapte",
+   "competence": "argumenter",
+   "situation": "Un sujet d’oral : Gil Blas est-il un héros vertueux ? Écoute deux élèves, puis vérifie ce que le roman autorise.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Gil Blas est un héros vertueux et constant, du début à la fin."
+      },
+      {
+       "qui": "Mina",
+       "texte": "Pas du tout : il n’est ni bon ni méchant, il s’[[a|adapte]]. Naïf au départ, il apprend la ruse."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Alors pourquoi suivre ce personnage ?"
+      },
+      {
+       "qui": "Mina",
+       "texte": "Parce qu’il est un observateur idéal des mœurs : chaque maître est une satire."
+      }
+     ]
+    },
+    {
+     "id": "genre",
+     "type": "tableau",
+     "titre": "Le roman picaresque",
+     "colonnes": [
+      "Trait du genre",
+      "Sa présence dans le roman"
+     ],
+     "lignes": [
+      [
+       "Un héros de basse condition",
+       "Gil Blas, fils d’un écuyer et d’une femme de chambre"
+      ],
+      [
+       "Le récit à la première personne",
+       "?"
+      ],
+      [
+       "Une succession d’épisodes et de maîtres",
+       "Chaque maître, une satire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe par lequel Mina résume le caractère de Gil Blas.",
+     "aide": "Il n’est ni bon ni méchant : il fait quoi ?",
+     "explication": "Gil Blas **s’adapte** : naïf au départ, il apprend la ruse au contact du monde."
+    },
+    {
+     "type": "categories",
+     "enonce": "Selon le débat et le cours, chaque affirmation est-elle vraie ou fausse ?",
+     "categories": [
+      "Vrai",
+      "Faux"
+     ],
+     "items": [
+      [
+       "Gil Blas apprend la ruse au fil de ses maîtres",
+       0
+      ],
+      [
+       "Gil Blas est vertueux et constant du début à la fin",
+       1
+      ],
+      [
+       "Le décor espagnol est transparent : c’est la France de la Régence",
+       0
+      ],
+      [
+       "Gil Blas ne sert qu’un seul maître",
+       1
+      ],
+      [
+       "Chaque maître est l’occasion d’une satire",
+       0
+      ]
+     ],
+     "aide": "Reprends les répliques de Mina et la fiche du roman.",
+     "explication": "Le héros **apprend la ruse** ; il n’est **pas constamment vertueux** ; l’Espagne est un **décor transparent** ; il sert **vingt maîtres** et chacun est une **satire**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Gil Blas raconte sa vie avec le recul de la vieillesse",
+      "Un narrateur extérieur raconte la vie de Gil Blas",
+      "Les lettres de Gil Blas à un ami lointain",
+      "Un journal tenu au jour le jour pendant le voyage"
+     ],
+     "reponse": 0,
+     "aide": "Le narrateur est aussi le héros : il se souvient.",
+     "explication": "Gil Blas est le **narrateur** de sa propre vie : il raconte à la première personne, avec le **recul de la vieillesse**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque maître ou personnage à ce qu’il incarne.",
+     "paires": [
+      [
+       "Le docteur Sangrado",
+       "Un médecin ignorant qui saigne tous ses patients"
+      ],
+      [
+       "L’archevêque de Grenade",
+       "La vanité"
+      ],
+      [
+       "Le capitaine Rolando",
+       "Le chef des brigands"
+      ],
+      [
+       "Scipion",
+       "Le valet puis secrétaire fidèle"
+      ]
+     ],
+     "aide": "Chaque personnage appartient à un des mondes que traverse Gil Blas.",
+     "explication": "**Sangrado** satirise la médecine, l’**archevêque** la vanité, **Rolando** commande les brigands, **Scipion** est fidèle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion le dossier permet-il le mieux d’appuyer ?",
+     "options": [
+      "Un roman d’apprentissage avant la lettre",
+      "Un récit de voyage sans portée sur la société",
+      "Une épopée héroïque racontée par un chevalier",
+      "Une tragédie classique en cinq actes"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi du terme du cours qui parle d’un héros qui apprend.",
+     "explication": "Gil Blas est un **roman d’apprentissage** avant la lettre : un narrateur **ironique** regarde son passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "5de1f68b-0f27-54ff-8890-b80414e76e30",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois élèves, un évadé",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Le Prisonnier d’Azkaban*. Lis la carte d’identité du tome et le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Harry Potter et le prisonnier d’Azkaban",
+     "sousTitre": "J. K. Rowling, 1999",
+     "emoji": "⚡",
+     "lignes": [
+      {
+       "texte": "Rang",
+       "valeur": "Troisième tome de sept"
+      },
+      {
+       "texte": "Saga",
+       "valeur": "1997-2007"
+      },
+      {
+       "texte": "Parution",
+       "valeur": "1999",
+       "id": "parution"
+      },
+      {
+       "texte": "Ton",
+       "valeur": "Plus long et plus sombre"
+      }
+     ],
+     "pied": "La série grandit avec ses lecteurs",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Harry, Ron, Hermione",
+       "Le trio, en troisième année à Poudlard"
+      ],
+      [
+       "Remus Lupin",
+       "Le nouveau professeur de Défense contre les forces du Mal"
+      ],
+      [
+       "Severus Rogue",
+       "?"
+      ],
+      [
+       "Hagrid",
+       "Professeur de Soins aux créatures magiques"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "parution"
+     ],
+     "enonce": "Touche la ligne qui donne l’année de parution du tome.",
+     "aide": "Cherche une année seule.",
+     "explication": "Le tome paraît en **1999**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tomes la saga compte-t-elle après *Le Prisonnier d’Azkaban* ?",
+     "reponse": 4,
+     "unite": "tomes",
+     "aide": "Le tome est le troisième d’une saga de sept.",
+     "explication": "7 − 3 = **4 tomes** viennent après."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Severus Rogue, dont la case porte un « ? » ?",
+     "options": [
+      "Le professeur hostile, qui révèle le secret de Lupin",
+      "Le professeur qui enseigne le Patronus à Harry",
+      "Le gardien qui soigne les créatures magiques",
+      "L’évadé qu’on accuse d’avoir trahi les parents de Harry"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, Lupin et Hagrid sont déjà décrits.",
+     "explication": "Rogue est le **professeur hostile** : c’est lui qui révèle que Lupin est un loup-garou."
+    }
+   ]
+  },
+  {
+   "chapitre": "5de1f68b-0f27-54ff-8890-b80414e76e30",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui est le vrai traître ?",
+   "competence": "analyser-document",
+   "situation": "Dans ce tome, rien n’est ce qu’il paraît. Lis le tableau des apparences et un résumé écrit pour l’exercice, puis démasque le coupable.",
+   "documents": [
+    {
+     "id": "app",
+     "type": "tableau",
+     "titre": "Ce qu’on croit, ce qui est vrai",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’on croit",
+      "Ce qui est vrai"
+     ],
+     "lignes": [
+      [
+       "Sirius Black",
+       "Un évadé d’Azkaban, le traître qui a livré les parents de Harry",
+       "?"
+      ],
+      [
+       "Croûtard",
+       "Le rat de Ron",
+       "Peter Pettigrow, caché depuis douze ans sous la forme d’un rat"
+      ],
+      [
+       "Lupin",
+       "Un professeur comme un autre",
+       "Un loup-garou"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’enquête de Harry",
+     "blocs": [
+      "Depuis le début de l’année, tout le monde se méfie de Sirius Black, évadé d’Azkaban. Mais le vrai coupable est plus près de Harry qu’on ne le croit : c’est un [[r|rat]] que Ron garde près de lui. Quand le secret éclate, il reprend sa forme d’homme."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après Harry Potter et le prisonnier d’Azkaban"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Sirius Black ?",
+     "options": [
+      "Un innocent, et le parrain de Harry",
+      "Un coupable, qui a bien livré les parents de Harry",
+      "Un professeur déguisé qui protège le château",
+      "Un loup-garou qui menace les élèves"
+     ],
+     "reponse": 0,
+     "aide": "Dans la ligne suivante, un autre personnage est démasqué comme vrai traître.",
+     "explication": "Sirius est **innocent** — et le **parrain** de Harry : le vrai traître est Pettigrow."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui désigne la forme animale du vrai traître.",
+     "aide": "Il se cache près de Ron.",
+     "explication": "Le vrai traître se cache sous la forme d’un **rat** : le faux animal de compagnie de Ron."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années Peter Pettigrow se cache-t-il sous sa forme animale ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "La durée est écrite dans le tableau, ligne « Croûtard ».",
+     "explication": "Pettigrow se cache depuis **douze ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du tome à ce qu’il permet ou montre.",
+     "paires": [
+      [
+       "Les Détraqueurs",
+       "Ils aspirent les souvenirs heureux"
+      ],
+      [
+       "Le Patronus",
+       "Le sortilège que Lupin enseigne à Harry"
+      ],
+      [
+       "Le Retourneur de Temps",
+       "Il permet de sauver Sirius et Buck"
+      ],
+      [
+       "La carte du Maraudeur",
+       "Elle est dessinée par Lunard, Queudver, Patmol et Cornedrue"
+      ]
+     ],
+     "aide": "Pense à ce que chaque objet ou créature fait dans l’intrigue.",
+     "explication": "Les **Détraqueurs** aspirent les souvenirs heureux, le **Patronus** les repousse, le **Retourneur de Temps** sauve Sirius et Buck, la **carte** a quatre auteurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "5de1f68b-0f27-54ff-8890-b80414e76e30",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un tome qui renverse les apparences",
+   "competence": "argumenter",
+   "situation": "Un sujet d’oral : ce tome est-il encore un conte pour enfants ? Lis une scène écrite à la manière de Rowling, écoute le débat, puis range les idées.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le compartiment",
+     "blocs": [
+      "La lumière faiblit dans le compartiment. Un froid glacé monte du couloir, et les rires s’éteignent un à un. Derrière la vitre, une silhouette cagoulée avance. Harry sent ses [[s|souvenirs]] heureux s’éloigner, comme aspirés par la créature."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Rowling (aucune citation)"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Ce tome, c’est un conte pour enfants : les gentils d’un côté, les méchants de l’autre."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Plus maintenant : un innocent est condamné, un adulte est un lâche, et la justice se [[j|trompe]]."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Et les créatures cagoulées ?"
+      },
+      {
+       "qui": "Noé",
+       "texte": "Les Détraqueurs sont une image de la dépression : Rowling l’a confirmé."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que la créature aspire.",
+     "aide": "Elle prive Harry de ce qui le rend heureux.",
+     "explication": "Les Détraqueurs aspirent les **souvenirs** heureux."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le verbe qui dit que la justice défaille dans ce tome.",
+     "aide": "Un innocent est condamné : la justice fait quoi ?",
+     "explication": "La justice **se trompe** : Sirius est condamné sans procès et Buck pour un accident."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du tome : relève-t-il de l’injustice ou de la peur ?",
+     "categories": [
+      "L’injustice",
+      "La peur"
+     ],
+     "items": [
+      [
+       "Sirius condamné sans procès",
+       0
+      ],
+      [
+       "Buck condamné après avoir été provoqué",
+       0
+      ],
+      [
+       "Les Détraqueurs",
+       1
+      ],
+      [
+       "L’épouvantard",
+       1
+      ],
+      [
+       "Le Patronus",
+       1
+      ]
+     ],
+     "aide": "L’injustice est un jugement qui se trompe ; la peur, ce qu’on affronte.",
+     "explication": "**Injustice** : Sirius et Buck. **Peur** : les Détraqueurs, l’épouvantard, et le Patronus qui permet de l’affronter."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le débat invite-t-il à lire les Détraqueurs ?",
+     "options": [
+      "Comme une image de la dépression",
+      "Comme de simples gardiens sans portée",
+      "Comme des ennemis venus d’un autre livre",
+      "Comme des amis qui protègent Harry"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Noé.",
+     "explication": "Les Détraqueurs sont une **image de la dépression** : Rowling l’a confirmé."
+    }
+   ]
+  }
+ ]
+}

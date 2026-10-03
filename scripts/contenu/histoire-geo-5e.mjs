@@ -167,7 +167,7 @@ Après la mort de Muhammad, les **califes** — ses successeurs — conquièrent
 
 | La dynastie | Sa capitale | Depuis |
 | Les **Omeyyades** | **Damas** | |
-| Les **Abbassides** | **Bagdad** | 750 |
+| Les **Abbassides** | **Bagdad** | 762 |
 
 ## Une civilisation brillante
 | Le lieu ou l’homme | Son apport |
@@ -191,7 +191,7 @@ Musulmans, chrétiens et juifs cohabitent. Les **dhimmis** — chrétiens et jui
             ['En quelle année a lieu l’Hégire ?', ['622', '610', '630', '750'], 0, 'Le départ de Muhammad vers Médine ouvre le calendrier musulman.'],
             ['Dans quelle ville Muhammad prêche-t-il d’abord ?', ['La Mecque', 'Médine', 'Damas', 'Bagdad'], 0, 'Il rejoint Médine en 622 après en avoir été chassé.'],
             ['Comment s’appelle le livre sacré de l’islam ?', ['Le Coran', 'La Torah', 'Les Évangiles', 'La Sunna'], 0, 'Les pratiques reposent sur les cinq piliers.'],
-            ['Quelle dynastie installe sa capitale à Bagdad en 750 ?', ['Les Abbassides', 'Les Omeyyades', 'Les Fatimides', 'Les Seldjoukides'], 0, 'Les Omeyyades gouvernaient depuis Damas.'],
+            ['Quelle dynastie fonde sa capitale, Bagdad, en 762 ?', ['Les Abbassides', 'Les Omeyyades', 'Les Fatimides', 'Les Seldjoukides'], 0, 'Les Omeyyades gouvernaient depuis Damas.', 'Quelle dynastie installe sa capitale à Bagdad en 750 ?'],
             ['Jusqu’où s’étend l’empire musulman en 750 ?', ['De l’Indus aux Pyrénées', 'De la Chine à l’Atlantique', 'De l’Égypte à la Grèce', 'De l’Arabie à la mer Noire'], 0, 'Un siècle de conquêtes après la mort de Muhammad.'],
             ['Qu’est-ce que la Maison de la Sagesse ?', ['Un centre de traduction et de savoir à Bagdad', 'Une mosquée de La Mecque', 'Un palais califal de Damas', 'Une école coranique de Cordoue'], 0, 'Elle transmet les savoirs grecs, perses et indiens.'],
             ['Qui sont les dhimmis ?', ['Les chrétiens et les juifs, qui gardent leur religion contre un impôt', 'Les esclaves de l’empire', 'Les soldats du calife', 'Les marchands étrangers'], 0, 'Un statut inférieur mais protégé.'],

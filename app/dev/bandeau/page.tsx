@@ -5,6 +5,7 @@ import ProfileChip from '@/components/defi/ProfileChip'
 import type { ProfileData } from '@/app/defi/profile-actions'
 import { avatarDataUri, DEFAULT_AVATAR } from '@/lib/avatar'
 import { portraitSrc } from '@/lib/portraits'
+import { SemeurQuetes } from '../quetes/ApercuQuetes'
 
 export const dynamic = 'force-dynamic'
 
@@ -18,7 +19,7 @@ export const dynamic = 'force-dynamic'
 // En bas, la carte du joueur de l'arène (ProfileChip), qui porte le même
 // multiplicateur d'XP sur le verre de nuit.
 //
-//   /dev/bandeau
+//   /dev/bandeau   (avec la pastille des quêtes du jour, semée par SemeurQuetes)
 
 const BLASON: AvatarHud = { src: portraitSrc('7'), visage: true }
 const COMPOSE: AvatarHud = { src: avatarDataUri(DEFAULT_AVATAR, 72), visage: false }
@@ -60,6 +61,7 @@ export default async function ApercuBandeauPage() {
   return (
     <div className="mx-auto flex max-w-md flex-col gap-4 px-0 pt-20 pb-28">
       <h1 className="sr-only">Aperçu du bandeau</h1>
+      <SemeurQuetes />
       {CAS.map((c) => (
         <section key={c.titre}>
           <p className="px-4 pb-1 text-xs font-bold text-muted-foreground">{c.titre}</p>

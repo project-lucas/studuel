@@ -1,0 +1,2015 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "0e390e42-664f-5a6d-bc5b-0dba4e5564ea",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix-huit lettres sous un faux nom",
+   "competence": "analyser-document",
+   "situation": "Tu fiches *Les Provinciales* pour l’oral. Lis la carte d’identité, puis repère les deux camps de la querelle.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Provinciales",
+     "sousTitre": "Blaise Pascal",
+     "emoji": "✉️",
+     "lignes": [
+      {
+       "texte": "Titre d’origine",
+       "valeur": "Lettres écrites à un provincial"
+      },
+      {
+       "texte": "Nombre de lettres",
+       "valeur": "Dix-huit"
+      },
+      {
+       "texte": "Pseudonyme",
+       "valeur": "Louis de Montalte",
+       "id": "pseudo"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "Clandestine"
+      }
+     ],
+     "pied": "Un modèle de polémique",
+     "teinte": "violet"
+    },
+    {
+     "id": "camps",
+     "type": "tableau",
+     "titre": "Les deux camps",
+     "colonnes": [
+      "Camp",
+      "Qui ?"
+     ],
+     "lignes": [
+      [
+       "Les défendus",
+       "Antoine Arnauld et les jansénistes de Port-Royal"
+      ],
+      [
+       "Les attaquants",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "pseudo"
+     ],
+     "enonce": "Touche la ligne qui donne le pseudonyme sous lequel Pascal publie.",
+     "aide": "Pascal ne signe pas de son nom.",
+     "explication": "Les lettres paraissent sous le pseudonyme de **Louis de Montalte**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "Pascal publie ___ lettres, de façon ___ ; l’ensemble s’intitule *Lettres écrites à un ___*.",
+     "reponses": [
+      [
+       "dix-huit",
+       "18"
+      ],
+      [
+       "clandestine"
+      ],
+      [
+       "provincial"
+      ]
+     ],
+     "banque": [
+      "dix-huit",
+      "clandestine",
+      "provincial",
+      "officielle",
+      "jésuite",
+      "vingt"
+     ],
+     "aide": "Lis les lignes de la fiche.",
+     "explication": "Il publie **dix-huit** lettres, de façon **clandestine**, sous le titre *Lettres écrites à un **provincial***."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La Sorbonne et les jésuites",
+      "Les jansénistes de Port-Royal",
+      "Antoine Arnauld et ses amis",
+      "Les mathématiciens de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Ils ont fait condamner Arnauld en 1656.",
+     "explication": "Les attaquants sont **la Sorbonne et les jésuites**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e390e42-664f-5a6d-bc5b-0dba4e5564ea",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un provincial bien naïf",
+   "competence": "analyser-texte",
+   "situation": "Lis une scène écrite pour l’exercice, à la manière des premières lettres, puis dis comment Pascal s’y prend pour convaincre.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une visite chez un casuiste",
+     "blocs": [
+      {
+       "didascalie": "Un provincial interroge un père casuiste sur une querelle de théologiens."
+      },
+      {
+       "personnage": "Le provincial",
+       "replique": "Mon père, je suis [[n|ignorant]] : pouvez-vous m’expliquer cela ?"
+      },
+      {
+       "personnage": "Le père",
+       "replique": "Volontiers ! À condition de bien distinguer les cas, rien n’est jamais défendu."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Provinciales* de Pascal"
+    },
+    {
+     "id": "lettres",
+     "type": "tableau",
+     "titre": "Deux temps",
+     "colonnes": [
+      "Les lettres",
+      "Leur méthode"
+     ],
+     "lignes": [
+      [
+       "Les premières",
+       "Elles feignent la naïveté : un provincial demande des explications"
+      ],
+      [
+       "Les suivantes",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot par lequel le provincial se présente pour mieux faire parler son interlocuteur.",
+     "aide": "Il joue celui qui ne sait rien.",
+     "explication": "Le provincial se dit **ignorant** : c’est la feinte naïveté des premières lettres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Elles attaquent de front la casuistique jésuite",
+      "Elles renoncent à l’ironie par prudence",
+      "Elles défendent la casuistique des jésuites",
+      "Elles se contentent de citer la Bible"
+     ],
+     "reponse": 0,
+     "aide": "Après avoir feint de ne pas comprendre, Pascal attaque.",
+     "explication": "Les suivantes **attaquent frontalement la casuistique jésuite**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel défaut de la morale casuiste la réplique du père montre-t-elle ?",
+     "options": [
+      "À force de distinguer les cas, elle permet de tout justifier",
+      "Elle interdit des gestes pourtant permis par la loi",
+      "Elle ignore les cas concrets et reste abstraite",
+      "Elle se contredit sur la querelle de la grâce"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase du père : « rien n’est jamais défendu ».",
+     "explication": "La casuistique **permet de tout justifier** en distinguant sans cesse les cas."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque arme de Pascal à son effet.",
+     "paires": [
+      [
+       "L’ironie",
+       "Elle désarme"
+      ],
+      [
+       "La mise en scène dialoguée",
+       "Elle rend le raisonnement vivant"
+      ],
+      [
+       "Les citations exactes des adversaires",
+       "Elles sont retournées contre eux"
+      ],
+      [
+       "Une langue limpide",
+       "Elle rend le débat accessible"
+      ]
+     ],
+     "aide": "Pense à ce que chaque arme apporte au lecteur.",
+     "explication": "L’**ironie** désarme, le **dialogue** vivifie, les **citations exactes** se retournent, la **langue limpide** rend accessible."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e390e42-664f-5a6d-bc5b-0dba4e5564ea",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faire court demande du temps",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent pourquoi Pascal choisit l’ironie. Lis leur débat, une phrase célèbre des lettres, puis complète le plan.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Pascal attaque les jésuites : il devrait écrire un traité sérieux."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Mais le public s’ennuierait : l’[[i|ironie]] convainc mieux qu’un traité."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une phrase célèbre",
+     "blocs": [
+      "Je n’ai fait celle-ci plus longue que parce que je n’ai pas eu le loisir de la faire plus courte."
+     ],
+     "source": "Blaise Pascal, *Les Provinciales*, seizième lettre"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Les lettres montrent que l’ironie convainc mieux qu’un traité",
+       "Elle désarme et rend le débat vivant",
+       "?"
+      ],
+      [
+       "Elles posent la question de la morale",
+       "Peut-on tout excuser par les intentions ?",
+       "Le duel, l’usure, la restriction mentale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui nomme l’arme que Tom juge la plus efficace.",
+     "aide": "Pense à ce qui fait rire tout en accusant.",
+     "explication": "Tom défend **l’ironie** : elle convainc mieux qu’un long traité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit Pascal de sa lettre dans cette phrase ?",
+     "options": [
+      "Faire court demande plus de temps que faire long",
+      "Il écrit plus long quand il est pressé",
+      "Une lettre longue prouve plus qu’une courte",
+      "Il n’a pas eu le temps de relire la lettre"
+     ],
+     "reponse": 0,
+     "aide": "Il s’excuse d’avoir écrit long, faute de temps pour faire court.",
+     "explication": "Pascal dit qu’il est plus difficile et plus long d’écrire **court** que d’écrire long."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un provincial naïf qui interroge un jésuite",
+      "La condamnation d’Arnauld par la Sorbonne",
+      "La nuit de feu de 1654",
+      "Les *Pensées*, restées inachevées"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple de mise en scène ironique.",
+     "explication": "Le **provincial naïf** qui interroge un jésuite met en scène l’ironie et le dialogue."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que la casuistique justifie, ou une arme de Pascal ?",
+     "categories": [
+      "Ce que la casuistique justifie",
+      "Une arme de Pascal"
+     ],
+     "items": [
+      [
+       "Le duel",
+       0
+      ],
+      [
+       "L’usure",
+       0
+      ],
+      [
+       "Le mensonge par restriction mentale",
+       0
+      ],
+      [
+       "L’ironie",
+       1
+      ],
+      [
+       "Les citations exactes des adversaires",
+       1
+      ]
+     ],
+     "aide": "Trois exemples sont des pratiques excusées, deux sont des moyens de les combattre.",
+     "explication": "La casuistique **justifie** le duel, l’usure et la restriction mentale ; Pascal combat avec l’**ironie** et les **citations exactes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "85bb2e90-ce0f-531c-b9c7-d26a39196872",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De l’Oklahoma à la route 66",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Les Raisins de la colère*. Place le roman dans la vie de Steinbeck, puis suis le début du voyage des Joad.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Steinbeck et son roman",
+     "debut": 1900,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1902,
+       "nom": "Naissance"
+      },
+      {
+       "id": "s",
+       "date": 1937,
+       "nom": "Des souris…"
+      },
+      {
+       "id": "r",
+       "date": 1939,
+       "nom": "Les Raisins"
+      },
+      {
+       "id": "p",
+       "date": 1940,
+       "nom": "Pulitzer"
+      },
+      {
+       "id": "no",
+       "date": 1962,
+       "nom": "Nobel"
+      },
+      {
+       "id": "m",
+       "date": 1968,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le départ des Joad",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Une ferme d’Oklahoma ruinée"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "La route 66 vers la Californie"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche sur la frise l’année de publication du roman.",
+     "aide": "Il paraît deux ans après *Des souris et des hommes*.",
+     "explication": "Le roman paraît en **1939**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication du roman du prix Nobel de Steinbeck ?",
+     "reponse": 23,
+     "unite": "ans",
+     "aide": "Compare 1939 et 1962.",
+     "explication": "1962 − 1939 = **23 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "La poussière, les dettes et les banques les chassent",
+      "Les Joad décident de vendre leur terre à un voisin",
+      "Les Joad partent en vacances chez des cousins",
+      "Les Joad fuient une inondation de la Californie"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui les chasse de leur ferme.",
+     "explication": "Ils sont chassés par les **tempêtes de poussière**, les **dettes** et les **tracteurs des banques**."
+    }
+   ]
+  },
+  {
+   "chapitre": "85bb2e90-ce0f-531c-b9c7-d26a39196872",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Douze personnes dans un camion",
+   "competence": "analyser-texte",
+   "situation": "Lis un résumé écrit pour l’exercice, puis identifie les personnages et leur évolution.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le départ",
+     "blocs": [
+      "Les Joad, douze personnes sur trois générations, entassent leurs affaires dans un camion. Les [[c|tempêtes]] de poussière, les [[c|dettes]] et les [[c|tracteurs]] des banques les chassent de leur ferme.",
+      "Ils prennent la route 66 vers la Californie, attirés par des [[a|prospectus]] qui promettent du travail."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après *Les Raisins de la colère* de Steinbeck"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Tom Joad",
+       "Sort de prison au début ; devient un militant"
+      ],
+      [
+       "Man Joad",
+       "La mère, pilier de la famille"
+      ],
+      [
+       "Pa Joad",
+       "Le père, qui perd peu à peu son autorité"
+      ],
+      [
+       "?",
+       "L’ancien pasteur devenu syndicaliste"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les trois causes qui chassent les Joad de leur ferme.",
+     "aide": "Cherche la poussière, l’argent dû et les machines.",
+     "explication": "Les **tempêtes** de poussière, les **dettes** et les **tracteurs** des banques les chassent."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche ce qui les attire vers la Californie.",
+     "aide": "Ce sont des papiers qui promettent du travail.",
+     "explication": "Les **prospectus** promettent du travail en Californie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Casy",
+      "Noah",
+      "Connie",
+      "Rose de Saron"
+     ],
+     "reponse": 0,
+     "aide": "Il accompagne les Joad, puis meurt pendant une grève.",
+     "explication": "C’est **Casy**, ancien pasteur devenu syndicaliste, tué pendant une grève."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre quatre moments du roman.",
+     "items": [
+      "Les Joad quittent l’Oklahoma",
+      "Ils roulent sur la route 66",
+      "Ils découvrent des camps sordides en Californie",
+      "Casy, devenu syndicaliste, est tué"
+     ],
+     "aide": "On part de la ferme et on termine par la répression.",
+     "explication": "Départ, **route 66**, **camps sordides**, puis la mort de **Casy**."
+    }
+   ]
+  },
+  {
+   "chapitre": "85bb2e90-ce0f-531c-b9c7-d26a39196872",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du « je » au « nous »",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si le roman raconte seulement une famille. Lis leur débat, puis relie les repères du livre.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clara",
+       "texte": "C’est le récit d’une seule famille, les Joad."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Mais le roman [[a|alterne]] avec des chapitres [[c|collectifs]] qui élargissent à toute une classe."
+      }
+     ]
+    },
+    {
+     "id": "evo",
+     "type": "tableau",
+     "titre": "L’évolution des personnages",
+     "colonnes": [
+      "Personnage",
+      "Évolution"
+     ],
+     "lignes": [
+      [
+       "Rose de Saron",
+       "De l’égoïsme au don"
+      ],
+      [
+       "Casy",
+       "Il cherche une foi nouvelle dans la solidarité"
+      ],
+      [
+       "Pa Joad",
+       "Il perd peu à peu son autorité"
+      ],
+      [
+       "Tom Joad",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "a",
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui disent comment le roman élargit le récit familial.",
+     "aide": "Un verbe dit la manière de construire, un adjectif dit le type de chapitres.",
+     "explication": "Le roman **alterne** récit familial et chapitres **collectifs** : il passe de la famille à la classe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle évolution faut-il écrire pour Tom dans le tableau ?",
+     "options": [
+      "De la prison au militantisme",
+      "De la ferme au tribunal",
+      "De la solidarité à l’égoïsme",
+      "De la ville à la campagne"
+     ],
+     "reponse": 0,
+     "aide": "Il sort de prison au début ; à la fin il continue la lutte de Casy.",
+     "explication": "Tom passe de la **prison au militantisme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle le passage du « je » au « nous » ?",
+     "options": [
+      "La famille devient une classe solidaire",
+      "Les Joad réussissent à retrouver leur ferme",
+      "Le roman change de narrateur à chaque chapitre",
+      "Les Joad se séparent et s’oublient"
+     ],
+     "reponse": 0,
+     "aide": "Pense au titre de la fiche : roman social et engagé.",
+     "explication": "Le « je » devient « nous » : la famille se fait **classe solidaire**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque repère du roman à ce qu’il désigne.",
+     "paires": [
+      [
+       "Dust Bowl",
+       "Les tempêtes de poussière qui ruinent les fermes"
+      ],
+      [
+       "Route 66",
+       "La route vers la Californie"
+      ],
+      [
+       "Rose de Saron",
+       "La jeune femme qui donne le sein à un mourant"
+      ],
+      [
+       "Battle Hymn of the Republic",
+       "Le chant patriotique d’où vient le titre"
+      ]
+     ],
+     "aide": "Chaque repère est un lieu, un événement, un personnage ou un chant.",
+     "explication": "Le **Dust Bowl** ruine les fermes, la **route 66** mène à la Californie, **Rose de Saron** donne le sein, le **Battle Hymn** donne le titre."
+    }
+   ]
+  },
+  {
+   "chapitre": "2739bb9c-c2bb-581a-b4b5-8ad12df9c88a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Entre lumière et ombre",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Les Rayons et les Ombres*. Place le recueil dans la vie de Hugo, puis repère ses poèmes.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Hugo et son recueil",
+     "debut": 1800,
+     "fin": 1890,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1802,
+       "nom": "Naissance"
+      },
+      {
+       "id": "j",
+       "date": 1833,
+       "nom": "Juliette Drouet"
+      },
+      {
+       "id": "r",
+       "date": 1840,
+       "nom": "Rayons et Ombres"
+      },
+      {
+       "id": "a",
+       "date": 1841,
+       "nom": "Académie"
+      },
+      {
+       "id": "c",
+       "date": 1853,
+       "nom": "Les Châtiments"
+      },
+      {
+       "id": "m",
+       "date": 1885,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "poemes",
+     "type": "tableau",
+     "titre": "Quelques poèmes",
+     "colonnes": [
+      "Poème",
+      "Ce qu’il porte"
+     ],
+     "lignes": [
+      [
+       "Fonction du poète",
+       "Il ouvre le recueil : le poète guide le peuple"
+      ],
+      [
+       "?",
+       "Le retour dans un lieu aimé où la nature a tout oublié"
+      ],
+      [
+       "Oceano nox",
+       "Les marins disparus en mer"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche sur la frise l’année du recueil.",
+     "aide": "Il paraît juste avant l’entrée de Hugo à l’Académie.",
+     "explication": "*Les Rayons et les Ombres* paraissent en **1840**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Hugo attend-il avant de publier à nouveau des vers, avec *Les Châtiments* ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Compare 1840 et 1853.",
+     "explication": "1853 − 1840 = **13 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel titre faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Tristesse d’Olympio",
+      "Guitare",
+      "Fonction du poète",
+      "Oceano nox"
+     ],
+     "reponse": 0,
+     "aide": "Le poète revient dans la vallée de ses amours.",
+     "explication": "C’est **« Tristesse d’Olympio »**, le retour dans un lieu aimé où la nature a tout oublié."
+    }
+   ]
+  },
+  {
+   "chapitre": "2739bb9c-c2bb-581a-b4b5-8ad12df9c88a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les marins disparus",
+   "competence": "analyser-texte",
+   "situation": "Lis le début d’un poème célèbre du recueil, puis relie les deux versants du titre.",
+   "documents": [
+    {
+     "id": "on",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Oceano nox",
+     "blocs": [
+      "Oh ! combien de [[m|marins]], combien de [[m|capitaines]]",
+      "Qui sont partis joyeux pour des courses lointaines,",
+      "Dans ce [[h|morne]] horizon se sont évanouis !"
+     ],
+     "source": "Victor Hugo, « Oceano nox », *Les Rayons et les Ombres* (1840), vers 1 à 3"
+    },
+    {
+     "id": "versants",
+     "type": "tableau",
+     "titre": "Les deux versants du titre",
+     "colonnes": [
+      "Les rayons",
+      "Les ombres"
+     ],
+     "lignes": [
+      [
+       "Le poète prophète",
+       "?"
+      ],
+      [
+       "L’élan vers l’avenir",
+       "Le temps et l’oubli"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "on",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui désignent ceux qui sont partis en mer.",
+     "aide": "Cherche deux fonctions à bord.",
+     "explication": "Les **marins** et les **capitaines** sont les disparus du poème."
+    },
+    {
+     "type": "zone",
+     "document": "on",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche l’adjectif qui assombrit l’horizon.",
+     "aide": "C’est l’un des mots du troisième vers.",
+     "explication": "L’horizon est **morne** : ce mot dit le deuil et l’oubli."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le deuil",
+      "La gloire",
+      "Le voyage",
+      "La mer"
+     ],
+     "reponse": 0,
+     "aide": "Les ombres s’opposent aux rayons.",
+     "explication": "Les ombres, c’est **le deuil**, avec le temps et l’oubli."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit ce début de poème ?",
+     "options": [
+      "Des marins sont partis joyeux et ont disparu en mer",
+      "Des marins reviennent joyeux de leur voyage",
+      "Un capitaine décrit une tempête avec calme",
+      "Des familles attendent leurs enfants au port"
+     ],
+     "reponse": 0,
+     "aide": "Relis les verbes « sont partis » et « se sont évanouis ».",
+     "explication": "Les marins sont **partis joyeux** et **ont disparu** : le poème évoque le deuil des familles."
+    }
+   ]
+  },
+  {
+   "chapitre": "2739bb9c-c2bb-581a-b4b5-8ad12df9c88a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Poète intime ou poète public ?",
+   "competence": "argumenter",
+   "situation": "Lis deux vers célèbres du recueil et compare trois poèmes du retour, puis tranche sur la mission du poète.",
+   "documents": [
+    {
+     "id": "fon",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Fonction du poète",
+     "blocs": [
+      "Le poète en des jours impies",
+      "Vient [[p|préparer]] des jours meilleurs."
+     ],
+     "source": "Victor Hugo, « Fonction du poète », *Les Rayons et les Ombres* (1840)"
+    },
+    {
+     "id": "trois",
+     "type": "tableau",
+     "titre": "Trois poèmes du retour",
+     "colonnes": [
+      "Poème",
+      "Poète"
+     ],
+     "lignes": [
+      [
+       "« Tristesse d’Olympio »",
+       "Hugo"
+      ],
+      [
+       "« Le Lac »",
+       "?"
+      ],
+      [
+       "« Souvenir »",
+       "Musset"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fon",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit la mission du poète.",
+     "aide": "Il agit pour un avenir meilleur.",
+     "explication": "Le poète vient **préparer** des jours meilleurs : il a une mission publique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Lamartine",
+      "Rimbaud",
+      "Verlaine",
+      "Baudelaire"
+     ],
+     "reponse": 0,
+     "aide": "C’est le poète du « Lac ».",
+     "explication": "« Le Lac » est de **Lamartine**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture ces deux vers permettent-ils de prouver ?",
+     "options": [
+      "Le poète a une mission publique : éclairer l’avenir",
+      "Le poète écrit seulement pour exprimer ses chagrins",
+      "Le poète doit rester loin des affaires du monde",
+      "Le poète doit décrire fidèlement la nature"
+     ],
+     "reponse": 0,
+     "aide": "Le poème s’intitule « Fonction du poète ».",
+     "explication": "Le poète a une **mission publique** : éclairer l’avenir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : poète intime, ou poète public ?",
+     "categories": [
+      "Poète intime",
+      "Poète public"
+     ],
+     "items": [
+      [
+       "Tristesse d’Olympio : le retour dans un lieu aimé",
+       0
+      ],
+      [
+       "Olympio qui parle de lui à la troisième personne",
+       0
+      ],
+      [
+       "Le poète qui guide le peuple",
+       1
+      ],
+      [
+       "Le poète qui éclaire l’avenir",
+       1
+      ]
+     ],
+     "aide": "Pense à ce que le recueil fait passer de l’un à l’autre.",
+     "explication": "Les poèmes du **souvenir** sont intimes ; le poète qui **guide** et **éclaire** est public."
+    }
+   ]
+  },
+  {
+   "chapitre": "5aa30bd4-3e5d-599a-aad4-ed3ff3289ae3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un Gascon à Paris",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Trois Mousquetaires*. Place le roman dans la vie de Dumas, puis repère ses personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Dumas et son roman",
+     "debut": 1800,
+     "fin": 1880,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1802,
+       "nom": "Naissance"
+      },
+      {
+       "id": "p",
+       "date": 1844,
+       "nom": "Parution"
+      },
+      {
+       "id": "m",
+       "date": 1870,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui est-ce ?"
+     ],
+     "lignes": [
+      [
+       "D’Artagnan",
+       "Un jeune Gascon monté à Paris"
+      ],
+      [
+       "Athos, Porthos et Aramis",
+       "Les trois mousquetaires"
+      ],
+      [
+       "Constance Bonacieux",
+       "La lingère de la reine"
+      ],
+      [
+       "?",
+       "Une espionne marquée d’une fleur de lys, ancienne épouse d’Athos"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche sur la frise l’année de parution du roman dans *Le Siècle*.",
+     "aide": "C’est un roman-feuilleton des années 1840.",
+     "explication": "Le roman paraît en feuilleton en **1844**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’histoire racontée (1625) de la parution du roman ?",
+     "reponse": 219,
+     "unite": "ans",
+     "aide": "Soustrais 1625 à l’année de parution.",
+     "explication": "1844 − 1625 = **219 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Milady de Winter",
+      "Anne d’Autriche",
+      "Constance Bonacieux",
+      "Isabelle"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’ennemie des mousquetaires, espionne du cardinal.",
+     "explication": "C’est **Milady de Winter**, espionne marquée d’une fleur de lys."
+    }
+   ]
+  },
+  {
+   "chapitre": "5aa30bd4-3e5d-599a-aad4-ed3ff3289ae3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les ferrets de la reine",
+   "competence": "analyser-texte",
+   "situation": "Suis la mission des mousquetaires à Londres, puis dis ce que fait Milady.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La mission",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "La reine a donné ses ferrets à Buckingham"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Ils sauvent l’honneur de la reine"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Ils vont les récupérer à Londres",
+      "Ils les rapportent au cardinal de Richelieu",
+      "Ils les vendent pour payer leurs dettes",
+      "Ils les cachent dans une auberge de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Où se trouve Buckingham ?",
+     "explication": "Il faut **récupérer les ferrets à Londres**, auprès de Buckingham."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape du triomphe des mousquetaires.",
+     "aide": "Ils réussissent sous les yeux du cardinal.",
+     "explication": "Ils **sauvent l’honneur de la reine** sous les yeux du cardinal."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque action de Milady à sa victime.",
+     "paires": [
+      [
+       "Elle empoisonne",
+       "Constance Bonacieux"
+      ],
+      [
+       "Elle fait assassiner",
+       "Le duc de Buckingham"
+      ],
+      [
+       "Elle manipule",
+       "Felton, le jeune officier puritain"
+      ]
+     ],
+     "aide": "Chaque verbe désigne une personne différente.",
+     "explication": "Milady **empoisonne Constance**, fait **assassiner Buckingham** et **manipule Felton**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le portrait de Milady.",
+     "texte": "Milady porte une ___ à l’épaule ; elle est l’ancienne épouse d’___.",
+     "reponses": [
+      [
+       "fleur de lys"
+      ],
+      [
+       "Athos"
+      ]
+     ],
+     "banque": [
+      "fleur de lys",
+      "Athos",
+      "Aramis",
+      "cicatrice",
+      "rose"
+     ],
+     "aide": "La marque est un symbole royal ; l’ancien mari est un mousquetaire.",
+     "explication": "Elle porte une **fleur de lys** à l’épaule et fut l’épouse d’**Athos**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5aa30bd4-3e5d-599a-aad4-ed3ff3289ae3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un chapitre qui s’arrête au bon moment",
+   "competence": "argumenter",
+   "situation": "Lis une scène écrite pour l’exercice, à la manière du roman, puis explique ce qui fait la force d’un roman-feuilleton.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’escalier de l’auberge",
+     "blocs": [
+      "Ce soir-là, quatre hommes tiennent l’escalier d’une auberge contre une dizaine de gardes. Le plus jeune, un Gascon, hésite à fuir.",
+      "« Un pour tous, tous pour un ! » lance l’aîné, et personne ne [[r|recule]]. Au chapitre suivant, on ne saura pas s’ils [[s|survivent]] : l’auteur s’arrête au bon moment."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Trois Mousquetaires* de Dumas"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’amitié est au centre, mais la fin est sombre",
+       "?",
+       "Les amis se séparent"
+      ],
+      [
+       "Le roman est un roman-feuilleton",
+       "Le chapitre s’arrête au bon moment",
+       "Le suspense relance le lecteur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui montre que la devise est tenue par tous.",
+     "aide": "Personne ne fait ce geste.",
+     "explication": "Personne ne **recule** : la devise « un pour tous, tous pour un » est tenue."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui laisse le lecteur dans le suspense.",
+     "aide": "Le lecteur ne sait pas ce qu’ils deviennent.",
+     "explication": "On ne sait pas s’ils **survivent** : c’est le suspense du feuilleton."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel procédé du roman-feuilleton ce passage illustre-t-il ?",
+     "options": [
+      "Le chapitre qui s’arrête au bon moment",
+      "Le résumé de l’histoire par le narrateur",
+      "La description minutieuse d’un décor",
+      "Le récit à la première personne"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui donne envie de lire la suite.",
+     "explication": "Le passage illustre le **chapitre qui s’arrête au bon moment** : le lecteur veut la suite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel argument faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Milady est jugée et exécutée par les mousquetaires",
+      "D’Artagnan devient capitaine des gardes du cardinal",
+      "La reine renvoie les mousquetaires du royaume",
+      "Constance Bonacieux survit et se marie"
+     ],
+     "reponse": 0,
+     "aide": "La fin est sombre : un personnage est exécuté.",
+     "explication": "La fin est sombre : les mousquetaires **jugent et exécutent Milady**."
+    }
+   ]
+  },
+  {
+   "chapitre": "90be7ef3-ac3c-5931-8c55-d8884e5e67c4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cent dix-huit sonnets",
+   "competence": "analyser-document",
+   "situation": "Tu fiches *Les Trophées* pour l’oral. Lis la carte d’identité du recueil, puis ses grandes sections.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Trophées",
+     "sousTitre": "José-Maria de Heredia",
+     "emoji": "🏺",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1893"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Cent dix-huit sonnets",
+       "id": "nb"
+      },
+      {
+       "texte": "Mouvement",
+       "valeur": "Le Parnasse"
+      },
+      {
+       "texte": "Maître",
+       "valeur": "Leconte de Lisle"
+      }
+     ],
+     "pied": "Un chef-d’œuvre de la poésie parnassienne",
+     "teinte": "violet"
+    },
+    {
+     "id": "sec",
+     "type": "tableau",
+     "titre": "Les grandes sections",
+     "colonnes": [
+      "Section",
+      "Son époque"
+     ],
+     "lignes": [
+      [
+       "La Grèce et la Sicile",
+       "L’Antiquité grecque"
+      ],
+      [
+       "?",
+       "L’Antiquité romaine"
+      ],
+      [
+       "Le Moyen Âge et la Renaissance",
+       "L’Europe"
+      ],
+      [
+       "L’Orient et les Tropiques",
+       "L’ailleurs"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "nb"
+     ],
+     "enonce": "Touche la ligne qui donne le nombre de sonnets du recueil.",
+     "aide": "Cherche la ligne « Forme ».",
+     "explication": "Le recueil compte **cent dix-huit** sonnets."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "Heredia, disciple de ___ ___, appartient au ___.",
+     "reponses": [
+      [
+       "Leconte"
+      ],
+      [
+       "de Lisle"
+      ],
+      [
+       "Parnasse"
+      ]
+     ],
+     "banque": [
+      "Leconte",
+      "de Lisle",
+      "Parnasse",
+      "symbolisme",
+      "Baudelaire"
+     ],
+     "aide": "Regarde les lignes « Mouvement » et « Maître ».",
+     "explication": "Heredia est disciple de **Leconte de Lisle** et appartient au **Parnasse**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle section faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Rome et les Barbares",
+      "La Nature et le Rêve",
+      "La Grèce et Rome",
+      "L’Orient et les Barbares"
+     ],
+     "reponse": 0,
+     "aide": "Elle évoque l’Antiquité romaine.",
+     "explication": "C’est **« Rome et les Barbares »**."
+    }
+   ]
+  },
+  {
+   "chapitre": "90be7ef3-ac3c-5931-8c55-d8884e5e67c4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des conquérants et des étoiles",
+   "competence": "analyser-texte",
+   "situation": "Lis la fin d’un sonnet célèbre, puis compare le Parnasse au romantisme.",
+   "documents": [
+    {
+     "id": "conq",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les Conquérants",
+     "blocs": [
+      "Ils regardaient monter en un ciel ignoré",
+      "Du fond de l’Océan des [[n|étoiles]] [[n|nouvelles]]."
+     ],
+     "source": "José-Maria de Heredia, « Les Conquérants », *Les Trophées* (1893), derniers vers"
+    },
+    {
+     "id": "para",
+     "type": "tableau",
+     "titre": "Le Parnasse contre le romantisme",
+     "colonnes": [
+      "Contre le romantisme",
+      "Ce que le Parnasse vise"
+     ],
+     "lignes": [
+      [
+       "L’épanchement",
+       "L’impersonnalité"
+      ],
+      [
+       "L’à-peu-près",
+       "?"
+      ],
+      [
+       "Le flou",
+       "Des images précises et éclatantes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conq",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que les conquérants voient monter.",
+     "aide": "Ce sont des astres inconnus.",
+     "explication": "Ils voient monter des **étoiles nouvelles**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet crée ce dernier vers ?",
+     "options": [
+      "Une image finale frappante qui referme le sonnet",
+      "Une confession personnelle du poète",
+      "Un récit détaillé du combat des conquérants",
+      "Une leçon morale adressée au lecteur"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que le sonnet de Heredia cherche dans son dernier vers.",
+     "explication": "Le dernier vers est une **image frappante** qui referme le sonnet."
+    },
+    {
+     "type": "zone",
+     "document": "para",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui dit ce que le Parnasse met à la place de l’épanchement.",
+     "aide": "Cherche la première ligne du tableau.",
+     "explication": "À la place de l’épanchement, le Parnasse vise **l’impersonnalité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le culte de la forme et l’érudition",
+      "L’expression libre des sentiments",
+      "Le rêve et le mystère",
+      "La chanson populaire"
+     ],
+     "reponse": 0,
+     "aide": "Le Parnasse refuse l’à-peu-près.",
+     "explication": "Contre l’à-peu-près, le Parnasse vise **le culte de la forme** et l’érudition."
+    }
+   ]
+  },
+  {
+   "chapitre": "90be7ef3-ac3c-5931-8c55-d8884e5e67c4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un poème sans « je »",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si un sonnet sans « je » est froid. Lis leur débat et un vers célèbre, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lucie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucie",
+       "texte": "Heredia ne dit jamais « je » : son sonnet est un [[t|tableau]], pas une confidence."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Mais le dernier vers, une vision éclatante, fait ressentir l’émotion sans la nommer."
+      }
+     ]
+    },
+    {
+     "id": "v1",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le premier vers",
+     "blocs": [
+      "Comme un vol de [[g|gerfauts]] hors du charnier natal,"
+     ],
+     "source": "José-Maria de Heredia, « Les Conquérants », *Les Trophées* (1893), vers 1"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le recueil illustre l’art pour l’art",
+       "La beauté pour elle-même, sans message moral",
+       "?"
+      ],
+      [
+       "Le poète se fait peintre et historien",
+       "Il choisit un instant, une image, une couleur",
+       "« Les Conquérants » : une vision d’étoiles nouvelles"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot par lequel Lucie définit le sonnet de Heredia.",
+     "aide": "Le poète se fait peintre.",
+     "explication": "Lucie voit un **tableau** : le « je » disparaît derrière l’image."
+    },
+    {
+     "type": "zone",
+     "document": "v1",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le nom des oiseaux de chasse auxquels les conquérants sont comparés.",
+     "aide": "Ils s’envolent d’un lieu natal.",
+     "explication": "Les conquérants sont comparés à un vol de **gerfauts**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel argument faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Chaque sonnet est un objet fini, indépendant",
+      "Chaque sonnet raconte la vie de l’auteur",
+      "Chaque sonnet développe une leçon morale",
+      "Chaque sonnet imite un poème de Lamartine"
+     ],
+     "reponse": 0,
+     "aide": "L’orfèvre ne cherche pas de message mais une perfection.",
+     "explication": "Chaque sonnet est **un objet fini, indépendant**, comme chez un orfèvre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Heredia à son effet.",
+     "paires": [
+      [
+       "Le dernier vers frappant",
+       "Il referme le sonnet sur une vision"
+      ],
+      [
+       "La contrainte du sonnet",
+       "Elle oblige à la concentration"
+      ],
+      [
+       "Le « je » absent",
+       "Le poète disparaît derrière le tableau"
+      ]
+     ],
+     "aide": "Pense à ce que chaque choix change pour le lecteur.",
+     "explication": "Le **dernier vers** referme, le **sonnet** concentre, le **« je » absent** efface le poète."
+    }
+   ]
+  },
+  {
+   "chapitre": "e20868fa-63d9-52fa-86fb-d1cdeb3128ed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le recueil de Colette Willy",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *Les Vrilles de la vigne* pour l’oral. Place le recueil dans la vie de Colette, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Colette et son recueil",
+     "debut": 1870,
+     "fin": 1960,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1873,
+       "nom": "Naissance"
+      },
+      {
+       "id": "s",
+       "date": 1906,
+       "nom": "Séparation"
+      },
+      {
+       "id": "v",
+       "date": 1908,
+       "nom": "Les Vrilles"
+      },
+      {
+       "id": "si",
+       "date": 1930,
+       "nom": "Sido"
+      },
+      {
+       "id": "m",
+       "date": 1954,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Vrilles de la vigne",
+     "sousTitre": "Colette",
+     "emoji": "🌿",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1908"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Vingt textes brefs"
+      },
+      {
+       "texte": "Signature",
+       "valeur": "?",
+       "id": "sign"
+      }
+     ],
+     "pied": "Le texte qui accompagne Sido au programme du bac",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche sur la frise l’année du recueil.",
+     "aide": "Il paraît deux ans après la séparation d’avec Willy.",
+     "explication": "*Les Vrilles de la vigne* paraissent en **1908**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Les Vrilles de la vigne* de *Sido* ?",
+     "reponse": 22,
+     "unite": "ans",
+     "aide": "Compare 1908 et 1930.",
+     "explication": "1930 − 1908 = **22 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle signature faut-il écrire dans la case « ? » de la fiche ?",
+     "options": [
+      "Colette Willy",
+      "Claudine",
+      "Henry Gauthier-Villars",
+      "Sido"
+     ],
+     "reponse": 0,
+     "aide": "Elle s’affranchit peu à peu du nom de son mari.",
+     "explication": "Elle signe **« Colette Willy »** et s’affranchit peu à peu de Willy."
+    }
+   ]
+  },
+  {
+   "chapitre": "e20868fa-63d9-52fa-86fb-d1cdeb3128ed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dialogue dans le jardin",
+   "competence": "analyser-texte",
+   "situation": "Lis une courte scène écrite pour l’exercice, à la manière du recueil, puis repère les grands types de textes.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un jardin au crépuscule",
+     "blocs": [
+      {
+       "didascalie": "Un jardin, au crépuscule. Un chien et une chatte discutent."
+      },
+      {
+       "personnage": "Le Chien",
+       "replique": "Je [[s|flaire]] l’orage dans le vent."
+      },
+      {
+       "personnage": "La Chatte",
+       "replique": "Moi, je [[s|savoure]] l’odeur du jasmin et la tiédeur de la pierre."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Vrilles de la vigne* de Colette"
+    },
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Les types de textes",
+     "colonnes": [
+      "Type de texte",
+      "Exemples"
+     ],
+     "lignes": [
+      [
+       "Les dialogues d’animaux",
+       "Toby-Chien et Kiki-la-Doucette"
+      ],
+      [
+       "?",
+       "« Nuit blanche », « Jour gris », « Le Dernier Feu »"
+      ],
+      [
+       "Les chroniques",
+       "Le music-hall, le maquillage, la province et Paris"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux verbes qui disent ce que les animaux ressentent.",
+     "aide": "Ce sont des verbes de sensation.",
+     "explication": "Le chien **flaire** et la chatte **savoure** : Colette écrit avec les sensations."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel type de texte du recueil ce passage ressemble-t-il ?",
+     "options": [
+      "Aux dialogues d’animaux",
+      "Aux chroniques de music-hall",
+      "Aux textes intimes adressés à une femme",
+      "Aux souvenirs de la vie de province"
+     ],
+     "reponse": 0,
+     "aide": "Qui parle dans la scène ?",
+     "explication": "Le passage ressemble aux **dialogues d’animaux**, comme Toby-Chien et Kiki-la-Doucette."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les textes intimes adressés à une femme aimée",
+      "Les poèmes en vers réguliers et rimés",
+      "Les contes pour enfants du recueil",
+      "Les lettres envoyées à la presse"
+     ],
+     "reponse": 0,
+     "aide": "Les trois titres sont adressés à une femme aimée.",
+     "explication": "Ces trois titres sont **des textes intimes adressés à une femme aimée**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur l’écriture de Colette.",
+     "texte": "Colette pratique l’écriture des ___ : phrase ___, attention au ___.",
+     "reponses": [
+      [
+       "sensations"
+      ],
+      [
+       "souple"
+      ],
+      [
+       "vivant"
+      ]
+     ],
+     "banque": [
+      "sensations",
+      "souple",
+      "vivant",
+      "raideur",
+      "idées",
+      "mort"
+     ],
+     "aide": "Le scène montre un chien et une chatte qui flairent.",
+     "explication": "C’est l’écriture des **sensations**, d’une phrase **souple**, attentive au **vivant**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e20868fa-63d9-52fa-86fb-d1cdeb3128ed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rossignol qui ne dormira plus",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent ce que représente le rossignol. Lis leur débat et la phrase du texte liminaire, puis complète le plan.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maya",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Le rossignol, c’est juste un oiseau dans un jardin."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Non : le texte liminaire est un art poétique en miniature, et le rossignol est la [[p|poète]]."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le texte liminaire",
+     "blocs": [
+      "Tant que la vigne pousse, pousse, pousse… Je ne dormirai plus !"
+     ],
+     "source": "Colette, *Les Vrilles de la vigne* (1908), texte liminaire (citation du cours)"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le recueil marque une émancipation",
+       "Colette signe « Colette Willy » et s’affranchit peu à peu",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot par lequel Maya désigne ce que représente le rossignol.",
+     "aide": "Le rossignol chante.",
+     "explication": "Le rossignol est la **poète** : il choisit de chanter pour rester libre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la décision de ne plus dormir et de chanter sans cesse ?",
+     "options": [
+      "Un choix de liberté : chanter pour ne plus être pris",
+      "Une peur de la nuit qui ne passera pas",
+      "Un regret de n’avoir pas su dormir plus tôt",
+      "Une demande d’aide adressée aux autres oiseaux"
+     ],
+     "reponse": 0,
+     "aide": "Les vrilles avaient ligoté le rossignol.",
+     "explication": "Le rossignol **chante pour ne plus se laisser prendre** : c’est un choix de liberté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le rossignol qui chante pour ne plus se laisser prendre",
+      "Les dialogues de Toby-Chien et Kiki-la-Doucette",
+      "Les chroniques sur le music-hall et le maquillage",
+      "La naissance de Colette à Saint-Sauveur-en-Puisaye"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple d’émancipation.",
+     "explication": "Le **rossignol qui chante pour ne plus être pris** illustre l’émancipation de Colette."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure du recueil à ce qu’elle représente.",
+     "paires": [
+      [
+       "Le rossignol",
+       "La poète qui chante pour rester libre"
+      ],
+      [
+       "Toby-Chien et Kiki-la-Doucette",
+       "Des animaux qui parlent avec humour"
+      ],
+      [
+       "La narratrice",
+       "Une femme sensuelle, attentive aux saisons et aux corps"
+      ]
+     ],
+     "aide": "Chaque figure joue un rôle différent dans le recueil.",
+     "explication": "Le **rossignol** est la poète, **Toby-Chien et Kiki-la-Doucette** parlent avec humour, la **narratrice** est sensuelle."
+    }
+   ]
+  }
+ ]
+}

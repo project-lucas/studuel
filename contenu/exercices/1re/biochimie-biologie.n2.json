@@ -1,0 +1,4348 @@
+{
+ "niveau": "1re",
+ "matiere": "biochimie-biologie",
+ "exercices": [
+  {
+   "chapitre": "cae06da0-6377-52bd-9c6c-06ae700b9a91",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le placard à sucres du laboratoire",
+   "competence": "lire-tableau",
+   "situation": "Léa, technicienne de laboratoire, range les flacons d’oses du placard. Chaque étiquette indique le nombre de carbones et le groupe carbonyle du sucre.",
+   "documents": [
+    {
+     "id": "oses",
+     "type": "tableau",
+     "titre": "Les étiquettes des flacons",
+     "colonnes": [
+      "Ose",
+      "Carbones",
+      "Groupe carbonyle"
+     ],
+     "lignes": [
+      [
+       "D-glucose",
+       6,
+       "–CHO (aldéhyde)"
+      ],
+      [
+       "D-fructose",
+       6,
+       "C=O entre deux carbones (cétone)"
+      ],
+      [
+       "D-ribose",
+       5,
+       "–CHO (aldéhyde)"
+      ],
+      [
+       "D-galactose",
+       6,
+       "–CHO (aldéhyde)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oses",
+     "enonce": "Touche la case qui décrit le sucre porteur d’une fonction cétone.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le groupe carbonyle situé entre deux carbones.",
+     "explication": "Seul le **D-fructose** porte une cétone ; les trois autres oses ont un groupe aldéhyde –CHO."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de carbones compte le D-ribose ?",
+     "reponse": 5,
+     "aide": "Lis la deuxième colonne sur la ligne du ribose.",
+     "explication": "Le D-ribose compte **5 carbones** : c’est un pentose."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque ose selon son nombre de carbones et sa fonction.",
+     "categories": [
+      "Aldohexose",
+      "Aldopentose",
+      "Cétohexose"
+     ],
+     "items": [
+      [
+       "D-glucose",
+       0
+      ],
+      [
+       "D-ribose",
+       1
+      ],
+      [
+       "D-fructose",
+       2
+      ],
+      [
+       "D-galactose",
+       0
+      ]
+     ],
+     "aide": "« Hexose » = 6 carbones, « pentose » = 5 ; « aldo » = aldéhyde, « céto » = cétone.",
+     "explication": "Glucose et galactose : **aldohexoses** (6 C, aldéhyde) ; ribose : **aldopentose** ; fructose : **cétohexose**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cae06da0-6377-52bd-9c6c-06ae700b9a91",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel sucre cache cet hydrolysat ?",
+   "competence": "analyser-document",
+   "situation": "Au TP, Malik reçoit un flacon d’oside inconnu. Il l’hydrolyse, puis dépose l’hydrolysat à côté de trois sucres de référence sur une plaque de chromatographie.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "schema",
+     "titre": "La plaque après migration",
+     "largeur": 320,
+     "hauteur": 224,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 280,
+       "h": 172,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 6
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        26,
+        44
+       ],
+       "a": [
+        294,
+        44
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 294,
+       "y": 38,
+       "texte": "front du solvant",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        26,
+        172
+       ],
+       "a": [
+        294,
+        172
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 294,
+       "y": 166,
+       "texte": "ligne de dépôt",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 115,
+       "r": 7,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "glucose",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 145,
+       "r": 7,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "galactose",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 85,
+       "r": 7,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "fructose",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 85,
+       "r": 7,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "hhaut",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 115,
+       "r": 7,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "hbas",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 208,
+       "texte": "Glucose",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 208,
+       "texte": "Galactose",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 208,
+       "texte": "Fructose",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 208,
+       "texte": "Hydrolysat",
+       "taille": "petit",
+       "gras": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la tache de l’hydrolysat qui est au même niveau que le fructose de référence.",
+     "reponse": [
+      "hhaut"
+     ],
+     "aide": "Suis horizontalement le niveau de la tache de fructose.",
+     "explication": "La tache haute de l’hydrolysat est alignée avec le **fructose** de référence."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’hydrolysat contient du glucose et du fructose. De quel oside s’agit-il ?",
+     "options": [
+      "Le maltose (du malt)",
+      "Le lactose (du lait)",
+      "Le saccharose",
+      "L’amidon (réserve)"
+     ],
+     "reponse": 2,
+     "ordreFixe": true,
+     "aide": "Rappelle-toi la composition du sucre de table.",
+     "explication": "Glucose + fructose = **saccharose**. Le maltose donnerait deux glucoses, le lactose du glucose et du galactose."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’oside n’a qu’une seule liaison osidique. Combien de molécules d’eau l’hydrolyse consomme-t-elle ?",
+     "reponse": 1,
+     "aide": "La condensation élimine une molécule d’eau par liaison ; l’hydrolyse fait le chemin inverse.",
+     "explication": "La liaison osidique s’est formée par condensation en éliminant **1** molécule d’eau ; l’hydrolyse en consomme donc 1."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque oside à sa composition.",
+     "paires": [
+      [
+       "Maltose",
+       "Glucose + glucose"
+      ],
+      [
+       "Lactose",
+       "Galactose + glucose"
+      ],
+      [
+       "Saccharose",
+       "Glucose + fructose"
+      ],
+      [
+       "Amidon",
+       "Des milliers de glucoses"
+      ]
+     ],
+     "aide": "Le lactose est le sucre du lait ; le maltose vient de l’hydrolyse de l’amidon.",
+     "explication": "Maltose : 2 glucoses ; lactose : galactose et glucose ; saccharose : glucose et fructose ; amidon : polymère de glucose."
+    }
+   ]
+  },
+  {
+   "chapitre": "cae06da0-6377-52bd-9c6c-06ae700b9a91",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Amidon, glycogène, cellulose : trois destins",
+   "competence": "analyser-document",
+   "situation": "Pourquoi tire-t-on du glucose du pain et du foie, mais pas du coton ni du papier ? Un laboratoire compare trois polymères de glucose après 30 minutes d’action d’enzymes digestives humaines.",
+   "documents": [
+    {
+     "id": "poly",
+     "type": "tableau",
+     "titre": "Trois polymères de glucose",
+     "colonnes": [
+      "",
+      "Amidon",
+      "Glycogène",
+      "Cellulose"
+     ],
+     "lignes": [
+      [
+       "Monomère",
+       "glucose",
+       "glucose",
+       "glucose"
+      ],
+      [
+       "Orientation des liaisons osidiques",
+       "orientation 1",
+       "orientation 1",
+       "orientation 2"
+      ],
+      [
+       "Origine",
+       "végétale",
+       "animale",
+       "végétale"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "digestion",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Glucose libéré après 30 min",
+     "categories": [
+      "Amidon",
+      "Glycogène",
+      "Cellulose"
+     ],
+     "series": [
+      {
+       "nom": "Glucose libéré",
+       "valeurs": [
+        95,
+        92,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Glucose libéré pour 100 mg de polymère",
+      "unite": "mg",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "digestion",
+     "enonce": "Touche la barre du polymère que les enzymes n’ont pas pu découper.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre qui n’apparaît pas.",
+     "explication": "La **cellulose** ne libère aucun glucose : les enzymes ne la découpent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose libère-t-on à partir de 200 mg d’amidon ?",
+     "reponse": 190,
+     "unite": "mg",
+     "aide": "Le graphique est donné pour 100 mg de polymère : double la valeur lue.",
+     "explication": "95 mg pour 100 mg d’amidon, donc 95 × 2 = **190 mg** pour 200 mg."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle explication relie les deux documents ?",
+     "options": [
+      "Ses liaisons osidiques ont une autre orientation : nos enzymes ne les reconnaissent pas",
+      "Elle est formée d’un autre ose que le glucose, que nos enzymes ne reconnaissent pas",
+      "Elle est trop ramifiée pour que les enzymes puissent y accéder, comme le glycogène",
+      "Elle est d’origine végétale, or nos enzymes ne coupent que les polymères animaux"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Orientation des liaisons » du tableau.",
+     "explication": "Même monomère, mais **orientation différente des liaisons** : les enzymes ne reconnaissent pas la cellulose. L’amidon, végétal, est digéré."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion.",
+     "texte": "Amidon, glycogène et cellulose sont tous des ___ de glucose ; ils diffèrent par l’___ de leurs liaisons osidiques.",
+     "reponses": [
+      [
+       "polymères"
+      ],
+      [
+       "orientation"
+      ]
+     ],
+     "banque": [
+      "polymères",
+      "dimères",
+      "orientation",
+      "nombre",
+      "oses",
+      "enzymes"
+     ],
+     "aide": "Ces molécules sont faites de milliers de glucoses.",
+     "explication": "Ce sont des **polymères** de glucose dont les liaisons ont une **orientation** différente pour la cellulose."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6412e61-bbb9-516e-9b29-5567e71a56a7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le carbone α sous la loupe",
+   "competence": "observer-schema",
+   "situation": "Inès prépare un exposé sur les protéines. Elle dessine la structure commune à tous les acides α-aminés, avec un radical R à identifier.",
+   "documents": [
+    {
+     "id": "aa",
+     "type": "schema",
+     "titre": "Un acide α-aminé",
+     "largeur": 320,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        105
+       ],
+       "a": [
+        138,
+        105
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        182,
+        105
+       ],
+       "a": [
+        220,
+        105
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        83
+       ],
+       "a": [
+        160,
+        52
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        127
+       ],
+       "a": [
+        160,
+        158
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 105,
+       "r": 22,
+       "teinte": "jaune",
+       "motif": "plein",
+       "texte": "Cα"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 90,
+       "l": 70,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "–NH₂",
+       "id": "amine",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 90,
+       "l": 70,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "–COOH",
+       "id": "acide",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 22,
+       "l": 44,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "H",
+       "id": "hydrogene",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 158,
+       "l": 44,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "R",
+       "id": "radical",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aa",
+     "enonce": "Touche le groupe caractéristique de la fonction amine.",
+     "reponse": [
+      "amine"
+     ],
+     "aide": "Une amine s’écrit –NH₂.",
+     "explication": "La fonction **amine** est le groupe –NH₂, à gauche du carbone α."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de groupes différents le carbone α porte-t-il (en dehors de la glycine) ?",
+     "reponse": 4,
+     "aide": "Compte les groupes reliés au carbone α sur le schéma.",
+     "explication": "Il porte **4** groupes : –NH₂, –COOH, H et R. Ils sont différents, donc le carbone α est asymétrique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le carbone α de la glycine n’est-il pas asymétrique ?",
+     "options": [
+      "Deux de ses quatre groupes sont identiques (H et R = H)",
+      "Il ne porte pas de fonction acide carboxylique",
+      "Il porte cinq groupes tous différents",
+      "Il ne porte pas de fonction amine"
+     ],
+     "reponse": 0,
+     "aide": "Dans la glycine, le radical R est un atome d’hydrogène : relis le schéma.",
+     "explication": "Dans la glycine R = H : le carbone porte **deux H identiques**, donc il n’est pas asymétrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6412e61-bbb9-516e-9b29-5567e71a56a7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un tétrapeptide de synthèse",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire synthétise un petit peptide. Sa fiche donne la séquence et un tableau rappelle les propriétés des acides aminés à pH 7.",
+   "documents": [
+    {
+     "id": "peptide",
+     "type": "chaine",
+     "titre": "Peptide écrit de l’extrémité N-terminale vers l’extrémité C-terminale",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "val",
+       "texte": "Val"
+      },
+      {
+       "id": "ser",
+       "texte": "Ser"
+      },
+      {
+       "id": "cys",
+       "texte": "Cys"
+      },
+      {
+       "id": "lys",
+       "texte": "Lys"
+      }
+     ],
+     "liens": [
+      {
+       "de": "val",
+       "a": "ser"
+      },
+      {
+       "de": "ser",
+       "a": "cys"
+      },
+      {
+       "de": "cys",
+       "a": "lys"
+      }
+     ]
+    },
+    {
+     "id": "props",
+     "type": "tableau",
+     "titre": "Propriétés des acides aminés",
+     "colonnes": [
+      "Acide aminé",
+      "Radical",
+      "Propriété à pH 7"
+     ],
+     "lignes": [
+      [
+       "Valine",
+       "chaîne carbonée ramifiée",
+       "hydrophobe"
+      ],
+      [
+       "Sérine",
+       "–CH₂–OH",
+       "polaire, hydrophile"
+      ],
+      [
+       "Cystéine",
+       "–CH₂–SH",
+       "forme des ponts disulfure"
+      ],
+      [
+       "Lysine",
+       "chaîne terminée par –NH₂",
+       "chargée +"
+      ],
+      [
+       "Acide glutamique",
+       "chaîne terminée par –COOH",
+       "chargé −"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "peptide",
+     "enonce": "Touche l’acide aminé qui porte la fonction acide carboxylique libre du peptide (extrémité C-terminale).",
+     "reponse": [
+      "lys"
+     ],
+     "aide": "Le peptide est écrit du côté N-terminal vers le côté C-terminal.",
+     "explication": "On lit le peptide de N vers C : l’extrémité C-terminale est portée par le dernier acide aminé, la **lysine**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons peptidiques ce peptide compte-t-il ?",
+     "reponse": 3,
+     "aide": "Une liaison relie deux acides aminés voisins.",
+     "explication": "4 acides aminés enchaînés = 4 − 1 = **3 liaisons peptidiques**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque acide aminé selon sa propriété à pH 7.",
+     "categories": [
+      "Hydrophobe",
+      "Polaire non chargé",
+      "Chargé +",
+      "Chargé −"
+     ],
+     "items": [
+      [
+       "Valine",
+       0
+      ],
+      [
+       "Sérine",
+       1
+      ],
+      [
+       "Lysine",
+       2
+      ],
+      [
+       "Acide glutamique",
+       3
+      ]
+     ],
+     "aide": "Utilise la dernière colonne du tableau.",
+     "explication": "Valine : hydrophobe ; sérine : polaire ; lysine : **+** ; acide glutamique : **−**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On oxyde deux exemplaires de ce peptide. Quels acides aminés peuvent relier les deux chaînes par une liaison covalente ?",
+     "options": [
+      "Les deux cystéines, par un pont disulfure",
+      "Les deux valines, par une liaison ionique",
+      "Les deux lysines, par une liaison ionique",
+      "Les deux sérines, par un pont disulfure"
+     ],
+     "reponse": 0,
+     "aide": "Cherche dans le tableau l’acide aminé qui forme des ponts disulfure.",
+     "explication": "Seule la **cystéine** (–SH) forme un pont disulfure covalent."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6412e61-bbb9-516e-9b29-5567e71a56a7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une enzyme qui ne se remet pas de la chaleur",
+   "competence": "lire-graphique",
+   "situation": "Karim, technicien de laboratoire, mesure l’activité d’une enzyme digestive à plusieurs températures. Pour chaque essai, il la ramène ensuite à 37 °C, puis analyse sa séquence.",
+   "documents": [
+    {
+     "id": "activite",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Activité de l’enzyme selon la température",
+     "categories": [
+      "10 °C",
+      "20 °C",
+      "30 °C",
+      "40 °C",
+      "50 °C",
+      "60 °C",
+      "70 °C"
+     ],
+     "series": [
+      {
+       "nom": "Activité relative",
+       "valeurs": [
+        15,
+        35,
+        70,
+        100,
+        55,
+        10,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Activité relative",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Température de l’essai"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "retour",
+     "type": "tableau",
+     "titre": "Après chauffage 10 min, puis retour à 37 °C",
+     "colonnes": [
+      "Température subie",
+      "Activité mesurée à 37 °C",
+      "Séquence en acides aminés"
+     ],
+     "lignes": [
+      [
+       "40 °C",
+       "100 %",
+       "inchangée"
+      ],
+      [
+       "60 °C",
+       "10 %",
+       "inchangée"
+      ],
+      [
+       "70 °C",
+       "0 %",
+       "inchangée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "activite",
+     "enonce": "Touche le point qui correspond à la température optimale de l’enzyme.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "L’activité est maximale à **40 °C** (100 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points d’activité relative perd-on entre 40 °C et 60 °C ?",
+     "reponse": 90,
+     "aide": "Lis les deux valeurs sur la courbe, puis soustrais.",
+     "explication": "100 − 10 = **90 points** d’activité perdus."
+    },
+    {
+     "type": "choix",
+     "enonce": "À 70 °C l’activité est nulle et ne revient pas à 37 °C, alors que la séquence est inchangée. Que peut-on conclure ?",
+     "options": [
+      "La structure tridimensionnelle est détruite : la protéine est dénaturée",
+      "Les acides aminés ont été remplacés par d’autres acides aminés",
+      "Toutes les liaisons peptidiques entre acides aminés ont été rompues",
+      "L’enzyme a été digérée par une autre protéine pendant le chauffage"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière colonne : la séquence est « inchangée ».",
+     "explication": "La séquence est intacte, mais la **forme** est perdue : c’est une dénaturation, et la fonction disparaît."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le chauffage rompt d’abord les liaisons faibles. Quelle liaison résiste le mieux à 60 °C ?",
+     "options": [
+      "Le pont disulfure entre deux cystéines",
+      "La liaison ionique entre lysine et acide glutamique",
+      "La liaison hydrogène entre deux groupes polaires",
+      "Les interactions hydrophobes au cœur de la protéine"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la seule liaison covalente de la liste.",
+     "explication": "Le **pont disulfure** est une liaison covalente, solide ; les trois autres sont des liaisons faibles."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee1628d3-10b7-5f76-bcf4-0a23441168ed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Étiquettes de quatre acides gras",
+   "competence": "lire-tableau",
+   "situation": "Un lycéen prépare les étiquettes de quatre flacons d’acides gras purs rangés dans un meuble de laboratoire. Il note leur nom, leur notation et leur état à 20 °C.",
+   "documents": [
+    {
+     "id": "ag",
+     "type": "tableau",
+     "titre": "Quatre acides gras",
+     "colonnes": [
+      "Acide gras",
+      "Notation",
+      "État à 20 °C"
+     ],
+     "lignes": [
+      [
+       "Acide palmitique",
+       "C16:0",
+       "solide"
+      ],
+      [
+       "Acide stéarique",
+       "C18:0",
+       "solide"
+      ],
+      [
+       "Acide oléique",
+       "C18:1 (9)",
+       "liquide"
+      ],
+      [
+       "Acide linoléique",
+       "C18:2 (9,12)",
+       "liquide"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ag",
+     "enonce": "Touche la notation de l’acide gras qui possède deux doubles liaisons C=C.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Le chiffre après les deux-points donne le nombre de doubles liaisons.",
+     "explication": "Dans **C18:2 (9,12)**, le « 2 » indique deux doubles liaisons : c’est l’acide linoléique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de carbones compte l’acide palmitique ?",
+     "reponse": 16,
+     "aide": "Le nombre qui suit la lettre C.",
+     "explication": "C**16**:0 : une chaîne de 16 carbones, sans double liaison."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque acide gras.",
+     "categories": [
+      "Saturé",
+      "Mono-insaturé",
+      "Poly-insaturé"
+     ],
+     "items": [
+      [
+       "Acide palmitique",
+       0
+      ],
+      [
+       "Acide stéarique",
+       0
+      ],
+      [
+       "Acide oléique",
+       1
+      ],
+      [
+       "Acide linoléique",
+       2
+      ]
+     ],
+     "aide": "Un acide gras saturé n’a aucune double liaison C=C.",
+     "explication": "Palmitique et stéarique : **saturés** (0) ; oléique : **mono-insaturé** (1) ; linoléique : **poly-insaturé** (2)."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee1628d3-10b7-5f76-bcf4-0a23441168ed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sur la coupe d’une membrane cellulaire",
+   "competence": "observer-schema",
+   "situation": "Un étudiant en BTS observe un schéma de membrane plasmique en coupe : de l’eau de chaque côté, et au milieu des phospholipides rangés en deux couches.",
+   "documents": [
+    {
+     "id": "membrane",
+     "type": "schema",
+     "titre": "La membrane plasmique en coupe",
+     "largeur": 320,
+     "hauteur": 224,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 20,
+       "texte": "Milieu extracellulaire (eau)",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 100,
+       "l": 280,
+       "h": 20,
+       "teinte": "brun",
+       "motif": "hachures",
+       "id": "coeur",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        36.5,
+        67
+       ],
+       "a": [
+        36.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        36.5,
+        153
+       ],
+       "a": [
+        36.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        43.5,
+        67
+       ],
+       "a": [
+        43.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        43.5,
+        153
+       ],
+       "a": [
+        43.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        66.5,
+        67
+       ],
+       "a": [
+        66.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        66.5,
+        153
+       ],
+       "a": [
+        66.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        73.5,
+        67
+       ],
+       "a": [
+        73.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        73.5,
+        153
+       ],
+       "a": [
+        73.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        96.5,
+        67
+       ],
+       "a": [
+        96.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        96.5,
+        153
+       ],
+       "a": [
+        96.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        103.5,
+        67
+       ],
+       "a": [
+        103.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        103.5,
+        153
+       ],
+       "a": [
+        103.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        216.5,
+        67
+       ],
+       "a": [
+        216.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        216.5,
+        153
+       ],
+       "a": [
+        216.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        223.5,
+        67
+       ],
+       "a": [
+        223.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        223.5,
+        153
+       ],
+       "a": [
+        223.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        246.5,
+        67
+       ],
+       "a": [
+        246.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        246.5,
+        153
+       ],
+       "a": [
+        246.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        253.5,
+        67
+       ],
+       "a": [
+        253.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        253.5,
+        153
+       ],
+       "a": [
+        253.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        276.5,
+        67
+       ],
+       "a": [
+        276.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        276.5,
+        153
+       ],
+       "a": [
+        276.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        283.5,
+        67
+       ],
+       "a": [
+        283.5,
+        100
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        283.5,
+        153
+       ],
+       "a": [
+        283.5,
+        120
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 58,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 162,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 58,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 162,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 58,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 162,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 58,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 162,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 58,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 162,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 58,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 162,
+       "r": 9,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 110,
+       "rx": 17,
+       "ry": 62,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "prot",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 205,
+       "texte": "Milieu intracellulaire (eau)",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "membrane",
+     "enonce": "Touche la protéine insérée dans la bicouche.",
+     "reponse": [
+      "prot"
+     ],
+     "aide": "Elle traverse la membrane de part en part.",
+     "explication": "La **protéine membranaire** est la grande forme qui traverse les deux couches de phospholipides."
+    },
+    {
+     "type": "zone",
+     "document": "membrane",
+     "enonce": "Touche la zone où les queues hydrophobes des deux couches se font face.",
+     "reponse": [
+      "coeur"
+     ],
+     "aide": "Cherche la bande entre les deux rangées de têtes.",
+     "explication": "Les queues apolaires se rejoignent au **cœur** de la bicouche, à l’abri de l’eau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de queues hydrophobes porte chaque phospholipide dessiné ?",
+     "reponse": 2,
+     "aide": "Compte les traits sous une tête.",
+     "explication": "Un phospholipide porte **deux** acides gras : ce sont ses deux queues hydrophobes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Que peut faire chaque molécule face à la bicouche ?",
+     "categories": [
+      "Traverse seule la bicouche",
+      "A besoin d’une protéine"
+     ],
+     "items": [
+      [
+       "Dioxygène (O₂)",
+       0
+      ],
+      [
+       "Glucose",
+       1
+      ],
+      [
+       "Ion potassium K⁺",
+       1
+      ],
+      [
+       "Dioxyde de carbone (CO₂)",
+       0
+      ]
+     ],
+     "aide": "Le cœur de la bicouche est apolaire : seules les petites molécules apolaires y passent.",
+     "explication": "O₂ et CO₂, petites et apolaires, **traversent seuls**. Le glucose (polaire, gros) et les ions ont besoin d’un transporteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee1628d3-10b7-5f76-bcf4-0a23441168ed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Transporter ou recevoir : P1 et P2",
+   "competence": "analyser-document",
+   "situation": "Une équipe étudie deux protéines membranaires, P1 et P2, de cellules de foie. Elle ajoute du glucose ou de l’insuline marqués dans le milieu extérieur et mesure la radioactivité à l’intérieur des cellules.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Résultats de l’expérience",
+     "colonnes": [
+      "Condition",
+      "Radioactivité à l’intérieur (u.a.)",
+      "Réponse de la cellule"
+     ],
+     "lignes": [
+      [
+       "Glucose marqué, P1 fonctionnelle",
+       80,
+       "—"
+      ],
+      [
+       "Glucose marqué, P1 bloquée",
+       4,
+       "—"
+      ],
+      [
+       "Insuline marquée, P2 fonctionnelle",
+       0,
+       "stockage du glucose activé"
+      ],
+      [
+       "Insuline marquée, P2 bloquée",
+       0,
+       "aucune"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Les deux protéines dans la membrane",
+     "largeur": 320,
+     "hauteur": 180,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 70,
+       "l": 280,
+       "h": 40,
+       "teinte": "brun",
+       "motif": "hachures"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 90,
+       "rx": 20,
+       "ry": 40,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 220,
+       "cy": 85,
+       "rx": 20,
+       "ry": 32,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 150,
+       "texte": "P1",
+       "gras": true,
+       "taille": "grand"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 150,
+       "texte": "P2",
+       "gras": true,
+       "taille": "grand"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 20,
+       "texte": "Face extérieure",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 172,
+       "texte": "Face intérieure",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "D’après le tableau, touche la protéine qui fait passer le glucose à l’intérieur de la cellule.",
+     "reponse": [
+      "p1"
+     ],
+     "aide": "Compare la radioactivité intérieure avec P1 fonctionnelle puis bloquée.",
+     "explication": "Avec P1 fonctionnelle, la radioactivité intérieure est de 80 contre 4 si elle est bloquée : **P1 est le transporteur**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur la radioactivité intérieure est-elle multipliée quand P1 fonctionne ?",
+     "reponse": 20,
+     "aide": "Divise la valeur obtenue avec P1 fonctionnelle par celle avec P1 bloquée.",
+     "explication": "80 ÷ 4 = **20** : le glucose entre 20 fois plus quand le transporteur fonctionne."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’insuline marquée n’entre jamais, pourtant la cellule réagit quand P2 fonctionne. Que fait P2 ?",
+     "options": [
+      "Elle fixe l’insuline sans la faire entrer et déclenche une réponse",
+      "Elle fait entrer l’insuline puis la détruit dans la cellule",
+      "Elle transporte le glucose en même temps que l’insuline entre",
+      "Elle empêche l’insuline de se fixer sur la membrane de la cellule"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la radioactivité intérieure et la réponse de la cellule pour l’insuline.",
+     "explication": "P2 est un **récepteur** : il fixe son messager à l’extérieur et déclenche la réponse, sans le faire entrer."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces protéines membranaires.",
+     "categories": [
+      "Transporteur",
+      "Récepteur"
+     ],
+     "items": [
+      [
+       "Transporteur du glucose",
+       0
+      ],
+      [
+       "Aquaporine",
+       0
+      ],
+      [
+       "Récepteur de l’insuline",
+       1
+      ]
+     ],
+     "aide": "Un transporteur fait passer une molécule ; un récepteur fixe un messager.",
+     "explication": "Transporteur du glucose et aquaporine **font passer** une molécule ; le récepteur de l’insuline **fixe** son messager."
+    }
+   ]
+  },
+  {
+   "chapitre": "35960909-47a6-58a2-937a-6405263073fd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trois pièces d’un nucléotide",
+   "competence": "observer-schema",
+   "situation": "Sam prépare une maquette de l’ADN pour son stage en laboratoire. Il commence par dessiner un seul nucléotide, en trois pièces.",
+   "documents": [
+    {
+     "id": "nucleotide",
+     "type": "schema",
+     "titre": "Un nucléotide",
+     "largeur": 320,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        82,
+        95
+       ],
+       "a": [
+        128,
+        95
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        192,
+        95
+       ],
+       "a": [
+        226,
+        95
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 95,
+       "r": 27,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "P",
+       "id": "phosphate",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         160,
+         63
+        ],
+        [
+         190,
+         85
+        ],
+        [
+         179,
+         121
+        ],
+        [
+         141,
+         121
+        ],
+        [
+         130,
+         85
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "ose",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 100,
+       "texte": "5 C",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 226,
+       "y": 72,
+       "l": 74,
+       "h": 46,
+       "arrondi": 8,
+       "teinte": "rose",
+       "motif": "plein",
+       "texte": "Base",
+       "id": "base",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 165,
+       "texte": "Un nucléotide de l’ADN",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nucleotide",
+     "enonce": "Touche l’ose du nucléotide : le sucre à cinq carbones.",
+     "reponse": [
+      "ose"
+     ],
+     "aide": "Cherche la pièce marquée « 5 C ».",
+     "explication": "L’**ose** à cinq carbones est la pièce centrale, entre le phosphate et la base."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le sucre de l’ADN et celui de l’ARN.",
+     "texte": "Le sucre de l’ADN est le ___ ; celui de l’ARN est le ___.",
+     "reponses": [
+      [
+       "désoxyribose"
+      ],
+      [
+       "ribose"
+      ]
+     ],
+     "banque": [
+      "désoxyribose",
+      "ribose",
+      "glucose",
+      "fructose"
+     ],
+     "aide": "Le désoxyribose a un –OH de moins que le ribose.",
+     "explication": "ADN : **désoxyribose** ; ARN : **ribose**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans quel acide nucléique trouve-t-on chaque base ?",
+     "categories": [
+      "ADN seulement",
+      "ARN seulement",
+      "ADN et ARN"
+     ],
+     "items": [
+      [
+       "Adénine (A)",
+       2
+      ],
+      [
+       "Thymine (T)",
+       0
+      ],
+      [
+       "Uracile (U)",
+       1
+      ],
+      [
+       "Guanine (G)",
+       2
+      ],
+      [
+       "Cytosine (C)",
+       2
+      ]
+     ],
+     "aide": "Une seule base de l’ADN est remplacée dans l’ARN.",
+     "explication": "La **thymine** est propre à l’ADN, l’**uracile** propre à l’ARN ; A, G et C se retrouvent dans les deux."
+    }
+   ]
+  },
+  {
+   "chapitre": "35960909-47a6-58a2-937a-6405263073fd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire un brin pour trouver l’autre",
+   "competence": "observer-schema",
+   "situation": "Au laboratoire, Yanis prépare une sonde d’hybridation. Il dispose d’un fragment d’ADN double brin dont il connaît les deux brins.",
+   "documents": [
+    {
+     "id": "brins",
+     "type": "schema",
+     "titre": "Un fragment d’ADN double brin",
+     "largeur": 320,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        75
+       ],
+       "a": [
+        60,
+        125
+       ],
+       "style": "pointilles",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 66,
+       "texte": "A",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 143,
+       "texte": "T",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        75
+       ],
+       "a": [
+        100,
+        125
+       ],
+       "style": "pointilles",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 66,
+       "texte": "T",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 143,
+       "texte": "A",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        75
+       ],
+       "a": [
+        140,
+        125
+       ],
+       "style": "pointilles",
+       "id": "p3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 66,
+       "texte": "G",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 143,
+       "texte": "C",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        75
+       ],
+       "a": [
+        180,
+        125
+       ],
+       "style": "pointilles",
+       "id": "p4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 66,
+       "texte": "C",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 143,
+       "texte": "G",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        75
+       ],
+       "a": [
+        220,
+        125
+       ],
+       "style": "pointilles",
+       "id": "p5",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 66,
+       "texte": "C",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 143,
+       "texte": "G",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        75
+       ],
+       "a": [
+        260,
+        125
+       ],
+       "style": "pointilles",
+       "id": "p6",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 66,
+       "texte": "A",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 143,
+       "texte": "T",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 22,
+       "y": 66,
+       "texte": "5′",
+       "gras": true,
+       "id": "t5h",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 298,
+       "y": 66,
+       "texte": "3′",
+       "gras": true,
+       "id": "t3h",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 22,
+       "y": 143,
+       "texte": "3′",
+       "gras": true,
+       "id": "t3b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 298,
+       "y": 143,
+       "texte": "5′",
+       "gras": true,
+       "id": "t5b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 178,
+       "texte": "Chaque trait pointillé relie deux bases d’une paire",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Séquence écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brins",
+     "enonce": "Touche toutes les paires de bases reliées par trois liaisons hydrogène.",
+     "reponse": [
+      "p3",
+      "p4",
+      "p5"
+     ],
+     "multiple": true,
+     "aide": "Une seule sorte de paire compte trois liaisons : G–C.",
+     "explication": "Les paires **G–C** (3e, 4e et 5e paires) sont reliées par trois liaisons hydrogène ; les paires A–T par deux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons hydrogène relient en tout les deux brins de ce fragment ?",
+     "reponse": 15,
+     "aide": "A–T : 2 liaisons ; G–C : 3 liaisons. Compte chaque type de paire.",
+     "explication": "3 paires A–T × 2 = 6, et 3 paires G–C × 3 = 9 : **15 liaisons** hydrogène."
+    },
+    {
+     "type": "zone",
+     "document": "brins",
+     "enonce": "Les brins sont antiparallèles. Touche l’extrémité 5′ du brin du bas.",
+     "reponse": [
+      "t5b"
+     ],
+     "aide": "Le brin du haut va de 5′ à gauche à 3′ à droite ; l’autre brin va dans l’autre sens.",
+     "explication": "Le brin du bas est orienté à l’envers : son extrémité **5′** est à droite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le brin du bas, écrit dans le sens conventionnel, de 5′ vers 3′ ?",
+     "options": [
+      "5′-TGGCAT-3′",
+      "5′-TACGGT-3′",
+      "5′-ATGCCA-3′",
+      "5′-ACCGTA-3′"
+     ],
+     "reponse": 0,
+     "aide": "Le brin du bas se lit de droite à gauche pour aller de 5′ vers 3′.",
+     "explication": "Lu de gauche à droite, le brin du bas est 3′-TACGGT-5′ ; écrit de 5′ vers 3′ : **5′-TGGCAT-3′**."
+    }
+   ]
+  },
+  {
+   "chapitre": "35960909-47a6-58a2-937a-6405263073fd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle température pour ouvrir ce fragment ?",
+   "competence": "analyser-document",
+   "situation": "Lina analyse un fragment d’ADN double brin inconnu. Elle dose ses bases, puis cherche à quelle température ses deux brins se séparent grâce à une courbe d’étalonnage.",
+   "documents": [
+    {
+     "id": "dosage",
+     "type": "tableau",
+     "titre": "Dosage des bases du fragment",
+     "colonnes": [
+      "Base",
+      "Part des bases"
+     ],
+     "lignes": [
+      [
+       "Adénine",
+       "20 %"
+      ],
+      [
+       "Thymine",
+       "?"
+      ],
+      [
+       "Guanine",
+       "?"
+      ],
+      [
+       "Cytosine",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "etalon",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Courbe d’étalonnage",
+     "categories": [
+      "30 %",
+      "40 %",
+      "50 %",
+      "60 %",
+      "70 %"
+     ],
+     "series": [
+      {
+       "nom": "Température de dénaturation",
+       "valeurs": [
+        82,
+        86,
+        90,
+        94,
+        98
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température de dénaturation",
+      "unite": "°C",
+      "min": 70,
+      "max": 100,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Part de bases G + C"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etalon",
+     "enonce": "Touche le point du fragment le plus riche en G + C.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche l’abscisse la plus élevée.",
+     "explication": "Le fragment à **70 %** de G + C est le plus riche : il se dénature à 98 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la part de thymine du fragment dosé ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Dans l’ADN double brin, l’adénine s’apparie avec la thymine.",
+     "explication": "A = T : il y a **20 %** de thymine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la part de bases G + C du fragment dosé ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Retire A et T du total (100 %).",
+     "explication": "100 − (20 + 20) = **60 %** de bases G + C, soit 30 % de guanine et 30 % de cytosine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle température les deux brins de ce fragment se séparent-ils ?",
+     "reponse": 94,
+     "unite": "°C",
+     "aide": "Lis la courbe pour la part de G + C que tu viens de trouver.",
+     "explication": "Pour **60 %** de G + C, la courbe donne 94 °C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un fragment riche en G + C résiste-t-il mieux à la chaleur ?",
+     "options": [
+      "Chaque paire G–C compte trois liaisons hydrogène, contre deux pour A–T",
+      "Chaque paire G–C compte deux liaisons hydrogène, contre trois pour A–T",
+      "Les paires G–C sont reliées par des liaisons phosphodiester solides",
+      "Les paires G–C contiennent un sucre différent des paires A–T"
+     ],
+     "reponse": 0,
+     "aide": "Plus il y a de liaisons à rompre, plus il faut chauffer.",
+     "explication": "Une paire **G–C** a 3 liaisons hydrogène, une paire A–T seulement 2 : il faut plus d’énergie pour ouvrir l’ADN."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f384b6d-1bab-5863-bef6-173203dd8097",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Visite guidée d’une cellule eucaryote",
+   "competence": "observer-schema",
+   "situation": "Amel observe le schéma d’une cellule de la glande pancréatique. Quatre organites sont repérés par des lettres.",
+   "documents": [
+    {
+     "id": "cellule",
+     "type": "schema",
+     "titre": "Une cellule eucaryote",
+     "largeur": 320,
+     "hauteur": 266,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 150,
+       "cy": 120,
+       "rx": 140,
+       "ry": 100,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 100,
+       "r": 36,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "noyau",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 215,
+       "cy": 85,
+       "rx": 24,
+       "ry": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "mito",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M201 85 Q208 78 215 85 Q222 92 229 85",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 90,
+       "cy": 178,
+       "rx": 44,
+       "ry": 10,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "re",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M185 165 Q215 150 245 165 Q215 158 185 165 Z",
+       "teinte": "ambre",
+       "motif": "plein",
+       "ferme": true,
+       "id": "g1",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M188 177 Q215 162 242 177 Q215 170 188 177 Z",
+       "teinte": "ambre",
+       "motif": "plein",
+       "ferme": true,
+       "id": "g2",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M191 189 Q215 174 239 189 Q215 182 191 189 Z",
+       "teinte": "ambre",
+       "motif": "plein",
+       "ferme": true,
+       "id": "g3",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 40,
+       "y": 40,
+       "texte": "A",
+       "vers": [
+        75,
+        82
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 270,
+       "y": 40,
+       "texte": "B",
+       "vers": [
+        233,
+        80
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 30,
+       "y": 215,
+       "texte": "C",
+       "vers": [
+        62,
+        181
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 275,
+       "y": 205,
+       "texte": "D",
+       "vers": [
+        243,
+        182
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        232,
+        244
+       ],
+       "a": [
+        280,
+        244
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 260,
+       "texte": "1 µm",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma simplifié, écrit pour l’exercice ; la barre d’échelle a la longueur de la mitochondrie"
+    },
+    {
+     "id": "secretion",
+     "type": "chaine",
+     "titre": "Voie de sécrétion d’une protéine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "rib",
+       "texte": "Ribosome"
+      },
+      {
+       "id": "rx",
+       "texte": "?"
+      },
+      {
+       "id": "gol",
+       "texte": "Golgi"
+      },
+      {
+       "id": "ves",
+       "texte": "Vésicule"
+      }
+     ],
+     "liens": [
+      {
+       "de": "rib",
+       "a": "rx"
+      },
+      {
+       "de": "rx",
+       "a": "gol"
+      },
+      {
+       "de": "gol",
+       "a": "ves"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque lettre à son organite.",
+     "paires": [
+      [
+       "A",
+       "Noyau"
+      ],
+      [
+       "B",
+       "Mitochondrie"
+      ],
+      [
+       "C",
+       "Réticulum endoplasmique"
+      ],
+      [
+       "D",
+       "Appareil de Golgi"
+      ]
+     ],
+     "aide": "Le noyau contient l’ADN ; la mitochondrie est en forme de petit haricot ; le Golgi est une pile de sacs aplatis.",
+     "explication": "A : **noyau** ; B : **mitochondrie** ; C : **réticulum endoplasmique** ; D : **appareil de Golgi** (sacs empilés)."
+    },
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Touche l’organite où se déroule la respiration cellulaire.",
+     "reponse": [
+      "mito"
+     ],
+     "aide": "C’est lui qui produit l’ATP.",
+     "explication": "La **mitochondrie** réalise la respiration cellulaire et produit l’ATP."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La mitochondrie est aussi longue que la barre d’échelle de 1 µm. Combien mesure-t-elle en nanomètres ?",
+     "reponse": 1000,
+     "unite": "nm",
+     "aide": "1 µm = 1 000 nm.",
+     "explication": "La mitochondrie mesure environ 1 µm, soit **1 000 nm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel organite remplace le « ? » dans la voie de sécrétion ?",
+     "options": [
+      "Le réticulum endoplasmique rugueux",
+      "La mitochondrie, siège de la respiration",
+      "Le noyau, qui protège l’ADN",
+      "La membrane plasmique, limite de la cellule"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les protéines sécrétées sont fabriquées par des ribosomes accrochés à cet organite.",
+     "explication": "Le **réticulum endoplasmique rugueux**, couvert de ribosomes, précède l’appareil de Golgi."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f384b6d-1bab-5863-bef6-173203dd8097",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelle taille ont vraiment ces objets ?",
+   "competence": "calculer",
+   "situation": "Un technicien de laboratoire mesure trois objets sur des clichés de microscopie. Il connaît le grossissement de chaque cliché et doit retrouver les tailles réelles.",
+   "documents": [
+    {
+     "id": "cliches",
+     "type": "tableau",
+     "titre": "Mesures sur les clichés",
+     "colonnes": [
+      "Objet observé",
+      "Grossissement",
+      "Taille sur le cliché"
+     ],
+     "lignes": [
+      [
+       "Cellule d’épithélium",
+       "× 400",
+       "12 mm"
+      ],
+      [
+       "Bactérie",
+       "× 2 000",
+       "8 mm"
+      ],
+      [
+       "Virus",
+       "× 200 000",
+       "24 mm"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cliches",
+     "enonce": "Touche le grossissement le plus élevé du tableau.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compare les trois grossissements.",
+     "explication": "Le cliché du virus a le plus fort grossissement : **× 200 000**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille réelle de la cellule d’épithélium, en micromètres ?",
+     "reponse": 30,
+     "unite": "µm",
+     "aide": "Divise 12 mm par 400, puis convertis (1 mm = 1 000 µm).",
+     "explication": "12 ÷ 400 = 0,03 mm = **30 µm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille réelle du virus, en nanomètres ?",
+     "reponse": 120,
+     "unite": "nm",
+     "aide": "Divise 24 mm par 200 000, puis convertis : 1 mm = 1 000 000 nm.",
+     "explication": "24 ÷ 200 000 = 0,000 12 mm = 0,12 µm = **120 nm**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces objets du plus petit au plus grand (la bactérie mesure 4 µm).",
+     "items": [
+      "Virus",
+      "Bactérie",
+      "Cellule d’épithélium"
+     ],
+     "aide": "Compare 120 nm, 4 µm et 30 µm.",
+     "explication": "Virus (120 nm) < bactérie (4 µm) < cellule d’épithélium (30 µm)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le microscope optique ne distingue pas deux points distants de moins de 0,2 µm. Que faut-il utiliser pour observer le virus ?",
+     "options": [
+      "Un microscope électronique",
+      "Un microscope optique avec un grossissement plus fort",
+      "Une loupe binoculaire",
+      "Une échographie"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare la taille du virus à la limite de 0,2 µm.",
+     "explication": "Le virus (0,12 µm) est sous la limite du microscope optique : il faut un **microscope électronique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f384b6d-1bab-5863-bef6-173203dd8097",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle imagerie pour quel patient ?",
+   "competence": "analyser-document",
+   "situation": "À l’hôpital, quatre patients attendent un examen. L’infirmière consulte la fiche des techniques d’imagerie et la liste des questions posées par les médecins.",
+   "documents": [
+    {
+     "id": "techniques",
+     "type": "tableau",
+     "titre": "Les techniques d’imagerie",
+     "colonnes": [
+      "Technique",
+      "Principe",
+      "Ce qu’on voit bien",
+      "Rayonnement ionisant"
+     ],
+     "lignes": [
+      [
+       "Radiographie",
+       "rayons X absorbés par les tissus denses",
+       "os",
+       "oui"
+      ],
+      [
+       "Échographie",
+       "ultrasons réfléchis aux interfaces",
+       "tissus mous",
+       "non"
+      ],
+      [
+       "Radiographie avec produit de contraste",
+       "substance opaque aux rayons X avalée ou injectée",
+       "tube digestif, vaisseaux",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "patients",
+     "type": "tableau",
+     "titre": "Les patients du jour",
+     "colonnes": [
+      "Patient",
+      "Situation",
+      "Question du médecin"
+     ],
+     "lignes": [
+      [
+       "Théo",
+       "15 ans, chute de vélo",
+       "Le poignet est-il fracturé ?"
+      ],
+      [
+       "Salma",
+       "28 ans, enceinte de 20 semaines",
+       "Le fœtus se développe-t-il normalement ?"
+      ],
+      [
+       "M. Roche",
+       "60 ans, douleur dans le flanc",
+       "Le rein présente-t-il une anomalie ?"
+      ],
+      [
+       "Mme Diallo",
+       "45 ans, douleurs digestives",
+       "Le tube digestif est-il rétréci ?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque patient selon l’examen le plus adapté.",
+     "categories": [
+      "Radiographie",
+      "Échographie",
+      "Radiographie avec produit de contraste"
+     ],
+     "items": [
+      [
+       "Théo",
+       0
+      ],
+      [
+       "Salma",
+       1
+      ],
+      [
+       "M. Roche",
+       1
+      ],
+      [
+       "Mme Diallo",
+       2
+      ]
+     ],
+     "aide": "Os : rayons X ; tissus mous : ultrasons ; tube digestif : il faut le rendre opaque.",
+     "explication": "Théo (os) : **radiographie** ; Salma et M. Roche (tissus mous) : **échographie** ; Mme Diallo : **produit de contraste**, car le tube digestif est un tissu mou peu contrasté aux rayons X."
+    },
+    {
+     "type": "zone",
+     "document": "techniques",
+     "enonce": "Touche la case qui indique ce que la radiographie simple montre bien.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Les tissus denses absorbent les rayons X.",
+     "explication": "La radiographie montre bien les **os**, qui absorbent fortement les rayons X."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi choisit-on l’échographie plutôt que la radiographie pour le suivi de la grossesse de Salma ?",
+     "options": [
+      "Les ultrasons ne sont pas ionisants et montrent bien les tissus mous",
+      "Les rayons X ne traversent jamais les tissus mous du fœtus",
+      "Les ultrasons sont absorbés par les os comme les rayons X",
+      "L’échographie permet d’observer les cellules une à une"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les deux dernières colonnes de la ligne « Échographie ».",
+     "explication": "L’échographie voit les tissus mous et n’emploie **aucun rayonnement ionisant** : on peut la répéter pendant la grossesse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une radiographie simple conviendrait-elle mal pour examiner le rein de M. Roche ?",
+     "options": [
+      "Les tissus mous sont peu contrastés aux rayons X",
+      "Les os du rein empêchent la lecture de l’image",
+      "Le rein émet lui-même un rayonnement ionisant",
+      "Le rein est trop dense pour laisser passer les ultrasons"
+     ],
+     "reponse": 0,
+     "aide": "La radiographie montre bien ce qui est dense.",
+     "explication": "Le rein est un **tissu mou** : il absorbe peu les rayons X, donc son image est peu contrastée."
+    }
+   ]
+  },
+  {
+   "chapitre": "38889374-0809-5bef-86d2-aa529291761c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où se cache l’eau d’un adulte de 60 kg ?",
+   "competence": "lire-graphique",
+   "situation": "Chez un adulte de 60 kg, l’eau représente 60 % de la masse (1 kg d’eau ≈ 1 L). Un diagramme montre comment elle se répartit dans l’organisme.",
+   "documents": [
+    {
+     "id": "eau",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Répartition de l’eau de l’organisme",
+     "categories": [
+      "Liquide intracellulaire",
+      "Liquide interstitiel",
+      "Plasma"
+     ],
+     "series": [
+      {
+       "nom": "Part de l’eau totale",
+       "valeurs": [
+        66.7,
+        25,
+        8.3
+       ]
+      }
+     ],
+     "source": "Chiffres arrondis (en % de l’eau totale)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eau",
+     "enonce": "Touche les deux secteurs qui forment, avec la lymphe, le milieu intérieur.",
+     "reponse": [
+      "k1",
+      "k2"
+     ],
+     "multiple": true,
+     "aide": "Le milieu intérieur, c’est le liquide qui baigne les cellules, à l’extérieur d’elles.",
+     "explication": "Le milieu intérieur est le liquide **extracellulaire** : liquide interstitiel et plasma (plus la lymphe)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume d’eau contient ce sujet de 60 kg ?",
+     "reponse": 36,
+     "unite": "L",
+     "aide": "Calcule 60 % de 60 kg.",
+     "explication": "60 × 0,60 = 36 kg d’eau, soit **36 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de plasma, environ, contient-il (au dixième de litre près) ?",
+     "reponse": 3,
+     "unite": "L",
+     "tolerance": 0.1,
+     "aide": "Le plasma représente 8,3 % (environ 1/12) de l’eau totale.",
+     "explication": "36 × 8,3 % ≈ **3 L** (environ 1/12 de 36 L)."
+    }
+   ]
+  },
+  {
+   "chapitre": "38889374-0809-5bef-86d2-aa529291761c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un bilan sanguin sous la loupe",
+   "competence": "lire-tableau",
+   "situation": "Le médecin d’Hugo lit son bilan sanguin et le compare aux intervalles physiologiques. Un second tableau rappelle la composition des trois compartiments liquidiens.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan sanguin d’Hugo",
+     "colonnes": [
+      "Paramètre",
+      "Résultat",
+      "Intervalle physiologique"
+     ],
+     "lignes": [
+      [
+       "Na⁺ plasmatique (mmol·L⁻¹)",
+       "128",
+       "135 – 145"
+      ],
+      [
+       "K⁺ plasmatique (mmol·L⁻¹)",
+       "4,2",
+       "3,5 – 5,0"
+      ],
+      [
+       "Glycémie à jeun (g·L⁻¹)",
+       "0,95",
+       "0,70 – 1,10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "compo",
+     "type": "tableau",
+     "titre": "Composition des compartiments",
+     "colonnes": [
+      "",
+      "Plasma",
+      "Liquide interstitiel",
+      "Liquide intracellulaire"
+     ],
+     "lignes": [
+      [
+       "Na⁺ (mmol·L⁻¹)",
+       "142",
+       "145",
+       "12"
+      ],
+      [
+       "K⁺ (mmol·L⁻¹)",
+       "4,2",
+       "4,0",
+       "140"
+      ],
+      [
+       "Protéines",
+       "élevées",
+       "faibles",
+       "élevées"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche le résultat d’Hugo qui sort de l’intervalle physiologique.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Compare chaque résultat aux bornes de l’intervalle.",
+     "explication": "Le **sodium** plasmatique (128) est sous la borne basse (135) ; le potassium et la glycémie sont dans l’intervalle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le sodium d’Hugo est-il sous la borne inférieure de l’intervalle ?",
+     "reponse": 7,
+     "unite": "mmol·L⁻¹",
+     "aide": "Soustrais son résultat à la borne basse.",
+     "explication": "135 − 128 = **7 mmol·L⁻¹**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans quel compartiment a-t-on prélevé chacun de ces liquides ?",
+     "categories": [
+      "Plasma",
+      "Liquide interstitiel",
+      "Liquide intracellulaire"
+     ],
+     "items": [
+      [
+       "Na⁺ 143 ; K⁺ 4,1 ; protéines élevées",
+       0
+      ],
+      [
+       "Na⁺ 144 ; K⁺ 4,0 ; protéines faibles",
+       1
+      ],
+      [
+       "Na⁺ 10 ; K⁺ 138 ; protéines élevées",
+       2
+      ]
+     ],
+     "aide": "Le K⁺ est élevé dans les cellules ; le liquide interstitiel est pauvre en protéines.",
+     "explication": "Peu de Na⁺ et beaucoup de K⁺ : **intracellulaire**. Beaucoup de Na⁺ et peu de protéines : **interstitiel**. Beaucoup de Na⁺ et de protéines : **plasma**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le liquide interstitiel contient-il beaucoup moins de protéines que le plasma ?",
+     "options": [
+      "Les grosses protéines ne traversent pas la paroi des capillaires",
+      "Les protéines sont détruites en traversant la paroi des capillaires",
+      "La lymphe retient toutes les protéines avant les capillaires",
+      "Les cellules absorbent toutes les protéines du liquide interstitiel"
+     ],
+     "reponse": 0,
+     "aide": "Le plasma filtre à travers la paroi des capillaires.",
+     "explication": "Le liquide interstitiel ressemble au plasma **sans ses grosses protéines**, que la paroi des capillaires ne laisse pas passer."
+    }
+   ]
+  },
+  {
+   "chapitre": "38889374-0809-5bef-86d2-aa529291761c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Après le sucre : deux courbes de glycémie",
+   "competence": "analyser-document",
+   "situation": "Deux sujets boivent la même solution de glucose. On suit leur glycémie pendant 150 minutes. Un schéma résume la boucle de régulation qui fonctionne chez le sujet sain.",
+   "documents": [
+    {
+     "id": "glycemie",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Glycémie après ingestion de glucose",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120",
+      "150"
+     ],
+     "series": [
+      {
+       "nom": "Sujet sain",
+       "valeurs": [
+        0.9,
+        1.4,
+        1.15,
+        0.95,
+        0.9,
+        0.88
+       ],
+       "teinte": "vert"
+      },
+      {
+       "nom": "Sujet diabétique",
+       "valeurs": [
+        1.3,
+        2.1,
+        2.3,
+        2.2,
+        2,
+        1.8
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Glycémie",
+      "unite": "g·L⁻¹",
+      "min": 0,
+      "max": 2.5,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Temps après ingestion (min)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "boucle",
+     "type": "chaine",
+     "titre": "La boucle de régulation de la glycémie",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "glyc",
+       "texte": "Glycémie qui monte"
+      },
+      {
+       "id": "panc",
+       "texte": "Cellules du pancréas"
+      },
+      {
+       "id": "mess",
+       "texte": "?"
+      },
+      {
+       "id": "eff",
+       "texte": "Foie, muscles, tissu adipeux"
+      }
+     ],
+     "liens": [
+      {
+       "de": "glyc",
+       "a": "panc"
+      },
+      {
+       "de": "panc",
+       "a": "mess"
+      },
+      {
+       "de": "mess",
+       "a": "eff"
+      },
+      {
+       "de": "eff",
+       "a": "glyc",
+       "texte": "ramène la glycémie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la glycémie maximale atteinte par le sujet sain ?",
+     "reponse": 1.4,
+     "unite": "g·L⁻¹",
+     "aide": "Cherche le sommet de la courbe du sujet sain.",
+     "explication": "Le pic du sujet sain est de **1,4 g·L⁻¹**, à 30 minutes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de minutes la glycémie du sujet sain est-elle redescendue à 0,95 g·L⁻¹ ?",
+     "reponse": 90,
+     "unite": "min",
+     "aide": "Cherche l’abscisse où la courbe du sujet sain vaut 0,95.",
+     "explication": "La glycémie redescend à 0,95 g·L⁻¹ à **90 minutes**."
+    },
+    {
+     "type": "zone",
+     "document": "boucle",
+     "enonce": "Touche l’étape de la boucle qui corrige la perturbation en ramenant la glycémie vers la consigne.",
+     "reponse": [
+      "eff"
+     ],
+     "aide": "C’est la réponse qui agit sur le glucose du sang.",
+     "explication": "Les **effecteurs** (foie, muscles, tissu adipeux) captent le glucose : ils ramènent la glycémie à la consigne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de la boucle à son rôle.",
+     "paires": [
+      [
+       "Glycémie",
+       "Grandeur régulée"
+      ],
+      [
+       "Cellules du pancréas",
+       "Capteurs"
+      ],
+      [
+       "Insuline",
+       "Messager"
+      ],
+      [
+       "Foie et muscles",
+       "Effecteurs"
+      ]
+     ],
+     "aide": "Le « ? » du schéma est le messager libéré par le pancréas.",
+     "explication": "La glycémie est la **grandeur régulée** ; le pancréas détecte l’écart ; l’**insuline** transmet l’ordre ; foie et muscles agissent."
+    },
+    {
+     "type": "choix",
+     "enonce": "À 150 min, la glycémie du sujet diabétique est encore de 1,8 g·L⁻¹. Que montre cette courbe ?",
+     "options": [
+      "La perturbation n’est plus corrigée : un maillon de la boucle est défaillant",
+      "La boucle fonctionne normalement mais plus lentement que chez le sujet sain",
+      "La consigne de glycémie est simplement plus élevée chez ce sujet",
+      "Le glucose ingéré n’a pas été absorbé par l’intestin de ce sujet"
+     ],
+     "reponse": 0,
+     "aide": "Compare la fin des deux courbes : l’une retrouve sa valeur de départ.",
+     "explication": "Chez le sujet sain, la glycémie revient vers 0,9 ; chez le sujet diabétique elle reste très haut : la **rétroaction ne corrige plus**, c’est une pathologie."
+    }
+   ]
+  },
+  {
+   "chapitre": "827909f0-e2f6-57cd-94eb-f5c3af3ca978",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du brin transcrit au petit peptide",
+   "competence": "analyser-document",
+   "situation": "Lola, stagiaire en biologie moléculaire, reçoit le brin transcrit d’un gène très court. Elle doit retrouver l’ARNm, puis le peptide fabriqué par les ribosomes.",
+   "documents": [
+    {
+     "id": "gene",
+     "type": "tableau",
+     "titre": "Compte rendu de séquençage",
+     "colonnes": [
+      "Document",
+      "Séquence"
+     ],
+     "lignes": [
+      [
+       "Brin transcrit",
+       "3′-TAC CCA GGA ATT-5′"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Séquence écrite pour l’exercice"
+    },
+    {
+     "id": "code",
+     "type": "tableau",
+     "titre": "Extrait du code génétique",
+     "colonnes": [
+      "Codon",
+      "Ce qu’il code"
+     ],
+     "lignes": [
+      [
+       "AUG",
+       "Méthionine (début de la traduction)"
+      ],
+      [
+       "GGU",
+       "Glycine"
+      ],
+      [
+       "CCU",
+       "Proline"
+      ],
+      [
+       "UAA",
+       "Aucun acide aminé (codon stop)"
+      ],
+      [
+       "AAG",
+       "Lysine"
+      ],
+      [
+       "GAG",
+       "Acide glutamique"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extrait du code génétique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Écris les quatre codons de l’ARNm, de 5′ vers 3′.",
+     "texte": "5′-___ ___ ___ ___-3′",
+     "reponses": [
+      [
+       "AUG"
+      ],
+      [
+       "GGU"
+      ],
+      [
+       "CCU"
+      ],
+      [
+       "UAA"
+      ]
+     ],
+     "aide": "Complète chaque base du brin transcrit (A↔U, C↔G) en remplaçant T par U.",
+     "explication": "TAC → **AUG**, CCA → **GGU**, GGA → **CCU**, ATT → **UAA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’acides aminés compte le peptide fabriqué ?",
+     "reponse": 3,
+     "aide": "La traduction s’arrête au codon stop, qui ne code aucun acide aminé.",
+     "explication": "AUG, GGU et CCU codent Met-Gly-Pro : **3** acides aminés ; UAA est un codon stop."
+    },
+    {
+     "type": "zone",
+     "document": "code",
+     "enonce": "Touche la case qui indique ce que fait le codon UAA.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche la ligne du codon UAA.",
+     "explication": "Le codon UAA est un **codon stop** : il arrête la traduction sans coder d’acide aminé."
+    }
+   ]
+  },
+  {
+   "chapitre": "827909f0-e2f6-57cd-94eb-f5c3af3ca978",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre mutants, quatre protéines",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire séquence un gène de référence (allèle sauvage) et quatre mutants. Il compare les ARNm et cherche ce que devient la protéine dans chaque cas.",
+   "documents": [
+    {
+     "id": "allele",
+     "type": "tableau",
+     "titre": "ARNm des allèles séquencés",
+     "colonnes": [
+      "Allèle",
+      "ARNm (5′ → 3′)"
+     ],
+     "lignes": [
+      [
+       "Sauvage",
+       "AUG CCU AAG GAG UAA"
+      ],
+      [
+       "Mutant 1",
+       "AUG CCC AAG GAG UAA"
+      ],
+      [
+       "Mutant 2",
+       "AUG CCU AAG GUG UAA"
+      ],
+      [
+       "Mutant 3",
+       "AUG CCU UAG GAG UAA"
+      ],
+      [
+       "Mutant 4",
+       "AUG CUA AGG AGU AA"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Séquences écrites pour l’exercice"
+    },
+    {
+     "id": "code",
+     "type": "tableau",
+     "titre": "Extrait du code génétique",
+     "colonnes": [
+      "Codon",
+      "Ce qu’il code"
+     ],
+     "lignes": [
+      [
+       "AUG",
+       "Méthionine"
+      ],
+      [
+       "CCU",
+       "Proline"
+      ],
+      [
+       "CCC",
+       "Proline"
+      ],
+      [
+       "AAG",
+       "Lysine"
+      ],
+      [
+       "GAG",
+       "Acide glutamique"
+      ],
+      [
+       "GUG",
+       "Valine"
+      ],
+      [
+       "CUA",
+       "Leucine"
+      ],
+      [
+       "AGG",
+       "Arginine"
+      ],
+      [
+       "AGU",
+       "Sérine"
+      ],
+      [
+       "UAG",
+       "Codon stop"
+      ],
+      [
+       "UAA",
+       "Codon stop"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Extrait du code génétique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Donne à chaque mutant le nom de sa mutation.",
+     "categories": [
+      "Silencieuse",
+      "Faux-sens",
+      "Non-sens",
+      "Décalage du cadre de lecture"
+     ],
+     "items": [
+      [
+       "Mutant 1",
+       0
+      ],
+      [
+       "Mutant 2",
+       1
+      ],
+      [
+       "Mutant 3",
+       2
+      ],
+      [
+       "Mutant 4",
+       3
+      ]
+     ],
+     "aide": "Compare chaque ARNm à l’allèle sauvage, codon par codon, et traduis avec le code.",
+     "explication": "Mutant 1 : CCU→CCC, toujours Pro (**silencieuse**). Mutant 2 : Glu→Val (**faux-sens**). Mutant 3 : AAG→UAG, stop (**non-sens**). Mutant 4 : un nucléotide en moins (**décalage**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’acides aminés compte le peptide du mutant 3 ?",
+     "reponse": 2,
+     "aide": "La traduction s’arrête au premier codon stop rencontré.",
+     "explication": "AUG (Met), CCU (Pro), puis UAG : stop. Le peptide, tronqué, ne compte que **2** acides aminés."
+    },
+    {
+     "type": "zone",
+     "document": "allele",
+     "enonce": "Touche la séquence du mutant dont la protéine est identique à la protéine sauvage.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche un codon modifié qui code encore le même acide aminé.",
+     "explication": "Dans le mutant 1, CCC code toujours la proline : la protéine est **inchangée** (mutation silencieuse)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le début du peptide du mutant 4 ?",
+     "options": [
+      "Met-Leu-Arg-Ser",
+      "Met-Pro-Lys-Glu",
+      "Met-Pro",
+      "Met-Leu-Lys-Glu"
+     ],
+     "reponse": 0,
+     "aide": "Redécoupe l’ARNm en codons à partir de l’AUG, puis traduis.",
+     "explication": "AUG CUA AGG AGU → **Met-Leu-Arg-Ser** : tous les codons après la délétion ont changé."
+    }
+   ]
+  },
+  {
+   "chapitre": "827909f0-e2f6-57cd-94eb-f5c3af3ca978",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un seul nucléotide dans le gène de l’hémoglobine",
+   "competence": "analyser-document",
+   "situation": "Dans la drépanocytose, la protéine hémoglobine S diffère de l’hémoglobine normale. Un laboratoire d’analyses compare le début du gène sauvage et celui de l’allèle S.",
+   "documents": [
+    {
+     "id": "hbb",
+     "type": "tableau",
+     "titre": "Début du gène de la chaîne β de l’hémoglobine",
+     "colonnes": [
+      "Codon n°",
+      "Allèle sauvage",
+      "Allèle S",
+      "Protéine sauvage",
+      "Protéine S"
+     ],
+     "lignes": [
+      [
+       "1",
+       "ATG",
+       "ATG",
+       "Met",
+       "Met"
+      ],
+      [
+       "2",
+       "GTG",
+       "GTG",
+       "Val",
+       "Val"
+      ],
+      [
+       "3",
+       "CAC",
+       "CAC",
+       "His",
+       "His"
+      ],
+      [
+       "4",
+       "CTG",
+       "CTG",
+       "Leu",
+       "Leu"
+      ],
+      [
+       "5",
+       "ACT",
+       "ACT",
+       "Thr",
+       "Thr"
+      ],
+      [
+       "6",
+       "CCT",
+       "CCT",
+       "Pro",
+       "Pro"
+      ],
+      [
+       "7",
+       "GAG",
+       "GTG",
+       "Glu",
+       "Val"
+      ],
+      [
+       "8",
+       "GAG",
+       "GAG",
+       "Glu",
+       "Glu"
+      ],
+      [
+       "9",
+       "AAG",
+       "AAG",
+       "Lys",
+       "Lys"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Début de séquence (brin non transcrit) ; les numéros comptent à partir du codon ATG"
+    },
+    {
+     "id": "props",
+     "type": "tableau",
+     "titre": "Deux acides aminés",
+     "colonnes": [
+      "Acide aminé",
+      "Radical",
+      "Propriété à pH 7"
+     ],
+     "lignes": [
+      [
+       "Acide glutamique",
+       "chaîne terminée par –COOH",
+       "chargé −, hydrophile"
+      ],
+      [
+       "Valine",
+       "chaîne carbonée ramifiée",
+       "hydrophobe"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hbb",
+     "enonce": "Touche la case du codon de l’allèle S qui diffère de l’allèle sauvage.",
+     "reponse": [
+      "r6c2"
+     ],
+     "aide": "Compare les colonnes « Allèle sauvage » et « Allèle S » ligne par ligne.",
+     "explication": "Seul le codon n° 7 change : **GTG** à la place de GAG."
+    },
+    {
+     "type": "texte",
+     "enonce": "Le codon modifié est GTG sur le brin non transcrit. Écris le codon correspondant de l’ARNm.",
+     "reponse": [
+      "GUG"
+     ],
+     "placeholder": "Trois lettres",
+     "aide": "Le brin non transcrit a la même séquence que l’ARNm, avec T remplacé par U.",
+     "explication": "GTG devient **GUG** dans l’ARNm : il code la valine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nucléotides diffèrent entre les deux allèles sur ces neuf codons ?",
+     "reponse": 1,
+     "aide": "Dans GAG → GTG, regarde quelles lettres changent.",
+     "explication": "Seule la 2e lettre change (A → T) : **1** nucléotide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel changement de propriété cette mutation entraîne-t-elle à la surface de la protéine ?",
+     "options": [
+      "Un radical chargé et hydrophile est remplacé par un radical hydrophobe",
+      "Un radical hydrophobe est remplacé par un radical chargé et hydrophile",
+      "Un radical polaire est remplacé par un radical qui forme des ponts disulfure",
+      "Un radical chargé + est remplacé par un radical chargé −"
+     ],
+     "reponse": 0,
+     "aide": "Lis le tableau des propriétés : Glu (sauvage) devient Val (allèle S).",
+     "explication": "L’acide glutamique (chargé −, hydrophile) est remplacé par la valine (**hydrophobe**) : ces valines « collantes » associent les molécules en fibres."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes, de la mutation jusqu’à la maladie.",
+     "items": [
+      "Un nucléotide du gène change : GAG devient GTG",
+      "L’ARNm porte le codon GUG au lieu de GAG",
+      "La valine remplace l’acide glutamique dans la protéine",
+      "Les molécules d’hémoglobine S s’associent en longues fibres",
+      "Les globules rouges se déforment"
+     ],
+     "aide": "On passe du gène à l’ARNm, puis à la protéine, puis à la cellule.",
+     "explication": "Gène → ARNm → protéine modifiée → fibres → globules rouges déformés : un seul acide aminé change, **toute la fonction** s’en ressent."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f25b26b-4689-50bb-b4c2-362fe95c80a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe d’ADN d’une cellule qui se divise",
+   "competence": "lire-graphique",
+   "situation": "Une cellule humaine en G1 contient environ 6 pg d’ADN. Un laboratoire suit sa quantité d’ADN tout au long d’un cycle cellulaire jusqu’à la fin de la mitose.",
+   "documents": [
+    {
+     "id": "adn",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Quantité d’ADN au cours du cycle",
+     "categories": [
+      "G1",
+      "Milieu de la phase S",
+      "G2",
+      "Fin de la mitose"
+     ],
+     "series": [
+      {
+       "nom": "Quantité d’ADN",
+       "valeurs": [
+        6,
+        9,
+        12,
+        6
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité d’ADN",
+      "unite": "pg",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Moment du cycle"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "adn",
+     "enonce": "Touche le point où la cellule est en train de répliquer son ADN.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche le point où la quantité d’ADN est entre sa valeur de départ et le double.",
+     "explication": "Au **milieu de la phase S**, l’ADN est à moitié copié : 9 pg, entre 6 et 12."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ADN contient la cellule en G2 ?",
+     "reponse": 12,
+     "unite": "pg",
+     "aide": "Lis la valeur du troisième point.",
+     "explication": "La réplication a doublé la quantité d’ADN : **12 pg**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque enzyme de la réplication à son rôle.",
+     "paires": [
+      [
+       "Hélicase",
+       "Sépare les deux brins"
+      ],
+      [
+       "ADN polymérase",
+       "Fabrique le brin complémentaire"
+      ]
+     ],
+     "aide": "La réplication commence par l’ouverture de la double hélice.",
+     "explication": "L’**hélicase** sépare les brins ; l’**ADN polymérase** construit, face à chacun, un brin neuf : chaque molécule fille garde un brin ancien."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la quantité d’ADN retombe-t-elle à 6 pg à la fin de la mitose ?",
+     "options": [
+      "Chaque cellule fille reçoit une chromatide de chaque chromosome",
+      "La moitié de l’ADN est détruite pendant la mitose",
+      "Chaque cellule fille reçoit toutes les chromatides sœurs",
+      "La cellule fille répare son ADN pour en perdre la moitié"
+     ],
+     "reponse": 0,
+     "aide": "En anaphase, les chromatides sœurs se séparent.",
+     "explication": "Les chromatides se séparent : chaque cellule fille reçoit **une copie de chaque chromosome**, donc 6 pg."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f25b26b-4689-50bb-b4c2-362fe95c80a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre images d’une mitose à ranger",
+   "competence": "observer-schema",
+   "situation": "En TP, Chloé observe au microscope une racine d’oignon et dessine quatre cellules, repérées par des lettres. Pour simplifier, la cellule n’a que quatre chromosomes.",
+   "documents": [
+    {
+     "id": "mitose",
+     "type": "schema",
+     "titre": "Quatre cellules en division",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 8,
+       "l": 145,
+       "h": 108,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 8
+      },
+      {
+       "forme": "rect",
+       "x": 165,
+       "y": 8,
+       "l": 145,
+       "h": 108,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 8
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 124,
+       "l": 145,
+       "h": 108,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 8
+      },
+      {
+       "forme": "rect",
+       "x": 165,
+       "y": 124,
+       "l": 145,
+       "h": 108,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 8
+      },
+      {
+       "forme": "ellipse",
+       "cx": 82,
+       "cy": 62,
+       "rx": 52,
+       "ry": 40,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        62,
+        43
+       ],
+       "a": [
+        70,
+        57
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        43
+       ],
+       "a": [
+        62,
+        57
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        41
+       ],
+       "a": [
+        100,
+        55
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        41
+       ],
+       "a": [
+        92,
+        55
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        64,
+        69
+       ],
+       "a": [
+        72,
+        83
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        72,
+        69
+       ],
+       "a": [
+        64,
+        83
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        94,
+        67
+       ],
+       "a": [
+        102,
+        81
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        102,
+        67
+       ],
+       "a": [
+        94,
+        81
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ellipse",
+       "cx": 237,
+       "cy": 62,
+       "rx": 52,
+       "ry": 40,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        233,
+        29
+       ],
+       "a": [
+        241,
+        43
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        241,
+        29
+       ],
+       "a": [
+        233,
+        43
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        233,
+        46
+       ],
+       "a": [
+        241,
+        60
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        241,
+        46
+       ],
+       "a": [
+        233,
+        60
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        233,
+        63
+       ],
+       "a": [
+        241,
+        77
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        241,
+        63
+       ],
+       "a": [
+        233,
+        77
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        233,
+        80
+       ],
+       "a": [
+        241,
+        94
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        241,
+        80
+       ],
+       "a": [
+        233,
+        94
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ellipse",
+       "cx": 82,
+       "cy": 178,
+       "rx": 62,
+       "ry": 38,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        171
+       ],
+       "a": [
+        34,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        43,
+        171
+       ],
+       "a": [
+        43,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        52,
+        171
+       ],
+       "a": [
+        52,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        61,
+        171
+       ],
+       "a": [
+        61,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        103,
+        171
+       ],
+       "a": [
+        103,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        171
+       ],
+       "a": [
+        112,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        121,
+        171
+       ],
+       "a": [
+        121,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        171
+       ],
+       "a": [
+        130,
+        185
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ellipse",
+       "cx": 212,
+       "cy": 178,
+       "rx": 33,
+       "ry": 36,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 262,
+       "cy": 178,
+       "rx": 33,
+       "ry": 36,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        203,
+        161
+       ],
+       "a": [
+        203,
+        175
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        221,
+        161
+       ],
+       "a": [
+        221,
+        175
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        203,
+        181
+       ],
+       "a": [
+        203,
+        195
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        221,
+        181
+       ],
+       "a": [
+        221,
+        195
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        253,
+        161
+       ],
+       "a": [
+        253,
+        175
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        271,
+        161
+       ],
+       "a": [
+        271,
+        175
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        253,
+        181
+       ],
+       "a": [
+        253,
+        195
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        271,
+        181
+       ],
+       "a": [
+        271,
+        195
+       ],
+       "teinte": "violet",
+       "epaisseur": 3
+      },
+      {
+       "forme": "etiquette",
+       "x": 28,
+       "y": 24,
+       "texte": "B",
+       "id": "eb",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 183,
+       "y": 24,
+       "texte": "D",
+       "id": "ed",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 28,
+       "y": 140,
+       "texte": "A",
+       "id": "ea",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 183,
+       "y": 140,
+       "texte": "C",
+       "id": "ec",
+       "zone": true
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mitose",
+     "enonce": "Touche la lettre de la cellule où les chromatides sœurs se séparent et migrent vers les pôles.",
+     "reponse": [
+      "ea"
+     ],
+     "aide": "Cherche la cellule étirée où chaque pôle reçoit un lot de chromatides.",
+     "explication": "En **anaphase**, les deux chromatides de chaque chromosome se séparent : c’est la cellule A."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les lettres dans l’ordre de la mitose.",
+     "items": [
+      "B",
+      "D",
+      "A",
+      "C"
+     ],
+     "aide": "Prophase, métaphase, anaphase, puis télophase.",
+     "explication": "B (prophase : chromosomes condensés, éparpillés) → D (métaphase : alignés au centre) → A (anaphase : séparation) → C (télophase : deux cellules)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromatides compte la cellule en métaphase ?",
+     "reponse": 8,
+     "aide": "Chaque chromosome en X a deux chromatides.",
+     "explication": "4 chromosomes à 2 chromatides : 4 × 2 = **8 chromatides**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes chaque cellule fille reçoit-elle en télophase ?",
+     "reponse": 4,
+     "aide": "Compte les traits dans l’une des deux cellules du bas à droite.",
+     "explication": "Chaque cellule fille reçoit **4 chromosomes** à une chromatide : ce sont les mêmes que ceux de la cellule mère."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f25b26b-4689-50bb-b4c2-362fe95c80a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mitose ou méiose ? Quatre cellules et une courbe",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire de reproduction observe quatre cellules humaines en division. Il dispose aussi de la courbe de la quantité d’ADN d’une cellule qui effectue une méiose complète.",
+   "documents": [
+    {
+     "id": "cellules",
+     "type": "tableau",
+     "titre": "Cellules observées",
+     "colonnes": [
+      "Cellule",
+      "Chromosomes visibles",
+      "Chromatides par chromosome",
+      "Disposition"
+     ],
+     "lignes": [
+      [
+       "A",
+       "46",
+       "2",
+       "alignés au centre"
+      ],
+      [
+       "B",
+       "23",
+       "2",
+       "alignés au centre"
+      ],
+      [
+       "C",
+       "46, appariés en 23 couples",
+       "2",
+       "couples alignés au centre"
+      ],
+      [
+       "D",
+       "46 à chaque pôle",
+       "1",
+       "regroupés aux deux pôles"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    },
+    {
+     "id": "meiose",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Quantité d’ADN au cours de la méiose",
+     "categories": [
+      "G1",
+      "Après la phase S",
+      "Après la 1re division",
+      "Après la 2e division"
+     ],
+     "series": [
+      {
+       "nom": "Quantité d’ADN",
+       "valeurs": [
+        6,
+        12,
+        6,
+        3
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité d’ADN par cellule",
+      "unite": "pg",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Dans quelle division se trouve chaque cellule ?",
+     "categories": [
+      "Mitose",
+      "Méiose I",
+      "Méiose II"
+     ],
+     "items": [
+      [
+       "Cellule A",
+       0
+      ],
+      [
+       "Cellule B",
+       2
+      ],
+      [
+       "Cellule C",
+       1
+      ],
+      [
+       "Cellule D",
+       0
+      ]
+     ],
+     "aide": "En méiose I, les homologues sont appariés ; en méiose II, il n’y a que 23 chromosomes.",
+     "explication": "A : **mitose** (46 doubles alignés). B : **méiose II** (23 doubles). C : **méiose I** (homologues appariés). D : **mitose** (anaphase-télophase, chromatides séparées)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ADN contient un gamète ?",
+     "reponse": 3,
+     "unite": "pg",
+     "aide": "Lis le dernier point de la courbe.",
+     "explication": "Après la 2e division, chaque gamète contient **3 pg**, soit la moitié de la quantité de départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de pg la quantité d’ADN chute-t-elle entre « Après la phase S » et « Après la 1re division » ?",
+     "reponse": 6,
+     "unite": "pg",
+     "aide": "Soustrais les deux valeurs lues sur la courbe.",
+     "explication": "12 − 6 = **6 pg** : la 1re division sépare les chromosomes homologues."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la courbe de la méiose descend-elle en deux marches ?",
+     "options": [
+      "Une seule réplication est suivie de deux divisions successives",
+      "L’ADN est répliqué deux fois avant chaque division",
+      "Deux cellules se partagent l’ADN avant la phase S",
+      "La première division sépare les chromatides et la seconde les homologues"
+     ],
+     "reponse": 0,
+     "aide": "Compte combien de fois l’ADN est copié, puis combien de fois la cellule se divise.",
+     "explication": "L’ADN est répliqué **une seule fois** (phase S) puis réparti en **deux divisions** : 12 → 6 → 3 pg."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après la 1re division de méiose, la cellule contient 6 pg d’ADN comme en G1. Que contient-elle ?",
+     "options": [
+      "23 chromosomes à deux chromatides",
+      "46 chromosomes à une chromatide",
+      "23 chromosomes à une chromatide",
+      "46 chromosomes à deux chromatides"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La méiose I sépare les chromosomes homologues, pas les chromatides sœurs.",
+     "explication": "La méiose I sépare les **homologues** : chaque cellule a 23 chromosomes, encore à deux chromatides (6 pg)."
+    }
+   ]
+  }
+ ]
+}

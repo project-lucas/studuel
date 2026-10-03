@@ -1,0 +1,2096 @@
+{
+ "niveau": "6e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "8d83c77b-c970-54e6-84b1-5915fdb531bb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre habitants d’Athènes",
+   "competence": "analyser-texte",
+   "situation": "Dans les rues d’Athènes, tout le monde ne vit pas de la même façon. Quatre habitants se présentent : lis leur histoire et retrouve leur place dans la cité.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Quatre présentations",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Ménon a vingt ans. Son père et sa mère sont athéniens. Il vote à l’[[a|Ecclésia]], l’assemblée du peuple.",
+      "Hippias est marchand. Il est né à Corinthe et vit libre à Athènes depuis dix ans. Il paie un impôt et sert à l’armée, mais il ne sera jamais citoyen.",
+      "Sosias travaille dans les mines d’argent du Laurion. Il appartient à un maître : pour la loi, c’est un [[b|bien]].",
+      "Thaïs est née à Athènes de parents athéniens. Elle est libre, mais elle ne vote pas : un tuteur décide pour elle."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le nom de **l’assemblée** où les citoyens votent.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche où Ménon exerce son droit de vote.",
+     "explication": "Les citoyens athéniens votent à l’**Ecclésia**, l’assemblée du peuple."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui dit **comment la loi voit un esclave**.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Lis ce que le récit dit de Sosias : à qui appartient-il ?",
+     "explication": "Pour la loi, un esclave est un **bien** : on peut l’acheter, le vendre, le posséder."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque personne dans son groupe.",
+     "categories": [
+      "Citoyen",
+      "Métèque",
+      "Esclave",
+      "Femme"
+     ],
+     "items": [
+      [
+       "Ménon",
+       0
+      ],
+      [
+       "Hippias",
+       1
+      ],
+      [
+       "Sosias",
+       2
+      ],
+      [
+       "Thaïs",
+       3
+      ],
+      [
+       "Lydos, un étranger libre installé à Athènes",
+       1
+      ],
+      [
+       "Un prisonnier de guerre vendu",
+       2
+      ]
+     ],
+     "aide": "Les métèques sont des étrangers libres ; les esclaves appartiennent à un maître.",
+     "explication": "Ménon est **citoyen**, Hippias est un **métèque** (étranger libre), Sosias est un **esclave**, Thaïs est une **femme** libre sans droits politiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d83c77b-c970-54e6-84b1-5915fdb531bb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui vote à Athènes ?",
+   "competence": "lire-graphique",
+   "situation": "En 451 av. J.-C., Périclès fait voter une nouvelle règle pour devenir citoyen. Compare cette règle aux habitants de la cité sur un diagramme imaginé.",
+   "documents": [
+    {
+     "id": "habitants",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les habitants d’une cité comme Athènes",
+     "source": "Proportions imaginées, d’après le cours (un habitant sur sept est citoyen).",
+     "categories": [
+      "Citoyens (hommes adultes)",
+      "Métèques",
+      "Esclaves",
+      "Femmes et enfants libres"
+     ],
+     "series": [
+      {
+       "nom": "Part des habitants",
+       "valeurs": [
+        14,
+        10,
+        50,
+        26
+       ]
+      }
+     ]
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La règle de 451 av. J.-C.",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "En 451 av. J.-C., sur proposition de Périclès, la cité décide que, pour être citoyen, il faut être un homme libre, né d’un père citoyen et d’une mère fille de citoyen.",
+      "Trois jeunes de dix-huit ans se présentent à leur dème : Aristos, dont le père est citoyen et la mère fille de citoyen ; Dion, dont le père est citoyen mais dont la mère est une étrangère ; Pyrrhos, né esclave."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "habitants",
+     "enonce": "Touche la part des habitants qui **peuvent voter**.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Seuls les citoyens votent : cherche la part des hommes adultes citoyens.",
+     "explication": "Seuls les **citoyens** votent. Ils forment une petite part des habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des habitants **ne peut pas voter** ?",
+     "reponse": 86,
+     "unite": "%",
+     "aide": "Retire la part des citoyens à 100.",
+     "explication": "100 − 14 = **86 %** des habitants ne votent pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la règle de 451, quels jeunes **ne seront pas** inscrits comme citoyens ?",
+     "options": [
+      "Dion et Pyrrhos",
+      "Aristos et Dion",
+      "Aristos seulement",
+      "Aristos et Pyrrhos"
+     ],
+     "reponse": 0,
+     "aide": "Vérifie les trois conditions : homme libre, père citoyen, mère fille de citoyen.",
+     "explication": "Aristos remplit les conditions. **Dion** (mère étrangère) et **Pyrrhos** (né esclave) sont refusés."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La démocratie athénienne est ___ (on vote soi-même les lois) mais aussi ___ à une minorité.",
+     "reponses": [
+      [
+       "directe"
+      ],
+      [
+       "restreinte"
+      ]
+     ],
+     "banque": [
+      "directe",
+      "restreinte",
+      "représentative",
+      "universelle"
+     ],
+     "aide": "Compare avec la nôtre : nous élisons des représentants, et tous les adultes peuvent voter.",
+     "explication": "À Athènes, la démocratie est **directe** (on vote soi-même) mais **restreinte** : un habitant sur sept seulement vote."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d83c77b-c970-54e6-84b1-5915fdb531bb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Devenir citoyen d’Athènes",
+   "competence": "analyser-document",
+   "situation": "Pour devenir citoyen, un jeune Athénien suit un parcours précis. Une fois citoyen, il reçoit des droits, mais il a aussi des devoirs. Étudie ce parcours et classe ce que fait un citoyen.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Le parcours d’un jeune Athénien",
+     "noeuds": [
+      {
+       "id": "deme",
+       "texte": "Inscrit dans son dème à 18 ans"
+      },
+      {
+       "id": "ephebie",
+       "texte": "?"
+      },
+      {
+       "id": "serment",
+       "texte": "Serment de défendre la cité"
+      }
+     ],
+     "liens": [
+      {
+       "de": "deme",
+       "a": "ephebie"
+      },
+      {
+       "de": "ephebie",
+       "a": "serment"
+      }
+     ]
+    },
+    {
+     "id": "actes",
+     "type": "tableau",
+     "titre": "Huit choses qu’un citoyen athénien fait ou reçoit",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "N°",
+      "Un citoyen athénien…"
+     ],
+     "lignes": [
+      [
+       1,
+       "vote à l’Ecclésia"
+      ],
+      [
+       2,
+       "sert dans l’armée"
+      ],
+      [
+       3,
+       "peut être tiré au sort"
+      ],
+      [
+       4,
+       "paie l’impôt, s’il est riche"
+      ],
+      [
+       5,
+       "possède de la terre"
+      ],
+      [
+       6,
+       "finance une trière (liturgie)"
+      ],
+      [
+       7,
+       "est jugé par ses pairs"
+      ],
+      [
+       8,
+       "participe aux cultes de la cité"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » du parcours ?",
+     "options": [
+      "L’éphébie : deux ans de service militaire",
+      "Un mariage arrangé par la famille",
+      "Un voyage de deux ans à l’étranger",
+      "Une année d’études auprès d’un philosophe"
+     ],
+     "reponse": 0,
+     "aide": "Entre l’inscription et le serment de défendre la cité, que fait le jeune homme ?",
+     "explication": "Après son inscription, le jeune homme fait l’**éphébie**, deux ans de service militaire, avant de jurer de défendre la cité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel âge, au plus tôt, un jeune Athénien termine-t-il l’éphébie ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Il commence à 18 ans et l’éphébie dure deux ans.",
+     "explication": "18 + 2 = **20 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque ligne du tableau : droit ou devoir ?",
+     "categories": [
+      "Droit",
+      "Devoir"
+     ],
+     "items": [
+      [
+       "Voter à l’Ecclésia",
+       0
+      ],
+      [
+       "Être tiré au sort",
+       0
+      ],
+      [
+       "Posséder de la terre",
+       0
+      ],
+      [
+       "Être jugé par ses pairs",
+       0
+      ],
+      [
+       "Servir dans l’armée",
+       1
+      ],
+      [
+       "Payer l’impôt",
+       1
+      ],
+      [
+       "Financer une trière",
+       1
+      ],
+      [
+       "Participer aux cultes",
+       1
+      ]
+     ],
+     "aide": "Un droit est ce que la cité te donne ; un devoir est ce que tu lui dois.",
+     "explication": "Voter, être tiré au sort, posséder la terre et être jugé par ses pairs sont des **droits**. Servir, payer l’impôt, financer une trière et participer aux cultes sont des **devoirs**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « être citoyen, c’est appartenir et devoir » ?",
+     "options": [
+      "Avoir des droits, mais aussi des devoirs envers la cité",
+      "Avoir seulement des droits, sans aucun devoir pour la cité",
+      "Ne rien devoir à personne dans toute la cité",
+      "Être le propriétaire de tous les esclaves de la cité"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne des devoirs : que doit-on à la cité ?",
+     "explication": "Le citoyen athénien a des **droits**, mais aussi des **devoirs** : il appartient à la cité."
+    }
+   ]
+  },
+  {
+   "chapitre": "398eb840-05be-56e9-ad42-d9b337f684d2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La louve et les jumeaux",
+   "competence": "analyser-texte",
+   "situation": "Les Romains racontaient comment leur ville était née. Lis cette légende, puis place la date de la fondation sur la frise.",
+   "documents": [
+    {
+     "id": "legende",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La fondation de Rome",
+     "auteur": "Légende adaptée d’après Tite-Live, texte écrit pour l’exercice",
+     "blocs": [
+      "Selon la légende, deux frères jumeaux, Romulus et Rémus, sont fils du dieu Mars. Abandonnés sur le Tibre, ils sont recueillis et allaités par une [[l|louve]].",
+      "Devenus adultes, ils décident de fonder une ville. Mais ils se disputent, et Romulus tue son frère. La ville prend le nom de Romulus : c’est Rome."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rome selon la tradition",
+     "debut": -800,
+     "fin": -500,
+     "pas": 100,
+     "source": "Dates traditionnelles.",
+     "evenements": [
+      {
+       "id": "fondation",
+       "date": -753,
+       "nom": "Fondation légendaire"
+      },
+      {
+       "id": "republique",
+       "date": -509,
+       "nom": "République"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "legende",
+     "enonce": "Touche l’animal qui **allaite** les jumeaux.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Les jumeaux sont abandonnés au bord du Tibre : qui les recueille ?",
+     "explication": "Selon la légende, une **louve** allaite Romulus et Rémus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient Rémus dans la légende ?",
+     "options": [
+      "Romulus le tue après une dispute",
+      "Il devient le premier roi de Rome",
+      "Il part fonder une autre ville",
+      "Il est allaité par Mars"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième paragraphe.",
+     "explication": "Les deux frères se disputent et **Romulus tue Rémus**. Rome porte le nom de Romulus."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise **la date légendaire de la fondation** de Rome.",
+     "reponse": [
+      "fondation"
+     ],
+     "aide": "Cherche le nom qui parle de fondation et de légende.",
+     "explication": "La tradition place la fondation de Rome en **753 av. J.-C.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "398eb840-05be-56e9-ad42-d9b337f684d2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Énée, la légende et les cabanes",
+   "competence": "analyser-document",
+   "situation": "Un poète raconte que les Romains descendent de héros troyens. Un archéologue, lui, montre des cabanes de bergers. Les deux sources racontent-elles la même chose ?",
+   "documents": [
+    {
+     "id": "virgile",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le départ de Troie",
+     "auteur": "D’après l’Énéide de Virgile, texte adapté et très abrégé",
+     "blocs": [
+      "Troie brûle. Un prince troyen, [[e|Énée]], prend son père sur ses épaules et fuit la ville en flammes avec quelques compagnons.",
+      "Après un long voyage sur la mer, Énée arrive en Italie. Selon le poète, ses descendants fonderont Rome."
+     ]
+    },
+    {
+     "id": "cartel",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Fouille du Palatin",
+     "sousTitre": "Fiche d’objet",
+     "emoji": "🪵",
+     "source": "Fiche écrite pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Lieu",
+       "valeur": "colline du Palatin, à Rome",
+       "id": "lieu"
+      },
+      {
+       "texte": "Date",
+       "valeur": "VIIIe siècle av. J.-C.",
+       "id": "date"
+      },
+      {
+       "texte": "Trouvaille",
+       "valeur": "trous de poteaux de cabanes",
+       "id": "trouvaille"
+      },
+      {
+       "texte": "Habitants",
+       "valeur": "probablement des bergers",
+       "id": "habitants"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "virgile",
+     "enonce": "Touche **le prince troyen** qui fuit sa ville en flammes.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche le prénom du héros du premier paragraphe.",
+     "explication": "Le héros est **Énée**, ancêtre des Romains dans l’Énéide de Virgile."
+    },
+    {
+     "type": "categories",
+     "enonce": "Récit ou fouilles ? Classe chaque information.",
+     "categories": [
+      "Ce que raconte le récit",
+      "Ce que montrent les fouilles"
+     ],
+     "items": [
+      [
+       "Romulus est fils du dieu Mars",
+       0
+      ],
+      [
+       "Énée a fui Troie en flammes",
+       0
+      ],
+      [
+       "Une louve a allaité les jumeaux",
+       0
+      ],
+      [
+       "Des trous de poteaux dessinent des cabanes",
+       1
+      ],
+      [
+       "Des bergers vivaient sur le Palatin au VIIIe siècle av. J.-C.",
+       1
+      ]
+     ],
+     "aide": "Un récit raconte des croyances ; les fouilles trouvent des traces matérielles.",
+     "explication": "Les légendes (Mars, Troie, la louve) sont des **récits**. Les cabanes et les bergers du Palatin sont des **traces** trouvées par les fouilles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Virgile écrit au Ier siècle av. J.-C. et la fondation légendaire date du VIIIe siècle av. J.-C. Combien de siècles les séparent ?",
+     "reponse": 7,
+     "unite": "siècles",
+     "aide": "Les deux siècles sont avant J.-C. : soustrais le plus petit numéro au plus grand.",
+     "explication": "8 − 1 = **7 siècles**. Le récit est écrit sept siècles après les faits supposés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ces récits sont-ils écrits si longtemps après ?",
+     "options": [
+      "Rome domine alors la Méditerranée et veut la justifier",
+      "Les premiers Romains ne savaient pas encore parler",
+      "Les fouilles n’avaient encore trouvé aucune cabane à Rome",
+      "Les poètes de l’époque ne connaissaient pas du tout Troie"
+     ],
+     "reponse": 0,
+     "aide": "À l’époque de Virgile, que fait Rome ?",
+     "explication": "Quand ces récits sont écrits, Rome **domine la Méditerranée** : elle cherche à justifier cette domination par une origine glorieuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "398eb840-05be-56e9-ad42-d9b337f684d2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du récit de Virgile aux trois âges de Rome",
+   "competence": "se-reperer-temps",
+   "situation": "Une carte suit la route que le récit donne à Énée. Une frise range ensuite l’histoire romaine en trois périodes. Qu’est-ce qui vient d’un récit et qu’est-ce qui vient de l’histoire ?",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le voyage d’Énée, selon Virgile",
+     "fond": "mediterranee",
+     "cadrage": [
+      5,
+      33,
+      32,
+      46
+     ],
+     "source": "Route simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "troie",
+       "lieu": "troie",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "rome",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "athenes",
+       "lieu": "athenes",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      }
+     ],
+     "traits": [
+      {
+       "id": "voyage",
+       "points": [
+        "troie",
+        "rome"
+       ],
+       "style": "fleche",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les trois périodes de l’histoire romaine",
+     "debut": -800,
+     "fin": 500,
+     "pas": 100,
+     "periodes": [
+      {
+       "id": "royaute",
+       "debut": -753,
+       "fin": -509,
+       "nom": "Royauté",
+       "teinte": "ambre"
+      },
+      {
+       "id": "republique",
+       "debut": -509,
+       "fin": -27,
+       "nom": "République",
+       "teinte": "bleu"
+      },
+      {
+       "id": "empire",
+       "debut": -27,
+       "fin": 476,
+       "nom": "Empire",
+       "teinte": "corail"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **Troie**, la ville d’où part Énée dans le récit de Virgile.",
+     "reponse": [
+      "troie"
+     ],
+     "aide": "La flèche part de la ville la plus à l’est des trois.",
+     "explication": "La flèche part de **Troie** (repère A) et arrive à Rome (repère B)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente la flèche du voyage d’Énée ?",
+     "options": [
+      "Un récit de Virgile, et non une trace des fouilles",
+      "Une route prouvée par les fouilles de la ville de Rome",
+      "Le trajet exact d’une armée romaine bien réelle",
+      "Le chemin suivi par la louve jusqu’au Palatin"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi qui a imaginé le voyage d’Énée.",
+     "explication": "Ce voyage vient du **récit de Virgile** : c’est une légende, pas une trace matérielle."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise **la République**.",
+     "reponse": [
+      "republique"
+     ],
+     "aide": "La République vient après la Royauté.",
+     "explication": "La **République** va de 509 à 27 av. J.-C. : les Romains ont chassé le dernier roi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la Royauté, de −753 à −509 ?",
+     "reponse": 244,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "753 − 509 = **244 ans**. Selon la tradition, sept rois se succèdent."
+    }
+   ]
+  },
+  {
+   "chapitre": "378ff142-faa2-5f28-9faf-2425b369d638",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire les couches du sol",
+   "competence": "observer-schema",
+   "situation": "Dans une fouille, chaque couche de terre garde les traces d’une époque. Observe la coupe d’un chantier imaginé : ce que tu apprends sur les couches vaut pour toutes les fouilles, à Rome comme ailleurs.",
+   "documents": [
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "La coupe d’une fouille",
+     "largeur": 340,
+     "hauteur": 240,
+     "source": "Coupe imaginée pour l’exercice.",
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 20,
+       "texte": "Surface du sol",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 30,
+       "l": 240,
+       "h": 36,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "c1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 66,
+       "l": 240,
+       "h": 36,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "c2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 102,
+       "l": 240,
+       "h": 36,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "c3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 138,
+       "l": 240,
+       "h": 36,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "c4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 174,
+       "l": 240,
+       "h": 36,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "c5",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 90,
+       "y": 50,
+       "emoji": "🧱",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 190,
+       "y": 86,
+       "emoji": "🪙",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 130,
+       "y": 122,
+       "emoji": "🏺",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 200,
+       "y": 194,
+       "emoji": "🦴",
+       "taille": 24
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 52,
+       "texte": "Couche 1",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 88,
+       "texte": "Couche 2",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 124,
+       "texte": "Couche 3",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 160,
+       "texte": "Couche 4",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 196,
+       "texte": "Couche 5",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche **la couche la plus ancienne** de la coupe.",
+     "reponse": [
+      "c5"
+     ],
+     "aide": "Les couches profondes se sont déposées en premier.",
+     "explication": "Les couches les plus profondes sont les plus **anciennes** : c’est la couche 5, tout en bas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de couches sont **plus anciennes** que celle où l’on a trouvé le vase 🏺 ?",
+     "reponse": 2,
+     "unite": "couches",
+     "aide": "Le vase est dans la couche 3 : compte les couches situées en dessous.",
+     "explication": "Le vase est dans la couche 3. Les couches 4 et 5 sont plus profondes, donc plus anciennes : **2 couches**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait l’archéologue quand il lit ces couches ?",
+     "options": [
+      "Il lit une chronologie, de l’ancien au récent",
+      "Il invente une légende pour chacune des couches",
+      "Il cherche seulement l’objet le plus beau de tous",
+      "Il mélange tous les objets de toutes les couches"
+     ],
+     "reponse": 0,
+     "aide": "La stratigraphie, c’est l’étude des couches du sol.",
+     "explication": "Lire les couches, c’est lire une **chronologie** : les couches profondes sont les plus anciennes, les superficielles les plus récentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "378ff142-faa2-5f28-9faf-2425b369d638",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment dater une trouvaille ?",
+   "competence": "analyser-document",
+   "situation": "Les archéologues disposent de plusieurs méthodes pour dire à quelle époque appartient un objet. Observe le tableau de leurs outils, puis range-les.",
+   "documents": [
+    {
+     "id": "methodes",
+     "type": "tableau",
+     "titre": "Cinq outils de datation",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "La méthode",
+      "Ce qu’elle regarde"
+     ],
+     "lignes": [
+      [
+       "Stratigraphie",
+       "Les couches du sol"
+      ],
+      [
+       "Style des poteries",
+       "La forme et le décor des vases"
+      ],
+      [
+       "Carbone 14",
+       "Les matières organiques (os, bois…)"
+      ],
+      [
+       "Dendrochronologie",
+       "Les cernes des arbres"
+      ],
+      [
+       "Monnaies",
+       "L’année où elles ont été frappées"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Datation relative ou absolue ? Classe chaque méthode.",
+     "categories": [
+      "Relative",
+      "Absolue"
+     ],
+     "items": [
+      [
+       "Stratigraphie",
+       0
+      ],
+      [
+       "Style des poteries",
+       0
+      ],
+      [
+       "Carbone 14",
+       1
+      ],
+      [
+       "Dendrochronologie",
+       1
+      ],
+      [
+       "Monnaies",
+       1
+      ]
+     ],
+     "aide": "La datation relative range les objets dans un ordre ; l’absolue donne une date.",
+     "explication": "La **stratigraphie** et la comparaison des **styles de poteries** sont des datations relatives. Le **carbone 14**, la **dendrochronologie** et les **monnaies** donnent des dates absolues."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle méthode regarde **les cernes d’un morceau de bois** ?",
+     "options": [
+      "La dendrochronologie",
+      "Le carbone 14",
+      "La stratigraphie",
+      "Le style des poteries"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, repère la ligne qui parle de cernes.",
+     "explication": "La **dendrochronologie** compte les cernes des arbres pour dater un bois."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Pour comprendre un objet, l’archéologue note sa position exacte : c’est le ___ qui donne le sens.",
+     "reponses": [
+      [
+       "contexte"
+      ]
+     ],
+     "banque": [
+      "contexte",
+      "prix",
+      "poids",
+      "nom"
+     ],
+     "aide": "Un objet hors de sa couche perd presque tout son intérêt.",
+     "explication": "C’est le **contexte** (la couche, la position) qui donne le sens, bien plus que l’objet lui-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "378ff142-faa2-5f28-9faf-2425b369d638",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le carnet de fouille du Palatin",
+   "competence": "analyser-document",
+   "situation": "Rome est-elle née un jour précis, sous la main de Romulus ? Les archéologues ne répondent pas par oui ou par non : ils notent ce qu’ils trouvent. Lis leur carnet et compare-le au récit.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Carnet de fouille",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Palatin, couche 3 : des trous de poteaux sont disposés en ovale. Ils dessinent le sol d’une [[c|cabane]], datée du VIIIe siècle av. J.-C.",
+      "Palatin, couche 3 : des morceaux d’une poterie fabriquée en Grèce. Elle a été [[i|importée]], donc apportée par des marchands.",
+      "Forum : une nécropole, puis un dallage sur l’ancien marécage. La zone devient un espace public."
+     ]
+    },
+    {
+     "id": "comparaison",
+     "type": "tableau",
+     "titre": "Récit et fouilles",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Sur quoi",
+      "Le récit",
+      "Les fouilles"
+     ],
+     "lignes": [
+      [
+       "La date",
+       "21 avril 753 av. J.-C.",
+       "Des cabanes dès le VIIIe siècle av. J.-C."
+      ],
+      [
+       "La naissance de Rome",
+       "Un acte : Romulus fonde la ville",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche **le mot** qui montre que Rome avait déjà des échanges avec d’autres peuples.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "Une poterie venue de Grèce n’a pas été fabriquée à Rome.",
+     "explication": "Une poterie **importée** prouve que Rome échangeait déjà avec d’autres peuples."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un processus : des villages qui se regroupent",
+      "Un acte : un roi qui trace un sillon sacré",
+      "Une invasion étrusque soudaine et complète",
+      "Un miracle des dieux qui ne laisse aucune trace"
+     ],
+     "reponse": 0,
+     "aide": "Les cabanes sont sur plusieurs collines, et les couches se superposent au fil du temps.",
+     "explication": "Pour les fouilles, Rome naît d’un **processus** : des villages sur les collines se regroupent progressivement."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le travail de l’archéologue.",
+     "items": [
+      "Fouiller en notant la position de chaque objet",
+      "Lire les couches du sol",
+      "Dater les objets trouvés",
+      "Comparer avec ce que racontent les textes"
+     ],
+     "aide": "On ne peut pas lire les couches avant d’avoir fouillé.",
+     "explication": "On **fouille** en notant les positions, on **lit les couches**, on **date**, puis on **compare** avec les textes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "L’archéologie ne confirme ni n’infirme Romulus : elle ___ la question.",
+     "reponses": [
+      [
+       "déplace"
+      ]
+     ],
+     "banque": [
+      "déplace",
+      "supprime",
+      "efface",
+      "règle"
+     ],
+     "aide": "Elle ne demande plus « la légende est-elle vraie ? » mais autre chose.",
+     "explication": "L’archéologie **déplace** la question : « que reste-t-il dans le sol, et que peut-on affirmer ? »"
+    }
+   ]
+  },
+  {
+   "chapitre": "485427dc-e28f-5cfc-a3c1-855d7966a203",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "SPQR : le Sénat et le peuple romain",
+   "competence": "se-reperer-temps",
+   "situation": "Sur les étendards et les monuments de Rome, quatre lettres reviennent partout. Découvre ce qu’elles veulent dire et place la République sur une frise.",
+   "documents": [
+    {
+     "id": "inscription",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Une inscription romaine",
+     "sousTitre": "Fiche d’observation",
+     "emoji": "🏛️",
+     "source": "Fiche écrite pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "On y lit",
+       "valeur": "SPQR",
+       "id": "sigle",
+       "gras": true
+      },
+      {
+       "texte": "Où ?",
+       "valeur": "sur les étendards et les monuments"
+      },
+      {
+       "texte": "En latin",
+       "valeur": "Senatus Populusque Romanus",
+       "id": "latin"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La République romaine",
+     "debut": -600,
+     "fin": 0,
+     "pas": 100,
+     "source": "Dates traditionnelles.",
+     "periodes": [
+      {
+       "id": "rep",
+       "debut": -509,
+       "fin": -27,
+       "nom": "République",
+       "teinte": "bleu"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "debut",
+       "date": -509,
+       "nom": "Chute du dernier roi"
+      },
+      {
+       "id": "auguste",
+       "date": -27,
+       "nom": "Auguste"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la traduction de SPQR.",
+     "texte": "SPQR signifie : le ___ et le peuple romain.",
+     "reponses": [
+      [
+       "Sénat"
+      ]
+     ],
+     "banque": [
+      "Sénat",
+      "roi",
+      "consul",
+      "tribun"
+     ],
+     "aide": "Dans « Senatus Populusque Romanus », le premier mot ressemble beaucoup à un mot français.",
+     "explication": "SPQR veut dire « le **Sénat** et le peuple romain » : la République est l’affaire de la communauté des citoyens."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise la période de **la République romaine**.",
+     "reponse": [
+      "rep"
+     ],
+     "aide": "Cherche la bande qui porte son nom, juste après la chute du dernier roi.",
+     "explication": "La **République** commence en 509 av. J.-C., quand les Romains chassent leur dernier roi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la République, de −509 à −27 ?",
+     "reponse": 482,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "509 − 27 = **482 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire *res publica* ?",
+     "options": [
+      "La chose publique",
+      "Le roi de Rome",
+      "La guerre civile",
+      "L’armée du Sénat"
+     ],
+     "reponse": 0,
+     "aide": "Le mot « république » vient de cette expression latine.",
+     "explication": "*Res publica* signifie « la **chose publique** » : le pouvoir n’appartient plus à un homme, mais à la communauté des citoyens.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "485427dc-e28f-5cfc-a3c1-855d7966a203",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un vote qui ne compte pas pareil",
+   "competence": "analyser-document",
+   "situation": "À Rome, tous les citoyens ne pèsent pas pareil dans un vote. Lis la règle d’un vote imaginé, puis regarde comment on élit les consuls.",
+   "documents": [
+    {
+     "id": "vote",
+     "type": "tableau",
+     "titre": "Un vote par groupes (exemple imaginé)",
+     "source": "Chiffres imaginés pour l’exercice, d’après le vote par groupes pondérés.",
+     "colonnes": [
+      "Groupe",
+      "Citoyens",
+      "Voix"
+     ],
+     "lignes": [
+      [
+       "Les plus riches",
+       600,
+       60
+      ],
+      [
+       "Tous les autres",
+       9400,
+       40
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’élection des consuls",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chaque année, les comices élisent [[n|deux]] consuls, chefs de l’État et de l’armée. Leur mandat dure [[d|un an]], pas un jour de plus.",
+      "Ensuite, ils entrent au Sénat, qui compte environ 300 anciens magistrats nommés à vie."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche la **durée** du mandat d’un consul.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Cherche le mot qui dit combien de temps ils restent en fonction.",
+     "explication": "Un magistrat est élu pour **un an** : cette brièveté empêche de confisquer le pouvoir."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le groupe « Tous les autres », combien de citoyens se partagent **une** voix ?",
+     "reponse": 235,
+     "unite": "citoyens",
+     "aide": "Divise le nombre de citoyens du groupe par son nombre de voix.",
+     "explication": "9 400 ÷ 40 = **235 citoyens** pour une voix, alors qu’il n’y en a que 10 chez les plus riches (600 ÷ 60)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la République romaine est oligarchique ?",
+     "options": [
+      "Le vrai pouvoir est aux mains de familles riches",
+      "Un seul homme décide de tout, comme le ferait un roi",
+      "Tous les habitants ont exactement le même poids de vote",
+      "Le peuple tire au sort tous les magistrats chaque année"
+     ],
+     "reponse": 0,
+     "aide": "Regarde qui possède 60 voix sur 100 dans le tableau.",
+     "explication": "Avec 60 voix sur 100, les plus riches décident presque toujours : c’est une **oligarchie**, le pouvoir de quelques-uns."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution à ce qu’elle est.",
+     "paires": [
+      [
+       "Les comices",
+       "Les assemblées qui élisent et votent les lois"
+      ],
+      [
+       "Les magistrats",
+       "Des élus pour un an, par deux au moins"
+      ],
+      [
+       "Le Sénat",
+       "Environ 300 anciens magistrats, nommés à vie"
+      ]
+     ],
+     "aide": "Le Sénat est formé d’anciens magistrats.",
+     "explication": "Les **comices** votent, les **magistrats** gouvernent un an, le **Sénat** garde les anciens magistrats à vie et dirige en fait."
+    }
+   ]
+  },
+  {
+   "chapitre": "485427dc-e28f-5cfc-a3c1-855d7966a203",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tribun dit « veto ! »",
+   "competence": "analyser-document",
+   "situation": "La République romaine n’est pas égalitaire : des luttes opposent patriciens et plébéiens. Une scène imaginée montre l’arme des plébéiens ; un schéma montre comment la République se termine.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une séance au Sénat",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le Sénat veut voter une loi qui oblige les plébéiens à payer plus d’impôts. Les patriciens applaudissent. Mais un tribun de la plèbe, Caius, se lève et crie : « [[v|Veto]] ! »",
+      "Ce mot veut dire « je m’oppose ». Grâce à lui, la loi est bloquée : les plébéiens ont obtenu cette arme après de longues luttes."
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "La fin de la République",
+     "noeuds": [
+      {
+       "id": "conq",
+       "texte": "Les conquêtes enrichissent une minorité"
+      },
+      {
+       "id": "crise",
+       "texte": "La crise sociale s’aggrave"
+      },
+      {
+       "id": "gen",
+       "texte": "?"
+      },
+      {
+       "id": "guerre",
+       "texte": "Guerre civile"
+      },
+      {
+       "id": "empire",
+       "texte": "L’Empire"
+      }
+     ],
+     "liens": [
+      {
+       "de": "conq",
+       "a": "crise"
+      },
+      {
+       "de": "crise",
+       "a": "gen"
+      },
+      {
+       "de": "gen",
+       "a": "guerre"
+      },
+      {
+       "de": "guerre",
+       "a": "empire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "enonce": "Touche le mot que prononce le tribun pour **bloquer la loi**.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "C’est un mot latin, entre guillemets, à la fin du premier paragraphe.",
+     "explication": "**Veto** signifie « je m’oppose » : c’est le droit des tribuns de la plèbe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque groupe ou chaque fonction à sa description.",
+     "paires": [
+      [
+       "Les patriciens",
+       "Les grandes familles"
+      ],
+      [
+       "Les plébéiens",
+       "Le reste des citoyens"
+      ],
+      [
+       "Les tribuns de la plèbe",
+       "Ils ont le droit de veto"
+      ],
+      [
+       "Les consuls",
+       "Chefs de l’État et de l’armée"
+      ]
+     ],
+     "aide": "Les tribuns défendent les plébéiens.",
+     "explication": "Les **patriciens** sont les grandes familles, les **plébéiens** le reste des citoyens. Les **tribuns** ont le droit de veto, les **consuls** dirigent l’État et l’armée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Qui est citoyen romain, et qui est exclu ?",
+     "categories": [
+      "Citoyen romain",
+      "Exclu de la citoyenneté"
+     ],
+     "items": [
+      [
+       "Un patricien",
+       0
+      ],
+      [
+       "Un plébéien",
+       0
+      ],
+      [
+       "Une femme",
+       1
+      ],
+      [
+       "Un esclave",
+       1
+      ],
+      [
+       "Un étranger",
+       1
+      ]
+     ],
+     "aide": "Les femmes, les esclaves et les étrangers sont exclus, comme à Athènes.",
+     "explication": "Patriciens et plébéiens sont citoyens. Les **femmes, les esclaves et les étrangers** sont exclus : la République est très inégalitaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Les généraux s’appuient sur leurs armées",
+      "Les plébéiens obtiennent le droit de veto",
+      "Le Sénat est supprimé pour toujours",
+      "Les consuls deviennent des rois élus"
+     ],
+     "reponse": 0,
+     "aide": "Qui gagne du pouvoir quand l’armée est fidèle à son chef ?",
+     "explication": "Quand la crise s’aggrave, des **généraux s’appuient sur leurs armées** : cela mène à la guerre civile, puis à l’Empire."
+    }
+   ]
+  },
+  {
+   "chapitre": "0167f885-4726-5db9-8eed-8b09a19bcd39",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une bibliothèque plutôt qu’un livre",
+   "competence": "analyser-document",
+   "situation": "On parle souvent de la Bible comme d’un seul livre. En réalité, la Bible hébraïque est une vraie bibliothèque. Lis sa fiche pour comprendre ce qu’elle contient.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "La Bible hébraïque",
+     "sousTitre": "Fiche de présentation",
+     "emoji": "📚",
+     "source": "Fiche écrite pour l’exercice, d’après le cours.",
+     "lignes": [
+      {
+       "texte": "Nature",
+       "valeur": "une collection de textes",
+       "id": "nature"
+      },
+      {
+       "texte": "Contenu",
+       "valeur": "récits, lois, poèmes, prophéties",
+       "id": "contenu"
+      },
+      {
+       "texte": "Rédaction",
+       "valeur": "du VIIIe au IIe siècle av. J.-C.",
+       "id": "date"
+      },
+      {
+       "texte": "Nom chez les chrétiens",
+       "valeur": "Ancien Testament",
+       "id": "chretiens"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui indique **le nom** que les chrétiens donnent à ces textes.",
+     "reponse": [
+      "chretiens"
+     ],
+     "aide": "Cherche le mot « chrétiens » dans la fiche.",
+     "explication": "Les chrétiens appellent la Bible hébraïque l’**Ancien Testament**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de siècles sépare le VIIIe siècle av. J.-C. du IIe siècle av. J.-C. ?",
+     "reponse": 6,
+     "unite": "siècles",
+     "aide": "Les deux siècles sont avant J.-C. : soustrais le plus petit numéro au plus grand.",
+     "explication": "8 − 2 = **6 siècles** : ces textes ont été écrits et rassemblés pendant très longtemps."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la fiche, la Bible hébraïque est…",
+     "options": [
+      "une collection de textes écrits sur des siècles",
+      "le livre d’un seul et unique auteur de l’époque",
+      "un recueil rédigé en une seule et même année",
+      "le journal personnel tenu par un roi de Jérusalem"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les lignes « Nature » et « Rédaction ».",
+     "explication": "La Bible hébraïque est une **collection de textes** écrits sur plusieurs siècles : une bibliothèque."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les cinq premiers livres de la Bible hébraïque forment la ___.",
+     "reponses": [
+      [
+       "Torah"
+      ]
+     ],
+     "banque": [
+      "Torah",
+      "Genèse",
+      "Prophétie",
+      "Alliance"
+     ],
+     "aide": "On les appelle aussi le Pentateuque.",
+     "explication": "Les cinq premiers livres forment la **Torah**, la Loi : de la Création à la mort de Moïse."
+    }
+   ]
+  },
+  {
+   "chapitre": "0167f885-4726-5db9-8eed-8b09a19bcd39",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Abraham, Moïse et l’exil",
+   "competence": "analyser-document",
+   "situation": "La Bible hébraïque raconte l’histoire des Hébreux. Lis ce que dit le récit, puis place deux dates sûres sur une frise : celles de l’exil à Babylone.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux grands récits",
+     "auteur": "D’après la Bible hébraïque, texte adapté et abrégé",
+     "blocs": [
+      "Selon le récit biblique, Abraham reçoit une promesse de Dieu : une terre et une descendance nombreuse. Cette promesse s’appelle l’[[a|Alliance]].",
+      "Plus tard, selon le même récit, Moïse fait sortir les Hébreux d’Égypte : c’est l’[[e|Exode]]. Au mont Sinaï, il reçoit les Dix Commandements."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’exil à Babylone",
+     "debut": -600,
+     "fin": -500,
+     "pas": 25,
+     "source": "Dates sûres : la prise de Jérusalem et la reconstruction du Temple.",
+     "periodes": [
+      {
+       "id": "exil",
+       "debut": -587,
+       "fin": -515,
+       "nom": "Exil et retour",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "prise",
+       "date": -587,
+       "nom": "Temple détruit"
+      },
+      {
+       "id": "retour",
+       "date": -515,
+       "nom": "Temple rebâti"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, **le nom de la promesse** de Dieu à Abraham.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche le mot qui commence par une majuscule, dans le premier paragraphe.",
+     "explication": "Selon le récit, la promesse d’une terre et d’une descendance s’appelle l’**Alliance**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à ce que raconte le récit biblique.",
+     "paires": [
+      [
+       "Abraham",
+       "Il reçoit la promesse de l’Alliance"
+      ],
+      [
+       "Moïse",
+       "Il fait sortir les Hébreux d’Égypte"
+      ],
+      [
+       "Salomon",
+       "Il bâtit le Temple de Jérusalem"
+      ]
+     ],
+     "aide": "Le Temple de Jérusalem est l’œuvre d’un roi.",
+     "explication": "**Abraham** reçoit l’Alliance, **Moïse** conduit l’Exode, **Salomon**, roi de Jérusalem, bâtit le Temple."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise la période qui va **de la destruction du Temple à sa reconstruction**.",
+     "reponse": [
+      "exil"
+     ],
+     "aide": "Cherche la bande qui relie les deux événements.",
+     "explication": "En 587 av. J.-C., Nabuchodonosor prend Jérusalem et déporte la population à Babylone ; le Temple est rebâti en 515."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la destruction du Temple (−587) de sa reconstruction (−515) ?",
+     "reponse": 72,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "587 − 515 = **72 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0167f885-4726-5db9-8eed-8b09a19bcd39",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que disent les textes, ce que montrent les fouilles",
+   "competence": "analyser-document",
+   "situation": "Un historien lit la Bible comme une source. Il confronte ce que le texte raconte à ce que montrent les traces matérielles. Observe la carte de la déportation et trie les affirmations.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La déportation de 587 av. J.-C.",
+     "fond": "mediterranee",
+     "cadrage": [
+      30,
+      28,
+      50,
+      37
+     ],
+     "source": "Trajet simplifié, écrit pour l’exercice.",
+     "lieux": [
+      {
+       "id": "jerusalem",
+       "lieu": "jerusalem",
+       "nom": "Jérusalem",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "babylone",
+       "lieu": "babylone",
+       "nom": "Babylone",
+       "symbole": "etoile",
+       "teinte": "ambre"
+      }
+     ],
+     "traits": [
+      {
+       "id": "deportation",
+       "points": [
+        "jerusalem",
+        "babylone"
+       ],
+       "style": "fleche",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "affirmations",
+     "type": "tableau",
+     "titre": "Trois affirmations à vérifier",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "N°",
+      "Affirmation"
+     ],
+     "lignes": [
+      [
+       1,
+       "Un royaume de Juda a existé."
+      ],
+      [
+       2,
+       "Jérusalem a été détruite."
+      ],
+      [
+       3,
+       "Les Hébreux sont sortis d’Égypte, comme le raconte l’Exode."
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **le trajet** de la population déportée après la prise de Jérusalem.",
+     "reponse": [
+      "deportation"
+     ],
+     "aide": "La flèche relie Jérusalem à la ville où l’on déporte les habitants.",
+     "explication": "En 587 av. J.-C., Nabuchodonosor prend Jérusalem, détruit le Temple et **déporte** la population à **Babylone**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque affirmation du tableau : confirmée ou non attestée par l’archéologie ?",
+     "categories": [
+      "Confirmée par les fouilles",
+      "Non attestée par les fouilles"
+     ],
+     "items": [
+      [
+       "Un royaume de Juda a existé",
+       0
+      ],
+      [
+       "Jérusalem a été détruite",
+       0
+      ],
+      [
+       "L’Exode tel qu’il est raconté",
+       1
+      ]
+     ],
+     "aide": "L’archéologie confirme certains éléments, pas tous.",
+     "explication": "Les fouilles confirment l’existence du **royaume de Juda** et les **destructions de Jérusalem** ; elles n’attestent pas l’**Exode** tel qu’il est raconté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment l’historien utilise-t-il la Bible ?",
+     "options": [
+      "Comme une source sur les croyances de ses auteurs",
+      "Comme un reportage précis sur chaque événement raconté",
+      "Comme un texte sans aucun intérêt pour l’historien",
+      "Comme une preuve que tout a eu lieu exactement ainsi"
+     ],
+     "reponse": 0,
+     "aide": "Un texte sacré est toujours une source historique, mais sur qui ?",
+     "explication": "Un texte sacré est une source **sur ceux qui l’écrivent** : leurs croyances, leur époque, pas forcément ce qu’il raconte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Beaucoup de textes bibliques ont été mis par écrit pendant l’___ à Babylone.",
+     "reponses": [
+      [
+       "exil"
+      ]
+     ],
+     "banque": [
+      "exil",
+      "Exode",
+      "Alliance",
+      "voyage"
+     ],
+     "aide": "Les Hébreux sont loin de leur terre et de leur Temple détruit.",
+     "explication": "C’est **en exil**, à Babylone, que beaucoup de textes sont mis par écrit."
+    }
+   ]
+  },
+  {
+   "chapitre": "09192cab-822a-5621-a072-c282cd2fb857",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux royaumes, un peuple",
+   "competence": "lire-carte",
+   "situation": "Au sud du Levant, deux royaumes ont existé : Israël au nord, Juda au sud. Observe la carte et retrouve d’où vient le mot « juif ».",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Israël et Juda",
+     "fond": "mediterranee",
+     "cadrage": [
+      33.2,
+      29.5,
+      37.5,
+      34
+     ],
+     "fleuves": [
+      "jourdain"
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "aires": [
+      {
+       "id": "israel",
+       "contour": [
+        [
+         34.9,
+         32
+        ],
+        [
+         35.9,
+         32
+        ],
+        [
+         36,
+         33.2
+        ],
+        [
+         35.1,
+         33.2
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair",
+       "etiquette": "Royaume du nord"
+      },
+      {
+       "id": "juda",
+       "contour": [
+        [
+         34.6,
+         31
+        ],
+        [
+         35.5,
+         31
+        ],
+        [
+         35.55,
+         32
+        ],
+        [
+         34.8,
+         32
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Royaume du sud"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "jerusalem",
+       "lieu": "jerusalem",
+       "nom": "Jérusalem",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **le royaume de Juda**, celui dont Jérusalem est la capitale.",
+     "reponse": [
+      "juda"
+     ],
+     "aide": "Jérusalem se trouve dans l’un des deux royaumes : lequel ?",
+     "explication": "Le royaume de **Juda** est au sud, avec **Jérusalem** pour capitale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le mot « juif » vient du royaume de ___.",
+     "reponses": [
+      [
+       "Juda"
+      ]
+     ],
+     "banque": [
+      "Juda",
+      "Israël",
+      "Babylone",
+      "Sinaï"
+     ],
+     "aide": "Les deux noms de royaumes sont sur la carte : l’un ressemble au mot « juif ».",
+     "explication": "Le mot « juif » vient de « **Juda** », le royaume du sud."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui distingue le judaïsme dans le monde antique ?",
+     "options": [
+      "La croyance en un Dieu unique, sans image",
+      "La croyance en douze dieux sur l’Olympe",
+      "Le culte rendu à des statues de dieux",
+      "Le culte rendu à un roi divin"
+     ],
+     "reponse": 0,
+     "aide": "Autour des Hébreux, d’autres peuples honorent des dizaines de dieux.",
+     "explication": "Les Hébreux ne reconnaissent qu’**un seul Dieu**, sans corps ni image : c’est le monothéisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "09192cab-822a-5621-a072-c282cd2fb857",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une semaine chez Noa",
+   "competence": "analyser-texte",
+   "situation": "Noa a douze ans et sa famille est juive. Lis comment se passe sa semaine et retrouve le sens des grandes pratiques du judaïsme.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La famille de Noa",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le samedi, jour du shabbat, la famille de Noa ne travaille pas : c’est le repos du septième jour.",
+      "Le matin, Noa va à la [[x|synagogue]] pour prier et étudier. Le [[x|rabbin]] dirige la prière et l’étude.",
+      "À la maison, on lui explique les fêtes : à Pessah, on se souvient de la sortie d’Égypte ; à Yom Kippour, on demande le Grand Pardon."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche **le lieu** de prière et d’étude et **la personne** qui dirige la prière.",
+     "reponse": [
+      "x"
+     ],
+     "aide": "Deux mots, dans le deuxième paragraphe.",
+     "explication": "La **synagogue** est le lieu de prière et d’étude ; le **rabbin** dirige la prière et l’étude."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pratique à son sens.",
+     "paires": [
+      [
+       "Le shabbat",
+       "Le repos du septième jour"
+      ],
+      [
+       "Pessah",
+       "Le souvenir de la sortie d’Égypte"
+      ],
+      [
+       "Yom Kippour",
+       "Le Grand Pardon"
+      ],
+      [
+       "La circoncision",
+       "Le signe de l’Alliance"
+      ]
+     ],
+     "aide": "Les trois premières sont dans le récit ; la dernière, tu l’as vue dans le cours.",
+     "explication": "Le **shabbat** est le septième jour de repos, **Pessah** rappelle la sortie d’Égypte, **Yom Kippour** est le Grand Pardon, la **circoncision** est le signe de l’Alliance."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La ___ est le nom donné aux interdits alimentaires.",
+     "reponses": [
+      [
+       "cacherout"
+      ]
+     ],
+     "banque": [
+      "cacherout",
+      "diaspora",
+      "synagogue",
+      "Torah"
+     ],
+     "aide": "C’est un mot hébreu qui ne figure pas dans le récit : pense à ce que mange la famille.",
+     "explication": "La **cacherout** désigne les interdits alimentaires du judaïsme."
+    }
+   ]
+  },
+  {
+   "chapitre": "09192cab-822a-5621-a072-c282cd2fb857",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sans Temple, le judaïsme voyage",
+   "competence": "se-reperer-temps",
+   "situation": "Le Temple de Jérusalem, détruit deux fois, était au cœur de la religion. Comment le judaïsme a-t-il continué sans lui ? Lis la frise, le schéma et le texte.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux destructions du Temple",
+     "debut": -600,
+     "fin": 100,
+     "pas": 100,
+     "source": "Dates sûres.",
+     "evenements": [
+      {
+       "id": "premiere",
+       "date": -587,
+       "nom": "Première destruction"
+      },
+      {
+       "id": "seconde",
+       "date": 70,
+       "nom": "Seconde destruction"
+      }
+     ]
+    },
+    {
+     "id": "survie",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Après 70 apr. J.-C.",
+     "noeuds": [
+      {
+       "id": "temple",
+       "texte": "Le Temple est détruit par les Romains"
+      },
+      {
+       "id": "orga",
+       "texte": "?"
+      },
+      {
+       "id": "partout",
+       "texte": "Le judaïsme survit partout, sans territoire"
+      }
+     ],
+     "liens": [
+      {
+       "de": "temple",
+       "a": "orga"
+      },
+      {
+       "de": "orga",
+       "a": "partout"
+      }
+     ]
+    },
+    {
+     "id": "diaspora",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La dispersion",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Après l’an 70, des familles juives vivent loin de la Judée : à [[v|Alexandrie]], à [[v|Rome]], puis dans toute l’Europe. On appelle cette dispersion la diaspora."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche **la destruction du Temple par les Romains**, en 70 apr. J.-C.",
+     "reponse": [
+      "seconde"
+     ],
+     "aide": "C’est l’événement le plus à droite de la frise.",
+     "explication": "En **70 apr. J.-C.**, les Romains détruisent définitivement le Temple de Jérusalem."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » du schéma ?",
+     "options": [
+      "Il se réorganise autour de l’étude et de la synagogue",
+      "Il disparaît complètement avec la destruction du Temple",
+      "Les Juifs reconstruisent aussitôt un troisième Temple",
+      "Les Juifs abandonnent leur Livre pour un tout autre livre"
+     ],
+     "reponse": 0,
+     "aide": "Une religion qui tient dans un livre peut voyager.",
+     "explication": "Privé de Temple, le judaïsme se réorganise autour de l’**étude des textes** et de la **synagogue**."
+    },
+    {
+     "type": "zone",
+     "document": "diaspora",
+     "enonce": "Touche **les deux villes** citées comme lieux de la diaspora.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche deux noms de grandes villes antiques.",
+     "explication": "Des familles juives vivent à **Alexandrie** et à **Rome**, puis dans toute l’Europe : c’est la diaspora."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Il ne reste du Temple de Jérusalem que le Mur ___.",
+     "reponses": [
+      [
+       "occidental"
+      ]
+     ],
+     "banque": [
+      "occidental",
+      "oriental",
+      "du nord",
+      "sacré"
+     ],
+     "aide": "Le cours le nomme d’après sa position cardinale.",
+     "explication": "Il n’en subsiste que le **Mur occidental**."
+    }
+   ]
+  }
+ ]
+}

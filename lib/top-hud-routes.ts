@@ -119,3 +119,13 @@ export function isHudOverDarkScene(pathname: string): boolean {
 export function isHudSerieMasquee(pathname: string): boolean {
   return pathname === '/reviser'
 }
+
+/**
+ * LA PASTILLE DES QUÊTES DU JOUR (03/10/2026) vit dans le bandeau, sur tous les
+ * écrans — sauf deux. Sur l'accueil Réviser, la puce de classe tient le bord
+ * droit : les quêtes y sont une carte en tête de page (QuetesReviser). Sur
+ * l'arène, le bandeau se masque et la tuile Quêtes du rail ouvre la même feuille.
+ */
+export function isHudQuetesMasquee(pathname: string): boolean {
+  return pathname === '/reviser' || pathname === '/defi'
+}

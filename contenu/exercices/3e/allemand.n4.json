@@ -1,0 +1,2816 @@
+{
+ "niveau": "3e",
+ "matiere": "allemand",
+ "exercices": [
+  {
+   "chapitre": "b531b475-2e30-50e9-8969-740d7561a192",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois pays, trois façons de dire bonjour",
+   "competence": "lire-tableau",
+   "situation": "Pour son voyage de classe, Léa prépare une fiche : l’allemand ne se dit pas partout de la même façon. Lis son tableau.",
+   "documents": [
+    {
+     "id": "gruss",
+     "type": "tableau",
+     "titre": "Gleich und doch anders",
+     "colonnes": [
+      "Sens",
+      "Deutschland",
+      "Österreich",
+      "Schweiz"
+     ],
+     "lignes": [
+      [
+       "Bonjour",
+       "Guten Tag",
+       "Grüß Gott",
+       "Grüezi"
+      ],
+      [
+       "Le petit pain",
+       "das Brötchen",
+       "die Semmel",
+       "das Brötli"
+      ],
+      [
+       "La tomate",
+       "die Tomate",
+       "der Paradeiser",
+       "die Tomate"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gruss",
+     "reponse": [
+      "r0c3"
+     ],
+     "enonce": "Touche la case qui donne la façon de dire bonjour en Suisse.",
+     "aide": "Cherche la colonne « Schweiz », sur la ligne « Bonjour ».",
+     "explication": "**Grüezi** est la salutation de la Suisse alémanique : on le lit dans la colonne *Schweiz*, ligne « Bonjour »."
+    },
+    {
+     "type": "zone",
+     "document": "gruss",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche le mot que seul un Autrichien emploie pour dire « la tomate ».",
+     "aide": "Dans deux colonnes sur trois, le mot est le même. Cherche celui qui change.",
+     "explication": "**der Paradeiser** : en Autriche, on ne dit pas *die Tomate*. Les deux autres colonnes ont le même mot."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans une boulangerie suisse, tu lis « Brötli » sur une étiquette. Que peux-tu acheter ?",
+     "options": [
+      "Des petits pains",
+      "Des tomates",
+      "Des gâteaux au chocolat",
+      "Des fromages"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne du tableau où les trois mots se ressemblent.",
+     "explication": "Le **Brötli** est le petit pain suisse : *das Brötchen* en Allemagne, *die Semmel* en Autriche."
+    }
+   ]
+  },
+  {
+   "chapitre": "b531b475-2e30-50e9-8969-740d7561a192",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lukas et Emma : Hochdeutsch ou dialecte ?",
+   "competence": "comprendre-langue",
+   "situation": "Emma, de Lyon, va passer une semaine chez Lukas, à Zurich. Avant le départ, ils s’écrivent des messages.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lukas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Hallo Lukas! Ich komme am Samstag. Wie sagt man „Bonjour“ bei euch?"
+      },
+      {
+       "qui": "Lukas",
+       "texte": "Bei uns sagt man Grüezi. Zu Hause sprechen wir [[d|Schwiizerdütsch]], aber in der Schule schreiben wir [[h|Hochdeutsch]]."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Ich verstehe nicht alles. Kannst du das bitte wiederholen?"
+      },
+      {
+       "qui": "Lukas",
+       "texte": "Kein Problem! Wir sprechen langsam."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui désigne la langue que Lukas parle à la maison.",
+     "aide": "C’est le dialecte de la Suisse alémanique.",
+     "explication": "**Schwiizerdütsch** : c’est le dialecte suisse, la langue de tous les jours."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui désigne l’allemand « standard » écrit à l’école.",
+     "aide": "Ce mot commence par « Hoch ».",
+     "explication": "**Hochdeutsch** est l’allemand standard : celui de l’école, des journaux et de l’écrit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation selon la langue qu’on utilise le plus souvent en Suisse alémanique.",
+     "categories": [
+      "Dialecte (Schwiizerdütsch)",
+      "Hochdeutsch"
+     ],
+     "items": [
+      [
+       "Parler avec sa famille à la maison, tous les jours",
+       0
+      ],
+      [
+       "Lire un article de journal",
+       1
+      ],
+      [
+       "Écrire une rédaction pour l’école",
+       1
+      ],
+      [
+       "Bavarder en famille à table",
+       0
+      ]
+     ],
+     "aide": "Le dialecte est la langue de l’oral quotidien ; le Hochdeutsch, celle de l’écrit.",
+     "explication": "En Suisse alémanique, le **dialecte** sert à l’oral de tous les jours, le **Hochdeutsch** à l’écrit : journaux, rédactions, textes officiels."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase qu’Emma écrit pour demander de répéter.",
+     "texte": "Kannst du das bitte ___?",
+     "reponses": [
+      [
+       "wiederholen"
+      ]
+     ],
+     "banque": [
+      "wiederholen",
+      "verstehen",
+      "sprechen",
+      "sagen"
+     ],
+     "aide": "Le verbe signifie « répéter ».",
+     "explication": "**Kannst du das bitte wiederholen?** *wiederholen* veut dire « répéter » ; après le modal *kannst*, il reste à l’infinitif, en fin de phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "b531b475-2e30-50e9-8969-740d7561a192",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où a-t-on écrit ces messages ?",
+   "competence": "analyser-document",
+   "situation": "Trois élèves publient des messages sur un forum d’échange scolaire. À toi de deviner, grâce à leurs mots, de quel pays ils écrivent.",
+   "documents": [
+    {
+     "id": "karte",
+     "type": "carte",
+     "titre": "Deutschsprachige Länder",
+     "fond": "europe",
+     "cadrage": [
+      4,
+      44,
+      19,
+      55
+     ],
+     "regionsCliquables": true,
+     "regions": [
+      {
+       "code": "DEU",
+       "teinte": "sable",
+       "etiquette": "Deutschland"
+      },
+      {
+       "code": "AUT",
+       "teinte": "rose",
+       "etiquette": "Österreich"
+      },
+      {
+       "code": "CHE",
+       "teinte": "ciel",
+       "etiquette": "Schweiz"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "posts",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Drei Nachrichten",
+     "blocs": [
+      "Mara : Im Supermarkt kaufe ich ein Kilo Paradeiser für die Pizza.",
+      "Noah : Jeden Morgen hole ich zwei Brötli beim Bäcker. Dann sage ich „Grüezi“.",
+      "Hannah : Ich bin in Köln. Zum Frühstück esse ich ein Brötchen."
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "karte",
+     "reponse": [
+      "AUT"
+     ],
+     "enonce": "Mara achète des « Paradeiser ». Touche sur la carte le pays d’où elle écrit.",
+     "aide": "Quel pays dit « Paradeiser » pour la tomate ?",
+     "explication": "Mara écrit d’**Autriche** (*Österreich*) : seul ce pays emploie *der Paradeiser* pour la tomate."
+    },
+    {
+     "type": "zone",
+     "document": "karte",
+     "reponse": [
+      "CHE"
+     ],
+     "enonce": "Noah achète des « Brötli » et dit « Grüezi ». Touche sur la carte le pays d’où il écrit.",
+     "aide": "Deux indices dans son message : le petit pain et la salutation.",
+     "explication": "Noah écrit de **Suisse** (*die Schweiz*) : *das Brötli* et *Grüezi* sont deux mots suisses."
+    },
+    {
+     "type": "categories",
+     "enonce": "Selon le tableau du cours, range ces mots dans le pays où ils sont typiques, entre la Suisse et l’Autriche.",
+     "categories": [
+      "Suisse",
+      "Autriche"
+     ],
+     "items": [
+      [
+       "Grüezi",
+       0
+      ],
+      [
+       "Uf Widerluege",
+       0
+      ],
+      [
+       "das Brötli",
+       0
+      ],
+      [
+       "der Paradeiser",
+       1
+      ],
+      [
+       "die Semmel",
+       1
+      ],
+      [
+       "Baba",
+       1
+      ]
+     ],
+     "aide": "Souviens-toi : « Grüezi » est suisse, « Semmel » est autrichien.",
+     "explication": "En **Suisse** : *Grüezi*, *Uf Widerluege*, *das Brötli*. En **Autriche** : *der Paradeiser*, *die Semmel*, *Baba* (au revoir)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hannah écrit de Köln : « Ich esse ein Brötchen. » Léo en conclut que Hannah « parle mal allemand ». Que lui réponds-tu ?",
+     "options": [
+      "Non : Brötchen est l’allemand standard, sans faute",
+      "Oui : seul l’allemand d’Autriche est du vrai allemand",
+      "Oui : tous les Allemands parlent seulement un dialecte",
+      "Non : Hannah parle suisse, et pas allemand du tout"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que dit le cours sur les variantes et les dialectes.",
+     "explication": "Aucune variante n’est « du mauvais allemand » : *Brötchen* est le mot du Hochdeutsch en Allemagne, *Brötli* et *Semmel* sont d’autres façons, tout aussi justes."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f6859ec-d31c-51bc-98f7-3666e6a6c7c6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’emploi du temps de Max",
+   "competence": "lire-tableau",
+   "situation": "Max est en 8e classe dans un collège de Hambourg. Voici son emploi du temps du lundi et du mardi.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Maxens Stundenplan",
+     "colonnes": [
+      "Zeit",
+      "Montag",
+      "Dienstag"
+     ],
+     "lignes": [
+      [
+       "1. Stunde",
+       "Mathe",
+       "Englisch"
+      ],
+      [
+       "2. Stunde",
+       "Mathe",
+       "Englisch"
+      ],
+      [
+       "Pause",
+       "Pause",
+       "Pause"
+      ],
+      [
+       "3. Stunde",
+       "Biologie",
+       "Sport"
+      ],
+      [
+       "4. Stunde",
+       "Kunst",
+       "Sport"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Emploi du temps écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux cases qui forment la Doppelstunde de maths du lundi.",
+     "aide": "Une Doppelstunde, ce sont deux heures de cours qui se suivent.",
+     "explication": "Les deux cases **Mathe** du lundi (1. et 2. Stunde) forment une *Doppelstunde* : deux heures de 45 minutes de suite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures de sport Max a-t-il le mardi ?",
+     "reponse": 2,
+     "aide": "Compte les cases « Sport » dans la colonne du mardi.",
+     "explication": "Le mardi, **2** heures de *Sport* se suivent (3. et 4. Stunde)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque matière de l’emploi du temps à sa traduction.",
+     "paires": [
+      [
+       "Mathe",
+       "les maths"
+      ],
+      [
+       "Englisch",
+       "l’anglais"
+      ],
+      [
+       "Biologie",
+       "la biologie"
+      ],
+      [
+       "Kunst",
+       "l’art"
+      ]
+     ],
+     "aide": "Certains mots ressemblent beaucoup au français.",
+     "explication": "*Mathe* = les maths, *Englisch* = l’anglais, *Biologie* = la biologie, *Kunst* = l’art. *Das Fach* est « la matière »."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f6859ec-d31c-51bc-98f7-3666e6a6c7c6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bulletin de Mia",
+   "competence": "lire-tableau",
+   "situation": "Mia reçoit son Zeugnis. En Allemagne, la note 1 est la meilleure et la 6 la pire : il faut bien lire pour comprendre ce que Mia a réussi.",
+   "documents": [
+    {
+     "id": "zeugnis",
+     "type": "tableau",
+     "titre": "Mias Zeugnis",
+     "colonnes": [
+      "Fach",
+      "Note"
+     ],
+     "lignes": [
+      [
+       "Deutsch",
+       2
+      ],
+      [
+       "Mathe",
+       3
+      ],
+      [
+       "Englisch",
+       1
+      ],
+      [
+       "Sport",
+       2
+      ],
+      [
+       "Kunst",
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Bulletin écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zeugnis",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la note dont Mia peut être le plus fière.",
+     "aide": "En Allemagne, la meilleure note est la plus petite.",
+     "explication": "La meilleure note est **1** (*sehr gut*) : c’est celle de *Englisch*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des cinq notes de Mia.",
+     "reponse": 2.4,
+     "aide": "Additionne les cinq notes puis divise par 5.",
+     "explication": "2 + 3 + 1 + 2 + 4 = 12, et 12 ÷ 5 = **2,4**. Une moyenne proche de 2 (*gut*) est une bonne moyenne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque note au mot allemand qui la décrit.",
+     "paires": [
+      [
+       "1",
+       "sehr gut"
+      ],
+      [
+       "2",
+       "gut"
+      ],
+      [
+       "4",
+       "ausreichend"
+      ],
+      [
+       "6",
+       "ungenügend"
+      ]
+     ],
+     "aide": "1 est la meilleure note, 6 la pire.",
+     "explication": "1 = *sehr gut* (très bien), 2 = *gut* (bien), 4 = *ausreichend* (passable), 6 = *ungenügend* (très insuffisant)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Mia raconte sa meilleure note. Complète sa phrase d’après le bulletin.",
+     "texte": "Ich habe eine Eins in ___!",
+     "reponses": [
+      [
+       "Englisch"
+      ]
+     ],
+     "banque": [
+      "Englisch",
+      "Deutsch",
+      "Mathe",
+      "Sport"
+     ],
+     "aide": "Cherche la matière où la note est 1.",
+     "explication": "**Ich habe eine Eins in Englisch!** Le bulletin donne 1 en *Englisch* ; *in* + matière introduit la matière notée."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f6859ec-d31c-51bc-98f7-3666e6a6c7c6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une école, deux emplois du temps",
+   "competence": "analyser-document",
+   "situation": "Jonas écrit à Camille, sa correspondante française. L’école de Jonas ne ressemble pas tout à fait à la sienne. Une affiche du collège voisin le montre aussi.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Eine E-Mail an Camille",
+     "blocs": [
+      "Liebe Camille,",
+      "bei uns beginnt die Schule um 7:45 Uhr und endet um 13:00 Uhr. Eine Stunde dauert 45 Minuten. Oft haben wir zwei Stunden zusammen, eine [[d|Doppelstunde]].",
+      "Meine Schule ist keine Ganztagsschule. Am Nachmittag spiele ich Handball in einem [[v|Verein]]. Nach der Grundschule geht man mit zehn Jahren auf das Gymnasium oder auf die Realschule.",
+      "Viele Grüße",
+      "Jonas"
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    },
+    {
+     "id": "plakat",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ganztagsschule",
+     "sousTitre": "Unsere Schule bleibt bis 16 Uhr offen",
+     "emoji": "🏫",
+     "lignes": [
+      {
+       "texte": "Montag bis Donnerstag: Unterricht bis 16:00 Uhr",
+       "id": "ende"
+      },
+      {
+       "texte": "Mittagessen in der Mensa",
+       "id": "essen"
+      },
+      {
+       "texte": "AGs : Fußball, Theater, Chor",
+       "id": "ag"
+      }
+     ],
+     "pied": "Herzlich willkommen!",
+     "teinte": "violet",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes dure une Doppelstunde dans l’école de Jonas ?",
+     "reponse": 90,
+     "unite": "minutes",
+     "aide": "Une Stunde dure 45 minutes ; une Doppelstunde, c’est deux Stunden.",
+     "explication": "2 × 45 = **90** minutes : une *Doppelstunde* est faite de deux heures de 45 minutes."
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui désigne le club où Jonas joue au handball.",
+     "aide": "C’est une association, pour le sport, la musique ou les pompiers volontaires.",
+     "explication": "**der Verein** : un club ou une association, très présent dans la vie des Allemands."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Jonas finit à 13 h. Au collège de l’affiche, les cours durent jusqu’à 16 h. Combien d’heures de plus passe-t-on à l’école là-bas ?",
+     "reponse": 3,
+     "unite": "heures",
+     "aide": "Compare l’heure de fin des deux écoles.",
+     "explication": "De 13 h à 16 h, il y a **3** heures de plus. C’est la différence entre une école « du matin » et une *Ganztagsschule*."
+    },
+    {
+     "type": "zone",
+     "document": "plakat",
+     "reponse": [
+      "essen"
+     ],
+     "enonce": "Une Ganztagsschule garde les élèves l’après-midi. Touche la ligne qui dit où ils déjeunent.",
+     "aide": "« Mittagessen » veut dire « repas de midi ».",
+     "explication": "**Mittagessen in der Mensa** : la cantine (*die Mensa*) fait partie de la journée complète."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le parcours d’un élève allemand. Le premier est Kindergarten.",
+     "items": [
+      "Kindergarten",
+      "Grundschule",
+      "Gymnasium",
+      "Abitur"
+     ],
+     "aide": "Pense à l’âge : 3 ans, 6 ans, 10 ans, puis le bac.",
+     "explication": "**Kindergarten** (3–6 ans), **Grundschule** (6–10 ans), **Gymnasium** (dès 10 ans), puis l’**Abitur**, le bac allemand."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb861351-4ac3-5866-8486-4bc55bf77cfa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une carte postale de Berlin",
+   "competence": "comprendre-langue",
+   "situation": "Lea est en voyage de classe à Berlin. Elle écrit une carte postale à sa grand-mère.",
+   "documents": [
+    {
+     "id": "karte",
+     "type": "fiche",
+     "modele": "carte-postale",
+     "entete": "Grüße aus Berlin",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "Liebe Oma,"
+      },
+      {
+       "texte": "ich bin in Berlin! Heute sehen wir das Brandenburger Tor.",
+       "id": "ort"
+      },
+      {
+       "texte": "Das Essen ist lecker.",
+       "id": "essen"
+      },
+      {
+       "texte": "Viele Grüße, Lea"
+      }
+     ],
+     "teinte": "bleu",
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "karte",
+     "reponse": [
+      "ort"
+     ],
+     "enonce": "Touche la phrase qui dit où Lea se trouve et ce qu’elle visite.",
+     "aide": "Cherche le nom de la ville.",
+     "explication": "**Ich bin in Berlin! Heute sehen wir das Brandenburger Tor.** : elle est à Berlin et visite la porte de Brandebourg."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que visite la classe de Lea aujourd’hui ?",
+     "options": [
+      "La porte de Brandebourg",
+      "Le château de Schönbrunn",
+      "Le port de Hambourg",
+      "Le rocher de la Loreley"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième ligne de la carte.",
+     "explication": "Le *Brandenburger Tor* est la porte de Brandebourg, un symbole de Berlin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne préposition : une ville, puis un pays avec article.",
+     "texte": "Ich fahre ___ Berlin und dann ___ die Schweiz.",
+     "reponses": [
+      [
+       "nach"
+      ],
+      [
+       "in"
+      ]
+     ],
+     "banque": [
+      "nach",
+      "in",
+      "zu",
+      "an"
+     ],
+     "aide": "Devant une ville : nach. Devant un pays avec article (die Schweiz) : in + accusatif.",
+     "explication": "**Ich fahre nach Berlin und dann in die Schweiz.** *nach* devant une ville, *in* devant un pays qui porte un article."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb861351-4ac3-5866-8486-4bc55bf77cfa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Partir pour l’Amérique en 1854",
+   "competence": "analyser-texte",
+   "situation": "Un petit texte raconte le départ d’une famille allemande au XIXe siècle. Lis-le avec attention.",
+   "documents": [
+    {
+     "id": "auswanderer",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Familie Müller wandert aus",
+     "blocs": [
+      "Familie Müller aus dem Schwarzwald ist arm. Im Jahr 1854 wandert sie aus.",
+      "Sie fährt mit dem Zug nach [[b|Bremerhaven]] und dann mit dem Schiff in die USA.",
+      "Die Kinder haben [[h|Heimweh]], aber die Eltern hoffen auf ein besseres Leben."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "auswanderer",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le nom du port d’où la famille embarque.",
+     "aide": "C’est un port allemand dont le nom commence par B.",
+     "explication": "**Bremerhaven** : c’est le grand port d’où partaient les bateaux ; il a aujourd’hui un musée de l’émigration."
+    },
+    {
+     "type": "zone",
+     "document": "auswanderer",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui exprime le mal du pays des enfants.",
+     "aide": "Le mot contient « Heim », la maison.",
+     "explication": "**das Heimweh** : le mal du pays, la nostalgie de la maison."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : la famille part vers les États-Unis.",
+     "texte": "Die Familie fährt mit dem Schiff ___ die USA.",
+     "reponses": [
+      [
+       "in"
+      ]
+     ],
+     "banque": [
+      "in",
+      "nach",
+      "zu",
+      "bei"
+     ],
+     "aide": "Les USA sont un pays avec article : die USA.",
+     "explication": "**in die USA** : avec un pays qui porte l’article, on emploie *in* + accusatif (comme *in die Schweiz*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : quelqu’un qui part, ou quelqu’un qui arrive pour s’installer ?",
+     "categories": [
+      "Auswandern (partir)",
+      "Einwandern (arriver)"
+     ],
+     "items": [
+      [
+       "La famille Müller quitte l’Allemagne en 1854",
+       0
+      ],
+      [
+       "Un Turc arrive en Allemagne en 1965 pour travailler",
+       1
+      ],
+      [
+       "Un Allemand s’installe au Texas",
+       0
+      ],
+      [
+       "Une famille syrienne s’installe à Berlin en 2016",
+       1
+      ]
+     ],
+     "aide": "Regarde le pays de départ et le pays d’arrivée.",
+     "explication": "*auswandern* = quitter son pays pour vivre ailleurs ; *einwandern* = arriver dans un pays pour s’y installer."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb861351-4ac3-5866-8486-4bc55bf77cfa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du Gastarbeiter à l’Allemagne d’aujourd’hui",
+   "competence": "se-reperer-temps",
+   "situation": "M. Yilmaz raconte l’histoire de sa famille. Replace-la sur une frise pour comprendre quand et pourquoi l’Allemagne est devenue un pays d’immigration.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les arrivées en Allemagne",
+     "debut": 1940,
+     "fin": 2030,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "gast",
+       "debut": 1950,
+       "fin": 1970,
+       "nom": "Gastarbeiter",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "mauer",
+       "date": 1989,
+       "nom": "Rideau de fer"
+      },
+      {
+       "id": "syrien",
+       "date": 2015,
+       "nom": "Syrie"
+      },
+      {
+       "id": "ukraine",
+       "date": 2022,
+       "nom": "Ukraine"
+      }
+     ],
+     "source": "Chiffres arrondis, d’après le cours"
+    },
+    {
+     "id": "yilmaz",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Herr Yilmaz erzählt",
+     "blocs": [
+      "Mein Vater kam 1965 als [[g|Gastarbeiter]] aus der Türkei nach Köln. Man dachte: Er bleibt nur zwei Jahre.",
+      "Aber wir sind geblieben. Meine Kinder sind Deutsche, und mein Enkel verkauft [[d|Döner]] in Berlin."
+     ],
+     "source": "Récit imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "gast"
+     ],
+     "enonce": "Le père de M. Yilmaz est arrivé en 1965. Touche sur la frise la période à laquelle il appartient.",
+     "aide": "Cherche une période qui contient l’année 1965.",
+     "explication": "En 1965, il fait partie des **Gastarbeiter** : ces travailleurs étrangers sont recrutés entre 1950 et 1970 environ."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Gastarbeiter », littéralement « travailleur invité » ?",
+     "options": [
+      "On pensait qu’ils repartiraient après quelques années",
+      "Ils étaient invités à un grand concours de cuisine",
+      "Ils venaient seulement passer leurs vacances d’été",
+      "Ils travaillaient surtout dans des grands hôtels"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase du père : « Man dachte… ».",
+     "explication": "Un invité ne reste pas : **on pensait qu’ils repartiraient**. Beaucoup sont restés, et leurs enfants sont allemands."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la chute du rideau de fer (1989) de l’arrivée de plus d’un million de réfugiés, surtout syriens (2015) ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "2015 − 1989 = **26** ans."
+    },
+    {
+     "type": "zone",
+     "document": "yilmaz",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui désigne le plat devenu un symbole de Berlin.",
+     "aide": "C’est un sandwich popularisé par des immigrés turcs.",
+     "explication": "**der Döner** : ce sandwich, popularisé à Berlin par des immigrés turcs, est devenu un plat national."
+    },
+    {
+     "type": "categories",
+     "enonce": "Pourquoi chacun de ces groupes est-il arrivé en Allemagne ?",
+     "categories": [
+      "Pour travailler",
+      "Pour fuir la guerre",
+      "Après la chute du rideau de fer"
+     ],
+     "items": [
+      [
+       "Les Italiens et les Turcs dans les années 1960",
+       0
+      ],
+      [
+       "Les Syriens en 2015",
+       1
+      ],
+      [
+       "Les Ukrainiens en 2022",
+       1
+      ],
+      [
+       "Les Spätaussiedler après 1989",
+       2
+      ]
+     ],
+     "aide": "Relis la frise, puis le cours : chaque période a sa raison.",
+     "explication": "Années 1950–1970 : **travail**. 2015 et 2022 : **guerre**. Après 1989 : les Allemands d’Europe de l’Est reviennent (**chute du rideau de fer**)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2279946-a10a-5bb9-98f1-ff5026801e98",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Soixante ans d’amitié sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Pour un exposé sur l’amitié franco-allemande, Mathis a dessiné une frise avec cinq dates importantes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deutsch-französische Freundschaft",
+     "debut": 1960,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "elysee",
+       "date": 1963,
+       "nom": "Traité de l’Élysée"
+      },
+      {
+       "id": "verdun",
+       "date": 1984,
+       "nom": "Verdun"
+      },
+      {
+       "id": "arte",
+       "date": 1992,
+       "nom": "Arte"
+      },
+      {
+       "id": "tag",
+       "date": 2003,
+       "nom": "Journée 22 janvier"
+      },
+      {
+       "id": "aix",
+       "date": 2019,
+       "nom": "Aix-la-Chapelle"
+      }
+     ],
+     "source": "Dates d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "arte"
+     ],
+     "enonce": "Touche l’événement de 1992 : la naissance de la chaîne de télévision franco-allemande.",
+     "aide": "Cherche le nom de la chaîne, en trois lettres sur la frise.",
+     "explication": "**Arte**, la chaîne franco-allemande, est créée en 1992."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le traité de l’Élysée (1963) du traité d’Aix-la-Chapelle (2019) ?",
+     "reponse": 56,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "2019 − 1963 = **56** ans. Le traité d’Aix-la-Chapelle renouvelle celui de l’Élysée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Pendant un échange, Mathis habite chez des Allemands. Complète sa phrase.",
+     "texte": "Ich wohne bei meiner ___.",
+     "reponses": [
+      [
+       "Gastfamilie"
+      ]
+     ],
+     "banque": [
+      "Gastfamilie",
+      "Brieffreundin",
+      "Schule",
+      "Stadt"
+     ],
+     "aide": "C’est la famille qui accueille un élève.",
+     "explication": "**Ich wohne bei meiner Gastfamilie.** *die Gastfamilie* est la famille d’accueil ; après *bei*, on met le datif : *meiner*."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2279946-a10a-5bb9-98f1-ff5026801e98",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Premier soir chez la famille d’accueil",
+   "competence": "comprendre-langue",
+   "situation": "Clara, une Lilloise de 3e, vient d’arriver à Hanovre chez sa correspondante Lena. Dès le premier soir, elle découvre des habitudes différentes.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Der erste Abend",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Clara",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Willkommen in Hannover, Clara! Wir essen um 18 Uhr Abendbrot."
+      },
+      {
+       "qui": "Clara",
+       "texte": "Schon um 18 Uhr? Bei uns in Frankreich ist das zu früh. Das ist anders als bei uns."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Bring bitte morgen die leeren Flaschen zurück. Es gibt [[p|Pfand]]."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Und sei bitte pünktlich: Um 8 Uhr gehen wir los."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit qu’on récupère de l’argent en rapportant ses bouteilles.",
+     "aide": "C’est la consigne.",
+     "explication": "**das Pfand** : la consigne sur les bouteilles, que l’on récupère en les rapportant."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque habitude : plutôt en Allemagne ou plutôt en France ?",
+     "categories": [
+      "En Allemagne",
+      "En France"
+     ],
+     "items": [
+      [
+       "On dîne tôt, parfois avec du pain et du fromage",
+       0
+      ],
+      [
+       "On fait la bise pour dire bonjour",
+       1
+      ],
+      [
+       "On se serre la main sans faire la bise",
+       0
+      ],
+      [
+       "Un petit retard est souvent toléré",
+       1
+      ],
+      [
+       "On rapporte ses bouteilles pour récupérer la consigne",
+       0
+      ]
+     ],
+     "aide": "Repère-toi dans le tableau du cours sur les habitudes.",
+     "explication": "**En Allemagne** : dîner tôt (*Abendbrot*), poignée de main, ponctualité, *Pfand*. **En France** : la bise, un petit retard toléré."
+    },
+    {
+     "type": "trous",
+     "enonce": "Clara dit qu’en France on dîne plus tard. Complète sa phrase.",
+     "texte": "Bei uns in Frankreich isst man ___.",
+     "reponses": [
+      [
+       "später"
+      ]
+     ],
+     "banque": [
+      "später",
+      "früher",
+      "kalt",
+      "allein"
+     ],
+     "aide": "En Allemagne, on dîne tôt. Et chez nous ?",
+     "explication": "**Bei uns in Frankreich isst man später.** *später* veut dire « plus tard » ; *früher* serait « plus tôt »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre pour que Clara se présente. Le premier mot est Ich.",
+     "items": [
+      "Ich",
+      "wohne",
+      "bei",
+      "meiner",
+      "Gastfamilie"
+     ],
+     "aide": "Le verbe est en deuxième position.",
+     "explication": "**Ich wohne bei meiner Gastfamilie.** Le verbe *wohne* est en 2e position ; *bei meiner Gastfamilie* indique chez qui."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2279946-a10a-5bb9-98f1-ff5026801e98",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un courriel pour l’échange Hambourg–Lyon",
+   "competence": "analyser-document",
+   "situation": "Jonas, élève de 3e à Hambourg, écrit à M. Dubois, le professeur qui accueillera sa classe à Lyon. Sa lettre est datée d’un jour spécial.",
+   "documents": [
+    {
+     "id": "karte",
+     "type": "carte",
+     "titre": "Hamburg – Lyon",
+     "fond": "europe",
+     "cadrage": [
+      -5,
+      42,
+      16,
+      56
+     ],
+     "regions": [
+      {
+       "code": "DEU",
+       "teinte": "sable"
+      },
+      {
+       "code": "FRA",
+       "teinte": "ciel"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "hh",
+       "lon": 9.99,
+       "lat": 53.55,
+       "nom": "Hamburg",
+       "symbole": "point"
+      },
+      {
+       "id": "ly",
+       "lieu": "lyon",
+       "nom": "Lyon",
+       "symbole": "point"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Ein Brief nach Lyon",
+     "blocs": [
+      "Hamburg, den 22.01.2026",
+      "Sehr geehrter Herr Dubois,",
+      "heute feiern wir den deutsch-französischen Tag, denn der Élysée-Vertrag gilt seit 1963. Meine Klasse fährt im Mai von Hamburg nach Lyon. Wir wohnen bei Gastfamilien und freuen uns sehr auf den Austausch!",
+      "[[f|Mit]] [[f|freundlichen]] [[f|Grüßen]]",
+      "Jonas Weber"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "karte",
+     "reponse": [
+      "hh"
+     ],
+     "enonce": "Les élèves partent « von Hamburg nach Lyon ». Touche sur la carte leur ville de départ.",
+     "aide": "Après « von », on trouve la ville de départ.",
+     "explication": "Le départ est **Hamburg** : *von* indique l’origine, *nach* la destination (*nach Lyon*)."
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche la formule de politesse qui termine la lettre.",
+     "aide": "Elle est sur sa ligne, avant la signature.",
+     "explication": "**Mit freundlichen Grüßen** : c’est la formule finale polie, adaptée à un adulte qu’on ne connaît pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La lettre est datée du 22.01.2026. Depuis combien d’années (au jour près) le traité de l’Élysée existe-t-il ce jour-là ?",
+     "reponse": 63,
+     "unite": "ans",
+     "aide": "Cherche l’année du traité dans la lettre, puis soustrais.",
+     "explication": "2026 − 1963 = **63** ans, et c’est même un anniversaire : le traité a été signé un 22 janvier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Jonas écrit-il « Sehr geehrter Herr Dubois » et non « Lieber Paul » ?",
+     "options": [
+      "Parce qu’il écrit à un adulte qu’il ne connaît pas",
+      "Parce qu’il écrit à un ami très proche de lui",
+      "Parce que M. Dubois est une femme de sa famille",
+      "Parce que sa lettre est envoyée sous forme de courriel"
+     ],
+     "reponse": 0,
+     "aide": "Pense au tutoiement et au vouvoiement.",
+     "explication": "**« Sehr geehrter Herr Dubois »** est l’appel poli adressé à un adulte inconnu ; *Lieber Paul* est réservé à un ami."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fête-t-on le 22 janvier en France et en Allemagne ?",
+     "options": [
+      "La Journée franco-allemande, fête du traité de l’Élysée",
+      "La naissance de la chaîne franco-allemande Arte, en 1992",
+      "La chute du mur de Berlin et la fin des frontières",
+      "Le jour de l’Europe, fête de l’Union européenne"
+     ],
+     "reponse": 0,
+     "aide": "La lettre le dit : « heute feiern wir … ».",
+     "explication": "Le **22 janvier**, on fête la *Journée franco-allemande*, qui rappelle le traité de l’Élysée signé le 22 janvier 1963."
+    }
+   ]
+  },
+  {
+   "chapitre": "71d80455-6e64-5fbc-b319-ebb0f0119420",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle heure est-il ? Et combien ?",
+   "competence": "manier-langue",
+   "situation": "Dans le train pour Vienne, Hannah regarde l’horloge de la gare, puis fait un jeu de nombres avec son frère.",
+   "documents": [
+    {
+     "id": "uhr",
+     "type": "horloge",
+     "heures": 7,
+     "minutes": 30,
+     "numerique": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Hannah regarde l’horloge. Que dit-elle pour l’heure familière ?",
+     "options": [
+      "Es ist halb acht.",
+      "Es ist halb sieben.",
+      "Es ist Viertel nach sieben.",
+      "Es ist halb neun."
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi : « halb acht » est la demi-heure qui mène à 8 h.",
+     "explication": "L’horloge indique 7 h 30 : on dit **halb acht**, « la moitié vers huit »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nombre écrit en lettres à son chiffre.",
+     "paires": [
+      [
+       "einundzwanzig",
+       "21"
+      ],
+      [
+       "vierunddreißig",
+       "34"
+      ],
+      [
+       "sechzehn",
+       "16"
+      ],
+      [
+       "siebzig",
+       "70"
+      ]
+     ],
+     "aide": "Les unités viennent avant les dizaines.",
+     "explication": "*einundzwanzig* = un-et-vingt = 21 ; *vierunddreißig* = 34 ; *sechzehn* = 16 ; *siebzig* = 70."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour écrire 63 : les unités d’abord, puis la dizaine.",
+     "texte": "63 = ___ und ___",
+     "reponses": [
+      [
+       "drei"
+      ],
+      [
+       "sechzig"
+      ]
+     ],
+     "banque": [
+      "drei",
+      "sechzig",
+      "sechs",
+      "dreißig"
+     ],
+     "aide": "On dit l’unité (3), puis la dizaine (60).",
+     "explication": "63 = **dreiundsechzig** : *drei* (3) + *und* + *sechzig* (60). Attention : *sechzig* perd le *s* de *sechs*."
+    }
+   ]
+  },
+  {
+   "chapitre": "71d80455-6e64-5fbc-b319-ebb0f0119420",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tableau des départs",
+   "competence": "lire-tableau",
+   "situation": "Hannah et son frère attendent à la gare de Francfort. Un panneau affiche l’heure officielle des départs, mais eux parlent à la façon de tous les jours.",
+   "documents": [
+    {
+     "id": "tafel",
+     "type": "tableau",
+     "titre": "Abfahrt",
+     "colonnes": [
+      "Zug",
+      "Ziel",
+      "Abfahrt"
+     ],
+     "lignes": [
+      [
+       "ICE 571",
+       "Berlin",
+       "7:30 Uhr"
+      ],
+      [
+       "IC 2012",
+       "Hamburg",
+       "8:15 Uhr"
+      ],
+      [
+       "ICE 593",
+       "München",
+       "8:45 Uhr"
+      ],
+      [
+       "RE 4",
+       "Köln",
+       "14:30 Uhr"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Horaires imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tafel",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Un voyageur dit : « Mein Zug fährt um halb acht ab. » Touche la case de son heure de départ.",
+     "aide": "Écris l’heure familière en chiffres : halb acht = 7 h 30.",
+     "explication": "**halb acht** = 7 h 30 : c’est le train **ICE 571** pour Berlin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où va le train qui part « um Viertel vor neun » ?",
+     "options": [
+      "Nach München",
+      "Nach Hamburg",
+      "Nach Berlin",
+      "Nach Köln"
+     ],
+     "reponse": 0,
+     "aide": "Viertel vor neun, c’est un quart d’heure avant 9 h.",
+     "explication": "**Viertel vor neun** = 8 h 45 : c’est le train pour **München**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre. Le premier groupe est Mein Zug.",
+     "items": [
+      "Mein Zug",
+      "fährt",
+      "um halb acht",
+      "ab"
+     ],
+     "aide": "Le verbe séparable abfahren envoie « ab » à la fin.",
+     "explication": "**Mein Zug fährt um halb acht ab.** Le verbe *abfahren* se coupe : *fährt* en 2e position, *ab* tout à la fin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire à quelle heure part le train de Hambourg (8 h 15).",
+     "texte": "Der Zug nach Hamburg fährt ___ Viertel nach acht ab.",
+     "reponses": [
+      [
+       "um"
+      ]
+     ],
+     "banque": [
+      "um",
+      "am",
+      "in",
+      "nach"
+     ],
+     "aide": "Pour dire « à » une heure donnée, on emploie un petit mot de deux lettres.",
+     "explication": "**Der Zug nach Hamburg fährt um Viertel nach acht ab.** Pour dire « à » une heure, on emploie *um*."
+    },
+    {
+     "type": "texte",
+     "enonce": "Le train 17 est en retard. Écris le nombre 17 en lettres, en un seul mot.",
+     "reponse": [
+      "siebzehn"
+     ],
+     "aide": "On perd un « en » à *sieben* ; ajoute « zehn ».",
+     "explication": "**siebzehn** : *sieben* perd son *en* devant *zehn*."
+    }
+   ]
+  },
+  {
+   "chapitre": "71d80455-6e64-5fbc-b319-ebb0f0119420",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une invitation d’anniversaire",
+   "competence": "manier-langue",
+   "situation": "Mia invite ses amis pour son anniversaire. Il faut retrouver sa date dans le calendrier de la classe et lire correctement l’heure sur son invitation.",
+   "documents": [
+    {
+     "id": "geb",
+     "type": "tableau",
+     "titre": "Geburtstage der Klasse",
+     "colonnes": [
+      "Name",
+      "Geburtstag"
+     ],
+     "lignes": [
+      [
+       "Eva",
+       "3. Oktober"
+      ],
+      [
+       "Tom",
+       "14. Mai"
+      ],
+      [
+       "Mia",
+       "21. März"
+      ],
+      [
+       "Ben",
+       "20. Juli"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calendrier écrit pour l’exercice"
+    },
+    {
+     "id": "einladung",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "Einladung",
+     "sousTitre": "Mias Geburtstagsparty",
+     "emoji": "🎂",
+     "lignes": [
+      {
+       "texte": "Ich lade dich zu meiner Party ein."
+      },
+      {
+       "texte": "Die Party beginnt um halb sieben abends.",
+       "id": "zeit"
+      },
+      {
+       "texte": "Bitte antworte bis zum 14. März."
+      }
+     ],
+     "teinte": "rose",
+     "source": "Invitation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "geb",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Mia a Geburtstag « am einundzwanzigsten März ». Touche sa date dans le calendrier.",
+     "aide": "Les ordinaux jusqu’à 19 finissent en -te ; 21 se lit « einundzwanzigste ».",
+     "explication": "Mia a son anniversaire le **21. März** : *am einundzwanzigsten März* (datif après *am*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux dates à voix haute, comme à l’oral.",
+     "texte": "Tom hat am ___ Mai Geburtstag, Ben am ___ Juli.",
+     "reponses": [
+      [
+       "vierzehnten"
+      ],
+      [
+       "zwanzigsten"
+      ]
+     ],
+     "banque": [
+      "vierzehnten",
+      "zwanzigsten",
+      "vierzehn",
+      "zwanzig"
+     ],
+     "aide": "Après « am », l’ordinal prend -n. De 20 à 99, on ajoute -ste.",
+     "explication": "**am vierzehnten Mai** (14 : -te + -n après *am*) et **am zwanzigsten Juli** (20 : -ste + -n)."
+    },
+    {
+     "type": "zone",
+     "document": "einladung",
+     "reponse": [
+      "zeit"
+     ],
+     "enonce": "Touche la ligne de l’invitation qui donne l’heure de la fête.",
+     "aide": "Cherche le mot « Uhr » ou « um ».",
+     "explication": "**Die Party beginnt um halb sieben abends.** : *um* introduit l’heure."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle heure commence la fête ?",
+     "options": [
+      "18 h 30",
+      "19 h 30",
+      "18 h 45",
+      "19 h 00"
+     ],
+     "reponse": 0,
+     "aide": "Attention : halb sieben = la moitié vers sept, donc une demi-heure avant.",
+     "explication": "**halb sieben** = 6 h 30 ; le soir (*abends*), cela donne **18 h 30**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Heute ist der dritte Oktober. Qui fête son anniversaire aujourd’hui ?",
+     "options": [
+      "Eva",
+      "Tom",
+      "Mia",
+      "Ben"
+     ],
+     "reponse": 0,
+     "aide": "Écris la date en chiffres : der 3.",
+     "explication": "Le **3. Oktober** est la date de **Eva** : on lit *der dritte Oktober* (nominatif)."
+    }
+   ]
+  },
+  {
+   "chapitre": "95825f97-d947-59a3-9e53-393efcc3226d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Couper les mots pour les comprendre",
+   "competence": "manier-langue",
+   "situation": "Zoé trouve les mots allemands très longs. Son professeur lui donne un tableau pour les découper : le dernier mot est toujours le mot de base.",
+   "documents": [
+    {
+     "id": "decoupe",
+     "type": "tableau",
+     "titre": "Wörter zerlegen",
+     "colonnes": [
+      "Mot",
+      "Premier mot",
+      "Dernier mot"
+     ],
+     "lignes": [
+      [
+       "das Klassenzimmer",
+       "die Klasse",
+       "das Zimmer"
+      ],
+      [
+       "der Handschuh",
+       "die Hand",
+       "der Schuh"
+      ],
+      [
+       "die Haustür",
+       "das Haus",
+       "die Tür"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "decoupe",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche le mot de base de « Handschuh » : celui qui donne le sens principal.",
+     "aide": "Dans un mot composé, le mot de base est le dernier.",
+     "explication": "Le mot de base est **der Schuh** : un *Handschuh* est une sorte de chaussure… de main, c’est-à-dire un gant."
+    },
+    {
+     "type": "trous",
+     "enonce": "Trouve l’article du mot « Mathebuch » (die Mathe + das Buch).",
+     "texte": "___ Mathebuch ist neu.",
+     "reponses": [
+      [
+       "Das"
+      ]
+     ],
+     "banque": [
+      "Das",
+      "Die",
+      "Der",
+      "Den"
+     ],
+     "aide": "Le genre vient du dernier mot.",
+     "explication": "**Das Mathebuch** : c’est *das Buch*, le dernier mot, qui donne le genre neutre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot composé à son sens.",
+     "paires": [
+      [
+       "das Lieblingsfach",
+       "la matière préférée"
+      ],
+      [
+       "der Bahnhof",
+       "la gare"
+      ],
+      [
+       "die Jugendherberge",
+       "l’auberge de jeunesse"
+      ],
+      [
+       "der Vorname",
+       "le prénom"
+      ]
+     ],
+     "aide": "Découpe d’abord en deux mots.",
+     "explication": "*Liebling* + *Fach* = la matière préférée ; *Bahn* + *Hof* = la gare ; *Jugend* + *Herberge* = l’auberge de jeunesse ; *vor* + *Name* = le prénom."
+    }
+   ]
+  },
+  {
+   "chapitre": "95825f97-d947-59a3-9e53-393efcc3226d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans ma nouvelle école",
+   "competence": "analyser-texte",
+   "situation": "Lukas décrit à un correspondant les lieux de son école. Beaucoup de mots sont composés.",
+   "documents": [
+    {
+     "id": "schule",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Unsere Schule",
+     "blocs": [
+      "Unsere Schule hat einen großen [[c|Pausenhof]] und eine [[c|Turnhalle]]. Der [[c|Stundenplan]] hängt neben der Tür. Die Schüler bekommen viele [[c|Hausaufgaben]]. In der Mensa gibt es heute Pizza."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schule",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche tous les mots composés du texte (quatre mots).",
+     "aide": "Cherche les mots longs formés de deux noms collés.",
+     "explication": "**Pausenhof** (Pause + n + Hof), **Turnhalle** (turnen + Halle), **Stundenplan** (Stunde + n + Plan) et **Hausaufgaben** (Haus + Aufgaben) sont composés."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mots composés selon leurs éléments.",
+     "categories": [
+      "Nom + nom",
+      "Adjectif + nom",
+      "Verbe + nom"
+     ],
+     "items": [
+      [
+       "das Lehrerzimmer",
+       0
+      ],
+      [
+       "der Fußball",
+       0
+      ],
+      [
+       "der Kühlschrank",
+       1
+      ],
+      [
+       "der Kleinbus",
+       1
+      ],
+      [
+       "die Turnhalle",
+       2
+      ],
+      [
+       "der Schreibtisch",
+       2
+      ]
+     ],
+     "aide": "Découpe : kühl est un adjectif, turnen est un verbe.",
+     "explication": "*Lehrer* + *Zimmer* et *Fuß* + *Ball* : **nom + nom**. *kühl* + *Schrank*, *klein* + *Bus* : **adjectif + nom**. *turnen* + *Halle*, *schreiben* + *Tisch* : **verbe + nom**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la lettre de liaison qui s’est glissée dans le mot.",
+     "texte": "die Stunde + ___ + der Plan = der Stundenplan",
+     "reponses": [
+      [
+       "n"
+      ]
+     ],
+     "banque": [
+      "n",
+      "s",
+      "en",
+      "er"
+     ],
+     "aide": "Elle se voit dans le mot composé : Stunde-?-plan.",
+     "explication": "**Stunde + n + Plan** : la lettre de liaison est un **-n-**, comme dans *Straßenbahn*. Il faut les retenir avec chaque mot."
+    },
+    {
+     "type": "trous",
+     "enonce": "Trouve l’article de « Pausenbrot » (die Pause + das Brot).",
+     "texte": "___ Pausenbrot ist lecker.",
+     "reponses": [
+      [
+       "Das"
+      ]
+     ],
+     "banque": [
+      "Das",
+      "Die",
+      "Der",
+      "Den"
+     ],
+     "aide": "Le dernier mot donne le genre.",
+     "explication": "**Das Pausenbrot** : le mot de base est *das Brot*, donc neutre."
+    }
+   ]
+  },
+  {
+   "chapitre": "95825f97-d947-59a3-9e53-393efcc3226d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au menu de la cantine",
+   "competence": "analyser-document",
+   "situation": "Dans la Mensa de Munich, tous les plats portent des noms composés. Avec le petit lexique, tu peux comprendre ce que tu manges.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Mensa – Speiseplan",
+     "sousTitre": "Montag",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Kartoffelsuppe",
+       "valeur": "1,50 €",
+       "id": "suppe"
+      },
+      {
+       "texte": "Gemüsepfanne",
+       "valeur": "3,20 €",
+       "id": "pfanne"
+      },
+      {
+       "texte": "Apfelkuchen",
+       "valeur": "1,80 €",
+       "id": "kuchen"
+      },
+      {
+       "texte": "Schokoladeneis",
+       "valeur": "1,20 €",
+       "id": "eis"
+      },
+      {
+       "texte": "Orangensaft",
+       "valeur": "1,00 €",
+       "id": "saft"
+      }
+     ],
+     "teinte": "ambre",
+     "source": "Menu écrit pour l’exercice"
+    },
+    {
+     "id": "lexikon",
+     "type": "tableau",
+     "titre": "Lexikon",
+     "colonnes": [
+      "Wort",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "die Kartoffel",
+       "la pomme de terre"
+      ],
+      [
+       "das Gemüse",
+       "les légumes"
+      ],
+      [
+       "die Pfanne",
+       "la poêle"
+      ],
+      [
+       "der Apfel",
+       "la pomme"
+      ],
+      [
+       "der Kuchen",
+       "le gâteau"
+      ],
+      [
+       "die Schokolade",
+       "le chocolat"
+      ],
+      [
+       "das Eis",
+       "la glace"
+      ],
+      [
+       "der Saft",
+       "le jus"
+      ],
+      [
+       "die Suppe",
+       "la soupe"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Lexique écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "reponse": [
+      "pfanne"
+     ],
+     "enonce": "Touche le plat dont le mot de base est « Pfanne ».",
+     "aide": "Le mot de base est le dernier élément du mot.",
+     "explication": "**Gemüsepfanne** se termine par *Pfanne* : c’est une « poêlée de légumes » (*Gemüse* + *Pfanne*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque plat du menu à son sens, grâce au lexique.",
+     "paires": [
+      [
+       "Kartoffelsuppe",
+       "soupe de pommes de terre"
+      ],
+      [
+       "Gemüsepfanne",
+       "poêlée de légumes"
+      ],
+      [
+       "Orangensaft",
+       "jus d’orange"
+      ],
+      [
+       "Schokoladeneis",
+       "glace au chocolat"
+      ]
+     ],
+     "aide": "Lis le mot de droite à gauche : le dernier mot est le mot de base.",
+     "explication": "On lit à l’envers : *Suppe* (soupe) précisée par *Kartoffel* ; *Pfanne* par *Gemüse* ; *Saft* par *Orange* ; *Eis* par *Schokolade*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque plat selon son article, qui vient du dernier mot (regarde le lexique).",
+     "categories": [
+      "der",
+      "die",
+      "das"
+     ],
+     "items": [
+      [
+       "Orangensaft",
+       0
+      ],
+      [
+       "Apfelkuchen",
+       0
+      ],
+      [
+       "Kartoffelsuppe",
+       1
+      ],
+      [
+       "Gemüsepfanne",
+       1
+      ],
+      [
+       "Schokoladeneis",
+       2
+      ]
+     ],
+     "aide": "Cherche l’article de Saft, Kuchen, Suppe, Pfanne et Eis dans le lexique.",
+     "explication": "**der** Orangensaft (*der Saft*), **der** Apfelkuchen (*der Kuchen*) ; **die** Kartoffelsuppe (*die Suppe*), **die** Gemüsepfanne (*die Pfanne*) ; **das** Schokoladeneis (*das Eis*)."
+    },
+    {
+     "type": "texte",
+     "enonce": "Au dessert, tu veux un jus de pomme. Écris le mot composé allemand, en un seul mot.",
+     "reponse": [
+      "Apfelsaft"
+     ],
+     "aide": "Pomme d’abord, jus ensuite : Apfel + Saft.",
+     "explication": "**Apfelsaft** : *der Apfel* (la pomme) + *der Saft* (le jus). Le mot de base est *Saft*, donc *der Apfelsaft*."
+    }
+   ]
+  },
+  {
+   "chapitre": "f73a4020-1993-5caf-8d34-8b00d2acd947",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le dimanche de Max",
+   "competence": "comprendre-langue",
+   "situation": "Max raconte son dimanche à un correspondant. Chaque étape commence par un petit mot qui marque l’ordre.",
+   "documents": [
+    {
+     "id": "sonntag",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Maxens Sonntag",
+     "blocs": [
+      "Am Sonntag bin ich spät aufgestanden. [[c|Zuerst]] habe ich Tee getrunken. [[c|Dann]] habe ich Hausaufgaben gemacht. [[c|Danach]] habe ich mit meiner Oma telefoniert. [[c|Schließlich]] bin ich ins Bett gegangen."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sonntag",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre mots qui marquent l’ordre des étapes.",
+     "aide": "Chaque phrase commence par un repère de temps : d’abord, ensuite, après ça, finalement.",
+     "explication": "**Zuerst, Dann, Danach, Schließlich** : ce sont les connecteurs chronologiques du récit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Max juste après ses devoirs ?",
+     "options": [
+      "Il téléphone à sa grand-mère",
+      "Il boit du thé avec sa famille",
+      "Il se couche et s’endort très vite",
+      "Il se lève après une longue nuit"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la phrase qui suit « Hausaufgaben ».",
+     "explication": "Après les devoirs, **« Danach habe ich mit meiner Oma telefoniert »** : il téléphone à sa grand-mère."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre : « Après, j’ai joué au football. » Le premier mot est Danach.",
+     "items": [
+      "Danach",
+      "habe",
+      "ich",
+      "Fußball",
+      "gespielt"
+     ],
+     "aide": "Après le connecteur, le verbe conjugué reste en 2e position.",
+     "explication": "**Danach habe ich Fußball gespielt.** Connecteur en tête : l’auxiliaire *habe* vient avant le sujet *ich*, et le participe *gespielt* ferme la phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "f73a4020-1993-5caf-8d34-8b00d2acd947",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un week-end raconté par SMS",
+   "competence": "analyser-texte",
+   "situation": "Luca prend des nouvelles de Sofia après le week-end. Elle lui raconte, étape par étape, une sortie à la piscine.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Wie war dein Wochenende?",
+     "participants": [
+      {
+       "nom": "Luca",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sofia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Luca",
+       "texte": "Wie war dein Wochenende?"
+      },
+      {
+       "qui": "Sofia",
+       "texte": "Super! Zuerst bin ich schwimmen gegangen. Danach habe ich Pizza gegessen. [[s|Plötzlich]] hat es geregnet!"
+      },
+      {
+       "qui": "Luca",
+       "texte": "Und dann?"
+      },
+      {
+       "qui": "Sofia",
+       "texte": "Dann bin ich mit dem Bus nach Hause gefahren."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui annonce une surprise : « soudain ».",
+     "aide": "C’est le connecteur de la pluie.",
+     "explication": "**Plötzlich** signifie « soudain » : il introduit un événement inattendu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces petits mots : provoquent-ils l’inversion du sujet et du verbe, ou non ?",
+     "categories": [
+      "Inversion : le verbe passe avant le sujet",
+      "Ordre normal : rien ne change"
+     ],
+     "items": [
+      [
+       "dann",
+       0
+      ],
+      [
+       "danach",
+       0
+      ],
+      [
+       "zuerst",
+       0
+      ],
+      [
+       "schließlich",
+       0
+      ],
+      [
+       "und",
+       1
+      ],
+      [
+       "aber",
+       1
+      ],
+      [
+       "denn",
+       1
+      ]
+     ],
+     "aide": "Les adverbes de temps occupent la 1re place ; les conjonctions de coordination restent à part.",
+     "explication": "*dann, danach, zuerst, schließlich* sont des **adverbes** : en tête, ils sont suivis du verbe (*Dann gehe ich*). *und, aber, denn* sont des **conjonctions de coordination** : l’ordre ne change pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre : « Soudain, le bus est arrivé. » Le premier mot est Plötzlich.",
+     "items": [
+      "Plötzlich",
+      "ist",
+      "der Bus",
+      "gekommen"
+     ],
+     "aide": "Le verbe conjugué est en 2e position, le participe tout à la fin.",
+     "explication": "**Plötzlich ist der Bus gekommen.** Auxiliaire *ist* en 2e position, sujet *der Bus*, participe *gekommen* en fin de phrase."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au parfait : « Après, j’ai mangé une glace. »",
+     "texte": "Danach habe ich ein Eis ___.",
+     "reponses": [
+      [
+       "gegessen"
+      ]
+     ],
+     "banque": [
+      "gegessen",
+      "essen",
+      "aß",
+      "gegessene"
+     ],
+     "aide": "Le participe de essen est irrégulier : ge-…-en.",
+     "explication": "**Danach habe ich ein Eis gegessen.** *essen* fait *gegessen* au participe passé, placé en fin de phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "f73a4020-1993-5caf-8d34-8b00d2acd947",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le journal de Jule, version à corriger",
+   "competence": "raisonner",
+   "situation": "Jule raconte sa journée de classe dans son journal. Deux phrases contiennent la faute classique : le sujet n’est pas à la bonne place. À toi de les repérer !",
+   "documents": [
+    {
+     "id": "tagebuch",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Julies Tagebuch",
+     "blocs": [
+      "Gestern war ein langer Tag. Zuerst bin ich um sieben Uhr aufgestanden. [[f|Dann]] ich habe gefrühstückt. Danach bin ich mit dem Rad zur Schule gefahren. [[f|Später]] wir haben Sport gehabt. Schließlich bin ich nach Hause gegangen."
+     ],
+     "source": "Journal écrit pour l’exercice"
+    },
+    {
+     "id": "zeitplan",
+     "type": "tableau",
+     "titre": "Julies Morgen",
+     "colonnes": [
+      "Uhrzeit",
+      "Was Jule macht"
+     ],
+     "lignes": [
+      [
+       "7:00 Uhr",
+       "aufstehen"
+      ],
+      [
+       "7:30 Uhr",
+       "frühstücken"
+      ],
+      [
+       "7:45 Uhr",
+       "mit dem Rad zur Schule fahren"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Emploi du temps écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tagebuch",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche le connecteur des deux phrases où l’inversion a été oubliée.",
+     "aide": "Cherche les phrases où le sujet suit directement le connecteur.",
+     "explication": "**Dann ich habe…** et **Später wir haben…** sont fausses : après un connecteur, le verbe passe en 2e position, avant le sujet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la première phrase fautive de Jule : « Dann ich habe gefrühstückt. »",
+     "texte": "Dann ___ ___ gefrühstückt.",
+     "reponses": [
+      [
+       "habe"
+      ],
+      [
+       "ich"
+      ]
+     ],
+     "banque": [
+      "habe",
+      "ich",
+      "hat",
+      "wir"
+     ],
+     "aide": "L’auxiliaire passe avant le sujet.",
+     "explication": "**Dann habe ich gefrühstückt.** Après *Dann*, le verbe conjugué (*habe*) est en 2e position, puis vient le sujet *ich*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Corrige la seconde phrase fautive. Le premier mot est Später.",
+     "items": [
+      "Später",
+      "haben",
+      "wir",
+      "Sport",
+      "gehabt"
+     ],
+     "aide": "Le verbe conjugué est en deuxième position.",
+     "explication": "**Später haben wir Sport gehabt.** Le connecteur occupe la 1re place, *haben* la 2e, puis le sujet *wir* ; le participe *gehabt* est à la fin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Jule dit « Dann habe ich gefrühstückt ». Selon son emploi du temps, comment dirait-on l’heure du petit déjeuner dans la conversation ?",
+     "options": [
+      "halb acht",
+      "Viertel nach sieben",
+      "halb sieben",
+      "Viertel vor acht"
+     ],
+     "reponse": 0,
+     "aide": "Écris l’heure du tableau, puis rappelle-toi que « halb acht » est la demi-heure avant 8 h.",
+     "explication": "Le petit déjeuner est à 7 h 30, soit **halb acht** (la moitié vers huit)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c058efac-b2a6-52b4-be8c-bf97f1224882",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un message à Paul",
+   "competence": "analyser-texte",
+   "situation": "Tom répond à son ami Paul, qui l’a invité pour son anniversaire. Observe comment il commence et termine son message.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Eine Nachricht an Paul",
+     "blocs": [
+      "Berlin, den 12. April 2026",
+      "[[a|Lieber]] Paul,",
+      "vielen Dank für deine Einladung! Mir geht es gut. Ich freue mich auf deinen Geburtstag.",
+      "[[f|Viele]] [[f|Grüße]]",
+      "Tom"
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot de l’appel qui s’accorde avec le prénom Paul (un garçon).",
+     "aide": "Pour un garçon, l’adjectif se termine en -er.",
+     "explication": "**Lieber** s’emploie pour un garçon (*Lieber Paul,*) ; *Liebe* pour une fille."
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche la formule finale d’un message à un ami.",
+     "aide": "Elle est sur sa ligne, sans virgule.",
+     "explication": "**Viele Grüße** : formule amicale, sans virgule, avant la signature."
+    },
+    {
+     "type": "trous",
+     "enonce": "Tom termine en demandant une réponse rapide. Complète sa phrase.",
+     "texte": "Schreib ___ bald!",
+     "reponses": [
+      [
+       "mir"
+      ]
+     ],
+     "banque": [
+      "mir",
+      "dir",
+      "mich",
+      "dich"
+     ],
+     "aide": "Il demande à Paul de lui écrire : « à moi ».",
+     "explication": "**Schreib mir bald!** « Écris-moi vite » : *mir* est le datif de *ich*."
+    }
+   ]
+  },
+  {
+   "chapitre": "c058efac-b2a6-52b4-be8c-bf97f1224882",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre à Mme Weber : la bonne politesse",
+   "competence": "manier-langue",
+   "situation": "Anna veut passer une nuit chez Mme Weber pendant un voyage à Cologne. Sa lettre contient trois fautes de politesse : cette adulte lui est inconnue.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Annas Brief",
+     "blocs": [
+      "Paris, den 3. Mai 2026",
+      "Sehr geehrte Frau Weber,",
+      "ich schreibe Ihnen, weil ich im Juli nach Köln komme. Ich danke [[x|dir]] für [[x|deine]] Antwort. Kann ich bei Ihnen übernachten?",
+      "[[x|Tschüss]],",
+      "Anna Lefèvre"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "x"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois mots qui ne conviennent pas à une lettre à une adulte inconnue.",
+     "aide": "Cherche le tutoiement et la formule d’un copain.",
+     "explication": "**dir**, **deine** (tutoiement) et **Tschüss** (formule de copain) sont à proscrire avec une personne qu’on vouvoie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la phrase avec le vouvoiement.",
+     "texte": "Ich danke ___ für ___ Antwort.",
+     "reponses": [
+      [
+       "Ihnen"
+      ],
+      [
+       "Ihre"
+      ]
+     ],
+     "banque": [
+      "Ihnen",
+      "Ihre",
+      "dir",
+      "deine",
+      "Sie"
+     ],
+     "aide": "Les formes de politesse prennent une majuscule.",
+     "explication": "**Ich danke Ihnen für Ihre Antwort.** *Ihnen* et *Ihre* sont les formes de politesse, avec une majuscule."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la bonne formule.",
+     "paires": [
+      [
+       "Appel à une amie",
+       "Liebe Anna,"
+      ],
+      [
+       "Appel à un monsieur inconnu",
+       "Sehr geehrter Herr Klein,"
+      ],
+      [
+       "Fin d’un message à un ami",
+       "Viele Grüße"
+      ],
+      [
+       "Fin d’une lettre polie",
+       "Mit freundlichen Grüßen"
+      ]
+     ],
+     "aide": "Pour un adulte inconnu, on vouvoie.",
+     "explication": "*Liebe* + prénom pour une amie ; *Sehr geehrter Herr…* pour un monsieur inconnu ; *Viele Grüße* entre amis ; *Mit freundlichen Grüßen* en lettre polie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre pour que Anna se présente. Le premier mot est Ich.",
+     "items": [
+      "Ich",
+      "möchte",
+      "mich",
+      "vorstellen"
+     ],
+     "aide": "Le verbe modal est en 2e position, l’infinitif à la fin.",
+     "explication": "**Ich möchte mich vorstellen.** *möchte* est en 2e position ; l’infinitif *vorstellen* ferme la phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "c058efac-b2a6-52b4-be8c-bf97f1224882",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Répondre à Lena",
+   "competence": "argumenter",
+   "situation": "Chloé a reçu une invitation de son amie Lena. Mais une date ne lui convient pas. Elle doit répondre avec les bonnes formules.",
+   "documents": [
+    {
+     "id": "lena",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lenas Nachricht",
+     "blocs": [
+      "Köln, den 6. Juli 2026",
+      "Liebe Chloé,",
+      "vielen Dank für deine Nachricht! Mir geht es gut. Wir freuen uns auf deinen Besuch. Kannst du am 12. Juli kommen?",
+      "Viele Grüße",
+      "Lena"
+     ],
+     "source": "Message écrit pour l’exercice"
+    },
+    {
+     "id": "agenda",
+     "type": "tableau",
+     "titre": "Chloés Kalender",
+     "colonnes": [
+      "Datum",
+      "Programm"
+     ],
+     "lignes": [
+      [
+       "10. Juli",
+       "Schule"
+      ],
+      [
+       "11. Juli",
+       "Fußballturnier"
+      ],
+      [
+       "12. Juli",
+       "Familienfest in Lyon"
+      ],
+      [
+       "13. Juli",
+       "frei"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Agenda écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "agenda",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Lena propose le 12 juillet. Touche la case de l’agenda de Chloé qui l’en empêche.",
+     "aide": "Cherche la date du 12 juillet.",
+     "explication": "Le **12. Juli**, Chloé a un *Familienfest* à Lyon : elle ne peut pas aller à Cologne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse de Chloé est correcte, d’après son agenda ?",
+     "options": [
+      "Leider kann ich am 12. Juli nicht kommen, aber am 13. Juli habe ich Zeit.",
+      "Leider ich kann am 12. Juli nicht kommen, aber am 13. Juli habe ich Zeit.",
+      "Leider kann ich am 12. Juli nicht kommen, aber am 11. Juli habe ich Zeit.",
+      "Leider kann ich am 13. Juli nicht kommen, aber am 12. Juli habe ich Zeit."
+     ],
+     "reponse": 0,
+     "aide": "Regarde quel jour est libre. Et après « Leider », le verbe passe devant le sujet.",
+     "explication": "Elle n’est pas libre le 12 (fête) ni le 11 (tournoi) : seul le **13. Juli** est *frei*. Et après *Leider*, on écrit *kann ich* (verbe avant le sujet)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les cinq parties d’un message à une amie.",
+     "items": [
+      "Paris, den 8. Juli 2026",
+      "Liebe Lena,",
+      "vielen Dank für deine Nachricht!",
+      "Viele Grüße",
+      "Chloé"
+     ],
+     "aide": "Lieu et date, appel, corps du message, formule finale, signature.",
+     "explication": "Un message commence par le **lieu et la date**, puis l’**appel** (*Liebe Lena,*), le **corps**, la **formule finale** (*Viele Grüße*) et enfin la **signature**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le début de la réponse de Chloé.",
+     "texte": "Leider ___ ich am 12. Juli nicht kommen.",
+     "reponses": [
+      [
+       "kann"
+      ]
+     ],
+     "banque": [
+      "kann",
+      "komme",
+      "kommen",
+      "kannst"
+     ],
+     "aide": "Après « Leider », le verbe est en 2e position ; c’est le verbe modal qui est conjugué.",
+     "explication": "**Leider kann ich am 12. Juli nicht kommen.** *Leider* est en 1re position, le modal *kann* en 2e, et l’infinitif *kommen* à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "28aaec6a-048f-5192-b135-72ff223afcfb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un film, un livre : ton avis ?",
+   "competence": "comprendre-langue",
+   "situation": "Anna et Ben discutent de ce qu’ils ont lu et vu cette semaine. Ils ne sont pas toujours du même avis.",
+   "documents": [
+    {
+     "id": "dialog",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Buch oder Film?",
+     "participants": [
+      {
+       "nom": "Anna",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anna",
+       "texte": "Ich finde, das Buch ist [[p|spannend]]."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Das stimmt. Ich finde es auch [[p|toll]]."
+      },
+      {
+       "qui": "Anna",
+       "texte": "Und der Film?"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Ich sehe das [[a|anders]]. Der Film ist [[n|langweilig]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dialog",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche l’adjectif négatif du dialogue.",
+     "aide": "Cherche le mot qui critique le film.",
+     "explication": "**langweilig** veut dire « ennuyeux » : c’est un jugement négatif."
+    },
+    {
+     "type": "zone",
+     "document": "dialog",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui montre que Ben n’est pas du même avis qu’Anna sur le film.",
+     "aide": "Le mot signifie « autrement ».",
+     "explication": "**anders** : *Ich sehe das anders* veut dire « Je vois ça autrement ». Ben n’est pas d’accord."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque adjectif : positif ou négatif ?",
+     "categories": [
+      "Positif",
+      "Négatif"
+     ],
+     "items": [
+      [
+       "interessant",
+       0
+      ],
+      [
+       "nützlich",
+       0
+      ],
+      [
+       "lustig",
+       0
+      ],
+      [
+       "blöd",
+       1
+      ],
+      [
+       "gefährlich",
+       1
+      ],
+      [
+       "schrecklich",
+       1
+      ]
+     ],
+     "aide": "Pense aux mots qui ressemblent au français ou à l’anglais.",
+     "explication": "Positifs : *interessant, nützlich* (utile), *lustig* (drôle). Négatifs : *blöd* (bête), *gefährlich* (dangereux), *schrecklich* (terrible)."
+    }
+   ]
+  },
+  {
+   "chapitre": "28aaec6a-048f-5192-b135-72ff223afcfb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les devoirs : pour ou contre ?",
+   "competence": "argumenter",
+   "situation": "Sur le forum du collège, deux élèves défendent leur avis sur les devoirs et le justifient. Regarde bien où va le verbe.",
+   "documents": [
+    {
+     "id": "forum",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Hausaufgaben: ja oder nein?",
+     "blocs": [
+      "Lea : Meiner Meinung nach sind Hausaufgaben nützlich, [[w|weil]] man zu Hause wiederholen kann.",
+      "Tim : Ich finde, dass Hausaufgaben zu lang sind, [[d|denn]] ich habe keine Zeit für Sport."
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "forum",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le mot qui envoie le verbe à la fin dans la justification de Lea.",
+     "aide": "Cherche le mot « parce que » suivi de « kann » à la fin.",
+     "explication": "**weil** introduit une subordonnée : le verbe conjugué (*kann*) part à la fin de la proposition."
+    },
+    {
+     "type": "zone",
+     "document": "forum",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche, chez Tim, la conjonction qui garde l’ordre normal.",
+     "aide": "Elle signifie « car ».",
+     "explication": "**denn** est une conjonction de coordination : l’ordre reste normal (*ich habe keine Zeit*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre l’opinion de Tim. Le premier groupe est Ich finde.",
+     "items": [
+      "Ich finde",
+      "dass",
+      "Hausaufgaben",
+      "zu lang",
+      "sind"
+     ],
+     "aide": "Après « dass », le verbe conjugué part à la fin.",
+     "explication": "**Ich finde, dass Hausaufgaben zu lang sind.** Après *dass*, la subordonnée envoie le verbe *sind* tout à la fin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le message de Lea : inversion après « Meiner Meinung nach », verbe à la fin après « weil ».",
+     "texte": "Meiner Meinung nach ___ Hausaufgaben nützlich, weil man zu Hause wiederholen ___.",
+     "reponses": [
+      [
+       "sind"
+      ],
+      [
+       "kann"
+      ]
+     ],
+     "banque": [
+      "sind",
+      "kann",
+      "ist",
+      "können"
+     ],
+     "aide": "Hausaufgaben est au pluriel ; « man » est à la 3e personne du singulier.",
+     "explication": "**Meiner Meinung nach sind Hausaufgaben nützlich, weil man zu Hause wiederholen kann.** Après *Meiner Meinung nach*, le verbe est en 2e position ; après *weil*, il part à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "28aaec6a-048f-5192-b135-72ff223afcfb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faut-il porter un uniforme ?",
+   "competence": "argumenter",
+   "situation": "Le collège de Mara hésite à imposer l’uniforme. Un tableau résume les arguments, puis deux élèves donnent leur avis.",
+   "documents": [
+    {
+     "id": "tabelle",
+     "type": "tableau",
+     "titre": "Schuluniform",
+     "colonnes": [
+      "Vorteile",
+      "Nachteile"
+     ],
+     "lignes": [
+      [
+       "Alle Schüler sehen gleich aus.",
+       "Man kann seinen Stil nicht zeigen."
+      ],
+      [
+       "Morgens muss man nicht lange überlegen.",
+       "Die Uniform ist manchmal teuer."
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "meinung",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Zwei Meinungen",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Elias",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Meiner Meinung nach sind Uniformen blöd, denn ich möchte meinen Stil zeigen."
+      },
+      {
+       "qui": "Elias",
+       "texte": "Ich sehe das [[a|anders]]. Ich finde, dass Uniformen praktisch sind, weil man morgens nicht lange überlegen muss."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tabelle",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche l’inconvénient qui concerne l’argent.",
+     "aide": "Cherche le mot « teuer » (cher).",
+     "explication": "**Die Uniform ist manchmal teuer.** : c’est un inconvénient lié au prix."
+    },
+    {
+     "type": "zone",
+     "document": "meinung",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche, dans la réponse d’Elias, le mot qui montre qu’il n’est pas d’accord avec Nora.",
+     "aide": "Le mot veut dire « autrement ».",
+     "explication": "**anders** : *Ich sehe das anders* annonce un désaccord poli."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument des deux élèves : avantage ou inconvénient de l’uniforme ?",
+     "categories": [
+      "Avantage (Vorteil)",
+      "Inconvénient (Nachteil)"
+     ],
+     "items": [
+      [
+       "Ich möchte meinen Stil zeigen.",
+       1
+      ],
+      [
+       "Man muss morgens nicht lange überlegen.",
+       0
+      ],
+      [
+       "Alle Schüler sehen gleich aus.",
+       0
+      ],
+      [
+       "Uniformen sind blöd.",
+       1
+      ]
+     ],
+     "aide": "Compare avec les colonnes du tableau.",
+     "explication": "Elias donne un **avantage** (le matin, pas de longue réflexion) ; Nora un **inconvénient** (pas de style personnel)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase d’un élève qui parle d’un inconvénient.",
+     "texte": "Der Nachteil ist, dass die Uniform manchmal teuer ___.",
+     "reponses": [
+      [
+       "ist"
+      ]
+     ],
+     "banque": [
+      "ist",
+      "sein",
+      "sind",
+      "wird"
+     ],
+     "aide": "Après « dass », le verbe est à la fin de la phrase.",
+     "explication": "**Der Nachteil ist, dass die Uniform manchmal teuer ist.** Après *dass*, le verbe conjugué *ist* se place en dernier."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre l’argument pour l’uniforme. Le premier groupe est Der Vorteil.",
+     "items": [
+      "Der Vorteil",
+      "ist",
+      "dass",
+      "alle",
+      "gleich aussehen"
+     ],
+     "aide": "Après « dass », le verbe part à la fin.",
+     "explication": "**Der Vorteil ist, dass alle gleich aussehen.** *Der Vorteil ist* en tête, puis *dass* ouvre une subordonnée dont le verbe (*aussehen*) est en dernier."
+    }
+   ]
+  }
+ ]
+}

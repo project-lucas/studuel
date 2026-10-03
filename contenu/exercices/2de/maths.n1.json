@@ -1,0 +1,3489 @@
+{
+ "niveau": "2de",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "fab3ca92-b4d6-53e0-b06b-eb3174505645",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le frigo du camping",
+   "competence": "lire-graphique",
+   "situation": "Camille gère le frigo d’un camping. Il est conforme quand sa température T est dans l’intervalle [2 ; 4], en °C. Elle a relevé la température chaque jour de la semaine et placé les relevés sur une droite graduée.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "droite",
+     "titre": "Les relevés de la semaine (°C)",
+     "min": 0,
+     "max": 6,
+     "pas": 1,
+     "division": 2,
+     "points": [
+      {
+       "id": "lun",
+       "valeur": 1.5,
+       "nom": "Lu"
+      },
+      {
+       "id": "mar",
+       "valeur": 3,
+       "nom": "Ma"
+      },
+      {
+       "id": "mer",
+       "valeur": 4,
+       "nom": "Me"
+      },
+      {
+       "id": "jeu",
+       "valeur": 4.5,
+       "nom": "Je"
+      },
+      {
+       "id": "ven",
+       "valeur": 2,
+       "nom": "Ve"
+      }
+     ],
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releves",
+     "enonce": "Touche les jours où le frigo était conforme, c’est-à-dire où T appartient à [2 ; 4].",
+     "reponse": [
+      "mar",
+      "mer",
+      "ven"
+     ],
+     "aide": "Les crochets de [2 ; 4] sont fermés : les bornes 2 et 4 comptent.",
+     "explication": "Mardi (3), mercredi (4) et vendredi (2) sont dans [2 ; 4] : les bornes sont **comprises**. Lundi (1,5) et jeudi (4,5) sont dehors.",
+     "multiple": true
+    },
+    {
+     "type": "association",
+     "enonce": "Le règlement parle de la température T. Associe chaque condition à l’intervalle qui la traduit.",
+     "paires": [
+      [
+       "T strictement supérieure à 4",
+       "]4 ; +∞["
+      ],
+      [
+       "T inférieure ou égale à 2",
+       "]−∞ ; 2]"
+      ],
+      [
+       "T strictement inférieure à 6",
+       "]−∞ ; 6["
+      ],
+      [
+       "T supérieure ou égale à 0",
+       "[0 ; +∞["
+      ]
+     ],
+     "aide": "Strictement : la borne est exclue (crochet ouvert). Côté infini, le crochet est toujours ouvert.",
+     "explication": "« Strictement » exclut la borne : **]4 ; +∞[** et **]−∞ ; 6[**. « Supérieure ou égale » ou « inférieure ou égale » l’inclut : **]−∞ ; 2]** et **[0 ; +∞[**. Côté infini, le crochet reste ouvert."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de l’intervalle [2 ; 4] (écart entre ses deux bornes) ?",
+     "reponse": 2,
+     "aide": "Soustrais la borne de gauche à celle de droite.",
+     "explication": "La longueur est 4 − 2 = **2** (degrés).",
+     "unite": "°C"
+    }
+   ]
+  },
+  {
+   "chapitre": "fab3ca92-b4d6-53e0-b06b-eb3174505645",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tri des nombres du club de maths",
+   "competence": "raisonner",
+   "situation": "Au club de maths, Léo a écrit six nombres sur des étiquettes : il doit les ranger dans la famille qui les décrit le mieux, puis repérer ceux qui tombent dans un intervalle.",
+   "documents": [
+    {
+     "id": "nombres",
+     "type": "tableau",
+     "titre": "Les étiquettes de Léo",
+     "colonnes": [
+      "Étiquette",
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+     ],
+     "lignes": [
+      [
+       "Nombre",
+       "−5",
+       "0,25",
+       "1/3",
+       "√2",
+       "12/4",
+       "π"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Nombres choisis pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque nombre dans la famille qui le décrit le mieux (la plus précise).",
+     "categories": [
+      "Entier relatif",
+      "Décimal non entier",
+      "Rationnel non décimal",
+      "Irrationnel"
+     ],
+     "items": [
+      [
+       "−5",
+       0
+      ],
+      [
+       "0,25",
+       1
+      ],
+      [
+       "1/3",
+       2
+      ],
+      [
+       "√2",
+       3
+      ],
+      [
+       "12/4",
+       0
+      ],
+      [
+       "π",
+       3
+      ]
+     ],
+     "aide": "Calcule les fractions : 12/4 se simplifie. Une écriture décimale finie donne un décimal.",
+     "explication": "−5 et 12/4 (= 3) sont des **entiers** ; 0,25 a une écriture décimale finie : c’est un **décimal** ; 1/3 est un quotient d’entiers à écriture infinie : **rationnel non décimal** ; √2 et π sont **irrationnels**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de ces six nombres appartiennent à ℚ ?",
+     "reponse": 4,
+     "aide": "Un entier, un décimal et une fraction d’entiers sont tous rationnels. Seuls les irrationnels n’y sont pas.",
+     "explication": "Tous sont rationnels sauf √2 et π : 6 − 2 = **4**."
+    },
+    {
+     "type": "zone",
+     "document": "nombres",
+     "enonce": "Touche les étiquettes dont le nombre appartient à l’intervalle [0 ; 1].",
+     "reponse": [
+      "r0c2",
+      "r0c3"
+     ],
+     "aide": "Estime chaque valeur : 1/3 ≈ 0,33 ; √2 ≈ 1,41 ; 12/4 = 3.",
+     "explication": "0,25 et 1/3 (≈ 0,33) sont entre 0 et 1. −5 est négatif ; √2 ≈ 1,41, 12/4 = 3 et π ≈ 3,14 dépassent 1.",
+     "multiple": true
+    }
+   ]
+  },
+  {
+   "chapitre": "fab3ca92-b4d6-53e0-b06b-eb3174505645",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La pression des pneus",
+   "competence": "modeliser",
+   "situation": "Un garagiste contrôle les pneus d’une voiture. La pression idéale est 2,4 bar, et une pression p est acceptable quand |p − 2,4| ≤ 0,3. Il a relevé les quatre pneus et noté les valeurs sur une droite graduée.",
+   "documents": [
+    {
+     "id": "consigne",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Fiche du véhicule",
+     "sousTitre": "Pression à froid",
+     "emoji": "🚗",
+     "lignes": [
+      {
+       "texte": "Pression idéale",
+       "valeur": "2,4 bar"
+      },
+      {
+       "texte": "Écart toléré",
+       "valeur": "± 0,3 bar"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Maximum du fabricant du pneu",
+       "valeur": "2,6 bar",
+       "id": "max"
+      }
+     ],
+     "pied": "Fiche imaginée pour l’exercice",
+     "teinte": "bleu"
+    },
+    {
+     "id": "pneus",
+     "type": "droite",
+     "titre": "Pressions relevées (bar)",
+     "min": 1.8,
+     "max": 3,
+     "pas": 0.2,
+     "division": 2,
+     "points": [
+      {
+       "id": "avg",
+       "valeur": 1.9,
+       "nom": "AvG"
+      },
+      {
+       "id": "avd",
+       "valeur": 2.4,
+       "nom": "AvD"
+      },
+      {
+       "id": "arg",
+       "valeur": 2.8,
+       "nom": "ArG"
+      },
+      {
+       "id": "ard",
+       "valeur": 2.1,
+       "nom": "ArD"
+      }
+     ],
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Écris |p − 2,4| ≤ 0,3 sous la forme p ∈ [a ; b]. Quelle est la borne a ?",
+     "reponse": 2.1,
+     "aide": "L’intervalle est centré en 2,4 et de rayon 0,3 : a = 2,4 − 0,3.",
+     "explication": "La distance de p à 2,4 est au plus 0,3 : p ∈ [2,4 − 0,3 ; 2,4 + 0,3] = **[2,1 ; 2,7]**. La borne a vaut **2,1**.",
+     "unite": "bar"
+    },
+    {
+     "type": "zone",
+     "document": "pneus",
+     "enonce": "Touche les pneus dont la pression est acceptable.",
+     "reponse": [
+      "avd",
+      "ard"
+     ],
+     "aide": "Compare chaque relevé à l’intervalle [2,1 ; 2,7], bornes comprises.",
+     "explication": "AvD (2,4) et ArD (2,1, la borne gauche) sont dans [2,1 ; 2,7]. AvG (1,9) est trop bas, ArG (2,8) trop haut.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le fabricant interdit aussi de dépasser 2,6 bar (p ≤ 2,6). Les deux conditions doivent être vraies : [2,1 ; 2,7] ∩ ]−∞ ; 2,6]. Quelle est la plus grande pression acceptée ?",
+     "reponse": 2.6,
+     "aide": "Une intersection garde ce qui est dans les deux ensembles à la fois : prends la plus petite des deux bornes hautes.",
+     "explication": "L’intersection est **[2,1 ; 2,6]** : la plus grande pression acceptée est **2,6 bar**.",
+     "unite": "bar"
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque inéquation à l’intervalle qui la traduit.",
+     "paires": [
+      [
+       "|x − 2| ≤ 5",
+       "[−3 ; 7]"
+      ],
+      [
+       "|x + 1| ≤ 3",
+       "[−4 ; 2]"
+      ],
+      [
+       "|x − 10| ≤ 0,5",
+       "[9,5 ; 10,5]"
+      ],
+      [
+       "|x| ≤ 4",
+       "[−4 ; 4]"
+      ]
+     ],
+     "aide": "Lis le centre (pour |x + 1|, c’est −1) et le rayon, puis calcule centre − rayon et centre + rayon.",
+     "explication": "|x − a| ≤ r devient [a − r ; a + r] : 2 ± 5 donne [−3 ; 7] ; −1 ± 3 donne [−4 ; 2] ; 10 ± 0,5 donne [9,5 ; 10,5] ; 0 ± 4 donne [−4 ; 4]."
+    }
+   ]
+  },
+  {
+   "chapitre": "7aaec3ed-c892-51f4-9408-c6383039372a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les parts de pizza de Noé",
+   "competence": "lire-tableau",
+   "situation": "Noé partage des pizzas entre amis. Il tape chaque fraction sur sa calculatrice, qui affiche 10 chiffres au plus. Il se demande lesquelles de ces fractions sont des nombres décimaux.",
+   "documents": [
+    {
+     "id": "fractions",
+     "type": "tableau",
+     "titre": "Ce que Noé a tapé",
+     "colonnes": [
+      "Fraction",
+      "Affichage de la calculatrice"
+     ],
+     "lignes": [
+      [
+       "1/4",
+       "0,25"
+      ],
+      [
+       "1/3",
+       "0,3333333333"
+      ],
+      [
+       "3/8",
+       "0,375"
+      ],
+      [
+       "2/3",
+       "0,6666666667"
+      ],
+      [
+       "1/7",
+       "0,1428571429"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Calculatrice 10 chiffres, valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fractions",
+     "enonce": "Touche les fractions qui sont des nombres décimaux (écriture décimale exacte et finie).",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "aide": "Une calculatrice arrondit : regarde plutôt si le dénominateur ne contient que des 2 et des 5.",
+     "explication": "1/4 = 25/100 et 3/8 = 375/1000 sont décimaux. Les dénominateurs 3 et 7 ne sont pas des produits de 2 et de 5 : 1/3, 2/3 et 1/7 ne sont **pas** décimaux.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le nombre 1/7 s’écrit 0,142857 142857 142857… Combien de chiffres compte le bloc qui se répète ?",
+     "reponse": 6,
+     "aide": "Le bloc commence à 1 et se termine juste avant que « 142857 » recommence.",
+     "explication": "Le bloc **142857** compte **6** chiffres : l’écriture est infinie mais périodique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire du nombre 1/3 ?",
+     "options": [
+      "Rationnel mais pas décimal",
+      "Décimal car sa période est courte",
+      "Irrationnel car il est infini",
+      "Entier car il vaut à peu près 0"
+     ],
+     "reponse": 0,
+     "aide": "C’est une fraction d’entiers, mais son écriture ne s’arrête jamais.",
+     "explication": "C’est un quotient d’entiers, donc **rationnel** ; son écriture 0,333… est infinie, donc il n’est **pas décimal**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7aaec3ed-c892-51f4-9408-c6383039372a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le 0,181818… de Zoé",
+   "competence": "calculer",
+   "situation": "Zoé veut écrire en fraction le nombre x = 0,181818… (le bloc 18 se répète). Elle a noté ses trois premières lignes, puis elle compare plusieurs fractions pour trouver lesquelles sont décimales.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes de Zoé",
+     "colonnes": [
+      "Ligne",
+      "Calcul"
+     ],
+     "lignes": [
+      [
+       "1",
+       "x = 0,181818…"
+      ],
+      [
+       "2",
+       "100x = 18,181818…"
+      ],
+      [
+       "3",
+       "100x − x = ?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs écrits pour l’exercice"
+    },
+    {
+     "id": "denominateurs",
+     "type": "tableau",
+     "titre": "Des fractions irréductibles et leur dénominateur",
+     "colonnes": [
+      "Fraction",
+      "Dénominateur décomposé"
+     ],
+     "lignes": [
+      [
+       "7/20",
+       "2² × 5"
+      ],
+      [
+       "5/12",
+       "2² × 3"
+      ],
+      [
+       "9/40",
+       "2³ × 5"
+      ],
+      [
+       "11/15",
+       "3 × 5"
+      ],
+      [
+       "13/16",
+       "2⁴"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Décompositions vérifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que vaut 100x − x (ligne 3) ?",
+     "reponse": 18,
+     "aide": "Les parties décimales infinies « 0,181818… » sont identiques : elles s’annulent.",
+     "explication": "100x − x = 18,181818… − 0,181818… = **18**."
+    },
+    {
+     "type": "trous",
+     "enonce": "La ligne 3 donne 99x = 18. Écris x sous forme de fraction irréductible.",
+     "texte": "x = ___ / ___",
+     "reponses": [
+      [
+       "2"
+      ],
+      [
+       "11"
+      ]
+     ],
+     "aide": "Divise 18 et 99 par leur plus grand diviseur commun.",
+     "explication": "x = 18/99. On simplifie par 9 : x = **2/11**. Un développement périodique est bien un rationnel."
+    },
+    {
+     "type": "zone",
+     "document": "denominateurs",
+     "enonce": "Touche les fractions qui sont des nombres décimaux.",
+     "reponse": [
+      "r0c0",
+      "r2c0",
+      "r4c0"
+     ],
+     "aide": "Le dénominateur ne doit contenir que des facteurs 2 et 5.",
+     "explication": "7/20 (2² × 5), 9/40 (2³ × 5) et 13/16 (2⁴) sont décimales. 5/12 contient un facteur 3 et 11/15 aussi : elles ne le sont pas.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne l’écriture décimale de 9/40.",
+     "reponse": 0.225,
+     "aide": "Écris 9/40 avec un dénominateur 1 000 : 40 × 25 = 1 000.",
+     "explication": "9/40 = 225/1 000 = **0,225**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7aaec3ed-c892-51f4-9408-c6383039372a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La dalle carrée et la diagonale impossible",
+   "competence": "raisonner",
+   "situation": "Un artisan pose une dalle carrée de côté 1 m. Il veut calculer la longueur d de sa diagonale. Son apprenti affirme que d s’écrit comme une fraction : l’artisan lui montre pourquoi c’est impossible.",
+   "documents": [
+    {
+     "id": "dalle",
+     "type": "figure",
+     "titre": "La dalle (hors échelle)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 7,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 7,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "codage": 1,
+       "longueur": "1 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "codage": 1,
+       "longueur": "1 m"
+      },
+      {
+       "de": "C",
+       "a": "D",
+       "codage": 1
+      },
+      {
+       "de": "D",
+       "a": "A",
+       "codage": 1
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "style": "pointilles",
+       "teinte": "corail",
+       "longueur": "d"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "B",
+       "de": "A",
+       "a": "C",
+       "droit": true
+      }
+     ],
+     "source": "Figure hors échelle"
+    },
+    {
+     "id": "liste",
+     "type": "tableau",
+     "titre": "Six nombres à trier",
+     "colonnes": [
+      "Lettre",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "a",
+       "√4"
+      ],
+      [
+       "b",
+       "√5"
+      ],
+      [
+       "c",
+       "π"
+      ],
+      [
+       "d",
+       "0,25"
+      ],
+      [
+       "e",
+       "√(9/4)"
+      ],
+      [
+       "f",
+       "22/7"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Nombres choisis pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dans le triangle ABC rectangle en B, applique Pythagore. Que vaut d² ?",
+     "reponse": 2,
+     "aide": "AC² = AB² + BC², avec AB = BC = 1.",
+     "explication": "d² = 1² + 1² = **2** : d est donc le nombre positif dont le carré vaut 2, c’est √2."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la démonstration par l’absurde que √2 n’est pas une fraction.",
+     "items": [
+      "On suppose √2 = p/q, avec p/q irréductible",
+      "On élève au carré : 2q² = p²",
+      "p² est pair, donc p est pair",
+      "On écrit p = 2k, d’où q² = 2k²",
+      "q est pair aussi : p et q ont 2 en facteur commun, contradiction"
+     ],
+     "aide": "On part de l’hypothèse, on calcule, puis on tombe sur une impossibilité.",
+     "explication": "On suppose le contraire, on en déduit que p **et** q sont pairs, ce qui contredit l’irréductibilité : **√2 est irrationnel**."
+    },
+    {
+     "type": "zone",
+     "document": "liste",
+     "enonce": "Touche les nombres irrationnels de la liste.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "aide": "Simplifie ce qui peut l’être : √4, √(9/4), et rappelle-toi que 22/7 est un quotient d’entiers.",
+     "explication": "√4 = 2, √(9/4) = 3/2, 0,25 = 1/4 et 22/7 sont des rationnels. Seuls **√5** et **π** sont irrationnels (22/7 n’est qu’une valeur approchée de π).",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris √8 + √2 sous la forme a√2. Que vaut a ?",
+     "reponse": 3,
+     "aide": "Écris √8 = √4 × √2.",
+     "explication": "√8 = 2√2, donc √8 + √2 = 2√2 + √2 = **3√2** : a = 3."
+    }
+   ]
+  },
+  {
+   "chapitre": "b5b4c57e-81a5-5e7e-b94c-1da2647e723d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les billets de la fête du village",
+   "competence": "lire-tableau",
+   "situation": "Salma tient la billetterie de la fête du village. Elle a noté le nombre de billets vendus chaque jour. Pour ranger les billets par lots de 3, elle utilise le critère de divisibilité.",
+   "documents": [
+    {
+     "id": "billets",
+     "type": "tableau",
+     "titre": "Billets vendus",
+     "colonnes": [
+      "Jour",
+      "Lun.",
+      "Mar.",
+      "Mer.",
+      "Jeu.",
+      "Ven."
+     ],
+     "lignes": [
+      [
+       "Billets",
+       "124",
+       "135",
+       "316",
+       "252",
+       "1 071"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "billets",
+     "enonce": "Touche les jours où le nombre de billets est divisible par 3.",
+     "reponse": [
+      "r0c2",
+      "r0c4",
+      "r0c5"
+     ],
+     "aide": "Additionne les chiffres : si la somme est dans la table de 3, le nombre l’est aussi.",
+     "explication": "135 (1+3+5 = 9), 252 (2+5+2 = 9) et 1 071 (1+0+7+1 = 9) sont divisibles par 3. 124 (somme 7) et 316 (somme 10) ne le sont pas.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le code d’un cadenas est 4_6. Quel chiffre remplace le « _ » pour que le nombre soit divisible par 9 ?",
+     "reponse": 8,
+     "aide": "La somme des chiffres doit être un multiple de 9 : 4 + _ + 6.",
+     "explication": "4 + 6 = 10 ; le prochain multiple de 9 est 18, donc il faut 18 − 10 = **8**. Le code est 486 = 9 × 54."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces nombres, lesquels divisent 252 ? (plusieurs réponses)",
+     "options": [
+      "4",
+      "5",
+      "8",
+      "9",
+      "11"
+     ],
+     "reponse": [
+      0,
+      3
+     ],
+     "aide": "Applique les critères : 4 → deux derniers chiffres, 9 → somme des chiffres, 5 → dernier chiffre.",
+     "explication": "252 se termine par 52 = 4 × 13 : divisible par **4**. Sa somme de chiffres est 9 : divisible par **9**. Il ne finit pas par 0 ou 5 ; 252 ÷ 8 = 31,5 et 252 ÷ 11 n’est pas entier."
+    }
+   ]
+  },
+  {
+   "chapitre": "b5b4c57e-81a5-5e7e-b94c-1da2647e723d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le crible d’Ève",
+   "competence": "raisonner",
+   "situation": "Ève cherche les nombres premiers de 2 à 43 en rayant les multiples, comme faisait le mathématicien Ératosthène. Puis elle teste un nombre plus grand, 143, en n’essayant que les diviseurs qui comptent.",
+   "documents": [
+    {
+     "id": "crible",
+     "type": "tableau",
+     "titre": "Les nombres de 2 à 43",
+     "colonnes": [
+      "Col. 1",
+      "Col. 2",
+      "Col. 3",
+      "Col. 4",
+      "Col. 5",
+      "Col. 6",
+      "Col. 7"
+     ],
+     "lignes": [
+      [
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8"
+      ],
+      [
+       "9",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15"
+      ],
+      [
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22"
+      ],
+      [
+       "23",
+       "24",
+       "25",
+       "26",
+       "27",
+       "28",
+       "29"
+      ],
+      [
+       "30",
+       "31",
+       "32",
+       "33",
+       "34",
+       "35",
+       "36"
+      ],
+      [
+       "37",
+       "38",
+       "39",
+       "40",
+       "41",
+       "42",
+       "43"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Grille de 2 à 43"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crible",
+     "enonce": "Touche tous les nombres premiers de la grille.",
+     "reponse": [
+      "r0c0",
+      "r0c1",
+      "r0c3",
+      "r0c5",
+      "r1c2",
+      "r1c4",
+      "r2c1",
+      "r2c3",
+      "r3c0",
+      "r3c6",
+      "r4c1",
+      "r5c0",
+      "r5c4",
+      "r5c6"
+     ],
+     "aide": "Un nombre premier n’a que deux diviseurs, 1 et lui-même. Raye les multiples de 2, 3, 5, 7.",
+     "explication": "Les nombres premiers de 2 à 43 sont **2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43** : aucun n’est multiple d’un plus petit nombre premier.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour savoir si 143 est premier, jusqu’à quel nombre premier faut-il tester les diviseurs ? (√143 ≈ 11,96)",
+     "reponse": 11,
+     "aide": "On teste les premiers inférieurs ou égaux à √143.",
+     "explication": "Il suffit de tester les premiers jusqu’à √143 ≈ 11,96 : 2, 3, 5, 7 et **11**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "143 = 11 × ?. Complète.",
+     "reponse": 13,
+     "aide": "Divise 143 par 11.",
+     "explication": "143 ÷ 11 = **13** : 143 = 11 × 13, il n’est **pas premier**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Et 149 ? (√149 ≈ 12,2 ; 149 n’est divisible ni par 2, 3, 5, 7, ni par 11)",
+     "options": [
+      "Oui : aucun premier ≤ 11 ne le divise",
+      "Non : 7 le divise, il est composé",
+      "Non : 3 le divise, il est composé",
+      "Non : 11 le divise, il est composé"
+     ],
+     "reponse": 0,
+     "aide": "Si aucun premier inférieur à √149 ne divise 149, il est premier.",
+     "explication": "Aucun premier jusqu’à 11 (le plus grand inférieur à 12,2) ne divise 149 : **149 est premier**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b5b4c57e-81a5-5e7e-b94c-1da2647e723d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les rubans de l’atelier",
+   "competence": "resoudre",
+   "situation": "Tom doit découper deux rubans, un rouge de 360 cm et un bleu de 84 cm, en morceaux tous de même longueur, la plus grande possible, sans aucune chute. Il décompose d’abord les longueurs en facteurs premiers.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Atelier de Tom",
+     "sousTitre": "Commande de rubans",
+     "emoji": "🎀",
+     "lignes": [
+      {
+       "texte": "Ruban rouge",
+       "valeur": "360 cm"
+      },
+      {
+       "texte": "Ruban bleu",
+       "valeur": "84 cm"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Morceaux de même longueur, sans chute",
+       "gras": true
+      }
+     ],
+     "pied": "Commande imaginée pour l’exercice",
+     "teinte": "corail"
+    },
+    {
+     "id": "decomp",
+     "type": "tableau",
+     "titre": "Exposants des facteurs premiers",
+     "colonnes": [
+      "Nombre",
+      "2",
+      "3",
+      "5",
+      "7"
+     ],
+     "lignes": [
+      [
+       "360",
+       3,
+       2,
+       1,
+       0
+      ],
+      [
+       "84",
+       2,
+       1,
+       0,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Décompositions vérifiées : 360 = 2³ × 3² × 5 et 84 = 2² × 3 × 7"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Le PGCD prend chaque facteur commun avec son plus petit exposant. Complète.",
+     "texte": "PGCD(360 ; 84) = 2^___ × 3^___",
+     "reponses": [
+      [
+       "2"
+      ],
+      [
+       "1"
+      ]
+     ],
+     "aide": "Pour le facteur 2, compare les exposants 3 et 2 ; pour 3, compare 2 et 1.",
+     "explication": "Facteur 2 : exposants 3 et 2, on garde le plus petit, **2**. Facteur 3 : exposants 2 et 1, on garde **1**. Les facteurs 5 et 7 ne sont pas communs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la plus grande longueur possible d’un morceau ?",
+     "reponse": 12,
+     "aide": "Calcule 2² × 3.",
+     "explication": "PGCD = 2² × 3 = 4 × 3 = **12 cm**.",
+     "unite": "cm"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de morceaux Tom obtient-il en tout, avec les deux rubans ?",
+     "reponse": 37,
+     "aide": "Divise chaque ruban par 12, puis additionne.",
+     "explication": "360 ÷ 12 = 30 et 84 ÷ 12 = 7, donc 30 + 7 = **37** morceaux."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Tom veut prouver que le carré d’un nombre impair est impair. Remets sa démonstration dans l’ordre.",
+     "items": [
+      "Soit n impair : n = 2k + 1, avec k entier",
+      "n² = (2k + 1)² = 4k² + 4k + 1",
+      "n² = 2(2k² + 2k) + 1",
+      "Comme 2k² + 2k est un entier, n² est de la forme 2m + 1 : il est impair"
+     ],
+     "aide": "Pars de l’écriture d’un impair, développe, puis fais apparaître « 2 × un entier + 1 ».",
+     "explication": "On écrit n = 2k + 1, on développe le carré, on factorise 2 dans les deux premiers termes : n² = 2m + 1, donc **impair**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a85fcba-5f8b-5eb6-aabf-5bcc73b851ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La carte mémoire de la console",
+   "competence": "lire-tableau",
+   "situation": "Yanis range des jeux sur la carte mémoire de sa console. Chaque taille est écrite en notation scientifique : un nombre entre 1 et 10 multiplié par une puissance de 10.",
+   "documents": [
+    {
+     "id": "tailles",
+     "type": "tableau",
+     "titre": "Tailles en octets",
+     "colonnes": [
+      "Élément",
+      "Taille (octets)"
+     ],
+     "lignes": [
+      [
+       "Jeu A",
+       "3,2 × 10⁹"
+      ],
+      [
+       "Jeu B",
+       "8 × 10⁸"
+      ],
+      [
+       "Carte mémoire",
+       "6,4 × 10¹⁰"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tailles arrondies, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tailles",
+     "enonce": "Touche la taille la plus grande.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compare d’abord les puissances de 10 : plus l’exposant est grand, plus le nombre est grand.",
+     "explication": "L’exposant 10 de la carte mémoire est plus grand que 9 et 8 : **6,4 × 10¹⁰** est la plus grande taille."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jeux A (3,2 × 10⁹ octets chacun) tiennent exactement sur la carte mémoire ?",
+     "reponse": 20,
+     "aide": "Divise 6,4 × 10¹⁰ par 3,2 × 10⁹ : divise les nombres, puis les puissances de 10.",
+     "explication": "(6,4 ÷ 3,2) × 10¹⁰⁻⁹ = 2 × 10¹ = **20** jeux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris la taille du jeu B en nombre entier. Combien de zéros comporte-t-elle ?",
+     "reponse": 8,
+     "aide": "8 × 10⁸, c’est un 8 suivi de 8 chiffres (des zéros).",
+     "explication": "8 × 10⁸ = 800 000 000 : il y a **8** zéros."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a85fcba-5f8b-5eb6-aabf-5bcc73b851ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux parterres carrés pour le jardin",
+   "competence": "calculer",
+   "situation": "Une jardinière aménage deux parterres carrés : le premier a une aire de 72 m², le second de 50 m². Elle veut connaître la longueur exacte de leurs côtés, puis le grillage nécessaire pour les entourer.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Plan des deux parterres (hors échelle)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 15,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 7,
+       "cache": true
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 7,
+       "cache": true
+      },
+      {
+       "id": "E",
+       "x": 9,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "F",
+       "x": 14,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "G",
+       "x": 14,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "H",
+       "x": 9,
+       "y": 6,
+       "cache": true
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "teinte": "turquoise",
+       "motif": "clair"
+      }
+     ],
+     "textes": [
+      {
+       "x": 4,
+       "y": 4,
+       "texte": "72 m²"
+      },
+      {
+       "x": 11.5,
+       "y": 3.5,
+       "texte": "50 m²"
+      }
+     ],
+     "source": "Plan schématique, hors échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète : le côté du premier parterre est √72 m.",
+     "texte": "√72 = ___ √2",
+     "reponses": [
+      [
+       "6"
+      ]
+     ],
+     "aide": "Cherche le plus grand carré parfait qui divise 72 : 72 = 36 × 2.",
+     "explication": "√72 = √36 × √2 = **6√2**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le côté du second parterre est √50 m.",
+     "texte": "√50 = ___ √2",
+     "reponses": [
+      [
+       "5"
+      ]
+     ],
+     "aide": "Cherche le plus grand carré parfait qui divise 50 : 50 = 25 × 2.",
+     "explication": "√50 = √25 × √2 = **5√2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le grillage entoure les deux parterres : il mesure 4 × 6√2 + 4 × 5√2 = 44√2 mètres. Donne cette longueur arrondie au dixième de mètre.",
+     "reponse": 62.2,
+     "aide": "Utilise √2 ≈ 1,4142 et multiplie par 44.",
+     "explication": "44 × 1,4142 ≈ 62,23 : environ **62,2 m**.",
+     "unite": "m",
+     "tolerance": 0.05
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces écritures est égale à √72 + √50 ?",
+     "options": [
+      "11√2",
+      "√122",
+      "30√2",
+      "61"
+     ],
+     "reponse": 0,
+     "aide": "Utilise les écritures 6√2 et 5√2 trouvées plus haut, puis additionne comme 6 pommes + 5 pommes.",
+     "explication": "√72 + √50 = 6√2 + 5√2 = **11√2**. Et √122 est faux : √(a + b) n’est pas √a + √b."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a85fcba-5f8b-5eb6-aabf-5bcc73b851ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les calculs d’Hugo passés au test",
+   "competence": "raisonner",
+   "situation": "Hugo a recopié trois égalités de son cahier. Sa prof lui conseille un réflexe de contrôle : remplacer x par 1 dans chaque membre et comparer. Si les deux valeurs diffèrent, l’égalité est fausse.",
+   "documents": [
+    {
+     "id": "hugo",
+     "type": "tableau",
+     "titre": "Le test x = 1",
+     "colonnes": [
+      "Calcul d’Hugo",
+      "Gauche (x = 1)",
+      "Droite (x = 1)"
+     ],
+     "lignes": [
+      [
+       "(x + 2)² = x² + 4",
+       "?",
+       "5"
+      ],
+      [
+       "(x² − 4)/(x − 2) = x + 2",
+       "3",
+       "3"
+      ],
+      [
+       "(x + 3)/(x + 5) = 3/5",
+       "2/3",
+       "3/5"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Calculs écrits pour l’exercice"
+    },
+    {
+     "id": "puiss",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La dernière ligne de son cahier",
+     "blocs": [
+      "Hugo a aussi écrit : (a³)² × a⁻⁴ = a⁻²",
+      "Il pense avoir multiplié les exposants puis les avoir ajoutés."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur du membre de gauche (x + 2)² pour x = 1 (case « ? »).",
+     "reponse": 9,
+     "aide": "Remplace x par 1, additionne, puis élève au carré.",
+     "explication": "(1 + 2)² = 3² = **9**, alors que le membre de droite vaut 1² + 4 = 5 : l’égalité est fausse."
+    },
+    {
+     "type": "zone",
+     "document": "hugo",
+     "enonce": "Touche les calculs qui sont faux d’après le test.",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "aide": "Compare les deux valeurs de chaque ligne : sont-elles égales ?",
+     "explication": "Ligne 1 : 9 ≠ 5 ; ligne 3 : 2/3 ≠ 3/5. En revanche la ligne 2 donne 3 = 3 : l’égalité est vraie (pour x ≠ 2).",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour (x² − 4)/(x − 2), quelle valeur de x est interdite ?",
+     "reponse": 2,
+     "aide": "Un quotient n’existe pas quand le dénominateur est nul.",
+     "explication": "x − 2 = 0 donne x = **2** : c’est la valeur interdite. Pour x ≠ 2, (x − 2)(x + 2)/(x − 2) = x + 2."
+    },
+    {
+     "type": "trous",
+     "enonce": "Rends rationnel le dénominateur de 1/√5 : multiplie le haut et le bas par √5.",
+     "texte": "1/√5 = √5 / ___",
+     "reponses": [
+      [
+       "5"
+      ]
+     ],
+     "aide": "Au dénominateur, √5 × √5 = 5.",
+     "explication": "1/√5 = (1 × √5)/(√5 × √5) = **√5/5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’exposant correct de a dans (a³)² × a⁻⁴ ?",
+     "reponse": 2,
+     "aide": "(a³)² = a⁶ ; ensuite on ajoute les exposants : 6 + (−4).",
+     "explication": "(a³)² = a⁶, puis a⁶ × a⁻⁴ = a⁶⁻⁴ = **a²** : l’exposant est 2, et non −2."
+    }
+   ]
+  },
+  {
+   "chapitre": "d513d5d5-e95d-5b04-b628-b4a1970f42bb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les calculs de tête de Sacha",
+   "competence": "calculer",
+   "situation": "Sacha adore calculer de tête : il décompose les nombres pour utiliser une identité remarquable. Il a collé les trois formules sur un panneau de sa chambre.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Les trois identités",
+     "sousTitre": "a et b sont deux nombres quelconques",
+     "emoji": "🧮",
+     "lignes": [
+      {
+       "texte": "Identité 1",
+       "valeur": "(a + b)² = a² + 2ab + b²",
+       "id": "i1"
+      },
+      {
+       "texte": "Identité 2",
+       "valeur": "(a − b)² = a² − 2ab + b²",
+       "id": "i2"
+      },
+      {
+       "texte": "Identité 3",
+       "valeur": "(a + b)(a − b) = a² − b²",
+       "id": "i3"
+      }
+     ],
+     "pied": "Panneau imaginé pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "enonce": "Pour calculer 103 × 97 de tête, touche l’identité que Sacha utilise.",
+     "reponse": [
+      "i3"
+     ],
+     "aide": "Écris 103 = 100 + 3 et 97 = 100 − 3 : quelle forme de produit obtiens-tu ?",
+     "explication": "103 × 97 = (100 + 3)(100 − 3) : c’est la forme **(a + b)(a − b)** de l’identité 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule 103 × 97.",
+     "reponse": 9991,
+     "aide": "Applique a² − b² avec a = 100 et b = 3.",
+     "explication": "103 × 97 = 100² − 3² = 10 000 − 9 = **9 991**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Pour 51², Sacha écrit 51 = 50 + 1. Complète.",
+     "texte": "51² = (50 + ___)² = 2 500 + ___ + 1 = ___",
+     "reponses": [
+      [
+       "1"
+      ],
+      [
+       "100"
+      ],
+      [
+       "2601",
+       "2 601"
+      ]
+     ],
+     "aide": "Identité 1 : le double produit est 2 × 50 × 1.",
+     "explication": "51² = (50 + 1)² = 50² + 2 × 50 × 1 + 1² = 2 500 + **100** + 1 = **2 601**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule 29² en écrivant 29 = 30 − 1.",
+     "reponse": 841,
+     "aide": "Identité 2 : a² − 2ab + b² avec a = 30 et b = 1.",
+     "explication": "29² = 30² − 2 × 30 × 1 + 1² = 900 − 60 + 1 = **841**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d513d5d5-e95d-5b04-b628-b4a1970f42bb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le potager qui s’agrandit",
+   "competence": "geometrie",
+   "situation": "Nina a un potager carré de côté x mètres. Elle l’agrandit en ajoutant 3 m sur deux côtés : le potager reste carré, de côté x + 3. Le plan montre les quatre pièces qui le composent (ici x = 5).",
+   "documents": [
+    {
+     "id": "potager",
+     "type": "figure",
+     "titre": "Le potager agrandi",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "p00",
+       "x": 1,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "p10",
+       "x": 6,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "p20",
+       "x": 9,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "p01",
+       "x": 1,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "p11",
+       "x": 6,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "p21",
+       "x": 9,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "p02",
+       "x": 1,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "p12",
+       "x": 6,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "p22",
+       "x": 9,
+       "y": 9,
+       "cache": true
+      }
+     ],
+     "polygones": [
+      {
+       "id": "vieux",
+       "sommets": [
+        "p00",
+        "p10",
+        "p11",
+        "p01"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "id": "droite",
+       "sommets": [
+        "p10",
+        "p20",
+        "p21",
+        "p11"
+       ],
+       "teinte": "turquoise",
+       "motif": "clair"
+      },
+      {
+       "id": "haut",
+       "sommets": [
+        "p01",
+        "p11",
+        "p12",
+        "p02"
+       ],
+       "teinte": "turquoise",
+       "motif": "clair"
+      },
+      {
+       "id": "coin",
+       "sommets": [
+        "p11",
+        "p21",
+        "p22",
+        "p12"
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      }
+     ],
+     "segments": [
+      {
+       "de": "p00",
+       "a": "p10",
+       "longueur": "x",
+       "style": "pointilles"
+      },
+      {
+       "de": "p10",
+       "a": "p20",
+       "longueur": "3",
+       "style": "pointilles"
+      },
+      {
+       "de": "p00",
+       "a": "p01",
+       "longueur": "x",
+       "style": "pointilles"
+      },
+      {
+       "de": "p01",
+       "a": "p02",
+       "longueur": "3",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Plan schématique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "potager",
+     "enonce": "Touche la pièce dont l’aire est 3 × 3 = 9 m².",
+     "reponse": [
+      "coin"
+     ],
+     "aide": "Cherche la pièce dont les deux côtés mesurent 3 m.",
+     "explication": "Le petit carré du coin a pour côtés 3 et 3 : son aire est **9 m²**. Les deux rectangles mesurent x sur 3, soit 3x chacun."
+    },
+    {
+     "type": "trous",
+     "enonce": "L’aire totale est (x + 3)². Complète son développement.",
+     "texte": "(x + 3)² = x² + ___x + ___",
+     "reponses": [
+      [
+       "6"
+      ],
+      [
+       "9"
+      ]
+     ],
+     "aide": "Additionne les aires : x² + 3x + 3x + 9.",
+     "explication": "x² + 3x + 3x + 9 = x² + **6x** + **9**. C’est l’identité (a + b)² = a² + 2ab + b² avec a = x et b = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’aire totale pour x = 5 m.",
+     "reponse": 64,
+     "aide": "Remplace x par 5 dans (x + 3)².",
+     "explication": "(5 + 3)² = 8² = **64 m²**. Contrôle : 25 + 30 + 9 = 64.",
+     "unite": "m²"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Nina hésite pour un autre carré. Quel est le coefficient de x dans le développement de (2x + 5)² ?",
+     "reponse": 20,
+     "aide": "Le double produit est 2 × a × b avec a = 2x et b = 5.",
+     "explication": "Le double produit est 2 × 2x × 5 = **20x** : le coefficient de x est 20. (Et (2x + 5)² = 4x² + 20x + 25.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "d513d5d5-e95d-5b04-b628-b4a1970f42bb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le coffre à deux serrures",
+   "competence": "resoudre",
+   "situation": "Dans un jeu d’évasion, un coffre s’ouvre avec le nombre positif x qui vérifie l’équation (2x + 1)² − 9 = 0. Un indice rappelle le nombre de solutions de trois équations voisines : il faut ne pas les confondre.",
+   "documents": [
+    {
+     "id": "enigme",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’énigme du coffre",
+     "blocs": [
+      "(2x + 1)² − 9 = 0",
+      "Le code est la solution positive de cette équation."
+     ],
+     "source": "Énigme écrite pour l’exercice"
+    },
+    {
+     "id": "trois",
+     "type": "tableau",
+     "titre": "Trois équations voisines",
+     "colonnes": [
+      "N°",
+      "Équation"
+     ],
+     "lignes": [
+      [
+       "E1",
+       "x² − 49 = 0"
+      ],
+      [
+       "E2",
+       "x² + 14x + 49 = 0"
+      ],
+      [
+       "E3",
+       "x² + 49 = 0"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Équations choisies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de résolution de (2x + 1)² − 9 = 0.",
+     "items": [
+      "On reconnaît a² − b² avec a = 2x + 1 et b = 3",
+      "On factorise : (2x + 1 − 3)(2x + 1 + 3) = 0",
+      "On simplifie : (2x − 2)(2x + 4) = 0",
+      "Un produit est nul si l’un de ses facteurs est nul",
+      "On résout 2x − 2 = 0 ou 2x + 4 = 0"
+     ],
+     "aide": "Factorise avant de résoudre : on reconnaît d’abord la forme a² − b².",
+     "explication": "On factorise avec **a² − b² = (a − b)(a + b)**, puis on utilise la règle du produit nul."
+    },
+    {
+     "type": "trous",
+     "enonce": "Vérifie la factorisation : (2x + 1)² − 9 = (2x − 2)(2x + ___).",
+     "texte": "(2x − 2)(2x + ___) = 0",
+     "reponses": [
+      [
+       "4"
+      ]
+     ],
+     "aide": "Calcule 2x + 1 + 3.",
+     "explication": "(2x + 1 − 3)(2x + 1 + 3) = (2x − 2)(2x + **4**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le code du coffre (la solution positive) ?",
+     "reponse": 1,
+     "aide": "Résous 2x − 2 = 0.",
+     "explication": "2x − 2 = 0 donne x = **1**. L’autre facteur 2x + 4 = 0 donne x = −2, qui n’est pas positif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’autre solution de l’équation (la solution négative) ?",
+     "reponse": -2,
+     "aide": "Résous 2x + 4 = 0.",
+     "explication": "2x + 4 = 0 donne 2x = −4, soit x = **−2**. S = {−2 ; 1}."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque équation du tableau à son nombre de solutions réelles.",
+     "paires": [
+      [
+       "E1 : x² − 49 = 0",
+       "2 solutions"
+      ],
+      [
+       "E2 : x² + 14x + 49 = 0",
+       "1 solution"
+      ],
+      [
+       "E3 : x² + 49 = 0",
+       "Aucune solution"
+      ]
+     ],
+     "aide": "Factorise E1 et E2 ; pour E3, un carré peut-il être égal à −49 ?",
+     "explication": "E1 = (x − 7)(x + 7) donne ±7 : **2 solutions**. E2 = (x + 7)² ne s’annule qu’en −7 : **1 solution**. E3 : x² = −49 est impossible : **aucune**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae2a882f-7b8b-53bb-80bf-21b8b4812122",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux formules pour le ciné-club",
+   "competence": "modeliser",
+   "situation": "Léa hésite entre deux formules du ciné-club : la formule A demande un abonnement et des séances moins chères ; la formule B n’a pas d’abonnement. Elle cherche à partir de combien de séances A devient avantageuse.",
+   "documents": [
+    {
+     "id": "tarifs",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ciné-club du quartier",
+     "sousTitre": "Deux formules",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "Formule A : abonnement (une seule fois)",
+       "valeur": "10 €",
+       "id": "abo"
+      },
+      {
+       "texte": "Formule A : prix par séance",
+       "valeur": "4 €",
+       "id": "seanceA"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Formule B : prix par séance",
+       "valeur": "6 €",
+       "id": "seanceB"
+      }
+     ],
+     "pied": "Tarifs imaginés pour l’exercice",
+     "teinte": "rose"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tarifs",
+     "enonce": "Touche la ligne qui donne le prix d’une séance avec la formule B.",
+     "reponse": [
+      "seanceB"
+     ],
+     "aide": "La formule B n’a pas d’abonnement.",
+     "explication": "Avec la formule B, une séance coûte **6 €**, sans abonnement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien Léa paie-t-elle pour 3 séances avec la formule A ?",
+     "reponse": 22,
+     "aide": "Abonnement + 3 fois le prix d’une séance.",
+     "explication": "10 + 3 × 4 = 10 + 12 = **22 €**.",
+     "unite": "€"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour combien de séances les deux formules coûtent-elles exactement pareil ? Résous 10 + 4x = 6x.",
+     "reponse": 5,
+     "aide": "Regroupe les x d’un côté : 10 = 6x − 4x.",
+     "explication": "10 + 4x = 6x donne 10 = 2x, soit x = **5** séances : 10 + 20 = 30 = 6 × 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de combien de séances la formule A est-elle strictement moins chère ? Résous 10 + 4x < 6x.",
+     "reponse": 6,
+     "aide": "L’inéquation donne x > 5 : quel est le plus petit entier strictement plus grand que 5 ?",
+     "explication": "10 + 4x < 6x donne 10 < 2x, soit x > 5. Le plus petit entier est **6** séances."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae2a882f-7b8b-53bb-80bf-21b8b4812122",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le four qui refroidit",
+   "competence": "resoudre",
+   "situation": "Après la cuisson, la température d’un four est donnée par T(t) = 220 − 12t (en °C), où t est le temps écoulé en minutes. Élodie a relevé quelques valeurs. Elle peut sortir ses gâteaux dès que T ≤ 100 °C.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température du four",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        220,
+        196,
+        172,
+        148,
+        124,
+        100,
+        76
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 60,
+      "max": 240,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps écoulé (min)"
+     },
+     "valeurs": false,
+     "source": "T(t) = 220 − 12t, valeurs calculées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis le graphique : quelle est la température au bout de 6 minutes ?",
+     "reponse": 148,
+     "aide": "Cherche la graduation 6 sur l’axe du temps, puis monte jusqu’au point.",
+     "explication": "Le point d’abscisse 6 a pour ordonnée **148 °C** (220 − 12 × 6 = 148).",
+     "unite": "°C"
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche le point où le four atteint 100 °C.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche l’ordonnée 100 sur la courbe.",
+     "explication": "Au bout de **10 minutes**, T = 220 − 120 = 100 °C : c’est le sixième point de la courbe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 220 − 12t ≤ 100. Au bout de combien de minutes au minimum Élodie peut-elle sortir ses gâteaux ?",
+     "reponse": 10,
+     "aide": "Soustrais 220 aux deux membres, puis divise par −12 : le sens de l’inégalité change.",
+     "explication": "−12t ≤ −120. On divise par −12 (négatif) : on **inverse** le sens, t ≥ **10** minutes.",
+     "unite": "min"
+    },
+    {
+     "type": "choix",
+     "enonce": "Élodie divise −12t ≤ −120 par −12 et écrit t ≤ 10. Quelle est son erreur ?",
+     "options": [
+      "Elle n’a pas changé le sens de l’inégalité",
+      "Elle aurait dû multiplier par 12 au lieu de diviser",
+      "Elle a oublié d’ajouter 220 de chaque côté",
+      "Il n’y a aucune erreur dans sa résolution"
+     ],
+     "reponse": 0,
+     "aide": "Le graphique le montre : à t = 4, le four est-il à 100 °C ou moins ?",
+     "explication": "Diviser par un nombre **négatif** inverse le sens : on obtient t ≥ 10. Avec t ≤ 10, elle sortirait les gâteaux au bout de 4 minutes, à 172 °C !"
+    }
+   ]
+  },
+  {
+   "chapitre": "ae2a882f-7b8b-53bb-80bf-21b8b4812122",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bonus de vitesse",
+   "competence": "raisonner",
+   "situation": "Dans un jeu vidéo, le bonus de vitesse d’un joueur est donné par B(x) = (x − 1)/(x + 4), où x est le nombre de niveaux franchis. Le bonus n’est débloqué que lorsque B(x) ≥ 0. Mathis résout l’inéquation avec un tableau de signes.",
+   "documents": [
+    {
+     "id": "signes",
+     "type": "tableau",
+     "titre": "Tableau de signes de (x − 1)/(x + 4)",
+     "colonnes": [
+      "x",
+      "]−∞ ; −4[",
+      "−4",
+      "]−4 ; 1[",
+      "1",
+      "]1 ; +∞["
+     ],
+     "lignes": [
+      [
+       "x + 4",
+       "−",
+       "0",
+       "+",
+       "+",
+       "+"
+      ],
+      [
+       "x − 1",
+       "−",
+       "−",
+       "−",
+       "0",
+       "+"
+      ],
+      [
+       "(x − 1)/(x + 4)",
+       "+",
+       "||",
+       "−",
+       "0",
+       "+"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau construit pour l’exercice"
+    },
+    {
+     "id": "tests",
+     "type": "droite",
+     "titre": "Cinq valeurs testées par Mathis",
+     "min": -6,
+     "max": 4,
+     "pas": 1,
+     "points": [
+      {
+       "id": "p",
+       "valeur": -5,
+       "nom": "P"
+      },
+      {
+       "id": "q",
+       "valeur": -2,
+       "nom": "Q"
+      },
+      {
+       "id": "r",
+       "valeur": 0,
+       "nom": "R"
+      },
+      {
+       "id": "s",
+       "valeur": 1,
+       "nom": "S"
+      },
+      {
+       "id": "t",
+       "valeur": 3,
+       "nom": "T"
+      }
+     ],
+     "source": "Valeurs choisies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur de x est interdite dans le quotient (x − 1)/(x + 4) ? (c’est la double barre du tableau)",
+     "reponse": -4,
+     "aide": "Un quotient n’existe pas quand son dénominateur est nul.",
+     "explication": "x + 4 = 0 donne x = **−4** : le quotient n’existe pas, on met une double barre."
+    },
+    {
+     "type": "zone",
+     "document": "signes",
+     "enonce": "Touche les cases du tableau où le quotient est strictement positif.",
+     "reponse": [
+      "r2c1",
+      "r2c5"
+     ],
+     "aide": "Regarde la dernière ligne et cherche le signe « + ».",
+     "explication": "Sur ]−∞ ; −4[ les deux facteurs sont négatifs : quotient **positif**. Sur ]1 ; +∞[ ils sont positifs : quotient **positif**. Entre −4 et 1, il est négatif.",
+     "multiple": true
+    },
+    {
+     "type": "zone",
+     "document": "tests",
+     "enonce": "Touche les valeurs testées qui débloquent le bonus (B(x) ≥ 0).",
+     "reponse": [
+      "p",
+      "s",
+      "t"
+     ],
+     "aide": "Place chaque valeur dans la ligne du quotient du tableau, sans oublier que 1 annule le quotient.",
+     "explication": "P = −5 est dans ]−∞ ; −4[ (+) ; S = 1 annule le quotient (0, donc ≥ 0 est vrai) ; T = 3 est dans ]1 ; +∞[ (+). Q = −2 et R = 0 sont entre −4 et 1 : négatif.",
+     "multiple": true
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’ensemble des solutions de (x − 1)/(x + 4) ≥ 0.",
+     "texte": "S = ]−∞ ; ___[ ∪ [___ ; +∞[",
+     "reponses": [
+      [
+       "−4",
+       "-4"
+      ],
+      [
+       "1"
+      ]
+     ],
+     "aide": "Le crochet en −4 est ouvert (valeur interdite) ; en 1 le quotient vaut 0, ce qui convient pour « ≥ ».",
+     "explication": "On garde les intervalles « + » et le 0 : −4 est **exclu** (valeur interdite), 1 est **inclus**. S = **]−∞ ; −4[ ∪ [1 ; +∞[**.",
+     "banque": [
+      "−4",
+      "−1",
+      "1",
+      "4"
+     ]
+    }
+   ]
+  },
+  {
+   "chapitre": "ebf88cac-fd60-5a8a-aa2d-6da9a219314a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le drone au-dessus de la route",
+   "competence": "geometrie",
+   "situation": "Un drone est en M, au-dessus d’une route rectiligne (d). Le point H est le point de la route situé juste en dessous de lui. Des relais sont posés en A et en B, sur la route.",
+   "documents": [
+    {
+     "id": "drone",
+     "type": "figure",
+     "titre": "Le drone et la route (1 carreau = 1 m)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "M",
+       "x": 5,
+       "y": 4,
+       "position": "n"
+      },
+      {
+       "id": "H",
+       "x": 5,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "P",
+       "x": 0,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "Q",
+       "x": 10,
+       "y": 1,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "P",
+        "Q"
+       ],
+       "nom": "(d)",
+       "teinte": "encre"
+      }
+     ],
+     "segments": [
+      {
+       "id": "mh",
+       "de": "M",
+       "a": "H",
+       "teinte": "violet",
+       "longueur": "3 m"
+      },
+      {
+       "id": "ha",
+       "de": "H",
+       "a": "A",
+       "style": "pointilles",
+       "longueur": "4 m"
+      },
+      {
+       "id": "ma",
+       "de": "M",
+       "a": "A",
+       "style": "pointilles",
+       "teinte": "corail"
+      },
+      {
+       "id": "mb",
+       "de": "M",
+       "a": "B",
+       "style": "pointilles",
+       "teinte": "corail"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "H",
+       "de": "M",
+       "a": "B",
+       "droit": true
+      }
+     ],
+     "source": "Plan schématique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "drone",
+     "enonce": "Touche le projeté orthogonal du point M sur la droite (d).",
+     "reponse": [
+      "H"
+     ],
+     "aide": "C’est le point de (d) tel que (MH) est perpendiculaire à (d) : cherche le petit carré de l’angle droit.",
+     "explication": "Le projeté orthogonal de M sur (d) est le point **H** : (MH) ⊥ (d), comme l’indique l’angle droit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance MA entre le drone et le relais A ?",
+     "reponse": 5,
+     "aide": "Le triangle MHA est rectangle en H : applique Pythagore avec MH = 3 et HA = 4.",
+     "explication": "MA² = MH² + HA² = 9 + 16 = 25, donc MA = **5 m**.",
+     "unite": "m"
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel point de la route est le plus proche du drone ?",
+     "options": [
+      "H",
+      "A",
+      "B",
+      "Les trois sont à la même distance"
+     ],
+     "reponse": 0,
+     "aide": "Compare MH aux hypoténuses MA et MB : laquelle des distances est la plus courte ?",
+     "explication": "MH = 3 m alors que MA = MB = 5 m. Le projeté orthogonal est le point de la droite **le plus proche** de M : c’est **H**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebf88cac-fd60-5a8a-aa2d-6da9a219314a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chemin le plus court vers la route",
+   "competence": "raisonner",
+   "situation": "Un terrain triangulaire ABC est bordé par une route le long du côté [BC]. On a mesuré AB = 9 m, AC = 12 m et BC = 15 m. Le propriétaire veut tracer le chemin le plus court entre le sommet A et la route.",
+   "documents": [
+    {
+     "id": "terrain",
+     "type": "figure",
+     "titre": "Le terrain (hors échelle)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 2,
+       "y": 2,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": 8,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 10,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "H",
+       "x": 4.88,
+       "y": 5.84,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "9 m"
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "longueur": "12 m"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "15 m"
+      },
+      {
+       "id": "ah",
+       "de": "A",
+       "a": "H",
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "H",
+       "de": "A",
+       "a": "C",
+       "droit": true
+      }
+     ],
+     "source": "Plan schématique, hors échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule AB² + AC².",
+     "reponse": 225,
+     "aide": "Élève chaque longueur au carré : 9² = 81.",
+     "explication": "AB² + AC² = 81 + 144 = **225**, et BC² = 15² = 225 : les deux sont égaux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure du calcul précédent ?",
+     "options": [
+      "Rectangle en A (réciproque de Pythagore)",
+      "Rectangle en B (réciproque de Pythagore)",
+      "Rectangle en C (réciproque de Pythagore)",
+      "Pas rectangle (réciproque de Pythagore)"
+     ],
+     "reponse": 0,
+     "aide": "Quel est le plus grand côté ? L’angle droit est en face de lui.",
+     "explication": "BC² = AB² + AC² : par la **réciproque de Pythagore**, le triangle est rectangle en **A**, sommet opposé au plus grand côté [BC]."
+    },
+    {
+     "type": "zone",
+     "document": "terrain",
+     "enonce": "Touche le segment qui représente la distance de A à la route (BC).",
+     "reponse": [
+      "ah"
+     ],
+     "aide": "La distance d’un point à une droite se mesure par la perpendiculaire.",
+     "explication": "H est le projeté orthogonal de A sur (BC) : la distance de A à (BC) est la longueur **AH**, la plus courte de A à la route."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’aire du triangle ABC, rectangle en A.",
+     "reponse": 54,
+     "aide": "Aire = (AB × AC) ÷ 2.",
+     "explication": "(9 × 12) ÷ 2 = 108 ÷ 2 = **54 m²**.",
+     "unite": "m²"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sachant que l’aire vaut aussi (BC × AH) ÷ 2, calcule AH.",
+     "reponse": 7.2,
+     "aide": "Résous 15 × AH ÷ 2 = 54.",
+     "explication": "15 × AH = 108, donc AH = 108 ÷ 15 = **7,2 m**.",
+     "unite": "m"
+    }
+   ]
+  },
+  {
+   "chapitre": "ebf88cac-fd60-5a8a-aa2d-6da9a219314a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le projecteur de la scène triangulaire",
+   "competence": "geometrie",
+   "situation": "Une scène de spectacle a la forme d’un triangle ABC. Le régisseur doit placer le projecteur à l’endroit où se coupent les trois médianes, et choisir d’autres points particuliers pour le micro, la lampe et le pied de caméra.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "figure",
+     "titre": "La scène (1 carreau = 1 m)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 7,
+       "position": "n"
+      },
+      {
+       "id": "I",
+       "x": 7,
+       "y": 4,
+       "position": "e"
+      },
+      {
+       "id": "J",
+       "x": 3,
+       "y": 4,
+       "position": "o"
+      },
+      {
+       "id": "K",
+       "x": 5,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "G",
+       "x": 5,
+       "y": 3,
+       "position": "o"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "A"
+      },
+      {
+       "de": "A",
+       "a": "I",
+       "teinte": "violet",
+       "style": "pointilles"
+      },
+      {
+       "de": "B",
+       "a": "J",
+       "teinte": "violet",
+       "style": "pointilles"
+      },
+      {
+       "de": "C",
+       "a": "K",
+       "teinte": "violet",
+       "style": "pointilles",
+       "longueur": "6 m"
+      }
+     ],
+     "source": "I, J et K sont les milieux de [BC], [AC] et [AB]"
+    },
+    {
+     "id": "cahier",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cahier des charges",
+     "sousTitre": "Où poser quoi ?",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Projecteur : au croisement des trois médianes"
+      },
+      {
+       "texte": "Micro : à égale distance des trois sommets"
+      },
+      {
+       "texte": "Lampe : à égale distance des trois côtés"
+      },
+      {
+       "texte": "Caméra : au croisement des trois hauteurs"
+      }
+     ],
+     "pied": "Document imaginé pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "enonce": "Touche l’endroit où se croisent les trois médianes : le centre de gravité.",
+     "reponse": [
+      "G"
+     ],
+     "aide": "Une médiane relie un sommet au milieu du côté opposé : cherche le point commun aux trois traits en pointillés.",
+     "explication": "Les médianes [AI], [BJ] et [CK] se coupent en **G** : c’est le centre de gravité du triangle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La médiane [CK] mesure 6 m. Le centre de gravité est aux deux tiers de la médiane depuis le sommet : quelle est la longueur CG ?",
+     "reponse": 4,
+     "aide": "Calcule les deux tiers de 6.",
+     "explication": "CG = (2/3) × 6 = **4 m**. Sur le plan, G est bien à 4 carreaux de C.",
+     "unite": "m"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est alors la longueur GK ?",
+     "reponse": 2,
+     "aide": "GK = CK − CG.",
+     "explication": "GK = 6 − 4 = **2 m** : G est à un tiers de la médiane depuis le milieu K.",
+     "unite": "m"
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque point du cahier des charges au point remarquable du triangle correspondant.",
+     "paires": [
+      [
+       "Le projecteur : croisement des médianes",
+       "Centre de gravité"
+      ],
+      [
+       "Le micro : équidistant des sommets",
+       "Centre du cercle circonscrit"
+      ],
+      [
+       "La lampe : équidistante des côtés",
+       "Centre du cercle inscrit"
+      ],
+      [
+       "La caméra : croisement des hauteurs",
+       "Orthocentre"
+      ]
+     ],
+     "aide": "Les médiatrices donnent le cercle circonscrit, les bissectrices le cercle inscrit.",
+     "explication": "Médianes → **centre de gravité** ; médiatrices (équidistant des sommets) → **centre du cercle circonscrit** ; bissectrices (équidistant des côtés) → **centre du cercle inscrit** ; hauteurs → **orthocentre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "27b703e8-ce8e-5098-8991-6c9faf1c90cc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les deux grues du chantier",
+   "competence": "geometrie",
+   "situation": "Sur un chantier, une grue déplace une caisse du point A au point B. Une seconde grue fait exactement le même déplacement, mais en partant du point C : elle dépose la caisse en D.",
+   "documents": [
+    {
+     "id": "grues",
+     "type": "figure",
+     "titre": "Le plan du chantier (1 carreau = 1 m)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": 5,
+       "y": 5,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "cd",
+       "de": "C",
+       "a": "D",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C",
+       "style": "pointilles"
+      },
+      {
+       "id": "bd",
+       "de": "B",
+       "a": "D",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Plan schématique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "grues",
+     "enonce": "Touche le segment qui représente le même déplacement que celui de A vers B (le vecteur AB).",
+     "reponse": [
+      "cd"
+     ],
+     "aide": "Même direction, même sens, même longueur : cherche le segment parallèle à [AB] qui part de C.",
+     "explication": "Le déplacement de C vers D est le même que de A vers B : **CD = AB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de carreaux vers la droite le vecteur AB déplace-t-il la caisse ?",
+     "reponse": 3,
+     "aide": "Compte les carreaux entre l’abscisse de A et celle de B.",
+     "explication": "A est à l’abscisse 1 et B à l’abscisse 4 : le déplacement est de 4 − 1 = **3** carreaux vers la droite.",
+     "unite": "carreaux"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’égalité des deux vecteurs.",
+     "texte": "AB = ___",
+     "reponses": [
+      [
+       "CD"
+      ]
+     ],
+     "aide": "Cherche le vecteur qui part de C pour arriver en D.",
+     "explication": "Les deux grues font le même déplacement : **AB = CD**. Cela signifie que ABDC est un parallélogramme.",
+     "banque": [
+      "CD",
+      "DC",
+      "AC",
+      "BD"
+     ]
+    }
+   ]
+  },
+  {
+   "chapitre": "27b703e8-ce8e-5098-8991-6c9faf1c90cc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La tournée du livreur",
+   "competence": "raisonner",
+   "situation": "Un livreur part de la boulangerie A, passe par le collège B, puis la mairie C, et termine à la gare D. Il veut savoir à quel seul déplacement équivaut chacune de ses étapes.",
+   "documents": [
+    {
+     "id": "tournee",
+     "type": "figure",
+     "titre": "La tournée (1 carreau = 1 km)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "D",
+       "x": 10,
+       "y": 6,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "teinte": "violet"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "teinte": "turquoise"
+      },
+      {
+       "de": "C",
+       "a": "D",
+       "teinte": "corail"
+      }
+     ],
+     "source": "Plan schématique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tournee",
+     "enonce": "Le trajet AB + BC se résume à un seul déplacement qui part de A. Touche le point d’arrivée de ce déplacement.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Enchaîne les deux déplacements : on va de A à B, puis de B à…",
+     "explication": "D’après la relation de Chasles, **AB + BC = AC** : le livreur arrive en **C**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque somme à son résultat.",
+     "paires": [
+      [
+       "AB + BC + CD",
+       "AD"
+      ],
+      [
+       "AC + CB",
+       "AB"
+      ],
+      [
+       "AB + BA",
+       "le vecteur nul"
+      ],
+      [
+       "AB − AC",
+       "CB"
+      ]
+     ],
+     "aide": "Pour AB − AC, écris AB + CA (l’opposé de AC) puis réordonne.",
+     "explication": "Chasles : AB + BC + CD = **AD** ; AC + CB = **AB** ; AB + BA = **0** (on revient au départ) ; AB − AC = AB + CA = CA + AB = **CB**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le trajet aller AB mesure 4 km. Quelle est la norme du vecteur −3AB ?",
+     "reponse": 12,
+     "aide": "Multiplier par −3 change le sens, mais la norme est multipliée par |−3| = 3.",
+     "explication": "La norme de −3AB est |−3| × 4 = **12 km** : une norme est toujours positive, seul le sens change.",
+     "unite": "km"
+    }
+   ]
+  },
+  {
+   "chapitre": "27b703e8-ce8e-5098-8991-6c9faf1c90cc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vol du drone en parallélogramme",
+   "competence": "resoudre",
+   "situation": "Un drone décrit le parallélogramme ABCD au-dessus d’un champ, puis traverse par les diagonales [AC] et [BD]. Pour programmer ses déplacements, on exprime chaque trajet avec les vecteurs AB et AD.",
+   "documents": [
+    {
+     "id": "champ",
+     "type": "figure",
+     "titre": "Le champ (1 carreau = 1 m)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 3,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C",
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "id": "bd",
+       "de": "B",
+       "a": "D",
+       "style": "pointilles",
+       "teinte": "corail"
+      }
+     ],
+     "source": "Plan schématique"
+    },
+    {
+     "id": "deplacements",
+     "type": "tableau",
+     "titre": "Déplacements en carreaux",
+     "colonnes": [
+      "Vecteur",
+      "Vers la droite",
+      "Vers le haut"
+     ],
+     "lignes": [
+      [
+       "AB",
+       "5",
+       "0"
+      ],
+      [
+       "AD",
+       "2",
+       "3"
+      ],
+      [
+       "AC",
+       "?",
+       "?"
+      ],
+      [
+       "BD",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs lues sur le plan"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "champ",
+     "enonce": "Touche la diagonale qui représente la somme AB + AD (règle du parallélogramme).",
+     "reponse": [
+      "ac"
+     ],
+     "aide": "Pour deux vecteurs de même origine A, la somme est la diagonale issue de A.",
+     "explication": "AB et AD partent du même point A : leur somme est la diagonale issue de A, **AC**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour exprimer BD avec AB et AD (relation de Chasles).",
+     "texte": "BD = ___ + ___",
+     "reponses": [
+      [
+       "BA"
+      ],
+      [
+       "AD"
+      ]
+     ],
+     "aide": "Pour aller de B à D, on peut passer par A.",
+     "explication": "BD = BA + AD (Chasles) : on revient de B à A, puis on va de A à D. Comme BA = −AB, **BD = AD − AB**.",
+     "banque": [
+      "BA",
+      "AB",
+      "AD",
+      "DA"
+     ]
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le tableau, complète la case « vers la droite » de AC = AB + AD.",
+     "reponse": 7,
+     "aide": "Additionne les déplacements vers la droite de AB et de AD.",
+     "explication": "AC = AB + AD : vers la droite, 5 + 2 = **7** carreaux ; vers le haut, 0 + 3 = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Complète maintenant la case « vers la droite » de BD = AD − AB (un nombre négatif signifie « vers la gauche »).",
+     "reponse": -3,
+     "aide": "Soustrais : (vers la droite de AD) − (vers la droite de AB).",
+     "explication": "BD = AD − AB : 2 − 5 = **−3** vers la droite, soit 3 carreaux vers la gauche ; et 3 − 0 = 3 vers le haut."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6fc7a9d-dc23-5456-bb58-751dc2551f24",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La carte au trésor de Camille",
+   "competence": "geometrie",
+   "situation": "Camille a dessiné la carte au trésor du camp d’été dans un repère orthonormé (1 carreau = 1 m). Le départ est en P, un arbre en Q et le trésor est caché à côté du rocher R.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "figure",
+     "titre": "La carte au trésor",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 9,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "P",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "Q",
+       "x": 4,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "R",
+       "x": 7,
+       "y": 2,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "P",
+       "a": "Q",
+       "style": "pointilles",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Carte imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le point de coordonnées (7 ; 2).",
+     "reponse": [
+      "R"
+     ],
+     "aide": "Lis d’abord l’abscisse sur l’axe horizontal, puis l’ordonnée sur l’axe vertical.",
+     "explication": "Le point d’abscisse 7 et d’ordonnée 2 est le rocher **R**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Donne les coordonnées du vecteur PQ.",
+     "texte": "PQ ( ___ ; ___ )",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "4"
+      ]
+     ],
+     "aide": "On soustrait toujours l’origine à l’extrémité : (xQ − xP ; yQ − yP).",
+     "explication": "PQ(4 − 1 ; 5 − 1) = **(3 ; 4)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance PQ, en mètres ? (le repère est orthonormé)",
+     "reponse": 5,
+     "aide": "Utilise √((xQ − xP)² + (yQ − yP)²).",
+     "explication": "PQ = √(3² + 4²) = √25 = **5 m**.",
+     "unite": "m"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Camille pose une pelle au milieu de [PQ]. Quelle est l’abscisse de ce milieu ?",
+     "reponse": 2.5,
+     "aide": "L’abscisse du milieu est la moyenne des deux abscisses.",
+     "explication": "xM = (1 + 4)/2 = **2,5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6fc7a9d-dc23-5456-bb58-751dc2551f24",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le podium parallélogramme",
+   "competence": "raisonner",
+   "situation": "Pour un spectacle, on a placé quatre projecteurs aux points A(−2 ; 1), B(3 ; 2), C(5 ; 5) et D(0 ; 4). Le technicien veut vérifier, avec des coordonnées, que ABCD est un parallélogramme.",
+   "documents": [
+    {
+     "id": "podium",
+     "type": "figure",
+     "titre": "Les quatre projecteurs",
+     "cadre": {
+      "xmin": -3,
+      "xmax": 7,
+      "ymin": -1,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": -2,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 3,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      }
+     ],
+     "source": "Plan imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Calcule les coordonnées du vecteur AB.",
+     "texte": "AB ( ___ ; ___ )",
+     "reponses": [
+      [
+       "5"
+      ],
+      [
+       "1"
+      ]
+     ],
+     "aide": "On calcule (xB − xA ; yB − yA) : attention à soustraire −2.",
+     "explication": "AB(3 − (−2) ; 2 − 1) = **(5 ; 1)**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les coordonnées de DC sont (5 − 0 ; 5 − 4) = (5 ; 1). Que peut-on conclure ?",
+     "options": [
+      "ABCD est un parallélogramme, car AB = DC",
+      "ABCD n’est pas un parallélogramme, car AB ≠ DC",
+      "ABCD est un parallélogramme, car AB = AD",
+      "On ne peut rien conclure"
+     ],
+     "reponse": 0,
+     "aide": "Un quadrilatère ABCD est un parallélogramme quand AB = DC.",
+     "explication": "Les vecteurs AB et DC ont les mêmes coordonnées : **AB = DC**, donc ABCD est un **parallélogramme**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Autre méthode : quelle est l’abscisse du milieu de la diagonale [AC] ?",
+     "reponse": 1.5,
+     "aide": "Moyenne des abscisses de A et de C.",
+     "explication": "xI = (−2 + 5)/2 = 3/2 = **1,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée du milieu de la diagonale [BD] ?",
+     "reponse": 3,
+     "aide": "Moyenne des ordonnées de B et de D.",
+     "explication": "yJ = (2 + 4)/2 = **3**. Le milieu de [BD] est (1,5 ; 3), identique à celui de [AC] : les diagonales ont le même milieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6fc7a9d-dc23-5456-bb58-751dc2551f24",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les drones sont-ils alignés ?",
+   "competence": "resoudre",
+   "situation": "Lors d’un spectacle, cinq drones sont placés aux points A, B, C, D et E d’un repère orthonormé. Un sixième drone F doit se placer à l’abscisse 11 pour être aligné avec A et B. On utilise le critère de colinéarité : u(x ; y) et v(x’ ; y’) sont colinéaires si et seulement si xy’ − yx’ = 0.",
+   "documents": [
+    {
+     "id": "coord",
+     "type": "tableau",
+     "titre": "Coordonnées des drones",
+     "colonnes": [
+      "Drone",
+      "Abscisse",
+      "Ordonnée"
+     ],
+     "lignes": [
+      [
+       "A",
+       "−1",
+       "2"
+      ],
+      [
+       "B",
+       "2",
+       "3"
+      ],
+      [
+       "C",
+       "8",
+       "5"
+      ],
+      [
+       "D",
+       "5",
+       "4"
+      ],
+      [
+       "E",
+       "6",
+       "3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Positions imaginées pour l’exercice"
+    },
+    {
+     "id": "ciel",
+     "type": "figure",
+     "titre": "Le ciel vu de dessus",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": -1,
+       "y": 2,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": 5,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "E",
+       "x": 6,
+       "y": 3,
+       "position": "se"
+      }
+     ],
+     "source": "Plan imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Les vecteurs AB et AC ont pour coordonnées (3 ; 1) et (9 ; 3). Calcule leur déterminant 3 × 3 − 1 × 9.",
+     "reponse": 0,
+     "aide": "Multiplie en croix : 3 × 3 puis 1 × 9, et soustrais.",
+     "explication": "3 × 3 − 1 × 9 = 9 − 9 = **0** : AB et AC sont colinéaires, donc A, B, C sont alignés."
+    },
+    {
+     "type": "zone",
+     "document": "ciel",
+     "enonce": "Touche les drones alignés avec A et B (parmi C, D et E).",
+     "reponse": [
+      "C",
+      "D"
+     ],
+     "aide": "Calcule les coordonnées de AD et AE, puis leur déterminant avec AB(3 ; 1).",
+     "explication": "AD(6 ; 2) : 3 × 2 − 1 × 6 = 0, aligné. AE(7 ; 1) : 3 × 1 − 1 × 7 = −4 ≠ 0, **pas** aligné. Les drones alignés sont **C et D**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le déterminant de AB(3 ; 1) et AE(7 ; 1).",
+     "reponse": -4,
+     "aide": "Multiplie en croix : 3 × 1 puis 1 × 7.",
+     "explication": "3 × 1 − 1 × 7 = 3 − 7 = **−4**. Il est non nul : AB et AE ne sont pas colinéaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le drone F a pour coordonnées (11 ; t). Pour quelle valeur de t est-il aligné avec A et B ?",
+     "reponse": 6,
+     "aide": "AF a pour coordonnées (12 ; t − 2). Écris det(AB, AF) = 0 : 3(t − 2) − 1 × 12 = 0.",
+     "explication": "3(t − 2) − 12 = 0 donne t − 2 = 4, soit t = **6**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2803fe6-baa3-5cc6-b2e1-54da7febc1cd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La course en taxi",
+   "competence": "lire-graphique",
+   "situation": "Un taxi facture une prise en charge fixe, puis un prix par kilomètre. Le graphique ci-dessous donne le prix de la course y (en €) en fonction du nombre x de kilomètres : les points sont alignés sur une droite d’équation y = mx + p.",
+   "documents": [
+    {
+     "id": "taxi",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Prix de la course",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Prix",
+       "valeurs": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Distance (km)"
+     },
+     "valeurs": false,
+     "source": "Tarifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "taxi",
+     "enonce": "Touche le point qui donne la prise en charge (le prix pour 0 km).",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "La prise en charge est payée même si on ne roule pas : x = 0.",
+     "explication": "Pour 0 km, le prix est **3 €** : c’est l’ordonnée à l’origine p = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’euros le prix augmente-t-il quand on roule 1 km de plus ? C’est le coefficient directeur m.",
+     "reponse": 2,
+     "aide": "Compare les prix pour 1 km et 2 km.",
+     "explication": "Le prix passe de 5 € à 7 € : m = (7 − 5)/(2 − 1) = **2** €/km. La droite est y = 2x + 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec y = 2x + 3, quel est le prix d’une course de 10 km ?",
+     "reponse": 23,
+     "aide": "Remplace x par 10 dans l’équation.",
+     "explication": "y = 2 × 10 + 3 = 20 + 3 = **23 €**.",
+     "unite": "€"
+    }
+   ]
+  },
+  {
+   "chapitre": "e2803fe6-baa3-5cc6-b2e1-54da7febc1cd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le câble du téléphérique",
+   "competence": "geometrie",
+   "situation": "Un téléphérique relie la station A(1 ; 5) au sommet B(4 ; −1) dans un repère où l’unité est la centaine de mètres. Le câble suit la droite (AB). Des pylônes sont plantés en quatre points P, Q, R et S.",
+   "documents": [
+    {
+     "id": "cable",
+     "type": "figure",
+     "titre": "Le câble et les pylônes",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 8,
+      "ymin": -4,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": -1,
+       "position": "ne"
+      },
+      {
+       "id": "P",
+       "x": 2,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "Q",
+       "x": 3,
+       "y": 2,
+       "position": "ne"
+      },
+      {
+       "id": "R",
+       "x": 6,
+       "y": -4,
+       "position": "no"
+      },
+      {
+       "id": "S",
+       "x": 5,
+       "y": -3,
+       "position": "ne"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "A",
+        "B"
+       ],
+       "nom": "(AB)",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Plan imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quand on suit le câble de A vers B, la droite (AB)…",
+     "options": [
+      "descend",
+      "monte",
+      "est horizontale",
+      "est verticale"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’ordonnée de A (5) et celle de B (−1) quand x augmente.",
+     "explication": "L’ordonnée passe de 5 à −1 quand x augmente de 1 à 4 : la droite **descend**, son coefficient directeur est négatif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur m de (AB).",
+     "reponse": -2,
+     "aide": "m = (yB − yA)/(xB − xA).",
+     "explication": "m = (−1 − 5)/(4 − 1) = −6/3 = **−2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’ordonnée à l’origine p, sachant que la droite est y = −2x + p et qu’elle passe par A(1 ; 5).",
+     "reponse": 7,
+     "aide": "Remplace x par 1 et y par 5 : 5 = −2 × 1 + p.",
+     "explication": "5 = −2 + p donne p = **7**. L’équation réduite est **y = −2x + 7** (contrôle avec B : −8 + 7 = −1)."
+    },
+    {
+     "type": "zone",
+     "document": "cable",
+     "enonce": "Touche les pylônes situés sur la droite (AB).",
+     "reponse": [
+      "P",
+      "S"
+     ],
+     "aide": "Un point est sur la droite si ses coordonnées vérifient y = −2x + 7.",
+     "explication": "P(2 ; 3) : −4 + 7 = 3, **oui**. S(5 ; −3) : −10 + 7 = −3, **oui**. Q(3 ; 2) : −6 + 7 = 1 ≠ 2 ; R(6 ; −4) : −12 + 7 = −5 ≠ −4.",
+     "multiple": true
+    }
+   ]
+  },
+  {
+   "chapitre": "e2803fe6-baa3-5cc6-b2e1-54da7febc1cd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux drones, un point de rencontre",
+   "competence": "modeliser",
+   "situation": "Dans un spectacle de drones, trois trajectoires rectilignes sont programmées dans un repère orthonormé. Le plan de vol donne leurs équations. Les drones 1 et 2 vont-ils se croiser ? Et où ?",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Plan de vol",
+     "sousTitre": "Trois trajectoires",
+     "emoji": "🛸",
+     "lignes": [
+      {
+       "texte": "Drone 1",
+       "valeur": "y = 2x − 2",
+       "id": "d1"
+      },
+      {
+       "texte": "Drone 2",
+       "valeur": "2x + y − 10 = 0",
+       "id": "d2"
+      },
+      {
+       "texte": "Drone 3",
+       "valeur": "4x − 2y + 5 = 0",
+       "id": "d3"
+      }
+     ],
+     "pied": "Plan imaginé pour l’exercice",
+     "teinte": "turquoise"
+    },
+    {
+     "id": "repere",
+     "type": "figure",
+     "titre": "Les trajectoires des drones 1 et 2",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 8,
+      "ymin": -3,
+      "ymax": 10
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "a",
+       "x": 0,
+       "y": -2,
+       "cache": true
+      },
+      {
+       "id": "b",
+       "x": 4,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "c",
+       "x": 0,
+       "y": 10,
+       "cache": true
+      },
+      {
+       "id": "d",
+       "x": 5,
+       "y": 0,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "a",
+        "b"
+       ],
+       "nom": "(d1)",
+       "teinte": "violet"
+      },
+      {
+       "par": [
+        "c",
+        "d"
+       ],
+       "nom": "(d2)",
+       "teinte": "corail"
+      }
+     ],
+     "source": "Plan imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche la trajectoire parallèle à celle du drone 1.",
+     "reponse": [
+      "d3"
+     ],
+     "aide": "Écris chaque équation sous la forme y = mx + p : deux droites parallèles ont le même m.",
+     "explication": "Drone 3 : 4x − 2y + 5 = 0 donne y = 2x + 2,5. Son coefficient directeur est **2**, comme celui du drone 1 : les deux trajectoires sont parallèles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient directeur de la trajectoire du drone 2 ? (isole y dans 2x + y − 10 = 0)",
+     "reponse": -2,
+     "aide": "Passe 2x − 10 de l’autre côté : y = … .",
+     "explication": "2x + y − 10 = 0 donne y = −2x + 10 : le coefficient directeur est **−2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’abscisse du point de rencontre des drones 1 et 2 ? Résous 2x − 2 = −2x + 10.",
+     "reponse": 3,
+     "aide": "Regroupe les x : 4x = 12.",
+     "explication": "2x − 2 = −2x + 10 donne 4x = 12, soit x = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée de ce point de rencontre ?",
+     "reponse": 4,
+     "aide": "Remplace x par 3 dans y = 2x − 2.",
+     "explication": "y = 2 × 3 − 2 = **4**. Contrôle avec le drone 2 : −2 × 3 + 10 = 4. Le point de rencontre est (3 ; 4)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À l’abscisse 10, quelle est l’ordonnée de la trajectoire du drone 1 ?",
+     "reponse": 18,
+     "aide": "Remplace x par 10 dans y = 2x − 2.",
+     "explication": "y = 2 × 10 − 2 = **18**."
+    }
+   ]
+  }
+ ]
+}

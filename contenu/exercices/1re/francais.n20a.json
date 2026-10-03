@@ -1,0 +1,1818 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "efd79e0e-1586-56c6-908a-edb4bebc7d21",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un jeune dandy dans le Cénacle",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur les *Premières poésies* de Musset. Lis la carte d’identité du recueil, puis le tableau de ses grandes pièces.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Premières poésies",
+     "sousTitre": "Alfred de Musset (1810-1857)",
+     "emoji": "🌙",
+     "lignes": [
+      {
+       "texte": "Poèmes écrits",
+       "valeur": "De 1829 à 1835",
+       "id": "periode"
+      },
+      {
+       "texte": "Cercle fréquenté dès dix-sept ans",
+       "valeur": "Le Cénacle de Victor Hugo",
+       "id": "cercle"
+      },
+      {
+       "texte": "Premier succès",
+       "valeur": "À dix-neuf ans",
+       "id": "succes"
+      },
+      {
+       "texte": "Suite célèbre",
+       "valeur": "Les *Nuits* (1835-1837)",
+       "id": "nuits"
+      }
+     ],
+     "pied": "Le recueil des vers de jeunesse",
+     "teinte": "violet"
+    },
+    {
+     "id": "pieces",
+     "type": "tableau",
+     "titre": "Les grandes pièces du recueil",
+     "colonnes": [
+      "Œuvre",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "*Contes d’Espagne et d’Italie*",
+       "Publiés à dix-neuf ans"
+      ],
+      [
+       "*Namouna*, *Rolla*, *La Coupe et les Lèvres*",
+       "?"
+      ],
+      [
+       "« Ballade à la lune »",
+       "La lune comparée à un point sur un i : scandale et rires"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "cercle"
+     ],
+     "enonce": "Sur la carte d’identité, touche la ligne qui nomme le cercle romantique que Musset fréquente très jeune.",
+     "aide": "Cherche le nom d’un groupe d’écrivains, autour de Hugo.",
+     "explication": "Dès dix-sept ans, Musset fréquente le **Cénacle** de Victor Hugo, le grand cercle du romantisme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les premiers poèmes du recueil (1829) des derniers (1835) ?",
+     "reponse": 6,
+     "aide": "Lis la ligne « Poèmes écrits » de la carte, puis soustrais.",
+     "explication": "1835 − 1829 = **6 ans** : le recueil rassemble les vers de jeunesse de Musset sur six années.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour *Namouna*, *Rolla* et *La Coupe et les Lèvres* ?",
+     "options": [
+      "Les grands poèmes narratifs du recueil",
+      "Trois pièces de théâtre en prose",
+      "Des chansons populaires sans auteur",
+      "Des lettres adressées à Hugo"
+     ],
+     "reponse": 0,
+     "aide": "Ces trois titres ne sont pas de courtes pièces : ils racontent une histoire en vers.",
+     "explication": "Ce sont les **grands poèmes narratifs** du recueil, bien plus longs que les poèmes brefs comme la « Ballade à la lune »."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd79e0e-1586-56c6-908a-edb4bebc7d21",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le poète qui parle au lecteur",
+   "competence": "analyser-texte",
+   "situation": "Un lecteur de 1830 ouvre le recueil et s’étonne : ce poète romantique plaisante. Lis ce texte écrit pour l’exercice, puis complète le tableau du ton de Musset.",
+   "documents": [
+    {
+     "id": "lecteur",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un lecteur de 1830 ouvre le recueil",
+     "blocs": [
+      "Le poète [[c|s’adresse]] à lui sans prévenir, puis s’interrompt par une [[c|digression]] avant de reprendre son récit.",
+      "Plus loin, dans *Rolla*, un personnage regrette un temps de foi et accuse [[v|Voltaire]] d’avoir détruit les croyances."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "ton",
+     "type": "tableau",
+     "titre": "Le ton de Musset",
+     "colonnes": [
+      "Ce qu’il fait",
+      "Son effet"
+     ],
+     "lignes": [
+      [
+       "Il joue avec les codes du mouvement",
+       "Le romantisme se regarde"
+      ],
+      [
+       "Il multiplie les digressions et s’adresse au lecteur",
+       "?"
+      ],
+      [
+       "Il mêle passion et ironie",
+       "Rien n’est jamais tout à fait sérieux"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lecteur",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Dans le second paragraphe, touche le nom de celui que *Rolla* accuse d’avoir détruit les croyances.",
+     "aide": "C’est un philosophe du XVIIIe siècle, nommé dans la phrase.",
+     "explication": "*Rolla* accuse **Voltaire** : le poème s’ouvre sur la nostalgie d’un temps de foi, illustration du « mal du siècle »."
+    },
+    {
+     "type": "zone",
+     "document": "lecteur",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots du premier paragraphe qui montrent le poète en train de faire un clin d’œil au lecteur.",
+     "aide": "Un verbe qui dit qu’il parle à quelqu’un, un nom pour un détour.",
+     "explication": "Le poète **s’adresse** au lecteur et fait une **digression** : deux procédés qui créent une complicité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Une complicité avec le lecteur",
+      "Une distance glacée avec le lecteur",
+      "Un respect solennel du lecteur",
+      "Un oubli total du lecteur"
+     ],
+     "reponse": 0,
+     "aide": "Parler directement à quelqu’un, c’est le prendre à témoin.",
+     "explication": "Les digressions et les adresses créent **une complicité** entre le poète et son lecteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd79e0e-1586-56c6-908a-edb4bebc7d21",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un point sur un i",
+   "competence": "argumenter",
+   "situation": "Léa et Sacha lisent la « Ballade à la lune ». Elle y voit une moquerie, lui un simple pastiche. Tranche avec les vers, puis classe ce que fait et refuse Musset.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Début de la « Ballade à la lune »",
+     "blocs": [
+      "C’était, dans la nuit brune,",
+      "Sur le clocher jauni,",
+      "La lune",
+      "Comme un [[p|point]] sur un i."
+     ],
+     "source": "Alfred de Musset, « Ballade à la lune », *Contes d’Espagne et d’Italie*"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Musset se moque du romantisme : la lune, si poétique, devient un détail de typographie."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Non, il imite les romantiques : il prend la lune très au sérieux."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Alors pourquoi cette comparaison a-t-elle fait rire et scandale ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot du dernier vers qui rabaisse la lune au rang de détail minuscule.",
+     "aide": "La lune est comparée à une marque posée sur une lettre.",
+     "explication": "La lune devient un **point** sur un i : la comparaison rabaisse l’astre romantique par excellence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture les vers prouvent-ils ?",
+     "options": [
+      "Musset joue avec les codes romantiques et en rit",
+      "Musset imite fidèlement les poètes de Hugo",
+      "Musset refuse d’écrire sur la nature",
+      "Musset renonce à la rime et au vers"
+     ],
+     "reponse": 0,
+     "aide": "Relis la comparaison : est-elle respectueuse ou irrévérencieuse ?",
+     "explication": "Le décor romantique (nuit, clocher, lune) est détourné par une image triviale : Musset **joue avec les codes** et en rit. Léa a raison."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : Musset le fait, ou Musset le refuse ?",
+     "categories": [
+      "Il le fait",
+      "Il le refuse"
+     ],
+     "items": [
+      [
+       "Joue avec les codes du romantisme",
+       0
+      ],
+      [
+       "S’adresse au lecteur",
+       0
+      ],
+      [
+       "Mêle passion et ironie",
+       0
+      ],
+      [
+       "La solennité de Hugo",
+       1
+      ],
+      [
+       "Le militantisme littéraire",
+       1
+      ],
+      [
+       "L’état de plagiaire",
+       1
+      ]
+     ],
+     "aide": "Pense à la formule « Mon verre n’est pas grand, mais je bois dans mon verre ».",
+     "explication": "Musset **joue**, **s’adresse** au lecteur et **mêle passion et ironie** ; il refuse la **solennité de Hugo**, le **militantisme** et l’**imitation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un sujet sur l’originalité en art, quel exemple de Musset le cours conseille-t-il de citer ?",
+     "options": [
+      "Son refus de l’imitation, résumé par la formule du verre",
+      "Son amitié avec Hugo dans le Cénacle, dès dix-sept ans",
+      "Son succès précoce, publié à dix-neuf ans",
+      "Sa rupture douloureuse avec George Sand"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le geste d’un poète qui refuse de copier.",
+     "explication": "Pour l’**originalité**, on cite son **refus de l’imitation**, résumé par la formule du verre."
+    }
+   ]
+  },
+  {
+   "chapitre": "25c8a00a-0a7a-584b-b32f-3b7779cc7ef2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une troupe anglaise sous les sifflets",
+   "competence": "se-reperer-temps",
+   "situation": "En 1822, des comédiens anglais sont chassés d’un théâtre parisien. Place la polémique de Stendhal sur la frise, puis lis la carte du texte.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Autour des brochures de Stendhal",
+     "debut": 1820,
+     "fin": 1830,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "siffl",
+       "date": 1822,
+       "nom": "Comédiens sifflés"
+      },
+      {
+       "id": "b1",
+       "date": 1823,
+       "nom": "1re brochure"
+      },
+      {
+       "id": "b2",
+       "date": 1825,
+       "nom": "2e brochure"
+      },
+      {
+       "id": "crom",
+       "date": 1827,
+       "nom": "Préf. de Cromwell"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Racine et Shakespeare",
+     "sousTitre": "Stendhal (Henri Beyle, 1783-1842)",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Forme",
+       "valeur": "Deux brochures polémiques"
+      },
+      {
+       "texte": "Querelle",
+       "valeur": "Classiques contre romantiques"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "1823 et 1825",
+       "id": "pub"
+      }
+     ],
+     "pied": "Un pamphlet vif",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "siffl"
+     ],
+     "enonce": "Sur la frise, touche l’événement parisien qui nourrit la polémique.",
+     "aide": "Des acteurs anglais jouant Shakespeare, mal accueillis par le public.",
+     "explication": "En **1822**, la troupe anglaise est huée : le public y voit les ennemis de Waterloo. La querelle est lancée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les deux brochures de Stendhal ?",
+     "reponse": 2,
+     "aide": "Lis la ligne « Publication » de la carte, ou repère les deux brochures sur la frise.",
+     "explication": "1825 − 1823 = **2 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du texte.",
+     "texte": "Le texte est un ___ qui prend parti dans la querelle entre classiques et ___.",
+     "reponses": [
+      [
+       "pamphlet",
+       "pamphlets"
+      ],
+      [
+       "romantiques"
+      ]
+     ],
+     "banque": [
+      "pamphlet",
+      "romantiques",
+      "roman",
+      "réalistes"
+     ],
+     "aide": "La carte parle de brochures polémiques.",
+     "explication": "C’est un **pamphlet** qui défend les **romantiques** contre le respect aveugle des classiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "25c8a00a-0a7a-584b-b32f-3b7779cc7ef2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Vingt-quatre heures en trois",
+   "competence": "analyser-texte",
+   "situation": "Un spectateur de 1824 sort du théâtre en maugréant. Lis sa remarque, puis les recommandations de Stendhal.",
+   "documents": [
+    {
+     "id": "spect",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "À la sortie du théâtre",
+     "blocs": [
+      "« Comment croire qu’il s’est passé [[d|vingt-quatre]] heures en [[d|trois]] heures de spectacle ? » murmure un spectateur."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "reco",
+     "type": "tableau",
+     "titre": "Les recommandations de Stendhal",
+     "colonnes": [
+      "Recommandation",
+      "Raison"
+     ],
+     "lignes": [
+      [
+       "Abandonner les unités",
+       "Elles n’ajoutent rien au plaisir"
+      ],
+      [
+       "Écrire les tragédies en prose",
+       "?"
+      ],
+      [
+       "Prendre les sujets dans l’histoire nationale récente",
+       "Le spectateur s’y reconnaît"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spect",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les deux durées que le spectateur oppose.",
+     "aide": "Une durée dans la fiction, une durée dans la salle.",
+     "explication": "La durée de l’action (**vingt-quatre** heures) et celle du spectacle (**trois** heures) : voilà l’argument de la **vraisemblance** contre l’unité de temps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le vers éloigne le spectateur",
+      "La prose fatigue le spectateur",
+      "Le vers plaît aux contemporains",
+      "La prose ruine la tragédie"
+     ],
+     "reponse": 0,
+     "aide": "Pourquoi abandonner le vers ? Pense à la distance entre la scène et la salle.",
+     "explication": "Pour Stendhal, **le vers éloigne** : la prose rapproche le spectacle du spectateur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce que Stendhal en dit.",
+     "paires": [
+      [
+       "Le romanticisme",
+       "Le plaisir des contemporains"
+      ],
+      [
+       "Le classicisme",
+       "Le plaisir qu’avaient les arrière-grands-pères"
+      ],
+      [
+       "Racine, en son temps",
+       "Un auteur romantique"
+      ],
+      [
+       "Suivre Racine à la lettre aujourd’hui",
+       "Être classique"
+      ]
+     ],
+     "aide": "Le goût change avec les époques : chacun plaît à son public.",
+     "explication": "Le romanticisme est le plaisir des **contemporains**, le classicisme celui des **arrière-grands-pères** ; Racine était romantique en son temps."
+    }
+   ]
+  },
+  {
+   "chapitre": "25c8a00a-0a7a-584b-b32f-3b7779cc7ef2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Stendhal ou Hugo ?",
+   "competence": "argumenter",
+   "situation": "Manon prétend que Stendhal et Hugo pensent la même chose. Yanis nuance. Lis la définition de Stendhal, puis le débat.",
+   "documents": [
+    {
+     "id": "def",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La définition du romanticisme",
+     "blocs": [
+      "Le romanticisme est l’art de présenter aux peuples les œuvres littéraires qui, dans l’état actuel de leurs habitudes et de leurs croyances, sont susceptibles de leur donner le plus de [[p|plaisir]] possible."
+     ],
+     "source": "Stendhal, *Racine et Shakespeare* (1823), cité par le cours"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le goût change avec les époques",
+       "Le romanticisme est le plaisir des contemporains",
+       "Racine était romantique en son temps"
+      ],
+      [
+       "Les unités gênent la vraisemblance",
+       "?",
+       "Vingt-quatre heures ne passent pas en trois"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Manon",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Manon",
+       "texte": "Stendhal et Hugo veulent la même chose, donc ils pensent pareil."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Pas tout à fait : Hugo reprendra ces idées dans la *Préface de Cromwell*, mais il garde le [[v|vers]]."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "def",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit ce que le romanticisme cherche à donner au public.",
+     "aide": "Le romanticisme se définit par l’effet produit sur le spectateur.",
+     "explication": "Le romanticisme vise le **plaisir** du public, dans l’état de ses habitudes et de ses croyances : c’est une idée neuve, la relativité historique du goût."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la colonne « Argument » de la deuxième ligne ?",
+     "options": [
+      "Le spectateur ne croit pas ce qu’on lui montre",
+      "Le spectateur veut revoir les classiques",
+      "Le spectateur ignore la vraisemblance",
+      "Le spectateur aime les longues pièces"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’exemple : vingt-quatre heures en trois, est-ce crédible ?",
+     "explication": "L’argument est la **vraisemblance** : le spectateur ne croit pas qu’il s’est passé vingt-quatre heures en trois."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui désigne ce que Hugo garde et que Stendhal écarte.",
+     "aide": "Stendhal écrit en prose ; que garde Hugo ?",
+     "explication": "Hugo garde le **vers**, quand Stendhal recommande la prose : les deux textes ne disent pas la même chose."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un sujet sur les règles au théâtre, quel argument de Stendhal le cours conseille-t-il de citer ?",
+     "options": [
+      "La vraisemblance, contre l’unité de temps",
+      "La rime, contre l’alexandrin",
+      "Le public, contre les comédiens anglais",
+      "L’Académie, contre la Préface de Cromwell"
+     ],
+     "reponse": 0,
+     "aide": "Pense au spectateur et aux heures de la pièce.",
+     "explication": "Pour un sujet sur les **règles**, on cite la **vraisemblance** opposée à l’unité de temps."
+    }
+   ]
+  },
+  {
+   "chapitre": "93420b62-1007-5f1c-a614-c173915be7d9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le seigneur devenu moraliste",
+   "competence": "analyser-document",
+   "situation": "Tu fiches les *Maximes*. Lis la carte du recueil, puis le tableau « vertu apparente / ce qu’elle cache ».",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Maximes",
+     "sousTitre": "François de La Rochefoucauld (1613-1680)",
+     "emoji": "✒️",
+     "lignes": [
+      {
+       "texte": "Nombre de maximes",
+       "valeur": "Environ cinq cents"
+      },
+      {
+       "texte": "Première publication",
+       "valeur": "1665",
+       "id": "pub"
+      },
+      {
+       "texte": "Dernier remaniement",
+       "valeur": "1678"
+      },
+      {
+       "texte": "Naissance de la forme",
+       "valeur": "Les jeux de salon de Madame de Sablé"
+      }
+     ],
+     "pied": "Il ne prêche pas : il observe",
+     "teinte": "violet"
+    },
+    {
+     "id": "vertus",
+     "type": "tableau",
+     "titre": "Derrière la vertu",
+     "colonnes": [
+      "Vertu apparente",
+      "Ce qu’elle cache"
+     ],
+     "lignes": [
+      [
+       "La générosité",
+       "L’envie d’être admiré"
+      ],
+      [
+       "La clémence",
+       "?"
+      ],
+      [
+       "La fidélité",
+       "La paresse ou l’habitude"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui donne la date de la première publication.",
+     "aide": "Cherche une année dans le XVIIe siècle.",
+     "explication": "Les *Maximes* paraissent en **1665**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années La Rochefoucauld retravaille-t-il son recueil, de la première publication au dernier remaniement ?",
+     "reponse": 13,
+     "aide": "Soustrais les deux dates de la carte.",
+     "explication": "1678 − 1665 = **13 ans** de remaniements.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que cache la clémence, d’après le cours ? (case « ? »)",
+     "options": [
+      "La peur",
+      "La reconnaissance",
+      "La sagesse",
+      "Le pardon"
+     ],
+     "reponse": 0,
+     "aide": "Derrière chaque vertu se cache l’amour-propre : la vanité, l’intérêt, la crainte…",
+     "explication": "Derrière la clémence, La Rochefoucauld voit la **peur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "93420b62-1007-5f1c-a614-c173915be7d9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La force de supporter les maux d’autrui",
+   "competence": "analyser-texte",
+   "situation": "Léa lit à voix haute deux maximes. Repère comment chacune est construite.",
+   "documents": [
+    {
+     "id": "max",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux maximes",
+     "blocs": [
+      "[[g|Nous]] avons [[g|tous]] assez de force pour supporter les maux d’autrui.",
+      "L’hypocrisie est un hommage que le vice rend à la vertu."
+     ],
+     "source": "La Rochefoucauld, *Réflexions ou sentences et maximes morales*"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "max",
+     "multiple": true,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Dans la première maxime, touche les deux mots qui généralisent : ils parlent de tout le monde.",
+     "aide": "Un pronom de la première personne du pluriel, un mot qui dit « sans exception ».",
+     "explication": "Les mots « **Nous** » et « **tous** » généralisent : la maxime vaut pour tous les hommes, y compris le lecteur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque maxime à son procédé.",
+     "paires": [
+      [
+       "« Nous avons tous assez de force pour supporter les maux d’autrui. »",
+       "Une généralisation suivie d’une chute"
+      ],
+      [
+       "« L’hypocrisie est un hommage que le vice rend à la vertu. »",
+       "Un paradoxe : le vice salue la vertu"
+      ],
+      [
+       "« L’amour-propre est le plus grand de tous les flatteurs. »",
+       "Une image : l’amour-propre devient un flatteur"
+      ]
+     ],
+     "aide": "Chaque maxime est brève et se termine par un effet de surprise.",
+     "explication": "**Généralisation et chute** pour la première, **paradoxe** pour la deuxième (le vice rend hommage à ce qu’il trahit), **image** pour la troisième."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle la chute de la première maxime sur ce que nous supportons ?",
+     "options": [
+      "Nous supportons aisément le malheur des autres",
+      "Nous supportons mal le malheur des autres",
+      "Nous supportons mieux notre propre malheur",
+      "Nous ne supportons aucun malheur"
+     ],
+     "reponse": 0,
+     "aide": "La chute est dans les derniers mots : « supporter les maux d’autrui ».",
+     "explication": "La force est « assez » grande quand il s’agit de **supporter le malheur d’autrui** : la chute dévoile notre égoïsme."
+    }
+   ]
+  },
+  {
+   "chapitre": "93420b62-1007-5f1c-a614-c173915be7d9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Prêcher ou démonter ?",
+   "competence": "argumenter",
+   "situation": "Léo croit que La Rochefoucauld donne des leçons de vertu. Nora n’est pas d’accord. Tranche à l’aide de la thèse du recueil.",
+   "documents": [
+    {
+     "id": "these",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La thèse du recueil",
+     "blocs": [
+      "Nos vertus ne sont, le plus [[n|souvent]], que des vices déguisés."
+     ],
+     "source": "La Rochefoucauld, *Maximes*, cité par le cours"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Il nous donne des leçons de vertu : il veut nous rendre meilleurs."
+      },
+      {
+       "qui": "Nora",
+       "texte": "Il ne prêche pas : il [[o|observe]] et démonte les faux-semblants."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le verbe qui dit ce que fait le moraliste, selon Nora.",
+     "aide": "Le moraliste regarde et analyse, il ne sermonne pas.",
+     "explication": "Il **observe** : il ne prêche pas, il démonte les faux-semblants du cœur humain."
+    },
+    {
+     "type": "zone",
+     "document": "these",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui empêche la thèse d’être absolue.",
+     "aide": "Il signale que la règle n’a pas toujours lieu.",
+     "explication": "« Le plus **souvent** » : la thèse n’est pas une règle sans exception, mais une constante de l’observation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : le moraliste le fait, ou ne le fait pas ?",
+     "categories": [
+      "Il le fait",
+      "Il ne le fait pas"
+     ],
+     "items": [
+      [
+       "Observer les conduites",
+       0
+      ],
+      [
+       "Démasquer les faux-semblants",
+       0
+      ],
+      [
+       "Dénoncer l’amour-propre",
+       0
+      ],
+      [
+       "Prêcher une morale édifiante",
+       1
+      ],
+      [
+       "Donner des leçons de vertu",
+       1
+      ],
+      [
+       "Faire l’éloge de la générosité",
+       1
+      ]
+     ],
+     "aide": "Le cours dit : « il ne prêche pas, il observe et démonte ».",
+     "explication": "Il **observe**, **démasque** et **dénonce** ; il **ne prêche pas**, ne donne pas de leçons et ne fait pas l’éloge des vertus qu’il juge suspectes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le genre bref sert-il la thèse de La Rochefoucauld ?",
+     "options": [
+      "Il surprend le lecteur et l’oblige à réfléchir",
+      "Il permet de raconter toute une vie",
+      "Il imite les longs sermons de l’Église",
+      "Il évite toute formule frappante"
+     ],
+     "reponse": 0,
+     "aide": "Une maxime se retient par sa chute.",
+     "explication": "Le **genre bref** surprend et se retient : le lecteur doit réfléchir à ce qu’il vient de lire."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7deb49e-285d-5ecc-97b1-3b5eedf76e21",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Persuader : une technique à trois moyens",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur la *Rhétorique* d’Aristote. Lis la carte du traité, puis le tableau des trois moyens de persuasion.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Rhétorique",
+     "sousTitre": "Aristote (384-322 av. J.-C.)",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Maître",
+       "valeur": "Élève de Platon",
+       "id": "maitre"
+      },
+      {
+       "texte": "Élève célèbre",
+       "valeur": "Alexandre le Grand",
+       "id": "eleve"
+      },
+      {
+       "texte": "École fondée à Athènes",
+       "valeur": "Le Lycée"
+      },
+      {
+       "texte": "Composition",
+       "valeur": "Trois livres"
+      }
+     ],
+     "pied": "L’art de persuader, vu comme une méthode",
+     "teinte": "violet"
+    },
+    {
+     "id": "moyens",
+     "type": "tableau",
+     "titre": "Les trois moyens de persuasion",
+     "colonnes": [
+      "Moyen",
+      "Ce qu’il engage"
+     ],
+     "lignes": [
+      [
+       "L’ethos",
+       "Le caractère que l’orateur donne à voir de lui-même"
+      ],
+      [
+       "Le pathos",
+       "Les émotions qu’il suscite : crainte, pitié, colère"
+      ],
+      [
+       "Le logos",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "maitre"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui nomme le maître d’Aristote.",
+     "aide": "Cherche le philosophe dont Aristote est l’élève.",
+     "explication": "Aristote est l’élève de **Platon**, qui accusait les sophistes de manipuler : Aristote veut faire de la rhétorique une méthode."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour le logos ?",
+     "options": [
+      "Le raisonnement et la preuve",
+      "Les émotions de l’auditoire",
+      "L’image que donne l’orateur",
+      "Le rythme et les sonorités"
+     ],
+     "reponse": 0,
+     "aide": "L’ethos engage le caractère, le pathos les émotions : que reste-t-il ?",
+     "explication": "Le logos est le **raisonnement** : l’enthymème (un syllogisme abrégé) et l’exemple."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du traité.",
+     "texte": "Aristote est l’élève de ___ et fonde à Athènes une école, le ___.",
+     "reponses": [
+      [
+       "Platon"
+      ],
+      [
+       "Lycée"
+      ]
+     ],
+     "banque": [
+      "Platon",
+      "Lycée",
+      "Socrate",
+      "Portique"
+     ],
+     "aide": "Tout est dans la carte du traité.",
+     "explication": "Aristote, élève de **Platon**, fonde le **Lycée** à Athènes."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7deb49e-285d-5ecc-97b1-3b5eedf76e21",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois discours, trois temps",
+   "competence": "analyser-texte",
+   "situation": "Dans une cité grecque, trois orateurs prennent la parole le même jour. Lis leurs discours (écrits pour l’exercice), puis rapproche-les de la grille d’Aristote.",
+   "documents": [
+    {
+     "id": "discours",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois prises de parole",
+     "blocs": [
+      "Devant le tribunal, un avocat répond : « Mon client n’était pas sur la place cette nuit-là ; l’accusation se trompe. »",
+      "À l’assemblée, un orateur propose : « Citoyens, votons [[a|demain]] la construction d’un mur autour du port. »",
+      "Aux funérailles d’un stratège, un ami proclame : « Il fut courageux, juste et généreux envers tous. »"
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "genres",
+     "type": "tableau",
+     "titre": "Les trois genres oratoires",
+     "colonnes": [
+      "Genre",
+      "Ce qu’il fait",
+      "Son temps"
+     ],
+     "lignes": [
+      [
+       "Judiciaire",
+       "Accuser ou défendre",
+       "Le passé"
+      ],
+      [
+       "Délibératif",
+       "Conseiller",
+       "?"
+      ],
+      [
+       "Épidictique",
+       "Louer ou blâmer",
+       "Le présent"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour le genre délibératif ?",
+     "options": [
+      "L’avenir",
+      "Le passé",
+      "Le présent",
+      "L’éternité"
+     ],
+     "reponse": 0,
+     "aide": "On conseille ce qu’il faudra faire.",
+     "explication": "Le genre délibératif conseille : il porte sur **l’avenir**."
+    },
+    {
+     "type": "zone",
+     "document": "discours",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Dans le deuxième discours, touche le mot qui tourne le propos vers l’avenir.",
+     "aide": "Un adverbe de temps, dans la proposition de l’orateur.",
+     "explication": "« **Demain** » tourne la phrase vers l’avenir : l’orateur conseille ce que l’assemblée doit décider."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque prise de parole à son genre oratoire.",
+     "paires": [
+      [
+       "L’avocat au tribunal",
+       "Le judiciaire"
+      ],
+      [
+       "L’orateur à l’assemblée",
+       "Le délibératif"
+      ],
+      [
+       "L’ami aux funérailles",
+       "L’épidictique"
+      ]
+     ],
+     "aide": "Chacun accuse, conseille ou loue : repère le verbe de l’action.",
+     "explication": "L’avocat **défend** (judiciaire), l’orateur **conseille** (délibératif), l’ami **loue** (épidictique)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7deb49e-285d-5ecc-97b1-3b5eedf76e21",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le délégué qui veut rouvrir le foyer",
+   "competence": "analyser-texte",
+   "situation": "Un candidat plaide pour rouvrir le foyer du lycée. Classe ses phrases selon les trois moyens de persuasion, puis identifie son genre oratoire.",
+   "documents": [
+    {
+     "id": "plaidoyer",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un plaidoyer pour le foyer",
+     "blocs": [
+      "Délégué depuis deux ans, j’ai tenu toutes mes promesses : vous pouvez me faire confiance.",
+      "Imaginez la [[p|tristesse]] d’un élève [[p|seul]] dans la cour, un jour de pluie, devant un foyer fermé.",
+      "Un lieu ouvert accueille ; ce qui accueille évite l’ennui : ouvrons donc le foyer."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’un discours scolaire"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le moyen de persuasion qu’elle emploie.",
+     "categories": [
+      "Ethos",
+      "Pathos",
+      "Logos"
+     ],
+     "items": [
+      [
+       "Délégué depuis deux ans, j’ai tenu toutes mes promesses",
+       0
+      ],
+      [
+       "Je connais ce lycée mieux que personne",
+       0
+      ],
+      [
+       "Imaginez la tristesse d’un élève seul dans la cour",
+       1
+      ],
+      [
+       "Vous seriez en colère devant une telle injustice",
+       1
+      ],
+      [
+       "Un lieu ouvert accueille ; ce qui accueille évite l’ennui",
+       2
+      ],
+      [
+       "Si le coût est faible et le gain grand, il faut le faire",
+       2
+      ]
+     ],
+     "aide": "L’ethos parle de l’orateur, le pathos des émotions, le logos du raisonnement.",
+     "explication": "L’**ethos** soigne l’image de l’orateur, le **pathos** touche les émotions, le **logos** enchaîne un raisonnement."
+    },
+    {
+     "type": "zone",
+     "document": "plaidoyer",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le deuxième paragraphe, touche les deux mots qui cherchent à émouvoir.",
+     "aide": "L’un dit un sentiment triste, l’autre dit l’isolement.",
+     "explication": "« **Tristesse** » et « **seul** » visent la pitié de l’auditoire : c’est du **pathos**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel genre oratoire ce discours appartient-il ?",
+     "options": [
+      "Le délibératif : il conseille une décision à venir",
+      "Le judiciaire : il défend un accusé",
+      "L’épidictique : il fait l’éloge d’un mort",
+      "Le didactique : il explique un cours"
+     ],
+     "reponse": 0,
+     "aide": "L’orateur demande de rouvrir le foyer : accuse-t-il, conseille-t-il, ou loue-t-il ?",
+     "explication": "L’orateur **conseille** de rouvrir le foyer : c’est le genre **délibératif**, tourné vers l’avenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbdbaf76-6bd0-5557-bd46-76ac2a1abf4b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une ville de province, trois actes",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur *Rhinocéros*. Lis la carte de la pièce, puis le tableau des trois personnages principaux.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Rhinocéros",
+     "sousTitre": "Eugène Ionesco (1909-1994)",
+     "emoji": "🦏",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Théâtre de l’absurde"
+      },
+      {
+       "texte": "Structure",
+       "valeur": "Trois actes",
+       "id": "actes"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1959 en Allemagne, 1960 à Paris"
+      },
+      {
+       "texte": "Mise en scène à Paris",
+       "valeur": "Jean-Louis Barrault"
+      }
+     ],
+     "pied": "Une ville se change en troupeau",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Trois personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il devient"
+     ],
+     "lignes": [
+      [
+       "Jean",
+       "Il se transforme sous les yeux du spectateur"
+      ],
+      [
+       "Daisy",
+       "?"
+      ],
+      [
+       "Bérenger",
+       "Il résiste, faute de pouvoir se transformer"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "actes"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui dit en combien d’actes la pièce est construite.",
+     "aide": "Cherche un nombre d’actes.",
+     "explication": "La pièce est construite en **trois actes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la pièce en Allemagne de sa création à Paris ?",
+     "reponse": 1,
+     "aide": "Lis la ligne « Création » : deux années sont données.",
+     "explication": "1960 − 1959 = **1 an**.",
+     "unite": "an"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient Daisy ? (case « ? »)",
+     "options": [
+      "Elle cède et se transforme à son tour",
+      "Elle résiste jusqu’à la fin",
+      "Elle quitte la ville avant l’épidémie",
+      "Elle devient la fiancée de Bérenger"
+     ],
+     "reponse": 0,
+     "aide": "Daisy est la fiancée de Bérenger : tiendra-t-elle ?",
+     "explication": "Daisy **finit par céder** et se transforme : seul Bérenger reste."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbdbaf76-6bd0-5557-bd46-76ac2a1abf4b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la place au dernier homme",
+   "competence": "se-reperer-temps",
+   "situation": "Suis le déroulement de la pièce, du premier rhinocéros au cri de Bérenger. Puis relie les prétextes à ceux qui les invoquent.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La pièce, étape par étape",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Un rhinocéros traverse la place un dimanche"
+      },
+      {
+       "id": "n2",
+       "texte": "Un deuxième passe à son tour"
+      },
+      {
+       "id": "n3",
+       "texte": "Les habitants se métamorphosent eux-mêmes"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Daisy finit par céder"
+      },
+      {
+       "id": "n6",
+       "texte": "Bérenger reste seul et ne capitule pas"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (case « ? ») ?",
+     "options": [
+      "Jean se transforme sous les yeux du spectateur",
+      "Bérenger se transforme en rhinocéros",
+      "Le Logicien chasse tous les rhinocéros",
+      "Daisy quitte la ville en avion"
+     ],
+     "reponse": 0,
+     "aide": "Un ami raisonneur défend peu à peu la rhinocérite avant de céder.",
+     "explication": "La scène célèbre de **Jean** : sa peau verdit, sa voix change, une corne pousse."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n6"
+     ],
+     "enonce": "Touche l’étape où Bérenger résiste jusqu’au bout.",
+     "aide": "Il est le dernier homme.",
+     "explication": "Resté seul, Bérenger tente un instant de se transformer, **échoue**, et conclut : « Je ne capitule pas ! »"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque prétexte à ceux qui l’invoquent.",
+     "paires": [
+      [
+       "La logique",
+       "Le Logicien"
+      ],
+      [
+       "La mode, l’adaptation",
+       "Les habitants"
+      ],
+      [
+       "Le courage, la « force de la nature »",
+       "Ceux qui cèdent"
+      ]
+     ],
+     "aide": "Chacun trouve une bonne raison de céder au conformisme.",
+     "explication": "Le **Logicien** invoque la logique, les **habitants** la mode, **ceux qui cèdent** le courage."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbdbaf76-6bd0-5557-bd46-76ac2a1abf4b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au bureau de poste",
+   "competence": "argumenter",
+   "situation": "Une scène écrite à la manière d’Ionesco montre comment le conformisme s’installe. Lis-la, puis cherche ce qu’elle dit de la pièce.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Au bureau de poste",
+     "blocs": [
+      {
+       "didascalie": "Un bureau de poste. Deux collègues regardent la rue par la fenêtre."
+      },
+      {
+       "personnage": "Anaïs",
+       "replique": "Tu as vu ? Monsieur Duval a [[t|verdi]]. Et il parle d’une voix toute drôle."
+      },
+      {
+       "personnage": "Paul",
+       "replique": "C’est la [[p|mode]], voyons. Il faut [[p|s’adapter]]."
+      },
+      {
+       "personnage": "Anaïs",
+       "replique": "Il dit que c’est la force de la nature."
+      },
+      {
+       "personnage": "Paul",
+       "replique": "Tout le monde le fera bientôt. Si nous sommes tous pareils, il n’y aura plus de problème."
+      },
+      {
+       "personnage": "Anaïs",
+       "replique": "Moi, je reste comme je suis."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Ionesco"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Une lecture de la pièce",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La pièce est une allégorie du conformisme",
+       "Une idéologie devient contagieuse parce qu’on s’adapte",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui montre le premier signe physique de la transformation.",
+     "aide": "Pense à la couleur de la peau de Jean.",
+     "explication": "Le visage de M. Duval a **verdi** : c’est le signe physique de la métamorphose, comme la peau de Jean dans la pièce."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots dont Paul se sert comme prétexte pour céder.",
+     "aide": "Il invoque une tendance et un effort d’ajustement.",
+     "explication": "Paul invoque la **mode** et l’**adaptation** : deux prétextes que le cours relève chez les habitants de la ville."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les habitants cèdent par mode et par adaptation",
+      "Bérenger se transforme avec tout le monde",
+      "Jean refuse de défendre la rhinocérite",
+      "Le Logicien s’oppose aux syllogismes"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un exemple de la pièce où l’on cède sans y être forcé.",
+     "explication": "Les habitants invoquent la **mode** et l’**adaptation** : le conformisme rend la contagion banale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui sauve Bérenger, d’après le cours ?",
+     "options": [
+      "Sa faiblesse même, qui l’empêche de céder",
+      "Son courage de héros, au service de tous",
+      "Sa fortune personnelle, qui le protège",
+      "Son amitié ancienne avec Jean"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit qu’il résiste non par héroïsme, mais parce qu’il ne peut pas.",
+     "explication": "C’est un **antihéros** : sa **faiblesse même** le sauve, non son héroïsme."
+    }
+   ]
+  },
+  {
+   "chapitre": "d97ab4f8-47ec-5212-a6bb-1f603ed5f19c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil écrit sur les routes",
+   "competence": "analyser-document",
+   "situation": "Tu fiches les *Romances sans paroles*. Lis la carte du recueil, puis le tableau de ses quatre sections.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Romances sans paroles",
+     "sousTitre": "Paul Verlaine (1844-1896)",
+     "emoji": "🎼",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1874",
+       "id": "pub"
+      },
+      {
+       "texte": "Écrit pendant",
+       "valeur": "L’errance avec Rimbaud, en Belgique et en Angleterre"
+      },
+      {
+       "texte": "Auteur alors emprisonné à",
+       "valeur": "Mons",
+       "id": "mons"
+      },
+      {
+       "texte": "Titre emprunté à",
+       "valeur": "Mendelssohn : des mélodies sans texte"
+      }
+     ],
+     "pied": "Le recueil de la musique pure",
+     "teinte": "violet"
+    },
+    {
+     "id": "sections",
+     "type": "tableau",
+     "titre": "Les quatre sections",
+     "colonnes": [
+      "Section",
+      "Ce qu’on y trouve"
+     ],
+     "lignes": [
+      [
+       "« Ariettes oubliées »",
+       "« Il pleure dans mon cœur… »"
+      ],
+      [
+       "« Paysages belges »",
+       "?"
+      ],
+      [
+       "« Birds in the night »",
+       "L’amour et la rupture"
+      ],
+      [
+       "« Aquarelles »",
+       "« Green », « Spleen », « Streets »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "mons"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui dit où Verlaine est emprisonné quand le recueil paraît.",
+     "aide": "C’est une ville de Belgique.",
+     "explication": "Le recueil paraît alors que Verlaine est emprisonné à **Mons**, pour avoir tiré sur Rimbaud."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent les « Paysages belges » ? (case « ? »)",
+     "options": [
+      "Des paysages vus d’un train",
+      "Des batailles en plein air",
+      "Des villes en ruine la nuit",
+      "Des jardins de palais royaux"
+     ],
+     "reponse": 0,
+     "aide": "Le recueil naît d’une errance : comment voyage-t-on d’une ville à l’autre ?",
+     "explication": "Ce sont des **paysages vus d’un train** : flous, fugitifs, comme le recueil lui-même."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du recueil.",
+     "texte": "Le recueil paraît en ___ ; son titre est emprunté à ___.",
+     "reponses": [
+      [
+       "1874"
+      ],
+      [
+       "Mendelssohn"
+      ]
+     ],
+     "banque": [
+      "1874",
+      "1873",
+      "Mendelssohn",
+      "Debussy"
+     ],
+     "aide": "Relis les lignes « Publication » et « Titre emprunté à ».",
+     "explication": "Le recueil paraît en **1874** ; son titre est emprunté à **Mendelssohn**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d97ab4f8-47ec-5212-a6bb-1f603ed5f19c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Il pleure dans mon cœur",
+   "competence": "analyser-texte",
+   "situation": "Lis la première strophe de l’« Ariette » la plus célèbre du recueil, puis cherche comment le poème dit la tristesse.",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Une ariette oubliée",
+     "blocs": [
+      "Il [[c|pleure]] dans mon cœur",
+      "Comme il [[c|pleut]] sur la ville ;",
+      "Quelle est cette [[l|langueur]]",
+      "Qui pénètre mon cœur ?"
+     ],
+     "source": "Paul Verlaine, « Il pleure dans mon cœur », *Romances sans paroles* (1874)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux verbes qui mêlent les larmes et la pluie.",
+     "aide": "L’un dit ce que fait le cœur, l’autre ce que fait le ciel.",
+     "explication": "« **Pleure** » et « **pleut** » : la pluie et les larmes se confondent, le paysage reflète l’âme."
+    },
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui nomme la tristesse du poète.",
+     "aide": "Un nom qui dit un abattement mou, sans cause nette.",
+     "explication": "Le poète nomme sa tristesse **langueur** et se demande d’où elle vient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la question finale sur l’origine de cette tristesse ?",
+     "options": [
+      "Elle n’a aucune cause précise",
+      "Elle vient de la rupture avec Rimbaud",
+      "Elle vient de la pluie seulement",
+      "Elle vient d’une faute à confesser"
+     ],
+     "reponse": 0,
+     "aide": "Le poète pose une question et ne donne pas la réponse.",
+     "explication": "Le poème ne donne **aucune cause précise** : la mélancolie est sans raison, d’où l’effet de musique pure."
+    }
+   ]
+  },
+  {
+   "chapitre": "d97ab4f8-47ec-5212-a6bb-1f603ed5f19c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La musique avant toute chose",
+   "competence": "argumenter",
+   "situation": "Clara lit le recueil comme un journal intime de la dispute avec Rimbaud. Malik n’est pas d’accord. Tranche avec l’« Art poétique » que Verlaine écrit la même année.",
+   "documents": [
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Début de l’« Art poétique »",
+     "blocs": [
+      "De la [[m|musique]] avant toute chose,",
+      "Et pour cela préfère l’[[i|Impair]]",
+      "Plus vague et plus soluble dans l’air,",
+      "Sans rien en lui qui pèse ou qui pose."
+     ],
+     "source": "Paul Verlaine, « Art poétique » (1874)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clara",
+       "texte": "Ce recueil raconte la querelle avec Rimbaud : c’est un journal intime."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Non : un poème peut se passer d’anecdote et de message. Ce qui compte, c’est le son et la sensation."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "art",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot que Verlaine place avant toute chose.",
+     "aide": "C’est le premier mot qui dit l’art qu’il préfère.",
+     "explication": "Verlaine place la **musique** avant toute chose : le poème vaut par son rythme et ses sonorités."
+    },
+    {
+     "type": "zone",
+     "document": "art",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui nomme le type de vers que Verlaine recommande.",
+     "aide": "Il est écrit avec une majuscule et s’oppose au pair.",
+     "explication": "Il recommande l’**Impair** : cinq, sept, neuf, onze syllabes, qui donnent un déséquilibre léger."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du recueil à son effet.",
+     "paires": [
+      [
+       "Les vers impairs",
+       "Le déséquilibre"
+      ],
+      [
+       "Les rimes atténuées et les répétitions",
+       "La fluidité"
+      ],
+      [
+       "Les sonorités liquides et les paysages flous",
+       "Le sens s’efface devant la sensation"
+      ]
+     ],
+     "aide": "Chaque procédé sert une poésie plus proche de la musique que du récit.",
+     "explication": "Les **vers impairs** donnent un déséquilibre, les **rimes atténuées** et **répétitions** la fluidité, les **sonorités liquides** font passer la sensation avant le sens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture l’« Art poétique » appuie-t-il ?",
+     "options": [
+      "Le poème vaut par sa musique, non par son anecdote",
+      "Le poème raconte la querelle avec Rimbaud",
+      "Le poème doit convaincre par l’éloquence",
+      "Le poème doit expliquer sa morale"
+     ],
+     "reponse": 0,
+     "aide": "Verlaine place la musique avant toute chose et rejette l’éloquence.",
+     "explication": "Malik a raison : le poème doit être **musique** et sensation, sans « rien qui pèse ou qui pose »."
+    }
+   ]
+  }
+ ]
+}

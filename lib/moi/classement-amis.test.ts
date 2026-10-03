@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import {
-  HAUTEUR_MIN_PCT,
+  PART_MIN_PCT,
   challengerDe,
   classerAmisPar,
   couronneDe,
   detailJoueur,
-  hauteursDesColonnes,
+  partsDuMeilleur,
   libelleMouvement,
   libelleValeur,
   lireClassementAmis,
@@ -112,16 +112,16 @@ describe('challengerDe — la meilleure semaine', () => {
   })
 })
 
-describe('hauteursDesColonnes', () => {
+describe('partsDuMeilleur', () => {
   it('la plus haute fait 100, les autres suivent, la plus petite reste visible', () => {
     const classes = classerAmisPar([lea, moi, joueur({ id: 'petit', trophees: 3 })], 'trophees')
-    expect(hauteursDesColonnes(classes, 'trophees')).toEqual([100, 40, HAUTEUR_MIN_PCT])
+    expect(partsDuMeilleur(classes, 'trophees')).toEqual([100, 40, PART_MIN_PCT])
   })
 
   it('une colonne à zéro reste à zéro', () => {
     const classes = classerAmisPar([lea, joueur({ id: 'rien' })], 'temps')
-    expect(hauteursDesColonnes(classes, 'temps')).toEqual([100, 0])
-    expect(hauteursDesColonnes([joueur({ id: 'a' })], 'temps')).toEqual([0])
+    expect(partsDuMeilleur(classes, 'temps')).toEqual([100, 0])
+    expect(partsDuMeilleur([joueur({ id: 'a' })], 'temps')).toEqual([0])
   })
 })
 

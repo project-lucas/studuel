@@ -1,0 +1,2909 @@
+{
+ "niveau": "1re",
+ "matiere": "sciences-sanitaires-sociales",
+ "exercices": [
+  {
+   "chapitre": "d7a6707f-cb7c-53a2-936b-03e067b76c98",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre personnes, quatre façons de se dire en bonne santé",
+   "competence": "analyser-document",
+   "situation": "Au lycée, Inès recueille quatre témoignages sur ce que « être en bonne santé » veut dire. Avant de les classer, elle les lit avec attention.",
+   "documents": [
+    {
+     "id": "voix",
+     "type": "tableau",
+     "titre": "Quatre témoignages",
+     "source": "Texte écrit pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Ce qu’elle dit"
+     ],
+     "lignes": [
+      [
+       "Mathis, 17 ans",
+       "Mon bilan chez le médecin du sport est normal : aucune lésion, aucun symptôme. Je suis donc en bonne santé."
+      ],
+      [
+       "Odette, 78 ans",
+       "Je suis diabétique et mon traitement est bien équilibré. Je me sens bien, c’est tout ce qui compte pour moi."
+      ],
+      [
+       "Hugo, 45 ans",
+       "Depuis mon accident, je marche avec une canne, mais je travaille, je conduis, je fais mes courses : je m’adapte."
+      ],
+      [
+       "Nadia, 40 ans",
+       "Je ne suis pas malade, mais je suis épuisée et je vois peu de monde : je ne me sens pas bien dans ma vie."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voix",
+     "enonce": "Touche le témoignage de la personne qui juge sa santé uniquement par l’absence de maladie ou de lésion.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche celui qui s’appuie sur un examen médical.",
+     "explication": "C’est **Mathis** : il se fie au bilan médical (aucune lésion, aucun symptôme). C’est l’**approche biomédicale**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à l’approche de la santé qu’elle illustre.",
+     "paires": [
+      [
+       "Mathis",
+       "Approche biomédicale"
+      ],
+      [
+       "Odette",
+       "Approche subjective"
+      ],
+      [
+       "Hugo",
+       "Approche fonctionnelle"
+      ]
+     ],
+     "aide": "Demande-toi si la personne parle d’examen, de ressenti ou d’activités qu’elle accomplit.",
+     "explication": "**Mathis** : biomédicale (absence de lésion). **Odette** : subjective (elle se sent bien malgré sa maladie). **Hugo** : fonctionnelle (il accomplit ses activités et s’adapte)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la définition de l’OMS de 1946, Nadia est-elle en bonne santé ?",
+     "options": [
+      "Non : le complet bien-être mental et social lui manque",
+      "Oui : elle n’a aucune maladie ni aucune lésion",
+      "Oui : elle accomplit ses activités sans difficulté",
+      "Impossible à dire sans un examen médical complet"
+     ],
+     "reponse": 0,
+     "aide": "L’OMS parle d’un bien-être physique, mental ET social.",
+     "explication": "L’OMS définit la santé comme un **état de complet bien-être physique, mental et social**, pas seulement l’absence de maladie. Nadia est épuisée et isolée : il lui manque une part de ce bien-être."
+    }
+   ]
+  },
+  {
+   "chapitre": "d7a6707f-cb7c-53a2-936b-03e067b76c98",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce qui inquiète les habitants de Val-Clair",
+   "competence": "lire-graphique",
+   "situation": "Le CCAS de Val-Clair, ville imaginaire, a demandé à 400 habitants quel problème de santé les inquiète le plus. Il veut s’en servir pour proposer des actions à la mairie.",
+   "documents": [
+    {
+     "id": "enq",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Problème de santé jugé le plus inquiétant",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Maladies chroniques",
+      "Santé mentale",
+      "Manque de médecins",
+      "Tabac et alcool",
+      "Isolement des aînés"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        120,
+        100,
+        80,
+        60,
+        40
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants (sur 400)",
+      "min": 0,
+      "max": 140,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Problème cité"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enq",
+     "enonce": "Touche le problème de santé cité par le plus d’habitants.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Les **maladies chroniques** (diabète, cancers, maladies cardio-vasculaires…) arrivent en tête avec 120 habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des 400 habitants cite la santé mentale ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Divise l’effectif lu par 400, puis multiplie par 100.",
+     "explication": "100 ÷ 400 × 100 = **25 %** des habitants citent la santé mentale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les maladies chroniques et la santé mentale réunies : quelle part des habitants cela représente-t-il ?",
+     "reponse": 55,
+     "unite": "%",
+     "aide": "Additionne d’abord les deux effectifs.",
+     "explication": "(120 + 100) ÷ 400 × 100 = **55 %** : plus d’un habitant sur deux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque situation : santé individuelle ou santé collective.",
+     "categories": [
+      "Santé individuelle",
+      "Santé collective"
+     ],
+     "items": [
+      [
+       "Mme Roux consulte son médecin pour une toux",
+       0
+      ],
+      [
+       "Une enquête relève l’état de santé des 400 habitants",
+       1
+      ],
+      [
+       "Karim se fait soigner une carie",
+       0
+      ],
+      [
+       "La ville publie son taux de mortalité",
+       1
+      ],
+      [
+       "La mairie mesure la part d’habitants diabétiques",
+       1
+      ]
+     ],
+     "aide": "La santé collective concerne un groupe, mesuré par des indicateurs.",
+     "explication": "La **santé individuelle** est celle d’une personne et des soignants. La **santé collective** décrit l’état d’un groupe, mesuré par des indicateurs, et relève des pouvoirs publics."
+    }
+   ]
+  },
+  {
+   "chapitre": "d7a6707f-cb7c-53a2-936b-03e067b76c98",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La santé, un idéal ou une ressource ?",
+   "competence": "argumenter",
+   "situation": "Lina et Yanis s’envoient des SMS la veille du contrôle : le grand-père de Yanis est diabétique, et ils se demandent s’il est « en bonne santé ». Une frise les aide à situer les définitions du cours.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de la veille du contrôle",
+     "source": "Texte écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Yanis",
+       "texte": "Mon grand-père a un diabète bien équilibré et il dit qu’il est en pleine forme. Mais il a une maladie, non ?"
+      },
+      {
+       "qui": "Lina",
+       "texte": "Pour l’approche biomédicale, il n’est pas en bonne santé. Pour l’approche subjective, si !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Et l’OMS ? Un état de complet bien-être, ça n’arrive presque jamais."
+      },
+      {
+       "qui": "Lina",
+       "texte": "C’est la critique qu’on lui fait : c’est un [[c|idéal]] difficile à atteindre. La charte d’Ottawa y voit plutôt une ressource du quotidien."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Donc la santé, ça dépend de la culture, de l’époque, de l’âge…"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois définitions repères",
+     "debut": 1900,
+     "fin": 2000,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "w",
+       "date": 1920,
+       "nom": "Winslow"
+      },
+      {
+       "id": "oms",
+       "date": 1946,
+       "nom": "Constitution de l’OMS"
+      },
+      {
+       "id": "ott",
+       "date": 1986,
+       "nom": "Charte d’Ottawa"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Selon l’approche biomédicale, le grand-père de Yanis est-il en bonne santé ?",
+     "options": [
+      "Non : il est atteint d’une maladie",
+      "Oui : il se sent en pleine forme",
+      "Oui : son traitement le rend invulnérable",
+      "On ne peut pas répondre sans l’avis de l’OMS"
+     ],
+     "reponse": 0,
+     "aide": "L’approche biomédicale juge d’après la présence ou non d’une maladie.",
+     "explication": "L’approche **biomédicale** définit la santé comme l’absence de maladie, de lésion ou de symptôme : le diabète est une maladie, donc elle ne le juge pas en bonne santé. C’est l’approche **subjective** qui retient son ressenti."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui résume la critique faite à la définition de l’OMS.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Lina le dit dans son dernier long message.",
+     "explication": "On reproche à l’OMS de décrire un **idéal** : un complet bien-être physique, mental et social est presque impossible à atteindre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque idée du dialogue à la notion du cours qu’elle illustre.",
+     "paires": [
+      [
+       "Il se sent en pleine forme malgré sa maladie",
+       "Approche subjective"
+      ],
+      [
+       "Un état de complet bien-être, ça n’arrive presque jamais",
+       "Critique de la définition de l’OMS"
+      ],
+      [
+       "Une ressource du quotidien",
+       "Charte d’Ottawa"
+      ],
+      [
+       "Ça dépend de la culture et de l’époque",
+       "Relativité de la santé"
+      ]
+     ],
+     "aide": "Relis chaque réplique de Lina et de Yanis.",
+     "explication": "Le ressenti, c’est l’approche **subjective** ; l’idéal inatteignable, la **critique de l’OMS** ; la santé comme ressource, la **charte d’Ottawa** ; la dépendance à la culture et à l’époque, la **relativité** de la santé."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement de la frise où la santé est présentée comme une ressource de la vie quotidienne.",
+     "reponse": [
+      "ott"
+     ],
+     "aide": "Le dialogue en parle après avoir critiqué l’OMS.",
+     "explication": "La **charte d’Ottawa**, en 1986, voit la santé comme une ressource de la vie quotidienne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la Constitution de l’OMS de la charte d’Ottawa ?",
+     "reponse": 40,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1986 − 1946 = **40 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0302f027-12d6-50ec-a753-3cf3099a3080",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les apprentissages d’Adèle, de 6 à 30 ans",
+   "competence": "analyser-document",
+   "situation": "Adèle a grandi à Val-Clair, ville imaginaire. Au fil des années, elle a appris à vivre avec les autres dans des endroits très différents.",
+   "documents": [
+    {
+     "id": "adele",
+     "type": "tableau",
+     "titre": "Où Adèle apprend à vivre en société",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Âge",
+      "Où elle apprend",
+      "Ce qu’elle apprend"
+     ],
+     "lignes": [
+      [
+       "6 ans",
+       "Sa famille",
+       "À dire merci et à partager"
+      ],
+      [
+       "9 ans",
+       "L’école",
+       "À attendre son tour pour parler"
+      ],
+      [
+       "14 ans",
+       "Ses amis du collège",
+       "Les expressions et les modes de son groupe"
+      ],
+      [
+       "19 ans",
+       "Son premier emploi d’été",
+       "À être ponctuelle et à travailler en équipe"
+      ],
+      [
+       "30 ans",
+       "Une association de quartier",
+       "À s’engager pour des causes communes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "adele",
+     "enonce": "Touche l’instance de socialisation primaire la plus importante dans l’enfance.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "C’est la première des instances qu’Adèle rencontre.",
+     "explication": "La **famille** est la principale instance de socialisation primaire : c’est elle qui transmet les premières normes et valeurs."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque lieu d’apprentissage d’Adèle : socialisation primaire ou secondaire.",
+     "categories": [
+      "Primaire (enfance)",
+      "Secondaire (toute la vie)"
+     ],
+     "items": [
+      [
+       "Sa famille",
+       0
+      ],
+      [
+       "L’école",
+       0
+      ],
+      [
+       "Ses amis du collège",
+       0
+      ],
+      [
+       "Son premier emploi d’été",
+       1
+      ],
+      [
+       "Une association de quartier",
+       1
+      ]
+     ],
+     "aide": "La socialisation primaire a lieu pendant l’enfance.",
+     "explication": "La socialisation **primaire** passe par la famille, l’école et les pairs. La **secondaire** se poursuit tout au long de la vie : travail, associations, médias."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la dernière ligne du tableau ?",
+     "options": [
+      "La socialisation continue tout au long de la vie",
+      "La socialisation s’arrête à la fin de l’enfance",
+      "La socialisation ne passe que par la famille",
+      "La socialisation est réservée aux adultes salariés"
+     ],
+     "reponse": 0,
+     "aide": "Adèle a 30 ans dans cette ligne.",
+     "explication": "À 30 ans, Adèle apprend encore : la socialisation **n’est jamais terminée**, elle se poursuit par la socialisation secondaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "0302f027-12d6-50ec-a753-3cf3099a3080",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La charte du club de basket",
+   "competence": "analyser-document",
+   "situation": "Le club de basket de Val-Clair, imaginaire, affiche sa charte à l’entrée du gymnase. Ses règles disent beaucoup de ce que le groupe attend de ses membres.",
+   "documents": [
+    {
+     "id": "charte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Charte du club",
+     "sousTitre": "Basket Val-Clair",
+     "emoji": "🏀",
+     "source": "Texte écrit pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "La solidarité entre joueurs",
+       "id": "v1",
+       "gras": true
+      },
+      {
+       "texte": "Le respect de chacun",
+       "id": "v2",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Serrer la main de l’adversaire après le match",
+       "id": "n1"
+      },
+      {
+       "texte": "Arriver dix minutes avant l’entraînement",
+       "id": "n2"
+      },
+      {
+       "texte": "Aider les plus jeunes à s’échauffer",
+       "id": "n3"
+      },
+      {
+       "texte": "Pas d’alcool lors des troisièmes mi-temps",
+       "id": "n4"
+      }
+     ],
+     "pied": "Ensemble, on joue mieux."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "charte",
+     "enonce": "Touche les deux lignes en gras : ce sont les idéaux auxquels le club adhère.",
+     "reponse": [
+      "v1",
+      "v2"
+     ],
+     "aide": "Un idéal commun à tout le groupe est une valeur.",
+     "explication": "La **solidarité** et le **respect** sont des **valeurs** : des idéaux auxquels le groupe adhère. Les autres lignes sont des normes.",
+     "multiple": true
+    },
+    {
+     "type": "zone",
+     "document": "charte",
+     "enonce": "Touche la règle qui influence directement les habitudes de santé des joueurs.",
+     "reponse": [
+      "n4"
+     ],
+     "aide": "Pense à l’alcool.",
+     "explication": "Interdire l’alcool aux troisièmes mi-temps est une **norme** qui agit sur les habitudes de vie : les conduites de santé s’apprennent dans les groupes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque norme à la valeur dont elle découle.",
+     "paires": [
+      [
+       "Serrer la main de l’adversaire",
+       "Le respect de chacun"
+      ],
+      [
+       "Aider les plus jeunes à s’échauffer",
+       "La solidarité entre joueurs"
+      ]
+     ],
+     "aide": "Une norme est la règle de conduite qui traduit une valeur.",
+     "explication": "Une **norme** découle d’une **valeur** : serrer la main exprime le respect, aider les plus jeunes exprime la solidarité."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon mot.",
+     "texte": "Dans la charte, « la solidarité » est une ___ ; « arriver dix minutes avant l’entraînement » est une ___.",
+     "reponses": [
+      [
+       "valeur"
+      ],
+      [
+       "norme"
+      ]
+     ],
+     "banque": [
+      "valeur",
+      "norme",
+      "instance",
+      "fait social"
+     ],
+     "aide": "Un idéal, c’est une valeur ; une règle de conduite, c’est une norme.",
+     "explication": "La **valeur** est un idéal auquel un groupe adhère ; la **norme** est la règle de conduite qui en découle."
+    }
+   ]
+  },
+  {
+   "chapitre": "0302f027-12d6-50ec-a753-3cf3099a3080",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Daniel, un lien après l’autre",
+   "competence": "argumenter",
+   "situation": "Daniel, 52 ans, habite Val-Clair (personnage imaginaire). Depuis son licenciement, ses liens sociaux se sont distendus. Le schéma et le portrait permettent d’en faire le bilan.",
+   "documents": [
+    {
+     "id": "portrait",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le portrait de Daniel",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Daniel a travaillé vingt-deux ans dans la même entreprise de transport, jusqu’à son licenciement il y a deux ans. Au chômage de longue durée, il ne voit plus ses anciens collègues.",
+      "Il ne joue plus aux boules avec ses amis du club : il a honte de sa situation. Son fils, étudiant, lui téléphone chaque dimanche. Daniel vote à toutes les élections et ses droits sont intacts."
+     ]
+    },
+    {
+     "id": "socio",
+     "type": "schema",
+     "titre": "Les liens de Daniel",
+     "largeur": 340,
+     "hauteur": 230,
+     "source": "Trait plein : le lien existe encore. Pointillés : le lien est rompu.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 90,
+       "l": 100,
+       "h": 44,
+       "arrondi": 10,
+       "texte": "Daniel",
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "daniel"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 120,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Son fils",
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "fils",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 10,
+       "l": 120,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Amis du club",
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "amis",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 175,
+       "l": 140,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Anciens collègues",
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "collegues",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 175,
+       "l": 120,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Droits civiques",
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "droits",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        90
+       ],
+       "a": [
+        90,
+        50
+       ],
+       "teinte": "vert"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        90
+       ],
+       "a": [
+        250,
+        50
+       ],
+       "style": "pointilles",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        134
+       ],
+       "a": [
+        90,
+        175
+       ],
+       "style": "pointilles",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        134
+       ],
+       "a": [
+        250,
+        175
+       ],
+       "teinte": "vert"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du portrait au type de lien décrit par Serge Paugam.",
+     "paires": [
+      [
+       "Son fils lui téléphone",
+       "Lien de filiation"
+      ],
+      [
+       "Ses amis du club de boules",
+       "Lien de participation élective"
+      ],
+      [
+       "Ses anciens collègues",
+       "Lien de participation organique"
+      ],
+      [
+       "Il vote, ses droits sont intacts",
+       "Lien de citoyenneté"
+      ]
+     ],
+     "aide": "Filiation = parents-enfants ; élective = amis choisis ; organique = monde du travail ; citoyenneté = même nation.",
+     "explication": "Le **fils** relève de la filiation, les **amis** de la participation élective (liens choisis), les **collègues** de la participation organique (monde du travail), le **vote** de la citoyenneté."
+    },
+    {
+     "type": "zone",
+     "document": "socio",
+     "enonce": "Touche les deux liens que le schéma montre comme rompus.",
+     "reponse": [
+      "amis",
+      "collegues"
+     ],
+     "aide": "Cherche les traits en pointillés.",
+     "explication": "Les liens avec les **amis du club** et les **anciens collègues** sont rompus (pointillés) ; ceux avec son fils et ses droits civiques subsistent.",
+     "multiple": true
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : facteur de cohésion sociale ou facteur de fragilisation.",
+     "categories": [
+      "Cohésion",
+      "Fragilisation"
+     ],
+     "items": [
+      [
+       "L’emploi stable",
+       0
+      ],
+      [
+       "Le chômage de longue durée",
+       1
+      ],
+      [
+       "La vie associative",
+       0
+      ],
+      [
+       "L’isolement",
+       1
+      ],
+      [
+       "La protection sociale",
+       0
+      ],
+      [
+       "La ségrégation territoriale",
+       1
+      ]
+     ],
+     "aide": "Pense à ce qui rapproche les gens et à ce qui les met à l’écart.",
+     "explication": "L’**emploi**, la **vie associative** et la **protection sociale** font la cohésion. Le **chômage de longue durée**, l’**isolement** et la **ségrégation territoriale** la fragilisent : Daniel les cumule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de la perte de ses liens organique et électif sur Daniel ?",
+     "options": [
+      "Il perd une part de sa protection et de sa reconnaissance",
+      "Il gagne en autonomie grâce à plus de temps libre",
+      "Il reste pleinement intégré grâce à son droit de vote",
+      "Il change de catégorie socioprofessionnelle"
+     ],
+     "reponse": 0,
+     "aide": "Les liens sociaux apportent deux choses, selon Paugam.",
+     "explication": "Les liens apportent **protection et reconnaissance**. En perdant ses liens de travail et d’amitié, Daniel risque l’isolement : sa **cohésion** avec la société se fragilise."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bfe56f8-e8ec-5168-b584-89d8e25b0fff",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les chiffres de la ville de Val-Clair",
+   "competence": "calculer",
+   "situation": "L’observatoire de Val-Clair, ville imaginaire, publie ses données de l’année pour dresser le portrait démographique de la ville.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan de l’année",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Population moyenne",
+       25000
+      ],
+      [
+       "Naissances vivantes",
+       500
+      ],
+      [
+       "Décès (tous âges)",
+       375
+      ],
+      [
+       "Décès d’enfants de moins d’un an",
+       2
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche le nombre de naissances vivantes.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Lis la ligne « Naissances vivantes ».",
+     "explication": "Il y a eu **500 naissances vivantes** dans l’année."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux brut de natalité de Val-Clair (pour 1 000 habitants).",
+     "reponse": 20,
+     "unite": "‰",
+     "aide": "Naissances vivantes ÷ population moyenne × 1 000.",
+     "explication": "500 ÷ 25 000 × 1 000 = **20 ‰**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux brut de mortalité (pour 1 000 habitants).",
+     "reponse": 15,
+     "unite": "‰",
+     "aide": "Décès de l’année ÷ population moyenne × 1 000.",
+     "explication": "375 ÷ 25 000 × 1 000 = **15 ‰**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi rapporte-t-on les décès d’enfants de moins d’un an pour calculer la mortalité infantile ?",
+     "options": [
+      "Aux naissances vivantes de l’année",
+      "À la population totale de la ville",
+      "À l’ensemble des décès de l’année",
+      "Aux enfants de moins de cinq ans"
+     ],
+     "reponse": 0,
+     "aide": "La population « à risque » est celle des enfants nés.",
+     "explication": "Le taux de mortalité infantile se calcule en rapportant les décès de moins d’un an aux **naissances vivantes** : 2 ÷ 500 × 1 000 = 4 ‰."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bfe56f8-e8ec-5168-b584-89d8e25b0fff",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le diabète à Val-Clair : plus de malades, pas plus de nouveaux cas",
+   "competence": "lire-graphique",
+   "situation": "À Val-Clair (50 000 habitants, ville imaginaire), l’observatoire suit le diabète depuis dix ans. Le nombre de personnes malades augmente, sans que la ville se sente plus « exposée ».",
+   "documents": [
+    {
+     "id": "diab",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le diabète à Val-Clair",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2010",
+      "2015",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Nouveaux cas dans l’année",
+       "valeurs": [
+        300,
+        300,
+        300
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Personnes malades à la fin de l’année",
+       "valeurs": [
+        2400,
+        2700,
+        3000
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Personnes",
+      "min": 0,
+      "max": 3500,
+      "pas": 500
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "diab",
+     "enonce": "Touche l’année où le nombre de personnes malades est le plus élevé.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare les barres de la série « Personnes malades ».",
+     "explication": "En **2020**, on compte 3 000 personnes malades : c’est le maximum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la prévalence du diabète en 2020 ? (part de la population de 50 000 habitants, en %)",
+     "reponse": 6,
+     "unite": "%",
+     "aide": "Cas existants ÷ population × 100.",
+     "explication": "3 000 ÷ 50 000 × 100 = **6 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la prévalence augmente-t-elle alors que l’incidence reste stable ?",
+     "options": [
+      "Les malades vivent plus longtemps avec la maladie",
+      "Il y a chaque année plus de nouveaux cas",
+      "Le diabète se guérit de plus en plus vite",
+      "Le nombre d’habitants de la ville diminue"
+     ],
+     "reponse": 0,
+     "aide": "L’incidence compte les nouveaux cas, la prévalence tous les cas existants.",
+     "explication": "Avec 300 nouveaux cas par an, mais des malades **qui vivent plus longtemps**, le stock de cas existants grossit : la prévalence augmente à incidence stable."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les définitions.",
+     "texte": "L’___ compte les nouveaux cas apparus pendant une période ; la ___ compte tous les cas existants à un moment donné.",
+     "reponses": [
+      [
+       "incidence"
+      ],
+      [
+       "prévalence"
+      ]
+     ],
+     "banque": [
+      "incidence",
+      "prévalence",
+      "morbidité",
+      "mortalité"
+     ],
+     "aide": "Les nouveaux cas d’un côté, tous les cas de l’autre.",
+     "explication": "L’**incidence** mesure les nouveaux cas sur une période ; la **prévalence** mesure l’ensemble des cas (anciens et nouveaux) à un moment donné."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bfe56f8-e8ec-5168-b584-89d8e25b0fff",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux villes, un même taux de mortalité ? Pas si vite",
+   "competence": "raisonner",
+   "situation": "Le maire de Port-Soleil, station balnéaire où vivent beaucoup de retraités, s’inquiète : son taux brut de mortalité est supérieur à celui de la ville universitaire de Campus-sur-Mer. Ces villes sont imaginaires.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "tableau",
+     "titre": "Les deux villes",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Ville",
+      "Population moyenne",
+      "Part des 65 ans et plus (%)",
+      "Décès de l’année"
+     ],
+     "lignes": [
+      [
+       "Port-Soleil",
+       40000,
+       35,
+       600
+      ],
+      [
+       "Campus-sur-Mer",
+       40000,
+       10,
+       400
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "std",
+     "type": "tableau",
+     "titre": "Taux standardisés de mortalité (pour 1 000)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Ville",
+      "Taux standardisé"
+     ],
+     "lignes": [
+      [
+       "Port-Soleil",
+       8.3
+      ],
+      [
+       "Campus-sur-Mer",
+       8.1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le taux brut de mortalité de Port-Soleil (pour 1 000 habitants).",
+     "reponse": 15,
+     "unite": "‰",
+     "aide": "Décès ÷ population moyenne × 1 000.",
+     "explication": "600 ÷ 40 000 × 1 000 = **15 ‰**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le taux brut de Port-Soleil est combien de fois celui de Campus-sur-Mer ?",
+     "reponse": 1.5,
+     "unite": "fois",
+     "aide": "Calcule d’abord le taux de Campus-sur-Mer : 400 ÷ 40 000 × 1 000.",
+     "explication": "Campus-sur-Mer : 10 ‰. Port-Soleil : 15 ‰. 15 ÷ 10 = **1,5 fois**."
+    },
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche la donnée du premier tableau qui explique pourquoi la comparaison des taux bruts est trompeuse.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Pense à la structure par âge.",
+     "explication": "Port-Soleil compte **35 % de 65 ans et plus** contre 10 % : une population plus âgée a un taux brut élevé même en bonne santé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure en comparant les taux standardisés (8,3 et 8,1) ?",
+     "options": [
+      "Les deux villes ont une mortalité comparable à structure par âge égale",
+      "Port-Soleil a une mortalité bien plus forte que Campus-sur-Mer",
+      "Campus-sur-Mer a une mortalité bien plus forte que Port-Soleil",
+      "Les taux standardisés ne permettent aucune comparaison"
+     ],
+     "reponse": 0,
+     "aide": "Le taux standardisé neutralise l’effet de l’âge.",
+     "explication": "Le **taux standardisé** est calculé comme si les deux populations avaient la même structure par âge : 8,3 et 8,1 sont très proches. L’écart des taux bruts vient surtout de l’**âge** de la population."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque producteur à la donnée qu’il fournit.",
+     "paires": [
+      [
+       "INSEE",
+       "Naissances, décès, espérance de vie"
+      ],
+      [
+       "Santé publique France",
+       "Surveillance épidémiologique"
+      ],
+      [
+       "Inserm (CépiDc)",
+       "Causes médicales de décès"
+      ],
+      [
+       "DREES",
+       "Santé, protection sociale, établissements"
+      ]
+     ],
+     "aide": "Chaque organisme a un domaine précis.",
+     "explication": "L’**INSEE** fournit la démographie, **Santé publique France** la surveillance, le **CépiDc** de l’Inserm les causes de décès, la **DREES** la santé et la protection sociale."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a9cf5fa-7d4d-578a-a1b8-1afcf54c1e66",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Treize ans d’écart entre deux hommes",
+   "competence": "lire-graphique",
+   "situation": "Une revue d’information sociale publie l’espérance de vie à la naissance des hommes en France selon leur niveau de vie. Léo veut comprendre ce que ces barres révèlent.",
+   "documents": [
+    {
+     "id": "ev",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Espérance de vie à la naissance des hommes",
+     "source": "Ordres de grandeur arrondis, d’après les données de l’INSEE.",
+     "categories": [
+      "5 % les plus modestes",
+      "Ensemble des hommes",
+      "5 % les plus aisés"
+     ],
+     "series": [
+      {
+       "nom": "Espérance de vie",
+       "valeurs": [
+        72,
+        80,
+        85
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Espérance de vie",
+      "unite": "en années",
+      "min": 60,
+      "max": 90,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Niveau de vie"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ev",
+     "enonce": "Touche le groupe dont l’espérance de vie est la plus faible.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "Les **5 % d’hommes les plus modestes** ont l’espérance de vie la plus faible : environ 72 ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart d’espérance de vie entre les 5 % les plus aisés et les 5 % les plus modestes ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Soustrais la plus petite valeur de la plus grande.",
+     "explication": "85 − 72 = **13 ans**, l’écart que le cours cite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cet écart de 13 ans est-il une simple disparité ?",
+     "options": [
+      "Non : c’est une inégalité sociale, construite et évitable en partie",
+      "Oui : toute différence entre groupes est une inégalité",
+      "Oui : il vient uniquement de l’hérédité",
+      "Non : il n’existe que dans les régions du Nord"
+     ],
+     "reponse": 0,
+     "aide": "Une inégalité est une différence socialement construite et jugée injuste.",
+     "explication": "Une **disparité** est une simple différence constatée. Ici, l’écart suit le niveau de vie : il est **socialement construit**, systématique et en partie évitable, donc c’est une **inégalité sociale** de santé."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a9cf5fa-7d4d-578a-a1b8-1afcf54c1e66",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui vit sous le seuil de pauvreté à Val-Clair ?",
+   "competence": "calculer",
+   "situation": "À Val-Clair, ville imaginaire, le CCAS étudie le niveau de vie de cinq foyers pour illustrer la notion de pauvreté monétaire. Le niveau de vie médian de la ville est de 1 900 € par mois.",
+   "documents": [
+    {
+     "id": "foyers",
+     "type": "tableau",
+     "titre": "Niveau de vie mensuel de cinq foyers",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Foyer",
+      "Niveau de vie (€)"
+     ],
+     "lignes": [
+      [
+       "Foyer A",
+       1050
+      ],
+      [
+       "Foyer B",
+       1300
+      ],
+      [
+       "Foyer C",
+       980
+      ],
+      [
+       "Foyer D",
+       1900
+      ],
+      [
+       "Foyer E",
+       1120
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À combien s’élève le seuil de pauvreté monétaire de Val-Clair ?",
+     "reponse": 1140,
+     "unite": "€",
+     "aide": "Le seuil est fixé à 60 % du niveau de vie médian.",
+     "explication": "1 900 × 0,60 = **1 140 €** par mois."
+    },
+    {
+     "type": "zone",
+     "document": "foyers",
+     "enonce": "Touche les trois niveaux de vie situés sous le seuil de pauvreté.",
+     "reponse": [
+      "r0c1",
+      "r2c1",
+      "r4c1"
+     ],
+     "aide": "Compare chaque valeur à 1 140 €.",
+     "explication": "Les foyers **A (1 050 €)**, **C (980 €)** et **E (1 120 €)** sont sous 1 140 € : ils sont pauvres au sens monétaire.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des cinq foyers du tableau vit sous le seuil de pauvreté ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Trois foyers sur cinq.",
+     "explication": "3 ÷ 5 × 100 = **60 %** des foyers de ce tableau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le taux de pauvreté monétaire ne suffit-il pas à décrire la pauvreté ?",
+     "options": [
+      "Il ignore le patrimoine, les aides en nature et le ressenti",
+      "Il compte deux fois les personnes qui sont au chômage",
+      "Il ne tient pas compte du niveau de vie médian de la ville",
+      "Il mesure uniquement l’espérance de vie de la population"
+     ],
+     "reponse": 0,
+     "aide": "Le taux ne regarde que le revenu.",
+     "explication": "La pauvreté **monétaire** se fonde sur le revenu : elle ignore le **patrimoine**, les **aides en nature** et le **ressenti**. On la croise avec la privation matérielle et sociale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indicateur à sa définition.",
+     "paires": [
+      [
+       "Taux de chômage",
+       "Part des chômeurs dans la population active"
+      ],
+      [
+       "Niveau de vie médian",
+       "Niveau de vie qui partage la population en deux moitiés"
+      ],
+      [
+       "Rapport interdécile D9/D1",
+       "Écart entre les niveaux de vie des plus aisés et des plus modestes"
+      ],
+      [
+       "Taux de privation matérielle et sociale",
+       "Part des personnes qui ne peuvent pas s’offrir des éléments de la vie courante"
+      ]
+     ],
+     "aide": "Relis les noms : actifs, médiane, déciles, privation.",
+     "explication": "Le **taux de chômage** rapporte les chômeurs aux actifs ; le **niveau de vie médian** coupe la population en deux ; le **D9/D1** compare plus aisés et plus modestes ; la **privation** compte les personnes qui renoncent à des biens courants."
+    }
+   ]
+  },
+  {
+   "chapitre": "7a9cf5fa-7d4d-578a-a1b8-1afcf54c1e66",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le territoire joue aussi sur la santé",
+   "competence": "lire-carte",
+   "situation": "Salma prépare une fiche sur les inégalités territoriales de santé. Elle dispose d’une carte de France et du relevé d’une communauté de communes imaginaire.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Régions du Nord et du Nord-Est à la mortalité plus élevée",
+     "fond": "france",
+     "source": "D’après le cours : régions du Nord et du Nord-Est à la mortalité plus élevée.",
+     "regions": [
+      {
+       "code": "HDF",
+       "teinte": "corail",
+       "motif": "hachures"
+      },
+      {
+       "code": "GES",
+       "teinte": "corail",
+       "motif": "hachures"
+      }
+     ],
+     "regionsCliquables": true,
+     "legende": [
+      {
+       "teinte": "corail",
+       "motif": "hachures",
+       "texte": "Mortalité plus élevée"
+      }
+     ]
+    },
+    {
+     "id": "dens",
+     "type": "tableau",
+     "titre": "Médecins généralistes pour 100 000 habitants",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Territoire",
+      "Densité"
+     ],
+     "lignes": [
+      [
+       "Ville-centre",
+       150
+      ],
+      [
+       "Quartier prioritaire",
+       90
+      ],
+      [
+       "Commune rurale isolée",
+       60
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux régions signalées par la légende.",
+     "reponse": [
+      "HDF",
+      "GES"
+     ],
+     "aide": "Cherche les zones hachurées au nord et à l’est.",
+     "explication": "Les **Hauts-de-France** et le **Grand Est** (Nord et Nord-Est) sont les régions à mortalité plus élevée.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "La ville-centre compte combien de fois plus de généralistes pour 100 000 habitants que la commune rurale isolée ?",
+     "reponse": 2.5,
+     "unite": "fois",
+     "aide": "Divise 150 par 60.",
+     "explication": "150 ÷ 60 = **2,5 fois** : c’est un désert médical en milieu rural."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque constat : inégalité sociale ou inégalité territoriale.",
+     "categories": [
+      "Sociale",
+      "Territoriale"
+     ],
+     "items": [
+      [
+       "Les ouvriers ont une espérance de vie à 35 ans plus faible que les cadres",
+       0
+      ],
+      [
+       "Un désert médical dans une zone rurale isolée",
+       1
+      ],
+      [
+       "Mortalité infantile plus forte en outre-mer",
+       1
+      ],
+      [
+       "Le renoncement aux soins est plus fréquent chez les faibles revenus",
+       0
+      ],
+      [
+       "L’obésité est plus fréquente dans les milieux modestes",
+       0
+      ],
+      [
+       "Les quartiers prioritaires de la politique de la ville",
+       1
+      ]
+     ],
+     "aide": "Un constat social compare des groupes ; un constat territorial compare des lieux.",
+     "explication": "Les écarts entre **catégories sociales** (cadres/ouvriers, faibles revenus, milieux modestes) sont **sociaux**. Ceux entre **lieux** (rural isolé, outre-mer, quartiers prioritaires) sont **territoriaux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les déserts médicaux accentuent-ils les inégalités de santé ?",
+     "options": [
+      "Ils limitent l’accès aux soins de ceux qui y vivent",
+      "Ils réduisent le nombre d’habitants du territoire",
+      "Ils augmentent le niveau de vie médian",
+      "Ils rendent les maladies chroniques moins fréquentes"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’accès aux médecins.",
+     "explication": "Un **désert médical** est un territoire où l’accès aux médecins est insuffisant : les habitants se soignent moins ou plus tard, ce qui creuse les inégalités."
+    }
+   ]
+  },
+  {
+   "chapitre": "5921b2f8-e5c4-53cc-937a-c52f9b933bb0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les couches qui entourent la santé d’une personne",
+   "competence": "observer-schema",
+   "situation": "En cours, ton professeur dessine le modèle de Dahlgren et Whitehead sous forme de couches emboîtées autour d’une personne. Retrouve où se placent les déterminants.",
+   "documents": [
+    {
+     "id": "dw",
+     "type": "schema",
+     "titre": "Le modèle en couches",
+     "largeur": 340,
+     "hauteur": 270,
+     "source": "Schéma simplifié du modèle de Dahlgren et Whitehead.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 320,
+       "h": 250,
+       "arrondi": 14,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "contexte",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 36,
+       "l": 290,
+       "h": 215,
+       "arrondi": 12,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "vie",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 62,
+       "l": 260,
+       "h": 180,
+       "arrondi": 10,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "reseaux",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 55,
+       "y": 88,
+       "l": 230,
+       "h": 145,
+       "arrondi": 10,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "mode",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 114,
+       "l": 200,
+       "h": 110,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "centre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 27,
+       "texte": "Contexte général : économie, culture, environnement",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 52,
+       "texte": "Conditions de vie et de travail",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 78,
+       "texte": "Réseaux sociaux et communautaires",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 104,
+       "texte": "Mode de vie personnel",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 164,
+       "texte": "La personne",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 184,
+       "texte": "âge, sexe, hérédité",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dw",
+     "enonce": "Touche la couche où se place le soutien de la famille et des amis.",
+     "reponse": [
+      "reseaux"
+     ],
+     "aide": "Cherche le mot « réseaux ».",
+     "explication": "Le soutien de la famille, des amis et du voisinage relève des **réseaux sociaux et communautaires**."
+    },
+    {
+     "type": "zone",
+     "document": "dw",
+     "enonce": "Touche le centre du modèle, qui regroupe les déterminants non modifiables.",
+     "reponse": [
+      "centre"
+     ],
+     "aide": "Ce sont ceux qu’on ne choisit pas : âge, sexe, hérédité.",
+     "explication": "Au **centre**, on trouve l’âge, le sexe et les facteurs héréditaires : on ne peut pas les modifier."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque exemple à la couche du modèle où il se place.",
+     "paires": [
+      [
+       "Fumer dix cigarettes par jour",
+       "Mode de vie personnel"
+      ],
+      [
+       "Habiter un logement insalubre",
+       "Conditions de vie et de travail"
+      ],
+      [
+       "Avoir un voisinage solidaire",
+       "Réseaux sociaux et communautaires"
+      ]
+     ],
+     "aide": "Le tabac est un choix personnel ; le logement, une condition de vie.",
+     "explication": "Le **tabac** est un déterminant du mode de vie personnel ; le **logement** relève des conditions de vie et de travail ; le **voisinage solidaire** des réseaux sociaux et communautaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "5921b2f8-e5c4-53cc-937a-c52f9b933bb0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La famille Morel et l’engrenage du poids",
+   "competence": "analyser-texte",
+   "situation": "Camille, infirmière scolaire à Val-Clair, observe que Louis, 13 ans, prend du poids. Elle s’intéresse à tout ce qui, autour de lui, pèse sur sa santé.",
+   "documents": [
+    {
+     "id": "morel",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La famille Morel",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Le père de Louis travaille en horaires décalés dans un entrepôt : il dort mal et mange souvent à la hâte. Le revenu de la famille est modeste, et les fruits et légumes frais coûtent cher.",
+      "Le quartier n’a ni espace vert ni équipement sportif. En revanche, le meilleur ami de Louis l’entraîne à marcher jusqu’au collège."
+     ]
+    },
+    {
+     "id": "eng",
+     "type": "chaine",
+     "titre": "Un enchaînement possible",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Horaires de travail décalés"
+      },
+      {
+       "id": "b",
+       "texte": "?"
+      },
+      {
+       "id": "c",
+       "texte": "Prise de poids"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : facteur de risque ou facteur de protection pour le poids de Louis.",
+     "categories": [
+      "Facteur de risque",
+      "Facteur de protection"
+     ],
+     "items": [
+      [
+       "Des horaires de travail décalés dans la famille",
+       0
+      ],
+      [
+       "Un faible revenu qui limite l’accès aux fruits et légumes",
+       0
+      ],
+      [
+       "Un quartier sans espace vert ni équipement sportif",
+       0
+      ],
+      [
+       "Un ami qui l’entraîne à marcher",
+       1
+      ]
+     ],
+     "aide": "Un facteur de risque augmente la probabilité d’un problème, un facteur de protection la diminue.",
+     "explication": "Les **horaires décalés**, le **faible revenu** et l’absence d’**équipements** augmentent le risque ; l’**ami** qui marche avec lui protège."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans l’enchaînement ?",
+     "options": [
+      "Alimentation et sommeil perturbés",
+      "Pratique régulière du sport",
+      "Hausse du revenu du ménage",
+      "Meilleur accès aux soins"
+     ],
+     "reponse": 0,
+     "aide": "Relis le premier paragraphe du récit.",
+     "explication": "Les horaires décalés **perturbent l’alimentation et le sommeil**, ce qui favorise la prise de poids : les déterminants s’enchaînent et se renforcent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque déterminant au champ du modèle de Lalonde.",
+     "paires": [
+      [
+       "Hérédité",
+       "Biologie humaine"
+      ],
+      [
+       "Qualité de l’air",
+       "Environnement"
+      ],
+      [
+       "Tabac et alcool",
+       "Habitudes de vie"
+      ],
+      [
+       "Accès à un médecin traitant",
+       "Organisation des soins"
+      ]
+     ],
+     "aide": "Lalonde distingue quatre champs.",
+     "explication": "Les quatre champs sont la **biologie humaine** (hérédité), l’**environnement**, les **habitudes de vie** (tabac, alcool) et l’**organisation des soins**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Camille.",
+     "texte": "Conseiller seulement de manger mieux a ___ d’effet si l’on n’agit pas aussi sur les ___ de vie.",
+     "reponses": [
+      [
+       "peu"
+      ],
+      [
+       "conditions"
+      ]
+     ],
+     "banque": [
+      "peu",
+      "beaucoup",
+      "conditions",
+      "goûts"
+     ],
+     "aide": "Les déterminants interagissent.",
+     "explication": "Agir sur un seul déterminant a **peu** d’effet si l’on n’agit pas aussi sur les **conditions** de vie : c’est tout l’enjeu de la promotion de la santé."
+    }
+   ]
+  },
+  {
+   "chapitre": "5921b2f8-e5c4-53cc-937a-c52f9b933bb0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où va l’argent, et qu’est-ce qui pèse vraiment sur la santé ?",
+   "competence": "raisonner",
+   "situation": "Un journaliste de Val-Clair compare la répartition des dépenses de santé avec le poids de quatre champs de déterminants, à la manière du rapport Lalonde. Puis il étudie le cas de Samir, ouvrier de 55 ans.",
+   "documents": [
+    {
+     "id": "lal",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Dépenses de santé et poids estimé sur la santé",
+     "source": "Chiffres imaginés pour l’exercice, qui illustrent le constat de Lalonde.",
+     "categories": [
+      "Biologie humaine",
+      "Environnement",
+      "Habitudes de vie",
+      "Organisation des soins"
+     ],
+     "series": [
+      {
+       "nom": "Part des dépenses de santé (%)",
+       "valeurs": [
+        5,
+        2,
+        3,
+        90
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Poids estimé sur la santé (%)",
+       "valeurs": [
+        27,
+        19,
+        43,
+        11
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Champ de déterminants"
+     }
+    },
+    {
+     "id": "samir",
+     "type": "tableau",
+     "titre": "Samir, 55 ans, ouvrier",
+     "source": "Texte écrit pour l’exercice.",
+     "colonnes": [
+      "Ce qui le concerne"
+     ],
+     "lignes": [
+      [
+       "Il a 55 ans"
+      ],
+      [
+       "Il fume dix cigarettes par jour"
+      ],
+      [
+       "Ses collègues de l’atelier le soutiennent"
+      ],
+      [
+       "Il travaille de nuit dans un entrepôt bruyant"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lal",
+     "enonce": "Touche le champ qui reçoit presque toutes les dépenses de santé.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute de la série « dépenses ».",
+     "explication": "L’**organisation des soins** reçoit 90 % des dépenses dans cet exemple, alors qu’elle ne pèse que 11 % sur la santé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart, en points, entre la part des dépenses et le poids estimé de l’organisation des soins ?",
+     "reponse": 79,
+     "unite": "points",
+     "aide": "Soustrais 11 de 90.",
+     "explication": "90 − 11 = **79 points** : le système dépense surtout là où le poids sur la santé est le plus faible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon ce graphique, quel champ pèse le plus sur la santé ?",
+     "options": [
+      "Les habitudes de vie",
+      "L’organisation des soins",
+      "La biologie humaine",
+      "L’environnement"
+     ],
+     "reponse": 0,
+     "aide": "Compare les barres de la série « poids estimé ».",
+     "explication": "Les **habitudes de vie** pèsent 43 % dans cet exemple : c’est le champ le plus déterminant, bien plus que les soins."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de la situation de Samir à la couche du modèle de Dahlgren et Whitehead.",
+     "paires": [
+      [
+       "Il a 55 ans",
+       "Centre : âge, sexe, hérédité"
+      ],
+      [
+       "Il fume dix cigarettes par jour",
+       "Mode de vie personnel"
+      ],
+      [
+       "Ses collègues le soutiennent",
+       "Réseaux sociaux et communautaires"
+      ],
+      [
+       "Il travaille de nuit dans un entrepôt bruyant",
+       "Conditions de vie et de travail"
+      ]
+     ],
+     "aide": "Âge au centre, tabac en mode de vie, soutien en réseaux, travail en conditions de vie.",
+     "explication": "L’**âge** est au centre ; le **tabac** relève du mode de vie ; les **collègues** forment un réseau de soutien ; le **travail de nuit** est une condition de travail."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le cas de Samir sur les déterminants de santé ?",
+     "options": [
+      "Ils interagissent : plusieurs couches pèsent en même temps sur lui",
+      "Un seul déterminant explique à lui seul toute maladie d’un adulte",
+      "Seuls les gènes comptent pour la santé d’un ouvrier de cet âge",
+      "Le système de soins suffit à compenser toutes ces difficultés"
+     ],
+     "reponse": 0,
+     "aide": "Combien de couches sont concernées ?",
+     "explication": "Samir cumule des déterminants de plusieurs couches : ils **interagissent et se renforcent**. Agir sur un seul ne suffit pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "44f70eeb-e15d-5111-8d2e-5fc207d59a59",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre événements qui ont changé la santé publique",
+   "competence": "se-reperer-temps",
+   "situation": "Un dossier de presse présente quatre événements sanitaires français récents. Lis-le pour retrouver ce que chacun a laissé derrière lui.",
+   "documents": [
+    {
+     "id": "crises",
+     "type": "tableau",
+     "titre": "Quatre événements",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Événement",
+      "Période",
+      "Ce qui s’est passé"
+     ],
+     "lignes": [
+      [
+       "Covid-19",
+       "À partir de 2020",
+       "Crise sanitaire mondiale"
+      ],
+      [
+       "Affaire du Mediator",
+       "2009-2010",
+       "Un médicament révélé dangereux, grâce à la pneumologue Irène Frachon"
+      ],
+      [
+       "Affaire du sang contaminé",
+       "Années 1980",
+       "Des hémophiles et transfusés contaminés par le VIH"
+      ],
+      [
+       "Canicule",
+       "Août 2003",
+       "Environ 15 000 décès en excès, surtout de personnes âgées isolées"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crises",
+     "enonce": "Touche la ligne qui mentionne environ 15 000 décès en excès.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Cherche un événement qui touche surtout des personnes âgées isolées.",
+     "explication": "La **canicule d’août 2003** a provoqué environ 15 000 décès en excès, surtout de personnes âgées isolées."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque événement à ce qu’il a changé.",
+     "paires": [
+      [
+       "Affaire du sang contaminé",
+       "Naissance de la sécurité sanitaire et des agences"
+      ],
+      [
+       "Canicule de 2003",
+       "Plan canicule et registres des personnes vulnérables"
+      ],
+      [
+       "Affaire du Mediator",
+       "Loi de 2011 et création de l’ANSM"
+      ],
+      [
+       "Covid-19",
+       "Renforcement de la veille sanitaire"
+      ]
+     ],
+     "aide": "Chaque crise laisse une trace.",
+     "explication": "Le **sang contaminé** a fait naître la sécurité sanitaire, la **canicule** le plan canicule, le **Mediator** la loi de 2011 et l’ANSM, la **Covid-19** une veille renforcée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Affaire du sang contaminé",
+      "Canicule d’août 2003",
+      "Affaire du Mediator",
+      "Covid-19"
+     ],
+     "aide": "Lis la colonne « Période ».",
+     "explication": "Années 1980 (sang contaminé), 2003 (canicule), 2009-2010 (Mediator), à partir de 2020 (Covid-19)."
+    }
+   ]
+  },
+  {
+   "chapitre": "44f70eeb-e15d-5111-8d2e-5fc207d59a59",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La pharmacienne et la chaudière",
+   "competence": "analyser-document",
+   "situation": "À Val-Clair, ville imaginaire, une pharmacienne remarque quelque chose d’inhabituel. Suis comment une situation locale devient un problème de santé publique.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une alerte à Val-Clair",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Début mars, la [[a|pharmacienne]] Mme Ibrahim remarque, en deux semaines, huit foyers d’un même immeuble qui se plaignent de maux de tête et de nausées. Elle prévient l’agence régionale de santé, dont l’enquête relève une chaudière défectueuse, réparable, et deux hospitalisations.",
+      "Un [[a|journaliste]] local publie l’histoire. Une [[a|association]] de locataires réclame des travaux, car les habitants jugent la situation inacceptable. Le [[a|maire]] inscrit la question à l’ordre du jour du conseil municipal."
+     ]
+    },
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "titre": "Du signal à la réponse",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Un cas inhabituel est repéré"
+      },
+      {
+       "id": "b",
+       "texte": "Alerte sanitaire"
+      },
+      {
+       "id": "c",
+       "texte": "Enquête épidémiologique"
+      },
+      {
+       "id": "d",
+       "texte": "?"
+      },
+      {
+       "id": "e",
+       "texte": "Mesures et nouvelles règles"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "e"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les quatre mots qui désignent des acteurs faisant émerger le problème (professionnel de santé, médias, association, élu).",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche une profession, un métier de presse, un collectif et un élu.",
+     "explication": "La **pharmacienne** (professionnelle de santé), le **journaliste** (médias), l’**association** de locataires et le **maire** (élu) portent le problème.",
+     "multiple": true
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fait du récit au critère de reconnaissance d’un problème de santé publique.",
+     "paires": [
+      [
+       "Huit foyers d’un même immeuble touchés",
+       "Ampleur"
+      ],
+      [
+       "Deux personnes hospitalisées",
+       "Gravité"
+      ],
+      [
+       "Une chaudière réparable",
+       "Possibilité d’agir"
+      ],
+      [
+       "Des habitants jugent la situation inacceptable",
+       "Perception sociale"
+      ]
+     ],
+     "aide": "Les critères sont l’ampleur, la gravité, le coût, la possibilité d’agir et la perception sociale.",
+     "explication": "Le nombre de foyers donne l’**ampleur**, les hospitalisations la **gravité**, la réparation la **possibilité d’agir**, le jugement des habitants la **perception sociale**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans les étapes ?",
+     "options": [
+      "Mise à l’agenda politique",
+      "Retour à la normale sans suite",
+      "Fin de la veille sanitaire",
+      "Retrait des associations"
+     ],
+     "reponse": 0,
+     "aide": "Le maire inscrit la question à l’ordre du jour.",
+     "explication": "Après l’enquête et la mobilisation des acteurs, la question est portée à l’**agenda politique** : c’est ce qui débouche sur des mesures."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le rôle de l’épidémiologie.",
+     "texte": "L’épidémiologie ___ le problème : elle mesure la ___ des cas et repère des facteurs de ___.",
+     "reponses": [
+      [
+       "objective"
+      ],
+      [
+       "fréquence"
+      ],
+      [
+       "risque"
+      ]
+     ],
+     "banque": [
+      "objective",
+      "fréquence",
+      "risque",
+      "cache"
+     ],
+     "aide": "Elle compte, elle repère, elle identifie.",
+     "explication": "L’épidémiologie **objective** le problème : elle mesure la **fréquence** des cas et identifie les facteurs de **risque**. Mais seuls des acteurs le mettent à l’agenda."
+    }
+   ]
+  },
+  {
+   "chapitre": "44f70eeb-e15d-5111-8d2e-5fc207d59a59",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rive-Haute : une crise sanitaire en cinq temps",
+   "competence": "analyser-document",
+   "situation": "Une crise sanitaire éclate à Rive-Haute, ville imaginaire. Tu dois reconnaître ses composantes, puis la replacer parmi les crises qui ont marqué la France.",
+   "documents": [
+    {
+     "id": "crise",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Chronique de la semaine",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "En trois jours, 300 habitants de Rive-Haute consultent pour des vomissements et de la diarrhée.",
+      "Les experts hésitent : eau du robinet, restaurant collectif ou autre cause ? Les analyses ne sont pas terminées.",
+      "Les journaux télévisés ouvrent chaque soir sur l’affaire et les réseaux sociaux s’enflamment.",
+      "Des habitants reprochent à la préfecture et à la mairie d’avoir tardé à réagir.",
+      "Le préfet doit décider en quarante-huit heures s’il faut interdire l’eau du robinet."
+     ]
+    },
+    {
+     "id": "traces",
+     "type": "tableau",
+     "titre": "Ce que les crises ont laissé",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Crise",
+      "Ce qu’elle a laissé"
+     ],
+     "lignes": [
+      [
+       "Sang contaminé (années 1980)",
+       "Sécurité sanitaire moderne, agences indépendantes"
+      ],
+      [
+       "Canicule d’août 2003",
+       "Plan canicule, registres des personnes vulnérables, journée de solidarité"
+      ],
+      [
+       "Mediator (2009-2010)",
+       "Loi de 2011 sur la sécurité du médicament, création de l’ANSM"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque fait de la chronique à la composante de crise sanitaire qu’il illustre.",
+     "paires": [
+      [
+       "300 malades en trois jours",
+       "Événement sanitaire"
+      ],
+      [
+       "Les experts hésitent sur la cause",
+       "Incertitude scientifique"
+      ],
+      [
+       "Les journaux en parlent chaque soir",
+       "Pression médiatique"
+      ],
+      [
+       "Les habitants reprochent aux autorités leur retard",
+       "Mise en cause des autorités"
+      ],
+      [
+       "Le préfet doit trancher en 48 heures",
+       "Décision dans l’urgence"
+      ]
+     ],
+     "aide": "Une crise associe un événement, une incertitude, les médias, une mise en cause et l’urgence.",
+     "explication": "Chaque paragraphe illustre une composante : l’**événement** (300 malades), l’**incertitude** (cause inconnue), la **pression médiatique**, la **mise en cause** des autorités et l’**urgence** de la décision."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi peut-on parler de crise sanitaire à Rive-Haute ?",
+     "options": [
+      "Il y a une forte pression médiatique et politique autour de l’événement",
+      "Seules 300 personnes sont concernées, ce qui est exceptionnel",
+      "Les experts ont immédiatement identifié la cause de l’épidémie",
+      "Les autorités n’ont aucune décision à prendre dans l’urgence"
+     ],
+     "reponse": 0,
+     "aide": "Une crise dépasse les capacités habituelles de réponse.",
+     "explication": "Une **crise sanitaire** associe un événement de santé qui dépasse les capacités habituelles de réponse, une forte dimension **médiatique et politique** et des décisions urgentes."
+    },
+    {
+     "type": "zone",
+     "document": "traces",
+     "enonce": "Touche ce que l’affaire du Mediator a laissé.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la loi de 2011.",
+     "explication": "Le Mediator a conduit à la **loi de 2011 sur la sécurité du médicament** et à la création de l’**ANSM**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux ce que montre le tableau ?",
+     "options": [
+      "Chaque crise laisse de nouvelles lois, agences ou dispositifs de veille",
+      "Une crise n’a presque jamais de conséquence durable sur le système",
+      "Seuls les scientifiques décident de ce qui change après une crise",
+      "Les crises sanitaires ne concernent que les médicaments et les vaccins"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne de droite.",
+     "explication": "Chaque crise laisse une trace : **de nouvelles lois, de nouvelles agences, de nouveaux dispositifs de veille**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb9922a9-01eb-5960-a702-1f6c4a37cdad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois situations, trois mots à ne pas confondre",
+   "competence": "analyser-document",
+   "situation": "Une assistante sociale de Val-Clair, ville imaginaire, présente trois personnes accompagnées par le CCAS. Chacune illustre une notion différente : précarité, pauvreté ou exclusion.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Trois personnes accompagnées",
+     "source": "Texte écrit pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Léa, 24 ans",
+       "Elle enchaîne des CDD de trois mois et loge chez une amie en attendant de trouver un appartement."
+      ],
+      [
+       "Mehdi, 38 ans",
+       "Son niveau de vie est inférieur au seuil de pauvreté monétaire de la ville."
+      ],
+      [
+       "Josette, 70 ans",
+       "Veuve, sans domicile depuis un an, elle n’a plus de contact avec sa famille ni avec ses voisins."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche la situation d’une personne dont les liens sociaux sont rompus.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "L’exclusion est une rupture des liens.",
+     "explication": "Josette n’a plus de domicile ni de contacts : c’est l’**exclusion**, la rupture des liens sociaux et la mise à l’écart de la vie sociale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à la notion qui décrit le mieux sa situation.",
+     "paires": [
+      [
+       "Léa",
+       "Précarité"
+      ],
+      [
+       "Mehdi",
+       "Pauvreté"
+      ],
+      [
+       "Josette",
+       "Exclusion"
+      ]
+     ],
+     "aide": "Fragilité, manque, rupture.",
+     "explication": "La **précarité** est une fragilité (emploi et logement incertains), la **pauvreté** un manque de ressources, l’**exclusion** une rupture des liens sociaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le niveau de vie médian de la ville est de 1 800 € par mois. À combien s’élève le seuil de pauvreté monétaire ?",
+     "reponse": 1080,
+     "unite": "€",
+     "aide": "Le seuil est fixé à 60 % du niveau de vie médian.",
+     "explication": "1 800 × 0,60 = **1 080 €** par mois : Mehdi vit sous ce seuil."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb9922a9-01eb-5960-a702-1f6c4a37cdad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Intégré, vulnérable ou désaffilié ?",
+   "competence": "raisonner",
+   "situation": "Dans son mémoire, Nolwenn applique à cinq personnes le continuum de Robert Castel. Elle s’intéresse aussi à la façon dont on glisse d’une zone à l’autre.",
+   "documents": [
+    {
+     "id": "zones",
+     "type": "tableau",
+     "titre": "Cinq situations",
+     "source": "Texte écrit pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Emploi",
+      "Liens sociaux"
+     ],
+     "lignes": [
+      [
+       "Inès",
+       "CDI depuis huit ans",
+       "Famille et amis proches"
+      ],
+      [
+       "Paul",
+       "Missions d’intérim",
+       "Quelques amis"
+      ],
+      [
+       "Marc",
+       "Sans travail depuis quatre ans",
+       "Ne voit plus personne"
+      ],
+      [
+       "Amina",
+       "CDD enchaînés",
+       "Famille éloignée, peu d’amis"
+      ],
+      [
+       "Georges",
+       "Retraite stable",
+       "Famille et club très présents"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "rup",
+     "type": "chaine",
+     "titre": "Un parcours d’exclusion",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Perte d’emploi"
+      },
+      {
+       "id": "b",
+       "texte": "?"
+      },
+      {
+       "id": "c",
+       "texte": "Perte du logement"
+      },
+      {
+       "id": "d",
+       "texte": "Isolement"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zones",
+     "enonce": "Touche la personne la plus proche de la désaffiliation.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Elle cumule absence de travail et isolement.",
+     "explication": "**Marc** n’a ni travail ni liens : il est en zone de **désaffiliation**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Place chaque personne dans la zone de Castel qui lui correspond.",
+     "categories": [
+      "Intégration",
+      "Vulnérabilité",
+      "Désaffiliation"
+     ],
+     "items": [
+      [
+       "Inès",
+       0
+      ],
+      [
+       "Georges",
+       0
+      ],
+      [
+       "Paul",
+       1
+      ],
+      [
+       "Amina",
+       1
+      ],
+      [
+       "Marc",
+       2
+      ]
+     ],
+     "aide": "Intégration : emploi stable et liens solides ; vulnérabilité : emploi précaire, liens fragiles.",
+     "explication": "**Inès** et **Georges** ont un emploi ou une retraite stable et des liens solides : **intégration**. **Paul** et **Amina** ont un emploi précaire et des liens fragiles : **vulnérabilité**. **Marc** : **désaffiliation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape se place à la place du « ? » dans le parcours d’exclusion ?",
+     "options": [
+      "Séparation du couple",
+      "Obtention d’un CDI",
+      "Entrée dans un club",
+      "Hausse du revenu"
+     ],
+     "reponse": 0,
+     "aide": "Le cours cite : perte d’emploi, séparation, perte du logement, maladie, isolement.",
+     "explication": "L’exclusion est un **processus** : perte d’emploi, **séparation**, perte du logement, isolement… des ruptures qui s’alimentent."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Selon Serge Paugam, la disqualification sociale mène : range ses étapes dans l’ordre.",
+     "items": [
+      "Fragilité",
+      "Dépendance envers les aides",
+      "Rupture"
+     ],
+     "aide": "Du plus léger au plus grave.",
+     "explication": "Paugam décrit un parcours de la **fragilité** à la **dépendance** envers les aides, puis à la **rupture**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb9922a9-01eb-5960-a702-1f6c4a37cdad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Comment un problème social est reconnu",
+   "competence": "se-reperer-temps",
+   "situation": "Au lycée, Mathilde prépare un exposé : « Un problème social est une construction. » Elle dispose d’une frise des réponses publiques et d’une chronique imaginaire.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Mobilisations et réponses publiques",
+     "debut": 1950,
+     "fin": 2010,
+     "pas": 10,
+     "source": "D’après le cours.",
+     "evenements": [
+      {
+       "id": "abbe",
+       "date": 1954,
+       "nom": "Appel abbé Pierre"
+      },
+      {
+       "id": "restos",
+       "date": 1985,
+       "nom": "Restos du cœur"
+      },
+      {
+       "id": "wres",
+       "date": 1987,
+       "nom": "Rapport Wresinski"
+      },
+      {
+       "id": "rmi",
+       "date": 1988,
+       "nom": "RMI"
+      },
+      {
+       "id": "excl",
+       "date": 1998,
+       "nom": "Loi exclusions"
+      },
+      {
+       "id": "dalo",
+       "date": 2007,
+       "nom": "DALO"
+      },
+      {
+       "id": "rsa",
+       "date": 2009,
+       "nom": "RSA"
+      }
+     ]
+    },
+    {
+     "id": "chron",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Chronique de Val-Clair, en désordre",
+     "source": "Chronique imaginée pour l’exercice.",
+     "blocs": [
+      "Le conseil municipal vote la création d’une aide alimentaire pour les étudiants.",
+      "Une association alerte la presse locale : les files d’attente s’allongent.",
+      "Chaque semaine, des étudiants font la queue devant l’épicerie solidaire.",
+      "La mairie inscrit le sujet à l’ordre du jour du conseil."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la prestation qui a remplacé le RMI.",
+     "reponse": [
+      "rsa"
+     ],
+     "aide": "Elle date de 2009.",
+     "explication": "Le **RSA**, créé en 2009, a remplacé le RMI de 1988."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création du RMI de celle du RSA ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "2009 − 1988 = **21 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la réponse publique qui l’a suivie.",
+     "paires": [
+      [
+       "Grande pauvreté, rapport Wresinski",
+       "RMI (1988)"
+      ],
+      [
+       "Montée de l’exclusion dans les années 1990",
+       "Loi de lutte contre les exclusions (1998)"
+      ],
+      [
+       "Mal-logement, mobilisation des associations",
+       "Droit au logement opposable (2007)"
+      ]
+     ],
+     "aide": "Regarde la frise pour les dates.",
+     "explication": "Le rapport Wresinski a mené au **RMI**, la montée de l’exclusion à la **loi de 1998**, le mal-logement au **droit au logement opposable** (DALO, 2007)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les phrases de la chronique dans l’ordre où un problème social est reconnu.",
+     "items": [
+      "Des étudiants font la queue devant l’épicerie solidaire",
+      "Une association alerte la presse locale",
+      "La mairie inscrit le sujet à l’ordre du jour",
+      "Le conseil municipal vote une aide alimentaire"
+     ],
+     "aide": "Situation, mobilisation, mise à l’agenda, réponse.",
+     "explication": "D’abord la **situation objective**, puis la **mobilisation** (association, presse), la **mise à l’agenda** (ordre du jour) et enfin la **réponse** (aide votée)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une situation difficile n’est-elle pas automatiquement un problème social ?",
+     "options": [
+      "Elle doit être dénoncée et jugée inacceptable par la collectivité",
+      "Elle doit d’abord coûter très cher à l’État",
+      "Elle doit toucher plus de la moitié de la population",
+      "Elle doit être décrite dans un rapport du ministère"
+     ],
+     "reponse": 0,
+     "aide": "Un problème social est une construction.",
+     "explication": "Un problème social suppose une **situation réelle**, des **acteurs** qui la dénoncent et une **collectivité** qui la reconnaît comme inacceptable."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab7a2b8c-afe0-5b60-8f38-31d4cc79a925",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand la vie fait chuter les revenus",
+   "competence": "analyser-document",
+   "situation": "L’assistante sociale d’un CCAS présente quatre situations courantes à un groupe de lycéens. Chacune correspond à un risque social.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "source": "Texte écrit pour l’exercice.",
+     "colonnes": [
+      "Personne",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Karim",
+       "Il perd son emploi et cherche un nouveau poste."
+      ],
+      [
+       "Sophie",
+       "Elle attend son premier enfant et prend un congé."
+      ],
+      [
+       "Odile, 86 ans",
+       "Elle ne peut plus faire seule sa toilette ni ses courses."
+      ],
+      [
+       "Jean",
+       "Il se blesse à l’usine pendant son travail."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "enonce": "Touche la situation qui relève du risque de perte d’autonomie.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Elle concerne une personne âgée.",
+     "explication": "La situation d’**Odile** relève de la **perte d’autonomie**, couverte notamment par l’APA pour les personnes âgées."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne au risque social auquel elle est exposée.",
+     "paires": [
+      [
+       "Karim",
+       "Emploi"
+      ],
+      [
+       "Sophie",
+       "Famille"
+      ],
+      [
+       "Odile",
+       "Perte d’autonomie"
+      ],
+      [
+       "Jean",
+       "Santé (accident du travail)"
+      ]
+     ],
+     "aide": "Chaque situation fait baisser les revenus ou monter les dépenses.",
+     "explication": "Karim : **emploi** ; Sophie : **famille** ; Odile : **perte d’autonomie** ; Jean : **santé** (accident du travail et maladie professionnelle)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qu’un risque social ?",
+     "options": [
+      "Un événement qui peut réduire les revenus ou augmenter les dépenses",
+      "Un événement qui ne concerne que les personnes pauvres",
+      "Une dépense obligatoire versée à un assureur privé",
+      "Une prestation versée uniquement aux retraités"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’effet sur le budget d’une personne ou d’une famille.",
+     "explication": "Un **risque social** est un événement qui peut entraîner une **baisse de revenus** ou une **hausse des dépenses** : la protection sociale organise la solidarité pour y faire face."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab7a2b8c-afe0-5b60-8f38-31d4cc79a925",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Bismarck, Beveridge : deux modèles, un système français",
+   "competence": "raisonner",
+   "situation": "Pour un exposé, Anaïs doit montrer que le système français emprunte aux deux grands modèles historiques. Une frise l’aide à situer les étapes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Étapes de la protection sociale",
+     "debut": 1940,
+     "fin": 2025,
+     "pas": 5,
+     "source": "D’après le cours.",
+     "evenements": [
+      {
+       "id": "bev",
+       "date": 1942,
+       "nom": "Rapport Beveridge"
+      },
+      {
+       "id": "secu",
+       "date": 1945,
+       "nom": "Sécurité sociale"
+      },
+      {
+       "id": "csg",
+       "date": 1991,
+       "nom": "CSG"
+      },
+      {
+       "id": "puma",
+       "date": 2016,
+       "nom": "PUMa"
+      },
+      {
+       "id": "auto",
+       "date": 2021,
+       "nom": "Branche autonomie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la création qui finance la protection sociale par un prélèvement sur l’ensemble des revenus.",
+     "reponse": [
+      "csg"
+     ],
+     "aide": "Elle date de 1991.",
+     "explication": "La **CSG** (contribution sociale généralisée, 1991) est un prélèvement sur tous les revenus : un élément de financement par l’impôt, d’inspiration beveridgienne."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique dans le modèle qui lui correspond.",
+     "categories": [
+      "Modèle bismarckien",
+      "Modèle beveridgien"
+     ],
+     "items": [
+      [
+       "Protection liée au travail",
+       0
+      ],
+      [
+       "Financement par cotisations sur les salaires",
+       0
+      ],
+      [
+       "Prestations proportionnelles aux revenus",
+       0
+      ],
+      [
+       "Gestion par les partenaires sociaux",
+       0
+      ],
+      [
+       "Protection de tous les citoyens",
+       1
+      ],
+      [
+       "Financement par l’impôt",
+       1
+      ],
+      [
+       "Prestations uniformes",
+       1
+      ],
+      [
+       "Gestion par l’État",
+       1
+      ]
+     ],
+     "aide": "Bismarck : assurance liée au travail ; Beveridge : universalité financée par l’impôt.",
+     "explication": "Le modèle **bismarckien** (Allemagne, années 1880) lie la protection au travail et aux cotisations. Le modèle **beveridgien** (rapport de 1942) protège tous les citoyens par l’impôt, avec des prestations uniformes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la Sécurité sociale de la protection universelle maladie ?",
+     "reponse": 71,
+     "unite": "ans",
+     "aide": "Lis les dates sur la frise.",
+     "explication": "2016 − 1945 = **71 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que le système français est mixte ?",
+     "options": [
+      "Il est né bismarckien et a intégré des éléments beveridgiens",
+      "Il est financé uniquement par les cotisations des salariés",
+      "Il n’est géré que par l’État, sans partenaires sociaux",
+      "Il a abandonné toute protection liée au travail depuis 1945"
+     ],
+     "reponse": 0,
+     "aide": "Pense au financement et à l’universalité.",
+     "explication": "Le système français, d’origine **bismarckienne** (liée au travail), a intégré des éléments **beveridgiens** : universalité (PUMa) et financement par l’impôt (CSG)."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab7a2b8c-afe0-5b60-8f38-31d4cc79a925",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où va l’argent de la protection sociale, et qui y accède ?",
+   "competence": "raisonner",
+   "situation": "À Val-Clair, une conseillère présente la répartition des dépenses de protection sociale, puis une enquête sur le RSA. Elle veut montrer que les droits ne suffisent pas toujours.",
+   "documents": [
+    {
+     "id": "dep",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Dépenses de protection sociale selon le risque",
+     "source": "Ordres de grandeur arrondis pour l’exercice.",
+     "categories": [
+      "Vieillesse et survie",
+      "Santé",
+      "Famille",
+      "Emploi",
+      "Logement",
+      "Pauvreté et exclusion"
+     ],
+     "series": [
+      {
+       "nom": "Part des dépenses",
+       "valeurs": [
+        45,
+        35,
+        8,
+        6,
+        3,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rsa",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une enquête sur le RSA",
+     "source": "Enquête imaginée pour l’exercice.",
+     "blocs": [
+      "À Val-Clair, 100 foyers pourraient toucher le RSA. Seuls 70 le perçoivent.",
+      "Parmi les 30 autres, certains ne connaissent pas leur droit, d’autres jugent les démarches trop compliquées, d’autres encore craignent d’être mal regardés."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dep",
+     "enonce": "Touche les deux premiers postes de dépenses.",
+     "reponse": [
+      "k0",
+      "k1"
+     ],
+     "aide": "Cherche les deux plus grandes parts.",
+     "explication": "La **vieillesse et la survie** (45 %) et la **santé** (35 %) sont les deux premiers postes.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des dépenses représentent la santé et la vieillesse-survie réunies ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Additionne les deux parts.",
+     "explication": "45 + 35 = **80 %** des dépenses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la part de non-recours au RSA parmi les 100 foyers éligibles ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Compte ceux qui ne le perçoivent pas.",
+     "explication": "100 − 70 = 30 foyers : le non-recours est de **30 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles raisons du non-recours apparaissent dans l’enquête ?",
+     "options": [
+      "La méconnaissance du droit",
+      "La complexité des démarches",
+      "La crainte d’être stigmatisé",
+      "Le refus de l’État de verser l’aide",
+      "Un plafond de ressources dépassé"
+     ],
+     "reponse": [
+      0,
+      1,
+      2
+     ],
+     "aide": "Relis le second paragraphe.",
+     "explication": "L’enquête cite la **méconnaissance**, la **complexité** des démarches et la **crainte du regard des autres**. Les deux autres options n’y figurent pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le non-recours ?",
+     "options": [
+      "Avoir un droit ne suffit pas : il faut pouvoir y accéder",
+      "Les droits sociaux n’existent plus en pratique",
+      "Le RSA est réservé à une minorité de foyers",
+      "La protection sociale est inutile pour les ayants droit"
+     ],
+     "reponse": 0,
+     "aide": "Pense au Préambule de 1946 et à l’accès aux droits.",
+     "explication": "Les droits sociaux sont inscrits dans le Préambule de **1946**, mais il faut y **accéder** : le **non-recours** montre l’écart entre un droit et son usage réel."
+    }
+   ]
+  }
+ ]
+}

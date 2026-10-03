@@ -1,0 +1,2379 @@
+{
+ "niveau": "1re",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "983ed423-3e2d-5c11-afb9-ad2721af7663",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une frise sur les migrations",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Hana a placé sept repères sur une frise : trois concernent le Canada ou New York, quatre le Royaume-Uni. Lis-la avec elle.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Seven landmarks of migration",
+     "debut": 1890,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "ellis",
+       "date": 1892,
+       "nom": "Ellis Island opens"
+      },
+      {
+       "id": "windrush",
+       "date": 1948,
+       "nom": "Windrush at Tilbury"
+      },
+      {
+       "id": "carnival",
+       "date": 1966,
+       "nom": "Notting Hill"
+      },
+      {
+       "id": "points",
+       "date": 1967,
+       "nom": "Points system"
+      },
+      {
+       "id": "multi",
+       "date": 1971,
+       "nom": "Multiculturalism"
+      },
+      {
+       "id": "island",
+       "date": 2004,
+       "nom": "Small Island"
+      },
+      {
+       "id": "scandal",
+       "date": 2018,
+       "nom": "Windrush scandal"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "windrush"
+     ],
+     "enonce": "Touche le repère qui correspond à l’arrivée à Tilbury d’un navire transportant surtout des Caribéens.",
+     "aide": "Cherche le nom du navire dans la frise : il est cité dans l’étiquette.",
+     "explication": "C’est **Windrush at Tilbury** : l’*Empire Windrush* accoste le 22 juin 1948."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’arrivée du Windrush (1948) du scandale Windrush (2018) ?",
+     "reponse": 70,
+     "unite": "ans",
+     "aide": "Soustrais 1948 de 2018.",
+     "explication": "2018 − 1948 = **70 ans** : des Britanniques arrivés enfants furent menacés d’expulsion soixante-dix ans après."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot anglais à sa traduction.",
+     "paires": [
+      [
+       "to settle",
+       "s’installer"
+      ],
+      [
+       "a host country",
+       "un pays d’accueil"
+      ],
+      [
+       "a newcomer",
+       "un nouvel arrivant"
+      ],
+      [
+       "a border",
+       "une frontière"
+      ]
+     ],
+     "aide": "Pense à l’histoire d’un navire qui accoste : qui arrive, où, et que fait-il ensuite ?",
+     "explication": "*To settle* : s’installer ; *a host country* : un pays d’accueil ; *a newcomer* : un nouvel arrivant ; *a border* : une frontière."
+    }
+   ]
+  },
+  {
+   "chapitre": "983ed423-3e2d-5c11-afb9-ad2721af7663",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une affiche pour attirer les nouveaux arrivants",
+   "competence": "analyser-document",
+   "situation": "Un bureau d’immigration fictif affiche trois critères pour choisir ses nouveaux arrivants, comme le fait le système à points canadien. Amara et Luis demandent à venir.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Come and build your future",
+     "sousTitre": "A country that invites newcomers",
+     "emoji": "🍁",
+     "lignes": [
+      {
+       "texte": "You speak English or French",
+       "id": "langue"
+      },
+      {
+       "texte": "You have a diploma",
+       "id": "diplome"
+      },
+      {
+       "texte": "You have a skill the country needs",
+       "id": "metier"
+      }
+     ],
+     "pied": "Points are given for each of the three criteria.",
+     "teinte": "corail",
+     "source": "Affiche écrite pour l’exercice"
+    },
+    {
+     "id": "points",
+     "type": "tableau",
+     "titre": "Two fictional applications",
+     "colonnes": [
+      "Applicant",
+      "Language",
+      "Diploma",
+      "Skill"
+     ],
+     "lignes": [
+      [
+       "Amara",
+       24,
+       18,
+       12
+      ],
+      [
+       "Luis",
+       20,
+       15,
+       22
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "metier"
+     ],
+     "enonce": "Touche la ligne de l’affiche qui concerne le métier recherché.",
+     "aide": "Le mot *skill* désigne une compétence professionnelle.",
+     "explication": "La ligne **You have a skill the country needs** correspond au métier : c’est le troisième critère, après la langue et le diplôme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Additionne les points de Luis sur les trois critères.",
+     "reponse": 57,
+     "unite": "points",
+     "aide": "Additionne les trois nombres de sa ligne.",
+     "explication": "20 + 15 + 22 = **57 points**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle image oppose-t-on souvent au « melting pot » pour parler du Canada ?",
+     "options": [
+      "La mosaïque : chacun garde sa couleur",
+      "Le brasero : tout le monde est identique",
+      "La pyramide : certains sont en haut",
+      "Le mur : on ne mélange rien"
+     ],
+     "reponse": 0,
+     "aide": "Pense à un assemblage de petits morceaux de couleurs différentes.",
+     "explication": "**La mosaïque** (ou le saladier) : le Canada reconnaît la diversité au lieu d’exiger l’assimilation."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Canada is often called a ___, not a melting pot.",
+     "reponses": [
+      [
+       "mosaic"
+      ]
+     ],
+     "banque": [
+      "mosaic",
+      "mirror",
+      "ladder",
+      "factory"
+     ],
+     "aide": "C’est le même mot que « mosaïque » en français.",
+     "explication": "**mosaic** : une mosaïque, où chaque culture garde sa couleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "983ed423-3e2d-5c11-afb9-ad2721af7663",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Windrush : ce qu’ils ont apporté, ce qu’on leur a fait",
+   "competence": "analyser-texte",
+   "situation": "Pour un débat, Leila rapproche un article sur l’arrivée du Windrush et le message d’une amie sur le scandale de 2018.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "June 1948",
+     "blocs": [
+      "On 22 June 1948, the *Empire Windrush* docked at [[t|Tilbury]], near London. Most of its passengers came from the Caribbean.",
+      "They had come to help a Britain still recovering from the war. Many of them worked in hospitals and on buses."
+     ],
+     "source": "Article écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Leila",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leila",
+       "texte": "In 2018, some people who had arrived as children were [[m|threatened]] with expulsion."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Seventy years later! They had no papers to prove their status."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le nom du lieu où le navire a accosté.",
+     "aide": "C’est le nom propre qui suit le verbe *docked at*.",
+     "explication": "Le navire a accosté à **Tilbury**, près de Londres."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui signifie « menacés ».",
+     "aide": "C’est un participe passé placé après *were*.",
+     "explication": "**threatened** : *to threaten* signifie menacer ; ces personnes risquaient l’expulsion."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait dans la bonne date.",
+     "categories": [
+      "1948 : l’apport",
+      "2018 : l’injustice"
+     ],
+     "items": [
+      [
+       "They worked in hospitals.",
+       0
+      ],
+      [
+       "They worked on buses.",
+       0
+      ],
+      [
+       "They could not prove their status.",
+       1
+      ],
+      [
+       "They were threatened with expulsion.",
+       1
+      ]
+     ],
+     "aide": "Le premier document parle de 1948, le second de 2018.",
+     "explication": "En 1948 les arrivants **travaillent** (hôpitaux, bus) ; en 2018 certains sont **menacés** faute de papiers : c’est le paradoxe du scandale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le scandale de 2018 est-il particulièrement choquant ?",
+     "options": [
+      "Des bâtisseurs du pays étaient traités en clandestins",
+      "Le navire n’avait pas le droit d’accoster à Tilbury en 1948",
+      "Les passagers venaient tous d’un pays européen voisin",
+      "Le gouvernement avait refusé la venue de ces travailleurs"
+     ],
+     "reponse": 0,
+     "aide": "Rapproche la dernière phrase du premier texte et le message de Ben.",
+     "explication": "**Ils avaient aidé à reconstruire le pays**, et soixante-dix ans plus tard certains étaient traités comme des immigrés illégaux : l’appartenance ne tient pas qu’aux papiers."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris une phrase sur cette génération. Le premier mot est « The ».",
+     "items": [
+      "The",
+      "Windrush",
+      "generation",
+      "helped",
+      "rebuild",
+      "Britain"
+     ],
+     "aide": "Sujet, verbe *helped*, puis une base verbale.",
+     "explication": "**The Windrush generation helped rebuild Britain** : après *help*, le *to* est facultatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d2675eb-0fb0-554a-a3c5-332a3ad98a1b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq arrêts de la Cour suprême",
+   "competence": "lire-tableau",
+   "situation": "Pour son cours d’anglais, Noah a recopié dans un tableau cinq grandes décisions de la Cour suprême des États-Unis.",
+   "documents": [
+    {
+     "id": "arrets",
+     "type": "tableau",
+     "titre": "Five Supreme Court rulings",
+     "colonnes": [
+      "Case",
+      "Year",
+      "Decision"
+     ],
+     "lignes": [
+      [
+       "Plessy v. Ferguson",
+       1896,
+       "Segregation is legal (“separate but equal”)"
+      ],
+      [
+       "Brown v. Board of Education",
+       1954,
+       "Segregation in public schools is unconstitutional"
+      ],
+      [
+       "Loving v. Virginia",
+       1967,
+       "Bans on interracial marriage are overturned"
+      ],
+      [
+       "Obergefell v. Hodges",
+       2015,
+       "Same-sex marriage becomes a right nationwide"
+      ],
+      [
+       "Students for Fair Admissions v. Harvard",
+       2023,
+       "Race is no longer considered in university admissions"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice, d’après des faits historiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arrets",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui donne la décision de l’arrêt de 1954.",
+     "aide": "Repère la ligne de 1954, puis la colonne « Decision ».",
+     "explication": "En 1954, l’arrêt *Brown v. Board of Education* déclare que **la ségrégation dans les écoles publiques est inconstitutionnelle**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’arrêt qui légalise la ségrégation de celui qui la déclare inconstitutionnelle à l’école ?",
+     "reponse": 58,
+     "unite": "ans",
+     "aide": "Compare *Plessy* et *Brown*.",
+     "explication": "1954 − 1896 = **58 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "a ruling",
+       "une décision de justice"
+      ],
+      [
+       "to overturn",
+       "annuler"
+      ],
+      [
+       "segregation",
+       "la ségrégation"
+      ],
+      [
+       "civil rights",
+       "les droits civiques"
+      ]
+     ],
+     "aide": "Le tableau emploie déjà *segregation* et *overturned*.",
+     "explication": "*A ruling* : une décision de justice ; *to overturn* : annuler ; *segregation* : la ségrégation ; *civil rights* : les droits civiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d2675eb-0fb0-554a-a3c5-332a3ad98a1b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le quartier entouré de rouge",
+   "competence": "lire-graphique",
+   "situation": "Dans les années 1930, des banques américaines refusaient des prêts dans certains quartiers. Maya étudie une ville imaginaire, Eastbridge, avec un texte et un graphique.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Redlining",
+     "blocs": [
+      "In the 1930s, banks drew a red line around some neighbourhoods and [[r|refused]] to lend money there. Most of the families who lived inside the line were Black.",
+      "In 1968, the Fair Housing Act banned discrimination in housing."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "prets",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Eastbridge, 1938: loans approved",
+     "categories": [
+      "Green Hill",
+      "Maple Park",
+      "Riverside",
+      "East End"
+     ],
+     "series": [
+      {
+       "nom": "Loans approved",
+       "valeurs": [
+        80,
+        70,
+        10,
+        20
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Loans approved",
+      "unite": "out of 100 applications",
+      "min": 0,
+      "max": 100,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Neighbourhood"
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice ; Riverside et East End sont les quartiers entourés de rouge"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui signifie « refusaient ».",
+     "aide": "Cherche un verbe au prétérit juste avant *to lend*.",
+     "explication": "**refused** : *to refuse to lend money* signifie refuser de prêter de l’argent."
+    },
+    {
+     "type": "zone",
+     "document": "prets",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche la barre du quartier où il y a eu le moins de prêts approuvés.",
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "**Riverside** : seulement 10 prêts approuvés sur 100 demandes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart entre le nombre de prêts approuvés à Green Hill et à East End ?",
+     "reponse": 60,
+     "unite": "prêts",
+     "aide": "Lis les deux barres sur l’axe, puis soustrais.",
+     "explication": "80 − 20 = **60 prêts** d’écart : le quartier entouré de rouge est loin derrière."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "The Fair Housing Act was passed in ___.",
+     "reponses": [
+      [
+       "1968"
+      ]
+     ],
+     "banque": [
+      "1968",
+      "1954",
+      "1896",
+      "2015"
+     ],
+     "aide": "Le texte donne la date de cette loi.",
+     "explication": "**1968** : le *Fair Housing Act* interdit la discrimination dans le logement."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d2675eb-0fb0-554a-a3c5-332a3ad98a1b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Représenter les minorités : trois cas",
+   "competence": "argumenter",
+   "situation": "Pour un oral, Sofia rapproche un tableau sur la représentation des peuples premiers et un article sur l’incendie de la tour Grenfell, à Londres.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Indigenous representation",
+     "colonnes": [
+      "Place",
+      "Measure",
+      "Year",
+      "Outcome"
+     ],
+     "lignes": [
+      [
+       "New Zealand",
+       "Māori seats in Parliament",
+       1867,
+       "In place"
+      ],
+      [
+       "Australia",
+       "Referendum on the “Voice”",
+       2023,
+       "Rejected"
+      ],
+      [
+       "United States",
+       "Deb Haaland, first Native American Cabinet member",
+       2021,
+       "Appointed"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "grenfell",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Grenfell Tower",
+     "blocs": [
+      "On 14 June 2017, a fire destroyed Grenfell Tower, a block of [[c|council]] flats in London. Seventy-two people died.",
+      "The tragedy showed how the residents of social housing had been neglected."
+     ],
+     "source": "Article écrit pour l’exercice, d’après des faits historiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c3"
+     ],
+     "enonce": "Touche la case qui dit ce qui s’est passé pour le référendum australien.",
+     "aide": "Repère la ligne « Australia » et la colonne « Outcome ».",
+     "explication": "Le référendum sur la « Voice » a été **rejeté** (*Rejected*) en octobre 2023."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création des sièges maoris du référendum australien ?",
+     "reponse": 156,
+     "unite": "ans",
+     "aide": "Soustrais 1867 de 2023.",
+     "explication": "2023 − 1867 = **156 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "grenfell",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui désigne le type de logements où vivaient les victimes.",
+     "aide": "Un *council flat* appartient à la commune ; c’est un logement social.",
+     "explication": "**council** : *council flats* sont des logements sociaux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait.",
+     "categories": [
+      "Un pas vers l’inclusion",
+      "Un obstacle ou une négligence"
+     ],
+     "items": [
+      [
+       "Māori seats exist in Parliament.",
+       0
+      ],
+      [
+       "A Native American becomes Interior Secretary.",
+       0
+      ],
+      [
+       "The Voice referendum is rejected.",
+       1
+      ],
+      [
+       "Residents of social housing are neglected.",
+       1
+      ]
+     ],
+     "aide": "Relis la colonne « Outcome » et le dernier paragraphe de l’article.",
+     "explication": "Les sièges maoris et la nomination de Deb Haaland **incluent** ; le rejet de la « Voice » et la négligence révélée par Grenfell sont des **obstacles**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux ce que montrent ces documents ?",
+     "options": [
+      "L’égalité sur le papier ne signifie pas toujours l’égalité dans la pratique",
+      "Toutes les minorités sont représentées de la même façon dans tous les pays",
+      "Les institutions n’ont aucune influence sur la vie des minorités",
+      "Les référendums garantissent toujours l’inclusion des minorités"
+     ],
+     "reponse": 0,
+     "aide": "Pense à : « Equality on paper does not mean equality in practice. »",
+     "explication": "**L’égalité sur le papier ne signifie pas l’égalité dans la pratique** : des mesures existent, mais des obstacles et des négligences demeurent."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf2ca757-1306-5f91-b69b-878220dc8e8d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq œuvres, cinq créateurs",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé sur l’art et le pouvoir, Lina a dressé le tableau de cinq œuvres célèbres.",
+   "documents": [
+    {
+     "id": "oeuvres",
+     "type": "tableau",
+     "titre": "Five works",
+     "colonnes": [
+      "Work",
+      "Creator",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Portraits of Henry VIII",
+       "Hans Holbein",
+       "1530s"
+      ],
+      [
+       "Hope (poster)",
+       "Shepard Fairey",
+       "2008"
+      ],
+      [
+       "Strange Fruit (song)",
+       "Billie Holiday",
+       "1939"
+      ],
+      [
+       "Migrant Mother (photograph)",
+       "Dorothea Lange",
+       "1936"
+      ],
+      [
+       "The Problem We All Live With (painting)",
+       "Norman Rockwell",
+       "1964"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice, d’après des faits historiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oeuvres",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui donne le nom de la photographe de *Migrant Mother*.",
+     "aide": "Repère la ligne de la photographie, puis la colonne « Creator ».",
+     "explication": "**Dorothea Lange** a photographié *Migrant Mother* en 1936."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Migrant Mother* de *Strange Fruit* ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Compare 1936 et 1939.",
+     "explication": "1939 − 1936 = **3 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "propaganda",
+       "la propagande"
+      ],
+      [
+       "to mock",
+       "se moquer de"
+      ],
+      [
+       "censorship",
+       "la censure"
+      ],
+      [
+       "a protest song",
+       "une chanson engagée"
+      ]
+     ],
+     "aide": "*Strange Fruit* est un exemple de *protest song*.",
+     "explication": "*Propaganda* : la propagande ; *to mock* : se moquer de ; *censorship* : la censure ; *a protest song* : une chanson engagée."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf2ca757-1306-5f91-b69b-878220dc8e8d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une reine, un globe, un message",
+   "competence": "analyser-document",
+   "situation": "Un musée prépare le cartel de l’*Armada Portrait* d’Élisabeth Ire. Quel message l’œuvre envoie-t-elle ?",
+   "documents": [
+    {
+     "id": "cartel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Museum label",
+     "blocs": [
+      "This portrait was painted around 1588. Queen Elizabeth I [[m|rests]] her hand on a globe.",
+      "The message is clear: England rules the seas."
+     ],
+     "source": "Cartel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cartel",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le verbe qui décrit le geste de la reine avec sa main.",
+     "aide": "C’est un verbe au présent, à la troisième personne, après le nom de la reine.",
+     "explication": "**rests** : *to rest one’s hand on* signifie poser sa main sur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "The portrait ___ the queen’s power.",
+     "reponses": [
+      [
+       "glorifies"
+      ]
+     ],
+     "banque": [
+      "glorifies",
+      "denounces",
+      "mocks",
+      "censors"
+     ],
+     "aide": "Le tableau présente la reine sous son meilleur jour.",
+     "explication": "**glorifies** : *to glorify* signifie glorifier ; ce portrait sert le pouvoir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque œuvre selon qu’elle sert le pouvoir ou le conteste.",
+     "categories": [
+      "Sert le pouvoir",
+      "Conteste le pouvoir"
+     ],
+     "items": [
+      [
+       "The Armada Portrait",
+       0
+      ],
+      [
+       "Holbein’s Henry VIII",
+       0
+      ],
+      [
+       "Spitting Image",
+       1
+      ],
+      [
+       "Strange Fruit",
+       1
+      ],
+      [
+       "Banksy’s stencils",
+       1
+      ]
+     ],
+     "aide": "Pose-toi la question : cette œuvre veut-elle flatter ou critiquer ?",
+     "explication": "L’*Armada Portrait* et Henri VIII **servent le pouvoir** ; *Spitting Image*, *Strange Fruit* et Banksy le **contestent**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris une phrase sur le portrait. Le premier mot est « She ».",
+     "items": [
+      "She",
+      "rests",
+      "her",
+      "hand",
+      "on",
+      "a",
+      "globe"
+     ],
+     "aide": "Sujet, verbe, puis le groupe nominal et le lieu.",
+     "explication": "**She rests her hand on a globe** : le globe symbolise la maîtrise des mers."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf2ca757-1306-5f91-b69b-878220dc8e8d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Que voit-on dans un tableau de Rockwell ?",
+   "competence": "analyser-document",
+   "situation": "Dans un atelier d’anglais, deux élèves décrivent *The Problem We All Live With*, le tableau de Norman Rockwell peint en 1964.",
+   "documents": [
+    {
+     "id": "desc",
+     "type": "texte",
+     "genre": "article",
+     "titre": "A painting described",
+     "blocs": [
+      "The painting shows Ruby Bridges, six years old, walking to school between four federal marshals.",
+      "We see the marshals only from the neck down. Behind them, an insult is written on the [[w|wall]] and a tomato has been thrown."
+     ],
+     "source": "Description écrite pour l’exercice, d’après un tableau de 1964"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Class chat",
+     "participants": [
+      {
+       "nom": "Ida",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Kai",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ida",
+       "texte": "Why did Rockwell hide the marshals’ faces?"
+      },
+      {
+       "qui": "Kai",
+       "texte": "So that we look at the girl. The painting turns a news event into a moral question."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de policiers fédéraux (marshals) escortent la fillette ?",
+     "reponse": 4,
+     "unite": "marshals",
+     "aide": "Cherche le nombre dans la première phrase.",
+     "explication": "**Quatre** *federal marshals* escortent Ruby Bridges."
+    },
+    {
+     "type": "zone",
+     "document": "desc",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche l’endroit où l’insulte est écrite.",
+     "aide": "Cherche dans la dernière phrase : l’insulte est derrière le groupe.",
+     "explication": "L’insulte est écrite sur le **wall** (le mur), derrière les policiers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon Kai, pourquoi le peintre cache-t-il les visages des policiers ?",
+     "options": [
+      "Pour que le spectateur regarde l’enfant",
+      "Pour ne pas être reconnu par ces hommes",
+      "Parce qu’il ne savait pas les dessiner",
+      "Pour rendre ces hommes plus effrayants"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première réponse de Kai.",
+     "explication": "**Pour que le spectateur regarde l’enfant** : on ne voit qu’une petite fille qui va à l’école, ce qui transforme un fait divers en question morale."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément.",
+     "categories": [
+      "Ce qu’on voit",
+      "Ce que le tableau suggère"
+     ],
+     "items": [
+      [
+       "A small girl walks to school.",
+       0
+      ],
+      [
+       "An insult is written on the wall.",
+       0
+      ],
+      [
+       "Segregation is a moral question.",
+       1
+      ],
+      [
+       "Everyone is responsible for this scene.",
+       1
+      ]
+     ],
+     "aide": "Un fait se voit sur la toile ; une idée se déduit.",
+     "explication": "La fillette et l’insulte **se voient** ; la question morale et la responsabilité de tous sont ce que le tableau **suggère**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "The painting shows Ruby walking ___ school.",
+     "reponses": [
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "to",
+      "at",
+      "in",
+      "of"
+     ],
+     "aide": "*Walk* + direction : on va vers l’école.",
+     "explication": "**to** : *to walk to school* indique la destination."
+    }
+   ]
+  },
+  {
+   "chapitre": "456fd206-da1b-5204-adfb-25d15b53b929",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq jalons de la science",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Théo a placé cinq jalons de l’histoire des sciences et de la littérature sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Five milestones",
+     "debut": 1810,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "frank",
+       "date": 1818,
+       "nom": "Frankenstein"
+      },
+      {
+       "id": "brave",
+       "date": 1932,
+       "nom": "Brave New World"
+      },
+      {
+       "id": "apollo",
+       "date": 1969,
+       "nom": "Apollo 11"
+      },
+      {
+       "id": "louise",
+       "date": 1978,
+       "nom": "Louise Brown born"
+      },
+      {
+       "id": "dolly",
+       "date": 1996,
+       "nom": "Dolly cloned"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "louise"
+     ],
+     "enonce": "Touche le repère qui correspond au premier bébé conçu par fécondation in vitro.",
+     "aide": "Cherche le nom du bébé dans les étiquettes.",
+     "explication": "**Louise Brown born** (1978) : premier bébé conçu par fécondation in vitro, né à Oldham."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Louise Brown du clonage de Dolly ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais 1978 de 1996.",
+     "explication": "1996 − 1978 = **18 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "a breakthrough",
+       "une percée"
+      ],
+      [
+       "cloning",
+       "le clonage"
+      ],
+      [
+       "a wind farm",
+       "un parc éolien"
+      ],
+      [
+       "ethics",
+       "l’éthique"
+      ]
+     ],
+     "aide": "*Breakthrough* évoque une barrière qu’on franchit.",
+     "explication": "*A breakthrough* : une percée ; *cloning* : le clonage ; *a wind farm* : un parc éolien ; *ethics* : l’éthique."
+    }
+   ]
+  },
+  {
+   "chapitre": "456fd206-da1b-5204-adfb-25d15b53b929",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dolly, une brebis écossaise",
+   "competence": "lire-carte",
+   "situation": "Pour son blog, Inès raconte deux grandes premières scientifiques nées au Royaume-Uni. Elle joint une carte pour situer les lieux.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Two firsts",
+     "blocs": [
+      "In 1996, scientists at the Roslin Institute, near Edinburgh, cloned Dolly the sheep. She was the first mammal cloned from an adult cell.",
+      "In 1978, Louise Brown, the first baby conceived by in vitro fertilisation, was born in Oldham, near Manchester.",
+      "Many people feared that human cloning would follow. Most countries later [[b|banned]] it."
+     ],
+     "source": "Article écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "The United Kingdom",
+     "fond": "europe",
+     "cadrage": [
+      -8,
+      49.5,
+      2.5,
+      59
+     ],
+     "lieux": [
+      {
+       "id": "edi",
+       "lon": -3.19,
+       "lat": 55.95,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "man",
+       "lon": -2.24,
+       "lat": 53.48,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "lon",
+       "lon": -0.13,
+       "lat": 51.51,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "car",
+       "lon": -3.18,
+       "lat": 51.48,
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "edi"
+     ],
+     "enonce": "Touche la lettre qui marque la ville près de laquelle Dolly a été clonée.",
+     "aide": "Le premier paragraphe nomme la ville ; elle est la plus au nord des quatre, en Écosse.",
+     "explication": "Dolly est née près d’Édimbourg : c’est la lettre **A**, la plus au nord."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "man"
+     ],
+     "enonce": "Touche la lettre qui marque la grande ville près de laquelle est née Louise Brown.",
+     "aide": "Oldham est dans le nord de l’Angleterre, plus au sud qu’Édimbourg.",
+     "explication": "Oldham est près de Manchester : c’est la lettre **B**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Louise Brown du clonage de Dolly ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Compare 1978 et 1996.",
+     "explication": "1996 − 1978 = **18 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le verbe qui signifie « ont interdit ».",
+     "aide": "C’est un participe passé après *later*.",
+     "explication": "**banned** : *to ban* signifie interdire ; la société décide que certaines choses sont possibles mais inacceptables."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Most countries later ___ human cloning.",
+     "reponses": [
+      [
+       "banned"
+      ]
+     ],
+     "banque": [
+      "banned",
+      "ban",
+      "bans",
+      "banning"
+     ],
+     "aide": "L’action est passée : *later* renvoie après 1996.",
+     "explication": "**banned** : prétérit de *to ban*."
+    }
+   ]
+  },
+  {
+   "chapitre": "456fd206-da1b-5204-adfb-25d15b53b929",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le progrès fait-il peur ?",
+   "competence": "argumenter",
+   "situation": "Pour un débat, Maya et Eli lisent un article sur les luddites et Mary Shelley, puis échangent des messages.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Fear of progress",
+     "blocs": [
+      "Between 1811 and 1816, English textile workers known as Luddites broke the [[m|machines]] that threatened their jobs.",
+      "In 1818, Mary Shelley published *Frankenstein*, a novel that asks whether a scientist is responsible for his creature."
+     ],
+     "source": "Article écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Debate",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Eli",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Science is neither good nor bad in itself: it depends on how we use it."
+      },
+      {
+       "qui": "Eli",
+       "texte": "But there are limits that should not be crossed, like cloning humans."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche ce que les luddites détruisaient.",
+     "aide": "C’est le complément de *broke*.",
+     "explication": "Les luddites brisaient les **machines** qui menaçaient leur emploi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la fin du mouvement luddite de la parution de *Frankenstein* ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Le mouvement se termine en 1816.",
+     "explication": "1818 − 1816 = **2 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument.",
+     "categories": [
+      "Confiance dans le progrès",
+      "Prudence"
+     ],
+     "items": [
+      [
+       "It depends on how we use it.",
+       0
+      ],
+      [
+       "The benefits outweigh the risks.",
+       0
+      ],
+      [
+       "There are limits that should not be crossed.",
+       1
+      ],
+      [
+       "A scientist is responsible for his creature.",
+       1
+      ]
+     ],
+     "aide": "Les deux derniers documents donnent des idées opposées.",
+     "explication": "Maya et « les bénéfices l’emportent » font confiance ; Eli et la responsabilité du savant invitent à la **prudence**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "The benefits ___ the risks.",
+     "reponses": [
+      [
+       "outweigh"
+      ]
+     ],
+     "banque": [
+      "outweigh",
+      "outgrow",
+      "outlive",
+      "outrun"
+     ],
+     "aide": "Le verbe signifie « l’emporter sur » dans une balance.",
+     "explication": "**outweigh** : *the benefits outweigh the risks* signifie que les bénéfices l’emportent sur les risques."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Reconstitue la phrase de Maya. Le premier mot est « Science ».",
+     "items": [
+      "Science",
+      "is",
+      "neither",
+      "good",
+      "nor",
+      "bad"
+     ],
+     "aide": "*Neither* est toujours suivi de *nor*.",
+     "explication": "**Science is neither good nor bad** (*in itself*) : la découverte est neutre, c’est son usage qui se juge."
+    }
+   ]
+  },
+  {
+   "chapitre": "8efd6d83-8333-50f4-9710-70cf535ff35d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq repères pour protéger la nature",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé, Zoé a rassemblé cinq repères sur la nature dans le monde anglophone.",
+   "documents": [
+    {
+     "id": "reperes",
+     "type": "tableau",
+     "titre": "Five landmarks",
+     "colonnes": [
+      "What",
+      "Detail",
+      "Year"
+     ],
+     "lignes": [
+      [
+       "Yellowstone",
+       "First national park in the world",
+       1872
+      ],
+      [
+       "Walden",
+       "Thoreau’s book about two years in a cabin",
+       1854
+      ],
+      [
+       "Sierra Club",
+       "Founded by John Muir",
+       1892
+      ],
+      [
+       "Silent Spring",
+       "Rachel Carson’s book against pesticides",
+       1962
+      ],
+      [
+       "Peak District",
+       "First national park in the UK",
+       1951
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice, d’après des faits historiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reperes",
+     "reponse": [
+      "r4c2"
+     ],
+     "enonce": "Touche la case qui donne l’année du premier parc national britannique.",
+     "aide": "Repère la ligne du *Peak District*, puis la colonne « Year ».",
+     "explication": "Le *Peak District* est le premier parc national britannique, en **1951**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de Yellowstone de la fondation du Sierra Club ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais 1872 de 1892.",
+     "explication": "1892 − 1872 = **20 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "wilderness",
+       "la nature sauvage"
+      ],
+      [
+       "wildlife",
+       "la faune sauvage"
+      ],
+      [
+       "a drought",
+       "une sécheresse"
+      ],
+      [
+       "a wildfire",
+       "un feu de forêt"
+      ]
+     ],
+     "aide": "*Wild* se retrouve dans trois mots sur quatre.",
+     "explication": "*Wilderness* : la nature sauvage ; *wildlife* : la faune ; *a drought* : une sécheresse ; *a wildfire* : un feu de forêt."
+    }
+   ]
+  },
+  {
+   "chapitre": "8efd6d83-8333-50f4-9710-70cf535ff35d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des parcs, une tempête, une poussière",
+   "competence": "lire-carte",
+   "situation": "Jordan prépare une carte pour illustrer trois histoires américaines : un parc national, un ouragan et une catastrophe agricole.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Three American stories",
+     "blocs": [
+      "Yellowstone, in the northern Rocky Mountains, became the world’s first national park in 1872.",
+      "In the 1930s, intensive farming exhausted the soil of the Great Plains. The dust blew away: this was the Dust Bowl.",
+      "In August 2005, Hurricane Katrina hit New Orleans, a city on the Gulf Coast. The poorest neighbourhoods were the worst hit."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "The United States",
+     "fond": "monde",
+     "cadrage": [
+      -128,
+      23,
+      -65,
+      50
+     ],
+     "reliefs": true,
+     "lieux": [
+      {
+       "id": "yel",
+       "lon": -110.5,
+       "lat": 44.6,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "yos",
+       "lon": -119.5,
+       "lat": 37.8,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "nol",
+       "lon": -90.07,
+       "lat": 29.95,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "okc",
+       "lon": -97.5,
+       "lat": 35.5,
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "yel"
+     ],
+     "enonce": "Touche la lettre qui marque Yellowstone, dans le nord des Rocheuses.",
+     "aide": "Le parc est au nord-ouest du pays, dans les montagnes.",
+     "explication": "Yellowstone est le point **A**, dans le nord des Rocheuses."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "nol"
+     ],
+     "enonce": "Touche la lettre qui marque la ville frappée par l’ouragan Katrina.",
+     "aide": "Elle est sur la côte du golfe du Mexique, au sud.",
+     "explication": "La Nouvelle-Orléans est le point **C**, sur la côte du golfe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le texte, pourquoi la poussière a-t-elle envahi les Grandes Plaines dans les années 1930 ?",
+     "options": [
+      "L’agriculture intensive avait épuisé les sols",
+      "Un volcan avait recouvert la région de cendres",
+      "Les parcs nationaux avaient asséché les rivières",
+      "Les ouragans avaient détruit les forêts"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième paragraphe.",
+     "explication": "**L’agriculture intensive avait épuisé les sols** : sans végétation, la poussière s’est envolée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Hurricane Katrina hit New Orleans in ___.",
+     "reponses": [
+      [
+       "2005"
+      ]
+     ],
+     "banque": [
+      "2005",
+      "1995",
+      "2015",
+      "1905"
+     ],
+     "aide": "Le texte donne le mois et l’année.",
+     "explication": "**2005** : Katrina frappe La Nouvelle-Orléans en août 2005."
+    }
+   ]
+  },
+  {
+   "chapitre": "8efd6d83-8333-50f4-9710-70cf535ff35d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Préserver ou exploiter ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves, Léo et Alma, débattent après avoir lu une fiche sur Katrina. Le débat prolonge une vieille querelle : préserver la nature ou l’exploiter ?",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Debate",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alma",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Muir wanted to [[p|preserve]] wilderness exactly as it is, without any use."
+      },
+      {
+       "qui": "Alma",
+       "texte": "Others wanted to [[c|conserve]] it: use forests, but without exhausting them."
+      },
+      {
+       "qui": "Léo",
+       "texte": "And Katrina proves that natural disasters hit the poorest hardest."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "defs",
+     "type": "tableau",
+     "titre": "Two ideas",
+     "colonnes": [
+      "Idea",
+      "Meaning"
+     ],
+     "lignes": [
+      [
+       "Preserve",
+       "Keep nature untouched"
+      ],
+      [
+       "Conserve",
+       "Use nature without exhausting it"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui désigne l’idée de garder la nature intacte.",
+     "aide": "Relis la première réplique de Léo.",
+     "explication": "**preserve** : garder la nature intacte, c’était l’idée de John Muir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée.",
+     "categories": [
+      "Préserver",
+      "Conserver"
+     ],
+     "items": [
+      [
+       "Keep a valley wild and closed to loggers.",
+       0
+      ],
+      [
+       "Ban all building in a national park.",
+       0
+      ],
+      [
+       "Cut trees but replant them.",
+       1
+      ],
+      [
+       "Use a river without exhausting its fish.",
+       1
+      ]
+     ],
+     "aide": "Regarde le tableau des deux idées.",
+     "explication": "Fermer et interdire, c’est **préserver** ; utiliser sans épuiser, c’est **conserver**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que Katrina fut une catastrophe aussi sociale ?",
+     "options": [
+      "Les quartiers les plus pauvres ont été les plus touchés",
+      "La tempête n’a frappé que des quartiers riches",
+      "Les habitants avaient refusé d’être secourus",
+      "L’ouragan a été provoqué par une usine"
+     ],
+     "reponse": 0,
+     "aide": "Relis le message de Léo sur les plus pauvres.",
+     "explication": "**Les quartiers les plus pauvres ont été les plus touchés** : la tempête était naturelle, le désastre aussi social."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Man is part of nature, not its ___.",
+     "reponses": [
+      [
+       "master"
+      ]
+     ],
+     "banque": [
+      "master",
+      "mother",
+      "mirror",
+      "mission"
+     ],
+     "aide": "Le contraire d’un « esclave » : celui qui commande.",
+     "explication": "**master** : l’homme fait partie de la nature, il n’en est pas le maître."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Reconstitue la phrase. Le premier mot est « Natural ».",
+     "items": [
+      "Natural",
+      "disasters",
+      "hit",
+      "the",
+      "poorest",
+      "hardest"
+     ],
+     "aide": "Sujet, verbe *hit*, puis l’adjectif au superlatif et l’adverbe.",
+     "explication": "**Natural disasters hit the poorest hardest** : les plus pauvres sont les plus durement touchés."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b94e0cd-764f-5a8e-a21b-7bfdbb517f99",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des dates pour le continent",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé, Ravi a noté quatre faits sur l’histoire des pays anglophones d’Amérique.",
+   "documents": [
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Four facts",
+     "colonnes": [
+      "Country",
+      "Fact",
+      "Year"
+     ],
+     "lignes": [
+      [
+       "Jamaica",
+       "Becomes independent",
+       1962
+      ],
+      [
+       "Trinidad and Tobago",
+       "Becomes independent",
+       1962
+      ],
+      [
+       "Barbados",
+       "Becomes a republic",
+       2021
+      ],
+      [
+       "Canada",
+       "Independence step by step",
+       "1867, 1931, 1982"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dates",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui donne l’année où la Barbade devient une république.",
+     "aide": "Repère la ligne « Barbados », puis la colonne « Year ».",
+     "explication": "La Barbade devient une république en **2021** (le 30 novembre)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’indépendance de la Jamaïque de la République de la Barbade ?",
+     "reponse": 59,
+     "unite": "ans",
+     "aide": "Soustrais 1962 de 2021.",
+     "explication": "2021 − 1962 = **59 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "soft power",
+       "l’influence culturelle"
+      ],
+      [
+       "a neighbour",
+       "un voisin"
+      ],
+      [
+       "a trade agreement",
+       "un accord commercial"
+      ],
+      [
+       "brain drain",
+       "la fuite des cerveaux"
+      ]
+     ],
+     "aide": "*Drain* évoque quelque chose qui s’écoule.",
+     "explication": "*Soft power* : l’influence culturelle ; *a neighbour* : un voisin ; *a trade agreement* : un accord commercial ; *brain drain* : la fuite des cerveaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b94e0cd-764f-5a8e-a21b-7bfdbb517f99",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui influence qui ?",
+   "competence": "lire-carte",
+   "situation": "Une classe étudie la circulation de la culture sur le continent. Elle a noté des exemples dans un tableau et placé quatre villes sur une carte.",
+   "documents": [
+    {
+     "id": "infl",
+     "type": "tableau",
+     "titre": "Cultural influences",
+     "colonnes": [
+      "From",
+      "To",
+      "Example"
+     ],
+     "lignes": [
+      [
+       "Jamaica",
+       "The world",
+       "Reggae and Bob Marley"
+      ],
+      [
+       "Barbados",
+       "The United States",
+       "Rihanna"
+      ],
+      [
+       "Canada",
+       "The United States",
+       "Drake and Justin Bieber"
+      ],
+      [
+       "The Caribbean",
+       "The United Kingdom",
+       "The Windrush generation and Notting Hill Carnival"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "The Americas",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      8,
+      -50,
+      50
+     ],
+     "lieux": [
+      {
+       "id": "kin",
+       "lon": -76.79,
+       "lat": 17.97,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "bri",
+       "lon": -59.62,
+       "lat": 13.1,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "tor",
+       "lon": -79.38,
+       "lat": 43.65,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "nyc",
+       "lon": -74,
+       "lat": 40.7,
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "infl",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui cite l’exemple du reggae.",
+     "aide": "Repère la ligne de la Jamaïque, puis la colonne « Example ».",
+     "explication": "**Reggae and Bob Marley** : la Jamaïque diffuse sa musique dans le monde entier."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "bri"
+     ],
+     "enonce": "Touche la lettre qui marque la capitale de la Barbade, l’île la plus à l’est des Petites Antilles.",
+     "aide": "Cherche la lettre la plus à droite, dans les Caraïbes.",
+     "explication": "Bridgetown est le point **B**, île de l’est des Caraïbes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau sur les influences culturelles ?",
+     "options": [
+      "L’influence va dans les deux sens",
+      "Seuls les États-Unis exportent leur culture",
+      "Le Canada n’a aucune influence culturelle",
+      "Les Caraïbes ne touchent que le Royaume-Uni"
+     ],
+     "reponse": 0,
+     "aide": "Relis la colonne « To » : des pays variés envoient leur culture vers les États-Unis.",
+     "explication": "**L’influence va dans les deux sens** : la Barbade et le Canada envoient des artistes vers les États-Unis."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "American culture is everywhere, yet local cultures ___.",
+     "reponses": [
+      [
+       "resist"
+      ]
+     ],
+     "banque": [
+      "resist",
+      "resign",
+      "resume",
+      "repeat"
+     ],
+     "aide": "Le verbe veut dire « ne pas se laisser effacer ».",
+     "explication": "**resist** : *to resist* signifie résister."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b94e0cd-764f-5a8e-a21b-7bfdbb517f99",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du Bronx au monde entier",
+   "competence": "analyser-texte",
+   "situation": "Pour un oral, Camille rapproche l’histoire du hip-hop et trois dates qui lient les États-Unis à leurs voisins.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Hip-hop",
+     "blocs": [
+      "Hip-hop was born in the [[b|Bronx]], in New York, in the 1970s, partly thanks to DJ Kool Herc, who had grown up in Jamaica.",
+      "An American music with Caribbean roots then conquered the world."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Three milestones",
+     "colonnes": [
+      "Year",
+      "Event"
+     ],
+     "lignes": [
+      [
+       1823,
+       "Monroe Doctrine"
+      ],
+      [
+       1994,
+       "NAFTA"
+      ],
+      [
+       2020,
+       "USMCA replaces NAFTA"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le quartier de New York où est né le hip-hop.",
+     "aide": "C’est un nom propre précédé de *the*.",
+     "explication": "Le hip-hop est né dans le **Bronx**, à New York."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de l’ALENA (NAFTA) de l’ACEUM (USMCA) qui l’a remplacé ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Soustrais 1994 de 2020.",
+     "explication": "2020 − 1994 = **26 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple selon le sens de l’influence.",
+     "categories": [
+      "Vers les États-Unis",
+      "Depuis les États-Unis"
+     ],
+     "items": [
+      [
+       "Rihanna becomes a global star in America.",
+       0
+      ],
+      [
+       "Drake and Justin Bieber succeed in America.",
+       0
+      ],
+      [
+       "American films are watched worldwide.",
+       1
+      ],
+      [
+       "American social media spread everywhere.",
+       1
+      ]
+     ],
+     "aide": "Demande-toi d’où part l’influence et où elle arrive.",
+     "explication": "Rihanna, Drake et Justin Bieber vont **vers** les États-Unis ; le cinéma et les réseaux sociaux américains **partent des** États-Unis."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "___ American culture is everywhere, local cultures resist.",
+     "reponses": [
+      [
+       "Although"
+      ]
+     ],
+     "banque": [
+      "Although",
+      "Because",
+      "Unless",
+      "Until"
+     ],
+     "aide": "La phrase oppose deux idées.",
+     "explication": "**Although** introduit une concession : « bien que la culture américaine soit partout… »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris une phrase. Le premier mot est « The ».",
+     "items": [
+      "The",
+      "influence",
+      "goes",
+      "both",
+      "ways"
+     ],
+     "aide": "Sujet, verbe *goes*, puis *both ways*.",
+     "explication": "**The influence goes both ways** : la circulation culturelle n’est jamais à sens unique."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea540e90-afbd-5ab7-8dde-9f6f8fba3d80",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Porto Rico en quatre dates",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Dani a placé quatre dates de l’histoire de Porto Rico sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Puerto Rico",
+     "debut": 1890,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "cede",
+       "date": 1898,
+       "nom": "Ceded by Spain"
+      },
+      {
+       "id": "citoyens",
+       "date": 1917,
+       "nom": "US citizenship"
+      },
+      {
+       "id": "free",
+       "date": 1952,
+       "nom": "Commonwealth"
+      },
+      {
+       "id": "maria",
+       "date": 2017,
+       "nom": "Hurricane Maria"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice, d’après des faits historiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "citoyens"
+     ],
+     "enonce": "Touche le repère où les Portoricains deviennent citoyens américains.",
+     "aide": "Cherche le mot *citizenship*.",
+     "explication": "**US citizenship** (1917) : le *Jones Act* fait des Portoricains des citoyens américains."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la cession de l’île aux États-Unis de l’octroi de la citoyenneté américaine ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais 1898 de 1917.",
+     "explication": "1917 − 1898 = **19 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "statehood",
+       "le statut d’État"
+      ],
+      [
+       "citizenship",
+       "la citoyenneté"
+      ],
+      [
+       "to be entitled to",
+       "avoir droit à"
+      ],
+      [
+       "a hurricane",
+       "un ouragan"
+      ]
+     ],
+     "aide": "Le mot *state* est dans *statehood*.",
+     "explication": "*Statehood* : le statut d’État ; *citizenship* : la citoyenneté ; *to be entitled to* : avoir droit à ; *a hurricane* : un ouragan."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea540e90-afbd-5ab7-8dde-9f6f8fba3d80",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Vancouver et Seattle, villes voisines",
+   "competence": "analyser-document",
+   "situation": "Deux villes du Pacific Northwest se ressemblent malgré la frontière. Mia les compare dans un tableau et sur une carte.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Two neighbours",
+     "colonnes": [
+      "Topic",
+      "Vancouver (Canada)",
+      "Seattle (United States)"
+     ],
+     "lignes": [
+      [
+       "Economy",
+       "Port, film (“Hollywood North”), technology",
+       "Boeing, Amazon, Starbucks"
+      ],
+      [
+       "Big event",
+       "Winter Olympics 2010",
+       "World’s Fair 1962 (Space Needle)"
+      ],
+      [
+       "Common problem",
+       "Housing prices",
+       "Housing prices"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Pacific Northwest",
+     "fond": "monde",
+     "cadrage": [
+      -126,
+      45,
+      -119,
+      51
+     ],
+     "lieux": [
+      {
+       "id": "van",
+       "lon": -123.12,
+       "lat": 49.28,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "sea",
+       "lon": -122.33,
+       "lat": 47.61,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui donne le grand événement de Seattle.",
+     "aide": "Repère la ligne « Big event » et la colonne de Seattle.",
+     "explication": "Seattle a accueilli l’**Exposition universelle de 1962**, dont le symbole est la Space Needle."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "van"
+     ],
+     "enonce": "Touche la lettre qui marque Vancouver, la ville canadienne.",
+     "aide": "La frontière passe entre les deux villes : le Canada est au nord.",
+     "explication": "Vancouver est le point **A**, le plus au nord."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’Exposition universelle de Seattle des Jeux olympiques d’hiver de Vancouver ?",
+     "reponse": 48,
+     "unite": "ans",
+     "aide": "Soustrais 1962 de 2010.",
+     "explication": "2010 − 1962 = **48 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Although they are on different sides of the border, the two cities ___ the same problems.",
+     "reponses": [
+      [
+       "share"
+      ]
+     ],
+     "banque": [
+      "share",
+      "shares",
+      "sharing",
+      "to share"
+     ],
+     "aide": "Le sujet est pluriel et la phrase décrit une situation actuelle.",
+     "explication": "**share** : *the two cities share* accorde le verbe au pluriel, au présent."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea540e90-afbd-5ab7-8dde-9f6f8fba3d80",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Citoyens, mais pas électeurs",
+   "competence": "argumenter",
+   "situation": "Marisol, 17 ans, vit à San Juan. Elle explique sa situation à une correspondante américaine, et un tableau compare les droits.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "A letter from San Juan",
+     "blocs": [
+      "Puerto Ricans have been American citizens since 1917. Yet we cannot vote for the president from the island.",
+      "After Hurricane Maria in 2017, my family waited for [[r|relief]], and many people felt like second-class citizens."
+     ],
+     "source": "Lettre écrite pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Rights compared",
+     "colonnes": [
+      "Right",
+      "Citizens in the 50 states",
+      "Puerto Ricans on the island"
+     ],
+     "lignes": [
+      [
+       "US passport",
+       "Yes",
+       "Yes"
+      ],
+      [
+       "Vote for the president",
+       "Yes",
+       "No"
+      ],
+      [
+       "Voting representative in Congress",
+       "Yes",
+       "No"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice, d’après des faits historiques"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "droits",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit si les Portoricains de l’île votent pour le président.",
+     "aide": "Repère la ligne « Vote for the president » et la dernière colonne.",
+     "explication": "**No** : les Portoricains de l’île ne votent pas à l’élection présidentielle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années, en 2017, les Portoricains étaient-ils citoyens américains ?",
+     "reponse": 100,
+     "unite": "ans",
+     "aide": "Soustrais 1917 de 2017.",
+     "explication": "2017 − 1917 = **100 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui signifie « les secours ».",
+     "aide": "La famille de Marisol l’attendait après l’ouragan.",
+     "explication": "**relief** : *relief* signifie les secours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque droit.",
+     "categories": [
+      "Ils l’ont",
+      "Ils ne l’ont pas"
+     ],
+     "items": [
+      [
+       "A US passport",
+       0
+      ],
+      [
+       "American citizenship",
+       0
+      ],
+      [
+       "A vote for the president from the island",
+       1
+      ],
+      [
+       "A voting representative in Congress",
+       1
+      ]
+     ],
+     "aide": "Relis la colonne « Puerto Ricans on the island ».",
+     "explication": "Passeport et citoyenneté : **oui** ; vote présidentiel depuis l’île et représentant votant au Congrès : **non**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Puerto Ricans are entitled ___ American citizenship.",
+     "reponses": [
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "to",
+      "at",
+      "for",
+      "of"
+     ],
+     "aide": "L’expression complète est *to be entitled to*.",
+     "explication": "**to** : *to be entitled to* signifie avoir droit à."
+    }
+   ]
+  }
+ ]
+}

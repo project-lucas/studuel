@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import type { Composant, DocCircuit } from '@/lib/exercices/types'
-import { etatCible, fondCible, propsCible, traitCible, type ZonesDoc } from '../commun'
+import { coord, etatCible, fondCible, propsCible, traitCible, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
 
 /**
@@ -36,7 +36,7 @@ const POLARISES = new Set(['pile', 'del', 'diode'])
 
 function SignesPile({ angle }: { angle: number }) {
   const r = (angle * Math.PI) / 180
-  const tourner = ([x, y]: [number, number]) => [x * Math.cos(r) - y * Math.sin(r), x * Math.sin(r) + y * Math.cos(r)]
+  const tourner = ([x, y]: [number, number]) => [coord(x * Math.cos(r) - y * Math.sin(r)), coord(x * Math.sin(r) + y * Math.cos(r))]
   const [px, py] = tourner([-11, -14])
   const [mx, my] = tourner([11, -14])
   return (
@@ -76,10 +76,10 @@ function Symbole({ c, allume, trait }: { c: Composant; allume?: boolean; trait: 
             ? [0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
                 <line
                   key={a}
-                  x1={16 * Math.cos((a * Math.PI) / 180)}
-                  y1={16 * Math.sin((a * Math.PI) / 180)}
-                  x2={21 * Math.cos((a * Math.PI) / 180)}
-                  y2={21 * Math.sin((a * Math.PI) / 180)}
+                  x1={coord(16 * Math.cos((a * Math.PI) / 180))}
+                  y1={coord(16 * Math.sin((a * Math.PI) / 180))}
+                  x2={coord(21 * Math.cos((a * Math.PI) / 180))}
+                  y2={coord(21 * Math.sin((a * Math.PI) / 180))}
                   style={{ stroke: 'var(--t-jaune)' }}
                   strokeWidth={2.2}
                   strokeLinecap="round"

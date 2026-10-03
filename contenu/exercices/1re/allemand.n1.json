@@ -1,0 +1,3979 @@
+{
+ "niveau": "1re",
+ "matiere": "allemand",
+ "exercices": [
+  {
+   "chapitre": "4113f286-ddf7-57a8-9154-2816837bdad1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur la carte : des fleuves et des villes",
+   "competence": "lire-carte",
+   "situation": "Pour son exposé, Nele prépare une carte des grands fleuves d’Europe centrale. Observe-la : les noms des fleuves sont écrits en allemand.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Flüsse in Mitteleuropa",
+     "fond": "europe",
+     "cadrage": [
+      -2,
+      43.5,
+      27,
+      56
+     ],
+     "fleuves": [
+      "rhin",
+      "danube",
+      "elbe",
+      "oder"
+     ],
+     "frontieres": true,
+     "lieux": [
+      {
+       "id": "str",
+       "lieu": "strasbourg",
+       "symbole": "point",
+       "nom": "Strasbourg",
+       "teinte": "violet"
+      },
+      {
+       "id": "hh",
+       "lieu": "hambourg",
+       "symbole": "point",
+       "nom": "Hambourg",
+       "teinte": "violet"
+      },
+      {
+       "id": "wien",
+       "lieu": "vienne-autriche",
+       "symbole": "point",
+       "nom": "Vienne",
+       "teinte": "violet"
+      },
+      {
+       "id": "bud",
+       "lieu": "budapest",
+       "symbole": "point",
+       "nom": "Budapest",
+       "teinte": "violet"
+      },
+      {
+       "id": "bel",
+       "lieu": "belgrade",
+       "symbole": "point",
+       "nom": "Belgrade",
+       "teinte": "violet"
+      }
+     ],
+     "etiquettes": [
+      {
+       "texte": "Rhein",
+       "lon": 5.2,
+       "lat": 49.6,
+       "style": "ville"
+      },
+      {
+       "texte": "Elbe",
+       "lon": 12,
+       "lat": 52.6,
+       "style": "ville"
+      },
+      {
+       "texte": "Oder",
+       "lon": 15.4,
+       "lat": 52.2,
+       "style": "ville"
+      },
+      {
+       "texte": "Donau",
+       "lon": 12,
+       "lat": 48.6,
+       "style": "ville"
+      }
+     ],
+     "source": "Carte simplifiée, fleuves tirés du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "hh"
+     ],
+     "enonce": "Touche le grand port situé près de l’endroit où l’Elbe se jette dans la mer du Nord.",
+     "aide": "Suis le tracé de l’Elbe vers le nord-ouest, jusqu’à la mer.",
+     "explication": "C’est **Hambourg** : le grand port allemand de l’Elbe, à quelques dizaines de kilomètres de la mer du Nord."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "str"
+     ],
+     "enonce": "Touche la ville française située sur le Rhin, face à Kehl : le pont de l’Europe les relie.",
+     "aide": "Le Rhin est la frontière entre la France et l’Allemagne : cherche la ville française au bord du fleuve.",
+     "explication": "**Strasbourg** est sur la rive française du Rhin ; le pont de l’Europe la relie à Kehl, en Allemagne."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "Donau",
+      "die Donau",
+      "Danube",
+      "le Danube"
+     ],
+     "placeholder": "En allemand",
+     "enonce": "Quel fleuve, écrit en allemand sur la carte, traverse Vienne, Budapest et Belgrade ?",
+     "aide": "Regarde quel nom longe les trois villes ; il commence par un D.",
+     "explication": "C’est **die Donau**, le Danube : il traverse dix pays et quatre capitales, dont Vienne, Budapest et Belgrade."
+    }
+   ]
+  },
+  {
+   "chapitre": "4113f286-ddf7-57a8-9154-2816837bdad1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Herbst 2015 : Freiwillige am Bahnhof",
+   "competence": "analyser-texte",
+   "situation": "Pour son cours d’allemand, Hanna lit un article sur la façon dont des habitants ont accueilli des réfugiés en 2015. À toi de relever ce qui compte.",
+   "documents": [
+    {
+     "id": "artikel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Willkommen am Bahnhof",
+     "blocs": [
+      "Im Herbst 2015 kamen mehr als eine Million Flüchtlinge nach Deutschland. An vielen Bahnhöfen warteten [[f|Freiwillige]] mit Wasser, Kleidern und Spielzeug für die Kinder. Man sprach von einer „Willkommenskultur“.",
+      "Die Kanzlerin Angela Merkel sagte damals: „Wir schaffen das.“ Aber nicht alle waren froh: Manche Menschen hatten Angst, und eine Partei gegen die Einwanderung wurde stärker.",
+      "Heute ist die Integration eine tägliche Aufgabe. Man muss die Sprache lernen, zur Schule gehen und Arbeit finden."
+     ],
+     "source": "Article écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "artikel",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot allemand qui désigne les bénévoles qui attendent les réfugiés dans les gares.",
+     "aide": "Ce sont des personnes qui aident sans être payées : le mot est dans le premier paragraphe.",
+     "explication": "Les **Freiwillige** sont les bénévoles : ils accueillent les arrivants avec de l’eau, des vêtements et des jouets."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque information dans la bonne colonne, d’après l’article.",
+     "categories": [
+      "L’accueil en 2015",
+      "Les défis d’aujourd’hui"
+     ],
+     "items": [
+      [
+       "Des bénévoles attendent dans les gares",
+       0
+      ],
+      [
+       "Apprendre la langue",
+       1
+      ],
+      [
+       "De l’eau, des vêtements et des jouets sont distribués",
+       0
+      ],
+      [
+       "Trouver un travail",
+       1
+      ],
+      [
+       "Aller à l’école",
+       1
+      ]
+     ],
+     "aide": "Le premier et le deuxième paragraphe racontent 2015 ; le dernier parle d’aujourd’hui.",
+     "explication": "En **2015**, on distribue de l’aide dans les gares ; **aujourd’hui**, l’intégration passe par la langue, l’école et le travail."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière phrase de l’article.",
+     "texte": "Man muss die Sprache ___, zur Schule gehen und Arbeit finden.",
+     "reponses": [
+      [
+       "lernen"
+      ]
+     ],
+     "banque": [
+      "lernen",
+      "vergessen",
+      "verkaufen",
+      "verbieten"
+     ],
+     "aide": "Pour s’intégrer, que faut-il faire avec la langue du pays ?",
+     "explication": "Il faut **die Sprache lernen** : apprendre la langue est le premier pas de l’intégration."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot allemand du vocabulaire du cours à sa traduction.",
+     "paires": [
+      [
+       "die Aufnahme",
+       "l’accueil"
+      ],
+      [
+       "die Integration",
+       "l’intégration"
+      ],
+      [
+       "der Austausch",
+       "l’échange"
+      ],
+      [
+       "die Vielfalt",
+       "la diversité"
+      ]
+     ],
+     "aide": "*Willkommenskultur* contient l’idée d’*Aufnahme*.",
+     "explication": "**die Aufnahme** = l’accueil, **die Integration** = l’intégration, **der Austausch** = l’échange, **die Vielfalt** = la diversité."
+    }
+   ]
+  },
+  {
+   "chapitre": "4113f286-ddf7-57a8-9154-2816837bdad1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Bargeld, Mark und Euro",
+   "competence": "analyser-document",
+   "situation": "Lena compare ce que dit son grand-père de l’argent avec quelques repères historiques. Lis les deux documents.",
+   "documents": [
+    {
+     "id": "reperes",
+     "type": "tableau",
+     "titre": "Geld und Geschichte",
+     "colonnes": [
+      "Repère",
+      "Jahr",
+      "Was er bedeutet"
+     ],
+     "lignes": [
+      [
+       "Die Fuggerei in Augsburg",
+       1521,
+       "älteste Sozialsiedlung, noch bewohnt"
+      ],
+      [
+       "Die D-Mark",
+       1948,
+       "Symbol für Wirtschaftswunder und Stabilität"
+      ],
+      [
+       "Der Euro",
+       2002,
+       "Die Europäische Zentralbank sitzt in Frankfurt"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Opa Karl",
+       "emoji": "👴",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Opa, warum zahlst du im Supermarkt immer mit [[b|Bargeld]]? Ich zahle mit der Karte."
+      },
+      {
+       "qui": "Opa Karl",
+       "texte": "Wir sagen: „Nur Bares ist Wahres.“ Ich will sehen, was ich ausgebe, und ich spare lieber."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Aber der Euro ist doch ein modernes Geld!"
+      },
+      {
+       "qui": "Opa Karl",
+       "texte": "Ja, aber ich habe noch die D-Mark im Kopf."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot allemand qui désigne l’argent liquide, que préfère le grand-père.",
+     "aide": "Il paie « en liquide » : le mot est dans le premier message de Lena.",
+     "explication": "**Bargeld** désigne l’argent liquide, les espèces. Le proverbe « *Nur Bares ist Wahres* » dit : seul le liquide est vrai."
+    },
+    {
+     "type": "zone",
+     "document": "reperes",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui donne l’année de la Fuggerei d’Augsbourg, la plus ancienne cité sociale encore habitée.",
+     "aide": "Cherche la ligne « Die Fuggerei », puis la colonne « Jahr ».",
+     "explication": "La Fuggerei date de **1521** : elle a été fondée par le banquier Jakob Fugger."
+    },
+    {
+     "type": "nombre",
+     "reponse": 54,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’introduction de la D-Mark de celle de l’euro ?",
+     "aide": "Soustrais les deux années de la colonne « Jahr ».",
+     "explication": "2002 − 1948 = **54 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le grand-père reste-t-il fidèle au liquide ?",
+     "options": [
+      "Il veut voir ce qu’il dépense et préfère épargner",
+      "Il n’a jamais entendu parler de l’euro en Allemagne",
+      "Il pense que la carte bancaire est interdite en Allemagne",
+      "Il travaille pour la Banque centrale européenne à Francfort"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse d’Opa Karl au proverbe.",
+     "explication": "Il dit : « Ich will sehen, was ich ausgebe, und ich spare lieber. » Les Allemands restent **attachés aux espèces et à l’épargne**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois repères du plus ancien au plus récent. Le premier est « Fuggerei ».",
+     "items": [
+      "Fuggerei",
+      "Einführung der D-Mark",
+      "Einführung des Euro"
+     ],
+     "aide": "Les années sont dans la colonne « Jahr » du tableau.",
+     "explication": "**1521** (Fuggerei) → **1948** (D-Mark) → **2002** (euro)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ac783e3-7a43-5c51-b685-18bfe2989ee5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grandes dates du vivre-ensemble",
+   "competence": "se-reperer-temps",
+   "situation": "Pour le journal du lycée, Jonas dresse une frise de quelques dates qui comptent dans l’histoire de la tolérance et des droits en Allemagne.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Zusammenleben in Deutschland",
+     "debut": 1760,
+     "fin": 2040,
+     "pas": 40,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "nathan",
+       "date": 1779,
+       "nom": "Nathan"
+      },
+      {
+       "id": "hirsch",
+       "date": 1919,
+       "nom": "Hirschfeld"
+      },
+      {
+       "id": "gg",
+       "date": 1949,
+       "nom": "Grundgesetz"
+      },
+      {
+       "id": "p175",
+       "date": 1994,
+       "nom": "§ 175 weg"
+      },
+      {
+       "id": "ehe",
+       "date": 2017,
+       "nom": "Ehe für alle"
+      }
+     ],
+     "source": "Dates tirées du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "gg"
+     ],
+     "enonce": "Touche l’événement qui correspond à la Loi fondamentale, dont l’article 3 interdit toute discrimination.",
+     "aide": "*Grundgesetz* veut dire « Loi fondamentale » : repère le nom sur la frise.",
+     "explication": "La **Grundgesetz** (Loi fondamentale) date de **1949**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 23,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la suppression définitive du paragraphe 175 du mariage pour tous ?",
+     "aide": "Le paragraphe 175 punissait l’homosexualité. Soustrais les deux dates de la frise.",
+     "explication": "2017 − 1994 = **23 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la dernière date de la frise.",
+     "texte": "Seit 2017 gibt es die ___ für alle.",
+     "reponses": [
+      [
+       "Ehe"
+      ]
+     ],
+     "banque": [
+      "Ehe",
+      "Wahl",
+      "Schule",
+      "Arbeit"
+     ],
+     "aide": "Le nom de l’événement est écrit sur la frise.",
+     "explication": "**die Ehe für alle** : le mariage pour tous, adopté en Allemagne en 2017."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ac783e3-7a43-5c51-b685-18bfe2989ee5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un club ouvert à tous",
+   "competence": "analyser-document",
+   "situation": "Mehmet cherche un club de sport près de chez lui. Il découvre l’affiche d’une association. Lis-la attentivement.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "TSV Sonnental",
+     "sousTitre": "Der Verein für alle",
+     "emoji": "⚽",
+     "teinte": "violet",
+     "lignes": [
+      {
+       "texte": "Fußball, Schwimmen und Tanzen für Kinder und Erwachsene",
+       "id": "sport"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Auch Menschen mit Behinderung sind willkommen: Inklusionstraining jeden Mittwoch",
+       "id": "inklusion"
+      },
+      {
+       "texte": "Jedes Jahr wählen die Mitglieder den Vorstand.",
+       "id": "wahl"
+      },
+      {
+       "texte": "Mitglied werden: nur 5 Euro im Monat",
+       "id": "preis"
+      }
+     ],
+     "pied": "Komm vorbei und mach mit!",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "wahl"
+     ],
+     "enonce": "Touche la ligne qui montre que le Verein est une « école de démocratie » : on y vote.",
+     "aide": "Cherche la ligne où les membres « wählen » (élisent) quelqu’un.",
+     "explication": "« Jedes Jahr **wählen** die Mitglieder den Vorstand » : on élit le bureau chaque année, c’est un geste démocratique."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "inklusion"
+     ],
+     "enonce": "Touche la ligne qui parle d’inclusion des personnes handicapées.",
+     "aide": "Le mot allemand pour « handicap » est *Behinderung*.",
+     "explication": "La ligne sur le **Inklusionstraining** accueille les personnes avec un handicap (*Behinderung*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle de l’article 3 de la Loi fondamentale (depuis 1994).",
+     "texte": "Niemand darf wegen seiner Behinderung ___ werden.",
+     "reponses": [
+      [
+       "benachteiligt"
+      ]
+     ],
+     "banque": [
+      "benachteiligt",
+      "geholfen",
+      "gewählt",
+      "engagiert"
+     ],
+     "aide": "Le verbe veut dire « défavoriser », et il est au participe II.",
+     "explication": "**benachteiligt** : « Personne ne doit être défavorisé à cause de son handicap. »"
+    },
+    {
+     "type": "categories",
+     "enonce": "Ces activités relèvent-elles du sport ou de la vie démocratique du club ?",
+     "categories": [
+      "Le sport",
+      "La vie démocratique"
+     ],
+     "items": [
+      [
+       "Tanzen",
+       0
+      ],
+      [
+       "Den Vorstand wählen",
+       1
+      ],
+      [
+       "Schwimmen",
+       0
+      ],
+      [
+       "Bei der Mitgliederversammlung abstimmen",
+       1
+      ]
+     ],
+     "aide": "*abstimmen* veut dire « voter ».",
+     "explication": "Danser et nager sont des **activités sportives** ; élire le bureau et voter en assemblée sont la **vie démocratique** de l’association."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ac783e3-7a43-5c51-b685-18bfe2989ee5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les trois anneaux et le chemin des droits",
+   "competence": "argumenter",
+   "situation": "Pour un exposé sur la tolérance, Sophie résume la parabole des trois anneaux de Lessing, puis elle relève quelques étapes de l’histoire des droits.",
+   "documents": [
+    {
+     "id": "ring",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Die Ringparabel",
+     "blocs": [
+      "Ein Vater liebt seine drei Söhne gleich. Er hat einen Ring und lässt zwei identische Ringe machen. Jeder Sohn bekommt einen Ring.",
+      "Nach seinem Tod streiten die Söhne: Welcher Ring ist der echte? Ein Richter antwortet: Man kann es nicht sehen. Jeder soll durch sein [[h|Handeln]] zeigen, dass sein Ring der echte ist.",
+      "So erzählt Lessing 1779 von den drei Religionen: Judentum, Christentum und Islam."
+     ],
+     "source": "Résumé rédigé pour l’exercice, d’après Lessing, Nathan der Weise (1779)"
+    },
+    {
+     "id": "recht",
+     "type": "tableau",
+     "titre": "Rechte und Verfolgung",
+     "colonnes": [
+      "Jahr",
+      "Ereignis"
+     ],
+     "lignes": [
+      [
+       1919,
+       "Magnus Hirschfeld gründet in Berlin ein Institut für Sexualwissenschaft"
+      ],
+      [
+       1933,
+       "Die Nazis plündern das Institut"
+      ],
+      [
+       1994,
+       "Der Paragraf 175 wird endgültig abgeschafft"
+      ],
+      [
+       2017,
+       "Die „Ehe für alle“ wird eingeführt"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ring",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot allemand qui dit comment chaque fils doit prouver la valeur de son anneau.",
+     "aide": "Le juge ne demande pas des paroles, mais des actes.",
+     "explication": "Chacun doit prouver la valeur de son anneau par son **Handeln**, c’est-à-dire par sa conduite, ses actes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée la parabole des anneaux défend-elle ?",
+     "options": [
+      "Chaque religion se juge à la conduite de ses fidèles",
+      "Une seule religion est la vraie et les deux autres sont fausses",
+      "Les religions doivent être interdites pour éviter les disputes",
+      "Le plus âgé des fils a raison parce qu’il est l’aîné"
+     ],
+     "reponse": 0,
+     "aide": "Aucun anneau ne se distingue des deux autres à l’œil nu.",
+     "explication": "Lessing défend la **tolérance** : on ne peut pas dire quelle religion est la seule vraie, c’est la conduite de chacun qui compte."
+    },
+    {
+     "type": "zone",
+     "document": "recht",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la case qui donne l’année de la suppression définitive du paragraphe 175.",
+     "aide": "Cherche la ligne qui parle de « Paragraf 175 » et lis son année.",
+     "explication": "Le paragraphe 175, qui punissait l’homosexualité, est supprimé définitivement en **1994**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 61,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le pillage de l’institut de Hirschfeld par les nazis de la suppression du paragraphe 175 ?",
+     "aide": "Prends l’année du pillage (« plündern ») et celle de la suppression.",
+     "explication": "1994 − 1933 = **61 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot allemand à sa traduction.",
+     "paires": [
+      [
+       "die Toleranz",
+       "la tolérance"
+      ],
+      [
+       "sich engagieren",
+       "s’engager"
+      ],
+      [
+       "die Gleichberechtigung",
+       "l’égalité des droits"
+      ],
+      [
+       "benachteiligen",
+       "défavoriser"
+      ]
+     ],
+     "aide": "*gleich* veut dire « égal » ; *Recht*, « droit ».",
+     "explication": "**die Toleranz** = la tolérance, **sich engagieren** = s’engager, **die Gleichberechtigung** = l’égalité des droits, **benachteiligen** = défavoriser."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a3d7cda-bd71-5e16-9be7-5037c20715a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "1933 – 1937 : quatre ans de culture sous contrôle",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son dossier sur l’art sous le IIIe Reich, Paul place quelques événements sur une frise. Observe-la.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Kunst und Macht",
+     "debut": 1932,
+     "fin": 1938,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "reich",
+       "debut": 1933,
+       "fin": 1938,
+       "nom": "Drittes Reich",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "buch",
+       "date": 1933,
+       "nom": "Bücherverbrennung"
+      },
+      {
+       "id": "film",
+       "date": 1935,
+       "nom": "Triumph des Willens"
+      },
+      {
+       "id": "kunst",
+       "date": 1937,
+       "nom": "Entartete Kunst"
+      }
+     ],
+     "source": "Dates tirées du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "kunst"
+     ],
+     "enonce": "Touche l’exposition qui ridiculisait l’art moderne, appelée « Art dégénéré ».",
+     "aide": "« Dégénéré » se dit *entartet* en allemand.",
+     "explication": "L’exposition **Entartete Kunst**, à Munich en **1937**, ridiculisait l’art moderne."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent les autodafés de l’exposition « Art dégénéré » ?",
+     "aide": "Autodafé se dit *Bücherverbrennung* : lis sa date sur la frise.",
+     "explication": "1937 − 1933 = **4 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la date des autodafés de 1933.",
+     "texte": "Die Bücherverbrennung war am 10. ___ 1933.",
+     "reponses": [
+      [
+       "Mai"
+      ]
+     ],
+     "banque": [
+      "Mai",
+      "März",
+      "Juli",
+      "Oktober"
+     ],
+     "aide": "Le cours donne la date exacte : le 10 mai 1933.",
+     "explication": "Les autodafés ont eu lieu le **10 mai 1933** : des étudiants brûlent les livres d’auteurs juifs, pacifistes, communistes."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a3d7cda-bd71-5e16-9be7-5037c20715a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cabaret d’Erika Mann",
+   "competence": "analyser-texte",
+   "situation": "Johanna prépare une fiche sur ceux qui ont résisté à la dictature par le rire ou par l’exil. Elle part d’un petit texte.",
+   "documents": [
+    {
+     "id": "text",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Lachen gegen die Macht",
+     "blocs": [
+      "Im Januar 1933 eröffnet Erika Mann in München das [[k|Kabarett]] „Die Pfeffermühle“. Auf der Bühne macht sich die Gruppe über die Nazis lustig.",
+      "Bald wird das in Deutschland zu gefährlich. Die Gruppe spielt weiter in der Schweiz.",
+      "Ihr Bruder Thomas Mann lebt in den USA. Im Radio der BBC spricht er zu den Deutschen. Bertolt Brecht geht zuerst nach Dänemark."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "text",
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche le mot allemand qui désigne le spectacle satirique d’Erika Mann.",
+     "aide": "C’est une vieille tradition allemande de théâtre politique et humoristique.",
+     "explication": "Le **Kabarett** est le cabaret politique : on y rit du pouvoir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le cabaret quitte-t-il l’Allemagne ?",
+     "options": [
+      "Jouer ces moqueries devient dangereux sous les nazis",
+      "Le public allemand ne s’intéressait plus du tout au cabaret",
+      "Erika Mann doit rejoindre son frère aux États-Unis",
+      "Le cabaret a été invité à jouer à la radio de la BBC"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième paragraphe : le mot *gefährlich* signifie « dangereux ».",
+     "explication": "« Bald wird das in Deutschland zu **gefährlich** » : se moquer des nazis devient trop dangereux, la troupe poursuit en **Suisse**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque artiste ou chaque geste dans la bonne colonne.",
+     "categories": [
+      "L’exil",
+      "Le rire contre le pouvoir"
+     ],
+     "items": [
+      [
+       "Thomas Mann parle aux Allemands par la radio de la BBC",
+       0
+      ],
+      [
+       "Erika Mann ouvre un cabaret à Munich",
+       1
+      ],
+      [
+       "Bertolt Brecht part d’abord au Danemark",
+       0
+      ],
+      [
+       "La troupe de la Pfeffermühle se moque des nazis sur scène",
+       1
+      ]
+     ],
+     "aide": "Deux gestes consistent à quitter le pays, deux autres à monter sur scène.",
+     "explication": "Thomas Mann et Brecht sont des **exilés** ; Erika Mann et sa troupe utilisent **le rire** contre le pouvoir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot allemand à sa traduction.",
+     "paires": [
+      [
+       "die Macht",
+       "le pouvoir"
+      ],
+      [
+       "die Zensur",
+       "la censure"
+      ],
+      [
+       "das Exil",
+       "l’exil"
+      ],
+      [
+       "die Bücherverbrennung",
+       "l’autodafé"
+      ]
+     ],
+     "aide": "*verbrennen* veut dire « brûler ».",
+     "explication": "**die Macht** = le pouvoir, **die Zensur** = la censure, **das Exil** = l’exil, **die Bücherverbrennung** = l’autodafé."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a3d7cda-bd71-5e16-9be7-5037c20715a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Brûler, interdire, partir",
+   "competence": "analyser-document",
+   "situation": "Pour un exposé, Nils a rédigé une page sur le 10 mai 1933 et dressé un tableau d’artistes partis en exil. Lis les deux documents.",
+   "documents": [
+    {
+     "id": "vortrag",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Der 10. Mai 1933",
+     "blocs": [
+      "Am 10. Mai 1933 verbrennen Studenten in vielen Städten Bücher von jüdischen, pazifistischen und kommunistischen Autoren.",
+      "Schon viel früher hatte Heinrich Heine geschrieben: „Dort, wo man Bücher verbrennt, verbrennt man auch am Ende Menschen.“",
+      "Joseph Goebbels ist der Minister für [[p|Propaganda]]. Wer nicht Mitglied der Reichskulturkammer ist, darf nicht mehr arbeiten."
+     ],
+     "source": "Texte écrit pour l’exercice ; la phrase de Heine est citée dans le cours"
+    },
+    {
+     "id": "exil",
+     "type": "tableau",
+     "titre": "Künstler im Exil",
+     "colonnes": [
+      "Name",
+      "Weg",
+      "Was er oder sie tut"
+     ],
+     "lignes": [
+      [
+       "Thomas Mann",
+       "USA",
+       "spricht zu den Deutschen im BBC-Radio"
+      ],
+      [
+       "Bertolt Brecht",
+       "Dänemark, dann USA",
+       "schreibt und warnt im Exil"
+      ],
+      [
+       "Marlene Dietrich",
+       "Ausland",
+       "weigert sich, für die Nazis zu drehen"
+      ],
+      [
+       "Erika Mann",
+       "Schweiz",
+       "spielt dort ihr Kabarett weiter"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vortrag",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot allemand qui désigne ce dont Goebbels est le ministre.",
+     "aide": "Le mot ressemble beaucoup au français.",
+     "explication": "Goebbels est le ministre de la **Propaganda** : il contrôle la culture et l’information."
+    },
+    {
+     "type": "zone",
+     "document": "exil",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit par quel pays Brecht est passé avant de rejoindre les États-Unis.",
+     "aide": "Cherche la ligne « Bertolt Brecht », colonne « Weg ».",
+     "explication": "Brecht passe par le **Danemark** avant les États-Unis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cite-t-on la phrase de Heine à propos des autodafés ?",
+     "options": [
+      "Elle montre que brûler des livres annonce la violence contre les hommes",
+      "Elle prouve que Heine approuvait les autodafés de 1933",
+      "Elle explique que les nazis ont censuré l’imprimerie de Heine",
+      "Elle dit que l’art n’a aucun rapport avec la politique"
+     ],
+     "reponse": 0,
+     "aide": "Relis la citation : après les livres, qui brûle-t-on ?",
+     "explication": "Heine avait écrit : « Là où l’on brûle des livres, on finit par brûler des hommes. » La phrase **annonce** la violence qui suivra."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personne à ce qu’elle a fait, d’après les documents et le cours.",
+     "paires": [
+      [
+       "Joseph Goebbels",
+       "dirige la propagande du régime"
+      ],
+      [
+       "Thomas Mann",
+       "parle aux Allemands par la BBC"
+      ],
+      [
+       "Erika Mann",
+       "poursuit son cabaret en Suisse"
+      ],
+      [
+       "Leni Riefenstahl",
+       "réalise Le Triomphe de la volonté"
+      ]
+     ],
+     "aide": "Les deux premiers sont dans les documents ; pour Riefenstahl, pense au film de 1935.",
+     "explication": "**Goebbels** dirige la propagande, **Thomas Mann** parle à la BBC, **Erika Mann** joue en Suisse, **Riefenstahl** réalise *Le Triomphe de la volonté* (1935)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le tableau, Marlene Dietrich est-elle restée tourner pour le régime nazi ?",
+     "options": [
+      "Non : elle refuse de tourner pour les nazis",
+      "Oui : elle y tourne tous ses films"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Relis la dernière colonne de sa ligne.",
+     "explication": "Le tableau dit qu’elle **se refuse** (*weigert sich*) à tourner pour les nazis."
+    }
+   ]
+  },
+  {
+   "chapitre": "df3653fa-11c0-5d35-8dbc-8b016a39d690",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre inventions, quatre dates",
+   "competence": "lire-tableau",
+   "situation": "Pour le club de sciences, Mira a dressé un tableau de quelques découvertes venues des pays germanophones. Lis-le.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Erfinder und Entdecker",
+     "colonnes": [
+      "Wer",
+      "Was",
+      "Wann"
+     ],
+     "lignes": [
+      [
+       "Johannes Gutenberg",
+       "der Buchdruck",
+       "um 1450"
+      ],
+      [
+       "Wilhelm Conrad Röntgen",
+       "die Röntgenstrahlen",
+       1895
+      ],
+      [
+       "Carl Benz",
+       "das Automobil",
+       1886
+      ],
+      [
+       "Robert Koch",
+       "der Tuberkulose-Erreger",
+       1882
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui donne l’année du brevet de l’automobile de Carl Benz.",
+     "aide": "Cherche la ligne « Carl Benz », puis la colonne « Wann ».",
+     "explication": "Carl Benz dépose le brevet de l’automobile en **1886**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 13,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la découverte du bacille de la tuberculose par Koch de celle des rayons X par Röntgen ?",
+     "aide": "Soustrais les deux années du tableau.",
+     "explication": "1895 − 1882 = **13 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces inventions de la plus ancienne à la plus récente. La première est « der Buchdruck ».",
+     "items": [
+      "der Buchdruck",
+      "der Tuberkulose-Erreger",
+      "das Automobil",
+      "die Röntgenstrahlen"
+     ],
+     "aide": "Compare les années de la dernière colonne.",
+     "explication": "**um 1450** (imprimerie) → **1882** (bacille de Koch) → **1886** (automobile) → **1895** (rayons X)."
+    }
+   ]
+  },
+  {
+   "chapitre": "df3653fa-11c0-5d35-8dbc-8b016a39d690",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lise Meitner, la grande oubliée",
+   "competence": "analyser-texte",
+   "situation": "Pour un exposé sur les femmes scientifiques, Leonie lit un court texte sur la physicienne Lise Meitner.",
+   "documents": [
+    {
+     "id": "meitner",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Lise Meitner",
+     "blocs": [
+      "Lise Meitner stammt aus Österreich. Als Physikerin arbeitet sie in Berlin mit einem Kollegen an der Radioaktivität.",
+      "Als Jüdin muss sie 1938 Deutschland verlassen. 1939 erklärt sie mit ihrem [[n|Neffen]] Otto Frisch die [[k|Kernspaltung]].",
+      "Den Nobelpreis für Chemie erhält aber Otto [[h|Hahn]] allein. Heute trägt ein chemisches Element ihren Namen: das Meitnerium."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "meitner",
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche le mot allemand qui désigne la fission nucléaire, que Lise Meitner explique en 1939.",
+     "aide": "Le mot est composé de *Kern* (noyau) et d’un nom qui veut dire « division ».",
+     "explication": "La **Kernspaltung** est la fission du noyau atomique."
+    },
+    {
+     "type": "zone",
+     "document": "meitner",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le nom du chercheur qui reçoit seul le prix Nobel de chimie.",
+     "aide": "Il est nommé dans le dernier paragraphe, avec son prénom Otto.",
+     "explication": "C’est **Otto Hahn** qui reçoit seul le prix Nobel de chimie ; Lise Meitner n’est pas récompensée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase d’après le texte.",
+     "texte": "Als Jüdin muss sie 1938 Deutschland ___.",
+     "reponses": [
+      [
+       "verlassen"
+      ]
+     ],
+     "banque": [
+      "verlassen",
+      "verlassend",
+      "verlässt",
+      "verließ"
+     ],
+     "aide": "Après un verbe de modalité comme *muss*, le second verbe est à l’infinitif.",
+     "explication": "On écrit **verlassen** : verbe de modalité (*muss*) + infinitif à la fin de la phrase."
+    },
+    {
+     "type": "trous",
+     "enonce": "Choisis entre « inventer » et « découvrir » : complète les deux phrases.",
+     "texte": "Gutenberg hat den Buchdruck ___. Koch hat den Erreger der Tuberkulose ___.",
+     "reponses": [
+      [
+       "erfunden"
+      ],
+      [
+       "entdeckt"
+      ]
+     ],
+     "banque": [
+      "erfunden",
+      "entdeckt",
+      "verboten",
+      "gesammelt"
+     ],
+     "aide": "*erfinden* crée une chose qui n’existait pas ; *entdecken* révèle une chose qui existait déjà.",
+     "explication": "Gutenberg a **erfunden** (inventé) l’imprimerie ; Koch a **entdeckt** (découvert) un bacille qui existait déjà."
+    }
+   ]
+  },
+  {
+   "chapitre": "df3653fa-11c0-5d35-8dbc-8b016a39d690",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le savant est-il responsable ?",
+   "competence": "argumenter",
+   "situation": "Un cours d’allemand propose un débat. Mia et Ben discutent d’un chimiste célèbre, Fritz Haber, et du rôle du savant.",
+   "documents": [
+    {
+     "id": "haber",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Fritz Haber",
+     "blocs": [
+      "Fritz Haber entwickelt ein Verfahren zur Herstellung von Ammoniak. Daraus macht man [[d|Dünger]]: So kann die Landwirtschaft mehr Menschen ernähren. Haber erhält den Nobelpreis.",
+      "1915 leitet er aber auch den ersten Giftgas-Angriff bei Ypern."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Diskussion",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Haber hat Millionen Menschen satt gemacht!"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Aber sein Wissen hat auch Menschen getötet. Ist der Forscher dafür verantwortlich?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "Ich finde: Jeder Forscher trägt eine große [[v|Verantwortung]] für das, was mit seinem Wissen passiert."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Dann muss man das Wort „Fortschritt“ immer prüfen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "haber",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot allemand qui désigne ce que l’on fabrique avec l’ammoniac pour nourrir plus de monde.",
+     "aide": "C’est un produit que l’on répand dans les champs.",
+     "explication": "L’ammoniac sert à fabriquer du **Dünger**, l’engrais, qui permet de nourrir plus d’êtres humains."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot allemand qui désigne la responsabilité, dans le message de Mia.",
+     "aide": "Le mot se termine par -ung et commence par *Ver-*.",
+     "explication": "**die Verantwortung** : la responsabilité du chercheur est le cœur du débat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces usages du savoir de Haber.",
+     "categories": [
+      "Un usage qui nourrit",
+      "Un usage qui tue"
+     ],
+     "items": [
+      [
+       "L’engrais pour les champs",
+       0
+      ],
+      [
+       "Le gaz de combat utilisé à Ypres",
+       1
+      ],
+      [
+       "Plus de récoltes pour nourrir des milliards de personnes",
+       0
+      ],
+      [
+       "La première attaque au gaz en 1915",
+       1
+      ]
+     ],
+     "aide": "Un seul et même savoir a deux visages.",
+     "explication": "Le même savoir donne l’**engrais** qui nourrit et le **gaz de combat** qui tue : « Un même savoir peut nourrir ou tuer. »"
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la position de Mia dans la discussion ?",
+     "options": [
+      "Chaque chercheur est responsable de l’usage de son savoir",
+      "Le chercheur n’a aucune responsabilité après sa découverte",
+      "Seul l’État est responsable de ce que fait un savant",
+      "Il faut interdire toutes les recherches en chimie"
+     ],
+     "reponse": 0,
+     "aide": "Relis son dernier message : le mot *jeder* veut dire « chaque ».",
+     "explication": "Mia dit que **jeder Forscher** porte une grande responsabilité pour ce qui arrive à son savoir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot allemand à sa traduction.",
+     "paires": [
+      [
+       "die Erfindung",
+       "l’invention"
+      ],
+      [
+       "die Entdeckung",
+       "la découverte"
+      ],
+      [
+       "der Fortschritt",
+       "le progrès"
+      ],
+      [
+       "missbrauchen",
+       "détourner, abuser de"
+      ]
+     ],
+     "aide": "*erfinden* = inventer ; *entdecken* = découvrir.",
+     "explication": "**die Erfindung** = l’invention, **die Entdeckung** = la découverte, **der Fortschritt** = le progrès, **missbrauchen** = détourner."
+    }
+   ]
+  },
+  {
+   "chapitre": "021ade94-a51a-5a19-837e-ce13c1cb72fb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De Carlowitz aux Verts : quatre dates",
+   "competence": "se-reperer-temps",
+   "situation": "Pour un exposé sur la nature en Allemagne, Tim a posé quelques dates sur une frise. Observe-la.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Natur in Deutschland",
+     "debut": 1700,
+     "fin": 2000,
+     "pas": 50,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "carl",
+       "date": 1713,
+       "nom": "Nachhaltigkeit"
+      },
+      {
+       "id": "friedrich",
+       "date": 1818,
+       "nom": "Friedrich"
+      },
+      {
+       "id": "wandervogel",
+       "date": 1901,
+       "nom": "Wandervogel"
+      },
+      {
+       "id": "gruene",
+       "date": 1980,
+       "nom": "Die Grünen"
+      }
+     ],
+     "source": "Dates tirées du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "wandervogel"
+     ],
+     "enonce": "Touche le mouvement de jeunes randonneurs qui fuient la ville pour la nature.",
+     "aide": "*wandern* veut dire « randonner ».",
+     "explication": "Le **Wandervogel** est un mouvement de jeunesse de randonnée, fondé en 1901."
+    },
+    {
+     "type": "nombre",
+     "reponse": 79,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la fondation du Wandervogel de celle du parti des Verts ?",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1980 − 1901 = **79 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le mot inventé en 1713.",
+     "texte": "Hans Carl von Carlowitz prägt das Wort ___.",
+     "reponses": [
+      [
+       "Nachhaltigkeit"
+      ]
+     ],
+     "banque": [
+      "Nachhaltigkeit",
+      "Landschaft",
+      "Umweltschutz",
+      "Wanderung"
+     ],
+     "aide": "Ce mot veut dire « durabilité » ; il est écrit sur la frise.",
+     "explication": "**die Nachhaltigkeit** : ne pas couper plus de bois qu’il n’en repousse."
+    }
+   ]
+  },
+  {
+   "chapitre": "021ade94-a51a-5a19-837e-ce13c1cb72fb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Jardins, parcs et maisons de campagne",
+   "competence": "comprendre-langue",
+   "situation": "Lena, qui habite à Leipzig, discute avec Tom de ce que l’on fait de la nature en ville et à la campagne. Lis leur échange.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Chat",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Du fährst am Wochenende in den Schrebergarten? Wer war eigentlich Schreber?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Ein [[a|Arzt]], Moritz Schreber. Der erste Garten dieser Art entstand 1864 in Leipzig."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Und deine Oma? Sie hat doch eine kleine Hütte auf dem Land."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Ja, in der DDR hatten viele Familien eine [[d|Datsche]]. Dort wandern wir oft im Wald."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot allemand qui désigne le métier de Moritz Schreber.",
+     "aide": "Tom demande « Wer war Schreber ? » : la réponse suit dans le message de Lena.",
+     "explication": "Moritz Schreber était un **Arzt**, un médecin. Les jardins ouvriers portent son nom."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot allemand qui désigne la petite maison de campagne répandue en RDA.",
+     "aide": "La grand-mère de Lena en a une « auf dem Land », à la campagne.",
+     "explication": "La **Datsche** est la petite maison de campagne, très répandue en RDA."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1864,
+     "enonce": "En quelle année le premier jardin de ce type naît-il à Leipzig ?",
+     "aide": "La date est dans la réponse de Lena sur Schreber.",
+     "explication": "Le premier *Schrebergarten* apparaît à Leipzig en **1864**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu allemand à sa définition.",
+     "paires": [
+      [
+       "der Schrebergarten",
+       "jardin ouvrier en location"
+      ],
+      [
+       "der Stadtpark",
+       "grand parc urbain"
+      ],
+      [
+       "die Datsche",
+       "petite maison de campagne"
+      ],
+      [
+       "das Naturschutzgebiet",
+       "réserve naturelle"
+      ]
+     ],
+     "aide": "*Schutz* veut dire « protection ».",
+     "explication": "**der Schrebergarten** = jardin ouvrier, **der Stadtpark** = grand parc urbain (comme le Tiergarten à Berlin), **die Datsche** = petite maison de campagne, **das Naturschutzgebiet** = réserve naturelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "021ade94-a51a-5a19-837e-ce13c1cb72fb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La forêt malade et la naissance d’un parti",
+   "competence": "analyser-document",
+   "situation": "Pour comprendre comment la nature est devenue un enjeu politique, Clara croise un article sur les années 1980 et un tableau de trois moments de l’histoire de la nature.",
+   "documents": [
+    {
+     "id": "artikel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Der Wald in Gefahr",
+     "blocs": [
+      "In den 1980er Jahren haben viele Deutsche Angst um den Wald. Saurer Regen schadet den Bäumen: Man spricht vom [[w|Waldsterben]].",
+      "Gleichzeitig protestieren viele Menschen gegen die Atomkraft. Aus diesen Bewegungen entsteht 1980 die Partei „Die Grünen“. 1983 ziehen sie zum ersten Mal in den Bundestag ein."
+     ],
+     "source": "Article écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Was die Natur bedeutet",
+     "colonnes": [
+      "Zeit",
+      "Wer",
+      "Die Natur ist …"
+     ],
+     "lignes": [
+      [
+       "um 1818",
+       "Caspar David Friedrich",
+       "ein Ort für Gefühl und Mysterium"
+      ],
+      [
+       "um 1901",
+       "Wandervogel",
+       "ein Ort der Freiheit"
+      ],
+      [
+       "ab 1980",
+       "Die Grünen",
+       "ein politisches Thema"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "artikel",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le mot allemand qui désigne la mort des forêts due aux pluies acides.",
+     "aide": "Le mot contient *Wald* (forêt) et *sterben* (mourir).",
+     "explication": "Le **Waldsterben** est la mort des forêts, causée par les pluies acides."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète deux informations de l’article.",
+     "texte": "Saurer ___ schadet den Bäumen. 1983 ziehen die Grünen in den ___ ein.",
+     "reponses": [
+      [
+       "Regen"
+      ],
+      [
+       "Bundestag"
+      ]
+     ],
+     "banque": [
+      "Regen",
+      "Bundestag",
+      "Schnee",
+      "Bundesrat"
+     ],
+     "aide": "Le premier mot est une précipitation ; le second est le parlement allemand.",
+     "explication": "**Saurer Regen** (pluie acide) abîme les arbres ; en 1983, les Verts entrent au **Bundestag**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "ans",
+     "enonce": "Combien d’années s’écoulent entre la fondation des Verts et leur entrée au Bundestag ?",
+     "aide": "Les deux dates sont dans le deuxième paragraphe.",
+     "explication": "1983 − 1980 = **3 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case du tableau qui dit ce qu’est devenue la nature à l’époque décrite dans l’article.",
+     "aide": "L’article parle des années 1980 : cherche la ligne « ab 1980 ».",
+     "explication": "À partir de 1980, la nature est **un sujet politique** : la peur de la mort des forêts fait naître les Verts."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel changement le tableau et l’article montrent-ils ensemble ?",
+     "options": [
+      "La nature passe du sentiment romantique à l’action politique",
+      "La nature perd toute importance pour les Allemands",
+      "La nature devient seulement un lieu de production de bois",
+      "Les romantiques fondent le parti des Verts en 1818"
+     ],
+     "reponse": 0,
+     "aide": "Compare la première et la dernière ligne du tableau.",
+     "explication": "En Allemagne, la nature est passée **du tableau au bulletin de vote** : du sentiment romantique à l’action politique."
+    }
+   ]
+  },
+  {
+   "chapitre": "61d7abb4-9780-51e0-9e71-37925864d94e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur la carte de l’Afrique coloniale allemande",
+   "competence": "lire-carte",
+   "situation": "Pour son dossier, Samir cherche sur une carte d’Afrique trois pays qui furent des colonies allemandes. Touche-les sur la carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Afrika heute",
+     "fond": "monde",
+     "cadrage": [
+      -18,
+      -36,
+      52,
+      16
+     ],
+     "regionsCliquables": true,
+     "etiquettes": [
+      {
+       "texte": "Afrique du Sud",
+       "lon": 24,
+       "lat": -30,
+       "style": "pays"
+      },
+      {
+       "texte": "Angola",
+       "lon": 17.5,
+       "lat": -12,
+       "style": "pays"
+      },
+      {
+       "texte": "Kenya",
+       "lon": 38,
+       "lat": 0.6,
+       "style": "pays"
+      },
+      {
+       "texte": "Nigeria",
+       "lon": 8,
+       "lat": 9.6,
+       "style": "pays"
+      },
+      {
+       "texte": "Gabon",
+       "lon": 11.8,
+       "lat": -0.8,
+       "style": "pays"
+      }
+     ],
+     "source": "Fond de carte actuel : les pays d’aujourd’hui"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "NAM"
+     ],
+     "enonce": "Touche le pays qui était la colonie « Deutsch-Südwestafrika ».",
+     "aide": "C’est un pays d’Afrique australe, au bord de l’océan Atlantique, au nord de l’Afrique du Sud.",
+     "explication": "Le **Deutsch-Südwestafrika** correspond à l’actuelle **Namibie**, où a eu lieu le massacre des Herero et des Nama."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "TZA"
+     ],
+     "enonce": "Touche le pays qui était la colonie « Deutsch-Ostafrika ».",
+     "aide": "Il est situé sur la côte de l’océan Indien, au sud du Kenya.",
+     "explication": "Le **Deutsch-Ostafrika** correspond à l’actuelle **Tanzanie**."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "CMR"
+     ],
+     "enonce": "Touche le Cameroun, une autre colonie allemande, sur le golfe de Guinée.",
+     "aide": "Il se trouve à l’angle du golfe de Guinée, entre le Nigeria et le Gabon.",
+     "explication": "Le **Cameroun** fut une colonie allemande jusqu’en 1919."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces repères du plus ancien au plus récent. Le premier est « Conférence de Berlin ».",
+     "items": [
+      "Conférence de Berlin",
+      "Une place au soleil réclamée par von Bülow",
+      "Traité de Versailles : fin des colonies",
+      "Reconnaissance du génocide par l’Allemagne"
+     ],
+     "aide": "Les dates sont 1884-1885, 1897, 1919 et 2021.",
+     "explication": "**1884-1885** → **1897** → **1919** → **2021**."
+    }
+   ]
+  },
+  {
+   "chapitre": "61d7abb4-9780-51e0-9e71-37925864d94e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre de Philadelphie",
+   "competence": "comprendre-langue",
+   "situation": "Anna a quitté l’Allemagne au XIXe siècle. Sa lettre (imaginée) à sa mère raconte son nouveau pays. Lis-la.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Philadelphia, den 12. Mai 1883",
+     "blocs": [
+      "Liebe Mutter, ich bin gut in Amerika angekommen. Zu Hause gab es keine Arbeit, deshalb bin ich [[a|ausgewandert]].",
+      "Ich wohne jetzt in der Nähe von [[g|Germantown]]. Die Stadt gibt es schon seit 1683, und viele Nachbarn sprechen Deutsch.",
+      "Meine Cousine ist auch hier: Sie ist letztes Jahr eingewandert. Schreib mir bald!"
+     ],
+     "source": "Lettre imaginée pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le nom de la ville fondée par des Allemands en Pennsylvanie en 1683.",
+     "aide": "Le nom contient *German* : c’est la ville des Allemands.",
+     "explication": "**Germantown**, fondée en 1683 en Pennsylvanie, est un symbole de l’émigration allemande."
+    },
+    {
+     "type": "nombre",
+     "reponse": 200,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la fondation de Germantown de la date de la lettre d’Anna ?",
+     "aide": "La date de la lettre est dans le titre du document.",
+     "explication": "1883 − 1683 = **200 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe qui dit qu’Anna a quitté son pays.",
+     "aide": "Il commence par *aus-* : vers l’extérieur.",
+     "explication": "**ausgewandert** : *aus-* indique la sortie, Anna a émigré."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux phrases avec le bon participe.",
+     "texte": "Anna hat Deutschland verlassen : sie ist ___. Ihre Cousine ist neu in Amerika angekommen : sie ist ___.",
+     "reponses": [
+      [
+       "ausgewandert"
+      ],
+      [
+       "eingewandert"
+      ]
+     ],
+     "banque": [
+      "ausgewandert",
+      "eingewandert",
+      "ausgestiegen",
+      "zurückgekommen"
+     ],
+     "aide": "Une personne quitte un pays, l’autre y entre : pense à *vers l’extérieur* et *vers l’intérieur*.",
+     "explication": "**ausgewandert** = émigrée (elle quitte l’Allemagne) ; **eingewandert** = immigrée (elle arrive aux États-Unis)."
+    }
+   ]
+  },
+  {
+   "chapitre": "61d7abb4-9780-51e0-9e71-37925864d94e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Puissance discrète, puissance assumée",
+   "competence": "analyser-document",
+   "situation": "Pour comprendre l’influence de l’Allemagne dans le monde, Yanis croise un tableau sur son rayonnement culturel et un texte sur sa politique étrangère.",
+   "documents": [
+    {
+     "id": "soft",
+     "type": "tableau",
+     "titre": "Deutsche Soft Power",
+     "colonnes": [
+      "Instrument",
+      "Was er macht"
+     ],
+     "lignes": [
+      [
+       "Das Goethe-Institut",
+       "verbreitet Sprache und Kultur, mehr als 150 Institute weltweit"
+      ],
+      [
+       "Die Deutsche Welle",
+       "sendet Radio und Fernsehen in etwa 30 Sprachen"
+      ],
+      [
+       "Made in Germany",
+       "Autos und Maschinen mit gutem Ruf"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "politik",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Außenpolitik",
+     "blocs": [
+      "Nach 1945 setzt die Bundesrepublik auf den Westen. Später setzt Willy Brandt auf die Entspannung mit dem Osten: Man nennt das Ostpolitik.",
+      "Die Bundeswehr ist erst seit den 1990er Jahren im Ausland im Einsatz.",
+      "Im Februar 2022 spricht Bundeskanzler Olaf Scholz nach dem Angriff auf die Ukraine von einer [[z|Zeitenwende]]."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "soft",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit en combien de langues environ émet la Deutsche Welle.",
+     "aide": "Cherche la ligne « Die Deutsche Welle ».",
+     "explication": "La Deutsche Welle émet en **une trentaine de langues**."
+    },
+    {
+     "type": "zone",
+     "document": "politik",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche le mot par lequel Olaf Scholz parle d’un « changement d’époque ».",
+     "aide": "Le mot est composé de *Zeit* (temps, époque) et d’un nom qui veut dire « tournant ».",
+     "explication": "**Zeitenwende** : le « changement d’époque » annoncé en février 2022."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces moments de la politique étrangère dans l’ordre chronologique. Le premier est « Ostpolitik ».",
+     "items": [
+      "Ostpolitik",
+      "Bundeswehr im Ausland",
+      "Zeitenwende"
+     ],
+     "aide": "Brandt est chancelier dans les années 1970 ; le texte donne les deux autres repères.",
+     "explication": "**Ostpolitik** (Brandt) → **années 1990** (premiers engagements de la Bundeswehr à l’étranger) → **2022** (Zeitenwende)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la bonne préposition.",
+     "texte": "Der Einfluss ___ andere Länder wächst.",
+     "reponses": [
+      [
+       "auf"
+      ]
+     ],
+     "banque": [
+      "auf",
+      "von",
+      "zu",
+      "bei"
+     ],
+     "aide": "*der Einfluss* se construit avec une préposition suivie de l’accusatif.",
+     "explication": "**der Einfluss auf + accusatif** : l’influence sur quelqu’un ou quelque chose."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces outils, lequel relève du rayonnement culturel plutôt que de la diplomatie ?",
+     "options": [
+      "Le Goethe-Institut",
+      "L’Ostpolitik de Willy Brandt",
+      "La Zeitenwende de Scholz",
+      "La Bundeswehr à l’étranger"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau parle de langue et de culture, le texte de politique étrangère.",
+     "explication": "Le **Goethe-Institut** fait connaître la langue et la culture allemandes : c’est du *soft power*."
+    }
+   ]
+  },
+  {
+   "chapitre": "01dddb98-7603-54fe-b7ea-f3f66e908200",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le train était déjà parti",
+   "competence": "manier-langue",
+   "situation": "Tim a raté son train hier. Il raconte sa soirée à Lena par messages. Lis leur conversation.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Wo warst du gestern? Ich habe dich gesucht."
+      },
+      {
+       "qui": "Tim",
+       "texte": "Als ich am Bahnhof ankam, [[p|war]] der Zug schon [[p|abgefahren]]. Danach bin ich nach Hause gefahren."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Oje, du Armer!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui forment le plus-que-parfait dans le message de Tim.",
+     "aide": "Le plus-que-parfait se forme avec le prétérit de *sein* (ou *haben*) et un participe II.",
+     "explication": "**war … abgefahren** : prétérit de *sein* + participe II. Ce temps dit que le départ du train est **antérieur** à l’arrivée de Tim."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec l’auxiliaire qui convient.",
+     "texte": "Nachdem er gegessen ___, ging er schlafen.",
+     "reponses": [
+      [
+       "hatte"
+      ]
+     ],
+     "banque": [
+      "hatte",
+      "war",
+      "hat",
+      "wurde"
+     ],
+     "aide": "*essen* se conjugue avec *haben* ; la principale est au prétérit.",
+     "explication": "**hatte** : *nachdem* demande un plus-que-parfait quand la principale est au prétérit (« ging »)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque parfait à son plus-que-parfait.",
+     "paires": [
+      [
+       "ich habe gegessen",
+       "ich hatte gegessen"
+      ],
+      [
+       "er ist gegangen",
+       "er war gegangen"
+      ],
+      [
+       "wir haben gewartet",
+       "wir hatten gewartet"
+      ],
+      [
+       "sie hat gelacht",
+       "sie hatte gelacht"
+      ]
+     ],
+     "aide": "On remplace l’auxiliaire du parfait par son prétérit, le participe ne change pas.",
+     "explication": "Le plus-que-parfait garde le **même auxiliaire** et le même participe II que le parfait, mais l’auxiliaire passe au prétérit."
+    }
+   ]
+  },
+  {
+   "chapitre": "01dddb98-7603-54fe-b7ea-f3f66e908200",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une journée de classe à Cologne",
+   "competence": "manier-langue",
+   "situation": "La classe de Jonas passe la journée à Cologne. Voici le programme affiché dans le couloir. Utilise-le pour construire des phrases sur l’ordre des événements.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Klassenfahrt nach Köln",
+     "sousTitre": "Programm",
+     "emoji": "🚆",
+     "teinte": "bleu",
+     "lignes": [
+      {
+       "texte": "Dom besuchen",
+       "valeur": "9:00",
+       "id": "dom"
+      },
+      {
+       "texte": "Spaziergang am Rhein",
+       "valeur": "11:00",
+       "id": "rhein"
+      },
+      {
+       "texte": "Mittagessen im Café",
+       "valeur": "12:30",
+       "id": "essen"
+      },
+      {
+       "texte": "Museum",
+       "valeur": "14:00",
+       "id": "museum"
+      }
+     ],
+     "pied": "Treffpunkt: Hauptbahnhof",
+     "source": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "rhein"
+     ],
+     "enonce": "Touche l’activité qui a lieu juste avant le déjeuner au café.",
+     "aide": "Lis les horaires dans l’ordre : le déjeuner est à 12 h 30.",
+     "explication": "La promenade au bord du Rhin (**Spaziergang am Rhein**, 11 h) précède le déjeuner de 12 h 30."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces groupes dans l’ordre pour dire : « Après avoir visité la cathédrale, la classe est allée au bord du Rhin. » Le premier groupe est « Nachdem die Klasse ».",
+     "items": [
+      "Nachdem die Klasse",
+      "den Dom",
+      "besucht hatte,",
+      "ging sie zum Rhein"
+     ],
+     "aide": "Dans la subordonnée en *nachdem*, le verbe conjugué est en dernière position ; la principale commence par son verbe.",
+     "explication": "**Nachdem die Klasse den Dom besucht hatte, ging sie zum Rhein.** Plus-que-parfait dans la subordonnée, prétérit dans la principale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase : « Après avoir déjeuné, nous sommes allés au musée. »",
+     "texte": "Nachdem wir zu Mittag ___ ___, gingen wir ins Museum.",
+     "reponses": [
+      [
+       "gegessen"
+      ],
+      [
+       "hatten"
+      ]
+     ],
+     "banque": [
+      "gegessen",
+      "hatten",
+      "hatte",
+      "haben"
+     ],
+     "aide": "Le sujet est *wir* : l’auxiliaire est au prétérit pluriel, à la fin de la subordonnée.",
+     "explication": "**gegessen hatten** : participe II puis auxiliaire au prétérit. Avec « haben », il n’y aurait pas de décalage avec *gingen*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase respecte le décalage des temps après *nachdem* ?",
+     "options": [
+      "Nachdem er gegessen hatte, ging er schlafen.",
+      "Nachdem er gegessen hat, ging er schlafen.",
+      "Nachdem er aß, ging er schlafen.",
+      "Nachdem er hatte gegessen, ging er schlafen."
+     ],
+     "reponse": 0,
+     "aide": "La subordonnée doit être « un cran plus loin dans le passé » que la principale.",
+     "explication": "Avec une principale au prétérit, la subordonnée en *nachdem* est au **plus-que-parfait**, et le verbe conjugué est à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "01dddb98-7603-54fe-b7ea-f3f66e908200",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Max rate son train",
+   "competence": "manier-langue",
+   "situation": "Max a raconté sa journée de samedi dans un petit récit. Un tableau rappelle les mots de l’avant et de l’après.",
+   "documents": [
+    {
+     "id": "geschichte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ein verpasster Zug",
+     "blocs": [
+      "Letzten Samstag wollte Max nach Berlin fahren. Als er am Bahnhof ankam, war der Zug schon abgefahren. Er hatte zu lange gefrühstückt.",
+      "[[b|Bevor]] er nach Hause ging, kaufte er einen Kaffee. Nachdem er zu Hause angekommen war, rief er seine Freundin an."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Vorher und nachher",
+     "colonnes": [
+      "Nature",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Subordonnant",
+       "bevor",
+       "nachdem"
+      ],
+      [
+       "Adverbe",
+       "vorher",
+       "nachher, danach"
+      ],
+      [
+       "Préposition + datif",
+       "vor dem Essen",
+       "nach dem Essen"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau tiré du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "geschichte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le subordonnant qui veut dire « avant que / avant de » et qui garde le même temps que la principale.",
+     "aide": "Il est en début du deuxième paragraphe ; le tableau le range dans la colonne « Avant ».",
+     "explication": "**Bevor** : l’antériorité s’exprime sans décalage des temps (*Bevor er nach Hause ging, kaufte er…*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les actions de Max dans l’ordre chronologique. La première est « Max kommt am Bahnhof an ».",
+     "items": [
+      "Max kommt am Bahnhof an",
+      "Max kauft einen Kaffee",
+      "Max kommt zu Hause an",
+      "Max ruft seine Freundin an"
+     ],
+     "aide": "Pense à *bevor* (avant de rentrer) et à *nachdem* (après être arrivé).",
+     "explication": "Gare → **café acheté** (*bevor er nach Hause ging*) → arrivée à la maison → **coup de téléphone** (*nachdem er angekommen war*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mots dans la bonne colonne, avec l’aide du tableau.",
+     "categories": [
+      "Antériorité (avant)",
+      "Postériorité (après)"
+     ],
+     "items": [
+      [
+       "vorher",
+       0
+      ],
+      [
+       "nachdem",
+       1
+      ],
+      [
+       "bevor",
+       0
+      ],
+      [
+       "danach",
+       1
+      ],
+      [
+       "vor dem Essen",
+       0
+      ],
+      [
+       "nach dem Essen",
+       1
+      ]
+     ],
+     "aide": "*vor* signifie « avant », *nach* signifie « après ».",
+     "explication": "**vorher, bevor, vor dem Essen** disent l’antériorité ; **nachdem, danach, nach dem Essen** disent la postériorité."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase : « Après avoir fait mes devoirs, je vais au cinéma. »",
+     "texte": "Nachdem ich die Hausaufgaben gemacht ___, gehe ich ins Kino.",
+     "reponses": [
+      [
+       "habe"
+      ]
+     ],
+     "banque": [
+      "habe",
+      "hatte",
+      "machte",
+      "bin"
+     ],
+     "aide": "La principale est au présent : la subordonnée est au parfait.",
+     "explication": "**habe** : avec une principale au présent, la subordonnée en *nachdem* est au **parfait** (*gemacht habe*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on : « Avant de partir, il ferme la fenêtre » ?",
+     "options": [
+      "Bevor er geht, schließt er das Fenster.",
+      "Vor zu gehen, schließt er das Fenster.",
+      "Nachdem er geht, schließt er das Fenster.",
+      "Bevor er ging, schließt er das Fenster."
+     ],
+     "reponse": 0,
+     "aide": "*bevor* garde le même temps que la principale et se construit avec un verbe conjugué.",
+     "explication": "**Bevor er geht, schließt er das Fenster.** *bevor* + verbe conjugué, jamais « vor … zu »."
+    }
+   ]
+  },
+  {
+   "chapitre": "942a29d1-ac6a-58ba-87c7-998d96d44a00",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un coup de main avant le contrôle",
+   "competence": "manier-langue",
+   "situation": "Jana et Paul se préparent pour le contrôle d’allemand. Lis leur échange, puis observe quels verbes demandent le datif.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Jana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jana",
+       "texte": "Kannst du [[d|mir]] bitte helfen? Ich verstehe die Aufgabe nicht."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Klar! Ich rufe [[a|dich]] gleich an."
+      },
+      {
+       "qui": "Jana",
+       "texte": "Danke!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le pronom au datif qui complète le verbe « helfen ».",
+     "aide": "En français, « aider quelqu’un » a un COD ; en allemand, *helfen* se construit autrement.",
+     "explication": "*helfen* demande le **datif** : *Kannst du **mir** helfen ?* (et non *mich*)."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le pronom à l’accusatif qui complète le verbe « anrufen ».",
+     "aide": "Ici, c’est l’inverse : le français dit « téléphoner à », mais l’allemand emploie le cas du COD.",
+     "explication": "*jn anrufen* demande l’**accusatif** : *Ich rufe **dich** an.*"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de politesse.",
+     "texte": "Ich danke ___ für die Einladung.",
+     "reponses": [
+      [
+       "Ihnen"
+      ]
+     ],
+     "banque": [
+      "Ihnen",
+      "Sie",
+      "Ihr",
+      "Ihren"
+     ],
+     "aide": "*danken* est un verbe à datif ; on vouvoie la personne.",
+     "explication": "**Ihnen** est le datif de la forme de politesse *Sie* : *Ich danke Ihnen.*"
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe selon le cas de son complément de personne.",
+     "categories": [
+      "Datif",
+      "Accusatif"
+     ],
+     "items": [
+      [
+       "helfen",
+       0
+      ],
+      [
+       "danken",
+       0
+      ],
+      [
+       "fragen",
+       1
+      ],
+      [
+       "anrufen",
+       1
+      ],
+      [
+       "gehören",
+       0
+      ],
+      [
+       "bitten (jn um etwas)",
+       1
+      ]
+     ],
+     "aide": "Les verbes à retenir pour le datif : *helfen, danken, folgen, gefallen, gehören*.",
+     "explication": "**Datif** : helfen, danken, gehören. **Accusatif** : fragen, anrufen, bitten (la personne, avec *um* pour la chose)."
+    }
+   ]
+  },
+  {
+   "chapitre": "942a29d1-ac6a-58ba-87c7-998d96d44a00",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un mot de remerciement",
+   "competence": "manier-langue",
+   "situation": "Jonas écrit à Mme Keller, qui l’a invité à une conférence. Lis son message et repère les cas.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Eine Nachricht an Frau Keller",
+     "blocs": [
+      "Liebe Frau Keller,",
+      "ich danke [[i|Ihnen]] für die Einladung. Mein Bruder hilft mir bei der Planung. Ich frage den [[d|Direktor]] nach dem Termin.",
+      "Das Buch gehört meiner Schwester; sie bringt es morgen mit. Mit freundlichen Grüßen, Jonas"
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le pronom au datif qui complète le verbe « danken ».",
+     "aide": "C’est la forme de politesse, avec un I majuscule.",
+     "explication": "**Ihnen** : *danken* + datif (forme de politesse de *Sie*)."
+    },
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le nom de la personne à qui Jonas pose une question (verbe « fragen »).",
+     "aide": "Ce nom désigne le chef d’un établissement.",
+     "explication": "*jn fragen* : **den Direktor** est à l’accusatif (*den*), pas au datif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon article ou adjectif possessif.",
+     "texte": "Ich helfe ___ Schwester und frage ___ Lehrer.",
+     "reponses": [
+      [
+       "meiner"
+      ],
+      [
+       "den"
+      ]
+     ],
+     "banque": [
+      "meiner",
+      "meine",
+      "den",
+      "dem"
+     ],
+     "aide": "*helfen* demande le datif féminin ; *fragen* demande l’accusatif masculin.",
+     "explication": "**meiner Schwester** (datif féminin) et **den Lehrer** (accusatif masculin)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remplace « dem Schüler die Regel » par des pronoms : « Ich erkläre sie ihm. » Remets les mots dans l’ordre ; le premier est « Ich ».",
+     "items": [
+      "Ich",
+      "erkläre",
+      "sie",
+      "ihm"
+     ],
+     "aide": "Avec deux pronoms, l’accusatif (la chose) vient avant le datif (la personne).",
+     "explication": "**Ich erkläre sie ihm.** Deux pronoms : l’accusatif d’abord, puis le datif."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe allemand à son sens.",
+     "paires": [
+      [
+       "widersprechen",
+       "contredire"
+      ],
+      [
+       "begegnen",
+       "rencontrer par hasard"
+      ],
+      [
+       "zuhören",
+       "écouter quelqu’un"
+      ],
+      [
+       "gratulieren",
+       "féliciter"
+      ]
+     ],
+     "aide": "Ces quatre verbes se construisent avec le datif.",
+     "explication": "**widersprechen** = contredire, **begegnen** = rencontrer par hasard, **zuhören** = écouter, **gratulieren** = féliciter : tous suivis du datif."
+    }
+   ]
+  },
+  {
+   "chapitre": "942a29d1-ac6a-58ba-87c7-998d96d44a00",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fais-moi voir les photos",
+   "competence": "analyser-document",
+   "situation": "Lukas écrit à son ami Max. Pendant ce temps, un tableau de révision résume quelques constructions délicates. Croise les deux documents.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Eine Nachricht an Max",
+     "blocs": [
+      "Lieber Max,",
+      "ich muss [[a|dich]] um Hilfe bitten. Kannst du mir die Fotos zeigen? Ich wasche mir erst die Hände, dann telefonieren wir. Bis gleich, Lukas"
+     ],
+     "source": "Message écrit pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Konstruktionen mit Kasus",
+     "colonnes": [
+      "Verb",
+      "Français",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "widersprechen",
+       "contredire",
+       "Er widerspricht seinem Vater."
+      ],
+      [
+       "sich einer Sache bewusst sein",
+       "être conscient de qqch",
+       "Er ist sich der Gefahr bewusst."
+      ],
+      [
+       "jn um etwas bitten",
+       "demander qqch à qqn",
+       "Er bittet mich um Hilfe."
+      ],
+      [
+       "der Opfer gedenken",
+       "commémorer les victimes",
+       "Wir gedenken der Opfer."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau tiré du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le pronom à l’accusatif qui désigne la personne à qui Lukas demande de l’aide.",
+     "aide": "*jn um etwas bitten* : la personne est à l’accusatif, la chose avec *um*.",
+     "explication": "**dich** : accusatif de la personne avec *bitten … um Hilfe*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Kannst du mir die Fotos zeigen ? », quels sont les cas de « mir » et de « die Fotos » ?",
+     "options": [
+      "mir : datif ; die Fotos : accusatif",
+      "mir : accusatif ; die Fotos : datif",
+      "mir : datif ; die Fotos : datif",
+      "mir : accusatif ; die Fotos : accusatif"
+     ],
+     "reponse": 0,
+     "aide": "Pour *zeigen*, la personne est au datif et la chose à l’accusatif.",
+     "explication": "*jm etwas zeigen* : la personne (**mir**) est au **datif**, la chose (**die Fotos**) à l’**accusatif**."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche l’exemple qui contient un complément au génitif après « sich … bewusst sein ».",
+     "aide": "Cherche la ligne « sich einer Sache bewusst sein » et lis sa dernière colonne.",
+     "explication": "« Er ist sich **der Gefahr** bewusst » : *der Gefahr* est au **génitif** (construction soutenue)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Quel cas porte le complément imposé par le verbe dans chaque phrase ?",
+     "categories": [
+      "Datif",
+      "Accusatif",
+      "Génitif"
+     ],
+     "items": [
+      [
+       "Er widerspricht seinem Vater.",
+       0
+      ],
+      [
+       "Er bittet mich um Hilfe.",
+       1
+      ],
+      [
+       "Wir gedenken der Opfer.",
+       2
+      ],
+      [
+       "Ich helfe dir.",
+       0
+      ],
+      [
+       "Ich rufe dich an.",
+       1
+      ]
+     ],
+     "aide": "Pour chaque phrase, cherche le complément qui suit directement le verbe, sans préposition.",
+     "explication": "**Datif** : seinem Vater, dir. **Accusatif** : mich, dich. **Génitif** : der Opfer (*gedenken*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase, comme dans la lettre de Lukas.",
+     "texte": "Nach dem Sport wasche ich ___ die Hände.",
+     "reponses": [
+      [
+       "mir"
+      ]
+     ],
+     "banque": [
+      "mir",
+      "mich",
+      "sich",
+      "uns"
+     ],
+     "aide": "Le verbe a déjà un COD (*die Hände*) : le pronom réfléchi passe au datif.",
+     "explication": "**mir** : *Ich wasche mir die Hände* (datif réfléchi), mais *Ich wasche mich* sans COD."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa17180e-43d2-5982-b445-9009ece3f398",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Partir, arriver, changer : les préverbes",
+   "competence": "comprendre-langue",
+   "situation": "Pour comprendre des verbes qu’il ne connaît pas, Elias lit un tableau de quatre préverbes séparables.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trennbare Vorsilben",
+     "colonnes": [
+      "Préverbe",
+      "Idée",
+      "Verbe"
+     ],
+     "lignes": [
+      [
+       "aus-",
+       "vers l’extérieur",
+       "auswandern"
+      ],
+      [
+       "ein-",
+       "vers l’intérieur",
+       "einwandern"
+      ],
+      [
+       "um-",
+       "changement",
+       "umziehen"
+      ],
+      [
+       "zurück-",
+       "retour",
+       "zurückkommen"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau tiré du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le préverbe qui exprime le retour, le mouvement en arrière.",
+     "aide": "Cherche la colonne « Idée » et la ligne qui parle de retour.",
+     "explication": "**zurück-** exprime le retour : *zurückkommen* = revenir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe à son sens.",
+     "paires": [
+      [
+       "auswandern",
+       "émigrer"
+      ],
+      [
+       "einwandern",
+       "immigrer"
+      ],
+      [
+       "umziehen",
+       "déménager"
+      ],
+      [
+       "zurückkommen",
+       "revenir"
+      ]
+     ],
+     "aide": "Additionne l’idée du préverbe et le sens du radical.",
+     "explication": "**aus-** (extérieur) + *wandern* = émigrer ; **ein-** (intérieur) = immigrer ; **um-** (changement) = déménager ; **zurück-** = revenir."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le bon préverbe.",
+     "texte": "Sie verlässt Deutschland : sie wandert ___.",
+     "reponses": [
+      [
+       "aus"
+      ]
+     ],
+     "banque": [
+      "aus",
+      "ein",
+      "um",
+      "zurück"
+     ],
+     "aide": "Quitter un pays, c’est aller vers l’extérieur.",
+     "explication": "**auswandern** : *aus-* = vers l’extérieur, la personne quitte son pays."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa17180e-43d2-5982-b445-9009ece3f398",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une ville qui change",
+   "competence": "analyser-texte",
+   "situation": "Pour son exposé sur l’histoire de sa ville, Lina lit un petit texte plein de verbes à préverbe.",
+   "documents": [
+    {
+     "id": "stadt",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Eine Stadt im Wandel",
+     "blocs": [
+      "Nach dem Krieg war die Stadt fast ganz [[z|zerstört]]. Viele Familien sind weggegangen, aber neue Bewohner sind eingewandert.",
+      "Man hat die Häuser erneuert, und die Stadt hat sich stark verändert. Die neue Brücke erleichtert den Weg zur Schule."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stadt",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche le participe qui dit que la ville a été détruite en morceaux.",
+     "aide": "Le préverbe *zer-* exprime une destruction en morceaux.",
+     "explication": "**zerstört** : *zer-* + *stören*, détruire. Le participe n’a pas de *ge-*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du texte.",
+     "texte": "Die Stadt hat sich stark ___.",
+     "reponses": [
+      [
+       "verändert"
+      ]
+     ],
+     "banque": [
+      "verändert",
+      "geverändert",
+      "verändern",
+      "veränderte"
+     ],
+     "aide": "Le verbe a un préverbe inséparable : son participe n’a pas de *ge-*.",
+     "explication": "**verändert** : les préverbes inséparables (*ver-, er-, zer-…*) ne prennent pas *ge-* au participe II."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe : le préverbe est-il séparable ou inséparable ?",
+     "categories": [
+      "Séparable",
+      "Inséparable"
+     ],
+     "items": [
+      [
+       "aussteigen",
+       0
+      ],
+      [
+       "verändern",
+       1
+      ],
+      [
+       "umdenken",
+       0
+      ],
+      [
+       "erreichen",
+       1
+      ],
+      [
+       "zurückkommen",
+       0
+      ],
+      [
+       "zerbrechen",
+       1
+      ]
+     ],
+     "aide": "Les préverbes inséparables sont *be-, er-, ver-, ent-, zer-, miss-*.",
+     "explication": "**Séparables** : aus-, um-, zurück-. **Inséparables** : ver-, er-, zer-."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le texte, que veut dire « erleichtern » (de *leicht*) ?",
+     "options": [
+      "faciliter",
+      "alourdir",
+      "interdire",
+      "réparer"
+     ],
+     "reponse": 0,
+     "aide": "*er-* rend, souvent à partir d’un adjectif : *leicht* = léger, facile.",
+     "explication": "**erleichtern** : rendre léger, donc **faciliter**. De la même famille : *erneuern* (de *neu*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa17180e-43d2-5982-b445-9009ece3f398",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Verschlafen, verlaufen, verschrieben",
+   "competence": "comprendre-langue",
+   "situation": "Mia raconte à Ben une matinée catastrophique. Utilise la méthode du cours pour comprendre ses verbes, puis range-les.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Heute Morgen habe ich [[v|verschlafen]], und dann habe ich mich auf dem Weg zur Schule auch noch verlaufen!"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Oje. Hast du wenigstens dein Heft mitgebracht?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "Ja. Aber beim Schreiben habe ich mich zweimal verschrieben."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe qui veut dire « dormir trop longtemps ».",
+     "aide": "Il est dans le premier message de Mia ; *schlafen* signifie « dormir ».",
+     "explication": "**verschlafen** : *ver-* exprime ici l’erreur, le « raté » : dormir plus que prévu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces verbes en *ver-* selon la valeur du préverbe.",
+     "categories": [
+      "Transformation",
+      "Erreur",
+      "Consommation complète"
+     ],
+     "items": [
+      [
+       "verbessern (de besser)",
+       0
+      ],
+      [
+       "verändern",
+       0
+      ],
+      [
+       "sich verschreiben",
+       1
+      ],
+      [
+       "verschlafen",
+       1
+      ],
+      [
+       "verbrauchen",
+       2
+      ],
+      [
+       "sich verlaufen",
+       1
+      ]
+     ],
+     "aide": "Pour chaque verbe, demande-toi : est-ce que quelque chose change, se trompe ou s’épuise ?",
+     "explication": "**Transformation** : verbessern, verändern. **Erreur** : sich verschreiben, verschlafen, sich verlaufen. **Consommation complète** : verbrauchen."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Er hat sich im Wald ___.",
+     "reponses": [
+      [
+       "verlaufen"
+      ]
+     ],
+     "banque": [
+      "verlaufen",
+      "geverlaufen",
+      "verlaufend",
+      "verläuft"
+     ],
+     "aide": "Après *hat*, il faut un participe II ; *ver-* est inséparable.",
+     "explication": "**verlaufen** : participe II de *sich verlaufen* (se perdre), sans *ge-*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le participe II de « zerstören » ?",
+     "options": [
+      "zerstört",
+      "gezerstört",
+      "zugestört",
+      "zerstörend"
+     ],
+     "reponse": 0,
+     "aide": "*zer-* est un préverbe inséparable.",
+     "explication": "**zerstört** : un préverbe inséparable ne prend pas *ge-*."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe séparable à son sens.",
+     "paires": [
+      [
+       "mitbringen",
+       "apporter"
+      ],
+      [
+       "wegwerfen",
+       "jeter"
+      ],
+      [
+       "aufmachen",
+       "ouvrir"
+      ],
+      [
+       "ankommen",
+       "arriver"
+      ]
+     ],
+     "aide": "*mit-* = avec ; *weg-* = au loin ; *auf-* = ouverture ; *an-* = contact.",
+     "explication": "**mitbringen** = apporter, **wegwerfen** = jeter, **aufmachen** = ouvrir, **ankommen** = arriver."
+    }
+   ]
+  },
+  {
+   "chapitre": "22a70af2-3b16-57ba-9179-a8946666b8e3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cuisiner en musique",
+   "competence": "manier-langue",
+   "situation": "Emma demande à Tim ce qu’il fait. Il lui répond par message : plusieurs choses se passent en même temps.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Was machst du gerade?"
+      },
+      {
+       "qui": "Tim",
+       "texte": "Ich koche, und [[w|währenddessen]] höre ich Musik. Beim Essen sehen wir dann fern."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Schön! Ich lese."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche l’adverbe qui veut dire « pendant ce temps ».",
+     "aide": "C’est un adverbe : le verbe vient juste après lui (inversion).",
+     "explication": "**währenddessen** : « pendant ce temps », adverbe suivi de l’inversion (*höre ich*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase : « Pendant que je travaille, il dort. »",
+     "texte": "___ ich arbeite, schläft er.",
+     "reponses": [
+      [
+       "Während"
+      ]
+     ],
+     "banque": [
+      "Während",
+      "Dass",
+      "Ob",
+      "Damit"
+     ],
+     "aide": "Le subordonnant exprime que les deux actions se passent en même temps.",
+     "explication": "**Während** + verbe à la fin (*arbeite*), puis principale avec son verbe en tête (*schläft er*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque construction à sa traduction.",
+     "paires": [
+      [
+       "beim Essen",
+       "en mangeant"
+      ],
+      [
+       "beim Lesen",
+       "en lisant"
+      ],
+      [
+       "beim Autofahren",
+       "en conduisant"
+      ],
+      [
+       "solange es regnet",
+       "tant qu’il pleut"
+      ]
+     ],
+     "aide": "*beim* + infinitif substantivé traduit le gérondif français.",
+     "explication": "**beim Essen**, **beim Lesen**, **beim Autofahren** rendent « en + participe présent » ; **solange** = tant que."
+    }
+   ]
+  },
+  {
+   "chapitre": "22a70af2-3b16-57ba-9179-a8946666b8e3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un samedi chez les Schmidt",
+   "competence": "analyser-texte",
+   "situation": "Un samedi de pluie, la famille Schmidt se partage les tâches. Lis le récit puis range les façons de dire « en même temps ».",
+   "documents": [
+    {
+     "id": "samstag",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ein Samstag bei Familie Schmidt",
+     "blocs": [
+      "Während der Vater kocht, deckt die Tochter den Tisch. Beim Essen sprechen alle über die Woche.",
+      "Solange es regnet, bleibt die Familie zu Hause. [[g|Gleichzeitig]] spielt der Sohn leise Gitarre."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "samstag",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche l’adverbe qui veut dire « au même moment » et qui provoque l’inversion.",
+     "aide": "Le sujet « der Sohn » vient après le verbe.",
+     "explication": "**Gleichzeitig** : adverbe, donc verbe en 2e position (*spielt der Sohn*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression selon sa construction.",
+     "categories": [
+      "Subordonnant (verbe à la fin)",
+      "Adverbe (inversion)",
+      "Nom ou préposition (pas de verbe conjugué)"
+     ],
+     "items": [
+      [
+       "Während der Vater kocht",
+       0
+      ],
+      [
+       "Solange es regnet",
+       0
+      ],
+      [
+       "Gleichzeitig spielt der Sohn",
+       1
+      ],
+      [
+       "Währenddessen sieht sie fern",
+       1
+      ],
+      [
+       "Beim Essen",
+       2
+      ],
+      [
+       "Während des Unterrichts",
+       2
+      ]
+     ],
+     "aide": "Regarde si l’expression contient un verbe conjugué et où il se trouve.",
+     "explication": "**Subordonnants** : *während, solange* (verbe à la fin). **Adverbes** : *gleichzeitig, währenddessen* (inversion). **Sans verbe conjugué** : *beim Essen, während des Unterrichts*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase : « Chaque fois que je le vois, il rit. »",
+     "texte": "Immer ___ ich ihn sehe, lacht er.",
+     "reponses": [
+      [
+       "wenn"
+      ]
+     ],
+     "banque": [
+      "wenn",
+      "als",
+      "ob",
+      "dass"
+     ],
+     "aide": "La phrase est au présent et la situation se répète.",
+     "explication": "**wenn** : « chaque fois », ou présent et futur ; *als* est réservé à un moment unique du passé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre : « Au repas, nous écoutons la radio. » Le premier groupe est « Beim Essen ».",
+     "items": [
+      "Beim Essen",
+      "hören",
+      "wir",
+      "Radio"
+     ],
+     "aide": "Après le groupe de tête, le verbe conjugué vient en deuxième position.",
+     "explication": "**Beim Essen hören wir Radio.** Le groupe de tête occupe la première place, le verbe la deuxième, puis le sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "22a70af2-3b16-57ba-9179-a8946666b8e3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux actions, un même moment",
+   "competence": "manier-langue",
+   "situation": "Pour réviser, Léa a recopié quelques phrases avec « während » et un tableau des outils de la simultanéité. Croise-les.",
+   "documents": [
+    {
+     "id": "saetze",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Vier Sätze",
+     "blocs": [
+      "Während Paul Sport liebt, liest seine Schwester lieber.",
+      "Während er kocht, deckt sie den Tisch.",
+      "Während die Stadt wächst, schrumpft das Dorf.",
+      "Während sie kocht, singt er."
+     ],
+     "source": "Phrases écrites pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Werkzeuge der Gleichzeitigkeit",
+     "colonnes": [
+      "Outil",
+      "Nature",
+      "Construction"
+     ],
+     "lignes": [
+      [
+       "während",
+       "subordonnant",
+       "verbe à la fin"
+      ],
+      [
+       "während + génitif",
+       "préposition",
+       "groupe nominal"
+      ],
+      [
+       "beim + infinitif",
+       "préposition + nom",
+       "pas de verbe conjugué"
+      ],
+      [
+       "gleichzeitig",
+       "adverbe",
+       "inversion"
+      ],
+      [
+       "solange",
+       "subordonnant",
+       "verbe à la fin"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau tiré du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c2"
+     ],
+     "enonce": "Touche la case qui dit quelle construction suit l’adverbe « gleichzeitig ».",
+     "aide": "Cherche la ligne « gleichzeitig », colonne « Construction ».",
+     "explication": "*gleichzeitig* est un adverbe : il demande l’**inversion** (le verbe passe avant le sujet)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans les quatre phrases, « während » a-t-il un sens temporel (pendant que) ou adversatif (tandis que) ?",
+     "categories": [
+      "Temporel : pendant que",
+      "Adversatif : tandis que"
+     ],
+     "items": [
+      [
+       "Während Paul Sport liebt, liest seine Schwester lieber.",
+       1
+      ],
+      [
+       "Während er kocht, deckt sie den Tisch.",
+       0
+      ],
+      [
+       "Während die Stadt wächst, schrumpft das Dorf.",
+       1
+      ],
+      [
+       "Während sie kocht, singt er.",
+       0
+      ]
+     ],
+     "aide": "Si les deux actions s’opposent, c’est adversatif ; si elles se déroulent ensemble, c’est temporel.",
+     "explication": "Quand les deux actions **s’opposent** (sport/lecture, ville qui grandit/village qui rétrécit), *während* = tandis que ; quand elles sont **simultanées**, *während* = pendant que."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces groupes dans l’ordre : « En faisant ses devoirs, il écoute de la musique ; pendant ce temps, sa sœur regarde la télévision. » Le premier groupe est « Bei den Hausaufgaben ».",
+     "items": [
+      "Bei den Hausaufgaben",
+      "hört",
+      "er",
+      "Musik;",
+      "währenddessen",
+      "sieht",
+      "seine Schwester fern"
+     ],
+     "aide": "Chaque proposition commence par un groupe de tête, puis le verbe conjugué en deuxième position.",
+     "explication": "**Bei den Hausaufgaben hört er Musik; währenddessen sieht seine Schwester fern.** Après le groupe de tête et après l’adverbe *währenddessen*, le verbe vient avant le sujet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la forme exacte de l’article.",
+     "texte": "Während ___ Unterrichts ist das Handy aus.",
+     "reponses": [
+      [
+       "des"
+      ]
+     ],
+     "banque": [
+      "des",
+      "dem",
+      "den",
+      "der"
+     ],
+     "aide": "*während*, préposition, est suivie du génitif ; *Unterricht* est masculin.",
+     "explication": "**während des Unterrichts** : préposition + génitif masculin (*des* + nom en *-s*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « En lisant, j’écoute de la musique » ?",
+     "options": [
+      "Beim Lesen höre ich Musik.",
+      "Beim Lesen höre Musik ich.",
+      "Bei Lesen höre ich Musik.",
+      "Beim Lesen ich höre Musik."
+     ],
+     "reponse": 0,
+     "aide": "L’infinitif devient un nom neutre, avec une majuscule ; *beim* = *bei dem*.",
+     "explication": "**Beim Lesen höre ich Musik.** *Lesen* prend une majuscule, et le verbe conjugué est en 2e position."
+    }
+   ]
+  },
+  {
+   "chapitre": "b008759b-3def-5f0d-b9e6-903018fc285f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les réseaux sociaux : pour et contre",
+   "competence": "argumenter",
+   "situation": "Mathis prépare un petit paragraphe sur les réseaux sociaux pour son cours d’allemand. Observe ses connecteurs.",
+   "documents": [
+    {
+     "id": "text",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Soziale Netzwerke",
+     "blocs": [
+      "Soziale Netzwerke sind [[z|zwar]] praktisch, aber sie können süchtig machen. Außerdem verbreiten sich Falschmeldungen sehr schnell."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "text",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche le mot qui annonce une concession, avant le « aber ».",
+     "aide": "*zwar … aber* veut dire « certes… mais ».",
+     "explication": "**zwar** : « certes ». On reconnaît un avantage avant de le nuancer avec *aber*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces connecteurs selon leur nature, donc selon la place du verbe.",
+     "categories": [
+      "Coordonnant (ordre normal)",
+      "Adverbe (inversion)",
+      "Subordonnant (verbe à la fin)"
+     ],
+     "items": [
+      [
+       "aber",
+       0
+      ],
+      [
+       "denn",
+       0
+      ],
+      [
+       "trotzdem",
+       1
+      ],
+      [
+       "deshalb",
+       1
+      ],
+      [
+       "obwohl",
+       2
+      ],
+      [
+       "während",
+       2
+      ]
+     ],
+     "aide": "Un coordonnant ne change pas l’ordre des mots ; un adverbe est en position 1 et le verbe vient juste après.",
+     "explication": "**Coordonnants** : aber, denn. **Adverbes** : trotzdem, deshalb. **Subordonnants** : obwohl, während."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase : « Ce n’est pas cher, c’est bon marché. »",
+     "texte": "Das ist nicht teuer, ___ billig.",
+     "reponses": [
+      [
+       "sondern"
+      ]
+     ],
+     "banque": [
+      "sondern",
+      "obwohl",
+      "trotzdem",
+      "zwar"
+     ],
+     "aide": "Après une négation, on corrige : « mais au contraire ».",
+     "explication": "**sondern** : « mais » après une négation (*nicht teuer, sondern billig*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque connecteur à sa traduction.",
+     "paires": [
+      [
+       "außerdem",
+       "de plus"
+      ],
+      [
+       "übrigens",
+       "d’ailleurs, au fait"
+      ],
+      [
+       "zum Beispiel",
+       "par exemple"
+      ],
+      [
+       "anders gesagt",
+       "autrement dit"
+      ]
+     ],
+     "aide": "*anders* veut dire « autrement ».",
+     "explication": "**außerdem** = de plus, **übrigens** = d’ailleurs, **zum Beispiel (z. B.)** = par exemple, **anders gesagt** = autrement dit."
+    }
+   ]
+  },
+  {
+   "chapitre": "b008759b-3def-5f0d-b9e6-903018fc285f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Se promener sous la pluie",
+   "competence": "manier-langue",
+   "situation": "Anna et Ben hésitent à sortir malgré la pluie. Lis leur échange, puis exerce-toi à exprimer la même idée de plusieurs façons.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Anna",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anna",
+       "texte": "[[o|Obwohl]] es regnet, gehen wir spazieren. Kommst du mit?"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Trotz des Regens? Das ist [[z|zwar]] mutig, aber ich komme mit."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le subordonnant qui introduit la concession et rejette le verbe à la fin.",
+     "aide": "Le mot est en tête du message d’Anna ; son verbe « regnet » est à la fin de la subordonnée.",
+     "explication": "**Obwohl** : « bien que », suivi du verbe en fin de subordonnée (*es regnet*)."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche le mot qui prépare le « aber » dans le message de Ben.",
+     "aide": "Il veut dire « certes ».",
+     "explication": "**zwar … aber** : « certes… mais »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Dis la même idée avec un adverbe. Le premier groupe est « Es regnet, ».",
+     "items": [
+      "Es regnet,",
+      "trotzdem",
+      "gehen",
+      "wir",
+      "spazieren"
+     ],
+     "aide": "Après *trotzdem*, le verbe conjugué vient juste après, avant le sujet.",
+     "explication": "**Es regnet, trotzdem gehen wir spazieren.** *trotzdem* est un adverbe : il provoque l’inversion."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces connecteurs selon ce qu’ils expriment.",
+     "categories": [
+      "Concession",
+      "Opposition",
+      "Ajout"
+     ],
+     "items": [
+      [
+       "obwohl",
+       0
+      ],
+      [
+       "trotzdem",
+       0
+      ],
+      [
+       "dagegen",
+       1
+      ],
+      [
+       "im Gegensatz zu",
+       1
+      ],
+      [
+       "außerdem",
+       2
+      ],
+      [
+       "darüber hinaus",
+       2
+      ]
+     ],
+     "aide": "*trotz* veut dire « malgré » ; *Gegensatz*, « contraire ».",
+     "explication": "**Concession** : obwohl, trotzdem. **Opposition** : dagegen, im Gegensatz zu. **Ajout** : außerdem, darüber hinaus."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la préposition qui veut dire « malgré ».",
+     "texte": "___ des Regens gehen wir spazieren.",
+     "reponses": [
+      [
+       "Trotz"
+      ]
+     ],
+     "banque": [
+      "Trotz",
+      "Obwohl",
+      "Trotzdem",
+      "Dagegen"
+     ],
+     "aide": "Le groupe nominal « des Regens » est au génitif : il faut une préposition.",
+     "explication": "**Trotz** + génitif = malgré. *Obwohl* et *trotzdem* introduiraient un verbe conjugué."
+    }
+   ]
+  },
+  {
+   "chapitre": "b008759b-3def-5f0d-b9e6-903018fc285f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faut-il autoriser les portables au lycée ?",
+   "competence": "argumenter",
+   "situation": "Le délégué de classe de Nora écrit un paragraphe argumenté sur le portable en cours. Elle le relit avec le tableau des trois façons d’exprimer une concession.",
+   "documents": [
+    {
+     "id": "absatz",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Handys in der Schule",
+     "blocs": [
+      "Einerseits sind Handys im Unterricht nützlich: Man kann schnell etwas nachschlagen. Andererseits lenken sie ab.",
+      "[[a|Außerdem]] sind viele Schüler abhängig. Zusammenfassend kann man sagen, dass Handys nur mit klaren Regeln erlaubt sein sollten."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Eine Idee, drei Konstruktionen",
+     "colonnes": [
+      "Connecteur",
+      "Nature",
+      "Place du verbe"
+     ],
+     "lignes": [
+      [
+       "obwohl",
+       "subordonnant",
+       "à la fin"
+      ],
+      [
+       "trotzdem",
+       "adverbe",
+       "juste après lui"
+      ],
+      [
+       "trotz + génitif",
+       "préposition",
+       "pas de verbe conjugué"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau tiré du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "absatz",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le connecteur d’ajout qui est suivi du verbe, puis du sujet (inversion).",
+     "aide": "Il ouvre le deuxième paragraphe : « sind viele Schüler » vient après lui.",
+     "explication": "**Außerdem** : adverbe d’ajout, donc verbe en 2e position et sujet après (*sind viele Schüler*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre : « Pour conclure, on peut dire que… » Le premier groupe est « Zusammenfassend ».",
+     "items": [
+      "Zusammenfassend",
+      "kann",
+      "man",
+      "sagen,",
+      "dass"
+     ],
+     "aide": "Après l’adverbe de tête, le verbe vient en deuxième position ; la subordonnée en *dass* suit.",
+     "explication": "**Zusammenfassend kann man sagen, dass …** : inversion après l’adverbe, puis subordonnée avec le verbe à la fin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase exprime la même idée que « Obwohl es regnet, gehen wir spazieren » ?",
+     "options": [
+      "Trotz des Regens gehen wir spazieren.",
+      "Wegen des Regens gehen wir spazieren.",
+      "Trotzdem es regnet, gehen wir spazieren.",
+      "Obwohl des Regens gehen wir spazieren."
+     ],
+     "reponse": 0,
+     "aide": "Le tableau montre trois constructions pour la même concession : *obwohl*, *trotzdem*, *trotz*.",
+     "explication": "**Trotz des Regens gehen wir spazieren.** : *trotz* + génitif, sans verbe conjugué dans le complément."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression de l’argumentation à sa fonction.",
+     "paires": [
+      [
+       "einerseits",
+       "d’un côté"
+      ],
+      [
+       "andererseits",
+       "de l’autre côté"
+      ],
+      [
+       "zusammenfassend",
+       "pour conclure"
+      ],
+      [
+       "d. h.",
+       "c’est-à-dire"
+      ]
+     ],
+     "aide": "*d. h.* est l’abréviation de *das heißt*.",
+     "explication": "**einerseits** = d’un côté, **andererseits** = de l’autre, **zusammenfassend** = pour conclure, **d. h.** = c’est-à-dire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le connecteur qui veut dire « quand même ».",
+     "texte": "Er ist krank, ___ geht er zur Arbeit.",
+     "reponses": [
+      [
+       "trotzdem"
+      ]
+     ],
+     "banque": [
+      "trotzdem",
+      "obwohl",
+      "trotz",
+      "dagegen"
+     ],
+     "aide": "Après la virgule, le verbe « geht » vient juste après le mot cherché.",
+     "explication": "**trotzdem** : adverbe, donc inversion (*trotzdem geht er*). *obwohl* enverrait le verbe à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1db55e3-10c0-5572-8850-c6668b37cc1f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où est Tom ?",
+   "competence": "comprendre-langue",
+   "situation": "Tom est absent. Lisa et Jonas essaient de deviner pourquoi. Lis leur conversation.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Lisa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jonas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lisa",
+       "texte": "Tom ist nicht in der Schule. Er [[m|muss]] krank sein."
+      },
+      {
+       "qui": "Jonas",
+       "texte": "Das [[c|mag]] sein, aber gestern war er noch gesund."
+      },
+      {
+       "qui": "Lisa",
+       "texte": "Dann dürfte er einen Termin beim Arzt haben."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le verbe de modalité qui exprime ici une supposition presque certaine, et non une obligation.",
+     "aide": "Lisa ne dit pas ce que Tom doit faire : elle devine ce qui est probable.",
+     "explication": "**muss** : emploi subjectif, « il doit être malade » = il est sûrement malade."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le verbe de modalité de la formule qui concède un point avant de le réfuter.",
+     "aide": "La formule est « Das … sein, aber… ».",
+     "explication": "**mag** : *Das mag sein, aber…* = « C’est possible, mais… »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque modal au degré de certitude qu’il exprime.",
+     "paires": [
+      [
+       "muss",
+       "presque certain"
+      ],
+      [
+       "dürfte",
+       "très probable"
+      ],
+      [
+       "könnte",
+       "possible"
+      ],
+      [
+       "kann nicht",
+       "impossible"
+      ]
+     ],
+     "aide": "L’échelle va de « presque certain » à « impossible ».",
+     "explication": "**muss** (presque certain), **dürfte** (très probable), **könnte** (possible), **kann nicht** (impossible)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1db55e3-10c0-5572-8850-c6668b37cc1f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le silence du père",
+   "competence": "analyser-texte",
+   "situation": "En cours, Marta commente une scène où un père se tait. Elle doit dire ce qu’elle suppose, avec le bon degré de certitude.",
+   "documents": [
+    {
+     "id": "kommentar",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Kommentar zur Szene",
+     "blocs": [
+      "Der Vater schweigt, als die Polizei kommt. Warum sagt er nichts?",
+      "Er muss Angst gehabt haben. [[v|Vielleicht]] wollte er aber auch seine Familie schützen."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "kommentar",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche l’adverbe qui exprime une simple possibilité (« peut-être »).",
+     "aide": "Il ouvre la deuxième phrase du dernier paragraphe.",
+     "explication": "**Vielleicht** : « peut-être », une hypothèse moins sûre que « Er muss Angst gehabt haben »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Il a sûrement eu peur. »",
+     "texte": "Er muss Angst ___ ___.",
+     "reponses": [
+      [
+       "gehabt"
+      ],
+      [
+       "haben"
+      ]
+     ],
+     "banque": [
+      "gehabt",
+      "haben",
+      "gewesen",
+      "sein"
+     ],
+     "aide": "Pour juger un fait passé, le modal reste au présent et l’infinitif devient passé : participe + *haben*.",
+     "explication": "**Er muss Angst gehabt haben.** Modal au présent + infinitif passé (*gehabt haben*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Le modal exprime-t-il une obligation, une permission ou une capacité (emploi objectif), ou une supposition du locuteur (emploi subjectif) ?",
+     "categories": [
+      "Emploi objectif",
+      "Emploi subjectif"
+     ],
+     "items": [
+      [
+       "Er muss um 8 Uhr arbeiten.",
+       0
+      ],
+      [
+       "Er muss müde sein.",
+       1
+      ],
+      [
+       "Sie kann gut schwimmen.",
+       0
+      ],
+      [
+       "Sie kann den Bus verpasst haben.",
+       1
+      ],
+      [
+       "Das dürfte stimmen.",
+       1
+      ],
+      [
+       "Du darfst hier parken.",
+       0
+      ]
+     ],
+     "aide": "Se demander : « est-ce une règle ou une capacité ? » ou « est-ce ce que je pense probable ? ».",
+     "explication": "**Objectif** : obligation (*muss arbeiten*), capacité (*kann schwimmen*), permission (*darfst parken*). **Subjectif** : *muss … sein*, *kann … verpasst haben*, *dürfte stimmen*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « Vous n’avez pas le droit de fumer ici » ?",
+     "options": [
+      "Sie dürfen hier nicht rauchen.",
+      "Sie müssen hier nicht rauchen.",
+      "Sie können hier nicht rauchen.",
+      "Sie sollten hier nicht rauchen."
+     ],
+     "reponse": 0,
+     "aide": "*muss nicht* ne veut pas dire « ne doit pas » : il exprime l’absence d’obligation.",
+     "explication": "**Sie dürfen hier nicht rauchen.** L’interdiction se dit avec *dürfen nicht* ; *müssen nicht* = « n’être pas obligé de »."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1db55e3-10c0-5572-8850-c6668b37cc1f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vélo disparu",
+   "competence": "argumenter",
+   "situation": "Mara a perdu son vélo et mène l’enquête avec Ole. Chacun avance des hypothèses : place-les sur l’échelle de certitude.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nachrichten",
+     "participants": [
+      {
+       "nom": "Mara",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ole",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mara",
+       "texte": "Mein Fahrrad ist weg! Wer hat es nur genommen?"
+      },
+      {
+       "qui": "Ole",
+       "texte": "Der Nachbar ist verreist. Das [[k|kann]] er nicht gewesen sein."
+      },
+      {
+       "qui": "Mara",
+       "texte": "Vielleicht war es Paul. Er braucht doch ein Rad."
+      },
+      {
+       "qui": "Ole",
+       "texte": "Das [[m|könnte]] sein, aber Paul war gestern den ganzen Tag bei mir."
+      },
+      {
+       "qui": "Mara",
+       "texte": "Dann muss es ein Fremder gewesen sein."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "skala",
+     "type": "tableau",
+     "titre": "Skala der Sicherheit",
+     "colonnes": [
+      "Adverbe",
+      "Degré de certitude"
+     ],
+     "lignes": [
+      [
+       "bestimmt, sicher",
+       "certain"
+      ],
+      [
+       "wahrscheinlich",
+       "probable"
+      ],
+      [
+       "vielleicht",
+       "peut-être"
+      ],
+      [
+       "kaum",
+       "à peine"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau tiré du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche le modal par lequel Ole exclut que le voisin soit le voleur.",
+     "aide": "Ole dit que c’est impossible.",
+     "explication": "**kann … nicht gewesen sein** : « ce n’est pas possible que ce soit lui ». Le modal reste au présent, l’infinitif est au passé."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le modal par lequel Ole admet seulement que ce serait possible, sans plus.",
+     "aide": "Le mot est au subjonctif II et exprime une simple possibilité.",
+     "explication": "**könnte** : « ça pourrait être vrai », le degré « possible » de l’échelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Mara à la fin de la conversation ?",
+     "options": [
+      "Elle est presque sûre que c’était un inconnu",
+      "Elle pense que c’est Paul, sans aucun doute",
+      "Elle croit que le vélo est resté chez le voisin",
+      "Elle pense que personne ne l’a pris"
+     ],
+     "reponse": 0,
+     "aide": "Relis sa dernière phrase : *muss … gewesen sein* exprime une quasi-certitude.",
+     "explication": "**Dann muss es ein Fremder gewesen sein.** : « ce doit être un inconnu » (presque certain)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces adverbes du moins sûr au plus sûr, d’après le tableau. Le premier est « kaum ».",
+     "items": [
+      "kaum",
+      "vielleicht",
+      "wahrscheinlich",
+      "bestimmt"
+     ],
+     "aide": "Le tableau les range du plus sûr au moins sûr : lis-le à l’envers.",
+     "explication": "**kaum** (à peine) → **vielleicht** (peut-être) → **wahrscheinlich** (probable) → **bestimmt** (certain)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase allemande à sa traduction.",
+     "paires": [
+      [
+       "Er muss krank gewesen sein.",
+       "Il a sûrement été malade."
+      ],
+      [
+       "Sie kann den Bus verpasst haben.",
+       "Elle a pu rater le bus."
+      ],
+      [
+       "Das dürfte schwierig gewesen sein.",
+       "Ça a dû être difficile."
+      ],
+      [
+       "Das kann nicht sein!",
+       "Ce n’est pas possible !"
+      ]
+     ],
+     "aide": "Pour le passé, le modal reste au présent et l’infinitif passe au passé.",
+     "explication": "**muss** = presque certain, **kann** = possible, **dürfte** = très probable, **kann nicht** = impossible."
+    }
+   ]
+  }
+ ]
+}

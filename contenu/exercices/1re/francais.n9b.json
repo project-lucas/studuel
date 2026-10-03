@@ -1,0 +1,2129 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "330310ac-af31-596c-861a-cf91ac271b2a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une comédie pour répondre à une querelle",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Critique de l’École des femmes*. Situe la pièce dans la vie de Molière, puis range ses personnages dans leur camp.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Molière",
+     "debut": 1620,
+     "fin": 1675,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "crit",
+       "date": 1663,
+       "nom": "La Critique"
+      },
+      {
+       "id": "mort",
+       "date": 1673,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Uranie",
+       "Maîtresse du salon, favorable à la pièce"
+      ],
+      [
+       "Dorante",
+       "Le chevalier, porte-parole de Molière"
+      ],
+      [
+       "Climène",
+       "La précieuse outrée"
+      ],
+      [
+       "Le Marquis",
+       "Le petit-maître ridicule, qui n’a qu’un « argument »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "crit"
+     ],
+     "enonce": "Touche l’année où Molière crée *La Critique de l’École des femmes*.",
+     "aide": "La pièce est jouée un an après *L’École des femmes* (1662).",
+     "explication": "La pièce est créée en **1663**, un an après le grand succès, et le scandale, de *L’École des femmes*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Molière vit-il encore après la création de la pièce ?",
+     "reponse": 10,
+     "aide": "Soustrais la date de la création de celle de la mort.",
+     "explication": "1673 − 1663 = **10 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage dans son camp.",
+     "categories": [
+      "Défend la pièce",
+      "Attaque la pièce"
+     ],
+     "items": [
+      [
+       "Dorante",
+       0
+      ],
+      [
+       "Uranie",
+       0
+      ],
+      [
+       "Climène",
+       1
+      ],
+      [
+       "Le Marquis",
+       1
+      ]
+     ],
+     "aide": "Le tableau dit pour qui chacun est : cherche « favorable », « porte-parole », « outrée », « ridicule ».",
+     "explication": "**Dorante** et **Uranie** défendent la pièce ; **Climène** (outrée) et le **Marquis** (ridicule) l’attaquent."
+    }
+   ]
+  },
+  {
+   "chapitre": "330310ac-af31-596c-861a-cf91ac271b2a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Tarte à la crème !",
+   "competence": "analyser-texte",
+   "situation": "Dans un salon, quelqu’un critique une pièce sans rien dire de précis. Lis la scène, puis repère les deux principes que Molière en tire.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Après la première",
+     "blocs": [
+      {
+       "didascalie": "Dans un salon, après la représentation de la pièce."
+      },
+      {
+       "personnage": "Le Marquis",
+       "replique": "Cette pièce ? Tarte à la crème !"
+      },
+      {
+       "personnage": "Dorante",
+       "replique": "Voilà un grand [[a|argument]] ! Dites-moi plutôt ce qui vous a déplu."
+      },
+      {
+       "personnage": "Le Marquis",
+       "replique": "Eh bien… tarte à la crème !"
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Molière"
+    },
+    {
+     "id": "principes",
+     "type": "tableau",
+     "titre": "Les deux principes",
+     "colonnes": [
+      "Principe",
+      "Sa formule"
+     ],
+     "lignes": [
+      [
+       "La seule règle est de plaire",
+       "« la grande règle de toutes les règles » (Dorante)"
+      ],
+      [
+       "La comédie est plus difficile que la tragédie",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot par lequel Dorante réclame au Marquis ce qu’il ne donne jamais.",
+     "aide": "Le Marquis répète la même formule sans rien démontrer.",
+     "explication": "Dorante réclame un **argument** : le Marquis n’a que sa formule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette scène du Marquis ?",
+     "options": [
+      "Une critique sans argument se réduit à une formule répétée",
+      "Un savant qui démonte une à une les règles d’Aristote",
+      "Un poète qui défend les règles des Anciens en citant Horace",
+      "Une dévote qui dénonce un scandale religieux au théâtre"
+     ],
+     "reponse": 0,
+     "aide": "Compte combien de fois le Marquis répète la même phrase.",
+     "explication": "Le Marquis n’a que sa formule : la **critique sans argument** se réduit à une phrase répétée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau : ce que doit faire l’auteur de comédie.",
+     "texte": "Il faut peindre d’après ___ et faire rire les ___.",
+     "reponses": [
+      [
+       "nature"
+      ],
+      [
+       "honnêtes gens",
+       "honnetes gens"
+      ]
+     ],
+     "banque": [
+      "nature",
+      "honnêtes gens",
+      "pédants",
+      "règles",
+      "précieuses"
+     ],
+     "aide": "Dorante parle de l’observation de la vie et d’un public cultivé.",
+     "explication": "Il faut **peindre d’après nature** et **faire rire les honnêtes gens** : c’est ce qui rend la comédie difficile."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque camp à ce qu’il apporte dans la pièce.",
+     "paires": [
+      [
+       "Climène et le Marquis",
+       "Aucun argument, sinon que la pièce est « détestable »"
+      ],
+      [
+       "Dorante et Uranie",
+       "Les critiques sont reprises une à une et démontées"
+      ],
+      [
+       "Élise",
+       "Elle se moque des précieux avec ironie"
+      ]
+     ],
+     "aide": "Une attaque sans preuves, une défense méthodique, une ironie.",
+     "explication": "Les **attaquants** n’ont pas d’argument, les **défenseurs** démontent les critiques, **Élise** les ridiculise avec ironie."
+    }
+   ]
+  },
+  {
+   "chapitre": "330310ac-af31-596c-861a-cf91ac271b2a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du théâtre qui parle du théâtre",
+   "competence": "argumenter",
+   "situation": "Camille et Yanis ne voient pas la pièce de la même façon. Lis leur débat et une phrase célèbre de Dorante, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "La Critique n’est qu’une préface qui défend *L’École des femmes*."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non : c’est une [[p|pièce]] où des personnages discutent de théâtre, sans intrigue ni dénouement."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une phrase de Dorante",
+     "blocs": [
+      {
+       "personnage": "Dorante",
+       "replique": "C’est une étrange entreprise que celle de faire rire les [[h|honnêtes]] gens."
+      }
+     ],
+     "source": "Molière, *La Critique de l’École des femmes* (1663)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot par lequel Yanis nomme ce que Molière a écrit.",
+     "aide": "Yanis oppose ce mot à « préface ».",
+     "explication": "Yanis soutient que Molière a écrit une **pièce** : du théâtre qui parle du théâtre, sans intrigue ni dénouement."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui dit quel public Molière veut faire rire.",
+     "aide": "Il est qualifié par un adjectif qui désigne des gens de bon goût.",
+     "explication": "Molière veut faire rire les **honnêtes** gens : c’est ce qui rend l’entreprise difficile."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la pièce à ce qu’il révèle de la poétique de Molière.",
+     "paires": [
+      [
+       "Des personnages qui discutent de la pièce précédente",
+       "Le théâtre parle du théâtre"
+      ],
+      [
+       "Un Marquis qui répète « Tarte à la crème ! »",
+       "Une critique sans argument est ridicule"
+      ],
+      [
+       "Dorante, porte-parole de Molière",
+       "La comédie doit peindre d’après nature"
+      ]
+     ],
+     "aide": "Chaque élément sert à défendre un point du programme de Molière.",
+     "explication": "La pièce est un **théâtre sur le théâtre**, le **Marquis** incarne la critique creuse, **Dorante** défend la peinture d’après nature."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase défend le mieux l’idée que faire rire est un art exigeant ?",
+     "options": [
+      "Dorante déclare que faire rire les honnêtes gens est une entreprise difficile",
+      "Le Marquis prouve que la comédie est un jeu facile à la portée de tous",
+      "Climène montre que le public ne rit jamais vraiment au théâtre",
+      "Lysidas affirme que la comédie ne vaut pas une bonne tragédie classique"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’affirmation qui apparaît dans le document « Une phrase de Dorante ».",
+     "explication": "La phrase de **Dorante** dit que faire rire les honnêtes gens est une **étrange entreprise** : un art difficile."
+    }
+   ]
+  },
+  {
+   "chapitre": "10e018d7-cc8b-5b12-bd88-6a1d5559166b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Paris sous le Second Empire",
+   "competence": "se-reperer-temps",
+   "situation": "Tu ouvres *La Curée*. Situe le roman dans la série de Zola et dans l’histoire, puis repère son personnage central.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Curée",
+     "sousTitre": "Émile Zola",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Série",
+       "valeur": "Les Rougon-Macquart, deuxième volume"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "Paris sous le Second Empire"
+      },
+      {
+       "texte": "Le spéculateur",
+       "valeur": "Aristide Saccard",
+       "id": "sacc"
+      },
+      {
+       "texte": "Sa jeune épouse",
+       "valeur": "Renée"
+      }
+     ],
+     "pied": "Roman naturaliste",
+     "teinte": "violet"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Second Empire et le roman",
+     "debut": 1840,
+     "fin": 1880,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "emp",
+       "debut": 1852,
+       "fin": 1870,
+       "nom": "Second Empire",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "feu",
+       "date": 1871,
+       "nom": "Le feuilleton"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "sacc"
+     ],
+     "enonce": "Touche la ligne de la fiche qui désigne celui qui fait fortune en spéculant.",
+     "aide": "C’est le personnage qui change de nom pour faire fortune.",
+     "explication": "**Aristide Saccard** (né Aristide Rougon) fait fortune en spéculant sur les expropriations de Haussmann."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "feu"
+     ],
+     "enonce": "Touche l’année où paraît le feuilleton, vite interrompu par le parquet.",
+     "aide": "Le roman paraît juste après la chute du Second Empire.",
+     "explication": "Le feuilleton paraît en **1871**, peu après la chute de l’Empire (1870)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure le Second Empire (de 1852 à 1870) ?",
+     "reponse": 18,
+     "aide": "Lis le début et la fin de la période sur la frise.",
+     "explication": "1870 − 1852 = **18 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "Saccard fait fortune en spéculant sur les ___ du préfet ___.",
+     "reponses": [
+      [
+       "expropriations"
+      ],
+      [
+       "Haussmann"
+      ]
+     ],
+     "banque": [
+      "expropriations",
+      "impôts",
+      "Haussmann",
+      "Rougon",
+      "Napoléon"
+     ],
+     "aide": "Il s’intéresse aux travaux qui transforment Paris dans les années 1850-1860.",
+     "explication": "Saccard spécule sur les **expropriations** décidées par le préfet **Haussmann**."
+    }
+   ]
+  },
+  {
+   "chapitre": "10e018d7-cc8b-5b12-bd88-6a1d5559166b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La méthode de Saccard",
+   "competence": "lire-tableau",
+   "situation": "Saccard est venu de province pour faire fortune. Découvre comment il s’y prend, puis qui l’entoure.",
+   "documents": [
+    {
+     "id": "meth",
+     "type": "tableau",
+     "titre": "Comment Saccard s’enrichit",
+     "colonnes": [
+      "Sa méthode",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "Il obtient des informations à l’Hôtel de Ville",
+       "Il sait où passeront les boulevards"
+      ],
+      [
+       "Il achète les immeubles condamnés",
+       "?"
+      ],
+      [
+       "Il épouse Renée",
+       "Une jeune femme riche : il l’épouse pour son argent"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "meth",
+     "multiple": false,
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche la case qui dit où Saccard trouve ses informations.",
+     "aide": "C’est un lieu du pouvoir municipal.",
+     "explication": "Saccard trouve ses informations **à l’Hôtel de Ville** : il sait avant les autres où passeront les boulevards."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : comment Saccard tire profit des immeubles qu’il achète ?",
+     "options": [
+      "Il se fait indemniser au prix fort",
+      "Il les revend à perte aux locataires",
+      "Il les offre à la ville de Paris",
+      "Il les loue à bas prix à des artistes"
+     ],
+     "reponse": 0,
+     "aide": "Les immeubles sont « condamnés » : la ville va les exproprier.",
+     "explication": "Les immeubles sont condamnés ; Saccard se fait **indemniser au prix fort** par la ville."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Aristide Saccard",
+       "Il spécule sur les expropriations"
+      ],
+      [
+       "Renée",
+       "La jeune femme riche, épousée pour sa dot"
+      ],
+      [
+       "Maxime",
+       "Le fils de Saccard, amant de sa belle-mère"
+      ],
+      [
+       "Sidonie Rougon",
+       "La sœur de Saccard, entremetteuse louche"
+      ]
+     ],
+     "aide": "Chaque personnage a un lien de famille ou d’argent avec Saccard.",
+     "explication": "**Saccard** spécule, **Renée** apporte sa dot, **Maxime** est son beau-fils, **Sidonie** est sa sœur entremetteuse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin de Renée.",
+     "texte": "Renée, ruinée et abandonnée, meurt d’une ___.",
+     "reponses": [
+      [
+       "méningite",
+       "meningite"
+      ]
+     ],
+     "banque": [
+      "méningite",
+      "noyade",
+      "fièvre",
+      "chute"
+     ],
+     "aide": "Une maladie du cerveau, selon le cours.",
+     "explication": "Renée, ruinée et abandonnée, meurt d’une **méningite**."
+    }
+   ]
+  },
+  {
+   "chapitre": "10e018d7-cc8b-5b12-bd88-6a1d5559166b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Paris dépecé, Phèdre transposée",
+   "competence": "argumenter",
+   "situation": "Lis une phrase célèbre de Saccard sur Paris, puis étudie comment Zola transpose le mythe de Phèdre.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Saccard regarde Paris",
+     "blocs": [
+      "« Paris haché à coups de [[c|sabre]], les [[c|veines]] ouvertes, nourrissant cent mille terrassiers et maçons. »"
+     ],
+     "source": "Émile Zola, *La Curée* (1871-1872), chapitre II"
+    },
+    {
+     "id": "phe",
+     "type": "tableau",
+     "titre": "Un mythe transposé",
+     "colonnes": [
+      "Mythe",
+      "Dans La Curée"
+     ],
+     "lignes": [
+      [
+       "Phèdre, amoureuse de son beau-fils",
+       "?"
+      ],
+      [
+       "Une représentation de Phèdre au théâtre",
+       "Renée y reconnaît sa propre histoire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui donnent à Paris l’apparence d’un corps blessé.",
+     "aide": "Cherche l’arme et la partie du corps qu’on ouvre pour saigner.",
+     "explication": "Le **sabre** et les **veines** ouvertes font de Paris un corps qu’on éventre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Renée, amoureuse de Maxime, son beau-fils",
+      "Renée, amoureuse de Saccard, son mari",
+      "Maxime, amoureux de Sidonie, sa tante",
+      "Saccard, amoureux de Renée, sa fille"
+     ],
+     "reponse": 0,
+     "aide": "Zola transpose le mythe : Renée est dans la place de Phèdre.",
+     "explication": "Renée aime **Maxime**, son beau-fils, comme Phèdre aime Hippolyte : Zola transpose Phèdre dans la spéculation immobilière."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à son sens.",
+     "paires": [
+      [
+       "La serre de l’hôtel du parc Monceau",
+       "La passion de Renée et Maxime, sous une végétation tropicale"
+      ],
+      [
+       "Le titre « La Curée »",
+       "Le partage des dépouilles après la chasse"
+      ],
+      [
+       "Les expropriations d’Haussmann",
+       "La source de la fortune de Saccard"
+      ]
+     ],
+     "aide": "Chaque élément condense un des grands thèmes du roman.",
+     "explication": "La **serre** abrite la passion, le **titre** dit le partage des dépouilles, les **expropriations** font la fortune de Saccard."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère l’image de Paris « haché à coups de sabre » pour une dissertation sur l’argent ?",
+     "options": [
+      "La ville est une proie que l’on dépèce pour s’enrichir",
+      "La ville est une œuvre d’art restaurée avec soin",
+      "La ville est un refuge paisible loin de la spéculation",
+      "La ville est un village agrandi sans heurts"
+     ],
+     "reponse": 0,
+     "aide": "Le titre du roman évoque une chasse.",
+     "explication": "Paris est une **proie** que l’on dépèce : le titre, **La Curée**, dit le partage de ses dépouilles."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c2f671d-c55f-59b5-b3dd-f395b46e647d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une ferme qui devient une dictature",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur *La Ferme des animaux*. Situe le livre dans la vie d’Orwell, puis identifie ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "George Orwell",
+     "debut": 1900,
+     "fin": 1950,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "esp",
+       "debut": 1936,
+       "fin": 1939,
+       "nom": "Guerre d’Espagne",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1903,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pub",
+       "date": 1945,
+       "nom": "Le livre paraît"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Napoléon",
+       "Il élève secrètement des chiens et prend le pouvoir"
+      ],
+      [
+       "Boule de Neige",
+       "Orateur et bâtisseur, il est expulsé"
+      ],
+      [
+       "Malabar",
+       "?"
+      ],
+      [
+       "Benjamin",
+       "Le sceptique qui comprend tout et ne dit rien"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année où paraît *La Ferme des animaux*.",
+     "aide": "Le livre paraît après la guerre mondiale, en août.",
+     "explication": "Le livre paraît en **1945**, après avoir été refusé par plusieurs éditeurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance d’Orwell de la parution du livre ?",
+     "reponse": 42,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1945 − 1903 = **42 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Malabar ?",
+     "options": [
+      "Le cheval travailleur, vendu à l’équarrisseur",
+      "Le cochon qui rédige les slogans du pouvoir",
+      "Le vieux sage qui donne l’élan de la révolte",
+      "Le fermier ivrogne chassé de sa ferme"
+     ],
+     "reponse": 0,
+     "aide": "Sa devise : « je vais travailler plus dur ».",
+     "explication": "Malabar est le **cheval infatigable**, finalement **vendu à l’équarrisseur** : la docilité ne le sauve pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c2f671d-c55f-59b5-b3dd-f395b46e647d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la révolte à la dictature",
+   "competence": "analyser-document",
+   "situation": "Suis, étape par étape, la façon dont la ferme tourne à la dictature des cochons.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes de la dictature",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Les animaux chassent le fermier Jones"
+      },
+      {
+       "id": "n2",
+       "texte": "Napoléon expulse Boule de Neige"
+      },
+      {
+       "id": "n3",
+       "texte": "Il s’approprie le projet du moulin"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Les commandements sont réécrits la nuit"
+      },
+      {
+       "id": "n6",
+       "texte": "Les cochons marchent sur deux pattes"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Des animaux avouent des crimes imaginaires et sont exécutés",
+      "Les animaux partagent la ferme avec les fermiers voisins",
+      "Les moutons votent pour un nouveau chef de la ferme",
+      "Boule de Neige revient prendre le pouvoir"
+     ],
+     "reponse": 0,
+     "aide": "Napoléon élimine ses opposants par la terreur.",
+     "explication": "Des animaux **avouent des crimes imaginaires** et sont **exécutés** par les chiens : c’est la terreur."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Napoléon reprend à son compte l’idée de son rival.",
+     "aide": "Le projet d’un bâtiment à vent, imaginé par Boule de Neige.",
+     "explication": "Napoléon s’approprie le **moulin**, projet de Boule de Neige, après l’avoir expulsé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière image du livre.",
+     "texte": "Les cochons ___ avec les fermiers : on ne les ___ plus.",
+     "reponses": [
+      [
+       "dînent",
+       "dinent"
+      ],
+      [
+       "distingue"
+      ]
+     ],
+     "banque": [
+      "dînent",
+      "chassent",
+      "distingue",
+      "reconnaît",
+      "oublie"
+     ],
+     "aide": "Les cochons ont fini par ressembler à ceux qu’ils avaient chassés.",
+     "explication": "Les cochons **dînent** avec les fermiers : on ne les **distingue** plus des hommes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans l’engrenage.",
+     "paires": [
+      [
+       "Sage l’Ancien",
+       "Il donne l’élan de la révolte"
+      ],
+      [
+       "Brille-Babil",
+       "Il est chargé de la propagande"
+      ],
+      [
+       "Les moutons",
+       "Ils bêlent les slogans pour couvrir tout débat"
+      ],
+      [
+       "Benjamin",
+       "Il comprend tout et se tait"
+      ]
+     ],
+     "aide": "Chacun joue un rôle précis : initiateur, propagandiste, chœur, témoin.",
+     "explication": "**Sage l’Ancien** lance la révolte, **Brille-Babil** fait la propagande, les **moutons** couvrent les débats, **Benjamin** se tait."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c2f671d-c55f-59b5-b3dd-f395b46e647d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le pouvoir des mots",
+   "competence": "argumenter",
+   "situation": "Lis un passage écrit à la manière d’Orwell, puis explique comment le pouvoir réécrit l’histoire.",
+   "documents": [
+    {
+     "id": "mur",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le mur de la grange",
+     "blocs": [
+      "Le lendemain matin, les animaux relurent le mur de la grange. Une phrase avait changé pendant la nuit. [[b|Brille-Babil]], essoufflé, assura qu’ils avaient mal lu. Les [[m|moutons]] se mirent à bêler le nouveau slogan, et personne n’osa plus discuter."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Orwell"
+    },
+    {
+     "id": "alleg",
+     "type": "tableau",
+     "titre": "L’allégorie",
+     "colonnes": [
+      "Dans l’apologue",
+      "Ce qu’il vise"
+     ],
+     "lignes": [
+      [
+       "Les commandements repeints",
+       "La réécriture de l’histoire"
+      ],
+      [
+       "Brille-Babil",
+       "?"
+      ],
+      [
+       "Napoléon",
+       "Staline"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mur",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui désigne ceux qui couvrent tout débat avec des slogans.",
+     "aide": "Ce sont des animaux qui répètent sans penser.",
+     "explication": "Les **moutons** bêlent le slogan : ils couvrent toute discussion."
+    },
+    {
+     "type": "zone",
+     "document": "mur",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le nom du personnage qui assure aux animaux qu’ils ont mal lu.",
+     "aide": "C’est le porte-parole du pouvoir.",
+     "explication": "**Brille-Babil**, chargé de la propagande, explique que les animaux se sont trompés : le pouvoir réécrit le texte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Brille-Babil ?",
+     "options": [
+      "La propagande",
+      "Le parti unique",
+      "La guerre d’Espagne",
+      "La police secrète"
+     ],
+     "reponse": 0,
+     "aide": "Il fait accepter chaque changement par un discours.",
+     "explication": "Brille-Babil figure la **propagande** : il justifie chaque mensonge."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque moyen de pouvoir : par la force, ou par les mots et la mémoire ?",
+     "categories": [
+      "Par la force",
+      "Par les mots et la mémoire"
+     ],
+     "items": [
+      [
+       "Les chiens de Napoléon",
+       0
+      ],
+      [
+       "Les exécutions des « traîtres »",
+       0
+      ],
+      [
+       "Brille-Babil et ses discours",
+       1
+      ],
+      [
+       "Les commandements repeints",
+       1
+      ],
+      [
+       "Les moutons qui bêlent",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si le moyen frappe les corps ou façonne ce que l’on croit.",
+     "explication": "Les **chiens** et les **exécutions** contraignent ; **Brille-Babil**, les **commandements repeints** et les **moutons** agissent sur les mots et la mémoire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vise Orwell avec cet apologue ?",
+     "options": [
+      "Le totalitarisme, et non la révolte elle-même",
+      "Toute révolte, jugée vouée à l’échec",
+      "Les animaux, jugés incapables de gouverner",
+      "Les fermiers, seuls responsables des abus"
+     ],
+     "reponse": 0,
+     "aide": "Orwell est lui-même socialiste.",
+     "explication": "Orwell, socialiste, vise le **totalitarisme**, non la révolte elle-même : la forme animalière rend la démonstration implacable."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce70e78f-1c2c-5ec4-8349-b01059005216",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce écrite à la veille d’une guerre",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur la pièce de Giraudoux. Place-la dans la vie de l’auteur et distingue ceux qui veulent la paix de ceux qui veulent la guerre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Jean Giraudoux",
+     "debut": 1880,
+     "fin": 1945,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1882,
+       "nom": "Naissance"
+      },
+      {
+       "id": "g14",
+       "date": 1914,
+       "nom": "Guerre de 1914"
+      },
+      {
+       "id": "cre",
+       "date": 1935,
+       "nom": "La pièce"
+      },
+      {
+       "id": "mort",
+       "date": 1944,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Ce que veulent les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il veut"
+     ],
+     "lignes": [
+      [
+       "Hector",
+       "Rendre Hélène pour éviter la guerre"
+      ],
+      [
+       "Ulysse",
+       "Repartir avec Hélène, sans combat"
+      ],
+      [
+       "Demokos",
+       "La guerre, pour la gloire"
+      ],
+      [
+       "Priam",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cre"
+     ],
+     "enonce": "Touche l’année où la pièce est créée par Louis Jouvet.",
+     "aide": "La pièce est créée entre l’arrivée de Hitler au pouvoir et Munich.",
+     "explication": "La pièce est créée en **1935**, dans une Europe qui sent venir la guerre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la guerre de 1914, où Giraudoux a combattu, de la création de la pièce ?",
+     "reponse": 21,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1935 − 1914 = **21 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Priam ?",
+     "options": [
+      "La guerre, pour la beauté d’Hélène et la gloire",
+      "La paix, pour protéger sa famille et son peuple",
+      "Un partage de la ville avec les Grecs vainqueurs",
+      "L’exil, pour fuir les combats avec les siens"
+     ],
+     "reponse": 0,
+     "aide": "Priam fait partie du camp de Demokos.",
+     "explication": "Le vieux **Priam** est du camp de la guerre : il y voit la **beauté d’Hélène** et la **gloire**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage dans son camp.",
+     "categories": [
+      "Pour la paix",
+      "Pour la guerre"
+     ],
+     "items": [
+      [
+       "Hector",
+       0
+      ],
+      [
+       "Ulysse",
+       0
+      ],
+      [
+       "Demokos",
+       1
+      ],
+      [
+       "Priam",
+       1
+      ]
+     ],
+     "aide": "Le tableau dit ce que veut chacun.",
+     "explication": "**Hector** et **Ulysse** cherchent la paix ; **Demokos** et **Priam** veulent la guerre."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce70e78f-1c2c-5ec4-8349-b01059005216",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment les portes de la guerre s’ouvrent",
+   "competence": "analyser-document",
+   "situation": "Hector a réussi à fermer les portes de la guerre. Suis la suite d’incidents qui les rouvrent.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’engrenage de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Hector obtient qu’on rende Hélène"
+      },
+      {
+       "id": "n2",
+       "texte": "Ulysse accepte de repartir avec elle"
+      },
+      {
+       "id": "n3",
+       "texte": "Ajax, ivre, revient importuner Andromaque"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Mourant, Demokos accuse Ajax"
+      },
+      {
+       "id": "n6",
+       "texte": "Les portes de la guerre s’ouvrent"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Demokos appelle aux armes ; Hector le tue",
+      "Priam rend Hélène aux Grecs en personne",
+      "Andromaque supplie Ulysse de rester",
+      "Cassandre est condamnée par les vieillards"
+     ],
+     "reponse": 0,
+     "aide": "Demokos meurt avant d’accuser Ajax.",
+     "explication": "Demokos appelle les Troyens **aux armes**, et **Hector le tue** : c’est le geste qui précipite tout."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où une fausse accusation soulève la foule.",
+     "aide": "Demokos désigne un coupable en mourant.",
+     "explication": "En mourant, Demokos **accuse Ajax** : la foule se soulève."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre quatre moments de la pièce.",
+     "items": [
+      "Ajax gifle Hector, qui encaisse",
+      "Ulysse accepte de repartir avec Hélène",
+      "Hector tue Demokos",
+      "Les portes de la guerre s’ouvrent"
+     ],
+     "aide": "La gifle vient avant la réussite d’Hector ; le meurtre juste avant la catastrophe.",
+     "explication": "La **gifle** précède l’accord avec **Ulysse** ; vient ensuite le **meurtre de Demokos**, puis l’**ouverture des portes**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Demokos",
+       "Le poète qui chante la guerre"
+      ],
+      [
+       "Busiris",
+       "Le juriste qui plie le droit"
+      ],
+      [
+       "Cassandre",
+       "Elle annonce le destin"
+      ],
+      [
+       "Hélène et Pâris",
+       "Légers, ils ne se sentent responsables de rien"
+      ]
+     ],
+     "aide": "Chacun incarne une façon de parler de la guerre ou de l’éviter.",
+     "explication": "**Demokos** chante la guerre, **Busiris** plie le droit, **Cassandre** annonce, **Hélène et Pâris** n’éprouvent aucune responsabilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce70e78f-1c2c-5ec4-8349-b01059005216",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un titre qui ment",
+   "competence": "argumenter",
+   "situation": "Lou et Max ne comprennent pas le titre de la même façon. Appuie-toi sur le dialogue et sur une réplique célèbre de la pièce.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lou",
+       "texte": "Le titre est sincère : Giraudoux croit qu’on peut éviter la guerre."
+      },
+      {
+       "qui": "Max",
+       "texte": "Au contraire, il est [[i|ironique]] : le spectateur sait dès le départ que la guerre aura lieu."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une réplique de la pièce",
+     "blocs": [
+      "« Le [[d|droit]] est la plus puissante des écoles de l’imagination. »"
+     ],
+     "source": "Jean Giraudoux, *La guerre de Troie n’aura pas lieu* (1935)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot par lequel Max qualifie le titre.",
+     "aide": "Il dit le contraire de « sincère ».",
+     "explication": "Max parle d’un titre **ironique** : le spectateur sait que la guerre aura lieu."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui désigne ce qui s’invente et se plie à l’imagination.",
+     "aide": "C’est le métier du juriste Busiris.",
+     "explication": "Le **droit** est une école d’imagination : le juriste plie la réalité à ses besoins."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces causes : la guerre arrive par elles, ou pas ?",
+     "categories": [
+      "La guerre arrive par…",
+      "La guerre n’arrive pas par…"
+     ],
+     "items": [
+      [
+       "Les mots et la vanité",
+       0
+      ],
+      [
+       "Un meurtre dû au hasard",
+       0
+      ],
+      [
+       "Une volonté d’Hector",
+       1
+      ],
+      [
+       "Une nécessité historique",
+       1
+      ]
+     ],
+     "aide": "Le cours dit : « non par nécessité ».",
+     "explication": "La guerre arrive par les **mots**, la **vanité** et le **hasard**, non par une volonté d’Hector ni par une nécessité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la pièce à ce qu’il révèle.",
+     "paires": [
+      [
+       "Le titre « …n’aura pas lieu »",
+       "Une ironie : le spectateur sait que la guerre aura lieu"
+      ],
+      [
+       "Busiris qui requalifie l’offense",
+       "Le langage et le droit plient devant la force"
+      ],
+      [
+       "Le dialogue Hector-Ulysse",
+       "Un sommet du théâtre politique français"
+      ]
+     ],
+     "aide": "Chaque élément porte un des grands thèmes de la pièce.",
+     "explication": "Le **titre** est ironique, **Busiris** montre le droit qui plie, le **dialogue Hector-Ulysse** est un sommet du théâtre politique."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d5f27c2-842d-5a02-8ce6-baba7f7b080b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une farce de jeunesse",
+   "competence": "se-reperer-temps",
+   "situation": "Tu étudies la plus ancienne farce de Molière. Situe-la dans sa vie, puis retrouve ses caractéristiques.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Molière et la province",
+     "debut": 1620,
+     "fin": 1675,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "prov",
+       "debut": 1645,
+       "fin": 1658,
+       "nom": "Province",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "dandin",
+       "date": 1668,
+       "nom": "George Dandin"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Jalousie du Barbouillé",
+     "sousTitre": "Molière",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Farce en un acte, en prose"
+      },
+      {
+       "texte": "Origine du nom",
+       "valeur": "Un visage barbouillé de farine"
+      },
+      {
+       "texte": "Pièce reprise plus tard",
+       "valeur": "George Dandin"
+      }
+     ],
+     "pied": "Texte transmis par une copie tardive",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "dandin"
+     ],
+     "enonce": "Touche l’année de *George Dandin*, qui reprend l’ossature de cette farce.",
+     "aide": "C’est la pièce de l’âge mûr de Molière.",
+     "explication": "*George Dandin* date de **1668** : Molière reprend l’ossature de sa farce de jeunesse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Molière passe-t-il en province, de 1645 à 1658 ?",
+     "reponse": 13,
+     "aide": "Lis le début et la fin de la période « Province ».",
+     "explication": "1658 − 1645 = **13 ans** de tournées, qui forment l’école de la farce.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "La pièce est une ___ en un ___, écrite en ___.",
+     "reponses": [
+      [
+       "farce"
+      ],
+      [
+       "acte"
+      ],
+      [
+       "prose"
+      ]
+     ],
+     "banque": [
+      "farce",
+      "tragédie",
+      "acte",
+      "vers",
+      "prose",
+      "chanson"
+     ],
+     "aide": "La première ligne de la fiche dit tout.",
+     "explication": "C’est une **farce** en un **acte**, écrite en **prose**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d5f27c2-842d-5a02-8ce6-baba7f7b080b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’enfermeur enfermé",
+   "competence": "analyser-document",
+   "situation": "Suis, étape par étape, la façon dont le Barbouillé finit par être puni par sa propre ruse.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la farce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le Barbouillé se plaint de sa femme Angélique"
+      },
+      {
+       "id": "n2",
+       "texte": "Un docteur pédant parle sans jamais répondre"
+      },
+      {
+       "id": "n3",
+       "texte": "Le soir, le Barbouillé l’enferme dehors"
+      },
+      {
+       "id": "n4",
+       "texte": "Angélique feint de se tuer"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      },
+      {
+       "id": "n6",
+       "texte": "Elle accuse son mari devant Gorgibus"
+      },
+      {
+       "id": "n7",
+       "texte": "Réconciliation forcée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      },
+      {
+       "de": "n6",
+       "a": "n7"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il sort pour voir ; elle rentre et l’enferme à son tour",
+      "Il appelle la police pour arrêter sa femme",
+      "Le Docteur prend la défense du Barbouillé",
+      "Gorgibus chasse sa fille de la maison de famille"
+     ],
+     "reponse": 0,
+     "aide": "Angélique ruse pour passer de l’autre côté de la porte.",
+     "explication": "Le Barbouillé **sort voir** ; Angélique **rentre et l’enferme à son tour** : c’est le renversement."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où paraît un personnage qui ne répond jamais à la question.",
+     "aide": "Un savant bavard qui cite le latin.",
+     "explication": "Le **docteur pédant** parle sans fin et ne répond jamais : c’est un type que Molière reprendra sans cesse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière étape.",
+     "texte": "La pièce se termine par une ___ forcée devant le père, ___.",
+     "reponses": [
+      [
+       "réconciliation",
+       "reconciliation"
+      ],
+      [
+       "Gorgibus"
+      ]
+     ],
+     "banque": [
+      "réconciliation",
+      "dispute",
+      "Gorgibus",
+      "Barbouillé",
+      "Angélique"
+     ],
+     "aide": "Le père juge la querelle sans la comprendre.",
+     "explication": "La pièce se termine par une **réconciliation** forcée devant **Gorgibus**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est.",
+     "paires": [
+      [
+       "Le Barbouillé",
+       "Le mari brutal et soupçonneux, qui finit dupé"
+      ],
+      [
+       "Angélique",
+       "L’épouse rusée, qui retourne la situation"
+      ],
+      [
+       "Le Docteur",
+       "Le savant bavard qui cite le latin"
+      ],
+      [
+       "Gorgibus",
+       "Le père, juge crédule de la querelle"
+      ]
+     ],
+     "aide": "Chacun a un caractère bien marqué : brutal, rusé, bavard, crédule.",
+     "explication": "Le **Barbouillé** est brutal et dupé, **Angélique** est rusée, le **Docteur** est bavard, **Gorgibus** est crédule."
+    }
+   ]
+  },
+  {
+   "chapitre": "3d5f27c2-842d-5a02-8ce6-baba7f7b080b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rire de la farce",
+   "competence": "argumenter",
+   "situation": "Lis un passage écrit à la manière de Molière, puis classe les ressorts comiques de la farce.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une consultation",
+     "blocs": [
+      {
+       "personnage": "Le Barbouillé",
+       "replique": "Docteur, que dois-je faire de ma femme ?"
+      },
+      {
+       "personnage": "Le Docteur",
+       "replique": "Votre question, mon ami, m’invite à considérer d’abord le [[e|mariage]], puis les mœurs de la [[e|femme]], enfin les astres de la [[e|nuit]]…"
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Molière"
+    },
+    {
+     "id": "comique",
+     "type": "tableau",
+     "titre": "Les types de comique",
+     "colonnes": [
+      "Type de comique",
+      "Où il opère"
+     ],
+     "lignes": [
+      [
+       "De gestes",
+       "Les portes, les coups"
+      ],
+      [
+       "De répétition",
+       "?"
+      ],
+      [
+       "De caractère",
+       "Le docteur pédant"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les trois sujets où le Docteur s’égare au lieu de répondre.",
+     "aide": "Il énumère au lieu de répondre : repère les trois sujets annoncés.",
+     "explication": "Le Docteur parle du **mariage**, de la **femme** et de la **nuit** sans jamais répondre : c’est le savoir creux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le docteur qui ne s’arrête pas",
+      "Les portes qu’on ferme au nez",
+      "Le mari brutal qui est dupé",
+      "Les coups reçus sur scène"
+     ],
+     "reponse": 0,
+     "aide": "Le comique de répétition naît d’une même chose qui revient.",
+     "explication": "Le comique de **répétition** repose sur le **docteur qui ne s’arrête pas**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque effet dans son type de comique.",
+     "categories": [
+      "Comique de gestes",
+      "Comique de répétition",
+      "Comique de caractère"
+     ],
+     "items": [
+      [
+       "Une porte fermée au nez de l’autre",
+       0
+      ],
+      [
+       "Un coup de bâton reçu",
+       0
+      ],
+      [
+       "Une même phrase qui revient encore et encore",
+       1
+      ],
+      [
+       "Un mari jaloux et grossier",
+       2
+      ],
+      [
+       "Un savant qui cite le latin à tort et à travers",
+       2
+      ]
+     ],
+     "aide": "Gestes : le corps ; répétition : ce qui revient ; caractère : un type de personnage.",
+     "explication": "Les **portes** et les **coups** relèvent du geste, la **phrase répétée** de la répétition, le **mari jaloux** et le **savant** du caractère."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la farce à ce qu’il révèle de Molière.",
+     "paires": [
+      [
+       "L’enfermeur enfermé",
+       "Le renversement, ressort de toute la pièce"
+      ],
+      [
+       "Le docteur pédant",
+       "Un type que Molière reprendra sans cesse"
+      ],
+      [
+       "La farce",
+       "Le socle de tout son théâtre"
+      ]
+     ],
+     "aide": "Chaque élément annonce le Molière des grandes comédies.",
+     "explication": "Le **renversement** est le ressort, le **docteur** un type récurrent, la **farce** le socle de son théâtre."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb510cba-5f1f-5ba3-aad0-da23c0c68466",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une orpheline à Bonneville",
+   "competence": "se-reperer-temps",
+   "situation": "Tu ouvres *La Joie de vivre*. Situe le roman dans la vie de Zola, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Émile Zola",
+     "debut": 1840,
+     "fin": 1905,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1840,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pub",
+       "date": 1884,
+       "nom": "La Joie de vivre"
+      },
+      {
+       "id": "mort",
+       "date": 1902,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Pauline Quenu",
+       "?"
+      ],
+      [
+       "Lazare",
+       "Velléitaire, hanté par la peur de la mort"
+      ],
+      [
+       "Louise Thibaudier",
+       "Jeune fille coquette et fragile, que Lazare épouse"
+      ],
+      [
+       "L’oncle Chanteau",
+       "Rongé par la goutte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année de publication du roman.",
+     "aide": "C’est l’année où Zola écrit après la mort de sa mère.",
+     "explication": "*La Joie de vivre* paraît en **1884**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge a Zola, environ, à la parution du roman (né en 1840) ?",
+     "reponse": 44,
+     "aide": "Soustrais la date de naissance de la date de publication.",
+     "explication": "1884 − 1840 = **44 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Pauline ?",
+     "options": [
+      "Une orpheline généreuse, saine et lucide",
+      "Une jeune fille coquette et fragile",
+      "Un cousin velléitaire hanté par la mort",
+      "Une servante bourrue et fidèle"
+     ],
+     "reponse": 0,
+     "aide": "Pauline est riche, orpheline, et recueillie par ses cousins.",
+     "explication": "Pauline est une **orpheline généreuse**, saine et lucide : la « joie de vivre » du titre."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb510cba-5f1f-5ba3-aad0-da23c0c68466",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fortune de Pauline",
+   "competence": "analyser-document",
+   "situation": "Pauline est riche, mais tout le monde puise dans sa fortune. Lis le résumé, puis suis l’engrenage.",
+   "documents": [
+    {
+     "id": "mer",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Pauline à Bonneville",
+     "blocs": [
+      "À Bonneville, village normand battu par la mer, Pauline, orpheline de dix ans et riche de cent cinquante mille francs, est recueillie par ses cousins Chanteau.",
+      "La famille dépense peu à peu sa fortune ; Pauline finance aussi les projets de Lazare : une usine d’[[a|algues]], des épis contre la mer que les tempêtes emportent."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    },
+    {
+     "id": "engr",
+     "type": "tableau",
+     "titre": "L’engrenage",
+     "colonnes": [
+      "Ce qui se passe",
+      "Ce qui en résulte"
+     ],
+     "lignes": [
+      [
+       "La famille dépense la fortune de Pauline",
+       "Elle donne sans compter"
+      ],
+      [
+       "Lazare épouse Louise",
+       "Pauline sauve leur enfant à la naissance et l’élève"
+      ],
+      [
+       "La mer",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mer",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le projet industriel de Lazare qui échoue.",
+     "aide": "Il s’agit de transformer une ressource de la mer.",
+     "explication": "Lazare entreprend une usine d’**algues**, qui n’aboutit pas : il commence tout et n’achève rien."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la situation de Pauline.",
+     "texte": "Pauline est orpheline de ___ ans et riche de ___ francs.",
+     "reponses": [
+      [
+       "dix"
+      ],
+      [
+       "cent cinquante mille",
+       "150000",
+       "150 000"
+      ]
+     ],
+     "banque": [
+      "dix",
+      "seize",
+      "cent cinquante mille",
+      "dix mille",
+      "un million"
+     ],
+     "aide": "Relis la première phrase du résumé.",
+     "explication": "Pauline est orpheline de **dix** ans et riche de **cent cinquante mille** francs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour la mer ?",
+     "options": [
+      "Elle démolit peu à peu le village",
+      "Elle apporte la fortune à la famille",
+      "Elle protège le village des tempêtes",
+      "Elle enrichit les pêcheurs de la côte"
+     ],
+     "reponse": 0,
+     "aide": "La mer est une force aveugle.",
+     "explication": "La mer **démolit** peu à peu le village : force aveugle qui ronge, comme la peur ronge Lazare."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa caractéristique.",
+     "paires": [
+      [
+       "L’oncle Chanteau",
+       "Rongé par la goutte"
+      ],
+      [
+       "La tante",
+       "Avide"
+      ],
+      [
+       "Véronique",
+       "La servante bourrue et fidèle"
+      ],
+      [
+       "Le docteur Cazenove",
+       "Le médecin ami, sceptique"
+      ]
+     ],
+     "aide": "Chacun a un trait marqué : maladie, avidité, fidélité, scepticisme.",
+     "explication": "L’**oncle** souffre de la goutte, la **tante** est avide, **Véronique** est fidèle, le **docteur** est sceptique."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb510cba-5f1f-5ba3-aad0-da23c0c68466",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un titre ironique, et pas seulement",
+   "competence": "argumenter",
+   "situation": "Eva et Malo lisent le titre différemment. Lis leur débat et le cri final du roman, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eva",
+       "texte": "Le titre est ironique : ce roman ne parle que de malheur et de mort."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Pas seulement : Pauline incarne une joie [[t|têtue]], faite de don et d’acceptation."
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le cri final",
+     "blocs": [
+      {
+       "personnage": "Chanteau",
+       "replique": "Faut-il être [[b|bête]] pour se tuer !"
+      }
+     ],
+     "source": "Émile Zola, *La Joie de vivre* (1884), dernière réplique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot par lequel Malo qualifie la joie de Pauline.",
+     "aide": "Elle résiste à tout ce qui l’entoure.",
+     "explication": "Malo parle d’une joie **têtue** : Pauline continue de donner et d’accepter malgré tout."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot du cri final qui dit l’absurdité du suicide.",
+     "aide": "C’est un adjectif familier, qui juge sans nuance.",
+     "explication": "Le roman se clôt sur ce cri de Chanteau : on est **bête** de se tuer. La dernière réplique est volontairement absurde."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : il relève du pessimisme de Lazare, ou de la joie de Pauline ?",
+     "categories": [
+      "Le pessimisme de Lazare",
+      "La joie de Pauline"
+     ],
+     "items": [
+      [
+       "La peur de la mort",
+       0
+      ],
+      [
+       "Des projets commencés, jamais achevés",
+       0
+      ],
+      [
+       "La lecture de Schopenhauer",
+       0
+      ],
+      [
+       "Le don de soi",
+       1
+      ],
+      [
+       "L’acceptation de la vie",
+       1
+      ]
+     ],
+     "aide": "Lazare craint et abandonne ; Pauline donne et accepte.",
+     "explication": "**Lazare** : peur de la mort, projets inachevés, Schopenhauer. **Pauline** : don de soi et acceptation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle interprétation le roman appuie-t-il le mieux ?",
+     "options": [
+      "Une joie têtue peut subsister dans un monde sombre",
+      "Le bonheur vient de la fortune et des projets industriels",
+      "Le pessimisme est la seule réponse lucide à la vie",
+      "La mer est un refuge qui protège les personnages"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que Pauline oppose à Lazare.",
+     "explication": "Pauline incarne une **joie têtue** dans un monde sombre : le titre est ironique, mais pas seulement."
+    }
+   ]
+  }
+ ]
+}

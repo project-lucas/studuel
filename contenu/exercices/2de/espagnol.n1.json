@@ -1,0 +1,2386 @@
+{
+ "niveau": "2de",
+ "matiere": "espagnol",
+ "exercices": [
+  {
+   "chapitre": "794c4be9-76d7-57d8-990b-ad3c6a37a92b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le courriel de Marta à son correspondant",
+   "competence": "comprendre-langue",
+   "situation": "Marta écrit à Pablo, son correspondant français. Elle lui parle de sa journée, de la veille et de son enfance.",
+   "documents": [
+    {
+     "id": "correo",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Correo de Marta",
+     "blocs": [
+      "Hola, Pablo:",
+      "Hoy [[p|he]] [[p|escrito]] mi primer correo en francés. Ayer [[i|comí]] en casa de mi abuela y por la tarde [[i|vimos]] una película.",
+      "Cuando era pequeña, mi abuela cocinaba paella todos los domingos."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "correo",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui forment le *pretérito perfecto* dans le courriel.",
+     "aide": "Il se compose de haber au présent et d’un participe passé ; le marqueur « Hoy » l’appelle.",
+     "explication": "**he escrito** : *haber* au présent + participe passé. Le perfecto relie l’action à aujourd’hui (« Hoy… »)."
+    },
+    {
+     "type": "zone",
+     "document": "correo",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes à l’indefinido** : des actions achevées, coupées du présent.",
+     "aide": "Cherche les actions de la veille, introduites par le marqueur « Ayer ».",
+     "explication": "**comí** et **vimos** sont à l’indefinido : *ayer* coupe l’action du présent, l’action est achevée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Marta dit ce que faisait sa grand-mère chaque dimanche. Complète.",
+     "texte": "Todos los domingos mi abuela ___ paella.",
+     "reponses": [
+      [
+       "cocinaba"
+      ]
+     ],
+     "banque": [
+      "cocinaba",
+      "cocinó",
+      "ha cocinado",
+      "cocinaban"
+     ],
+     "aide": "Une habitude du passé appelle l’imperfecto ; regarde aussi la personne du verbe.",
+     "explication": "**cocinaba** : une habitude (« todos los domingos ») se met à l’imperfecto, ici à la 3e personne du singulier (-aba)."
+    }
+   ]
+  },
+  {
+   "chapitre": "794c4be9-76d7-57d8-990b-ad3c6a37a92b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Messages après une soirée sous la pluie",
+   "competence": "manier-langue",
+   "situation": "Lucas et Irene s’écrivent le lendemain d’une journée pluvieuse. À toi de choisir le bon passé dans chaque phrase.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Irene et de Lucas",
+     "participants": [
+      {
+       "nom": "Irene",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Irene",
+       "texte": "Lucas, ¿qué hiciste ayer?"
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Ayer fui a casa de Sara. [[d|Llovía]] mucho cuando salí de casa."
+      },
+      {
+       "qui": "Irene",
+       "texte": "Yo me quedé en casa. [[h|Hoy]] he llegado tarde a clase."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Mi abuelo siempre [[d|decía]] que la lluvia trae suerte."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes à l’imperfecto** : l’un plante un décor, l’autre dit une habitude.",
+     "aide": "Un verbe suit « siempre », l’autre dit ce qui durait quand Lucas est sorti.",
+     "explication": "**Llovía** (le décor) et **decía** (l’habitude : « siempre ») sont à l’imperfecto ; *fui*, *salí* et *me quedé* sont des actions achevées."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le **marqueur de temps** qui appelle le *pretérito perfecto* (« he llegado »).",
+     "aide": "C’est un mot qui dit que le moment n’est pas encore fini.",
+     "explication": "**Hoy** : la journée n’est pas finie, le passé reste relié au présent, donc *he llegado*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque marqueur au temps qu’il appelle.",
+     "paires": [
+      [
+       "ayer",
+       "indefinido"
+      ],
+      [
+       "hoy",
+       "perfecto"
+      ],
+      [
+       "siempre",
+       "imperfecto"
+      ]
+     ],
+     "aide": "Pense à l’action achevée, au passé relié à aujourd’hui et à l’habitude.",
+     "explication": "*Ayer* → **indefinido** (achevé), *hoy* → **perfecto** (relié au présent), *siempre* → **imperfecto** (habitude)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la forme qui convient (nosotros, une action achevée la veille).",
+     "texte": "Ayer nosotros ___ paella en casa de Sara.",
+     "reponses": [
+      [
+       "comimos"
+      ]
+     ],
+     "banque": [
+      "comimos",
+      "comemos",
+      "hemos comido",
+      "comieron"
+     ],
+     "aide": "Ayer coupe du présent ; la personne est nosotros.",
+     "explication": "**comimos** : indefinido de *comer* à nosotros (-imos). *Hemos comido* serait fautif avec *ayer*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il dormait quand le téléphone a sonné. » La phrase commence par Dormía.",
+     "items": [
+      "Dormía",
+      "cuando",
+      "sonó",
+      "el teléfono"
+     ],
+     "aide": "L’imperfecto plante le décor, l’indefinido l’interrompt.",
+     "explication": "**Dormía cuando sonó el teléfono** : le décor à l’imperfecto, l’événement qui survient à l’indefinido."
+    }
+   ]
+  },
+  {
+   "chapitre": "794c4be9-76d7-57d8-990b-ad3c6a37a92b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une nuit d’été à Séville",
+   "competence": "analyser-texte",
+   "situation": "Un récit de voyage mêle décor et événements. Une fiche de correction relève quatre phrases, dont une est fausse.",
+   "documents": [
+    {
+     "id": "noche",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Una noche en Sevilla",
+     "blocs": [
+      "[[d|Era]] una noche de verano en Sevilla. [[d|Hacía]] calor y la gente [[d|paseaba]] por la plaza.",
+      "De pronto, un músico [[a|empezó]] a cantar y todos se [[a|callaron]]. Cuando [[a|terminó]], los turistas [[a|aplaudieron]]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "fichas",
+     "type": "tableau",
+     "titre": "Cuatro frases del cuaderno",
+     "colonnes": [
+      "Frase del alumno"
+     ],
+     "lignes": [
+      [
+       "Hoy he estudiado mucho."
+      ],
+      [
+       "El año pasado viajé a Cuba."
+      ],
+      [
+       "Ayer he comido paella."
+      ],
+      [
+       "Esta semana he trabajado mucho."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Phrases écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "noche",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes qui plantent le décor** (imperfecto).",
+     "aide": "Ils disent ce qui durait : la nuit, la chaleur, les promenades.",
+     "explication": "**Era, Hacía, paseaba** : l’imperfecto décrit le décor et ce qui durait."
+    },
+    {
+     "type": "zone",
+     "document": "noche",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre verbes qui font avancer l’action** (indefinido).",
+     "aide": "Ce sont des événements qui surviennent, chacun achevé.",
+     "explication": "**empezó, callaron, terminó, aplaudieron** : chaque événement rompt le décor, l’action avance."
+    },
+    {
+     "type": "zone",
+     "document": "fichas",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Dans le tableau, une phrase est **fautive**. Touche-la.",
+     "aide": "Regarde le marqueur de temps : est-il coupé du présent ou relié à lui ?",
+     "explication": "**Ayer he comido paella** est fautive : *ayer* coupe du présent, il faut *Ayer comí paella*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « Ayer he comido paella » est-elle fautive ?",
+     "options": [
+      "Ayer situe l’action hors du présent : il faut l’indefinido",
+      "Le perfecto est réservé aux verbes en -ar, pas en -er",
+      "Avec ayer, l’espagnol exige toujours l’imparfait pour manger",
+      "Le mot paella impose le pretérito imperfecto dans ce cas"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec « Hoy he estudiado mucho » : qu’est-ce qui change ?",
+     "explication": "**Ayer coupe l’action du présent** : on emploie l’indefinido (*comí*). Le perfecto est réservé à ce qui touche encore à aujourd’hui."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe (personne et temps indiqués) à sa forme.",
+     "paires": [
+      [
+       "comer (él, indefinido)",
+       "comió"
+      ],
+      [
+       "hablar (ellos, indefinido)",
+       "hablaron"
+      ],
+      [
+       "vivir (nosotros, imparfait)",
+       "vivíamos"
+      ],
+      [
+       "ir (yo, imparfait)",
+       "iba"
+      ]
+     ],
+     "aide": "L’imparfait n’a que trois irréguliers : ser, ir, ver.",
+     "explication": "*comió* (-ió), *hablaron* (-aron), *vivíamos* (-íamos), *iba* (ir est un des trois irréguliers de l’imparfait)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8eafb2f8-b2cd-58a7-9796-3dd902c65eef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lucía se présente à Mateo",
+   "competence": "comprendre-langue",
+   "situation": "Lucía et Mateo se parlent pour la première fois par messages. Lucía est à Madrid et Mateo parle de sa mère.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Premiers messages",
+     "participants": [
+      {
+       "nom": "Lucía",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mateo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucía",
+       "texte": "Hola, soy Lucía y [[e|estoy]] en Madrid."
+      },
+      {
+       "qui": "Mateo",
+       "texte": "¡Hola! Mi madre es profesora, pero hoy [[e|está]] cansada."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux formes du verbe estar** dans les messages.",
+     "aide": "Ce sont les verbes qui disent où Lucía se trouve et comment va la mère de Mateo.",
+     "explication": "**estoy** (localisation) et **está** (état passager) : *estar* dit où l’on se trouve et comment l’on va."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lucía écrit-elle « estoy en Madrid » ?",
+     "options": [
+      "Madrid est où elle se trouve : localisation, donc estar",
+      "Madrid est son origine : l’origine appelle estar",
+      "Madrid est sa profession : la profession appelle estar",
+      "Madrid est l’heure : l’heure appelle estar"
+     ],
+     "reponse": 0,
+     "aide": "Elle dit où elle se trouve en ce moment.",
+     "explication": "**Localisation → estar** : *Madrid está en España*, *Lucía está en Madrid*. L’origine, elle, se dit avec *ser* (*soy de Valencia*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Mateo parle de sa mère. Complète avec le bon verbe.",
+     "texte": "La madre de Mateo ___ profesora.",
+     "reponses": [
+      [
+       "es"
+      ]
+     ],
+     "banque": [
+      "es",
+      "está",
+      "son",
+      "estoy"
+     ],
+     "aide": "Une profession dit ce que la personne est, pas comment elle va.",
+     "explication": "**es** : une profession appelle *ser*. On dira *está cansada* pour l’état passager."
+    }
+   ]
+  },
+  {
+   "chapitre": "8eafb2f8-b2cd-58a7-9796-3dd902c65eef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La lettre d’Inés à sa correspondante",
+   "competence": "manier-langue",
+   "situation": "Inés écrit à Clara pour lui parler de sa famille. Attention : avec ser ou avec estar, un même adjectif change de sens.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Inés",
+     "blocs": [
+      "Querida Clara:",
+      "Mi hermano Álvaro es muy listo, pero hoy está [[m|malo]]: tiene fiebre y no está listo para ir al colegio.",
+      "En casa, la sopa de mi abuela está rica y el agua está fría.",
+      "Mi tío, en cambio, es [[r|rico]]: tiene tres coches y una casa enorme."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche l’adjectif qui veut dire « **malade** » (Álvaro a de la fièvre).",
+     "aide": "Il suit « está » et rime avec le contraire de « bueno ».",
+     "explication": "**está malo** : *estar malo* = être malade ; *ser malo* = être méchant."
+    },
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche l’adjectif qui veut dire « **riche** » (de l’argent), et pas « délicieux ».",
+     "aide": "Deux mots se ressemblent dans la lettre : l’un parle de la soupe, l’autre de l’oncle.",
+     "explication": "**es rico** : *ser rico* = être riche ; *estar rico* = être délicieux (la soupe *está rica*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « no está listo para ir al colegio » ?",
+     "options": [
+      "Il n’est pas prêt à aller au collège",
+      "Il n’est pas assez malin pour aller au collège",
+      "Il n’est pas content d’aller au collège",
+      "Il n’est pas autorisé à aller au collège"
+     ],
+     "reponse": 0,
+     "aide": "Compare « es muy listo » au début de la lettre et « no está listo ».",
+     "explication": "**estar listo** = être prêt ; **ser listo** = être malin. Le verbe change le sens de l’adjectif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire qu’Álvaro s’ennuie en classe.",
+     "texte": "Mi hermano ___ aburrido en clase.",
+     "reponses": [
+      [
+       "está"
+      ]
+     ],
+     "banque": [
+      "está",
+      "es",
+      "son",
+      "estoy"
+     ],
+     "aide": "S’ennuyer est un état passager.",
+     "explication": "**está aburrido** : *estar aburrido* = s’ennuyer ; *ser aburrido* = être ennuyeux."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à son sens.",
+     "paires": [
+      [
+       "ser listo",
+       "être malin"
+      ],
+      [
+       "estar listo",
+       "être prêt"
+      ],
+      [
+       "ser malo",
+       "être méchant"
+      ],
+      [
+       "estar malo",
+       "être malade"
+      ]
+     ],
+     "aide": "Ser dit ce que la personne est ; estar dit comment elle va.",
+     "explication": "Avec *ser*, c’est la nature (malin, méchant) ; avec *estar*, c’est un état (prêt, malade)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8eafb2f8-b2cd-58a7-9796-3dd902c65eef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le groupe de messages du club de cinéma",
+   "competence": "manier-langue",
+   "situation": "Elena et Mario discutent dans le groupe du club d’espagnol, en 2026. Ils choisissent une séance au cinéma Alba.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Club de español",
+     "participants": [
+      {
+       "nom": "Elena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mario",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elena",
+       "texte": "¡Hola, Mario! [[t|Hace]] tres años que estudio español."
+      },
+      {
+       "qui": "Mario",
+       "texte": "Yo no. A mí me gusta mucho el cine español."
+      },
+      {
+       "qui": "Elena",
+       "texte": "Y a mí me gustan las películas de Almodóvar. ¿Qué hay en el cine Alba?"
+      },
+      {
+       "qui": "Mario",
+       "texte": "Mira la cartelera. Hoy estoy cansado, pero la sesión del sábado es muy buena."
+      }
+     ],
+     "source": "Messages écrits en 2026 pour l’exercice"
+    },
+    {
+     "id": "cartelera",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cine Alba",
+     "sousTitre": "Cartelera del sábado",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "Sala 1",
+       "valeur": "Comedia",
+       "id": "s1"
+      },
+      {
+       "texte": "Sala 2",
+       "valeur": "Drama",
+       "id": "s2"
+      },
+      {
+       "texte": "Sala 3",
+       "valeur": "Dibujos animados",
+       "id": "s3"
+      }
+     ],
+     "pied": "Hay entradas para todas las salas.",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche la tournure qui exprime le **temps écoulé** depuis le début des études d’Elena.",
+     "aide": "C’est le mot qui ouvre la phrase d’Elena.",
+     "explication": "**Hace** : *hace tres años que estudio español* = j’étudie l’espagnol depuis trois ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les messages sont écrits en 2026. **En quelle année** Elena a-t-elle commencé l’espagnol ?",
+     "reponse": 2023,
+     "aide": "Hace tres años : retranche trois ans à 2026.",
+     "explication": "2026 − 3 = **2023** : *hace tres años que* donne la durée écoulée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le verbe qui s’accorde avec ce qui plaît.",
+     "texte": "A Elena le ___ las películas de Almodóvar.",
+     "reponses": [
+      [
+       "gustan"
+      ]
+     ],
+     "banque": [
+      "gustan",
+      "gusta",
+      "gusto",
+      "gustas"
+     ],
+     "aide": "Gustar s’accorde avec la chose qui plaît, pas avec la personne.",
+     "explication": "**gustan** : *las películas* est au pluriel, donc *gustan* (*me gustan las películas*)."
+    },
+    {
+     "type": "zone",
+     "document": "cartelera",
+     "reponse": [
+      "s3"
+     ],
+     "enonce": "Mario veut voir un film d’animation. Touche la **salle** qui le projette.",
+     "aide": "Cherche l’expression qui veut dire « dessins animés ».",
+     "explication": "**Sala 3** : *dibujos animados* = dessins animés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mario écrit-il « Hoy estoy cansado » et non « Hoy soy cansado » ?",
+     "options": [
+      "Être fatigué est un état passager : on emploie estar",
+      "Être fatigué est une origine : on emploie estar",
+      "Estar remplace ser avec tous les adjectifs en -ado",
+      "Soy ne peut pas s’employer avec le mot hoy"
+     ],
+     "reponse": 0,
+     "aide": "Se demander si l’on décrit ce qu’est le sujet ou comment il va.",
+     "explication": "**estoy cansado** : l’état passager appelle *estar* ; *ser* décrirait ce que la personne est par nature."
+    }
+   ]
+  },
+  {
+   "chapitre": "edd32eaf-5f53-54c3-bf0f-641af757fff8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’Espagne du XXe siècle sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "En préparant un exposé sur la mémoire, Hugo place sur une frise trois grandes périodes de l’histoire de l’Espagne.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Espagne, 1930-1980",
+     "debut": 1930,
+     "fin": 1980,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "guerra",
+       "debut": 1936,
+       "fin": 1939,
+       "nom": "Guerre civile",
+       "teinte": "corail"
+      },
+      {
+       "id": "franquismo",
+       "debut": 1939,
+       "fin": 1975,
+       "nom": "Franquisme",
+       "teinte": "ambre"
+      },
+      {
+       "id": "transicion",
+       "debut": 1975,
+       "fin": 1978,
+       "nom": "Transición",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "constitucion",
+       "date": 1978,
+       "nom": "Constitution"
+      }
+     ],
+     "source": "Repères d’histoire de l’Espagne"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "franquismo"
+     ],
+     "enonce": "Touche la période de la **dictature de Franco**.",
+     "aide": "C’est la plus longue des trois périodes.",
+     "explication": "**Le franquisme (1939-1975)** : c’est la longue dictature qui suit la guerre civile."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** a duré le franquisme ?",
+     "reponse": 36,
+     "unite": "ans",
+     "aide": "Retranche la date de début à la date de fin.",
+     "explication": "1975 − 1939 = **36 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "constitucion"
+     ],
+     "enonce": "Touche l’**événement** qui marque la fin de la *transición*.",
+     "aide": "Il a lieu en 1978, quand l’Espagne se donne un nouveau texte fondateur.",
+     "explication": "**La Constitution de 1978** conclut la *transición* : l’Espagne passe de la dictature à la démocratie."
+    }
+   ]
+  },
+  {
+   "chapitre": "edd32eaf-5f53-54c3-bf0f-641af757fff8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un Argentin et une Mexicaine discutent",
+   "competence": "comprendre-langue",
+   "situation": "Martín (Buenos Aires) et Ximena (Mexico) s’écrivent en espagnol. Leur façon de parler n’est pas la même, et aucune des deux n’est une faute.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Martín et de Ximena",
+     "participants": [
+      {
+       "nom": "Martín",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ximena",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Martín",
+       "texte": "Che, ¿[[v|vos]] [[v|tenés]] tiempo? Quiero mostrarte mi barrio de Buenos Aires."
+      },
+      {
+       "qui": "Ximena",
+       "texte": "Sí. Voy a [[m|platicar]] contigo un rato, pero ahora manejo mi [[m|carro]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots du voseo** dans le message de Martín.",
+     "aide": "Il remplace *tú* et sa conjugaison est différente (*tienes* devient autre chose).",
+     "explication": "**vos tenés** : le *voseo* remplace *tú tienes* en Argentine, en Uruguay et en Amérique centrale."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots du lexique mexicain** dans le message de Ximena.",
+     "aide": "L’un remplace *hablar*, l’autre *coche*.",
+     "explication": "**platicar** (parler) et **carro** (voiture) sont des mots mexicains courants."
+    },
+    {
+     "type": "choix",
+     "enonce": "En Espagne, on dit « coche ». Que penser du « carro » de Ximena ?",
+     "options": [
+      "C’est une norme régionale, pas une faute",
+      "C’est une faute qu’un professeur doit corriger",
+      "C’est un mot qui n’existe qu’en Argentine",
+      "C’est un mot de l’espagnol ancien disparu"
+     ],
+     "reponse": 0,
+     "aide": "Une langue mondiale a plusieurs normes.",
+     "explication": "**Une norme régionale** : traiter ces variantes comme des écarts est un contresens sur ce qu’est une langue mondiale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque variante à l’endroit où on la rencontre.",
+     "paires": [
+      [
+       "el voseo",
+       "Argentine, Uruguay, Amérique centrale"
+      ],
+      [
+       "el seseo",
+       "Andalousie et toute l’Amérique"
+      ],
+      [
+       "carro, platicar",
+       "Mexique"
+      ]
+     ],
+     "aide": "Le seseo est une prononciation ; le voseo et le lexique mexicain se lisent dans les messages.",
+     "explication": "*Voseo* : Argentine, Uruguay, Amérique centrale ; *seseo* : Andalousie et toute l’Amérique ; *carro, platicar* : Mexique."
+    }
+   ]
+  },
+  {
+   "chapitre": "edd32eaf-5f53-54c3-bf0f-641af757fff8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des dictatures, un écrivain : la lettre de Valeria",
+   "competence": "analyser-document",
+   "situation": "Valeria prépare un exposé sur la mémoire. Elle a un tableau de repères et rédige un courriel pour son professeur.",
+   "documents": [
+    {
+     "id": "repere",
+     "type": "tableau",
+     "titre": "Repères de mémoire",
+     "colonnes": [
+      "Années",
+      "En Espagne",
+      "En Amérique latine"
+     ],
+     "lignes": [
+      [
+       "1936-1939",
+       "La guerra civil",
+       "—"
+      ],
+      [
+       "1939-1975",
+       "El franquismo",
+       "—"
+      ],
+      [
+       "1973-1990",
+       "—",
+       "Dictadura de Pinochet en Chile"
+      ],
+      [
+       "1976-1983",
+       "—",
+       "Dictadura argentina"
+      ],
+      [
+       "1975-1978",
+       "La transición, Constitución de 1978",
+       "—"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Repères du cours"
+    },
+    {
+     "id": "correo",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Correo de Valeria",
+     "blocs": [
+      "Me llamo Valeria y estudio en Buenos Aires.",
+      "Mi vecina marcha con las Madres de Plaza de Mayo para recordar la dictadura. Mi amigo Tomás, que es chileno, me cuenta que en su país la dictadura terminó en 1990.",
+      "En clase de literatura leemos a [[a|García]] [[a|Márquez]] y hablamos del realismo mágico."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "repere",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la **case** du tableau qui parle de la dictature de Pinochet.",
+     "aide": "Cherche d’abord la ligne 1973-1990, puis la colonne de l’Amérique latine.",
+     "explication": "**Dictadura de Pinochet en Chile (1973-1990)** : la case est à l’intersection de la ligne 1973-1990 et de la colonne « En Amérique latine »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Valeria vit à Buenos Aires. Combien d’**années** a duré la dictature argentine ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Le tableau donne les dates ; la vecina des Madres de Plaza de Mayo est argentine.",
+     "explication": "1983 − 1976 = **7 ans** (1976-1983)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La dictature chilienne a duré **combien d’années de plus** que la dictature argentine ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Calcule les deux durées, puis fais la différence.",
+     "explication": "Chili : 1990 − 1973 = 17 ans ; Argentine : 7 ans ; 17 − 7 = **10 ans** de plus."
+    },
+    {
+     "type": "zone",
+     "document": "correo",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche le **nom de l’écrivain** associé au réalisme magique.",
+     "aide": "Son nom comprend deux mots, un prénom composé et un nom.",
+     "explication": "**García Márquez** est l’écrivain colombien associé au réalisme magique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les Madres de Plaza de Mayo, citées par Valeria, sont liées à quelle période ?",
+     "options": [
+      "La dictature argentine, 1976-1983",
+      "La dictature chilienne, 1973-1990",
+      "La guerre civile espagnole, 1936-1939",
+      "La transition espagnole, 1975-1978"
+     ],
+     "reponse": 0,
+     "aide": "Valeria habite à Buenos Aires.",
+     "explication": "**La dictature argentine (1976-1983)** : les Madres de Plaza de Mayo marchent à Buenos Aires pour leurs enfants disparus."
+    }
+   ]
+  },
+  {
+   "chapitre": "8dc6f8da-9011-5d99-8aec-fa68662c30d0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une fiche du musée du Prado",
+   "competence": "analyser-texte",
+   "situation": "Léa visite le Prado. Elle lit la fiche qui accompagne un célèbre tableau de la salle de Velázquez.",
+   "documents": [
+    {
+     "id": "ficha",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Ficha del museo",
+     "blocs": [
+      "*Las Meninas* es un cuadro de Diego Velázquez, pintado en 1656. En primer plano se ve a la infanta, rodeada de sus damas.",
+      "A la izquierda aparece el propio pintor, con el pincel en la mano: es un [[a|autorretrato]] dentro de un retrato de corte.",
+      "El cuadro está en el Museo del [[m|Prado]], en Madrid."
+     ],
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ficha",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui veut dire « **autoportrait** ».",
+     "aide": "Il commence par *auto-* et se termine comme *retrato*.",
+     "explication": "**el autorretrato** = l’autoportrait : ici, Velázquez s’est représenté dans son propre tableau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Velázquez dans ce tableau ?",
+     "options": [
+      "Il s’est peint lui-même, pinceau à la main",
+      "Il peint le roi seul dans son palais",
+      "Il n’apparaît pas : il ne peint que la cour",
+      "Il copie un autoportrait de Goya"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième phrase de la fiche.",
+     "explication": "**Il s’est représenté lui-même**, pinceau à la main : un autoportrait glissé dans un portrait de cour."
+    },
+    {
+     "type": "zone",
+     "document": "ficha",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le nom du **musée** où se trouve le tableau.",
+     "aide": "C’est le grand musée de Madrid, qui commence par P.",
+     "explication": "**El Prado** : *Las Meninas* est au musée du Prado, à Madrid."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase pour décrire le premier plan.",
+     "texte": "En ___ plano se ve a la infanta.",
+     "reponses": [
+      [
+       "primer"
+      ]
+     ],
+     "banque": [
+      "primer",
+      "segundo",
+      "último",
+      "gran"
+     ],
+     "aide": "Pour décrire un premier plan, on dit « En … plano se ve… ».",
+     "explication": "**En primer plano se ve…** : c’est la formule pour décrire ce qui est au premier plan."
+    }
+   ]
+  },
+  {
+   "chapitre": "8dc6f8da-9011-5d99-8aec-fa68662c30d0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Préparer l’oral sur Las dos Fridas",
+   "competence": "argumenter",
+   "situation": "Inés et Hugo préparent un oral sur l’autoportrait. Ils échangent des messages pour décrire le tableau, puis l’interpréter.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Inés et d’Hugo",
+     "participants": [
+      {
+       "nom": "Inés",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inés",
+       "texte": "Para el oral voy a presentar *Las dos Fridas*. Es de [[a|1939]]."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Se ven dos Fridas sentadas. Una lleva un [[v|vestido]] europeo y la otra un [[v|traje]] mexicano."
+      },
+      {
+       "qui": "Inés",
+       "texte": "Parece que la pintora quiere mostrar su doble identidad."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche l’**année** du tableau.",
+     "aide": "Inés la donne dans son premier message.",
+     "explication": "**1939** : *Las dos Fridas* est de Frida Kahlo, peint en 1939."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux vêtements** que porte chaque Frida.",
+     "aide": "Hugo les oppose : l’un est européen, l’autre mexicain.",
+     "explication": "**vestido** (robe européenne) et **traje** (costume mexicain) : les deux Frida incarnent une identité double."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase d’interprétation d’Inés.",
+     "texte": "Parece que la pintora quiere ___ su doble identidad.",
+     "reponses": [
+      [
+       "mostrar"
+      ]
+     ],
+     "banque": [
+      "mostrar",
+      "muestra",
+      "mostrando",
+      "mostrado"
+     ],
+     "aide": "Après quiere, on met un infinitif.",
+     "explication": "**quiere mostrar** : *querer* + infinitif. *Parece que…* sert à interpréter une image."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je crois que la peintre exprime son identité double. » La phrase commence par Creo.",
+     "items": [
+      "Creo",
+      "que",
+      "la pintora",
+      "expresa",
+      "su doble identidad"
+     ],
+     "aide": "Creo que + sujet + verbe + complément.",
+     "explication": "**Creo que la pintora expresa su doble identidad** : *creo que* introduit ton avis."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque œuvre ou description au peintre.",
+     "paires": [
+      [
+       "Las Meninas (1656)",
+       "Velázquez"
+      ],
+      [
+       "Las dos Fridas (1939)",
+       "Frida Kahlo"
+      ],
+      [
+       "Il se peint vieilli et malade, sans flatterie",
+       "Goya"
+      ]
+     ],
+     "aide": "Trois peintres, trois autoportraits célèbres.",
+     "explication": "*Las Meninas* est de **Velázquez**, *Las dos Fridas* de **Frida Kahlo**, et c’est **Goya** qui se peint sans se flatter."
+    }
+   ]
+  },
+  {
+   "chapitre": "8dc6f8da-9011-5d99-8aec-fa68662c30d0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Parler catalan, euskera ou guarani",
+   "competence": "analyser-document",
+   "situation": "Un article parle de trois adolescents espagnols et de leurs langues. Une carte permet de situer deux pays où des langues autres que le castillan sont officielles.",
+   "documents": [
+    {
+     "id": "mapaE",
+     "type": "carte",
+     "titre": "L’Europe du Sud-Ouest",
+     "fond": "europe",
+     "cadrage": [
+      -12,
+      34,
+      8,
+      46
+     ],
+     "regionsCliquables": true,
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "mapaA",
+     "type": "carte",
+     "titre": "L’Amérique du Sud",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      -57,
+      -30,
+      14
+     ],
+     "regionsCliquables": true,
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "articulo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Tres lenguas, tres identidades",
+     "blocs": [
+      "En Barcelona, Marta habla [[l|catalán]] en casa y castellano en el colegio. Su primo Iker, de Bilbao, habla [[l|euskera]]. Su amiga Brais, de Galicia, habla [[l|gallego]].",
+      "La Constitución de 1978 reconoce estas lenguas en sus comunidades; el castellano es la lengua oficial del Estado.",
+      "En Paraguay, mucha gente habla guaraní y español: las dos lenguas son oficiales."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "articulo",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois langues** co-officielles dans leur communauté, à côté du castillan.",
+     "aide": "Ne touche pas le castillan, qui est la langue officielle de l’État.",
+     "explication": "**catalán, euskera, gallego** : la Constitution de 1978 les reconnaît dans leurs communautés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle **année** la Constitution espagnole reconnaît-elle ces langues ?",
+     "reponse": 1978,
+     "aide": "La date figure dans le deuxième paragraphe.",
+     "explication": "**1978** : l’article 3 de la Constitution fait du castillan la langue officielle de l’État et reconnaît les autres langues dans leurs communautés."
+    },
+    {
+     "type": "zone",
+     "document": "mapaE",
+     "reponse": [
+      "ESP"
+     ],
+     "enonce": "Touche le **pays** où vivent Marta, Iker et Brais.",
+     "aide": "C’est dans la péninsule Ibérique, au nord-ouest du continent africain.",
+     "explication": "**L’Espagne** : le catalan, le basque et le galicien y sont co-officiels dans leurs communautés."
+    },
+    {
+     "type": "zone",
+     "document": "mapaA",
+     "reponse": [
+      "PRY"
+     ],
+     "enonce": "Touche le **pays d’Amérique du Sud** où le guarani est langue co-officielle avec l’espagnol.",
+     "aide": "Il est enclavé, entre l’Argentine, la Bolivie et le Brésil.",
+     "explication": "**Le Paraguay** : le guarani y est co-officiel avec l’espagnol (Constitution de 1992)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque langue à son lieu.",
+     "paires": [
+      [
+       "el guaraní",
+       "Paraguay"
+      ],
+      [
+       "el euskera",
+       "País Vasco"
+      ],
+      [
+       "el gallego",
+       "Galicia"
+      ],
+      [
+       "el spanglish",
+       "Estados Unidos"
+      ]
+     ],
+     "aide": "Le spanglish mêle l’espagnol et l’anglais.",
+     "explication": "*Guaraní* au **Paraguay**, *euskera* au **Pays basque**, *gallego* en **Galice**, *spanglish* chez les Latinos des **États-Unis**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c14d0179-a9bc-508f-adcb-8541781dec60",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Camila et sa grand-mère de Buenos Aires",
+   "competence": "comprendre-langue",
+   "situation": "Camila, seize ans, parle de sa grand-mère dans un petit texte pour son cours d’espagnol.",
+   "documents": [
+    {
+     "id": "texto",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mi abuela",
+     "blocs": [
+      "Me llamo Camila y vivo en Buenos Aires.",
+      "Mi [[f|abuela]] Elena busca a su [[f|nieto]], robado durante la dictadura. La dictadura argentina duró de 1976 a 1983.",
+      "Hoy, mi abuela me transmite sus [[r|recuerdos]] y yo heredo su historia."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texto",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui désignent des membres de la famille d’Elena.",
+     "aide": "L’un est la grand-mère, l’autre le petit-fils qu’elle cherche.",
+     "explication": "**abuela** (grand-mère) et **nieto** (petit-fils) : *los abuelos* et *los nietos*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** a duré la dictature argentine ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Le texte donne les deux dates.",
+     "explication": "1983 − 1976 = **7 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "texto",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui veut dire « **souvenirs** ».",
+     "aide": "Elena les transmet à sa petite-fille.",
+     "explication": "**los recuerdos** : les souvenirs que les aînés transmettent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot espagnol à sa traduction.",
+     "paires": [
+      [
+       "los nietos",
+       "les petits-enfants"
+      ],
+      [
+       "heredar",
+       "hériter"
+      ],
+      [
+       "transmitir",
+       "transmettre"
+      ],
+      [
+       "el recuerdo",
+       "le souvenir"
+      ]
+     ],
+     "aide": "Ces quatre mots figurent dans le texte de Camila.",
+     "explication": "*Los nietos* (petits-enfants), *heredar* (hériter), *transmitir* (transmettre), *el recuerdo* (le souvenir)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c14d0179-a9bc-508f-adcb-8541781dec60",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux affiches de films de familles",
+   "competence": "analyser-document",
+   "situation": "Dans un ciné-club, deux affiches racontent des familles espagnoles. Quelles générations, quelles menaces ?",
+   "documents": [
+    {
+     "id": "volver",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Volver",
+     "sousTitre": "Un film de Pedro Almodóvar (2006)",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "Tres generaciones de mujeres",
+       "id": "gen"
+      },
+      {
+       "texte": "Un pueblo de La Mancha",
+       "id": "lug"
+      },
+      {
+       "texte": "Secretos de familia y el regreso de una madre",
+       "id": "sec"
+      }
+     ],
+     "teinte": "corail"
+    },
+    {
+     "id": "alcarras",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Alcarràs",
+     "sousTitre": "Carla Simón — Oso de Oro 2022",
+     "emoji": "🍑",
+     "lignes": [
+      {
+       "texte": "Una familia de cultivadores de melocotones",
+       "id": "cul"
+      },
+      {
+       "texte": "En Cataluña",
+       "id": "cat"
+      },
+      {
+       "texte": "Ante el fin de su forma de vida",
+       "id": "fin"
+      }
+     ],
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "volver",
+     "reponse": [
+      "gen"
+     ],
+     "enonce": "Touche la ligne de l’affiche de *Volver* qui dit **combien de générations** y apparaissent.",
+     "aide": "Cherche le mot « generaciones ».",
+     "explication": "**Tres generaciones de mujeres** : *Volver* réunit trois générations de femmes autour de secrets de famille."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent *Volver* (2006) de l’Ours d’or d’*Alcarràs* (2022) ?",
+     "reponse": 16,
+     "unite": "ans",
+     "aide": "Relève les deux années sur les affiches.",
+     "explication": "2022 − 2006 = **16 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon l’affiche d’*Alcarràs*, à quoi la famille est-elle confrontée ?",
+     "options": [
+      "À la fin de son mode de vie",
+      "Au départ d’un fils vers l’Argentine",
+      "À la préparation d’une fête de village",
+      "Au retour d’une mère que l’on croyait morte"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière ligne de l’affiche.",
+     "explication": "**Ante el fin de su forma de vida** : les grands-parents, les parents et les enfants font face à la fin d’un mode de vie. Le retour d’une mère est l’histoire de *Volver*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la tournure de concession.",
+     "texte": "___ verdad que hay una brecha generacional, pero se pueden entender.",
+     "reponses": [
+      [
+       "Es"
+      ]
+     ],
+     "banque": [
+      "Es",
+      "Está",
+      "Hay",
+      "Son"
+     ],
+     "aide": "« Es verdad que… , pero… » sert à concéder.",
+     "explication": "**Es verdad que…, pero…** : on reconnaît un point (le fossé des générations) avant de nuancer."
+    }
+   ]
+  },
+  {
+   "chapitre": "c14d0179-a9bc-508f-adcb-8541781dec60",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lola interroge sa grand-mère après Coco",
+   "competence": "argumenter",
+   "situation": "Lola a vu *Coco* au collège. Sa grand-mère lui répond avec un autre souvenir, et un tableau remet les dates à leur place.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Lola et de sa grand-mère",
+     "participants": [
+      {
+       "nom": "Lola",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Abuela",
+       "emoji": "👵",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lola",
+       "texte": "Abuela, hoy vimos Coco en el cole. ¡Me encantó!"
+      },
+      {
+       "qui": "Abuela",
+       "texte": "Es [[c|verdad]] que es una película bonita, pero en mi casa la memoria no es una fiesta."
+      },
+      {
+       "qui": "Lola",
+       "texte": "¿Por qué, abuela?"
+      },
+      {
+       "qui": "Abuela",
+       "texte": "Porque durante la dictadura muchas familias guardaron silencio."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "fechas",
+     "type": "tableau",
+     "titre": "Fechas de Argentina y de México",
+     "colonnes": [
+      "Año",
+      "Hecho"
+     ],
+     "lignes": [
+      [
+       "1964-1973",
+       "Mafalda, la tira de Quino (Argentina)"
+      ],
+      [
+       "1976-1983",
+       "Dictadura argentina"
+      ],
+      [
+       "1977",
+       "Nacen las Abuelas de Plaza de Mayo"
+      ],
+      [
+       "2017",
+       "Coco, película de Pixar ambientada en México"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Repères du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fechas",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche la **case des années** de la dictature dont parle la grand-mère.",
+     "aide": "Elle vit en Argentine ; cherche la ligne « Dictadura argentina ».",
+     "explication": "**1976-1983** : c’est la période de la dictature argentine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent la naissance des Abuelas de Plaza de Mayo de la fin de la dictature ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Prends 1977 et la date de fin de la dictature.",
+     "explication": "1983 − 1977 = **6 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui signale une **concession** dans la réplique de la grand-mère (« Es… que…, pero… »).",
+     "aide": "Il suit « Es » : il dit que quelque chose est vrai avant le « pero ».",
+     "explication": "**verdad** : *es verdad que…, pero…* concède un point avant de le nuancer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la grand-mère dit-elle que « la memoria no es una fiesta » chez elle, contrairement à *Coco* ?",
+     "options": [
+      "Parce que la dictature a fait taire les familles",
+      "Parce qu’elle déteste les films d’animation",
+      "Parce que Coco se passe en Argentine",
+      "Parce que sa famille n’a jamais connu la dictature"
+     ],
+     "reponse": 0,
+     "aide": "Croise sa dernière réplique avec le tableau.",
+     "explication": "**Le silence de la dictature (1976-1983)** : à *Coco*, la mémoire est une fête mexicaine ; en Argentine, elle est encore une blessure."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il est vrai que la dictature s’est achevée en 1983, mais la blessure reste ouverte. » La phrase commence par Es verdad que.",
+     "items": [
+      "Es verdad que",
+      "la dictadura terminó en 1983",
+      "pero",
+      "la herida sigue abierta"
+     ],
+     "aide": "Concession d’abord, puis « pero », puis l’idée qui nuance.",
+     "explication": "**Es verdad que la dictadura terminó en 1983, pero la herida sigue abierta** : concession, puis nuance."
+    }
+   ]
+  },
+  {
+   "chapitre": "05302e8f-a3f4-5a72-b6ae-d0806d1d1dc1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le calendrier des fêtes de l’année",
+   "competence": "lire-tableau",
+   "situation": "Sofía prépare une affiche pour le club d’espagnol. Elle a rassemblé quatre fêtes dans un tableau.",
+   "documents": [
+    {
+     "id": "fiestas",
+     "type": "tableau",
+     "titre": "Cuatro fiestas del mundo hispánico",
+     "colonnes": [
+      "Fiesta",
+      "Lugar",
+      "Fecha",
+      "Qué se ve"
+     ],
+     "lignes": [
+      [
+       "Las Fallas",
+       "Valencia",
+       "marzo (el 19)",
+       "Figuras gigantes que se queman"
+      ],
+      [
+       "San Fermín",
+       "Pamplona",
+       "6-14 de julio",
+       "Los encierros: toros en las calles"
+      ],
+      [
+       "Día de Muertos",
+       "México",
+       "1 y 2 de noviembre",
+       "Ofrendas y calaveras de azúcar"
+      ],
+      [
+       "Inti Raymi",
+       "Cuzco (Perú)",
+       "24 de junio",
+       "La fiesta inca del Sol"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après les repères du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiestas",
+     "reponse": [
+      "r3c2"
+     ],
+     "enonce": "Touche la **case** qui donne la date de l’Inti Raymi.",
+     "aide": "Cherche la ligne de Cuzco, puis la colonne « Fecha ».",
+     "explication": "**24 de junio** : l’Inti Raymi est la fête inca du Soleil, à Cuzco, le 24 juin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "San Fermín dure du 6 au 14 juillet (jours inclus). Combien de **jours** de fête cela fait-il ?",
+     "reponse": 9,
+     "unite": "jours",
+     "aide": "Compte aussi le premier et le dernier jour.",
+     "explication": "Du 6 au 14 inclus : 14 − 6 + 1 = **9 jours**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fête à ce que l’on y voit.",
+     "paires": [
+      [
+       "Las Fallas",
+       "Des figures géantes que l’on brûle"
+      ],
+      [
+       "San Fermín",
+       "Des courses de taureaux dans les rues"
+      ],
+      [
+       "Día de Muertos",
+       "Des autels et des calaveras en sucre"
+      ],
+      [
+       "Inti Raymi",
+       "La fête inca du Soleil"
+      ]
+     ],
+     "aide": "La dernière colonne du tableau donne la clé en espagnol.",
+     "explication": "*Fallas* : figures brûlées ; *San Fermín* : *encierros* ; *Día de Muertos* : *ofrendas* et *calaveras* ; *Inti Raymi* : fête inca du Soleil."
+    }
+   ]
+  },
+  {
+   "chapitre": "05302e8f-a3f4-5a72-b6ae-d0806d1d1dc1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un autel pour les ancêtres",
+   "competence": "analyser-texte",
+   "situation": "Un article du journal du lycée présente le Día de Muertos au Mexique. Comment parler de cette fête sans la réduire à une seule lecture ?",
+   "documents": [
+    {
+     "id": "articulo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "El Día de Muertos en México",
+     "blocs": [
+      "En México, el Día de Muertos se celebra el 1 y el 2 de noviembre. Las familias preparan ofrendas con [[o|fotos]] de los difuntos, flores de [[o|cempasúchil]] y [[o|calaveras]] de azúcar para recibir a sus antepasados.",
+      "Para [[c|unos]] es una tradición religiosa; para [[c|otros]], una fiesta de la memoria. Es un patrimonio vivo que deja una huella en cada familia."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "articulo",
+     "reponse": [
+      "o"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois éléments** qui composent l’offrande selon l’article.",
+     "aide": "Une image du défunt, une fleur, une friandise.",
+     "explication": "**fotos, cempasúchil, calaveras** : les photos, les fleurs de *cempasúchil* et les *calaveras* en sucre garnissent l’*ofrenda*."
+    },
+    {
+     "type": "zone",
+     "document": "articulo",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui opposent deux points de vue (« Para… , para… »).",
+     "aide": "Ils suivent chacun « Para ».",
+     "explication": "**Para unos…, para otros…** : la tournure qui oppose deux lectures de la même fête."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon mode après « Me parece importante que… ».",
+     "texte": "Me parece importante que las familias ___ a sus antepasados.",
+     "reponses": [
+      [
+       "recuerden"
+      ]
+     ],
+     "banque": [
+      "recuerden",
+      "recuerdan",
+      "recordar",
+      "recordarán"
+     ],
+     "aide": "Après *Me parece importante que*, on emploie le subjonctif.",
+     "explication": "**recuerden** : *Me parece importante que* + subjonctif présent (3e personne du pluriel)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot du texte à sa traduction.",
+     "paires": [
+      [
+       "la huella",
+       "la trace"
+      ],
+      [
+       "el patrimonio",
+       "le patrimoine"
+      ],
+      [
+       "el antepasado",
+       "l’ancêtre"
+      ],
+      [
+       "la ofrenda",
+       "l’autel d’offrandes"
+      ]
+     ],
+     "aide": "Ces quatre mots figurent dans l’article.",
+     "explication": "*La huella* (la trace), *el patrimonio* (le patrimoine), *el antepasado* (l’ancêtre), *la ofrenda* (l’autel d’offrandes)."
+    }
+   ]
+  },
+  {
+   "chapitre": "05302e8f-a3f4-5a72-b6ae-d0806d1d1dc1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un même 12 octobre, trois récits",
+   "competence": "analyser-document",
+   "situation": "Camilo prépare un exposé sur le 12 octobre. Il croise un article et une carte pour comprendre pourquoi la même date porte trois noms.",
+   "documents": [
+    {
+     "id": "mapaE",
+     "type": "carte",
+     "titre": "L’Europe du Sud-Ouest",
+     "fond": "europe",
+     "cadrage": [
+      -12,
+      34,
+      8,
+      46
+     ],
+     "regionsCliquables": true,
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "mapaA",
+     "type": "carte",
+     "titre": "L’Amérique du Sud",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      -57,
+      -30,
+      14
+     ],
+     "regionsCliquables": true,
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "articulo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Una fecha, tres nombres",
+     "blocs": [
+      "El 12 de octubre de 1492, Cristóbal Colón llegó a América. Hoy esa fecha tiene tres nombres.",
+      "En España es la Fiesta Nacional. En Venezuela, desde 2002, se llama Día de la Resistencia Indígena. En Argentina, desde 2010, es el Día del Respeto a la Diversidad Cultural."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mapaE",
+     "reponse": [
+      "ESP"
+     ],
+     "enonce": "Touche le pays où le 12 octobre est la **Fiesta Nacional**.",
+     "aide": "C’est le pays dont Colomb est parti pour son voyage de 1492.",
+     "explication": "**L’Espagne** : le 12 octobre y est la *Fiesta Nacional*."
+    },
+    {
+     "type": "zone",
+     "document": "mapaA",
+     "reponse": [
+      "VEN",
+      "ARG"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux pays d’Amérique du Sud** où cette date a été rebaptisée.",
+     "aide": "L’article en cite deux après l’Espagne : l’un depuis 2002, l’autre depuis 2010.",
+     "explication": "**Le Venezuela** (Día de la Resistencia Indígena, 2002) et **l’Argentine** (Día del Respeto a la Diversidad Cultural, 2010)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent le changement de nom vénézuélien de l’argentin ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Relève les deux années dans l’article.",
+     "explication": "2010 − 2002 = **8 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Pour les uns c’est une fête, pour les autres une polémique. » La phrase commence par Para unos.",
+     "items": [
+      "Para unos",
+      "es una fiesta",
+      "para otros",
+      "una polémica"
+     ],
+     "aide": "La tournure oppose deux points de vue.",
+     "explication": "**Para unos es una fiesta, para otros una polémica** : *para unos…, para otros…* oppose deux points de vue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le fait qu’une même date porte trois noms ?",
+     "options": [
+      "Que le récit national fait débat selon les pays",
+      "Que Colomb n’est pas arrivé en 1492",
+      "Que la date est fériée dans le monde entier",
+      "Que les trois pays ont la même histoire"
+     ],
+     "reponse": 0,
+     "aide": "Même date, trois récits.",
+     "explication": "**Le récit national fait débat** : célébration en Espagne, résistance indigène au Venezuela, respect de la diversité en Argentine."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee113ceb-ff52-54c4-825b-793cc61f8198",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux panneaux pour une ville moins polluée",
+   "competence": "comprendre-langue",
+   "situation": "Dans un guide scolaire, deux panneaux présentent des mesures prises par des villes espagnoles pour mieux respirer.",
+   "documents": [
+    {
+     "id": "superilla",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Superilla de Poblenou",
+     "sousTitre": "Barcelona, desde 2016",
+     "emoji": "🌳",
+     "lignes": [
+      {
+       "texte": "Menos coches",
+       "id": "coches"
+      },
+      {
+       "texte": "Más árboles",
+       "id": "arboles"
+      },
+      {
+       "texte": "Más espacio para jugar",
+       "id": "jugar"
+      }
+     ],
+     "teinte": "vert"
+    },
+    {
+     "id": "central",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Madrid Central",
+     "sousTitre": "Zona de bajas emisiones, desde 2018",
+     "emoji": "🚲",
+     "lignes": [
+      {
+       "texte": "Objetivo: reducir la contaminación del aire",
+       "id": "obj"
+      }
+     ],
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "superilla",
+     "reponse": [
+      "jugar"
+     ],
+     "enonce": "Touche la ligne qui promet de la place pour les **jeux des enfants**.",
+     "aide": "Cherche le verbe *jugar*.",
+     "explication": "**Más espacio para jugar** : une *superilla* rend des rues aux piétons, aux arbres et aux jeux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent la première *superilla* de Barcelone de Madrid Central ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Relève l’année sous chaque titre.",
+     "explication": "2018 − 2016 = **2 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’objectif de Madrid Central.",
+     "texte": "El objetivo es reducir la ___ del aire.",
+     "reponses": [
+      [
+       "contaminación"
+      ]
+     ],
+     "banque": [
+      "contaminación",
+      "manifestación",
+      "alquiler",
+      "compromiso"
+     ],
+     "aide": "Le mot est écrit sur le panneau.",
+     "explication": "**la contaminación** = la pollution : Madrid Central est une zone à faibles émissions."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le point commun des deux panneaux ?",
+     "options": [
+      "Réduire la place de la voiture pour une ville plus agréable",
+      "Augmenter le nombre de touristes dans le centre",
+      "Construire de nouvelles routes pour les voitures",
+      "Faire payer l’entrée du centre aux piétons"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux mots « menos coches » et « bajas emisiones ».",
+     "explication": "**Moins de voitures, moins de pollution** : les deux mesures redonnent la ville aux habitants."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee113ceb-ff52-54c4-825b-793cc61f8198",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les jeunes se mobilisent : Madrid et Medellín",
+   "competence": "analyser-document",
+   "situation": "Pour son dossier sur la jeunesse engagée, Nora rapproche une chronique sur le 15-M et un panneau consacré à Medellín.",
+   "documents": [
+    {
+     "id": "cronica",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Crónica",
+     "blocs": [
+      "El 15 de mayo de 2011, miles de jóvenes, los [[i|indignados]], ocuparon la Puerta del Sol, en Madrid. Protestaban contra el desempleo y la crisis.",
+      "Desde 2019, otros jóvenes hacen huelga por el clima, en España, en Chile o en Argentina."
+     ],
+     "source": "Chronique écrite pour l’exercice"
+    },
+    {
+     "id": "metro",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Metrocable de Medellín",
+     "sousTitre": "Colombia, desde 2004",
+     "emoji": "🚠",
+     "lignes": [
+      {
+       "texte": "Une los barrios de las colinas con el metro",
+       "id": "une"
+      }
+     ],
+     "teinte": "turquoise"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cronica",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le nom donné aux jeunes qui occupent la Puerta del Sol en 2011.",
+     "aide": "Il vient du verbe qui exprime la colère devant une injustice.",
+     "explication": "**los indignados** : le mouvement « 15-M », né le 15 mai 2011 à Madrid."
+    },
+    {
+     "type": "choix",
+     "enonce": "Contre quoi les indignés protestent-ils ?",
+     "options": [
+      "Contre le chômage et la crise",
+      "Contre le tourisme de masse",
+      "Contre la hausse des loyers aux Canaries",
+      "Contre le réchauffement du climat"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la première phrase de la chronique.",
+     "explication": "**El desempleo y la crisis** : le 15-M proteste contre le chômage des jeunes et la crise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent le 15-M des premières grèves pour le climat mentionnées ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Compare 2011 et la date de la deuxième phrase.",
+     "explication": "2019 − 2011 = **8 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent l’ouverture du Metrocable de Medellín du 15-M ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Croise le panneau (2004) avec la chronique.",
+     "explication": "2011 − 2004 = **7 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Exprime un souhait avec le bon mode.",
+     "texte": "Ojalá los jóvenes se ___ más.",
+     "reponses": [
+      [
+       "comprometan"
+      ]
+     ],
+     "banque": [
+      "comprometan",
+      "comprometen",
+      "comprometerán",
+      "comprometieron"
+     ],
+     "aide": "Après *Ojalá*, on emploie le subjonctif.",
+     "explication": "**Ojalá… se comprometan** : *ojalá* est suivi du subjonctif ; *comprometerse* = s’engager."
+    }
+   ]
+  },
+  {
+   "chapitre": "ee113ceb-ff52-54c4-825b-793cc61f8198",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tourisme, richesse ou menace ?",
+   "competence": "argumenter",
+   "situation": "Dans un dossier sur le tourisme, un article espagnol sur les Canaries et un panneau du Machu Picchu posent la même question : faut-il limiter les visiteurs ?",
+   "documents": [
+    {
+     "id": "noticia",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Canarias tiene un límite",
+     "blocs": [
+      "El 20 de abril de 2024, decenas de miles de canarios salieron a la calle con el lema « Canarias tiene un límite ». Protestaban contra el [[t|turismo]] [[t|masivo]] y contra la subida de los [[a|alquileres]].",
+      "España recibe cada año más de 80 millones de turistas extranjeros. Según los manifestantes, el problema es que muchos habitantes ya no pueden pagar el [[a|alquiler]]."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "machu",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Machu Picchu",
+     "sousTitre": "Perú",
+     "emoji": "⛰️",
+     "lignes": [
+      {
+       "texte": "Número de visitantes limitado cada día",
+       "id": "lim"
+      },
+      {
+       "texte": "Para proteger el sitio",
+       "id": "prot"
+      }
+     ],
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "noticia",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** de l’article qui parlent du loyer.",
+     "aide": "L’un est au pluriel, l’autre au singulier.",
+     "explication": "**alquileres** et **alquiler** : *el alquiler* = le loyer ; la hausse des loyers est un des motifs de la manifestation."
+    },
+    {
+     "type": "zone",
+     "document": "noticia",
+     "reponse": [
+      "t"
+     ],
+     "multiple": true,
+     "enonce": "Touche l’expression qui veut dire « **tourisme de masse** ».",
+     "aide": "Elle est formée d’un nom et d’un adjectif.",
+     "explication": "**turismo masivo** = le tourisme de masse, première cible des manifestants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le point commun entre la manifestation aux Canaries et la règle du Machu Picchu ?",
+     "options": [
+      "Toutes deux veulent limiter le tourisme de masse",
+      "Toutes deux demandent plus de touristes étrangers",
+      "Toutes deux interdisent totalement les visites",
+      "Toutes deux concernent la hausse des loyers"
+     ],
+     "reponse": 0,
+     "aide": "L’une est une protestation, l’autre une mesure ; que veulent-elles toutes deux ?",
+     "explication": "**Limiter le tourisme de masse** : les Canariens manifestent, le Machu Picchu plafonne les entrées pour protéger le site."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il faudrait limiter les logements touristiques. » La phrase commence par Habría que.",
+     "items": [
+      "Habría que",
+      "limitar",
+      "los pisos turísticos"
+     ],
+     "aide": "On propose une solution avec *Habría que* + infinitif.",
+     "explication": "**Habría que limitar los pisos turísticos** : *habría que* + infinitif propose une solution."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule pour présenter un problème.",
+     "texte": "El ___ es que los alquileres suben.",
+     "reponses": [
+      [
+       "problema"
+      ]
+     ],
+     "banque": [
+      "problema",
+      "ventaja",
+      "objetivo",
+      "compromiso"
+     ],
+     "aide": "On ne présente pas ici un avantage.",
+     "explication": "**El problema es que…** : la formule pour présenter un problème avant de proposer une solution."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5e6f348-2819-555b-9389-9f540382337a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois artistes qui reprennent des œuvres",
+   "competence": "lire-tableau",
+   "situation": "Au musée, un panneau compare trois artistes qui ont réinventé des motifs connus.",
+   "documents": [
+    {
+     "id": "obras",
+     "type": "tableau",
+     "titre": "Tres artistas",
+     "colonnes": [
+      "Artista",
+      "Obra",
+      "Año",
+      "Lo que hace"
+     ],
+     "lignes": [
+      [
+       "Picasso",
+       "Las Meninas (según Velázquez)",
+       "1957",
+       "58 cuadros"
+      ],
+      [
+       "Botero",
+       "Mona Lisa a los doce años",
+       "1959",
+       "Figuras redondas"
+      ],
+      [
+       "Dalí",
+       "La persistencia de la memoria",
+       "1931",
+       "Relojes blandos"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice, d’après les repères du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "obras",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la **case** qui donne l’année de l’œuvre de Botero.",
+     "aide": "Cherche la ligne de Botero, puis la colonne « Año ».",
+     "explication": "**1959** : Botero peint *Mona Lisa a los doce años* en 1959."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent la toile de Dalí des *Meninas* de Picasso ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Retranche la date la plus ancienne à la plus récente.",
+     "explication": "1957 − 1931 = **26 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque artiste à ce qui le caractérise dans le tableau.",
+     "paires": [
+      [
+       "Picasso",
+       "58 tableaux d’après Velázquez"
+      ],
+      [
+       "Botero",
+       "Des figures rondes"
+      ],
+      [
+       "Dalí",
+       "Des montres molles"
+      ]
+     ],
+     "aide": "La dernière colonne donne la clé, en espagnol.",
+     "explication": "**Picasso** : 58 toiles d’après *Las Meninas* ; **Botero** : figures rondes ; **Dalí** : *relojes blandos*, des montres molles."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5e6f348-2819-555b-9389-9f540382337a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La mode, miroir de la société",
+   "competence": "analyser-texte",
+   "situation": "Un article du journal du lycée compare trois noms de la mode espagnole et latino-américaine, de Balenciaga à Zara.",
+   "documents": [
+    {
+     "id": "moda",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La moda y la sociedad",
+     "blocs": [
+      "Cristóbal Balenciaga nació en Getaria, en el País Vasco, en 1895. Fue un gran diseñador y se inspiró en los trajes españoles.",
+      "La empresa Zara nació en [[g|Galicia]] en 1975 y hoy es un símbolo de la moda rápida.",
+      "En 2019, México criticó a la diseñadora venezolana Carolina Herrera: usó motivos indígenas sin citarlos. Es el debate sobre la apropiación cultural."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "moda",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le nom de la **région** où est née l’entreprise Zara.",
+     "aide": "C’est une communauté du nord-ouest de l’Espagne.",
+     "explication": "**Galicia** (la Galice) : Zara, groupe Inditex, y est née en 1975."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent la naissance de Balenciaga de la fondation de Zara ?",
+     "reponse": 80,
+     "unite": "ans",
+     "aide": "Relève les deux années dans l’article.",
+     "explication": "1975 − 1895 = **80 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que reproche le Mexique à Carolina Herrera en 2019 ?",
+     "options": [
+      "D’avoir repris des motifs indigènes sans les citer",
+      "D’avoir copié les robes de Balenciaga",
+      "D’avoir quitté le Venezuela pour l’Espagne",
+      "D’avoir vendu ses vêtements à des prix trop bas"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière partie de l’article.",
+     "explication": "**Des motifs indigènes repris sans être cités** : c’est le débat sur l’appropriation culturelle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire que le créateur puise son inspiration dans les costumes traditionnels.",
+     "texte": "El diseñador se ___ en los trajes tradicionales.",
+     "reponses": [
+      [
+       "inspira"
+      ]
+     ],
+     "banque": [
+      "inspira",
+      "inspirar",
+      "inspirado",
+      "inspiran"
+     ],
+     "aide": "Le sujet est un seul créateur ; le verbe est au présent.",
+     "explication": "**se inspira en** : *inspirarse en* = s’inspirer de, à la 3e personne du singulier."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à sa traduction.",
+     "paires": [
+      [
+       "la obra maestra",
+       "le chef-d’œuvre"
+      ],
+      [
+       "el homenaje",
+       "l’hommage"
+      ],
+      [
+       "la moda rápida",
+       "la mode rapide"
+      ],
+      [
+       "el diseñador",
+       "le créateur de mode"
+      ]
+     ],
+     "aide": "Certains de ces mots figurent dans l’article.",
+     "explication": "*La obra maestra* (le chef-d’œuvre), *el homenaje* (l’hommage), *la moda rápida* (la mode rapide), *el diseñador* (le créateur)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5e6f348-2819-555b-9389-9f540382337a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois légendes qui voyagent",
+   "competence": "analyser-document",
+   "situation": "Pour une exposition sur les légendes, un article présente La Llorona, El Dorado et Don Quichotte. Une carte permet de situer les deux légendes américaines.",
+   "documents": [
+    {
+     "id": "mapa",
+     "type": "carte",
+     "titre": "Le Mexique et la Colombie",
+     "fond": "monde",
+     "cadrage": [
+      -120,
+      -8,
+      -65,
+      33
+     ],
+     "regionsCliquables": true,
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "leyendas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Tres leyendas",
+     "blocs": [
+      "La Llorona es una mujer que llora por la noche y busca a sus hijos. Es una leyenda de México.",
+      "El Dorado nace de un rito de los [[m|muiscas]] en la laguna de Guatavita, en Colombia. Esta leyenda lanzó a los conquistadores en busca de una ciudad imaginaria.",
+      "Don Quijote, de Cervantes (1605 y 1615), es un caballero que confunde molinos con gigantes."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mapa",
+     "reponse": [
+      "MEX"
+     ],
+     "enonce": "Touche le pays d’où vient la légende de **La Llorona**.",
+     "aide": "L’article le précise à la fin du premier paragraphe.",
+     "explication": "**Le Mexique** : La Llorona est une femme en pleurs qui cherche ses enfants la nuit."
+    },
+    {
+     "type": "zone",
+     "document": "mapa",
+     "reponse": [
+      "COL"
+     ],
+     "enonce": "Touche le pays où se trouve la **lagune de Guatavita**, source du mythe d’El Dorado.",
+     "aide": "C’est un pays du nord-ouest de l’Amérique du Sud.",
+     "explication": "**La Colombie** : le mythe d’El Dorado naît d’un rite muisca à la lagune de Guatavita."
+    },
+    {
+     "type": "zone",
+     "document": "leyendas",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le nom du **peuple** à l’origine du mythe d’El Dorado.",
+     "aide": "Il célébrait un rite à la lagune.",
+     "explication": "**Les muiscas** : un rite muisca à la lagune de Guatavita est à l’origine du mythe du roi couvert d’or."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**années** séparent les deux parties de *Don Quijote* ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Relève les deux dates entre parenthèses.",
+     "explication": "1615 − 1605 = **10 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ce film rend hommage à la légende de La Llorona. » La phrase commence par Esta película.",
+     "items": [
+      "Esta película",
+      "rinde homenaje",
+      "a la leyenda",
+      "de La Llorona"
+     ],
+     "aide": "*Rendre hommage* se dit *rendir homenaje*.",
+     "explication": "**Esta película rinde homenaje a la leyenda de La Llorona** : *rendir homenaje a* = rendre hommage à."
+    }
+   ]
+  }
+ ]
+}

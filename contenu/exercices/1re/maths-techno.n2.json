@@ -1,0 +1,2318 @@
+{
+ "niveau": "1re",
+ "matiere": "maths-techno",
+ "exercices": [
+  {
+   "chapitre": "843d659b-93f2-5d2e-9676-9fa14631dcf7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le jet d’un arroseur de jardin",
+   "competence": "lire-graphique",
+   "situation": "Le jet d’un arroseur automatique retombe sur la pelouse. Sarah a relevé la hauteur h(x) de l’eau, en décimètres, à x mètres de l’arroseur : la courbe est une parabole.",
+   "documents": [
+    {
+     "id": "jet",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur du jet selon la distance",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "h(x)",
+       "valeurs": [
+        0,
+        5,
+        8,
+        9,
+        8,
+        5,
+        0
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "en dm",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Distance x (m)"
+     },
+     "valeurs": false,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jet",
+     "enonce": "Touche le point où le jet est le plus haut (le sommet de la parabole).",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la plus grande valeur de la courbe.",
+     "explication": "Le sommet est le point d’abscisse x = 3 : le jet y atteint sa hauteur maximale, **9 dm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance de l’arroseur l’eau retombe-t-elle sur la pelouse ?",
+     "reponse": 6,
+     "unite": "m",
+     "aide": "L’eau touche le sol quand la hauteur vaut 0, après le départ.",
+     "explication": "La hauteur est de nouveau nulle pour x = 6 : l’eau retombe à **6 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur du jet à 5 m de l’arroseur ?",
+     "reponse": 5,
+     "unite": "dm",
+     "aide": "Repère x = 5 sur l’axe horizontal, puis monte jusqu’à la courbe.",
+     "explication": "Pour x = 5, la courbe passe au point d’ordonnée **5 dm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La parabole est ouverte vers le bas. Que peut-on dire de son sommet ?",
+     "options": [
+      "C’est un maximum, car a est négatif",
+      "C’est un minimum, car a est négatif",
+      "C’est un maximum, car a est positif",
+      "C’est un minimum, car a est positif"
+     ],
+     "reponse": 0,
+     "aide": "Une parabole ouverte vers le bas a la forme d’une colline.",
+     "explication": "Ouverte vers le bas, la parabole correspond à a < 0 : son sommet est un **maximum**."
+    }
+   ]
+  },
+  {
+   "chapitre": "843d659b-93f2-5d2e-9676-9fa14631dcf7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bénéfice du food-truck",
+   "competence": "modeliser",
+   "situation": "Karim tient un food-truck. Son bénéfice, en centaines d’euros, pour x dizaines de menus vendus dans la journée, est B(x) = −2(x − 2)(x − 8). Il a calculé quelques valeurs dans un tableau.",
+   "documents": [
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Bénéfice selon le nombre de menus",
+     "colonnes": [
+      "x (dizaines de menus)",
+      "1",
+      "2",
+      "3",
+      "7",
+      "8",
+      "9"
+     ],
+     "lignes": [
+      [
+       "B(x) (centaines d’€)",
+       "−14",
+       "0",
+       "10",
+       "10",
+       "0",
+       "−14"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "valeurs",
+     "enonce": "Touche les deux cases où le bénéfice est nul (les racines de B).",
+     "reponse": [
+      "r0c2",
+      "r0c5"
+     ],
+     "multiple": true,
+     "aide": "Cherche la valeur 0 dans la ligne B(x).",
+     "explication": "B(x) = 0 pour x = 2 et x = 8 : ce sont les **deux racines**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La parabole est symétrique. Pour quelle valeur de x le bénéfice est-il maximal ?",
+     "reponse": 5,
+     "aide": "L’axe de symétrie est au milieu des deux racines.",
+     "explication": "x = (2 + 8) ÷ 2 = **5** : le sommet se trouve sur l’axe de symétrie, au milieu des racines."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le bénéfice maximal, en euros ?",
+     "reponse": 1800,
+     "unite": "€",
+     "aide": "Remplace x par 5 dans B(x), sans oublier que B est en centaines d’euros.",
+     "explication": "B(5) = −2 × 3 × (−3) = 18 centaines d’euros, soit **1 800 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quel nombre de menus vendus le food-truck gagne-t-il de l’argent (B(x) > 0) ?",
+     "options": [
+      "Entre 20 et 80 menus",
+      "Moins de 20 menus",
+      "Plus de 80 menus",
+      "Pour n’importe quel nombre de menus"
+     ],
+     "reponse": 0,
+     "aide": "Avec a = −2 < 0, le signe est contraire de a entre les racines.",
+     "explication": "a est négatif : B est positive **entre les racines**, soit entre x = 2 et x = 8, donc entre 20 et 80 menus."
+    }
+   ]
+  },
+  {
+   "chapitre": "843d659b-93f2-5d2e-9676-9fa14631dcf7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le laboratoire et la cuve chauffée",
+   "competence": "raisonner",
+   "situation": "Dans un laboratoire, la température T(t) d’un liquide (en °C) varie pendant les 10 premières minutes. Camille dispose de trois relevés du capteur et de la notice du modèle.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Relevé du capteur",
+     "sousTitre": "Cuve n° 2",
+     "emoji": "🌡️",
+     "lignes": [
+      {
+       "texte": "t = 0 min",
+       "valeur": "20 °C"
+      },
+      {
+       "texte": "t = 2 min",
+       "valeur": "8 °C"
+      },
+      {
+       "texte": "t = 8 min",
+       "valeur": "20 °C"
+      }
+     ],
+     "pied": "Relevés imaginés pour l’exercice"
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Notice du modèle",
+     "sousTitre": "T(t) = t² − 8t + 20",
+     "lignes": [
+      {
+       "texte": "Durée étudiée",
+       "valeur": "0 ≤ t ≤ 10 min"
+      },
+      {
+       "texte": "Alerte basse température",
+       "valeur": "T < 5 °C"
+      }
+     ],
+     "pied": "Notice imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Les relevés à 0 min et à 8 min donnent la même température. En quelle minute t se trouve l’axe de symétrie de la parabole ?",
+     "reponse": 4,
+     "unite": "min",
+     "aide": "Deux points de même ordonnée : l’axe passe au milieu de leurs abscisses.",
+     "explication": "Les abscisses 0 et 8 ont la même image : l’axe est au milieu, t = (0 + 8) ÷ 2 = **4 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la température minimale du liquide ?",
+     "reponse": 4,
+     "unite": "°C",
+     "aide": "Le sommet est sur l’axe : remplace t par la valeur trouvée dans T(t), pas ailleurs.",
+     "explication": "a = 1 > 0 : le sommet est un minimum. T(4) = 16 − 32 + 20 = **4 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le liquide peut-il atteindre 0 °C pendant ces 10 minutes ?",
+     "options": [
+      "Non, car son minimum est de 4 °C",
+      "Oui, au bout de 4 minutes",
+      "Oui, à la fin des 10 minutes",
+      "On ne peut pas savoir"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0 °C au minimum de la température.",
+     "explication": "Le minimum de T est 4 °C, et 4 > 0 : la température **ne descend jamais jusqu’à 0 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On vérifie que T(3) = 5 et T(5) = 5. Pendant combien de minutes la température est-elle inférieure à 5 °C (alerte) ?",
+     "reponse": 2,
+     "unite": "min",
+     "aide": "La courbe est un « U » : elle est sous 5 °C entre les deux instants où elle vaut 5.",
+     "explication": "T(x) < 5 entre les deux instants où T = 5, donc de t = 3 à t = 5 : l’alerte dure 5 − 3 = **2 min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea2039a8-af84-59ed-be7f-0056129fbeb3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La côte du cycliste",
+   "competence": "calculer",
+   "situation": "Inès s’entraîne à vélo sur une côte. Son compteur a noté la distance parcourue depuis le bas de la côte à quatre instants.",
+   "documents": [
+    {
+     "id": "dist",
+     "type": "tableau",
+     "titre": "Distance parcourue depuis le départ",
+     "colonnes": [
+      "t (s)",
+      "0",
+      "10",
+      "20",
+      "30"
+     ],
+     "lignes": [
+      [
+       "d (m)",
+       0,
+       40,
+       90,
+       150
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dist",
+     "enonce": "Touche la distance parcourue au bout de 20 secondes.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère la colonne t = 20, puis lis la ligne d (m).",
+     "explication": "Au bout de 20 s, Inès a parcouru **90 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa vitesse moyenne entre t = 0 et t = 10 ?",
+     "reponse": 4,
+     "unite": "m/s",
+     "aide": "Taux de variation = (d(10) − d(0)) ÷ (10 − 0).",
+     "explication": "(40 − 0) ÷ (10 − 0) = **4 m/s** : le taux de variation est une vitesse moyenne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa vitesse moyenne entre t = 10 et t = 30 ?",
+     "reponse": 5.5,
+     "unite": "m/s",
+     "aide": "Distance parcourue entre les deux instants, divisée par la durée.",
+     "explication": "(150 − 40) ÷ (30 − 10) = 110 ÷ 20 = **5,5 m/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quel intervalle de temps Inès roule-t-elle le plus vite en moyenne ?",
+     "options": [
+      "Entre t = 20 et t = 30",
+      "Entre t = 0 et t = 10",
+      "Entre t = 10 et t = 20",
+      "Toujours à la même vitesse"
+     ],
+     "reponse": 0,
+     "aide": "Calcule les trois taux de variation et compare-les.",
+     "explication": "Les vitesses moyennes valent 4, 5 puis 6 m/s : c’est **entre 20 et 30 s** qu’elle va le plus vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea2039a8-af84-59ed-be7f-0056129fbeb3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le coût marginal d’une imprimerie",
+   "competence": "modeliser",
+   "situation": "Une imprimerie produit x centaines de pièces. Son coût de production, en centaines d’euros, est C(x) = x² + 4x + 3. Élodie, la gestionnaire, veut savoir de combien le coût augmente quand on produit un peu plus que 2 centaines de pièces.",
+   "documents": [
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Coût de production",
+     "colonnes": [
+      "x (centaines de pièces)",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "C(x) (centaines d’€)",
+       8,
+       15,
+       24,
+       35
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de variation de C entre x = 2 et x = 4 ?",
+     "reponse": 10,
+     "aide": "(C(4) − C(2)) ÷ (4 − 2), avec les valeurs du tableau.",
+     "explication": "(35 − 15) ÷ (4 − 2) = 20 ÷ 2 = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de variation de C entre x = 2 et x = 3 ?",
+     "reponse": 9,
+     "aide": "Même formule, avec b = 3.",
+     "explication": "(24 − 15) ÷ (3 − 2) = **9**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour h ≠ 0, le taux de variation de C entre 2 et 2 + h s’écrit (8h + h²) ÷ h = 8 + h. Quel nombre dérivé C′(2) obtient-on quand h se rapproche de 0 ?",
+     "reponse": 8,
+     "aide": "Que devient 8 + h quand h est presque nul ?",
+     "explication": "Quand h se rapproche de 0, 8 + h se rapproche de 8 : **C′(2) = 8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La tangente en x = 2 a pour équation y = 8x + b. Quelle est la valeur de b ?",
+     "reponse": -1,
+     "aide": "La tangente passe par le point de la courbe (2 ; C(2)) : remplace x et y.",
+     "explication": "Elle passe par (2 ; 15) : 15 = 8 × 2 + b, donc **b = −1**, et y = 8x − 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea2039a8-af84-59ed-be7f-0056129fbeb3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fusée à eau de Lola",
+   "competence": "analyser-document",
+   "situation": "Lola lance une fusée à eau. Sa hauteur h(t), en mètres, t secondes après le décollage, est modélisée par h(t) = 20t − 5t². Elle a tracé la courbe et calculé des taux de variation autour de t = 1.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur de la fusée",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "h(t)",
+       "valeurs": [
+        0,
+        8.75,
+        15,
+        18.75,
+        20,
+        18.75,
+        15,
+        8.75,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "en m",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Temps t (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    },
+    {
+     "id": "taux",
+     "type": "tableau",
+     "titre": "Taux de variation de h entre 1 et 1 + k",
+     "colonnes": [
+      "k (s)",
+      "1",
+      "0,5",
+      "0,1",
+      "0,01"
+     ],
+     "lignes": [
+      [
+       "Taux (m/s)",
+       "5",
+       "7,5",
+       "9,5",
+       "9,95"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse moyenne de la fusée entre t = 1 s et t = 2 s ?",
+     "reponse": 5,
+     "unite": "m/s",
+     "aide": "Lis h(1) et h(2) sur la courbe, puis calcule le taux de variation.",
+     "explication": "(20 − 15) ÷ (2 − 1) = **5 m/s**."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche l’instant où la fusée atteint sa hauteur maximale.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "C’est le point le plus haut de la courbe.",
+     "explication": "Le maximum est atteint à t = 2 s, à **20 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quand k se rapproche de 0, vers quel nombre semblent tendre les taux du tableau ? C’est la vitesse instantanée h′(1), en m/s.",
+     "reponse": 10,
+     "unite": "m/s",
+     "aide": "Regarde la ligne « Taux » de droite à gauche : 9,5 puis 9,95…",
+     "explication": "Les taux se rapprochent de 10 : **h′(1) = 10 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au sommet de la courbe, la tangente est horizontale. Que vaut h′(2) ?",
+     "reponse": 0,
+     "aide": "Quel est le coefficient directeur d’une droite horizontale ?",
+     "explication": "Une tangente horizontale a un coefficient directeur nul : **h′(2) = 0**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La tangente en t = 1 a pour équation y = 10(t − 1) + 15. Quelle hauteur annonce-t-elle pour t = 1,5 ?",
+     "reponse": 20,
+     "unite": "m",
+     "aide": "Remplace t par 1,5 dans l’équation de la tangente.",
+     "explication": "y = 10 × 0,5 + 15 = **20 m** : un peu plus que la vraie hauteur (18,75 m), car la tangente n’est qu’une approximation proche du point."
+    }
+   ]
+  },
+  {
+   "chapitre": "abd160bf-bfc6-5b62-a306-312761dafa09",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les fonctions du bureau d’études",
+   "competence": "calculer",
+   "situation": "Maëlys, technicienne dans un bureau d’études, doit dériver quatre fonctions avant une réunion. Elle les a rangées dans un tableau.",
+   "documents": [
+    {
+     "id": "fonctions",
+     "type": "tableau",
+     "titre": "Quatre fonctions à dériver",
+     "colonnes": [
+      "Fonction",
+      "Expression"
+     ],
+     "lignes": [
+      [
+       "A",
+       "4x²"
+      ],
+      [
+       "B",
+       "x³ + 5x"
+      ],
+      [
+       "C",
+       "3x − 7"
+      ],
+      [
+       "D",
+       "x² − 6x"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque fonction à sa dérivée.",
+     "paires": [
+      [
+       "4x²",
+       "8x"
+      ],
+      [
+       "x³ + 5x",
+       "3x² + 5"
+      ],
+      [
+       "3x − 7",
+       "3"
+      ],
+      [
+       "x² − 6x",
+       "2x − 6"
+      ]
+     ],
+     "aide": "On dérive terme à terme : x² donne 2x, x³ donne 3x², x donne 1, une constante donne 0.",
+     "explication": "4x² → 4 × 2x = 8x ; x³ + 5x → 3x² + 5 ; 3x − 7 → 3 ; x² − 6x → 2x − 6."
+    },
+    {
+     "type": "zone",
+     "document": "fonctions",
+     "enonce": "Touche l’expression de la fonction dont la dérivée est une constante.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Quelle fonction n’a pas de terme en x² ni en x³ ?",
+     "explication": "La fonction **C** : sa dérivée vaut toujours 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule D′(2), où D(x) = x² − 6x.",
+     "reponse": -2,
+     "aide": "D′(x) = 2x − 6. Remplace x par 2.",
+     "explication": "D′(2) = 2 × 2 − 6 = **−2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur l’intervalle ]0 ; 2[, que fait la fonction D ?",
+     "options": [
+      "Elle décroît, car D′(x) est négatif",
+      "Elle croît, car D′(x) est positif",
+      "Elle est constante",
+      "Elle atteint un maximum"
+     ],
+     "reponse": 0,
+     "aide": "D′(x) = 2x − 6 est négatif tant que x < 3.",
+     "explication": "Pour x < 3, D′(x) = 2x − 6 < 0 : D est **décroissante** sur ]0 ; 2[."
+    }
+   ]
+  },
+  {
+   "chapitre": "abd160bf-bfc6-5b62-a306-312761dafa09",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bénéfice de l’atelier de céramique",
+   "competence": "modeliser",
+   "situation": "Un atelier de céramique réalise le bénéfice B(x) = −3x² + 18x − 15, en centaines d’euros, pour x centaines d’objets vendus (0 ≤ x ≤ 6). Son comptable a commencé le tableau de variations de B.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Tableau de variations de B (début de copie)",
+     "colonnes": [
+      "x",
+      "0",
+      "a",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Signe de B′(x)",
+       "+",
+       "0",
+       "−"
+      ],
+      [
+       "Variations de B",
+       "croissante",
+       "maximum",
+       "décroissante"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "On a B′(x) = −6x + 18. Calcule B′(2).",
+     "reponse": 6,
+     "aide": "Remplace x par 2 dans −6x + 18.",
+     "explication": "B′(2) = −6 × 2 + 18 = **6** : le bénéfice augmente encore à 200 objets."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le maximum est atteint en x = a, là où B′ s’annule. Résous −6x + 18 = 0 : que vaut a ?",
+     "reponse": 3,
+     "aide": "−6x + 18 = 0 revient à 6x = 18.",
+     "explication": "−6x + 18 = 0 donne x = 18 ÷ 6 = **3** : le bénéfice est maximal pour 300 objets."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le bénéfice maximal, en euros ?",
+     "reponse": 1200,
+     "unite": "€",
+     "aide": "Pour une valeur d’extremum, on remplace x dans B, pas dans B′. N’oublie pas : B est en centaines d’euros.",
+     "explication": "B(3) = −27 + 54 − 15 = 12 centaines d’euros, soit **1 200 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le bénéfice de l’atelier pour 500 objets (x = 5), en euros ?",
+     "reponse": 0,
+     "unite": "€",
+     "aide": "Calcule B(5) = −3 × 25 + 18 × 5 − 15.",
+     "explication": "B(5) = −75 + 90 − 15 = **0** : à 500 objets l’atelier ne gagne rien, mais ne perd rien non plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "abd160bf-bfc6-5b62-a306-312761dafa09",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les montagnes russes du parc",
+   "competence": "modeliser",
+   "situation": "Un parc de loisirs étudie un tronçon de montagnes russes. L’altitude de la rame, en mètres, à x dizaines de mètres du départ, est h(x). Le bureau d’études fournit la courbe et la notice de calcul.",
+   "documents": [
+    {
+     "id": "profil",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Profil du tronçon",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "h(x)",
+       "valeurs": [
+        30,
+        19,
+        8,
+        3,
+        10,
+        35
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Altitude",
+      "unite": "en m",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Distance x (dizaines de m)"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Notice de conception",
+     "sousTitre": "Sur [0 ; 5]",
+     "lignes": [
+      {
+       "texte": "h(x)",
+       "valeur": "x³ − 3x² − 9x + 30"
+      },
+      {
+       "texte": "h′(x)",
+       "valeur": "3x² − 6x − 9 = 3(x − 3)(x + 1)"
+      }
+     ],
+     "pied": "Notice imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "profil",
+     "enonce": "Touche le point le plus bas du tronçon.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la plus petite altitude de la courbe.",
+     "explication": "Le point le plus bas est celui d’abscisse x = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule h′(1) avec la notice. Que vaut la pente de la tangente en x = 1 ?",
+     "reponse": -12,
+     "aide": "h′(x) = 3x² − 6x − 9 : remplace x par 1.",
+     "explication": "h′(1) = 3 − 6 − 9 = **−12** : la rame descend à cet endroit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec h′(x) = 3(x − 3)(x + 1), quel est le signe de h′ sur ]0 ; 3[, et que fait h ?",
+     "options": [
+      "h′ est négatif : h descend",
+      "h′ est positif : h monte",
+      "h′ est nul : h est constante",
+      "h′ change de signe deux fois"
+     ],
+     "reponse": 0,
+     "aide": "Sur ]0 ; 3[, x − 3 est négatif et x + 1 est positif.",
+     "explication": "Un produit d’un facteur négatif par deux facteurs positifs est **négatif** : h est décroissante sur ]0 ; 3[."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’altitude minimale est atteinte en x = 3, là où h′ s’annule en passant de − à +. Calcule-la.",
+     "reponse": 3,
+     "unite": "m",
+     "aide": "Remplace x par 3 dans h, et non dans h′ (qui donne 0).",
+     "explication": "h(3) = 27 − 27 − 27 + 30 = **3 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quelle hauteur la rame remonte-t-elle entre x = 3 et x = 5 ?",
+     "reponse": 32,
+     "unite": "m",
+     "aide": "Compare h(5) et h(3), lues sur le profil.",
+     "explication": "h(5) − h(3) = 35 − 3 = **32 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3750939c-e3db-539b-ab9e-210a5ef0b123",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La publicité de la boulangerie",
+   "competence": "calculer",
+   "situation": "Une boulangerie compare ses dépenses de publicité x (en centaines d’euros) et ses ventes de la semaine y (en centaines de baguettes), sur cinq semaines.",
+   "documents": [
+    {
+     "id": "serie",
+     "type": "tableau",
+     "titre": "Publicité et ventes",
+     "colonnes": [
+      "x (centaines d’€)",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "y (centaines de baguettes)",
+       12,
+       15,
+       17,
+       21,
+       25
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serie",
+     "enonce": "Touche la semaine où les ventes ont été les plus élevées.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Cherche la plus grande valeur de y.",
+     "explication": "Les ventes sont les plus élevées avec 5 centaines d’euros de publicité : **25** centaines de baguettes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne x̄ des dépenses de publicité ?",
+     "reponse": 3,
+     "aide": "(1 + 2 + 3 + 4 + 5) ÷ 5.",
+     "explication": "15 ÷ 5 = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne ȳ des ventes ?",
+     "reponse": 18,
+     "aide": "Additionne les cinq valeurs de y, puis divise par 5.",
+     "explication": "(12 + 15 + 17 + 21 + 25) ÷ 5 = 90 ÷ 5 = **18**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces points, lequel est certainement sur la droite des moindres carrés de la série ?",
+     "options": [
+      "G(3 ; 18), le point moyen",
+      "A(1 ; 12), le premier point",
+      "B(5 ; 25), le dernier point",
+      "C(3 ; 90)"
+     ],
+     "reponse": 0,
+     "aide": "Cette droite passe par un point particulier construit avec les moyennes.",
+     "explication": "La droite des moindres carrés passe toujours par le **point moyen G(x̄ ; ȳ) = (3 ; 18)**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3750939c-e3db-539b-ab9e-210a5ef0b123",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La campagne de vaccination",
+   "competence": "modeliser",
+   "situation": "Un centre de santé suit le nombre de personnes vaccinées chaque semaine (en dizaines). Pour prévoir la suite, Hugo veut ajuster le nuage de points par une droite, avec la méthode de Mayer.",
+   "documents": [
+    {
+     "id": "vacc",
+     "type": "tableau",
+     "titre": "Vaccinations par semaine",
+     "colonnes": [
+      "Semaine x",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Vaccinés y (dizaines)",
+       3,
+       6,
+       9,
+       14,
+       18,
+       22
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vacc",
+     "enonce": "Hugo forme un premier groupe avec les semaines 1 à 3. Touche les trois valeurs de y de ce groupe.",
+     "reponse": [
+      "r0c1",
+      "r0c2",
+      "r0c3"
+     ],
+     "multiple": true,
+     "aide": "Les semaines 1, 2 et 3 sont les trois premières colonnes.",
+     "explication": "Le groupe 1 contient les valeurs **3, 6 et 9**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le point moyen G1 du groupe 1 a pour abscisse 2. Quelle est son ordonnée ?",
+     "reponse": 6,
+     "aide": "Moyenne de 3, 6 et 9.",
+     "explication": "(3 + 6 + 9) ÷ 3 = **6** : G1(2 ; 6)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le point moyen G2 du groupe 2 (semaines 4 à 6) a pour abscisse 5. Quelle est son ordonnée ?",
+     "reponse": 18,
+     "aide": "Moyenne de 14, 18 et 22.",
+     "explication": "(14 + 18 + 22) ÷ 3 = **18** : G2(5 ; 18)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient directeur de la droite (G1G2) ?",
+     "reponse": 4,
+     "aide": "(y de G2 − y de G1) ÷ (x de G2 − x de G1).",
+     "explication": "(18 − 6) ÷ (5 − 2) = 12 ÷ 3 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La droite a pour équation y = 4x + b. Quelle vaccination la droite prévoit-elle pour la semaine 7 (en dizaines) ?",
+     "reponse": 26,
+     "unite": "dizaines",
+     "aide": "Trouve d’abord b avec G1 : 6 = 4 × 2 + b. Puis calcule y pour x = 7.",
+     "explication": "b = 6 − 8 = −2, donc y = 4x − 2. Pour x = 7 : 28 − 2 = **26**. C’est une extrapolation : à prendre avec prudence."
+    }
+   ]
+  },
+  {
+   "chapitre": "3750939c-e3db-539b-ab9e-210a5ef0b123",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La croissance d’une plante au laboratoire",
+   "competence": "raisonner",
+   "situation": "Clara mesure chaque semaine la hauteur d’une plante. Elle a saisi les mesures dans un tableur, qui propose un ajustement affine. Elle doit juger ce qu’il vaut.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Hauteur de la plante",
+     "colonnes": [
+      "Semaine x",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Hauteur y (cm)",
+       3,
+       5,
+       6,
+       8,
+       8
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "tableur",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Sortie du tableur",
+     "sousTitre": "Moindres carrés",
+     "emoji": "📈",
+     "lignes": [
+      {
+       "texte": "Droite d’ajustement",
+       "valeur": "y = 1,3x + 2,1"
+      }
+     ],
+     "pied": "Résultat obtenu pour la série ci-dessus"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur moyenne ȳ des cinq mesures ?",
+     "reponse": 6,
+     "unite": "cm",
+     "aide": "(3 + 5 + 6 + 8 + 8) ÷ 5.",
+     "explication": "30 ÷ 5 = **6 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le point moyen G(3 ; 6) est-il sur la droite y = 1,3x + 2,1 ?",
+     "options": [
+      "Oui, car 1,3 × 3 + 2,1 = 6",
+      "Non, car 1,3 × 3 + 2,1 = 6,9",
+      "Non, car 1,3 × 3 + 2,1 = 3,9",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "aide": "Remplace x par 3 dans l’équation et compare avec 6.",
+     "explication": "1,3 × 3 + 2,1 = 3,9 + 2,1 = 6 : **G est sur la droite**, comme toujours pour les moindres carrés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À la semaine 5, de combien l’ajustement dépasse-t-il la mesure réelle ? (écart en cm, valeur positive)",
+     "reponse": 0.6,
+     "unite": "cm",
+     "aide": "Calcule 1,3 × 5 + 2,1 puis compare à 8 cm.",
+     "explication": "1,3 × 5 + 2,1 = 8,6 ; la mesure est 8 : l’ajustement dépasse la mesure de **0,6 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Selon la droite, quelle hauteur aurait la plante à la semaine 20 (en cm) ?",
+     "reponse": 28.1,
+     "unite": "cm",
+     "aide": "Remplace x par 20 dans y = 1,3x + 2,1.",
+     "explication": "1,3 × 20 + 2,1 = 26 + 2,1 = **28,1 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Clara annonce « la plante mesurera 28,1 cm en semaine 20 ». Que lui répondre ?",
+     "options": [
+      "Extrapolation lointaine : la tendance peut ne pas durer",
+      "C’est sûr : la droite passe par le point moyen G de la série",
+      "C’est sûr : l’ajustement est très bon sur les cinq semaines",
+      "C’est faux : une hauteur doit être un nombre entier de cm"
+     ],
+     "reponse": 0,
+     "aide": "Est-ce que la semaine 20 est dans l’intervalle des mesures (1 à 5) ?",
+     "explication": "La semaine 20 est **très loin** des données observées : un ajustement est un modèle, pas une preuve que la tendance continue."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca9f1ae2-2afb-51a8-868b-30acfbebd037",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vaccination à la maison de santé",
+   "competence": "lire-tableau",
+   "situation": "Une maison de santé a relevé, sur 200 patients, s’ils avaient été vaccinés contre la grippe (V) et s’ils ont été malades cet hiver (M). Un patient est choisi au hasard.",
+   "documents": [
+    {
+     "id": "croise",
+     "type": "tableau",
+     "titre": "Patients selon la vaccination et la maladie",
+     "colonnes": [
+      "",
+      "Malades",
+      "Non malades",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Vaccinés",
+       6,
+       114,
+       120
+      ],
+      [
+       "Non vaccinés",
+       16,
+       64,
+       80
+      ],
+      [
+       "Total",
+       22,
+       178,
+       200
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "croise",
+     "enonce": "Touche l’effectif des patients vaccinés ET malades (V ∩ M).",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Croise la ligne « Vaccinés » et la colonne « Malades ».",
+     "explication": "Il y a **6** patients vaccinés et malades."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité P(V) que le patient soit vacciné ?",
+     "reponse": 0.6,
+     "aide": "Effectif des vaccinés ÷ effectif total.",
+     "explication": "120 ÷ 200 = **0,6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité que le patient soit malade sachant qu’il est vacciné, P_V(M) ?",
+     "reponse": 0.05,
+     "aide": "On se limite aux vaccinés : divise par leur effectif (120), pas par 200.",
+     "explication": "P_V(M) = 6 ÷ 120 = **0,05**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi les non vaccinés, 16 ÷ 80 = 0,2 sont malades. Que peut-on dire ?",
+     "options": [
+      "Les non vaccinés sont plus souvent malades que les vaccinés",
+      "Les vaccinés sont plus souvent malades que les non vaccinés",
+      "La vaccination ne change rien",
+      "Les vaccinés sont plus nombreux, donc plus malades"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,2 et P_V(M) = 0,05.",
+     "explication": "0,2 > 0,05 : **les non vaccinés sont plus souvent malades**. On compare des proportions, pas des effectifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca9f1ae2-2afb-51a8-868b-30acfbebd037",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux machines, un contrôle qualité",
+   "competence": "modeliser",
+   "situation": "Dans une usine, la machine A fabrique 60 % des pièces et la machine B les 40 % restantes. Un pourcentage de pièces est défectueux (D) selon la machine. On prélève une pièce au hasard.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre pondéré du contrôle",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 125,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        65
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 69,
+       "texte": "A",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 82,
+       "texte": "0,6",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        35
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 40,
+       "texte": "0,02",
+       "ancre": "debut",
+       "id": "pD_A",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 39,
+       "texte": "D",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        95
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 100,
+       "texte": "0,98",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 99,
+       "texte": "non D",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        185
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 189,
+       "texte": "B",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 176,
+       "texte": "0,4",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        185
+       ],
+       "a": [
+        246,
+        155
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 160,
+       "texte": "0,05",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 159,
+       "texte": "D",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        185
+       ],
+       "a": [
+        246,
+        215
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 220,
+       "texte": "0,95",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 219,
+       "texte": "non D",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 244,
+       "texte": "A, B : la pièce vient de la machine A, B — D : défectueuse",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche la probabilité qu’une pièce soit défectueuse sachant qu’elle vient de la machine A.",
+     "reponse": [
+      "pD_A"
+     ],
+     "aide": "C’est une branche du second niveau, sous A.",
+     "explication": "Il s’agit de **P_A(D) = 0,02**, sur la branche qui part de A vers D."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité P(A ∩ D) qu’une pièce vienne de A et soit défectueuse ?",
+     "reponse": 0.012,
+     "aide": "On multiplie le long du chemin A puis D.",
+     "explication": "P(A ∩ D) = 0,6 × 0,02 = **0,012**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité P(D) qu’une pièce soit défectueuse ?",
+     "reponse": 0.032,
+     "aide": "Additionne les deux chemins qui mènent à D : par A et par B.",
+     "explication": "P(D) = 0,6 × 0,02 + 0,4 × 0,05 = 0,012 + 0,02 = **0,032**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La pièce est défectueuse. Quelle est la probabilité qu’elle vienne de la machine A, P_D(A) ?",
+     "reponse": 0.375,
+     "aide": "P_D(A) = P(A ∩ D) ÷ P(D).",
+     "explication": "P_D(A) = 0,012 ÷ 0,032 = **0,375**, soit 3/8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les événements A et D sont-ils indépendants ?",
+     "options": [
+      "Non, car P_A(D) ≠ P(D)",
+      "Oui, car P_A(D) est petit",
+      "Oui, car P(A) est élevé",
+      "Non, car A et D sont incompatibles"
+     ],
+     "reponse": 0,
+     "aide": "A et D sont indépendants si P_A(D) = P(D).",
+     "explication": "0,02 ≠ 0,032 : savoir que la pièce vient de A change la probabilité qu’elle soit défectueuse. Ils **ne sont pas indépendants**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca9f1ae2-2afb-51a8-868b-30acfbebd037",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le test de dépistage",
+   "competence": "raisonner",
+   "situation": "Une maladie touche 10 % d’une population. Un laboratoire teste un dépistage dont la notice indique ses performances. Julie doit comprendre ce que signifie un test positif.",
+   "documents": [
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Notice du test",
+     "sousTitre": "Dépistage rapide",
+     "lignes": [
+      {
+       "texte": "Personnes malades (M)",
+       "valeur": "10 %"
+      },
+      {
+       "texte": "Sensibilité : P_M(T)",
+       "valeur": "90 %"
+      },
+      {
+       "texte": "Spécificité : P_non M(non T)",
+       "valeur": "80 %"
+      }
+     ],
+     "pied": "Chiffres imaginés pour l’exercice"
+    },
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre du dépistage",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 125,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        65
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 69,
+       "texte": "M",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 82,
+       "texte": "0,1",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        35
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 40,
+       "texte": "0,9",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 39,
+       "texte": "T",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        95
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 100,
+       "texte": "0,1",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 99,
+       "texte": "non T",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        185
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 189,
+       "texte": "non M",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 176,
+       "texte": "0,9",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        185
+       ],
+       "a": [
+        246,
+        155
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 208,
+       "y": 160,
+       "texte": "?",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 159,
+       "texte": "T",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        185
+       ],
+       "a": [
+        246,
+        215
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 208,
+       "y": 220,
+       "texte": "0,8",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 219,
+       "texte": "non T",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 244,
+       "texte": "M : malade — T : test positif",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Une probabilité est remplacée par « ? » dans l’arbre : c’est la probabilité d’un faux positif, P_non M(T). Quelle est-elle ?",
+     "reponse": 0.2,
+     "aide": "Les deux branches issues de « non M » ont des probabilités de somme 1.",
+     "explication": "1 − 0,8 = **0,2** : 20 % des non-malades ont un test positif (faux positifs)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité P(M ∩ T) d’être malade et positif ?",
+     "reponse": 0.09,
+     "aide": "Multiplie les branches M puis T.",
+     "explication": "P(M ∩ T) = 0,1 × 0,9 = **0,09**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité P(T) que le test soit positif ?",
+     "reponse": 0.27,
+     "aide": "Additionne P(M ∩ T) et P(non M ∩ T) = 0,9 × 0,2.",
+     "explication": "P(T) = 0,09 + 0,18 = **0,27**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le test est positif. Quelle est la probabilité d’être réellement malade, P_T(M) ? (arrondi au centième)",
+     "reponse": 0.33,
+     "tolerance": 0.005,
+     "aide": "P_T(M) = P(M ∩ T) ÷ P(T).",
+     "explication": "P_T(M) = 0,09 ÷ 0,27 = 1/3 ≈ **0,33**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie ce résultat pour Julie ?",
+     "options": [
+      "Un positif sur trois seulement est vraiment malade",
+      "Un test positif prouve qu’on est malade à coup sûr",
+      "Un test positif donne 90 % de chances d’être malade",
+      "Le test se trompe tout le temps, il est inutile"
+     ],
+     "reponse": 0,
+     "aide": "Ne confonds pas P_M(T) = 0,9 et P_T(M).",
+     "explication": "P_T(M) ≈ 0,33 : parmi les positifs, **un seul sur trois est malade**, car il y a beaucoup de faux positifs. On confond souvent P_M(T) et P_T(M)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a94d498b-a359-50fa-9e50-c0e4893612b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les deux tirs de la basketteuse",
+   "competence": "lire-tableau",
+   "situation": "Zoé réussit chaque lancer franc avec une probabilité de 0,7, indépendamment des autres. Elle tire deux fois. S désigne un lancer réussi (succès), É un lancer manqué.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre des deux lancers",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 125,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        65
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 69,
+       "texte": "S",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 82,
+       "texte": "0,7",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        35
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 40,
+       "texte": "0,7",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 39,
+       "texte": "S",
+       "ancre": "debut",
+       "id": "SS",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        95
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 100,
+       "texte": "0,3",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 99,
+       "texte": "É",
+       "ancre": "debut",
+       "id": "SE",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        185
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 189,
+       "texte": "É",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 176,
+       "texte": "0,3",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        185
+       ],
+       "a": [
+        246,
+        155
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 160,
+       "texte": "0,7",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 159,
+       "texte": "S",
+       "ancre": "debut",
+       "id": "ES",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        185
+       ],
+       "a": [
+        246,
+        215
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 220,
+       "texte": "0,3",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 219,
+       "texte": "É",
+       "ancre": "debut",
+       "id": "EE",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 244,
+       "texte": "Premier lancer à gauche, second lancer à droite",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Probabilités imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche l’issue « premier lancer réussi, second lancer manqué ».",
+     "reponse": [
+      "SE"
+     ],
+     "aide": "Suis le chemin : S au premier lancer, puis É au second.",
+     "explication": "C’est la feuille **É** placée sous le premier S."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de réussir les deux lancers ?",
+     "reponse": 0.49,
+     "aide": "Les lancers sont indépendants : on multiplie les probabilités le long du chemin.",
+     "explication": "0,7 × 0,7 = **0,49**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de manquer les deux lancers ?",
+     "reponse": 0.09,
+     "aide": "Chemin É puis É : 0,3 × 0,3.",
+     "explication": "0,3 × 0,3 = **0,09**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de réussir exactement un lancer sur deux ?",
+     "reponse": 0.42,
+     "aide": "Deux chemins conviennent : S puis É, et É puis S.",
+     "explication": "Chaque chemin vaut 0,7 × 0,3 = 0,21 : 2 × 0,21 = **0,42**. On vérifie : 0,49 + 0,42 + 0,09 = 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "a94d498b-a359-50fa-9e50-c0e4893612b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La roue de la fête du lycée",
+   "competence": "calculer",
+   "situation": "Pour la fête du lycée, une roue coûte 2 € la partie. Le gain net du joueur (gain moins la mise) peut valoir −2 €, 0 €, 3 € ou 8 €. Le tableau donne la loi de probabilité du gain net X.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "tableau",
+     "titre": "Loi de probabilité du gain net X",
+     "colonnes": [
+      "Gain x (€)",
+      "−2",
+      "0",
+      "3",
+      "8"
+     ],
+     "lignes": [
+      [
+       "P(X = x)",
+       "0,5",
+       "0,3",
+       "0,15",
+       "0,05"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Probabilités imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche la probabilité la plus faible de la loi.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Compare les quatre probabilités de la ligne.",
+     "explication": "La plus faible est **0,05**, pour le gain net de 8 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de gagner de l’argent, P(X > 0) ?",
+     "reponse": 0.2,
+     "aide": "Additionne les probabilités des gains positifs.",
+     "explication": "P(X > 0) = 0,15 + 0,05 = **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance E(X) du gain net, en euros.",
+     "reponse": -0.15,
+     "unite": "€",
+     "aide": "E(X) = −2 × 0,5 + 0 × 0,3 + 3 × 0,15 + 8 × 0,05.",
+     "explication": "E(X) = −1 + 0 + 0,45 + 0,4 = **−0,15 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie E(X) = −0,15 ?",
+     "options": [
+      "Jeu défavorable : le joueur perd 0,15 € en moyenne par partie",
+      "Le jeu est équitable : personne ne gagne ni ne perd",
+      "À chaque partie, le joueur perd exactement 0,15 €",
+      "Le joueur gagne en moyenne 0,15 € par partie"
+     ],
+     "reponse": 0,
+     "aide": "Un jeu est équitable quand E(X) = 0.",
+     "explication": "E(X) < 0 : le jeu est **défavorable** au joueur, en moyenne sur un grand nombre de parties. Ce n’est pas ce qui arrive à chaque partie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 200 parties, quel gain total moyen peut espérer le joueur, en euros ?",
+     "reponse": -30,
+     "unite": "€",
+     "aide": "Multiplie l’espérance par le nombre de parties.",
+     "explication": "200 × (−0,15) = **−30 €** en moyenne."
+    }
+   ]
+  },
+  {
+   "chapitre": "a94d498b-a359-50fa-9e50-c0e4893612b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le contrôle d’une machine de découpe",
+   "competence": "raisonner",
+   "situation": "Dans un atelier, une machine fabrique des pièces conformes avec la probabilité 0,9. Le responsable qualité prélève 3 pièces au hasard, indépendamment, puis s’intéresse à la fiabilité de ses fréquences sur de grands échantillons.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Contrôle qualité",
+     "sousTitre": "Atelier de découpe",
+     "lignes": [
+      {
+       "texte": "Pièce conforme",
+       "valeur": "p = 0,9"
+      },
+      {
+       "texte": "Pièces prélevées",
+       "valeur": "3, indépendantes"
+      }
+     ],
+     "pied": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "disp",
+     "type": "tableau",
+     "titre": "Dispersion des fréquences (de l’ordre de 1 ÷ √n)",
+     "colonnes": [
+      "Taille n de l’échantillon",
+      "100",
+      "400",
+      "1 600"
+     ],
+     "lignes": [
+      [
+       "Dispersion",
+       "0,1",
+       "?",
+       "0,025"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité que les 3 pièces soient conformes ?",
+     "reponse": 0.729,
+     "aide": "Un seul chemin : conforme trois fois de suite.",
+     "explication": "0,9 × 0,9 × 0,9 = **0,729**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’exactement une pièce soit défectueuse ?",
+     "reponse": 0.243,
+     "aide": "Il y a 3 chemins : la pièce défectueuse peut être la première, la deuxième ou la troisième.",
+     "explication": "3 × 0,9 × 0,9 × 0,1 = 3 × 0,081 = **0,243**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’au moins une pièce soit défectueuse ?",
+     "reponse": 0.271,
+     "aide": "C’est le contraire de « aucune pièce défectueuse ».",
+     "explication": "1 − 0,729 = **0,271**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Complète la case « ? » du tableau : quelle est la dispersion pour n = 400 ?",
+     "reponse": 0.05,
+     "aide": "Calcule 1 ÷ √400, sachant que √400 = 20.",
+     "explication": "1 ÷ 20 = **0,05** : quand n est multiplié par 4, la dispersion est divisée par 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour obtenir une dispersion de 0,01, quelle taille d’échantillon faut-il ?",
+     "reponse": 10000,
+     "aide": "Résous 1 ÷ √n = 0,01 : √n = 100.",
+     "explication": "√n = 1 ÷ 0,01 = 100, donc n = 100² = **10 000**. Diviser par k la dispersion demande de multiplier n par k²."
+    }
+   ]
+  },
+  {
+   "chapitre": "70d0856e-6eb3-5960-9263-65d06c3dd531",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La convocation à l’épreuve de maths",
+   "competence": "analyser-document",
+   "situation": "Noa, élève de 1re technologique, reçoit la convocation à l’épreuve anticipée de mathématiques. Il veut organiser sa préparation.",
+   "documents": [
+    {
+     "id": "convoc",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "Convocation",
+     "sousTitre": "Épreuve anticipée de mathématiques",
+     "lignes": [
+      {
+       "texte": "Durée",
+       "valeur": "2 heures"
+      },
+      {
+       "texte": "Calculatrice",
+       "valeur": "non autorisée",
+       "id": "calc"
+      },
+      {
+       "texte": "Coefficient",
+       "valeur": "2"
+      },
+      {
+       "texte": "Partie 1 : automatismes (QCM)",
+       "valeur": "6 points"
+      },
+      {
+       "texte": "Partie 2 : exercices guidés",
+       "valeur": "14 points"
+      }
+     ],
+     "pied": "Document imaginé pour l’exercice"
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Gestion des 2 heures",
+     "colonnes": [
+      "Temps",
+      "Étape"
+     ],
+     "lignes": [
+      [
+       "0 – 25 min",
+       "QCM d’automatismes"
+      ],
+      [
+       "25 – 110 min",
+       "Exercices"
+      ],
+      [
+       "110 – 120 min",
+       "Relecture"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "convoc",
+     "enonce": "Touche la ligne qui dit si l’on peut utiliser une calculatrice.",
+     "reponse": [
+      "calc"
+     ],
+     "aide": "Cherche le mot « Calculatrice ».",
+     "explication": "La calculatrice **n’est pas autorisée** : il faut s’entraîner à calculer de tête."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de points l’épreuve rapporte-t-elle au total (partie 1 + partie 2) ?",
+     "reponse": 20,
+     "unite": "points",
+     "aide": "Additionne les points des deux parties.",
+     "explication": "6 + 14 = **20 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes le planning prévoit-il pour les exercices ?",
+     "reponse": 85,
+     "unite": "min",
+     "aide": "Durée = fin − début de l’étape « Exercices ».",
+     "explication": "110 − 25 = **85 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Noa bloque sur une question du QCM. Que doit-il faire ?",
+     "options": [
+      "Passer à la suivante et y revenir à la fin",
+      "Rester dessus jusqu’à trouver",
+      "Laisser la question sans y revenir",
+      "Répondre au hasard sans relire"
+     ],
+     "reponse": 0,
+     "aide": "Une question sautée ne rapporte rien, mais bloquer coûte du temps.",
+     "explication": "Le plus efficace est de **passer et revenir à la fin**, avec le temps de relecture prévu au planning."
+    }
+   ]
+  },
+  {
+   "chapitre": "70d0856e-6eb3-5960-9263-65d06c3dd531",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les automatismes sans calculatrice",
+   "competence": "calculer",
+   "situation": "Léa s’entraîne aux automatismes, sans calculatrice. Elle a noté la proposition du QCM sur 0,9² et le ticket d’un achat à 120 € sur lequel un magasin applique une remise de 15 %.",
+   "documents": [
+    {
+     "id": "qcm",
+     "type": "tableau",
+     "titre": "QCM : combien vaut 0,9² ?",
+     "colonnes": [
+      "Réponse A",
+      "Réponse B",
+      "Réponse C",
+      "Réponse D"
+     ],
+     "lignes": [
+      [
+       "0,18",
+       "0,81",
+       "0,9",
+       "1,8"
+      ]
+     ]
+    },
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Magasin Atelier-Pro",
+     "sousTitre": "Tenues de travail",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "Blouse",
+       "valeur": "48,00 €"
+      },
+      {
+       "texte": "Pantalon",
+       "valeur": "72,00 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL avant remise",
+       "valeur": "120,00 €",
+       "gras": true
+      }
+     ],
+     "pied": "Remise : 15 % sur le total — ticket imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "qcm",
+     "enonce": "0,9 est inférieur à 1, donc 0,9² est plus petit que 0,9. Touche les deux réponses qu’on peut éliminer tout de suite.",
+     "reponse": [
+      "r0c2",
+      "r0c3"
+     ],
+     "multiple": true,
+     "aide": "Garde seulement les réponses plus petites que 0,9.",
+     "explication": "Les réponses C (0,9) et D (1,8) sont **trop grandes** : 0,9² est plus petit que 0,9."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien vaut 0,9² ? (Pense à 9 × 9.)",
+     "reponse": 0.81,
+     "aide": "9 × 9 = 81, puis place la virgule : deux décimales.",
+     "explication": "0,9 × 0,9 = **0,81** (réponse B)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le montant à payer après la remise de 15 % sur 120 € ?",
+     "reponse": 102,
+     "unite": "€",
+     "aide": "Coefficient multiplicateur : 1 − 0,15 = 0,85. Ou calcule 10 % puis 5 %.",
+     "explication": "0,85 × 120 = 120 − 18 = **102 €** (10 % = 12 €, 5 % = 6 €)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un prix augmente de 10 %, puis baisse de 10 %. Quelle est l’évolution globale, en pourcentage ?",
+     "reponse": -1,
+     "unite": "%",
+     "aide": "Multiplie les coefficients 1,1 et 0,9 : on n’additionne jamais des pourcentages successifs.",
+     "explication": "1,1 × 0,9 = 0,99 : le prix baisse de **1 %**, et non de 0 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "70d0856e-6eb3-5960-9263-65d06c3dd531",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La copie de Sofiane",
+   "competence": "raisonner",
+   "situation": "Sofiane s’entraîne sur un extrait d’exercice guidé. Il a rédigé une copie, mais un résultat est faux. À toi de jouer le rôle du correcteur.",
+   "documents": [
+    {
+     "id": "enonce",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Exercice (extrait)",
+     "blocs": [
+      "Un atelier réalise un bénéfice B(x) = −x² + 8x − 7, en milliers d’euros, pour x centaines d’objets (0 ≤ x ≤ 8).",
+      "1. Calculer B′(x).",
+      "2. Étudier le signe de B′(x) et en déduire les variations de B.",
+      "3. Déterminer le bénéfice maximal."
+     ]
+    },
+    {
+     "id": "copie",
+     "type": "tableau",
+     "titre": "La copie de Sofiane",
+     "colonnes": [
+      "Question",
+      "Ce que Sofiane a écrit"
+     ],
+     "lignes": [
+      [
+       "1",
+       "B′(x) = −2x + 8"
+      ],
+      [
+       "2",
+       "B′(x) = 0 pour x = 4 ; B croît puis décroît"
+      ],
+      [
+       "3",
+       "Maximum : B′(4) = 0"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copie",
+     "enonce": "Touche la ligne de la copie qui contient l’erreur classique de méthode.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Pour un extremum, dans quelle fonction remplace-t-on x ?",
+     "explication": "À la question 3, Sofiane a remplacé x dans B′ (il trouve 0) au lieu de B : on calcule la **valeur du maximum dans B**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule correctement B(4), en milliers d’euros.",
+     "reponse": 9,
+     "unite": "milliers d’€",
+     "aide": "B(4) = −4² + 8 × 4 − 7 : attention, −16 et non +16.",
+     "explication": "B(4) = −16 + 32 − 7 = **9** milliers d’euros."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de la question 3 est correcte et complète (avec l’unité) ?",
+     "options": [
+      "Le bénéfice maximal est de 9 000 € pour 400 objets",
+      "Le bénéfice maximal est de 9 € pour 4 objets",
+      "Le bénéfice maximal est de 9 000 € pour 4 objets",
+      "Le bénéfice maximal est de 0 € pour 400 objets"
+     ],
+     "reponse": 0,
+     "aide": "x est en centaines d’objets et B en milliers d’euros.",
+     "explication": "x = 4 centaines : 400 objets ; B = 9 milliers : **9 000 €**. Une conclusion rédigée donne la phrase et l’unité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sofiane ne sait pas faire la question 2. Pour la question 3, que peut-il faire ?",
+     "options": [
+      "Admettre le résultat de la 2 et continuer",
+      "Abandonner aussi la question 3 sans rien écrire",
+      "Recopier l’énoncé en entier à la place",
+      "Inventer un résultat sans le préciser"
+     ],
+     "reponse": 0,
+     "aide": "Dans un exercice guidé, une question s’appuie sur la précédente.",
+     "explication": "On peut **admettre le résultat** d’une question et l’utiliser : un raisonnement juste, même inachevé, rapporte des points."
+    }
+   ]
+  }
+ ]
+}

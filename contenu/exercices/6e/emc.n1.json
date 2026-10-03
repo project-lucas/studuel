@@ -1,0 +1,2516 @@
+{
+ "niveau": "6e",
+ "matiere": "emc",
+ "exercices": [
+  {
+   "chapitre": "0165dc05-4a53-5233-b1a2-4a0dbe4ac780",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le groupe de la 6e B",
+   "competence": "analyser-document",
+   "situation": "Dans le groupe de messages de la 6e B, plusieurs élèves se moquent de Lola, qui n’y est pas. Tu lis leur conversation pour savoir si c’est du harcèlement.",
+   "documents": [
+    {
+     "id": "groupe",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le groupe de la 6e B",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sacha",
+       "emoji": "🧒",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Regardez la photo de Lola à la cantine 😂"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Encore son sac tout abîmé ! Je l’appelle [[s|Limace]] maintenant."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Lundi on l’a mise à l’écart au foot. Mardi aussi. Et on lui a pris son cartable."
+      },
+      {
+       "qui": "Nina",
+       "texte": "On recommence demain : personne ne lui parle."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Au fait, qui a fini l’exercice de maths ?"
+      }
+     ],
+     "source": "Conversation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "groupe",
+     "enonce": "Touche le surnom que le groupe donne à Lola.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche le mot que Tom emploie pour « appeler » Lola.",
+     "explication": "Le surnom est **Limace**. Un surnom moqueur répété est une forme de harcèlement verbal."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle du cours.",
+     "texte": "Une moquerie ___ contre la même personne, par un ___, c’est du harcèlement.",
+     "reponses": [
+      [
+       "répétée",
+       "repetee"
+      ],
+      [
+       "groupe"
+      ]
+     ],
+     "banque": [
+      "répétée",
+      "groupe",
+      "unique",
+      "ami"
+     ],
+     "aide": "Dans la conversation, ça recommence lundi, mardi, demain… et ils sont plusieurs.",
+     "explication": "Le harcèlement est une violence **répétée**, souvent menée par un **groupe** contre quelqu’un qui ne peut pas se défendre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque geste à sa forme de harcèlement.",
+     "paires": [
+      [
+       "Le surnom « Limace »",
+       "Verbale"
+      ],
+      [
+       "Personne ne lui parle",
+       "Sociale"
+      ],
+      [
+       "On lui prend son cartable",
+       "Matérielle"
+      ],
+      [
+       "La photo moquée envoyée au groupe",
+       "Cyber"
+      ],
+      [
+       "Des coups dans le couloir",
+       "Physique"
+      ]
+     ],
+     "aide": "Verbale = les mots ; sociale = l’écart ; matérielle = les affaires ; cyber = l’écran ; physique = le corps.",
+     "explication": "Insultes et surnoms : **verbale**. Mise à l’écart : **sociale**. Vol d’affaires : **matérielle**. Photo ou message en ligne : **cyber**. Coups : **physique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0165dc05-4a53-5233-b1a2-4a0dbe4ac780",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bus de 17 h 10",
+   "competence": "analyser-texte",
+   "situation": "Yanis prend le bus après les cours. Depuis lundi, il voit une scène qui le met mal à l’aise. Que peut-il faire, lui qui est témoin ?",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le témoignage de Yanis",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Je m’appelle Yanis et je prends le bus de 17 h 10. Depuis lundi, trois élèves de 3e s’en prennent à Sam, un élève de 6e.",
+      "Lundi, ils lui ont pris sa casquette. Mardi, ils ont dit qu’il sentait mauvais. Jeudi, ils ont recommencé devant tout le bus.",
+      "Quelques élèves [[e|rient]]. D’autres regardent leur téléphone. Moi, je n’ai rien dit."
+     ]
+    },
+    {
+     "id": "echange",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Yanis et Camille à la sortie",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Si tu préviens la CPE, tu vas rapporter. C’est nul !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non. Rapporter, c’est vouloir nuire à quelqu’un. Moi, je veux que Sam soit [[p|protégé]]."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Ah… alors toi, tu signales."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "D’après le témoignage, pendant combien de jours différents Sam a-t-il été embêté cette semaine ?",
+     "reponse": 3,
+     "unite": "jours",
+     "aide": "Relève les trois jours cités dans le deuxième paragraphe.",
+     "explication": "Lundi, mardi et jeudi : **3 jours**. C’est la **répétition**, un des trois éléments du harcèlement."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui montre des élèves qui encouragent les moqueries.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Un groupe qui encourage montre qu’il trouve ça drôle.",
+     "explication": "Les élèves qui **rient** encouragent les harceleurs : un groupe qui rit donne raison à celui qui se moque."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque attitude de témoin : elle encourage, ou elle protège ?",
+     "categories": [
+      "Ça encourage",
+      "Ça protège"
+     ],
+     "items": [
+      [
+       "Rire avec les autres",
+       0
+      ],
+      [
+       "Filmer la scène pour la montrer",
+       0
+      ],
+      [
+       "Regarder ailleurs sans rien dire",
+       0
+      ],
+      [
+       "Prévenir un adulte",
+       1
+      ],
+      [
+       "Aller parler à Sam après",
+       1
+      ],
+      [
+       "Dire « arrêtez » avec d’autres élèves",
+       1
+      ]
+     ],
+     "aide": "Pour le cours, ne rien faire, c’est déjà choisir un camp.",
+     "explication": "Rire, filmer et se taire **encouragent** ; prévenir un adulte, soutenir Sam et dire stop **protègent**."
+    },
+    {
+     "type": "zone",
+     "document": "echange",
+     "enonce": "Touche le mot qui montre que Yanis veut signaler, pas rapporter.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Signaler, c’est protéger quelqu’un.",
+     "explication": "Yanis veut que Sam soit **protégé** : **signaler protège**, alors que rapporter vise à nuire."
+    }
+   ]
+  },
+  {
+   "chapitre": "0165dc05-4a53-5233-b1a2-4a0dbe4ac780",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des messages à 23 h",
+   "competence": "analyser-document",
+   "situation": "Lola reçoit des messages d’un compte sans nom, le soir, dans sa chambre. Elle ne sait pas quoi faire. Tu l’aides à comprendre et à réagir.",
+   "documents": [
+    {
+     "id": "nuit",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le téléphone de Lola, 23 h 12",
+     "participants": [
+      {
+       "nom": "Compte anonyme",
+       "emoji": "👤",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lola",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Compte anonyme",
+       "texte": "Tu dors déjà ? Tout le monde a ta photo. 😂"
+      },
+      {
+       "qui": "Compte anonyme",
+       "texte": "Elle a déjà été partagée vingt fois."
+      },
+      {
+       "qui": "Lola",
+       "texte": "Laisse-moi tranquille…"
+      },
+      {
+       "qui": "Compte anonyme",
+       "texte": "Personne ne saura jamais que c’est moi. 😈"
+      },
+      {
+       "qui": "Compte anonyme",
+       "texte": "Demain, on recommence."
+      }
+     ],
+     "source": "Conversation écrite pour l’exercice"
+    },
+    {
+     "id": "numeros",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Les numéros à connaître",
+     "entete": "Besoin d’aide ?",
+     "emoji": "📞",
+     "lignes": [
+      {
+       "texte": "3018",
+       "valeur": "Harcèlement et cyberharcèlement",
+       "id": "n3018"
+      },
+      {
+       "texte": "119",
+       "valeur": "Enfance en danger",
+       "id": "n119"
+      },
+      {
+       "texte": "15",
+       "valeur": "Urgence médicale (SAMU)",
+       "id": "n15"
+      },
+      {
+       "texte": "17",
+       "valeur": "Police, gendarmerie",
+       "id": "n17"
+      }
+     ],
+     "pied": "Le 3018 est gratuit et anonyme."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de messages le compte anonyme envoie-t-il à Lola ?",
+     "reponse": 4,
+     "unite": "messages",
+     "aide": "Ne compte pas la réponse de Lola.",
+     "explication": "Le compte anonyme écrit **4 messages** : le harcèlement est **répété**, même la nuit."
+    },
+    {
+     "type": "association",
+     "enonce": "Pourquoi le cyberharcèlement est-il pire ? Relie chaque cause à sa conséquence.",
+     "paires": [
+      [
+       "Il ne s’arrête pas à la grille",
+       "Il suit la victime chez elle, la nuit"
+      ],
+      [
+       "Les traces restent",
+       "Elles se rediffusent"
+      ],
+      [
+       "Le harceleur se croit protégé",
+       "Une adresse IP s’identifie"
+      ]
+     ],
+     "aide": "Pense au message reçu à 23 h et à la photo partagée vingt fois.",
+     "explication": "À l’écran, le harcèlement **suit Lola chez elle**, les traces **se rediffusent**, et le harceleur n’est pas aussi caché qu’il le croit : une **adresse IP s’identifie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le compte écrit : « Personne ne saura jamais que c’est moi. » Est-ce vrai ?",
+     "options": [
+      "Non : une adresse IP permet de l’identifier",
+      "Oui : un compte sans nom est introuvable",
+      "Oui : seul le prénom permet de le retrouver",
+      "Oui : il suffit qu’il efface son compte"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit le cours sur l’écran qui « protège ».",
+     "explication": "Le harceleur se croit caché, mais une **adresse IP s’identifie** : il peut être retrouvé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les gestes que Lola peut faire.",
+     "items": [
+      "En parler à un adulte",
+      "Conserver les preuves par captures d’écran",
+      "Ne pas répondre aux provocations",
+      "Bloquer le compte"
+     ],
+     "aide": "On commence par chercher de l’aide, et on finit par couper le contact.",
+     "explication": "En parler à un adulte → **garder les preuves** → **ne pas répondre** → **bloquer**."
+    },
+    {
+     "type": "zone",
+     "document": "numeros",
+     "enonce": "Touche le numéro que Lola peut appeler, gratuit et anonyme, contre le cyberharcèlement.",
+     "reponse": [
+      "n3018"
+     ],
+     "aide": "Cherche la ligne qui parle de harcèlement et de cyberharcèlement.",
+     "explication": "Le **3018** répond au harcèlement et au cyberharcèlement, gratuitement et sans donner son nom."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe11dd4d-cfdf-5a34-8513-38a2d70c829d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui joue sur le terrain central ?",
+   "competence": "lire-tableau",
+   "situation": "Pendant une récréation, la classe de 6e A a compté qui occupe quelle partie de la cour. Tu lis leurs résultats.",
+   "documents": [
+    {
+     "id": "cour",
+     "type": "tableau",
+     "titre": "Les élèves présents dans la cour à 10 h",
+     "colonnes": [
+      "Endroit de la cour",
+      "Garçons",
+      "Filles"
+     ],
+     "lignes": [
+      [
+       "Terrain central",
+       18,
+       3
+      ],
+      [
+       "Bords et coins",
+       4,
+       9
+      ],
+      [
+       "Préau",
+       5,
+       8
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Comptage écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cour",
+     "enonce": "Touche le nombre de filles qui jouent sur le terrain central.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Ligne « Terrain central », colonne « Filles ».",
+     "explication": "Il y a **3 filles** sur le terrain central."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves, filles et garçons ensemble, jouent sur le terrain central ?",
+     "reponse": 21,
+     "unite": "élèves",
+     "aide": "Additionne les deux nombres de la ligne « Terrain central ».",
+     "explication": "18 + 3 = **21 élèves**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce comptage ?",
+     "options": [
+      "Le terrain central est surtout occupé par des garçons",
+      "Le terrain central est partagé à parts égales",
+      "Aucune fille ne va jamais dans la cour",
+      "Les garçons n’ont pas le droit d’aller au préau"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux nombres de la ligne « Terrain central ».",
+     "explication": "Sur le terrain central, 18 garçons pour 3 filles : l’espace est **surtout occupé par des garçons**, alors que la cour est ouverte à tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe11dd4d-cfdf-5a34-8513-38a2d70c829d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La robotique, c’est pour les garçons ?",
+   "competence": "argumenter",
+   "situation": "Anaïs voudrait s’inscrire au club de robotique du collège. Hugo lui dit que ce n’est pas pour elle. Tu analyses ce qu’il dit.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Dans la cour",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Je voudrais m’inscrire au club de robotique."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "La robotique, c’est [[g|toujours]] pour les garçons."
+      },
+      {
+       "qui": "Anaïs",
+       "texte": "Qui a dit ça ? Au collège, on a les mêmes cours et la même liberté de choisir."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "enonce": "Hugo transforme une idée en règle pour tous. Touche le mot qui le montre.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Cherche le mot qui ne laisse aucune exception.",
+     "explication": "« **Toujours** » ne laisse aucune exception : c’est la marque d’un stéréotype."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : stéréotype, ou fait que l’on peut vérifier ?",
+     "categories": [
+      "Stéréotype",
+      "Fait vérifiable"
+     ],
+     "items": [
+      [
+       "Les filles ne savent pas jouer au foot",
+       0
+      ],
+      [
+       "Les garçons ne pleurent jamais",
+       0
+      ],
+      [
+       "Les garçons sont nuls en lecture",
+       0
+      ],
+      [
+       "Il y a 14 filles dans la classe de 6e A",
+       1
+      ],
+      [
+       "Léa a eu 18 sur 20 au contrôle de maths",
+       1
+      ],
+      [
+       "Le club de robotique a lieu le mardi",
+       1
+      ]
+     ],
+     "aide": "Un fait se compte ou se vérifie ; un stéréotype range toutes les filles ou tous les garçons dans une case.",
+     "explication": "Un **stéréotype** est une idée toute faite sur « les filles » ou « les garçons » ; un **fait** se vérifie."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la règle, Anaïs peut-elle s’inscrire au club de robotique ?",
+     "options": [
+      "Oui : filles et garçons ont les mêmes droits et la même liberté",
+      "Non : la loi réserve ce club aux garçons, comme chaque année",
+      "Non : seulement si un garçon l’accompagne tout le temps",
+      "Non : seulement si elle a de meilleures notes que les garçons"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse d’Anaïs : elle dit ce que garantit la loi.",
+     "explication": "Filles et garçons ont **les mêmes droits** : même école, mêmes matières, même liberté de choisir."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe11dd4d-cfdf-5a34-8513-38a2d70c829d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une blague de trop et une photo",
+   "competence": "analyser-document",
+   "situation": "Au club photo, Nolan fait une remarque sur Jade, puis veut publier une photo d’elle. Tu relis la scène avec la règle du club.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Au club photo",
+     "participants": [
+      {
+       "nom": "Nolan",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "🧒",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nolan",
+       "texte": "Une fille qui fait du foot, c’est [[x|ridicule]]. Retourne à la corde à sauter !"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Qui veut essayer le nouvel appareil ?"
+      },
+      {
+       "qui": "Nolan",
+       "texte": "Hier Jade m’a dit oui pour la photo, je la publie."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Aujourd’hui, je ne veux plus."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "regles",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "La règle du club",
+     "entete": "Club photo",
+     "emoji": "📷",
+     "lignes": [
+      {
+       "texte": "On range le matériel après la séance.",
+       "id": "rangement"
+      },
+      {
+       "texte": "On ne diffuse l’image de quelqu’un qu’avec son accord.",
+       "id": "accord"
+      },
+      {
+       "texte": "Chacun peut essayer tous les appareils.",
+       "id": "appareils"
+      }
+     ],
+     "pied": "Règle écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "enonce": "Touche le mot de la première phrase qui rabaisse les filles.",
+     "reponse": [
+      "x"
+     ],
+     "aide": "Cherche le jugement porté sur une fille qui joue au foot.",
+     "explication": "« **Ridicule** » rabaisse les filles à cause de leur sexe : c’est du sexisme, pas une maladresse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faire face à une blague comme celle de Nolan ?",
+     "options": [
+      "Ne pas en rire et dire que ce n’est pas normal",
+      "En rire pour ne pas gâcher l’ambiance",
+      "La relayer à d’autres élèves",
+      "Ne rien dire : ce n’est qu’une maladresse"
+     ],
+     "reponse": 0,
+     "aide": "Pour le cours, ces blagues sont des atteintes, pas des maladresses.",
+     "explication": "On **ne rit pas**, on **dit que ce n’est pas normal** et, si besoin, on en parle à un adulte."
+    },
+    {
+     "type": "zone",
+     "document": "regles",
+     "enonce": "Touche la règle du club qui concerne la photo de Jade.",
+     "reponse": [
+      "accord"
+     ],
+     "aide": "Cherche la ligne qui parle de diffuser l’image de quelqu’un.",
+     "explication": "On ne diffuse l’image de quelqu’un **qu’avec son accord**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Jade avait dit oui hier, mais dit non aujourd’hui. Que doit faire Nolan ?",
+     "options": [
+      "Ne pas publier : le consentement peut être retiré",
+      "Publier la photo, car elle avait dit oui hier",
+      "Publier si les autres élèves du club sont d’accord",
+      "Publier en cachant seulement son prénom dessous"
+     ],
+     "reponse": 0,
+     "aide": "Le consentement est libre et clair, mais ce n’est pas un engagement définitif.",
+     "explication": "Le **consentement peut être retiré à tout moment** : Jade a dit non, la photo ne sort pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "74137f62-de99-5c1d-a450-5a479535c67b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les symboles sur la façade de la mairie",
+   "competence": "observer-schema",
+   "situation": "Sur le chemin de l’école, Maëlys passe devant la mairie de sa commune. Elle y repère plusieurs symboles de la République.",
+   "documents": [
+    {
+     "id": "mairie",
+     "type": "schema",
+     "titre": "La façade de la mairie",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 105,
+       "l": 260,
+       "h": 125,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         20,
+         105
+        ],
+        [
+         160,
+         52
+        ],
+        [
+         300,
+         105
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 93,
+       "texte": "MAIRIE",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        52
+       ],
+       "a": [
+        160,
+        8
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 162,
+       "y": 10,
+       "l": 14,
+       "h": 22,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "fl1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 176,
+       "y": 10,
+       "l": 14,
+       "h": 22,
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "fl2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 10,
+       "l": 14,
+       "h": 22,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "fl3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 112,
+       "l": 220,
+       "h": 22,
+       "arrondi": 4,
+       "teinte": "blanc",
+       "motif": "plein",
+       "texte": "LIBERTÉ · ÉGALITÉ · FRATERNITÉ",
+       "id": "devise",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 156,
+       "r": 15,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 158,
+       "r": 9,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "visage",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         151,
+         154
+        ],
+        [
+         160,
+         142
+        ],
+        [
+         169,
+         154
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "bonnet",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 178,
+       "l": 40,
+       "h": 52,
+       "arrondi": 10,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 150,
+       "l": 30,
+       "h": 28,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 150,
+       "l": 30,
+       "h": 28,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 190,
+       "l": 30,
+       "h": 28,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 190,
+       "l": 30,
+       "h": 28,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 230,
+       "l": 80,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 238,
+       "l": 110,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mairie",
+     "enonce": "Touche le visage de Marianne et son bonnet phrygien.",
+     "reponse": [
+      "visage",
+      "bonnet"
+     ],
+     "aide": "Cherche le médaillon rond au-dessus de la porte : il y a un visage et un petit bonnet pointu.",
+     "explication": "Marianne, coiffée du **bonnet phrygien**, représente la **liberté** et la République."
+    },
+    {
+     "type": "zone",
+     "document": "mairie",
+     "enonce": "Touche la devise de la République gravée sur la façade.",
+     "reponse": [
+      "devise"
+     ],
+     "aide": "C’est une phrase de trois mots, sous le toit.",
+     "explication": "La devise est **Liberté, Égalité, Fraternité** : elle est gravée au fronton des mairies et des écoles."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque symbole à ce qu’il est.",
+     "paires": [
+      [
+       "Le drapeau tricolore",
+       "Né en 1790, il flotte sur les bâtiments publics"
+      ],
+      [
+       "Marianne",
+       "Figure de femme coiffée du bonnet phrygien"
+      ],
+      [
+       "La Marseillaise",
+       "L’hymne national"
+      ],
+      [
+       "Le 14 Juillet",
+       "La fête nationale"
+      ]
+     ],
+     "aide": "Pense au drapeau sur la façade, au buste, au chant et à la fête du mois de juillet.",
+     "explication": "Le drapeau, Marianne, l’**hymne national** (la Marseillaise) et la **fête nationale** (le 14 Juillet) rappellent la même communauté de citoyens."
+    }
+   ]
+  },
+  {
+   "chapitre": "74137f62-de99-5c1d-a450-5a479535c67b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du 14 juillet 1789 à la fête nationale",
+   "competence": "se-reperer-temps",
+   "situation": "Pour le 14 Juillet, la mairie de Maëlys affiche une frise sur l’histoire des symboles. Tu la lis avant le défilé.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Dates des symboles",
+     "debut": 1780,
+     "fin": 1890,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "bastille",
+       "date": 1789,
+       "nom": "Bastille"
+      },
+      {
+       "id": "federation",
+       "date": 1790,
+       "nom": "Tricolore"
+      },
+      {
+       "id": "chant",
+       "date": 1792,
+       "nom": "Chant écrit"
+      },
+      {
+       "id": "hymne",
+       "date": 1879,
+       "nom": "Hymne"
+      }
+     ]
+    },
+    {
+     "id": "couleurs",
+     "type": "tableau",
+     "titre": "Le drapeau tricolore",
+     "colonnes": [
+      "Couleur",
+      "Origine"
+     ],
+     "lignes": [
+      [
+       "Bleu",
+       "Couleur de Paris"
+      ],
+      [
+       "Blanc",
+       "?"
+      ],
+      [
+       "Rouge",
+       "Couleur de Paris"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année où la Marseillaise devient l’hymne national.",
+     "reponse": [
+      "hymne"
+     ],
+     "aide": "Elle est écrite en 1792, mais elle devient hymne national bien plus tard.",
+     "explication": "Elle devient hymne national en **1879**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture de la Marseillaise (1792) de son adoption comme hymne national ?",
+     "reponse": 87,
+     "unite": "ans",
+     "aide": "Soustrais l’année de l’écriture à l’année de l’adoption.",
+     "explication": "1879 − 1792 = **87 ans**."
+    },
+    {
+     "type": "texte",
+     "document": "couleurs",
+     "enonce": "Dans le tableau, la case marquée « ? » cache l’origine du blanc. De qui est-ce la couleur ?",
+     "reponse": [
+      "le roi",
+      "roi",
+      "du roi",
+      "la couleur du roi",
+      "la monarchie",
+      "monarchie"
+     ],
+     "placeholder": "Un ou deux mots",
+     "aide": "Le tricolore réunit la ville de Paris et la monarchie.",
+     "explication": "Le blanc est la couleur du **roi** : le drapeau réunit Paris et la monarchie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la fête nationale.",
+     "texte": "Le 14 Juillet commémore la prise de la ___ en 1789 et la Fête de la ___ en 1790.",
+     "reponses": [
+      [
+       "Bastille"
+      ],
+      [
+       "Fédération"
+      ]
+     ],
+     "banque": [
+      "Bastille",
+      "Fédération",
+      "Marseillaise",
+      "République"
+     ],
+     "aide": "Deux événements, à un an d’écart : le second fêtait l’unité de la Nation.",
+     "explication": "Le 14 Juillet commémore **deux** événements : la prise de la **Bastille** (1789) et la Fête de la **Fédération** (1790)."
+    }
+   ]
+  },
+  {
+   "chapitre": "74137f62-de99-5c1d-a450-5a479535c67b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le cousin se trompe sur les symboles",
+   "competence": "analyser-texte",
+   "situation": "À la sortie du défilé, le cousin de Maëlys explique les symboles à tout le monde. Il se trompe plusieurs fois. Tu corriges.",
+   "documents": [
+    {
+     "id": "cousin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ce que dit le cousin",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "« Le coq gaulois est un symbole officiel de la République. Marianne, c’était une vraie femme qui a existé. »",
+      "« La Marseillaise s’appelle ainsi parce qu’elle a été écrite à [[m|Marseille]], en 1792. Et le drapeau tricolore est né en 1790. »",
+      "« Le 14 Juillet, on fête seulement la prise de la Bastille. Et le bonnet de Marianne, c’était celui des esclaves affranchis de Rome. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cousin",
+     "enonce": "Touche la ville que le cousin cite à tort comme lieu d’écriture de la Marseillaise.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Le chant doit son nom aux fédérés marseillais, qui le chantaient en montant à Paris.",
+     "explication": "Rouget de Lisle l’écrit à **Strasbourg**. Elle s’appelle Marseillaise parce que des **fédérés marseillais** la chantaient."
+    },
+    {
+     "type": "texte",
+     "enonce": "Dans quelle ville Rouget de Lisle a-t-il écrit ce chant en 1792 ?",
+     "reponse": [
+      "Strasbourg"
+     ],
+     "placeholder": "Une ville",
+     "aide": "C’est une ville de l’est de la France, au bord du Rhin.",
+     "explication": "Il l’écrit à **Strasbourg**, comme chant de guerre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Le cousin dit six choses. Range-les : vrai ou faux ?",
+     "categories": [
+      "Vrai",
+      "Faux"
+     ],
+     "items": [
+      [
+       "Le coq gaulois est un symbole officiel",
+       1
+      ],
+      [
+       "Marianne a réellement existé",
+       1
+      ],
+      [
+       "Le drapeau tricolore est né en 1790",
+       0
+      ],
+      [
+       "Le 14 Juillet fête un seul événement",
+       1
+      ],
+      [
+       "Les esclaves affranchis de Rome portaient le bonnet phrygien",
+       0
+      ],
+      [
+       "La Marseillaise a été écrite à Marseille",
+       1
+      ]
+     ],
+     "aide": "Le coq est un symbole ancien et non officiel ; Marianne est une figure, pas une personne.",
+     "explication": "Vrai : le tricolore date de **1790** et le bonnet vient des **affranchis de Rome**. Faux : le coq n’est **pas officiel**, Marianne est une **figure**, le 14 Juillet fête **deux** événements, la Marseillaise est née à **Strasbourg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi servent ces symboles, visibles partout ?",
+     "options": [
+      "À rappeler que les citoyens forment une même communauté",
+      "À décorer les bâtiments publics",
+      "À montrer qui sont les meilleurs élèves",
+      "À remplacer les lois votées par le Parlement"
+     ],
+     "reponse": 0,
+     "aide": "Un symbole est un raccourci qui rappelle une histoire commune.",
+     "explication": "Au-delà des différences, les citoyens appartiennent à **une même communauté politique** : les symboles le rappellent chaque jour."
+    }
+   ]
+  },
+  {
+   "chapitre": "fcdb2e20-7248-5c26-b40a-566f95c96d13",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée de Zoé au collège",
+   "competence": "lire-tableau",
+   "situation": "Zoé raconte sa journée de collégienne. Tu retrouves ce qui relève de la liberté, de l’égalité ou de la fraternité.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "La journée de Zoé",
+     "colonnes": [
+      "Heure",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "8 h",
+       "Karim donne son avis sur le menu de la cantine devant la classe."
+      ],
+      [
+       "10 h",
+       "Tous les élèves de la classe ont les mêmes cours dans la même école gratuite."
+      ],
+      [
+       "12 h",
+       "Lina voit Sofia seule au réfectoire et vient manger avec elle."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journee",
+     "enonce": "Touche la scène qui montre la fraternité.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La fraternité, c’est se sentir concerné par les autres.",
+     "explication": "Lina vient manger avec Sofia : c’est la **fraternité**, le refus de laisser quelqu’un de côté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours.",
+     "texte": "La liberté de chacun s’arrête là où commence celle des ___.",
+     "reponses": [
+      [
+       "autres"
+      ]
+     ],
+     "banque": [
+      "autres",
+      "adultes",
+      "lois",
+      "cours"
+     ],
+     "aide": "Ma liberté s’arrête quand elle gêne quelqu’un d’autre.",
+     "explication": "La liberté des uns s’arrête où commence celle des **autres**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque situation à la valeur de la devise.",
+     "paires": [
+      [
+       "Choisir de s’exprimer dans le journal du collège",
+       "Liberté"
+      ],
+      [
+       "Avoir les mêmes droits quelle que soit sa religion",
+       "Égalité"
+      ],
+      [
+       "Aider un camarade qui n’a pas compris la leçon",
+       "Fraternité"
+      ]
+     ],
+     "aide": "Liberté = penser et s’exprimer ; égalité = mêmes droits ; fraternité = entraide.",
+     "explication": "S’exprimer relève de la **liberté**, les mêmes droits pour tous de l’**égalité**, l’entraide de la **fraternité**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fcdb2e20-7248-5c26-b40a-566f95c96d13",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du temps en plus pour Samir",
+   "competence": "argumenter",
+   "situation": "Pendant un contrôle de 45 minutes, Samir, dyslexique, a le droit à 15 minutes de plus. Théo trouve ça injuste. Tu expliques.",
+   "documents": [
+    {
+     "id": "couloir",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "À la fin du contrôle",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mme Roux",
+       "emoji": "👩‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "Samir a eu 15 minutes de plus. C’est un [[p|privilège]] !"
+      },
+      {
+       "qui": "Mme Roux",
+       "texte": "Non. Ce temps en plus l’aide à lutter à armes égales avec vous."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couloir",
+     "enonce": "Touche le mot que Théo emploie à tort pour parler du temps en plus.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche le mot qui voudrait dire « avantage injuste ».",
+     "explication": "Théo parle de **privilège** : ce temps en plus n’en est pas un, il rétablit l’égalité réelle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes Samir a-t-il en tout pour le contrôle ?",
+     "reponse": 60,
+     "unite": "minutes",
+     "aide": "Ajoute le temps du contrôle (45 min) et le temps en plus.",
+     "explication": "45 + 15 = **60 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente ce temps en plus ?",
+     "options": [
+      "Une mesure d’équité",
+      "Un cadeau du professeur",
+      "Une récompense pour bon comportement",
+      "Une sanction envers les autres élèves"
+     ],
+     "reponse": 0,
+     "aide": "Traiter également des personnes en situation inégale ne suffit pas.",
+     "explication": "C’est une **mesure d’équité** : elle rétablit une égalité **réelle** entre élèves en situation différente."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple : même traitement pour tous (égalité), ou aide adaptée (équité) ?",
+     "categories": [
+      "Même traitement pour tous",
+      "Aide adaptée"
+     ],
+     "items": [
+      [
+       "Les mêmes cours pour tous les élèves de 6e",
+       0
+      ],
+      [
+       "Une rampe pour un élève en fauteuil roulant",
+       1
+      ],
+      [
+       "Le même règlement intérieur pour tous",
+       0
+      ],
+      [
+       "Du temps en plus pour un élève dyslexique",
+       1
+      ],
+      [
+       "Une aide pour payer la cantine à une famille en difficulté",
+       1
+      ],
+      [
+       "L’école gratuite pour tous",
+       0
+      ]
+     ],
+     "aide": "Se demander : tout le monde reçoit-il exactement la même chose, ou bien l’aide dépend-elle de la situation ?",
+     "explication": "Mêmes cours, même règlement et école gratuite pour tous : **égalité**. Rampe, temps en plus et aide à la cantine : **équité**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fcdb2e20-7248-5c26-b40a-566f95c96d13",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peut-on tout écrire sur le blog ?",
+   "competence": "analyser-document",
+   "situation": "Le blog du collège accepte les commentaires des élèves. Une délégation veut savoir lesquels sont permis par la loi et pourquoi les trois valeurs vont ensemble.",
+   "documents": [
+    {
+     "id": "blog",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les commentaires du blog",
+     "participants": [
+      {
+       "nom": "Élève 1",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Élève 2",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élève 1",
+       "texte": "Je trouve qu’il manque des légumes à la cantine."
+      },
+      {
+       "qui": "Élève 2",
+       "texte": "Pas d’accord avec le délégué : je pense que la sortie est trop chère."
+      },
+      {
+       "qui": "Élève 1",
+       "texte": "Tais-toi ou je vais te [[m|casser]] la figure !"
+      },
+      {
+       "qui": "Élève 2",
+       "texte": "Tu n’es qu’un [[i|abruti]]."
+      }
+     ],
+     "source": "Commentaires écrits pour l’exercice"
+    },
+    {
+     "id": "trio",
+     "type": "tableau",
+     "titre": "Les trois valeurs, seules",
+     "colonnes": [
+      "Valeur seule",
+      "Ce qu’elle produit"
+     ],
+     "lignes": [
+      [
+       "La liberté totale",
+       "?"
+      ],
+      [
+       "L’égalité absolue",
+       "?"
+      ],
+      [
+       "La fraternité",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "blog",
+     "enonce": "Touche le mot qui fait de ce commentaire une menace.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cherche ce que l’élève annonce qu’il va faire à l’autre.",
+     "explication": "« **Casser** la figure » est une menace : elle est interdite par la loi, même au nom de la liberté d’expression."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces commentaires : permis, ou interdits par la loi ?",
+     "categories": [
+      "Permis",
+      "Interdit par la loi"
+     ],
+     "items": [
+      [
+       "Il manque des légumes à la cantine",
+       0
+      ],
+      [
+       "Je ne suis pas d’accord avec le délégué",
+       0
+      ],
+      [
+       "Je te casse la figure si tu parles",
+       1
+      ],
+      [
+       "Tu n’es qu’un abruti",
+       1
+      ],
+      [
+       "Il faut haïr les élèves de la 6e C",
+       1
+      ],
+      [
+       "Une fausse rumeur qui salit un camarade",
+       1
+      ]
+     ],
+     "aide": "On peut critiquer ; on ne peut ni insulter, ni menacer, ni diffamer, ni appeler à la haine.",
+     "explication": "Donner son avis est **permis** ; l’**insulte**, la **menace**, la **diffamation** et l’**appel à la haine** sont interdits."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque valeur seule à ce qu’elle produit.",
+     "paires": [
+      [
+       "La liberté totale",
+       "Elle creuse les écarts"
+      ],
+      [
+       "L’égalité absolue",
+       "Elle supprime les choix"
+      ],
+      [
+       "La fraternité",
+       "Elle permet de tenir les deux ensemble"
+      ]
+     ],
+     "aide": "Sans règles communes, les plus forts l’emportent ; sans choix, tout est identique.",
+     "explication": "**Liberté** totale : écarts. **Égalité** absolue : plus de choix. **Fraternité** : elle permet de tenir les deux ensemble."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève voit un camarade tomber et saigner dans la cour. Il ne fait rien alors qu’il pourrait appeler. Quel délit rattache la fraternité au droit ?",
+     "options": [
+      "La non-assistance à personne en danger",
+      "La diffamation envers un camarade",
+      "Le vol de matériel scolaire",
+      "L’appel à la haine contre un groupe"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit de ne pas aider quelqu’un en danger.",
+     "explication": "La fraternité ne s’impose pas par la loi, mais la **non-assistance à personne en danger** est un délit."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebc93d31-f95a-5be1-a7e6-27c3575ae336",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’affiche du hall de Lila",
+   "competence": "analyser-document",
+   "situation": "Pour son premier jour de 6e, Lila voit une grande affiche dans le hall. Sa professeure principale lui explique ce que c’est.",
+   "documents": [
+    {
+     "id": "hall",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Dans le hall du collège",
+     "participants": [
+      {
+       "nom": "Lila",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "La professeure",
+       "emoji": "👩‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lila",
+       "texte": "C’est quoi, cette grande affiche ?"
+      },
+      {
+       "qui": "La professeure",
+       "texte": "La Charte de la laïcité à l’école. Elle compte 15 articles et elle est affichée depuis 2013."
+      },
+      {
+       "qui": "La professeure",
+       "texte": "La laïcité te laisse croire, ne pas croire, ou changer d’avis."
+      },
+      {
+       "qui": "La professeure",
+       "texte": "La loi de séparation des Églises et de l’État date de [[s|1905]] : l’État ne finance aucun culte."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’articles compte la Charte de la laïcité ?",
+     "reponse": 15,
+     "unite": "articles",
+     "aide": "La professeure donne le nombre dans sa première réponse.",
+     "explication": "La Charte compte **15 articles**."
+    },
+    {
+     "type": "zone",
+     "document": "hall",
+     "enonce": "Touche l’année de la loi qui sépare les Églises et l’État.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche la date dans la dernière réplique.",
+     "explication": "Cette loi date de **1905**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque garantie de la laïcité à ce qu’elle veut dire.",
+     "paires": [
+      [
+       "La liberté de conscience",
+       "Croire, ne pas croire, changer d’avis"
+      ],
+      [
+       "La séparation",
+       "Entre l’État et les religions"
+      ],
+      [
+       "L’égalité",
+       "De tous devant la loi, quelle que soit la croyance"
+      ]
+     ],
+     "aide": "Relis la deuxième réplique de la professeure, puis le tableau du cours.",
+     "explication": "La laïcité garantit la **liberté de conscience**, la **séparation** de l’État et des religions, et l’**égalité** de tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebc93d31-f95a-5be1-a7e6-27c3575ae336",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que la règle demande à chacun",
+   "competence": "analyser-document",
+   "situation": "Maxime vient d’arriver au collège et se pose des questions sur ce qui est permis ou non à l’école publique. Il en parle avec la CPE.",
+   "documents": [
+    {
+     "id": "regle",
+     "type": "tableau",
+     "titre": "À l’école publique",
+     "colonnes": [
+      "Qui",
+      "Ce que la règle lui demande"
+     ],
+     "lignes": [
+      [
+       "Les enseignants",
+       "Une stricte neutralité"
+      ],
+      [
+       "Les élèves",
+       "Libres de croire, mais pas de signes religieux ostensibles"
+      ],
+      [
+       "Les programmes",
+       "Les mêmes pour tous : pas de dispense au nom d’une croyance"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    },
+    {
+     "id": "cpe",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Maxime et la CPE",
+     "participants": [
+      {
+       "nom": "Maxime",
+       "emoji": "🧒",
+       "cote": "gauche"
+      },
+      {
+       "nom": "La CPE",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maxime",
+       "texte": "Un élève de ma classe voudrait ne pas suivre le cours d’histoire sur les religions."
+      },
+      {
+       "qui": "La CPE",
+       "texte": "Les programmes sont les mêmes pour tous. Apprendre ce que sont les religions, c’est un savoir."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regle",
+     "enonce": "Touche ce que la règle demande aux enseignants.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Ligne « Les enseignants », colonne de droite.",
+     "explication": "Les enseignants, agents de l’État, doivent une **stricte neutralité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que répond le collège à la demande de dispense du cours d’histoire ?",
+     "options": [
+      "Non : les programmes sont les mêmes pour tous",
+      "Oui : il suffit que l’élève prévienne la CPE à l’avance",
+      "Oui : si ses parents écrivent un mot au principal",
+      "Oui, mais seulement pour les cours sur les religions"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière ligne du tableau.",
+     "explication": "Il n’y a **pas de dispense** au nom d’une croyance : les programmes sont les mêmes pour tous."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : permise ou non à l’école publique ?",
+     "categories": [
+      "Permis",
+      "Pas permis"
+     ],
+     "items": [
+      [
+       "Étudier l’histoire d’une religion en cours d’histoire",
+       0
+      ],
+      [
+       "Croire ou ne pas croire, chacun comme il veut",
+       0
+      ],
+      [
+       "Un élève porte un signe religieux ostensible en classe",
+       1
+      ],
+      [
+       "Un enseignant donne ses convictions religieuses à la classe",
+       1
+      ],
+      [
+       "Être dispensé d’un cours au nom d’une croyance",
+       1
+      ],
+      [
+       "Lire en français un récit qui parle d’une religion",
+       0
+      ]
+     ],
+     "aide": "Les élèves sont libres de croire, mais pas de porter des signes ostensibles ; les enseignants sont neutres.",
+     "explication": "Parler des religions et croire librement : **permis**. Signe ostensible, convictions de l’enseignant et dispense : **pas permis**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La loi qui interdit les signes religieux ostensibles dans les écoles publiques date du 15 mars… de quelle année ?",
+     "reponse": 2004,
+     "aide": "Elle est plus récente que la loi de 1905 et plus ancienne que la Charte de 2013.",
+     "explication": "C’est la loi du 15 mars **2004**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebc93d31-f95a-5be1-a7e6-27c3575ae336",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une lettre pour un correspondant étranger",
+   "competence": "analyser-texte",
+   "situation": "Camille explique la laïcité à son correspondant. Dans sa lettre, une phrase est fausse. Tu la repères et tu replaces les dates sur une frise.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La lettre de Camille",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Cher Jonas, chez nous, l’école publique est laïque.",
+      "À l’école, la laïcité [[e|interdit]] de parler des religions en cours, même en histoire.",
+      "Les enseignants restent neutres et les élèves sont libres de croire ou de ne pas croire."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois dates",
+     "debut": 1900,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "sep",
+       "date": 1905,
+       "nom": "Séparation"
+      },
+      {
+       "id": "loi04",
+       "date": 2004,
+       "nom": "Loi signes"
+      },
+      {
+       "id": "charte",
+       "date": 2013,
+       "nom": "Charte"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui rend fausse la phrase de Camille sur les religions en cours.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Parler des religions en cours est prévu par les programmes.",
+     "explication": "La laïcité n’**interdit** pas d’en parler : c’est **prévu par les programmes** en histoire, en français, en arts."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la date de la loi sur les signes religieux ostensibles à l’école.",
+     "reponse": [
+      "loi04"
+     ],
+     "aide": "Elle se situe au début des années 2000.",
+     "explication": "Cette loi date du 15 mars **2004**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi de 1905 de la Charte de la laïcité ?",
+     "reponse": 108,
+     "unite": "ans",
+     "aide": "Soustrais 1905 à l’année de la Charte.",
+     "explication": "2013 − 1905 = **108 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases : vraies ou fausses ?",
+     "categories": [
+      "Vrai",
+      "Faux"
+     ],
+     "items": [
+      [
+       "La laïcité garantit aussi la liberté de ne croire en aucune religion",
+       0
+      ],
+      [
+       "Les enseignants doivent rester neutres",
+       0
+      ],
+      [
+       "La Charte de la laïcité compte 15 articles",
+       0
+      ],
+      [
+       "La laïcité est une opinion contre les religions",
+       1
+      ],
+      [
+       "L’État finance les cultes depuis 1905",
+       1
+      ],
+      [
+       "Un élève peut être dispensé d’un cours au nom de sa croyance",
+       1
+      ]
+     ],
+     "aide": "L’État ne croit rien, ne combat aucune croyance et n’en finance aucune.",
+     "explication": "Vraies : liberté de ne pas croire, neutralité des enseignants, 15 articles. Fausses : la laïcité n’est **pas** contre les religions ; l’État ne finance **aucun** culte depuis 1905 ; **pas de dispense**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2dd6f82-d9ec-57b4-ac59-63700189c6a2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le règlement du collège Les Tilleuls",
+   "competence": "analyser-document",
+   "situation": "Le collège de Noa a un règlement intérieur. Noa se demande ce qui est une règle du collège et ce qui est une loi.",
+   "documents": [
+    {
+     "id": "reglement",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Extrait du règlement intérieur",
+     "entete": "Collège Les Tilleuls",
+     "emoji": "📋",
+     "lignes": [
+      {
+       "texte": "Art. 1 : les vélos se rangent dans l’abri prévu à cet effet.",
+       "id": "velo"
+      },
+      {
+       "texte": "Art. 2 : les téléphones restent éteints dans le sac pendant les cours.",
+       "id": "tel"
+      },
+      {
+       "texte": "Art. 3 : voler est interdit partout en France, au collège comme ailleurs.",
+       "id": "vol"
+      }
+     ],
+     "pied": "Extrait écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reglement",
+     "enonce": "Touche l’article qui rappelle une loi valable pour tous, partout en France.",
+     "reponse": [
+      "vol"
+     ],
+     "aide": "Cherche l’article qui dit « partout en France ».",
+     "explication": "L’article 3 rappelle une **loi** : elle s’applique à tous, pas seulement dans ce collège."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque interdit ou obligation : règle du collège ou loi ?",
+     "categories": [
+      "Règle du collège",
+      "Loi"
+     ],
+     "items": [
+      [
+       "Ranger son vélo dans l’abri",
+       0
+      ],
+      [
+       "Éteindre son téléphone en classe",
+       0
+      ],
+      [
+       "Rentrer en rang après la sonnerie",
+       0
+      ],
+      [
+       "Voler est interdit",
+       1
+      ],
+      [
+       "Frapper quelqu’un est interdit",
+       1
+      ],
+      [
+       "Le harcèlement scolaire est un délit",
+       1
+      ]
+     ],
+     "aide": "La règle vaut dans un groupe précis ; la loi s’applique à tous.",
+     "explication": "Vélos, téléphone et rangs sont des **règles du collège** ; voler, frapper et harceler relèvent de la **loi**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui vote la loi en France ?",
+     "options": [
+      "Le Parlement : Assemblée nationale et Sénat",
+      "Le conseil d’administration du collège",
+      "Les délégués de classe",
+      "Le maire de la commune"
+     ],
+     "reponse": 0,
+     "aide": "Il y a deux chambres.",
+     "explication": "La loi est votée par le **Parlement** : l’Assemblée nationale et le Sénat."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2dd6f82-d9ec-57b4-ac59-63700189c6a2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un règlement peut-il contredire la loi ?",
+   "competence": "raisonner",
+   "situation": "Au conseil de la vie collégienne, un élève propose d’écrire dans le règlement : « Un élève insulté a le droit de frapper. » Le principal répond. Tu l’aides à comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "normes",
+     "type": "chaine",
+     "titre": "La hiérarchie des textes",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "constit",
+       "texte": "La Constitution"
+      },
+      {
+       "id": "lois",
+       "texte": "?"
+      },
+      {
+       "id": "decrets",
+       "texte": "Les décrets"
+      },
+      {
+       "id": "reglements",
+       "texte": "Les règlements"
+      }
+     ],
+     "liens": [
+      {
+       "de": "constit",
+       "a": "lois"
+      },
+      {
+       "de": "lois",
+       "a": "decrets"
+      },
+      {
+       "de": "decrets",
+       "a": "reglements"
+      }
+     ]
+    },
+    {
+     "id": "principal",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Au conseil de la vie collégienne",
+     "participants": [
+      {
+       "nom": "Un élève",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Le principal",
+       "emoji": "👨‍💼",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Un élève",
+       "texte": "Et si on écrivait dans le règlement : « Un élève insulté a le droit de frapper » ?"
+      },
+      {
+       "qui": "Le principal",
+       "texte": "Impossible : le règlement du collège ne peut pas aller contre la loi."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "document": "normes",
+     "enonce": "Quel texte se place juste sous la Constitution, à la place du « ? » ?",
+     "reponse": [
+      "les lois",
+      "lois",
+      "la loi",
+      "loi"
+     ],
+     "placeholder": "Un mot",
+     "aide": "Ce sont les textes votés par le Parlement.",
+     "explication": "Juste sous la Constitution viennent **les lois**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le règlement ne peut-il pas écrire cette phrase ?",
+     "options": [
+      "Une règle ne peut jamais contredire une norme supérieure comme la loi",
+      "Parce que le principal n’aime pas cette idée",
+      "Parce que le règlement ne peut pas contenir de phrases longues",
+      "Parce que la Constitution interdit tous les règlements"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la place du règlement sur le schéma.",
+     "explication": "Le règlement est **tout en bas** de la hiérarchie : il est **subordonné** à la loi."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la fabrication d’une loi.",
+     "items": [
+      "Une proposition de loi ou un projet de loi",
+      "La discussion et le vote par les deux chambres",
+      "Le contrôle éventuel du Conseil constitutionnel",
+      "La promulgation par le président de la République",
+      "La publication au Journal officiel"
+     ],
+     "aide": "On commence par un texte proposé, on finit par la publication.",
+     "explication": "Proposition ou projet → **vote** par les deux chambres → contrôle éventuel → **promulgation** → **Journal officiel**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque date au changement de loi.",
+     "paires": [
+      [
+       "1848",
+       "Abolition définitive de l’esclavage"
+      ],
+      [
+       "1981",
+       "Abolition de la peine de mort"
+      ]
+     ],
+     "aide": "Une loi n’est pas éternelle : elle peut être modifiée ou abrogée.",
+     "explication": "**1848** : fin de l’esclavage ; **1981** : fin de la peine de mort. Une loi peut changer."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2dd6f82-d9ec-57b4-ac59-63700189c6a2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du pain lancé à la cantine",
+   "competence": "raisonner",
+   "situation": "À la cantine, Hugo a lancé du pain sur la table voisine. Trois propositions de sanction circulent. Tu en cherches une qui respecte les règles d’une sanction juste.",
+   "documents": [
+    {
+     "id": "sanctions",
+     "type": "tableau",
+     "titre": "Trois sanctions proposées",
+     "colonnes": [
+      "Proposition",
+      "Description"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Exclusion définitive du collège pour un pain lancé."
+      ],
+      [
+       "B",
+       "Nettoyer la table et s’excuser, comme le prévoit le règlement, avec une explication de la CPE."
+      ],
+      [
+       "C",
+       "Une punition inventée le lendemain, sans explication."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas écrit pour l’exercice"
+    },
+    {
+     "id": "fin",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Après la cantine",
+     "participants": [
+      {
+       "nom": "La CPE",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "La CPE",
+       "texte": "Cette mesure ne sert pas à te faire payer. Elle vise aussi à réparer."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "D’accord, je nettoie et je m’excuse."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sanctions",
+     "enonce": "Touche la proposition qui est proportionnée, prévue à l’avance et expliquée.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Une sanction juste n’est pas disproportionnée, pas inventée après coup, et on explique pourquoi.",
+     "explication": "La proposition **B** est proportionnée, prévue par le règlement et expliquée."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque condition d’une sanction juste à son sens.",
+     "paires": [
+      [
+       "Proportionnée",
+       "À la hauteur de la faute"
+      ],
+      [
+       "Prévue à l’avance",
+       "Pas inventée après coup"
+      ],
+      [
+       "Expliquée",
+       "L’élève comprend pourquoi"
+      ]
+     ],
+     "aide": "Pense aux propositions A et C.",
+     "explication": "Une sanction doit être **proportionnée** à la faute, **prévue à l’avance** et **expliquée**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours à partir de la réplique de la CPE.",
+     "texte": "La sanction n’est pas une vengeance : elle vise aussi à ___.",
+     "reponses": [
+      [
+       "réparer",
+       "reparer"
+      ]
+     ],
+     "banque": [
+      "réparer",
+      "venger",
+      "humilier",
+      "effacer"
+     ],
+     "aide": "Hugo nettoie la table : il remet les choses en état.",
+     "explication": "La sanction vise aussi à **réparer** : c’est le sens des mesures de responsabilisation au collège."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le cours, que se passerait-il sans loi ?",
+     "options": [
+      "Seul le rapport de force compterait",
+      "Tout le monde serait protégé de la même façon",
+      "Les plus faibles seraient les mieux protégés",
+      "Les sanctions seraient plus justes"
+     ],
+     "reponse": 0,
+     "aide": "La loi protège le plus faible du plus fort.",
+     "explication": "Sans loi, seul le **rapport de force** compterait : la loi protège le plus faible du plus fort."
+    }
+   ]
+  },
+  {
+   "chapitre": "9875e9aa-116d-5019-85f1-667cf8385bb8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Voter pour la déléguée de classe",
+   "competence": "analyser-document",
+   "situation": "La classe de 6e D élit ses délégués. Alix affiche sa campagne dans le couloir. Tu lis ses promesses et tu retraces l’élection.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’affiche d’Alix",
+     "entete": "Votez Alix",
+     "emoji": "🗳️",
+     "lignes": [
+      {
+       "texte": "Je porterai votre parole au conseil de classe.",
+       "id": "parole"
+      },
+      {
+       "texte": "Je vous rendrai compte après chaque conseil.",
+       "id": "compte"
+      },
+      {
+       "texte": "Je ne répéterai pas ce qui est confidentiel.",
+       "id": "secret"
+      }
+     ],
+     "pied": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la promesse qui dit qu’Alix reviendra expliquer ce qui s’est passé.",
+     "reponse": [
+      "compte"
+     ],
+     "aide": "Le délégué doit « rendre compte » à ses camarades.",
+     "explication": "Après le conseil de classe, le délégué **rend compte** : on lui demande des comptes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le délégué de classe est-il désigné ?",
+     "options": [
+      "Élu par ses camarades au scrutin secret",
+      "Choisi par le professeur principal",
+      "Tiré au sort parmi les élèves",
+      "Nommé par le principal"
+     ],
+     "reponse": 0,
+     "aide": "Dans une démocratie, on choisit celui qui parle en son nom.",
+     "explication": "Il est **élu par ses camarades au scrutin secret**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes d’une élection de délégué dans l’ordre.",
+     "items": [
+      "Se présenter comme candidat",
+      "Faire campagne auprès de la classe",
+      "Voter à bulletin secret",
+      "Compter les voix et annoncer le résultat"
+     ],
+     "aide": "On se présente avant de faire campagne, et on vote avant de compter.",
+     "explication": "On **se présente**, on **fait campagne**, on **vote** en secret, puis on **compte** les voix."
+    }
+   ]
+  },
+  {
+   "chapitre": "9875e9aa-116d-5019-85f1-667cf8385bb8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des projets pour le collège",
+   "competence": "analyser-document",
+   "situation": "Des élèves ont des idées pour leur collège et pour leur quartier. Ils cherchent la bonne instance ou la bonne association.",
+   "documents": [
+    {
+     "id": "instances",
+     "type": "tableau",
+     "titre": "Les instances du collège",
+     "colonnes": [
+      "L’instance",
+      "Son objet"
+     ],
+     "lignes": [
+      [
+       "Le CVC (conseil de la vie collégienne)",
+       "Les élèves proposent des projets sur la vie de l’établissement"
+      ],
+      [
+       "Les éco-délégués",
+       "Tri, gaspillage alimentaire, énergie"
+      ],
+      [
+       "Le foyer socio-éducatif, les clubs, l’AS",
+       "La vie associative de l’établissement"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    },
+    {
+     "id": "asso",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’association du quartier",
+     "entete": "Coup de pouce",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "Association loi 1901 : aide aux devoirs."
+      },
+      {
+       "texte": "24 bénévoles, 2 h chacun par semaine.",
+       "id": "benevoles"
+      },
+      {
+       "texte": "Personne n’est payé."
+      }
+     ],
+     "pied": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "instances",
+     "enonce": "Touche l’instance qui s’occupe du gaspillage à la cantine.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche l’instance qui parle de tri, de gaspillage alimentaire et d’énergie.",
+     "explication": "Le gaspillage alimentaire est l’objet des **éco-délégués**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque idée à l’endroit où la porter.",
+     "paires": [
+      [
+       "Réduire le gaspillage à la cantine",
+       "Les éco-délégués"
+      ],
+      [
+       "Proposer un projet sur la vie du collège",
+       "Le CVC"
+      ],
+      [
+       "Monter un club de théâtre",
+       "Le foyer socio-éducatif et les clubs"
+      ]
+     ],
+     "aide": "Relis la colonne « Son objet » du tableau.",
+     "explication": "Gaspillage : **éco-délégués** ; projet sur la vie de l’établissement : **CVC** ; club : **foyer et clubs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures de bénévolat l’association donne-t-elle en tout chaque semaine ?",
+     "reponse": 48,
+     "unite": "heures",
+     "aide": "Multiplie le nombre de bénévoles par leurs heures.",
+     "explication": "24 × 2 = **48 heures** par semaine."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces groupes : association loi 1901 (but non lucratif), ou non ?",
+     "categories": [
+      "But non lucratif",
+      "But lucratif"
+     ],
+     "items": [
+      [
+       "Des bénévoles qui nourrissent des animaux abandonnés",
+       0
+      ],
+      [
+       "Des habitants qui nettoient la plage sans être payés",
+       0
+      ],
+      [
+       "Un club d’aide aux devoirs sans rémunération",
+       0
+      ],
+      [
+       "Un magasin qui vend des jouets pour gagner de l’argent",
+       1
+      ],
+      [
+       "Une entreprise de livraison",
+       1
+      ]
+     ],
+     "aide": "Une association loi 1901 vise un but non lucratif.",
+     "explication": "Une association loi 1901 réunit des personnes autour d’un but **non lucratif** ; un magasin ou une entreprise cherchent à gagner de l’argent."
+    }
+   ]
+  },
+  {
+   "chapitre": "9875e9aa-116d-5019-85f1-667cf8385bb8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un malaise au gymnase",
+   "competence": "resoudre",
+   "situation": "Pendant le sport, un élève s’effondre au gymnase. Léa, qui a suivi la formation PSC1, réagit. Tu retrouves les bons numéros et les bons gestes.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ce qu’a fait Léa",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Léa voit un camarade s’effondrer. Elle appelle les secours avec le téléphone du professeur. Puis elle ne touche à rien : elle reste près de lui jusqu’à l’arrivée de l’équipe."
+     ]
+    },
+    {
+     "id": "numeros",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Les numéros d’urgence",
+     "entete": "En cas d’urgence",
+     "emoji": "🚨",
+     "lignes": [
+      {
+       "texte": "15",
+       "valeur": "SAMU, urgence médicale",
+       "id": "n15"
+      },
+      {
+       "texte": "17",
+       "valeur": "Police, gendarmerie",
+       "id": "n17"
+      },
+      {
+       "texte": "18",
+       "valeur": "Pompiers",
+       "id": "n18"
+      },
+      {
+       "texte": "112",
+       "valeur": "Numéro d’urgence européen",
+       "id": "n112"
+      },
+      {
+       "texte": "114",
+       "valeur": "Urgences par SMS",
+       "id": "n114"
+      }
+     ],
+     "pied": "Numéros d’urgence en France"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "numeros",
+     "enonce": "Un élève sourd veut alerter les secours. Touche le numéro à utiliser.",
+     "reponse": [
+      "n114"
+     ],
+     "aide": "Cherche le numéro qui fonctionne par SMS.",
+     "explication": "Le **114** permet d’alerter **par SMS**, pour les personnes sourdes ou malentendantes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque situation au bon numéro.",
+     "paires": [
+      [
+       "Un cambriolage dans le quartier",
+       "17"
+      ],
+      [
+       "Un incendie dans un bâtiment",
+       "18"
+      ],
+      [
+       "Un malaise grave",
+       "15"
+      ],
+      [
+       "Un accident en voyage, dans un pays d’Europe",
+       "112"
+      ]
+     ],
+     "aide": "Le 17 pour la police, le 18 pour le feu, le 15 pour le médical, le 112 partout en Europe.",
+     "explication": "**17** : police ; **18** : pompiers ; **15** : SAMU ; **112** : numéro européen, depuis n’importe quel téléphone."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les gestes que la formation PSC1 apprend.",
+     "items": [
+      "Alerter les secours",
+      "Masser",
+      "Utiliser un défibrillateur"
+     ],
+     "aide": "On commence toujours par appeler.",
+     "explication": "On **alerte**, on **masse**, puis on utilise un **défibrillateur**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léa a seulement appelé les secours et est restée près de lui. A-t-elle porté secours ?",
+     "options": [
+      "Oui : appeler, c’est déjà secourir",
+      "Non : seuls les adultes peuvent secourir",
+      "Non : il fallait obligatoirement masser",
+      "Non : il fallait être pompier"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin du cours sur porter secours.",
+     "explication": "**Appeler, c’est déjà secourir**. Ne pas porter secours quand on le peut est un **délit**."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1891 @@
+{
+ "niveau": "1re",
+ "matiere": "management",
+ "exercices": [
+  {
+   "chapitre": "2cdecb0c-d0cf-52c5-9f0a-23d2ac8887ac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tableau de bord de Bio’Marché",
+   "competence": "lire-tableau",
+   "situation": "Bio’Marché est une épicerie imaginaire. À la fin de l’année, sa gérante lit son tableau de bord : trois indicateurs, un objectif et un résultat pour chacun.",
+   "documents": [
+    {
+     "id": "bord",
+     "type": "tableau",
+     "titre": "Le tableau de bord de l’année",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Objectif",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Chiffre d’affaires (en €)",
+       "250 000",
+       "230 000"
+      ],
+      [
+       "Nouveaux clients",
+       "400",
+       "430"
+      ],
+      [
+       "Note de satisfaction (sur 5)",
+       "4,2",
+       "4,3"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bord",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche le seul résultat qui n’atteint pas son objectif.",
+     "aide": "Compare, ligne par ligne, le résultat à l’objectif.",
+     "explication": "Le **chiffre d’affaires** (230 000 €) reste sous son objectif (250 000 €) ; les deux autres indicateurs le dépassent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart entre le résultat et l’objectif de chiffre d’affaires ?",
+     "reponse": -20000,
+     "unite": "€",
+     "aide": "Écart = résultat − objectif ; il peut être négatif.",
+     "explication": "230 000 − 250 000 = **− 20 000 €** : l’écart est défavorable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de réalisation de l’objectif de chiffre d’affaires ?",
+     "reponse": 92,
+     "unite": "%",
+     "aide": "Taux de réalisation = résultat ÷ objectif × 100.",
+     "explication": "230 000 ÷ 250 000 × 100 = **92 %** de l’objectif réalisé."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cdecb0c-d0cf-52c5-9f0a-23d2ac8887ac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq ans de chiffre d’affaires à la boulangerie des Halles",
+   "competence": "lire-graphique",
+   "situation": "La boulangerie des Halles, imaginaire, suit son chiffre d’affaires depuis 2021. Son gérant veut mesurer l’évolution, puis choisir les bons indicateurs pour la suite.",
+   "documents": [
+    {
+     "id": "ca",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Chiffre d’affaires de la boulangerie",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "series": [
+      {
+       "nom": "Chiffre d’affaires",
+       "valeurs": [
+        120,
+        132,
+        138,
+        144,
+        162
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Chiffre d’affaires",
+      "unite": "en milliers d’euros",
+      "min": 0,
+      "max": 180,
+      "pas": 30
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ca",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche l’année où le chiffre d’affaires a le plus augmenté, en valeur, par rapport à l’année précédente.",
+     "aide": "Cherche la plus forte montée entre deux points.",
+     "explication": "En **2025**, le chiffre d’affaires gagne 18 000 € ; les autres hausses sont de 12 000 € ou moins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du chiffre d’affaires entre 2024 et 2025 ?",
+     "reponse": 12.5,
+     "unite": "%",
+     "aide": "Taux d’évolution = (162 − 144) ÷ 144 × 100.",
+     "explication": "(162 − 144) ÷ 144 × 100 = **12,5 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du chiffre d’affaires entre 2021 et 2025 ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Taux d’évolution = (162 − 120) ÷ 120 × 100.",
+     "explication": "(162 − 120) ÷ 120 × 100 = **35 %** sur quatre ans."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces indicateurs : quantitatif ou qualitatif ?",
+     "categories": [
+      "Quantitatif",
+      "Qualitatif"
+     ],
+     "items": [
+      [
+       "Le nombre de baguettes vendues chaque jour",
+       0
+      ],
+      [
+       "Un avis écrit d’un client sur le pain",
+       1
+      ],
+      [
+       "Le taux de retours de produits",
+       0
+      ],
+      [
+       "Un commentaire laissé dans le livre d’or",
+       1
+      ]
+     ],
+     "aide": "Un indicateur quantitatif est un chiffre ; un indicateur qualitatif est une appréciation.",
+     "explication": "Un nombre ou un taux est **quantitatif** ; un avis ou un commentaire est **qualitatif**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cdecb0c-d0cf-52c5-9f0a-23d2ac8887ac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La prime qui épuise l’équipe de Domo’Assist",
+   "competence": "argumenter",
+   "situation": "Domo’Assist est un service client imaginaire. Depuis janvier, une prime récompense chaque vente. Le responsable est ravi des ventes, mais d’autres indicateurs du tableau de bord se dégradent.",
+   "documents": [
+    {
+     "id": "bord",
+     "type": "tableau",
+     "titre": "Le tableau de bord du service",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Objectif",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Ventes du mois",
+       "1 200",
+       "1 380"
+      ],
+      [
+       "Taux d’absentéisme (en %)",
+       "4",
+       "9"
+      ],
+      [
+       "Note de satisfaction des clients (sur 5)",
+       "4,5",
+       "3,8"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "resp",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les propos du responsable",
+     "source": "Propos écrits pour l’exercice ; entreprise fictive.",
+     "blocs": [
+      "« Grâce à la [[p|prime]], les conseillers enchaînent les appels. Beaucoup n’ont plus le temps de bien renseigner les clients, et plusieurs sont épuisés. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de réalisation de l’objectif de ventes ?",
+     "reponse": 115,
+     "unite": "%",
+     "aide": "Taux de réalisation = résultat ÷ objectif × 100.",
+     "explication": "1 380 ÷ 1 200 × 100 = **115 %** : l’objectif de ventes est dépassé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points le taux d’absentéisme dépasse-t-il son objectif ?",
+     "reponse": 5,
+     "unite": "points",
+     "aide": "Soustrais l’objectif au résultat.",
+     "explication": "9 − 4 = **5 points** au-dessus de l’objectif."
+    },
+    {
+     "type": "zone",
+     "document": "bord",
+     "reponse": [
+      "r1c2",
+      "r2c2"
+     ],
+     "enonce": "Touche les deux résultats défavorables.",
+     "aide": "Pour l’absentéisme, plus bas vaut mieux ; pour la satisfaction, plus haut vaut mieux.",
+     "explication": "L’**absentéisme** (9 % pour 4 %) et la **satisfaction** (3,8 pour 4,5) sont défavorables.",
+     "multiple": true
+    },
+    {
+     "type": "zone",
+     "document": "resp",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui désigne la mesure incitative à l’origine de ces effets.",
+     "aide": "Quelle récompense est versée pour chaque vente ?",
+     "explication": "C’est la **prime** à la vente qui pousse les conseillers à aller vite, au détriment de la qualité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau de bord sur la manière d’évaluer le management ?",
+     "options": [
+      "Atteindre l’objectif de ventes ne suffit pas : la manière de l’obtenir compte aussi",
+      "Il suffit de regarder les ventes, puisque l’objectif principal est atteint",
+      "Les indicateurs sociaux n’ont aucun lien avec la performance de l’équipe",
+      "Une prime élevée prouve toujours qu’une bonne pratique est en place"
+     ],
+     "reponse": 0,
+     "aide": "On n’évalue pas seulement les résultats, mais aussi les pratiques.",
+     "explication": "On évalue **aussi la manière** d’obtenir les résultats : une prime qui dope les ventes mais épuise l’équipe n’est pas une bonne pratique."
+    }
+   ]
+  },
+  {
+   "chapitre": "6086f565-d845-5e36-aeae-23862be7dca2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les domaines d’activité d’Électro-Rive",
+   "competence": "lire-tableau",
+   "situation": "La marque imaginaire Électro-Rive vend des appareils ménagers. Sa direction regroupe ses activités en domaines d’activité stratégique : mêmes clients, mêmes concurrents, mêmes technologies.",
+   "documents": [
+    {
+     "id": "activites",
+     "type": "tableau",
+     "titre": "Les activités d’Électro-Rive",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Activité",
+      "Clients",
+      "Concurrents",
+      "Chiffre d’affaires (en millions d’euros)"
+     ],
+     "lignes": [
+      [
+       "Cafetières",
+       "Particuliers",
+       "Marques de petit électroménager",
+       "18"
+      ],
+      [
+       "Grille-pain",
+       "Particuliers",
+       "Marques de petit électroménager",
+       "12"
+      ],
+      [
+       "Lave-linge",
+       "Particuliers",
+       "Marques de gros électroménager",
+       "45"
+      ],
+      [
+       "Lave-vaisselle",
+       "Particuliers",
+       "Marques de gros électroménager",
+       "25"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Regroupe ces quatre activités en deux domaines d’activité stratégique.",
+     "categories": [
+      "DAS petit électroménager",
+      "DAS gros électroménager"
+     ],
+     "items": [
+      [
+       "Cafetières",
+       0
+      ],
+      [
+       "Grille-pain",
+       0
+      ],
+      [
+       "Lave-linge",
+       1
+      ],
+      [
+       "Lave-vaisselle",
+       1
+      ]
+     ],
+     "aide": "Un DAS regroupe des activités qui ont les mêmes concurrents.",
+     "explication": "Les concurrents sont les mêmes : cafetières et grille-pain forment le **DAS petit électroménager**, lave-linge et lave-vaisselle le **DAS gros électroménager**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du chiffre d’affaires total vient du DAS gros électroménager ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Additionne lave-linge et lave-vaisselle, puis divise par le total de 100.",
+     "explication": "(45 + 25) ÷ 100 × 100 = **70 %** du chiffre d’affaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Électro-Rive ne vend que des appareils ménagers. Quelle stratégie globale cela illustre-t-il ?",
+     "options": [
+      "La spécialisation : se concentrer sur un seul métier",
+      "La diversification : entrer dans de nouveaux métiers",
+      "L’externalisation : confier une étape à un prestataire",
+      "La domination par les coûts dans un seul domaine"
+     ],
+     "reponse": 0,
+     "aide": "Combien de métiers différents l’entreprise exerce-t-elle ?",
+     "explication": "Se concentrer sur un seul métier, c’est la **spécialisation** : expertise et image claire, mais risque si le marché décline."
+    }
+   ]
+  },
+  {
+   "chapitre": "6086f565-d845-5e36-aeae-23862be7dca2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois enseignes, trois façons de gagner",
+   "competence": "analyser-document",
+   "situation": "Un meuble, un bijou de bois, un billet d’avion : dans chaque cas, une enseigne imaginaire a choisi sa manière de battre ses concurrents. Il s’agit de reconnaître laquelle.",
+   "documents": [
+    {
+     "id": "enseignes",
+     "type": "tableau",
+     "titre": "Trois enseignes",
+     "source": "Enseignes imaginées pour l’exercice.",
+     "colonnes": [
+      "Enseigne",
+      "Ce qu’elle propose",
+      "Prix"
+     ],
+     "lignes": [
+      [
+       "MeubleMalin",
+       "Meubles en kit, fabriqués en très grandes séries ; le client transporte et monte lui-même",
+       "Un buffet à 120 €"
+      ],
+      [
+       "Atelier Rareté",
+       "Meubles d’un maître ébéniste, séries limitées, finitions à la main",
+       "Un buffet à 2 400 €"
+      ],
+      [
+       "VolPlume",
+       "Compagnie aérienne sans repas ni bagage inclus, billets vendus en ligne seulement",
+       "Un Paris–Nice à 29 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enseignes",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui montre comment MeubleMalin réduit ses coûts.",
+     "aide": "Cherche ce qui permet de produire moins cher : séries, kits, travail du client.",
+     "explication": "Les **grandes séries** et le montage par le client permettent à MeubleMalin de produire et de vendre moins cher."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque enseigne à sa stratégie de domaine.",
+     "paires": [
+      [
+       "MeubleMalin",
+       "Domination par les coûts"
+      ],
+      [
+       "Atelier Rareté",
+       "Différenciation par sophistication"
+      ],
+      [
+       "VolPlume",
+       "Différenciation par épuration"
+      ]
+     ],
+     "aide": "La sophistication ajoute qualité et services ; l’épuration enlève tout le superflu.",
+     "explication": "MeubleMalin domine par les **coûts**, l’Atelier Rareté se différencie par la **sophistication**, VolPlume par l’**épuration**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le buffet de l’Atelier Rareté coûte-t-il plus cher que celui de MeubleMalin ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Divise le prix le plus élevé par le prix le plus bas.",
+     "explication": "2 400 ÷ 120 = **20 fois** plus cher."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un concurrent copie les kits de MeubleMalin et casse ses prix. Que cela montre-t-il ?",
+     "options": [
+      "Un avantage concurrentiel est éphémère : l’imitation l’use",
+      "Un avantage concurrentiel est acquis une fois pour toutes",
+      "Le concurrent a automatiquement une meilleure stratégie globale",
+      "MeubleMalin doit arrêter toute production de meubles"
+     ],
+     "reponse": 0,
+     "aide": "Que devient un avantage quand tout le monde peut l’imiter ?",
+     "explication": "Concurrence, imitation et innovations **érodent** un avantage concurrentiel : il faut le renouveler sans cesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "6086f565-d845-5e36-aeae-23862be7dca2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Intégrer ou externaliser chez Vélos Alpins ?",
+   "competence": "analyser-document",
+   "situation": "Vélos Alpins, entreprise imaginaire, vend des vélos de montagne. Son directeur étudie sa chaîne de valeur : quelles étapes garde-t-il en interne et lesquelles confie-t-il à d’autres ?",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "La chaîne de valeur",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "conc",
+       "texte": "Conception"
+      },
+      {
+       "id": "fab",
+       "texte": "Fabrication"
+      },
+      {
+       "id": "inc",
+       "texte": "?"
+      },
+      {
+       "id": "ven",
+       "texte": "Vente"
+      },
+      {
+       "id": "sav",
+       "texte": "SAV"
+      }
+     ],
+     "liens": [
+      {
+       "de": "conc",
+       "a": "fab"
+      },
+      {
+       "de": "fab",
+       "a": "inc"
+      },
+      {
+       "de": "inc",
+       "a": "ven"
+      },
+      {
+       "de": "ven",
+       "a": "sav"
+      }
+     ]
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Qui réalise chaque étape ?",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Étape",
+      "Réalisée par",
+      "Coût par vélo (en €)"
+     ],
+     "lignes": [
+      [
+       "Conception",
+       "Vélos Alpins",
+       "60"
+      ],
+      [
+       "Fabrication",
+       "Un sous-traitant",
+       "220"
+      ],
+      [
+       "Logistique",
+       "Un transporteur",
+       "25"
+      ],
+      [
+       "Vente",
+       "Les magasins de Vélos Alpins",
+       "90"
+      ],
+      [
+       "Service après-vente",
+       "Vélos Alpins",
+       "35"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne de valeur, entre la fabrication et la vente ?",
+     "options": [
+      "La logistique : acheminer les vélos jusqu’aux magasins",
+      "Les achats : commander les pièces avant la fabrication",
+      "La comptabilité : tenir les comptes de l’entreprise",
+      "Le recrutement : choisir les salariés de l’atelier"
+     ],
+     "reponse": 0,
+     "aide": "Que faut-il faire des vélos une fois fabriqués, avant de les vendre ?",
+     "explication": "Entre fabrication et vente, il faut **acheminer** les vélos : c’est la logistique."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "enonce": "Touche les deux étapes externalisées.",
+     "aide": "Cherche les étapes confiées à une autre entreprise.",
+     "explication": "La **fabrication** (sous-traitant) et la **logistique** (transporteur) sont externalisées ; les autres étapes sont intégrées.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du coût total d’un vélo est externalisée ? (arrondi à l’unité)",
+     "reponse": 57,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Additionne les coûts externalisés, divise par le coût total de 430 €.",
+     "explication": "(220 + 25) ÷ 430 × 100 ≈ 56,98, soit environ **57 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le sous-traitant augmente ses prix de 20 %. De combien d’euros le coût d’un vélo augmente-t-il ?",
+     "reponse": 44,
+     "unite": "€",
+     "aide": "Calcule 20 % du coût de fabrication.",
+     "explication": "20 % de 220 € = **44 €** de plus par vélo."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette hausse imposée par le sous-traitant illustre quel risque de l’externalisation ?",
+     "options": [
+      "La dépendance envers le prestataire",
+      "Des coûts fixes élevés à porter seul",
+      "Une perte de souplesse dans l’entreprise",
+      "L’absence totale de contrôle de la qualité"
+     ],
+     "reponse": 0,
+     "aide": "Que peut faire l’entreprise si elle ne maîtrise plus cette étape ?",
+     "explication": "Externaliser rend **dépendant** du prestataire : si ses prix montent, l’entreprise doit suivre."
+    }
+   ]
+  },
+  {
+   "chapitre": "184f9d36-2f42-5f5f-9b96-19565516b808",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois façons de doubler Mie Dorée",
+   "competence": "lire-tableau",
+   "situation": "La chaîne imaginaire de boulangeries Mie Dorée veut doubler de taille. Elle a 20 boutiques et hésite entre trois options, que son directeur résume dans un tableau.",
+   "documents": [
+    {
+     "id": "options",
+     "type": "tableau",
+     "titre": "Les trois options",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Option",
+      "Principe",
+      "Délai",
+      "Coût pour l’entreprise"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Ouvrir 20 boutiques elle-même",
+       "5 ans",
+       "8 millions d’euros"
+      ],
+      [
+       "B",
+       "Racheter un réseau régional de 20 boutiques",
+       "6 mois",
+       "12 millions d’euros"
+      ],
+      [
+       "C",
+       "Proposer son enseigne à 20 boulangers indépendants",
+       "2 ans",
+       "1 million d’euros"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque option à sa modalité de développement.",
+     "paires": [
+      [
+       "Option A",
+       "Croissance interne"
+      ],
+      [
+       "Option B",
+       "Croissance externe"
+      ],
+      [
+       "Option C",
+       "Partenariat (franchise)"
+      ]
+     ],
+     "aide": "Interne : ses propres moyens ; externe : on rachète ; partenariat : on coopère sans fusionner.",
+     "explication": "A est une croissance **interne**, B une croissance **externe** (rachat), C un **partenariat** par franchise."
+    },
+    {
+     "type": "zone",
+     "document": "options",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche le délai de l’option la plus rapide.",
+     "aide": "Compare les durées de la colonne « Délai ».",
+     "explication": "L’option B se réalise en **6 mois** : c’est la plus rapide, mais aussi la plus chère."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de millions d’euros l’option B coûte-t-elle plus cher que l’option A ?",
+     "reponse": 4,
+     "unite": "millions d’euros",
+     "aide": "Soustrais le coût de A au coût de B.",
+     "explication": "12 − 8 = **4 millions d’euros** de plus pour aller plus vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "184f9d36-2f42-5f5f-9b96-19565516b808",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Alliance, coentreprise, franchise ou sous-traitance ?",
+   "competence": "analyser-document",
+   "situation": "Les partenariats prennent plusieurs formes. Pour les distinguer, Jules lit quatre situations imaginaires, puis un extrait résumé de contrat de franchise.",
+   "documents": [
+    {
+     "id": "situations",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Situation",
+      "Description"
+     ],
+     "lignes": [
+      [
+       "S1",
+       "Deux constructeurs automobiles développent ensemble un moteur, sans fusionner, le temps d’un projet précis"
+      ],
+      [
+       "S2",
+       "Deux entreprises créent une société commune, détenue à parts égales, pour vendre en Asie"
+      ],
+      [
+       "S3",
+       "Un commerçant utilise l’enseigne et le savoir-faire d’une marque contre une redevance"
+      ],
+      [
+       "S4",
+       "Une marque fait fabriquer ses chaussures par une usine appartenant à une autre entreprise"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "contrat",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Un extrait de contrat",
+     "entete": "Contrat de franchise",
+     "sousTitre": "Extrait résumé — texte écrit pour l’exercice",
+     "emoji": "📄",
+     "lignes": [
+      {
+       "texte": "Durée du contrat",
+       "valeur": "5 ans"
+      },
+      {
+       "texte": "Redevance annuelle",
+       "valeur": "6 % du chiffre d’affaires",
+       "id": "red"
+      },
+      {
+       "texte": "Droit d’entrée",
+       "valeur": "15 000 €",
+       "id": "droit"
+      }
+     ],
+     "pied": "Contrat imaginaire."
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme de partenariat à la situation qui l’illustre.",
+     "paires": [
+      [
+       "Alliance",
+       "Deux constructeurs développent ensemble un moteur, sans fusionner"
+      ],
+      [
+       "Coentreprise",
+       "Deux entreprises créent une société commune pour vendre en Asie"
+      ],
+      [
+       "Franchise",
+       "Un commerçant utilise une enseigne contre une redevance"
+      ],
+      [
+       "Sous-traitance",
+       "Une usine d’une autre entreprise fabrique les chaussures d’une marque"
+      ]
+     ],
+     "aide": "Une société commune, un contrat d’enseigne, un projet précis, une production confiée.",
+     "explication": "**Alliance** (projet commun), **coentreprise** (société commune), **franchise** (enseigne contre redevance), **sous-traitance** (production confiée)."
+    },
+    {
+     "type": "zone",
+     "document": "contrat",
+     "reponse": [
+      "red"
+     ],
+     "enonce": "Touche la ligne qui indique ce que le franchisé verse chaque année selon ses ventes.",
+     "aide": "Cherche un pourcentage du chiffre d’affaires.",
+     "explication": "La **redevance annuelle** (6 % du chiffre d’affaires) dépend des ventes ; le droit d’entrée est un montant fixe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un franchisé réalise 250 000 € de chiffre d’affaires dans l’année. Quelle redevance verse-t-il ?",
+     "reponse": 15000,
+     "unite": "€",
+     "aide": "Calcule 6 % de 250 000.",
+     "explication": "6 % de 250 000 = 250 000 × 0,06 = **15 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est un inconvénient de la franchise pour la marque qui la propose ?",
+     "options": [
+      "Un contrôle plus faible de la qualité chez les franchisés",
+      "Un coût d’ouverture très élevé pour chaque nouvelle boutique",
+      "Une croissance plus lente qu’avec ses propres boutiques",
+      "Une dépendance totale envers un seul fournisseur"
+     ],
+     "reponse": 0,
+     "aide": "Les franchisés sont des commerçants indépendants.",
+     "explication": "La marque partage coûts et risques mais **contrôle moins** la qualité : les franchisés sont indépendants."
+    }
+   ]
+  },
+  {
+   "chapitre": "184f9d36-2f42-5f5f-9b96-19565516b808",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Vélibre veut conquérir cinq pays",
+   "competence": "argumenter",
+   "situation": "Vélibre, start-up imaginaire de trottinettes électriques, veut s’implanter dans cinq pays d’ici un an. Inès, sa fondatrice, doit choisir une modalité de croissance compatible avec ses moyens.",
+   "documents": [
+    {
+     "id": "ines",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les propos d’Inès, fondatrice",
+     "source": "Propos écrits pour l’exercice ; entreprise fictive.",
+     "blocs": [
+      "« Nous voulons être présents dans cinq pays d’ici douze mois. Notre trésorerie est de 3 millions d’euros. »",
+      "« La qualité de nos trottinettes est notre marque : je ne veux pas la perdre. Grâce aux [[p|plateformes]] de location, nos clients nous trouvent déjà dans le monde entier. »"
+     ]
+    },
+    {
+     "id": "scenarios",
+     "type": "tableau",
+     "titre": "Trois scénarios étudiés",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Scénario",
+      "Coût",
+      "Délai",
+      "Contrôle de la qualité"
+     ],
+     "lignes": [
+      [
+       "A. Ouvrir cinq filiales elle-même",
+       "5 millions d’euros",
+       "36 mois",
+       "Total"
+      ],
+      [
+       "B. Racheter un concurrent déjà installé",
+       "9 millions d’euros",
+       "Immédiat",
+       "Total"
+      ],
+      [
+       "C. Créer une coentreprise avec un partenaire local",
+       "1,5 million d’euros",
+       "12 mois",
+       "Partagé"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scenarios",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "enonce": "Touche les deux coûts qui dépassent la trésorerie de Vélibre.",
+     "aide": "Compare chaque coût aux 3 millions d’euros de trésorerie.",
+     "explication": "Les scénarios **A** (5 millions) et **B** (9 millions) dépassent les 3 millions de trésorerie.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de millions d’euros le scénario A coûte-t-il plus cher que le scénario C ?",
+     "reponse": 3.5,
+     "unite": "millions d’euros",
+     "aide": "Soustrais le coût de C à celui de A.",
+     "explication": "5 − 1,5 = **3,5 millions d’euros** de plus pour A."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel scénario est compatible avec la trésorerie et avec le délai de douze mois ?",
+     "options": [
+      "Le scénario C : la coentreprise",
+      "Le scénario A : les cinq filiales",
+      "Le scénario B : le rachat d’un concurrent",
+      "Aucun des trois scénarios ne convient"
+     ],
+     "reponse": 0,
+     "aide": "Élimine les scénarios trop chers, puis ceux qui sont trop lents.",
+     "explication": "Seul **C** coûte moins que 3 millions d’euros et se réalise en 12 mois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel risque Inès prend-elle en choisissant ce partenariat ?",
+     "options": [
+      "Un contrôle de la qualité partagé, avec des conflits possibles",
+      "Un coût d’investissement supérieur à celui d’un rachat",
+      "Un délai de mise en œuvre de plusieurs années",
+      "Une perte totale de la propriété de sa marque"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière colonne du tableau.",
+     "explication": "Un partenariat **partage** les coûts et les risques mais aussi le contrôle : dépendance et conflits sont possibles."
+    },
+    {
+     "type": "zone",
+     "document": "ines",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui désigne l’outil numérique qui met en relation offre et demande à l’échelle mondiale.",
+     "aide": "Cherche le mot lié à la location en ligne.",
+     "explication": "Les **plateformes** mettent en relation l’offre et la demande partout dans le monde."
+    }
+   ]
+  },
+  {
+   "chapitre": "01f0cf6c-090b-5840-b4c2-546fc582e1de",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La médiathèque municipale de Valmoray",
+   "competence": "analyser-document",
+   "situation": "La mairie de Valmoray gère une médiathèque. Son panneau d’accueil donne des règles de fonctionnement et quelques chiffres. Un service public obéit à des principes, et ne vise pas le profit.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Le panneau d’accueil",
+     "entete": "Médiathèque municipale de Valmoray",
+     "sousTitre": "Informations pratiques",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Ouverte tous les jours, y compris pendant les vacances scolaires",
+       "id": "cont"
+      },
+      {
+       "texte": "Même tarif d’abonnement pour tous les habitants : 8 € par an",
+       "id": "egal"
+      },
+      {
+       "texte": "Inscription et prolongation des prêts possibles en ligne depuis 2025",
+       "id": "adapt"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Budget de fonctionnement annuel",
+       "valeur": "60 000 €"
+      },
+      {
+       "texte": "Recettes des abonnements",
+       "valeur": "9 600 €"
+      }
+     ],
+     "pied": "Panneau imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "reponse": [
+      "egal"
+     ],
+     "enonce": "Touche la ligne qui illustre le principe d’égalité.",
+     "aide": "L’égalité : tous les usagers sont traités de la même manière.",
+     "explication": "Le **même tarif pour tous les habitants** illustre le principe d’égalité du service public."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque principe du service public à un exemple.",
+     "paires": [
+      [
+       "Continuité",
+       "Le service des eaux répond jour et nuit"
+      ],
+      [
+       "Égalité",
+       "Un dossier est traité de la même façon pour chaque usager"
+      ],
+      [
+       "Adaptabilité",
+       "Un guichet unique est créé quand les besoins changent"
+      ]
+     ],
+     "aide": "Sans interruption, même traitement, évolution avec les besoins.",
+     "explication": "**Continuité** (service jour et nuit), **égalité** (même traitement), **adaptabilité** (le service suit les besoins)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du budget de fonctionnement les abonnements couvrent-ils ?",
+     "reponse": 16,
+     "unite": "%",
+     "aide": "Divise les recettes par le budget, puis multiplie par 100.",
+     "explication": "9 600 ÷ 60 000 × 100 = **16 %** : le reste est financé par la collectivité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la boussole de la stratégie de la mairie pour sa médiathèque ?",
+     "options": [
+      "L’intérêt général de tous les habitants",
+      "La rentabilité de chaque abonnement",
+      "La satisfaction des seuls actionnaires",
+      "La conquête de parts de marché"
+     ],
+     "reponse": 0,
+     "aide": "Une organisation publique ne se juge pas à ses bénéfices.",
+     "explication": "Une organisation publique poursuit l’**intérêt général**, pas le profit : elle se juge au service rendu."
+    }
+   ]
+  },
+  {
+   "chapitre": "01f0cf6c-090b-5840-b4c2-546fc582e1de",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Régie ou délégation pour les bus de Valmoray ?",
+   "competence": "analyser-document",
+   "situation": "Le conseil municipal de Valmoray doit choisir comment gérer son réseau de transports urbains. Les élus comparent deux modes de gestion, puis s’interrogent sur le niveau de décision.",
+   "documents": [
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le compte rendu du conseil municipal",
+     "source": "Compte rendu imaginé pour l’exercice.",
+     "blocs": [
+      "Le maire rappelle que la ville garde la responsabilité du service, même si elle le confie à une entreprise par une [[d|délégation]] de service public.",
+      "Un élu s’inquiète : « Le prix ne doit pas passer avant l’égalité entre les quartiers. »"
+     ]
+    },
+    {
+     "id": "modes",
+     "type": "tableau",
+     "titre": "Les deux modes de gestion",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Mode de gestion",
+      "Qui gère le service ?",
+      "Coût annuel pour la ville"
+     ],
+     "lignes": [
+      [
+       "Régie",
+       "Les agents de la ville",
+       "1 800 000 €"
+      ],
+      [
+       "Délégation de service public",
+       "Une entreprise choisie par contrat",
+       "1 500 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle économie annuelle la ville réaliserait-elle avec la délégation ?",
+     "reponse": 300000,
+     "unite": "€",
+     "aide": "Soustrais le coût de la délégation au coût de la régie.",
+     "explication": "1 800 000 − 1 500 000 = **300 000 €** par an."
+    },
+    {
+     "type": "zone",
+     "document": "conseil",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui désigne le contrat par lequel la ville confie la gestion du service à une entreprise.",
+     "aide": "Cherche le mot qui précède « de service public ».",
+     "explication": "La **délégation** de service public confie la gestion à une entreprise, sous le contrôle de la collectivité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si la ville choisit la délégation, que garde-t-elle ?",
+     "options": [
+      "La responsabilité du service et le contrôle du délégataire",
+      "Plus aucune responsabilité envers les usagers",
+      "Uniquement les bénéfices dégagés par l’entreprise",
+      "Le droit de ne plus respecter l’égalité des usagers"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase du maire.",
+     "explication": "La collectivité **garde la responsabilité** du service et contrôle l’entreprise délégataire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque décision au niveau stratégique qui la prend.",
+     "categories": [
+      "Central (national)",
+      "Territorial (local)",
+      "Européen"
+     ],
+     "items": [
+      [
+       "Une réforme du lycée décidée par l’État",
+       0
+      ],
+      [
+       "Des transports régionaux",
+       1
+      ],
+      [
+       "Des normes environnementales communes à plusieurs pays",
+       2
+      ],
+      [
+       "La voirie de la commune",
+       1
+      ]
+     ],
+     "aide": "L’État, les collectivités locales et l’Union européenne ne décident pas des mêmes sujets.",
+     "explication": "L’**État** décide les réformes nationales, les **collectivités** les transports régionaux et la voirie, l’**Union européenne** les normes communes."
+    }
+   ]
+  },
+  {
+   "chapitre": "01f0cf6c-090b-5840-b4c2-546fc582e1de",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mesurer la performance de deux hôpitaux",
+   "competence": "analyser-document",
+   "situation": "Deux hôpitaux publics imaginaires sont comparés par leur région. Les élus mesurent leur performance, mais une affaire de conflit d’intérêts vient troubler le débat.",
+   "documents": [
+    {
+     "id": "hopitaux",
+     "type": "tableau",
+     "titre": "Les indicateurs des deux hôpitaux",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Hôpital de Bellerive",
+      "Hôpital de Montclar"
+     ],
+     "lignes": [
+      [
+       "Temps d’attente aux urgences (en minutes)",
+       "90",
+       "60"
+      ],
+      [
+       "Coût moyen d’un séjour (en €)",
+       "4 200",
+       "4 800"
+      ],
+      [
+       "Part des objectifs de soins atteints (en %)",
+       "95",
+       "85"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "affaire",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une affaire à la région",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Un conseiller régional, [[a|associé]] de la société de nettoyage retenue pour l’hôpital de Bellerive, a voté en faveur de ce contrat sans le signaler.",
+      "La Haute Autorité pour la transparence de la vie publique pourrait être saisie."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion de performance à l’indicateur qui la mesure.",
+     "paires": [
+      [
+       "Qualité du service rendu",
+       "Temps d’attente aux urgences"
+      ],
+      [
+       "Efficience",
+       "Coût moyen d’un séjour"
+      ],
+      [
+       "Efficacité",
+       "Part des objectifs de soins atteints"
+      ]
+     ],
+     "aide": "Efficacité : objectifs atteints ; efficience : au meilleur coût ; qualité : service rendu.",
+     "explication": "L’**efficacité** mesure les objectifs atteints, l’**efficience** le coût, la **qualité** le service vécu par l’usager."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’euros par séjour Bellerive économise-t-il par rapport à Montclar ?",
+     "reponse": 600,
+     "unite": "€",
+     "aide": "Soustrais le coût de Bellerive à celui de Montclar.",
+     "explication": "4 800 − 4 200 = **600 €** de moins par séjour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel hôpital est à la fois le plus efficace et le plus efficient ?",
+     "options": [
+      "Bellerive : plus d’objectifs atteints et un coût moindre",
+      "Montclar : une attente plus courte aux urgences",
+      "Les deux, car leurs performances sont identiques",
+      "Aucun, car on ne peut pas comparer des hôpitaux publics"
+     ],
+     "reponse": 0,
+     "aide": "Compare les objectifs atteints puis les coûts.",
+     "explication": "Bellerive atteint **95 %** de ses objectifs (efficacité) à **4 200 €** (efficience) ; Montclar n’est meilleur que sur l’attente (qualité)."
+    },
+    {
+     "type": "zone",
+     "document": "affaire",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui révèle l’intérêt personnel du conseiller dans cette décision.",
+     "aide": "Cherche le lien entre le conseiller et la société retenue.",
+     "explication": "Le conseiller est **associé** de la société retenue : il a un intérêt personnel dans la décision."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette situation s’appelle…",
+     "options": [
+      "Un conflit d’intérêts, qui doit être déclaré",
+      "Un partenariat public-privé, qui est normal",
+      "Une délégation de service public, qui est normale",
+      "Un groupe de pression, qui est interdit"
+     ],
+     "reponse": 0,
+     "aide": "Un décideur public ne doit pas avoir d’intérêt personnel dans la décision qu’il prend.",
+     "explication": "Un décideur public qui a un intérêt personnel dans une décision est en **conflit d’intérêts** : la loi impose des déclarations et un contrôle."
+    }
+   ]
+  },
+  {
+   "chapitre": "895bfaf1-e271-5472-9be3-98866bb4b820",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le budget du Basket Club de Valmoray",
+   "competence": "lire-graphique",
+   "situation": "Le Basket Club de Valmoray, imaginaire, est une association qui perd des licenciés. Son trésorier montre d’où vient l’argent du club.",
+   "documents": [
+    {
+     "id": "recettes",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "D’où vient l’argent du club ?",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Subvention de la mairie",
+      "Cotisations des licenciés",
+      "Buvette et tournoi",
+      "Dons"
+     ],
+     "series": [
+      {
+       "nom": "Part des recettes",
+       "valeurs": [
+        60,
+        25,
+        10,
+        5
+       ],
+       "teinte": "bleu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recettes",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la ressource la plus importante du club.",
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "La **subvention de la mairie** représente 60 % des recettes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si la mairie supprimait sa subvention, quelle part des recettes resterait au club ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Retire la part de la subvention à 100 %.",
+     "explication": "100 − 60 = **40 %** des recettes seulement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dépendre d’une seule subvention pour 60 % de ses recettes est…",
+     "options": [
+      "Une faiblesse : la dépendance envers un seul financeur est risquée",
+      "Une force : une grosse subvention garantit toujours l’avenir",
+      "Une opportunité : la mairie est une partie prenante externe",
+      "Une menace : la mairie est un concurrent du club"
+     ],
+     "reponse": 0,
+     "aide": "Que se passe-t-il pour le club si ce financeur se retire ?",
+     "explication": "Dépendre d’un seul financeur est une **faiblesse** : il faut diversifier ses ressources."
+    }
+   ]
+  },
+  {
+   "chapitre": "895bfaf1-e271-5472-9be3-98866bb4b820",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les ressources de Cœur de Quartier",
+   "competence": "lire-tableau",
+   "situation": "L’association imaginaire Cœur de Quartier aide des familles du quartier. Sa présidente présente le budget de l’année : cinq ressources, pour 100 000 € au total.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Les ressources de l’association",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Ressource",
+      "Montant annuel"
+     ],
+     "lignes": [
+      [
+       "Cotisations des adhérents",
+       "12 000 €"
+      ],
+      [
+       "Dons de particuliers",
+       "18 000 €"
+      ],
+      [
+       "Mécénat d’une entreprise",
+       "10 000 €"
+      ],
+      [
+       "Subventions publiques",
+       "40 000 €"
+      ],
+      [
+       "Ventes de la boutique solidaire",
+       "20 000 €"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche le montant de la ressource qui dépend des collectivités.",
+     "aide": "Cherche l’aide versée par des pouvoirs publics.",
+     "explication": "Les **subventions publiques** (40 000 €) dépendent des collectivités."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ressource à sa définition.",
+     "paires": [
+      [
+       "Cotisations",
+       "Sommes versées par les adhérents"
+      ],
+      [
+       "Mécénat",
+       "Soutien financier d’une entreprise"
+      ],
+      [
+       "Subventions",
+       "Aides des collectivités, souvent liées à des projets"
+      ],
+      [
+       "Ventes",
+       "Recettes de biens ou de services vendus"
+      ]
+     ],
+     "aide": "Pense à qui verse l’argent : adhérents, entreprise, collectivité, clients.",
+     "explication": "**Cotisations** (adhérents), **mécénat** (entreprise), **subventions** (collectivités), **ventes** (clients)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des ressources vient des subventions publiques ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Divise 40 000 € par le total de 100 000 €.",
+     "explication": "40 000 ÷ 100 000 × 100 = **40 %** des ressources."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’association a-t-elle intérêt à diversifier ses ressources ?",
+     "options": [
+      "Pour réduire sa dépendance à un seul financeur",
+      "Pour pouvoir distribuer des bénéfices à ses membres",
+      "Pour cesser de dépendre de ses adhérents bénévoles",
+      "Pour échapper à toute obligation de transparence"
+     ],
+     "reponse": 0,
+     "aide": "Que risque l’association si une seule ressource disparaît ?",
+     "explication": "Diversifier ses ressources **réduit la dépendance** à un seul financeur et protège l’association."
+    }
+   ]
+  },
+  {
+   "chapitre": "895bfaf1-e271-5472-9be3-98866bb4b820",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Retenir les bénévoles de la Maison des Jeunes",
+   "competence": "analyser-document",
+   "situation": "L’association imaginaire Maison des Jeunes voit fondre le nombre de ses bénévoles. Son président cherche des causes et des solutions pour que l’association dure.",
+   "documents": [
+    {
+     "id": "benevoles",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Bénévoles actifs de l’association",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "series": [
+      {
+       "nom": "Bénévoles actifs",
+       "valeurs": [
+        62,
+        58,
+        51,
+        47,
+        44,
+        40
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Bénévoles actifs",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "president",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les propos du président",
+     "source": "Propos écrits pour l’exercice ; association fictive.",
+     "blocs": [
+      "« Chaque année, nous recrutons de nouveaux bénévoles, mais nous peinons à les garder : leurs missions sont floues et personne ne les remercie. »",
+      "« Nous avons un noyau de 40 bénévoles très fidèles. Les jeunes aimeraient s’engager sur des missions courtes, et d’autres associations du quartier cherchent aussi des bénévoles. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "benevoles",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche l’année où la baisse du nombre de bénévoles a été la plus forte.",
+     "aide": "Compare la perte de chaque année avec celle de l’année précédente.",
+     "explication": "En **2022**, l’association passe de 58 à 51 bénévoles, soit − 7 : c’est la plus forte baisse annuelle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du nombre de bénévoles de 2020 à 2025 ? (arrondi à l’unité)",
+     "reponse": -35,
+     "unite": "%",
+     "tolerance": 0.6,
+     "aide": "Taux d’évolution = (valeur d’arrivée − valeur de départ) ÷ valeur de départ × 100.",
+     "explication": "(40 − 62) ÷ 62 × 100 ≈ − 35,5 ; arrondi à l’unité, environ **− 35 %**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ressource humaine à son enjeu stratégique.",
+     "paires": [
+      [
+       "Bénévoles",
+       "Les recruter, les former, les fidéliser"
+      ],
+      [
+       "Salariés",
+       "Professionnaliser certaines tâches"
+      ],
+      [
+       "Dirigeants élus",
+       "Assurer le renouvellement des responsables"
+      ]
+     ],
+     "aide": "Chaque catégorie de personnes pose un problème différent à l’association.",
+     "explication": "Pour les **bénévoles** : recruter, former, fidéliser ; pour les **salariés** : professionnaliser ; pour les **dirigeants** : se renouveler."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément dans la case du diagnostic qui lui correspond.",
+     "categories": [
+      "Force",
+      "Faiblesse",
+      "Opportunité",
+      "Menace"
+     ],
+     "items": [
+      [
+       "Un noyau de 40 bénévoles très fidèles",
+       0
+      ],
+      [
+       "Des missions floues et peu de reconnaissance",
+       1
+      ],
+      [
+       "Des jeunes prêts à s’engager sur des missions courtes",
+       2
+      ],
+      [
+       "D’autres associations qui cherchent aussi des bénévoles",
+       3
+      ]
+     ],
+     "aide": "Interne : ce que l’association maîtrise ; externe : ce qui vient de son environnement.",
+     "explication": "**Force** et **faiblesse** sont internes ; l’**opportunité** (jeunes disponibles) et la **menace** (concurrence entre associations) sont externes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure répond le mieux au problème de fidélisation des bénévoles ?",
+     "options": [
+      "Définir des missions claires et reconnaître l’engagement de chacun",
+      "Augmenter les cotisations des adhérents de l’association",
+      "Réduire de moitié les activités proposées au quartier",
+      "Remplacer tous les bénévoles par des salariés payés"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que le président dit des raisons du départ des bénévoles.",
+     "explication": "Missions floues et absence de reconnaissance font partir les bénévoles : il faut **clarifier les missions et remercier**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0505ca66-19de-53e8-a909-3aace905d54d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Caractériser la Fromagerie des Aravis",
+   "competence": "analyser-texte",
+   "situation": "Avant de répondre à une question de management, on identifie l’organisation. Léo lit une présentation de la Fromagerie des Aravis, entreprise imaginaire, et relève les informations utiles.",
+   "documents": [
+    {
+     "id": "presentation",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Présentation de la fromagerie",
+     "source": "Texte écrit pour l’exercice ; entreprise fictive.",
+     "blocs": [
+      "La Fromagerie des Aravis est une [[j|SARL]] de [[t|18]] salariés qui fabrique des fromages de montagne. Elle les vend sur les marchés de la vallée et en ligne dans toute la France.",
+      "Son chiffre d’affaires atteint 1,4 million d’euros. Elle achète le lait à douze éleveurs voisins et fait imprimer ses étiquettes par une imprimerie locale."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "presentation",
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le mot qui indique le statut juridique de l’entreprise.",
+     "aide": "Cherche le sigle qui suit « est une ».",
+     "explication": "**SARL** est le statut juridique : une société à responsabilité limitée."
+    },
+    {
+     "type": "zone",
+     "document": "presentation",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le nombre qui indique la taille de l’entreprise, mesurée par son effectif.",
+     "aide": "Cherche le nombre devant « salariés ».",
+     "explication": "L’effectif est de **18 salariés** : c’est ce nombre qui mesure la taille de l’entreprise."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque critère de la grille de caractérisation à l’information correspondante.",
+     "paires": [
+      [
+       "Statut juridique",
+       "Société à responsabilité limitée (SARL)"
+      ],
+      [
+       "Effectif",
+       "18 salariés"
+      ],
+      [
+       "Secteur d’activité",
+       "Industrie (secteur secondaire)"
+      ],
+      [
+       "Production",
+       "Des biens marchands vendus au public"
+      ]
+     ],
+     "aide": "Pense à ce qui est écrit : forme de la société, nombre de salariés, métier, ce qui est vendu.",
+     "explication": "On caractérise une organisation par son **statut**, sa **taille**, son **secteur** et sa **production**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type d’organisation est la Fromagerie des Aravis ?",
+     "options": [
+      "Une entreprise privée : elle vend des biens marchands pour réaliser un profit",
+      "Une organisation publique : elle finance ses salariés par les impôts",
+      "Une organisation de la société civile : elle repose sur le bénévolat",
+      "Une administration locale : elle vend du lait à des éleveurs"
+     ],
+     "reponse": 0,
+     "aide": "Regarde sa finalité et qui la finance.",
+     "explication": "Elle vend des biens **marchands** pour réaliser un profit : c’est une **entreprise privée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0505ca66-19de-53e8-a909-3aace905d54d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire le verbe avant de rédiger",
+   "competence": "analyser-document",
+   "situation": "Maëlys prépare un devoir sur le Haras de la Rive, entreprise imaginaire. Avant de lire le document, elle regarde les verbes des questions : chacun annonce ce que le professeur attend.",
+   "documents": [
+    {
+     "id": "sujet",
+     "type": "tableau",
+     "titre": "Les questions du devoir",
+     "source": "Sujet imaginé pour l’exercice.",
+     "colonnes": [
+      "N°",
+      "Question"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Identifiez le statut juridique du Haras de la Rive."
+      ],
+      [
+       "2",
+       "Caractérisez la modalité de croissance choisie."
+      ],
+      [
+       "3",
+       "Justifiez ce choix."
+      ],
+      [
+       "4",
+       "Évaluez les risques de cette décision."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "haras",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le document",
+     "source": "Texte écrit pour l’exercice ; entreprise fictive.",
+     "blocs": [
+      "En 2025, le Haras de la Rive, société anonyme, a [[r|racheté]] l’entreprise voisine Bocage Équitation et ses douze salariés."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à ce qu’il attend.",
+     "paires": [
+      [
+       "Identifiez",
+       "Nommer précisément, avec un élément du document"
+      ],
+      [
+       "Caractérisez",
+       "Décrire avec une notion du cours"
+      ],
+      [
+       "Justifiez",
+       "Donner des arguments appuyés sur le contexte"
+      ],
+      [
+       "Évaluez",
+       "Peser avantages et limites, puis conclure"
+      ]
+     ],
+     "aide": "Identifier nomme ; caractériser utilise le cours ; justifier argumente ; évaluer pèse.",
+     "explication": "Chaque **verbe** fixe l’attendu : nommer, caractériser avec le cours, argumenter avec le cas, peser pour conclure."
+    },
+    {
+     "type": "zone",
+     "document": "haras",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot du document qui permet de caractériser la modalité de croissance.",
+     "aide": "Quel verbe montre que l’entreprise s’est développée en acquérant une autre ?",
+     "explication": "Le verbe **racheté** révèle une croissance externe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment faut-il caractériser la croissance du Haras de la Rive ?",
+     "options": [
+      "Une croissance externe, par rachat d’une autre entreprise",
+      "Une croissance interne, avec ses propres moyens",
+      "Un partenariat sous forme de franchise",
+      "Une sous-traitance de sa production"
+     ],
+     "reponse": 0,
+     "aide": "Ici, l’entreprise rachète une autre entreprise.",
+     "explication": "Racheter une entreprise est une **croissance externe** : rapide, mais coûteuse, avec un risque de choc des cultures."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la méthode en trois temps pour répondre à une question.",
+     "texte": "J’énonce la ___, je l’___ au cas avec un indice précis, puis je ___.",
+     "reponses": [
+      [
+       "notion"
+      ],
+      [
+       "applique"
+      ],
+      [
+       "conclus"
+      ]
+     ],
+     "banque": [
+      "notion",
+      "applique",
+      "conclus",
+      "recopie",
+      "résume",
+      "cite"
+     ],
+     "aide": "Définir, appliquer, conclure.",
+     "explication": "On **énonce la notion**, on **l’applique** au cas avec un indice, puis on **conclut** en répondant à la question."
+    }
+   ]
+  },
+  {
+   "chapitre": "0505ca66-19de-53e8-a909-3aace905d54d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Corriger trois copies sur Lait des Plaines",
+   "competence": "argumenter",
+   "situation": "Sacha a rédigé trois brouillons pour la question « Caractérisez la demande de produits locaux pour la coopérative laitière Lait des Plaines ». Il faut repérer les défauts de chacun, puis écrire la bonne réponse.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le document",
+     "source": "Texte écrit pour l’exercice ; coopérative fictive.",
+     "blocs": [
+      "La coopérative laitière Lait des Plaines regroupe 90 éleveurs. Sa laiterie, modernisée en 2024, lui donne un savoir-faire reconnu. En même temps, la demande de produits locaux progresse dans les supermarchés de la région."
+     ]
+    },
+    {
+     "id": "copies",
+     "type": "tableau",
+     "titre": "Les trois brouillons",
+     "source": "Brouillons écrits pour l’exercice.",
+     "colonnes": [
+      "Copie",
+      "Réponse"
+     ],
+     "lignes": [
+      [
+       "A",
+       "La demande de produits locaux est une force de la coopérative."
+      ],
+      [
+       "B",
+       "Une opportunité est une évolution favorable de l’environnement."
+      ],
+      [
+       "C",
+       "Dans le cas, la demande de produits locaux progresse dans les supermarchés de la région."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copies",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la copie qui confond opportunité et force.",
+     "aide": "Une force est interne ; la demande des clients vient de l’extérieur.",
+     "explication": "La copie **A** appelle « force » une évolution externe : c’est une **opportunité**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque copie à son défaut.",
+     "paires": [
+      [
+       "Copie A",
+       "Elle confond opportunité et force"
+      ],
+      [
+       "Copie B",
+       "Elle énonce la notion sans l’appliquer au cas"
+      ],
+      [
+       "Copie C",
+       "Elle cite le cas sans nommer la notion : de la paraphrase"
+      ]
+     ],
+     "aide": "Une notion sans exemple est hors sujet ; un exemple sans notion est de la paraphrase.",
+     "explication": "A confond deux notions, B reste **théorique**, C **paraphrase** le texte : il faut associer notion et exemple."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois temps de la bonne réponse.",
+     "items": [
+      "Une opportunité est une évolution favorable de l’environnement, extérieure à l’organisation.",
+      "Ici, la demande de produits locaux progresse dans les supermarchés de la région.",
+      "Il s’agit donc d’une opportunité, que la coopérative peut saisir grâce à sa laiterie modernisée."
+     ],
+     "aide": "J’énonce la notion, je l’applique avec un indice du document, je conclus.",
+     "explication": "Une bonne réponse enchaîne **notion → application avec un indice → conclusion**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du document : force interne ou opportunité externe ?",
+     "categories": [
+      "Force (interne)",
+      "Opportunité (externe)"
+     ],
+     "items": [
+      [
+       "La laiterie modernisée en 2024",
+       0
+      ],
+      [
+       "La demande de produits locaux qui progresse",
+       1
+      ],
+      [
+       "Le savoir-faire reconnu de la coopérative",
+       0
+      ],
+      [
+       "Les 90 éleveurs regroupés dans la coopérative",
+       0
+      ]
+     ],
+     "aide": "Interne : ce que la coopérative possède ; externe : ce qui change autour d’elle.",
+     "explication": "La laiterie et le savoir-faire sont des **forces** internes ; la demande et l’aide régionale sont des **opportunités** externes."
+    }
+   ]
+  }
+ ]
+}

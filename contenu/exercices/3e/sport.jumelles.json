@@ -1,0 +1,2664 @@
+{
+ "niveau": "3e",
+ "matiere": "sport",
+ "exercices": [
+  {
+   "chapitre": "b1c96368-e4c3-5c62-81bc-956b02559cfd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le règlement du tournoi",
+   "competence": "analyser-document",
+   "situation": "Avant le tournoi de la classe, le professeur affiche le règlement. Il demande à chacun de comprendre à quoi sert chaque règle.",
+   "documents": [
+    {
+     "id": "reglement",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Règlement du tournoi",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Un but vaut 1 point",
+       "id": "but"
+      },
+      {
+       "texte": "Un match dure 2 × 8 minutes",
+       "id": "duree"
+      },
+      {
+       "texte": "Le terrain mesure 20 m sur 12 m",
+       "id": "terrain"
+      },
+      {
+       "texte": "Les contacts brutaux sont interdits",
+       "id": "contact"
+      },
+      {
+       "texte": "Protège-tibias obligatoires",
+       "id": "tibias"
+      }
+     ],
+     "pied": "Règlement écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reglement",
+     "enonce": "Touche les deux règles de sécurité.",
+     "reponse": [
+      "contact",
+      "tibias"
+     ],
+     "multiple": true,
+     "aide": "Elles fixent les contacts autorisés ou le matériel obligatoire.",
+     "explication": "L’interdiction des **contacts brutaux** et les **protège-tibias** protègent les joueurs : ce sont les règles de sécurité."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque règle dans sa famille.",
+     "categories": [
+      "But",
+      "Espace et temps",
+      "Sécurité"
+     ],
+     "items": [
+      [
+       "Un but vaut 1 point",
+       0
+      ],
+      [
+       "Un match dure 2 × 8 minutes",
+       1
+      ],
+      [
+       "Le terrain mesure 20 m sur 12 m",
+       1
+      ],
+      [
+       "Protège-tibias obligatoires",
+       2
+      ]
+     ],
+     "aide": "Le terrain, les zones et la durée sont des règles d’espace et de temps.",
+     "explication": "**But** : comment on marque. **Espace et temps** : durée et terrain. **Sécurité** : contacts et matériel."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert la règle dans un sport ?",
+     "options": [
+      "Elle crée le jeu en fixant ce qui compte",
+      "Elle empêche de jouer",
+      "Elle sert seulement à punir",
+      "Elle ne sert à rien sans arbitre"
+     ],
+     "reponse": 0,
+     "aide": "Sans règle commune, il n’y a pas de match.",
+     "explication": "Sans règle commune, il n’y a pas de match : la règle **crée le jeu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1c96368-e4c3-5c62-81bc-956b02559cfd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le match de Lilou",
+   "competence": "analyser-texte",
+   "situation": "Lilou vient de jouer la finale du tournoi de basket. Son équipe a gagné largement. Elle raconte trois moments du match à son professeur.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le récit de Lilou",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Mon équipe menait de dix points. Un adversaire est tombé et je lui ai tendu la main pour le relever.",
+      "Plus tard, le ballon a touché mon pied avant de sortir. L’arbitre n’a rien vu et a donné la remise à mon équipe, mais j’ai levé la main et j’ai [[r|avoué]] ma faute.",
+      "À la fin du match, je n’ai pas ri des perdants : j’ai serré la main de chacun."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui montre que Lilou reconnaît une faute que l’arbitre n’a pas vue.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "C’est un verbe du deuxième paragraphe.",
+     "explication": "**Avouer** une faute que personne n’a vue, c’est du fair-play."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque situation au geste de fair-play.",
+     "paires": [
+      [
+       "L’arbitre n’a pas vu une faute",
+       "La reconnaître"
+      ],
+      [
+       "Un joueur est à terre",
+       "L’aider"
+      ],
+      [
+       "L’adversaire est dominé",
+       "Ne pas l’humilier"
+      ],
+      [
+       "Le match est fini",
+       "Serrer la main"
+      ]
+     ],
+     "aide": "Relis les trois moments du récit.",
+     "explication": "Reconnaître la faute, **aider** celui qui est à terre, ne pas **humilier** et serrer la main : quatre gestes de fair-play."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lilou avoue alors que l’arbitre n’a rien vu. Comment appeler son geste ?",
+     "options": [
+      "Du fair-play, même sans témoin",
+      "De l’obéissance à l’arbitre qui regarde",
+      "De la naïveté, car personne n’avait vu",
+      "Une triche déguisée pour séduire l’arbitre"
+     ],
+     "reponse": 0,
+     "aide": "Le fair-play commence là où finit la surveillance.",
+     "explication": "Respecter la règle quand l’arbitre regarde, c’est de l’**obéissance** ; quand il ne regarde pas, c’est du **fair-play**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur gagner et perdre.",
+     "texte": "Gagner sans ___, perdre sans ___.",
+     "reponses": [
+      [
+       "mépriser"
+      ],
+      [
+       "accuser"
+      ]
+     ],
+     "banque": [
+      "mépriser",
+      "accuser",
+      "jouer",
+      "serrer"
+     ],
+     "aide": "Le premier verbe concerne l’adversaire battu, le second les excuses.",
+     "explication": "On gagne **sans mépriser** et on perd **sans accuser** : c’est ce qui permet de voir ce qu’il y avait à corriger."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1c96368-e4c3-5c62-81bc-956b02559cfd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un titre annulé, un tournoi à relire",
+   "competence": "argumenter",
+   "situation": "Un club a annulé un titre départemental pour dopage. Quelques semaines plus tard, trois équipes de ta classe jouent un tournoi. Tu relis les deux situations avec les valeurs olympiques.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Titre annulé",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Le titre de Camille est annulé : un contrôle a révélé un produit interdit dans son organisme.",
+      "Elle est exclue des compétitions. Son médecin rappelle que ces produits agissent sur le cœur, les hormones et le psychisme."
+     ]
+    },
+    {
+     "id": "tournoi",
+     "type": "tableau",
+     "titre": "Le tournoi de la classe",
+     "colonnes": [
+      "Équipe",
+      "Score",
+      "Comportement après le match"
+     ],
+     "lignes": [
+      [
+       "Rouge",
+       "12-2",
+       "Se moque des perdants"
+      ],
+      [
+       "Bleue",
+       "2-12",
+       "Accuse l’arbitre"
+      ],
+      [
+       "Verte",
+       "8-6",
+       "Serre la main de tous"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le dopage est-il interdit ?",
+     "options": [
+      "Il fausse la compétition et met la santé en danger",
+      "Il rend le sport trop facile à regarder en direct",
+      "Il fait perdre trop de temps aux arbitres",
+      "Il n’est interdit qu’aux sportifs adultes"
+     ],
+     "reponse": 0,
+     "aide": "L’article cite les organes touchés.",
+     "explication": "Le dopage **fausse la compétition** et **met la santé en danger** : cœur, hormones, psychisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve une victoire obtenue en trichant ?",
+     "options": [
+      "Rien, pas même à celui qui triche",
+      "Que l’on est vraiment le meilleur joueur",
+      "Que l’arbitre est trop faible pour sanctionner",
+      "Que la règle du jeu est mauvaise"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que la victoire doit mesurer.",
+     "explication": "Une victoire obtenue en trichant **ne prouve rien**, pas même à celui qui triche."
+    },
+    {
+     "type": "zone",
+     "document": "tournoi",
+     "enonce": "Touche le comportement de l’équipe qui cherche une excuse après sa défaite.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Elle blâme quelqu’un d’autre que son équipe.",
+     "explication": "L’équipe Bleue **accuse l’arbitre** : le mauvais perdant se prive de ce qu’il y avait à corriger."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque comportement.",
+     "categories": [
+      "Fair-play",
+      "Pas de fair-play"
+     ],
+     "items": [
+      [
+       "Se moquer des perdants",
+       1
+      ],
+      [
+       "Serrer la main de tous",
+       0
+      ],
+      [
+       "Accuser l’arbitre",
+       1
+      ],
+      [
+       "Aider un adversaire à terre",
+       0
+      ]
+     ],
+     "aide": "Pense aux gestes de gagner sans mépriser et perdre sans accuser.",
+     "explication": "Serrer la main et aider un adversaire sont des gestes de **fair-play** ; se moquer ou accuser en sont l’inverse."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque valeur olympique à ce qu’elle demande.",
+     "paires": [
+      [
+       "Excellence",
+       "Donner son meilleur"
+      ],
+      [
+       "Amitié",
+       "Placer le lien avant le résultat"
+      ],
+      [
+       "Respect",
+       "De la règle, de l’adversaire, de soi"
+      ]
+     ],
+     "aide": "Les trois valeurs sont excellence, amitié, respect.",
+     "explication": "**Excellence** : donner son meilleur. **Amitié** : le lien avant le résultat. **Respect** : de la règle, de l’adversaire, de soi."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2370991-704d-529f-a09c-5c1707968c73",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les nuits de Camille",
+   "competence": "se-reperer-temps",
+   "situation": "Camille a un cross demain matin. Elle se couche à l’heure indiquée par la première horloge et son réveil sonne à l’heure de la seconde.",
+   "documents": [
+    {
+     "id": "coucher",
+     "type": "horloge",
+     "titre": "Heure du coucher",
+     "heures": 21,
+     "minutes": 30,
+     "numerique": true
+    },
+    {
+     "id": "lever",
+     "type": "horloge",
+     "titre": "Heure du réveil",
+     "heures": 7,
+     "minutes": 0,
+     "numerique": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures Camille dort-elle, si elle s’endort tout de suite ?",
+     "reponse": 9.5,
+     "unite": "h",
+     "aide": "De 21 h 30 à minuit, puis de minuit à 7 h.",
+     "explication": "De 21 h 30 à minuit : 2 h 30 ; de minuit à 7 h : 7 h. Au total **9 h 30**, soit 9,5 heures."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille respecte-t-elle le besoin de sommeil d’un adolescent ?",
+     "options": [
+      "Oui : elle est dans la fourchette de 8 à 10 h",
+      "Non : elle dort moins de 8 heures par nuit",
+      "Non : elle dort plus de 10 heures par nuit",
+      "On ne peut pas savoir sans connaître son âge"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare sa durée de sommeil à la fourchette du cours.",
+     "explication": "9 h 30 est entre 8 et 10 heures : **oui**, c’est le bon repère pour un adolescent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le repère.",
+     "texte": "Un adolescent a besoin de ___ à ___ heures de sommeil par nuit.",
+     "reponses": [
+      [
+       "8",
+       "huit"
+      ],
+      [
+       "10",
+       "dix"
+      ]
+     ],
+     "banque": [
+      "8",
+      "10",
+      "5",
+      "12"
+     ],
+     "aide": "C’est la fourchette utilisée dans la question précédente.",
+     "explication": "Le besoin d’un adolescent est de **8 à 10 heures** par nuit."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2370991-704d-529f-a09c-5c1707968c73",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plateau-repas du sportif",
+   "competence": "analyser-document",
+   "situation": "Karim a cours d’EPS à 14 h et le menu de la cantine est affiché. Il veut choisir ce qui lui donnera de l’énergie et réparera ses muscles, mais il n’a pas pris de petit-déjeuner.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Cantine du collège",
+     "sousTitre": "Menu du jour",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Carottes râpées",
+       "id": "carottes"
+      },
+      {
+       "texte": "Poulet rôti",
+       "id": "poulet"
+      },
+      {
+       "texte": "Riz",
+       "id": "riz"
+      },
+      {
+       "texte": "Pomme",
+       "id": "pomme"
+      },
+      {
+       "texte": "Eau",
+       "id": "eau"
+      }
+     ],
+     "pied": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche le plat qui apporte surtout le carburant de l’effort (glucides complexes).",
+     "reponse": [
+      "riz"
+     ],
+     "aide": "Pâtes, riz, pain, légumes secs sont des glucides complexes.",
+     "explication": "Le **riz** est un glucide complexe : c’est le carburant principal de l’effort."
+    },
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche le plat qui aide à réparer le muscle (protéines).",
+     "reponse": [
+      "poulet"
+     ],
+     "aide": "Viande, poisson, œufs et légumineuses sont riches en protéines.",
+     "explication": "Le **poulet** apporte des protéines, qui réparent le muscle."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque aliment selon son apport principal.",
+     "categories": [
+      "Glucides complexes",
+      "Protéines",
+      "Fruits et légumes",
+      "Inutile à cet âge"
+     ],
+     "items": [
+      [
+       "Lentilles",
+       0
+      ],
+      [
+       "Œufs",
+       1
+      ],
+      [
+       "Pomme",
+       2
+      ],
+      [
+       "Haricots verts",
+       2
+      ],
+      [
+       "Complément protéiné",
+       3
+      ],
+      [
+       "Pâtes",
+       0
+      ]
+     ],
+     "aide": "Les compléments protéinés sont inutiles pour un adolescent qui mange varié.",
+     "explication": "Glucides complexes : lentilles, pâtes. Protéines : œufs. Fruits et légumes : pomme, haricots verts. Les **compléments protéinés** sont inutiles à cet âge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que risque Karim en venant à l’EPS sans avoir pris de petit-déjeuner ?",
+     "options": [
+      "Un malaise",
+      "Un claquage assuré",
+      "Aucun risque",
+      "Une entorse"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que le cours dit de l’EPS à jeun.",
+     "explication": "Venir à jeun en EPS expose au **malaise** : le petit-déjeuner compte."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2370991-704d-529f-a09c-5c1707968c73",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les 60 minutes d’Adam",
+   "competence": "raisonner",
+   "situation": "L’OMS recommande aux 5-17 ans au moins 60 minutes d’activité physique par jour. Adam a noté sa journée et il se couche tard après avoir regardé son téléphone. Il se demande ce que cela change.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "La journée d’Adam (activité physique)",
+     "colonnes": [
+      "Moment",
+      "Activité",
+      "Durée (min)"
+     ],
+     "lignes": [
+      [
+       "Matin",
+       "Vélo jusqu’au collège",
+       15
+      ],
+      [
+       "Midi",
+       "Escaliers et récréation",
+       15
+      ],
+      [
+       "Après-midi",
+       "Cours d’EPS",
+       30
+      ],
+      [
+       "Soir",
+       "Promener le chien",
+       10
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Journée écrite pour l’exercice"
+    },
+    {
+     "id": "ecran",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "e",
+       "texte": "Écran tard le soir",
+       "emoji": "📱"
+      },
+      {
+       "id": "l",
+       "texte": "Lumière bleue",
+       "emoji": "💡"
+      },
+      {
+       "id": "m",
+       "texte": "?"
+      },
+      {
+       "id": "n",
+       "texte": "Endormissement décalé",
+       "emoji": "😴"
+      },
+      {
+       "id": "p",
+       "texte": "Nuit raccourcie",
+       "emoji": "⏰"
+      }
+     ],
+     "liens": [
+      {
+       "de": "e",
+       "a": "l"
+      },
+      {
+       "de": "l",
+       "a": "m"
+      },
+      {
+       "de": "m",
+       "a": "n"
+      },
+      {
+       "de": "n",
+       "a": "p"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes d’activité physique Adam a-t-il faites dans la journée ?",
+     "reponse": 70,
+     "unite": "min",
+     "aide": "Additionne les quatre durées du tableau.",
+     "explication": "15 + 15 + 30 + 10 = **70 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Adam atteint-il la recommandation de l’OMS ?",
+     "options": [
+      "Oui : 70 minutes dépassent les 60 minutes",
+      "Non : il lui manque encore 10 minutes",
+      "Non : l’EPS ne compte pas dans le total",
+      "Non : seul le sport encadré est comptabilisé"
+     ],
+     "reponse": 0,
+     "aide": "Marcher, prendre l’escalier et faire du vélo comptent aussi.",
+     "explication": "L’OMS recommande **au moins 60 minutes** par jour ; Adam en fait 70, vélo et escaliers compris."
+    },
+    {
+     "type": "texte",
+     "enonce": "Dans la chaîne, la lumière bleue retarde la sécrétion de quelle hormone ?",
+     "reponse": [
+      "mélatonine",
+      "la mélatonine"
+     ],
+     "placeholder": "Une hormone",
+     "aide": "C’est l’hormone du sommeil.",
+     "explication": "La lumière bleue retarde la sécrétion de **mélatonine** : l’endormissement est décalé et la nuit raccourcie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Adam fait de l’EPS mais passe cinq heures assis chaque jour. Que dire de la sédentarité ?",
+     "options": [
+      "C’est un risque distinct qu’une séance ne compense pas",
+      "Une séance d’EPS suffit à la compenser",
+      "Elle est sans danger pour la santé",
+      "Elle ne concerne que les adultes sédentaires"
+     ],
+     "reponse": 0,
+     "aide": "On peut faire du sport et être sédentaire le reste du temps.",
+     "explication": "La sédentarité est un **risque distinct** du manque de sport : se lever quelques minutes chaque heure compte réellement."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6515e6f-f9b1-5fb4-b15b-59e8ba6b362c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’échauffement avant le cross",
+   "competence": "analyser-document",
+   "situation": "Sami a écrit son programme d’échauffement avant le cross du collège. Son professeur lui demande de ranger chaque exercice dans le bon temps.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Échauffement de Sami",
+     "sousTitre": "Avant le cross",
+     "emoji": "🏃",
+     "lignes": [
+      {
+       "texte": "Trottiner 7 minutes",
+       "id": "trot"
+      },
+      {
+       "texte": "Rotations lentes des chevilles",
+       "id": "chev"
+      },
+      {
+       "texte": "Étirement long de la cuisse, 1 minute",
+       "id": "etir"
+      },
+      {
+       "texte": "Foulées de plus en plus rapides",
+       "id": "foul"
+      }
+     ],
+     "pied": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche la ligne qui n’a pas sa place avant l’effort.",
+     "reponse": [
+      "etir"
+     ],
+     "aide": "Les étirements longs ont leur moment, mais pas celui-là.",
+     "explication": "Les étirements longs et statiques se font **au retour au calme** : avant l’effort, ils diminuent temporairement la force."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces exercices dans le bon temps de l’échauffement.",
+     "categories": [
+      "Général",
+      "Articulaire",
+      "Spécifique"
+     ],
+     "items": [
+      [
+       "Trottiner 7 minutes",
+       0
+      ],
+      [
+       "Rotations lentes des chevilles",
+       1
+      ],
+      [
+       "Foulées de plus en plus rapides",
+       2
+      ],
+      [
+       "Sautiller doucement sur place",
+       0
+      ]
+     ],
+     "aide": "Le général est doux et continu ; le spécifique ressemble à l’activité à venir.",
+     "explication": "Général : trottiner, sautiller. **Articulaire** : rotations lentes. **Spécifique** : les gestes de la course, de plus en plus vite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "L’échauffement prépare le corps à l’effort et réduit le risque de ___.",
+     "reponses": [
+      [
+       "blessure",
+       "blessures"
+      ]
+     ],
+     "banque": [
+      "blessure",
+      "fatigue",
+      "victoire",
+      "soif"
+     ],
+     "aide": "C’est ce qu’on veut éviter en s’échauffant.",
+     "explication": "L’échauffement protège le muscle et réduit le risque de **blessure**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6515e6f-f9b1-5fb4-b15b-59e8ba6b362c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cœur qui monte en puissance",
+   "competence": "lire-graphique",
+   "situation": "Pendant un échauffement de 12 minutes, Louane porte une montre qui mesure son rythme cardiaque. Le professeur compare son échauffement à celui d’un autre élève.",
+   "documents": [
+    {
+     "id": "fc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Rythme cardiaque de Louane",
+     "categories": [
+      "0 min",
+      "3 min",
+      "6 min",
+      "9 min",
+      "12 min"
+     ],
+     "series": [
+      {
+       "nom": "Louane",
+       "valeurs": [
+        70,
+        95,
+        115,
+        135,
+        155
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Battements par minute",
+      "min": 60,
+      "max": 160,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps d’échauffement"
+     },
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rythme cardiaque de Louane après 6 minutes d’échauffement ?",
+     "reponse": 115,
+     "unite": "battements/min",
+     "tolerance": 2,
+     "aide": "Lis la valeur de la courbe au-dessus de « 6 min ».",
+     "explication": "Au bout de 6 minutes, son cœur bat à environ **115 battements par minute**."
+    },
+    {
+     "type": "zone",
+     "document": "fc",
+     "enonce": "Touche la première mesure où son rythme dépasse 130 battements par minute.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le premier point au-dessus de la graduation 130.",
+     "explication": "À **9 minutes**, elle est à 135 : le cœur accélère progressivement pour apporter plus de sang aux muscles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit cette courbe de la façon de s’échauffer ?",
+     "options": [
+      "Le rythme monte progressivement, du lent vers le rapide",
+      "Le rythme est resté stable pendant tout l’échauffement",
+      "Louane a commencé par un sprint",
+      "Le rythme baisse au fil des minutes"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’allure générale de la courbe.",
+     "explication": "La courbe monte **régulièrement** : c’est le principe de progressivité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque départ à son arrivée dans une progression d’échauffement.",
+     "paires": [
+      [
+       "Du lent",
+       "vers le rapide"
+      ],
+      [
+       "Du général",
+       "vers le spécifique"
+      ],
+      [
+       "Du petit",
+       "vers le grand"
+      ]
+     ],
+     "aide": "Un échauffement ne démarre jamais à fond.",
+     "explication": "On va **du lent vers le rapide**, **du général vers le spécifique**, **du petit vers le grand**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6515e6f-f9b1-5fb4-b15b-59e8ba6b362c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tournoi de handball de 10 h 30",
+   "competence": "resoudre",
+   "situation": "Le premier match du tournoi de handball commence à 10 h 30. L’équipe de Mehdi veut s’échauffer correctement, puis se préparer au retour au calme après le match.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le plan d’échauffement de l’équipe",
+     "colonnes": [
+      "Temps",
+      "Contenu",
+      "Durée (min)"
+     ],
+     "lignes": [
+      [
+       "Général",
+       "Footing léger",
+       7
+      ],
+      [
+       "Articulaire",
+       "Rotations lentes, nuque aux chevilles",
+       3
+      ],
+      [
+       "Spécifique",
+       "Passes et tirs de plus en plus vite",
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Plan écrit pour l’exercice"
+    },
+    {
+     "id": "match",
+     "type": "horloge",
+     "titre": "Heure du match",
+     "heures": 10,
+     "minutes": 30,
+     "numerique": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes dure l’échauffement complet ?",
+     "reponse": 15,
+     "unite": "min",
+     "aide": "Additionne les trois durées du tableau.",
+     "explication": "7 + 3 + 5 = **15 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle heure l’équipe doit-elle commencer pour finir exactement à 10 h 30 ?",
+     "options": [
+      "10 h 15",
+      "10 h 25",
+      "10 h 00",
+      "10 h 45"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Recule de la durée de l’échauffement à partir de l’heure du match.",
+     "explication": "10 h 30 − 15 min = **10 h 15**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Que fait l’équipe avant le match, et que fait-elle après ?",
+     "categories": [
+      "Avant le match",
+      "Après le match"
+     ],
+     "items": [
+      [
+       "Rotations des chevilles",
+       0
+      ],
+      [
+       "Passes de plus en plus vite",
+       0
+      ],
+      [
+       "Étirements longs des cuisses",
+       1
+      ],
+      [
+       "Cinq minutes de marche",
+       1
+      ]
+     ],
+     "aide": "Les étirements longs ont leur place au retour au calme.",
+     "explication": "**Avant** : rotations, passes de plus en plus vite. **Après** : marche douce et étirements longs, pour faire redescendre le cœur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lola propose d’ajouter deux minutes d’étirements longs avant le match. Que lui répondre ?",
+     "options": [
+      "Non : ils diminuent la force et n’évitent pas les blessures",
+      "Oui : ils évitent toutes les blessures avant l’effort",
+      "Oui : ils échauffent mieux que le footing léger",
+      "Non : ils font monter trop vite le rythme du cœur"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que les étirements statiques font à la force juste avant l’effort.",
+     "explication": "Les étirements longs avant l’effort **diminuent temporairement la force** ; leur place est au retour au calme."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a956139-30e2-57d4-b103-54ad0ed6bdd7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le pouls de Jade au fil de la séance",
+   "competence": "lire-graphique",
+   "situation": "Jade a pris son pouls à quatre moments de la séance d’EPS : au repos, pendant l’échauffement en marchant, pendant le footing et après un sprint.",
+   "documents": [
+    {
+     "id": "pouls",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le pouls de Jade",
+     "categories": [
+      "Repos",
+      "Marche",
+      "Footing",
+      "Sprint"
+     ],
+     "series": [
+      {
+       "nom": "Pouls",
+       "valeurs": [
+        70,
+        90,
+        130,
+        180
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Battements par minute",
+      "min": 0,
+      "max": 200,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Moment"
+     },
+     "valeurs": false,
+     "source": "Chiffres arrondis, inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pouls",
+     "enonce": "Touche le moment où le cœur de Jade bat le plus vite.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Après le **sprint**, son cœur bat à 180 battements par minute : l’effort intense demande beaucoup de dioxygène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est son pouls pendant le footing ?",
+     "reponse": 130,
+     "unite": "battements/min",
+     "tolerance": 5,
+     "aide": "Lis la graduation en face du sommet de la barre « Footing ».",
+     "explication": "Pendant le footing, le cœur bat à environ **130 battements par minute**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de battements par minute son cœur accélère-t-il entre le repos et le sprint ?",
+     "reponse": 110,
+     "unite": "battements/min",
+     "tolerance": 5,
+     "aide": "Soustrais le pouls au repos à celui du sprint.",
+     "explication": "180 − 70 = **110 battements** de plus : le cœur livre plus vite aux muscles actifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a956139-30e2-57d4-b103-54ad0ed6bdd7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui court dans sa zone d’endurance ?",
+   "competence": "calculer",
+   "situation": "Trois élèves ont couru 15 minutes à allure régulière. Leur professeur a relevé leur rythme cardiaque en fin de footing et veut savoir qui travaille vraiment l’endurance.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Relevé de fin de footing",
+     "colonnes": [
+      "Élève",
+      "Âge (ans)",
+      "Pouls (battements/min)",
+      "Peut parler ?"
+     ],
+     "lignes": [
+      [
+       "Nora",
+       13,
+       140,
+       "Oui"
+      ],
+      [
+       "Léo",
+       12,
+       190,
+       "Non"
+      ],
+      [
+       "Sacha",
+       14,
+       130,
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Estime la fréquence cardiaque maximale de Nora avec la formule « 220 moins l’âge ».",
+     "reponse": 207,
+     "unite": "battements/min",
+     "aide": "Lis l’âge de Nora dans le tableau.",
+     "explication": "220 − 13 = **207 battements par minute**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La zone d’endurance monte jusqu’à 75 % de la fréquence maximale. Quelle est sa limite haute pour Nora, arrondie à l’unité ?",
+     "reponse": 155,
+     "unite": "battements/min",
+     "aide": "Multiplie 207 par 0,75.",
+     "explication": "207 × 0,75 = 155,25, soit environ **155 battements par minute**."
+    },
+    {
+     "type": "zone",
+     "document": "releve",
+     "enonce": "Touche le pouls de l’élève qui dépasse nettement sa zone d’endurance.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare chaque pouls à la zone, entre 60 et 75 % de la fréquence maximale.",
+     "explication": "Léo (12 ans) a une fréquence maximale d’environ 208 : sa zone va jusqu’à 156. À **190**, il est bien au-delà."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léo ne peut plus parler en courant. Que se passe-t-il ?",
+     "options": [
+      "Il passe en anaérobie : le dioxygène ne suffit plus",
+      "Il est en endurance parfaite : le dioxygène suffit",
+      "Son cœur est en difficulté : il bat trop fort",
+      "Il manque de sommeil : c’est la seule cause"
+     ],
+     "reponse": 0,
+     "aide": "Si on ne peut plus parler, on est au-delà de l’endurance.",
+     "explication": "À cette intensité, le dioxygène ne suffit plus : l’**acide lactique** s’accumule et l’essoufflement vient vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a956139-30e2-57d4-b103-54ad0ed6bdd7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois mois d’entraînement plus tard",
+   "competence": "analyser-document",
+   "situation": "Marco a couru le même parcours avant et après trois mois d’entraînement régulier. Il compare son pouls à chaque étape. Il lit ensuite l’affiche des signaux d’alerte du gymnase.",
+   "documents": [
+    {
+     "id": "marco",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Pouls de Marco sur le même parcours",
+     "categories": [
+      "Repos",
+      "Footing",
+      "Montée",
+      "Sprint",
+      "Récup. 3 min"
+     ],
+     "series": [
+      {
+       "nom": "Avant",
+       "valeurs": [
+        78,
+        140,
+        165,
+        190,
+        120
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Après",
+       "valeurs": [
+        68,
+        130,
+        155,
+        185,
+        100
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Battements par minute",
+      "min": 60,
+      "max": 200,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Étape du parcours"
+     },
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "alerte",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Signaux d’alerte",
+     "emoji": "⚠️",
+     "lignes": [
+      {
+       "texte": "Douleur vive"
+      },
+      {
+       "texte": "Vertiges"
+      },
+      {
+       "texte": "Point de côté persistant"
+      },
+      {
+       "texte": "Transpiration"
+      },
+      {
+       "texte": "Cœur qui accélère à l’effort"
+      }
+     ],
+     "pied": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de battements par minute le pouls de Marco au repos a-t-il baissé ?",
+     "reponse": 10,
+     "unite": "battements/min",
+     "aide": "Compare les deux points « Repos » des deux courbes.",
+     "explication": "78 − 68 = **10 battements** de moins : un entraînement régulier fait baisser le rythme cardiaque au repos."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que traduit cette baisse du pouls au repos ?",
+     "options": [
+      "Le cœur travaille moins pour le même effort",
+      "Le cœur de Marco est devenu plus fragile",
+      "Marco a moins de sang dans tout son corps",
+      "Marco ne s’est pas assez entraîné ces mois-ci"
+     ],
+     "reponse": 0,
+     "aide": "Le volume de sang envoyé à chaque battement augmente.",
+     "explication": "Chaque battement livre plus d’oxygène : le cœur peut battre **moins vite** pour le même résultat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces signes pendant l’effort.",
+     "categories": [
+      "Je m’arrête et je préviens",
+      "Normal à l’effort"
+     ],
+     "items": [
+      [
+       "Douleur vive",
+       0
+      ],
+      [
+       "Vertiges",
+       0
+      ],
+      [
+       "Point de côté persistant",
+       0
+      ],
+      [
+       "Transpiration",
+       1
+      ],
+      [
+       "Cœur qui accélère",
+       1
+      ]
+     ],
+     "aide": "La transpiration refroidit le corps ; la douleur est une information.",
+     "explication": "La douleur vive, les vertiges et un point de côté persistant sont des **signaux d’alerte**. Cœur et transpiration réagissent normalement à l’effort."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle d’hydratation.",
+     "texte": "On boit ___, ___ et ___ l’effort.",
+     "reponses": [
+      [
+       "avant"
+      ],
+      [
+       "pendant"
+      ],
+      [
+       "après"
+      ]
+     ],
+     "banque": [
+      "avant",
+      "pendant",
+      "après",
+      "sans",
+      "jamais"
+     ],
+     "aide": "Boire ne se fait pas seulement quand on a soif.",
+     "explication": "On boit **avant, pendant et après** l’effort : la soif arrive quand la déshydratation a déjà commencé."
+    }
+   ]
+  },
+  {
+   "chapitre": "b9a7ffef-c714-5a72-a51d-a55a4aad519e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Prêt pour la séance de gym ?",
+   "competence": "analyser-document",
+   "situation": "Léo arrive au gymnase pour la séance de gymnastique. Avant de commencer, il vérifie sa tenue avec l’affiche du professeur.",
+   "documents": [
+    {
+     "id": "tenue",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ma tenue du jour",
+     "emoji": "🤸",
+     "lignes": [
+      {
+       "texte": "Baskets bien lacées",
+       "id": "baskets"
+      },
+      {
+       "texte": "Bague et montre",
+       "id": "bijoux"
+      },
+      {
+       "texte": "Cheveux attachés",
+       "id": "cheveux"
+      },
+      {
+       "texte": "Collier en argent",
+       "id": "collier"
+      },
+      {
+       "texte": "Tapis en place",
+       "id": "tapis"
+      }
+     ],
+     "pied": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tenue",
+     "enonce": "Touche les deux éléments que Léo doit retirer avant la séance.",
+     "reponse": [
+      "bijoux",
+      "collier"
+     ],
+     "multiple": true,
+     "aide": "Bagues, colliers et montres accrochent et blessent.",
+     "explication": "La **bague, la montre et le collier** accrochent et blessent : on retire tous les bijoux."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque activité à sa règle de sécurité non négociable.",
+     "paires": [
+      [
+       "Gymnastique",
+       "La parade"
+      ],
+      [
+       "Escalade",
+       "L’assurage"
+      ],
+      [
+       "Athlétisme",
+       "La zone de lancer dégagée"
+      ],
+      [
+       "Sports de combat",
+       "Aucun contact hors situation prévue"
+      ]
+     ],
+     "aide": "Chaque règle protège contre le danger propre à l’activité.",
+     "explication": "Parade, assurage, zone de lancer dégagée, **aucun contact hors situation prévue** : une règle par activité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les consignes de sécurité existent-elles ?",
+     "options": [
+      "Elles sont la trace d’un accident réel",
+      "Elles servent surtout à punir les élèves",
+      "Elles ne concernent que le professeur",
+      "Elles sont des précautions purement théoriques"
+     ],
+     "reponse": 0,
+     "aide": "Une consigne n’est presque jamais une précaution théorique.",
+     "explication": "Une consigne de sécurité est **la trace d’un accident réel** qu’on ne veut pas revoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "b9a7ffef-c714-5a72-a51d-a55a4aad519e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui s’est fait quoi ?",
+   "competence": "analyser-document",
+   "situation": "Pendant une séance d’EPS, quatre élèves se plaignent de douleurs. Le professeur note ce qu’il observe pour décider quoi faire.",
+   "documents": [
+    {
+     "id": "observe",
+     "type": "tableau",
+     "titre": "Ce que le professeur observe",
+     "colonnes": [
+      "Élève",
+      "Signes"
+     ],
+     "lignes": [
+      [
+       "Samia",
+       "Cheville tordue, douleur, gonflement"
+      ],
+      [
+       "Tom",
+       "Douleur musculaire brutale dans la cuisse en plein sprint"
+      ],
+      [
+       "Lina",
+       "Douleur intense, bras déformé, impossible à bouger"
+      ],
+      [
+       "Hugo",
+       "Pâle, sueurs, vertiges"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Cas écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élève selon sa blessure ou son état.",
+     "categories": [
+      "Entorse",
+      "Claquage",
+      "Fracture",
+      "Malaise"
+     ],
+     "items": [
+      [
+       "Samia",
+       0
+      ],
+      [
+       "Tom",
+       1
+      ],
+      [
+       "Lina",
+       2
+      ],
+      [
+       "Hugo",
+       3
+      ]
+     ],
+     "aide": "Cherche les signes propres à chaque cas dans le tableau.",
+     "explication": "Samia : **entorse**. Tom : **claquage**. Lina : **fracture**. Hugo : **malaise**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Samia a une entorse. Remets le protocole RICE dans l’ordre.",
+     "items": [
+      "Repos : arrêter l’effort",
+      "Glace pendant 15 à 20 minutes",
+      "Compression avec un bandage",
+      "Élévation du membre"
+     ],
+     "aide": "RICE : Repos, Ice, Compression, Élévation.",
+     "explication": "**R**epos, **I**ce (glace), **C**ompression, **É**lévation, puis avis médical."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes au maximum applique-t-on la glace sur une entorse ?",
+     "reponse": 20,
+     "unite": "min",
+     "aide": "Le cours donne une fourchette de 15 à…",
+     "explication": "La glace s’applique **15 à 20 minutes** : 20 minutes au maximum."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appliquer la glace sur la cheville de Samia ?",
+     "options": [
+      "Jamais à même la peau",
+      "Directement sur la peau pour qu’elle agisse",
+      "Sans durée précise",
+      "Seulement si la douleur disparaît"
+     ],
+     "reponse": 0,
+     "aide": "Pense au risque de brûlure par le froid.",
+     "explication": "La glace n’est **jamais appliquée à même la peau**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b9a7ffef-c714-5a72-a51d-a55a4aad519e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Théo est tombé de la poutre",
+   "competence": "resoudre",
+   "situation": "Au gymnase, Théo tombe de la poutre, ne peut plus bouger la jambe et crie de douleur. Emma est la seule élève à côté de lui. Elle doit agir dans le bon ordre.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "p",
+       "texte": "Protéger",
+       "emoji": "🛡️"
+      },
+      {
+       "id": "a",
+       "texte": "?"
+      },
+      {
+       "id": "s",
+       "texte": "Secourir",
+       "emoji": "🩹"
+      }
+     ],
+     "liens": [
+      {
+       "de": "p",
+       "a": "a"
+      },
+      {
+       "de": "a",
+       "a": "s"
+      }
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le gymnase",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Emma s’assure qu’aucun agrès ne risque de retomber sur Théo, sans se mettre elle-même en danger. Mais elle ne peut pas soigner Théo seule."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quelle est l’étape qui manque au milieu de la chaîne ?",
+     "reponse": [
+      "alerter",
+      "alerte",
+      "l’alerte"
+     ],
+     "placeholder": "Un verbe",
+     "aide": "Emma doit prévenir des secours.",
+     "explication": "L’ordre des gestes est : protéger, **alerter**, secourir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque numéro à son usage.",
+     "paires": [
+      [
+       "15",
+       "Urgence médicale (SAMU)"
+      ],
+      [
+       "18",
+       "Pompiers"
+      ],
+      [
+       "112",
+       "Numéro d’urgence européen"
+      ],
+      [
+       "114",
+       "Alerte par SMS"
+      ]
+     ],
+     "aide": "Le 114 est le numéro à utiliser par SMS.",
+     "explication": "**15** SAMU, **18** pompiers, **112** européen, **114** par SMS. Pour Théo, le 15 est le bon numéro."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Au téléphone avec les secours, que doit dire Emma, dans l’ordre ?",
+     "items": [
+      "Le lieu précis",
+      "Ce qui s’est passé",
+      "L’état de la victime"
+     ],
+     "aide": "On commence par dire où envoyer les secours.",
+     "explication": "**Le lieu précis**, ce qui s’est passé, l’état de la victime — et on ne raccroche jamais la première."
+    },
+    {
+     "type": "choix",
+     "enonce": "Emma a donné l’adresse. Peut-elle raccrocher ?",
+     "options": [
+      "Non : elle ne raccroche jamais la première",
+      "Oui : l’adresse suffit",
+      "Oui : les secours rappelleront",
+      "Non : elle doit d’abord déplacer Théo"
+     ],
+     "reponse": 0,
+     "aide": "Les secours peuvent encore avoir des questions ou des consignes.",
+     "explication": "Il ne faut **jamais raccrocher le premier** : les secours peuvent donner des consignes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on apprendre au PSC1, dès le collège ?",
+     "options": [
+      "Position latérale, massage cardiaque, défibrillateur",
+      "À arbitrer un match sans se tromper jamais",
+      "À soigner seul une fracture ouverte",
+      "À remplacer les secours dans toutes les situations"
+     ],
+     "reponse": 0,
+     "aide": "PSC1 signifie prévention et secours civiques de niveau 1.",
+     "explication": "Le PSC1 apprend la **position latérale de sécurité**, le **massage cardiaque** et le **défibrillateur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfc46096-1e6a-58f7-b0c2-5b87c7260cf7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le carnet de suivi de Maëlle",
+   "competence": "lire-tableau",
+   "situation": "Maëlle veut courir 8 minutes sans s’arrêter avant le cross du collège. Elle note chaque semaine, dans son carnet, le temps qu’elle tient sans marcher.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Le carnet de Maëlle",
+     "colonnes": [
+      "Semaine",
+      "Course sans arrêt (min)",
+      "Ressenti"
+     ],
+     "lignes": [
+      [
+       "Semaine 1",
+       3,
+       "Dur"
+      ],
+      [
+       "Semaine 2",
+       4,
+       "Dur"
+      ],
+      [
+       "Semaine 3",
+       6,
+       "Correct"
+      ],
+      [
+       "Semaine 4",
+       8,
+       "Facile"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes Maëlle a-t-elle tenu sans s’arrêter lors de la semaine 1 ?",
+     "reponse": 3,
+     "unite": "min",
+     "aide": "Cherche la ligne « Semaine 1 », colonne du temps de course.",
+     "explication": "Son niveau de départ est de **3 minutes** : c’est la mesure qui permettra de voir le progrès."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche la case qui montre que Maëlle a atteint son objectif.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Son objectif est de courir 8 minutes sans s’arrêter.",
+     "explication": "En semaine 4, elle court **8 minutes** : l’objectif précis et mesurable est atteint."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de minutes Maëlle a-t-elle progressé entre la semaine 1 et la semaine 4 ?",
+     "reponse": 5,
+     "unite": "min",
+     "aide": "Soustrais le temps de départ au temps d’arrivée.",
+     "explication": "8 − 3 = **5 minutes** gagnées en quatre semaines, grâce à la mesure et à la régularité."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfc46096-1e6a-58f7-b0c2-5b87c7260cf7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois petites séances ou une grosse ?",
+   "competence": "analyser-document",
+   "situation": "Inès et Hugo veulent tous les deux progresser en course. Inès s’entraîne trois fois par semaine, Hugo ne fait qu’une longue séance le dimanche. Ils comparent leurs carnets.",
+   "documents": [
+    {
+     "id": "orga",
+     "type": "tableau",
+     "titre": "Deux façons de s’entraîner",
+     "colonnes": [
+      "Élève",
+      "Séances par semaine",
+      "Durée d’une séance"
+     ],
+     "lignes": [
+      [
+       "Inès",
+       3,
+       "20 min"
+      ],
+      [
+       "Hugo",
+       1,
+       "2 h"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation écrite pour l’exercice"
+    },
+    {
+     "id": "prog",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Temps de course sans arrêt",
+     "categories": [
+      "Sem. 1",
+      "Sem. 2",
+      "Sem. 3",
+      "Sem. 4"
+     ],
+     "series": [
+      {
+       "nom": "Inès",
+       "valeurs": [
+        3,
+        5,
+        7,
+        9
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Hugo",
+       "valeurs": [
+        3,
+        4,
+        4,
+        5
+       ],
+       "teinte": "jaune"
+      }
+     ],
+     "axeY": {
+      "titre": "Course sans arrêt",
+      "unite": "min",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Semaine"
+     },
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes de plus Hugo passe-t-il à s’entraîner chaque semaine qu’Inès ?",
+     "reponse": 60,
+     "unite": "min",
+     "aide": "Convertis 2 h en minutes, puis multiplie la séance d’Inès par 3.",
+     "explication": "Hugo : 2 h = 120 min. Inès : 3 × 20 = 60 min. Hugo s’entraîne **60 minutes de plus**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En semaine 4, de combien de minutes le temps de course d’Inès dépasse-t-il celui de Hugo ?",
+     "reponse": 4,
+     "unite": "min",
+     "aide": "Lis la valeur de chaque courbe au-dessus de « Sem. 4 ».",
+     "explication": "Inès tient 9 minutes, Hugo 5 : l’écart est de 9 − 5 = **4 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison des deux carnets ?",
+     "options": [
+      "Trois séances courtes progressent mieux qu’une seule longue",
+      "Une longue séance progresse mieux que trois courtes",
+      "Les deux organisations donnent le même progrès",
+      "Hugo progresse plus vite parce qu’il s’entraîne plus longtemps"
+     ],
+     "reponse": 0,
+     "aide": "Regarde laquelle des deux courbes monte le plus.",
+     "explication": "Malgré moins de temps total, Inès progresse davantage : **3 séances de 20 minutes** donnent le meilleur progrès."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication.",
+     "texte": "Le corps s’adapte ___ les séances, pas ___ : c’est la ___.",
+     "reponses": [
+      [
+       "entre"
+      ],
+      [
+       "pendant"
+      ],
+      [
+       "surcompensation"
+      ]
+     ],
+     "banque": [
+      "entre",
+      "pendant",
+      "surcompensation",
+      "fatigue",
+      "sans"
+     ],
+     "aide": "Pense au repos entre deux séances.",
+     "explication": "Le corps s’adapte **entre** les séances, pas **pendant** : c’est la **surcompensation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfc46096-1e6a-58f7-b0c2-5b87c7260cf7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les tirs de Noé, séance après séance",
+   "competence": "raisonner",
+   "situation": "Noé s’entraîne au tir au panier : à chaque séance, il tente dix lancers. Sa camarade Lina l’observe et lui parle de ses progrès. Aide-le à lire son carnet et à fixer son prochain objectif.",
+   "documents": [
+    {
+     "id": "tirs",
+     "type": "tableau",
+     "titre": "Le carnet de Noé",
+     "colonnes": [
+      "Séance",
+      "Tirs réussis sur 10",
+      "Ressenti"
+     ],
+     "lignes": [
+      [
+       "Séance 1",
+       3,
+       "Raté beaucoup"
+      ],
+      [
+       "Séance 2",
+       4,
+       "Un peu mieux"
+      ],
+      [
+       "Séance 3",
+       3,
+       "Fatigué"
+      ],
+      [
+       "Séance 4",
+       6,
+       "Confiant"
+      ],
+      [
+       "Séance 5",
+       7,
+       "Content"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Tu as bien joué !"
+      },
+      {
+       "qui": "Noé",
+       "texte": "Ça ne m’aide pas, donne-moi un chiffre."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Sur tes 3 tirs ratés de tout à l’heure, ton [[c|coude]] partait sur le côté 3 fois."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tirs",
+     "enonce": "Touche le résultat de la seule séance où Noé a fait moins bien que la précédente.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compare chaque séance à celle d’avant.",
+     "explication": "En séance 3, il passe de 4 à **3 tirs réussis**. Un petit recul fait partie de l’apprentissage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tirs réussis Noé a-t-il gagnés entre la séance 1 et la séance 5 ?",
+     "reponse": 4,
+     "aide": "Soustrais le résultat de départ à celui d’arrivée.",
+     "explication": "7 − 3 = **4 tirs** de plus : sans mesure de départ, ce progrès serait resté invisible."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche dans le message de Lina la partie du corps qui explique les tirs ratés.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Lina décrit ce qui part sur le côté.",
+     "explication": "C’est le **coude** : un relevé précis donne à Noé une action possible à corriger."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces objectifs.",
+     "categories": [
+      "Utile",
+      "Pas utile"
+     ],
+     "items": [
+      [
+       "Réussir 8 tirs sur 10 d’ici la séance 8",
+       0
+      ],
+      [
+       "Devenir le meilleur du collège",
+       1
+      ],
+      [
+       "Réussir 10 tirs sur 10 dès demain",
+       1
+      ],
+      [
+       "Garder son coude dans l’axe sur tous les tirs",
+       0
+      ]
+     ],
+     "aide": "Un bon objectif est précis, mesurable et atteignable.",
+     "explication": "Sont utiles les objectifs **précis, mesurables et atteignables** à court terme ; « devenir le meilleur » est vague et « 10 sur 10 dès demain » décourage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Noé a un 3 sur 10 en séance 3. Quelle conclusion est la plus juste ?",
+     "options": [
+      "Un échec isolé : l’erreur fait partie de l’apprentissage",
+      "Il n’a pas de don, il doit arrêter",
+      "Le carnet ne sert à rien",
+      "Il doit s’entraîner une seule fois, mais très longtemps"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la suite de la courbe de résultats.",
+     "explication": "Un geste s’automatise après de nombreux essais, **dont beaucoup d’échecs** : les séances 4 et 5 le confirment."
+    }
+   ]
+  },
+  {
+   "chapitre": "c98d6100-4ce5-5646-b5a0-80e7f39469db",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une année d’EPS en 6e B",
+   "competence": "lire-tableau",
+   "situation": "À la rentrée, M. Garnier distribue à la 6e B le programme d’EPS de l’année : cinq activités, cinq périodes. Mais quels problèmes la classe va-t-elle apprendre à résoudre ?",
+   "documents": [
+    {
+     "id": "programme",
+     "type": "tableau",
+     "titre": "Le programme d’EPS de la 6e B",
+     "source": "Programme imaginé pour l’exercice.",
+     "colonnes": [
+      "Période",
+      "Activité",
+      "Lieu"
+     ],
+     "lignes": [
+      [
+       "Sept. – oct.",
+       "Demi-fond",
+       "Stade"
+      ],
+      [
+       "Nov. – déc.",
+       "Handball",
+       "Gymnase"
+      ],
+      [
+       "Janv. – févr.",
+       "Acrosport",
+       "Gymnase"
+      ],
+      [
+       "Mars – avr.",
+       "Course d’orientation",
+       "Parc de la ville"
+      ],
+      [
+       "Mai – juin",
+       "Natation de vitesse",
+       "Piscine"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "programme",
+     "enonce": "Touche l’activité où la 6e B devra **s’exprimer devant les autres** par une prestation artistique (champ 3).",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Le champ 3 regroupe la danse, l’acrosport, les arts du cirque et la gymnastique. Cherche l’une d’elles dans la colonne « Activité ».",
+     "explication": "C’est l’**acrosport**, en janvier-février : on construit des figures à plusieurs et on les présente devant un public. C’est le champ 3, « s’exprimer par une prestation artistique »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’activités de l’année relèvent du **champ 1**, celui où l’on produit une performance **mesurée** ?",
+     "reponse": 2,
+     "unite": "activités",
+     "aide": "Dans quelles activités du tableau mesure-t-on un temps, avec un chronomètre ?",
+     "explication": "**2 activités** : le demi-fond et la natation de vitesse. Dans les deux, un chronomètre mesure la performance… et donc le progrès."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque activité de l’année dans son champ d’apprentissage.",
+     "categories": [
+      "1 · Performance mesurée",
+      "2 · Adapter son déplacement",
+      "3 · S’exprimer",
+      "4 · Affrontement"
+     ],
+     "items": [
+      [
+       "Demi-fond",
+       0
+      ],
+      [
+       "Handball",
+       3
+      ],
+      [
+       "Acrosport",
+       2
+      ],
+      [
+       "Course d’orientation",
+       1
+      ],
+      [
+       "Natation de vitesse",
+       0
+      ]
+     ],
+     "aide": "Pour chaque activité, demande-toi quel problème elle pose : se mesurer, gérer un milieu inconnu, s’exprimer devant un public ou affronter un adversaire ?",
+     "explication": "Demi-fond et natation de vitesse : **champ 1** (un chronomètre). Course d’orientation : **champ 2** (un milieu inconnu). Acrosport : **champ 3** (un public). Handball : **champ 4** (un adversaire). La 6e B rencontre bien les quatre champs cette année."
+    }
+   ]
+  },
+  {
+   "chapitre": "c98d6100-4ce5-5646-b5a0-80e7f39469db",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre élèves, quatre problèmes",
+   "competence": "analyser-document",
+   "situation": "En fin de trimestre, la professeure demande à quatre élèves de raconter le moment le plus difficile de leur cycle… sans dire le nom de l’activité. À toi de retrouver le problème que chacun a dû résoudre.",
+   "documents": [
+    {
+     "id": "recits",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Ce qu’ils racontent",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Maëlle",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "🧒",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Arrivée tout en haut du mur, j’ai regardé en bas… Pour redescendre, il a fallu faire confiance à la corde et à mon assureur."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Le défenseur a foncé sur moi. J’avais une [[d|seconde]] pour choisir : faire la passe à Inès ou tirer."
+      },
+      {
+       "qui": "Maëlle",
+       "texte": "Le plus dur, c’était les regards de toute la classe sur notre enchaînement. On a répété nos figures jusqu’à ne plus avoir le trac."
+      },
+      {
+       "qui": "Tom",
+       "texte": "En septembre, je courais le 1 000 m en 6 min 10 s. En décembre, en 5 min 50 s !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque élève au champ d’apprentissage qu’il décrit.",
+     "paires": [
+      [
+       "Lina",
+       "Adapter son déplacement (champ 2)"
+      ],
+      [
+       "Yanis",
+       "Conduire un affrontement (champ 4)"
+      ],
+      [
+       "Maëlle",
+       "S’exprimer devant les autres (champ 3)"
+      ],
+      [
+       "Tom",
+       "Produire une performance mesurée (champ 1)"
+      ]
+     ],
+     "aide": "Cherche l’indice de chaque bulle : un milieu qui fait peur, un adversaire, un public qui regarde, un chronomètre.",
+     "explication": "Lina grimpe en hauteur : **champ 2** (sa sécurité dans un milieu incertain). Yanis affronte un défenseur : **champ 4**. Maëlle présente un enchaînement : **champ 3**. Tom est chronométré : **champ 1**."
+    },
+    {
+     "type": "zone",
+     "document": "recits",
+     "enonce": "Dans le champ 4, il faut **décider vite**. Touche le mot de Yanis qui montre qu’il avait très peu de temps pour choisir.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Relis la bulle de Yanis : combien de temps avait-il avant que le défenseur n’arrive ?",
+     "explication": "« J’avais une **seconde** pour choisir » : dans un affrontement, l’adversaire ne laisse pas le temps de réfléchir longtemps. Il faut décider vite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de **secondes** Tom a-t-il amélioré son temps au 1 000 m entre septembre et décembre ?",
+     "reponse": 20,
+     "unite": "s",
+     "aide": "Attention : 1 minute = 60 secondes. De 6 min 10 s à 6 min, puis de 6 min à 5 min 50 s, combien de secondes en tout ?",
+     "explication": "6 min 10 s = 370 s et 5 min 50 s = 350 s. 370 − 350 = **20 secondes** gagnées en un trimestre."
+    },
+    {
+     "type": "choix",
+     "enonce": "En calculant ces 20 secondes, quel critère d’évaluation de l’EPS viens-tu de mesurer pour Tom ?",
+     "options": [
+      "La progression",
+      "La performance",
+      "La méthode",
+      "Le rôle tenu"
+     ],
+     "reponse": 0,
+     "aide": "Tu n’as pas regardé un seul temps, mais l’écart entre son temps d’arrivée et son point de départ.",
+     "explication": "C’est la **progression** : l’écart avec le point de départ. La performance, elle, serait son temps de décembre (5 min 50 s)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c98d6100-4ce5-5646-b5a0-80e7f39469db",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le champ qui manque à Sofiane",
+   "competence": "raisonner",
+   "situation": "Sofiane, en 6e C, a entendu dire qu’une année d’EPS couvre normalement les **quatre champs d’apprentissage**. Il compare le programme de sa classe à l’affiche de l’association sportive (AS) du collège.",
+   "documents": [
+    {
+     "id": "cycles",
+     "type": "tableau",
+     "titre": "Les cycles d’EPS de la 6e C",
+     "source": "Programme imaginé pour l’exercice.",
+     "colonnes": [
+      "Période",
+      "Activité"
+     ],
+     "lignes": [
+      [
+       "Sept. – oct.",
+       "Badminton"
+      ],
+      [
+       "Nov. – déc.",
+       "Acrosport"
+      ],
+      [
+       "Janv. – févr.",
+       "Basket-ball"
+      ],
+      [
+       "Mars – avr.",
+       "Demi-fond"
+      ],
+      [
+       "Mai – juin",
+       "Danse"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "as",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’affiche de l’AS",
+     "entete": "Association sportive",
+     "sousTitre": "Le mercredi après-midi, au collège",
+     "emoji": "🏅",
+     "teinte": "vert",
+     "lignes": [
+      {
+       "texte": "**Escalade** · 13 h 30, mur du gymnase",
+       "id": "escalade"
+      },
+      {
+       "texte": "**Tennis de table** · 13 h 30, salle B",
+       "id": "tennis"
+      },
+      {
+       "texte": "**Course d’orientation** · 14 h, parc de la ville",
+       "id": "co"
+      },
+      {
+       "texte": "**Gymnastique** · 15 h, gymnase",
+       "id": "gym"
+      },
+      {
+       "texte": "**Futsal** · 15 h, plateau sportif",
+       "id": "futsal"
+      }
+     ],
+     "pied": "Ouverte à tous les élèves, débutants bienvenus !"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de cycles de la 6e C relèvent du champ 4, **conduire un affrontement** ?",
+     "reponse": 2,
+     "unite": "cycles",
+     "aide": "Le champ 4 regroupe les sports collectifs, les sports de raquette et les sports de combat.",
+     "explication": "**2 cycles** : le badminton (un sport de raquette) et le basket-ball (un sport collectif)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel champ d’apprentissage la 6e C ne rencontrera-t-elle **pas** cette année ?",
+     "options": [
+      "Champ 1 : produire une performance mesurée",
+      "Champ 2 : adapter son déplacement à des environnements variés",
+      "Champ 3 : s’exprimer par une prestation artistique",
+      "Champ 4 : conduire un affrontement"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Place chaque activité du Doc 1 dans son champ. Lequel reste vide ?",
+     "explication": "Demi-fond : champ 1. Acrosport et danse : champ 3. Badminton et basket : champ 4. **Le champ 2** reste vide : aucune activité dans un milieu qui change (hauteur, eau profonde, nature)."
+    },
+    {
+     "type": "zone",
+     "document": "as",
+     "enonce": "Sur l’affiche de l’AS, touche les **deux** activités qui feraient découvrir à Sofiane le champ qui manque à sa classe.",
+     "reponse": [
+      "escalade",
+      "co"
+     ],
+     "multiple": true,
+     "aide": "Le champ qui manque se joue dans un environnement incertain : la hauteur, l’eau profonde, la nature.",
+     "explication": "L’**escalade** (la hauteur) et la **course d’orientation** (un parc qu’on ne connaît pas) relèvent du champ 2 : on y gère sa sécurité dans un milieu incertain. Le tennis de table et le futsal sont du champ 4 ; la gymnastique, du champ 3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sofiane n’est pas le meilleur de sa classe en sport. Peut-il s’inscrire à l’AS ?",
+     "options": [
+      "Oui : l’AS est ouverte à tous, débutants compris",
+      "Non : l’AS est réservée aux meilleurs de chaque classe",
+      "Seulement s’il a de bonnes notes en EPS",
+      "Seulement dans une activité qu’il connaît déjà"
+     ],
+     "reponse": 0,
+     "aide": "Relis le bas de l’affiche.",
+     "explication": "**Oui** : l’AS est « ouverte à tous les élèves ». Elle prolonge l’EPS le mercredi et sert justement à découvrir des activités absentes des cours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Sofiane.",
+     "texte": "Ma classe couvre trois champs sur quatre. Il lui manque celui où l’on gère sa ___ dans un milieu ___. Pour le découvrir, je peux m’inscrire à l’___ le mercredi.",
+     "reponses": [
+      [
+       "sécurité"
+      ],
+      [
+       "incertain",
+       "inconnu",
+       "variable"
+      ],
+      [
+       "AS",
+       "association sportive"
+      ]
+     ],
+     "banque": [
+      "sécurité",
+      "incertain",
+      "AS",
+      "vitesse",
+      "artistique",
+      "étude"
+     ],
+     "aide": "Relis le problème posé par le champ 2 dans ton cours, puis regarde le titre de l’affiche.",
+     "explication": "Il manque le champ où l’on gère sa **sécurité** dans un milieu **incertain**. L’**AS** du mercredi, avec l’escalade et la course d’orientation, comble ce manque."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ce73901-91d0-5be7-b05b-9f9032b4d659",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui fait quoi au tournoi ?",
+   "competence": "analyser-document",
+   "situation": "La classe de 6e organise un tournoi de handball 3 contre 3. Le professeur a affiché la feuille des rôles : chacun a une mission.",
+   "documents": [
+    {
+     "id": "roles",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Feuille des rôles",
+     "emoji": "📋",
+     "lignes": [
+      {
+       "texte": "Emma — siffle les fautes",
+       "id": "emma"
+      },
+      {
+       "texte": "Noah — compte les passes réussies",
+       "id": "noah"
+      },
+      {
+       "texte": "Zoé — conseille l’équipe bleue",
+       "id": "zoe"
+      },
+      {
+       "texte": "Karim — tient le score et le chronomètre",
+       "id": "karim"
+      }
+     ],
+     "pied": "Feuille écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "roles",
+     "enonce": "Touche l’élève qui tient le rôle d’arbitre.",
+     "reponse": [
+      "emma"
+     ],
+     "aide": "L’arbitre fait appliquer la règle.",
+     "explication": "**Emma** siffle les fautes : c’est l’arbitre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque rôle à ce qu’il demande.",
+     "paires": [
+      [
+       "Arbitre",
+       "Connaître la règle et décider vite"
+      ],
+      [
+       "Observateur",
+       "Un critère mesurable"
+      ],
+      [
+       "Coach",
+       "Des conseils précis et positifs"
+      ],
+      [
+       "Organisateur",
+       "Sans lui, la séance n’a pas lieu"
+      ]
+     ],
+     "aide": "Pense à ce que chaque rôle doit savoir faire.",
+     "explication": "L’arbitre décide vite, l’observateur relève des **données précises**, le coach conseille de façon **précise et positive**, l’organisateur rend la séance possible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change le fait de tenir un rôle ?",
+     "options": [
+      "On passe de participant à responsable",
+      "On joue moins bien parce qu’on est occupé",
+      "On n’a plus besoin de comprendre l’activité",
+      "On est dispensé des autres séances d’EPS"
+     ],
+     "reponse": 0,
+     "aide": "Tenir un rôle, c’est prendre une responsabilité.",
+     "explication": "Tenir un rôle fait passer de **participant à responsable** : on comprend l’activité au lieu de la subir."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ce73901-91d0-5be7-b05b-9f9032b4d659",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le relevé de l’observateur",
+   "competence": "lire-tableau",
+   "situation": "Pendant un match de basket, Yanis observe trois joueurs et compte leurs passes. Il en tirera des conseils précis pour son équipe.",
+   "documents": [
+    {
+     "id": "passes",
+     "type": "tableau",
+     "titre": "Relevé de Yanis",
+     "colonnes": [
+      "Joueur",
+      "Passes tentées",
+      "Passes réussies"
+     ],
+     "lignes": [
+      [
+       "Samia",
+       10,
+       7
+      ],
+      [
+       "Tom",
+       8,
+       6
+      ],
+      [
+       "Ilyès",
+       10,
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "passes",
+     "enonce": "Touche le nombre de passes tentées par le joueur qui en a tenté le moins.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare la deuxième colonne.",
+     "explication": "**Tom** n’a tenté que 8 passes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de passes Samia a-t-elle ratées ?",
+     "reponse": 3,
+     "aide": "Retire les passes réussies aux passes tentées.",
+     "explication": "10 − 7 = **3 passes ratées**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel joueur a le meilleur taux de réussite ?",
+     "options": [
+      "Tom : 6 passes sur 8, soit 75 %",
+      "Samia : 7 passes sur 10, soit 70 %",
+      "Ilyès : 5 passes sur 10, soit 50 %",
+      "Samia, car elle a réussi le plus de passes"
+     ],
+     "reponse": 0,
+     "aide": "Compare les passes réussies aux passes tentées de chaque joueur.",
+     "explication": "6 sur 8 donne 75 %, devant 70 % et 50 %. Un relevé **chiffré** permet de comparer vraiment."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases de coach.",
+     "categories": [
+      "Conseil utile",
+      "Conseil inutile"
+     ],
+     "items": [
+      [
+       "Place-toi plus haut",
+       0
+      ],
+      [
+       "Tu joues mal",
+       1
+      ],
+      [
+       "Demande la balle plus tôt",
+       0
+      ],
+      [
+       "C’est nul",
+       1
+      ]
+     ],
+     "aide": "Un bon conseil est précis, positif et donne une action possible.",
+     "explication": "« Place-toi plus haut » et « demande la balle plus tôt » sont des **actions possibles** ; « tu joues mal » ne dit rien à corriger."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ce73901-91d0-5be7-b05b-9f9032b4d659",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Inès siffle son premier match",
+   "competence": "analyser-document",
+   "situation": "Inès arbitre un match de basket entre deux équipes de sa classe. Un observateur note chaque décision et si elle a été contestée. Le match devient tendu.",
+   "documents": [
+    {
+     "id": "bulles",
+     "type": "dialogue",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Max",
+       "texte": "C’est faux ! T’es [[i|nul]], l’arbitre !"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Euh… oui… non… je ne sais plus…"
+      },
+      {
+       "qui": "Max",
+       "texte": "Pouvez-vous m’expliquer cette décision ?"
+      }
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Journal de l’observateur",
+     "colonnes": [
+      "Minute",
+      "Décision d’Inès",
+      "Contestée ?"
+     ],
+     "lignes": [
+      [
+       "3",
+       "Faute sifflée",
+       "Non"
+      ],
+      [
+       "7",
+       "Remise en jeu",
+       "Oui"
+      ],
+      [
+       "11",
+       "Pas de faute",
+       "Oui"
+      ],
+      [
+       "15",
+       "Faute sifflée",
+       "Non"
+      ],
+      [
+       "19",
+       "Panier validé",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Journal écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bulles",
+     "enonce": "Touche le mot qui n’a pas sa place dans une contestation respectueuse.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "On peut demander une explication ; on n’insulte pas.",
+     "explication": "« **nul** » est une insulte : contester systématiquement ou insulter rend le rôle d’arbitre intenable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de décisions d’Inès ont été contestées ?",
+     "reponse": 3,
+     "aide": "Compte les « Oui » de la dernière colonne.",
+     "explication": "Il y a **3 contestations** : minutes 7, 11 et 19."
+    },
+    {
+     "type": "choix",
+     "enonce": "Max juge la décision injuste. Quelle réaction est juste ?",
+     "options": [
+      "Demander une explication, sans insulter",
+      "Contester chaque décision de l’arbitre",
+      "Refuser de continuer à jouer le match",
+      "Crier plus fort que l’arbitre pour être entendu"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière réplique de Max.",
+     "explication": "On peut **demander une explication** ; on n’insulte pas et on ne conteste pas systématiquement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Inès hésite beaucoup avant de siffler. Que lui arrive-t-il ?",
+     "options": [
+      "Elle perd le match : un arbitre doit décider vite",
+      "Elle gagne du temps pour mieux regarder",
+      "Les joueurs la respectent davantage ensuite",
+      "Rien, l’arbitrage ne demande pas de décision"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit ce que perd un arbitre qui hésite.",
+     "explication": "Un arbitre qui hésite **perd le match** : le rôle demande de connaître la règle, décider vite et assumer."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque rôle à une compétence qui sert hors du gymnase.",
+     "paires": [
+      [
+       "Arbitre",
+       "Décider sous pression"
+      ],
+      [
+       "Observateur",
+       "Formuler un retour utile"
+      ],
+      [
+       "Organisateur",
+       "Organiser un groupe"
+      ]
+     ],
+     "aide": "Pense à ce que chaque rôle fait pratiquer.",
+     "explication": "Décider sous pression, formuler un retour utile et organiser un groupe sont des compétences qui servent **partout**."
+    }
+   ]
+  }
+ ]
+}

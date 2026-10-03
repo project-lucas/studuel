@@ -43,13 +43,8 @@ import {
   type MatiereACouronner,
 } from '@/lib/moi/couronnes'
 import { appliquerValidationsAuto, lireActiviteDuJour } from '@/lib/moi/journal'
-import {
-  formatDuree,
-  phraseRythme,
-  rythmeHebdo,
-  JOURS_HISTORIQUE,
-  type JourTravail,
-} from '@/lib/moi/temps'
+import { phraseRythme, rythmeHebdo, JOURS_HISTORIQUE, type JourTravail } from '@/lib/moi/temps'
+import { meilleureSerie, recordSemaine } from '@/lib/moi/record'
 import { bilanMoyenne } from '@/lib/moi/moyenne'
 import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import {
@@ -98,7 +93,7 @@ type MoiProfileRow = {
 //    pas son profil. Bannière, badges, pseudo, école, blason de rang, stats de
 //    duel : tout existait déjà, enfermé dans une modale de `/defi`. Une modale
 //    n'a pas d'URL, pas de retour arrière, pas de partage ; personne n'y va
-//    « pour voir ». Ça vit ici maintenant (`CarteProfil`), et `/compte` est
+//    « pour voir ». Ça vit ici maintenant (`EnTeteMoi`), et `/compte` est
 //    enfin accessible d'un geste, par l'engrenage de la carte.
 //
 // 2. UN SEUL NIVEAU. L'écran affichait « Assidu · niveau 5 » avec sa barre, à
@@ -148,6 +143,15 @@ type MoiProfileRow = {
 // Palmarès — au lieu de six blocs empilés ; les badges ont leur étagère, les
 // jeux par matière sont repliés. La mise en page vit dans
 // components/moi/EcranMoi ; cette page ne fait que lire et calculer.
+//
+// REFONTE DU 2026-10-02 (Lucas : « je ne trouve pas l'onglet au point »,
+// maquette « D » choisie entre quatre). LE TABLEAU DE BORD : une ligne
+// d'identité, puis des tuiles — le RECORD DE LA SEMAINE en tête (la semaine en
+// cours face à la meilleure d'avant, lib/moi/record), la série, les trophées,
+// « Toi et tes amis » en barres, ma place, ma moyenne, la collection, le
+// palmarès. Chaque tuile ouvre son détail dans une feuille ; les trois onglets
+// et la carte de joueur ont disparu. Aucune lecture de plus : le record vient
+// du journal déjà lu pour le rythme, la meilleure série des jours actifs.
 // -----------------------------------------------------------------------------
 /**
  * L'ONGLET MOI, construit dès l'ouverture de l'app et gardé vivant,
@@ -343,6 +347,9 @@ export default async function OngletMoi() {
   const secondesTotal = Number(profile?.work_seconds ?? 0) || 0
   const rythmeDisponible = !isMissingSchemaObject(workError)
   const semaines = rythmeHebdo(workDays ?? [], today)
+  // Le record de la semaine : la semaine en cours face à la meilleure d'avant,
+  // lue dans le même journal (un an de profondeur) — aucune requête de plus.
+  const record = recordSemaine(workDays ?? [], today)
 
   // --- Preuve n°3 : la moyenne ---------------------------------------------
   const schoolGrades = normalizeGradeList(gradeRows ?? [])
@@ -420,6 +427,10 @@ export default async function OngletMoi() {
     secondes: secondesTotal,
   }
   const amis = resoudreClassementAmis(classementAmisBrut, maLigne)
+  // Mes trophées de la semaine ne se lisent que dans la réponse de la 465.
+  const tropheesSemaine = amis.complet
+    ? (amis.joueurs.find((j) => j.moi)?.tropheesSemaine ?? null)
+    : null
 
   // ⚠️ LA CARTE « MES HABITUDES » A QUITTÉ CET ONGLET, et avec elle les deux
   // calculs qui ne servaient qu'à son affichage : les LEVIERS du jour (fait /
@@ -453,10 +464,10 @@ export default async function OngletMoi() {
 
   return (
     <div>
-      {/* LA CARTE, puis TROIS ONGLETS (Progrès · Collection · Palmarès) —
-          refonte du 17/09/2026, détaillée dans components/moi/EcranMoi. */}
+      {/* LE TABLEAU DE BORD (refonte du 02/10/2026) : une ligne d'identité,
+          puis des tuiles — détaillé dans components/moi/EcranMoi. */}
       <EcranMoi
-        carte={
+        identite={
           profilJeu
             ? {
                 data: {
@@ -472,25 +483,23 @@ export default async function OngletMoi() {
                   badges: profilJeu.badges,
                   equippedBadgeIds: profilJeu.equippedBadgeIds,
                 },
-                workTitle: level.title,
                 gemmes: gems,
                 abonne: isPremiumTier((profile?.subscription_tier ?? 'free') as Tier),
-                // Les pastilles en verre — ce qui ne redescend jamais (série,
-                // temps) et ce que l'arène a donné (trophées).
-                compteurs: [
-                  { valeur: `${serie} j`, legende: 'série' },
-                  {
-                    valeur: secondesTotal > 0 ? formatDuree(secondesTotal) : '0 min',
-                    legende: 'travail',
-                  },
-                  {
-                    valeur: profilJeu.summary.trophies.toLocaleString('fr-FR'),
-                    legende: 'trophées',
-                  },
-                ],
               }
             : null
         }
+        record={record}
+        travail={{ total: secondesTotal, titre: level.title }}
+        serie={{ jours: serie, meilleure: meilleureSerie(joursActifs, serie) }}
+        trophees={{
+          total: profilJeu?.summary.trophies ?? 0,
+          semaine: tropheesSemaine,
+          meilleur: profilJeu?.summary.bestTrophies ?? 0,
+        }}
+        badges={{
+          gagnes: (profilJeu?.badges ?? []).filter((b) => b.earned).length,
+          total: profilJeu?.badges.length ?? 0,
+        }}
         notes={{ bilan: moyenne, terms, indisponible: Boolean(termError) }}
         classement={{
           mesures: { travail: standings.assiduite, trophees: nationalTrophees },

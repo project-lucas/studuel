@@ -1,0 +1,1939 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "76f3de38-2adb-5217-a10a-988bbe964a20",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un amour qui s’éteint",
+   "competence": "se-reperer-temps",
+   "situation": "Adolphe séduit Ellénore, puis ne sait plus comment la quitter. Suis les étapes de cette liaison, de la séduction à la fin.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La liaison d’Adolphe et d’Ellénore",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Adolphe séduit Ellénore, par vanité"
+      },
+      {
+       "id": "n2",
+       "texte": "Ellénore quitte tout pour lui"
+      },
+      {
+       "id": "n3",
+       "texte": "Aussitôt qu’il l’a obtenue, il cesse de l’aimer"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Ellénore meurt après avoir lu sa lettre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il n’ose pas le lui dire : il reste par pitié et par faiblesse",
+      "Il l’avoue aussitôt à Ellénore et la quitte sans un regard",
+      "Il épouse Ellénore pour apaiser son père et la société",
+      "Il part pour la Pologne afin d’oublier tout à fait Ellénore"
+     ],
+     "reponse": 0,
+     "aide": "Adolphe n’aime plus, mais il n’a pas le courage de rompre.",
+     "explication": "Adolphe **n’ose pas le dire** : il reste par **pitié**, par **faiblesse**, par peur de la faire souffrir, et cette indécision dure des années."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où le sentiment d’Adolphe se retourne.",
+     "aide": "Cherche ce qui arrive dès qu’il a obtenu ce qu’il voulait.",
+     "explication": "Dès qu’il l’a **obtenue**, il cesse de l’aimer : la vanité qui l’avait poussé à séduire disparaît avec la conquête."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Adolphe",
+       "Un jeune homme lucide sur lui-même mais incapable d’agir"
+      ],
+      [
+       "Ellénore",
+       "D’origine polonaise, maîtresse d’un comte, elle quitte tout pour lui"
+      ],
+      [
+       "Le père d’Adolphe",
+       "Il désapprouve la liaison, à distance"
+      ],
+      [
+       "Le baron de T.",
+       "Il pousse Adolphe à rompre et fait parvenir sa lettre"
+      ]
+     ],
+     "aide": "Le baron de T. est un ami du père d’Adolphe.",
+     "explication": "**Adolphe** voit tout sans agir, **Ellénore** sacrifie tout, le **père** désapprouve, le **baron de T.** pousse à la rupture."
+    }
+   ]
+  },
+  {
+   "chapitre": "76f3de38-2adb-5217-a10a-988bbe964a20",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un manuscrit trouvé",
+   "competence": "se-reperer-temps",
+   "situation": "Le livre se présente comme un manuscrit retrouvé et publié par un « éditeur ». Place-le dans la vie de Constant, puis lis l’avertissement imaginé pour l’exercice.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Constant et son livre",
+     "debut": 1760,
+     "fin": 1835,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1767,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ecr",
+       "date": 1806,
+       "nom": "Adolphe écrit"
+      },
+      {
+       "id": "pub",
+       "date": 1816,
+       "nom": "Adolphe publié"
+      },
+      {
+       "id": "mort",
+       "date": 1830,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "avert",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Un avertissement imaginé",
+     "blocs": [
+      "J’ai [[e|trouvé]] ce manuscrit dans les papiers d’un inconnu. Je le publie tel qu’il m’est venu, sans en connaître l’auteur ni juger le héros."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de l’« éditeur » d’*Adolphe*"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture d’*Adolphe* de sa publication ?",
+     "reponse": 10,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1816 − 1806 = **10 ans** : *Adolphe* est écrit en 1806 et publié en 1816.",
+     "unite": "ans"
+    },
+    {
+     "type": "zone",
+     "document": "avert",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le verbe par lequel l’« éditeur » prétend ne pas être l’auteur du récit.",
+     "aide": "Il dit seulement ce qu’il a fait du manuscrit.",
+     "explication": "**Trouvé** : l’« éditeur » prétend n’avoir fait que retrouver et publier un manuscrit, comme dans le dispositif d’*Adolphe*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait d’*Adolphe* : il le rattache au romantisme, ou à la tradition classique ?",
+     "categories": [
+      "Par son époque et son thème, romantique",
+      "Par sa manière, classique"
+     ],
+     "items": [
+      [
+       "Il appartient à la génération du « mal du siècle »",
+       0
+      ],
+      [
+       "Il s’inscrit dans la génération romantique",
+       0
+      ],
+      [
+       "Son style est d’une sécheresse toute classique",
+       1
+      ],
+      [
+       "Il est l’héritier de *La Princesse de Clèves*",
+       1
+      ],
+      [
+       "Presque pas d’action : tout est dans les motifs",
+       1
+      ]
+     ],
+     "aide": "Le style dépouillé et l’analyse des motifs font penser au XVIIe siècle.",
+     "explication": "Constant est **romantique** par sa génération et le « mal du siècle », mais **classique** par la sécheresse du style et l’analyse des motifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "76f3de38-2adb-5217-a10a-988bbe964a20",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faible ou cruel ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves portent un jugement opposé sur Adolphe. Appuie-toi sur le dialogue et sur une phrase du roman pour trancher.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Adolphe est un manipulateur : il séduit Ellénore par [[v|vanité]], puis il l’abandonne."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Pas tout à fait : il ne la quitte jamais vraiment. Il reste par [[p|pitié]] et par faiblesse, et c’est cette indécision qui la tue."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Donc il n’est pas coupable ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Si, mais autrement : il fait un mal immense en voulant éviter d’en faire."
+      }
+     ]
+    },
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une phrase du roman",
+     "blocs": [
+      "« Malheur à l’homme qui, dans les premiers moments d’une liaison d’amour, ne croit pas que cette liaison doit être [[e|éternelle]] ! »"
+     ],
+     "source": "Benjamin Constant, *Adolphe* (1816)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit pourquoi Adolphe reste auprès d’Ellénore alors qu’il ne l’aime plus.",
+     "aide": "Hugo donne le motif juste après « Il reste par ».",
+     "explication": "Adolphe reste par **pitié**, et par faiblesse : il ne veut pas faire souffrir Ellénore, et il la fait mourir à petit feu."
+    },
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit ce que celui qui commence une liaison doit croire de cette liaison.",
+     "aide": "Le mot est le dernier de la proposition, juste avant le point d’exclamation.",
+     "explication": "Il doit croire que sa liaison est **éternelle** : la phrase dit combien on se trompe sur la durée de l’amour."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème du roman à ce qu’il en dit.",
+     "paires": [
+      [
+       "La faiblesse",
+       "Plus destructrice que la méchanceté"
+      ],
+      [
+       "La société",
+       "Elle condamne la femme, pas l’homme"
+      ],
+      [
+       "La lucidité",
+       "Adolphe voit tout, et n’en fait rien"
+      ]
+     ],
+     "aide": "Les trois thèmes s’opposent à ce qu’on attendrait d’un héros.",
+     "explication": "La **faiblesse** détruit plus que la méchanceté, la **société** condamne la femme seule, la **lucidité** n’empêche pas d’agir mal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture d’Adolphe le cours permet-il de défendre ?",
+     "options": [
+      "Un faible, qui fait un mal immense en voulant l’éviter",
+      "Un séducteur cynique qui quitte Ellénore sans le moindre remords",
+      "Une victime de la société, qui n’a aucune part de responsabilité",
+      "Un héros romantique que sa passion mène vers la gloire"
+     ],
+     "reponse": 0,
+     "aide": "Hugo parle de faiblesse et d’indécision, pas de cruauté.",
+     "explication": "Constant démonte la **mécanique de la lâcheté sentimentale** : Adolphe n’est ni un monstre ni un innocent, c’est un faible."
+    }
+   ]
+  },
+  {
+   "chapitre": "3f8843d5-4dcf-5cf7-9ecf-9b36b2df408a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil sans ponctuation",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur « Alcools ». Lis la carte d’identité du recueil, puis relie ses poèmes à ce qu’ils racontent.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Alcools",
+     "sousTitre": "Guillaume Apollinaire (1880-1918)",
+     "emoji": "🥂",
+     "lignes": [
+      {
+       "texte": "Publié en",
+       "valeur": "?",
+       "id": "annee"
+      },
+      {
+       "texte": "Premier poème",
+       "valeur": "« Zone »",
+       "id": "premier"
+      },
+      {
+       "texte": "Dernier poème",
+       "valeur": "« Vendémiaire »",
+       "id": "dernier"
+      },
+      {
+       "texte": "Particularité",
+       "valeur": "Aucune ponctuation",
+       "id": "ponct"
+      }
+     ],
+     "pied": "Quinze ans de poèmes",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "En quelle année le recueil est-il publié (la ligne « ? ») ?",
+     "options": [
+      "1913",
+      "1901",
+      "1918",
+      "1920"
+     ],
+     "reponse": 0,
+     "aide": "Apollinaire meurt en 1918, cinq ans après.",
+     "explication": "Le recueil paraît en **1913** et rassemble quinze ans de poèmes."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "premier"
+     ],
+     "enonce": "Touche la ligne qui dit quel poème ouvre le recueil.",
+     "aide": "Le recueil s’ouvre sur le poème écrit en dernier.",
+     "explication": "Le recueil s’ouvre sur « **Zone** », écrit en dernier, et se ferme sur « Vendémiaire » : l’ordre n’est ni chronologique ni thématique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque poème à ce qu’il contient.",
+     "paires": [
+      [
+       "« Zone »",
+       "La tour Eiffel « bergère », les affiches, l’aviation"
+      ],
+      [
+       "« Le Pont Mirabeau »",
+       "L’amour qui passe comme l’eau"
+      ],
+      [
+       "« La Chanson du mal-aimé »",
+       "La longue plainte amoureuse"
+      ],
+      [
+       "« Nuit rhénane »",
+       "Un poème né du séjour en Rhénanie"
+      ]
+     ],
+     "aide": "Le nom du pont indique un fleuve ; « rhénane » renvoie au Rhin.",
+     "explication": "**Zone** : la ville moderne ; **Le Pont Mirabeau** : l’amour qui passe ; **La Chanson du mal-aimé** : la plainte ; **Nuit rhénane** : la Rhénanie."
+    }
+   ]
+  },
+  {
+   "chapitre": "3f8843d5-4dcf-5cf7-9ecf-9b36b2df408a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sous le pont Mirabeau",
+   "competence": "analyser-texte",
+   "situation": "Apollinaire a supprimé toute ponctuation dans ce recueil. Lis le début du « Pont Mirabeau » et son refrain, puis explique ce choix.",
+   "documents": [
+    {
+     "id": "pont",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le Pont Mirabeau",
+     "blocs": [
+      "Sous le pont Mirabeau coule la [[s|Seine]]",
+      "Et nos amours",
+      "",
+      "Vienne la nuit sonne l’[[r|heure]]",
+      "Les jours s’en vont je [[r|demeure]]"
+     ],
+     "source": "Guillaume Apollinaire, *Alcools* (1913), début et refrain"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pont",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui désigne l’eau qui passe, image de l’amour.",
+     "aide": "Un fleuve de Paris.",
+     "explication": "La **Seine** qui coule, c’est l’amour qui s’en va : la chanson fait du temps qui passe une image d’eau."
+    },
+    {
+     "type": "zone",
+     "document": "pont",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui riment à la fin des vers du refrain.",
+     "aide": "Ce sont les derniers mots des deux vers du refrain.",
+     "explication": "**Heure** et **demeure** riment : le refrain est régulier et se retient par cœur, malgré l’absence de ponctuation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le refrain ?",
+     "options": [
+      "Le temps s’écoule, l’amour passe, le poète reste",
+      "Le poète annonce son départ prochain pour la Rhénanie",
+      "Le poète demande à la nuit de venir le consoler vite",
+      "Le poète célèbre le retour de l’amour avec la nuit"
+     ],
+     "reponse": 0,
+     "aide": "Les jours s’en vont ; qui demeure ?",
+     "explication": "« Les jours s’en vont, je demeure » : **le temps passe, l’amour s’en va, le poète reste** avec sa mélancolie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit Apollinaire de la ponctuation.",
+     "texte": "Apollinaire supprime toute la ___ : « le rythme même et la coupe des ___, voilà la véritable ponctuation ».",
+     "reponses": [
+      [
+       "ponctuation"
+      ],
+      [
+       "vers"
+      ]
+     ],
+     "banque": [
+      "ponctuation",
+      "vers",
+      "rimes",
+      "strophes",
+      "titres"
+     ],
+     "aide": "Dans le poème ci-dessus, aucune virgule ne sépare « nuit » de « sonne ».",
+     "explication": "Il supprime la **ponctuation** : le rythme même et la coupe des **vers** suffisent à ponctuer."
+    }
+   ]
+  },
+  {
+   "chapitre": "3f8843d5-4dcf-5cf7-9ecf-9b36b2df408a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une tour Eiffel bergère",
+   "competence": "analyser-texte",
+   "situation": "Apollinaire est moderne sans rompre avec la tradition. Observe les deux premiers vers de « Zone », puis compare ce poème au « Pont Mirabeau ».",
+   "documents": [
+    {
+     "id": "zone",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Zone",
+     "blocs": [
+      "À la fin tu es las de ce monde ancien",
+      "[[m|Bergère]] ô tour Eiffel le [[m|troupeau]] des ponts [[m|bêle]] ce matin"
+     ],
+     "source": "Guillaume Apollinaire, *Alcools* (1913), « Zone », vers 1 et 2"
+    },
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Deux poèmes d’Alcools",
+     "colonnes": [
+      "",
+      "« Zone »",
+      "« Le Pont Mirabeau »"
+     ],
+     "lignes": [
+      [
+       "Forme",
+       "Long, en vers libres",
+       "?"
+      ],
+      [
+       "Thème dominant",
+       "La modernité",
+       "L’amour perdu"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zone",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les trois mots qui font de Paris un paysage de berger.",
+     "aide": "Un animal, son bruit, et la personne qui le garde.",
+     "explication": "**Bergère**, **troupeau** et **bêle** : un vocabulaire pastoral très ancien pour dire la ville moderne, ses ponts et sa tour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau (la forme du « Pont Mirabeau ») ?",
+     "options": [
+      "Court, chanté",
+      "Long, en vers libres",
+      "Long, en prose",
+      "Très court, sans aucun rythme"
+     ],
+     "reponse": 0,
+     "aide": "Le cours oppose un poème long à un poème court.",
+     "explication": "« Le Pont Mirabeau » est **court et chanté**, avec un refrain, tandis que « Zone » est long, en vers libres."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix d’Apollinaire à son effet.",
+     "paires": [
+      [
+       "Supprimer la ponctuation",
+       "Le rythme et la coupe des vers suffisent à ponctuer"
+      ],
+      [
+       "Appeler la tour Eiffel « bergère »",
+       "La modernité entre dans un vocabulaire pastoral ancien"
+      ],
+      [
+       "Un refrain régulier",
+       "Une chanson qu’on retient par cœur"
+      ]
+     ],
+     "aide": "Chaque choix lie du neuf à de l’ancien, ou l’inverse.",
+     "explication": "La **ponctuation** supprimée laisse parler le rythme, la **bergère** marie la ville et la tradition, le **refrain** garde la chanson populaire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de dissertation.",
+     "texte": "On peut être moderne ___ rompre : Apollinaire mêle chanson populaire, légendes et vers ___.",
+     "reponses": [
+      [
+       "sans"
+      ],
+      [
+       "libre",
+       "libres"
+      ]
+     ],
+     "banque": [
+      "sans",
+      "en",
+      "libre",
+      "rimé"
+     ],
+     "aide": "La modernité d’Alcools est un alliage, pas un rejet.",
+     "explication": "*Alcools* montre qu’on peut être moderne **sans** rompre : chanson populaire, légendes et vers **libre** se mêlent."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c39ac00-00bc-5508-a3ec-a786502bd514",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une chaîne de passions",
+   "competence": "analyser-document",
+   "situation": "Après la chute de Troie, tout le monde aime quelqu’un qui ne l’aime pas. Suis la chaîne, puis repère les confidents.",
+   "documents": [
+    {
+     "id": "amour",
+     "type": "chaine",
+     "titre": "Qui aime qui ?",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "oreste",
+       "texte": "Oreste"
+      },
+      {
+       "id": "hermione",
+       "texte": "Hermione"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "andromaque",
+       "texte": "Andromaque"
+      },
+      {
+       "id": "hector",
+       "texte": "Hector (mort)"
+      }
+     ],
+     "liens": [
+      {
+       "de": "oreste",
+       "a": "hermione",
+       "texte": "aime"
+      },
+      {
+       "de": "hermione",
+       "a": "x",
+       "texte": "aime"
+      },
+      {
+       "de": "x",
+       "a": "andromaque",
+       "texte": "aime"
+      },
+      {
+       "de": "andromaque",
+       "a": "hector",
+       "texte": "aime"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Pyrrhus, roi d’Épire",
+      "Astyanax, fils d’Andromaque",
+      "Pylade, ami d’Oreste",
+      "Phœnix, ancien gouverneur d’Achille"
+     ],
+     "reponse": 0,
+     "aide": "Hermione est la fiancée de ce roi, qui aime Andromaque.",
+     "explication": "**Pyrrhus**, roi d’Épire, est aimé d’Hermione et aime Andromaque, qui reste fidèle à Hector."
+    },
+    {
+     "type": "zone",
+     "document": "amour",
+     "multiple": false,
+     "reponse": [
+      "hector"
+     ],
+     "enonce": "Touche celui à qui Andromaque reste fidèle.",
+     "aide": "Elle est veuve.",
+     "explication": "Andromaque reste fidèle à **Hector**, son mari mort : seule elle « tient debout » dans la chaîne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque confident au personnage qu’il accompagne.",
+     "paires": [
+      [
+       "Pylade",
+       "Oreste"
+      ],
+      [
+       "Céphise",
+       "Andromaque"
+      ],
+      [
+       "Cléone",
+       "Hermione"
+      ],
+      [
+       "Phœnix",
+       "Pyrrhus"
+      ]
+     ],
+     "aide": "Phœnix a été le gouverneur d’Achille, père de Pyrrhus.",
+     "explication": "**Pylade** est l’ami d’Oreste, **Céphise** la confidente d’Andromaque, **Cléone** celle d’Hermione, **Phœnix** accompagne Pyrrhus."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c39ac00-00bc-5508-a3ec-a786502bd514",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La cascade du dénouement",
+   "competence": "analyser-texte",
+   "situation": "Le dénouement tient en quatre coups. Remets-les dans l’ordre, puis écoute deux répliques célèbres.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Le dénouement (en désordre)",
+     "colonnes": [
+      "Étape",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "La fin",
+       "Oreste obéit ; Hermione le maudit et se tue sur le corps de Pyrrhus ; Oreste devient fou"
+      ],
+      [
+       "Le chantage",
+       "Pyrrhus menace de livrer Astyanax aux Grecs si Andromaque le repousse"
+      ],
+      [
+       "L’ordre",
+       "Hermione, folle de jalousie, ordonne à Oreste de tuer Pyrrhus"
+      ],
+      [
+       "La ruse",
+       "Andromaque accepte le mariage, décidée à se tuer après la cérémonie"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "repliques",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Deux répliques de l’acte V",
+     "blocs": [
+      {
+       "didascalie": "Oreste vient annoncer à Hermione la mort de Pyrrhus."
+      },
+      {
+       "personnage": "Hermione",
+       "replique": "Qui te l’a dit ?"
+      },
+      {
+       "didascalie": "Plus tard, Oreste, devenu fou, croit voir les Furies."
+      },
+      {
+       "personnage": "Oreste",
+       "replique": "Pour qui sont ces [[s|serpents]] qui sifflent sur vos têtes ?"
+      }
+     ],
+     "source": "Jean Racine, *Andromaque* (1667), acte V"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les quatre étapes du dénouement dans l’ordre.",
+     "items": [
+      "Le chantage",
+      "La ruse",
+      "L’ordre",
+      "La fin"
+     ],
+     "aide": "Le chantage vient d’abord, la mort de Pyrrhus et la folie viennent en dernier.",
+     "explication": "Ordre : **chantage**, **ruse**, **ordre** d’Hermione, **fin** : Pyrrhus menace, Andromaque trompe, Hermione ordonne, tout s’effondre."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui dit comment Andromaque veut sauver son fils sans trahir Hector.",
+     "aide": "Elle accepte quelque chose qu’elle ne compte pas vivre jusqu’au bout.",
+     "explication": "Elle **accepte le mariage**, décidée à **se tuer après la cérémonie** : son fils sera protégé, sans qu’elle trahisse Hector."
+    },
+    {
+     "type": "zone",
+     "document": "repliques",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui montre ce qu’Oreste croit voir dans sa folie.",
+     "aide": "Ce sont des animaux qui sifflent.",
+     "explication": "Les **serpents** sont ceux des Furies : le vers est célèbre pour son allitération en « s »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle la réponse d’Hermione, « Qui te l’a dit ? » ?",
+     "options": [
+      "Hermione renie l’ordre qu’elle a elle-même donné",
+      "Hermione ne croit pas qu’Oreste ait vraiment agi",
+      "Hermione veut savoir qui a vu la scène",
+      "Hermione accuse Pyrrhus d’avoir menti"
+     ],
+     "reponse": 0,
+     "aide": "Qui avait demandé à Oreste de tuer Pyrrhus ?",
+     "explication": "Hermione **renie l’ordre qu’elle a donné** : la passion rend aveugle, et une parole donnée ne se reprend pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c39ac00-00bc-5508-a3ec-a786502bd514",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La passion aveugle",
+   "competence": "analyser-texte",
+   "situation": "Racine met en scène des êtres que la passion rend aveugles. Lis un vers célèbre d’Hermione et un tableau de synthèse, puis conclus.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Hermione et Pyrrhus",
+     "blocs": [
+      "Je t’aimais [[o|inconstant]], qu’aurais-je fait [[o|fidèle]] ?"
+     ],
+     "source": "Jean Racine, *Andromaque* (1667), acte IV, scène 5"
+    },
+    {
+     "id": "enjeux",
+     "type": "tableau",
+     "titre": "Ce que la tragédie met en jeu",
+     "colonnes": [
+      "Enjeu",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "La passion qui rend aveugle",
+       "Chacun ne voit que son objet"
+      ],
+      [
+       "La parole qui engage",
+       "?"
+      ],
+      [
+       "La fidélité au mort",
+       "Seule Andromaque tient debout"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots qui s’opposent dans ce vers.",
+     "aide": "Deux adjectifs contraires, tous deux qualifient Pyrrhus.",
+     "explication": "**Inconstant** et **fidèle** : Hermione dit qu’elle aimait Pyrrhus infidèle, alors que sa fidélité l’aurait laissée indifférente."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : comment la parole engage-t-elle ?",
+     "options": [
+      "Un ordre donné ne se reprend pas",
+      "Une promesse se rompt sans conséquence",
+      "Les mots ne servent qu’à tromper les confidents",
+      "Un serment se tient toujours par amitié"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’ordre d’Hermione à Oreste.",
+     "explication": "La parole **engage** : un ordre donné ne se reprend pas, même quand on s’en repent aussitôt."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il exige.",
+     "paires": [
+      [
+       "Oreste",
+       "D’être aimé d’Hermione"
+      ],
+      [
+       "Hermione",
+       "D’être aimée de Pyrrhus"
+      ],
+      [
+       "Pyrrhus",
+       "D’être aimé d’Andromaque"
+      ]
+     ],
+     "aide": "Chacun aime quelqu’un d’autre que celui qui l’aime.",
+     "explication": "Chacun **exige d’être aimé par celui qui ne le peut pas** : c’est ce qui rend la chaîne parfaite, et tragique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que la tragédie classique respecte et refuse de montrer.",
+     "texte": "La tragédie classique respecte la règle des trois ___ ; la violence y est ___ et non montrée.",
+     "reponses": [
+      [
+       "unités"
+      ],
+      [
+       "racontée"
+      ]
+     ],
+     "banque": [
+      "unités",
+      "actes",
+      "racontée",
+      "jouée",
+      "dessinée"
+     ],
+     "aide": "Unité de lieu, de temps et d’action ; et la mort de Pyrrhus se raconte.",
+     "explication": "Les trois **unités** (lieu, temps, action), et une violence **racontée** plutôt que montrée."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd04e3a5-be49-50de-9b49-48ef9542b8df",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux Antigone face à face",
+   "competence": "analyser-document",
+   "situation": "Anouilh reprend le mythe de Sophocle, mais sa pièce n’est pas la même. Compare-les dans le tableau avant de les distinguer.",
+   "documents": [
+    {
+     "id": "duo",
+     "type": "tableau",
+     "titre": "Sophocle et Anouilh",
+     "colonnes": [
+      "",
+      "Sophocle",
+      "Anouilh"
+     ],
+     "lignes": [
+      [
+       "Époque",
+       "Vers 441 av. J.-C.",
+       "?"
+      ],
+      [
+       "Les dieux",
+       "Présents : les lois non écrites des dieux",
+       "Disparus"
+      ],
+      [
+       "Créon",
+       "Le roi qui fait passer la cité avant tout",
+       "Un homme fatigué qui explique"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quand la pièce d’Anouilh est-elle créée (la case « ? ») ?",
+     "options": [
+      "Février 1944, sous l’Occupation",
+      "Novembre 1667, sous Louis XIV",
+      "Octobre 1994, à Paris",
+      "Mai 1871, sous la Commune"
+     ],
+     "reponse": 0,
+     "aide": "La pièce est créée en pleine Occupation.",
+     "explication": "La pièce est créée en **février 1944**, au théâtre de l’Atelier, sous l’Occupation."
+    },
+    {
+     "type": "zone",
+     "document": "duo",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit ce que sont devenus les dieux chez Anouilh.",
+     "aide": "Cherche la ligne « Les dieux », colonne Anouilh.",
+     "explication": "Chez Anouilh, les dieux ont **disparu** : Antigone ne se bat plus pour une loi divine mais pour elle-même."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage secondaire à son rôle chez Anouilh.",
+     "paires": [
+      [
+       "Ismène",
+       "La sœur belle et raisonnable, qui a peur"
+      ],
+      [
+       "La Nourrice",
+       "La tendresse de l’enfance, qui ne comprend rien au drame"
+      ],
+      [
+       "Le Chœur",
+       "Il commente et distingue la tragédie du drame"
+      ],
+      [
+       "Les Gardes",
+       "Des hommes ordinaires, occupés de leur solde"
+      ]
+     ],
+     "aide": "Chacun a une fonction très différente : un qui commente, d’autres qui ne comprennent pas.",
+     "explication": "**Ismène** a peur, la **Nourrice** ne comprend pas, le **Chœur** commente, les **Gardes** pensent à leur solde."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd04e3a5-be49-50de-9b49-48ef9542b8df",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui survit à la fin ?",
+   "competence": "analyser-document",
+   "situation": "La tragédie d’Anouilh annonce sa fin dès le début. Reconstitue le dénouement, puis lis un prologue écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "tableau",
+     "titre": "La fin de la pièce",
+     "colonnes": [
+      "Personnage",
+      "Sa fin"
+     ],
+     "lignes": [
+      [
+       "Antigone",
+       "Murée vivante"
+      ],
+      [
+       "Hémon",
+       "?"
+      ],
+      [
+       "Eurydice",
+       "Elle se tue"
+      ],
+      [
+       "Créon",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "prologue",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un prologue à la manière d’Anouilh",
+     "blocs": [
+      {
+       "personnage": "Le Prologue",
+       "replique": "Voici les personnages. La petite, là-bas, va mourir : elle le sait déjà. Le roi, fatigué, va pourtant essayer de la sauver. Rien n’y fera : la [[m|mécanique]] est [[m|montée]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Anouilh"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète le tableau avec la fin de chaque personnage.",
+     "texte": "Hémon, fils de Créon, ___ ; Créon, lui, ___ en vie et retourne au conseil.",
+     "reponses": [
+      [
+       "se tue"
+      ],
+      [
+       "reste"
+      ]
+     ],
+     "banque": [
+      "se tue",
+      "reste",
+      "s’enfuit",
+      "part en exil"
+     ],
+     "aide": "Hémon est le fiancé d’Antigone ; Créon est celui qui continue de gouverner.",
+     "explication": "Hémon **se tue** ; Créon **reste** en vie et retourne au conseil : le pouvoir continue."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le personnage qui survit et retourne à sa tâche.",
+     "aide": "C’est celui qui exerce le pouvoir.",
+     "explication": "**Créon** reste et retourne au conseil : la pièce n’a pas changé le cours des affaires."
+    },
+    {
+     "type": "zone",
+     "document": "prologue",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui disent que la fin est inévitable.",
+     "aide": "La tragédie est comparée à une machine.",
+     "explication": "La **mécanique** est **montée** : la tragédie se déroule toute seule, sans que personne puisse l’arrêter."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la pièce à son effet.",
+     "paires": [
+      [
+       "Un prologue qui annonce la fin",
+       "La tragédie est une mécanique qui se déroule toute seule"
+      ],
+      [
+       "Des gardes qui parlent de leur solde",
+       "Un anachronisme assumé qui rapproche la pièce de nous"
+      ],
+      [
+       "Un Créon fatigué qui argumente",
+       "Un homme qui tente de sauver sa nièce plutôt qu’un tyran"
+      ]
+     ],
+     "aide": "Pense à ce que chaque élément change par rapport à Sophocle.",
+     "explication": "Le **prologue** annonce la fin, les **gardes** sont un anachronisme assumé, **Créon** n’est pas un tyran mais un homme fatigué."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd04e3a5-be49-50de-9b49-48ef9542b8df",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Créon, un tyran ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves jugent Créon différemment. Appuie-toi sur leur dialogue pour distinguer Anouilh de Sophocle.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Après la lecture",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Chez Anouilh, Créon est un tyran : il veut la mort d’Antigone."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Au contraire : il [[a|argumente]], il explique, il essaie de la [[a|sauver]]. Il lui dit même que ses deux frères étaient indignes."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Et elle refuse quand même ?"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Oui. Elle ne se bat plus pour les dieux, mais pour elle-même."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux verbes de Malik qui montrent que Créon n’est pas un tyran.",
+     "aide": "Cherche ce que Créon fait avec Antigone, plutôt que de la punir.",
+     "explication": "Créon **argumente** et essaie de la **sauver** : c’est un homme fatigué qui explique, pas un tyran."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : il appartient à la pièce de Sophocle ou à celle d’Anouilh ?",
+     "categories": [
+      "Sophocle",
+      "Anouilh"
+     ],
+     "items": [
+      [
+       "Antigone invoque les lois non écrites des dieux",
+       0
+      ],
+      [
+       "Antigone se bat pour elle-même",
+       1
+      ],
+      [
+       "Créon fait passer la cité avant tout",
+       0
+      ],
+      [
+       "Créon, fatigué, tente de sauver sa nièce",
+       1
+      ],
+      [
+       "Des gardes qui parlent de leur solde",
+       1
+      ]
+     ],
+     "aide": "Chez Anouilh, les dieux ont disparu.",
+     "explication": "**Sophocle** : les lois divines et la cité ; **Anouilh** : Antigone pour elle-même, un Créon fatigué, des gardes anachroniques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi, sous l’Occupation, chaque camp a-t-il pu lire son message dans la pièce ?",
+     "options": [
+      "Elle oppose refus absolu et compromis sans trancher",
+      "Elle condamne clairement l’occupant dès le prologue",
+      "Elle soutient Créon contre Antigone de bout en bout",
+      "Elle raconte la vie quotidienne sous l’Occupation"
+     ],
+     "reponse": 0,
+     "aide": "Antigone refuse tout ; Créon explique qu’il faut gouverner.",
+     "explication": "La pièce oppose le **refus absolu** et le **compromis nécessaire** sans trancher : c’est son ambiguïté même."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que le Chœur dit de la tragédie.",
+     "texte": "Le Chœur explique que, dans la tragédie, l’___ n’existe plus : c’est ce qui la rend ___.",
+     "reponses": [
+      [
+       "espoir"
+      ],
+      [
+       "reposante"
+      ]
+     ],
+     "banque": [
+      "espoir",
+      "reposante",
+      "drame",
+      "joyeuse"
+     ],
+     "aide": "Dans un drame on espère encore ; pas dans une tragédie.",
+     "explication": "Dans la tragédie, l’**espoir** n’existe plus : c’est ce qui la rend **reposante**, selon le Chœur."
+    }
+   ]
+  },
+  {
+   "chapitre": "937db5e6-1213-5e14-9fad-43e7c0566e10",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une famille thébaine",
+   "competence": "analyser-document",
+   "situation": "Autour d’Antigone, tout le monde tient son rôle dans la cité de Thèbes. Lis le tableau, puis reconnais les autres personnages.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les proches d’Antigone",
+     "colonnes": [
+      "Personnage",
+      "Lien avec Antigone",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Créon",
+       "Oncle, roi de Thèbes",
+       "Fait passer la cité avant tout"
+      ],
+      [
+       "Ismène",
+       "Sœur",
+       "?"
+      ],
+      [
+       "Hémon",
+       "Fiancé, fils de Créon",
+       "Plaide pour elle"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui dit quel lien unit Créon à Antigone.",
+     "aide": "Cherche la ligne de Créon, colonne « Lien avec Antigone ».",
+     "explication": "Créon est son **oncle**, et il est roi de Thèbes : c’est ce qui rend le conflit à la fois familial et politique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle faut-il écrire dans la case « ? » pour Ismène ?",
+     "options": [
+      "La sœur prudente, qui n’ose pas désobéir",
+      "La sœur aînée, qui ordonne la sépulture",
+      "La nourrice, qui élève Antigone",
+      "La reine, épouse de Créon"
+     ],
+     "reponse": 0,
+     "aide": "Ismène a peur de désobéir.",
+     "explication": "Ismène est la **sœur prudente** : elle n’ose pas désobéir au décret de Créon."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Tirésias",
+       "Le devin aveugle"
+      ],
+      [
+       "Eurydice",
+       "La reine, épouse de Créon"
+      ],
+      [
+       "Le Garde",
+       "Il rapporte la transgression, en tremblant"
+      ]
+     ],
+     "aide": "Un de ces personnages voit mieux que les autres, sans yeux.",
+     "explication": "**Tirésias** est le devin aveugle, **Eurydice** la reine, le **Garde** celui qui rapporte l’acte d’Antigone."
+    }
+   ]
+  },
+  {
+   "chapitre": "937db5e6-1213-5e14-9fad-43e7c0566e10",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une loi, deux devoirs",
+   "competence": "se-reperer-temps",
+   "situation": "Créon interdit de pleurer Polynice ; Antigone n’obéit pas. Suis les étapes de l’affrontement, puis distingue les deux camps.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’affrontement",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Créon honore Étéocle, interdit Polynice"
+      },
+      {
+       "id": "n2",
+       "texte": "Antigone recouvre le corps de terre"
+      },
+      {
+       "id": "n3",
+       "texte": "Elle invoque les lois non écrites des dieux"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Antigone se pend, Hémon et Eurydice se tuent"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Le devin Tirésias avertit Créon, mais trop tard",
+      "Le chœur obtient la grâce d’Antigone par un vote",
+      "Ismène prend la place d’Antigone dans le tombeau",
+      "Créon renonce à son décret devant le peuple de Thèbes"
+     ],
+     "reponse": 0,
+     "aide": "C’est le devin aveugle qui prévient Créon.",
+     "explication": "**Tirésias** avertit Créon, mais **trop tard** : Créon reste seul, la fin est déjà là."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Antigone invoque des lois supérieures aux décrets des hommes.",
+     "aide": "Elle ne se cache pas : elle dit pourquoi elle a agi.",
+     "explication": "Antigone **revendique son acte** et invoque les lois non écrites des dieux, supérieures aux décrets des hommes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui lui arrive dans le conflit.",
+     "paires": [
+      [
+       "Étéocle",
+       "Honoré par Créon"
+      ],
+      [
+       "Polynice",
+       "Laissé sans sépulture"
+      ],
+      [
+       "Ismène",
+       "Veut partager la faute, mais Antigone refuse"
+      ]
+     ],
+     "aide": "Étéocle et Polynice sont frères : Créon les traite différemment.",
+     "explication": "**Étéocle** est honoré, **Polynice** sans sépulture, et **Ismène** veut partager la faute : Antigone refuse."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il relève de la loi divine et familiale, ou de la raison d’État ?",
+     "categories": [
+      "Loi divine et familiale",
+      "Raison d’État"
+     ],
+     "items": [
+      [
+       "Donner une sépulture à son frère",
+       0
+      ],
+      [
+       "Faire passer la cité avant tout",
+       1
+      ],
+      [
+       "Les lois non écrites des dieux",
+       0
+      ],
+      [
+       "Un décret qui punit de mort",
+       1
+      ]
+     ],
+     "aide": "Antigone défend le sang et les dieux ; Créon défend la cité.",
+     "explication": "Antigone défend la **loi divine et familiale**, Créon la **raison d’État** : aucun n’a entièrement tort."
+    }
+   ]
+  },
+  {
+   "chapitre": "937db5e6-1213-5e14-9fad-43e7c0566e10",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Antigone a-t-elle raison ?",
+   "competence": "argumenter",
+   "situation": "Trois élèves discutent du conflit. Écoute leurs arguments, puis lis le chant du chœur pour mesurer la grandeur — et la limite — de l’homme.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léna",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Marthe",
+       "emoji": "🧑",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léna",
+       "texte": "Créon a raison : sans loi, la cité s’écroule. La cité passe avant tout."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non : aucun décret n’est supérieur aux lois non écrites des dieux. Un frère doit recevoir une sépulture."
+      },
+      {
+       "qui": "Marthe",
+       "texte": "Vous avez chacun une part de vérité : aucun des deux n’a entièrement tort."
+      }
+     ]
+    },
+    {
+     "id": "choeur",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le chant du chœur (résumé)",
+     "blocs": [
+      "Il est bien des merveilles en ce monde, mais aucune n’est plus grande que l’homme, capable de tout, sauf de vaincre la [[m|mort]]."
+     ],
+     "source": "Résumé du chant du chœur, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument : il défend Antigone ou Créon ?",
+     "categories": [
+      "Antigone",
+      "Créon"
+     ],
+     "items": [
+      [
+       "La cité passe avant tout",
+       1
+      ],
+      [
+       "Sans loi, la cité s’écroule",
+       1
+      ],
+      [
+       "Aucun décret n’est supérieur aux lois non écrites des dieux",
+       0
+      ],
+      [
+       "Un frère doit recevoir une sépulture",
+       0
+      ]
+     ],
+     "aide": "Léna parle pour Créon, Yanis pour Antigone.",
+     "explication": "**Créon** : la cité avant tout ; **Antigone** : les lois divines et le devoir envers le frère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Marthe juge-t-elle la pièce « inépuisable » ?",
+     "options": [
+      "Parce qu’aucun des deux n’a entièrement tort",
+      "Parce qu’Antigone finit par donner raison à Créon",
+      "Parce que Créon est puni par les dieux sans raison",
+      "Parce que le chœur est le seul à avoir raison"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Marthe.",
+     "explication": "**Aucun des deux n’a entièrement tort** : le conflit oppose deux devoirs, et chaque lecteur peut choisir son camp."
+    },
+    {
+     "type": "zone",
+     "document": "choeur",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit la limite de l’homme.",
+     "aide": "Capable de tout, sauf d’une seule chose.",
+     "explication": "L’homme est capable de tout, sauf de vaincre la **mort** : le chœur célèbre sa grandeur en rappelant sa limite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce qui perd Créon.",
+     "texte": "L’___, la démesure, perd ___ dans la pièce.",
+     "reponses": [
+      [
+       "hybris"
+      ],
+      [
+       "Créon"
+      ]
+     ],
+     "banque": [
+      "hybris",
+      "hamartia",
+      "Créon",
+      "Hémon"
+     ],
+     "aide": "C’est un mot grec qui désigne la démesure.",
+     "explication": "L’**hybris**, la démesure, perd **Créon** : averti trop tard par Tirésias, il reste seul."
+    }
+   ]
+  },
+  {
+   "chapitre": "577f235b-e7ab-504f-a9da-61c2ddb1e728",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un premier roman de salon",
+   "competence": "analyser-document",
+   "situation": "Armance est le premier roman de Stendhal. Fais connaissance avec ses personnages et situe-le avant son célèbre successeur.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages d’*Armance*",
+     "colonnes": [
+      "Personnage",
+      "Qui est-il ?"
+     ],
+     "lignes": [
+      [
+       "Octave de Malivert",
+       "Vingt ans, sorti de l’École polytechnique"
+      ],
+      [
+       "Armance de Zohiloff",
+       "?"
+      ],
+      [
+       "Madame de Malivert",
+       "La mère d’Octave, qui souhaite le mariage"
+      ],
+      [
+       "Le commandeur de Soubirane",
+       "L’oncle ultra, hostile au mariage"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Stendhal",
+     "sousTitre": "Henri Beyle, né à Grenoble",
+     "emoji": "✒️",
+     "lignes": [
+      {
+       "texte": "*Armance*",
+       "valeur": "1827",
+       "id": "arm"
+      },
+      {
+       "texte": "*Le Rouge et le Noir*",
+       "valeur": "1830",
+       "id": "rn"
+      }
+     ],
+     "pied": "Premier roman publié : *Armance*",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est Armance de Zohiloff (la case « ? ») ?",
+     "options": [
+      "Sa cousine russe, orpheline et sans fortune",
+      "Sa sœur aînée, mariée à un riche banquier",
+      "Sa nièce, héritière du commandeur de Soubirane",
+      "Une actrice rencontrée à l’Opéra de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Elle est pauvre et fière, et elle est de la famille d’Octave.",
+     "explication": "Armance est la **cousine d’origine russe** d’Octave, orpheline sans fortune."
+    },
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui dit de quelle école sort Octave de Malivert.",
+     "aide": "Cherche la ligne d’Octave.",
+     "explication": "Octave sort de l’**École polytechnique** : un jeune homme brillant, mélancolique et secret."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Armance* du roman de Stendhal publié en 1830 ?",
+     "reponse": 3,
+     "aide": "Lis les deux dates sur la carte d’identité.",
+     "explication": "1830 − 1827 = **3 ans** : *Armance* paraît trois ans avant le roman de 1830, son célèbre successeur.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "577f235b-e7ab-504f-a9da-61c2ddb1e728",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piège de la fausse lettre",
+   "competence": "se-reperer-temps",
+   "situation": "Octave aime Armance, mais un secret et une machination vont tout gâcher. Suis le fil du roman, jusqu’au dénouement.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Octave a un secret : il ne peut épouser personne"
+      },
+      {
+       "id": "n2",
+       "texte": "Armance cache son amour, par fierté"
+      },
+      {
+       "id": "n3",
+       "texte": "Le commandeur fabrique une fausse lettre"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Octave s’empoisonne à bord"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Octave épouse Armance puis s’embarque pour la Grèce",
+      "Octave renonce au mariage et entre au couvent",
+      "Octave tue le commandeur de Soubirane en duel",
+      "Armance part pour la Russie avec sa mère"
+     ],
+     "reponse": 0,
+     "aide": "Octave s’empoisonne en route vers la Grèce.",
+     "explication": "Marié à Armance, Octave **s’embarque pour la Grèce** et s’empoisonne à bord."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui persuade Octave qu’Armance ne l’aime pas.",
+     "aide": "C’est une machination de son oncle.",
+     "explication": "Le **commandeur de Soubirane**, son oncle, fabrique une **fausse lettre** : c’est elle qui trompe Octave."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le retient ou le fait agir.",
+     "paires": [
+      [
+       "Octave",
+       "Un secret l’empêche d’être l’époux de qui que ce soit"
+      ],
+      [
+       "Armance",
+       "Elle ne veut pas paraître intéressée par la fortune d’Octave"
+      ],
+      [
+       "Le commandeur de Soubirane",
+       "Il fabrique une fausse lettre"
+      ]
+     ],
+     "aide": "Chacun a une raison différente : un secret, une fierté, un calcul.",
+     "explication": "**Octave** garde un secret, **Armance** sa fierté, le **commandeur** trompe son neveu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le roman traite-t-il le secret d’Octave ?",
+     "options": [
+      "Il ne le nomme jamais : le lecteur doit le deviner",
+      "Il le nomme dès le premier chapitre",
+      "Il l’explique dans une longue lettre finale",
+      "Il le réserve à un médecin qui le dévoile"
+     ],
+     "reponse": 0,
+     "aide": "Le roman est celui du non-dit.",
+     "explication": "Le secret **n’est jamais nommé** dans le texte : c’est un roman du non-dit, où tout est retenu et allusif."
+    }
+   ]
+  },
+  {
+   "chapitre": "577f235b-e7ab-504f-a9da-61c2ddb1e728",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que le texte ne dit pas",
+   "competence": "analyser-texte",
+   "situation": "Dans *Armance*, tout se joue dans ce qu’on ne dit pas. Lis une scène de salon écrite pour l’exercice, puis tire les leçons du roman.",
+   "documents": [
+    {
+     "id": "salon",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une scène de salon, à la manière de Stendhal",
+     "blocs": [
+      "Le salon de la marquise était plein ; on y parlait de l’indemnité, du prix des terres, d’un mariage conclu à Londres. Aurore traversa la pièce, s’arrêta devant Gaston, et lui dit seulement qu’il faisait chaud. Il répondit qu’en effet il faisait chaud. Puis tous deux regardèrent, avec une attention [[n|extraordinaire]], le dessin du tapis."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stendhal"
+    },
+    {
+     "id": "acquis",
+     "type": "tableau",
+     "titre": "Ce qu’on y trouve déjà",
+     "colonnes": [
+      "Ce qu’on y trouve",
+      "Où"
+     ],
+     "lignes": [
+      [
+       "La peinture d’une société",
+       "Le salon aristocratique de la Restauration, l’argent, les calculs de mariage"
+      ],
+      [
+       "L’analyse d’une conscience",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "salon",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui montre que l’attention portée au tapis n’est qu’un prétexte.",
+     "aide": "Un tapis ne mérite pas une telle attention.",
+     "explication": "L’attention est **extraordinaire** pour un simple tapis : c’est que les personnages évitent de parler de ce qui les occupe vraiment."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse compléter la case « ? » du tableau ?",
+     "options": [
+      "Une conscience prise dans son propre secret",
+      "Une conscience délivrée par la fortune",
+      "Une conscience tournée vers la politique",
+      "Une conscience heureuse de son rôle mondain"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui empêche Octave d’être l’époux de qui que ce soit.",
+     "explication": "Stendhal analyse **une conscience prise dans son propre secret** : celle d’Octave."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "Un secret jamais nommé",
+       "Le lecteur doit deviner ce que le texte refuse de nommer"
+      ],
+      [
+       "Un style retenu, allusif",
+       "Il a dérouté les lecteurs de 1827"
+      ],
+      [
+       "Le sous-titre « Quelques scènes d’un salon de Paris en 1827 »",
+       "Il annonce une peinture de société plutôt qu’une aventure"
+      ]
+     ],
+     "aide": "Pense au secret, au style et au sous-titre.",
+     "explication": "Le **secret** est deviné, le **style retenu** a dérouté les lecteurs de 1827, le **sous-titre** annonce une société plus qu’une aventure."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de dissertation.",
+     "texte": "*Armance* est un roman du ___ : le sens naît de ce que le texte ___ de nommer.",
+     "reponses": [
+      [
+       "non-dit",
+       "non dit"
+      ],
+      [
+       "refuse"
+      ]
+     ],
+     "banque": [
+      "non-dit",
+      "refuse",
+      "dit",
+      "accepte"
+     ],
+     "aide": "Le roman cache plus qu’il ne dit.",
+     "explication": "*Armance* est un roman du **non-dit** : le sens naît de ce que le texte **refuse** de nommer."
+    }
+   ]
+  }
+ ]
+}

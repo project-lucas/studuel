@@ -16,60 +16,114 @@
 import { seededRng } from '@/lib/defi-modes'
 
 // --- Catalogue -------------------------------------------------------------------
+//
+// LES TROIS GESTES DE L'APP (03/10/2026, Lucas : « les quêtes journalières sont
+// centrales, comme Genshin Impact »). Chaque jour, une quête par geste :
+// APPRENDRE (un cours), SE TESTER (un quiz, des bonnes réponses, le cahier),
+// JOUER (l'arène). Elles ne touchaient avant que le duel classé, et quatre
+// d'entre elles comptaient des choses que rien n'alimentait.
+//
+// RÈGLE D'OR : une quête n'entre au catalogue que si son type est alimenté par
+// un appel réel à advanceQuests (lib/quests-server), et qu'un élève gratuit de
+// n'importe quelle classe peut la finir aujourd'hui. Seule exception, le
+// cahier d'exercices : réservé à Studuel+ et écrit pour certaines classes, il
+// n'est tiré que si le contexte de l'élève le permet (`QuestContext`).
 
 /** Ce qu'une quête compte. Chaque type est incrémenté depuis UN endroit du
  *  code : ajouter un type sans brancher son compteur = quête infinissable. */
 export type QuestKind =
-  | 'duel_play' // duels de 90 s joués
-  | 'duel_win' // duels gagnés
-  | 'correct' // bonnes réponses cumulées (tous modes)
-  | 'combo' // atteindre une série de N bonnes réponses
-  | 'session_prepa' // sessions du plan de préparation terminées
-  | 'revision' // cartes révisées (file « À revoir »)
-  | 'chapter' // chapitres différents travaillés
+  | 'lecon' // cours terminés (completeLesson)
+  | 'quiz' // quiz terminés (recordTestSession)
+  | 'quiz_reussi' // quiz terminés à 80 % ou plus (recordTestSession)
+  | 'correct' // bonnes réponses : quiz, révisions, jeux, duels
+  | 'exercice' // exercices du cahier réussis (terminerExercice)
+  | 'duel_play' // courses classées jouées (fin de course)
+  | 'duel_win' // courses classées gagnées (fin de course)
+  | 'partie' // parties de jeux de salon et de modes de l'arène (recordChallenge)
+
+/** Le geste de la journée auquel une quête appartient — un par jour. */
+export type QuestPilier = 'apprendre' | 'tester' | 'jouer'
+
+export const PILIERS: readonly QuestPilier[] = ['apprendre', 'tester', 'jouer']
+
+export const PILIER_LIBELLE: Record<QuestPilier, string> = {
+  apprendre: 'Apprendre',
+  tester: 'Se tester',
+  jouer: 'Jouer',
+}
 
 export type QuestDef = {
   id: string
   kind: QuestKind
+  pilier: QuestPilier
   goal: number
   /** Libellé à l'infinitif, court. Il tient sur une ligne de téléphone. */
   label: string
+  /** Où ça se fait, en quelques mots, sous le libellé. */
+  detail: string
+  /** Où mène « Y aller ». */
+  href: string
   xp: number
   gems: number
-  /** Difficulté : on tire toujours une facile, une moyenne, une exigeante —
-   *  une journée sans victoire facile décourage, une journée sans défi ennuie. */
-  tier: 'facile' | 'moyenne' | 'exigeante'
+  /** Ne se tire que pour un abonné dont la classe a un cahier d'exercices. */
+  cahier?: true
 }
 
 export const QUEST_CATALOG: readonly QuestDef[] = [
-  // --- faciles : bouclées en une session, toujours atteignables -------------
-  { id: 'duel1', kind: 'duel_play', goal: 1, label: 'Jouer 1 duel de 90 s', xp: 30, gems: 3, tier: 'facile' },
-  { id: 'correct10', kind: 'correct', goal: 10, label: 'Trouver 10 bonnes réponses', xp: 30, gems: 3, tier: 'facile' },
-  { id: 'revision5', kind: 'revision', goal: 5, label: 'Réviser 5 cartes', xp: 30, gems: 3, tier: 'facile' },
-  { id: 'combo3', kind: 'combo', goal: 3, label: 'Enchaîner 3 bonnes réponses', xp: 30, gems: 3, tier: 'facile' },
+  // --- apprendre --------------------------------------------------------------
+  { id: 'lecon1', kind: 'lecon', pilier: 'apprendre', goal: 1, label: 'Terminer 1 cours', detail: 'Lis un cours jusqu’au bout', href: '/reviser', xp: 30, gems: 3 },
+  { id: 'lecon2', kind: 'lecon', pilier: 'apprendre', goal: 2, label: 'Terminer 2 cours', detail: 'Dans la matière de ton choix', href: '/reviser', xp: 50, gems: 5 },
 
-  // --- moyennes : deux ou trois duels, ou une vraie session ------------------
-  { id: 'duel3', kind: 'duel_play', goal: 3, label: 'Jouer 3 duels', xp: 60, gems: 6, tier: 'moyenne' },
-  { id: 'win1', kind: 'duel_win', goal: 1, label: 'Gagner 1 duel', xp: 60, gems: 6, tier: 'moyenne' },
-  { id: 'correct25', kind: 'correct', goal: 25, label: 'Trouver 25 bonnes réponses', xp: 60, gems: 6, tier: 'moyenne' },
-  { id: 'prepa1', kind: 'session_prepa', goal: 1, label: 'Faire 1 session de préparation', xp: 60, gems: 6, tier: 'moyenne' },
-  { id: 'revision15', kind: 'revision', goal: 15, label: 'Réviser 15 cartes', xp: 60, gems: 6, tier: 'moyenne' },
+  // --- se tester --------------------------------------------------------------
+  { id: 'quiz1', kind: 'quiz', pilier: 'tester', goal: 1, label: 'Terminer 1 quiz', detail: 'N’importe quel chapitre', href: '/reviser', xp: 30, gems: 3 },
+  { id: 'quiz80', kind: 'quiz_reussi', pilier: 'tester', goal: 1, label: 'Réussir 1 quiz à 80 %', detail: 'Au moins 8 bonnes réponses sur 10', href: '/reviser', xp: 40, gems: 4 },
+  { id: 'correct20', kind: 'correct', pilier: 'tester', goal: 20, label: 'Trouver 20 bonnes réponses', detail: 'Quiz, révisions, jeux et duels comptent', href: '/reviser', xp: 40, gems: 4 },
+  { id: 'exercice1', kind: 'exercice', pilier: 'tester', goal: 1, label: 'Réussir 1 exercice du cahier', detail: 'Dans le cahier d’un chapitre', href: '/reviser', xp: 50, gems: 5, cahier: true },
 
-  // --- exigeantes : le petit défi du jour, jamais indispensable --------------
-  { id: 'win3', kind: 'duel_win', goal: 3, label: 'Gagner 3 duels', xp: 120, gems: 12, tier: 'exigeante' },
-  { id: 'combo8', kind: 'combo', goal: 8, label: 'Enchaîner 8 bonnes réponses', xp: 120, gems: 12, tier: 'exigeante' },
-  { id: 'chapter2', kind: 'chapter', goal: 2, label: 'Travailler 2 chapitres différents', xp: 120, gems: 12, tier: 'exigeante' },
-  { id: 'correct50', kind: 'correct', goal: 50, label: 'Trouver 50 bonnes réponses', xp: 120, gems: 12, tier: 'exigeante' },
+  // --- jouer ------------------------------------------------------------------
+  { id: 'duel1', kind: 'duel_play', pilier: 'jouer', goal: 1, label: 'Jouer 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 30, gems: 3 },
+  { id: 'win1', kind: 'duel_win', pilier: 'jouer', goal: 1, label: 'Gagner 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 40, gems: 4 },
+  { id: 'partie2', kind: 'partie', pilier: 'jouer', goal: 2, label: 'Jouer 2 parties', detail: 'Un jeu ou un mode de l’arène', href: '/defi', xp: 30, gems: 3 },
+]
+
+/** Les quêtes retirées le 03/10/2026 : la base les connaît encore (555), pour
+ *  payer une journée commencée avant le déploiement ; plus aucun code ne les
+ *  tire. Le test miroir (lib/recompenses-mirror.test.ts) les y tolère. */
+export const QUETES_RETIREES: readonly string[] = [
+  'correct10',
+  'revision5',
+  'combo3',
+  'duel3',
+  'correct25',
+  'prepa1',
+  'revision15',
+  'win3',
+  'combo8',
+  'chapter2',
+  'correct50',
 ]
 
 export const QUESTS_PER_DAY = 3
 
-/** Bonus versé quand les trois quêtes du jour sont bouclées. Il doit valoir
- *  plus que la somme des trois : c'est LUI qu'on vient chercher. */
+/** Bonus versé quand les trois quêtes du jour sont bouclées (le coffre du
+ *  jour). Il doit valoir plus que la somme des trois : c'est LUI qu'on vient
+ *  chercher. */
 export const ALL_DONE_XP = 100
 export const ALL_DONE_GEMS = 15
 
-const TIER_ORDER: QuestDef['tier'][] = ['facile', 'moyenne', 'exigeante']
+/** Ce que l'on sait de l'élève pour tirer ses quêtes. */
+export type QuestContext = {
+  /** Abonné Studuel+ ET classe dotée d'un cahier d'exercices. */
+  cahier?: boolean
+}
+
+/** Les classes (niveau de contenu) dont le cahier d'exercices est en base. */
+export const NIVEAUX_CAHIER: readonly string[] = ['3e', '1re', 'Tle']
+
+/** Le contexte de tirage, depuis l'abonnement et le niveau de contenu. */
+export function contexteQuetes(premium: boolean, niveauContenu: string | null | undefined): QuestContext {
+  return { cahier: premium && !!niveauContenu && NIVEAUX_CAHIER.includes(niveauContenu) }
+}
 
 /** Tire un élément d'une liste avec un générateur pseudo-aléatoire ensemencé. */
 function pick<T>(list: readonly T[], rng: () => number): T {
@@ -77,21 +131,22 @@ function pick<T>(list: readonly T[], rng: () => number): T {
 }
 
 /**
- * Les trois quêtes du jour : une facile, une moyenne, une exigeante, tirées de
- * façon déterministe depuis (jour + élève). Même jour + même élève = mêmes
- * quêtes, à chaque rendu, sur chaque appareil, côté serveur comme client.
+ * Les trois quêtes du jour : une par geste (apprendre, se tester, jouer),
+ * tirées de façon déterministe depuis (jour + élève + contexte). Mêmes
+ * entrées = mêmes quêtes, à chaque rendu, sur chaque appareil.
  */
-export function dailyQuests(dayKey: string, userId: string): QuestDef[] {
+export function dailyQuests(dayKey: string, userId: string, ctx: QuestContext = {}): QuestDef[] {
   const out: QuestDef[] = []
-  for (const tier of TIER_ORDER) {
-    const bucket = QUEST_CATALOG.filter((q) => q.tier === tier)
+  for (const pilier of PILIERS) {
+    const bucket = QUEST_CATALOG.filter((q) => q.pilier === pilier && (!q.cahier || ctx.cahier === true))
     if (bucket.length === 0) continue
-    // Une graine par palier : sinon deux paliers tirés du même flux se
+    // Une graine par geste : sinon deux gestes tirés du même flux se
     // corrèlent et l'élève retrouve toujours les mêmes couples.
-    out.push(pick(bucket, seededRng(`${dayKey}#${userId}#${tier}`)))
+    out.push(pick(bucket, seededRng(`${dayKey}#${userId}#${pilier}`)))
   }
   return out
 }
+
 
 // --- Progression ------------------------------------------------------------------
 
@@ -125,8 +180,9 @@ export function questViews(
   dayKey: string,
   userId: string,
   progress: QuestProgress,
+  ctx: QuestContext = {},
 ): QuestView[] {
-  return dailyQuests(dayKey, userId).map((d) => questView(d, progress))
+  return dailyQuests(dayKey, userId, ctx).map((d) => questView(d, progress))
 }
 
 export function allDone(views: readonly QuestView[]): boolean {
@@ -138,7 +194,7 @@ export function doneCount(views: readonly QuestView[]): number {
 }
 
 /** L'accroche du bloc de quêtes. Elle doit donner le prochain geste, pas un
- *  état : « Jouer 1 duel » vaut mieux que « 1 quête restante ». */
+ *  état : « Terminer 1 cours » vaut mieux que « 1 quête restante ». */
 export function questsHeadline(views: readonly QuestView[]): string {
   if (views.length === 0) return 'Quêtes du jour'
   if (allDone(views)) return 'Journée bouclée — bravo !'
@@ -150,6 +206,68 @@ export function questsHeadline(views: readonly QuestView[]): string {
  *  il récompense les trois quêtes du jour, pas une seule. */
 export const BONUS_STEP_ID = '__jour__'
 
+// --- Ce que le navigateur reçoit ------------------------------------------------
+// La feuille des quêtes vit dans le bandeau, sur tous les onglets : elle est
+// servie par une route (app/api/quetes) et non calculée par chaque page.
+
+/** Une quête du jour telle que le navigateur la reçoit : à plat, sérialisable. */
+export type QueteServie = {
+  id: string
+  pilier: QuestPilier
+  label: string
+  detail: string
+  href: string
+  goal: number
+  current: number
+  done: boolean
+  xp: number
+  gems: number
+}
+
+export type QuetesDuJour = {
+  jour: string
+  quetes: QueteServie[]
+  /** Ids déjà encaissés aujourd'hui, '__jour__' compris (le coffre du jour). */
+  encaissees: string[]
+}
+
+export function queteServie(v: QuestView): QueteServie {
+  const { def } = v
+  return {
+    id: def.id,
+    pilier: def.pilier,
+    label: def.label,
+    detail: def.detail,
+    href: def.href,
+    goal: def.goal,
+    current: v.current,
+    done: v.done,
+    xp: def.xp,
+    gems: def.gems,
+  }
+}
+
+/** Les quêtes finies et pas encore payées : ce qu'il y a à encaisser. */
+export function aEncaisser(etat: QuetesDuJour): QueteServie[] {
+  const payees = new Set(etat.encaissees)
+  return etat.quetes.filter((q) => q.done && !payees.has(q.id))
+}
+
+/** Le coffre du jour : les trois quêtes finies, et pas encore ouvert. */
+export function coffreDuJourPret(etat: QuetesDuJour): boolean {
+  return etat.quetes.length > 0 && etat.quetes.every((q) => q.done) && !etat.encaissees.includes(BONUS_STEP_ID)
+}
+
+/**
+ * « Quête accomplie » : les quêtes finies que l'élève n'a encore ni vues
+ * annoncées ni encaissées. `annoncees` vient du navigateur (une liste par
+ * jour) : une quête finie la veille au soir n'est pas réannoncée au réveil.
+ */
+export function quetesAAnnoncer(etat: QuetesDuJour, annoncees: readonly string[]): QueteServie[] {
+  const deja = new Set(annoncees)
+  return aEncaisser(etat).filter((q) => !deja.has(q.id))
+}
+
 // --- Événements de jeu → avancement -------------------------------------------------
 // Un seul endroit traduit « ce qui vient de se passer » en incréments de quête.
 // Les Server Actions appellent CETTE fonction et poussent le résultat en base :
@@ -157,41 +275,39 @@ export const BONUS_STEP_ID = '__jour__'
 
 /** Ce qu'une partie ou une activité vient de produire. */
 export type QuestEvent = {
+  lecons?: number
+  quiz?: number
+  quizReussis?: number
+  correct?: number
+  exercicesReussis?: number
   duelsPlayed?: number
   duelsWon?: number
-  correct?: number
-  /** Meilleure série atteinte pendant l'activité (valeur ABSOLUE, pas un
-   *  incrément : une série ne se cumule pas d'une partie à l'autre). */
-  bestCombo?: number
-  sessionsPrepa?: number
-  revisions?: number
-  /** Ids des chapitres travaillés pendant l'activité. */
-  chapterIds?: readonly string[]
+  parties?: number
 }
 
-/** Les increments à appliquer, par type de quête. Les quêtes « combo » sont un
- *  MAXIMUM et non une somme — d'où leur traitement à part. */
-export type QuestDelta = {
-  add: Partial<Record<QuestKind, number>>
-  max: Partial<Record<QuestKind, number>>
-}
+/** Les incréments à appliquer, par type de quête. */
+export type QuestDelta = Partial<Record<QuestKind, number>>
 
 export function deltaFor(event: QuestEvent): QuestDelta {
   const n = (v: number | undefined) =>
     Number.isFinite(v) ? Math.max(0, Math.floor(v as number)) : 0
   return {
-    add: {
-      duel_play: n(event.duelsPlayed),
-      duel_win: n(event.duelsWon),
-      correct: n(event.correct),
-      session_prepa: n(event.sessionsPrepa),
-      revision: n(event.revisions),
-      chapter: new Set(event.chapterIds ?? []).size,
-    },
-    max: {
-      combo: n(event.bestCombo),
-    },
+    lecon: n(event.lecons),
+    quiz: n(event.quiz),
+    quiz_reussi: n(event.quizReussis),
+    correct: n(event.correct),
+    exercice: n(event.exercicesReussis),
+    duel_play: n(event.duelsPlayed),
+    duel_win: n(event.duelsWon),
+    partie: n(event.parties),
   }
+}
+
+/** Un quiz « réussi » pour les quêtes : 80 % des réponses au moins. */
+export const SEUIL_QUIZ_REUSSI = 0.8
+
+export function quizReussi(score: number, total: number): boolean {
+  return total > 0 && score / total >= SEUIL_QUIZ_REUSSI
 }
 
 /**
@@ -204,16 +320,14 @@ export function applyEvent(
   userId: string,
   progress: QuestProgress,
   event: QuestEvent,
+  ctx: QuestContext = {},
 ): QuestProgress {
   const delta = deltaFor(event)
   const next: Record<string, number> = { ...progress }
-  for (const def of dailyQuests(dayKey, userId)) {
+  for (const def of dailyQuests(dayKey, userId, ctx)) {
     const current = Number.isFinite(next[def.id]) ? next[def.id] : 0
-    const add = delta.add[def.kind] ?? 0
-    const max = delta.max[def.kind] ?? 0
-    // Un type de quête relève soit du cumul, soit du record — jamais des deux.
-    const value = max > 0 ? Math.max(current, max) : current + add
-    if (value !== current) next[def.id] = value
+    const add = delta[def.kind] ?? 0
+    if (add > 0) next[def.id] = current + add
   }
   return next
 }

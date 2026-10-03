@@ -1,0 +1,4821 @@
+{
+ "niveau": "1re",
+ "matiere": "sciences-gestion-numerique",
+ "exercices": [
+  {
+   "chapitre": "8c70f435-bd3c-5ceb-9639-7cc9af5c6994",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une boulangerie, une piscine et un club de course",
+   "competence": "lire-tableau",
+   "situation": "Dans la petite ville de Vireloup, trois organisations rendent service aux habitants. Elles n’ont pas le même but ni le même propriétaire : un tableau permet de les comparer.",
+   "documents": [
+    {
+     "id": "orgas",
+     "type": "tableau",
+     "titre": "Trois organisations de Vireloup",
+     "source": "Organisations imaginées pour l’exercice.",
+     "colonnes": [
+      "Organisation",
+      "Qui la détient",
+      "Son but"
+     ],
+     "lignes": [
+      [
+       "Le Fournil de Zoé (boulangerie)",
+       "Zoé, seule",
+       "Vendre du pain et réaliser un profit"
+      ],
+      [
+       "Piscine municipale",
+       "La commune",
+       "Rendre un service d’intérêt général à prix modéré"
+      ],
+      [
+       "Association Les Foulées du lac",
+       "Ses 120 adhérents",
+       "Faire courir ses membres, sans partager de bénéfices"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "orgas",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit à qui appartient la piscine.",
+     "aide": "Regarde la ligne de la piscine, dans la colonne « Qui la détient ».",
+     "explication": "La piscine appartient à **la commune** : c’est une organisation publique, détenue par une collectivité."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque organisation à son type.",
+     "paires": [
+      [
+       "Le Fournil de Zoé",
+       "Entreprise privée"
+      ],
+      [
+       "Piscine municipale",
+       "Organisation publique"
+      ],
+      [
+       "Association Les Foulées du lac",
+       "Organisation à but non lucratif"
+      ]
+     ],
+     "aide": "Le but indiqué dans le tableau suffit : profit, intérêt général ou service aux membres sans partage de bénéfices.",
+     "explication": "Le Fournil cherche un **profit** (entreprise privée), la piscine rend un service d’**intérêt général** (organisation publique), l’association ne partage **aucun bénéfice** (but non lucratif)."
+    },
+    {
+     "type": "nombre",
+     "unite": "voix",
+     "enonce": "Dans l’association, chaque adhérent dispose d’une voix en assemblée générale. Combien de voix compte l’assemblée si tous les adhérents sont présents ?",
+     "reponse": 120,
+     "aide": "Une personne, une voix : combien y a-t-il d’adhérents dans le tableau ?",
+     "explication": "Dans une association, c’est le principe « une personne, une voix » : **120 adhérents, 120 voix**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c70f435-bd3c-5ceb-9639-7cc9af5c6994",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La société anonyme Cyclo-Vallée tient son assemblée",
+   "competence": "analyser-document",
+   "situation": "Cyclo-Vallée fabrique des vélos de ville. C’est une société anonyme : ses 400 actionnaires ne dirigent pas eux-mêmes l’entreprise. Qui décide, et qui contrôle ?",
+   "documents": [
+    {
+     "id": "pouvoir",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Qui détient le pouvoir de décision ?",
+     "source": "Schéma simplifié.",
+     "noeuds": [
+      {
+       "id": "act",
+       "texte": "Actionnaires",
+       "emoji": "🧑‍💼"
+      },
+      {
+       "id": "inconnu",
+       "texte": "?"
+      },
+      {
+       "id": "dg",
+       "texte": "Direction générale",
+       "emoji": "🏢"
+      }
+     ],
+     "liens": [
+      {
+       "de": "act",
+       "a": "inconnu",
+       "texte": "élisent"
+      },
+      {
+       "de": "inconnu",
+       "a": "dg",
+       "texte": "nomme"
+      }
+     ]
+    },
+    {
+     "id": "ag",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Compte rendu de l’assemblée générale",
+     "source": "Texte écrit pour l’exercice ; entreprise imaginaire.",
+     "blocs": [
+      "Les 400 actionnaires de Cyclo-Vallée se réunissent en assemblée générale. Ils approuvent les comptes de l’année et élisent le conseil d’administration.",
+      "Le [[c|commissaire]] aux comptes déclare que les comptes sont sincères et réguliers.",
+      "Le directeur général, M. Barral, propose de réinvestir tout le bénéfice dans une nouvelle usine. Plusieurs actionnaires auraient préféré un dividende plus élevé."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ag",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui désigne l’acteur chargé de certifier la sincérité des comptes.",
+     "aide": "Cherche, dans le deuxième paragraphe, la personne qui déclare les comptes sincères.",
+     "explication": "Le **commissaire aux comptes** certifie que les comptes sont sincères. C’est un contrôle extérieur aux dirigeants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel organe se cache derrière le point d’interrogation du schéma, entre les actionnaires et la direction générale ?",
+     "options": [
+      "Le conseil d’administration",
+      "Le commissaire aux comptes",
+      "La Cour des comptes",
+      "Le bureau de l’association"
+     ],
+     "reponse": 0,
+     "aide": "Les actionnaires élisent cet organe, qui nomme ensuite la direction générale.",
+     "explication": "Dans une société anonyme, les actionnaires élisent **le conseil d’administration**, qui nomme la direction générale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à son rôle dans la société anonyme.",
+     "paires": [
+      [
+       "Assemblée générale",
+       "Approuve les comptes et peut révoquer les dirigeants"
+      ],
+      [
+       "Conseil d’administration",
+       "Nomme la direction générale"
+      ],
+      [
+       "Commissaire aux comptes",
+       "Certifie la sincérité des comptes"
+      ],
+      [
+       "Direction générale",
+       "Dirige l’entreprise au quotidien"
+      ]
+     ],
+     "aide": "Relis le compte rendu et le schéma : l’un élit, l’autre nomme, un troisième certifie.",
+     "explication": "L’**assemblée générale** approuve les comptes et peut révoquer ; le **conseil d’administration** nomme la direction ; le **commissaire** certifie les comptes ; la **direction générale** dirige."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi M. Barral et certains actionnaires ne sont-ils pas d’accord sur l’usage du bénéfice ?",
+     "options": [
+      "Le directeur privilégie la croissance, des actionnaires la rentabilité de leurs titres",
+      "Le directeur veut moins de contrôle, les actionnaires veulent moins de dividendes",
+      "Le directeur veut plus de dividendes, les actionnaires veulent de la croissance",
+      "Le directeur veut réduire le capital, les actionnaires veulent plus de salariés"
+     ],
+     "reponse": 0,
+     "aide": "Un dividende rémunère l’actionnaire ; une nouvelle usine fait grandir l’entreprise.",
+     "explication": "Propriétaires et dirigeants sont des personnes différentes : leurs intérêts peuvent diverger. Le dirigeant vise la **croissance**, l’actionnaire la **rentabilité de ses titres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c70f435-bd3c-5ceb-9639-7cc9af5c6994",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Verger & Fils contre Les Vergers Unis",
+   "competence": "raisonner",
+   "situation": "Deux organisations vendent des pommes : une société par actions et une coopérative. Qui y détient le pouvoir, et le contrôle du dirigeant pose-t-il le même problème dans les deux ?",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Deux façons de gouverner",
+     "source": "Organisations imaginées pour l’exercice.",
+     "colonnes": [
+      "Critère",
+      "SA Verger & Fils",
+      "Coopérative Les Vergers Unis"
+     ],
+     "lignes": [
+      [
+       "Qui détient l’organisation ?",
+       "1 000 actions : le fonds Orme en détient 450, Mme Rey 300 et 250 petits actionnaires 1 chacun",
+       "300 coopérateurs, producteurs de pommes"
+      ],
+      [
+       "Règle de vote",
+       "Une action, une voix",
+       "Une personne, une voix"
+      ],
+      [
+       "Direction",
+       "Un conseil élu par les actionnaires nomme la direction générale",
+       "Un conseil élu par les coopérateurs nomme un directeur salarié"
+      ],
+      [
+       "Résultat",
+       "Dividendes versés aux actionnaires",
+       "Excédents répartis entre les coopérateurs"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Courriel d’une petite actionnaire",
+     "source": "Courriel écrit pour l’exercice.",
+     "blocs": [
+      "Objet : assemblée générale de Verger & Fils",
+      "Bonjour, je possède une seule action et je ne peux pas me déplacer à l’assemblée. De toute façon, ma voix ne pèse presque rien face au fonds Orme. Je ne sais pas si le directeur utilise bien l’argent des actionnaires. Lina Perret"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit comment votent les coopérateurs.",
+     "aide": "Cherche la ligne « Règle de vote », colonne de la coopérative.",
+     "explication": "Chez les coopérateurs, c’est **une personne, une voix**, quel que soit l’apport ; dans la société par actions, une action donne une voix."
+    },
+    {
+     "type": "nombre",
+     "unite": "actions",
+     "enonce": "À Verger & Fils, il faut plus de la moitié des voix pour imposer une décision. Combien d’actions de plus le fonds Orme doit-il acquérir pour y parvenir ?",
+     "reponse": 51,
+     "aide": "La moitié de 1 000 est 500 : il faut dépasser 500, donc détenir au moins 501 actions.",
+     "explication": "La majorité absolue est de **501 voix** (plus de la moitié de 1 000). Le fonds en a 450 : il lui manque 501 − 450 = **51 actions**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le courriel de Lina Perret sur la gouvernance de Verger & Fils ?",
+     "options": [
+      "La propriété dispersée rend le contrôle du dirigeant difficile pour les petits actionnaires",
+      "Le dirigeant a été révoqué par une assemblée sans que les actionnaires soient informés",
+      "Les actionnaires ont refusé de nommer un commissaire pour certifier les comptes",
+      "Le conseil d’administration a été élu par les salariés et non par les actionnaires"
+     ],
+     "reponse": 0,
+     "aide": "Lina possède 1 action sur 1 000 : que peut-elle surveiller ?",
+     "explication": "Plus la propriété est **dispersée**, plus le contrôle des dirigeants est un enjeu : une petite actionnaire pèse peu et surveille mal."
+    },
+    {
+     "type": "nombre",
+     "unite": "voix",
+     "enonce": "Dans la coopérative, combien de voix faut-il au minimum pour obtenir la majorité absolue lors d’un vote où les 300 coopérateurs sont présents ?",
+     "reponse": 151,
+     "aide": "Une voix par coopérateur : il faut dépasser la moitié de 300.",
+     "explication": "La moitié de 300 est 150 : il faut **151 voix** au moins. Aucun apport, même énorme, ne donne plus d’une voix."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c6cd590-fdd4-52aa-ac67-7a08e7513e93",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le premier service de Malik à la boulangerie",
+   "competence": "analyser-texte",
+   "situation": "Malik, 17 ans, fait son stage de première dans une boulangerie. Son tuteur note ce qu’il observe pour comprendre ce qui se passe dans la tête du stagiaire et ce qui se voit.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le carnet du tuteur",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Malik, timide et méthodique, a le [[e|trac]] avant son premier service. Il [[c|arrive]] dix minutes en avance et range le comptoir sans qu’on le lui demande.",
+      "Face à une cliente pressée qui s’énerve, il garde son calme et sourit. Il la juge pourtant odieuse. Yasmine, sa collègue, pense seulement que la cliente est fatiguée."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui annonce un comportement que le tuteur peut observer.",
+     "aide": "Un comportement est ce que la personne fait, visible de l’extérieur.",
+     "explication": "Arriver en avance est un **comportement** : on le voit. Le trac, lui, est une émotion que l’on ne voit pas directement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à l’élément du carnet qui l’illustre.",
+     "paires": [
+      [
+       "Personnalité",
+       "Timide et méthodique"
+      ],
+      [
+       "Émotion",
+       "Le trac avant le premier service"
+      ],
+      [
+       "Contrôle de soi",
+       "Rester calme face à une cliente qui s’énerve"
+      ],
+      [
+       "Perception",
+       "Malik juge la cliente odieuse, Yasmine la juge fatiguée"
+      ]
+     ],
+     "aide": "La perception est la manière de lire une même situation : ici, deux lectures différentes.",
+     "explication": "La **personnalité** est un ensemble de traits stables, l’**émotion** une réaction brève, le **contrôle de soi** la maîtrise de ses réactions, la **perception** une interprétation propre à chacun."
+    },
+    {
+     "type": "choix",
+     "enonce": "Malik et Yasmine voient la même cliente, mais en font des lectures opposées. Quelle notion l’explique le mieux ?",
+     "options": [
+      "La perception de chacun",
+      "Le niveau de qualification",
+      "La structure de propriété",
+      "Le canal de communication"
+     ],
+     "reponse": 0,
+     "aide": "Chacun sélectionne et interprète les informations à sa manière.",
+     "explication": "Deux personnes peuvent vivre la même scène différemment : c’est la **perception**, manière de sélectionner et d’interpréter l’information."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c6cd590-fdd4-52aa-ac67-7a08e7513e93",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un message qui n’arrive pas jusqu’à Hugo",
+   "competence": "analyser-document",
+   "situation": "Inès, responsable d’un magasin de sport, écrit à Hugo, apprenti depuis une semaine. Le message est lu, mais la tâche n’est pas faite. Où la communication a-t-elle cloché ?",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Échange écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👩‍💼",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Hugo, tu me fais un [[j|reporting]] des [[j|KPI]] avant 17 h ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Euh… je ne vois pas de quoi tu parles. Tu peux m’expliquer ?"
+      }
+     ]
+    },
+    {
+     "id": "schema",
+     "type": "chaine",
+     "disposition": "cycle",
+     "titre": "Le schéma de la communication",
+     "source": "Schéma simplifié.",
+     "noeuds": [
+      {
+       "id": "emet",
+       "texte": "Émetteur : Inès",
+       "emoji": "🗣️"
+      },
+      {
+       "id": "canal",
+       "texte": "?",
+       "emoji": "📱"
+      },
+      {
+       "id": "recep",
+       "texte": "Récepteur : Hugo",
+       "emoji": "👂"
+      },
+      {
+       "id": "retro",
+       "texte": "Rétroaction",
+       "emoji": "↩️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "emet",
+       "a": "canal"
+      },
+      {
+       "de": "canal",
+       "a": "recep"
+      },
+      {
+       "de": "recep",
+       "a": "retro"
+      },
+      {
+       "de": "retro",
+       "a": "emet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche les deux mots d’Inès qui jouent le rôle de bruit pour Hugo.",
+     "aide": "Quels mots techniques un apprenti de première semaine peut-il ne pas connaître ?",
+     "explication": "Le **jargon** (« reporting », « KPI ») est un bruit : Hugo ne connaît pas ces mots, le message est mal décodé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel canal Inès utilise-t-elle pour transmettre son message (le point d’interrogation du schéma) ?",
+     "options": [
+      "Un échange écrit sur messagerie instantanée",
+      "Une réunion en face à face",
+      "Un appel de visioconférence",
+      "Une affiche dans l’arrière-boutique"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la forme du document 1 : des messages qui s’affichent.",
+     "explication": "Le canal est le moyen de transmission : ici une **messagerie instantanée**, sans le ton ni les gestes de l’oral."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la réponse d’Hugo, « Tu peux m’expliquer ? » ?",
+     "options": [
+      "Il signale qu’il n’a pas compris : c’est la rétroaction",
+      "Il refuse de travailler : c’est un conflit ouvert",
+      "Il change le code du message : c’est un bruit",
+      "Il envoie un nouveau message sans réponse attendue"
+     ],
+     "reponse": 0,
+     "aide": "Dans le schéma, quel maillon permet au récepteur de montrer ce qu’il a compris ?",
+     "explication": "La **rétroaction** (feedback) permet au récepteur de montrer qu’il a — ou n’a pas — compris. Elle donne à Inès l’occasion de corriger."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée : bruit qui gêne la transmission ou façon de l’améliorer ?",
+     "categories": [
+      "Bruit qui gêne",
+      "Façon d’améliorer"
+     ],
+     "items": [
+      [
+       "Les sigles non expliqués",
+       0
+      ],
+      [
+       "La fatigue d’Hugo en fin de journée",
+       0
+      ],
+      [
+       "Définir chaque sigle dans le message",
+       1
+      ],
+      [
+       "Demander à Hugo de reformuler la consigne",
+       1
+      ]
+     ],
+     "aide": "Un bruit perturbe la transmission ; une amélioration aide le récepteur à comprendre.",
+     "explication": "Jargon et fatigue sont des **bruits**. Expliquer les sigles et faire reformuler sont deux moyens d’**améliorer** la communication."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c6cd590-fdd4-52aa-ac67-7a08e7513e93",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Jade cherche une alternance : que dit sa trace en ligne ?",
+   "competence": "analyser-document",
+   "situation": "Jade Morel, étudiante en BTS, postule à une alternance d’assistante commerciale. Avant l’entretien, la recruteuse tape son nom dans un moteur de recherche et lit l’offre qu’elle a elle-même publiée.",
+   "documents": [
+    {
+     "id": "recherche",
+     "type": "tableau",
+     "titre": "Ce que montre une recherche sur « Jade Morel »",
+     "source": "Résultats imaginés pour l’exercice.",
+     "colonnes": [
+      "Résultat",
+      "Où le trouve-t-on ?"
+     ],
+     "lignes": [
+      [
+       "Profil : étudiante en BTS, alternance recherchée",
+       "Réseau professionnel"
+      ],
+      [
+       "Photo de soirée, verre à la main, en accès public",
+       "Compte personnel"
+      ],
+      [
+       "Commentaire insultant sous une vidéo de jeu",
+       "Forum"
+      ],
+      [
+       "Bénévole au club de handball de Pontlieue",
+       "Site du club"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "offre",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Alternance : assistant(e) commercial(e)",
+     "sousTitre": "Magasin Sport’Nord",
+     "emoji": "📌",
+     "lignes": [
+      {
+       "texte": "Missions",
+       "valeur": "accueillir les clients, saisir les commandes"
+      },
+      {
+       "texte": "Savoirs",
+       "valeur": "notions de gestion commerciale"
+      },
+      {
+       "texte": "Savoir-faire",
+       "valeur": "construire un tableau de suivi sur tableur"
+      },
+      {
+       "texte": "Savoir-être",
+       "valeur": "esprit d’équipe, calme face à un client mécontent"
+      }
+     ],
+     "pied": "Offre écrite pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recherche",
+     "reponse": [
+      "r1c0",
+      "r2c0"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux résultats qui risquent de donner une mauvaise image de Jade à un recruteur.",
+     "aide": "Pense à ce qu’un recruteur attend d’une future assistante commerciale face aux clients.",
+     "explication": "La **photo de soirée publique** et le **commentaire insultant** nuisent à son image professionnelle : tout ce qui est en ligne y reste."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "L’ensemble des ___ qu’une personne laisse en ligne s’appelle son identité ___.",
+     "reponses": [
+      [
+       "traces"
+      ],
+      [
+       "numérique",
+       "numerique"
+      ]
+     ],
+     "banque": [
+      "traces",
+      "numérique",
+      "sociale",
+      "adresses"
+     ],
+     "aide": "Ce qu’on publie, commente ou partage laisse des marques ; l’adjectif dit qu’on parle du monde en ligne.",
+     "explication": "L’**identité numérique** est l’ensemble des **traces** qu’on laisse en ligne : profils, publications, photos, commentaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles deux actions de Jade respecteraient les bonnes pratiques de gestion de son identité numérique ?",
+     "options": [
+      "Paramétrer la confidentialité de son compte personnel",
+      "Supprimer son commentaire et le signaler comme une erreur",
+      "Créer un faux profil professionnel au nom d’une amie",
+      "Mélanger vie privée et vie professionnelle sur un seul compte",
+      "Publier plus de photos de soirée pour paraître sociable"
+     ],
+     "reponse": [
+      0,
+      1
+     ],
+     "aide": "Deux gestes protègent la vie privée et réparent la trace ; les autres l’aggravent.",
+     "explication": "Régler la **confidentialité** et retirer ce qui dessert son image sont de bonnes pratiques ; séparer vie privée et vie professionnelle va dans le même sens."
+    },
+    {
+     "type": "categories",
+     "enonce": "D’après l’offre, range chaque exemple de compétence en savoir, savoir-faire ou savoir-être.",
+     "categories": [
+      "Savoir",
+      "Savoir-faire",
+      "Savoir-être"
+     ],
+     "items": [
+      [
+       "Connaître la différence entre un devis et une facture",
+       0
+      ],
+      [
+       "Construire un tableau de suivi des commandes",
+       1
+      ],
+      [
+       "Écouter un client sans l’interrompre",
+       2
+      ],
+      [
+       "Connaître les étapes d’une vente",
+       0
+      ],
+      [
+       "Saisir sans erreur une commande sur un tableur",
+       1
+      ],
+      [
+       "Garder son calme face à un client mécontent",
+       2
+      ]
+     ],
+     "aide": "Savoir = connaissances ; savoir-faire = geste ou technique ; savoir-être = attitude.",
+     "explication": "Les **savoirs** se connaissent, les **savoir-faire** se réalisent, les **savoir-être** se manifestent dans la relation aux autres."
+    },
+    {
+     "type": "zone",
+     "document": "recherche",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le résultat qui prouve le mieux le savoir-être « esprit d’équipe » demandé dans l’offre.",
+     "aide": "Quel résultat parle d’un engagement avec d’autres personnes ?",
+     "explication": "Le **bénévolat dans un club de handball** montre qu’elle sait travailler avec d’autres : c’est une trace utile à sa candidature."
+    }
+   ]
+  },
+  {
+   "chapitre": "e42d9492-3c55-5e95-8129-32cbb7a1f4f3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les habitudes du club de basket de Saint-Aubin",
+   "competence": "analyser-texte",
+   "situation": "Léa vient d’arriver au club de basket de Saint-Aubin. Elle découvre vite que le club a ses façons de faire, écrites ou non.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le premier mois de Léa",
+     "source": "Texte écrit pour l’exercice ; club imaginaire.",
+     "blocs": [
+      "Ici, tout le monde se tutoie, même le président. Après chaque match, les joueurs partagent le [[r|goûter]] du samedi, une habitude vieille de vingt ans.",
+      "Les anciens répètent que « les jeunes ne pensent qu’à leur téléphone ». Nour, 16 ans, capitaine de l’équipe, trouve cela injuste. Chaque semaine, elle retrouve son amie Inès pour s’entraîner, sans que personne le leur demande."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui annonce la pratique répétée qui est un rituel du club.",
+     "aide": "Un rituel est une pratique répétée dans le temps, comme une tradition.",
+     "explication": "Le **goûter du samedi** est un rituel : une pratique répétée, partagée par les membres, qui crée du lien."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du texte à la notion de la culture d’organisation qu’il illustre.",
+     "paires": [
+      [
+       "Se tutoyer, même avec le président",
+       "Une norme"
+      ],
+      [
+       "Le goûter du samedi après le match",
+       "Un rituel"
+      ],
+      [
+       "« Les jeunes ne pensent qu’à leur téléphone »",
+       "Un stéréotype"
+      ],
+      [
+       "Nour est capitaine de l’équipe",
+       "Un statut"
+      ]
+     ],
+     "aide": "Une norme est une règle de conduite ; un statut est une position dans le groupe.",
+     "explication": "Le tutoiement est une **norme**, le goûter un **rituel**, l’idée sur les jeunes un **stéréotype**, la place de capitaine un **statut**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Nour et Inès s’entraînent ensemble sans que personne le leur demande. Cette relation est…",
+     "options": [
+      "informelle : elle est spontanée, non prévue par l’organisation",
+      "formelle : elle est prévue par l’organigramme et les procédures",
+      "hiérarchique : l’une rend compte à l’autre de ses résultats",
+      "contractuelle : elle est fixée par le règlement du club"
+     ],
+     "reponse": 0,
+     "aide": "Personne ne l’a imposée : elle naît de l’amitié.",
+     "explication": "Une relation **informelle** est spontanée (amitié, entraide). Elle n’est ni prévue par l’organigramme ni imposée par une procédure."
+    }
+   ]
+  },
+  {
+   "chapitre": "e42d9492-3c55-5e95-8129-32cbb7a1f4f3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’atelier de vélos : qui commande, vers qui va-t-on ?",
+   "competence": "observer-schema",
+   "situation": "Dans l’atelier Roue Libre, la directrice Mme Aubry a confié l’équipe à Paul, chef d’atelier. Mais quand une panne résiste, ce n’est pas toujours à lui qu’on s’adresse.",
+   "documents": [
+    {
+     "id": "orga",
+     "type": "schema",
+     "largeur": 340,
+     "hauteur": 290,
+     "titre": "Qui rend compte à qui ?",
+     "source": "Organisation imaginée pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 85,
+       "y": 10,
+       "l": 170,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Mme Aubry, directrice",
+       "id": "dir",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        48
+       ],
+       "a": [
+        170,
+        88
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 85,
+       "y": 88,
+       "l": 170,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Paul, chef d’atelier",
+       "id": "paul",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        126
+       ],
+       "a": [
+        46,
+        176
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        126
+       ],
+       "a": [
+        170,
+        176
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        126
+       ],
+       "a": [
+        294,
+        176
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 176,
+       "l": 76,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Sami",
+       "id": "sami",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 176,
+       "l": 76,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Lou",
+       "id": "lou",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 256,
+       "y": 176,
+       "l": 76,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Inès",
+       "id": "ines",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        84,
+        200
+       ],
+       "a": [
+        132,
+        200
+       ],
+       "fleche": "fin",
+       "style": "pointilles",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        256,
+        200
+       ],
+       "a": [
+        208,
+        200
+       ],
+       "fleche": "fin",
+       "style": "pointilles",
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 108,
+       "y": 192,
+       "texte": "conseil",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 192,
+       "texte": "conseil",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 252,
+       "texte": "Trait plein : relation hiérarchique",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 270,
+       "texte": "Trait pointillé : on vient demander conseil",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "orga",
+     "reponse": [
+      "paul"
+     ],
+     "enonce": "Touche la personne dont Sami reçoit directement ses ordres.",
+     "aide": "Suis le trait plein qui arrive au-dessus de Sami.",
+     "explication": "Sami dépend directement de **Paul**, son supérieur hiérarchique : c’est une relation formelle, prévue par l’organisation."
+    },
+    {
+     "type": "zone",
+     "document": "orga",
+     "reponse": [
+      "lou"
+     ],
+     "enonce": "Touche la mécanicienne vers laquelle ses collègues se tournent pour demander conseil.",
+     "aide": "Regarde où arrivent les flèches en pointillé.",
+     "explication": "**Lou** n’a aucun titre de chef, mais ses collègues viennent la consulter : c’est un leadership informel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Paul donne des ordres, Lou entraîne les autres par son expérience. Quelle formule décrit le mieux la situation ?",
+     "options": [
+      "Paul a l’autorité par sa fonction, Lou a de l’influence par sa personne",
+      "Paul a de l’influence par sa personne, Lou a l’autorité par sa fonction",
+      "Paul et Lou ont tous deux une autorité légitime sur l’équipe",
+      "Ni Paul ni Lou n’exercent de pouvoir sur le reste de l’équipe"
+     ],
+     "reponse": 0,
+     "aide": "L’autorité est reconnue comme légitime par la fonction ; le leadership vient de la capacité à entraîner.",
+     "explication": "Un chef a de l’**autorité** par sa fonction, un leader a de l’**influence** par sa personne. Le meilleur manager cumule les deux."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation de l’atelier à la notion correspondante.",
+     "paires": [
+      [
+       "Paul fixe le planning de la semaine",
+       "Autorité"
+      ],
+      [
+       "Lou donne l’exemple et on la suit",
+       "Leadership"
+      ],
+      [
+       "Une prime est versée si l’atelier dépasse ses objectifs",
+       "Incitation"
+      ],
+      [
+       "Deux mécaniciens se disputent un planning puis s’accordent sur une alternance",
+       "Consensus"
+      ]
+     ],
+     "aide": "L’incitation est le levier que l’organisation actionne : prime, promotion.",
+     "explication": "L’**autorité** est un pouvoir légitime, le **leadership** un pouvoir d’entraînement, l’**incitation** un levier (prime), le **consensus** l’issue d’un conflit bien géré."
+    }
+   ]
+  },
+  {
+   "chapitre": "e42d9492-3c55-5e95-8129-32cbb7a1f4f3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sacha, nouveau responsable du rayon plantes",
+   "competence": "analyser-document",
+   "situation": "Sacha, 25 ans, vient d’être nommé responsable du rayon plantes d’une jardinerie. Mina, dix ans d’ancienneté, ne cache pas son scepticisme. Une fiche de poste et un échange de messages racontent la suite.",
+   "documents": [
+    {
+     "id": "poste",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Fiche de poste : responsable de rayon",
+     "sousTitre": "Jardinerie Les Trois Saules",
+     "emoji": "🪴",
+     "lignes": [
+      {
+       "texte": "Organiser les plannings du rayon",
+       "id": "planning"
+      },
+      {
+       "texte": "Rend compte à la directrice du magasin",
+       "id": "compte"
+      },
+      {
+       "texte": "Prime de 300 € si l’objectif trimestriel est atteint",
+       "id": "prime"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice."
+    },
+    {
+     "id": "echange",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Échange écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Mina",
+       "emoji": "👩‍🌾",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sacha",
+       "emoji": "🧑‍💼",
+       "cote": "droite"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "🧑",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mina",
+       "texte": "Encore un jeune chef qui ne pense qu’aux chiffres. Le planning de samedi a changé sans que personne ne soit consulté."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Tu as raison, j’aurais dû vous en parler. Je propose qu’on fixe le planning ensemble chaque lundi."
+      },
+      {
+       "qui": "Mina",
+       "texte": "Ça me va."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Moi, je fais comme Mina : c’est elle qui sait."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poste",
+     "reponse": [
+      "prime"
+     ],
+     "enonce": "Touche la ligne de la fiche de poste qui est une incitation.",
+     "aide": "Une incitation est un levier que l’organisation actionne pour pousser à agir.",
+     "explication": "La **prime de 300 €** liée à l’objectif est une incitation : un levier financier pour orienter le comportement."
+    },
+    {
+     "type": "zone",
+     "document": "poste",
+     "reponse": [
+      "compte"
+     ],
+     "enonce": "Touche la ligne qui décrit une relation formelle, prévue par l’organigramme.",
+     "aide": "Cherche le lien hiérarchique : à qui Sacha doit-il rendre des comptes ?",
+     "explication": "Rendre compte à la directrice est une **relation formelle** : elle est prévue par l’organisation et par la hiérarchie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la gestion de ce conflit.",
+     "items": [
+      "Mina exprime son désaccord sur le planning",
+      "Sacha reconnaît le problème et écoute",
+      "Sacha propose un planning fixé ensemble chaque lundi",
+      "Mina accepte la solution : c’est un consensus"
+     ],
+     "aide": "Gérer un conflit : écouter chaque partie, identifier le vrai problème, chercher une solution acceptable.",
+     "explication": "Le conflit part d’un **désaccord**, passe par l’**écoute**, une **proposition** et débouche sur un **consensus**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après les messages, qui exerce un leadership dans le rayon ?",
+     "options": [
+      "Mina, que Tom suit sans qu’elle ait d’autorité hiérarchique",
+      "Sacha, parce qu’il a une position hiérarchique dans le rayon",
+      "Tom, parce qu’il suit les consignes de la directrice",
+      "La directrice, qui anime directement toutes les réunions"
+     ],
+     "reponse": 0,
+     "aide": "Le leadership peut exister sans position hiérarchique : qui entraîne Tom ?",
+     "explication": "Tom suit **Mina** par choix, parce qu’elle est reconnue : c’est du leadership informel. Sacha, lui, a l’**autorité** par sa fonction."
+    }
+   ]
+  },
+  {
+   "chapitre": "83595a40-a9fe-549d-a2a0-5a8ec127fbd2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bulletin de paie de Samia",
+   "competence": "lire-tableau",
+   "situation": "Samia est vendeuse au Fournil de Zoé. Elle veut comprendre pourquoi la somme qui arrive sur son compte est plus petite que le salaire écrit sur son contrat.",
+   "documents": [
+    {
+     "id": "bulletin",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Le Fournil de Zoé",
+     "sousTitre": "Bulletin de paie simplifié",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "Emploi",
+       "valeur": "vendeuse"
+      },
+      {
+       "texte": "Qualification",
+       "valeur": "CAP employé de commerce"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Salaire brut",
+       "valeur": "2 000 €",
+       "id": "brut"
+      },
+      {
+       "texte": "Cotisations salariales",
+       "valeur": "22 % du brut",
+       "id": "cot"
+      },
+      {
+       "texte": "Salaire net",
+       "valeur": "?",
+       "gras": true,
+       "id": "net"
+      }
+     ],
+     "pied": "Bulletin imaginé pour l’exercice ; taux simplifié."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bulletin",
+     "reponse": [
+      "brut"
+     ],
+     "enonce": "Touche la ligne qui indique le salaire prévu au contrat de Samia.",
+     "aide": "Le salaire prévu au contrat est celui d’avant tout prélèvement.",
+     "explication": "Le **salaire brut** est celui du contrat, avant les cotisations salariales."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le montant des cotisations salariales de Samia, en euros ?",
+     "reponse": 440,
+     "aide": "Calcule 22 % de 2 000 : 2 000 × 0,22.",
+     "explication": "2 000 × 0,22 = **440 €** de cotisations salariales, prélevées sur le brut."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mention à ce qu’elle décrit chez Samia.",
+     "paires": [
+      [
+       "Le CAP indiqué sur le bulletin",
+       "Une qualification"
+      ],
+      [
+       "Tenir seule la caisse un jour d’affluence",
+       "Une compétence"
+      ]
+     ],
+     "aide": "La qualification est attestée par un diplôme ; la compétence se prouve en situation de travail.",
+     "explication": "Le CAP atteste ce qu’elle **peut** faire : c’est une qualification. Savoir tenir la caisse un jour chargé est une **compétence**."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le salaire net de Samia, en euros ?",
+     "reponse": 1560,
+     "aide": "Salaire brut moins cotisations salariales.",
+     "explication": "2 000 − 440 = **1 560 €** : c’est le salaire net, celui que Samia reçoit."
+    }
+   ]
+  },
+  {
+   "chapitre": "83595a40-a9fe-549d-a2a0-5a8ec127fbd2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien coûte un comptable à la PME Roue Libre ?",
+   "competence": "calculer",
+   "situation": "La PME Roue Libre emploie un comptable. Sa gérante veut savoir ce qu’il lui coûte vraiment sur l’année, et le comparer à ce qu’il produit.",
+   "documents": [
+    {
+     "id": "contrat",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "PME Roue Libre",
+     "sousTitre": "Coût mensuel d’un salarié",
+     "emoji": "🚲",
+     "lignes": [
+      {
+       "texte": "Salaire brut",
+       "valeur": "2 500 €",
+       "id": "brut"
+      },
+      {
+       "texte": "Cotisations patronales",
+       "valeur": "40 % du brut",
+       "id": "patr"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Coût global",
+       "valeur": "brut + patronales",
+       "gras": true
+      }
+     ],
+     "pied": "Taux simplifié, chiffres imaginés pour l’exercice."
+    },
+    {
+     "id": "activite",
+     "type": "tableau",
+     "titre": "Activité du comptable sur l’année",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Dossiers traités",
+       "3 000"
+      ],
+      [
+       "Heures travaillées",
+       "1 500"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "contrat",
+     "reponse": [
+      "patr"
+     ],
+     "enonce": "Touche la ligne qui indique ce que l’employeur paie en plus du salaire brut.",
+     "aide": "Ce sont des cotisations versées par l’employeur, pas par le salarié.",
+     "explication": "Les **cotisations patronales** s’ajoutent au brut : elles font partie du coût du travail pour l’employeur."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le coût du comptable pour l’employeur sur une année, en euros ?",
+     "reponse": 42000,
+     "aide": "Coût mensuel = 2 500 + 40 % de 2 500, puis multiplie par 12.",
+     "explication": "Cotisations patronales : 2 500 × 0,40 = 1 000 €. Coût mensuel : 3 500 €. Sur 12 mois : **42 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle valeur représente la productivité du comptable, en dossiers par heure ?",
+     "options": [
+      "2 dossiers par heure",
+      "0,5 dossier par heure",
+      "1 500 dossiers par heure",
+      "3 000 dossiers par heure"
+     ],
+     "reponse": 0,
+     "aide": "Productivité = production ÷ quantité de travail.",
+     "explication": "3 000 dossiers ÷ 1 500 heures = **2 dossiers par heure**."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le coût du travail par dossier traité, en euros ?",
+     "reponse": 14,
+     "aide": "Divise le coût annuel par le nombre de dossiers de l’année.",
+     "explication": "42 000 ÷ 3 000 = **14 €** par dossier : le coût n’a de sens que rapporté à ce que le travail produit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un collègue, payé 2 800 € bruts, coûte 47 040 € par an et traite 4 000 dossiers. Comparé au premier comptable, il…",
+     "options": [
+      "coûte plus cher à l’année mais moins cher par dossier",
+      "coûte plus cher à l’année et plus cher par dossier",
+      "coûte moins cher à l’année et moins cher par dossier",
+      "coûte autant par dossier mais plus cher à l’année"
+     ],
+     "reponse": 0,
+     "aide": "Calcule son coût par dossier : 47 040 ÷ 4 000.",
+     "explication": "47 040 ÷ 4 000 = **11,76 € par dossier**, contre 14 €. Un salarié mieux payé mais plus productif peut coûter moins par unité produite."
+    }
+   ]
+  },
+  {
+   "chapitre": "83595a40-a9fe-549d-a2a0-5a8ec127fbd2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les Ateliers du Marais ont-ils bien investi dans le bien-être ?",
+   "competence": "analyser-document",
+   "situation": "L’entreprise Les Ateliers du Marais a investi pour améliorer les conditions de travail de ses 80 salariés. La DRH veut vérifier, chiffres en main, que l’opération a payé.",
+   "documents": [
+    {
+     "id": "bord",
+     "type": "tableau",
+     "titre": "Tableau de bord social",
+     "source": "Chiffres imaginés pour l’exercice ; entreprise imaginaire.",
+     "colonnes": [
+      "Donnée",
+      "2023",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Effectif moyen",
+       "80",
+       "80"
+      ],
+      [
+       "Entrées dans l’année",
+       "12",
+       "6"
+      ],
+      [
+       "Sorties dans l’année",
+       "14",
+       "6"
+      ],
+      [
+       "Heures théoriques de travail",
+       "128 000",
+       "128 000"
+      ],
+      [
+       "Heures d’absence",
+       "6 400",
+       "3 520"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Note de la DRH",
+     "source": "Note écrite pour l’exercice.",
+     "blocs": [
+      "En 2024, l’entreprise a investi 40 000 € dans des sièges ergonomiques et des horaires plus souples. Une heure d’absence coûte en moyenne 25 € à l’entreprise (salaire versé et organisation perturbée)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bord",
+     "reponse": [
+      "r4c2"
+     ],
+     "enonce": "Touche la case qui, avec les heures théoriques de travail, permet de calculer le taux d’absentéisme de 2024.",
+     "aide": "Le taux d’absentéisme rapporte des heures d’absence aux heures théoriques.",
+     "explication": "Pour 2024, il faut les **3 520 heures d’absence** : taux = heures d’absence ÷ heures théoriques × 100."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "Quel était le taux d’absentéisme en 2023, en pourcentage ?",
+     "reponse": 5,
+     "aide": "Heures d’absence ÷ heures théoriques × 100, avec les chiffres de 2023.",
+     "explication": "6 400 ÷ 128 000 × 100 = **5 %** en 2023."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture des chiffres de 2023 à 2024 est la plus cohérente avec la note de la DRH ?",
+     "options": [
+      "De meilleures conditions de travail ont réduit l’absentéisme et le départ de salariés",
+      "La baisse de l’absentéisme vient d’une hausse du nombre d’heures théoriques",
+      "La rotation du personnel a augmenté car moins de salariés sont entrés",
+      "L’investissement n’a eu aucun effet : l’effectif moyen est resté stable"
+     ],
+     "reponse": 0,
+     "aide": "Compare les entrées, les sorties et les heures d’absence d’une année sur l’autre.",
+     "explication": "Absences et mouvements de personnel ont **baissé** : de bonnes conditions de travail réduisent absentéisme et rotation, donc leurs coûts."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "Quel est le taux de rotation du personnel en 2024, en pourcentage ? (rotation = ((entrées + sorties) ÷ 2) ÷ effectif moyen × 100)",
+     "reponse": 7.5,
+     "aide": "Entrées et sorties de 2024 : additionne-les, divise par 2, puis rapporte à l’effectif moyen.",
+     "explication": "((6 + 6) ÷ 2) ÷ 80 × 100 = 6 ÷ 80 × 100 = **7,5 %**, contre 16,25 % en 2023."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Combien l’entreprise gagne-t-elle en 2024, une fois les 40 000 € investis retirés des économies d’heures d’absence ?",
+     "reponse": 32000,
+     "aide": "Heures d’absence évitées × 25 €, puis retire 40 000 €.",
+     "explication": "6 400 − 3 520 = 2 880 heures évitées ; 2 880 × 25 = 72 000 € ; 72 000 − 40 000 = **32 000 €** de gain net."
+    }
+   ]
+  },
+  {
+   "chapitre": "66e6b32a-ea0b-53d0-9b69-eb855b924207",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des chiffres de caisse à la fournée du lendemain",
+   "competence": "lire-tableau",
+   "situation": "La boulangerie du Port enregistre chaque vente avec son logiciel de caisse. La gérante veut passer des chiffres bruts à une décision utile.",
+   "documents": [
+    {
+     "id": "caisse",
+     "type": "tableau",
+     "titre": "Extrait du fichier de caisse",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Date",
+      "Produit",
+      "Quantité vendue"
+     ],
+     "lignes": [
+      [
+       "12/03",
+       "Baguette",
+       142
+      ],
+      [
+       "13/03",
+       "Baguette",
+       98
+      ],
+      [
+       "14/03",
+       "Baguette",
+       105
+      ],
+      [
+       "14/03",
+       "Croissant",
+       61
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "baguettes",
+     "enonce": "Combien de baguettes la boulangerie a-t-elle vendues en tout du 12 au 14 mars ?",
+     "reponse": 345,
+     "aide": "Additionne les trois lignes « Baguette ».",
+     "explication": "142 + 98 + 105 = **345 baguettes** : en regroupant des données, on obtient une information."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque énoncé à son niveau : donnée, information ou connaissance.",
+     "paires": [
+      [
+       "« 142 »",
+       "Donnée"
+      ],
+      [
+       "« 142 baguettes ont été vendues le 12/03 »",
+       "Information"
+      ],
+      [
+       "« Quand la pluie est annoncée, on cuit moins de viennoiseries : moins d’invendus »",
+       "Connaissance"
+      ]
+     ],
+     "aide": "La donnée est brute ; l’information a un contexte ; la connaissance permet d’agir.",
+     "explication": "« 142 » seul est une **donnée**. Mise en contexte, c’est une **information**. Interprétée pour décider quoi cuire, c’est une **connaissance**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après chaque vente, le logiciel recalcule automatiquement le stock restant de baguettes. Quelle fonction du système d’information est à l’œuvre ?",
+     "options": [
+      "Traiter",
+      "Collecter",
+      "Mémoriser",
+      "Diffuser"
+     ],
+     "reponse": 0,
+     "aide": "Le logiciel fait un calcul sur des données déjà enregistrées.",
+     "explication": "Calculer un stock à partir des ventes enregistrées, c’est **traiter** l’information. Collecter, mémoriser et diffuser sont d’autres fonctions."
+    }
+   ]
+  },
+  {
+   "chapitre": "66e6b32a-ea0b-53d0-9b69-eb855b924207",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La salle de sport Énergym et ses fiches d’inscription",
+   "competence": "analyser-document",
+   "situation": "La salle Énergym fait remplir un formulaire à chaque nouvel adhérent. Lina, qui vient de quitter la salle, trouve qu’on lui a demandé trop de choses et qu’on garde ses données.",
+   "documents": [
+    {
+     "id": "form",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Formulaire d’inscription",
+     "sousTitre": "Énergym — finalité : gérer l’abonnement et prévenir en cas de fermeture",
+     "emoji": "🏋️",
+     "lignes": [
+      {
+       "texte": "Nom et prénom",
+       "id": "nom"
+      },
+      {
+       "texte": "Adresse électronique",
+       "id": "mail"
+      },
+      {
+       "texte": "Numéro de téléphone",
+       "id": "tel"
+      },
+      {
+       "texte": "Numéro de sécurité sociale",
+       "id": "ss"
+      },
+      {
+       "texte": "Revenus de la famille",
+       "id": "rev"
+      }
+     ],
+     "pied": "Formulaire écrit pour l’exercice ; salle imaginaire."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "form",
+     "reponse": [
+      "ss",
+      "rev"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux informations dont la salle n’a pas besoin pour sa finalité.",
+     "aide": "Pour gérer un abonnement et prévenir en cas de fermeture, que faut-il vraiment connaître ?",
+     "explication": "Le principe de **minimisation** impose de ne collecter que le nécessaire : ni sécurité sociale ni revenus ne servent à gérer un abonnement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Énergym conserve toutes les données de Lina cinq ans après son départ, « au cas où ». Quel principe du RGPD n’est pas respecté ?",
+     "options": [
+      "La durée de conservation limitée",
+      "Le droit à la portabilité des données",
+      "La finalité précise de la collecte",
+      "La sécurité des données stockées"
+     ],
+     "reponse": 0,
+     "aide": "Une donnée ne doit pas être gardée plus longtemps que la finalité ne le justifie.",
+     "explication": "Le RGPD impose une **durée de conservation limitée** : une fois l’abonnement terminé, il n’y a plus de raison de garder la fiche."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque demande de Lina au droit qu’elle exerce.",
+     "paires": [
+      [
+       "Elle demande une copie des données que la salle détient sur elle",
+       "Droit d’accès"
+      ],
+      [
+       "Elle demande de supprimer sa fiche après son départ",
+       "Droit d’effacement"
+      ],
+      [
+       "Elle fait corriger une adresse erronée",
+       "Droit de rectification"
+      ],
+      [
+       "Elle refuse de recevoir des publicités",
+       "Droit d’opposition"
+      ]
+     ],
+     "aide": "Chaque droit correspond à une action précise : voir, supprimer, corriger, refuser.",
+     "explication": "Accès, effacement, rectification et opposition sont des **droits** que le RGPD reconnaît aux personnes sur leurs données."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lina juge que la salle ne respecte pas ses droits. Quelle autorité peut contrôler et sanctionner en France ?",
+     "options": [
+      "La CNIL",
+      "La Cour des comptes",
+      "L’INSEE",
+      "Le commissaire aux comptes"
+     ],
+     "reponse": 0,
+     "aide": "Elle contrôle le respect de la protection des données personnelles.",
+     "explication": "En France, la **CNIL** contrôle l’application du RGPD et peut prononcer des sanctions."
+    }
+   ]
+  },
+  {
+   "chapitre": "66e6b32a-ea0b-53d0-9b69-eb855b924207",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Plage&Co : la canicule fait-elle vendre des parasols ?",
+   "competence": "analyser-document",
+   "situation": "Le site de vente en ligne Plage&Co vend des parasols. Son responsable croise ses ventes avec des relevés de température publiés en accès libre pour mieux anticiper les stocks.",
+   "documents": [
+    {
+     "id": "ventes",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Parasols vendus par semaine",
+     "source": "Chiffres imaginés pour l’exercice ; site imaginaire.",
+     "categories": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "series": [
+      {
+       "nom": "Parasols vendus",
+       "valeurs": [
+        120,
+        135,
+        410,
+        98,
+        430,
+        125
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Parasols vendus",
+      "min": 0,
+      "max": 500,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Semaine"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "meteo",
+     "type": "tableau",
+     "titre": "Température maximale de la semaine (relevés ouverts)",
+     "source": "Relevés imaginés pour l’exercice, présentés comme données ouvertes.",
+     "colonnes": [
+      "Semaine",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "lignes": [
+      [
+       "Température max (°C)",
+       18,
+       19,
+       31,
+       17,
+       33,
+       20
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ventes",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche la barre de la semaine où la température maximale a été la plus élevée.",
+     "aide": "Repère la semaine la plus chaude dans le tableau, puis cherche-la sur le graphique.",
+     "explication": "La température a été la plus haute en **S5** (33 °C) : c’est là que le site a vendu 430 parasols."
+    },
+    {
+     "type": "nombre",
+     "unite": "parasols",
+     "enonce": "En moyenne, combien de parasols sont vendus par semaine quand la température dépasse 30 °C ?",
+     "reponse": 420,
+     "aide": "Repère les semaines au-dessus de 30 °C, puis fais la moyenne de leurs ventes.",
+     "explication": "S3 (31 °C) et S5 (33 °C) : (410 + 430) ÷ 2 = **420 parasols** par semaine."
+    },
+    {
+     "type": "nombre",
+     "unite": "parasols",
+     "enonce": "Et quand la température ne dépasse pas 30 °C, quelle est la moyenne hebdomadaire des ventes ?",
+     "reponse": 119.5,
+     "tolerance": 0.05,
+     "aide": "Les quatre autres semaines : S1, S2, S4 et S6.",
+     "explication": "(120 + 135 + 98 + 125) ÷ 4 = 478 ÷ 4 = **119,5 parasols** par semaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle connaissance le responsable peut-il en tirer pour décider de ses commandes ?",
+     "options": [
+      "Quand plus de 30 °C sont annoncés, il faut prévoir environ 3,5 fois plus de parasols en stock",
+      "Les parasols se vendent mieux quand il fait moins de 20 °C, il faut augmenter les stocks",
+      "Les ventes ne dépendent pas de la météo, le stock actuel suffit toute l’année",
+      "Il faut vendre un parasol sur deux dès que la température dépasse 25 °C"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux moyennes : 420 contre 119,5.",
+     "explication": "420 ÷ 119,5 ≈ 3,5 : en croisant ses données avec les données ouvertes, il obtient une **connaissance** qui permet d’agir."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque exemple à la catégorie de données qu’il illustre.",
+     "paires": [
+      [
+       "Les relevés de température publiés librement et réutilisables",
+       "Données ouvertes"
+      ],
+      [
+       "L’adresse électronique d’un client du site",
+       "Donnée personnelle"
+      ],
+      [
+       "Des millions de clics enregistrés chaque jour sur le site",
+       "Mégadonnées"
+      ]
+     ],
+     "aide": "Une donnée est personnelle quand elle se rapporte à une personne identifiable.",
+     "explication": "Des relevés publics libres sont des **données ouvertes** ; un e-mail est une **donnée personnelle** ; un flux massif de clics relève des **mégadonnées**."
+    }
+   ]
+  },
+  {
+   "chapitre": "79146d57-e806-5985-a4f2-71e2be47a9f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les droits dans l’espace numérique du lycée",
+   "competence": "lire-tableau",
+   "situation": "Au lycée imaginaire Jean-Macé, chaque élève et chaque professeur a un rôle dans l’espace numérique de travail. Léo, élève délégué, veut savoir ce qu’il peut faire dans le dossier de la classe.",
+   "documents": [
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Droits selon le rôle",
+     "source": "Droits simplifiés, espace imaginaire.",
+     "colonnes": [
+      "Rôle",
+      "Lire",
+      "Modifier",
+      "Supprimer"
+     ],
+     "lignes": [
+      [
+       "Administrateur",
+       "Oui",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Contributeur",
+       "Oui",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Lecteur",
+       "Oui",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "droits",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le rôle qui permet seulement de consulter les documents.",
+     "aide": "Cherche la ligne où il n’y a qu’un seul « Oui ».",
+     "explication": "Le **lecteur** peut lire mais ni modifier ni supprimer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léo, contributeur, veut supprimer un fichier de la classe. Que se passe-t-il ?",
+     "options": [
+      "Il ne peut pas : seul l’administrateur peut supprimer",
+      "Il peut le faire, car un contributeur peut tout faire",
+      "Il peut le faire, mais seulement la nuit",
+      "Il ne peut pas lire le fichier, donc pas le supprimer"
+     ],
+     "reponse": 0,
+     "aide": "Lis la colonne « Supprimer » à la ligne du contributeur.",
+     "explication": "Le contributeur peut lire et modifier, mais pas supprimer. Gérer finement les droits évite les **suppressions accidentelles**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les responsabilités de l’utilisateur.",
+     "texte": "Chaque utilisateur doit protéger son ___ et respecter la ___ des documents.",
+     "reponses": [
+      [
+       "mot de passe"
+      ],
+      [
+       "confidentialité",
+       "confidentialite"
+      ]
+     ],
+     "banque": [
+      "mot de passe",
+      "confidentialité",
+      "adresse",
+      "vitesse"
+     ],
+     "aide": "Deux responsabilités citées dans le cours : un accès personnel et le caractère privé des fichiers.",
+     "explication": "Protéger son **mot de passe** et respecter la **confidentialité** font partie des responsabilités de l’utilisateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "79146d57-e806-5985-a4f2-71e2be47a9f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un agent conversationnel pour le service client",
+   "competence": "analyser-document",
+   "situation": "Le service client d’un site de vente en ligne reçoit 500 demandes par jour. La direction teste un agent conversationnel pour les demandes simples, en gardant des conseillers pour le reste.",
+   "documents": [
+    {
+     "id": "demandes",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Demandes reçues par jour",
+     "source": "Chiffres imaginés pour l’exercice ; site imaginaire.",
+     "categories": [
+      "Suivre un colis",
+      "Demander les horaires",
+      "Retourner un produit",
+      "Litige complexe"
+     ],
+     "series": [
+      {
+       "nom": "Demandes",
+       "valeurs": [
+        200,
+        100,
+        120,
+        80
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Demandes par jour",
+      "min": 0,
+      "max": 250,
+      "pas": 50
+     },
+     "valeurs": false
+    },
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Courriel d’un conseiller",
+     "source": "Courriel écrit pour l’exercice.",
+     "blocs": [
+      "Hier, l’agent conversationnel a répondu à une cliente qu’elle avait 60 jours pour renvoyer son achat. La règle est de 14 jours. Il a inventé la réponse avec aplomb, et nous avons dû rattraper l’erreur."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "demandes",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche le type de demande le plus fréquent.",
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "**Suivre un colis** : 200 demandes par jour, soit 40 % du total."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "L’agent traite le suivi de colis et les horaires. Quelle part des 500 demandes quotidiennes cela représente-t-il, en pourcentage ?",
+     "reponse": 60,
+     "aide": "Additionne les deux barres concernées, puis divise par 500.",
+     "explication": "200 + 100 = 300 demandes ; 300 ÷ 500 = **60 %** des demandes peuvent être automatisées."
+    },
+    {
+     "type": "categories",
+     "enonce": "Qui doit traiter chaque demande dans la nouvelle organisation ?",
+     "categories": [
+      "Agent conversationnel",
+      "Conseiller humain"
+     ],
+     "items": [
+      [
+       "Indiquer où en est un colis",
+       0
+      ],
+      [
+       "Donner l’heure de fermeture du service client",
+       0
+      ],
+      [
+       "Résoudre un litige complexe avec un client en colère",
+       1
+      ],
+      [
+       "Décider d’un geste commercial pour un cas particulier",
+       1
+      ]
+     ],
+     "aide": "Les tâches simples et répétitives s’automatisent ; le jugement reste humain.",
+     "explication": "L’IA automatise les tâches **répétitives** ; les cas complexes demandent du **jugement** et de la relation humaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel risque de l’intelligence artificielle le courriel du conseiller illustre-t-il ?",
+     "options": [
+      "Des erreurs et des réponses inventées qu’il faut contrôler",
+      "La suppression de tous les emplois du service client",
+      "Une dépendance totale à un unique fournisseur d’énergie",
+      "Une perte de données due à un mot de passe volé"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit l’agent sur le délai de retour.",
+     "explication": "L’IA peut commettre des **erreurs** et inventer des réponses : les conseillers doivent contrôler et alimenter une base de connaissances."
+    }
+   ]
+  },
+  {
+   "chapitre": "79146d57-e806-5985-a4f2-71e2be47a9f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre équipes, une fête du lycée",
+   "competence": "analyser-document",
+   "situation": "Pour la fête du lycée, quatre équipes d’élèves ont préparé leurs idées avec le même budget et le même temps. Le comité n’en a pas retenu autant dans chacune. Pourquoi ?",
+   "documents": [
+    {
+     "id": "equipes",
+     "type": "tableau",
+     "titre": "Les quatre équipes",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Équipe",
+      "Objectif partagé ?",
+      "Règles et confiance",
+      "Outil",
+      "Idées retenues"
+     ],
+     "lignes": [
+      [
+       "Décors",
+       "Oui",
+       "Rôles et règles écrits",
+       "Document co-édité, droits par rôle",
+       14
+      ],
+      [
+       "Musique",
+       "Non : chacun veut sa playlist",
+       "Aucune règle",
+       "Messagerie",
+       3
+      ],
+      [
+       "Buvette",
+       "Oui",
+       "Rôles et règles écrits",
+       "Wiki partagé",
+       12
+      ],
+      [
+       "Communication",
+       "Oui",
+       "Chacun peut tout modifier",
+       "Dossier partagé sans droits",
+       5
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "com",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le journal de l’équipe Communication",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Dans le dossier de l’équipe, les huit élèves ont le même droit : tout modifier et tout supprimer. Mardi, Sacha a supprimé par erreur le plan de la fête. Personne ne savait qui avait la dernière version."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "equipes",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui montre qu’une des conditions de l’intelligence collective manque à l’équipe Musique.",
+     "aide": "L’une des conditions est un objectif commun à tous.",
+     "explication": "Dans l’équipe Musique, l’**objectif n’est pas partagé** : chacun poursuit sa propre playlist, la mise en commun échoue."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "Quelle part des idées retenues vient des équipes Décors et Buvette, en pourcentage arrondi à l’unité ?",
+     "reponse": 76,
+     "tolerance": 0.5,
+     "aide": "Additionne les idées des quatre équipes, puis celles de Décors et de Buvette.",
+     "explication": "Total : 14 + 3 + 12 + 5 = 34 ; Décors et Buvette : 26. 26 ÷ 34 ≈ 0,7647, soit **76 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel risque une gestion plus fine des droits aurait-elle évité à l’équipe Communication ?",
+     "options": [
+      "Une suppression accidentelle d’un fichier important",
+      "Une fuite de données personnelles vers la CNIL",
+      "Une panne de messagerie pendant la fête",
+      "Le départ d’un élève vers une autre équipe"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce qui est arrivé à Sacha mardi.",
+     "explication": "Quand tout le monde peut tout supprimer, une **suppression accidentelle** est possible : les droits doivent dépendre du rôle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle organisation de l’espace partagé aiderait le mieux l’équipe Communication ?",
+     "options": [
+      "Un administrateur, des contributeurs et des lecteurs, avec des règles écrites",
+      "Un seul compte partagé dont tout le monde connaît le mot de passe",
+      "Une messagerie instantanée sans aucun dossier commun",
+      "Un dossier privé par élève, sans partage entre les membres"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que fait l’équipe Décors : rôles, droits et règles.",
+     "explication": "Des **rôles**, des **droits** et des règles claires (comme dans l’équipe Décors) sécurisent le partage et rendent la coopération efficace."
+    }
+   ]
+  },
+  {
+   "chapitre": "6672653f-dff4-57cd-a85e-394af3898942",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du clic du client au colis expédié",
+   "competence": "observer-schema",
+   "situation": "Sur le site de vente en ligne du magasin Sport’Nord, chaque commande suit le même parcours. Salomé, stagiaire, doit comprendre ce processus de bout en bout.",
+   "documents": [
+    {
+     "id": "process",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Le processus de vente en ligne",
+     "source": "Schéma simplifié ; magasin imaginaire.",
+     "noeuds": [
+      {
+       "id": "cmd",
+       "texte": "Commande du client",
+       "emoji": "🛒"
+      },
+      {
+       "id": "pay",
+       "texte": "Vérification du paiement",
+       "emoji": "💳"
+      },
+      {
+       "id": "inconnu",
+       "texte": "?"
+      },
+      {
+       "id": "exp",
+       "texte": "Expédition",
+       "emoji": "🚚"
+      },
+      {
+       "id": "fact",
+       "texte": "Facturation",
+       "emoji": "🧾"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cmd",
+       "a": "pay"
+      },
+      {
+       "de": "pay",
+       "a": "inconnu"
+      },
+      {
+       "de": "inconnu",
+       "a": "exp"
+      },
+      {
+       "de": "exp",
+       "a": "fact"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "process",
+     "reponse": [
+      "cmd"
+     ],
+     "enonce": "Touche l’étape qui joue le rôle d’événement déclencheur du processus.",
+     "aide": "L’événement déclencheur est ce qui met tout le processus en route.",
+     "explication": "La **commande du client** déclenche le processus : sans elle, rien ne se passe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle activité manque à la place du point d’interrogation, entre le paiement et l’expédition ?",
+     "options": [
+      "La préparation du colis",
+      "Le suivi et l’avis client",
+      "La paie des salariés",
+      "La clôture des comptes"
+     ],
+     "reponse": 0,
+     "aide": "Avant d’expédier, il faut avoir constitué le colis.",
+     "explication": "Après la vérification du paiement vient la **préparation du colis**, puis l’expédition."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à son exemple dans ce processus.",
+     "paires": [
+      [
+       "Événement déclencheur",
+       "Le client valide son panier"
+      ],
+      [
+       "Résultat attendu",
+       "Le client reçoit son colis"
+      ],
+      [
+       "Décision",
+       "Paiement accepté ? oui ou non"
+      ]
+     ],
+     "aide": "Un processus part d’un événement, suit des activités et aboutit à un résultat pour un client.",
+     "explication": "L’**événement déclencheur** lance le processus, le **résultat** est ce que le client reçoit, la **décision** est un choix oui/non."
+    }
+   ]
+  },
+  {
+   "chapitre": "6672653f-dff4-57cd-a85e-394af3898942",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La PME Roue Libre adopte un PGI",
+   "competence": "analyser-document",
+   "situation": "La PME de vélos Roue Libre remplace ses tableurs par un progiciel de gestion intégré. La gérante veut mesurer ce qu’elle gagne, et ce que le nouvel outil impose.",
+   "documents": [
+    {
+     "id": "pgi",
+     "type": "schema",
+     "largeur": 340,
+     "hauteur": 275,
+     "titre": "Les services autour de la base commune",
+     "source": "Schéma simplifié.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 95,
+       "l": 100,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "base",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 122,
+       "texte": "Base de",
+       "taille": "normal",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 138,
+       "texte": "données",
+       "taille": "normal",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 154,
+       "texte": "commune",
+       "taille": "normal",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 12,
+       "l": 100,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Ventes",
+       "id": "ventes",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 4,
+       "y": 111,
+       "l": 96,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Atelier",
+       "id": "atelier",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 111,
+       "l": 96,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Comptabilité",
+       "id": "compta",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 210,
+       "l": 100,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Stocks",
+       "id": "stocks",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        50
+       ],
+       "a": [
+        170,
+        95
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        130
+       ],
+       "a": [
+        120,
+        130
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        130
+       ],
+       "a": [
+        220,
+        130
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        165
+       ],
+       "a": [
+        170,
+        210
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 268,
+       "texte": "Chaque service lit et écrit dans la même base.",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "saisie",
+     "type": "tableau",
+     "titre": "Saisir une commande",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Avant le PGI",
+      "Avec le PGI"
+     ],
+     "lignes": [
+      [
+       "Nombre de saisies par commande",
+       3,
+       1
+      ],
+      [
+       "Durée d’une saisie (minutes)",
+       6,
+       6
+      ],
+      [
+       "Commandes par jour",
+       40,
+       40
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pgi",
+     "reponse": [
+      "base"
+     ],
+     "enonce": "Touche l’élément du schéma qui permet de ne saisir une donnée qu’une seule fois pour tous les services.",
+     "aide": "Tous les services sont reliés au même élément central.",
+     "explication": "La **base de données commune** est le cœur du PGI : une donnée saisie une fois est disponible dans tous les services."
+    },
+    {
+     "type": "nombre",
+     "unite": "minutes",
+     "enonce": "Combien de minutes de saisie le PGI fait-il gagner par commande ?",
+     "reponse": 12,
+     "aide": "Avant : 3 saisies de 6 minutes. Après : 1 saisie.",
+     "explication": "Avant : 3 × 6 = 18 minutes. Avec le PGI : 6 minutes. On gagne 18 − 6 = **12 minutes** par commande."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique d’un PGI : avantage ou limite ?",
+     "categories": [
+      "Avantage",
+      "Limite"
+     ],
+     "items": [
+      [
+       "Une donnée saisie une seule fois",
+       0
+      ],
+      [
+       "Une information cohérente et à jour",
+       0
+      ],
+      [
+       "Un coût d’acquisition et de paramétrage élevé",
+       1
+      ],
+      [
+       "Des procédures standardisées parfois contraignantes",
+       1
+      ]
+     ],
+     "aide": "Un avantage fait gagner du temps ou de la fiabilité ; une limite est un coût ou une contrainte.",
+     "explication": "Saisie unique et information cohérente sont des **avantages** ; coût élevé et procédures standardisées sont des **limites**."
+    },
+    {
+     "type": "nombre",
+     "unite": "heures",
+     "enonce": "Avec 40 commandes par jour, combien d’heures de saisie la PME économise-t-elle chaque jour ?",
+     "reponse": 8,
+     "aide": "Minutes gagnées par commande × 40, puis convertis en heures.",
+     "explication": "12 × 40 = 480 minutes ; 480 ÷ 60 = **8 heures** gagnées chaque jour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le PGI refuse d’envoyer un devis tant que la comptable ne l’a pas validé, même pour 20 €. Que montre cette obligation ?",
+     "options": [
+      "Le numérique peut rigidifier l’organisation si on adapte le travail au logiciel",
+      "Le numérique rend toujours l’organisation plus agile, sans aucune contrainte",
+      "Le cloud impose d’acheter ses propres serveurs avant tout paramétrage",
+      "L’automatisation supprime toute intervention humaine dans le processus"
+     ],
+     "reponse": 0,
+     "aide": "Qui s’adapte à qui : le logiciel au travail, ou le travail au logiciel ?",
+     "explication": "Quand on adapte le travail au logiciel, l’organisation devient **rigide**. On peut la corriger en paramétrant un seuil sous lequel la validation n’est pas requise."
+    }
+   ]
+  },
+  {
+   "chapitre": "6672653f-dff4-57cd-a85e-394af3898942",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La commande en ligne : processus, cloud et prix",
+   "competence": "analyser-document",
+   "situation": "Le site marchand de Sport’Nord traite les commandes selon un processus précis. L’entreprise hésite aussi entre acheter un serveur et prendre un abonnement en ligne pour héberger ses outils.",
+   "documents": [
+    {
+     "id": "flux",
+     "type": "schema",
+     "largeur": 340,
+     "hauteur": 312,
+     "titre": "Le processus de commande",
+     "source": "Processus simplifié ; magasin imaginaire.",
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 18,
+       "texte": "Client",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 18,
+       "texte": "Site marchand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 18,
+       "texte": "Entrepôt",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        28
+       ],
+       "a": [
+        112,
+        304
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        226,
+        28
+       ],
+       "a": [
+        226,
+        304
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 40,
+       "l": 84,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "declencheur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 57,
+       "texte": "Passe sa",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 70,
+       "texte": "commande",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        60
+       ],
+       "a": [
+        128,
+        60
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 40,
+       "l": 84,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "verif",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 57,
+       "texte": "Vérifier le",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 70,
+       "texte": "paiement",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        80
+       ],
+       "a": [
+        170,
+        98
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         170,
+         98
+        ],
+        [
+         222,
+         128
+        ],
+        [
+         170,
+         158
+        ],
+        [
+         118,
+         128
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "dec",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 125,
+       "texte": "Paiement",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 139,
+       "texte": "accepté ?",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        128
+       ],
+       "a": [
+        92,
+        128
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 144,
+       "texte": "non",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 108,
+       "l": 84,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "erreur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 125,
+       "texte": "Message",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 138,
+       "texte": "d’erreur",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        158
+       ],
+       "a": [
+        170,
+        186
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 182,
+       "y": 177,
+       "texte": "oui",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 186,
+       "l": 84,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "enreg",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 203,
+       "texte": "Enregistrer",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 216,
+       "texte": "la commande",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        212,
+        206
+       ],
+       "a": [
+        236,
+        206
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 186,
+       "l": 90,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "prep",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 281,
+       "y": 203,
+       "texte": "Préparer et",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 281,
+       "y": 216,
+       "texte": "expédier",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        281,
+        226
+       ],
+       "a": [
+        281,
+        256
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 256,
+       "l": 90,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "colis",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 281,
+       "y": 273,
+       "texte": "Colis",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 281,
+       "y": 286,
+       "texte": "expédié",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        276
+       ],
+       "a": [
+        92,
+        276
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 164,
+       "y": 270,
+       "texte": "livraison",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 256,
+       "l": 84,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "recu",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 273,
+       "texte": "Reçoit son",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 286,
+       "texte": "colis",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "cout",
+     "type": "tableau",
+     "titre": "Serveur ou cloud ?",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Solution",
+      "Coût"
+     ],
+     "lignes": [
+      [
+       "Serveur acheté",
+       "12 000 € amortis sur 5 ans, plus 1 500 € de maintenance par an"
+      ],
+      [
+       "Cloud",
+       "40 € par utilisateur et par mois"
+      ],
+      [
+       "Nombre d’utilisateurs aujourd’hui",
+       "8"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flux",
+     "reponse": [
+      "dec"
+     ],
+     "enonce": "Touche l’élément du schéma qui représente une décision.",
+     "aide": "Cherche la forme qui pose une question avec deux réponses possibles.",
+     "explication": "Le losange « Paiement accepté ? » est une **décision** : selon la réponse oui ou non, le processus prend deux chemins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il d’après le schéma quand le paiement n’est pas accepté ?",
+     "options": [
+      "Le client reçoit un message d’erreur",
+      "La commande est préparée puis expédiée",
+      "Le colis est envoyé à l’entrepôt",
+      "La commande est enregistrée sans paiement"
+     ],
+     "reponse": 0,
+     "aide": "Suis la flèche « non » qui part du losange.",
+     "explication": "La branche « non » mène à un **message d’erreur** adressé au client : la commande ne continue pas."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le coût annuel du serveur acheté, en euros ?",
+     "reponse": 3900,
+     "aide": "Amortissement annuel : 12 000 ÷ 5, puis ajoute la maintenance.",
+     "explication": "12 000 ÷ 5 = 2 400 € par an, plus 1 500 € de maintenance : **3 900 €** par an."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le coût annuel du cloud pour les 8 utilisateurs, en euros ?",
+     "reponse": 3840,
+     "aide": "Utilisateurs × prix mensuel × 12 mois.",
+     "explication": "8 × 40 × 12 = **3 840 €** par an : un peu moins que le serveur."
+    },
+    {
+     "type": "choix",
+     "enonce": "À partir de combien d’utilisateurs le cloud devient-il plus cher que le serveur acheté ?",
+     "options": [
+      "9 utilisateurs",
+      "8 utilisateurs",
+      "10 utilisateurs",
+      "12 utilisateurs"
+     ],
+     "reponse": 0,
+     "aide": "Un utilisateur coûte 40 × 12 = 480 € par an : compare à 3 900 €.",
+     "explication": "À 8 utilisateurs : 3 840 € ; à **9** : 9 × 480 = 4 320 €, plus que 3 900 €. Les coûts du cloud grimpent avec l’usage."
+    }
+   ]
+  },
+  {
+   "chapitre": "199facb1-0934-516a-92de-408a4791d121",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’atelier de bougies de Mina : de combien est la valeur ajoutée ?",
+   "competence": "calculer",
+   "situation": "Mina fabrique des bougies artisanales. Elle veut savoir ce que son atelier crée vraiment en valeur, une fois retirés les achats utilisés pour produire.",
+   "documents": [
+    {
+     "id": "compte",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Atelier de bougies de Mina",
+     "sousTitre": "Une année d’activité",
+     "emoji": "🕯️",
+     "lignes": [
+      {
+       "texte": "Chiffre d’affaires",
+       "valeur": "240 000 €",
+       "id": "ca",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Cire, mèches et parfums",
+       "valeur": "62 000 €",
+       "id": "cire"
+      },
+      {
+       "texte": "Électricité de l’atelier",
+       "valeur": "11 500 €",
+       "id": "elec"
+      },
+      {
+       "texte": "Pots et emballages",
+       "valeur": "6 500 €",
+       "id": "pots"
+      },
+      {
+       "texte": "Salaires des 4 salariés",
+       "valeur": "100 000 €",
+       "id": "sal"
+      }
+     ],
+     "pied": "Chiffres imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "compte",
+     "reponse": [
+      "cire",
+      "elec",
+      "pots"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois lignes qui sont des consommations intermédiaires.",
+     "aide": "Ce sont des biens et services achetés à d’autres entreprises et utilisés pour produire.",
+     "explication": "Cire, électricité et emballages sont achetés à l’extérieur et consommés dans la production : ce sont des **consommations intermédiaires**. Les salaires, eux, rémunèrent le travail."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le total des consommations intermédiaires, en euros ?",
+     "reponse": 80000,
+     "aide": "Additionne les trois lignes d’achats : cire, électricité, pots.",
+     "explication": "62 000 + 11 500 + 6 500 = **80 000 €** de consommations intermédiaires."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quelle est la valeur ajoutée de l’atelier, en euros ?",
+     "reponse": 160000,
+     "aide": "Valeur ajoutée = chiffre d’affaires − consommations intermédiaires.",
+     "explication": "240 000 − 80 000 = **160 000 €** de valeur ajoutée."
+    }
+   ]
+  },
+  {
+   "chapitre": "199facb1-0934-516a-92de-408a4791d121",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui reçoit la valeur ajoutée de la chocolaterie des Quais ?",
+   "competence": "lire-graphique",
+   "situation": "La chocolaterie des Quais vient de clore son année. Sa gérante veut savoir à qui profite la valeur qu’elle a créée, et ce que changerait un dividende plus généreux.",
+   "documents": [
+    {
+     "id": "creation",
+     "type": "tableau",
+     "titre": "Création de valeur",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Chiffre d’affaires",
+       "1 000 000"
+      ],
+      [
+       "Consommations intermédiaires",
+       "400 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "repartition",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Répartition de la valeur ajoutée",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Salariés",
+      "État et collectivités",
+      "Banques",
+      "Actionnaires",
+      "Entreprise"
+     ],
+     "series": [
+      {
+       "nom": "Part de la valeur ajoutée (%)",
+       "valeurs": [
+        65,
+        10,
+        3,
+        7,
+        15
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quelle est la valeur ajoutée de la chocolaterie, en euros ?",
+     "reponse": 600000,
+     "aide": "Chiffre d’affaires moins consommations intermédiaires.",
+     "explication": "1 000 000 − 400 000 = **600 000 €**."
+    },
+    {
+     "type": "zone",
+     "document": "repartition",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche la part de la valeur ajoutée qui revient aux prêteurs, sous forme d’intérêts.",
+     "aide": "Les prêteurs sont les banques.",
+     "explication": "Les **banques** reçoivent des intérêts : 3 % de la valeur ajoutée."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel montant de dividendes les actionnaires reçoivent-ils, en euros ?",
+     "reponse": 42000,
+     "aide": "Calcule 7 % de la valeur ajoutée.",
+     "explication": "600 000 × 0,07 = **42 000 €** de dividendes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque bénéficiaire à la forme que prend sa part de la valeur ajoutée.",
+     "paires": [
+      [
+       "Salariés",
+       "Salaires et cotisations sociales"
+      ],
+      [
+       "État et collectivités",
+       "Impôts et taxes"
+      ],
+      [
+       "Banques",
+       "Intérêts"
+      ],
+      [
+       "Actionnaires",
+       "Dividendes"
+      ]
+     ],
+     "aide": "Chaque partie prenante est rémunérée sous une forme précise.",
+     "explication": "La valeur ajoutée se partage : **salaires**, **impôts**, **intérêts**, **dividendes**, et le bénéfice mis en réserve pour l’entreprise."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "La gérante envisage des dividendes à 11 % de la valeur ajoutée, sans toucher aux autres parts sauf l’autofinancement. De combien l’autofinancement baisse-t-il, en euros ?",
+     "reponse": 24000,
+     "aide": "Calcule les nouveaux dividendes (11 % de 600 000) et retire les anciens.",
+     "explication": "11 % de 600 000 = 66 000 € ; 66 000 − 42 000 = **24 000 €**. Le partage est un arbitrage : plus de dividendes, moins d’autofinancement."
+    }
+   ]
+  },
+  {
+   "chapitre": "199facb1-0934-516a-92de-408a4791d121",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Vélo-Plus : trois documents, plusieurs formes de valeur",
+   "competence": "analyser-document",
+   "situation": "Vélo-Plus, société cotée en Bourse, fabrique des vélos électriques. Un investisseur étudie ses documents de synthèse pour comprendre la valeur qu’elle crée et ce qu’elle vaut.",
+   "documents": [
+    {
+     "id": "resultat",
+     "type": "tableau",
+     "titre": "Compte de résultat simplifié (en €)",
+     "source": "Chiffres imaginés pour l’exercice ; société imaginaire.",
+     "colonnes": [
+      "Poste",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Ventes de vélos",
+       "3 200 000"
+      ],
+      [
+       "Autres produits",
+       "100 000"
+      ],
+      [
+       "Achats",
+       "1 700 000"
+      ],
+      [
+       "Salaires",
+       "1 050 000"
+      ],
+      [
+       "Autres charges",
+       "360 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan simplifié (en €)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Actif",
+      "Montant",
+      "Passif",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Bâtiments",
+       "800 000",
+       "Capitaux propres",
+       "900 000"
+      ],
+      [
+       "Machines",
+       "450 000",
+       "Dettes bancaires",
+       "700 000"
+      ],
+      [
+       "Stocks",
+       "300 000",
+       "Dettes fournisseurs",
+       "400 000"
+      ],
+      [
+       "Créances clients",
+       "250 000",
+       "",
+       ""
+      ],
+      [
+       "Trésorerie",
+       "200 000",
+       "",
+       ""
+      ],
+      [
+       "Total",
+       "2 000 000",
+       "Total",
+       "2 000 000"
+      ]
+     ]
+    },
+    {
+     "id": "bourse",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Action Vélo-Plus",
+     "sousTitre": "Cotation",
+     "emoji": "📈",
+     "lignes": [
+      {
+       "texte": "Cours de l’action",
+       "valeur": "48 €"
+      },
+      {
+       "texte": "Nombre d’actions",
+       "valeur": "250 000"
+      }
+     ],
+     "pied": "Cotation imaginée pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le résultat de Vélo-Plus (produits moins charges), en euros ?",
+     "reponse": 190000,
+     "aide": "Produits : ventes et autres produits. Charges : achats, salaires et autres charges.",
+     "explication": "Produits : 3 300 000 € ; charges : 3 110 000 € ; résultat : **190 000 €** de bénéfice."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans le bilan, range chaque élément : actif ou passif ?",
+     "categories": [
+      "Actif",
+      "Passif"
+     ],
+     "items": [
+      [
+       "Machines",
+       0
+      ],
+      [
+       "Capitaux propres",
+       1
+      ],
+      [
+       "Stocks",
+       0
+      ],
+      [
+       "Dettes bancaires",
+       1
+      ]
+     ],
+     "aide": "L’actif est ce que l’entreprise possède ; le passif dit comment c’est financé.",
+     "explication": "Machines et stocks sont possédés (**actif**) ; capitaux propres et dettes disent comment l’actif est financé (**passif**)."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quelle est la valeur boursière de Vélo-Plus (capitalisation), en euros ?",
+     "reponse": 12000000,
+     "aide": "Cours de l’action × nombre d’actions.",
+     "explication": "48 × 250 000 = **12 000 000 €**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme de valeur à la façon de la mesurer.",
+     "paires": [
+      [
+       "Valeur boursière",
+       "Cours de l’action multiplié par le nombre d’actions"
+      ],
+      [
+       "Valeur financière",
+       "Bénéfice, dividendes, rentabilité"
+      ],
+      [
+       "Valeur partenariale",
+       "Emplois, délais de paiement, retombées locales"
+      ],
+      [
+       "Valeur perçue",
+       "Notoriété, satisfaction et avis des clients"
+      ]
+     ],
+     "aide": "Chaque forme de valeur concerne des personnes précises : actionnaires, parties prenantes ou clients.",
+     "explication": "La valeur n’est pas qu’un chiffre : **boursière**, **financière**, **partenariale** et **perçue** se mesurent différemment."
+    }
+   ]
+  },
+  {
+   "chapitre": "a65289f3-63d8-57f0-9111-d27ee01f8d30",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux tournées de livraison à vélo",
+   "competence": "lire-tableau",
+   "situation": "Coursier Vélo Express a organisé deux tournées le même jour. Sa gérante veut savoir laquelle est la plus efficiente, pas seulement la plus efficace.",
+   "documents": [
+    {
+     "id": "tournees",
+     "type": "tableau",
+     "titre": "Résultats des deux tournées",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Tournée A",
+      "Tournée B"
+     ],
+     "lignes": [
+      [
+       "Colis à livrer",
+       100,
+       100
+      ],
+      [
+       "Colis livrés",
+       100,
+       100
+      ],
+      [
+       "Carburant consommé (litres)",
+       40,
+       32
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque constat à la notion qui lui correspond.",
+     "paires": [
+      [
+       "L’objectif de 100 colis est atteint",
+       "Efficacité"
+      ],
+      [
+       "Le même résultat est obtenu avec moins de carburant",
+       "Efficience"
+      ]
+     ],
+     "aide": "L’efficacité compare le résultat à l’objectif ; l’efficience compare le résultat aux moyens utilisés.",
+     "explication": "L’**efficacité** mesure l’atteinte de l’objectif ; l’**efficience** mesure ce que cela a coûté en moyens."
+    },
+    {
+     "type": "zone",
+     "document": "tournees",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui montre que la tournée B est plus efficiente que la tournée A.",
+     "aide": "Les deux tournées livrent autant : cherche ce qui les distingue.",
+     "explication": "La tournée B livre autant de colis avec **32 litres** au lieu de 40 : elle est plus efficiente."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "De quel pourcentage la tournée B consomme-t-elle moins de carburant que la tournée A ?",
+     "reponse": 20,
+     "aide": "Calcule la différence (40 − 32), puis rapporte-la à 40.",
+     "explication": "(40 − 32) ÷ 40 = 8 ÷ 40 = **20 %** de carburant en moins."
+    }
+   ]
+  },
+  {
+   "chapitre": "a65289f3-63d8-57f0-9111-d27ee01f8d30",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La chocolaterie Dumas est-elle performante partout ?",
+   "competence": "calculer",
+   "situation": "La chocolaterie Dumas affiche de beaux résultats financiers. Son directeur veut vérifier que cette performance ne cache pas de faiblesse ailleurs.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "Les chiffres de l’année",
+     "source": "Chiffres imaginés pour l’exercice ; entreprise imaginaire.",
+     "colonnes": [
+      "Donnée",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Chiffre d’affaires",
+       "1 500 000"
+      ],
+      [
+       "Résultat",
+       "75 000"
+      ],
+      [
+       "Capitaux propres",
+       "300 000"
+      ],
+      [
+       "Ventes totales du marché régional",
+       "15 000 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "social",
+     "type": "tableau",
+     "titre": "Extrait du bilan social",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Entreprise",
+      "Secteur"
+     ],
+     "lignes": [
+      [
+       "Taux d’absentéisme",
+       "8 %",
+       "5 %"
+      ],
+      [
+       "Accidents du travail",
+       "2",
+       "3"
+      ],
+      [
+       "Salariés formés",
+       "40 %",
+       "35 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "Quelle est la part de marché de la chocolaterie, en pourcentage ?",
+     "reponse": 10,
+     "aide": "Ventes de l’entreprise ÷ ventes totales du marché × 100.",
+     "explication": "1 500 000 ÷ 15 000 000 × 100 = **10 %** du marché régional."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indicateur à la dimension de la performance qu’il mesure.",
+     "paires": [
+      [
+       "Part de marché",
+       "Performance commerciale"
+      ],
+      [
+       "Taux de rentabilité",
+       "Performance financière"
+      ],
+      [
+       "Taux d’absentéisme",
+       "Performance sociale"
+      ],
+      [
+       "Émissions de CO2 de l’usine",
+       "Performance environnementale"
+      ]
+     ],
+     "aide": "Chaque dimension a ses indicateurs typiques : ventes, argent, personnel, environnement.",
+     "explication": "Part de marché : **commerciale** ; rentabilité : **financière** ; absentéisme : **sociale** ; CO2 : **environnementale**."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "Quel est le taux de profitabilité, en pourcentage ?",
+     "reponse": 5,
+     "aide": "Résultat ÷ chiffre d’affaires × 100.",
+     "explication": "75 000 ÷ 1 500 000 × 100 = **5 %** : cinq centimes de bénéfice par euro vendu."
+    },
+    {
+     "type": "zone",
+     "document": "social",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui révèle une faiblesse de la performance sociale de l’entreprise.",
+     "aide": "Compare l’entreprise au secteur : cherche un indicateur nettement plus mauvais.",
+     "explication": "Un absentéisme de **8 %** contre 5 % dans le secteur est un signal d’alerte : la performance sociale est faible."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "Quel est le taux de rentabilité financière, en pourcentage ?",
+     "reponse": 25,
+     "aide": "Résultat ÷ capitaux propres × 100.",
+     "explication": "75 000 ÷ 300 000 × 100 = **25 %** : très bonne rentabilité pour les associés, mais pas toute la performance."
+    }
+   ]
+  },
+  {
+   "chapitre": "a65289f3-63d8-57f0-9111-d27ee01f8d30",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Baisser les prix, verdir l’atelier : un tableau de bord sous tension",
+   "competence": "raisonner",
+   "situation": "Une biscuiterie industrielle a baissé ses prix pour gagner des parts de marché et remplacé un four à gaz par un four électrique. Son directeur lit son tableau de bord avant de décider de la suite.",
+   "documents": [
+    {
+     "id": "bord",
+     "type": "tableau",
+     "titre": "Tableau de bord",
+     "source": "Chiffres imaginés pour l’exercice ; entreprise imaginaire.",
+     "colonnes": [
+      "Indicateur",
+      "Dimension",
+      "Année N-1",
+      "Année N",
+      "Secteur"
+     ],
+     "lignes": [
+      [
+       "Part de marché",
+       "Commerciale",
+       "8 %",
+       "11 %",
+       "—"
+      ],
+      [
+       "Taux de profitabilité",
+       "Financière",
+       "6 %",
+       "3 %",
+       "5 %"
+      ],
+      [
+       "Émissions de CO2 (tonnes)",
+       "Environnementale",
+       900,
+       780,
+       "—"
+      ],
+      [
+       "Taux d’absentéisme",
+       "Sociale",
+       "4 %",
+       "7 %",
+       "5 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Note de la direction",
+     "source": "Note écrite pour l’exercice.",
+     "blocs": [
+      "En janvier, nous avons baissé nos prix de 10 % pour gagner des parts de marché. Nous avons aussi remplacé un four à gaz par un four électrique. Pour tenir les cadences, les équipes de nuit se plaignent de la fatigue."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Entre l’année N-1 et l’année N, chaque indicateur s’est-il amélioré ou dégradé ?",
+     "categories": [
+      "Amélioré",
+      "Dégradé"
+     ],
+     "items": [
+      [
+       "Part de marché",
+       0
+      ],
+      [
+       "Taux de profitabilité",
+       1
+      ],
+      [
+       "Émissions de CO2",
+       0
+      ],
+      [
+       "Taux d’absentéisme",
+       1
+      ]
+     ],
+     "aide": "Une part de marché qui monte est un progrès ; des émissions ou un absentéisme qui montent sont des reculs.",
+     "explication": "Part de marché et CO2 se sont **améliorés** (hausse et baisse favorables) ; profitabilité et absentéisme se sont **dégradés**."
+    },
+    {
+     "type": "zone",
+     "document": "bord",
+     "reponse": [
+      "r1c3"
+     ],
+     "enonce": "Touche la case de la profitabilité de l’année N, devenue inférieure à la moyenne du secteur.",
+     "aide": "Compare la colonne « Année N » à la colonne « Secteur » sur la ligne de la profitabilité.",
+     "explication": "La profitabilité est tombée à **3 %**, alors que le secteur est à 5 % : la baisse des prix pèse sur chaque euro vendu."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "enonce": "De combien de pour cent les émissions de CO2 ont-elles baissé, arrondi à l’unité ?",
+     "reponse": 13,
+     "tolerance": 0.5,
+     "aide": "Calcule (900 − 780) ÷ 900 × 100.",
+     "explication": "(900 − 780) ÷ 900 × 100 = 13,3 %, soit environ **13 %** de baisse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle décision de la note explique le mieux la chute de la profitabilité ?",
+     "options": [
+      "La baisse des prix de 10 %, qui réduit ce que rapporte chaque euro vendu",
+      "Le remplacement du four à gaz, qui a fait chuter l’absentéisme",
+      "La hausse des émissions de CO2, qui a augmenté les parts de marché",
+      "Le départ des équipes de nuit, qui a réduit les ventes de l’entreprise"
+     ],
+     "reponse": 0,
+     "aide": "Gagner des parts de marché en baissant ses prix a un prix.",
+     "explication": "Baisser les prix pour gagner des **parts de marché** réduit la **profitabilité** : les performances sont parfois contradictoires."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc72491e-6aea-504e-be1b-7fd26bfbd128",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le camion à pizzas de Nino : à partir de quand gagne-t-il ?",
+   "competence": "calculer",
+   "situation": "Nino lance un camion à pizzas. Avant de signer le crédit, il veut savoir combien de pizzas il doit vendre sur l’année pour ne pas perdre d’argent.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Le camion de Nino",
+     "sousTitre": "Prévisions de l’année",
+     "emoji": "🍕",
+     "lignes": [
+      {
+       "texte": "Prix de vente d’une pizza",
+       "valeur": "15 €",
+       "id": "prix"
+      },
+      {
+       "texte": "Pâte, garniture et boîte (par pizza)",
+       "valeur": "9 €",
+       "id": "var"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Loyer de l’emplacement",
+       "valeur": "15 000 € par an",
+       "id": "loyer"
+      },
+      {
+       "texte": "Assurance du camion",
+       "valeur": "4 000 € par an",
+       "id": "assur"
+      },
+      {
+       "texte": "Salaire fixe du cuisinier",
+       "valeur": "8 000 € par an",
+       "id": "sal"
+      }
+     ],
+     "pied": "Chiffres imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque dépense de Nino : charge variable ou charge fixe ?",
+     "categories": [
+      "Charge variable",
+      "Charge fixe"
+     ],
+     "items": [
+      [
+       "Pâte et garniture",
+       0
+      ],
+      [
+       "Loyer de l’emplacement",
+       1
+      ],
+      [
+       "Assurance du camion",
+       1
+      ],
+      [
+       "Boîtes en carton",
+       0
+      ]
+     ],
+     "aide": "Une charge variable suit le nombre de pizzas vendues ; une charge fixe ne dépend pas de l’activité à court terme.",
+     "explication": "Pâte, garniture et boîtes augmentent avec les ventes : **charges variables**. Loyer et assurance ne changent pas avec l’activité : **charges fixes**."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quelle est la marge sur coût variable d’une pizza, en euros ?",
+     "reponse": 6,
+     "aide": "Prix de vente moins charges variables par pizza.",
+     "explication": "15 − 9 = **6 €** de marge sur coût variable par pizza."
+    },
+    {
+     "type": "nombre",
+     "unite": "pizzas",
+     "enonce": "Combien de pizzas Nino doit-il vendre dans l’année pour atteindre son seuil de rentabilité ?",
+     "reponse": 4500,
+     "aide": "Charges fixes totales ÷ marge sur coût variable par pizza.",
+     "explication": "Charges fixes : 15 000 + 4 000 + 8 000 = 27 000 €. 27 000 ÷ 6 = **4 500 pizzas**, soit 67 500 € de chiffre d’affaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc72491e-6aea-504e-be1b-7fd26bfbd128",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La trésorerie de la boutique Poucette sur trois mois",
+   "competence": "lire-tableau",
+   "situation": "Poucette, boutique de vêtements, prépare son budget de trésorerie du premier trimestre. Sa gérante veut repérer les mois où l’argent risque de manquer.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Budget de trésorerie (en €)",
+     "source": "Chiffres imaginés pour l’exercice ; boutique imaginaire.",
+     "colonnes": [
+      "Poste",
+      "Janvier",
+      "Février",
+      "Mars"
+     ],
+     "lignes": [
+      [
+       "Trésorerie de début",
+       "8 000",
+       "6 000",
+       "?"
+      ],
+      [
+       "Encaissements",
+       "25 000",
+       "21 000",
+       "35 000"
+      ],
+      [
+       "Décaissements",
+       "27 000",
+       "29 000",
+       "28 000"
+      ],
+      [
+       "Trésorerie de fin",
+       "6 000",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "À la fin de février, la trésorerie est négative. De quel montant ? (donne-le sans le signe moins)",
+     "reponse": 2000,
+     "aide": "Trésorerie de début + encaissements − décaissements, pour février.",
+     "explication": "6 000 + 21 000 − 29 000 = −2 000 : il manque **2 000 €**, il faudra un découvert ou un décalage de paiements."
+    },
+    {
+     "type": "zone",
+     "document": "budget",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui contient les décaissements du mois où la trésorerie devient négative.",
+     "aide": "Repère d’abord le mois du manque d’argent, puis la ligne des décaissements.",
+     "explication": "C’est en février que la trésorerie devient négative : les décaissements y sont de **29 000 €**, bien plus que les encaissements."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quelle sera la trésorerie de fin de mars, en euros ?",
+     "reponse": 5000,
+     "aide": "La trésorerie de début de mars est celle de fin février (négative).",
+     "explication": "Début de mars : −2 000 €. −2 000 + 35 000 − 28 000 = **5 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert ce budget de trésorerie pour la gérante ?",
+     "options": [
+      "À anticiper dès janvier le manque d’argent de février et à négocier un découvert",
+      "À calculer le seuil de rentabilité annuel de la boutique",
+      "À vérifier que les comptes sont certifiés par un commissaire aux comptes",
+      "À mesurer la satisfaction de la clientèle sur le trimestre"
+     ],
+     "reponse": 0,
+     "aide": "Un budget de trésorerie prévoit mois par mois encaissements et décaissements.",
+     "explication": "Le budget de trésorerie **anticipe** les manques (négocier un découvert) ou les excédents (les placer)."
+    }
+   ]
+  },
+  {
+   "chapitre": "bc72491e-6aea-504e-be1b-7fd26bfbd128",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’atelier Roue Libre : seuil de rentabilité et valeur du temps",
+   "competence": "modeliser",
+   "situation": "L’atelier de réparation Roue Libre facture 50 € une réparation moyenne. Son gérant veut savoir à partir de quand il gagne de l’argent, et comment placer la trésorerie qu’il met de côté.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Chiffre d’affaires et coûts totaux selon l’activité",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "0",
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600"
+     ],
+     "series": [
+      {
+       "nom": "Chiffre d’affaires",
+       "valeurs": [
+        0,
+        5000,
+        10000,
+        15000,
+        20000,
+        25000,
+        30000
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Coûts totaux",
+       "valeurs": [
+        8000,
+        11000,
+        14000,
+        17000,
+        20000,
+        23000,
+        26000
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Euros par mois",
+      "min": 0,
+      "max": 30000,
+      "pas": 5000
+     },
+     "axeX": {
+      "titre": "Réparations par mois"
+     }
+    },
+    {
+     "id": "donnees",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Atelier Roue Libre",
+     "sousTitre": "Données mensuelles",
+     "emoji": "🔧",
+     "lignes": [
+      {
+       "texte": "Prix moyen d’une réparation",
+       "valeur": "50 €"
+      },
+      {
+       "texte": "Charges variables par réparation",
+       "valeur": "30 €"
+      },
+      {
+       "texte": "Charges fixes par mois",
+       "valeur": "8 000 €"
+      }
+     ],
+     "pied": "Chiffres imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbes",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche le nombre de réparations pour lequel le résultat est nul, là où les deux courbes se croisent.",
+     "aide": "Au seuil de rentabilité, le chiffre d’affaires égale les coûts totaux.",
+     "explication": "Les deux courbes se rejoignent à **400 réparations** : le chiffre d’affaires et les coûts valent tous deux 20 000 €."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Calcule le seuil de rentabilité en chiffre d’affaires, en euros. (seuil = charges fixes ÷ taux de marge sur coût variable)",
+     "reponse": 20000,
+     "aide": "Taux de marge sur coût variable = (50 − 30) ÷ 50 = 40 %.",
+     "explication": "8 000 ÷ 0,40 = **20 000 €** de chiffre d’affaires, soit 400 réparations à 50 €. Le calcul confirme le graphique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il en un mois où l’atelier fait 300 réparations ?",
+     "options": [
+      "Une perte de 2 000 €",
+      "Un bénéfice de 2 000 €",
+      "Un résultat nul",
+      "Une perte de 8 000 €"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux courbes au-dessus de 300 : laquelle est au-dessus ?",
+     "explication": "Chiffre d’affaires : 15 000 € ; coûts : 17 000 €. Le résultat est **−2 000 €** : l’atelier est sous son seuil."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le résultat mensuel de l’atelier s’il réalise 550 réparations ?",
+     "reponse": 3000,
+     "aide": "Marge sur coût variable par réparation × 550, moins les charges fixes.",
+     "explication": "550 × 20 = 11 000 € de marge, moins 8 000 € de charges fixes : **3 000 €** de bénéfice."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Le gérant touchera 10 609 € dans deux ans. Quelle est la valeur de cette somme aujourd’hui avec un taux de placement de 3 % par an ?",
+     "reponse": 10000,
+     "aide": "Cherche le capital qui devient 10 609 € après deux ans à 3 % : divise par 1,03².",
+     "explication": "1,03² = 1,0609 ; 10 609 ÷ 1,0609 = **10 000 €**. Un euro d’aujourd’hui vaut plus qu’un euro dans deux ans : actualiser, c’est ramener une somme future à aujourd’hui."
+    }
+   ]
+  },
+  {
+   "chapitre": "f25317d1-d70b-51a4-891b-523a8a4606e9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les inquiétudes de Maëlle, pâtissière en ligne",
+   "competence": "lire-tableau",
+   "situation": "Maëlle a lancé Délices&Co, une pâtisserie vendue en ligne. Elle dresse la liste de ses inquiétudes et note chacune de 1 à 3 pour la probabilité et pour la gravité.",
+   "documents": [
+    {
+     "id": "liste",
+     "type": "tableau",
+     "titre": "Les risques de Délices&Co",
+     "source": "Notes imaginées pour l’exercice ; entreprise imaginaire.",
+     "colonnes": [
+      "Risque",
+      "Probabilité (1 à 3)",
+      "Gravité (1 à 3)"
+     ],
+     "lignes": [
+      [
+       "Retard de livraison des emballages",
+       3,
+       1
+      ],
+      [
+       "Panne du four principal",
+       2,
+       3
+      ],
+      [
+       "Hausse du prix de l’énergie",
+       3,
+       3
+      ],
+      [
+       "Cyberattaque sur le site",
+       1,
+       3
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liste",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le risque dont le niveau (probabilité × gravité) est le plus élevé.",
+     "aide": "Multiplie les deux notes de chaque ligne et compare.",
+     "explication": "Hausse de l’énergie : 3 × 3 = **9**, contre 3, 6 et 3 pour les autres : c’est le risque à traiter en premier."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le niveau de risque de la panne du four principal ?",
+     "reponse": 6,
+     "aide": "Niveau de risque = probabilité × gravité.",
+     "explication": "2 × 3 = **6**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maëlle souscrit une assurance qui rembourse ses pertes en cas de panne du four. Quelle stratégie de traitement du risque applique-t-elle ?",
+     "options": [
+      "Transférer le risque",
+      "Éviter le risque",
+      "Réduire le risque",
+      "Accepter le risque"
+     ],
+     "reponse": 0,
+     "aide": "Elle ne supprime pas la panne : qui paie, désormais, en cas de panne ?",
+     "explication": "Souscrire une assurance, c’est **transférer** le risque (ses conséquences financières) à l’assureur."
+    }
+   ]
+  },
+  {
+   "chapitre": "f25317d1-d70b-51a4-891b-523a8a4606e9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La cartographie des risques d’un atelier de bijoux",
+   "competence": "observer-schema",
+   "situation": "Zoé dirige un atelier de bijoux. Avec son équipe, elle a placé quatre risques sur une cartographie qui croise probabilité et gravité. Il faut décider par quoi commencer.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "schema",
+     "largeur": 340,
+     "hauteur": 262,
+     "titre": "Cartographie des risques",
+     "source": "Cartographie imaginée pour l’exercice.",
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 20,
+       "texte": "Gravité",
+       "gras": true,
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 154,
+       "l": 76,
+       "h": 62,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 92,
+       "l": 76,
+       "h": 62,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 30,
+       "l": 76,
+       "h": 62,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 154,
+       "l": 76,
+       "h": 62,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 92,
+       "l": 76,
+       "h": 62,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 30,
+       "l": 76,
+       "h": 62,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 222,
+       "y": 154,
+       "l": 76,
+       "h": 62,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 222,
+       "y": 92,
+       "l": 76,
+       "h": 62,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 222,
+       "y": 30,
+       "l": 76,
+       "h": 62,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 64,
+       "y": 65,
+       "texte": "forte",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 64,
+       "y": 127,
+       "texte": "moyenne",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 64,
+       "y": 189,
+       "texte": "faible",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 108,
+       "y": 232,
+       "texte": "faible",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 184,
+       "y": 232,
+       "texte": "moyenne",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 232,
+       "texte": "forte",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 184,
+       "y": 252,
+       "texte": "Probabilité",
+       "gras": true,
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 61,
+       "r": 17,
+       "teinte": "blanc",
+       "motif": "plein",
+       "texte": "A",
+       "id": "rA",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 185,
+       "r": 17,
+       "teinte": "blanc",
+       "motif": "plein",
+       "texte": "B",
+       "id": "rB",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 108,
+       "cy": 61,
+       "r": 17,
+       "teinte": "blanc",
+       "motif": "plein",
+       "texte": "C",
+       "id": "rC",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 123,
+       "r": 17,
+       "teinte": "blanc",
+       "motif": "plein",
+       "texte": "D",
+       "id": "rD",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "legende",
+     "type": "tableau",
+     "titre": "Légende",
+     "source": "Risques imaginés pour l’exercice.",
+     "colonnes": [
+      "Repère",
+      "Risque"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Pénurie de métaux précieux"
+      ],
+      [
+       "B",
+       "Panne de la messagerie de l’atelier"
+      ],
+      [
+       "C",
+       "Perte du plus gros client"
+      ],
+      [
+       "D",
+       "Un concurrent baisse ses prix"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "rA"
+     ],
+     "enonce": "Touche le risque dont le niveau (probabilité × gravité) est le plus élevé.",
+     "aide": "Lis la probabilité en bas et la gravité à gauche, puis multiplie pour chaque repère.",
+     "explication": "Le risque **A** a une probabilité moyenne (2) et une gravité forte (3) : niveau 6, le plus élevé de la carte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le niveau du risque D, un concurrent qui baisse ses prix ?",
+     "reponse": 4,
+     "aide": "Repère sa position sur les deux axes puis multiplie.",
+     "explication": "D est en probabilité moyenne (2) et gravité moyenne (2) : 2 × 2 = **4**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque décision de Zoé à la stratégie de traitement du risque correspondante.",
+     "paires": [
+      [
+       "Chercher un second fournisseur de métaux",
+       "Réduire"
+      ],
+      [
+       "Souscrire une assurance perte d’exploitation",
+       "Transférer"
+      ],
+      [
+       "Renoncer à un marché très instable",
+       "Éviter"
+      ],
+      [
+       "Surveiller un risque faible sans agir",
+       "Accepter"
+      ]
+     ],
+     "aide": "Éviter supprime l’exposition ; réduire la limite ; transférer la confie à un tiers ; accepter la garde en la surveillant.",
+     "explication": "**Réduire** : diversifier ; **transférer** : assurance ; **éviter** : renoncer ; **accepter** : surveiller un risque faible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le risque C, dépendre d’un seul gros client, est un facteur de risque…",
+     "options": [
+      "interne : il naît des décisions de l’organisation elle-même",
+      "externe : il vient d’un événement que l’organisation ne contrôle pas",
+      "externe : il est lié à l’évolution de la demande du marché",
+      "interne : il est lié à une rupture technologique"
+     ],
+     "reponse": 0,
+     "aide": "Qui a décidé de ne travailler qu’avec un seul gros client ?",
+     "explication": "La dépendance à un gros client résulte des **choix de l’organisation** : c’est un facteur interne."
+    }
+   ]
+  },
+  {
+   "chapitre": "f25317d1-d70b-51a4-891b-523a8a4606e9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Voltix, fournisseur unique de moteurs de trottinettes",
+   "competence": "analyser-document",
+   "situation": "La marque Glisse Urbaine fabrique des trottinettes électriques. Tous ses moteurs viennent d’un seul fournisseur, Voltix. Un courriel d’alerte arrive : il faut mesurer le risque et choisir un traitement.",
+   "documents": [
+    {
+     "id": "achats",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Répartition des 600 000 € d’achats annuels",
+     "source": "Chiffres imaginés pour l’exercice ; marque imaginaire.",
+     "categories": [
+      "Moteurs (Voltix, fournisseur unique)",
+      "Cadres",
+      "Batteries",
+      "Divers"
+     ],
+     "series": [
+      {
+       "nom": "Part des achats (%)",
+       "valeurs": [
+        45,
+        25,
+        20,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Courriel de Voltix",
+     "source": "Courriel écrit pour l’exercice ; fournisseur imaginaire.",
+     "blocs": [
+      "À compter de janvier, le prix de nos moteurs augmente de 30 %. Nos capacités de production sont limitées : les commandes sont servies dans l’ordre d’arrivée."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "achats",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la part des achats qui dépend d’un fournisseur unique.",
+     "aide": "Lis les libellés : l’un d’eux le dit entre parenthèses.",
+     "explication": "Les **moteurs** viennent de Voltix seul : 45 % des achats dépendent d’un unique fournisseur."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "De combien d’euros les achats annuels de moteurs augmentent-ils avec la hausse de 30 % ?",
+     "reponse": 81000,
+     "aide": "Montant annuel des moteurs : 45 % de 600 000 €. Puis applique 30 %.",
+     "explication": "600 000 × 0,45 = 270 000 € de moteurs ; 270 000 × 0,30 = **81 000 €** de surcoût par an."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque décision selon la stratégie de traitement du risque qu’elle illustre.",
+     "categories": [
+      "Réduire",
+      "Transférer",
+      "Éviter"
+     ],
+     "items": [
+      [
+       "Trouver un second fournisseur de moteurs",
+       0
+      ],
+      [
+       "Souscrire une assurance perte d’exploitation",
+       1
+      ],
+      [
+       "Constituer un stock de sécurité de deux mois de moteurs",
+       0
+      ],
+      [
+       "Abandonner le modèle équipé du moteur le plus puissant",
+       2
+      ]
+     ],
+     "aide": "Transférer, c’est confier le risque à un tiers ; éviter, c’est renoncer à l’activité exposée.",
+     "explication": "Un second fournisseur et un stock de sécurité **réduisent** le risque ; l’assurance le **transfère** ; abandonner le modèle l’**évite**."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "enonce": "Quel est le coût du stock de sécurité de deux mois de moteurs, aux achats actuels ?",
+     "reponse": 45000,
+     "aide": "Achats mensuels de moteurs : 270 000 ÷ 12. Puis multiplie par 2.",
+     "explication": "270 000 ÷ 12 = 22 500 € par mois ; sur deux mois : **45 000 €** de stock immobilisé."
+    }
+   ]
+  },
+  {
+   "chapitre": "240fb557-5e5a-5c1b-8947-ab3d322ba126",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Yanis cherche sa problématique",
+   "competence": "argumenter",
+   "situation": "Yanis prépare son étude de gestion sur la librairie Page 12, où il fait son stage. Il hésite entre quatre formulations de problématique.",
+   "documents": [
+    {
+     "id": "idees",
+     "type": "tableau",
+     "titre": "Les quatre idées de Yanis",
+     "source": "Formulations écrites pour l’exercice ; librairie imaginaire.",
+     "colonnes": [
+      "N°",
+      "Formulation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "L’informatique dans les entreprises"
+      ],
+      [
+       "2",
+       "La librairie Page 12 a-t-elle un site marchand ?"
+      ],
+      [
+       "3",
+       "En quoi le site marchand de la librairie Page 12 a-t-il rendu son organisation plus agile ?"
+      ],
+      [
+       "4",
+       "Les organisations et le numérique"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "idees",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la formulation qui est une bonne problématique : une question ouverte, précise et reliée au programme.",
+     "aide": "Cherche celle qui nomme l’organisation, un outil précis et une notion du programme.",
+     "explication": "La formulation 3 est **ouverte** (« en quoi »), **précise** (Page 12, site marchand) et **reliée au programme** (agilité)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque formulation : trop vague, trop fermée ou bonne problématique ?",
+     "categories": [
+      "Trop vague",
+      "Trop fermée",
+      "Bonne problématique"
+     ],
+     "items": [
+      [
+       "L’informatique dans les entreprises",
+       0
+      ],
+      [
+       "La librairie Page 12 a-t-elle un site marchand ?",
+       1
+      ],
+      [
+       "Les organisations et le numérique",
+       0
+      ],
+      [
+       "En quoi le site marchand de Page 12 l’a-t-il rendue plus agile ?",
+       2
+      ]
+     ],
+     "aide": "Une question à laquelle on répond par oui ou non est fermée ; un simple thème ne pose aucune question.",
+     "explication": "Les thèmes 1 et 4 sont des **sujets sans question** ; la 2 appelle un oui ou un non (**fermée**) ; la 3 est une **vraie problématique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel chapitre du programme se rattache la problématique retenue ?",
+     "options": [
+      "Le numérique : agilité ou rigidité ?",
+      "Ressources humaines et coût du travail",
+      "Mesurer la création de valeur",
+      "Le temps dans la gestion"
+     ],
+     "reponse": 0,
+     "aide": "Repère la notion du programme dans la formulation : agile.",
+     "explication": "L’**agilité** liée à un outil numérique renvoie au chapitre « Le numérique : agilité ou rigidité ? »."
+    }
+   ]
+  },
+  {
+   "chapitre": "240fb557-5e5a-5c1b-8947-ab3d322ba126",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carnet de bord de Camille sur l’association Les Aiglons",
+   "competence": "analyser-document",
+   "situation": "Camille prépare son étude de gestion sur l’association sportive Les Aiglons. Son carnet de bord montre les sources qu’elle a consultées. Une information semble bizarre.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Extrait du carnet de bord",
+     "source": "Carnet imaginé pour l’exercice ; association imaginaire.",
+     "colonnes": [
+      "Date",
+      "Source",
+      "Information relevée"
+     ],
+     "lignes": [
+      [
+       "12/10",
+       "Site de l’association",
+       "180 licenciés"
+      ],
+      [
+       "03/11",
+       "Entretien avec la trésorière",
+       "Cotisation moyenne : 95 €"
+      ],
+      [
+       "17/11",
+       "Article de la presse locale",
+       "Environ 210 licenciés"
+      ],
+      [
+       "24/11",
+       "Rapport annuel de l’association",
+       "182 licenciés"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque source : interne à l’organisation ou externe ?",
+     "categories": [
+      "Source interne",
+      "Source externe"
+     ],
+     "items": [
+      [
+       "Site de l’association",
+       0
+      ],
+      [
+       "Entretien avec la trésorière",
+       0
+      ],
+      [
+       "Article de la presse locale",
+       1
+      ],
+      [
+       "Rapport annuel de l’association",
+       0
+      ]
+     ],
+     "aide": "Une source interne vient de l’organisation elle-même ou de ses membres.",
+     "explication": "Site, entretien avec un responsable et rapport annuel sont **internes** ; un article de presse est **externe**."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche l’information qui s’écarte des autres sources sur le nombre de licenciés.",
+     "aide": "Trois sources donnent des chiffres voisins, une seule s’en éloigne.",
+     "explication": "L’article de presse annonce **environ 210 licenciés**, alors que le site et le rapport donnent 180 et 182."
+    },
+    {
+     "type": "nombre",
+     "unite": "licenciés",
+     "enonce": "Quel est l’écart entre le chiffre de la presse et celui du rapport annuel ?",
+     "reponse": 28,
+     "aide": "Soustrais le chiffre du rapport à celui de l’article.",
+     "explication": "210 − 182 = **28 licenciés** d’écart : trop pour l’ignorer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit faire Camille face à cet écart avant de retenir un chiffre ?",
+     "options": [
+      "Comparer qui parle, quand et dans quel but, puis croiser les sources",
+      "Retenir le chiffre de la presse, car il est le plus élevé",
+      "Calculer la moyenne des quatre sources sans les vérifier",
+      "Supprimer les autres sources pour ne garder que la presse"
+     ],
+     "reponse": 0,
+     "aide": "Pour chaque source : qui parle ? quand ? dans quel but ?",
+     "explication": "Croiser au moins deux sources et **vérifier leur origine** permet d’évaluer leur fiabilité (le chiffre de la presse est approximatif et peut être plus ancien ou plus large)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de l’étude de gestion.",
+     "items": [
+      "Choisir un thème rattaché à une question de gestion",
+      "Choisir l’organisation",
+      "Formuler une problématique",
+      "Collecter les informations",
+      "Analyser avec les notions du cours",
+      "Préparer la soutenance orale"
+     ],
+     "aide": "On commence par le thème, on finit par l’oral ; l’analyse suit la collecte.",
+     "explication": "Thème → organisation → problématique → collecte → analyse → soutenance : c’est la **démarche** de l’étude de gestion."
+    }
+   ]
+  },
+  {
+   "chapitre": "240fb557-5e5a-5c1b-8947-ab3d322ba126",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lucie répète sa soutenance sur Sport’Nord",
+   "competence": "analyser-document",
+   "situation": "Lucie présente son étude de gestion sur le magasin Sport’Nord. Elle a chronométré sa répétition et se demande ce qu’il faut couper, et ce que le jury attend vraiment.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le plan de Lucie",
+     "source": "Plan écrit pour l’exercice ; magasin imaginaire.",
+     "blocs": [
+      "Problématique : en quoi l’application de gestion des stocks a-t-elle rendu le magasin Sport’Nord plus [[a|agile]] ?",
+      "Partie 1 : une information qui circule plus vite entre la caisse et la réserve.",
+      "Partie 2 : mais des procédures plus rigides pour les vendeurs.",
+      "Partie 3 : des recommandations de paramétrage."
+     ]
+    },
+    {
+     "id": "chrono",
+     "type": "tableau",
+     "titre": "Chronométrage de la répétition",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Temps de l’exposé",
+      "Durée (minutes)"
+     ],
+     "lignes": [
+      [
+       "Introduction",
+       3
+      ],
+      [
+       "Partie 1",
+       3
+      ],
+      [
+       "Partie 2",
+       4
+      ],
+      [
+       "Partie 3",
+       2
+      ],
+      [
+       "Conclusion",
+       1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot de la problématique qui renvoie à une notion du programme de sciences de gestion et numérique.",
+     "aide": "Quelle qualité de l’organisation est mise en question par l’application ?",
+     "explication": "L’**agilité** est la notion du programme (le numérique rend-il l’organisation agile ou rigide ?) : elle relie l’étude au cours."
+    },
+    {
+     "type": "nombre",
+     "unite": "minutes",
+     "enonce": "L’exposé doit durer dix minutes au plus. De combien de minutes la répétition de Lucie dépasse-t-elle cette limite ?",
+     "reponse": 3,
+     "aide": "Additionne toutes les durées du tableau, puis compare à 10.",
+     "explication": "3 + 3 + 4 + 2 + 1 = 13 minutes ; 13 − 10 = **3 minutes** de trop."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque temps de la soutenance à son contenu.",
+     "paires": [
+      [
+       "Introduction",
+       "L’organisation en quelques chiffres, la question de gestion, la problématique"
+      ],
+      [
+       "Développement",
+       "Deux ou trois parties : observations analysées avec les notions"
+      ],
+      [
+       "Conclusion",
+       "La réponse à la problématique, une limite, une ouverture"
+      ],
+      [
+       "Entretien",
+       "Justifier ses choix, définir les notions, raconter sa démarche"
+      ]
+     ],
+     "aide": "L’exposé a trois temps ; l’entretien avec le jury vient après.",
+     "explication": "L’**introduction** pose le cadre, le **développement** analyse, la **conclusion** répond et ouvre, l’**entretien** vérifie ta démarche."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque pratique : à faire ou à éviter pendant la soutenance ?",
+     "categories": [
+      "À faire",
+      "À éviter"
+     ],
+     "items": [
+      [
+       "Répondre à la problématique en conclusion",
+       0
+      ],
+      [
+       "Signaler une limite de son étude",
+       0
+      ],
+      [
+       "Expliquer sa démarche et citer ses sources",
+       0
+      ],
+      [
+       "Lire ses notes à voix haute",
+       1
+      ],
+      [
+       "Projeter un diaporama surchargé de texte",
+       1
+      ],
+      [
+       "Décrire l’organisation sans jamais l’analyser",
+       1
+      ]
+     ],
+     "aide": "Le jury veut voir que tu raisonnes avec les notions et que tu expliques ta démarche.",
+     "explication": "Une bonne soutenance **répond**, assume ses limites et explique sa démarche ; lire ses notes, surcharger un diaporama ou rester descriptif sont des erreurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hugo, un camarade, a fait rédiger sa conclusion par une IA sans le dire. Que penser de cette pratique ?",
+     "options": [
+      "Elle n’est pas acceptable : il faut dire d’où vient le texte, l’étude doit être la sienne",
+      "Elle est acceptable, car la conclusion est la partie la moins importante",
+      "Elle est acceptable à condition de ne pas citer ses sources ailleurs",
+      "Elle est recommandée, car l’IA ne commet jamais d’erreur"
+     ],
+     "reponse": 0,
+     "aide": "Le carnet de bord doit prouver que l’étude est la tienne.",
+     "explication": "Faire rédiger par une IA **sans le dire** n’est pas acceptable ; cite tes sources et explique ta démarche. L’IA peut aussi se tromper."
+    }
+   ]
+  }
+ ]
+}

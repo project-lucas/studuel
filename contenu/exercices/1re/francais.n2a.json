@@ -1,0 +1,2225 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "ac40112c-efda-5ad2-84ef-d94bdf1aded1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix volumes pour un seul roman",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur le plus long roman de la littérature française. Relève ses chiffres, puis démêle qui se cache derrière ses héros.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Artamène ou le Grand Cyrus",
+     "sousTitre": "Un roman sous le nom de Georges de Scudéry",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "id": "vol",
+       "texte": "Nombre de volumes",
+       "valeur": "Dix"
+      },
+      {
+       "id": "dates",
+       "texte": "Publication",
+       "valeur": "1649 à 1653"
+      },
+      {
+       "id": "mots",
+       "texte": "Longueur",
+       "valeur": "environ deux millions de mots"
+      },
+      {
+       "id": "cadre",
+       "texte": "Cadre",
+       "valeur": "L’Antiquité perse"
+      }
+     ],
+     "pied": "Écrit pour l’essentiel par sa sœur Madeleine",
+     "teinte": "violet"
+    },
+    {
+     "id": "cles",
+     "type": "tableau",
+     "titre": "Les clés du roman",
+     "colonnes": [
+      "Personnage du roman",
+      "Ce que les lecteurs y reconnaissent",
+      "Précision"
+     ],
+     "lignes": [
+      [
+       "Cyrus",
+       "Le Grand Condé",
+       "Héros militaire de la Fronde"
+      ],
+      [
+       "Mandane",
+       "?",
+       "Sa sœur"
+      ],
+      [
+       "Sapho",
+       "?",
+       "Peinte dans le dernier volume"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "vol"
+     ],
+     "enonce": "Touche la ligne qui donne le nombre de volumes du roman.",
+     "aide": "Cherche le mot « volumes » dans la fiche.",
+     "explication": "Le roman compte **dix volumes** : c’est ce qui en fait le plus long roman de la littérature française."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre le premier et le dernier volume, d’après les dates de la fiche ?",
+     "reponse": 4,
+     "aide": "Soustrais la première date de la dernière.",
+     "explication": "1653 − 1649 = **4 ans** : les dix volumes paraissent en quatre ans seulement.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux cases « ? » du tableau.",
+     "texte": "Mandane est ___ ; Sapho est ___.",
+     "reponses": [
+      [
+       "duchesse de longueville",
+       "la duchesse de longueville"
+      ],
+      [
+       "madeleine de scudery",
+       "madeleine de scudéry"
+      ]
+     ],
+     "banque": [
+      "duchesse de Longueville",
+      "Madeleine de Scudéry",
+      "Cyrus",
+      "Georges de Scudéry"
+     ],
+     "aide": "Mandane est la sœur du Grand Condé ; Sapho est le surnom de l’autrice.",
+     "explication": "**Mandane** est la **duchesse de Longueville**, sœur du Grand Condé ; **Sapho** est **Madeleine de Scudéry** elle-même : c’est un roman à clé."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac40112c-efda-5ad2-84ef-d94bdf1aded1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un samedi dans le salon de Sapho",
+   "competence": "se-reperer-temps",
+   "situation": "Un samedi de 1652, on lit un nouveau volume du Grand Cyrus chez Madeleine de Scudéry. Que cherche-t-on dans ce roman, et où se situe-t-il dans le siècle ?",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une lecture en société",
+     "blocs": [
+      "Dans le Marais, les invités se pressent pour la lecture du jour. Les [[b|batailles]] et les [[b|enlèvements]] passent vite : tout le monde les attend, personne ne les écoute.",
+      "On s’arrête sur une [[c|conversation]] : « l’absence renforce-t-elle l’amour ? » Chacun reconnaît sous un nom antique un personnage de la Cour."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Grand Cyrus parmi son siècle",
+     "debut": 1645,
+     "fin": 1680,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "fronde",
+       "debut": 1648,
+       "fin": 1653,
+       "nom": "La Fronde",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "cyr",
+       "date": 1649,
+       "nom": "Début du Grand Cyrus"
+      },
+      {
+       "id": "mol",
+       "date": 1659,
+       "nom": "Les Précieuses ridicules"
+      },
+      {
+       "id": "clev",
+       "date": 1678,
+       "nom": "La Princesse de Clèves"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche les deux mots qui nomment ce qui ne sert que de cadre au roman.",
+     "aide": "Cherche ce que le public attend sans vraiment l’écouter.",
+     "explication": "Les **batailles** et les **enlèvements** ne sont que le cadre ; ce qui compte, ce sont les conversations."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du roman : cadre, ou ce qui intéresse vraiment le public ?",
+     "categories": [
+      "Ce qui sert de cadre",
+      "Ce qui intéresse vraiment"
+     ],
+     "items": [
+      [
+       "Les naufrages",
+       0
+      ],
+      [
+       "Les reconnaissances",
+       0
+      ],
+      [
+       "Les portraits",
+       1
+      ],
+      [
+       "Les questions galantes",
+       1
+      ],
+      [
+       "Les analyses de sentiments",
+       1
+      ]
+     ],
+     "aide": "Pense à ce qu’on discute après la lecture, dans le salon.",
+     "explication": "Naufrages et reconnaissances sont le **cadre** de l’aventure ; **portraits**, **questions galantes** et **analyses de sentiments** font le plaisir du public."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le début du Grand Cyrus de La Princesse de Clèves ?",
+     "reponse": 29,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1678 − 1649 = **29 ans** : le roman de Scudéry est donc très antérieur à celui de Mme de La Fayette.",
+     "unite": "ans"
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces trois repères dans l’ordre où ils se produisent.",
+     "items": [
+      "Début du Grand Cyrus",
+      "Les Précieuses ridicules",
+      "La Princesse de Clèves"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "Le Grand Cyrus (**1649**), puis la satire de Molière (**1659**), puis le roman classique de **1678**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac40112c-efda-5ad2-84ef-d94bdf1aded1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi lire dix volumes ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si le Grand Cyrus mérite encore d’être lu. Le dialogue et le tableau t’aident à tenir une thèse pour ta dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sami",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Dix volumes d’enlèvements, c’est interminable : il ne s’y passe rien."
+      },
+      {
+       "qui": "Sami",
+       "texte": "Le public ne lisait pas pour l’action. Il venait pour les [[c|conversations]] et pour deviner quelles [[p|personnes]] réelles se cachaient sous les noms antiques."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Alors Cyrus n’est pas vraiment Cyrus ?"
+      },
+      {
+       "qui": "Sami",
+       "texte": "Pour les lecteurs de la Fronde, c’est le Grand Condé."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Deux thèses pour la dissertation",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Un document sur l’art de la conversation",
+       "Les débats galants tiennent plus de place que l’action",
+       "?"
+      ],
+      [
+       "Un roman à clé",
+       "Les lecteurs reconnaissent des contemporains sous des noms antiques",
+       "Cyrus = le Grand Condé"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "c",
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que le public cherche vraiment dans le roman.",
+     "aide": "Sami répond à Léa : « il venait pour… et pour deviner… ».",
+     "explication": "Le public cherche les **conversations** et les **personnes** réelles à reconnaître : le roman est un jeu de salon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Peut-on aimer sans espoir ? L’absence renforce-t-elle l’amour ?",
+      "Cyrus enlève Mandane sur un vaisseau, puis la reprend",
+      "Madeleine de Scudéry signe du nom de son frère Georges",
+      "Le roman paraît pendant et juste après la Fronde"
+     ],
+     "reponse": 0,
+     "aide": "On cherche un exemple de débat galant, pas d’aventure.",
+     "explication": "Les **questions galantes** débattues à l’infini illustrent la thèse : la conversation est l’art de vivre du roman."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait du roman à ce qu’il révèle.",
+     "paires": [
+      [
+       "Le cadre de l’Antiquité perse",
+       "Un décor sous lequel on reconnaît la société du temps"
+      ],
+      [
+       "Le portrait de Sapho",
+       "La défense d’une femme savante"
+      ],
+      [
+       "Une lecture par épisodes, en société",
+       "Un plaisir collectif, comme une série"
+      ]
+     ],
+     "aide": "Chaque trait a une fonction dans le jeu de salon.",
+     "explication": "Le **décor antique** masque les contemporains, **Sapho** défend l’idée qu’une femme peut être savante, la **lecture en société** fait du roman un plaisir partagé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ces documents permettent-ils le mieux d’appuyer ?",
+     "options": [
+      "Le roman d’avant La Princesse de Clèves est immense, galant et héroïque",
+      "Le roman du XVIIe siècle est toujours court et sans aucun héros",
+      "Le Grand Cyrus a été écrit pour condamner la Fronde et ses chefs",
+      "Le Grand Cyrus est resté célèbre sans interruption jusqu’au XXe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les deux thèses du tableau : conversation et roman à clé.",
+     "explication": "Le roman montre ce qu’était le genre **avant** 1678 : **immense, galant, héroïque**, nourri de conversations."
+    }
+   ]
+  },
+  {
+   "chapitre": "b50f6df2-ce44-513e-9e89-28ebdf9ea753",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le grand magasin de Mouret",
+   "competence": "analyser-document",
+   "situation": "Tu présentes Au Bonheur des Dames à ta classe. Commence par la carte d’identité du roman, puis par ses principaux personnages.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Au Bonheur des Dames",
+     "sousTitre": "Émile Zola",
+     "emoji": "🏬",
+     "lignes": [
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1883"
+      },
+      {
+       "id": "serie",
+       "texte": "Série",
+       "valeur": "Les Rougon-Macquart"
+      },
+      {
+       "id": "rang",
+       "texte": "Rang dans la série",
+       "valeur": "Onzième volume"
+      },
+      {
+       "id": "ecole",
+       "texte": "Mouvement",
+       "valeur": "Naturalisme"
+      }
+     ],
+     "pied": "Octave Mouret vient de Pot-Bouille (1882)",
+     "teinte": "ambre"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Denise Baudu",
+       "Orpheline venue de Valognes"
+      ],
+      [
+       "Octave Mouret",
+       "Patron du grand magasin"
+      ],
+      [
+       "Baudu",
+       "Oncle drapier du « Vieil Elbeuf »"
+      ],
+      [
+       "Bourras",
+       "Vieux marchand de parapluies"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "serie"
+     ],
+     "enonce": "Touche la ligne qui dit à quelle série appartient le roman.",
+     "aide": "Zola a écrit toute une « histoire naturelle et sociale d’une famille ».",
+     "explication": "Le roman appartient aux **Rougon-Macquart**, la grande série de Zola."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fiche du roman.",
+     "texte": "Au Bonheur des Dames est le ___ volume des Rougon-Macquart, publié en ___.",
+     "reponses": [
+      [
+       "onzieme",
+       "onzième",
+       "11e",
+       "11"
+      ],
+      [
+       "1883"
+      ]
+     ],
+     "banque": [
+      "onzième",
+      "vingtième",
+      "1883",
+      "1882"
+     ],
+     "aide": "Les deux informations sont dans la fiche.",
+     "explication": "Le roman est le **onzième** volume de la série et paraît en **1883**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans l’histoire.",
+     "paires": [
+      [
+       "Denise Baudu",
+       "Devient vendeuse au Bonheur des Dames"
+      ],
+      [
+       "Octave Mouret",
+       "Dirige le grand magasin"
+      ],
+      [
+       "Baudu",
+       "Perd tout, ruiné par le magasin"
+      ],
+      [
+       "Bourras",
+       "Résiste jusqu’à l’expulsion"
+      ]
+     ],
+     "aide": "Un personnage dirige, une autre travaille, deux résistent.",
+     "explication": "**Denise** entre comme vendeuse, **Mouret** dirige, **Baudu** et **Bourras** sont les petits commerçants écrasés."
+    }
+   ]
+  },
+  {
+   "chapitre": "b50f6df2-ce44-513e-9e89-28ebdf9ea753",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du Vieil Elbeuf à la vente de blanc",
+   "competence": "se-reperer-temps",
+   "situation": "Denise vient d’arriver à Paris. Suis ce qu’elle découvre, puis ce que le magasin invente pour séduire les clientes.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’histoire de Denise",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Denise entre comme vendeuse au Bonheur des Dames"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle voit la ruine des petits commerçants"
+      },
+      {
+       "id": "n3",
+       "texte": "Mouret, génie du commerce, l’aime"
+      },
+      {
+       "id": "n4",
+       "texte": "Denise résiste : pas question d’être maîtresse"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "innov",
+     "type": "tableau",
+     "titre": "Les innovations du magasin",
+     "colonnes": [
+      "Innovation",
+      "Son ressort"
+     ],
+     "lignes": [
+      [
+       "Étalages, soldes, publicité",
+       "Créer le désir"
+      ],
+      [
+       "Vente par correspondance",
+       "?"
+      ],
+      [
+       "Exploitation de la clientèle féminine",
+       "Le désir comme moteur de vente"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne, à la fin du roman ?",
+     "options": [
+      "Elle devient la maîtresse de Mouret",
+      "Elle quitte Paris et rentre à Valognes",
+      "Elle ouvre sa propre boutique de nouveautés",
+      "Elle finit par épouser Mouret"
+     ],
+     "reponse": 3,
+     "aide": "Denise a refusé d’être une maîtresse : que reste-t-il ?",
+     "explication": "À la fin, Denise **épouse** Mouret : elle n’est jamais devenue sa maîtresse."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où Denise voit ce que le magasin fait aux petits commerçants.",
+     "aide": "Cherche le mot « ruine ».",
+     "explication": "À cette étape, Denise découvre la **ruine des petits commerçants**, dont son oncle Baudu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le ressort de la vente par correspondance (case « ? » du tableau) ?",
+     "options": [
+      "Étendre le marché au-delà du quartier",
+      "Fermer les boutiques concurrentes une à une",
+      "Faire payer les clientes avant de les servir",
+      "Remplacer les vendeuses par des commis"
+     ],
+     "reponse": 0,
+     "aide": "Un catalogue envoyé loin du magasin touche qui ?",
+     "explication": "La vente par correspondance sert à **étendre le marché** : on vend à des clientes qui ne viendront jamais en boutique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le tableau et la chaîne.",
+     "texte": "Le magasin ___ l’oncle ___ et les autres petits commerçants du quartier.",
+     "reponses": [
+      [
+       "ruine"
+      ],
+      [
+       "baudu"
+      ]
+     ],
+     "banque": [
+      "ruine",
+      "enrichit",
+      "Baudu",
+      "Mouret",
+      "Bourras"
+     ],
+     "aide": "Pense à l’oncle drapier de Denise.",
+     "explication": "Le grand magasin **ruine** l’oncle **Baudu** et les boutiques voisines."
+    }
+   ]
+  },
+  {
+   "chapitre": "b50f6df2-ce44-513e-9e89-28ebdf9ea753",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une machine et un temple",
+   "competence": "analyser-texte",
+   "situation": "Zola décrit le grand magasin comme une machine et comme un temple. Lis une description écrite à sa manière et repère les deux images.",
+   "documents": [
+    {
+     "id": "desc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la galerie des soieries",
+     "blocs": [
+      "Sous la verrière, la [[t|nef]] des soieries s’ouvrait comme une église, et les dames, silencieuses, s’approchaient de l’[[t|autel]] de la nouvelle mode.",
+      "Derrière les murs, la [[m|machine]] ronflait : le monte-charge, les caisses, les commis alignés, tout [[m|tournait]] pour que le désir ne s’éteigne jamais."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Zola"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "desc",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui font du magasin un lieu de culte.",
+     "aide": "Cherche le vocabulaire de l’église.",
+     "explication": "**Nef** et **autel** appartiennent à l’église : le magasin devient un temple, où la mode est une religion."
+    },
+    {
+     "type": "zone",
+     "document": "desc",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui font du magasin un mécanisme.",
+     "aide": "Cherche ce qui ronfle et ce qui tourne sans cesse.",
+     "explication": "La **machine** qui **tourne** montre un magasin fait de rouages, au service du désir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « C’était la cathédrale du commerce moderne », quelle image domine ?",
+     "options": [
+      "Celle du temple : le commerce devient une religion",
+      "Celle de la machine : le commerce est un mécanisme",
+      "Celle de la ruine : le commerce détruit les églises",
+      "Celle de la prison : le commerce enferme les clientes"
+     ],
+     "reponse": 0,
+     "aide": "Une cathédrale est un lieu de quoi ?",
+     "explication": "La **cathédrale** est l’image du **temple** : le grand magasin attire les foules comme un lieu de culte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage : victime du magasin, ou bénéficiaire ?",
+     "categories": [
+      "Victime du magasin",
+      "Profite du magasin"
+     ],
+     "items": [
+      [
+       "Baudu",
+       0
+      ],
+      [
+       "Bourras",
+       0
+      ],
+      [
+       "Geneviève",
+       0
+      ],
+      [
+       "Mouret",
+       1
+      ],
+      [
+       "Le baron Hartmann",
+       1
+      ]
+     ],
+     "aide": "Pense à celui qui perd sa boutique et à ceux qui font fortune.",
+     "explication": "**Baudu**, **Bourras** et **Geneviève** sont écrasés ; **Mouret** et le banquier **Hartmann** profitent du progrès : c’est une loi impitoyable."
+    }
+   ]
+  },
+  {
+   "chapitre": "29bbccd8-69aa-5e1b-a4a0-03f71cf6b1f1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les Tuvache et les Vallin",
+   "competence": "analyser-document",
+   "situation": "Dans un village normand, deux familles très pauvres reçoivent la même offre. Compare leurs réponses, puis chiffre la rente promise.",
+   "documents": [
+    {
+     "id": "fam",
+     "type": "tableau",
+     "titre": "Deux familles, une offre",
+     "colonnes": [
+      "Famille",
+      "Sa décision",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "Les Tuvache",
+       "Refusent avec indignation",
+       "Charlot reste paysan"
+      ],
+      [
+       "Les Vallin",
+       "?",
+       "Jean revient riche vingt ans plus tard"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "rente",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’offre des d’Hubières",
+     "blocs": [
+      "Adopter un petit garçon contre une rente.",
+      "Rente promise aux Vallin : cent francs par mois, portée ensuite à cent vingt francs."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après la nouvelle de Maupassant"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fam",
+     "multiple": false,
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche la famille qui refuse l’offre des d’Hubières.",
+     "aide": "Un des deux noms est associé à « refusent avec indignation ».",
+     "explication": "Ce sont les **Tuvache** qui refusent, avec indignation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme les Vallin touchent-ils en un an une fois la rente portée à cent vingt francs par mois ?",
+     "reponse": 1440,
+     "aide": "Multiplie la rente mensuelle par douze.",
+     "explication": "120 × 12 = **1 440 francs** par an.",
+     "unite": "francs"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Charlot Tuvache",
+       "L’enfant d’abord choisi, que ses parents gardent"
+      ],
+      [
+       "Jean Vallin",
+       "L’enfant cédé, qui revient en « jeune monsieur »"
+      ],
+      [
+       "Mme d’Hubières",
+       "La bourgeoise qui paie pour avoir un enfant"
+      ],
+      [
+       "La mère Tuvache",
+       "Fière de son refus, elle méprise les Vallin"
+      ]
+     ],
+     "aide": "Deux enfants, une bourgeoise, une mère.",
+     "explication": "**Charlot** est gardé, **Jean** est cédé, **Mme d’Hubières** achète un enfant, la **mère Tuvache** méprise les voisins pendant vingt ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "29bbccd8-69aa-5e1b-a4a0-03f71cf6b1f1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Vingt ans plus tard",
+   "competence": "analyser-texte",
+   "situation": "La nouvelle de Maupassant se lit comme un miroir : deux familles, deux choix, deux destins. Reconstitue-la, puis relève sa construction.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la nouvelle",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Les d’Hubières offrent une rente"
+      },
+      {
+       "id": "n2",
+       "texte": "Les Tuvache refusent, les Vallin acceptent"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Charlot comprend ce que le refus lui a coûté"
+      },
+      {
+       "id": "n5",
+       "texte": "Il insulte ses parents et quitte la ferme"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "sym",
+     "type": "tableau",
+     "titre": "Une symétrie parfaite",
+     "colonnes": [
+      "Famille",
+      "Geste",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "Tuvache",
+       "Geste « moral » : on refuse",
+       "Le malheur"
+      ],
+      [
+       "Vallin",
+       "Geste « scandaleux » : on vend",
+       "La réussite"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Jean revient riche et élégant embrasser ses parents",
+      "Les Vallin renoncent et rendent la rente aux d’Hubières",
+      "Charlot part en ville pour retrouver Jean Vallin",
+      "Les Tuvache acceptent à leur tour de céder Charlot"
+     ],
+     "reponse": 0,
+     "aide": "Vingt ans ont passé : que devient l’enfant cédé ?",
+     "explication": "Vingt ans plus tard, **Jean revient riche et élégant** : c’est cette vue qui bouleverse Charlot."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape de la chute, qui retourne le récit.",
+     "aide": "La nouvelle se termine par la réaction de Charlot.",
+     "explication": "La chute est la réaction de **Charlot** : il **insulte** ses parents et quitte la ferme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque famille à ce que son geste produit.",
+     "paires": [
+      [
+       "Les Tuvache",
+       "Le malheur, malgré un geste moral"
+      ],
+      [
+       "Les Vallin",
+       "Une réussite, malgré un geste scandaleux"
+      ]
+     ],
+     "aide": "Le tableau dit le contraire de ce qu’on attend.",
+     "explication": "La **morale ne nourrit pas** : le geste des Tuvache produit du malheur, celui des Vallin une réussite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète une phrase de ton commentaire.",
+     "texte": "La nouvelle repose sur une ___ parfaite entre les deux familles, et sa ___ retourne le récit d’une phrase.",
+     "reponses": [
+      [
+       "symetrie",
+       "symétrie"
+      ],
+      [
+       "chute"
+      ]
+     ],
+     "banque": [
+      "symétrie",
+      "chute",
+      "dispute",
+      "préface"
+     ],
+     "aide": "Les deux familles se répondent comme dans un miroir.",
+     "explication": "La **symétrie** des deux familles et la **chute** font toute la force de cette nouvelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "29bbccd8-69aa-5e1b-a4a0-03f71cf6b1f1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Maupassant juge-t-il ?",
+   "competence": "argumenter",
+   "situation": "Pour l’oral, deux élèves discutent : Maupassant condamne-t-il les parents qui vendent leur fils ? Le dialogue et le tableau tranchent.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Les Vallin ont vendu leur fils : Maupassant les condamne."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Il ne dit rien de tel. Les Tuvache refusent et leur fils les insulte ; les Vallin acceptent et leur fils revient riche."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors il approuve les Vallin ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Non plus : il [[m|montre]] les deux gestes et laisse la chute parler."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Maupassant ne juge pas",
+       "Chaque geste produit un résultat contraire à la morale attendue",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot de Théo qui dit ce que fait Maupassant.",
+     "aide": "Théo dit ce que fait l’auteur au lieu de juger.",
+     "explication": "Maupassant **montre** les deux gestes : il laisse au lecteur le soin de conclure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le dialogue soutient-il ?",
+     "options": [
+      "Aucune famille n’est jugée : le récit montre et la chute parle",
+      "Les Tuvache sont condamnés car leur fils les insulte",
+      "Les Vallin sont approuvés car leur fils revient riche",
+      "Les d’Hubières sont condamnés car ils paient une rente"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Théo.",
+     "explication": "Maupassant ne prend parti pour **personne** : il **montre** et laisse la chute parler."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les Tuvache, fiers de leur refus, sont insultés par Charlot",
+      "Les d’Hubières adoptent finalement un enfant d’une autre famille",
+      "Mme d’Hubières regrette son offre et quitte le village",
+      "Les Vallin refusent à leur tour de revoir Jean"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le geste « moral » qui produit du malheur.",
+     "explication": "Le refus **moral** des Tuvache produit du malheur : leur fils les **insulte** et part."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Une symétrie parfaite entre deux familles",
+       "La comparaison s’impose sans commentaire"
+      ],
+      [
+       "Le patois des dialogues",
+       "Une marque du réalisme"
+      ],
+      [
+       "Une chute d’une phrase",
+       "Le retournement du récit"
+      ]
+     ],
+     "aide": "Chaque procédé sert le réalisme et la brièveté.",
+     "explication": "La **symétrie** rend la comparaison évidente, le **patois** relève du réalisme, la **chute** retourne tout en une phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "f34a467e-89c8-55b3-aa04-3b830841588a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un palais dont on ne sort pas",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur Bajazet. Commence par situer la pièce dans l’espace et dans le temps, puis par ce que veut chaque personnage.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Bajazet",
+     "sousTitre": "Tragédie de Jean Racine",
+     "emoji": "🕌",
+     "lignes": [
+      {
+       "id": "lieu",
+       "texte": "Lieu",
+       "valeur": "Le sérail de Constantinople"
+      },
+      {
+       "id": "date",
+       "texte": "Création",
+       "valeur": "Janvier 1672, Hôtel de Bourgogne"
+      },
+      {
+       "id": "faits",
+       "texte": "Date des faits",
+       "valeur": "1635"
+      },
+      {
+       "id": "source",
+       "texte": "Source",
+       "valeur": "Un récit du comte de Cézy, ambassadeur"
+      }
+     ],
+     "pied": "La seule tragédie de Racine tirée d’une histoire contemporaine",
+     "teinte": "ambre"
+    },
+    {
+     "id": "veut",
+     "type": "tableau",
+     "titre": "Qui veut quoi ?",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Roxane",
+       "Favorite à qui le sultan a confié le palais"
+      ],
+      [
+       "Bajazet",
+       "Frère du sultan, prisonnier au sérail"
+      ],
+      [
+       "Atalide",
+       "Celle que Bajazet aime"
+      ],
+      [
+       "Acomat",
+       "Vizir qui manœuvre pour ses intérêts"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "source"
+     ],
+     "enonce": "Touche la ligne qui dit d’où Racine tient cette histoire.",
+     "aide": "Racine l’explique dans sa préface.",
+     "explication": "Racine dit tenir l’histoire d’un **récit du comte de Cézy**, ambassadeur à Constantinople."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les faits racontés de la création de la pièce ?",
+     "reponse": 37,
+     "aide": "Soustrais la date des faits de celle de la création.",
+     "explication": "1672 − 1635 = **37 ans** : le sujet est « contemporain », mais éloigné dans l’espace.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il veut.",
+     "paires": [
+      [
+       "Roxane",
+       "Épouser Bajazet et régner avec lui"
+      ],
+      [
+       "Bajazet",
+       "Épouser Atalide"
+      ],
+      [
+       "Atalide",
+       "Sauver Bajazet en lui faisant feindre l’amour"
+      ],
+      [
+       "Acomat",
+       "Servir d’abord ses propres intérêts"
+      ]
+     ],
+     "aide": "Roxane pose un marché ; Atalide aide Bajazet.",
+     "explication": "**Roxane** veut régner avec Bajazet, qui aime **Atalide** ; celle-ci conseille de feindre ; **Acomat** manœuvre pour lui-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "f34a467e-89c8-55b3-aa04-3b830841588a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La lettre qui trahit",
+   "competence": "se-reperer-temps",
+   "situation": "Dans le sérail, un seul papier suffit à tout perdre. Suis le fil de l’action jusqu’au dénouement, puis range les confidents.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "De l’ultimatum à la mort",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Roxane : épouser Bajazet et régner, ou mourir"
+      },
+      {
+       "id": "n2",
+       "texte": "Atalide lui conseille de feindre l’amour"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Roxane fait exécuter Bajazet"
+      },
+      {
+       "id": "n5",
+       "texte": "Roxane est tuée sur ordre d’Amurat"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "conf",
+     "type": "tableau",
+     "titre": "Les seconds rôles",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Osmin",
+       "Le confident d’Acomat"
+      ],
+      [
+       "Zatime",
+       "L’esclave de Roxane, qui trouve la lettre"
+      ],
+      [
+       "Zaïre",
+       "L’esclave d’Atalide"
+      ],
+      [
+       "Orcan",
+       "L’esclave envoyé par Amurat"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Roxane découvre la vérité par une lettre",
+      "Bajazet avoue son amour pour Atalide à Roxane en public",
+      "Acomat renverse le sultan et prend le pouvoir",
+      "Amurat revient de Babylone et reprend le palais"
+     ],
+     "reponse": 0,
+     "aide": "Zatime, l’esclave de Roxane, la trouve.",
+     "explication": "C’est **une lettre** qui révèle la vérité à Roxane : la parole écrite suffit à condamner."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où le pouvoir absent d’Amurat frappe enfin.",
+     "aide": "Qui exécute l’ordre du sultan ?",
+     "explication": "Amurat, qui n’est jamais en scène, fait tuer Roxane : tout vient de **l’absent qui décide de tout**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque second rôle à sa fonction.",
+     "paires": [
+      [
+       "Osmin",
+       "Confident d’Acomat"
+      ],
+      [
+       "Zatime",
+       "Trouve la lettre"
+      ],
+      [
+       "Zaïre",
+       "Esclave d’Atalide"
+      ],
+      [
+       "Orcan",
+       "Tue Roxane sur ordre d’Amurat"
+      ]
+     ],
+     "aide": "Le tableau dit pour qui chacun travaille.",
+     "explication": "**Osmin** sert Acomat, **Zatime** trouve la lettre, **Zaïre** sert Atalide, **Orcan** exécute Roxane."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin de la pièce.",
+     "texte": "Roxane découvre la vérité par une ___ ; Atalide se donne la ___ ; Acomat s’___.",
+     "reponses": [
+      [
+       "lettre"
+      ],
+      [
+       "mort"
+      ],
+      [
+       "enfuit",
+       "enfuie"
+      ]
+     ],
+     "banque": [
+      "lettre",
+      "mort",
+      "enfuit",
+      "marie",
+      "vie"
+     ],
+     "aide": "Le dénouement laisse un survivant : le calculateur.",
+     "explication": "Une **lettre** perd tout le monde ; **Atalide** se donne la **mort** ; **Acomat s’enfuit**, le calcul survit mieux que l’amour."
+    }
+   ]
+  },
+  {
+   "chapitre": "f34a467e-89c8-55b3-aa04-3b830841588a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mentir pour survivre",
+   "competence": "analyser-texte",
+   "situation": "Dans le sérail, la parole est surveillée : que dit-on, et qui décide ? Lis un court échange écrit à la manière de Racine, puis range les personnages.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans un palais fermé",
+     "blocs": [
+      {
+       "didascalie": "Une favorite fait attendre un prisonnier, dans une salle dont les portes ont des oreilles."
+      },
+      {
+       "personnage": "La favorite",
+       "replique": "Vous vous [[t|taisez]]. Un seul mot suffirait."
+      },
+      {
+       "personnage": "Le prisonnier",
+       "replique": "Madame, ici, chaque mot est une [[t|arme]] : j’en prononce peu."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Bajazet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui montrent que la parole est dangereuse dans ce palais.",
+     "aide": "Cherche ce que le prisonnier fait de ses mots, et ce qu’il en dit.",
+     "explication": "Il se **tait** et parle d’**arme** : dans le sérail, la parole est surveillée et peut condamner."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage de Bajazet : il dissimule pour survivre, ou il décide du sort des autres ?",
+     "categories": [
+      "Dissimule pour survivre",
+      "Décide du sort des autres"
+     ],
+     "items": [
+      [
+       "Bajazet",
+       0
+      ],
+      [
+       "Atalide",
+       0
+      ],
+      [
+       "Acomat",
+       0
+      ],
+      [
+       "Roxane",
+       1
+      ],
+      [
+       "Amurat",
+       1
+      ]
+     ],
+     "aide": "Roxane et Amurat ont le pouvoir ; les autres jouent un rôle.",
+     "explication": "**Bajazet**, **Atalide** et **Acomat** jouent un rôle pour survivre ; **Roxane** et **Amurat** ont le pouvoir de condamner."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la pièce à son effet.",
+     "paires": [
+      [
+       "Le sérail, espace clos",
+       "La parole y est surveillée"
+      ],
+      [
+       "Amurat, l’absent",
+       "Tout vient de lui"
+      ],
+      [
+       "« Sortez. »",
+       "Le mot le plus court, le plus tragique"
+      ],
+      [
+       "Une lettre",
+       "Elle prouve la dissimulation"
+      ]
+     ],
+     "aide": "Chaque élément resserre l’étau sur les personnages.",
+     "explication": "L’**espace clos** surveille la parole, l’**absent** décide de tout, « **Sortez.** » envoie Bajazet à la mort, la **lettre** prouve le mensonge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume le mieux la pièce ?",
+     "options": [
+      "Tragédie de la dissimulation : chacun joue un rôle et meurt de l’avoir mal joué",
+      "Tragédie de la pitié : chacun meurt de n’avoir pas su pardonner aux autres",
+      "Tragédie du destin : chacun meurt d’avoir désobéi aux dieux de la cité",
+      "Tragédie de l’orgueil : chacun meurt d’avoir trop parlé de lui-même"
+     ],
+     "reponse": 0,
+     "aide": "Reprends ce que tu as rangé : qui dissimule, qui décide.",
+     "explication": "La pièce est une **tragédie de la dissimulation** : mentir est une question de survie, et on meurt de l’avoir mal fait."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce1aa210-14a1-5ec5-9ef2-e0cb92ce3dda",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les quatre femmes de Duroy",
+   "competence": "analyser-document",
+   "situation": "Georges Duroy monte à Paris sans argent ni talent. Retrouve ce que lui apporte chacune des femmes de sa vie.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Bel-Ami",
+     "sousTitre": "Guy de Maupassant",
+     "emoji": "🎩",
+     "lignes": [
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1885, en feuilleton"
+      },
+      {
+       "id": "journal",
+       "texte": "Journal du feuilleton",
+       "valeur": "Gil Blas"
+      },
+      {
+       "id": "jv",
+       "texte": "Journal du héros",
+       "valeur": "La Vie française"
+      },
+      {
+       "id": "lieu",
+       "texte": "Lieu et époque",
+       "valeur": "Paris, début des années 1880"
+      }
+     ],
+     "pied": "Le roman de la presse et de la spéculation",
+     "teinte": "violet"
+    },
+    {
+     "id": "femmes",
+     "type": "tableau",
+     "titre": "Les femmes de Duroy",
+     "colonnes": [
+      "Femme",
+      "Son lien"
+     ],
+     "lignes": [
+      [
+       "Clotilde de Marelle",
+       "Sa maîtresse"
+      ],
+      [
+       "Madeleine Forestier",
+       "Veuve de son camarade"
+      ],
+      [
+       "Virginie Walter",
+       "Épouse du patron du journal"
+      ],
+      [
+       "Suzanne Walter",
+       "Fille du patron"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "jv"
+     ],
+     "enonce": "Touche la ligne qui nomme le journal où Duroy est embauché.",
+     "aide": "Ne confonds pas avec le journal où le roman paraît d’abord.",
+     "explication": "Duroy entre à **La Vie française**, grâce à son camarade Forestier ; le roman, lui, paraît dans *Gil Blas*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le début du parcours de Duroy.",
+     "texte": "Duroy entre au journal La ___ grâce à son ancien camarade ___.",
+     "reponses": [
+      [
+       "vie francaise",
+       "vie française"
+      ],
+      [
+       "forestier"
+      ]
+     ],
+     "banque": [
+      "Vie française",
+      "Gil Blas",
+      "Forestier",
+      "Walter"
+     ],
+     "aide": "Le journal est dans la fiche ; le camarade est dans le cours.",
+     "explication": "Il entre à **La Vie française** grâce à **Forestier**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque femme à ce qu’elle apporte à Duroy.",
+     "paires": [
+      [
+       "Clotilde de Marelle",
+       "L’argent de poche et la liaison"
+      ],
+      [
+       "Madeleine Forestier",
+       "Ses articles écrits à sa place"
+      ],
+      [
+       "Virginie Walter",
+       "L’accès au journal"
+      ],
+      [
+       "Suzanne Walter",
+       "Un mariage triomphal"
+      ]
+     ],
+     "aide": "Chaque femme sert une étape de l’ascension.",
+     "explication": "Duroy tire de chacune ce dont il a besoin : **argent**, **articles**, **accès au journal**, puis un **mariage triomphal**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce1aa210-14a1-5ec5-9ef2-e0cb92ce3dda",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du journal au Palais-Bourbon",
+   "competence": "se-reperer-temps",
+   "situation": "Pour réussir, Duroy ne compte ni sur son talent ni sur son travail. Suis son ascension, puis relève ce que Maupassant peint autour de lui.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’ascension de Duroy",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Il entre au journal grâce à Forestier"
+      },
+      {
+       "id": "n2",
+       "texte": "Madeleine Forestier lui écrit ses articles"
+      },
+      {
+       "id": "n3",
+       "texte": "Il épouse Madeleine, devenue veuve"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il enlève Suzanne Walter et l’épouse"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "peint",
+     "type": "tableau",
+     "titre": "Ce que peint le roman",
+     "colonnes": [
+      "Ce qui est peint",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "Le journalisme de la IIIe République",
+       "Article de commande, chantage, campagnes payées"
+      ],
+      [
+       "La spéculation coloniale",
+       "?"
+      ],
+      [
+       "Le pouvoir des femmes",
+       "Dans une société qui prétend les tenir à l’écart"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Il la fait surprendre en adultère pour divorcer",
+      "Il la quitte sans un mot pour partir pour Cannes",
+      "Il lui rend la fortune du comte de Vaudrec",
+      "Il révèle à tous qu’elle écrit ses articles"
+     ],
+     "reponse": 0,
+     "aide": "Il veut se débarrasser de Madeleine avant d’épouser Suzanne.",
+     "explication": "Duroy **fait surprendre Madeleine en adultère**, avec le ministre Laroche-Mathieu, pour divorcer."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui montre que Duroy n’écrit pas ses articles lui-même.",
+     "aide": "Quelqu’un écrit à sa place.",
+     "explication": "**Madeleine Forestier** lui écrit ses articles : Duroy apprend à « se faire écrire » son travail."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle affaire de spéculation le roman met-il en scène (case « ? » du tableau) ?",
+     "options": [
+      "L’affaire du Maroc",
+      "L’affaire du canal de Suez",
+      "L’affaire des chemins de fer",
+      "L’affaire des mines du Transvaal"
+     ],
+     "reponse": 0,
+     "aide": "Elle se passe du côté du Maghreb.",
+     "explication": "Le roman met en scène **l’affaire du Maroc**, spéculation coloniale qui alimente la presse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le nom que Duroy se fabrique.",
+     "texte": "Devenu « Du Roy de ___ », il sort de l’église de la ___ en triomphe.",
+     "reponses": [
+      [
+       "cantel"
+      ],
+      [
+       "madeleine"
+      ]
+     ],
+     "banque": [
+      "Cantel",
+      "Madeleine",
+      "Marelle",
+      "Concorde"
+     ],
+     "aide": "Le nom est une petite noblesse inventée ; l’église porte le prénom d’une de ses femmes.",
+     "explication": "Il se fait appeler **Du Roy de Cantel** et sort de l’église de la **Madeleine** en triomphe."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce1aa210-14a1-5ec5-9ef2-e0cb92ce3dda",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un arrivisme qui réussit",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Bel-Ami est-il un roman moral, où le méchant est puni ? La dernière phrase de Maupassant tranche.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La sortie de l’église",
+     "blocs": [
+      "Et il lui sembla qu’il allait faire un [[b|bond]] du portique de la Madeleine au portique du Palais-Bourbon."
+     ],
+     "source": "Guy de Maupassant, *Bel-Ami* (1885), dernier chapitre de la seconde partie"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maël",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maël",
+       "texte": "Duroy a trompé tout le monde : le roman doit le punir."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Au contraire : il sort de l’église en triomphe, et il rêve déjà d’être député."
+      },
+      {
+       "qui": "Maël",
+       "texte": "Alors Maupassant approuve son héros ?"
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Non : le style est net, on épouse le regard du personnage sans jamais l’approuver."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui dit la rapidité de l’ascension de Duroy.",
+     "aide": "Cherche le mot qui exprime un saut.",
+     "explication": "Le **bond** dit une ascension fulgurante : de l’église à la Chambre des députés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la dernière phrase soutient-elle le mieux ?",
+     "options": [
+      "L’arrivisme de Duroy n’est pas puni : il réussit et vise plus haut",
+      "Le héros est puni de ses mensonges et finit seul et ruiné",
+      "Le héros renonce à la politique pour retrouver sa première femme",
+      "Le héros devient écrivain, enfin digne de son talent"
+     ],
+     "reponse": 0,
+     "aide": "Un bond vers le Palais-Bourbon : où est-il, et où va-t-il ?",
+     "explication": "Le roman est celui de **l’arrivisme sans châtiment** : contrairement à Julien Sorel, **Bel-Ami réussit**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Maupassant à son effet.",
+     "paires": [
+      [
+       "Une focalisation collée au personnage",
+       "On suit son regard sans l’approuver"
+      ],
+      [
+       "Un style net",
+       "Le cynisme du héros n’est jamais commenté"
+      ],
+      [
+       "Un roman d’apprentissage à l’envers",
+       "Le héros apprend la ruse, pas la vertu"
+      ]
+     ],
+     "aide": "Chaque procédé empêche le narrateur de moraliser.",
+     "explication": "La **focalisation** colle au héros, le **style net** ne commente pas, l’**apprentissage à l’envers** montre qu’on apprend la ruse."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments : ce qui sert l’ascension de Duroy, ou ce que le roman dénonce ?",
+     "categories": [
+      "Ce qui sert son ascension",
+      "Ce que le roman dénonce"
+     ],
+     "items": [
+      [
+       "Les articles écrits par Madeleine",
+       0
+      ],
+      [
+       "Le mariage avec Suzanne",
+       0
+      ],
+      [
+       "Les articles de commande",
+       1
+      ],
+      [
+       "Le chantage dans la presse",
+       1
+      ],
+      [
+       "La spéculation sur le Maroc",
+       1
+      ]
+     ],
+     "aide": "Certains éléments sont des moyens, d’autres des maux de la société.",
+     "explication": "Duroy se sert de **Madeleine** et de **Suzanne** ; le roman dénonce la **presse corrompue** et la **spéculation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7beef7b-13c3-5b65-8da8-f2096d799520",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un cycle de romans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu places Belle du Seigneur dans l’œuvre d’Albert Cohen, puis tu découvres ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Albert Cohen et ses livres",
+     "debut": 1925,
+     "fin": 1975,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "sol",
+       "date": 1930,
+       "nom": "Solal"
+      },
+      {
+       "id": "man",
+       "date": 1938,
+       "nom": "Mangeclous"
+      },
+      {
+       "id": "mere",
+       "date": 1954,
+       "nom": "Le Livre de ma mère"
+      },
+      {
+       "id": "bel",
+       "date": 1968,
+       "nom": "Belle du Seigneur"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Solal",
+       "Haut fonctionnaire de la Société des Nations"
+      ],
+      [
+       "Ariane d’Auble",
+       "Épouse d’Adrien Deume"
+      ],
+      [
+       "Adrien Deume",
+       "Petit fonctionnaire médiocre"
+      ],
+      [
+       "Saltiel",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "bel"
+     ],
+     "enonce": "Touche l’année de parution de Belle du Seigneur.",
+     "aide": "Le roman est le troisième volet du cycle commencé avec Solal.",
+     "explication": "Belle du Seigneur paraît en **1968**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Solal de Belle du Seigneur ?",
+     "reponse": 38,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1968 − 1930 = **38 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Saltiel (case « ? » du tableau) ?",
+     "options": [
+      "L’oncle de Solal, l’un des Valeureux",
+      "Le frère d’Ariane, fonctionnaire à Genève",
+      "Le père d’Adrien Deume, bourgeois et snob",
+      "Un diplomate rival de Solal à la Société des Nations"
+     ],
+     "reponse": 0,
+     "aide": "Il fait partie des cousins de Céphalonie.",
+     "explication": "**Saltiel** est l’**oncle de Solal**, l’un des Valeureux, les cousins de Céphalonie."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7beef7b-13c3-5b65-8da8-f2096d799520",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La passion qui s’étiole",
+   "competence": "analyser-texte",
+   "situation": "Au Ritz de Genève, Solal parie qu’il séduira Ariane. Suis ce qui arrive aux amants, puis les registres du roman.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du Ritz à la villa",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Solal, en vieillard déguisé, est repoussé"
+      },
+      {
+       "id": "n2",
+       "texte": "Il revient en séducteur et la conquiert"
+      },
+      {
+       "id": "n3",
+       "texte": "Les amants fuient sur la Côte d’Azur"
+      },
+      {
+       "id": "n4",
+       "texte": "La passion s’étiole : rituels, jalousie, ennui"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "reg",
+     "type": "tableau",
+     "titre": "Les registres du roman",
+     "colonnes": [
+      "Registre",
+      "Où il se déploie"
+     ],
+     "lignes": [
+      [
+       "Monologues intérieurs",
+       "La conscience d’Ariane, celle de Solal"
+      ],
+      [
+       "Satire féroce",
+       "La bureaucratie internationale, les Deume"
+      ],
+      [
+       "Comédie",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Leur double suicide",
+      "Le retour d’Ariane auprès de son mari",
+      "Le départ de Solal pour Corfou",
+      "Un second mariage à Genève"
+     ],
+     "reponse": 0,
+     "aide": "Le roman ne finit pas par un mariage.",
+     "explication": "Le roman s’achève sur le **double suicide** des amants."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape où la passion commence à mourir d’elle-même.",
+     "aide": "Cherche les mots « rituels » et « ennui ».",
+     "explication": "Coupée du monde, la passion s’**étiole** : rituels, jalousie et **ennui**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où se déploie la comédie dans le roman (case « ? » du tableau) ?",
+     "options": [
+      "Chez les Valeureux, cousins de Céphalonie",
+      "Dans les monologues intérieurs d’Ariane",
+      "Dans la fuite des amants vers la Côte d’Azur",
+      "Dans la scène finale du double suicide"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux cousins bavards de Solal.",
+     "explication": "La comédie vit chez les **Valeureux**, dont Mangeclous, le plus bavard."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète une phrase du cours.",
+     "texte": "Pour éloigner Adrien Deume, Solal le fait ___ ; le roman reçoit en 1968 le prix de l’Académie ___.",
+     "reponses": [
+      [
+       "promouvoir"
+      ],
+      [
+       "francaise",
+       "française"
+      ]
+     ],
+     "banque": [
+      "promouvoir",
+      "renvoyer",
+      "française",
+      "Goncourt"
+     ],
+     "aide": "Un mari qu’on éloigne par une bonne nouvelle.",
+     "explication": "Solal **fait promouvoir** Adrien Deume pour l’éloigner ; le roman reçoit le prix de l’Académie **française**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7beef7b-13c3-5b65-8da8-f2096d799520",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Après la conquête",
+   "competence": "analyser-texte",
+   "situation": "Dans les romans d’amour, on s’arrête souvent à la conquête. Albert Cohen, lui, continue : lis un passage écrit à sa manière et discute avec deux élèves.",
+   "documents": [
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "À la villa",
+     "blocs": [
+      "Au Ritz, [[a|avant]] la conquête, il démontait déjà les ruses de la séduction.",
+      "À la villa, après des semaines, il découvrit ce qu’il redoutait : chaque soir le même [[r|rite]] — elle se fardait, il admirait, ils se disaient les mêmes mots tendres. L’[[e|ennui]] était entré sans frapper, et la passion, coupée du monde, se mettait à mourir d’elle-même."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Belle du Seigneur"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Un roman d’amour doit finir sur la conquête : après, il n’y a plus rien à raconter."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Justement : Cohen montre ce qui vient [[a|après]], là où les autres romans s’arrêtent."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": true,
+     "reponse": [
+      "r",
+      "e"
+     ],
+     "enonce": "Touche les deux mots du passage qui disent ce qui tue la passion.",
+     "aide": "Cherche ce qui se répète et ce qui s’installe.",
+     "explication": "Le **rite** répété chaque soir et l’**ennui** font mourir la passion : elle s’étiole dans la routine."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot de Hugo qui dit ce que Cohen ajoute aux autres romans d’amour.",
+     "aide": "Hugo répond à Chloé : « ce qui vient… ».",
+     "explication": "Cohen montre ce qui vient **après** la conquête."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le passage prouve-t-il le mieux ?",
+     "options": [
+      "La passion meurt de ses propres rituels, coupée du monde",
+      "La passion meurt parce qu’un rival intervient",
+      "La passion renaît chaque soir plus forte qu’avant",
+      "La passion s’éteint car un des amants part en voyage"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du passage.",
+     "explication": "La passion **se met à mourir d’elle-même** : rituels et ennui, coupée du monde."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque registre du roman à son effet.",
+     "paires": [
+      [
+       "Les monologues intérieurs",
+       "Le lyrisme et l’analyse des consciences"
+      ],
+      [
+       "La satire des Deume",
+       "Le rire cruel contre la bureaucratie"
+      ],
+      [
+       "La démolition des ruses",
+       "Un regard lucide sur la séduction"
+      ]
+     ],
+     "aide": "Le roman est à la fois lyrique et cruel.",
+     "explication": "Les **monologues** disent les consciences, la **satire** frappe la bureaucratie, la démolition des ruses (la **babouinerie**) rend la séduction lucide."
+    }
+   ]
+  }
+ ]
+}

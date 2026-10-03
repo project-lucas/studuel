@@ -1,0 +1,1294 @@
+{
+ "niveau": "6e",
+ "matiere": "musique",
+ "exercices": [
+  {
+   "chapitre": "f5fe06c7-f924-5f8d-becd-c362ada910fb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre sons de la cour de récréation",
+   "competence": "lire-graphique",
+   "situation": "Noé a mesuré la fréquence de quatre sons entendus pendant la récréation. Il veut les ranger du plus grave au plus aigu et retrouver quel paramètre du son il vient d’étudier.",
+   "documents": [
+    {
+     "id": "freq",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Fréquence des sons de la cour",
+     "categories": [
+      "Tambour de la fanfare",
+      "Voix d’un enfant",
+      "La du diapason",
+      "Sifflet de l’arbitre"
+     ],
+     "series": [
+      {
+       "nom": "Fréquence",
+       "valeurs": [
+        120,
+        300,
+        440,
+        2000
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Fréquence",
+      "unite": "Hz",
+      "min": 0,
+      "max": 2000,
+      "pas": 500
+     },
+     "valeurs": true,
+     "source": "Mesures arrondies, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "freq",
+     "enonce": "Touche **le son le plus aigu** de la cour.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Plus la fréquence est élevée, plus le son est aigu.",
+     "explication": "Le **sifflet** a la fréquence la plus élevée (2 000 Hz) : c’est le son le plus aigu. Une fréquence élevée donne un son aigu, une fréquence basse un son grave."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de hertz le sifflet est-il plus aigu que le la du diapason ?",
+     "unite": "Hz",
+     "reponse": 1560,
+     "aide": "Lis les deux valeurs dans le graphique, puis calcule la différence.",
+     "explication": "Le sifflet est à 2 000 Hz, le la du diapason à 440 Hz : 2 000 − 440 = **1 560 Hz**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans quelle rubrique range-t-on chacune de ces observations ?",
+     "categories": [
+      "Hauteur",
+      "Durée",
+      "Intensité",
+      "Timbre"
+     ],
+     "items": [
+      [
+       "Un son aigu",
+       0
+      ],
+      [
+       "Un son court",
+       1
+      ],
+      [
+       "Un son fort",
+       2
+      ],
+      [
+       "Reconnaître un violon",
+       3
+      ],
+      [
+       "Un son grave",
+       0
+      ],
+      [
+       "Un son doux",
+       2
+      ]
+     ],
+     "aide": "Les quatre paramètres du son sont : hauteur, durée, intensité et timbre.",
+     "explication": "Aigu et grave relèvent de la **hauteur** ; court de la **durée** ; fort et doux de l’**intensité** ; reconnaître un instrument relève du **timbre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5fe06c7-f924-5f8d-becd-c362ada910fb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ronde, blanche, noire, croche",
+   "competence": "observer-schema",
+   "situation": "Lou découvre comment on note la durée des sons. Son professeur a dessiné chaque figure de note sous forme d’une barre : plus la note dure, plus la barre est longue.",
+   "documents": [
+    {
+     "id": "durees",
+     "type": "schema",
+     "titre": "La durée des figures de note",
+     "largeur": 320,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 46,
+       "texte": "Ronde",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 28,
+       "l": 160,
+       "h": 26,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "ronde",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 91,
+       "texte": "Blanche",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 73,
+       "l": 80,
+       "h": 26,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "blanche",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 136,
+       "texte": "Noire",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 118,
+       "l": 40,
+       "h": 26,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "noire",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 181,
+       "texte": "Croche",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 163,
+       "l": 20,
+       "h": 26,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "croche",
+       "zone": true
+      }
+     ],
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "durees",
+     "enonce": "Touche la figure qui dure **la moitié d’une blanche**.",
+     "reponse": [
+      "noire"
+     ],
+     "aide": "Cherche la barre deux fois plus courte que celle de la blanche.",
+     "explication": "Chaque figure vaut la **moitié** de la précédente : la **noire** dure la moitié d’une blanche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de croches faut-il pour remplir **une ronde** ?",
+     "reponse": 8,
+     "aide": "Compte combien de fois la barre de la croche entre dans celle de la ronde.",
+     "explication": "La ronde (160) est 8 fois plus longue que la croche (20) : il faut **8** croches. On divise par deux à chaque figure : 8, 4, 2, 1."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces figures **de la plus courte à la plus longue**.",
+     "items": [
+      "Croche",
+      "Noire",
+      "Blanche",
+      "Ronde"
+     ],
+     "aide": "Suis la longueur des barres, de la plus petite à la plus grande.",
+     "explication": "Du plus court au plus long : **croche, noire, blanche, ronde**. La ronde est la figure qui dure le plus longtemps."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5fe06c7-f924-5f8d-becd-c362ada910fb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le concert de fin d’année",
+   "competence": "analyser-document",
+   "situation": "La chorale et l’orchestre du collège préparent le concert de fin d’année. Le chef a affiché le programme et noté sur un graphique l’intensité de l’un des morceaux, mesure après mesure.",
+   "documents": [
+    {
+     "id": "programme",
+     "type": "fiche",
+     "modele": "horaires",
+     "titre": "Le programme du concert",
+     "entete": "Concert de fin d’année",
+     "sousTitre": "Salle polyvalente",
+     "emoji": "🎼",
+     "lignes": [
+      {
+       "texte": "Chant d’entrée",
+       "valeur": "flûte seule, piano",
+       "id": "entree"
+      },
+      {
+       "texte": "La tempête",
+       "valeur": "orchestre, du piano au fortissimo",
+       "id": "tempete"
+      },
+      {
+       "texte": "Berceuse",
+       "valeur": "violon, piano puis decrescendo",
+       "id": "berceuse"
+      },
+      {
+       "texte": "Final",
+       "valeur": "tous, forte",
+       "id": "final"
+      }
+     ],
+     "pied": "Programme imaginé pour l’exercice"
+    },
+    {
+     "id": "tempete",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La tempête : l’intensité mesure par mesure",
+     "categories": [
+      "Mes. 1",
+      "Mes. 2",
+      "Mes. 3",
+      "Mes. 4",
+      "Mes. 5",
+      "Mes. 6"
+     ],
+     "series": [
+      {
+       "nom": "Intensité",
+       "valeurs": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nuance (1 piano, 2 mezzo forte, 3 forte, 4 fortissimo)",
+      "min": 0,
+      "max": 4,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Mesure"
+     },
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "programme",
+     "enonce": "Touche le morceau qui contient **un crescendo**, c’est-à-dire une intensité qui augmente progressivement.",
+     "reponse": [
+      "tempete"
+     ],
+     "aide": "Cherche le morceau qui passe d’une nuance douce à une nuance très forte.",
+     "explication": "*La tempête* passe du **piano** au **fortissimo** : l’intensité augmente progressivement, c’est un crescendo."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le graphique, quelle nuance est jouée à la mesure 3 ?",
+     "options": [
+      "Mezzo forte",
+      "Piano",
+      "Forte",
+      "Fortissimo"
+     ],
+     "reponse": 0,
+     "aide": "Lis la valeur de la courbe à la mesure 3, puis repère la légende de l’axe.",
+     "explication": "À la mesure 3, la courbe est au niveau 2 : c’est le **mezzo forte**, moyennement fort."
+    },
+    {
+     "type": "zone",
+     "document": "tempete",
+     "enonce": "Touche **la première mesure** où l’orchestre joue *forte* (niveau 3).",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le premier point de la courbe qui atteint le niveau 3.",
+     "explication": "La courbe atteint le niveau 3 à la **mesure 4** : c’est la première mesure jouée forte."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nuance à son sens.",
+     "paires": [
+      [
+       "Piano",
+       "Doux"
+      ],
+      [
+       "Mezzo forte",
+       "Moyennement fort"
+      ],
+      [
+       "Forte",
+       "Fort"
+      ],
+      [
+       "Fortissimo",
+       "Très fort"
+      ]
+     ],
+     "aide": "Les nuances viennent de l’italien : « piano » veut dire doucement.",
+     "explication": "**Piano** : doux ; **mezzo forte** : moyennement fort ; **forte** : fort ; **fortissimo** : très fort."
+    },
+    {
+     "type": "texte",
+     "enonce": "La flûte du chant d’entrée et le violon de la berceuse jouent la même note, avec la même intensité. Quel paramètre du son permet de les distinguer ? (un mot)",
+     "reponse": [
+      "timbre",
+      "le timbre"
+     ],
+     "aide": "Il se compare à la « couleur » du son et dépend des harmoniques de l’instrument.",
+     "explication": "C’est le **timbre** : il permet de reconnaître l’instrument même quand la hauteur et l’intensité sont les mêmes."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a938ef3-f5f8-50d7-b584-05109a97b260",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’orchestre du collège",
+   "competence": "lire-tableau",
+   "situation": "Le professeur de musique a noté le nombre de musiciens de chaque pupitre de l’orchestre du collège. Il veut les ranger par familles d’instruments.",
+   "documents": [
+    {
+     "id": "orchestre",
+     "type": "tableau",
+     "titre": "Les pupitres de l’orchestre",
+     "colonnes": [
+      "Instrument",
+      "Musiciens"
+     ],
+     "lignes": [
+      [
+       "Violon",
+       8
+      ],
+      [
+       "Alto",
+       3
+      ],
+      [
+       "Violoncelle",
+       3
+      ],
+      [
+       "Contrebasse",
+       1
+      ],
+      [
+       "Clarinette",
+       2
+      ],
+      [
+       "Saxophone",
+       1
+      ],
+      [
+       "Trompette",
+       2
+      ],
+      [
+       "Timbales",
+       1
+      ]
+     ],
+     "source": "Effectifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de musiciens jouent d’un instrument à **cordes frottées** (violon, alto, violoncelle, contrebasse) ?",
+     "reponse": 15,
+     "aide": "Additionne les quatre premières lignes du tableau.",
+     "explication": "Violons 8 + altos 3 + violoncelles 3 + contrebasse 1 = **15** musiciens, tous joués à l’archet."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque instrument dans sa famille.",
+     "categories": [
+      "Cordes frottées",
+      "Bois",
+      "Cuivres",
+      "Percussions"
+     ],
+     "items": [
+      [
+       "Violon",
+       0
+      ],
+      [
+       "Clarinette",
+       1
+      ],
+      [
+       "Trompette",
+       2
+      ],
+      [
+       "Timbales",
+       3
+      ],
+      [
+       "Contrebasse",
+       0
+      ],
+      [
+       "Saxophone",
+       1
+      ]
+     ],
+     "aide": "La famille dépend de la façon dont le son est produit : archet, anche, lèvres, frappe.",
+     "explication": "Violon et contrebasse : **cordes frottées**. Clarinette et saxophone : **bois** (anche). Trompette : **cuivres** (lèvres). Timbales : **percussions**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le saxophone est en métal. À quelle famille appartient-il pourtant ?",
+     "options": [
+      "Aux bois, car son son naît d’une anche",
+      "Aux cuivres, car il est en métal",
+      "Aux cordes, car il a une anche",
+      "Aux percussions, car on le frappe"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas la matière qui classe un instrument, c’est la façon dont le son est produit.",
+     "explication": "Le saxophone fait partie des **bois** : son son naît d’une **anche**, malgré son métal."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a938ef3-f5f8-50d7-b584-05109a97b260",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La chorale du collège",
+   "competence": "lire-graphique",
+   "situation": "Une chorale mélange six types de voix. Pour préparer un morceau, la cheffe de chœur a relevé la note la plus aiguë que chaque voix peut chanter.",
+   "documents": [
+    {
+     "id": "voix",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "La note la plus aiguë de chaque voix",
+     "categories": [
+      "Soprano",
+      "Mezzo-soprano",
+      "Alto",
+      "Ténor",
+      "Baryton",
+      "Basse"
+     ],
+     "series": [
+      {
+       "nom": "Fréquence",
+       "valeurs": [
+        1050,
+        880,
+        700,
+        520,
+        440,
+        330
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Fréquence",
+      "unite": "Hz",
+      "min": 0,
+      "max": 1200,
+      "pas": 200
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces voix **de la plus aiguë à la plus grave**.",
+     "items": [
+      "Soprano",
+      "Alto",
+      "Ténor",
+      "Basse"
+     ],
+     "aide": "Plus la fréquence de la note la plus aiguë est haute, plus la voix est aiguë.",
+     "explication": "D’après le graphique : **soprano** (1 050 Hz), **alto** (700), **ténor** (520), **basse** (330)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque voix selon qu’elle est chantée par des femmes ou par des hommes.",
+     "categories": [
+      "Voix de femmes",
+      "Voix d’hommes"
+     ],
+     "items": [
+      [
+       "Soprano",
+       0
+      ],
+      [
+       "Ténor",
+       1
+      ],
+      [
+       "Mezzo-soprano",
+       0
+      ],
+      [
+       "Baryton",
+       1
+      ],
+      [
+       "Alto",
+       0
+      ],
+      [
+       "Basse",
+       1
+      ]
+     ],
+     "aide": "Il y a trois voix de femmes et trois voix d’hommes.",
+     "explication": "Voix de femmes : soprano, mezzo-soprano, alto. Voix d’hommes : ténor, baryton, basse."
+    },
+    {
+     "type": "zone",
+     "document": "voix",
+     "enonce": "Touche **la voix d’homme la plus aiguë**.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Parmi ténor, baryton et basse, cherche la barre la plus longue.",
+     "explication": "Le **ténor** (520 Hz) est la voix d’homme la plus aiguë ; la basse est la plus grave."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la cheffe de chœur.",
+     "texte": "Un chœur qui chante ___ chante sans accompagnement ___.",
+     "reponses": [
+      [
+       "a cappella",
+       "acappella"
+      ],
+      [
+       "instrumental",
+       "d’instruments"
+      ]
+     ],
+     "banque": [
+      "a cappella",
+      "en canon",
+      "instrumental",
+      "vocal"
+     ],
+     "aide": "L’expression vient de l’italien et désigne un chant sans instruments.",
+     "explication": "Chanter **a cappella**, c’est chanter sans accompagnement **instrumental**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a938ef3-f5f8-50d7-b584-05109a97b260",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le programme du concert de printemps",
+   "competence": "analyser-document",
+   "situation": "Léo et Zoé préparent l’affiche du concert de printemps. Ils se disputent pour classer les instruments du programme dans les bonnes familles.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "horaires",
+     "titre": "Le programme du concert de printemps",
+     "entete": "Concert de printemps",
+     "sousTitre": "Salle des fêtes",
+     "emoji": "🎶",
+     "lignes": [
+      {
+       "texte": "Ouverture",
+       "valeur": "trompette et cor",
+       "id": "ouverture"
+      },
+      {
+       "texte": "Sérénade",
+       "valeur": "harpe et guitare",
+       "id": "serenade"
+      },
+      {
+       "texte": "Intermède",
+       "valeur": "saxophone et clarinette",
+       "id": "intermede"
+      },
+      {
+       "texte": "Danse",
+       "valeur": "timbales et xylophone",
+       "id": "danse"
+      },
+      {
+       "texte": "Finale",
+       "valeur": "chœur, sans accompagnement",
+       "id": "finale"
+      }
+     ],
+     "pied": "Programme imaginé pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "J’ai mis le saxophone avec les cuivres, il est en métal !"
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Je crois qu’on ne classe pas un instrument avec sa matière…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche le morceau joué **uniquement par des cuivres**.",
+     "reponse": [
+      "ouverture"
+     ],
+     "aide": "Chez les cuivres, le son naît de la vibration des lèvres.",
+     "explication": "La trompette et le cor sont des **cuivres** : le son naît de la vibration des lèvres."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche le morceau joué **uniquement par des percussions déterminées** (qui produisent une hauteur précise).",
+     "reponse": [
+      "danse"
+     ],
+     "aide": "Le xylophone et les timbales font entendre des notes précises.",
+     "explication": "Les **timbales et le xylophone** sont des percussions déterminées : elles produisent une hauteur précise."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque instrument à la façon dont son son naît.",
+     "paires": [
+      [
+       "Trompette",
+       "Vibration des lèvres"
+      ],
+      [
+       "Clarinette",
+       "Anche"
+      ],
+      [
+       "Harpe",
+       "Cordes pincées"
+      ],
+      [
+       "Timbales",
+       "Frappe"
+      ]
+     ],
+     "aide": "Cherche la façon dont on met l’instrument en vibration.",
+     "explication": "Trompette : **lèvres** (cuivre). Clarinette : **anche** (bois). Harpe : **doigts** (cordes pincées). Timbales : **frappe** (percussion)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Zoé a raison. Pourquoi le saxophone est-il classé dans les bois ?",
+     "options": [
+      "Son son naît d’une anche, pas des lèvres",
+      "Il est fabriqué en bois, comme la flûte à bec",
+      "Il fait toujours partie de l’orchestre classique",
+      "Il est joué uniquement par les musiciens solistes"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas la matière qui classe un instrument.",
+     "explication": "Le saxophone est un **bois** parce que son son naît d’une **anche** : on classe un instrument d’après la façon dont le son est produit."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment dit-on d’un chœur qui chante sans instruments, comme au Finale ? (deux mots)",
+     "reponse": [
+      "a cappella",
+      "acappella"
+     ],
+     "aide": "C’est une expression italienne.",
+     "explication": "Le Finale est chanté **a cappella** : sans accompagnement."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7680197-e832-59d3-bf44-d92057c28d8d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Marcher, valser, courir",
+   "competence": "lire-tableau",
+   "situation": "Maya doit choisir des morceaux pour le bal du collège. Elle a noté, pour quatre titres, leur indication de tempo et leur mesure.",
+   "documents": [
+    {
+     "id": "morceaux",
+     "type": "tableau",
+     "titre": "Les morceaux du bal",
+     "colonnes": [
+      "Morceau",
+      "Indication",
+      "Mesure"
+     ],
+     "lignes": [
+      [
+       "La marche des élèves",
+       "andante",
+       "2 temps"
+      ],
+      [
+       "La valse du printemps",
+       "allegro",
+       "3 temps"
+      ],
+      [
+       "Le chant de la nuit",
+       "largo",
+       "4 temps"
+      ],
+      [
+       "La course folle",
+       "presto",
+       "4 temps"
+      ]
+     ],
+     "source": "Titres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "morceaux",
+     "enonce": "Touche l’indication qui signifie **très rapide**.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "C’est le mot italien le plus vif de la liste.",
+     "explication": "**Presto** signifie très rapide : c’est l’indication de *La course folle*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indication italienne à sa vitesse.",
+     "paires": [
+      [
+       "Largo",
+       "Très lent"
+      ],
+      [
+       "Andante",
+       "Allant"
+      ],
+      [
+       "Allegro",
+       "Vif"
+      ],
+      [
+       "Presto",
+       "Très rapide"
+      ]
+     ],
+     "aide": "Du plus lent au plus rapide : largo, andante, allegro, presto.",
+     "explication": "**Largo** : très lent ; **andante** : allant ; **allegro** : vif ; **presto** : très rapide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps compte une mesure de *La valse du printemps* ?",
+     "reponse": 3,
+     "aide": "Lis la dernière colonne, sur la ligne de la valse.",
+     "explication": "La valse est une danse à **3 temps** : chaque mesure compte trois pulsations."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7680197-e832-59d3-bf44-d92057c28d8d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Même pulsation, deux rythmes",
+   "competence": "observer-schema",
+   "situation": "Eliott tape du pied la pulsation d’un morceau. Au-dessus, deux rythmes A et B sont dessinés : chaque rectangle est une note, plus il est long, plus la note dure.",
+   "documents": [
+    {
+     "id": "rythmes",
+     "type": "schema",
+     "titre": "La pulsation et deux rythmes",
+     "largeur": 320,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 20,
+       "texte": "A",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 28,
+       "l": 61,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a1",
+       "zone": false
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 28,
+       "l": 29,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a2",
+       "zone": false
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 28,
+       "l": 29,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a3",
+       "zone": false
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 28,
+       "l": 61,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a4",
+       "zone": false
+      },
+      {
+       "forme": "rect",
+       "x": 224,
+       "y": 28,
+       "l": 61,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a5",
+       "zone": false
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 83,
+       "texte": "B",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 90,
+       "l": 29,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 64,
+       "y": 90,
+       "l": 29,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 90,
+       "l": 61,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 90,
+       "l": 29,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 192,
+       "y": 90,
+       "l": 29,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b5",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 224,
+       "y": 90,
+       "l": 29,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b6",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 256,
+       "y": 90,
+       "l": 29,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "b7",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 143,
+       "texte": "Pulsation",
+       "gras": false,
+       "italique": true,
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 42,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 74,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 106,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 138,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 202,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 234,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 266,
+       "cy": 168,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      }
+     ],
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Le morceau est joué à **60 battements par minute**. Combien de secondes dure la ligne de 8 pulsations ?",
+     "unite": "s",
+     "reponse": 8,
+     "aide": "À 60 battements par minute, une pulsation dure une seconde.",
+     "explication": "60 battements par minute font **1 battement par seconde** : 8 pulsations durent **8 secondes**."
+    },
+    {
+     "type": "zone",
+     "document": "rythmes",
+     "enonce": "Touche **la note la plus longue** du rythme B.",
+     "reponse": [
+      "b3"
+     ],
+     "aide": "Cherche le rectangle deux fois plus long que les autres dans la ligne B.",
+     "explication": "Dans le rythme B, une seule note dure **2 pulsations** : c’est la troisième, les autres durent 1 pulsation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de notes le rythme B compte-t-il **de plus** que le rythme A ?",
+     "reponse": 2,
+     "aide": "Compte les rectangles de chaque ligne, puis fais la différence.",
+     "explication": "A compte 5 notes et B en compte 7 : 7 − 5 = **2** notes de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "A et B sont joués avec la même pulsation. Que peut-on dire ?",
+     "options": [
+      "Même tempo, rythmes différents",
+      "Tempos différents, même rythme",
+      "Même tempo et même rythme",
+      "Tempos et rythmes différents"
+     ],
+     "reponse": 0,
+     "aide": "Le tempo, c’est la vitesse de la pulsation ; le rythme, ce sont les longues et courtes notes posées dessus.",
+     "explication": "La pulsation (donc le **tempo**) est la même ; les notes longues et courtes sont placées autrement : les **rythmes** sont différents."
+    }
+   ]
+  },
+  {
+   "chapitre": "e7680197-e832-59d3-bf44-d92057c28d8d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Retrouver la mesure du morceau mystère",
+   "competence": "analyser-document",
+   "situation": "Dans un morceau mystère, Chloé a mesuré la force de chacun des 12 premiers temps. Elle veut deviner la mesure, puis choisir le bon titre dans la liste de son récital.",
+   "documents": [
+    {
+     "id": "accents",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La force de chaque temps du morceau mystère",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "Force",
+       "valeurs": [
+        4,
+        1,
+        1,
+        4,
+        1,
+        1,
+        4,
+        1,
+        1,
+        4,
+        1,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Force du temps",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "recital",
+     "type": "tableau",
+     "titre": "Les cinq morceaux du récital",
+     "colonnes": [
+      "Morceau",
+      "Indication",
+      "Mesure"
+     ],
+     "lignes": [
+      [
+       "Berceuse",
+       "largo",
+       "3 temps"
+      ],
+      [
+       "Rêverie",
+       "adagio",
+       "4 temps"
+      ],
+      [
+       "Promenade",
+       "andante",
+       "2 temps"
+      ],
+      [
+       "Valse",
+       "allegro",
+       "3 temps"
+      ],
+      [
+       "Galop",
+       "presto",
+       "2 temps"
+      ]
+     ],
+     "source": "Titres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "accents",
+     "enonce": "Touche **tous les temps forts** du morceau mystère (les quatre temps les plus forts).",
+     "reponse": [
+      "k0",
+      "k3",
+      "k6",
+      "k9"
+     ],
+     "multiple": true,
+     "aide": "Le temps fort est le premier temps de chaque mesure : cherche les barres les plus hautes.",
+     "explication": "Les temps forts sont les temps **1, 4, 7 et 10** : ce sont les premiers temps de chaque mesure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps y a-t-il dans **une mesure** de ce morceau ?",
+     "reponse": 3,
+     "aide": "Compte les temps qui séparent deux temps forts.",
+     "explication": "Un temps fort revient tous les **3 temps** : la mesure est à 3 temps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le récital, Chloé choisit le morceau à 3 temps **le plus vif**. Lequel ?",
+     "options": [
+      "Valse",
+      "Berceuse",
+      "Galop",
+      "Promenade"
+     ],
+     "reponse": 0,
+     "aide": "Cherche d’abord les morceaux à 3 temps, puis compare leur indication de tempo.",
+     "explication": "Berceuse et Valse sont à 3 temps ; la valse est *allegro* (vif) et la berceuse *largo* (très lent) : c’est la **Valse**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les morceaux **du plus lent au plus rapide**.",
+     "items": [
+      "Berceuse",
+      "Rêverie",
+      "Promenade",
+      "Valse",
+      "Galop"
+     ],
+     "aide": "Suis les indications : largo, adagio, andante, allegro, presto.",
+     "explication": "Du plus lent au plus rapide : **largo** (Berceuse), **adagio** (Rêverie), **andante** (Promenade), **allegro** (Valse), **presto** (Galop)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les 12 temps du morceau mystère durent 6 secondes. Quel est son tempo en battements par minute ?",
+     "unite": "bpm",
+     "reponse": 120,
+     "aide": "Calcule d’abord le nombre de temps par seconde, puis par minute.",
+     "explication": "12 temps en 6 secondes font 2 temps par seconde, soit 2 × 60 = **120 battements par minute**."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4041 @@
+{
+ "niveau": "1re",
+ "matiere": "biotechnologies",
+ "exercices": [
+  {
+   "chapitre": "61621029-3b3b-521a-a0e8-14c4f42020e7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle gélose pour quel travail ?",
+   "competence": "lire-tableau",
+   "situation": "Au laboratoire du lycée, Inès sort quatre milieux du réfrigérateur pour le TP de microbiologie. Chaque flacon porte une étiquette qui liste ses ingrédients caractéristiques.",
+   "documents": [
+    {
+     "id": "milieux",
+     "type": "tableau",
+     "titre": "Les étiquettes des quatre milieux",
+     "colonnes": [
+      "Milieu",
+      "Ingrédients caractéristiques"
+     ],
+     "lignes": [
+      [
+       "A",
+       "peptones, extrait de viande, agar"
+      ],
+      [
+       "B",
+       "peptones, agar, sels biliaires, cristal violet"
+      ],
+      [
+       "C",
+       "peptones, agar, lactose, rouge neutre (indicateur de pH)"
+      ],
+      [
+       "D",
+       "peptones, extrait de viande (sans agar)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Compositions simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "milieux",
+     "enonce": "Touche la case qui contient des agents inhibiteurs, ces substances qui empêchent certaines bactéries de pousser.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche des sels biliaires ou un colorant comme le cristal violet.",
+     "explication": "Les **sels biliaires et le cristal violet** du milieu B freinent certains groupes de bactéries : c’est ce qui fait de B un milieu sélectif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Parmi ces quatre milieux, combien sont des milieux solides (gélosés) sur lesquels on peut obtenir des colonies ?",
+     "reponse": 3,
+     "aide": "C’est l’agar qui donne la gélose : repère les lignes où il figure.",
+     "explication": "A, B et C contiennent de l’agar : **3 milieux** solides. Le milieu D, sans agar, reste liquide : c’est un bouillon."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque milieu à son rôle.",
+     "paires": [
+      [
+       "Milieu A",
+       "Ordinaire : faire pousser la plupart des bactéries"
+      ],
+      [
+       "Milieu B",
+       "Sélectif : ne laisser pousser qu’un groupe"
+      ],
+      [
+       "Milieu C",
+       "D’orientation : distinguer par la fermentation du lactose"
+      ]
+     ],
+     "aide": "Un substrat fermentescible et un indicateur de pH signent le milieu d’orientation.",
+     "explication": "A : composition simple, **ordinaire**. B : inhibiteurs, **sélectif**. C : lactose + indicateur de pH, **d’orientation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "61621029-3b3b-521a-a0e8-14c4f42020e7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Isoler une colonie par stries",
+   "competence": "experimenter",
+   "situation": "Karim doit obtenir des colonies bien séparées à partir d’un tube de culture trouble. Il réalise un isolement par la méthode des quadrants, puis photographie sa boîte.",
+   "documents": [
+    {
+     "id": "boite",
+     "type": "schema",
+     "titre": "La boîte de Karim",
+     "largeur": 320,
+     "hauteur": 224,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 105,
+       "r": 85,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        28
+       ],
+       "a": [
+        160,
+        182
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        82,
+        105
+       ],
+       "a": [
+        238,
+        105
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        60
+       ],
+       "a": [
+        154,
+        60
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        68
+       ],
+       "a": [
+        154,
+        68
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        76
+       ],
+       "a": [
+        154,
+        76
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        84
+       ],
+       "a": [
+        154,
+        84
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        92
+       ],
+       "a": [
+        154,
+        92
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        62
+       ],
+       "a": [
+        208,
+        62
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        74
+       ],
+       "a": [
+        208,
+        74
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        86
+       ],
+       "a": [
+        208,
+        86
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        98
+       ],
+       "a": [
+        208,
+        98
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        114
+       ],
+       "a": [
+        208,
+        114
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        128
+       ],
+       "a": [
+        208,
+        128
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        168,
+        142
+       ],
+       "a": [
+        208,
+        142
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "cercle",
+       "cx": 115,
+       "cy": 130,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 135,
+       "cy": 122,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 150,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 146,
+       "cy": 140,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 108,
+       "cy": 154,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 160,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 112,
+       "r": 3.5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 36,
+       "cy": 34,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "A",
+       "id": "qa",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 284,
+       "cy": 34,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "B",
+       "id": "qb",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 284,
+       "cy": 176,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "C",
+       "id": "qc",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 36,
+       "cy": 176,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "D",
+       "id": "qd",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 208,
+       "texte": "Boîte vue de dessus, après isolement",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boite",
+     "enonce": "Touche la lettre du quadrant où l’on peut prélever une colonie bien isolée.",
+     "reponse": [
+      "qd"
+     ],
+     "aide": "Cherche le quadrant où les cellules sont assez éloignées pour donner des colonies séparées.",
+     "explication": "Le quadrant **D** est le dernier strié : l’inoculum y est assez dilué pour que chaque cellule isolée forme sa propre colonie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les gestes de Karim, de l’étiquetage à l’incubation.",
+     "items": [
+      "Inscrire nom, date, milieu et souche sur le fond de la boîte",
+      "Prélever l’inoculum avec une anse stérile",
+      "Strier le premier quadrant",
+      "Strier les quadrants suivants pour diluer peu à peu l’inoculum",
+      "Placer la boîte retournée à l’étuve"
+     ],
+     "aide": "On identifie la boîte avant d’y toucher ; on incube en dernier.",
+     "explication": "On **étiquette d’abord** (traçabilité), on prélève, on strie le premier quadrant puis les suivants, et on **incube retournée** pour que la condensation ne tombe pas sur la gélose."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le compte rendu de Karim.",
+     "texte": "L’anse ___ progressivement l’inoculum d’un quadrant à l’autre : dans le dernier, chaque cellule isolée donne une ___ .",
+     "reponses": [
+      [
+       "dilue"
+      ],
+      [
+       "colonie"
+      ]
+     ],
+     "banque": [
+      "dilue",
+      "concentre",
+      "colonie",
+      "toxine"
+     ],
+     "aide": "Plus on strie loin, moins il y a de cellules par endroit.",
+     "explication": "L’anse **dilue** l’inoculum de quadrant en quadrant ; chaque cellule isolée du dernier donne une **colonie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Karim a écrit son nom sur le couvercle. Pourquoi est-ce une erreur de traçabilité ?",
+     "options": [
+      "Le couvercle peut être échangé avec celui d’une autre boîte",
+      "Le feutre risque d’abîmer la gélose pendant l’incubation",
+      "Le couvercle empêche la boîte d’être placée à l’étuve",
+      "On n’inscrit jamais de nom sur une boîte de Petri"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arrive quand on empile et ouvre plusieurs boîtes.",
+     "explication": "On écrit **sur le fond** : un couvercle se déplace d’une boîte à l’autre, et l’identification serait alors fausse."
+    }
+   ]
+  },
+  {
+   "chapitre": "61621029-3b3b-521a-a0e8-14c4f42020e7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un fromage blanc sur deux géloses",
+   "competence": "analyser-document",
+   "situation": "Mathilde contrôle un fromage blanc. Elle en ensemence le même volume sur une gélose ordinaire et sur une gélose sélective des bactéries Gram négatif, lactosée avec un indicateur de pH qui vire au jaune quand le milieu s’acidifie. Voici les deux boîtes après incubation.",
+   "documents": [
+    {
+     "id": "boites",
+     "type": "schema",
+     "titre": "Les deux boîtes après 24 h à 37 °C",
+     "largeur": 320,
+     "hauteur": 214,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 100,
+       "r": 68,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 58,
+       "cy": 68,
+       "r": 9,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 108,
+       "cy": 62,
+       "r": 9,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 128,
+       "r": 9,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 112,
+       "cy": 118,
+       "r": 9,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 88,
+       "cy": 92,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 100,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 144,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 78,
+       "cy": 74,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 62,
+       "cy": 100,
+       "r": 7,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 100,
+       "r": 68,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 212,
+       "cy": 78,
+       "r": 20,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 112,
+       "r": 20,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 212,
+       "cy": 78,
+       "r": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ca",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 258,
+       "cy": 72,
+       "r": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "cb",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 112,
+       "r": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "cc",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 134,
+       "r": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "cd",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 266,
+       "cy": 140,
+       "r": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ce",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 186,
+       "texte": "Gélose ordinaire",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 186,
+       "texte": "Gélose sélective lactosée",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 200,
+       "texte": "avec indicateur de pH",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boites",
+     "enonce": "Touche les colonies de la gélose sélective qui sont entourées d’un virage de couleur.",
+     "reponse": [
+      "ca",
+      "cc"
+     ],
+     "multiple": true,
+     "aide": "Le virage est une auréole autour de la colonie : il y en a deux.",
+     "explication": "Les colonies entourées d’une auréole sont celles qui **fermentent le lactose** : elles acidifient le milieu et font virer l’indicateur de pH."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de colonies de plus la gélose ordinaire compte-t-elle par rapport à la gélose sélective ?",
+     "reponse": 4,
+     "aide": "Compte les colonies de chaque boîte, puis fais la différence.",
+     "explication": "Gélose ordinaire : 9 colonies. Gélose sélective : 5. L’écart est de **4 colonies**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la gélose sélective porte-t-elle moins de colonies ?",
+     "options": [
+      "Ses agents inhibiteurs bloquent certains groupes de bactéries",
+      "Elle contient moins d’eau que la gélose ordinaire",
+      "Elle a été incubée moins longtemps que l’autre boîte",
+      "Elle ne contient aucune source de carbone organique"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui distingue un milieu sélectif d’un milieu ordinaire ?",
+     "explication": "Un milieu sélectif contient des **agents inhibiteurs** : seules les bactéries capables de leur résister forment des colonies."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les colonies sans auréole de la gélose sélective sont…",
+     "options": [
+      "Gram négatif, lactose négatif",
+      "Gram positif, lactose positif",
+      "Gram positif, lactose négatif",
+      "Des levures qui fermentent le lactose"
+     ],
+     "reponse": 0,
+     "aide": "Elles ont poussé sur un milieu qui laisse passer un seul groupe, mais sans acidifier.",
+     "explication": "Elles ont poussé sur un milieu réservé aux **Gram négatif** et n’ont pas acidifié le milieu : elles ne fermentent pas le lactose."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris la conclusion pour les colonies entourées d’une auréole.",
+     "texte": "Ce sont des bactéries Gram ___ , lactose ___ .",
+     "reponses": [
+      [
+       "négatif",
+       "negatif"
+      ],
+      [
+       "positif"
+      ]
+     ],
+     "banque": [
+      "négatif",
+      "positif",
+      "inhibé",
+      "anaérobie"
+     ],
+     "aide": "Reprends ce que le milieu sélectionne, puis ce que l’auréole révèle.",
+     "explication": "Gram **négatif** (le milieu ne laisse pousser qu’elles) et lactose **positif** (elles acidifient le milieu autour d’elles)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2517347d-cfb3-5c19-b997-a697c246a579",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le registre des souches du laboratoire",
+   "competence": "lire-tableau",
+   "situation": "Sarah recopie dans le registre du laboratoire le nom de trois souches bactériennes conservées au réfrigérateur. Elle les range par genre, espèce et famille.",
+   "documents": [
+    {
+     "id": "registre",
+     "type": "tableau",
+     "titre": "Le registre des souches",
+     "colonnes": [
+      "Genre",
+      "Espèce",
+      "Famille"
+     ],
+     "lignes": [
+      [
+       "Escherichia",
+       "coli",
+       "Enterobacteriaceae"
+      ],
+      [
+       "Staphylococcus",
+       "aureus",
+       "Staphylococcaceae"
+      ],
+      [
+       "Bacillus",
+       "subtilis",
+       "Bacillaceae"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Registre écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "registre",
+     "enonce": "Touche la case qui contient l’espèce de la bactérie du genre Bacillus.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "L’espèce est le deuxième mot du nom binomial, en minuscule.",
+     "explication": "Le nom complet est *Bacillus subtilis* : le genre est *Bacillus*, l’espèce est **subtilis**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Après une première mention, comment abrège-t-on *Escherichia coli* ?",
+     "reponse": [
+      "E. coli",
+      "E coli"
+     ],
+     "placeholder": "Écris l’abréviation",
+     "aide": "On garde l’initiale du genre suivie d’un point, puis l’espèce.",
+     "explication": "Le genre s’abrège avec sa majuscule : **E. coli**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque niveau de classification à l’exemple du registre.",
+     "paires": [
+      [
+       "Famille",
+       "Enterobacteriaceae"
+      ],
+      [
+       "Genre",
+       "Escherichia"
+      ],
+      [
+       "Espèce",
+       "Escherichia coli"
+      ]
+     ],
+     "aide": "Le nom d’une famille se termine par -aceae ; une espèce porte deux mots.",
+     "explication": "La famille finit en **-aceae**, le genre est un seul mot avec majuscule, et l’espèce s’écrit avec **deux mots** (genre + épithète)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2517347d-cfb3-5c19-b997-a697c246a579",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre champs au microscope",
+   "competence": "observer-schema",
+   "situation": "Au TP d’identification, Léo observe quatre préparations colorées au Gram, chacune faite à partir d’une souche différente. Il schématise ce qu’il voit à fort grossissement.",
+   "documents": [
+    {
+     "id": "champs",
+     "type": "schema",
+     "titre": "Les quatre champs observés",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 70,
+       "r": 48,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 70,
+       "r": 48,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 175,
+       "r": 48,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 175,
+       "r": 48,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 58,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 78,
+       "cy": 58,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 74,
+       "cy": 65,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 66,
+       "cy": 65,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 82,
+       "cy": 65,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 74,
+       "cy": 51,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 72,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 78,
+       "cy": 72,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 84,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 108,
+       "cy": 84,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 104,
+       "cy": 91,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 96,
+       "cy": 91,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 112,
+       "cy": 91,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 104,
+       "cy": 77,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 54,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 225,
+       "cy": 57,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 59,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 245,
+       "cy": 58,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 255,
+       "cy": 55,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 207,
+       "cy": 86,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 217,
+       "cy": 83,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 227,
+       "cy": 81,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 237,
+       "cy": 82,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 247,
+       "cy": 85,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 257,
+       "cy": 88,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 62,
+       "cy": 158,
+       "rx": 10,
+       "ry": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 98,
+       "cy": 154,
+       "rx": 4,
+       "ry": 10,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 76,
+       "cy": 182,
+       "rx": 10,
+       "ry": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 106,
+       "cy": 186,
+       "rx": 10,
+       "ry": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 64,
+       "cy": 204,
+       "rx": 4,
+       "ry": 10,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 96,
+       "cy": 206,
+       "rx": 10,
+       "ry": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 160,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 225,
+       "cy": 160,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 252,
+       "cy": 165,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 252,
+       "cy": 175,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 222,
+       "cy": 190,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 222,
+       "cy": 200,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 256,
+       "cy": 195,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 266,
+       "cy": 195,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 22,
+       "cy": 24,
+       "r": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "A",
+       "id": "ca",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 298,
+       "cy": 24,
+       "r": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "B",
+       "id": "cb",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 22,
+       "cy": 218,
+       "r": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "C",
+       "id": "cc",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 298,
+       "cy": 218,
+       "r": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "D",
+       "id": "cd",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "champs",
+     "enonce": "Touche la lettre du champ où les coques sont rangés en chaînettes.",
+     "reponse": [
+      "cb"
+     ],
+     "aide": "Cherche des coques alignés les uns derrière les autres.",
+     "explication": "Dans le champ **B**, les coques forment des files : ce sont des chaînettes, évocatrices du genre *Streptococcus*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bacilles Léo compte-t-il dans le champ C ?",
+     "reponse": 6,
+     "aide": "Un bacille est un bâtonnet : compte tous les bâtonnets, couchés ou debout.",
+     "explication": "Le champ C contient **6 bacilles**, tous isolés : aucun groupement caractéristique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mode de groupement à son nom.",
+     "paires": [
+      [
+       "Coques par deux",
+       "Diplocoques"
+      ],
+      [
+       "Coques en files",
+       "Chaînettes (streptocoques)"
+      ],
+      [
+       "Coques en amas",
+       "Grappes (staphylocoques)"
+      ]
+     ],
+     "aide": "Les champs D, B et A illustrent chacun l’un de ces groupements.",
+     "explication": "Par deux : **diplocoques** (D). En files : **chaînettes** (B). En amas irréguliers : **grappes** (A)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le champ A, les coques forment des amas. Qu’est-ce qui l’explique ?",
+     "options": [
+      "Ils se divisent dans plusieurs plans successifs",
+      "Ils se divisent toujours dans le même plan",
+      "Ils sont mobiles et se rassemblent",
+      "Ils sont mêlés à des levures"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le groupement vient de la façon dont les cellules filles restent accrochées après la division.",
+     "explication": "Quand la division se fait dans **plusieurs plans**, les cellules filles s’agglutinent en amas ; dans un seul plan, elles forment des chaînettes."
+    }
+   ]
+  },
+  {
+   "chapitre": "2517347d-cfb3-5c19-b997-a697c246a579",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui vit dans le kéfir ?",
+   "competence": "analyser-document",
+   "situation": "Au club sciences, Élodie prépare un état frais de kéfir de fruits. Elle observe cinq types de cellules, les schématise à l’échelle et note leurs caractères dans un tableau. Elle veut savoir lesquelles sont des levures et lesquelles des bactéries.",
+   "documents": [
+    {
+     "id": "etat",
+     "type": "schema",
+     "titre": "L’état frais de kéfir",
+     "largeur": 320,
+     "hauteur": 214,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 94,
+       "cy": 52,
+       "r": 9,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 60,
+       "cy": 65,
+       "rx": 28,
+       "ry": 20,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ca",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 200,
+       "cy": 62,
+       "rx": 36,
+       "ry": 22,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "cc",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 140,
+       "r": 4,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "cb",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 120,
+       "cy": 140,
+       "rx": 12,
+       "ry": 4,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "cd",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 258,
+       "cy": 126,
+       "r": 9,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 232,
+       "cy": 142,
+       "r": 24,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ce",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 96,
+       "texte": "a",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 96,
+       "texte": "c",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 160,
+       "texte": "b",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 160,
+       "texte": "d",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 176,
+       "texte": "e",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        202
+       ],
+       "a": [
+        100,
+        202
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        197
+       ],
+       "a": [
+        20,
+        207
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        197
+       ],
+       "a": [
+        100,
+        207
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 206,
+       "texte": "= 10 µm",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma à l’échelle écrit pour l’exercice"
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les caractères relevés",
+     "colonnes": [
+      "Cellule",
+      "Forme",
+      "Taille",
+      "Bourgeon"
+     ],
+     "lignes": [
+      [
+       "a",
+       "ovale",
+       "7 µm",
+       "oui"
+      ],
+      [
+       "b",
+       "ronde",
+       "1 µm",
+       "non"
+      ],
+      [
+       "c",
+       "ovale",
+       "9 µm",
+       "non"
+      ],
+      [
+       "d",
+       "bâtonnet",
+       "3 µm",
+       "non"
+      ],
+      [
+       "e",
+       "ronde",
+       "6 µm",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etat",
+     "enonce": "Touche les cellules du schéma qui portent un bourgeon.",
+     "reponse": [
+      "ca",
+      "ce"
+     ],
+     "multiple": true,
+     "aide": "Un bourgeon est une petite cellule fille accolée à la grande.",
+     "explication": "Les cellules **a** et **e** portent un bourgeon : c’est un caractère de levure, jamais observé chez une bactérie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque cellule en levure ou en bactérie à l’aide du tableau.",
+     "categories": [
+      "Levure",
+      "Bactérie"
+     ],
+     "items": [
+      [
+       "Cellule a",
+       0
+      ],
+      [
+       "Cellule b",
+       1
+      ],
+      [
+       "Cellule c",
+       0
+      ],
+      [
+       "Cellule d",
+       1
+      ],
+      [
+       "Cellule e",
+       0
+      ]
+     ],
+     "aide": "Compare la taille à 5-10 µm pour une levure et à environ 1 µm pour une bactérie en forme de coque.",
+     "explication": "Levures : a, c et e (ovales ou rondes, 6 à 9 µm, bourgeon pour a et e). Bactéries : b (coque de 1 µm) et d (**bacille** de 3 µm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la cellule c est-elle plus longue que la cellule b ?",
+     "reponse": 9,
+     "aide": "Divise les deux tailles du tableau.",
+     "explication": "9 µm ÷ 1 µm = **9** : une levure est beaucoup plus grosse qu’une coque."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Élodie sur son kéfir ?",
+     "options": [
+      "Il contient à la fois des levures et des bactéries",
+      "Il ne contient que des levures",
+      "Il ne contient que des bactéries",
+      "Il ne contient que des champignons filamenteux"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les deux classes du tableau sont-elles représentées ?",
+     "explication": "Le kéfir contient des **levures** (a, c, e) et des **bactéries** (b, d), comme l’état frais de levain décrit dans le cours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Élodie veut nommer l’espèce du bacille d. Que peut-elle dire à partir de la morphologie seule ?",
+     "options": [
+      "Seulement que c’est un bacille ; il faut d’autres caractères",
+      "L’espèce exacte, grâce à la forme en bâtonnet observée",
+      "Le genre Staphylococcus, grâce à la petite taille",
+      "L’espèce exacte, grâce à la taille de 3 µm mesurée"
+     ],
+     "reponse": 0,
+     "aide": "Deux bacilles très différents peuvent se ressembler au microscope.",
+     "explication": "La morphologie permet d’**orienter**, pas de nommer l’espèce : il faut compléter par des caractères culturaux et métaboliques."
+    }
+   ]
+  },
+  {
+   "chapitre": "c9b7b27a-1d15-566e-9f8b-63615d8bad6d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois tubes pour diluer un yaourt",
+   "competence": "calculer",
+   "situation": "Noé prépare les dilutions d’un yaourt avant le dénombrement : il pèse 10 g de produit dans 90 mL de diluant, puis enchaîne trois tubes contenant chacun 9 mL de diluant.",
+   "documents": [
+    {
+     "id": "serie",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "mere",
+       "texte": "Mère 10⁻¹"
+      },
+      {
+       "id": "t1",
+       "texte": "Tube 1"
+      },
+      {
+       "id": "t2",
+       "texte": "Tube 2"
+      },
+      {
+       "id": "t3",
+       "texte": "Tube 3"
+      }
+     ],
+     "liens": [
+      {
+       "de": "mere",
+       "a": "t1",
+       "texte": "1 mL"
+      },
+      {
+       "de": "t1",
+       "a": "t2",
+       "texte": "1 mL"
+      },
+      {
+       "de": "t2",
+       "a": "t3",
+       "texte": "1 mL"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serie",
+     "enonce": "Touche le tube dont la dilution est 10⁻³.",
+     "reponse": [
+      "t2"
+     ],
+     "aide": "À chaque tube, la dilution est divisée par 10 : la mère est à 10⁻¹, le tube 1 à 10⁻².",
+     "explication": "Mère 10⁻¹, tube 1 : 10⁻², tube 2 : **10⁻³**, tube 3 : 10⁻⁴. À chaque passage, 1 mL dans 9 mL divise par 10."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La dilution du tube 3 s’écrit 10⁻ⁿ. Quelle est la valeur de n ?",
+     "reponse": 4,
+     "aide": "Compte combien de fois on a dilué au 1/10 depuis le produit pur, mère comprise.",
+     "explication": "La mère est au 1/10 (n = 1), puis chaque tube ajoute une dilution décimale : le tube 3 est à 10⁻⁴, donc **n = 4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume total de diluant a-t-on versé dans les trois tubes (sans compter les 90 mL de la mère) ?",
+     "reponse": 27,
+     "unite": "mL",
+     "aide": "Trois tubes, chacun avec 9 mL.",
+     "explication": "3 × 9 mL = **27 mL** de diluant : chaque tube reçoit 9 mL de diluant et 1 mL de la dilution précédente, soit 10 mL."
+    }
+   ]
+  },
+  {
+   "chapitre": "c9b7b27a-1d15-566e-9f8b-63615d8bad6d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de levures dans le jus ?",
+   "competence": "calculer",
+   "situation": "Une brasserie artisanale contrôle la quantité de levures dans un moût en fermentation. Zoé dilue 1 mL de moût dans 99 mL d’eau, remplit une cellule de Malassez et compte les levures dans cinq rectangles. Un rectangle représente un volume de 10⁻⁵ mL.",
+   "documents": [
+    {
+     "id": "comptage",
+     "type": "tableau",
+     "titre": "Levures comptées par rectangle",
+     "colonnes": [
+      "Rectangle",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Levures comptées",
+       17,
+       22,
+       21,
+       19,
+       21
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Comptages inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "comptage",
+     "enonce": "Touche le rectangle dont le comptage s’écarte le plus de la moyenne.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Calcule d’abord la moyenne, puis cherche l’écart le plus grand.",
+     "explication": "La moyenne vaut 20. Le rectangle 1 (17) s’écarte de **3**, les autres de 2 au plus : c’est le plus éloigné."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des cinq comptages ?",
+     "reponse": 20,
+     "unite": "levures",
+     "aide": "Additionne les cinq valeurs puis divise par 5.",
+     "explication": "(17 + 22 + 21 + 19 + 21) ÷ 5 = 100 ÷ 5 = **20 levures** par rectangle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration de la suspension diluée, en millions de cellules par mL ?",
+     "reponse": 2,
+     "unite": "millions/mL",
+     "aide": "Divise la moyenne par le volume d’un rectangle, 10⁻⁵ mL.",
+     "explication": "20 ÷ 10⁻⁵ mL = 2 × 10⁶ cellules par mL, soit **2 millions** de cellules par mL."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le moût a été dilué 100 fois. Quelle est sa concentration, en millions de cellules par mL ?",
+     "reponse": 200,
+     "unite": "millions/mL",
+     "aide": "Il faut multiplier par l’inverse de la dilution.",
+     "explication": "La suspension a été diluée 100 fois : 2 millions × 100 = **200 millions** de cellules par mL, soit 2 × 10⁸."
+    }
+   ]
+  },
+  {
+   "chapitre": "c9b7b27a-1d15-566e-9f8b-63615d8bad6d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le fromage frais est-il conforme ?",
+   "competence": "resoudre",
+   "situation": "Sofiane contrôle un fromage frais. Il met 10 g de produit dans 90 mL de diluant (mère à 10⁻¹), prépare des dilutions décimales et ensemence 1 mL de chaque dilution en profondeur. Il compte les colonies après incubation, puis compare au critère de l’entreprise.",
+   "documents": [
+    {
+     "id": "boites",
+     "type": "tableau",
+     "titre": "Résultats après incubation",
+     "colonnes": [
+      "Dilution ensemencée",
+      "Volume",
+      "Colonies comptées"
+     ],
+     "lignes": [
+      [
+       "10⁻³",
+       "1 mL",
+       410
+      ],
+      [
+       "10⁻⁴",
+       "1 mL",
+       148
+      ],
+      [
+       "10⁻⁵",
+       "1 mL",
+       9
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Comptages inventés pour l’exercice"
+    },
+    {
+     "id": "critere",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Critère maison",
+     "sousTitre": "Fromage frais",
+     "emoji": "🧀",
+     "lignes": [
+      {
+       "texte": "Germes revivifiables à 30 °C",
+       "valeur": "≤ 1,0 × 10⁶ UFC par g",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Boîtes exploitables",
+       "valeur": "15 à 300 colonies"
+      }
+     ],
+     "pied": "Critère inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boites",
+     "enonce": "Touche le nombre de colonies de la seule boîte exploitable pour le calcul.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare chaque nombre à l’intervalle donné par la fiche : 15 à 300.",
+     "explication": "410 est trop chargé (colonies confluentes), 9 trop pauvre : seule la boîte à **148** colonies convient."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration du fromage, en milliers d’UFC par gramme (arrondie à deux chiffres significatifs).",
+     "reponse": 1500,
+     "tolerance": 25,
+     "unite": "milliers UFC/g",
+     "aide": "N = n / (V × d), avec n = 148, V = 1 mL et d = 10⁻⁴.",
+     "explication": "N = 148 / (1 × 10⁻⁴) = 1,48 × 10⁶ ≈ 1,5 × 10⁶ UFC par g, soit **1 500 milliers** d’UFC par gramme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Sofiane en comparant ce résultat au critère ?",
+     "options": [
+      "Non conforme : 1,5 × 10⁶ dépasse le seuil de 1,0 × 10⁶",
+      "Conforme : le résultat est proche du critère de 10⁶",
+      "Impossible de conclure sans refaire une numération directe",
+      "Conforme : 148 colonies, c’est moins que 300 colonies"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "Compare la concentration calculée au seuil maximal, pas le nombre de colonies.",
+     "explication": "Il faut comparer les **UFC par gramme** au seuil : 1,5 × 10⁶ est supérieur à 1,0 × 10⁶, donc le produit est **non conforme**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sofiane recommence avec 0,1 mL de la dilution 10⁻³ et compte 130 colonies. Quelle concentration trouve-t-il, en milliers d’UFC par gramme ?",
+     "reponse": 1300,
+     "unite": "milliers UFC/g",
+     "aide": "Le volume ensemencé a changé : V = 0,1 mL.",
+     "explication": "N = 130 / (0,1 × 10⁻³) = 1,3 × 10⁶ UFC par g, soit **1 300 milliers** : du même ordre que le premier essai, ce qui confirme le résultat."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes du dénombrement après culture.",
+     "items": [
+      "Préparer la suspension mère (10 g + 90 mL)",
+      "Réaliser les dilutions décimales en série",
+      "Ensemencer un volume exact de plusieurs dilutions",
+      "Incuber puis compter les boîtes exploitables",
+      "Calculer N = n / (V × d)"
+     ],
+     "aide": "On ne compte qu’après l’incubation, et on calcule en dernier.",
+     "explication": "Suspension mère → dilutions → ensemencement → incubation et comptage → **calcul** du nombre d’UFC par gramme."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4b2d249-9246-53a5-aa0c-0c113e830958",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bon de préparation du glucose",
+   "competence": "calculer",
+   "situation": "Léna, technicienne, doit préparer une solution de glucose pour le TP de l’après-midi. Le responsable du laboratoire lui laisse un bon de préparation.",
+   "documents": [
+    {
+     "id": "bon",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Bon de préparation",
+     "sousTitre": "Solution de glucose",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Concentration à obtenir",
+       "valeur": "6,0 g·L⁻¹"
+      },
+      {
+       "texte": "Volume à préparer",
+       "valeur": "500,0 mL"
+      },
+      {
+       "texte": "Verrerie",
+       "valeur": "fiole jaugée de 500,0 mL",
+       "id": "verre"
+      },
+      {
+       "texte": "Méthode",
+       "valeur": "pesée"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bon",
+     "enonce": "Touche la ligne qui indique le récipient où le volume doit être exact.",
+     "reponse": [
+      "verre"
+     ],
+     "aide": "Cherche la verrerie jaugée.",
+     "explication": "On contient un volume exact dans une **fiole jaugée** : c’est la ligne « Verrerie »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose Léna doit-elle peser ?",
+     "reponse": 3,
+     "unite": "g",
+     "tolerance": 0.01,
+     "aide": "m = ρ × V, avec le volume exprimé en litres.",
+     "explication": "V = 500,0 mL = 0,5000 L ; m = 6,0 × 0,5000 = **3,0 g**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la préparation par pesée.",
+     "items": [
+      "Calculer la masse à peser",
+      "Peser la masse dans une coupelle tarée",
+      "Transférer dans la fiole en rinçant la coupelle",
+      "Dissoudre avec environ la moitié du volume de solvant",
+      "Compléter jusqu’au trait de jauge",
+      "Boucher et homogéniser"
+     ],
+     "aide": "On dissout avant de compléter, et on homogénéise en dernier.",
+     "explication": "On calcule, on **pèse**, on transfère (rinçage de la coupelle), on dissout, on **complète au trait**, puis on homogénéise en retournant la fiole."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4b2d249-9246-53a5-aa0c-0c113e830958",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre fioles à partir d’un seul flacon",
+   "competence": "calculer",
+   "situation": "Pour préparer des solutions de travail, Hugo dispose d’un flacon de glucose à 10,0 g·L⁻¹. Il doit préparer quatre solutions filles par dilution, chacune dans une fiole jaugée.",
+   "documents": [
+    {
+     "id": "filles",
+     "type": "tableau",
+     "titre": "Les solutions filles à préparer",
+     "colonnes": [
+      "Solution fille",
+      "Concentration voulue (g·L⁻¹)",
+      "Volume final (mL)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "2,0",
+       "50,0"
+      ],
+      [
+       "B",
+       "5,0",
+       "100,0"
+      ],
+      [
+       "C",
+       "0,50",
+       "200,0"
+      ],
+      [
+       "D",
+       "1,0",
+       "250,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Solution mère : 10,0 g·L⁻¹. Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "filles",
+     "enonce": "Touche la solution fille qui demande la dilution la plus forte (le plus grand facteur de dilution).",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Le facteur de dilution est F = Ci / Cf : cherche la plus faible concentration finale.",
+     "explication": "F vaut 5 pour A, 2 pour B, **20 pour C** et 10 pour D : la solution C est la plus diluée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de solution mère faut-il prélever pour préparer la solution D ?",
+     "reponse": 25,
+     "unite": "mL",
+     "tolerance": 0.05,
+     "aide": "Vi = Cf × Vf / Ci, tous les volumes en mL.",
+     "explication": "Vi = 1,0 × 250,0 / 10,0 = **25 mL** (F = 10, donc Vi = 250 / 10)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque besoin au matériel adapté.",
+     "paires": [
+      [
+       "Contenir un volume exact",
+       "Fiole jaugée"
+      ],
+      [
+       "Délivrer un volume exact de solution mère",
+       "Pipette jaugée"
+      ],
+      [
+       "Verser un volume approximatif de solvant",
+       "Éprouvette"
+      ]
+     ],
+     "aide": "On prélève avec la pipette, on contient dans la fiole.",
+     "explication": "La **fiole jaugée** contient un volume exact, la **pipette jaugée** le délivre, l’éprouvette ne donne qu’un volume approximatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hugo veut prélever la solution mère. Comment doit-il procéder ?",
+     "options": [
+      "La verser dans un bécher puis pipeter dans le bécher",
+      "Plonger la pipette directement dans le flacon",
+      "Verser la solution mère dans la fiole jaugée puis en retirer",
+      "Prélever avec l’éprouvette"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arriverait au flacon si on y plongeait un instrument déjà utilisé.",
+     "explication": "On verse un peu de solution mère dans un **bécher** puis on pipette dans le bécher : on ne contamine jamais le flacon."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4b2d249-9246-53a5-aa0c-0c113e830958",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La pesée qui n’était pas la bonne",
+   "competence": "resoudre",
+   "situation": "Malik prépare 100,0 mL d’une solution de glucose à 5,0 g·L⁻¹, puis veut en tirer 50,0 mL à 1,0 g·L⁻¹ par dilution. Dans son compte rendu, il a noté tout ce qui s’est passé, y compris ses écarts.",
+   "documents": [
+    {
+     "id": "objectif",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La consigne",
+     "blocs": [
+      "Préparer 100,0 mL de glucose à 5,0 g·L⁻¹ par pesée, dans une fiole jaugée de 100,0 mL.",
+      "Puis préparer 50,0 mL à 1,0 g·L⁻¹ à partir de cette solution mère."
+     ],
+     "source": "Consigne écrite pour l’exercice"
+    },
+    {
+     "id": "cr",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Compte rendu de Malik",
+     "sousTitre": "Préparation de la solution mère",
+     "emoji": "📝",
+     "lignes": [
+      {
+       "texte": "Masse pesée",
+       "valeur": "0,625 g",
+       "id": "pesee"
+      },
+      {
+       "texte": "Coupelle rincée dans la fiole",
+       "valeur": "oui"
+      },
+      {
+       "texte": "Niveau final",
+       "valeur": "bas du ménisque 2 mm au-dessus du trait",
+       "id": "niveau"
+      },
+      {
+       "texte": "Homogénéisation",
+       "valeur": "oui"
+      }
+     ],
+     "pied": "Compte rendu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cr",
+     "enonce": "Touche la ligne du compte rendu qui oblige Malik à recommencer toute la solution mère.",
+     "reponse": [
+      "niveau"
+     ],
+     "aide": "Une pesée différente reste exploitable si on a noté la masse exacte, mais un autre écart ne se rattrape pas.",
+     "explication": "Quand on a **dépassé le trait de jauge**, on ne peut pas retirer le surplus : le volume n’est plus exact, il faut tout refaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse aurait-il fallu peser pour respecter la consigne ?",
+     "reponse": 0.5,
+     "unite": "g",
+     "tolerance": 0.005,
+     "aide": "m = ρ × V, avec V en litres.",
+     "explication": "m = 5,0 × 0,1000 = **0,50 g**. Malik a pesé un peu plus (0,625 g)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si la fiole avait été complétée correctement avec la masse notée par Malik, quelle serait la concentration de la solution mère ?",
+     "reponse": 6.25,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "ρ = m / V, avec le volume en litres.",
+     "explication": "ρ = 0,625 / 0,1000 = **6,25 g·L⁻¹**. Noter la masse exacte permet de connaître la vraie concentration."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec cette solution mère à 6,25 g·L⁻¹, quel volume prélever pour préparer 50,0 mL à 1,0 g·L⁻¹ ?",
+     "reponse": 8,
+     "unite": "mL",
+     "tolerance": 0.05,
+     "aide": "Vi = Cf × Vf / Ci avec Ci = 6,25 g·L⁻¹.",
+     "explication": "Vi = 1,0 × 50,0 / 6,25 = **8,0 mL** (F = 6,25, donc Vi = 50,0 / 6,25)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque erreur à sa conséquence.",
+     "paires": [
+      [
+       "Coupelle non rincée",
+       "Concentration trop faible"
+      ],
+      [
+       "Pas d’homogénéisation",
+       "Concentration différente selon l’endroit"
+      ],
+      [
+       "Trait de jauge dépassé",
+       "Solution à refaire"
+      ]
+     ],
+     "aide": "Pense à ce qu’on perd, ou à ce qui n’est pas mélangé.",
+     "explication": "Une coupelle non rincée **perd du soluté** ; sans homogénéisation la concentration varie dans la fiole ; un trait dépassé impose de **tout refaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9bd35516-d749-5b91-bc4e-debcbb177895",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre tubes, quatre réactifs",
+   "competence": "lire-tableau",
+   "situation": "Lors d’un TP, Amina teste quatre tubes avec des réactifs de détection. Elle note la couleur obtenue dans le tableau de sa paillasse.",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "tableau",
+     "titre": "Les quatre tubes",
+     "colonnes": [
+      "Tube",
+      "Contenu",
+      "Réactif ajouté",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "1",
+       "empois d’amidon",
+       "eau iodée",
+       "bleu-noir"
+      ],
+      [
+       "2",
+       "blanc d’œuf dilué",
+       "biuret",
+       "violet"
+      ],
+      [
+       "3",
+       "solution de glucose",
+       "liqueur de Fehling, à chaud",
+       "précipité rouge brique"
+      ],
+      [
+       "4",
+       "eau distillée",
+       "eau iodée",
+       "brun-jaune, inchangé"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la case qui désigne le contenu du témoin négatif.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Le témoin négatif ne contient que le solvant : aucune molécule recherchée.",
+     "explication": "Le tube 4 ne contient que de l’**eau distillée** : il prouve que le réactif ne réagit pas tout seul."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réactif à la molécule qu’il révèle.",
+     "paires": [
+      [
+       "Eau iodée",
+       "Amidon"
+      ],
+      [
+       "Biuret",
+       "Protéines"
+      ],
+      [
+       "Fehling à chaud",
+       "Sucre réducteur (glucose)"
+      ]
+     ],
+     "aide": "Les trois tubes colorés du tableau contiennent chacun la molécule correspondante.",
+     "explication": "L’eau iodée révèle l’**amidon**, le biuret les **protéines** (liaisons peptidiques), la liqueur de Fehling à chaud un **sucre réducteur**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tubes ont donné un résultat positif ?",
+     "reponse": 3,
+     "aide": "Un résultat positif est un changement de couleur ou un précipité attendu.",
+     "explication": "Les tubes 1, 2 et 3 sont positifs : **3 tubes**. Le tube 4, témoin négatif, ne change pas, comme prévu."
+    }
+   ]
+  },
+  {
+   "chapitre": "9bd35516-d749-5b91-bc4e-debcbb177895",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce lait est-il bien pasteurisé ?",
+   "competence": "experimenter",
+   "situation": "Un laboratoire contrôle des laits grâce au test de la phosphatase alcaline : le substrat ajouté est incolore, et devient jaune si l’enzyme est active. Deux séries de contrôle ont été faites, à deux jours différents.",
+   "documents": [
+    {
+     "id": "a",
+     "type": "tableau",
+     "titre": "Série A",
+     "colonnes": [
+      "Tube",
+      "Contenu",
+      "Couleur après 10 min"
+     ],
+     "lignes": [
+      [
+       "Essai",
+       "lait à contrôler",
+       "jaune"
+      ],
+      [
+       "Témoin positif",
+       "lait cru",
+       "jaune"
+      ],
+      [
+       "Témoin négatif",
+       "eau",
+       "incolore"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    },
+    {
+     "id": "b",
+     "type": "tableau",
+     "titre": "Série B",
+     "colonnes": [
+      "Tube",
+      "Contenu",
+      "Couleur après 10 min"
+     ],
+     "lignes": [
+      [
+       "Essai",
+       "lait à contrôler",
+       "incolore"
+      ],
+      [
+       "Témoin positif",
+       "lait cru",
+       "incolore"
+      ],
+      [
+       "Témoin négatif",
+       "eau",
+       "incolore"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "a",
+     "enonce": "Touche la case de la série A qui prouve que le substrat et l’enzyme fonctionnent bien.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le tube où l’enzyme est sûrement présente.",
+     "explication": "Le **témoin positif** (lait cru) devient jaune : l’enzyme y est active et le réactif fonctionne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Série A : que conclut-on pour le lait contrôlé ?",
+     "options": [
+      "La pasteurisation a été insuffisante",
+      "Le lait est parfaitement pasteurisé",
+      "Le lait contient de l’amidon",
+      "Le test n’est pas interprétable"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les deux témoins ont réagi comme attendu : l’essai est interprétable.",
+     "explication": "La phosphatase alcaline est détruite par la pasteurisation : un lait pasteurisé doit rester incolore. L’essai jaune signale une **pasteurisation insuffisante**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Série B : l’essai est incolore. Peut-on conclure que le lait est bien pasteurisé ?",
+     "options": [
+      "Non : le témoin positif est incolore, le test n’a pas fonctionné",
+      "Oui : l’essai est incolore, donc la phosphatase est détruite",
+      "Oui : le témoin négatif est incolore, donc tout va bien",
+      "Non : l’essai devrait être jaune dans tous les cas"
+     ],
+     "reponse": 0,
+     "aide": "À quoi sert le témoin positif ?",
+     "explication": "Un témoin positif incolore prouve que le **test est en panne** (enzyme, substrat ou température) : l’essai incolore ne veut alors rien dire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le cours sur les enzymes du lait.",
+     "texte": "La phosphatase alcaline est ___ par la pasteurisation ; la peroxydase, plus résistante, n’est détruite que par un chauffage plus ___ .",
+     "reponses": [
+      [
+       "détruite",
+       "detruite"
+      ],
+      [
+       "fort",
+       "intense"
+      ]
+     ],
+     "banque": [
+      "détruite",
+      "activée",
+      "fort",
+      "faible"
+     ],
+     "aide": "Un lait pasteurisé doit être négatif au test de la phosphatase.",
+     "explication": "La PAL est **détruite** par la pasteurisation ; la POD, plus résistante, ne disparaît qu’avec un chauffage plus **fort**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9bd35516-d749-5b91-bc4e-debcbb177895",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le spectre d’un colorant bleu",
+   "competence": "lire-graphique",
+   "situation": "Yanis doit choisir la longueur d’onde de travail pour doser un colorant bleu alimentaire. Il relève l’absorbance de la solution tous les 50 nm, puis consulte la fiche des cuves du laboratoire.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre d’absorption du colorant",
+     "categories": [
+      "400",
+      "450",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0.08,
+        0.12,
+        0.3,
+        0.62,
+        0.85,
+        0.6,
+        0.15
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "unite": "sans unité",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Longueur d’onde (nm)"
+     },
+     "valeurs": false,
+     "source": "Valeurs inventées pour l’exercice"
+    },
+    {
+     "id": "cuves",
+     "type": "tableau",
+     "titre": "Les cuves du laboratoire",
+     "colonnes": [
+      "Cuve",
+      "Domaine utilisable"
+     ],
+     "lignes": [
+      [
+       "Polystyrène",
+       "visible"
+      ],
+      [
+       "Verre",
+       "visible"
+      ],
+      [
+       "Quartz",
+       "ultraviolet et visible"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche la longueur d’onde optimale du colorant.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la longueur d’onde où l’absorbance est la plus élevée.",
+     "explication": "Le maximum d’absorbance, 0,85, est atteint à **600 nm** : c’est λmax, la longueur d’onde de travail."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle absorbance la solution présente-t-elle à 550 nm ?",
+     "reponse": 0.62,
+     "tolerance": 0.03,
+     "aide": "Repère 550 sur l’axe horizontal, puis lis la hauteur du point.",
+     "explication": "À 550 nm, la courbe passe à environ **0,62**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le colorant absorbe surtout vers 600 nm, dans l’orange. Quelle couleur la solution paraît-elle ?",
+     "options": [
+      "Bleue",
+      "Orange",
+      "Rouge",
+      "Verte"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La couleur perçue est la couleur complémentaire de celle qui est absorbée.",
+     "explication": "On perçoit la couleur **complémentaire** de la lumière absorbée : une solution qui absorbe l’orange paraît bleue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Yanis voudrait aussi doser de l’ADN à 260 nm. Quelles cuves du tableau doit-il écarter ?",
+     "options": [
+      "Polystyrène",
+      "Verre",
+      "Quartz"
+     ],
+     "reponse": [
+      0,
+      1
+     ],
+     "aide": "Regarde le domaine utilisable de chaque cuve : 260 nm est dans l’ultraviolet.",
+     "explication": "À 260 nm (ultraviolet), il faut une cuve en **quartz** ; le polystyrène et le verre ne servent que dans le visible."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la démarche pour obtenir un spectre d’absorption.",
+     "items": [
+      "Faire le zéro avec une cuve contenant le solvant seul",
+      "Mesurer l’absorbance à différentes longueurs d’onde",
+      "Tracer A en fonction de λ",
+      "Repérer la longueur d’onde optimale"
+     ],
+     "aide": "Le zéro se fait avant toute mesure ; le repérage du maximum vient en dernier.",
+     "explication": "On fait le **zéro** (blanc), on mesure à chaque λ, on trace A = f(λ), puis on repère λmax au maximum de la courbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a413a85-24d6-5170-9c18-aab0c9620743",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lire une plaque de CCM",
+   "competence": "observer-schema",
+   "situation": "Inès recherche deux acides aminés dans un mélange. Elle a déposé sur une plaque de silice un étalon d’alanine, un étalon de leucine et le mélange, puis révélé la plaque à la ninhydrine. Une règle graduée à partir de la ligne de dépôt est dessinée à gauche.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "schema",
+     "titre": "La plaque révélée",
+     "largeur": 320,
+     "hauteur": 248,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 20,
+       "l": 220,
+       "h": 200,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 4
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        74,
+        40
+       ],
+       "a": [
+        286,
+        40
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        74,
+        200
+       ],
+       "a": [
+        286,
+        200
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 284,
+       "y": 34,
+       "texte": "front de l’éluant",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 284,
+       "y": 194,
+       "texte": "ligne de dépôt",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        200
+       ],
+       "a": [
+        66,
+        200
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 204,
+       "texte": "0",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        180
+       ],
+       "a": [
+        66,
+        180
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        160
+       ],
+       "a": [
+        66,
+        160
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 164,
+       "texte": "2",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        140
+       ],
+       "a": [
+        66,
+        140
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        120
+       ],
+       "a": [
+        66,
+        120
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 124,
+       "texte": "4",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        100
+       ],
+       "a": [
+        66,
+        100
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        80
+       ],
+       "a": [
+        66,
+        80
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 84,
+       "texte": "6",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        60
+       ],
+       "a": [
+        66,
+        60
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        40
+       ],
+       "a": [
+        66,
+        40
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 44,
+       "texte": "8",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 22,
+       "texte": "cm",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 136,
+       "r": 8,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "ea",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 88,
+       "r": 8,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "el",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 136,
+       "r": 8,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "m1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 88,
+       "r": 8,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 168,
+       "r": 8,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "m3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 238,
+       "texte": "Alanine",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 238,
+       "texte": "Leucine",
+       "taille": "petit",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 238,
+       "texte": "Mélange",
+       "taille": "petit",
+       "gras": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la tache du mélange qui s’est élevée à la même hauteur que l’étalon d’alanine.",
+     "reponse": [
+      "m1"
+     ],
+     "aide": "Suis horizontalement le niveau de la tache d’alanine.",
+     "explication": "La tache à 3,2 cm dans le mélange a le **même Rf** que l’alanine : l’alanine est présente dans le mélange."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le Rf de la leucine ? Le front de l’éluant est à 8,0 cm de la ligne de dépôt.",
+     "reponse": 0.7,
+     "tolerance": 0.01,
+     "aide": "Rf = distance parcourue par la tache / distance parcourue par le front.",
+     "explication": "La tache de leucine est à 5,6 cm : Rf = 5,6 / 8,0 = **0,70**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La tache du mélange à 1,6 cm ne correspond à aucun étalon. Que peut-on dire ?",
+     "options": [
+      "C’est une molécule différente de l’alanine et de la leucine",
+      "C’est de l’alanine qui a migré moins haut que prévu",
+      "C’est de la leucine qui a migré moins haut que prévu",
+      "C’est une impureté de la plaque, sans rapport avec le mélange"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "On identifie une tache grâce à un étalon de même Rf.",
+     "explication": "Son Rf (1,6 / 8,0 = 0,20) ne correspond à **aucun étalon** : c’est une autre molécule, qu’il faudrait comparer à d’autres étalons."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a413a85-24d6-5170-9c18-aab0c9620743",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi cette CCM a-t-elle raté ?",
+   "competence": "experimenter",
+   "situation": "Le premier essai de Rayan n’a donné aucune tache lisible. Voici sa cuve au moment où il a lancé la migration. Il refait ensuite l’expérience correctement avec un front de l’éluant à 9,0 cm.",
+   "documents": [
+    {
+     "id": "cuve",
+     "type": "schema",
+     "titre": "La cuve du premier essai",
+     "largeur": 320,
+     "hauteur": 224,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 50,
+       "l": 180,
+       "h": 160,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 6
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 152,
+       "l": 176,
+       "h": 56,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "eluant",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 85,
+       "y": 70,
+       "l": 70,
+       "h": 130,
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "plaque",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        88,
+        172
+       ],
+       "a": [
+        152,
+        172
+       ],
+       "teinte": "encre",
+       "id": "depot",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 102,
+       "cy": 172,
+       "r": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 172,
+       "r": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 138,
+       "cy": 172,
+       "r": 4,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         24,
+         30
+        ],
+        [
+         216,
+         16
+        ],
+        [
+         218,
+         30
+        ],
+        [
+         26,
+         44
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "couvercle",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 264,
+       "y": 24,
+       "texte": "Couvercle",
+       "vers": [
+        218,
+        26
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 262,
+       "y": 104,
+       "texte": "Plaque",
+       "vers": [
+        157,
+        104
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 266,
+       "y": 172,
+       "texte": "Éluant",
+       "vers": [
+        210,
+        176
+       ]
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Le second essai",
+     "colonnes": [
+      "Substance",
+      "Distance parcourue (cm)"
+     ],
+     "lignes": [
+      [
+       "Front de l’éluant",
+       "9,0"
+      ],
+      [
+       "Étalon de glycine",
+       "2,7"
+      ],
+      [
+       "Étalon d’alanine",
+       "4,5"
+      ],
+      [
+       "Étalon de leucine",
+       "6,3"
+      ],
+      [
+       "Mélange, tache 1",
+       "2,7"
+      ],
+      [
+       "Mélange, tache 2",
+       "4,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cuve",
+     "enonce": "Touche les deux éléments du schéma qui expliquent l’échec de la manipulation.",
+     "reponse": [
+      "depot",
+      "couvercle"
+     ],
+     "multiple": true,
+     "aide": "Regarde où se trouve la ligne de dépôt par rapport au niveau de l’éluant, puis l’état de la cuve.",
+     "explication": "La **ligne de dépôt est sous le niveau de l’éluant** (les dépôts se dissolvent) et le **couvercle est ouvert** (la migration devient irrégulière)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient un dépôt plongé dans l’éluant ?",
+     "options": [
+      "Il se dissout dans la cuve",
+      "Il se fixe plus solidement",
+      "Il migre plus vite",
+      "Il s’évapore"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La ligne de dépôt doit rester au-dessus du niveau de l’éluant.",
+     "explication": "Les dépôts **se dissolvent dans la cuve** avant d’avoir migré : il n’y a plus rien à révéler."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque geste : bonne pratique ou faute ?",
+     "categories": [
+      "Bonne pratique",
+      "Faute"
+     ],
+     "items": [
+      [
+       "Tracer la ligne de dépôt au crayon",
+       0
+      ],
+      [
+       "Déposer de petites taches",
+       0
+      ],
+      [
+       "Fermer la cuve pendant la migration",
+       0
+      ],
+      [
+       "Déposer de grosses taches",
+       1
+      ],
+      [
+       "Laisser le couvercle de travers",
+       1
+      ],
+      [
+       "Plonger la ligne de dépôt dans l’éluant",
+       1
+      ]
+     ],
+     "aide": "Des taches trop grosses s’étalent et se chevauchent.",
+     "explication": "Crayon, petits dépôts et cuve fermée sont de bonnes pratiques ; des **gros dépôts** étalent les taches et une ligne immergée les dissout."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur le second essai, quel est le Rf de la tache 2 du mélange ?",
+     "reponse": 0.5,
+     "tolerance": 0.01,
+     "aide": "Divise la distance de la tache par celle du front de l’éluant.",
+     "explication": "Rf = 4,5 / 9,0 = **0,50**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles substances le mélange contient-il d’après les étalons ?",
+     "options": [
+      "Glycine et alanine",
+      "Glycine et leucine",
+      "Alanine et leucine",
+      "Glycine, alanine et leucine"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare la distance de chaque tache du mélange à celle des étalons.",
+     "explication": "La tache 1 (2,7 cm) est au niveau de la **glycine**, la tache 2 (4,5 cm) au niveau de l’**alanine** ; rien ne correspond à la leucine."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a413a85-24d6-5170-9c18-aab0c9620743",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une colonne qui retient les acides aminés",
+   "competence": "analyser-document",
+   "situation": "Pour récupérer l’acide glutamique d’un mélange, Chloé utilise une colonne d’échange d’ions dont la résine est chargée positivement. Elle recueille des fractions de 2 mL et mesure l’intensité de la couleur violette obtenue avec la ninhydrine, d’abord pendant le lavage (fractions 1 à 4), puis pendant l’élution (fractions 5 à 8).",
+   "documents": [
+    {
+     "id": "charges",
+     "type": "tableau",
+     "titre": "Charge à pH 7",
+     "colonnes": [
+      "Acide aminé",
+      "Charge à pH 7"
+     ],
+     "lignes": [
+      [
+       "Lysine",
+       "positive"
+      ],
+      [
+       "Glycine",
+       "neutre"
+      ],
+      [
+       "Acide glutamique",
+       "négative"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données simplifiées, écrites pour l’exercice"
+    },
+    {
+     "id": "fractions",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Intensité de la couleur selon la fraction",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0.05,
+        0.8,
+        0.45,
+        0.04,
+        0.03,
+        0.7,
+        0.3,
+        0.02
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "unite": "sans unité",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Numéro de fraction"
+     },
+     "valeurs": false,
+     "source": "Valeurs inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel acide aminé la résine chargée positivement retient-elle à pH 7 ?",
+     "options": [
+      "L’acide glutamique",
+      "La lysine",
+      "La glycine",
+      "Aucun des trois"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Des liaisons ioniques se forment avec les molécules de charge opposée.",
+     "explication": "La résine est positive : elle retient la molécule de charge **négative**, l’acide glutamique ; la lysine (positive) et la glycine (neutre) ne se fixent pas."
+    },
+    {
+     "type": "zone",
+     "document": "fractions",
+     "enonce": "Touche les deux fractions d’élution qui contiennent l’acide glutamique.",
+     "reponse": [
+      "k5",
+      "k6"
+     ],
+     "multiple": true,
+     "aide": "L’élution commence à la fraction 5 : cherche les barres hautes après le lavage.",
+     "explication": "Les fractions **6 et 7** de l’élution portent la couleur violette : l’acide glutamique, détaché de la résine, s’y trouve."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la séparation.",
+     "items": [
+      "Déposer le mélange : les molécules de charge opposée se fixent",
+      "Laver pour éliminer ce qui n’est pas fixé",
+      "Éluer en changeant le pH ou la concentration en sel",
+      "Repérer chaque fraction par un dépôt révélé à la ninhydrine"
+     ],
+     "aide": "On ne détache les molécules fixées qu’après avoir éliminé le reste.",
+     "explication": "**Fixation**, puis **lavage**, puis **élution** pour détacher les molécules retenues, et enfin repérage des fractions."
+    },
+    {
+     "type": "categories",
+     "enonce": "Où trouve-t-on chaque acide aminé : dans le lavage ou dans l’élution ?",
+     "categories": [
+      "Fractions de lavage",
+      "Fractions d’élution"
+     ],
+     "items": [
+      [
+       "Lysine",
+       0
+      ],
+      [
+       "Glycine",
+       0
+      ],
+      [
+       "Acide glutamique",
+       1
+      ]
+     ],
+     "aide": "Ce qui n’est pas retenu par la résine sort avec le lavage.",
+     "explication": "Lysine (positive) et glycine (neutre) **ne se fixent pas** et passent au lavage ; l’acide glutamique, retenu, ne sort qu’à l’élution."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tire-t-on de l’absence de couleur dans la fraction 4 ?",
+     "options": [
+      "Le lavage est terminé : il ne sort plus rien de non fixé",
+      "Le mélange ne contenait aucune molécule au départ",
+      "La résine est saturée et ne retient plus rien",
+      "L’élution a déjà commencé à la fraction 4"
+     ],
+     "reponse": 0,
+     "aide": "La fraction 4 est la dernière du lavage.",
+     "explication": "Une fraction incolore signale qu’il ne sort plus de molécules non fixées : le **lavage est terminé** et l’on peut passer à l’élution."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d391f5c-f208-5edf-8d28-6758359d6825",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un colorant, quatre dilutions",
+   "competence": "lire-tableau",
+   "situation": "Pour vérifier la loi de Beer-Lambert, Manon mesure l’absorbance de quatre solutions d’un même colorant, dans une cuve de 1 cm, à la longueur d’onde optimale.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Absorbance en fonction de la concentration",
+     "colonnes": [
+      "Concentration (mmol·L⁻¹)",
+      "0,1",
+      "0,2",
+      "0,4",
+      "0,8"
+     ],
+     "lignes": [
+      [
+       "Absorbance A (ℓ = 1 cm)",
+       "0,12",
+       "0,24",
+       "0,48",
+       "0,96"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche l’absorbance de la solution la plus concentrée.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Plus la solution est concentrée, plus elle absorbe : cherche la plus grande valeur.",
+     "explication": "La solution à 0,8 mmol·L⁻¹ est la plus concentrée : son absorbance, **0,96**, est la plus élevée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle absorbance attend-on pour une solution à 0,6 mmol·L⁻¹ ?",
+     "reponse": 0.72,
+     "tolerance": 0.005,
+     "aide": "L’absorbance est proportionnelle à la concentration : repère le coefficient entre A et c.",
+     "explication": "A / c = 0,12 / 0,1 = 1,2 par mmol·L⁻¹ ; pour 0,6 mmol·L⁻¹, A = 1,2 × 0,6 = **0,72**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une solution du même colorant a pour absorbance 0,36. Quelle est sa concentration ?",
+     "reponse": 0.3,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.005,
+     "aide": "Divise l’absorbance par le coefficient de proportionnalité 1,2.",
+     "explication": "c = 0,36 / 1,2 = **0,30 mmol·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient d’absorption molaire ε, en L·mol⁻¹·cm⁻¹. Prends la solution à 0,1 mmol·L⁻¹, soit 1,0 × 10⁻⁴ mol·L⁻¹.",
+     "reponse": 1200,
+     "unite": "L·mol⁻¹·cm⁻¹",
+     "tolerance": 5,
+     "aide": "A = ε × ℓ × c, donc ε = A / (ℓ × c).",
+     "explication": "ε = 0,12 / (1 × 1,0 × 10⁻⁴) = **1 200 L·mol⁻¹·cm⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d391f5c-f208-5edf-8d28-6758359d6825",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La gamme du dosage des protéines",
+   "competence": "modeliser",
+   "situation": "Camille dose les protéines d’un échantillon avec le réactif du biuret. Elle prépare une gamme d’étalonnage à partir d’une solution étalon à 2,0 g·L⁻¹, mesure l’absorbance de chaque tube, puis celle de l’essai.",
+   "documents": [
+    {
+     "id": "gamme",
+     "type": "tableau",
+     "titre": "Le tableau de manipulation",
+     "colonnes": [
+      "",
+      "Tube 0",
+      "Tube 1",
+      "Tube 2",
+      "Tube 3",
+      "Tube 4",
+      "Essai"
+     ],
+     "lignes": [
+      [
+       "Étalon à 2,0 g·L⁻¹ (mL)",
+       "0",
+       "0,1",
+       "0,2",
+       "0,3",
+       "0,4",
+       "—"
+      ],
+      [
+       "Échantillon (mL)",
+       "—",
+       "—",
+       "—",
+       "—",
+       "—",
+       "0,5"
+      ],
+      [
+       "Eau (mL)",
+       "0,5",
+       "0,4",
+       "0,3",
+       "0,2",
+       "0,1",
+       "0"
+      ],
+      [
+       "Réactif (mL)",
+       "4,0",
+       "4,0",
+       "4,0",
+       "4,0",
+       "4,0",
+       "4,0"
+      ],
+      [
+       "Masse de protéines (mg)",
+       "0",
+       "0,2",
+       "0,4",
+       "?",
+       "0,8",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Protocole écrit pour l’exercice"
+    },
+    {
+     "id": "droite",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Droite d’étalonnage",
+     "categories": [
+      "0",
+      "0,2",
+      "0,4",
+      "0,6",
+      "0,8"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0,
+        0.11,
+        0.22,
+        0.33,
+        0.44
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "unite": "sans unité",
+      "min": 0,
+      "max": 0.5,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Masse de protéines (mg)"
+     },
+     "valeurs": false,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gamme",
+     "enonce": "Touche la case qui donne la masse de protéines du tube qui sert à faire le zéro de l’appareil.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Le tube de zéro ne contient aucun soluté.",
+     "explication": "Le **tube 0** (le blanc) ne contient aucune protéine : sa masse est 0 mg, et il sert à faire le zéro."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse de protéines du tube 3.",
+     "reponse": 0.6,
+     "unite": "mg",
+     "tolerance": 0.005,
+     "aide": "Masse = concentration de l’étalon × volume d’étalon (en mL).",
+     "explication": "m = 2,0 mg·mL⁻¹ × 0,3 mL = **0,6 mg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’essai donne A = 0,165. Quelle masse de protéines contient le tube d’essai (lecture sur la droite) ?",
+     "reponse": 0.3,
+     "unite": "mg",
+     "tolerance": 0.02,
+     "aide": "Cherche sur la droite l’abscisse qui correspond à A = 0,165, ou divise par 0,55.",
+     "explication": "La droite a pour coefficient 0,55 (0,22 / 0,4) : m = 0,165 / 0,55 = **0,30 mg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration de l’échantillon, en g·L⁻¹ ?",
+     "reponse": 0.6,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "Les 0,30 mg proviennent de 0,5 mL d’échantillon.",
+     "explication": "C = 0,30 mg / 0,5 mL = 0,60 mg·mL⁻¹ = **0,60 g·L⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un autre essai a une absorbance de 0,70. Que faut-il faire ?",
+     "options": [
+      "Le diluer puis le doser à nouveau",
+      "Prolonger la droite et lire quand même",
+      "Retirer le tube 0 de la gamme",
+      "Utiliser l’essai précédent"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare 0,70 à l’absorbance du tube le plus concentré de la gamme.",
+     "explication": "Un essai **hors de la gamme** (plus absorbant que le tube 4) doit être dilué puis dosé à nouveau."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d391f5c-f208-5edf-8d28-6758359d6825",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le glucose d’un jus de pomme",
+   "competence": "resoudre",
+   "situation": "Léo dose le glucose d’un jus de pomme par la méthode enzymatique (glucose oxydase). Le jus a été dilué 20 fois, puis 0,5 mL de jus dilué est introduit dans chaque tube d’essai. Il lit l’absorbance après la fin de la réaction.",
+   "documents": [
+    {
+     "id": "gamme",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Gamme d’étalonnage du glucose",
+     "categories": [
+      "0",
+      "0,2",
+      "0,4",
+      "0,6",
+      "0,8"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0,
+        0.12,
+        0.24,
+        0.36,
+        0.48
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "unite": "sans unité",
+      "min": 0,
+      "max": 0.6,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Masse de glucose (mg)"
+     },
+     "valeurs": false,
+     "source": "Mesures inventées pour l’exercice"
+    },
+    {
+     "id": "serie",
+     "type": "tableau",
+     "titre": "Les mesures de la série",
+     "colonnes": [
+      "Tube",
+      "Absorbance"
+     ],
+     "lignes": [
+      [
+       "Jus A dilué 20 fois",
+       "0,30"
+      ],
+      [
+       "Jus B dilué 20 fois",
+       "0,78"
+      ],
+      [
+       "Étalon de contrôle, 0,40 mg de glucose",
+       "0,24"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serie",
+     "enonce": "Touche l’absorbance de l’essai qui doit être dilué puis dosé à nouveau.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare chaque absorbance à celle du tube le plus concentré de la gamme.",
+     "explication": "Le jus B (0,78) dépasse le dernier point de la gamme (0,48) : il est **hors du domaine** étalonné."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose contient le tube du jus A ?",
+     "reponse": 0.5,
+     "unite": "mg",
+     "tolerance": 0.02,
+     "aide": "Le coefficient directeur de la droite vaut 0,12 / 0,2 = 0,60.",
+     "explication": "m = A / 0,60 = 0,30 / 0,60 = **0,50 mg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en glucose du jus A dilué, en g·L⁻¹ ?",
+     "reponse": 1,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.02,
+     "aide": "La masse trouvée provient des 0,5 mL de jus dilué prélevés.",
+     "explication": "C = 0,50 mg / 0,5 mL = 1,0 mg·mL⁻¹ = **1,0 g·L⁻¹** dans le jus dilué."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en glucose du jus de pomme pur, en g·L⁻¹ ?",
+     "reponse": 20,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.5,
+     "aide": "Le jus a été dilué 20 fois avant le dosage.",
+     "explication": "C = 1,0 × 20 = **20 g·L⁻¹** : il faut penser à multiplier par le facteur de dilution."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’étalon de contrôle (0,40 mg) donne A = 0,24. Que conclut Léo ?",
+     "options": [
+      "La série est exacte : 0,24 correspond bien à 0,40 mg",
+      "La série est fausse : il aurait fallu 0,48",
+      "Le zéro n’a pas été fait",
+      "La gamme doit être refaite en entier"
+     ],
+     "reponse": 0,
+     "aide": "Lis sur la gamme l’absorbance prévue pour 0,40 mg.",
+     "explication": "D’après la droite, 0,40 mg donne **0,24** : l’étalon de contrôle confirme l’exactitude de la série."
+    }
+   ]
+  },
+  {
+   "chapitre": "3da787b0-ae06-5dd3-af66-024457285de8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le montage du titrage du vinaigre",
+   "competence": "observer-schema",
+   "situation": "Au TP, Jade veut connaître la concentration en acide éthanoïque d’un vinaigre dilué. Elle a monté le dispositif ci-dessous : le rose de la phénolphtaléine persiste quand la burette atteint 17,0 mL.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Le montage de Jade",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 20,
+       "l": 22,
+       "h": 110,
+       "teinte": "bleu",
+       "motif": "clair",
+       "arrondi": 3,
+       "id": "burette",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 64,
+       "y": 130,
+       "l": 34,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "arrondi": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        81,
+        138
+       ],
+       "a": [
+        81,
+        164
+       ],
+       "teinte": "encre",
+       "epaisseur": 1
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 160,
+       "l": 82,
+       "h": 60,
+       "teinte": "gris",
+       "motif": "clair",
+       "arrondi": 4,
+       "id": "becher",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 42,
+       "y": 188,
+       "l": 78,
+       "h": 30,
+       "teinte": "ciel",
+       "motif": "clair",
+       "arrondi": 2
+      },
+      {
+       "forme": "ellipse",
+       "cx": 81,
+       "cy": 212,
+       "rx": 12,
+       "ry": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 224,
+       "l": 102,
+       "h": 16,
+       "teinte": "gris",
+       "motif": "plein",
+       "arrondi": 3,
+       "id": "agitateur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 112,
+       "y": 44,
+       "texte": "Soude à 0,10 mol·L⁻¹",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 112,
+       "y": 64,
+       "texte": "Niveau initial : 2,0 mL",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 112,
+       "y": 82,
+       "texte": "Niveau à l’équivalence : 17,0 mL",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 138,
+       "y": 190,
+       "texte": "20,0 mL de vinaigre dilué",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 138,
+       "y": 206,
+       "texte": "+ phénolphtaléine",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche l’élément qui contient la solution titrante, de concentration connue.",
+     "reponse": [
+      "burette"
+     ],
+     "aide": "La solution titrante est versée progressivement : où est-elle placée ?",
+     "explication": "La solution titrante (la soude) est dans la **burette**, ce qui permet de la verser goutte à goutte et de lire le volume."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du montage à son rôle.",
+     "paires": [
+      [
+       "Burette",
+       "Contient la solution titrante"
+      ],
+      [
+       "Bécher",
+       "Contient la solution à doser et l’indicateur"
+      ],
+      [
+       "Agitateur magnétique",
+       "Homogénéise pendant le versement"
+      ]
+     ],
+     "aide": "Chaque élément a un rôle différent dans le dispositif.",
+     "explication": "La burette contient le **titrant**, le bécher la solution à doser avec son indicateur, et l’agitateur **homogénéise** le mélange."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume équivalent VE versé ?",
+     "reponse": 15,
+     "unite": "mL",
+     "tolerance": 0.05,
+     "aide": "Le volume versé est la différence entre le niveau final et le niveau initial.",
+     "explication": "VE = 17,0 − 2,0 = **15,0 mL** : on soustrait le niveau initial, car la burette ne part pas de zéro."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration de l’acide dans le vinaigre dilué ?",
+     "reponse": 0.075,
+     "unite": "mol·L⁻¹",
+     "tolerance": 0.0005,
+     "aide": "La réaction est mole à mole : C1 × V1 = C2 × VE.",
+     "explication": "C1 = C2 × VE / V1 = 0,10 × 15,0 / 20,0 = **0,075 mol·L⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3da787b0-ae06-5dd3-af66-024457285de8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La vitamine C d’un jus d’orange",
+   "competence": "calculer",
+   "situation": "Au laboratoire d’une coopérative de fruits, Théo dose la vitamine C d’un jus d’orange en versant du DCPIP, un oxydant bleu qui devient incolore quand la vitamine C le réduit. La réaction est mole à mole. Il titre 10,0 mL de jus, d’abord à la volée, puis avec soin.",
+   "documents": [
+    {
+     "id": "reactifs",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Fiche des réactifs",
+     "sousTitre": "Dosage de la vitamine C",
+     "emoji": "🍊",
+     "lignes": [
+      {
+       "texte": "DCPIP (dans la burette)",
+       "valeur": "2,0 × 10⁻³ mol·L⁻¹"
+      },
+      {
+       "texte": "Prise d’essai de jus",
+       "valeur": "10,0 mL"
+      },
+      {
+       "texte": "Masse molaire de la vitamine C",
+       "valeur": "176 g·mol⁻¹"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "titrages",
+     "type": "tableau",
+     "titre": "Les volumes de DCPIP versés",
+     "colonnes": [
+      "Titrage",
+      "Volume de DCPIP versé (mL)"
+     ],
+     "lignes": [
+      [
+       "Titrage rapide",
+       "12"
+      ],
+      [
+       "Essai 1",
+       "11,1"
+      ],
+      [
+       "Essai 2",
+       "10,9"
+      ],
+      [
+       "Essai 3",
+       "11,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "titrages",
+     "enonce": "Touche le volume qui sert seulement à encadrer le volume équivalent.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Un premier titrage rapide donne une idée du volume avant les essais précis.",
+     "explication": "Le **titrage rapide** (12 mL) ne sert qu’à encadrer VE : on ralentit ensuite près de ce volume."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Théo repère-t-il l’équivalence ?",
+     "options": [
+      "Le DCPIP en excès garde sa coloration bleue",
+      "Le jus devient incolore dès la première goutte",
+      "Un précipité rouge brique apparaît dans le bécher",
+      "Le jus devient rose comme avec la phénolphtaléine"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Tant qu’il reste de la vitamine C, chaque goutte de DCPIP perd sa coloration.",
+     "explication": "À l’équivalence, la première goutte de DCPIP en excès **reste bleue** : le titrant sert lui-même d’indicateur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le volume équivalent moyen des trois essais précis.",
+     "reponse": 11,
+     "unite": "mL",
+     "tolerance": 0.05,
+     "aide": "Additionne les trois essais puis divise par 3.",
+     "explication": "(11,1 + 10,9 + 11,0) / 3 = 33,0 / 3 = **11,0 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en vitamine C du jus, en mmol·L⁻¹ ?",
+     "reponse": 2.2,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.02,
+     "aide": "La réaction est mole à mole : n(DCPIP versé) = n(vitamine C).",
+     "explication": "C1 = C2 × VE / V1 = 2,0 × 10⁻³ × 11,0 / 10,0 = 2,2 × 10⁻³ mol·L⁻¹ = **2,2 mmol·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de vitamine C le jus contient-il par litre, arrondie au centième ?",
+     "reponse": 0.39,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.005,
+     "aide": "Multiplie la concentration en mol·L⁻¹ par la masse molaire.",
+     "explication": "ρ = 2,2 × 10⁻³ × 176 = 0,387 ≈ **0,39 g·L⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3da787b0-ae06-5dd3-af66-024457285de8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vinaigre de la cantine est-il fidèle à son étiquette ?",
+   "competence": "resoudre",
+   "situation": "Nina contrôle le vinaigre de la cantine. Elle en dilue 10,0 mL dans une fiole jaugée de 100,0 mL, puis titre 10,0 mL de ce vinaigre dilué par de la soude à 0,100 mol·L⁻¹, avec de la phénolphtaléine. L’équation est CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Vinaigre de table",
+     "sousTitre": "Étiquette de la bouteille",
+     "emoji": "🍶",
+     "lignes": [
+      {
+       "texte": "Acidité",
+       "valeur": "7 g d’acide éthanoïque pour 100 mL"
+      },
+      {
+       "texte": "Masse molaire de l’acide éthanoïque",
+       "valeur": "60 g·mol⁻¹"
+      }
+     ],
+     "pied": "Étiquette inventée pour l’exercice"
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les quatre titrages de Nina",
+     "colonnes": [
+      "Essai",
+      "Volume de soude versé (mL)",
+      "Observation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "11,6",
+       "rose pâle persistant"
+      ],
+      [
+       "2",
+       "11,8",
+       "rose pâle persistant"
+      ],
+      [
+       "3",
+       "11,7",
+       "rose pâle persistant"
+      ],
+      [
+       "4",
+       "13,4",
+       "rose foncé : équivalence dépassée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche le volume que Nina doit écarter du calcul.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Regarde la colonne « Observation » : un essai a dépassé l’équivalence.",
+     "explication": "L’essai 4 a dépassé l’équivalence (rose foncé) : son volume de **13,4 mL** n’est pas le volume équivalent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le volume équivalent moyen avec les essais retenus.",
+     "reponse": 11.7,
+     "unite": "mL",
+     "tolerance": 0.05,
+     "aide": "Moyenne des trois essais restants.",
+     "explication": "(11,6 + 11,8 + 11,7) / 3 = 35,1 / 3 = **11,7 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration de l’acide dans le vinaigre dilué ?",
+     "reponse": 0.117,
+     "unite": "mol·L⁻¹",
+     "tolerance": 0.001,
+     "aide": "C1 × V1 = C2 × VE, avec V1 = 10,0 mL.",
+     "explication": "C1 = 0,100 × 11,7 / 10,0 = **0,117 mol·L⁻¹**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les bonnes pratiques du titrage.",
+     "items": [
+      "Rincer la burette avec la solution titrante",
+      "Chasser la bulle d’air et ajuster le zéro",
+      "Faire un titrage rapide pour encadrer VE",
+      "Titrer avec précision, goutte à goutte près de l’équivalence",
+      "Répéter pour vérifier la répétabilité"
+     ],
+     "aide": "On prépare la burette avant de verser, et on contrôle à la fin.",
+     "explication": "On **prépare la burette**, on encadre VE par un titrage rapide, on titre avec précision, puis on répète pour vérifier la **répétabilité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration du vinaigre pur, en mol·L⁻¹ ?",
+     "reponse": 1.17,
+     "unite": "mol·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "Le vinaigre a été dilué de 10,0 mL à 100,0 mL : quel est le facteur de dilution ?",
+     "explication": "F = 100,0 / 10,0 = 10 ; C = 0,117 × 10 = **1,17 mol·L⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le vinaigre est-il conforme à son étiquette ?",
+     "options": [
+      "Oui : 70 g·L⁻¹ soit 7 g pour 100 mL",
+      "Non : 117 g·L⁻¹, trop concentré",
+      "Non : 7 g·L⁻¹, trop dilué",
+      "Oui : 1,17 g·L⁻¹ soit 7 g pour 100 mL"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Multiplie la concentration molaire par la masse molaire, puis exprime-la pour 100 mL.",
+     "explication": "ρ = 1,17 × 60 = 70,2 g·L⁻¹ ≈ 70 g·L⁻¹, soit environ **7 g pour 100 mL** : l’étiquette est respectée."
+    }
+   ]
+  }
+ ]
+}

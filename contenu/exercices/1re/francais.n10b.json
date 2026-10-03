@@ -1,0 +1,1912 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "d9e3c9d7-3dd0-5bd9-abd0-6a4c03d58fd9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un talisman en trois parties",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Peau de chagrin* pour l’oral. Lis l’affiche du roman, puis le plan en trois parties.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Peau de chagrin",
+     "sousTitre": "Honoré de Balzac",
+     "emoji": "🦓",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "Honoré de Balzac (1799-1850)"
+      },
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1831"
+      },
+      {
+       "id": "en",
+       "texte": "Ensemble",
+       "valeur": "Études philosophiques, La Comédie humaine"
+      },
+      {
+       "id": "ge",
+       "texte": "Genre",
+       "valeur": "Conte fantastique et peinture de Paris"
+      }
+     ],
+     "pied": "Premier grand succès de Balzac",
+     "teinte": "brun"
+    },
+    {
+     "id": "pl",
+     "type": "tableau",
+     "titre": "Le plan du roman",
+     "colonnes": [
+      "Partie",
+      "Ce qui s’y passe"
+     ],
+     "lignes": [
+      [
+       "Le Talisman",
+       "Raphaël, ruiné, reçoit d’un antiquaire une peau qui exauce les vœux"
+      ],
+      [
+       "?",
+       "Récit rétrospectif : la jeunesse pauvre, l’amour de Fœdora, la ruine"
+      ],
+      [
+       "L’Agonie",
+       "Raphaël, riche et condamné, tente de ne plus rien désirer"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel est le titre de la deuxième partie (la case « ? ») ?",
+     "options": [
+      "La Femme sans cœur",
+      "La Peau du diable",
+      "Le Bal des ruinés",
+      "La Jeunesse perdue"
+     ],
+     "reponse": 0,
+     "aide": "Elle raconte l’amour pour Fœdora, incapable d’aimer.",
+     "explication": "La deuxième partie est **La Femme sans cœur** : Fœdora, incapable d’aimer."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "Le roman ouvre les Études ___ de La Comédie ___.",
+     "reponses": [
+      [
+       "philosophiques"
+      ],
+      [
+       "humaine"
+      ]
+     ],
+     "banque": [
+      "philosophiques",
+      "humaine",
+      "sociales",
+      "française"
+     ],
+     "aide": "Lis la ligne « Ensemble ».",
+     "explication": "Le roman ouvre les Études **philosophiques** de *La Comédie* **humaine**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication du roman (1831) de la mort de Balzac (1850) ?",
+     "reponse": 19,
+     "aide": "Lis les deux dates sur l’affiche.",
+     "explication": "1850 − 1831 = **19 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "d9e3c9d7-3dd0-5bd9-abd0-6a4c03d58fd9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prix d’un vœu",
+   "competence": "analyser-texte",
+   "situation": "Raphaël fait un premier vœu. Lis le résumé, puis suis le mécanisme de la peau.",
+   "documents": [
+    {
+     "id": "cy",
+     "type": "chaine",
+     "titre": "Le mécanisme de la peau",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Raphaël exprime un désir"
+      },
+      {
+       "id": "n2",
+       "texte": "Le vœu est exaucé"
+      },
+      {
+       "id": "n3",
+       "texte": "La peau rétrécit"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "re",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La première soirée",
+     "blocs": [
+      "Ce soir-là, Raphaël est au banquet du banquier [[t|Taillefer]] : c’est ce qu’il avait souhaité, une orgie fastueuse. Peu avant, ruiné, il s’apprêtait à se noyer quand un antiquaire lui a offert une peau d’onagre. Au sortir de la fête, une nouvelle l’attend : il hérite de six millions."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du cycle ?",
+     "options": [
+      "La vie de Raphaël raccourcit",
+      "La vie de Raphaël s’allonge",
+      "Le talisman perd tout pouvoir",
+      "L’antiquaire reprend la peau"
+     ],
+     "reponse": 0,
+     "aide": "La peau rétrécit, et la vie de son possesseur avec elle.",
+     "explication": "À chaque vœu, la peau rétrécit et **la vie de Raphaël raccourcit**."
+    },
+    {
+     "type": "zone",
+     "document": "re",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Dans le résumé, touche le nom du banquier chez qui a lieu le banquet.",
+     "aide": "Cherche l’homme qui donne la fête.",
+     "explication": "Le banquet est celui du banquier **Taillefer**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les événements de la première soirée dans l’ordre où ils arrivent.",
+     "items": [
+      "Raphaël, ruiné, veut se noyer",
+      "L’antiquaire lui offre la peau",
+      "Il souhaite une orgie fastueuse",
+      "Il apprend qu’il hérite de six millions"
+     ],
+     "aide": "Le résumé commence par la fin : relis-le en cherchant « peu avant ».",
+     "explication": "Ordre : **ruiné**, **peau offerte**, **vœu de l’orgie**, **héritage** de six millions."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions Raphaël hérite-t-il ?",
+     "reponse": 6,
+     "aide": "Lis la dernière phrase du résumé.",
+     "explication": "Il hérite de **six millions**.",
+     "unite": "millions"
+    }
+   ]
+  },
+  {
+   "chapitre": "d9e3c9d7-3dd0-5bd9-abd0-6a4c03d58fd9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Vouloir, pouvoir, brûler",
+   "competence": "argumenter",
+   "situation": "Jade et Loïc discutent du fantastique de Balzac. L’inscription gravée sur la peau, citée dans le cours, t’aide à trancher.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Loïc",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Un talisman, c’est du fantastique pur : le Paris du roman doit être inventé."
+      },
+      {
+       "qui": "Loïc",
+       "texte": "Non : la peau est installée dans un Paris [[m|minutieusement]] décrit."
+      }
+     ]
+    },
+    {
+     "id": "in",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’inscription du talisman",
+     "blocs": [
+      "Si tu me [[p|possèdes]], tu [[p|posséderas]] tout. Mais ta [[v|vie]] m’appartiendra."
+     ],
+     "source": "Honoré de Balzac, *La Peau de chagrin* (1831), inscription du talisman"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "in",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans l’inscription, touche les deux verbes qui promettent tout au possesseur.",
+     "aide": "Ils sont de la même famille.",
+     "explication": "Les verbes **posséder** (« possèdes », « posséderas ») promettent tout au possesseur."
+    },
+    {
+     "type": "zone",
+     "document": "in",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit ce que paie le possesseur.",
+     "aide": "Le prix n’est pas de l’argent.",
+     "explication": "Le prix est la **vie** : chaque désir est une dépense."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : détail réaliste ou élément fantastique.",
+     "categories": [
+      "Détail réaliste",
+      "Élément fantastique"
+     ],
+     "items": [
+      [
+       "Un banquet chez le banquier Taillefer",
+       0
+      ],
+      [
+       "Une peau d’onagre qui exauce les vœux",
+       1
+      ],
+      [
+       "La spéculation de 1830",
+       0
+      ],
+      [
+       "Une peau qui rétrécit à chaque souhait",
+       1
+      ],
+      [
+       "La ruine au jeu d’un jeune homme",
+       0
+      ]
+     ],
+     "aide": "Le Paris de 1830 est décrit avec précision ; seule la peau sort du réel.",
+     "explication": "Banquet, spéculation et ruine au jeu sont **réalistes** ; la **peau** et son rétrécissement sont le seul élément fantastique : c’est le réalisme fantastique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère, au-delà du conte, la peau qui s’use à chaque désir ?",
+     "options": [
+      "Une énergie qui se consume elle-même, comme l’époque",
+      "Une punition pour les peintres de la bourgeoisie",
+      "Un rêve d’enfant que l’adulte oublie très vite",
+      "Un simple jeu d’esprit sans rapport avec 1830"
+     ],
+     "reponse": 0,
+     "aide": "Chaque désir est une dépense : qui paie, dans la société de 1830 ?",
+     "explication": "La peau dit l’**énergie d’une époque** — spéculation, arrivisme — qui se consume elle-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae545d77-1dca-589a-bfbd-7922d0803f41",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Oran, 1947",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *La Peste*. Lis l’affiche du roman, puis le tableau de ses personnages.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Peste",
+     "sousTitre": "Albert Camus",
+     "emoji": "🐀",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "Albert Camus (1913-1960)"
+      },
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1947"
+      },
+      {
+       "id": "no",
+       "texte": "Prix Nobel de littérature",
+       "valeur": "1957"
+      },
+      {
+       "id": "li",
+       "texte": "Lieu",
+       "valeur": "Oran"
+      }
+     ],
+     "pied": "Un roman de la révolte",
+     "teinte": "encre"
+    },
+    {
+     "id": "pe",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il choisit"
+     ],
+     "lignes": [
+      [
+       "Rieux",
+       "Il soigne sans relâche"
+      ],
+      [
+       "Rambert",
+       "Il choisit de rester pour lutter"
+      ],
+      [
+       "Tarrou",
+       "Il organise les formations sanitaires volontaires"
+      ],
+      [
+       "?",
+       "Un employé modeste qui écrit sans fin la première phrase d’un roman"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication du roman du prix Nobel de Camus ?",
+     "reponse": 10,
+     "aide": "Lis les deux dates sur l’affiche.",
+     "explication": "1957 − 1947 = **10 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "L’action se passe à ___ ; le roman paraît en ___.",
+     "reponses": [
+      [
+       "Oran"
+      ],
+      [
+       "1947"
+      ]
+     ],
+     "banque": [
+      "Oran",
+      "Alger",
+      "1947",
+      "1957"
+     ],
+     "aide": "Relis les lignes « Lieu » et « Publication ».",
+     "explication": "L’action se passe à **Oran** et le roman paraît en **1947**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Grand",
+      "Cottard",
+      "Castel",
+      "Paneloux"
+     ],
+     "reponse": 0,
+     "aide": "Il cherche la première phrase de son roman.",
+     "explication": "C’est **Grand**, l’employé modeste qui réécrit sans fin sa première phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae545d77-1dca-589a-bfbd-7922d0803f41",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La ville fermée",
+   "competence": "analyser-texte",
+   "situation": "Suis l’épidémie d’Oran, puis le revirement du père Paneloux.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "L’épidémie à Oran",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Les rats meurent par milliers"
+      },
+      {
+       "id": "n2",
+       "texte": "Les hommes meurent à leur tour"
+      },
+      {
+       "id": "n3",
+       "texte": "Les autorités ferment la ville"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "La peste recule, la ville rouvre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "pa",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le père Paneloux",
+     "blocs": [
+      "Au début, le père Paneloux prêche que la peste est un [[c|châtiment]]. Puis un enfant meurt sous ses yeux, dans une longue agonie. Il change alors de discours, et meurt à son tour."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Des volontaires s’organisent autour de Rieux et de Tarrou",
+      "Les habitants fuient la ville par la mer avant la fermeture",
+      "Rambert est chargé de raconter les événements",
+      "Cottard prend la direction des formations sanitaires"
+     ],
+     "reponse": 0,
+     "aide": "Les hommes ne restent pas passifs : qui agit ?",
+     "explication": "Des **volontaires** s’organisent autour de Rieux et de Tarrou : l’action commune."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Oran est coupée du monde.",
+     "aide": "Les portes sont closes.",
+     "explication": "Les autorités **ferment la ville** : c’est la prison collective."
+    },
+    {
+     "type": "zone",
+     "document": "pa",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Dans le texte, touche le mot par lequel Paneloux explique d’abord la peste.",
+     "aide": "Il la présente comme une sanction.",
+     "explication": "Paneloux prêche la peste comme un **châtiment**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui change le discours de Paneloux ?",
+     "options": [
+      "La mort atroce d’un enfant sous ses yeux",
+      "Une lettre reçue de l’évêque d’Oran",
+      "La guérison miraculeuse d’un voisin",
+      "La fin de l’épidémie annoncée en ville"
+     ],
+     "reponse": 0,
+     "aide": "Le texte parle d’une agonie.",
+     "explication": "La mort atroce d’un **enfant** le fait changer de discours."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae545d77-1dca-589a-bfbd-7922d0803f41",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Il ne s’agit pas d’héroïsme",
+   "competence": "argumenter",
+   "situation": "Nadia et Mathis débattent de ce que célèbre le roman. Un court texte écrit pour l’exercice, à la manière de Camus, t’aide à répondre.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nadia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mathis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nadia",
+       "texte": "La Peste célèbre des héros exceptionnels."
+      },
+      {
+       "qui": "Mathis",
+       "texte": "Non : le roman refuse l’[[h|héroïsme]] et parle d’honnêteté ordinaire."
+      }
+     ]
+    },
+    {
+     "id": "te",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le carnet du docteur",
+     "blocs": [
+      "Ce soir-là, comme les autres, le docteur nota le chiffre des morts sur un carnet. Il le fit sans phrase, avec soin. Les voisins parlaient de courage ; il haussa les épaules. Le travail était là, il fallait le faire. Et l’on ne demandait pas à un menuisier d’être un [[h|héros]] parce qu’il rabote une planche."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Camus"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "te",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Dans le texte, touche le mot que le docteur refuse pour lui-même.",
+     "aide": "Les voisins lui parlent de courage.",
+     "explication": "Le docteur refuse d’être un **héros** : il fait son métier, avec honnêteté."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Dans le débat, touche le mot que le roman refuse, selon Mathis.",
+     "aide": "Il s’oppose à « honnêteté ».",
+     "explication": "Le roman refuse l’**héroïsme** : il parle d’honnêteté."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lecture ou procédé à ce qu’il montre.",
+     "paires": [
+      [
+       "Lecture allégorique",
+       "Le nazisme et l’Occupation"
+      ],
+      [
+       "Lecture morale",
+       "La solidarité et l’action sans espoir de salut"
+      ],
+      [
+       "Narrateur-chroniqueur",
+       "Un témoin sobre, qui cherche l’objectivité"
+      ]
+     ],
+     "aide": "Pense aux deux lectures du cours, puis à la façon de raconter.",
+     "explication": "L’allégorie lit **l’Occupation** ; la morale lit la **solidarité** ; la chronique cherche l’**objectivité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée de dissertation le texte et le débat appuient-ils ?",
+     "options": [
+      "Face au mal, il faut agir ensemble sans attendre de salut",
+      "Face au mal, il faut attendre un signe venu du ciel",
+      "Face au mal, seuls les chefs peuvent espérer agir",
+      "Face au mal, il faut surtout fuir la ville vite"
+     ],
+     "reponse": 0,
+     "aide": "Le docteur fait son métier, sans emphase.",
+     "explication": "La révolte selon Camus : **agir ensemble**, sans attendre de salut, par honnêteté."
+    }
+   ]
+  },
+  {
+   "chapitre": "19efdeed-168b-546c-9d4a-c9ce8d5965b4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux jumeaux, une sorcière",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Petite Fadette*. Lis l’affiche du roman, puis relie les personnages entre eux.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Petite Fadette",
+     "sousTitre": "George Sand",
+     "emoji": "🌿",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "George Sand"
+      },
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1849"
+      },
+      {
+       "id": "li",
+       "texte": "Village",
+       "valeur": "La Cosse, dans le Berry"
+      },
+      {
+       "id": "ge",
+       "texte": "Genre",
+       "valeur": "Roman champêtre"
+      }
+     ],
+     "pied": "Écrit après l’échec de 1848",
+     "teinte": "vert"
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Les liens entre les personnages",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Sylvinet Barbeau"
+      },
+      {
+       "id": "n2",
+       "texte": "Landry Barbeau"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "Le roman se passe au village de la ___, dans le ___.",
+     "reponses": [
+      [
+       "Cosse"
+      ],
+      [
+       "Berry"
+      ]
+     ],
+     "banque": [
+      "Cosse",
+      "Berry",
+      "Poitou",
+      "Beauce"
+     ],
+     "aide": "Lis la ligne « Village ».",
+     "explication": "Le roman se passe à la **Cosse**, dans le **Berry**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » de la chaîne ?",
+     "options": [
+      "Fanchon Fadet, dite la petite Fadette",
+      "Madelon, la jolie fille du village",
+      "La mère Fadet, la grand-mère guérisseuse",
+      "La veuve que courtise Landry"
+     ],
+     "reponse": 0,
+     "aide": "Elle épouse Landry à la fin.",
+     "explication": "C’est **Fanchon Fadet**, dite la petite Fadette, que Landry épouse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent La Mare au diable (1846) de La Petite Fadette ?",
+     "reponse": 3,
+     "aide": "Compare 1846 à la date de l’affiche.",
+     "explication": "1849 − 1846 = **3 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "19efdeed-168b-546c-9d4a-c9ce8d5965b4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du village à la ville",
+   "competence": "analyser-texte",
+   "situation": "Fadette change de vie. Retrouve les étapes de son parcours.",
+   "documents": [
+    {
+     "id": "pa",
+     "type": "tableau",
+     "titre": "Le parcours de Fadette (en désordre)",
+     "colonnes": [
+      "Moment",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "La guérison",
+       "Elle soigne Sylvinet de sa jalousie maladive"
+      ],
+      [
+       "Le départ",
+       "Pour se refaire une réputation, elle quitte le village et part servir en ville"
+      ],
+      [
+       "La fin",
+       "Elle épouse Landry"
+      ],
+      [
+       "La transformation",
+       "Elle apprend à se tenir et hérite d’un magot inattendu"
+      ],
+      [
+       "La promesse",
+       "Elle aide Landry à retrouver Sylvinet ; en échange, il danse avec elle"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "vi",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ce que dit le village",
+     "blocs": [
+      "On disait au village que la petite Fadette était [[s|sorcière]] : pauvre, mal habillée, moqueuse, élevée par une grand-mère qui guérissait avec des herbes."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les cinq moments du parcours de Fadette dans l’ordre.",
+     "items": [
+      "La promesse",
+      "Le départ",
+      "La transformation",
+      "La guérison",
+      "La fin"
+     ],
+     "aide": "Elle ne peut guérir Sylvinet qu’après avoir changé.",
+     "explication": "Ordre : **promesse**, **départ**, **transformation**, **guérison**, **fin**."
+    },
+    {
+     "type": "zone",
+     "document": "pa",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit pourquoi Fadette quitte le village.",
+     "aide": "Elle veut changer son image.",
+     "explication": "Elle part **pour se refaire une réputation**."
+    },
+    {
+     "type": "zone",
+     "document": "vi",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans le texte, touche le mot que le village emploie pour la désigner.",
+     "aide": "C’est un mot de conte de fées.",
+     "explication": "Le village la prend pour une **sorcière**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que découvre Landry au contact de Fadette ?",
+     "options": [
+      "Son intelligence et sa bonté",
+      "Son talent pour les sortilèges",
+      "Sa fortune cachée dans le village",
+      "Sa jalousie envers son frère"
+     ],
+     "reponse": 0,
+     "aide": "Il découvre qu’elle n’est pas ce qu’on dit.",
+     "explication": "Landry découvre son **intelligence** et sa **bonté** : le village se trompait."
+    }
+   ]
+  },
+  {
+   "chapitre": "19efdeed-168b-546c-9d4a-c9ce8d5965b4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "On n’est laid que dans les yeux du village",
+   "competence": "argumenter",
+   "situation": "Rose et Aymeric se disputent sur Fadette. Un court texte écrit pour l’exercice, à la manière de Sand, t’aide à trancher.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Rose",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Aymeric",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Rose",
+       "texte": "Fadette est une vraie sorcière : le roman a un fond de fantastique."
+      },
+      {
+       "qui": "Aymeric",
+       "texte": "Non : le [[p|préjugé]] fabrique la sorcière, et le roman le démonte."
+      }
+     ]
+    },
+    {
+     "id": "te",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Au bord de la rivière",
+     "blocs": [
+      "Au village, on la montrait du doigt. Pourtant, quand Landry l’écouta parler de la rivière et des remèdes de sa grand-mère, il comprit que le mal n’était pas en elle : il était dans les [[y|yeux]] de ceux qui la regardaient."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de George Sand"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "te",
+     "multiple": false,
+     "reponse": [
+      "y"
+     ],
+     "enonce": "Dans le texte, touche le mot qui dit où se trouve le vrai mal.",
+     "aide": "Il ne se trouve pas chez Fadette.",
+     "explication": "Le mal est dans les **yeux** du village : c’est le regard des autres qui fabrique la sorcière."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le débat, touche le mot qui explique, selon Aymeric, ce qui fabrique la sorcière.",
+     "aide": "Rose parle de fantastique ; Aymeric répond.",
+     "explication": "Le **préjugé** fabrique la sorcière : le roman le démonte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que dit le village ou ce que révèle le roman.",
+     "categories": [
+      "Ce que dit le village",
+      "Ce que révèle le roman"
+     ],
+     "items": [
+      [
+       "Fadette est une sorcière",
+       0
+      ],
+      [
+       "Elle est intelligente et bonne",
+       1
+      ],
+      [
+       "Elle est laide et méchante",
+       0
+      ],
+      [
+       "Elle soigne Sylvinet de sa jalousie",
+       1
+      ],
+      [
+       "Sa grand-mère jette des sorts",
+       0
+      ]
+     ],
+     "aide": "Le village juge sur les apparences ; le roman montre la vérité.",
+     "explication": "Le village **juge** (sorcière, laide, sorts) ; le roman **révèle** l’intelligence, la bonté et le soin porté à Sylvinet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le parcours de Fadette en dissertation ?",
+     "options": [
+      "Un conte d’apprentissage où la « sorcière » devient respectée",
+      "Un conte merveilleux où la magie résout les conflits",
+      "Un récit d’aventures où l’héroïne conquiert une ville",
+      "Un drame où le préjugé finit par triompher"
+     ],
+     "reponse": 0,
+     "aide": "Elle apprend, change, épouse Landry.",
+     "explication": "C’est un **conte d’apprentissage** : la « sorcière » devient une femme respectée."
+    }
+   ]
+  },
+  {
+   "chapitre": "22969467-2886-50a1-8217-b4db636e0d26",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Gide, de Fongueusemare à Stockholm",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Porte étroite* pour l’oral. Place Gide et son récit dans le temps, puis relève les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Gide et son récit",
+     "debut": 1860,
+     "fin": 1960,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "na",
+       "date": 1869,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pe",
+       "date": 1909,
+       "nom": "La Porte étroite"
+      },
+      {
+       "id": "no",
+       "date": 1947,
+       "nom": "Prix Nobel"
+      }
+     ]
+    },
+    {
+     "id": "pe",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Jérôme",
+       "Le narrateur, amoureux patient"
+      ],
+      [
+       "Alissa",
+       "L’héroïne qui sacrifie son bonheur à la sainteté"
+      ],
+      [
+       "?",
+       "La sœur vive, qui épouse sans amour un viticulteur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pe"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication de La Porte étroite.",
+     "aide": "Elle tombe entre la naissance et le prix Nobel.",
+     "explication": "Le récit paraît en **1909**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication du récit (1909) du prix Nobel de Gide (1947) ?",
+     "reponse": 38,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1947 − 1909 = **38 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Juliette",
+      "Lucile",
+      "Henriette",
+      "Cécile"
+     ],
+     "reponse": 0,
+     "aide": "C’est la sœur d’Alissa.",
+     "explication": "C’est **Juliette**, qui épouse sans amour le viticulteur Édouard Teissières."
+    }
+   ]
+  },
+  {
+   "chapitre": "22969467-2886-50a1-8217-b4db636e0d26",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un amour qui refuse le bonheur",
+   "competence": "analyser-texte",
+   "situation": "Suis le destin d’Alissa, puis découvre comment le récit se retourne.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Le destin d’Alissa",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Jérôme et Alissa s’aiment depuis l’enfance"
+      },
+      {
+       "id": "n2",
+       "texte": "Alissa recule le mariage"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Alissa rompt"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle meurt seule dans une maison de santé"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "jo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La construction du récit",
+     "blocs": [
+      "Jérôme raconte l’histoire, puis le [[j|journal]] d’Alissa, découvert après sa mort, révèle ce qu’elle n’a jamais dit : elle l’a aimé jusqu’au bout."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle prétend que sa sœur Juliette aime Jérôme",
+      "Elle part vivre à Paris avec son cousin",
+      "Elle avoue à sa mère qu’elle aime ailleurs",
+      "Elle épouse un viticulteur de Normandie"
+     ],
+     "reponse": 0,
+     "aide": "Elle s’efface pour laisser la place à Juliette.",
+     "explication": "Pour s’effacer, Alissa **prétend que sa sœur Juliette aime Jérôme**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la parole de l’Évangile qui donne son titre au récit.",
+     "texte": "« Efforcez-vous d’entrer par la ___ ___. »",
+     "reponses": [
+      [
+       "porte"
+      ],
+      [
+       "étroite"
+      ]
+     ],
+     "banque": [
+      "porte",
+      "étroite",
+      "large",
+      "haute"
+     ],
+     "aide": "C’est le titre du récit.",
+     "explication": "« Efforcez-vous d’entrer par la **porte étroite** » : l’Évangile qui nourrit la piété d’Alissa."
+    },
+    {
+     "type": "zone",
+     "document": "jo",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Dans le texte, touche le mot qui désigne ce qui révèle les sentiments d’Alissa.",
+     "aide": "Il est découvert après sa mort.",
+     "explication": "Le **journal** d’Alissa révèle qu’elle l’a aimé jusqu’au bout."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change le journal à la lecture du récit ?",
+     "options": [
+      "Il retourne la lecture : Alissa a souffert de son sacrifice",
+      "Il confirme que Jérôme avait tout compris dès le début",
+      "Il montre qu’Alissa n’aimait pas vraiment Jérôme",
+      "Il apprend que Juliette était l’héroïne véritable"
+     ],
+     "reponse": 0,
+     "aide": "Jérôme croyait comprendre ; le journal dit autre chose.",
+     "explication": "Le journal **retourne toute la lecture** : Alissa l’aimait et a souffert de son sacrifice."
+    }
+   ]
+  },
+  {
+   "chapitre": "22969467-2886-50a1-8217-b4db636e0d26",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bonheur refusé",
+   "competence": "argumenter",
+   "situation": "Clémence et Rayan débattent du comportement d’Alissa. Une lettre écrite pour l’exercice, à la manière de Gide, t’aide à les départager.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Clémence",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Rayan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clémence",
+       "texte": "Alissa est cruelle : elle fait souffrir Jérôme par caprice."
+      },
+      {
+       "qui": "Rayan",
+       "texte": "Le journal prouve le contraire : elle l’a aimé jusqu’au bout et a [[s|souffert]] de son sacrifice."
+      }
+     ]
+    },
+    {
+     "id": "le",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre à la manière de Gide",
+     "blocs": [
+      "Jérôme, je crains que notre bonheur ne nous [[d|détourne]] de ce qui seul est nécessaire. Ne m’écris plus sur le ton d’autrefois ; prie plutôt pour moi."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Gide"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "le",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Dans la lettre, touche le verbe qui dit ce que le bonheur risque de faire.",
+     "aide": "Le bonheur éloigne de ce qui seul est nécessaire.",
+     "explication": "Alissa craint que le bonheur ne les **détourne** de Dieu."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans le débat, touche le verbe qui dit ce que le journal révèle chez Alissa.",
+     "aide": "Rayan répond à Clémence.",
+     "explication": "Le journal révèle qu’Alissa a **souffert** de son sacrifice."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Le récit de Jérôme suivi du journal d’Alissa",
+       "Le lecteur relit toute l’histoire autrement"
+      ],
+      [
+       "Un narrateur qui voit de l’extérieur",
+       "Jérôme ne comprend pas Alissa"
+      ],
+      [
+       "Un titre tiré de l’Évangile",
+       "L’exigence d’une vertu qui exclut le bonheur"
+      ]
+     ],
+     "aide": "Pense à la construction, au point de vue, puis au titre.",
+     "explication": "Le **journal** retourne la lecture ; le **point de vue limité** de Jérôme l’aveugle ; le **titre** dit l’exigence de la vertu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse de dissertation ce récit appuie-t-il le mieux ?",
+     "options": [
+      "Le renoncement érigé en valeur peut mener à la solitude",
+      "Le renoncement garantit toujours une paix profonde",
+      "Le renoncement n’a aucun lien avec la religion",
+      "Le renoncement prépare à un mariage heureux"
+     ],
+     "reponse": 0,
+     "aide": "Le sacrifice d’Alissa ne lui apporte ni paix ni sainteté.",
+     "explication": "Le bonheur refusé au nom de la sainteté ne donne **ni l’un ni l’autre** : il mène à la solitude."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd592e65-2209-5389-8183-7bac8dd872b5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une cour du XVIe siècle vue par le XVIIe",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Princesse de Clèves*. Place l’action et l’autrice dans le temps, puis relève les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Le roman dans le temps",
+     "debut": 1550,
+     "fin": 1700,
+     "pas": 25,
+     "evenements": [
+      {
+       "id": "ac",
+       "date": 1558,
+       "nom": "Action du roman"
+      },
+      {
+       "id": "na",
+       "date": 1634,
+       "nom": "Naissance de l’autrice"
+      },
+      {
+       "id": "pu",
+       "date": 1678,
+       "nom": "Publication"
+      },
+      {
+       "id": "mo",
+       "date": 1693,
+       "nom": "Mort de l’autrice"
+      }
+     ]
+    },
+    {
+     "id": "pe",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il représente"
+     ],
+     "lignes": [
+      [
+       "La princesse",
+       "La conscience qui s’observe et se juge"
+      ],
+      [
+       "Madame de Chartres",
+       "La mère éducatrice, qui enseigne la méfiance"
+      ],
+      [
+       "Le prince de Clèves",
+       "L’époux aimant et estimable"
+      ],
+      [
+       "?",
+       "Le séducteur accompli de la cour"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pu"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication du roman.",
+     "aide": "Elle vient longtemps après l’action.",
+     "explication": "Le roman est publié, anonymement, en **1678**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’action du roman (1558) de sa publication (1678) ?",
+     "reponse": 120,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1678 − 1558 = **120 ans** : Madame de Lafayette peint la cour de Louis XIV sous les traits de celle d’Henri II.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Le duc de Nemours",
+      "Le chevalier de Guise",
+      "Le vidame de Chartres",
+      "Le roi Henri II"
+     ],
+     "reponse": 0,
+     "aide": "La princesse l’aime en silence.",
+     "explication": "C’est le **duc de Nemours**, le séducteur accompli de la cour."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd592e65-2209-5389-8183-7bac8dd872b5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du mariage au refus",
+   "competence": "analyser-texte",
+   "situation": "Un carnet de lecture range les épisodes du roman dans le désordre. Retrouve l’enchaînement.",
+   "documents": [
+    {
+     "id": "ca",
+     "type": "tableau",
+     "titre": "Le carnet de lecture (en désordre)",
+     "colonnes": [
+      "Épisode",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "L’aveu",
+       "Elle avoue à son mari qu’elle aime un autre homme, sans le nommer"
+      ],
+      [
+       "Le refus",
+       "Libre, elle refuse d’épouser Nemours"
+      ],
+      [
+       "Le mariage",
+       "Mademoiselle de Chartres épouse sans amour le prince de Clèves"
+      ],
+      [
+       "Le portrait",
+       "Elle voit Nemours dérober son portrait et ne dit rien"
+      ],
+      [
+       "La mort",
+       "Le prince de Clèves meurt de jalousie et de chagrin"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les cinq épisodes du roman dans l’ordre.",
+     "items": [
+      "Le mariage",
+      "Le portrait",
+      "L’aveu",
+      "La mort",
+      "Le refus"
+     ],
+     "aide": "Le refus est possible parce qu’elle est devenue libre.",
+     "explication": "Ordre : **mariage**, **portrait**, **aveu**, **mort** du prince, **refus**."
+    },
+    {
+     "type": "zone",
+     "document": "ca",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui montre la princesse cachant son trouble par le silence.",
+     "aide": "Elle voit un geste et ne dit rien.",
+     "explication": "Elle voit Nemours dérober son portrait et **ne dit rien** : la passion reste silencieuse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la scène de l’aveu.",
+     "texte": "La princesse avoue qu’elle aime un autre homme, sans le ___, et demande à quitter la ___.",
+     "reponses": [
+      [
+       "nommer"
+      ],
+      [
+       "cour"
+      ]
+     ],
+     "banque": [
+      "nommer",
+      "voir",
+      "cour",
+      "ville"
+     ],
+     "aide": "Relis la ligne « L’aveu ».",
+     "explication": "Elle avoue **sans le nommer** et demande à quitter la **cour**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd592e65-2209-5389-8183-7bac8dd872b5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce qui paraît n’est presque jamais la vérité",
+   "competence": "argumenter",
+   "situation": "Eliott et Mina débattent de la cour. La première phrase du roman et le conseil de Madame de Chartres t’aident à trancher.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Eliott",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eliott",
+       "texte": "La cour, c’est un lieu de sincérité : tout le monde s’y aime."
+      },
+      {
+       "qui": "Mina",
+       "texte": "Sa mère l’avertit : ce qui [[p|paraît]] n’est presque jamais la vérité."
+      }
+     ]
+    },
+    {
+     "id": "ph",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La première phrase du roman",
+     "blocs": [
+      "La [[m|magnificence]] et la [[m|galanterie]] n’ont jamais paru en France avec tant d’éclat que dans les dernières années du règne de Henri second."
+     ],
+     "source": "Madame de Lafayette, *La Princesse de Clèves* (1678), première phrase"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ph",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Dans la première phrase, touche les deux mots qui disent ce qui brille à la cour.",
+     "aide": "Ce sont deux noms abstraits.",
+     "explication": "La cour brille par sa **magnificence** et sa **galanterie** : un monde d’apparences."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le débat, touche le verbe qui résume le conseil de Madame de Chartres.",
+     "aide": "Elle parle des apparences.",
+     "explication": "Ce qui **paraît** n’est presque jamais la vérité : la cour est un théâtre d’apparences."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à ce qu’il montre.",
+     "paires": [
+      [
+       "La cour",
+       "Un système d’observation et de calcul"
+      ],
+      [
+       "Le refus final",
+       "Orgueil, sagesse ou liberté : un grand sujet de dissertation"
+      ],
+      [
+       "La scène de l’aveu",
+       "Une scène sans précédent dans le roman français"
+      ]
+     ],
+     "aide": "Pense à la cour, puis au refus, puis à l’aveu.",
+     "explication": "La **cour** observe et calcule ; le **refus** ouvre le débat ; l’**aveu** est une scène sans précédent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui fait la nouveauté de ce roman ?",
+     "options": [
+      "L’analyse des mouvements intérieurs plutôt que l’action",
+      "Le récit de nombreuses batailles de la cour",
+      "L’histoire détaillée des guerres de religion",
+      "Le portrait comique des nobles de province"
+     ],
+     "reponse": 0,
+     "aide": "Il y a peu de péripéties extérieures.",
+     "explication": "C’est un **roman d’analyse** : l’action extérieure compte moins que les mouvements intérieurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c92f993-cbf7-5452-8a05-7d76420c0cba",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une nouvelle anonyme de 1662",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Princesse de Montpensier*. Lis l’affiche de la nouvelle, puis relie les personnages entre eux.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Princesse de Montpensier",
+     "sousTitre": "Madame de La Fayette",
+     "emoji": "⚔️",
+     "lignes": [
+      {
+       "id": "na",
+       "texte": "Naissance de l’autrice",
+       "valeur": "1634"
+      },
+      {
+       "id": "pu",
+       "texte": "Publication",
+       "valeur": "1662, sans nom d’auteur"
+      },
+      {
+       "id": "ge",
+       "texte": "Genre",
+       "valeur": "Nouvelle historique"
+      },
+      {
+       "id": "ca",
+       "texte": "Cadre",
+       "valeur": "Les guerres de religion"
+      }
+     ],
+     "pied": "Annonce La Princesse de Clèves",
+     "teinte": "ambre"
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Les liens de la princesse",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le duc de Guise"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Le prince de Montpensier"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel âge a Madame de La Fayette quand elle publie cette nouvelle ?",
+     "reponse": 28,
+     "aide": "Soustrais sa naissance de la date de publication.",
+     "explication": "1662 − 1634 = **28 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "La nouvelle paraît sans nom d’___ en ___ ; son cadre : les guerres de ___.",
+     "reponses": [
+      [
+       "auteur"
+      ],
+      [
+       "1662"
+      ],
+      [
+       "religion"
+      ]
+     ],
+     "banque": [
+      "auteur",
+      "éditeur",
+      "1662",
+      "1678",
+      "religion",
+      "Cent Ans"
+     ],
+     "aide": "Relis « Publication » et « Cadre ».",
+     "explication": "La nouvelle paraît sans nom d’**auteur** en **1662** ; son cadre : les guerres de **religion**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » de la chaîne ?",
+     "options": [
+      "Mademoiselle de Mézières, devenue princesse de Montpensier",
+      "Madame de Chartres, la mère de la princesse de Clèves",
+      "Mademoiselle de Scudéry, autrice de longs romans",
+      "La duchesse de Guise, mère du duc de Guise"
+     ],
+     "reponse": 0,
+     "aide": "Elle aime Guise et épouse le prince.",
+     "explication": "C’est **Mademoiselle de Mézières**, amoureuse de Guise, mariée au prince de Montpensier."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c92f993-cbf7-5452-8a05-7d76420c0cba",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le dévouement de Chabannes",
+   "competence": "analyser-texte",
+   "situation": "Une lectrice résume la fin de la nouvelle en commençant par la fin. Remets les événements dans l’ordre.",
+   "documents": [
+    {
+     "id": "re",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le dénouement",
+     "blocs": [
+      "La princesse meurt de chagrin, abandonnée de tous : [[g|Guise]] a épousé une autre femme par ambition. Chabannes, lui, est déjà mort, tué à la Saint-Barthélemy, après avoir sauvé l’honneur de la princesse en se laissant prendre pour l’amant la nuit où le prince surprend Guise dans sa chambre. Tout avait recommencé au retour de Guise, quand la passion était revenue."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les cinq événements dans l’ordre où ils se produisent.",
+     "items": [
+      "Guise revient : la passion renaît",
+      "Le prince surprend Guise chez sa femme",
+      "Chabannes se laisse prendre pour l’amant",
+      "Chabannes est tué à la Saint-Barthélemy",
+      "Guise épouse une autre ; la princesse meurt"
+     ],
+     "aide": "Le résumé commence par la fin : cherche « avait recommencé ».",
+     "explication": "Ordre : **retour de Guise**, **surprise du prince**, **sacrifice de Chabannes**, **Saint-Barthélemy**, puis la mort de la princesse."
+    },
+    {
+     "type": "zone",
+     "document": "re",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Dans le texte, touche le nom de celui qui abandonne la princesse par ambition.",
+     "aide": "Il épouse une autre femme.",
+     "explication": "**Guise** épouse une autre femme par ambition."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le dévouement de Chabannes, jamais récompensé ?",
+     "options": [
+      "Une loyauté absolue qui ne sauve personne",
+      "Une ruse destinée à séduire la princesse",
+      "Une jalousie qui s’abat sur son maître",
+      "Une ambition qui cherche la faveur du roi"
+     ],
+     "reponse": 0,
+     "aide": "Il se sacrifie sans rien obtenir.",
+     "explication": "Son **dévouement absolu n’est jamais récompensé** : l’une des grandes créations de l’autrice."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c92f993-cbf7-5452-8a05-7d76420c0cba",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Si la vertu et la prudence…",
+   "competence": "argumenter",
+   "situation": "Sacha et Lou débattent de la fin de la nouvelle. La fin de la dernière phrase, citée dans le cours, t’aide à trancher.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sacha",
+       "texte": "La nouvelle accuse les hommes : ils trahissent tous la princesse."
+      },
+      {
+       "qui": "Lou",
+       "texte": "La dernière phrase juge aussi la [[p|princesse]] : il lui a manqué vertu et prudence."
+      }
+     ]
+    },
+    {
+     "id": "fi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La fin de la nouvelle",
+     "blocs": [
+      "[…] et qui en aurait été sans doute la plus heureuse, si la [[q|vertu]] et la [[q|prudence]] eussent conduit toutes ses actions."
+     ],
+     "source": "Madame de La Fayette, *La Princesse de Montpensier* (1662), fin de la dernière phrase"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fi",
+     "multiple": true,
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Dans la phrase, touche les deux qualités qui auraient dû conduire les actions de la princesse.",
+     "aide": "Ce sont deux noms qui commencent par un v et un p.",
+     "explication": "**Vertu** et **prudence** : voilà ce qui aurait fait son bonheur."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le débat, touche le nom du personnage que la dernière phrase met aussi en cause.",
+     "aide": "Lou répond à Sacha.",
+     "explication": "La dernière phrase met en cause la **princesse** elle-même."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix d’écriture à son effet.",
+     "paires": [
+      [
+       "Un narrateur sobre qui juge en une phrase",
+       "Une leçon morale nette, sans longs commentaires"
+      ],
+      [
+       "Le dévouement de Chabannes jamais récompensé",
+       "Une figure de loyauté sans salut"
+      ],
+      [
+       "Un cadre historique réel",
+       "Une rupture avec les longs romans héroïques"
+      ]
+     ],
+     "aide": "Pense à la brièveté, à Chabannes, puis au cadre.",
+     "explication": "Le narrateur **juge en une phrase** ; Chabannes est un dévouement sans salut ; le cadre **historique réel** rompt avec les romans héroïques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée de dissertation cette nouvelle appuie-t-elle ?",
+     "options": [
+      "La passion se paie par la mort ou le renoncement",
+      "La passion garantit le bonheur dans le mariage",
+      "La passion disparaît quand la famille consent",
+      "La passion n’intéresse que les personnages secondaires"
+     ],
+     "reponse": 0,
+     "aide": "La princesse meurt de chagrin ; Chabannes meurt aussi.",
+     "explication": "Chez Madame de La Fayette, la passion ne se paie jamais autrement que par la **mort** ou le **renoncement**."
+    }
+   ]
+  }
+ ]
+}

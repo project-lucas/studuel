@@ -1,0 +1,5179 @@
+{
+ "niveau": "2de",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "0f4c7b7f-4cd7-5f83-a328-7ed3dfa8af40",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les échantillons de la cuisine",
+   "competence": "analyser-document",
+   "situation": "Camille range la cuisine et observe cinq échantillons avant de les classer pour son exposé de physique-chimie.",
+   "documents": [
+    {
+     "id": "cuisine",
+     "type": "tableau",
+     "titre": "Le carnet de Camille",
+     "colonnes": [
+      "Échantillon",
+      "Ce que Camille observe"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Sucre en poudre (saccharose)",
+       "Une seule espèce chimique"
+      ],
+      [
+       "Eau salée",
+       "Liquide limpide, une seule phase visible"
+      ],
+      [
+       "Eau et huile",
+       "Deux phases bien séparées"
+      ],
+      [
+       "Jus d’orange avec pulpe",
+       "Liquide avec des morceaux en suspension"
+      ],
+      [
+       "Air de la pièce",
+       "Gaz, une seule phase"
+      ]
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cuisine",
+     "multiple": true,
+     "reponse": [
+      "r2c0",
+      "r3c0"
+     ],
+     "enonce": "Touche les échantillons qui sont des mélanges hétérogènes.",
+     "aide": "Un mélange hétérogène montre plusieurs phases que l’on peut distinguer.",
+     "explication": "**L’eau et l’huile** (deux phases) et **le jus avec pulpe** (pulpe visible) sont hétérogènes. Les autres ne montrent qu’une seule phase."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque échantillon dans la bonne catégorie.",
+     "categories": [
+      "Corps pur",
+      "Mélange homogène",
+      "Mélange hétérogène"
+     ],
+     "items": [
+      [
+       "Sucre en poudre",
+       0
+      ],
+      [
+       "Eau salée",
+       1
+      ],
+      [
+       "Air de la pièce",
+       1
+      ],
+      [
+       "Eau et huile",
+       2
+      ],
+      [
+       "Jus avec pulpe",
+       2
+      ]
+     ],
+     "aide": "Compte d’abord les espèces chimiques, puis le nombre de phases visibles.",
+     "explication": "Le **sucre** n’a qu’une espèce : corps pur. **L’eau salée** et **l’air** ont plusieurs espèces mais une seule phase : homogènes. **Eau-huile** et **jus avec pulpe** : hétérogènes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de conclusion de Camille.",
+     "texte": "Un mélange homogène ne comporte qu’une seule ___ visible.",
+     "reponses": [
+      [
+       "phase"
+      ]
+     ],
+     "banque": [
+      "phase",
+      "espèce",
+      "couleur",
+      "bulle"
+     ],
+     "aide": "Pense au mot qui compte les « zones » distinctes dans un récipient.",
+     "explication": "Dans un mélange homogène, on ne voit qu’une seule **phase** : le critère est physique, même si plusieurs espèces sont présentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f4c7b7f-4cd7-5f83-a328-7ed3dfa8af40",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux glaçons, deux courbes",
+   "competence": "lire-graphique",
+   "situation": "Maël chauffe doucement deux petits blocs de glace sortis du congélateur : l’échantillon A est de l’eau distillée gelée, l’échantillon B de l’eau salée gelée. Il note la température chaque minute.",
+   "documents": [
+    {
+     "id": "chauffe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température des deux échantillons en fonction du temps",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "Échantillon A",
+       "valeurs": [
+        -10,
+        -5,
+        0,
+        0,
+        0,
+        0,
+        10,
+        20,
+        30,
+        40,
+        50
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Échantillon B",
+       "valeurs": [
+        -14,
+        -10,
+        -7,
+        -5,
+        -3,
+        -1,
+        3,
+        10,
+        18,
+        27,
+        36
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": -20,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chauffe",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche l’instant où l’échantillon A atteint son palier de température.",
+     "aide": "Cherche la première minute où la courbe A devient horizontale.",
+     "explication": "La courbe A atteint 0 °C à la minute **2** et y reste : c’est le début du palier de fusion."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée du palier de température de l’échantillon A ?",
+     "reponse": 3,
+     "unite": "min",
+     "aide": "Repère la première et la dernière minute où A vaut 0 °C, puis fais la différence.",
+     "explication": "A vaut 0 °C de la minute 2 à la minute 5 : durée = 5 − 2 = **3 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle température a lieu ce palier ?",
+     "reponse": 0,
+     "unite": "°C",
+     "aide": "Lis l’ordonnée de la partie horizontale de la courbe A.",
+     "explication": "Le palier se situe à **0 °C** : c’est la température de fusion de l’eau pure sous 1 013 hPa."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel échantillon est un corps pur, et pourquoi ?",
+     "options": [
+      "A : sa température reste constante pendant le changement d’état",
+      "B : sa température monte sans cesse, comme un corps pur",
+      "A : sa température change plus vite que celle de B",
+      "B : il fond à une température plus basse que A"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "Un corps pur présente un palier net pendant le changement d’état.",
+     "explication": "**A** est un corps pur : pendant la fusion sa température reste constante. B monte régulièrement, sans palier net : c’est un mélange."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f4c7b7f-4cd7-5f83-a328-7ed3dfa8af40",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Récupérer l’éthanol d’un mélange",
+   "competence": "observer-schema",
+   "situation": "Léa dispose d’un mélange d’eau et d’éthanol. Elle réalise une distillation pour récupérer l’éthanol, puis mesure 25,0 mL du liquide recueilli : sa masse est de 19,75 g.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données sous 1 013 hPa",
+     "colonnes": [
+      "Espèce",
+      "Température d’ébullition (°C)",
+      "Masse volumique (g·mL⁻¹)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Eau",
+       100,
+       "1,00"
+      ],
+      [
+       "Éthanol",
+       78,
+       "0,79"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Le montage de Léa",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 233,
+       "l": 310,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 300,
+       "y": 40,
+       "l": 8,
+       "h": 193,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 190,
+       "l": 84,
+       "h": 43,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 67,
+       "cy": 160,
+       "r": 34,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "ballon",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 59,
+       "y": 96,
+       "l": 16,
+       "h": 34,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 67,
+       "y": 164,
+       "texte": "mélange",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 64,
+       "y": 52,
+       "l": 6,
+       "h": 50,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "thermometre",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 67,
+       "cy": 105,
+       "r": 4,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 57,
+       "y": 44,
+       "l": 20,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        75,
+        100
+       ],
+       "a": [
+        118,
+        95
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         122,
+         85
+        ],
+        [
+         254,
+         140
+        ],
+        [
+         246,
+         160
+        ],
+        [
+         114,
+         105
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "refrigerant",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        95
+       ],
+       "a": [
+        250,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        226,
+        152
+       ],
+       "a": [
+        219,
+        169
+       ],
+       "epaisseur": 3,
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        149,
+        96
+       ],
+       "a": [
+        156,
+        79
+       ],
+       "epaisseur": 3,
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        300,
+        128
+       ],
+       "a": [
+        196,
+        128
+       ],
+       "epaisseur": 3,
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        158
+       ],
+       "a": [
+        254,
+        186
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 238,
+       "y": 185,
+       "l": 32,
+       "h": 48,
+       "arrondi": 4,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "eprouvette",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 215,
+       "l": 28,
+       "h": 18,
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ],
+     "source": "Schéma simplifié, sans légende"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "reponse": [
+      "refrigerant"
+     ],
+     "enonce": "Touche l’élément du montage qui refroidit les vapeurs pour les liquéfier.",
+     "aide": "C’est le long tube traversé par de l’eau froide.",
+     "explication": "Le **réfrigérant** est refroidi par la circulation d’eau : les vapeurs s’y liquéfient avant de tomber dans l’éprouvette."
+    },
+    {
+     "type": "zone",
+     "document": "montage",
+     "reponse": [
+      "thermometre"
+     ],
+     "enonce": "Touche l’élément qui permet de suivre la température des vapeurs.",
+     "aide": "Cherche l’instrument fixé en haut du ballon.",
+     "explication": "Le **thermomètre**, placé en haut du ballon, mesure la température des vapeurs : elle reste voisine de celle d’ébullition du constituant qui distille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle espèce arrive la première dans l’éprouvette, d’après le tableau ?",
+     "options": [
+      "L’éthanol, dont la température d’ébullition est la plus basse",
+      "L’eau, dont la température d’ébullition est la plus basse",
+      "L’éthanol, dont la masse volumique est la plus élevée",
+      "L’eau, dont la masse volumique est la plus élevée"
+     ],
+     "reponse": 0,
+     "aide": "La distillation sépare selon les températures d’ébullition : laquelle s’évapore en premier ?",
+     "explication": "L’éthanol bout à **78 °C**, avant l’eau (100 °C) : ses vapeurs montent d’abord, se liquéfient et s’accumulent dans l’éprouvette."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse volumique du liquide recueilli, en g·mL⁻¹.",
+     "reponse": 0.79,
+     "tolerance": 0.005,
+     "unite": "g·mL⁻¹",
+     "aide": "ρ = m / V, avec la masse en grammes et le volume en millilitres.",
+     "explication": "ρ = m / V = 19,75 g / 25,0 mL = **0,79 g·mL⁻¹** : c’est celle de l’éthanol, le distillat est bien de l’éthanol."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le distillat est-il plus ou moins dense que l’eau ?",
+     "texte": "La densité du distillat vaut ___ : elle est ___ à 1, donc il flotte sur l’eau.",
+     "reponses": [
+      [
+       "0,79",
+       "0.79"
+      ],
+      [
+       "inférieure"
+      ]
+     ],
+     "banque": [
+      "0,79",
+      "1,26",
+      "inférieure",
+      "supérieure"
+     ],
+     "aide": "La densité est la masse volumique rapportée à celle de l’eau (1,00 g·mL⁻¹).",
+     "explication": "d = 0,79 / 1,00 = **0,79**, **inférieure** à 1 : un corps moins dense que l’eau flotte dessus."
+    }
+   ]
+  },
+  {
+   "chapitre": "eacc2aa2-858e-5f5f-ae21-4006a908f025",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La limonade de Théo",
+   "competence": "calculer",
+   "situation": "Théo prépare de la limonade maison pour le goûter : il dissout du sucre dans de l’eau puis complète jusqu’au trait de sa carafe graduée.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Limonade de Théo",
+     "sousTitre": "Pour toute la bande",
+     "emoji": "🍋",
+     "lignes": [
+      {
+       "texte": "Sucre en poudre",
+       "valeur": "15 g",
+       "id": "sucre"
+      },
+      {
+       "texte": "Eau",
+       "valeur": "jusqu’au trait de la carafe",
+       "id": "eau"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Volume de limonade obtenu",
+       "valeur": "0,50 L",
+       "id": "volume",
+       "gras": true
+      }
+     ],
+     "pied": "Recette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recette",
+     "reponse": [
+      "sucre"
+     ],
+     "enonce": "Touche la ligne qui désigne le soluté de cette solution.",
+     "aide": "Le soluté est l’espèce dissoute, présente en petite quantité.",
+     "explication": "Le **sucre** est dissous : c’est le soluté. L’eau, majoritaire, est le solvant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en masse de sucre dans la limonade, en g·L⁻¹.",
+     "reponse": 30,
+     "unite": "g·L⁻¹",
+     "aide": "Divise la masse de sucre par le volume de la solution obtenue.",
+     "explication": "t = m / V = 15 g / 0,50 L = **30 g·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Théo se sert un verre de 0,20 L. Quelle masse de sucre ce verre contient-il ?",
+     "reponse": 6,
+     "unite": "g",
+     "aide": "Utilise t = m / V pour retrouver m, avec la concentration trouvée juste avant.",
+     "explication": "m = t × V = 30 g·L⁻¹ × 0,20 L = **6,0 g**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Théo complète-t-il jusqu’au trait de la carafe plutôt que de verser 0,50 L d’eau ?",
+     "options": [
+      "Le volume qui compte est celui de la solution obtenue, pas celui de l’eau ajoutée",
+      "Le sucre disparaît entièrement et n’occupe aucune place dans la solution",
+      "Le trait de la carafe donne directement la masse de sucre dissous",
+      "Il faut toujours plus d’eau que de sucre pour que la solution soit saturée"
+     ],
+     "reponse": 0,
+     "aide": "Relis la précision sur V dans la définition de la concentration en masse.",
+     "explication": "Dans t = m / V, V est le volume de la **solution obtenue** : le sucre dissous prend un peu de place, d’où le trait de jauge."
+    }
+   ]
+  },
+  {
+   "chapitre": "eacc2aa2-858e-5f5f-ae21-4006a908f025",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Éclaircir une solution de sulfate de cuivre",
+   "competence": "resoudre",
+   "situation": "En TP, Inès dispose d’un flacon de solution mère de sulfate de cuivre II. Elle veut préparer 100,0 mL de solution fille de concentration en masse 8,0 g·L⁻¹.",
+   "documents": [
+    {
+     "id": "flacon",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Sulfate de cuivre II",
+     "sousTitre": "Solution aqueuse",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Concentration en masse t₁",
+       "valeur": "40,0 g·L⁻¹",
+       "id": "mere"
+      },
+      {
+       "texte": "Solution mère",
+       "valeur": "bleue"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "verrerie",
+     "type": "tableau",
+     "titre": "La verrerie du placard",
+     "colonnes": [
+      "Verrerie",
+      "Contenance (mL)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Pipette jaugée",
+       "5,0"
+      ],
+      [
+       "Pipette jaugée",
+       "10,0"
+      ],
+      [
+       "Pipette jaugée",
+       "20,0"
+      ],
+      [
+       "Fiole jaugée",
+       "100,0"
+      ],
+      [
+       "Fiole jaugée",
+       "250,0"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le facteur de dilution F = t₁ / t₂.",
+     "reponse": 5,
+     "aide": "Divise la concentration de la solution mère par celle de la solution fille souhaitée.",
+     "explication": "F = t₁ / t₂ = 40,0 / 8,0 = **5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume V₁ de solution mère faut-il prélever pour obtenir 100,0 mL de solution fille ?",
+     "reponse": 20,
+     "unite": "mL",
+     "aide": "La quantité de soluté se conserve : t₁ × V₁ = t₂ × V₂, ou V₁ = V₂ / F.",
+     "explication": "V₁ = V₂ / F = 100,0 / 5 = **20,0 mL**."
+    },
+    {
+     "type": "zone",
+     "document": "verrerie",
+     "multiple": true,
+     "reponse": [
+      "r2c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les contenances de la pipette jaugée et de la fiole jaugée à utiliser.",
+     "aide": "La pipette prélève V₁ ; la fiole reçoit tout le volume final.",
+     "explication": "Pipette jaugée de **20,0 mL** pour prélever V₁ et fiole jaugée de **100,0 mL** pour le volume final."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de sulfate de cuivre II le prélèvement de la solution mère contient-il ?",
+     "reponse": 0.8,
+     "tolerance": 0.005,
+     "unite": "g",
+     "aide": "Multiplie t₁ par V₁ exprimé en litres.",
+     "explication": "m = t₁ × V₁ = 40,0 g·L⁻¹ × 0,0200 L = **0,80 g**, soit exactement la masse de soluté de la solution fille : elle se conserve."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les gestes de la dilution.",
+     "items": [
+      "Prélever 20,0 mL de solution mère à la pipette jaugée",
+      "Verser ce volume dans la fiole jaugée de 100,0 mL",
+      "Ajouter de l’eau distillée jusqu’au trait de jauge",
+      "Boucher la fiole et l’agiter pour homogénéiser"
+     ],
+     "aide": "On prélève, on introduit, on complète, et on mélange en dernier.",
+     "explication": "On **prélève**, on **introduit** dans la fiole, on **complète** au trait de jauge, puis on **homogénéise**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eacc2aa2-858e-5f5f-ae21-4006a908f025",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien de colorant dans le sirop ?",
+   "competence": "modeliser",
+   "situation": "Sara veut savoir combien de colorant bleu contient son sirop. Elle prépare des étalons, mesure leur absorbance, puis mesure celle du sirop après l’avoir dilué dix fois (prélèvement de 10,0 mL complété à 100,0 mL).",
+   "documents": [
+    {
+     "id": "etalonnage",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Courbe d’étalonnage",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0,
+        0.12,
+        0.24,
+        0.36,
+        0.48,
+        0.6
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 0.7,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Concentration en colorant (mg·L⁻¹)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    },
+    {
+     "id": "mesure",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Carnet de TP de Sara",
+     "sousTitre": "Sirop bleu",
+     "emoji": "📓",
+     "lignes": [
+      {
+       "texte": "Absorbance du sirop dilué",
+       "valeur": "A = 0,30",
+       "id": "abs",
+       "gras": true
+      },
+      {
+       "texte": "Facteur de dilution",
+       "valeur": "10"
+      },
+      {
+       "texte": "Volume de la bouteille de sirop",
+       "valeur": "250 mL",
+       "id": "bouteille"
+      }
+     ],
+     "pied": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etalonnage",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la concentration de l’étalon dont l’absorbance vaut 0,36.",
+     "aide": "Repère le point de la courbe à la hauteur 0,36, puis lis son abscisse.",
+     "explication": "L’étalon d’absorbance 0,36 a pour concentration **6 mg·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la concentration en colorant du sirop dilué sur la courbe d’étalonnage.",
+     "reponse": 5,
+     "tolerance": 0.1,
+     "unite": "mg·L⁻¹",
+     "aide": "Pars de A = 0,30 sur l’axe vertical, rejoins la courbe, puis descends sur l’axe horizontal.",
+     "explication": "La courbe est une droite : A = 0,06 × c. Pour A = 0,30, c = 0,30 / 0,06 = **5,0 mg·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en colorant du sirop non dilué ?",
+     "reponse": 50,
+     "tolerance": 1,
+     "unite": "mg·L⁻¹",
+     "aide": "La solution mesurée a été diluée dix fois : la solution de départ est dix fois plus concentrée.",
+     "explication": "c(sirop) = F × c(dilué) = 10 × 5,0 = **50 mg·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de colorant la bouteille de 250 mL contient-elle ?",
+     "reponse": 12.5,
+     "tolerance": 0.2,
+     "unite": "mg",
+     "aide": "Multiplie la concentration du sirop par son volume en litres.",
+     "explication": "m = t × V = 50 mg·L⁻¹ × 0,250 L = **12,5 mg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Sara dilue-t-elle le sirop avant de mesurer son absorbance ?",
+     "options": [
+      "Pour que la mesure tombe dans la gamme couverte par les étalons",
+      "Pour que l’absorbance devienne indépendante de la concentration",
+      "Pour changer la couleur du colorant et mieux la mesurer",
+      "Pour que le sirop soit saturé en colorant avant la mesure"
+     ],
+     "reponse": 0,
+     "aide": "Le sirop pur est très coloré : son absorbance serait-elle lisible sur la courbe ?",
+     "explication": "On ne peut lire une concentration que **dans la gamme des étalons** : le sirop pur serait bien plus concentré que le dernier étalon (10 mg·L⁻¹)."
+    }
+   ]
+  },
+  {
+   "chapitre": "37a47f84-0811-5f2c-a63c-f61467d9c29f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre tubes, quatre tests",
+   "competence": "analyser-document",
+   "situation": "Zoé a recueilli quatre gaz ou liquides dans quatre tubes à essai et leur a appliqué un test caractéristique. Elle note ses résultats dans son carnet.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Le carnet de Zoé",
+     "colonnes": [
+      "Tube",
+      "Test réalisé",
+      "Observation"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "A",
+       "Bûchette incandescente",
+       "Elle se rallume"
+      ],
+      [
+       "B",
+       "Eau de chaux",
+       "Elle se trouble"
+      ],
+      [
+       "C",
+       "Sulfate de cuivre anhydre",
+       "Il passe du blanc au bleu"
+      ],
+      [
+       "D",
+       "Flamme approchée",
+       "Petite détonation"
+      ]
+     ],
+     "source": "Observations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche l’observation qui met en évidence le dioxyde de carbone.",
+     "aide": "Quel réactif se trouble en présence de dioxyde de carbone ?",
+     "explication": "L’**eau de chaux qui se trouble** est le test du dioxyde de carbone."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tube à l’espèce qu’il contient.",
+     "paires": [
+      [
+       "Tube A",
+       "Dioxygène"
+      ],
+      [
+       "Tube B",
+       "Dioxyde de carbone"
+      ],
+      [
+       "Tube C",
+       "Eau"
+      ],
+      [
+       "Tube D",
+       "Dihydrogène"
+      ]
+     ],
+     "aide": "Relie chaque observation à son test caractéristique du cours.",
+     "explication": "Bûchette qui se rallume : **dioxygène**. Eau de chaux trouble : **CO₂**. Sulfate de cuivre bleui : **eau**. Détonation : **dihydrogène**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Zoé réalise-t-elle quatre tests différents ?",
+     "options": [
+      "Chaque espèce chimique a son propre test caractéristique",
+      "Un seul test suffit mais elle veut le vérifier quatre fois",
+      "Les quatre tests donnent toujours le même résultat",
+      "Chaque test sert à mesurer la masse de l’espèce présente"
+     ],
+     "reponse": 0,
+     "aide": "Peut-on détecter l’eau avec la bûchette incandescente ?",
+     "explication": "Un test n’est **caractéristique que d’une espèce** : pour identifier le contenu d’un tube, on choisit le test de l’espèce soupçonnée."
+    }
+   ]
+  },
+  {
+   "chapitre": "37a47f84-0811-5f2c-a63c-f61467d9c29f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les colorants d’un bonbon",
+   "competence": "observer-schema",
+   "situation": "Samir veut savoir quels colorants contient l’enrobage d’un bonbon. Il réalise une chromatographie sur couche mince avec deux colorants de référence, A et B, et la règle graduée en centimètres posée à côté de la plaque.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "schema",
+     "titre": "La plaque après élution",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 20,
+       "l": 250,
+       "h": 200,
+       "arrondi": 3,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        200
+       ],
+       "a": [
+        300,
+        200
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        50
+       ],
+       "a": [
+        300,
+        50
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 40,
+       "texte": "Front de l’éluant",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 214,
+       "texte": "Ligne de dépôt",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        200
+       ],
+       "a": [
+        40,
+        50
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        200
+       ],
+       "a": [
+        40,
+        200
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 204,
+       "texte": "0",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        175
+       ],
+       "a": [
+        40,
+        175
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 179,
+       "texte": "1",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        150
+       ],
+       "a": [
+        40,
+        150
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 154,
+       "texte": "2",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        125
+       ],
+       "a": [
+        40,
+        125
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 129,
+       "texte": "3",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        100
+       ],
+       "a": [
+        40,
+        100
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 104,
+       "texte": "4",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        75
+       ],
+       "a": [
+        40,
+        75
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 79,
+       "texte": "5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        50
+       ],
+       "a": [
+        40,
+        50
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 54,
+       "texte": "6",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 14,
+       "texte": "cm",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 200,
+       "r": 2,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 175,
+       "cy": 200,
+       "r": 2,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 245,
+       "cy": 200,
+       "r": 2,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 105,
+       "cy": 125,
+       "rx": 9,
+       "ry": 6,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "refA",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 245,
+       "cy": 162.5,
+       "rx": 9,
+       "ry": 6,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "refB",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 125,
+       "rx": 9,
+       "ry": 6,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "b1",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 87.5,
+       "rx": 9,
+       "ry": 6,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "b2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 238,
+       "texte": "Réf. A",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 238,
+       "texte": "Bonbon",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 245,
+       "y": 238,
+       "texte": "Réf. B",
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Plaque simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’espèces colorées le bonbon contient-il, d’après la plaque ?",
+     "reponse": 2,
+     "aide": "Compte les taches dans la colonne « Bonbon ».",
+     "explication": "La colonne du bonbon montre **deux taches** : au moins deux espèces colorées."
+    },
+    {
+     "type": "zone",
+     "document": "plaque",
+     "reponse": [
+      "b1"
+     ],
+     "enonce": "Touche la tache du bonbon qui a migré à la même hauteur que la référence A.",
+     "aide": "Compare les hauteurs avec la règle graduée.",
+     "explication": "La tache du bonbon à **3,0 cm** est à la hauteur de la référence A : c’est probablement la même espèce."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rapport frontal Rf de la tache la plus haute du bonbon. Le front de l’éluant est à 6,0 cm de la ligne de dépôt.",
+     "reponse": 0.75,
+     "tolerance": 0.02,
+     "aide": "Rf = distance parcourue par la tache / distance parcourue par le front.",
+     "explication": "La tache est à 4,5 cm : Rf = 4,5 / 6,0 = **0,75**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de la tache la plus haute du bonbon ?",
+     "options": [
+      "Elle ne correspond à aucune des deux références, A ou B",
+      "Elle correspond à la référence B, car elle est plus haute",
+      "Elle correspond à la référence A, car elle est colorée",
+      "Elle prouve que le bonbon ne contient pas de colorant A"
+     ],
+     "reponse": 0,
+     "aide": "Cherche une référence qui a migré à la même hauteur : y en a-t-il une ?",
+     "explication": "Aucune référence ne migre à **4,5 cm** : cette espèce est différente de A et de B (elle reste à identifier)."
+    }
+   ]
+  },
+  {
+   "chapitre": "37a47f84-0811-5f2c-a63c-f61467d9c29f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le liquide incolore du placard",
+   "competence": "raisonner",
+   "situation": "Léna trouve un flacon sans étiquette contenant un liquide incolore. Elle suspecte l’un des liquides de la liste ci-dessous et réalise trois mesures, qu’elle croise pour identifier l’espèce.",
+   "documents": [
+    {
+     "id": "refs",
+     "type": "tableau",
+     "titre": "Grandeurs de référence",
+     "colonnes": [
+      "Liquide",
+      "ρ (g·mL⁻¹)",
+      "Indice de réfraction n",
+      "Température d’ébullition (°C)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Eau",
+       "1,00",
+       "1,333",
+       100
+      ],
+      [
+       "Acétone",
+       "0,791",
+       "1,359",
+       56
+      ],
+      [
+       "Éthanol",
+       "0,789",
+       "1,361",
+       78
+      ],
+      [
+       "Propan-2-ol",
+       "0,786",
+       "1,377",
+       82
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "mesures",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Mesures de Léna",
+     "sousTitre": "Liquide inconnu",
+     "emoji": "📏",
+     "lignes": [
+      {
+       "texte": "Volume prélevé",
+       "valeur": "25,0 mL"
+      },
+      {
+       "texte": "Masse du volume prélevé",
+       "valeur": "19,8 g"
+      },
+      {
+       "texte": "Incertitude sur ρ",
+       "valeur": "± 0,010 g·mL⁻¹"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Indice de réfraction",
+       "valeur": "n = 1,360 (± 0,002)",
+       "id": "nmes"
+      },
+      {
+       "texte": "Température d’ébullition",
+       "valeur": "77 °C",
+       "id": "tmes"
+      }
+     ],
+     "pied": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse volumique du liquide inconnu, en g·mL⁻¹, arrondie au millième.",
+     "reponse": 0.792,
+     "tolerance": 0.001,
+     "unite": "g·mL⁻¹",
+     "aide": "ρ = m / V, avec 19,8 g et 25,0 mL.",
+     "explication": "ρ = m / V = 19,8 / 25,0 = **0,792 g·mL⁻¹**."
+    },
+    {
+     "type": "zone",
+     "document": "refs",
+     "multiple": true,
+     "reponse": [
+      "r1c1",
+      "r2c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les masses volumiques compatibles avec la mesure de Léna, compte tenu de l’incertitude.",
+     "aide": "La mesure est 0,792 ± 0,010 : quelles valeurs de référence sont dans cet intervalle ?",
+     "explication": "L’intervalle va de 0,782 à 0,802 : l’**acétone, l’éthanol et le propan-2-ol** conviennent. L’eau (1,00) est exclue."
+    },
+    {
+     "type": "zone",
+     "document": "refs",
+     "multiple": true,
+     "reponse": [
+      "r1c2",
+      "r2c2"
+     ],
+     "enonce": "Touche les indices de réfraction compatibles avec n = 1,360 ± 0,002.",
+     "aide": "Calcule l’intervalle 1,358 – 1,362 et compare-le aux trois liquides restants.",
+     "explication": "L’**acétone (1,359)** et l’**éthanol (1,361)** sont dans l’intervalle ; le propan-2-ol (1,377) est écarté. Deux candidats restent."
+    },
+    {
+     "type": "choix",
+     "enonce": "La température d’ébullition mesurée est 77 °C. Quel liquide Léna a-t-elle identifié ?",
+     "options": [
+      "L’éthanol",
+      "L’acétone",
+      "Le propan-2-ol",
+      "L’eau"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare 77 °C aux températures d’ébullition des deux candidats qui restent.",
+     "explication": "77 °C est proche des 78 °C de l’**éthanol** et très loin des 56 °C de l’acétone."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Léna n’a-t-elle pas conclu avec la seule masse volumique ?",
+     "options": [
+      "Plusieurs liquides ont des masses volumiques compatibles avec l’incertitude",
+      "Une masse volumique ne dépend jamais de l’espèce chimique",
+      "La masse volumique d’un liquide change avec la quantité prélevée",
+      "Il est interdit d’identifier un liquide avec une seule grandeur"
+     ],
+     "reponse": 0,
+     "aide": "Regarde combien de lignes du tableau étaient compatibles avec ρ.",
+     "explication": "Trois liquides restaient compatibles : une seule mesure rend l’identité **probable**, pas certaine. Il faut **croiser** plusieurs indices."
+    }
+   ]
+  },
+  {
+   "chapitre": "dde4e188-ec24-51d2-b85b-0cd0e4bee7ae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La carte d’identité des noyaux",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé, Hugo recopie dans un tableau le numéro atomique et le nombre de masse de cinq noyaux.",
+   "documents": [
+    {
+     "id": "noyaux",
+     "type": "tableau",
+     "titre": "Cinq noyaux",
+     "colonnes": [
+      "Élément",
+      "Symbole",
+      "Z",
+      "A"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Hélium",
+       "He",
+       2,
+       4
+      ],
+      [
+       "Carbone",
+       "C",
+       6,
+       12
+      ],
+      [
+       "Oxygène",
+       "O",
+       8,
+       16
+      ],
+      [
+       "Sodium",
+       "Na",
+       11,
+       23
+      ],
+      [
+       "Chlore",
+       "Cl",
+       17,
+       35
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "noyaux",
+     "reponse": [
+      "r3c2"
+     ],
+     "enonce": "Touche le nombre de protons du noyau de sodium.",
+     "aide": "Le nombre de protons est le numéro atomique, noté Z.",
+     "explication": "Le noyau de sodium contient **11 protons** : Z = 11."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de neutrons le noyau de sodium contient-il ?",
+     "reponse": 12,
+     "aide": "Le nombre de neutrons est A − Z.",
+     "explication": "N = A − Z = 23 − 11 = **12**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons possède l’ion Na⁺ ?",
+     "reponse": 10,
+     "aide": "L’atome neutre a autant d’électrons que de protons ; l’ion Na⁺ en a perdu un.",
+     "explication": "L’atome Na a 11 électrons ; en perdant un électron il devient Na⁺ avec **10 électrons** : le noyau, lui, ne change pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "dde4e188-ec24-51d2-b85b-0cd0e4bee7ae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les trois carbones",
+   "competence": "raisonner",
+   "situation": "Le carbone existe dans la nature sous trois formes. Lucie prépare une fiche et souhaite aussi estimer la masse d’un atome de carbone 12, sachant qu’un nucléon pèse environ 1,67 × 10⁻²⁷ kg.",
+   "documents": [
+    {
+     "id": "isotopes",
+     "type": "tableau",
+     "titre": "Les isotopes du carbone",
+     "colonnes": [
+      "Isotope",
+      "Z",
+      "A",
+      "Abondance naturelle"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "¹²C",
+       6,
+       12,
+       "98,9 %"
+      ],
+      [
+       "¹³C",
+       6,
+       13,
+       "1,1 %"
+      ],
+      [
+       "¹⁴C",
+       6,
+       14,
+       "traces"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "isotopes",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche l’isotope dont le noyau contient 8 neutrons.",
+     "aide": "Calcule A − Z pour chaque ligne.",
+     "explication": "Pour ¹⁴C : 14 − 6 = **8 neutrons**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque isotope à son nombre de neutrons.",
+     "paires": [
+      [
+       "Carbone 12",
+       "6 neutrons"
+      ],
+      [
+       "Carbone 13",
+       "7 neutrons"
+      ],
+      [
+       "Carbone 14",
+       "8 neutrons"
+      ]
+     ],
+     "aide": "Utilise N = A − Z, avec Z = 6 pour les trois.",
+     "explication": "¹²C : 12 − 6 = **6** ; ¹³C : 13 − 6 = **7** ; ¹⁴C : 14 − 6 = **8**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ces trois isotopes ont-ils les mêmes propriétés chimiques ?",
+     "options": [
+      "Ils ont le même nombre d’électrons",
+      "Ils ont le même nombre de neutrons",
+      "Ils ont le même nombre de masse",
+      "Ils ont la même abondance dans la nature"
+     ],
+     "reponse": 0,
+     "aide": "Ce sont les électrons qui interviennent dans les réactions chimiques.",
+     "explication": "Même Z, donc même nombre d’électrons dans l’atome neutre : les propriétés chimiques dépendent des **électrons**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Estime la masse d’un atome de ¹²C, en 10⁻²⁶ kg, arrondie au dixième (on néglige les électrons).",
+     "reponse": 2,
+     "tolerance": 0.05,
+     "unite": "× 10⁻²⁶ kg",
+     "aide": "Multiplie le nombre de nucléons par la masse d’un nucléon.",
+     "explication": "m ≈ A × m(nucléon) = 12 × 1,67 × 10⁻²⁷ kg = 20,04 × 10⁻²⁷ kg ≈ **2,0 × 10⁻²⁶ kg**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dde4e188-ec24-51d2-b85b-0cd0e4bee7ae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un atome presque vide",
+   "competence": "modeliser",
+   "situation": "Maya observe le modèle d’un atome de lithium dessiné dans son manuel : le noyau, au centre, et des électrons qui l’entourent. Elle se demande à quoi ressemblerait un atome à l’échelle d’une bille.",
+   "documents": [
+    {
+     "id": "lithium",
+     "type": "schema",
+     "titre": "Un atome de lithium",
+     "largeur": 320,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 105,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 60,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "+",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 177,
+       "cy": 150,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "0",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 169,
+       "cy": 165,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "+",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 151,
+       "cy": 165,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "0",
+       "id": "n2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 143,
+       "cy": 150,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "0",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 151,
+       "cy": 135,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "+",
+       "id": "p3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 169,
+       "cy": 135,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "0",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 212,
+       "cy": 180,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "−",
+       "id": "e1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 108,
+       "cy": 120,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "−",
+       "id": "e2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 142,
+       "cy": 253,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "−",
+       "id": "e3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 290,
+       "texte": "Modèle simplifié, hors échelle",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "tailles",
+     "type": "tableau",
+     "titre": "Ordres de grandeur",
+     "colonnes": [
+      "Objet",
+      "Diamètre (m)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Noyau",
+       "10⁻¹⁵"
+      ],
+      [
+       "Atome",
+       "10⁻¹⁰"
+      ]
+     ],
+     "source": "Ordres de grandeur"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lithium",
+     "multiple": true,
+     "reponse": [
+      "p1",
+      "p2",
+      "p3"
+     ],
+     "enonce": "Touche toutes les particules de charge positive.",
+     "aide": "Les protons portent la charge +e ; les neutrons sont neutres ; les électrons sont négatifs.",
+     "explication": "Les **trois protons** (+) donnent Z = 3 : c’est le lithium."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre de masse A de cet atome ?",
+     "reponse": 7,
+     "aide": "A compte tous les nucléons du noyau : protons et neutrons.",
+     "explication": "Le noyau compte 3 protons et 4 neutrons : A = 3 + 4 = **7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un noyau de lithium 6 (Z = 3, A = 6) est-il un isotope de celui du schéma ?",
+     "options": [
+      "Oui : même Z, mais un nombre de masse A différent",
+      "Non : il n’a pas le même nombre de masse A",
+      "Non : il n’a pas le même numéro atomique Z",
+      "Oui : il a le même nombre de masse A"
+     ],
+     "reponse": 0,
+     "aide": "Des isotopes se distinguent par une seule de ces deux grandeurs.",
+     "explication": "Même Z = 3, donc même élément, mais A = 6 au lieu de 7 : ce sont deux **isotopes** du lithium."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons possède l’ion Li⁺ ?",
+     "reponse": 2,
+     "aide": "L’atome neutre a autant d’électrons que de protons ; l’ion a perdu un électron.",
+     "explication": "L’atome Li a 3 électrons ; l’ion Li⁺ en a perdu un : **2 électrons**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si le noyau avait la taille d’une bille de 1,0 cm, quel serait le diamètre de l’atome, en mètres ?",
+     "reponse": 1000,
+     "unite": "m",
+     "aide": "Calcule d’abord le rapport entre les deux diamètres du tableau.",
+     "explication": "Rapport : 10⁻¹⁰ / 10⁻¹⁵ = **100 000**. Une bille de 1,0 cm donnerait un atome de 100 000 cm = **1 000 m** : l’atome est essentiellement vide."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d5d7962-fbfd-5abb-a035-fcdcdd0eaed2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq configurations à décoder",
+   "competence": "lire-tableau",
+   "situation": "Pour préparer son contrôle, Nolan recopie les configurations électroniques de cinq éléments et se demande où se trouvent leurs électrons de valence.",
+   "documents": [
+    {
+     "id": "configs",
+     "type": "tableau",
+     "titre": "Configurations électroniques",
+     "colonnes": [
+      "Élément",
+      "Z",
+      "Configuration"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Hydrogène",
+       1,
+       "1s¹"
+      ],
+      [
+       "Carbone",
+       6,
+       "1s² 2s² 2p²"
+      ],
+      [
+       "Oxygène",
+       8,
+       "1s² 2s² 2p⁴"
+      ],
+      [
+       "Sodium",
+       11,
+       "1s² 2s² 2p⁶ 3s¹"
+      ],
+      [
+       "Chlore",
+       17,
+       "1s² 2s² 2p⁶ 3s² 3p⁵"
+      ]
+     ],
+     "source": "Configurations à l’état fondamental"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "configs",
+     "multiple": true,
+     "reponse": [
+      "r3c2",
+      "r4c2"
+     ],
+     "enonce": "Touche les configurations dont la couche externe est la couche n° 3.",
+     "aide": "La couche externe est celle qui a le plus grand numéro : repère les sous-couches commençant par 3.",
+     "explication": "Le **sodium** (3s¹) et le **chlore** (3s² 3p⁵) ont des électrons sur la couche 3 : c’est leur couche externe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons de valence l’oxygène possède-t-il ?",
+     "reponse": 6,
+     "aide": "Additionne les électrons des sous-couches de la couche externe (n = 2).",
+     "explication": "Couche externe n° 2 : 2s² 2p⁴, soit 2 + 4 = **6 électrons de valence**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la configuration électronique du magnésium (Z = 12) ?",
+     "options": [
+      "1s² 2s² 2p⁶ 3s², soit 2 électrons de valence",
+      "1s² 2s² 2p⁶ 3s¹, soit 1 électron de valence",
+      "1s² 2s² 2p⁶ 3p², soit 2 électrons de valence",
+      "1s² 2s² 2p⁶ 3s² 3p¹, soit 3 électrons de valence"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le magnésium a un électron de plus que le sodium : remplis la sous-couche 3s.",
+     "explication": "12 électrons : 2 + 2 + 6 = 10 dans les couches 1 et 2, puis **3s²** pour les deux derniers."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d5d7962-fbfd-5abb-a035-fcdcdd0eaed2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un morceau du tableau périodique",
+   "competence": "analyser-document",
+   "situation": "Dans son manuel, Chloé ne voit qu’un extrait du tableau périodique et un tableau de quelques configurations électroniques. Elle veut retrouver les familles d’éléments.",
+   "documents": [
+    {
+     "id": "extrait",
+     "type": "tableau",
+     "titre": "Extrait du tableau périodique",
+     "colonnes": [
+      "Période",
+      "Colonne 1",
+      "Colonne 2",
+      "Colonne 17",
+      "Colonne 18"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "2e période",
+       "Li (Z = 3)",
+       "Be (Z = 4)",
+       "F (Z = 9)",
+       "Ne (Z = 10)"
+      ],
+      [
+       "3e période",
+       "Na (Z = 11)",
+       "Mg (Z = 12)",
+       "Cl (Z = 17)",
+       "Ar (Z = 18)"
+      ]
+     ]
+    },
+    {
+     "id": "cfg",
+     "type": "tableau",
+     "titre": "Quelques configurations",
+     "colonnes": [
+      "Élément",
+      "Configuration"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Li",
+       "1s² 2s¹"
+      ],
+      [
+       "Be",
+       "1s² 2s²"
+      ],
+      [
+       "F",
+       "1s² 2s² 2p⁵"
+      ],
+      [
+       "Ne",
+       "1s² 2s² 2p⁶"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "extrait",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "enonce": "Touche les deux éléments qui ont 1 électron de valence.",
+     "aide": "Deux éléments d’une même colonne ont le même nombre d’électrons de valence ; regarde la configuration du lithium.",
+     "explication": "Le lithium a 1 électron de valence (2s¹). Le **sodium**, dans la même colonne, en a aussi 1."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément à son nombre d’électrons de valence.",
+     "paires": [
+      [
+       "Lithium",
+       "1 électron"
+      ],
+      [
+       "Béryllium",
+       "2 électrons"
+      ],
+      [
+       "Fluor",
+       "7 électrons"
+      ],
+      [
+       "Néon",
+       "8 électrons"
+      ]
+     ],
+     "aide": "Lis la dernière couche de la configuration : 2s¹ compte 1 électron.",
+     "explication": "Li : 2s¹ → **1** ; Be : 2s² → **2** ; F : 2s² 2p⁵ → 2 + 5 = **7** ; Ne : 2s² 2p⁶ → 2 + 6 = **8**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces éléments dans leur famille.",
+     "categories": [
+      "Alcalins",
+      "Halogènes",
+      "Gaz nobles"
+     ],
+     "items": [
+      [
+       "Li",
+       0
+      ],
+      [
+       "Na",
+       0
+      ],
+      [
+       "F",
+       1
+      ],
+      [
+       "Cl",
+       1
+      ],
+      [
+       "Ne",
+       2
+      ],
+      [
+       "Ar",
+       2
+      ]
+     ],
+     "aide": "La famille se lit dans la colonne : la première, l’avant-dernière ou la dernière.",
+     "explication": "Colonne 1 : **alcalins** ; colonne 17 : **halogènes** ; colonne 18 : **gaz nobles**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le néon et l’argon sont-ils chimiquement inertes ?",
+     "options": [
+      "Leur couche externe est saturée",
+      "Leur couche externe est vide",
+      "Ils n’ont qu’un seul électron de valence",
+      "Ils ont perdu tous leurs électrons de valence"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la configuration du néon : sa couche 2 est-elle pleine ?",
+     "explication": "Le néon (2s² 2p⁶) a 8 électrons sur sa couche externe : elle est **saturée**, il n’en gagne ni n’en perd facilement."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d5d7962-fbfd-5abb-a035-fcdcdd0eaed2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chlore et ses trois familiers",
+   "competence": "raisonner",
+   "situation": "Eva a dessiné l’atome de chlore (Z = 17) avec ses couches électroniques. Trois éléments mystère, X, Y et Z, ont été retrouvés dans le carnet de son professeur : l’un d’eux appartient à la même famille que le chlore.",
+   "documents": [
+    {
+     "id": "chlore",
+     "type": "schema",
+     "titre": "L’atome de chlore",
+     "largeur": 320,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 106,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "couche3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 72,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "couche2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 38,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "couche1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 150,
+       "r": 17,
+       "teinte": "jaune",
+       "motif": "plein",
+       "texte": "17+",
+       "id": "noyau",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 188,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 112,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 227,
+       "cy": 178,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 188,
+       "cy": 217,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 132,
+       "cy": 217,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 93,
+       "cy": 178,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 93,
+       "cy": 122,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 132,
+       "cy": 83,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 188,
+       "cy": 83,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 227,
+       "cy": 122,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 256,
+       "cy": 196,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 253,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 94,
+       "cy": 233,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 54,
+       "cy": 150,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 94,
+       "cy": 67,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 47,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 256,
+       "cy": 104,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 292,
+       "texte": "Modèle en couches simplifié",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "mystere",
+     "type": "tableau",
+     "titre": "Les éléments mystère",
+     "colonnes": [
+      "Élément",
+      "Configuration électronique"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "X",
+       "1s² 2s² 2p⁶ 3s¹"
+      ],
+      [
+       "Y",
+       "1s² 2s² 2p⁵"
+      ],
+      [
+       "Z",
+       "1s² 2s² 2p⁶"
+      ]
+     ],
+     "source": "Configurations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chlore",
+     "reponse": [
+      "couche3"
+     ],
+     "enonce": "Touche la couche externe de l’atome de chlore.",
+     "aide": "La couche externe est la plus éloignée du noyau.",
+     "explication": "La couche externe est la couche **n° 3**, la plus éloignée du noyau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons de valence le chlore possède-t-il ? Compte-les sur le schéma.",
+     "reponse": 7,
+     "aide": "Compte les points violets de la couche externe.",
+     "explication": "La couche externe porte **7 électrons** : 3s² 3p⁵."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lequel des éléments mystère est dans la même colonne que le chlore ?",
+     "options": [
+      "X",
+      "Y",
+      "Z",
+      "Aucun des trois"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Une même colonne rassemble des éléments qui ont le même nombre d’électrons de valence.",
+     "explication": "**Y** a 2 + 5 = 7 électrons de valence, comme le chlore : c’est le fluor, un halogène."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément mystère à sa famille.",
+     "paires": [
+      [
+       "Élément X",
+       "Alcalin"
+      ],
+      [
+       "Élément Y",
+       "Halogène"
+      ],
+      [
+       "Élément Z",
+       "Gaz noble"
+      ]
+     ],
+     "aide": "X : un seul électron de valence. Z : couche externe pleine.",
+     "explication": "**X** (3s¹) est un alcalin ; **Y** (7 électrons de valence) est un halogène ; **Z** (2s² 2p⁶, couche saturée) est un gaz noble."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons manque-t-il au chlore pour que sa couche externe soit saturée, comme celle d’un gaz noble ?",
+     "reponse": 1,
+     "aide": "La couche externe saturée d’un gaz noble porte 8 électrons.",
+     "explication": "8 − 7 = **1 électron** : le chlore gagne facilement un électron, comme tous les halogènes."
+    }
+   ]
+  },
+  {
+   "chapitre": "2210c063-acb9-58e3-84e3-21849315d457",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des atomes qui se transforment en ions",
+   "competence": "raisonner",
+   "situation": "Dans la salle de TP, Ibrahim lit un tableau qui donne le numéro atomique et la colonne de quatre atomes. Il cherche l’ion que chacun forme pour atteindre la configuration d’un gaz noble.",
+   "documents": [
+    {
+     "id": "atomes",
+     "type": "tableau",
+     "titre": "Quatre atomes",
+     "colonnes": [
+      "Atome",
+      "Z",
+      "Colonne du tableau périodique"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Sodium",
+       11,
+       "1"
+      ],
+      [
+       "Magnésium",
+       12,
+       "2"
+      ],
+      [
+       "Oxygène",
+       8,
+       "16"
+      ],
+      [
+       "Chlore",
+       17,
+       "17"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "atomes",
+     "multiple": true,
+     "reponse": [
+      "r0c0",
+      "r1c0"
+     ],
+     "enonce": "Touche les atomes qui perdent des électrons pour former un ion.",
+     "aide": "Les atomes des colonnes 1 et 2 ont peu d’électrons de valence : ils en perdent plutôt que d’en gagner.",
+     "explication": "Le **sodium** (1 électron de valence) et le **magnésium** (2) perdent des électrons : ils forment des cations."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque atome à l’ion qu’il forme.",
+     "paires": [
+      [
+       "Sodium",
+       "Na⁺"
+      ],
+      [
+       "Magnésium",
+       "Mg²⁺"
+      ],
+      [
+       "Oxygène",
+       "O²⁻"
+      ],
+      [
+       "Chlore",
+       "Cl⁻"
+      ]
+     ],
+     "aide": "Pour atteindre l’octet, regarde si l’atome perd ou gagne le moins d’électrons.",
+     "explication": "Na perd 1 électron → **Na⁺** ; Mg en perd 2 → **Mg²⁺** ; O en gagne 2 → **O²⁻** ; Cl en gagne 1 → **Cl⁻**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons l’ion Mg²⁺ possède-t-il ?",
+     "reponse": 10,
+     "aide": "L’atome neutre a Z électrons ; l’ion a perdu deux électrons.",
+     "explication": "Mg a 12 électrons ; Mg²⁺ en a perdu 2 : **10 électrons**, comme le néon."
+    }
+   ]
+  },
+  {
+   "chapitre": "2210c063-acb9-58e3-84e3-21849315d457",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La molécule d’ammoniac",
+   "competence": "modeliser",
+   "situation": "Dans un flacon de produit nettoyant, Rayan lit « ammoniac, NH₃ ». Il dessine la formule de Lewis de la molécule avec les électrons de valence de ses atomes.",
+   "documents": [
+    {
+     "id": "valences",
+     "type": "tableau",
+     "titre": "Électrons de valence",
+     "colonnes": [
+      "Atome",
+      "Z",
+      "Électrons de valence"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Hydrogène",
+       1,
+       1
+      ],
+      [
+       "Azote",
+       7,
+       5
+      ]
+     ]
+    },
+    {
+     "id": "lewis",
+     "type": "schema",
+     "titre": "Formule de Lewis de NH₃",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 106,
+       "texte": "N",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 95,
+       "y": 154,
+       "texte": "H",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 190,
+       "texte": "H",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 225,
+       "y": 154,
+       "texte": "H",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        148,
+        114
+       ],
+       "a": [
+        107,
+        140
+       ],
+       "epaisseur": 2,
+       "id": "l1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        118
+       ],
+       "a": [
+        160,
+        172
+       ],
+       "epaisseur": 2,
+       "id": "l2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        172,
+        114
+       ],
+       "a": [
+        213,
+        140
+       ],
+       "epaisseur": 2,
+       "id": "l3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        80
+       ],
+       "a": [
+        170,
+        80
+       ],
+       "epaisseur": 3,
+       "id": "nl",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lewis",
+     "reponse": [
+      "nl"
+     ],
+     "enonce": "Touche le doublet non liant de la molécule.",
+     "aide": "Un doublet non liant est un tiret qui reste sur un atome, sans relier deux atomes.",
+     "explication": "Le tiret posé **sur l’azote**, non relié à un hydrogène, est le doublet non liant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons de valence la molécule NH₃ compte-t-elle au total ?",
+     "reponse": 8,
+     "aide": "Additionne les électrons de valence de l’azote et des trois hydrogènes.",
+     "explication": "5 (azote) + 3 × 1 (hydrogènes) = **8 électrons de valence**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de doublets d’électrons la formule de Lewis doit-elle montrer ?",
+     "reponse": 4,
+     "aide": "Un doublet regroupe deux électrons.",
+     "explication": "8 électrons / 2 = **4 doublets** : trois liants (N–H) et un non liant sur l’azote."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons entourent l’atome d’azote, en comptant les doublets liants et le doublet non liant ?",
+     "reponse": 8,
+     "aide": "Chaque doublet autour de l’azote compte pour 2 électrons.",
+     "explication": "4 doublets × 2 = **8 électrons** : l’azote respecte la règle de l’octet."
+    }
+   ]
+  },
+  {
+   "chapitre": "2210c063-acb9-58e3-84e3-21849315d457",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chlorométhane, un gaz réfrigérant",
+   "competence": "raisonner",
+   "situation": "Sofia étudie une molécule de formule brute CH₃Cl. Elle part des configurations électroniques des atomes pour justifier le nombre de liaisons, puis examine sa formule de Lewis.",
+   "documents": [
+    {
+     "id": "atomes",
+     "type": "tableau",
+     "titre": "Les trois atomes",
+     "colonnes": [
+      "Atome",
+      "Z",
+      "Configuration électronique"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Hydrogène",
+       1,
+       "1s¹"
+      ],
+      [
+       "Carbone",
+       6,
+       "1s² 2s² 2p²"
+      ],
+      [
+       "Chlore",
+       17,
+       "1s² 2s² 2p⁶ 3s² 3p⁵"
+      ]
+     ]
+    },
+    {
+     "id": "lewis",
+     "type": "schema",
+     "titre": "Formule de Lewis de CH₃Cl",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 115,
+       "texte": "C",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 56,
+       "texte": "H",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 66,
+       "y": 115,
+       "texte": "H",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 176,
+       "texte": "H",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 115,
+       "texte": "Cl",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        100
+       ],
+       "a": [
+        140,
+        66
+       ],
+       "epaisseur": 2,
+       "id": "l1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        126,
+        110
+       ],
+       "a": [
+        82,
+        110
+       ],
+       "epaisseur": 2,
+       "id": "l2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        124
+       ],
+       "a": [
+        140,
+        160
+       ],
+       "epaisseur": 2,
+       "id": "l3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        154,
+        110
+       ],
+       "a": [
+        212,
+        110
+       ],
+       "epaisseur": 2,
+       "id": "l4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        222,
+        88
+       ],
+       "a": [
+        238,
+        88
+       ],
+       "epaisseur": 3,
+       "id": "d1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        222,
+        134
+       ],
+       "a": [
+        238,
+        134
+       ],
+       "epaisseur": 3,
+       "id": "d2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        256,
+        102
+       ],
+       "a": [
+        256,
+        118
+       ],
+       "epaisseur": 3,
+       "id": "d3",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons covalentes le carbone forme-t-il ?",
+     "reponse": 4,
+     "aide": "Compte ses électrons de valence puis ce qui lui manque pour l’octet.",
+     "explication": "Le carbone a 4 électrons de valence ; il lui en manque 8 − 4 = **4** : il forme 4 liaisons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons covalentes le chlore forme-t-il ?",
+     "reponse": 1,
+     "aide": "Chlore : 3s² 3p⁵, soit 7 électrons de valence.",
+     "explication": "Il lui manque 8 − 7 = **1** électron : une seule liaison."
+    },
+    {
+     "type": "zone",
+     "document": "lewis",
+     "multiple": true,
+     "reponse": [
+      "d1",
+      "d2",
+      "d3"
+     ],
+     "enonce": "Touche tous les doublets non liants de la molécule.",
+     "aide": "Ce sont les tirets portés par un seul atome, sans relier deux atomes.",
+     "explication": "Les **trois tirets** autour du chlore sont des doublets non liants : son octet compte 1 liaison (2 électrons) + 3 doublets (6 électrons)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons de valence la molécule compte-t-elle au total ?",
+     "reponse": 14,
+     "aide": "Additionne les électrons de valence de C, des trois H et de Cl.",
+     "explication": "4 + 3 × 1 + 7 = **14 électrons**, soit 7 doublets : 4 liants et 3 non liants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la formule brute de la molécule dessinée ?",
+     "options": [
+      "Un C, trois H et un Cl : CH₃Cl",
+      "Un C, quatre H et un Cl : CH₄Cl",
+      "Trois C, un H et un Cl : C₃HCl",
+      "Un C, un H et trois Cl : CHCl₃"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compte chaque type d’atome autour du carbone.",
+     "explication": "Un carbone, trois hydrogènes et un chlore : **CH₃Cl**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9600e331-947d-5d5b-aa3e-a933c899663a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le verre d’eau de Mia",
+   "competence": "calculer",
+   "situation": "Mia boit un verre contenant 180 g d’eau. Elle se demande combien de molécules d’eau elle avale. On donne N(A) = 6,02 × 10²³ mol⁻¹.",
+   "documents": [
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses molaires atomiques",
+     "colonnes": [
+      "Élément",
+      "Symbole",
+      "M (g·mol⁻¹)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Hydrogène",
+       "H",
+       "1,0"
+      ],
+      [
+       "Carbone",
+       "C",
+       "12,0"
+      ],
+      [
+       "Azote",
+       "N",
+       "14,0"
+      ],
+      [
+       "Oxygène",
+       "O",
+       "16,0"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "masses",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r3c2"
+     ],
+     "enonce": "Une molécule d’eau est H₂O. Touche les masses molaires dont tu as besoin pour calculer M(H₂O).",
+     "aide": "Quels éléments la formule H₂O contient-elle ?",
+     "explication": "La molécule contient de l’**hydrogène** et de l’**oxygène** : ce sont les deux masses molaires à utiliser."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire de l’eau, en g·mol⁻¹.",
+     "reponse": 18,
+     "tolerance": 0.05,
+     "unite": "g·mol⁻¹",
+     "aide": "M(H₂O) = 2 × M(H) + M(O).",
+     "explication": "M(H₂O) = 2 × 1,0 + 16,0 = **18,0 g·mol⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière d’eau le verre contient-il ?",
+     "reponse": 10,
+     "tolerance": 0.05,
+     "unite": "mol",
+     "aide": "n = m / M, avec la masse en grammes et M en g·mol⁻¹.",
+     "explication": "n = m / M = 180 / 18,0 = **10,0 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules d’eau le verre contient-il ? Réponds en 10²⁴ molécules, arrondi au centième.",
+     "reponse": 6.02,
+     "tolerance": 0.01,
+     "unite": "× 10²⁴ molécules",
+     "aide": "N = n × N(A).",
+     "explication": "N = n × N(A) = 10,0 × 6,02 × 10²³ = 60,2 × 10²³ = **6,02 × 10²⁴ molécules**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9600e331-947d-5d5b-aa3e-a933c899663a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le comprimé de paracétamol",
+   "competence": "calculer",
+   "situation": "Hugo prend un comprimé contre la fièvre. Il lit la boîte et veut savoir quelle quantité de matière de principe actif, de formule C₈H₉NO₂, il absorbe.",
+   "documents": [
+    {
+     "id": "boite",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Paracétamol",
+     "sousTitre": "Boîte de 8 comprimés",
+     "emoji": "💊",
+     "lignes": [
+      {
+       "texte": "Principe actif",
+       "valeur": "C₈H₉NO₂"
+      },
+      {
+       "texte": "Masse de principe actif par comprimé",
+       "valeur": "500 mg",
+       "id": "masse",
+       "gras": true
+      },
+      {
+       "texte": "Comprimés dans la boîte",
+       "valeur": "8",
+       "id": "nb"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses molaires atomiques",
+     "colonnes": [
+      "Élément",
+      "M (g·mol⁻¹)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "H",
+       "1,0"
+      ],
+      [
+       "C",
+       "12,0"
+      ],
+      [
+       "N",
+       "14,0"
+      ],
+      [
+       "O",
+       "16,0"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boite",
+     "reponse": [
+      "masse"
+     ],
+     "enonce": "Touche la ligne qui permet de calculer la quantité de matière absorbée en un comprimé.",
+     "aide": "Pour n = m / M, il faut une masse de principe actif pour un comprimé.",
+     "explication": "La masse de principe actif d’**un comprimé**, 500 mg (0,500 g), est la donnée à utiliser."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire du paracétamol C₈H₉NO₂, en g·mol⁻¹.",
+     "reponse": 151,
+     "tolerance": 0.1,
+     "unite": "g·mol⁻¹",
+     "aide": "Additionne 8 × M(C), 9 × M(H), M(N) et 2 × M(O).",
+     "explication": "M = 8 × 12,0 + 9 × 1,0 + 14,0 + 2 × 16,0 = 96,0 + 9,0 + 14,0 + 32,0 = **151,0 g·mol⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière un comprimé contient-il ? Réponds en mmol, arrondie au centième.",
+     "reponse": 3.31,
+     "tolerance": 0.01,
+     "unite": "mmol",
+     "aide": "Convertis 500 mg en grammes avant d’appliquer n = m / M ; 1 mol = 1 000 mmol.",
+     "explication": "n = m / M = 0,500 / 151,0 ≈ 3,311 × 10⁻³ mol ≈ **3,31 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules un comprimé contient-il ? Réponds en 10²¹ molécules, arrondi au centième (N(A) = 6,02 × 10²³ mol⁻¹).",
+     "reponse": 1.99,
+     "tolerance": 0.01,
+     "unite": "× 10²¹ molécules",
+     "aide": "N = n × N(A), avec n en moles.",
+     "explication": "N = 3,311 × 10⁻³ × 6,02 × 10²³ ≈ **1,99 × 10²¹ molécules**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9600e331-947d-5d5b-aa3e-a933c899663a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois échantillons, lequel contient le plus d’entités ?",
+   "competence": "raisonner",
+   "situation": "Au laboratoire, Anaïs reçoit trois échantillons : un liquide, un gaz et une solution. Elle veut les classer selon le nombre d’entités chimiques qu’ils contiennent, c’est-à-dire selon leur quantité de matière.",
+   "documents": [
+    {
+     "id": "echantillons",
+     "type": "tableau",
+     "titre": "Les trois échantillons",
+     "colonnes": [
+      "Échantillon",
+      "Espèce",
+      "Donnée"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "A",
+       "Éthanol C₂H₆O (liquide)",
+       "V = 10,0 mL ; ρ = 0,79 g·mL⁻¹"
+      ],
+      [
+       "B",
+       "Dioxygène (gaz, 20 °C, 1 013 hPa)",
+       "V = 3,60 L"
+      ],
+      [
+       "C",
+       "Chlorure de sodium NaCl en solution",
+       "V = 0,500 L ; t = 11,7 g·L⁻¹"
+      ]
+     ]
+    },
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données utiles",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "M(H)",
+       "1,0 g·mol⁻¹"
+      ],
+      [
+       "M(C)",
+       "12,0 g·mol⁻¹"
+      ],
+      [
+       "M(O)",
+       "16,0 g·mol⁻¹"
+      ],
+      [
+       "M(Na)",
+       "23,0 g·mol⁻¹"
+      ],
+      [
+       "M(Cl)",
+       "35,5 g·mol⁻¹"
+      ],
+      [
+       "Volume molaire V(m)",
+       "24,0 L·mol⁻¹"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "donnees",
+     "reponse": [
+      "r5c1"
+     ],
+     "enonce": "Touche la donnée qui permet de calculer la quantité de matière de l’échantillon B.",
+     "aide": "B est un gaz : quelle relation relie le volume d’un gaz à sa quantité de matière ?",
+     "explication": "Pour un gaz, n = V / V(m) : la donnée utile est le **volume molaire de 24,0 L·mol⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire de l’éthanol C₂H₆O, en g·mol⁻¹.",
+     "reponse": 46,
+     "tolerance": 0.05,
+     "unite": "g·mol⁻¹",
+     "aide": "Additionne 2 × M(C), 6 × M(H) et M(O).",
+     "explication": "M = 2 × 12,0 + 6 × 1,0 + 16,0 = **46,0 g·mol⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière d’éthanol contient l’échantillon A ? Réponds en mol, arrondie au millième.",
+     "reponse": 0.172,
+     "tolerance": 0.001,
+     "unite": "mol",
+     "aide": "Passe par la masse : m = ρ × V, puis n = m / M.",
+     "explication": "m = ρ × V = 0,79 × 10,0 = 7,9 g, puis n = m / M = 7,9 / 46,0 ≈ **0,172 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière de NaCl contient l’échantillon C ? Réponds en mol, arrondie au millième.",
+     "reponse": 0.1,
+     "tolerance": 0.001,
+     "unite": "mol",
+     "aide": "Calcule m = t × V, puis n = m / M avec M(NaCl) = M(Na) + M(Cl).",
+     "explication": "m = t × V = 11,7 × 0,500 = 5,85 g ; M(NaCl) = 58,5 g·mol⁻¹ ; n = 5,85 / 58,5 = **0,100 mol**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois échantillons du moins riche au plus riche en entités chimiques.",
+     "items": [
+      "C : la solution de NaCl",
+      "B : le dioxygène",
+      "A : l’éthanol"
+     ],
+     "aide": "Calcule n(B) = V / V(m), puis compare les trois quantités de matière.",
+     "explication": "n(B) = 3,60 / 24,0 = 0,150 mol. Ordre croissant : C (0,100) < B (0,150) < A (0,172) : **A** contient le plus d’entités."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cdb4008-bfd7-581e-9ffd-ada6b7b564df",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du glaçon à la vapeur",
+   "competence": "analyser-document",
+   "situation": "Un glaçon posé dans une casserole est chauffé jusqu’à ce que l’eau bouille. Jade note les trois états de l’eau qu’elle voit apparaître.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "titre": "Le trajet de l’eau",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "glace",
+       "texte": "Glaçon",
+       "emoji": "🧊",
+       "teinte": "ciel"
+      },
+      {
+       "id": "liquide",
+       "texte": "Eau liquide",
+       "emoji": "💧",
+       "teinte": "bleu"
+      },
+      {
+       "id": "vapeur",
+       "texte": "Vapeur d’eau",
+       "emoji": "☁️",
+       "teinte": "gris"
+      }
+     ],
+     "liens": [
+      {
+       "de": "glace",
+       "a": "liquide",
+       "texte": "chauffage"
+      },
+      {
+       "de": "liquide",
+       "a": "vapeur",
+       "texte": "chauffage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Nomme les deux changements d’état du trajet de Jade.",
+     "texte": "Du glaçon à l’eau liquide, c’est la ___ ; de l’eau liquide à la vapeur, c’est la ___.",
+     "reponses": [
+      [
+       "fusion"
+      ],
+      [
+       "vaporisation"
+      ]
+     ],
+     "banque": [
+      "fusion",
+      "vaporisation",
+      "solidification",
+      "liquéfaction"
+     ],
+     "aide": "Passer de solide à liquide, puis de liquide à gaz.",
+     "explication": "Solide → liquide : **fusion**. Liquide → gaz : **vaporisation**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à son changement d’état.",
+     "paires": [
+      [
+       "Un glaçon fond dans un verre",
+       "Fusion"
+      ],
+      [
+       "Le linge mouillé sèche",
+       "Vaporisation"
+      ],
+      [
+       "Le givre se forme sur la vitre",
+       "Condensation"
+      ],
+      [
+       "La carboglace disparaît à l’air",
+       "Sublimation"
+      ]
+     ],
+     "aide": "Pour chaque situation, repère l’état de départ puis l’état d’arrivée.",
+     "explication": "Solide → liquide : fusion ; liquide → gaz : vaporisation ; gaz → solide : **condensation** ; solide → gaz : **sublimation**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces changements d’état selon leur bilan énergétique.",
+     "categories": [
+      "Endothermique : absorbe de l’énergie",
+      "Exothermique : libère de l’énergie"
+     ],
+     "items": [
+      [
+       "Fusion",
+       0
+      ],
+      [
+       "Vaporisation",
+       0
+      ],
+      [
+       "Sublimation",
+       0
+      ],
+      [
+       "Solidification",
+       1
+      ],
+      [
+       "Liquéfaction",
+       1
+      ]
+     ],
+     "aide": "Passer vers un état plus désordonné demande de l’énergie.",
+     "explication": "Fusion, vaporisation et sublimation **absorbent** de l’énergie ; solidification et liquéfaction en **libèrent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cdb4008-bfd7-581e-9ffd-ada6b7b564df",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La casserole de Jade",
+   "competence": "lire-graphique",
+   "situation": "Jade chauffe un bloc de glace pure sorti du congélateur et relève la température toutes les deux minutes, jusqu’à l’ébullition. Elle trace la courbe de chauffage.",
+   "documents": [
+    {
+     "id": "chauffage",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Chauffage d’un bloc de glace d’eau pure",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        -20,
+        -10,
+        0,
+        0,
+        0,
+        25,
+        50,
+        75,
+        100,
+        100,
+        100
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": -20,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chauffage",
+     "reponse": [
+      "k8"
+     ],
+     "enonce": "Touche l’instant où l’eau commence à bouillir.",
+     "aide": "L’ébullition correspond au second palier, à la température d’ébullition.",
+     "explication": "À **16 min**, la température atteint 100 °C et ne bouge plus : l’eau bout."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée du palier de fusion ?",
+     "reponse": 4,
+     "unite": "min",
+     "aide": "Repère le premier palier, à 0 °C : de quelle minute à quelle minute dure-t-il ?",
+     "explication": "Le palier de fusion va de 4 min à 8 min : durée = **4 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la température de l’eau à la minute 12 ?",
+     "reponse": 50,
+     "tolerance": 1,
+     "unite": "°C",
+     "aide": "Lis l’ordonnée du point d’abscisse 12.",
+     "explication": "À 12 min, l’eau liquide est à **50 °C** et continue de se réchauffer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pendant le palier de fusion, la température ne monte pas alors qu’on chauffe toujours. À quoi sert l’énergie apportée ?",
+     "options": [
+      "À défaire les interactions entre les entités du solide",
+      "À agiter davantage les entités déjà liquides",
+      "À faire disparaître les molécules d’eau",
+      "À transformer l’eau en une autre espèce chimique"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui change pendant la fusion : l’organisation des entités.",
+     "explication": "L’énergie sert à **défaire les interactions** entre entités ; la température ne monte qu’une fois la fusion terminée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Jade refait l’expérience au sommet de l’Everest. Où se situe le second palier ?",
+     "options": [
+      "Environ 70 °C",
+      "Toujours exactement 100 °C",
+      "Environ 130 °C",
+      "Environ 0 °C"
+     ],
+     "reponse": 0,
+     "aide": "La pression y est bien plus faible qu’au niveau de la mer.",
+     "explication": "Une pression plus faible abaisse la température d’ébullition : environ **70 °C** au sommet de l’Everest."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cdb4008-bfd7-581e-9ffd-ada6b7b564df",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des cristaux blancs trouvés dans un tiroir",
+   "competence": "raisonner",
+   "situation": "Nadia a trouvé des cristaux blancs dans un tiroir du laboratoire. Elle chauffe l’échantillon A de ces cristaux, puis l’échantillon B d’un mélange où elle en a dissous un autre. Elle mesure aussi le volume de 11,5 g de cristaux : 10,0 cm³.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Chauffage des échantillons A et B",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "series": [
+      {
+       "nom": "Échantillon A",
+       "valeurs": [
+        20,
+        40,
+        60,
+        80,
+        80,
+        80,
+        80,
+        100
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Échantillon B",
+       "valeurs": [
+        20,
+        40,
+        55,
+        65,
+        72,
+        80,
+        90,
+        100
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    },
+    {
+     "id": "refs",
+     "type": "tableau",
+     "titre": "Solides de référence",
+     "colonnes": [
+      "Solide",
+      "Température de fusion (°C)",
+      "Masse volumique (g·cm⁻³)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Naphtalène",
+       80,
+       "1,15"
+      ],
+      [
+       "Acide benzoïque",
+       122,
+       "1,27"
+      ],
+      [
+       "Acide citrique",
+       153,
+       "1,66"
+      ],
+      [
+       "Saccharose",
+       186,
+       "1,59"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel échantillon est un corps pur, et pourquoi ?",
+     "options": [
+      "A : il présente un palier de température net pendant la fusion",
+      "B : sa température augmente régulièrement pendant la fusion",
+      "A : il atteint 100 °C avant B",
+      "B : il est le seul à fondre à plus de 60 °C"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la courbe qui présente un palier net pendant le changement d’état.",
+     "explication": "**A** : sa température reste constante pendant la fusion. Le mélange B n’a pas de palier net."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la température de fusion de l’échantillon A ?",
+     "reponse": 80,
+     "unite": "°C",
+     "aide": "Lis l’ordonnée du palier de la courbe A.",
+     "explication": "Le palier de A est à **80 °C** : c’est sa température de fusion."
+    },
+    {
+     "type": "zone",
+     "document": "refs",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la température de fusion de référence qui coïncide avec celle de A.",
+     "aide": "Compare 80 °C aux valeurs du tableau.",
+     "explication": "Le **naphtalène** fond à 80 °C : c’est le candidat que désigne la température de fusion."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse volumique des cristaux, en g·cm⁻³.",
+     "reponse": 1.15,
+     "tolerance": 0.005,
+     "unite": "g·cm⁻³",
+     "aide": "ρ = m / V, avec 11,5 g et 10,0 cm³.",
+     "explication": "ρ = m / V = 11,5 / 10,0 = **1,15 g·cm⁻³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut conclure Nadia en croisant les deux mesures ?",
+     "options": [
+      "Ce sont très probablement des cristaux de naphtalène",
+      "Ce sont à coup sûr des cristaux d’acide benzoïque",
+      "C’est un mélange de plusieurs solides",
+      "Les mesures ne permettent d’éliminer aucun solide"
+     ],
+     "reponse": 0,
+     "aide": "Une température de fusion ET une masse volumique concordent avec le même solide.",
+     "explication": "Deux grandeurs caractéristiques concordent avec le **naphtalène** : l’identification est très probable. Les autres solides sont écartés."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fb60a4c-0d09-5810-b219-f61e01b8ad25",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La flamme de la cuisinière",
+   "competence": "calculer",
+   "situation": "Antoine allume sa cuisinière : le méthane CH₄ brûle dans le dioxygène O₂ et forme du dioxyde de carbone CO₂ et de l’eau H₂O. Il écrit d’abord l’équation CH₄ + O₂ → CO₂ + H₂O et compte les atomes.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Le bilan des atomes de l’équation non équilibrée",
+     "colonnes": [
+      "Atome",
+      "Avant (réactifs)",
+      "Après (produits)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "C",
+       1,
+       1
+      ],
+      [
+       "H",
+       4,
+       2
+      ],
+      [
+       "O",
+       2,
+       3
+      ]
+     ],
+     "source": "Comptage écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche le nombre d’atomes d’hydrogène qui figure dans les produits.",
+     "aide": "Dans le tableau, repère la ligne de l’hydrogène, puis la colonne « Après ».",
+     "explication": "Après la réaction, l’équation écrite ne compte que **2 atomes d’hydrogène** contre 4 avant : elle n’est pas équilibrée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Équilibre l’équation en ajoutant les coefficients manquants.",
+     "texte": "CH₄ + ___ O₂ → CO₂ + ___ H₂O",
+     "reponses": [
+      [
+       "2"
+      ],
+      [
+       "2"
+      ]
+     ],
+     "aide": "Équilibre d’abord l’hydrogène avec H₂O, puis l’oxygène avec O₂.",
+     "explication": "Avec 2 H₂O, on retrouve les 4 H ; l’oxygène vaut alors 2 + 2 = 4, d’où 2 O₂ : **CH₄ + 2 O₂ → CO₂ + 2 H₂O**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’oxygène compte-t-on de chaque côté de l’équation équilibrée ?",
+     "reponse": 4,
+     "aide": "Compte les atomes d’oxygène dans 2 O₂, ou dans CO₂ + 2 H₂O.",
+     "explication": "Réactifs : 2 × 2 = 4 atomes ; produits : 2 + 2 × 1 = 4 atomes : **4 de chaque côté**, l’oxygène est conservé."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fb60a4c-0d09-5810-b219-f61e01b8ad25",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le barbecue au propane",
+   "competence": "modeliser",
+   "situation": "Lucas allume un barbecue au gaz. Le propane brûle selon l’équation C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O. Il dispose de 0,20 mol de propane et de 0,80 mol de dioxygène. Il complète le tableau d’avancement.",
+   "documents": [
+    {
+     "id": "avancement",
+     "type": "tableau",
+     "titre": "Tableau d’avancement (quantités en mol)",
+     "colonnes": [
+      "État",
+      "x",
+      "C₃H₈",
+      "O₂",
+      "CO₂",
+      "H₂O"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Initial",
+       "0",
+       "0,20",
+       "0,80",
+       "0",
+       "0"
+      ],
+      [
+       "En cours",
+       "x",
+       "0,20 − x",
+       "0,80 − 5x",
+       "3x",
+       "4x"
+      ],
+      [
+       "Final",
+       "x_max",
+       "?",
+       "?",
+       "?",
+       "?"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de l’avancement maximal x_max, en mol ?",
+     "reponse": 0.16,
+     "tolerance": 0.005,
+     "unite": "mol",
+     "aide": "Cherche la valeur de x qui annule chaque réactif, puis garde la plus petite.",
+     "explication": "C₃H₈ s’annule pour x = 0,20 mol ; O₂ pour x = 0,80 / 5 = 0,16 mol. Le plus petit : **x_max = 0,16 mol**."
+    },
+    {
+     "type": "zone",
+     "document": "avancement",
+     "reponse": [
+      "r0c3"
+     ],
+     "enonce": "Touche la quantité initiale du réactif limitant.",
+     "aide": "Le réactif limitant est celui qui s’annule pour la plus petite valeur de x.",
+     "explication": "Le **dioxygène** (0,80 mol) est limitant : il disparaît à x = 0,16 mol, avant le propane."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de dioxyde de carbone se forme à l’état final ?",
+     "reponse": 0.48,
+     "tolerance": 0.005,
+     "unite": "mol",
+     "aide": "Dans la colonne CO₂, la quantité vaut 3x : remplace x par x_max.",
+     "explication": "n(CO₂) = 3 × x_max = 3 × 0,16 = **0,48 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de propane reste-t-il à l’état final ?",
+     "reponse": 0.04,
+     "tolerance": 0.005,
+     "unite": "mol",
+     "aide": "Utilise la colonne C₃H₈ de la ligne « En cours », avec x = x_max.",
+     "explication": "n(C₃H₈) = 0,20 − 0,16 = **0,04 mol** : le propane est en excès."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fb60a4c-0d09-5810-b219-f61e01b8ad25",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fabriquer de l’eau avec de l’hydrogène",
+   "competence": "raisonner",
+   "situation": "Dans un cours de chimie, on fait réagir du dihydrogène et du dioxygène pour former de l’eau. Maëlys suit l’évolution des quantités de matière en fonction de l’avancement x et dresse le graphique ci-contre.",
+   "documents": [
+    {
+     "id": "evolution",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Quantités de matière en fonction de l’avancement",
+     "categories": [
+      "0",
+      "0,05",
+      "0,10",
+      "0,15",
+      "0,20"
+     ],
+     "series": [
+      {
+       "nom": "H₂",
+       "valeurs": [
+        0.4,
+        0.3,
+        0.2,
+        0.1,
+        0
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "O₂",
+       "valeurs": [
+        0.3,
+        0.25,
+        0.2,
+        0.15,
+        0.1
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "H₂O",
+       "valeurs": [
+        0,
+        0.1,
+        0.2,
+        0.3,
+        0.4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité de matière",
+      "unite": "mol",
+      "min": 0,
+      "max": 0.4,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Avancement x (mol)"
+     },
+     "source": "Valeurs calculées pour l’exercice"
+    },
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Équation",
+       "2 H₂ + O₂ → 2 H₂O"
+      ],
+      [
+       "n₀(H₂)",
+       "0,40 mol"
+      ],
+      [
+       "n₀(O₂)",
+       "0,30 mol"
+      ],
+      [
+       "M(H₂O)",
+       "18,0 g·mol⁻¹"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "evolution",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche l’avancement à partir duquel la réaction s’arrête.",
+     "aide": "La réaction s’arrête quand un réactif a entièrement disparu.",
+     "explication": "La courbe du dihydrogène atteint 0 pour **x = 0,20 mol** : la réaction s’arrête là."
+    },
+    {
+     "type": "zone",
+     "document": "evolution",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche l’avancement pour lequel les trois espèces sont présentes en quantités égales.",
+     "aide": "Cherche l’abscisse où les trois courbes se croisent.",
+     "explication": "Pour **x = 0,10 mol**, H₂, O₂ et H₂O valent chacun 0,20 mol : les trois courbes se croisent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le réactif limitant ?",
+     "options": [
+      "Le dihydrogène : sa quantité s’annule en premier, à x = 0,20 mol",
+      "Le dioxygène : sa quantité initiale est la plus faible",
+      "L’eau : sa quantité initiale est nulle",
+      "Aucun : les deux réactifs disparaissent ensemble"
+     ],
+     "reponse": 0,
+     "aide": "Le limitant n’est pas forcément celui dont la quantité initiale est la plus petite : regarde quelle courbe atteint 0.",
+     "explication": "Le **dihydrogène** disparaît à x = 0,20 mol, alors qu’il reste 0,10 mol de dioxygène : c’est lui qui limite la réaction."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de dioxygène reste-t-il à la fin ?",
+     "reponse": 0.1,
+     "tolerance": 0.005,
+     "unite": "mol",
+     "aide": "Lis la courbe de O₂ pour x = x_max, ou calcule 0,30 − x_max.",
+     "explication": "À x_max = 0,20 mol : n(O₂) = 0,30 − 0,20 = **0,10 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse d’eau se forme à l’état final ? Réponds en grammes.",
+     "reponse": 7.2,
+     "tolerance": 0.05,
+     "unite": "g",
+     "aide": "Lis n(H₂O) final sur le graphique, puis utilise m = n × M.",
+     "explication": "n(H₂O) = 2 × 0,20 = 0,40 mol ; m = n × M = 0,40 × 18,0 = **7,2 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f321f7cc-0a13-5e10-b7a2-3b609edb195c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Reproduire l’arôme de la vanille",
+   "competence": "analyser-document",
+   "situation": "Pour fabriquer un dessert à la vanille, un laboratoire reproduit la vanilline, l’arôme de la gousse. Les chimistes suivent un protocole que Noémie a résumé en quatre gestes.",
+   "documents": [
+    {
+     "id": "protocole",
+     "type": "chaine",
+     "titre": "Le protocole de Noémie",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "reflux",
+       "texte": "Chauffer le mélange à reflux",
+       "emoji": "🔥",
+       "teinte": "corail"
+      },
+      {
+       "id": "filtre",
+       "texte": "Filtrer le solide formé",
+       "emoji": "🧫",
+       "teinte": "ciel"
+      },
+      {
+       "id": "recrist",
+       "texte": "Recristalliser le solide",
+       "emoji": "❄️",
+       "teinte": "ciel"
+      },
+      {
+       "id": "kofler",
+       "texte": "Mesurer sa température de fusion",
+       "emoji": "🌡️",
+       "teinte": "ambre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "reflux",
+       "a": "filtre"
+      },
+      {
+       "de": "filtre",
+       "a": "recrist"
+      },
+      {
+       "de": "recrist",
+       "a": "kofler"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste dans la grande étape d’une synthèse à laquelle il appartient.",
+     "categories": [
+      "Transformation",
+      "Séparation",
+      "Identification"
+     ],
+     "items": [
+      [
+       "Chauffer à reflux",
+       0
+      ],
+      [
+       "Filtrer le solide",
+       1
+      ],
+      [
+       "Recristalliser",
+       1
+      ],
+      [
+       "Mesurer la température de fusion",
+       2
+      ],
+      [
+       "Faire une chromatographie",
+       2
+      ],
+      [
+       "Extraire par un solvant",
+       1
+      ]
+     ],
+     "aide": "Une synthèse comprend toujours : fabriquer, isoler, puis vérifier ce qu’on a obtenu.",
+     "explication": "Chauffer à reflux : **transformation**. Filtrer, recristalliser, extraire : **séparation**. Température de fusion et chromatographie : **identification**."
+    },
+    {
+     "type": "zone",
+     "document": "protocole",
+     "reponse": [
+      "kofler"
+     ],
+     "enonce": "Touche le geste qui sert à identifier le produit obtenu.",
+     "aide": "Identifier, c’est comparer une grandeur mesurée à une valeur de référence.",
+     "explication": "La **température de fusion** mesurée se compare à la valeur de référence de la vanilline : c’est l’identification."
+    },
+    {
+     "type": "choix",
+     "enonce": "La vanilline de synthèse a la même structure que celle de la gousse. Que peut-on en dire ?",
+     "options": [
+      "Elle est identique : le corps ne fait aucune différence",
+      "Elle est plus dangereuse, car elle est de synthèse",
+      "Elle est moins pure, car elle n’est pas naturelle",
+      "Elle a un autre arôme, car sa formule est différente"
+     ],
+     "reponse": 0,
+     "aide": "Ce qui compte, c’est la molécule elle-même.",
+     "explication": "À structure identique, la molécule est **la même**, qu’elle vienne d’une gousse ou d’un ballon."
+    }
+   ]
+  },
+  {
+   "chapitre": "f321f7cc-0a13-5e10-b7a2-3b609edb195c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le rendement de l’aspirine",
+   "competence": "calculer",
+   "situation": "Au lycée, Karim synthétise de l’aspirine (C₉H₈O₄) selon l’équation C₇H₆O₃ + C₄H₆O₃ → C₉H₈O₄ + C₂H₄O₂. L’acide salicylique C₇H₆O₃ est le réactif limitant ; l’anhydride éthanoïque C₄H₆O₃ est en excès.",
+   "documents": [
+    {
+     "id": "protocole",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Synthèse de l’aspirine",
+     "sousTitre": "Cahier de TP de Karim",
+     "emoji": "⚗️",
+     "lignes": [
+      {
+       "texte": "Acide salicylique C₇H₆O₃",
+       "valeur": "5,00 g",
+       "id": "reactif"
+      },
+      {
+       "texte": "Anhydride éthanoïque C₄H₆O₃",
+       "valeur": "en excès"
+      },
+      {
+       "texte": "Chauffage à reflux",
+       "valeur": "15 min"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Masse d’aspirine obtenue, après séchage",
+       "valeur": "4,50 g",
+       "id": "obtenue",
+       "gras": true
+      }
+     ],
+     "pied": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses molaires",
+     "colonnes": [
+      "Espèce",
+      "M (g·mol⁻¹)"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Acide salicylique C₇H₆O₃",
+       "138,0"
+      ],
+      [
+       "Aspirine C₉H₈O₄",
+       "180,0"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "protocole",
+     "reponse": [
+      "obtenue"
+     ],
+     "enonce": "Touche la ligne qui donne la quantité de produit réellement obtenue.",
+     "aide": "Le rendement compare ce qu’on a obtenu à ce qu’on pouvait espérer.",
+     "explication": "La masse d’aspirine **obtenue**, 4,50 g, sera comparée à la masse maximale attendue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité maximale d’aspirine peut-on obtenir ? Réponds en mmol, arrondie au dixième.",
+     "reponse": 36.2,
+     "tolerance": 0.1,
+     "unite": "mmol",
+     "aide": "Les coefficients de l’équation valent 1 : n(aspirine max) = n(acide salicylique).",
+     "explication": "n = m / M = 5,00 / 138,0 ≈ 0,03623 mol, soit **36,2 mmol** d’aspirine au maximum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle masse maximale d’aspirine cela correspond-il ? Réponds en grammes, arrondie au centième.",
+     "reponse": 6.52,
+     "tolerance": 0.01,
+     "unite": "g",
+     "aide": "m = n × M, avec M(aspirine) = 180,0 g·mol⁻¹.",
+     "explication": "m max = 0,03623 × 180,0 ≈ **6,52 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement de la synthèse, en pourcentage, arrondi au dixième.",
+     "reponse": 69,
+     "tolerance": 0.2,
+     "unite": "%",
+     "aide": "Rendement = quantité obtenue / quantité maximale attendue, puis × 100.",
+     "explication": "Rendement = 4,50 / 6,52 ≈ 0,690, soit **69,0 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces causes, laquelle explique que le rendement soit inférieur à 100 % ?",
+     "options": [
+      "Il reste toujours du produit sur la verrerie, au fil des transferts",
+      "L’équation de la réaction est équilibrée",
+      "La masse molaire de l’aspirine est supérieure à celle du réactif",
+      "Le chauffage à reflux crée de la matière"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux pertes lors du filtrage, du rinçage et du séchage.",
+     "explication": "Les **pertes aux transferts**, une réaction incomplète et des réactions secondaires expliquent que le rendement soit toujours inférieur à 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "f321f7cc-0a13-5e10-b7a2-3b609edb195c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Chauffer de l’éthanol sans rien perdre",
+   "competence": "observer-schema",
+   "situation": "Pour une synthèse, Dylan doit chauffer un mélange contenant de l’éthanol pendant une demi-heure. Le professeur lui impose un chauffage à reflux et lui rappelle les consignes de sécurité du flacon.",
+   "documents": [
+    {
+     "id": "reflux",
+     "type": "schema",
+     "titre": "Le montage de chauffage à reflux",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 270,
+       "l": 240,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 270,
+       "y": 30,
+       "l": 8,
+       "h": 240,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 232,
+       "l": 120,
+       "h": 38,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 200,
+       "r": 40,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 121,
+       "y": 128,
+       "l": 18,
+       "h": 40,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 206,
+       "texte": "mélange",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 113,
+       "y": 40,
+       "l": 34,
+       "h": 95,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "refrigerant",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        40
+       ],
+       "a": [
+        130,
+        135
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "rect",
+       "x": 147,
+       "y": 108,
+       "l": 20,
+       "h": 10,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "entree",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 93,
+       "y": 57,
+       "l": 20,
+       "h": 10,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "sortie",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        80
+       ],
+       "a": [
+        147,
+        80
+       ],
+       "epaisseur": 3,
+       "teinte": "gris"
+      }
+     ],
+     "source": "Schéma simplifié, sans légende"
+    },
+    {
+     "id": "flacon",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Éthanol",
+     "sousTitre": "Étiquette simplifiée",
+     "emoji": "🔥",
+     "lignes": [
+      {
+       "texte": "Pictogramme",
+       "valeur": "inflammable"
+      },
+      {
+       "texte": "H225 Liquide et vapeurs très inflammables",
+       "id": "h225"
+      },
+      {
+       "texte": "H319 Provoque une sévère irritation des yeux",
+       "id": "h319"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "P210 Tenir à l’écart des flammes et de toute source de chaleur",
+       "id": "p210"
+      },
+      {
+       "texte": "P280 Porter des gants et des lunettes de protection",
+       "id": "p280"
+      }
+     ],
+     "pied": "Mentions abrégées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reflux",
+     "reponse": [
+      "refrigerant"
+     ],
+     "enonce": "Touche l’élément qui condense les vapeurs pour les renvoyer dans le ballon.",
+     "aide": "C’est le tube vertical au-dessus du ballon.",
+     "explication": "Le **réfrigérant** liquéfie les vapeurs, qui retombent dans le ballon : on chauffe sans perdre de matière."
+    },
+    {
+     "type": "zone",
+     "document": "reflux",
+     "reponse": [
+      "entree"
+     ],
+     "enonce": "Touche l’arrivée de l’eau froide dans le réfrigérant.",
+     "aide": "L’eau entre là où elle refroidit le mieux : elle doit remplir le réfrigérant de bas en haut.",
+     "explication": "L’eau froide entre par le **bas** et ressort par le haut : le réfrigérant reste plein d’eau et refroidit efficacement."
+    },
+    {
+     "type": "zone",
+     "document": "flacon",
+     "reponse": [
+      "p210"
+     ],
+     "enonce": "Touche la mention qui interdit d’approcher une flamme du flacon.",
+     "aide": "Les mentions P donnent des conseils de prudence.",
+     "explication": "La mention **P210** demande de tenir l’éthanol à l’écart des flammes et des sources de chaleur : pour chauffer, on utilise un chauffe-ballon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi chauffe-t-on à reflux plutôt que dans un ballon ouvert ?",
+     "options": [
+      "Pour chauffer longtemps sans perdre de vapeurs inflammables ni de matière",
+      "Pour que l’éthanol brûle plus vite pendant la synthèse",
+      "Pour que la température de l’éthanol dépasse largement 78 °C",
+      "Pour remplacer l’éthanol par de l’eau dans le ballon"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que deviennent les vapeurs chaudes dans un ballon ouvert.",
+     "explication": "Les vapeurs, condensées, **retombent dans le ballon** : on ne perd pas de matière et on évite de libérer des vapeurs inflammables."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les gestes du chauffage à reflux, sécurité comprise.",
+     "items": [
+      "Mettre blouse, gants et lunettes",
+      "Introduire les réactifs dans le ballon, sous la hotte",
+      "Brancher l’eau du réfrigérant, puis chauffer",
+      "Laisser refroidir avant de démonter le montage",
+      "Trier les déchets dans le bidon adapté"
+     ],
+     "aide": "La protection passe en premier ; on ne démonte jamais un montage chaud.",
+     "explication": "Protection, introduction des réactifs, **eau puis chauffage**, refroidissement, puis tri des déchets : un protocole contient toujours son volet sécurité."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ac624e9-b754-5dfd-a02f-d91fe2b9af1d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois transformations, deux familles",
+   "competence": "analyser-document",
+   "situation": "En classe, Clara reçoit trois descriptions de transformations de la matière. Son professeur lui demande de distinguer les réactions chimiques des réactions nucléaires.",
+   "documents": [
+    {
+     "id": "transfos",
+     "type": "tableau",
+     "titre": "Trois transformations",
+     "colonnes": [
+      "Transformation",
+      "Ce qui se passe"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Combustion du méthane",
+       "Des atomes se réarrangent en molécules ; chaque élément se conserve"
+      ],
+      [
+       "Désintégration d’un noyau d’uranium 238",
+       "Le noyau émet un noyau d’hélium et devient un noyau de thorium"
+      ],
+      [
+       "Fusion dans le Soleil",
+       "Des noyaux d’hydrogène s’unissent pour former de l’hélium"
+      ]
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "transfos",
+     "multiple": true,
+     "reponse": [
+      "r1c0",
+      "r2c0"
+     ],
+     "enonce": "Touche les transformations où un élément chimique se transforme en un autre.",
+     "aide": "Cherche celles où le noyau change : un élément est défini par son numéro atomique Z.",
+     "explication": "Dans la **désintégration de l’uranium** et dans la **fusion**, les noyaux changent : un élément devient un autre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque transformation.",
+     "categories": [
+      "Réaction chimique",
+      "Réaction nucléaire"
+     ],
+     "items": [
+      [
+       "Combustion du méthane",
+       0
+      ],
+      [
+       "Rouille d’un clou",
+       0
+      ],
+      [
+       "Désintégration de l’uranium 238",
+       1
+      ],
+      [
+       "Fusion dans le Soleil",
+       1
+      ],
+      [
+       "Fission dans une centrale",
+       1
+      ]
+     ],
+     "aide": "Une réaction nucléaire modifie le noyau ; une réaction chimique ne touche qu’aux électrons.",
+     "explication": "Combustion et rouille : **chimiques**. Désintégration, fusion, fission : **nucléaires**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel ordre de grandeur d’énergie met-on en jeu par noyau dans une réaction nucléaire ?",
+     "options": [
+      "Le million d’électronvolts",
+      "L’électronvolt",
+      "Le millième d’électronvolt",
+      "Le milliard de joules"
+     ],
+     "reponse": 0,
+     "aide": "L’énergie mise en jeu par une réaction nucléaire est bien plus grande que celle d’une réaction chimique.",
+     "explication": "Une réaction chimique met en jeu **environ un eV** par entité, une réaction nucléaire **environ un million d’eV** par noyau."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ac624e9-b754-5dfd-a02f-d91fe2b9af1d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Compléter des équations de désintégration",
+   "competence": "raisonner",
+   "situation": "En TP, Rémi doit compléter trois équations de désintégration à l’aide des lois de Soddy : la conservation du nombre de nucléons A et du nombre de charge Z.",
+   "documents": [
+    {
+     "id": "equations",
+     "type": "tableau",
+     "titre": "Trois désintégrations",
+     "colonnes": [
+      "Type",
+      "Équation"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "α",
+       "²³⁸₉₂U → X + ⁴₂He"
+      ],
+      [
+       "β⁻",
+       "¹⁴₆C → Y + ⁰₋₁e"
+      ],
+      [
+       "β⁺",
+       "²²₁₁Na → W + ⁰₊₁e"
+      ]
+     ],
+     "source": "Équations proposées pour l’exercice"
+    },
+    {
+     "id": "elements",
+     "type": "tableau",
+     "titre": "Quelques éléments",
+     "colonnes": [
+      "Z",
+      "Symbole"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "7",
+       "N"
+      ],
+      [
+       "10",
+       "Ne"
+      ],
+      [
+       "12",
+       "Mg"
+      ],
+      [
+       "90",
+       "Th"
+      ],
+      [
+       "91",
+       "Pa"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre de masse A du noyau X ?",
+     "reponse": 234,
+     "aide": "Conservation de A : 238 = A(X) + 4.",
+     "explication": "A(X) = 238 − 4 = **234**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre de charge Z du noyau X ?",
+     "reponse": 90,
+     "aide": "Conservation de Z : 92 = Z(X) + 2.",
+     "explication": "Z(X) = 92 − 2 = **90** : c’est du thorium."
+    },
+    {
+     "type": "zone",
+     "document": "elements",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche le symbole de l’élément Y formé par la désintégration β⁻ du carbone 14.",
+     "aide": "Z se conserve : 6 = Z(Y) + (−1).",
+     "explication": "Z(Y) = 6 + 1 = 7 et A(Y) = 14 : c’est l’**azote N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre de charge Z du noyau W formé par la désintégration β⁺ du sodium 22 ?",
+     "reponse": 10,
+     "aide": "Conservation de Z : 11 = Z(W) + 1.",
+     "explication": "Z(W) = 11 − 1 = **10** : c’est du néon."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque désintégration à son effet sur Z.",
+     "paires": [
+      [
+       "Désintégration alpha",
+       "Z diminue de 2"
+      ],
+      [
+       "Désintégration bêta moins",
+       "Z augmente de 1"
+      ],
+      [
+       "Désintégration bêta plus",
+       "Z diminue de 1"
+      ]
+     ],
+     "aide": "Reviens aux trois équations du tableau.",
+     "explication": "α : 92 → 90, **Z diminue de 2**. β⁻ : 6 → 7, **Z augmente de 1**. β⁺ : 11 → 10, **Z diminue de 1**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ac624e9-b754-5dfd-a02f-d91fe2b9af1d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’âge de la pirogue",
+   "competence": "modeliser",
+   "situation": "Des archéologues retrouvent une pirogue dans la vase d’un lac. Le bois contient 12,5 % du carbone 14 que contient un bois vivant. Ils utilisent la courbe de décroissance du carbone 14, dont la demi-vie vaut 5 730 ans.",
+   "documents": [
+    {
+     "id": "decroissance",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Décroissance du carbone 14 dans un bois mort",
+     "categories": [
+      "0",
+      "5 730",
+      "11 460",
+      "17 190",
+      "22 920"
+     ],
+     "series": [
+      {
+       "nom": "Carbone 14 restant",
+       "valeurs": [
+        100,
+        50,
+        25,
+        12.5,
+        6.25
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du carbone 14 initial",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps écoulé depuis la mort de l’arbre (ans)"
+     },
+     "source": "Courbe théorique"
+    },
+    {
+     "id": "eq",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’équation de la désintégration",
+     "blocs": [
+      "¹⁴₆C → X + ⁰₋₁e",
+      "X est un noyau d’azote de nombre de masse A et de nombre de charge Z."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "decroissance",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche le temps pour lequel il reste 25 % du carbone 14 initial.",
+     "aide": "Chaque demi-vie divise la quantité restante par deux : 100 % → 50 % → …",
+     "explication": "Après deux demi-vies, il reste 25 % : **11 460 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge a la pirogue ?",
+     "reponse": 17190,
+     "tolerance": 1,
+     "unite": "ans",
+     "aide": "Combien de fois faut-il diviser 100 % par 2 pour obtenir 12,5 % ? Multiplie par la demi-vie.",
+     "explication": "12,5 % correspond à 3 demi-vies : 3 × 5 730 = **17190 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre de charge Z du noyau X ?",
+     "reponse": 7,
+     "aide": "Conservation de Z : 6 = Z + (−1).",
+     "explication": "Z = 6 + 1 = **7** : X est un noyau d’azote. Le carbone 14 subit une désintégration β⁻."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « la demi-vie du carbone 14 est de 5 730 ans » ?",
+     "options": [
+      "Sur un très grand nombre de noyaux, la moitié s’est désintégrée au bout de 5 730 ans",
+      "Chaque noyau se désintègre exactement 5 730 ans après sa formation",
+      "Au bout de 5 730 ans, il ne reste plus aucun noyau de carbone 14",
+      "La désintégration d’un noyau donné peut être prédite à la seconde près"
+     ],
+     "reponse": 0,
+     "aide": "La désintégration d’un noyau donné est imprévisible ; une loi statistique n’apparaît que sur un grand nombre.",
+     "explication": "C’est une loi **statistique** : à l’échelle d’un grand nombre de noyaux, la moitié se désintègre en 5 730 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne peut-on pas dater un fossile vieux d’un million d’années au carbone 14 ?",
+     "options": [
+      "Il n’en reste pratiquement plus : la quantité est trop faible pour être mesurée",
+      "Le carbone 14 est un noyau stable qui ne se désintègre jamais",
+      "La demi-vie du carbone 14 augmente avec le temps",
+      "Il faudrait plus de carbone 14 dans le fossile que dans un vivant"
+     ],
+     "reponse": 0,
+     "aide": "Un million d’années, c’est environ 175 demi-vies de 5 730 ans.",
+     "explication": "Après tant de demi-vies, la fraction restante est **infime** : la méthode ne vaut que pour quelques dizaines de milliers d’années."
+    }
+   ]
+  },
+  {
+   "chapitre": "dacee4e2-6a4b-5397-84c9-944047efeb73",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le voisin qui dort dans le TGV",
+   "competence": "analyser-document",
+   "situation": "Jeanne voyage en TGV. Elle échange des messages avec son frère Lucas, qui l’attend sur le quai de la gare.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Jeanne",
+       "emoji": "🚄",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucas",
+       "emoji": "🚉",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jeanne",
+       "texte": "Mon voisin dort : par rapport à [[ref|moi]], il ne bouge pas du tout !"
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Vu d’ici, sur le quai, il passe à toute vitesse !"
+      },
+      {
+       "qui": "Jeanne",
+       "texte": "Le contrôleur annonce que le train roule à 108 km/h."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "ref"
+     ],
+     "enonce": "Touche le mot qui montre que Jeanne choisit son propre train comme référence.",
+     "aide": "Cherche dans le message de Jeanne la personne à laquelle elle compare son voisin.",
+     "explication": "Jeanne écrit « par rapport à **moi** » : elle prend le train comme référentiel, où son voisin est immobile."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le voisin de Jeanne est-il en mouvement ?",
+     "options": [
+      "Cela dépend du référentiel choisi : train ou quai",
+      "Non, puisqu’il dort, il est immobile dans tous les référentiels",
+      "Oui, il est en mouvement dans tous les référentiels possibles",
+      "Seul Lucas peut le savoir, car le quai ne bouge pas, lui"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux messages : chacun parle depuis un point de vue différent.",
+     "explication": "Les deux descriptions sont justes : c’est la **relativité du mouvement**. Il faut toujours préciser le référentiel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse du train en m·s⁻¹.",
+     "reponse": 30,
+     "unite": "m·s⁻¹",
+     "aide": "1 m·s⁻¹ = 3,6 km·h⁻¹ : divise par 3,6.",
+     "explication": "108 / 3,6 = **30 m·s⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dacee4e2-6a4b-5397-84c9-944047efeb73",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La valve de la roue de vélo",
+   "competence": "observer-schema",
+   "situation": "Anaïs filme la roue de son vélo et relève la position de la valve toutes les 0,050 s. Elle obtient deux chronophotographies : l’une prise depuis le bord de la route, l’autre depuis le cycliste. Le périmètre de la roue est de 2,10 m.",
+   "documents": [
+    {
+     "id": "photo1",
+     "type": "schema",
+     "titre": "Chronophotographie 1",
+     "largeur": 340,
+     "hauteur": 140,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        106
+       ],
+       "a": [
+        330,
+        106
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 20,
+       "cy": 100,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 22,
+       "cy": 93,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 34,
+       "cy": 76,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 59,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 52,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 131,
+       "cy": 59,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 157,
+       "cy": 76,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 169,
+       "cy": 93,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 171,
+       "cy": 100,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 173,
+       "cy": 93,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 76,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 210,
+       "cy": 59,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 246,
+       "cy": 52,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 282,
+       "cy": 59,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 308,
+       "cy": 76,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 320,
+       "cy": 93,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 322,
+       "cy": 100,
+       "r": 3.5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 132,
+       "texte": "sol",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Positions de la valve, une toutes les 0,050 s"
+    },
+    {
+     "id": "photo2",
+     "type": "schema",
+     "titre": "Chronophotographie 2",
+     "largeur": 340,
+     "hauteur": 150,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 214,
+       "cy": 80,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 201,
+       "cy": 111,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 124,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 139,
+       "cy": 111,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 126,
+       "cy": 80,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 139,
+       "cy": 49,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 36,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 201,
+       "cy": 49,
+       "r": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 80,
+       "r": 2,
+       "teinte": "gris",
+       "motif": "plein"
+      }
+     ],
+     "source": "Positions de la valve, une toutes les 0,050 s"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle chronophotographie a été prise depuis le cycliste ?",
+     "options": [
+      "La chronophotographie 2 : la valve décrit un cercle autour de l’axe",
+      "La chronophotographie 1 : la valve décrit un cercle autour de l’axe",
+      "La chronophotographie 2 : la valve décrit une cycloïde",
+      "Aucune : le cycliste ne voit pas la valve bouger"
+     ],
+     "reponse": 0,
+     "aide": "Pour le cycliste, la roue tourne sur place autour de son axe.",
+     "explication": "Dans le référentiel du cycliste, la trajectoire de la valve est un **cercle** ; vue du bord de la route, c’est une **cycloïde**, courbe en arches."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure un tour de roue, d’après la chronophotographie 2 ?",
+     "reponse": 0.4,
+     "tolerance": 0.005,
+     "unite": "s",
+     "aide": "Compte les positions de la valve sur le cercle, puis multiplie par l’intervalle de temps.",
+     "explication": "8 positions, espacées de 0,050 s : durée = 8 × 0,050 = **0,40 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant un tour, le vélo avance d’une distance égale au périmètre de la roue. Calcule sa vitesse en m·s⁻¹.",
+     "reponse": 5.25,
+     "tolerance": 0.01,
+     "unite": "m·s⁻¹",
+     "aide": "v = d / Δt, avec d = 2,10 m et Δt la durée d’un tour.",
+     "explication": "v = d / Δt = 2,10 / 0,40 = **5,25 m·s⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime cette vitesse en km·h⁻¹, arrondie au dixième.",
+     "reponse": 18.9,
+     "tolerance": 0.05,
+     "unite": "km·h⁻¹",
+     "aide": "1 m·s⁻¹ = 3,6 km·h⁻¹.",
+     "explication": "v = 5,25 × 3,6 = **18,9 km·h⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dacee4e2-6a4b-5397-84c9-944047efeb73",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La Station spatiale en orbite",
+   "competence": "modeliser",
+   "situation": "Le satellite habité qu’est la Station spatiale internationale (ISS) tourne autour de la Terre sur une orbite quasi circulaire. Mathis veut estimer sa vitesse et choisir le bon référentiel pour l’étudier.",
+   "documents": [
+    {
+     "id": "iss",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Station spatiale internationale",
+     "sousTitre": "Fiche d’identité simplifiée",
+     "emoji": "🛰️",
+     "lignes": [
+      {
+       "texte": "Altitude moyenne",
+       "valeur": "400 km",
+       "id": "alt"
+      },
+      {
+       "texte": "Période de révolution",
+       "valeur": "92 min",
+       "id": "periode"
+      },
+      {
+       "texte": "Rayon de la Terre",
+       "valeur": "6 371 km",
+       "id": "rayon"
+      }
+     ],
+     "pied": "Valeurs arrondies"
+    },
+    {
+     "id": "refs",
+     "type": "tableau",
+     "titre": "Les référentiels usuels",
+     "colonnes": [
+      "Référentiel",
+      "Centre",
+      "Adapté à"
+     ],
+     "enteteLignes": true,
+     "lignes": [
+      [
+       "Terrestre",
+       "Un point du sol",
+       "Les mouvements du quotidien"
+      ],
+      [
+       "Géocentrique",
+       "Le centre de la Terre",
+       "Les satellites"
+      ],
+      [
+       "Héliocentrique",
+       "Le centre du Soleil",
+       "Les planètes"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "refs",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le référentiel adapté à l’étude du mouvement de l’ISS autour de la Terre.",
+     "aide": "Un satellite se décrit par rapport au centre de la planète autour de laquelle il tourne.",
+     "explication": "Le référentiel **géocentrique**, centré sur la Terre, convient à l’étude d’un satellite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rayon de l’orbite de l’ISS, mesuré depuis le centre de la Terre ?",
+     "reponse": 6771,
+     "tolerance": 1,
+     "unite": "km",
+     "aide": "L’orbite est à 400 km d’altitude, au-dessus de la surface de la Terre.",
+     "explication": "r = 6 371 + 400 = **6771 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance l’ISS parcourt-elle en un tour ? Réponds en km, arrondie à l’unité.",
+     "reponse": 42543,
+     "tolerance": 2,
+     "unite": "km",
+     "aide": "La trajectoire est un cercle de rayon r : périmètre = 2πr.",
+     "explication": "d = 2π × 6771 ≈ **42543 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse moyenne de l’ISS en km·s⁻¹, arrondie au dixième.",
+     "reponse": 7.7,
+     "tolerance": 0.05,
+     "unite": "km·s⁻¹",
+     "aide": "v = d / Δt, avec Δt exprimée en secondes : 92 min = 92 × 60 s.",
+     "explication": "Δt = 92 × 60 = 5 520 s, donc v = 42543 / 5 520 ≈ **7,7 km·s⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un astronaute flotte, immobile, au milieu de la station. Comment décrire son mouvement ?",
+     "options": [
+      "Immobile dans le référentiel de la station, en mouvement dans le référentiel géocentrique",
+      "Immobile dans tous les référentiels, car il flotte",
+      "En mouvement dans le référentiel de la station, immobile dans le référentiel géocentrique",
+      "Impossible à décrire sans connaître sa masse"
+     ],
+     "reponse": 0,
+     "aide": "Le mouvement dépend du référentiel : l’astronaute est-il fixe par rapport à la station ?",
+     "explication": "Par rapport à la station il est **immobile** ; dans le référentiel géocentrique, il tourne autour de la Terre à la même vitesse que l’ISS."
+    }
+   ]
+  }
+ ]
+}

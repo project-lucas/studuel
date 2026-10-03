@@ -8,11 +8,12 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
-import { menuAlertCount } from '@/lib/arene-hud'
+import { menuAlertCount, questTileBadge } from '@/lib/arene-hud'
 import { useDialogFocus } from '@/lib/use-dialog'
 import SheetShell from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
+import { ouvrirFeuilleQuetes, useQuetesDuJour } from '@/components/quetes/store'
 
 /**
  * Une entrée du menu burger. Deux comportements exclusifs :
@@ -82,6 +83,9 @@ export interface RailTile {
   href?: string
   sheetTitle?: string
   sheetContent?: ReactNode
+  /** Ouvre LA feuille des quêtes du jour (components/quetes) ; sa pastille
+   *  se lit dans le magasin des quêtes, pas dans `badge`. */
+  ouvreQuetes?: boolean
 }
 
 interface ArenaHudProps {
@@ -302,9 +306,13 @@ export default function ArenaHud({
             même plaque, même écart. */}
         {leftTiles.length > 0 ? (
           <div className="mt-1 flex flex-col items-center gap-3">
-            {leftTiles.map((tile) => (
-              <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
-            ))}
+            {leftTiles.map((tile) =>
+              tile.ouvreQuetes ? (
+                <TuileQuetes key={tile.id} tile={tile} />
+              ) : (
+                <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
+              ),
+            )}
           </div>
         ) : null}
       </div>
@@ -417,6 +425,33 @@ export default function ArenaHud({
  * deux robes pour un même geste (ouvrir quelque chose), et des dessins de 36 px
  * qui perdaient leur cerne. Une seule matière, un seul format.
  */
+/**
+ * La tuile Quêtes du rail : elle ouvre la feuille des quêtes de toute l'app,
+ * et sa pastille dit le dû (corail) ou le reste à faire (violet), d'après le
+ * magasin que relit le bandeau (lib/arene-hud.questTileBadge).
+ */
+function TuileQuetes({ tile }: { tile: RailTile }) {
+  const etat = useQuetesDuJour()
+  const badge = etat
+    ? questTileBadge(
+        etat.quetes.map((q) => ({ id: q.id, done: q.done })),
+        etat.encaissees,
+      )
+    : null
+  const faites = etat ? etat.quetes.filter((q) => q.done).length : 0
+  return (
+    <RailTileFace
+      tile={{
+        ...tile,
+        label: etat ? `Quêtes du jour — ${faites} sur ${etat.quetes.length} faites` : tile.label,
+        badge: badge ? String(badge.count) : undefined,
+        badgeTone: badge?.tone,
+      }}
+      onOpen={() => ouvrirFeuilleQuetes()}
+    />
+  )
+}
+
 function RailTileFace({
   tile,
   onOpen,

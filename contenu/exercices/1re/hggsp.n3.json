@@ -1,0 +1,2378 @@
+{
+ "niveau": "1re",
+ "matiere": "hggsp",
+ "exercices": [
+  {
+   "chapitre": "1dc8244c-1c84-5ca7-a8df-beed9c703000",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grandes dates du réseau",
+   "competence": "se-reperer-temps",
+   "situation": "Nadia prépare une fiche sur l’histoire d’Internet. Elle a dessiné une frise : il lui reste à la lire pour y placer les bonnes étapes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "D’ARPANET aux plateformes",
+     "source": "Frise réalisée d’après le cours.",
+     "debut": 1960,
+     "fin": 2020,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "ouv",
+       "debut": 1990,
+       "fin": 1999,
+       "nom": "Ouverture au public",
+       "teinte": "ambre"
+      },
+      {
+       "id": "soc",
+       "debut": 2000,
+       "fin": 2009,
+       "nom": "Web social",
+       "teinte": "rose"
+      },
+      {
+       "id": "mob",
+       "debut": 2010,
+       "fin": 2020,
+       "nom": "Internet mobile",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "arpa",
+       "date": 1969,
+       "nom": "ARPANET"
+      },
+      {
+       "id": "web",
+       "date": 1989,
+       "nom": "Web au CERN"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où chacun devient producteur de contenus.",
+     "reponse": [
+      "soc"
+     ],
+     "aide": "Pense aux blogs et aux réseaux où l’on publie soi-même.",
+     "explication": "Dans les années 2000 naît le **web social** : chacun peut publier, et plus seulement lire."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où les plateformes deviennent le principal accès à l’information.",
+     "reponse": [
+      "mob"
+     ],
+     "aide": "C’est la période la plus récente de la frise.",
+     "explication": "Dans les années 2010, avec l’**Internet mobile**, les plateformes deviennent les principaux points d’accès à l’information."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les premiers nœuds d’ARPANET du Web inventé au CERN ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise, puis soustrais.",
+     "explication": "1989 − 1969 = **20 ans** entre ARPANET et le World Wide Web."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ARPANET est-il conçu comme un réseau décentralisé ?",
+     "options": [
+      "Pour continuer de fonctionner si l’un de ses nœuds est détruit",
+      "Pour permettre aux entreprises de vendre de la publicité",
+      "Pour que chaque utilisateur puisse publier ses propres contenus",
+      "Pour relier d’abord les écoles avant les universités"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de l’origine militaire du projet.",
+     "explication": "ARPANET est né d’un projet militaire américain : un réseau **décentralisé** survit à la destruction d’un de ses nœuds."
+    }
+   ]
+  },
+  {
+   "chapitre": "1dc8244c-1c84-5ca7-a8df-beed9c703000",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux fils d’actualité pour un même débat",
+   "competence": "lire-tableau",
+   "situation": "Camille et Ismaël suivent le même débat sur un projet de piste cyclable (cas imaginé). Chacun a regardé les 20 premières publications de son fil.",
+   "documents": [
+    {
+     "id": "fils",
+     "type": "tableau",
+     "titre": "Les 20 premières publications du fil de chacun",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Lecteur",
+      "Favorables au projet",
+      "Opposées au projet",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Camille",
+       17,
+       3,
+       20
+      ],
+      [
+       "Ismaël",
+       4,
+       16,
+       20
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des publications du fil de Camille est favorable au projet ?",
+     "reponse": 85,
+     "unite": "%",
+     "aide": "Divise le nombre de publications favorables par le total, puis multiplie par 100.",
+     "explication": "17 ÷ 20 = 0,85, soit **85 %** de publications favorables."
+    },
+    {
+     "type": "zone",
+     "document": "fils",
+     "enonce": "Touche la case qui indique ce que voit le plus souvent Ismaël.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare les deux cases de la ligne d’Ismaël.",
+     "explication": "Ismaël voit surtout des publications **opposées** au projet : 16 sur 20."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle l’effet qui fait que chacun est surtout exposé à ce qui confirme ses convictions ?",
+     "options": [
+      "La bulle de filtres",
+      "L’infobésité",
+      "La fracture numérique",
+      "Le monopole des médias"
+     ],
+     "reponse": 0,
+     "aide": "Les deux fils sont très différents alors que le débat est le même.",
+     "explication": "C’est la **bulle de filtres** : l’algorithme compose un flux qui conforte chacun, et la contradiction se raréfie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque effet à sa définition.",
+     "paires": [
+      [
+       "Bulle de filtres",
+       "On est surtout exposé à ce qui confirme ses idées"
+      ],
+      [
+       "Infobésité",
+       "L’abondance rend le tri plus difficile que la recherche"
+      ],
+      [
+       "Viralité",
+       "Ce qui circule est ce qui fait réagir"
+      ],
+      [
+       "Fracture cognitive",
+       "Manque de capacité à user du réseau de façon critique"
+      ]
+     ],
+     "aide": "Chaque effet a un mot-clé : confirmer, abondance, réagir, critique.",
+     "explication": "Bulle de filtres = ce qui **confirme** ; infobésité = **abondance** ; viralité = ce qui fait **réagir** ; fracture cognitive = absence de **regard critique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1dc8244c-1c84-5ca7-a8df-beed9c703000",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi la rumeur voyage plus vite",
+   "competence": "analyser-document",
+   "situation": "Léo a retrouvé la note interne d’une plateforme imaginaire, Fluxo, et un graphique sur la circulation de deux types de contenus. Il veut comprendre ce qui est mis en avant.",
+   "documents": [
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note interne de la plateforme Fluxo",
+     "auteur": "Texte écrit pour l’exercice : plateforme imaginaire",
+     "blocs": [
+      "Fluxo est gratuite : elle se finance en vendant de la [[p|publicité]] aux annonceurs.",
+      "Plus un utilisateur reste longtemps, plus il voit d’annonces. L’algorithme recommande donc d’abord les contenus qui font le plus [[r|réagir]].",
+      "Il ne vérifie pas les informations avant de les recommander."
+     ]
+    },
+    {
+     "id": "partages",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Partages moyens par publication",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Information vérifiée",
+      "Rumeur sensationnelle"
+     ],
+     "series": [
+      {
+       "nom": "Partages",
+       "valeurs": [
+        120,
+        480
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Partages",
+      "unite": "par publication",
+      "min": 0,
+      "max": 500,
+      "pas": 100
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "note",
+     "enonce": "Touche le mot qui explique de quoi vit la plateforme.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le premier paragraphe dit comment elle se finance.",
+     "explication": "La gratuité n’est qu’apparente : la plateforme vit de la **publicité**, donc de l’attention et des données de ses utilisateurs."
+    },
+    {
+     "type": "zone",
+     "document": "partages",
+     "enonce": "Touche la barre du contenu qui circule le plus.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La **rumeur sensationnelle** est la plus partagée : 480 partages en moyenne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la rumeur est-elle plus partagée que l’information vérifiée ?",
+     "reponse": 4,
+     "unite": "fois",
+     "aide": "Divise la valeur de la rumeur par celle de l’information vérifiée.",
+     "explication": "480 ÷ 120 = **4 fois** plus de partages."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel lien peut-on faire entre la note et le graphique ?",
+     "options": [
+      "L’algorithme favorise ce qui fait réagir, pas ce qui est vérifié",
+      "La plateforme supprime les rumeurs avant qu’elles circulent",
+      "Les utilisateurs partagent surtout les contenus les plus sérieux",
+      "Les annonceurs paient pour diffuser des informations vérifiées"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième paragraphe de la note, puis regarde quelle barre est la plus haute.",
+     "explication": "Un algorithme qui cherche à faire **réagir** pousse ce qui est viral. La **viralité** ne mesure pas la vérification."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le renversement décisif.",
+     "texte": "L’enjeu n’est plus l’___ à l’information, mais sa ___ et sa vérification.",
+     "reponses": [
+      [
+       "accès"
+      ],
+      [
+       "hiérarchisation"
+      ]
+     ],
+     "banque": [
+      "accès",
+      "hiérarchisation",
+      "gratuité",
+      "diffusion"
+     ],
+     "aide": "L’information est devenue presque illimitée : le problème, c’est de la trier.",
+     "explication": "L’accès est devenu presque illimité ; l’enjeu est désormais la **hiérarchisation** et la **vérification**, que le lecteur doit en partie assurer lui-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "84e3cf31-af07-5f97-a91b-d66c68789873",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une affaire en quatre dates",
+   "competence": "se-reperer-temps",
+   "situation": "Inès prépare un exposé sur l’affaire Dreyfus. Sa frise ne retient que quatre moments : elle doit s’y retrouver avant de raconter l’histoire.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la condamnation à la réhabilitation",
+     "source": "Frise réalisée d’après le cours.",
+     "debut": 1890,
+     "fin": 1910,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "cond",
+       "date": 1894,
+       "nom": "Condamnation"
+      },
+      {
+       "id": "pic",
+       "date": 1896,
+       "nom": "Picquart"
+      },
+      {
+       "id": "zola",
+       "date": 1898,
+       "nom": "« J’accuse… ! »"
+      },
+      {
+       "id": "rehab",
+       "date": 1906,
+       "nom": "Réhabilitation"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui correspond à la lettre ouverte de Zola dans L’Aurore.",
+     "reponse": [
+      "zola"
+     ],
+     "aide": "Cherche le titre de la lettre.",
+     "explication": "Le **13 janvier 1898**, Zola publie « J’accuse… ! » à la une de *L’Aurore*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la condamnation de Dreyfus et sa réhabilitation ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais la date de la condamnation à celle de la réhabilitation.",
+     "explication": "1906 − 1894 = **12 ans** pour que l’erreur soit officiellement réparée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la découverte de Picquart de la lettre de Zola ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Lis les années de ces deux événements sur la frise.",
+     "explication": "1898 − 1896 = **2 ans** : Picquart a trouvé le vrai auteur du bordereau, mais l’état-major a étouffé l’affaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 1896 et 1898, que se passe-t-il pour que Zola prenne la plume ?",
+     "options": [
+      "L’état-major étouffe l’affaire et Esterhazy est acquitté",
+      "Dreyfus est gracié et revient en France",
+      "La loi de séparation des Églises et de l’État est votée",
+      "Le colonel Picquart est élu président de la République"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arrive à Esterhazy en janvier 1898.",
+     "explication": "En janvier 1898, l’état-major **étouffe l’affaire** : Esterhazy, le vrai auteur du bordereau, est acquitté. Zola réagit deux jours plus tard."
+    }
+   ]
+  },
+  {
+   "chapitre": "84e3cf31-af07-5f97-a91b-d66c68789873",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre à la une de L’Aurore",
+   "competence": "analyser-texte",
+   "situation": "Samir a trouvé la fiche d’identité de la une du 13 janvier 1898 et un résumé de la lettre qu’elle porte. Il cherche pourquoi Zola prend un tel risque.",
+   "documents": [
+    {
+     "id": "une",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Aurore",
+     "sousTitre": "13 janvier 1898",
+     "emoji": "📰",
+     "lignes": [
+      {
+       "texte": "À la une",
+       "valeur": "Lettre ouverte au président de la République"
+      },
+      {
+       "texte": "Auteur",
+       "valeur": "Émile Zola"
+      },
+      {
+       "texte": "Titre trouvé par",
+       "valeur": "Clemenceau",
+       "id": "titre"
+      },
+      {
+       "texte": "Tirage du jour",
+       "valeur": "300 000 exemplaires"
+      }
+     ],
+     "pied": "Fiche résumée d’après le cours"
+    },
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Ce que dit la lettre",
+     "auteur": "Résumé rédigé pour l’exercice",
+     "blocs": [
+      "Zola affirme qu’un innocent a été condamné en 1894 et que le véritable auteur du bordereau, le commandant [[e|Esterhazy]], vient d’être acquitté.",
+      "Il nomme les responsables, sachant qu’il s’expose à un procès en [[d|diffamation]]. C’est ce qu’il cherche : que l’affaire soit débattue au grand jour, de façon contradictoire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "une",
+     "enonce": "Touche la ligne qui dit qui a trouvé le titre de la lettre.",
+     "reponse": [
+      "titre"
+     ],
+     "aide": "Zola n’est pas l’auteur du titre.",
+     "explication": "C’est **Clemenceau** qui donne son titre à la lettre : « J’accuse… ! »."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "enonce": "Touche le nom du véritable auteur du bordereau.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Il vient d’être acquitté.",
+     "explication": "Le véritable auteur du bordereau est le commandant **Esterhazy**, découvert par Picquart en 1896."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "enonce": "Touche le mot qui désigne le procès auquel Zola s’expose volontairement.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Zola nomme des personnes : la loi punit ce délit.",
+     "explication": "Zola s’expose à un procès en **diffamation**, car il nomme les responsables. C’est ce qu’il recherche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Zola cherche-t-il à être poursuivi ?",
+     "options": [
+      "Pour forcer un débat contradictoire public",
+      "Pour obtenir l’interdiction du journal concurrent",
+      "Pour échapper à une condamnation plus lourde",
+      "Pour être élu député à Paris"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du résumé.",
+     "explication": "Un procès oblige à débattre **publiquement et de façon contradictoire** : c’est le moyen de rouvrir l’affaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "84e3cf31-af07-5f97-a91b-d66c68789873",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux éditoriaux, une même affaire",
+   "competence": "analyser-document",
+   "situation": "Lina fouille un grenier et trouve deux éditoriaux imaginés dans l’esprit de 1898, qui ne disent pas la même chose. Elle les confronte pour comprendre le rôle de la presse.",
+   "documents": [
+    {
+     "id": "a",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Éditorial A",
+     "auteur": "Texte écrit pour l’exercice : aucun journal réel",
+     "blocs": [
+      "Le conseil de guerre a jugé : la chose est jugée.",
+      "Rouvrir l’affaire, c’est [[f|affaiblir]] l’armée devant l’Allemagne. Ceux qui réclament la révision divisent les Français au pire moment."
+     ]
+    },
+    {
+     "id": "b",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Éditorial B",
+     "auteur": "Texte écrit pour l’exercice : aucun journal réel",
+     "blocs": [
+      "Un homme est au bagne depuis 1894, condamné sur une pièce mince.",
+      "L’honneur de l’armée n’est pas de se taire : il est de reconnaître l’erreur. La vérité ne doit rien à l’état-major."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument dans l’éditorial qui le défend.",
+     "categories": [
+      "Éditorial A",
+      "Éditorial B"
+     ],
+     "items": [
+      [
+       "Rouvrir l’affaire affaiblit l’armée",
+       0
+      ],
+      [
+       "L’honneur est de reconnaître l’erreur",
+       1
+      ],
+      [
+       "La chose est jugée, il faut s’en tenir là",
+       0
+      ],
+      [
+       "La condamnation repose sur une pièce mince",
+       1
+      ]
+     ],
+     "aide": "Un éditorial défend l’armée, l’autre défend la révision.",
+     "explication": "L’**éditorial A** protège l’institution militaire ; l’**éditorial B** réclame la révision au nom de la vérité."
+    },
+    {
+     "type": "zone",
+     "document": "a",
+     "enonce": "Touche le verbe qui dit ce que la révision ferait à l’armée selon l’éditorial A.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "C’est le contraire de « renforcer ».",
+     "explication": "Pour l’auteur, rouvrir l’affaire reviendrait à **affaiblir** l’armée : l’argument de l’ordre contre celui de la vérité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette confrontation sur le rôle de la presse dans l’affaire ?",
+     "options": [
+      "Elle est une puissance politique qui structure deux camps",
+      "Elle reste neutre et se contente de relayer les faits",
+      "Elle n’intéresse que les militaires",
+      "Elle est contrôlée par un seul parti"
+     ],
+     "reponse": 0,
+     "aide": "Deux journaux, deux versions du même fait.",
+     "explication": "La presse **impose un sujet, structure deux camps et fait basculer l’opinion** : c’est une puissance politique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet la même liberté de la presse, d’après le bilan de l’affaire ?",
+     "options": [
+      "La campagne de calomnie comme son démenti",
+      "Seulement la défense de l’innocent",
+      "Seulement la diffusion de fausses preuves",
+      "La suppression de tout débat public"
+     ],
+     "reponse": 0,
+     "aide": "Pense à La Libre Parole d’un côté, à Zola de l’autre.",
+     "explication": "La même liberté a permis la **calomnie** et son **démenti** : elle n’est pas neutre, mais elle est la condition pour qu’une erreur soit corrigée."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a392ab1-c353-5406-a982-3f8b6b94ef86",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre textes qui protègent l’information",
+   "competence": "se-reperer-temps",
+   "situation": "Maëlle prépare un oral sur la liberté de la presse. Elle a listé quatre textes essentiels dans un tableau et veut savoir ce que chacun apporte.",
+   "documents": [
+    {
+     "id": "textes",
+     "type": "tableau",
+     "titre": "Quatre textes, quatre dates",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "Texte"
+     ],
+     "lignes": [
+      [
+       "1789",
+       "Déclaration des droits de l’homme, article 11"
+      ],
+      [
+       "1881",
+       "Loi sur la liberté de la presse"
+      ],
+      [
+       "1948",
+       "Déclaration universelle des droits de l’homme, article 19"
+      ],
+      [
+       "1950",
+       "Convention européenne des droits de l’homme, article 10"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "textes",
+     "enonce": "Touche le texte qui supprime l’autorisation préalable et le cautionnement.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "C’est une loi française, et non une déclaration.",
+     "explication": "La **loi de 1881** met fin à l’autorisation préalable et au cautionnement : on répond de ses écrits après coup, devant les tribunaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi sur la presse de la Déclaration universelle ?",
+     "reponse": 67,
+     "unite": "ans",
+     "aide": "Soustrais 1881 à 1948.",
+     "explication": "1948 − 1881 = **67 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque texte à ce qu’il pose.",
+     "paires": [
+      [
+       "Déclaration de 1789, article 11",
+       "La libre communication des pensées et des opinions"
+      ],
+      [
+       "Déclaration universelle de 1948, article 19",
+       "Chercher, recevoir et répandre des informations sans frontières"
+      ],
+      [
+       "Convention européenne de 1950, article 10",
+       "Un droit qu’on peut faire valoir devant une cour"
+      ]
+     ],
+     "aide": "Pense à « sans frontières » pour le texte mondial, et à « cour » pour le texte européen.",
+     "explication": "1789 : **libre communication** des pensées ; 1948 : information **sans frontières** ; 1950 : un droit **justiciable** devant une cour."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a392ab1-c353-5406-a982-3f8b6b94ef86",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand la justice devient une arme",
+   "competence": "lire-graphique",
+   "situation": "Dans un pays imaginaire, des journalistes d’investigation se plaignent d’être attaqués en justice. Zoé compare des chiffres et classe des cas pour comprendre où s’arrête la liberté d’informer.",
+   "documents": [
+    {
+     "id": "baillons",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Poursuites contre des journalistes d’investigation",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Poursuites",
+       "valeurs": [
+        12,
+        18,
+        25,
+        31,
+        44
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Poursuites",
+      "unite": "par an",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Quatre publications poursuivies",
+     "source": "Cas imaginés pour l’exercice.",
+     "colonnes": [
+      "Publication",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Accuse un maire de corruption, sans aucune preuve"
+      ],
+      [
+       "B",
+       "Publie l’adresse et des photos de la famille d’un voisin"
+      ],
+      [
+       "C",
+       "Appelle à s’en prendre à une communauté"
+      ],
+      [
+       "D",
+       "Dévoile des documents secrets de la défense nationale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "baillons",
+     "enonce": "Touche l’année où il y a eu le plus de poursuites.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "C’est **2023** : 44 poursuites."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de poursuites par an le chiffre a-t-il augmenté entre 2019 et 2023 ?",
+     "reponse": 32,
+     "unite": "poursuites",
+     "aide": "Lis la barre de 2019 et celle de 2023, puis soustrais.",
+     "explication": "44 − 12 = **32 poursuites** de plus en quatre ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une action en justice destinée à épuiser un journaliste plutôt qu’à obtenir gain de cause s’appelle…",
+     "options": [
+      "Une procédure-bâillon",
+      "Une lettre de cachet",
+      "Un droit de réponse",
+      "Un secret d’instruction"
+     ],
+     "reponse": 0,
+     "aide": "Le nom évoque ce qu’on met sur une bouche.",
+     "explication": "C’est une **procédure-bâillon** : multiplier les poursuites pour fatiguer, ruiner et faire taire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque publication à la limite de la liberté d’informer qu’elle met en jeu.",
+     "paires": [
+      [
+       "Publication A",
+       "Diffamation : l’honneur"
+      ],
+      [
+       "Publication B",
+       "Vie privée : l’intimité"
+      ],
+      [
+       "Publication C",
+       "Incitation à la haine : l’ordre public"
+      ],
+      [
+       "Publication D",
+       "Secret de la défense : la sécurité"
+      ]
+     ],
+     "aide": "Demande-toi à chaque fois ce que la loi protège : un honneur, une intimité, des personnes visées, la sécurité du pays.",
+     "explication": "A attaque l’**honneur** (diffamation) ; B l’**intimité** ; C **incite à la haine** ; D menace le **secret de la défense**. Ces limites sont légitimes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui doit décider si une publication a franchi une de ces limites ?",
+     "options": [
+      "Le juge",
+      "L’administration",
+      "Le propriétaire du journal",
+      "Le ministre"
+     ],
+     "reponse": 0,
+     "aide": "Ces limites sont aussi celles qu’un pouvoir invoque pour restreindre.",
+     "explication": "C’est le **juge**, et non l’administration, qui doit trancher : sinon la limite peut devenir un prétexte de censure."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a392ab1-c353-5406-a982-3f8b6b94ef86",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un pays libre sur le papier ?",
+   "competence": "analyser-document",
+   "situation": "Camille compare le discours officiel d’un pays imaginaire, l’Altavie, à des chiffres de 2023. Elle veut savoir si la liberté de l’information y est réelle ou seulement écrite.",
+   "documents": [
+    {
+     "id": "alt",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’Altavie vue de près",
+     "auteur": "Texte écrit pour l’exercice : pays imaginaire",
+     "blocs": [
+      "La Constitution d’Altavie proclame que la presse est libre. Les procès sont jugés par des tribunaux publics.",
+      "Pourtant, une loi punit la publication de « fausses nouvelles » sans jamais les définir. C’est le [[m|ministère]] de l’Intérieur, et non un juge, qui peut retirer sa carte de presse à un journaliste.",
+      "Trois groupes détiennent presque tous les journaux du pays."
+     ]
+    },
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "L’Altavie en 2023",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Journalistes poursuivis pour diffamation",
+       "14"
+      ],
+      [
+       "Journalistes condamnés",
+       "1"
+      ],
+      [
+       "Cartes de presse retirées par le ministère",
+       "9"
+      ],
+      [
+       "Titres de presse détenus par trois groupes",
+       "80 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alt",
+     "enonce": "Touche l’autorité qui peut retirer la carte de presse, alors que ce devrait être un juge.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cherche une administration dans le deuxième paragraphe.",
+     "explication": "C’est le **ministère** de l’Intérieur : une décision administrative, sans juge, est un signe de contrôle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de journalistes poursuivis n’ont pas été condamnés ?",
+     "reponse": 13,
+     "unite": "journalistes",
+     "aide": "Soustrais les condamnés aux poursuivis.",
+     "explication": "14 − 1 = **13 journalistes** poursuivis sans être condamnés : le signe d’une possible procédure-bâillon."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : garantit-il la liberté de l’information ou la restreint-il ?",
+     "categories": [
+      "Garantit",
+      "Restreint"
+     ],
+     "items": [
+      [
+       "La Constitution proclame la presse libre",
+       0
+      ],
+      [
+       "Les procès se tiennent devant des tribunaux publics",
+       0
+      ],
+      [
+       "Une loi punit des « fausses nouvelles » sans les définir",
+       1
+      ],
+      [
+       "Trois groupes détiennent 80 % des titres",
+       1
+      ],
+      [
+       "Le ministère retire des cartes de presse",
+       1
+      ]
+     ],
+     "aide": "Un texte ou un tribunal protège ; un pouvoir flou ou concentré restreint.",
+     "explication": "La Constitution et les tribunaux publics **garantissent** ; les lois floues, le retrait administratif des cartes et la **concentration** des médias **restreignent**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le rapport entre 14 poursuites et 1 condamnation ?",
+     "options": [
+      "Des poursuites destinées à épuiser plutôt qu’à gagner",
+      "Une justice trop indulgente envers les médias",
+      "Un journalisme sans aucune erreur",
+      "Une loi qui protège toujours les sources"
+     ],
+     "reponse": 0,
+     "aide": "Une procédure peut être efficace même sans condamnation.",
+     "explication": "Beaucoup de poursuites pour une seule condamnation : c’est la logique de la **procédure-bâillon**, qui use le journaliste plus qu’elle ne vise la victoire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure sur la liberté de l’information en Altavie ?",
+     "options": [
+      "Elle se mesure moins aux textes qu’à ce qu’on peut publier",
+      "Elle est garantie, puisque la Constitution la proclame",
+      "Elle est totale, puisque des tribunaux existent",
+      "Elle n’a aucun sens dans un pays imaginaire"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce qui est écrit à ce qui est possible dans les faits.",
+     "explication": "La liberté se mesure **moins aux textes qu’à ce qu’il est effectivement possible de publier** : l’Altavie la proclame mais la restreint."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ccd9285-da40-506f-91db-a2670cdb1779",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que disent les journaux, ce que voit le front",
+   "competence": "analyser-texte",
+   "situation": "Louise reçoit une lettre de son frère Paul, soldat en 1916. Il n’y reconnaît pas ce qu’il lit dans la presse.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre du front",
+     "auteur": "Lettre imaginée, écrite pour l’exercice",
+     "blocs": [
+      "Chère Louise, les journaux d’ici disent que nos pertes sont [[m|légères]] et que la victoire est [[m|proche]].",
+      "Mais ici, avec les camarades, nous enterrons chaque jour ceux qui tombent, et aucun journal ne le dit. Nous ne croyons plus ce qu’on nous raconte.",
+      "Embrasse les enfants pour moi. Paul."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche les deux mots par lesquels la presse minimise la guerre.",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "aide": "Un mot parle des pertes, l’autre de la fin de la guerre.",
+     "explication": "La presse parle de pertes **légères** et d’une victoire **proche** : c’est le procédé de propagande qu’on appelle le bourrage de crâne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on cette propagande qui minimise les pertes et promet une victoire prochaine ?",
+     "options": [
+      "Le bourrage de crâne",
+      "Le samizdat",
+      "Le brouillage",
+      "La retouche de photographies"
+     ],
+     "reponse": 0,
+     "aide": "L’expression est née pendant la Grande Guerre.",
+     "explication": "C’est le **bourrage de crâne** : minimiser les pertes, ridiculiser l’ennemi, promettre la victoire prochaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conséquence durable ce discours a-t-il sur les combattants ?",
+     "options": [
+      "Une défiance envers la presse",
+      "Une confiance accrue dans les journaux",
+      "Un désintérêt pour la guerre",
+      "Une envie d’écrire dans les journaux"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du deuxième paragraphe.",
+     "explication": "Ce décalage entre le front et les journaux nourrit une **défiance durable** des combattants envers la presse."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ccd9285-da40-506f-91db-a2670cdb1779",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Par-dessus le rideau de fer",
+   "competence": "observer-schema",
+   "situation": "Pendant la guerre froide, une radio de l’Ouest veut atteindre des auditeurs de l’Est. Tomek, un élève, regarde le schéma d’un cours et en repère les acteurs.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Informer à l’Est pendant la guerre froide",
+     "source": "Schéma simplifié, d’après le cours.",
+     "largeur": 340,
+     "hauteur": 280,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 30,
+       "l": 100,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "radio",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 65,
+       "y": 55,
+       "emoji": "📻",
+       "taille": 30
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 90,
+       "texte": "Radio de l’Ouest",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 225,
+       "y": 30,
+       "l": 100,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "auditeurs",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 275,
+       "y": 55,
+       "emoji": "🏠",
+       "taille": 30
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 90,
+       "texte": "Auditeurs de l’Est",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 15,
+       "l": 14,
+       "h": 100,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "rideau",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 167,
+       "y": 130,
+       "texte": "Rideau de fer",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        115,
+        65
+       ],
+       "a": [
+        225,
+        65
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 160,
+       "l": 110,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "brouilleur",
+       "zone": true,
+       "texte": "Émetteur"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        255,
+        160
+       ],
+       "a": [
+        255,
+        106
+       ],
+       "fleche": "fin",
+       "teinte": "corail",
+       "style": "pointilles"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 215,
+       "l": 280,
+       "h": 45,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "samizdats",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 65,
+       "y": 237,
+       "emoji": "🧑",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 237,
+       "emoji": "🧑",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 275,
+       "y": 237,
+       "emoji": "🧑",
+       "taille": 28
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        237
+       ],
+       "a": [
+        145,
+        237
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        195,
+        237
+       ],
+       "a": [
+        250,
+        237
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 207,
+       "texte": "Textes recopiés à la main",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche l’émetteur dont les ondes servent à empêcher d’entendre la radio de l’Ouest.",
+     "reponse": [
+      "brouilleur"
+     ],
+     "aide": "Sa flèche pointillée attaque le signal de la radio.",
+     "explication": "C’est le **brouillage** : les régimes de l’Est émettent du bruit pour couvrir les radios occidentales."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche le moyen de diffusion qui passe de main en main, sans radio ni presse officielle.",
+     "reponse": [
+      "samizdats"
+     ],
+     "aide": "Des textes sont recopiés à la main.",
+     "explication": "Ce sont les **samizdats** : des textes recopiés à la main et diffusés clandestinement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque arme de l’information à son emploi.",
+     "paires": [
+      [
+       "Radios internationales",
+       "Émettre par-delà le rideau de fer"
+      ],
+      [
+       "Brouillage",
+       "La riposte des régimes de l’Est"
+      ],
+      [
+       "Samizdats",
+       "Des textes recopiés et diffusés clandestinement"
+      ]
+     ],
+     "aide": "Regarde d’où part chaque flèche du schéma.",
+     "explication": "Les **radios** traversent le rideau de fer ; le **brouillage** est la riposte ; les **samizdats** contournent les deux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce schéma sur l’information pendant la guerre froide ?",
+     "options": [
+      "Chaque camp veut contrôler ce qu’entend l’autre",
+      "Une information libre et partagée entre l’Est et l’Ouest",
+      "Une disparition des radios au profit de la presse",
+      "Un contrôle exercé seulement par les États de l’Ouest"
+     ],
+     "reponse": 0,
+     "aide": "Observe qui émet, qui brouille et qui contourne.",
+     "explication": "Chaque camp cherche à **contrôler l’information** que l’autre peut recevoir : c’est l’un des champs de la guerre froide."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ccd9285-da40-506f-91db-a2670cdb1779",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Reconnaître le contrôle de l’information",
+   "competence": "analyser-document",
+   "situation": "Yanis prépare un devoir : « Le contrôle de l’information appartient-il au passé ? ». Il compare deux grandes affaires du XXe siècle à un cas imaginaire de 2024.",
+   "documents": [
+    {
+     "id": "affaires",
+     "type": "tableau",
+     "titre": "Deux enquêtes qui ont fait vaciller un pouvoir",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Affaire",
+      "Date",
+      "Ce qui est révélé ou publié",
+      "Issue"
+     ],
+     "lignes": [
+      [
+       "Pentagon Papers",
+       "1971",
+       "Des documents classifiés sur la guerre du Vietnam",
+       "Publiés malgré le gouvernement"
+      ],
+      [
+       "Watergate",
+       "1972-1974",
+       "L’enquête du Washington Post",
+       "Démission du président Nixon"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "nord",
+     "type": "texte",
+     "genre": "article",
+     "titre": "En Nordmark, en 2024",
+     "auteur": "Texte écrit pour l’exercice : pays imaginaire",
+     "blocs": [
+      "Le ministère de la Communication exige de lire chaque article [[p|avant]] sa publication.",
+      "Le principal quotidien a été racheté par un proche du président.",
+      "Des milliers de faux comptes diffusent un faux document sur une opposante.",
+      "Le téléphone d’une journaliste d’investigation est espionné."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affaires",
+     "enonce": "Touche l’affaire dont l’issue est la démission d’un président.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Regarde la colonne « Issue ».",
+     "explication": "Le **Watergate** : l’enquête du *Washington Post* conduit à la démission de Nixon en 1974."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication des Pentagon Papers de la fin du Watergate ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Prends l’année de la publication des Pentagon Papers et la dernière année du Watergate.",
+     "explication": "1974 − 1971 = **3 ans** : en peu de temps, la presse a mis en cause deux pouvoirs américains."
+    },
+    {
+     "type": "zone",
+     "document": "nord",
+     "enonce": "Touche le mot qui montre qu’il s’agit d’une censure préalable.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le contrôle intervient avant la parution.",
+     "explication": "Lire chaque article **avant** sa publication, c’est une **censure préalable** : le contrôle direct du contenu."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fait de Nordmark au mécanisme de contrôle qu’il illustre.",
+     "paires": [
+      [
+       "Lecture des articles avant parution",
+       "Censure directe"
+      ],
+      [
+       "Quotidien racheté par un proche du président",
+       "Contrôle par la propriété"
+      ],
+      [
+       "Faux comptes qui diffusent un faux document",
+       "Campagne de désinformation"
+      ],
+      [
+       "Téléphone d’une journaliste espionné",
+       "Surveillance"
+      ]
+     ],
+     "aide": "Relis chaque paragraphe de Nordmark : qui contrôle, comment ?",
+     "explication": "Censure, propriété, désinformation, surveillance : ce sont les **quatre mécanismes** que le jalon demande de savoir reconnaître."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de la comparaison entre 1971-1974 et Nordmark ?",
+     "options": [
+      "Les mécanismes de contrôle de l’information n’appartiennent pas au passé",
+      "Le contrôle de l’information a disparu depuis le Watergate",
+      "Seuls les régimes totalitaires du XXe siècle contrôlent l’information",
+      "La presse n’a plus jamais été un contre-pouvoir"
+     ],
+     "reponse": 0,
+     "aide": "Les formes changent, mais les mécanismes…",
+     "explication": "Les **formes ont changé, les mécanismes demeurent** : censure directe, contrôle par la propriété, désinformation, surveillance."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d788dd8-54b3-52c5-9fde-a04e5307cc41",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux glaives, un roi sacré",
+   "competence": "lire-tableau",
+   "situation": "Hugo découvre au collège la théorie des deux glaives et le sacre des rois de France. Il remplit un tableau et suit les étapes qui font un roi.",
+   "documents": [
+    {
+     "id": "glaives",
+     "type": "tableau",
+     "titre": "La théorie des deux glaives",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Glaive",
+      "Son domaine",
+      "Qui le porte"
+     ],
+     "lignes": [
+      [
+       "Spirituel",
+       "Le salut des âmes",
+       "?"
+      ],
+      [
+       "Temporel",
+       "?",
+       "Les princes"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "sacre",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "reims",
+       "texte": "Sacre à Reims",
+       "emoji": "👑"
+      },
+      {
+       "id": "roi",
+       "texte": "Roi par la grâce de Dieu"
+      },
+      {
+       "id": "devoirs",
+       "texte": "Devoirs du roi"
+      }
+     ],
+     "liens": [
+      {
+       "de": "reims",
+       "a": "roi",
+       "texte": "fait"
+      },
+      {
+       "de": "roi",
+       "a": "devoirs",
+       "texte": "impose"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui porte le glaive spirituel, à la place du « ? » du tableau ?",
+     "options": [
+      "L’Église",
+      "Les princes",
+      "Les marchands",
+      "Les paysans"
+     ],
+     "reponse": 0,
+     "aide": "Le glaive spirituel concerne le salut des âmes.",
+     "explication": "Le glaive **spirituel** est porté par l’**Église**, qui a la charge du salut des âmes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le domaine du glaive temporel, à la place du « ? » du tableau ?",
+     "options": [
+      "Le gouvernement des hommes",
+      "Le salut des âmes",
+      "La rédaction des prières",
+      "La copie des manuscrits"
+     ],
+     "reponse": 0,
+     "aide": "Les princes gouvernent.",
+     "explication": "Le glaive **temporel** est celui des princes : le **gouvernement des hommes**."
+    },
+    {
+     "type": "zone",
+     "document": "sacre",
+     "enonce": "Touche la cérémonie qui fait du roi un roi « par la grâce de Dieu ».",
+     "reponse": [
+      "reims"
+     ],
+     "aide": "Le roi de France y est oint de l’huile de la Sainte Ampoule.",
+     "explication": "C’est le **sacre à Reims** : il fait le roi par la grâce de Dieu et ne laisse plus son pouvoir seulement héréditaire ou militaire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les devoirs du roi sacré.",
+     "texte": "Il doit protéger l’___, rendre la ___ et défendre les ___.",
+     "reponses": [
+      [
+       "Église"
+      ],
+      [
+       "justice"
+      ],
+      [
+       "faibles"
+      ]
+     ],
+     "banque": [
+      "Église",
+      "justice",
+      "faibles",
+      "armée",
+      "marchands"
+     ],
+     "aide": "Ce que le sacre impose en retour : trois devoirs.",
+     "explication": "Le sacre impose au roi de protéger l’**Église**, de rendre la **justice** et de défendre les **faibles**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d788dd8-54b3-52c5-9fde-a04e5307cc41",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui nomme les évêques ?",
+   "competence": "analyser-texte",
+   "situation": "Zoé lit un récit sur la querelle des Investitures. Elle veut comprendre pourquoi un empereur s’humilie devant un pape, puis comment le conflit se règle.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le pape et l’empereur",
+     "auteur": "Récit rédigé pour l’exercice",
+     "blocs": [
+      "Au XIe siècle, le pape Grégoire VII veut que l’Église choisisse elle-même ses évêques. L’empereur Henri IV refuse : à ses yeux, ces évêques sont aussi de grands seigneurs, dont il a besoin.",
+      "Le pape excommunie Henri IV. Abandonné par une partie des princes allemands, l’empereur se rend en janvier 1077 au château de [[l|Canossa]], en Italie, pour demander son pardon.",
+      "L’épisode reste le symbole d’un empereur humilié, mais la querelle ne s’arrête pas là : elle dure jusqu’au concordat de Worms, en 1122."
+     ]
+    },
+    {
+     "id": "worms",
+     "type": "tableau",
+     "titre": "Le concordat de Worms (1122)",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Qui ?",
+      "Ce qu’il confère à l’évêque"
+     ],
+     "lignes": [
+      [
+       "L’Église",
+       "?"
+      ],
+      [
+       "L’empereur",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le lieu qui symbolise l’humiliation de l’empereur Henri IV.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Le nom du château est dans le deuxième paragraphe.",
+     "explication": "**Canossa** : l’empereur y vient demander son pardon à Grégoire VII, un épisode resté fameux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Canossa du concordat de Worms ?",
+     "reponse": 45,
+     "unite": "ans",
+     "aide": "Soustrais 1077 à 1122.",
+     "explication": "1122 − 1077 = **45 ans** : la querelle des Investitures ne s’éteint pas avec Canossa."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’empereur tient-il tant à nommer les évêques ?",
+     "options": [
+      "Ce sont aussi de grands seigneurs temporels",
+      "Il veut devenir lui-même prêtre",
+      "Il veut interdire la dîme aux paysans",
+      "Il souhaite supprimer le glaive spirituel"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui explique les raisons d’Henri IV.",
+     "explication": "Les évêques sont aussi de **grands seigneurs temporels** : celui qui les nomme contrôle des terres et des hommes."
+    },
+    {
+     "type": "association",
+     "enonce": "Complète le tableau : qui confère quelle investiture à Worms ?",
+     "paires": [
+      [
+       "L’Église",
+       "L’investiture spirituelle"
+      ],
+      [
+       "L’empereur",
+       "L’investiture temporelle"
+      ]
+     ],
+     "aide": "Chaque pouvoir garde son domaine : spirituel pour l’Église, temporel pour l’empereur.",
+     "explication": "À **Worms (1122)**, l’Église donne l’investiture **spirituelle**, l’empereur l’investiture **temporelle**. C’est un partage."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d788dd8-54b3-52c5-9fde-a04e5307cc41",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un évêque nommé par le roi",
+   "competence": "analyser-document",
+   "situation": "Nous sommes en 1520. Un évêque imaginaire écrit à un ami. Clara croise sa lettre avec une frise pour comprendre comment le roi de France en est arrivé là.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un évêque, en 1520",
+     "auteur": "Lettre imaginée, écrite pour l’exercice",
+     "blocs": [
+      "Mon cher ami, je dois ma charge au roi. Depuis l’accord signé en 1516 à [[b|Bologne]], c’est lui qui nomme les évêques du royaume.",
+      "Je reste pourtant un homme d’Église : je baptise, je marie, je lève la dîme et je juge les clercs devant la justice de l’Église."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le roi, l’empereur et le pape",
+     "source": "D’après le cours.",
+     "debut": 800,
+     "fin": 1600,
+     "pas": 200,
+     "evenements": [
+      {
+       "id": "charl",
+       "date": 800,
+       "nom": "Sacre de Charlemagne"
+      },
+      {
+       "id": "worms",
+       "date": 1122,
+       "nom": "Worms"
+      },
+      {
+       "id": "boniface",
+       "date": 1303,
+       "nom": "Boniface VIII arrêté"
+      },
+      {
+       "id": "bologne",
+       "date": 1516,
+       "nom": "Bologne"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le lieu de l’accord qui donne au roi la nomination des évêques.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Il est cité dans la première phrase de la lettre.",
+     "explication": "C’est le **concordat de Bologne** (1516) : le roi de France y obtient la nomination des évêques."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où un roi de France fait arrêter un pape.",
+     "reponse": [
+      "boniface"
+     ],
+     "aide": "Philippe le Bel agit en 1303.",
+     "explication": "En **1303**, Philippe le Bel fait arrêter le pape **Boniface VIII** : l’État royal ne se laisse plus commander."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le concordat de Worms de celui de Bologne ?",
+     "reponse": 394,
+     "unite": "ans",
+     "aide": "Soustrais 1122 à 1516.",
+     "explication": "1516 − 1122 = **394 ans** : l’équilibre entre pape, empereur et roi a beaucoup bougé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on une Église catholique largement contrôlée par le pouvoir royal ?",
+     "options": [
+      "Le gallicanisme",
+      "Le millet ottoman",
+      "La dîme royale",
+      "Le califat sunnite"
+     ],
+     "reponse": 0,
+     "aide": "Le mot vient d’un ancien nom de la France.",
+     "explication": "C’est le **gallicanisme**. Le concordat de Bologne en est un jalon : le roi nomme les évêques."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque pouvoir : appartient-il plutôt au roi ou à l’Église dans la lettre ?",
+     "categories": [
+      "Le roi",
+      "L’Église"
+     ],
+     "items": [
+      [
+       "Nommer les évêques du royaume",
+       0
+      ],
+      [
+       "Lever la dîme",
+       1
+      ],
+      [
+       "Juger les clercs devant sa propre justice",
+       1
+      ],
+      [
+       "Baptiser et marier",
+       1
+      ]
+     ],
+     "aide": "Relis les deux paragraphes de la lettre.",
+     "explication": "Le **roi** nomme les évêques ; l’**Église** garde la dîme, sa propre justice et les rites de la vie. Le pouvoir royal monte, sans effacer celui de l’Église."
+    }
+   ]
+  },
+  {
+   "chapitre": "eea5f740-409f-5eac-8f7f-26f9913398a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les réformes d’Atatürk, une à une",
+   "competence": "lire-tableau",
+   "situation": "Elif prépare une fiche sur la Turquie de Mustafa Kemal, dit Atatürk. Elle range les grandes réformes dans un tableau.",
+   "documents": [
+    {
+     "id": "reformes",
+     "type": "tableau",
+     "titre": "Cinq réformes kémalistes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "Réforme"
+     ],
+     "lignes": [
+      [
+       "1924",
+       "Abolition du califat"
+      ],
+      [
+       "1926",
+       "Code civil inspiré du code suisse"
+      ],
+      [
+       "1928",
+       "Alphabet latin à la place de l’arabe"
+      ],
+      [
+       "1934",
+       "Droit de vote et d’éligibilité des femmes"
+      ],
+      [
+       "1937",
+       "Laïcité inscrite dans la Constitution"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reformes",
+     "enonce": "Touche la date de l’adoption de l’alphabet latin.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la ligne qui parle de l’arabe.",
+     "explication": "C’est **1928** : l’alphabet latin coupe d’un coup l’accès aux textes anciens, une rupture culturelle majeure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’abolition du califat de l’inscription de la laïcité dans la Constitution ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Soustrais 1924 à 1937.",
+     "explication": "1937 − 1924 = **13 ans** : la sécularisation s’est faite par étapes rapides, décidée d’en haut."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réforme au domaine qu’elle transforme.",
+     "paires": [
+      [
+       "Abolition du califat",
+       "Le pouvoir religieux"
+      ],
+      [
+       "Code civil inspiré du code suisse",
+       "Le droit de la famille"
+      ],
+      [
+       "Alphabet latin",
+       "L’écriture et la culture"
+      ],
+      [
+       "Droit de vote des femmes",
+       "Les droits politiques"
+      ]
+     ],
+     "aide": "Qu’est-ce qui change à chaque fois : le calife, la famille, l’écriture, le vote ?",
+     "explication": "Califat : **pouvoir religieux** ; code civil : **famille** (mariage civil, fin de la polygamie) ; alphabet : **culture** ; vote : **droits politiques**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eea5f740-409f-5eac-8f7f-26f9913398a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ankara, Istanbul et l’armée gardienne",
+   "competence": "lire-carte",
+   "situation": "Mehmet suit la Turquie sur une carte et dans un tableau : la capitale de la République, la ville de Sainte-Sophie et les interventions de l’armée.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La Turquie et ses deux grandes villes",
+     "source": "Carte schématique.",
+     "fond": "mediterranee",
+     "cadrage": [
+      22,
+      34,
+      46,
+      44
+     ],
+     "regions": [
+      {
+       "code": "TUR",
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "ankara",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "istanbul",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "armee",
+     "type": "tableau",
+     "titre": "Les interventions de l’armée",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Année",
+      "Intervention"
+     ],
+     "lignes": [
+      [
+       "1960",
+       "Coup d’État"
+      ],
+      [
+       "1971",
+       "Intervention"
+      ],
+      [
+       "1980",
+       "Coup d’État"
+      ],
+      [
+       "1997",
+       "« Coup d’État postmoderne »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale de la République turque, proclamée en 1923.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Ce n’est pas la plus grande ville ni la plus à l’ouest.",
+     "explication": "**Ankara** est la capitale de la République proclamée par Mustafa Kemal en 1923."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où se trouve Sainte-Sophie, reconvertie en mosquée en 2020.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "C’est l’ancienne Constantinople, sur le détroit du Bosphore.",
+     "explication": "**Istanbul** abrite Sainte-Sophie, reconvertie en mosquée en 2020."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’interventions de l’armée le tableau recense-t-il ?",
+     "reponse": 4,
+     "unite": "interventions",
+     "aide": "Compte les lignes du tableau.",
+     "explication": "Il y en a **quatre** : 1960, 1971, 1980 et 1997."
+    },
+    {
+     "type": "choix",
+     "enonce": "Au nom de quoi l’armée est-elle longtemps intervenue ?",
+     "options": [
+      "De l’héritage kémaliste, contre des pouvoirs trop religieux",
+      "De l’autorité du calife, rétabli en 1960 par la loi",
+      "Du retour à l’alphabet arabe dans les écoles",
+      "De l’autonomie des communautés non musulmanes"
+     ],
+     "reponse": 0,
+     "aide": "L’armée se considérait comme gardienne du régime.",
+     "explication": "L’armée s’est longtemps vue comme la **gardienne de l’héritage kémaliste** et est intervenue contre des gouvernements jugés trop religieux."
+    }
+   ]
+  },
+  {
+   "chapitre": "eea5f740-409f-5eac-8f7f-26f9913398a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Turquie et France : deux modèles",
+   "competence": "argumenter",
+   "situation": "Dans un devoir, Selim doit expliquer en quoi la sécularisation turque diffère de la laïcité française, puis montrer qu’elle n’est pas « irréversible ». Il croise un tableau et une frise.",
+   "documents": [
+    {
+     "id": "modeles",
+     "type": "tableau",
+     "titre": "Deux modèles",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Question",
+      "France (loi de 1905)",
+      "Turquie kémaliste"
+     ],
+     "lignes": [
+      [
+       "Rapport de l’État à la religion",
+       "Séparation : neutralité de l’État",
+       "Contrôle de la religion par l’État"
+      ],
+      [
+       "Qui nomme les imams ?",
+       "Aucune administration d’État : les cultes s’organisent eux-mêmes",
+       "Le Diyanet, créé en 1924"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le tournant contemporain",
+     "source": "D’après le cours.",
+     "debut": 2000,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "akp",
+       "date": 2002,
+       "nom": "AKP au pouvoir"
+      },
+      {
+       "id": "coup",
+       "date": 2016,
+       "nom": "Tentative de coup d’État"
+      },
+      {
+       "id": "sophie",
+       "date": 2020,
+       "nom": "Sainte-Sophie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modeles",
+     "enonce": "Touche la case qui dit qui nomme les imams en Turquie.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne « Qui nomme les imams ? », colonne Turquie.",
+     "explication": "C’est le **Diyanet**, créé en 1924 : il nomme les imams, rédige les prêches et gère les mosquées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le modèle kémaliste n’est-il pas la laïcité à la française ?",
+     "options": [
+      "L’État contrôle la religion au lieu de s’en séparer",
+      "L’État y interdit toute pratique religieuse privée",
+      "L’État y finance uniquement l’Église anglicane",
+      "L’État y reconnaît plusieurs religions d’État"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux colonnes de la première ligne.",
+     "explication": "Le modèle kémaliste ne **sépare** pas l’État et la religion : il la **contrôle**. C’est la différence décisive avec la laïcité française."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui reconvertit un grand monument en mosquée.",
+     "reponse": [
+      "sophie"
+     ],
+     "aide": "Le monument est célèbre à Istanbul.",
+     "explication": "En **2020**, Sainte-Sophie est reconvertie en mosquée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’arrivée de l’AKP au pouvoir de la reconversion de Sainte-Sophie ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais 2002 à 2020.",
+     "explication": "2020 − 2002 = **18 ans** : l’AKP gouverne durablement et la place du religieux grandit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : relève-t-il de la sécularisation autoritaire (1923-1937) ou du retour du religieux (depuis 2002) ?",
+     "categories": [
+      "Sécularisation autoritaire",
+      "Retour du religieux"
+     ],
+     "items": [
+      [
+       "Abolition du califat",
+       0
+      ],
+      [
+       "Levée de l’interdiction du foulard",
+       1
+      ],
+      [
+       "Code civil inspiré du code suisse",
+       0
+      ],
+      [
+       "Reconversion de Sainte-Sophie en mosquée",
+       1
+      ],
+      [
+       "Droit de vote des femmes",
+       0
+      ]
+     ],
+     "aide": "Pense aux dates : avant 1940 ou après 2002.",
+     "explication": "Califat, code civil et vote des femmes sont des réformes **kémalistes**. Le foulard et Sainte-Sophie marquent le **retour du religieux** dans l’espace public : la sécularisation n’est ni linéaire ni irréversible."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5d38137-c0d3-56c0-97e8-e9a143bad32f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre façons de traiter la religion",
+   "competence": "lire-tableau",
+   "situation": "Rayan prépare un oral sur les modèles de relation entre États et religions. Un tableau résume les quatre principaux.",
+   "documents": [
+    {
+     "id": "modeles",
+     "type": "tableau",
+     "titre": "Les quatre modèles",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Modèle",
+      "Principe"
+     ],
+     "lignes": [
+      [
+       "Séparation",
+       "L’État ne reconnaît, ne salarie ni ne subventionne aucun culte"
+      ],
+      [
+       "Religion d’État",
+       "Un culte officiel"
+      ],
+      [
+       "Reconnaissance de cultes",
+       "L’État organise et finance"
+      ],
+      [
+       "Contrôle étatique",
+       "L’État administre le religieux"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modeles",
+     "enonce": "Touche le principe qui correspond à un État qui administre le religieux.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche le verbe « administrer ».",
+     "explication": "C’est le **contrôle étatique** : l’État administre le religieux, comme en Turquie kémaliste ou en Chine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays à son modèle.",
+     "paires": [
+      [
+       "France depuis 1905",
+       "Séparation"
+      ],
+      [
+       "Royaume-Uni",
+       "Religion d’État"
+      ],
+      [
+       "Allemagne",
+       "Reconnaissance de cultes"
+      ],
+      [
+       "Chine",
+       "Contrôle étatique"
+      ]
+     ],
+     "aide": "Pense à l’impôt d’Église en Allemagne et au souverain qui gouverne l’Église anglicane.",
+     "explication": "France : **séparation** (1905) ; Royaume-Uni : **religion d’État** ; Allemagne : **reconnaissance** (impôt d’Église collecté par l’État) ; Chine : **contrôle étatique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie la laïcité française ?",
+     "options": [
+      "La neutralité de l’État, qui garantit la liberté de tous",
+      "L’effacement du religieux de tout l’espace public",
+      "Un culte officiel protégé par l’État",
+      "L’administration des cultes par l’État"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est ni l’effacement du religieux ni son hostilité.",
+     "explication": "La laïcité française est la **neutralité de l’État** : elle garantit la liberté de tous, croyants ou non."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5d38137-c0d3-56c0-97e8-e9a143bad32f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une carte d’Europe des cultes",
+   "competence": "lire-carte",
+   "situation": "Inès compare quatre pays d’Europe : elle a coloré une carte selon la façon dont l’État traite la religion.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre pays, trois modèles",
+     "source": "D’après le cours.",
+     "fond": "europe",
+     "cadrage": [
+      -12,
+      42,
+      24,
+      62
+     ],
+     "regionsCliquables": true,
+     "muette": true,
+     "regions": [
+      {
+       "code": "FRA",
+       "teinte": "bleu",
+       "motif": "clair",
+       "etiquette": "France"
+      },
+      {
+       "code": "GBR",
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Royaume-Uni"
+      },
+      {
+       "code": "DNK",
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Danemark"
+      },
+      {
+       "code": "DEU",
+       "teinte": "vert",
+       "motif": "clair",
+       "etiquette": "Allemagne"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Séparation"
+      },
+      {
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Religion d’État"
+      },
+      {
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Reconnaissance de cultes"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays où l’État collecte un impôt d’Église.",
+     "reponse": [
+      "DEU"
+     ],
+     "aide": "C’est le pays à l’est de la France, de modèle « reconnaissance ».",
+     "explication": "En **Allemagne**, l’État collecte l’impôt d’Église : c’est le modèle de la reconnaissance de cultes."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays où le souverain gouverne l’Église officielle.",
+     "reponse": [
+      "GBR"
+     ],
+     "aide": "C’est une île, au nord-ouest de la France.",
+     "explication": "Au **Royaume-Uni**, le souverain gouverne l’Église anglicane : c’est une religion d’État."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pays de la carte relèvent du modèle de la religion d’État ?",
+     "reponse": 2,
+     "unite": "pays",
+     "aide": "Compte les pays de la même catégorie dans la légende.",
+     "explication": "Il y en a **deux** : le Royaume-Uni et le Danemark."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle particularité subsiste en Alsace-Moselle, dans une France de séparation ?",
+     "options": [
+      "Un régime concordataire",
+      "Une religion d’État",
+      "Un impôt d’Église collecté pour l’État",
+      "Une interdiction de tous les cultes"
+     ],
+     "reponse": 0,
+     "aide": "C’est un héritage d’un régime ancien de reconnaissance des cultes.",
+     "explication": "L’**Alsace-Moselle** conserve un **régime concordataire** : une exception à la séparation de 1905."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5d38137-c0d3-56c0-97e8-e9a143bad32f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Démêler un conflit « religieux »",
+   "competence": "analyser-document",
+   "situation": "Dans un devoir, Anaïs doit analyser un conflit imaginaire où la religion est invoquée. Elle croise le récit du conflit avec les textes qui protègent la liberté de conscience.",
+   "documents": [
+    {
+     "id": "conflit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La vallée de l’Orme",
+     "auteur": "Texte écrit pour l’exercice : pays imaginaire",
+     "blocs": [
+      "En Karvélie, deux communautés, l’une de religion A, l’autre de religion B, s’affrontent depuis dix ans pour le contrôle de la vallée de l’Orme.",
+      "La vallée est fertile, et ses [[r|puits]] fournissent toute la région. Chaque camp y voit la terre de ses ancêtres, et un [[m|massacre]] commis en 1950 reste présent dans toutes les mémoires.",
+      "Le gouvernement, en difficulté, parle de « guerre sainte » pour rassembler la population derrière lui."
+     ]
+    },
+    {
+     "id": "textes",
+     "type": "tableau",
+     "titre": "Deux garanties internationales",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Texte",
+      "Article",
+      "Ce qu’il garantit"
+     ],
+     "lignes": [
+      [
+       "Déclaration universelle des droits de l’homme (1948)",
+       "18",
+       "Liberté de pensée, de conscience et de religion"
+      ],
+      [
+       "Convention européenne des droits de l’homme",
+       "9",
+       "Liberté de pensée, de conscience et de religion"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conflit",
+     "enonce": "Touche le mot qui désigne une ressource en jeu dans le conflit.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "La vallée fournit de l’eau à toute la région.",
+     "explication": "Les **puits** sont une ressource vitale : un enjeu matériel qui n’a rien de religieux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon l’enjeu qu’il révèle.",
+     "categories": [
+      "Ressources",
+      "Mémoire",
+      "Pouvoir"
+     ],
+     "items": [
+      [
+       "Les puits de la vallée",
+       0
+      ],
+      [
+       "Le massacre de 1950",
+       1
+      ],
+      [
+       "Le discours de « guerre sainte » du gouvernement",
+       2
+      ],
+      [
+       "La fertilité de la vallée",
+       0
+      ]
+     ],
+     "aide": "Un puits est une ressource, un massacre est un souvenir, un discours est un moyen de gouverner.",
+     "explication": "Puits et fertilité : **ressources** ; massacre : **mémoire** ; « guerre sainte » : **pouvoir** qui cherche à se légitimer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du conflit est la plus juste ?",
+     "options": [
+      "La religion y marque une identité mobilisée pour la terre, le pouvoir, la mémoire",
+      "C’est avant tout un affrontement entre deux doctrines religieuses opposées",
+      "Le conflit n’a aucun lien avec l’identité des deux communautés rivales",
+      "Le conflit est causé uniquement par une différence de langue entre les camps"
+     ],
+     "reponse": 0,
+     "aide": "Relis les trois paragraphes : que se dispute-t-on vraiment ?",
+     "explication": "Lire un conflit comme purement religieux est presque toujours une erreur : la religion est un **marqueur** mobilisé sur des enjeux de **terre, de pouvoir et de mémoire**."
+    },
+    {
+     "type": "zone",
+     "document": "textes",
+     "enonce": "Touche l’article de la Convention européenne des droits de l’homme qui garantit cette liberté.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Convention européenne », colonne Article.",
+     "explication": "C’est l’**article 9** de la Convention européenne des droits de l’homme ; la Déclaration universelle de 1948 le fait par son **article 18**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ces deux textes protègent aussi un droit particulier : lequel ?",
+     "options": [
+      "Le droit de changer de religion",
+      "Le droit d’imposer sa religion",
+      "Le droit à une religion d’État",
+      "Le droit de ne payer aucun impôt"
+     ],
+     "reponse": 0,
+     "aide": "Ils protègent la liberté de conscience, pas seulement le fait de croire.",
+     "explication": "Ils garantissent la liberté de croire, de ne pas croire et **de changer de conviction** : un point refusé dans plusieurs États."
+    }
+   ]
+  }
+ ]
+}

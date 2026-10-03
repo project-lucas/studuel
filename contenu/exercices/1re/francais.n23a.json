@@ -1,0 +1,2097 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "e258a28c-4c3c-5fe8-aac0-14ba6ece8272",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Colette signe enfin de son nom",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Les Vrilles de la vigne*. Avant de parler de célébration, place le livre dans la vie de Colette et rappelle les étapes qui l’ont menée à signer seule.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Colette et son livre",
+     "debut": 1870,
+     "fin": 1955,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1873,
+       "nom": "Naissance"
+      },
+      {
+       "id": "will",
+       "date": 1893,
+       "nom": "Mariage avec Willy"
+      },
+      {
+       "id": "vri",
+       "date": 1908,
+       "nom": "Les Vrilles"
+      },
+      {
+       "id": "mort",
+       "date": 1954,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Une femme qui écrit",
+     "colonnes": [
+      "Étape",
+      "Ce qu’elle marque"
+     ],
+     "lignes": [
+      [
+       "Elle publie sous le nom de son mari, Willy",
+       "L’effacement"
+      ],
+      [
+       "Elle monte sur scène au music-hall pour vivre",
+       "?"
+      ],
+      [
+       "Elle divorce et publie sous son seul nom",
+       "Le premier livre signé « Colette » seule"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "vri"
+     ],
+     "enonce": "Sur la frise, touche l’événement qui correspond au premier livre signé « Colette » seule.",
+     "aide": "Le titre de ce livre est celui du chapitre : il parle d’une plante qui s’enroule.",
+     "explication": "*Les Vrilles de la vigne* paraît en **1908** : c’est le premier livre que Colette signe de son seul nom."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le mariage avec Willy du livre signé « Colette » seule ?",
+     "reponse": 15,
+     "aide": "Repère les deux dates sur la frise, puis soustrais.",
+     "explication": "1908 − 1893 = **15 ans** : pendant ce temps, ses livres ont paru sous le nom de son mari.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que marque l’étape du music-hall, dans la case « ? » du tableau ?",
+     "options": [
+      "Le scandale et l’autonomie",
+      "L’effacement et le silence",
+      "Le retour à la maison natale",
+      "La reconnaissance officielle"
+     ],
+     "reponse": 0,
+     "aide": "Elle monte sur scène pour gagner sa vie : cela fait parler, mais cela la rend indépendante.",
+     "explication": "Au music-hall, Colette gagne sa vie : c’est à la fois **le scandale et l’autonomie**, deux pas vers sa signature."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le tableau.",
+     "texte": "Colette a d’abord publié sous le nom de ___, puis elle a ___ et signé sous son seul nom.",
+     "reponses": [
+      [
+       "Willy"
+      ],
+      [
+       "divorcé"
+      ]
+     ],
+     "banque": [
+      "Willy",
+      "Sido",
+      "divorcé",
+      "voyagé"
+     ],
+     "aide": "Relis la première et la dernière ligne du tableau.",
+     "explication": "Elle publie d’abord sous le nom de **Willy**, puis elle **divorce** et signe seule."
+    }
+   ]
+  },
+  {
+   "chapitre": "e258a28c-4c3c-5fe8-aac0-14ba6ece8272",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le jardin de la maison vendue",
+   "competence": "analyser-texte",
+   "situation": "Lis ce court souvenir écrit « à la manière de » Colette. Repère comment elle célèbre le monde sans l’embellir, puis ce que cette célébration ne cache pas.",
+   "documents": [
+    {
+     "id": "souv",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un souvenir de jardin",
+     "blocs": [
+      "Il sentait la pluie d’août sur la poussière chaude. Ma mère se penchait sur un [[f|souci]], écartait une [[a|chenille]] sans la tuer, parlait à la [[f|pivoine]] qui tardait.",
+      "Aujourd’hui la maison est [[p|vendue]], et le jardin n’est plus qu’une odeur que je garde."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Colette"
+    },
+    {
+     "id": "perte",
+     "type": "tableau",
+     "titre": "Ce qui est célébré, ce qui est perdu",
+     "colonnes": [
+      "Ce qui est célébré",
+      "Ce qui est perdu"
+     ],
+     "lignes": [
+      [
+       "Le jardin, la maison, les saisons",
+       "La mère morte, l’enfance enfuie"
+      ],
+      [
+       "Le père",
+       "Sans œuvre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "souv",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux noms de fleurs précis que l’on trouve dans ce souvenir.",
+     "aide": "Colette n’écrit pas « une fleur » : elle donne le nom exact.",
+     "explication": "Elle écrit un **souci** et une **pivoine** : l’émerveillement naît de l’exactitude, non de l’effusion."
+    },
+    {
+     "type": "zone",
+     "document": "souv",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le vivant non humain que la mère épargne.",
+     "aide": "Sido sauve une petite bête qui pourrait abîmer les plantes.",
+     "explication": "La **chenille** est épargnée : pour Sido, le vivant non humain est une société, pas un décor."
+    },
+    {
+     "type": "zone",
+     "document": "souv",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit que la célébration s’écrit du côté de la perte.",
+     "aide": "Il concerne la maison, dans le dernier paragraphe.",
+     "explication": "La maison est **vendue** : le jardin n’existe plus que dans le souvenir, et c’est pour cela qu’on le regarde si bien."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de l’enfance à ce qu’il devient.",
+     "paires": [
+      [
+       "La maison",
+       "Vendue"
+      ],
+      [
+       "Le père",
+       "Sans œuvre"
+      ],
+      [
+       "Les frères",
+       "Devenus silencieux"
+      ]
+     ],
+     "aide": "Le tableau et le cours donnent ces trois pertes ; la maison est dans le souvenir.",
+     "explication": "La maison est **vendue**, le père reste **sans œuvre**, les frères deviennent **silencieux** : la perte est dite sans éclat."
+    }
+   ]
+  },
+  {
+   "chapitre": "e258a28c-4c3c-5fe8-aac0-14ba6ece8272",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Célébrer, est-ce embellir ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves préparent la dissertation « La célébration du monde exclut-elle la perte ? ». Pèse leurs arguments, puis complète le tableau des axes de dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Élise",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élise",
+       "texte": "Pour moi, célébrer le monde, c’est l’embellir : tout doit y être doux."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Pourtant Colette écrit « un souci », « une pivoine », jamais « une fleur ». Ce qui compte, c’est l’[[e|exactitude]]."
+      },
+      {
+       "qui": "Élise",
+       "texte": "Mais la mère morte, la maison vendue ? Ce n’est pas très joyeux."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Justement : elle écrit du côté de la [[p|perte]], et c’est pour cela qu’elle regarde si bien."
+      }
+     ]
+    },
+    {
+     "id": "axes",
+     "type": "tableau",
+     "titre": "Les axes de dissertation",
+     "colonnes": [
+      "Question",
+      "Ce que permet l’œuvre"
+     ],
+     "lignes": [
+      [
+       "Célébrer le monde, est-ce l’embellir ?",
+       "Non : la précision remplace l’idéalisation"
+      ],
+      [
+       "L’écriture du souvenir est-elle fidèle ?",
+       "?"
+      ],
+      [
+       "Le regard de l’enfant ou de l’adulte ?",
+       "Les deux se superposent"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot par lequel Malo répond à l’idée que célébrer, c’est embellir.",
+     "aide": "Il s’oppose à « une fleur » : c’est la qualité d’un nom précis.",
+     "explication": "Malo répond par l’**exactitude** : la précision remplace l’idéalisation."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui explique, pour Malo, la qualité du regard de Colette.",
+     "aide": "Elle écrit « du côté de » quelque chose, dit-il.",
+     "explication": "Elle écrit du côté de la **perte** : la lumière du livre tient à cette tension."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Elle compose, sélectionne, invente : le vrai est de l’ordre de la sensation",
+      "Oui : tout y est un document exact, daté et vérifiable par les archives",
+      "Non : elle ne parle jamais de son enfance et n’évoque aucun souvenir",
+      "On ne peut rien en savoir : tout y est faux et inventé de bout en bout"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle de sensation, pas de document.",
+     "explication": "Colette **compose, sélectionne, invente** : le vrai y est de l’ordre de la sensation, pas du document."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple : ce que Colette écrit, ou ce qu’elle n’écrit pas.",
+     "categories": [
+      "Ce qu’elle écrit",
+      "Ce qu’elle n’écrit pas"
+     ],
+     "items": [
+      [
+       "Un souci, une pivoine",
+       0
+      ],
+      [
+       "Une fleur",
+       1
+      ],
+      [
+       "L’odeur exacte de la première pluie sur la poussière chaude",
+       0
+      ],
+      [
+       "Le printemps",
+       1
+      ]
+     ],
+     "aide": "Elle préfère le nom précis et la sensation exacte aux mots généraux.",
+     "explication": "Elle écrit le **souci**, la **pivoine**, l’**odeur exacte** de la pluie ; elle n’écrit pas « une fleur » ni « le printemps » : célébrer, c’est nommer."
+    }
+   ]
+  },
+  {
+   "chapitre": "5593f9c3-ddac-51da-a68c-442f9305db5c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui aime qui à Trézène ?",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur *Phèdre*. Présente la pièce, puis démêle le triangle des amours.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Phèdre",
+     "sousTitre": "Jean Racine",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Tragédie"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Cinq actes, en vers"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1677"
+      },
+      {
+       "texte": "Parcours",
+       "valeur": "Passion et tragédie"
+      }
+     ],
+     "pied": "Alexandrins d’une simplicité extrême",
+     "teinte": "violet"
+    },
+    {
+     "id": "amours",
+     "type": "chaine",
+     "titre": "Le triangle des amours",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "ph",
+       "texte": "Phèdre"
+      },
+      {
+       "id": "hi",
+       "texte": "Hippolyte"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ph",
+       "a": "hi"
+      },
+      {
+       "de": "hi",
+       "a": "x"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "Phèdre est une tragédie en ___ actes et en ___, créée en ___.",
+     "reponses": [
+      [
+       "cinq",
+       "5"
+      ],
+      [
+       "vers"
+      ],
+      [
+       "1677"
+      ]
+     ],
+     "banque": [
+      "cinq",
+      "trois",
+      "vers",
+      "prose",
+      "1677",
+      "1670"
+     ],
+     "aide": "Tout est sur l’affiche.",
+     "explication": "Une tragédie en **cinq** actes et en **vers**, créée en **1677**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » : celle qu’Hippolyte aime ?",
+     "options": [
+      "Aricie",
+      "Œnone",
+      "Ismène",
+      "Pasiphaé"
+     ],
+     "reponse": 0,
+     "aide": "C’est une princesse d’une famille ennemie.",
+     "explication": "Hippolyte aime **Aricie**, princesse d’une famille ennemie : c’est l’obstacle à l’amour de Phèdre."
+    },
+    {
+     "type": "zone",
+     "document": "amours",
+     "multiple": false,
+     "reponse": [
+      "hi"
+     ],
+     "enonce": "Touche le personnage dont Phèdre est amoureuse, le fils de son époux Thésée.",
+     "aide": "Phèdre est la femme de Thésée : celui qu’elle aime est son beau-fils.",
+     "explication": "Phèdre aime **Hippolyte**, fils de Thésée et d’une Amazone."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Thésée",
+       "Roi d’Athènes, réputé mort"
+      ],
+      [
+       "Œnone",
+       "Nourrice de Phèdre"
+      ],
+      [
+       "Théramène",
+       "Il fait le récit de la mort d’Hippolyte"
+      ],
+      [
+       "Aricie",
+       "Princesse d’une famille ennemie"
+      ]
+     ],
+     "aide": "Chaque rôle apparaît dans le cours ; Aricie est déjà dans l’exercice.",
+     "explication": "**Thésée** est réputé mort, **Œnone** est la nourrice, **Théramène** raconte la mort, **Aricie** est la princesse ennemie."
+    }
+   ]
+  },
+  {
+   "chapitre": "5593f9c3-ddac-51da-a68c-442f9305db5c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De l’aveu à la mort",
+   "competence": "se-reperer-temps",
+   "situation": "Suis l’enchaînement des événements de la pièce : un aveu, une calomnie, une vengeance. Le tableau donne les étapes dans le désordre.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes de l’action (en désordre)",
+     "colonnes": [
+      "Moment",
+      "Qui agit",
+      "Ce qui en découle"
+     ],
+     "lignes": [
+      [
+       "Le retour",
+       "Thésée",
+       "Il n’était pas mort"
+      ],
+      [
+       "La calomnie",
+       "?",
+       "Elle accuse Hippolyte d’avoir voulu séduire Phèdre"
+      ],
+      [
+       "L’aveu",
+       "Phèdre",
+       "Elle dit son amour à sa nourrice"
+      ],
+      [
+       "La vengeance",
+       "Neptune",
+       "Un monstre marin tue Hippolyte"
+      ],
+      [
+       "La déclaration",
+       "Phèdre",
+       "Hippolyte la repousse avec horreur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » de la calomnie ?",
+     "options": [
+      "Œnone",
+      "Aricie",
+      "Théramène",
+      "Vénus"
+     ],
+     "reponse": 0,
+     "aide": "C’est la confidente de Phèdre.",
+     "explication": "C’est **Œnone**, la nourrice, qui accuse Hippolyte auprès de Thésée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les cinq étapes dans l’ordre de la pièce.",
+     "items": [
+      "Phèdre avoue son amour à sa nourrice",
+      "Phèdre se déclare à Hippolyte, qui la repousse",
+      "Thésée reparaît : il n’était pas mort",
+      "Œnone accuse Hippolyte",
+      "Un monstre marin tue Hippolyte"
+     ],
+     "aide": "La pièce part de l’aveu à la nourrice et finit par la vengeance de Neptune.",
+     "explication": "Aveu à Œnone, **déclaration** repoussée, **retour** de Thésée, **calomnie**, **mort** d’Hippolyte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin de la pièce.",
+     "texte": "Phèdre avoue la ___ et meurt ___.",
+     "reponses": [
+      [
+       "vérité"
+      ],
+      [
+       "empoisonnée"
+      ]
+     ],
+     "banque": [
+      "vérité",
+      "empoisonnée",
+      "calomnie",
+      "noyée"
+     ],
+     "aide": "Après la mort d’Hippolyte, elle ne veut plus se taire.",
+     "explication": "À la fin, Phèdre avoue la **vérité** et meurt **empoisonnée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Thésée appelle-t-il Neptune contre son fils ?",
+     "options": [
+      "Il croit la calomnie d’Œnone",
+      "Il veut éloigner Aricie",
+      "Il a lu une lettre de Phèdre",
+      "Il a surpris Hippolyte en fuite"
+     ],
+     "reponse": 0,
+     "aide": "Qu’a-t-on dit à Thésée au sujet d’Hippolyte ?",
+     "explication": "Thésée **croit la calomnie** : on lui dit qu’Hippolyte a voulu séduire Phèdre."
+    }
+   ]
+  },
+  {
+   "chapitre": "5593f9c3-ddac-51da-a68c-442f9305db5c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Coupable ou victime ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Phèdre choisit-elle sa passion ? Lis les vers célèbres du récit de son mal, puis tranche.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Phèdre raconte son mal",
+     "blocs": [
+      "Je le vis, je [[c|rougis]], je [[c|pâlis]] à sa vue ;",
+      "Un trouble s’éleva dans mon âme éperdue.",
+      "",
+      "C’est [[v|Vénus]] tout entière à sa proie attachée."
+     ],
+     "source": "Jean Racine, *Phèdre* (1677), acte I, scène 3"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Phèdre est coupable : elle a choisi d’aimer le fils de son mari."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Elle est surtout une [[p|proie]] : une déesse la poursuit, et son sang la condamne."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux verbes qui montrent que le corps de Phèdre la trahit.",
+     "aide": "Ce sont deux verbes de couleur et de teint, dans le premier vers.",
+     "explication": "Elle **rougit** et **pâlit** : la passion se lit sur le corps, sans que Phèdre le décide."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le nom de la divinité qui poursuit Phèdre.",
+     "aide": "Elle est « tout entière » attachée à sa victime.",
+     "explication": "**Vénus** persécute Phèdre : la passion est une maladie subie, non un choix."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche, dans la réplique de Noé, le mot qui fait écho au dernier vers cité.",
+     "aide": "Le vers dit « à sa proie attachée ».",
+     "explication": "Noé parle de **proie** comme Racine : Phèdre est la victime d’une force qui la dépasse."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque règle ou procédé racinien à sa mise en œuvre.",
+     "paires": [
+      [
+       "Les trois unités",
+       "Lieu, temps, action"
+      ],
+      [
+       "La bienséance",
+       "La mort d’Hippolyte est racontée, jamais montrée"
+      ],
+      [
+       "Les images fixes",
+       "Le feu, le sang, le jour, l’ombre"
+      ],
+      [
+       "Le vers",
+       "Alexandrins simples, vocabulaire restreint"
+      ]
+     ],
+     "aide": "Chaque procédé est détaillé dans le cours, section « L’art racinien ».",
+     "explication": "**Unités** : lieu, temps, action ; **bienséance** : récit de la mort ; **images fixes** : feu, sang, jour, ombre ; **vers** : simplicité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ces vers appuient-ils le mieux ?",
+     "options": [
+      "Culpabilité et innocence sont inséparables chez Phèdre",
+      "Phèdre est entièrement coupable de son amour",
+      "Phèdre est entièrement innocente et sans faute",
+      "Phèdre n’éprouve aucune passion pour Hippolyte"
+     ],
+     "reponse": 0,
+     "aide": "Le corps trahit, la déesse poursuit : mais Phèdre parle et avoue.",
+     "explication": "Racine peint la passion comme une maladie subie : **culpabilité et innocence sont inséparables**, c’est la lecture janséniste."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b52475-ba68-55a1-8752-11aca4c944d4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une folle journée au château",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur la pièce de Beaumarchais. Présente-la, puis retrouve les rôles des personnages.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Folle Journée ou Le Mariage de Figaro",
+     "sousTitre": "Beaumarchais",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Comédie en cinq actes"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1784"
+      },
+      {
+       "texte": "Interdite",
+       "valeur": "Trois ans, par Louis XVI"
+      },
+      {
+       "texte": "Durée de l’action",
+       "valeur": "Une seule journée"
+      }
+     ],
+     "pied": "Parcours : la comédie du valet",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Deux personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui est-ce ?"
+     ],
+     "lignes": [
+      [
+       "Figaro",
+       "Valet du comte Almaviva, sur le point de se marier"
+      ],
+      [
+       "Marceline",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec l’affiche.",
+     "texte": "La pièce, une comédie en ___ actes, est créée en ___ après ___ ans d’interdiction.",
+     "reponses": [
+      [
+       "cinq",
+       "5"
+      ],
+      [
+       "1784"
+      ],
+      [
+       "trois",
+       "3"
+      ]
+     ],
+     "banque": [
+      "cinq",
+      "trois",
+      "1784",
+      "1789",
+      "deux",
+      "dix"
+     ],
+     "aide": "Cherche « Genre », « Création » et « Interdite ».",
+     "explication": "Comédie en **cinq** actes, créée en **1784**, après **trois** ans d’interdiction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Marceline (la case « ? ») ?",
+     "options": [
+      "Celle qui réclame Figaro en mariage et se révèle sa mère",
+      "La comtesse Almaviva, que l’on appelle aussi Rosine",
+      "La camériste de la comtesse, que Figaro doit épouser",
+      "La mère du comte, qui cherche à le remarier au château"
+     ],
+     "reponse": 0,
+     "aide": "Son procès est burlesque : on découvre un lien de parenté.",
+     "explication": "**Marceline** réclamait Figaro en mariage ; au procès burlesque, elle découvre qu’elle est **sa mère**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Suzanne",
+       "Camériste de la comtesse, fiancée de Figaro"
+      ],
+      [
+       "Chérubin",
+       "Jeune page amoureux de toutes les femmes du château"
+      ],
+      [
+       "Rosine",
+       "La comtesse Almaviva"
+      ],
+      [
+       "Le comte",
+       "Il veut un « droit » qu’il a lui-même aboli"
+      ]
+     ],
+     "aide": "Le comte est le maître de Figaro ; Rosine est son épouse.",
+     "explication": "**Suzanne** est la fiancée, **Chérubin** le page, **Rosine** la comtesse, et le **comte** veut un « droit du seigneur » qu’il a aboli."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b52475-ba68-55a1-8752-11aca4c944d4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du fauteuil aux marronniers",
+   "competence": "se-reperer-temps",
+   "situation": "Une seule journée, des dizaines de rebondissements. Suis les grandes étapes de l’action, puis entre dans le jardin de l’acte V.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la journée",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le comte veut un « droit » sur Suzanne"
+      },
+      {
+       "id": "n2",
+       "texte": "Figaro, Suzanne et Rosine déjouent ses plans"
+      },
+      {
+       "id": "n3",
+       "texte": "Procès : Marceline est la mère de Figaro"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Le comte, démasqué, demande pardon"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "jardin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le jardin, la nuit",
+     "blocs": [
+      "Le comte attend Suzanne. Mais sous les [[m|marronniers]], c’est la [[c|comtesse]], [[d|déguisée]] en Suzanne, qui répond à ses avances. Démasqué, il demande pardon."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (case « ? ») ?",
+     "options": [
+      "Dans le jardin, le comte courtise sa propre femme déguisée en Suzanne",
+      "Figaro quitte le château pour entrer au service d’un autre maître",
+      "Chérubin épouse la comtesse sous les yeux de tout le château",
+      "Le comte abolit pour de bon le « droit du seigneur » devant la cour"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le résumé de l’acte V.",
+     "explication": "À l’acte V, le comte **courtise sa propre femme** déguisée en Suzanne : c’est le piège qui le démasque."
+    },
+    {
+     "type": "zone",
+     "document": "jardin",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le personnage qui se fait passer pour Suzanne.",
+     "aide": "Elle est l’épouse du comte.",
+     "explication": "C’est la **comtesse** : Suzanne et elle organisent le piège final."
+    },
+    {
+     "type": "zone",
+     "document": "jardin",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche la cachette de l’acte V.",
+     "aide": "C’est un arbre de jardin.",
+     "explication": "La cachette de l’acte V, ce sont les **marronniers** du jardin."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces cachettes dans l’ordre des actes.",
+     "items": [
+      "Le fauteuil (acte I)",
+      "Le cabinet (acte II)",
+      "Les marronniers (acte V)"
+     ],
+     "aide": "Le numéro de l’acte est écrit dans chaque proposition.",
+     "explication": "Le **fauteuil** (acte I), le **cabinet** (acte II), les **marronniers** (acte V) : des cachettes qui rythment la comédie."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b52475-ba68-55a1-8752-11aca4c944d4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La peine de naître",
+   "competence": "argumenter",
+   "situation": "Un monologue célèbre fait de Figaro le porte-parole des sans-privilèges. Lis-le, puis fais le lien avec ce que la pièce attaque.",
+   "documents": [
+    {
+     "id": "mono",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Monologue de Figaro",
+     "blocs": [
+      {
+       "personnage": "Figaro",
+       "replique": "[[p|Noblesse]], [[p|fortune]], un [[p|rang]], des [[p|places]], tout cela rend si fier ! Qu’avez-vous fait pour tant de biens ? Vous vous êtes donné la peine de [[n|naître]], et rien de plus."
+      }
+     ],
+     "source": "Beaumarchais, *Le Mariage de Figaro* (1784), acte V, scène 3"
+    },
+    {
+     "id": "cibles",
+     "type": "tableau",
+     "titre": "Ce que la pièce attaque",
+     "colonnes": [
+      "Ce qui est attaqué",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "Les privilèges",
+       "Le monologue et le renversement des rôles"
+      ],
+      [
+       "La censure",
+       "Figaro l’a subie comme auteur"
+      ],
+      [
+       "La justice vénale",
+       "?"
+      ],
+      [
+       "La condition des femmes",
+       "La tirade de Marceline"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mono",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les quatre biens que le comte doit à sa naissance.",
+     "aide": "Figaro les énumère avant de demander ce que le comte a fait pour les mériter.",
+     "explication": "**Noblesse, fortune, rang, places** : des biens reçus à la naissance, non gagnés par le mérite."
+    },
+    {
+     "type": "zone",
+     "document": "mono",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le verbe qui résume le seul « effort » du comte.",
+     "aide": "La phrase dit : « la peine de… ».",
+     "explication": "Le comte s’est donné la peine de **naître** : la naissance est la seule différence entre Figaro et lui."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : par quoi la pièce attaque-t-elle la justice vénale ?",
+     "options": [
+      "Le procès de l’acte III",
+      "Le monologue de l’acte V",
+      "La scène de la chanson finale",
+      "Le billet de Chérubin"
+     ],
+     "reponse": 0,
+     "aide": "Le procès burlesque est un moment de justice.",
+     "explication": "La justice vénale est attaquée par le **procès de l’acte III**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Louis XVI aurait dit qu’il faudrait détruire la Bastille pour que la représentation ne fût pas « une inconséquence dangereuse ». Que prouve ce mot ?",
+     "options": [
+      "Qu’il jugeait la pièce menaçante pour l’ordre établi",
+      "Qu’il trouvait la pièce sans aucune portée politique",
+      "Qu’il voulait détruire la Bastille avant 1789",
+      "Qu’il admirait Figaro, le valet"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux trois ans d’interdiction et à la date, cinq ans avant 1789.",
+     "explication": "Le roi juge la pièce **dangereuse pour l’ordre établi** : elle attaque les privilèges cinq ans avant 1789."
+    }
+   ]
+  },
+  {
+   "chapitre": "923ec51e-464b-5ffd-a962-af9cc8ac55e9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le valet change de place",
+   "competence": "se-reperer-temps",
+   "situation": "Le valet est un type ancien du théâtre. Place trois grandes comédies sur la frise et retrouve ce que chaque auteur en fait.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois valets sur scène",
+     "debut": 1650,
+     "fin": 1800,
+     "pas": 25,
+     "periodes": [
+      {
+       "id": "rev",
+       "debut": 1789,
+       "fin": 1799,
+       "nom": "Révolution",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "sca",
+       "date": 1671,
+       "nom": "Les Fourberies"
+      },
+      {
+       "id": "ile",
+       "date": 1725,
+       "nom": "L’Île des esclaves"
+      },
+      {
+       "id": "fig",
+       "date": 1784,
+       "nom": "Le Mariage de Figaro"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "fig"
+     ],
+     "enonce": "Sur la frise, touche la comédie où le valet devient le protagoniste de la pièce.",
+     "aide": "C’est la plus récente des trois, créée cinq ans avant la Révolution.",
+     "explication": "Dans *Le Mariage de Figaro* (**1784**), le valet prend le titre, l’initiative et le monologue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *L’Île des esclaves* du *Mariage de Figaro* ?",
+     "reponse": 59,
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1784 − 1725 = **59 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création du *Mariage de Figaro* du début de la Révolution (1789) ?",
+     "reponse": 5,
+     "aide": "Le début de la période « Révolution » est lisible sur la frise.",
+     "explication": "1789 − 1784 = **5 ans** : la pièce passe pour avoir annoncé la Révolution.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque auteur à la place qu’il donne au valet.",
+     "paires": [
+      [
+       "Plaute et Molière",
+       "Un adjuvant qui sert la ruse du maître"
+      ],
+      [
+       "Marivaux",
+       "Un valet qui parle d’égal à égal"
+      ],
+      [
+       "Beaumarchais",
+       "Un valet qui prend la place du protagoniste"
+      ]
+     ],
+     "aide": "Le titre de la pièce de Beaumarchais porte le nom du valet.",
+     "explication": "**Plaute et Molière** : adjuvant ; **Marivaux** : égal à égal ; **Beaumarchais** : protagoniste."
+    }
+   ]
+  },
+  {
+   "chapitre": "923ec51e-464b-5ffd-a962-af9cc8ac55e9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Seul dans le noir, Figaro fait ses comptes",
+   "competence": "analyser-texte",
+   "situation": "À l’acte V, Figaro se retrouve seul dans le jardin. Lis ce résumé de son monologue, puis relève ce qui fait de ce passage un cas unique.",
+   "documents": [
+    {
+     "id": "mono",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le bilan d’une vie",
+     "blocs": [
+      "Seul dans le noir, Figaro revoit son existence : enfant trouvé, chirurgien, [[a|auteur]] dramatique [[c|censuré]], [[a|journaliste]] interdit, joueur, banquier ruiné, barbier.",
+      "Sa colère se change peu à peu en mélancolie. Une seule chose le sépare du comte : la naissance."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    },
+    {
+     "id": "uniq",
+     "type": "tableau",
+     "titre": "Ce qui rend le monologue unique",
+     "colonnes": [
+      "Ce qui le rend unique",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "Sa longueur",
+       "Le plus long monologue du théâtre français classique"
+      ],
+      [
+       "Son ton",
+       "De la colère à la mélancolie"
+      ],
+      [
+       "Son objet",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mono",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux métiers de Figaro qui touchent à l’écriture.",
+     "aide": "L’un écrit pour la scène, l’autre pour les gazettes.",
+     "explication": "Figaro a été **auteur** dramatique et **journaliste** : deux métiers où il a subi la censure."
+    },
+    {
+     "type": "zone",
+     "document": "mono",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui dit ce que le pouvoir a fait à ses pièces.",
+     "aide": "Il accompagne « auteur dramatique ».",
+     "explication": "Ses pièces ont été **censurées** : Figaro parle ici de sa propre expérience."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’objet du monologue (la case « ? ») ?",
+     "options": [
+      "La naissance, seule différence entre lui et le comte",
+      "Le mariage, qu’il craint d’avoir raté à jamais",
+      "La mort, qu’il attend seul dans le jardin obscur",
+      "La Bastille, qu’il voudrait voir détruite un jour"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du résumé.",
+     "explication": "Le monologue porte sur la **naissance** : c’est la seule différence entre le valet et le comte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le tableau.",
+     "texte": "Le ton du monologue passe de la ___ à la ___.",
+     "reponses": [
+      [
+       "colère"
+      ],
+      [
+       "mélancolie"
+      ]
+     ],
+     "banque": [
+      "colère",
+      "mélancolie",
+      "joie",
+      "peur"
+     ],
+     "aide": "Cherche la ligne « Son ton ».",
+     "explication": "Le ton passe de la **colère** à la **mélancolie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "923ec51e-464b-5ffd-a962-af9cc8ac55e9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui mène vraiment l’intrigue ?",
+   "competence": "argumenter",
+   "situation": "Sujet de dissertation : « Qui mène réellement l’intrigue du *Mariage de Figaro* ? » Deux élèves s’affrontent ; à toi de ranger les arguments.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "C’est Figaro : il donne son nom à la pièce, il a le plus long monologue."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Oui, mais regarde la fin : le piège du jardin, ce sont Suzanne et la comtesse qui l’[[o|organisent]]."
+      }
+     ]
+    },
+    {
+     "id": "qui",
+     "type": "tableau",
+     "titre": "Qui agit contre qui ?",
+     "colonnes": [
+      "Qui agit",
+      "Contre qui"
+     ],
+     "lignes": [
+      [
+       "Suzanne",
+       "?"
+      ],
+      [
+       "La comtesse",
+       "Son mari, avec l’aide de sa servante"
+      ],
+      [
+       "Marceline",
+       "Le sort fait aux femmes séduites puis abandonnées"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le verbe qui montre, selon Inès, qui prépare le piège final.",
+     "aide": "Inès cite les personnages qui font ce travail.",
+     "explication": "Suzanne et la comtesse **organisent** le piège : ce sont les femmes qui font gagner le camp des opprimés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Contre qui Suzanne agit-elle (la case « ? ») ?",
+     "options": [
+      "Contre le comte, qu’elle mène par le bout du nez",
+      "Contre la comtesse, qu’elle voit comme une rivale",
+      "Contre Marceline, qui l’a calomniée auprès du comte",
+      "Contre Chérubin, le page qui la poursuit sans cesse"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit qu’elle le mène « par le bout du nez ».",
+     "explication": "Suzanne mène **le comte** par le bout du nez."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument : il plaide pour Figaro meneur, ou pour les femmes qui mènent.",
+     "categories": [
+      "Figaro mène",
+      "Les femmes mènent"
+     ],
+     "items": [
+      [
+       "Le titre porte son nom",
+       0
+      ],
+      [
+       "Il a le plus long monologue",
+       0
+      ],
+      [
+       "Elles organisent le piège final dans le jardin",
+       1
+      ],
+      [
+       "La comtesse s’allie à sa servante contre son mari",
+       1
+      ],
+      [
+       "Figaro échoue souvent",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : l’argument parle-t-il du héros ou de celles qui gagnent ?",
+     "explication": "Le **titre** et le **monologue** parlent pour Figaro ; le **piège final**, l’**alliance** de la comtesse et son **échec fréquent** montrent que les femmes gagnent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le valet est-il vraiment libre à la fin de la pièce ?",
+     "options": [
+      "Pas tout à fait : il se marie, mais reste au service du comte",
+      "Oui : il quitte le château avec sa femme",
+      "Oui : le comte l’a fait nommer lui-même grand seigneur",
+      "Non : il est renvoyé et ne se marie pas"
+     ],
+     "reponse": 0,
+     "aide": "Le mariage a lieu ; qui est toujours son maître ?",
+     "explication": "Le mariage a lieu, mais Figaro **reste au service du comte** : la libération n’est que partielle."
+    }
+   ]
+  },
+  {
+   "chapitre": "84abfe68-00de-5933-b567-ddd00497084b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Winnie, son mamelon et son mari",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur la pièce de Beckett. Rassemble ses repères, puis suis le dispositif des deux actes.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Oh les beaux jours",
+     "sousTitre": "Samuel Beckett",
+     "emoji": "☀️",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Pièce en deux actes"
+      },
+      {
+       "texte": "Titre anglais",
+       "valeur": "Happy Days"
+      },
+      {
+       "texte": "Création en anglais",
+       "valeur": "1961"
+      },
+      {
+       "texte": "Création en français",
+       "valeur": "1963"
+      }
+     ],
+     "pied": "Parcours : un théâtre de la condition humaine",
+     "teinte": "violet"
+    },
+    {
+     "id": "dispo",
+     "type": "tableau",
+     "titre": "Le dispositif",
+     "colonnes": [
+      "Acte",
+      "La situation de Winnie"
+     ],
+     "lignes": [
+      [
+       "Acte I",
+       "Enterrée jusqu’à la taille dans un mamelon de terre desséchée"
+      ],
+      [
+       "Acte II",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec l’affiche.",
+     "texte": "La pièce, en ___ actes, est créée en anglais sous le titre ___ en ___.",
+     "reponses": [
+      [
+       "deux",
+       "2"
+      ],
+      [
+       "Happy Days"
+      ],
+      [
+       "1961"
+      ]
+     ],
+     "banque": [
+      "deux",
+      "trois",
+      "Happy Days",
+      "Waiting Days",
+      "1961",
+      "1963"
+     ],
+     "aide": "Cherche « Genre », « Titre anglais » et « Création en anglais ».",
+     "explication": "Une pièce en **deux** actes, créée en anglais sous le titre ***Happy Days*** en **1961**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création en anglais de la création en français ?",
+     "reponse": 2,
+     "aide": "Soustrais les deux dates de l’affiche.",
+     "explication": "1963 − 1961 = **2 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Où en est Winnie à l’acte II (la case « ? ») ?",
+     "options": [
+      "Enterrée jusqu’au cou",
+      "Hors du mamelon, debout",
+      "Enterrée jusqu’aux genoux",
+      "Allongée dans son sac"
+     ],
+     "reponse": 0,
+     "aide": "Le corps s’enfonce de plus en plus entre les deux actes.",
+     "explication": "À l’acte II, Winnie est **enterrée jusqu’au cou** : elle ne peut plus bouger la tête."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il fait.",
+     "paires": [
+      [
+       "Winnie",
+       "Elle parle presque sans arrêt"
+      ],
+      [
+       "Willie",
+       "Il rampe derrière le mamelon et répond par monosyllabes"
+      ]
+     ],
+     "aide": "Un seul des deux parle vraiment.",
+     "explication": "**Winnie** parle presque sans arrêt ; **Willie**, son mari, lit son journal et répond par monosyllabes."
+    }
+   ]
+  },
+  {
+   "chapitre": "84abfe68-00de-5933-b567-ddd00497084b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une journée sans intrigue",
+   "competence": "analyser-texte",
+   "situation": "Rien n’arrive dans cette pièce : le temps est rempli par des rituels. Lis cette courte scène écrite pour l’exercice, à la manière de Beckett, puis classe ce qui s’y répète.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un réveil de Winnie",
+     "blocs": [
+      {
+       "didascalie": "Une [[s|sonnerie]] aiguë perce le silence. Winnie, enterrée jusqu’à la taille, ouvre les yeux."
+      },
+      {
+       "personnage": "Winnie",
+       "replique": "Encore un jour divin. Un peu de [[r|prière]], la [[r|brosse]] à dents, le [[r|peigne]]. Dans le sac, tout au fond, le [[v|revolver]]."
+      },
+      {
+       "didascalie": "Derrière le mamelon, Willie lit son journal."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Beckett"
+    },
+    {
+     "id": "rit",
+     "type": "tableau",
+     "titre": "Les rituels de la pièce",
+     "colonnes": [
+      "Rituel",
+      "Ce qu’il occupe"
+     ],
+     "lignes": [
+      [
+       "La sonnerie qui réveille",
+       "Elle règle le jour"
+      ],
+      [
+       "La prière, la brosse à dents, le peigne",
+       "Le temps"
+      ],
+      [
+       "Le revolver dans le sac",
+       "?"
+      ],
+      [
+       "L’espoir que Willie réponde",
+       "L’adresse à l’autre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui règle le jour de Winnie.",
+     "aide": "C’est un bruit qui la réveille.",
+     "explication": "La **sonnerie** réveille Winnie et règle le jour, qui recommence sans cesse."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les trois mots qui disent ce qui occupe son temps.",
+     "aide": "Un geste de piété, un objet pour les dents, un objet pour les cheveux.",
+     "explication": "La **prière**, la **brosse** à dents et le **peigne** : les rituels remplacent l’intrigue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente le revolver (la case « ? ») ?",
+     "options": [
+      "Une possibilité jamais choisie",
+      "Une arme qui servira au dénouement",
+      "Un cadeau de Willie",
+      "Un souvenir de guerre"
+     ],
+     "reponse": 0,
+     "aide": "Il reste dans le sac, et la pièce n’avance pas vers un dénouement.",
+     "explication": "Le revolver est **une possibilité jamais choisie** : il est là, il n’intervient pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui remplace l’intrigue dans cette pièce ?",
+     "options": [
+      "Des rituels qui meublent un jour qui recommence",
+      "Une enquête sur le passé de Winnie",
+      "Un voyage de Willie à travers le désert",
+      "Un procès entre les deux époux"
+     ],
+     "reponse": 0,
+     "aide": "Relis le titre du tableau.",
+     "explication": "**Des rituels** : rien ne se noue ni ne se dénoue, et le jour recommence."
+    }
+   ]
+  },
+  {
+   "chapitre": "84abfe68-00de-5933-b567-ddd00497084b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rire d’une femme qui s’enfonce",
+   "competence": "argumenter",
+   "situation": "La situation est atroce et pourtant on rit. Lis ce passage écrit pour l’exercice à la manière de Beckett, puis tranche le débat entre deux élèves.",
+   "documents": [
+    {
+     "id": "acte2",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "L’acte II, en pastiche",
+     "blocs": [
+      {
+       "didascalie": "Winnie, enterrée jusqu’au cou, ne peut plus tourner la tête. Elle parle vers le ciel."
+      },
+      {
+       "personnage": "Winnie",
+       "replique": "Je ne peux plus [[c|tourner]] la tête. Ni [[c|atteindre]] mon sac. Mais je peux encore [[p|parler]]. Encore un jour [[d|divin]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Beckett"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nathan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "C’est atroce : on ne devrait pas rire d’une femme qui disparaît."
+      },
+      {
+       "qui": "Nathan",
+       "texte": "C’est le rire qui rend la pièce supportable… et plus cruelle."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "acte2",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux verbes qui disent ce que le corps de Winnie ne peut plus faire.",
+     "aide": "Ils sont précédés de « ne peux plus » et de « ni ».",
+     "explication": "Elle ne peut plus **tourner** la tête ni **atteindre** son sac : le corps disparaît."
+    },
+    {
+     "type": "zone",
+     "document": "acte2",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce qui lui reste.",
+     "aide": "Il s’oppose aux gestes impossibles.",
+     "explication": "Il lui reste la parole : elle peut encore **parler**."
+    },
+    {
+     "type": "zone",
+     "document": "acte2",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui sonne comme une formule ironique, depuis la terre qui l’engloutit.",
+     "aide": "Elle le dit après avoir énuméré ses pertes.",
+     "explication": "**Divin** : le jour n’a rien de divin pour une femme ensevelie ; c’est le cœur ironique du texte."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du texte à ce qu’il révèle.",
+     "paires": [
+      [
+       "Elle ne peut plus tourner la tête",
+       "Le corps disparaît"
+      ],
+      [
+       "Elle parle encore",
+       "Le langage continue"
+      ],
+      [
+       "« Encore un jour divin »",
+       "Un optimisme ironique, stratégie de survie"
+      ]
+     ],
+     "aide": "Corps, parole, formule : trois niveaux du texte.",
+     "explication": "Le **corps** disparaît, le **langage** continue, la formule est un **optimisme** qui sert à survivre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse de dissertation Nathan défend-il ?",
+     "options": [
+      "Comique et tragique sont indissociables chez Beckett",
+      "Le rire efface le tragique de la situation",
+      "Le tragique interdit tout comique",
+      "La pièce est une simple farce sans gravité"
+     ],
+     "reponse": 0,
+     "aide": "Nathan dit que le rire rend la pièce à la fois supportable et plus cruelle.",
+     "explication": "Rire et désespoir sont **indissociables** : le rire rend la pièce supportable, et plus cruelle à la fois."
+    }
+   ]
+  },
+  {
+   "chapitre": "093b4756-43e7-5d6a-8f9f-9be32e3fdf23",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le corps s’en va, la voix reste",
+   "competence": "analyser-document",
+   "situation": "Beckett retire presque tout ce qui définissait le théâtre. Suis le mouvement des deux actes, puis dresse le bilan de ce qui disparaît.",
+   "documents": [
+    {
+     "id": "mvt",
+     "type": "chaine",
+     "titre": "Le mouvement de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "a1",
+       "texte": "Acte I : Winnie enterrée jusqu’à la taille"
+      },
+      {
+       "id": "a2",
+       "texte": "Acte II : Winnie enterrée jusqu’au cou"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "fin",
+       "texte": "Il lui reste la parole et le souvenir"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a1",
+       "a": "a2"
+      },
+      {
+       "de": "a2",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "fin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque (la case « ? ») ?",
+     "options": [
+      "Elle ne peut plus utiliser ses mains, ses objets ni ses rituels",
+      "Elle quitte le mamelon pour aller rejoindre Willie au loin",
+      "Willie vient la déterrer et lui rend tous ses objets",
+      "Elle se sert enfin du revolver qu’elle gardait dans son sac"
+     ],
+     "reponse": 0,
+     "aide": "Le corps disparaît, donc ce qui demande des mains aussi.",
+     "explication": "À l’acte II, Winnie ne peut plus utiliser **ses mains, ses objets, ses rituels**."
+    },
+    {
+     "type": "zone",
+     "document": "mvt",
+     "multiple": false,
+     "reponse": [
+      "fin"
+     ],
+     "enonce": "Touche l’étape qui dit ce que Beckett conserve de l’humain, au bout du mouvement.",
+     "aide": "C’est la dernière case de la chaîne.",
+     "explication": "Il reste la **parole et le souvenir** : une voix qui refuse de s’arrêter."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la loi de la pièce.",
+     "texte": "Le ___ disparaît, le ___ continue.",
+     "reponses": [
+      [
+       "corps"
+      ],
+      [
+       "langage"
+      ]
+     ],
+     "banque": [
+      "corps",
+      "langage",
+      "temps",
+      "public"
+     ],
+     "aide": "Relis les deux premières cases : qui s’enfonce, qui reste ?",
+     "explication": "Le **corps** disparaît, le **langage** continue."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie ce que Beckett retire au théâtre à ce qui en reste.",
+     "paires": [
+      [
+       "L’intrigue",
+       "Rien ne se noue ni ne se dénoue"
+      ],
+      [
+       "Le personnage psychologique",
+       "On ignore le passé de Winnie"
+      ],
+      [
+       "L’espace vraisemblable",
+       "Un mamelon, une lumière crue, un ciel vide"
+      ],
+      [
+       "Le temps",
+       "Une sonnerie règle un jour qui recommence"
+      ]
+     ],
+     "aide": "Chaque ligne du cours associe une disparition à son reste.",
+     "explication": "**Intrigue** : rien ne se noue ; **personnage** : passé inconnu ; **espace** : un mamelon ; **temps** : un jour qui recommence."
+    }
+   ]
+  },
+  {
+   "chapitre": "093b4756-43e7-5d6a-8f9f-9be32e3fdf23",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand l’auteur compte les secondes",
+   "competence": "analyser-texte",
+   "situation": "Beckett règle tout : pauses, regards, gestes. Lis ces didascalies écrites pour l’exercice, à la manière de l’auteur, puis note ce qui s’efface dans la mémoire de Winnie.",
+   "documents": [
+    {
+     "id": "dida",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Des indications très précises",
+     "blocs": [
+      {
+       "didascalie": "Winnie regarde Willie. Pause de [[n|trois]] secondes. Elle prend la brosse à dents et fait [[n|deux]] gestes, pas un de plus."
+      },
+      {
+       "personnage": "Winnie",
+       "replique": "L’inscription sur la brosse… presque effacée. Un bal, autrefois, mais la suite, je ne la retrouve plus. Une citation aussi, à moitié perdue."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des didascalies de Beckett"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dida",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les deux nombres que l’auteur impose au metteur en scène.",
+     "aide": "L’un compte une pause, l’autre des gestes.",
+     "explication": "**Trois** secondes de pause, **deux** gestes : la précision est extrême."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette précision sur la liberté du metteur en scène ?",
+     "options": [
+      "Elle la lui refuse : le texte est aussi une partition",
+      "Elle lui laisse une liberté entière de mise en scène",
+      "Elle la réserve aux seuls acteurs, jamais au metteur",
+      "Elle ne la limite que pour les scènes de l’acte I"
+     ],
+     "reponse": 0,
+     "aide": "Beckett a été mêlé à plusieurs procès célèbres.",
+     "explication": "Le texte est une **partition de mise en scène** : il refuse au metteur en scène la liberté d’interpréter."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque souvenir ou objet de Winnie à son état.",
+     "paires": [
+      [
+       "La brosse à dents",
+       "Son inscription s’efface"
+      ],
+      [
+       "Le souvenir de bal",
+       "Incomplet"
+      ],
+      [
+       "La citation",
+       "À moitié perdue"
+      ]
+     ],
+     "aide": "Relis la réplique de Winnie.",
+     "explication": "La **brosse à dents** s’efface, le **bal** est incomplet, la **citation** est à moitié perdue : la mémoire s’effrite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le cours interprète-t-il l’optimisme répété de Winnie ?",
+     "options": [
+      "Comme une stratégie de survie, ni naïve ni aveugle",
+      "Comme une naïveté d’enfant gâtée",
+      "Comme une moquerie de l’auteur contre elle",
+      "Comme une preuve que sa situation est agréable"
+     ],
+     "reponse": 0,
+     "aide": "La pièce traite l’optimisme avec tendresse et ironie.",
+     "explication": "Ce n’est **ni naïveté ni aveuglement** : c’est une **stratégie de survie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "093b4756-43e7-5d6a-8f9f-9be32e3fdf23",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Courageuse ou aveugle ?",
+   "competence": "argumenter",
+   "situation": "Dissertation : « Winnie est-elle courageuse ou aveugle ? » Deux élèves s’opposent. Utilise leurs arguments et le bilan du parcours pour construire ta conclusion.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sami",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Elle dit « Encore un jour divin » alors qu’elle s’enfonce : elle ne voit rien !"
+      },
+      {
+       "qui": "Sami",
+       "texte": "Elle voit très bien : son optimisme, c’est une [[s|stratégie]] de survie."
+      }
+     ]
+    },
+    {
+     "id": "axes",
+     "type": "tableau",
+     "titre": "Axes de dissertation",
+     "colonnes": [
+      "Question",
+      "La réponse de la pièce"
+     ],
+     "lignes": [
+      [
+       "Peut-on faire du théâtre sans action ?",
+       "La parole est l’action"
+      ],
+      [
+       "Le rire est-il compatible avec le désespoir ?",
+       "?"
+      ],
+      [
+       "Winnie est-elle courageuse ou aveugle ?",
+       "Le texte ne tranche pas"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot par lequel Sami défend le courage de Winnie.",
+     "aide": "C’est un terme militaire, appliqué à un optimisme répété.",
+     "explication": "Pour Sami, l’optimisme est une **stratégie** de survie : c’est un choix, pas un aveuglement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Chez Beckett, ils sont indissociables",
+      "Non : le rire interdit la gravité",
+      "Oui, mais seulement à l’acte I",
+      "La pièce ne contient aucun rire"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la définition du comique chez Beckett.",
+     "explication": "Chez Beckett, rire et désespoir sont **indissociables**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la meilleure conclusion sur Lina et Sami ?",
+     "options": [
+      "Le texte ne tranche pas, et c’est ce qui le rend fort",
+      "Lina a raison : Winnie est simplement aveugle et naïve",
+      "Sami a raison : Winnie est une héroïne sans faille",
+      "Aucun des deux n’a lu la pièce, ils inventent tout"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière ligne du tableau.",
+     "explication": "La pièce traite l’optimisme avec **tendresse et ironie** : elle **ne tranche pas**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : Beckett le retire, ou il reste à Winnie.",
+     "categories": [
+      "Beckett le retire",
+      "Il reste à Winnie"
+     ],
+     "items": [
+      [
+       "L’intrigue",
+       0
+      ],
+      [
+       "L’espace vraisemblable",
+       0
+      ],
+      [
+       "Le temps",
+       0
+      ],
+      [
+       "Une voix",
+       1
+      ],
+      [
+       "Une adresse à l’autre",
+       1
+      ],
+      [
+       "Un rituel",
+       1
+      ]
+     ],
+     "aide": "Une voix, une adresse, un rituel : voilà ce que le cours garde.",
+     "explication": "Beckett retire l’**intrigue**, l’**espace** et le **temps** ; il reste une **voix**, une **adresse à l’autre**, un **rituel**."
+    }
+   ]
+  }
+ ]
+}

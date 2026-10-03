@@ -1,0 +1,2425 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "22412df0-a8db-5005-bc79-7ccb22c23cbc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un conte « traduit de l’allemand »",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Candide*. Place d’abord le conte dans la vie de Voltaire, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Voltaire et son conte",
+     "debut": 1690,
+     "fin": 1780,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1694,
+       "nom": "Naissance"
+      },
+      {
+       "id": "lis",
+       "date": 1755,
+       "nom": "Séisme de Lisbonne"
+      },
+      {
+       "id": "cand",
+       "date": 1759,
+       "nom": "Candide"
+      },
+      {
+       "id": "mort",
+       "date": 1778,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Candide",
+       "Le naïf qui apprend par l’expérience"
+      ],
+      [
+       "Pangloss",
+       "?"
+      ],
+      [
+       "Cacambo",
+       "Le valet débrouillard, fidèle et pratique"
+      ],
+      [
+       "Martin",
+       "Le savant pessimiste"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cand"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraît *Candide*.",
+     "aide": "Le conte paraît à Genève, sans nom d’auteur.",
+     "explication": "*Candide* paraît en **1759**, à Genève, sans nom d’auteur : il se dit « traduit de l’allemand de M. le docteur Ralph »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le tremblement de terre de Lisbonne de la parution du conte ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1759 − 1755 = **4 ans** : la catastrophe réelle de Lisbonne vient d’être vécue quand Voltaire l’intègre au conte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle faut-il écrire dans la case « ? » pour Pangloss ?",
+     "options": [
+      "Le philosophe optimiste, que rien ne fait changer d’avis",
+      "Un valet débrouillard et fidèle, qui sert Candide",
+      "La fille du baron, aimée de Candide, devenue laide",
+      "Un pessimiste savant, persuadé que l’homme naît pour souffrir"
+     ],
+     "reponse": 0,
+     "aide": "Pangloss enseigne que tout est au mieux dans le meilleur des mondes possibles.",
+     "explication": "**Pangloss** est le philosophe optimiste : même après les pires malheurs, il ne change pas d’avis. Il caricature l’optimisme de Leibniz."
+    }
+   ]
+  },
+  {
+   "chapitre": "22412df0-a8db-5005-bc79-7ccb22c23cbc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du château au jardin, les épreuves",
+   "competence": "analyser-document",
+   "situation": "Candide traverse le monde et l’horreur. À chaque épreuve, Voltaire attache un mal réel qu’il dénonce : remets le récit en ordre et retrouve ce que chaque épisode attaque.",
+   "documents": [
+    {
+     "id": "epreuves",
+     "type": "tableau",
+     "titre": "Ce que chaque épreuve dénonce",
+     "colonnes": [
+      "Épreuve",
+      "Ce qu’elle dénonce"
+     ],
+     "lignes": [
+      [
+       "Enrôlement de force chez les Bulgares",
+       "?"
+      ],
+      [
+       "Tremblement de terre de Lisbonne",
+       "Le mal naturel"
+      ],
+      [
+       "Autodafé de l’Inquisition",
+       "Le fanatisme"
+      ],
+      [
+       "Épisode de Surinam : un esclave mutilé pour le sucre",
+       "L’esclavage"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "fin",
+     "type": "chaine",
+     "titre": "La fin du conte",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "L’Eldorado, pays idéal"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Une métairie près de Constantinople"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, en face des Bulgares ?",
+     "options": [
+      "La guerre",
+      "La famine",
+      "La piraterie",
+      "La justice des rois"
+     ],
+     "reponse": 0,
+     "aide": "Candide est enrôlé de force dans une armée.",
+     "explication": "L’enrôlement chez les Bulgares dénonce **la guerre**, avec ses massacres que le conte décrit sans emphase."
+    },
+    {
+     "type": "zone",
+     "document": "epreuves",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui dit ce que dénonce l’autodafé.",
+     "aide": "Cherche la ligne de l’Inquisition.",
+     "explication": "L’autodafé dénonce **le fanatisme** : on brûle des hommes pour avoir douté ou parlé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne, entre l’Eldorado et la métairie ?",
+     "options": [
+      "Les retrouvailles avec Cunégonde devenue laide",
+      "Le départ pour le château de Thunder-ten-tronckh",
+      "Le tremblement de terre de Lisbonne",
+      "L’enrôlement chez les Bulgares"
+     ],
+     "reponse": 0,
+     "aide": "Candide quitte l’Eldorado pour retrouver quelqu’un.",
+     "explication": "Après l’Eldorado, Candide **retrouve Cunégonde, devenue laide, et l’épouse quand même** ; le couple finira à la métairie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces étapes du conte dans l’ordre du récit.",
+     "items": [
+      "Candide est chassé du château",
+      "Les Bulgares l’enrôlent de force",
+      "Le tremblement de terre de Lisbonne",
+      "L’Eldorado",
+      "Les retrouvailles avec Cunégonde",
+      "La métairie près de Constantinople"
+     ],
+     "aide": "Commence par le début du conte : pourquoi quitte-t-il le château ?",
+     "explication": "Ordre : **chassé du château**, **Bulgares**, **Lisbonne**, **Eldorado**, **retrouvailles**, **métairie**. Chaque épreuve est brève : le récit va vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "22412df0-a8db-5005-bc79-7ccb22c23cbc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cultiver son jardin, vraiment ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves préparent l’oral : la fin de *Candide* est-elle un renoncement, ou un appel à agir ? Lis leur échange et un passage écrit à la manière de Voltaire.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Cultiver son jardin, c’est se désintéresser du monde : Candide baisse les bras."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Regarde : Pangloss ne cesse de [[d|discourir]] sur le meilleur des mondes. Candide, lui, finit par se mettre au [[t|travail]]."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Donc Voltaire ne se moque pas du travail ?"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Non. Il se moque des systèmes qui n’ont jamais rien changé."
+      }
+     ]
+    },
+    {
+     "id": "pastiche",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un optimiste devant sa maison",
+     "blocs": [
+      "Le docteur Trompette, en passant devant la ruine de sa maison, expliquait à ses élèves que tout s’y était passé pour le [[o|mieux]].",
+      "Les murs étaient à terre, mais on y voyait [[o|enfin]] le ciel ; il n’avait plus de dettes, puisqu’il n’avait plus de meubles."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Voltaire"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit ce que Candide choisit de faire à la fin.",
+     "aide": "Malik l’oppose au bavardage de Pangloss.",
+     "explication": "À la fin, Candide se met au **travail** : la sagesse de la métairie est modeste et pratique."
+    },
+    {
+     "type": "zone",
+     "document": "pastiche",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots par lesquels l’optimiste présente la ruine comme un bien.",
+     "aide": "Cherche les mots qui transforment un désastre en avantage.",
+     "explication": "Le docteur dit que tout est pour le **mieux** et qu’on voit **enfin** le ciel : l’ironie vient de ce faux bon côté, comme chez Pangloss."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : Voltaire le dénonce, ou le propose ?",
+     "categories": [
+      "Ce qu’il dénonce",
+      "Ce qu’il propose"
+     ],
+     "items": [
+      [
+       "Les systèmes de Pangloss",
+       0
+      ],
+      [
+       "Le fanatisme de l’Inquisition",
+       0
+      ],
+      [
+       "La guerre des Bulgares",
+       0
+      ],
+      [
+       "Le travail modeste de la métairie",
+       1
+      ],
+      [
+       "« Il faut cultiver notre jardin »",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : est-ce un mal du monde, ou une réponse à ce mal ?",
+     "explication": "Voltaire **dénonce** les systèmes, le fanatisme et la guerre ; il **propose** le travail modeste et le jardin : renoncer aux systèmes et agir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture de la conclusion le cours permet-il de défendre ?",
+     "options": [
+      "Il faut renoncer aux grands systèmes et agir par le travail",
+      "Il faut tout accepter puisque tout est pour le mieux",
+      "Il faut fuir le monde pour vivre loin des hommes",
+      "Il faut se venger de l’Inquisition et des Bulgares"
+     ],
+     "reponse": 0,
+     "aide": "Pangloss soutient un système ; Candide, à la fin, a changé de méthode.",
+     "explication": "La conclusion est célèbre et discutée : elle invite à **renoncer aux systèmes et à agir**, ce que montre le passage de Pangloss au travail."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ee991b6-1148-5de0-8784-defe34a258b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil, un poète, une femme aimée",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Capitale de la douleur*. Place le recueil dans la vie d’Éluard, puis relève sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Éluard et son recueil",
+     "debut": 1890,
+     "fin": 1955,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1895,
+       "nom": "Naissance"
+      },
+      {
+       "id": "gala",
+       "date": 1912,
+       "nom": "Rencontre de Gala"
+      },
+      {
+       "id": "rec",
+       "date": 1926,
+       "nom": "Le recueil"
+      },
+      {
+       "id": "amo",
+       "date": 1929,
+       "nom": "L’Amour la poésie"
+      },
+      {
+       "id": "mort",
+       "date": 1952,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Capitale de la douleur",
+     "sousTitre": "Paul Éluard (Eugène Grindel)",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Mouvement",
+       "valeur": "?"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Vers libres, sans ponctuation"
+      },
+      {
+       "texte": "Syntaxe",
+       "valeur": "Limpide"
+      }
+     ],
+     "pied": "Un recueil de poèmes d’amour",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rec"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraît *Capitale de la douleur*.",
+     "aide": "Le recueil est le premier événement de la frise qui porte son nom.",
+     "explication": "*Capitale de la douleur* paraît en **1926** et installe Éluard comme la grande voix lyrique du surréalisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mouvement faut-il écrire dans la case « ? » de la fiche ?",
+     "options": [
+      "Le surréalisme",
+      "Le symbolisme",
+      "Le romantisme",
+      "Le naturalisme"
+     ],
+     "reponse": 0,
+     "aide": "Éluard participe à Dada, puis rejoint André Breton.",
+     "explication": "Éluard fait partie du **surréalisme** avec André Breton, après un passage par Dada."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le recueil de *L’Amour la poésie* ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Repère les deux événements sur la frise et soustrais.",
+     "explication": "1929 − 1926 = **3 ans** : *L’Amour la poésie* est le recueil qui suit *Capitale de la douleur*."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ee991b6-1148-5de0-8784-defe34a258b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre sections, des poèmes d’amour",
+   "competence": "analyser-document",
+   "situation": "Le recueil réunit des poèmes écrits à plusieurs moments. Retrouve la section manquante, puis relie les poèmes à ce qui les caractérise.",
+   "documents": [
+    {
+     "id": "sections",
+     "type": "chaine",
+     "titre": "Les quatre sections du recueil",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Répétitions (1922)"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Les Petits Justes"
+      },
+      {
+       "id": "n4",
+       "texte": "Nouveaux poèmes"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "poemes",
+     "type": "tableau",
+     "titre": "Deux poèmes du recueil",
+     "colonnes": [
+      "Poème",
+      "Son premier vers"
+     ],
+     "lignes": [
+      [
+       "La courbe de tes yeux…",
+       "fait le tour de mon cœur"
+      ],
+      [
+       "L’amoureuse",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle section faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Mourir de ne pas mourir (1924)",
+      "Capitale de la douleur (1926)",
+      "L’Amour la poésie (1929)",
+      "Le Cœur à gaz (1923)"
+     ],
+     "reponse": 0,
+     "aide": "C’est une section de 1924, entre 1922 et les deux dernières.",
+     "explication": "La deuxième section est « **Mourir de ne pas mourir** » (1924), entre « Répétitions » (1922) et « Les Petits Justes »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le premier vers du poème « L’amoureuse ».",
+     "texte": "« Elle est debout sur mes ___ »",
+     "reponses": [
+      [
+       "paupières"
+      ]
+     ],
+     "banque": [
+      "paupières",
+      "mains",
+      "yeux",
+      "épaules"
+     ],
+     "aide": "Le poème dit où se tient la femme aimée : sur une partie fine du visage.",
+     "explication": "Le poème s’ouvre par « Elle est debout sur mes **paupières** » : la femme aimée est tout contre le regard du poète."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque poème ou motif à ce que le cours en dit.",
+     "paires": [
+      [
+       "« Ta chevelure d’oranges »",
+       "L’image comme éblouissement"
+      ],
+      [
+       "« Max Ernst »",
+       "Le dialogue avec les peintres"
+      ],
+      [
+       "Les sections expérimentales",
+       "Nées de l’écriture automatique"
+      ]
+     ],
+     "aide": "Pense au rôle des peintres dans le surréalisme.",
+     "explication": "La chevelure d’oranges est une **image-éblouissement** ; « Max Ernst » dialogue avec **les peintres** ; les sections expérimentales naissent de **l’écriture automatique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ee991b6-1148-5de0-8784-defe34a258b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une image simple et inouïe",
+   "competence": "argumenter",
+   "situation": "Lina croit que le surréalisme n’est qu’un jeu d’images étranges, sans amour. Hugo n’est pas d’accord. Lis leur échange et deux vers d’Éluard pour trancher.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Chez Éluard, le surréalisme, c’est du délire sans sens : il n’y a pas d’amour là-dedans."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Regarde les mots : la syntaxe est [[s|limpide]], et le poème parle d’[[s|amour]]."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Mais les images sont étranges !"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Oui, mais c’est un rapprochement qui déplace tout, pas un brouillard."
+      }
+     ]
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les deux premiers vers",
+     "blocs": [
+      "La [[c|courbe]] de tes [[y|yeux]] fait le [[c|tour]] de mon cœur,",
+      "Un [[c|rond]] de danse et de douceur,"
+     ],
+     "source": "Paul Éluard, « La courbe de tes yeux », *Capitale de la douleur* (1926), vers 1 et 2"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux mots par lesquels Hugo montre que le surréalisme d’Éluard n’est pas un délire.",
+     "aide": "Cherche un mot sur la clarté de la phrase et un mot sur le sujet.",
+     "explication": "La syntaxe **limpide** et le thème de l’**amour** montrent que le surréalisme d’Éluard sert l’amour : l’image est simple, et le sentiment, lisible."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les trois mots qui dessinent une forme circulaire autour du cœur.",
+     "aide": "Une courbe, un tour, un rond : cherche ce qui tourne.",
+     "explication": "La **courbe**, le **tour** et le **rond** enlacent le cœur : les yeux de la femme aimée forment un cercle de douceur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments : sont-ils des traits de forme ou ce que le recueil dit ?",
+     "categories": [
+      "Trait de forme",
+      "Ce que le recueil dit"
+     ],
+     "items": [
+      [
+       "Vers libres",
+       0
+      ],
+      [
+       "Refus de la ponctuation",
+       0
+      ],
+      [
+       "Syntaxe limpide",
+       0
+      ],
+      [
+       "La souffrance amoureuse",
+       1
+      ],
+      [
+       "Le regard de la femme aimée",
+       1
+      ],
+      [
+       "L’absence et la séparation",
+       1
+      ]
+     ],
+     "aide": "La forme se voit sur la page ; le thème se lit dans le sens.",
+     "explication": "Les **vers libres**, l’absence de ponctuation et la syntaxe limpide sont des **traits de forme** ; l’amour, le regard et la douleur sont **ce que dit le recueil**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse ces éléments permettent-ils de défendre en dissertation ?",
+     "options": [
+      "Le surréalisme d’Éluard est d’abord une poésie de l’amour",
+      "Le surréalisme interdit tout sentiment personnel",
+      "Le surréalisme n’est qu’un jeu de mots sans enjeu",
+      "Éluard refuse l’image au profit du récit"
+     ],
+     "reponse": 0,
+     "aide": "Pense au titre du recueil et à la femme dont les yeux reviennent sans cesse.",
+     "explication": "Le recueil montre que le surréalisme n’est pas qu’un jeu d’images étranges : c’est **une poésie de l’amour**, où la femme aimée rend le monde visible."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c09146e-16e9-55c6-85ae-8024e63e0165",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un archéologue, un bandit, une bohémienne",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Carmen*. Retrouve la date de parution, puis les personnages de la nouvelle.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Carmen",
+     "sousTitre": "Prosper Mérimée",
+     "emoji": "🌹",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1845, *Revue des Deux Mondes*",
+       "id": "parution"
+      },
+      {
+       "texte": "Dernier chapitre ajouté",
+       "valeur": "1847, sur les Roms",
+       "id": "ajout"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "L’Andalousie"
+      }
+     ],
+     "pied": "Une nouvelle brève",
+     "teinte": "corail"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Don José",
+       "Un Basque de Navarre, soldat honnête qui se perd par amour"
+      ],
+      [
+       "Carmen",
+       "La bohémienne qui ne veut appartenir à personne"
+      ],
+      [
+       "García le Borgne",
+       "?"
+      ],
+      [
+       "Lucas",
+       "Le picador, dernier caprice de Carmen"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "ajout"
+     ],
+     "enonce": "Touche la ligne qui dit ce que Mérimée ajoute en 1847.",
+     "aide": "Cherche la date 1847 dans la fiche.",
+     "explication": "En **1847**, Mérimée ajoute un dernier chapitre, une petite étude sur **les Roms**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle faut-il écrire dans la case « ? » pour García le Borgne ?",
+     "options": [
+      "Le mari de Carmen, chef de contrebandiers",
+      "Le narrateur savant, à la recherche de Munda",
+      "Le brigadier qui laisse Carmen s’échapper",
+      "Le picador aimé de Carmen à la fin"
+     ],
+     "reponse": 0,
+     "aide": "García est lié à Carmen et à la bande des contrebandiers.",
+     "explication": "**García le Borgne** est le mari de Carmen et le chef des contrebandiers : José le tuera."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce résumé du cadre de la nouvelle.",
+     "texte": "Un ___ français cherche le champ de bataille de ___ ; il rencontre le bandit don José, un ___ de Navarre.",
+     "reponses": [
+      [
+       "archéologue"
+      ],
+      [
+       "Munda"
+      ],
+      [
+       "Basque"
+      ]
+     ],
+     "banque": [
+      "archéologue",
+      "Munda",
+      "Basque",
+      "Cordoue",
+      "avocat"
+     ],
+     "aide": "Le narrateur est un savant ; José vient de Navarre.",
+     "explication": "Le narrateur est un **archéologue** qui cherche le champ de bataille de **Munda** ; don José est **Basque**, de Navarre."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c09146e-16e9-55c6-85ae-8024e63e0165",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La chute de don José",
+   "competence": "analyser-document",
+   "situation": "José était un brigadier honnête. Suis, étape par étape, ce qu’il perd en suivant Carmen, jusqu’à la veille de son exécution.",
+   "documents": [
+    {
+     "id": "chute",
+     "type": "chaine",
+     "titre": "La chute de José",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Il laisse Carmen s’échapper après une rixe"
+      },
+      {
+       "id": "n2",
+       "texte": "Il déserte et tue un officier"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Carmen se lasse et le lui dit"
+      },
+      {
+       "id": "n5",
+       "texte": "Il la poignarde et se livre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il rejoint les contrebandiers et tue le mari de Carmen",
+      "Il épouse Carmen devant le narrateur savant",
+      "Il retrouve enfin le champ de bataille de Munda",
+      "Il s’enfuit avec le picador Lucas en Navarre"
+     ],
+     "reponse": 0,
+     "aide": "Après la désertion, José n’a plus de place dans la société.",
+     "explication": "José **rejoint les contrebandiers et tue le mari de Carmen** : il ne lui reste plus aucune issue."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque étape de la chute à ce que José perd.",
+     "paires": [
+      [
+       "Il laisse Carmen s’échapper",
+       "Son grade"
+      ],
+      [
+       "Il déserte et tue un officier",
+       "Sa place dans la société"
+      ],
+      [
+       "Il rejoint les contrebandiers",
+       "Toute issue"
+      ]
+     ],
+     "aide": "Chaque étape l’éloigne un peu plus de sa vie d’avant.",
+     "explication": "Il perd **son grade**, puis **sa place dans la société**, puis **toute issue** : la chute est progressive."
+    },
+    {
+     "type": "zone",
+     "document": "chute",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape où se joue la phrase qui condamne Carmen.",
+     "aide": "Elle est libre, elle ne l’aime plus : elle ne mentira pas.",
+     "explication": "Quand Carmen **se lasse et le lui dit**, elle refuse de mentir : c’est cette franchise qui la tue."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les temps du récit enchâssé.",
+     "items": [
+      "Le narrateur rencontre don José en Andalousie",
+      "Il rencontre Carmen à Cordoue",
+      "Il retrouve José en prison, la veille de son exécution",
+      "Il recueille le récit de José"
+     ],
+     "aide": "Le narrateur voit d’abord, puis il écoute.",
+     "explication": "Le narrateur **rencontre José**, puis **Carmen**, puis **retrouve José en prison** et **recueille son récit** : c’est un récit enchâssé."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c09146e-16e9-55c6-85ae-8024e63e0165",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Je ne mentirai pas",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Carmen est-elle une séductrice qui perd don José, ou une femme qui refuse d’appartenir ? Lis leur échange et une scène écrite à la manière de Mérimée.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une scène imaginée",
+     "blocs": [
+      "Le brigadier la regarda longtemps sans parler. « Tu ne m’aimes donc plus ? » demanda-t-il enfin.",
+      "Elle ne baissa pas les yeux. « Non. Je pourrais te dire le contraire pour avoir la paix, mais je ne [[m|mentirai]] pas. Tu peux me tuer : je suis [[l|libre]] et je ne serai à personne. »"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Mérimée, *Carmen*"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Carmen est une femme fatale : elle perd don José, c’est tout."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Non : c’est elle qui refuse d’appartenir à qui que ce soit, et le récit est mené par une [[v|voix]] d’homme."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Donc on la voit à travers les yeux de José ?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Et de l’archéologue : deux voix d’hommes."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit ce que le personnage refuse de faire, même pour avoir la paix.",
+     "aide": "C’est un verbe au futur, à la forme négative.",
+     "explication": "Elle refuse de **mentir** : elle préfère mourir plutôt que de dire ce qu’elle ne pense pas."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui dit ce que le personnage revendique.",
+     "aide": "Elle s’appartient à elle-même.",
+     "explication": "Elle se dit **libre** : c’est le trait central de Carmen, qui refuse absolument d’appartenir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : correspond-il à Carmen, ou pas ?",
+     "categories": [
+      "Ce que Carmen est",
+      "Ce qu’elle n’est pas"
+     ],
+     "items": [
+      [
+       "Une femme qui refuse d’appartenir",
+       0
+      ],
+      [
+       "Quelqu’un qui préfère mourir plutôt que de mentir",
+       0
+      ],
+      [
+       "Une séductrice sans volonté propre",
+       1
+      ],
+      [
+       "Un personnage secondaire du récit",
+       1
+      ]
+     ],
+     "aide": "Le cours dit qu’elle n’est pas une séductrice sans consistance.",
+     "explication": "Carmen **refuse d’appartenir** et **préfère mourir plutôt que de mentir** ; elle n’est ni une séductrice sans volonté, ni un personnage secondaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet le dispositif des récits enchâssés produit-il ?",
+     "options": [
+      "On n’entend Carmen qu’à travers deux voix d’hommes",
+      "Carmen raconte elle-même toute l’histoire",
+      "Le récit est mené par une voix de femme",
+      "Don José ne prend jamais la parole"
+     ],
+     "reponse": 0,
+     "aide": "Qui raconte vraiment ? Pense à don José et au narrateur.",
+     "explication": "Les récits enchâssés créent une **distance** : le lecteur n’entend Carmen qu’à travers **deux voix d’hommes**, don José et le narrateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "8105ed10-94f3-5d3e-9f8d-5c5291f6812f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui veut quoi à Rome ?",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Cinna*. Repère d’où Corneille tire son sujet, puis ce que veut chaque personnage du complot.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cinna",
+     "sousTitre": "Pierre Corneille",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "Date",
+       "valeur": "1641"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Tragédie"
+      },
+      {
+       "texte": "Sujet tiré de",
+       "valeur": "Sénèque, *De la clémence*",
+       "id": "source"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "Rome, sous l’empereur Auguste"
+      }
+     ],
+     "pied": "Après *Le Cid* et *Horace*",
+     "teinte": "ambre"
+    },
+    {
+     "id": "vouloirs",
+     "type": "tableau",
+     "titre": "Qui veut quoi",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il veut"
+     ],
+     "lignes": [
+      [
+       "Émilie",
+       "Venger son père, tué par Auguste lors des proscriptions"
+      ],
+      [
+       "Cinna",
+       "?"
+      ],
+      [
+       "Maxime",
+       "Il est entraîné dans le complot, et aime Émilie lui aussi"
+      ],
+      [
+       "Auguste",
+       "Las du pouvoir, il envisage d’abdiquer"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "source"
+     ],
+     "enonce": "Touche la ligne qui dit d’où Corneille tire l’anecdote.",
+     "aide": "Cherche le nom d’un philosophe latin.",
+     "explication": "Corneille tire l’anecdote de **Sénèque**, dans son traité *De la clémence*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Cinna ?",
+     "options": [
+      "Il aime Émilie et doit tuer l’empereur pour la mériter",
+      "Il veut remplacer Auguste sur le trône de Rome",
+      "Il cherche à venger son propre père",
+      "Il hésite à abdiquer comme Auguste"
+     ],
+     "reponse": 0,
+     "aide": "Émilie pose une condition à celui qui l’aime.",
+     "explication": "**Cinna aime Émilie**, qui exige qu’il assassine l’empereur pour mériter sa main."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce résumé du motif d’Émilie.",
+     "texte": "Émilie veut ___ son père, tué par Auguste lors des ___.",
+     "reponses": [
+      [
+       "venger"
+      ],
+      [
+       "proscriptions"
+      ]
+     ],
+     "banque": [
+      "venger",
+      "proscriptions",
+      "pleurer",
+      "guerres civiles"
+     ],
+     "aide": "Pense à un mot d’action contre l’empereur, et à des persécutions politiques.",
+     "explication": "Émilie veut **venger** son père, tué par Auguste lors des **proscriptions**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8105ed10-94f3-5d3e-9f8d-5c5291f6812f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le nœud d’une conspiration",
+   "competence": "analyser-document",
+   "situation": "Auguste est las du pouvoir ; ses deux conseillers cachent un complot. Suis le nœud de l’action, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "noeud",
+     "type": "chaine",
+     "titre": "Le nœud de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Auguste demande s’il doit abdiquer"
+      },
+      {
+       "id": "n2",
+       "texte": "Cinna plaide pour le maintien de l’Empire"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Auguste découvre tout"
+      },
+      {
+       "id": "n5",
+       "texte": "Longue délibération intérieure"
+      },
+      {
+       "id": "n6",
+       "texte": "Il choisit de pardonner"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Maxime trahit le complot",
+      "Émilie renonce à venger son père",
+      "Auguste décide d’abdiquer",
+      "Livie quitte Rome avec Cinna"
+     ],
+     "reponse": 0,
+     "aide": "Auguste ne peut pas « tout découvrir » sans que quelqu’un parle.",
+     "explication": "**Maxime trahit le complot** : c’est ce qui permet à Auguste de découvrir tout."
+    },
+    {
+     "type": "zone",
+     "document": "noeud",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où Cinna donne un conseil qui sert son projet de meurtre.",
+     "aide": "Pour tuer un tyran, il faut qu’il reste au pouvoir.",
+     "explication": "Cinna conseille le **maintien de l’Empire** : pour garder le tyran qu’il veut tuer."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le raisonnement de Cinna.",
+     "texte": "Cinna conseille à Auguste de garder l’___ pour garder le ___ qu’il veut tuer.",
+     "reponses": [
+      [
+       "Empire"
+      ],
+      [
+       "tyran"
+      ]
+     ],
+     "banque": [
+      "Empire",
+      "tyran",
+      "peuple",
+      "complot"
+     ],
+     "aide": "Un souverain qui abdique ne peut plus être assassiné.",
+     "explication": "Cinna plaide pour garder l’**Empire** : c’est garder le **tyran** qu’il veut tuer."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans la pièce.",
+     "paires": [
+      [
+       "Livie",
+       "L’impératrice, qui conseille la clémence"
+      ],
+      [
+       "Euphorbe",
+       "L’affranchi de Maxime, qui dénonce le complot"
+      ],
+      [
+       "Fulvie",
+       "La confidente d’Émilie"
+      ]
+     ],
+     "aide": "Un personnage conseille, un autre dénonce, un troisième écoute Émilie.",
+     "explication": "**Livie** conseille la clémence, **Euphorbe** dénonce le complot, **Fulvie** est la confidente d’Émilie."
+    }
+   ]
+  },
+  {
+   "chapitre": "8105ed10-94f3-5d3e-9f8d-5c5291f6812f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Maître de soi comme de l’univers",
+   "competence": "analyser-texte",
+   "situation": "Une élève voit dans le pardon d’Auguste une faiblesse. Lis deux passages de Corneille pour prouver le contraire, puis complète un argument de dissertation.",
+   "documents": [
+    {
+     "id": "v1",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Acte V, scène 1",
+     "blocs": [
+      {
+       "personnage": "Auguste",
+       "replique": "Prends un siège, Cinna, prends, et sur toute chose / Observe exactement la loi que je t’[[i|impose]]"
+      }
+     ],
+     "source": "Pierre Corneille, *Cinna* (1641), V, 1 (premier et deuxième vers de la scène)"
+    },
+    {
+     "id": "v2",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Acte V, scène 3",
+     "blocs": [
+      {
+       "personnage": "Auguste",
+       "replique": "Je suis [[m|maître]] de [[m|moi]] comme de l’[[m|univers]] ;"
+      },
+      {
+       "personnage": "Auguste",
+       "replique": "Je le suis, je veux l’être."
+      }
+     ],
+     "source": "Pierre Corneille, *Cinna* (1641), V, 3"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La clémence n’est pas une faiblesse",
+       "Elle prouve que le souverain se domine",
+       "?"
+      ],
+      [
+       "Le héros cornélien surmonte sa passion",
+       "Il choisit au lieu de subir",
+       "Auguste pardonne à Cinna, à Maxime et à Émilie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "v1",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le verbe qui montre qu’Auguste domine l’entretien.",
+     "aide": "Auguste décide des règles de la conversation.",
+     "explication": "Auguste **impose** sa loi à Cinna : il parle en maître, avant même de révéler qu’il sait tout."
+    },
+    {
+     "type": "zone",
+     "document": "v2",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les trois mots qui comparent la maîtrise de soi et celle du monde.",
+     "aide": "Cherche ce dont il est maître, et ce dont il est maître « comme ».",
+     "explication": "Auguste se dit **maître** de **moi** comme de l’**univers** : la maîtrise de soi est aussi grande que celle de l’empire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Auguste : « Je suis maître de moi comme de l’univers »",
+      "Maxime trahit le complot de Cinna et d’Émilie",
+      "Émilie veut venger son père, tué par Auguste",
+      "Cinna plaide pour le maintien de l’Empire"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la phrase où Auguste dit qu’il se domine lui-même.",
+     "explication": "La phrase d’Auguste, « **Je suis maître de moi comme de l’univers** », illustre qu’il se domine : la clémence est un acte de force."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces traits : appartiennent-ils au héros cornélien ou au héros racinien ?",
+     "categories": [
+      "Héros cornélien",
+      "Héros racinien"
+     ],
+     "items": [
+      [
+       "Il surmonte sa passion par un choix",
+       0
+      ],
+      [
+       "Il choisit ce qu’il est",
+       0
+      ],
+      [
+       "Il est la victime de sa passion",
+       1
+      ],
+      [
+       "Il subit un destin qui le dépasse",
+       1
+      ]
+     ],
+     "aide": "Le cours oppose un héros qui choisit à un héros qui subit.",
+     "explication": "Le héros **cornélien** surmonte sa passion par un choix ; les héros de **Racine** en sont victimes."
+    }
+   ]
+  },
+  {
+   "chapitre": "894635b6-b10c-5108-8bed-86feb8a71e6e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois hommes dans un ballon",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Cinq Semaines en ballon*. Retrouve l’éditeur, l’âge de l’auteur à la parution, puis l’équipage du *Victoria*.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cinq Semaines en ballon",
+     "sousTitre": "Jules Verne, né en 1828 à Nantes",
+     "emoji": "🎈",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1863"
+      },
+      {
+       "texte": "Éditeur",
+       "valeur": "Pierre-Jules Hetzel",
+       "id": "editeur"
+      },
+      {
+       "texte": "Cycle",
+       "valeur": "Les Voyages extraordinaires"
+      },
+      {
+       "texte": "Départ du ballon",
+       "valeur": "Zanzibar"
+      }
+     ],
+     "pied": "Premier roman du cycle",
+     "teinte": "ciel"
+    },
+    {
+     "id": "equipage",
+     "type": "tableau",
+     "titre": "L’équipage du *Victoria*",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Samuel Fergusson",
+       "Le savant, inventeur du procédé"
+      ],
+      [
+       "Dick Kennedy",
+       "L’ami chasseur, sceptique"
+      ],
+      [
+       "Joe",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "editeur"
+     ],
+     "enonce": "Touche la ligne qui nomme l’éditeur de Verne.",
+     "aide": "Cherche le mot « Éditeur » dans la fiche.",
+     "explication": "L’éditeur est **Pierre-Jules Hetzel**, qui le restera toute sa vie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Verne a-t-il quand paraît le roman ?",
+     "reponse": 35,
+     "unite": "ans",
+     "aide": "Soustrais sa date de naissance à celle de la parution.",
+     "explication": "1863 − 1828 = **35 ans** : le roman rend Verne célèbre à trente-cinq ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Joe ?",
+     "options": [
+      "Le domestique, débrouillard et comique",
+      "Le capitaine du navire, prudent et grave",
+      "Le missionnaire sauvé, mort peu après",
+      "L’éditeur du docteur, avare et pressé"
+     ],
+     "reponse": 0,
+     "aide": "Joe n’est ni un savant ni un chasseur.",
+     "explication": "**Joe** est le domestique, débrouillard et comique : il apporte l’humour au récit."
+    }
+   ]
+  },
+  {
+   "chapitre": "894635b6-b10c-5108-8bed-86feb8a71e6e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Zanzibar au Sénégal",
+   "competence": "lire-carte",
+   "situation": "Le *Victoria* traverse l’Afrique d’est en ouest. Suis son trajet sur une carte, puis ce que chaque épisode apporte au récit.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le trajet du *Victoria* (schématique)",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      -20,
+      55,
+      28
+     ],
+     "regionsCliquables": true,
+     "fleuves": [
+      "nil"
+     ],
+     "lieux": [
+      {
+       "id": "zanz",
+       "lon": 39.19,
+       "lat": -6.16,
+       "nom": "Zanzibar",
+       "symbole": "etoile",
+       "teinte": "corail"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        [
+         39.19,
+         -6.16
+        ],
+        [
+         -14.5,
+         14.5
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "corail",
+       "id": "trajet"
+      }
+     ],
+     "source": "Trajet simplifié, d’après le cours"
+    },
+    {
+     "id": "episodes",
+     "type": "tableau",
+     "titre": "Ce que chaque épisode apporte",
+     "colonnes": [
+      "Épisode",
+      "Ce qu’il apporte au récit"
+     ],
+     "lignes": [
+      [
+       "Le sauvetage d’un missionnaire français",
+       "?"
+      ],
+      [
+       "Le désert et la soif",
+       "Le danger"
+      ],
+      [
+       "Le suspense et l’humour",
+       "Le moteur du récit"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "zanz"
+     ],
+     "enonce": "Touche le point de départ du ballon.",
+     "aide": "C’est une île, à l’est de l’Afrique.",
+     "explication": "Le *Victoria* décolle de **Zanzibar**, sur la côte est de l’Afrique."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "SEN"
+     ],
+     "enonce": "Touche le pays où l’équipage termine son voyage.",
+     "aide": "Le trajet va d’est en ouest, jusqu’à un fleuve de l’Atlantique.",
+     "explication": "L’équipage atteint le **Sénégal**, épuisé mais victorieux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, en face du sauvetage du missionnaire ?",
+     "options": [
+      "L’émotion",
+      "Le comique",
+      "Le danger",
+      "La géographie"
+     ],
+     "reponse": 0,
+     "aide": "Le missionnaire meurt peu après son sauvetage.",
+     "explication": "Ce sauvetage apporte **l’émotion** au récit : le missionnaire meurt peu après."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces moments du roman dans l’ordre.",
+     "items": [
+      "Fergusson annonce son projet à Londres",
+      "Le *Victoria* décolle de Zanzibar",
+      "L’équipage découvre les sources du Nil",
+      "Le ballon atteint le Sénégal"
+     ],
+     "aide": "Commence par l’annonce du projet, finis par l’arrivée.",
+     "explication": "Ordre : **annonce à Londres**, **décollage de Zanzibar**, **sources du Nil**, **arrivée au Sénégal**."
+    }
+   ]
+  },
+  {
+   "chapitre": "894635b6-b10c-5108-8bed-86feb8a71e6e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Instruire en amusant, mais quel regard ?",
+   "competence": "analyser-texte",
+   "situation": "Maya trouve que Verne décrit l’Afrique comme un documentaire neutre. Lucas n’est pas d’accord. Lis leur échange et une scène écrite à la manière de Verne.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans la nacelle",
+     "blocs": [
+      {
+       "personnage": "Fergusson",
+       "replique": "Il suffit de [[c|chauffer]] le gaz pour monter, mon cher Dick, et de le laisser refroidir pour descendre."
+      },
+      {
+       "personnage": "Kennedy",
+       "replique": "Et si le chalumeau s’éteint ?"
+      },
+      {
+       "personnage": "Joe",
+       "replique": "Alors, monsieur, nous apprendrons la géographie par le chemin le plus court."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Jules Verne"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Verne décrit l’Afrique de façon neutre et moderne : c’est presque un documentaire."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Non. C’est le regard de son [[k|époque]] : un regard [[k|colonial]], qu’il faut savoir signaler."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui dit comment le docteur fait monter le ballon.",
+     "aide": "Pense à l’invention centrale du livre : la variation de température du gaz.",
+     "explication": "On fait monter le ballon en **chauffant** le gaz : c’est l’invention du livre, et la physique est ici expliquée en une phrase."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa façon de parler dans cette scène.",
+     "paires": [
+      [
+       "Fergusson",
+       "Il explique le procédé"
+      ],
+      [
+       "Kennedy",
+       "Il doute et s’inquiète"
+      ],
+      [
+       "Joe",
+       "Il plaisante"
+      ]
+     ],
+     "aide": "Un savant, un sceptique, un comique : chacun parle selon son rôle.",
+     "explication": "**Fergusson** explique, **Kennedy** doute, **Joe** plaisante : la scène réunit science, suspense et humour."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces ingrédients : servent-ils à instruire ou à amuser ?",
+     "categories": [
+      "Instruire",
+      "Amuser"
+     ],
+     "items": [
+      [
+       "La géographie",
+       0
+      ],
+      [
+       "La physique du ballon",
+       0
+      ],
+      [
+       "Le suspense",
+       1
+      ],
+      [
+       "L’humour de Joe",
+       1
+      ]
+     ],
+     "aide": "Le cours parle d’une formule d’éditeur : « instruire en amusant ».",
+     "explication": "La **géographie** et la **physique** instruisent ; le **suspense** et l’**humour** amusent."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche les deux mots par lesquels Lucas situe le regard de Verne.",
+     "aide": "Lucas parle d’un temps et d’un rapport de force.",
+     "explication": "Le regard est celui de son **époque**, **colonial** et daté : un point à savoir signaler."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fe7bf3e-e30a-54d5-8e5b-e0893d90dd70",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman de dix volumes",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Clélie*. Place le roman dans la vie de Madeleine de Scudéry et retrouve l’héroïne.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le roman et sa postérité",
+     "debut": 1650,
+     "fin": 1705,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "cle",
+       "debut": 1654,
+       "fin": 1660,
+       "nom": "Clélie",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "mol",
+       "date": 1659,
+       "nom": "Précieuses ridicules"
+      },
+      {
+       "id": "mort",
+       "date": 1701,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Clélie, histoire romaine",
+     "sousTitre": "Madeleine de Scudéry",
+     "emoji": "🗺️",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "Dix volumes, de 1654 à 1660"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "La Rome des débuts de la République"
+      },
+      {
+       "texte": "Héroïne",
+       "valeur": "Clélie, promise à ?"
+      },
+      {
+       "texte": "Passage célèbre",
+       "valeur": "La carte de Tendre"
+      }
+     ],
+     "pied": "Un roman-fleuve",
+     "teinte": "rose"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cle"
+     ],
+     "enonce": "Sur la frise, touche la période pendant laquelle paraît le roman.",
+     "aide": "Cherche le nom du roman sur la frise.",
+     "explication": "*Clélie* paraît entre **1654 et 1660**, en dix volumes."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mol"
+     ],
+     "enonce": "Touche la date à laquelle Molière se moque des précieuses dans une pièce.",
+     "aide": "La pièce a pour titre *Les Précieuses ridicules*.",
+     "explication": "Molière donne *Les Précieuses ridicules* en **1659** : la carte de Tendre devient une caricature."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » : à qui Clélie est-elle promise ?",
+     "options": [
+      "Aronce",
+      "Porsenna",
+      "Cyrus",
+      "Tite-Live"
+     ],
+     "reponse": 0,
+     "aide": "C’est le nom d’un personnage, et non celui du roi étrusque.",
+     "explication": "Clélie est promise à **Aronce** ; elle est enlevée, séparée de lui, poursuivie."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fe7bf3e-e30a-54d5-8e5b-e0893d90dd70",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le voyage au pays de Tendre",
+   "competence": "observer-schema",
+   "situation": "Une jeune précieuse veut gagner le pays de Tendre depuis Nouvelle-Amitié. Lis la carte pour trouver les chemins, puis ce qu’il faut éviter.",
+   "documents": [
+    {
+     "id": "tendre",
+     "type": "schema",
+     "titre": "La carte de Tendre (schéma simplifié)",
+     "largeur": 360,
+     "hauteur": 340,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 50,
+       "cy": 300,
+       "rx": 46,
+       "ry": 26,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 297,
+       "texte": "Mer d’",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 310,
+       "texte": "Inimitié",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 310,
+       "cy": 305,
+       "rx": 46,
+       "ry": 24,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 310,
+       "y": 302,
+       "texte": "Lac d’",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 310,
+       "y": 315,
+       "texte": "Indifférence",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        288
+       ],
+       "a": [
+        78,
+        200
+       ],
+       "teinte": "bleu",
+       "epaisseur": 3,
+       "id": "fleuve",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        78,
+        200
+       ],
+       "a": [
+        52,
+        98
+       ],
+       "teinte": "bleu",
+       "epaisseur": 3,
+       "fleche": "fin",
+       "id": "fleuve2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        285
+       ],
+       "a": [
+        170,
+        97
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        298
+       ],
+       "a": [
+        300,
+        97
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "cercle",
+       "cx": 45,
+       "cy": 75,
+       "r": 20,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "incl",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 45,
+       "y": 82,
+       "emoji": "🏰",
+       "taille": 22
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 26,
+       "texte": "Tendre-sur-",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 38,
+       "texte": "Inclination",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 75,
+       "r": 20,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "est",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 82,
+       "emoji": "🏰",
+       "taille": 22
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 26,
+       "texte": "Tendre-sur-",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 38,
+       "texte": "Estime",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 300,
+       "cy": 75,
+       "r": 20,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "rec",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 300,
+       "y": 82,
+       "emoji": "🏰",
+       "taille": 22
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 26,
+       "texte": "Tendre-sur-",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 38,
+       "texte": "Reconnaissance",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 235,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 239,
+       "texte": "Grand-Esprit",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 195,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 199,
+       "texte": "Jolis-Vers",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 155,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 159,
+       "texte": "Billet-Doux",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 115,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 119,
+       "texte": "Sincérité",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 245,
+       "cy": 254,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "v1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 258,
+       "texte": "Complaisance",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "cercle",
+       "cx": 265,
+       "cy": 198,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "v2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 202,
+       "texte": "Petits-Soins",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "cercle",
+       "cx": 285,
+       "cy": 142,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "v3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 295,
+       "y": 146,
+       "texte": "Assiduité",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 285,
+       "l": 120,
+       "h": 30,
+       "arrondi": 8,
+       "texte": "Nouvelle-Amitié",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "depart",
+       "zone": true
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice, d’après la carte de Tendre (Clélie, 1654-1660)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tendre",
+     "multiple": false,
+     "reponse": [
+      "depart"
+     ],
+     "enonce": "Touche le lieu d’où part le voyage.",
+     "aide": "C’est le point le plus bas de la carte.",
+     "explication": "Le voyage part de **Nouvelle-Amitié**."
+    },
+    {
+     "type": "zone",
+     "document": "tendre",
+     "multiple": false,
+     "reponse": [
+      "incl"
+     ],
+     "enonce": "Touche la ville où mène le fleuve, le chemin le plus direct.",
+     "aide": "Suis la flèche bleue.",
+     "explication": "Le fleuve mène à **Tendre-sur-Inclination** : c’est le chemin le plus direct."
+    },
+    {
+     "type": "zone",
+     "document": "tendre",
+     "multiple": true,
+     "reponse": [
+      "v1",
+      "v2",
+      "v3"
+     ],
+     "enonce": "Touche les trois villages par lesquels on passe pour atteindre Tendre-sur-Reconnaissance.",
+     "aide": "Ils disent les égards et les services rendus.",
+     "explication": "On passe par **Complaisance**, **Petits-Soins** et **Assiduité** pour gagner Tendre-sur-Reconnaissance."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque destination au chemin qui y mène.",
+     "paires": [
+      [
+       "Tendre-sur-Estime",
+       "Par Grand-Esprit, Jolis-Vers, Billet-Doux, Sincérité"
+      ],
+      [
+       "Tendre-sur-Reconnaissance",
+       "Par Complaisance, Petits-Soins, Assiduité"
+      ],
+      [
+       "Tendre-sur-Inclination",
+       "Par le fleuve"
+      ]
+     ],
+     "aide": "Chaque ville a son propre trajet sur la carte.",
+     "explication": "**Estime** : par Grand-Esprit, Jolis-Vers, Billet-Doux, Sincérité ; **Reconnaissance** : par les égards ; **Inclination** : par le fleuve."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fe7bf3e-e30a-54d5-8e5b-e0893d90dd70",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Penser l’amour au salon",
+   "competence": "argumenter",
+   "situation": "Dans les salons du XVIIe siècle, on débat de la meilleure façon d’aimer. Lis une conversation écrite à la manière de Scudéry, puis construis l’argument que la carte de Tendre illustre.",
+   "documents": [
+    {
+     "id": "salon",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une conversation de salon",
+     "blocs": [
+      "Doralise demanda à la compagnie par quel chemin on gagne le cœur d’un amant.",
+      "« Il n’y a point de raccourci, répondit Cléomède : on n’arrive à l’amour que par l’[[v|estime]], par la [[v|conversation]] et par le [[v|mérite]]. Un mariage arrangé n’y mène pas. »"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des conversations de salon de Madeleine de Scudéry"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’amour se mérite lentement",
+       "On passe par l’estime, puis par les égards",
+       "?"
+      ],
+      [
+       "L’amitié tendre vaut l’amour",
+       "Elle peut le précéder",
+       "Nouvelle-Amitié, point de départ de la carte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "salon",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les trois mots par lesquels, selon Cléomède, on arrive à l’amour.",
+     "aide": "Cherche trois noms après « que par ».",
+     "explication": "On arrive à l’amour par l’**estime**, la **conversation** et le **mérite**, non par un mariage arrangé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La carte de Tendre, de Nouvelle-Amitié à Tendre-sur-Estime",
+      "La fuite de Clélie à travers le Tibre",
+      "Le roman en dix volumes de 1654 à 1660",
+      "La pièce de Molière, *Les Précieuses ridicules*"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple où l’on passe par l’estime et les égards, étape par étape.",
+     "explication": "La **carte de Tendre** montre l’amour qu’on gagne par étapes : de Nouvelle-Amitié à Tendre-sur-Estime, par Jolis-Vers et Billet-Doux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : Scudéry le défend, ou l’écarte ?",
+     "categories": [
+      "Ce qu’elle défend",
+      "Ce qu’elle écarte"
+     ],
+     "items": [
+      [
+       "L’estime",
+       0
+      ],
+      [
+       "La conversation",
+       0
+      ],
+      [
+       "Le mérite",
+       0
+      ],
+      [
+       "Le mariage arrangé",
+       1
+      ],
+      [
+       "Le lac d’Indifférence",
+       1
+      ],
+      [
+       "La mer d’Inimitié",
+       1
+      ]
+     ],
+     "aide": "Le lac et la mer sont des dangers sur la carte.",
+     "explication": "Scudéry **défend** l’estime, la conversation et le mérite ; elle **écarte** le mariage arrangé, l’indifférence et l’inimitié."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert, ici, le roman du XVIIe siècle ?",
+     "options": [
+      "À penser les sentiments, ici l’amour",
+      "À raconter l’histoire de Rome en détail",
+      "À prouver que le mariage arrangé est bon",
+      "À faire rire de la société précieuse"
+     ],
+     "reponse": 0,
+     "aide": "La carte est une cartographie du sentiment, née d’un jeu de salon.",
+     "explication": "*Clélie* sert à **penser les sentiments** : la carte de Tendre en fait le plan."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2347 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "99b06d03-723d-54da-a85d-1ffb2ceb03f1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La première de Dom Juan",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Dom Juan : place la pièce dans la vie de Molière, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Molière et sa pièce",
+     "debut": 1620,
+     "fin": 1680,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "dj",
+       "date": 1665,
+       "nom": "Dom Juan"
+      },
+      {
+       "id": "mort",
+       "date": 1673,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Dom Juan ou le Festin de pierre",
+     "sousTitre": "Molière, comédie en cinq actes et en prose",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Créée le",
+       "valeur": "15 février 1665"
+      },
+      {
+       "texte": "Au",
+       "valeur": "Théâtre du Palais-Royal"
+      },
+      {
+       "texte": "Rôle de Molière",
+       "valeur": "?"
+      },
+      {
+       "texte": "Retirée après",
+       "valeur": "Quinze représentations"
+      }
+     ],
+     "pied": "Un sujet venu d’Espagne",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "dj"
+     ],
+     "enonce": "Touche l’année de création de Dom Juan.",
+     "aide": "Cherche le titre de la pièce.",
+     "explication": "La pièce est créée en **1665**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la pièce de la mort de Molière ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1673 − 1665 = **8 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle Molière joue-t-il lui-même (la ligne « ? ») ?",
+     "options": [
+      "Sganarelle, le valet",
+      "Dom Louis, le père",
+      "Pierrot, le paysan",
+      "Le Commandeur, la statue"
+     ],
+     "reponse": 0,
+     "aide": "Il joue le valet comique de Dom Juan.",
+     "explication": "Molière joue **Sganarelle**, le valet à la fois complice et censeur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité.",
+     "texte": "La pièce compte ___ actes et est écrite en ___.",
+     "reponses": [
+      [
+       "cinq"
+      ],
+      [
+       "prose"
+      ]
+     ],
+     "banque": [
+      "cinq",
+      "trois",
+      "prose",
+      "vers"
+     ],
+     "aide": "Relis le sous-titre de la carte.",
+     "explication": "Comédie en **cinq** actes et en **prose**."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b06d03-723d-54da-a85d-1ffb2ceb03f1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du couvent aux flammes",
+   "competence": "analyser-texte",
+   "situation": "Tu dois raconter les étapes de la pièce, puis montrer comment Dom Juan met en pratique l’éloge qu’il fait de l’hypocrisie.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Dom Juan",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Dom Juan abandonne Elvire, enlevée d’un couvent"
+      },
+      {
+       "id": "n2",
+       "texte": "Il tente d’enlever une fiancée et fait naufrage"
+      },
+      {
+       "id": "n3",
+       "texte": "Il promet le mariage à deux paysannes"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il invite la statue du Commandeur à souper"
+      },
+      {
+       "id": "n6",
+       "texte": "Il feint la conversion"
+      },
+      {
+       "id": "n7",
+       "texte": "La statue l’entraîne dans les flammes"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      },
+      {
+       "de": "n6",
+       "a": "n7"
+      }
+     ]
+    },
+    {
+     "id": "vice",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un vice à la mode",
+     "blocs": [
+      {
+       "didascalie": "Dom Juan s’explique devant son valet, à l’acte V."
+      },
+      {
+       "personnage": "Dom Juan",
+       "replique": "L’[[h|hypocrisie]] est un vice à la mode, et tous les vices à la mode passent pour vertus."
+      }
+     ],
+     "source": "Molière, Dom Juan (1665), acte V, scène 2"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait Dom Juan à l’étape « ? » ?",
+     "options": [
+      "Il offre un louis d’or au pauvre s’il jure",
+      "Il épouse Elvire devant un notaire",
+      "Il rend l’armure du Commandeur à ses frères",
+      "Il paie enfin ses gages à Sganarelle"
+     ],
+     "reponse": 0,
+     "aide": "Le pauvre refuse de jurer : Dom Juan le lui donne « pour l’amour de l’humanité ».",
+     "explication": "C’est **la scène du pauvre** : un louis d’or contre un juron, scène qui fit scandale."
+    },
+    {
+     "type": "zone",
+     "document": "vice",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui nomme le vice dont Dom Juan fait l’éloge.",
+     "aide": "C’est le contraire de la sincérité.",
+     "explication": "Dom Juan fait l’éloge de **l’hypocrisie**, « vice à la mode »."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n6"
+     ],
+     "enonce": "Touche l’étape où Dom Juan met en pratique cet éloge de l’hypocrisie.",
+     "aide": "À la fin, il fait semblant de changer de vie.",
+     "explication": "Il **feint la conversion** : c’est l’hypocrisie mise en actes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin de la chaîne.",
+     "texte": "Dom Juan invite la ___ du Commandeur à souper, et c’est elle qui l’entraîne dans les ___.",
+     "reponses": [
+      [
+       "statue"
+      ],
+      [
+       "flammes"
+      ]
+     ],
+     "banque": [
+      "statue",
+      "flammes",
+      "tombes",
+      "fleuves"
+     ],
+     "aide": "Relis les deux dernières étapes.",
+     "explication": "La **statue** du Commandeur l’entraîne dans les **flammes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "99b06d03-723d-54da-a85d-1ffb2ceb03f1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Libertin de mœurs, libertin de pensée",
+   "competence": "argumenter",
+   "situation": "Deux élèves ne s’accordent pas sur le mot « libertin ». Une réplique célèbre de Dom Juan les départage.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Que veut dire « libertin » ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Libertin, ça veut juste dire séducteur, non ?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Pas seulement : Dom Juan est libertin de [[l|mœurs]] et de [[l|pensée]]."
+      }
+     ]
+    },
+    {
+     "id": "rep",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Ce que croit Dom Juan",
+     "blocs": [
+      {
+       "didascalie": "Le valet demande à son maître en quoi il croit."
+      },
+      {
+       "personnage": "Dom Juan",
+       "replique": "Je crois que deux et deux sont quatre, [[v|Sganarelle]], et que quatre et quatre sont huit."
+      }
+     ],
+     "source": "Molière, Dom Juan (1665), acte III, scène 1"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Deux libertinages",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Dom Juan est libertin de mœurs",
+       "Il séduit puis abandonne",
+       "Elvire, Charlotte et Mathurine"
+      ],
+      [
+       "Dom Juan est libertin de pensée",
+       "Il ne croit qu’à ce qu’il peut vérifier",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche les deux mots qui disent le double sens du libertinage de Dom Juan.",
+     "aide": "Paul donne deux domaines.",
+     "explication": "Dom Juan est libertin de **mœurs** (il séduit) et de **pensée** (il ne croit qu’à ce qui se prouve)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la réponse de Dom Juan à son valet ?",
+     "options": [
+      "Il ne croit qu’à ce que le calcul prouve",
+      "Il croit en Dieu mais refuse de le dire",
+      "Il se moque de son valet sans rien penser",
+      "Il récite une prière apprise à l’église"
+     ],
+     "reponse": 0,
+     "aide": "Il répond par des additions, pas par une croyance.",
+     "explication": "Il ne croit qu’à **l’évidence du calcul** : c’est son libertinage de pensée."
+    },
+    {
+     "type": "zone",
+     "document": "rep",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le nom du personnage à qui Dom Juan répond.",
+     "aide": "C’est son valet.",
+     "explication": "Dom Juan répond à son valet **Sganarelle**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Sa réplique sur deux et deux, quatre et quatre",
+      "Le naufrage dont Pierrot le sauve de justesse",
+      "Sa promesse de mariage à Charlotte la paysanne",
+      "Les gages que réclame Sganarelle à la fin"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’exemple où il dit en quoi il croit.",
+     "explication": "C’est **la phrase sur deux et deux** : il ne croit qu’à ce qu’il peut vérifier."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8824985-4922-5e84-8828-303d5d9082c5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un hidalgo qui a trop lu",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Don Quichotte : place le roman dans la vie de Cervantes, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Cervantes et son roman",
+     "debut": 1560,
+     "fin": 1620,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "lep",
+       "date": 1571,
+       "nom": "Lépante"
+      },
+      {
+       "id": "p1",
+       "date": 1605,
+       "nom": "1re partie"
+      },
+      {
+       "id": "p2",
+       "date": 1615,
+       "nom": "2e partie"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Don Quichotte",
+     "sousTitre": "Miguel de Cervantes",
+     "emoji": "🐴",
+     "lignes": [
+      {
+       "texte": "Héros",
+       "valeur": "Alonso Quichano, hidalgo pauvre de la Manche"
+      },
+      {
+       "texte": "Sa folie",
+       "valeur": "Il a trop lu de romans de chevalerie"
+      },
+      {
+       "texte": "Son cheval",
+       "valeur": "Rossinante"
+      },
+      {
+       "texte": "Son écuyer",
+       "valeur": "?"
+      },
+      {
+       "texte": "Sa dame",
+       "valeur": "Dulcinée du Toboso"
+      }
+     ],
+     "pied": "Deux parties, 1605 et 1615",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "p1"
+     ],
+     "enonce": "Touche l’année de parution de la première partie.",
+     "aide": "Cherche la plus ancienne des deux parties.",
+     "explication": "La première partie paraît en **1605**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les deux parties du roman ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1615 − 1605 = **10 ans** : Cervantes publie sa vraie suite après la fausse suite d’Avellaneda."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est l’écuyer de don Quichotte (la ligne « ? ») ?",
+     "options": [
+      "Sancho Panza",
+      "Sansón Carrasco",
+      "Le barbier",
+      "Le duc"
+     ],
+     "reponse": 0,
+     "aide": "C’est un paysan pratique et proverbial.",
+     "explication": "**Sancho Panza** est son écuyer."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la folie du héros.",
+     "texte": "Alonso Quichano a tant lu de romans de ___ qu’il perd la ___.",
+     "reponses": [
+      [
+       "chevalerie"
+      ],
+      [
+       "raison"
+      ]
+     ],
+     "banque": [
+      "chevalerie",
+      "raison",
+      "aventure",
+      "mémoire"
+     ],
+     "aide": "Relis la ligne « Sa folie ».",
+     "explication": "Il a lu trop de romans de **chevalerie** et perd la **raison**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8824985-4922-5e84-8828-303d5d9082c5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des géants, des armées et des galériens",
+   "competence": "analyser-texte",
+   "situation": "Tu dois raconter l’histoire du chevalier, puis montrer l’opposition entre lui et son écuyer.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Alonso Quichano perd la raison à force de lire"
+      },
+      {
+       "id": "n2",
+       "texte": "Il devient don Quichotte et choisit Dulcinée"
+      },
+      {
+       "id": "n3",
+       "texte": "Il prend Sancho Panza pour écuyer"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Vaincu, il rentre chez lui"
+      },
+      {
+       "id": "n6",
+       "texte": "Il retrouve la raison, puis meurt"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    },
+    {
+     "id": "moulins",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la plaine",
+     "blocs": [
+      "Sur la plaine, de grandes ailes de bois tournent au vent. « Ce sont des [[g|géants]] ! » s’écrie don Quichotte, qui lance Rossinante au galop. Sancho, resté sur le chemin, ne voit que des [[m|moulins]] à vent."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le roman de Cervantes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait don Quichotte à l’étape « ? » ?",
+     "options": [
+      "Il charge des moulins, des troupeaux, des galériens",
+      "Il épouse Dulcinée du Toboso",
+      "Il écrit la seconde partie de ses aventures",
+      "Il devient gouverneur de l’île de Barataria"
+     ],
+     "reponse": 0,
+     "aide": "Entre le départ et la défaite, il part à l’aventure.",
+     "explication": "Il part à l’aventure et se bat contre ce qu’il prend pour des ennemis : **moulins, troupeaux, galériens**."
+    },
+    {
+     "type": "zone",
+     "document": "moulins",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot qui montre l’illusion de don Quichotte.",
+     "aide": "Il voit autre chose que ce qui est.",
+     "explication": "Don Quichotte voit des **géants** : sa lecture des romans déforme le réel."
+    },
+    {
+     "type": "zone",
+     "document": "moulins",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui montre ce que voit Sancho, le réaliste.",
+     "aide": "Il voit les choses telles qu’elles sont.",
+     "explication": "Sancho voit des **moulins** : le duo idéaliste / réaliste est né."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque aventure à ce que croit voir don Quichotte.",
+     "paires": [
+      [
+       "Les moulins à vent",
+       "Des géants à combattre"
+      ],
+      [
+       "Les troupeaux",
+       "Des armées"
+      ],
+      [
+       "Les galériens",
+       "Des innocents à libérer"
+      ]
+     ],
+     "aide": "Il transforme le monde en roman de chevalerie.",
+     "explication": "Il prend les **moulins** pour des géants, les **troupeaux** pour des armées, les **galériens** pour des innocents."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8824985-4922-5e84-8828-303d5d9082c5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que lire fait à la vie",
+   "competence": "argumenter",
+   "situation": "Don Quichotte est-il un simple fou ridicule ? Lis une scène de la seconde partie, un débat d’élèves, puis construis l’argument.",
+   "documents": [
+    {
+     "id": "chateau",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Au château du duc",
+     "blocs": [
+      "Le duc et la duchesse accueillent le chevalier dans leur château. « Nous avons lu le [[l|livre]] de vos aventures, dit la duchesse : tout le monde vous y [[r|reconnaît]]. »",
+      "Don Quichotte s’incline, ravi d’être connu. Sancho, lui, se demande si on se moque d’eux."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après la seconde partie du roman (1615)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Un fou ridicule ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Don Quichotte est juste un fou ridicule : le roman se moque de lui."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Il fait plus : il montre ce que la [[f|fiction]] fait à celui qui la lit. Et dans la seconde partie, les personnages ont lu la première."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman parle de ce que lire fait à la vie",
+       "Don Quichotte agit comme les héros des romans qu’il a lus",
+       "?"
+      ],
+      [
+       "Le roman se regarde lui-même",
+       "Dans la seconde partie, les personnages ont lu la première",
+       "Le duc et la duchesse reconnaissent le chevalier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chateau",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui montre que les personnages connaissent déjà les aventures du héros.",
+     "aide": "La duchesse en a lu le récit.",
+     "explication": "Les personnages ont lu **le livre** de la première partie : c’est la mise en abyme."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui désigne l’objet de la réflexion du roman, selon Malik.",
+     "aide": "Un livre qui parle de ce que font les livres.",
+     "explication": "Le roman réfléchit sur **la fiction** : ce que lire fait à la vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Il prend des moulins pour des géants",
+      "Il épouse la fille du duc et devient gouverneur",
+      "Il écrit à Avellaneda pour le féliciter",
+      "Il renonce à toute aventure dès le premier chapitre"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’épisode où il agit comme dans un roman de chevalerie.",
+     "explication": "Il prend des **moulins pour des géants** : il vit sa vie comme un roman."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque apport du roman à ce qu’il a irrigué.",
+     "paires": [
+      [
+       "Le duo don Quichotte / Sancho",
+       "Un idéaliste et un réaliste qui se complètent"
+      ],
+      [
+       "La mise en abyme",
+       "Le livre dans le livre"
+      ],
+      [
+       "L’ironie et la tendresse",
+       "Un regard moqueur mais attaché au héros"
+      ]
+     ],
+     "aide": "Chaque apport est un trait du roman moderne.",
+     "explication": "Le **duo** oppose idéal et réel, la **mise en abyme** met un livre dans le livre, l’**ironie** reste tendre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée de dissertation ce roman appuie-t-il le mieux ?",
+     "options": [
+      "Le roman peut réfléchir sur ce que la fiction fait au lecteur",
+      "Le roman doit reproduire fidèlement la vie réelle du lecteur",
+      "Le roman n’a d’autre but que d’amuser par la parodie",
+      "Le roman doit imiter les romans de chevalerie sans rire"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’une réflexion sur la fiction elle-même.",
+     "explication": "Le roman est une **réflexion sur la fiction** : ce que lire fait à la vie."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b62e5cb-c480-583a-b27e-acd869b65970",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman refusé, puis publié",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un oral sur Du côté de chez Swann : place le volume dans la vie de Proust, puis ses trois parties.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Proust et son premier volume",
+     "debut": 1870,
+     "fin": 1925,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1871,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pub",
+       "date": 1913,
+       "nom": "Publié chez Grasset"
+      },
+      {
+       "id": "mort",
+       "date": 1922,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Les trois parties",
+     "colonnes": [
+      "Partie",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "Combray",
+       "Le narrateur enfant, le baiser du soir refusé, la madeleine"
+      ],
+      [
+       "?",
+       "Un récit à la troisième personne, antérieur à la naissance du narrateur"
+      ],
+      [
+       "Noms de pays : le nom",
+       "La rêverie sur les noms de villes et l’amour d’enfance pour Gilberte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année de publication du volume.",
+     "aide": "Cherche l’éditeur.",
+     "explication": "Le volume paraît en **1913**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Proust de la publication du volume ?",
+     "reponse": 42,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1913 − 1871 = **42 ans** : Proust, longtemps tenu pour un mondain, publie son premier grand livre à quarante-deux ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle partie se cache derrière la case « ? » ?",
+     "options": [
+      "Un amour de Swann",
+      "Combray",
+      "Le baiser du soir",
+      "Les Guermantes"
+     ],
+     "reponse": 0,
+     "aide": "Elle raconte une passion antérieure à la naissance du narrateur.",
+     "explication": "C’est **« Un amour de Swann »**, récit à la troisième personne."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la publication.",
+     "texte": "Le volume est publié à ___ d’auteur chez Bernard ___.",
+     "reponses": [
+      [
+       "compte"
+      ],
+      [
+       "Grasset"
+      ]
+     ],
+     "banque": [
+      "compte",
+      "frais",
+      "Grasset",
+      "Gallimard"
+     ],
+     "aide": "Il avait été refusé par plusieurs éditeurs.",
+     "explication": "Refusé par plusieurs éditeurs, il paraît **à compte** d’auteur chez Bernard **Grasset**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b62e5cb-c480-583a-b27e-acd869b65970",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’amour de Swann, étape par étape",
+   "competence": "analyser-texte",
+   "situation": "Tu dois suivre « Un amour de Swann », puis identifier les phrases célèbres et les personnages de Combray.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Un amour de Swann",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Swann s’éprend d’Odette de Crécy"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "La petite phrase de Vinteuil le fait souffrir"
+      },
+      {
+       "id": "n4",
+       "texte": "Il juge qu’Odette n’était pas son genre"
+      },
+      {
+       "id": "n5",
+       "texte": "Il l’épouse pourtant"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "inc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux phrases célèbres",
+     "blocs": [
+      "« [[d|Longtemps]], je me suis couché de bonne heure. »",
+      "« Et tout d’un coup le souvenir m’est apparu. »"
+     ],
+     "source": "Marcel Proust, Du côté de chez Swann (1913), Combray"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape se cache derrière la case « ? » ?",
+     "options": [
+      "Une jalousie maladive le ronge",
+      "Il part vivre à Venise avec Odette",
+      "Il confie son amour à la tante Léonie",
+      "Il devient le maître d’un salon rival"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’un enfermement.",
+     "explication": "Swann est enfermé dans **une jalousie maladive**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui dit comment Swann juge finalement Odette.",
+     "aide": "C’est le verdict de la fin.",
+     "explication": "Il se juge aveugle : Odette **n’était pas son genre**."
+    },
+    {
+     "type": "zone",
+     "document": "inc",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche l’adverbe qui ouvre le roman et annonce une habitude ancienne.",
+     "aide": "Il dit une durée.",
+     "explication": "**Longtemps** ouvre le roman : le narrateur se souvient d’un temps long."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "La tante Léonie",
+       "Elle offrait la madeleine trempée dans le tilleul"
+      ],
+      [
+       "Les Verdurin",
+       "Le salon où Swann rencontre Odette"
+      ],
+      [
+       "Vinteuil",
+       "Le compositeur de la « petite phrase »"
+      ],
+      [
+       "Françoise",
+       "La cuisinière, fidèle et impitoyable"
+      ]
+     ],
+     "aide": "Pense à Combray et au salon bourgeois.",
+     "explication": "**Léonie** donne la madeleine, les **Verdurin** réunissent Swann et Odette, **Vinteuil** compose, **Françoise** cuisine."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b62e5cb-c480-583a-b27e-acd869b65970",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le goût du passé",
+   "competence": "argumenter",
+   "situation": "La madeleine est-elle un souvenir cherché ? Lis le verdict de Swann, un débat d’élèves, puis le tableau.",
+   "documents": [
+    {
+     "id": "ver",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le verdict de Swann",
+     "blocs": [
+      "« Dire que j’ai gâché des années de ma vie, […] pour une femme qui ne me plaisait pas, qui n’était pas mon [[g|genre]] ! »"
+     ],
+     "source": "Marcel Proust, Du côté de chez Swann (1913), « Un amour de Swann »"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Une mémoire cherchée ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Louis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Dans la scène de la madeleine, le narrateur cherche volontairement son passé."
+      },
+      {
+       "qui": "Louis",
+       "texte": "Non : c’est la mémoire [[i|involontaire]]. Un goût fait resurgir tout un pan du passé, sans qu’il l’ait cherché."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le temps et la mémoire remplacent l’intrigue",
+       "Un goût suffit à faire resurgir tout un pan du passé",
+       "?"
+      ],
+      [
+       "L’amour est une illusion qui s’éteint",
+       "Swann finit par se juger aveugle",
+       "Son verdict sur Odette"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ver",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot par lequel Swann dit qu’Odette ne correspondait pas à ses goûts.",
+     "aide": "C’est le dernier mot de sa phrase.",
+     "explication": "Odette n’était pas son **genre** : l’illusion amoureuse s’éteint."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche l’adjectif qui corrige l’idée d’Ana.",
+     "aide": "Louis dit que le souvenir n’est pas voulu.",
+     "explication": "C’est la mémoire **involontaire** : le goût déclenche le souvenir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La madeleine trempée dans le thé",
+      "Le salon des Verdurin",
+      "La sonate de Vinteuil",
+      "L’amour d’enfance pour Gilberte"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un goût qui fait resurgir le passé.",
+     "explication": "C’est **la madeleine** : un goût fait resurgir tout un pan du passé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du livre à son effet.",
+     "paires": [
+      [
+       "La phrase longue",
+       "Elle épouse le mouvement de la pensée"
+      ],
+      [
+       "La madeleine",
+       "Un goût fait resurgir un pan du passé"
+      ],
+      [
+       "Le verdict sur Odette",
+       "La fin de l’illusion amoureuse"
+      ]
+     ],
+     "aide": "Chaque élément montre un mécanisme du roman.",
+     "explication": "La **phrase longue** suit la pensée, la **madeleine** réveille le passé, le **verdict** met fin à l’illusion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un oral, quel objet d’étude et quelle idée associer à ce livre ?",
+     "options": [
+      "Le roman et le récit : le temps et la mémoire remplacent l’intrigue",
+      "Le théâtre : l’intrigue avance par quiproquos successifs",
+      "La poésie : le vers libre remplace la rime",
+      "La littérature d’idées : un manifeste de réforme de la langue"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle du roman et du récit.",
+     "explication": "Le livre relève du **roman et du récit** : le temps et la mémoire y remplacent l’intrigue."
+    }
+   ]
+  },
+  {
+   "chapitre": "6e1e1b8f-9639-5a4a-a790-565f1070c571",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Électre sur la scène de l’Athénée",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Électre : place la pièce dans la vie de Giraudoux, puis repère ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Giraudoux et sa pièce",
+     "debut": 1880,
+     "fin": 1950,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1882,
+       "nom": "Naissance"
+      },
+      {
+       "id": "el",
+       "date": 1937,
+       "nom": "Électre"
+      },
+      {
+       "id": "mort",
+       "date": 1944,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Électre",
+       "Elle attend son frère et refuse tout compromis"
+      ],
+      [
+       "Oreste",
+       "?"
+      ],
+      [
+       "Égisthe",
+       "Le régent d’Argos, amant de Clytemnestre"
+      ],
+      [
+       "Les Euménides",
+       "Trois petites filles qui grandissent d’acte en acte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "el"
+     ],
+     "enonce": "Touche l’année de création d’Électre.",
+     "aide": "Cherche le titre de la pièce.",
+     "explication": "La pièce est créée en **1937**, à l’Athénée, par Louis Jouvet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création d’Électre de la mort de Giraudoux ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1944 − 1937 = **7 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Oreste (la case « ? ») ?",
+     "options": [
+      "Le frère d’Électre, qui venge Agamemnon",
+      "Le mari d’Électre, un jardinier",
+      "Le fils d’Égisthe, héritier d’Argos",
+      "Le roi d’Argos, assassiné"
+     ],
+     "reponse": 0,
+     "aide": "Électre l’attend au début de la pièce.",
+     "explication": "**Oreste** est le frère d’Électre : il tue Clytemnestre et Égisthe."
+    },
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui décrit des personnages qui grandissent au fil des actes.",
+     "aide": "Ce sont trois petites filles.",
+     "explication": "Les **Euménides** grandissent d’acte en acte et poussent à la révélation."
+    }
+   ]
+  },
+  {
+   "chapitre": "6e1e1b8f-9639-5a4a-a790-565f1070c571",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cela s’appelle l’aurore",
+   "competence": "analyser-texte",
+   "situation": "Tu dois suivre l’action d’Électre jusqu’à la dernière réplique, puis lire cette réplique.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Électre attend Oreste et soupçonne sa mère"
+      },
+      {
+       "id": "n2",
+       "texte": "Égisthe veut la marier au jardinier"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Oreste tue Clytemnestre et Égisthe"
+      },
+      {
+       "id": "n5",
+       "texte": "Argos brûle"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La dernière réplique",
+     "blocs": [
+      {
+       "personnage": "La femme Narsès",
+       "replique": "Comment cela s’appelle-t-il, quand le jour se lève, comme aujourd’hui, et que tout est gâché, que tout est saccagé…"
+      },
+      {
+       "personnage": "Le Mendiant",
+       "replique": "Cela a un très beau nom, femme Narsès. Cela s’appelle l’[[a|aurore]]."
+      }
+     ],
+     "source": "Jean Giraudoux, Électre (1937), dernière scène"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il à l’étape « ? » ?",
+     "options": [
+      "Les Euménides grandissent et poussent à la vérité",
+      "Électre accepte enfin d’épouser le jardinier",
+      "Égisthe cède le pouvoir à Électre",
+      "Clytemnestre quitte Argos avec les Corinthiens"
+     ],
+     "reponse": 0,
+     "aide": "Elles grandissent d’acte en acte.",
+     "explication": "Les **Euménides** grandissent et poussent à la révélation."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape qui se produit au moment où les Corinthiens attaquent.",
+     "aide": "La cité en subit les conséquences.",
+     "explication": "Pendant que la vengeance s’accomplit, **Argos brûle**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui prononce la dernière réplique de la pièce ?",
+     "options": [
+      "Le Mendiant",
+      "Le Président",
+      "Le jardinier",
+      "Égisthe"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le nom au début de la dernière réplique.",
+     "explication": "C’est **le Mendiant** qui répond à la femme Narsès."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui nomme ce que décrit la femme Narsès.",
+     "aide": "C’est le moment où le jour se lève.",
+     "explication": "Cela s’appelle **l’aurore**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6e1e1b8f-9639-5a4a-a790-565f1070c571",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La vérité contre la cité",
+   "competence": "argumenter",
+   "situation": "Électre a-t-elle raison d’exiger toute la vérité ? Deux élèves en débattent, un tableau compare les deux camps.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "La vérité à tout prix ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Karim",
+       "texte": "Électre a raison : la vérité doit passer avant tout."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Mais la vérité entière [[d|détruit]] la cité : la pièce ne dit pas que c’est gagné."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Et Égisthe, c’est un méchant ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Pas simplement : le pouvoir l’a fait devenir un vrai chef."
+      }
+     ]
+    },
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Deux camps",
+     "colonnes": [
+      "",
+      "Électre",
+      "Égisthe"
+     ],
+     "lignes": [
+      [
+       "Ce qu’il ou elle veut",
+       "La vérité entière, quoi qu’il en coûte",
+       "?"
+      ],
+      [
+       "Ce qu’il ou elle accepte",
+       "Aucun compromis",
+       "Un compromis pour tenir la cité"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe qui dit ce que la vérité entière fait à la cité.",
+     "aide": "Inès parle du risque de la vérité.",
+     "explication": "La vérité entière **détruit** la cité : c’est la tension de la pièce."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut Égisthe (la case « ? ») ?",
+     "options": [
+      "Garder la paix et l’ordre dans la cité",
+      "Venger Agamemnon au plus vite",
+      "Faire tomber Argos aux mains de Corinthe",
+      "Révéler le crime à tout le peuple"
+     ],
+     "reponse": 0,
+     "aide": "Il accepte un compromis pour tenir la cité.",
+     "explication": "Égisthe veut **garder la paix** : il est un régent efficace."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il est du côté d’Électre, ou d’Égisthe ?",
+     "categories": [
+      "Du côté d’Électre",
+      "Du côté d’Égisthe"
+     ],
+     "items": [
+      [
+       "La vérité entière, quoi qu’il en coûte",
+       0
+      ],
+      [
+       "Marier Électre au jardinier",
+       1
+      ],
+      [
+       "Aucun compromis",
+       0
+      ],
+      [
+       "Gouverner efficacement la cité",
+       1
+      ],
+      [
+       "La justice absolue",
+       0
+      ]
+     ],
+     "aide": "D’un côté la justice absolue, de l’autre le compromis politique.",
+     "explication": "Électre porte la **justice absolue**, Égisthe le **compromis** qui protège la cité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Égisthe n’est-il pas un méchant simple ?",
+     "options": [
+      "Le pouvoir l’a fait devenir un vrai chef",
+      "Il aime sincèrement Électre",
+      "Il ignore tout du meurtre d’Agamemnon",
+      "Il refuse de gouverner Argos"
+     ],
+     "reponse": 0,
+     "aide": "Inès donne la raison à la fin du débat.",
+     "explication": "Le **pouvoir** l’a fait devenir un vrai chef : sa position se défend."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème à ce qu’en fait Giraudoux.",
+     "paires": [
+      [
+       "La vérité",
+       "Absolue, elle détruit tout"
+      ],
+      [
+       "La justice",
+       "Elle s’oppose à la paix de la cité"
+      ],
+      [
+       "Le destin",
+       "Il avance malgré les hommes"
+      ]
+     ],
+     "aide": "Pense aux trois forces qui s’affrontent dans la pièce.",
+     "explication": "La **vérité** détruit, la **justice** s’oppose à la paix, le **destin** avance malgré les hommes."
+    }
+   ]
+  },
+  {
+   "chapitre": "1783a615-5df9-51f1-b55b-1b8e87e95577",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une attente en plein Paris",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur En attendant Godot : place la pièce dans la vie de Beckett, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Beckett et sa pièce",
+     "debut": 1900,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1906,
+       "nom": "Naissance"
+      },
+      {
+       "id": "crea",
+       "date": 1953,
+       "nom": "Création"
+      },
+      {
+       "id": "nob",
+       "date": 1969,
+       "nom": "Prix Nobel"
+      },
+      {
+       "id": "mort",
+       "date": 1989,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "En attendant Godot",
+     "sousTitre": "Samuel Beckett, pièce en deux actes",
+     "emoji": "🌳",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Un écrivain irlandais installé en France"
+      },
+      {
+       "texte": "Écrite en",
+       "valeur": "Français, en 1948-1949"
+      },
+      {
+       "texte": "Publiée aux",
+       "valeur": "Éditions de Minuit, en 1952"
+      },
+      {
+       "texte": "Créée le",
+       "valeur": "5 janvier 1953"
+      },
+      {
+       "texte": "Mise en scène",
+       "valeur": "?"
+      }
+     ],
+     "pied": "Une route de campagne, un arbre",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "crea"
+     ],
+     "enonce": "Touche l’année de création de la pièce.",
+     "aide": "Cherche le mot « Création ».",
+     "explication": "La pièce est créée en **1953** au théâtre de Babylone."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la pièce du prix Nobel de Beckett ?",
+     "reponse": 16,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1969 − 1953 = **16 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui met en scène la création (la ligne « ? ») ?",
+     "options": [
+      "Roger Blin",
+      "Louis Jouvet",
+      "Jean Vilar",
+      "Jacques Copeau"
+     ],
+     "reponse": 0,
+     "aide": "Il met en scène la pièce au théâtre de Babylone.",
+     "explication": "La création est mise en scène par **Roger Blin**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité.",
+     "texte": "Beckett, écrivain ___ installé en France, écrit la pièce en ___.",
+     "reponses": [
+      [
+       "irlandais"
+      ],
+      [
+       "français"
+      ]
+     ],
+     "banque": [
+      "irlandais",
+      "anglais",
+      "français",
+      "belge"
+     ],
+     "aide": "Relis les lignes « Auteur » et « Écrite en ».",
+     "explication": "Écrivain **irlandais**, il écrit d’abord la pièce en **français**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1783a615-5df9-51f1-b55b-1b8e87e95577",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Demain, peut-être",
+   "competence": "analyser-texte",
+   "situation": "Tu dois comparer les deux actes, puis reconnaître le geste de la pièce dans une scène écrite à sa manière.",
+   "documents": [
+    {
+     "id": "actes",
+     "type": "tableau",
+     "titre": "Les deux actes",
+     "colonnes": [
+      "",
+      "Acte I",
+      "Acte II"
+     ],
+     "lignes": [
+      [
+       "Pozzo et Lucky",
+       "Un maître brutal et son esclave tenu en laisse",
+       "Pozzo est aveugle, Lucky muet"
+      ],
+      [
+       "Le garçon",
+       "Annonce que Godot ne viendra pas ce soir, mais demain",
+       "?"
+      ],
+      [
+       "L’arbre",
+       "Un arbre, sans feuilles",
+       "L’arbre porte quelques feuilles"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "past",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un banc, un lampadaire",
+     "blocs": [
+      {
+       "didascalie": "Un banc, un lampadaire. Deux hommes attendent."
+      },
+      {
+       "personnage": "Marc",
+       "replique": "Il est tard. Il a dit qu’il viendrait ?"
+      },
+      {
+       "personnage": "Léo",
+       "replique": "Il a dit : [[d|demain]]."
+      },
+      {
+       "personnage": "Marc",
+       "replique": "On s’en va ?"
+      },
+      {
+       "personnage": "Léo",
+       "replique": "Oui. Partons."
+      },
+      {
+       "didascalie": "Ils restent assis."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Beckett, En attendant Godot"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait le garçon à l’acte II (la case « ? ») ?",
+     "options": [
+      "Il répète : Godot viendra demain",
+      "Il amène enfin Godot sur la route",
+      "Il annonce que Godot est mort",
+      "Il repart sans rien dire"
+     ],
+     "reponse": 0,
+     "aide": "Dans le cours, le garçon « revient dire la même chose ».",
+     "explication": "Le garçon **revient dire la même chose** : l’attente continue."
+    },
+    {
+     "type": "zone",
+     "document": "actes",
+     "multiple": false,
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui décrit l’état de Pozzo et de Lucky à l’acte II.",
+     "aide": "Ils ont changé : l’un a perdu la vue, l’autre la parole.",
+     "explication": "À l’acte II, Pozzo est **aveugle** et Lucky **muet**."
+    },
+    {
+     "type": "zone",
+     "document": "past",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui repousse l’arrivée de celui qu’on attend.",
+     "aide": "Ce n’est ni hier ni aujourd’hui.",
+     "explication": "On repousse toujours l’arrivée à **demain** : le temps tourne en rond."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel procédé de Beckett ce passage imite-t-il ?",
+     "options": [
+      "Une décision de partir que les personnages ne suivent pas",
+      "Un coup de théâtre qui résout enfin l’intrigue",
+      "Un monologue qui explique le sens de l’attente",
+      "Un duel de répliques en alexandrins"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière didascalie, après « Partons ».",
+     "explication": "Les deux hommes décident de partir, puis **restent assis** : l’action fait du sur-place."
+    }
+   ]
+  },
+  {
+   "chapitre": "1783a615-5df9-51f1-b55b-1b8e87e95577",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui est Godot ?",
+   "competence": "argumenter",
+   "situation": "Godot est-il Dieu ? Deux élèves en débattent, un tableau structure l’argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Godot, c’est Dieu ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lisa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lisa",
+       "texte": "Godot, c’est Dieu : Beckett le dit clairement."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Non : Beckett a toujours [[r|refusé]] d’expliquer. On y a lu l’attente de Dieu, l’après-guerre, la condition humaine."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Beckett ne donne pas la clé de la pièce",
+       "Il a toujours refusé d’expliquer",
+       "Les lectures possibles : Dieu, l’après-guerre, la condition humaine"
+      ],
+      [
+       "Le temps tourne en rond",
+       "Chaque acte recommence presque à l’identique",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui dit l’attitude de Beckett face aux explications.",
+     "aide": "Noé le dit de Beckett.",
+     "explication": "Beckett a toujours **refusé** d’expliquer : la pièce reste ouverte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le texte de Noé autorise-t-il ?",
+     "options": [
+      "Plusieurs lectures sont possibles, aucune n’est imposée",
+      "Godot désigne Dieu, et seulement Dieu",
+      "Godot désigne l’après-guerre, et rien d’autre",
+      "La pièce n’a aucun sens, c’est un jeu de mots"
+     ],
+     "reponse": 0,
+     "aide": "Noé cite trois lectures sans en choisir une.",
+     "explication": "On y a lu Dieu, l’après-guerre, la condition humaine : **plusieurs lectures** restent possibles."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la pièce à son effet.",
+     "paires": [
+      [
+       "Le décor nu",
+       "Un lieu sans repères, qui peut être partout"
+      ],
+      [
+       "Le temps circulaire",
+       "Chaque jour recommence sans progrès"
+      ],
+      [
+       "Le comique de music-hall",
+       "Il fait rire tout en servant le désespoir"
+      ]
+     ],
+     "aide": "Pense au lieu, au temps, au ton.",
+     "explication": "Le **décor nu**, le **temps circulaire** et le **comique de music-hall** composent l’absurde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "À la fin de chaque acte, le garçon annonce que Godot viendra demain",
+      "À la fin de chaque acte, Godot arrive enfin sur la route",
+      "À la fin de chaque acte, les deux hommes quittent la scène",
+      "À la fin de chaque acte, Pozzo révèle le sens de l’attente"
+     ],
+     "reponse": 0,
+     "aide": "Le garçon revient chaque fois dire la même chose.",
+     "explication": "À la fin de chaque acte, **le garçon annonce** que Godot viendra demain."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : la pièce l’a, ou ne l’a pas ?",
+     "categories": [
+      "Ce que la pièce n’a pas",
+      "Ce qu’elle a"
+     ],
+     "items": [
+      [
+       "Une intrigue",
+       0
+      ],
+      [
+       "Une psychologie des personnages",
+       0
+      ],
+      [
+       "Un décor nu",
+       1
+      ],
+      [
+       "Un temps circulaire",
+       1
+      ],
+      [
+       "Du comique de music-hall",
+       1
+      ]
+     ],
+     "aide": "Le cours oppose ce qu’elle n’a pas à ce qu’elle a.",
+     "explication": "Ni **intrigue** ni **psychologie** ; un **décor nu**, un **temps circulaire**, du **music-hall**."
+    }
+   ]
+  },
+  {
+   "chapitre": "61a28877-dc06-51b1-a2fd-4af01cec46d6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Vingt ans pour tout rassembler",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches l’Encyclopédie : place-la dans le temps et regarde ses chiffres.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’Encyclopédie",
+     "debut": 1720,
+     "fin": 1780,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "cyc",
+       "date": 1728,
+       "nom": "Cyclopaedia"
+      },
+      {
+       "id": "deb",
+       "date": 1751,
+       "nom": "1er volume"
+      },
+      {
+       "id": "fin",
+       "date": 1772,
+       "nom": "Fin"
+      }
+     ]
+    },
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "L’entreprise en chiffres",
+     "colonnes": [
+      "Fait",
+      "Le chiffre"
+     ],
+     "lignes": [
+      [
+       "Volumes de texte",
+       "17"
+      ],
+      [
+       "Volumes de planches",
+       "11"
+      ],
+      [
+       "Articles",
+       "?"
+      ],
+      [
+       "Collaborateurs",
+       "Près de deux cents"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "deb"
+     ],
+     "enonce": "Touche l’année du premier volume, avec le Discours préliminaire de d’Alembert.",
+     "aide": "Le premier volume est plus ancien que la fin.",
+     "explication": "Le premier volume paraît en **1751**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de volumes l’Encyclopédie compte-t-elle en tout, texte et planches ?",
+     "reponse": 28,
+     "unite": "volumes",
+     "aide": "Additionne les deux premières lignes du tableau.",
+     "explication": "17 + 11 = **28 volumes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien d’articles compte l’Encyclopédie (la case « ? ») ?",
+     "options": [
+      "Environ 72 000",
+      "Environ 7 200",
+      "Environ 720 000",
+      "Environ 720"
+     ],
+     "reponse": 0,
+     "aide": "Il faut compter en dizaines de milliers.",
+     "explication": "L’Encyclopédie compte **environ 72 000 articles**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années la publication a-t-elle duré ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1772 − 1751 = **21 ans** : une vingtaine d’années."
+    }
+   ]
+  },
+  {
+   "chapitre": "61a28877-dc06-51b1-a2fd-4af01cec46d6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Rassembler, classer, relier",
+   "competence": "analyser-texte",
+   "situation": "Tu dois montrer ce que l’Encyclopédie change, puis suivre ses obstacles sur une frise.",
+   "documents": [
+    {
+     "id": "gestes",
+     "type": "tableau",
+     "titre": "Les trois gestes",
+     "colonnes": [
+      "Geste",
+      "Ce qu’il change"
+     ],
+     "lignes": [
+      [
+       "Rassembler",
+       "Tous les savoirs, y compris ceux des métiers manuels"
+      ],
+      [
+       "?",
+       "Selon un arbre issu des facultés humaines, et non selon la théologie"
+      ],
+      [
+       "Faire communiquer",
+       "Par des renvois, dont certains sont ironiques"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "obst",
+     "type": "frise",
+     "titre": "Les obstacles",
+     "debut": 1750,
+     "fin": 1775,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "int",
+       "date": 1752,
+       "nom": "Interdiction"
+      },
+      {
+       "id": "rev",
+       "date": 1759,
+       "nom": "Révocation"
+      },
+      {
+       "id": "cen",
+       "date": 1764,
+       "nom": "Censure"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel geste se cache derrière la case « ? » ?",
+     "options": [
+      "Classer",
+      "Traduire",
+      "Illustrer",
+      "Imprimer"
+     ],
+     "reponse": 0,
+     "aide": "On range les savoirs selon un arbre.",
+     "explication": "C’est **classer** : un arbre fondé sur la mémoire, la raison, l’imagination."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque geste à son exemple.",
+     "paires": [
+      [
+       "Rassembler",
+       "Les planches sur la fabrication des épingles ou du papier"
+      ],
+      [
+       "Classer",
+       "Un arbre fondé sur la mémoire, la raison et l’imagination"
+      ],
+      [
+       "Faire communiquer",
+       "L’article « Anthropophages » renvoie à « Eucharistie »"
+      ]
+     ],
+     "aide": "Un exemple par geste.",
+     "explication": "Les **planches** rassemblent, l’**arbre** classe, les **renvois** relient, parfois par ironie."
+    },
+    {
+     "type": "zone",
+     "document": "obst",
+     "multiple": false,
+     "reponse": [
+      "rev"
+     ],
+     "enonce": "Touche l’année où le privilège est révoqué et où le pape condamne l’ouvrage.",
+     "aide": "C’est la deuxième épreuve de la frise.",
+     "explication": "En **1759**, le privilège est révoqué et le pape condamne l’ouvrage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’interdiction des deux premiers volumes de la découverte de la censure secrète ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais la première et la dernière date.",
+     "explication": "1764 − 1752 = **12 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "61a28877-dc06-51b1-a2fd-4af01cec46d6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Diffuser le savoir est un acte politique",
+   "competence": "argumenter",
+   "situation": "Un dictionnaire peut-il être une arme ? Un extrait de Diderot, un débat d’élèves et un tableau t’aident à répondre.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Un dictionnaire neutre ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "L’Encyclopédie, c’est juste un gros dictionnaire neutre."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Pas du tout : [[p|diffuser]] le savoir est déjà une action [[p|politique]] : un lecteur informé se soumet moins."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Alors même un article sur les métiers peut déranger ?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Oui : les planches donnent une dignité savante au travail manuel."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le but de l’entreprise",
+     "blocs": [
+      "« Le but d’une encyclopédie est de rassembler les connaissances [[e|éparses]] sur la surface de la terre… »"
+     ],
+     "source": "Denis Diderot, Encyclopédie, article « Encyclopédie » (1755)"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’Encyclopédie est une arme des Lumières",
+       "Elle donne une dignité savante aux métiers manuels",
+       "?"
+      ],
+      [
+       "Elle classe autrement que la théologie",
+       "Elle suit un arbre issu des facultés humaines",
+       "Mémoire, raison, imagination"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui disent la nature de l’acte de diffuser le savoir, selon Tom.",
+     "aide": "Tom dit ce que fait la diffusion, et de quel ordre est cette action.",
+     "explication": "Diffuser le savoir est une action **politique** : un lecteur informé se soumet moins."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit que les connaissances sont dispersées.",
+     "aide": "Elles sont à rassembler.",
+     "explication": "Les connaissances sont **éparses** : l’Encyclopédie veut les rassembler."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Les planches sur la fabrication des épingles ou du papier",
+      "Les renvois ironiques vers l’article « Eucharistie »",
+      "Le Discours préliminaire écrit par d’Alembert",
+      "La censure secrète découverte en 1764"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’exemple qui montre le travail des artisans.",
+     "explication": "Les **planches** sur les épingles ou le papier donnent une dignité aux métiers manuels."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il fait de l’ouvrage une œuvre collective, ou un combat politique ?",
+     "categories": [
+      "Une œuvre collective",
+      "Un combat politique"
+     ],
+     "items": [
+      [
+       "Près de deux cents collaborateurs",
+       0
+      ],
+      [
+       "Jaucourt rédige près d’un quart des articles",
+       0
+      ],
+      [
+       "Voltaire, Rousseau et des artisans y écrivent",
+       0
+      ],
+      [
+       "Interdit à deux reprises",
+       1
+      ],
+      [
+       "Privilège révoqué en 1759",
+       1
+      ],
+      [
+       "Poursuivi à demi clandestinement",
+       1
+      ]
+     ],
+     "aide": "Un groupe parle des auteurs, l’autre des obstacles.",
+     "explication": "Les **collaborateurs** font l’œuvre collective ; les **interdictions** et la **révocation** disent le combat politique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée de dissertation l’Encyclopédie permet-elle d’appuyer ?",
+     "options": [
+      "Diffuser le savoir est en soi une action politique",
+      "Le savoir doit rester un dépôt réservé aux savants",
+      "Une forme neutre ne peut jamais servir une thèse",
+      "Un dictionnaire n’a pas d’autre rôle que de définir"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase de Tom.",
+     "explication": "La forme **dictionnaire** est déjà un argument : diffuser le savoir est **une action politique**."
+    }
+   ]
+  }
+ ]
+}

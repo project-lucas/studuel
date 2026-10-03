@@ -1,0 +1,3980 @@
+{
+ "niveau": "1re",
+ "matiere": "emc",
+ "exercices": [
+  {
+   "chapitre": "ffeec1c1-803f-56b3-aa0d-67f29b016f68",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les aides de la famille Martin",
+   "competence": "lire-tableau",
+   "situation": "Chez les Martin, chacun reçoit une aide différente. Léa, lycéenne, veut comprendre pourquoi certaines reposent sur des cotisations et d’autres non.",
+   "documents": [
+    {
+     "id": "aides",
+     "type": "tableau",
+     "titre": "Les prestations reçues en un mois",
+     "source": "Famille et montants imaginés pour l’exercice",
+     "colonnes": [
+      "Qui",
+      "Prestation",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Le père, au chômage",
+       "Allocation chômage (il a cotisé)",
+       1150
+      ],
+      [
+       "La grand-mère",
+       "Pension de retraite (elle a cotisé)",
+       1400
+      ],
+      [
+       "Léa, lycéenne",
+       "Aide du fonds social du lycée",
+       60
+      ],
+      [
+       "Une voisine sans emploi ni droits",
+       "Revenu de solidarité active (RSA)",
+       650
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aides",
+     "multiple": true,
+     "reponse": [
+      "r2c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les deux prestations versées sans que la personne ait cotisé auparavant.",
+     "aide": "Regarde les lignes où la cotisation n’est pas mentionnée.",
+     "explication": "Le fonds social du lycée et le **RSA** relèvent de l’**assistance** : on les reçoit parce qu’on en a besoin, sans avoir cotisé."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "reponse": 2550,
+     "enonce": "Quel est le total mensuel des deux prestations qui relèvent de l’assurance ?",
+     "aide": "Additionne l’allocation chômage et la pension de retraite.",
+     "explication": "Allocation chômage et retraite relèvent de l’**assurance** : 1 150 + 1 400 = **2 550 €**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à ce qu’il désigne.",
+     "paires": [
+      [
+       "Fraternité",
+       "Une valeur : un lien moral qu’on ne peut pas imposer"
+      ],
+      [
+       "Solidarité",
+       "Sa traduction organisée : impôts, cotisations, prestations"
+      ],
+      [
+       "Assurance",
+       "On cotise d’abord, puis on est couvert"
+      ],
+      [
+       "Assistance",
+       "On reçoit parce qu’on en a besoin, sans avoir cotisé"
+      ]
+     ],
+     "aide": "Pense à ce qu’on peut exiger ou non.",
+     "explication": "La **fraternité** est une valeur, la **solidarité** sa traduction organisée ; l’**assurance** suppose d’avoir cotisé, l’**assistance** non."
+    }
+   ]
+  },
+  {
+   "chapitre": "ffeec1c1-803f-56b3-aa0d-67f29b016f68",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une nuit d’hospitalité devant le juge",
+   "competence": "analyser-texte",
+   "situation": "Dans une vallée de montagne, une habitante a hébergé un voyageur étranger sans papiers. Elle est poursuivie. Un lycéen suit l’affaire pour son exposé d’EMC.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une habitante poursuivie",
+     "source": "Article écrit pour l’exercice : personnes et lieux imaginés",
+     "blocs": [
+      "Mme Roche, retraitée de Valbrune, a logé deux nuits un voyageur étranger dont le séjour n’était pas régulier. Elle l’a fait gratuitement, sans rien demander en échange.",
+      "Poursuivie pour avoir aidé un étranger en situation irrégulière, elle explique son geste en un mot : [[m|humanité]].",
+      "Son avocat invoque le principe de fraternité, reconnu par le Conseil constitutionnel le 6 juillet 2018."
+     ]
+    },
+    {
+     "id": "decision",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Ce que tire le Conseil de la fraternité",
+     "source": "Texte adapté pour l’exercice, d’après la décision du 6 juillet 2018",
+     "blocs": [
+      "Le principe de fraternité implique la liberté d’aider autrui, dans un but humanitaire, sans considération de la régularité de son séjour sur le territoire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Mme Roche résume pourquoi elle a agi.",
+     "aide": "Cherche le mot que le texte annonce après « en un mot ».",
+     "explication": "Elle invoque l’**humanité** : un motif désintéressé, et non un profit."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "D’après l’extrait de la décision, que protège la fraternité dans une telle situation ?",
+     "options": [
+      "La liberté d’aider autrui dans un but humanitaire, quelle que soit la régularité de son séjour",
+      "Le droit de loger n’importe quel étranger en échange d’une somme d’argent",
+      "L’obligation pour l’État d’héberger toute personne qui en fait la demande",
+      "L’interdiction de contrôler le séjour des étrangers sur l’ensemble du territoire"
+     ],
+     "aide": "Relis la fin de la phrase de la décision : « sans considération… ».",
+     "explication": "Le Conseil reconnaît la **liberté d’aider autrui dans un but humanitaire**, sans considération de la régularité de son séjour. C’est ce qui limite le « délit de solidarité »."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "fraternité",
+      "constitutionnelle",
+      "solidarité",
+      "égalité",
+      "législative"
+     ],
+     "enonce": "Complète le résumé de l’affaire.",
+     "texte": "Le Conseil constitutionnel reconnaît à la ___ une valeur ___ ; le « délit de ___ » se trouve limité.",
+     "reponses": [
+      [
+       "fraternité"
+      ],
+      [
+       "constitutionnelle"
+      ],
+      [
+       "solidarité"
+      ]
+     ],
+     "aide": "La valeur dont parle l’avocat de Mme Roche est inscrite dans la devise de la République.",
+     "explication": "Le 6 juillet 2018, la **fraternité** reçoit une valeur **constitutionnelle** ; le « délit de **solidarité** » est limité pour l’aide désintéressée."
+    }
+   ]
+  },
+  {
+   "chapitre": "ffeec1c1-803f-56b3-aa0d-67f29b016f68",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le fonds social du lycée Marianne",
+   "competence": "analyser-document",
+   "situation": "Le lycée Marianne dispose d’un fonds social pour aider des familles en difficulté. Le conseil de la vie lycéenne cherche à savoir quelle logique de protection ce fonds illustre et à qui il profite.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Fonds social lycéen",
+     "sousTitre": "Lycée Marianne — affiche imaginée pour l’exercice",
+     "emoji": "🤝",
+     "lignes": [
+      {
+       "texte": "Aide pour la demi-pension, les sorties et les fournitures"
+      },
+      {
+       "texte": "Dossier à remettre à l’assistante sociale",
+       "id": "dossier"
+      },
+      {
+       "texte": "Aucune cotisation préalable n’est demandée",
+       "id": "cotis"
+      },
+      {
+       "texte": "Aide accordée selon les ressources de la famille",
+       "id": "ressources"
+      }
+     ],
+     "pied": "Confidentiel et gratuit"
+    },
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Le fonds social de l’année",
+     "source": "Chiffres imaginés pour l’exercice",
+     "colonnes": [
+      "Élément",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Somme disponible (€)",
+       3200
+      ],
+      [
+       "Familles aidées",
+       16
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "cotis"
+     ],
+     "enonce": "Touche la ligne de l’affiche qui prouve que cette aide relève de l’assistance et non de l’assurance.",
+     "aide": "L’assurance suppose d’avoir cotisé : cherche la ligne qui dit le contraire.",
+     "explication": "Aucune **cotisation préalable** n’est demandée : l’aide est versée selon les besoins, c’est de l’**assistance**."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "reponse": 200,
+     "enonce": "Si la somme était partagée à parts égales entre les familles aidées, combien chacune recevrait-elle ?",
+     "aide": "Divise la somme disponible par le nombre de familles aidées.",
+     "explication": "3 200 ÷ 16 = **200 €** par famille."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Assurance",
+      "Assistance",
+      "Geste volontaire"
+     ],
+     "enonce": "Classe chacun de ces dispositifs dans la bonne logique.",
+     "items": [
+      [
+       "Allocation chômage",
+       0
+      ],
+      [
+       "Pension de retraite",
+       0
+      ],
+      [
+       "RSA",
+       1
+      ],
+      [
+       "Fonds social d’un lycée",
+       1
+      ],
+      [
+       "Don du sang",
+       2
+      ],
+      [
+       "Bénévolat dans une association",
+       2
+      ]
+     ],
+     "aide": "Se demander : faut-il avoir cotisé ? L’État l’organise-t-il, ou chacun choisit-il d’agir ?",
+     "explication": "Chômage et retraite : **assurance** (on cotise). RSA et fonds social : **assistance** (on a besoin). Don du sang et bénévolat : gestes **volontaires**, qui complètent l’impôt sans le remplacer."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Pourquoi peut-on dire que ce fonds est une traduction de la solidarité et non de la seule fraternité ?",
+     "options": [
+      "Parce que les élèves ont voté eux-mêmes le montant de l’aide à accorder",
+      "Parce que l’aide dépend du bon vouloir de chaque membre de la communauté",
+      "Parce qu’une institution l’organise avec des règles et un budget définis",
+      "Parce que seuls les élèves qui ont cotisé auparavant peuvent la demander"
+     ],
+     "aide": "La fraternité est une valeur ; la solidarité est organisée, financée, encadrée.",
+     "explication": "La **solidarité** est la traduction organisée de la fraternité : ici un budget, un dossier, des critères. Une valeur seule, on ne peut pas l’exiger."
+    }
+   ]
+  },
+  {
+   "chapitre": "f528c350-34ff-546a-8dae-67ccca604594",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le niveau de vie médian de l’immeuble",
+   "competence": "lire-tableau",
+   "situation": "Dans un immeuble imaginaire, sept foyers comparent leur niveau de vie. Une élève veut comprendre ce que veulent dire « médian » et « seuil de pauvreté ».",
+   "documents": [
+    {
+     "id": "foyers",
+     "type": "tableau",
+     "titre": "Niveau de vie mensuel par personne",
+     "source": "Chiffres imaginés pour l’exercice, foyers classés du plus modeste au plus aisé",
+     "colonnes": [
+      "Foyer",
+      "Niveau de vie (€)"
+     ],
+     "lignes": [
+      [
+       "A",
+       1200
+      ],
+      [
+       "B",
+       1400
+      ],
+      [
+       "C",
+       1500
+      ],
+      [
+       "D",
+       1800
+      ],
+      [
+       "E",
+       2000
+      ],
+      [
+       "F",
+       2200
+      ],
+      [
+       "G",
+       9000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "foyers",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Les foyers sont classés du plus modeste au plus aisé. Touche le niveau de vie médian, qui partage les sept foyers en deux moitiés.",
+     "aide": "Il y a trois foyers en dessous et trois au-dessus : cherche celui du milieu.",
+     "explication": "Le foyer D, avec **1 800 €**, a trois foyers au-dessous et trois au-dessus : c’est la **médiane**."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "reponse": 1080,
+     "enonce": "Le seuil de pauvreté est fixé à 60 % du niveau de vie médian. Quel est-il ici ?",
+     "aide": "Calcule 60 % de 1 800.",
+     "explication": "1 800 × 0,60 = **1 080 €**. Aucun foyer de l’immeuble n’est en dessous."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Pourquoi la médiane décrit-elle mieux cet immeuble que la moyenne ?",
+     "options": [
+      "Parce que la moyenne est toujours plus faible que la médiane",
+      "Parce qu’un seul très haut revenu fait monter la moyenne sans changer la médiane",
+      "Parce que la médiane ajoute tous les revenus puis les divise par sept",
+      "Parce que la moyenne ne tient pas compte des revenus les plus modestes"
+     ],
+     "aide": "Regarde le foyer G : que ferait-il à la moyenne ?",
+     "explication": "Le foyer G, à 9 000 €, tire la moyenne vers le haut (environ 2 729 €) alors que la **médiane** reste à 1 800 €. Elle n’est pas sensible à quelques très hauts revenus."
+    }
+   ]
+  },
+  {
+   "chapitre": "f528c350-34ff-546a-8dae-67ccca604594",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Beauregard et ses logements sociaux",
+   "competence": "se-reperer-temps",
+   "situation": "Le conseil municipal de Beauregard, commune imaginaire située en zone tendue, étudie la loi SRU. Il veut savoir combien de logements sociaux il lui manque.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques repères de la politique de cohésion",
+     "source": "Dates du cours",
+     "debut": 2000,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "sru",
+       "date": 2000,
+       "nom": "Loi SRU"
+      },
+      {
+       "id": "quota",
+       "date": 2013,
+       "nom": "Quota relevé"
+      },
+      {
+       "id": "anct",
+       "date": 2020,
+       "nom": "Création ANCT"
+      }
+     ]
+    },
+    {
+     "id": "commune",
+     "type": "tableau",
+     "titre": "Beauregard",
+     "source": "Chiffres imaginés pour l’exercice",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Résidences principales",
+       12000
+      ],
+      [
+       "Logements sociaux",
+       1800
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 13,
+     "enonce": "Combien d’années séparent la loi SRU du relèvement du quota à 25 % ?",
+     "aide": "Soustrais 2000 à 2013.",
+     "explication": "2013 − 2000 = **13 ans**. La loi SRU fixait d’abord 20 %, puis 25 % dans les zones tendues."
+    },
+    {
+     "type": "nombre",
+     "unite": "logements",
+     "reponse": 1200,
+     "enonce": "En zone tendue, la commune doit atteindre 25 % de logements sociaux parmi ses résidences principales. Combien de logements sociaux lui manque-t-il ?",
+     "aide": "Calcule d’abord 25 % de 12 000, puis retire les 1 800 déjà là.",
+     "explication": "25 % de 12 000 = 3 000 ; 3 000 − 1 800 = **1 200** logements manquants."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "anct"
+     ],
+     "enonce": "Un conseiller veut agir sur les inégalités entre territoires (quartiers, ruralité) : touche la date de la création de l’organisme qui s’y consacre.",
+     "aide": "Les trois repères sont : un quota de logements, son relèvement, puis une agence.",
+     "explication": "L’**ANCT**, créée en 2020, agit sur les inégalités territoriales. La loi SRU, elle, vise la mixité sociale par le logement."
+    },
+    {
+     "type": "choix",
+     "reponse": 3,
+     "enonce": "Quel est l’objectif principal du quota de logements sociaux de la loi SRU ?",
+     "options": [
+      "Faire baisser les impôts locaux de toutes les communes concernées",
+      "Réserver les logements d’une commune aux familles les plus modestes",
+      "Remplacer les aides de l’État par un système d’assurance obligatoire",
+      "Favoriser la mixité sociale en répartissant mieux les logements sociaux"
+     ],
+     "aide": "Le cours parle d’un outil de… sociale.",
+     "explication": "La loi SRU est un outil de **mixité sociale** : elle oblige les communes à accueillir des logements sociaux pour que les populations ne soient pas séparées par quartiers."
+    }
+   ]
+  },
+  {
+   "chapitre": "f528c350-34ff-546a-8dae-67ccca604594",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Inégalités, redistribution et vote",
+   "competence": "argumenter",
+   "situation": "Dans un pays imaginaire, un institut compare les revenus avant et après redistribution, puis le taux d’abstention selon le niveau de vie. Les lycéens doivent en tirer une conclusion sur la cohésion sociale.",
+   "documents": [
+    {
+     "id": "redis",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Écart entre les 20 % les plus aisés et les 20 % les plus modestes",
+     "source": "Chiffres imaginés pour l’exercice : rapport entre les revenus des deux groupes",
+     "categories": [
+      "Avant redistribution",
+      "Après redistribution"
+     ],
+     "series": [
+      {
+       "nom": "Rapport des revenus",
+       "valeurs": [
+        9,
+        6
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Rapport",
+      "unite": "fois",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Situation"
+     }
+    },
+    {
+     "id": "abst",
+     "type": "tableau",
+     "titre": "Abstention à une élection nationale",
+     "source": "Chiffres imaginés pour l’exercice",
+     "colonnes": [
+      "Niveau de vie",
+      "Abstention (%)"
+     ],
+     "lignes": [
+      [
+       "Parmi les 20 % les plus modestes",
+       52
+      ],
+      [
+       "Classes intermédiaires",
+       36
+      ],
+      [
+       "Parmi les 20 % les plus aisés",
+       24
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "%",
+     "reponse": 33,
+     "tolerance": 1,
+     "enonce": "De quel pourcentage la redistribution réduit-elle l’écart de revenus ? Arrondis à l’unité.",
+     "aide": "L’écart passe de 9 à 6 : calcule la baisse, puis divise-la par 9.",
+     "explication": "(9 − 6) ÷ 9 ≈ 0,33 : environ **33 %**, soit un tiers. C’est l’ordre de grandeur que donne le cours pour la France."
+    },
+    {
+     "type": "zone",
+     "document": "abst",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche le taux d’abstention le plus élevé.",
+     "aide": "Compare les trois nombres de la colonne de droite.",
+     "explication": "Les 20 % les plus modestes s’abstiennent le plus : **52 %**."
+    },
+    {
+     "type": "nombre",
+     "unite": "points",
+     "reponse": 28,
+     "enonce": "Quel est l’écart d’abstention, en points, entre les plus modestes et les plus aisés ?",
+     "aide": "Soustrais le plus petit taux au plus grand.",
+     "explication": "52 − 24 = **28 points**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque outil de l’État à son effet.",
+     "paires": [
+      [
+       "Impôts progressifs et prestations",
+       "Redistribuer pour réduire les écarts de revenus"
+      ],
+      [
+       "Prime d’activité",
+       "Compléter le revenu des travailleurs modestes"
+      ],
+      [
+       "Loi SRU",
+       "Favoriser la mixité sociale par le logement"
+      ],
+      [
+       "ANCT",
+       "Agir sur les inégalités entre territoires"
+      ]
+     ],
+     "aide": "Chaque outil agit sur un domaine différent.",
+     "explication": "Redistribution, prime d’activité, loi SRU et ANCT : quatre leviers qui agissent sur les revenus, le travail, le logement et les territoires."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle conclusion les deux documents permettent-ils de tirer pour la démocratie ?",
+     "options": [
+      "Des inégalités fortes déforment la représentation si les plus modestes votent moins",
+      "La redistribution supprime toutes les différences de revenus entre les citoyens",
+      "L’abstention ne dépend que de l’âge des électeurs et jamais de leur situation",
+      "Les plus aisés sont toujours les plus nombreux à participer aux élections"
+     ],
+     "aide": "Le cours dit que l’abstention est plus élevée dans les milieux populaires.",
+     "explication": "Quand les plus modestes votent moins, la **représentation est déformée** et la confiance s’abîme. La redistribution **réduit** les écarts, elle ne supprime pas les différences."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d2e06e1-de83-557f-bb3d-e6852dfd4774",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grandes dates de l’égalité",
+   "competence": "se-reperer-temps",
+   "situation": "Une classe de première prépare une exposition sur l’égalité entre les femmes et les hommes. Elle commence par une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques étapes de l’égalité en France",
+     "source": "Dates du cours",
+     "debut": 1940,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "vote",
+       "date": 1944,
+       "nom": "Droit de vote"
+      },
+      {
+       "id": "mari",
+       "date": 1965,
+       "nom": "Compte sans mari"
+      },
+      {
+       "id": "salaire",
+       "date": 1972,
+       "nom": "Égalité de salaire"
+      },
+      {
+       "id": "veil",
+       "date": 1975,
+       "nom": "Loi Veil"
+      },
+      {
+       "id": "roudy",
+       "date": 1983,
+       "nom": "Loi Roudy"
+      },
+      {
+       "id": "index",
+       "date": 2019,
+       "nom": "Index d’égalité"
+      },
+      {
+       "id": "ivg",
+       "date": 2024,
+       "nom": "IVG et Constitution"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "vote"
+     ],
+     "enonce": "Touche la date à laquelle les femmes obtiennent le droit de vote et d’éligibilité.",
+     "aide": "C’est le repère le plus ancien de la frise.",
+     "explication": "C’est en **1944** que les femmes obtiennent le droit de vote ; elles votent pour la première fois en 1945."
+    },
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 49,
+     "enonce": "Combien d’années séparent la loi Veil de l’entrée de la liberté de recourir à l’IVG dans la Constitution ?",
+     "aide": "Soustrais la date de la loi Veil à celle de l’entrée dans la Constitution.",
+     "explication": "2024 − 1975 = **49 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à ce qu’elle apporte.",
+     "paires": [
+      [
+       "1965",
+       "Les femmes mariées peuvent travailler sans l’accord de leur mari"
+      ],
+      [
+       "1972",
+       "Égalité de rémunération à travail de valeur égale"
+      ],
+      [
+       "1983",
+       "Loi Roudy sur l’égalité professionnelle"
+      ],
+      [
+       "2019",
+       "Index de l’égalité professionnelle"
+      ]
+     ],
+     "aide": "Relis les noms des repères sur la frise.",
+     "explication": "Quatre dates, quatre avancées : le travail sans autorisation (**1965**), l’égalité de salaire (**1972**), la loi Roudy (**1983**) et l’index (**2019**)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d2e06e1-de83-557f-bb3d-e6852dfd4774",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lina et Hugo débattent de l’écart de salaire",
+   "competence": "lire-graphique",
+   "situation": "En classe, Lina et Hugo ne sont pas d’accord sur l’écart de rémunération entre femmes et hommes. Le graphique les départagera.",
+   "documents": [
+    {
+     "id": "ecart",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Écart de revenu salarial entre femmes et hommes",
+     "source": "Chiffres arrondis",
+     "categories": [
+      "Tous temps de travail confondus",
+      "À poste et temps de travail comparables"
+     ],
+     "series": [
+      {
+       "nom": "Écart",
+       "valeurs": [
+        20,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Écart",
+      "unite": "en %",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Situation"
+     }
+    },
+    {
+     "id": "debat",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le débat de la classe",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Lina : « Les femmes sont payées 20 % de moins pour le [[e|même]] [[e|travail]]. »",
+      "Hugo : « Cet écart n’existe pas : il vient uniquement du temps partiel. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ecart",
+     "reponse": [
+      "k1"
+     ],
+     "enonce": "Touche la barre qui mesure l’écart à poste et temps de travail comparables.",
+     "aide": "Lis les libellés sous les barres.",
+     "explication": "À poste et temps de travail comparables, l’écart est d’environ **4 %**."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "reponse": 80,
+     "enonce": "Quelle part de l’écart de 20 % est expliquée par les différences de poste et de temps de travail ?",
+     "aide": "Retire 4 à 20, puis compare le résultat à 20.",
+     "explication": "20 − 4 = 16 points sur 20, soit **80 %** de l’écart. Les 4 points restants ne s’expliquent pas par le poste ou le temps."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche l’expression de Lina que le graphique ne confirme pas.",
+     "aide": "Compare ce que dit Lina à la barre de droite.",
+     "explication": "À **même travail** (même poste, même temps), l’écart est d’environ 4 %, pas 20 %. L’écart de 20 % concerne tous les temps de travail confondus."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Que peut-on répondre à Hugo ?",
+     "options": [
+      "Il a raison : à poste comparable, l’écart est nul",
+      "Il a tort : l’écart n’a rien à voir avec le temps partiel",
+      "Il exagère : un écart d’environ 4 % subsiste à poste comparable",
+      "Il a raison : le graphique ne montre aucun écart de salaire"
+     ],
+     "aide": "Regarde la barre de droite : est-elle à zéro ?",
+     "explication": "Le temps partiel et les métiers expliquent l’essentiel, mais il reste **environ 4 %** d’écart à situation comparable."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque cause de l’écart à ce qu’elle recouvre.",
+     "paires": [
+      [
+       "Temps partiel",
+       "Très majoritairement féminin"
+      ],
+      [
+       "Ségrégation professionnelle",
+       "Des métiers très féminins, souvent moins rémunérés"
+      ],
+      [
+       "Plafond de verre",
+       "Obstacles à l’accès aux postes de direction"
+      ]
+     ],
+     "aide": "Pense à un mot, un métier, une promotion.",
+     "explication": "Temps partiel, **ségrégation professionnelle**, **plafond de verre** : trois causes qui expliquent l’écart de revenu sans être une inégalité de salaire à poste égal."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d2e06e1-de83-557f-bb3d-e6852dfd4774",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Égalité en droit, égalité réelle",
+   "competence": "analyser-document",
+   "situation": "La mairie de Saint-Aubin prépare une campagne sur l’égalité. Elle réunit une affiche sur les violences et un tableau sur les filières de terminale du lycée, pour voir ce qui est acquis en droit et ce qui reste à faire.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Victime de violences ?",
+     "sousTitre": "Campagne de la mairie — affiche imaginée pour l’exercice",
+     "emoji": "📞",
+     "lignes": [
+      {
+       "texte": "Appelle le 3919 : écoute, gratuit, 24 h/24",
+       "id": "num"
+      },
+      {
+       "texte": "Une ordonnance de protection peut être demandée au juge",
+       "id": "ordo"
+      },
+      {
+       "texte": "En cas de danger immédiat, appelle la police"
+      }
+     ],
+     "pied": "Tu n’es pas seul·e"
+    },
+    {
+     "id": "filieres",
+     "type": "tableau",
+     "titre": "Part des filles en terminale, lycée de Saint-Aubin",
+     "source": "Chiffres imaginés pour l’exercice",
+     "colonnes": [
+      "Spécialité",
+      "Part des filles (%)"
+     ],
+     "lignes": [
+      [
+       "SES",
+       58
+      ],
+      [
+       "SVT",
+       62
+      ],
+      [
+       "Mathématiques",
+       41
+      ],
+      [
+       "NSI",
+       14
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "num"
+     ],
+     "enonce": "Touche la ligne qui donne le numéro d’écoute gratuit pour les femmes victimes de violences.",
+     "aide": "Cherche un numéro à quatre chiffres.",
+     "explication": "Le **3919** est le numéro d’écoute gratuit, ouvert 24 h/24."
+    },
+    {
+     "type": "zone",
+     "document": "filieres",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la spécialité où la part des filles est la plus faible.",
+     "aide": "Compare les pourcentages de la colonne de droite.",
+     "explication": "En **NSI**, seulement 14 % des élèves sont des filles : le choix des filières reste très genré."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Égalité en droit (acquise)",
+      "Égalité réelle (inachevée)"
+     ],
+     "enonce": "Classe chaque constat.",
+     "items": [
+      [
+       "Le droit de vote des femmes depuis 1944",
+       0
+      ],
+      [
+       "L’égalité de rémunération à travail de valeur égale, posée en 1972",
+       0
+      ],
+      [
+       "Un écart de revenu salarial d’environ 20 %",
+       1
+      ],
+      [
+       "Très peu de femmes aux postes de direction",
+       1
+      ],
+      [
+       "Peu de filles dans les filières scientifiques et techniques",
+       1
+      ]
+     ],
+     "aide": "La loi dit-elle déjà l’égalité, ou les faits ne la montrent-ils pas encore ?",
+     "explication": "Le **droit** pose l’égalité depuis longtemps (vote, rémunération). L’**égalité réelle** reste inachevée : écarts de revenu, plafond de verre, orientation."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque besoin au bon dispositif.",
+     "paires": [
+      [
+       "Parler à une écoutante, sans payer",
+       "Le 3919"
+      ],
+      [
+       "Interdire à un conjoint violent de s’approcher",
+       "L’ordonnance de protection"
+      ],
+      [
+       "Mesurer les écarts entre femmes et hommes en entreprise",
+       "L’index de l’égalité professionnelle"
+      ],
+      [
+       "S’engager contre les violences faites aux femmes entre États",
+       "La Convention d’Istanbul"
+      ]
+     ],
+     "aide": "Distingue l’urgence individuelle de la règle collective.",
+     "explication": "3919 pour écouter, **ordonnance de protection** pour protéger, **index** pour mesurer, **Convention d’Istanbul** (2011, ratifiée en 2014) pour agir entre États."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Que montre le tableau sur l’origine d’une partie des écarts de revenu ?",
+     "options": [
+      "Que les filles réussissent moins bien dans toutes les spécialités",
+      "Que l’orientation genrée prépare des métiers différents, souvent inégalement payés",
+      "Que les garçons choisissent les filières les moins exigeantes du lycée",
+      "Que les lycées imposent leurs spécialités aux filles et aux garçons"
+     ],
+     "aide": "Les stéréotypes se forment tôt et orientent les choix.",
+     "explication": "La **représentation genrée des formations** oriente les choix bien avant le marché du travail ; elle nourrit la ségrégation professionnelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "87f5e9ae-40ba-5df4-b79b-6b8045bc37f2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre annonces passées au crible",
+   "competence": "analyser-document",
+   "situation": "Le Défenseur des droits reçoit souvent des réclamations sur des annonces. Un stagiaire doit trier quatre annonces pour dire lesquelles posent un problème.",
+   "documents": [
+    {
+     "id": "annonces",
+     "type": "tableau",
+     "titre": "Quatre annonces",
+     "source": "Annonces écrites pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Texte de l’annonce"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Garage cherche mécanicien : permis B exigé pour essayer les véhicules des clients."
+      ],
+      [
+       "2",
+       "Boulangerie cherche apprenti : « Nous ne prenons pas de femmes. »"
+      ],
+      [
+       "3",
+       "Cabinet comptable cherche assistant : bonne maîtrise d’un logiciel de comptabilité."
+      ],
+      [
+       "4",
+       "Agence immobilière : logements refusés aux personnes qui habitent le quartier des Tilleuls."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "annonces",
+     "multiple": true,
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les deux annonces qui constituent une discrimination.",
+     "aide": "Cherche celles qui écartent des personnes à cause d’une caractéristique personnelle.",
+     "explication": "L’annonce 2 écarte les femmes (**sexe**) et l’annonce 4 écarte des personnes selon leur **lieu de résidence** : deux critères prohibés par la loi."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi l’annonce 1 n’est-elle pas une discrimination ?",
+     "options": [
+      "Le permis est une exigence liée au poste et non un critère prohibé par la loi",
+      "Parce que le permis de conduire est un critère que le droit interdit toujours",
+      "Parce que toutes les annonces de garage échappent aux règles de la loi",
+      "Parce que le garage est une entreprise trop petite pour être contrôlée"
+     ],
+     "aide": "Toute distinction n’est pas une discrimination : sur quoi repose-t-elle ?",
+     "explication": "Distinguer devient **discriminer** seulement si la distinction repose sur un critère prohibé. Le permis est lié au poste : l’annonce 1 est licite."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Critère prohibé par la loi",
+      "Critère lié au poste, admis"
+     ],
+     "enonce": "Classe ces critères de sélection.",
+     "items": [
+      [
+       "Origine",
+       0
+      ],
+      [
+       "Handicap",
+       0
+      ],
+      [
+       "Orientation sexuelle",
+       0
+      ],
+      [
+       "Lieu de résidence",
+       0
+      ],
+      [
+       "Maîtrise d’un logiciel de comptabilité",
+       1
+      ],
+      [
+       "Diplôme exigé pour le poste",
+       1
+      ]
+     ],
+     "aide": "Le droit français énumère plus de vingt-cinq critères prohibés.",
+     "explication": "Origine, handicap, orientation sexuelle et lieu de résidence figurent parmi les critères prohibés. Une compétence ou un diplôme **nécessaire au poste** reste admis."
+    }
+   ]
+  },
+  {
+   "chapitre": "87f5e9ae-40ba-5df4-b79b-6b8045bc37f2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une règle neutre, un effet qui ne l’est pas",
+   "competence": "analyser-document",
+   "situation": "Une association qui défend l’égalité d’accès à l’emploi examine des règles d’entreprises, puis réalise un testing avec deux candidatures.",
+   "documents": [
+    {
+     "id": "regles",
+     "type": "tableau",
+     "titre": "Quatre règles d’embauche",
+     "source": "Règles écrites pour l’exercice",
+     "colonnes": [
+      "Règle",
+      "Ce qu’elle dit"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Seuls les candidats mesurant plus de 1,80 m sont reçus pour un poste de standardiste."
+      ],
+      [
+       "2",
+       "Les candidats de plus de 50 ans ne sont pas reçus."
+      ],
+      [
+       "3",
+       "Les candidatures de personnes en fauteuil roulant ne sont pas retenues."
+      ],
+      [
+       "4",
+       "Pour un poste de comptable, le candidat doit maîtriser le logiciel utilisé chaque jour."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "testing",
+     "type": "tableau",
+     "titre": "Testing : deux candidatures envoyées à cinq entreprises",
+     "source": "Testing imaginé pour l’exercice",
+     "colonnes": [
+      "",
+      "Candidate A",
+      "Candidate B"
+     ],
+     "lignes": [
+      [
+       "Diplôme",
+       "Licence",
+       "Licence"
+      ],
+      [
+       "Expérience",
+       "3 ans",
+       "3 ans"
+      ],
+      [
+       "Âge",
+       "28 ans",
+       "55 ans"
+      ],
+      [
+       "Réponses favorables",
+       "4 sur 5",
+       "1 sur 5"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Discrimination directe",
+      "Discrimination indirecte",
+      "Pas une discrimination"
+     ],
+     "enonce": "Classe chaque règle.",
+     "items": [
+      [
+       "Règle 1 (taille minimale)",
+       1
+      ],
+      [
+       "Règle 2 (plus de 50 ans)",
+       0
+      ],
+      [
+       "Règle 3 (fauteuil roulant)",
+       0
+      ],
+      [
+       "Règle 4 (logiciel de comptabilité)",
+       2
+      ]
+     ],
+     "aide": "Directe : le critère interdit est écrit. Indirecte : la règle semble neutre mais défavorise un groupe sans nécessité.",
+     "explication": "Les règles 2 et 3 utilisent **explicitement** un critère prohibé (âge, handicap). La règle 1 paraît neutre mais défavorise surtout les femmes sans lien avec le poste : **indirecte**. La règle 4 est liée au poste."
+    },
+    {
+     "type": "zone",
+     "document": "testing",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la seule caractéristique des deux CV qui diffère (sans compter les résultats).",
+     "aide": "Compare ligne par ligne les deux candidatures.",
+     "explication": "Les CV sont identiques sauf l’**âge** : c’est le critère que le testing met à l’épreuve."
+    },
+    {
+     "type": "nombre",
+     "unite": "réponses",
+     "reponse": 3,
+     "enonce": "Combien de réponses favorables de plus la candidate A a-t-elle obtenues que la candidate B ?",
+     "aide": "Soustrais les réponses favorables de B à celles de A.",
+     "explication": "4 − 1 = **3 réponses** de plus pour la candidate A, alors que tout le reste est identique."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Que permet ce testing, admis comme mode de preuve ?",
+     "options": [
+      "De condamner immédiatement toutes les entreprises testées",
+      "De prouver que l’âge est un critère que la loi autorise",
+      "D’apporter des éléments de fait que l’entreprise devra ensuite justifier",
+      "D’éviter que la victime ne saisisse un jour le Défenseur des droits"
+     ],
+     "aide": "Pense à l’aménagement de la charge de la preuve.",
+     "explication": "Le testing fournit des **éléments de fait** : la victime les présente, et c’est ensuite au défendeur de prouver que sa décision était justifiée."
+    }
+   ]
+  },
+  {
+   "chapitre": "87f5e9ae-40ba-5df4-b79b-6b8045bc37f2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le Défenseur des droits est saisi",
+   "competence": "argumenter",
+   "situation": "M. Perrin, qui se déplace en fauteuil roulant, s’est vu refuser un logement. Un étudiant en droit imagine le parcours qu’il peut suivre.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un refus de location",
+     "source": "Cas imaginé pour l’exercice",
+     "blocs": [
+      "M. Perrin visite un appartement à louer à Rivemont. Le gestionnaire lui répond que le propriétaire « ne loue pas aux personnes en situation de [[c|handicap]] ».",
+      "La [[s|location]] lui est donc refusée.",
+      "M. Perrin note la date, les propos tenus et le nom d’un témoin, puis s’adresse à une autorité indépendante."
+     ]
+    },
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Ce que dit le droit",
+     "source": "Résumé adapté pour l’exercice des articles 225-1 et suivants du Code pénal",
+     "blocs": [
+      "Constitue une discrimination toute distinction entre personnes à raison d’un critère interdit par la loi (origine, sexe, handicap, âge, religion…), lorsqu’elle porte sur une situation visée par la loi : refus d’embauche, de louer, de fournir un bien ou un service. Elle est punie de 3 ans d’emprisonnement et de 45 000 € d’amende au plus."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le critère prohibé sur lequel repose le refus.",
+     "aide": "Cherche ce qui concerne la personne, pas le logement.",
+     "explication": "Le refus repose sur le **handicap**, un critère prohibé."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui désigne la situation visée par la loi dans laquelle la discrimination a lieu.",
+     "aide": "Le droit cite l’embauche, le refus de louer, de fournir un bien ou un service.",
+     "explication": "Il s’agit d’un refus de **location** : une situation visée par la loi."
+    },
+    {
+     "type": "nombre",
+     "unite": "€",
+     "reponse": 45000,
+     "enonce": "Quelle est l’amende maximale encourue par l’auteur de la discrimination, en euros ?",
+     "aide": "Lis la dernière phrase du résumé de la loi.",
+     "explication": "La peine peut aller jusqu’à 3 ans d’emprisonnement et **45 000 €** d’amende."
+    },
+    {
+     "type": "choix",
+     "reponse": 3,
+     "enonce": "Quelle autorité M. Perrin peut-il saisir gratuitement ?",
+     "options": [
+      "La CNCDH, qui remet un rapport annuel sur le racisme",
+      "La DILCRAH, qui coordonne la lutte contre la haine anti-LGBT",
+      "Le préfet, qui contrôle la légalité des actes des communes",
+      "Le Défenseur des droits, autorité constitutionnelle indépendante"
+     ],
+     "aide": "C’est une autorité créée en 2011, saisissable par toute personne.",
+     "explication": "Le **Défenseur des droits**, créé en 2011, peut être saisi gratuitement par toute personne. La CNCDH publie un rapport, la DILCRAH coordonne l’action publique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la démarche de M. Perrin, de la preuve à la décision.",
+     "items": [
+      "Il note les faits : la date, les propos, un témoin",
+      "Il saisit gratuitement le Défenseur des droits",
+      "Il présente des éléments laissant supposer une discrimination",
+      "Le propriétaire doit prouver que son refus était justifié"
+     ],
+     "aide": "La victime avance des faits ; le défendeur se justifie ensuite.",
+     "explication": "Grâce à l’**aménagement de la charge de la preuve**, la victime présente des éléments de fait ; c’est ensuite au défendeur de démontrer que sa décision reposait sur autre chose."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b7b35a4-e4f7-56fe-b5f4-f197cfb6d39c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’escalier du lycée de Jade",
+   "competence": "analyser-texte",
+   "situation": "Jade est élève de première et se déplace en fauteuil roulant. Sa classe étudie la notion de société inclusive à partir de sa situation.",
+   "documents": [
+    {
+     "id": "jade",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un premier étage inaccessible",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Jade se déplace en fauteuil roulant. Au lycée, la salle de SVT se trouve au premier étage et l’on n’y accède que par un [[o|escalier]].",
+      "Jade attend en bas pendant que ses camarades montent. Elle pense : « Ce n’est pas mon fauteuil qui me gêne, c’est le bâtiment. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jade",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui désigne l’obstacle qui crée la situation de handicap.",
+     "aide": "Cherche l’élément du bâtiment qui empêche Jade de monter.",
+     "explication": "C’est l’**escalier** : l’environnement inadapté, qui transforme une déficience en situation de handicap."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Dans l’approche sociale, où se situe le handicap ?",
+     "options": [
+      "Dans une déficience individuelle que la personne doit compenser seule",
+      "Dans la rencontre entre une déficience et un environnement inadapté",
+      "Dans le fauteuil roulant, qui limite les mouvements de la personne",
+      "Dans le regard des élèves qui n’aident pas leur camarade à monter"
+     ],
+     "aide": "Jade dit : « Ce n’est pas mon fauteuil qui me gêne… »",
+     "explication": "L’approche **sociale** voit le handicap dans la **rencontre** entre une déficience et un environnement inadapté. Il faut donc adapter l’environnement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque sigle à ce qu’il désigne dans la scolarité de Jade.",
+     "paires": [
+      [
+       "MDPH",
+       "La maison départementale qui sert de guichet unique"
+      ],
+      [
+       "AESH",
+       "L’accompagnant qui aide l’élève en classe"
+      ],
+      [
+       "PPS",
+       "Le projet personnalisé de scolarisation"
+      ],
+      [
+       "Ulis",
+       "Une unité localisée pour l’inclusion scolaire"
+      ]
+     ],
+     "aide": "Un sigle désigne un lieu, une personne, un projet.",
+     "explication": "La **MDPH** est le guichet unique, l’**AESH** accompagne, le **PPS** organise la scolarité, l’**Ulis** est une unité d’inclusion."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b7b35a4-e4f7-56fe-b5f4-f197cfb6d39c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le quota de 6 % dans quatre entreprises",
+   "competence": "lire-tableau",
+   "situation": "Une inspectrice contrôle l’emploi des travailleurs handicapés dans quatre entreprises d’une même ville. Elle rencontre aussi Hugo, comptable malvoyant.",
+   "documents": [
+    {
+     "id": "entreprises",
+     "type": "tableau",
+     "titre": "Les quatre entreprises",
+     "source": "Entreprises et effectifs imaginés pour l’exercice",
+     "colonnes": [
+      "Entreprise",
+      "Salariés",
+      "Salariés handicapés"
+     ],
+     "lignes": [
+      [
+       "Atelier Lumière",
+       15,
+       0
+      ],
+      [
+       "Brasserie du Port",
+       200,
+       9
+      ],
+      [
+       "Cabinet Rivière",
+       50,
+       3
+      ],
+      [
+       "Dépôt Martin",
+       100,
+       4
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "hugo",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le poste de Hugo",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Hugo est comptable et malvoyant. Son employeur lui a installé un logiciel qui lit l’écran à voix haute et un grand écran, pour qu’il puisse travailler comme ses collègues."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "entreprises",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche l’entreprise qui n’est pas concernée par l’obligation d’emploi de 6 %.",
+     "aide": "L’obligation s’applique à partir de 20 salariés.",
+     "explication": "L’Atelier Lumière a **15 salariés** : sous le seuil de 20, il n’est pas soumis à l’obligation."
+    },
+    {
+     "type": "nombre",
+     "unite": "salariés",
+     "reponse": 3,
+     "enonce": "Combien de travailleurs handicapés manque-t-il à la Brasserie du Port pour atteindre 6 % de ses effectifs ?",
+     "aide": "Calcule 6 % de 200, puis retire les 9 déjà employés.",
+     "explication": "6 % de 200 = 12 ; 12 − 9 = **3** travailleurs handicapés manquants."
+    },
+    {
+     "type": "nombre",
+     "unite": "%",
+     "reponse": 4,
+     "enonce": "Quelle part de ses effectifs le Dépôt Martin consacre-t-il à l’emploi de travailleurs handicapés ?",
+     "aide": "Divise 4 par 100, puis exprime le résultat en pourcentage.",
+     "explication": "4 ÷ 100 = **4 %**, soit moins que les 6 % exigés : l’entreprise doit verser une contribution à défaut."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Comment s’appelle l’obligation que remplit l’employeur de Hugo ?",
+     "options": [
+      "Le versement d’une contribution à défaut de respecter le quota",
+      "L’aménagement raisonnable du poste de travail de l’employé",
+      "La prestation de compensation du handicap versée à la personne",
+      "Le projet personnalisé de scolarisation de l’élève concerné"
+     ],
+     "aide": "L’employeur adapte le poste pour permettre le travail.",
+     "explication": "L’employeur doit procéder à des **aménagements raisonnables** : adapter le poste pour que la personne puisse travailler."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b7b35a4-e4f7-56fe-b5f4-f197cfb6d39c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La commune qui lève les obstacles",
+   "competence": "analyser-document",
+   "situation": "À Valbonne-sur-Tarn, commune imaginaire, un article de presse raconte l’histoire de Samir, 16 ans, malvoyant. Les élèves le comparent aux grandes dates de la loi.",
+   "documents": [
+    {
+     "id": "presse",
+     "type": "texte",
+     "genre": "article",
+     "titre": "À Valbonne, un lycéen change la mairie",
+     "source": "Article écrit pour l’exercice : personnes et lieux imaginés",
+     "blocs": [
+      "Samir est malvoyant. Les panneaux du lycée sont écrits en trop petits caractères et le formulaire de demande d’aide n’existe qu’en version papier minuscule.",
+      "Le maire a déclaré : « Ce n’est pas à Samir de s’habituer à nos bâtiments. C’est à la commune de lever les obstacles. »",
+      "La mairie va agrandir les caractères, installer des bandes guidantes et proposer un dossier unique, à déposer en un seul endroit."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques dates",
+     "source": "Dates du cours",
+     "debut": 1985,
+     "fin": 2015,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "quota",
+       "date": 1987,
+       "nom": "Quota de 6 %"
+      },
+      {
+       "id": "loi",
+       "date": 2005,
+       "nom": "Loi du 11 février"
+      },
+      {
+       "id": "onu",
+       "date": 2006,
+       "nom": "Convention ONU"
+      },
+      {
+       "id": "ratif",
+       "date": 2010,
+       "nom": "Ratification France"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "loi"
+     ],
+     "enonce": "Touche la date de la loi qui pose les trois piliers : accessibilité généralisée, compensation, guichet unique.",
+     "aide": "C’est la loi « pour l’égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées ».",
+     "explication": "La **loi du 11 février 2005** pose les trois piliers."
+    },
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 4,
+     "enonce": "Combien d’années séparent l’adoption de la Convention de l’ONU de sa ratification par la France ?",
+     "aide": "Soustrais 2006 à 2010.",
+     "explication": "2010 − 2006 = **4 ans**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Accessibilité généralisée",
+      "Compensation",
+      "Guichet unique"
+     ],
+     "enonce": "Range chaque mesure sous le pilier de la loi de 2005 auquel elle se rattache.",
+     "items": [
+      [
+       "Une rampe d’accès à la mairie",
+       0
+      ],
+      [
+       "Des transports adaptés",
+       0
+      ],
+      [
+       "La prestation de compensation du handicap",
+       1
+      ],
+      [
+       "L’allocation aux adultes handicapés (AAH)",
+       1
+      ],
+      [
+       "Une MDPH dans chaque département",
+       2
+      ],
+      [
+       "Un dossier unique déposé en un seul endroit",
+       2
+      ]
+     ],
+     "aide": "Trois piliers : lever les obstacles, aider financièrement, simplifier les démarches.",
+     "explication": "L’**accessibilité** lève les obstacles ; la **compensation** aide financièrement ; le **guichet unique** (la MDPH) simplifie les démarches."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "En quoi la phrase du maire illustre-t-elle l’approche sociale du handicap ?",
+     "options": [
+      "Elle demande à l’environnement de s’adapter, et non à la personne seule",
+      "Elle demande à la personne de compenser seule sa déficience individuelle",
+      "Elle affirme que le handicap n’existe pas lorsqu’on y pense moins",
+      "Elle confie à l’État la totalité des dépenses liées à tous les handicaps"
+     ],
+     "aide": "Regarde qui doit changer dans la phrase du maire.",
+     "explication": "L’approche **sociale** place le handicap dans la rencontre entre une déficience et un environnement inadapté : c’est donc **l’environnement** qu’il faut adapter."
+    }
+   ]
+  },
+  {
+   "chapitre": "4adecebe-8eff-5410-b73d-3ae75a40033c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La frise des lois contre la haine",
+   "competence": "se-reperer-temps",
+   "situation": "Pour un exposé, une élève range sur une frise les lois qui encadrent la liberté d’expression et punissent les propos haineux.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre lois repères",
+     "source": "Dates du cours",
+     "debut": 1880,
+     "fin": 2020,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "presse",
+       "date": 1881,
+       "nom": "Loi sur la presse"
+      },
+      {
+       "id": "pleven",
+       "date": 1972,
+       "nom": "Loi Pleven"
+      },
+      {
+       "id": "gayssot",
+       "date": 1990,
+       "nom": "Loi Gayssot"
+      },
+      {
+       "id": "loi2004",
+       "date": 2004,
+       "nom": "Loi du 30 décembre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "gayssot"
+     ],
+     "enonce": "Touche la loi qui punit la contestation de crimes contre l’humanité.",
+     "aide": "C’est une loi de juillet 1990.",
+     "explication": "La **loi Gayssot** (13 juillet 1990) punit la contestation de crimes contre l’humanité."
+    },
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 32,
+     "enonce": "Combien d’années séparent la loi Pleven de la loi du 30 décembre 2004 ?",
+     "aide": "Soustrais 1972 à 2004.",
+     "explication": "2004 − 1972 = **32 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque loi à ce qu’elle apporte.",
+     "paires": [
+      [
+       "Loi du 29 juillet 1881",
+       "Le cadre général des abus de la liberté d’expression"
+      ],
+      [
+       "Loi Pleven",
+       "Punit la provocation à la haine, la diffamation et l’injure racistes"
+      ],
+      [
+       "Loi Gayssot",
+       "Punit la contestation de crimes contre l’humanité"
+      ],
+      [
+       "Loi du 30 décembre 2004",
+       "Étend la répression aux injures sexistes, homophobes et handiphobes"
+      ]
+     ],
+     "aide": "Chaque loi ajoute un cas à la précédente.",
+     "explication": "La loi de **1881** pose le cadre ; **1972**, **1990** et **2004** le complètent."
+    }
+   ]
+  },
+  {
+   "chapitre": "4adecebe-8eff-5410-b73d-3ae75a40033c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Critiquer une idée ou viser des personnes",
+   "competence": "argumenter",
+   "situation": "Une modératrice de réseau social doit trier cinq propos. Elle se demande lesquels la loi autorise, et pour les autres, quelle loi s’applique.",
+   "documents": [
+    {
+     "id": "propos",
+     "type": "tableau",
+     "titre": "Cinq propos",
+     "source": "Propos écrits pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Propos"
+     ],
+     "lignes": [
+      [
+       "1",
+       "« Cette doctrine religieuse est absurde, et voici mes arguments, un par un. »"
+      ],
+      [
+       "2",
+       "« Les gens du voyage sont tous des voleurs : il faut les chasser. »"
+      ],
+      [
+       "3",
+       "Un message en ligne affirme que le génocide des Juifs n’a jamais eu lieu."
+      ],
+      [
+       "4",
+       "« Je trouve ce programme politique mauvais pour le pays. »"
+      ],
+      [
+       "5",
+       "Un tag « sale homo » est écrit sur la porte d’un voisin."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "propos",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les deux propos que la loi autorise.",
+     "aide": "La loi permet de critiquer une idée, pas d’attaquer des personnes pour ce qu’elles sont.",
+     "explication": "Les propos **1** et **4** critiquent une doctrine ou un programme : c’est permis. Les autres attaquent des personnes ou nient un crime contre l’humanité."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Loi Pleven (1972)",
+      "Loi Gayssot (1990)",
+      "Loi du 30 décembre 2004"
+     ],
+     "enonce": "Associe chaque propos puni à la loi qui le réprime.",
+     "items": [
+      [
+       "Propos n° 2 (les gens du voyage)",
+       0
+      ],
+      [
+       "Propos n° 3 (le génocide des Juifs)",
+       1
+      ],
+      [
+       "Propos n° 5 (le tag homophobe)",
+       2
+      ]
+     ],
+     "aide": "Pleven : racisme ; Gayssot : contestation de crimes contre l’humanité ; 2004 : sexisme, homophobie, handicap.",
+     "explication": "Le propos 2 est une injure à caractère raciste (**Pleven**), le 3 une **contestation de crime contre l’humanité** (Gayssot), le 5 une injure homophobe (**loi de 2004**)."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Pourquoi le propos n° 1 est-il permis alors que le propos n° 2 est puni ?",
+     "options": [
+      "Le premier est plus long que le second et donc mieux argumenté",
+      "Le second a été écrit en ligne alors que le premier est resté privé",
+      "Le premier critique une doctrine, le second attaque un groupe de personnes",
+      "Le premier est écrit par un adulte et le second par un élève de lycée"
+     ],
+     "aide": "Qu’est-ce qui est visé : une idée, ou des personnes ?",
+     "explication": "On peut **critiquer une idée, une doctrine, une religion** ; on ne peut pas **attaquer une personne ou un groupe** pour ce qu’il est."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la démarche face à un contenu manifestement illicite repéré en ligne.",
+     "items": [
+      "Tu repères un contenu manifestement illicite",
+      "Tu le signales à la plateforme ou sur PHAROS",
+      "La plateforme prévenue doit le retirer promptement"
+     ],
+     "aide": "On repère, on signale, la plateforme agit.",
+     "explication": "PHAROS recueille les signalements ; les plateformes doivent **retirer promptement** les contenus manifestement illicites qui leur sont notifiés."
+    }
+   ]
+  },
+  {
+   "chapitre": "4adecebe-8eff-5410-b73d-3ae75a40033c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un message sur le forum du lycée",
+   "competence": "analyser-document",
+   "situation": "Sur le forum du lycée, un message déclenche une conversation entre Alex et Cléo. Ils cherchent où passe la limite de la liberté d’expression.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Alex et Cléo",
+     "participants": [
+      {
+       "nom": "Cléo",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alex",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Cléo",
+       "texte": "Tu as vu le message de Bao sur le forum ? « Les gens de cette religion sont des [[a|parasites]]. »"
+      },
+      {
+       "qui": "Alex",
+       "texte": "Oui. Dire qu’une doctrine me paraît absurde, je peux. Mais traiter des personnes comme ça, non."
+      },
+      {
+       "qui": "Cléo",
+       "texte": "Je l’ai signalé à la plateforme."
+      }
+     ]
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Contenu illicite en ligne ?",
+     "sousTitre": "Panneau imaginé pour l’exercice",
+     "emoji": "🚩",
+     "lignes": [
+      {
+       "texte": "Signale-le à la plateforme où tu l’as vu",
+       "id": "plat"
+      },
+      {
+       "texte": "Ou sur la plateforme officielle PHAROS",
+       "id": "pharos"
+      }
+     ],
+     "pied": "Ne le partage pas"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot du message de Bao qui vise des personnes plutôt qu’une idée.",
+     "aide": "Cherche le mot injurieux appliqué aux gens.",
+     "explication": "**« Parasites »** désigne des personnes en raison de leur religion : c’est une attaque contre un groupe, non une critique d’une doctrine."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Quelle phrase résume la limite que dessinent Alex et Cléo ?",
+     "options": [
+      "La loi punit toute critique d’une religion, quelle qu’elle soit",
+      "La loi permet de critiquer une idée mais punit l’attaque contre un groupe",
+      "La loi punit toutes les opinions, même quand on les garde pour soi",
+      "La loi autorise tout propos tant qu’il est écrit sur un forum privé"
+     ],
+     "aide": "Relis la réplique d’Alex.",
+     "explication": "Critiquer une doctrine est permis ; **attaquer des personnes** pour ce qu’elles sont est puni. La loi ne punit pas le fait de penser, mais des actes de langage publics."
+    },
+    {
+     "type": "zone",
+     "document": "panneau",
+     "reponse": [
+      "pharos"
+     ],
+     "enonce": "Touche la ligne qui désigne la plateforme officielle de signalement.",
+     "aide": "Cherche un nom en majuscules.",
+     "explication": "**PHAROS** recueille les signalements de contenus illicites en ligne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur à son rôle.",
+     "paires": [
+      [
+       "PHAROS",
+       "Recueille les signalements de contenus illicites"
+      ],
+      [
+       "Une plateforme en ligne",
+       "Retire promptement les contenus manifestement illicites signalés"
+      ],
+      [
+       "Une association habilitée",
+       "Peut se porter partie civile"
+      ],
+      [
+       "La loi du 29 juillet 1881",
+       "Définit les abus de la liberté d’expression"
+      ]
+     ],
+     "aide": "Distingue celui qui signale, celui qui retire, celui qui poursuit, celui qui définit.",
+     "explication": "**PHAROS** reçoit les signalements ; les **plateformes** retirent ; les **associations** (loi Pleven) se portent partie civile ; la **loi de 1881** définit les abus."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "penser",
+      "langage",
+      "croire",
+      "religion"
+     ],
+     "enonce": "Complète la règle à retenir.",
+     "texte": "La loi ne punit pas le fait de ___, mais des actes de ___ publics.",
+     "reponses": [
+      [
+       "penser"
+      ],
+      [
+       "langage"
+      ]
+     ],
+     "aide": "Provoquer, injurier, diffamer sont des actes.",
+     "explication": "La loi ne punit pas le fait de **penser**, mais des actes de **langage** publics : provoquer, injurier, diffamer, nier un crime contre l’humanité."
+    }
+   ]
+  },
+  {
+   "chapitre": "367f457f-4a36-501c-9939-6cda87bc1606",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux articles pour une République laïque",
+   "competence": "analyser-texte",
+   "situation": "Pour son exposé, Inès lit les deux premiers articles de la loi de 1905 et cherche ce que chacun garantit.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La loi du 9 décembre 1905",
+     "source": "Articles 1 et 2, texte adapté pour l’exercice",
+     "blocs": [
+      "Article 1er. La République assure la liberté de conscience. Elle garantit le libre exercice des cultes, sous les restrictions utiles à l’ordre public.",
+      "Article 2. La République ne [[v|reconnaît]], ne [[v|salarie]] ni ne [[v|subventionne]] aucun culte."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les trois verbes par lesquels l’article 2 fixe la neutralité de l’État.",
+     "aide": "Cherche les trois verbes qui suivent « La République ne ».",
+     "explication": "L’État ne **reconnaît**, ne **salarie** ni ne **subventionne** aucun culte : c’est sa neutralité."
+    },
+    {
+     "type": "choix",
+     "reponse": 3,
+     "enonce": "Que garantit l’article 1er ?",
+     "options": [
+      "La neutralité de l’État et de tous ses agents",
+      "Le financement public de chacun des cultes",
+      "L’interdiction de tout signe religieux dans l’espace public",
+      "La liberté de conscience et le libre exercice des cultes"
+     ],
+     "aide": "Cet article pose une liberté, l’article 2 une neutralité.",
+     "explication": "L’article 1er garantit une **liberté** : la liberté de conscience et le libre exercice des cultes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque exigence de la laïcité à son contenu.",
+     "paires": [
+      [
+       "Liberté de conscience",
+       "Croire, ne pas croire ou changer de conviction"
+      ],
+      [
+       "Neutralité",
+       "Un service public ne prend pas parti"
+      ],
+      [
+       "Égalité",
+       "Aucune conviction n’ouvre de privilège ni ne justifie de discrimination"
+      ]
+     ],
+     "aide": "Trois exigences indissociables.",
+     "explication": "**Liberté de conscience**, **neutralité** et **égalité** forment les trois exigences de la laïcité."
+    }
+   ]
+  },
+  {
+   "chapitre": "367f457f-4a36-501c-9939-6cda87bc1606",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À qui s’impose la neutralité ?",
+   "competence": "argumenter",
+   "situation": "Au conseil municipal, des élus s’interrogent sur ce que la laïcité interdit et sur ce qu’elle permet. Ils étudient quatre cas, puis un projet d’arrêté.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Quatre cas",
+     "source": "Cas écrits pour l’exercice",
+     "colonnes": [
+      "Cas",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Une élève de collège public porte un signe qui manifeste ostensiblement son appartenance religieuse."
+      ],
+      [
+       "2",
+       "Un agent de la préfecture reçoit le public en portant un signe religieux visible."
+      ],
+      [
+       "3",
+       "Une passante porte un signe religieux dans la rue."
+      ],
+      [
+       "4",
+       "Un voyageur lit un livre religieux dans le tramway."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Compte rendu du conseil municipal",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le maire propose un arrêté qui fixe les horaires des [[p|sonneries]] de cloches et encadre la [[p|procession]] prévue sur la voie publique.",
+      "Une conseillère demande sur quels articles de la loi de 1905 il s’appuie."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "enonce": "Touche les deux cas où la règle française interdit le signe religieux.",
+     "aide": "La loi vise les élèves des écoles publiques et les agents publics.",
+     "explication": "Cas 1 : la **loi du 15 mars 2004** interdit les signes ostensibles aux élèves. Cas 2 : la **stricte neutralité** s’impose aux agents publics. Les cas 3 et 4 sont permis : la neutralité s’impose à l’État, pas aux citoyens."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque règle à ceux qu’elle concerne ou à ce qu’elle fait.",
+     "paires": [
+      [
+       "Loi du 15 mars 2004",
+       "Les élèves des écoles, collèges et lycées publics"
+      ],
+      [
+       "Stricte neutralité",
+       "Les agents publics"
+      ],
+      [
+       "Charte de la laïcité à l’école (2013)",
+       "Rassemble les règles de laïcité à l’école"
+      ],
+      [
+       "Articles 27 et 28 de la loi de 1905",
+       "Encadrent la police des cultes"
+      ]
+     ],
+     "aide": "Distingue élèves, agents, texte de synthèse, police des cultes.",
+     "explication": "La loi de **2004** concerne les élèves ; la **neutralité** les agents ; la **Charte** (2013) rassemble les règles ; les **articles 27 et 28** encadrent la police des cultes."
+    },
+    {
+     "type": "zone",
+     "document": "conseil",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux éléments que le maire veut encadrer : ce sont des manifestations extérieures du culte.",
+     "aide": "Cherche un son et un défilé sur la voie publique.",
+     "explication": "Les **sonneries** et la **procession** sont des manifestations extérieures : leur cadre relève de la police des cultes."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Sur quels articles de la loi de 1905 le maire peut-il s’appuyer pour cet arrêté ?",
+     "options": [
+      "Les articles 27 et 28, qui encadrent la police des cultes",
+      "Les articles 1er et 2, qui posent la liberté et la neutralité",
+      "La loi du 15 mars 2004, qui vise les signes à l’école",
+      "La Charte de la laïcité à l’école publiée en 2013"
+     ],
+     "aide": "Sonneries et manifestations extérieures relèvent de la « police des cultes ».",
+     "explication": "Les **articles 27 et 28** encadrent la police des cultes : sonneries, manifestations extérieures, emblèmes dans les lieux publics."
+    }
+   ]
+  },
+  {
+   "chapitre": "367f457f-4a36-501c-9939-6cda87bc1606",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand la Cour européenne juge une restriction",
+   "competence": "analyser-document",
+   "situation": "Une cour imaginaire examine trois restrictions à la liberté de manifester sa religion, avec les critères de la Cour européenne des droits de l’homme. Les élèves regardent aussi ce que dit la Charte de la laïcité à l’école.",
+   "documents": [
+    {
+     "id": "charte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Charte de la laïcité à l’école",
+     "sousTitre": "Extraits adaptés pour l’exercice (2013)",
+     "emoji": "🏫",
+     "lignes": [
+      {
+       "texte": "La laïcité garantit à chacun la liberté de conscience",
+       "id": "lib"
+      },
+      {
+       "texte": "Elle garantit l’égalité : aucune conviction n’ouvre de privilège",
+       "id": "ega"
+      },
+      {
+       "texte": "Les agents publics sont tenus à la stricte neutralité",
+       "id": "agents"
+      },
+      {
+       "texte": "Les élèves ne portent pas de signe manifestant ostensiblement une appartenance religieuse",
+       "id": "eleves"
+      }
+     ]
+    },
+    {
+     "id": "restrictions",
+     "type": "tableau",
+     "titre": "Trois restrictions examinées",
+     "source": "Cas imaginés pour l’exercice",
+     "colonnes": [
+      "Cas",
+      "Restriction"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Une loi précise interdit à l’agent d’un guichet public de porter un signe religieux, pour garantir la neutralité du service, pendant son service seulement."
+      ],
+      [
+       "B",
+       "Un directeur interdit tout signe religieux dans son service par une simple note orale, alors qu’aucun texte ne le prévoit."
+      ],
+      [
+       "C",
+       "Une loi interdit toute manifestation d’une croyance, même à l’intérieur de son propre logement."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "charte",
+     "reponse": [
+      "agents"
+     ],
+     "enonce": "Touche la ligne de la Charte qui s’applique aux agents publics.",
+     "aide": "Cherche la ligne qui parle de « neutralité ».",
+     "explication": "La **stricte neutralité** s’impose aux agents publics, non aux usagers."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Restriction admissible",
+      "Restriction non admissible"
+     ],
+     "enonce": "Selon les critères de la Cour (prévue par la loi, but légitime, proportionnée), classe chaque cas.",
+     "items": [
+      [
+       "Cas A",
+       0
+      ],
+      [
+       "Cas B",
+       1
+      ],
+      [
+       "Cas C",
+       1
+      ]
+     ],
+     "aide": "La Cour vérifie trois conditions à la fois.",
+     "explication": "Le cas **A** remplit les trois conditions. Le **B** n’est pas prévu par la loi. Le **C** est disproportionné : il vise même la sphère privée."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Pourquoi la restriction du cas B ne passe-t-elle pas le contrôle de la Cour ?",
+     "options": [
+      "Parce qu’elle poursuit un but que la Cour juge toujours illégitime",
+      "Parce qu’aucune loi ne la prévoit : ce n’est qu’une consigne orale",
+      "Parce qu’elle est jugée trop sévère pour la vie privée de la personne",
+      "Parce que seuls les élèves peuvent être soumis à une restriction"
+     ],
+     "aide": "Relis le cas B : sur quoi repose l’interdiction ?",
+     "explication": "Le cas B échoue à la première condition : la restriction doit être **prévue par la loi**, pas par une note orale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque condition à la question que la Cour se pose.",
+     "paires": [
+      [
+       "Prévue par la loi",
+       "Un texte précis l’autorise-t-il ?"
+      ],
+      [
+       "But légitime",
+       "Protège-t-elle l’ordre public ou les droits d’autrui ?"
+      ],
+      [
+       "Proportionnée",
+       "Reste-t-elle limitée à ce qui est nécessaire ?"
+      ]
+     ],
+     "aide": "Trois conditions : le texte, le but, la mesure.",
+     "explication": "La Cour admet une restriction si elle est **prévue par la loi**, poursuit un **but légitime** et reste **proportionnée**. La laïcité française n’est donc pas le seul modèle possible en Europe."
+    }
+   ]
+  },
+  {
+   "chapitre": "27f47db5-6f14-5c5e-b867-1d2dd49f4583",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui s’occupe de quoi dans la République ?",
+   "competence": "observer-schema",
+   "situation": "Camille, élève de première, veut comprendre pourquoi son école primaire, son ancien collège et son lycée dépendent de niveaux différents. Elle dessine un schéma des niveaux de la République.",
+   "documents": [
+    {
+     "id": "niveaux",
+     "type": "schema",
+     "titre": "Les niveaux de la République",
+     "source": "Schéma simplifié pour l’exercice",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 14,
+       "l": 300,
+       "h": 52,
+       "arrondi": 10,
+       "texte": "L’État",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "etat",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 96,
+       "texte": "Trois niveaux de collectivités, chacun avec un conseil élu",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 112,
+       "l": 96,
+       "h": 60,
+       "arrondi": 10,
+       "texte": "Commune",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "commune",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 122,
+       "y": 112,
+       "l": 96,
+       "h": 60,
+       "arrondi": 10,
+       "texte": "Département",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "dep",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 224,
+       "y": 112,
+       "l": 96,
+       "h": 60,
+       "arrondi": 10,
+       "texte": "Région",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "region",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 68,
+       "y": 192,
+       "texte": "conseil",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 68,
+       "y": 206,
+       "texte": "municipal",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 192,
+       "texte": "conseil",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 206,
+       "texte": "départemental",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 192,
+       "texte": "conseil",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 206,
+       "texte": "régional",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "niveaux",
+     "reponse": [
+      "region"
+     ],
+     "enonce": "Touche le niveau qui a la charge des lycées.",
+     "aide": "Collèges, lycées : le département et la région se partagent ces deux écoles.",
+     "explication": "La **région** s’occupe des lycées, de la formation professionnelle et des transports régionaux. Le département a la charge des collèges."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque compétence au niveau qui l’exerce.",
+     "paires": [
+      [
+       "Les écoles primaires",
+       "La commune"
+      ],
+      [
+       "Les routes départementales",
+       "Le département"
+      ],
+      [
+       "La formation professionnelle",
+       "La région"
+      ],
+      [
+       "La justice",
+       "L’État"
+      ]
+     ],
+     "aide": "Du plus proche au plus lointain : commune, département, région, État.",
+     "explication": "La **commune** gère l’école primaire, le **département** ses routes, la **région** la formation professionnelle ; la **justice** reste à l’**État**."
+    },
+    {
+     "type": "zone",
+     "document": "niveaux",
+     "reponse": [
+      "etat"
+     ],
+     "enonce": "Touche le niveau qui garde les fonctions régaliennes : défense, justice, monnaie, police, diplomatie.",
+     "aide": "Ce niveau n’est pas une collectivité décentralisée.",
+     "explication": "Défense, justice, monnaie, police et diplomatie restent à l’**État**. Les collectivités administrent, elles ne légifèrent pas."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "unitaire",
+      "fédéral",
+      "centralisé",
+      "régional"
+     ],
+     "enonce": "Complète la formule à retenir.",
+     "texte": "La France est un État ___ décentralisé, et non un État ___.",
+     "reponses": [
+      [
+       "unitaire"
+      ],
+      [
+       "fédéral"
+      ]
+     ],
+     "aide": "Un seul pouvoir législatif, mais des collectivités qui s’administrent.",
+     "explication": "La France est un État **unitaire** décentralisé, pas un État **fédéral** : les collectivités n’ont pas de pouvoir législatif propre."
+    }
+   ]
+  },
+  {
+   "chapitre": "27f47db5-6f14-5c5e-b867-1d2dd49f4583",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Décentraliser, déconcentrer : qui décide ?",
+   "competence": "analyser-texte",
+   "situation": "À la mairie de Fontvallon, commune imaginaire, quatre décisions sont à l’ordre du jour. Une élève de première doit dire, pour chacune, qui l’exerce.",
+   "documents": [
+    {
+     "id": "decisions",
+     "type": "tableau",
+     "titre": "Quatre décisions",
+     "source": "Décisions imaginées pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Décision"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Le conseil régional vote le budget des transports régionaux."
+      ],
+      [
+       "2",
+       "Le préfet vérifie qu’une délibération du conseil municipal respecte la loi."
+      ],
+      [
+       "3",
+       "Le conseil municipal, élu, fixe des règles d’urbanisme."
+      ],
+      [
+       "4",
+       "Le Parlement vote une loi qui s’applique sur tout le territoire."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "constit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La Constitution",
+     "source": "Articles 1er et 72, résumés pour l’exercice",
+     "blocs": [
+      "Article 1er. L’organisation de la République est [[d|décentralisée]].",
+      "Article 72. Les collectivités territoriales s’administrent librement par des conseils [[e|élus]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Décentralisation",
+      "Déconcentration",
+      "Compétence de l’État"
+     ],
+     "enonce": "Classe chaque décision.",
+     "items": [
+      [
+       "Décision 1",
+       0
+      ],
+      [
+       "Décision 2",
+       1
+      ],
+      [
+       "Décision 3",
+       0
+      ],
+      [
+       "Décision 4",
+       2
+      ]
+     ],
+     "aide": "Décentralisation : des élus locaux. Déconcentration : les agents de l’État sur place.",
+     "explication": "Les décisions 1 et 3 sont prises par des **élus locaux** (décentralisation). Le préfet (décision 2) représente l’**État** : c’est de la **déconcentration**. La loi (décision 4) relève de l’**État**."
+    },
+    {
+     "type": "zone",
+     "document": "constit",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit comment les conseils des collectivités sont désignés.",
+     "aide": "Cherche le mot qui s’oppose à « nommés ».",
+     "explication": "Les conseils sont **élus** : c’est ce qui distingue la décentralisation de la déconcentration."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "décentralisation",
+      "déconcentration",
+      "fédéralisme",
+      "subsidiarité"
+     ],
+     "enonce": "Complète la définition.",
+     "texte": "La ___ transfère des compétences à des élus locaux ; la ___ les confie à des agents de l’État.",
+     "reponses": [
+      [
+       "décentralisation"
+      ],
+      [
+       "déconcentration"
+      ]
+     ],
+     "aide": "La première des deux notions apparaît dans l’article 1er.",
+     "explication": "La **décentralisation** transfère à des collectivités élues ; la **déconcentration** confie des tâches aux représentants de l’État, comme le préfet."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Pourquoi la France n’est-elle pas un État fédéral ?",
+     "options": [
+      "Parce que ses collectivités n’ont aucun budget ni aucun conseil élu",
+      "Parce que ses collectivités n’ont pas de pouvoir législatif propre",
+      "Parce que ses collectivités sont toutes dirigées par un préfet",
+      "Parce que l’État n’y exerce aucune compétence sur son territoire"
+     ],
+     "aide": "Dans un État fédéral, les entités fédérées votent leurs propres lois.",
+     "explication": "Les collectivités françaises administrent mais **ne légifèrent pas** : la loi est la même pour tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "27f47db5-6f14-5c5e-b867-1d2dd49f4583",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le « peuple corse » censuré en 1991",
+   "competence": "analyser-document",
+   "situation": "En 1991, une loi sur la Corse a soulevé une question de principe. Des lycéens la reprennent pour comprendre le sens du mot « indivisible », puis comparent trois États imaginaires.",
+   "documents": [
+    {
+     "id": "loi1991",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une mention censurée",
+     "source": "Résumé écrit pour l’exercice",
+     "blocs": [
+      "En 1991, un projet de loi sur l’organisation de la Corse mentionnait « le peuple [[c|corse]], composante du peuple français ».",
+      "Le Conseil constitutionnel a censuré cette mention : la République est indivisible, et il n’existe qu’un seul peuple français."
+     ]
+    },
+    {
+     "id": "etats",
+     "type": "tableau",
+     "titre": "Trois États imaginaires",
+     "source": "États imaginés pour l’exercice",
+     "colonnes": [
+      "État",
+      "Organisation"
+     ],
+     "lignes": [
+      [
+       "X",
+       "Chaque entité vote ses propres lois et a son propre Parlement."
+      ],
+      [
+       "Y",
+       "Des collectivités élues gèrent des compétences, mais une seule loi, votée au niveau national, s’applique partout."
+      ],
+      [
+       "Z",
+       "Les collectivités n’ont ni budget ni élus : le représentant de l’État décide de tout sur place."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi1991",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’adjectif qui qualifie le peuple dans la mention censurée.",
+     "aide": "Cherche l’adjectif entre guillemets, avant « composante du peuple français ».",
+     "explication": "La mention d’un peuple **corse** a été censurée : elle contredisait l’unité du peuple français."
+    },
+    {
+     "type": "choix",
+     "reponse": 3,
+     "enonce": "Pourquoi le Conseil constitutionnel a-t-il censuré cette mention ?",
+     "options": [
+      "Parce que la Corse ne peut pas avoir de collectivité territoriale propre",
+      "Parce que les collectivités n’ont pas le droit de gérer leurs compétences",
+      "Parce que la Constitution interdit toute langue autre que le français",
+      "Parce que la République est indivisible : il n’y a qu’un seul peuple français"
+     ],
+     "aide": "Relis la dernière phrase du texte.",
+     "explication": "L’**indivisibilité** de la République signifie qu’il n’existe qu’**un seul peuple français**. Cela n’empêche pas la décentralisation."
+    },
+    {
+     "type": "zone",
+     "document": "etats",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche l’État dont l’organisation ressemble à celle de la France.",
+     "aide": "Une seule loi nationale, mais des collectivités élues qui gèrent des compétences.",
+     "explication": "L’État **Y** : des collectivités élues, une loi unique. L’État X est fédéral ; l’État Z est centralisé."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Collectivité décentralisée",
+      "État"
+     ],
+     "enonce": "Qui exerce chacune de ces compétences en France ?",
+     "items": [
+      [
+       "Gérer les collèges",
+       0
+      ],
+      [
+       "Gérer le RSA",
+       0
+      ],
+      [
+       "Battre la monnaie",
+       1
+      ],
+      [
+       "Rendre la justice",
+       1
+      ],
+      [
+       "Assurer la défense",
+       1
+      ]
+     ],
+     "aide": "Les fonctions régaliennes restent à l’État.",
+     "explication": "Collèges et RSA relèvent du **département**. Monnaie, justice et défense sont des fonctions **régaliennes**, gardées par l’**État**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9009928d-f52b-592a-9efb-1496daf3785f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les étapes de la décentralisation",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son dossier, un élève dresse la frise des grandes lois de la décentralisation et des langues régionales.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La décentralisation depuis 1982",
+     "source": "Dates du cours",
+     "debut": 1980,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "defferre",
+       "date": 1982,
+       "nom": "Loi Defferre"
+      },
+      {
+       "id": "acte2",
+       "date": 2003,
+       "nom": "Acte II"
+      },
+      {
+       "id": "maptam",
+       "date": 2014,
+       "nom": "Loi MAPTAM"
+      },
+      {
+       "id": "notre",
+       "date": 2015,
+       "nom": "Loi NOTRe"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "maptam"
+     ],
+     "enonce": "Touche la loi qui crée les métropoles.",
+     "aide": "C’est une loi de 2014.",
+     "explication": "La **loi MAPTAM** (2014) crée les métropoles."
+    },
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 33,
+     "enonce": "Combien d’années séparent la loi Defferre de la loi NOTRe ?",
+     "aide": "Soustrais 1982 à 2015.",
+     "explication": "2015 − 1982 = **33 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape à ce qu’elle change.",
+     "paires": [
+      [
+       "Loi Defferre (1982)",
+       "Le contrôle de légalité a posteriori remplace la tutelle a priori du préfet"
+      ],
+      [
+       "Acte II (2003-2004)",
+       "La décentralisation entre dans la Constitution"
+      ],
+      [
+       "Loi MAPTAM (2014)",
+       "Création des métropoles"
+      ],
+      [
+       "Loi NOTRe (2015)",
+       "Les régions de métropole passent de 22 à 13"
+      ]
+     ],
+     "aide": "Chaque étape va un cran plus loin.",
+     "explication": "**1982** : fin de la tutelle a priori. **2003-2004** : la Constitution. **2014** : métropoles. **2015** : 13 régions."
+    }
+   ]
+  },
+  {
+   "chapitre": "9009928d-f52b-592a-9efb-1496daf3785f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De 22 à 13 régions",
+   "competence": "lire-carte",
+   "situation": "La loi NOTRe de 2015 a réduit le nombre de régions de la France métropolitaine. Un élève regarde la carte pour repérer celles qui ont fusionné.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les 13 régions de métropole depuis 2016",
+     "source": "Fond de carte du guide",
+     "fond": "france",
+     "regionsCliquables": true,
+     "regions": [
+      {
+       "code": "GES",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "HDF",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "NOR",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "NAQ",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "OCC",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "ARA",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "BFC",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "code": "BRE",
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "code": "PDL",
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "code": "CVL",
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "code": "IDF",
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "code": "PAC",
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "code": "COR",
+       "teinte": "gris",
+       "motif": "hachures"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Région issue d’une fusion (2016)"
+      },
+      {
+       "teinte": "gris",
+       "motif": "hachures",
+       "texte": "Région non fusionnée"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "GES"
+     ],
+     "enonce": "Parmi les régions issues d’une fusion, touche celle qui borde l’Allemagne.",
+     "aide": "Cherche la région fusionnée à l’est de la France, le long du Rhin.",
+     "explication": "Le **Grand Est**, issu d’Alsace, de Champagne-Ardenne et de Lorraine, borde l’Allemagne le long du Rhin."
+    },
+    {
+     "type": "nombre",
+     "unite": "régions",
+     "reponse": 6,
+     "enonce": "Combien de régions de métropole n’ont pas fusionné ?",
+     "aide": "Compte les régions hachurées.",
+     "explication": "Six régions n’ont pas fusionné : Bretagne, Pays de la Loire, Centre-Val de Loire, Île-de-France, Provence-Alpes-Côte d’Azur et Corse."
+    },
+    {
+     "type": "nombre",
+     "unite": "régions",
+     "reponse": 9,
+     "enonce": "La métropole comptait 22 régions avant 2016 et en compte 13 aujourd’hui. De combien a-t-elle diminué ?",
+     "aide": "Soustrais le nombre actuel au nombre d’avant.",
+     "explication": "22 − 13 = **9 régions** de moins, grâce aux fusions de la loi NOTRe."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Que fait aussi la loi NOTRe de 2015, outre la réduction du nombre de régions ?",
+     "options": [
+      "Elle supprime le contrôle de légalité du préfet sur les actes locaux",
+      "Elle crée les métropoles, que la loi MAPTAM n’avait pas prévues",
+      "Elle clarifie les compétences des collectivités territoriales",
+      "Elle inscrit les langues régionales dans la Constitution française"
+     ],
+     "aide": "Le nom de la loi signifie « Nouvelle organisation territoriale de la République ».",
+     "explication": "La loi **NOTRe** clarifie les compétences des collectivités et réduit le nombre de régions. Les métropoles viennent de la loi MAPTAM (2014)."
+    }
+   ]
+  },
+  {
+   "chapitre": "9009928d-f52b-592a-9efb-1496daf3785f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une République, des statuts différents",
+   "competence": "analyser-document",
+   "situation": "Quatre élèves de première, d’origines différentes, comparent leurs statuts territoriaux. Ils lisent aussi ce que la Constitution dit des langues.",
+   "documents": [
+    {
+     "id": "statuts",
+     "type": "tableau",
+     "titre": "Trois régimes de l’outre-mer",
+     "source": "Résumé du cours",
+     "colonnes": [
+      "Régime",
+      "Ce qu’il prévoit"
+     ],
+     "lignes": [
+      [
+       "Article 73",
+       "Les lois de la République s’appliquent, avec des adaptations possibles."
+      ],
+      [
+       "Article 74",
+       "Un statut particulier fixé par loi organique, avec une part d’autonomie."
+      ],
+      [
+       "Titre XIII",
+       "Un accord de 1998 : citoyenneté calédonienne, « lois du pays », transferts de compétences."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "eleves",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Quatre élèves",
+     "source": "Personnages imaginés pour l’exercice",
+     "blocs": [
+      "Nina vit à Saint-Denis, à La Réunion.",
+      "Tevai vit à Papeete, en Polynésie française.",
+      "Marie vit à Nouméa, en Nouvelle-Calédonie.",
+      "Léo vit à Fort-de-France, en Martinique."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "statuts",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui évoque des « lois du pays ».",
+     "aide": "Seul un régime parle de lois propres au territoire.",
+     "explication": "Les « **lois du pays** » relèvent du titre XIII, l’accord de Nouméa (1998)."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Article 73",
+      "Article 74",
+      "Titre XIII"
+     ],
+     "enonce": "Classe chaque élève selon le régime de son territoire.",
+     "items": [
+      [
+       "Nina (La Réunion)",
+       0
+      ],
+      [
+       "Léo (Martinique)",
+       0
+      ],
+      [
+       "Tevai (Polynésie française)",
+       1
+      ],
+      [
+       "Marie (Nouvelle-Calédonie)",
+       2
+      ]
+     ],
+     "aide": "Les départements et régions d’outre-mer relèvent de l’article 73.",
+     "explication": "La **Réunion** et la **Martinique** relèvent de l’article 73 ; la **Polynésie française** de l’article 74 ; la **Nouvelle-Calédonie** du titre XIII."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi ces statuts différents ne contredisent-ils pas l’indivisibilité de la République ?",
+     "options": [
+      "L’unité juridique demeure : la loi commune s’applique, même adaptée",
+      "Les territoires d’outre-mer ne font pas partie de la République",
+      "Chaque territoire a ses lois sans aucun contrôle de l’État",
+      "L’indivisibilité est une formule sans aucune portée juridique"
+     ],
+     "aide": "L’unité n’exige pas l’uniformité.",
+     "explication": "L’unité de la Nation n’exige pas l’**uniformité** des territoires : elle exige que la loi commune s’applique partout, y compris quand elle s’adapte."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque article de la Constitution à ce qu’il dispose.",
+     "paires": [
+      [
+       "Article 2",
+       "La langue de la République est le français"
+      ],
+      [
+       "Article 75-1",
+       "Les langues régionales appartiennent au patrimoine de la France"
+      ],
+      [
+       "Article 72",
+       "Les collectivités s’administrent librement par des conseils élus"
+      ]
+     ],
+     "aide": "Cherche l’article qui parle de langue et celui qui parle de patrimoine.",
+     "explication": "Article **2** : le français. Article **75-1**, ajouté en 2008 : les langues régionales appartiennent au patrimoine. Article **72** : libre administration."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4ef57a8-9602-55b3-ae15-dbec3c034cb5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois jeunes, trois façons d’être français",
+   "competence": "analyser-document",
+   "situation": "Trois jeunes ont un lien avec la France. Une élève de première cherche, pour chacun, comment il est ou deviendra français.",
+   "documents": [
+    {
+     "id": "jeunes",
+     "type": "tableau",
+     "titre": "Trois situations",
+     "source": "Personnes imaginées pour l’exercice",
+     "colonnes": [
+      "Personne",
+      "Naissance",
+      "Parents"
+     ],
+     "lignes": [
+      [
+       "Léo",
+       "Né à Tunis",
+       "Mère française, père tunisien"
+      ],
+      [
+       "Naïma",
+       "Née à Marseille",
+       "Père étranger né à Marseille, mère étrangère née à l’étranger"
+      ],
+      [
+       "Tom, 17 ans",
+       "Né à Nantes, résidant en France sans interruption",
+       "Parents étrangers nés à l’étranger"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque voie d’accès à la nationalité à la personne concernée.",
+     "paires": [
+      [
+       "Droit du sang",
+       "Léo"
+      ],
+      [
+       "Double droit du sol",
+       "Naïma"
+      ],
+      [
+       "Droit du sol à 18 ans",
+       "Tom"
+      ]
+     ],
+     "aide": "Le droit du sang suit les parents ; le double droit du sol exige un parent né en France.",
+     "explication": "Léo : un **parent français** (droit du sang). Naïma : née en France d’un parent lui-même né en France (**double droit du sol**). Tom : né en France de parents étrangers, il sera français à **18 ans** s’il remplit la condition de résidence."
+    },
+    {
+     "type": "zone",
+     "document": "jeunes",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche la personne française dès sa naissance parce qu’un de ses parents est lui-même né en France.",
+     "aide": "Compare le lieu de naissance des parents.",
+     "explication": "Naïma est française **dès la naissance** : c’est le double droit du sol."
+    },
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 7,
+     "enonce": "À 18 ans, combien d’années Tom aura-t-il passées en France depuis l’âge de 11 ans, en y résidant sans interruption ?",
+     "aide": "Soustrais 11 à 18.",
+     "explication": "18 − 11 = **7 ans**, soit plus que les 5 ans exigés : Tom pourra devenir français de plein droit à 18 ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4ef57a8-9602-55b3-ae15-dbec3c034cb5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Aldo vote-t-il à Lyon ?",
+   "competence": "lire-tableau",
+   "situation": "Aldo, Italien installé à Lyon, est citoyen de l’Union européenne. Une classe compare ses droits à ceux d’une Française et d’une résidente étrangère hors Union.",
+   "documents": [
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Qui peut voter en France ?",
+     "source": "Personnes imaginées pour l’exercice",
+     "colonnes": [
+      "Résident en France",
+      "Municipales",
+      "Européennes",
+      "Présidentielle"
+     ],
+     "lignes": [
+      [
+       "Chloé, française",
+       "Oui",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Aldo, italien, citoyen de l’Union",
+       "Oui",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Binta, de nationalité sénégalaise",
+       "Non",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "situations",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux situations",
+     "source": "Situations imaginées pour l’exercice",
+     "blocs": [
+      "Une initiative citoyenne européenne est lancée. L’Union compte 27 États membres. Il faut recueillir un million de signatures, venant d’au moins un quart des États.",
+      "Aldo perd ses papiers dans un pays hors de l’Union où l’Italie n’a pas d’ambassade. L’ambassade de France accepte de l’aider."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "droits",
+     "multiple": true,
+     "reponse": [
+      "r1c1",
+      "r1c2"
+     ],
+     "enonce": "Touche les deux cases qui montrent que la citoyenneté n’est pas toujours attachée à la nationalité.",
+     "aide": "Cherche un étranger qui vote malgré tout.",
+     "explication": "Aldo n’est pas français mais vote aux **municipales** et aux **européennes** : c’est l’exception de la citoyenneté européenne. La présidentielle lui reste fermée."
+    },
+    {
+     "type": "nombre",
+     "unite": "États",
+     "reponse": 7,
+     "enonce": "Combien d’États au minimum doivent apporter des signatures ? Un quart de 27, arrondi à l’entier supérieur.",
+     "aide": "Divise 27 par 4, puis arrondis vers le haut.",
+     "explication": "27 ÷ 4 = 6,75, donc au moins **7 États** (on ne peut pas avoir 6,75 États)."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Quel droit de la citoyenneté européenne l’aide de l’ambassade de France illustre-t-elle ?",
+     "options": [
+      "Le droit de circuler et de séjourner dans toute l’Union",
+      "Le droit de pétition adressé au Parlement européen",
+      "La protection consulaire par tout État membre",
+      "Le droit de voter aux élections européennes"
+     ],
+     "aide": "Aldo est à l’étranger, hors de l’Union, et demande de l’aide.",
+     "explication": "La **protection consulaire** permet à un citoyen européen de demander l’aide de l’ambassade de n’importe quel État membre."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "nationalité",
+      "citoyenneté",
+      "identité",
+      "naturalisation"
+     ],
+     "enonce": "Complète la distinction à retenir.",
+     "texte": "La ___ est un lien juridique avec un État ; la ___ y ajoute des droits politiques.",
+     "reponses": [
+      [
+       "nationalité"
+      ],
+      [
+       "citoyenneté"
+      ]
+     ],
+     "aide": "Voter et être élu sont des droits politiques.",
+     "explication": "La **nationalité** est un lien juridique ; la **citoyenneté** y ajoute des droits politiques : voter, être élu."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4ef57a8-9602-55b3-ae15-dbec3c034cb5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Karim, Maria et la cérémonie d’accueil",
+   "competence": "argumenter",
+   "situation": "Karim et Maria vivent en France et envisagent de devenir français. Une élève de première calcule à quelle date chacun pourra en faire la demande.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux parcours",
+     "source": "Personnages imaginés pour l’exercice",
+     "blocs": [
+      "Karim est arrivé en France en 2018 avec un titre de séjour régulier. Il y réside sans interruption et parle bien le français.",
+      "Maria s’est mariée en 2021 avec Julien, de nationalité française. Ils vivent ensemble depuis le mariage."
+     ]
+    },
+    {
+     "id": "ceremonie",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "Cérémonie d’accueil dans la citoyenneté française",
+     "sousTitre": "Invitation imaginée pour l’exercice",
+     "emoji": "🎉",
+     "lignes": [
+      {
+       "texte": "Accueil par le préfet"
+      },
+      {
+       "texte": "Remise de la charte des droits et devoirs du citoyen français",
+       "id": "charte"
+      },
+      {
+       "texte": "Verre de l’amitié"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ceremonie",
+     "reponse": [
+      "charte"
+     ],
+     "enonce": "Touche ce que reçoit chaque nouveau citoyen lors de la cérémonie.",
+     "aide": "Cherche un document remis aux invités.",
+     "explication": "On remet la **charte des droits et devoirs du citoyen français**."
+    },
+    {
+     "type": "nombre",
+     "unite": "année",
+     "reponse": 2023,
+     "enonce": "À partir de quelle année Karim peut-il en principe demander la naturalisation, après cinq ans de résidence régulière ?",
+     "aide": "Ajoute cinq ans à son année d’arrivée.",
+     "explication": "2018 + 5 = **2023**. La naturalisation se fait par décret, sous conditions d’intégration."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Nationalité",
+      "Citoyenneté"
+     ],
+     "enonce": "Classe chaque élément.",
+     "items": [
+      [
+       "Un lien juridique entre une personne et l’État",
+       0
+      ],
+      [
+       "Avoir la nationalité française",
+       0
+      ],
+      [
+       "Voter à une élection",
+       1
+      ],
+      [
+       "Pouvoir être élu",
+       1
+      ]
+     ],
+     "aide": "Les droits politiques relèvent de la citoyenneté.",
+     "explication": "La **nationalité** est un lien juridique ; la **citoyenneté** y ajoute les **droits politiques**, comme voter et être élu."
+    },
+    {
+     "type": "nombre",
+     "unite": "année",
+     "reponse": 2025,
+     "enonce": "À partir de quelle année Maria peut-elle devenir française par déclaration, après quatre ans de vie commune ?",
+     "aide": "Ajoute quatre ans à l’année du mariage.",
+     "explication": "2021 + 4 = **2025**. Le conjoint étranger devient français par déclaration après 4 ans de vie commune."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Une fois française, que lui apporte en plus la citoyenneté européenne ?",
+     "options": [
+      "La libre circulation et le séjour dans toute l’Union",
+      "Le droit de voter à la présidentielle de n’importe quel État",
+      "La disparition de sa citoyenneté nationale française",
+      "Un droit de vote dans toutes les élections de l’Union"
+     ],
+     "aide": "Elle complète la citoyenneté nationale sans la remplacer.",
+     "explication": "La citoyenneté européenne **complète** la citoyenneté nationale : circulation et séjour dans toute l’Union, vote aux municipales et aux européennes dans l’État de résidence, protection consulaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "65ff5d37-8556-5758-ace0-d6e503f49374",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le calendrier des cérémonies de Valmy-les-Bois",
+   "competence": "analyser-document",
+   "situation": "La mairie de Valmy-les-Bois, commune imaginaire, a affiché son calendrier de cérémonies. Une élève cherche ce que chaque date rappelle.",
+   "documents": [
+    {
+     "id": "calendrier",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cérémonies de l’année",
+     "sousTitre": "Affiche imaginée pour l’exercice",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "27 janvier — salle Marianne",
+       "id": "jan"
+      },
+      {
+       "texte": "8 mai — place de la Mairie",
+       "id": "mai8"
+      },
+      {
+       "texte": "10 mai — jardin des Vents",
+       "id": "mai10"
+      },
+      {
+       "texte": "18 juin — mât des couleurs",
+       "id": "juin"
+      },
+      {
+       "texte": "11 novembre — monument aux morts",
+       "id": "nov"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "calendrier",
+     "reponse": [
+      "juin"
+     ],
+     "enonce": "Touche la cérémonie qui rappelle l’appel du général de Gaulle.",
+     "aide": "Cet appel date de juin 1940.",
+     "explication": "Le **18 juin** rappelle l’appel du général de Gaulle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à ce qu’elle rappelle.",
+     "paires": [
+      [
+       "11 novembre",
+       "L’armistice de 1918 et tous les morts pour la France"
+      ],
+      [
+       "8 mai",
+       "La victoire de 1945"
+      ],
+      [
+       "27 janvier",
+       "Les victimes de la Shoah"
+      ],
+      [
+       "10 mai",
+       "La traite, l’esclavage et leurs abolitions"
+      ]
+     ],
+     "aide": "Deux dates parlent de la guerre, deux de mémoires particulières.",
+     "explication": "Le **11 novembre** : 1918. Le **8 mai** : 1945. Le **27 janvier** : la Shoah. Le **10 mai** : la traite, l’esclavage et leurs abolitions."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Quelle différence y a-t-il entre une commémoration et un cours d’histoire ?",
+     "options": [
+      "La commémoration est fondée sur des archives, le cours sur des souvenirs",
+      "La commémoration choisit ce qu’elle rappelle, l’histoire est critique et fondée sur des sources",
+      "La commémoration est écrite par des historiens, le cours est écrit par des élèves",
+      "La commémoration n’a aucun rapport avec le passé, le cours n’y a que rapport"
+     ],
+     "aide": "La mémoire est sélective, l’histoire est critique.",
+     "explication": "La **mémoire** est un rapport vécu et sélectif au passé ; l’**histoire** est une démarche critique, fondée sur des sources. Une commémoration **choisit** ce qu’elle rappelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "65ff5d37-8556-5758-ace0-d6e503f49374",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les lois mémorielles en débat",
+   "competence": "argumenter",
+   "situation": "Une classe prépare un débat sur les lois mémorielles et sur la formule « devoir de mémoire ». Elle part d’une frise puis des interventions de quatre élèves.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Lois et textes de mémoire",
+     "source": "Dates du cours",
+     "debut": 1990,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "gayssot",
+       "date": 1990,
+       "nom": "Loi Gayssot"
+      },
+      {
+       "id": "taubira",
+       "date": 2001,
+       "nom": "Loi Taubira"
+      },
+      {
+       "id": "conseil",
+       "date": 2012,
+       "nom": "Décision du Conseil"
+      },
+      {
+       "id": "portraits",
+       "date": 2021,
+       "nom": "Portraits de France"
+      }
+     ]
+    },
+    {
+     "id": "debat",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le débat de la classe",
+     "source": "Interventions écrites pour l’exercice",
+     "blocs": [
+      "Inès : « Dire “devoir de mémoire”, c’est transformer le passé en obligation imposée à chacun. »",
+      "Mathis : « Si on abandonne cette formule, on laisse le champ libre à l’oubli. »",
+      "Sana : « Une formule aussi large fige le passé : on récite au lieu de comprendre. »",
+      "Paul : « Sans cette formule, plus personne ne se sentirait responsable de transmettre. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 11,
+     "enonce": "Combien d’années séparent la loi Taubira de la décision du Conseil constitutionnel sur le génocide arménien ?",
+     "aide": "Soustrais 2001 à 2012.",
+     "explication": "2012 − 2001 = **11 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "conseil"
+     ],
+     "enonce": "Touche la date où le Conseil constitutionnel censure la loi pénalisant la négation du génocide arménien.",
+     "aide": "Ce n’est ni une loi, ni un recueil : cherche la décision d’un juge.",
+     "explication": "En **2012**, le Conseil constitutionnel censure cette loi au nom de la **liberté d’expression**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Contre la formule",
+      "Pour la formule"
+     ],
+     "enonce": "Classe chaque intervention du débat.",
+     "items": [
+      [
+       "Intervention d’Inès",
+       0
+      ],
+      [
+       "Intervention de Mathis",
+       1
+      ],
+      [
+       "Intervention de Sana",
+       0
+      ],
+      [
+       "Intervention de Paul",
+       1
+      ]
+     ],
+     "aide": "Qui juge la formule trop large, et qui craint l’oubli ?",
+     "explication": "Inès et Sana jugent la formule **trop large, qui fige le passé**. Mathis et Paul y voient une protection contre l’**oubli**."
+    },
+    {
+     "type": "choix",
+     "reponse": 3,
+     "enonce": "Pourquoi des historiens critiquent-ils certaines lois mémorielles ?",
+     "options": [
+      "Parce qu’elles interdisent l’accès aux archives de l’État",
+      "Parce qu’elles ne concernent que des événements récents",
+      "Parce qu’elles sont toujours censurées par le Conseil constitutionnel",
+      "Parce qu’il n’appartient pas au législateur d’écrire l’histoire"
+     ],
+     "aide": "Distingue le rôle du législateur et celui des historiens.",
+     "explication": "Les historiens rappellent qu’il **n’appartient pas au législateur d’écrire l’histoire** : c’est la tâche d’une communauté savante, fondée sur des sources."
+    }
+   ]
+  },
+  {
+   "chapitre": "65ff5d37-8556-5758-ace0-d6e503f49374",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qu’est-ce qui fait un citoyen attaché à la République ?",
+   "competence": "analyser-document",
+   "situation": "Trois élèves répondent à la question « Qu’est-ce qui fait un Français ? ». Le professeur leur fait ensuite comparer deux conceptions de la Nation.",
+   "documents": [
+    {
+     "id": "reponses",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois réponses",
+     "source": "Réponses écrites pour l’exercice",
+     "blocs": [
+      "Lou : « C’est avoir des ancêtres établis ici depuis longtemps. »",
+      "[[p|Idris]] : « C’est adhérer aux principes de la République — liberté, égalité, fraternité — et vouloir qu’ils soient mieux appliqués. »",
+      "Anna : « C’est parler la même langue à la maison. »"
+     ]
+    },
+    {
+     "id": "conceptions",
+     "type": "tableau",
+     "titre": "Deux conceptions du lien national",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "",
+      "Conception A",
+      "Conception B"
+     ],
+     "lignes": [
+      [
+       "Ce qui rassemble",
+       "Une origine commune",
+       "Les principes fondateurs de la République"
+      ],
+      [
+       "Qui peut en faire partie",
+       "Ceux qui descendent de la communauté d’origine",
+       "Tout citoyen qui y adhère"
+      ],
+      [
+       "Associée au philosophe",
+       "—",
+       "Jürgen Habermas"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reponses",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche l’élève dont la réponse correspond au patriotisme constitutionnel.",
+     "aide": "Cherche celui qui parle de principes plutôt que d’origine.",
+     "explication": "Idris attache la Nation aux **principes de la République**, et au souci de les mieux réaliser : c’est le patriotisme constitutionnel."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Quelle conception du tableau correspond au patriotisme constitutionnel ?",
+     "options": [
+      "La conception A, fondée sur une origine commune",
+      "Aucune : c’est un patriotisme réservé aux historiens",
+      "La conception B, fondée sur l’adhésion aux principes",
+      "Les deux : elles reposent sur la même idée de la Nation"
+     ],
+     "aide": "Le tableau associe une conception à Jürgen Habermas.",
+     "explication": "La conception **B**, associée à Habermas, est celle d’un patriotisme **par adhésion**, ouvert à qui adhère aux principes."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Le droit",
+      "La science historique",
+      "La politique mémorielle"
+     ],
+     "enonce": "Range chaque exemple dans le domaine dont il relève.",
+     "items": [
+      [
+       "Une loi qui punit la contestation de crimes contre l’humanité",
+       0
+      ],
+      [
+       "Une décision du Conseil constitutionnel de 2012",
+       0
+      ],
+      [
+       "Un travail d’historiens fondé sur des archives",
+       1
+      ],
+      [
+       "Un débat scientifique entre sources contradictoires",
+       1
+      ],
+      [
+       "Une cérémonie le 8 mai devant le monument aux morts",
+       2
+      ]
+     ],
+     "aide": "Trois niveaux : ce qui est juridique, ce qui est savant, ce qui est célébré.",
+     "explication": "Le **droit** (lois, décisions), la **science** (historiens, sources) et la **politique** (commémorations) ne se confondent pas : un bon réflexe de copie."
+    },
+    {
+     "type": "zone",
+     "document": "conceptions",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui décrit qui peut faire partie de la Nation dans la conception B.",
+     "aide": "Cherche la ligne « Qui peut en faire partie » et la colonne de la conception B.",
+     "explication": "Dans la conception B, **tout citoyen qui adhère** aux principes peut faire partie de la Nation : c’est un patriotisme ouvert."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf92abfb-c5c4-5cee-86d2-c26537206f93",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre incidents, quatre menaces",
+   "competence": "analyser-document",
+   "situation": "Le préfet de Valmar, ville imaginaire, reçoit quatre alertes dans la même semaine. Son équipe doit identifier chaque menace.",
+   "documents": [
+    {
+     "id": "incidents",
+     "type": "tableau",
+     "titre": "Les alertes de la semaine",
+     "source": "Incidents imaginés pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Incident"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Un logiciel malveillant bloque tous les ordinateurs d’un hôpital."
+      ],
+      [
+       "2",
+       "Des soldats patrouillent devant une gare après une alerte."
+      ],
+      [
+       "3",
+       "Une fausse vidéo annonce une panne d’eau générale la veille d’une élection."
+      ],
+      [
+       "4",
+       "Une épidémie sature les services d’urgence."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque incident à la menace qu’il illustre.",
+     "paires": [
+      [
+       "Incident 1",
+       "Une cyberattaque"
+      ],
+      [
+       "Incident 2",
+       "Une menace terroriste"
+      ],
+      [
+       "Incident 3",
+       "Une manipulation de l’information"
+      ],
+      [
+       "Incident 4",
+       "Une crise sanitaire"
+      ]
+     ],
+     "aide": "Les menaces nouvelles ne sont plus seulement militaires.",
+     "explication": "Cyberattaque, terrorisme, désinformation et crise sanitaire : quatre menaces qui relèvent de la **sécurité nationale**."
+    },
+    {
+     "type": "zone",
+     "document": "incidents",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’incident qui relève de la désinformation, une arme des guerres hybrides.",
+     "aide": "Cherche l’action menée par l’information, avant un vote.",
+     "explication": "Une fausse vidéo avant une élection est une **ingérence informationnelle**, typique d’une guerre hybride."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle agence protège l’État et les opérateurs d’importance vitale contre l’incident 1 ?",
+     "options": [
+      "L’ANSSI, agence de sécurité des systèmes d’information",
+      "La CNCDH, qui rend un rapport annuel sur le racisme",
+      "Le plan Vigipirate, qui organise la vigilance antiterroriste",
+      "La JDC, la journée défense et citoyenneté des jeunes"
+     ],
+     "aide": "L’incident 1 est une attaque contre un système d’information.",
+     "explication": "L’**ANSSI** protège l’État et les opérateurs d’importance vitale contre les cyberattaques."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf92abfb-c5c4-5cee-86d2-c26537206f93",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Depuis 1997 : comment s’engager ?",
+   "competence": "se-reperer-temps",
+   "situation": "Depuis la suspension de la conscription, comment un jeune se relie-t-il à la défense du pays ? Un élève de première réunit une frise et un tableau.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques repères",
+     "source": "Dates du cours",
+     "debut": 1995,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "conscription",
+       "date": 1997,
+       "nom": "Fin de la conscription"
+      },
+      {
+       "id": "blanc",
+       "date": 2008,
+       "nom": "Livre blanc"
+      },
+      {
+       "id": "art427",
+       "date": 2015,
+       "nom": "Article 42-7 invoqué"
+      }
+     ]
+    },
+    {
+     "id": "dispositifs",
+     "type": "tableau",
+     "titre": "Quatre dispositifs",
+     "source": "Résumé du cours",
+     "colonnes": [
+      "Dispositif",
+      "Public concerné"
+     ],
+     "lignes": [
+      [
+       "Recensement",
+       "Tous les Français, à 16 ans"
+      ],
+      [
+       "Journée défense et citoyenneté",
+       "Tous les jeunes Français"
+      ],
+      [
+       "Réserve opérationnelle",
+       "Des volontaires qui s’engagent auprès des armées"
+      ],
+      [
+       "Service militaire volontaire",
+       "Des jeunes volontaires, formés dans un cadre militaire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "blanc"
+     ],
+     "enonce": "Touche le texte de 2008 qui introduit la notion de « sécurité nationale ».",
+     "aide": "C’est un document sur la défense et la sécurité nationale.",
+     "explication": "Le **Livre blanc de 2008** introduit la notion de sécurité nationale."
+    },
+    {
+     "type": "nombre",
+     "unite": "ans",
+     "reponse": 7,
+     "enonce": "Combien d’années séparent le Livre blanc de la première invocation de l’article 42-7 ?",
+     "aide": "Soustrais 2008 à 2015.",
+     "explication": "2015 − 2008 = **7 ans**. La France a invoqué l’article 42-7 après les attentats du 13 novembre 2015."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Obligatoire",
+      "Volontaire"
+     ],
+     "enonce": "Classe chaque dispositif.",
+     "items": [
+      [
+       "Recensement",
+       0
+      ],
+      [
+       "Journée défense et citoyenneté",
+       0
+      ],
+      [
+       "Réserve opérationnelle",
+       1
+      ],
+      [
+       "Service militaire volontaire",
+       1
+      ]
+     ],
+     "aide": "Cherche dans le tableau ceux qui concernent « tous » les jeunes.",
+     "explication": "Recensement et JDC sont **obligatoires**. La réserve opérationnelle et le service militaire volontaire reposent sur un **engagement volontaire**."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Depuis 1997, comment le lien entre l’armée et la Nation se manifeste-t-il ?",
+     "options": [
+      "Par un service militaire obligatoire pour tous les jeunes Français",
+      "Uniquement par des interventions de l’armée à l’étranger",
+      "Par des démarches obligatoires et des engagements volontaires",
+      "Par la seule action des entreprises et des collectivités"
+     ],
+     "aide": "Regarde les deux colonnes du tableau.",
+     "explication": "La conscription est suspendue depuis 1997 : le lien passe par le **recensement**, la **JDC** et des engagements **volontaires**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cf92abfb-c5c4-5cee-86d2-c26537206f93",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une guerre qui ne dit pas son nom",
+   "competence": "analyser-texte",
+   "situation": "À Valmar, ville imaginaire, plusieurs événements se succèdent. Un groupe d’élèves analyse ce qu’est une guerre hybride, puis les réponses de la France.",
+   "documents": [
+    {
+     "id": "semaine",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une semaine à Valmar",
+     "source": "Article écrit pour l’exercice : lieux et faits imaginés",
+     "blocs": [
+      "Lundi, le réseau informatique du port de Valmar, grand port français, est paralysé par un logiciel malveillant.",
+      "Mardi, des comptes anonymes diffusent la fausse annonce d’une coupure d’eau dans toute la ville.",
+      "Mercredi, un État étranger impose sans préavis des taxes sur les produits que le port exporte.",
+      "Jeudi, des hommes sans uniforme occupent un poste frontière avant de se retirer.",
+      "Aucun État n’a déclaré la guerre."
+     ]
+    },
+    {
+     "id": "reponses",
+     "type": "tableau",
+     "titre": "Les réponses prévues",
+     "source": "Résumé du cours",
+     "colonnes": [
+      "Menace",
+      "Dispositif"
+     ],
+     "lignes": [
+      [
+       "Terrorisme",
+       "Plan Vigipirate et opération Sentinelle"
+      ],
+      [
+       "Cyberattaques",
+       "ANSSI"
+      ],
+      [
+       "Agression d’un État membre de l’Union",
+       "Article 42-7 du traité sur l’Union européenne"
+      ],
+      [
+       "Défense collective",
+       "OTAN"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Action cyber",
+      "Action informationnelle",
+      "Action économique",
+      "Action militaire"
+     ],
+     "enonce": "Classe chacune des actions décrites dans l’article.",
+     "items": [
+      [
+       "Le logiciel malveillant du lundi",
+       0
+      ],
+      [
+       "La fausse annonce du mardi",
+       1
+      ],
+      [
+       "Les taxes du mercredi",
+       2
+      ],
+      [
+       "L’occupation du poste frontière le jeudi",
+       3
+      ]
+     ],
+     "aide": "Une guerre hybride combine plusieurs types d’actions.",
+     "explication": "Cyber, information, économie, force militaire : une **guerre hybride** combine ces actions, menées **sous le seuil de la guerre déclarée**."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Pourquoi qualifie-t-on cette semaine de guerre hybride ?",
+     "options": [
+      "Parce que la guerre a été déclarée par un État étranger",
+      "Parce que plusieurs types d’actions s’enchaînent sans guerre déclarée",
+      "Parce que seule l’armée est visée par ces différentes attaques",
+      "Parce que ces événements n’ont aucun lien avec la sécurité nationale"
+     ],
+     "aide": "Relis la dernière phrase de l’article.",
+     "explication": "Actions militaires, cyber, économiques et informationnelles se combinent **sans déclaration de guerre** : c’est ce qui caractérise la guerre hybride."
+    },
+    {
+     "type": "zone",
+     "document": "reponses",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche le dispositif qui protège l’État et les opérateurs d’importance vitale contre l’événement du lundi.",
+     "aide": "Le lundi, c’est une attaque informatique.",
+     "explication": "L’**ANSSI** protège l’État et les opérateurs d’importance vitale contre les cyberattaques."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "vérifier",
+      "défense",
+      "croire",
+      "diffuser"
+     ],
+     "enonce": "Complète la phrase du cours à retenir.",
+     "texte": "Savoir ___ une information relève de la ___ nationale.",
+     "reponses": [
+      [
+       "vérifier"
+      ],
+      [
+       "défense"
+      ]
+     ],
+     "aide": "Face à la désinformation, il faut contrôler avant de croire.",
+     "explication": "Désinformation et ingérences électorales font partie des menaces : savoir **vérifier** une information relève de la **défense** nationale."
+    }
+   ]
+  }
+ ]
+}

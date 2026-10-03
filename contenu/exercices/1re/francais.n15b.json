@@ -1,0 +1,2081 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "5974e0f7-e0e0-57e3-8ba8-01134ffd9e17",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil condamné l’année même de sa parution",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Fleurs du mal*. Place les deux éditions du recueil sur la frise, puis relève ce qui se passe en 1857.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Baudelaire, de 1855 à 1870",
+     "debut": 1855,
+     "fin": 1870,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "pro",
+       "date": 1857,
+       "nom": "Procès"
+      },
+      {
+       "id": "ed",
+       "date": 1861,
+       "nom": "Édition"
+      },
+      {
+       "id": "mort",
+       "date": 1867,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Fleurs du mal",
+     "sousTitre": "Charles Baudelaire",
+     "emoji": "🥀",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1857"
+      },
+      {
+       "texte": "Verdict",
+       "valeur": "Condamné pour outrage aux bonnes mœurs"
+      },
+      {
+       "texte": "Sanction",
+       "valeur": "Six pièces retranchées"
+      },
+      {
+       "texte": "Dédicace",
+       "valeur": "À un « poète impeccable »"
+      }
+     ],
+     "pied": "Une édition augmentée paraît en 1861",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pro"
+     ],
+     "enonce": "Touche l’année où le recueil est publié et condamné.",
+     "aide": "C’est la première date de la frise.",
+     "explication": "Le recueil est publié et condamné en **1857**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La condamnation n’est annulée qu’en 1949 : combien d’années après 1857 ?",
+     "reponse": 92,
+     "unite": "ans",
+     "aide": "Soustrais 1857 de 1949.",
+     "explication": "1949 − 1857 = **92 ans** : il faut attendre plus d’un siècle pour que le recueil soit réhabilité."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "Le recueil est condamné en 1857 et ___ pièces sont retranchées ; Baudelaire le dédie à Théophile ___.",
+     "reponses": [
+      [
+       "six",
+       "6"
+      ],
+      [
+       "gautier"
+      ]
+     ],
+     "banque": [
+      "six",
+      "douze",
+      "Gautier",
+      "Hugo"
+     ],
+     "aide": "La fiche donne le nombre de pièces ; le cours donne le nom du dédicataire.",
+     "explication": "Six pièces sont retranchées ; le recueil est dédié à Théophile **Gautier**, « poète impeccable »."
+    }
+   ]
+  },
+  {
+   "chapitre": "5974e0f7-e0e0-57e3-8ba8-01134ffd9e17",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Entre spleen et idéal",
+   "competence": "analyser-texte",
+   "situation": "Deux quatrains pour deux notions. Lis-les, relève leurs images clés, puis relie les quatre notions du recueil à leur définition.",
+   "documents": [
+    {
+     "id": "sp",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Spleen",
+     "blocs": [
+      "Quand le ciel bas et lourd pèse comme un [[c|couvercle]]",
+      "Sur l’esprit gémissant en proie aux longs ennuis,"
+     ],
+     "source": "Charles Baudelaire, « Spleen » (« Quand le ciel bas et lourd… »), *Les Fleurs du mal*, vers 1 et 2"
+    },
+    {
+     "id": "co",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Correspondances",
+     "blocs": [
+      "La Nature est un temple où de vivants piliers",
+      "Laissent parfois sortir de confuses paroles ;",
+      "L’homme y passe à travers des forêts de [[s|symboles]]",
+      "Qui l’observent avec des regards familiers."
+     ],
+     "source": "Charles Baudelaire, « Correspondances », *Les Fleurs du mal*, strophe 1"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sp",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’image qui dit l’écrasement du ciel sur l’esprit.",
+     "aide": "Le ciel est comparé à un objet qui ferme une boîte.",
+     "explication": "Le ciel pèse comme un **couvercle** : il enferme l’esprit."
+    },
+    {
+     "type": "zone",
+     "document": "co",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que l’homme traverse dans la nature.",
+     "aide": "L’homme y passe « à travers des forêts de… ».",
+     "explication": "La nature est une forêt de **symboles** : parfums, couleurs et sons se répondent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à sa définition.",
+     "paires": [
+      [
+       "Le spleen",
+       "Angoisse sans objet, ennui métaphysique"
+      ],
+      [
+       "L’idéal",
+       "L’élévation par l’art, la beauté, le voyage rêvé"
+      ],
+      [
+       "Les correspondances",
+       "Parfums, couleurs et sons se répondent"
+      ],
+      [
+       "L’alchimie poétique",
+       "Faire de la boue de l’or par le travail de la forme"
+      ]
+     ],
+     "aide": "Le cours donne un exemple pour chaque notion.",
+     "explication": "**Spleen**, **idéal**, **correspondances** et **alchimie** sont les quatre clés du recueil."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison du ciel avec un couvercle ?",
+     "options": [
+      "Un monde étriqué qui enferme l’esprit dans l’ennui",
+      "Un monde ouvert qui invite l’esprit à voyager",
+      "Un monde protecteur qui rassure l’esprit inquiet",
+      "Un monde en fête que l’esprit regarde sans émotion"
+     ],
+     "reponse": 0,
+     "aide": "Un couvercle ferme, il n’ouvre pas.",
+     "explication": "Le ciel enferme l’esprit : image du **spleen**, ennui sans issue."
+    }
+   ]
+  },
+  {
+   "chapitre": "5974e0f7-e0e0-57e3-8ba8-01134ffd9e17",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Tu m’as donné ta boue et j’en ai fait de l’or »",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Baudelaire est-il moderne par sa forme ou par sa matière ? Tranche avec le projet d’épilogue et le dialogue, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "ep",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le projet d’épilogue",
+     "blocs": [
+      "Tu m’as donné ta [[x|boue]] et j’en ai fait de l’[[x|or]]."
+     ],
+     "source": "Charles Baudelaire, projet d’épilogue pour l’édition de 1861 des *Fleurs du mal*"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Baudelaire est moderne parce qu’il invente de nouvelles formes."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Faux : il écrit des sonnets et des alexandrins. C’est la [[m|matière]] qui est nouvelle : la ville, la laideur, le transitoire."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ep",
+     "multiple": true,
+     "reponse": [
+      "x"
+     ],
+     "enonce": "Touche les deux mots qui s’opposent dans cette formule.",
+     "aide": "Une matière sale, un métal précieux.",
+     "explication": "**Boue** et **or** : la beauté naît du travail de la forme, non du sujet."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Noé dit où se trouve la nouveauté de Baudelaire.",
+     "aide": "Noé l’oppose à la forme.",
+     "explication": "La nouveauté est dans la **matière** : la ville, la laideur, le transitoire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : classique de facture, ou révolutionnaire de matière.",
+     "categories": [
+      "Classique de facture",
+      "Révolutionnaire de matière"
+     ],
+     "items": [
+      [
+       "Le sonnet",
+       0
+      ],
+      [
+       "L’alexandrin",
+       0
+      ],
+      [
+       "La ville moderne",
+       1
+      ],
+      [
+       "La charogne et la laideur",
+       1
+      ],
+      [
+       "Le passant entrevu dans la foule",
+       1
+      ]
+     ],
+     "aide": "La forme garde la tradition ; le sujet la bouscule.",
+     "explication": "**Classique** : sonnets et alexandrins ; **révolutionnaire** : la ville, la laideur (« Une Charogne »), le transitoire (« À une passante »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « alchimie poétique » dans le projet d’épilogue ?",
+     "options": [
+      "La beauté vient de l’art et de la forme, non du sujet traité",
+      "La beauté vient du seul choix d’un sujet noble et agréable",
+      "La poésie doit imiter exactement le réel sans le transformer",
+      "La poésie doit rester claire et simple pour tous les lecteurs"
+     ],
+     "reponse": 0,
+     "aide": "Boue = le sujet ; or = le poème.",
+     "explication": "L’**alchimie** transforme un sujet laid en beauté par le travail de la forme."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a665d1e-0dd5-5d27-ae28-8832a4b3e59f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un valet, deux pères, une pièce de 1671",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Fourberies de Scapin* : carte d’identité de la pièce, puis personnages.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Fourberies de Scapin",
+     "sousTitre": "Molière",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Date",
+       "valeur": "1671"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Comédie en trois actes et en prose"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Naples"
+      },
+      {
+       "texte": "Modèle antique",
+       "valeur": "Le *Phormion* de Térence"
+      }
+     ],
+     "pied": "Un retour assumé à la farce",
+     "teinte": "violet"
+    },
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Quatre personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Scapin",
+       "Valet de Léandre, fourbe génial"
+      ],
+      [
+       "Silvestre",
+       "?"
+      ],
+      [
+       "Argante",
+       "Père d’Octave, avare et colérique"
+      ],
+      [
+       "Géronte",
+       "Père de Léandre, avare et crédule"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "per",
+     "multiple": false,
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le personnage qui mène toute l’intrigue.",
+     "aide": "C’est un valet très malin.",
+     "explication": "**Scapin** est « le moteur de toute la pièce »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle faut-il écrire pour Silvestre dans la case « ? »",
+     "options": [
+      "Le valet d’Octave, complice peureux",
+      "Le père de la jeune Zerbinette",
+      "Le faux spadassin engagé par Scapin",
+      "L’oncle qui paie la rançon de Léandre"
+     ],
+     "reponse": 0,
+     "aide": "Chaque jeune homme a son valet.",
+     "explication": "**Silvestre** est le valet d’Octave et le complice peureux de Scapin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Molière meurt en 1673 : combien d’années séparent la pièce de sa mort ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais 1671 de 1673.",
+     "explication": "1673 − 1671 = **2 ans** : c’est l’une de ses dernières pièces."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Comédie en ___ actes et en ___, dont l’action se passe à ___.",
+     "reponses": [
+      [
+       "trois",
+       "3"
+      ],
+      [
+       "prose"
+      ],
+      [
+       "naples"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "cinq",
+      "prose",
+      "vers",
+      "Naples",
+      "Paris"
+     ],
+     "aide": "La fiche donne le genre et le lieu.",
+     "explication": "Comédie en **trois** actes et en **prose**, à **Naples**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a665d1e-0dd5-5d27-ae28-8832a4b3e59f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois fourberies, un pardon",
+   "competence": "analyser-texte",
+   "situation": "Scapin ment, joue des rôles, fait peur. Lis une scène adaptée, relève ce qui fait rire, puis remets le fil de l’intrigue dans l’ordre.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La rançon (texte adapté)",
+     "blocs": [
+      {
+       "didascalie": "Scapin annonce une mauvaise nouvelle à Géronte."
+      },
+      {
+       "personnage": "Scapin",
+       "replique": "Votre fils est tombé aux mains d’un [[t|Turc]] : on le retient sur une galère, et l’on exige une rançon."
+      },
+      {
+       "personnage": "Géronte",
+       "replique": "Que diable allait-il faire dans cette [[g|galère]] ?"
+      }
+     ],
+     "source": "D’après Molière, *Les Fourberies de Scapin* (1671), acte II — texte adapté ; la réplique de Géronte est celle de la pièce"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot repris par la réplique la plus célèbre de la pièce.",
+     "aide": "Géronte s’étonne du lieu où son fils s’est fourré.",
+     "explication": "La célèbre réplique tourne autour de la **galère**."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel type de comique relève cette réplique répétée ?",
+     "options": [
+      "Un comique de mots",
+      "Un comique de gestes",
+      "Un comique de caractère",
+      "Un comique de situation tragique"
+     ],
+     "reponse": 0,
+     "aide": "Le cours range la galère du côté des mots.",
+     "explication": "C’est un comique de **mots** : la réplique, répétée, devient un refrain."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque victime de Scapin à sa ruse.",
+     "paires": [
+      [
+       "Argante",
+       "Un faux spadassin exige de l’argent pour casser le mariage"
+      ],
+      [
+       "Géronte, la rançon",
+       "Son fils serait retenu sur une galère turque"
+      ],
+      [
+       "Géronte, la vengeance",
+       "Enfermé dans un sac, il est roué de coups"
+      ]
+     ],
+     "aide": "Trois fourberies, trois victimes.",
+     "explication": "**Argante** : le faux spadassin ; **Géronte** : la galère turque, puis le sac."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces moments de l’intrigue dans l’ordre.",
+     "items": [
+      "Scapin trompe Argante et Géronte pour leur prendre de l’argent",
+      "Scapin enferme Géronte dans un sac et le roue de coups",
+      "Les deux jeunes filles se révèlent être les filles perdues des deux pères",
+      "Scapin obtient son pardon en feignant d’être mourant"
+     ],
+     "aide": "Les ruses d’abord, le dénouement ensuite.",
+     "explication": "Ruses, **sac**, **révélation** des filles perdues, puis **pardon** de Scapin."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a665d1e-0dd5-5d27-ae28-8832a4b3e59f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le valet metteur en scène",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Scapin est-il seulement un valet complice ? Boileau, lui, juge Molière sévèrement. Appuie-toi sur leur échange et sur ses vers.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Scapin est un valet qui aide gentiment les jeunes gens."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Il fait bien plus : il invente des rôles, des voix et des scènes. C’est un [[m|metteur]] en scène."
+      }
+     ]
+    },
+    {
+     "id": "bo",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le jugement de Boileau",
+     "blocs": [
+      "Dans ce sac [[r|ridicule]] où Scapin s’enveloppe,",
+      "Je ne reconnais plus l’auteur du *Misanthrope*."
+     ],
+     "source": "Nicolas Boileau, *Art poétique* (1674)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Adam dit ce qu’est vraiment Scapin.",
+     "aide": "Scapin dirige les autres comme un artiste de théâtre.",
+     "explication": "Scapin est un **metteur** en scène : il invente les rôles qu’il fait jouer."
+    },
+    {
+     "type": "zone",
+     "document": "bo",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche l’adjectif par lequel Boileau juge la scène du sac.",
+     "aide": "Il ne la trouve pas digne de Molière.",
+     "explication": "Boileau juge le sac **ridicule** : il regrette la farce."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon son type de comique.",
+     "categories": [
+      "De gestes",
+      "De mots",
+      "De caractère"
+     ],
+     "items": [
+      [
+       "Géronte enfermé dans le sac",
+       0
+      ],
+      [
+       "Les coups de bâton",
+       0
+      ],
+      [
+       "« Que diable allait-il faire dans cette galère ? »",
+       1
+      ],
+      [
+       "L’avarice d’Argante et de Géronte",
+       2
+      ],
+      [
+       "La crédulité de Géronte",
+       2
+      ]
+     ],
+     "aide": "Corps, paroles, tempérament.",
+     "explication": "**Gestes** : le sac, les coups ; **mots** : la galère ; **caractère** : l’avarice, la crédulité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Boileau reproche-t-il cette pièce à Molière ?",
+     "options": [
+      "Elle retourne à la farce, loin du *Misanthrope*",
+      "Elle imite trop servilement le *Phormion* de Térence",
+      "Elle abandonne la comédie pour la tragédie",
+      "Elle se passe dans une ville étrangère"
+     ],
+     "reponse": 0,
+     "aide": "Boileau compare le sac à l’auteur du *Misanthrope*.",
+     "explication": "Boileau regrette que Molière revienne à la **farce** après de grandes comédies."
+    }
+   ]
+  },
+  {
+   "chapitre": "cded14d6-f35f-59af-9043-d49a275922a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Moscou, 1905 : un attentat sur scène",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Justes* : carte d’identité de la pièce, puis le groupe de révolutionnaires.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Justes",
+     "sousTitre": "Albert Camus",
+     "emoji": "💣",
+     "lignes": [
+      {
+       "texte": "Création",
+       "valeur": "Décembre 1949"
+      },
+      {
+       "texte": "Actes",
+       "valeur": "Cinq"
+      },
+      {
+       "texte": "Fait réel",
+       "valeur": "L’attentat contre le grand-duc Serge, Moscou, 1905"
+      },
+      {
+       "texte": "Cycle",
+       "valeur": "La révolte"
+      }
+     ],
+     "pied": "Peut-on tuer pour la révolution ?",
+     "teinte": "violet"
+    },
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Le groupe",
+     "colonnes": [
+      "Personnage",
+      "Sa position"
+     ],
+     "lignes": [
+      [
+       "Kaliayev, poète",
+       "Il doit lancer la bombe"
+      ],
+      [
+       "Stepan, endurci par la prison",
+       "Il défend l’efficacité révolutionnaire"
+      ],
+      [
+       "Dora",
+       "?"
+      ],
+      [
+       "Annenkov",
+       "Le chef du groupe"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "per",
+     "multiple": false,
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le personnage qui doit lancer la bombe.",
+     "aide": "C’est le poète du groupe.",
+     "explication": "**Kaliayev** doit lancer la bombe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle position faut-il écrire pour Dora dans la case « ? »",
+     "options": [
+      "Elle aime Kaliayev et lui donne raison",
+      "Elle dénonce le groupe à la police",
+      "Elle refuse de lancer la bombe par peur",
+      "Elle dirige le groupe à la place d’Annenkov"
+     ],
+     "reponse": 0,
+     "aide": "Dora aime Kaliayev.",
+     "explication": "**Dora**, qui aime Kaliayev, lui donne raison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’attentat réel (1905) de la création de la pièce (1949) ?",
+     "reponse": 44,
+     "unite": "ans",
+     "aide": "Soustrais 1905 de 1949.",
+     "explication": "1949 − 1905 = **44 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "La pièce compte ___ actes et appartient au cycle de la ___.",
+     "reponses": [
+      [
+       "cinq",
+       "5"
+      ],
+      [
+       "révolte",
+       "revolte"
+      ]
+     ],
+     "banque": [
+      "cinq",
+      "trois",
+      "révolte",
+      "absurde"
+     ],
+     "aide": "La fiche donne le nombre d’actes et le cycle.",
+     "explication": "La pièce compte **cinq** actes et appartient au cycle de la **révolte**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cded14d6-f35f-59af-9043-d49a275922a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les enfants dans la calèche",
+   "competence": "analyser-texte",
+   "situation": "Kaliayev renonce à lancer la bombe. Lis une scène écrite pour l’exercice, puis suis les étapes de l’attentat et relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Après le premier passage (scène imaginée)",
+     "blocs": [
+      {
+       "didascalie": "Kaliayev revient les mains vides. Stepan l’attend."
+      },
+      {
+       "personnage": "Stepan",
+       "replique": "Tu n’as pas lancé la bombe. Pourquoi ?"
+      },
+      {
+       "personnage": "Kaliayev",
+       "replique": "J’ai vu des [[e|enfants]] dans la calèche. Je n’ai pas pu."
+      },
+      {
+       "personnage": "Stepan",
+       "replique": "Tu as eu pitié. Pour la révolution, c’est une [[f|faiblesse]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, d’après l’épisode central des *Justes* de Camus"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi Kaliayev n’a pas lancé la bombe.",
+     "aide": "Ce sont des innocents qui se trouvent dans la voiture.",
+     "explication": "Il y a des **enfants** dans la calèche : Kaliayev refuse de les tuer."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot par lequel Stepan juge le geste de Kaliayev.",
+     "aide": "Stepan en fait un défaut.",
+     "explication": "Stepan parle de **faiblesse** : pour lui, l’efficacité passe avant tout."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes de l’histoire dans l’ordre.",
+     "items": [
+      "Kaliayev renonce à lancer la bombe devant les enfants",
+      "Stepan lui reproche cette faiblesse",
+      "L’attentat réussit, deux jours plus tard",
+      "Kaliayev refuse la grâce proposée en prison",
+      "Kaliayev est pendu"
+     ],
+     "aide": "Avant l’attentat, l’attentat, puis la prison.",
+     "explication": "**Renoncement**, **reproche**, **attentat réussi**, **refus de la grâce**, puis **pendaison**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Dora",
+       "À la fin, elle demande à lancer la prochaine bombe"
+      ],
+      [
+       "Voinov",
+       "Il perd courage et veut quitter l’action directe"
+      ],
+      [
+       "Skouratov",
+       "Chef de la police, il tente de faire trahir Kaliayev"
+      ],
+      [
+       "Foka",
+       "Prisonnier devenu bourreau"
+      ]
+     ],
+     "aide": "Chaque personnage secondaire a une fonction précise.",
+     "explication": "**Dora** relaie Kaliayev, **Voinov** renonce, **Skouratov** tente de corrompre, **Foka** est bourreau."
+    }
+   ]
+  },
+  {
+   "chapitre": "cded14d6-f35f-59af-9043-d49a275922a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fin justifie-t-elle les moyens ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur la leçon des *Justes*. Tranche avec leur échange, complète l’argument et distribue les trois positions de la pièce.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Rémi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Camus montre que la fin justifie les moyens : l’attentat réussit."
+      },
+      {
+       "qui": "Rémi",
+       "texte": "Faux : Kaliayev renonce devant des enfants, et le révolté doit [[p|payer]] de sa vie le meurtre qu’il commet."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La révolte a une limite",
+       "On ne tue pas des innocents",
+       "?"
+      ],
+      [
+       "Le meurtre a un prix",
+       "Le révolté accepte de payer de sa vie",
+       "Kaliayev refuse la grâce et marche à la mort"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe par lequel Rémi dit ce que le révolté doit faire de sa vie.",
+     "aide": "C’est la condition pour qu’il puisse tuer.",
+     "explication": "Le révolté doit **payer** de sa vie le meurtre qu’il commet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Kaliayev renonce au premier passage à cause des enfants",
+      "Stepan reproche à Kaliayev sa faiblesse devant le groupe",
+      "Dora demande à lancer la prochaine bombe",
+      "Skouratov propose un marchandage au prisonnier"
+     ],
+     "reponse": 0,
+     "aide": "Quel geste montre qu’on refuse de tuer des innocents ?",
+     "explication": "Kaliayev **renonce** devant les enfants : c’est la limite de la révolte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : idéalisme moral, efficacité révolutionnaire, ou amour.",
+     "categories": [
+      "Idéalisme moral",
+      "Efficacité révolutionnaire",
+      "Amour"
+     ],
+     "items": [
+      [
+       "Refuser de tuer des enfants",
+       0
+      ],
+      [
+       "Défendre ce refus au nom de la justice",
+       0
+      ],
+      [
+       "Placer la morale après le résultat",
+       1
+      ],
+      [
+       "Reprocher à un camarade sa pitié",
+       1
+      ],
+      [
+       "Soutenir celui qu’on aime et lui donner raison",
+       2
+      ]
+     ],
+     "aide": "Chaque personnage incarne une position.",
+     "explication": "**Kaliayev** : l’idéalisme ; **Stepan** : l’efficacité ; **Dora** : l’amour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la pièce relève-t-elle de la tragédie moderne ?",
+     "options": [
+      "Elle oppose des personnages devant un dilemme moral sans issue heureuse",
+      "Elle met en scène des dieux qui punissent les héros orgueilleux",
+      "Elle raconte une aventure légère qui finit dans la joie",
+      "Elle défend sans nuance une cause politique contre une autre"
+     ],
+     "reponse": 0,
+     "aide": "Pas de dieux ici, mais un choix impossible.",
+     "explication": "Pas de dieux, mais un **dilemme moral** sans issue heureuse : c’est la tragédie moderne."
+    }
+   ]
+  },
+  {
+   "chapitre": "1a92a160-59b8-511e-9ba9-170727442954",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman par lettres, à la veille de la Révolution",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Liaisons dangereuses* : carte d’identité, puis les deux entreprises qui lancent l’histoire.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Liaisons dangereuses",
+     "sousTitre": "Choderlos de Laclos",
+     "emoji": "✉️",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1782"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Roman par lettres : 175 lettres"
+      },
+      {
+       "texte": "Auteur",
+       "valeur": "Un officier d’artillerie"
+      },
+      {
+       "texte": "Contexte",
+       "valeur": "L’aristocratie à la veille de la Révolution"
+      }
+     ],
+     "pied": "Un jeu de séduction mené comme une campagne militaire",
+     "teinte": "violet"
+    },
+    {
+     "id": "ent",
+     "type": "tableau",
+     "titre": "Deux entreprises",
+     "colonnes": [
+      "Qui",
+      "Son entreprise"
+     ],
+     "lignes": [
+      [
+       "La marquise de Merteuil",
+       "Se venger de Gercourt en faisant corrompre sa future épouse, Cécile de Volanges"
+      ],
+      [
+       "Le vicomte de Valmont",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ent",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui nomme la jeune fille sortie du couvent.",
+     "aide": "Cherche le prénom de la future épouse de Gercourt.",
+     "explication": "**Cécile de Volanges** est la future épouse de Gercourt, sortie du couvent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle entreprise faut-il écrire pour Valmont dans la case « ? »",
+     "options": [
+      "Séduire la présidente de Tourvel, femme pieuse et mariée",
+      "Épouser Cécile de Volanges avant le retour de Gercourt",
+      "Se venger de Madame de Volanges devant toute la cour",
+      "Protéger Danceny en le présentant dans le monde"
+     ],
+     "reponse": 0,
+     "aide": "Valmont vise une femme pieuse et mariée.",
+     "explication": "Valmont veut **séduire la présidente de Tourvel**, femme pieuse et mariée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "Roman ___ en ___ lettres, publié en ___.",
+     "reponses": [
+      [
+       "épistolaire",
+       "epistolaire"
+      ],
+      [
+       "175"
+      ],
+      [
+       "1782"
+      ]
+     ],
+     "banque": [
+      "épistolaire",
+      "historique",
+      "175",
+      "75",
+      "1782",
+      "1792"
+     ],
+     "aide": "La fiche donne le nombre de lettres et la date.",
+     "explication": "Roman **épistolaire** en **175** lettres, publié en **1782**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du roman (1782) de la Révolution (1789) ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Soustrais 1782 de 1789.",
+     "explication": "1789 − 1782 = **7 ans** : le roman montre une aristocratie à la veille de la Révolution."
+    }
+   ]
+  },
+  {
+   "chapitre": "1a92a160-59b8-511e-9ba9-170727442954",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du pari à la chute",
+   "competence": "analyser-texte",
+   "situation": "Le jeu tourne mal. Lis un billet imaginé dans la manière de Laclos, repère la chaîne des retournements, puis relie chaque personnage à son sort.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Les retournements",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Valmont séduit la présidente de Tourvel"
+      },
+      {
+       "id": "n2",
+       "texte": "Il tombe amoureux d’elle"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Tourvel en meurt"
+      },
+      {
+       "id": "n5",
+       "texte": "Danceny tue Valmont en duel"
+      },
+      {
+       "id": "n6",
+       "texte": "Merteuil est démasquée et s’enfuit"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    },
+    {
+     "id": "bil",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Un billet de Merteuil (pastiche)",
+     "blocs": [
+      "Vous voulez qu’on vous plaigne d’avoir réussi ? Je ne vous croyais pas si tendre.",
+      "Vous direz à votre présidente que vous ne l’aimez plus, en deux lignes, et que ce n’est pas votre [[f|faute]]. Je l’[[x|exige]]."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Laclos"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Merteuil, jalouse, exige que Valmont rompe par une lettre cruelle",
+      "Valmont renonce à Tourvel et se retire dans un couvent",
+      "Tourvel découvre le pari et quitte Paris en secret",
+      "Danceny confie à Madame de Volanges les lettres de Valmont"
+     ],
+     "reponse": 0,
+     "aide": "Valmont est amoureux : qui s’en irrite ?",
+     "explication": "**Merteuil**, jalouse, **exige la rupture** par une lettre cruelle."
+    },
+    {
+     "type": "zone",
+     "document": "bil",
+     "multiple": false,
+     "reponse": [
+      "x"
+     ],
+     "enonce": "Touche le verbe qui montre que Merteuil donne un ordre à Valmont.",
+     "aide": "Elle ne demande pas : elle…",
+     "explication": "Merteuil l’**exige** : elle commande, Valmont obéit."
+    },
+    {
+     "type": "zone",
+     "document": "bil",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui reprend la formule célèbre de la lettre de rupture.",
+     "aide": "La formule dit « ce n’est pas ma… ».",
+     "explication": "**Faute** : « ce n’est pas ma faute », la formule cruelle de la rupture."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son sort.",
+     "paires": [
+      [
+       "Tourvel",
+       "Elle meurt de la rupture"
+      ],
+      [
+       "Valmont",
+       "Il est tué en duel et lègue les lettres de Merteuil"
+      ],
+      [
+       "Merteuil",
+       "Démasquée et ruinée, elle s’enfuit"
+      ],
+      [
+       "Danceny",
+       "Il tue Valmont en duel"
+      ]
+     ],
+     "aide": "Chaque sort découle de la chaîne des retournements.",
+     "explication": "**Tourvel** meurt, **Valmont** est tué, **Merteuil** est démasquée, **Danceny** tue Valmont."
+    }
+   ]
+  },
+  {
+   "chapitre": "1a92a160-59b8-511e-9ba9-170727442954",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un roman sans narrateur : le lecteur juge",
+   "competence": "argumenter",
+   "situation": "Un roman immoral ou un roman qui prétend instruire ? Deux élèves en discutent ; toi, tu examines le texte clé de la lettre 81 et la forme épistolaire.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Merteuil sur elle-même",
+     "blocs": [
+      "Je les ai créés, et je puis dire que je suis mon [[o|ouvrage]]."
+     ],
+     "source": "Pierre Choderlos de Laclos, *Les Liaisons dangereuses* (1782), lettre 81, la marquise de Merteuil"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clara",
+       "texte": "Ce roman est immoral : il montre le vice et le rend séduisant."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Il n’y a pas de narrateur : chaque lettre a sa [[s|stratégie]], et c’est le lecteur qui reconstitue seul la vérité."
+      },
+      {
+       "qui": "Clara",
+       "texte": "Donc c’est au lecteur de juger ?"
+      },
+      {
+       "qui": "Samir",
+       "texte": "Oui : voilà ce que permet le roman épistolaire."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot par lequel Merteuil dit qu’elle s’est faite elle-même.",
+     "aide": "Elle se compare à une œuvre dont elle serait l’auteur.",
+     "explication": "Merteuil est son propre **ouvrage** : elle s’est construite pour survivre dans un monde d’hommes."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que poursuit chaque lettre, selon Samir.",
+     "aide": "Chaque lettre a un style, un destinataire et…",
+     "explication": "Chaque lettre a sa **stratégie** : elle cherche à agir sur son destinataire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : ce qui relève de la forme épistolaire, ou de ce que le roman montre.",
+     "categories": [
+      "La forme épistolaire",
+      "Ce que le roman montre"
+     ],
+     "items": [
+      [
+       "Chaque lettre a son style et son destinataire",
+       0
+      ],
+      [
+       "Le lecteur reconstitue seul la vérité",
+       0
+      ],
+      [
+       "Plusieurs points de vue se croisent",
+       0
+      ],
+      [
+       "Une aristocratie à la veille de la Révolution",
+       1
+      ],
+      [
+       "Une éducation féminine pour survivre dans un monde d’hommes",
+       1
+      ],
+      [
+       "Une préface qui prétend instruire sur les dangers du vice",
+       1
+      ]
+     ],
+     "aide": "La forme, c’est la manière d’écrire ; le fond, ce qu’elle dévoile.",
+     "explication": "**Forme** : style, destinataire, lecteur juge ; **fond** : aristocratie, éducation féminine, préface morale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel sujet de dissertation ce dossier permet-il le mieux de traiter ?",
+     "options": [
+      "Merteuil, victime ou créatrice d’elle-même dans un monde d’hommes ?",
+      "Pourquoi Laclos a-t-il abandonné sa carrière d’officier ?",
+      "La Révolution a-t-elle été provoquée par ce roman ?",
+      "Valmont est-il l’auteur de la lettre 81 ?"
+     ],
+     "reponse": 0,
+     "aide": "Qui a fabriqué Merteuil ?",
+     "explication": "Le dossier éclaire la **condition féminine** : Merteuil se fabrique pour survivre."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0961faa-1a80-5acb-8da2-ad5dfd01be5d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Illyrie, 1943-1945",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Mains sales* : carte d’identité de la pièce, puis personnages.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Mains sales",
+     "sousTitre": "Jean-Paul Sartre",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Création",
+       "valeur": "1948"
+      },
+      {
+       "texte": "Construction",
+       "valeur": "Sept tableaux, en grande partie en flash-back"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "L’Illyrie, pays imaginaire d’Europe de l’Est"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "1943-1945"
+      }
+     ],
+     "pied": "Faut-il se salir les mains pour agir ?",
+     "teinte": "violet"
+    },
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Hugo",
+       "Jeune bourgeois qui veut prouver qu’il est un vrai révolutionnaire"
+      ],
+      [
+       "Hoederer",
+       "Chef réaliste, prêt aux compromis pour éviter des morts"
+      ],
+      [
+       "Jessica",
+       "La femme de Hugo, qui joue et cherche un homme vrai"
+      ],
+      [
+       "Olga",
+       "?"
+      ],
+      [
+       "Louis",
+       "Le responsable du parti, dur et méfiant"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "per",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le chef réaliste, prêt aux compromis.",
+     "aide": "Il veut éviter des morts.",
+     "explication": "**Hoederer** est le chef réaliste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle faut-il écrire pour Olga dans la case « ? »",
+     "options": [
+      "Militante qui protège Hugo à sa sortie de prison",
+      "Journaliste qui enquête sur la mort d’Hoederer",
+      "Cheffe du parti qui ordonne l’assassinat",
+      "Sœur d’Hoederer, qui veut le venger"
+     ],
+     "reponse": 0,
+     "aide": "Olga aide Hugo quand il sort.",
+     "explication": "**Olga** est la militante qui protège Hugo à sa sortie de prison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’action se passe entre 1943 et 1945 : combien d’années couvre-t-elle ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais 1943 de 1945.",
+     "explication": "1945 − 1943 = **2 ans**, à la fin de la Seconde Guerre mondiale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "La pièce est créée en ___ ; elle compte ___ tableaux.",
+     "reponses": [
+      [
+       "1948"
+      ],
+      [
+       "sept",
+       "7"
+      ]
+     ],
+     "banque": [
+      "1948",
+      "1958",
+      "sept",
+      "trois"
+     ],
+     "aide": "La fiche donne la date et la construction.",
+     "explication": "Créée en **1948**, elle compte **sept** tableaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0961faa-1a80-5acb-8da2-ad5dfd01be5d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un assassinat raconté à rebours",
+   "competence": "analyser-texte",
+   "situation": "La pièce raconte en flash-back. Lis un résumé, remets les événements dans l’ordre où ils se sont passés, puis relie les moments clés à leur sens.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Résumé",
+     "blocs": [
+      "Hugo, jeune bourgeois devenu communiste en Illyrie, sort de prison. Le parti doit décider s’il faut le liquider.",
+      "Deux ans plus tôt, on l’avait chargé d’assassiner Hoederer, accusé de trahison parce qu’il veut s’allier aux conservateurs. Devenu son [[s|secrétaire]], Hugo l’admire et hésite. Il tire enfin, mais par [[j|jalousie]]."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le poste que Hugo occupe auprès d’Hoederer.",
+     "aide": "Il travaille à côté de lui.",
+     "explication": "Hugo devient le **secrétaire** d’Hoederer."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le mot qui explique le geste final de Hugo.",
+     "aide": "Il a surpris sa femme dans les bras d’Hoederer.",
+     "explication": "Hugo tire par **jalousie** : ses motifs restent ambigus."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces événements dans l’ordre où ils se sont passés (chronologie, et non ordre du récit).",
+     "items": [
+      "On charge Hugo d’assassiner Hoederer",
+      "Hugo devient le secrétaire d’Hoederer",
+      "Hugo tue Hoederer",
+      "Hugo sort de prison",
+      "Hugo refuse de renier son acte"
+     ],
+     "aide": "Le récit commence par la fin : la chronologie, non.",
+     "explication": "Mission, **secrétariat**, **meurtre**, puis **sortie de prison** et **refus** de renier son acte."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque moment de la pièce à son sens.",
+     "paires": [
+      [
+       "La leçon d’Hoederer",
+       "Un homme politique doit accepter de se salir les mains"
+      ],
+      [
+       "L’acte",
+       "Hugo tire dans un accès de jalousie"
+      ],
+      [
+       "L’ironie",
+       "La ligne d’Hoederer devient celle du parti"
+      ],
+      [
+       "La fin",
+       "Hugo se déclare « non récupérable »"
+      ]
+     ],
+     "aide": "Chaque moment a un effet dans la pièce.",
+     "explication": "**Leçon**, **acte**, **ironie**, **fin** : tout tient dans l’ambiguïté des motifs de Hugo."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0961faa-1a80-5acb-8da2-ad5dfd01be5d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pureté ou efficacité",
+   "competence": "argumenter",
+   "situation": "La pièce refuse de trancher entre deux attitudes. Lis une scène imaginée, complète le tableau, puis distribue arguments et sujets.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une discussion (scène imaginée)",
+     "blocs": [
+      {
+       "didascalie": "Dans un bureau de parti, un jeune militant et un chef discutent d’un mensonge utile."
+      },
+      {
+       "personnage": "Le jeune militant",
+       "replique": "Un chef qui ment à ses camarades les trahit. Je veux garder des mains [[p|propres]]."
+      },
+      {
+       "personnage": "Le chef",
+       "replique": "Garde-les propres : tu n’auras jamais rien [[a|fait]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Mains sales* de Sartre"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Deux attitudes",
+     "colonnes": [
+      "Ce qui compte",
+      "Hugo",
+      "Hoederer"
+     ],
+     "lignes": [
+      [
+       "Ce qu’il défend",
+       "La pureté",
+       "?"
+      ],
+      [
+       "Ce qu’il accepte",
+       "Rien qui le salisse",
+       "Le compromis pour éviter des morts"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche l’adjectif qui dit ce que le jeune militant veut garder.",
+     "aide": "Il parle de ses mains.",
+     "explication": "Il veut des mains **propres** : c’est la pureté."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe par lequel le chef lui reproche de n’avoir rien accompli.",
+     "aide": "Il parle d’action.",
+     "explication": "Garder les mains propres, c’est n’avoir jamais rien **fait** : l’action salit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle valeur faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "L’efficacité",
+      "La fidélité à son milieu d’origine",
+      "L’amour de sa femme",
+      "Le goût du secret"
+     ],
+     "reponse": 0,
+     "aide": "Hoederer s’oppose à la pureté.",
+     "explication": "**Hoederer** défend l’**efficacité**, quitte à se salir les mains."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : plutôt Hugo, ou plutôt Hoederer.",
+     "categories": [
+      "Hugo",
+      "Hoederer"
+     ],
+     "items": [
+      [
+       "Veut prouver qu’il est un vrai révolutionnaire",
+       0
+      ],
+      [
+       "Ne sait pas lui-même pourquoi il a tiré",
+       0
+      ],
+      [
+       "Refuse de renier son acte",
+       0
+      ],
+      [
+       "Prêt aux compromis pour éviter des morts",
+       1
+      ],
+      [
+       "Accepte de se salir les mains",
+       1
+      ],
+      [
+       "Voit sa ligne adoptée par le parti",
+       1
+      ]
+     ],
+     "aide": "Hugo incarne la pureté, Hoederer l’efficacité.",
+     "explication": "**Hugo** : pureté, ambiguïté, refus de renier ; **Hoederer** : compromis, mains sales, ligne adoptée."
+    }
+   ]
+  },
+  {
+   "chapitre": "34bb28c2-64dd-5d9f-a19c-2b511f80bada",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman de 1862 écrit en exil",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Misérables* : place le roman dans la vie de Hugo, puis relève ses cinq parties.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Hugo et son roman",
+     "debut": 1830,
+     "fin": 1865,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "ins",
+       "date": 1832,
+       "nom": "Insurrection"
+      },
+      {
+       "id": "int",
+       "date": 1848,
+       "nom": "Interrompu"
+      },
+      {
+       "id": "pub",
+       "date": 1862,
+       "nom": "Parution"
+      }
+     ]
+    },
+    {
+     "id": "par",
+     "type": "tableau",
+     "titre": "Les cinq parties",
+     "colonnes": [
+      "Partie",
+      "Son centre"
+     ],
+     "lignes": [
+      [
+       "Fantine",
+       "La chute d’une mère"
+      ],
+      [
+       "Cosette",
+       "L’enfant sauvée"
+      ],
+      [
+       "Marius",
+       "?"
+      ],
+      [
+       "L’Idylle rue Plumet et l’épopée rue Saint-Denis",
+       "L’amour et la barricade"
+      ],
+      [
+       "Jean Valjean",
+       "Le sacrifice final"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche l’année de la parution du roman.",
+     "aide": "Hugo l’achève en exil, à Guernesey.",
+     "explication": "Le roman paraît en **1862**, chez un éditeur belge."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Hugo interrompt son roman en 1848 : combien d’années passent avant la parution ?",
+     "reponse": 14,
+     "unite": "ans",
+     "aide": "Soustrais 1848 de 1862.",
+     "explication": "1862 − 1848 = **14 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel centre faut-il écrire pour la partie « Marius » ?",
+     "options": [
+      "La jeunesse républicaine",
+      "La chute d’une mère de famille",
+      "L’enfant sauvée des Thénardier",
+      "Le sacrifice final de Valjean"
+     ],
+     "reponse": 0,
+     "aide": "Marius est un jeune républicain.",
+     "explication": "La partie **Marius** a pour centre la jeunesse républicaine."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le cours.",
+     "texte": "Jean Valjean est libéré après ___ ans de bagne pour un ___ volé.",
+     "reponses": [
+      [
+       "dix-neuf",
+       "19"
+      ],
+      [
+       "pain"
+      ]
+     ],
+     "banque": [
+      "dix-neuf",
+      "cinq",
+      "pain",
+      "argent"
+     ],
+     "aide": "Le cours donne la durée et l’objet du vol.",
+     "explication": "Valjean a passé **dix-neuf** ans au bagne pour un **pain** volé."
+    }
+   ]
+  },
+  {
+   "chapitre": "34bb28c2-64dd-5d9f-a19c-2b511f80bada",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De l’argenterie aux égouts",
+   "competence": "analyser-texte",
+   "situation": "Le parcours de Jean Valjean tient en quelques gestes. Lis un résumé, remets ces gestes dans l’ordre, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le parcours de Valjean",
+     "blocs": [
+      "Libéré après dix-neuf ans de bagne, Jean Valjean est accueilli par l’évêque Myriel et lui vole son argenterie. Repris par les gendarmes, il est sauvé par l’évêque, qui affirme la lui avoir donnée et y ajoute ses [[c|chandeliers]].",
+      "Devenu monsieur Madeleine, maire et industriel, il recueille Cosette, fille de Fantine, en l’arrachant aux Thénardier. L’inspecteur Javert le [[p|poursuit]] sans relâche."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’objet que l’évêque ajoute à l’argenterie.",
+     "aide": "C’est un objet de culte, pour la lumière.",
+     "explication": "L’évêque ajoute ses **chandeliers** : un geste qui change Valjean."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les gestes de Valjean dans l’ordre.",
+     "items": [
+      "Il sort du bagne après dix-neuf ans",
+      "Il vole l’argenterie de l’évêque Myriel",
+      "Il devient monsieur Madeleine, maire et industriel",
+      "Il recueille Cosette",
+      "Il sauve Marius dans les égouts",
+      "Il meurt, réconcilié, après avoir tout dit"
+     ],
+     "aide": "Du bagne à la mort, en passant par Paris.",
+     "explication": "**Bagne**, **vol de l’argenterie**, **monsieur Madeleine**, **Cosette**, **égouts**, puis **mort réconciliée**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Fantine",
+       "Prostituée morte de misère, mère de Cosette"
+      ],
+      [
+       "Marius",
+       "Jeune républicain qui aime Cosette"
+      ],
+      [
+       "Les Thénardier",
+       "Ceux à qui Valjean arrache Cosette"
+      ],
+      [
+       "Myriel",
+       "L’évêque qui sauve Valjean"
+      ]
+     ],
+     "aide": "Chaque personnage figure dans les étapes du résumé.",
+     "explication": "**Fantine**, **Marius**, **Thénardier**, **Myriel** : chacun fait avancer le destin de Valjean."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment meurt Javert, selon le cours ?",
+     "options": [
+      "Incapable de penser un criminel bon, il se jette dans la Seine",
+      "Il tombe sur la barricade de la rue de la Chanvrerie",
+      "Il est pendu après l’échec de l’insurrection de 1832",
+      "Il meurt épuisé dans les égouts de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Valjean l’a épargné : Javert ne le supporte pas.",
+     "explication": "Incapable de penser un criminel bon, Javert **se jette dans la Seine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "34bb28c2-64dd-5d9f-a19c-2b511f80bada",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un roman pour que cesse l’enfer social",
+   "competence": "argumenter",
+   "situation": "Un roman d’aventures ou un roman engagé ? Appuie-toi sur la préface, le débat de deux élèves, puis classe les digressions du roman.",
+   "documents": [
+    {
+     "id": "pr",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La préface",
+     "blocs": [
+      "Tant qu’il existera (…) une [[d|damnation]] sociale créant artificiellement des enfers, (…) des livres de la nature de celui-ci pourront ne pas être inutiles."
+     ],
+     "source": "Victor Hugo, *Les Misérables* (1862), préface (extraits)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maël",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maël",
+       "texte": "Les Misérables, c’est une aventure : un forçat, un policier, une barricade."
+      },
+      {
+       "qui": "Camille",
+       "texte": "C’est aussi un roman [[e|engagé]] : Hugo dénonce la misère, le bagne et le travail des enfants."
+      },
+      {
+       "qui": "Maël",
+       "texte": "Alors Javert, Valjean et Gavroche sont plus que des personnages ?"
+      },
+      {
+       "qui": "Camille",
+       "texte": "Ce sont des types : Javert, la Loi ; Valjean, la conscience ; Gavroche, le peuple de Paris."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pr",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui nomme ce que le roman dénonce.",
+     "aide": "Une condamnation que la société fabrique.",
+     "explication": "Le roman dénonce une **damnation** sociale : la misère fabriquée par les lois et les mœurs."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche l’adjectif par lequel Camille qualifie le roman.",
+     "aide": "Elle le range parmi les romans qui défendent une cause.",
+     "explication": "Le roman est **engagé** : il dénonce la misère, le bagne, le travail des enfants."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage au type qu’il incarne.",
+     "paires": [
+      [
+       "Javert",
+       "La Loi"
+      ],
+      [
+       "Jean Valjean",
+       "La conscience"
+      ],
+      [
+       "Gavroche",
+       "Le peuple de Paris"
+      ]
+     ],
+     "aide": "Le dialogue de Camille donne les trois types.",
+     "explication": "**Javert** : la Loi ; **Valjean** : la conscience ; **Gavroche** : le peuple de Paris."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du roman : récit, digression historique, ou digression sociale.",
+     "categories": [
+      "Le récit",
+      "Digression historique",
+      "Digression sociale"
+     ],
+     "items": [
+      [
+       "Les destins croisés de Valjean et de Cosette",
+       0
+      ],
+      [
+       "La bataille de Waterloo",
+       1
+      ],
+      [
+       "Les égouts de Paris",
+       2
+      ],
+      [
+       "L’argot",
+       2
+      ],
+      [
+       "Les couvents",
+       2
+      ]
+     ],
+     "aide": "Le roman mêle un récit et des analyses du monde.",
+     "explication": "**Récit** : les destins ; **historique** : Waterloo ; **sociales** : égouts, argot, couvents."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse ce dossier permet-il le mieux de défendre ?",
+     "options": [
+      "Un roman peut mêler récit et dénonciation au service d’une cause",
+      "Un roman doit éviter l’histoire pour rester populaire",
+      "Un roman d’aventures n’a rien à dire sur la société",
+      "Un roman engagé doit renoncer à tout personnage symbolique"
+     ],
+     "reponse": 0,
+     "aide": "Aventure et engagement ne s’excluent pas.",
+     "explication": "Le roman **mêle** récit populaire et dénonciation sociale : c’est la force de Hugo."
+    }
+   ]
+  }
+ ]
+}

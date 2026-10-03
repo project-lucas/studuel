@@ -564,7 +564,7 @@ En France aujourd’hui : **Anna Gavalda**, **Bernard Werber**.
 
 Le romancier observe, se documente, expérimente. Il étudie l’effet de l’**hérédité** et du **milieu** sur ses personnages.
 
-> Zola l’écrit dans *Le Roman expérimental* : le romancier est « un observateur et un expérimentateur ».
+> Zola l’écrit dans *Le Roman expérimental* : le romancier est « fait d’un observateur et d’un expérimentateur ».
 
 ## Les Rougon-Macquart
 = 20 romans, de 1871 à 1893, sur cinq générations d’une même famille

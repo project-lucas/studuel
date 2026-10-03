@@ -52,7 +52,7 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
         <Inline texte={l.texte} />
       </span>
       {pointilles && l.valeur ? <span className={s.pointilles} aria-hidden="true" /> : null}
-      {l.valeur ? <span className="shrink-0 tabular-nums">{l.valeur}</span> : null}
+      {l.valeur ? <span className="shrink-0 tabular-nums"><Inline texte={l.valeur} /></span> : null}
     </div>
   )
 
@@ -62,15 +62,15 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
         <div className={s.ticket}>
           <p className="text-center text-[0.95rem] font-bold tracking-widest uppercase">
             {doc.emoji ? `${doc.emoji} ` : ''}
-            {doc.entete}
+            <Inline texte={doc.entete} />
           </p>
-          {doc.sousTitre ? <p className="text-center opacity-70">{doc.sousTitre}</p> : null}
+          {doc.sousTitre ? <p className="text-center opacity-70"><Inline texte={doc.sousTitre} /></p> : null}
           <hr className="my-2 border-dashed border-current opacity-40" />
           {doc.lignes.map((l, i) => ligne(l, i, (x) => valeurADroite(x)))}
           {doc.pied ? (
             <>
               <hr className="my-2 border-dashed border-current opacity-40" />
-              <p className="text-center opacity-70">{doc.pied}</p>
+              <p className="text-center opacity-70"><Inline texte={doc.pied} /></p>
             </>
           ) : null}
         </div>
@@ -80,18 +80,18 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
         <div className={s.menu}>
           <p className="text-center text-xl font-bold italic" style={{ color: couleur(doc.teinte, 'brun') }}>
             {doc.emoji ? `${doc.emoji} ` : ''}
-            {doc.entete}
+            <Inline texte={doc.entete} />
           </p>
-          {doc.sousTitre ? <p className="mb-2 text-center text-sm italic opacity-70">{doc.sousTitre}</p> : null}
+          {doc.sousTitre ? <p className="mb-2 text-center text-sm italic opacity-70"><Inline texte={doc.sousTitre} /></p> : null}
           <div className="text-[0.92rem]">{doc.lignes.map((l, i) => ligne(l, i, (x) => valeurADroite(x, true)))}</div>
-          {doc.pied ? <p className="mt-2 text-center text-xs italic opacity-70">{doc.pied}</p> : null}
+          {doc.pied ? <p className="mt-2 text-center text-xs italic opacity-70"><Inline texte={doc.pied} /></p> : null}
         </div>
       )
     case 'etiquette':
       return (
         <div className={s.etiquetteNutri}>
-          <p className="text-[1.05rem] font-black">{doc.entete}</p>
-          {doc.sousTitre ? <p className="text-xs">{doc.sousTitre}</p> : null}
+          <p className="text-[1.05rem] font-black"><Inline texte={doc.entete} /></p>
+          {doc.sousTitre ? <p className="text-xs"><Inline texte={doc.sousTitre} /></p> : null}
           <div className="mt-1 border-t-8 border-[#1d1d1d] pt-1">
             {doc.lignes.map((l, i) =>
               ligne(l, i, (x) => (
@@ -104,7 +104,7 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
               )),
             )}
           </div>
-          {doc.pied ? <p className="mt-1 text-[0.68rem]">{doc.pied}</p> : null}
+          {doc.pied ? <p className="mt-1 text-[0.68rem]"><Inline texte={doc.pied} /></p> : null}
         </div>
       )
     case 'affiche':
@@ -116,8 +116,8 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
             style={{ background: `linear-gradient(160deg, ${couleur(doc.teinte, 'violet')}, color-mix(in oklch, ${couleur(doc.teinte, 'violet')}, black 22%))` }}
           >
             {doc.emoji ? <div className="text-4xl leading-none" aria-hidden="true">{doc.emoji}</div> : null}
-            <p className="font-heading mt-1 text-2xl leading-tight font-extrabold text-balance">{doc.entete}</p>
-            {doc.sousTitre ? <p className="mt-0.5 text-sm font-semibold opacity-90">{doc.sousTitre}</p> : null}
+            <p className="font-heading mt-1 text-2xl leading-tight font-extrabold text-balance"><Inline texte={doc.entete} /></p>
+            {doc.sousTitre ? <p className="mt-0.5 text-sm font-semibold opacity-90"><Inline texte={doc.sousTitre} /></p> : null}
           </div>
           <div className={cn('px-4 py-3 text-[0.9rem]', doc.modele === 'invitation' && 'text-center')}>
             {doc.lignes.map((l, i) =>
@@ -131,7 +131,7 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
           </div>
           {doc.pied ? (
             <p className="border-t border-dashed px-4 py-2 text-center text-xs font-bold" style={{ color: couleur(doc.teinte, 'violet') }}>
-              {doc.pied}
+              <Inline texte={doc.pied} />
             </p>
           ) : null}
         </div>
@@ -145,11 +145,11 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
           <div className="rounded-xl border-2 border-white/80 px-4 py-3 text-white">
             <p className="font-heading text-center text-xl leading-tight font-extrabold">
               {doc.emoji ? `${doc.emoji} ` : ''}
-              {doc.entete}
+              <Inline texte={doc.entete} />
             </p>
-            {doc.sousTitre ? <p className="text-center text-sm font-semibold opacity-90">{doc.sousTitre}</p> : null}
+            {doc.sousTitre ? <p className="text-center text-sm font-semibold opacity-90"><Inline texte={doc.sousTitre} /></p> : null}
             <div className="mt-2 text-[0.9rem] font-semibold">{doc.lignes.map((l, i) => ligne(l, i, (x) => valeurADroite(x)))}</div>
-            {doc.pied ? <p className="mt-2 text-center text-xs opacity-85">{doc.pied}</p> : null}
+            {doc.pied ? <p className="mt-2 text-center text-xs opacity-85"><Inline texte={doc.pied} /></p> : null}
           </div>
         </div>
       )
@@ -158,11 +158,11 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
         <div className="mx-auto max-w-sm rounded-xl bg-white p-4 shadow-[inset_0_0_0_1.5px_var(--papier-trait)]" style={{ backgroundImage: 'repeating-linear-gradient(transparent 0 1.55rem, color-mix(in oklch, var(--t-bleu), white 82%) 1.55rem 1.6rem)' }}>
           <p className="font-heading text-lg font-extrabold" style={{ color: couleur(doc.teinte, 'corail') }}>
             {doc.emoji ? `${doc.emoji} ` : ''}
-            {doc.entete}
+            <Inline texte={doc.entete} />
           </p>
-          {doc.sousTitre ? <p className="text-sm font-semibold opacity-70">{doc.sousTitre}</p> : null}
+          {doc.sousTitre ? <p className="text-sm font-semibold opacity-70"><Inline texte={doc.sousTitre} /></p> : null}
           <div className="mt-1 text-[0.92rem] leading-[1.6rem]">{doc.lignes.map((l, i) => ligne(l, i, (x) => valeurADroite(x)))}</div>
-          {doc.pied ? <p className="mt-1 text-xs italic opacity-70">{doc.pied}</p> : null}
+          {doc.pied ? <p className="mt-1 text-xs italic opacity-70"><Inline texte={doc.pied} /></p> : null}
         </div>
       )
     case 'horaires':
@@ -170,18 +170,18 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
         <div className={cn(s.horaires, 'mx-auto max-w-sm overflow-hidden rounded-xl shadow-lg')}>
           <p className="flex items-center gap-2 bg-black/25 px-3 py-2 text-sm font-extrabold tracking-wide text-white uppercase">
             {doc.emoji ? <span aria-hidden="true">{doc.emoji}</span> : null}
-            {doc.entete}
-            {doc.sousTitre ? <span className="ml-auto text-xs font-semibold normal-case opacity-80">{doc.sousTitre}</span> : null}
+            <Inline texte={doc.entete} />
+            {doc.sousTitre ? <span className="ml-auto text-xs font-semibold normal-case opacity-80"><Inline texte={doc.sousTitre} /></span> : null}
           </p>
           <div className="px-3 py-2 font-mono text-[0.85rem]">{doc.lignes.map((l, i) => ligne(l, i, (x) => valeurADroite(x)))}</div>
-          {doc.pied ? <p className="px-3 pb-2 text-xs text-white/70">{doc.pied}</p> : null}
+          {doc.pied ? <p className="px-3 pb-2 text-xs text-white/70"><Inline texte={doc.pied} /></p> : null}
         </div>
       )
     case 'carte-postale':
       return (
         <div className={cn(s.cartePostale, 'mx-auto grid max-w-md grid-cols-[1fr_auto] gap-3 rounded-md p-4 font-[Georgia,serif] shadow-md')}>
           <div className="text-[0.92rem] italic">
-            <p className="mb-1 font-bold not-italic">{doc.entete}</p>
+            <p className="mb-1 font-bold not-italic"><Inline texte={doc.entete} /></p>
             {doc.lignes.map((l, i) =>
               ligne(l, i, (x) => (
                 <p className="py-0.5">
@@ -189,7 +189,7 @@ export function Fiche({ doc, zones }: { doc: DocFiche; zones?: ZonesDoc }) {
                 </p>
               )),
             )}
-            {doc.pied ? <p className="mt-1 text-right">{doc.pied}</p> : null}
+            {doc.pied ? <p className="mt-1 text-right"><Inline texte={doc.pied} /></p> : null}
           </div>
           <div
             className="flex size-14 items-center justify-center rounded-sm border-2 border-dashed text-2xl"

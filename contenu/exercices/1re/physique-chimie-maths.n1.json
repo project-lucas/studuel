@@ -1,0 +1,2962 @@
+{
+ "niveau": "1re",
+ "matiere": "physique-chimie-maths",
+ "exercices": [
+  {
+   "chapitre": "29c363ad-7772-5fc0-a719-df6597bdc705",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq tours de pendule à l’atelier",
+   "competence": "lire-tableau",
+   "situation": "Au lycée, Inès chronomètre cinq fois la période d’un pendule pour vérifier le montage d’un banc d’essai. Elle note ses relevés dans un tableau.",
+   "documents": [
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Cinq mesures de la période du pendule",
+     "colonnes": [
+      "Mesure",
+      "n°1",
+      "n°2",
+      "n°3",
+      "n°4",
+      "n°5"
+     ],
+     "lignes": [
+      [
+       "T (s)",
+       "1,54",
+       "1,49",
+       "1,50",
+       "1,49",
+       "1,48"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rel",
+     "enonce": "Touche la plus grande des cinq mesures.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Compare les cinq nombres de la ligne T (s).",
+     "explication": "La plus grande valeur est **1,54 s**, relevée à la mesure n°1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des cinq mesures.",
+     "reponse": 1.5,
+     "aide": "Additionne les cinq valeurs puis divise par le nombre de mesures.",
+     "explication": "Somme : 1,54 + 1,49 + 1,50 + 1,49 + 1,48 = 7,50 s. Moyenne : 7,50 / 5 = **1,50 s**.",
+     "unite": "s",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "La calculatrice donne un écart-type s ≈ 0,023 s. Calcule l’incertitude-type u = s / √n, arrondie au centième de seconde.",
+     "reponse": 0.01,
+     "aide": "Ici n = 5 mesures : divise s par √5, soit environ 2,24.",
+     "explication": "u = 0,023 / √5 ≈ 0,0103 s, soit **0,01 s** au centième près.",
+     "unite": "s",
+     "tolerance": 0.0006
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle écriture du résultat est correcte ?",
+     "options": [
+      "T = 1,50 ± 0,01 s",
+      "T = 1,50 s",
+      "T = 1,5012 ± 0,01 s",
+      "T = 1,50 ± 0,010329 s"
+     ],
+     "reponse": 0,
+     "aide": "La valeur s’arrondit à la même décimale que l’incertitude, qui garde 1 ou 2 chiffres significatifs.",
+     "explication": "L’incertitude est arrondie à un chiffre significatif (0,01 s) et la valeur à la même décimale : **T = 1,50 ± 0,01 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "29c363ad-7772-5fc0-a719-df6597bdc705",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La sonde de l’étuve est-elle juste ?",
+   "competence": "experimenter",
+   "situation": "Lina vérifie la sonde de température d’une étuve de laboratoire en la plongeant dans un bain de glace fondante, dont la température vaut exactement 0,0 °C. Elle fait cinq lectures.",
+   "documents": [
+    {
+     "id": "sonde",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Cinq lectures de la sonde dans la glace fondante",
+     "categories": [
+      "n°1",
+      "n°2",
+      "n°3",
+      "n°4",
+      "n°5"
+     ],
+     "series": [
+      {
+       "nom": "θ lue (°C)",
+       "valeurs": [
+        1.8,
+        2.1,
+        2,
+        1.9,
+        2.2
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "θ lue",
+      "unite": "°C",
+      "min": 0,
+      "max": 3,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Lecture"
+     },
+     "valeurs": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sonde",
+     "enonce": "Touche la lecture la plus proche de la valeur vraie (0,0 °C).",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "La valeur vraie est 0,0 °C : cherche la barre la plus basse.",
+     "explication": "La lecture n°1 vaut **1,8 °C** : c’est la plus proche de 0,0 °C, mais elle en est encore très éloignée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des cinq lectures.",
+     "reponse": 2,
+     "aide": "Additionne les cinq valeurs puis divise par 5.",
+     "explication": "(1,8 + 2,1 + 2,0 + 1,9 + 2,2) / 5 = 10,0 / 5 = **2,0 °C**.",
+     "unite": "°C",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’écart-type des lectures est s ≈ 0,16 °C. Calcule u = s / √5, arrondie au centième de degré.",
+     "reponse": 0.07,
+     "aide": "Divise 0,16 par √5 ≈ 2,24.",
+     "explication": "u = 0,16 / √5 ≈ 0,0716 °C, soit **0,07 °C**.",
+     "unite": "°C",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec u = 0,07 °C, calcule z = |moyenne − valeur vraie| / u, arrondi à l’unité.",
+     "reponse": 29,
+     "aide": "Écart entre 2,0 et 0,0, puis division par 0,07.",
+     "explication": "z = |2,0 − 0,0| / 0,07 ≈ 28,6, soit environ **29** : très au-delà de 2.",
+     "tolerance": 0.6
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure sur la sonde ?",
+     "options": [
+      "Systématique : la sonde est décalée vers le haut",
+      "Aléatoire : les lectures fluctuent au hasard",
+      "Aucune : toutes les mesures sont compatibles",
+      "Aléatoire : la sonde est mal lue à chaque fois"
+     ],
+     "reponse": 0,
+     "aide": "Les lectures sont groupées, mais loin de la valeur vraie. Quel type d’erreur décale tout dans le même sens ?",
+     "explication": "Les lectures sont **fidèles** (peu dispersées) mais **pas justes** : toutes décalées d’environ +2 °C. C’est une **erreur systématique** : il faut ré-étalonner la sonde."
+    }
+   ]
+  },
+  {
+   "chapitre": "29c363ad-7772-5fc0-a719-df6597bdc705",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois groupes mesurent g",
+   "competence": "raisonner",
+   "situation": "Trois groupes de TP mesurent l’intensité de la pesanteur g avec un pendule. Leurs résultats se recoupent-ils avec la valeur de référence ? Il faut les comparer proprement.",
+   "documents": [
+    {
+     "id": "groupes",
+     "type": "tableau",
+     "titre": "Résultats des trois groupes",
+     "colonnes": [
+      "Groupe",
+      "Mesures",
+      "Moyenne (m/s²)",
+      "u (m/s²)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "5",
+       "9,70",
+       "0,05"
+      ],
+      [
+       "B",
+       "8",
+       "9,84",
+       "0,06"
+      ],
+      [
+       "C",
+       "16",
+       "9,76",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Règle de comparaison",
+     "blocs": [
+      "Valeur de référence : g = 9,81 m/s².",
+      "Un résultat est compatible avec la référence si z = |g mesuré − g référence| / u est inférieur à 2.",
+      "Groupe C : l’écart-type de ses 16 mesures vaut s = 0,20 m/s²."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "groupes",
+     "enonce": "Touche la moyenne la plus éloignée de la valeur de référence.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Calcule l’écart entre chaque moyenne et 9,81.",
+     "explication": "Écarts : A → 0,11 ; B → 0,03 ; C → 0,05. La moyenne la plus éloignée est celle du **groupe A (9,70)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule z pour le groupe B.",
+     "reponse": 0.5,
+     "aide": "z = écart / u, avec l’écart |9,84 − 9,81|.",
+     "explication": "z = 0,03 / 0,06 = **0,5**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’incertitude-type du groupe C : u = s / √n, avec n = 16.",
+     "reponse": 0.05,
+     "aide": "√16 = 4.",
+     "explication": "u = 0,20 / √16 = 0,20 / 4 = **0,05 m/s²**.",
+     "unite": "m/s²",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule alors z pour le groupe C.",
+     "reponse": 1,
+     "aide": "Écart |9,76 − 9,81| divisé par la valeur de u que tu viens de trouver.",
+     "explication": "z = 0,05 / 0,05 = **1,0**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour le groupe A, z = 0,11 / 0,05 = 2,2. Quels groupes sont compatibles avec la référence ?",
+     "options": [
+      "Les groupes B et C",
+      "Le groupe A seulement",
+      "Les trois groupes",
+      "Aucun groupe"
+     ],
+     "reponse": 0,
+     "aide": "Un résultat est compatible si z est inférieur à 2.",
+     "explication": "z vaut 2,2 pour A (> 2), 0,5 pour B et 1,0 pour C : seuls **B et C** sont compatibles. Pour A, on cherche une erreur systématique."
+    }
+   ]
+  },
+  {
+   "chapitre": "63725c90-87aa-5c8f-958a-7aff761769a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du moteur de la perceuse à la mèche",
+   "competence": "observer-schema",
+   "situation": "Sacha utilise une perceuse sans fil sur un chantier. Un technicien a relevé les puissances de la chaîne qui va de la batterie à la mèche.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Chaîne énergétique de la perceuse",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "bat",
+       "texte": "Batterie : 120 W délivrés",
+       "emoji": "🔋"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "meche",
+       "texte": "Mèche : 84 W utiles",
+       "emoji": "🔩"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bat",
+       "a": "mot",
+       "texte": "énergie électrique"
+      },
+      {
+       "de": "mot",
+       "a": "meche",
+       "texte": "énergie mécanique"
+      }
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche le convertisseur d’énergie de la chaîne.",
+     "reponse": [
+      "mot"
+     ],
+     "aide": "Un convertisseur transforme une forme d’énergie en une autre.",
+     "explication": "Le **moteur** reçoit de l’énergie électrique et fournit de l’énergie mécanique : c’est lui le convertisseur."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément à la forme d’énergie qui lui correspond.",
+     "paires": [
+      [
+       "Batterie",
+       "Énergie chimique stockée"
+      ],
+      [
+       "Fil entre batterie et moteur",
+       "Énergie électrique transférée"
+      ],
+      [
+       "Mèche qui tourne",
+       "Énergie cinétique"
+      ],
+      [
+       "Échauffement du moteur",
+       "Énergie thermique perdue"
+      ]
+     ],
+     "aide": "Une batterie stocke l’énergie sous forme chimique ; une pièce en mouvement a de l’énergie cinétique.",
+     "explication": "Batterie → chimique ; fil → électrique ; mèche en rotation → cinétique ; chaleur du moteur → thermique (pertes)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue dans le moteur (en W) ?",
+     "reponse": 36,
+     "aide": "Puissance reçue = puissance utile + puissance perdue.",
+     "explication": "Pertes : 120 − 84 = **36 W**, dissipés en chaleur.",
+     "unite": "W",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement du moteur (valeur entre 0 et 1).",
+     "reponse": 0.7,
+     "aide": "η = puissance utile / puissance reçue.",
+     "explication": "η = 84 / 120 = **0,70**, soit 70 %.",
+     "tolerance": 0.005
+    }
+   ]
+  },
+  {
+   "chapitre": "63725c90-87aa-5c8f-958a-7aff761769a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’autonomie de la batterie de la caravane",
+   "competence": "calculer",
+   "situation": "Dans leur caravane, Hugo et Maëlle alimentent leurs appareils avec une batterie de service. Ils veulent savoir combien de jours elle tient sans recharge.",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Consommation quotidienne",
+     "colonnes": [
+      "Appareil",
+      "Puissance (W)",
+      "Durée par jour (h)"
+     ],
+     "lignes": [
+      [
+       "Éclairage LED",
+       "12",
+       "5"
+      ],
+      [
+       "Pompe à eau",
+       "30",
+       "2"
+      ],
+      [
+       "Réfrigérateur",
+       "45",
+       "8"
+      ],
+      [
+       "Chargeurs",
+       "10",
+       "4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "batterie",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Batterie de service",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "🔋",
+     "lignes": [
+      {
+       "texte": "Tension nominale",
+       "valeur": "12 V"
+      },
+      {
+       "texte": "Capacité",
+       "valeur": "100 Ah"
+      },
+      {
+       "texte": "Masse",
+       "valeur": "11 kg"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche l’appareil qui consomme le plus d’énergie par jour.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Énergie = puissance × durée : calcule-la pour chaque appareil.",
+     "explication": "Éclairage 60 Wh, pompe 60 Wh, réfrigérateur 360 Wh, chargeurs 40 Wh : c’est le **réfrigérateur**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie totale consommée par jour, en wattheures.",
+     "reponse": 520,
+     "aide": "Additionne les produits P × Δt de chaque ligne.",
+     "explication": "12 × 5 + 30 × 2 + 45 × 8 + 10 × 4 = 60 + 60 + 360 + 40 = **520 Wh**.",
+     "unite": "Wh",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "La batterie stocke U × C wattheures (tension en volts × capacité en ampères-heures). Calcule cette énergie en Wh.",
+     "reponse": 1200,
+     "aide": "Lis la tension et la capacité sur la plaque signalétique.",
+     "explication": "12 V × 100 Ah = **1 200 Wh**, soit 1,2 kWh.",
+     "unite": "Wh",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’autonomie en jours, arrondie au dixième.",
+     "reponse": 2.3,
+     "aide": "Autonomie = énergie stockée / énergie consommée par jour.",
+     "explication": "1 200 / 520 ≈ **2,3 jours**.",
+     "unite": "jours",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime la consommation quotidienne en mégajoules (1 Wh = 3 600 J), arrondie au centième.",
+     "reponse": 1.87,
+     "aide": "Multiplie 520 par 3 600, puis divise par 10⁶.",
+     "explication": "520 × 3 600 = 1 872 000 J ≈ **1,87 MJ**.",
+     "unite": "MJ",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "63725c90-87aa-5c8f-958a-7aff761769a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Remplacer le moteur de la pompe ?",
+   "competence": "modeliser",
+   "situation": "Une exploitation agricole compare deux moteurs de pompe qui fournissent la même puissance utile. L’ancien est-il à remplacer ? Le moteur fonctionne 6 h par jour, 250 jours par an ; l’électricité coûte 0,25 € le kWh ; le moteur neuf coûte 240 €.",
+   "documents": [
+    {
+     "id": "moteurs",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Bilan de puissance des deux moteurs",
+     "categories": [
+      "Ancien",
+      "Neuf"
+     ],
+     "series": [
+      {
+       "nom": "Puissance reçue (W)",
+       "valeurs": [
+        800,
+        600
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Puissance perdue (W)",
+       "valeurs": [
+        320,
+        120
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "W",
+      "min": 0,
+      "max": 900,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Moteur"
+     },
+     "valeurs": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "moteurs",
+     "enonce": "Touche le moteur qui perd le moins de puissance en chaleur.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare les barres de puissance perdue.",
+     "explication": "Le moteur **neuf** ne perd que 120 W, contre 320 W pour l’ancien."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance utile fournissent les deux moteurs (en W) ?",
+     "reponse": 480,
+     "aide": "Puissance utile = puissance reçue − puissance perdue.",
+     "explication": "Ancien : 800 − 320 = 480 W. Neuf : 600 − 120 = 480 W. Les deux fournissent **480 W**.",
+     "unite": "W",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement du moteur neuf (valeur entre 0 et 1).",
+     "reponse": 0.8,
+     "aide": "η = puissance utile / puissance reçue.",
+     "explication": "η = 480 / 600 = **0,80**. (L’ancien : 480 / 800 = 0,60.)",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie électrique le moteur neuf économise-t-il en un an, en kWh ? (6 h × 250 jours = 1 500 h de marche)",
+     "reponse": 300,
+     "aide": "Compare 0,8 kW × 1 500 h et 0,6 kW × 1 500 h : une des deux est la consommation de l’ancien.",
+     "explication": "Ancien : 0,8 × 1 500 = 1 200 kWh. Neuf : 0,6 × 1 500 = 900 kWh. Économie : **300 kWh** par an.",
+     "unite": "kWh",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle économie cela représente-t-il en euros par an ?",
+     "reponse": 75,
+     "aide": "Multiplie les kWh économisés par le prix du kWh.",
+     "explication": "300 kWh × 0,25 € = **75 €** par an.",
+     "unite": "€",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "En combien d’années le moteur neuf (240 €) est-il remboursé par l’économie ?",
+     "reponse": 3.2,
+     "aide": "Divise le prix du moteur par l’économie annuelle.",
+     "explication": "240 / 75 = **3,2 ans** : le moteur neuf se rembourse en un peu plus de trois ans.",
+     "unite": "ans",
+     "tolerance": 0.05
+    }
+   ]
+  },
+  {
+   "chapitre": "79b096c3-0c69-542b-9fdc-6f2b8bed7397",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La chaudière de l’atelier : quel combustible ?",
+   "competence": "analyser-document",
+   "situation": "Mathis entretient la chaudière d’un petit atelier. Il consulte le tableau des combustibles qu’on peut y brûler et doit s’assurer de la bonne équation de combustion.",
+   "documents": [
+    {
+     "id": "combu",
+     "type": "tableau",
+     "titre": "Quelques combustibles",
+     "colonnes": [
+      "Combustible",
+      "Formule"
+     ],
+     "lignes": [
+      [
+       "Méthane",
+       "CH₄"
+      ],
+      [
+       "Éthène",
+       "C₂H₄"
+      ],
+      [
+       "Propane",
+       "C₃H₈"
+      ],
+      [
+       "Éthanol",
+       "C₂H₅OH"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Formules du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "combu",
+     "enonce": "Touche le combustible qui appartient à la famille des alcools.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Un alcool porte le groupe –OH.",
+     "explication": "L’**éthanol** C₂H₅OH porte le groupe caractéristique –OH : c’est un alcool."
+    },
+    {
+     "type": "zone",
+     "document": "combu",
+     "enonce": "Touche les deux alcanes (formule CₙH₂ₙ₊₂).",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "aide": "Pour CH₄, n = 1 : 2n + 2 = 4. Teste les autres formules.",
+     "explication": "CH₄ (n = 1) et C₃H₈ (n = 3) suivent la formule CₙH₂ₙ₊₂ : ce sont des **alcanes**. L’éthène C₂H₄ est un alcène.",
+     "multiple": true
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’équation de la combustion complète du méthane.",
+     "texte": "CH₄ + ___ O₂ → CO₂ + ___ H₂O",
+     "reponses": [
+      [
+       "2"
+      ],
+      [
+       "2"
+      ]
+     ],
+     "aide": "Équilibre d’abord C, puis H, puis O.",
+     "explication": "CH₄ + **2** O₂ → CO₂ + **2** H₂O : 4 atomes d’hydrogène donnent 2 H₂O, qui avec CO₂ contiennent 4 atomes d’oxygène."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel gaz toxique se forme si la combustion est incomplète ?",
+     "options": [
+      "Le monoxyde de carbone",
+      "Le dioxyde de carbone",
+      "Le dihydrogène",
+      "La vapeur d’eau"
+     ],
+     "reponse": 0,
+     "aide": "Il est incolore, inodore et mortel.",
+     "explication": "Quand le dioxygène manque, il se forme du **monoxyde de carbone CO**, gaz incolore et inodore dangereux."
+    }
+   ]
+  },
+  {
+   "chapitre": "79b096c3-0c69-542b-9fdc-6f2b8bed7397",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel combustible pour l’abri de jardin ?",
+   "competence": "calculer",
+   "situation": "Yanis veut chauffer son abri de jardin. Il compare le pouvoir calorifique de plusieurs combustibles avant de choisir.",
+   "documents": [
+    {
+     "id": "pc",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Pouvoir calorifique de quelques combustibles",
+     "categories": [
+      "Bois sec",
+      "Éthanol",
+      "Essence",
+      "Méthane",
+      "Dihydrogène"
+     ],
+     "series": [
+      {
+       "nom": "PC (MJ/kg)",
+       "valeurs": [
+        18,
+        27,
+        45,
+        50,
+        120
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "PC",
+      "unite": "MJ/kg",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": true,
+     "source": "Ordres de grandeur du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pc",
+     "enonce": "Touche le combustible dont le pouvoir calorifique est le plus grand.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Le **dihydrogène** libère 120 MJ par kilogramme, bien plus que les autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie libèrent 3,0 kg d’éthanol (Q = m × PC) ?",
+     "reponse": 81,
+     "aide": "Lis le PC de l’éthanol sur le graphique.",
+     "explication": "Q = 3,0 × 27 = **81 MJ**.",
+     "unite": "MJ",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime ces 81 MJ en kWh (1 kWh = 3,6 MJ).",
+     "reponse": 22.5,
+     "aide": "Divise par 3,6.",
+     "explication": "81 / 3,6 = **22,5 kWh**.",
+     "unite": "kWh",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de bois sec libère autant d’énergie qu’1 kg d’essence ?",
+     "reponse": 2.5,
+     "aide": "Énergie de 1 kg d’essence : 45 MJ. Combien de kg de bois à 18 MJ/kg ?",
+     "explication": "45 / 18 = **2,5 kg** de bois sec.",
+     "unite": "kg",
+     "tolerance": 0.05
+    }
+   ]
+  },
+  {
+   "chapitre": "79b096c3-0c69-542b-9fdc-6f2b8bed7397",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chauffage d’appoint du garage",
+   "competence": "analyser-document",
+   "situation": "Dans un garage mal ventilé, Louise allume un chauffage d’appoint au propane. Un détecteur enregistre la concentration en monoxyde de carbone (CO) dans la pièce. Elle veut comprendre ce qui se passe.",
+   "documents": [
+    {
+     "id": "chauffage",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Chauffage d’appoint",
+     "sousTitre": "Notice",
+     "emoji": "🔥",
+     "lignes": [
+      {
+       "texte": "Combustible : propane C₃H₈"
+      },
+      {
+       "texte": "Consommation",
+       "valeur": "0,20 kg par heure",
+       "id": "conso"
+      },
+      {
+       "texte": "Pouvoir calorifique du propane",
+       "valeur": "46 MJ/kg"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "co",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Concentration en CO dans le garage",
+     "categories": [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40",
+      "50",
+      "60"
+     ],
+     "series": [
+      {
+       "nom": "CO (ppm)",
+       "valeurs": [
+        0,
+        5,
+        20,
+        45,
+        80,
+        120,
+        170
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "CO",
+      "unite": "ppm",
+      "min": 0,
+      "max": 200,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "co",
+     "enonce": "Le seuil d’alerte du détecteur est 50 ppm. Touche le premier instant où la concentration dépasse ce seuil.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le premier point au-dessus de 50.",
+     "explication": "À 30 min la concentration vaut 45 ppm (sous le seuil) ; à **40 min** elle vaut 80 ppm : c’est le premier dépassement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’équation de combustion incomplète du propane.",
+     "texte": "2 C₃H₈ + ___ O₂ → 6 CO + 8 H₂O",
+     "reponses": [
+      [
+       "7"
+      ]
+     ],
+     "aide": "Compte les atomes d’oxygène à droite : 6 + 8.",
+     "explication": "À droite : 6 atomes d’oxygène dans CO et 8 dans H₂O, soit 14 : il faut **7** molécules O₂."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance thermique du chauffage en kW : énergie libérée en une heure (0,20 kg × 46 MJ/kg) divisée par 3 600 s. Arrondis au dixième.",
+     "reponse": 2.6,
+     "aide": "Énergie en MJ puis en J, avant de diviser par 3 600 s.",
+     "explication": "Q = 0,20 × 46 = 9,2 MJ par heure. P = 9,2 × 10⁶ / 3 600 ≈ 2 556 W, soit **2,6 kW**.",
+     "unite": "kW",
+     "tolerance": 0.05
+    },
+    {
+     "type": "choix",
+     "enonce": "Le détecteur sonne. Que faut-il faire ?",
+     "options": [
+      "Aérer, éteindre le chauffage et sortir",
+      "Fermer les fenêtres pour garder la chaleur",
+      "Rallumer à puissance maximale pour finir",
+      "Attendre que la concentration redescende"
+     ],
+     "reponse": 0,
+     "aide": "Le CO prend la place du dioxygène dans le sang : il faut renouveler l’air.",
+     "explication": "Il faut **aérer, éteindre l’appareil et sortir** : une pièce mal ventilée manque de dioxygène, d’où la combustion incomplète."
+    }
+   ]
+  },
+  {
+   "chapitre": "614b407f-51b8-5865-ba7e-2df9084769f7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une résistance sous 6 volts",
+   "competence": "observer-schema",
+   "situation": "Au laboratoire du lycée, Théo monte un circuit simple : un générateur de tension 6,0 V, un ampèremètre et une résistance R = 150 Ω. L’ampèremètre indique 0,040 A.",
+   "documents": [
+    {
+     "id": "circ",
+     "type": "circuit",
+     "titre": "Circuit en série",
+     "branches": [
+      {
+       "de": [
+        0,
+        4
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "generateur",
+       "nom": "G",
+       "id": "gene"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ],
+       "composant": "amperemetre",
+       "nom": "A",
+       "id": "am"
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        4
+       ],
+       "composant": "resistance",
+       "nom": "R",
+       "id": "res"
+      },
+      {
+       "de": [
+        8,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ]
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circ",
+     "enonce": "Touche l’appareil qui mesure l’intensité du courant.",
+     "reponse": [
+      "am"
+     ],
+     "aide": "Il se branche en série et porte la lettre A.",
+     "explication": "L’**ampèremètre** (symbole A) mesure l’intensité du courant, ici 0,040 A."
+    },
+    {
+     "type": "zone",
+     "document": "circ",
+     "enonce": "Touche le récepteur du circuit, celui qui reçoit l’énergie du générateur.",
+     "reponse": [
+      "res"
+     ],
+     "aide": "Le générateur fournit l’énergie ; l’autre dipôle la reçoit.",
+     "explication": "Le **conducteur ohmique** de 150 Ω est le récepteur : il reçoit l’énergie et la transforme en chaleur (effet Joule)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la tension aux bornes de la résistance avec la loi d’Ohm U = R × I.",
+     "reponse": 6,
+     "aide": "Multiplie 150 Ω par 0,040 A.",
+     "explication": "U = 150 × 0,040 = **6,0 V** : on retrouve la tension du générateur, car il n’y a qu’un seul récepteur.",
+     "unite": "V",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance reçue par la résistance, P = U × I.",
+     "reponse": 0.24,
+     "aide": "Multiplie la tension par l’intensité.",
+     "explication": "P = 6,0 × 0,040 = **0,24 W**. (On trouve la même chose avec P = R × I² = 150 × 0,040².)",
+     "unite": "W",
+     "tolerance": 0.005
+    }
+   ]
+  },
+  {
+   "chapitre": "614b407f-51b8-5865-ba7e-2df9084769f7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le convecteur du garage et le tableau électrique",
+   "competence": "calculer",
+   "situation": "Camille veut installer un convecteur électrique dans son garage et le brancher sur une prise. Elle lit la plaque signalétique de l’appareil et le schéma de son tableau électrique.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Convecteur électrique",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "🔌",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "230 V ~ 50 Hz"
+      },
+      {
+       "texte": "Puissance",
+       "valeur": "1 500 W",
+       "id": "puiss"
+      },
+      {
+       "texte": "Classe",
+       "valeur": "II"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Circuits du tableau électrique",
+     "colonnes": [
+      "Circuit",
+      "Disjoncteur (A)"
+     ],
+     "lignes": [
+      [
+       "Éclairage",
+       "10"
+      ],
+      [
+       "Prises",
+       "16"
+      ],
+      [
+       "Four",
+       "32"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la ligne qui donne la puissance de l’appareil.",
+     "reponse": [
+      "puiss"
+     ],
+     "aide": "La puissance s’exprime en watts.",
+     "explication": "La puissance nominale du convecteur est **1 500 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité du courant absorbé (P = U × I), arrondie au dixième.",
+     "reponse": 6.5,
+     "aide": "I = P / U avec U = 230 V.",
+     "explication": "I = 1 500 / 230 ≈ **6,5 A**.",
+     "unite": "A",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance du convecteur, arrondie au dixième (U = R × I).",
+     "reponse": 35.3,
+     "aide": "Utilise l’intensité exacte 1 500 / 230.",
+     "explication": "R = U / I = 230 / 6,52 ≈ **35,3 Ω**.",
+     "unite": "Ω",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie consomme-t-il en 4 h de chauffage, en kWh ?",
+     "reponse": 6,
+     "aide": "Convertis 1 500 W en 1,5 kW avant de multiplier par la durée.",
+     "explication": "E = P × Δt = 1,5 kW × 4 h = **6 kWh**.",
+     "unite": "kWh",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de convecteurs identiques peut-on brancher au maximum sur le circuit des prises, sans dépasser le disjoncteur ?",
+     "reponse": 2,
+     "aide": "Puissance maximale du circuit : 16 A × 230 V. Divise par 1 500 W et garde la partie entière.",
+     "explication": "Le circuit supporte 16 × 230 = 3 680 W. Comme 3 680 / 1 500 ≈ 2,45, on ne peut en brancher que **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "614b407f-51b8-5865-ba7e-2df9084769f7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La prise de courant à l’oscilloscope",
+   "competence": "lire-graphique",
+   "situation": "Au lycée, Nora observe à l’oscilloscope la tension du secteur français. Elle compare ensuite avec des relevés faits sur des prises étrangères.",
+   "documents": [
+    {
+     "id": "secteur",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension du secteur sur une période",
+     "categories": [
+      "0",
+      "2,5",
+      "5",
+      "7,5",
+      "10",
+      "12,5",
+      "15",
+      "17,5",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "u (V)",
+       "valeurs": [
+        0,
+        230,
+        325,
+        230,
+        0,
+        -230,
+        -325,
+        -230,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "u",
+      "unite": "V",
+      "min": -400,
+      "max": 400,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "etranger",
+     "type": "tableau",
+     "titre": "Relevés sur deux prises étrangères",
+     "colonnes": [
+      "Pays",
+      "Tension maximale (V)"
+     ],
+     "lignes": [
+      [
+       "Japon",
+       "141"
+      ],
+      [
+       "États-Unis",
+       "170"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "secteur",
+     "enonce": "Touche l’instant où la tension est maximale.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "La tension est maximale à **5 ms**, avec 325 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la période T de la tension sur le graphique, en ms.",
+     "reponse": 20,
+     "aide": "Combien de temps faut-il pour retrouver la même valeur en repartant dans le même sens ?",
+     "explication": "Le motif se reproduit au bout de **20 ms** : T = 20 ms.",
+     "unite": "ms",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence f = 1 / T, en hertz.",
+     "reponse": 50,
+     "aide": "Convertis T = 20 ms en secondes : 0,020 s.",
+     "explication": "f = 1 / 0,020 = **50 Hz**.",
+     "unite": "Hz",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur efficace de la tension (U eff = U max / √2), arrondie à l’unité.",
+     "reponse": 230,
+     "aide": "Lis U max sur le graphique, puis divise par √2 ≈ 1,414.",
+     "explication": "U eff = 325 / √2 ≈ 229,8, soit **230 V** : c’est la valeur « du secteur ».",
+     "unite": "V",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la valeur moyenne de cette tension sur une période ?",
+     "options": [
+      "0 V",
+      "230 V",
+      "325 V",
+      "162 V"
+     ],
+     "reponse": 0,
+     "aide": "Observe l’aire au-dessus et en dessous de l’axe.",
+     "explication": "Les parties positives et négatives se compensent : la valeur moyenne est **nulle**.",
+     "ordreFixe": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur efficace de la tension aux États-Unis à l’aide du tableau, arrondie à l’unité.",
+     "reponse": 120,
+     "aide": "Utilise la tension maximale de la ligne États-Unis.",
+     "explication": "U eff = 170 / √2 ≈ 120,2, soit **120 V**.",
+     "unite": "V",
+     "tolerance": 1
+    }
+   ]
+  },
+  {
+   "chapitre": "fc77e966-3e5d-5f90-99fa-7db5cb682ab4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La casserole sur la plaque chauffante",
+   "competence": "observer-schema",
+   "situation": "Alice fait chauffer de l’eau dans une casserole posée sur une plaque. Après quelques minutes, le manche est chaud et l’eau brasse en tournant doucement. Elle observe le schéma de la casserole.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Une casserole sur sa plaque",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 178,
+       "l": 220,
+       "h": 18,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "plaque",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 96,
+       "l": 160,
+       "h": 80,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "casserole"
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 116,
+       "l": 148,
+       "h": 54,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "eau",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 106,
+       "l": 80,
+       "h": 14,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "manche",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        164
+       ],
+       "a": [
+        110,
+        128
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        124
+       ],
+       "a": [
+        190,
+        124
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        128
+       ],
+       "a": [
+        190,
+        164
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        164
+       ],
+       "a": [
+        150,
+        140
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        214
+       ],
+       "a": [
+        90,
+        198
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        214
+       ],
+       "a": [
+        130,
+        198
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        214
+       ],
+       "a": [
+        170,
+        198
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        214
+       ],
+       "a": [
+        210,
+        198
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "etiquette",
+       "x": 290,
+       "y": 60,
+       "texte": "Manche",
+       "vers": [
+        275,
+        104
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 40,
+       "y": 56,
+       "texte": "Eau",
+       "vers": [
+        90,
+        120
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 290,
+       "y": 190,
+       "texte": "Plaque",
+       "vers": [
+        260,
+        190
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 234,
+       "texte": "Chaleur fournie par la plaque",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche la partie qui chauffe de proche en proche, sans que la matière se déplace (conduction).",
+     "reponse": [
+      "manche"
+     ],
+     "aide": "Quel élément est un solide qui reçoit la chaleur par la casserole ?",
+     "explication": "La chaleur se propage dans le **manche** de proche en proche : c’est la conduction."
+    },
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche l’endroit où l’on observe des courants de convection.",
+     "reponse": [
+      "eau"
+     ],
+     "aide": "La convection existe seulement dans un fluide.",
+     "explication": "Dans l’**eau**, le liquide chaud monte et le froid descend : c’est la convection, un transfert par déplacement de fluide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel sens se fait spontanément le transfert thermique entre la plaque et la casserole ?",
+     "options": [
+      "Du corps chaud vers le corps froid",
+      "Du corps froid vers le corps chaud",
+      "Dans les deux sens à la fois",
+      "Il n’y a pas de sens privilégié"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arrive à une tasse de thé posée sur la table.",
+     "explication": "Un transfert thermique se fait **spontanément du chaud vers le froid** : ici, de la plaque vers la casserole."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’eau est à 20 °C. Convertis cette température en kelvins.",
+     "reponse": 293.15,
+     "aide": "T(K) = θ(°C) + 273,15.",
+     "explication": "T = 20 + 273,15 = **293,15 K**, soit environ 293 K.",
+     "unite": "K",
+     "tolerance": 0.2
+    }
+   ]
+  },
+  {
+   "chapitre": "fc77e966-3e5d-5f90-99fa-7db5cb682ab4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La bouilloire de la cantine",
+   "competence": "modeliser",
+   "situation": "La bouilloire de la cantine contient 1,5 kg d’eau à 20 °C. On relève la température toutes les minutes pendant le chauffage. L’eau reçoit une puissance utile de 1 800 W.",
+   "documents": [
+    {
+     "id": "bouilloire",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Bouilloire",
+     "sousTitre": "Données",
+     "emoji": "🫖",
+     "lignes": [
+      {
+       "texte": "Masse d’eau",
+       "valeur": "1,5 kg"
+      },
+      {
+       "texte": "Capacité thermique de l’eau",
+       "valeur": "4 180 J/(kg·°C)"
+      },
+      {
+       "texte": "Puissance utile",
+       "valeur": "1 800 W"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "chauffe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température de l’eau pendant le chauffage",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "θ (°C)",
+       "valeurs": [
+        20,
+        37,
+        54,
+        72,
+        89,
+        100,
+        100
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "θ",
+      "unite": "°C",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chauffe",
+     "enonce": "Touche les deux instants du plateau de température.",
+     "reponse": [
+      "k5",
+      "k6"
+     ],
+     "aide": "Cherche où la courbe devient horizontale.",
+     "explication": "Aux minutes **5 et 6**, la température reste à 100 °C : c’est un plateau, signe d’un changement d’état.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis sur la courbe la température de l’eau à 3 min.",
+     "reponse": 72,
+     "aide": "Repère le point de la minute 3.",
+     "explication": "À 3 min, l’eau est à **72 °C** environ.",
+     "unite": "°C",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie faut-il pour porter l’eau de 20 °C à 100 °C (Q = m × c × Δθ), en kJ ?",
+     "reponse": 501.6,
+     "aide": "Δθ = 100 − 20 = 80 °C. Convertis les joules en kilojoules.",
+     "explication": "Q = 1,5 × 4 180 × 80 = 501 600 J = **501,6 kJ**.",
+     "unite": "kJ",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure ce chauffage avec 1 800 W utiles, en secondes ?",
+     "reponse": 279,
+     "aide": "Durée = énergie / puissance, énergie en joules.",
+     "explication": "Δt = 501 600 / 1 800 ≈ 278,7 s, soit **279 s** : un peu moins de 5 minutes, comme le montre le plateau qui commence vers la minute 5.",
+     "unite": "s",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la température reste-t-elle à 100 °C après la cinquième minute ?",
+     "options": [
+      "L’eau change d’état et la température reste constante",
+      "La bouilloire ne chauffe plus du tout",
+      "L’eau ne peut pas dépasser 100 °C car elle est pure",
+      "Le thermomètre est bloqué à sa valeur maximale"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arrive à un corps pur pendant un changement d’état.",
+     "explication": "Pendant la vaporisation, l’eau reçoit de l’énergie **sans que sa température change** : le plateau marque le changement d’état."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc77e966-3e5d-5f90-99fa-7db5cb682ab4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel matériau et quel isolant pour le ballon ?",
+   "competence": "analyser-document",
+   "situation": "Un artisan veut stocker de la chaleur dans un ballon de 100 kg d’eau, isolé par deux types d’isolants. Il compare les capacités thermiques de plusieurs matières, puis suit le refroidissement du ballon avec l’isolant A et avec l’isolant B.",
+   "documents": [
+    {
+     "id": "capa",
+     "type": "tableau",
+     "titre": "Capacités thermiques massiques",
+     "colonnes": [
+      "Matière",
+      "c (J/(kg·°C))"
+     ],
+     "lignes": [
+      [
+       "Eau",
+       "4 180"
+      ],
+      [
+       "Huile",
+       "2 000"
+      ],
+      [
+       "Aluminium",
+       "900"
+      ],
+      [
+       "Acier",
+       "450"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs du cours"
+    },
+    {
+     "id": "refroid",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température du ballon qui refroidit",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Isolant A",
+       "valeurs": [
+        60,
+        55,
+        51,
+        47.5,
+        44.5
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Isolant B",
+       "valeurs": [
+        60,
+        52,
+        45,
+        39,
+        34
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "θ",
+      "unite": "°C",
+      "min": 20,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (h)"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "capa",
+     "enonce": "Touche la matière qui stocke le plus de chaleur par kilogramme et par degré.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Compare les capacités thermiques massiques : la plus grande stocke le plus.",
+     "explication": "L’**eau** a la plus grande capacité thermique (4 180 J/(kg·°C)) : c’est pourquoi elle sert de réservoir de chaleur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie cède 10 kg d’eau qui refroidit de 60 °C à 30 °C, en kJ ?",
+     "reponse": 1254,
+     "aide": "Q = m × c × Δθ avec Δθ = 30 °C ; convertis en kJ.",
+     "explication": "Q = 10 × 4 180 × 30 = 1 254 000 J = **1 254 kJ**.",
+     "unite": "kJ",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Même calcul pour 10 kg d’acier qui refroidissent de 60 °C à 30 °C, en kJ.",
+     "reponse": 135,
+     "aide": "Utilise c = 450 J/(kg·°C).",
+     "explication": "Q = 10 × 450 × 30 = 135 000 J = **135 kJ**, presque dix fois moins que l’eau.",
+     "unite": "kJ",
+     "tolerance": 0.5
+    },
+    {
+     "type": "zone",
+     "document": "refroid",
+     "enonce": "Touche l’instant où le ballon avec l’isolant B passe sous 40 °C.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Suis la courbe de l’isolant B jusqu’à la première valeur inférieure à 40.",
+     "explication": "Avec l’isolant B, le ballon est à 45 °C à 4 h puis à **39 °C à 6 h** : il passe sous 40 °C à 6 h."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel isolant est le meilleur ?",
+     "options": [
+      "L’isolant A : la température baisse plus lentement",
+      "L’isolant B : la température baisse plus vite",
+      "Aucun : les deux courbes finissent au même endroit",
+      "L’isolant B : il atteint 34 °C en premier"
+     ],
+     "reponse": 0,
+     "aide": "Un bon isolant ralentit le transfert thermique vers l’extérieur.",
+     "explication": "Le ballon perd 15,5 °C en 8 h avec A, contre 26 °C avec B : **A** isole mieux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec l’isolant A, quelle énergie perd le ballon de 100 kg d’eau en 8 h, en MJ (arrondi au centième) ?",
+     "reponse": 6.48,
+     "aide": "Δθ = 60 − 44,5 = 15,5 °C ; Q = m × c × Δθ.",
+     "explication": "Q = 100 × 4 180 × 15,5 = 6 479 000 J ≈ **6,48 MJ**, soit environ 1,8 kWh.",
+     "unite": "MJ",
+     "tolerance": 0.02
+    }
+   ]
+  },
+  {
+   "chapitre": "8f3d1616-66f6-5169-84db-40639bc23d20",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le vélo de Malik sur la piste droite",
+   "competence": "lire-graphique",
+   "situation": "Malik roule en ligne droite sur une piste cyclable. Son compteur a relevé sa position toutes les secondes. On veut caractériser son mouvement.",
+   "documents": [
+    {
+     "id": "pos",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Position du vélo en fonction du temps",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "Distance parcourue (m)",
+       "valeurs": [
+        0,
+        5,
+        10,
+        15,
+        20
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "Distance",
+      "unite": "m",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pos",
+     "enonce": "Touche la position du vélo à l’instant t = 3 s.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point dont l’abscisse est 3.",
+     "explication": "À t = 3 s, le vélo a parcouru **15 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse du vélo (v = d / Δt), en m/s.",
+     "reponse": 5,
+     "aide": "Distance parcourue en 4 s : lis la dernière valeur.",
+     "explication": "v = 20 / 4 = **5 m/s**. C’est la même sur chaque intervalle : 5 m chaque seconde.",
+     "unite": "m/s",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette vitesse en km/h (1 m/s = 3,6 km/h).",
+     "reponse": 18,
+     "aide": "Multiplie par 3,6.",
+     "explication": "5 × 3,6 = **18 km/h**.",
+     "unite": "km/h",
+     "tolerance": 0.1
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le mouvement du vélo ?",
+     "options": [
+      "Rectiligne uniforme",
+      "Rectiligne accéléré",
+      "Rectiligne ralenti",
+      "Circulaire uniforme"
+     ],
+     "reponse": 0,
+     "aide": "La trajectoire est une droite ; regarde si la distance par seconde change.",
+     "explication": "La trajectoire est une droite et la vitesse est constante : le mouvement est **rectiligne uniforme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f3d1616-66f6-5169-84db-40639bc23d20",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le skateur de la rampe",
+   "competence": "modeliser",
+   "situation": "Lilian (40 kg avec sa planche) part sans vitesse du haut d’une rampe haute de 5 m, avec g = 9,81 N/kg. Un radar mesure sa vitesse en bas : 8,0 m/s. Le schéma montre la rampe.",
+   "documents": [
+    {
+     "id": "rampe",
+     "type": "schema",
+     "titre": "La rampe du skatepark",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         40,
+         50
+        ],
+        [
+         300,
+         190
+        ],
+        [
+         40,
+         190
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        190
+       ],
+       "a": [
+        320,
+        190
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        52
+       ],
+       "a": [
+        300,
+        190
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        24,
+        52
+       ],
+       "a": [
+        24,
+        188
+       ],
+       "fleche": "deux",
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 12,
+       "y": 124,
+       "texte": "5 m",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 50,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 120,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 300,
+       "cy": 190,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "C",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 58,
+       "y": 44,
+       "texte": "A",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 112,
+       "texte": "B",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 216,
+       "texte": "C",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 100,
+       "y": 66,
+       "emoji": "🛹",
+       "taille": 24
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 216,
+       "texte": "Sol (altitude z = 0)",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rampe",
+     "enonce": "Touche le point où l’énergie potentielle de pesanteur de Lilian est la plus grande.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "L’énergie potentielle dépend de l’altitude : Epp = m × g × z.",
+     "explication": "Epp est maximale au point le plus haut : le point **A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie potentielle de pesanteur en A (Epp = m × g × z), en joules.",
+     "reponse": 1962,
+     "aide": "m = 40 kg, g = 9,81 N/kg, z = 5 m.",
+     "explication": "Epp = 40 × 9,81 × 5 = **1 962 J**.",
+     "unite": "J",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans frottement, toute cette énergie devient cinétique en C. Calcule la vitesse en C (Ec = ½ m v²), arrondie au dixième.",
+     "reponse": 9.9,
+     "aide": "v = √(2 × Ec / m).",
+     "explication": "v = √(2 × 1 962 / 40) = √98,1 ≈ **9,9 m/s**.",
+     "unite": "m/s",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "En réalité, Lilian arrive à 8,0 m/s. Quelle énergie les frottements ont-ils dissipée, en joules ?",
+     "reponse": 682,
+     "aide": "Ec réelle = ½ × 40 × 8,0² ; compare avec Epp en A.",
+     "explication": "Ec réelle = ½ × 40 × 64 = 1 280 J. Énergie dissipée : 1 962 − 1 280 = **682 J**.",
+     "unite": "J",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient cette énergie « perdue » par frottement ?",
+     "options": [
+      "De l’énergie thermique",
+      "De l’énergie potentielle",
+      "De l’énergie nucléaire",
+      "Elle disparaît"
+     ],
+     "reponse": 0,
+     "aide": "L’énergie ne disparaît pas : elle change de forme.",
+     "explication": "Les frottements échauffent les roues, la rampe et l’air : l’énergie mécanique perdue devient de l’**énergie thermique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f3d1616-66f6-5169-84db-40639bc23d20",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le monte-charge du chantier",
+   "competence": "modeliser",
+   "situation": "Sur un chantier, un monte-charge hisse 200 kg de matériaux sur 10 m (g = 9,81 N/kg). Un capteur enregistre la vitesse de la cabine pendant les 20 s de la montée ; la fiche donne la puissance absorbée.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Monte-charge de chantier",
+     "sousTitre": "Fiche technique",
+     "emoji": "🏗️",
+     "lignes": [
+      {
+       "texte": "Charge soulevée",
+       "valeur": "200 kg"
+      },
+      {
+       "texte": "Hauteur de montée",
+       "valeur": "10 m"
+      },
+      {
+       "texte": "Durée de la montée",
+       "valeur": "20 s"
+      },
+      {
+       "texte": "Puissance électrique absorbée",
+       "valeur": "1,5 kW",
+       "id": "pabs"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "vit",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse de la cabine pendant la montée",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "v (m/s)",
+       "valeurs": [
+        0,
+        0.3125,
+        0.625,
+        0.625,
+        0.625,
+        0.625,
+        0.625,
+        0.625,
+        0.625,
+        0.3125,
+        0
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "v",
+      "unite": "m/s",
+      "min": 0,
+      "max": 0.8,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vit",
+     "enonce": "Touche le premier instant où la cabine atteint sa vitesse maximale.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche où la courbe cesse de monter.",
+     "explication": "La cabine atteint sa vitesse maximale dès **4 s** et la garde jusqu’à 16 s."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse maximale en km/h.",
+     "reponse": 2.25,
+     "aide": "Lis v max sur la courbe puis multiplie par 3,6.",
+     "explication": "0,625 × 3,6 = **2,25 km/h**.",
+     "unite": "km/h",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Le poids de la charge travaille-t-il de façon motrice ou résistante pendant la montée ?",
+     "options": [
+      "Résistante : il s’oppose au déplacement",
+      "Motrice : il aide le déplacement",
+      "Nulle : le poids est perpendiculaire au déplacement",
+      "Elle dépend de la vitesse"
+     ],
+     "reponse": 0,
+     "aide": "Le poids est vertical vers le bas, le déplacement vers le haut.",
+     "explication": "Le poids est opposé au déplacement : son travail est **résistant** (négatif)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur absolue du travail du poids de la charge sur la montée (W = P × h), en joules.",
+     "reponse": 19620,
+     "aide": "P = m × g, puis multiplie par la hauteur.",
+     "explication": "|W| = 200 × 9,81 × 10 = **19 620 J**.",
+     "unite": "J",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance mécanique moyenne qu’il faut fournir (W / Δt), en watts.",
+     "reponse": 981,
+     "aide": "Divise le travail par la durée de 20 s lue sur la fiche.",
+     "explication": "P = 19 620 / 20 = **981 W**.",
+     "unite": "W",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement du monte-charge (puissance mécanique / puissance électrique), arrondi au centième.",
+     "reponse": 0.65,
+     "aide": "Convertis 1,5 kW en watts.",
+     "explication": "η = 981 / 1 500 ≈ **0,65**, soit 65 % : le reste est perdu en chaleur dans le moteur et les frottements.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "d6c55281-7888-548a-8a9f-6aa493c0df95",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le panneau solaire du mobil-home",
+   "competence": "analyser-document",
+   "situation": "Sur le toit de son mobil-home, Éloïse a fait poser un panneau photovoltaïque. Elle lit sa plaque signalétique et se demande quelle part de la lumière reçue devient de l’électricité, par grand soleil (1 000 W/m²).",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Panneau photovoltaïque",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "☀️",
+     "lignes": [
+      {
+       "texte": "Surface du panneau",
+       "valeur": "1,6 m²",
+       "id": "surf"
+      },
+      {
+       "texte": "Puissance électrique maximale",
+       "valeur": "280 W"
+      },
+      {
+       "texte": "Irradiance de référence",
+       "valeur": "1 000 W/m²"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la ligne qui donne la surface du panneau.",
+     "reponse": [
+      "surf"
+     ],
+     "aide": "La surface s’exprime en mètres carrés.",
+     "explication": "La surface du panneau est de **1,6 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance lumineuse reçue par le panneau (P = E × S), en watts.",
+     "reponse": 1600,
+     "aide": "Multiplie l’irradiance par la surface.",
+     "explication": "P = 1 000 × 1,6 = **1 600 W**.",
+     "unite": "W",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement du panneau en pourcentage (puissance électrique / puissance reçue).",
+     "reponse": 17.5,
+     "aide": "Divise 280 W par la puissance reçue, puis multiplie par 100.",
+     "explication": "η = 280 / 1 600 = 0,175, soit **17,5 %**.",
+     "unite": "%",
+     "tolerance": 0.1
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient l’essentiel de l’énergie lumineuse non convertie en électricité ?",
+     "options": [
+      "De la chaleur",
+      "De l’énergie chimique",
+      "De l’énergie cinétique",
+      "Elle est détruite"
+     ],
+     "reponse": 0,
+     "aide": "Un panneau exposé au soleil devient chaud.",
+     "explication": "La majeure partie du reste est convertie en **chaleur** : le panneau chauffe, ce qui baisse même son rendement."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6c55281-7888-548a-8a9f-6aa493c0df95",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une journée de soleil sur le toit de l’atelier",
+   "competence": "lire-graphique",
+   "situation": "Le toit d’un atelier porte un panneau de 1,7 m² et de rendement 20 %. Une station météo relève l’irradiance toute la journée, de 6 h à 18 h.",
+   "documents": [
+    {
+     "id": "irr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Irradiance reçue par le panneau",
+     "categories": [
+      "6 h",
+      "8 h",
+      "10 h",
+      "12 h",
+      "14 h",
+      "16 h",
+      "18 h"
+     ],
+     "series": [
+      {
+       "nom": "Irradiance (W/m²)",
+       "valeurs": [
+        50,
+        300,
+        650,
+        900,
+        800,
+        450,
+        100
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Irradiance",
+      "unite": "W/m²",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Heure"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Panneau de l’atelier",
+     "sousTitre": "Caractéristiques",
+     "emoji": "🔆",
+     "lignes": [
+      {
+       "texte": "Surface",
+       "valeur": "1,7 m²"
+      },
+      {
+       "texte": "Rendement",
+       "valeur": "20 %"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "irr",
+     "enonce": "Touche l’heure où l’irradiance est la plus forte.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "L’irradiance est maximale à **12 h**, avec 900 W/m²."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance lumineuse reçue à 10 h (P = E × S), en watts.",
+     "reponse": 1105,
+     "aide": "Lis l’irradiance à 10 h puis multiplie par 1,7 m².",
+     "explication": "P = 650 × 1,7 = **1 105 W**.",
+     "unite": "W",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance électrique produite à 14 h, en watts.",
+     "reponse": 272,
+     "aide": "Puissance reçue à 14 h, puis rendement de 20 %.",
+     "explication": "Reçue : 800 × 1,7 = 1 360 W. Produite : 1 360 × 0,20 = **272 W**.",
+     "unite": "W",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’irradiance baisse-t-elle en fin d’après-midi ?",
+     "options": [
+      "Les rayons arrivent plus inclinés sur le panneau",
+      "Le Soleil émet moins de lumière le soir",
+      "Le panneau devient trop chaud pour capter la lumière",
+      "L’air devient plus froid et absorbe tout"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’angle entre les rayons et la surface du panneau.",
+     "explication": "Quand le Soleil est bas, les rayons sont **plus inclinés** : la surface « vue » par la lumière diminue, donc la puissance reçue aussi."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6c55281-7888-548a-8a9f-6aa493c0df95",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le laser de découpe et le pointeur",
+   "competence": "modeliser",
+   "situation": "Dans un atelier de métallerie, un laser de découpe est concentré sur une tache minuscule. Un apprenti se demande si un petit pointeur laser est vraiment inoffensif. Il compare les deux sources avec le Soleil (1 000 W/m²).",
+   "documents": [
+    {
+     "id": "laser",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Laser de découpe",
+     "sousTitre": "Fiche technique",
+     "emoji": "🔴",
+     "lignes": [
+      {
+       "texte": "Puissance",
+       "valeur": "2,0 kW"
+      },
+      {
+       "texte": "Diamètre de la tache focale",
+       "valeur": "0,20 mm"
+      },
+      {
+       "texte": "Classe de danger",
+       "valeur": "4",
+       "id": "classe"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "pointeur",
+     "type": "tableau",
+     "titre": "Pointeur laser",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Puissance",
+       "5 mW"
+      ],
+      [
+       "Diamètre du faisceau sur la cible",
+       "1,0 mm"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "laser",
+     "enonce": "Touche la classe de danger du laser de découpe.",
+     "reponse": [
+      "classe"
+     ],
+     "aide": "Les classes vont de 1 (sans danger) à 4 (très dangereux).",
+     "explication": "Le laser de découpe est de **classe 4**, la plus dangereuse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’aire de la tache focale (S = π × r²), en 10⁻⁸ m² (arrondie au centième). Le rayon vaut 0,10 mm = 1,0 × 10⁻⁴ m.",
+     "reponse": 3.14,
+     "aide": "r² = 1,0 × 10⁻⁸ m².",
+     "explication": "S = π × (1,0 × 10⁻⁴)² ≈ **3,14 × 10⁻⁸ m²**.",
+     "unite": "× 10⁻⁸ m²",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’irradiance du laser (E = P / S), en 10¹⁰ W/m² (arrondie au dixième).",
+     "reponse": 6.4,
+     "aide": "Convertis 2,0 kW en 2 000 W puis divise par 3,14 × 10⁻⁸ m².",
+     "explication": "E = 2 000 / 3,14 × 10⁻⁸ ≈ 6,4 × 10¹⁰ W/m² : **6,4** dans l’unité demandée.",
+     "unite": "× 10¹⁰ W/m²",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de fois cette irradiance dépasse-t-elle celle du Soleil (1 000 W/m²) ? Arrondis à l’unité.",
+     "reponse": 64,
+     "aide": "Divise 6,4 × 10¹⁰ par 1 000, puis exprime en millions.",
+     "explication": "6,4 × 10¹⁰ / 10³ = 6,4 × 10⁷ : soit environ **64 millions** de fois l’irradiance du Soleil.",
+     "unite": "millions",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’irradiance du pointeur (P = 5 mW, rayon 0,50 mm), arrondie à la centaine de W/m².",
+     "reponse": 6400,
+     "aide": "S = π × (0,50 × 10⁻³)² ≈ 7,85 × 10⁻⁷ m² ; P = 0,005 W.",
+     "explication": "E = 0,005 / 7,85 × 10⁻⁷ ≈ 6 366 W/m², soit environ **6 400 W/m²**.",
+     "unite": "W/m²",
+     "tolerance": 50
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure sur le pointeur laser ?",
+     "options": [
+      "Il dépasse l’irradiance du Soleil : il peut abîmer la rétine",
+      "Il est inoffensif car sa puissance est très faible",
+      "Il n’est dangereux que si l’on regarde le Soleil aussi",
+      "Il est moins dangereux que le Soleil sur la cible"
+     ],
+     "reponse": 0,
+     "aide": "Compare 6 400 W/m² avec 1 000 W/m².",
+     "explication": "Son irradiance vaut plus de **6 fois celle du Soleil** : malgré 5 mW, un faisceau fin peut lésionner la rétine. On ne le regarde jamais, ni ses reflets."
+    }
+   ]
+  },
+  {
+   "chapitre": "12907300-08c0-507f-a841-0325ea183ae9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel matériau pour quelle pièce ?",
+   "competence": "analyser-document",
+   "situation": "Dans l’atelier de son lycée, Jade doit choisir des matériaux pour fabriquer des pièces. Elle consulte la fiche des propriétés de quatre matériaux.",
+   "documents": [
+    {
+     "id": "prop",
+     "type": "tableau",
+     "titre": "Fiche des propriétés",
+     "colonnes": [
+      "Matériau",
+      "Conduit l’électricité",
+      "Attiré par un aimant"
+     ],
+     "lignes": [
+      [
+       "Cuivre",
+       "oui",
+       "non"
+      ],
+      [
+       "Acier",
+       "oui",
+       "oui"
+      ],
+      [
+       "PVC",
+       "non",
+       "non"
+      ],
+      [
+       "Verre",
+       "non",
+       "non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Propriétés usuelles"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prop",
+     "enonce": "Touche la case qui indique le matériau attiré par un aimant.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le « oui » dans la dernière colonne.",
+     "explication": "Seul l’**acier** (qui contient du fer) est attiré par un aimant."
+    },
+    {
+     "type": "zone",
+     "document": "prop",
+     "enonce": "Touche les deux cases qui indiquent les matériaux conducteurs de l’électricité.",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "aide": "Les conducteurs sont ceux de la colonne du milieu marqués « oui ».",
+     "explication": "Le **cuivre** et l’**acier** sont conducteurs : ce sont des métaux dont les électrons sont mobiles.",
+     "multiple": true
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque objet dans la famille de son matériau.",
+     "categories": [
+      "Métallique",
+      "Organique (polymère)",
+      "Minéral",
+      "Composite"
+     ],
+     "items": [
+      [
+       "Fil de cuivre",
+       0
+      ],
+      [
+       "Bouteille en PET",
+       1
+      ],
+      [
+       "Vitre",
+       2
+      ],
+      [
+       "Coque en fibre de verre et résine",
+       3
+      ],
+      [
+       "Poêle en aluminium",
+       0
+      ],
+      [
+       "Sac en polyéthylène",
+       1
+      ]
+     ],
+     "aide": "Un composite associe plusieurs matériaux ; un polymère est une macromolécule de carbone.",
+     "explication": "Cuivre et aluminium sont **métalliques** ; PET et polyéthylène sont des **polymères** (organiques) ; la vitre est **minérale** ; la coque est un **composite** (fibres + résine)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les métaux conduisent-ils l’électricité ?",
+     "options": [
+      "Leurs électrons sont mobiles",
+      "Leurs atomes sont tous identiques",
+      "Ils sont tous brillants",
+      "Ils sont toujours chauds"
+     ],
+     "reponse": 0,
+     "aide": "Un courant est un déplacement de charges.",
+     "explication": "Dans un métal, des **électrons mobiles** peuvent circuler : c’est ce qui permet le courant électrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "12907300-08c0-507f-a841-0325ea183ae9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La solution de glucose du labo",
+   "competence": "calculer",
+   "situation": "Au laboratoire de biologie, Samir prépare une solution de glucose à partir de la fiche d’une fiole. Il utilise le tableau des masses molaires atomiques pour calculer la concentration.",
+   "documents": [
+    {
+     "id": "atomes",
+     "type": "tableau",
+     "titre": "Masses molaires atomiques",
+     "colonnes": [
+      "Élément",
+      "Symbole",
+      "M (g/mol)"
+     ],
+     "lignes": [
+      [
+       "Carbone",
+       "C",
+       "12,0"
+      ],
+      [
+       "Hydrogène",
+       "H",
+       "1,0"
+      ],
+      [
+       "Oxygène",
+       "O",
+       "16,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "fiole",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Solution de glucose",
+     "sousTitre": "Étiquette de la fiole",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Formule",
+       "valeur": "C₆H₁₂O₆"
+      },
+      {
+       "texte": "Masse dissoute",
+       "valeur": "27,0 g"
+      },
+      {
+       "texte": "Volume de solution",
+       "valeur": "250 mL"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "atomes",
+     "enonce": "Touche la masse molaire atomique de l’oxygène.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la ligne de l’oxygène, dernière colonne.",
+     "explication": "La masse molaire de l’oxygène est **16,0 g/mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire du glucose C₆H₁₂O₆, en g/mol.",
+     "reponse": 180,
+     "aide": "Additionne 6 × M(C) + 12 × M(H) + 6 × M(O).",
+     "explication": "M = 6 × 12,0 + 12 × 1,0 + 6 × 16,0 = 72 + 12 + 96 = **180 g/mol**.",
+     "unite": "g/mol",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité de matière de glucose dissous (n = m / M), en mol.",
+     "reponse": 0.15,
+     "aide": "Utilise la masse dissoute de l’étiquette.",
+     "explication": "n = 27,0 / 180 = **0,150 mol**.",
+     "unite": "mol",
+     "tolerance": 0.002
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration molaire C = n / V, en mol/L (V en litres).",
+     "reponse": 0.6,
+     "aide": "Convertis 250 mL en litres.",
+     "explication": "C = 0,150 / 0,250 = **0,600 mol/L**.",
+     "unite": "mol/L",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration massique Cm = m / V, en g/L.",
+     "reponse": 108,
+     "aide": "Divise la masse dissoute par le volume en litres.",
+     "explication": "Cm = 27,0 / 0,250 = **108 g/L**.",
+     "unite": "g/L",
+     "tolerance": 0.5
+    }
+   ]
+  },
+  {
+   "chapitre": "12907300-08c0-507f-a841-0325ea183ae9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bidon d’éthanol de l’atelier",
+   "competence": "observer-schema",
+   "situation": "Dans un atelier de cosmétique, Inès doit manipuler un bidon d’éthanol. Elle lit l’étiquette de danger avant d’y toucher, puis regarde la structure de l’eau pour comprendre la notion de doublet non liant. Masses molaires : C = 12,0 ; H = 1,0 ; O = 16,0 g/mol.",
+   "documents": [
+    {
+     "id": "etiq",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Éthanol",
+     "sousTitre": "Étiquette de danger",
+     "emoji": "🔥",
+     "lignes": [
+      {
+       "texte": "Liquide et vapeurs très inflammables",
+       "id": "infl"
+      },
+      {
+       "texte": "Provoque une sévère irritation des yeux"
+      },
+      {
+       "texte": "Formule",
+       "valeur": "C₂H₆O"
+      },
+      {
+       "texte": "Masse contenue",
+       "valeur": "230 g"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "lewis",
+     "type": "schema",
+     "titre": "Schéma de Lewis de l’eau",
+     "largeur": 340,
+     "hauteur": 238,
+     "elements": [
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 118,
+       "emoji": "O",
+       "taille": 40
+      },
+      {
+       "forme": "emoji",
+       "x": 92,
+       "y": 188,
+       "emoji": "H",
+       "taille": 36
+      },
+      {
+       "forme": "emoji",
+       "x": 248,
+       "y": 188,
+       "emoji": "H",
+       "taille": 36
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        134
+       ],
+       "a": [
+        108,
+        170
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        182,
+        134
+       ],
+       "a": [
+        232,
+        170
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 136,
+       "y": 80,
+       "l": 28,
+       "h": 8,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "d1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 176,
+       "y": 80,
+       "l": 28,
+       "h": 8,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "d2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 230,
+       "texte": "H–O–H : tirets entre atomes et autour de O",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiq",
+     "enonce": "Touche la mention qui signale le risque d’incendie.",
+     "reponse": [
+      "infl"
+     ],
+     "aide": "Cherche le mot qui renvoie au pictogramme « flamme ».",
+     "explication": "La mention **« très inflammables »** correspond au pictogramme flamme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le pictogramme « flamme » du règlement CLP ?",
+     "options": [
+      "Produit inflammable",
+      "Produit toxique",
+      "Produit corrosif",
+      "Produit dangereux pour l’environnement"
+     ],
+     "reponse": 0,
+     "aide": "Le pictogramme flamme figure aussi sur les bidons de carburant.",
+     "explication": "Le pictogramme **flamme** désigne un produit inflammable."
+    },
+    {
+     "type": "zone",
+     "document": "lewis",
+     "enonce": "Touche les deux doublets non liants de l’atome d’oxygène.",
+     "reponse": [
+      "d1",
+      "d2"
+     ],
+     "aide": "Ce sont les tirets qui ne relient pas deux atomes.",
+     "explication": "Les deux tirets autour de l’oxygène, qui ne relient pas deux atomes, sont ses **doublets non liants**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons covalentes comporte la molécule d’eau ?",
+     "reponse": 2,
+     "aide": "Compte les tirets entre deux atomes.",
+     "explication": "Il y a une liaison O–H pour chaque atome d’hydrogène : **2 liaisons**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire de l’éthanol C₂H₆O, en g/mol.",
+     "reponse": 46,
+     "aide": "M = 2 × M(C) + 6 × M(H) + M(O).",
+     "explication": "M = 2 × 12,0 + 6 × 1,0 + 16,0 = **46 g/mol**.",
+     "unite": "g/mol",
+     "tolerance": 0.2
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’éthanol contient le bidon (230 g), en mol ?",
+     "reponse": 5,
+     "aide": "n = m / M avec M = 46 g/mol.",
+     "explication": "n = 230 / 46 = **5,0 mol**.",
+     "unite": "mol",
+     "tolerance": 0.02
+    }
+   ]
+  }
+ ]
+}

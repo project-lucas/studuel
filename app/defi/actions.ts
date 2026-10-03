@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { isSchoolLevel } from '@/lib/clan'
 import { createClient } from '@/lib/supabase/server'
+import { avancerQuetesApres } from '@/lib/quests-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { isCommuteNow } from '@/lib/trajet'
@@ -83,6 +84,8 @@ export async function recordChallenge(
   // créneau) du jour tout de suite, sans attendre le prochain chargement de /moi.
   let award: WalletAward | null = null
   if (!error) {
+    // Les quêtes du jour : une partie jouée, et ses bonnes réponses.
+    avancerQuetesApres(supabase, user.id, { parties: 1, correct: cleanScore })
     const [, , touche] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id, slots),

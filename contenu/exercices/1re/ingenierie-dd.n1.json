@@ -1,0 +1,2768 @@
+{
+ "niveau": "1re",
+ "matiere": "ingenierie-dd",
+ "exercices": [
+  {
+   "chapitre": "6d56462d-13c2-5c4a-9960-77e5aa38543a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le vélo électrique de Sacha",
+   "competence": "analyser-document",
+   "situation": "Sacha hésite entre deux vélos à assistance électrique. Il lit la fiche du modèle « Urbano » pour comprendre de quoi il est fait avant de choisir.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Fiche produit Urbano",
+     "sousTitre": "Vélo à assistance électrique",
+     "emoji": "🚲",
+     "lignes": [
+      {
+       "texte": "Cadre en aluminium recyclé",
+       "id": "cadre"
+      },
+      {
+       "texte": "Batterie 36 V",
+       "id": "bat"
+      },
+      {
+       "texte": "Capteur de pédalage",
+       "id": "capt"
+      },
+      {
+       "texte": "Moteur dans le moyeu",
+       "id": "mot"
+      },
+      {
+       "texte": "Écran de bord (vitesse, charge)",
+       "id": "ecran"
+      },
+      {
+       "texte": "Assemblé en atelier local, salariés couverts et formés",
+       "id": "atelier"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche les deux éléments du vélo qui relèvent du champ **information**.",
+     "reponse": [
+      "capt",
+      "ecran"
+     ],
+     "multiple": true,
+     "aide": "L’information, c’est ce qui est mesuré, traité ou affiché.",
+     "explication": "Le **capteur de pédalage** (il mesure) et l’**écran de bord** (il communique) relèvent de l’information."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces autres pièces du vélo dans le bon champ du triptyque.",
+     "categories": [
+      "Matière",
+      "Énergie",
+      "Information"
+     ],
+     "items": [
+      [
+       "Garde-boue en plastique recyclé",
+       0
+      ],
+      [
+       "Fourche en acier",
+       0
+      ],
+      [
+       "Variateur de puissance",
+       1
+      ],
+      [
+       "Chaîne de transmission",
+       1
+      ],
+      [
+       "Compteur de vitesse",
+       2
+      ],
+      [
+       "Carte de commande",
+       2
+      ]
+     ],
+     "aide": "Matière : formes et matériaux. Énergie : stocker, convertir, transmettre. Information : mesurer, traiter, afficher.",
+     "explication": "Garde-boue et fourche sont de la **matière** ; variateur et chaîne gèrent l’**énergie** ; compteur et carte de commande traitent l’**information**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La fiche précise que le vélo est assemblé en atelier local, salariés couverts et formés. Quel pilier du développement durable cela illustre-t-il ?",
+     "options": [
+      "Le pilier social",
+      "Le pilier économique",
+      "Le pilier environnemental",
+      "Le pilier énergétique"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux conditions de travail de ceux qui fabriquent le produit.",
+     "explication": "Des salariés protégés et formés relèvent du **pilier social** : le produit doit être fabriqué dans de bonnes conditions."
+    }
+   ]
+  },
+  {
+   "chapitre": "6d56462d-13c2-5c4a-9960-77e5aa38543a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le couloir du lycée",
+   "competence": "calculer",
+   "situation": "Au lycée, le couloir du bâtiment B est éclairé par 16 tubes qui restent allumés toute la journée. Le conseil de vie lycéenne propose de les remplacer et d’ajouter un détecteur de présence.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le couloir avant et après travaux",
+     "colonnes": [
+      "",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Lampes",
+       "16 tubes de 36 W",
+       "16 LED de 18 W"
+      ],
+      [
+       "Commande",
+       "Allumage permanent",
+       "Détecteur de présence"
+      ],
+      [
+       "Allumage par jour",
+       "10 h",
+       "4 h"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le couloir consomme-t-il par jour **avant** les travaux ?",
+     "reponse": 5.76,
+     "unite": "kWh",
+     "tolerance": 0.005,
+     "aide": "E = P × t : multiplie la puissance de toutes les lampes par la durée, puis passe en kWh.",
+     "explication": "16 × 36 × 10 = 5760 Wh, soit **5.76 kWh** par jour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie consomme-t-il par jour **après** les travaux ?",
+     "reponse": 1.152,
+     "unite": "kWh",
+     "tolerance": 0.005,
+     "aide": "Les LED ne s’allument que 4 h par jour.",
+     "explication": "16 × 18 × 4 = 1152 Wh, soit **1.152 kWh** par jour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle mesure, prise seule, économiserait le plus d’énergie ?",
+     "options": [
+      "Remplacer les tubes par des LED, sans commande",
+      "Ajouter le détecteur en gardant les tubes",
+      "Les deux économisent exactement autant",
+      "Aucune des deux : seul le cumul économise"
+     ],
+     "reponse": 1,
+     "aide": "Calcule la consommation avec les LED seules (2880 Wh), puis avec le détecteur seul.",
+     "explication": "LED seules : 2.88 kWh économisés par jour. Détecteur seul : 16 × 36 × 4 = 2304 Wh, soit **3.456 kWh** économisés. **La commande (l’information) pèse plus** que le composant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 200 jours de cours, quelle énergie les deux mesures réunies économisent-elles ?",
+     "reponse": 921.6,
+     "unite": "kWh",
+     "tolerance": 0.1,
+     "aide": "Économie par jour = avant − après, puis multiplie par le nombre de jours.",
+     "explication": "(5.76 − 1.152) × 200 = **921.6 kWh**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6d56462d-13c2-5c4a-9960-77e5aa38543a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Produire l’énergie près de chez soi",
+   "competence": "analyser-document",
+   "situation": "Une commune hésite entre acheter son électricité à une grande centrale ou installer une éolienne de quartier. Elle réunit deux documents.",
+   "documents": [
+    {
+     "id": "mix",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Énergie primaire mondiale par source",
+     "categories": [
+      "Pétrole",
+      "Charbon",
+      "Gaz naturel",
+      "Nucléaire",
+      "Hydraulique",
+      "Autres renouvelables"
+     ],
+     "series": [
+      {
+       "nom": "Part (%)",
+       "valeurs": [
+        31,
+        27,
+        23,
+        4,
+        7,
+        8
+       ]
+      }
+     ],
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "prod",
+     "type": "tableau",
+     "titre": "Deux façons de produire",
+     "colonnes": [
+      "",
+      "Grande centrale et réseau",
+      "Éolienne de quartier"
+     ],
+     "lignes": [
+      [
+       "Énergie produite en un an (MWh)",
+       1000,
+       100
+      ],
+      [
+       "Pertes de transport (%)",
+       6,
+       0
+      ],
+      [
+       "Disponibilité",
+       "Presque toujours",
+       "Seulement quand il y a du vent"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mix",
+     "enonce": "Touche les trois sources d’énergie **fossiles**.",
+     "reponse": [
+      "k0",
+      "k1",
+      "k2"
+     ],
+     "multiple": true,
+     "aide": "Les fossiles sont le pétrole, le gaz et le charbon.",
+     "explication": "**Pétrole, charbon et gaz naturel** sont des combustibles fossiles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’énergie primaire mondiale vient des sources fossiles ?",
+     "reponse": 81,
+     "unite": "%",
+     "tolerance": 0,
+     "aide": "Additionne les trois parts que tu viens de toucher.",
+     "explication": "31 + 27 + 23 = **81 %**, un peu plus que les « environ 80 % » du cours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est perdue chaque année dans le transport de la grande centrale ?",
+     "reponse": 60,
+     "unite": "MWh",
+     "tolerance": 0,
+     "aide": "Calcule 6 % de 1 000 MWh.",
+     "explication": "1 000 × 0,06 = **60 MWh** perdus avant d’arriver chez les usagers."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces caractéristiques selon le type de production qu’elles décrivent.",
+     "categories": [
+      "Production centralisée",
+      "Production locale"
+     ],
+     "items": [
+      [
+       "Pertes sur de longues lignes",
+       0
+      ],
+      [
+       "Proche du consommateur",
+       1
+      ],
+      [
+       "Dépend de la météo",
+       1
+      ],
+      [
+       "Grandes centrales reliées au réseau",
+       0
+      ]
+     ],
+     "aide": "Relis les deux colonnes du tableau.",
+     "explication": "Le transport coûte des **pertes** à la production centralisée ; la production locale est proche du consommateur mais **intermittente**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0afce55-97a4-578c-a70e-3b3ff726ceda",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "À quoi sert le portail ?",
+   "competence": "observer-schema",
+   "situation": "Léo veut décrire le portail automatique de sa maison avant de le faire réparer. Il dessine qui s’en sert et ce que le portail doit faire pour eux.",
+   "documents": [
+    {
+     "id": "uc",
+     "type": "schema",
+     "titre": "Diagramme du portail automatique",
+     "largeur": 340,
+     "hauteur": 250,
+     "source": "Schéma simplifié, écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 20,
+       "l": 215,
+       "h": 210,
+       "teinte": "gris",
+       "motif": "aucun",
+       "id": "fr",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 217,
+       "y": 40,
+       "texte": "Portail automatique",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 217,
+       "cy": 85,
+       "rx": 78,
+       "ry": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ouvrir",
+       "id": "c1",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 217,
+       "cy": 135,
+       "rx": 78,
+       "ry": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Fermer",
+       "id": "c2",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 217,
+       "cy": 190,
+       "rx": 78,
+       "ry": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Détecter un obstacle",
+       "id": "c3",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 45,
+       "y": 100,
+       "emoji": "🧑",
+       "taille": 30,
+       "id": "usager",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 128,
+       "texte": "Usager",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 45,
+       "y": 185,
+       "emoji": "🚶",
+       "taille": 30,
+       "id": "pieton",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 213,
+       "texte": "Piéton",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        68,
+        95
+       ],
+       "a": [
+        140,
+        86
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        68,
+        105
+       ],
+       "a": [
+        140,
+        130
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        68,
+        183
+       ],
+       "a": [
+        142,
+        188
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "uc",
+     "enonce": "Touche la **frontière** du système : ce qui est dedans est le portail, ce qui est dehors est son environnement.",
+     "reponse": [
+      "fr"
+     ],
+     "aide": "La frontière est le grand cadre qui entoure les services rendus.",
+     "explication": "Le **grand cadre** est la frontière : les personnes dessinées à l’extérieur font partie de l’environnement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de services (cas d’utilisation) le portail rend-il sur ce schéma ?",
+     "reponse": 3,
+     "tolerance": 0,
+     "aide": "Compte les ovales à l’intérieur du cadre.",
+     "explication": "Ouvrir, fermer et détecter un obstacle : **3 services**."
+    },
+    {
+     "type": "zone",
+     "document": "uc",
+     "enonce": "Touche l’acteur qui n’est concerné que par la détection d’obstacle.",
+     "reponse": [
+      "pieton"
+     ],
+     "aide": "Regarde de quel ovale part chaque trait.",
+     "explication": "Le **piéton** n’utilise pas la télécommande : il n’est relié qu’à « Détecter un obstacle »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type de diagramme SysML Léo vient-il de dessiner ?",
+     "options": [
+      "Un diagramme de cas d’utilisation (uc)",
+      "Un diagramme d’états (stm)",
+      "Un diagramme de blocs internes (ibd)",
+      "Un diagramme de séquence (sd)"
+     ],
+     "reponse": 0,
+     "aide": "Il montre des acteurs et les services qu’ils obtiennent.",
+     "explication": "Un système, des acteurs et des services rendus : c’est un **diagramme de cas d’utilisation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0afce55-97a4-578c-a70e-3b3ff726ceda",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cahier des charges du portail",
+   "competence": "analyser-document",
+   "situation": "Un installateur rédige les exigences du portail d’une copropriété. Le syndic lui demande de ne garder que des exigences qu’on pourra vérifier le jour de la réception.",
+   "documents": [
+    {
+     "id": "req",
+     "type": "tableau",
+     "titre": "Exigences proposées",
+     "colonnes": [
+      "Id",
+      "Texte de l’exigence"
+     ],
+     "lignes": [
+      [
+       "2.1",
+       "Le portail doit supporter des vantaux de 60 kg"
+      ],
+      [
+       "2.2",
+       "Le portail doit être pratique"
+      ],
+      [
+       "2.3",
+       "Le moteur doit s’arrêter en moins de 0,5 s après la détection d’un obstacle"
+      ],
+      [
+       "2.4",
+       "Le portail doit être solide"
+      ],
+      [
+       "2.5",
+       "La télécommande doit fonctionner jusqu’à 30 m"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Exigences écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "req",
+     "enonce": "Touche les deux exigences qu’on ne pourra **pas vérifier** telles qu’elles sont écrites.",
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "aide": "Une exigence vérifiable contient souvent une valeur chiffrée.",
+     "explication": "« Pratique » et « solide » ne se mesurent pas : **2.2 et 2.4** ne sont pas vérifiables."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En combien de secondes au plus le moteur doit-il s’arrêter après la détection d’un obstacle ?",
+     "reponse": 0.5,
+     "unite": "s",
+     "tolerance": 0,
+     "aide": "Lis l’exigence 2.3.",
+     "explication": "L’exigence 2.3 fixe **0,5 s** au plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle reformulation de l’exigence 2.2 est vérifiable ?",
+     "options": [
+      "Le portail doit s’ouvrir en appuyant sur un seul bouton de la télécommande",
+      "Le portail doit être le plus pratique possible pour toute la famille",
+      "Le portail doit être agréable à utiliser au quotidien pour chacun",
+      "Le portail doit plaire à tous les habitants de la copropriété"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la phrase qu’on peut valider par un essai, sans donner son avis.",
+     "explication": "Un seul bouton : on peut **tester** l’exigence, et la réponse est oui ou non."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces diagrammes SysML selon ce qu’ils décrivent.",
+     "categories": [
+      "Le besoin",
+      "La structure",
+      "Le comportement"
+     ],
+     "items": [
+      [
+       "Cas d’utilisation (uc)",
+       0
+      ],
+      [
+       "Exigences (req)",
+       0
+      ],
+      [
+       "Définition de blocs (bdd)",
+       1
+      ],
+      [
+       "Blocs internes (ibd)",
+       1
+      ],
+      [
+       "États (stm)",
+       2
+      ],
+      [
+       "Séquence (sd)",
+       2
+      ]
+     ],
+     "aide": "Besoin : à quoi sert-il ? Structure : de quoi est-il fait ? Comportement : comment réagit-il ?",
+     "explication": "uc et req décrivent le **besoin**, bdd et ibd la **structure**, stm et sd le **comportement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0afce55-97a4-578c-a70e-3b3ff726ceda",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Comment le portail se parle à lui-même",
+   "competence": "observer-schema",
+   "situation": "Le mainteneur du portail a sous les yeux deux documents : un schéma de blocs avec des flux, et le tableau des états. Il doit retrouver ce qui circule et comment le portail réagit.",
+   "documents": [
+    {
+     "id": "ibd",
+     "type": "schema",
+     "titre": "Portail : blocs et flux",
+     "largeur": 340,
+     "hauteur": 270,
+     "source": "Schéma simplifié, écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 30,
+       "l": 72,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Secteur",
+       "id": "sect",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 30,
+       "l": 72,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Carte",
+       "id": "carte",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 258,
+       "y": 30,
+       "l": 72,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Moteur",
+       "id": "mot",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 120,
+       "l": 72,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Cellule",
+       "id": "cell",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 258,
+       "y": 120,
+       "l": 72,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Réducteur",
+       "id": "red",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 258,
+       "y": 210,
+       "l": 72,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Vantail",
+       "id": "vant",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        82,
+        50
+       ],
+       "a": [
+        135,
+        50
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "f1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        207,
+        50
+       ],
+       "a": [
+        258,
+        50
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "f2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        294,
+        70
+       ],
+       "a": [
+        294,
+        120
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "f3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        294,
+        160
+       ],
+       "a": [
+        294,
+        210
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "f4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        171,
+        120
+       ],
+       "a": [
+        171,
+        70
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "f5",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "stm",
+     "type": "tableau",
+     "titre": "Transitions du portail",
+     "colonnes": [
+      "État",
+      "Événement ou garde",
+      "État suivant"
+     ],
+     "lignes": [
+      [
+       "Fermé",
+       "appui télécommande",
+       "Ouverture"
+      ],
+      [
+       "Ouverture",
+       "fin de course ouvert",
+       "Ouvert"
+      ],
+      [
+       "Ouvert",
+       "après 30 s",
+       "?"
+      ],
+      [
+       "Fermeture",
+       "obstacle détecté",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ibd",
+     "enonce": "Touche le flux d’**information** du schéma.",
+     "reponse": [
+      "f5"
+     ],
+     "aide": "Quelle flèche transporte une détection plutôt que de la puissance ?",
+     "explication": "La flèche **Cellule → Carte** transporte une information (obstacle ou non)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque flux à sa nature.",
+     "paires": [
+      [
+       "Secteur → Carte",
+       "Énergie électrique"
+      ],
+      [
+       "Moteur → Réducteur",
+       "Énergie mécanique"
+      ],
+      [
+       "Cellule → Carte",
+       "Information"
+      ]
+     ],
+     "aide": "Électricité, mouvement ou donnée ?",
+     "explication": "Du secteur à la carte circule de l’**énergie électrique**, du moteur au réducteur de l’**énergie mécanique**, de la cellule à la carte de l’**information**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux cases « ? » du tableau.",
+     "texte": "Après 30 s à l’état Ouvert, le portail passe en ___ ; si un obstacle est détecté pendant la fermeture, il passe en ___.",
+     "reponses": [
+      [
+       "Fermeture"
+      ],
+      [
+       "Ouverture"
+      ]
+     ],
+     "banque": [
+      "Ouverture",
+      "Fermeture",
+      "Fermé",
+      "Ouvert"
+     ],
+     "aide": "Un portail ne reste pas ouvert indéfiniment, et il rouvre devant un obstacle.",
+     "explication": "Ouvert → **Fermeture** après 30 s ; Fermeture → **Ouverture** si obstacle : c’est la sécurité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le schéma de blocs relève de la structure et le tableau du comportement. Quels diagrammes SysML correspondent ?",
+     "options": [
+      "Un ibd pour le schéma et un stm pour le tableau",
+      "Un uc pour le schéma et un req pour le tableau",
+      "Un bdd pour le schéma et un sd pour le tableau",
+      "Un req pour le schéma et un ibd pour le tableau"
+     ],
+     "reponse": 0,
+     "aide": "Les flux entre blocs : ibd. Les états et transitions : stm.",
+     "explication": "Le schéma est un **ibd** (blocs et flux), le tableau décrit un **stm** (états et transitions)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a120e4ff-80b0-577e-994a-e1a72bb900fd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche de l’éolienne Brise",
+   "competence": "lire-tableau",
+   "situation": "Camille installe une petite éolienne domestique sur le toit du garage. Elle lit la fiche technique pour repérer ce qui circule dans l’appareil et ce qui s’y accumule.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Éolienne Brise 600",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Puissance électrique nominale",
+       "600 W"
+      ],
+      [
+       "Débit d’air à travers le rotor",
+       "7,5 m³/s"
+      ],
+      [
+       "Énergie stockée dans la batterie",
+       "1 200 Wh"
+      ],
+      [
+       "Liaison radio vers le téléphone",
+       "9 600 bit/s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la valeur qui décrit un **stock** (une accumulation) et non un flux.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Un stock se mesure à un instant, sans « par seconde ».",
+     "explication": "**1 200 Wh** est une énergie accumulée dans la batterie : c’est un stock. Les autres valeurs sont des flux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La liaison radio envoie 9 600 bit/s. Combien d’octets par seconde cela fait-il ?",
+     "reponse": 1200,
+     "unite": "octets/s",
+     "tolerance": 0,
+     "aide": "Un octet contient 8 bits.",
+     "explication": "9 600 ÷ 8 = **1 200 octets par seconde**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la valeur qui décrit un flux d’**information**.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "L’information se compte en bits par seconde.",
+     "explication": "Le **débit binaire** (9 600 bit/s) mesure un flux d’information."
+    },
+    {
+     "type": "choix",
+     "enonce": "La puissance de 600 W est un flux de quelle nature ?",
+     "options": [
+      "D’énergie",
+      "De matière",
+      "D’information",
+      "De lumière"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "1 W, c’est 1 joule par seconde.",
+     "explication": "Une puissance est un **flux d’énergie** : 1 W = 1 J par seconde."
+    }
+   ]
+  },
+  {
+   "chapitre": "a120e4ff-80b0-577e-994a-e1a72bb900fd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où part l’énergie du drone ?",
+   "competence": "lire-graphique",
+   "situation": "Le club de robotique mesure la puissance à chaque étage de son drone en vol stationnaire. Il cherche l’étage à améliorer en priorité.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Puissance à chaque étage du drone",
+     "categories": [
+      "Batterie",
+      "Après le variateur",
+      "Après les moteurs",
+      "Après les hélices"
+     ],
+     "series": [
+      {
+       "nom": "Puissance",
+       "valeurs": [
+        120,
+        108,
+        86.4,
+        60.48
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "W",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": true,
+     "source": "Mesures simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la barre qui représente la puissance utile fournie à l’air par les hélices.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "C’est la dernière marche de la chaîne.",
+     "explication": "La puissance utile est celle qui reste **après les hélices** : 60,48 W."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelles pertes le variateur provoque-t-il ?",
+     "reponse": 12,
+     "unite": "W",
+     "tolerance": 0.01,
+     "aide": "Pertes = puissance reçue − puissance transmise.",
+     "explication": "120 − 108 = **12 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelles pertes les hélices provoquent-elles ?",
+     "reponse": 25.92,
+     "unite": "W",
+     "tolerance": 0.01,
+     "aide": "Compare la puissance après les moteurs et après les hélices.",
+     "explication": "86.4 − 60.48 = **25.92 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement global de la chaîne ? Arrondis au centième.",
+     "reponse": 0.5,
+     "tolerance": 0.005,
+     "aide": "Rendement global = puissance utile ÷ puissance de la batterie.",
+     "explication": "60.48 ÷ 120 ≈ **0.5** : à peine la moitié de l’énergie sert à porter le drone."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel étage faut-il chercher à améliorer en priorité ?",
+     "options": [
+      "Les hélices, qui perdent le plus de puissance",
+      "Le variateur, qui est le premier étage",
+      "Les moteurs, qui perdent autant que les hélices",
+      "La batterie, car elle fournit toute la puissance"
+     ],
+     "reponse": 0,
+     "aide": "Compare les trois pertes : 12 W, 21,6 W et celle des hélices.",
+     "explication": "Pertes : variateur 12 W, moteurs 21.6 W, hélices **25.92 W**. Le plus gros gisement est dans les hélices."
+    }
+   ]
+  },
+  {
+   "chapitre": "a120e4ff-80b0-577e-994a-e1a72bb900fd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le ballon d’eau chaude solaire",
+   "competence": "raisonner",
+   "situation": "Dans une maison, un ballon de 200 L stocke l’eau chauffée par des capteurs solaires. À 6 h, il contient 100 L d’eau chaude. Ariane suit les flux d’entrée et de sortie, toutes les deux heures.",
+   "documents": [
+    {
+     "id": "flux",
+     "type": "tableau",
+     "titre": "Flux d’eau chaude du ballon",
+     "colonnes": [
+      "Période",
+      "Entrée (L/h)",
+      "Soutirage (L/h)"
+     ],
+     "lignes": [
+      [
+       "6 h – 8 h",
+       0,
+       30
+      ],
+      [
+       "8 h – 10 h",
+       40,
+       10
+      ],
+      [
+       "10 h – 12 h",
+       60,
+       10
+      ],
+      [
+       "12 h – 14 h",
+       60,
+       60
+      ],
+      [
+       "14 h – 16 h",
+       20,
+       50
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés simplifiés, écrits pour l’exercice"
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le circuit d’eau",
+     "noeuds": [
+      {
+       "id": "cap",
+       "texte": "Capteurs solaires",
+       "emoji": "☀️"
+      },
+      {
+       "id": "bal",
+       "texte": "Ballon 200 L",
+       "emoji": "🛢️"
+      },
+      {
+       "id": "rob",
+       "texte": "Robinets",
+       "emoji": "🚿"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cap",
+       "a": "bal",
+       "texte": "entrée"
+      },
+      {
+       "de": "bal",
+       "a": "rob",
+       "texte": "soutirage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "enonce": "Touche l’élément du circuit qui joue le rôle de **stock**.",
+     "reponse": [
+      "bal"
+     ],
+     "aide": "Quel élément accumule de l’eau chaude ?",
+     "explication": "Le **ballon** accumule l’eau chaude : c’est le stock. Les capteurs et les robinets laissent passer des flux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres d’eau chaude le ballon contient-il à 8 h ?",
+     "reponse": 40,
+     "unite": "L",
+     "tolerance": 0,
+     "aide": "Variation sur 2 h = (entrée − soutirage) × 2.",
+     "explication": "Entre 6 h et 8 h : (0 − 30) × 2 = −60 L ; 100 − 60 = **40 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres contient-il à 12 h ?",
+     "reponse": 200,
+     "unite": "L",
+     "tolerance": 0,
+     "aide": "Poursuis la méthode de proche en proche : 8 h, 10 h, puis 12 h.",
+     "explication": "À 10 h : 40 + (40 − 10) × 2 = 100 L ; à 12 h : 100 + (60 − 10) × 2 = **200 L**. Le ballon est plein."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 12 h et 14 h, le stock reste constant. Pourquoi ?",
+     "options": [
+      "Le flux entrant (60 L/h) est égal au flux sortant (60 L/h)",
+      "Le ballon est plein, donc plus rien n’entre ni ne sort",
+      "Les capteurs solaires sont arrêtés pendant ces deux heures",
+      "Le soutirage est nul, alors que l’entrée reste de 60 L/h"
+     ],
+     "reponse": 0,
+     "aide": "Un stock varie selon la différence entre ce qui entre et ce qui sort.",
+     "explication": "Entrée = sortie = 60 L/h : la différence est nulle, **le stock ne varie pas**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres le ballon contient-il à 16 h ?",
+     "reponse": 140,
+     "unite": "L",
+     "tolerance": 0,
+     "aide": "Entre 14 h et 16 h : (20 − 50) × 2.",
+     "explication": "200 + (20 − 50) × 2 = **140 L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2f2e2668-de18-55cf-aefc-eece07a44158",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans la perceuse sans fil",
+   "competence": "observer-schema",
+   "situation": "Yanis démonte sa perceuse sans fil pour comprendre comment l’énergie de la batterie arrive jusqu’au mandrin. Il repère cinq éléments sur une chaîne.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Chaîne de puissance de la perceuse",
+     "noeuds": [
+      {
+       "id": "bat",
+       "texte": "Batterie",
+       "emoji": "🔋"
+      },
+      {
+       "id": "var",
+       "texte": "Variateur"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "red",
+       "texte": "Réducteur"
+      },
+      {
+       "id": "man",
+       "texte": "Mandrin",
+       "emoji": "🔩"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bat",
+       "a": "var",
+       "texte": "électricité"
+      },
+      {
+       "de": "var",
+       "a": "mot",
+       "texte": "électricité dosée"
+      },
+      {
+       "de": "mot",
+       "a": "red",
+       "texte": "rotation rapide"
+      },
+      {
+       "de": "red",
+       "a": "man",
+       "texte": "rotation lente"
+      }
+     ],
+     "source": "Chaîne simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "enonce": "Touche le composant qui **convertit** l’énergie électrique en énergie mécanique.",
+     "reponse": [
+      "mot"
+     ],
+     "aide": "Quel composant reçoit de l’électricité et fait tourner un arbre ?",
+     "explication": "Le **moteur** change la nature de l’énergie : électrique en entrée, mécanique en sortie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque composant à sa fonction dans la chaîne de puissance.",
+     "paires": [
+      [
+       "Batterie",
+       "Stocker l’énergie"
+      ],
+      [
+       "Variateur",
+       "Distribuer et moduler"
+      ],
+      [
+       "Moteur",
+       "Convertir"
+      ],
+      [
+       "Réducteur",
+       "Adapter et transmettre"
+      ]
+     ],
+     "aide": "Suis la chaîne : fournir, doser, convertir, adapter.",
+     "explication": "Batterie : **stocker** ; variateur : **distribuer / moduler** ; moteur : **convertir** ; réducteur : **adapter** vitesse et couple."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand Yanis appuie plus ou moins sur la gâchette, qui commande le variateur ?",
+     "options": [
+      "La chaîne d’information, qui mesure la gâchette",
+      "Le moteur lui-même, qui règle sa propre vitesse dans la perceuse",
+      "La batterie, qui adapte sa tension toute seule selon la charge",
+      "Le mandrin, qui renvoie son effort mécanique au variateur"
+     ],
+     "reponse": 0,
+     "aide": "La chaîne de puissance obéit aux ordres d’une autre chaîne.",
+     "explication": "La chaîne de puissance **obéit** : c’est la chaîne d’information qui pilote la fonction « distribuer »."
+    }
+   ]
+  },
+  {
+   "chapitre": "2f2e2668-de18-55cf-aefc-eece07a44158",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre appareils, quatre convertisseurs",
+   "competence": "lire-tableau",
+   "situation": "Le magasin de vélos électriques « Pédale Verte » range ses appareils : le chargeur, le micro-onduleur du toit solaire, le variateur de lumière de l’atelier et le variateur de la trottinette de prêt.",
+   "documents": [
+    {
+     "id": "conv",
+     "type": "tableau",
+     "titre": "Entrées et sorties des appareils",
+     "colonnes": [
+      "Appareil",
+      "Entrée",
+      "Sortie"
+     ],
+     "lignes": [
+      [
+       "Chargeur du vélo électrique",
+       "230 V alternatif",
+       "42 V continu"
+      ],
+      [
+       "Micro-onduleur du toit",
+       "30 V continu",
+       "230 V alternatif"
+      ],
+      [
+       "Variateur de lumière",
+       "230 V alternatif",
+       "230 V alternatif réglable"
+      ],
+      [
+       "Variateur de la trottinette",
+       "36 V continu",
+       "0 à 36 V continu"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque appareil selon le type de convertisseur qu’il contient.",
+     "categories": [
+      "AC/DC",
+      "DC/AC",
+      "DC/DC",
+      "AC/AC"
+     ],
+     "items": [
+      [
+       "Chargeur du vélo électrique",
+       0
+      ],
+      [
+       "Micro-onduleur du toit",
+       1
+      ],
+      [
+       "Variateur de la trottinette",
+       2
+      ],
+      [
+       "Variateur de lumière",
+       3
+      ]
+     ],
+     "aide": "Lis la nature de l’entrée puis celle de la sortie.",
+     "explication": "Alternatif → continu : **AC/DC** (chargeur). Continu → alternatif : **DC/AC** (onduleur). Continu → continu réglable : **DC/DC** (hacheur). Alternatif → alternatif : **AC/AC** (gradateur)."
+    },
+    {
+     "type": "zone",
+     "document": "conv",
+     "enonce": "Touche l’appareil qui permet de régler progressivement la vitesse d’un moteur alimenté par une batterie.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Il faut une sortie continue dont la tension se règle.",
+     "explication": "Le **variateur de la trottinette** (hacheur) règle la tension continue envoyée au moteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un relais allume ou éteint la pompe d’un arrosage, sans autre réglage. Quel type de modulation est-ce ?",
+     "options": [
+      "Tout ou rien (TOR)",
+      "Progressive",
+      "Proportionnelle",
+      "Par variation de fréquence"
+     ],
+     "reponse": 0,
+     "aide": "Combien d’états la pompe peut-elle prendre ?",
+     "explication": "Marche ou arrêt, rien entre les deux : c’est une modulation **tout ou rien**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque forme de stockage à un exemple.",
+     "paires": [
+      [
+       "Chimique",
+       "Batterie du vélo"
+      ],
+      [
+       "Électrique",
+       "Supercondensateur"
+      ],
+      [
+       "Mécanique",
+       "Volant d’inertie"
+      ],
+      [
+       "Thermique",
+       "Ballon d’eau chaude"
+      ]
+     ],
+     "aide": "Pense à ce que contient réellement chaque objet.",
+     "explication": "Une batterie stocke sous forme **chimique**, un supercondensateur sous forme **électrique**, un volant d’inertie sous forme **mécanique**, un ballon sous forme **thermique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2f2e2668-de18-55cf-aefc-eece07a44158",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La chaîne de puissance d’une éolienne",
+   "competence": "modeliser",
+   "situation": "Une petite éolienne alimente le chalet d’une famille. Son multiplicateur, de rapport 8, accélère la rotation du rotor pour entraîner la génératrice. On le suppose sans pertes.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Chaîne de puissance de l’éolienne",
+     "noeuds": [
+      {
+       "id": "rot",
+       "texte": "Rotor (pales)",
+       "emoji": "🌬️"
+      },
+      {
+       "id": "mul",
+       "texte": "Multiplicateur"
+      },
+      {
+       "id": "gen",
+       "texte": "Génératrice"
+      },
+      {
+       "id": "red",
+       "texte": "Redresseur"
+      },
+      {
+       "id": "bat",
+       "texte": "Batterie",
+       "emoji": "🔋"
+      },
+      {
+       "id": "ond",
+       "texte": "Onduleur"
+      }
+     ],
+     "liens": [
+      {
+       "de": "rot",
+       "a": "mul"
+      },
+      {
+       "de": "mul",
+       "a": "gen"
+      },
+      {
+       "de": "gen",
+       "a": "red"
+      },
+      {
+       "de": "red",
+       "a": "bat"
+      },
+      {
+       "de": "bat",
+       "a": "ond"
+      }
+     ],
+     "source": "Chaîne simplifiée, écrite pour l’exercice"
+    },
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Grandeurs mesurées",
+     "colonnes": [
+      "Grandeur",
+      "Rotor (entrée)",
+      "Génératrice (sortie du multiplicateur)"
+     ],
+     "lignes": [
+      [
+       "Vitesse de rotation (tr/min)",
+       150,
+       "?"
+      ],
+      [
+       "Couple (N·m)",
+       40,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À quelle vitesse tourne la génératrice ?",
+     "reponse": 1200,
+     "unite": "tr/min",
+     "tolerance": 0,
+     "aide": "Le multiplicateur multiplie la vitesse par son rapport.",
+     "explication": "150 × 8 = **1200 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le couple à l’entrée de la génératrice, sans pertes ?",
+     "reponse": 5,
+     "unite": "N·m",
+     "tolerance": 0.01,
+     "aide": "La puissance se conserve : si la vitesse est multipliée par 8, le couple est divisé par 8.",
+     "explication": "40 ÷ 8 = **5 N·m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la puissance mécanique du rotor, avec P = C × ω et ω = 2π × N ÷ 60. Arrondis à l’unité.",
+     "reponse": 628,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "Convertis d’abord 150 tr/min en rad/s.",
+     "explication": "ω = 2π × 150 ÷ 60 ≈ 15.71 rad/s ; P = 40 × 15.71 ≈ **628 W**. Côté génératrice : 628 W, la puissance est la même."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "enonce": "Touche l’élément qui assure la fonction **stocker** l’énergie.",
+     "reponse": [
+      "bat"
+     ],
+     "aide": "Quel élément garde l’énergie quand il n’y a pas de vent ?",
+     "explication": "La **batterie** stocke l’énergie sous forme chimique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à la conversion qu’il réalise.",
+     "paires": [
+      [
+       "Génératrice",
+       "Mécanique vers électrique"
+      ],
+      [
+       "Redresseur",
+       "Alternatif vers continu"
+      ],
+      [
+       "Onduleur",
+       "Continu vers alternatif"
+      ]
+     ],
+     "aide": "La génératrice change la nature de l’énergie, les deux autres changent la forme du courant.",
+     "explication": "Génératrice : **mécanique → électrique** ; redresseur : **AC/DC** ; onduleur : **DC/AC**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fonction réalise le multiplicateur ?",
+     "options": [
+      "Adapter : il augmente la vitesse et diminue le couple",
+      "Adapter : il diminue la vitesse et augmente le couple",
+      "Convertir : il change l’énergie mécanique en électrique",
+      "Stocker : il garde l’énergie du vent pour plus tard"
+     ],
+     "reponse": 0,
+     "aide": "Compare les valeurs avant et après dans le tableau.",
+     "explication": "C’est un adaptateur **inverse du réducteur** : vitesse × 8, couple ÷ 8."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9b1139b-15d7-5149-b152-1451473200c3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les mouvements de la trottinette",
+   "competence": "lire-tableau",
+   "situation": "Un atelier de réparation étudie quatre pièces de trottinette. Pour chacune, il note les mouvements qu’elle peut faire par rapport à la pièce qui la porte.",
+   "documents": [
+    {
+     "id": "mv",
+     "type": "tableau",
+     "titre": "Mouvements possibles",
+     "colonnes": [
+      "Pièce",
+      "Translations possibles",
+      "Rotations possibles"
+     ],
+     "lignes": [
+      [
+       "Roue avant sur son axe",
+       0,
+       1
+      ],
+      [
+       "Tige de guidon télescopique, verrouillée en rotation",
+       1,
+       0
+      ],
+      [
+       "Rotule de la direction d’un jouet",
+       0,
+       3
+      ],
+      [
+       "Roue vissée sur son moyeu",
+       0,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mv",
+     "enonce": "Touche le nombre de rotations que permet la rotule.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la ligne de la rotule, puis la colonne des rotations.",
+     "explication": "La rotule autorise **3 rotations** et aucune translation."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque pièce à la liaison qu’elle réalise.",
+     "paires": [
+      [
+       "Roue avant sur son axe",
+       "Pivot"
+      ],
+      [
+       "Tige télescopique verrouillée en rotation",
+       "Glissière"
+      ],
+      [
+       "Rotule de direction",
+       "Rotule"
+      ],
+      [
+       "Roue vissée sur son moyeu",
+       "Encastrement"
+      ]
+     ],
+     "aide": "Compte les translations et les rotations qui restent possibles.",
+     "explication": "Une rotation seule : **pivot**. Une translation seule : **glissière**. Trois rotations : **rotule**. Aucun mouvement : **encastrement**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un solide libre a 6 degrés de liberté. Combien de mouvements la liaison pivot supprime-t-elle ?",
+     "reponse": 5,
+     "tolerance": 0,
+     "aide": "Le pivot laisse une seule rotation.",
+     "explication": "6 − 1 = **5 mouvements supprimés** : il ne reste que la rotation."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9b1139b-15d7-5149-b152-1451473200c3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le vérin du portail battant",
+   "competence": "geometrie",
+   "situation": "Le portail de Madame Rey s’ouvre grâce à un vérin. Le technicien liste les pièces : pilier, platine, vantail, ferrure, corps du vérin et tige du vérin. Il les regroupe puis dessine le graphe des liaisons.",
+   "documents": [
+    {
+     "id": "obs",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Observations du technicien",
+     "emoji": "🛠️",
+     "lignes": [
+      {
+       "texte": "Le pilier et la platine sont vissés ensemble"
+      },
+      {
+       "texte": "Le vantail et la ferrure sont soudés ensemble"
+      },
+      {
+       "texte": "Le vantail tourne autour de ses gonds, fixés au pilier",
+       "id": "o1"
+      },
+      {
+       "texte": "Le corps du vérin pivote sur la platine",
+       "id": "o2"
+      },
+      {
+       "texte": "La tige coulisse dans le corps du vérin, sans tourner",
+       "id": "o3"
+      },
+      {
+       "texte": "La tige pivote sur la ferrure du vantail",
+       "id": "o4"
+      }
+     ],
+     "pied": "Notes écrites pour l’exercice",
+     "teinte": "violet"
+    },
+    {
+     "id": "graphe",
+     "type": "schema",
+     "titre": "Graphe des liaisons du vérin de portail",
+     "largeur": 320,
+     "hauteur": 250,
+     "source": "Graphe écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 50,
+       "r": 24,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "1",
+       "id": "k1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 50,
+       "r": 24,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "2",
+       "id": "k2"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 190,
+       "r": 24,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "3",
+       "id": "k3"
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 190,
+       "r": 24,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "4",
+       "id": "k4"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        84,
+        50
+       ],
+       "a": [
+        236,
+        50
+       ],
+       "id": "l12",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        74
+       ],
+       "a": [
+        260,
+        166
+       ],
+       "id": "l24",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        190
+       ],
+       "a": [
+        84,
+        190
+       ],
+       "id": "l43",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        166
+       ],
+       "a": [
+        60,
+        74
+       ],
+       "id": "l31",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 40,
+       "texte": "liaison A",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 122,
+       "texte": "liaison B",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 182,
+       "texte": "liaison C",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 122,
+       "texte": "liaison D",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de classes d’équivalence cinématique ce portail compte-t-il ? (Les pièces vissées ou soudées ensemble n’en forment qu’une.)",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Pilier + platine = une classe. Vantail + ferrure = une classe. Que reste-t-il ?",
+     "explication": "Pilier-platine, vantail-ferrure, corps du vérin, tige : **4 classes**, les quatre cercles du graphe."
+    },
+    {
+     "type": "zone",
+     "document": "graphe",
+     "enonce": "Touche, sur le graphe, la liaison entre le corps du vérin (3) et sa tige (4).",
+     "reponse": [
+      "l43"
+     ],
+     "aide": "Cherche le trait qui relie les cercles 3 et 4.",
+     "explication": "La liaison **3–4**, en bas du graphe, relie le corps et la tige du vérin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle liaison relie le corps du vérin et sa tige ?",
+     "options": [
+      "Une glissière : la tige coulisse sans tourner",
+      "Un pivot : la tige tourne dans le corps",
+      "Une rotule : la tige s’oriente dans tous les sens",
+      "Un encastrement : la tige ne bouge pas du tout"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que fait la tige : coulisser, tourner ?",
+     "explication": "Une seule translation possible : c’est une **glissière**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons le graphe compte-t-il ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Compte les traits.",
+     "explication": "**4 liaisons** relient les 4 classes : le graphe forme une boucle fermée."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9b1139b-15d7-5149-b152-1451473200c3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le serre-joint de l’atelier",
+   "competence": "raisonner",
+   "situation": "En atelier, Malik analyse un serre-joint à vis. Pièces : corps avec mâchoire fixe (soudés), vis avec poignée (soudées), et patin mobile posé au bout de la vis.",
+   "documents": [
+    {
+     "id": "obs",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Ce que Malik observe",
+     "emoji": "🗜️",
+     "lignes": [
+      {
+       "texte": "En tournant la poignée, la vis avance dans le corps",
+       "id": "a"
+      },
+      {
+       "texte": "Le patin s’oriente dans tous les sens au bout de la vis",
+       "id": "b"
+      },
+      {
+       "texte": "La poignée est soudée sur la vis",
+       "id": "c"
+      },
+      {
+       "texte": "Le patin ne peut pas quitter la vis",
+       "id": "d"
+      }
+     ],
+     "pied": "Observations écrites pour l’exercice",
+     "teinte": "violet"
+    },
+    {
+     "id": "g",
+     "type": "schema",
+     "titre": "Graphe des liaisons du serre-joint",
+     "largeur": 340,
+     "hauteur": 150,
+     "source": "Graphe écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 70,
+       "r": 26,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "1",
+       "id": "c1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 70,
+       "r": 26,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "2",
+       "id": "c2"
+      },
+      {
+       "forme": "cercle",
+       "cx": 290,
+       "cy": 70,
+       "r": 26,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "3",
+       "id": "c3"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        76,
+        70
+       ],
+       "a": [
+        144,
+        70
+       ],
+       "id": "l12",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        196,
+        70
+       ],
+       "a": [
+        264,
+        70
+       ],
+       "id": "l23",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 55,
+       "texte": "liaison A",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 55,
+       "texte": "liaison B",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de classes d’équivalence ce serre-joint compte-t-il ?",
+     "reponse": 3,
+     "tolerance": 0,
+     "aide": "Regroupe les pièces soudées entre elles : corps + mâchoire, vis + poignée, patin.",
+     "explication": "Corps-mâchoire, vis-poignée et patin : **3 classes**, les trois cercles du graphe."
+    },
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la liaison où une rotation fait avancer une pièce.",
+     "reponse": [
+      "l12"
+     ],
+     "aide": "Quelle liaison est entre le corps (1) et la vis (2) ?",
+     "explication": "Entre le corps et la vis, tourner fait avancer : c’est une liaison **hélicoïdale**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque observation à la liaison qu’elle décrit.",
+     "paires": [
+      [
+       "La vis avance quand on la tourne",
+       "Hélicoïdale"
+      ],
+      [
+       "Le patin s’oriente dans tous les sens",
+       "Rotule"
+      ],
+      [
+       "La poignée est soudée sur la vis",
+       "Encastrement"
+      ]
+     ],
+     "aide": "Compte rotations et translations autorisées.",
+     "explication": "Rotation + translation liées : **hélicoïdale**. Trois rotations : **rotule**. Aucun mouvement : **encastrement** (pièces de la même classe)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les quatre étapes de la démarche pour obtenir le schéma cinématique.",
+     "items": [
+      "Regrouper les pièces en classes d’équivalence",
+      "Dessiner le graphe des liaisons",
+      "Identifier le nom de chaque liaison",
+      "Dessiner le schéma cinématique"
+     ],
+     "aide": "On regroupe avant de relier, et on nomme avant de dessiner.",
+     "explication": "**Classes → graphe → liaisons → schéma cinématique** : on ne dessine les symboles qu’à la fin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mouvements un encastrement supprime-t-il à un solide libre ?",
+     "reponse": 6,
+     "tolerance": 0,
+     "aide": "Un solide libre en a 6.",
+     "explication": "Un encastrement supprime **les 6 mouvements** : les deux pièces forment un seul solide."
+    }
+   ]
+  },
+  {
+   "chapitre": "c27dcba6-e37f-5b65-8914-16799fd3554b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans le thermostat connecté",
+   "competence": "observer-schema",
+   "situation": "Lina installe un thermostat connecté dans sa chambre. Il mesure la température, décide s’il faut chauffer et affiche l’information sur son téléphone.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Chaîne d’information du thermostat",
+     "noeuds": [
+      {
+       "id": "sonde",
+       "texte": "Sonde de température",
+       "emoji": "🌡️"
+      },
+      {
+       "id": "can",
+       "texte": "Convertisseur analogique-numérique"
+      },
+      {
+       "id": "mcu",
+       "texte": "Microcontrôleur"
+      },
+      {
+       "id": "wifi",
+       "texte": "Module Wi-Fi",
+       "emoji": "📶"
+      }
+     ],
+     "liens": [
+      {
+       "de": "sonde",
+       "a": "can",
+       "texte": "tension"
+      },
+      {
+       "de": "can",
+       "a": "mcu",
+       "texte": "nombre"
+      },
+      {
+       "de": "mcu",
+       "a": "wifi",
+       "texte": "message"
+      }
+     ],
+     "source": "Chaîne simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "enonce": "Touche le composant qui réalise la fonction **traiter** : calculer et décider.",
+     "reponse": [
+      "mcu"
+     ],
+     "aide": "Quel composant compare la température à la consigne ?",
+     "explication": "Le **microcontrôleur** calcule et décide : c’est la fonction « traiter »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments selon la fonction qu’ils remplissent.",
+     "categories": [
+      "Acquérir",
+      "Traiter",
+      "Communiquer"
+     ],
+     "items": [
+      [
+       "Sonde de température",
+       0
+      ],
+      [
+       "Bouton + / −",
+       0
+      ],
+      [
+       "Détecteur d’ouverture de fenêtre",
+       0
+      ],
+      [
+       "Microcontrôleur",
+       1
+      ],
+      [
+       "Écran",
+       2
+      ],
+      [
+       "Module Wi-Fi",
+       2
+      ]
+     ],
+     "aide": "Acquérir : prélever. Traiter : décider. Communiquer : transmettre.",
+     "explication": "Capteurs et boutons **acquièrent** ; le microcontrôleur **traite** ; écran et Wi-Fi **communiquent**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le détecteur d’ouverture de fenêtre ne renvoie que « ouverte » ou « fermée ». Quelle est la nature de son information ?",
+     "options": [
+      "Binaire (tout ou rien)",
+      "Analogique continue",
+      "Numérique sur 10 bits",
+      "Fréquentielle"
+     ],
+     "reponse": 0,
+     "aide": "Combien de valeurs différentes peut-il donner ?",
+     "explication": "Deux états seulement : c’est une information **binaire** (TOR)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le convertisseur du thermostat code sur 8 bits. Combien de valeurs différentes peut-il fournir ?",
+     "reponse": 256,
+     "tolerance": 0,
+     "aide": "Le nombre de valeurs vaut 2 puissance le nombre de bits.",
+     "explication": "2⁸ = **256 valeurs**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c27dcba6-e37f-5b65-8914-16799fd3554b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe du capteur de température",
+   "competence": "lire-graphique",
+   "situation": "Le thermostat de la serre de Noé utilise un capteur dont le constructeur donne la courbe ci-dessous. Noé veut savoir avec quelle finesse sa carte électronique lira la température.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension de sortie du capteur",
+     "categories": [
+      "0 °C",
+      "10 °C",
+      "20 °C",
+      "30 °C",
+      "40 °C",
+      "50 °C"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Température"
+     },
+     "valeurs": false,
+     "source": "Courbe simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "c",
+     "enonce": "Touche le point de la courbe qui correspond à **30 °C**.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compte les graduations en partant de 0 °C.",
+     "explication": "Le point de **30 °C** est le quatrième, à 0,6 V."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’allure de cette courbe sur le capteur ?",
+     "options": [
+      "Il est linéaire : la tension est proportionnelle à la température",
+      "Il est saturé : la tension plafonne à 1 V dès 30 °C",
+      "Il est binaire : la tension ne prend que deux valeurs",
+      "Il est bruité : la tension varie dans tous les sens"
+     ],
+     "reponse": 0,
+     "aide": "Observe si les points sont alignés avec l’origine.",
+     "explication": "Une droite qui passe par l’origine : le capteur est **linéaire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la sensibilité du capteur, en mV/°C ?",
+     "reponse": 20,
+     "unite": "mV/°C",
+     "tolerance": 0.5,
+     "aide": "À 50 °C, la tension vaut 1 V = 1 000 mV.",
+     "explication": "1 000 mV ÷ 50 °C = **20 mV/°C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La carte de Noé utilise un CAN 12 bits de pleine échelle 3,3 V. Quel est son quantum, en mV ? Arrondis au millième.",
+     "reponse": 0.806,
+     "unite": "mV",
+     "tolerance": 0.001,
+     "aide": "Quantum = pleine échelle ÷ 2 puissance n, avec n = 12 et 2¹² = 4 096.",
+     "explication": "3,3 V ÷ 4 096 ≈ 0,000 806 V, soit **0.806 mV**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle plus petite variation de température le CAN distingue-t-il ? Arrondis au centième.",
+     "reponse": 0.04,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Divise le quantum par la sensibilité du capteur.",
+     "explication": "0.806 mV ÷ 20 mV/°C ≈ **0.04 °C**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c27dcba6-e37f-5b65-8914-16799fd3554b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le volet qui suit le soleil",
+   "competence": "modeliser",
+   "situation": "Un volet roulant automatique s’adapte à la lumière du jour. Son capteur doit distinguer deux éclairements qui diffèrent de 5 lux. Le bureau d’études compare trois convertisseurs.",
+   "documents": [
+    {
+     "id": "cap",
+     "type": "tableau",
+     "titre": "Capteur de luminosité",
+     "colonnes": [
+      "Caractéristique",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Étendue de mesure",
+       "0 à 10 000 lux"
+      ],
+      [
+       "Tension de sortie",
+       "0 à 2,5 V, proportionnelle à l’éclairement"
+      ],
+      [
+       "Pleine échelle du CAN",
+       "2,5 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "can",
+     "type": "tableau",
+     "titre": "Convertisseurs proposés",
+     "colonnes": [
+      "Convertisseur",
+      "Nombre de bits",
+      "Coût unitaire (€)"
+     ],
+     "lignes": [
+      [
+       "CAN A",
+       8,
+       0.4
+      ],
+      [
+       "CAN B",
+       10,
+       0.65
+      ],
+      [
+       "CAN C",
+       12,
+       1.2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Prix simplifiés, écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la sensibilité du capteur, en mV par lux ?",
+     "reponse": 0.25,
+     "unite": "mV/lux",
+     "tolerance": 0.005,
+     "aide": "Sensibilité = variation de tension ÷ variation d’éclairement, sur toute l’étendue.",
+     "explication": "2 500 mV ÷ 10 000 lux = **0.25 mV/lux**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le quantum du CAN B (10 bits), en mV ? Arrondis au centième.",
+     "reponse": 2.44,
+     "unite": "mV",
+     "tolerance": 0.01,
+     "aide": "Quantum = 2,5 V ÷ 1 024.",
+     "explication": "2 500 mV ÷ 1 024 ≈ **2.44 mV**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle plus petite variation d’éclairement le CAN B distingue-t-il ? Arrondis au centième.",
+     "reponse": 9.77,
+     "unite": "lux",
+     "tolerance": 0.01,
+     "aide": "Divise l’étendue de mesure par le nombre de valeurs.",
+     "explication": "10 000 ÷ 1 024 ≈ **9.77 lux** : c’est plus que 5 lux, le CAN B ne convient pas. (CAN A : 39.06 lux.)"
+    },
+    {
+     "type": "zone",
+     "document": "can",
+     "enonce": "Touche le convertisseur le moins cher qui distingue bien 5 lux.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Il faut une résolution meilleure que 5 lux : essaie les trois convertisseurs.",
+     "explication": "Seul le **CAN C** (12 bits) descend à 2.44 lux, sous les 5 lux demandés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le CAN C, quel nombre le microcontrôleur lit-il pour un éclairement de 1 250 lux ?",
+     "reponse": 512,
+     "tolerance": 0,
+     "aide": "1 250 lux donnent 0,3125 V ; divise cette tension par le quantum du CAN 12 bits.",
+     "explication": "0,3125 V ÷ (2,5 V ÷ 4 096) = **512**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2b97941-fbb1-5594-beab-3e565ee245a5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les huit volets de la maison",
+   "competence": "calculer",
+   "situation": "Dans une maison connectée, la carte de commande code l’état de huit volets roulants dans un seul octet : un bit par volet, 1 = volet baissé. Chaque colonne du tableau porte le poids d’un bit.",
+   "documents": [
+    {
+     "id": "oct",
+     "type": "tableau",
+     "titre": "L’octet de la maison",
+     "colonnes": [
+      "Volet",
+      "Poids du bit",
+      "État (1 = baissé)"
+     ],
+     "lignes": [
+      [
+       "V8",
+       128,
+       1
+      ],
+      [
+       "V7",
+       64,
+       0
+      ],
+      [
+       "V6",
+       32,
+       1
+      ],
+      [
+       "V5",
+       16,
+       1
+      ],
+      [
+       "V4",
+       8,
+       0
+      ],
+      [
+       "V3",
+       4,
+       0
+      ],
+      [
+       "V2",
+       2,
+       0
+      ],
+      [
+       "V1",
+       1,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Octet écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oct",
+     "enonce": "Touche les poids des volets qui sont **baissés**.",
+     "reponse": [
+      "r0c1",
+      "r2c1",
+      "r3c1",
+      "r7c1"
+     ],
+     "multiple": true,
+     "aide": "Un volet est baissé quand son bit vaut 1.",
+     "explication": "Les bits à 1 sont ceux des poids **128, 32, 16 et 1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur décimale cet octet représente-t-il ?",
+     "reponse": 177,
+     "tolerance": 0,
+     "aide": "Additionne les poids des bits à 1.",
+     "explication": "128 + 32 + 16 + 1 = **177**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’états différents peut-on coder avec un octet ?",
+     "reponse": 256,
+     "tolerance": 0,
+     "aide": "Chaque bit double le nombre de possibilités.",
+     "explication": "2⁸ = **256 états**, de 0 à 255."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2b97941-fbb1-5594-beab-3e565ee245a5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le programme de l’arrosage",
+   "competence": "programmer",
+   "situation": "Le jardin potager du lycée est arrosé par un petit programme. Il tourne quatre fois, à dix minutes d’intervalle, et lit à chaque passage l’humidité du sol.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Programme d’arrosage",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "pour i de 1 à 4 :",
+      "    mesure ← lire_humidite()",
+      "    si [[c|mesure < 30]] alors",
+      "        ouvrir_vanne()",
+      "    sinon",
+      "        fermer_vanne()",
+      "    attendre(10 min)"
+     ]
+    },
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Humidité relevée à chaque passage",
+     "colonnes": [
+      "Passage",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Humidité (%)",
+       42,
+       30,
+       27,
+       35
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche la **condition** qui décide d’ouvrir la vanne.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "La condition est ce qui suit le mot « si ».",
+     "explication": "La condition est **mesure < 30** : elle est vraie ou fausse à chaque passage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les quatre passages, combien de fois la vanne s’ouvre-t-elle ?",
+     "reponse": 1,
+     "tolerance": 0,
+     "aide": "Compare chaque humidité à 30, en gardant le « strictement inférieur ».",
+     "explication": "Seul le passage 3 (27 %) vérifie « < 30 ». Au passage 2, 30 n’est **pas** inférieur à 30 : **1 ouverture**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la vanne reste-t-elle fermée au passage 2, avec 30 % d’humidité ?",
+     "options": [
+      "Parce que 30 n’est pas strictement inférieur à 30",
+      "Parce que 30 est supérieur à 30, donc le sol est trop sec",
+      "Parce que la boucle ne passe jamais par le deuxième tour",
+      "Parce que le programme ne lit pas toujours l’humidité"
+     ],
+     "reponse": 0,
+     "aide": "Relis le signe de la condition.",
+     "explication": "Le test est **< 30**, pas ≤ 30 : à 30 exactement, la condition est fausse, on passe au « sinon »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure le programme en tout, en minutes ?",
+     "reponse": 40,
+     "unite": "min",
+     "tolerance": 0,
+     "aide": "Chaque tour attend 10 minutes.",
+     "explication": "4 tours × 10 min = **40 min**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : ce programme utilise une structure ___ (si… alors… sinon) et une structure ___ (pour).",
+     "texte": "Ce programme utilise une structure ___ (si… alors… sinon) et une structure ___ (pour).",
+     "reponses": [
+      [
+       "conditionnelle",
+       "condition"
+      ],
+      [
+       "répétitive",
+       "boucle",
+       "itérative"
+      ]
+     ],
+     "banque": [
+      "conditionnelle",
+      "répétitive",
+      "séquentielle",
+      "sous-programme"
+     ],
+     "aide": "L’une choisit, l’autre répète.",
+     "explication": "Le « si » est une **condition**, le « pour » une **boucle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c2b97941-fbb1-5594-beab-3e565ee245a5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le journal du capteur",
+   "competence": "modeliser",
+   "situation": "Un capteur de température de maison connectée envoie sa mesure sur un petit serveur. Ce serveur garde l’historique pendant un mois, et la LED d’état du capteur est pilotée par un code couleur en hexadécimal.",
+   "documents": [
+    {
+     "id": "j",
+     "type": "tableau",
+     "titre": "Fonctionnement du capteur",
+     "colonnes": [
+      "Caractéristique",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Mesures par heure",
+       60
+      ],
+      [
+       "Taille d’une mesure (octets)",
+       2
+      ],
+      [
+       "Durée d’archivage (jours)",
+       30
+      ],
+      [
+       "Taux de compression de l’archive",
+       0.25
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "h",
+     "type": "tableau",
+     "titre": "Code couleur de la LED",
+     "colonnes": [
+      "Couleur",
+      "Code hexadécimal (rouge, vert, bleu)"
+     ],
+     "lignes": [
+      [
+       "Orange de la LED d’état",
+       "FF 80 00"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Code écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’octets le capteur envoie-t-il en une journée ?",
+     "reponse": 2880,
+     "unite": "octets",
+     "tolerance": 0,
+     "aide": "60 mesures par heure pendant 24 h, de 2 octets chacune.",
+     "explication": "60 × 24 × 2 = **2880 octets**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille de l’archive de 30 jours, en ko (1 ko = 1 000 octets) ?",
+     "reponse": 86.4,
+     "unite": "ko",
+     "tolerance": 0.1,
+     "aide": "Multiplie l’octet de la journée par 30, puis divise par 1 000.",
+     "explication": "2880 × 30 = 86400 octets, soit **86.4 ko**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille de l’archive une fois compressée, en ko ?",
+     "reponse": 21.6,
+     "unite": "ko",
+     "tolerance": 0.1,
+     "aide": "Taux de compression = taille compressée ÷ taille initiale.",
+     "explication": "86.4 ko × 0.25 = **21.6 ko**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Convertis le code FF 80 00 en décimal : donne les trois valeurs R, V et B.",
+     "texte": "Rouge : ___ ; vert : ___ ; bleu : ___.",
+     "reponses": [
+      [
+       "255"
+      ],
+      [
+       "128"
+      ],
+      [
+       "0"
+      ]
+     ],
+     "aide": "FF = 15 × 16 + 15 ; 80 = 8 × 16 ; 00 = 0.",
+     "explication": "FF = 15 × 16 + 15 = **255** ; 80 = 8 × 16 = **128** ; 00 = **0**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On archive ces mesures pour les relire exactement plus tard. Quelle compression choisir ?",
+     "options": [
+      "Sans perte (comme zip)",
+      "Avec perte (comme jpeg)",
+      "Aucune : on supprime les vieilles mesures",
+      "Avec perte, car le capteur est précis"
+     ],
+     "reponse": 0,
+     "aide": "Quelle compression restitue tout ?",
+     "explication": "Pour relire **exactement** les mesures, il faut une compression **sans perte**."
+    }
+   ]
+  }
+ ]
+}

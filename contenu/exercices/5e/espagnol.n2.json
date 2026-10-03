@@ -1,0 +1,4150 @@
+{
+ "niveau": "5e",
+ "matiere": "espagnol",
+ "exercices": [
+  {
+   "chapitre": "b05037aa-80c2-597e-9b11-27efe9df1a6c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un sábado sans plan",
+   "competence": "comprendre-langue",
+   "situation": "Pablo et Lucía cherchent quoi faire samedi. Ils n’ont encore rien prévu.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Pablo y Lucía",
+     "participants": [
+      {
+       "nom": "Pablo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucía",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Pablo",
+       "texte": "Hola, Lucía. ¿Tienes [[a|algún]] plan para el sábado?"
+      },
+      {
+       "qui": "Lucía",
+       "texte": "No tengo [[a|ningún]] plan. ¿Y tú?"
+      },
+      {
+       "qui": "Pablo",
+       "texte": "Yo tampoco. ¿Vamos a [[a|algún]] sitio?"
+      },
+      {
+       "qui": "Lucía",
+       "texte": "Vamos al parque. [[c|Cada]] sábado hay mercado allí."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois indéfinis apocopés** (raccourcis) de la conversation.",
+     "aide": "Ils sont devant un nom masculin singulier : cherche algún et ningún.",
+     "explication": "**algún plan, ningún plan, algún sitio** : devant un nom masculin singulier, *alguno* et *ninguno* perdent leur *-o*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Cada sábado », que peut-on dire de *cada* ?",
+     "options": [
+      "Non, cada est toujours invariable",
+      "Oui, il devient cadas au pluriel",
+      "Oui, il prend un s si on parle de plusieurs jours",
+      "Il s’accorde avec le genre du nom"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si le mot change quand on parle de plusieurs jours : *cada día*, *cada dos horas*.",
+     "explication": "**Cada** est invariable : jamais de pluriel, ni de féminin (*cada día*, *cada semana*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon indéfini.",
+     "texte": "Al llegar al parque, Pablo dice : « No veo a ___. ¡Está vacío! »",
+     "reponses": [
+      [
+       "nadie"
+      ]
+     ],
+     "banque": [
+      "nadie",
+      "nada",
+      "algo",
+      "alguna"
+     ],
+     "aide": "Il s’agit d’une personne, et la phrase est négative.",
+     "explication": "**No veo a nadie** : avec un COD de personne, la préposition *a* est obligatoire et *nadie* se combine avec *no*."
+    }
+   ]
+  },
+  {
+   "chapitre": "b05037aa-80c2-597e-9b11-27efe9df1a6c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le club de théâtre du collège",
+   "competence": "manier-langue",
+   "situation": "Le collège affiche une annonce pour recruter de nouveaux élèves dans son club de théâtre.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Club de teatro",
+     "sousTitre": "Instituto Cervantes · aula 12",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Cualquier alumno puede venir.",
+       "id": "a"
+      },
+      {
+       "texte": "Cada martes, a las cinco.",
+       "id": "b"
+      },
+      {
+       "texte": "No hace falta ninguna experiencia.",
+       "id": "c"
+      },
+      {
+       "texte": "Trae algún objeto para la escena.",
+       "id": "d"
+      }
+     ],
+     "pied": "¡Te esperamos!",
+     "teinte": "violet",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "c"
+     ],
+     "multiple": false,
+     "enonce": "Touche la ligne qui contient un indéfini à la **forme féminine**.",
+     "aide": "Cherche un indéfini terminé par -a, pas apocopé.",
+     "explication": "**ninguna** experiencia : *experiencia* est féminin, donc *ninguno* prend la forme *ninguna* (pas d’apocope)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la forme correcte.",
+     "texte": "No tengo ___ duda sobre la fecha.",
+     "reponses": [
+      [
+       "ninguna"
+      ]
+     ],
+     "banque": [
+      "ninguna",
+      "ningún",
+      "ninguno",
+      "nadie"
+     ],
+     "aide": "*Duda* est un nom féminin.",
+     "explication": "**ninguna duda** : devant un féminin, *ninguno* garde sa forme pleine *ninguna*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’affiche dit-elle « cualquier alumno » et non « cualquiera alumno » ?",
+     "options": [
+      "Cualquiera s’apocope devant un nom",
+      "Cualquiera ne s’emploie jamais au singulier",
+      "Alumno est un nom féminin singulier",
+      "Cualquiera est réservé aux personnes"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui suit le mot : un nom, ou rien ?",
+     "explication": "**cualquier alumno** : *cualquiera* devient *cualquier* devant un nom, masculin ou féminin ; il garde le *-a* quand il est seul."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "Je ne vois personne",
+       "No veo a nadie"
+      ],
+      [
+       "Tu veux quelque chose ?",
+       "¿Quieres algo?"
+      ],
+      [
+       "Chaque jour",
+       "Cada día"
+      ],
+      [
+       "Tous les deux",
+       "Ambos"
+      ]
+     ],
+     "aide": "Pense à la paire positif / négatif pour les personnes et les choses.",
+     "explication": "*nadie* (personne), *algo* (quelque chose), *cada* (chaque, invariable) et *ambos* (tous les deux)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b05037aa-80c2-597e-9b11-27efe9df1a6c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les copies de la classe",
+   "competence": "analyser-document",
+   "situation": "Le professeur d’espagnol corrige des phrases d’élèves. Certaines contiennent une faute sur un indéfini.",
+   "documents": [
+    {
+     "id": "copias",
+     "type": "tableau",
+     "titre": "Las frases de los alumnos",
+     "colonnes": [
+      "Alumno",
+      "Frase"
+     ],
+     "lignes": [
+      [
+       "Marta",
+       "Estudio todos días en la biblioteca."
+      ],
+      [
+       "Iván",
+       "Quiero otro libro, por favor."
+      ],
+      [
+       "Sara",
+       "Cualquiera día puedo venir."
+      ],
+      [
+       "Hugo",
+       "No tengo ningún problema."
+      ],
+      [
+       "Nora",
+       "Mi tío tiene un otro coche."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Phrases écrites pour l’exercice"
+    },
+    {
+     "id": "primos",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Elena y Dani",
+     "participants": [
+      {
+       "nom": "Elena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dani",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elena",
+       "texte": "Mis dos primos vienen mañana. Ambos viven en Sevilla."
+      },
+      {
+       "qui": "Dani",
+       "texte": "¿Y los demás? ¿Viene también tu tía?"
+      },
+      {
+       "qui": "Elena",
+       "texte": "No, los demás se quedan en casa. Cada uno tiene sus planes."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copias",
+     "reponse": [
+      "r0c1",
+      "r2c1",
+      "r4c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois phrases** qui contiennent une faute.",
+     "aide": "Une faute d’article, une faute d’apocope, et un article de trop.",
+     "explication": "**Todos días** (il faut *todos los días*), **Cualquiera día** (il faut *cualquier día*) et **un otro coche** (il faut *otro coche*, sans article indéfini)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment corriger « Estudio todos días » ?",
+     "options": [
+      "Ajouter l’article : todos los días",
+      "Mettre todos au féminin : todas días",
+      "Supprimer todos : estudio días",
+      "Mettre días au singulier : todos día"
+     ],
+     "reponse": 0,
+     "aide": "Todo exige l’article : *todo el día*, *toda la noche*.",
+     "explication": "**Todos los días** : *todo* s’accorde et exige l’article défini."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon mot.",
+     "texte": "Mis dos primos vienen : ___ viven en Sevilla.",
+     "reponses": [
+      [
+       "ambos"
+      ]
+     ],
+     "banque": [
+      "ambos",
+      "ninguno",
+      "cada",
+      "demás"
+     ],
+     "aide": "Le message parle de deux personnes, et on veut dire « tous les deux ».",
+     "explication": "**Ambos** : « tous les deux »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « los demás se quedan en casa », que désigne *los demás* ?",
+     "options": [
+      "Les autres, le reste des personnes",
+      "Tous les cousins sans exception",
+      "Aucun des cousins",
+      "Les deux cousins seulement"
+     ],
+     "reponse": 0,
+     "aide": "Elena vient de parler de deux cousins, puis d’autres personnes.",
+     "explication": "**Los demás** = les autres, le reste (ici la tante et les autres membres de la famille)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Chacun a ses projets. » La phrase commence par Cada.",
+     "items": [
+      "Cada",
+      "uno",
+      "tiene",
+      "sus",
+      "planes"
+     ],
+     "aide": "*Cada uno* = chacun.",
+     "explication": "**Cada uno tiene sus planes** : *cada uno* est le sujet, suivi du verbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "127e9936-2588-5463-8aa6-f46bdd9a0aad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux vélos à louer",
+   "competence": "lire-tableau",
+   "situation": "Clara hésite entre deux vélos dans un magasin de location et compare leurs caractéristiques.",
+   "documents": [
+    {
+     "id": "bicis",
+     "type": "tableau",
+     "titre": "Las dos bicis",
+     "colonnes": [
+      "",
+      "Bici A",
+      "Bici B"
+     ],
+     "lignes": [
+      [
+       "Precio (€)",
+       120,
+       150
+      ],
+      [
+       "Peso (kg)",
+       12,
+       12
+      ],
+      [
+       "Edad (años)",
+       2,
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bicis",
+     "reponse": [
+      "r1c1",
+      "r1c2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux cases** qui montrent que les deux vélos sont à égalité.",
+     "aide": "Cherche deux valeurs identiques sur la même ligne.",
+     "explication": "Les deux vélos pèsent **12 kg** : on pourra dire *tan pesada como*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la comparaison.",
+     "texte": "La bici A es ___ cara ___ la bici B.",
+     "reponses": [
+      [
+       "menos"
+      ],
+      [
+       "que"
+      ]
+     ],
+     "banque": [
+      "menos",
+      "más",
+      "que",
+      "como",
+      "tan"
+     ],
+     "aide": "Compare les prix : 120 € et 150 €.",
+     "explication": "**La bici A es menos cara que la bici B** : infériorité = *menos… que*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dire que la bici B est plus vieille ?",
+     "options": [
+      "La bici B es más vieja que la bici A",
+      "La bici B es tan vieja como la bici A",
+      "La bici B es menos vieja que la bici A",
+      "La bici B es más vieja como la bici A"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Edad » : 4 ans contre 2 ans.",
+     "explication": "**Más vieja que** : supériorité = *más… que*."
+    }
+   ]
+  },
+  {
+   "chapitre": "127e9936-2588-5463-8aa6-f46bdd9a0aad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au marché avec cinq euros",
+   "competence": "manier-langue",
+   "situation": "Marta fait le marché pour sa mère. Elle lit le ticket et envoie un message.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Mercado de Triana",
+     "sousTitre": "Hoy · puesto de fruta",
+     "emoji": "🍎",
+     "lignes": [
+      {
+       "texte": "Tomates (1 kg)",
+       "valeur": "2 €",
+       "id": "t"
+      },
+      {
+       "texte": "Manzanas (1 kg)",
+       "valeur": "3 €",
+       "id": "m"
+      },
+      {
+       "texte": "Peras (1 kg)",
+       "valeur": "3 €",
+       "id": "p"
+      },
+      {
+       "texte": "Uvas (1 kg)",
+       "valeur": "4 €",
+       "id": "u"
+      }
+     ],
+     "pied": "¡Buen provecho!",
+     "teinte": "vert",
+     "source": "Ticket écrit pour l’exercice"
+    },
+    {
+     "id": "marta",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Marta y su madre",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mamá",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "Mamá, solo tengo cinco euros. No tengo más que cinco euros."
+      },
+      {
+       "qui": "Mamá",
+       "texte": "Compra fruta, pero no más de dos kilos."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ticket",
+     "reponse": [
+      "m",
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux fruits** qui coûtent « tanto como » l’un l’autre.",
+     "aide": "Cherche deux lignes avec le même prix.",
+     "explication": "**Manzanas** et **peras** coûtent chacune 3 € : *las manzanas cuestan tanto como las peras*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Les raisins sont plus chers que les tomates. » La phrase commence par Las uvas.",
+     "items": [
+      "Las uvas",
+      "son",
+      "más",
+      "caras",
+      "que",
+      "los tomates"
+     ],
+     "aide": "Supériorité : *más + adjectif + que*.",
+     "explication": "**Las uvas son más caras que los tomates** : 4 € contre 2 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Marta écrit « No tengo más que cinco euros ». Que veut-elle dire ?",
+     "options": [
+      "Elle n’a que cinq euros",
+      "Elle a plus de cinq euros",
+      "Elle n’a pas d’argent",
+      "Elle dépensera cinq euros"
+     ],
+     "reponse": 0,
+     "aide": "*No… más que* devant un chiffre signifie « seulement ».",
+     "explication": "**No tengo más que cinco euros** = je n’ai que cinq euros ; *no… más de* voudrait dire « pas plus de »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Marta tiene cinco euros : tiene ___ de diez euros.",
+     "reponses": [
+      [
+       "menos"
+      ]
+     ],
+     "banque": [
+      "menos",
+      "más",
+      "tan",
+      "que"
+     ],
+     "aide": "Cinq est plus petit que dix.",
+     "explication": "**Menos de diez euros** : devant un nombre, on emploie *de* et non *que*."
+    }
+   ]
+  },
+  {
+   "chapitre": "127e9936-2588-5463-8aa6-f46bdd9a0aad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois frères et sœurs",
+   "competence": "manier-langue",
+   "situation": "Lucía décrit sa famille dans une lettre. Un tableau donne l’âge, la taille et la note d’anglais de chacun.",
+   "documents": [
+    {
+     "id": "ficha",
+     "type": "tableau",
+     "titre": "Ficha de los hermanos",
+     "colonnes": [
+      "Nombre",
+      "Edad (años)",
+      "Altura (cm)",
+      "Nota de inglés"
+     ],
+     "lignes": [
+      [
+       "Pablo",
+       16,
+       175,
+       7
+      ],
+      [
+       "Ana",
+       14,
+       160,
+       5
+      ],
+      [
+       "Lucía",
+       11,
+       160,
+       9
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Lucía",
+     "blocs": [
+      "Mi hermano Pablo es mayor que yo. Tengo mejor nota que Ana en inglés, aunque es más difícil de lo que parece.",
+      "Y Pablo crece cada vez más rápido: ¡ya es más alto que mi padre!"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ficha",
+     "reponse": [
+      "r1c2",
+      "r2c2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux tailles** égales.",
+     "aide": "Compare la colonne « Altura ».",
+     "explication": "**Ana et Lucía** mesurent toutes deux 160 cm : *Ana es tan alta como Lucía*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le comparatif irrégulier.",
+     "texte": "Lucía es ___ que Pablo.",
+     "reponses": [
+      [
+       "menor"
+      ]
+     ],
+     "banque": [
+      "menor",
+      "mayor",
+      "mejor",
+      "peor"
+     ],
+     "aide": "Lucía a 11 ans, Pablo 16 ans.",
+     "explication": "**Lucía es menor que Pablo** : *menor* sert pour l’âge."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le comparatif irrégulier.",
+     "texte": "Lucía tiene ___ nota que Ana en inglés.",
+     "reponses": [
+      [
+       "mejor"
+      ]
+     ],
+     "banque": [
+      "mejor",
+      "peor",
+      "más mejor",
+      "mayor"
+     ],
+     "aide": "Compare 9 et 5. Et rappelle-toi : jamais « más mejor ».",
+     "explication": "**Mejor nota** : *mejor* est le comparatif de *bueno*, il ne se combine jamais avec *más*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lucía écrit-elle « más difícil de lo que parece » ?",
+     "options": [
+      "Le second terme est une proposition",
+      "Il y a un nombre après más",
+      "Elle compare deux personnes",
+      "Difícil est un comparatif irrégulier"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui vient après le comparatif : un verbe conjugué.",
+     "explication": "**De lo que parece** : quand le second terme est une proposition, on emploie *de lo que*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ana est plus jeune que Pablo. » La phrase commence par Ana.",
+     "items": [
+      "Ana",
+      "es",
+      "menor",
+      "que",
+      "Pablo"
+     ],
+     "aide": "*Menor que* se construit comme *más… que*.",
+     "explication": "**Ana es menor que Pablo** : 14 ans contre 16."
+    }
+   ]
+  },
+  {
+   "chapitre": "b42c627a-e076-50f6-bcd8-6275fc4cfda6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les sommets d’Espagne",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé de géographie, Inés présente trois grands sommets espagnols.",
+   "documents": [
+    {
+     "id": "picos",
+     "type": "tableau",
+     "titre": "Los picos más famosos",
+     "colonnes": [
+      "Pico",
+      "Altura (m)"
+     ],
+     "lignes": [
+      [
+       "Teide (Tenerife)",
+       3715
+      ],
+      [
+       "Mulhacén (Sierra Nevada)",
+       3479
+      ],
+      [
+       "Aneto (Pirineos)",
+       3404
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Altitudes arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "picos",
+     "reponse": [
+      "r0c0"
+     ],
+     "multiple": false,
+     "enonce": "Touche le sommet qui est **« el más alto de España »**.",
+     "aide": "Cherche la plus grande altitude.",
+     "explication": "Le **Teide** (3 715 m) est le plus haut sommet d’Espagne."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le superlatif relatif.",
+     "texte": "El Teide es el pico ___ alto ___ España.",
+     "reponses": [
+      [
+       "más"
+      ],
+      [
+       "de"
+      ]
+     ],
+     "banque": [
+      "más",
+      "menos",
+      "de",
+      "en"
+     ],
+     "aide": "On compare le Teide aux autres, et le complément se construit avec *de*.",
+     "explication": "**El más alto de España** : *el + más + adjectif + de*. Jamais *en*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte pour parler de l’Aneto ?",
+     "options": [
+      "El Aneto es el más bajo de los tres",
+      "El Aneto es el más alto de los tres",
+      "El Aneto es el más bajo en los tres",
+      "El Aneto es muy bajísimo de los tres"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec les deux autres altitudes.",
+     "explication": "**El más bajo de los tres** : 3 404 m, le plus bas des trois ; et le complément prend *de*."
+    }
+   ]
+  },
+  {
+   "chapitre": "b42c627a-e076-50f6-bcd8-6275fc4cfda6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un menu « tout en -ísimo »",
+   "competence": "manier-langue",
+   "situation": "Un restaurant de Séville décrit ses plats avec enthousiasme. Tu vas repérer et fabriquer des superlatifs absolus.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Restaurante La Plaza",
+     "sousTitre": "Menú del día",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Paella valenciana — riquísima",
+       "id": "a"
+      },
+      {
+       "texte": "Ensalada mixta — muy fresca",
+       "id": "b"
+      },
+      {
+       "texte": "Pescado del día — fresquísimo",
+       "id": "c"
+      },
+      {
+       "texte": "Sopa de ajo — calentísima",
+       "id": "d"
+      },
+      {
+       "texte": "Flan casero — muy dulce",
+       "id": "e"
+      }
+     ],
+     "teinte": "ambre",
+     "source": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "reponse": [
+      "a",
+      "c",
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois plats** décrits avec le suffixe **-ísimo**.",
+     "aide": "Cherche les mots qui se terminent en -ísima.",
+     "explication": "**riquísima, fresquísimo, calentísima** : le superlatif absolu se forme avec *-ísimo*. Les plats « muy fresca » et « muy dulce » utilisent *muy*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque adjectif à son superlatif en -ísimo.",
+     "paires": [
+      [
+       "rico",
+       "riquísimo"
+      ],
+      [
+       "largo",
+       "larguísimo"
+      ],
+      [
+       "feliz",
+       "felicísimo"
+      ],
+      [
+       "blanco",
+       "blanquísimo"
+      ]
+     ],
+     "aide": "La consonne s’ajuste pour garder le son : c→qu, g→gu, z→c.",
+     "explication": "**riquísimo, larguísimo, felicísimo, blanquísimo** : c→qu, g→gu, z→c."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la phrase « La paella es muy riquísima » est-elle fausse ?",
+     "options": [
+      "Muy et -ísimo ne se cumulent jamais",
+      "Riquísima doit s’écrire sans accent",
+      "Paella est un nom masculin",
+      "Muy ne s’emploie qu’avec un verbe"
+     ],
+     "reponse": 0,
+     "aide": "Les deux formes disent la même chose.",
+     "explication": "**Muy** et **-ísimo** sont deux manières de faire le superlatif absolu : on en choisit une seule."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression : superlatif relatif ou absolu ?",
+     "categories": [
+      "Relatif (compare)",
+      "Absolu (sans comparaison)"
+     ],
+     "items": [
+      [
+       "el más alto de la clase",
+       0
+      ],
+      [
+       "altísimo",
+       1
+      ],
+      [
+       "la menos cara del menú",
+       0
+      ],
+      [
+       "muy simpático",
+       1
+      ],
+      [
+       "los más rápidos del equipo",
+       0
+      ]
+     ],
+     "aide": "Le relatif compare dans un ensemble et se termine par *de*.",
+     "explication": "Le **relatif** compare (*el más… de*) ; l’**absolu** porte la qualité au maximum sans comparer (*muy*, *-ísimo*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "b42c627a-e076-50f6-bcd8-6275fc4cfda6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La copa del colegio",
+   "competence": "manier-langue",
+   "situation": "Le collège a organisé une journée sportive. Un article de blog et un tableau racontent la victoire de la classe.",
+   "documents": [
+    {
+     "id": "articulo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Nuestra victoria",
+     "blocs": [
+      "Nuestra clase ganó la copa del colegio. La carrera fue [[a|larguísima]], pero Sara, la más rápida del equipo, llegó la primera.",
+      "Marcos es el más alto del equipo y Pablo, el más gracioso. El profesor dijo que fue un día [[a|felicísimo]], aunque el postre del comedor fue [[s|pésimo]]."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    },
+    {
+     "id": "result",
+     "type": "tableau",
+     "titre": "Resultados del equipo",
+     "colonnes": [
+      "Nombre",
+      "Altura (m)",
+      "Tiempo (s)"
+     ],
+     "lignes": [
+      [
+       "Marcos",
+       "1,78",
+       14
+      ],
+      [
+       "Pablo",
+       "1,70",
+       13
+      ],
+      [
+       "Sara",
+       "1,62",
+       12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "articulo",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux superlatifs absolus** en -ísimo.",
+     "aide": "Ils se terminent en -ísima ou -ísimo.",
+     "explication": "**larguísima** et **felicísimo** sont deux superlatifs absolus : ils portent la qualité au maximum sans comparer."
+    },
+    {
+     "type": "zone",
+     "document": "articulo",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le **superlatif savant** (irrégulier) du texte.",
+     "aide": "C’est le superlatif de *malo*.",
+     "explication": "**Pésimo** est le superlatif savant de *malo* ; *óptimo* est celui de *bueno*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le superlatif absolu.",
+     "texte": "La carrera fue ___.",
+     "reponses": [
+      [
+       "larguísima"
+      ]
+     ],
+     "banque": [
+      "larguísima",
+      "largísima",
+      "muy larguísima",
+      "larguísimo"
+     ],
+     "aide": "*Largo* est transformé : g devient gu pour garder le son, et le nom est féminin.",
+     "explication": "**Larguísima** : le g devient gu devant i, et l’adjectif s’accorde avec *carrera*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète en t’aidant du tableau.",
+     "texte": "Sara es la ___ alta ___ equipo.",
+     "reponses": [
+      [
+       "menos"
+      ],
+      [
+       "del"
+      ]
+     ],
+     "banque": [
+      "menos",
+      "más",
+      "del",
+      "en"
+     ],
+     "aide": "Regarde la colonne « Altura » : Sara est la plus petite.",
+     "explication": "**La menos alta del equipo** : *menos* parce que Sara mesure 1,62 m ; *del* (de + el)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Marcos est le plus grand de l’équipe. » La phrase commence par Marcos.",
+     "items": [
+      "Marcos",
+      "es",
+      "el más",
+      "alto",
+      "del equipo"
+     ],
+     "aide": "Superlatif relatif : *el más + adjectif + de*.",
+     "explication": "**Marcos es el más alto del equipo** : 1,78 m, le plus grand des trois."
+    }
+   ]
+  },
+  {
+   "chapitre": "c10228a2-b26a-54a4-9234-222fce7403b8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un cumpleaños en el primer piso",
+   "competence": "comprendre-langue",
+   "situation": "Ana invite Leo à l’anniversaire de son ami Juan. Ils s’écrivent pour s’organiser.",
+   "documents": [
+    {
+     "id": "cumple",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Ana y Leo",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "¡Buenos días, Leo! Hoy es el cumpleaños de mi amigo Juan. Es un [[a|gran]] amigo."
+      },
+      {
+       "qui": "Leo",
+       "texte": "¡Qué [[a|buen]] plan! ¿Dónde es la fiesta?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "En su casa, en el [[a|primer]] piso."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cumple",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois adjectifs apocopés** devant un nom masculin singulier.",
+     "aide": "Ils ont perdu leur dernière lettre.",
+     "explication": "**gran amigo, buen plan, primer piso** : *grande*, *bueno* et *primero* perdent leur finale devant un nom."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Es una ___ idea.",
+     "reponses": [
+      [
+       "buena"
+      ]
+     ],
+     "banque": [
+      "buena",
+      "buen",
+      "bueno",
+      "bien"
+     ],
+     "aide": "*Idea* est un nom féminin.",
+     "explication": "**Una buena idea** : devant un féminin, il n’y a pas d’apocope."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il y a un bon restaurant. » La phrase commence par Hay.",
+     "items": [
+      "Hay",
+      "un",
+      "buen",
+      "restaurante"
+     ],
+     "aide": "Un adjectif apocopé se place juste avant le nom.",
+     "explication": "**Hay un buen restaurante** : *bueno* devient *buen* devant un nom masculin singulier."
+    }
+   ]
+  },
+  {
+   "chapitre": "c10228a2-b26a-54a4-9234-222fce7403b8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les fêtes de San Fermín",
+   "competence": "manier-langue",
+   "situation": "Une affiche annonce les fêtes de Pamplona, et un tableau liste des villes qui portent le nom d’un saint.",
+   "documents": [
+    {
+     "id": "fiestas",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Fiestas de San Fermín",
+     "sousTitre": "Pamplona",
+     "emoji": "🎉",
+     "lignes": [
+      {
+       "texte": "Del 6 al 14 de julio"
+      },
+      {
+       "texte": "Un gran desfile abre las fiestas"
+      },
+      {
+       "texte": "Cien actividades para todos"
+      },
+      {
+       "texte": "Música cada noche en la plaza"
+      }
+     ],
+     "teinte": "rose",
+     "source": "Affiche écrite pour l’exercice, d’après les dates des fêtes réelles"
+    },
+    {
+     "id": "ciudades",
+     "type": "tableau",
+     "titre": "Ciudades con nombre de santo",
+     "colonnes": [
+      "Ciudad",
+      "País"
+     ],
+     "lignes": [
+      [
+       "Santo Domingo",
+       "República Dominicana"
+      ],
+      [
+       "San Juan",
+       "Puerto Rico"
+      ],
+      [
+       "San José",
+       "Costa Rica"
+      ],
+      [
+       "San Salvador",
+       "El Salvador"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Capitales de pays d’Amérique"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ciudades",
+     "reponse": [
+      "r0c0"
+     ],
+     "multiple": false,
+     "enonce": "Touche la ville dont le nom garde **« Santo » en entier**.",
+     "aide": "Regarde les deux premières lettres du prénom qui suit.",
+     "explication": "**Santo Domingo** : *santo* ne s’apocope pas devant les prénoms qui commencent par *To-* ou *Do-*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Santo Domingo » et non « San Domingo » ?",
+     "options": [
+      "Santo reste entier devant Do- et To-",
+      "Santo ne s’apocope jamais devant un nom de ville",
+      "Domingo est un nom de jour",
+      "Santo s’apocope seulement au pluriel"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la première syllabe du prénom.",
+     "explication": "**Santo Domingo, Santo Tomás** : exception à la règle *san* devant un prénom masculin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la forme apocopée.",
+     "texte": "Un ___ desfile abre las fiestas.",
+     "reponses": [
+      [
+       "gran"
+      ]
+     ],
+     "banque": [
+      "gran",
+      "grande",
+      "grandes",
+      "grandísimo"
+     ],
+     "aide": "Le nom est au singulier.",
+     "explication": "**Un gran desfile** : *grande* devient *gran* devant un nom singulier, masculin ou féminin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon nombre.",
+     "texte": "Hay ___ actividades para todos.",
+     "reponses": [
+      [
+       "cien"
+      ]
+     ],
+     "banque": [
+      "cien",
+      "ciento",
+      "cientos",
+      "un"
+     ],
+     "aide": "On dit « cent » juste avant un nom, sans autre nombre.",
+     "explication": "**Cien actividades** : *ciento* devient *cien* devant un nom ; il reste *ciento* devant un autre nombre (*ciento veinte*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c10228a2-b26a-54a4-9234-222fce7403b8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Postal desde Granada",
+   "competence": "manier-langue",
+   "situation": "Lucía envoie une carte à son ami Hugo après un voyage à Grenade. Elle utilise plusieurs formes apocopées.",
+   "documents": [
+    {
+     "id": "postal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Querido Hugo",
+     "blocs": [
+      "¡Qué [[a|buen]] viaje! Vimos un [[a|gran]] palacio, la Alhambra, y el [[a|tercer]] día hubo una [[a|gran]] fiesta en la plaza.",
+      "Compramos pan [[r|recién]] hecho y gastamos [[c|ciento]] veinte euros en recuerdos. ¡Un abrazo! Lucía"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "postal",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre adjectifs apocopés** devant un nom.",
+     "aide": "Ils sont tous juste devant un nom.",
+     "explication": "**buen viaje, gran palacio, tercer día, gran fiesta** : l’apocope joue devant un nom masculin singulier, sauf *gran* qui vaut aussi au féminin."
+    },
+    {
+     "type": "zone",
+     "document": "postal",
+     "reponse": [
+      "r"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’adverbe apocopé qui précède un **participe passé**.",
+     "aide": "C’est la forme courte de *recientemente*.",
+     "explication": "**Recién hecho** : *recientemente* devient *recién* devant un participe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le nombre.",
+     "texte": "Gastamos ___ veinte euros.",
+     "reponses": [
+      [
+       "ciento"
+      ]
+     ],
+     "banque": [
+      "cien",
+      "ciento",
+      "cientos",
+      "un"
+     ],
+     "aide": "Un autre nombre suit : le mot garde sa forme pleine.",
+     "explication": "**Ciento veinte** : on garde la forme pleine quand un autre nombre suit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « gran fiesta » alors qu’on ne dirait pas « buen fiesta » ?",
+     "options": [
+      "Gran vaut pour les deux genres du singulier",
+      "Fiesta est en réalité un nom masculin",
+      "Buen est réservé aux noms de personnes",
+      "Gran est ici un adverbe de quantité"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec *gran palacio* (masculin).",
+     "explication": "**Gran** est une apocope particulière : elle vaut pour le masculin et le féminin singuliers (*una gran mujer*). *Bueno* ne s’apocope qu’au masculin."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque forme : apocopée ou forme pleine ?",
+     "categories": [
+      "Forme apocopée",
+      "Forme pleine"
+     ],
+     "items": [
+      [
+       "san Pedro",
+       0
+      ],
+      [
+       "santa Teresa",
+       1
+      ],
+      [
+       "Santo Tomás",
+       1
+      ],
+      [
+       "primer año",
+       0
+      ],
+      [
+       "primera vez",
+       1
+      ],
+      [
+       "ciento veinte",
+       1
+      ],
+      [
+       "cien euros",
+       0
+      ]
+     ],
+     "aide": "L’apocope ne concerne que le masculin singulier (sauf *gran*, *cien*, *cualquier*) et a quelques exceptions.",
+     "explication": "*San*, *primer*, *cien* sont apocopés ; le féminin (*santa*, *primera*), *Santo Tomás* et *ciento veinte* gardent la forme pleine."
+    }
+   ]
+  },
+  {
+   "chapitre": "a52838aa-bc31-5e59-9711-f713ae945bed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "¿Has hecho los deberes?",
+   "competence": "comprendre-langue",
+   "situation": "Marta et Iván se parlent après les cours. Il leur reste des devoirs.",
+   "documents": [
+    {
+     "id": "deberes",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Marta e Iván",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Iván",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "Hola, Iván. ¿[[h|Has]] hecho los deberes?"
+      },
+      {
+       "qui": "Iván",
+       "texte": "Sí, ya [[h|he]] terminado. Hay dos ejercicios difíciles."
+      },
+      {
+       "qui": "Marta",
+       "texte": "Yo [[h|he]] escrito la redacción. Hay que entregarla mañana."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deberes",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois formes de l’auxiliaire haber** (présent) qui précèdent un participe.",
+     "aide": "Cherche les mots qui précèdent hecho, terminado et escrito.",
+     "explication": "**has, he, he** : *haber* au présent suivi du participe forme le passé composé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Hay dos ejercicios », pourquoi *hay* ne devient-il pas *hayn* ?",
+     "options": [
+      "Hay est invariable, même devant un pluriel",
+      "Hay s’accorde seulement au féminin",
+      "Hay est le participe de haber",
+      "Hay ne s’emploie jamais avec un nombre"
+     ],
+     "reponse": 0,
+     "aide": "*Hay* = il y a : il ne varie pas, comme en français.",
+     "explication": "**Hay** est une forme impersonnelle invariable : *Hay un libro*, *Hay dos libros*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme de haber.",
+     "texte": "Mis padres ___ llegado tarde.",
+     "reponses": [
+      [
+       "han"
+      ]
+     ],
+     "banque": [
+      "han",
+      "ha",
+      "he",
+      "hay"
+     ],
+     "aide": "Le sujet est pluriel (« mis padres »).",
+     "explication": "**Han llegado** : 3e personne du pluriel de *haber* + participe, qui ne s’accorde pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Hay que entregarla mañana » ?",
+     "options": [
+      "Il faut la rendre demain",
+      "Je l’ai rendue hier",
+      "Elle est déjà rendue",
+      "Je dois la rendre à Iván"
+     ],
+     "reponse": 0,
+     "aide": "*Hay que* + infinitif exprime une obligation impersonnelle.",
+     "explication": "**Hay que** + infinitif = « il faut » : obligation impersonnelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "a52838aa-bc31-5e59-9711-f713ae945bed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Retard à la gare",
+   "competence": "manier-langue",
+   "situation": "Un élève arrive trop tard à la gare. Il raconte l’histoire, puis son père lui parle au téléphone.",
+   "documents": [
+    {
+     "id": "estacion",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "En la estación",
+     "blocs": [
+      "Cuando llegué a la estación, el tren ya [[p|había]] salido. [[h|Hubo]] un retraso de una hora, y mucha gente esperaba en el andén.",
+      "Por teléfono, mi padre dice : « Mañana, a las ocho, ya [[f|habré]] llegado a casa. »"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "estacion",
+     "reponse": [
+      "p"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’**auxiliaire** du plus-que-parfait (il a déjà quitté la gare).",
+     "aide": "C’est le mot qui précède le participe *salido*.",
+     "explication": "**había salido** : *había* + participe forme le plus-que-parfait."
+    },
+    {
+     "type": "zone",
+     "document": "estacion",
+     "reponse": [
+      "f"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’auxiliaire du **futur antérieur**.",
+     "aide": "Le père parle de demain à huit heures.",
+     "explication": "**habré llegado** : *habré* + participe forme le futur antérieur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Hubo un retraso », à quel temps est *hubo* ?",
+     "options": [
+      "Au passé simple de hay",
+      "À l’imparfait de hay",
+      "Au futur de hay",
+      "Au présent de haber auxiliaire"
+     ],
+     "reponse": 0,
+     "aide": "Le retard est un événement ponctuel, terminé.",
+     "explication": "**Hubo** est le passé simple de *hay* (« il y a eu »)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le futur antérieur.",
+     "texte": "Para el lunes, mis primos ya ___ vuelto.",
+     "reponses": [
+      [
+       "habrán"
+      ]
+     ],
+     "banque": [
+      "habrán",
+      "habían",
+      "hayan",
+      "han"
+     ],
+     "aide": "« Pour lundi » parle du futur ; le sujet est pluriel.",
+     "explication": "**Habrán vuelto** : futur antérieur de *haber* (3e personne du pluriel) + participe."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je ne l’ai jamais vu. » La phrase commence par No.",
+     "items": [
+      "No",
+      "lo",
+      "he",
+      "visto",
+      "nunca"
+     ],
+     "aide": "Rien ne se glisse entre *he* et *visto*.",
+     "explication": "**No lo he visto nunca** : le bloc *he visto* est soudé, l’adverbe passe après."
+    }
+   ]
+  },
+  {
+   "chapitre": "a52838aa-bc31-5e59-9711-f713ae945bed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "¿Dónde hay una farmacia ?",
+   "competence": "manier-langue",
+   "situation": "Tom, en vacances, cherche une pharmacie. Il discute avec Sofía, puis lit un article sur la place du village.",
+   "documents": [
+    {
+     "id": "farmacia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Tom y Sofía",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sofía",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Perdona, Sofía. ¿[[e|Hay]] una farmacia por aquí?"
+      },
+      {
+       "qui": "Sofía",
+       "texte": "Sí, [[e|hay]] una en la calle Sol. La farmacia [[l|está]] al lado del banco."
+      },
+      {
+       "qui": "Tom",
+       "texte": "¿Y había mucha gente esta mañana?"
+      },
+      {
+       "qui": "Sofía",
+       "texte": "Sí, había cola, pero ahora no queda nadie."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "plaza",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Noticias de la plaza",
+     "blocs": [
+      "El sábado pasado [[a|hubo]] un concierto en la plaza Mayor. Antes había una fuente, pero ahora hay un escenario.",
+      "El próximo año [[f|habrá]] más conciertos."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "farmacia",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux formes de hay** qui **posent l’existence** d’une pharmacie.",
+     "aide": "Cherche *hay* au présent, dans la question et dans la réponse.",
+     "explication": "**Hay** présente une chose pas encore identifiée : « il y a une pharmacie »."
+    },
+    {
+     "type": "zone",
+     "document": "farmacia",
+     "reponse": [
+      "l"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui **situe** la pharmacie déjà identifiée.",
+     "aide": "Après « la farmacia », on la localise.",
+     "explication": "**La farmacia está** : on localise une chose déjà connue avec *estar*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « La farmacia está… » et non « La farmacia hay… » ?",
+     "options": [
+      "La pharmacie est déjà identifiée",
+      "Hay ne s’emploie qu’avec un pluriel",
+      "Hay ne s’emploie qu’à l’imparfait",
+      "Está remplace hay dans toutes les phrases"
+     ],
+     "reponse": 0,
+     "aide": "Compare « ¿Hay una farmacia ? » et « La farmacia está al lado… ».",
+     "explication": "**Hay** pose l’existence d’une chose non identifiée ; **está** localise une chose déjà connue."
+    },
+    {
+     "type": "zone",
+     "document": "plaza",
+     "reponse": [
+      "a"
+     ],
+     "multiple": false,
+     "enonce": "Touche la forme de *hay* qui raconte un **événement ponctuel** au passé.",
+     "aide": "C’est le passé simple.",
+     "explication": "**Hubo un concierto** : un événement ponctuel et terminé se dit avec *hubo*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque temps de hay à sa forme.",
+     "paires": [
+      [
+       "Présent",
+       "hay"
+      ],
+      [
+       "Imparfait",
+       "había"
+      ],
+      [
+       "Passé simple",
+       "hubo"
+      ],
+      [
+       "Futur",
+       "habrá"
+      ]
+     ],
+     "aide": "Le futur et l’imparfait se retrouvent dans l’article.",
+     "explication": "**hay, había, hubo, habrá** : *hay* est invariable à tous les temps."
+    }
+   ]
+  },
+  {
+   "chapitre": "660bd3b5-bb9d-55ff-a462-adf86d79ce0e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La rutina de Nora",
+   "competence": "comprendre-langue",
+   "situation": "Nora raconte son réveil du matin. Son frère, lui, ne fait pas du tout la même chose.",
+   "documents": [
+    {
+     "id": "rutina",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mi mañana",
+     "blocs": [
+      "[[r|Me]] levanto a las siete. [[r|Me]] ducho y [[r|me]] visto en cinco minutos.",
+      "Mi hermano, en cambio, [[s|se]] despierta tarde y [[s|se]] queja de todo."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rutina",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois pronoms réfléchis** de Nora (« yo »).",
+     "aide": "Ils précèdent levanto, ducho et visto.",
+     "explication": "**Me levanto, me ducho, me visto** : le pronom *me* correspond au sujet *yo* et se place devant le verbe conjugué."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon pronom.",
+     "texte": "Mi hermano ___ despierta tarde.",
+     "reponses": [
+      [
+       "se"
+      ]
+     ],
+     "banque": [
+      "me",
+      "te",
+      "se",
+      "nos"
+     ],
+     "aide": "Le sujet est « mi hermano » : 3e personne.",
+     "explication": "**Se despierta** : le pronom s’accorde avec le sujet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le verbe et son pronom.",
+     "texte": "Los sábados quiero ___ más tarde.",
+     "reponses": [
+      [
+       "levantarme"
+      ]
+     ],
+     "banque": [
+      "levantarme",
+      "me levantar",
+      "levantarse",
+      "levantarte"
+     ],
+     "aide": "Avec un infinitif, le pronom se soude derrière. Le sujet est *yo* (« quiero »).",
+     "explication": "**Levantarme** : à l’infinitif le pronom est soudé derrière et s’accorde avec le sujet (*quiero* → *me*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « se queja » ?",
+     "options": [
+      "Il se plaint",
+      "Il se lave",
+      "Il se réveille",
+      "Il s’endort"
+     ],
+     "reponse": 0,
+     "aide": "*Quejarse* est un verbe essentiellement pronominal.",
+     "explication": "**Quejarse** = se plaindre : le pronom fait partie du verbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "660bd3b5-bb9d-55ff-a462-adf86d79ce0e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tableau d’annonces",
+   "competence": "manier-langue",
+   "situation": "Dans le hall d’un centre culturel, plusieurs annonces utilisent le pronom *se*.",
+   "documents": [
+    {
+     "id": "tablon",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Tablón de anuncios",
+     "sousTitre": "Centro cultural · entrada",
+     "emoji": "📌",
+     "lignes": [
+      {
+       "texte": "Se venden bicis de segunda mano",
+       "id": "a"
+      },
+      {
+       "texte": "Aquí se come muy bien",
+       "id": "b"
+      },
+      {
+       "texte": "Se buscan voluntarios para la feria",
+       "id": "c"
+      },
+      {
+       "texte": "Se alquila un piso pequeño",
+       "id": "d"
+      }
+     ],
+     "teinte": "jaune",
+     "source": "Annonces écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tablon",
+     "reponse": [
+      "a",
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux annonces** où le verbe est au **pluriel** parce qu’il s’accorde avec son sujet.",
+     "aide": "Cherche venden et buscan.",
+     "explication": "**Se venden bicis, se buscan voluntarios** : valeur passive, le verbe s’accorde avec le sujet pluriel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Se ___ pisos baratos en el barrio.",
+     "reponses": [
+      [
+       "venden"
+      ]
+     ],
+     "banque": [
+      "vende",
+      "venden",
+      "vendo",
+      "vender"
+     ],
+     "aide": "Le sujet est « pisos » (pluriel).",
+     "explication": "**Se venden pisos** : tournure passive, le verbe s’accorde avec le sujet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Aquí se come muy bien », quelle est la valeur de *se* ?",
+     "options": [
+      "Impersonnelle : « on mange bien ici »",
+      "Réfléchie : quelqu’un se mange lui-même",
+      "Réciproque : deux personnes se mangent",
+      "Lexicale : comerse est toujours pronominal"
+     ],
+     "reponse": 0,
+     "aide": "Personne n’est désigné : on parle de tout le monde.",
+     "explication": "**Se come** : valeur impersonnelle, le verbe reste au singulier."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase espagnole à son sens.",
+     "paires": [
+      [
+       "Se venden pisos",
+       "Des appartements sont à vendre"
+      ],
+      [
+       "Se dice que…",
+       "On dit que…"
+      ],
+      [
+       "Se escriben",
+       "Ils s’écrivent l’un à l’autre"
+      ],
+      [
+       "Se lava",
+       "Il se lave lui-même"
+      ]
+     ],
+     "aide": "Quatre valeurs : passive, impersonnelle, réciproque, réfléchie.",
+     "explication": "Passive (*se venden*), impersonnelle (*se dice*), réciproque (*se escriben*), réfléchie (*se lava*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "660bd3b5-bb9d-55ff-a462-adf86d79ce0e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Me voy al cine",
+   "competence": "manier-langue",
+   "situation": "Álvaro propose un plan à Clara. Ses réponses contiennent plusieurs verbes pronominaux.",
+   "documents": [
+    {
+     "id": "cine",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Álvaro y Clara",
+     "participants": [
+      {
+       "nom": "Álvaro",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Álvaro",
+       "texte": "¿Te quedas en casa esta tarde?"
+      },
+      {
+       "qui": "Clara",
+       "texte": "No, me [[v|voy]] al cine. Me [[p|pongo]] contenta cuando veo una película."
+      },
+      {
+       "qui": "Clara",
+       "texte": "¿Te [[a|acuerdas]] de la del otro día? Luego nos [[r|escribimos]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "sentidos",
+     "type": "tableau",
+     "titre": "Con o sin pronombre",
+     "colonnes": [
+      "Sin pronombre",
+      "Con pronombre"
+     ],
+     "lignes": [
+      [
+       "ir (aller)",
+       "irse (?)"
+      ],
+      [
+       "dormir (dormir)",
+       "dormirse (?)"
+      ],
+      [
+       "acordar (décider)",
+       "acordarse de (?)"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cine",
+     "reponse": [
+      "v"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui signifie **« s’en aller, partir »**.",
+     "aide": "*Irse* ne veut pas dire « aller ».",
+     "explication": "**Me voy** = je m’en vais : *irse* change de sens par rapport à *ir*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Me pongo contenta », que signifie *ponerse* ?",
+     "options": [
+      "Devenir, se mettre dans un état",
+      "Mettre un objet quelque part",
+      "S’en aller",
+      "Se souvenir"
+     ],
+     "reponse": 0,
+     "aide": "Contenta décrit un état : le pronom exprime un changement.",
+     "explication": "**Ponerse + adjectif** = devenir (*Me pongo contenta* : je deviens contente)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la traduction qui convient.",
+     "texte": "irse → ___ ; dormirse → ___ ; acordarse de → ___",
+     "reponses": [
+      [
+       "partir"
+      ],
+      [
+       "s’endormir"
+      ],
+      [
+       "se souvenir"
+      ]
+     ],
+     "banque": [
+      "partir",
+      "s’endormir",
+      "se souvenir",
+      "rester",
+      "devenir"
+     ],
+     "aide": "Le pronom change le sens du verbe : compare avec la colonne de gauche.",
+     "explication": "**irse** = partir ; **dormirse** = s’endormir ; **acordarse de** = se souvenir de."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : passive ou impersonnelle ?",
+     "categories": [
+      "Passive (le verbe s’accorde)",
+      "Impersonnelle (verbe au singulier)"
+     ],
+     "items": [
+      [
+       "Se venden pisos",
+       0
+      ],
+      [
+       "Se habla de política",
+       1
+      ],
+      [
+       "Se alquilan coches",
+       0
+      ],
+      [
+       "Aquí se come bien",
+       1
+      ]
+     ],
+     "aide": "Cherche si un nom pluriel est le sujet du verbe.",
+     "explication": "Dans la **passive**, le verbe s’accorde avec le sujet (*se venden pisos*) ; dans l’**impersonnelle**, il reste au singulier (*se habla de política*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "477809ab-0dcd-54d8-89a7-0ca09a4c1c57",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La botte de pensar",
+   "competence": "lire-tableau",
+   "situation": "Julia conjugue le verbe *pensar* au présent pour préparer son contrôle.",
+   "documents": [
+    {
+     "id": "pensar",
+     "type": "tableau",
+     "titre": "Pensar (presente)",
+     "colonnes": [
+      "Persona",
+      "Forma"
+     ],
+     "lignes": [
+      [
+       "yo",
+       "pienso"
+      ],
+      [
+       "tú",
+       "piensas"
+      ],
+      [
+       "él / ella",
+       "piensa"
+      ],
+      [
+       "nosotros",
+       "pensamos"
+      ],
+      [
+       "vosotros",
+       "pensáis"
+      ],
+      [
+       "ellos / ellas",
+       "piensan"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pensar",
+     "reponse": [
+      "r3c1",
+      "r4c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux formes** qui ne diphtonguent pas.",
+     "aide": "L’accent tonique tombe sur la terminaison.",
+     "explication": "**pensamos, pensáis** : à *nosotros* et *vosotros* l’accent est sur la terminaison, donc pas de diphtongue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Yo ___ en las vacaciones.",
+     "reponses": [
+      [
+       "pienso"
+      ]
+     ],
+     "banque": [
+      "pienso",
+      "pensamos",
+      "pensáis",
+      "pensar"
+     ],
+     "aide": "Le sujet est *yo* : la voyelle du radical est accentuée.",
+     "explication": "**Pienso** : à *yo*, la voyelle du radical diphtongue (e → ie)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « pensamos » ne diphtongue-t-il pas ?",
+     "options": [
+      "L’accent tonique tombe sur la terminaison",
+      "Le verbe est irrégulier",
+      "Nosotros ne se conjugue qu’au passé",
+      "Le radical contient déjà un i"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où se trouve l’accent dans « pen-SA-mos ».",
+     "explication": "**Pensamos** : l’accent est sur *-a-*, la voyelle du radical n’est pas accentuée."
+    }
+   ]
+  },
+  {
+   "chapitre": "477809ab-0dcd-54d8-89a7-0ca09a4c1c57",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Samedi en famille",
+   "competence": "manier-langue",
+   "situation": "Sofía décrit le samedi de sa famille. Les verbes à diphtongue s’y cachent.",
+   "documents": [
+    {
+     "id": "sabado",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un sábado cualquiera",
+     "blocs": [
+      "Mis hermanos [[j|juegan]] al fútbol los sábados. Yo prefiero quedarme en casa : cierro la ventana, enciendo la luz y leo hasta que duermo la siesta.",
+      "Mis padres no pueden venir a verlos jugar, porque trabajan."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sabado",
+     "reponse": [
+      "j"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe où **u devient ue**.",
+     "aide": "C’est le seul verbe de ce type.",
+     "explication": "**juegan** : *jugar* est le seul verbe où u devient ue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Nosotros ___ al fútbol los sábados.",
+     "reponses": [
+      [
+       "jugamos"
+      ]
+     ],
+     "banque": [
+      "juego",
+      "juegan",
+      "jugamos",
+      "jugáis"
+     ],
+     "aide": "*Nosotros* est hors de la botte.",
+     "explication": "**Jugamos** : pas de diphtongue à *nosotros*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque forme : avec ou sans diphtongue ?",
+     "categories": [
+      "Avec diphtongue",
+      "Sans diphtongue"
+     ],
+     "items": [
+      [
+       "vuelvo",
+       0
+      ],
+      [
+       "volvemos",
+       1
+      ],
+      [
+       "cierran",
+       0
+      ],
+      [
+       "cerráis",
+       1
+      ],
+      [
+       "queremos",
+       1
+      ],
+      [
+       "pueden",
+       0
+      ]
+     ],
+     "aide": "La botte entoure *nosotros* et *vosotros*.",
+     "explication": "Les formes de la **botte** diphtonguent ; *volvemos, cerráis, queremos* ne diphtonguent pas."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque infinitif à sa 1re personne du présent.",
+     "paires": [
+      [
+       "poder",
+       "puedo"
+      ],
+      [
+       "cerrar",
+       "cierro"
+      ],
+      [
+       "dormir",
+       "duermo"
+      ],
+      [
+       "oler",
+       "huelo"
+      ]
+     ],
+     "aide": "Oler prend un h quand il diphtongue.",
+     "explication": "**puedo, cierro, duermo, huelo** : *oler* s’écrit avec *h* quand il diphtongue."
+    }
+   ]
+  },
+  {
+   "chapitre": "477809ab-0dcd-54d8-89a7-0ca09a4c1c57",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le temps du verbe",
+   "competence": "manier-langue",
+   "situation": "Un tableau compare plusieurs temps de *pensar*, et Hugo décrit sa visite à la boulangerie.",
+   "documents": [
+    {
+     "id": "tiempos",
+     "type": "tableau",
+     "titre": "Pensar en varios tiempos",
+     "colonnes": [
+      "Tiempo",
+      "Forma"
+     ],
+     "lignes": [
+      [
+       "Presente (yo)",
+       "pienso"
+      ],
+      [
+       "Pretérito (yo)",
+       "pensé"
+      ],
+      [
+       "Imperfecto (yo)",
+       "pensaba"
+      ],
+      [
+       "Futuro (yo)",
+       "pensaré"
+      ],
+      [
+       "Subjuntivo presente (nosotros)",
+       "pensemos"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "panaderia",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "En la panadería",
+     "blocs": [
+      "Entro en la panadería y [[h|huelo]] el pan recién hecho.",
+      "Mi madre cuenta el dinero y vuelve a casa."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tiempos",
+     "reponse": [
+      "r0c1"
+     ],
+     "multiple": false,
+     "enonce": "Touche la seule forme de l’**indicatif** de ce tableau qui diphtongue.",
+     "aide": "Passé simple, imparfait, futur : l’accent tonique n’est pas sur le radical.",
+     "explication": "**Pienso** est la seule : le passé simple, l’imparfait et le futur ne diphtonguent jamais."
+    },
+    {
+     "type": "zone",
+     "document": "panaderia",
+     "reponse": [
+      "h"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui prend un **h** quand il diphtongue.",
+     "aide": "C’est *oler*.",
+     "explication": "**Huelo** : *oler* devient *huelo* avec un *h*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme du subjonctif.",
+     "texte": "Quiero que tú ___ en mí.",
+     "reponses": [
+      [
+       "pienses"
+      ]
+     ],
+     "banque": [
+      "piensas",
+      "piense",
+      "pienses",
+      "pensemos"
+     ],
+     "aide": "Au subjonctif présent, la botte est la même ; le sujet est *tú*.",
+     "explication": "**Pienses** : subjonctif présent de *pensar* à *tú*, avec la diphtongue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme du subjonctif.",
+     "texte": "Es importante que nosotros ___ la puerta.",
+     "reponses": [
+      [
+       "cerremos"
+      ]
+     ],
+     "banque": [
+      "cerramos",
+      "cerremos",
+      "cierren",
+      "cierro"
+     ],
+     "aide": "*Nosotros* est hors de la botte, au subjonctif aussi.",
+     "explication": "**Cerremos** : à *nosotros* le subjonctif ne diphtongue pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe selon son changement.",
+     "categories": [
+      "e → ie",
+      "o → ue",
+      "u → ue"
+     ],
+     "items": [
+      [
+       "pienso",
+       0
+      ],
+      [
+       "puedo",
+       1
+      ],
+      [
+       "juego",
+       2
+      ],
+      [
+       "cierro",
+       0
+      ],
+      [
+       "cuento",
+       1
+      ],
+      [
+       "vuelvo",
+       1
+      ]
+     ],
+     "aide": "*Pensar, cerrar* : e → ie. *Poder, contar, volver* : o → ue. *Jugar* est seul.",
+     "explication": "**e → ie** : pienso, cierro ; **o → ue** : puedo, cuento, vuelvo ; **u → ue** : juego."
+    }
+   ]
+  },
+  {
+   "chapitre": "3dd89e49-5cad-5472-bc3c-600682927976",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un desayuno en el bar",
+   "competence": "comprendre-langue",
+   "situation": "Mateo raconte son petit-déjeuner dans un bar avec sa famille.",
+   "documents": [
+    {
+     "id": "desayuno",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "En el bar",
+     "blocs": [
+      "Hoy desayunamos en un bar. Yo [[a|pido]] un zumo. Mi hermana [[a|pide]] un café con leche. Nosotros pedimos dos tostadas y los camareros nos [[a|sirven]] enseguida."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "desayuno",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois formes** où le *e* du radical devient *i*.",
+     "aide": "Cherche pido, pide et le verbe servir.",
+     "explication": "**pido, pide, sirven** : l’accent tonique tombe sur le radical, le *e* devient *i*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Vosotros ___ dos tostadas.",
+     "reponses": [
+      [
+       "pedís"
+      ]
+     ],
+     "banque": [
+      "pedís",
+      "pidís",
+      "pido",
+      "piden"
+     ],
+     "aide": "*Vosotros* est hors de la botte.",
+     "explication": "**Pedís** : à *vosotros* l’accent est sur la terminaison, pas d’affaiblissement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « pedimos » ne change-t-il pas ?",
+     "options": [
+      "L’accent tonique tombe sur la terminaison",
+      "Pedir est un verbe en -ar qui reste régulier",
+      "Nosotros n’existe pas au présent simple",
+      "Le verbe diphtongue à la place de s’affaiblir"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec « pido » et « pide ».",
+     "explication": "**Pedimos** : *nosotros* et *vosotros* n’ont pas l’accent sur le radical."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Mis padres ___ un helado.",
+     "reponses": [
+      [
+       "piden"
+      ]
+     ],
+     "banque": [
+      "piden",
+      "pedimos",
+      "pedís",
+      "pedí"
+     ],
+     "aide": "Le sujet est « mis padres ».",
+     "explication": "**Piden** : 3e personne du pluriel, dans la botte."
+    }
+   ]
+  },
+  {
+   "chapitre": "3dd89e49-5cad-5472-bc3c-600682927976",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La comida del abuelo",
+   "competence": "manier-langue",
+   "situation": "Lucas raconte un repas de famille. Les verbes en -ir y changent de radical.",
+   "documents": [
+    {
+     "id": "comida",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La comida del domingo",
+     "blocs": [
+      "Ayer mi abuelo [[p|sirvió]] la comida y nos [[p|pidió]] silencio. Mientras comíamos, [[p|siguió]] contando historias de su infancia.",
+      "Mis primos [[p|repitieron]] la sopa y yo tomé agua."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "comida",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre verbes** du passé simple (3e personne) qui s’affaiblissent.",
+     "aide": "Ils contiennent un *i* à la place du *e* du radical.",
+     "explication": "**sirvió, pidió, siguió, repitieron** : au passé simple, l’affaiblissement touche les 3es personnes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au passé simple.",
+     "texte": "Ayer mis primos ___ otro postre.",
+     "reponses": [
+      [
+       "pidieron"
+      ]
+     ],
+     "banque": [
+      "pidieron",
+      "pedieron",
+      "pidió",
+      "pedimos"
+     ],
+     "aide": "3e personne du pluriel : l’affaiblissement s’applique.",
+     "explication": "**Pidieron** : *pedir* → *pidieron* (3e pers. du pluriel)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque infinitif à son gérondif.",
+     "paires": [
+      [
+       "decir",
+       "diciendo"
+      ],
+      [
+       "pedir",
+       "pidiendo"
+      ],
+      [
+       "servir",
+       "sirviendo"
+      ],
+      [
+       "dormir",
+       "durmiendo"
+      ]
+     ],
+     "aide": "Le gérondif de ces verbes s’affaiblit toujours.",
+     "explication": "**diciendo, pidiendo, sirviendo, durmiendo** : le gérondif porte toujours l’affaiblissement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au passé simple.",
+     "texte": "Ayer yo ___ un helado.",
+     "reponses": [
+      [
+       "pedí"
+      ]
+     ],
+     "banque": [
+      "pedí",
+      "pidí",
+      "pidió",
+      "pedió"
+     ],
+     "aide": "À la 1re personne, la terminaison porte l’accent.",
+     "explication": "**Pedí** : à *yo*, pas d’affaiblissement ; il n’apparaît qu’aux 3es personnes."
+    }
+   ]
+  },
+  {
+   "chapitre": "3dd89e49-5cad-5472-bc3c-600682927976",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Verbes mixtes et pièges d’orthographe",
+   "competence": "manier-langue",
+   "situation": "Un tableau compare quatre verbes en -ir, puis Hugo écrit à son oncle pour choisir le dessert.",
+   "documents": [
+    {
+     "id": "mixtos",
+     "type": "tableau",
+     "titre": "Cuatro verbos en -ir",
+     "colonnes": [
+      "Verbo",
+      "Presente (yo)",
+      "Pasado (él)",
+      "Gerundio"
+     ],
+     "lignes": [
+      [
+       "sentir",
+       "siento",
+       "sintió",
+       "sintiendo"
+      ],
+      [
+       "preferir",
+       "prefiero",
+       "prefirió",
+       "prefiriendo"
+      ],
+      [
+       "dormir",
+       "duermo",
+       "durmió",
+       "durmiendo"
+      ],
+      [
+       "pedir",
+       "pido",
+       "pidió",
+       "pidiendo"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "tio",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta al tío",
+     "blocs": [
+      "Querido tío : hoy yo [[g|elijo]] el postre. Mi hermano prefiere la tarta y mi madre pide un helado. ¡Nos reímos mucho!"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mixtos",
+     "reponse": [
+      "r0c1",
+      "r1c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes mixtes** : ceux qui diphtonguent au présent *et* s’affaiblissent ensuite.",
+     "aide": "Compare la colonne « Presente » : la voyelle change-t-elle en *ie* ou *ue* ?",
+     "explication": "**siento, prefiero, duermo** : diphtongue au présent (*ie, ue*), affaiblissement au passé et au gérondif. *Pido* n’est qu’un affaiblissement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire de *pedir*, dans ce tableau ?",
+     "options": [
+      "Il s’affaiblit sans diphtonguer",
+      "Il diphtongue au présent comme sentir",
+      "Il ne change jamais de voyelle",
+      "Il diphtongue au gérondif"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne « Presente (yo) » : *pido*, pas *piedo*.",
+     "explication": "**Pedir** n’est pas mixte : *pido, pidió, pidiendo*, jamais de diphtongue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au passé simple.",
+     "texte": "Anoche mi hermano ___ doce horas.",
+     "reponses": [
+      [
+       "durmió"
+      ]
+     ],
+     "banque": [
+      "durmió",
+      "dormió",
+      "duerme",
+      "durmiendo"
+     ],
+     "aide": "Le passé simple s’affaiblit à la 3e personne.",
+     "explication": "**Durmió** : *dormir* est mixte, il s’affaiblit au passé simple (*o → u*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au subjonctif présent.",
+     "texte": "Quiero que nosotros ___ pizza.",
+     "reponses": [
+      [
+       "pidamos"
+      ]
+     ],
+     "banque": [
+      "pedimos",
+      "pidamos",
+      "pidan",
+      "pedamos"
+     ],
+     "aide": "Au subjonctif présent, l’affaiblissement touche toutes les personnes.",
+     "explication": "**Pidamos** : subjonctif présent, l’affaiblissement s’applique même à *nosotros*."
+    },
+    {
+     "type": "zone",
+     "document": "tio",
+     "reponse": [
+      "g"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe dont le **g devient j** pour garder le son.",
+     "aide": "C’est le verbe *elegir*.",
+     "explication": "**Elijo** : le g de *elegir* devient *j* devant o."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque forme selon le temps.",
+     "categories": [
+      "Présent",
+      "Passé simple (3e pers.)",
+      "Gérondif"
+     ],
+     "items": [
+      [
+       "pido",
+       0
+      ],
+      [
+       "pidió",
+       1
+      ],
+      [
+       "pidiendo",
+       2
+      ],
+      [
+       "siento",
+       0
+      ],
+      [
+       "sintió",
+       1
+      ],
+      [
+       "sintiendo",
+       2
+      ]
+     ],
+     "aide": "Regarde la terminaison : -o, -ió ou -iendo.",
+     "explication": "Présent en *-o*, passé simple en *-ió*, gérondif en *-iendo*."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd3940a7-c380-5511-8874-aab5a5d3312e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "¿Dónde estás, Dani ?",
+   "competence": "comprendre-langue",
+   "situation": "Lola écrit à Dani pour l’inviter à une fête. Dani est malade, mais pas elle.",
+   "documents": [
+    {
+     "id": "fiesta",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Lola y Dani",
+     "participants": [
+      {
+       "nom": "Lola",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dani",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lola",
+       "texte": "Hola, Dani. ¿Dónde [[l|estás]]?"
+      },
+      {
+       "qui": "Dani",
+       "texte": "[[l|Estoy]] en casa. Mi hermano [[s|está]] enfermo."
+      },
+      {
+       "qui": "Lola",
+       "texte": "¡Vaya! Mañana es sábado. La fiesta es en mi casa."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiesta",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes** qui servent à **situer Dani**.",
+     "aide": "Cherche la question de Lola et la réponse de Dani.",
+     "explication": "**estás** et **estoy** : on localise une personne avec *estar*."
+    },
+    {
+     "type": "zone",
+     "document": "fiesta",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui donne l’**état de santé** du frère.",
+     "aide": "C’est « enfermo » qui décrit son état.",
+     "explication": "**está enfermo** : un état constaté, la santé, se dit avec *estar*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lola écrit-elle « La fiesta es en mi casa » avec *ser* ?",
+     "options": [
+      "Un événement « a lieu » quelque part",
+      "Casa est un nom féminin",
+      "La fiesta est une chose permanente",
+      "Ser sert toujours pour les lieux"
+     ],
+     "reponse": 0,
+     "aide": "Compare « Dani está en casa » : une personne, un événement.",
+     "explication": "**La fiesta es en mi casa** : pour un événement, *ser* signifie « avoir lieu »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon verbe.",
+     "texte": "Mi casa ___ en el centro.",
+     "reponses": [
+      [
+       "está"
+      ]
+     ],
+     "banque": [
+      "es",
+      "está",
+      "son",
+      "estoy"
+     ],
+     "aide": "On situe une chose.",
+     "explication": "**Está** : un lieu ou une chose se situent avec *estar*."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd3940a7-c380-5511-8874-aab5a5d3312e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une carte de Valence",
+   "competence": "manier-langue",
+   "situation": "Marina passe l’été à Valence chez ses cousins. Elle envoie une carte postale à sa grand-mère.",
+   "documents": [
+    {
+     "id": "postal",
+     "type": "fiche",
+     "modele": "carte-postale",
+     "entete": "Saludos desde Valencia",
+     "sousTitre": "Querida abuela",
+     "emoji": "🏖️",
+     "lignes": [
+      {
+       "texte": "Estoy en Valencia con mis primos.",
+       "id": "a"
+      },
+      {
+       "texte": "La playa es enorme.",
+       "id": "b"
+      },
+      {
+       "texte": "El agua está muy fría hoy.",
+       "id": "c"
+      },
+      {
+       "texte": "La paella está muy rica.",
+       "id": "d"
+      },
+      {
+       "texte": "Mi primo Raúl es muy listo.",
+       "id": "e"
+      }
+     ],
+     "pied": "Un beso, Marina",
+     "teinte": "turquoise",
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "postal",
+     "reponse": [
+      "a"
+     ],
+     "multiple": false,
+     "enonce": "Touche la ligne qui **situe** Marina.",
+     "aide": "On la localise : quel verbe ?",
+     "explication": "**Estoy en Valencia** : localisation d’une personne, donc *estar*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase de la carte : *ser* ou *estar* ?",
+     "categories": [
+      "Ser (ce qui définit)",
+      "Estar (ce qui se constate)"
+     ],
+     "items": [
+      [
+       "La playa es enorme",
+       0
+      ],
+      [
+       "El agua está muy fría",
+       1
+      ],
+      [
+       "Mi primo es muy listo",
+       0
+      ],
+      [
+       "Estoy en Valencia",
+       1
+      ],
+      [
+       "La paella está muy rica",
+       1
+      ]
+     ],
+     "aide": "*Ser* répond à « qu’est-ce que c’est ? », *estar* à « comment est-ce maintenant ? ».",
+     "explication": "*Ser* pour une caractéristique (*enorme, listo*) ; *estar* pour un lieu et un état constaté (*fría, rica*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « La paella está muy rica » ?",
+     "options": [
+      "Elle est délicieuse",
+      "Elle est très riche en calories",
+      "Elle est très chère",
+      "Elle est très ancienne"
+     ],
+     "reponse": 0,
+     "aide": "*Estar rico* parle du goût.",
+     "explication": "**Estar rico** = être délicieux ; *ser rico* = être riche (d’argent)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon verbe.",
+     "texte": "Raúl ___ listo para salir.",
+     "reponses": [
+      [
+       "está"
+      ]
+     ],
+     "banque": [
+      "es",
+      "está",
+      "son",
+      "estoy"
+     ],
+     "aide": "Ici *listo* veut dire « prêt ».",
+     "explication": "**Está listo** = il est prêt ; *es listo* = il est malin."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à son sens.",
+     "paires": [
+      [
+       "ser listo",
+       "être malin"
+      ],
+      [
+       "estar listo",
+       "être prêt"
+      ],
+      [
+       "ser aburrido",
+       "être ennuyeux"
+      ],
+      [
+       "estar aburrido",
+       "s’ennuyer"
+      ]
+     ],
+     "aide": "Le sens change selon le verbe.",
+     "explication": "**ser listo** = malin ; **estar listo** = prêt ; **ser aburrido** = ennuyeux ; **estar aburrido** = s’ennuyer."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd3940a7-c380-5511-8874-aab5a5d3312e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "¡Estás invitado!",
+   "competence": "manier-langue",
+   "situation": "Elena envoie une invitation d’anniversaire à son ami Leo, qui lui répond.",
+   "documents": [
+    {
+     "id": "invitacion",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "¡Estás invitado!",
+     "sousTitre": "Cumpleaños de Elena",
+     "emoji": "🎂",
+     "lignes": [
+      {
+       "texte": "La fiesta es en mi casa.",
+       "id": "a"
+      },
+      {
+       "texte": "Mi casa está cerca del parque.",
+       "id": "b"
+      },
+      {
+       "texte": "Hoy es lunes: confirma antes del jueves.",
+       "id": "c"
+      },
+      {
+       "texte": "Estoy muy contenta de invitarte.",
+       "id": "d"
+      }
+     ],
+     "teinte": "rose",
+     "source": "Invitation écrite pour l’exercice"
+    },
+    {
+     "id": "respuesta",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Respuesta de Leo",
+     "participants": [
+      {
+       "nom": "Elena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elena",
+       "texte": "¿Vienes a mi fiesta, Leo?"
+      },
+      {
+       "qui": "Leo",
+       "texte": "¡Gracias! Estoy muy contento, pero mi hermana no puede ir : [[s|está]] enferma."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "invitacion",
+     "reponse": [
+      "a"
+     ],
+     "multiple": false,
+     "enonce": "Touche la ligne où *ser* sert à dire **où a lieu** un événement.",
+     "aide": "On ne situe pas un lieu : on dit où l’événement se passe.",
+     "explication": "**La fiesta es en mi casa** : l’événement « a lieu » chez Elena."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Mi casa está cerca del parque » avec *estar* ?",
+     "options": [
+      "On situe un lieu, une chose",
+      "C’est une caractéristique permanente",
+      "La phrase décrit un événement",
+      "Cerca exige toujours ser"
+     ],
+     "reponse": 0,
+     "aide": "La maison est un lieu.",
+     "explication": "**Mi casa está** : un lieu se situe avec *estar*."
+    },
+    {
+     "type": "zone",
+     "document": "respuesta",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui dit **l’état de santé** de la sœur de Leo.",
+     "aide": "Un état constaté.",
+     "explication": "**Está enferma** : la santé est un état, donc *estar*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : *ser* ou *estar* ?",
+     "categories": [
+      "Ser",
+      "Estar"
+     ],
+     "items": [
+      [
+       "Hoy es lunes",
+       0
+      ],
+      [
+       "Estoy de acuerdo",
+       1
+      ],
+      [
+       "Es de madera",
+       0
+      ],
+      [
+       "Está a punto de salir",
+       1
+      ],
+      [
+       "Es alta",
+       0
+      ],
+      [
+       "Estoy estudiando",
+       1
+      ]
+     ],
+     "aide": "*Ser* : date, matière, caractéristique. *Estar* : expression figée, forme progressive.",
+     "explication": "*Ser* pour la date, la matière, une caractéristique ; *estar* pour les expressions figées (*de acuerdo, a punto de*) et la forme progressive."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à sa traduction.",
+     "paires": [
+      [
+       "estar de acuerdo",
+       "être d’accord"
+      ],
+      [
+       "estar de vacaciones",
+       "être en vacances"
+      ],
+      [
+       "estar de pie",
+       "être debout"
+      ],
+      [
+       "estar a punto de",
+       "être sur le point de"
+      ]
+     ],
+     "aide": "Ces expressions se construisent toutes avec *estar*.",
+     "explication": "Quatre expressions figées avec **estar** à retenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "a50546fc-f44a-5d4d-9f18-63c9ee5a1c77",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "¿Qué estás haciendo ?",
+   "competence": "comprendre-langue",
+   "situation": "Nuria envoie un message à Javi pour savoir ce que fait sa famille un dimanche après-midi.",
+   "documents": [
+    {
+     "id": "domingo",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Nuria y Javi",
+     "participants": [
+      {
+       "nom": "Nuria",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Javi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nuria",
+       "texte": "Hola, Javi. ¿Qué estás [[g|haciendo]]?"
+      },
+      {
+       "qui": "Javi",
+       "texte": "Estoy [[g|estudiando]]. Mi hermano está [[g|comiendo]] y mi madre está [[g|leyendo]]."
+      },
+      {
+       "qui": "Nuria",
+       "texte": "Yo estoy [[g|jugando]] con mi perro."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "domingo",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **cinq gérondifs** de la conversation.",
+     "aide": "Ils se terminent en -ando ou -iendo.",
+     "explication": "**haciendo, estudiando, comiendo, leyendo, jugando** : *estar* + gérondif dit l’action en cours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le gérondif de *ver*.",
+     "texte": "Mi padre está ___ la tele.",
+     "reponses": [
+      [
+       "viendo"
+      ]
+     ],
+     "banque": [
+      "viendo",
+      "veyendo",
+      "visto",
+      "ver"
+     ],
+     "aide": "*Ver* est en -er : terminaison en -iendo.",
+     "explication": "**Viendo** : le gérondif de *ver* (-er) se forme en *-iendo*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Javi écrit « mi hermano está comiendo ». Que veut-il dire ?",
+     "options": [
+      "Il est en train de manger",
+      "Il a déjà fini de manger",
+      "Il va manger plus tard",
+      "Il mange assez rarement"
+     ],
+     "reponse": 0,
+     "aide": "*Estar* + gérondif = action en cours.",
+     "explication": "**Está comiendo** : « il est en train de manger »."
+    }
+   ]
+  },
+  {
+   "chapitre": "a50546fc-f44a-5d4d-9f18-63c9ee5a1c77",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux ans d’espagnol",
+   "competence": "manier-langue",
+   "situation": "Une collégienne française écrit à son correspondant espagnol et raconte ses progrès.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Querido Pierre",
+     "blocs": [
+      "[[l|Llevo]] dos años estudiando español y [[v|voy]] mejorando poco a poco. Todavía sigo cometiendo errores, pero ayer acabé aprobando el examen."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "l"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui exprime la **durée écoulée** (« depuis deux ans »).",
+     "aide": "C’est l’équivalent espagnol de « depuis ».",
+     "explication": "**Llevo dos años estudiando** : *llevar* + durée + gérondif."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque périphrase à son sens.",
+     "paires": [
+      [
+       "seguir + gérondif",
+       "continuer à"
+      ],
+      [
+       "llevar + durée + gérondif",
+       "faire depuis"
+      ],
+      [
+       "ir + gérondif",
+       "peu à peu"
+      ],
+      [
+       "acabar + gérondif",
+       "finir par"
+      ]
+     ],
+     "aide": "Relis la lettre pour retrouver chaque périphrase.",
+     "explication": "**seguir** = continuer ; **llevar** = depuis ; **ir** = progression ; **acabar** = aboutissement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon verbe.",
+     "texte": "___ tres meses viviendo aquí.",
+     "reponses": [
+      [
+       "Llevo"
+      ]
+     ],
+     "banque": [
+      "Llevo",
+      "Voy",
+      "Sigo",
+      "Acabo"
+     ],
+     "aide": "Le complément « tres meses » indique une durée.",
+     "explication": "**Llevo tres meses viviendo aquí** : j’habite ici depuis trois mois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Sigo cometiendo errores » ?",
+     "options": [
+      "Je continue à faire des erreurs",
+      "J’ai fini par faire des erreurs",
+      "Je ne fais plus d’erreurs",
+      "Je vais faire des erreurs"
+     ],
+     "reponse": 0,
+     "aide": "*Seguir* exprime la continuation.",
+     "explication": "**Sigo cometiendo** = je continue à commettre."
+    }
+   ]
+  },
+  {
+   "chapitre": "a50546fc-f44a-5d4d-9f18-63c9ee5a1c77",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le gérondif à ne pas employer",
+   "competence": "analyser-document",
+   "situation": "Le professeur a relevé quatre phrases d’élèves. Deux d’entre elles utilisent mal le gérondif.",
+   "documents": [
+    {
+     "id": "frases",
+     "type": "tableau",
+     "titre": "Las frases de los alumnos",
+     "colonnes": [
+      "Alumno",
+      "Frase"
+     ],
+     "lignes": [
+      [
+       "Elena",
+       "Vi una caja conteniendo libros."
+      ],
+      [
+       "Hugo",
+       "Salió corriendo de la clase."
+      ],
+      [
+       "Marta",
+       "Cogió el tren, llegando a Madrid dos horas después."
+      ],
+      [
+       "Pablo",
+       "Estoy leyendo un libro."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Phrases écrites pour l’exercice"
+    },
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Laura",
+     "blocs": [
+      "Mi profesor [[v|viene]] diciendo desde septiembre que voy mejorando. Llevo seis meses practicando y acabé aprobando."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frases",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux phrases** où le gérondif est mal employé.",
+     "aide": "Un gérondif ne qualifie pas un nom, et ne dit pas ce qui se passe après.",
+     "explication": "**conteniendo** (calque du français : *una caja que contiene libros*) et **llegando… después** (le gérondif ne dit pas la postériorité)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « una caja conteniendo libros » est-elle fausse ?",
+     "options": [
+      "Le gérondif ne peut pas qualifier un nom",
+      "Contener n’a pas de gérondif en espagnol",
+      "Caja est un nom féminin singulier",
+      "Libros doit rester au singulier ici"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la traduction : « une boîte contenant des livres ».",
+     "explication": "**Una caja que contiene libros** : le gérondif espagnol ne s’emploie pas comme adjectif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne tournure.",
+     "texte": "Vi una caja ___ ___ libros.",
+     "reponses": [
+      [
+       "que"
+      ],
+      [
+       "contiene"
+      ]
+     ],
+     "banque": [
+      "que",
+      "contiene",
+      "conteniendo",
+      "y"
+     ],
+     "aide": "Il faut une proposition relative.",
+     "explication": "**Una caja que contiene libros** : proposition relative au lieu du gérondif."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque infinitif à son gérondif.",
+     "paires": [
+      [
+       "leer",
+       "leyendo"
+      ],
+      [
+       "ir",
+       "yendo"
+      ],
+      [
+       "dormir",
+       "durmiendo"
+      ],
+      [
+       "decir",
+       "diciendo"
+      ]
+     ],
+     "aide": "Après une voyelle, le -iendo devient -yendo.",
+     "explication": "**leyendo, yendo, durmiendo, diciendo** : *-yendo* après une voyelle, radical modifié pour *dormir* et *decir*."
+    },
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "v"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui exprime une **évolution venue du passé**.",
+     "aide": "Il est suivi de diciendo.",
+     "explication": "**Viene diciendo** : *venir* + gérondif, une action qui dure depuis longtemps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « acabé aprobando » ?",
+     "options": [
+      "J’ai fini par réussir",
+      "J’ai fini de réussir",
+      "Je suis en train de réussir",
+      "Je vais réussir"
+     ],
+     "reponse": 0,
+     "aide": "*Acabar* + gérondif exprime l’aboutissement.",
+     "explication": "**Acabé aprobando** = j’ai fini par réussir (l’examen)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a883d16d-53ad-54e5-b19f-c7754b0a3871",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deberes y ventana",
+   "competence": "comprendre-langue",
+   "situation": "Marta et Pablo s’écrivent avant le cours. Ils parlent des devoirs et de la fenêtre.",
+   "documents": [
+    {
+     "id": "ventana",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Marta y Pablo",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Pablo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "Hola, Pablo. ¿Estás listo para la clase?"
+      },
+      {
+       "qui": "Pablo",
+       "texte": "Sí, he [[p|hecho]] los deberes y he [[p|escrito]] la redacción."
+      },
+      {
+       "qui": "Marta",
+       "texte": "¿Has [[p|abierto]] la ventana?"
+      },
+      {
+       "qui": "Pablo",
+       "texte": "No, la ventana está cerrada."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ventana",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois participes irréguliers** qui suivent *haber*.",
+     "aide": "Aucun ne finit en -ado ou -ido.",
+     "explication": "**hecho, escrito, abierto** : participes irréguliers de *hacer, escribir, abrir*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le participe.",
+     "texte": "Hemos ___ la puerta.",
+     "reponses": [
+      [
+       "abierto"
+      ]
+     ],
+     "banque": [
+      "abierto",
+      "abierta",
+      "abrido",
+      "abrir"
+     ],
+     "aide": "Avec *haber*, le participe ne s’accorde jamais.",
+     "explication": "**Hemos abierto** : participe irrégulier de *abrir*, invariable après *haber*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « cerrada » est-il féminin dans « la ventana está cerrada » ?",
+     "options": [
+      "Il s’accorde avec le sujet ventana",
+      "Il suit l’auxiliaire haber ici",
+      "Il est toujours féminin en espagnol",
+      "Il est invariable comme avec haber"
+     ],
+     "reponse": 0,
+     "aide": "Avec *estar*, le participe fonctionne comme un adjectif.",
+     "explication": "**Está cerrada** : après *ser* ou *estar*, le participe s’accorde avec le sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "a883d16d-53ad-54e5-b19f-c7754b0a3871",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Après la vaisselle",
+   "competence": "manier-langue",
+   "situation": "Un petit mot de famille raconte ce qui s’est passé dans la cuisine, hier soir.",
+   "documents": [
+    {
+     "id": "cocina",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "En la cocina",
+     "blocs": [
+      "Ayer mi hermano ha [[h|roto]] dos vasos. Mi madre ha [[h|puesto]] la mesa y las tazas están ya [[a|puestas]]. Los vasos [[a|rotos]] están en la basura."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cocina",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux participes** qui suivent *haber* et ne s’accordent jamais.",
+     "aide": "Cherche « ha » devant le participe.",
+     "explication": "**ha roto, ha puesto** : après *haber*, le participe est figé."
+    },
+    {
+     "type": "zone",
+     "document": "cocina",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux participes** qui s’accordent avec leur nom.",
+     "aide": "Ils sont après estar ou devant un nom.",
+     "explication": "**puestas, rotos** : après *estar* ou comme adjectif, le participe s’accorde."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le participe.",
+     "texte": "Las cartas que he ___ son largas.",
+     "reponses": [
+      [
+       "escrito"
+      ]
+     ],
+     "banque": [
+      "escrito",
+      "escrita",
+      "escritos",
+      "escribido"
+     ],
+     "aide": "Avec *haber*, le participe ne s’accorde pas.",
+     "explication": "**Las cartas que he escrito** : participe irrégulier de *escribir*, invariable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « las tazas están puestas » ?",
+     "options": [
+      "Estar + participe donne un état, et il s’accorde",
+      "Estar + participe donne une action en cours",
+      "Les tasses sont le sujet de haber",
+      "Puestas est invariable"
+     ],
+     "reponse": 0,
+     "aide": "Le fait est accompli : on décrit le résultat.",
+     "explication": "**Están puestas** : état résultant, le participe s’accorde avec *tazas*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque infinitif à son participe.",
+     "paires": [
+      [
+       "escribir",
+       "escrito"
+      ],
+      [
+       "volver",
+       "vuelto"
+      ],
+      [
+       "romper",
+       "roto"
+      ],
+      [
+       "satisfacer",
+       "satisfecho"
+      ]
+     ],
+     "aide": "Ce sont tous des participes irréguliers.",
+     "explication": "**escrito, vuelto, roto, satisfecho**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a883d16d-53ad-54e5-b19f-c7754b0a3871",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La Casa del Reloj",
+   "competence": "manier-langue",
+   "situation": "Un panneau d’information présente un vieux bâtiment, et un tableau rappelle les verbes à deux participes.",
+   "documents": [
+    {
+     "id": "casa",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La Casa del Reloj",
+     "blocs": [
+      "La Casa del Reloj fue [[a|construida]] en 1920. Hoy está [[e|cerrada]], pero el ayuntamiento ha prometido su apertura.",
+      "Los muros han sido pintados y se han restaurado las ventanas."
+     ],
+     "source": "Texte inventé pour l’exercice"
+    },
+    {
+     "id": "dobles",
+     "type": "tableau",
+     "titre": "Participios dobles",
+     "colonnes": [
+      "Verbo",
+      "Temps composé",
+      "Nom",
+      "Adjectif"
+     ],
+     "lignes": [
+      [
+       "freír",
+       "he freído",
+       "patatas",
+       "?"
+      ],
+      [
+       "imprimir",
+       "he imprimido",
+       "un texto",
+       "?"
+      ],
+      [
+       "soltar",
+       "he soltado",
+       "un perro",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "casa",
+     "reponse": [
+      "a"
+     ],
+     "multiple": false,
+     "enonce": "Touche le participe de la **passive d’action** (on assiste à la construction).",
+     "aide": "Il suit *ser*, au passé simple.",
+     "explication": "**fue construida** : *ser* + participe décrit l’action."
+    },
+    {
+     "type": "zone",
+     "document": "casa",
+     "reponse": [
+      "e"
+     ],
+     "multiple": false,
+     "enonce": "Touche le participe qui exprime l’**état résultant**.",
+     "aide": "Il suit *está*.",
+     "explication": "**está cerrada** : *estar* + participe décrit le résultat."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « han sido pintados », pourquoi *sido* ne change-t-il pas, alors que *pintados* s’accorde ?",
+     "options": [
+      "Sido suit haber ; pintados suit ser",
+      "Les deux participes suivent haber",
+      "Les deux participes suivent ser",
+      "Pintados est un adjectif sans verbe"
+     ],
+     "reponse": 0,
+     "aide": "Cherche quel auxiliaire précède chaque participe.",
+     "explication": "**han sido** : après *haber*, pas d’accord ; **sido pintados** : après *ser*, le participe s’accorde avec le sujet *muros*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le participe adjectif.",
+     "texte": "patatas ___ ; un texto ___ ; un perro ___",
+     "reponses": [
+      [
+       "fritas"
+      ],
+      [
+       "impreso"
+      ],
+      [
+       "suelto"
+      ]
+     ],
+     "banque": [
+      "fritas",
+      "frito",
+      "impreso",
+      "imprimido",
+      "suelto",
+      "soltado"
+     ],
+     "aide": "Le participe adjectif est l’irrégulier, accordé avec le nom.",
+     "explication": "**patatas fritas, un texto impreso, un perro suelto** : forme irrégulière comme adjectif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression selon le participe.",
+     "categories": [
+      "Participe invariable (haber)",
+      "Participe accordé"
+     ],
+     "items": [
+      [
+       "han llegado",
+       0
+      ],
+      [
+       "está cerrada",
+       1
+      ],
+      [
+       "las cartas que he escrito",
+       0
+      ],
+      [
+       "fueron construidas",
+       1
+      ],
+      [
+       "ha vuelto",
+       0
+      ],
+      [
+       "están rotas",
+       1
+      ]
+     ],
+     "aide": "Après *haber* : jamais d’accord. Ailleurs : accord.",
+     "explication": "Après **haber** le participe est figé ; après **ser/estar** ou comme adjectif, il s’accorde."
+    }
+   ]
+  },
+  {
+   "chapitre": "87b7993b-28e5-53d4-9ed4-df3c68e7d024",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "¿Qué te gusta hacer ?",
+   "competence": "comprendre-langue",
+   "situation": "Eva et Tomás parlent de ce qu’ils aiment faire pendant leur temps libre.",
+   "documents": [
+    {
+     "id": "gustos",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Eva y Tomás",
+     "participants": [
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tomás",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eva",
+       "texte": "Hola, Tomás. ¿Qué te gusta hacer?"
+      },
+      {
+       "qui": "Tomás",
+       "texte": "Me gusta el cine y me gustan las [[s|series]]. ¿Y a ti?"
+      },
+      {
+       "qui": "Eva",
+       "texte": "A mí me gusta leer. A mí también me gusta el cine."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gustos",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui est le **sujet** du verbe *gustan*.",
+     "aide": "Le sujet est ce qui plaît, pas la personne.",
+     "explication": "**las series** est le sujet : *me gustan las series* = « les séries me plaisent »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le pronom.",
+     "texte": "A mis padres ___ gustan los viajes.",
+     "reponses": [
+      [
+       "les"
+      ]
+     ],
+     "banque": [
+      "les",
+      "le",
+      "nos",
+      "me"
+     ],
+     "aide": "Le complément est « mis padres » : pluriel.",
+     "explication": "**A mis padres les gustan** : le pronom *les* renvoie à plusieurs personnes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Tomás écrit-il « me gusta el cine » mais « me gustan las series » ?",
+     "options": [
+      "Le verbe s’accorde avec ce qui plaît",
+      "Le verbe s’accorde avec la personne qui parle",
+      "Gustar change selon le pronom",
+      "Gustan est la forme polie"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le sujet de chaque phrase.",
+     "explication": "**Me gusta el cine** (singulier), **me gustan las series** (pluriel) : le verbe s’accorde avec le sujet, c’est-à-dire ce qui plaît."
+    }
+   ]
+  },
+  {
+   "chapitre": "87b7993b-28e5-53d4-9ed4-df3c68e7d024",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’enquête de la classe",
+   "competence": "lire-tableau",
+   "situation": "La classe de 4e A a fait une enquête sur ce que chacun aime ou n’aime pas.",
+   "documents": [
+    {
+     "id": "encuesta",
+     "type": "tableau",
+     "titre": "Encuesta de la clase",
+     "colonnes": [
+      "Alumno",
+      "Le gusta",
+      "No le gusta"
+     ],
+     "lignes": [
+      [
+       "Lola",
+       "el cine",
+       "el fútbol"
+      ],
+      [
+       "Hugo",
+       "los videojuegos",
+       "las matemáticas"
+      ],
+      [
+       "Ana",
+       "bailar y cantar",
+       "madrugar"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "encuesta",
+     "reponse": [
+      "r2c2"
+     ],
+     "multiple": false,
+     "enonce": "Touche ce qui **ne plaît pas** à Ana.",
+     "aide": "Regarde la colonne « No le gusta ».",
+     "explication": "**Madrugar** : se lever tôt ne plaît pas à Ana."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le pronom.",
+     "texte": "A Lola ___ gusta el cine.",
+     "reponses": [
+      [
+       "le"
+      ]
+     ],
+     "banque": [
+      "le",
+      "les",
+      "me",
+      "nos"
+     ],
+     "aide": "Lola est une seule personne : 3e personne.",
+     "explication": "**A Lola le gusta el cine** : *a Lola* renforce le pronom *le*, qui reste obligatoire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "A Hugo le ___ los videojuegos.",
+     "reponses": [
+      [
+       "gustan"
+      ]
+     ],
+     "banque": [
+      "gusta",
+      "gustan",
+      "gusto",
+      "gustas"
+     ],
+     "aide": "Le sujet est « los videojuegos » (pluriel).",
+     "explication": "**Gustan** : le verbe s’accorde avec ce qui plaît."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte pour parler d’Ana ?",
+     "options": [
+      "A Ana le gusta bailar y cantar",
+      "A Ana le gustan bailar y cantar",
+      "A Ana les gusta bailar y cantar",
+      "A Ana gusta bailar y cantar"
+     ],
+     "reponse": 0,
+     "aide": "Deux infinitifs ne donnent pas un pluriel.",
+     "explication": "**Le gusta bailar y cantar** : deux infinitifs, verbe au singulier ; le pronom *le* reste obligatoire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase espagnole à sa traduction.",
+     "paires": [
+      [
+       "Me duele la cabeza",
+       "J’ai mal à la tête"
+      ],
+      [
+       "Me encantan los perros",
+       "J’adore les chiens"
+      ],
+      [
+       "Nos hacen falta dos sillas",
+       "Il nous faut deux chaises"
+      ],
+      [
+       "Me queda poco dinero",
+       "Il me reste peu d’argent"
+      ]
+     ],
+     "aide": "Tous ces verbes se construisent comme *gustar*.",
+     "explication": "Ces verbes suivent la construction de **gustar** : la chose est le sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "87b7993b-28e5-53d4-9ed4-df3c68e7d024",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux entradas para el sábado",
+   "competence": "manier-langue",
+   "situation": "Sara et Marcos organisent une sortie au cinéma. Une affiche donne le programme.",
+   "documents": [
+    {
+     "id": "cine",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mensajes de Sara y Marcos",
+     "participants": [
+      {
+       "nom": "Marcos",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sara",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marcos",
+       "texte": "Me gusta mucho el cine. Me encantan las películas de aventuras."
+      },
+      {
+       "qui": "Sara",
+       "texte": "A mí [[a|también]] me gusta el cine, pero no me gusta nada el fútbol."
+      },
+      {
+       "qui": "Marcos",
+       "texte": "A mí [[t|tampoco]]. Prefiero el baloncesto."
+      },
+      {
+       "qui": "Sara",
+       "texte": "Me hacen falta dos entradas para el sábado."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "cartelera",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cine Goya",
+     "sousTitre": "Cartelera del sábado",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "Aventuras en la selva"
+      },
+      {
+       "texte": "Sábado, a las 18:00"
+      },
+      {
+       "texte": "Entrada : 6 euros"
+      }
+     ],
+     "teinte": "ambre",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cine",
+     "reponse": [
+      "t"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui exprime l’**accord après une phrase négative**.",
+     "aide": "Marcos dit « moi non plus ».",
+     "explication": "**A mí tampoco** : accord après une négation. Après une affirmation : *a mí también*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Sara dit-elle « A mí también » en réponse à Marcos ?",
+     "options": [
+      "Marcos vient d’affirmer quelque chose",
+      "Marcos vient de dire une négation",
+      "Sara est en désaccord avec Marcos",
+      "Elle répond à une question de Marcos"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec « A mí tampoco » dit après la négation de Sara.",
+     "explication": "**También** après une affirmation, **tampoco** après une négation ; **a mí sí / a mí no** pour le désaccord."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon mot.",
+     "texte": "Me hacen ___ dos entradas.",
+     "reponses": [
+      [
+       "falta"
+      ]
+     ],
+     "banque": [
+      "falta",
+      "faltan",
+      "gusta",
+      "duele"
+     ],
+     "aide": "*Hacer falta* = être nécessaire.",
+     "explication": "**Me hacen falta dos entradas** : *hacer falta* se construit comme *gustar*, *falta* reste invariable."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon mot.",
+     "texte": "No me gusta ___ el fútbol.",
+     "reponses": [
+      [
+       "nada"
+      ]
+     ],
+     "banque": [
+      "nada",
+      "muy",
+      "mucho",
+      "nadie"
+     ],
+     "aide": "On veut dire « pas du tout ».",
+     "explication": "**No me gusta nada** : jamais « me gusta muy »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il me reste peu d’argent. » La phrase commence par Me.",
+     "items": [
+      "Me",
+      "queda",
+      "poco",
+      "dinero"
+     ],
+     "aide": "*Quedar* se construit comme *gustar*.",
+     "explication": "**Me queda poco dinero** : le sujet est *dinero*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sara et Marcos achètent deux entrées. Combien paient-ils en tout ?",
+     "reponse": 12,
+     "unite": "€",
+     "aide": "Regarde le prix d’une entrée sur l’affiche.",
+     "explication": "**12 €** : 2 × 6 € = 12 €."
+    }
+   ]
+  }
+ ]
+}

@@ -83,7 +83,7 @@ export function lireClassementAmis(brut: unknown): AmiClasse[] {
 
 // --------------------------------------------------------------- le classement
 
-/** Le nombre qui fait la hauteur de la colonne, pour la mesure affichée. */
+/** Le nombre qui fait la longueur de la barre, pour la mesure affichée. */
 export function valeurDe(joueur: AmiClasse, mesure: Mesure): number {
   return mesure === 'trophees' ? joueur.trophees : joueur.secondesSemaine
 }
@@ -144,18 +144,18 @@ export function challengerDe(joueurs: readonly AmiClasse[]): string | null {
   return meilleur && elan(meilleur) > 0 ? meilleur.id : null
 }
 
-// ------------------------------------------------------------------ les colonnes
+// -------------------------------------------------------------------- les barres
 
-/** Hauteur minimale d'une colonne qui a quelque chose, en % : elle reste visible. */
-export const HAUTEUR_MIN_PCT = 8
+/** Longueur minimale d'une barre qui a quelque chose, en % : elle reste visible. */
+export const PART_MIN_PCT = 8
 
-/** La hauteur de chaque colonne, en % de la plus haute (qui fait 100). */
-export function hauteursDesColonnes(classes: readonly AmiClasse[], mesure: Mesure): number[] {
+/** La longueur de chaque barre, en % de la plus longue (qui fait 100). */
+export function partsDuMeilleur(classes: readonly AmiClasse[], mesure: Mesure): number[] {
   const max = Math.max(0, ...classes.map((j) => valeurDe(j, mesure)))
   if (max <= 0) return classes.map(() => 0)
   return classes.map((j) => {
     const valeur = valeurDe(j, mesure)
-    return valeur <= 0 ? 0 : Math.max(HAUTEUR_MIN_PCT, Math.round((valeur / max) * 100))
+    return valeur <= 0 ? 0 : Math.max(PART_MIN_PCT, Math.round((valeur / max) * 100))
   })
 }
 
@@ -166,7 +166,7 @@ function nombre(n: number): string {
   return String(Math.max(0, Math.round(n))).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
 }
 
-/** Ce qui s'écrit sur le chapiteau d'une colonne : « 128 », « 2 h 10 ». */
+/** Ce qui s'écrit au bout d'une barre : « 128 », « 2 h 10 ». */
 export function libelleValeur(joueur: AmiClasse, mesure: Mesure): string {
   return mesure === 'trophees' ? nombre(joueur.trophees) : formatDuree(joueur.secondesSemaine)
 }
@@ -178,7 +178,7 @@ export function libelleMouvement(tropheesSemaine: number): string {
   return '0'
 }
 
-/** Le détail de la colonne allumée, dit en entier. */
+/** Le détail de la ligne touchée, dit en entier. */
 export function detailJoueur(joueur: AmiClasse): string {
   const qui = joueur.moi ? 'Toi' : joueur.nom
   const trophees = `${nombre(joueur.trophees)} trophée${joueur.trophees > 1 ? 's' : ''}`

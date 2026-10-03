@@ -18,8 +18,10 @@ import {
   isHudAccountHidden,
   isHudHidden,
   isHudOverDarkScene,
+  isHudQuetesMasquee,
   isHudSerieMasquee,
 } from '@/lib/top-hud-routes'
+import PastilleQuetes from '@/components/quetes/PastilleQuetes'
 import { cn } from '@/lib/utils'
 
 /** Quelle bulle est ouverte, s'il y en a une : les cristaux ou le multiplicateur d'XP. */
@@ -400,6 +402,15 @@ export default function TopHud({
           délavée en permanence, c'est-à-dire tout le temps sauf une fois. Elle
           garde donc ses pleines couleurs, et l'état actif se marque par un
           anneau — la même bague que porte déjà l'écusson de niveau. */}
+      {/* LES QUÊTES DU JOUR (03/10/2026) : le parchemin et « 1/3 », au bord
+          droit — sauf sur l'accueil Réviser (la puce de classe y tient le
+          bord, les quêtes sont une carte en tête de page) et sur l'arène. */}
+      {connected && !isHudQuetesMasquee(pathname) ? (
+        <div className="ml-auto flex shrink-0 items-center">
+          <PastilleQuetes dark={dark} />
+        </div>
+      ) : null}
+
       {accountHidden ? null : (
         <Link
           href={accountHref}

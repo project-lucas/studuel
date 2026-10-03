@@ -17,6 +17,7 @@ import SubjectsHome from '@/components/SubjectsHome'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import CarnetButton from '@/components/carnet/CarnetButton'
 import ClasseChip from '@/components/reviser/ClasseChip'
+import QuetesReviser from '@/components/quetes/QuetesReviser'
 import { isGradeLevel } from '@/lib/grades'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
@@ -671,6 +672,9 @@ export default async function OngletReviser() {
                   />
                 }
               />
+              {/* Les quêtes du jour : ici une carte, ailleurs la pastille
+                      du bandeau (la puce de classe en tient le bord). */}
+              <QuetesReviser />
               {/* 2. « On s'y remet ? » — deux sessions à reprendre, pas une
                       réserve qui défile. */}
               <ResumeSessions items={resumeItems} />

@@ -1,0 +1,2098 @@
+{
+ "niveau": "5e",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "8f784bec-0277-5d05-b70e-7d47fb81e7bc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le carnet d’un marin",
+   "competence": "analyser-texte",
+   "situation": "Après six semaines de mer, un jeune marin note chaque soir ce qu’il découvre. Sa classe a retrouvé des pages de ce carnet imaginaire : à toi de repérer ce qui fait d’un texte un récit de voyage.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Pages du carnet",
+     "blocs": [
+      "Lundi 14 mars. Après six semaines de mer, [[je|j’]]aperçois enfin une côte basse et verte.",
+      "Mercredi 16 mars. Nous jetons l’ancre. Un peuple inconnu nous attend sur la plage : [[je|je]] n’ai jamais vu d’hommes si grands. Leurs maisons, [[co|longues comme une halle]], abritent des dizaines de familles.",
+      "Vendredi 18 mars. [[et|Étrange]] pays ! Les arbres portent des fruits [[et|jamais vus]] chez nous, et les oiseaux sont des [[et|merveilles]] de couleurs. [[je|J’]]en ai compté vingt sortes.",
+      "Samedi 19 mars. Un petit animal court devant [[je|mes]] pieds : il est [[co|gros comme un lièvre]], mais il marche sur deux pattes."
+     ],
+     "source": "Journal imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "multiple": true,
+     "reponse": [
+      "je"
+     ],
+     "enonce": "Touche les **quatre mots** qui montrent que le marin dit « je » (pronoms et déterminants de la première personne).",
+     "aide": "Cherche j’, je, J’ et un mot qui veut dire « les miens ».",
+     "explication": "Les marques du narrateur sont **j’**, **je**, **J’** et **mes** : le voyageur dit « je » et se porte garant de ce qu’il raconte."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "multiple": true,
+     "reponse": [
+      "et"
+     ],
+     "enonce": "Touche les **trois expressions** du vocabulaire de l’étonnement.",
+     "aide": "Le marin est surpris : cherche ce qu’il n’avait jamais vu, ce qui est bizarre, ce qui est extraordinaire.",
+     "explication": "**Étrange**, **jamais vus** et **merveilles** disent la surprise du voyageur devant l’inconnu."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "multiple": true,
+     "reponse": [
+      "co"
+     ],
+     "enonce": "Pour faire imaginer l’inconnu, le marin le compare à ce qu’il connaît. Touche les **deux comparaisons**.",
+     "aide": "Une comparaison utilise « comme » pour rapprocher deux choses.",
+     "explication": "Les deux comparaisons sont **longues comme une halle** et **gros comme un lièvre** : l’inconnu est dit avec des mots du connu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le marin donne-t-il des dates et des nombres (« six semaines », « vingt sortes ») ?",
+     "options": [
+      "Pour être cru de ses lecteurs",
+      "Pour amuser ses lecteurs",
+      "Pour cacher une partie de la vérité",
+      "Pour remplir des pages vides"
+     ],
+     "reponse": 0,
+     "aide": "Un voyageur raconte des choses que personne n’a vues : que cherche-t-il à obtenir ?",
+     "explication": "Le voyageur veut être **cru** : il multiplie les détails précis, les dates et les mesures."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f784bec-0277-5d05-b70e-7d47fb81e7bc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a raconté quoi ?",
+   "competence": "analyser-document",
+   "situation": "Pour son exposé sur les grands voyageurs, Emma a dressé un tableau. Elle échange ensuite avec Tom, qui a lu le même tableau… mais qui glisse une erreur dans sa phrase.",
+   "documents": [
+    {
+     "id": "voyageurs",
+     "type": "tableau",
+     "titre": "Quatre textes de voyage",
+     "colonnes": [
+      "Auteur",
+      "Texte",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Marco Polo",
+       "Le Devisement du monde",
+       "vers 1298"
+      ],
+      [
+       "Christophe Colomb",
+       "Journal de bord",
+       "1492"
+      ],
+      [
+       "Jean de Léry",
+       "Histoire d’un voyage en terre de Brésil",
+       "1578"
+      ],
+      [
+       "Michel de Montaigne",
+       "« Des cannibales » (Essais)",
+       "1580"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Dates d’après le cours"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages d’Emma et de Tom",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Pour l’exposé, je prends les quatre auteurs du tableau."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Super ! Moi je dirai que Jean de Léry raconte son voyage [[er|en Chine]], comme Marco Polo."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 86,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le journal de bord de Colomb du livre de Jean de Léry ?",
+     "aide": "Soustrais les deux dates du tableau.",
+     "explication": "De 1492 à 1578, il y a 1578 − 1492 = **86 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "voyageurs",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Dans le tableau, touche le texte qui est un texte administratif devenu document historique.",
+     "aide": "Il est tenu au jour le jour à bord d’un navire.",
+     "explication": "C’est le **journal de bord** de Christophe Colomb (1492), à l’origine un texte administratif."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "reponse": [
+      "er"
+     ],
+     "enonce": "Tom se trompe. Touche les mots fautifs de sa phrase en relisant le tableau.",
+     "aide": "Regarde le titre de l’œuvre de Léry dans le tableau : de quel pays parle-t-il ?",
+     "explication": "Léry parle du **Brésil** (*Histoire d’un voyage en terre de Brésil*, 1578), pas de la Chine : le voyage en Chine est celui de Marco Polo."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Marco Polo",
+       "Dicte ses voyages en prison"
+      ],
+      [
+       "Christophe Colomb",
+       "Tient un journal de bord"
+      ],
+      [
+       "Jean de Léry",
+       "Porte un regard d’ethnographe sur le Brésil"
+      ],
+      [
+       "Montaigne",
+       "Invente la figure du « bon sauvage »"
+      ]
+     ],
+     "enonce": "Relie chaque voyageur à ce qu’il a fait.",
+     "aide": "Pense au lieu où Marco Polo a mis ses souvenirs par écrit, et au mot « sauvage ».",
+     "explication": "Marco Polo dicte son livre en **prison** ; Colomb tient son **journal de bord** ; Léry est l’un des premiers **ethnographes** ; Montaigne invente le **« bon sauvage »**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f784bec-0277-5d05-b70e-7d47fb81e7bc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois routes, trois regards",
+   "competence": "se-reperer-espace",
+   "situation": "Un professeur affiche une carte de trois grands voyages et deux témoignages sur un même peuple lointain. Il demande à ses élèves de situer, de dater et de reconnaître le regard de chaque voyageur.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois voyages célèbres",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -35,
+      155,
+      60
+     ],
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "lery",
+       "lon": -43.2,
+       "lat": -22.9,
+       "nom": "Léry, 1578",
+       "symbole": "carre",
+       "teinte": "corail"
+      }
+     ],
+     "traits": [
+      {
+       "id": "polo",
+       "points": [
+        "venise",
+        "pekin"
+       ],
+       "style": "fleche",
+       "teinte": "ambre",
+       "epaisseur": 2,
+       "etiquette": "Marco Polo, vers 1298"
+      },
+      {
+       "id": "colomb",
+       "points": [
+        [
+         -6.9,
+         37.2
+        ],
+        [
+         -74.5,
+         24.1
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "bleu",
+       "epaisseur": 2,
+       "etiquette": "Colomb, 1492"
+      }
+     ],
+     "source": "Trajets simplifiés"
+    },
+    {
+     "id": "regards",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux voyageurs, un même peuple",
+     "blocs": [
+      "Voyageur A : « [[em|Quelle merveille !]] Ces hommes lisent le ciel et les rivières mieux que nos pilotes. [[em|J’admire]] leurs chants. »",
+      "Voyageur B : « Ces gens sont [[me|des barbares]] : ils vivent sans lois, [[me|comme des bêtes]]. Il faut leur apprendre à vivre. »"
+     ],
+     "source": "Textes écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "colomb"
+     ],
+     "enonce": "Le journal de bord de 1492 raconte la traversée de l’océan Atlantique. Touche ce trajet sur la carte.",
+     "aide": "Cherche la flèche qui va de l’Europe vers l’Amérique.",
+     "explication": "C’est la flèche **Colomb, 1492** : de l’Espagne vers les îles de l’Atlantique, de l’autre côté de l’océan."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Marco Polo",
+      "Christophe Colomb",
+      "Jean de Léry"
+     ],
+     "enonce": "Range les trois voyageurs de la carte du plus ancien au plus récent.",
+     "aide": "Lis les dates écrites sur la carte.",
+     "explication": "Dans l’ordre : **Marco Polo** (vers 1298), **Christophe Colomb** (1492), **Jean de Léry** (1578)."
+    },
+    {
+     "type": "zone",
+     "document": "regards",
+     "multiple": true,
+     "reponse": [
+      "me"
+     ],
+     "enonce": "Touche les deux expressions qui montrent le **mépris** du voyageur B.",
+     "aide": "Cherche les mots par lesquels il rabaisse les habitants.",
+     "explication": "**des barbares** et **comme des bêtes** : le voyageur B juge les habitants depuis sa propre culture, avec mépris."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèlent les deux textes sur les récits de voyage ?",
+     "options": [
+      "Le voyageur regarde toujours depuis sa propre culture",
+      "Le voyageur décrit toujours exactement ce qu’il voit",
+      "Le voyageur ne parle jamais de lui-même",
+      "Le voyageur n’invente jamais rien"
+     ],
+     "reponse": 0,
+     "aide": "Le même peuple est décrit de deux façons opposées : qui change d’un texte à l’autre ?",
+     "explication": "Les deux voyageurs voient le même peuple, mais chacun parle **depuis sa propre culture** : le récit en dit autant sur celui qui regarde que sur ce qu’il regarde."
+    },
+    {
+     "type": "trous",
+     "texte": "Montaigne invente la figure du « ___ » pour critiquer sa propre ___.",
+     "reponses": [
+      [
+       "bon sauvage"
+      ],
+      [
+       "société",
+       "sa société"
+      ]
+     ],
+     "banque": [
+      "bon sauvage",
+      "société",
+      "navigateur",
+      "voyageur",
+      "prison"
+     ],
+     "enonce": "Complète ce que fait Montaigne dans « Des cannibales ».",
+     "aide": "Il met en scène un peuple lointain vertueux pour juger son pays.",
+     "explication": "Montaigne invente le **« bon sauvage »** pour critiquer **sa propre société**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4366ab9b-8872-567d-bf24-2f2eb9c1a9ea",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un pays qui n’existe pas",
+   "competence": "analyser-texte",
+   "situation": "Le club de poésie lit les premiers vers d’un célèbre poème d’invitation au voyage. Sam veut repérer comment le poète s’adresse à quelqu’un et comment il fait rêver d’un ailleurs.",
+   "documents": [
+    {
+     "id": "invitation",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "L’Invitation au voyage",
+     "blocs": [
+      "[[ap|Mon enfant, ma sœur]],",
+      "[[im|Songe]] à la douceur",
+      "D’aller [[la|là-bas]] vivre ensemble !",
+      "Aimer à loisir,",
+      "Aimer et mourir",
+      "Au pays qui te ressemble !",
+      "",
+      "Là, tout n’est qu’ordre et beauté,",
+      "Luxe, calme et volupté."
+     ],
+     "auteur": "Charles Baudelaire",
+     "source": "Baudelaire, Les Fleurs du mal (1857) : les six premiers vers, puis le refrain"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "invitation",
+     "multiple": true,
+     "reponse": [
+      "ap"
+     ],
+     "enonce": "Touche les mots par lesquels le poète s’adresse directement à quelqu’un.",
+     "aide": "Une apostrophe interpelle une personne : cherche-la au tout début.",
+     "explication": "**Mon enfant, ma sœur** est une apostrophe : le poète parle à la personne qu’il invite."
+    },
+    {
+     "type": "zone",
+     "document": "invitation",
+     "multiple": true,
+     "reponse": [
+      "im"
+     ],
+     "enonce": "Touche le verbe à l’**impératif** qui sert à inviter.",
+     "aide": "C’est un ordre doux, au début du deuxième vers.",
+     "explication": "**Songe** est à l’impératif : il invite la personne aimée à rêver avec lui."
+    },
+    {
+     "type": "zone",
+     "document": "invitation",
+     "multiple": true,
+     "reponse": [
+      "la"
+     ],
+     "enonce": "Touche le mot qui montre que le bonheur est ailleurs.",
+     "aide": "Cherche un mot de lieu, dans le troisième vers.",
+     "explication": "**là-bas** désigne un ailleurs lointain : c’est la promesse du voyage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les mêmes vers reviennent-ils (le refrain) à la fin des strophes ?",
+     "options": [
+      "Pour imiter le bercement du départ",
+      "Parce que le poète n’a plus d’idées",
+      "Pour donner des informations utiles",
+      "Pour décrire une carte très précise"
+     ],
+     "reponse": 0,
+     "aide": "Pense à un air que l’on répète pour bercer.",
+     "explication": "Le rythme et le refrain créent une **musicalité** qui imite le bercement du départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "4366ab9b-8872-567d-bf24-2f2eb9c1a9ea",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Heureux qui, comme Ulysse…",
+   "competence": "analyser-texte",
+   "situation": "Joachim du Bellay est à Rome, loin de chez lui. Léa lit deux passages d’un de ses sonnets et complète un tableau qui range les poètes selon leur façon de voyager.",
+   "documents": [
+    {
+     "id": "regrets",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les Regrets, sonnet 31",
+     "blocs": [
+      "Heureux qui, comme [[ul|Ulysse]], a fait un beau voyage,",
+      "(…)",
+      "Quand reverrai-je, [[pl|hélas]], de mon petit village",
+      "Fumer la cheminée, et en quelle saison"
+     ],
+     "auteur": "Joachim du Bellay",
+     "source": "Du Bellay, Les Regrets (1558), vers 1, 5 et 6, orthographe modernisée"
+    },
+    {
+     "id": "facons",
+     "type": "tableau",
+     "titre": "Trois façons de traiter le voyage",
+     "colonnes": [
+      "La façon",
+      "Le poète",
+      "Ce qu’il en fait"
+     ],
+     "lignes": [
+      [
+       "Le voyage rêvé",
+       "Baudelaire",
+       "Un pays fait du désir du poète"
+      ],
+      [
+       "Le voyage comme fuite",
+       "Rimbaud",
+       "Fuir l’ennui, la médiocrité, soi-même"
+      ],
+      [
+       "Le retour et le regret",
+       "Du Bellay",
+       "Le mal du pays, écrit depuis Rome"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regrets",
+     "multiple": true,
+     "reponse": [
+      "ul"
+     ],
+     "enonce": "Touche le nom du héros antique auquel le poète se compare.",
+     "aide": "C’est le héros de l’*Odyssée*, qui met dix ans à rentrer chez lui.",
+     "explication": "**Ulysse** est le modèle du voyageur qui rentre : Du Bellay rêve de son propre retour."
+    },
+    {
+     "type": "zone",
+     "document": "regrets",
+     "multiple": true,
+     "reponse": [
+      "pl"
+     ],
+     "enonce": "Touche l’interjection par laquelle le poète exprime sa plainte.",
+     "aide": "Elle est au début du vers 5, entre deux virgules.",
+     "explication": "**hélas** est un cri de plainte : le poète regrette son village."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que regrette Du Bellay depuis Rome ?",
+     "options": [
+      "Son petit village, où il rêve de rentrer",
+      "Les palais de Rome qu’il a dû quitter",
+      "Un voyage qu’il n’a jamais osé faire",
+      "Une longue guerre qu’il a perdue"
+     ],
+     "reponse": 0,
+     "aide": "Relis le vers 5 : de quoi parle-t-il avec tendresse ?",
+     "explication": "Il regrette son **petit village** : il le préfère aux palais romains."
+    },
+    {
+     "type": "zone",
+     "document": "facons",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche, dans le tableau, la façon de voyager que ce sonnet illustre.",
+     "aide": "Le poète est loin de chez lui et rêve de rentrer.",
+     "explication": "Le sonnet de Du Bellay relève du **retour et du regret** : le mal du pays, écrit depuis Rome."
+    }
+   ]
+  },
+  {
+   "chapitre": "4366ab9b-8872-567d-bf24-2f2eb9c1a9ea",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Samarcande, Zanzibar, Tombouctou",
+   "competence": "analyser-texte",
+   "situation": "Pour la fête de fin d’année, Noé a écrit un petit poème de départ. Avant de le lire, il le soumet à un tableau qui range les façons de voyager en poésie.",
+   "documents": [
+    {
+     "id": "depart",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Départ",
+     "blocs": [
+      "[[ap|Ô mer]], berce mon départ !",
+      "[[np|Samarcande]], [[np|Zanzibar]], [[np|Tombouctou]] :",
+      "ces noms sonnent [[co|comme des cloches lointaines]].",
+      "[[en|Sable]], [[en|soie]], [[en|épices]], [[en|étoiles]],",
+      "tout défile derrière mes paupières.",
+      "Je pars, mais je veux rentrer, comme Ulysse."
+     ],
+     "source": "Poème écrit pour l’exercice"
+    },
+    {
+     "id": "facons2",
+     "type": "tableau",
+     "titre": "Trois façons de voyager en poésie",
+     "colonnes": [
+      "La façon",
+      "Ce qu’elle dit"
+     ],
+     "lignes": [
+      [
+       "Le voyage rêvé",
+       "Un pays fait du désir du poète"
+      ],
+      [
+       "Le voyage comme fuite",
+       "Fuir l’ennui, la médiocrité, soi-même"
+      ],
+      [
+       "Le retour et le regret",
+       "Le voyageur est un homme qui rentre"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depart",
+     "multiple": true,
+     "reponse": [
+      "np"
+     ],
+     "enonce": "Touche les **trois noms propres exotiques**, qui font rêver par leur seule sonorité.",
+     "aide": "Ce sont des noms de villes lointaines, avec une majuscule.",
+     "explication": "**Samarcande**, **Zanzibar** et **Tombouctou** font rêver par leur seule musique."
+    },
+    {
+     "type": "zone",
+     "document": "depart",
+     "multiple": true,
+     "reponse": [
+      "en"
+     ],
+     "enonce": "Touche les **quatre mots** de l’énumération qui fait défiler les merveilles entrevues.",
+     "aide": "Ils se suivent, séparés par des virgules, au quatrième vers.",
+     "explication": "**Sable, soie, épices, étoiles** : l’énumération fait défiler les merveilles."
+    },
+    {
+     "type": "zone",
+     "document": "depart",
+     "multiple": true,
+     "reponse": [
+      "co"
+     ],
+     "enonce": "Touche la comparaison qui transforme les noms en musique.",
+     "aide": "Cherche le mot « comme » au troisième vers.",
+     "explication": "**comme des cloches lointaines** compare les noms à des sons qui font rêver."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Énumération",
+       "Les merveilles entrevues défilent"
+      ],
+      [
+       "Noms propres exotiques",
+       "Ils font rêver par leur sonorité"
+      ],
+      [
+       "Apostrophe",
+       "Le poète s’adresse à quelqu’un ou à quelque chose"
+      ],
+      [
+       "Refrain",
+       "Il imite le bercement du départ"
+      ]
+     ],
+     "enonce": "Relie chaque procédé à son effet.",
+     "aide": "Pense à ce que le lecteur éprouve en lisant chaque procédé.",
+     "explication": "Chaque procédé a son effet : l’**énumération** fait défiler, les **noms propres** font rêver, l’**apostrophe** interpelle, le **refrain** berce."
+    },
+    {
+     "type": "zone",
+     "document": "facons2",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "La dernière ligne du poème rappelle Ulysse. Touche, dans le tableau, la façon de voyager qu’elle annonce.",
+     "aide": "Ulysse est celui qui rentre chez lui.",
+     "explication": "Le poème se termine par le désir de rentrer, **comme Ulysse** : c’est le thème du **retour**, car depuis l’*Odyssée* le voyageur poétique est un homme qui rentre."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c916708-6b4d-586a-bacf-4aaff6a2264f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Tom embarque sur le Dauphin",
+   "competence": "analyser-texte",
+   "situation": "Le professeur distribue le début d’un roman d’aventures inventé pour la classe. Il faut repérer qui raconte, les épreuves du héros et le moment où le suspense s’installe.",
+   "documents": [
+    {
+     "id": "dauphin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le début d’un roman",
+     "blocs": [
+      "Je m’appelle Tom et j’ai treize ans. Hier, j’ai quitté mon village pour embarquer sur le *Dauphin*, un voilier qui part chercher un trésor.",
+      "Le troisième jour, [[pe|une tempête]] a brisé notre mât. Le capitaine Brook a hurlé : « À l’abri ! »",
+      "Cette nuit-là, [[pe|le cuisinier nous a trahis]] : il a volé la carte au trésor.",
+      "Une semaine plus tard, nous avons échoué sur une île déserte.",
+      "Soudain, une ombre se glisse derrière moi… [[su|Qui est-ce ?]]"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui raconte l’histoire ?",
+     "options": [
+      "Tom lui-même : le narrateur est interne",
+      "Le capitaine Brook, qui observe le héros",
+      "Un narrateur extérieur qui connaît tout",
+      "Le cuisinier, qui s’explique à la fin"
+     ],
+     "reponse": 0,
+     "aide": "Le texte commence par « Je m’appelle Tom ».",
+     "explication": "Tom dit « je » : le **narrateur est interne**, ce qui rapproche le lecteur du héros."
+    },
+    {
+     "type": "zone",
+     "document": "dauphin",
+     "multiple": true,
+     "reponse": [
+      "pe"
+     ],
+     "enonce": "Touche les **deux péripéties** (épreuves ou coups durs) de l’histoire.",
+     "aide": "Cherche un phénomène de la nature et une trahison.",
+     "explication": "Les péripéties sont **une tempête** et **le cuisinier nous a trahis**."
+    },
+    {
+     "type": "zone",
+     "document": "dauphin",
+     "multiple": true,
+     "reponse": [
+      "su"
+     ],
+     "enonce": "Touche la phrase qui entretient le suspense à la fin du passage.",
+     "aide": "Elle pose une question qui reste sans réponse.",
+     "explication": "**Qui est-ce ?** : la fin du chapitre laisse une question en suspens, ce qui donne envie de lire la suite."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Tom embarque",
+      "La tempête brise le mât",
+      "Le cuisinier vole la carte",
+      "Le bateau échoue sur une île"
+     ],
+     "enonce": "Range ces événements dans l’ordre du récit.",
+     "aide": "Les jours sont comptés dans le texte : « le troisième jour », « cette nuit-là », « une semaine plus tard ».",
+     "explication": "Tom **embarque**, la **tempête** brise le mât, le **cuisinier vole la carte**, puis le bateau **échoue** sur l’île."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c916708-6b4d-586a-bacf-4aaff6a2264f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Vite ou lentement ?",
+   "competence": "analyser-texte",
+   "situation": "Dans un roman d’aventures, l’auteur règle la vitesse du récit comme un conducteur : il accélère dans le danger, il ralentit pour faire voir. Léna observe ce réglage dans un passage inventé.",
+   "documents": [
+    {
+     "id": "vitesses",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le Cormoran",
+     "blocs": [
+      "« Hisse la voile ! cria Brook. — Oui, capitaine ! » répondit Tom en tirant sur la corde de toutes ses forces.",
+      "[[so|Pendant dix jours, il ne se passa rien d’autre que le vent, les vagues et les repas de biscuit.]]",
+      "[[pa|La plage s’étendait, longue et blanche, bordée de palmiers dont les feuilles ne bougeaient pas.]]",
+      "[[el|Trois ans plus tard,]] Tom revint au village, devenu un homme."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vitesses",
+     "multiple": true,
+     "reponse": [
+      "so"
+     ],
+     "enonce": "Touche le passage qui résume **dix jours** en une phrase : c’est un sommaire.",
+     "aide": "Cherche une longue durée racontée très vite.",
+     "explication": "**Pendant dix jours…** : plusieurs jours sont résumés en quelques lignes, c’est un **sommaire**."
+    },
+    {
+     "type": "zone",
+     "document": "vitesses",
+     "multiple": true,
+     "reponse": [
+      "pa"
+     ],
+     "enonce": "Touche le passage où l’action s’arrête pour décrire un paysage : c’est une pause.",
+     "aide": "Plus rien ne se passe : on regarde.",
+     "explication": "La description de la plage suspend l’action : c’est une **pause**."
+    },
+    {
+     "type": "zone",
+     "document": "vitesses",
+     "multiple": true,
+     "reponse": [
+      "el"
+     ],
+     "enonce": "Touche les mots qui annoncent un passage de temps passé sous silence : c’est une ellipse.",
+     "aide": "Cherche une durée de plusieurs années.",
+     "explication": "**Trois ans plus tard** : tout ce qui s’est passé pendant ce temps est **passé sous silence**, c’est une **ellipse**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Scène",
+       "Le récit prend le temps de l’action, dialogue compris"
+      ],
+      [
+       "Sommaire",
+       "Plusieurs jours résumés en quelques lignes"
+      ],
+      [
+       "Ellipse",
+       "Un passage de temps passé sous silence"
+      ],
+      [
+       "Pause",
+       "Une description qui suspend l’action"
+      ]
+     ],
+     "enonce": "Relie chaque vitesse du récit à ce qu’elle fait.",
+     "aide": "Pense au premier paragraphe : un dialogue à voix haute.",
+     "explication": "La **scène** montre l’action en direct, le **sommaire** résume, l’**ellipse** saute, la **pause** décrit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un roman d’aventures alterne-t-il ces vitesses ?",
+     "options": [
+      "Il accélère dans le danger et ralentit pour faire voir",
+      "Il garde toujours la même vitesse du début à la fin",
+      "Il ne fait jamais de description pour aller plus vite",
+      "Il ralentit seulement quand le héros est en danger"
+     ],
+     "reponse": 0,
+     "aide": "Réfléchis aux moments de danger et aux moments de calme.",
+     "explication": "Le roman d’aventures **alterne** les vitesses : il accélère dans le danger et ralentit pour faire voir."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c916708-6b4d-586a-bacf-4aaff6a2264f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La quatrième de couverture de Léo",
+   "competence": "analyser-document",
+   "situation": "La libraire a affiché la quatrième de couverture d’un roman inventé, *L’Île aux Sept Courants*. À côté, une petite affiche présente quelques grands romans d’aventures. Tu dois lire l’une avec l’autre.",
+   "documents": [
+    {
+     "id": "couv",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Île aux Sept Courants",
+     "sousTitre": "Un roman d’aventures",
+     "emoji": "🏝️",
+     "teinte": "bleu",
+     "lignes": [
+      {
+       "texte": "Léo, douze ans, rêve de partir en mer.",
+       "id": "jeune"
+      },
+      {
+       "texte": "Un matin, il embarque en cachette sur le *Cormoran*.",
+       "id": "depart"
+      },
+      {
+       "texte": "Tempête, naufrage, trahison : rien ne lui sera épargné.",
+       "id": "epreuves"
+      },
+      {
+       "texte": "« Je n’oublierai jamais cette nuit-là », raconte-t-il.",
+       "id": "je"
+      },
+      {
+       "texte": "Un an plus tard, il revient au village… et personne ne le reconnaît.",
+       "id": "retour"
+      }
+     ],
+     "pied": "Quatrième de couverture inventée pour l’exercice"
+    },
+    {
+     "id": "rayon",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Rayon aventures",
+     "sousTitre": "Les grands titres",
+     "emoji": "📚",
+     "teinte": "violet",
+     "lignes": [
+      {
+       "texte": "Robinson Crusoé",
+       "valeur": "1719"
+      },
+      {
+       "texte": "L’Île au trésor",
+       "valeur": "1883"
+      },
+      {
+       "texte": "Vingt mille lieues sous les mers",
+       "valeur": "Jules Verne"
+      }
+     ],
+     "pied": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couv",
+     "reponse": [
+      "epreuves"
+     ],
+     "enonce": "Touche la ligne qui annonce les péripéties du roman.",
+     "aide": "Cherche une phrase qui énumère des coups durs.",
+     "explication": "**Tempête, naufrage, trahison** : ce sont les péripéties qui vont éprouver le héros."
+    },
+    {
+     "type": "zone",
+     "document": "couv",
+     "reponse": [
+      "retour"
+     ],
+     "enonce": "Touche la ligne qui montre que le héros est transformé à la fin.",
+     "aide": "Après un an, que se passe-t-il quand il rentre chez lui ?",
+     "explication": "**Personne ne le reconnaît** : Léo est parti enfant et revient changé, comme dans un récit d’apprentissage."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle citation voit-on que le narrateur est interne ?",
+     "options": [
+      "« Je n’oublierai jamais cette nuit-là »",
+      "Léo, douze ans, rêve de partir en mer",
+      "Un matin, il embarque en cachette",
+      "Tempête, naufrage, trahison : rien ne l’arrête"
+     ],
+     "reponse": 0,
+     "aide": "Cherche une phrase où le héros dit « je ».",
+     "explication": "Léo dit **« je »** : c’est lui qui raconte, le narrateur est interne."
+    },
+    {
+     "type": "nombre",
+     "reponse": 164,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent *Robinson Crusoé* de *L’Île au trésor* ?",
+     "aide": "Utilise l’affiche du rayon aventures.",
+     "explication": "De 1719 à 1883, il y a 1883 − 1719 = **164 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que ce roman est un récit d’apprentissage ?",
+     "options": [
+      "Le héros part enfant et revient adulte, construit par les épreuves",
+      "Le héros apprend des leçons dans un manuel scolaire",
+      "Le héros reste le même du début à la fin du roman",
+      "Le héros raconte surtout ce qu’il a lu dans des livres"
+     ],
+     "reponse": 0,
+     "aide": "Compare Léo au début (douze ans, il rêve) et à la fin (personne ne le reconnaît).",
+     "explication": "Léo part enfant et revient **transformé** : l’île et la mer sont les épreuves qui le **construisent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fde4fddf-3208-557a-829e-0de6fa170325",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Horace confie ses secrets à Arnolphe",
+   "competence": "analyser-texte",
+   "situation": "La troupe du collège joue une scène écrite dans l’esprit de *L’École des femmes*, de Molière. Horace raconte son bonheur à un homme qui, sans qu’il le sache, est son rival. Le public rit : à toi de comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une place de la ville",
+     "blocs": [
+      {
+       "didascalie": "Horace raconte sa journée à Arnolphe, qui l’écoute avec un sourire [[fo|forcé]]."
+      },
+      {
+       "personnage": "Horace",
+       "replique": "Monsieur, je suis fou d’amour pour une jeune fille ! Son tuteur la tient enfermée, mais j’ai trouvé le moyen de lui parler."
+      },
+      {
+       "personnage": "Arnolphe (à part)",
+       "replique": "[[su|Quel supplice]] ! Cet imbécile ne sait pas qui je suis…"
+      },
+      {
+       "personnage": "Horace",
+       "replique": "Elle m’a souri ce matin ! Je suis le plus heureux des hommes."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, dans l’esprit de Molière"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette scène fait-elle rire le public ?",
+     "options": [
+      "Horace confie ses progrès à son rival sans le savoir",
+      "Arnolphe tombe de sa chaise devant tout le monde",
+      "Horace se déguise en vieillard pour tromper son tuteur",
+      "Arnolphe raconte une histoire drôle à tout le village"
+     ],
+     "reponse": 0,
+     "aide": "Qui est le tuteur dont parle Horace ? Et qui l’écoute ?",
+     "explication": "Le public sait qu’Arnolphe est le tuteur, mais Horace l’ignore : c’est le **comique de situation**."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "su"
+     ],
+     "enonce": "Touche les mots qui montrent qu’Arnolphe souffre en secret.",
+     "aide": "Cherche la réplique dite « à part », que seul le public entend.",
+     "explication": "**Quel supplice** : Arnolphe cache sa souffrance à Horace, mais le public l’entend."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "fo"
+     ],
+     "enonce": "Touche le mot de la didascalie qui montre que le sourire d’Arnolphe n’est pas sincère.",
+     "aide": "Cherche un adjectif accolé à « sourire ».",
+     "explication": "Le sourire est **forcé** : Arnolphe cache sa jalousie."
+    }
+   ]
+  },
+  {
+   "chapitre": "fde4fddf-3208-557a-829e-0de6fa170325",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le théâtre se défend par le théâtre",
+   "competence": "analyser-document",
+   "situation": "En 1662, *L’École des femmes* fait scandale. Un journal imaginaire de la classe résume l’histoire de la pièce, puis explique la réponse de Molière à ses accusateurs.",
+   "documents": [
+    {
+     "id": "intrigue",
+     "type": "chaine",
+     "titre": "L’intrigue de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "ignorance",
+       "texte": "Arnolphe élève Agnès dans l’ignorance"
+      },
+      {
+       "id": "epouser",
+       "texte": "Il l’aime et compte l’épouser"
+      },
+      {
+       "id": "horace",
+       "texte": "Agnès rencontre le jeune Horace"
+      },
+      {
+       "id": "ironie",
+       "texte": "Horace raconte tout à son rival sans le savoir"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ignorance",
+       "a": "epouser",
+       "texte": "puis"
+      },
+      {
+       "de": "epouser",
+       "a": "horace",
+       "texte": "mais"
+      },
+      {
+       "de": "horace",
+       "a": "ironie",
+       "texte": "et"
+      }
+     ]
+    },
+    {
+     "id": "querelle",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une querelle célèbre",
+     "blocs": [
+      "Après la première, certains spectateurs accusent Molière d’[[im|immoralité]].",
+      "Il ne publie pas de lettre de défense : il répond par deux pièces, [[ti|La Critique de l’École des femmes]] et [[ti|L’Impromptu de Versailles]]."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "intrigue",
+     "reponse": [
+      "ironie"
+     ],
+     "enonce": "Touche l’étape qui crée l’ironie qui structure la pièce.",
+     "aide": "Cherche l’étape où quelqu’un parle sans savoir à qui.",
+     "explication": "C’est l’étape où **Horace raconte ses progrès à Arnolphe**, sans savoir qu’il parle à son rival."
+    },
+    {
+     "type": "zone",
+     "document": "querelle",
+     "multiple": true,
+     "reponse": [
+      "ti"
+     ],
+     "enonce": "Touche les **deux titres** des pièces par lesquelles Molière répond à ses accusateurs.",
+     "aide": "Les titres sont écrits en entier, après « deux pièces ».",
+     "explication": "Molière répond par **La Critique de l’École des femmes** et **L’Impromptu de Versailles**."
+    },
+    {
+     "type": "zone",
+     "document": "querelle",
+     "multiple": true,
+     "reponse": [
+      "im"
+     ],
+     "enonce": "Touche le reproche fait à Molière après la première.",
+     "aide": "C’est un nom abstrait : on lui reproche de manquer de morale.",
+     "explication": "On reproche à Molière son **immoralité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Arnolphe n’est-il pas un simple personnage de farce ?",
+     "options": [
+      "Parce qu’il aime réellement Agnès",
+      "Parce qu’il gagne à la fin de la pièce",
+      "Parce qu’il ne dit jamais rien de drôle",
+      "Parce qu’il est un jeune premier"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’étape 2 de l’intrigue.",
+     "explication": "Arnolphe **aime réellement** Agnès : il échoue et reste seul, ce qui dépasse la simple farce."
+    }
+   ]
+  },
+  {
+   "chapitre": "fde4fddf-3208-557a-829e-0de6fa170325",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Agnès a appris à penser",
+   "competence": "analyser-texte",
+   "situation": "Dans cette scène inventée, Agnès répond à son tuteur avec une vivacité qui le surprend. Un tableau rappelle les trois grandes questions que la pièce met en jeu.",
+   "documents": [
+    {
+     "id": "agnes",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans le jardin d’Arnolphe",
+     "blocs": [
+      {
+       "personnage": "Arnolphe",
+       "replique": "Je vous ai élevée dans l’ignorance pour votre bien. Une femme n’a pas besoin d’en savoir plus."
+      },
+      {
+       "personnage": "Agnès",
+       "replique": "Pourtant, Monsieur, hier j’ai [[co|compris toute seule]] ce que vous me cachiez."
+      },
+      {
+       "personnage": "Arnolphe",
+       "replique": "Qui vous a appris à parler ainsi ?"
+      },
+      {
+       "personnage": "Agnès",
+       "replique": "L’amour, Monsieur. Il m’a rendue plus savante que tous vos livres."
+      },
+      {
+       "personnage": "Arnolphe (seul)",
+       "replique": "Mon plan s’effondre : [[ai|j’aime Agnès]] et je la perds."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, dans l’esprit de Molière"
+    },
+    {
+     "id": "enjeux",
+     "type": "tableau",
+     "titre": "Ce que la pièce met en jeu",
+     "colonnes": [
+      "La question",
+      "Ce qu’elle pose"
+     ],
+     "lignes": [
+      [
+       "L’éducation des filles",
+       "Faut-il les instruire, ou les tenir dans l’ignorance ?"
+      ],
+      [
+       "Le mariage forcé",
+       "L’autorité des tuteurs"
+      ],
+      [
+       "La liberté",
+       "Choisir sa vie"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enjeux",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "La première réplique d’Arnolphe parle d’instruire ou non une femme. Touche la question du tableau qu’elle illustre.",
+     "aide": "Il décide ce qu’Agnès a le droit de savoir.",
+     "explication": "La réplique d’Arnolphe porte sur **l’éducation des filles** : faut-il les instruire ou les tenir dans l’ignorance ?"
+    },
+    {
+     "type": "zone",
+     "document": "agnes",
+     "multiple": true,
+     "reponse": [
+      "co"
+     ],
+     "enonce": "Touche les mots qui montrent qu’Agnès a appris à raisonner toute seule.",
+     "aide": "Cherche ce qu’elle dit avoir fait « hier ».",
+     "explication": "**compris toute seule** montre qu’Agnès pense par elle-même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’évolution d’Agnès sur l’éducation ?",
+     "options": [
+      "C’est l’ignorance, et non la nature, qui l’enfermait",
+      "Les filles n’ont aucun besoin d’apprendre à lire",
+      "Seuls les livres suffisent à rendre intelligent",
+      "Un tuteur sait toujours mieux que sa pupille ce qui est bon"
+     ],
+     "reponse": 0,
+     "aide": "Agnès dit qu’elle est devenue plus savante : grâce à quoi ?",
+     "explication": "Agnès devient intelligente en devenant amoureuse : c’est **l’ignorance** qui la tenait enfermée, pas sa nature."
+    },
+    {
+     "type": "zone",
+     "document": "agnes",
+     "multiple": true,
+     "reponse": [
+      "ai"
+     ],
+     "enonce": "Touche les mots qui montrent qu’Arnolphe n’est pas seulement ridicule : il souffre vraiment.",
+     "aide": "Cherche ce qu’il avoue à la dernière réplique.",
+     "explication": "**j’aime Agnès** : Arnolphe aime réellement, et c’est ce qui rend la pièce plus profonde qu’une farce."
+    }
+   ]
+  },
+  {
+   "chapitre": "6599efec-fefb-5c60-86a9-b028fa4f86ed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un été au bout du chemin",
+   "competence": "analyser-texte",
+   "situation": "Une romancière imaginaire raconte un été de son enfance. Dans ce court extrait, on entend deux voix : l’adulte qui écrit aujourd’hui et la petite fille qui ne savait pas encore.",
+   "documents": [
+    {
+     "id": "ete",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Extrait de souvenirs",
+     "blocs": [
+      "Quand j’avais huit ans, nous [[im|habitions]] une maison au bout d’un chemin de terre. Chaque été, mon grand-père [[im|réparait]] ses filets dans la cour.",
+      "[[se|L’odeur de goudron]] et [[se|le cri des mouettes]] me reviennent encore, intacts.",
+      "Ce jour-là, [[pa|je ne savais pas encore]] que c’était notre dernier été."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ete",
+     "multiple": true,
+     "reponse": [
+      "se"
+     ],
+     "enonce": "Touche les **deux sensations** (une odeur, un son) qui font revenir le souvenir.",
+     "aide": "Un souvenir revient plus sûrement par les sens que par les faits.",
+     "explication": "**L’odeur de goudron** et **le cri des mouettes** sont des sensations qui ravivent le souvenir."
+    },
+    {
+     "type": "zone",
+     "document": "ete",
+     "multiple": true,
+     "reponse": [
+      "im"
+     ],
+     "enonce": "Touche les **deux verbes à l’imparfait** qui décrivent le décor et les habitudes.",
+     "aide": "Ils disent ce qui se passait chaque été.",
+     "explication": "**habitions** et **réparait** sont à l’imparfait : ce temps sert au décor et aux habitudes."
+    },
+    {
+     "type": "zone",
+     "document": "ete",
+     "multiple": true,
+     "reponse": [
+      "pa"
+     ],
+     "enonce": "Touche les mots par lesquels l’adulte annonce ce qu’il sait déjà.",
+     "aide": "C’est une anticipation : la voix de l’adulte sait la suite.",
+     "explication": "**je ne savais pas encore** est une anticipation : l’adulte qui écrit sait ce que l’enfant ignorait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui annonce que c’était « notre dernier été » ?",
+     "options": [
+      "L’adulte qui écrit (le je narrant)",
+      "L’enfant de huit ans (le je narré)",
+      "Le grand-père, qui le dit à voix haute",
+      "Un narrateur extérieur à l’histoire"
+     ],
+     "reponse": 0,
+     "aide": "L’enfant ne savait pas : qui le sait donc ?",
+     "explication": "C’est le **je narrant**, l’adulte qui écrit et qui sait ce qui va arriver."
+    }
+   ]
+  },
+  {
+   "chapitre": "6599efec-fefb-5c60-86a9-b028fa4f86ed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Autobiographie, roman ou autofiction ?",
+   "competence": "analyser-document",
+   "situation": "Trois élèves du club d’écriture présentent chacun leur projet de livre sur l’enfance. Elles échangent avec Tom. Le tableau de la bibliothèque rappelle quelques grands textes du genre.",
+   "documents": [
+    {
+     "id": "oeuvres",
+     "type": "tableau",
+     "titre": "Quelques récits d’enfance",
+     "colonnes": [
+      "Auteur",
+      "Œuvre",
+      "À retenir"
+     ],
+     "lignes": [
+      [
+       "Rousseau",
+       "Les Confessions (1782)",
+       "Inaugure le genre moderne"
+      ],
+      [
+       "Marcel Pagnol",
+       "La Gloire de mon père",
+       "Souvenirs d’enfance"
+      ],
+      [
+       "Hervé Bazin",
+       "Vipère au poing",
+       "La famille est un lieu de guerre"
+      ],
+      [
+       "Nathalie Sarraute",
+       "Enfance",
+       "Souvenirs d’enfance"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    },
+    {
+     "id": "club",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Au club d’écriture",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "🧒",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Mon livre promet de raconter la [[ve|vérité]], rien que la vérité."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Le mien s’inspire de ma vie mais j’invente des scènes : j’assume la fiction."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Moi, je mélange volontairement les deux."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oeuvres",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Dans le tableau, touche le titre de l’œuvre où la famille est un lieu de guerre.",
+     "aide": "Regarde la dernière colonne.",
+     "explication": "**Vipère au poing**, de Hervé Bazin, montre une famille qui est un lieu de guerre."
+    },
+    {
+     "type": "zone",
+     "document": "club",
+     "multiple": true,
+     "reponse": [
+      "ve"
+     ],
+     "enonce": "Touche le mot de Léa qui montre qu’elle signe un pacte autobiographique.",
+     "aide": "Elle promet de dire ce qui s’est vraiment passé.",
+     "explication": "Léa promet la **vérité** : c’est la promesse de l’autobiographie."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Léa",
+       "Autobiographie"
+      ],
+      [
+       "Tom",
+       "Roman autobiographique"
+      ],
+      [
+       "Inès",
+       "Autofiction"
+      ]
+     ],
+     "enonce": "Relie chaque élève au genre de son livre.",
+     "aide": "Qui promet la vérité ? Qui assume la fiction ? Qui mêle les deux volontairement ?",
+     "explication": "Léa promet la vérité (**autobiographie**), Tom s’inspire de sa vie mais assume la fiction (**roman autobiographique**), Inès mêle les deux volontairement (**autofiction**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi tout récit d’enfance est-il en partie une invention ?",
+     "options": [
+      "Parce que la mémoire reconstruit au lieu d’enregistrer",
+      "Parce que les auteurs mentent pour se faire aimer",
+      "Parce que les enfants inventent tout ce qu’ils vivent",
+      "Parce que les éditeurs réécrivent les souvenirs"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la façon dont on se souvient d’une journée d’il y a dix ans.",
+     "explication": "La mémoire **reconstruit** : l’invention vient de sa nature, pas d’un mensonge."
+    }
+   ]
+  },
+  {
+   "chapitre": "6599efec-fefb-5c60-86a9-b028fa4f86ed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ma tante Odile",
+   "competence": "analyser-texte",
+   "situation": "Un adulte se souvient de sa tante, vue avec ses yeux d’enfant. Un petit tableau rappelle les temps du passé. Ton travail : distinguer les deux voix et sentir ce que leur écart produit.",
+   "documents": [
+    {
+     "id": "odile",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Souvenir d’un dimanche",
+     "blocs": [
+      "Ma tante Odile me paraissait immense, avec [[ag|ses mains de géante]] et [[ag|une voix de tonnerre]]. Chaque dimanche, elle m’embrassait si fort que j’en perdais le souffle.",
+      "Un jour, en épluchant des oignons, elle [[ps|éclata]] en sanglots. Je pensais que c’était à cause des oignons.",
+      "Aujourd’hui, je sais que son mari venait de mourir."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Les temps du passé",
+     "colonnes": [
+      "Temps",
+      "Emploi"
+     ],
+     "lignes": [
+      [
+       "Imparfait",
+       "Le décor et les habitudes"
+      ],
+      [
+       "Passé simple",
+       "Un événement précis"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "odile",
+     "multiple": true,
+     "reponse": [
+      "ag"
+     ],
+     "enonce": "Les adultes sont « vus d’en bas » et agrandis. Touche les **deux expressions** qui agrandissent la tante.",
+     "aide": "Cherche ce qui la fait ressembler à une géante ou à un orage.",
+     "explication": "**ses mains de géante** et **une voix de tonnerre** agrandissent la tante par le regard de l’enfant."
+    },
+    {
+     "type": "zone",
+     "document": "odile",
+     "multiple": true,
+     "reponse": [
+      "ps"
+     ],
+     "enonce": "Touche le verbe au passé simple qui marque l’événement du souvenir.",
+     "aide": "D’après le tableau, ce temps sert à un événement précis.",
+     "explication": "**éclata** est au passé simple : il marque l’événement (les sanglots), alors que les autres verbes décrivent l’habitude."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Je narré (l’enfant)",
+      "Je narrant (l’adulte)"
+     ],
+     "items": [
+      [
+       "Elle me paraissait immense",
+       0
+      ],
+      [
+       "Je pensais que c’était à cause des oignons",
+       0
+      ],
+      [
+       "Aujourd’hui, je sais que son mari venait de mourir",
+       1
+      ],
+      [
+       "Je comprends maintenant son chagrin",
+       1
+      ]
+     ],
+     "enonce": "Classe ces phrases selon la voix qui parle.",
+     "aide": "L’enfant ne sait pas ; l’adulte sait et commente.",
+     "explication": "Le **je narré** voit comme l’enfant ; le **je narrant** comprend après coup."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que produit l’écart entre l’enfant qui ne savait pas et l’adulte qui sait ?",
+     "options": [
+      "De la tendresse ou du regret",
+      "Une démonstration mathématique",
+      "Un portrait neutre et sans émotion",
+      "Une description scientifique"
+     ],
+     "reponse": 0,
+     "aide": "L’adulte regarde l’enfant qu’il était, en sachant pourquoi la tante pleurait.",
+     "explication": "L’écart entre les deux voix crée de la **tendresse**, de l’ironie ou du regret."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a7a28dd-117c-5eac-9606-4dc594d578b4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Alix et la baguette d’argent",
+   "competence": "analyser-texte",
+   "situation": "Pour le concours de contes de la bibliothèque, Alix lit un conte inventé. Avant de voter, le jury repère les marques qui font de ce texte un conte merveilleux.",
+   "documents": [
+    {
+     "id": "alix",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La baguette d’argent",
+     "blocs": [
+      "[[fo|Il était une fois]] une jeune fille nommée Alix, qui vivait avec sa [[pt|marâtre]].",
+      "Un soir, une [[pt|fée]] lui offrit une [[om|baguette]] d’argent et lui dit : « Tu devras passer [[ns|trois]] épreuves. »",
+      "Alix ne s’étonna pas du tout : dans ce pays, tout le monde croisait des êtres magiques."
+     ],
+     "source": "Conte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alix",
+     "multiple": true,
+     "reponse": [
+      "fo"
+     ],
+     "enonce": "Touche la formule d’ouverture qui place l’histoire dans un temps indéterminé.",
+     "aide": "C’est la formule qui commence presque tous les contes.",
+     "explication": "**Il était une fois** est la formule d’ouverture du conte."
+    },
+    {
+     "type": "zone",
+     "document": "alix",
+     "multiple": true,
+     "reponse": [
+      "pt"
+     ],
+     "enonce": "Touche les **deux personnages types** des contes.",
+     "aide": "Cherche une belle-mère cruelle et une aide magique.",
+     "explication": "La **marâtre** et la **fée** sont des personnages types du conte."
+    },
+    {
+     "type": "zone",
+     "document": "alix",
+     "multiple": true,
+     "reponse": [
+      "om"
+     ],
+     "enonce": "Touche l’objet magique du récit.",
+     "aide": "Les fées en donnent souvent un.",
+     "explication": "La **baguette** est un objet magique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce conte est-il un conte merveilleux et non un récit fantastique ?",
+     "options": [
+      "Le surnaturel y est admis sans étonner personne",
+      "Il raconte un doute sur ce qui est réel",
+      "Il se passe dans une ville moderne",
+      "Il se termine toujours mal"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase : Alix est-elle surprise ?",
+     "explication": "Dans le merveilleux, le surnaturel est **admis d’emblée** : Alix ne s’étonne pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a7a28dd-117c-5eac-9606-4dc594d578b4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le dragon qui but le lac",
+   "competence": "analyser-texte",
+   "situation": "Léa raconte à la classe un conte de sa fabrication. Le professeur lui demande de retrouver les cinq étapes du schéma narratif et les rôles du schéma actanciel.",
+   "documents": [
+    {
+     "id": "lac",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le dragon qui but le lac",
+     "blocs": [
+      "Au royaume de Valmer, tout le monde vivait heureux au bord du lac.",
+      "Un matin, [[ep|un dragon but toute l’eau du lac]]. Le roi, désespéré, envoya le jeune Noé chercher l’eau perdue.",
+      "Noé traversa une forêt de ronces, puis une montagne de glace. Une [[ad|cigogne]] devint son amie et lui montra le chemin.",
+      "[[re|Noé endormit le dragon avec une chanson]] et le lac se remplit de nouveau.",
+      "Depuis ce jour, le royaume vit en paix."
+     ],
+     "source": "Conte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "items": [
+      "Situation initiale",
+      "Élément perturbateur",
+      "Péripéties",
+      "Élément de résolution",
+      "Situation finale"
+     ],
+     "enonce": "Range les cinq étapes du schéma narratif dans l’ordre.",
+     "aide": "L’équilibre vient d’abord, puis il est rompu, puis le héros lutte.",
+     "explication": "Dans l’ordre : **situation initiale**, **élément perturbateur**, **péripéties**, **élément de résolution**, **situation finale**."
+    },
+    {
+     "type": "zone",
+     "document": "lac",
+     "multiple": true,
+     "reponse": [
+      "ep"
+     ],
+     "enonce": "Touche l’élément perturbateur : ce qui rompt l’équilibre du début.",
+     "aide": "Que se passe-t-il « un matin » ?",
+     "explication": "**un dragon but toute l’eau du lac** : le bonheur du royaume est rompu."
+    },
+    {
+     "type": "zone",
+     "document": "lac",
+     "multiple": true,
+     "reponse": [
+      "re"
+     ],
+     "enonce": "Touche l’élément de résolution : ce qui dénoue l’histoire.",
+     "aide": "Cherche ce que fait Noé pour arrêter le dragon.",
+     "explication": "**Noé endormit le dragon avec une chanson** : c’est ce qui dénoue l’histoire."
+    },
+    {
+     "type": "zone",
+     "document": "lac",
+     "multiple": true,
+     "reponse": [
+      "ad"
+     ],
+     "enonce": "Dans le schéma actanciel, touche l’adjuvant : celui qui aide le héros.",
+     "aide": "C’est un animal qui montre le chemin.",
+     "explication": "La **cigogne** aide Noé : c’est l’adjuvant."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Noé",
+       "Sujet"
+      ],
+      [
+       "Le roi",
+       "Destinateur"
+      ],
+      [
+       "La cigogne",
+       "Adjuvant"
+      ],
+      [
+       "Le dragon",
+       "Opposant"
+      ]
+     ],
+     "enonce": "Relie chaque personnage à son rôle dans le schéma actanciel.",
+     "aide": "Le sujet poursuit un objet ; le destinateur envoie ; l’adjuvant aide ; l’opposant gêne.",
+     "explication": "Noé est le **sujet** (il part en quête), le roi est le **destinateur** (il l’envoie), la cigogne est l’**adjuvant**, le dragon est l’**opposant**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3a7a28dd-117c-5eac-9606-4dc594d578b4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une voix dans le couloir",
+   "competence": "comprendre-langue",
+   "situation": "Pour le défi « deux genres, un seul surnaturel », Mina et un narrateur de ton âge vivent chacun une histoire étrange. Il faut déterminer lequel est un merveilleux et lequel un fantastique.",
+   "documents": [
+    {
+     "id": "texteA",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Texte A : la reine des abeilles",
+     "blocs": [
+      "La reine des abeilles salua Mina : « Bonjour, petite. Où vas-tu ? » Mina [[ad|ne s’étonna pas]] et lui offrit du miel."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "texteB",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Texte B : le couloir",
+     "blocs": [
+      "Ce soir-là, dans le couloir de l’immeuble, la porte de l’ascenseur s’ouvrit sans personne. Une voix murmura mon prénom. [[dt|Je crus rêver]], ou avoir confondu avec la télévision… [[dt|Je n’étais plus sûr de rien]]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Le texte A est :",
+     "options": [
+      "Un conte merveilleux",
+      "Un récit fantastique",
+      "Un récit de voyage",
+      "Une autobiographie"
+     ],
+     "reponse": 0,
+     "aide": "Mina est-elle surprise qu’une reine des abeilles parle ?",
+     "explication": "Le surnaturel est admis d’emblée : c’est du **merveilleux**."
+    },
+    {
+     "type": "zone",
+     "document": "texteA",
+     "multiple": true,
+     "reponse": [
+      "ad"
+     ],
+     "enonce": "Touche les mots qui montrent que le surnaturel est accepté sans surprise.",
+     "aide": "Cherche la réaction de Mina.",
+     "explication": "**ne s’étonna pas** : le surnaturel est admis, c’est la marque du merveilleux."
+    },
+    {
+     "type": "zone",
+     "document": "texteB",
+     "multiple": true,
+     "reponse": [
+      "dt"
+     ],
+     "enonce": "Touche les **deux expressions** qui montrent le doute du narrateur.",
+     "aide": "Il hésite entre le rêve et la réalité.",
+     "explication": "**Je crus rêver** et **Je n’étais plus sûr de rien** disent le doute : c’est la marque du fantastique."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Merveilleux",
+      "Fantastique"
+     ],
+     "items": [
+      [
+       "La reine des abeilles parle à Mina (texte A)",
+       0
+      ],
+      [
+       "Une voix inexplicable murmure un prénom dans le couloir (texte B)",
+       1
+      ],
+      [
+       "Mina offre du miel sans être surprise",
+       0
+      ],
+      [
+       "Le narrateur hésite entre rêve et réalité",
+       1
+      ]
+     ],
+     "enonce": "Classe ces phrases selon le genre.",
+     "aide": "Demande-toi : le héros doute-t-il ou accepte-t-il ?",
+     "explication": "Dans le **merveilleux**, le surnaturel est accepté ; dans le **fantastique**, il surgit dans un monde réaliste et provoque le **doute**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c841f7b9-62c1-579c-9266-06e8246818e5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’île que nulle carte ne montre",
+   "competence": "analyser-texte",
+   "situation": "Un navigateur imaginaire aborde une île étrange et note ce qu’il y voit. Dans la classe, on repère les marques d’une utopie.",
+   "documents": [
+    {
+     "id": "ile",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Récit d’un voyageur",
+     "blocs": [
+      "Le navigateur Hugo aborda une [[li|île]] perdue au milieu de l’océan, [[ac|que nulle carte ne montrait]].",
+      "Ici, [[tr|personne n’est plus riche qu’un autre]] et tout le monde [[tr|travaille six heures par jour]]. [[tr|Les enfants vont tous à l’école]], et [[tr|les lois tiennent sur une seule page]]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ile",
+     "multiple": true,
+     "reponse": [
+      "li"
+     ],
+     "enonce": "Touche le mot qui désigne le lieu isolé où se passe l’utopie.",
+     "aide": "C’est un lieu entouré d’eau.",
+     "explication": "Une **île** est un lieu isolé : le cadre habituel d’une utopie."
+    },
+    {
+     "type": "zone",
+     "document": "ile",
+     "multiple": true,
+     "reponse": [
+      "tr"
+     ],
+     "enonce": "Touche les **quatre traits** de cette société : égalité, travail partagé, éducation, lois simples.",
+     "aide": "Cherche ce qui concerne la richesse, le temps de travail, l’école et les lois.",
+     "explication": "Ce sont **l’égalité**, le **travail partagé et limité**, l’**éducation pour tous** et les **lois simples**."
+    },
+    {
+     "type": "zone",
+     "document": "ile",
+     "multiple": true,
+     "reponse": [
+      "ac"
+     ],
+     "enonce": "Touche les mots qui disent que cette île n’existe sur aucune carte.",
+     "aide": "La première phrase le dit.",
+     "explication": "**que nulle carte ne montrait** : l’île n’existe nulle part, c’est le sens du mot « utopie »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le mot « utopie », inventé par Thomas More ?",
+     "options": [
+      "« En aucun lieu »",
+      "« Pays du bonheur »",
+      "« Île du trésor »",
+      "« Voyage lointain »"
+     ],
+     "reponse": 0,
+     "aide": "Le mot vient du grec *ou-topos*.",
+     "explication": "**Utopie** vient du grec *ou-topos* : « en aucun lieu »."
+    }
+   ]
+  },
+  {
+   "chapitre": "c841f7b9-62c1-579c-9266-06e8246818e5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ici, pas là-bas",
+   "competence": "argumenter",
+   "situation": "Thomas More a imaginé une île parfaite pour critiquer son propre pays. Un tableau et une courte fiche sur Thélème t’aident à comprendre cette critique indirecte.",
+   "documents": [
+    {
+     "id": "more",
+     "type": "tableau",
+     "titre": "L’île de More et son pays",
+     "colonnes": [
+      "Thème",
+      "Dans l’île d’*Utopie*",
+      "Dans l’Angleterre de More"
+     ],
+     "lignes": [
+      [
+       "Richesse",
+       "Égalité entre les habitants",
+       "Enclosures et misère"
+      ],
+      [
+       "Propriété",
+       "Commune ou fortement encadrée",
+       "Privée, avec des enclosures"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    },
+    {
+     "id": "theleme",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’abbaye de Thélème",
+     "blocs": [
+      "Chez Rabelais, l’abbaye de Thélème n’a qu’une seule règle : « [[rg|Fais ce que voudras]] »."
+     ],
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "more",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche dans le tableau ce que More vise vraiment en décrivant son île sans propriété privée.",
+     "aide": "Il critique son pays par contraste.",
+     "explication": "More vise **l’Angleterre de son temps**, ses **enclosures et sa misère**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que l’argumentation de More est « indirecte » ?",
+     "options": [
+      "Il critique son pays en montrant un monde parfait ailleurs",
+      "Il écrit une lettre directe au roi pour se plaindre",
+      "Il décrit exactement une île qu’il a visitée",
+      "Il ne critique rien et raconte seulement un rêve"
+     ],
+     "reponse": 0,
+     "aide": "Il ne dit pas « mon pays est injuste » : que montre-t-il à la place ?",
+     "explication": "Il montre ce qui **pourrait être** pour faire voir ce qui ne va pas : c’est une argumentation **indirecte**."
+    },
+    {
+     "type": "zone",
+     "document": "theleme",
+     "multiple": true,
+     "reponse": [
+      "rg"
+     ],
+     "enonce": "Touche la règle unique de l’abbaye de Thélème.",
+     "aide": "Elle tient en trois mots, entre guillemets.",
+     "explication": "La règle de Thélème est **Fais ce que voudras**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Lieu isolé",
+       "Une île, une vallée, une planète"
+      ],
+      [
+       "Lois simples",
+       "Peu de crimes, peu de juges"
+      ],
+      [
+       "Éducation",
+       "Offerte à tous les habitants"
+      ],
+      [
+       "Propriété",
+       "Commune ou fortement encadrée"
+      ]
+     ],
+     "enonce": "Relie chaque trait d’utopie à son sens.",
+     "aide": "Pense à ce que chaque trait décrit : le lieu, le droit, l’école, les biens.",
+     "explication": "Chaque trait participe à la société idéale décrite par les utopies."
+    }
+   ]
+  },
+  {
+   "chapitre": "c841f7b9-62c1-579c-9266-06e8246818e5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Bienvenue à Lumeria",
+   "competence": "argumenter",
+   "situation": "Une cité « parfaite », Lumeria, vante son bonheur. Un schéma montre comment l’utopie peut basculer. Ton travail : repérer ce qui ressemble à une utopie… et ce qui la fait basculer.",
+   "documents": [
+    {
+     "id": "lumeria",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Brochure de Lumeria",
+     "blocs": [
+      "Bienvenue à Lumeria, la cité parfaite. Ici, [[ra|toutes les maisons sont identiques]] et [[ra|une cloche règle les horaires]] : on se lève, on travaille et on mange en même temps. Personne n’a faim, personne ne se dispute.",
+      "Mais [[su|des yeux de verre surveillent chaque rue]], et [[ob|ceux qui refusent ce bonheur]] sont priés de « se reposer » dans une maison à part."
+     ],
+     "source": "Brochure imaginée pour l’exercice"
+    },
+    {
+     "id": "basculement",
+     "type": "chaine",
+     "titre": "Du rêve au cauchemar",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "u",
+       "texte": "Une société parfaite"
+      },
+      {
+       "id": "un",
+       "texte": "L’uniformité nécessaire"
+      },
+      {
+       "id": "su",
+       "texte": "La surveillance"
+      },
+      {
+       "id": "dys",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "u",
+       "a": "un",
+       "texte": "suppose"
+      },
+      {
+       "de": "un",
+       "a": "su",
+       "texte": "entraîne"
+      },
+      {
+       "de": "su",
+       "a": "dys",
+       "texte": "mène à"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lumeria",
+     "multiple": true,
+     "reponse": [
+      "ra"
+     ],
+     "enonce": "Touche les **deux traits** qui montrent une organisation rationnelle de la cité.",
+     "aide": "Cherche ce qui est identique et réglé comme une horloge.",
+     "explication": "**toutes les maisons sont identiques** et **une cloche règle les horaires** : villes identiques et horaires réglés sont des traits d’utopie."
+    },
+    {
+     "type": "zone",
+     "document": "lumeria",
+     "multiple": true,
+     "reponse": [
+      "su"
+     ],
+     "enonce": "Touche ce qui fait basculer la cité vers la dystopie.",
+     "aide": "Cherche ce qui contrôle chaque habitant.",
+     "explication": "**des yeux de verre surveillent chaque rue** : la surveillance fait basculer l’utopie vers la dystopie."
+    },
+    {
+     "type": "zone",
+     "document": "lumeria",
+     "multiple": true,
+     "reponse": [
+      "ob"
+     ],
+     "enonce": "Touche les personnes que la cité écarte parce qu’elles ne veulent pas du même bonheur que les autres.",
+     "aide": "Ils refusent le bonheur imposé.",
+     "explication": "**ceux qui refusent ce bonheur** sont écartés : une société parfaite suppose que tout le monde veuille la même chose."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans le schéma ?",
+     "options": [
+      "La dystopie",
+      "La liberté",
+      "Le voyage",
+      "L’égalité parfaite"
+     ],
+     "reponse": 0,
+     "aide": "L’utopie, quand elle devient oppressante, change de nom.",
+     "explication": "L’utopie, par l’uniformité et la surveillance, mène à la **dystopie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle question toute utopie contient-elle ?",
+     "options": [
+      "Qui décide de ce qui est parfait ?",
+      "Où se trouve l’île du trésor ?",
+      "Combien de temps dure le voyage ?",
+      "Qui a inventé le mot « utopie » ?"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ceux qui ne sont pas d’accord avec la cité parfaite.",
+     "explication": "Toute utopie contient sa propre inquiétude : **qui décide de ce qui est parfait**, et que fait-on de ceux qui ne sont pas d’accord ?"
+    }
+   ]
+  }
+ ]
+}

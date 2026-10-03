@@ -1,0 +1,2642 @@
+{
+ "niveau": "4e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "2b7b7129-b680-5559-83f6-c675d1f5476b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le voyage d’un navire de Nantes",
+   "competence": "lire-carte",
+   "situation": "En 1770, un armateur de Nantes envoie un navire sur la route du commerce triangulaire. Sur la carte, trois étapes sont tracées : suis-les une à une.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les trois étapes du navire",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      5,
+      20,
+      55
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "nantes",
+       "lieu": "nantes",
+       "symbole": "point",
+       "nom": "Nantes"
+      },
+      {
+       "id": "dakar",
+       "lieu": "dakar",
+       "symbole": "point",
+       "nom": "Côte du Sénégal"
+      },
+      {
+       "id": "antilles",
+       "lieu": "fort-de-france",
+       "symbole": "point",
+       "nom": "Antilles"
+      }
+     ],
+     "traits": [
+      {
+       "id": "t1",
+       "points": [
+        "nantes",
+        "dakar"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "etiquette": "1"
+      },
+      {
+       "id": "t2",
+       "points": [
+        "dakar",
+        "fort-de-france"
+       ],
+       "style": "fleche",
+       "teinte": "corail",
+       "etiquette": "2"
+      },
+      {
+       "id": "t3",
+       "points": [
+        "fort-de-france",
+        "nantes"
+       ],
+       "style": "fleche",
+       "teinte": "ambre",
+       "etiquette": "3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le trait qui représente la traversée des captifs vers l’Amérique.",
+     "reponse": [
+      "t2"
+     ],
+     "aide": "Cette traversée part d’Afrique et arrive aux Antilles.",
+     "explication": "C’est l’étape **2**, de l’Afrique vers les Antilles : la traversée de l’Atlantique, appelée le « passage du milieu »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape à ce que le navire transporte.",
+     "paires": [
+      [
+       "Étape 1 : Nantes → Afrique",
+       "Des armes, des tissus, de l’alcool"
+      ],
+      [
+       "Étape 2 : Afrique → Antilles",
+       "Des captifs"
+      ],
+      [
+       "Étape 3 : Antilles → Nantes",
+       "Du sucre, du café, du coton"
+      ]
+     ],
+     "aide": "Le navire repart toujours chargé : à l’aller, il apporte des marchandises ; au retour, il ramène les produits des plantations.",
+     "explication": "À l’aller, des marchandises contre des captifs ; au milieu, des **captifs** ; au retour, les **produits des plantations**. Chaque étape rapporte de l’argent à l’armateur."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment appelle-t-on la traversée de l’Atlantique avec les captifs ? Écris les trois mots : « le … du … ».",
+     "reponse": [
+      "passage du milieu",
+      "le passage du milieu",
+      "Passage du Milieu"
+     ],
+     "placeholder": "le … du …",
+     "aide": "Le mot du milieu veut dire que cette étape est la deuxième sur trois.",
+     "explication": "On l’appelle le **passage du milieu** : c’est la deuxième étape, au milieu du triangle."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b7b7129-b680-5559-83f6-c675d1f5476b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le registre du navire et la loi",
+   "competence": "analyser-document",
+   "situation": "Lina, archiviste à Nantes, ouvre le registre imaginaire d’un navire négrier. Elle le compare à un article du Code Noir, la loi royale de 1685.",
+   "documents": [
+    {
+     "id": "registre",
+     "type": "tableau",
+     "titre": "Registre d’un navire (imaginé)",
+     "source": "Chiffres écrits pour l’exercice, d’après la proportion donnée par le cours.",
+     "colonnes": [
+      "Ligne du registre",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "Captifs embarqués en Afrique",
+       300
+      ],
+      [
+       "Captifs morts pendant la traversée (un sur six)",
+       "?"
+      ],
+      [
+       "Marins de l’équipage",
+       40
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le statut de l’esclave",
+     "auteur": "D’après l’article 44 du Code Noir (1685) — texte adapté pour l’exercice",
+     "blocs": [
+      "Les esclaves sont des [[m|meubles]] : ils entrent dans les biens de leur maître comme un objet. Il peut les vendre, les donner et les laisser en héritage à ses enfants."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "code",
+     "enonce": "Touche, dans le texte, le mot qui dit ce qu’est un esclave pour la loi.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cherche le mot qui compare l’esclave à un objet que l’on possède.",
+     "explication": "Le Code Noir classe l’esclave parmi les **meubles** : un bien que l’on possède, que l’on vend et que l’on transmet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans ce registre, un captif sur six meurt pendant la traversée. Combien de morts compte-t-on parmi les 300 captifs embarqués ?",
+     "reponse": 50,
+     "unite": "morts",
+     "aide": "Divise 300 par 6.",
+     "explication": "300 ÷ 6 = **50 morts** : ce sont les conditions de la traversée (entassement, maladies, révoltes réprimées) qui tuent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change le mot « meuble » pour la vie d’un esclave ?",
+     "options": [
+      "Il est traité en droit comme une chose qu’on peut vendre.",
+      "Il devient propriétaire de sa maison aux Antilles.",
+      "Il peut choisir librement son maître.",
+      "Il reçoit un salaire en échange de son travail."
+     ],
+     "reponse": 0,
+     "aide": "Un meuble s’achète, se vend et se lègue.",
+     "explication": "Être un **bien meuble**, c’est être juridiquement une chose : on la possède, on la vend, on la transmet. L’esclave n’a aucun des droits d’une personne."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b7b7129-b680-5559-83f6-c675d1f5476b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un armateur de Nantes face aux Amis des Noirs",
+   "competence": "se-reperer-temps",
+   "situation": "Pierre, élève de 4e, prépare un exposé sur la traite. Il dispose d’une frise des dates clés et d’une lettre imaginée d’un armateur nantais qui réagit à une société nouvelle, fondée en 1788.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la loi à l’abolition définitive",
+     "debut": 1680,
+     "fin": 1860,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "code",
+       "date": 1685,
+       "nom": "Code Noir"
+      },
+      {
+       "id": "amis",
+       "date": 1788,
+       "nom": "Amis des Noirs"
+      },
+      {
+       "id": "abo94",
+       "date": 1794,
+       "nom": "Première abolition"
+      },
+      {
+       "id": "retab",
+       "date": 1802,
+       "nom": "Rétablissement"
+      },
+      {
+       "id": "abo48",
+       "date": 1848,
+       "nom": "Abolition définitive"
+      }
+     ]
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un armateur nantais (1788)",
+     "auteur": "Lettre imaginaire, écrite pour l’exercice",
+     "blocs": [
+      "Nantes, 1788. Monsieur, on me dit qu’une société nouvelle, à Paris, veut en finir avec la traite.",
+      "Or chaque voyage de mon navire me [[r|rapporte]] : mes tissus et mes armes s’échangent contre des captifs, les captifs contre du sucre, le sucre contre de l’argent. Si l’on arrête un seul de ces échanges, ma fortune s’arrête avec lui."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces quatre événements du plus ancien au plus récent.",
+     "items": [
+      "Le Code Noir",
+      "La fondation de la Société des amis des Noirs",
+      "La première abolition de l’esclavage",
+      "Le rétablissement de l’esclavage"
+     ],
+     "aide": "Lis les dates sous chaque point de la frise.",
+     "explication": "Code Noir (**1685**), Amis des Noirs (**1788**), première abolition (**1794**), rétablissement (**1802**) : la route vers l’abolition n’est pas une ligne droite."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise l’événement qui annule l’abolition de 1794.",
+     "reponse": [
+      "retab"
+     ],
+     "aide": "Cherche ce qui arrive après la première abolition et qui remet l’esclavage en place.",
+     "explication": "En **1802**, Bonaparte rétablit l’esclavage dans les colonies : c’est un retour en arrière, huit ans après 1794."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre le rétablissement de l’esclavage et son abolition définitive ?",
+     "reponse": 46,
+     "unite": "ans",
+     "aide": "Soustrais la date du rétablissement à celle de l’abolition définitive.",
+     "explication": "1848 − 1802 = **46 ans**. Entre les deux, des révoltes, des débats et des mobilisations ont fini par l’emporter."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot de la lettre qui montre que l’armateur pense d’abord à l’argent.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche le verbe qui dit ce que chaque voyage fait gagner à l’armateur.",
+     "explication": "L’armateur écrit que chaque voyage lui **rapporte** : pour lui, la traite est avant tout une affaire rentable à chaque étape."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle cette lettre sur les raisons qui font durer la traite ?",
+     "options": [
+      "Chaque étape rapporte, donc les armateurs la défendent.",
+      "Les armateurs ignorent tout de la traite des captifs.",
+      "Le roi interdit déjà tout commerce avec l’Afrique.",
+      "Les ports atlantiques s’appauvrissent grâce à la traite."
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase où l’armateur compte ce que chaque échange lui apporte.",
+     "explication": "La lettre montre la **raison économique** de la persistance de la traite : chaque étape rapporte, et ceux qui en vivent défendent le système. Face à eux, les Amis des Noirs font entendre une autre voix."
+    }
+   ]
+  },
+  {
+   "chapitre": "6255e663-4edf-5792-a61b-5d5e190bdddd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’exposé d’Inès sur quatre grands livres",
+   "competence": "lire-tableau",
+   "situation": "Inès prépare un exposé sur les Lumières. Elle a rangé dans un tableau quatre livres célèbres du XVIIIe siècle avec leur date.",
+   "documents": [
+    {
+     "id": "livres",
+     "type": "tableau",
+     "titre": "Quatre livres des Lumières",
+     "source": "Dates de publication, d’après le cours.",
+     "colonnes": [
+      "Penseur",
+      "Livre",
+      "Année"
+     ],
+     "lignes": [
+      [
+       "Montesquieu",
+       "De l’esprit des lois",
+       "1748"
+      ],
+      [
+       "Diderot et d’Alembert",
+       "L’Encyclopédie (28 volumes)",
+       "1751-1772"
+      ],
+      [
+       "Rousseau",
+       "Du contrat social",
+       "1762"
+      ],
+      [
+       "Voltaire",
+       "Traité sur la tolérance",
+       "1763"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livres",
+     "enonce": "Touche l’année de publication du livre le plus ancien.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Compare les années : la plus petite correspond au livre le plus ancien.",
+     "explication": "Le plus ancien est *De l’esprit des lois* de Montesquieu, paru en **1748**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre la parution de *De l’esprit des lois* (1748) et celle du *Contrat social* ?",
+     "reponse": 14,
+     "unite": "ans",
+     "aide": "Lis l’année du *Contrat social* dans le tableau, puis soustrais 1748.",
+     "explication": "1762 − 1748 = **14 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque penseur à son idée maîtresse.",
+     "paires": [
+      [
+       "Montesquieu",
+       "La séparation des pouvoirs"
+      ],
+      [
+       "Rousseau",
+       "La souveraineté du peuple"
+      ],
+      [
+       "Voltaire",
+       "La tolérance religieuse"
+      ],
+      [
+       "Diderot et d’Alembert",
+       "Réunir tout le savoir"
+      ]
+     ],
+     "aide": "Pense au titre de leur œuvre : *l’esprit des lois*, *le contrat social*, *tolérance*, *Encyclopédie*.",
+     "explication": "Montesquieu sépare les pouvoirs, Rousseau place la souveraineté dans le peuple, Voltaire défend la tolérance, Diderot et d’Alembert rassemblent le savoir dans l’**Encyclopédie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6255e663-4edf-5792-a61b-5d5e190bdddd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois souverains qui réforment sans partager",
+   "competence": "analyser-document",
+   "situation": "À Berlin, à Saint-Pétersbourg et à Vienne, des souverains se disent inspirés par les Lumières. Léa compare leurs capitales sur une carte et lit un édit imaginé.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois capitales de souverains éclairés",
+     "fond": "europe",
+     "cadrage": [
+      -5,
+      40,
+      45,
+      65
+     ],
+     "lieux": [
+      {
+       "id": "berlin",
+       "lieu": "berlin",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "spb",
+       "lieu": "saint-petersbourg",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "vienne",
+       "lieu": "vienne-autriche",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "ambre"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "symbole": "lettre",
+       "texte": "A : Berlin (Prusse), Frédéric II"
+      },
+      {
+       "teinte": "corail",
+       "symbole": "lettre",
+       "texte": "B : Saint-Pétersbourg (Russie), Catherine II"
+      },
+      {
+       "teinte": "ambre",
+       "symbole": "lettre",
+       "texte": "C : Vienne (Autriche), Joseph II"
+      }
+     ]
+    },
+    {
+     "id": "edit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un édit imaginé",
+     "auteur": "Édit imaginaire, écrit pour l’exercice",
+     "blocs": [
+      "Nous voulons que chacun de nos sujets puisse prier selon sa conscience, et que des écoles soient ouvertes dans tous nos villages.",
+      "Mais aucune assemblée ne sera élue : [[p|Nous seul]] décidons des lois de notre royaume."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la lettre qui désigne la capitale de la Russie de Catherine II.",
+     "reponse": [
+      "spb"
+     ],
+     "aide": "Lis la légende : une seule lettre correspond à la Russie.",
+     "explication": "La capitale de Catherine II est **Saint-Pétersbourg**, repérée par la lettre B, au nord-est de la carte."
+    },
+    {
+     "type": "zone",
+     "document": "edit",
+     "enonce": "Touche les mots de l’édit qui montrent que le souverain garde tout le pouvoir.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche qui décide des lois, à la fin du texte.",
+     "explication": "« **Nous seul** décidons des lois » : le souverain réforme, mais ne partage rien. C’est le **despotisme éclairé**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : est-ce une réforme éclairée ou une marque du pouvoir gardé ?",
+     "categories": [
+      "Une réforme au nom des Lumières",
+      "Un pouvoir que le souverain garde"
+     ],
+     "items": [
+      [
+       "La liberté de prier selon sa conscience",
+       0
+      ],
+      [
+       "L’ouverture d’écoles dans les villages",
+       0
+      ],
+      [
+       "Aucune assemblée élue",
+       1
+      ],
+      [
+       "Lui seul décide des lois",
+       1
+      ]
+     ],
+     "aide": "Relis l’édit : les deux premières idées sont données au peuple, les deux dernières sont refusées.",
+     "explication": "Tolérance et écoles sont des **réformes éclairées** ; l’absence d’assemblée et la décision seul sont les marques du **pouvoir gardé**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi appelle-t-on ces souverains des « despotes éclairés » ?",
+     "options": [
+      "Ils réforment mais gardent tout le pouvoir.",
+      "Ils partagent le pouvoir avec une assemblée élue.",
+      "Ils refusent toute réforme par attachement à la tradition.",
+      "Ils sont choisis par le peuple pour le gouverner."
+     ],
+     "reponse": 0,
+     "aide": "« Éclairé » renvoie aux Lumières, « despote » au pouvoir sans partage.",
+     "explication": "Le **despotisme éclairé**, c’est réformer au nom du peuple, jamais avec lui : Frédéric II, Catherine II et Joseph II gardent tout le pouvoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "6255e663-4edf-5792-a61b-5d5e190bdddd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Séparer les pouvoirs : deux royaumes imaginaires",
+   "competence": "analyser-texte",
+   "situation": "Deux phrases célèbres des Lumières servent à juger deux royaumes inventés, Valdor et Arnis. Lequel applique l’idée de Montesquieu ?",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux phrases célèbres",
+     "auteur": "Montesquieu, De l’esprit des lois, livre XI (1748) ; Rousseau, Du contrat social, livre I (1762)",
+     "blocs": [
+      "« Pour qu’on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le pouvoir [[a|arrête]] le pouvoir. »  (Montesquieu)",
+      "« L’homme est né libre, et partout il est dans les fers. »  (Rousseau)"
+     ]
+    },
+    {
+     "id": "royaumes",
+     "type": "tableau",
+     "titre": "Deux royaumes imaginaires",
+     "source": "Tableau écrit pour l’exercice.",
+     "colonnes": [
+      "Pouvoir",
+      "Valdor",
+      "Arnis"
+     ],
+     "lignes": [
+      [
+       "Fait les lois",
+       "Le roi",
+       "Une assemblée élue"
+      ],
+      [
+       "Applique les lois",
+       "Le roi",
+       "Le roi et ses ministres"
+      ],
+      [
+       "Juge",
+       "Le roi",
+       "Des tribunaux indépendants"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "enonce": "Touche, dans la phrase de Montesquieu, le mot qui dit ce que chaque pouvoir doit faire à l’autre.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche le verbe qui complète « le pouvoir … le pouvoir ».",
+     "explication": "Pour Montesquieu, le pouvoir doit **arrêter** le pouvoir : aucun pouvoir ne doit être seul, sinon il abuse."
+    },
+    {
+     "type": "zone",
+     "document": "royaumes",
+     "multiple": true,
+     "enonce": "Touche les trois cases qui montrent qu’à Valdor un seul homme concentre tous les pouvoirs.",
+     "reponse": [
+      "r0c1",
+      "r1c1",
+      "r2c1"
+     ],
+     "aide": "Regarde la colonne de Valdor : qui fait, applique et juge ?",
+     "explication": "À Valdor, **le roi** fait les lois, les applique et juge : exactement ce que Montesquieu veut empêcher."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel royaume applique l’idée de séparation des pouvoirs ?",
+     "options": [
+      "Arnis, où les pouvoirs sont confiés à des mains différentes",
+      "Valdor, où le roi tient tous les pouvoirs sans partage",
+      "Aucun des deux royaumes, car le roi y décide de tout",
+      "Les deux royaumes, car chacun a des lois et un roi"
+     ],
+     "reponse": 0,
+     "aide": "Compare, ligne par ligne, qui détient chaque pouvoir dans chaque royaume.",
+     "explication": "À **Arnis**, l’assemblée fait les lois, le roi et ses ministres les appliquent, des tribunaux jugent : les pouvoirs sont séparés et se limitent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel penseur a écrit « L’homme est né libre, et partout il est dans les fers » ?",
+     "options": [
+      "Rousseau",
+      "Montesquieu",
+      "Voltaire",
+      "Diderot"
+     ],
+     "reponse": 0,
+     "aide": "Cette phrase ouvre le livre qui parle de la souveraineté du peuple.",
+     "explication": "C’est **Rousseau**, au début du *Contrat social* (1762) : l’autorité doit venir de ceux qui obéissent."
+    }
+   ]
+  },
+  {
+   "chapitre": "49b51a1c-152a-5f93-9a94-69520a6b9e39",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui paie l’impôt dans la France de 1788 ?",
+   "competence": "lire-graphique",
+   "situation": "Nous sommes en 1788. Un secrétaire du roi veut savoir comment se répartissent les Français entre les trois ordres. Il lit ce diagramme en secteurs.",
+   "documents": [
+    {
+     "id": "ordres",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les trois ordres de la population",
+     "source": "Ordres de grandeur arrondis, d’après le cours.",
+     "categories": [
+      "Clergé",
+      "Noblesse",
+      "Tiers état"
+     ],
+     "series": [
+      {
+       "nom": "Part de la population (%)",
+       "valeurs": [
+        0.5,
+        1.5,
+        98
+       ],
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ordres",
+     "enonce": "Touche l’ordre qui rassemble presque toute la population.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le plus grand secteur du diagramme.",
+     "explication": "Le **tiers état** représente environ 98 % des Français."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la population forment ensemble le clergé et la noblesse ? Réponds en pourcentage.",
+     "reponse": 2,
+     "unite": "%",
+     "aide": "Additionne les deux petits secteurs : 0,5 et 1,5.",
+     "explication": "0,5 + 1,5 = **2 %** : deux Français sur cent seulement appartiennent aux ordres privilégiés."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ordre à sa situation devant l’impôt.",
+     "paires": [
+      [
+       "Clergé",
+       "Privilégié : exempté de l’essentiel"
+      ],
+      [
+       "Noblesse",
+       "Privilégiée"
+      ],
+      [
+       "Tiers état",
+       "Il paie"
+      ]
+     ],
+     "aide": "Deux ordres sont privilégiés ; l’autre est celui qui paie.",
+     "explication": "Clergé et noblesse sont **privilégiés** ; le tiers état, 98 % de la population, **paie** : c’est l’une des sources de la colère de 1789."
+    }
+   ]
+  },
+  {
+   "chapitre": "49b51a1c-152a-5f93-9a94-69520a6b9e39",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le journal de Marie, été 1789",
+   "competence": "analyser-texte",
+   "situation": "Marie, une jeune Parisienne imaginaire, tient son journal à la fin de l’été 1789. Elle raconte, dans le désordre, les événements qui ont changé le royaume.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Journal de Marie, 26 août 1789",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Aujourd’hui, 26 août, l’Assemblée a publié la Déclaration des droits de l’homme et du citoyen. Papa dit que c’est un grand jour.",
+      "Pourtant, l’hiver dernier, nous avions faim : la récolte avait été mauvaise et le [[p|pain]] était hors de prix.",
+      "Le 14 juillet, des Parisiens ont pris la Bastille, la prison du roi. Plus tôt, le 20 juin, les députés du tiers état avaient juré au Jeu de paume de ne pas se séparer avant d’avoir donné une constitution.",
+      "Et dans la nuit du 4 août, l’Assemblée a aboli les privilèges."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le mot qui explique pourquoi le peuple est en colère avant 1789.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche l’aliment de base devenu trop cher après la mauvaise récolte.",
+     "explication": "Le **pain**, base de l’alimentation, devient hors de prix après les mauvaises récoltes de 1788 : la crise nourrit la colère."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces quatre événements cités par Marie dans l’ordre où ils se sont produits.",
+     "items": [
+      "Le serment du Jeu de paume",
+      "La prise de la Bastille",
+      "L’abolition des privilèges",
+      "La Déclaration des droits de l’homme et du citoyen"
+     ],
+     "aide": "Marie raconte dans le désordre : cherche les dates écrites dans le journal.",
+     "explication": "20 juin → 14 juillet → 4 août → 26 août : en dix semaines, la monarchie change de nature."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours séparent la prise de la Bastille (14 juillet) de la Déclaration des droits (26 août) ?",
+     "reponse": 43,
+     "unite": "jours",
+     "aide": "Il reste 17 jours en juillet après le 14, puis il faut ajouter les 26 jours d’août.",
+     "explication": "17 jours (du 14 au 31 juillet) + 26 jours = **43 jours**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de la nuit du 4 août ?",
+     "options": [
+      "Elle abolit les privilèges des ordres.",
+      "Elle donne le droit de vote aux femmes.",
+      "Elle abolit l’esclavage dans les colonies.",
+      "Elle exécute le roi."
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du journal.",
+     "explication": "Dans la nuit du 4 août, les **privilèges** sont abolis : le clergé et la noblesse perdent leurs exemptions d’impôt."
+    }
+   ]
+  },
+  {
+   "chapitre": "49b51a1c-152a-5f93-9a94-69520a6b9e39",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les articles de 1789 et la réponse d’Olympe de Gouges",
+   "competence": "analyser-document",
+   "situation": "Sofiane lit deux articles de la Déclaration de 1789. Puis il découvre la phrase d’Olympe de Gouges, qui en 1791 écrit une Déclaration pour les femmes.",
+   "documents": [
+    {
+     "id": "declaration",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Déclaration des droits de l’homme et du citoyen (1789)",
+     "auteur": "Assemblée nationale, 26 août 1789, articles 1 et 3",
+     "blocs": [
+      "Article 1. Les [[h|hommes]] naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l’utilité commune.",
+      "Article 3. Le principe de toute souveraineté réside essentiellement dans la [[n|Nation]]. Nul corps, nul individu ne peut exercer d’autorité qui n’en émane expressément."
+     ]
+    },
+    {
+     "id": "gouges",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La réponse d’Olympe de Gouges (1791)",
+     "auteur": "D’après la Déclaration des droits de la femme et de la citoyenne, article 1 — texte adapté",
+     "blocs": [
+      "La femme naît libre et demeure égale à l’homme en droits."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "declaration",
+     "enonce": "Touche le mot de l’article 3 qui dit à qui appartient la souveraineté.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Cherche le mot qui commence par une majuscule et désigne l’ensemble des citoyens.",
+     "explication": "La souveraineté appartient à la **Nation**, et non plus au roi seul."
+    },
+    {
+     "type": "zone",
+     "document": "declaration",
+     "enonce": "Touche le mot de l’article 1 qui explique pourquoi Olympe de Gouges proteste.",
+     "reponse": [
+      "h"
+     ],
+     "aide": "Elle écrit sa propre version pour parler d’autres personnes que celles que le texte nomme.",
+     "explication": "L’article 1 parle des **hommes** : Olympe de Gouges y répond en proclamant que la femme naît aussi libre et égale en droits."
+    },
+    {
+     "type": "choix",
+     "enonce": "La Déclaration de 1789 s’appliquait-elle aux esclaves des colonies ?",
+     "options": [
+      "Non : elle ne les concernait pas, l’abolition vient en 1794.",
+      "Oui : elle les libère immédiatement en 1789.",
+      "Oui, mais seulement dans l’Atlantique.",
+      "Oui : elle donne le vote à tous les hommes libres."
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de la date de la première abolition de l’esclavage.",
+     "explication": "La Déclaration ne concerne **ni les femmes ni les esclaves** des colonies ; la Convention n’abolit l’esclavage qu’en **1794**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans la monarchie constitutionnelle de 1791, qui peut voter avec le suffrage censitaire ?",
+     "categories": [
+      "Peut voter en 1791",
+      "Ne peut pas voter en 1791"
+     ],
+     "items": [
+      [
+       "Un homme qui paie l’impôt exigé",
+       0
+      ],
+      [
+       "Une femme",
+       1
+      ],
+      [
+       "Un homme trop pauvre pour l’impôt exigé",
+       1
+      ],
+      [
+       "Un esclave des colonies",
+       1
+      ]
+     ],
+     "aide": "Seuls les hommes qui paient un certain impôt votent.",
+     "explication": "Le **suffrage censitaire** réserve le vote aux hommes qui paient assez d’impôt : les femmes, les hommes pauvres et les esclaves sont exclus. Le texte était immense et incomplet à la fois."
+    }
+   ]
+  },
+  {
+   "chapitre": "22991364-07ac-5bf7-9059-313215b36cd6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la fuite à Varennes à la chute de Robespierre",
+   "competence": "se-reperer-temps",
+   "situation": "Hugo veut retenir les grandes dates de la Révolution entre 1791 et 1794. Il les a placées sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre ans de Révolution",
+     "debut": 1791,
+     "fin": 1795,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "varennes",
+       "date": 1791.47,
+       "nom": "Fuite à Varennes"
+      },
+      {
+       "id": "republique",
+       "date": 1792.72,
+       "nom": "République proclamée"
+      },
+      {
+       "id": "roi",
+       "date": 1793.06,
+       "nom": "Mort de Louis XVI"
+      },
+      {
+       "id": "esclavage",
+       "date": 1794.09,
+       "nom": "Esclavage aboli"
+      },
+      {
+       "id": "chute",
+       "date": 1794.57,
+       "nom": "Chute de Robespierre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui marque la naissance de la Première République.",
+     "reponse": [
+      "republique"
+     ],
+     "aide": "Cherche l’événement dont le nom parle de la République.",
+     "explication": "La **République** est proclamée le 22 septembre 1792."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la fuite à Varennes (1791) de la chute de Robespierre (1794) ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Soustrais les années, sans te préoccuper des mois.",
+     "explication": "1794 − 1791 = **3 ans** : en trois ans, la France passe d’un roi constitutionnel à une république qui guillotine ses citoyens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il en 1794, d’après la frise, avant la chute de Robespierre ?",
+     "options": [
+      "L’esclavage est aboli.",
+      "Louis XVI est guillotiné.",
+      "La République est proclamée.",
+      "Le roi s’enfuit à Varennes."
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’événement placé juste avant « Chute de Robespierre ».",
+     "explication": "Début **1794**, la Convention abolit l’esclavage ; Robespierre est renversé le 9 thermidor, en juillet."
+    }
+   ]
+  },
+  {
+   "chapitre": "22991364-07ac-5bf7-9059-313215b36cd6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Arrêter sur un soupçon : la loi des suspects",
+   "competence": "analyser-texte",
+   "situation": "À l’automne 1793, la République est attaquée de tous côtés. Hélène, élève de 4e, lit une adaptation de la loi des suspects et un tableau des réponses du pouvoir.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La loi des suspects (17 septembre 1793)",
+     "auteur": "D’après la loi des suspects — texte adapté pour l’exercice",
+     "blocs": [
+      "Sont arrêtés comme suspects ceux qui, par leur [[s|conduite]], leurs [[s|relations]], leurs [[s|propos]] ou leurs [[s|écrits]], se montrent ennemis de la liberté."
+     ]
+    },
+    {
+     "id": "reponses",
+     "type": "tableau",
+     "titre": "Les menaces et les réponses du pouvoir en 1793",
+     "source": "Tableau de synthèse, d’après le cours.",
+     "colonnes": [
+      "Menace",
+      "Mesure prise"
+     ],
+     "lignes": [
+      [
+       "Guerre aux frontières",
+       "La levée en masse"
+      ],
+      [
+       "Ennemis de l’intérieur",
+       "La loi des suspects"
+      ],
+      [
+       "Prix du pain trop élevés",
+       "Le maximum des prix"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "multiple": true,
+     "enonce": "Touche les quatre mots qui permettent de rendre quelqu’un suspect.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "La loi énumère quatre choses sur lesquelles on peut être jugé : conduite, et trois autres.",
+     "explication": "Conduite, relations, propos, écrits : **quatre domaines** très larges, qui permettent d’arrêter sur un simple **soupçon**."
+    },
+    {
+     "type": "zone",
+     "document": "reponses",
+     "enonce": "Touche la mesure qui répond à la hausse du prix du pain.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne qui parle des prix.",
+     "explication": "Pour limiter la hausse des prix, la Convention fixe un **maximum des prix**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette loi est-elle dangereuse pour la liberté ?",
+     "options": [
+      "On peut être arrêté sans preuve, sur un soupçon.",
+      "Elle interdit toute arrestation sans l’avis du roi.",
+      "Elle permet à chacun de choisir librement ses juges.",
+      "Elle réserve les arrestations aux seuls nobles."
+     ],
+     "reponse": 0,
+     "aide": "Regarde la manière dont on devient suspect : par une conduite, des propos…",
+     "explication": "La Terreur est faite au nom de la liberté, mais la loi permet d’arrêter **sans preuve** : c’est le paradoxe de ce moment."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase pour résumer la loi.",
+     "texte": "Avec la loi des ___, on peut être arrêté sur simple ___, sans ___.",
+     "reponses": [
+      [
+       "suspects"
+      ],
+      [
+       "soupçon"
+      ],
+      [
+       "preuve"
+      ]
+     ],
+     "banque": [
+      "suspects",
+      "soupçon",
+      "preuve",
+      "salaire",
+      "récolte"
+     ],
+     "aide": "Reprends les mots clés de ce que tu viens de lire.",
+     "explication": "**Loi des suspects**, **soupçon**, **preuve** : le pouvoir en guerre arrête d’abord, juge ensuite."
+    }
+   ]
+  },
+  {
+   "chapitre": "22991364-07ac-5bf7-9059-313215b36cd6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une République menacée, un décret qui abolit l’esclavage",
+   "competence": "lire-carte",
+   "situation": "En 1793-1794, la Convention gouverne une France en guerre, avec une insurrection à l’ouest et des révoltes dans de grandes villes. Dans le même temps, elle vote un décret historique.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La France menacée en 1793",
+     "fond": "france",
+     "source": "Carte simplifiée, d’après le cours.",
+     "aires": [
+      {
+       "id": "vendee",
+       "contour": [
+        [
+         -2.35,
+         46.7
+        ],
+        [
+         -2.15,
+         46.4
+        ],
+        [
+         -1.2,
+         46.35
+        ],
+        [
+         -0.55,
+         46.5
+        ],
+        [
+         -0.6,
+         47
+        ],
+        [
+         -1.5,
+         47.1
+        ],
+        [
+         -2,
+         46.95
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "hachures",
+       "etiquette": "Vendée"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "etoile",
+       "nom": "Paris",
+       "teinte": "violet"
+      },
+      {
+       "id": "lyon",
+       "lieu": "lyon",
+       "symbole": "point",
+       "nom": "Lyon"
+      },
+      {
+       "id": "marseille",
+       "lieu": "marseille",
+       "symbole": "point",
+       "nom": "Marseille"
+      },
+      {
+       "id": "bordeaux",
+       "lieu": "bordeaux",
+       "symbole": "point",
+       "nom": "Bordeaux"
+      }
+     ]
+    },
+    {
+     "id": "decret",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le décret du 4 février 1794",
+     "auteur": "D’après le décret du 16 pluviôse an II — texte adapté pour l’exercice",
+     "blocs": [
+      "L’esclavage est aboli dans toutes les colonies. Tous les hommes, sans distinction de couleur, qui vivent dans les colonies sont [[c|citoyens français]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone de l’insurrection contre-révolutionnaire qui cause des dizaines de milliers de morts.",
+     "reponse": [
+      "vendee"
+     ],
+     "aide": "L’étiquette hachurée porte son nom.",
+     "explication": "L’insurrection de **Vendée**, à l’ouest, est l’une des grandes menaces intérieures de la République."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les trois villes qui, avec d’autres, se révoltent contre la Convention en 1793 (révoltes fédéralistes).",
+     "reponse": [
+      "lyon",
+      "marseille",
+      "bordeaux"
+     ],
+     "aide": "Ce ne sont ni Paris ni la Vendée : trois grandes villes de province.",
+     "explication": "Lyon, Marseille et Bordeaux, parmi d’autres villes, refusent l’autorité de la Convention : ce sont les **révoltes fédéralistes**."
+    },
+    {
+     "type": "zone",
+     "document": "decret",
+     "enonce": "Touche les mots du décret qui font des hommes des colonies des membres de la nation.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche l’expression qui donne un statut politique aux hommes des colonies.",
+     "explication": "Ils deviennent **citoyens français**, sans distinction de couleur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui rend ce décret surprenant au milieu de la Terreur ?",
+     "options": [
+      "La Convention qui arrête sur soupçon libère les esclaves.",
+      "Il est voté par un roi qui gouverne sans assemblée.",
+      "Il rétablit l’esclavage dans toutes les colonies.",
+      "Il n’a aucun lien avec les débats de la Révolution."
+     ],
+     "reponse": 0,
+     "aide": "Pense à la Convention qui gouverne en 1793-1794.",
+     "explication": "La Convention, qui gouverne **par l’exception** et sans preuve, vote aussi l’abolition de l’esclavage : un paradoxe que ce chapitre laisse intact. Bonaparte la défera en 1802."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0461f1e-9622-5e6b-b130-43b5e4d03254",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Napoléon Bonaparte, de 1799 à 1815",
+   "competence": "se-reperer-temps",
+   "situation": "Ravi prépare une fiche sur Napoléon. Il trace une frise de sa carrière avec deux grandes périodes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Consulat, l’Empire et leur fin",
+     "debut": 1798,
+     "fin": 1816,
+     "pas": 2,
+     "periodes": [
+      {
+       "id": "consulat",
+       "debut": 1799,
+       "fin": 1804,
+       "nom": "Consulat",
+       "teinte": "ambre"
+      },
+      {
+       "id": "empire",
+       "debut": 1804,
+       "fin": 1815,
+       "nom": "Empire",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "brumaire",
+       "date": 1799,
+       "nom": "Brumaire"
+      },
+      {
+       "id": "russie",
+       "date": 1812,
+       "nom": "Russie"
+      },
+      {
+       "id": "waterloo",
+       "date": 1815,
+       "nom": "Waterloo"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où Napoléon est empereur.",
+     "reponse": [
+      "empire"
+     ],
+     "aide": "Il se fait sacrer en 1804.",
+     "explication": "Napoléon est empereur pendant l’**Empire** (à partir du sacre du 2 décembre 1804)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre le coup d’État de Brumaire (1799) et Waterloo (1815) ?",
+     "reponse": 16,
+     "unite": "ans",
+     "aide": "Soustrais les deux années sur la frise.",
+     "explication": "1815 − 1799 = **16 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": true,
+     "enonce": "Touche les deux événements qui annoncent la chute de l’Empire.",
+     "reponse": [
+      "russie",
+      "waterloo"
+     ],
+     "aide": "L’un est un désastre militaire en 1812, l’autre la défaite finale.",
+     "explication": "La campagne de **Russie** (1812) est un désastre ; **Waterloo** (1815) est la défaite définitive."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0461f1e-9622-5e6b-b130-43b5e4d03254",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que Napoléon garde, ce qu’il supprime",
+   "competence": "lire-tableau",
+   "situation": "Camille compare quatre décisions de Bonaparte pour comprendre sa méthode : garder de la Révolution ce qui rend l’État fort, et supprimer ce qui limite le pouvoir.",
+   "documents": [
+    {
+     "id": "actes",
+     "type": "tableau",
+     "titre": "Quatre décisions de Bonaparte",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Décision",
+      "Année",
+      "Ce qu’elle change"
+     ],
+     "lignes": [
+      [
+       "Banque de France",
+       "1800",
+       "Une monnaie plus stable"
+      ],
+      [
+       "Concordat",
+       "1801",
+       "La paix religieuse avec l’Église"
+      ],
+      [
+       "Retour de l’esclavage",
+       "1802",
+       "Annule l’abolition de 1794"
+      ],
+      [
+       "Code civil",
+       "1804",
+       "Égalité devant la loi, propriété garantie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "actes",
+     "enonce": "Touche l’année où l’esclavage est rétabli.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne qui annule l’abolition de 1794.",
+     "explication": "L’esclavage est rétabli en **1802**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le Concordat du Code civil ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Lis les deux années dans le tableau, puis soustrais.",
+     "explication": "1804 − 1801 = **3 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque mesure : consolide-t-elle l’État ou supprime-t-elle une liberté ou un droit ?",
+     "categories": [
+      "Consolide l’État",
+      "Supprime une liberté ou un droit"
+     ],
+     "items": [
+      [
+       "La Banque de France",
+       0
+      ],
+      [
+       "Les préfets",
+       0
+      ],
+      [
+       "Les lycées",
+       0
+      ],
+      [
+       "Le rétablissement de l’esclavage",
+       1
+      ],
+      [
+       "La liberté de la presse supprimée",
+       1
+      ]
+     ],
+     "aide": "Garde les institutions solides d’un côté, les libertés enlevées de l’autre.",
+     "explication": "Banque de France, préfets, lycées **renforcent l’État** ; l’esclavage rétabli et la presse censurée **suppriment des libertés** : « Il garde l’égalité devant la loi et l’administration ; il supprime tout ce qui contrôle le pouvoir »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les plébiscites de l’Empire ne sont-ils pas de vraies élections ?",
+     "options": [
+      "Ils approuvent le pouvoir sans vraiment choisir.",
+      "Ils laissent le peuple choisir librement entre plusieurs régimes.",
+      "Ils sont organisés par l’opposition.",
+      "Ils sont réservés aux femmes."
+     ],
+     "reponse": 0,
+     "aide": "Le peuple répond seulement « oui » ou « non » à une question posée par le pouvoir.",
+     "explication": "Un **plébiscite** demande d’approuver ce que le pouvoir a décidé : il ne choisit rien et n’est pas une élection."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0461f1e-9622-5e6b-b130-43b5e4d03254",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chemin des armées de l’Empire",
+   "competence": "analyser-document",
+   "situation": "Dans l’atelier d’histoire, on suit sur une carte d’Europe quelques lieux marquants de l’Empire, puis on lit un tableau qui dit ce qui s’y est passé.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quelques lieux de l’Empire",
+     "fond": "europe",
+     "cadrage": [
+      -12,
+      36,
+      42,
+      60
+     ],
+     "frontieres": true,
+     "source": "Frontières actuelles, repères placés pour l’exercice.",
+     "lieux": [
+      {
+       "id": "madrid",
+       "lieu": "madrid",
+       "symbole": "point",
+       "nom": "Madrid"
+      },
+      {
+       "id": "waterloo",
+       "lon": 4.41,
+       "lat": 50.68,
+       "symbole": "point",
+       "nom": "Waterloo"
+      },
+      {
+       "id": "austerlitz",
+       "lon": 16.88,
+       "lat": 49.15,
+       "symbole": "point",
+       "nom": "Austerlitz"
+      },
+      {
+       "id": "moscou",
+       "lieu": "moscou",
+       "symbole": "point",
+       "nom": "Moscou"
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Cinq lieux, cinq épisodes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Lieu",
+      "Année",
+      "Épisode"
+     ],
+     "lignes": [
+      [
+       "Austerlitz",
+       "1805",
+       "Victoire sur l’Autriche et la Russie"
+      ],
+      [
+       "Madrid",
+       "1808",
+       "Début de la guerre d’Espagne, qui s’enlise"
+      ],
+      [
+       "Moscou",
+       "1812",
+       "L’armée y entre puis doit reculer : désastre"
+      ],
+      [
+       "Leipzig",
+       "1813",
+       "Défaite devant les armées alliées"
+      ],
+      [
+       "Waterloo",
+       "1815",
+       "Défaite finale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu de la défaite finale de Napoléon, en 1815.",
+     "reponse": [
+      "waterloo"
+     ],
+     "aide": "Cherche la ligne du tableau marquée « Défaite finale ».",
+     "explication": "La défaite définitive a lieu à **Waterloo**, en 1815, avant l’exil à Sainte-Hélène."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu le plus à l’est atteint par l’armée en 1812.",
+     "reponse": [
+      "moscou"
+     ],
+     "aide": "C’est le lieu du désastre de la campagne de Russie.",
+     "explication": "L’armée atteint **Moscou** en 1812, puis la retraite tourne au désastre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre la victoire d’Austerlitz et la défaite finale de Waterloo ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Lis les deux années dans le tableau.",
+     "explication": "1815 − 1805 = **10 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le tableau, quelle guerre commence avant la Russie et use l’armée impériale ?",
+     "options": [
+      "La guerre d’Espagne",
+      "La bataille d’Austerlitz",
+      "La bataille de Waterloo",
+      "La bataille de Leipzig"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la date la plus ancienne qui parle d’un enlisement.",
+     "explication": "La **guerre d’Espagne** (1808) s’enlise bien avant la Russie : c’est elle qui use l’armée impériale la première."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a4d61d5-80eb-52e7-89a2-096322650cb1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le charbon, carburant de l’industrie britannique",
+   "competence": "lire-graphique",
+   "situation": "Au XIXe siècle, les usines britanniques brûlent de plus en plus de charbon. Un journal d’époque publie un diagramme de l’extraction.",
+   "documents": [
+    {
+     "id": "charbon",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Extraction de charbon au Royaume-Uni",
+     "source": "Chiffres arrondis, ordres de grandeur.",
+     "categories": [
+      "1800",
+      "1850",
+      "1900"
+     ],
+     "series": [
+      {
+       "nom": "Charbon extrait",
+       "valeurs": [
+        10,
+        50,
+        220
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Charbon extrait",
+      "unite": "en millions de tonnes",
+      "min": 0,
+      "max": 250,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "charbon",
+     "enonce": "Touche l’année où l’on extrait le plus de charbon.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "C’est **1900**, avec 220 millions de tonnes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien l’extraction est-elle multipliée entre 1800 et 1850 ?",
+     "reponse": 5,
+     "unite": "fois",
+     "aide": "Divise la valeur de 1850 par celle de 1800.",
+     "explication": "50 ÷ 10 = **5** : l’extraction est multipliée par cinq en cinquante ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle invention a besoin de ce charbon pour fonctionner ?",
+     "options": [
+      "La machine à vapeur",
+      "L’imprimerie de Gutenberg",
+      "La boussole des marins",
+      "La charrue des paysans"
+     ],
+     "reponse": 0,
+     "aide": "Le moteur de la première industrialisation fonctionne au charbon.",
+     "explication": "La **machine à vapeur** de James Watt brûle du charbon : c’est le moteur de la première industrialisation."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a4d61d5-80eb-52e7-89a2-096322650cb1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La journée de Louis, ouvrier à douze ans",
+   "competence": "analyser-document",
+   "situation": "Louis, 12 ans, travaille dans une filature en 1840. Son récit imaginaire et un tableau de salaires montrent comment la fabrique change le travail.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une journée de Louis",
+     "auteur": "Récit imaginaire, écrit pour l’exercice",
+     "blocs": [
+      "La [[c|cloche]] sonne à 5 h et nous entrons dans la fabrique. Elle sonne de nouveau à 19 h : on sort. Entre les deux, une seule heure de pause pour manger.",
+      "Dans l’atelier de mon père, on travaillait à la tâche, quand on voulait. Ici, on travaille à l’heure, à côté des machines."
+     ]
+    },
+    {
+     "id": "salaires",
+     "type": "tableau",
+     "titre": "Salaire par jour, en francs (imaginé)",
+     "source": "Chiffres imaginés, proches de ceux de l’époque.",
+     "colonnes": [
+      "Ouvrier",
+      "Salaire par jour"
+     ],
+     "lignes": [
+      [
+       "Un homme",
+       "2 F"
+      ],
+      [
+       "Une femme",
+       "1 F"
+      ],
+      [
+       "Un enfant",
+       "0,50 F"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui rythme la journée dans la fabrique.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche l’objet qui sonne pour entrer et pour sortir.",
+     "explication": "La **cloche** fixe l’heure d’entrée et de sortie : dans la fabrique, on travaille à l’heure, non plus à la tâche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures Louis travaille-t-il par jour, une fois la pause retirée ?",
+     "reponse": 13,
+     "unite": "heures",
+     "aide": "Calcule d’abord de 5 h à 19 h, puis retire la pause.",
+     "explication": "De 5 h à 19 h : 14 heures. On retire 1 heure de pause : **13 heures** de travail."
+    },
+    {
+     "type": "zone",
+     "document": "salaires",
+     "enonce": "Touche le salaire de Louis par jour.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Louis est un enfant.",
+     "explication": "Un enfant gagne **0,50 F** par jour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les patrons emploient-ils beaucoup d’enfants ?",
+     "options": [
+      "Ils coûtent moins cher qu’un homme.",
+      "Ils travaillent plus vite que les adultes.",
+      "La loi les oblige à les embaucher.",
+      "Ils sont mieux formés que les adultes."
+     ],
+     "reponse": 0,
+     "aide": "Compare les trois salaires du tableau.",
+     "explication": "Un enfant gagne quatre fois moins qu’un homme : employer femmes et enfants est un **calcul**, pas un effet secondaire de l’industrialisation."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a4d61d5-80eb-52e7-89a2-096322650cb1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les villes grandissent, le train unifie l’heure",
+   "competence": "analyser-document",
+   "situation": "Nora étudie deux changements du XIXe siècle : les campagnes qui se vident et le chemin de fer qui bouscule les horloges.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Part de la population qui vit en ville (Royaume-Uni)",
+     "source": "Chiffres arrondis, ordres de grandeur.",
+     "categories": [
+      "1800",
+      "1850",
+      "1900"
+     ],
+     "series": [
+      {
+       "nom": "Population urbaine",
+       "valeurs": [
+        30,
+        50,
+        75
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la population",
+      "unite": "en %",
+      "min": 0,
+      "max": 100,
+      "pas": 25
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true
+    },
+    {
+     "id": "voyageur",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans une gare, en 1840",
+     "auteur": "Récit imaginaire, écrit pour l’exercice",
+     "blocs": [
+      "À Rouen, l’horloge de la cathédrale indique 10 h 05, celle de la gare 10 h 12. Chaque ville vit à son heure solaire.",
+      "Mais le [[t|train]] doit partir à une heure précise et arriver à une heure précise : il faut une heure unique pour tous."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche l’année où la ville regroupe le plus d’habitants.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "En **1900**, 75 % des habitants vivent en ville : l’exode rural a vidé les campagnes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part urbaine augmente-t-elle entre 1800 et 1900 ?",
+     "reponse": 45,
+     "unite": "points",
+     "aide": "Soustrais la valeur de 1800 à celle de 1900.",
+     "explication": "75 − 30 = **45 points** : la ville a gagné près d’un habitant sur deux en un siècle."
+    },
+    {
+     "type": "zone",
+     "document": "voyageur",
+     "enonce": "Touche le mot qui oblige à adopter une heure unique.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "C’est l’invention qui doit respecter des horaires précis.",
+     "explication": "C’est le **train** : avant lui, chaque ville vivait à son heure solaire, et les horaires devenaient impossibles à lire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le point commun entre ces deux documents ?",
+     "options": [
+      "Ils montrent des changements liés à l’industrialisation.",
+      "Ils décrivent la vie à la campagne avant 1800.",
+      "Ils parlent de la Révolution française.",
+      "Ils racontent la colonisation de l’Afrique."
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui fait grandir les villes et à ce qui impose les chemins de fer.",
+     "explication": "L’exode rural et le chemin de fer sont deux effets de la **révolution industrielle** : une révolution de l’organisation, du capital, du travail et du temps."
+    }
+   ]
+  },
+  {
+   "chapitre": "27d22a9c-3d7e-5d27-a482-53ddcf2e1397",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux familles, deux mondes dans la même ville",
+   "competence": "lire-tableau",
+   "situation": "En 1860, dans une ville industrielle imaginaire, Jules étudie deux familles : celle d’un industriel et celle d’un ouvrier de sa filature.",
+   "documents": [
+    {
+     "id": "familles",
+     "type": "tableau",
+     "titre": "Deux familles en 1860 (imaginées)",
+     "source": "Tableau écrit pour l’exercice, d’après le cours.",
+     "colonnes": [
+      "",
+      "Famille Durand",
+      "Famille Morel"
+     ],
+     "lignes": [
+      [
+       "Métier du père",
+       "Propriétaire de la filature",
+       "Ouvrier dans la filature"
+      ],
+      [
+       "Ce qu’elle possède",
+       "L’entreprise",
+       "Seulement sa force de travail"
+      ],
+      [
+       "Où elle vit",
+       "Un beau quartier",
+       "Un quartier ouvrier surpeuplé"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "familles",
+     "enonce": "Touche la case qui dit ce que possède la famille ouvrière.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne « Ce qu’elle possède », colonne Morel.",
+     "explication": "La famille Morel ne possède que sa **force de travail**, qu’elle vend contre un salaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on le groupe des ouvriers, qui ne possèdent que leur force de travail ?",
+     "options": [
+      "Le prolétariat",
+      "La bourgeoisie",
+      "Les classes moyennes",
+      "La noblesse"
+     ],
+     "reponse": 0,
+     "aide": "L’autre groupe possède les entreprises et s’appelle la bourgeoisie.",
+     "explication": "Le groupe qui vend sa force de travail contre un salaire est le **prolétariat** ; celui qui possède les entreprises est la **bourgeoisie**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque famille à son groupe social.",
+     "paires": [
+      [
+       "Famille Durand",
+       "La bourgeoisie"
+      ],
+      [
+       "Famille Morel",
+       "Le prolétariat"
+      ]
+     ],
+     "aide": "Regarde qui possède l’entreprise.",
+     "explication": "Les **Durand** sont des bourgeois (ils possèdent l’usine) ; les **Morel** sont des prolétaires (ils vendent leur travail)."
+    }
+   ]
+  },
+  {
+   "chapitre": "27d22a9c-3d7e-5d27-a482-53ddcf2e1397",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des droits arrachés, un à un",
+   "competence": "se-reperer-temps",
+   "situation": "Mina prépare une affiche sur les conquêtes sociales du XIXe siècle et du début du XXe. Elle les place sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Conquêtes et textes, de 1864 à 1906",
+     "debut": 1860,
+     "fin": 1910,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "greve",
+       "date": 1864,
+       "nom": "Droit de grève"
+      },
+      {
+       "id": "syndicat",
+       "date": 1884,
+       "nom": "Liberté syndicale"
+      },
+      {
+       "id": "rerum",
+       "date": 1891,
+       "nom": "Rerum novarum"
+      },
+      {
+       "id": "repos",
+       "date": 1906,
+       "nom": "Repos hebdomadaire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui est un texte de l’Église, et non une loi.",
+     "reponse": [
+      "rerum"
+     ],
+     "aide": "Cherche le titre écrit en latin.",
+     "explication": "*Rerum novarum* (**1891**) est un texte de l’Église catholique qui reconnaît la question ouvrière : c’est le catholicisme social."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre le droit de grève et le repos hebdomadaire ?",
+     "reponse": 42,
+     "unite": "ans",
+     "aide": "Soustrais l’année du droit de grève à celle du repos hebdomadaire.",
+     "explication": "1906 − 1864 = **42 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à la conquête correspondante.",
+     "paires": [
+      [
+       "1864",
+       "Droit de grève"
+      ],
+      [
+       "1884",
+       "Liberté syndicale"
+      ],
+      [
+       "1906",
+       "Repos hebdomadaire"
+      ]
+     ],
+     "aide": "Lis les dates sous les points de la frise.",
+     "explication": "**1864** : grève ; **1884** : syndicats ; **1906** : repos du dimanche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment ces droits sont-ils obtenus ?",
+     "options": [
+      "Par la mobilisation des ouvriers",
+      "Ils sont offerts spontanément par les patrons",
+      "Ils existent depuis toujours",
+      "Ils sont achetés par les syndicats"
+     ],
+     "reponse": 0,
+     "aide": "Rien n’est donné : tout est arraché.",
+     "explication": "Les protections sociales ne sont pas accordées spontanément : elles sont **arrachées par la mobilisation** des ouvriers, grèves et syndicats."
+    }
+   ]
+  },
+  {
+   "chapitre": "27d22a9c-3d7e-5d27-a482-53ddcf2e1397",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le budget d’une famille ouvrière et les grands courants d’idées",
+   "competence": "analyser-document",
+   "situation": "Rose compare le budget d’une famille ouvrière à quatre manières de penser la question de la richesse produite.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Budget d’une famille ouvrière vers 1860",
+     "source": "Chiffres arrondis, imaginés pour l’exercice.",
+     "categories": [
+      "Nourriture",
+      "Logement",
+      "Vêtements",
+      "Chauffage",
+      "Le reste"
+     ],
+     "series": [
+      {
+       "nom": "Part du budget (%)",
+       "valeurs": [
+        60,
+        15,
+        10,
+        8,
+        7
+       ],
+       "teinte": "ambre"
+      }
+     ]
+    },
+    {
+     "id": "voix",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Quatre voix sur la question ouvrière",
+     "auteur": "Résumés écrits pour l’exercice",
+     "blocs": [
+      "A : « L’État doit laisser faire le marché. »",
+      "B : « Les ouvriers produisent la richesse : il faut partager les moyens de production. »",
+      "C : « L’Église doit s’intéresser à la condition des ouvriers. »",
+      "D : « Il faut supprimer l’État lui-même. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche le poste le plus lourd du budget.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus grande part.",
+     "explication": "La **nourriture** prend 60 % du budget : une hausse du prix du pain pèse très lourd."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La famille dispose de 800 francs par an. Combien dépense-t-elle pour se nourrir ?",
+     "reponse": 480,
+     "unite": "francs",
+     "aide": "Calcule 60 % de 800.",
+     "explication": "60 % de 800 = 800 × 0,60 = **480 francs**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque voix à son courant d’idées.",
+     "paires": [
+      [
+       "A",
+       "Le libéralisme économique"
+      ],
+      [
+       "B",
+       "Le socialisme"
+      ],
+      [
+       "C",
+       "Le catholicisme social"
+      ],
+      [
+       "D",
+       "L’anarchisme"
+      ]
+     ],
+     "aide": "Pense au mot clé de chaque phrase : marché, partage, Église, supprimer l’État.",
+     "explication": "A : **libéralisme** ; B : **socialisme** ; C : **catholicisme social** (*Rerum novarum*, 1891) ; D : **anarchisme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une famille ouvrière est-elle plus fragile face à la hausse du prix du pain qu’une famille bourgeoise ?",
+     "options": [
+      "La nourriture occupe la plus grande part de son budget.",
+      "Elle ne mange jamais de pain dans la semaine.",
+      "Elle ne paie aucun loyer à son propriétaire.",
+      "Elle gagne plus d’argent que les bourgeois."
+     ],
+     "reponse": 0,
+     "aide": "Regarde la part de la nourriture dans le budget.",
+     "explication": "Avec **60 %** du budget consacré à la nourriture, toute hausse du pain coûte très cher : la question du siècle devient « à qui profite la richesse produite ? »."
+    }
+   ]
+  },
+  {
+   "chapitre": "7396e312-7adb-55b8-bacf-e4d5660ee603",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un monde presque entièrement dominé",
+   "competence": "lire-graphique",
+   "situation": "En 1914, l’Europe domine le monde. Un manuel imaginaire montre la part des terres qu’elle contrôle et raconte la conférence de Berlin.",
+   "documents": [
+    {
+     "id": "terres",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les terres émergées en 1914",
+     "source": "Chiffre du cours, arrondi.",
+     "categories": [
+      "Contrôlées par l’Europe",
+      "Autres terres"
+     ],
+     "series": [
+      {
+       "nom": "Part des terres (%)",
+       "valeurs": [
+        85,
+        15
+       ],
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "berlin",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La conférence de Berlin (1884-1885)",
+     "auteur": "Texte écrit pour l’exercice, d’après le cours",
+     "blocs": [
+      "À Berlin, des représentants des puissances européennes se réunissent pour se partager l’Afrique. [[a|Aucun Africain]] n’est présent. Les frontières sont tracées à la règle, sans tenir compte des peuples et des royaumes existants."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "terres",
+     "enonce": "Touche la part des terres contrôlées par l’Europe en 1914.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "L’Europe contrôle environ **85 %** des terres émergées en 1914."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des terres n’est pas contrôlée par l’Europe ? Réponds en pourcentage.",
+     "reponse": 15,
+     "unite": "%",
+     "aide": "Retire 85 de 100.",
+     "explication": "100 − 85 = **15 %**."
+    },
+    {
+     "type": "zone",
+     "document": "berlin",
+     "enonce": "Touche les mots du texte qui montrent que les Africains ne participent pas au partage.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche la phrase qui dit qui n’est pas présent.",
+     "explication": "**Aucun Africain** n’est présent : l’Afrique est partagée sans consulter ceux qui y vivent."
+    }
+   ]
+  },
+  {
+   "chapitre": "7396e312-7adb-55b8-bacf-e4d5660ee603",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois voix pour justifier la conquête",
+   "competence": "analyser-texte",
+   "situation": "En 1890, trois personnages imaginaires défendent la colonisation : un industriel, un député et un journaliste. Léo les écoute, puis lit un tableau sur la société coloniale.",
+   "documents": [
+    {
+     "id": "voix",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois arguments",
+     "auteur": "Textes imaginaires, écrits pour l’exercice",
+     "blocs": [
+      "L’industriel : « Nos usines manquent de coton et de caoutchouc, et nos produits ne se vendent plus assez chez nous. »",
+      "Le député : « Notre pays doit avoir des ports et des bases militaires, sinon nos rivaux nous dépasseront. »",
+      "Le journaliste : « Notre devoir est d’apporter la [[m|mission civilisatrice]] aux peuples qui ne la connaissent pas. »"
+     ]
+    },
+    {
+     "id": "societe",
+     "type": "tableau",
+     "titre": "La société coloniale",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Groupe",
+      "Sa situation"
+     ],
+     "lignes": [
+      [
+       "Les colons européens",
+       "Le pouvoir et la terre"
+      ],
+      [
+       "Les colonisés",
+       "Statut d’indigène : sans droits politiques, soumis à l’impôt et au travail forcé"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque argument selon son motif.",
+     "categories": [
+      "Motif économique",
+      "Motif politique",
+      "Motif idéologique"
+     ],
+     "items": [
+      [
+       "Trouver du coton et du caoutchouc",
+       0
+      ],
+      [
+       "Vendre ses produits à l’étranger",
+       0
+      ],
+      [
+       "Avoir des ports et des bases militaires",
+       1
+      ],
+      [
+       "Dépasser ses rivaux",
+       1
+      ],
+      [
+       "Apporter une prétendue mission civilisatrice",
+       2
+      ]
+     ],
+     "aide": "Économique : matières premières et débouchés. Politique : prestige et rivalités. Idéologique : une idée de supériorité.",
+     "explication": "Matières premières et débouchés sont **économiques** ; bases militaires et rivalités sont **politiques** ; la « mission civilisatrice » est **idéologique**, adossée à des théories racistes."
+    },
+    {
+     "type": "zone",
+     "document": "voix",
+     "enonce": "Touche l’expression qui sert de justification morale à la conquête.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cherche ce que le journaliste appelle un devoir.",
+     "explication": "La « **mission civilisatrice** » est le motif idéologique : une justification qui s’appuie sur des idées de supériorité."
+    },
+    {
+     "type": "zone",
+     "document": "societe",
+     "enonce": "Touche la case qui dit ce que le statut d’indigène retire aux colonisés.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Regarde la ligne des colonisés.",
+     "explication": "Le statut d’**indigène** retire les droits politiques, et soumet à l’impôt et au travail forcé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « prétendue » mission civilisatrice ?",
+     "options": [
+      "Parce qu’elle justifie une domination par des idées racistes.",
+      "Parce qu’elle améliore réellement la vie de tous les colonisés.",
+      "Parce qu’elle est une idée venue des colonisés eux-mêmes.",
+      "Parce qu’elle est interdite par toutes les lois de l’époque."
+     ],
+     "reponse": 0,
+     "aide": "Le cours ajoute que les équipements profitent d’abord à l’exportation et à une minorité.",
+     "explication": "La mission civilisatrice est un **prétexte** : elle justifie la domination et fragilise l’alimentation des colonisés au moment où elle se dit civilisatrice."
+    }
+   ]
+  },
+  {
+   "chapitre": "7396e312-7adb-55b8-bacf-e4d5660ee603",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Résister à la conquête : trois lieux, trois puissances",
+   "competence": "lire-carte",
+   "situation": "Dans un manuel imaginaire, Sami étudie trois résistances à la conquête coloniale : une carte du monde et un tableau lui donnent les pistes.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois pays où l’on résiste",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      -35,
+      90,
+      45
+     ],
+     "regionsCliquables": true,
+     "source": "Carte simplifiée, écrite pour l’exercice."
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois résistances",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Résistance",
+      "Contre quelle puissance",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Abd el-Kader",
+       "France",
+       "1832-1847"
+      ],
+      [
+       "Révolte des Cipayes",
+       "Royaume-Uni",
+       "1857"
+      ],
+      [
+       "Guerre des Herero",
+       "Allemagne",
+       "1904"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays où Abd el-Kader résiste à la conquête française.",
+     "reponse": [
+      "DZA"
+     ],
+     "aide": "C’est un pays d’Afrique du Nord, en face de la France.",
+     "explication": "Abd el-Kader résiste en **Algérie**, de 1832 à 1847."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays où éclate la révolte des Cipayes en 1857.",
+     "reponse": [
+      "IND"
+     ],
+     "aide": "C’est un grand pays d’Asie du Sud, alors dominé par le Royaume-Uni.",
+     "explication": "La révolte des Cipayes éclate en **Inde**, contre la domination britannique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois résistances de la plus ancienne à la plus récente.",
+     "items": [
+      "Abd el-Kader",
+      "La révolte des Cipayes",
+      "La guerre des Herero"
+     ],
+     "aide": "Lis la colonne des dates.",
+     "explication": "Abd el-Kader (**1832**), Cipayes (**1857**), Herero (**1904**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ces trois exemples ?",
+     "options": [
+      "Les peuples colonisés résistent partout et dès le départ.",
+      "Les peuples colonisés n’ont jamais résisté à la conquête.",
+      "Seule la France a rencontré des résistances à la conquête.",
+      "Les résistances ont toujours réussi à chasser les colons."
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’étendue des lieux et des dates.",
+     "explication": "Les résistances existent **partout et dès le départ**, et sont réprimées, parfois avec une extrême violence."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c4af367-1f90-51b8-b1dd-f43ed6c28022",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien d’électeurs sous trois régimes ?",
+   "competence": "lire-graphique",
+   "situation": "Zoé compare le nombre d’électeurs en France sous la Restauration, la monarchie de Juillet et la Deuxième République.",
+   "documents": [
+    {
+     "id": "electeurs",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le nombre d’électeurs",
+     "source": "Ordres de grandeur arrondis, d’après le cours.",
+     "categories": [
+      "Restauration",
+      "Monarchie de Juillet",
+      "Deuxième République"
+     ],
+     "series": [
+      {
+       "nom": "Électeurs",
+       "valeurs": [
+        0.1,
+        0.24,
+        9
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Électeurs",
+      "unite": "en millions",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Régime"
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "electeurs",
+     "enonce": "Touche le régime qui compte le plus d’électeurs.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La **Deuxième République** compte 9 millions d’électeurs, d’un coup."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’électeurs compte-t-on sous la Deuxième République ?",
+     "reponse": 9,
+     "unite": "millions",
+     "aide": "Lis la valeur au bout de la dernière barre.",
+     "explication": "**9 millions** : le suffrage universel masculin remplace le suffrage censitaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui vote sous le suffrage universel masculin de 1848 ?",
+     "options": [
+      "Tous les hommes",
+      "Tous les hommes et toutes les femmes",
+      "Seulement ceux qui paient un impôt élevé",
+      "Seulement les nobles"
+     ],
+     "reponse": 0,
+     "aide": "Le mot « masculin » précise qui peut voter.",
+     "explication": "Tous les **hommes** votent ; les femmes devront attendre **1944**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c4af367-1f90-51b8-b1dd-f43ed6c28022",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre régimes en cinquante-cinq ans",
+   "competence": "se-reperer-temps",
+   "situation": "Axel trace les régimes qui se succèdent en France entre 1815 et 1870, avec deux dates clés du vote.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les régimes de 1815 à 1870",
+     "debut": 1810,
+     "fin": 1880,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "resta",
+       "debut": 1815,
+       "fin": 1830,
+       "nom": "Restauration",
+       "teinte": "ambre"
+      },
+      {
+       "id": "juillet",
+       "debut": 1830,
+       "fin": 1848,
+       "nom": "Monarchie de Juillet",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "rep",
+       "debut": 1848,
+       "fin": 1852,
+       "nom": "IIe République",
+       "teinte": "corail"
+      },
+      {
+       "id": "empire",
+       "debut": 1852,
+       "fin": 1870,
+       "nom": "Second Empire",
+       "teinte": "bleu"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "glorieuses",
+       "date": 1830,
+       "nom": "Trois Glorieuses"
+      },
+      {
+       "id": "universel",
+       "date": 1848,
+       "nom": "Suffrage universel"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le régime qui naît des Trois Glorieuses.",
+     "reponse": [
+      "juillet"
+     ],
+     "aide": "Cherche ce qui commence en 1830.",
+     "explication": "La révolution de 1830 installe la **monarchie de Juillet**, avec Louis-Philippe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la monarchie de Juillet ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais l’année de début à l’année de fin.",
+     "explication": "1848 − 1830 = **18 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces quatre régimes dans l’ordre.",
+     "items": [
+      "La Restauration",
+      "La monarchie de Juillet",
+      "La Deuxième République",
+      "Le Second Empire"
+     ],
+     "aide": "Suis la frise de gauche à droite.",
+     "explication": "Restauration → monarchie de Juillet → Deuxième République → Second Empire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le vote évolue-t-il pendant le Second Empire ?",
+     "options": [
+      "Napoléon III encadre le suffrage universel.",
+      "Le suffrage universel est supprimé entièrement.",
+      "Les femmes obtiennent le droit de vote.",
+      "Le vote devient secret avec l’isoloir."
+     ],
+     "reponse": 0,
+     "aide": "Pense à la candidature officielle et à la censure.",
+     "explication": "Napoléon III **encadre** le suffrage universel : candidature officielle, censure. L’isoloir ne viendra qu’en **1913**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c4af367-1f90-51b8-b1dd-f43ed6c28022",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Voter sous les yeux du régisseur",
+   "competence": "analyser-document",
+   "situation": "En 1860, Jean, métayer, va voter. Un tableau retrace les étapes du droit de vote ; son récit imaginaire montre ce qu’était un vote public.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes du droit de vote",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Date",
+      "Étape"
+     ],
+     "lignes": [
+      [
+       "1815-1848",
+       "Suffrage censitaire (de 100 000 à 240 000 électeurs)"
+      ],
+      [
+       "1848",
+       "Suffrage universel masculin (9 millions d’électeurs)"
+      ],
+      [
+       "1913",
+       "Isoloir et enveloppe"
+      ],
+      [
+       "1944",
+       "Droit de vote des femmes"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Jean vote, en 1860",
+     "auteur": "Récit imaginaire, écrit pour l’exercice",
+     "blocs": [
+      "Jean arrive à la mairie. Il n’y a ni enveloppe ni isoloir : on dépose son bulletin devant le maire et le régisseur du domaine.",
+      "Le régisseur regarde attentivement. Jean sait que son maître apprendra [[v|pour qui il a voté]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les mots qui montrent que le vote n’est pas libre.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche ce que Jean craint que son maître sache.",
+     "explication": "Son maître apprendra **pour qui il a voté** : le vote est public, donc surveillé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années les femmes ont-elles attendu entre le suffrage universel masculin et leur droit de vote ?",
+     "reponse": 96,
+     "unite": "ans",
+     "aide": "Soustrais 1848 à 1944.",
+     "explication": "1944 − 1848 = **96 ans** : presque un siècle."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : protège-t-il la liberté du vote ou permet-il de le contrôler ?",
+     "categories": [
+      "Protège la liberté du vote",
+      "Permet de contrôler le vote"
+     ],
+     "items": [
+      [
+       "L’isoloir",
+       0
+      ],
+      [
+       "L’enveloppe",
+       0
+      ],
+      [
+       "Le vote public devant le maire",
+       1
+      ],
+      [
+       "La candidature officielle",
+       1
+      ]
+     ],
+     "aide": "L’isoloir et l’enveloppe rendent le vote secret.",
+     "explication": "**Isoloir** et **enveloppe** protègent ; le vote **public** et la **candidature officielle** permettent de contrôler."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que le mot « universel » de 1848 était incomplet ?",
+     "options": [
+      "Il excluait les femmes, soit la moitié du pays.",
+      "Il excluait tous les hommes de moins de 40 ans.",
+      "Il réservait le vote aux seuls nobles du royaume.",
+      "Il n’a finalement jamais été appliqué en France."
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de la date de 1944.",
+     "explication": "Le suffrage « universel » de 1848 est **masculin** : il exclut les femmes, qui voteront en **1944**."
+    }
+   ]
+  }
+ ]
+}

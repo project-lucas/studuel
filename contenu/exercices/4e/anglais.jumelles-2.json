@@ -1,0 +1,4038 @@
+{
+ "niveau": "4e",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "a387e8a5-2ddb-542b-9d02-6579b3d0fada",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un déjeuner un peu spécial",
+   "competence": "comprendre-langue",
+   "situation": "Nina écrit un message à son amie pendant la pause du midi. Aujourd’hui, son rythme est différent de d’habitude.",
+   "documents": [
+    {
+     "id": "nina",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Message de Nina",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Hi Emma! I’m [[e|eating]] lunch now. I usually eat at one, but today I’m eating early. It’s raining!"
+      }
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nina",
+     "reponse": [
+      "e"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui dit ce que Nina **est en train de faire** maintenant.",
+     "aide": "Il est en -ING.",
+     "explication": "**eating** : *am eating* décrit une action en cours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon l’habitude ou l’action en cours.",
+     "categories": [
+      "Habitude",
+      "En cours"
+     ],
+     "items": [
+      [
+       "I play tennis every Saturday.",
+       0
+      ],
+      [
+       "I’m playing tennis now.",
+       1
+      ],
+      [
+       "She goes to school by bus.",
+       0
+      ],
+      [
+       "She is going to school now.",
+       1
+      ]
+     ],
+     "aide": "Cherche *every*, *now*, *usually*.",
+     "explication": "*Every Saturday* : habitude, présent simple. *Now* : en cours, BE + -ING."
+    },
+    {
+     "type": "trous",
+     "enonce": "Dehors, il pleut en ce moment.",
+     "texte": "Look! It ___ raining.",
+     "reponses": [
+      [
+       "is"
+      ]
+     ],
+     "banque": [
+      "is",
+      "does",
+      "are",
+      "has"
+     ],
+     "aide": "Il faut l’auxiliaire *be* avec -ING.",
+     "explication": "**is raining** : be + verbe en -ING."
+    }
+   ]
+  },
+  {
+   "chapitre": "a387e8a5-2ddb-542b-9d02-6579b3d0fada",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les horaires du train",
+   "competence": "manier-langue",
+   "situation": "Lucas voyage de Leeds à Londres avec ses parents. Il lit le panneau de la gare et discute des horaires.",
+   "documents": [
+    {
+     "id": "train",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Leeds station",
+     "sousTitre": "Departures",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "The London train leaves at 9.15",
+       "id": "londres"
+      },
+      {
+       "texte": "The York train leaves at 9.30",
+       "id": "york"
+      },
+      {
+       "texte": "The Hull train leaves at 9.45",
+       "id": "hull"
+      }
+     ],
+     "pied": "Please check the platform",
+     "teinte": "bleu",
+     "source": "Panneau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "train",
+     "reponse": [
+      "londres"
+     ],
+     "multiple": false,
+     "enonce": "Touche le train qui part **en premier**.",
+     "aide": "Compare les horaires.",
+     "explication": "**The London train**, à 9.15, part avant les autres."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au présent simple.",
+     "texte": "She ___ (study) hard every night.",
+     "reponses": [
+      [
+       "studies"
+      ]
+     ],
+     "banque": [
+      "studies",
+      "studys",
+      "studyes",
+      "study"
+     ],
+     "aide": "À la 3e personne, *study* devient *studies*.",
+     "explication": "**studies** : consonne + y devient -ies."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "She doesn’t work here.",
+      "She don’t work here.",
+      "She doesn’t works here.",
+      "She not work here."
+     ],
+     "reponse": 0,
+     "aide": "Avec *doesn’t*, le verbe reste à la base verbale.",
+     "explication": "**She doesn’t work here** : doesn’t + base verbale."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il est toujours en train de perdre ses clés ». La phrase commence par He.",
+     "items": [
+      "He",
+      "is",
+      "always",
+      "losing",
+      "his",
+      "keys"
+     ],
+     "aide": "BE + -ING avec *always* exprime l’agacement.",
+     "explication": "**He is always losing his keys** : *always* + BE + -ING exprime l’agacement."
+    }
+   ]
+  },
+  {
+   "chapitre": "a387e8a5-2ddb-542b-9d02-6579b3d0fada",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux semaines en Écosse",
+   "competence": "argumenter",
+   "situation": "Lena passe deux semaines chez sa tante à Édimbourg. Elle écrit à son amie et lit les horaires du train pour ses sorties.",
+   "documents": [
+    {
+     "id": "lena",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Lena",
+     "blocs": [
+      "Hi Zoe, I’m [[t|staying]] with my aunt for two weeks. Usually I live in Paris. Every morning, my aunt goes to work at eight, so I make breakfast. Today it’s raining, so I’m reading in the kitchen. We [[p|are]] [[p|meeting]] my cousins on Friday!"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "gare",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Edinburgh – Glasgow",
+     "sousTitre": "Timetable",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "The train leaves at 10.05"
+      },
+      {
+       "texte": "The train arrives at 11.00"
+      }
+     ],
+     "pied": "Have a nice trip!",
+     "teinte": "bleu",
+     "source": "Horaires écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lena",
+     "reponse": [
+      "t"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui montre que la situation de Lena est **temporaire**.",
+     "aide": "Il parle de deux semaines chez sa tante.",
+     "explication": "**staying** : BE + -ING pour une situation temporaire."
+    },
+    {
+     "type": "zone",
+     "document": "lena",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** d’un **projet organisé** pour vendredi.",
+     "aide": "Cherche *are* suivi d’un verbe en -ING.",
+     "explication": "**are meeting** : BE + -ING exprime un projet déjà organisé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase de l’e-mail : habitude ou situation en cours ?",
+     "categories": [
+      "Habitude / permanent",
+      "En cours / temporaire"
+     ],
+     "items": [
+      [
+       "Usually I live in Paris.",
+       0
+      ],
+      [
+       "I’m staying with my aunt.",
+       1
+      ],
+      [
+       "My aunt goes to work at eight.",
+       0
+      ],
+      [
+       "I’m reading in the kitchen.",
+       1
+      ]
+     ],
+     "aide": "Pense à *usually*, *every*, *today*.",
+     "explication": "Présent simple : habituel. BE + -ING : en cours ou temporaire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "I ___ the answer. Please ask me!",
+     "reponses": [
+      [
+       "know"
+      ]
+     ],
+     "banque": [
+      "know",
+      "am knowing",
+      "knows",
+      "knowing"
+     ],
+     "aide": "*Know* est un verbe d’état.",
+     "explication": "**know** : un verbe d’état n’accepte pas -ING."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « The train leaves at 10.05 » au présent simple ?",
+     "options": [
+      "C’est un horaire fixe",
+      "C’est une action en cours",
+      "C’est un agacement",
+      "C’est une situation temporaire"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux horaires de gare.",
+     "explication": "**Un horaire fixe** se dit au présent simple."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0290fde-f898-53f3-8883-0e5c894b2570",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Shopping avec Ana",
+   "competence": "comprendre-langue",
+   "situation": "Ana fait les boutiques et écrit à son frère Sam. Elle lui montre ce qui est près d’elle, et Sam répond à propos de ce qui est plus loin.",
+   "documents": [
+    {
+     "id": "shop",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ana et Sam",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Hi Sam! I like [[p|this]] jacket and [[p|these]] shoes here, in my hands."
+      },
+      {
+       "qui": "Sam",
+       "texte": "What about that bag over there and those hats?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "shop",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux démonstratifs** qu’Ana emploie pour ce qui est **près d’elle**.",
+     "aide": "Ils commencent tous les deux par th- et finissent par -s ou -is.",
+     "explication": "**this** (singulier) et **these** (pluriel) désignent ce qui est proche."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque démonstratif à ce qu’il désigne.",
+     "paires": [
+      [
+       "this",
+       "proche, singulier"
+      ],
+      [
+       "these",
+       "proche, pluriel"
+      ],
+      [
+       "that",
+       "éloigné, singulier"
+      ],
+      [
+       "those",
+       "éloigné, pluriel"
+      ]
+     ],
+     "aide": "Deux critères : le nombre et la distance.",
+     "explication": "**this / these** pour le proche, **that / those** pour l’éloigné ; this et that au singulier, these et those au pluriel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Sam montre un sac au fond du magasin. Complète sa phrase.",
+     "texte": "Sam: “___ bag is nice!”",
+     "reponses": [
+      [
+       "that"
+      ]
+     ],
+     "banque": [
+      "this",
+      "these",
+      "that",
+      "those"
+     ],
+     "aide": "Le sac est loin et au singulier.",
+     "explication": "**That bag** : démonstratif éloigné et singulier."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0290fde-f898-53f3-8883-0e5c894b2570",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un coup de téléphone entre amis",
+   "competence": "manier-langue",
+   "situation": "Paul téléphone à son amie Emma. Ils se présentent, puis parlent de leurs souvenirs de vacances.",
+   "documents": [
+    {
+     "id": "tel",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Une conversation téléphonique",
+     "participants": [
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Paul",
+       "texte": "Hello, [[tel|this]] is Paul speaking. Is Emma there?"
+      },
+      {
+       "qui": "Emma",
+       "texte": "Yes, [[tel|this]] is Emma! Are you free this afternoon?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Yes! Do you remember that summer in Spain? Look at these old photos."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Those were the days!"
+      }
+     ],
+     "source": "Conversation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tel",
+     "reponse": [
+      "tel"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux démonstratifs** que Paul et Emma emploient pour **se présenter** au téléphone.",
+     "aide": "En français, on dit « c’est Paul ».",
+     "explication": "**This is Paul speaking / This is Emma** : au téléphone, l’anglais emploie **this**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Emma propose un moment de la journée en cours. Complète.",
+     "texte": "Are you free ___ afternoon?",
+     "reponses": [
+      [
+       "this"
+      ]
+     ],
+     "banque": [
+      "this",
+      "that",
+      "these",
+      "those"
+     ],
+     "aide": "Le moment est proche : c’est aujourd’hui.",
+     "explication": "**this afternoon** : this pour le présent ou le futur proche."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : le démonstratif est-il **adjectif** (suivi d’un nom) ou **pronom** (seul) ?",
+     "categories": [
+      "Adjectif",
+      "Pronom"
+     ],
+     "items": [
+      [
+       "This is my car.",
+       1
+      ],
+      [
+       "This car is old.",
+       0
+      ],
+      [
+       "I prefer these.",
+       1
+      ],
+      [
+       "Look at those birds.",
+       0
+      ],
+      [
+       "That was strange!",
+       1
+      ],
+      [
+       "These shoes are new.",
+       0
+      ]
+     ],
+     "aide": "Regarde si un nom suit le démonstratif.",
+     "explication": "**Adjectif** : suivi d’un nom (this car, those birds). **Pronom** : employé seul (This is…, I prefer these)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Emma pense à des vacances lointaines, il y a cinq ans. Complète.",
+     "texte": "I loved ___ holiday!",
+     "reponses": [
+      [
+       "that"
+      ]
+     ],
+     "banque": [
+      "this",
+      "that",
+      "these",
+      "those"
+     ],
+     "aide": "Le souvenir est loin dans le temps, et le nom est au singulier.",
+     "explication": "**that holiday** : that pour le passé qui s’éloigne."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0290fde-f898-53f3-8883-0e5c894b2570",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La visite guidée du musée",
+   "competence": "analyser-document",
+   "situation": "Léa visite un musée avec un guide. Le soir, elle écrit une carte postale à sa grand-mère.",
+   "documents": [
+    {
+     "id": "visite",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La visite guidée",
+     "participants": [
+      {
+       "nom": "Guide",
+       "emoji": "🧑‍🏫",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Guide",
+       "texte": "Good morning! Look at this statue next to me, and look at [[f|that]] painting on the far wall."
+      },
+      {
+       "qui": "Guide",
+       "texte": "These coins in my hand are Roman. And [[f|those]] coins in the window at the end of the room are Greek."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Wow, they are beautiful!"
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carte postale de Léa",
+     "blocs": [
+      "Dear Gran,",
+      "This morning we visited a big museum in Paris. We saw Roman coins and a beautiful statue.",
+      "Last summer, we went to Rome and I loved that trip. Love, Léa"
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque objet au démonstratif que le guide emploie.",
+     "paires": [
+      [
+       "la statue à côté du guide",
+       "this"
+      ],
+      [
+       "le tableau sur le mur du fond",
+       "that"
+      ],
+      [
+       "les pièces dans la main du guide",
+       "these"
+      ],
+      [
+       "les pièces dans la vitrine, au bout de la salle",
+       "those"
+      ]
+     ],
+     "aide": "Proche ou éloigné ? Singulier ou pluriel ?",
+     "explication": "**this** (proche, singulier), **that** (loin, singulier), **these** (proche, pluriel), **those** (loin, pluriel)."
+    },
+    {
+     "type": "zone",
+     "document": "visite",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux démonstratifs** que le guide emploie pour des objets **éloignés**.",
+     "aide": "Regarde les mots qui désignent le mur du fond et le bout de la salle.",
+     "explication": "**that painting** et **those coins** : that et those désignent ce qui est loin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la carte, pourquoi Léa écrit-elle « **that** trip » ?",
+     "options": [
+      "Le voyage est passé, loin dans le temps",
+      "Le voyage est tout proche, ici et maintenant",
+      "Le mot trip est au pluriel",
+      "Le voyage a lieu cet après-midi"
+     ],
+     "reponse": 0,
+     "aide": "Léa parle de l’été dernier.",
+     "explication": "**that trip** : that peut marquer une distance dans le temps (le passé)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Léa raconte sa matinée du jour même. Complète.",
+     "texte": "Dear Gran, ___ morning we visited a big museum.",
+     "reponses": [
+      [
+       "This"
+      ]
+     ],
+     "banque": [
+      "This",
+      "That",
+      "These",
+      "Those"
+     ],
+     "aide": "La matinée est celle d’aujourd’hui.",
+     "explication": "**This morning** : this pour le présent ou le futur proche."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ces pièces sont grecques. » La phrase commence par Those.",
+     "items": [
+      "Those",
+      "coins",
+      "are",
+      "Greek"
+     ],
+     "aide": "Those est le démonstratif pluriel éloigné.",
+     "explication": "**Those coins are Greek.** *Those* est déjà un pluriel : on n’écrit jamais « thoses »."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4870041-8ed9-5e45-9d47-62eb681fc6eb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le train de Mia",
+   "competence": "comprendre-langue",
+   "situation": "Mia arrive à la gare pour aller chez sa tante, mais la journée ne se passe pas comme prévu.",
+   "documents": [
+    {
+     "id": "gare",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "At the station",
+     "blocs": [
+      "When Mia arrived at the station, the train had already [[a|left]]. She was sad because she had [[a|missed]] it.",
+      "She had also [[a|forgotten]] her phone at home."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gare",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois participes passés** qui suivent *had* dans le texte.",
+     "aide": "Ils décrivent ce qui s’était passé avant l’arrivée de Mia.",
+     "explication": "**left**, **missed** et **forgotten** suivent *had* : le past perfect se forme avec **had + participe passé**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’auxiliaire qui convient.",
+     "texte": "When Mia arrived, the train ___ already left.",
+     "reponses": [
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "had",
+      "has",
+      "was",
+      "did"
+     ],
+     "aide": "C’est l’auxiliaire du past perfect, le même à toutes les personnes.",
+     "explication": "**had** : le train était parti **avant** l’arrivée de Mia."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle action s’est passée **en premier** ?",
+     "options": [
+      "Le train est parti.",
+      "Mia est arrivée à la gare.",
+      "Mia a été triste.",
+      "Mia a parlé au contrôleur."
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’action au past perfect.",
+     "explication": "Le **train** était déjà parti quand Mia est arrivée : l’action au past perfect est la plus ancienne."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4870041-8ed9-5e45-9d47-62eb681fc6eb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "En retard à l’école",
+   "competence": "lire-tableau",
+   "situation": "Lola est arrivée en retard à l’école. Elle explique à son professeur ce qui s’est passé, heure par heure. Elle est allée à l’école à pied.",
+   "documents": [
+    {
+     "id": "matin",
+     "type": "tableau",
+     "titre": "Le matin de Lola",
+     "colonnes": [
+      "Time",
+      "What happened"
+     ],
+     "lignes": [
+      [
+       "07.40",
+       "The bus left the stop."
+      ],
+      [
+       "07.45",
+       "Lola arrived at the stop."
+      ],
+      [
+       "08.30",
+       "The lessons started."
+      ],
+      [
+       "08.40",
+       "Lola got to school."
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Emploi du temps écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "matin",
+     "reponse": [
+      "r0c1"
+     ],
+     "multiple": false,
+     "enonce": "Touche la case de l’action la **plus ancienne** de la matinée.",
+     "aide": "Compare les heures.",
+     "explication": "**The bus left the stop** à 7 h 40 : c’est la première action, donc celle qu’on met au past perfect."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’auxiliaire qui convient.",
+     "texte": "When Lola arrived at the stop, the bus ___ already left.",
+     "reponses": [
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "had",
+      "has",
+      "have",
+      "was"
+     ],
+     "aide": "Le bus est parti à 7 h 40, avant Lola.",
+     "explication": "**had** : le past perfect (**had + left**) pose le départ du bus **avant** l’arrivée de Lola."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le bus était parti avant que Lola arrive. » La phrase commence par The bus.",
+     "items": [
+      "The bus",
+      "had",
+      "left",
+      "before",
+      "Lola",
+      "arrived"
+     ],
+     "aide": "L’action la plus ancienne est au past perfect.",
+     "explication": "**The bus had left before Lola arrived** : *had left* est antérieur à *arrived*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque morceau : action **la plus ancienne** (past perfect) ou **la plus récente** (prétérit) ?",
+     "categories": [
+      "La plus ancienne (past perfect)",
+      "La plus récente (prétérit)"
+     ],
+     "items": [
+      [
+       "the bus had left",
+       0
+      ],
+      [
+       "Lola arrived at the stop",
+       1
+      ],
+      [
+       "the lessons had started",
+       0
+      ],
+      [
+       "Lola got to school",
+       1
+      ]
+     ],
+     "aide": "Pour chaque couple, regarde l’heure qui vient d’abord dans le tableau.",
+     "explication": "Au moment où Lola arrive, **le bus était parti** et **les cours avaient commencé** : ce sont les actions les plus anciennes."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4870041-8ed9-5e45-9d47-62eb681fc6eb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le regret de Nathan",
+   "competence": "argumenter",
+   "situation": "Nathan a raté un contrôle. Il raconte sa journée dans son journal, puis discute avec sa mère par messages.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Nathan’s diary",
+     "blocs": [
+      "Last Friday was terrible. I had stayed up late the night before, so I overslept.",
+      "When I got to school, the teacher looked at me and said, “You arrived too late.” I [[w|wish]] I had gone to bed earlier! If I had set my alarm, I would have arrived on time."
+     ],
+     "source": "Journal écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Nathan et Maman",
+     "participants": [
+      {
+       "nom": "Nathan",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mum",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nathan",
+       "texte": "I’d studied all week, but I overslept."
+      },
+      {
+       "qui": "Mum",
+       "texte": "Oh dear. I’d like to call your teacher."
+      },
+      {
+       "qui": "Nathan",
+       "texte": "Please don’t! I’d rather write to her myself."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "w"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui introduit le **regret** de Nathan sur le passé.",
+     "aide": "Ce mot est suivi d’un past perfect.",
+     "explication": "**wish** + past perfect exprime un regret sur le passé : *I wish I had gone to bed earlier*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « If I had set my alarm, I would have arrived on time » ?",
+     "options": [
+      "Il n’a pas réglé son réveil et il est arrivé en retard.",
+      "Il a réglé son réveil et il est arrivé à l’heure.",
+      "Il réglera son réveil pour arriver à l’heure.",
+      "Il n’a pas réglé son réveil, mais il est arrivé à l’heure."
+     ],
+     "reponse": 0,
+     "aide": "La troisième condition parle de ce qui ne s’est pas passé.",
+     "explication": "**if + past perfect, would have + participe passé** : l’irréel du passé. Les faits réels sont l’inverse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour rapporter les paroles du professeur.",
+     "texte": "The teacher said that I ___ arrived too late.",
+     "reponses": [
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "had",
+      "has",
+      "was",
+      "would"
+     ],
+     "aide": "Au discours indirect, le prétérit devient un past perfect.",
+     "explication": "Après **said**, le prétérit (*arrived*) devient **had arrived** au discours indirect."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « S’il avait pris le bus, il serait arrivé plus tôt. » La phrase commence par If he.",
+     "items": [
+      "If he",
+      "had taken",
+      "the bus,",
+      "he would",
+      "have arrived",
+      "earlier"
+     ],
+     "aide": "Past perfect dans le *if*, would have + participe dans la principale.",
+     "explication": "**If he had taken the bus, he would have arrived earlier** : troisième condition."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans les messages, ’d vaut-il **had** ou **would** ?",
+     "categories": [
+      "’d = had",
+      "’d = would"
+     ],
+     "items": [
+      [
+       "I’d studied",
+       0
+      ],
+      [
+       "I’d like",
+       1
+      ],
+      [
+       "I’d rather",
+       1
+      ]
+     ],
+     "aide": "Après ’d, regarde si le mot suivant est un participe passé.",
+     "explication": "**I’d studied** = *I had studied* (participe passé). **I’d like** et **I’d rather** = *I would like / would rather*."
+    }
+   ]
+  },
+  {
+   "chapitre": "617c49ce-42cd-54ff-9a6f-3853561fe67c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois amis au collège",
+   "competence": "lire-tableau",
+   "situation": "Ana, Ben et Cleo comparent leur taille et leur âge pour un petit jeu en classe.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Three friends",
+     "colonnes": [
+      "Name",
+      "Height",
+      "Age"
+     ],
+     "lignes": [
+      [
+       "Ana",
+       "1.52 m",
+       12
+      ],
+      [
+       "Ben",
+       "1.48 m",
+       11
+      ],
+      [
+       "Cleo",
+       "1.55 m",
+       12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui donne la taille de **la personne la plus grande**.",
+     "aide": "Compare les trois tailles.",
+     "explication": "**1.55 m** : Cleo est la plus grande des trois."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la comparaison.",
+     "texte": "Cleo is ___ than Ben.",
+     "reponses": [
+      [
+       "taller"
+      ]
+     ],
+     "banque": [
+      "taller",
+      "tall",
+      "more tall",
+      "tallest"
+     ],
+     "aide": "*Tall* est un adjectif court : on ajoute *-er*.",
+     "explication": "**taller than** : adjectif court + *-er* + *than*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est **vraie** d’après le tableau ?",
+     "options": [
+      "Ana is as old as Cleo.",
+      "Ben is older than Ana.",
+      "Cleo is shorter than Ben.",
+      "Ben is taller than Ana."
+     ],
+     "reponse": 0,
+     "aide": "Compare les âges d’Ana et de Cleo.",
+     "explication": "**Ana is as old as Cleo.** : elles ont toutes les deux 12 ans, on emploie *as* + adjectif + *as*."
+    }
+   ]
+  },
+  {
+   "chapitre": "617c49ce-42cd-54ff-9a6f-3853561fe67c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le menu du Sunny Café",
+   "competence": "lire-tableau",
+   "situation": "Jade et Tom déjeunent au Sunny Café et comparent les prix du menu avant de commander.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "titre": "Menu",
+     "entete": "Sunny Café",
+     "emoji": "☕",
+     "lignes": [
+      {
+       "texte": "Burger",
+       "valeur": "£6.50",
+       "id": "burger"
+      },
+      {
+       "texte": "Pizza",
+       "valeur": "£8.00",
+       "id": "pizza"
+      },
+      {
+       "texte": "Salad",
+       "valeur": "£5.00",
+       "id": "salad"
+      },
+      {
+       "texte": "Orange juice",
+       "valeur": "£2.50",
+       "id": "juice"
+      }
+     ],
+     "pied": "Open every day",
+     "teinte": "ambre",
+     "source": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "reponse": [
+      "juice"
+     ],
+     "enonce": "Touche **l’article le moins cher** du menu.",
+     "aide": "Compare tous les prix.",
+     "explication": "**Orange juice** : £2.50 est le prix le plus bas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de livres sterling **de plus** la pizza coûte-t-elle que la salade ?",
+     "reponse": 3,
+     "unite": "£",
+     "aide": "Soustrais le prix de la salade à celui de la pizza.",
+     "explication": "8,00 − 5,00 = **3 £** : la pizza est plus chère que la salade."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Un burger est moins cher que la pizza. » La phrase commence par *A*.",
+     "items": [
+      "A",
+      "burger",
+      "is",
+      "less",
+      "expensive",
+      "than",
+      "pizza"
+     ],
+     "aide": "Infériorité : *less* + adjectif + *than*.",
+     "explication": "**A burger is less expensive than pizza.** : *less* + adjectif + *than*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « La pizza est plus chère que le burger » ?",
+     "options": [
+      "The pizza is more expensive than the burger.",
+      "The pizza is expensiver than the burger.",
+      "The pizza is more expensiver than the burger.",
+      "The pizza is most expensive than the burger."
+     ],
+     "reponse": 0,
+     "aide": "*Expensive* est un adjectif long.",
+     "explication": "**more expensive than** : adjectif long → *more* + adjectif + *than*."
+    }
+   ]
+  },
+  {
+   "chapitre": "617c49ce-42cd-54ff-9a6f-3853561fe67c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La bibliothèque du collège",
+   "competence": "lire-graphique",
+   "situation": "La bibliothécaire de Park School compte les visiteurs de la semaine. Elle affiche aussi un slogan pour donner envie de lire.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Visitors to the school library",
+     "categories": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri"
+     ],
+     "series": [
+      {
+       "nom": "Visitors",
+       "valeurs": [
+        12,
+        18,
+        9,
+        15,
+        20
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Visitors",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "valeurs": true,
+     "source": "Chiffres écrits pour l’exercice"
+    },
+    {
+     "id": "poster",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Library poster",
+     "blocs": [
+      "READ MORE!",
+      "The more you read, the better you speak!",
+      "Our library is bigger than before."
+     ],
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k2"
+     ],
+     "enonce": "Touche le jour où il y a eu **le moins** de visiteurs.",
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "**Wed** : 9 visiteurs, c’est la barre la plus basse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon mot.",
+     "texte": "There were ___ visitors on Wednesday than on Tuesday.",
+     "reponses": [
+      [
+       "fewer"
+      ]
+     ],
+     "banque": [
+      "fewer",
+      "less",
+      "more",
+      "littler"
+     ],
+     "aide": "*Visitors* est dénombrable, et il y en a moins mercredi.",
+     "explication": "**fewer** : « moins de » devant un nom dénombrable pluriel (*less* pour un indénombrable)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon comparatif.",
+     "texte": "Friday was ___ than Thursday.",
+     "reponses": [
+      [
+       "busier"
+      ]
+     ],
+     "banque": [
+      "busier",
+      "more busy",
+      "busyer",
+      "busiest"
+     ],
+     "aide": "*Busy* finit par -y : le y devient i.",
+     "explication": "**busier than** : adjectif court en *-y* → *-ier than*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque adjectif à son comparatif.",
+     "paires": [
+      [
+       "good",
+       "better"
+      ],
+      [
+       "bad",
+       "worse"
+      ],
+      [
+       "little",
+       "less"
+      ],
+      [
+       "big",
+       "bigger"
+      ]
+     ],
+     "aide": "Trois sont irréguliers ; *big* double sa consonne.",
+     "explication": "*good* → **better** ; *bad* → **worse** ; *little* → **less** ; *big* → **bigger**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « Plus tu lis, mieux tu écris » ? Inspire-toi de l’affiche.",
+     "options": [
+      "The more you read, the better you write.",
+      "The more you read, better you write.",
+      "More you read, the best you write.",
+      "The most you read, the better you write."
+     ],
+     "reponse": 0,
+     "aide": "Le modèle est sur l’affiche : *The more…, the better…*.",
+     "explication": "**The more you read, the better you write.** : *the* + comparatif, *the* + comparatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "5deb5eb8-67d2-5fdd-9498-a2a858b68b01",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les montagnes du Royaume-Uni",
+   "competence": "lire-tableau",
+   "situation": "Pour un exposé sur le Royaume-Uni, Maya a relevé la hauteur des principales montagnes de chaque pays.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Mountains of the UK",
+     "colonnes": [
+      "Mountain",
+      "Country",
+      "Height (m)"
+     ],
+     "lignes": [
+      [
+       "Ben Nevis",
+       "Scotland",
+       1345
+      ],
+      [
+       "Snowdon",
+       "Wales",
+       1085
+      ],
+      [
+       "Scafell Pike",
+       "England",
+       978
+      ],
+      [
+       "Slieve Donard",
+       "Northern Ireland",
+       850
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le nom de **la montagne la plus haute**.",
+     "aide": "Compare les hauteurs de la dernière colonne.",
+     "explication": "**Ben Nevis** : 1 345 m, c’est la plus haute montagne du tableau."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Ben Nevis is the highest mountain ___ the UK.",
+     "reponses": [
+      [
+       "in"
+      ]
+     ],
+     "banque": [
+      "in",
+      "of",
+      "at",
+      "on"
+     ],
+     "aide": "Après un superlatif, on emploie ce mot devant un lieu.",
+     "explication": "**in the UK** : après un superlatif, *in* introduit un lieu ou un groupe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Slieve Donard est la montagne la plus basse du tableau. Quelle phrase est correcte ?",
+     "options": [
+      "Slieve Donard is the lowest of the four mountains.",
+      "Slieve Donard is the most low of the four mountains.",
+      "Slieve Donard is lowest of the four mountains.",
+      "Slieve Donard is the lower of the four mountains."
+     ],
+     "reponse": 0,
+     "aide": "*Low* est court, et le superlatif a toujours *the*.",
+     "explication": "**the lowest** : *the* + adjectif court + *-est*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Snowdon est la plus haute montagne du pays de Galles. » La phrase commence par *Snowdon*.",
+     "items": [
+      "Snowdon",
+      "is",
+      "the",
+      "highest",
+      "mountain",
+      "in",
+      "Wales"
+     ],
+     "aide": "Sujet, *is*, *the* + superlatif, nom, *in*, lieu.",
+     "explication": "**Snowdon is the highest mountain in Wales.** : *the* + adjectif + *-est* + nom + *in* + lieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "5deb5eb8-67d2-5fdd-9498-a2a858b68b01",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des vacances en Cornouailles",
+   "competence": "manier-langue",
+   "situation": "Sam revient de vacances en Cornouailles. Il raconte son séjour à son amie Ava.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Sam et Ava",
+     "participants": [
+      {
+       "nom": "Ava",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ava",
+       "texte": "Hi Sam! How was Cornwall?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "Amazing! It was the [[h|hottest]] weekend of the summer, and it’s the most beautiful place I have ever visited!"
+      },
+      {
+       "qui": "Ava",
+       "texte": "Lucky you! Was the food good?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "It was the best fish I have ever eaten, and the cheapest!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le superlatif d’un **adjectif court** dont la **consonne finale est doublée**.",
+     "aide": "*Hot* devient *hotter* au comparatif.",
+     "explication": "**hottest** : *hot* → *the hottest* (la consonne *t* est doublée)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "She is the tallest girl ___ the class.",
+     "reponses": [
+      [
+       "in"
+      ]
+     ],
+     "banque": [
+      "in",
+      "of",
+      "at",
+      "to"
+     ],
+     "aide": "On parle d’un groupe, la classe.",
+     "explication": "**in the class** : après un superlatif, *in* devant un groupe ou un lieu."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le superlatif.",
+     "texte": "This is the ___ book I have ever read.",
+     "reponses": [
+      [
+       "most interesting"
+      ]
+     ],
+     "banque": [
+      "most interesting",
+      "more interesting",
+      "interestingest",
+      "most interested"
+     ],
+     "aide": "*Interesting* est un adjectif long.",
+     "explication": "**the most interesting** : adjectif long → *the most* + adjectif."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque adjectif à son superlatif.",
+     "paires": [
+      [
+       "big",
+       "the biggest"
+      ],
+      [
+       "happy",
+       "the happiest"
+      ],
+      [
+       "good",
+       "the best"
+      ],
+      [
+       "bad",
+       "the worst"
+      ]
+     ],
+     "aide": "Pense aux consonnes doublées, au *y* devenu *i* et aux irréguliers.",
+     "explication": "*big* → **the biggest** ; *happy* → **the happiest** ; *good* → **the best** ; *bad* → **the worst**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : deux éléments comparés (comparatif) ou trois et plus (superlatif).",
+     "categories": [
+      "Deux éléments : comparatif",
+      "Trois éléments ou plus : superlatif"
+     ],
+     "items": [
+      [
+       "Of the two brothers, Leo is the taller.",
+       0
+      ],
+      [
+       "Of the three brothers, Leo is the tallest.",
+       1
+      ],
+      [
+       "Of the two books, this is the more interesting.",
+       0
+      ],
+      [
+       "Of all the students, Kim is the most hard-working.",
+       1
+      ],
+      [
+       "Of the two cafés, Pete’s is the cheaper.",
+       0
+      ],
+      [
+       "Of the five cafés, Pete’s is the cheapest.",
+       1
+      ]
+     ],
+     "aide": "Compte les éléments comparés dans chaque phrase.",
+     "explication": "À **deux** éléments : comparatif (*the taller*). À **trois ou plus** : superlatif (*the tallest*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5deb5eb8-67d2-5fdd-9498-a2a858b68b01",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les champions du zoo",
+   "competence": "lire-graphique",
+   "situation": "Jade visite un parc animalier. Elle compare la vitesse des animaux et regarde les tarifs d’entrée.",
+   "documents": [
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Top speed of four animals",
+     "categories": [
+      "Cheetah",
+      "Lion",
+      "Horse",
+      "Elephant"
+     ],
+     "series": [
+      {
+       "nom": "Speed",
+       "valeurs": [
+        100,
+        80,
+        70,
+        40
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Top speed",
+      "unite": "km/h",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": true,
+     "source": "Chiffres arrondis"
+    },
+    {
+     "id": "prix",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Ticket prices",
+     "entete": "Wildlife Park",
+     "sousTitre": "Tickets",
+     "emoji": "🎟️",
+     "lignes": [
+      {
+       "texte": "Child",
+       "valeur": "£12",
+       "id": "enfant"
+      },
+      {
+       "texte": "Student",
+       "valeur": "£15",
+       "id": "etudiant"
+      },
+      {
+       "texte": "Adult",
+       "valeur": "£18",
+       "id": "adulte"
+      }
+     ],
+     "teinte": "vert",
+     "source": "Tarifs écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graph",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche l’animal **le plus lent** des quatre.",
+     "aide": "Cherche la plus petite vitesse.",
+     "explication": "**Elephant** : 40 km/h, c’est la vitesse la plus basse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase décrit correctement le graphique ?",
+     "options": [
+      "The cheetah is the fastest animal of the four.",
+      "The cheetah is the most fast animal of the four.",
+      "The cheetah is fastest animal of the four.",
+      "The cheetah is the faster animal of the four."
+     ],
+     "reponse": 0,
+     "aide": "Quatre animaux : superlatif, avec *the*.",
+     "explication": "**the fastest** : *the* + adjectif court + *-est* (quatre animaux = superlatif)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de km/h le guépard est-il plus rapide que le cheval ?",
+     "reponse": 30,
+     "unite": "km/h",
+     "aide": "Soustrais la vitesse du cheval à celle du guépard.",
+     "explication": "100 − 70 = **30 km/h**."
+    },
+    {
+     "type": "zone",
+     "document": "prix",
+     "reponse": [
+      "enfant"
+     ],
+     "enonce": "Touche le billet qui est **the least expensive**.",
+     "aide": "*The least expensive* veut dire « le moins cher ».",
+     "explication": "**Child** : £12, c’est le billet le moins cher (*the least expensive*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Choisis la préposition qui suit le superlatif.",
+     "categories": [
+      "in",
+      "of"
+     ],
+     "items": [
+      [
+       "the oldest building ___ the town",
+       0
+      ],
+      [
+       "the happiest day ___ my life",
+       1
+      ],
+      [
+       "the cheapest shop ___ the street",
+       0
+      ],
+      [
+       "the hottest week ___ the summer",
+       1
+      ],
+      [
+       "the biggest lake ___ England",
+       0
+      ],
+      [
+       "the longest night ___ the year",
+       1
+      ]
+     ],
+     "aide": "*In* devant un lieu ; *of* devant une période ou un ensemble.",
+     "explication": "**in** devant un lieu (*the town*, *the street*, *England*) ; **of** devant une période ou un ensemble (*my life*, *the summer*, *the year*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « C’est la plus haute tour de Paris. » La phrase commence par *It*.",
+     "items": [
+      "It",
+      "is",
+      "the",
+      "tallest",
+      "tower",
+      "in",
+      "Paris"
+     ],
+     "aide": "*The* + superlatif + nom + *in* + lieu.",
+     "explication": "**It is the tallest tower in Paris.** : *the* + adjectif + *-est* + nom + *in* + lieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "63a4aa8d-ba12-548f-b8be-114e11d012de",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La liste de courses du pique-nique",
+   "competence": "comprendre-langue",
+   "situation": "Leo prépare un pique-nique avec sa famille. Sa mère lui envoie la liste de courses par message.",
+   "documents": [
+    {
+     "id": "liste",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Mum et Leo",
+     "participants": [
+      {
+       "nom": "Mum",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mum",
+       "texte": "Hi Leo! For the picnic, please buy two [[p|boxes]] of tea, six [[p|potatoes]], four [[p|knives]] and some bread."
+      },
+      {
+       "qui": "Leo",
+       "texte": "OK! Anything else?"
+      },
+      {
+       "qui": "Mum",
+       "texte": "Yes, some water. Thanks!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liste",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois noms au pluriel** qui ne se terminent pas par un simple -s.",
+     "aide": "Cherche les terminaisons -es et -ves.",
+     "explication": "**boxes, potatoes, knives** : après -x et -o on ajoute **-es**, et knife devient knives (-fe → **-ves**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le message, quel nom est **indénombrable** ?",
+     "options": [
+      "bread",
+      "boxes",
+      "knives",
+      "potatoes"
+     ],
+     "reponse": 0,
+     "aide": "Un nom indénombrable n’a pas de pluriel et ne se compte pas directement.",
+     "explication": "**bread** est indénombrable : on ne dit pas « two breads » mais « two pieces of bread »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Leo boit de l’eau : il boit un ___ d’eau.",
+     "texte": "At the picnic, Leo drinks a ___ of water.",
+     "reponses": [
+      [
+       "glass"
+      ]
+     ],
+     "banque": [
+      "glass",
+      "piece",
+      "box",
+      "pair"
+     ],
+     "aide": "On compte l’eau avec un récipient.",
+     "explication": "**a glass of water** : pour compter un indénombrable, on emploie un partitif."
+    }
+   ]
+  },
+  {
+   "chapitre": "63a4aa8d-ba12-548f-b8be-114e11d012de",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une journée à la ferme de Green Farm",
+   "competence": "manier-langue",
+   "situation": "Une ferme pédagogique distribue une affiche à l’entrée. Elle annonce les animaux et l’équipe.",
+   "documents": [
+    {
+     "id": "ferme",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Green Farm",
+     "blocs": [
+      "Welcome to Green Farm! Come and meet 20 [[inv|sheep]] and 3 [[inv|deer]] in the fields.",
+      "Look for 8 mice in the barn. Children under five are free.",
+      "Our team: three men and two women. See you on Sunday!"
+     ],
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ferme",
+     "reponse": [
+      "inv"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux noms** dont le pluriel est **identique** au singulier.",
+     "aide": "Ce sont deux animaux : l’un a une laine, l’autre vit dans les bois.",
+     "explication": "**sheep** et **deer** ne changent pas au pluriel : one sheep, twenty sheep."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque singulier à son pluriel, comme sur l’affiche.",
+     "paires": [
+      [
+       "mouse",
+       "mice"
+      ],
+      [
+       "child",
+       "children"
+      ],
+      [
+       "man",
+       "men"
+      ],
+      [
+       "woman",
+       "women"
+      ]
+     ],
+     "aide": "Ces quatre pluriels sont irréguliers : on ne met pas de -s.",
+     "explication": "**mouse → mice, child → children, man → men, woman → women** : pluriels irréguliers à connaître par cœur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nom selon la façon dont il fait son pluriel.",
+     "categories": [
+      "Pluriel en -es",
+      "Pluriel en -ies ou -ves",
+      "Pluriel irrégulier"
+     ],
+     "items": [
+      [
+       "box",
+       0
+      ],
+      [
+       "watch",
+       0
+      ],
+      [
+       "potato",
+       0
+      ],
+      [
+       "city",
+       1
+      ],
+      [
+       "leaf",
+       1
+      ],
+      [
+       "knife",
+       1
+      ],
+      [
+       "tooth",
+       2
+      ],
+      [
+       "foot",
+       2
+      ],
+      [
+       "mouse",
+       2
+      ]
+     ],
+     "aide": "Regarde la fin du mot : -x, -ch, -o, consonne + y, -f ou -fe.",
+     "explication": "**box, watch, potato** → -es ; **city → cities, leaf → leaves, knife → knives** ; **tooth, foot, mouse** changent de voyelle (teeth, feet, mice)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Aya voit un deer dans le champ. Ben en voit trois. Complète.",
+     "texte": "Aya sees one deer. Ben sees three ___.",
+     "reponses": [
+      [
+       "deer"
+      ]
+     ],
+     "aide": "Pense au mot de l’affiche qui ne change pas.",
+     "explication": "**deer** : ce nom est inchangé au pluriel (comme sheep et fish)."
+    }
+   ]
+  },
+  {
+   "chapitre": "63a4aa8d-ba12-548f-b8be-114e11d012de",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les bonnes nouvelles de Kate",
+   "competence": "analyser-document",
+   "situation": "Kate écrit à son ami Sam : elle lui raconte ses bonnes nouvelles et lui parle du mobilier acheté pour sa chambre. Elle joint le ticket de caisse.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Un message de Kate",
+     "blocs": [
+      "Hi Sam,",
+      "I have good [[u|news]]! Our teacher gave me some [[u|advice]] about the exam, and Mum bought new [[u|furniture]] for my room. But I have a lot of [[u|homework]] today!"
+     ],
+     "source": "Message écrit pour l’exercice"
+    },
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Home & Co",
+     "sousTitre": "Saturday — 11:20",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "1 desk",
+       "valeur": "£60"
+      },
+      {
+       "texte": "1 chair",
+       "valeur": "£25"
+      },
+      {
+       "texte": "1 shelf",
+       "valeur": "£15"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "£100",
+       "gras": true
+      }
+     ],
+     "pied": "Thank you!",
+     "teinte": "bleu",
+     "source": "Ticket écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "u"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **quatre noms indénombrables** du message.",
+     "aide": "Ces noms ne prennent jamais de -s et n’ont pas de « a / an ».",
+     "explication": "**news, advice, furniture, homework** sont indénombrables, même si le français dit « des conseils » ou « des devoirs »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après le ticket, **combien d’objets** de mobilier Mum a-t-elle achetés ?",
+     "reponse": 3,
+     "aide": "Compte les lignes d’achat, sans la ligne TOTAL.",
+     "explication": "**3** objets : un bureau, une chaise, une étagère."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le partitif : on compte le mobilier par « pièces ».",
+     "texte": "Mum bought three ___ of furniture.",
+     "reponses": [
+      [
+       "pieces"
+      ]
+     ],
+     "banque": [
+      "pieces",
+      "piece",
+      "pairs",
+      "glasses"
+     ],
+     "aide": "Il y en a trois : le partitif prend la marque du pluriel.",
+     "explication": "**three pieces of furniture** : furniture reste au singulier, c’est le partitif qui se met au pluriel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Kate annonce une bonne nouvelle. Complète avec le bon verbe.",
+     "texte": "The news ___ good.",
+     "reponses": [
+      [
+       "is"
+      ]
+     ],
+     "banque": [
+      "is",
+      "are",
+      "were",
+      "have"
+     ],
+     "aide": "News est indénombrable : le verbe est toujours au singulier.",
+     "explication": "**The news is good.** « News » se termine par -s, mais c’est un indénombrable : verbe au **singulier**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "She gave me some good advice.",
+      "She gave me a good advice.",
+      "She gave me good advices.",
+      "She gave me many advices."
+     ],
+     "reponse": 0,
+     "aide": "Advice est indénombrable : ni a, ni pluriel.",
+     "explication": "**She gave me some good advice.** Avec un indénombrable : pas de « a », pas de -s."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6047999-8bce-5f37-a362-4a8db56911cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Si j’avais un chien",
+   "competence": "comprendre-langue",
+   "situation": "Lina et Max discutent de la météo de demain, puis Lina rêve à voix haute.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Lina et Max",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "If it rains tomorrow, I will stay home."
+      },
+      {
+       "qui": "Max",
+       "texte": "Me too. If it’s sunny, I will go to the park."
+      },
+      {
+       "qui": "Lina",
+       "texte": "If I had a dog, I [[w|would]] take it to the park."
+      },
+      {
+       "qui": "Max",
+       "texte": "You don’t have a dog!"
+      },
+      {
+       "qui": "Lina",
+       "texte": "No, but if I had one, I [[w|would]] call him Bingo."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "w"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui montrent que Lina parle de quelque chose d’**irréel**.",
+     "aide": "Ils se trouvent dans la proposition principale, pas après *if*.",
+     "explication": "**would** (deux fois) : *if + prétérit, would + base verbale* exprime l’irréel du présent."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : condition **possible** (type 1) ou **irréelle** (type 2) ?",
+     "categories": [
+      "Type 1 : possible",
+      "Type 2 : irréel du présent"
+     ],
+     "items": [
+      [
+       "If it rains tomorrow, I will stay home.",
+       0
+      ],
+      [
+       "If it’s sunny, I will go to the park.",
+       0
+      ],
+      [
+       "If I had a dog, I would take it to the park.",
+       1
+      ],
+      [
+       "If I had one, I would call him Bingo.",
+       1
+      ]
+     ],
+     "aide": "Lina a-t-elle vraiment un chien ?",
+     "explication": "Type 1 : *if + présent, will*. Type 2 : *if + prétérit, would*, pour une situation irréelle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour une condition irréelle.",
+     "texte": "If I ___ a bike, I would ride to school.",
+     "reponses": [
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "had",
+      "have",
+      "will have",
+      "would have"
+     ],
+     "aide": "On n’a pas de vélo : le verbe après *if* est au prétérit.",
+     "explication": "**had** : *if + prétérit*, jamais *will* ni *would* après *if*."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6047999-8bce-5f37-a362-4a8db56911cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre à la directrice",
+   "competence": "argumenter",
+   "situation": "Zoe a mis un mot dans la boîte à idées du collège : elle explique ce qu’elle ferait si elle dirigeait l’établissement.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Dear Mrs Bell",
+     "blocs": [
+      "Dear Mrs Bell, if I [[w|were]] the head teacher, I would build a swimming pool. If we had a pool, we would swim every Friday.",
+      "I would also change the canteen: if it served pizza, more students would eat there. Thank you for reading! Zoe, class 5B"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "w"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui est à la forme **were** après *if I*.",
+     "aide": "Il remplace *was* dans cette structure.",
+     "explication": "**were** : dans la condition de type 2, on emploie **were** à toutes les personnes (*if I were…*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "If I ___ you, I would apologise.",
+     "reponses": [
+      [
+       "were"
+      ]
+     ],
+     "banque": [
+      "were",
+      "am",
+      "be",
+      "will be"
+     ],
+     "aide": "On emploie la même forme pour toutes les personnes.",
+     "explication": "**were** : *If I were you, I would…* est la forme à retenir."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque condition de la lettre à sa conséquence.",
+     "paires": [
+      [
+       "If we had a pool,",
+       "we would swim every Friday."
+      ],
+      [
+       "If the canteen served pizza,",
+       "more students would eat there."
+      ],
+      [
+       "If I were the head teacher,",
+       "I would build a swimming pool."
+      ]
+     ],
+     "aide": "Relis chaque phrase de Zoe.",
+     "explication": "**if + prétérit, would + base verbale** : chaque condition irréelle est suivie de sa conséquence."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « S’il pleuvait, nous jouerions à l’intérieur. » La phrase commence par If it.",
+     "items": [
+      "If it",
+      "rained,",
+      "we would",
+      "play",
+      "inside"
+     ],
+     "aide": "Prétérit après *if*, would + base verbale dans la principale.",
+     "explication": "**If it rained, we would play inside** : type 2, avec une virgule après la proposition en *if*."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6047999-8bce-5f37-a362-4a8db56911cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bus manqué d’Ellie",
+   "competence": "argumenter",
+   "situation": "Ellie a raté la sortie scolaire. Le journal du collège raconte l’histoire, puis ses camarades réagissent.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "article",
+     "titre": "School news",
+     "blocs": [
+      "Ellie missed the museum trip last Saturday. She says: “If I [[g|had]] [[g|gone]] to bed earlier, I would have caught the bus.”",
+      "Next time, if she sets two alarms, she will arrive on time."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de la classe",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ruby",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Ellie",
+       "emoji": "👩",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "If you had told me, I would have woken you up."
+      },
+      {
+       "qui": "Ruby",
+       "texte": "If you come with us next time, you will love the museum."
+      },
+      {
+       "qui": "Ellie",
+       "texte": "If I had a car, I would drive to the museum myself!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Dans la proposition en *if* d’Ellie, touche les **deux mots** qui forment le past perfect.",
+     "aide": "Cherche *had* et le participe passé qui le suit.",
+     "explication": "**had** et **gone** : *if + past perfect* exprime un regret sur le passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « If I had gone to bed earlier, I would have caught the bus » ?",
+     "options": [
+      "Ellie ne s’est pas couchée tôt et elle a manqué le bus.",
+      "Ellie s’est couchée tôt et elle a pris le bus.",
+      "Ellie ne se couchera pas tôt demain.",
+      "Ellie ne se couche jamais tôt et prend toujours le bus."
+     ],
+     "reponse": 0,
+     "aide": "Une condition de type 3 parle du contraire de ce qui s’est passé.",
+     "explication": "Type 3 : **if + past perfect, would have + participe passé**. Les faits réels sont l’inverse."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon son **type** de condition.",
+     "categories": [
+      "Type 1 (possible)",
+      "Type 2 (irréel du présent)",
+      "Type 3 (irréel du passé)"
+     ],
+     "items": [
+      [
+       "If you had told me, I would have woken you up.",
+       2
+      ],
+      [
+       "If you come with us next time, you will love the museum.",
+       0
+      ],
+      [
+       "If I had a car, I would drive to the museum myself!",
+       1
+      ],
+      [
+       "If I had gone to bed earlier, I would have caught the bus.",
+       2
+      ]
+     ],
+     "aide": "Regarde le temps du verbe après *if*.",
+     "explication": "Présent → type 1 ; prétérit → type 2 ; past perfect → type 3."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour une condition possible.",
+     "texte": "Next time, if Ellie ___ two alarms, she will arrive on time.",
+     "reponses": [
+      [
+       "sets"
+      ]
+     ],
+     "banque": [
+      "sets",
+      "set",
+      "will set",
+      "would set"
+     ],
+     "aide": "Condition de type 1 : présent après *if*.",
+     "explication": "**sets** : après *if*, on emploie le **présent** pour une condition possible."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Si j’avais su, je te l’aurais dit. » La phrase commence par If I.",
+     "items": [
+      "If I",
+      "had known,",
+      "I would",
+      "have told",
+      "you"
+     ],
+     "aide": "Past perfect après *if*, would have + participe dans la principale.",
+     "explication": "**If I had known, I would have told you** : troisième condition."
+    }
+   ]
+  },
+  {
+   "chapitre": "eaf70f0e-b304-52ac-8501-33f4e40a6537",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des messages à rapporter",
+   "competence": "comprendre-langue",
+   "situation": "Ava et Ben échangent des messages. Plus tard, Ava les raconte à sa mère au discours indirect.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ava et de Ben",
+     "participants": [
+      {
+       "nom": "Ava",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ava",
+       "texte": "I [[p|am]] tired."
+      },
+      {
+       "qui": "Ben",
+       "texte": "I can’t come tonight, sorry."
+      },
+      {
+       "qui": "Ava",
+       "texte": "OK. I will call you tomorrow."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot du premier message qui devient *was* au discours indirect.",
+     "aide": "Le présent recule d’un cran au prétérit.",
+     "explication": "**am** : le présent simple devient un prétérit (*was*) après *said*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Ava said she ___ tired.",
+     "reponses": [
+      [
+       "was"
+      ]
+     ],
+     "banque": [
+      "was",
+      "is",
+      "were",
+      "had been"
+     ],
+     "aide": "Le verbe introducteur est au passé.",
+     "explication": "**Ava said she was tired.** : recul des temps, présent → prétérit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ava dit « I will call you tomorrow ». Quelle est la phrase rapportée ?",
+     "options": [
+      "Ava said she would call him the next day.",
+      "Ava said she will call him tomorrow.",
+      "Ava said she would call him tomorrow.",
+      "Ava said she called him the next day."
+     ],
+     "reponse": 0,
+     "aide": "*Will* devient *would*, et *tomorrow* change aussi.",
+     "explication": "**would** et **the next day** : *will* → *would* ; *tomorrow* → *the next day*."
+    }
+   ]
+  },
+  {
+   "chapitre": "eaf70f0e-b304-52ac-8501-33f4e40a6537",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que Tom a dit",
+   "competence": "lire-tableau",
+   "situation": "Tom raconte sa journée. Sa sœur rapporte ses paroles à leur mère. Complète les lignes du tableau.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Tom’s words",
+     "colonnes": [
+      "Paroles de Tom",
+      "Discours indirect"
+     ],
+     "lignes": [
+      [
+       "« I play football. »",
+       "Tom said he played football."
+      ],
+      [
+       "« I am late. »",
+       "?"
+      ],
+      [
+       "« I can swim. »",
+       "?"
+      ],
+      [
+       "« I saw her. »",
+       "?"
+      ],
+      [
+       "« Where do you live? »",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la phrase qui devient un **past perfect** au discours indirect.",
+     "aide": "Un prétérit recule d’un cran.",
+     "explication": "**« I saw her. »** : le prétérit devient un past perfect (*he had seen her*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la 2e ligne du tableau.",
+     "texte": "Tom said he ___ late.",
+     "reponses": [
+      [
+       "was"
+      ]
+     ],
+     "banque": [
+      "was",
+      "is",
+      "were",
+      "be"
+     ],
+     "aide": "Le présent de *be* recule au prétérit.",
+     "explication": "**Tom said he was late.** : *am* → *was*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Complète la 3e ligne du tableau : « Tom said he ___ swim. »",
+     "options": [
+      "could",
+      "can",
+      "would",
+      "must"
+     ],
+     "reponse": 0,
+     "aide": "*Can* recule d’un cran.",
+     "explication": "**could** : *can* → *could* au discours indirect."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la 4e ligne du tableau. La phrase commence par *Tom*.",
+     "items": [
+      "Tom",
+      "said",
+      "he",
+      "had",
+      "seen",
+      "her"
+     ],
+     "aide": "Prétérit direct → past perfect indirect.",
+     "explication": "**Tom said he had seen her.** : *saw* → *had seen*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la dernière ligne (question rapportée). La phrase commence par *Tom*.",
+     "items": [
+      "Tom",
+      "asked",
+      "me",
+      "where",
+      "I",
+      "lived"
+     ],
+     "aide": "Une question rapportée reprend l’ordre de l’affirmative.",
+     "explication": "**Tom asked me where I lived.** : ordre sujet + verbe, et recul au prétérit."
+    }
+   ]
+  },
+  {
+   "chapitre": "eaf70f0e-b304-52ac-8501-33f4e40a6537",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les messages de maman",
+   "competence": "analyser-document",
+   "situation": "Zoé échange avec sa mère avant une soirée. Le lendemain, elle raconte la conversation à son amie.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de maman et de Zoé",
+     "participants": [
+      {
+       "nom": "Mum",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mum",
+       "texte": "Don’t be late [[t|tonight]]."
+      },
+      {
+       "qui": "Zoe",
+       "texte": "I will be home at six."
+      },
+      {
+       "qui": "Mum",
+       "texte": "Did you finish your homework?"
+      },
+      {
+       "qui": "Zoe",
+       "texte": "I haven’t finished it yet. I will do it [[t|tomorrow]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Comment rapporte-t-on l’ordre « Don’t be late tonight » ?",
+     "options": [
+      "Mum told Zoe not to be late that night.",
+      "Mum told Zoe that she doesn’t be late that night.",
+      "Mum said Zoe not be late that night.",
+      "Mum told Zoe didn’t be late that night."
+     ],
+     "reponse": 0,
+     "aide": "Un ordre rapporté : *tell* + personne + *to* + base verbale.",
+     "explication": "**told Zoe not to be late** : ordre négatif = *tell* + complément + *not to* + base verbale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Mum a posé une question fermée. Complète.",
+     "texte": "Mum asked Zoe ___ she had finished her homework.",
+     "reponses": [
+      [
+       "if",
+       "whether"
+      ]
+     ],
+     "banque": [
+      "if",
+      "whether",
+      "that",
+      "what"
+     ],
+     "aide": "Une question qui appelle « oui » ou « non » se rapporte avec un mot de doute.",
+     "explication": "**if** ou **whether** : introduit une question fermée rapportée, sans inversion."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "t"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux repères de temps** qui changent au discours indirect.",
+     "aide": "*Tonight* et *tomorrow* ne se disent plus tels quels.",
+     "explication": "**tonight** → *that night* ; **tomorrow** → *the next day*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du discours direct à sa forme rapportée.",
+     "paires": [
+      [
+       "tonight",
+       "that night"
+      ],
+      [
+       "tomorrow",
+       "the next day"
+      ],
+      [
+       "I will be home",
+       "she would be home"
+      ],
+      [
+       "I haven’t finished",
+       "she hadn’t finished"
+      ]
+     ],
+     "aide": "Applique le recul des temps et les changements de repères.",
+     "explication": "*tonight* → **that night** ; *tomorrow* → **the next day** ; *will* → **would** ; *haven’t finished* → **hadn’t finished**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Maman a demandé si elle était prête. » La phrase commence par *Mum*.",
+     "items": [
+      "Mum",
+      "asked",
+      "if",
+      "she",
+      "was",
+      "ready"
+     ],
+     "aide": "Après *if*, on garde l’ordre sujet + verbe.",
+     "explication": "**Mum asked if she was ready.** : question rapportée avec *if*, ordre de l’affirmative."
+    }
+   ]
+  },
+  {
+   "chapitre": "838f6ae6-a475-5555-abfc-9190d3a3f2f4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au club de natation",
+   "competence": "comprendre-langue",
+   "situation": "Kim s’inscrit au club de natation. Dan, le moniteur, lui pose quelques questions.",
+   "documents": [
+    {
+     "id": "natation",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Dan et Kim",
+     "participants": [
+      {
+       "nom": "Dan",
+       "emoji": "🏊",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Kim",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Dan",
+       "texte": "Can you swim?"
+      },
+      {
+       "qui": "Kim",
+       "texte": "Yes, I can. I can swim and I can dive. But I [[n|can’t]] ride a horse."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "natation",
+     "reponse": [
+      "n"
+     ],
+     "multiple": false,
+     "enonce": "Touche la forme **négative** de can.",
+     "aide": "Elle se termine par -n’t.",
+     "explication": "**can’t** (ou *cannot*) est la négation de can."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment demande-t-on « Sais-tu nager ? »",
+     "options": [
+      "Can you swim?",
+      "Do you can swim?",
+      "Are you can swim?",
+      "Can you to swim?"
+     ],
+     "reponse": 0,
+     "aide": "Can est un modal : il passe devant le sujet, sans do ni to.",
+     "explication": "**Can you swim?** Le modal se place devant le sujet ; le verbe est à la base, sans to."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je sais faire du vélo. » La phrase commence par I.",
+     "items": [
+      "I",
+      "can",
+      "ride",
+      "a",
+      "bike"
+     ],
+     "aide": "Sujet, modal, verbe à la base.",
+     "explication": "**I can ride a bike.** Can est invariable, suivi du verbe sans to."
+    }
+   ]
+  },
+  {
+   "chapitre": "838f6ae6-a475-5555-abfc-9190d3a3f2f4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’histoire de Gran",
+   "competence": "manier-langue",
+   "situation": "Une élève raconte ce que sa grand-mère était capable de faire, hier comme demain.",
+   "documents": [
+    {
+     "id": "gran",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Gran’s story",
+     "blocs": [
+      "My gran is 70 now, but she is very strong.",
+      "When she was a girl, she [[g|could]] run very fast.",
+      "Last winter, a storm closed the road. Gran was [[p|able]] to reach the village on foot.",
+      "Next summer, she will be able to swim in the lake again."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gran",
+     "reponse": [
+      "g"
+     ],
+     "multiple": false,
+     "enonce": "Touche le modal qui exprime la **capacité passée générale**.",
+     "aide": "Elle courait vite quand elle était petite.",
+     "explication": "**could** : capacité passée générale (« elle savait courir »)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la forme qui l’exprime.",
+     "paires": [
+      [
+       "capacité présente",
+       "can"
+      ],
+      [
+       "capacité passée générale",
+       "could"
+      ],
+      [
+       "réussite précise au passé",
+       "was able to"
+      ],
+      [
+       "capacité future",
+       "will be able to"
+      ]
+     ],
+     "aide": "Une réussite ponctuelle n’emploie pas could.",
+     "explication": "**can**, **could**, **was/were able to**, **will be able to** : une forme pour chaque situation."
+    },
+    {
+     "type": "zone",
+     "document": "gran",
+     "reponse": [
+      "p"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui montre que Gran a **réussi cette fois-là** à atteindre le village.",
+     "aide": "La tempête n’a eu lieu qu’une fois.",
+     "explication": "**was able to** : réussite ponctuelle au passé, on n’emploie pas could."
+    },
+    {
+     "type": "trous",
+     "enonce": "Gran pourra nager l’été prochain. Complète.",
+     "texte": "Next summer, Gran ___ swim in the lake.",
+     "reponses": [
+      [
+       "will be able to"
+      ]
+     ],
+     "banque": [
+      "can",
+      "could",
+      "will be able to",
+      "must"
+     ],
+     "aide": "Can n’a pas de futur.",
+     "explication": "**will be able to** : forme de remplacement pour exprimer la capacité au futur."
+    }
+   ]
+  },
+  {
+   "chapitre": "838f6ae6-a475-5555-abfc-9190d3a3f2f4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un camp de natation au bord du lac",
+   "competence": "analyser-document",
+   "situation": "Tom est en camp de natation au bord d’un lac. Il écrit à son père, et son moniteur note ses progrès.",
+   "documents": [
+    {
+     "id": "lac",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Tom à Dad",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dad",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Hi Dad! From my window I can [[v|see]] the sea and I can [[v|hear]] the waves."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Yesterday the lake was very cold, but I was able to swim 100 metres!"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Could you send me my goggles, please?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Tom’s swimming test",
+     "colonnes": [
+      "Week",
+      "Distance"
+     ],
+     "lignes": [
+      [
+       "Week 1",
+       "25 m"
+      ],
+      [
+       "Week 2",
+       "50 m"
+      ],
+      [
+       "Week 3",
+       "100 m"
+      ]
+     ],
+     "source": "Résultats inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lac",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes de perception** que Tom emploie avec *can*.",
+     "aide": "Ce sont des verbes qui parlent de ce qu’on voit et de ce qu’on entend.",
+     "explication": "**see** et **hear** : avec les verbes de perception, l’anglais emploie *can*, là où le français dit simplement « je vois, j’entends »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Tom écrit-il « **Could** you send me… » et non « Can you… » ?",
+     "options": [
+      "Could rend la demande plus polie",
+      "Could parle d’une action déjà terminée",
+      "Can n’existe pas dans les questions",
+      "Could exprime une réussite précise"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la manière de demander gentiment un service.",
+     "explication": "**Could you…?** est une formule plus polie que *Can you…?*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après le tableau, **de combien de mètres** Tom a-t-il progressé entre la semaine 1 et la semaine 3 ?",
+     "reponse": 75,
+     "unite": "m",
+     "aide": "Soustrais la première distance à la dernière.",
+     "explication": "100 − 25 = **75** mètres de progrès."
+    },
+    {
+     "type": "trous",
+     "enonce": "En semaine 3, Tom a réussi son test (une réussite précise). Complète.",
+     "texte": "In week 3, Tom ___ swim 100 m.",
+     "reponses": [
+      [
+       "was able to"
+      ]
+     ],
+     "banque": [
+      "was able to",
+      "can",
+      "will be able to",
+      "must"
+     ],
+     "aide": "C’est une réussite ponctuelle, au passé.",
+     "explication": "**was able to** : réussite ponctuelle au passé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Tu pourras peut-être venir. » La phrase commence par You.",
+     "items": [
+      "You",
+      "might",
+      "be",
+      "able",
+      "to",
+      "come"
+     ],
+     "aide": "Après might, on emploie be able to.",
+     "explication": "**You might be able to come.** Après un modal, on emploie la forme de remplacement *be able to*."
+    }
+   ]
+  },
+  {
+   "chapitre": "f67d09fc-f9e9-54a8-91d0-f117c075d1cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un téléphone tout neuf",
+   "competence": "comprendre-langue",
+   "situation": "Léa raconte à une amie l’achat de son téléphone. L’ordre des mots anglais est strict : sujet, verbe, complément.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Léa’s weekend",
+     "blocs": [
+      "Last Saturday I bought a new [[o|phone]] in town. It was raining, so I took a taxi.",
+      "There is a problem now: my sister borrowed it."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "o"
+     ],
+     "multiple": false,
+     "enonce": "Touche le **nom** qui est le complément d’objet de *bought*.",
+     "aide": "Qu’est-ce que Léa a acheté ?",
+     "explication": "**phone** : *I (S) bought (V) a new phone (O)* suit l’ordre sujet – verbe – objet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Elle a joué du piano magnifiquement au concert hier soir. » La phrase commence par She.",
+     "items": [
+      "She",
+      "played",
+      "the piano",
+      "beautifully",
+      "at the concert",
+      "last night"
+     ],
+     "aide": "Après l’objet : manière, lieu, temps.",
+     "explication": "**She played the piano beautifully at the concert last night** : sujet, verbe, objet, puis manière → lieu → temps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « It was raining » et non « Was raining » ?",
+     "options": [
+      "Parce que le sujet est obligatoire en anglais.",
+      "Parce que *rain* est un verbe irrégulier.",
+      "Parce que le prétérit exige *it*.",
+      "Parce que *raining* est un nom."
+     ],
+     "reponse": 0,
+     "aide": "Regarde la phrase sans *it* : que manque-t-il ?",
+     "explication": "Le **sujet est obligatoire** en anglais, même quand il est vide : *It was raining*."
+    }
+   ]
+  },
+  {
+   "chapitre": "f67d09fc-f9e9-54a8-91d0-f117c075d1cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La soirée de Lou",
+   "competence": "manier-langue",
+   "situation": "Lou raconte sa soirée dans un petit article. Il y a des phrases coordonnées et des phrases subordonnées.",
+   "documents": [
+    {
+     "id": "soiree",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Lou’s evening",
+     "blocs": [
+      "I was tired, [[c|so]] I went to bed early. I wanted to read, [[c|but]] my eyes hurt.",
+      "My sister, who sleeps in the next room, was playing music that I don’t like. I will tell her when she comes home."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "soiree",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots de coordination** qui relient deux propositions de même rang.",
+     "aide": "Ce sont des petits mots entre deux propositions.",
+     "explication": "**so** et **but** coordonnent deux propositions : elles ont le **même rang**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mot du texte : **coordination** ou **subordination** ?",
+     "categories": [
+      "Coordination",
+      "Subordination"
+     ],
+     "items": [
+      [
+       "so",
+       0
+      ],
+      [
+       "but",
+       0
+      ],
+      [
+       "who",
+       1
+      ],
+      [
+       "when",
+       1
+      ]
+     ],
+     "aide": "La subordination fait dépendre une proposition d’une autre.",
+     "explication": "**so, but** relient deux propositions de même rang ; **who** (relative) et **when** (temps) introduisent une subordonnée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète après la conjonction de temps.",
+     "texte": "I’ll call you as soon as I ___ home.",
+     "reponses": [
+      [
+       "get"
+      ]
+     ],
+     "banque": [
+      "get",
+      "will get",
+      "got",
+      "getting"
+     ],
+     "aide": "Après *as soon as*, on emploie le présent.",
+     "explication": "**get** : après une conjonction de temps, on emploie le **présent** pour l’avenir."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je n’ai vu personne. » La phrase commence par I.",
+     "items": [
+      "I",
+      "didn’t",
+      "see",
+      "anybody"
+     ],
+     "aide": "Une seule négation par phrase.",
+     "explication": "**I didn’t see anybody** : l’anglais n’admet pas de double négation (*nobody*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f67d09fc-f9e9-54a8-91d0-f117c075d1cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le club d’échecs",
+   "competence": "argumenter",
+   "situation": "Noor et Ali découvrent le club d’échecs du collège. Ils lisent le règlement, puis échangent des messages.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Chess club",
+     "blocs": [
+      "Our chess club meets on Fridays at four o’clock. You can bring a friend if you ask Mr Hall first.",
+      "[[u|Unless]] it rains, we play in the yard. We use the library when it is cold. In order to win more games, practise every week."
+     ],
+     "source": "Règlement écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Noor et Ali",
+     "participants": [
+      {
+       "nom": "Noor",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ali",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noor",
+       "texte": "I speak English well, but I didn’t understand the rules."
+      },
+      {
+       "qui": "Ali",
+       "texte": "I think they are simple. I [[f|often]] play with my brother."
+      },
+      {
+       "qui": "Noor",
+       "texte": "I will call you when I arrive on Friday."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "u"
+     ],
+     "multiple": false,
+     "enonce": "Touche la conjonction qui veut dire « **à moins que** ».",
+     "aide": "C’est le premier mot d’une phrase du règlement.",
+     "explication": "**Unless** exprime une condition négative (« à moins que »)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque morceau du règlement selon le **type** de subordonnée.",
+     "categories": [
+      "Temps",
+      "Condition",
+      "But"
+     ],
+     "items": [
+      [
+       "when it is cold",
+       0
+      ],
+      [
+       "if you ask Mr Hall first",
+       1
+      ],
+      [
+       "unless it rains",
+       1
+      ],
+      [
+       "in order to win more games",
+       2
+      ]
+     ],
+     "aide": "Pense à la question : quand ? sous quelle condition ? pour quoi ?",
+     "explication": "**when** : temps ; **if, unless** : condition ; **in order to** : but."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le mot omis.",
+     "texte": "I think ___ they are simple.",
+     "reponses": [
+      [
+       "that"
+      ]
+     ],
+     "banque": [
+      "that",
+      "which",
+      "who",
+      "where"
+     ],
+     "aide": "C’est un mot qu’on peut souvent omettre après *I think*.",
+     "explication": "**that** introduit la subordonnée complétive ; il est souvent omis dans « I think they are simple »."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "f"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’**adverbe de fréquence** dans les messages.",
+     "aide": "Il répond à « à quelle fréquence ? ».",
+     "explication": "**often** se place **avant** le verbe lexical : *I often play*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "We didn’t meet anyone at the club.",
+      "We didn’t meet no one at the club.",
+      "We met not anyone at the club.",
+      "We didn’t met anyone at the club."
+     ],
+     "reponse": 0,
+     "aide": "Une seule négation, et la base verbale après *didn’t*.",
+     "explication": "**We didn’t meet anyone** : pas de double négation, base verbale après *didn’t*."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d2bd35f-6f7f-5753-a1fb-86e7b856c46a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le téléphone perdu",
+   "competence": "comprendre-langue",
+   "situation": "Jo a perdu son téléphone au collège. Sam l’aide à le retrouver.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Jo et Sam",
+     "participants": [
+      {
+       "nom": "Jo",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jo",
+       "texte": "I can’t find my phone. Can you help me?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "Sure! Is this blue phone yours?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "No, mine is red. That one is Lily’s. She lost it yesterday."
+      },
+      {
+       "qui": "Sam",
+       "texte": "I’ll give it to [[l|her]] at school."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "l"
+     ],
+     "multiple": false,
+     "enonce": "Touche le **pronom complément** qui remplace *Lily*.",
+     "aide": "Un pronom complément suit le verbe ou une préposition.",
+     "explication": "**her** : après la préposition *to*, le pronom complément de *she* est **her**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le pronom possessif.",
+     "texte": "No, ___ is red.",
+     "reponses": [
+      [
+       "mine"
+      ]
+     ],
+     "banque": [
+      "mine",
+      "my",
+      "me",
+      "myself"
+     ],
+     "aide": "Il remplace « mon téléphone » sans nom derrière.",
+     "explication": "**mine** : le pronom possessif de *I* s’emploie sans nom (*mine is red*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que remplace *it* dans « She lost it yesterday » ?",
+     "options": [
+      "Le téléphone de Lily.",
+      "Le téléphone de Jo.",
+      "Lily elle-même.",
+      "Le collège."
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase d’avant : *That one is Lily’s*.",
+     "explication": "**it** reprend une chose : ici le téléphone de Lily."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d2bd35f-6f7f-5753-a1fb-86e7b856c46a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Merci pour la fête",
+   "competence": "manier-langue",
+   "situation": "Après l’anniversaire d’Emma, une amie lui écrit une carte de remerciement. Emma lui répond par message.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Dear Emma",
+     "blocs": [
+      "Dear Emma, we had a great time at your party. Tom [[r|himself]] made a joke, and my brother made the cake [[r|himself]]!",
+      "We want to thank you and your parents. Our gift is for you: this card is from us."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Message d’Emma",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Thanks! I get up at six on Saturdays. I wash and I dress quickly. I don’t feel tired."
+      }
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux pronoms réfléchis** de la lettre.",
+     "aide": "Ils se terminent par -self.",
+     "explication": "**himself** (deux fois) : ici, le pronom réfléchi sert à **insister** (*il l’a fait lui-même*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pronom sujet à son pronom complément.",
+     "paires": [
+      [
+       "I",
+       "me"
+      ],
+      [
+       "she",
+       "her"
+      ],
+      [
+       "we",
+       "us"
+      ],
+      [
+       "they",
+       "them"
+      ]
+     ],
+     "aide": "Le pronom complément suit le verbe ou une préposition.",
+     "explication": "I – **me**, she – **her**, we – **us**, they – **them**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le pronom réfléchi.",
+     "texte": "My brother made the cake ___.",
+     "reponses": [
+      [
+       "himself"
+      ]
+     ],
+     "banque": [
+      "himself",
+      "herself",
+      "itself",
+      "him"
+     ],
+     "aide": "Il insiste sur celui qui l’a fait : un garçon.",
+     "explication": "**himself** : le pronom réfléchi de *he* ; il dit « il l’a fait lui-même »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi n’y a-t-il pas de *myself* dans « I wash and I dress quickly » ?",
+     "options": [
+      "Ces verbes ne prennent pas de réfléchi en anglais.",
+      "Parce que *myself* est réservé à l’écrit formel.",
+      "Parce que le sujet est au pluriel dans ce message.",
+      "Parce qu’Emma est seule quand elle se prépare."
+     ],
+     "reponse": 0,
+     "aide": "En français, on dit « je me lave » : et en anglais ?",
+     "explication": "Certains verbes pronominaux français ne le sont pas en anglais : **I wash**, **I get up**, **I feel**, sans pronom réfléchi."
+    }
+   ]
+  },
+  {
+   "chapitre": "9d2bd35f-6f7f-5753-a1fb-86e7b856c46a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "À qui est-ce ?",
+   "competence": "argumenter",
+   "situation": "Le collège range les objets trouvés. La surveillante interroge les élèves pour rendre chaque objet à son propriétaire.",
+   "documents": [
+    {
+     "id": "objets",
+     "type": "tableau",
+     "titre": "Les objets trouvés",
+     "colonnes": [
+      "Object",
+      "Owner"
+     ],
+     "lignes": [
+      [
+       "Blue bag",
+       "Ava"
+      ],
+      [
+       "Green scarf",
+       "Noah"
+      ],
+      [
+       "Yellow ball",
+       "the twins"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Liste écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Mme Lee, Ava et Noah",
+     "participants": [
+      {
+       "nom": "Ms Lee",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ava",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Noah",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ms Lee",
+       "texte": "It’s late, Ava. Is the blue bag yours?"
+      },
+      {
+       "qui": "Ava",
+       "texte": "Yes, it’s mine! I looked for it [[s|by]] [[s|myself]]."
+      },
+      {
+       "qui": "Ms Lee",
+       "texte": "Good. Noah, the green scarf is yours, I think."
+      },
+      {
+       "qui": "Noah",
+       "texte": "Thanks, miss. And the ball? I think it belongs to the twins."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Le foulard est à Noah. Complète avec le pronom possessif.",
+     "texte": "The scarf is Noah’s. It’s ___.",
+     "reponses": [
+      [
+       "his"
+      ]
+     ],
+     "banque": [
+      "his",
+      "him",
+      "he",
+      "himself"
+     ],
+     "aide": "Noah est un garçon.",
+     "explication": "**his** : le pronom possessif de *he* est **his**."
+    },
+    {
+     "type": "trous",
+     "enonce": "La balle est aux jumeaux. Complète avec le pronom possessif.",
+     "texte": "The ball is the twins’. It’s ___.",
+     "reponses": [
+      [
+       "theirs"
+      ]
+     ],
+     "banque": [
+      "theirs",
+      "their",
+      "them",
+      "themselves"
+     ],
+     "aide": "Il remplace « leur balle », sans nom derrière.",
+     "explication": "**theirs** : le pronom possessif de *they* s’emploie sans nom."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui disent qu’Ava a cherché son sac **toute seule**.",
+     "aide": "Cherche la préposition et le pronom réfléchi.",
+     "explication": "**by myself** : *by* + pronom réfléchi veut dire « tout seul »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque pronom : **complément**, **possessif** ou **réfléchi** ?",
+     "categories": [
+      "Pronom complément",
+      "Pronom possessif",
+      "Pronom réfléchi"
+     ],
+     "items": [
+      [
+       "them",
+       0
+      ],
+      [
+       "hers",
+       1
+      ],
+      [
+       "themselves",
+       2
+      ],
+      [
+       "us",
+       0
+      ],
+      [
+       "ours",
+       1
+      ],
+      [
+       "yourself",
+       2
+      ]
+     ],
+     "aide": "Les réfléchis finissent par -self ou -selves ; les possessifs s’emploient sans nom.",
+     "explication": "**them, us** : compléments ; **hers, ours** : possessifs ; **themselves, yourself** : réfléchis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente *it* dans « It’s late, Ava » ?",
+     "options": [
+      "Un sujet vide : il parle de l’heure.",
+      "Le sac bleu que Mme Lee a trouvé.",
+      "Le foulard vert que Noah a perdu.",
+      "La surveillante qui range les objets."
+     ],
+     "reponse": 0,
+     "aide": "Peut-on remplacer *it* par un objet précis ?",
+     "explication": "**It** est ici un **sujet vide** : il parle de l’heure, comme dans *It’s cold* ou *It’s five o’clock*."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc2d1f5e-c280-51c2-9c90-d80504dfc114",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une idée pour le club",
+   "competence": "comprendre-langue",
+   "situation": "Nora propose à Ben d’inviter sa tante au club d’anglais. Observe les petits mots devant les noms.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Nora et Ben",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Hi Ben! I have [[an|an]] idea for the club. My aunt is a dentist, and she can come for [[an|an]] hour on Friday."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Great! I love it."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "an"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux fois** où Nora écrit **an**.",
+     "aide": "Cherche le petit mot de deux lettres.",
+     "explication": "**an idea** et **an hour** : on emploie **an** devant un son de voyelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « an hour » alors que hour commence par un h ?",
+     "options": [
+      "Parce que le h ne se prononce pas : on entend un son de voyelle",
+      "Parce que hour est un nom au pluriel en anglais",
+      "Parce que an se met devant tous les noms de durée",
+      "Parce que le h est toujours muet devant la lettre o"
+     ],
+     "reponse": 0,
+     "aide": "C’est le son, pas la lettre, qui décide.",
+     "explication": "**On entend [aʊə], un son de voyelle** : donc an, même si la lettre h est écrite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du message avec le métier de la tante.",
+     "texte": "My aunt is ___ dentist.",
+     "reponses": [
+      [
+       "a"
+      ]
+     ],
+     "banque": [
+      "a",
+      "an",
+      "the",
+      "two"
+     ],
+     "aide": "Dentist commence par un son de consonne, et on dit « a » devant un métier.",
+     "explication": "**She is a dentist.** Devant un métier, on met **a** ou **an** (ici a, devant un son de consonne)."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc2d1f5e-c280-51c2-9c90-d80504dfc114",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ella, une correspondante près de la Tamise",
+   "competence": "manier-langue",
+   "situation": "Ella, une collégienne de Londres, écrit à sa correspondante française. Elle parle de sa ville et de ses loisirs.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Un message d’Ella",
+     "blocs": [
+      "Hi! I’m Ella. I live in London, near the Thames.",
+      "At school I play [[z|football]] and on Sundays I play the piano. I have [[z|breakfast]] at seven."
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "z"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux noms** qui s’emploient **sans article** (un sport et un repas).",
+     "aide": "Un sport et un repas n’en prennent pas.",
+     "explication": "**football** et **breakfast** : un sport, un repas → **pas d’article**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nom selon qu’il demande **the** ou **aucun article**.",
+     "categories": [
+      "Avec the",
+      "Sans article"
+     ],
+     "items": [
+      [
+       "Thames",
+       0
+      ],
+      [
+       "football",
+       1
+      ],
+      [
+       "Alps",
+       0
+      ],
+      [
+       "tennis",
+       1
+      ],
+      [
+       "Atlantic",
+       0
+      ],
+      [
+       "Paris",
+       1
+      ],
+      [
+       "breakfast",
+       1
+      ],
+      [
+       "violin",
+       0
+      ]
+     ],
+     "aide": "Fleuves, chaînes de montagnes, océans : the. Sports, villes, repas : rien. Un instrument prend the.",
+     "explication": "**the Thames, the Alps, the Atlantic, the violin** ; **football, tennis, Paris, breakfast** s’emploient sans article."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ella dit : « My mum goes to the school to see the teacher. » Que montre **the school** ?",
+     "options": [
+      "Le bâtiment précis, pas l’activité d’étudier",
+      "L’activité d’étudier, pas le bâtiment",
+      "Que l’école est unique au monde",
+      "Que l’école est un nom au pluriel"
+     ],
+     "reponse": 0,
+     "aide": "Compare « goes to school » (étudier) avec « goes to the school ».",
+     "explication": "**The school** désigne le **bâtiment**. On dit *go to school* pour l’activité d’étudier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’article qui convient devant un fleuve.",
+     "texte": "Ella lives near ___ Thames.",
+     "reponses": [
+      [
+       "the"
+      ]
+     ],
+     "banque": [
+      "the",
+      "a",
+      "an",
+      "this"
+     ],
+     "aide": "Les fleuves se disent avec l’article défini.",
+     "explication": "**the Thames** : les fleuves, océans et chaînes de montagnes prennent **the**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc2d1f5e-c280-51c2-9c90-d80504dfc114",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un week-end à Londres",
+   "competence": "analyser-document",
+   "situation": "Un guide touristique présente Londres. Kim, elle, raconte à son père ce qu’elle a vu dans le parc.",
+   "documents": [
+    {
+     "id": "guide",
+     "type": "texte",
+     "genre": "article",
+     "titre": "London tips",
+     "blocs": [
+      "The Thames is a long river in London.",
+      "Visit Tower Bridge: it is the [[s|best]] place for photos.",
+      "The museum is open twice a week, on Monday and Friday.",
+      "You can see a lot from the top. It is an amazing view!"
+     ],
+     "source": "Guide écrit pour l’exercice"
+    },
+    {
+     "id": "parc",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Kim et Dad",
+     "participants": [
+      {
+       "nom": "Kim",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dad",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Kim",
+       "texte": "Dad, I saw a dog and a cat in the park."
+      },
+      {
+       "qui": "Dad",
+       "texte": "Was the dog big?"
+      },
+      {
+       "qui": "Kim",
+       "texte": "Yes! The dog was huge but the cat was tiny."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "guide",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le **superlatif** : l’adjectif qui exige **the** devant lui.",
+     "aide": "C’est le mot qui veut dire « le meilleur ».",
+     "explication": "**the best** : un superlatif prend toujours **the**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’expression de fréquence du guide.",
+     "texte": "The museum is open ___ a week.",
+     "reponses": [
+      [
+       "twice"
+      ]
+     ],
+     "banque": [
+      "twice",
+      "two",
+      "second",
+      "double"
+     ],
+     "aide": "Le musée ouvre deux fois…",
+     "explication": "**twice a week** : pour la fréquence, on emploie **a** (« par »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le message de Dad, pourquoi « **the** dog » et pas « a dog » ?",
+     "options": [
+      "Parce que Kim a déjà parlé de ce chien",
+      "Parce que le chien est unique au monde",
+      "Parce que dog est au pluriel",
+      "Parce que le chien est un animal rare"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la première phrase de Kim.",
+     "explication": "**The dog** : le chien a déjà été mentionné (*a dog* la première fois, *the dog* ensuite)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon l’article qui manque.",
+     "categories": [
+      "a / an",
+      "the",
+      "Aucun article"
+     ],
+     "items": [
+      [
+       "She is ___ dentist.",
+       0
+      ],
+      [
+       "___ sun is hot.",
+       1
+      ],
+      [
+       "I like ___ dogs.",
+       2
+      ],
+      [
+       "He plays ___ guitar.",
+       1
+      ],
+      [
+       "We have ___ breakfast at seven.",
+       2
+      ],
+      [
+       "It takes ___ hour.",
+       0
+      ]
+     ],
+     "aide": "Métier : a. Objet unique ou instrument : the. Pluriel général, repas : rien.",
+     "explication": "**a** devant un métier, **the** devant le soleil et l’instrument, **rien** devant un pluriel général ou un repas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il est le meilleur joueur. » La phrase commence par He.",
+     "items": [
+      "He",
+      "is",
+      "the",
+      "best",
+      "player"
+     ],
+     "aide": "Le superlatif s’emploie avec the.",
+     "explication": "**He is the best player.** Superlatif : the + best."
+    }
+   ]
+  }
+ ]
+}

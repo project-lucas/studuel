@@ -1,0 +1,4793 @@
+{
+ "niveau": "6e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "82cc1a20-c0cf-526a-b188-84ec864c6402",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plan du skate-park",
+   "competence": "geometrie",
+   "situation": "Sur le plan du skate-park, Inès a tracé le rail [AB], la ligne de vue (CD) et le faisceau du projecteur placé en E, qui passe par F. M est le milieu du rail.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan du skate-park",
+     "source": "Plan dessiné pour l’exercice, pas à l’échelle",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 6.5,
+       "position": "no"
+      },
+      {
+       "id": "M",
+       "x": 3.5,
+       "y": 6.5,
+       "position": "n"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 6.5,
+       "position": "ne"
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 1.5,
+       "position": "s"
+      },
+      {
+       "id": "D",
+       "x": 11,
+       "y": 4.5,
+       "position": "e"
+      },
+      {
+       "id": "E",
+       "x": 1.5,
+       "y": 2.5,
+       "position": "so"
+      },
+      {
+       "id": "F",
+       "x": 4.5,
+       "y": 3.4,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "M",
+       "codage": 1
+      },
+      {
+       "de": "M",
+       "a": "B",
+       "codage": 1
+      }
+     ],
+     "droites": [
+      {
+       "id": "cd",
+       "par": [
+        "C",
+        "D"
+       ],
+       "nom": "(CD)"
+      }
+     ],
+     "demiDroites": [
+      {
+       "id": "ef",
+       "origine": "E",
+       "par": "F"
+      }
+     ],
+     "textes": [
+      {
+       "x": 1,
+       "y": 7.4,
+       "texte": "AB = 8 cm"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche la **demi-droite** : celle qui a une origine et qui est illimitée de l’autre côté.",
+     "reponse": [
+      "ef"
+     ],
+     "aide": "Une demi-droite commence en un point et continue sans jamais s’arrêter.",
+     "explication": "Le faisceau part du point E et continue au-delà de F : c’est la **demi-droite [EF)**. La droite (CD) est illimitée des deux côtés."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque écriture à l’objet qu’elle désigne.",
+     "paires": [
+      [
+       "Crochets des deux côtés : [AB]",
+       "Un segment"
+      ],
+      [
+       "Parenthèses des deux côtés : (AB)",
+       "Une droite"
+      ],
+      [
+       "Un crochet et une parenthèse : [AB)",
+       "Une demi-droite"
+      ],
+      [
+       "Aucun signe : AB",
+       "Une longueur"
+      ]
+     ],
+     "aide": "Crochets : on s’arrête. Parenthèses : on continue des deux côtés.",
+     "explication": "Crochets des deux côtés pour un **segment**, parenthèses pour une **droite**, un crochet et une parenthèse pour une **demi-droite**, aucune marque pour une **longueur**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "M est le milieu de [AB] (les deux moitiés portent le même codage). Combien mesure AM, en cm ?",
+     "unite": "cm",
+     "reponse": 4,
+     "aide": "Le milieu coupe le segment en deux parties égales.",
+     "explication": "M est le milieu : AM = MB = AB ÷ 2 = 8 ÷ 2 = **4 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "82cc1a20-c0cf-526a-b188-84ec864c6402",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les allées du parc",
+   "competence": "geometrie",
+   "situation": "Sur le plan du parc, les allées (a) et (b) coupent l’allée centrale (c) à angle droit. Une quatrième allée (f) est parallèle à (c).",
+   "documents": [
+    {
+     "id": "parc",
+     "type": "figure",
+     "titre": "Les allées du parc",
+     "source": "Plan dessiné pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A1",
+       "x": 0.5,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "A2",
+       "x": 11.5,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "B1",
+       "x": 0.5,
+       "y": 2.5,
+       "cache": true
+      },
+      {
+       "id": "B2",
+       "x": 11.5,
+       "y": 2.5,
+       "cache": true
+      },
+      {
+       "id": "C1",
+       "x": 4,
+       "y": 0.5,
+       "cache": true
+      },
+      {
+       "id": "C2",
+       "x": 4,
+       "y": 7.5,
+       "cache": true
+      },
+      {
+       "id": "F1",
+       "x": 8,
+       "y": 0.5,
+       "cache": true
+      },
+      {
+       "id": "F2",
+       "x": 8,
+       "y": 7.5,
+       "cache": true
+      },
+      {
+       "id": "P",
+       "x": 4,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "Q",
+       "x": 4,
+       "y": 2.5,
+       "cache": true
+      },
+      {
+       "id": "R",
+       "x": 8,
+       "y": 6,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "id": "a",
+       "par": [
+        "A1",
+        "A2"
+       ],
+       "nom": "(a)"
+      },
+      {
+       "id": "b",
+       "par": [
+        "B1",
+        "B2"
+       ],
+       "nom": "(b)"
+      },
+      {
+       "id": "c",
+       "par": [
+        "C1",
+        "C2"
+       ],
+       "nom": "(c)"
+      },
+      {
+       "id": "f",
+       "par": [
+        "F1",
+        "F2"
+       ],
+       "nom": "(f)"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "P",
+       "de": "A2",
+       "a": "C2",
+       "droit": true
+      },
+      {
+       "sommet": "Q",
+       "de": "B2",
+       "a": "C2",
+       "droit": true
+      },
+      {
+       "sommet": "R",
+       "de": "A2",
+       "a": "F2",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parc",
+     "enonce": "Touche les **deux** allées perpendiculaires à (c).",
+     "multiple": true,
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "aide": "Cherche les petits carrés qui codent l’angle droit.",
+     "explication": "Les allées **(a)** et **(b)** coupent (c) en formant un angle droit : elles lui sont perpendiculaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on affirmer de (a) et (b), qui sont perpendiculaires à la même droite (c) ?",
+     "options": [
+      "Elles sont parallèles",
+      "Elles sont perpendiculaires entre elles",
+      "Elles se coupent en un point",
+      "On ne peut rien dire sans les mesurer"
+     ],
+     "reponse": 0,
+     "aide": "Reprends la première propriété du cours.",
+     "explication": "Deux droites perpendiculaires à une même droite sont **parallèles** entre elles. C’est une propriété : on n’a pas besoin de mesurer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "(f) est parallèle à (c), et (c) est perpendiculaire à (a). Combien mesure l’angle marqué « ? » entre (a) et (f), en degrés ?",
+     "unite": "°",
+     "reponse": 90,
+     "aide": "Si deux droites sont parallèles, une droite perpendiculaire à l’une l’est aussi à l’autre.",
+     "explication": "(f) // (c) et (c) ⊥ (a), donc (f) ⊥ (a) : l’angle mesure **90°**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Par un point donné, il passe ___ seule parallèle à une droite donnée.",
+     "reponses": [
+      [
+       "une",
+       "1"
+      ]
+     ],
+     "banque": [
+      "une",
+      "deux",
+      "aucune",
+      "une infinité de"
+     ],
+     "aide": "Le cours le dit en un mot.",
+     "explication": "Par un point donné passe **une seule** parallèle à une droite donnée."
+    }
+   ]
+  },
+  {
+   "chapitre": "82cc1a20-c0cf-526a-b188-84ec864c6402",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le poteau et le cerf-volant",
+   "competence": "geometrie",
+   "situation": "Pour son jardin, Tom veut planter un poteau à la même distance des deux piquets A et B. Pour son cerf-volant, il fixe ensuite une baguette qui partage l’angle formé par deux autres baguettes.",
+   "documents": [
+    {
+     "id": "jardin",
+     "type": "figure",
+     "titre": "Le jardin",
+     "source": "Plan dessiné pour l’exercice, pas à l’échelle",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1.5,
+       "y": 3.5,
+       "position": "o"
+      },
+      {
+       "id": "B",
+       "x": 8.5,
+       "y": 3.5,
+       "position": "e"
+      },
+      {
+       "id": "M",
+       "x": 5,
+       "y": 3.5,
+       "position": "se"
+      },
+      {
+       "id": "P",
+       "x": 5,
+       "y": 6.5,
+       "position": "e"
+      },
+      {
+       "id": "S",
+       "x": 5,
+       "y": 1.2,
+       "position": "e"
+      },
+      {
+       "id": "R",
+       "x": 7.5,
+       "y": 6.5,
+       "position": "e"
+      },
+      {
+       "id": "T",
+       "x": 2.5,
+       "y": 1.5,
+       "position": "n"
+      },
+      {
+       "id": "D1",
+       "x": 5,
+       "y": 0.2,
+       "cache": true
+      },
+      {
+       "id": "D2",
+       "x": 5,
+       "y": 7.3,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "M",
+       "codage": 1
+      },
+      {
+       "de": "M",
+       "a": "B",
+       "codage": 1
+      },
+      {
+       "de": "A",
+       "a": "P",
+       "style": "pointilles"
+      }
+     ],
+     "droites": [
+      {
+       "id": "d",
+       "par": [
+        "D1",
+        "D2"
+       ],
+       "nom": "(d)"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "M",
+       "de": "B",
+       "a": "P",
+       "droit": true
+      }
+     ],
+     "textes": [
+      {
+       "x": 1.7,
+       "y": 5.3,
+       "texte": "PA = 4,61 cm"
+      }
+     ]
+    },
+    {
+     "id": "cerf",
+     "type": "figure",
+     "titre": "Le cerf-volant",
+     "source": "Figure dessinée pour l’exercice : l’angle xOy mesure 80°",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "O",
+       "x": 1.5,
+       "y": 1.5,
+       "position": "so"
+      },
+      {
+       "id": "X",
+       "x": 10.5,
+       "y": 1.5,
+       "cache": true
+      },
+      {
+       "id": "Y",
+       "x": 3.063,
+       "y": 10.363,
+       "cache": true
+      },
+      {
+       "id": "Ja",
+       "x": 9.294,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "Jb",
+       "x": 8.394,
+       "y": 7.285,
+       "cache": true
+      },
+      {
+       "id": "Jc",
+       "x": 6.662,
+       "y": 8.872,
+       "cache": true
+      }
+     ],
+     "demiDroites": [
+      {
+       "id": "ox",
+       "origine": "O",
+       "par": "X"
+      },
+      {
+       "id": "oy",
+       "origine": "O",
+       "par": "Y"
+      },
+      {
+       "id": "ra",
+       "origine": "O",
+       "par": "Ja",
+       "teinte": "gris"
+      },
+      {
+       "id": "rb",
+       "origine": "O",
+       "par": "Jb",
+       "teinte": "gris"
+      },
+      {
+       "id": "rc",
+       "origine": "O",
+       "par": "Jc",
+       "teinte": "gris"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "O",
+       "de": "X",
+       "a": "Y",
+       "mesure": "80°"
+      }
+     ],
+     "textes": [
+      {
+       "x": 10.2,
+       "y": 2.1,
+       "texte": "x"
+      },
+      {
+       "x": 3.6,
+       "y": 9.6,
+       "texte": "y"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jardin",
+     "enonce": "Touche la **médiatrice** de [AB].",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Elle est perpendiculaire au segment et passe par son milieu.",
+     "explication": "La droite **(d)** coupe [AB] en son milieu M, à angle droit : c’est la médiatrice de [AB]."
+    },
+    {
+     "type": "zone",
+     "document": "jardin",
+     "enonce": "Touche **tous** les points à égale distance de A et de B.",
+     "multiple": true,
+     "reponse": [
+      "M",
+      "P",
+      "S"
+     ],
+     "aide": "Les points qui sont à égale distance des deux extrémités sont sur la médiatrice.",
+     "explication": "Tous les points de la médiatrice sont à égale distance de A et de B : **M, P et S**. R et T sont plus près de l’un des piquets, ils ne sont pas sur (d)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On lit PA = 4,61 cm. Combien mesure PB, en cm ?",
+     "unite": "cm",
+     "reponse": 4.61,
+     "aide": "P est un point de la médiatrice de [AB].",
+     "explication": "P est sur la médiatrice de [AB], donc PA = PB = **4,61 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "cerf",
+     "enonce": "Touche la **bissectrice** de l’angle xOy.",
+     "reponse": [
+      "rb"
+     ],
+     "aide": "La bissectrice partage 80° en deux angles égaux : combien chacun doit-il mesurer ?",
+     "explication": "80° ÷ 2 = 40° : la demi-droite qui fait **40°** avec [Ox) est la bissectrice."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes pour tracer la médiatrice d’un segment [AB] au compas.",
+     "items": [
+      "Piquer le compas en A et tracer un arc de cercle de chaque côté de [AB]",
+      "Garder le même écartement, piquer en B et tracer deux arcs qui coupent les premiers",
+      "Marquer les deux points où les arcs se croisent",
+      "Relier ces deux points à la règle : c’est la médiatrice"
+     ],
+     "aide": "On trace d’abord les arcs, on trace la droite en dernier.",
+     "explication": "Deux arcs de même rayon autour de A, puis autour de B, donnent deux points d’intersection ; la droite qui les relie est la **médiatrice**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6dddd25-5a8c-580b-be68-1e7aeaa3c2a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les rampes du skate-park",
+   "competence": "geometrie",
+   "situation": "Lina a relevé l’ouverture de quatre rampes du skate-park. Chaque rampe est un angle dont le sommet est marqué.",
+   "documents": [
+    {
+     "id": "rampes",
+     "type": "figure",
+     "titre": "Quatre rampes",
+     "source": "Plan dessiné pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "aO",
+       "x": 1,
+       "y": 6,
+       "position": "so",
+       "nom": "A"
+      },
+      {
+       "id": "aX",
+       "x": 4.4,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "aY",
+       "x": 3.527,
+       "y": 8.275,
+       "cache": true
+      },
+      {
+       "id": "bO",
+       "x": 8,
+       "y": 6,
+       "position": "so",
+       "nom": "B"
+      },
+      {
+       "id": "bX",
+       "x": 11.4,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "bY",
+       "x": 8,
+       "y": 9.4,
+       "cache": true
+      },
+      {
+       "id": "cO",
+       "x": 1.2,
+       "y": 1.8,
+       "position": "so",
+       "nom": "C"
+      },
+      {
+       "id": "cX",
+       "x": 4.6,
+       "y": 1.8,
+       "cache": true
+      },
+      {
+       "id": "cY",
+       "x": -0.75,
+       "y": 4.585,
+       "cache": true
+      },
+      {
+       "id": "dO",
+       "x": 8,
+       "y": 1.8,
+       "position": "so",
+       "nom": "D"
+      },
+      {
+       "id": "dX",
+       "x": 11.4,
+       "y": 1.8,
+       "cache": true
+      },
+      {
+       "id": "dY",
+       "x": 11.234,
+       "y": 2.851,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "aO",
+       "a": "aX"
+      },
+      {
+       "de": "aO",
+       "a": "aY"
+      },
+      {
+       "de": "bO",
+       "a": "bX"
+      },
+      {
+       "de": "bO",
+       "a": "bY"
+      },
+      {
+       "de": "cO",
+       "a": "cX"
+      },
+      {
+       "de": "cO",
+       "a": "cY"
+      },
+      {
+       "de": "dO",
+       "a": "dX"
+      },
+      {
+       "de": "dO",
+       "a": "dY"
+      }
+     ],
+     "angles": [
+      {
+       "id": "ang-a",
+       "sommet": "aO",
+       "de": "aX",
+       "a": "aY"
+      },
+      {
+       "id": "ang-b",
+       "sommet": "bO",
+       "de": "bX",
+       "a": "bY",
+       "droit": true
+      },
+      {
+       "id": "ang-c",
+       "sommet": "cO",
+       "de": "cX",
+       "a": "cY"
+      },
+      {
+       "id": "ang-d",
+       "sommet": "dO",
+       "de": "dX",
+       "a": "dY"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rampes",
+     "enonce": "Touche l’angle **obtus**.",
+     "reponse": [
+      "ang-c"
+     ],
+     "aide": "Obtus : une ouverture large, plus grande qu’un angle droit.",
+     "explication": "L’angle de la rampe C est plus ouvert que l’angle droit (le carré de B) sans être plat : il est **obtus**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure dans la bonne catégorie.",
+     "categories": [
+      "Aigu",
+      "Droit",
+      "Obtus"
+     ],
+     "items": [
+      [
+       "25°",
+       0
+      ],
+      [
+       "90°",
+       1
+      ],
+      [
+       "150°",
+       2
+      ],
+      [
+       "72°",
+       0
+      ],
+      [
+       "105°",
+       2
+      ],
+      [
+       "89°",
+       0
+      ]
+     ],
+     "aide": "Compare chaque mesure à 90°.",
+     "explication": "Aigu : entre 0° et 90°. Droit : exactement 90°. Obtus : entre 90° et 180°."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La rampe D a un angle de 18°. Quel est son angle complémentaire, en degrés ?",
+     "unite": "°",
+     "reponse": 72,
+     "aide": "Deux angles complémentaires font ensemble 90°.",
+     "explication": "90° − 18° = **72°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6dddd25-5a8c-580b-be68-1e7aeaa3c2a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les lattes croisées de la barrière",
+   "competence": "geometrie",
+   "situation": "Deux lattes de la barrière se croisent au point O. Le menuisier a mesuré l’angle AOB : 65°.",
+   "documents": [
+    {
+     "id": "barriere",
+     "type": "figure",
+     "titre": "La barrière",
+     "source": "Figure dessinée pour l’exercice (angles exacts)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "O",
+       "x": 6,
+       "y": 4,
+       "position": "se"
+      },
+      {
+       "id": "A",
+       "x": 10.698,
+       "y": 5.71,
+       "position": "e"
+      },
+      {
+       "id": "B",
+       "x": 6.288,
+       "y": 7.287,
+       "position": "n"
+      },
+      {
+       "id": "C",
+       "x": 1.302,
+       "y": 2.29,
+       "position": "o"
+      },
+      {
+       "id": "D",
+       "x": 5.712,
+       "y": 0.713,
+       "position": "s"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "D"
+      }
+     ],
+     "angles": [
+      {
+       "id": "aob",
+       "sommet": "O",
+       "de": "A",
+       "a": "B",
+       "mesure": "65°"
+      },
+      {
+       "id": "boc",
+       "sommet": "O",
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "id": "cod",
+       "sommet": "O",
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "id": "doa",
+       "sommet": "O",
+       "de": "D",
+       "a": "A"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "barriere",
+     "enonce": "Touche l’angle **opposé par le sommet** à l’angle AOB.",
+     "reponse": [
+      "cod"
+     ],
+     "aide": "Il est en face de AOB, de l’autre côté du point O, dans le prolongement des deux lattes.",
+     "explication": "COD est en face de AOB : leurs côtés sont dans le prolongement l’un de l’autre. Ce sont deux angles **opposés par le sommet**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle COD, en degrés ?",
+     "unite": "°",
+     "reponse": 65,
+     "aide": "Que dit le cours des angles opposés par le sommet ?",
+     "explication": "Des angles opposés par le sommet sont égaux : COD = AOB = **65°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle BOC, en degrés ?",
+     "unite": "°",
+     "reponse": 115,
+     "aide": "A, O et C sont alignés : AOB et BOC forment ensemble un angle plat.",
+     "explication": "Les angles AOB et BOC sont supplémentaires : 180° − 65° = **115°**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour justifier.",
+     "texte": "Les angles AOB et BOC sont adjacents et ___ : leur somme vaut 180°.",
+     "reponses": [
+      [
+       "supplémentaires",
+       "supplementaires"
+      ]
+     ],
+     "banque": [
+      "supplémentaires",
+      "complémentaires",
+      "égaux",
+      "droits"
+     ],
+     "aide": "Deux angles qui forment ensemble un angle plat…",
+     "explication": "Deux angles dont la somme vaut 180° sont **supplémentaires**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6dddd25-5a8c-580b-be68-1e7aeaa3c2a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rapporteur de Zoé",
+   "competence": "raisonner",
+   "situation": "Zoé a mesuré l’angle DBC de sa maquette de cerf-volant avec son rapporteur. Elle n’est pas d’accord avec Maël. La figure est exacte et l’angle DBA est droit.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maël",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "J’ai lu 130° sur mon rapporteur pour l’angle DBC."
+      },
+      {
+       "qui": "Maël",
+       "texte": "Mais il a l’air tout petit, ton angle !"
+      },
+      {
+       "qui": "Zoé",
+       "texte": "J’ai bien posé le centre sur B, pourtant…"
+      }
+     ]
+    },
+    {
+     "id": "maquette",
+     "type": "figure",
+     "titre": "La maquette",
+     "source": "Figure dessinée pour l’exercice (angles exacts)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6.5
+     },
+     "points": [
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1.5,
+       "position": "s"
+      },
+      {
+       "id": "D",
+       "x": 9,
+       "y": 1.5,
+       "position": "e"
+      },
+      {
+       "id": "C",
+       "x": 7.7,
+       "y": 4.717,
+       "position": "ne"
+      },
+      {
+       "id": "A",
+       "x": 5,
+       "y": 5.5,
+       "position": "n"
+      },
+      {
+       "id": "E",
+       "x": 1,
+       "y": 1.5,
+       "position": "o"
+      }
+     ],
+     "segments": [
+      {
+       "de": "B",
+       "a": "D"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "A"
+      },
+      {
+       "de": "B",
+       "a": "E"
+      }
+     ],
+     "angles": [
+      {
+       "id": "dbc",
+       "sommet": "B",
+       "de": "D",
+       "a": "C",
+       "mesure": "?"
+      },
+      {
+       "id": "cbe",
+       "sommet": "B",
+       "de": "C",
+       "a": "E"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que s’est-il passé pour Zoé ?",
+     "options": [
+      "Elle a lu la mauvaise graduation du rapporteur",
+      "Elle a placé le centre du rapporteur au mauvais endroit",
+      "Son angle est vraiment obtus",
+      "Son rapporteur est cassé"
+     ],
+     "reponse": 0,
+     "aide": "Un angle visiblement aigu doit mesurer moins de 90°.",
+     "explication": "Le rapporteur a **deux graduations** : 130° et 50° sont complémentaires à 180°. L’angle est aigu, donc c’était l’autre graduation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure vraiment l’angle DBC (il vaut 180° − 130°), en degrés ?",
+     "unite": "°",
+     "reponse": 50,
+     "aide": "Les deux lectures du rapporteur font ensemble 180°.",
+     "explication": "180° − 130° = **50°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’angle DBA est droit. Combien mesure l’angle CBA, complémentaire de DBC ?",
+     "unite": "°",
+     "reponse": 40,
+     "aide": "DBC + CBA = 90°.",
+     "explication": "DBC + CBA = DBA = 90°, donc CBA = 90° − 50° = **40°**."
+    },
+    {
+     "type": "zone",
+     "document": "maquette",
+     "enonce": "Touche l’angle qui mesure **130°** : c’est celui que Zoé avait lu.",
+     "reponse": [
+      "cbe"
+     ],
+     "aide": "Cherche l’angle supplémentaire de DBC.",
+     "explication": "CBE et DBC sont adjacents sur la droite (DE) : leur somme vaut 180°, donc CBE = **130°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8554a91c-649a-50a6-980c-bde0b6b95732",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fanion de l’équipe",
+   "competence": "geometrie",
+   "situation": "Le club de handball fait coudre un fanion triangulaire. Sur le patron, deux angles sont notés ; le troisième est à trouver.",
+   "documents": [
+    {
+     "id": "fanion",
+     "type": "figure",
+     "titre": "Le patron du fanion",
+     "source": "Patron dessiné pour l’exercice (angles exacts)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 8,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5.882,
+       "y": 6.818,
+       "position": "n"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "id": "ang-a",
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "mesure": "50°"
+      },
+      {
+       "id": "ang-b",
+       "sommet": "B",
+       "de": "C",
+       "a": "A",
+       "mesure": "70°"
+      },
+      {
+       "id": "ang-c",
+       "sommet": "C",
+       "de": "A",
+       "a": "B",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle en C, en degrés ?",
+     "unite": "°",
+     "reponse": 60,
+     "aide": "La somme des trois angles d’un triangle est toujours la même.",
+     "explication": "180° − 50° − 70° = **60°**."
+    },
+    {
+     "type": "zone",
+     "document": "fanion",
+     "enonce": "Touche le **plus grand** angle du triangle.",
+     "reponse": [
+      "ang-b"
+     ],
+     "aide": "Compare 50°, 70° et l’angle que tu viens de trouver.",
+     "explication": "Les angles mesurent 50°, 70° et 60° : le plus grand est celui de **70°**, en B."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Dans un triangle, la somme des trois angles vaut toujours ___ degrés.",
+     "reponses": [
+      [
+       "180"
+      ]
+     ],
+     "banque": [
+      "90",
+      "180",
+      "360",
+      "100"
+     ],
+     "aide": "Un angle plat…",
+     "explication": "La somme des angles d’un triangle vaut **180°**, quelle que soit sa forme."
+    }
+   ]
+  },
+  {
+   "chapitre": "8554a91c-649a-50a6-980c-bde0b6b95732",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les baguettes de la cabane",
+   "competence": "raisonner",
+   "situation": "Pour la charpente de sa cabane miniature, Kenza a coupé des baguettes. Elle veut former des triangles avec trois baguettes. Avant de coller, elle vérifie que chaque trio est possible.",
+   "documents": [
+    {
+     "id": "baguettes",
+     "type": "tableau",
+     "titre": "Les trios de baguettes",
+     "source": "Longueurs inventées pour l’exercice",
+     "colonnes": [
+      "Trio",
+      "Côté 1 (cm)",
+      "Côté 2 (cm)",
+      "Côté 3 (cm)"
+     ],
+     "lignes": [
+      [
+       "Trio A",
+       5,
+       7,
+       9
+      ],
+      [
+       "Trio B",
+       4,
+       4,
+       9
+      ],
+      [
+       "Trio C",
+       6,
+       8,
+       10
+      ],
+      [
+       "Trio D",
+       2,
+       3,
+       7
+      ],
+      [
+       "Trio E",
+       7,
+       7,
+       12
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque trio : peut-on construire un triangle avec ces trois baguettes ?",
+     "categories": [
+      "Possible",
+      "Impossible"
+     ],
+     "items": [
+      [
+       "Trio A",
+       0
+      ],
+      [
+       "Trio B",
+       1
+      ],
+      [
+       "Trio C",
+       0
+      ],
+      [
+       "Trio D",
+       1
+      ],
+      [
+       "Trio E",
+       0
+      ]
+     ],
+     "aide": "Compare le plus grand côté à la somme des deux autres.",
+     "explication": "Un triangle existe quand le plus grand côté est **plus petit** que la somme des deux autres. A, C et E sont possibles ; pour B (9 > 4 + 4) et D (7 > 2 + 3) les deux petits côtés ne se rejoignent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le trio B, Kenza garde les baguettes de 4 cm et de 9 cm et change la troisième. Quelle est la plus petite longueur **entière**, en cm, qui rend le triangle possible ?",
+     "unite": "cm",
+     "reponse": 6,
+     "aide": "Il faut que 9 soit plus petit que 4 plus la troisième longueur.",
+     "explication": "Il faut 9 < 4 + c, donc c > 5. Avec 5 cm : 4 + 5 = 9, ce n’est pas plus grand que 9. Avec **6 cm** : 4 + 6 = 10 > 9, c’est possible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le trio D (2 cm, 3 cm, 7 cm) est-il impossible ?",
+     "options": [
+      "Car 7 dépasse 2 + 3 = 5 : les petites baguettes ne se rejoignent pas",
+      "Car les trois baguettes ont toutes des longueurs différentes",
+      "Car 7 est un nombre impair, ce qui bloque le triangle",
+      "Car la somme 2 + 3 + 7 dépasse 10 cm, c’est trop grand"
+     ],
+     "reponse": 0,
+     "aide": "Reprends l’inégalité triangulaire.",
+     "explication": "Les deux petites baguettes mises bout à bout (5 cm) sont trop courtes pour atteindre les deux extrémités de la baguette de 7 cm."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la construction du trio A (5 cm, 7 cm, 9 cm) à la règle et au compas.",
+     "items": [
+      "Tracer le plus grand côté [AB] de 9 cm",
+      "Piquer le compas en A, écartement 5 cm : tracer un arc",
+      "Piquer le compas en B, écartement 7 cm : tracer un arc qui coupe le premier",
+      "Relier le point d’intersection C à A et à B"
+     ],
+     "aide": "On trace d’abord un côté, on termine en reliant.",
+     "explication": "Un côté à la règle, deux arcs de compas qui se croisent au troisième sommet, puis on relie : c’est la construction avec les **trois côtés**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8554a91c-649a-50a6-980c-bde0b6b95732",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La figure de Louna",
+   "competence": "raisonner",
+   "situation": "Louna a construit un triangle ABC avec AB = 6 cm, un angle de 40° en A et un angle de 100° en B. Elle a ensuite mesuré le troisième angle, mais Maël trouve que son résultat est impossible.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Louna",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maël",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Louna",
+       "texte": "Mes trois angles font 40°, 100° et 50°."
+      },
+      {
+       "qui": "Maël",
+       "texte": "Ça ne va pas, vérifie encore."
+      }
+     ]
+    },
+    {
+     "id": "triangle",
+     "type": "figure",
+     "titre": "Le triangle de Louna",
+     "source": "Figure dessinée pour l’exercice (angles exacts)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 8.042,
+       "y": 6.909,
+       "position": "n"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "6 cm"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "mesure": "40°"
+      },
+      {
+       "sommet": "B",
+       "de": "C",
+       "a": "A",
+       "mesure": "100°"
+      },
+      {
+       "sommet": "C",
+       "de": "A",
+       "a": "B",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les mesures de Louna (40°, 100° et 50°) sont-elles impossibles ?",
+     "options": [
+      "Leur somme vaut 190°, pas 180°",
+      "Un triangle ne peut pas avoir un angle de 100°",
+      "Un triangle ne peut pas avoir trois angles différents",
+      "Les angles doivent tous être aigus"
+     ],
+     "reponse": 0,
+     "aide": "Additionne les trois angles.",
+     "explication": "40° + 100° + 50° = 190°. La somme des angles d’un triangle vaut toujours **180°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure vraiment l’angle en C, en degrés ?",
+     "unite": "°",
+     "reponse": 40,
+     "aide": "180° moins les deux angles connus.",
+     "explication": "180° − 40° − 100° = **40°**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Louna veut ajouter un deuxième angle obtus. Pourquoi est-ce impossible ?",
+     "options": [
+      "Deux angles obtus dépasseraient 180° à eux seuls",
+      "Parce qu’un angle obtus doit être le plus petit",
+      "Parce que la somme doit valoir 360°",
+      "Parce qu’un triangle n’a que deux angles"
+     ],
+     "reponse": 0,
+     "aide": "Un angle obtus mesure plus de 90°.",
+     "explication": "Deux angles obtus font plus de 90° + 90° = 180° : il ne resterait rien pour le troisième. Un triangle a **un seul** angle obtus au maximum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans un triangle rectangle, un angle aigu mesure 28°. Combien mesure l’autre angle aigu ?",
+     "unite": "°",
+     "reponse": 62,
+     "aide": "Les deux angles aigus d’un triangle rectangle sont complémentaires.",
+     "explication": "180° − 90° − 28° = **62°** (ou 90° − 28°)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la construction du triangle ABC de Louna.",
+     "items": [
+      "Tracer le segment [AB] de 6 cm",
+      "Placer le rapporteur en A et marquer 40°, tracer la demi-droite",
+      "Placer le rapporteur en B et marquer 100°, tracer la demi-droite",
+      "Nommer C leur point d’intersection et coder la figure"
+     ],
+     "aide": "Le côté d’abord, puis les angles à ses deux extrémités.",
+     "explication": "On connaît un côté et les deux angles adjacents : règle, puis **deux demi-droites** qui se croisent en C."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0d7aa65-e861-5b41-8631-1414f4237d2c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les fanions de la fête",
+   "competence": "geometrie",
+   "situation": "Pour la fête de l’école, trois fanions de formes différentes sont accrochés. Les égalités de longueurs sont codées sur la figure.",
+   "documents": [
+    {
+     "id": "fanions",
+     "type": "figure",
+     "titre": "Les trois fanions",
+     "source": "Figure dessinée pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 15,
+      "ymin": 0,
+      "ymax": 6.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2.5,
+       "y": 4.5,
+       "position": "n"
+      },
+      {
+       "id": "D",
+       "x": 6,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "E",
+       "x": 9.5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": 7.75,
+       "y": 4.031,
+       "position": "n"
+      },
+      {
+       "id": "G",
+       "x": 11.5,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "H",
+       "x": 14,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "I",
+       "x": 11.5,
+       "y": 4.5,
+       "position": "n"
+      }
+     ],
+     "polygones": [
+      {
+       "id": "t1",
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "id": "t2",
+       "sommets": [
+        "D",
+        "E",
+        "F"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "id": "t3",
+       "sommets": [
+        "G",
+        "H",
+        "I"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "D",
+       "a": "E",
+       "codage": 1
+      },
+      {
+       "de": "E",
+       "a": "F",
+       "codage": 1
+      },
+      {
+       "de": "D",
+       "a": "F",
+       "codage": 1
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "G",
+       "de": "H",
+       "a": "I",
+       "droit": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fanions",
+     "enonce": "Touche le fanion qui est un triangle **équilatéral**.",
+     "reponse": [
+      "t2"
+     ],
+     "aide": "Trois côtés égaux : cherche les trois côtés qui portent le même trait.",
+     "explication": "Le triangle DEF a ses trois côtés codés de la même façon : il est **équilatéral**."
+    },
+    {
+     "type": "zone",
+     "document": "fanions",
+     "enonce": "Touche le fanion qui est un triangle **rectangle**.",
+     "reponse": [
+      "t3"
+     ],
+     "aide": "Cherche le petit carré.",
+     "explication": "Le triangle GHI porte le petit carré de l’**angle droit** en G : il est rectangle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque triangle à sa définition.",
+     "paires": [
+      [
+       "Isocèle",
+       "deux côtés de même longueur"
+      ],
+      [
+       "Équilatéral",
+       "trois côtés de même longueur"
+      ],
+      [
+       "Rectangle",
+       "un angle droit"
+      ]
+     ],
+     "aide": "Reprends les trois fanions de la figure.",
+     "explication": "Isocèle : **deux** côtés égaux. Équilatéral : **trois** côtés égaux. Rectangle : **un** angle droit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure chaque angle du fanion équilatéral, en degrés ?",
+     "unite": "°",
+     "reponse": 60,
+     "aide": "Trois angles égaux dont la somme vaut 180°.",
+     "explication": "180° ÷ 3 = **60°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0d7aa65-e861-5b41-8631-1414f4237d2c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le toit de la cabane et la voile",
+   "competence": "geometrie",
+   "situation": "Sur le plan de la cabane de Samir, la façade est un triangle isocèle en A, avec AB = AC. L’angle au sommet mesure 50°. Sa petite voile de bateau est un autre triangle isocèle.",
+   "documents": [
+    {
+     "id": "facade",
+     "type": "figure",
+     "titre": "La façade de la cabane",
+     "source": "Figure dessinée pour l’exercice (angles exacts)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 5,
+       "y": 5.985,
+       "position": "n"
+      },
+      {
+       "id": "B",
+       "x": 2.676,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 7.324,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "H",
+       "x": 5,
+       "y": 1,
+       "position": "s"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "codage": 1
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "droites": [
+      {
+       "id": "axe",
+       "par": [
+        "A",
+        "H"
+       ],
+       "style": "axe"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "mesure": "50°"
+      },
+      {
+       "sommet": "B",
+       "de": "C",
+       "a": "A",
+       "mesure": "?"
+      }
+     ]
+    },
+    {
+     "id": "voile",
+     "type": "figure",
+     "titre": "La voile du bateau",
+     "source": "Figure dessinée pour l’exercice : DE = DF",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6.5
+     },
+     "points": [
+      {
+       "id": "D",
+       "x": 5,
+       "y": 5,
+       "position": "n"
+      },
+      {
+       "id": "E",
+       "x": 1.284,
+       "y": 1.654,
+       "position": "so"
+      },
+      {
+       "id": "F",
+       "x": 8.716,
+       "y": 1.654,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "D",
+       "a": "E",
+       "codage": 1
+      },
+      {
+       "de": "D",
+       "a": "F",
+       "codage": 1
+      },
+      {
+       "de": "E",
+       "a": "F"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "E",
+       "de": "F",
+       "a": "D",
+       "mesure": "42°"
+      },
+      {
+       "sommet": "F",
+       "de": "D",
+       "a": "E",
+       "mesure": "42°"
+      },
+      {
+       "sommet": "D",
+       "de": "E",
+       "a": "F",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle en B (angle à la base), en degrés ?",
+     "unite": "°",
+     "reponse": 65,
+     "aide": "Les deux angles à la base sont égaux, et les trois angles font 180°.",
+     "explication": "(180° − 50°) ÷ 2 = 130° ÷ 2 = **65°**."
+    },
+    {
+     "type": "zone",
+     "document": "facade",
+     "enonce": "Touche l’**axe de symétrie** de la façade.",
+     "reponse": [
+      "axe"
+     ],
+     "aide": "C’est la droite en traits mixtes qui passe par le sommet principal.",
+     "explication": "Le triangle isocèle a **un** axe de symétrie : la médiatrice de la base, qui passe par A."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans la voile, les angles à la base mesurent 42°. Combien mesure l’angle au sommet D, en degrés ?",
+     "unite": "°",
+     "reponse": 96,
+     "aide": "Additionne les deux angles à la base, puis complète jusqu’à 180°.",
+     "explication": "180° − 42° − 42° = **96°**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces triangles d’après leurs trois angles.",
+     "categories": [
+      "Isocèle",
+      "Équilatéral",
+      "Rectangle"
+     ],
+     "items": [
+      [
+       "70°, 70°, 40°",
+       0
+      ],
+      [
+       "60°, 60°, 60°",
+       1
+      ],
+      [
+       "90°, 35°, 55°",
+       2
+      ],
+      [
+       "30°, 75°, 75°",
+       0
+      ],
+      [
+       "90°, 20°, 70°",
+       2
+      ]
+     ],
+     "aide": "Cherche deux angles égaux, trois angles égaux ou un angle de 90°.",
+     "explication": "Deux angles égaux : **isocèle**. Trois angles de 60° : **équilatéral**. Un angle de 90° : **rectangle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0d7aa65-e861-5b41-8631-1414f4237d2c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La guirlande des fanions",
+   "competence": "raisonner",
+   "situation": "Une guirlande est faite de deux fanions collés par le côté [BC] : ABC est un triangle équilatéral et BCD un triangle rectangle en C avec CB = CD. Eliott veut connaître quelques angles pour couper le tissu.",
+   "documents": [
+    {
+     "id": "guirlande",
+     "type": "figure",
+     "titre": "La guirlande",
+     "source": "Figure dessinée pour l’exercice (longueurs et angles exacts)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 11
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 3.5,
+       "y": 9.83,
+       "position": "n"
+      },
+      {
+       "id": "B",
+       "x": 1,
+       "y": 5.5,
+       "position": "o"
+      },
+      {
+       "id": "C",
+       "x": 6,
+       "y": 5.5,
+       "position": "e"
+      },
+      {
+       "id": "D",
+       "x": 6,
+       "y": 0.5,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "C",
+       "a": "D",
+       "codage": 1
+      },
+      {
+       "id": "bd",
+       "de": "B",
+       "a": "D"
+      },
+      {
+       "id": "ad",
+       "de": "A",
+       "a": "D",
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "C",
+       "de": "B",
+       "a": "D",
+       "droit": true
+      },
+      {
+       "sommet": "B",
+       "de": "C",
+       "a": "D",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle CBD, en degrés ?",
+     "unite": "°",
+     "reponse": 45,
+     "aide": "BCD est rectangle en C et CB = CD : c’est un triangle isocèle rectangle.",
+     "explication": "Les angles à la base d’un triangle isocèle rectangle valent (180° − 90°) ÷ 2 = **45°**."
+    },
+    {
+     "type": "zone",
+     "document": "guirlande",
+     "enonce": "Touche l’**hypoténuse** du triangle BCD.",
+     "reponse": [
+      "bd"
+     ],
+     "aide": "C’est le côté opposé à l’angle droit.",
+     "explication": "L’angle droit est en C : le côté opposé est [BD], le plus long côté du triangle : c’est l’**hypoténuse**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle ABD, en degrés ? (ABC est équilatéral.)",
+     "unite": "°",
+     "reponse": 105,
+     "aide": "L’angle ABD est formé de l’angle ABC et de l’angle CBD.",
+     "explication": "ABC est équilatéral : 60°. Avec CBD = 45° : 60° + 45° = **105°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le triangle ACD est isocèle en C (CA = CD) et l’angle ACD vaut 60° + 90°. Combien mesure l’angle CAD, en degrés ?",
+     "unite": "°",
+     "reponse": 15,
+     "aide": "Calcule d’abord l’angle ACD, puis partage ce qui reste entre les deux angles à la base.",
+     "explication": "ACD = 60° + 90° = 150°. Les deux angles à la base sont égaux : (180° − 150°) ÷ 2 = **15°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d2dcb9fb-0efd-5322-a419-5991a19683f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le papillon sur la nappe",
+   "competence": "geometrie",
+   "situation": "Sur le motif d’une nappe brodée, la droite (d) est l’axe de symétrie du papillon. Léa a placé quelques points d’un côté et d’autres de l’autre.",
+   "documents": [
+    {
+     "id": "nappe",
+     "type": "figure",
+     "titre": "Le motif de la nappe",
+     "source": "Motif dessiné pour l’exercice, 1 carreau = 1 cm",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 3,
+       "y": 6,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": 2,
+       "position": "so"
+      },
+      {
+       "id": "E",
+       "x": 6,
+       "y": 4,
+       "position": "e"
+      },
+      {
+       "id": "P",
+       "x": 9,
+       "y": 6,
+       "position": "ne"
+      },
+      {
+       "id": "Q",
+       "x": 9,
+       "y": 5,
+       "position": "e"
+      },
+      {
+       "id": "R",
+       "x": 10,
+       "y": 6,
+       "position": "ne"
+      },
+      {
+       "id": "S",
+       "x": 10,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "d1",
+       "x": 6,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "d2",
+       "x": 6,
+       "y": 8,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "id": "axe",
+       "par": [
+        "d1",
+        "d2"
+       ],
+       "nom": "(d)",
+       "style": "axe"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nappe",
+     "enonce": "Touche le point **symétrique de A** par rapport à (d).",
+     "reponse": [
+      "P"
+     ],
+     "aide": "A est à 3 carreaux de l’axe : son symétrique est à 3 carreaux de l’autre côté, à la même hauteur.",
+     "explication": "A est à 3 carreaux de l’axe, à la hauteur 6. Son symétrique est à 3 carreaux de l’autre côté, à la même hauteur : c’est **P**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "S est le symétrique de B. Combien mesure la distance BS, en cm ?",
+     "unite": "cm",
+     "reponse": 8,
+     "aide": "B et S sont chacun à la même distance de l’axe : compte les carreaux de B à l’axe.",
+     "explication": "B est à 4 carreaux de l’axe, S aussi, de l’autre côté : BS = 4 + 4 = **8 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "nappe",
+     "enonce": "Touche le point qui est **son propre symétrique**.",
+     "reponse": [
+      "E"
+     ],
+     "aide": "Quel point ne bouge pas quand on plie le long de l’axe ?",
+     "explication": "Un point **sur l’axe** est son propre symétrique : c’est **E**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d2dcb9fb-0efd-5322-a419-5991a19683f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le panneau de la salle d’arts",
+   "competence": "geometrie",
+   "situation": "Pour décorer la salle d’arts, Mehdi a découpé un panneau rectangulaire (un rectangle qui n’est pas un carré). Il hésite sur les plis possibles et trace quatre droites en pointillés.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "figure",
+     "titre": "Le panneau rectangulaire",
+     "source": "Figure dessinée pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "v1",
+       "x": 5,
+       "y": 0.2,
+       "cache": true
+      },
+      {
+       "id": "v2",
+       "x": 5,
+       "y": 5.8,
+       "cache": true
+      },
+      {
+       "id": "h1",
+       "x": 0.2,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "h2",
+       "x": 9.8,
+       "y": 3,
+       "cache": true
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      }
+     ],
+     "droites": [
+      {
+       "id": "vert",
+       "par": [
+        "v1",
+        "v2"
+       ],
+       "style": "pointilles"
+      },
+      {
+       "id": "horiz",
+       "par": [
+        "h1",
+        "h2"
+       ],
+       "style": "pointilles"
+      },
+      {
+       "id": "diag1",
+       "par": [
+        "A",
+        "C"
+       ],
+       "style": "pointilles"
+      },
+      {
+       "id": "diag2",
+       "par": [
+        "B",
+        "D"
+       ],
+       "style": "pointilles"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "enonce": "Touche **tous** les axes de symétrie du rectangle.",
+     "multiple": true,
+     "reponse": [
+      "vert",
+      "horiz"
+     ],
+     "aide": "Plie mentalement : les deux moitiés doivent se superposer exactement. Les diagonales ne passent pas par les milieux des côtés.",
+     "explication": "Un rectangle qui n’est pas un carré a **deux** axes : les médiatrices de ses côtés. Plié le long d’une diagonale, un coin ne retombe pas sur le coin voisin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mehdi plie le panneau le long de la diagonale [AC]. Que se passe-t-il ?",
+     "options": [
+      "B ne retombe pas sur D : les moitiés ne se superposent pas",
+      "Le point B retombe exactement sur le point D du panneau",
+      "Le panneau se coupe en deux rectangles tous identiques",
+      "Les côtés restent parallèles à la diagonale du panneau"
+     ],
+     "reponse": 0,
+     "aide": "Compare la longueur AB et la longueur AD.",
+     "explication": "AB est plus long que AD : B ne peut pas se poser sur D. La diagonale d’un rectangle qui n’est pas un carré **n’est pas un axe**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Et si le panneau était un carré ? Combien aurait-il d’axes de symétrie ?",
+     "reponse": 4,
+     "aide": "Les deux médiatrices des côtés, et deux autres droites.",
+     "explication": "Un carré a **4** axes : les deux médiatrices de ses côtés et ses deux diagonales."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces figures selon leur nombre d’axes de symétrie.",
+     "categories": [
+      "Aucun axe",
+      "1 axe",
+      "2 axes",
+      "3 axes"
+     ],
+     "items": [
+      [
+       "Parallélogramme quelconque",
+       0
+      ],
+      [
+       "Triangle isocèle (non équilatéral)",
+       1
+      ],
+      [
+       "Losange",
+       2
+      ],
+      [
+       "Rectangle (non carré)",
+       2
+      ],
+      [
+       "Triangle équilatéral",
+       3
+      ]
+     ],
+     "aide": "Le cours donne la liste des axes de chaque figure.",
+     "explication": "Parallélogramme quelconque : aucun. Triangle isocèle : 1. Losange et rectangle : 2. Triangle équilatéral : 3."
+    }
+   ]
+  },
+  {
+   "chapitre": "d2dcb9fb-0efd-5322-a419-5991a19683f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le pliage de la carte",
+   "competence": "raisonner",
+   "situation": "Chloé a plié une carte le long de la droite (d). Un triangle ABC rectangle en A, tracé à gauche, s’est imprimé de l’autre côté : c’est son symétrique A′B′C′. Sur la figure, 1 carreau = 1 cm ; AB = 3 cm, AC = 4 cm et l’aire de ABC est 6 cm².",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "figure",
+     "titre": "Le triangle et son symétrique",
+     "source": "Figure dessinée pour l’exercice, 1 carreau = 1 cm",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 2,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "A2",
+       "x": 10,
+       "y": 1,
+       "position": "se",
+       "nom": "A′"
+      },
+      {
+       "id": "B2",
+       "x": 7,
+       "y": 1,
+       "position": "so",
+       "nom": "B′"
+      },
+      {
+       "id": "C2",
+       "x": 10,
+       "y": 5,
+       "position": "ne",
+       "nom": "C′"
+      },
+      {
+       "id": "d1",
+       "x": 6,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "d2",
+       "x": 6,
+       "y": 7,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "id": "axe",
+       "par": [
+        "d1",
+        "d2"
+       ],
+       "nom": "(d)",
+       "style": "axe"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "A2",
+        "B2",
+        "C2"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      },
+      {
+       "sommet": "A2",
+       "de": "C2",
+       "a": "B2",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le point **symétrique de C**.",
+     "reponse": [
+      "C2"
+     ],
+     "aide": "C est à 4 carreaux de l’axe, à la hauteur 5.",
+     "explication": "C est à 4 carreaux de l’axe : son symétrique est à 4 carreaux de l’autre côté, à la même hauteur : **C′**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure A′B′, en cm ?",
+     "unite": "cm",
+     "reponse": 3,
+     "aide": "La symétrie conserve les longueurs.",
+     "explication": "La symétrie axiale conserve les longueurs : A′B′ = AB = **3 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien mesure l’angle marqué « ? » en A′, en degrés ?",
+     "unite": "°",
+     "reponse": 90,
+     "aide": "La symétrie conserve aussi les mesures d’angles.",
+     "explication": "Les mesures d’angles sont conservées : l’angle en A′ est droit comme celui en A, soit **90°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du triangle A′B′C′, en cm² ?",
+     "unite": "cm²",
+     "reponse": 6,
+     "aide": "Que fait la symétrie des aires ?",
+     "explication": "Une figure et son symétrique sont superposables : elles ont la même aire, soit **6 cm²**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Quelles propriétés la symétrie axiale conserve-t-elle ? Range chacune.",
+     "categories": [
+      "Conservé",
+      "Modifié"
+     ],
+     "items": [
+      [
+       "Les longueurs",
+       0
+      ],
+      [
+       "Les mesures d’angles",
+       0
+      ],
+      [
+       "Les aires",
+       0
+      ],
+      [
+       "Le sens de lecture",
+       1
+      ],
+      [
+       "Le parallélisme",
+       0
+      ]
+     ],
+     "aide": "Dans un miroir, un texte se lit à l’envers.",
+     "explication": "La symétrie conserve longueurs, angles, aires et parallélisme. Elle ne change que le **sens** (de lecture)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b15c01d-221b-51a1-98ae-d8a3447287e5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’aquarium de la classe",
+   "competence": "resoudre",
+   "situation": "La classe de 6e installe un aquarium en forme de pavé droit. Ses dimensions intérieures sont indiquées sur le schéma. Il faudra le remplir avec des bouteilles d’eau.",
+   "documents": [
+    {
+     "id": "aquarium",
+     "type": "solide",
+     "titre": "L’aquarium",
+     "source": "Schéma pour l’exercice, dimensions intérieures",
+     "longueur": 5,
+     "largeur": 3,
+     "hauteur": 4,
+     "cotes": true,
+     "unite": "dm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume de l’aquarium, en dm³ ?",
+     "unite": "dm³",
+     "reponse": 60,
+     "aide": "Volume d’un pavé droit : longueur × largeur × hauteur.",
+     "explication": "V = 5 × 3 × 4 = **60 dm³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres d’eau l’aquarium peut-il contenir ?",
+     "unite": "L",
+     "reponse": 60,
+     "aide": "Quel lien y a-t-il entre le litre et le dm³ ?",
+     "explication": "1 L = 1 dm³ : l’aquarium contient **60 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bouteilles de 1,5 L faut-il vider pour le remplir ?",
+     "reponse": 40,
+     "aide": "Divise la capacité totale par le contenu d’une bouteille.",
+     "explication": "60 ÷ 1,5 = **40 bouteilles**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b15c01d-221b-51a1-98ae-d8a3447287e5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La boîte de rangement",
+   "competence": "calculer",
+   "situation": "Samia range ses cubes de construction dans une boîte en forme de pavé droit. Elle veut connaître son volume, sa contenance en litres, et le nombre de petits cubes qu’elle pourra y ranger.",
+   "documents": [
+    {
+     "id": "boite",
+     "type": "solide",
+     "titre": "La boîte de rangement",
+     "source": "Schéma pour l’exercice",
+     "longueur": 20,
+     "largeur": 15,
+     "hauteur": 10,
+     "cotes": true,
+     "unite": "cm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume de la boîte, en cm³ ?",
+     "unite": "cm³",
+     "reponse": 3000,
+     "aide": "Multiplie les trois dimensions, toutes en cm.",
+     "explication": "V = 20 × 15 × 10 = **3 000 cm³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa contenance, en litres ?",
+     "unite": "L",
+     "reponse": 3,
+     "aide": "1 dm³ = 1 000 cm³ et 1 L = 1 dm³.",
+     "explication": "3 000 cm³ = 3 dm³ = **3 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les petits cubes ont 5 cm d’arête. Combien en rentre-t-il dans la boîte, en les rangeant sans vide ?",
+     "reponse": 24,
+     "aide": "Compte combien de cubes se rangent dans la longueur, la largeur et la hauteur.",
+     "explication": "20 ÷ 5 = 4 cubes en longueur, 15 ÷ 5 = 3 en largeur, 10 ÷ 5 = 2 en hauteur : 4 × 3 × 2 = **24 cubes**. Contrôle : 3 000 ÷ 125 = 24."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque volume à son équivalent.",
+     "paires": [
+      [
+       "1 L",
+       "1 dm³"
+      ],
+      [
+       "1 mL",
+       "1 cm³"
+      ],
+      [
+       "1 dm³",
+       "1 000 cm³"
+      ],
+      [
+       "1 m³",
+       "1 000 dm³"
+      ]
+     ],
+     "aide": "Pour les volumes, chaque rang vaut 1 000 fois le suivant.",
+     "explication": "1 L = 1 dm³, 1 mL = 1 cm³, 1 dm³ = 1 000 cm³ et 1 m³ = 1 000 dm³ (donc 1 000 L)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b15c01d-221b-51a1-98ae-d8a3447287e5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le patron du dé géant",
+   "competence": "raisonner",
+   "situation": "Pour la kermesse, Hugo veut fabriquer un dé géant en carton : un cube de 10 cm d’arête. Il a dessiné quatre assemblages de six carrés, notés A, B, C et D, mais tous ne se plient pas en cube.",
+   "documents": [
+    {
+     "id": "patrons",
+     "type": "figure",
+     "titre": "Quatre assemblages de six carrés",
+     "source": "Dessin pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 15,
+      "ymin": 0,
+      "ymax": 12.5
+     },
+     "points": [
+      {
+       "id": "q0_1_0a",
+       "x": 2,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "q0_1_0b",
+       "x": 3,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "q0_1_0c",
+       "x": 3,
+       "y": 7,
+       "cache": true
+      },
+      {
+       "id": "q0_1_0d",
+       "x": 2,
+       "y": 7,
+       "cache": true
+      },
+      {
+       "id": "q0_1_1a",
+       "x": 2,
+       "y": 7,
+       "cache": true
+      },
+      {
+       "id": "q0_1_1b",
+       "x": 3,
+       "y": 7,
+       "cache": true
+      },
+      {
+       "id": "q0_1_1c",
+       "x": 3,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_1_1d",
+       "x": 2,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_1_2a",
+       "x": 2,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_1_2b",
+       "x": 3,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_1_2c",
+       "x": 3,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_1_2d",
+       "x": 2,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_1_3a",
+       "x": 2,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_1_3b",
+       "x": 3,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_1_3c",
+       "x": 3,
+       "y": 10,
+       "cache": true
+      },
+      {
+       "id": "q0_1_3d",
+       "x": 2,
+       "y": 10,
+       "cache": true
+      },
+      {
+       "id": "q0_0_2a",
+       "x": 1,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_0_2b",
+       "x": 2,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_0_2c",
+       "x": 2,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_0_2d",
+       "x": 1,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_2_2a",
+       "x": 3,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_2_2b",
+       "x": 4,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "q0_2_2c",
+       "x": 4,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q0_2_2d",
+       "x": 3,
+       "y": 9,
+       "cache": true
+      },
+      {
+       "id": "q1_0_0a",
+       "x": 8,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_0_0b",
+       "x": 9,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_0_0c",
+       "x": 9,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_0_0d",
+       "x": 8,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_1_0a",
+       "x": 9,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_1_0b",
+       "x": 10,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_1_0c",
+       "x": 10,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_1_0d",
+       "x": 9,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_2_0a",
+       "x": 10,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_2_0b",
+       "x": 11,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_2_0c",
+       "x": 11,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_2_0d",
+       "x": 10,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_3_0a",
+       "x": 11,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_3_0b",
+       "x": 12,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_3_0c",
+       "x": 12,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_3_0d",
+       "x": 11,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_4_0a",
+       "x": 12,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_4_0b",
+       "x": 13,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_4_0c",
+       "x": 13,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_4_0d",
+       "x": 12,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_5_0a",
+       "x": 13,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_5_0b",
+       "x": 14,
+       "y": 10.5,
+       "cache": true
+      },
+      {
+       "id": "q1_5_0c",
+       "x": 14,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q1_5_0d",
+       "x": 13,
+       "y": 11.5,
+       "cache": true
+      },
+      {
+       "id": "q2_0_0a",
+       "x": 9,
+       "y": 5.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_0b",
+       "x": 10,
+       "y": 5.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_0c",
+       "x": 10,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_0d",
+       "x": 9,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_0a",
+       "x": 10,
+       "y": 5.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_0b",
+       "x": 11,
+       "y": 5.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_0c",
+       "x": 11,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_0d",
+       "x": 10,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_1a",
+       "x": 9,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_1b",
+       "x": 10,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_1c",
+       "x": 10,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_1d",
+       "x": 9,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_1a",
+       "x": 10,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_1b",
+       "x": 11,
+       "y": 6.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_1c",
+       "x": 11,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_1d",
+       "x": 10,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_2a",
+       "x": 9,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_2b",
+       "x": 10,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_2c",
+       "x": 10,
+       "y": 8.6,
+       "cache": true
+      },
+      {
+       "id": "q2_0_2d",
+       "x": 9,
+       "y": 8.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_2a",
+       "x": 10,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_2b",
+       "x": 11,
+       "y": 7.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_2c",
+       "x": 11,
+       "y": 8.6,
+       "cache": true
+      },
+      {
+       "id": "q2_1_2d",
+       "x": 10,
+       "y": 8.6,
+       "cache": true
+      },
+      {
+       "id": "q3_0_0a",
+       "x": 1,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "q3_0_0b",
+       "x": 2,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "q3_0_0c",
+       "x": 2,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_0_0d",
+       "x": 1,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_1_0a",
+       "x": 2,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "q3_1_0b",
+       "x": 3,
+       "y": 1,
+       "cache": true
+      },
+      {
+       "id": "q3_1_0c",
+       "x": 3,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_1_0d",
+       "x": 2,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_1_1a",
+       "x": 2,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_1_1b",
+       "x": 3,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_1_1c",
+       "x": 3,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_1_1d",
+       "x": 2,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_2_1a",
+       "x": 3,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_2_1b",
+       "x": 4,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "q3_2_1c",
+       "x": 4,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_2_1d",
+       "x": 3,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_2_2a",
+       "x": 3,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_2_2b",
+       "x": 4,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_2_2c",
+       "x": 4,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "q3_2_2d",
+       "x": 3,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "q3_3_2a",
+       "x": 4,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_3_2b",
+       "x": 5,
+       "y": 3,
+       "cache": true
+      },
+      {
+       "id": "q3_3_2c",
+       "x": 5,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "q3_3_2d",
+       "x": 4,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "A",
+       "x": 2.5,
+       "y": 5.2,
+       "position": "s"
+      },
+      {
+       "id": "B",
+       "x": 10.5,
+       "y": 9.7,
+       "position": "s"
+      },
+      {
+       "id": "C",
+       "x": 10,
+       "y": 5,
+       "position": "s"
+      },
+      {
+       "id": "D",
+       "x": 3,
+       "y": 0.2,
+       "position": "s"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "q0_1_0a",
+        "q0_1_0b",
+        "q0_1_0c",
+        "q0_1_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q0_1_1a",
+        "q0_1_1b",
+        "q0_1_1c",
+        "q0_1_1d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q0_1_2a",
+        "q0_1_2b",
+        "q0_1_2c",
+        "q0_1_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q0_1_3a",
+        "q0_1_3b",
+        "q0_1_3c",
+        "q0_1_3d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q0_0_2a",
+        "q0_0_2b",
+        "q0_0_2c",
+        "q0_0_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q0_2_2a",
+        "q0_2_2b",
+        "q0_2_2c",
+        "q0_2_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q1_0_0a",
+        "q1_0_0b",
+        "q1_0_0c",
+        "q1_0_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q1_1_0a",
+        "q1_1_0b",
+        "q1_1_0c",
+        "q1_1_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q1_2_0a",
+        "q1_2_0b",
+        "q1_2_0c",
+        "q1_2_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q1_3_0a",
+        "q1_3_0b",
+        "q1_3_0c",
+        "q1_3_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q1_4_0a",
+        "q1_4_0b",
+        "q1_4_0c",
+        "q1_4_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q1_5_0a",
+        "q1_5_0b",
+        "q1_5_0c",
+        "q1_5_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q2_0_0a",
+        "q2_0_0b",
+        "q2_0_0c",
+        "q2_0_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q2_1_0a",
+        "q2_1_0b",
+        "q2_1_0c",
+        "q2_1_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q2_0_1a",
+        "q2_0_1b",
+        "q2_0_1c",
+        "q2_0_1d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q2_1_1a",
+        "q2_1_1b",
+        "q2_1_1c",
+        "q2_1_1d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q2_0_2a",
+        "q2_0_2b",
+        "q2_0_2c",
+        "q2_0_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q2_1_2a",
+        "q2_1_2b",
+        "q2_1_2c",
+        "q2_1_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q3_0_0a",
+        "q3_0_0b",
+        "q3_0_0c",
+        "q3_0_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q3_1_0a",
+        "q3_1_0b",
+        "q3_1_0c",
+        "q3_1_0d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q3_1_1a",
+        "q3_1_1b",
+        "q3_1_1c",
+        "q3_1_1d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q3_2_1a",
+        "q3_2_1b",
+        "q3_2_1c",
+        "q3_2_1d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q3_2_2a",
+        "q3_2_2b",
+        "q3_2_2c",
+        "q3_2_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "q3_3_2a",
+        "q3_3_2b",
+        "q3_3_2c",
+        "q3_3_2d"
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "cube",
+     "type": "solide",
+     "titre": "Le dé fini",
+     "source": "Schéma pour l’exercice",
+     "longueur": 10,
+     "largeur": 10,
+     "hauteur": 10,
+     "cotes": true,
+     "unite": "cm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "patrons",
+     "enonce": "Touche **tous** les assemblages qui se plient pour former un cube.",
+     "multiple": true,
+     "reponse": [
+      "A",
+      "D"
+     ],
+     "aide": "Plie mentalement : dans chaque assemblage, deux carrés ne doivent jamais retomber sur la même face.",
+     "explication": "A (la croix) et D (l’escalier) sont deux des **onze** patrons du cube. B et C ont deux carrés qui se replient sur la même face."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’assemblage B, une bande de six carrés, ne peut-il pas former un cube ?",
+     "options": [
+      "Le 1er et le 5e carré retombent sur la même face",
+      "Cet assemblage compte plus de six carrés au total",
+      "Ses carrés ne sont pas tous de la même taille ici",
+      "Un cube n’a pas de patron, il ne se déplie pas"
+     ],
+     "reponse": 0,
+     "aide": "Quatre carrés alignés font déjà le tour du cube.",
+     "explication": "Quatre carrés alignés font le tour du cube : le cinquième retombe sur le premier. Une face se retrouve **doublée** et une autre manque."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume du dé fini, en cm³ ?",
+     "unite": "cm³",
+     "reponse": 1000,
+     "aide": "Volume d’un cube : arête × arête × arête.",
+     "explication": "V = 10 × 10 × 10 = **1 000 cm³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres de sable faudrait-il pour remplir ce dé ?",
+     "unite": "L",
+     "reponse": 1,
+     "aide": "1 000 cm³ font combien de dm³ ?",
+     "explication": "1 000 cm³ = 1 dm³ = **1 L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "15b3551e-f499-5560-b197-00898aa3d9bf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sport préféré de la classe",
+   "competence": "lire-graphique",
+   "situation": "Maya a demandé à chaque élève de sa classe de 6e quel sport il préfère. Elle a représenté les réponses dans un diagramme en barres.",
+   "documents": [
+    {
+     "id": "sports",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le sport préféré des élèves",
+     "source": "Enquête imaginée pour l’exercice",
+     "categories": [
+      "Foot",
+      "Hand",
+      "Danse",
+      "Natation",
+      "Basket"
+     ],
+     "series": [
+      {
+       "nom": "Élèves",
+       "valeurs": [
+        9,
+        6,
+        7,
+        5,
+        3
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre d’élèves",
+      "min": 0,
+      "max": 10,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Sport"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sports",
+     "enonce": "Touche le sport préféré du plus grand nombre d’élèves.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre la plus haute est celle du **foot**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves la classe compte-t-elle en tout ? (Chaque élève a donné une seule réponse.)",
+     "reponse": 30,
+     "aide": "Additionne les effectifs de toutes les barres.",
+     "explication": "9 + 6 + 7 + 5 + 3 = **30 élèves**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence des élèves qui préfèrent le foot, en pourcentage ?",
+     "unite": "%",
+     "reponse": 30,
+     "aide": "Fréquence = effectif ÷ effectif total.",
+     "explication": "9 ÷ 30 = 0,3, soit **30 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "15b3551e-f499-5560-b197-00898aa3d9bf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les emprunts du CDI",
+   "competence": "lire-graphique",
+   "situation": "En octobre, le CDI du collège a prêté 80 documents. La documentaliste a représenté les types de documents empruntés dans un diagramme circulaire.",
+   "documents": [
+    {
+     "id": "cdi",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les emprunts du mois d’octobre",
+     "source": "Chiffres inventés pour l’exercice",
+     "categories": [
+      "BD",
+      "Romans",
+      "Documentaires",
+      "Mangas"
+     ],
+     "series": [
+      {
+       "nom": "Emprunts (%)",
+       "valeurs": [
+        45,
+        30,
+        15,
+        10
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel angle occupe le secteur des romans (30 % du disque), en degrés ?",
+     "unite": "°",
+     "reponse": 108,
+     "aide": "Angle = fréquence × 360°.",
+     "explication": "0,30 × 360° = **108°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel angle occupe le secteur des documentaires (15 %), en degrés ?",
+     "unite": "°",
+     "reponse": 54,
+     "aide": "Angle = fréquence × 360°.",
+     "explication": "0,15 × 360° = **54°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de BD ont été empruntées en octobre (45 % de 80 documents) ?",
+     "reponse": 36,
+     "aide": "Calcule 45 % de 80.",
+     "explication": "0,45 × 80 = **36 BD**."
+    },
+    {
+     "type": "zone",
+     "document": "cdi",
+     "enonce": "Touche le type de document emprunté **8 fois** seulement.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "8 documents sur 80 : quelle fréquence est-ce ?",
+     "explication": "8 ÷ 80 = 0,10 soit 10 % : c’est le plus petit secteur, celui des **mangas**."
+    }
+   ]
+  },
+  {
+   "chapitre": "15b3551e-f499-5560-b197-00898aa3d9bf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les buts des Lions et des Faucons",
+   "competence": "lire-tableau",
+   "situation": "Deux équipes de handball ont joué cinq matchs. Le journal du club affirme que « les Lions et les Faucons marquent autant ». Gabin vérifie dans le tableau, puis regarde un graphique de la saison.",
+   "documents": [
+    {
+     "id": "matchs",
+     "type": "tableau",
+     "titre": "Buts marqués match par match",
+     "source": "Résultats inventés pour l’exercice",
+     "colonnes": [
+      "Équipe",
+      "Match 1",
+      "Match 2",
+      "Match 3",
+      "Match 4",
+      "Match 5"
+     ],
+     "lignes": [
+      [
+       "Les Lions",
+       18,
+       22,
+       20,
+       21,
+       19
+      ],
+      [
+       "Les Faucons",
+       9,
+       36,
+       12,
+       33,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "saison",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Total de buts de la saison",
+     "source": "Chiffres inventés pour l’exercice",
+     "categories": [
+      "Lions",
+      "Tigres"
+     ],
+     "series": [
+      {
+       "nom": "Buts",
+       "valeurs": [
+        100,
+        104
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Buts marqués",
+      "min": 96,
+      "max": 106,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Équipe"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne de buts par match des Lions ?",
+     "reponse": 20,
+     "aide": "Additionne les cinq scores, puis divise par 5.",
+     "explication": "(18 + 22 + 20 + 21 + 19) ÷ 5 = 100 ÷ 5 = **20 buts** par match."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne de buts par match des Faucons ?",
+     "reponse": 20,
+     "aide": "Même méthode : la somme des scores, puis la division par 5.",
+     "explication": "(9 + 36 + 12 + 33 + 10) ÷ 5 = 100 ÷ 5 = **20 buts** par match."
+    },
+    {
+     "type": "zone",
+     "document": "matchs",
+     "enonce": "Touche le match où les Faucons ont marqué le moins de buts.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Regarde la ligne des Faucons : cherche le plus petit nombre.",
+     "explication": "Les Faucons n’ont marqué que **9 buts** au match 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les deux équipes ont la même moyenne. Que peut-on en conclure ?",
+     "options": [
+      "Rien sur la régularité : les Lions marquent presque pareil à chaque match",
+      "Les deux équipes jouent exactement de la même façon, match après match",
+      "Les Faucons sont plus réguliers que les Lions d’un match à l’autre",
+      "Les deux équipes ont gagné le même nombre de matchs cette saison"
+     ],
+     "reponse": 0,
+     "aide": "Compare les scores de chaque équipe d’un match à l’autre.",
+     "explication": "La moyenne ne dit **rien de la dispersion** : les Lions marquent entre 18 et 22 buts, les Faucons entre 9 et 36."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur le graphique de la saison, la barre des Tigres paraît deux fois plus haute que celle des Lions. Pourquoi est-ce trompeur ?",
+     "options": [
+      "L’axe ne part pas de zéro : l’écart réel n’est que de 4 buts",
+      "Les deux barres ne sont pas tracées avec la même couleur",
+      "Les Tigres ont joué un plus grand nombre de matchs que les Lions",
+      "Le graphique n’a pas de titre ni de légende lisible"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la première graduation de l’axe vertical.",
+     "explication": "L’axe commence à 96 : les barres mesurent 4 et 8 graduations au lieu de 100 et 104. Un axe qui ne part pas de zéro **exagère** les écarts."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c0536c3-5d68-5cfc-b877-7064e51a0fcf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La roue de la kermesse",
+   "competence": "resoudre",
+   "situation": "À la kermesse, Noé fait tourner la roue de la chance. Elle est partagée en huit secteurs identiques, numérotés de 1 à 8. La flèche s’arrête au hasard sur un secteur.",
+   "documents": [
+    {
+     "id": "roue",
+     "type": "schema",
+     "titre": "La roue de la chance",
+     "source": "Roue imaginée pour l’exercice : les huit secteurs sont identiques",
+     "largeur": 320,
+     "hauteur": 320,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 160 40 A 120 120 0 0 1 244.853 75.147 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 189.849,
+       "y": 94.937,
+       "texte": "1",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 244.853 75.147 A 120 120 0 0 1 280 160 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 232.063,
+       "y": 137.151,
+       "texte": "2",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 280 160 A 120 120 0 0 1 244.853 244.853 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 232.063,
+       "y": 196.849,
+       "texte": "3",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 244.853 244.853 A 120 120 0 0 1 160 280 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 189.849,
+       "y": 239.063,
+       "texte": "4",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 160 280 A 120 120 0 0 1 75.147 244.853 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s5",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 130.151,
+       "y": 239.063,
+       "texte": "5",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 75.147 244.853 A 120 120 0 0 1 40 160 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s6",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 87.937,
+       "y": 196.849,
+       "texte": "6",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 40 160 A 120 120 0 0 1 75.147 75.147 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s7",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 87.937,
+       "y": 137.151,
+       "texte": "7",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 160 L 75.147 75.147 A 120 120 0 0 1 160 40 Z",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s8",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 130.151,
+       "y": 94.937,
+       "texte": "8",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         150,
+         8
+        ],
+        [
+         170,
+         8
+        ],
+        [
+         160,
+         40
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "roue",
+     "enonce": "Touche **tous** les secteurs qui donnent un nombre strictement supérieur à 6.",
+     "multiple": true,
+     "reponse": [
+      "s7",
+      "s8"
+     ],
+     "aide": "Strictement supérieur à 6 : 6 n’est pas compté.",
+     "explication": "Les nombres strictement supérieurs à 6 sont **7 et 8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il d’issues possibles quand la roue s’arrête ?",
+     "reponse": 8,
+     "aide": "Une issue, c’est un résultat possible : compte les secteurs.",
+     "explication": "Chaque secteur est une issue : il y en a **8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité que la roue s’arrête sur un nombre strictement supérieur à 6 ? (Une fraction ou un décimal.)",
+     "reponse": 0.25,
+     "aide": "Cas favorables ÷ cas possibles. Tu viens de les compter.",
+     "explication": "Il y a 2 cas favorables (7 et 8) sur 8 cas possibles : P = {{2/8}} = {{1/4}} = **0,25**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c0536c3-5d68-5cfc-b877-7064e51a0fcf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sac de billes de Yanis",
+   "competence": "resoudre",
+   "situation": "Yanis a un sac opaque avec douze billes identiques au toucher. Elles se distinguent seulement par leur motif : unies, rayées ou à points. Il en tire une sans regarder.",
+   "documents": [
+    {
+     "id": "sac",
+     "type": "schema",
+     "titre": "Le contenu du sac",
+     "source": "Sac dessiné pour l’exercice",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 40,
+       "l": 240,
+       "h": 175,
+       "arrondi": 28,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 80,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b00",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 137,
+       "cy": 80,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "hachures",
+       "id": "b01",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 80,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "points",
+       "id": "b02",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 231,
+       "cy": 80,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b03",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 127,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "hachures",
+       "id": "b10",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 137,
+       "cy": 127,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b11",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 127,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b12",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 231,
+       "cy": 127,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "points",
+       "id": "b13",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 174,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "points",
+       "id": "b20",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 137,
+       "cy": 174,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "hachures",
+       "id": "b21",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 184,
+       "cy": 174,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b22",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 231,
+       "cy": 174,
+       "r": 18,
+       "teinte": "encre",
+       "motif": "hachures",
+       "id": "b23",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 258,
+       "r": 12,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 88,
+       "y": 263,
+       "texte": "unie",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 258,
+       "r": 12,
+       "teinte": "encre",
+       "motif": "hachures"
+      },
+      {
+       "forme": "texte",
+       "x": 168,
+       "y": 263,
+       "texte": "rayée",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 258,
+       "r": 12,
+       "teinte": "encre",
+       "motif": "points"
+      },
+      {
+       "forme": "texte",
+       "x": 253,
+       "y": 263,
+       "texte": "à points",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sac",
+     "enonce": "Touche **toutes** les billes à points.",
+     "multiple": true,
+     "reponse": [
+      "b02",
+      "b13",
+      "b20"
+     ],
+     "aide": "Regarde la légende sous le sac pour reconnaître le motif « à points ».",
+     "explication": "Il y a **3 billes à points** sur 12."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de tirer une bille unie ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.4166666666666667,
+     "tolerance": 0.005,
+     "aide": "Compte les billes unies, puis divise par le nombre total de billes.",
+     "explication": "5 billes unies sur 12 billes au total : P = **{{5/12}}**, soit environ 0,42."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de **ne pas** tirer une bille à points ? (Une fraction ou un décimal.)",
+     "reponse": 0.75,
+     "aide": "Cet événement est le contraire de « tirer une bille à points » : leurs probabilités font 1 à deux.",
+     "explication": "9 billes sur 12 ne sont pas à points : P = {{9/12}} = {{3/4}} = **0,75**. Autre méthode : 1 − {{3/12}} = 0,75."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Yanis ajoute dans le sac 6 billes à points. Quelle est maintenant la probabilité de tirer une bille à points ? (Une fraction ou un décimal.)",
+     "reponse": 0.5,
+     "aide": "Le nombre total de billes a changé, et le nombre de billes à points aussi.",
+     "explication": "Il y a maintenant 3 + 6 = 9 billes à points sur 12 + 6 = 18 : P = {{9/18}} = {{1/2}} = **0,5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c0536c3-5d68-5cfc-b877-7064e51a0fcf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pile ou face au club de maths",
+   "competence": "raisonner",
+   "situation": "Au club de maths, Ilan et Chloé lancent une pièce équilibrée. Ils notent la fréquence des « pile » pour 10, 100 puis 1 000 lancers, puis discutent après une série de cinq « pile » à la suite.",
+   "documents": [
+    {
+     "id": "lancers",
+     "type": "tableau",
+     "titre": "Les lancers du club",
+     "source": "Résultats imaginés pour l’exercice",
+     "colonnes": [
+      "Lancers",
+      "Nombre de « pile »",
+      "Fréquence de « pile »"
+     ],
+     "lignes": [
+      [
+       10,
+       7,
+       "0,7"
+      ],
+      [
+       100,
+       56,
+       "?"
+      ],
+      [
+       1000,
+       507,
+       "0,507"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Ilan",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ilan",
+       "texte": "Cinq pile à la suite ! Au prochain lancer, face a plus de chances de sortir."
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Je ne suis pas d’accord avec toi."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est la probabilité d’obtenir « pile » au sixième lancer ?",
+     "options": [
+      "{{1/2}}, comme à chaque lancer : la pièce n’a pas de mémoire",
+      "Moins de {{1/2}}, puisque « pile » est déjà sorti cinq fois",
+      "Plus de {{1/2}}, car « pile » est en série",
+      "On ne peut pas le savoir sans refaire le tirage"
+     ],
+     "reponse": 0,
+     "aide": "Les lancers précédents changent-ils la pièce ?",
+     "explication": "Le hasard n’a pas de dette : chaque lancer a **une chance sur deux** de donner pile, quel que soit le passé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence de « pile » pour 100 lancers (la case « ? ») ? (Un décimal.)",
+     "reponse": 0.56,
+     "aide": "Fréquence = nombre de « pile » ÷ nombre de lancers.",
+     "explication": "56 ÷ 100 = **0,56**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que constate-t-on quand le nombre de lancers augmente (10, 100, puis 1 000) ?",
+     "options": [
+      "La fréquence se rapproche de 0,5, la probabilité de « pile »",
+      "La fréquence s’éloigne de plus en plus de la valeur 0,5",
+      "La fréquence finit par devenir exactement égale à 1",
+      "La fréquence ne change jamais, quel que soit le nombre"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,7, 0,56 et 0,507 avec 0,5.",
+     "explication": "0,7 → 0,56 → 0,507 : plus on répète l’expérience, plus la fréquence **se rapproche** de la probabilité, 0,5."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque événement : certain, impossible, ou ni l’un ni l’autre ?",
+     "categories": [
+      "Certain",
+      "Impossible",
+      "Ni l’un ni l’autre"
+     ],
+     "items": [
+      [
+       "Obtenir 7 avec un dé à six faces",
+       1
+      ],
+      [
+       "Obtenir un nombre inférieur à 7 avec un dé à six faces",
+       0
+      ],
+      [
+       "Obtenir « pile » ou « face » avec une pièce",
+       0
+      ],
+      [
+       "Obtenir un 6 avec un dé à six faces",
+       2
+      ],
+      [
+       "Tirer une bille unie dans un sac qui ne contient que des billes rayées",
+       1
+      ]
+     ],
+     "aide": "Certain : probabilité 1. Impossible : probabilité 0.",
+     "explication": "Un événement **certain** a pour probabilité 1, un événement **impossible** 0 ; obtenir un 6 a une chance sur six."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On lance un dé à six faces. Quelle est la probabilité de **ne pas** obtenir 6 ? (Une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.8333333333333334,
+     "tolerance": 0.005,
+     "aide": "C’est l’événement contraire de « obtenir 6 » : la somme des deux probabilités vaut 1.",
+     "explication": "P(6) = {{1/6}}, donc P(pas 6) = 1 − {{1/6}} = **{{5/6}}**, soit environ 0,83."
+    }
+   ]
+  },
+  {
+   "chapitre": "60cda20a-9d42-520c-8531-4653aa8a1cff",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le robot du gymnase",
+   "competence": "se-reperer-espace",
+   "situation": "Au gymnase, un petit robot se déplace sur un quadrillage de 1 m de côté. On lui donne l’instruction « aller à (x ; y) » : x est l’abscisse, y est l’ordonnée. Cinq plots sont posés sur le sol.",
+   "documents": [
+    {
+     "id": "sol",
+     "type": "figure",
+     "titre": "Le sol du gymnase",
+     "source": "Plan dessiné pour l’exercice, 1 carreau = 1 m",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 3,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": 2,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 4,
+       "y": 1,
+       "position": "se"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sol",
+     "enonce": "Le robot reçoit l’instruction « aller à (3 ; 2) ». Touche le plot où il s’arrête.",
+     "reponse": [
+      "B"
+     ],
+     "aide": "Pars de l’origine : d’abord 3 vers la droite (abscisse), puis 2 vers le haut (ordonnée).",
+     "explication": "L’abscisse est 3 (horizontale), l’ordonnée est 2 (verticale) : le robot va en **B**. Le plot F est le point (2 ; 3)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée du plot A ?",
+     "reponse": 4,
+     "aide": "L’ordonnée se lit sur l’axe vertical.",
+     "explication": "A est à 4 carreaux de hauteur : son ordonnée est **4**. A a pour coordonnées (1 ; 4)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle.",
+     "texte": "Dans un couple de coordonnées, l’___ s’écrit toujours en premier.",
+     "reponses": [
+      [
+       "abscisse"
+      ]
+     ],
+     "banque": [
+      "abscisse",
+      "ordonnée",
+      "origine",
+      "altitude"
+     ],
+     "aide": "C’est la coordonnée horizontale.",
+     "explication": "L’**abscisse** (horizontale) vient toujours avant l’ordonnée (verticale) : (x ; y)."
+    }
+   ]
+  },
+  {
+   "chapitre": "60cda20a-9d42-520c-8531-4653aa8a1cff",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le robot qui dessine",
+   "competence": "programmer",
+   "situation": "Le club informatique programme un robot-stylo. Il doit dessiner un hexagone régulier, mais le résultat n’est pas celui attendu. Chaque pas fait 1 cm.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "scratch",
+     "titre": "Le programme du robot-stylo",
+     "source": "Programme écrit pour l’exercice",
+     "scripts": [
+      [
+       {
+        "categorie": "evenement",
+        "texte": "quand le drapeau vert est cliqué"
+       },
+       {
+        "categorie": "stylo",
+        "texte": "stylo en position d’écriture"
+       },
+       {
+        "categorie": "controle",
+        "texte": "répéter (6) fois",
+        "interieur": [
+         {
+          "categorie": "mouvement",
+          "texte": "avancer de (40) pas",
+          "id": "av"
+         },
+         {
+          "categorie": "mouvement",
+          "texte": "tourner à droite de (90) degrés",
+          "id": "tr"
+         }
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche l’instruction **fautive** du programme.",
+     "reponse": [
+      "tr"
+     ],
+     "aide": "Un hexagone régulier a six côtés égaux et six angles de rotation égaux.",
+     "explication": "Pour un hexagone, il faut tourner de **60°** à chaque tour, pas de 90°. L’instruction « tourner de 90° » est fautive."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel angle de rotation faut-il pour tracer un hexagone régulier, en degrés ?",
+     "unite": "°",
+     "reponse": 60,
+     "aide": "Pour un polygone à n côtés, on tourne de 360 ÷ n.",
+     "explication": "360 ÷ 6 = **60°**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dessine le programme tel qu’il est écrit ?",
+     "options": [
+      "Un carré, puis il repasse sur deux de ses côtés",
+      "Un hexagone régulier, comme prévu au départ",
+      "Un triangle équilatéral aux côtés de 40 pas",
+      "Une ligne droite de 240 pas, sans aucun virage"
+     ],
+     "reponse": 0,
+     "aide": "Avec des rotations de 90°, la figure se referme au bout de quatre côtés.",
+     "explication": "Tourner de 90° referme un carré au bout de 4 côtés ; avec 6 répétitions, le robot repasse sur **2 côtés** du carré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans la boucle « répéter », combien d’instructions « avancer » et « tourner » faudrait-il écrire pour les six côtés ?",
+     "reponse": 12,
+     "aide": "Chaque côté demande une instruction « avancer » et une instruction « tourner ».",
+     "explication": "6 côtés × 2 instructions = **12 instructions**. La boucle n’en garde que deux."
+    }
+   ]
+  },
+  {
+   "chapitre": "60cda20a-9d42-520c-8531-4653aa8a1cff",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le parcours du robot-livreur",
+   "competence": "programmer",
+   "situation": "Dans le gymnase, un robot-livreur part du point (2 ; 1), tourné vers la droite du quadrillage (vers les x qui augmentent). Un pas fait un carreau. Le programme suivant lui est donné.",
+   "documents": [
+    {
+     "id": "livraison",
+     "type": "scratch",
+     "titre": "Le programme du robot-livreur",
+     "source": "Programme écrit pour l’exercice",
+     "scripts": [
+      [
+       {
+        "categorie": "evenement",
+        "texte": "quand le drapeau vert est cliqué"
+       },
+       {
+        "categorie": "mouvement",
+        "texte": "aller à x: (2) y: (1)"
+       },
+       {
+        "categorie": "mouvement",
+        "texte": "avancer de (3) pas",
+        "id": "p1"
+       },
+       {
+        "categorie": "mouvement",
+        "texte": "tourner à gauche de (90) degrés",
+        "id": "gauche"
+       },
+       {
+        "categorie": "mouvement",
+        "texte": "avancer de (2) pas",
+        "id": "p2"
+       },
+       {
+        "categorie": "mouvement",
+        "texte": "tourner à droite de (90) degrés",
+        "id": "droite"
+       },
+       {
+        "categorie": "mouvement",
+        "texte": "avancer de (1) pas",
+        "id": "p3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": "gym",
+     "type": "figure",
+     "titre": "Le quadrillage",
+     "source": "Plan dessiné pour l’exercice, 1 carreau = 1 m",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 9,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "S",
+       "x": 2,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "F",
+       "x": 6,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "G",
+       "x": 4,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "H",
+       "x": 3,
+       "y": 6,
+       "position": "ne"
+      },
+      {
+       "id": "I",
+       "x": 8,
+       "y": 1,
+       "position": "ne"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livraison",
+     "enonce": "Touche l’instruction qui fait **monter** le robot vers le haut du quadrillage.",
+     "reponse": [
+      "gauche"
+     ],
+     "aide": "Le robot regarde vers la droite. Dans quel sens doit-il tourner pour regarder vers le haut ?",
+     "explication": "En tournant à **gauche** de 90°, le robot qui regarde vers la droite se met à regarder vers le haut."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pas le robot fait-il en tout ?",
+     "reponse": 6,
+     "aide": "Additionne les trois « avancer ».",
+     "explication": "3 + 2 + 1 = **6 pas**."
+    },
+    {
+     "type": "zone",
+     "document": "gym",
+     "enonce": "Touche le point où le robot s’arrête à la fin du programme.",
+     "reponse": [
+      "F"
+     ],
+     "aide": "Suis le robot pas à pas depuis S : 3 vers la droite, puis 2 vers le haut, puis il tourne à droite.",
+     "explication": "De (2 ; 1) il avance de 3 → (5 ; 1), tourne à gauche et monte de 2 → (5 ; 3), tourne à droite et avance de 1 → **(6 ; 3)**, le point F."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’instruction qui ramène le robot à son point de départ.",
+     "texte": "aller à x: ___ y: ___",
+     "reponses": [
+      [
+       "2"
+      ],
+      [
+       "1"
+      ]
+     ],
+     "banque": [
+      "1",
+      "2",
+      "3",
+      "6"
+     ],
+     "aide": "Le point de départ est (2 ; 1) : l’abscisse d’abord.",
+     "explication": "Le départ a pour abscisse **2** et pour ordonnée **1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour dessiner un pentagone régulier avec une boucle, de quel angle faut-il tourner à chaque tour, en degrés ?",
+     "unite": "°",
+     "reponse": 72,
+     "aide": "Pour un polygone à n côtés, on tourne de 360 ÷ n.",
+     "explication": "360 ÷ 5 = **72°**."
+    }
+   ]
+  }
+ ]
+}

@@ -23,7 +23,9 @@ vitesse de l'app dépend des requêtes faites à chaque écran, pas de l'histori
 
 ## Ce qui reste à exécuter en production
 
-**Au 01/10/2026 dans la nuit : rien.** La **465** (`schema/465_classement_amis.sql`)
+**Au 03/10/2026 au soir : la 555** (`schema/555_quetes_trois_gestes.sql`) — le catalogue SQL des quêtes du jour autour des trois gestes (apprendre, se tester, jouer). Une seule fonction remplacée (`quest_catalog`), idempotente. Sans elle, les nouvelles quêtes s'affichent mais n'avancent pas et ne se paient pas (seuls les deux duels avancent) ; rien ne casse.
+
+**Plus tôt le 03/10/2026 : rien.** Les 466 → 554 (corrections de cours et cahier de toutes les classes) sont passées par l’API de gestion et contrôlées : 8 841 exercices, les 2 947 chapitres de classe ont chacun leurs trois exercices et leurs clés. **Au 01/10/2026 dans la nuit : rien.** La **465** (`schema/465_classement_amis.sql`)
 est passée la dernière : `classement_amis()`, qui sert le bloc « Toi et tes
 amis » de l'onglet Moi — trophées et temps de travail de la semaine, pour
 l'élève et ses amis acceptés. Essayée sur PGlite (rejeu double, périmètre,
@@ -203,6 +205,29 @@ d'une question nommée). Sans ces champs, il régénère les 420 et 425 à
 l'identique. Les sources (`scripts/contenu`, `scripts/complements`,
 `contenu/controles`, `contenu/exercices`) portent les mêmes corrections, et
 une question reformulée garde son identifiant (clé d'origine en 5e élément).
+
+## Le cahier pour toutes les classes : 466 → 554 (générées le 02/10/2026, EXÉCUTÉES le 03/10/2026)
+
+Toutes les classes et toutes les matières ont leur cahier : 2 947 chapitres sur 2 952
+ont leurs trois exercices (★ ★★ ★★★) ; les cinq restants sont les chapitres « tous
+niveaux » (fiscalité, économie…). 166 lots écrits et relus, plus 545 fiches jumelles
+recopiées (`contenu/exercices/<niveau>/<matière>.jumelles*.json`). Chaque fichier
+est sous 300 Ko (table temporaire : il ne se découpe pas après coup).
+
+| N° | Ce que c'est |
+|---|---|
+| 466 | 22 erreurs de cours relevées par les rédacteurs du cahier, vérifiées à une source (cours, quiz, contrôles) |
+| 467 → 471 | Cahier de 6e (5 fichiers) |
+| 472 → 481 | Cahier de 5e (10 fichiers) |
+| 482 → 493 | Cahier de 4e (12 fichiers) |
+| 494 → 498 | Cahier de 3e (5 fichiers) |
+| 499 → 512 | Cahier de 2de (14 fichiers) |
+| 513 → 548 | Cahier de 1re (36 fichiers) |
+| 549 → 554 | Cahier de Tle (6 fichiers) |
+
+Ordre : la 466 d'abord, puis 467 → 554 dans l'ordre ; toutes demandent la 372.
+Elles mettent à jour sans doublon les exercices déjà en base (identifiant dérivé
+du chapitre et de la position).
 
 ## Pourquoi ne pas « tout fusionner en un fichier » ?
 

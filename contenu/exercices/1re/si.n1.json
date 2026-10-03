@@ -1,0 +1,4759 @@
+{
+ "niveau": "1re",
+ "matiere": "si",
+ "exercices": [
+  {
+   "chapitre": "0d25e817-4458-553c-8e2c-b24b74ce1e3e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le portail qui s’ouvre tout seul",
+   "competence": "observer-schema",
+   "situation": "Lola observe le portail automatique de son lycée : un bouton, une cellule sur le côté, un voyant orange, un moteur dans un coffret. Elle veut savoir qui fait quoi dans ce système.",
+   "documents": [
+    {
+     "id": "composants",
+     "type": "tableau",
+     "titre": "Les composants du portail",
+     "colonnes": [
+      "Repère",
+      "Composant"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Batterie 24 V"
+      ],
+      [
+       "2",
+       "Carte de puissance (variateur)"
+      ],
+      [
+       "3",
+       "Moteur à courant continu"
+      ],
+      [
+       "4",
+       "Réducteur à engrenages"
+      ],
+      [
+       "5",
+       "Vantail du portail"
+      ]
+     ],
+     "source": "Système imaginé pour l’exercice"
+    },
+    {
+     "id": "info",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Un chemin de l’information",
+     "noeuds": [
+      {
+       "id": "cell",
+       "texte": "Cellule photoélectrique"
+      },
+      {
+       "id": "mc",
+       "texte": "Microcontrôleur"
+      },
+      {
+       "id": "voy",
+       "texte": "Voyant orange"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cell",
+       "a": "mc",
+       "texte": "présence"
+      },
+      {
+       "de": "mc",
+       "a": "voy",
+       "texte": "ordre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "info",
+     "reponse": [
+      "cell"
+     ],
+     "enonce": "Touche le composant qui acquiert l’information « un obstacle est présent ».",
+     "aide": "Acquérir, c’est mesurer une grandeur du monde réel : quel composant « regarde » devant le portail ?",
+     "explication": "La **cellule photoélectrique** est un capteur : elle réalise « acquérir ». Le microcontrôleur traite, le voyant communique."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Batterie 24 V",
+       "Alimenter"
+      ],
+      [
+       "Carte de puissance (variateur)",
+       "Distribuer"
+      ],
+      [
+       "Moteur à courant continu",
+       "Convertir"
+      ],
+      [
+       "Réducteur à engrenages",
+       "Transmettre"
+      ]
+     ],
+     "enonce": "Associe chaque composant du tableau à sa fonction dans la chaîne d’énergie.",
+     "aide": "Le moteur transforme l’énergie électrique en énergie mécanique : quel verbe de la chaîne cela donne-t-il ?",
+     "explication": "Chaîne d’énergie : la **batterie alimente**, la carte de puissance **distribue**, le moteur **convertit**, le réducteur **transmet** et le vantail est l’élément qui agit."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Chaîne d’information",
+      "Chaîne d’énergie"
+     ],
+     "items": [
+      [
+       "Cellule photoélectrique",
+       0
+      ],
+      [
+       "Microcontrôleur",
+       0
+      ],
+      [
+       "Voyant orange",
+       0
+      ],
+      [
+       "Batterie 24 V",
+       1
+      ],
+      [
+       "Moteur",
+       1
+      ],
+      [
+       "Réducteur",
+       1
+      ]
+     ],
+     "enonce": "Range chaque composant dans sa chaîne.",
+     "aide": "La chaîne d’information décide, la chaîne d’énergie exécute.",
+     "explication": "Capteur, microcontrôleur et voyant **décident et informent** ; batterie, moteur et réducteur **fournissent et transmettent la puissance**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d25e817-4458-553c-8e2c-b24b74ce1e3e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cahier des charges du vélo à assistance électrique",
+   "competence": "analyser-document",
+   "situation": "Une équipe de lycéens conçoit un vélo à assistance électrique. Leur cahier des charges exprime le besoin en fonctions de service ; chacune est assortie d’un critère, d’un niveau et d’une flexibilité.",
+   "documents": [
+    {
+     "id": "cdc",
+     "type": "tableau",
+     "titre": "Extrait du cahier des charges",
+     "colonnes": [
+      "Fonction de service",
+      "Critère",
+      "Niveau",
+      "Flexibilité"
+     ],
+     "lignes": [
+      [
+       "Aider le cycliste dans une côte",
+       "Puissance d’assistance",
+       "250 W",
+       "± 10 %"
+      ],
+      [
+       "Permettre un long trajet sans recharge",
+       "Autonomie",
+       "60 km",
+       "± 5 km"
+      ],
+      [
+       "Respecter la réglementation",
+       "Vitesse maximale assistée",
+       "25 km/h",
+       "aucune"
+      ],
+      [
+       "Se recharger à la maison",
+       "Durée de recharge",
+       "5 h",
+       "+ 1 h"
+      ]
+     ],
+     "source": "Cahier des charges imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cdc",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui donne le niveau attendu pour l’autonomie.",
+     "aide": "Le niveau est la valeur chiffrée attendue ; repère d’abord la ligne « Autonomie ».",
+     "explication": "Le niveau de l’autonomie est **60 km**. Le critère dit sur quoi on mesure, le niveau dit quelle valeur on attend."
+    },
+    {
+     "type": "nombre",
+     "reponse": 55,
+     "unite": "km",
+     "tolerance": 0,
+     "enonce": "Quelle est l’autonomie minimale acceptée par le cahier des charges ?",
+     "aide": "La flexibilité est la tolérance admise autour du niveau : niveau − tolérance.",
+     "explication": "Niveau 60 km, flexibilité ± 5 km : l’autonomie acceptée va de 55 à 65 km, donc le minimum est 60 − 5 = **55 km**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Non : 52 km est en dessous du minimum de 55 km",
+      "Oui : 52 km reste dans la tolérance de ± 5 km autour de 60 km",
+      "Oui : un essai réel n’a pas à respecter le cahier des charges",
+      "On ne peut pas conclure : il manque la flexibilité"
+     ],
+     "enonce": "Un essai donne une autonomie de 52 km. L’exigence est-elle respectée ?",
+     "aide": "Calcule d’abord l’intervalle admis, puis place 52 km dedans ou dehors.",
+     "explication": "L’intervalle admis est 55–65 km et 52 km est dehors : l’exigence n’est **pas respectée**. Comparer le réel au cahier des charges, c’est l’écart 3."
+    },
+    {
+     "type": "nombre",
+     "reponse": 225,
+     "unite": "W",
+     "tolerance": 0,
+     "enonce": "Quelle puissance d’assistance minimale le vélo doit-il fournir dans une côte ?",
+     "aide": "Une flexibilité en pourcentage s’applique au niveau : 10 % de 250 W, à retrancher.",
+     "explication": "10 % de 250 W font 25 W : la puissance minimale est 250 − 25 = **225 W**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d25e817-4458-553c-8e2c-b24b74ce1e3e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois écarts pour un robot tondeuse",
+   "competence": "raisonner",
+   "situation": "Une équipe teste un robot tondeuse. Elle a un cahier des charges, une simulation et un prototype réel ; les trois ne racontent pas la même histoire. Il faut comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Comparaison des trois sources",
+     "colonnes": [
+      "Grandeur",
+      "Cahier des charges",
+      "Simulation",
+      "Essai réel"
+     ],
+     "lignes": [
+      [
+       "Autonomie",
+       "≥ 2,0 h",
+       "2,6 h",
+       "1,7 h"
+      ],
+      [
+       "Vitesse d’avance",
+       "≥ 0,5 m/s",
+       "0,6 m/s",
+       "0,58 m/s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "notes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Notes de l’équipe",
+     "blocs": [
+      "Les instruments de mesure ont été étalonnés avant l’essai. La batterie et le moteur sont conformes à leur fiche technique.",
+      "L’essai s’est déroulé sur une pelouse plane, comme dans la simulation.",
+      "Le modèle numérique supposait que l’herbe n’oppose [[h|aucune]] [[h|résistance]] à la lame de coupe."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 0.9,
+     "unite": "h",
+     "tolerance": 0,
+     "enonce": "De combien d’heures l’autonomie réelle est-elle inférieure à celle prévue par la simulation ?",
+     "aide": "Soustrais l’autonomie de l’essai à celle de la simulation.",
+     "explication": "2,6 − 1,7 = **0,9 h** : c’est l’écart entre le modèle et le réel."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "2,6 h (simulation) comparée à 1,7 h (essai)",
+       "Écart 2"
+      ],
+      [
+       "1,7 h (essai) comparée à ≥ 2,0 h (cahier des charges)",
+       "Écart 3"
+      ],
+      [
+       "≥ 2,0 h (cahier des charges) comparée à 2,6 h (simulation)",
+       "Écart 1"
+      ]
+     ],
+     "enonce": "Associe chaque comparaison à l’écart qu’elle mesure.",
+     "aide": "Écart 1 : cahier des charges et modèle. Écart 2 : modèle et réel. Écart 3 : réel et cahier des charges.",
+     "explication": "Écart 1 : cahier des charges ↔ modèle. Écart 2 : modèle ↔ réel. Écart 3 : réel ↔ cahier des charges. Ici les écarts 1 et 2 sont réalisés avec la même simulation et l’écart 3 révèle un produit non conforme."
+    },
+    {
+     "type": "zone",
+     "document": "notes",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche, dans les notes, les deux mots qui désignent l’hypothèse du modèle contredite par le réel.",
+     "aide": "Les instruments, la batterie, le moteur et la pelouse sont hors de cause : cherche ce que la simulation supposait.",
+     "explication": "Le modèle supposait que l’herbe n’opposait **aucune résistance** : hypothèse trop grossière, qui explique les 0,9 h manquantes."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Le modèle colle au réel, mais le produit reste non conforme : il faut revoir sa conception",
+      "Le produit devient conforme puisque modèle et réel s’accordent désormais",
+      "Le cahier des charges est faux puisque le réel lui est inférieur",
+      "L’essai est invalide car il contredit la simulation initiale"
+     ],
+     "enonce": "Après correction de l’hypothèse, le modèle prévoit 1,7 h comme l’essai. Que conclure ?",
+     "aide": "Distingue l’écart modèle/réel (qui se ferme) de l’écart réel/cahier des charges (qui reste).",
+     "explication": "L’écart 2 est refermé, mais 1,7 h < 2,0 h : l’écart 3 demeure. Le modèle est maintenant fiable ; c’est le **produit** qu’il faut améliorer."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ac4ea59-e43f-56e9-b998-771c3128048b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une imprimante 3D pour l’atelier",
+   "competence": "analyser-document",
+   "situation": "Le lycée veut offrir une imprimante 3D à l’atelier de technologie. Le professeur résume la demande de l’établissement ; Inès doit en tirer les contraintes du projet.",
+   "documents": [
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note de service",
+     "blocs": [
+      "Le lycée offre une imprimante 3D à l’atelier de technologie.",
+      "Le budget voté est de 1 200 €.",
+      "L’imprimante doit être installée avant les vacances de Noël.",
+      "Elle doit fabriquer des pièces de 20 cm de côté avec une précision de 0,2 mm."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "phases",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Les quatre phases du projet",
+     "noeuds": [
+      {
+       "id": "conc",
+       "texte": "Conception"
+      },
+      {
+       "id": "plan",
+       "texte": "Planification"
+      },
+      {
+       "id": "real",
+       "texte": "Réalisation"
+      },
+      {
+       "id": "term",
+       "texte": "Terminaison"
+      }
+     ],
+     "liens": [
+      {
+       "de": "conc",
+       "a": "plan",
+       "texte": "jalon"
+      },
+      {
+       "de": "plan",
+       "a": "real",
+       "texte": "jalon"
+      },
+      {
+       "de": "real",
+       "a": "term",
+       "texte": "jalon"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Budget de 1 200 €",
+       "Coût"
+      ],
+      [
+       "Installation avant Noël",
+       "Délai"
+      ],
+      [
+       "Pièces de 20 cm, précision 0,2 mm",
+       "Qualité"
+      ]
+     ],
+     "enonce": "Associe chaque phrase de la note à la contrainte du triangle du projet qu’elle exprime.",
+     "aide": "Coût : l’argent. Délai : le temps. Qualité : ce que le produit doit faire.",
+     "explication": "Le budget est une contrainte de **coût**, la date de Noël une contrainte de **délai**, la taille et la précision des pièces la **qualité** attendue."
+    },
+    {
+     "type": "trous",
+     "texte": "Pour installer l’imprimante plus tôt sans dépasser 1 200 €, il faudra accepter une moindre ___.",
+     "reponses": [
+      [
+       "qualité",
+       "qualite"
+      ]
+     ],
+     "banque": [
+      "qualité",
+      "délai",
+      "coût",
+      "jalon"
+     ],
+     "enonce": "Complète la phrase avec la bonne contrainte du triangle.",
+     "aide": "On ne peut pas améliorer une contrainte sans peser sur les deux autres : ici le budget et le délai sont fixés.",
+     "explication": "Réduire le délai à budget constant se paie en **qualité** : c’est la règle du triangle du projet."
+    },
+    {
+     "type": "zone",
+     "document": "phases",
+     "reponse": [
+      "term"
+     ],
+     "enonce": "Touche la phase qui s’achève par la livraison et le retour d’expérience.",
+     "aide": "C’est la dernière phase du cycle de vie du projet.",
+     "explication": "La **terminaison** livre le produit, remet la documentation et tire le bilan. Chaque phase se clôt par un jalon."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ac4ea59-e43f-56e9-b998-771c3128048b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les bonnes exigences du store motorisé",
+   "competence": "analyser-document",
+   "situation": "Maëlys et son équipe rédigent le cahier des charges d’un store motorisé pour le CDI. Leur premier jet mélange des exigences bien formulées et d’autres qui ne le sont pas.",
+   "documents": [
+    {
+     "id": "brouillon",
+     "type": "tableau",
+     "titre": "Premier jet de l’équipe",
+     "colonnes": [
+      "Réf.",
+      "Exigence proposée"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Être solide"
+      ],
+      [
+       "B",
+       "Résister à un vent de 60 km/h (± 10 %)"
+      ],
+      [
+       "C",
+       "Utiliser un moteur pas à pas"
+      ],
+      [
+       "D",
+       "Se déployer en 20 s (± 2 s)"
+      ],
+      [
+       "E",
+       "Être beau"
+      ]
+     ],
+     "source": "Document imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "multiple": true,
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "enonce": "Touche les deux exigences exploitables, c’est-à-dire dotées d’un critère, d’un niveau et d’une flexibilité.",
+     "aide": "Une exigence exploitable contient un nombre, une unité et une tolérance.",
+     "explication": "Les exigences **B** (vent, 60 km/h, ± 10 %) et **D** (durée, 20 s, ± 2 s) sont vérifiables. « Solide » et « beau » ne le sont pas."
+    },
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’exigence qui impose une solution technique au lieu de dire ce que le store doit faire.",
+     "aide": "Un cahier des charges dit ce qu’il faut faire, jamais comment.",
+     "explication": "« Utiliser un moteur pas à pas » est une **solution** : elle interdit d’avance toute autre piste. Une bonne exigence parlerait de couple ou de précision."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Fonction principale",
+      "Fonction contrainte"
+     ],
+     "items": [
+      [
+       "Protéger la pièce du soleil",
+       0
+      ],
+      [
+       "Limiter l’éblouissement des occupants",
+       0
+      ],
+      [
+       "Respecter la norme électrique en vigueur",
+       1
+      ],
+      [
+       "Fonctionner entre − 10 °C et 50 °C",
+       1
+      ],
+      [
+       "Coûter moins de 400 €",
+       1
+      ]
+     ],
+     "enonce": "Classe ces fonctions du store.",
+     "aide": "Une contrainte est une limite imposée par le milieu extérieur : norme, température, coût, encombrement.",
+     "explication": "Protéger du soleil et limiter l’éblouissement sont ce qui **justifie** le store. Norme, plage de températures et budget sont des **limites imposées** de l’extérieur."
+    },
+    {
+     "type": "nombre",
+     "reponse": 22,
+     "unite": "s",
+     "tolerance": 0,
+     "enonce": "Quelle est la durée de déploiement maximale acceptée pour l’exigence D ?",
+     "aide": "Niveau + flexibilité.",
+     "explication": "20 s + 2 s = **22 s** : au-delà, l’exigence n’est plus respectée."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ac4ea59-e43f-56e9-b998-771c3128048b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le calendrier du drone d’inspection",
+   "competence": "raisonner",
+   "situation": "Une équipe développe un drone d’inspection de toitures en 12 semaines. Le client demande soudain une livraison en 9 semaines, sans augmenter le budget. L’équipe doit mesurer ce que cela coûte.",
+   "documents": [
+    {
+     "id": "phases",
+     "type": "tableau",
+     "titre": "Les phases du projet",
+     "colonnes": [
+      "Phase",
+      "Début",
+      "Fin",
+      "Jalon de sortie"
+     ],
+     "lignes": [
+      [
+       "Conception",
+       "S1",
+       "S3",
+       "Solution retenue"
+      ],
+      [
+       "Planification",
+       "S4",
+       "S4",
+       "Planning validé"
+      ],
+      [
+       "Réalisation",
+       "S5",
+       "S10",
+       "Drone testé"
+      ],
+      [
+       "Terminaison",
+       "S11",
+       "S12",
+       "Livraison et bilan"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Projet imaginé pour l’exercice"
+    },
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Journal du projet",
+     "colonnes": [
+      "Semaine",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "S2",
+       "Comparaison de trois solutions de motorisation"
+      ],
+      [
+       "S4",
+       "Ordonnancement des tâches validé"
+      ],
+      [
+       "S10",
+       "Vol d’essai et mesure de l’autonomie"
+      ],
+      [
+       "S12",
+       "Remise du drone et de sa notice au client"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "paires": [
+      [
+       "S2 : trois solutions comparées",
+       "Conception"
+      ],
+      [
+       "S4 : tâches ordonnancées",
+       "Planification"
+      ],
+      [
+       "S10 : vol d’essai",
+       "Réalisation"
+      ],
+      [
+       "S12 : remise au client",
+       "Terminaison"
+      ]
+     ],
+     "enonce": "Associe chaque événement du journal à la phase du cycle de vie qui le contient.",
+     "aide": "Conception : comparer des solutions. Planification : ordonner les tâches. Réalisation : fabriquer et tester. Terminaison : livrer.",
+     "explication": "Comparer des solutions relève de la **conception**, ordonner les tâches de la **planification**, tester le drone de la **réalisation**, remettre le produit de la **terminaison**."
+    },
+    {
+     "type": "zone",
+     "document": "phases",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la phase la plus longue du projet.",
+     "aide": "Compte les semaines entre le début et la fin de chaque phase.",
+     "explication": "La **réalisation** dure de S5 à S10 compris : 6 semaines, contre 3, 1 et 2 pour les autres."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "%",
+     "tolerance": 0,
+     "enonce": "Quelle part de la durée totale de 12 semaines occupe la réalisation ? (en pourcentage)",
+     "aide": "Divise la durée de la réalisation par la durée totale.",
+     "explication": "6 semaines sur 12 : 6 / 12 = **50 %** du projet."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "semaines",
+     "tolerance": 0,
+     "enonce": "L’équipe ramène la réalisation de 6 à 4 semaines, sans toucher aux autres phases. Quelle est alors la durée totale ?",
+     "aide": "Retranche les semaines gagnées à la durée totale.",
+     "explication": "12 − (6 − 4) = **10 semaines** : c’est encore plus long que les 9 semaines demandées par le client."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Réduire le périmètre (par exemple un capteur en moins) ou augmenter le budget",
+      "Rien à sacrifier : travailler plus vite suffit sans conséquence",
+      "Le coût baissera tout seul quand le délai sera plus court",
+      "Seule la qualité peut être réduite, jamais les deux autres contraintes"
+     ],
+     "enonce": "Pour tenir 9 semaines, que doit accepter le client ?",
+     "aide": "Pense au triangle coût – délai – qualité : on ne peut pas en améliorer une sans peser sur les autres.",
+     "explication": "Raccourcir un projet à budget constant se paie en **périmètre ou en qualité** ; garder tout en moins de temps coûte plus cher. Le triangle ne se triche pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "fcae5443-73a8-5c02-a69d-66f1a3e8378c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le moteur du vélo électrique sur le banc d’essai",
+   "competence": "calculer",
+   "situation": "Sur le banc d’essai du lycée, Karim fait tourner le moteur d’un vélo à assistance électrique. Un voltmètre et un ampèremètre donnent la puissance qu’il absorbe ; la fiche du moteur donne celle qu’il fournit.",
+   "documents": [
+    {
+     "id": "circ",
+     "type": "circuit",
+     "titre": "Montage du banc d’essai",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        3,
+        0
+       ]
+      },
+      {
+       "de": [
+        3,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "amperemetre",
+       "nom": "A",
+       "id": "amp"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "moteur",
+       "id": "mot"
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ],
+       "composant": "voltmetre",
+       "nom": "V",
+       "id": "volt"
+      },
+      {
+       "de": [
+        12,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        5,
+        6
+       ],
+       "composant": "interrupteur-ferme",
+       "id": "int"
+      },
+      {
+       "de": [
+        5,
+        6
+       ],
+       "a": [
+        0,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Relevés et fiche du moteur",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Tension aux bornes du moteur",
+       "36 V"
+      ],
+      [
+       "Courant dans le moteur",
+       "8,0 A"
+      ],
+      [
+       "Puissance mécanique fournie",
+       "250 W"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures arrondies, imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circ",
+     "reponse": [
+      "amp"
+     ],
+     "enonce": "Touche l’appareil qui mesure le courant dans le moteur.",
+     "aide": "L’ampèremètre se place en série, sur le même fil que le moteur.",
+     "explication": "L’**ampèremètre** (A) est en série avec le moteur et mesure le courant. Le voltmètre (V), en dérivation, mesure la tension."
+    },
+    {
+     "type": "nombre",
+     "reponse": 288,
+     "unite": "W",
+     "tolerance": 0,
+     "enonce": "Calcule la puissance électrique absorbée par le moteur.",
+     "aide": "En électricité, P = U × I.",
+     "explication": "P = U × I = 36 × 8,0 = **288 W** absorbés."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.87,
+     "tolerance": 0.003,
+     "enonce": "Calcule le rendement du moteur, arrondi au centième.",
+     "aide": "Rendement = puissance utile divisée par puissance absorbée.",
+     "explication": "η = 250 / 288 ≈ **0,87** : le moteur convertit 87 % de la puissance électrique en puissance mécanique."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "38 W partent en chaleur (effet Joule) et en frottements",
+      "38 W sont stockés dans la batterie pour plus tard",
+      "38 W deviennent de la puissance mécanique supplémentaire",
+      "Rien ne se perd : l’écart vient d’une erreur de mesure"
+     ],
+     "enonce": "Où passent les 288 − 250 = 38 W manquants ?",
+     "aide": "Un rendement est toujours inférieur à 1 : que deviennent les pertes ?",
+     "explication": "Les **pertes** partent en chaleur (effet Joule), en frottements et en bruit : la puissance utile reste toujours inférieure à la puissance absorbée."
+    }
+   ]
+  },
+  {
+   "chapitre": "fcae5443-73a8-5c02-a69d-66f1a3e8378c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du moteur à la roue, des pertes en cascade",
+   "competence": "calculer",
+   "situation": "Sur un vélo électrique, Zoé veut 200 W à la roue. Entre la batterie et la roue, trois éléments se suivent et chacun perd un peu de puissance. Elle cherche ce que la batterie doit réellement fournir.",
+   "documents": [
+    {
+     "id": "cascade",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne de puissance du vélo",
+     "noeuds": [
+      {
+       "id": "bat",
+       "texte": "Batterie"
+      },
+      {
+       "id": "ctl",
+       "texte": "Contrôleur η = 0,95"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur η = 0,85"
+      },
+      {
+       "id": "red",
+       "texte": "Réducteur η = 0,90"
+      },
+      {
+       "id": "roue",
+       "texte": "Roue : 200 W"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bat",
+       "a": "ctl"
+      },
+      {
+       "de": "ctl",
+       "a": "mot"
+      },
+      {
+       "de": "mot",
+       "a": "red"
+      },
+      {
+       "de": "red",
+       "a": "roue"
+      }
+     ],
+     "source": "Rendements arrondis, imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 0.73,
+     "tolerance": 0.003,
+     "enonce": "Quel est le rendement global de la chaîne, arrondi au centième ?",
+     "aide": "En cascade, les rendements se multiplient.",
+     "explication": "η = 0,95 × 0,85 × 0,90 ≈ **0,73** : bien moins que chaque élément pris seul."
+    },
+    {
+     "type": "nombre",
+     "reponse": 275,
+     "unite": "W",
+     "tolerance": 0.6,
+     "enonce": "Quelle puissance la batterie doit-elle fournir pour obtenir 200 W à la roue ? Arrondis à l’unité.",
+     "aide": "Puissance utile = rendement global × puissance absorbée.",
+     "explication": "P = 200 / 0,72675 ≈ **275 W**. La batterie fournit plus que la roue ne reçoit."
+    },
+    {
+     "type": "nombre",
+     "reponse": 138,
+     "unite": "Wh",
+     "tolerance": 0.6,
+     "enonce": "Le vélo roule 30 minutes à cette puissance. Quelle énergie la batterie fournit-elle, en wattheures, arrondie à l’unité ?",
+     "aide": "E = P × t, avec t exprimé en heures (30 min = 0,5 h).",
+     "explication": "E = P × t ≈ 275,2 × 0,5 ≈ **138 Wh**."
+    },
+    {
+     "type": "zone",
+     "document": "cascade",
+     "reponse": [
+      "mot"
+     ],
+     "enonce": "Touche l’élément qui perd le plus de puissance dans la chaîne.",
+     "aide": "Le rendement le plus faible correspond aux pertes les plus fortes.",
+     "explication": "Le **moteur** (η = 0,85) perd 15 % de la puissance qu’il reçoit, davantage que le contrôleur (5 %) et que le réducteur (10 %)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fcae5443-73a8-5c02-a69d-66f1a3e8378c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le réducteur du bras de robot",
+   "competence": "modeliser",
+   "situation": "Un bras de robot de laboratoire est entraîné par un petit moteur à 3 000 tr/min. Un réducteur à deux engrenages ralentit le mouvement et augmente le couple. Théo veut chiffrer ce que le réducteur échange.",
+   "documents": [
+    {
+     "id": "train",
+     "type": "schema",
+     "titre": "Le train d’engrenages (schématique)",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        115
+       ],
+       "a": [
+        133,
+        115
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        121,
+        130
+       ],
+       "a": [
+        127.9,
+        134
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        141
+       ],
+       "a": [
+        114,
+        147.9
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        145
+       ],
+       "a": [
+        95,
+        153
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        141
+       ],
+       "a": [
+        76,
+        147.9
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        69,
+        130
+       ],
+       "a": [
+        62.1,
+        134
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        115
+       ],
+       "a": [
+        57,
+        115
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        69,
+        100
+       ],
+       "a": [
+        62.1,
+        96
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        89
+       ],
+       "a": [
+        76,
+        82.1
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        85
+       ],
+       "a": [
+        95,
+        77
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        89
+       ],
+       "a": [
+        114,
+        82.1
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        121,
+        100
+       ],
+       "a": [
+        127.9,
+        96
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 115,
+       "r": 30,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "pignon",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 115,
+       "r": 5,
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 95,
+       "y": 137,
+       "texte": "Z = 20",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        265,
+        115
+       ],
+       "a": [
+        273,
+        115
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        263.5,
+        129.6
+       ],
+       "a": [
+        271.3,
+        131.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258.9,
+        143.5
+       ],
+       "a": [
+        266.3,
+        146.7
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        251.6,
+        156.1
+       ],
+       "a": [
+        258.1,
+        160.8
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        241.8,
+        167
+       ],
+       "a": [
+        247.2,
+        173
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        175.6
+       ],
+       "a": [
+        234,
+        182.5
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        216.6,
+        181.6
+       ],
+       "a": [
+        219.1,
+        189.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        202.3,
+        184.6
+       ],
+       "a": [
+        203.2,
+        192.6
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        187.7,
+        184.6
+       ],
+       "a": [
+        186.8,
+        192.6
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        173.4,
+        181.6
+       ],
+       "a": [
+        170.9,
+        189.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        175.6
+       ],
+       "a": [
+        156,
+        182.5
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        148.2,
+        167
+       ],
+       "a": [
+        142.8,
+        173
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        138.4,
+        156.1
+       ],
+       "a": [
+        131.9,
+        160.8
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        131.1,
+        143.5
+       ],
+       "a": [
+        123.7,
+        146.7
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        126.5,
+        129.6
+       ],
+       "a": [
+        118.7,
+        131.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        115
+       ],
+       "a": [
+        117,
+        115
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        126.5,
+        100.4
+       ],
+       "a": [
+        118.7,
+        98.8
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        131.1,
+        86.5
+       ],
+       "a": [
+        123.7,
+        83.3
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        138.4,
+        73.9
+       ],
+       "a": [
+        131.9,
+        69.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        148.2,
+        63
+       ],
+       "a": [
+        142.8,
+        57
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        54.4
+       ],
+       "a": [
+        156,
+        47.5
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        173.4,
+        48.4
+       ],
+       "a": [
+        170.9,
+        40.8
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        187.7,
+        45.4
+       ],
+       "a": [
+        186.8,
+        37.4
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        202.3,
+        45.4
+       ],
+       "a": [
+        203.2,
+        37.4
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        216.6,
+        48.4
+       ],
+       "a": [
+        219.1,
+        40.8
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        54.4
+       ],
+       "a": [
+        234,
+        47.5
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        241.8,
+        63
+       ],
+       "a": [
+        247.2,
+        57
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        251.6,
+        73.9
+       ],
+       "a": [
+        258.1,
+        69.2
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258.9,
+        86.5
+       ],
+       "a": [
+        266.3,
+        83.3
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        263.5,
+        100.4
+       ],
+       "a": [
+        271.3,
+        98.8
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 195,
+       "cy": 115,
+       "r": 70,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "roue",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 195,
+       "cy": 115,
+       "r": 5,
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 195,
+       "y": 137,
+       "texte": "Z = 100",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        115
+       ],
+       "a": [
+        60,
+        115
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 140,
+       "texte": "Moteur",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        275,
+        115
+       ],
+       "a": [
+        330,
+        115
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 330,
+       "y": 140,
+       "texte": "Bras",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 222,
+       "texte": "Dessin schématique : les dents ne sont pas comptées.",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "data",
+     "type": "tableau",
+     "titre": "Caractéristiques",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Vitesse du moteur",
+       "3 000 tr/min"
+      ],
+      [
+       "Couple du moteur",
+       "0,12 N·m"
+      ],
+      [
+       "Rendement du réducteur",
+       "0,90"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "train",
+     "reponse": [
+      "pignon"
+     ],
+     "enonce": "Touche l’engrenage qui tourne le plus vite.",
+     "aide": "Les deux engrenages avancent du même nombre de dents : celui qui en a le moins fait plus de tours.",
+     "explication": "Le **pignon** de 20 dents tourne cinq fois plus vite que la roue de 100 dents : même nombre de dents engrenées, moins de dents par tour."
+    },
+    {
+     "type": "nombre",
+     "reponse": 600,
+     "unite": "tr/min",
+     "tolerance": 0,
+     "enonce": "À quelle vitesse tourne le bras ?",
+     "aide": "Le rapport de transmission vaut 20 / 100 ; il multiplie la vitesse du moteur.",
+     "explication": "r = 20 / 100 = 0,2 donc N = 3 000 × 0,2 = **600 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.54,
+     "unite": "N·m",
+     "tolerance": 0.005,
+     "enonce": "Quel couple le réducteur fournit-il au bras ? Prends en compte son rendement.",
+     "aide": "Le couple est multiplié par l’inverse du rapport de vitesse, puis par le rendement.",
+     "explication": "C = 0,12 × 5 × 0,90 = **0,54 N·m**. Sans pertes, on aurait 0,60 N·m."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Le réducteur perd 10 % de la puissance en frottements : le couple ne vaut que 4,5 fois celui du moteur",
+      "Le couple n’est multiplié que par 4,5 car le moteur délivre moins de couple quand il ralentit",
+      "La puissance d’un réducteur augmente, ce qui compense les frottements",
+      "Le réducteur ne conserve pas la vitesse de rotation du moteur"
+     ],
+     "enonce": "La vitesse est divisée par 5 mais le couple n’est multiplié que par 4,5. Pourquoi ?",
+     "aide": "P = C × ω : la puissance en sortie est celle de l’entrée, aux pertes près.",
+     "explication": "Un réducteur échange de la vitesse contre du couple. Avec η = 0,90, la puissance de sortie vaut 90 % de celle d’entrée, donc le couple vaut 5 × 0,90 = **4,5 fois** celui du moteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "99195b56-a49b-5dcd-a801-5adaabd3ec2e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un brainstorming pour le robot tondeuse",
+   "competence": "analyser-document",
+   "situation": "Lina, Malik et Sam cherchent des idées pour un robot tondeuse. La séance dérape un peu : le professeur relit leurs échanges et leurs notes pour rappeler les règles de la conception.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le fil de discussion de l’équipe",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "🧑",
+       "cote": "droite"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Idée : des panneaux solaires sur le capot pour recharger la tondeuse !"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Ou une lame qui se règle toute seule avec un capteur d’herbe."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Pff, c’est [[j|nul]] : trop cher, ça ne marchera jamais."
+      },
+      {
+       "qui": "Lina",
+       "texte": "On note tout pour l’instant, on triera après."
+      }
+     ],
+     "source": "Échange écrit pour l’exercice"
+    },
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Notes en vrac de l’équipe",
+     "colonnes": [
+      "Ce qu’on a noté"
+     ],
+     "lignes": [
+      [
+       "Tondre la pelouse sans intervention de l’utilisateur"
+      ],
+      [
+       "Rentrer seule à sa base quand la batterie est faible"
+      ],
+      [
+       "Convertir l’énergie électrique en rotation de la lame"
+      ],
+      [
+       "Mesurer le niveau de la batterie"
+      ],
+      [
+       "Moteur brushless de 150 W"
+      ],
+      [
+       "Capteur à ultrasons HC-SR04"
+      ]
+     ],
+     "source": "Notes écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le mot par lequel Sam juge une idée alors que l’équipe cherche encore des idées.",
+     "aide": "Pendant la phase de recherche d’idées, il est interdit de juger.",
+     "explication": "Le mot « **nul** » est un jugement. Pendant la divergence, juger tue les idées fragiles, dont sortent souvent les meilleures solutions."
+    },
+    {
+     "type": "trous",
+     "texte": "Pendant la ___, on produit un maximum d’idées sans juger ; pendant la ___, on évalue et on retient.",
+     "reponses": [
+      [
+       "divergence"
+      ],
+      [
+       "convergence"
+      ]
+     ],
+     "banque": [
+      "divergence",
+      "convergence",
+      "simulation",
+      "maquette"
+     ],
+     "enonce": "Complète la règle des deux temps de la recherche de solutions.",
+     "aide": "Le premier temps ouvre le choix, le second le referme.",
+     "explication": "La **divergence** produit des idées, la **convergence** les évalue et en retient ; il est interdit de rouvrir la liste en convergence."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Fonction de service",
+      "Fonction technique",
+      "Solution constructive"
+     ],
+     "items": [
+      [
+       "Tondre la pelouse sans intervention de l’utilisateur",
+       0
+      ],
+      [
+       "Rentrer seule à sa base quand la batterie est faible",
+       0
+      ],
+      [
+       "Convertir l’énergie électrique en rotation de la lame",
+       1
+      ],
+      [
+       "Mesurer le niveau de la batterie",
+       1
+      ],
+      [
+       "Moteur brushless de 150 W",
+       2
+      ],
+      [
+       "Capteur à ultrasons HC-SR04",
+       2
+      ]
+     ],
+     "enonce": "Range chaque note du tableau dans le bon niveau, du besoin à la pièce choisie.",
+     "aide": "Service : ce que reçoit l’utilisateur. Technique : comment le système s’y prend. Solution : la pièce ou le composant.",
+     "explication": "Une fonction de **service** parle à l’utilisateur ; une fonction **technique** décrit ce que fait le système en interne ; une **solution constructive** est le composant retenu, avec sa référence."
+    }
+   ]
+  },
+  {
+   "chapitre": "99195b56-a49b-5dcd-a801-5adaabd3ec2e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Choisir le moteur de coupe avec un tableau multicritère",
+   "competence": "raisonner",
+   "situation": "L’équipe du robot tondeuse hésite entre trois moteurs pour la lame. Elle les compare avec un tableau multicritère : chaque critère reçoit un poids, chaque solution une note sur 5.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Notes sur 5 des trois solutions",
+     "colonnes": [
+      "Critère",
+      "Poids",
+      "A : courant continu",
+      "B : brushless",
+      "C : pas à pas"
+     ],
+     "lignes": [
+      [
+       "Coût",
+       3,
+       5,
+       2,
+       3
+      ],
+      [
+       "Bruit",
+       2,
+       2,
+       4,
+       3
+      ],
+      [
+       "Rendement",
+       3,
+       3,
+       5,
+       2
+      ],
+      [
+       "Fiabilité",
+       2,
+       3,
+       5,
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes imaginées pour l’exercice"
+    },
+    {
+     "id": "poids2",
+     "type": "tableau",
+     "titre": "Poids proposés par le directeur, qui veut surtout un prix bas",
+     "colonnes": [
+      "Critère",
+      "Poids"
+     ],
+     "lignes": [
+      [
+       "Coût",
+       5
+      ],
+      [
+       "Bruit",
+       1
+      ],
+      [
+       "Rendement",
+       2
+      ],
+      [
+       "Fiabilité",
+       2
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 39,
+     "tolerance": 0,
+     "enonce": "Avec les poids du premier tableau, quel est le total pondéré de la solution B (brushless) ?",
+     "aide": "Multiplie chaque note de la colonne B par le poids de sa ligne, puis additionne.",
+     "explication": "B : 3 × 2 + 2 × 4 + 3 × 5 + 2 × 5 = 6 + 8 + 15 + 10 = **39**. Avec ces poids, A obtient 34 et C 29."
+    },
+    {
+     "type": "nombre",
+     "reponse": 39,
+     "tolerance": 0,
+     "enonce": "Avec les poids du directeur, quel est le total pondéré de la solution A (courant continu) ?",
+     "aide": "Reprends les notes de la colonne A et utilise les nouveaux poids 5, 1, 2 et 2.",
+     "explication": "A : 5 × 5 + 1 × 2 + 2 × 3 + 2 × 3 = 25 + 2 + 6 + 6 = **39**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "A : courant continu",
+      "B : brushless",
+      "C : pas à pas"
+     ],
+     "enonce": "Avec les poids du directeur, range les solutions de la mieux classée à la moins bien classée.",
+     "aide": "Il te reste à calculer B et C avec les nouveaux poids (A vaut 39).",
+     "explication": "Avec les nouveaux poids : A = 39, B = 5 × 2 + 1 × 4 + 2 × 5 + 2 × 5 = 34, C = 15 + 3 + 4 + 8 = 30. Le classement devient **A, B, C**, alors qu’il était B, A, C."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Le tableau rend le choix explicite et discutable : changer les poids peut changer le classement",
+      "Le tableau a donné un résultat faux la première fois et un résultat juste la seconde fois",
+      "Le directeur a raison puisque son classement est le dernier calculé",
+      "Un tableau multicritère désigne la solution objectivement optimale"
+     ],
+     "enonce": "Le classement a changé avec les poids. Que montre cet exercice ?",
+     "aide": "Le tableau est un outil de discussion, pas un oracle.",
+     "explication": "Un tableau multicritère n’est pas un oracle : il met les **priorités à plat**. Savoir montrer que le classement dépend des poids fait partie du travail de l’ingénieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "99195b56-a49b-5dcd-a801-5adaabd3ec2e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le moteur du bras de robot chauffe trop",
+   "competence": "lire-graphique",
+   "situation": "Le moteur d’un bras de robot ne doit jamais dépasser 70 °C. Avant fabrication, l’équipe l’a simulé ; puis un prototype a été mesuré au banc. Les deux courbes ne racontent pas la même chose.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température du moteur au cours d’un essai",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+     ],
+     "series": [
+      {
+       "nom": "Simulation",
+       "valeurs": [
+        20,
+        35,
+        45,
+        52,
+        57,
+        60
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Mesure sur le prototype",
+       "valeurs": [
+        20,
+        40,
+        54,
+        64,
+        71,
+        75
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 0,
+      "max": 80,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "hyp",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Hypothèses du modèle de simulation",
+     "blocs": [
+      "H1 : les pièces du bras sont indéformables.",
+      "H2 : les [[f|frottements]] dans les paliers sont négligés.",
+      "H3 : la tension d’alimentation reste constante."
+     ],
+     "source": "Hypothèses écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 57,
+     "unite": "°C",
+     "tolerance": 1,
+     "enonce": "Quelle température la simulation prévoit-elle au bout de 20 minutes ?",
+     "aide": "Lis la courbe de la simulation à l’abscisse 20.",
+     "explication": "À 20 minutes, la simulation prévoit **57 °C**, sous la limite de 70 °C."
+    },
+    {
+     "type": "nombre",
+     "reponse": 14,
+     "unite": "°C",
+     "tolerance": 1,
+     "enonce": "À 20 minutes, de combien de degrés la mesure dépasse-t-elle la simulation ?",
+     "aide": "Lis aussi la mesure à 20 minutes (71 °C), puis soustrais.",
+     "explication": "71 − 57 = **14 °C** d’écart : la simulation sous-estime l’échauffement."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche l’instant où la mesure dépasse pour la première fois la limite de 70 °C.",
+     "aide": "Repère le premier point de la courbe de mesure situé au-dessus de la graduation 70.",
+     "explication": "À **20 minutes**, la mesure atteint 71 °C ; à 15 minutes elle n’était qu’à 64 °C. L’exigence des 70 °C n’est pas tenue."
+    },
+    {
+     "type": "zone",
+     "document": "hyp",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot de l’hypothèse qui explique le mieux que la simulation sous-estime la chaleur.",
+     "aide": "Qu’est-ce qui produit de la chaleur dans un moteur mécanique, en plus du courant ?",
+     "explication": "Les **frottements** des paliers produisent de la chaleur : les négliger donne un moteur trop « froid » dans la simulation."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Non : la simulation sous-estime l’échauffement, il faut affiner le modèle ou valider par l’essai",
+      "Oui : la simulation est un résultat de calcul, donc plus fiable que la mesure",
+      "Oui : 60 °C à 25 minutes prouve que le moteur reste sous 70 °C",
+      "Non : mais seulement parce qu’il manque un point à 30 minutes"
+     ],
+     "enonce": "Peut-on valider l’exigence « moteur sous 70 °C » avec la seule simulation ?",
+     "aide": "Un résultat de simulation n’a de sens que dans le cadre de ses hypothèses.",
+     "explication": "Une simulation n’a de valeur que dans le cadre de ses **hypothèses simplificatrices** ; ici l’une est fausse, et la mesure le prouve. Il faut corriger le modèle ou valider sur le prototype."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fca8277-b3e5-5e39-828e-86b8e3fb88ce",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les capteurs du portail automatique",
+   "competence": "lire-tableau",
+   "situation": "Le portail du lycée surveille sa position, la présence d’un obstacle et la température de son moteur. Rayan range ses capteurs : chacun délivre un signal d’un type différent.",
+   "documents": [
+    {
+     "id": "capteurs",
+     "type": "tableau",
+     "titre": "Les capteurs du portail",
+     "colonnes": [
+      "Capteur",
+      "Grandeur mesurée",
+      "Signal de sortie"
+     ],
+     "lignes": [
+      [
+       "Fin de course",
+       "Position du vantail",
+       "0 ou 1"
+      ],
+      [
+       "Cellule",
+       "Présence d’un obstacle",
+       "0 ou 1"
+      ],
+      [
+       "Sonde de température",
+       "Température du moteur",
+       "Tension continue de 0 à 3,3 V"
+      ],
+      [
+       "Codeur magnétique",
+       "Angle de l’arbre",
+       "Valeur codée envoyée sur un bus I2C"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Système imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "capteurs",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui décrit un signal analogique.",
+     "aide": "Un signal analogique est une tension qui varie de façon continue avec la grandeur mesurée.",
+     "explication": "La sonde de température délivre une **tension continue** de 0 à 3,3 V : c’est un capteur analogique."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "TOR",
+      "Analogique",
+      "Numérique"
+     ],
+     "items": [
+      [
+       "Fin de course",
+       0
+      ],
+      [
+       "Cellule",
+       0
+      ],
+      [
+       "Sonde de température",
+       1
+      ],
+      [
+       "Codeur magnétique",
+       2
+      ]
+     ],
+     "enonce": "Classe chaque capteur selon la nature de son signal.",
+     "aide": "TOR : deux états seulement. Analogique : tension continue. Numérique : valeur codée sur un bus.",
+     "explication": "Fin de course et cellule ne donnent que deux états (**TOR**), la sonde une tension continue (**analogique**), le codeur une valeur codée sur le bus I2C (**numérique**)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1024,
+     "enonce": "Un CAN de 10 bits lit la tension de la sonde. Combien de valeurs différentes peut-il produire ?",
+     "aide": "Avec n bits, on obtient 2 puissance n niveaux.",
+     "explication": "2¹⁰ = **1 024** niveaux.",
+     "tolerance": 0
+    },
+    {
+     "type": "nombre",
+     "reponse": 3.22,
+     "unite": "mV",
+     "tolerance": 0.006,
+     "enonce": "Le CAN de 10 bits couvre de 0 à 3,3 V. Quel est le pas de quantification, en millivolts, arrondi au centième ?",
+     "aide": "Divise la pleine échelle (3 300 mV) par le nombre de niveaux.",
+     "explication": "q = 3 300 / 1 024 ≈ **3,22 mV** : c’est la plus petite variation de tension que le CAN code."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fca8277-b3e5-5e39-828e-86b8e3fb88ce",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mesurer la température de la buse d’une imprimante 3D",
+   "competence": "lire-graphique",
+   "situation": "Dans une imprimante 3D, un capteur mesure la température de la buse, et un CAN la transforme en nombre pour le microcontrôleur. Lucie cherche la sensibilité du capteur et la finesse de la mesure.",
+   "documents": [
+    {
+     "id": "cap",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension de sortie du capteur de buse",
+     "categories": [
+      "0",
+      "50",
+      "100",
+      "150",
+      "200",
+      "250"
+     ],
+     "series": [
+      {
+       "nom": "Tension de sortie",
+       "valeurs": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2,
+        2.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension de sortie",
+      "unite": "V",
+      "min": 0,
+      "max": 3,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Température de la buse (°C)"
+     },
+     "valeurs": false,
+     "source": "Caractéristique idéalisée, imaginée pour l’exercice"
+    },
+    {
+     "id": "can",
+     "type": "tableau",
+     "titre": "Le convertisseur",
+     "colonnes": [
+      "Caractéristique",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Résolution",
+       "12 bits"
+      ],
+      [
+       "Tension de pleine échelle",
+       "3,3 V"
+      ],
+      [
+       "Fréquence d’échantillonnage",
+       "100 Hz"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cap",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la température pour laquelle le capteur délivre 1,5 V.",
+     "aide": "Repère 1,5 V sur l’axe vertical, puis cherche l’abscisse du point correspondant.",
+     "explication": "La courbe passe par 1,5 V à **150 °C**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "mV/°C",
+     "tolerance": 0.3,
+     "enonce": "Quelle est la sensibilité du capteur, en millivolts par degré Celsius ?",
+     "aide": "Sensibilité = variation de la sortie divisée par variation de l’entrée ; la courbe est une droite.",
+     "explication": "S = (2,5 − 0) V / 250 °C = 0,010 V/°C = **10 mV/°C**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.08,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "enonce": "Quelle plus petite variation de température le CAN permet-il de distinguer ? Arrondis au centième de degré.",
+     "aide": "Calcule d’abord le pas du CAN en mV (3 300 / 4 096), puis divise par la sensibilité.",
+     "explication": "q = 3 300 / 4 096 ≈ 0,806 mV, donc 0,806 / 10 ≈ **0,08 °C** : la mesure est très fine."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Non : il faudrait au moins 120 Hz, sinon le signal serait irrémédiablement déformé",
+      "Oui : 100 Hz dépasse la fréquence maximale de 60 Hz, c’est donc largement suffisant",
+      "Oui : tant que le CAN reste à 12 bits, la fréquence d’échantillonnage importe peu",
+      "Non : il faudrait seulement 60 Hz de plus, soit un échantillonnage à 160 Hz minimum"
+     ],
+     "enonce": "Un capteur de vibration du plateau délivre un signal dont la fréquence maximale est 60 Hz. L’échantillonnage à 100 Hz suffit-il ?",
+     "aide": "Le théorème de Shannon impose d’échantillonner au moins au double de la fréquence maximale.",
+     "explication": "Shannon : fréquence d’échantillonnage ≥ 2 × 60 = **120 Hz**. À 100 Hz, le signal est déformé et aucun traitement ultérieur ne le récupère."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fca8277-b3e5-5e39-828e-86b8e3fb88ce",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le cerveau du portail : états et boucle",
+   "competence": "modeliser",
+   "situation": "Un portail coulissant est commandé par un microcontrôleur qui répète sans fin la même boucle toutes les 20 ms. Mehdi doit lire son diagramme d’états, son programme et ses caractéristiques pour chiffrer le fonctionnement.",
+   "documents": [
+    {
+     "id": "etats",
+     "type": "schema",
+     "titre": "Diagramme d’états du portail",
+     "largeur": 420,
+     "hauteur": 245,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 105,
+       "l": 100,
+       "h": 44,
+       "arrondi": 10,
+       "texte": "Fermé",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 25,
+       "l": 120,
+       "h": 44,
+       "arrondi": 10,
+       "texte": "En ouverture",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 310,
+       "y": 105,
+       "l": 100,
+       "h": 44,
+       "arrondi": 10,
+       "texte": "Ouvert",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 185,
+       "l": 120,
+       "h": 44,
+       "arrondi": 10,
+       "texte": "En fermeture",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        105
+       ],
+       "a": [
+        160,
+        55
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 78,
+       "texte": "télécommande",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "t1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        52
+       ],
+       "a": [
+        350,
+        105
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 292,
+       "y": 36,
+       "texte": "fin de course ouvert",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "t2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        350,
+        149
+       ],
+       "a": [
+        280,
+        200
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 322,
+       "y": 190,
+       "texte": "après 30 s",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "t3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        200
+       ],
+       "a": [
+        70,
+        149
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 224,
+       "texte": "fin de course fermé",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "t4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        185
+       ],
+       "a": [
+        220,
+        69
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 130,
+       "texte": "obstacle",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "t5",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Programme principal",
+     "blocs": [
+      "répéter indéfiniment :",
+      "    lire bouton, obstacle, fin_ouvert, fin_ferme",
+      "    si état = FERMÉ et bouton = 1 : état ← OUVERTURE",
+      "    si état = OUVERTURE et fin_ouvert = 1 : état ← OUVERT",
+      "    si état = FERMETURE et obstacle = 1 : état ← …",
+      "    écrire le moteur selon l’état"
+     ],
+     "source": "Pseudo-code écrit pour l’exercice"
+    },
+    {
+     "id": "data",
+     "type": "tableau",
+     "titre": "Caractéristiques",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Course du vantail",
+       "4,0 m"
+      ],
+      [
+       "Vitesse du vantail",
+       "0,25 m/s"
+      ],
+      [
+       "Période de la boucle",
+       "20 ms"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etats",
+     "reponse": [
+      "t5"
+     ],
+     "enonce": "Le vantail se ferme et la cellule détecte un enfant. Touche la transition que le portail doit alors prendre.",
+     "aide": "Pars de l’état « En fermeture » et cherche la flèche déclenchée par un obstacle.",
+     "explication": "La transition **« obstacle »** ramène le portail de « En fermeture » à « En ouverture », ce qui libère le passage."
+    },
+    {
+     "type": "trous",
+     "texte": "Dans l’état FERMETURE, si obstacle = 1, le programme met état ← ___.",
+     "reponses": [
+      [
+       "OUVERTURE"
+      ]
+     ],
+     "banque": [
+      "OUVERTURE",
+      "OUVERT",
+      "FERMÉ",
+      "FERMETURE"
+     ],
+     "enonce": "Complète la ligne du programme qui contient « … », en t’aidant du diagramme.",
+     "aide": "Le programme doit réaliser la transition que tu viens de repérer sur le diagramme.",
+     "explication": "Le diagramme d’états dit que l’obstacle fait passer à **OUVERTURE** : le programme code exactement la transition."
+    },
+    {
+     "type": "nombre",
+     "reponse": 16,
+     "unite": "s",
+     "tolerance": 0,
+     "enonce": "Combien de temps dure l’ouverture complète du portail ?",
+     "aide": "Durée = distance divisée par vitesse.",
+     "explication": "t = 4,0 / 0,25 = **16 s**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 800,
+     "enonce": "Combien de fois la boucle du programme s’exécute-t-elle pendant cette ouverture ?",
+     "aide": "Convertis 20 ms en secondes, puis divise la durée de l’ouverture par la période de la boucle.",
+     "explication": "16 s / 0,020 s = **800** passages : le microcontrôleur vérifie 800 fois les capteurs pendant l’ouverture.",
+     "tolerance": 0
+    }
+   ]
+  },
+  {
+   "chapitre": "87cc1792-39e8-5d7c-ba06-3ee7e2747ad2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le planning de l’imprimante 3D du lycée",
+   "competence": "lire-tableau",
+   "situation": "Le lycée installe son imprimante 3D en six semaines. Clara lit le diagramme de Gantt de son équipe : un rectangle par tâche, qui montre aussi les tâches menées en même temps.",
+   "documents": [
+    {
+     "id": "gantt",
+     "type": "tableau",
+     "titre": "Diagramme de Gantt (■ = tâche en cours)",
+     "colonnes": [
+      "Tâche",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "lignes": [
+      [
+       "T1 Rédiger le cahier des charges",
+       "■",
+       "■",
+       "·",
+       "·",
+       "·",
+       "·"
+      ],
+      [
+       "T2 Choisir le modèle",
+       "·",
+       "·",
+       "■",
+       "■",
+       "·",
+       "·"
+      ],
+      [
+       "T3 Commander et attendre la livraison",
+       "·",
+       "·",
+       "·",
+       "·",
+       "■",
+       "·"
+      ],
+      [
+       "T4 Préparer la salle (table, prises)",
+       "·",
+       "·",
+       "■",
+       "■",
+       "■",
+       "·"
+      ],
+      [
+       "T5 Installer et tester",
+       "·",
+       "·",
+       "·",
+       "·",
+       "·",
+       "■"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Planning imaginé pour l’exercice"
+    },
+    {
+     "id": "ant",
+     "type": "tableau",
+     "titre": "Antériorités",
+     "colonnes": [
+      "Tâche",
+      "À terminer avant elle"
+     ],
+     "lignes": [
+      [
+       "T1",
+       "aucune"
+      ],
+      [
+       "T2",
+       "T1"
+      ],
+      [
+       "T3",
+       "T2"
+      ],
+      [
+       "T4",
+       "T1"
+      ],
+      [
+       "T5",
+       "T3 et T4"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gantt",
+     "multiple": true,
+     "reponse": [
+      "r1c3",
+      "r3c3"
+     ],
+     "enonce": "Touche les deux cases de la semaine S3 qui montrent deux tâches menées en même temps.",
+     "aide": "Descends la colonne S3 et repère les deux cases marquées ■.",
+     "explication": "En **S3**, T2 (choisir le modèle) et T4 (préparer la salle) avancent en parallèle : c’est ce que le Gantt montre d’un coup d’œil."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "semaines",
+     "tolerance": 0,
+     "enonce": "Quelle est la durée totale du projet, de la première à la dernière case marquée ?",
+     "aide": "Repère la première semaine où une tâche commence et la dernière où une tâche se termine.",
+     "explication": "Le projet va de S1 à S6 : **6 semaines**."
+    },
+    {
+     "type": "zone",
+     "document": "ant",
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la case qui dit quelles tâches doivent être terminées avant de commencer T5.",
+     "aide": "Cherche la ligne T5 dans le tableau des antériorités.",
+     "explication": "T5 ne démarre qu’une fois **T3 et T4** terminées : une antériorité est une tâche à finir avant."
+    }
+   ]
+  },
+  {
+   "chapitre": "87cc1792-39e8-5d7c-ba06-3ee7e2747ad2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le réseau PERT du store motorisé",
+   "competence": "calculer",
+   "situation": "Un groupe de lycéens fabrique un store motorisé pour le CDI. Six tâches, des durées, des antériorités : Zoé calcule les dates au plus tôt pour trouver ce qui commande la durée du projet.",
+   "documents": [
+    {
+     "id": "taches",
+     "type": "tableau",
+     "titre": "Les tâches du projet",
+     "colonnes": [
+      "Tâche",
+      "Description",
+      "Durée (jours)",
+      "Antériorités"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Étude du besoin",
+       2,
+       "aucune"
+      ],
+      [
+       "B",
+       "Conception mécanique",
+       4,
+       "A"
+      ],
+      [
+       "C",
+       "Conception électronique",
+       3,
+       "A"
+      ],
+      [
+       "D",
+       "Fabrication des pièces",
+       5,
+       "B et C"
+      ],
+      [
+       "E",
+       "Programmation",
+       2,
+       "C"
+      ],
+      [
+       "F",
+       "Assemblage et essais",
+       3,
+       "D et E"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Projet imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "jours",
+     "tolerance": 0,
+     "enonce": "Au bout de combien de jours la tâche D peut-elle commencer au plus tôt ?",
+     "aide": "D attend B et C : calcule la fin de chacune et prends la plus tardive.",
+     "explication": "A finit à 2 j ; B finit à 2 + 4 = 6 j, C à 2 + 3 = 5 j. D commence donc au plus tôt à **6 jours**."
+    },
+    {
+     "type": "zone",
+     "document": "taches",
+     "multiple": true,
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r3c0",
+      "r5c0"
+     ],
+     "enonce": "Touche les quatre tâches du chemin critique.",
+     "aide": "Cherche la suite de tâches qui, mise bout à bout, donne la durée totale la plus longue.",
+     "explication": "Le chemin critique est **A → B → D → F** : 2 + 4 + 5 + 3 = 14 jours. C (marge 1 jour) et E (marge 4 jours) peuvent glisser sans retarder le projet."
+    },
+    {
+     "type": "nombre",
+     "reponse": 14,
+     "unite": "jours",
+     "tolerance": 0,
+     "enonce": "Quelle est la durée minimale du projet ?",
+     "aide": "C’est la longueur du chemin critique.",
+     "explication": "La durée minimale est la longueur du chemin critique : **14 jours**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Aucun jour : E a une marge de 4 jours et n’est pas sur le chemin critique",
+      "Deux jours : la durée de la tâche diminue, donc celle du projet aussi",
+      "Un jour : la moitié du temps gagné sur E profite au projet",
+      "Quatre jours : toute la marge de E est récupérée par le projet"
+     ],
+     "enonce": "L’équipe parvient à programmer en 2 jours de moins (tâche E). Combien de jours le projet y gagne-t-il ?",
+     "aide": "Accélérer une tâche hors du chemin critique ne fait rien gagner.",
+     "explication": "E a une marge de 4 jours : l’accélérer ne change pas le chemin critique A → B → D → F. Le projet y gagne **0 jour** ; on ne renforce que ce qui est critique."
+    }
+   ]
+  },
+  {
+   "chapitre": "87cc1792-39e8-5d7c-ba06-3ee7e2747ad2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La panne d’imprimante retarde le drone",
+   "competence": "raisonner",
+   "situation": "Une équipe de lycéens assemble un drone d’inspection. Au jour 4, l’imprimante 3D tombe en panne : une tâche va durer plus longtemps. Le chef de projet doit savoir si le projet prend du retard, et que faire.",
+   "documents": [
+    {
+     "id": "taches",
+     "type": "tableau",
+     "titre": "Les tâches du projet",
+     "colonnes": [
+      "Tâche",
+      "Description",
+      "Durée (jours)",
+      "Antériorités"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Commande des composants",
+       3,
+       "aucune"
+      ],
+      [
+       "B",
+       "Impression 3D du châssis",
+       4,
+       "aucune"
+      ],
+      [
+       "C",
+       "Soudure de la carte de puissance",
+       2,
+       "A"
+      ],
+      [
+       "D",
+       "Assemblage mécanique",
+       2,
+       "A et B"
+      ],
+      [
+       "E",
+       "Câblage et réglages",
+       3,
+       "C et D"
+      ],
+      [
+       "F",
+       "Essais en vol",
+       2,
+       "E"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Projet imaginé pour l’exercice"
+    },
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Journal du chef de projet",
+     "blocs": [
+      "Jour 4 : l’imprimante du lycée tombe en panne. L’impression du châssis (B) durera 6 jours au lieu de 4.",
+      "Une seconde imprimante existe dans un autre établissement, à trois quarts d’heure de route."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "taches",
+     "multiple": true,
+     "reponse": [
+      "r1c0",
+      "r3c0",
+      "r4c0",
+      "r5c0"
+     ],
+     "enonce": "Avant la panne, touche les quatre tâches du chemin critique.",
+     "aide": "Compare les chemins B → D → E → F, A → D → E → F et A → C → E → F.",
+     "explication": "B → D → E → F fait 4 + 2 + 3 + 2 = 11 jours, contre 10 pour les deux autres chemins : le chemin critique est **B, D, E, F**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 11,
+     "unite": "jours",
+     "tolerance": 0,
+     "enonce": "Quelle était la durée minimale prévue du projet ?",
+     "aide": "C’est la longueur du chemin critique.",
+     "explication": "4 + 2 + 3 + 2 = **11 jours**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Rien : la tâche C dispose d’une marge de 1 jour, qui absorbe le retard",
+      "Le projet recule d’un jour, car C est sur le chemin critique",
+      "Le projet recule d’un jour : le retard d’une tâche se reporte toujours",
+      "Le projet avance d’un jour : un retard sur C libère le soudeur"
+     ],
+     "enonce": "Imaginons que la soudure C dure 3 jours au lieu de 2. Quel effet sur la durée du projet ?",
+     "aide": "Calcule la marge de C : l’écart entre sa date au plus tard et sa date au plus tôt.",
+     "explication": "C finit au plus tôt à 5 j et peut finir au plus tard à 6 j (début de E) : sa marge est de 1 jour. Un retard de 1 jour **se résorbe**, le projet reste à 11 jours."
+    },
+    {
+     "type": "nombre",
+     "reponse": 13,
+     "unite": "jours",
+     "tolerance": 0,
+     "enonce": "Avec la panne (B dure 6 jours), quelle est la nouvelle durée minimale du projet ?",
+     "aide": "Recalcule la longueur du chemin passant par B : 6 + 2 + 3 + 2.",
+     "explication": "B → D → E → F fait désormais 6 + 2 + 3 + 2 = **13 jours** : le projet a 2 jours de retard."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Faire imprimer le châssis sur la seconde imprimante pour retrouver du temps sur B",
+      "Accélérer la soudure C pour compenser le retard",
+      "Raccourcir la commande A, puisqu’elle est au début du projet",
+      "Ne rien faire, la marge des tâches non critiques absorbera le retard"
+     ],
+     "enonce": "Quelle décision permet de limiter le retard ?",
+     "aide": "Un retard sur une tâche critique impose d’agir sur cette tâche : ajouter des moyens, réduire le périmètre ou accepter le décalage.",
+     "explication": "B est critique : il faut lui **ajouter des moyens** (seconde imprimante). Accélérer C ou A ne gagne rien, et la marge n’existe pas sur le chemin critique."
+    }
+   ]
+  },
+  {
+   "chapitre": "387fd060-82f1-59b8-9de2-8c207df43d5c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un robot tondeuse conforme… mais inadapté",
+   "competence": "analyser-document",
+   "situation": "Le robot tondeuse du lycée est livré à un jardinier. Au contrôle, il respecte toutes ses spécifications. Pourtant, quelques jours plus tard, le client écrit une lettre mécontente.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "tableau",
+     "titre": "Recette : spécifications et mesures",
+     "colonnes": [
+      "Exigence",
+      "Niveau demandé",
+      "Mesuré"
+     ],
+     "lignes": [
+      [
+       "Hauteur de coupe",
+       "4 cm ± 0,5 cm",
+       "4,2 cm"
+      ],
+      [
+       "Autonomie",
+       "≥ 90 min",
+       "95 min"
+      ],
+      [
+       "Pente franchissable",
+       "≥ 15°",
+       "15°"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre du client",
+     "blocs": [
+      "Madame, Monsieur,",
+      "Mon jardin descend vers la rivière avec une pente de [[p|25°]]. Votre robot patine dès les premiers mètres et ne tond presque rien.",
+      "Je voulais une machine qui tonde tout mon terrain."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien d’exigences du tableau sont respectées par le robot ?",
+     "aide": "Compare chaque mesure au niveau demandé, en tenant compte de la flexibilité.",
+     "explication": "Coupe : 4,2 cm est dans 4 ± 0,5 cm. Autonomie : 95 ≥ 90. Pente : 15° ≥ 15°. Les **trois** exigences sont respectées : le robot est conforme à ses spécifications.",
+     "tolerance": 0
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche, dans la lettre, la donnée qui montre que la spécification traduisait mal le besoin du client.",
+     "aide": "Cherche une valeur chiffrée qui dépasse ce que le robot sait franchir.",
+     "explication": "La pente de **25°** du jardin dépasse les 15° de la spécification : le robot est conforme à la spécification, mais celle-ci traduisait mal le besoin réel."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Il est vérifié, car conforme aux spécifications, mais pas validé, car il ne répond pas au besoin réel",
+      "Il est validé, car conforme aux spécifications, et pas vérifié, car le client se plaint",
+      "Il est à la fois vérifié et validé, puisque toutes les mesures sont bonnes",
+      "Il n’est ni vérifié ni validé, puisqu’un client est mécontent"
+     ],
+     "enonce": "Que peut-on dire du robot ?",
+     "aide": "Vérifier : a-t-on bien construit le produit ? Valider : a-t-on construit le bon produit ?",
+     "explication": "**Vérifier**, c’est comparer aux spécifications ; **valider**, c’est confronter au besoin réel. Un produit peut être parfaitement vérifié et rester invalide."
+    }
+   ]
+  },
+  {
+   "chapitre": "387fd060-82f1-59b8-9de2-8c207df43d5c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’imprimante 3D n’atteint pas sa vitesse",
+   "competence": "raisonner",
+   "situation": "Pendant la recette de l’imprimante 3D, Noémie constate que la vitesse d’impression n’atteint pas celle du cahier des charges. L’équipe doit comprendre l’origine de l’écart avant de modifier quoi que ce soit.",
+   "documents": [
+    {
+     "id": "vit",
+     "type": "tableau",
+     "titre": "Vitesse d’impression",
+     "colonnes": [
+      "Source",
+      "Vitesse"
+     ],
+     "lignes": [
+      [
+       "Cahier des charges",
+       "≥ 60 mm/s"
+      ],
+      [
+       "Simulation",
+       "58 mm/s"
+      ],
+      [
+       "Essai n° 1",
+       "48 mm/s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "proto",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Protocole de l’essai n° 1",
+     "blocs": [
+      "La vitesse a été relevée en chronométrant à la main le déplacement de la tête d’impression sur 5 secondes."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "unite": "mm/s",
+     "tolerance": 0,
+     "enonce": "De combien la vitesse mesurée est-elle inférieure à l’exigence du cahier des charges ?",
+     "aide": "Soustrais la vitesse de l’essai à celle du cahier des charges.",
+     "explication": "60 − 48 = **12 mm/s** : c’est l’écart entre le réel mesuré et le cahier des charges."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "unite": "%",
+     "tolerance": 0,
+     "enonce": "Quel pourcentage de l’exigence ces 12 mm/s représentent-ils ?",
+     "aide": "Divise l’écart par la vitesse du cahier des charges.",
+     "explication": "12 / 60 = 0,20, soit **20 %** de l’exigence."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "La courroie de l’axe X patine sur sa poulie",
+       "Le produit"
+      ],
+      [
+       "Le temps a été chronométré à la main sur 5 s",
+       "Le protocole de mesure"
+      ],
+      [
+       "Le modèle supposait des accélérations instantanées",
+       "Une hypothèse du modèle"
+      ]
+     ],
+     "enonce": "Associe chaque constat à l’origine possible de l’écart qu’il explique.",
+     "aide": "Trois origines : une fabrication non conforme, une mesure mal faite, un modèle trop grossier.",
+     "explication": "Une courroie qui patine est un défaut du **produit** ; un chronométrage manuel sur 5 s est un défaut du **protocole** ; des accélérations instantanées sont une **hypothèse** trop grossière du modèle."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "L’origine « protocole de mesure » est écartée : l’écart vient du produit ou du modèle",
+      "L’écart disparaît : la mesure précise confirme les 60 mm/s du cahier des charges",
+      "Le modèle est confirmé : 47 mm/s s’approche des 58 mm/s simulés",
+      "Le produit est validé, car deux mesures donnent presque la même valeur"
+     ],
+     "enonce": "L’équipe refait l’essai avec un capteur optique pendant 60 s et obtient 47 mm/s. Que conclure ?",
+     "aide": "Une mesure plus précise donne la même valeur qu’avant : le défaut ne venait pas de la mesure.",
+     "explication": "Le capteur optique retrouve 47 mm/s : le chronométrage n’était pas en cause. L’écart a donc son origine dans le **produit** ou une **hypothèse du modèle**, qu’il faut examiner."
+    }
+   ]
+  },
+  {
+   "chapitre": "387fd060-82f1-59b8-9de2-8c207df43d5c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bras de robot a dérivé sans que personne ne le sache",
+   "competence": "raisonner",
+   "situation": "Un projet de bras de robot s’achève. Pendant la réalisation, plusieurs modifications ont été demandées. L’équipe prépare le bilan et doit savoir ce que le projet a réellement coûté, et ce qu’il faut en retenir.",
+   "documents": [
+    {
+     "id": "base",
+     "type": "tableau",
+     "titre": "Le projet au départ",
+     "colonnes": [
+      "Grandeur",
+      "Valeur prévue"
+     ],
+     "lignes": [
+      [
+       "Budget",
+       "5 000 €"
+      ],
+      [
+       "Délai",
+       "30 jours"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Projet imaginé pour l’exercice"
+    },
+    {
+     "id": "modifs",
+     "type": "tableau",
+     "titre": "Journal des modifications",
+     "colonnes": [
+      "N°",
+      "Demande",
+      "Surcoût",
+      "Délai en plus",
+      "Statut"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Pince à trois doigts",
+       "+ 450 €",
+       "+ 5 j",
+       "Chiffrée et validée"
+      ],
+      [
+       "2",
+       "Capot d’une autre couleur",
+       "non chiffré",
+       "non chiffré",
+       "Acceptée oralement"
+      ],
+      [
+       "3",
+       "Capteur de force en plus",
+       "+ 300 €",
+       "+ 2 j",
+       "Chiffrée et validée"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modifs",
+     "reponse": [
+      "r1c4"
+     ],
+     "enonce": "Touche la case du statut de la modification qui ne respecte pas la règle « tracée, chiffrée et validée ».",
+     "aide": "Regarde comment chaque demande a été acceptée.",
+     "explication": "La modification n° 2 a été **acceptée oralement** : ni chiffrée ni validée par écrit. Sans gestion des modifications, le projet dérive sans qu’on sache pourquoi."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5750,
+     "unite": "€",
+     "tolerance": 0,
+     "enonce": "Quel est le budget total, en ajoutant les deux modifications chiffrées au budget initial ?",
+     "aide": "Additionne 5 000 € et les surcoûts des modifications 1 et 3.",
+     "explication": "5 000 + 450 + 300 = **5 750 €**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 15,
+     "unite": "%",
+     "tolerance": 0,
+     "enonce": "De quel pourcentage du budget initial le budget a-t-il augmenté ?",
+     "aide": "Divise l’augmentation totale par le budget initial.",
+     "explication": "(450 + 300) / 5 000 = 750 / 5 000 = 0,15, soit **15 %**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Livraison et recette avec le client",
+      "Remise de la documentation",
+      "Bilan et retour d’expérience",
+      "Clôture : archivage et dissolution de l’équipe"
+     ],
+     "enonce": "Range les étapes de la terminaison du projet dans leur ordre.",
+     "aide": "On livre d’abord, on clôt à la toute fin.",
+     "explication": "Livraison et recette, documentation, bilan avec retour d’expérience, puis **clôture**. Le bilan de coût et de délai y compare le réel au prévisionnel."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Aux projets suivants, qui évitent de refaire les mêmes erreurs",
+      "Au projet en cours, qui peut encore corriger sa dérive de budget",
+      "Au client, qui est remboursé du surcoût",
+      "À personne : la clôture a déjà dissous l’équipe"
+     ],
+     "enonce": "À qui profite surtout le retour d’expérience ?",
+     "aide": "Le projet en cours est terminé.",
+     "explication": "Le retour d’expérience bénéficie surtout aux **projets suivants** : sans lui, chaque nouveau projet recommence les erreurs du précédent."
+    }
+   ]
+  },
+  {
+   "chapitre": "e21baaf4-ca31-5110-8d2b-e4dd335cbafa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les deux chaînes d’un vélo à assistance électrique",
+   "competence": "observer-schema",
+   "situation": "Un vélo à assistance électrique mesure sa vitesse, décide du courant à envoyer au moteur et entraîne la roue. Camille a dessiné ses deux chaînes dans un diagramme de blocs internes.",
+   "documents": [
+    {
+     "id": "bdi",
+     "type": "schema",
+     "titre": "Chaînes d’énergie et d’information",
+     "largeur": 340,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 14,
+       "texte": "Chaîne d’énergie",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 14,
+       "texte": "Chaîne d’information",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 22,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "bat",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 44,
+       "texte": "Batterie",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 78,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "ctl",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 100,
+       "texte": "Contrôleur",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 134,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "mot",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 156,
+       "texte": "Moteur",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 190,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "red",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 212,
+       "texte": "Réducteur",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 246,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "roue",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 268,
+       "texte": "Roue",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 22,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "ihm",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 44,
+       "texte": "Écran",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 78,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "calc",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 100,
+       "texte": "Calculateur",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 134,
+       "l": 130,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "cap",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 156,
+       "texte": "Capteur de vitesse",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        58
+       ],
+       "a": [
+        85,
+        78
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        114
+       ],
+       "a": [
+        85,
+        134
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        170
+       ],
+       "a": [
+        85,
+        190
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        226
+       ],
+       "a": [
+        85,
+        246
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        255,
+        134
+       ],
+       "a": [
+        255,
+        114
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        255,
+        78
+       ],
+       "a": [
+        255,
+        58
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        96
+       ],
+       "a": [
+        150,
+        96
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "id": "cmd",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        152
+       ],
+       "a": [
+        190,
+        152
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "id": "mes",
+       "zone": true
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bdi",
+     "reponse": [
+      "ctl"
+     ],
+     "enonce": "Touche le bloc qui réalise la fonction « distribuer » de la chaîne d’énergie.",
+     "aide": "Il se place entre la batterie et le moteur et dose l’énergie envoyée.",
+     "explication": "Le **contrôleur** (préactionneur) distribue l’énergie vers le moteur selon l’ordre reçu."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Capteur de vitesse",
+       "Acquérir"
+      ],
+      [
+       "Calculateur",
+       "Traiter"
+      ],
+      [
+       "Moteur",
+       "Convertir"
+      ],
+      [
+       "Réducteur",
+       "Transmettre"
+      ]
+     ],
+     "enonce": "Associe chaque bloc à sa fonction dans la chaîne fonctionnelle.",
+     "aide": "Le moteur transforme l’énergie électrique en énergie mécanique.",
+     "explication": "Le capteur **acquiert**, le calculateur **traite**, le moteur **convertit**, le réducteur **transmet**."
+    },
+    {
+     "type": "zone",
+     "document": "bdi",
+     "reponse": [
+      "cmd"
+     ],
+     "enonce": "Touche la flèche par laquelle l’information commande la chaîne d’énergie.",
+     "aide": "Elle relie un bloc de la chaîne d’information à un bloc de la chaîne d’énergie, dans le sens du bloc qui décide.",
+     "explication": "La flèche **calculateur → contrôleur** est la commande ; la flèche moteur → capteur ramène la mesure : la boucle des deux flèches fait un système asservi."
+    }
+   ]
+  },
+  {
+   "chapitre": "e21baaf4-ca31-5110-8d2b-e4dd335cbafa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel diagramme pour quelle question ? Le store du CDI",
+   "competence": "analyser-document",
+   "situation": "L’équipe qui conçoit le store motorisé du CDI doit choisir, pour chaque question qu’elle se pose, le bon diagramme SysML. Elle a aussi dessiné le comportement du store dans un diagramme d’états.",
+   "documents": [
+    {
+     "id": "questions",
+     "type": "tableau",
+     "titre": "Les questions de l’équipe",
+     "colonnes": [
+      "Question à laquelle répondre"
+     ],
+     "lignes": [
+      [
+       "Qui utilise le store ?"
+      ],
+      [
+       "Quel signal circule du capteur de vent au calculateur ?"
+      ],
+      [
+       "Le store monte-t-il, descend-il ou est-il à l’arrêt ?"
+      ],
+      [
+       "De quelles pièces le store est-il composé ?"
+      ],
+      [
+       "Dans quel ordre l’utilisateur et le calculateur échangent-ils des messages ?"
+      ],
+      [
+       "Comment suivre chaque exigence du cahier des charges ?"
+      ]
+     ],
+     "source": "Questions écrites pour l’exercice"
+    },
+    {
+     "id": "etats",
+     "type": "schema",
+     "titre": "Diagramme d’états du store",
+     "largeur": 420,
+     "hauteur": 275,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 20,
+       "l": 110,
+       "h": 40,
+       "arrondi": 10,
+       "texte": "Montée",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "montee",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 120,
+       "l": 110,
+       "h": 40,
+       "arrondi": 10,
+       "texte": "Arrêté",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 220,
+       "l": 110,
+       "h": 40,
+       "arrondi": 10,
+       "texte": "Descente",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        120
+       ],
+       "a": [
+        190,
+        60
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 182,
+       "y": 95,
+       "texte": "bouton ▲",
+       "taille": "petit",
+       "ancre": "fin",
+       "id": "e1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        60
+       ],
+       "a": [
+        240,
+        120
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 248,
+       "y": 95,
+       "texte": "fin de course haut",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "e2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        160
+       ],
+       "a": [
+        190,
+        220
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 182,
+       "y": 195,
+       "texte": "bouton ▼ [vent < 50 km/h]",
+       "taille": "petit",
+       "ancre": "fin",
+       "id": "g",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        220
+       ],
+       "a": [
+        240,
+        160
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 248,
+       "y": 195,
+       "texte": "fin de course bas",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "e4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        240
+       ],
+       "a": [
+        385,
+        240
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        385,
+        240
+       ],
+       "a": [
+        385,
+        40
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        385,
+        40
+       ],
+       "a": [
+        270,
+        40
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 377,
+       "y": 140,
+       "texte": "[vent ≥ 50 km/h]",
+       "taille": "petit",
+       "ancre": "fin",
+       "id": "g2",
+       "zone": true
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Qui utilise le store ?",
+       "Cas d’utilisation"
+      ],
+      [
+       "Quel signal va du capteur au calculateur ?",
+       "Blocs internes"
+      ],
+      [
+       "Le store monte-t-il ou descend-il ?",
+       "États"
+      ],
+      [
+       "De quelles pièces est-il composé ?",
+       "Définition de blocs"
+      ],
+      [
+       "Qui envoie quel message, et quand ?",
+       "Séquence"
+      ],
+      [
+       "Comment suivre chaque exigence ?",
+       "Exigences"
+      ]
+     ],
+     "enonce": "Associe chaque question au diagramme SysML qui y répond.",
+     "aide": "Le besoin : exigences et cas d’utilisation. La structure : définition de blocs et blocs internes. Le comportement : états et séquence.",
+     "explication": "Acteurs → **cas d’utilisation** ; flux → **blocs internes** ; états successifs → **états** ; décomposition → **définition de blocs** ; messages dans le temps → **séquence** ; traçabilité → **exigences**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Le besoin",
+      "La structure",
+      "Le comportement"
+     ],
+     "items": [
+      [
+       "Exigences",
+       0
+      ],
+      [
+       "Cas d’utilisation",
+       0
+      ],
+      [
+       "Définition de blocs",
+       1
+      ],
+      [
+       "Blocs internes",
+       1
+      ],
+      [
+       "États",
+       2
+      ],
+      [
+       "Séquence",
+       2
+      ]
+     ],
+     "enonce": "Range les six diagrammes dans la question à laquelle ils répondent.",
+     "aide": "À quoi doit-il répondre ? De quoi est-il fait ? Que fait-il ?",
+     "explication": "Le **besoin** : exigences et cas d’utilisation. La **structure** : blocs et blocs internes. Le **comportement** : états et séquence. Les confondre est l’erreur classique du chapitre."
+    },
+    {
+     "type": "zone",
+     "document": "etats",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche la transition qui interdit de commander la descente quand le vent est fort.",
+     "aide": "Cherche une condition entre crochets sur une transition qui part de l’état « Arrêté ».",
+     "explication": "La condition **[vent < 50 km/h]** est une garde : la transition « bouton ▼ » n’est franchie que si elle est vraie."
+    },
+    {
+     "type": "zone",
+     "document": "etats",
+     "reponse": [
+      "montee"
+     ],
+     "enonce": "Le store descend et le vent atteint 65 km/h. Touche l’état dans lequel il passe.",
+     "aide": "Pars de « Descente » et cherche la transition dont la garde est vraie pour 65 km/h.",
+     "explication": "La transition [vent ≥ 50 km/h] ramène de « Descente » à **Montée** : le store se met en sécurité."
+    }
+   ]
+  },
+  {
+   "chapitre": "e21baaf4-ca31-5110-8d2b-e4dd335cbafa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du flux à l’exigence : l’assistance du vélo",
+   "competence": "modeliser",
+   "situation": "Les lycéens qui conçoivent un vélo à assistance électrique ont modélisé leur système. Ils doivent relier les flux échangés entre blocs à une exigence du cahier des charges et vérifier si elle est tenue.",
+   "documents": [
+    {
+     "id": "exig",
+     "type": "schema",
+     "titre": "Diagramme des exigences (extrait)",
+     "largeur": 360,
+     "hauteur": 185,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 10,
+       "l": 140,
+       "h": 34,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "racine",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 31,
+       "texte": "Assister le cycliste",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        44
+       ],
+       "a": [
+        180,
+        70
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        62,
+        70
+       ],
+       "a": [
+        298,
+        70
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        62,
+        70
+       ],
+       "a": [
+        62,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        70
+       ],
+       "a": [
+        180,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        298,
+        70
+       ],
+       "a": [
+        298,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 100,
+       "l": 108,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "e11",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 118,
+       "texte": "1.1",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 132,
+       "texte": "Puissance",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 146,
+       "texte": "mécanique",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 160,
+       "texte": "≥ 250 W",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 126,
+       "y": 100,
+       "l": 108,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "e12",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 118,
+       "texte": "1.2",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 132,
+       "texte": "Coupure de",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 146,
+       "texte": "l’assistance",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 160,
+       "texte": "à 25 km/h",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 100,
+       "l": 108,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "e13",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 298,
+       "y": 125,
+       "texte": "1.3",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 298,
+       "y": 139,
+       "texte": "Autonomie",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 298,
+       "y": 153,
+       "texte": "≥ 60 km",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    },
+    {
+     "id": "flux",
+     "type": "tableau",
+     "titre": "Flux échangés entre blocs",
+     "colonnes": [
+      "De",
+      "Vers",
+      "Flux",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Batterie",
+       "Contrôleur",
+       "Énergie électrique",
+       "36 V ; 8,0 A"
+      ],
+      [
+       "Moteur",
+       "Réducteur",
+       "Énergie mécanique",
+       "8,0 N·m ; 300 tr/min"
+      ],
+      [
+       "Capteur de pédalage",
+       "Calculateur",
+       "Information",
+       "impulsions"
+      ]
+     ],
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "exig",
+     "reponse": [
+      "e11"
+     ],
+     "enonce": "Touche l’exigence que l’on vérifie en calculant la puissance mécanique du moteur.",
+     "aide": "Cherche l’exigence qui porte sur une puissance.",
+     "explication": "L’exigence **1.1** (puissance mécanique ≥ 250 W) se vérifie à partir du couple et de la vitesse du moteur."
+    },
+    {
+     "type": "nombre",
+     "reponse": 288,
+     "unite": "W",
+     "tolerance": 0,
+     "enonce": "Quelle puissance électrique le flux batterie → contrôleur transporte-t-il ?",
+     "aide": "P = U × I.",
+     "explication": "P = 36 × 8,0 = **288 W**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 251.3,
+     "unite": "W",
+     "tolerance": 0.06,
+     "enonce": "Quelle puissance mécanique le flux moteur → réducteur transporte-t-il ? Arrondis au dixième de watt.",
+     "aide": "P = C × ω, avec ω en radians par seconde : ω = N × 2π / 60, N en tr/min.",
+     "explication": "ω = 300 × 2π / 60 ≈ 31,42 rad/s ; P = 8,0 × 31,42 ≈ **251,3 W**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Oui : 251,3 W dépasse 250 W, mais avec une marge très faible",
+      "Non : le moteur ne fournit que 87 % des 288 W absorbés",
+      "Non : 251,3 W est inférieur à la puissance de 288 W",
+      "On ne peut pas conclure : il manque la vitesse du vélo"
+     ],
+     "enonce": "L’exigence 1.1 « puissance mécanique ≥ 250 W » est-elle respectée ?",
+     "aide": "Compare la puissance mécanique calculée au niveau de l’exigence, pas à la puissance électrique.",
+     "explication": "On compare 251,3 W au niveau 250 W : l’exigence est **respectée**, de justesse. Le rendement de 87 % (251,3 / 288) explique l’écart avec la puissance électrique."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Batterie → Contrôleur",
+       "Énergie électrique"
+      ],
+      [
+       "Moteur → Réducteur",
+       "Énergie mécanique"
+      ],
+      [
+       "Capteur de pédalage → Calculateur",
+       "Information"
+      ]
+     ],
+     "enonce": "Associe chaque flux du tableau à sa nature.",
+     "aide": "Matière, énergie ou information : lis la colonne « Valeur » pour repérer l’unité.",
+     "explication": "Volts et ampères : énergie **électrique**. Newtons-mètres et tours par minute : énergie **mécanique**. Des impulsions comptées : de l’**information**."
+    }
+   ]
+  },
+  {
+   "chapitre": "250fa736-d78b-5639-b6de-38df00e23d78",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le vent pousse le drone",
+   "competence": "geometrie",
+   "situation": "Un drone est en O. Le vent exerce sur lui une force représentée par le vecteur OF ; sur le quadrillage, un carreau représente 1 newton. Léo décrit cette force avec les quatre caractéristiques d’un vecteur.",
+   "documents": [
+    {
+     "id": "fig",
+     "type": "figure",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 6,
+      "ymin": -1,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "P",
+       "x": 3,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": 3,
+       "y": 4,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "P"
+      },
+      {
+       "de": "P",
+       "a": "F"
+      },
+      {
+       "de": "O",
+       "a": "F",
+       "id": "vec"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "P",
+       "de": "O",
+       "a": "F",
+       "droit": true
+      }
+     ],
+     "titre": "Le vecteur OF",
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fig",
+     "reponse": [
+      "O"
+     ],
+     "enonce": "Touche le point d’application de la force.",
+     "aide": "C’est le point où la force s’exerce : le drone est en O.",
+     "explication": "Le point d’application est **O** : la force s’exerce sur le drone. Les trois autres caractéristiques sont la direction, le sens et la norme."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "unite": "N",
+     "tolerance": 0,
+     "enonce": "Les coordonnées de OF sont (3 ; 4). Quelle est la norme de la force, en newtons ?",
+     "aide": "Dans le plan, la norme est la racine carrée de x² + y².",
+     "explication": "‖OF‖ = √(3² + 4²) = √25 = **5 N**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Même direction et même norme, mais sens opposé : coordonnées (− 3 ; − 4)",
+      "Même sens, direction opposée et même norme : coordonnées (3 ; − 4)",
+      "Même direction et même sens, norme opposée : coordonnées (− 3 ; − 4)",
+      "Même point d’application et même sens, mais norme 5 fois plus petite"
+     ],
+     "enonce": "Une bourrasque inverse exactement la force : le vecteur devient −OF. Que devient-il ?",
+     "aide": "Multiplier un vecteur par un réel négatif inverse son sens.",
+     "explication": "Multiplier par − 1 inverse le **sens** ; la direction et la norme (5 N) ne changent pas, et les coordonnées changent de signe : **(− 3 ; − 4)**."
+    }
+   ]
+  },
+  {
+   "chapitre": "250fa736-d78b-5639-b6de-38df00e23d78",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le robot-livreur sur sa rampe",
+   "competence": "modeliser",
+   "situation": "Un robot-livreur de 12 kg monte une rampe d’accès inclinée à 20°. Pour savoir ce qui le fait glisser, Anaïs décompose son poids dans un repère lié à la rampe : un axe le long de la pente et un axe perpendiculaire.",
+   "documents": [
+    {
+     "id": "rampe",
+     "type": "schema",
+     "titre": "Le poids du robot sur la rampe",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         30,
+         175
+        ],
+        [
+         310,
+         175
+        ],
+        [
+         310,
+         73.1
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         139.9,
+         135
+        ],
+        [
+         200.1,
+         113.1
+        ],
+        [
+         189.2,
+         83
+        ],
+        [
+         129,
+         104.9
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 152.9,
+       "y": 77.1,
+       "texte": "robot",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        164.5,
+        109
+       ],
+       "a": [
+        164.5,
+        229
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 148.5,
+       "y": 233,
+       "texte": "P",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        164.5,
+        109
+       ],
+       "a": [
+        125.9,
+        123
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 3,
+       "id": "long",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        164.5,
+        109
+       ],
+       "a": [
+        203.1,
+        215
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 3,
+       "id": "perp",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 70 175 A 40 40 0 0 0 67.6 161.3",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 78,
+       "y": 169,
+       "texte": "α = 20°",
+       "ancre": "debut",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    },
+    {
+     "id": "data",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse du robot",
+       "12 kg"
+      ],
+      [
+       "Intensité de la pesanteur",
+       "9,81 N/kg"
+      ],
+      [
+       "Inclinaison de la rampe",
+       "20°"
+      ],
+      [
+       "Angle entre le poids et l’axe de la rampe",
+       "70°"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 117.7,
+     "unite": "N",
+     "tolerance": 0.06,
+     "enonce": "Quelle est la norme du poids du robot ? Arrondis au dixième de newton.",
+     "aide": "P = m × g.",
+     "explication": "P = 12 × 9,81 = 117,72 N, soit **117,7 N**."
+    },
+    {
+     "type": "zone",
+     "document": "rampe",
+     "reponse": [
+      "long"
+     ],
+     "enonce": "Touche la composante du poids qui tend à faire descendre le robot le long de la rampe.",
+     "aide": "Elle est portée par la rampe elle-même, pas par la perpendiculaire.",
+     "explication": "La composante **parallèle à la rampe** tire le robot vers le bas de la pente ; la composante perpendiculaire est équilibrée par la rampe."
+    },
+    {
+     "type": "nombre",
+     "reponse": 40.3,
+     "unite": "N",
+     "tolerance": 0.06,
+     "enonce": "Quelle est la norme de cette composante le long de la rampe ? Arrondis au dixième de newton.",
+     "aide": "La composante le long d’un axe fait intervenir le cosinus de l’angle avec cet axe : ici 70°.",
+     "explication": "P × cos 70° = 117,72 × 0,342 ≈ **40,3 N**. Si l’on avait pris le cosinus de 20°, on aurait trouvé 110,6 N : l’erreur classique."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Elle augmente : l’angle du poids avec la rampe passe à 60° et son cosinus augmente",
+      "Elle diminue : une pente plus forte retient mieux le robot sur la rampe et le stabilise",
+      "Elle reste la même : le poids du robot ne dépend pas de l’inclinaison de la rampe",
+      "Elle s’annule dès que la pente dépasse 25°, car le robot ne glisse plus du tout"
+     ],
+     "enonce": "La rampe est relevée de 20° à 30°. Que devient la composante du poids le long de la rampe ?",
+     "aide": "Calcule l’angle entre le poids et l’axe de la rampe dans le nouveau cas, puis compare les cosinus.",
+     "explication": "L’angle passe de 70° à 60°, donc cos 60° = 0,5 est plus grand que cos 70° ≈ 0,34 : la composante vaut alors **58,9 N**, elle augmente."
+    }
+   ]
+  },
+  {
+   "chapitre": "250fa736-d78b-5639-b6de-38df00e23d78",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le moment du poids sur le bras de robot",
+   "competence": "modeliser",
+   "situation": "Un bras de robot de 0,5 m, incliné à 30° au-dessus de l’horizontale, porte en A une charge qui exerce une force verticale de 30 N. Yanis veut savoir quelle rotation cette force cherche à produire autour de O.",
+   "documents": [
+    {
+     "id": "bras",
+     "type": "schema",
+     "titre": "Le bras et sa charge",
+     "largeur": 340,
+     "hauteur": 235,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        170
+       ],
+       "a": [
+        160,
+        170
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        170
+       ],
+       "a": [
+        233.2,
+        70
+       ],
+       "teinte": "violet",
+       "epaisseur": 4
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 170,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 52,
+       "y": 186,
+       "texte": "O",
+       "ancre": "fin",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 233.2,
+       "cy": 70,
+       "r": 7,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 245.2,
+       "y": 62,
+       "texte": "A",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        233.2,
+        77
+       ],
+       "a": [
+        233.2,
+        160
+       ],
+       "fleche": "fin",
+       "teinte": "encre",
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 243.2,
+       "y": 130,
+       "texte": "F",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 217.2,
+       "y": 162,
+       "l": 32,
+       "h": 22,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 100 170 A 40 40 0 0 0 94.6 150.0",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 108,
+       "y": 160,
+       "texte": "30°",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 105,
+       "texte": "OA = 0,5 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    },
+    {
+     "id": "data",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Longueur du bras OA",
+       "0,5 m"
+      ],
+      [
+       "Force exercée par la charge en A",
+       "30 N, verticale vers le bas"
+      ],
+      [
+       "Angle entre OA et la force",
+       "120°"
+      ],
+      [
+       "Descente de la charge",
+       "0,2 m, verticalement vers le bas"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bras",
+     "reponse": [
+      "A"
+     ],
+     "enonce": "Touche le point d’application de la force exercée par la charge.",
+     "aide": "La charge est accrochée au bout du bras.",
+     "explication": "La force s’exerce au point **A**, extrémité du bras, et elle est portée par la verticale."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "J",
+     "tolerance": 0,
+     "enonce": "La charge descend de 0,2 m. Quel travail la force de 30 N fournit-elle, en joules ?",
+     "aide": "Le travail est le produit scalaire de la force et du déplacement ; ici ils ont même direction et même sens.",
+     "explication": "W = F · d = 30 × 0,2 × cos 0° = **6 J** : le produit scalaire de deux vecteurs de même sens est le produit des normes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 13,
+     "unite": "N·m",
+     "tolerance": 0.06,
+     "enonce": "Quelle est la norme du moment de la force par rapport à O ? Arrondis au dixième de N·m.",
+     "aide": "Norme du moment = OA × F × sin α, avec α l’angle entre OA et la force.",
+     "explication": "M = 0,5 × 30 × sin 120° = 15 × 0,866 ≈ **13,0 N·m**. C’est un produit vectoriel : il fait intervenir le sinus."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "options": [
+      "Il serait nul : sin 180° = 0, la force passe par O et ne cherche pas à faire tourner",
+      "Il serait maximal : le bras vertical supporte alors tout le poids de la charge en A",
+      "Il vaudrait 15 N·m : le produit OA × F, sans le sinus de l’angle entre les deux",
+      "Il vaudrait 6 N·m : le même nombre que le travail de la force sur 0,2 m de descente"
+     ],
+     "enonce": "On relève le bras jusqu’à la verticale, la charge en haut. Quel serait alors le moment de la force par rapport à O ?",
+     "aide": "Quand le bras est vertical, la force et OA sont portés par la même droite : quel est l’angle entre eux ?",
+     "explication": "L’angle entre OA et la force vaut 180° : **sin 180° = 0**, le moment est nul. Une force dont la droite d’action passe par O ne fait pas tourner."
+    }
+   ]
+  }
+ ]
+}

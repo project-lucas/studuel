@@ -1,0 +1,4009 @@
+{
+ "niveau": "1re",
+ "matiere": "innovation-technologique",
+ "exercices": [
+  {
+   "chapitre": "cc340db3-37ab-5ae2-bc0c-f417b8b57fc1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le planning de la gourde connectée",
+   "competence": "lire-tableau",
+   "situation": "Une équipe de STI2D développe une gourde connectée qui compte les gorgées. Elle liste ses quatre premières tâches avant de bâtir son planning.",
+   "documents": [
+    {
+     "id": "taches",
+     "type": "tableau",
+     "titre": "Les tâches du projet",
+     "colonnes": [
+      "Tâche",
+      "Durée (jours)",
+      "Antériorité"
+     ],
+     "lignes": [
+      [
+       "A : cahier des charges",
+       2,
+       "—"
+      ],
+      [
+       "B : choix du capteur",
+       3,
+       "A"
+      ],
+      [
+       "C : commande des modules",
+       5,
+       "A"
+      ],
+      [
+       "D : assemblage du prototype",
+       4,
+       "B et C"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Durées inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "taches",
+     "enonce": "Touche la case qui dit quelles tâches doivent être terminées avant l’assemblage du prototype.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Les antériorités sont dans la dernière colonne.",
+     "explication": "L’assemblage D a pour antériorité **B et C** : il ne démarre que lorsque les deux sont finies."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée minimale du projet, en jours ?",
+     "reponse": 11,
+     "unite": "jours",
+     "tolerance": 0,
+     "aide": "Deux chemins mènent à D : compte chacun, garde le plus long.",
+     "explication": "A → B → D fait 2 + 3 + 4 = 9 j ; A → C → D fait 2 + 5 + 4 = 11 j. Le projet dure au minimum **11 jours**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle suite de tâches forme le chemin critique ?",
+     "options": [
+      "A → B → D, qui dure 9 jours au total",
+      "A → C → D, qui dure 11 jours au total",
+      "A → B → C → D, qui dure 14 jours au total",
+      "B → C → D, qui dure 12 jours au total"
+     ],
+     "reponse": 1,
+     "aide": "Le chemin critique est la suite la plus longue.",
+     "explication": "Le chemin critique est la suite dont tout retard retarde la fin : **A → C → D** (11 j). La tâche B, elle, a 2 jours de marge."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc340db3-37ab-5ae2-bc0c-f417b8b57fc1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui fait quoi pour l’abri vélo du lycée ?",
+   "competence": "analyser-document",
+   "situation": "Une communauté de communes veut un abri vélos de 40 places près du lycée. Voici le rôle de chaque intervenant, puis les étapes d’études du bâtiment.",
+   "documents": [
+    {
+     "id": "acteurs",
+     "type": "tableau",
+     "titre": "Les intervenants du chantier",
+     "colonnes": [
+      "Qui",
+      "Ce qu’il fait sur le projet"
+     ],
+     "lignes": [
+      [
+       "La communauté de communes",
+       "Exprime le besoin : un abri de 40 places. Budget fixé : 60 000 €"
+      ],
+      [
+       "Le cabinet Roche & Fils",
+       "Dessine l’abri, choisit les solutions et dirige le chantier"
+      ],
+      [
+       "L’entreprise de charpente",
+       "Fabrique et monte la structure en bois"
+      ],
+      [
+       "Le bureau de contrôle",
+       "Vérifie la sécurité incendie et l’accessibilité"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation inventée pour l’exercice"
+    },
+    {
+     "id": "etudes",
+     "type": "chaine",
+     "titre": "Les études d’un bâtiment",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "esq",
+       "texte": "Esquisse"
+      },
+      {
+       "id": "aps",
+       "texte": "APS : avant-projet sommaire"
+      },
+      {
+       "id": "apd",
+       "texte": "?"
+      },
+      {
+       "id": "dce",
+       "texte": "Consultation des entreprises"
+      },
+      {
+       "id": "exe",
+       "texte": "Exécution du chantier"
+      }
+     ],
+     "liens": [
+      {
+       "de": "esq",
+       "a": "aps"
+      },
+      {
+       "de": "aps",
+       "a": "apd"
+      },
+      {
+       "de": "apd",
+       "a": "dce"
+      },
+      {
+       "de": "dce",
+       "a": "exe"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "acteurs",
+     "enonce": "Touche l’intervenant qui joue le rôle de maître d’ouvrage.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Le maître d’ouvrage exprime le besoin et paie.",
+     "explication": "La **communauté de communes** exprime le besoin et fixe le budget : c’est le maître d’ouvrage (le client)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque acteur à son rôle.",
+     "paires": [
+      [
+       "Maître d’ouvrage",
+       "Dit quoi et pour combien"
+      ],
+      [
+       "Maître d’œuvre",
+       "Dit comment, et dirige la réalisation"
+      ],
+      [
+       "Entreprise",
+       "Réalise l’ouvrage sur le terrain"
+      ],
+      [
+       "Contrôleur",
+       "Vérifie la conformité aux règles"
+      ]
+     ],
+     "aide": "Relis le tableau : le cabinet Roche & Fils dessine et dirige.",
+     "explication": "Le maître d’ouvrage dit **quoi** et **pour combien** ; le maître d’œuvre dit **comment** ; les entreprises réalisent ; les contrôleurs vérifient."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel budget par place de vélo, en euros ?",
+     "reponse": 1500,
+     "unite": "€ par place",
+     "tolerance": 0,
+     "aide": "Divise le budget total par le nombre de places.",
+     "explication": "60 000 ÷ 40 = **1 500 € par place**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le sigle caché sur la frise des études ?",
+     "options": [
+      "Avant-projet définitif",
+      "Appel public à dossier",
+      "Analyse préalable des déchets",
+      "Avis préfectoral définitif"
+     ],
+     "reponse": 0,
+     "aide": "Il vient après l’avant-projet sommaire et précise le projet.",
+     "explication": "Après l’APS vient l’**APD, avant-projet définitif**, qui fige la solution avant de consulter les entreprises."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc340db3-37ab-5ae2-bc0c-f417b8b57fc1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le casque audio prend du retard",
+   "competence": "modeliser",
+   "situation": "L’équipe d’un casque audio sans fil a planifié sa pré-conception. En revue de projet, un fournisseur annonce un retard : l’équipe doit mesurer l’effet sur la date de fin.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le planning prévu",
+     "colonnes": [
+      "Tâche",
+      "Durée (jours)",
+      "Antériorité"
+     ],
+     "lignes": [
+      [
+       "A : étude de marché",
+       3,
+       "—"
+      ],
+      [
+       "B : cahier des charges",
+       2,
+       "A"
+      ],
+      [
+       "C : choix des transducteurs",
+       4,
+       "B"
+      ],
+      [
+       "D : conception du boîtier",
+       6,
+       "B"
+      ],
+      [
+       "E : prototype",
+       5,
+       "C et D"
+      ],
+      [
+       "F : essais",
+       3,
+       "E"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Durées inventées pour l’exercice"
+    },
+    {
+     "id": "revue",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Revue de projet n° 2",
+     "sousTitre": "Casque audio — fin de la pré-conception",
+     "emoji": "🎧",
+     "lignes": [
+      {
+       "texte": "Tâche C : transducteurs livrés avec 3 jours de retard",
+       "id": "retard"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Décision attendue du jalon : continuer, corriger ou arrêter"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée minimale du projet prévu, en jours ?",
+     "reponse": 19,
+     "unite": "jours",
+     "tolerance": 0,
+     "aide": "Compare A → B → C → E → F et A → B → D → E → F.",
+     "explication": "Par C : 3 + 2 + 4 + 5 + 3 = 17 j. Par D : 3 + 2 + 6 + 5 + 3 = 19 j. Le projet dure au minimum **19 jours**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle marge possède la tâche C, en jours ?",
+     "reponse": 2,
+     "unite": "jours",
+     "tolerance": 0,
+     "aide": "C et D doivent toutes deux être finies pour lancer E : compare leurs durées.",
+     "explication": "D dure 6 j et C 4 j : E attend la fin de D. C peut glisser de 6 − 4 = **2 jours** sans rien retarder."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le retard de 3 jours sur C, quelle devient la durée minimale du projet, en jours ?",
+     "reponse": 20,
+     "unite": "jours",
+     "tolerance": 0,
+     "aide": "C passe à 4 + 3 = 7 jours : recompare les deux chemins.",
+     "explication": "C dure maintenant 7 j : A → B → C → E → F fait 3 + 2 + 7 + 5 + 3 = 20 j, contre 19 j par D. La fin recule d’**1 jour** : 20 jours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après ce retard, quel est le chemin critique ?",
+     "options": [
+      "A → B → D → E → F, qui est resté le même",
+      "A → B → C → E → F, qui est devenu le plus long",
+      "A → B → C → D → E → F, qui regroupe toutes les tâches",
+      "C → E → F, qui commence à la tâche en retard"
+     ],
+     "reponse": 1,
+     "aide": "Le chemin critique est le plus long après modification.",
+     "explication": "Avec 20 j, c’est **A → B → C → E → F** qui est critique : la marge de C (2 j) est dépassée de 1 j."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit décider l’équipe à ce jalon ?",
+     "options": [
+      "Continuer, corriger le planning ou arrêter, après avoir mesuré l’écart",
+      "Ignorer le retard puisque la marge de C est de 2 jours",
+      "Changer de client pour retrouver un budget plus élevé",
+      "Terminer les essais avant le prototype pour gagner du temps"
+     ],
+     "reponse": 0,
+     "aide": "Un jalon clôt une phase par une décision.",
+     "explication": "Un jalon est une **revue de projet** : on décide de continuer, de corriger ou d’arrêter, à partir de l’écart mesuré (ici +1 jour)."
+    }
+   ]
+  },
+  {
+   "chapitre": "be170fb8-5053-5c3c-86dd-a78bef07c696",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Présenter la lampe solaire au jury",
+   "competence": "analyser-document",
+   "situation": "Ton équipe conçoit une lampe solaire de jardin. Pour le jury, qui n’est pas spécialiste, elle prépare un schéma simple du principe de fonctionnement.",
+   "documents": [
+    {
+     "id": "principe",
+     "type": "chaine",
+     "titre": "Principe de la lampe",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "pan",
+       "texte": "Panneau solaire",
+       "emoji": "☀️"
+      },
+      {
+       "id": "bat",
+       "texte": "Batterie",
+       "emoji": "🔋"
+      },
+      {
+       "id": "car",
+       "texte": "Carte de commande",
+       "emoji": "🧠"
+      },
+      {
+       "id": "led",
+       "texte": "LED",
+       "emoji": "💡"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pan",
+       "a": "bat",
+       "texte": "énergie"
+      },
+      {
+       "de": "bat",
+       "a": "car",
+       "texte": "énergie"
+      },
+      {
+       "de": "car",
+       "a": "led",
+       "texte": "énergie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "principe",
+     "enonce": "Touche l’élément qui garde l’énergie du jour pour éclairer la nuit.",
+     "reponse": [
+      "bat"
+     ],
+     "aide": "Le panneau produit, une autre pièce stocke.",
+     "explication": "La **batterie** stocke l’énergie captée le jour et la rend la nuit."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque outil à ce qu’il montre bien.",
+     "paires": [
+      [
+       "Croquis à main levée",
+       "Une forme, en quelques secondes"
+      ],
+      [
+       "Carte mentale",
+       "Des idées autour d’un thème central"
+      ],
+      [
+       "Organigramme",
+       "Un enchaînement d’étapes ou de décisions"
+      ],
+      [
+       "Maquette numérique",
+       "L’aspect final et les volumes"
+      ]
+     ],
+     "aide": "Pense à ce que chaque outil dessine : un objet, des idées, des étapes.",
+     "explication": "Chaque outil a son usage : le **croquis** va vite, la **carte mentale** explore, l’**organigramme** décrit une logique, la **maquette numérique** montre le rendu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le programmeur doit coder « si la luminosité est faible, allumer la LED ». Quel document lui est le plus utile ?",
+     "options": [
+      "Un organigramme de la décision",
+      "Une carte mentale des usages",
+      "Un rendu réaliste de la lampe",
+      "Un croquis de la lampe en perspective"
+     ],
+     "reponse": 0,
+     "aide": "Il faut décrire une suite d’étapes et de décisions.",
+     "explication": "Le programmeur a besoin d’un **organigramme** : le choix du document dépend de ce qu’on transmet et à qui."
+    }
+   ]
+  },
+  {
+   "chapitre": "be170fb8-5053-5c3c-86dd-a78bef07c696",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ranger dix vélos en ville : la carte mentale",
+   "competence": "observer-schema",
+   "situation": "Pour imaginer un rangement de vélos sur un trottoir, l’équipe commence une carte mentale. Il reste à placer de nouvelles idées et à choisir les bons outils.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "schema",
+     "titre": "La carte mentale de l’équipe",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        110
+       ],
+       "a": [
+        60,
+        45
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        110
+       ],
+       "a": [
+        240,
+        45
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        150
+       ],
+       "a": [
+        60,
+        215
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        150
+       ],
+       "a": [
+        280,
+        215
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 130,
+       "rx": 62,
+       "ry": 28,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "centre"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 134,
+       "texte": "Vélos en ville",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 15,
+       "l": 100,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Usagers",
+       "id": "usagers",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 15,
+       "l": 100,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Contraintes",
+       "id": "contraintes",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 215,
+       "l": 100,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Matériaux",
+       "id": "materiaux",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 215,
+       "l": 100,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Sécurité",
+       "id": "securite",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 62,
+       "texte": "enfants",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 78,
+       "texte": "livreurs",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 62,
+       "texte": "trottoir de 2 m",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 78,
+       "texte": "budget",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 200,
+       "texte": "acier galvanisé",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 10,
+       "y": 184,
+       "texte": "bois",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la branche où l’équipe doit noter l’acier galvanisé et le bois.",
+     "reponse": [
+      "materiaux"
+     ],
+     "aide": "Ce sont des matières dont on fait les supports.",
+     "explication": "L’acier et le bois sont des **matériaux** : ils vont dans la branche du même nom."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nouvelle idée sur la bonne branche de la carte.",
+     "categories": [
+      "Usagers",
+      "Contraintes",
+      "Matériaux",
+      "Sécurité"
+     ],
+     "items": [
+      [
+       "Parents avec une remorque",
+       0
+      ],
+      [
+       "Place disponible : 5 m²",
+       1
+      ],
+      [
+       "Aluminium recyclé",
+       2
+      ],
+      [
+       "Éclairage la nuit",
+       3
+      ],
+      [
+       "Antivol à encastrer",
+       3
+      ]
+     ],
+     "aide": "Demande-toi : qui ? quelle limite ? quelle matière ? quel risque ?",
+     "explication": "Les **parents** sont des usagers ; **5 m²** est une contrainte ; l’**aluminium** est un matériau ; **éclairage** et **antivol** relèvent de la sécurité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque situation à l’outil le plus adapté.",
+     "paires": [
+      [
+       "Explorer toutes les idées autour d’un thème",
+       "Carte mentale"
+      ],
+      [
+       "Montrer une forme en trente secondes",
+       "Croquis à main levée"
+      ],
+      [
+       "Expliquer le principe à des parents non spécialistes",
+       "Schéma simple non normalisé"
+      ],
+      [
+       "Faire manipuler l’objet réel à tous",
+       "Prototype ou maquette physique"
+      ]
+     ],
+     "aide": "Le bon outil dépend de ce qu’on transmet et à qui.",
+     "explication": "Le choix dépend du **contenu** et de l’**interlocuteur** : explorer = carte mentale, montrer vite = croquis, expliquer = schéma simple, faire toucher = maquette physique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois temps d’un bon croquis, du premier au dernier.",
+     "items": [
+      "Poser les grands volumes",
+      "Ajouter les détails",
+      "Annoter : flèches, noms, cotes"
+     ],
+     "aide": "On va du général au particulier, puis on explique.",
+     "explication": "On commence par les **grands volumes**, on ajoute les **détails**, puis on **annote**."
+    }
+   ]
+  },
+  {
+   "chapitre": "be170fb8-5053-5c3c-86dd-a78bef07c696",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux versions du même fichier",
+   "competence": "analyser-document",
+   "situation": "Léa et Hugo préparent la présentation d’une application de covoiturage. À 14 h 30, ils découvrent que leurs modifications se sont écrasées.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "J’ai terminé le schéma, il est dans « pres_jury_v3 »."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Oups, j’ai corrigé « pres_jury_v2 » pendant ce temps."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Il nous faut un seul espace, avec les fichiers à jour pour tous."
+      }
+     ]
+    },
+    {
+     "id": "hist",
+     "type": "tableau",
+     "titre": "Historique des fichiers",
+     "colonnes": [
+      "Fichier",
+      "Modifié par",
+      "Heure"
+     ],
+     "lignes": [
+      [
+       "pres_jury_v2",
+       "Hugo",
+       "14 h 20"
+      ],
+      [
+       "pres_jury_v3",
+       "Léa",
+       "14 h 05"
+      ],
+      [
+       "planning",
+       "Inès",
+       "13 h 40"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hist",
+     "enonce": "Touche l’heure de la dernière modification de l’ensemble des fichiers.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche l’heure la plus tardive.",
+     "explication": "14 h 20 est la plus tardive : c’est la modification de Hugo sur la **v2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes séparent la modification de Léa de celle de Hugo ?",
+     "reponse": 15,
+     "unite": "minutes",
+     "tolerance": 0,
+     "aide": "Soustrais 14 h 05 de 14 h 20.",
+     "explication": "14 h 20 − 14 h 05 = **15 minutes** : ils ont travaillé en parallèle sur deux copies."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le constat de l’équipe.",
+     "texte": "Léa et Hugo travaillaient sur deux ___ différentes du même document, sans espace ___.",
+     "reponses": [
+      [
+       "versions",
+       "copies"
+      ],
+      [
+       "partagé",
+       "commun"
+      ]
+     ],
+     "banque": [
+      "versions",
+      "partagé",
+      "imprimées",
+      "secret"
+     ],
+     "aide": "Relis les noms de fichiers et la phrase de Léa.",
+     "explication": "Deux **versions** circulaient, sans espace **partagé** pour synchroniser le travail."
+    },
+    {
+     "type": "categories",
+     "enonce": "Pour chaque situation, choisis l’outil collaboratif adapté.",
+     "categories": [
+      "Cloud",
+      "PLM",
+      "BIM"
+     ],
+     "items": [
+      [
+       "Quatre élèves modifient ensemble le même dossier de présentation",
+       0
+      ],
+      [
+       "Un constructeur suit les plans et nomenclatures de 2 000 pièces",
+       1
+      ],
+      [
+       "Architecte et électricien consultent une même maquette 3D d’un gymnase",
+       2
+      ],
+      [
+       "Savoir quelle version d’un plan a servi pour une série de casques",
+       1
+      ],
+      [
+       "Repérer sur une maquette partagée une gaine qui traverse une poutre",
+       2
+      ]
+     ],
+     "aide": "Cloud : fichiers à jour. PLM : produit industriel. BIM : bâtiment.",
+     "explication": "Le **cloud** partage des fichiers, le **PLM** gère plans, versions et nomenclatures d’un produit, le **BIM** partage la maquette 3D d’un bâtiment."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour le jury, que choisit-on de montrer en priorité ?",
+     "options": [
+      "Un schéma simple avec les flux principaux",
+      "Un diagramme SysML complet des exigences",
+      "Le code source de toute l’application",
+      "Un tableau de toutes les versions des fichiers"
+     ],
+     "reponse": 0,
+     "aide": "Le jury n’est pas composé d’ingénieurs.",
+     "explication": "Pour un jury non spécialiste, un **schéma simple** des flux principaux est plus clair que le SysML, réservé aux ingénieurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "993f3135-fabd-5f9c-bdde-99210cc835a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux montres, une même heure",
+   "competence": "lire-tableau",
+   "situation": "Deux montres rendent exactement le même service technique, mais l’une coûte soixante fois plus cher. Un designer cherche à comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "montres",
+     "type": "tableau",
+     "titre": "Fiche comparative",
+     "colonnes": [
+      "",
+      "Montre Pixel",
+      "Montre Orion"
+     ],
+     "lignes": [
+      [
+       "Précision de l’heure",
+       "± 1 s par jour",
+       "± 1 s par jour"
+      ],
+      [
+       "Étanchéité",
+       "50 m",
+       "50 m"
+      ],
+      [
+       "Image donnée",
+       "Sportive et accessible",
+       "Luxe et prestige"
+      ],
+      [
+       "Prix",
+       "15 €",
+       "900 €"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Produits imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montres",
+     "enonce": "Touche la case qui décrit la fonction symbolique de la montre Orion.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "La fonction symbolique dit ce que l’objet raconte de son propriétaire.",
+     "explication": "« Luxe et prestige » est la **fonction symbolique** : ce que la montre dit de celui qui la porte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la montre Orion coûte-t-elle plus cher que la montre Pixel ?",
+     "reponse": 60,
+     "unite": "fois",
+     "tolerance": 0,
+     "aide": "Divise le prix le plus élevé par le prix le plus bas.",
+     "explication": "900 ÷ 15 = **60** : la montre Orion coûte 60 fois plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer un tel écart de prix ?",
+     "options": [
+      "Le service rendu est le même ; l’écart vient surtout de la part symbolique",
+      "Le service rendu est très différent ; l’écart vient surtout de la précision",
+      "Le service rendu est le même ; l’écart vient surtout de l’étanchéité",
+      "Le service rendu est meilleur ; l’écart vient surtout de la durée de vie"
+     ],
+     "reponse": 0,
+     "aide": "Compare les lignes qui sont identiques.",
+     "explication": "Précision et étanchéité sont identiques : l’écart vient de la **fonction symbolique** (le luxe)."
+    }
+   ]
+  },
+  {
+   "chapitre": "993f3135-fabd-5f9c-bdde-99210cc835a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les formes d’un siècle",
+   "competence": "se-reperer-temps",
+   "situation": "Dans un cours de design, une frise place deux grands courants du XXe siècle. Il faut relier chaque forme d’objet à son époque.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux courants du XXe siècle",
+     "debut": 1910,
+     "fin": 1990,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "bau",
+       "debut": 1919,
+       "fin": 1933,
+       "nom": "Bauhaus",
+       "teinte": "ambre"
+      },
+      {
+       "id": "pop",
+       "debut": 1960,
+       "fin": 1979,
+       "nom": "Design pop",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "str",
+       "date": 1935,
+       "nom": "Streamline"
+      }
+     ],
+     "source": "Repères arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où l’on disait que « la forme suit la fonction », avec des formes simples faites pour la série.",
+     "reponse": [
+      "bau"
+     ],
+     "aide": "C’est l’école allemande fondée en 1919.",
+     "explication": "Le **Bauhaus** (1919-1933) défend des formes simples adaptées à la production en série."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la période du Bauhaus sur la frise ?",
+     "reponse": 14,
+     "unite": "ans",
+     "tolerance": 0,
+     "aide": "Soustrais l’année de début de l’année de fin.",
+     "explication": "1933 − 1919 = **14 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque époque à ce qui guide la forme des objets.",
+     "paires": [
+      [
+       "Bauhaus",
+       "Formes simples faites pour la série"
+      ],
+      [
+       "Streamline",
+       "Profils aérodynamiques, même immobiles"
+      ],
+      [
+       "Design pop",
+       "Couleurs vives et plastiques"
+      ],
+      [
+       "Éco-design",
+       "Sobriété de matière et réparabilité"
+      ]
+     ],
+     "aide": "Associe chaque nom au mot-clé du cours.",
+     "explication": "Chaque époque a sa logique : **Bauhaus** simplicité, **Streamline** aérodynamisme, **pop** couleur et plastique, **éco-design** sobriété."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un grille-pain immobile, aux formes de goutte d’eau, daté de 1936 : de quel courant relève-t-il ?",
+     "options": [
+      "Du Streamline, qui dessine des profils aérodynamiques",
+      "Du Bauhaus, qui impose des formes très géométriques",
+      "Du design pop, qui joue sur les couleurs vives",
+      "De l’éco-design, qui cherche la réparabilité"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la date et la forme profilée.",
+     "explication": "Dans les années 1930, le **Streamline** dessinait des profils aérodynamiques même sur des objets qui ne bougent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "993f3135-fabd-5f9c-bdde-99210cc835a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tabouret Plot en designer",
+   "competence": "analyser-document",
+   "situation": "Un fabricant lance le tabouret empilable Plot, en plastique. Tu analyses sa fiche produit et son cahier des charges comme un designer, puis comme un ingénieur.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Tabouret Plot",
+     "sousTitre": "Fiche produit",
+     "emoji": "🪑",
+     "lignes": [
+      {
+       "texte": "Prix de vente",
+       "valeur": "14 €"
+      },
+      {
+       "texte": "Procédé",
+       "valeur": "Injection plastique, une pièce",
+       "id": "proc"
+      },
+      {
+       "texte": "Épaisseur des parois",
+       "valeur": "4 mm partout",
+       "id": "ep"
+      },
+      {
+       "texte": "Hauteur d’un tabouret",
+       "valeur": "45 cm"
+      },
+      {
+       "texte": "Décalage entre deux tabourets empilés",
+       "valeur": "4 cm"
+      },
+      {
+       "texte": "Cible",
+       "valeur": "Familles, terrasses, cantines"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "violet"
+    },
+    {
+     "id": "cdc",
+     "type": "tableau",
+     "titre": "Extrait du cahier des charges",
+     "colonnes": [
+      "Critère",
+      "Niveau"
+     ],
+     "lignes": [
+      [
+       "Charge supportée",
+       "110 kg"
+      ],
+      [
+       "Masse maximale",
+       "1,2 kg"
+      ],
+      [
+       "Durée de vie visée",
+       "5 ans"
+      ],
+      [
+       "Matière",
+       "Polypropylène neuf"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui explique que les parois aient la même épaisseur partout.",
+     "reponse": [
+      "proc"
+     ],
+     "aide": "Quel procédé fabrique la pièce en une seule fois ?",
+     "explication": "L’**injection plastique** impose une épaisseur régulière et des formes arrondies : la forme découle du procédé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur d’une pile de 10 tabourets, en centimètres ?",
+     "reponse": 81,
+     "unite": "cm",
+     "tolerance": 0,
+     "aide": "Le premier mesure 45 cm, chacun des 9 suivants ajoute le décalage.",
+     "explication": "45 + 9 × 4 = **81 cm**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque observation dans la bonne étape de l’analyse en designer.",
+     "categories": [
+      "Contexte",
+      "Fonction et forme",
+      "Usage",
+      "Environnement"
+     ],
+     "items": [
+      [
+       "Vendu 14 € à des familles",
+       0
+      ],
+      [
+       "Pieds évasés qui permettent d’empiler",
+       1
+      ],
+      [
+       "Dix tabourets rangés dans un coin",
+       2
+      ],
+      [
+       "Plastique d’origine fossile, difficile à réparer",
+       3
+      ],
+      [
+       "Épaisseur constante imposée par l’injection",
+       1
+      ]
+     ],
+     "aide": "Contexte : pour qui et à quel prix. Usage : prise en main et rangement.",
+     "explication": "Le **contexte** (cible, prix), la **relation fonction-forme**, l’**usage** (rangement) et l’**environnement** (matière, réparabilité) structurent l’analyse."
+    },
+    {
+     "type": "zone",
+     "document": "cdc",
+     "enonce": "Touche la donnée sur laquelle l’ingénieur dimensionne les pieds.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Il dimensionne pour qu’un utilisateur puisse s’asseoir sans casse.",
+     "explication": "L’ingénieur dimensionne les pieds pour la charge de **110 kg** : c’est la faisabilité et la solidité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle piste d’éco-design cible le mieux le cahier des charges ?",
+     "options": [
+      "Du polypropylène recyclé et des pièces réparables pour durer plus de 5 ans",
+      "Du polypropylène neuf plus épais pour augmenter le poids du tabouret",
+      "Du polypropylène neuf coloré pour changer plus souvent de modèle",
+      "Du polypropylène neuf collé pour simplifier l’assemblage des pièces"
+     ],
+     "reponse": 0,
+     "aide": "L’éco-design vise sobriété, réparabilité, durée de vie.",
+     "explication": "L’éco-design cherche **sobriété de matière, réparabilité et durée de vie** : matière recyclée et pièces remplaçables."
+    }
+   ]
+  },
+  {
+   "chapitre": "348f93c5-06bd-5ade-b489-51be0e939ee8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La borne de recharge de trottinettes",
+   "competence": "analyser-document",
+   "situation": "Inès, 16 ans, pressée, recharge sa trottinette sur une borne en test dans la cour du lycée. Des observateurs notent ce qui la gêne.",
+   "documents": [
+    {
+     "id": "test",
+     "type": "tableau",
+     "titre": "Observations pendant le test",
+     "colonnes": [
+      "Ce que l’on observe",
+      "Remarque"
+     ],
+     "lignes": [
+      [
+       "Inès doit se baisser pour brancher",
+       "Prise à 30 cm du sol"
+      ],
+      [
+       "Inès ne sait pas si la charge a démarré",
+       "Aucun voyant"
+      ],
+      [
+       "Le câble traîne au sol",
+       "Risque de chute"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "test",
+     "enonce": "Touche la remarque qui relève de la sécurité.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche un danger pour l’utilisateur.",
+     "explication": "Un câble au sol peut faire tomber quelqu’un : c’est un problème de **sécurité**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque problème à l’amélioration qui lui répond.",
+     "paires": [
+      [
+       "Prise trop basse",
+       "Prise placée à 90 cm"
+      ],
+      [
+       "Aucune réponse à l’action",
+       "Voyant vert ou orange"
+      ],
+      [
+       "Câble au sol",
+       "Enrouleur de câble"
+      ]
+     ],
+     "aide": "Chaque amélioration vise le problème de la ligne correspondante.",
+     "explication": "Prise à 90 cm pour le **confort**, voyant pour le **retour d’information**, enrouleur pour la **sécurité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on « Inès, 16 ans, pressée, smartphone en main » ?",
+     "options": [
+      "Un persona, c’est-à-dire un utilisateur type fictif",
+      "Un scénario d’usage, c’est-à-dire un déroulé pas à pas",
+      "Un test utilisateur, c’est-à-dire une observation réelle",
+      "Un détrompeur, c’est-à-dire une forme qui évite l’erreur"
+     ],
+     "reponse": 0,
+     "aide": "C’est une personne inventée mais réaliste.",
+     "explication": "Un **persona** est un utilisateur type fictif mais réaliste (âge, habitudes, besoins)."
+    }
+   ]
+  },
+  {
+   "chapitre": "348f93c5-06bd-5ade-b489-51be0e939ee8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À quelle hauteur placer l’écran ?",
+   "competence": "lire-graphique",
+   "situation": "L’écran d’une borne doit être lisible par la plupart des usagers. Le bureau d’études dispose de la hauteur des yeux d’adultes debout.",
+   "documents": [
+    {
+     "id": "yeux",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Hauteur des yeux d’adultes debout",
+     "categories": [
+      "5e centile",
+      "50e centile",
+      "95e centile"
+     ],
+     "series": [
+      {
+       "nom": "Hauteur des yeux",
+       "valeurs": [
+        150,
+        162,
+        176
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur des yeux",
+      "unite": "cm",
+      "min": 0,
+      "max": 200,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Position dans la population"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "yeux",
+     "enonce": "Un produit est dimensionné du 5e au 95e centile. Touche les deux barres qui bornent cette plage.",
+     "reponse": [
+      "k0",
+      "k2"
+     ],
+     "aide": "Les bornes sont la plus petite et la plus grande valeur.",
+     "explication": "La plage couvre du **5e au 95e centile** : les barres de gauche et de droite en marquent les bornes.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’étendue de la plage entre le 5e et le 95e centile, en centimètres ?",
+     "reponse": 26,
+     "unite": "cm",
+     "tolerance": 2,
+     "aide": "Soustrais la plus petite valeur de la plus grande.",
+     "explication": "176 − 150 = **26 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle part de la population reste hors de la plage 5e – 95e centile ?",
+     "options": [
+      "10 % : 5 % de très petits et 5 % de très grands",
+      "5 % : seulement les plus grands adultes",
+      "90 % : la plage ne concerne que les extrêmes",
+      "50 % : la moitié se situe au-dessus de la médiane"
+     ],
+     "reponse": 0,
+     "aide": "Ajoute les deux extrémités.",
+     "explication": "On exclut les **5 %** les plus petits et les **5 %** les plus grands : 10 % hors plage, 90 % couverts."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un écran fixé à la hauteur des yeux du 50e centile est trop haut de combien pour le 5e centile, en centimètres ?",
+     "reponse": 12,
+     "unite": "cm",
+     "tolerance": 2,
+     "aide": "Compare les barres du milieu et de gauche.",
+     "explication": "162 − 150 = **12 cm** : c’est pourquoi on prévoit un écran inclinable ou réglable."
+    }
+   ]
+  },
+  {
+   "chapitre": "348f93c5-06bd-5ade-b489-51be0e939ee8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’appli de covoiturage passe le test utilisateur",
+   "competence": "analyser-document",
+   "situation": "L’équipe teste la maquette d’une application de covoiturage avec cinq élèves. Elle observe l’écran de réservation et les résultats chronométrés.",
+   "documents": [
+    {
+     "id": "maquette",
+     "type": "schema",
+     "titre": "Écran de réservation (maquette)",
+     "largeur": 340,
+     "hauteur": 330,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 10,
+       "l": 180,
+       "h": 310,
+       "arrondi": 18,
+       "teinte": "encre",
+       "motif": "aucun",
+       "id": "ecran"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 24,
+       "l": 156,
+       "h": 28,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Covoiturage",
+       "id": "titre"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 62,
+       "l": 156,
+       "h": 100,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Carte du trajet",
+       "id": "carte"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 184,
+       "texte": "Rennes → Nantes · 12 €",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 206,
+       "l": 44,
+       "h": 22,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Réserv.",
+       "id": "reserver",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 200,
+       "l": 96,
+       "h": 34,
+       "arrondi": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "texte": "Annuler le trajet",
+       "id": "annuler",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 260,
+       "texte": "Aucun message après un toucher",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Maquette écrite pour l’exercice"
+    },
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Résultats du test",
+     "colonnes": [
+      "Testeur",
+      "A réussi à réserver ?",
+      "Temps (s)"
+     ],
+     "lignes": [
+      [
+       "Léa",
+       "oui",
+       12
+      ],
+      [
+       "Karim",
+       "non",
+       "—"
+      ],
+      [
+       "Sofia",
+       "oui",
+       48
+      ],
+      [
+       "Paul",
+       "oui",
+       45
+      ],
+      [
+       "Awa",
+       "non",
+       "—"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maquette",
+     "enonce": "Touche le bouton dont la petite taille gêne la visibilité d’une commande utile.",
+     "reponse": [
+      "reserver"
+     ],
+     "aide": "La commande utile est celle qu’on veut toucher en premier.",
+     "explication": "Le bouton **Réserver** est minuscule et grisé : une commande utile doit être visible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Annuler le trajet se fait d’un seul toucher, juste à côté de Réserver, sans confirmation. Quel principe est violé ?",
+     "options": [
+      "La prévention des erreurs, qui rend la mauvaise manœuvre difficile",
+      "La cohérence, qui garde les mêmes gestes pour les mêmes effets",
+      "Le retour d’information, qui répond à chaque action",
+      "La visibilité, qui montre les commandes utiles à l’écran"
+     ],
+     "reponse": 0,
+     "aide": "Un geste destructeur trop facile à déclencher par erreur.",
+     "explication": "Un geste irréversible, collé à un autre bouton, ouvre la porte aux erreurs : il faut une **prévention des erreurs** (confirmation)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de réussite de la réservation, en pourcentage ?",
+     "reponse": 60,
+     "unite": "%",
+     "tolerance": 0,
+     "aide": "Compte les « oui » sur cinq testeurs.",
+     "explication": "3 réussites sur 5 : 3 ÷ 5 = **60 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le temps moyen de réservation des testeurs qui ont réussi, en secondes ?",
+     "reponse": 35,
+     "unite": "s",
+     "tolerance": 0.5,
+     "aide": "Additionne les temps des seuls testeurs qui ont réussi.",
+     "explication": "(12 + 48 + 45) ÷ 3 = 105 ÷ 3 = **35 s**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du parcours d’un utilisateur de l’application.",
+     "items": [
+      "Découvrir l’application dans un magasin",
+      "L’installer et créer un compte",
+      "Réserver un trajet",
+      "Mettre à jour l’application",
+      "Supprimer son compte"
+     ],
+     "aide": "L’expérience utilisateur couvre tout le parcours, de la découverte à la séparation.",
+     "explication": "L’**expérience utilisateur** va de la découverte à la fin : découvrir, installer, utiliser, entretenir, se séparer."
+    }
+   ]
+  },
+  {
+   "chapitre": "637da7f5-b6c5-52c5-a5f4-6ffac9dd4d21",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Aquaclip : protéger la gourde filtrante",
+   "competence": "analyser-document",
+   "situation": "Une équipe invente une gourde qui filtre l’eau grâce à une cartouche clipsable. Elle a donné à son produit une forme en goutte et le nom « Aquaclip ».",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Aquaclip",
+     "sousTitre": "Les trois idées à protéger",
+     "emoji": "💧",
+     "lignes": [
+      {
+       "texte": "Système de cartouche clipsable",
+       "valeur": "idée n° 1",
+       "id": "cartouche"
+      },
+      {
+       "texte": "Forme de la gourde en goutte",
+       "valeur": "idée n° 2",
+       "id": "forme"
+      },
+      {
+       "texte": "Nom « Aquaclip »",
+       "valeur": "idée n° 3",
+       "id": "nom"
+      }
+     ],
+     "pied": "Produit imaginé pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche l’idée que protège un brevet d’invention.",
+     "reponse": [
+      "cartouche"
+     ],
+     "aide": "Un brevet protège une solution technique.",
+     "explication": "Le **système de cartouche clipsable** est une solution technique : c’est l’objet du brevet."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque titre à sa durée maximale de protection en France.",
+     "paires": [
+      [
+       "Brevet d’invention",
+       "20 ans"
+      ],
+      [
+       "Dessin et modèle",
+       "25 ans"
+      ],
+      [
+       "Marque",
+       "10 ans, renouvelable sans limite"
+      ]
+     ],
+     "aide": "La marque est la seule qu’on peut renouveler indéfiniment.",
+     "explication": "Brevet : **20 ans**. Dessin et modèle : **25 ans** (par tranches de 5 ans). Marque : **10 ans**, renouvelable sans limite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’équipe dépose son brevet en 2026. Jusqu’à quelle année le protège-t-il au maximum ?",
+     "reponse": 2046,
+     "tolerance": 0,
+     "aide": "Ajoute la durée maximale à l’année de dépôt.",
+     "explication": "2026 + 20 = **2046**."
+    }
+   ]
+  },
+  {
+   "chapitre": "637da7f5-b6c5-52c5-a5f4-6ffac9dd4d21",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La veille technologique du mois",
+   "competence": "analyser-document",
+   "situation": "Le CDI du lycée affiche chaque mois une veille technologique. Tu classes les nouveautés par type, puis par ampleur d’innovation.",
+   "documents": [
+    {
+     "id": "veille",
+     "type": "tableau",
+     "titre": "Les nouveautés du mois",
+     "colonnes": [
+      "Nouveauté",
+      "Ce qui arrive à l’ancien produit"
+     ],
+     "lignes": [
+      [
+       "Un casque dont la batterie tient 1 h de plus",
+       "L’ancien modèle reste utilisable et vendu"
+      ],
+      [
+       "L’appareil photo numérique",
+       "La pellicule argentique perd son marché"
+      ],
+      [
+       "Un grille-pain au bouton plus ergonomique",
+       "Même produit, légèrement amélioré"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Autres nouveautés",
+     "colonnes": [
+      "Nouveauté"
+     ],
+     "lignes": [
+      [
+       "Une application qui loue une perceuse à un voisin"
+      ],
+      [
+       "L’impression 3D de pièces métalliques au lieu de l’usinage"
+      ],
+      [
+       "Un smartphone dont l’écran se replie en deux"
+      ],
+      [
+       "Un tableau de projet partagé qui remplace les réunions"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "veille",
+     "enonce": "Touche la nouveauté qui est une innovation de rupture.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Une rupture rend l’ancien produit obsolète.",
+     "explication": "L’**appareil photo numérique** rend la pellicule obsolète : c’est une rupture, pas une amélioration."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nouveauté dans le bon type d’innovation.",
+     "categories": [
+      "De produit",
+      "De procédé",
+      "De marketing",
+      "D’organisation"
+     ],
+     "items": [
+      [
+       "Un smartphone dont l’écran se replie en deux",
+       0
+      ],
+      [
+       "L’impression 3D de pièces métalliques au lieu de l’usinage",
+       1
+      ],
+      [
+       "Une application qui loue une perceuse à un voisin",
+       2
+      ],
+      [
+       "Un tableau de projet partagé qui remplace les réunions",
+       3
+      ]
+     ],
+     "aide": "Produit : l’objet. Procédé : fabriquer. Marketing : vendre. Organisation : travailler.",
+     "explication": "Un **produit** change l’objet, un **procédé** la fabrication, le **marketing** la façon de proposer, l’**organisation** la façon de travailler."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Une invention devient une ___ quand elle trouve ses ___.",
+     "reponses": [
+      [
+       "innovation"
+      ],
+      [
+       "utilisateurs",
+       "clients"
+      ]
+     ],
+     "banque": [
+      "innovation",
+      "utilisateurs",
+      "brevet",
+      "marque"
+     ],
+     "aide": "Pense à l’adoption par le marché.",
+     "explication": "Une invention devient **innovation** quand elle est adoptée par ses **utilisateurs**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type d’innovation est le casque avec 1 h d’autonomie en plus ?",
+     "options": [
+      "Une innovation incrémentale, qui améliore progressivement",
+      "Une innovation de rupture, qui rend l’ancien obsolète",
+      "Une innovation de marketing, qui change la vente",
+      "Une innovation d’organisation, qui change le travail"
+     ],
+     "reponse": 0,
+     "aide": "L’ancien modèle reste vendu et utilisable.",
+     "explication": "L’ancien modèle reste utilisable : c’est une amélioration progressive, donc **incrémentale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "637da7f5-b6c5-52c5-a5f4-6ffac9dd4d21",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Aquaclip en 2035 : que peut copier un concurrent ?",
+   "competence": "raisonner",
+   "situation": "Aquaclip a déposé trois titres entre 2012 et 2016. En 2035, un concurrent veut lancer une gourde proche. L’équipe vérifie ce qui est encore protégé.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les dépôts d’Aquaclip",
+     "debut": 2010,
+     "fin": 2045,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "b",
+       "date": 2012,
+       "nom": "Dépôt du brevet"
+      },
+      {
+       "id": "m",
+       "date": 2015,
+       "nom": "Dépôt de la marque"
+      },
+      {
+       "id": "d",
+       "date": 2016,
+       "nom": "Dépôt du modèle"
+      }
+     ],
+     "source": "Dates inventées pour l’exercice"
+    },
+    {
+     "id": "titres",
+     "type": "tableau",
+     "titre": "Les titres déposés",
+     "colonnes": [
+      "Élément",
+      "Titre",
+      "Durée maximale"
+     ],
+     "lignes": [
+      [
+       "Cartouche clipsable",
+       "Brevet d’invention",
+       "20 ans"
+      ],
+      [
+       "Forme en goutte",
+       "Dessin et modèle",
+       "25 ans"
+      ],
+      [
+       "Nom Aquaclip",
+       "Marque",
+       "10 ans, renouvelable"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "titres",
+     "enonce": "Touche la durée maximale de protection de la forme en goutte.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "La forme est une apparence.",
+     "explication": "La forme relève du **dessin et modèle** : 25 ans au maximum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle année le brevet de la cartouche arrive-t-il à son terme maximal ?",
+     "reponse": 2032,
+     "tolerance": 0,
+     "aide": "Ajoute 20 ans à la date de dépôt du brevet.",
+     "explication": "2012 + 20 = **2032**."
+    },
+    {
+     "type": "categories",
+     "enonce": "En 2035, que peut copier librement un concurrent ? On suppose que la marque a été renouvelée en 2025.",
+     "categories": [
+      "Copiable librement",
+      "Reste protégé"
+     ],
+     "items": [
+      [
+       "Le système de cartouche clipsable",
+       0
+      ],
+      [
+       "La forme en goutte (modèle de 2016)",
+       1
+      ],
+      [
+       "Le nom « Aquaclip »",
+       1
+      ]
+     ],
+     "aide": "Compare 2035 aux dates de fin de chaque titre.",
+     "explication": "Le brevet a pris fin en **2032** : la solution technique est libre. Le modèle court jusqu’en **2041** et la marque renouvelée reste protégée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de renouvellements la marque (déposée en 2015) exige-t-elle pour rester protégée en 2042 ?",
+     "reponse": 2,
+     "tolerance": 0,
+     "aide": "Chaque période dure 10 ans à partir du dépôt.",
+     "explication": "2015 → 2025 (1er renouvellement), 2025 → 2035, puis 2035 → 2045 (2e renouvellement) : il faut **2 renouvellements**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le brevet est-il publié, alors que l’invention y est détaillée ?",
+     "options": [
+      "Tout le monde peut le lire, mais pas l’exploiter sans licence",
+      "Tout le monde peut le lire et l’exploiter librement tout de suite",
+      "Il reste secret pendant toute la durée de sa protection",
+      "Il est lu uniquement par l’INPI avant d’être archivé"
+     ],
+     "reponse": 0,
+     "aide": "En échange de la protection, il faut dire comment ça marche.",
+     "explication": "En échange du monopole, le brevet est **publié** : lecture libre, exploitation soumise à licence."
+    }
+   ]
+  },
+  {
+   "chapitre": "d50a9add-a72b-5d45-92c6-4a3d7e0f67bb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La gourde connectée à 30 €",
+   "competence": "lire-tableau",
+   "situation": "Une gourde connectée coûte 30 € à fabriquer. Le bureau d’études a estimé, pour chaque fonction, ce qu’elle coûte et ce qu’elle compte pour l’utilisateur.",
+   "documents": [
+    {
+     "id": "fonctions",
+     "type": "tableau",
+     "titre": "Coût et importance des fonctions",
+     "colonnes": [
+      "Fonction",
+      "Coût (€)",
+      "Part du coût",
+      "Importance"
+     ],
+     "lignes": [
+      [
+       "Contenir et protéger l’eau",
+       9,
+       "30 %",
+       "45 %"
+      ],
+      [
+       "Compter les gorgées",
+       12,
+       "40 %",
+       "15 %"
+      ],
+      [
+       "Se tenir en main",
+       3,
+       "10 %",
+       "25 %"
+      ],
+      [
+       "Plaire (aspect)",
+       6,
+       "20 %",
+       "15 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Estimations inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fonctions",
+     "enonce": "Touche le coût le plus élevé.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche le plus grand nombre de la colonne Coût.",
+     "explication": "La fonction « compter les gorgées » coûte **12 €**, le plus élevé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du coût total représente la fonction « Plaire » ? Réponds en pourcentage.",
+     "reponse": 20,
+     "unite": "%",
+     "tolerance": 0,
+     "aide": "Divise 6 € par 30 €.",
+     "explication": "6 ÷ 30 = 0,20, soit **20 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fonction est trop chère par rapport à son importance ?",
+     "options": [
+      "Compter les gorgées, qui coûte 40 % pour 15 % d’importance",
+      "Contenir l’eau, qui coûte 30 % pour 45 % d’importance",
+      "Se tenir en main, qui coûte 10 % pour 25 % d’importance",
+      "Plaire, qui coûte 20 % pour 15 % d’importance"
+     ],
+     "reponse": 0,
+     "aide": "Compare, ligne par ligne, la part du coût et l’importance.",
+     "explication": "« Compter les gorgées » coûte **40 %** pour seulement 15 % d’importance : c’est là qu’il faut chercher des économies."
+    }
+   ]
+  },
+  {
+   "chapitre": "d50a9add-a72b-5d45-92c6-4a3d7e0f67bb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois supports de smartphone en concurrence",
+   "competence": "modeliser",
+   "situation": "Un fabricant hésite entre trois supports de smartphone. Une enquête a noté la satisfaction du besoin sur 20, et le bureau d’études a chiffré le coût de chaque variante.",
+   "documents": [
+    {
+     "id": "variantes",
+     "type": "tableau",
+     "titre": "Les trois variantes",
+     "colonnes": [
+      "Variante",
+      "Satisfaction (sur 20)",
+      "Coût (€)"
+     ],
+     "lignes": [
+      [
+       "A : plastique injecté",
+       16,
+       8
+      ],
+      [
+       "B : bois découpé laser",
+       18,
+       12
+      ],
+      [
+       "C : carton plié",
+       12,
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes et coûts inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur de la variante A (satisfaction divisée par le coût).",
+     "reponse": 2,
+     "tolerance": 0,
+     "aide": "Valeur = satisfaction ÷ coût.",
+     "explication": "16 ÷ 8 = **2**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois variantes de la plus grande valeur à la plus petite.",
+     "items": [
+      "C : carton plié",
+      "A : plastique injecté",
+      "B : bois découpé laser"
+     ],
+     "aide": "Calcule la valeur de B (18 ÷ 12) et de C (12 ÷ 4).",
+     "explication": "C : 12 ÷ 4 = **3**, A : 16 ÷ 8 = **2**, B : 18 ÷ 12 = **1,5**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition de la valeur.",
+     "texte": "La valeur est le rapport de la ___ du besoin au ___.",
+     "reponses": [
+      [
+       "satisfaction"
+      ],
+      [
+       "coût",
+       "cout"
+      ]
+     ],
+     "banque": [
+      "satisfaction",
+      "coût",
+      "importance",
+      "impact"
+     ],
+     "aide": "Regarde les deux colonnes du tableau.",
+     "explication": "Valeur = **satisfaction** du besoin ÷ **coût**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour augmenter la valeur de la variante B sans toucher à sa satisfaction, que faire ?",
+     "options": [
+      "Réduire son coût, par exemple en simplifiant sa finition",
+      "Augmenter son coût, par exemple en ajoutant des options",
+      "Garder le même coût et ajouter une fonction inutile",
+      "Changer la couleur du bois pour suivre la mode"
+     ],
+     "reponse": 0,
+     "aide": "Il y a deux façons d’augmenter une valeur : numérateur ou dénominateur.",
+     "explication": "À satisfaction égale, la valeur monte quand le **coût baisse**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d50a9add-a72b-5d45-92c6-4a3d7e0f67bb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Casque audio : où trouver 4,50 € ?",
+   "competence": "modeliser",
+   "situation": "Un casque audio sans fil est fabriqué pour 60 €. Le service financier demande 7 % d’économies sans perdre en satisfaction : l’équipe passe en revue ses fonctions.",
+   "documents": [
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Coût des fonctions",
+     "colonnes": [
+      "Fonction",
+      "Coût (€)"
+     ],
+     "lignes": [
+      [
+       "Restituer le son",
+       24
+      ],
+      [
+       "S’adapter à la tête (confort)",
+       12
+      ],
+      [
+       "Se connecter sans fil",
+       12
+      ],
+      [
+       "Plaire (finition)",
+       12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Estimations inventées pour l’exercice"
+    },
+    {
+     "id": "valeur",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part du coût et importance, en %",
+     "categories": [
+      "Son",
+      "Confort",
+      "Sans fil",
+      "Plaire"
+     ],
+     "series": [
+      {
+       "nom": "Part du coût",
+       "valeurs": [
+        40,
+        20,
+        20,
+        20
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Importance pour l’utilisateur",
+       "valeurs": [
+        45,
+        25,
+        20,
+        10
+       ],
+       "teinte": "jaune"
+      }
+     ],
+     "axeY": {
+      "titre": "Pourcentage",
+      "unite": "%",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Fonction"
+     },
+     "valeurs": false,
+     "source": "Enquête inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du coût total représente la fonction « Plaire » ? Réponds en pourcentage.",
+     "reponse": 20,
+     "unite": "%",
+     "tolerance": 0,
+     "aide": "Divise 12 € par le total de 60 €.",
+     "explication": "12 ÷ 60 = **20 %**."
+    },
+    {
+     "type": "zone",
+     "document": "valeur",
+     "enonce": "Touche la fonction dont la part du coût dépasse nettement son importance.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compare les deux barres de chaque fonction.",
+     "explication": "Pour « Plaire », le coût (20 %) est deux fois l’importance (10 %) : c’est la fonction à retravailler."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une finition simplifiée fait passer « Plaire » de 12 € à 7,50 €. Quel est le nouveau coût total du casque, en euros ?",
+     "reponse": 55.5,
+     "unite": "€",
+     "tolerance": 0.05,
+     "aide": "Soustrais l’économie réalisée au total de 60 €.",
+     "explication": "12 − 7,50 = 4,50 € d’économie ; 60 − 4,50 = **55,50 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment utiliser au mieux une partie des 4,50 € économisés ?",
+     "options": [
+      "Améliorer les transducteurs, fonction la plus importante et sous-dotée",
+      "Ajouter des décorations, pour que le casque plaise davantage",
+      "Ajouter un écran, pour montrer les notifications à l’oreille",
+      "Garder tout l’argent, sans rien changer aux autres fonctions"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la fonction dont le coût est inférieur à l’importance.",
+     "explication": "« Restituer le son » pèse 45 % d’importance pour 40 % du coût : c’est elle qui mérite plus de moyens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle relation analyse-t-on en cherchant le procédé le moins cher pour la finition ?",
+     "options": [
+      "Fonction, coût et réalisation",
+      "Fonction, coût et besoin",
+      "Fonction et impact environnemental",
+      "Besoin réel et besoin induit"
+     ],
+     "reponse": 0,
+     "aide": "On s’intéresse à la façon de fabriquer.",
+     "explication": "Interroger le procédé de fabrication, c’est la relation **fonction / coût / réalisation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0507e90-d051-5ce3-9f70-3b224e33c516",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix vélos sur 5 m² : le brainstorming dérape",
+   "competence": "analyser-texte",
+   "situation": "Pendant un brainstorming sur la question « Comment ranger dix vélos sur 5 m² ? », une réplique casse la dynamique de l’équipe.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "On pourrait les suspendre au plafond !"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Idée [[j|nulle]], c’est trop lourd."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Alors les empiler sur deux étages ?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ou un râtelier qui pivote comme une porte !"
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui enfreint la règle de la divergence.",
+     "reponse": [
+      "j"
+     ],
+     "aide": "En divergence, on ne juge pas.",
+     "explication": "« **nulle** » juge l’idée d’Emma : pendant la divergence, on produit sans critiquer."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à sa description.",
+     "paires": [
+      [
+       "Divergence",
+       "Produire un maximum d’idées sans juger"
+      ],
+      [
+       "Convergence",
+       "Trier, évaluer et choisir"
+      ],
+      [
+       "Brainstorming",
+       "Idées lancées en groupe, la quantité prime"
+      ],
+      [
+       "Tableau multicritère",
+       "Comparer les pistes avec des critères"
+      ]
+     ],
+     "aide": "Une phase produit, l’autre choisit.",
+     "explication": "La **divergence** produit sans juger, la **convergence** trie et choisit ; le **tableau multicritère** sert à comparer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après la séance, quel outil aide à choisir entre les pistes ?",
+     "options": [
+      "Un tableau multicritère",
+      "Une carte mentale",
+      "Une nouvelle séance libre",
+      "Un croquis à main levée"
+     ],
+     "reponse": 0,
+     "aide": "On compare coût, encombrement, facilité d’usage.",
+     "explication": "En **convergence**, on évalue les pistes avec un **tableau multicritère**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0507e90-d051-5ce3-9f70-3b224e33c516",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’où viennent les bonnes idées ?",
+   "competence": "analyser-document",
+   "situation": "Quatre innovations célèbres sont affichées au CDI. Pour chacune, une courte note raconte l’origine de l’idée. Tu l’identifies, puis tu ranges la séance de l’équipe.",
+   "documents": [
+    {
+     "id": "origines",
+     "type": "tableau",
+     "titre": "Quatre innovations",
+     "colonnes": [
+      "Innovation",
+      "Origine de l’idée"
+     ],
+     "lignes": [
+      [
+       "Le velcro",
+       "Un ingénieur observe les graines de bardane qui s’accrochent au pelage de son chien"
+      ],
+      [
+       "Le nez du TGV japonais",
+       "Les concepteurs imitent le bec du martin-pêcheur qui plonge sans éclaboussure"
+      ],
+      [
+       "Le GPS des voitures",
+       "Une technologie d’abord conçue pour les armées est reprise par le grand public"
+      ],
+      [
+       "La coque d’un smartphone",
+       "Elle sert à la fois d’enveloppe, de structure et d’antenne"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes d’après des cas connus, rédigées pour l’exercice"
+    },
+    {
+     "id": "seance",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Déroulé d’une séance",
+     "sousTitre": "Étapes notées dans le désordre",
+     "emoji": "📝",
+     "lignes": [
+      {
+       "texte": "Choisir une ou deux pistes à approfondir",
+       "id": "e5"
+      },
+      {
+       "texte": "Poser le problème en question ouverte",
+       "id": "e1"
+      },
+      {
+       "texte": "Évaluer avec un tableau multicritère",
+       "id": "e4"
+      },
+      {
+       "texte": "Brainstorming de 15 minutes",
+       "id": "e2"
+      },
+      {
+       "texte": "Regrouper les idées par familles",
+       "id": "e3"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque innovation à la démarche qui l’explique.",
+     "paires": [
+      [
+       "Le velcro",
+       "Biomimétisme"
+      ],
+      [
+       "Le GPS des voitures",
+       "Transfert de technologie"
+      ],
+      [
+       "La coque d’un smartphone",
+       "Intégration de fonctions"
+      ]
+     ],
+     "aide": "Le vivant, un autre domaine, une pièce qui fait plusieurs choses.",
+     "explication": "Le velcro imite le vivant (**biomimétisme**), le GPS vient d’un autre domaine (**transfert**), la coque cumule plusieurs fonctions (**intégration**)."
+    },
+    {
+     "type": "zone",
+     "document": "origines",
+     "enonce": "Touche l’innovation qui reprend une solution venue d’un autre domaine.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la note qui parle d’une technologie d’abord conçue pour un autre usage.",
+     "explication": "Le **GPS** est passé du domaine militaire au grand public : c’est un transfert de technologie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la séance dans l’ordre.",
+     "items": [
+      "Poser le problème en question ouverte",
+      "Brainstorming de 15 minutes",
+      "Regrouper les idées par familles",
+      "Évaluer avec un tableau multicritère",
+      "Choisir une ou deux pistes à approfondir"
+     ],
+     "aide": "On diverge d’abord, on converge ensuite.",
+     "explication": "Question ouverte, brainstorming, regroupement, évaluation puis choix : on **diverge** avant de **converger**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formulation de départ est la plus adaptée à une séance de créativité ?",
+     "options": [
+      "Comment ranger dix vélos sur 5 m² ?",
+      "Faut-il acheter un râtelier à 120 € ?",
+      "Un râtelier vertical est-il meilleur ?",
+      "Peut-on ranger dix vélos au sol ?"
+     ],
+     "reponse": 0,
+     "aide": "La question doit laisser des solutions ouvertes.",
+     "explication": "Une **question ouverte** (« Comment… ? ») laisse de la place aux idées ; une question fermée appelle oui ou non."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0507e90-d051-5ce3-9f70-3b224e33c516",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Casque de vélo : solide ET léger",
+   "competence": "raisonner",
+   "situation": "Pour un casque de vélo, une équipe se heurte à une contradiction : plus la coque est épaisse, plus elle protège, mais plus elle pèse. Elle applique une méthode rationnelle, puis compare trois pistes.",
+   "documents": [
+    {
+     "id": "triz",
+     "type": "chaine",
+     "titre": "Méthode rationnelle",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Contradiction : solide (épais) et léger (fin)"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Coque fine et rigide sur mousse alvéolaire"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    },
+    {
+     "id": "multi",
+     "type": "tableau",
+     "titre": "Tableau multicritère (notes sur 5)",
+     "colonnes": [
+      "Critère",
+      "Coef.",
+      "A : ABS épais",
+      "B : coque + mousse",
+      "C : carbone"
+     ],
+     "lignes": [
+      [
+       "Coût",
+       2,
+       5,
+       4,
+       1
+      ],
+      [
+       "Légèreté",
+       3,
+       2,
+       4,
+       5
+      ],
+      [
+       "Protection",
+       3,
+       4,
+       4,
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel principe d’innovation relie la contradiction à la solution ?",
+     "options": [
+      "Utiliser une structure alvéolaire",
+      "Faire grossir toute la coque",
+      "Remplacer la coque par du carton",
+      "Supprimer la mousse de protection"
+     ],
+     "reponse": 0,
+     "aide": "La mousse du casque est faite de petites cellules.",
+     "explication": "La méthode TRIZ propose ici la **structure alvéolaire** : légère, mais capable d’absorber les chocs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le total pondéré de la piste A (somme des coefficients × notes).",
+     "reponse": 28,
+     "tolerance": 0,
+     "aide": "Multiplie chaque note par son coefficient, puis additionne.",
+     "explication": "5 × 2 + 2 × 3 + 4 × 3 = 10 + 6 + 12 = **28**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le total pondéré de la piste B.",
+     "reponse": 32,
+     "tolerance": 0,
+     "aide": "Même calcul avec les notes de la colonne B.",
+     "explication": "4 × 2 + 4 × 3 + 4 × 3 = 8 + 12 + 12 = **32**."
+    },
+    {
+     "type": "zone",
+     "document": "multi",
+     "enonce": "Touche la note qui explique pourquoi le carbone est pénalisé.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Le carbone a de très bonnes notes, sauf sur un critère.",
+     "explication": "Le carbone a **1 sur 5** en coût : malgré sa légèreté, il est trop cher (total de 29 contre 32)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle piste retenir, et pourquoi ?",
+     "options": [
+      "La piste B, qui a le meilleur total pondéré avec 32 points",
+      "La piste A, qui a la meilleure note de coût avec 5 sur 5",
+      "La piste C, qui a la meilleure note de légèreté avec 5 sur 5",
+      "Aucune, car les trois pistes ont le même total pondéré"
+     ],
+     "reponse": 0,
+     "aide": "On choisit avec le total pondéré, pas avec une seule note.",
+     "explication": "B totalise **32**, contre 28 pour A et 29 pour C : c’est le meilleur compromis."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec893d47-68ac-5fe4-90de-3389d476e3e0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’ordinateur portable sous la loupe",
+   "competence": "lire-graphique",
+   "situation": "Un bureau d’études mesure l’impact climatique d’un ordinateur portable sur ses cinq grandes phases de vie, avant de chercher des pistes d’amélioration.",
+   "documents": [
+    {
+     "id": "phases",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de l’impact climatique par phase",
+     "categories": [
+      "Matières premières",
+      "Fabrication",
+      "Transport",
+      "Utilisation",
+      "Fin de vie"
+     ],
+     "series": [
+      {
+       "nom": "Part de l’impact",
+       "valeurs": [
+        25,
+        45,
+        5,
+        20,
+        5
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de l’impact",
+      "unite": "%",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Phase du cycle de vie"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phases",
+     "enonce": "Touche la phase qui pèse le plus sur le climat.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La **fabrication** (45 %) est la phase dominante pour cet ordinateur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’impact vient des matières premières et de la fabrication réunies, en pourcentage ?",
+     "reponse": 70,
+     "unite": "%",
+     "tolerance": 1,
+     "aide": "Additionne les deux premières barres.",
+     "explication": "25 + 45 = **70 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle piste d’éco-conception vise le mieux cette phase dominante ?",
+     "options": [
+      "Allonger la durée de vie, pour étaler la fabrication sur plus d’années",
+      "Alléger l’emballage, pour réduire l’impact du transport",
+      "Réduire la veille, pour diminuer l’énergie consommée à l’usage",
+      "Imprimer moins de notices, pour économiser un peu de papier"
+     ],
+     "reponse": 0,
+     "aide": "Quelle phase pèse 70 % avec les matières ?",
+     "explication": "Quand la fabrication domine, utiliser le produit **plus longtemps** réduit l’impact par année d’usage."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec893d47-68ac-5fe4-90de-3389d476e3e0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Gourdes en aluminium recyclé",
+   "competence": "modeliser",
+   "situation": "Une PME fabrique 500 gourdes de 0,4 kg en aluminium. Elle compare l’énergie du métal neuf et du métal recyclé, puis replace le recyclage dans le cycle de vie.",
+   "documents": [
+    {
+     "id": "energie",
+     "type": "tableau",
+     "titre": "Énergie pour produire 1 kg d’aluminium",
+     "colonnes": [
+      "Origine du métal",
+      "Énergie (kWh par kg)"
+     ],
+     "lignes": [
+      [
+       "Aluminium primaire",
+       40
+      ],
+      [
+       "Aluminium recyclé",
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "cycle",
+     "type": "chaine",
+     "titre": "Cycle de vie d’une gourde",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "ext",
+       "texte": "Extraction"
+      },
+      {
+       "id": "fab",
+       "texte": "Fabrication"
+      },
+      {
+       "id": "tra",
+       "texte": "Transport"
+      },
+      {
+       "id": "usa",
+       "texte": "Utilisation"
+      },
+      {
+       "id": "fin",
+       "texte": "Fin de vie"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ext",
+       "a": "fab"
+      },
+      {
+       "de": "fab",
+       "a": "tra"
+      },
+      {
+       "de": "tra",
+       "a": "usa"
+      },
+      {
+       "de": "usa",
+       "a": "fin"
+      },
+      {
+       "de": "fin",
+       "a": "ext",
+       "texte": "recyclage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cycle",
+     "enonce": "Touche la phase dont le recyclage permet d’éviter une partie.",
+     "reponse": [
+      "ext"
+     ],
+     "aide": "La matière recyclée remplace une matière tirée de la terre.",
+     "explication": "Le recyclage ramène la matière en fabrication : on **extrait** moins de minerai."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage l’énergie baisse-t-elle quand on passe de l’aluminium primaire au recyclé ?",
+     "reponse": 95,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Calcule (40 − 2) ÷ 40.",
+     "explication": "(40 − 2) ÷ 40 = 0,95, soit **95 %** d’énergie en moins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la PME économise-t-elle pour 500 gourdes en passant au recyclé, en kWh ?",
+     "reponse": 7600,
+     "unite": "kWh",
+     "tolerance": 0,
+     "aide": "Masse totale en kg, puis économie par kilo.",
+     "explication": "500 × 0,4 = 200 kg ; 200 × (40 − 2) = **7 600 kWh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un emballage biodégradable diminue les déchets mais double la consommation d’eau. Comment appelle-t-on cela ?",
+     "options": [
+      "Un transfert de pollution",
+      "Un recyclage en boucle fermée",
+      "Une analyse de la valeur",
+      "Un transfert de technologie"
+     ],
+     "reponse": 0,
+     "aide": "On réduit un impact en en aggravant un autre.",
+     "explication": "Réduire un impact en en aggravant un autre est un **transfert de pollution** : l’ACV regarde plusieurs critères à la fois."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec893d47-68ac-5fe4-90de-3389d476e3e0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux sèche-cheveux, un meilleur bilan",
+   "competence": "modeliser",
+   "situation": "Un fabricant compare son sèche-cheveux A à un modèle B éco-conçu, plus robuste mais un peu plus lourd en matière. L’impact est mesuré en kg équivalent CO2 sur toute la vie.",
+   "documents": [
+    {
+     "id": "acv",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Impact climatique par phase (kg éq. CO2)",
+     "categories": [
+      "Matières",
+      "Fabrication",
+      "Transport",
+      "Utilisation",
+      "Fin de vie"
+     ],
+     "series": [
+      {
+       "nom": "Modèle A",
+       "valeurs": [
+        3,
+        2,
+        1,
+        24,
+        1
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Modèle B",
+       "valeurs": [
+        4,
+        3,
+        1,
+        17,
+        1
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Impact",
+      "unite": "kg éq. CO2",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Phase"
+     },
+     "valeurs": false,
+     "source": "Valeurs inventées pour l’exercice"
+    },
+    {
+     "id": "duree",
+     "type": "tableau",
+     "titre": "Durée de vie",
+     "colonnes": [
+      "",
+      "Modèle A",
+      "Modèle B"
+     ],
+     "lignes": [
+      [
+       "Durée de vie",
+       "4 ans",
+       "6 ans"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "acv",
+     "enonce": "Touche les deux phases où le modèle B émet plus que le modèle A.",
+     "reponse": [
+      "k0",
+      "k1"
+     ],
+     "aide": "Compare les deux barres de chaque phase.",
+     "explication": "B émet plus en **matières** (4 contre 3) et en **fabrication** (3 contre 2).",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage l’impact total baisse-t-il de A à B ? Arrondis à l’unité.",
+     "reponse": 16,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Calcule les deux totaux (A : 31, B : 26), puis (A − B) ÷ A.",
+     "explication": "A : 31 kg ; B : 26 kg. (31 − 26) ÷ 31 ≈ 0,161, soit **16 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’impact annuel du modèle B, arrondi au dixième, en kg éq. CO2 par an ?",
+     "reponse": 4.3,
+     "unite": "kg éq. CO2/an",
+     "tolerance": 0.05,
+     "aide": "Divise l’impact total de B par sa durée de vie.",
+     "explication": "26 ÷ 6 ≈ **4,3 kg éq. CO2 par an** (contre 7,75 pour A : 31 ÷ 4)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phase explique l’essentiel du gain du modèle B ?",
+     "options": [
+      "L’utilisation, qui passe de 24 à 17 kg éq. CO2",
+      "Les matières, qui passent de 3 à 4 kg éq. CO2",
+      "La fabrication, qui passe de 2 à 3 kg éq. CO2",
+      "Le transport, qui reste à 1 kg éq. CO2 pour les deux"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’écart le plus grand entre les deux barres.",
+     "explication": "L’**utilisation** baisse de 7 kg : c’est l’essentiel du gain, bien plus que les phases où B est moins bon."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si l’entreprise vend 1 000 sèche-cheveux B au lieu de A, quelle économie totale obtient-elle, en tonnes éq. CO2 ?",
+     "reponse": 5,
+     "unite": "t éq. CO2",
+     "tolerance": 0.05,
+     "aide": "Économie par appareil, puis × 1 000, puis conversion.",
+     "explication": "5 kg × 1 000 = 5 000 kg = **5 t éq. CO2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d64455d0-5f74-5f8a-bf60-0c0abec384df",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Modéliser un support de smartphone",
+   "competence": "observer-schema",
+   "situation": "Une équipe modélise en CAO un support de smartphone. Son arbre de construction garde, étape par étape, l’historique de la pièce.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "chaine",
+     "titre": "Arbre de construction du support",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "esq",
+       "texte": "Esquisse : rectangle de 80 × 60 mm"
+      },
+      {
+       "id": "ext",
+       "texte": "Extrusion : 4 mm"
+      },
+      {
+       "id": "enl",
+       "texte": "Enlèvement de matière : encoche de 8 mm"
+      },
+      {
+       "id": "con",
+       "texte": "Congé : rayon de 2 mm sur les angles"
+      }
+     ],
+     "liens": [
+      {
+       "de": "esq",
+       "a": "ext"
+      },
+      {
+       "de": "ext",
+       "a": "enl"
+      },
+      {
+       "de": "enl",
+       "a": "con"
+      }
+     ],
+     "source": "Pièce imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche l’étape qui donne l’épaisseur de la plaque.",
+     "reponse": [
+      "ext"
+     ],
+     "aide": "L’esquisse est plate : une fonction la pousse dans l’épaisseur.",
+     "explication": "L’**extrusion** pousse l’esquisse dans l’épaisseur : ici 4 mm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume de la plaque avant l’encoche, en cm³ ?",
+     "reponse": 19.2,
+     "unite": "cm³",
+     "tolerance": 0.05,
+     "aide": "Calcule 80 × 60 × 4 en mm³, puis convertis (1 cm³ = 1 000 mm³).",
+     "explication": "80 × 60 × 4 = 19 200 mm³ = **19,2 cm³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour changer la largeur de l’encoche, que modifie-t-on dans l’arbre ?",
+     "options": [
+      "La cote de 8 mm dans l’esquisse de l’enlèvement de matière",
+      "Le rayon du congé sur les angles de la plaque",
+      "La hauteur de l’extrusion de la plaque de 4 mm",
+      "Chaque pièce de l’assemblage une à une, à la main"
+     ],
+     "reponse": 0,
+     "aide": "La conception paramétrée met tout à jour depuis une cote.",
+     "explication": "En conception **paramétrée**, on change la cote de l’esquisse et toute la pièce se met à jour."
+    }
+   ]
+  },
+  {
+   "chapitre": "d64455d0-5f74-5f8a-bf60-0c0abec384df",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le téléphone n’entre pas dans l’encoche",
+   "competence": "observer-schema",
+   "situation": "Le test d’assemblage du support signale un conflit : le téléphone, épais de 9 mm, ne rentre pas dans une encoche de 8 mm. La coupe ci-dessous montre la situation.",
+   "documents": [
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "Coupe du support avec le téléphone",
+     "largeur": 340,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M10 110 L80 110 L80 180 L240 180 L240 110 L310 110 L310 240 L10 240 Z",
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "support",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 40,
+       "l": 180,
+       "h": 140,
+       "teinte": "bleu",
+       "motif": "hachures",
+       "id": "telephone",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 100,
+       "texte": "Téléphone",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 218,
+       "texte": "Support",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        25
+       ],
+       "a": [
+        250,
+        25
+       ],
+       "fleche": "deux",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 18,
+       "texte": "9 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        240
+       ],
+       "a": [
+        80,
+        262
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        240
+       ],
+       "a": [
+        240,
+        262
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        258
+       ],
+       "a": [
+        240,
+        258
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 280,
+       "texte": "Encoche : 8 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Coupe schématique écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche la pièce dont il faut modifier une cote pour supprimer le conflit.",
+     "reponse": [
+      "support"
+     ],
+     "aide": "Le téléphone est un objet réel : on ne peut pas le modifier.",
+     "explication": "Le téléphone est fixé à 9 mm : c’est la cote de l’encoche du **support** qu’on modifie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de millimètres le téléphone est-il trop épais pour l’encoche ?",
+     "reponse": 1,
+     "unite": "mm",
+     "tolerance": 0,
+     "aide": "Compare 9 mm et 8 mm.",
+     "explication": "9 − 8 = **1 mm** : les deux pièces se chevauchent, c’est une interférence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’équipe passe l’encoche à 9,5 mm. Quel jeu reste-t-il autour du téléphone, en mm ?",
+     "reponse": 0.5,
+     "unite": "mm",
+     "tolerance": 0.01,
+     "aide": "Soustrais l’épaisseur du téléphone à la nouvelle cote.",
+     "explication": "9,5 − 9 = **0,5 mm** de jeu : le téléphone s’insère sans forcer."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque fonction de CAO à son effet.",
+     "paires": [
+      [
+       "Extrusion",
+       "Pousse l’esquisse dans l’épaisseur"
+      ],
+      [
+       "Révolution",
+       "Fait tourner l’esquisse autour d’un axe"
+      ],
+      [
+       "Enlèvement de matière",
+       "Creuse ou perce la pièce"
+      ],
+      [
+       "Congé",
+       "Arrondit une arête vive"
+      ]
+     ],
+     "aide": "Imagine le geste de chaque fonction sur l’esquisse.",
+     "explication": "Chaque fonction volumique a son geste : **pousser**, **tourner**, **creuser**, **arrondir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel outil de la maquette numérique a révélé ce conflit entre deux pièces ?",
+     "options": [
+      "La détection d’interférences",
+      "Le rendu réaliste",
+      "L’export pour l’impression",
+      "La mise en plan cotée"
+     ],
+     "reponse": 0,
+     "aide": "Deux pièces qui se chevauchent : erreur de conception.",
+     "explication": "La **détection d’interférences** repère deux pièces qui occupent le même espace."
+    }
+   ]
+  },
+  {
+   "chapitre": "d64455d0-5f74-5f8a-bf60-0c0abec384df",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une rondelle modélisée par révolution",
+   "competence": "geometrie",
+   "situation": "Une équipe modélise une rondelle : Ø extérieur 40 mm, Ø intérieur 10 mm, épaisseur 5 mm. Elle la dessine par une esquisse tournée autour d’un axe, puis cherche sa masse.",
+   "documents": [
+    {
+     "id": "esquisse",
+     "type": "schema",
+     "titre": "Esquisse pour la révolution",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        20
+       ],
+       "a": [
+        60,
+        215
+       ],
+       "style": "pointilles",
+       "id": "axe",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 235,
+       "texte": "Axe de révolution",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 100,
+       "l": 150,
+       "h": 50,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "esq"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        85
+       ],
+       "a": [
+        110,
+        85
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 75,
+       "texte": "5 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        175
+       ],
+       "a": [
+        260,
+        175
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 185,
+       "y": 195,
+       "texte": "? mm",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        285,
+        100
+       ],
+       "a": [
+        285,
+        150
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 305,
+       "y": 130,
+       "texte": "5 mm",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Esquisse écrite pour l’exercice"
+    },
+    {
+     "id": "mat",
+     "type": "tableau",
+     "titre": "Masses volumiques",
+     "colonnes": [
+      "Matériau",
+      "Masse volumique (g/cm³)"
+     ],
+     "lignes": [
+      [
+       "PLA",
+       1.24
+      ],
+      [
+       "Aluminium",
+       2.7
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la cote manquante : la largeur du rectangle à tourner, en mm ?",
+     "reponse": 15,
+     "unite": "mm",
+     "tolerance": 0,
+     "aide": "Le rectangle va du rayon intérieur au rayon extérieur.",
+     "explication": "Rayon extérieur 20 mm, rayon intérieur 5 mm : 20 − 5 = **15 mm**."
+    },
+    {
+     "type": "zone",
+     "document": "esquisse",
+     "enonce": "Touche l’élément autour duquel l’esquisse tourne.",
+     "reponse": [
+      "axe"
+     ],
+     "aide": "La révolution fait tourner l’esquisse autour d’une ligne.",
+     "explication": "L’esquisse tourne autour de l’**axe de révolution**, le trait pointillé à gauche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le volume de la rondelle en cm³, arrondi au dixième (π × (R² − r²) × épaisseur).",
+     "reponse": 5.9,
+     "unite": "cm³",
+     "tolerance": 0.05,
+     "aide": "Passe d’abord le calcul en mm³ avec R = 20 et r = 5.",
+     "explication": "π × (20² − 5²) × 5 = π × 375 × 5 ≈ 5 890 mm³ ≈ **5,9 cm³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la masse de la rondelle en aluminium, en grammes ? Arrondis au dixième.",
+     "reponse": 15.9,
+     "unite": "g",
+     "tolerance": 0.1,
+     "aide": "Masse = volume × masse volumique.",
+     "explication": "5,89 × 2,7 ≈ **15,9 g**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fonction arrondit l’arête vive extérieure de la rondelle ?",
+     "options": [
+      "Un congé",
+      "Une extrusion",
+      "Une révolution",
+      "Une répétition"
+     ],
+     "reponse": 0,
+     "aide": "On veut casser une arête, pas ajouter de volume.",
+     "explication": "Le **congé** arrondit une arête vive ; le chanfrein la casse."
+    }
+   ]
+  },
+  {
+   "chapitre": "0938429a-4e00-5371-bd0b-f659e2a0610a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel procédé pour quelle pièce ?",
+   "competence": "lire-tableau",
+   "situation": "L’atelier du lycée dispose de quatre machines. Avant de lancer une pièce, l’équipe relit le principe de chacune.",
+   "documents": [
+    {
+     "id": "procedes",
+     "type": "tableau",
+     "titre": "Les machines de l’atelier",
+     "colonnes": [
+      "Procédé",
+      "Principe"
+     ],
+     "lignes": [
+      [
+       "Impression 3D par fil",
+       "Une buse dépose du plastique fondu couche par couche"
+      ],
+      [
+       "Impression 3D résine",
+       "Un faisceau lumineux durcit une résine liquide"
+      ],
+      [
+       "Découpe laser",
+       "Un laser découpe une plaque de bois ou d’acrylique"
+      ],
+      [
+       "Fraisage à commande numérique",
+       "Un outil rotatif enlève de la matière"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "procedes",
+     "enonce": "Touche le procédé le plus rapide pour des pièces planes en bois.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Il découpe des plaques.",
+     "explication": "La **découpe laser** découpe vite des pièces planes en bois ou en acrylique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque procédé : additif ou soustractif ?",
+     "categories": [
+      "Additif",
+      "Soustractif"
+     ],
+     "items": [
+      [
+       "Impression 3D par fil",
+       0
+      ],
+      [
+       "Impression 3D résine",
+       0
+      ],
+      [
+       "Découpe laser",
+       1
+      ],
+      [
+       "Fraisage à commande numérique",
+       1
+      ]
+     ],
+     "aide": "Additif : on ajoute de la matière. Soustractif : on en enlève.",
+     "explication": "Les impressions 3D **ajoutent** de la matière couche par couche ; la découpe et le fraisage en **enlèvent**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la masse d’une pièce pleine de 20 cm³ en PLA (1,24 g/cm³), en grammes ?",
+     "reponse": 24.8,
+     "unite": "g",
+     "tolerance": 0.1,
+     "aide": "Masse = volume × masse volumique.",
+     "explication": "20 × 1,24 = **24,8 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0938429a-4e00-5371-bd0b-f659e2a0610a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Régler l’imprimante 3D",
+   "competence": "modeliser",
+   "situation": "Une équipe imprime le boîtier d’un capteur. Voici les réglages choisis dans le logiciel de tranchage.",
+   "documents": [
+    {
+     "id": "reglages",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Réglages d’impression",
+     "sousTitre": "Boîtier du capteur",
+     "emoji": "🖨️",
+     "lignes": [
+      {
+       "texte": "Hauteur de couche",
+       "valeur": "0,2 mm"
+      },
+      {
+       "texte": "Remplissage",
+       "valeur": "20 %",
+       "id": "remp"
+      },
+      {
+       "texte": "Hauteur de la pièce",
+       "valeur": "24 mm"
+      },
+      {
+       "texte": "Durée d’une couche",
+       "valeur": "45 s"
+      },
+      {
+       "texte": "Supports",
+       "valeur": "oui (surplomb)",
+       "id": "supports"
+      }
+     ],
+     "pied": "Réglages écrits pour l’exercice",
+     "teinte": "turquoise"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reglages",
+     "enonce": "Touche le réglage qui permet d’économiser de la matière à l’intérieur de la pièce.",
+     "reponse": [
+      "remp"
+     ],
+     "aide": "Une pièce n’a pas besoin d’être pleine.",
+     "explication": "Réduire le **remplissage** (ici 20 %) économise matière et temps."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de couches la pièce compte-t-elle ?",
+     "reponse": 120,
+     "tolerance": 0,
+     "aide": "Divise la hauteur de la pièce par la hauteur d’une couche.",
+     "explication": "24 ÷ 0,2 = **120 couches**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée totale d’impression, en minutes ?",
+     "reponse": 90,
+     "unite": "min",
+     "tolerance": 0,
+     "aide": "Multiplie le nombre de couches par 45 s, puis convertis.",
+     "explication": "120 × 45 s = 5 400 s = **90 min**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du fichier à la pièce.",
+     "items": [
+      "Exporter la maquette au format STL",
+      "Trancher la pièce en couches",
+      "Régler couche, remplissage et supports",
+      "Imprimer",
+      "Retirer les supports"
+     ],
+     "aide": "On prépare le fichier avant d’imprimer.",
+     "explication": "On **exporte**, on **tranche**, on **règle**, on **imprime**, puis on **retire** les supports."
+    }
+   ]
+  },
+  {
+   "chapitre": "0938429a-4e00-5371-bd0b-f659e2a0610a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le prototype passe l’essai de flexion",
+   "competence": "experimenter",
+   "situation": "Le boîtier d’un capteur doit supporter au moins 150 N sans rompre. L’équipe teste cinq éprouvettes identiques, imprimées avec 20 % de remplissage, et note la charge de rupture de chacune.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Charge de rupture des cinq éprouvettes",
+     "categories": [
+      "Essai 1",
+      "Essai 2",
+      "Essai 3",
+      "Essai 4",
+      "Essai 5"
+     ],
+     "series": [
+      {
+       "nom": "Charge de rupture",
+       "valeurs": [
+        162,
+        142,
+        171,
+        155,
+        170
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Charge de rupture",
+      "unite": "N",
+      "min": 120,
+      "max": 180,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Éprouvette"
+     },
+     "valeurs": false,
+     "source": "Mesures inventées pour l’exercice"
+    },
+    {
+     "id": "protocole",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Fiche d’essai",
+     "sousTitre": "Flexion du boîtier",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Exigence",
+       "valeur": "≥ 150 N sur chaque essai",
+       "id": "exigence"
+      },
+      {
+       "texte": "Éprouvettes testées",
+       "valeur": "5"
+      },
+      {
+       "texte": "Masse d’une éprouvette",
+       "valeur": "22 g"
+      },
+      {
+       "texte": "Prix du fil",
+       "valeur": "25 € le kilo"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice",
+     "teinte": "turquoise"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche l’essai qui ne respecte pas l’exigence.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la charge inférieure à 150 N.",
+     "explication": "L’essai 2 casse à **142 N**, sous l’exigence de 150 N."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la charge moyenne de rupture des cinq essais, en newtons ?",
+     "reponse": 160,
+     "unite": "N",
+     "tolerance": 1,
+     "aide": "Additionne les cinq valeurs puis divise par 5.",
+     "explication": "(162 + 142 + 171 + 155 + 170) ÷ 5 = 800 ÷ 5 = **160 N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut l’équipe en comparant au cahier des charges ?",
+     "options": [
+      "Non conforme : un essai casse sous 150 N, malgré une moyenne de 160 N",
+      "Conforme : la moyenne de 160 N dépasse largement l’exigence de 150 N",
+      "Conforme : quatre essais sur cinq suffisent à valider l’exigence",
+      "Impossible à dire : un prototype ne se compare pas au cahier des charges"
+     ],
+     "reponse": 0,
+     "aide": "L’exigence porte sur chaque essai, pas sur la moyenne.",
+     "explication": "L’exigence est « ≥ 150 N sur **chaque** essai » : l’essai 2 la viole, il faut modifier le prototype."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût matière d’une éprouvette de 22 g à 25 € le kilo, en euros ?",
+     "reponse": 0.55,
+     "unite": "€",
+     "tolerance": 0.005,
+     "aide": "Convertis 22 g en kilogrammes.",
+     "explication": "0,022 kg × 25 = **0,55 €**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes d’un essai sur prototype.",
+     "items": [
+      "Définir ce que l’on veut vérifier",
+      "Écrire un protocole",
+      "Mesurer",
+      "Comparer au cahier des charges",
+      "Conclure : conforme ou à modifier"
+     ],
+     "aide": "Avant de mesurer, il faut savoir quoi vérifier.",
+     "explication": "On **définit** l’objectif, on écrit le **protocole**, on **mesure**, on **compare**, puis on **conclut**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fa14818-0c04-5564-816c-e9a73b10a71c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui fait quoi dans l’équipe ?",
+   "competence": "analyser-document",
+   "situation": "Une équipe de quatre élèves mène le projet de fin de première, soit environ 36 heures réparties en séances de 3 heures. Voici le bilan de leur dernière séance.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan de séance",
+     "colonnes": [
+      "Qui",
+      "Ce qu’il a fait"
+     ],
+     "lignes": [
+      [
+       "Tom",
+       "Il imprime et assemble le prototype"
+      ],
+      [
+       "Inès",
+       "Elle présente le principe en anglais à la classe"
+      ],
+      [
+       "Samir",
+       "Il reformule le besoin et lit le cahier des charges"
+      ],
+      [
+       "Lucie",
+       "Elle imagine une solution en séance de créativité"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Bilan écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche l’activité qui relève de l’objectif O4 : communiquer, y compris en langue étrangère.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche qui s’exprime devant la classe.",
+     "explication": "Inès **communique** son principe, en anglais : c’est l’objectif O4."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque objectif à son activité.",
+     "paires": [
+      [
+       "O2 : identifier les éléments qui influencent le développement",
+       "Reformuler le besoin, lire le cahier des charges"
+      ],
+      [
+       "O5 : imaginer une solution",
+       "Imaginer une solution en séance de créativité"
+      ],
+      [
+       "O7 : expérimenter et réaliser",
+       "Imprimer et assembler le prototype"
+      ]
+     ],
+     "aide": "Lis le verbe de chaque objectif.",
+     "explication": "O2 = s’**approprier** le besoin, O5 = **imaginer**, O7 = **réaliser** un prototype."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de séances de 3 heures fait un projet de 36 heures ?",
+     "reponse": 12,
+     "unite": "séances",
+     "tolerance": 0,
+     "aide": "Divise la durée totale par la durée d’une séance.",
+     "explication": "36 ÷ 3 = **12 séances**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fa14818-0c04-5564-816c-e9a73b10a71c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carnet de bord de l’équipe de Léa",
+   "competence": "analyser-texte",
+   "situation": "L’équipe de Léa conçoit un détecteur de fermeture de porte pour personnes âgées. Elle tient un carnet de bord après chaque séance.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Carnet de bord — séance 5",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Problématique : comment permettre à une personne âgée de savoir, sans se déplacer, si la porte d’entrée est bien fermée ?",
+      "Fait : maquette numérique du boîtier (Léa), test du programme (Sami).",
+      "Décision : nous avons retenu l’aluminium pour le boîtier, car il est [[r|léger]] et [[r|recyclable]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche les deux mots qui justifient le choix du matériau.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche ce qui suit « car ».",
+     "explication": "La décision est justifiée par deux qualités : **léger** et **recyclable**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle problématique est bien formulée pour ce projet ?",
+     "options": [
+      "Comment prévenir une personne âgée que sa porte est ouverte ?",
+      "Comment installer un capteur magnétique et une application ?",
+      "Comment programmer un microcontrôleur en langage Python ?",
+      "Comment rendre la serrure de la porte entièrement automatique ?"
+     ],
+     "reponse": 0,
+     "aide": "Elle nomme l’utilisateur et le besoin, sans imposer la solution.",
+     "explication": "Une bonne problématique précise l’**utilisateur** et le **besoin** et laisse les solutions **ouvertes**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du projet.",
+     "items": [
+      "Explorer",
+      "Choisir",
+      "Concevoir",
+      "Réaliser",
+      "Tester"
+     ],
+     "aide": "On cherche avant de choisir, on construit avant de tester.",
+     "explication": "L’ordre est **explorer**, **choisir**, **concevoir**, **réaliser**, **tester**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le rôle du carnet de bord.",
+     "texte": "Il garde la trace de ce qui a été ___ et des ___, avec leurs raisons.",
+     "reponses": [
+      [
+       "fait"
+      ],
+      [
+       "décisions"
+      ]
+     ],
+     "banque": [
+      "fait",
+      "décisions",
+      "supprimé",
+      "secrets"
+     ],
+     "aide": "Relis le contenu du carnet de la séance 5.",
+     "explication": "Le carnet note ce qui a été **fait** et les **décisions**, avec leurs raisons."
+    }
+   ]
+  },
+  {
+   "chapitre": "2fa14818-0c04-5564-816c-e9a73b10a71c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le planning du projet tient-il en 36 heures ?",
+   "competence": "modeliser",
+   "situation": "Une équipe dispose de 36 heures pour son projet. Elle a listé ses tâches, mais un essai risque de durer plus que prévu. Elle prépare aussi son oral.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Les tâches du projet",
+     "colonnes": [
+      "Tâche",
+      "Durée (h)",
+      "Antériorité"
+     ],
+     "lignes": [
+      [
+       "A : s’approprier le besoin",
+       3,
+       "—"
+      ],
+      [
+       "B : recherche et créativité",
+       6,
+       "A"
+      ],
+      [
+       "C : choix et justification",
+       3,
+       "B"
+      ],
+      [
+       "D : maquette numérique",
+       9,
+       "C"
+      ],
+      [
+       "E : prototype",
+       6,
+       "D"
+      ],
+      [
+       "F : essais",
+       3,
+       "E"
+      ],
+      [
+       "G : diapositives",
+       6,
+       "C"
+      ],
+      [
+       "H : répétition de l’oral",
+       3,
+       "F et G"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Durées inventées pour l’exercice"
+    },
+    {
+     "id": "oral",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Préparer l’oral",
+     "sousTitre": "Phrases notées par l’équipe",
+     "emoji": "🎤",
+     "lignes": [
+      {
+       "texte": "Nous avons retenu cette solution, car elle est légère et réparable",
+       "id": "bon1"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "On a fait comme ça",
+       "id": "mauvais"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Les essais montrent un écart de 8 N : voici notre amélioration",
+       "id": "bon2"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée minimale du projet, en heures ?",
+     "reponse": 33,
+     "unite": "h",
+     "tolerance": 0,
+     "aide": "Cherche la suite de tâches la plus longue : elle passe par D, E et F.",
+     "explication": "A → B → C → D → E → F → H : 3 + 6 + 3 + 9 + 6 + 3 + 3 = **33 h**. La suite par G fait 3 + 6 + 3 + 6 + 3 = 21 h."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle marge possède la tâche G, en heures ?",
+     "reponse": 12,
+     "unite": "h",
+     "tolerance": 0,
+     "aide": "H attend la fin de F et de G : compare leurs dates de fin.",
+     "explication": "G finit à l’heure 18 (3 + 6 + 3 + 6) ; F finit à l’heure 30. G peut glisser de 30 − 18 = **12 h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les essais F durent finalement 6 h au lieu de 3 h. Quelle est la nouvelle durée minimale, en heures ?",
+     "reponse": 36,
+     "unite": "h",
+     "tolerance": 0,
+     "aide": "F est sur le chemin critique : le retard s’ajoute tel quel.",
+     "explication": "F est critique : 33 + 3 = **36 h**, exactement les 36 h disponibles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de ce planning après le retard de F ?",
+     "options": [
+      "Il tient en 36 h, mais sans aucune marge pour un nouvel aléa",
+      "Il tient largement en 36 h, car G dispose de 12 h de marge",
+      "Il dépasse les 36 h, car le retard s’ajoute à toutes les tâches",
+      "Il ne peut plus tenir, car H doit s’exécuter avant F"
+     ],
+     "reponse": 0,
+     "aide": "Compare la durée minimale à la durée disponible.",
+     "explication": "Durée minimale = 36 h = durée disponible : **aucune marge** sur le chemin critique ; la marge de G ne sert pas à F."
+    },
+    {
+     "type": "zone",
+     "document": "oral",
+     "enonce": "Touche la formulation à éviter à l’oral.",
+     "reponse": [
+      "mauvais"
+     ],
+     "aide": "Un jury veut des choix justifiés.",
+     "explication": "« On a fait comme ça » ne justifie rien : il faut dire « nous avons retenu…, **car**… »."
+    }
+   ]
+  }
+ ]
+}

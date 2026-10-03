@@ -1,0 +1,4967 @@
+{
+ "niveau": "4e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "b8a83eb5-6775-52b3-871c-7b460356ac11",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les crêpes de la kermesse",
+   "competence": "calculer",
+   "situation": "Inès prépare la pâte à crêpes pour la kermesse du collège. Sa recette est écrite pour plusieurs nombres de personnes, mais une case du tableau est restée vide.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "tableau",
+     "titre": "La recette d’Inès",
+     "source": "Quantités imaginées pour l’exercice",
+     "colonnes": [
+      "Nombre de personnes",
+      "4",
+      "8",
+      "12",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Farine (g)",
+       200,
+       400,
+       600,
+       "?"
+      ],
+      [
+       "Lait (cL)",
+       50,
+       100,
+       150,
+       75
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recette",
+     "enonce": "Touche la case qui donne la quantité de **lait** pour **12 personnes**.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Cherche la ligne du lait, puis la colonne « 12 ».",
+     "explication": "Pour 12 personnes, la recette demande **150 cL de lait** : c’est la case de la ligne « Lait » sous la colonne 12."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour trouver la farine d’**une** personne.",
+     "texte": "Pour 1 personne, il faut ___ g de farine.",
+     "reponses": [
+      [
+       "50"
+      ]
+     ],
+     "banque": [
+      "25",
+      "50",
+      "100",
+      "800"
+     ],
+     "aide": "Divise la farine d’une colonne par le nombre de personnes de cette colonne.",
+     "explication": "200 ÷ 4 = **50** : une personne mange 50 g de farine. C’est le coefficient de proportionnalité entre les deux lignes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de grammes de farine faut-il pour **6 personnes** (la case « ? ») ?",
+     "reponse": 300,
+     "unite": "g",
+     "aide": "Multiplie le nombre de personnes par la farine d’une personne.",
+     "explication": "6 × 50 = **300 g**. On retrouve aussi 300 = 200 + 100, la farine de 4 personnes plus celle de 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Inès n’a que **750 g** de farine. Pour combien de personnes sa recette suffit-elle ?",
+     "reponse": 15,
+     "unite": "personnes",
+     "aide": "Cette fois, c’est la farine qu’on connaît : combien de fois 50 g y a-t-il dans 750 g ?",
+     "explication": "750 ÷ 50 = **15 personnes**. Quand on connaît la farine, on divise par le coefficient."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8a83eb5-6775-52b3-871c-7b460356ac11",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux formules pour louer un vélo",
+   "competence": "lire-graphique",
+   "situation": "À la plage, Malik hésite entre deux formules de location de vélo. Le loueur a tracé le prix à payer selon la durée de location.",
+   "documents": [
+    {
+     "id": "tarifs",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Prix de la location selon la durée",
+     "source": "Tarifs imaginés pour l’exercice",
+     "categories": [
+      "0 h",
+      "1 h",
+      "2 h",
+      "3 h",
+      "4 h",
+      "5 h",
+      "6 h"
+     ],
+     "series": [
+      {
+       "nom": "Formule Libre",
+       "valeurs": [
+        0,
+        7,
+        14,
+        21,
+        28,
+        35,
+        42
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Formule Dossier",
+       "valeurs": [
+        8,
+        13,
+        18,
+        23,
+        28,
+        33,
+        38
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 42,
+      "pas": 7
+     },
+     "axeX": {
+      "titre": "Durée de location"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle formule est **proportionnelle** à la durée de location ?",
+     "options": [
+      "La formule Libre",
+      "La formule Dossier",
+      "Les deux formules",
+      "Aucune des deux"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde ce que coûte chaque formule quand la durée est de 0 h.",
+     "explication": "La formule **Libre** : 0 h coûte 0 €, et le prix double quand la durée double. La formule Dossier démarre à 8 € : il y a une part fixe, donc pas de proportionnalité."
+    },
+    {
+     "type": "zone",
+     "document": "tarifs",
+     "enonce": "Touche la durée pour laquelle les deux formules coûtent **le même prix**.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche l’endroit où les deux courbes se croisent.",
+     "explication": "À **4 h**, les deux formules coûtent 28 €. Avant, la formule Libre est la moins chère ; après, c’est l’autre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La formule Libre est proportionnelle. Combien coûteraient **9 heures** de location ?",
+     "reponse": 63,
+     "unite": "€",
+     "aide": "Cherche le prix d’une heure, puis multiplie par 9.",
+     "explication": "Une heure coûte 7 €, donc 9 h coûtent 9 × 7 = **63 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour **3 heures**, de combien d’euros la formule la moins chère est-elle moins chère que l’autre ?",
+     "reponse": 2,
+     "unite": "€",
+     "aide": "Lis le prix de chaque formule à 3 h, puis fais la différence.",
+     "explication": "À 3 h : 21 € pour Libre et 23 € pour Dossier. La différence est de 23 − 21 = **2 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8a83eb5-6775-52b3-871c-7b460356ac11",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La sortie accrobranche de Zoé",
+   "competence": "raisonner",
+   "situation": "Zoé organise une sortie accrobranche pour sa classe. Elle compare les tarifs de deux parcs et lit l’avis d’Hugo dans la discussion du groupe.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Prix de groupe selon le nombre d’enfants",
+     "source": "Tarifs imaginés pour l’exercice",
+     "colonnes": [
+      "Nombre d’enfants",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+     ],
+     "lignes": [
+      [
+       "Parc des Cimes (€)",
+       30,
+       60,
+       90,
+       120,
+       150
+      ],
+      [
+       "Parc Tarzan (€)",
+       50,
+       80,
+       110,
+       140,
+       170
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La discussion du groupe",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Au parc Tarzan, 6 enfants coûtent 110 €. Pour 12 enfants, je double : 220 €."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Hmm, je ne suis pas sûre que ça marche…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Au **parc des Cimes**, combien coûte la sortie **par enfant** ?",
+     "reponse": 15,
+     "unite": "€",
+     "aide": "Divise le prix d’une colonne par le nombre d’enfants de cette colonne.",
+     "explication": "30 ÷ 2 = 15, et 60 ÷ 4 = 15 : le quotient est le même partout, c’est **15 € par enfant**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien paie-t-on aux Cimes pour **13 enfants** ?",
+     "reponse": 195,
+     "unite": "€",
+     "aide": "Le parc des Cimes est proportionnel : utilise le prix par enfant.",
+     "explication": "13 × 15 = **195 €**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : proportionnelle ou non ?",
+     "categories": [
+      "Proportionnelle",
+      "Pas proportionnelle"
+     ],
+     "items": [
+      [
+       "Prix aux Cimes selon le nombre d’enfants",
+       0
+      ],
+      [
+       "Prix chez Tarzan selon le nombre d’enfants",
+       1
+      ],
+      [
+       "Périmètre d’un carré selon son côté",
+       0
+      ],
+      [
+       "Aire d’un carré selon son côté",
+       1
+      ],
+      [
+       "Âge de Zoé selon l’âge de son petit frère",
+       1
+      ]
+     ],
+     "aide": "Dans une proportionnalité, quand l’une des grandeurs est nulle, l’autre l’est aussi, et quand l’une double, l’autre double.",
+     "explication": "Seuls le **prix aux Cimes** et le **périmètre du carré** (P = 4 × c) sont proportionnels. L’aire varie comme c², Tarzan a une part fixe, et l’écart d’âge entre deux personnes ne change pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le calcul d’Hugo (220 €) est-il faux ?",
+     "options": [
+      "Le prix chez Tarzan n’est pas proportionnel au nombre d’enfants",
+      "Il a oublié une remise de groupe pour 12 enfants",
+      "Il aurait dû tripler le prix puis le diviser par deux",
+      "Il a mal recopié le prix de 6 enfants du tableau"
+     ],
+     "reponse": 0,
+     "aide": "Compare 110 € pour 6 enfants avec ce que coûtent 12 enfants si le prix doublait : retrouve-t-on le tableau ?",
+     "explication": "Chez Tarzan, une part fixe de 20 € s’ajoute au prix des enfants : **doubler le nombre d’enfants ne double pas le prix**. Le doublement ne marche que dans une situation proportionnelle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien coûtent vraiment **12 enfants** au parc Tarzan ?",
+     "reponse": 200,
+     "unite": "€",
+     "aide": "Pars de 10 enfants (170 €) et ajoute le prix de 2 enfants de plus.",
+     "explication": "De 10 à 12 enfants, on ajoute 2 enfants, soit 30 € : 170 + 30 = **200 €**. Chaque enfant coûte 15 € et il y a 20 € fixes : 20 + 12 × 15 = 200."
+    }
+   ]
+  },
+  {
+   "chapitre": "a4a9b404-01b5-555c-aab1-8228a323ce3f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les soldes du magasin de sport",
+   "competence": "calculer",
+   "situation": "Inès profite des soldes : le magasin affiche −20 % sur tout le rayon. Elle veut savoir ce qu’elle économise sur chaque article.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "SOLDES −20 %",
+     "sousTitre": "Sur tout le rayon, remise déduite en caisse",
+     "emoji": "🏷️",
+     "teinte": "corail",
+     "source": "Prix imaginés pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Sweat à capuche",
+       "valeur": "45 €",
+       "id": "sweat"
+      },
+      {
+       "texte": "Casquette",
+       "valeur": "12 €",
+       "id": "casquette"
+      },
+      {
+       "texte": "Sac à dos",
+       "valeur": "30 €",
+       "id": "sac"
+      },
+      {
+       "texte": "Survêtement",
+       "valeur": "60 €",
+       "id": "survet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle remise Inès obtient-elle sur le **sweat à capuche** ?",
+     "reponse": 9,
+     "unite": "€",
+     "aide": "Prendre 20 %, c’est multiplier par 20 ÷ 100, soit 0,2.",
+     "explication": "20 % de 45 € = 45 × 0,2 = **9 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix soldé du **sac à dos** ?",
+     "reponse": 24,
+     "unite": "€",
+     "aide": "Enlève la remise au prix de départ, ou multiplie directement par un seul coefficient.",
+     "explication": "La remise est de 30 × 0,2 = 6 €, donc le prix soldé est 30 − 6 = **24 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par quel coefficient multiplie-t-on un prix de départ pour obtenir le prix soldé ?",
+     "options": [
+      "0,2",
+      "0,8",
+      "1,2",
+      "20"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "On garde 100 % − 20 % du prix.",
+     "explication": "Une baisse de 20 % se traduit par un coefficient de 1 − 0,2 = **0,8**."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche l’article dont la **remise en euros** est la plus grande.",
+     "reponse": [
+      "survet"
+     ],
+     "aide": "La remise est toujours 20 % du prix : le prix le plus haut donne la plus grosse remise.",
+     "explication": "Le **survêtement** (60 €) a la plus grande remise : 60 × 0,2 = 12 €, contre 9 €, 6 € et 2,40 € pour les autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "a4a9b404-01b5-555c-aab1-8228a323ce3f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prix de la place de cinéma",
+   "competence": "modeliser",
+   "situation": "Le cinéma de quartier a changé plusieurs fois le prix de sa place. Marwan veut comprendre ce que ces évolutions donnent au total.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Prix d’une place au tarif plein",
+     "source": "Prix imaginés pour l’exercice",
+     "categories": [
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Prix de la place",
+       "valeurs": [
+        8,
+        9,
+        9.9
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De 2021 à 2022, le prix passe de 8 € à 9 €. Quel est le **taux d’évolution**, en % ?",
+     "reponse": 12.5,
+     "unite": "%",
+     "aide": "Taux = (valeur finale − valeur initiale) ÷ valeur initiale × 100.",
+     "explication": "(9 − 8) ÷ 8 × 100 = **12,5 %** : l’augmentation est ramenée au prix de départ, 8 €."
+    },
+    {
+     "type": "zone",
+     "document": "prix",
+     "enonce": "Touche l’année où le prix a **augmenté de 10 %** par rapport à l’année précédente.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Calcule le taux d’évolution pour chaque année, ou multiplie 9 € par 1,1.",
+     "explication": "**2023** : 9 × 1,1 = 9,90 €. De 2021 à 2022, la hausse est de 12,5 %, pas de 10 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2024, le cinéma **baisse de 10 %** le prix de 2023. Quel est le prix de la place en 2024 ?",
+     "reponse": 8.91,
+     "unite": "€",
+     "aide": "Baisser de 10 %, c’est multiplier par 0,9.",
+     "explication": "9,90 × 0,9 = **8,91 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 2022 et 2024, le prix a été multiplié par 1,1 puis par 0,9. Que dire de l’évolution totale ?",
+     "options": [
+      "Une baisse de 1 % en tout",
+      "Un retour exact au prix de 2022",
+      "Une hausse de 1 % en tout",
+      "Une baisse de 20 % en tout"
+     ],
+     "reponse": 0,
+     "aide": "On multiplie les coefficients : calcule 1,1 × 0,9.",
+     "explication": "1,1 × 0,9 = 0,99, donc **une baisse de 1 %** : une hausse puis une baisse du même taux ne ramènent jamais au prix de départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "a4a9b404-01b5-555c-aab1-8228a323ce3f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle trottinette est la moins chère ?",
+   "competence": "raisonner",
+   "situation": "Samir veut acheter une trottinette électrique à 120 €. Deux sites l’affichent avec des remises différentes, et il pense que ça revient au même prix.",
+   "documents": [
+    {
+     "id": "siteA",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Rapido-Trott",
+     "sousTitre": "Trottinette électrique",
+     "emoji": "🛴",
+     "teinte": "bleu",
+     "source": "Offres imaginées pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Prix catalogue",
+       "valeur": "120 €"
+      },
+      {
+       "texte": "Remise de lancement",
+       "valeur": "−20 %"
+      },
+      {
+       "texte": "Code promo sur le prix déjà remisé",
+       "valeur": "−10 %"
+      }
+     ]
+    },
+    {
+     "id": "siteB",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Trott&Co",
+     "sousTitre": "La même trottinette",
+     "emoji": "🛴",
+     "teinte": "turquoise",
+     "source": "Offres imaginées pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Prix catalogue",
+       "valeur": "120 €"
+      },
+      {
+       "texte": "Remise immédiate",
+       "valeur": "−30 %"
+      }
+     ]
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samir",
+       "texte": "Chez Rapido-Trott c’est −20 % puis −10 % : 20 + 10 = 30 %. C’est le même prix que chez Trott&Co !"
+      },
+      {
+       "qui": "Lina",
+       "texte": "Tu es sûr ? Calcule les deux prix avant de commander."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Chez Rapido-Trott, quel est le prix après la **première** remise (−20 %) ?",
+     "reponse": 96,
+     "unite": "€",
+     "aide": "Multiplie 120 € par 0,8.",
+     "explication": "120 × 0,8 = **96 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix **final** chez Rapido-Trott, après le code promo de −10 % ?",
+     "reponse": 86.4,
+     "unite": "€",
+     "aide": "Le code promo s’applique sur le prix déjà remisé (96 €), pas sur 120 €.",
+     "explication": "96 × 0,9 = **86,40 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix chez Trott&Co, avec −30 % sur 120 € ?",
+     "reponse": 84,
+     "unite": "€",
+     "aide": "Un seul coefficient : 1 − 0,3.",
+     "explication": "120 × 0,7 = **84 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Samir a-t-il tort de penser que −20 % puis −10 % reviennent à −30 % ?",
+     "options": [
+      "La seconde remise porte sur le prix déjà réduit, pas sur le prix de départ",
+      "Le code promo est toujours supérieur à la remise de lancement",
+      "Les pourcentages ne s’appliquent qu’une fois",
+      "Il faut soustraire les deux pourcentages, pas les additionner"
+     ],
+     "reponse": 0,
+     "aide": "Sur quel prix chaque pourcentage est-il calculé ?",
+     "explication": "**On ne calcule pas les deux pourcentages sur la même quantité** : −10 % de 96 € enlève moins que −10 % de 120 €. Les évolutions successives se multiplient (coefficients), elles ne s’additionnent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle **baisse unique**, en %, serait équivalente à −20 % puis −10 % ?",
+     "reponse": 28,
+     "unite": "%",
+     "aide": "Multiplie les deux coefficients, puis cherche de combien la baisse est équivalente.",
+     "explication": "0,8 × 0,9 = 0,72, soit un coefficient de 1 − 0,28 : une baisse de **28 %**, et pas de 30 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "4290e251-d2de-5cdc-8b95-ab632ef98d7a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La randonnée de Sacha",
+   "competence": "lire-graphique",
+   "situation": "Sacha fait une randonnée en montagne. Son altimètre a relevé son altitude toutes les heures depuis le départ, et le graphique montre l’allure de sa journée.",
+   "documents": [
+    {
+     "id": "alti",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Altitude de Sacha au cours de la randonnée",
+     "source": "Relevés imaginés pour l’exercice",
+     "categories": [
+      "0 h",
+      "1 h",
+      "2 h",
+      "3 h",
+      "4 h",
+      "5 h",
+      "6 h"
+     ],
+     "series": [
+      {
+       "nom": "Altitude",
+       "valeurs": [
+        300,
+        600,
+        900,
+        900,
+        1200,
+        900,
+        600
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Altitude",
+      "unite": "m",
+      "min": 0,
+      "max": 1500,
+      "pas": 300
+     },
+     "axeX": {
+      "titre": "Temps depuis le départ"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle grandeur est la **variable**, placée en abscisse ?",
+     "options": [
+      "Le temps écoulé",
+      "L’altitude",
+      "La vitesse de Sacha",
+      "La longueur du sentier"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui est écrit sous l’axe horizontal.",
+     "explication": "On place **le temps** en abscisse : c’est la grandeur qu’on choisit. L’altitude en dépend et se lit en ordonnée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’altitude de Sacha au bout de **4 heures** ?",
+     "reponse": 1200,
+     "unite": "m",
+     "aide": "Pars de 4 h sur l’axe horizontal, monte jusqu’à la courbe, puis lis à gauche.",
+     "explication": "À 4 h, la courbe est à **1 200 m**."
+    },
+    {
+     "type": "zone",
+     "document": "alti",
+     "enonce": "Sacha fait une pause. Touche les **deux repères de temps** entre lesquels son altitude ne change pas.",
+     "reponse": [
+      "k2",
+      "k3"
+     ],
+     "multiple": true,
+     "aide": "Cherche le morceau horizontal de la courbe, appelé un palier.",
+     "explication": "Entre **2 h et 3 h**, la courbe est horizontale : l’altitude reste à 900 m, c’est un palier."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mètres Sacha a-t-il **perdus en altitude** entre 4 h et 6 h ?",
+     "reponse": 600,
+     "unite": "m",
+     "aide": "Lis l’altitude à 4 h et à 6 h, puis fais la différence.",
+     "explication": "1 200 − 600 = **600 m** : sur cette partie, la courbe est décroissante."
+    }
+   ]
+  },
+  {
+   "chapitre": "4290e251-d2de-5cdc-8b95-ab632ef98d7a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux formules à la salle d’escalade",
+   "competence": "modeliser",
+   "situation": "Lou veut s’inscrire à la salle d’escalade « Les Grimpeurs », qui propose deux formules. Il cherche laquelle choisir selon le nombre de séances.",
+   "documents": [
+    {
+     "id": "tarifs",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Grimpeurs",
+     "sousTitre": "Nos deux formules",
+     "emoji": "🧗",
+     "teinte": "ambre",
+     "source": "Tarifs imaginés pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Formule A : P = 5 × n",
+       "valeur": "5 € la séance"
+      },
+      {
+       "texte": "Formule B : P = 20 + 3 × n",
+       "valeur": "20 € d’inscription + 3 € la séance"
+      }
+     ],
+     "pied": "P est le prix en euros, n le nombre de séances."
+    },
+    {
+     "id": "table",
+     "type": "tableau",
+     "titre": "Prix selon le nombre de séances",
+     "colonnes": [
+      "Séances (n)",
+      "0",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "lignes": [
+      [
+       "Formule A (€)",
+       0,
+       10,
+       20,
+       30,
+       40
+      ],
+      [
+       "Formule B (€)",
+       20,
+       26,
+       32,
+       38,
+       44
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque formule à sa description.",
+     "paires": [
+      [
+       "Formule A",
+       "Le prix est proportionnel au nombre de séances"
+      ],
+      [
+       "Formule B",
+       "Une part fixe s’ajoute au prix des séances"
+      ]
+     ],
+     "aide": "Regarde si le prix part de 0 € quand on ne fait aucune séance.",
+     "explication": "La formule **A** (P = 5 × n) est proportionnelle ; la formule **B** a une part fixe de 20 €."
+    },
+    {
+     "type": "zone",
+     "document": "table",
+     "enonce": "Touche la case du tableau qui montre que la formule **B** n’est **pas** proportionnelle.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Dans une proportionnalité, 0 séance doit coûter 0 €.",
+     "explication": "Pour **0 séance**, la formule B coûte déjà 20 € : le prix ne part pas de zéro, donc pas de proportionnalité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la formule B, combien Lou paie-t-il pour **12 séances** ?",
+     "reponse": 56,
+     "unite": "€",
+     "aide": "Applique la formule : P = 20 + 3 × n avec n = 12.",
+     "explication": "P = 20 + 3 × 12 = 20 + 36 = **56 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour combien de séances les deux formules coûtent-elles **exactement le même prix** ?",
+     "reponse": 10,
+     "unite": "séances",
+     "aide": "À 8 séances, A coûte 40 € et B 44 € : de combien l’écart diminue-t-il à chaque séance supplémentaire ?",
+     "explication": "L’écart de 4 € à 8 séances diminue de 2 € par séance (5 − 3) : il disparaît à **10 séances**, où les deux formules coûtent 50 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "4290e251-d2de-5cdc-8b95-ab632ef98d7a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Remplir le bassin du centre aquatique",
+   "competence": "modeliser",
+   "situation": "Au centre aquatique, on remplit un bassin de 60 m³ avec la pompe A. Le technicien a tracé le volume d’eau en fonction du temps, puis il compare avec une pompe B plus puissante.",
+   "documents": [
+    {
+     "id": "volume",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Volume d’eau dans le bassin (pompe A)",
+     "source": "Relevés imaginés pour l’exercice",
+     "categories": [
+      "0 min",
+      "10 min",
+      "20 min",
+      "30 min",
+      "40 min",
+      "50 min",
+      "60 min"
+     ],
+     "series": [
+      {
+       "nom": "Volume d’eau",
+       "valeurs": [
+        0,
+        30,
+        60,
+        60,
+        60,
+        40,
+        20
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Volume",
+      "unite": "m³",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps"
+     }
+    },
+    {
+     "id": "pompeB",
+     "type": "tableau",
+     "titre": "La pompe B, essayée seule",
+     "colonnes": [
+      "Temps (min)",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "lignes": [
+      [
+       "Volume (m³)",
+       20,
+       40,
+       60,
+       80
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume d’eau dans le bassin au bout de **20 minutes** ?",
+     "reponse": 60,
+     "unite": "m³",
+     "aide": "Lis l’ordonnée du point qui correspond à 20 min.",
+     "explication": "À 20 min, le volume est de **60 m³**."
+    },
+    {
+     "type": "zone",
+     "document": "volume",
+     "enonce": "Touche **tous** les temps où le bassin contient exactement 60 m³.",
+     "reponse": [
+      "k2",
+      "k3",
+      "k4"
+     ],
+     "multiple": true,
+     "aide": "Cherche le palier horizontal de la courbe.",
+     "explication": "Aux repères **20, 30 et 40 min** le volume est de 60 m³ : la pompe est arrêtée, la courbe est horizontale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant les 20 premières minutes, de combien de m³ le volume augmente-t-il **par minute** ?",
+     "reponse": 3,
+     "unite": "m³/min",
+     "aide": "Le volume passe de 0 à 30 m³ en 10 minutes.",
+     "explication": "30 ÷ 10 = **3 m³ par minute** (et 60 ÷ 20 = 3 aussi : le remplissage est régulier)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le volume du bassin est-il proportionnel au temps sur l’ensemble des 60 minutes ?",
+     "options": [
+      "Non : la courbe n’est pas une droite passant par l’origine",
+      "Oui : la courbe part de 0 m³ au début du remplissage",
+      "Oui : à chaque temps correspond un seul volume",
+      "Non : le volume ne dépend absolument pas du temps"
+     ],
+     "reponse": 0,
+     "aide": "Dépendre n’est pas la même chose qu’être proportionnel : quelle forme doit avoir la courbe ?",
+     "explication": "Le volume **dépend** du temps (à chaque temps correspond un seul volume), mais ce n’est pas une proportionnalité : la courbe s’aplatit, puis descend. Le test reste la **droite passant par l’origine**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la pompe B seule, de combien de minutes gagne-t-on pour atteindre 60 m³ par rapport à la pompe A ?",
+     "reponse": 5,
+     "unite": "min",
+     "aide": "Lis dans le tableau le temps que met la pompe B pour atteindre 60 m³, puis compare avec la pompe A.",
+     "explication": "La pompe B atteint 60 m³ en 15 min, la pompe A en 20 min : on gagne 20 − 15 = **5 min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "805434a4-e66b-59e7-9f49-6ca5ab6b24ac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le ticket de caisse du marché",
+   "competence": "lire-tableau",
+   "situation": "Nadia fait ses courses au marché de Saint-Gilles. Elle garde le ticket de caisse pour vérifier les prix au kilo.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Marché de Saint-Gilles",
+     "sousTitre": "Étal de fruits et fruits secs",
+     "emoji": "🧺",
+     "source": "Ticket imaginé pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Pommes : 1,5 kg à 2,40 €/kg",
+       "valeur": "3,60 €",
+       "id": "pommes"
+      },
+      {
+       "texte": "Cerises : 0,5 kg à 7,50 €/kg",
+       "valeur": "3,75 €",
+       "id": "cerises"
+      },
+      {
+       "texte": "Noix : 0,25 kg à 12 €/kg",
+       "valeur": "3,00 €",
+       "id": "noix"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "10,35 €",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ticket",
+     "enonce": "Touche le produit dont le **prix au kilo** est le plus élevé.",
+     "reponse": [
+      "noix"
+     ],
+     "aide": "Compare les prix écrits avec l’unité €/kg, pas les sommes de la colonne de droite.",
+     "explication": "Les **noix** coûtent 12 €/kg, contre 7,50 €/kg pour les cerises et 2,40 €/kg pour les pommes. Le prix payé dépend aussi de la masse achetée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien coûteraient **2 kg de pommes** au même prix au kilo ?",
+     "reponse": 4.8,
+     "unite": "€",
+     "aide": "Le prix payé, c’est le prix d’un kilo multiplié par la masse.",
+     "explication": "2 × 2,40 = **4,80 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le prix au kilo est une grandeur quotient. Quelle division le donne ?",
+     "options": [
+      "Le prix payé divisé par la masse achetée",
+      "La masse achetée divisée par le prix payé",
+      "Le prix payé multiplié par la masse achetée",
+      "Le prix payé moins la masse achetée"
+     ],
+     "reponse": 0,
+     "aide": "L’unité €/kg se lit « euros par kilogramme » : des euros divisés par des kilogrammes.",
+     "explication": "Le prix au kilo est **le prix payé ÷ la masse achetée** : par exemple 3,60 € ÷ 1,5 kg = 2,40 €/kg. L’unité dit l’opération."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Nadia a **15 €** pour acheter des cerises. Quelle masse peut-elle acheter ?",
+     "reponse": 2,
+     "unite": "kg",
+     "aide": "Combien de fois 7,50 € « rentre-t-il » dans 15 € ?",
+     "explication": "15 ÷ 7,50 = **2 kg** de cerises."
+    }
+   ]
+  },
+  {
+   "chapitre": "805434a4-e66b-59e7-9f49-6ca5ab6b24ac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien coûte le chauffage de la maison ?",
+   "competence": "calculer",
+   "situation": "Sacha regarde la consommation de quelques appareils de la maison pour comprendre sa facture d’électricité. L’énergie se mesure en kilowattheures (kWh).",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Quelques appareils de la maison",
+     "source": "Valeurs imaginées pour l’exercice",
+     "colonnes": [
+      "Appareil",
+      "Puissance (kW)",
+      "Durée de marche (h)",
+      "Énergie (kWh)"
+     ],
+     "lignes": [
+      [
+       "Radiateur",
+       1.5,
+       4,
+       "?"
+      ],
+      [
+       "Four",
+       2.4,
+       1.5,
+       "?"
+      ],
+      [
+       "Lave-linge",
+       1.2,
+       2,
+       "?"
+      ],
+      [
+       "Bouilloire",
+       2,
+       0.25,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "tarif",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Contrat d’électricité",
+     "sousTitre": "Tarif de la maison de Sacha",
+     "emoji": "⚡",
+     "source": "Tarif imaginé pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Prix du kilowattheure",
+       "valeur": "0,25 €"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le **radiateur** consomme-t-il en 4 heures ?",
+     "reponse": 6,
+     "unite": "kWh",
+     "aide": "L’énergie est un produit : puissance × durée.",
+     "explication": "1,5 kW × 4 h = **6 kWh**."
+    },
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche la **puissance** la plus élevée du tableau.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Regarde seulement la colonne « Puissance (kW) ».",
+     "explication": "Le **four** a la plus grande puissance : 2,4 kW. Mais la puissance seule ne dit pas l’énergie consommée : la durée compte aussi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le **four** consomme-t-il en 1,5 heure ?",
+     "reponse": 3.6,
+     "unite": "kWh",
+     "aide": "Même méthode : puissance × durée, avec la durée en heures décimales.",
+     "explication": "2,4 kW × 1,5 h = **3,6 kWh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel appareil consomme le **plus d’énergie** pendant sa durée de marche ?",
+     "options": [
+      "Le radiateur",
+      "Le four",
+      "Le lave-linge",
+      "La bouilloire"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Calcule l’énergie de chaque appareil : 6 kWh, 3,6 kWh, puis les deux autres.",
+     "explication": "Le **radiateur** (6 kWh) devance le four (3,6 kWh), le lave-linge (1,2 × 2 = 2,4 kWh) et la bouilloire (2 × 0,25 = 0,5 kWh), alors que sa puissance n’est pas la plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien coûte l’électricité d’un cycle de **lave-linge** avec ce tarif ?",
+     "reponse": 0.6,
+     "unite": "€",
+     "aide": "Calcule d’abord l’énergie du lave-linge en kWh, puis multiplie par le prix du kWh.",
+     "explication": "Énergie : 1,2 × 2 = 2,4 kWh. Coût : 2,4 × 0,25 = **0,60 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "805434a4-e66b-59e7-9f49-6ca5ab6b24ac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le cube mystère de Louise",
+   "competence": "raisonner",
+   "situation": "Louise a trouvé un petit cube métallique dans le garage de son grand-père. Il pèse 975 g. Elle veut savoir de quel métal il est fait, grâce à sa masse volumique.",
+   "documents": [
+    {
+     "id": "cube",
+     "type": "solide",
+     "titre": "Le cube de Louise",
+     "longueur": 5,
+     "largeur": 5,
+     "hauteur": 5,
+     "cotes": true,
+     "unite": "cm"
+    },
+    {
+     "id": "metaux",
+     "type": "tableau",
+     "titre": "Masses volumiques de quelques métaux",
+     "source": "Valeurs arrondies",
+     "colonnes": [
+      "Métal",
+      "Masse volumique (g/cm³)"
+     ],
+     "lignes": [
+      [
+       "Aluminium",
+       2.7
+      ],
+      [
+       "Zinc",
+       7.1
+      ],
+      [
+       "Fer",
+       7.8
+      ],
+      [
+       "Cuivre",
+       9
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** du cube de Louise ?",
+     "reponse": 125,
+     "unite": "cm³",
+     "aide": "Le volume d’un cube est arête × arête × arête.",
+     "explication": "5 × 5 × 5 = **125 cm³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa **masse volumique** ?",
+     "reponse": 7.8,
+     "unite": "g/cm³",
+     "aide": "Une masse volumique est une masse divisée par un volume.",
+     "explication": "975 g ÷ 125 cm³ = **7,8 g/cm³**."
+    },
+    {
+     "type": "zone",
+     "document": "metaux",
+     "enonce": "Touche le métal dont le cube de Louise est fait.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare ta masse volumique avec la colonne du tableau.",
+     "explication": "La masse volumique 7,8 g/cm³ est celle du **fer**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un cube du même métal de **2 cm d’arête** pèserait combien ?",
+     "reponse": 62.4,
+     "unite": "g",
+     "aide": "Calcule d’abord le volume du petit cube, puis multiplie par la masse volumique : la masse est un produit.",
+     "explication": "Volume : 2 × 2 × 2 = 8 cm³. Masse : 8 × 7,8 = **62,4 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un cube de **cuivre** de même taille que celui de Louise serait plus lourd de combien de grammes ?",
+     "reponse": 150,
+     "unite": "g",
+     "aide": "Calcule la masse de 125 cm³ de cuivre avec le tableau, puis soustrais 975 g.",
+     "explication": "125 × 9 = 1 125 g, soit 1 125 − 975 = **150 g** de plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "141cd0b9-b54b-52da-8d7f-450f4cefa8cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le train de Valmont à Rivebelle",
+   "competence": "calculer",
+   "situation": "Lisa prend le train pour rejoindre sa grand-mère. Le panneau de la gare donne les horaires et la distance du trajet.",
+   "documents": [
+    {
+     "id": "horaires",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Gare de Valmont",
+     "sousTitre": "Train direct vers Rivebelle",
+     "emoji": "🚆",
+     "source": "Horaires imaginés pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Départ",
+       "valeur": "9 h 15"
+      },
+      {
+       "texte": "Arrivée",
+       "valeur": "10 h 45"
+      },
+      {
+       "texte": "Distance parcourue",
+       "valeur": "162 km"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure le trajet, **en heures décimales** ?",
+     "reponse": 1.5,
+     "unite": "h",
+     "aide": "De 9 h 15 à 10 h 45, il y a 1 h 30 : la demi-heure est 0,5 h.",
+     "explication": "1 h 30 min = **1,5 h**, et non 1,30 h : les durées ne sont pas décimales."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **vitesse moyenne** du train, en km/h ?",
+     "reponse": 108,
+     "unite": "km/h",
+     "aide": "Vitesse = distance ÷ durée, avec la durée en heures.",
+     "explication": "162 ÷ 1,5 = **108 km/h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette vitesse en **mètres par seconde**.",
+     "reponse": 30,
+     "unite": "m/s",
+     "aide": "Pour passer des km/h aux m/s, on divise par 3,6.",
+     "explication": "108 ÷ 3,6 = **30 m/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le compteur du train a-t-il toujours indiqué cette vitesse pendant le trajet ?",
+     "options": [
+      "Non : c’est une moyenne sur tout le trajet",
+      "Oui : le train roule à vitesse constante",
+      "Oui : un train ne ralentit jamais",
+      "Non : la vitesse moyenne est toujours plus grande"
+     ],
+     "reponse": 0,
+     "aide": "Un train démarre, ralentit, s’arrête en gare : que mesure la vitesse moyenne ?",
+     "explication": "La vitesse moyenne porte sur **l’ensemble du trajet** ; la vitesse instantanée, celle du compteur, varie à chaque instant."
+    }
+   ]
+  },
+  {
+   "chapitre": "141cd0b9-b54b-52da-8d7f-450f4cefa8cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La balade de Léo et la crêperie",
+   "competence": "lire-graphique",
+   "situation": "Léo fait une balade à vélo d’une heure. Son compteur a enregistré la distance parcourue depuis le départ, et il s’est arrêté un moment devant une crêperie.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Distance parcourue par Léo",
+     "source": "Relevés imaginés pour l’exercice",
+     "categories": [
+      "0 min",
+      "10 min",
+      "20 min",
+      "30 min",
+      "40 min",
+      "50 min",
+      "60 min"
+     ],
+     "series": [
+      {
+       "nom": "Distance",
+       "valeurs": [
+        0,
+        3,
+        6,
+        9,
+        9,
+        12,
+        15
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Distance",
+      "unite": "km",
+      "min": 0,
+      "max": 18,
+      "pas": 3
+     },
+     "axeX": {
+      "titre": "Temps depuis le départ"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche les **deux repères** entre lesquels Léo s’arrête devant la crêperie.",
+     "reponse": [
+      "k3",
+      "k4"
+     ],
+     "multiple": true,
+     "aide": "Quand il est arrêté, la distance ne change plus : cherche le palier.",
+     "explication": "Entre **30 et 40 min**, la distance reste à 9 km : Léo est arrêté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse de Léo pendant les **30 premières minutes** ?",
+     "reponse": 18,
+     "unite": "km/h",
+     "aide": "Il parcourt 9 km en une demi-heure : combien de km en une heure ?",
+     "explication": "9 km en 0,5 h : 9 ÷ 0,5 = **18 km/h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **vitesse moyenne** de Léo sur l’heure entière ?",
+     "reponse": 15,
+     "unite": "km/h",
+     "aide": "Distance totale ÷ durée totale, la pause comprise.",
+     "explication": "15 km en 1 h : **15 km/h**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la vitesse moyenne (15 km/h) est-elle plus petite que la vitesse de roulage (18 km/h) ?",
+     "options": [
+      "La pause compte dans la durée mais pas dans la distance",
+      "Léo ralentit sans arrêt à la fin du trajet",
+      "Une vitesse moyenne est toujours plus petite",
+      "Léo a roulé plus vite après la pause"
+     ],
+     "reponse": 0,
+     "aide": "Calcule la vitesse de Léo entre 40 et 60 minutes.",
+     "explication": "Entre 40 et 60 min, Léo parcourt 6 km en 20 min, donc roule encore à 18 km/h. Les **10 minutes d’arrêt** sont comptées dans la durée sans ajouter de distance : la moyenne baisse."
+    }
+   ]
+  },
+  {
+   "chapitre": "141cd0b9-b54b-52da-8d7f-450f4cefa8cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’aller-retour vers la mer",
+   "competence": "raisonner",
+   "situation": "La famille de Chloé part passer le week-end à la mer. À l’aller, la circulation est dense. Au retour, la route est dégagée. Leur voiture consomme 7 L aux 100 km.",
+   "documents": [
+    {
+     "id": "trajets",
+     "type": "tableau",
+     "titre": "Les deux trajets",
+     "source": "Valeurs imaginées pour l’exercice",
+     "colonnes": [
+      "Trajet",
+      "Distance (km)",
+      "Vitesse moyenne (km/h)",
+      "Durée (h)"
+     ],
+     "lignes": [
+      [
+       "Aller",
+       240,
+       80,
+       "?"
+      ],
+      [
+       "Retour",
+       240,
+       120,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Dans la voiture",
+     "participants": [
+      {
+       "nom": "Mathis",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mathis",
+       "texte": "La vitesse moyenne de l’aller-retour, c’est la moyenne de 80 et de 120 : 100 km/h !"
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Je ne crois pas. Calculons plutôt avec les durées."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée de l’**aller** ?",
+     "reponse": 3,
+     "unite": "h",
+     "aide": "Durée = distance ÷ vitesse.",
+     "explication": "240 ÷ 80 = **3 h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée du **retour** ?",
+     "reponse": 2,
+     "unite": "h",
+     "aide": "Même formule que pour l’aller.",
+     "explication": "240 ÷ 120 = **2 h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **vitesse moyenne** de l’aller-retour complet ?",
+     "reponse": 96,
+     "unite": "km/h",
+     "aide": "Additionne les deux distances et les deux durées avant de diviser.",
+     "explication": "Distance totale : 480 km. Durée totale : 5 h. Vitesse moyenne : 480 ÷ 5 = **96 km/h**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mathis se trompe-t-il avec ses 100 km/h ?",
+     "options": [
+      "Les durées diffèrent : on ne moyenne pas les vitesses",
+      "Il aurait dû additionner les deux vitesses : 200 km/h",
+      "Il aurait dû diviser 240 par 100 pour la durée",
+      "Sa moyenne est juste, mais son unité est fausse"
+     ],
+     "reponse": 0,
+     "aide": "On a roulé plus longtemps à 80 km/h qu’à 120 km/h : cela compte-t-il dans la moyenne ?",
+     "explication": "La voiture roule **3 h à 80 km/h** mais seulement 2 h à 120 km/h : la vitesse la plus faible pèse plus. Il faut toujours passer par **la distance totale et la durée totale**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de litres de carburant la voiture consomme-t-elle pour l’**aller-retour** ?",
+     "reponse": 33.6,
+     "unite": "L",
+     "aide": "480 km, c’est combien de fois 100 km ? Multiplie par la consommation aux 100 km.",
+     "explication": "480 km = 4,8 × 100 km, donc 4,8 × 7 = **33,6 L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f91e9054-fdd3-5d3e-8910-de90cc5862b9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La boîte de chocolats",
+   "competence": "geometrie",
+   "situation": "Une boîte de chocolats a la forme d’un pavé droit. Elle est remplie de petits cubes de chocolat d’un centimètre d’arête, comme le montre le dessin.",
+   "documents": [
+    {
+     "id": "boite",
+     "type": "solide",
+     "titre": "La boîte et ses petits cubes",
+     "longueur": 4,
+     "largeur": 3,
+     "hauteur": 2,
+     "cubes": true,
+     "cotes": true,
+     "unite": "cm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de petits cubes la boîte contient-elle ?",
+     "reponse": 24,
+     "unite": "cubes",
+     "aide": "Compte une couche, puis multiplie par le nombre de couches : longueur × largeur × hauteur.",
+     "explication": "4 × 3 × 2 = **24 cubes**, soit un volume de 24 cm³."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’arêtes de la boîte mesurent **3 cm** ?",
+     "reponse": 4,
+     "aide": "Un pavé droit a quatre arêtes de chaque dimension : repère celles qui sont de la même direction que la largeur.",
+     "explication": "Un pavé droit a 12 arêtes, réparties en 3 groupes de 4 arêtes parallèles : **4 arêtes** mesurent 3 cm."
+    },
+    {
+     "type": "choix",
+     "enonce": "On choisit un sommet comme origine, et on place les axes le long de la longueur, de la largeur et de la hauteur, dans cet ordre. Quelles sont les coordonnées du sommet opposé ?",
+     "options": [
+      "(4 ; 3 ; 2)",
+      "(2 ; 3 ; 4)",
+      "(3 ; 4 ; 2)",
+      "(4 ; 2 ; 3)"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le sommet opposé est au bout des trois arêtes : lis les trois dimensions dans l’ordre donné.",
+     "explication": "Le sommet opposé a pour coordonnées **(4 ; 3 ; 2)** : on avance de 4 cm en longueur, 3 cm en largeur et 2 cm en hauteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "f91e9054-fdd3-5d3e-8910-de90cc5862b9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dessiner le pavé en perspective",
+   "competence": "geometrie",
+   "situation": "Karim a dessiné un pavé droit en perspective cavalière pour son cours de technologie. La face avant ABFE est en vraie grandeur et les arêtes cachées sont en pointillés.",
+   "documents": [
+    {
+     "id": "pave",
+     "type": "figure",
+     "titre": "Le pavé en perspective cavalière",
+     "source": "Dessin réalisé pour l’exercice : la face avant est en vraie grandeur",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": 6,
+       "y": 4,
+       "position": "se"
+      },
+      {
+       "id": "E",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": 3,
+       "y": 2.5,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 2.5,
+       "position": "e"
+      },
+      {
+       "id": "G",
+       "x": 8,
+       "y": 5.5,
+       "position": "ne"
+      },
+      {
+       "id": "H",
+       "x": 3,
+       "y": 5.5,
+       "position": "n"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "5 cm"
+      },
+      {
+       "id": "bf",
+       "de": "B",
+       "a": "F"
+      },
+      {
+       "id": "fe",
+       "de": "F",
+       "a": "E"
+      },
+      {
+       "id": "ea",
+       "de": "E",
+       "a": "A"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "4 cm"
+      },
+      {
+       "id": "fg",
+       "de": "F",
+       "a": "G"
+      },
+      {
+       "id": "cg",
+       "de": "C",
+       "a": "G"
+      },
+      {
+       "id": "eh",
+       "de": "E",
+       "a": "H"
+      },
+      {
+       "id": "hg",
+       "de": "H",
+       "a": "G"
+      },
+      {
+       "id": "ad",
+       "de": "A",
+       "a": "D",
+       "style": "pointilles"
+      },
+      {
+       "id": "dc",
+       "de": "D",
+       "a": "C",
+       "style": "pointilles"
+      },
+      {
+       "id": "dh",
+       "de": "D",
+       "a": "H",
+       "style": "pointilles"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pave",
+     "enonce": "Touche **toutes** les arêtes parallèles à [AB], en plus de [AB] elle-même.",
+     "reponse": [
+      "dc",
+      "fe",
+      "hg"
+     ],
+     "multiple": true,
+     "aide": "Dans un pavé droit, il y a quatre arêtes de même direction que [AB] : l’une est sur la face avant, une autre en bas à l’arrière.",
+     "explication": "Les arêtes **[DC], [FE] et [HG]** sont parallèles à [AB] : le parallélisme est conservé en perspective cavalière."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** de ce pavé, sachant que AB = 5 cm, BF = 3 cm et BC = 4 cm ?",
+     "reponse": 60,
+     "unite": "cm³",
+     "aide": "Volume = longueur × largeur × hauteur.",
+     "explication": "5 × 4 × 3 = **60 cm³**. Sur le dessin, BC paraît plus courte que 4 cm : les longueurs des fuyantes ne sont pas conservées."
+    },
+    {
+     "type": "trous",
+     "enonce": "On prend A comme origine, avec les axes [AB), [AD) et [AE). Complète les coordonnées du sommet G.",
+     "texte": "G a pour coordonnées ( ___ ; ___ ; ___ ).",
+     "reponses": [
+      [
+       "5"
+      ],
+      [
+       "4"
+      ],
+      [
+       "3"
+      ]
+     ],
+     "banque": [
+      "3",
+      "4",
+      "5",
+      "0"
+     ],
+     "aide": "Pour aller de A à G, on avance de AB sur le premier axe, de AD sur le deuxième et de AE sur le troisième.",
+     "explication": "G est au bout des trois arêtes : **(5 ; 4 ; 3)**, puisque AB = 5, AD = BC = 4 et AE = BF = 3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur le dessin, la face BCGF a la forme d’un parallélogramme. Que peut-on dire de cette face dans le vrai pavé ?",
+     "options": [
+      "Un rectangle : la perspective déforme les angles droits",
+      "Un parallélogramme qui n’est pas un rectangle",
+      "Un losange dont les côtés sont tous égaux",
+      "Un carré dont les quatre côtés sont égaux"
+     ],
+     "reponse": 0,
+     "aide": "Dans un pavé droit, toutes les faces sont des rectangles.",
+     "explication": "Toutes les faces d’un pavé droit sont des **rectangles**. En perspective cavalière, les angles droits ne sont conservés que sur la face avant : les autres faces apparaissent en parallélogrammes."
+    }
+   ]
+  },
+  {
+   "chapitre": "f91e9054-fdd3-5d3e-8910-de90cc5862b9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une baguette dans le coffre de rangement",
+   "competence": "geometrie",
+   "situation": "Léna veut ranger une baguette de bois de 5,2 dm dans un coffre à jouets. Le coffre est un pavé droit. Elle se demande si la baguette tiendra à plat sur le fond du coffre.",
+   "documents": [
+    {
+     "id": "coffre",
+     "type": "solide",
+     "titre": "Le coffre",
+     "longueur": 4,
+     "largeur": 3,
+     "hauteur": 2,
+     "cotes": true,
+     "unite": "dm"
+    },
+    {
+     "id": "fond",
+     "type": "figure",
+     "titre": "Le fond du coffre, vu de dessus",
+     "source": "Dessin à l’échelle : 1 carreau = 1 dm",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 6,
+      "ymin": 0,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "4 dm"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "3 dm"
+      },
+      {
+       "id": "cd",
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "id": "da",
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C",
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "B",
+       "de": "A",
+       "a": "C",
+       "droit": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** du coffre, en dm³ ?",
+     "reponse": 24,
+     "unite": "dm³",
+     "aide": "Longueur × largeur × hauteur.",
+     "explication": "4 × 3 × 2 = **24 dm³**, soit 24 litres."
+    },
+    {
+     "type": "zone",
+     "document": "fond",
+     "enonce": "Touche le segment qui est l’**hypoténuse** du triangle ABC.",
+     "reponse": [
+      "ac"
+     ],
+     "aide": "L’hypoténuse est le côté opposé à l’angle droit.",
+     "explication": "L’angle droit est en B : l’hypoténuse du triangle ABC est **[AC]**, la diagonale du fond."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur de la diagonale [AC] du fond.",
+     "reponse": 5,
+     "unite": "dm",
+     "aide": "Pythagore dans ABC rectangle en B : AC² = AB² + BC².",
+     "explication": "AC² = 4² + 3² = 16 + 9 = 25, donc AC = √25 = **5 dm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La baguette de 5,2 dm peut-elle être posée à plat sur le fond du coffre ?",
+     "options": [
+      "Non : elle dépasse la diagonale du fond, qui mesure 5 dm",
+      "Oui : 5,2 dm est inférieur à 4 + 3 = 7 dm",
+      "Oui : elle est plus courte que la longueur du coffre",
+      "Oui : le fond est assez grand, son aire est de 12 dm²"
+     ],
+     "reponse": 0,
+     "aide": "La plus grande longueur qu’on peut poser à plat sur un fond rectangulaire est sa diagonale.",
+     "explication": "La plus longue baguette qui tient à plat est de **5 dm** (la diagonale). Avec 5,2 dm, elle ne tient pas : l’aire du fond ne suffit pas à répondre, c’est la longueur de la diagonale qui compte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de la diagonale de la **face avant** (4 dm de long, 2 dm de haut) ? Arrondis au dixième de dm.",
+     "reponse": 4.5,
+     "tolerance": 0.05,
+     "unite": "dm",
+     "aide": "Même méthode, dans le rectangle de la face avant : d² = 4² + 2².",
+     "explication": "d² = 16 + 4 = 20, donc d = √20 ≈ **4,5 dm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "58cfa258-69f9-5109-927a-c51fd8fae8c7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pyramide en carton de Lou",
+   "competence": "geometrie",
+   "situation": "Lou a construit une pyramide en carton pour son exposé sur l’Égypte. Elle veut connaître la place qu’elle occupe, et la comparer à un bloc plein de même base et de même hauteur.",
+   "documents": [
+    {
+     "id": "pyr",
+     "type": "schema",
+     "titre": "La pyramide en carton de Lou",
+     "largeur": 320,
+     "hauteur": 230,
+     "source": "Dessin en perspective, pas à l’échelle",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         70,
+         185
+        ],
+        [
+         210,
+         185
+        ],
+        [
+         270,
+         150
+        ],
+        [
+         130,
+         150
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         170,
+         30
+        ],
+        [
+         70,
+         185
+        ],
+        [
+         210,
+         185
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         170,
+         30
+        ],
+        [
+         210,
+         185
+        ],
+        [
+         270,
+         150
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        185
+       ],
+       "a": [
+        210,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        185
+       ],
+       "a": [
+        270,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        185
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        150
+       ],
+       "a": [
+        270,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        70,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        210,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        270,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        170,
+        167.5
+       ],
+       "style": "pointilles",
+       "id": "hauteur",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        161,
+        167.5
+       ],
+       "a": [
+        161,
+        158.5
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        161,
+        158.5
+       ],
+       "a": [
+        170,
+        158.5
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 206,
+       "texte": "9 cm",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "etiquette",
+       "x": 262,
+       "y": 70,
+       "texte": "hauteur : 8 cm",
+       "vers": [
+        174,
+        105
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 25,
+       "y": 175,
+       "texte": "base carrée",
+       "ancre": "debut",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pyr",
+     "enonce": "Touche la **hauteur** de la pyramide.",
+     "reponse": [
+      "hauteur"
+     ],
+     "aide": "La hauteur part du sommet et tombe perpendiculairement sur la base : ce n’est jamais une arête.",
+     "explication": "La **hauteur** est le segment en pointillés qui descend du sommet, perpendiculairement à la base. Les arêtes latérales sont plus longues."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire de la base** carrée ?",
+     "reponse": 81,
+     "unite": "cm²",
+     "aide": "L’aire d’un carré est côté × côté.",
+     "explication": "9 × 9 = **81 cm²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** de la pyramide ?",
+     "reponse": 216,
+     "unite": "cm³",
+     "aide": "Volume = {{1/3}} × aire de la base × hauteur. N’oublie pas le tiers !",
+     "explication": "{{1/3}} × 81 × 8 = 648 ÷ 3 = **216 cm³**. Le tiers est le facteur qu’on oublie le plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel serait le volume d’un **prisme** de même base et de même hauteur ?",
+     "reponse": 648,
+     "unite": "cm³",
+     "aide": "Un prisme a pour volume aire de la base × hauteur, sans le tiers.",
+     "explication": "81 × 8 = **648 cm³** : la pyramide occupe le **tiers** du prisme (648 ÷ 3 = 216)."
+    }
+   ]
+  },
+  {
+   "chapitre": "58cfa258-69f9-5109-927a-c51fd8fae8c7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cornet de glace",
+   "competence": "geometrie",
+   "situation": "Au stand de glaces, le vendeur pose une boule dans un cornet en forme de cône de révolution. Mia aimerait savoir combien de crème glacée il peut contenir.",
+   "documents": [
+    {
+     "id": "cone",
+     "type": "schema",
+     "titre": "Le cornet de glace",
+     "largeur": 320,
+     "hauteur": 245,
+     "source": "Dessin de profil, pas à l’échelle",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         160,
+         28
+        ],
+        [
+         80,
+         172
+        ],
+        [
+         240,
+         172
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 172,
+       "rx": 80,
+       "ry": 16,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        28
+       ],
+       "a": [
+        80,
+        172
+       ],
+       "epaisseur": 2,
+       "id": "gl",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        28
+       ],
+       "a": [
+        240,
+        172
+       ],
+       "epaisseur": 2,
+       "id": "gr",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        28
+       ],
+       "a": [
+        160,
+        172
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        151,
+        172
+       ],
+       "a": [
+        151,
+        163
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        151,
+        163
+       ],
+       "a": [
+        160,
+        163
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        208
+       ],
+       "a": [
+        240,
+        208
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 228,
+       "texte": "diamètre de la base : 6 cm",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "etiquette",
+       "x": 262,
+       "y": 75,
+       "texte": "hauteur : 4 cm",
+       "vers": [
+        164,
+        100
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cone",
+     "enonce": "Touche les **deux génératrices** visibles sur le dessin.",
+     "reponse": [
+      "gl",
+      "gr"
+     ],
+     "multiple": true,
+     "aide": "Une génératrice joint le sommet à un point du bord de la base.",
+     "explication": "Les deux côtés obliques du cône sont des **génératrices**. La hauteur, elle, est en pointillés : c’est un autre segment."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur d’une **génératrice**, en cm ?",
+     "reponse": 5,
+     "unite": "cm",
+     "aide": "Le rayon vaut la moitié du diamètre. Le triangle formé par la hauteur, le rayon et la génératrice est rectangle : Pythagore !",
+     "explication": "Rayon : 6 ÷ 2 = 3 cm. Génératrice² = 3² + 4² = 25, donc la génératrice mesure **5 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** du cornet, arrondi à l’unité ?",
+     "reponse": 38,
+     "unite": "cm³",
+     "aide": "V = {{1/3}} × π × R² × h, avec R = 3 cm et h = 4 cm.",
+     "explication": "V = {{1/3}} × π × 3² × 4 = 12 × π ≈ 37,7, soit **38 cm³** (38 mL de glace)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un cylindre de même base et de même hauteur contiendrait combien de fois plus que le cornet ?",
+     "options": [
+      "3 fois plus",
+      "2 fois plus",
+      "4 fois plus",
+      "π fois plus"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare la formule du cône à celle du cylindre : π × R² × h.",
+     "explication": "Le cône a pour volume le **tiers** de celui du cylindre : le cylindre en contient **3 fois plus**, soit 36 × π ≈ 113 cm³."
+    }
+   ]
+  },
+  {
+   "chapitre": "58cfa258-69f9-5109-927a-c51fd8fae8c7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La pyramide de verre coupée en deux",
+   "competence": "raisonner",
+   "situation": "Un architecte conçoit une pyramide de verre pour un parc. Il veut connaître le volume de la grande pyramide, puis celui du petit sommet détaché par un plan de coupe parallèle à la base.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Chantier de la pyramide de verre",
+     "sousTitre": "Fiche technique",
+     "emoji": "🏗️",
+     "source": "Dimensions imaginées pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Base carrée, côté",
+       "valeur": "12 m"
+      },
+      {
+       "texte": "Hauteur de la pyramide",
+       "valeur": "9 m"
+      },
+      {
+       "texte": "Plan de coupe",
+       "valeur": "mi-hauteur"
+      }
+     ],
+     "pied": "Le plan de coupe est parallèle à la base."
+    },
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "La pyramide et son plan de coupe",
+     "largeur": 320,
+     "hauteur": 215,
+     "source": "Schéma en perspective, pas à l’échelle",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         70,
+         185
+        ],
+        [
+         210,
+         185
+        ],
+        [
+         270,
+         150
+        ],
+        [
+         130,
+         150
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         170,
+         30
+        ],
+        [
+         70,
+         185
+        ],
+        [
+         210,
+         185
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         170,
+         30
+        ],
+        [
+         210,
+         185
+        ],
+        [
+         270,
+         150
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        185
+       ],
+       "a": [
+        210,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        185
+       ],
+       "a": [
+        270,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        185
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        150
+       ],
+       "a": [
+        270,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        70,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        210,
+        185
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        270,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        30
+       ],
+       "a": [
+        170,
+        167.5
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        161,
+        167.5
+       ],
+       "a": [
+        161,
+        158.5
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        161,
+        158.5
+       ],
+       "a": [
+        170,
+        158.5
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         107.5
+        ],
+        [
+         190,
+         107.5
+        ],
+        [
+         220,
+         90
+        ],
+        [
+         150,
+         90
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "hachures",
+       "id": "section",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche la **section** de la pyramide par le plan de coupe.",
+     "reponse": [
+      "section"
+     ],
+     "aide": "La section est la surface découpée par le plan : elle est parallèle à la base.",
+     "explication": "La **section** est le carré hachuré, parallèle à la base : une réduction de la base."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du côté de la section ?",
+     "reponse": 6,
+     "unite": "m",
+     "aide": "Le plan est à mi-hauteur : la petite pyramide est une réduction de rapport {{1/2}}.",
+     "explication": "La petite pyramide est une réduction de rapport {{1/2}}, donc le côté de la section est 12 × {{1/2}} = **6 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume de la grande pyramide** ?",
+     "reponse": 432,
+     "unite": "m³",
+     "aide": "V = {{1/3}} × aire de la base × hauteur.",
+     "explication": "Aire de la base : 12 × 12 = 144 m². V = {{1/3}} × 144 × 9 = **432 m³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume de la petite pyramide** du sommet (hauteur 4,5 m, base de côté 6 m) ?",
+     "reponse": 54,
+     "unite": "m³",
+     "aide": "Même formule, avec la base de la section et la hauteur 4,5 m.",
+     "explication": "{{1/3}} × 6² × 4,5 = {{1/3}} × 36 × 4,5 = **54 m³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par combien le volume est-il divisé quand on passe de la grande à la petite pyramide ?",
+     "options": [
+      "8",
+      "2",
+      "4",
+      "6"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare 432 et 54, ou rappelle-toi que les volumes sont multipliés par k³ quand les longueurs sont multipliées par k.",
+     "explication": "432 ÷ 54 = **8** : avec k = {{1/2}}, les volumes sont multipliés par k³ = {{1/8}}."
+    }
+   ]
+  },
+  {
+   "chapitre": "990b3f90-a500-56fe-8672-24b970637547",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La maquette du voilier de Maya",
+   "competence": "calculer",
+   "situation": "Maya a construit une maquette de voilier à l’échelle 1/25. Elle a mesuré les pièces de sa maquette et veut connaître les mesures du vrai bateau.",
+   "documents": [
+    {
+     "id": "maquette",
+     "type": "tableau",
+     "titre": "Les mesures de la maquette",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Pièce",
+      "Sur la maquette (cm)",
+      "En réalité"
+     ],
+     "lignes": [
+      [
+       "Longueur de la coque",
+       40,
+       "? m"
+      ],
+      [
+       "Hauteur du mât",
+       30,
+       "? m"
+      ],
+      [
+       "Largeur de la coque",
+       12,
+       "? m"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À l’échelle 1/25, par combien multiplie-t-on une longueur de la maquette pour obtenir la réalité ?",
+     "options": [
+      "Par 25",
+      "Par 0,25",
+      "Par 50",
+      "Par 625"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Une échelle 1/25 veut dire que 1 cm sur la maquette représente 25 cm en réalité.",
+     "explication": "On multiplie les longueurs **par 25** : c’est le rapport k de l’agrandissement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **longueur réelle de la coque**, en mètres ?",
+     "reponse": 10,
+     "unite": "m",
+     "aide": "Multiplie 40 cm par 25, puis convertis en mètres (100 cm = 1 m).",
+     "explication": "40 × 25 = 1 000 cm, soit **10 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **hauteur réelle du mât**, en mètres ?",
+     "reponse": 7.5,
+     "unite": "m",
+     "aide": "Même méthode : × 25, puis des cm en m.",
+     "explication": "30 × 25 = 750 cm, soit **7,5 m**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Le gouvernail réel mesure 2 m. Complète pour trouver sa taille sur la maquette.",
+     "texte": "Sur la maquette, le gouvernail mesure ___ cm.",
+     "reponses": [
+      [
+       "8"
+      ]
+     ],
+     "banque": [
+      "8",
+      "50",
+      "200",
+      "2"
+     ],
+     "aide": "Passe 2 m en centimètres, puis divise par 25.",
+     "explication": "2 m = 200 cm, et 200 ÷ 25 = **8 cm** : pour passer de la réalité à la maquette, on divise par 25."
+    }
+   ]
+  },
+  {
+   "chapitre": "990b3f90-a500-56fe-8672-24b970637547",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan du terrain de la mairie",
+   "competence": "geometrie",
+   "situation": "La mairie fait aménager un terrain rectangulaire. Le plan est dessiné à l’échelle 1/500 : 1 cm sur le plan représente 500 cm, soit 5 m, sur le terrain.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan du terrain",
+     "source": "Plan à l’échelle 1/500 : un carreau mesure 1 cm sur le plan",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "6 cm"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "4 cm"
+      },
+      {
+       "id": "cd",
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "id": "da",
+       "de": "D",
+       "a": "A"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "D",
+       "droit": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le côté du terrain qui mesure **30 m** en réalité.",
+     "reponse": [
+      "ab"
+     ],
+     "aide": "1 cm sur le plan vaut 5 m en réalité : convertis la longueur de chaque côté.",
+     "explication": "Le côté [AB] mesure 6 cm sur le plan, soit 6 × 500 = 3 000 cm = **30 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **largeur réelle** du terrain, c’est-à-dire la longueur du côté [BC], en mètres ?",
+     "reponse": 20,
+     "unite": "m",
+     "aide": "BC mesure 4 cm sur le plan.",
+     "explication": "4 × 500 = 2 000 cm, soit **20 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire réelle** du terrain ?",
+     "reponse": 600,
+     "unite": "m²",
+     "aide": "Calcule les dimensions réelles, puis l’aire du rectangle.",
+     "explication": "30 × 20 = **600 m²**. Sur le plan, l’aire est 6 × 4 = 24 cm² : elle a été multipliée par 500² = 250 000."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève multiplie l’aire du plan, 24 cm², par 500 pour trouver l’aire réelle. Quelle est son erreur ?",
+     "options": [
+      "Les aires se multiplient par 500², pas par 500",
+      "Il aurait dû diviser l’aire par 500",
+      "Il a oublié de convertir les cm² en cm³",
+      "Une aire ne peut pas se lire sur un plan"
+     ],
+     "reponse": 0,
+     "aide": "Quand les longueurs sont multipliées par k, par combien les aires sont-elles multipliées ?",
+     "explication": "Si les longueurs sont multipliées par k, **les aires sont multipliées par k²**. Ici k = 500, donc l’aire est multipliée par 500² = 250 000."
+    }
+   ]
+  },
+  {
+   "chapitre": "990b3f90-a500-56fe-8672-24b970637547",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’aquarium géant du musée",
+   "competence": "raisonner",
+   "situation": "Le musée de la mer expose un aquarium géant. C’est un agrandissement de rapport 4 du petit aquarium de l’accueil. Les élèves se demandent combien d’eau il contiendra.",
+   "documents": [
+    {
+     "id": "petit",
+     "type": "solide",
+     "titre": "Le petit aquarium",
+     "longueur": 3,
+     "largeur": 2,
+     "hauteur": 2.5,
+     "cotes": true,
+     "unite": "dm"
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "À la sortie du musée",
+     "participants": [
+      {
+       "nom": "Mina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mina",
+       "texte": "Il est 4 fois plus grand, donc il contiendra 4 fois plus d’eau !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Vérifions avec les dimensions."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume d’eau du **petit aquarium**, en litres ? (1 dm³ = 1 L)",
+     "reponse": 15,
+     "unite": "L",
+     "aide": "Longueur × largeur × hauteur, en dm : le résultat est en dm³.",
+     "explication": "3 × 2 × 2,5 = 15 dm³, soit **15 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **longueur** de l’aquarium géant, en dm ?",
+     "reponse": 12,
+     "unite": "dm",
+     "aide": "Toutes les longueurs sont multipliées par le rapport 4.",
+     "explication": "3 × 4 = **12 dm**. Ses autres dimensions sont 8 dm et 10 dm."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mina a-t-elle raison de dire que l’aquarium contiendra 4 fois plus d’eau ?",
+     "options": [
+      "Non : le volume est multiplié par 4³ = 64, pas par 4",
+      "Oui : toutes les dimensions sont multipliées par 4",
+      "Oui : le volume est multiplié par 4 × 4 = 16",
+      "Non : le volume est multiplié par 4 + 4 = 8"
+     ],
+     "reponse": 0,
+     "aide": "Dans un agrandissement de rapport k, par combien les volumes sont-ils multipliés ?",
+     "explication": "Les longueurs sont multipliées par 4, mais **les volumes par 4³ = 64**. Mina confond la longueur avec le volume."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume d’eau de l’**aquarium géant**, en litres ?",
+     "reponse": 960,
+     "unite": "L",
+     "aide": "Soit tu calcules 12 × 8 × 10, soit tu multiplies 15 L par 64.",
+     "explication": "12 × 8 × 10 = 960 dm³, soit **960 L**, et 15 × 64 = 960 : les deux méthodes concordent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La vitre arrière du petit aquarium mesure 3 dm sur 2,5 dm. Quelle est l’**aire** de la vitre arrière du géant ?",
+     "reponse": 120,
+     "unite": "dm²",
+     "aide": "Calcule l’aire de la petite vitre, puis multiplie par le rapport des aires.",
+     "explication": "Petite vitre : 3 × 2,5 = 7,5 dm². Les aires sont multipliées par 4² = 16 : 7,5 × 16 = **120 dm²** (et 12 × 10 = 120)."
+    }
+   ]
+  },
+  {
+   "chapitre": "05b94edf-f4f0-5eb9-8d79-ae92e41e213f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux équerres en bois",
+   "competence": "geometrie",
+   "situation": "Un menuisier a découpé deux équerres en bois et se demande si elles sont identiques. Il a codé les côtés égaux et l’angle droit sur le dessin.",
+   "documents": [
+    {
+     "id": "equerres",
+     "type": "figure",
+     "titre": "Les deux équerres ABC et DEF",
+     "source": "Dessin à l’échelle : 1 carreau = 1 cm",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": 7,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "E",
+       "x": 11,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": 7,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "codage": 1,
+       "longueur": "4 cm"
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "codage": 2,
+       "longueur": "3 cm"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "5 cm"
+      },
+      {
+       "de": "D",
+       "a": "E",
+       "codage": 1
+      },
+      {
+       "de": "D",
+       "a": "F",
+       "codage": 2
+      },
+      {
+       "id": "ef",
+       "de": "E",
+       "a": "F"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "D",
+        "E",
+        "F"
+       ],
+       "teinte": "turquoise",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      },
+      {
+       "sommet": "D",
+       "de": "E",
+       "a": "F",
+       "droit": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel cas d’égalité permet d’affirmer que les triangles ABC et DEF sont égaux ?",
+     "options": [
+      "Deux côtés et l’angle compris entre eux",
+      "Trois côtés égaux deux à deux",
+      "Un côté et les deux angles adjacents",
+      "Deux angles égaux seulement"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde ce qui est codé : deux côtés, et un angle droit placé entre eux.",
+     "explication": "AB = DE, AC = DF et les angles droits en A et en D sont **compris entre ces côtés** : c’est le cas « deux côtés et l’angle compris »."
+    },
+    {
+     "type": "zone",
+     "document": "equerres",
+     "enonce": "Touche le côté de DEF qui **correspond** à [BC].",
+     "reponse": [
+      "ef"
+     ],
+     "aide": "Dans deux triangles égaux, le côté correspondant à [BC] est opposé au même angle : l’angle droit.",
+     "explication": "[BC] est opposé à l’angle droit en A, donc son correspondant est le côté opposé à l’angle droit en D : **[EF]**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de [EF] ?",
+     "reponse": 5,
+     "unite": "cm",
+     "aide": "Des triangles égaux ont leurs côtés correspondants de même longueur.",
+     "explication": "Les triangles étant égaux, EF = BC = **5 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire** du triangle DEF ?",
+     "reponse": 6,
+     "unite": "cm²",
+     "aide": "Triangle rectangle : aire = (côté × autre côté de l’angle droit) ÷ 2.",
+     "explication": "(4 × 3) ÷ 2 = **6 cm²**. Deux triangles égaux ont aussi la même aire."
+    }
+   ]
+  },
+  {
+   "chapitre": "05b94edf-f4f0-5eb9-8d79-ae92e41e213f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La hauteur du mât du collège",
+   "competence": "raisonner",
+   "situation": "Au collège, Inès mesure 1,60 m. Un midi de soleil, son ombre mesure 2 m, et l’ombre du mât du drapeau mesure 10 m. Elle veut en déduire la hauteur du mât sans y grimper.",
+   "documents": [
+    {
+     "id": "ombres",
+     "type": "schema",
+     "titre": "Deux ombres au même moment",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Schéma à l’échelle : 1 m est dessiné par 20 unités",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        175
+       ],
+       "a": [
+        330,
+        175
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         30,
+         175
+        ],
+        [
+         30,
+         143
+        ],
+        [
+         70,
+         175
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         175
+        ],
+        [
+         120,
+         15
+        ],
+        [
+         320,
+         175
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        175
+       ],
+       "a": [
+        30,
+        143
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        175
+       ],
+       "a": [
+        70,
+        175
+       ],
+       "epaisseur": 3,
+       "id": "ombrePetit",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        175
+       ],
+       "a": [
+        120,
+        15
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        175
+       ],
+       "a": [
+        320,
+        175
+       ],
+       "epaisseur": 3,
+       "id": "ombreGrand",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 22,
+       "y": 162,
+       "texte": "1,60 m",
+       "ancre": "fin",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 192,
+       "texte": "2 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 112,
+       "y": 100,
+       "texte": "mât : ?",
+       "ancre": "fin",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 192,
+       "texte": "ombre : 10 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "emoji",
+       "x": 300,
+       "y": 32,
+       "emoji": "☀️",
+       "taille": 28
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ombres",
+     "enonce": "Dans le **grand** triangle, touche le côté qui correspond à l’ombre d’Inès dans le petit triangle.",
+     "reponse": [
+      "ombreGrand"
+     ],
+     "aide": "L’ombre d’Inès est posée sur le sol : cherche le côté du grand triangle posé aussi sur le sol.",
+     "explication": "Le côté correspondant est **l’ombre du mât**, posée sur le sol comme l’ombre d’Inès."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ces deux triangles sont-ils semblables ?",
+     "options": [
+      "Deux angles égaux : l’angle droit et celui des rayons du soleil",
+      "Ils ont le même nombre de côtés, donc ils sont semblables",
+      "Leurs côtés ont les mêmes longueurs, en mètres",
+      "Ils ont la même aire, car le soleil éclaire les deux"
+     ],
+     "reponse": 0,
+     "aide": "Le sol et les verticaux forment un angle droit ; les rayons du soleil sont parallèles.",
+     "explication": "Chaque triangle a **un angle droit** (sol et verticale) et **le même angle** formé par les rayons parallèles du soleil avec le sol. Deux angles égaux suffisent pour des triangles semblables."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **rapport de similitude** du petit triangle vers le grand ?",
+     "reponse": 5,
+     "aide": "Divise l’ombre du mât par l’ombre d’Inès.",
+     "explication": "10 ÷ 2 = **5** : les longueurs du grand triangle sont 5 fois celles du petit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **hauteur du mât** ?",
+     "reponse": 8,
+     "unite": "m",
+     "aide": "Multiplie la taille d’Inès par le rapport de similitude.",
+     "explication": "1,60 × 5 = **8 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au même moment, un panneau mesure 2,40 m. Quelle est la longueur de son ombre ?",
+     "reponse": 3,
+     "unite": "m",
+     "aide": "Dans le petit triangle, l’ombre vaut 2 ÷ 1,60 = 1,25 fois la hauteur.",
+     "explication": "L’ombre est 1,25 fois la hauteur : 2,40 × 1,25 = **3 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "05b94edf-f4f0-5eb9-8d79-ae92e41e213f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quels triangles sont semblables à T1 ?",
+   "competence": "raisonner",
+   "situation": "Alix et Basile ont découpé quatre triangles dans du carton. Ils veulent savoir lesquels ont la même forme que le triangle T1, d’aire 6 cm².",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les côtés des quatre triangles",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Triangle",
+      "Petit côté (cm)",
+      "Côté moyen (cm)",
+      "Grand côté (cm)"
+     ],
+     "lignes": [
+      [
+       "T1",
+       3,
+       4,
+       5
+      ],
+      [
+       "T2",
+       6,
+       8,
+       10
+      ],
+      [
+       "T3",
+       9,
+       12,
+       14
+      ],
+      [
+       "T4",
+       4.5,
+       6,
+       7.5
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Dans l’atelier",
+     "participants": [
+      {
+       "nom": "Alix",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Basile",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Alix",
+       "texte": "T3 est semblable à T1 : 9 = 3 × 3 et 12 = 4 × 3."
+      },
+      {
+       "qui": "Basile",
+       "texte": "Il faut vérifier les trois côtés, pas deux seulement."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque triangle : est-il semblable à T1 ?",
+     "categories": [
+      "Semblable à T1",
+      "Pas semblable à T1"
+     ],
+     "items": [
+      [
+       "T2",
+       0
+      ],
+      [
+       "T3",
+       1
+      ],
+      [
+       "T4",
+       0
+      ]
+     ],
+     "aide": "Divise chaque côté du triangle par le côté correspondant de T1 : les trois quotients doivent être égaux.",
+     "explication": "T2 : 2, 2, 2. T4 : 1,5, 1,5, 1,5. T3 : 3, 3, mais 14 ÷ 5 = 2,8. Seuls **T2 et T4** ont trois quotients égaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **rapport de similitude** de T1 à T4 ?",
+     "reponse": 1.5,
+     "aide": "Divise un côté de T4 par le côté correspondant de T1.",
+     "explication": "4,5 ÷ 3 = 6 ÷ 4 = 7,5 ÷ 5 = **1,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire de T4** ?",
+     "reponse": 13.5,
+     "unite": "cm²",
+     "aide": "Les longueurs sont multipliées par 1,5 : par combien les aires sont-elles multipliées ?",
+     "explication": "Les aires sont multipliées par k² = 1,5² = 2,25 : 6 × 2,25 = **13,5 cm²**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Alix a un raisonnement incomplet. Que faut-il pour que T3 soit semblable à T1 ?",
+     "options": [
+      "Le grand côté de T3 devrait mesurer 15 cm",
+      "Le petit côté de T3 devrait mesurer 8 cm",
+      "Le côté moyen de T3 devrait mesurer 10 cm",
+      "Il suffit qu’il ait un côté de plus de 9 cm"
+     ],
+     "reponse": 0,
+     "aide": "Si k = 3, le grand côté de T3 doit être égal à 5 × 3.",
+     "explication": "Avec les rapports 3 et 3 sur deux côtés, le troisième devrait être 5 × 3 = **15 cm**. Il mesure 14 cm : **trois quotients** doivent être égaux, pas deux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un triangle T5, semblable à T1, a un **périmètre de 36 cm**. Combien mesure son petit côté ?",
+     "reponse": 9,
+     "unite": "cm",
+     "aide": "Calcule le périmètre de T1, puis le rapport de similitude : T5 est un agrandissement de T1.",
+     "explication": "Périmètre de T1 : 3 + 4 + 5 = 12 cm. Rapport : 36 ÷ 12 = 3. Petit côté : 3 × 3 = **9 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b448aeea-8ff7-59c3-925f-8ed2edb8fa33",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La traverse de la charpente",
+   "competence": "geometrie",
+   "situation": "Dans la charpente d’un abri de jardin, la traverse [MN] est parallèle à la poutre [BC]. Le charpentier veut calculer les longueurs qu’il n’a pas encore mesurées.",
+   "documents": [
+    {
+     "id": "charpente",
+     "type": "figure",
+     "titre": "La charpente ABC",
+     "source": "Figure à l’échelle",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 9,
+      "ymin": -1,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 6.06,
+       "y": 8.44,
+       "position": "ne"
+      },
+      {
+       "id": "M",
+       "x": 3,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "N",
+       "x": 2.69,
+       "y": 3.48,
+       "position": "o"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "id": "mn",
+       "de": "M",
+       "a": "N"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "M",
+        "N"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les mesures relevées",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Segment",
+      "AM",
+      "AB",
+      "AN",
+      "MN"
+     ],
+     "lignes": [
+      [
+       "Longueur (m)",
+       2,
+       6,
+       3,
+       2.5
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "charpente",
+     "enonce": "Touche les **deux segments parallèles** de la figure.",
+     "reponse": [
+      "bc",
+      "mn"
+     ],
+     "multiple": true,
+     "aide": "Le théorème de Thalès a besoin de deux droites parallèles : l’énoncé les nomme.",
+     "explication": "La traverse **[MN]** est parallèle à la poutre **[BC]** : c’est l’hypothèse du théorème de Thalès."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’égalité de Thalès.",
+     "texte": "AM ÷ AB = AN ÷ ___ = MN ÷ ___",
+     "reponses": [
+      [
+       "AC"
+      ],
+      [
+       "BC"
+      ]
+     ],
+     "banque": [
+      "AC",
+      "BC",
+      "AM",
+      "AB"
+     ],
+     "aide": "Chaque quotient compare une longueur du petit triangle AMN à la longueur correspondante du grand triangle ABC.",
+     "explication": "AM ÷ AB = AN ÷ **AC** = MN ÷ **BC** : on met toujours le petit segment sur le grand."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de [AC] ?",
+     "reponse": 9,
+     "unite": "m",
+     "aide": "AM ÷ AB = 2 ÷ 6 = {{1/3}}. Et AN ÷ AC doit valoir {{1/3}} aussi.",
+     "explication": "AN ÷ AC = {{1/3}}, donc AC = 3 × AN = 3 × 3 = **9 m** (produit en croix : AC = 3 × 6 ÷ 2)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de [BC] ?",
+     "reponse": 7.5,
+     "unite": "m",
+     "aide": "Utilise MN ÷ BC = {{1/3}} avec MN = 2,5 m.",
+     "explication": "MN ÷ BC = {{1/3}}, donc BC = 3 × 2,5 = **7,5 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b448aeea-8ff7-59c3-925f-8ed2edb8fa33",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La largeur de l’étang",
+   "competence": "geometrie",
+   "situation": "Léna veut connaître la largeur d’un étang, entre les piquets M et N. Elle plante deux piquets B et C sur une rive, et un piquet A tel que B, A, M soient alignés et C, A, N aussi. Les droites (BC) et (MN) sont parallèles.",
+   "documents": [
+    {
+     "id": "etang",
+     "type": "figure",
+     "titre": "L’étang et les piquets",
+     "source": "Figure à l’échelle",
+     "cadre": {
+      "xmin": 1,
+      "xmax": 11,
+      "ymin": -1,
+      "ymax": 15
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 6.5,
+       "y": 9.5,
+       "position": "e"
+      },
+      {
+       "id": "B",
+       "x": 5.37,
+       "y": 12.28,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 7.82,
+       "y": 12.74,
+       "position": "ne"
+      },
+      {
+       "id": "M",
+       "x": 9.33,
+       "y": 2.56,
+       "position": "se"
+      },
+      {
+       "id": "N",
+       "x": 3.19,
+       "y": 1.4,
+       "position": "so"
+      }
+     ],
+     "segments": [
+      {
+       "id": "bm",
+       "de": "B",
+       "a": "M"
+      },
+      {
+       "id": "cn",
+       "de": "C",
+       "a": "N"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "id": "mn",
+       "de": "M",
+       "a": "N"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "M",
+        "N",
+        "A"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Ce que Léna a mesuré",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Segment",
+      "AB",
+      "AM",
+      "BC",
+      "AC"
+     ],
+     "lignes": [
+      [
+       "Longueur (m)",
+       12,
+       30,
+       10,
+       14
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on cette configuration, où M et N sont de part et d’autre de A ?",
+     "options": [
+      "Une configuration en papillon",
+      "Des triangles emboîtés",
+      "Une configuration de Pythagore",
+      "Une configuration de cosinus"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde la forme que dessinent les deux triangles qui se touchent en A.",
+     "explication": "Les deux triangles se touchent par le sommet A, en miroir : c’est une configuration en **papillon**. Le théorème de Thalès s’applique comme pour deux triangles emboîtés."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la méthode de Thalès.",
+     "items": [
+      "Vérifier que les points sont alignés et que les droites sont parallèles",
+      "Écrire les trois quotients de longueurs",
+      "Résoudre par le produit en croix",
+      "Conclure par une phrase, avec l’unité"
+     ],
+     "aide": "On commence par ce qui autorise à utiliser le théorème, on finit par la réponse.",
+     "explication": "D’abord les **hypothèses** (alignement, parallélisme), puis **les quotients**, puis **le produit en croix**, enfin **la conclusion** avec son unité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la largeur **MN** de l’étang ?",
+     "reponse": 25,
+     "unite": "m",
+     "aide": "AM ÷ AB = 30 ÷ 12 = 2,5, et c’est aussi MN ÷ BC.",
+     "explication": "AM ÷ AB = MN ÷ BC, donc MN = 10 × 30 ÷ 12 = **25 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance de A se trouve le piquet **N** (la longueur AN) ?",
+     "reponse": 35,
+     "unite": "m",
+     "aide": "Le rapport 2,5 est le même pour AN ÷ AC.",
+     "explication": "AN = AC × 2,5 = 14 × 2,5 = **35 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b448aeea-8ff7-59c3-925f-8ed2edb8fa33",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux charpentes, une traverse",
+   "competence": "raisonner",
+   "situation": "Un menuisier a posé une traverse [MN] dans deux charpentes. Il veut vérifier que, dans chacune, la traverse est bien parallèle à la poutre [BC], en utilisant la réciproque du théorème de Thalès.",
+   "documents": [
+    {
+     "id": "charp1",
+     "type": "figure",
+     "titre": "Charpente n°1",
+     "source": "Figure à l’échelle",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 13,
+      "ymin": -1,
+      "ymax": 11
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 11,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 10.61,
+       "y": 8.99,
+       "position": "ne"
+      },
+      {
+       "id": "M",
+       "x": 5,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "N",
+       "x": 4.85,
+       "y": 4.2,
+       "position": "o"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "id": "mn",
+       "de": "M",
+       "a": "N"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "M",
+        "N"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "charp2",
+     "type": "figure",
+     "titre": "Charpente n°2",
+     "source": "Figure à l’échelle",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 10,
+      "ymin": -1,
+      "ymax": 9
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 8.5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 7.75,
+       "y": 6.95,
+       "position": "ne"
+      },
+      {
+       "id": "M",
+       "x": 4,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "N",
+       "x": 4,
+       "y": 3.65,
+       "position": "o"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "id": "mn",
+       "de": "M",
+       "a": "N"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "M",
+        "N"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les longueurs mesurées, en mètres",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Charpente",
+      "AM",
+      "AB",
+      "AN",
+      "AC",
+      "BC"
+     ],
+     "lignes": [
+      [
+       "n°1",
+       4,
+       10,
+       5,
+       12.5,
+       8
+      ],
+      [
+       "n°2",
+       3,
+       7.5,
+       4,
+       9,
+       6
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Charpente n°1 : calcule les deux quotients.",
+     "texte": "AM ÷ AB = ___ et AN ÷ AC = ___",
+     "reponses": [
+      [
+       "0,4",
+       "0.4",
+       "2/5"
+      ],
+      [
+       "0,4",
+       "0.4",
+       "2/5"
+      ]
+     ],
+     "aide": "4 ÷ 10 et 5 ÷ 12,5 : écris les résultats en nombre décimal.",
+     "explication": "4 ÷ 10 = **0,4** et 5 ÷ 12,5 = **0,4** : les deux quotients sont égaux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Charpente n°1 : peut-on affirmer que (MN) est parallèle à (BC) ?",
+     "options": [
+      "Oui : points alignés dans le même ordre et quotients égaux",
+      "Non : AM et AN sont différents, donc les droites se coupent",
+      "Non : on ne peut rien dire sans connaître la longueur de MN",
+      "Oui : parce que les deux triangles ont le même sommet A"
+     ],
+     "reponse": 0,
+     "aide": "La réciproque demande deux choses : l’ordre des points et l’égalité des quotients.",
+     "explication": "Les points A, M, B et A, N, C sont alignés **dans le même ordre**, et AM ÷ AB = AN ÷ AC. D’après la **réciproque de Thalès**, (MN) // (BC)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Charpente n°1 : quelle est la longueur de la traverse [MN] ?",
+     "reponse": 3.2,
+     "unite": "m",
+     "aide": "Comme (MN) // (BC), le rapport 0,4 est aussi celui de MN ÷ BC.",
+     "explication": "MN = 0,4 × BC = 0,4 × 8 = **3,2 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Charpente n°2 : la traverse est-elle parallèle à [BC] ?",
+     "options": [
+      "Non : AM ÷ AB = 0,4 mais AN ÷ AC = {{4/9}} ≈ 0,44",
+      "Oui : AM ÷ AB et AN ÷ AC sont presque égaux, donc elles le sont",
+      "Oui : les points sont alignés dans le même ordre",
+      "Non : AC est plus long que AB, ce qui l’interdit"
+     ],
+     "reponse": 0,
+     "aide": "Calcule 3 ÷ 7,5 et 4 ÷ 9, puis compare. « Presque égaux » ne suffit pas.",
+     "explication": "3 ÷ 7,5 = 0,4 mais 4 ÷ 9 ≈ 0,44. Les quotients sont **différents** (3 × 9 = 27 et 7,5 × 4 = 30), donc les droites ne sont **pas parallèles**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour rectifier la charpente n°2, à quelle distance de A, en mètres, faut-il fixer N pour que (MN) soit parallèle à (BC) ?",
+     "reponse": 3.6,
+     "unite": "m",
+     "aide": "Il faut que AN ÷ AC soit égal à AM ÷ AB = 0,4.",
+     "explication": "AN = 0,4 × AC = 0,4 × 9 = **3,6 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fb4a98f-4599-5332-9d79-41375f4de191",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’échelle contre le mur",
+   "competence": "geometrie",
+   "situation": "Un peintre appuie une échelle de 2,5 m contre un mur. Le pied de l’échelle est posé à 1,5 m du mur. Il se demande à quelle hauteur l’échelle touche le mur.",
+   "documents": [
+    {
+     "id": "echelle",
+     "type": "figure",
+     "titre": "L’échelle, le mur et le sol",
+     "source": "Schéma à l’échelle : 1 carreau = 0,5 m",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 6,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "1,5 m"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C",
+       "longueur": "?"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "2,5 m"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echelle",
+     "enonce": "Touche l’**hypoténuse** du triangle ABC (l’échelle).",
+     "reponse": [
+      "bc"
+     ],
+     "aide": "L’hypoténuse est le côté opposé à l’angle droit, et c’est le plus long.",
+     "explication": "L’angle droit est en A, entre le mur et le sol : l’hypoténuse est **[BC]**, l’échelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la bonne méthode pour calculer la hauteur AC ?",
+     "options": [
+      "Soustraire les carrés : AC² = BC² − AB²",
+      "Additionner les carrés : AC² = BC² + AB²",
+      "Additionner les longueurs : AC = BC + AB",
+      "Soustraire les longueurs : AC = BC − AB"
+     ],
+     "reponse": 0,
+     "aide": "Le carré de l’hypoténuse [BC] est la somme des carrés des deux autres côtés : BC² = AB² + AC².",
+     "explication": "Pythagore s’écrit **BC² = AB² + AC²**. Pour un côté de l’angle droit, on isole : **AC² = BC² − AB²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle hauteur l’échelle touche-t-elle le mur (la longueur AC) ?",
+     "reponse": 2,
+     "unite": "m",
+     "aide": "On cherche un côté de l’angle droit : on soustrait. AC² = BC² − AB².",
+     "explication": "AC² = 2,5² − 1,5² = 6,25 − 2,25 = 4, donc AC = √4 = **2 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une rampe d’accès a une base horizontale de 0,9 m et une hauteur de 1,2 m. Quelle est la longueur de la rampe ?",
+     "reponse": 1.5,
+     "unite": "m",
+     "aide": "Ici la rampe est l’hypoténuse : on additionne les carrés.",
+     "explication": "Rampe² = 0,9² + 1,2² = 0,81 + 1,44 = 2,25, donc la rampe mesure √2,25 = **1,5 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fb4a98f-4599-5332-9d79-41375f4de191",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’angle droit du massif de fleurs",
+   "competence": "raisonner",
+   "situation": "Rosa veut tracer un massif de fleurs avec un coin bien droit. Elle tend une corde en triangle, mesure ses trois côtés, et se sert de la réciproque de Pythagore pour vérifier l’angle droit.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les mesures de Rosa",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Essai",
+      "Côté a (m)",
+      "Côté b (m)",
+      "Grand côté c (m)"
+     ],
+     "lignes": [
+      [
+       "Essai 1",
+       0.6,
+       0.8,
+       1
+      ],
+      [
+       "Essai 2",
+       1.2,
+       1.6,
+       2.1
+      ],
+      [
+       "Essai 3",
+       0.9,
+       1.2,
+       1.5
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "**Essai 2** : calcule c², le carré du plus grand côté.",
+     "reponse": 4.41,
+     "aide": "2,1 × 2,1.",
+     "explication": "2,1² = **4,41**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "**Essai 2** : calcule a² + b², la somme des carrés des deux autres côtés.",
+     "reponse": 4,
+     "aide": "1,2² = 1,44 et 1,6² = 2,56.",
+     "explication": "1,44 + 2,56 = **4**. Comme 4 ≠ 4,41, l’essai 2 n’a pas d’angle droit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque essai : le triangle a-t-il un angle droit ?",
+     "categories": [
+      "Angle droit",
+      "Pas d’angle droit"
+     ],
+     "items": [
+      [
+       "Essai 1",
+       0
+      ],
+      [
+       "Essai 2",
+       1
+      ],
+      [
+       "Essai 3",
+       0
+      ]
+     ],
+     "aide": "Compare à chaque fois le carré du grand côté et la somme des deux autres carrés.",
+     "explication": "Essai 1 : 0,36 + 0,64 = 1 = 1². Essai 3 : 0,81 + 1,44 = 2,25 = 1,5². Ces deux triangles sont **rectangles** ; l’essai 2 ne l’est pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Rosa essaie un 4ᵉ triangle avec a = 0,5 m et b = 1,2 m. Quelle longueur doit avoir le grand côté pour que l’angle soit droit ?",
+     "reponse": 1.3,
+     "unite": "m",
+     "aide": "Le grand côté est l’hypoténuse : c² = a² + b².",
+     "explication": "c² = 0,5² + 1,2² = 0,25 + 1,44 = 1,69, donc c = √1,69 = **1,3 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fb4a98f-4599-5332-9d79-41375f4de191",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le câble qui tient le mât",
+   "competence": "geometrie",
+   "situation": "Un mât vertical est tenu par un câble de 12 m, tendu entre son sommet et le sol. Le câble fait un angle de 50° avec le sol. Les ouvriers veulent savoir où l’ancrer et quelle est la hauteur du mât.",
+   "documents": [
+    {
+     "id": "mat",
+     "type": "figure",
+     "titre": "Le mât et son câble",
+     "source": "Schéma à l’échelle : 1 carreau = 1 m",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 12
+     },
+     "points": [
+      {
+       "id": "M",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 8.71,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "S",
+       "x": 1,
+       "y": 10.19,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "id": "mat",
+       "de": "M",
+       "a": "S",
+       "longueur": "?"
+      },
+      {
+       "id": "sol",
+       "de": "M",
+       "a": "C",
+       "longueur": "?"
+      },
+      {
+       "id": "cable",
+       "de": "S",
+       "a": "C",
+       "longueur": "12 m"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "M",
+        "C",
+        "S"
+       ],
+       "teinte": "ciel",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "M",
+       "de": "C",
+       "a": "S",
+       "droit": true
+      },
+      {
+       "sommet": "C",
+       "de": "M",
+       "a": "S",
+       "mesure": "50°"
+      }
+     ]
+    },
+    {
+     "id": "cosinus",
+     "type": "tableau",
+     "titre": "Quelques cosinus",
+     "source": "Valeurs arrondies au millième",
+     "colonnes": [
+      "Angle",
+      "30°",
+      "40°",
+      "50°",
+      "60°"
+     ],
+     "lignes": [
+      [
+       "Cosinus",
+       0.866,
+       0.766,
+       0.643,
+       0.5
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mat",
+     "enonce": "Touche l’**hypoténuse** du triangle formé par le mât, le sol et le câble.",
+     "reponse": [
+      "cable"
+     ],
+     "aide": "Cherche le côté opposé à l’angle droit.",
+     "explication": "L’angle droit est entre le mât et le sol : l’hypoténuse est le **câble**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance du pied du mât le câble est-il ancré ? Arrondis au dixième de mètre.",
+     "reponse": 7.7,
+     "tolerance": 0.05,
+     "unite": "m",
+     "aide": "Le côté du sol est adjacent à l’angle de 50° : cos 50° = côté adjacent ÷ hypoténuse.",
+     "explication": "cos 50° = distance ÷ 12, donc distance = 12 × 0,643 ≈ **7,7 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur du mât ? Arrondis au dixième de mètre.",
+     "reponse": 9.2,
+     "tolerance": 0.05,
+     "unite": "m",
+     "aide": "Avec la distance trouvée et le câble, utilise Pythagore pour un côté de l’angle droit.",
+     "explication": "Mât² = 12² − 7,7² = 144 − 59,29 ≈ 84,7, donc mât ≈ √84,7 ≈ **9,2 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un second câble de 10 m est ancré à 6 m du pied du mât. Quel angle fait-il avec le sol ? Arrondis au degré.",
+     "reponse": 53,
+     "tolerance": 0.5,
+     "unite": "°",
+     "aide": "cos(angle) = 6 ÷ 10 = 0,6. Utilise la touche cos⁻¹, avec la calculatrice en degrés.",
+     "explication": "cos(angle) = 6 ÷ 10 = 0,6, donc angle = cos⁻¹(0,6) ≈ **53°**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève trouve cos(angle) = 1,3 pour un angle aigu d’un triangle rectangle. Que conclure ?",
+     "options": [
+      "Erreur : le cosinus d’un angle aigu ne dépasse pas 1",
+      "L’angle est très petit, presque nul, car 1,3 est proche de 1",
+      "L’angle est très grand, presque droit, car 1,3 est élevé",
+      "L’hypoténuse est probablement trop petite dans son calcul"
+     ],
+     "reponse": 0,
+     "aide": "Dans cos = adjacent ÷ hypoténuse, l’hypoténuse est le plus long côté.",
+     "explication": "Le côté adjacent est plus court que l’hypoténuse : le cosinus d’un angle aigu est **toujours compris entre 0 et 1**. 1,3 signale une erreur de calcul."
+    }
+   ]
+  },
+  {
+   "chapitre": "85198058-0dfe-5d69-9c6b-468913a7d6a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le jardin de Maya",
+   "competence": "geometrie",
+   "situation": "Maya trace sur plan un jardin ABCD. Elle mesure les deux diagonales et constate qu’elles se coupent en leur milieu O.",
+   "documents": [
+    {
+     "id": "jardin",
+     "type": "figure",
+     "titre": "Le plan du jardin",
+     "source": "Dessin à main levée, non à l’échelle",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "O",
+       "x": 4,
+       "y": 2.5,
+       "position": "n"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "de": "A",
+       "a": "O",
+       "codage": 1
+      },
+      {
+       "de": "O",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "O",
+       "codage": 1
+      },
+      {
+       "de": "O",
+       "a": "D",
+       "codage": 1
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les diagonales mesurées",
+     "source": "Mesures imaginées pour l’exercice",
+     "colonnes": [
+      "Diagonale",
+      "AC",
+      "BD"
+     ],
+     "lignes": [
+      [
+       "Longueur (m)",
+       10,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jardin",
+     "enonce": "Touche le point de rencontre des deux diagonales, qui est leur **milieu**.",
+     "reponse": [
+      "O"
+     ],
+     "aide": "Les diagonales sont les segments qui relient deux sommets opposés.",
+     "explication": "Le point **O** est le milieu commun des diagonales [AC] et [BD], et le centre de symétrie du jardin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de [AO] ?",
+     "reponse": 5,
+     "unite": "m",
+     "aide": "O est le milieu de [AC].",
+     "explication": "AC = 10 m et O est son milieu : AO = 10 ÷ 2 = **5 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle figure peut-on affirmer avec ces seules informations ?",
+     "options": [
+      "Un rectangle",
+      "Un losange",
+      "Un carré",
+      "Un cerf-volant"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les diagonales se coupent en leur milieu : parallélogramme. Elles ont la même longueur : quelle propriété particulière ?",
+     "explication": "Des diagonales qui se coupent en leur milieu **et** de même longueur : c’est un **rectangle**. Rien ne dit qu’elles soient perpendiculaires : ni losange ni carré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la mesure de l’angle ABC ?",
+     "reponse": 90,
+     "unite": "°",
+     "aide": "Que valent les angles d’un rectangle ?",
+     "explication": "ABCD est un rectangle : l’angle ABC mesure **90°**, comme les trois autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "85198058-0dfe-5d69-9c6b-468913a7d6a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les quatre plaques du menuisier",
+   "competence": "raisonner",
+   "situation": "Un menuisier a découpé quatre plaques de bois quadrilatères, Q1 à Q4. Pour chacune, il a vérifié avec un fil si les diagonales se coupent en leur milieu, si elles ont la même longueur et si elles sont perpendiculaires.",
+   "documents": [
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Ce que le menuisier a observé",
+     "source": "Observations imaginées pour l’exercice",
+     "colonnes": [
+      "Plaque",
+      "Milieu commun",
+      "Même longueur",
+      "Perpendiculaires"
+     ],
+     "lignes": [
+      [
+       "Q1",
+       "oui",
+       "oui",
+       "non"
+      ],
+      [
+       "Q2",
+       "oui",
+       "non",
+       "oui"
+      ],
+      [
+       "Q3",
+       "oui",
+       "oui",
+       "oui"
+      ],
+      [
+       "Q4",
+       "oui",
+       "non",
+       "non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque plaque à sa nature.",
+     "paires": [
+      [
+       "Q1",
+       "Rectangle"
+      ],
+      [
+       "Q2",
+       "Losange"
+      ],
+      [
+       "Q3",
+       "Carré"
+      ],
+      [
+       "Q4",
+       "Parallélogramme quelconque"
+      ]
+     ],
+     "aide": "Des diagonales perpendiculaires caractérisent un losange, des diagonales de même longueur un rectangle.",
+     "explication": "Q1 : **rectangle** (diagonales égales). Q2 : **losange** (perpendiculaires). Q3 : **carré** (les deux). Q4 : **parallélogramme** quelconque (milieu commun seulement)."
+    },
+    {
+     "type": "zone",
+     "document": "tests",
+     "enonce": "Touche la plaque qui possède **4 axes de symétrie**.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Un seul de ces quadrilatères est à la fois rectangle et losange.",
+     "explication": "Le **carré** (Q3) a 4 axes de symétrie : les deux médiatrices des côtés et les deux diagonales."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’axes de symétrie ces quatre plaques ont-elles **en tout** ?",
+     "reponse": 8,
+     "aide": "Rectangle : 2. Losange : 2. Carré : 4. Parallélogramme quelconque : 0.",
+     "explication": "2 + 2 + 4 + 0 = **8 axes**. Le parallélogramme quelconque a un centre de symétrie, mais aucun axe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un angle de la plaque Q4 mesure 65°. Combien mesure l’angle voisin (consécutif) ?",
+     "reponse": 115,
+     "unite": "°",
+     "aide": "Les angles opposés ont la même mesure, et la somme des quatre angles vaut 360°.",
+     "explication": "Deux angles de 65° et deux angles égaux x : 2 × 65 + 2x = 360, donc x = (360 − 130) ÷ 2 = **115°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "85198058-0dfe-5d69-9c6b-468913a7d6a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rectangle ou losange ? Démontre-le",
+   "competence": "argumenter",
+   "situation": "Anaïs et Maël étudient un quadrilatère ABCD tracé par leur professeur. Les diagonales se coupent en O, qui est le milieu de chacune. Ils doivent trouver sa nature exacte et la justifier.",
+   "documents": [
+    {
+     "id": "quad",
+     "type": "figure",
+     "titre": "Le quadrilatère ABCD",
+     "source": "Figure à l’échelle : 1 carreau = 1 cm",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 9
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 2,
+       "y": 4.5,
+       "position": "o"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 0.5,
+       "position": "s"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 4.5,
+       "position": "e"
+      },
+      {
+       "id": "D",
+       "x": 5,
+       "y": 8.5,
+       "position": "n"
+      },
+      {
+       "id": "O",
+       "x": 5,
+       "y": 4.5,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "5 cm"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "de": "A",
+       "a": "O",
+       "codage": 1
+      },
+      {
+       "de": "O",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "O",
+       "codage": 2
+      },
+      {
+       "de": "O",
+       "a": "D",
+       "codage": 2
+      }
+     ],
+     "textes": [
+      {
+       "x": 3.5,
+       "y": 4,
+       "texte": "3 cm",
+       "teinte": "bleu"
+      },
+      {
+       "x": 5.7,
+       "y": 2.4,
+       "texte": "4 cm",
+       "teinte": "bleu"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "rose",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Dans la classe",
+     "participants": [
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maël",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Les diagonales mesurent 6 cm et 8 cm. ABCD est un rectangle !"
+      },
+      {
+       "qui": "Maël",
+       "texte": "Je n’en suis pas sûr. Étudions le triangle AOB."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi peut-on affirmer que ABCD est un parallélogramme ?",
+     "options": [
+      "Ses diagonales se coupent en leur milieu",
+      "Ses diagonales ont la même longueur",
+      "Ses quatre côtés sont égaux",
+      "Il possède un angle droit en O"
+     ],
+     "reponse": 0,
+     "aide": "Le codage de la figure montre que O est le milieu de chaque diagonale.",
+     "explication": "Un quadrilatère dont **les diagonales se coupent en leur milieu** est un parallélogramme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le triangle AOB, calcule AO² + OB².",
+     "reponse": 25,
+     "aide": "AO = 3 cm et OB = 4 cm.",
+     "explication": "AO² + OB² = 3² + 4² = 9 + 16 = **25**. Et AB² = 5² = 25 : les deux sont égaux."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la réciproque de Pythagore, quelle est la nature la plus précise de ABCD ?",
+     "options": [
+      "Un losange : les diagonales sont perpendiculaires",
+      "Un rectangle : ses diagonales sont perpendiculaires",
+      "Un carré : toutes ses diagonales sont égales",
+      "Un parallélogramme quelconque, sans propriété de plus"
+     ],
+     "reponse": 0,
+     "aide": "AO² + OB² = AB² : que dit la réciproque de Pythagore pour l’angle AOB ?",
+     "explication": "Comme AO² + OB² = AB², le triangle AOB est **rectangle en O** : les diagonales sont perpendiculaires. Un parallélogramme aux diagonales perpendiculaires est un **losange**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **périmètre** de ABCD ?",
+     "reponse": 20,
+     "unite": "cm",
+     "aide": "Dans un losange, les quatre côtés ont la même longueur.",
+     "explication": "Les quatre côtés mesurent 5 cm : 4 × 5 = **20 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Anaïs a-t-elle tort de dire que ABCD est un rectangle ?",
+     "options": [
+      "Les diagonales d’un rectangle ont la même longueur, ici 6 cm ≠ 8 cm",
+      "Un rectangle n’a jamais de diagonales perpendiculaires",
+      "Les diagonales d’un rectangle ne se coupent pas en leur milieu",
+      "Un rectangle a forcément quatre côtés égaux"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi la propriété des diagonales d’un rectangle, puis compare 6 cm et 8 cm.",
+     "explication": "Dans un rectangle, **les diagonales ont la même longueur**. Ici elles mesurent 6 cm et 8 cm : ABCD est un losange, qui n’est pas un rectangle."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2791 @@
+{
+ "niveau": "1re",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "0982f49a-453d-5c24-9144-85bf56d099e7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Théâtre ou pas : 200 élèves de 1re",
+   "competence": "lire-tableau",
+   "situation": "Dans un lycée, les 200 élèves de 1re ont répondu à un sondage : sont-ils inscrits à l’option théâtre ? Le professeur principal a rangé les réponses dans un tableau. On choisit un élève au hasard.",
+   "documents": [
+    {
+     "id": "sondage",
+     "type": "tableau",
+     "titre": "Les 200 élèves de 1re",
+     "colonnes": [
+      "Élèves",
+      "Théâtre",
+      "Pas théâtre",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Filles",
+       36,
+       84,
+       120
+      ],
+      [
+       "Garçons",
+       12,
+       68,
+       80
+      ],
+      [
+       "Total",
+       48,
+       152,
+       200
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sondage",
+     "enonce": "Touche la case qui donne le nombre de filles inscrites en théâtre.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche l’intersection de la ligne « Filles » et de la colonne « Théâtre ».",
+     "explication": "La ligne **Filles** et la colonne **Théâtre** se croisent sur la case **36** : 36 filles font du théâtre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité que l’élève choisi soit une fille inscrite en théâtre ?",
+     "reponse": 0.18,
+     "aide": "Divise l’effectif de cette case par l’effectif total de la classe.",
+     "explication": "P(F ∩ T) = 36 ÷ 200 = **0,18**. On divise par les 200 élèves, car l’élève est choisi parmi tous."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On choisit maintenant une fille au hasard. Quelle est la probabilité qu’elle soit inscrite en théâtre ?",
+     "reponse": 0.3,
+     "aide": "Ici l’univers n’est plus la classe entière : on sait que c’est une fille.",
+     "explication": "On sait que c’est une fille : on divise par les 120 filles. P(F)(T) = 36 ÷ 120 = **0,3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle écriture traduit « parmi les garçons, la proportion d’inscrits en théâtre » ?",
+     "options": [
+      "P(G)(T)",
+      "P(T)(G)",
+      "P(G ∩ T) : garçon et théâtre",
+      "P(G) × P(T)"
+     ],
+     "reponse": 0,
+     "aide": "P(A)(B) se lit « B sachant A » : l’événement connu s’écrit entre les premières parenthèses.",
+     "explication": "« Parmi les garçons » : on sait que c’est un garçon, donc **P(G)(T)**. Elle vaut 12 ÷ 80 = 0,15."
+    }
+   ]
+  },
+  {
+   "chapitre": "0982f49a-453d-5c24-9144-85bf56d099e7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les retards du matin au lycée Pasteur",
+   "competence": "modeliser",
+   "situation": "Un surveillant du lycée Pasteur observe comment les élèves arrivent le matin et s’ils sont en retard. Il a rangé ses relevés dans un arbre pondéré.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre pondéré des relevés du matin",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 125,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        65
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        125
+       ],
+       "a": [
+        128,
+        185
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 69,
+       "texte": "V",
+       "ancre": "debut",
+       "id": "noeudV",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 189,
+       "texte": "non V",
+       "ancre": "debut",
+       "id": "noeudNV",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 82,
+       "texte": "0,4",
+       "ancre": "debut",
+       "id": "pV",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 176,
+       "texte": "0,6",
+       "ancre": "debut",
+       "id": "pNV",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        35
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        158,
+        65
+       ],
+       "a": [
+        246,
+        95
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        185
+       ],
+       "a": [
+        246,
+        155
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        185
+       ],
+       "a": [
+        246,
+        215
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 39,
+       "texte": "R",
+       "ancre": "debut",
+       "id": "noeudVR",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 99,
+       "texte": "non R",
+       "ancre": "debut",
+       "id": "noeudVNR",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 159,
+       "texte": "R",
+       "ancre": "debut",
+       "id": "noeudNVR",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 219,
+       "texte": "non R",
+       "ancre": "debut",
+       "id": "noeudNVNR",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 40,
+       "texte": "0,1",
+       "ancre": "debut",
+       "id": "pR_V",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 100,
+       "texte": "0,9",
+       "ancre": "debut",
+       "id": "pNR_V",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 206,
+       "y": 160,
+       "texte": "0,2",
+       "ancre": "debut",
+       "id": "pR_NV",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 206,
+       "y": 220,
+       "texte": "0,8",
+       "ancre": "debut",
+       "id": "pNR_NV",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 244,
+       "texte": "V : l’élève vient à vélo — R : l’élève arrive en retard",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche la probabilité qui se lit « parmi les cyclistes, la proportion d’élèves en retard ».",
+     "reponse": [
+      "pR_V"
+     ],
+     "aide": "Une probabilité conditionnelle se trouve sur une branche du deuxième niveau, après l’événement connu.",
+     "explication": "On sait que l’élève vient à vélo : on part du nœud V puis on suit la branche R. C’est **P(V)(R) = 0,1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’un élève vienne à vélo ET arrive en retard ?",
+     "reponse": 0.04,
+     "aide": "La probabilité d’un chemin est le produit des probabilités de ses branches.",
+     "explication": "P(V ∩ R) = P(V) × P(V)(R) = 0,4 × 0,1 = **0,04**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’un élève arrive en retard ?",
+     "reponse": 0.16,
+     "aide": "R se réalise par deux chemins : additionne leurs probabilités.",
+     "explication": "Formule des probabilités totales : P(R) = 0,4 × 0,1 + 0,6 × 0,2 = 0,04 + 0,12 = **0,16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’un élève ne vienne pas à vélo ET arrive à l’heure ?",
+     "reponse": 0.48,
+     "aide": "Suis le chemin « non V » puis « non R » et multiplie ses branches.",
+     "explication": "P(non V ∩ non R) = 0,6 × 0,8 = **0,48**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0982f49a-453d-5c24-9144-85bf56d099e7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le test de dépistage qui inquiète à tort",
+   "competence": "raisonner",
+   "situation": "Un laboratoire présente un test pour une maladie M. Karim vient d’apprendre que son test est positif et s’inquiète. Avant de conclure, il veut calculer la probabilité d’être réellement malade, sachant que le test est positif.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les caractéristiques du test",
+     "blocs": [
+      "1 % de la population est atteint de la maladie M.",
+      "Chez un malade, le test est positif dans 95 % des cas.",
+      "Chez une personne non malade, le test est positif (à tort) dans 4 % des cas."
+     ],
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "dix",
+     "type": "tableau",
+     "titre": "Pour 10 000 personnes testées",
+     "colonnes": [
+      "Personnes",
+      "Test positif",
+      "Test négatif",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Malades",
+       95,
+       5,
+       100
+      ],
+      [
+       "Non malades",
+       396,
+       9504,
+       9900
+      ],
+      [
+       "Total",
+       491,
+       9509,
+       10000
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs arrondis, calculés à partir de la fiche"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "On choisit une personne au hasard. Quelle est la probabilité qu’elle soit malade ET que son test soit positif ?",
+     "reponse": 0.0095,
+     "aide": "P(M ∩ T) = P(M) × P(M)(T), avec les deux pourcentages de la fiche.",
+     "explication": "P(M ∩ T) = 0,01 × 0,95 = **0,0095**."
+    },
+    {
+     "type": "zone",
+     "document": "dix",
+     "enonce": "Touche la case qui donne le nombre de personnes dont le test est positif alors qu’elles ne sont pas malades.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Une personne non malade au test positif : ligne « Non malades », colonne « Test positif ».",
+     "explication": "Ce sont les faux positifs : **396** personnes sur 10 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité que le test soit positif ?",
+     "reponse": 0.0491,
+     "aide": "Un test positif vient d’un malade ou d’un non-malade : additionne les deux chemins.",
+     "explication": "P(T) = 0,01 × 0,95 + 0,99 × 0,04 = 0,0095 + 0,0396 = **0,0491**, soit 491 personnes sur 10 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sachant que le test est positif, quelle est la probabilité d’être malade ? Arrondis au millième.",
+     "reponse": 0.193,
+     "tolerance": 0.0006,
+     "aide": "P(T)(M) = P(M ∩ T) ÷ P(T). Tu as déjà calculé les deux termes.",
+     "explication": "P(T)(M) = 0,0095 ÷ 0,0491 ≈ **0,193** (on retrouve 95 ÷ 491 avec le tableau)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire à Karim ?",
+     "options": [
+      "Il a environ 1 chance sur 5 d’être réellement malade",
+      "Il a environ 19 chances sur 20 d’être réellement malade",
+      "Il a environ 1 chance sur 100 d’être réellement malade",
+      "Il est certainement malade, car le test est fiable à 95 %"
+     ],
+     "reponse": 0,
+     "aide": "0,193 est proche de 0,2. Que vaut 0,2 sous forme de « 1 chance sur … » ?",
+     "explication": "P(T)(M) ≈ 0,19 : **environ 1 chance sur 5**. Le test est fiable chez les malades (95 %), mais la maladie est rare : la plupart des tests positifs sont de faux positifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "576b7c68-bf81-5696-b404-8641ef5b2b0a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La roue des cadeaux à la kermesse",
+   "competence": "lire-tableau",
+   "situation": "À la kermesse, Yanis tente sa chance à la roue des cadeaux. Le gain X, en euros, dépend de la case où s’arrête la roue. L’organisateur a affiché la loi de X, mais une probabilité est effacée.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "tableau",
+     "titre": "Loi de probabilité du gain X",
+     "colonnes": [
+      "Gain X (€)",
+      "0",
+      "2",
+      "5",
+      "10"
+     ],
+     "lignes": [
+      [
+       "Probabilité",
+       "0,5",
+       "0,3",
+       "?",
+       "0,05"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Roue imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité effacée, celle de gagner 5 € ?",
+     "reponse": 0.15,
+     "aide": "La somme des probabilités d’une loi vaut toujours 1.",
+     "explication": "0,5 + 0,3 + 0,05 = 0,85 et 1 − 0,85 = **0,15**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de gagner au moins 5 € ?",
+     "reponse": 0.2,
+     "aide": "Au moins 5 €, c’est 5 € ou 10 € : additionne deux probabilités.",
+     "explication": "P(X ≥ 5) = P(X = 5) + P(X = 10) = 0,15 + 0,05 = **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance E(X) du gain.",
+     "reponse": 1.85,
+     "unite": "€",
+     "aide": "E(X) = somme des valeurs multipliées par leur probabilité.",
+     "explication": "E(X) = 0 × 0,5 + 2 × 0,3 + 5 × 0,15 + 10 × 0,05 = 0,6 + 0,75 + 0,5 = **1,85 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le ticket coûte 2 €. Que peut-on dire de ce jeu ?",
+     "options": [
+      "Il est favorable à l’organisateur",
+      "Il est favorable au joueur",
+      "Il est équitable",
+      "On ne peut pas le savoir avant d’avoir joué"
+     ],
+     "reponse": 0,
+     "aide": "Compare le gain moyen à la mise de 2 €.",
+     "explication": "Le gain moyen (1,85 €) est inférieur à la mise (2 €) : le gain net moyen vaut 1,85 − 2 = −0,15 €. Le jeu est **favorable à l’organisateur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "576b7c68-bf81-5696-b404-8641ef5b2b0a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les buts du FC Rivage",
+   "competence": "lire-graphique",
+   "situation": "L’entraîneur du FC Rivage a étudié tous les matchs de son équipe sur plusieurs saisons. Il a tracé la loi du nombre X de buts marqués par match, et il veut en déduire la prime versée aux joueurs.",
+   "documents": [
+    {
+     "id": "buts",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Loi du nombre de buts marqués X",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "P(X = k)",
+       "valeurs": [
+        20,
+        35,
+        25,
+        15,
+        5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Probabilité",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Nombre de buts k"
+     },
+     "valeurs": false,
+     "source": "Statistiques imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "buts",
+     "enonce": "Touche la valeur de X la plus probable.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre la plus haute est celle de **1 but** (35 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne P(X ≥ 3) sous forme décimale.",
+     "reponse": 0.2,
+     "aide": "Additionne les barres de 3 et de 4 buts, puis convertis le pourcentage en décimal.",
+     "explication": "P(X ≥ 3) = 15 % + 5 % = 20 %, soit **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance E(X).",
+     "reponse": 1.5,
+     "unite": "buts",
+     "aide": "Multiplie chaque nombre de buts par sa probabilité (en décimal) et additionne.",
+     "explication": "E(X) = 0 × 0,2 + 1 × 0,35 + 2 × 0,25 + 3 × 0,15 + 4 × 0,05 = 0,35 + 0,5 + 0,45 + 0,2 = **1,5 but** par match."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la variance V(X).",
+     "reponse": 1.25,
+     "aide": "V(X) = somme des x² × P(X = x), moins le carré de E(X).",
+     "explication": "Somme des x² × P : 0,35 + 4 × 0,25 + 9 × 0,15 + 16 × 0,05 = 3,5. Puis V(X) = 3,5 − 1,5² = 3,5 − 2,25 = **1,25**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le club verse 2 000 € par but marqué plus 1 000 € de prime de match : la prime est P = 2 000 X + 1 000. Quelle est la prime moyenne E(P) ?",
+     "reponse": 4000,
+     "unite": "€",
+     "aide": "E(aX + b) = a E(X) + b.",
+     "explication": "E(P) = 2 000 × E(X) + 1 000 = 2 000 × 1,5 + 1 000 = **4 000 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "576b7c68-bf81-5696-b404-8641ef5b2b0a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux stands, même gain moyen, quel risque ?",
+   "competence": "raisonner",
+   "situation": "À la fête du lycée, deux stands proposent un jeu gratuit où l’on gagne des euros. Les deux annoncent le même gain moyen. Lina veut savoir lequel est le plus risqué avant d’y emmener sa classe.",
+   "documents": [
+    {
+     "id": "standA",
+     "type": "tableau",
+     "titre": "Stand A : loi du gain",
+     "colonnes": [
+      "Gain (€)",
+      "0",
+      "10"
+     ],
+     "lignes": [
+      [
+       "Probabilité",
+       "0,5",
+       "0,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Lois imaginées pour l’exercice"
+    },
+    {
+     "id": "standB",
+     "type": "tableau",
+     "titre": "Stand B : loi du gain",
+     "colonnes": [
+      "Gain (€)",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Probabilité",
+       "0,25",
+       "0,5",
+       "0,25"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Lois imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance du gain au stand A.",
+     "reponse": 5,
+     "unite": "€",
+     "aide": "E = 0 × 0,5 + 10 × 0,5.",
+     "explication": "E(A) = 0 × 0,5 + 10 × 0,5 = **5 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’espérance du gain au stand B.",
+     "reponse": 5,
+     "unite": "€",
+     "aide": "Multiplie chaque gain par sa probabilité, puis additionne les trois produits.",
+     "explication": "E(B) = 4 × 0,25 + 5 × 0,5 + 6 × 0,25 = 1 + 2,5 + 1,5 = **5 €**. Les deux annonces sont exactes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la variance du gain au stand A.",
+     "reponse": 25,
+     "aide": "V = somme des x² × P(X = x) − E². Ici x² vaut 0 ou 100.",
+     "explication": "Somme des x² × P = 0 × 0,5 + 100 × 0,5 = 50, puis V(A) = 50 − 5² = **25**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la variance du gain au stand B.",
+     "reponse": 0.5,
+     "aide": "Même méthode : somme des x² × P, moins le carré de l’espérance.",
+     "explication": "Somme des x² × P = 16 × 0,25 + 25 × 0,5 + 36 × 0,25 = 4 + 12,5 + 9 = 25,5, puis V(B) = 25,5 − 25 = **0,5**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel stand est le plus risqué ?",
+     "options": [
+      "Le stand A : ses gains s’éloignent davantage de la moyenne",
+      "Le stand B : ses gains s’éloignent davantage de la moyenne",
+      "Aucun des deux : même espérance, donc même risque",
+      "On ne peut pas comparer : les gains sont différents"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux variances : la plus grande indique la plus forte dispersion.",
+     "explication": "V(A) = 25 est bien plus grande que V(B) = 0,5 : **le stand A** est plus risqué. Une même espérance ne dit rien du risque."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un sponsor double les gains du stand A puis ajoute 3 € : le nouveau gain est Y = 2X + 3. Quelle est la variance de Y ?",
+     "reponse": 100,
+     "aide": "V(aX + b) = a² V(X) : que devient le b ?",
+     "explication": "V(Y) = 2² × V(X) = 4 × 25 = **100**. Le + 3 ne change pas la dispersion."
+    }
+   ]
+  },
+  {
+   "chapitre": "bf08a9a9-57bd-5372-bc84-ba423ad96e4e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pyramide de boîtes de conserve",
+   "competence": "calculer",
+   "situation": "Amina empile des boîtes de conserve en pyramide au supermarché : 3 boîtes sur la rangée du haut, puis 2 de plus à chaque rangée en descendant. Elle a noté le début dans un tableau.",
+   "documents": [
+    {
+     "id": "rangs",
+     "type": "tableau",
+     "titre": "Boîtes par rangée",
+     "colonnes": [
+      "Rangée",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Boîtes",
+       3,
+       5,
+       7,
+       9,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de boîtes y a-t-il sur la rangée 5 (case manquante) ?",
+     "reponse": 11,
+     "aide": "On ajoute toujours le même nombre de boîtes d’une rangée à la suivante.",
+     "explication": "La raison est 2 : 9 + 2 = **11 boîtes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de boîtes sur la rangée 10, tout en bas ?",
+     "reponse": 21,
+     "aide": "u(10) = u(1) + 9 × raison : entre la rangée 1 et la rangée 10, on ajoute 9 fois la raison.",
+     "explication": "u(10) = 3 + 9 × 2 = **21 boîtes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de boîtes la pyramide de 10 rangées compte-t-elle en tout ?",
+     "reponse": 120,
+     "aide": "Somme = nombre de termes × (premier + dernier) ÷ 2.",
+     "explication": "S = 10 × (3 + 21) ÷ 2 = 10 × 12 = **120 boîtes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de boîtes sur les rangées 4 à 10 (rangées 4 et 10 comprises) ?",
+     "reponse": 105,
+     "aide": "Compte d’abord les termes : de la rangée 4 à la rangée 10 inclus, pense au « + 1 ».",
+     "explication": "De 4 à 10 : 10 − 4 + 1 = 7 rangées. Premier terme u(4) = 9, dernier 21 : S = 7 × (9 + 21) ÷ 2 = 7 × 15 = **105 boîtes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bf08a9a9-57bd-5372-bc84-ba423ad96e4e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’invitation qui fait boule de neige",
+   "competence": "modeliser",
+   "situation": "Un lundi, Léa envoie une invitation à une fête à 3 amis. Chaque jour suivant, chaque personne qui vient de la recevoir la transmet à 3 autres personnes qui ne l’avaient pas encore. Léa suit la diffusion dans un tableau.",
+   "documents": [
+    {
+     "id": "diffusion",
+     "type": "tableau",
+     "titre": "Nouvelles personnes touchées chaque jour",
+     "colonnes": [
+      "Jour",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Nouvelles personnes",
+       3,
+       9,
+       27,
+       81,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de cette suite ?",
+     "reponse": 3,
+     "aide": "Divise un terme par le précédent.",
+     "explication": "9 ÷ 3 = 27 ÷ 9 = 81 ÷ 27 = **3** : la suite est géométrique de raison 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nouvelles personnes le jour 5 (case manquante) ?",
+     "reponse": 243,
+     "aide": "Multiplie le terme du jour 4 par la raison.",
+     "explication": "81 × 3 = **243**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de personnes ont reçu l’invitation en tout au bout de 6 jours (sans compter Léa) ?",
+     "reponse": 1092,
+     "aide": "Somme géométrique : premier terme × (1 − q^N) ÷ (1 − q), avec N = 6 termes.",
+     "explication": "S = 3 × (1 − 3⁶) ÷ (1 − 3) = 3 × (1 − 729) ÷ (−2) = 3 × 364 = **1 092 personnes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de quel jour, au plus tôt, plus de 1 000 personnes ont-elles reçu l’invitation ?",
+     "reponse": 6,
+     "aide": "Calcule le total à la fin du jour 5, puis celui du jour 6.",
+     "explication": "Après 5 jours : 3 + 9 + 27 + 81 + 243 = 363, c’est moins de 1 000. Après 6 jours : 1 092. C’est donc le **jour 6**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bf08a9a9-57bd-5372-bc84-ba423ad96e4e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plan d’entraînement de Sacha",
+   "competence": "programmer",
+   "situation": "Sacha prépare un 10 km avec le plan de son club. Pour vérifier ses calculs, il a écrit un petit programme Python qui additionne les distances semaine après semaine.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Club d’athlétisme",
+     "sousTitre": "Plan d’entraînement de Sacha",
+     "emoji": "🏃",
+     "lignes": [
+      {
+       "texte": "Semaine 1",
+       "valeur": "5 km",
+       "id": "sem1"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Chaque semaine suivante",
+       "valeur": "+ 2 km",
+       "id": "plus"
+      },
+      {
+       "texte": "Durée du plan",
+       "valeur": "8 semaines",
+       "id": "duree"
+      }
+     ],
+     "pied": "Plan imaginé pour l’exercice",
+     "teinte": "bleu"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Sacha",
+     "blocs": [
+      "s = 0",
+      "u = 5",
+      "for i in range(8):",
+      "    s = s + u",
+      "    u = u + 2",
+      "print(s)"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance Sacha court-il la semaine 8 ?",
+     "reponse": 19,
+     "unite": "km",
+     "aide": "Entre la semaine 1 et la semaine 8, on ajoute 7 fois 2 km.",
+     "explication": "u(8) = 5 + 7 × 2 = **19 km**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le programme, que représente la variable u au début de chaque tour de boucle ?",
+     "options": [
+      "La distance de la semaine en cours",
+      "La distance totale déjà courue",
+      "Le nombre de semaines écoulées",
+      "La raison de la suite"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qu’on ajoute à s à chaque tour, puis ce que devient u à la ligne suivante.",
+     "explication": "Chaque tour ajoute u à s, puis passe à la semaine suivante avec u = u + 2 : u est **la distance de la semaine en cours**, et s le total."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur le programme affiche-t-il à la fin ?",
+     "reponse": 96,
+     "unite": "km",
+     "aide": "Il additionne les distances des 8 semaines : utilise la formule de la somme.",
+     "explication": "S = 8 × (5 + 19) ÷ 2 = 8 × 12 = **96 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On remplace range(8) par range(10). Quelle valeur le programme affiche-t-il alors ?",
+     "reponse": 140,
+     "unite": "km",
+     "aide": "Il faut d’abord le dernier terme, pour 10 semaines.",
+     "explication": "Dernier terme : 5 + 9 × 2 = 23. S = 10 × (5 + 23) ÷ 2 = **140 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sacha voudrait avoir couru au moins 200 km au total. Combien de semaines de plan faut-il, au minimum ?",
+     "reponse": 13,
+     "aide": "Pour n semaines, le total vaut n × (10 + 2(n − 1)) ÷ 2, soit n(n + 4). Teste quelques valeurs de n.",
+     "explication": "Total après n semaines : n(n + 4). Pour n = 12 : 12 × 16 = 192, c’est trop peu. Pour n = 13 : 13 × 17 = 221 ≥ 200. Il faut **13 semaines**."
+    }
+   ]
+  },
+  {
+   "chapitre": "389e4ddc-4d82-591f-b9d6-657624771756",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Chloé dérive avant le contrôle",
+   "competence": "calculer",
+   "situation": "La veille d’un contrôle, Chloé a recopié l’aide-mémoire des dérivées de référence. Elle s’entraîne sur une fonction polynôme.",
+   "documents": [
+    {
+     "id": "memo",
+     "type": "tableau",
+     "titre": "Aide-mémoire de Chloé",
+     "colonnes": [
+      "Fonction f(x)",
+      "Dérivée f′(x)"
+     ],
+     "lignes": [
+      [
+       "x²",
+       "2x"
+      ],
+      [
+       "x³",
+       "3x²"
+      ],
+      [
+       "x",
+       "1"
+      ],
+      [
+       "k (constante)",
+       "0"
+      ],
+      [
+       "1/x",
+       "−1/x²"
+      ],
+      [
+       "√x",
+       "1/(2√x)"
+      ],
+      [
+       "eˣ",
+       "eˣ"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de cours"
+    },
+    {
+     "id": "fonction",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction à dériver",
+     "blocs": [
+      "f(x) = 2x³ − 5x² + 3x − 1, définie sur l’ensemble des réels."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "memo",
+     "enonce": "Touche la case qui donne la dérivée de x³.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Repère la ligne de x³, puis la colonne des dérivées.",
+     "explication": "La ligne de x³ donne **3x²** : on multiplie par l’exposant 3 et on baisse l’exposant de 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée f′(x) de la fonction de Chloé ?",
+     "options": [
+      "f′(x) = 6x² − 10x + 3",
+      "f′(x) = 6x² − 5x + 3",
+      "f′(x) = 2x² − 10x + 3",
+      "f′(x) = 6x² − 10x − 1"
+     ],
+     "reponse": 0,
+     "aide": "Dérive terme à terme : 2x³ → 2 × 3x², puis −5x², puis 3x, puis la constante.",
+     "explication": "(2x³)′ = 6x², (−5x²)′ = −10x, (3x)′ = 3 et la constante −1 disparaît : **f′(x) = 6x² − 10x + 3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(2).",
+     "reponse": 7,
+     "aide": "Remplace x par 2 dans l’expression de f′(x).",
+     "explication": "f′(2) = 6 × 4 − 10 × 2 + 3 = 24 − 20 + 3 = **7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire du sens de variation de f près de x = 1 ?",
+     "options": [
+      "f est décroissante, car f′(1) = −1 est négatif",
+      "f est croissante, car f′(1) = −1 est négatif",
+      "f est croissante, car f(1) = −1 est un nombre non nul",
+      "On ne peut rien dire sans le tableau de signes complet"
+     ],
+     "reponse": 0,
+     "aide": "Calcule f′(1) et regarde son signe.",
+     "explication": "f′(1) = 6 − 10 + 3 = −1 < 0 : **f est décroissante** près de 1. C’est le signe de la dérivée qui compte, pas celui de f(1)."
+    }
+   ]
+  },
+  {
+   "chapitre": "389e4ddc-4d82-591f-b9d6-657624771756",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les dérivées de Malik : où sont les erreurs ?",
+   "competence": "raisonner",
+   "situation": "Malik a corrigé son devoir sur les dérivées de composées affines. Sa prof a relevé deux erreurs dans son cahier, mais ne dit pas lesquelles.",
+   "documents": [
+    {
+     "id": "cahier",
+     "type": "tableau",
+     "titre": "Le cahier de Malik",
+     "colonnes": [
+      "Fonction",
+      "Dérivée trouvée par Malik"
+     ],
+     "lignes": [
+      [
+       "(2x + 1)³",
+       "3 (2x + 1)²"
+      ],
+      [
+       "e^(−3x)",
+       "−3 e^(−3x)"
+      ],
+      [
+       "sin(2x)",
+       "cos(2x)"
+      ],
+      [
+       "1/(x + 4)",
+       "−1/(x + 4)²"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cahier",
+     "enonce": "Touche les deux dérivées fausses.",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Pour g(ax + b), la dérivée est a × g′(ax + b) : vérifie si le facteur a est bien présent.",
+     "explication": "Les deux erreurs sont **(2x + 1)³** (il manque le facteur 2) et **sin(2x)** (il manque aussi le facteur 2). Les deux autres lignes sont justes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle erreur Malik commet-il sur la première ligne ?",
+     "options": [
+      "Il oublie de multiplier par le coefficient 2 de 2x + 1",
+      "Il se trompe sur l’exposant : il fallait garder 3",
+      "Il dérive la parenthèse comme si c’était une somme",
+      "Il oublie de dériver : il recopie la fonction telle quelle"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec 3 × 2 × (2x + 1)².",
+     "explication": "Pour g(ax + b), on a a × g′(ax + b). Ici a = 2 : la bonne dérivée est 3 × 2 × (2x + 1)² = **6 (2x + 1)²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vraie dérivée de (2x + 1)³ en x = 1.",
+     "reponse": 54,
+     "aide": "Utilise 6 (2x + 1)² et remplace x par 1.",
+     "explication": "6 × (2 × 1 + 1)² = 6 × 9 = **54**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vraie dérivée de sin(2x) en x = 0.",
+     "reponse": 2,
+     "aide": "La dérivée est 2 cos(2x) ; que vaut cos(0) ?",
+     "explication": "2 cos(0) = 2 × 1 = **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "389e4ddc-4d82-591f-b9d6-657624771756",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une courbe qui monte puis redescend",
+   "competence": "modeliser",
+   "situation": "Une infirmière étudie la concentration d’un médicament dans le sang, en milligrammes par litre, x heures après la prise. Le modèle est g(x) = x e^(−x), et elle a tracé la courbe ci-dessous.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Concentration g(x) en fonction du temps",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "g(x)",
+       "valeurs": [
+        0,
+        0.303,
+        0.368,
+        0.335,
+        0.271,
+        0.205,
+        0.149,
+        0.106,
+        0.073
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "mg/L",
+      "min": 0,
+      "max": 0.4,
+      "pas": 0.05
+     },
+     "axeX": {
+      "titre": "Temps x (heures)"
+     },
+     "source": "Valeurs calculées, arrondies au millième"
+    },
+    {
+     "id": "modele",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le modèle",
+     "blocs": [
+      "g(x) = x e^(−x), pour x ≥ 0."
+     ],
+     "source": "Modèle écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche le point de la courbe où la concentration semble la plus élevée.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le sommet est au point d’abscisse **x = 1** (concentration 0,368 mg/L)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée de g ?",
+     "options": [
+      "g′(x) = (1 − x) e^(−x)",
+      "g′(x) = (x + 1) e^x",
+      "g′(x) = −x e^(−x)",
+      "g′(x) = e^(−x)"
+     ],
+     "reponse": 0,
+     "aide": "Produit uv avec u = x et v = e^(−x), dont la dérivée est −e^(−x) (composée affine, a = −1).",
+     "explication": "g′(x) = 1 × e^(−x) + x × (−e^(−x)) = e^(−x) − x e^(−x) = **(1 − x) e^(−x)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de x la dérivée s’annule-t-elle ?",
+     "reponse": 1,
+     "aide": "e^(−x) n’est jamais nul : il reste à résoudre 1 − x = 0.",
+     "explication": "g′(x) = 0 équivaut à 1 − x = 0, donc **x = 1**. La dérivée est positive avant 1 et négative après : g est croissante puis décroissante."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration maximale ? Arrondis au centième.",
+     "reponse": 0.37,
+     "unite": "mg/L",
+     "tolerance": 0.005,
+     "aide": "Calcule g(1) = 1 × e^(−1), avec ta calculatrice.",
+     "explication": "g(1) = e^(−1) ≈ 0,3679, soit **0,37 mg/L** au centième."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de la tangente à la courbe au point d’abscisse 0 ?",
+     "options": [
+      "y = x",
+      "y = 1",
+      "y = x + 1",
+      "y = 0"
+     ],
+     "reponse": 0,
+     "aide": "y = g′(0)(x − 0) + g(0). Calcule g(0) et g′(0).",
+     "explication": "g(0) = 0 et g′(0) = (1 − 0) × e⁰ = 1 : la tangente est **y = x**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae795625-7722-5c76-a1e5-9edcf501d0f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tangente en un point de la courbe",
+   "competence": "lire-graphique",
+   "situation": "Nadia étudie la fonction f(x) = x² + x. Elle a tracé sa courbe et veut l’équation de la tangente au point A d’abscisse 1.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Courbe de f(x) = x² + x",
+     "categories": [
+      "−2",
+      "−1,5",
+      "−1",
+      "−0,5",
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        2,
+        0.75,
+        0,
+        -0.25,
+        0,
+        0.75,
+        2,
+        3.75,
+        6
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": -1,
+      "max": 6,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "source": "Valeurs calculées pour l’exercice"
+    },
+    {
+     "id": "rappel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le rappel de cours",
+     "blocs": [
+      "La tangente en a a pour équation y = f′(a)(x − a) + f(a)."
+     ],
+     "source": "Rappel de cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche sur la courbe le point A d’abscisse 1.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "Repère la graduation « 1 » sur l’axe des abscisses.",
+     "explication": "Le point d’abscisse 1 est celui de la septième graduation : **A(1 ; 2)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f(1).",
+     "reponse": 2,
+     "aide": "Remplace x par 1 dans x² + x.",
+     "explication": "f(1) = 1² + 1 = **2**, ce que confirme la courbe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(1), sachant que f′(x) = 2x + 1.",
+     "reponse": 3,
+     "aide": "Remplace x par 1 dans 2x + 1.",
+     "explication": "f′(1) = 2 × 1 + 1 = **3** : c’est le coefficient directeur de la tangente."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de la tangente en A ?",
+     "options": [
+      "y = 3x − 1",
+      "y = 3x + 2",
+      "y = 2x − 1",
+      "y = 2x + 3"
+     ],
+     "reponse": 0,
+     "aide": "y = f′(1)(x − 1) + f(1) : développe et simplifie.",
+     "explication": "y = 3(x − 1) + 2 = 3x − 3 + 2 = **3x − 1**. Contrôle : en x = 1, 3 × 1 − 1 = 2 = f(1)."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae795625-7722-5c76-a1e5-9edcf501d0f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prix de la boule de glace",
+   "competence": "modeliser",
+   "situation": "Un glacier a noté combien de boules il vend par jour selon son prix. Il veut savoir à quel prix sa recette quotidienne sera la plus grande. Le prix p est compris entre 0 € et 4 €.",
+   "documents": [
+    {
+     "id": "ventes",
+     "type": "tableau",
+     "titre": "Boules vendues par jour selon le prix",
+     "colonnes": [
+      "Prix p (€)",
+      "1",
+      "1,5",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "Boules vendues",
+       300,
+       250,
+       200,
+       100
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Les relevés suivent un modèle affine. Quel est le nombre N(p) de boules vendues ?",
+     "options": [
+      "N(p) = 400 − 100 p",
+      "N(p) = 300 − 50 p",
+      "N(p) = 100 + 200 p",
+      "N(p) = 400 − 50 p"
+     ],
+     "reponse": 0,
+     "aide": "Entre p = 1 et p = 2, le nombre de boules change de combien ? Cela donne le coefficient.",
+     "explication": "Quand p augmente de 1, N baisse de 100 : N(p) = 400 − 100 p. Contrôle : N(1) = 300 et N(3) = 100."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait la recette, en euros, à 2,50 € la boule ?",
+     "reponse": 375,
+     "unite": "€",
+     "aide": "Recette = prix × nombre de boules vendues ; calcule d’abord N(2,5).",
+     "explication": "N(2,5) = 400 − 250 = 150 boules, donc 2,5 × 150 = **375 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La recette vaut R(p) = p(400 − 100p) = 400p − 100p². Pour quel prix p la recette est-elle maximale ?",
+     "reponse": 2,
+     "unite": "€",
+     "aide": "R′(p) = 400 − 200p : cherche où elle s’annule en changeant de signe.",
+     "explication": "R′(p) = 400 − 200p s’annule en **p = 2**. Elle est positive avant 2 et négative après : R croît puis décroît."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la recette maximale ?",
+     "reponse": 400,
+     "unite": "€",
+     "aide": "Calcule R(2).",
+     "explication": "R(2) = 2 × 200 = 400, ou 400 × 2 − 100 × 4 = 800 − 400 = **400 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ae795625-7722-5c76-a1e5-9edcf501d0f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La boîte sans couvercle la plus grande",
+   "competence": "modeliser",
+   "situation": "Hugo fabrique une boîte sans couvercle à partir d’une feuille de carton carrée de 30 cm de côté. Il découpe un petit carré de côté x à chaque coin, puis relève les bords. Il cherche la valeur de x qui donne le plus grand volume. On a 0 < x < 15.",
+   "documents": [
+    {
+     "id": "patron",
+     "type": "figure",
+     "titre": "Le patron de la boîte (hors échelle)",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 32,
+      "ymin": -3,
+      "ymax": 32
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "B",
+       "x": 30,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "C",
+       "x": 30,
+       "y": 30,
+       "cache": true
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 30,
+       "cache": true
+      },
+      {
+       "id": "P1",
+       "x": 4,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "P2",
+       "x": 26,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "P3",
+       "x": 30,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "P4",
+       "x": 30,
+       "y": 26,
+       "cache": true
+      },
+      {
+       "id": "P5",
+       "x": 26,
+       "y": 30,
+       "cache": true
+      },
+      {
+       "id": "P6",
+       "x": 4,
+       "y": 30,
+       "cache": true
+      },
+      {
+       "id": "P7",
+       "x": 0,
+       "y": 26,
+       "cache": true
+      },
+      {
+       "id": "P8",
+       "x": 0,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "Q1",
+       "x": 4,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "Q2",
+       "x": 26,
+       "y": 4,
+       "cache": true
+      },
+      {
+       "id": "Q3",
+       "x": 26,
+       "y": 26,
+       "cache": true
+      },
+      {
+       "id": "Q4",
+       "x": 4,
+       "y": 26,
+       "cache": true
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "A",
+        "P1",
+        "Q1",
+        "P8"
+       ],
+       "teinte": "encre",
+       "motif": "hachures"
+      },
+      {
+       "sommets": [
+        "P2",
+        "B",
+        "P3",
+        "Q2"
+       ],
+       "teinte": "encre",
+       "motif": "hachures"
+      },
+      {
+       "sommets": [
+        "Q3",
+        "P4",
+        "C",
+        "P5"
+       ],
+       "teinte": "encre",
+       "motif": "hachures"
+      },
+      {
+       "sommets": [
+        "P7",
+        "Q4",
+        "P6",
+        "D"
+       ],
+       "teinte": "encre",
+       "motif": "hachures"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "P1",
+       "longueur": "x"
+      },
+      {
+       "de": "P1",
+       "a": "P2",
+       "longueur": "30 − 2x"
+      },
+      {
+       "de": "P2",
+       "a": "B",
+       "longueur": "x"
+      }
+     ],
+     "source": "Les coins hachurés sont découpés"
+    },
+    {
+     "id": "volumes",
+     "type": "tableau",
+     "titre": "Volumes calculés pour quelques valeurs de x",
+     "colonnes": [
+      "x (cm)",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "lignes": [
+      [
+       "V(x) (cm³)",
+       1728,
+       1936,
+       2000,
+       1944,
+       1792,
+       1568
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "volumes",
+     "enonce": "Touche le plus grand volume relevé dans le tableau.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Compare les valeurs de la ligne V(x).",
+     "explication": "Le plus grand volume du tableau est **2 000 cm³**, obtenu pour x = 5."
+    },
+    {
+     "type": "choix",
+     "enonce": "La boîte a pour base un carré de côté 30 − 2x et pour hauteur x. Quelle est l’expression développée de V(x) = x (30 − 2x)² ?",
+     "options": [
+      "V(x) = 4x³ − 120x² + 900x",
+      "V(x) = x³ − 60x² + 900x",
+      "V(x) = 4x³ − 60x² + 900x",
+      "V(x) = 4x³ − 120x² + 900"
+     ],
+     "reponse": 0,
+     "aide": "Développe d’abord (30 − 2x)² = 900 − 120x + 4x², puis multiplie par x.",
+     "explication": "(30 − 2x)² = 900 − 120x + 4x², et en multipliant par x : **4x³ − 120x² + 900x**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dérive V : V′(x) = 12x² − 240x + 900. Calcule V′(5).",
+     "reponse": 0,
+     "aide": "Remplace x par 5 : 12 × 25 − 240 × 5 + 900.",
+     "explication": "V′(5) = 300 − 1 200 + 900 = **0** : la tangente à la courbe de V est horizontale en x = 5."
+    },
+    {
+     "type": "choix",
+     "enonce": "On calcule V′(3) = 288 et V′(7) = −192. Que peut-on conclure ?",
+     "options": [
+      "V′ passe de + à − autour de 5 : V est maximal en x = 5",
+      "V′ passe de − à + autour de 5 : V est minimal en x = 5",
+      "V′ garde le même signe : V est monotone sur ]0 ; 15[",
+      "V′ s’annule seulement en 5 : V y est forcément maximal"
+     ],
+     "reponse": 0,
+     "aide": "Un extremum se lit là où V′ s’annule en changeant de signe : de quel signe à quel signe ?",
+     "explication": "V′ est positive avant 5 puis négative après : V croît puis décroît, avec un **maximum en x = 5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour ce maximum, quel est le côté de la base carrée de la boîte ?",
+     "reponse": 20,
+     "unite": "cm",
+     "aide": "Le côté de la base vaut 30 − 2x.",
+     "explication": "30 − 2 × 5 = **20 cm**. La boîte mesure 20 cm × 20 cm × 5 cm, soit 2 000 cm³."
+    }
+   ]
+  },
+  {
+   "chapitre": "77b2af3c-6e73-5a84-ae9c-8e38aa178198",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La droite d’un vecteur normal connu",
+   "competence": "geometrie",
+   "situation": "Dans un repère orthonormé, Inès a tracé une droite (d) sur du papier quadrillé et placé trois points A, B et C. Elle veut savoir lequel est sur la droite et comment la décrire.",
+   "documents": [
+    {
+     "id": "repere",
+     "type": "figure",
+     "titre": "La droite (d) et trois points",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 9,
+      "ymin": -1,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "P",
+       "x": 0,
+       "y": 6,
+       "cache": true
+      },
+      {
+       "id": "Q",
+       "x": 4,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "A",
+       "x": 2,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 1,
+       "position": "ne"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "P",
+        "Q"
+       ],
+       "nom": "(d)"
+      }
+     ],
+     "source": "Repère orthonormé, unité : un carreau"
+    },
+    {
+     "id": "eq",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’équation de (d)",
+     "blocs": [
+      "(d) a pour équation 3x + 2y − 12 = 0."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "repere",
+     "enonce": "Touche le point qui appartient à la droite (d).",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Un point est sur la droite quand son tracé coïncide avec elle.",
+     "explication": "**A(2 ; 3)** est sur (d) : 3 × 2 + 2 × 3 − 12 = 0."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est un vecteur normal à (d) ?",
+     "options": [
+      "n(3 ; 2)",
+      "n(−2 ; 3)",
+      "n(3 ; 12)",
+      "n(2 ; 12)"
+     ],
+     "reponse": 0,
+     "aide": "Pour ax + by + c = 0, les coefficients a et b donnent un vecteur normal n(a ; b).",
+     "explication": "Pour 3x + 2y − 12 = 0, a = 3 et b = 2 : **n(3 ; 2)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée du point où la droite (d) coupe l’axe des ordonnées ?",
+     "reponse": 6,
+     "aide": "Sur l’axe des ordonnées, x = 0.",
+     "explication": "Avec x = 0 : 2y − 12 = 0, donc y = **6**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de la droite (d′) parallèle à (d) passant par B(4 ; 3) ?",
+     "options": [
+      "3x + 2y − 18 = 0",
+      "3x + 2y − 12 = 0",
+      "2x + 3y − 17 = 0",
+      "3x − 2y − 6 = 0"
+     ],
+     "reponse": 0,
+     "aide": "Une droite parallèle garde le même vecteur normal : seule la constante change. Impose que B soit dessus.",
+     "explication": "Même normal n(3 ; 2) : 3x + 2y + c = 0. Avec B : 12 + 6 + c = 0, donc c = −18 : **3x + 2y − 18 = 0**."
+    }
+   ]
+  },
+  {
+   "chapitre": "77b2af3c-6e73-5a84-ae9c-8e38aa178198",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le phare et la route qui frôle sa lumière",
+   "competence": "geometrie",
+   "situation": "Un phare est situé en Ω et sa lumière éclaire un disque. Une route rectiligne touche ce disque en un seul point A, sans le traverser. Dans un repère orthonormé gradué en kilomètres, on cherche l’équation de cette route, c’est-à-dire la tangente au cercle en A.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Coordonnées relevées",
+     "colonnes": [
+      "Point",
+      "Abscisse",
+      "Ordonnée"
+     ],
+     "lignes": [
+      [
+       "Ω (le phare)",
+       1,
+       1
+      ],
+      [
+       "A (la route touche le cercle)",
+       5,
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevé imaginé pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "figure",
+     "titre": "Le disque éclairé et la route",
+     "cadre": {
+      "xmin": -5,
+      "xmax": 11,
+      "ymin": -5,
+      "ymax": 9
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "nom": "Ω",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 5,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "S",
+       "x": 2,
+       "y": 8,
+       "cache": true
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 5
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "A",
+        "S"
+       ],
+       "nom": "(route)"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "A",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Repère orthonormé, unité : 1 km"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rayon du disque éclairé, c’est-à-dire la distance ΩA ?",
+     "reponse": 5,
+     "unite": "km",
+     "aide": "Calcule les coordonnées du vecteur ΩA, puis sa norme √(x² + y²).",
+     "explication": "ΩA a pour coordonnées (5 − 1 ; 4 − 1) = (4 ; 3), et ΩA = √(16 + 9) = **5 km**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est un vecteur normal à la route (la tangente en A) ?",
+     "options": [
+      "(4 ; 3)",
+      "(−3 ; 4)",
+      "(1 ; 1)",
+      "(5 ; 4)"
+     ],
+     "reponse": 0,
+     "aide": "La tangente est perpendiculaire au rayon [ΩA] : quel vecteur est dirigé le long du rayon ?",
+     "explication": "La tangente est perpendiculaire à [ΩA] : le vecteur **ΩA(4 ; 3)** est normal à la route."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de la route ?",
+     "options": [
+      "4x + 3y − 32 = 0",
+      "4x + 3y − 12 = 0",
+      "3x + 4y − 31 = 0",
+      "4x − 3y − 8 = 0"
+     ],
+     "reponse": 0,
+     "aide": "Avec n(a ; b) et A(xA ; yA) : a (x − xA) + b (y − yA) = 0. Développe.",
+     "explication": "4 (x − 5) + 3 (y − 4) = 0 donne 4x + 3y − 32 = 0. Contrôle avec A : 20 + 12 − 32 = 0. Réponse : **4x + 3y − 32 = 0**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’abscisse du point où la route coupe l’axe des abscisses ?",
+     "reponse": 8,
+     "aide": "Sur l’axe des abscisses, y = 0.",
+     "explication": "Avec y = 0 : 4x − 32 = 0, donc x = **8**. La route passe par le point (8 ; 0)."
+    }
+   ]
+  },
+  {
+   "chapitre": "77b2af3c-6e73-5a84-ae9c-8e38aa178198",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un drone, une route, un cercle de portée",
+   "competence": "resoudre",
+   "situation": "Un drone est posé en M. Il doit rejoindre une route rectiligne (d) au point le plus proche, puis il décrit autour de M un cercle de rayon 5. Dans un repère orthonormé gradué en mètres, on étudie le projeté orthogonal de M sur (d) et les intersections.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le drone et la route",
+     "cadre": {
+      "xmin": -3,
+      "xmax": 11,
+      "ymin": -2,
+      "ymax": 9
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "M",
+       "x": 5,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "A",
+       "x": -2,
+       "y": 1,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 6,
+       "y": 7,
+       "position": "no"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "A",
+        "C"
+       ],
+       "nom": "(d)"
+      }
+     ],
+     "source": "Repère orthonormé, unité : 1 m"
+    },
+    {
+     "id": "donnees",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les équations",
+     "blocs": [
+      "(d) : 3x − 4y + 10 = 0",
+      "Cercle de centre M(5 ; 0) et de rayon 5 : (x − 5)² + y² = 25"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point de la route (d) le plus proche du drone M.",
+     "reponse": [
+      "B"
+     ],
+     "aide": "Le point le plus proche est le projeté orthogonal : MH est perpendiculaire à (d). Compare les distances à M.",
+     "explication": "Les distances à M valent MA = √50, MB = **5** et MC = √50 : le point le plus proche est **B(2 ; 4)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le projeté H s’écrit H = M + k n, où n(3 ; −4) est un vecteur normal à (d). En écrivant que H est sur (d), trouve k.",
+     "reponse": -1,
+     "aide": "H(5 + 3k ; −4k). Remplace dans 3x − 4y + 10 = 0 et résous en k.",
+     "explication": "3 (5 + 3k) − 4 (−4k) + 10 = 25 + 25k = 0, donc **k = −1**. Alors H(2 ; 4)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance MH du drone à la route ?",
+     "reponse": 5,
+     "unite": "m",
+     "aide": "MH = |k| × ‖n‖, avec ‖n‖ = √(3² + 4²).",
+     "explication": "MH = 1 × √(9 + 16) = **5 m**, ce que la figure confirme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On remplace y = (3x + 10) ÷ 4 dans l’équation du cercle et on obtient 25x² − 100x + 100 = 0. Calcule le discriminant Δ.",
+     "reponse": 0,
+     "aide": "Δ = b² − 4ac avec a = 25, b = −100 et c = 100.",
+     "explication": "Δ = (−100)² − 4 × 25 × 100 = 10 000 − 10 000 = **0**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on en conclure sur la route et le cercle de portée ?",
+     "options": [
+      "La route est tangente au cercle, en H(2 ; 4)",
+      "La route coupe le cercle en deux points distincts",
+      "La route est extérieure au cercle",
+      "La route est tangente au cercle, en M"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec la distance MH et le rayon du cercle ; Δ = 0 signifie un seul point commun.",
+     "explication": "Δ = 0 : un seul point commun, la route est **tangente** au cercle. Cela concorde avec MH = 5 = rayon. Le point de contact est le projeté H(2 ; 4)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2be0e5d-91b4-55dd-af9e-65d7b54c455b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Camille simule dix lancers de dé",
+   "competence": "experimenter",
+   "situation": "Camille simule 10 lancers d’un dé équilibré à six faces avec l’instruction randint(1, 6) de Python et note les résultats dans un tableau. Elle les compare ensuite à ce que prévoit la théorie.",
+   "documents": [
+    {
+     "id": "lancers",
+     "type": "tableau",
+     "titre": "Résultats des 10 lancers simulés",
+     "colonnes": [
+      "Lancers",
+      "n° 1",
+      "n° 2",
+      "n° 3",
+      "n° 4",
+      "n° 5"
+     ],
+     "lignes": [
+      [
+       "Lancers 1 à 5",
+       4,
+       2,
+       6,
+       3,
+       3
+      ],
+      [
+       "Lancers 6 à 10",
+       5,
+       1,
+       6,
+       4,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Simulation réalisée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lancers",
+     "enonce": "Touche toutes les cases où le dé a donné 6.",
+     "reponse": [
+      "r0c3",
+      "r1c3"
+     ],
+     "multiple": true,
+     "aide": "Il y a deux lancers qui ont donné 6 : un dans chaque ligne.",
+     "explication": "Le 6 est sorti au **lancer 3** et au **lancer 8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence observée du 6 sur ces 10 lancers ?",
+     "reponse": 0.2,
+     "aide": "Fréquence = nombre de succès ÷ nombre d’essais.",
+     "explication": "Deux 6 sur 10 lancers : 2 ÷ 10 = **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des 10 résultats ?",
+     "reponse": 3.6,
+     "aide": "Additionne les 10 valeurs (18 pour chaque ligne) puis divise par 10.",
+     "explication": "La somme vaut 18 + 18 = 36, et 36 ÷ 10 = **3,6**."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’espérance d’un dé équilibré vaut 3,5, et Camille trouve 3,6. Comment expliquer l’écart ?",
+     "options": [
+      "C’est la fluctuation d’échantillonnage, normale sur un petit échantillon",
+      "Le programme de Camille est faux : une moyenne doit toujours valoir 3,5",
+      "Le dé de Camille est truqué, puisque sa moyenne diffère de l’espérance",
+      "L’espérance change à chaque simulation, il n’y a donc rien à expliquer"
+     ],
+     "reponse": 0,
+     "aide": "Deux échantillons de même taille ont-ils exactement la même moyenne ?",
+     "explication": "10 lancers, c’est peu : la moyenne fluctue autour de l’espérance. C’est la **fluctuation d’échantillonnage**, qui diminue quand n augmente."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2be0e5d-91b4-55dd-af9e-65d7b54c455b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le grattage et ses fréquences",
+   "competence": "programmer",
+   "situation": "Un jeu de grattage fait gagner avec une probabilité que l’on ne connaît pas par cœur. Mehdi a programmé une simulation : la fonction essai() renvoie 1 pour un ticket gagnant et 0 sinon, et frequence(n) donne la fréquence des gains sur n tickets.",
+   "documents": [
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Mehdi",
+     "blocs": [
+      "from random import random",
+      "def essai():",
+      "    if random() < 0.2:",
+      "        return 1",
+      "    return 0",
+      "def frequence(n):",
+      "    s = 0",
+      "    for i in range(n):",
+      "        s = s + essai()",
+      "    return s / n"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    },
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Fréquences obtenues pour différentes tailles",
+     "colonnes": [
+      "n",
+      "10",
+      "100",
+      "1 000",
+      "10 000"
+     ],
+     "lignes": [
+      [
+       "frequence(n)",
+       "0,3",
+       "0,17",
+       "0,214",
+       "0,1987"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Simulations réalisées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de gagner programmée dans la fonction essai() ?",
+     "reponse": 0.2,
+     "aide": "Le test random() < p est vrai avec la probabilité p.",
+     "explication": "random() < 0,2 est vrai avec une probabilité de **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n = 100, le programme renvoie 0,17. Combien de tickets gagnants cela représente-t-il ?",
+     "reponse": 17,
+     "aide": "La fréquence vaut s ÷ n : retrouve s.",
+     "explication": "s = 0,17 × 100 = **17** tickets gagnants."
+    },
+    {
+     "type": "zone",
+     "document": "resultats",
+     "enonce": "Touche la fréquence la plus proche de la probabilité programmée.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Calcule l’écart entre chaque fréquence et 0,2.",
+     "explication": "L’écart de **0,1987** à 0,2 est de 0,0013 : c’est le plus petit. Plus n grandit, plus la fréquence se rapproche de p."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour n = 10 000, on obtient 0,1987. Que peut-on dire ?",
+     "options": [
+      "Cette fréquence estime la probabilité de gagner, sans la démontrer",
+      "Cette fréquence prouve que la probabilité de gagner vaut 0,1987",
+      "Cette fréquence montre que le programme est faux car 0,1987 ≠ 0,2",
+      "Cette fréquence devrait valoir exactement 0,2 à chaque simulation"
+     ],
+     "reponse": 0,
+     "aide": "Relance mentalement la simulation : retrouverait-on exactement le même nombre ?",
+     "explication": "Une simulation **estime** une probabilité mais ne la démontre pas : une autre simulation donnerait un autre nombre proche de 0,2."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2be0e5d-91b4-55dd-af9e-65d7b54c455b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les moyennes de dés sortent-elles de l’intervalle ?",
+   "competence": "raisonner",
+   "situation": "Une classe de 1re lance un dé équilibré 100 fois par groupe, simulé sur ordinateur, et calcule la moyenne des résultats de chaque groupe. Le professeur demande de repérer les groupes dont la moyenne est « anormale », c’est-à-dire hors de l’intervalle de fluctuation.",
+   "documents": [
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les données du problème",
+     "blocs": [
+      "Dé équilibré à six faces : espérance μ = 3,5 ; écart type σ ≈ 1,71.",
+      "Un échantillon de taille n = 100 : on lance 100 fois le dé et on calcule la moyenne m.",
+      "Intervalle de fluctuation : [μ − 2σ / √n ; μ + 2σ / √n]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "groupes",
+     "type": "tableau",
+     "titre": "Les moyennes des cinq groupes",
+     "colonnes": [
+      "Groupe",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "lignes": [
+      [
+       "Moyenne (n = 100)",
+       "3,41",
+       "3,62",
+       "3,52",
+       "3,95",
+       "3,47"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Simulations réalisées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule σ ÷ √n pour n = 100.",
+     "reponse": 0.171,
+     "aide": "Ici √100 = 10.",
+     "explication": "σ ÷ √n = 1,71 ÷ 10 = **0,171**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la demi-largeur 2σ ÷ √n de l’intervalle de fluctuation ?",
+     "reponse": 0.342,
+     "aide": "C’est le double du résultat précédent.",
+     "explication": "2 × 0,171 = **0,342**. L’intervalle est donc [3,158 ; 3,842]."
+    },
+    {
+     "type": "zone",
+     "document": "groupes",
+     "enonce": "Touche la moyenne qui sort de l’intervalle de fluctuation [3,158 ; 3,842].",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Compare chaque moyenne aux deux bornes de l’intervalle.",
+     "explication": "Seule la moyenne **3,95** (groupe D) dépasse 3,842. Les quatre autres sont dans l’intervalle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si 1 000 groupes faisaient la même expérience, combien de moyennes sortiraient environ de l’intervalle ?",
+     "options": [
+      "Environ 50",
+      "Environ 500",
+      "Environ 5",
+      "Aucune"
+     ],
+     "reponse": 0,
+     "aide": "L’intervalle contient en général environ 95 % des moyennes.",
+     "explication": "Environ 95 % des moyennes sont dans l’intervalle : il en reste environ 5 %, soit **50 sur 1 000**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien faut-il multiplier la taille n des échantillons pour diviser par 3 la dispersion des moyennes ?",
+     "reponse": 9,
+     "aide": "La dispersion vaut σ ÷ √n : que doit valoir √n pour être multiplié par 3 ?",
+     "explication": "Il faut √n multiplié par 3, donc n multiplié par 3² = **9**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6f5e298-1a8e-59b5-af64-b30f7610eac3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Suivre les valeurs de a et de b",
+   "competence": "programmer",
+   "situation": "Dans son cours de Python, Ilyès doit prévoir ce que fait un petit programme sans l’exécuter, en suivant la valeur des variables ligne après ligne.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme à suivre",
+     "blocs": [
+      "a = 4",
+      "b = 7",
+      "a = a + b",
+      "b = a - b",
+      "if a > 10:",
+      "    print(\"grand\")",
+      "else:",
+      "    print(\"petit\")"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de a après la ligne « a = a + b » ?",
+     "reponse": 11,
+     "aide": "On calcule a + b avec les valeurs actuelles, puis on range le résultat dans a.",
+     "explication": "a = 4 + 7 = **11**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de b à la fin des quatre premières lignes ?",
+     "reponse": 4,
+     "aide": "Pour b = a - b, utilise la NOUVELLE valeur de a.",
+     "explication": "b = a − b = 11 − 7 = **4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait la fin du programme ?",
+     "options": [
+      "Il affiche grand",
+      "Il affiche petit",
+      "Il n’affiche rien",
+      "Il provoque une erreur"
+     ],
+     "reponse": 0,
+     "aide": "Teste la condition a > 10 avec la valeur de a trouvée plus haut.",
+     "explication": "a vaut 11, et 11 > 10 est vrai : le bloc du « if » s’exécute, et le programme **affiche grand**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut a % 3, avec la valeur finale de a ?",
+     "reponse": 2,
+     "aide": "Le symbole % donne le reste de la division.",
+     "explication": "11 = 3 × 3 + 2 : le reste vaut **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6f5e298-1a8e-59b5-af64-b30f7610eac3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand le capital de Léa atteindra-t-il 1 500 € ?",
+   "competence": "programmer",
+   "situation": "Léa place 1 000 € à intérêts composés de 10 % par an. Elle écrit un programme pour savoir au bout de combien d’années son capital atteindra 1 500 €, et note les premiers tours dans un tableau.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Léa",
+     "blocs": [
+      "capital = 1000",
+      "n = 0",
+      "while capital < 1500:",
+      "    capital = capital * 1.1",
+      "    n = n + 1"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "Trace des premiers tours",
+     "colonnes": [
+      "Après le tour",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "capital (€)",
+       "1000",
+       "1100",
+       "1210",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Complète la trace : quelle est la valeur de capital après le tour 3 ?",
+     "reponse": 1331,
+     "unite": "€",
+     "aide": "À chaque tour, on multiplie la valeur précédente par 1,1.",
+     "explication": "1210 × 1,1 = **1 331 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de n quand la boucle s’arrête ?",
+     "reponse": 5,
+     "aide": "Continue la trace : le capital passe de 1 331 à 1 464,1 puis… jusqu’à ce que la condition devienne fausse.",
+     "explication": "Tour 4 : 1 464,10 € (< 1 500, on continue). Tour 5 : 1 610,51 € (≥ 1 500, la boucle s’arrête). Donc **n = 5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur finale de capital, arrondie au centime ?",
+     "reponse": 1610.51,
+     "unite": "€",
+     "tolerance": 0.005,
+     "aide": "Multiplie 1 464,1 par 1,1.",
+     "explication": "1 464,1 × 1,1 = **1 610,51 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Léa utilise-t-elle une boucle while plutôt qu’une boucle for ?",
+     "options": [
+      "On ne connaît pas à l’avance le nombre de tours à faire",
+      "Parce que for ne sait pas multiplier par 1,1",
+      "Parce que while est toujours plus rapide que for",
+      "Parce qu’on ne peut pas écrire de test dans un for"
+     ],
+     "reponse": 0,
+     "aide": "Sais-tu, avant de lancer le programme, combien de tours il faudra ?",
+     "explication": "Le nombre de tours dépend du seuil à atteindre : on répète **tant que** la condition est vraie, sans connaître ce nombre d’avance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On remplace 1500 par 2000 dans le programme. Quelle sera alors la valeur finale de n ?",
+     "reponse": 8,
+     "aide": "Continue la trace : 1 610,51 puis 1 771,56 puis… compare à 2 000 à chaque tour.",
+     "explication": "Tour 6 : 1 771,56 ; tour 7 : 1 948,72 (< 2 000) ; tour 8 : 2 143,59 (≥ 2 000). On s’arrête à **n = 8**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6f5e298-1a8e-59b5-af64-b30f7610eac3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Que calcule la fonction mystere ?",
+   "competence": "raisonner",
+   "situation": "Sonia trouve une fonction dans le programme de son club d’informatique, sans commentaire. Pour savoir ce qu’elle calcule, elle suit son exécution pour n = 6, puis en tire une conclusion.",
+   "documents": [
+    {
+     "id": "fonction",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction mystere",
+     "blocs": [
+      "def mystere(n):",
+      "    s = 0",
+      "    for i in range(1, n + 1):",
+      "        if i % 2 == 0:",
+      "            s = s + i",
+      "    return s"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "Trace de mystere(6)",
+     "colonnes": [
+      "i",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "s après le tour",
+       0,
+       2,
+       2,
+       "?",
+       6,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Trace écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de s après le tour i = 4 (première case manquante) ?",
+     "reponse": 6,
+     "aide": "i = 4 est pair : s augmente de 4.",
+     "explication": "Avant le tour, s = 2. Comme 4 % 2 == 0, on ajoute 4 : s = **6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur renvoyée par mystere(6) (dernière case manquante) ?",
+     "reponse": 12,
+     "aide": "i = 6 est pair ; i = 5 ne change pas s.",
+     "explication": "s = 6 + 6 = **12**, et la fonction renvoie 12."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que calcule mystere(n) ?",
+     "options": [
+      "La somme des entiers pairs de 1 à n",
+      "La somme des entiers de 1 à n",
+      "La somme des entiers impairs de 1 à n",
+      "Le nombre d’entiers pairs de 1 à n"
+     ],
+     "reponse": 0,
+     "aide": "Regarde quelles valeurs de i sont ajoutées à s : celles pour lesquelles i % 2 == 0.",
+     "explication": "Le test i % 2 == 0 retient les nombres pairs, que l’on **additionne** : mystere(6) = 2 + 4 + 6."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule mystere(100) sans exécuter le programme.",
+     "reponse": 2550,
+     "aide": "2 + 4 + … + 100 = 2 × (1 + 2 + … + 50) : utilise n(n + 1) ÷ 2.",
+     "explication": "2 × (1 + 2 + … + 50) = 2 × 50 × 51 ÷ 2 = 50 × 51 = **2 550**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On remplace la dernière ligne « return s » par « print(s) ». Que se passe-t-il pour l’expression mystere(6) + 1 ?",
+     "options": [
+      "Il affiche 12, puis une erreur : la fonction ne renvoie rien",
+      "Il affiche 13 : print renvoie 12, qui s’additionne à 1 sans erreur",
+      "Il affiche 12 puis 13 : le calcul se fait sans aucune erreur",
+      "Rien ne s’affiche : print empêche tout calcul sur le résultat"
+     ],
+     "reponse": 0,
+     "aide": "print affiche une valeur, mais que renvoie alors la fonction ?",
+     "explication": "print **affiche** s mais ne le renvoie pas : mystere(6) vaut None, et None + 1 provoque une erreur. Seul return rend la valeur réutilisable."
+    }
+   ]
+  },
+  {
+   "chapitre": "44eb7d0f-3683-5ca2-82e8-8a9aa4f28a23",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les cinq notes de Samir dans une liste",
+   "competence": "programmer",
+   "situation": "Samir enregistre les notes de ses cinq derniers devoirs de maths dans une liste Python L. Il a noté, dans un tableau, l’indice et la valeur de chaque élément.",
+   "documents": [
+    {
+     "id": "liste",
+     "type": "tableau",
+     "titre": "La liste L = [12, 5, 8, 20, 3]",
+     "colonnes": [
+      "Indice",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Valeur",
+       12,
+       5,
+       8,
+       20,
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liste",
+     "enonce": "Touche la case qui correspond à L[3].",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Les indices commencent à 0 : l’indice 3 est le quatrième élément.",
+     "explication": "L[3] est le **quatrième** élément, **20**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut L[-1] ?",
+     "reponse": 3,
+     "aide": "L’indice −1 désigne le dernier élément.",
+     "explication": "L[-1] est le dernier élément de la liste : **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut len(L) ?",
+     "reponse": 5,
+     "aide": "len compte les éléments, pas les indices.",
+     "explication": "Il y a cinq éléments : len(L) = **5**. Les indices valides vont de 0 à 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "On exécute L[1] = 9 puis L.append(1). Que vaut L ensuite ?",
+     "options": [
+      "[12, 9, 8, 20, 3, 1]",
+      "[12, 5, 8, 20, 3, 9, 1]",
+      "[9, 5, 8, 20, 3, 1]",
+      "[12, 9, 8, 20, 3]"
+     ],
+     "reponse": 0,
+     "aide": "L[1] = 9 remplace le deuxième élément ; append ajoute à la fin.",
+     "explication": "L[1] = 9 remplace le 5 par 9, puis append(1) ajoute 1 en fin de liste : **[12, 9, 8, 20, 3, 1]**."
+    }
+   ]
+  },
+  {
+   "chapitre": "44eb7d0f-3683-5ca2-82e8-8a9aa4f28a23",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des listes en compréhension à suivre pas à pas",
+   "competence": "programmer",
+   "situation": "Bastien découvre les listes en compréhension. Il veut prévoir le contenu des listes construites par un petit programme avant de l’exécuter.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Bastien",
+     "blocs": [
+      "L = [k * k for k in range(1, 7)]",
+      "M = [k for k in L if k % 2 == 0]",
+      "s = 0",
+      "for x in M:",
+      "    s = s + x"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est la liste L ?",
+     "options": [
+      "[1, 4, 9, 16, 25, 36]",
+      "[0, 1, 4, 9, 16, 25]",
+      "[1, 4, 9, 16, 25, 36, 49]",
+      "[1, 2, 3, 4, 5, 6]"
+     ],
+     "reponse": 0,
+     "aide": "range(1, 7) parcourt 1, 2, 3, 4, 5, 6 (7 est exclu).",
+     "explication": "k prend les valeurs 1 à 6 : on obtient les carrés **[1, 4, 9, 16, 25, 36]**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’éléments contient la liste M ?",
+     "reponse": 3,
+     "aide": "M ne garde que les éléments pairs de L.",
+     "explication": "Les carrés pairs sont 4, 16 et 36 : M = [4, 16, 36], donc len(M) = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut M[1] + L[-2] ?",
+     "reponse": 41,
+     "aide": "M[1] est le deuxième élément de M ; L[-2] est l’avant-dernier élément de L.",
+     "explication": "M[1] = 16 et L[-2] = 25 : 16 + 25 = **41**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de s à la fin du programme ?",
+     "reponse": 56,
+     "aide": "La boucle additionne tous les éléments de M.",
+     "explication": "s = 4 + 16 + 36 = **56**."
+    }
+   ]
+  },
+  {
+   "chapitre": "44eb7d0f-3683-5ca2-82e8-8a9aa4f28a23",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une suite, sa liste et le seuil à dépasser",
+   "competence": "programmer",
+   "situation": "Une suite (u) est définie par u(0) = 3 et u(n+1) = 3u(n) − 4. Camille a écrit deux fonctions : l’une range les premiers termes dans une liste, l’autre cherche à partir de quel rang on dépasse un seuil.",
+   "documents": [
+    {
+     "id": "termes",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction termes",
+     "blocs": [
+      "def termes(n):",
+      "    u = 3",
+      "    L = [u]",
+      "    for i in range(n):",
+      "        u = 3 * u - 4",
+      "        L.append(u)",
+      "    return L"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    },
+    {
+     "id": "depasse",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction depasse",
+     "blocs": [
+      "def depasse(seuil):",
+      "    u = 3",
+      "    n = 0",
+      "    while u <= seuil:",
+      "        u = 3 * u - 4",
+      "        n = n + 1",
+      "    return n"
+     ],
+     "source": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le dernier élément de la liste renvoyée par termes(3) ?",
+     "reponse": 29,
+     "aide": "Calcule u(1), u(2), u(3) avec u(n+1) = 3u(n) − 4.",
+     "explication": "u(1) = 5, u(2) = 11, u(3) = 29 : la liste est [3, 5, 11, 29], et son dernier élément est **29**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’éléments contient la liste renvoyée par termes(6) ?",
+     "reponse": 7,
+     "aide": "La liste commence par u(0), puis chaque tour de boucle ajoute un terme.",
+     "explication": "1 terme de départ + 6 tours de boucle : len = **7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On déplace « return L » dans la boucle for, au même retrait que « L.append(u) ». Que renvoie alors termes(3) ?",
+     "options": [
+      "[3, 5], car la fonction s’arrête dès le premier tour",
+      "[3, 5, 11, 29], comme avant",
+      "[3], car la boucle ne démarre pas",
+      "Une erreur, car return ne peut pas être dans une boucle"
+     ],
+     "reponse": 0,
+     "aide": "Que se passe-t-il dès que Python rencontre return ?",
+     "explication": "Dès le premier tour, L vaut [3, 5], puis return **termine la fonction** : elle renvoie [3, 5]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que renvoie depasse(100) ?",
+     "reponse": 5,
+     "aide": "Suis les valeurs de u : 3, 5, 11, … jusqu’à dépasser 100, en comptant les tours.",
+     "explication": "u prend les valeurs 3, 5, 11, 29, 83 (≤ 100, on continue), puis 245 (> 100). Il y a eu 5 tours : **n = 5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des éléments de la liste renvoyée par termes(4) ?",
+     "reponse": 131,
+     "aide": "termes(4) = [3, 5, 11, 29, 83]. Additionne.",
+     "explication": "3 + 5 + 11 + 29 + 83 = **131**."
+    }
+   ]
+  }
+ ]
+}

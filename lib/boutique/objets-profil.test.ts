@@ -14,13 +14,13 @@ const ligne = (patch: Record<string, unknown>) => ({
 })
 
 describe('categorieObjet', () => {
-  it('range bannières, tenues et accessoires', () => {
+  it('range bannières et accessoires', () => {
     expect(categorieObjet('banner')).toBe('banniere')
-    expect(categorieObjet('outfit')).toBe('tenue')
     expect(categorieObjet('equipment')).toBe('accessoire')
   })
 
   it('refuse les rayons qui ne se vendent pas en gemmes', () => {
+    expect(categorieObjet('outfit')).toBeNull() // les tenues habillaient l’avatar dessiné, retiré
     expect(categorieObjet('hair_style')).toBeNull()
     expect(categorieObjet('body_skin')).toBeNull()
     expect(categorieObjet(null)).toBeNull()

@@ -1,0 +1,4291 @@
+{
+ "niveau": "1re",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "f4a8cf17-671f-5e39-b438-492e0ea466ea",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois villes, quatre chiffres",
+   "competence": "lire-tableau",
+   "situation": "Mira prépare un exposé sur la hiérarchie des métropoles. Elle a relevé quatre chiffres pour trois villes imaginaires et doit les rattacher aux critères de classement.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "tableau",
+     "titre": "Ardenne, Bastide et Cassel",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Ardenne",
+      "Bastide",
+      "Cassel"
+     ],
+     "lignes": [
+      [
+       "Sièges sociaux de grandes firmes",
+       120,
+       15,
+       40
+      ],
+      [
+       "Passagers de l’aéroport (millions par an)",
+       85,
+       12,
+       60
+      ],
+      [
+       "Étudiants (milliers)",
+       150,
+       60,
+       90
+      ],
+      [
+       "Organisations internationales installées",
+       14,
+       0,
+       2
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche la case qui chiffre la connectivité de Cassel.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "La connectivité mesure l’insertion dans les réseaux de transport : cherche la ligne des passagers.",
+     "explication": "La connectivité se lit dans les **aéroports**, les ports et les câbles : Cassel accueille **60 millions** de passagers par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois Ardenne compte-t-elle plus de sièges sociaux que Cassel ?",
+     "reponse": 3,
+     "unite": "fois",
+     "aide": "Divise le nombre de sièges d’Ardenne par celui de Cassel.",
+     "explication": "120 ÷ 40 = **3**. Les sièges sociaux mesurent le poids **économique** : Ardenne commande trois fois plus que Cassel."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque ligne du tableau selon le critère de classement qu’elle mesure.",
+     "categories": [
+      "Poids économique",
+      "Rayonnement culturel",
+      "Connectivité",
+      "Influence politique"
+     ],
+     "items": [
+      [
+       "Sièges sociaux de grandes firmes",
+       0
+      ],
+      [
+       "Étudiants (milliers)",
+       1
+      ],
+      [
+       "Passagers de l’aéroport",
+       2
+      ],
+      [
+       "Organisations internationales installées",
+       3
+      ]
+     ],
+     "aide": "Universités et étudiants relèvent du rayonnement culturel ; les institutions internationales, de l’influence politique.",
+     "explication": "Sièges sociaux : **poids économique**. Étudiants : **rayonnement culturel**. Passagers : **connectivité**. Organisations internationales : **influence politique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4a8cf17-671f-5e39-b438-492e0ea466ea",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Plus peuplée, mais moins influente",
+   "competence": "analyser-document",
+   "situation": "Un journaliste compare quatre métropoles imaginaires. L’une est la plus peuplée de la liste, mais les investisseurs la citent rarement. Aide Inès à comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Population des quatre métropoles",
+     "source": "Chiffres arrondis, inventés pour l’exercice.",
+     "categories": [
+      "Kantara",
+      "Nordheim",
+      "Soleira",
+      "Port-Aurore"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        22,
+        11,
+        18,
+        9
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en millions",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "valeurs": false
+    },
+    {
+     "id": "flux",
+     "type": "tableau",
+     "titre": "Insertion dans les flux mondiaux",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Kantara",
+      "Nordheim",
+      "Soleira",
+      "Port-Aurore"
+     ],
+     "lignes": [
+      [
+       "Destinations aériennes directes",
+       20,
+       140,
+       30,
+       110
+      ],
+      [
+       "Sièges sociaux de grandes firmes",
+       4,
+       90,
+       6,
+       55
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la métropole la plus peuplée.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "**Kantara** compte 22 millions d’habitants : c’est la barre la plus haute."
+    },
+    {
+     "type": "zone",
+     "document": "flux",
+     "enonce": "Touche la case qui mesure la connectivité de Kantara.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "La connectivité se lit dans les liaisons aériennes, pas dans les sièges sociaux.",
+     "explication": "Kantara n’a que **20 destinations** aériennes directes : elle est peu connectée aux grands réseaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois Nordheim a-t-elle plus de destinations aériennes directes que Kantara ?",
+     "reponse": 7,
+     "unite": "fois",
+     "aide": "Divise 140 par 20.",
+     "explication": "140 ÷ 20 = **7**. Nordheim, deux fois moins peuplée, est bien plus reliée au monde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison de Kantara et de Nordheim ?",
+     "options": [
+      "Une métropole très peuplée peut avoir peu de fonctions de commandement",
+      "La population d’une métropole suffit à mesurer son influence mondiale",
+      "Les métropoles les moins peuplées sont toujours les moins connectées",
+      "Le nombre de sièges sociaux ne dépend jamais de la connectivité"
+     ],
+     "reponse": 0,
+     "aide": "Compare le rang de population et le rang d’insertion dans les flux.",
+     "explication": "Kantara est la plus peuplée mais la moins connectée : **la population ne fait pas les fonctions de commandement**. Beaucoup de métropoles du Sud sont dans ce cas."
+    }
+   ]
+  },
+  {
+   "chapitre": "f4a8cf17-671f-5e39-b438-492e0ea466ea",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre quartiers, une même métropole du Sud",
+   "competence": "observer-schema",
+   "situation": "Léo visite Port-Soleil, métropole imaginaire du Sud. Il lit un reportage et le confronte à un plan schématique de la ville pour comprendre ses inégalités internes.",
+   "documents": [
+    {
+     "id": "reportage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un reportage à Port-Soleil",
+     "source": "Reportage imaginé pour l’exercice.",
+     "blocs": [
+      "Près du vieux port, un ancien quartier ouvrier a été rénové : les façades sont repeintes, les cafés ont changé de clientèle et les loyers ont doublé en dix ans. Beaucoup d’anciens habitants sont partis vivre plus loin.",
+      "De l’autre côté de l’avenue, un quartier résidentiel est entouré d’un haut mur. Des gardiens contrôlent l’entrée jour et nuit : seuls les habitants et leurs invités passent.",
+      "Derrière les tours de bureaux, des milliers de familles vivent dans des cabanes de tôle, sans eau courante. Le quartier d’affaires n’est qu’à dix minutes à pied."
+     ]
+    },
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan schématique de Port-Soleil",
+     "source": "Schéma imaginé pour l’exercice.",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 8,
+       "l": 324,
+       "h": 234,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 18,
+       "y": 18,
+       "l": 148,
+       "h": 100,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "affaires",
+       "zone": true,
+       "texte": "Quartier d’affaires"
+      },
+      {
+       "forme": "rect",
+       "x": 174,
+       "y": 18,
+       "l": 148,
+       "h": 100,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "renove",
+       "zone": true,
+       "texte": "Centre ancien rénové"
+      },
+      {
+       "forme": "rect",
+       "x": 18,
+       "y": 126,
+       "l": 148,
+       "h": 100,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "precaire",
+       "zone": true,
+       "texte": "Quartier précaire"
+      },
+      {
+       "forme": "rect",
+       "x": 174,
+       "y": 126,
+       "l": 148,
+       "h": 100,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "clos",
+       "zone": true,
+       "texte": "Résidence fermée"
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 98,
+       "emoji": "🏢",
+       "taille": 22
+      },
+      {
+       "forme": "emoji",
+       "x": 196,
+       "y": 98,
+       "emoji": "🏗️",
+       "taille": 22
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 206,
+       "emoji": "🏚️",
+       "taille": 22
+      },
+      {
+       "forme": "emoji",
+       "x": 196,
+       "y": 206,
+       "emoji": "🏡",
+       "taille": 22
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche, sur le plan, l’espace décrit dans le deuxième paragraphe du reportage.",
+     "reponse": [
+      "clos"
+     ],
+     "aide": "Cherche le quartier protégé par un mur et des gardiens.",
+     "explication": "Un quartier résidentiel **clos et gardé**, c’est une *gated community* : la ségrégation socio-spatiale prend la forme d’un mur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque observation du reportage dans le phénomène qu’elle illustre.",
+     "categories": [
+      "Gentrification",
+      "Ségrégation socio-spatiale",
+      "Quartier d’affaires et bidonville côte à côte"
+     ],
+     "items": [
+      [
+       "Les loyers doublent et les anciens habitants s’en vont",
+       0
+      ],
+      [
+       "Les cafés changent de clientèle",
+       0
+      ],
+      [
+       "Un mur et des gardiens contrôlent l’entrée",
+       1
+      ],
+      [
+       "Un quartier réservé aux habitants et à leurs invités",
+       1
+      ],
+      [
+       "Des cabanes de tôle à dix minutes à pied des bureaux",
+       2
+      ],
+      [
+       "Des familles sans eau courante derrière des tours",
+       2
+      ]
+     ],
+     "aide": "La gentrification chasse les anciens habitants ; la ségrégation sépare les groupes ; le troisième phénomène juxtapose richesse et misère.",
+     "explication": "Loyers et clientèle qui changent : **gentrification**. Mur et gardiens : **ségrégation socio-spatiale**. Cabanes près des tours : la **coexistence** que l’on retrouve à Bombay avec Dharavi."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’espace du plan qui ressemble à Dharavi, à Bombay : un bidonville proche d’un quartier d’affaires.",
+     "reponse": [
+      "precaire"
+     ],
+     "aide": "Il se trouve juste sous le quartier d’affaires, comme dans le troisième paragraphe.",
+     "explication": "Le **quartier précaire** touche le quartier d’affaires : c’est la situation de Dharavi, bidonville voisin des bureaux de Bombay."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble le reportage et le plan ?",
+     "options": [
+      "Une métropole peut être riche et très inégale à l’intérieur d’elle-même",
+      "Une métropole qui se modernise fait disparaître ses quartiers pauvres",
+      "Les inégalités n’existent qu’entre métropoles, pas à l’intérieur",
+      "Les quartiers fermés sont une solution aux bidonvilles"
+     ],
+     "reponse": 0,
+     "aide": "Relis les trois paragraphes : que partagent-ils ?",
+     "explication": "Quartier d’affaires, centre gentrifié, résidence fermée et bidonville **cohabitent** : les inégalités se jouent aussi **dans** la métropole."
+    }
+   ]
+  },
+  {
+   "chapitre": "8214dfca-5e27-5ec8-b7b7-18d2ad2f23e1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Soixante-dix minutes pour aller travailler",
+   "competence": "analyser-texte",
+   "situation": "Lina habite avec ses parents dans un lotissement, loin de la métropole où travaille son père. Elle raconte un trajet qui ressemble à celui de milliers de familles.",
+   "documents": [
+    {
+     "id": "lina",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le journal de Lina",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Ma famille a acheté une maison dans un [[a|lotissement]] récent, à 35 kilomètres de la métropole. Le terrain y coûtait beaucoup moins cher qu’en ville.",
+      "Mon père part à 6 h 30 pour rejoindre son bureau du quartier d’affaires. Il met 70 minutes à l’aller et 70 minutes au retour, cinq jours par semaine."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lina",
+     "enonce": "Touche le mot qui désigne le type d’habitat que la périurbanisation multiplie.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est le mot que Lina emploie pour parler de son quartier.",
+     "explication": "La périurbanisation étend les **lotissements** toujours plus loin de la ville, là où le foncier est moins cher."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes le père de Lina passe-t-il dans les transports en une semaine de travail ?",
+     "reponse": 700,
+     "unite": "minutes",
+     "aide": "Un aller-retour dure 2 × 70 minutes ; il y en a cinq par semaine.",
+     "explication": "70 × 2 × 5 = **700 minutes**, soit presque douze heures par semaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la famille de Lina a-t-elle choisi de s’installer si loin ?",
+     "options": [
+      "Le terrain y coûtait beaucoup moins cher qu’en ville",
+      "Le quartier d’affaires s’y est installé récemment",
+      "Les loyers y sont plus élevés qu’au centre",
+      "La métropole a interdit de construire en ville"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase du journal.",
+     "explication": "Le **prix du foncier**, très élevé au centre, repousse les ménages vers les périphéries."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de conclusion.",
+     "texte": "Ce trajet quotidien entre le domicile et le travail est un déplacement ___. Il s’allonge à cause de la ___.",
+     "reponses": [
+      [
+       "pendulaire"
+      ],
+      [
+       "périurbanisation",
+       "periurbanisation"
+      ]
+     ],
+     "banque": [
+      "pendulaire",
+      "périurbanisation",
+      "gentrification",
+      "ségrégation"
+     ],
+     "aide": "Le trajet va et vient comme le balancier d’une pendule.",
+     "explication": "Un **déplacement pendulaire** est un trajet quotidien domicile-travail ; la **périurbanisation** en allonge la distance."
+    }
+   ]
+  },
+  {
+   "chapitre": "8214dfca-5e27-5ec8-b7b7-18d2ad2f23e1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les docks de Port-Neuf changent de métier",
+   "competence": "se-reperer-temps",
+   "situation": "Tom étudie le quartier des docks de Port-Neuf, une métropole imaginaire. Il confronte la chronologie du quartier et l’évolution du prix de l’immobilier.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Histoire du quartier des docks",
+     "source": "Dates imaginées pour l’exercice.",
+     "debut": 1960,
+     "fin": 2020,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "friche",
+       "debut": 1968,
+       "fin": 1998,
+       "nom": "Friche",
+       "teinte": "brun"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "navire",
+       "date": 1968,
+       "nom": "Dernier navire"
+      },
+      {
+       "id": "plan",
+       "date": 1998,
+       "nom": "Plan de rénovation"
+      },
+      {
+       "id": "affaires",
+       "date": 2006,
+       "nom": "Quartier d’affaires"
+      },
+      {
+       "id": "eco",
+       "date": 2016,
+       "nom": "Écoquartier"
+      }
+     ]
+    },
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Prix de l’immobilier dans le quartier",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "1985",
+      "2000",
+      "2020"
+     ],
+     "lignes": [
+      [
+       "Prix moyen du m² (€)",
+       900,
+       2700,
+       9000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin à l’activité portuaire du quartier.",
+     "reponse": [
+      "navire"
+     ],
+     "aide": "Après lui, les quais sont à l’abandon.",
+     "explication": "Le **dernier navire** quitte les docks en 1968 : commence alors la période de friche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années les docks sont-ils restés une friche, avant le plan de rénovation ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Mesure la période brune sur la frise.",
+     "explication": "De 1968 à 1998 : 1998 − 1968 = **30 ans**. Les friches portuaires peuvent attendre longtemps leur reconversion."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le prix du m² de 2020 est-il supérieur à celui de 1985 ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Divise 9 000 par 900.",
+     "explication": "9 000 ÷ 900 = **10**. Les anciens docks rénovés ont été rattrapés par le prix du foncier central."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel changement explique le mieux cette hausse des prix ?",
+     "options": [
+      "Le quartier est devenu un lieu de bureaux et de logements haut de gamme",
+      "Les docks ont repris peu à peu leur activité portuaire d’autrefois",
+      "La métropole a strictement limité les constructions près du centre",
+      "Les habitants de ce quartier ont tous quitté la métropole pour le périurbain"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que deviennent les friches portuaires des métropoles.",
+     "explication": "Réhabilitées en **quartier d’affaires et en écoquartier**, d’anciennes friches portuaires deviennent des espaces centraux très chers."
+    }
+   ]
+  },
+  {
+   "chapitre": "8214dfca-5e27-5ec8-b7b7-18d2ad2f23e1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où s’arrête la métropole ?",
+   "competence": "observer-schema",
+   "situation": "Un urbaniste dessine le plan d’une métropole imaginaire pour une réunion publique. Un élu affirme qu’elle s’arrête aux limites de la commune centrale : le plan dit autre chose.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan schématique d’une métropole",
+     "source": "Schéma imaginé pour l’exercice.",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 140,
+       "rx": 158,
+       "ry": 112,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "periurbain",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 140,
+       "rx": 108,
+       "ry": 76,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "banlieue",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 140,
+       "rx": 54,
+       "ry": 38,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "centre",
+       "zone": true,
+       "texte": "Centre"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 84,
+       "texte": "Banlieues",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 52,
+       "texte": "Lotissements",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 275,
+       "cy": 92,
+       "r": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "poleb",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 232,
+       "y": 14,
+       "texte": "Pôle B : bureaux, hôtels",
+       "vers": [
+        270,
+        82
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        224,
+        140
+       ],
+       "a": [
+        334,
+        140
+       ],
+       "teinte": "brun",
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 296,
+       "y": 128,
+       "texte": "Autoroute",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 150,
+       "l": 62,
+       "h": 22,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "logis",
+       "zone": true,
+       "texte": "Entrepôts"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        46,
+        176
+       ],
+       "a": [
+        118,
+        150
+       ],
+       "teinte": "violet",
+       "style": "pointilles",
+       "fleche": "fin",
+       "epaisseur": 2
+      },
+      {
+       "forme": "etiquette",
+       "x": 70,
+       "y": 232,
+       "texte": "Trajets quotidiens",
+       "vers": [
+        72,
+        164
+       ]
+      }
+     ]
+    },
+    {
+     "id": "elu",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Propos d’un élu",
+     "source": "Propos imaginés pour l’exercice.",
+     "blocs": [
+      "« La métropole s’arrête là où s’arrête la commune centrale. Ce qu’il y a autour ne nous regarde pas. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces espaces du centre vers l’extérieur, comme sur le plan.",
+     "items": [
+      "Le centre d’affaires",
+      "Les banlieues",
+      "Les lotissements périurbains"
+     ],
+     "aide": "Suis les cercles du plan, du plus petit au plus grand.",
+     "explication": "Du centre vers le bord : **centre d’affaires → banlieues → lotissements périurbains**. L’urbanisation s’étend en couronnes."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’edge city : un pôle d’activités développé en périphérie.",
+     "reponse": [
+      "poleb"
+     ],
+     "aide": "Cherche un pôle d’activités loin du centre, dans la couronne extérieure.",
+     "explication": "Le **pôle B** réunit bureaux et hôtels à l’écart du centre : c’est une *edge city*. Sa présence rend la métropole **polycentrique**."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’équipement qui s’installe le long d’un grand axe de transport.",
+     "reponse": [
+      "logis"
+     ],
+     "aide": "Il se trouve juste à côté de l’autoroute.",
+     "explication": "Les **entrepôts** et plateformes logistiques s’installent le long des axes : l’autoroute sert à leurs camions."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les propos de l’élu ne décrivent-ils pas bien la métropole ?",
+     "options": [
+      "Les trajets et les activités débordent largement la commune centrale",
+      "La commune centrale occupe en réalité toute la surface du plan",
+      "Les périphéries ne comptent aucun habitant ni aucune activité",
+      "Les limites administratives sont toujours plus larges que la métropole"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la flèche pointillée et l’edge city : où vivent et travaillent les habitants ?",
+     "explication": "Les **déplacements pendulaires** et les pôles périphériques dépassent la commune : la métropole se lit dans son **aire d’influence**, pas dans ses limites administratives."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : avec des pôles secondaires comme le pôle B, la métropole…",
+     "texte": "Avec la naissance de pôles comme le pôle B, la métropole se ___.",
+     "reponses": [
+      [
+       "polycentrise"
+      ]
+     ],
+     "banque": [
+      "polycentrise",
+      "gentrifie",
+      "densifie",
+      "ferme"
+     ],
+     "aide": "Le mot contient « centre » et « plusieurs ».",
+     "explication": "Une métropole qui développe plusieurs pôles autour du centre **se polycentrise**."
+    }
+   ]
+  },
+  {
+   "chapitre": "20e28d7f-2957-5afb-a8b2-278ed88e13e6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Paris et les autres",
+   "competence": "lire-carte",
+   "situation": "Hugo prépare une fiche sur la métropolisation en France. Il place quatre villes sur la carte, puis il compare le nombre d’habitants de leurs aires urbaines.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre métropoles françaises",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "aires",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Population des aires urbaines",
+     "source": "Ordres de grandeur arrondis.",
+     "categories": [
+      "Paris",
+      "Lyon",
+      "Marseille-Aix",
+      "Toulouse"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        13,
+        2.3,
+        1.9,
+        1.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en millions",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la seule métropole française de rang mondial.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est la capitale.",
+     "explication": "**A** est Paris, la seule métropole française de rang mondial : sièges du CAC 40, place financière, hubs de Roissy et d’Orly."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la métropole régionale spécialisée dans l’aéronautique.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle se trouve dans le Sud-Ouest.",
+     "explication": "**B** est Toulouse, métropole de l’aéronautique et du spatial."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’aire urbaine de Paris compte environ combien de fois plus d’habitants que celle de Lyon ? (Arrondis à l’unité.)",
+     "reponse": 6,
+     "tolerance": 0.5,
+     "unite": "fois",
+     "aide": "Divise 13 par 2,3.",
+     "explication": "13 ÷ 2,3 ≈ 5,7, soit environ **6 fois** plus : c’est ce poids démesuré que l’on appelle macrocéphalie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan de Hugo.",
+     "texte": "On parle de ___ pour le poids démesuré de Paris. Son aire urbaine produit près d’un ___ du PIB national.",
+     "reponses": [
+      [
+       "macrocéphalie",
+       "macrocephalie"
+      ],
+      [
+       "tiers"
+      ]
+     ],
+     "banque": [
+      "macrocéphalie",
+      "tiers",
+      "quart",
+      "gentrification"
+     ],
+     "aide": "Le premier mot contient « tête » (céphalé en grec).",
+     "explication": "La **macrocéphalie** désigne le poids démesuré d’une capitale : l’aire parisienne pèse près d’un **tiers** du PIB."
+    }
+   ]
+  },
+  {
+   "chapitre": "20e28d7f-2957-5afb-a8b2-278ed88e13e6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le rideau de fer de Valmont",
+   "competence": "lire-graphique",
+   "situation": "Sonia est née à Valmont, ville moyenne imaginaire. Elle lit un reportage sur le centre-ville, puis compare avec un graphique de la vacance des commerces.",
+   "documents": [
+    {
+     "id": "reportage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le centre de Valmont",
+     "source": "Reportage imaginé pour l’exercice.",
+     "blocs": [
+      "À Valmont, 22 000 habitants, plusieurs boutiques de la rue principale ont baissé leur rideau. Les jeunes partent faire leurs études dans la métropole voisine et beaucoup ne reviennent pas.",
+      "En 2018, la ville est entrée dans le programme Action cœur de ville. Les habitants, eux, parlent encore d’un sentiment d’[[a|abandon]]."
+     ]
+    },
+    {
+     "id": "vacance",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Locaux commerciaux vides au centre de Valmont",
+     "source": "Chiffres inventés pour l’exercice.",
+     "categories": [
+      "2010",
+      "2015",
+      "2020",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Locaux vides",
+       "valeurs": [
+        6,
+        9,
+        14,
+        12
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Locaux commerciaux vides",
+      "unite": "en %",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de locaux vides a-t-elle augmenté entre 2010 et 2020 ?",
+     "reponse": 8,
+     "unite": "points",
+     "aide": "Lis la hauteur des barres de 2010 et 2020, puis soustrais.",
+     "explication": "14 − 6 = **8 points** : le centre de Valmont se vide, comme celui de beaucoup de villes moyennes."
+    },
+    {
+     "type": "zone",
+     "document": "vacance",
+     "enonce": "Touche la première année où la part de locaux vides recule.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la première barre plus basse que la précédente.",
+     "explication": "En **2023**, la vacance passe de 14 % à 12 % : un premier recul, après le début d’Action cœur de ville en 2018."
+    },
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche le mot qui dit ce que ressentent les habitants.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est dans la dernière phrase du reportage.",
+     "explication": "Dans les villes moyennes et les anciennes régions industrielles à l’écart de la métropolisation domine un sentiment d’**abandon**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces territoires : gagnent-ils de la croissance, ou sont-ils fragilisés par la métropolisation ?",
+     "categories": [
+      "Gagnent",
+      "Fragilisés"
+     ],
+     "items": [
+      [
+       "Toulouse, aéronautique et universités",
+       0
+      ],
+      [
+       "Rennes, enseignement supérieur et services",
+       0
+      ],
+      [
+       "Valmont, ville moyenne aux commerces fermés",
+       1
+      ],
+      [
+       "Un espace rural isolé qui vieillit",
+       1
+      ],
+      [
+       "Une ancienne région industrielle qui a perdu ses usines",
+       1
+      ]
+     ],
+     "aide": "La croissance se concentre dans une quinzaine d’aires urbaines.",
+     "explication": "Les **métropoles régionales** captent croissance et emplois qualifiés ; les **villes moyennes**, les espaces ruraux isolés et les anciennes régions industrielles sont fragilisés."
+    }
+   ]
+  },
+  {
+   "chapitre": "20e28d7f-2957-5afb-a8b2-278ed88e13e6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux maires, un préfet",
+   "competence": "argumenter",
+   "situation": "La préfète doit répartir une aide publique entre une métropole en pleine croissance et une ville moyenne en difficulté. Elle lit leurs demandes et un tableau sur l’emploi.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux demandes",
+     "source": "Débat imaginé pour l’exercice.",
+     "blocs": [
+      "Mme Roux, maire de la métropole d’Avonne : « Notre métropole attire laboratoires, étudiants et emplois qualifiés. Pour rester dans la course, il nous faut une ligne à grande vitesse et un pôle de compétitivité de plus. »",
+      "M. Faure, maire de Sainte-Aure, ville moyenne : « Chez nous, un commerce sur sept est fermé et les jeunes partent à Avonne. Nous demandons un programme pour rénover le centre : les habitants ont un sentiment d’[[a|abandon]]. »"
+     ]
+    },
+    {
+     "id": "emploi",
+     "type": "tableau",
+     "titre": "Évolution de l’emploi entre 2010 et 2020",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Type de territoire",
+      "Évolution de l’emploi"
+     ],
+     "lignes": [
+      [
+       "Métropole régionale (Avonne)",
+       "+ 11 %"
+      ],
+      [
+       "Ville moyenne (Sainte-Aure)",
+       "− 3 %"
+      ],
+      [
+       "Espace rural isolé",
+       "− 6 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "emploi",
+     "enonce": "Touche la case qui concerne la ville de M. Faure.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Sainte-Aure est une ville moyenne.",
+     "explication": "Sainte-Aure a perdu **3 %** de ses emplois : cela confirme les craintes de son maire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart, en points, entre l’évolution de l’emploi dans la métropole et dans l’espace rural isolé ?",
+     "reponse": 17,
+     "unite": "points",
+     "aide": "Attention au signe : 11 − (− 6).",
+     "explication": "11 − (− 6) = **17 points** : la métropolisation creuse l’écart entre territoires."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "enonce": "Touche le mot qui résume le sentiment des habitants de Sainte-Aure.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il apparaît à la fin de la prise de parole de M. Faure.",
+     "explication": "Le mot est **abandon** : il domine dans les territoires restés à l’écart de la métropolisation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure : accompagne-t-elle la métropolisation ou cherche-t-elle à en corriger les effets ?",
+     "categories": [
+      "Accompagne la métropolisation",
+      "Corrige ses effets"
+     ],
+     "items": [
+      [
+       "Une ligne à grande vitesse entre deux métropoles",
+       0
+      ],
+      [
+       "Un pôle de compétitivité autour d’un laboratoire",
+       0
+      ],
+      [
+       "Action cœur de ville : rénover un centre de ville moyenne",
+       1
+      ],
+      [
+       "Une aide pour rouvrir des commerces en centre-ville",
+       1
+      ]
+     ],
+     "aide": "Demande-toi qui bénéficie de la mesure : les grandes villes, ou celles qui sont à l’écart.",
+     "explication": "LGV et pôles de compétitivité **accompagnent** la métropolisation ; Action cœur de ville **corrige** certains de ses effets."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la préfète ne peut-elle pas satisfaire pleinement les deux maires ?",
+     "options": [
+      "Soutenir la métropole et corriger ses effets ne sont pas toujours compatibles",
+      "La loi interdit d’aider les villes moyennes avant les métropoles",
+      "Une ville moyenne ne peut recevoir aucune aide de l’État",
+      "Les métropoles n’ont besoin d’aucun équipement public"
+     ],
+     "reponse": 0,
+     "aide": "Les moyens publics sont limités : deux objectifs se disputent la même aide.",
+     "explication": "Les politiques publiques **accompagnent** la métropolisation tout en cherchant à en **corriger les effets** : les deux objectifs se concurrencent."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9fa9438-c709-5e14-882f-61066aa1b873",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les deux lois des métropoles",
+   "competence": "se-reperer-temps",
+   "situation": "Camille révise le statut des métropoles. Elle range deux lois sur une frise, puis repère sur une carte les trois métropoles dont le régime est particulier.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux lois sur les métropoles",
+     "debut": 2012,
+     "fin": 2018,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "maptam",
+       "date": 2014,
+       "nom": "Loi MAPTAM"
+      },
+      {
+       "id": "notre",
+       "date": 2015,
+       "nom": "Loi NOTRe"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre grandes villes",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la loi qui crée le statut de métropole.",
+     "reponse": [
+      "maptam"
+     ],
+     "aide": "C’est la première des deux, en 2014.",
+     "explication": "La loi **MAPTAM** de 2014 crée le statut de métropole."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait la loi NOTRe de 2015 ?",
+     "options": [
+      "Elle renforce les compétences des métropoles",
+      "Elle crée le statut de métropole",
+      "Elle supprime les métropoles de Lyon et de Marseille",
+      "Elle fixe la limite administrative de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Elle vient après la loi qui a créé le statut.",
+     "explication": "La loi **NOTRe** (2015) **renforce les compétences** des métropoles, un an après la loi MAPTAM."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois métropoles qui ont un régime particulier : le Grand Paris, Lyon et Marseille.",
+     "reponse": [
+      "a",
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Bordeaux n’en fait pas partie.",
+     "explication": "**A** Paris, **B** Lyon et **C** Marseille ont un régime particulier. Bordeaux (D) a le statut ordinaire de métropole."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La France compte 21 métropoles, plus celle de ___, qui exercent des compétences élargies : transports, développement économique, ___.",
+     "reponses": [
+      [
+       "Lyon"
+      ],
+      [
+       "logement",
+       "le logement"
+      ]
+     ],
+     "banque": [
+      "Lyon",
+      "Lille",
+      "logement",
+      "justice",
+      "défense"
+     ],
+     "aide": "La Métropole de Lyon a un statut à part.",
+     "explication": "21 métropoles **plus la Métropole de Lyon** exercent des compétences élargies : transports, développement économique, **logement**, déchets, aménagement."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9fa9438-c709-5e14-882f-61066aa1b873",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux communes voisines, deux réalités",
+   "competence": "lire-tableau",
+   "situation": "Deux communes imaginaires, Valmy-les-Tours et Bellerive, sont voisines dans la même métropole. Leur écart rappelle celui qu’on observe entre la Seine-Saint-Denis et les Hauts-de-Seine.",
+   "documents": [
+    {
+     "id": "communes",
+     "type": "tableau",
+     "titre": "Deux communes de la même métropole",
+     "source": "Communes et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Valmy-les-Tours",
+      "Bellerive"
+     ],
+     "lignes": [
+      [
+       "Revenu médian par personne (€ par mois)",
+       "1 100",
+       "2 200"
+      ],
+      [
+       "Élèves reçus au brevet (%)",
+       78,
+       95
+      ],
+      [
+       "Taux de chômage (%)",
+       17,
+       7
+      ],
+      [
+       "Logements sociaux (%)",
+       45,
+       12
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "communes",
+     "enonce": "Touche la case qui montre le plus fort taux de chômage.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Lis la ligne du chômage et compare les deux communes.",
+     "explication": "**17 %** à Valmy-les-Tours, contre 7 % à Bellerive : le chômage y est plus de deux fois plus fort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le revenu médian de Bellerive est-il plus élevé que celui de Valmy-les-Tours ?",
+     "reponse": 2,
+     "unite": "fois",
+     "aide": "Divise 2 200 par 1 100.",
+     "explication": "2 200 ÷ 1 100 = **2**. Des communes voisines peuvent vivre dans deux mondes économiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau sur les métropoles françaises ?",
+     "options": [
+      "De fortes inégalités peuvent séparer des communes voisines d’une même métropole",
+      "Les écarts de revenus n’existent qu’entre des régions éloignées l’une de l’autre",
+      "La réussite scolaire est identique dans toute l’étendue d’une métropole",
+      "Les communes d’une même métropole ont toutes à peu près le même niveau de vie"
+     ],
+     "reponse": 0,
+     "aide": "Les deux communes sont voisines : que dit l’écart ?",
+     "explication": "Revenus, réussite scolaire et accès à l’emploi diffèrent beaucoup entre communes **voisines** : une métropole se juge à l’**écart entre ses quartiers**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : réduit-il ou accentue-t-il les écarts entre quartiers ?",
+     "categories": [
+      "Réduit les écarts",
+      "Accentue les écarts"
+     ],
+     "items": [
+      [
+       "La rénovation urbaine (ANRU) dans les quartiers prioritaires",
+       0
+      ],
+      [
+       "Un tramway qui relie un quartier populaire au centre",
+       0
+      ],
+      [
+       "Des loyers si élevés au centre que les ménages modestes partent",
+       1
+      ],
+      [
+       "Des quartiers fermés réservés aux plus aisés",
+       1
+      ]
+     ],
+     "aide": "La politique de la ville et les transports visent à rapprocher les quartiers.",
+     "explication": "L’**ANRU** et le **tramway** cherchent à réduire les fractures ; le **logement cher** (éviction) et les **quartiers fermés** les accentuent."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9fa9438-c709-5e14-882f-61066aa1b873",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La ville mange la campagne",
+   "competence": "lire-graphique",
+   "situation": "L’agence d’urbanisme de la métropole imaginaire d’Avonne a comparé l’étalement de la ville et la croissance de sa population depuis 1990. Elle a aussi relevé quatre problèmes du quotidien.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Avonne, indice 100 en 1990",
+     "source": "Chiffres inventés pour l’exercice.",
+     "categories": [
+      "1990",
+      "2000",
+      "2010",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Surface artificialisée",
+       "valeurs": [
+        100,
+        125,
+        160,
+        200
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Population",
+       "valeurs": [
+        100,
+        110,
+        122,
+        135
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Indice",
+      "unite": "base 100 en 1990",
+      "min": 0,
+      "max": 220,
+      "pas": 20
+     }
+    },
+    {
+     "id": "releve",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le relevé de l’agence d’urbanisme",
+     "source": "Relevé imaginé pour l’exercice.",
+     "blocs": [
+      "Le loyer moyen a augmenté de 40 % en dix ans : des familles modestes quittent la métropole.",
+      "Chaque matin, des files de voitures bloquent les entrées de la ville et l’air devient irrespirable.",
+      "Une zone humide a été transformée en immense parking : l’eau de pluie ne s’infiltre plus.",
+      "Lors des canicules, le centre est bien plus chaud que les campagnes alentour."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage la surface artificialisée a-t-elle augmenté entre 1990 et 2020 ?",
+     "reponse": 100,
+     "unite": "%",
+     "aide": "L’indice passe de 100 à 200 : de combien a-t-il augmenté ?",
+     "explication": "De l’indice 100 à l’indice 200 : la surface a **doublé**, soit **+ 100 %**."
+    },
+    {
+     "type": "zone",
+     "document": "courbes",
+     "enonce": "Touche la première date où la surface artificialisée a augmenté de plus de 50 % par rapport à 1990.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Il faut que l’indice dépasse 150.",
+     "explication": "En **2010**, l’indice atteint 160 : c’est la première date au-dessus de 150."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2020, quel est l’écart, en points d’indice, entre la surface artificialisée et la population ?",
+     "reponse": 65,
+     "unite": "points",
+     "aide": "Lis les deux valeurs de 2020 : 200 et 135.",
+     "explication": "200 − 135 = **65 points** : la ville s’étale beaucoup plus vite que sa population ne croît."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle cet écart croissant entre les deux courbes ?",
+     "options": [
+      "L’étalement urbain consomme de plus en plus d’espace par habitant",
+      "La population diminue alors que la ville se densifie",
+      "Les sols sont de moins en moins artificialisés",
+      "La métropole a limité ses constructions depuis 1990"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce qui augmente le plus vite : les surfaces bâties ou les habitants.",
+     "explication": "Les surfaces bâties augmentent plus vite que la population : c’est l’**artificialisation des sols** par l’étalement. La densification est l’une des réponses des villes durables."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque constat du relevé au défi qu’il illustre.",
+     "paires": [
+      [
+       "Un loyer qui monte de 40 % en dix ans",
+       "Le logement cher"
+      ],
+      [
+       "Des files de voitures et un air irrespirable",
+       "La congestion et la pollution"
+      ],
+      [
+       "Une zone humide transformée en parking",
+       "L’artificialisation des sols"
+      ],
+      [
+       "Un centre plus chaud lors des canicules",
+       "L’adaptation au changement climatique"
+      ]
+     ],
+     "aide": "Chaque constat correspond à l’un des quatre défis des métropoles françaises.",
+     "explication": "Loyers : **logement cher** (éviction). Voitures : **congestion et pollution**. Parking sur zone humide : **artificialisation**. Centre plus chaud : îlots de chaleur et **changement climatique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1fb68a5-161a-502e-9676-402d6c597ca0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le smartphone d’Anaïs fait le tour du monde",
+   "competence": "analyser-document",
+   "situation": "Anaïs vient de recevoir un smartphone. Elle se demande où il a été conçu, fabriqué et assemblé : sa chaîne de production traverse plusieurs continents.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "La chaîne de production d’un smartphone",
+     "source": "Schéma simplifié d’après l’exemple du cours.",
+     "noeuds": [
+      {
+       "id": "conception",
+       "texte": "Conception et marketing en Californie",
+       "emoji": "💡"
+      },
+      {
+       "id": "fabrication",
+       "texte": "Fabrication des pièces en Asie",
+       "emoji": "🏭"
+      },
+      {
+       "id": "assemblage",
+       "texte": "Assemblage dans un autre pays",
+       "emoji": "🔧"
+      },
+      {
+       "id": "vente",
+       "texte": "Vente dans le monde entier",
+       "emoji": "🛒"
+      }
+     ],
+     "liens": [
+      {
+       "de": "conception",
+       "a": "fabrication"
+      },
+      {
+       "de": "fabrication",
+       "a": "assemblage"
+      },
+      {
+       "de": "assemblage",
+       "a": "vente"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape qui reste au Nord, là où se font la conception et le marketing.",
+     "reponse": [
+      "conception"
+     ],
+     "aide": "Cherche l’étape située en Californie.",
+     "explication": "La **conception** et le marketing restent dans les pays du Nord ; la fabrication part là où les coûts sont bas."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape qui se fait là où les coûts de production sont bas.",
+     "reponse": [
+      "fabrication"
+     ],
+     "aide": "Une firme fabrique ses pièces là où elle paie moins cher.",
+     "explication": "La **fabrication** est placée en Asie, où les coûts sont plus bas : c’est la logique de la division internationale du travail."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on ce partage des étapes de production entre plusieurs pays ?",
+     "options": [
+      "La division internationale du travail",
+      "La relocalisation de l’industrie nationale",
+      "La conteneurisation des marchandises",
+      "La périurbanisation des activités"
+     ],
+     "reponse": 0,
+     "aide": "Chaque pays se voit attribuer une tâche.",
+     "explication": "C’est la **DIT**, la division internationale du travail : elle explique les chaînes de valeur mondiales."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan d’Anaïs.",
+     "texte": "Ces étapes forment une ___ de valeur mondiale, pilotée par une firme ___.",
+     "reponses": [
+      [
+       "chaîne",
+       "chaine"
+      ],
+      [
+       "transnationale"
+      ]
+     ],
+     "banque": [
+      "chaîne",
+      "transnationale",
+      "locale",
+      "nationale"
+     ],
+     "aide": "La firme a des activités dans plusieurs pays.",
+     "explication": "Une **chaîne** de valeur mondiale est pilotée par une **firme transnationale**, qui fragmente la production."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1fb68a5-161a-502e-9676-402d6c597ca0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’usine de Kerlen ferme, puis rouvre",
+   "competence": "analyser-texte",
+   "situation": "Dans le bassin industriel imaginaire de Kerlen, l’entreprise Valtec a fermé une usine en 2004 avant d’en rouvrir une en 2022. Léa cherche ce qui a changé entre ces deux dates.",
+   "documents": [
+    {
+     "id": "emplois",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Emplois industriels dans le bassin de Kerlen",
+     "source": "Chiffres inventés pour l’exercice.",
+     "categories": [
+      "1975",
+      "1990",
+      "2005",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Emplois",
+       "valeurs": [
+        420,
+        300,
+        210,
+        190
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Emplois industriels",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 450,
+      "pas": 50
+     },
+     "valeurs": false
+    },
+    {
+     "id": "valtec",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’histoire d’une usine",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "En 2004, l’entreprise Valtec ferme son usine de pompes de Kerlen et transfère la production en Asie, où les salaires sont alors bien plus bas.",
+      "En 2022, elle rouvre une usine à Kerlen. Les salaires asiatiques ont beaucoup augmenté, le transport coûte plus cher et les [[a|robots]] rendent la fabrication locale moins coûteuse. Valtec veut aussi ne plus dépendre d’un seul fournisseur pour des pièces essentielles."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’emplois industriels (en milliers) le bassin a-t-il perdus entre 1975 et 2005 ?",
+     "reponse": 210,
+     "unite": "milliers",
+     "aide": "Soustrais la valeur de 2005 à celle de 1975.",
+     "explication": "420 − 210 = **210 milliers** d’emplois : c’est la trace des délocalisations dans une région industrielle du Nord."
+    },
+    {
+     "type": "zone",
+     "document": "valtec",
+     "enonce": "Touche le mot qui désigne la technologie rendant la fabrication locale moins coûteuse.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle remplace une partie du travail humain dans l’usine.",
+     "explication": "La **robotisation** réduit l’écart de coût du travail : elle fait partie des facteurs qui poussent aux relocalisations."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : relève-t-il d’une délocalisation ou d’une relocalisation ?",
+     "categories": [
+      "Délocalisation",
+      "Relocalisation"
+     ],
+     "items": [
+      [
+       "Fermeture d’une usine du Nord, production transférée en Asie",
+       0
+      ],
+      [
+       "Des salaires asiatiques qui augmentent",
+       1
+      ],
+      [
+       "Des robots qui diminuent l’écart de coût du travail",
+       1
+      ],
+      [
+       "La recherche de souveraineté sur des pièces essentielles",
+       1
+      ],
+      [
+       "Un transfert vers un pays aux coûts plus faibles",
+       0
+      ]
+     ],
+     "aide": "La délocalisation éloigne la production ; la relocalisation la rapproche.",
+     "explication": "Fermer pour produire ailleurs à moindre coût : **délocalisation**. Salaires qui montent, robots, souveraineté : autant de facteurs de **relocalisation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’histoire de l’usine de Kerlen ?",
+     "options": [
+      "Un espace productif se gagne et se perd au rythme des stratégies d’entreprises",
+      "Une usine fermée ne peut jamais être remplacée dans la même région",
+      "Les délocalisations sont définitives pour toutes les activités industrielles",
+      "Les salaires seuls décident toujours du lieu de production"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce que dit le texte pour 2004 et pour 2022.",
+     "explication": "Un espace productif **n’est jamais acquis** : stratégies d’entreprises et politiques publiques le font gagner ou perdre. Les salaires ne sont qu’un facteur parmi d’autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1fb68a5-161a-502e-9676-402d6c597ca0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où construire l’usine de drones d’Orion ?",
+   "competence": "lire-carte",
+   "situation": "La firme imaginaire Orion veut lancer un drone. Son conseil d’administration étudie plusieurs sites dans le monde, avec les demandes des acteurs concernés. Place-toi dans le rôle d’un conseiller.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre sites envisagés",
+     "fond": "monde",
+     "cadrage": [
+      -140,
+      -5,
+      140,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -122.1,
+       "lat": 37.4,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "shenzhen",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "bangalore",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "rotterdam",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Autour de la table",
+     "source": "Situation imaginée pour l’exercice.",
+     "blocs": [
+      "La direction d’Orion doit décider où concevoir, fabriquer et expédier son nouveau drone.",
+      "Une province chinoise propose une zone économique spéciale : impôts réduits et terrain préparé.",
+      "Un syndicat de la maison mère demande que la fabrication reste en Europe pour sauver des emplois.",
+      "Une ONG alerte sur les conditions de travail chez les sous-traitants."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux technopôles d’Asie cités dans le cours (Bangalore et Shenzhen).",
+     "reponse": [
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Elles sont toutes les deux en Asie : l’une en Chine, l’autre en Inde.",
+     "explication": "**B** est Shenzhen (Chine) et **C** Bangalore (Inde) : deux technopôles et clusters asiatiques. **A**, la Silicon Valley, est aux États-Unis."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le site de la Silicon Valley, où Orion pourrait installer son équipe de conception.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "La conception reste au Nord, près d’un cluster d’innovation américain.",
+     "explication": "**A** est la Silicon Valley, en Californie : cluster d’innovation du Nord, où l’on trouve laboratoires, start-up et capital-risque."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur du texte à sa manière d’agir sur la localisation.",
+     "paires": [
+      [
+       "Une province chinoise",
+       "Elle attire l’entreprise par des avantages fiscaux"
+      ],
+      [
+       "Un syndicat",
+       "Il défend les emplois sur le site d’origine"
+      ],
+      [
+       "Une ONG",
+       "Elle dénonce les conditions de travail"
+      ],
+      [
+       "La direction d’Orion",
+       "Elle choisit où concevoir et fabriquer"
+      ]
+     ],
+     "aide": "Relis chaque paragraphe : que demande ou que propose chacun ?",
+     "explication": "États et collectivités attirent par **subventions et fiscalité** ; syndicats défendent l’**emploi** ; ONG **alertent** ; la firme **décide**. La localisation est un **rapport de force**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le choix d’Orion ne se résume-t-il pas à un calcul de coûts ?",
+     "options": [
+      "Il résulte d’un rapport de force entre plusieurs acteurs",
+      "Les coûts de production n’intéressent plus aucune entreprise",
+      "Seuls les États choisissent où les firmes s’installent",
+      "Les consommateurs n’ont aucun rôle dans les choix des firmes"
+     ],
+     "reponse": 0,
+     "aide": "Compte les acteurs autour de la table.",
+     "explication": "Les choix de localisation **résultent du rapport de force** entre firmes, États, collectivités, syndicats, ONG et consommateurs : jamais d’une pure logique de coût."
+    }
+   ]
+  },
+  {
+   "chapitre": "70640bf2-32dd-5841-b1da-4d0e0921d913",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Six lieux, trois familles",
+   "competence": "lire-tableau",
+   "situation": "Yanis prépare un tour du monde de la production. Il note six lieux et ce qu’on y voit, puis il doit les ranger dans les trois grandes familles d’espaces productifs.",
+   "documents": [
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "Six lieux de production",
+     "source": "Exemples pris dans le cours.",
+     "colonnes": [
+      "Lieu",
+      "Ce qu’on y voit"
+     ],
+     "lignes": [
+      [
+       "Zone industrialo-portuaire de Rotterdam",
+       "Raffineries et usines au bord des quais"
+      ],
+      [
+       "Plaine de la Beauce",
+       "Immenses champs de blé vendus à l’exportation"
+      ],
+      [
+       "Quartier de La Défense",
+       "Tours de bureaux et sièges sociaux"
+      ],
+      [
+       "Technopôle de Bangalore",
+       "Laboratoires, universités et start-up"
+      ],
+      [
+       "Grande exploitation de soja au Brésil",
+       "Cultures à très grande échelle, détenues par une firme"
+      ],
+      [
+       "Parc d’activités près de Lyon",
+       "Ateliers et usines d’assemblage"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lieux",
+     "enonce": "Touche la case qui décrit un espace de recherche et d’innovation.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche les laboratoires et les start-up.",
+     "explication": "Le **technopôle de Bangalore** associe laboratoires, universités et start-up : c’est un espace de l’innovation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque lieu dans sa famille d’espaces productifs.",
+     "categories": [
+      "Espaces industriels",
+      "Espaces agricoles",
+      "Espaces de services"
+     ],
+     "items": [
+      [
+       "Zone industrialo-portuaire de Rotterdam",
+       0
+      ],
+      [
+       "Parc d’activités près de Lyon",
+       0
+      ],
+      [
+       "Plaine de la Beauce",
+       1
+      ],
+      [
+       "Exploitation de soja au Brésil",
+       1
+      ],
+      [
+       "Quartier de La Défense",
+       2
+      ],
+      [
+       "Technopôle de Bangalore",
+       2
+      ]
+     ],
+     "aide": "Regarde ce qu’on y produit : des biens fabriqués, des récoltes ou des services.",
+     "explication": "ZIP et parcs d’activités : **industriels**. Champs de blé et soja : **agricoles** (l’exploitation du Brésil est une agriculture de firme). Quartiers d’affaires et technopôles : **services**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel point commun ont La Défense et Bangalore dans le tableau ?",
+     "options": [
+      "Ce sont deux espaces de services, où l’on produit de l’information et des idées",
+      "Ce sont deux zones industrialo-portuaires ouvertes sur la mer, avec des quais",
+      "Ce sont deux espaces agricoles tournés vers l’exportation de leurs récoltes",
+      "Ce sont deux parcs d’ateliers où l’on assemble des produits en série"
+     ],
+     "reponse": 0,
+     "aide": "Aucun des deux ne fabrique d’objets ni ne cultive de champs.",
+     "explication": "Quartiers d’affaires et technopôles sont des **espaces de services**, comme les centres d’appels et les data centers."
+    }
+   ]
+  },
+  {
+   "chapitre": "70640bf2-32dd-5841-b1da-4d0e0921d913",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le conteneur qui a changé le monde",
+   "competence": "lire-graphique",
+   "situation": "Sacha se demande comment un jean peut être fabriqué à des milliers de kilomètres de l’endroit où on l’achète. Il compare l’évolution du coût du transport et la carte des grands pôles logistiques.",
+   "documents": [
+    {
+     "id": "cout",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Coût du transport maritime d’une tonne de marchandises",
+     "source": "Indice imaginé pour l’exercice : base 100 en 1960.",
+     "categories": [
+      "1960",
+      "1975",
+      "1990",
+      "2010"
+     ],
+     "series": [
+      {
+       "nom": "Coût de transport",
+       "valeurs": [
+        100,
+        70,
+        35,
+        20
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Indice",
+      "unite": "base 100 en 1960",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     }
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre pôles logistiques",
+     "fond": "monde",
+     "cadrage": [
+      -130,
+      -5,
+      140,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "singapour",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "rotterdam",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": -90.05,
+       "lat": 35.15,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage le coût du transport a-t-il baissé entre 1960 et 1990 ?",
+     "reponse": 65,
+     "unite": "%",
+     "aide": "L’indice passe de 100 à 35 : de combien a-t-il diminué ?",
+     "explication": "100 − 35 = 65 points sur une base 100 : le coût a baissé de **65 %**. C’est l’effet de la conteneurisation."
+    },
+    {
+     "type": "zone",
+     "document": "cout",
+     "enonce": "Touche la première date où le coût passe sous la moitié de son niveau de 1960.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la première valeur inférieure à 50.",
+     "explication": "En **1990**, l’indice est à 35, donc sous 50. En 1975 il était encore à 70."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux plus grands ports à conteneurs du monde, cités dans le cours.",
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "multiple": true,
+     "aide": "Ils sont tous deux en Asie.",
+     "explication": "**A** est Shanghai et **B** Singapour, les deux plus grands ports à conteneurs. **C** est Rotterdam, premier port d’Europe."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le grand aéroport de fret situé aux États-Unis.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est le seul point du continent américain.",
+     "explication": "**D** est Memphis, grand aéroport de fret : avec Hong Kong, il fait partie des plateformes de la logistique aérienne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conséquence la baisse du coût du transport a-t-elle eue sur la production ?",
+     "options": [
+      "Elle a rendu possible l’éclatement des chaînes de production dans le monde",
+      "Elle a obligé les firmes à rassembler toute leur production en un lieu",
+      "Elle a supprimé le rôle des ports dans le commerce mondial",
+      "Elle a réservé la production industrielle aux pays du Nord"
+     ],
+     "reponse": 0,
+     "aide": "Fabriquer loin n’a de sens que si transporter coûte peu.",
+     "explication": "Sans conteneur, **pas de mondialisation productive** : le transport bon marché permet de fabriquer les pièces dans plusieurs pays."
+    }
+   ]
+  },
+  {
+   "chapitre": "70640bf2-32dd-5841-b1da-4d0e0921d913",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Silvaire, la ville qui attire et qui coûte cher",
+   "competence": "analyser-document",
+   "situation": "Silvaire, ville imaginaire, est devenue un grand centre d’innovation. Une ingénieure y travaille ; elle raconte comment ses collègues et elle vivent cette réussite.",
+   "documents": [
+    {
+     "id": "loyers",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Loyer moyen d’un appartement à Silvaire",
+     "source": "Chiffres inventés pour l’exercice.",
+     "categories": [
+      "2005",
+      "2010",
+      "2015",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Loyer",
+       "valeurs": [
+        900,
+        1100,
+        1600,
+        2200
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Loyer mensuel",
+      "unite": "en euros",
+      "min": 0,
+      "max": 2400,
+      "pas": 400
+     }
+    },
+    {
+     "id": "ingenieure",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Témoignage d’une ingénieure",
+     "source": "Témoignage imaginé pour l’exercice.",
+     "blocs": [
+      "Je suis arrivée à Silvaire pour travailler dans un laboratoire de l’université. Beaucoup de start-up se sont installées ici parce qu’on y trouve des chercheurs et des investisseurs : le [[a|capital-risque]] finance leurs premiers produits.",
+      "Mais mon loyer a doublé en dix ans, et mes collègues cherchent à se loger de plus en plus loin."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ingenieure",
+     "enonce": "Touche le mot qui désigne l’argent investi dans les jeunes entreprises innovantes.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le mot contient une idée de « risque ».",
+     "explication": "Le **capital-risque** finance les start-up : avec les universités et les laboratoires, il forme un écosystème d’innovation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le loyer de 2020 est-il plus élevé que celui de 2010 ?",
+     "reponse": 2,
+     "unite": "fois",
+     "aide": "Divise 2 200 par 1 100.",
+     "explication": "2 200 ÷ 1 100 = **2** : le loyer a doublé en dix ans, comme le dit l’ingénieure."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur de l’écosystème d’innovation à son rôle.",
+     "paires": [
+      [
+       "Les universités",
+       "Elles forment la main-d’œuvre très qualifiée"
+      ],
+      [
+       "Les laboratoires",
+       "Ils produisent la recherche"
+      ],
+      [
+       "Les start-up",
+       "Elles transforment les idées en produits"
+      ],
+      [
+       "Le capital-risque",
+       "Il finance les premières années des jeunes entreprises"
+      ]
+     ],
+     "aide": "Chaque acteur intervient à une étape différente : formation, recherche, produit, financement.",
+     "explication": "Universités, laboratoires, start-up et capital-risque se renforcent mutuellement : c’est ce qui rend l’écosystème **difficile à reproduire**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces facteurs : comptaient-ils autrefois ou comptent-ils aujourd’hui pour localiser une activité de pointe ?",
+     "categories": [
+      "Facteurs d’autrefois",
+      "Facteurs d’aujourd’hui"
+     ],
+     "items": [
+      [
+       "Un gisement de charbon proche",
+       0
+      ],
+      [
+       "La proximité d’un port",
+       0
+      ],
+      [
+       "Une main-d’œuvre très qualifiée",
+       1
+      ],
+      [
+       "Une bonne connexion aux réseaux",
+       1
+      ],
+      [
+       "L’accès aux marchés",
+       1
+      ]
+     ],
+     "aide": "Le cours dit que ce n’est plus le charbon ou le port.",
+     "explication": "Autrefois : le **charbon** et le **port**. Aujourd’hui : la **matière grise**, la **connexion** et l’**accès aux marchés**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de cette concentration de l’innovation sur la ville ?",
+     "options": [
+      "Une montée des prix du logement qui chasse des habitants",
+      "Une baisse des loyers grâce à l’arrivée de nouveaux habitants",
+      "La disparition des start-up faute d’emplois qualifiés",
+      "La fermeture des universités pour manque d’étudiants"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du témoignage et regarde la courbe.",
+     "explication": "Les territoires de l’innovation attirent une main-d’œuvre très qualifiée et connaissent une **montée des prix du logement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce3c7a75-b3df-5e20-9824-690f1d70cc50",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux ports, une même logique",
+   "competence": "lire-carte",
+   "situation": "Maëlle prépare un exposé sur les grandes zones industrialo-portuaires. Elle les repère sur une carte d’Europe occidentale et relève quelques chiffres de la littoralisation.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre ports d’Europe occidentale",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -6,
+      41,
+      12,
+      54
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "rotterdam",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "le-havre",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 4.88,
+       "lat": 43.44,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "cote",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Où vit la population mondiale ?",
+     "source": "Chiffres arrondis.",
+     "categories": [
+      "À moins de 100 km d’une côte",
+      "À plus de 100 km d’une côte"
+     ],
+     "series": [
+      {
+       "nom": "Population mondiale",
+       "valeurs": [
+        60,
+        40
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le plus grand port d’Europe par son trafic.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il se trouve aux Pays-Bas, sur la mer du Nord.",
+     "explication": "**A** est Rotterdam, premier port européen par son trafic, grande zone industrialo-portuaire."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone industrialo-portuaire française située sur la Méditerranée.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Elle se trouve près de Marseille.",
+     "explication": "**C** est Fos-sur-Mer, ZIP française : port en eau profonde, raffineries, sidérurgie et pétrochimie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la population mondiale vit à plus de 100 km d’une côte ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Les deux parts du graphique font 100 %.",
+     "explication": "100 − 60 = **40 %** : une majorité des humains vit à moins de 100 km d’une côte, c’est la littoralisation."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le chiffre clé du commerce mondial.",
+     "texte": "Plus de ___ % du commerce mondial de marchandises passe par la mer, en volume.",
+     "reponses": [
+      [
+       "80"
+      ]
+     ],
+     "banque": [
+      "80",
+      "50",
+      "30"
+     ],
+     "aide": "Le chiffre est nettement supérieur à la moitié.",
+     "explication": "**Plus de 80 %** du commerce mondial de marchandises passe par la mer : d’où l’importance des ports."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce3c7a75-b3df-5e20-9824-690f1d70cc50",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le port et son arrière-pays",
+   "competence": "observer-schema",
+   "situation": "Un géographe dessine le schéma d’un grand port à conteneurs. Il veut montrer pourquoi les usines lourdes s’installent au bord de l’eau et jusqu’où le port rayonne à l’intérieur des terres.",
+   "documents": [
+    {
+     "id": "port",
+     "type": "schema",
+     "titre": "Un port, sa ZIP et son arrière-pays",
+     "source": "Schéma imaginé pour l’exercice.",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 8,
+       "l": 108,
+       "h": 234,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 28,
+       "texte": "Mer",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         22,
+         112
+        ],
+        [
+         98,
+         112
+        ],
+        [
+         86,
+         134
+        ],
+        [
+         34,
+         134
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 62,
+       "y": 98,
+       "l": 22,
+       "h": 14,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 100,
+       "l": 18,
+       "h": 12,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 156,
+       "texte": "Navire géant",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 116,
+       "y": 8,
+       "l": 20,
+       "h": 234,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 18,
+       "l": 184,
+       "h": 68,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "zip",
+       "zone": true,
+       "texte": "Raffineries, sidérurgie"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 112,
+       "texte": "Arrière-pays desservi",
+       "taille": "normal",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 330,
+       "y": 150,
+       "texte": "Fleuve",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        142,
+        160
+       ],
+       "a": [
+        330,
+        160
+       ],
+       "teinte": "bleu",
+       "epaisseur": 3,
+       "fleche": "fin",
+       "id": "fleuve",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 330,
+       "y": 190,
+       "texte": "Voie ferrée",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        142,
+        200
+       ],
+       "a": [
+        330,
+        200
+       ],
+       "teinte": "gris",
+       "epaisseur": 3,
+       "style": "pointilles",
+       "fleche": "fin",
+       "id": "rail",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 330,
+       "y": 220,
+       "texte": "Autoroute",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        142,
+        230
+       ],
+       "a": [
+        330,
+        230
+       ],
+       "teinte": "brun",
+       "epaisseur": 3,
+       "fleche": "fin",
+       "id": "route",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "port",
+     "enonce": "Touche la zone qui associe raffineries et sidérurgie au bord du quai : la ZIP.",
+     "reponse": [
+      "zip"
+     ],
+     "aide": "Elle touche directement le quai, côté terre.",
+     "explication": "La **zone industrialo-portuaire** réunit port en eau profonde, raffineries, sidérurgie, pétrochimie et logistique."
+    },
+    {
+     "type": "zone",
+     "document": "port",
+     "enonce": "Touche les trois voies qui prolongent le port vers l’arrière-pays.",
+     "reponse": [
+      "fleuve",
+      "rail",
+      "route"
+     ],
+     "multiple": true,
+     "aide": "Il y a un fleuve, une voie ferrée et une route.",
+     "explication": "Le **fleuve**, la **voie ferrée** et l’**autoroute** étendent l’hinterland du port : plus elles sont efficaces, plus l’arrière-pays desservi est vaste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les industries lourdes s’installent-elles près du quai ?",
+     "options": [
+      "Elles évitent des ruptures de charge coûteuses sur des matières pondéreuses",
+      "Elles profitent de la proximité des centres de recherche des métropoles",
+      "Elles cherchent à s’éloigner des flux de marchandises du monde",
+      "Elles n’ont besoin ni de terrain disponible ni de grands navires"
+     ],
+     "reponse": 0,
+     "aide": "Minerai, pétrole, charbon : que coûte le fait de les décharger puis de les recharger ?",
+     "explication": "Décharger puis recharger des matières **pondéreuses** coûte cher (rupture de charge). Au bord du quai, l’usine reçoit la marchandise directement du navire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "L’arrière-pays qu’un port dessert s’appelle son ___.",
+     "reponses": [
+      [
+       "hinterland"
+      ]
+     ],
+     "banque": [
+      "hinterland",
+      "littoral",
+      "cluster",
+      "technopôle"
+     ],
+     "aide": "Le mot vient de l’allemand : « le pays de derrière ».",
+     "explication": "Le **hinterland** est l’arrière-pays d’un port ; les voies ferrées, les fleuves et les autoroutes l’étendent."
+    }
+   ]
+  },
+  {
+   "chapitre": "ce3c7a75-b3df-5e20-9824-690f1d70cc50",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La côte ou l’intérieur ? Le dilemme de Norvane",
+   "competence": "raisonner",
+   "situation": "L’entreprise imaginaire Norvane veut construire une aciérie. Deux sites sont possibles : l’un sur la côte, l’autre à 300 km dans les terres. Son directeur compare coûts et risques.",
+   "documents": [
+    {
+     "id": "sites",
+     "type": "tableau",
+     "titre": "Deux sites pour l’aciérie",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Site A : sur la côte",
+      "Site B : dans les terres"
+     ],
+     "lignes": [
+      [
+       "Coût du transport du minerai (€ par tonne)",
+       8,
+       22
+      ],
+      [
+       "Terrain disponible pour s’étendre (hectares)",
+       400,
+       90
+      ],
+      [
+       "Exposition à la submersion et aux tempêtes",
+       "Forte",
+       "Faible"
+      ],
+      [
+       "Ruptures de charge entre le navire et l’usine",
+       "Aucune",
+       "Deux"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "directeur",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La note du directeur",
+     "source": "Note imaginée pour l’exercice.",
+     "blocs": [
+      "« Sur la côte, le minerai passe du navire à l’usine sans être touché. Mais le niveau de la mer monte, les tempêtes se multiplient et notre assureur s’inquiète. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel écart de coût de transport du minerai (en euros par tonne) sépare les deux sites ?",
+     "reponse": 14,
+     "unite": "€ par tonne",
+     "aide": "Soustrais le coût du site A à celui du site B.",
+     "explication": "22 − 8 = **14 € par tonne** : l’intérieur coûte beaucoup plus cher, à cause des ruptures de charge."
+    },
+    {
+     "type": "zone",
+     "document": "sites",
+     "enonce": "Touche la case qui montre la fragilité du site A.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche le risque naturel lié à la proximité de la mer.",
+     "explication": "Le site côtier est **fortement exposé** à la submersion et aux tempêtes : c’est la fragilité écologique de la littoralisation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour une activité qui manipule de grandes masses de minerai, quel site est le plus avantageux économiquement ?",
+     "options": [
+      "Le site A, sur la côte",
+      "Le site B, dans les terres",
+      "Les deux sites sont équivalents",
+      "Aucun des deux sites n’est exploitable"
+     ],
+     "reponse": 0,
+     "aide": "Compare le coût de transport et le nombre de ruptures de charge.",
+     "explication": "Le site **A** économise 14 € par tonne et toute rupture de charge : c’est ce qui attire les industries lourdes vers les ports."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : est-ce un atout de la littoralisation ou une de ses fragilités ?",
+     "categories": [
+      "Atout",
+      "Fragilité"
+     ],
+     "items": [
+      [
+       "L’accès direct aux navires géants",
+       0
+      ],
+      [
+       "Un terrain vaste pour s’étendre",
+       0
+      ],
+      [
+       "La congestion et la pollution autour du port",
+       1
+      ],
+      [
+       "La submersion et les tempêtes",
+       1
+      ],
+      [
+       "Aucune rupture de charge",
+       0
+      ]
+     ],
+     "aide": "Un atout fait gagner de l’argent ou de la place ; une fragilité fait courir un risque.",
+     "explication": "Accès aux navires, terrain et absence de rupture de charge sont des **atouts** ; congestion, pollution et risques littoraux sont des **fragilités**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume la situation de Norvane ?",
+     "options": [
+      "Une localisation efficace économiquement mais fragile écologiquement",
+      "Une localisation fragile économiquement mais très sûre écologiquement",
+      "Une localisation sans avantage économique ni risque particulier",
+      "Une localisation sûre sur le plan climatique et très coûteuse"
+     ],
+     "reponse": 0,
+     "aide": "Relie les chiffres du tableau au risque que décrit le directeur.",
+     "explication": "La littoralisation est **efficace économiquement et fragile écologiquement** : les deux constats vont ensemble."
+    }
+   ]
+  },
+  {
+   "chapitre": "f014f98c-ad77-5259-a9ec-56909fe936fe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq passages où le monde se resserre",
+   "competence": "lire-carte",
+   "situation": "Jade suit sur une carte le trajet d’un porte-conteneurs. Il doit franchir plusieurs détroits et canaux stratégiques, repérés par des lettres.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Cinq points de passage du commerce maritime",
+     "fond": "monde",
+     "cadrage": [
+      -130,
+      -5,
+      135,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -5.4,
+       "lat": 36,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 32.55,
+       "lat": 30,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 56.5,
+       "lat": 26.5,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 101,
+       "lat": 2.8,
+       "symbole": "lettre",
+       "lettre": "D"
+      },
+      {
+       "id": "e",
+       "lon": -79.6,
+       "lat": 9,
+       "symbole": "lettre",
+       "lettre": "E"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le canal qui relie l’océan Atlantique à l’océan Pacifique.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche en Amérique centrale.",
+     "explication": "**E** est le canal de Panama : il relie l’Atlantique et le Pacifique."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le détroit par lequel passe une grande partie du pétrole du golfe Persique.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Il se trouve à la sortie du golfe Persique.",
+     "explication": "**C** est le détroit d’Ormuz : il commande les exportations de pétrole du Golfe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque point de passage à ce qu’il commande.",
+     "paires": [
+      [
+       "Détroit de Malacca",
+       "Le lien entre l’Asie orientale et l’océan Indien"
+      ],
+      [
+       "Canal de Suez",
+       "Le lien entre l’Europe et l’Asie"
+      ],
+      [
+       "Détroit de Gibraltar",
+       "L’entrée de la Méditerranée"
+      ]
+     ],
+     "aide": "Replace chaque nom sur la carte : Gibraltar est la lettre A, Suez la B, Malacca la D.",
+     "explication": "**Malacca** commande Asie orientale — océan Indien ; **Suez** relie Europe et Asie ; **Gibraltar** est l’entrée de la Méditerranée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels sont les trois grands pôles reliés par les routes maritimes ?",
+     "options": [
+      "L’Asie orientale, l’Amérique du Nord et l’Europe",
+      "L’Afrique, l’Océanie et l’Amérique du Sud",
+      "L’Asie centrale, la Russie et le Moyen-Orient",
+      "L’Europe, l’Afrique et l’Amérique du Sud"
+     ],
+     "reponse": 0,
+     "aide": "Ce sont les trois grands pôles du commerce mondial.",
+     "explication": "Les routes maritimes relient **Asie orientale, Amérique du Nord et Europe**, les trois grands pôles du commerce mondial."
+    }
+   ]
+  },
+  {
+   "chapitre": "f014f98c-ad77-5259-a9ec-56909fe936fe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un navire bloque le canal, une usine s’arrête",
+   "competence": "analyser-texte",
+   "situation": "Sofie dirige une usine de meubles à Lyon. Elle raconte ce qui s’est passé quand un événement réel, le blocage du canal de Suez en 2021, a dérangé ses livraisons.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le récit de Sofie",
+     "source": "Récit écrit pour l’exercice, d’après un événement réel de mars 2021.",
+     "blocs": [
+      "En mars 2021, un porte-conteneurs géant s’échoue en travers du canal de Suez. Pendant près d’une semaine, la circulation est interrompue.",
+      "Mon usine fonctionne en flux tendu : je n’ai presque pas de [[a|stock]] de visserie, qui m’arrive d’Asie juste à temps. Quand le canal est bloqué, les conteneurs ne passent plus."
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Les conséquences du blocage",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Un navire bloque le canal",
+       "emoji": "🚢"
+      },
+      {
+       "id": "n2",
+       "texte": "Des centaines de navires attendent",
+       "emoji": "⏳"
+      },
+      {
+       "id": "n3",
+       "texte": "Les livraisons sont retardées",
+       "emoji": "📦"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui désigne ce que le flux tendu cherche à limiter.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Sofie en a « presque pas ».",
+     "explication": "Le **flux tendu** limite les **stocks** et livre au moment voulu : c’est efficace, mais fragile au moindre blocage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on à la place du point d’interrogation, dans la chaîne des conséquences ?",
+     "options": [
+      "L’usine, privée de pièces, doit ralentir ou s’arrêter",
+      "Les stocks de visserie de l’usine augmentent",
+      "Les usines concurrentes baissent leurs prix de vente",
+      "Les conteneurs sont livrés avant la date prévue"
+     ],
+     "reponse": 0,
+     "aide": "Sofie n’a presque pas de stock : que se passe-t-il quand la visserie n’arrive pas ?",
+     "explication": "Sans stocks, un retard de livraison **bloque la production** : c’est la fragilité du flux tendu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : vulnérabilité révélée ou réponse des entreprises ?",
+     "categories": [
+      "Vulnérabilité révélée",
+      "Réponse des entreprises"
+     ],
+     "items": [
+      [
+       "Un seul navire peut bloquer le commerce mondial",
+       0
+      ],
+      [
+       "La dépendance à quelques fournisseurs",
+       0
+      ],
+      [
+       "Constituer des stocks plus importants",
+       1
+      ],
+      [
+       "Diversifier les fournisseurs",
+       1
+      ],
+      [
+       "Régionaliser une partie de la production",
+       1
+      ]
+     ],
+     "aide": "Le blocage révèle une faiblesse ; les entreprises cherchent ensuite à s’en protéger.",
+     "explication": "Le blocage de Suez et la pandémie ont révélé la **dépendance** aux routes et à quelques fournisseurs ; les entreprises répondent par des **stocks**, des **fournisseurs diversifiés** et une production plus **régionale**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Sofie.",
+     "texte": "Chaque incident révèle la fragilité du ___ tendu.",
+     "reponses": [
+      [
+       "flux"
+      ]
+     ],
+     "banque": [
+      "flux",
+      "stock",
+      "circuit"
+     ],
+     "aide": "L’expression désigne une organisation qui livre au moment voulu.",
+     "explication": "Le **flux tendu** limite les stocks ; il rend la chaîne efficace mais vulnérable."
+    }
+   ]
+  },
+  {
+   "chapitre": "f014f98c-ad77-5259-a9ec-56909fe936fe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une commande qui voyage avant le sac",
+   "competence": "analyser-document",
+   "situation": "Océane, petite entreprise nantaise imaginaire, vend des sacs de sport fabriqués en Asie. Un client passe commande sur son site : avant que le sac ne bouge, tout circule déjà par les réseaux.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le dossier d’Océane",
+     "source": "Situation imaginée pour l’exercice.",
+     "blocs": [
+      "Océane a acheté 30 % du capital d’une usine asiatique. Son ingénieur s’est formé deux ans à Shenzhen avant de revenir à Nantes. L’entreprise paie une licence pour un tissu breveté.",
+      "Les commandes passent par un câble sous-marin jusqu’à un data center, et l’ordre de fabrication part vers l’usine en quelques secondes. Le suivi du colis circule ensuite en temps réel.",
+      "Océane hésite à produire plus près de ses clients : cela réduirait les trajets en bateau et en avion, mais coûterait plus cher."
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le parcours d’une commande",
+     "noeuds": [
+      {
+       "id": "commande",
+       "texte": "Commande en ligne",
+       "emoji": "🖱️"
+      },
+      {
+       "id": "ordre",
+       "texte": "Ordre transmis à l’usine",
+       "emoji": "📡"
+      },
+      {
+       "id": "fabrication",
+       "texte": "Fabrication du sac",
+       "emoji": "🏭"
+      },
+      {
+       "id": "envoi",
+       "texte": "Envoi par conteneur",
+       "emoji": "🚢"
+      }
+     ],
+     "liens": [
+      {
+       "de": "commande",
+       "a": "ordre"
+      },
+      {
+       "de": "ordre",
+       "a": "fabrication"
+      },
+      {
+       "de": "fabrication",
+       "a": "envoi"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait du dossier selon le flux immatériel qu’il illustre.",
+     "categories": [
+      "Flux de capitaux",
+      "Flux de données",
+      "Flux de savoir-faire"
+     ],
+     "items": [
+      [
+       "L’achat de 30 % d’une usine asiatique",
+       0
+      ],
+      [
+       "La commande transmise par un câble sous-marin",
+       1
+      ],
+      [
+       "Le suivi du colis en temps réel",
+       1
+      ],
+      [
+       "Un ingénieur formé deux ans à Shenzhen",
+       2
+      ],
+      [
+       "Une licence payée pour un tissu breveté",
+       2
+      ]
+     ],
+     "aide": "Capitaux : argent investi. Données : informations. Savoir-faire : compétences, brevets, licences.",
+     "explication": "L’**investissement** est un flux de capitaux ; la commande et le suivi sont des **données** ; la formation d’un ingénieur et la **licence** sont des flux de **savoir-faire**."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche les deux étapes qui ne sont, à ce stade, que de l’information.",
+     "reponse": [
+      "commande",
+      "ordre"
+     ],
+     "multiple": true,
+     "aide": "Rien de matériel n’a encore bougé : ni sac, ni conteneur.",
+     "explication": "La **commande** et l’**ordre de fabrication** circulent sous forme de données, avant que la marchandise ne se déplace."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie : « La marchandise suit le flux de données, pas l’inverse » ?",
+     "options": [
+      "L’information part avant et commande le déplacement des biens",
+      "Les biens voyagent toujours plus vite que les données",
+      "Les données n’ont aucun rôle dans la production",
+      "Les marchandises circulent sans qu’on les commande"
+     ],
+     "reponse": 0,
+     "aide": "Observe l’ordre des quatre étapes du parcours.",
+     "explication": "Une chaîne mondiale de production est d’abord une **chaîne d’informations** : la commande et l’ordre précèdent la fabrication et l’envoi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type de projet répond à l’hésitation d’Océane sur le coût écologique des trajets ?",
+     "options": [
+      "Des circuits plus courts, plus proches des clients",
+      "Des chaînes de production encore plus longues",
+      "Une augmentation du nombre de trajets aériens",
+      "La suppression de toute fabrication industrielle"
+     ],
+     "reponse": 0,
+     "aide": "Le transport maritime et aérien pèse lourd dans les émissions de gaz à effet de serre.",
+     "explication": "Les débats sur le **coût écologique des chaînes longues** nourrissent des projets de **circuits plus courts**."
+    }
+   ]
+  },
+  {
+   "chapitre": "82e58c7b-52f7-5f9f-ac3c-0666a1a8c1a1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une économie de services, quelques pôles industriels",
+   "competence": "lire-carte",
+   "situation": "Noé présente l’économie française à sa classe. Il montre que la plupart des emplois sont dans les services, puis il repère sur une carte deux pôles industriels de rang mondial.",
+   "documents": [
+    {
+     "id": "emplois",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les emplois en France",
+     "source": "Chiffres arrondis.",
+     "categories": [
+      "Services",
+      "Autres activités (industrie, construction, agriculture)"
+     ],
+     "series": [
+      {
+       "nom": "Emplois",
+       "valeurs": [
+        75,
+        25
+       ]
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois villes de l’industrie française",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 6.92,
+       "lat": 43.66,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "rennes",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des emplois français n’est pas dans les services ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Les deux parts du graphique font 100 %.",
+     "explication": "100 − 75 = **25 %** : la France est une économie très tertiarisée, avec environ 75 % des emplois dans les services."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pôle français de l’aéronautique et du spatial.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il se trouve dans le Sud-Ouest.",
+     "explication": "**A** est Toulouse, capitale de l’aéronautique et du spatial, avec Bordeaux."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville du parfum et de la cosmétique, pôle du luxe.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle se trouve dans le Sud-Est, près de la Méditerranée.",
+     "explication": "**B** est Grasse, pôle de la parfumerie et de la cosmétique, avec Paris pour le luxe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque filière à son pôle.",
+     "paires": [
+      [
+       "Aéronautique et spatial",
+       "Toulouse et Bordeaux"
+      ],
+      [
+       "Luxe et cosmétique",
+       "Paris et Grasse"
+      ],
+      [
+       "Agroalimentaire",
+       "Bretagne et Grand Ouest"
+      ]
+     ],
+     "aide": "Reprends les trois villes de la carte, puis pense à l’Ouest.",
+     "explication": "Aéronautique : **Toulouse et Bordeaux**. Luxe et cosmétique : **Paris et Grasse**. Agroalimentaire : **Bretagne et Grand Ouest**."
+    }
+   ]
+  },
+  {
+   "chapitre": "82e58c7b-52f7-5f9f-ac3c-0666a1a8c1a1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Moins d’emplois, mais autant d’exportations",
+   "competence": "lire-tableau",
+   "situation": "Zoé a lu que l’industrie française pesait deux fois moins qu’autrefois. Elle se demande si cela veut dire qu’elle n’exporte plus rien : elle compare plusieurs chiffres.",
+   "documents": [
+    {
+     "id": "pib",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de l’industrie dans le PIB",
+     "source": "Chiffres arrondis.",
+     "categories": [
+      "Années 1970",
+      "Aujourd’hui"
+     ],
+     "series": [
+      {
+       "nom": "Part de l’industrie",
+       "valeurs": [
+        26,
+        13
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du PIB",
+      "unite": "en %",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "valeurs": false
+    },
+    {
+     "id": "filieres",
+     "type": "tableau",
+     "titre": "Quatre filières industrielles",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Filière",
+      "Part de l’emploi industriel (%)",
+      "Part des exportations industrielles (%)"
+     ],
+     "lignes": [
+      [
+       "Aéronautique",
+       5,
+       15
+      ],
+      [
+       "Textile",
+       4,
+       2
+      ],
+      [
+       "Automobile",
+       9,
+       7
+      ],
+      [
+       "Agroalimentaire",
+       16,
+       14
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la part de l’industrie dans le PIB était-elle plus forte dans les années 1970 qu’aujourd’hui ?",
+     "reponse": 2,
+     "unite": "fois",
+     "aide": "Divise 26 par 13.",
+     "explication": "26 ÷ 13 = **2** : l’industrie pèse deux fois moins dans le PIB. C’est la désindustrialisation."
+    },
+    {
+     "type": "zone",
+     "document": "filieres",
+     "enonce": "Touche la case qui montre qu’une filière pèse beaucoup dans les exportations.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la plus forte part des exportations, pour une filière qui emploie peu.",
+     "explication": "**15 %** des exportations industrielles pour seulement 5 % de l’emploi : l’aéronautique exporte bien plus qu’elle n’emploie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour l’aéronautique, combien de fois la part dans les exportations est-elle plus forte que la part dans l’emploi ?",
+     "reponse": 3,
+     "unite": "fois",
+     "aide": "Divise 15 par 5.",
+     "explication": "15 ÷ 5 = **3** : une industrie qui pèse moins dans l’emploi peut peser encore beaucoup dans les exportations."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque territoire selon sa trajectoire.",
+     "categories": [
+      "Gagne des emplois",
+      "A perdu des centaines de milliers d’emplois depuis 1975",
+      "Concentre sièges et recherche"
+     ],
+     "items": [
+      [
+       "L’Ouest",
+       0
+      ],
+      [
+       "Le Sud-Ouest",
+       0
+      ],
+      [
+       "Le Nord industriel",
+       1
+      ],
+      [
+       "L’Est industriel",
+       1
+      ],
+      [
+       "L’Île-de-France",
+       2
+      ]
+     ],
+     "aide": "Pense à la carte des inégalités : le Nord et l’Est industriels s’opposent à l’Ouest.",
+     "explication": "L’**Ouest** et le **Sud-Ouest** gagnent des emplois ; le **Nord** et l’**Est** industriels en ont perdu des centaines de milliers ; l’**Île-de-France** concentre sièges et recherche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du tableau et du graphique réunis ?",
+     "options": [
+      "L’industrie pèse moins dans le PIB mais certaines filières exportent beaucoup",
+      "L’industrie française a disparu et n’exporte plus rien",
+      "Toutes les filières pèsent autant dans l’emploi que dans les exportations",
+      "La désindustrialisation a touché toutes les filières de la même manière"
+     ],
+     "reponse": 0,
+     "aide": "Compare le graphique (le poids global) et la ligne de l’aéronautique.",
+     "explication": "La **désindustrialisation** est réelle, mais l’industrie reste puissante dans quelques filières exportatrices comme l’**aéronautique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "82e58c7b-52f7-5f9f-ac3c-0666a1a8c1a1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La carte des gagnants et des perdants, et la friche de Valbourg",
+   "competence": "analyser-document",
+   "situation": "Lucie compare la carte des territoires qui gagnent ou perdent des emplois à l’histoire d’une usine imaginaire du Nord. Elle veut comprendre comment une région industrielle peut se transformer.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Emploi et trajectoires des régions",
+     "source": "Carte schématique.",
+     "fond": "france",
+     "regionsCliquables": true,
+     "regions": [
+      {
+       "code": "IDF",
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "code": "BRE",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "PDL",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "NAQ",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "HDF",
+       "teinte": "corail",
+       "motif": "hachures"
+      },
+      {
+       "code": "GES",
+       "teinte": "corail",
+       "motif": "hachures"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "Sièges et recherche"
+      },
+      {
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Gagne des emplois"
+      },
+      {
+       "teinte": "corail",
+       "motif": "hachures",
+       "texte": "Désindustrialisation"
+      }
+     ]
+    },
+    {
+     "id": "valbourg",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’usine de Valbourg",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "En 1992, l’usine de tissage de Valbourg, dans le Nord, ferme ses portes après un siècle d’activité. Plus de mille emplois disparaissent.",
+      "Le site reste une [[a|friche]] pendant vingt ans. En 2015, la ville le réhabilite : un lycée, une médiathèque et des bureaux s’installent dans les anciens ateliers."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la région qui concentre les sièges sociaux et la recherche.",
+     "reponse": [
+      "IDF"
+     ],
+     "aide": "C’est la région de la capitale.",
+     "explication": "L’**Île-de-France** concentre les sièges et la recherche : c’est le cœur des fonctions de commandement du pays."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux régions du Nord et de l’Est qui ont perdu des centaines de milliers d’emplois depuis 1975.",
+     "reponse": [
+      "HDF",
+      "GES"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les régions du Nord et de l’Est, voisines de la Belgique et de l’Allemagne.",
+     "explication": "Les **Hauts-de-France** et le **Grand Est** ont le plus souffert de la désindustrialisation : leurs mines, usines textiles et sidérurgiques ont fermé."
+    },
+    {
+     "type": "zone",
+     "document": "valbourg",
+     "enonce": "Touche le mot qui désigne un ancien site de production abandonné.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le site « reste » ainsi pendant vingt ans.",
+     "explication": "Une **friche industrielle** est un ancien site de production abandonné ; elle peut être reconvertie, comme à Valbourg."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de l’histoire du site de Valbourg.",
+     "items": [
+      "L’usine de tissage ferme",
+      "Le site devient une friche",
+      "La ville réhabilite les anciens ateliers",
+      "Un lycée, une médiathèque et des bureaux s’y installent"
+     ],
+     "aide": "Suis les dates : 1992, puis vingt ans plus tard.",
+     "explication": "Fermeture (1992) → **friche** → réhabilitation (2015) → **nouveaux usages**. C’est la reconversion type d’un territoire désindustrialisé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’illustre l’histoire de Valbourg dans le cas de la carte ?",
+     "options": [
+      "La désindustrialisation du Nord et la reconversion de ses friches",
+      "La croissance des emplois industriels dans les régions de l’Ouest",
+      "La concentration des sièges sociaux dans les villes du Nord",
+      "La fin de toute activité économique dans les anciennes régions industrielles"
+     ],
+     "reponse": 0,
+     "aide": "Le Nord est colorié en hachures sur la carte : relis la légende.",
+     "explication": "Valbourg illustre la **désindustrialisation** du Nord et la **reconversion** de ses friches industrielles, comme à Euralille ou dans le Nord-Pas-de-Calais."
+    }
+   ]
+  },
+  {
+   "chapitre": "f944fe8e-b8af-5617-b96f-89ae6c55ad0e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Avec qui la France commerce-t-elle ?",
+   "competence": "lire-graphique",
+   "situation": "Maxime prépare une fiche sur l’insertion de la France dans le monde. Il observe d’abord le partage de ses échanges, puis il situe quelques grandes portes d’entrée du pays.",
+   "documents": [
+    {
+     "id": "echanges",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les échanges de la France",
+     "source": "Chiffres arrondis.",
+     "categories": [
+      "Union européenne",
+      "Reste du monde"
+     ],
+     "series": [
+      {
+       "nom": "Échanges",
+       "valeurs": [
+        60,
+        40
+       ]
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes françaises",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "le-havre",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 2.55,
+       "lat": 49.01,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "clermont-ferrand",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echanges",
+     "enonce": "Touche le premier partenaire commercial de la France.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus grande part du graphique.",
+     "explication": "L’**Union européenne** reçoit environ **60 %** des échanges de la France : c’est son premier partenaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des échanges de la France se fait avec le reste du monde ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Les deux parts font 100 %.",
+     "explication": "100 − 60 = **40 %** avec le reste du monde."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois portes d’entrée de rang international : Roissy, Le Havre et Marseille.",
+     "reponse": [
+      "a",
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Roissy est l’aéroport de Paris ; la quatrième ville, au centre du pays, n’en fait pas partie.",
+     "explication": "**A** (Le Havre), **B** (Marseille) et **C** (Roissy) sont de rang international. **D** est Clermont-Ferrand, ville de l’intérieur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que protège une AOP, comme celle du comté ?",
+     "options": [
+      "Un produit lié à un terroir et à un savoir-faire",
+      "Une marque vendue uniquement à l’étranger",
+      "Une entreprise contre la délocalisation de ses usines",
+      "Un produit fabriqué dans plusieurs pays à la fois"
+     ],
+     "reponse": 0,
+     "aide": "Le comté vient d’un lieu précis et d’une façon précise de le fabriquer.",
+     "explication": "Les signes de qualité (AOP, AOC, IGP, Label rouge) protègent un **savoir-faire lié à un lieu** : champagne, comté, roquefort."
+    }
+   ]
+  },
+  {
+   "chapitre": "f944fe8e-b8af-5617-b96f-89ae6c55ad0e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux entreprises, deux manières de vivre dans la mondialisation",
+   "competence": "lire-tableau",
+   "situation": "Eva compare deux entreprises imaginaires installées en France. L’une fabrique des produits liés à un lieu, l’autre fabrique pour la grande distribution mondiale. Elle se demande laquelle peut déménager.",
+   "documents": [
+    {
+     "id": "entreprises",
+     "type": "tableau",
+     "titre": "Deux entreprises françaises",
+     "source": "Entreprises imaginées pour l’exercice.",
+     "colonnes": [
+      "",
+      "Fromagerie des Cimes",
+      "Électro-Vallée"
+     ],
+     "lignes": [
+      [
+       "Produit",
+       "Fromage d’AOP, vendu en France et à l’étranger",
+       "Lave-linge pour la grande distribution"
+      ],
+      [
+       "Pourquoi le produire ici ?",
+       "Le fromage est lié à son terroir",
+       "Les coûts de production sont comparés pays par pays"
+      ],
+      [
+       "Peut-elle délocaliser ?",
+       "Non",
+       "Oui, si les coûts sont plus bas ailleurs"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "entreprises",
+     "enonce": "Touche la case qui explique pourquoi la fromagerie ne peut pas délocaliser.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Pourquoi le produire ici ? ».",
+     "explication": "Le fromage d’AOP est **lié à son terroir** : le déplacer reviendrait à changer le produit. L’emploi y est non délocalisable."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque activité : est-elle facilement délocalisable ou non ?",
+     "categories": [
+      "Facilement délocalisable",
+      "Non délocalisable"
+     ],
+     "items": [
+      [
+       "Assembler des lave-linge pour la grande distribution",
+       0
+      ],
+      [
+       "Un centre d’appels pour un opérateur de téléphone",
+       0
+      ],
+      [
+       "Un gîte rural en Auvergne",
+       1
+      ],
+      [
+       "Un artisan d’art installé dans son village",
+       1
+      ],
+      [
+       "Une boulangerie de quartier",
+       1
+      ]
+     ],
+     "aide": "Une activité est non délocalisable quand elle dépend d’un lieu ou d’une clientèle de proximité.",
+     "explication": "Tourisme, artisanat lié au terroir et **services de proximité** sont **non délocalisables** ; l’assemblage standard et un centre d’appels peuvent aller où les coûts sont bas."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan d’Eva.",
+     "texte": "Deux stratégies coexistent : produire pour le ___, et produire ce que le monde ne peut pas ___.",
+     "reponses": [
+      [
+       "monde"
+      ],
+      [
+       "copier"
+      ]
+     ],
+     "banque": [
+      "monde",
+      "copier",
+      "taxer",
+      "détruire"
+     ],
+     "aide": "La fromagerie appartient à la deuxième stratégie.",
+     "explication": "Électro-Vallée **produit pour le monde** ; la fromagerie **produit ce que le monde ne peut pas copier**, grâce à son terroir et son savoir-faire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel arbitrage les systèmes productifs français doivent-ils faire ?",
+     "options": [
+      "Entre compétitivité et ancrage territorial",
+      "Entre industrie et agriculture, qui s’excluent toujours",
+      "Entre l’Union européenne et le reste du monde, sans pouvoir commercer avec les deux",
+      "Entre production et vente, deux activités qui ne se rencontrent jamais"
+     ],
+     "reponse": 0,
+     "aide": "Une entreprise doit être compétitive, mais aussi rester liée à son territoire.",
+     "explication": "Compétitivité et **ancrage territorial** ne pointent pas toujours dans la même direction : c’est l’arbitrage au cœur du chapitre."
+    }
+   ]
+  },
+  {
+   "chapitre": "f944fe8e-b8af-5617-b96f-89ae6c55ad0e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le solde qui nuance tout",
+   "competence": "lire-tableau",
+   "situation": "Un conseiller économique imaginaire dresse le bilan des échanges de biens de la France. Il constate des points forts spectaculaires, mais un solde global qui n’est pas à l’avantage du pays.",
+   "documents": [
+    {
+     "id": "echanges",
+     "type": "tableau",
+     "titre": "Échanges de biens par secteur",
+     "source": "Chiffres inventés pour l’exercice (milliards d’euros).",
+     "colonnes": [
+      "Secteur",
+      "Exportations",
+      "Importations"
+     ],
+     "lignes": [
+      [
+       "Aéronautique",
+       70,
+       25
+      ],
+      [
+       "Agroalimentaire",
+       80,
+       65
+      ],
+      [
+       "Automobile",
+       45,
+       75
+      ],
+      [
+       "Énergie",
+       20,
+       95
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La note du conseiller",
+     "source": "Note imaginée pour l’exercice.",
+     "blocs": [
+      "La France exporte des avions, du champagne et du comté dans le monde entier. Pourtant elle importe, au total, plus de biens qu’elle n’en exporte."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le solde commercial de l’aéronautique (exportations moins importations), en milliards d’euros ?",
+     "reponse": 45,
+     "unite": "milliards d’€",
+     "aide": "Soustrais les importations aux exportations.",
+     "explication": "70 − 25 = **+ 45 milliards d’euros** : l’aéronautique est un point fort exportateur."
+    },
+    {
+     "type": "zone",
+     "document": "echanges",
+     "enonce": "Touche la case qui montre le plus gros poste d’importations.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Cherche la plus grande valeur de la colonne des importations.",
+     "explication": "L’**énergie** pèse **95 milliards** d’importations : c’est le plus gros poste, bien devant l’automobile."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le solde de l’ensemble des quatre secteurs, en milliards d’euros ? (Exportations moins importations.)",
+     "reponse": -45,
+     "unite": "milliards d’€",
+     "aide": "Additionne les exportations, puis les importations, et compare.",
+     "explication": "Exportations : 70 + 80 + 45 + 20 = 215. Importations : 25 + 65 + 75 + 95 = 260. 215 − 260 = **− 45** : le solde est déficitaire, comme la balance commerciale des biens de la France."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que nuance ce solde négatif dans le bilan de la France ?",
+     "options": [
+      "Les points forts exportateurs n’empêchent pas un déficit global",
+      "La France n’exporte aucun produit de haute technologie",
+      "Les importations sont toujours plus faibles que les exportations",
+      "L’aéronautique est le seul secteur qui commerce avec l’étranger"
+     ],
+     "reponse": 0,
+     "aide": "Compare le solde de l’aéronautique et le solde de l’ensemble.",
+     "explication": "La balance commerciale française est **déficitaire** : elle importe plus de biens qu’elle n’en exporte. C’est le chiffre qui nuance tout le reste."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque produit : relève-t-il de « produire pour le monde » ou de « produire ce que le monde ne peut pas copier » ?",
+     "categories": [
+      "Produire pour le monde",
+      "Produire ce que le monde ne peut pas copier"
+     ],
+     "items": [
+      [
+       "Un avion assemblé à Toulouse et vendu partout",
+       0
+      ],
+      [
+       "Un cosmétique vendu par une grande firme dans de nombreux pays",
+       0
+      ],
+      [
+       "Un comté d’AOP affiné dans le Jura",
+       1
+      ],
+      [
+       "Un champagne produit sur son terroir",
+       1
+      ]
+     ],
+     "aide": "Les signes de qualité protègent un savoir-faire lié à un lieu.",
+     "explication": "Avions et cosmétiques sont des produits de **firmes transnationales** qui visent le monde ; comté et champagne sont **liés à un terroir** : le monde ne peut pas les copier."
+    }
+   ]
+  },
+  {
+   "chapitre": "82305c44-7df9-589e-bb2c-340e4a269d4c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui vit vraiment à la campagne ?",
+   "competence": "lire-graphique",
+   "situation": "Manon vit à Vaux-les-Prés, commune rurale imaginaire. Un enseignant lui demande : « Dans ton village, tout le monde travaille-t-il dans l’agriculture ? » Elle relève la répartition des actifs.",
+   "documents": [
+    {
+     "id": "actifs",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les actifs de Vaux-les-Prés",
+     "source": "Chiffres inventés pour l’exercice.",
+     "categories": [
+      "Agriculteurs",
+      "Ouvriers",
+      "Employés",
+      "Cadres et professions intermédiaires",
+      "Artisans et commerçants"
+     ],
+     "series": [
+      {
+       "nom": "Actifs",
+       "valeurs": [
+        7,
+        28,
+        33,
+        24,
+        8
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "actifs",
+     "enonce": "Touche la catégorie des agriculteurs.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la plus petite part du graphique, avec les artisans et commerçants.",
+     "explication": "Les **agriculteurs** ne représentent que 7 % des actifs de la commune : une petite minorité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des actifs de la commune n’est pas agricole ?",
+     "reponse": 93,
+     "unite": "%",
+     "aide": "Soustrais la part des agriculteurs à 100.",
+     "explication": "100 − 7 = **93 %** : le rural d’aujourd’hui n’est plus défini par l’agriculture seule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce graphique sur les espaces ruraux ?",
+     "options": [
+      "Les actifs ruraux sont surtout des employés, des ouvriers et des cadres",
+      "Les campagnes se résument à l’activité agricole",
+      "Les habitants des campagnes ne travaillent plus du tout",
+      "Les agriculteurs sont majoritaires dans tous les villages"
+     ],
+     "reponse": 0,
+     "aide": "Compare la part des agriculteurs à celle des autres catégories.",
+     "explication": "Autrefois, **rural = agricole**. Aujourd’hui, on y trouve des employés, des ouvriers, des retraités et des télétravailleurs."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition moderne.",
+     "texte": "Aujourd’hui, on parle d’un ___ urbain-rural plutôt que d’une frontière nette entre ville et campagne.",
+     "reponses": [
+      [
+       "continuum"
+      ]
+     ],
+     "banque": [
+      "continuum",
+      "contraste",
+      "conflit"
+     ],
+     "aide": "Le mot évoque un dégradé continu.",
+     "explication": "Le **continuum urbain-rural** décrit un dégradé entre la ville et la campagne, sans frontière nette."
+    }
+   ]
+  },
+  {
+   "chapitre": "82305c44-7df9-589e-bb2c-340e4a269d4c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois villages, trois destins",
+   "competence": "lire-carte",
+   "situation": "Trois communes rurales imaginaires n’ont pas le même destin : l’une gagne des habitants, l’autre attire des vacanciers, la dernière se vide. Tu les compares et tu situes la « diagonale des faibles densités ».",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Une grande bande de faibles densités",
+     "source": "Contour schématique.",
+     "fond": "france",
+     "aires": [
+      {
+       "id": "diag",
+       "contour": [
+        [
+         4.6,
+         50.2
+        ],
+        [
+         6.4,
+         48.6
+        ],
+        [
+         0.4,
+         43.2
+        ],
+        [
+         -1.4,
+         44.8
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "surTerre": true
+      },
+      {
+       "id": "rhone",
+       "contour": [
+        [
+         4.4,
+         46.5
+        ],
+        [
+         5.4,
+         46.5
+        ],
+        [
+         5,
+         43.3
+        ],
+        [
+         4.2,
+         43.3
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "clair",
+       "surTerre": true
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Bande A"
+      },
+      {
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Bande B"
+      }
+     ]
+    },
+    {
+     "id": "communes",
+     "type": "tableau",
+     "titre": "Trois communes rurales",
+     "source": "Communes et chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Commune",
+      "Situation",
+      "Population 2008-2020"
+     ],
+     "lignes": [
+      [
+       "Pré-Fleuri",
+       "À 20 km d’une métropole, maisons individuelles",
+       "+ 14 %"
+      ],
+      [
+       "Mont-Doré",
+       "Station de montagne dans le Sud, résidences secondaires",
+       "+ 6 %"
+      ],
+      [
+       "Roche-Sèche",
+       "Village isolé, dans la diagonale des faibles densités",
+       "− 9 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la bande qui est la diagonale des faibles densités, de la Meuse aux Landes.",
+     "reponse": [
+      "diag"
+     ],
+     "aide": "C’est la bande qui traverse la France du Nord-Est au Sud-Ouest.",
+     "explication": "La **diagonale des faibles densités** est une bande orientée du Nord-Est au Sud-Ouest, où les densités sont très basses."
+    },
+    {
+     "type": "zone",
+     "document": "communes",
+     "enonce": "Touche la case qui montre la commune qui perd des habitants.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche le signe « − ».",
+     "explication": "Roche-Sèche perd **9 %** de sa population : c’est le destin d’une campagne isolée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque commune à son type de campagne.",
+     "paires": [
+      [
+       "Pré-Fleuri",
+       "Campagne périurbaine"
+      ],
+      [
+       "Mont-Doré",
+       "Campagne touristique et résidentielle"
+      ],
+      [
+       "Roche-Sèche",
+       "Campagne isolée"
+      ]
+     ],
+     "aide": "Regarde la distance à la ville et l’activité de chaque commune.",
+     "explication": "Pré-Fleuri gagne des habitants grâce à la maison individuelle : **périurbaine**. Mont-Doré attire actifs et retraités : **touristique et résidentielle**. Roche-Sèche perd habitants et services : **isolée**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart, en points, sépare la commune qui gagne le plus d’habitants et celle qui en perd ?",
+     "reponse": 23,
+     "unite": "points",
+     "aide": "Calcule 14 − (− 9).",
+     "explication": "14 − (− 9) = **23 points** : il n’existe pas une campagne, mais des espaces ruraux aux trajectoires divergentes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de ces trois communes ?",
+     "options": [
+      "Il n’existe pas une campagne, mais des campagnes aux destins différents",
+      "Toutes les campagnes françaises perdent des habitants",
+      "Toutes les campagnes françaises gagnent des habitants grâce à la ville",
+      "Les campagnes ne diffèrent que par leur altitude"
+     ],
+     "reponse": 0,
+     "aide": "Compare les trois évolutions démographiques.",
+     "explication": "Il n’existe pas **une** campagne : les trajectoires divergent selon la proximité de la ville, le tourisme ou l’isolement."
+    }
+   ]
+  },
+  {
+   "chapitre": "82305c44-7df9-589e-bb2c-340e4a269d4c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le conseil municipal de Vauclair",
+   "competence": "argumenter",
+   "situation": "Vauclair, village imaginaire de 600 habitants, doit décider de l’avenir de ses terres et de ses services. Lis le compte rendu du conseil, puis la distance aux services : chaque projet pose un enjeu.",
+   "documents": [
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le compte rendu du conseil",
+     "source": "Compte rendu imaginé pour l’exercice.",
+     "blocs": [
+      "Mme Lenoir propose d’ouvrir un espace de travail partagé : depuis 2020, plusieurs [[a|télétravailleurs]] se sont installés au village.",
+      "M. Blanc veut vendre des champs pour construire un lotissement de vingt maisons : la commune gagnerait des habitants mais perdrait des terres agricoles.",
+      "Mme Garnier, éleveuse, part à la retraite dans deux ans et cherche quelqu’un pour reprendre son exploitation.",
+      "Dans le même temps, le dernier médecin du canton annonce son départ."
+     ]
+    },
+    {
+     "id": "distances",
+     "type": "tableau",
+     "titre": "Distance depuis Vauclair",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Service",
+      "Distance (km)"
+     ],
+     "lignes": [
+      [
+       "Médecin le plus proche",
+       18
+      ],
+      [
+       "Collège",
+       12
+      ],
+      [
+       "Supermarché",
+       15
+      ],
+      [
+       "Gare",
+       25
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque point du compte rendu à l’enjeu qu’il pose.",
+     "paires": [
+      [
+       "L’espace de travail partagé",
+       "Le renouveau démographique et le télétravail"
+      ],
+      [
+       "Le lotissement sur des champs",
+       "L’artificialisation des sols"
+      ],
+      [
+       "La reprise de l’exploitation de Mme Garnier",
+       "La transmission des exploitations"
+      ],
+      [
+       "Le départ du médecin",
+       "L’accès aux services"
+      ]
+     ],
+     "aide": "Chaque paragraphe renvoie à l’un des enjeux des espaces ruraux.",
+     "explication": "Télétravail : **renouveau** rural. Lotissement : **artificialisation** et conflit d’usage. Reprise : **transmission** des exploitations. Départ du médecin : **accès aux services**."
+    },
+    {
+     "type": "zone",
+     "document": "conseil",
+     "enonce": "Touche le mot qui désigne les nouveaux actifs arrivés depuis 2020.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le mot est dans le premier paragraphe.",
+     "explication": "Le **télétravail**, accéléré depuis 2020, renforce l’attractivité des campagnes, sans effacer les fractures."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un habitant va au supermarché en voiture et revient. Combien de kilomètres parcourt-il ?",
+     "reponse": 30,
+     "unite": "km",
+     "aide": "Il fait un aller-retour : double la distance du tableau.",
+     "explication": "15 × 2 = **30 km**. L’éloignement des services rend la voiture indispensable : c’est le principal handicap des campagnes isolées."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément dans la fonction de l’espace rural qu’il illustre.",
+     "categories": [
+      "Fonction productive",
+      "Fonction résidentielle",
+      "Fonction récréative",
+      "Fonction écologique"
+     ],
+     "items": [
+      [
+       "Une exploitation d’élevage",
+       0
+      ],
+      [
+       "Les maisons d’un lotissement",
+       1
+      ],
+      [
+       "Des sentiers de randonnée et un gîte",
+       2
+      ],
+      [
+       "Une zone humide protégée",
+       3
+      ]
+     ],
+     "aide": "Produire, loger, se distraire, protéger : quatre rôles différents.",
+     "explication": "Élevage : **productive**. Maisons : **résidentielle**. Randonnée et gîte : **récréative**. Zone humide : **écologique**. C’est la **multifonctionnalité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble ces quatre points du conseil ?",
+     "options": [
+      "La multifonctionnalité est une chance, la fragmentation en est le risque",
+      "Les campagnes n’ont plus aucune fonction économique",
+      "Chaque projet est indépendant et ne dispute jamais le même sol",
+      "Les services sont toujours proches des habitants"
+     ],
+     "reponse": 0,
+     "aide": "Le même sol peut être convoité pour plusieurs usages.",
+     "explication": "Les campagnes ont plusieurs fonctions, mais les **conflits d’usage** et l’éloignement des services peuvent les **fragmenter**."
+    }
+   ]
+  }
+ ]
+}

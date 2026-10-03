@@ -56,7 +56,6 @@ import {
   buildLiveSessions,
   mapFriendsOverview,
 } from '@/lib/social'
-import { questTileBadge } from '@/lib/arene-hud'
 import BossSheet from '@/components/defi/BossSheet'
 import BossFlash from '@/components/defi/BossFlash'
 import {
@@ -89,12 +88,9 @@ import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
 import {
   lastWeekKey,
 } from '@/lib/clan-week-server'
-import { fetchQuestViews, fetchClaimedQuestIds } from '@/lib/quests-server'
 import { buildTraqueBoard } from '@/lib/traque-server'
-import { doneCount, type QuestView } from '@/lib/quests'
 import { resolveCurrentChapter } from '@/lib/chapitre-courant-server'
 import { reasonLabel } from '@/lib/chapitre-courant'
-import DailyQuests from '@/components/defi/DailyQuests'
 import { duelGoal } from '@/lib/duel-cta'
 import { fetchMyPalmares } from '@/lib/palmares/palmares-server'
 import type { LignePalmares } from '@/lib/palmares/palmares'
@@ -199,8 +195,6 @@ export default async function OngletDefi() {
   // Présence sociale : le prénom d'UN ami en session (RPC friends_live) pour
   // le chip au-dessus du CTA duel. Rien si personne n'est en ligne.
   let onlineFriendName: string | undefined
-  let questViewList: QuestView[] = []
-  let questClaimedIds: string[] = []
   let clanWeek: ClanWeekBoard | null = null
   let clanReward: { weekKey: string; label: string } | null = null
   // LA SÉRIE ET LES CRISTAUX, portés par la carte du joueur (Lucas, 17/09/2026 :
@@ -307,8 +301,6 @@ export default async function OngletDefi() {
     })
     const [
       vague1,
-      questRes,
-      claimedRes,
       catalogSubjects,
       quizMastery,
       gemsRes,
@@ -319,8 +311,6 @@ export default async function OngletDefi() {
       [schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
     ] = await Promise.all([
       vague1P,
-      fetchQuestViews(supabase, user.id, todayKey),
-      fetchClaimedQuestIds(supabase, user.id, todayKey),
       getSubjectsCached(),
       masteryP,
       fetchGems(supabase, user.id),
@@ -487,8 +477,6 @@ export default async function OngletDefi() {
       ? reasonLabel(chapterRes.chapter, todayKey)
       : undefined
     onlineFriendName = buildLiveSessions(liveRes.data)[0]?.friend.name
-    questViewList = questRes
-    questClaimedIds = claimedRes
     clanWeek = weekRes
 
     // Le coffre de la semaine passée : proposé seulement s'il y a vraiment
@@ -629,15 +617,13 @@ export default async function OngletDefi() {
   ]
 
 
-  // Rail GAUCHE — le duo missions, tuiles libres. La pastille des quêtes dit
-  // le dû (corail : récompense à réclamer) ou le reste à faire (neutre) —
-  // décision dans lib/arene-hud.questTileBadge. Le boss de la semaine change
-  // chaque lundi : sa tuile est vivante toute seule, le minuteur crée le
-  // rendez-vous.
-  const questBadge = questTileBadge(
-    questViewList.map((v) => ({ id: v.def.id, done: v.done })),
-    questClaimedIds,
-  )
+  // Rail GAUCHE — le duo missions, tuiles libres. Les quêtes du jour ne se
+  // lisent plus ici (03/10/2026) : la tuile ouvre LA feuille des quêtes de
+  // toute l'app (components/quetes), et sa pastille — le dû en corail, le
+  // reste à faire en violet (lib/arene-hud.questTileBadge) — se calcule dans
+  // le navigateur, sur le magasin que relit le bandeau. Deux lectures de
+  // moins par rendu de l'arène. Le boss de la semaine change chaque lundi :
+  // sa tuile est vivante toute seule, le minuteur crée le rendez-vous.
   // LA TRAQUE — la tuile Boss n'ouvre plus un mode de jeu : elle ouvre la CARTE
   // DES GARDIENS. Le boss le plus avancé (ou celui qui vient de sortir) donne
   // son visage à la tuile, la pastille compte ceux qui attendent, et le
@@ -652,23 +638,13 @@ export default async function OngletDefi() {
       ? `${traqueLead.percent} %`
       : undefined
   const leftTiles: RailTile[] = [
-    ...(questViewList.length > 0
+    ...(user
       ? [
           {
             id: 'quetes',
-            label: `Quêtes du jour — ${doneCount(questViewList)} sur ${questViewList.length} faites`,
+            label: 'Quêtes du jour',
             image: '/images/defi/icones/quetes-v3.webp',
-            badge: questBadge ? String(questBadge.count) : undefined,
-            badgeTone: questBadge?.tone,
-            sheetTitle: 'Quêtes du jour',
-            sheetContent: (
-              <div className="p-4">
-                <DailyQuests
-                  views={questViewList}
-                  claimedIds={questClaimedIds}
-                />
-              </div>
-            ),
+            ouvreQuetes: true,
           } satisfies RailTile,
         ]
       : []),

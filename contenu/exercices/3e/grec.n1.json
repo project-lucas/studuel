@@ -1,0 +1,1045 @@
+{
+ "niveau": "3e",
+ "matiere": "grec",
+ "exercices": [
+  {
+   "chapitre": "0144a2de-d9ae-5f38-b84d-2b982e253814",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des lettres grecques dans ton cartable",
+   "competence": "lire-tableau",
+   "situation": "Maëlle feuillette son manuel de maths et de physique : elle y croise des lettres étranges, qui viennent toutes de l’alphabet grec. Elle les range dans un tableau.",
+   "documents": [
+    {
+     "id": "lettres",
+     "type": "tableau",
+     "titre": "Les lettres grecques de Maëlle",
+     "colonnes": [
+      "Lettre",
+      "Nom",
+      "Où on la rencontre"
+     ],
+     "lignes": [
+      [
+       "π",
+       "pi",
+       "le périmètre du cercle (3,14…)"
+      ],
+      [
+       "Ω",
+       "oméga",
+       "l’ohm, unité de résistance électrique"
+      ],
+      [
+       "Δ",
+       "delta",
+       "la variation d’une grandeur"
+      ],
+      [
+       "λ",
+       "lambda",
+       "la longueur d’onde"
+      ],
+      [
+       "μ",
+       "mu",
+       "le préfixe « micro »"
+      ],
+      [
+       "α",
+       "alpha",
+       "un angle, en géométrie"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettres",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche la lettre grecque qui sert à écrire l’ohm.",
+     "aide": "Cherche la ligne qui parle de résistance électrique.",
+     "explication": "**Ω (oméga)** désigne l’ohm, l’unité de résistance électrique. C’est la dernière lettre de l’alphabet grec."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, quelle lettre grecque note la longueur d’onde ?",
+     "options": [
+      "lambda",
+      "mu",
+      "delta",
+      "pi"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Cherche la ligne qui parle de longueur d’onde.",
+     "explication": "**λ (lambda)** note la longueur d’onde ; μ se dit mu, Δ delta, π pi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Le mot « alphabet » est fait des noms des deux premières lettres grecques.",
+     "texte": "Alphabet = ___ + ___",
+     "reponses": [
+      [
+       "alpha"
+      ],
+      [
+       "bêta",
+       "beta"
+      ]
+     ],
+     "banque": [
+      "alpha",
+      "bêta",
+      "gamma",
+      "delta"
+     ],
+     "aide": "Dans le tableau, α est la première lettre.",
+     "explication": "**Alpha** (α) puis **bêta** (β) : « alpha-bêta », d’où *alphabet*."
+    }
+   ]
+  },
+  {
+   "chapitre": "0144a2de-d9ae-5f38-b84d-2b982e253814",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le mot gravé sur la stèle",
+   "competence": "manier-langue",
+   "situation": "Au musée, Hugo recopie un mot grec en minuscules : quatre lettres, dont deux le trompent parce qu’elles ressemblent à des lettres françaises. Il doit le lire sans se tromper.",
+   "documents": [
+    {
+     "id": "stele",
+     "type": "schema",
+     "titre": "Le mot recopié par Hugo",
+     "largeur": 320,
+     "hauteur": 140,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 30,
+       "l": 60,
+       "h": 70,
+       "arrondi": 8,
+       "id": "nu",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 50,
+       "y": 72,
+       "emoji": "ν",
+       "taille": 40
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 30,
+       "l": 60,
+       "h": 70,
+       "arrondi": 8,
+       "id": "iota",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 120,
+       "y": 72,
+       "emoji": "ι",
+       "taille": 40
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 30,
+       "l": 60,
+       "h": 70,
+       "arrondi": 8,
+       "id": "kappa",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 190,
+       "y": 72,
+       "emoji": "κ",
+       "taille": 40
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 30,
+       "l": 60,
+       "h": 70,
+       "arrondi": 8,
+       "id": "eta",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 260,
+       "y": 72,
+       "emoji": "η",
+       "taille": 40
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 125,
+       "texte": "Mot grec lu de gauche à droite",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stele",
+     "reponse": [
+      "eta"
+     ],
+     "enonce": "Touche la lettre qui ressemble à un « n » minuscule mais qui note un E long.",
+     "aide": "Cette lettre s’appelle êta ; elle s’oppose à l’epsilon, le E bref.",
+     "explication": "**η (êta)** ressemble à un « n » mais se lit comme un **E long**."
+    },
+    {
+     "type": "zone",
+     "document": "stele",
+     "reponse": [
+      "nu"
+     ],
+     "enonce": "Touche la lettre qui ressemble à un « v » mais qui note un N.",
+     "aide": "Son nom est celui d’une lettre qui se prononce « nu ».",
+     "explication": "**ν (nu)** ressemble à un « v » mais note le son **N**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Lis les quatre lettres de gauche à droite et écris le mot en lettres latines, comme on le prononce.",
+     "reponse": [
+      "nike",
+      "nikê",
+      "nikè"
+     ],
+     "placeholder": "en lettres latines",
+     "aide": "ν se lit n, ι se lit i, κ se lit k, et η se lit é.",
+     "explication": "ν + ι + κ + η = **nikê** (« Niké », la victoire). Les deux lettres trompeuses sont ν (N) et η (E long)."
+    }
+   ]
+  },
+  {
+   "chapitre": "0144a2de-d9ae-5f38-b84d-2b982e253814",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "D’où vient le « h » d’hippodrome ?",
+   "competence": "analyser-document",
+   "situation": "Inès affirme qu’il n’y a pas de « h » dans l’alphabet grec, donc pas de « h » dans les mots français venus du grec. Malik n’en est pas si sûr : il a un tableau sous les yeux.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Une dispute au CDI",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Il n’y a aucune lettre « h » dans l’alphabet grec, donc aucun « h » dans les mots venus du grec."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Alors pourquoi on écrit hippodrome avec un « h » ?"
+      }
+     ]
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Cinq mots grecs et leurs descendants",
+     "colonnes": [
+      "Mot grec",
+      "Sens",
+      "Mot français"
+     ],
+     "lignes": [
+      [
+       "ἵππος",
+       "cheval",
+       "hippodrome"
+      ],
+      [
+       "ἄθεος",
+       "sans dieu",
+       "athée"
+      ],
+      [
+       "ἱστορία",
+       "enquête, récit",
+       "histoire"
+      ],
+      [
+       "ἥλιος",
+       "soleil",
+       "héliotrope"
+      ],
+      [
+       "ἔρημος",
+       "désert",
+       "ermite"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que peut répondre Malik à Inès ?",
+     "options": [
+      "Une voyelle initiale grecque peut porter un esprit rude, qui note une aspiration que le français écrit « h »",
+      "Le « h » a été ajouté au hasard par les copistes du Moyen Âge, sans lien avec le grec",
+      "Le grec avait bien une lettre « h » dans l’alphabet, mais elle a disparu au fil des siècles",
+      "Le « h » vient du latin, qui l’a mis sur tous les mots empruntés au grec"
+     ],
+     "reponse": 0,
+     "aide": "Pense au signe qu’on pose sur une voyelle initiale : l’esprit rude ou l’esprit doux.",
+     "explication": "Le grec n’a pas de lettre « h », mais l’**esprit rude** placé sur la voyelle initiale note une aspiration : le français l’écrit « h » (ἵππος → *hippodrome*)."
+    },
+    {
+     "type": "zone",
+     "document": "mots",
+     "reponse": [
+      "r1c0",
+      "r4c0"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots grecs qui portent un esprit doux : leur descendant français n’a pas de « h ».",
+     "aide": "Regarde la colonne de droite : quels mots français commencent par une voyelle ?",
+     "explication": "**ἄθεος** (athée) et **ἔρημος** (ermite) : esprit doux, pas de « h » en français."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mots français de la colonne de droite commencent par un « h » ?",
+     "reponse": 3,
+     "aide": "Compte hippodrome, puis les autres.",
+     "explication": "**3** : *hippodrome*, *histoire* et *héliotrope*. Ces trois mots grecs avaient un esprit rude."
+    },
+    {
+     "type": "categories",
+     "enonce": "D’après ce que tu viens de voir, classe ces mots français selon l’esprit de leur mot grec.",
+     "categories": [
+      "Esprit rude",
+      "Esprit doux"
+     ],
+     "items": [
+      [
+       "hippopotame",
+       0
+      ],
+      [
+       "hématome",
+       0
+      ],
+      [
+       "amoral",
+       1
+      ],
+      [
+       "athée",
+       1
+      ],
+      [
+       "histoire",
+       0
+      ]
+     ],
+     "aide": "Un « h » en français vient d’un esprit rude ; pas de « h », esprit doux.",
+     "explication": "*Hippopotame*, *hématome* et *histoire* ont un « h » : esprit rude. *Amoral* et *athée* commencent par une voyelle : esprit doux."
+    }
+   ]
+  },
+  {
+   "chapitre": "52bbd6bc-2aa3-5b92-9cd6-216cde52b1bd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Décomposer un mot savant",
+   "competence": "comprendre-langue",
+   "situation": "Dans un journal, Noé tombe sur « biologie », « philanthrope » et « politique ». Il se rappelle qu’un mot savant se lit comme une addition de racines grecques.",
+   "documents": [
+    {
+     "id": "racines",
+     "type": "tableau",
+     "titre": "Les racines que Noé a notées",
+     "colonnes": [
+      "Racine grecque",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "ἄνθρωπος (anthrôpos)",
+       "l’homme"
+      ],
+      [
+       "λόγος (logos)",
+       "parole, science"
+      ],
+      [
+       "φιλεῖν (philein)",
+       "aimer"
+      ],
+      [
+       "πόλις (polis)",
+       "la cité"
+      ],
+      [
+       "βίος (bios)",
+       "la vie"
+      ],
+      [
+       "γράφειν (graphein)",
+       "écrire"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que signifie littéralement « biologie », formé de bios + logos ?",
+     "options": [
+      "Le discours sur la vie",
+      "L’amour de la vie",
+      "L’écriture de la vie",
+      "La cité de la vie"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le sens de bios, puis celui de logos.",
+     "explication": "*bios* = la vie, *logos* = le discours, la science : **le discours sur la vie**."
+    },
+    {
+     "type": "zone",
+     "document": "racines",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la racine grecque que l’on retrouve dans « politique ».",
+     "aide": "La politique concerne la vie de la cité.",
+     "explication": "**πόλις (polis)**, la cité : la *politique* est ce qui concerne la cité."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot français à sa décomposition.",
+     "paires": [
+      [
+       "anthropologie",
+       "l’homme + la science"
+      ],
+      [
+       "philanthrope",
+       "aimer + l’homme"
+      ],
+      [
+       "politique",
+       "ce qui concerne la cité"
+      ]
+     ],
+     "aide": "Repère les racines dans chaque mot : anthrôpos, philein, polis.",
+     "explication": "*Anthropologie* = anthrôpos + logos ; *philanthrope* = philein + anthrôpos ; *politique* vient de polis."
+    }
+   ]
+  },
+  {
+   "chapitre": "52bbd6bc-2aa3-5b92-9cd6-216cde52b1bd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les services de l’hôpital",
+   "competence": "comprendre-langue",
+   "situation": "Dans le hall d’un hôpital, un panneau indique les services dont le nom est en grec : cardiologie, dermatologie, néphrologie… Tu dois deviner où envoyer chaque patient sans chercher dans un dictionnaire.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Hôpital — les services",
+     "sousTitre": "Rez-de-chaussée et 1er étage",
+     "emoji": "🏥",
+     "lignes": [
+      {
+       "texte": "Cardiologie",
+       "valeur": "Salle A",
+       "id": "cardio"
+      },
+      {
+       "texte": "Dermatologie",
+       "valeur": "Salle B",
+       "id": "derma"
+      },
+      {
+       "texte": "Néphrologie",
+       "valeur": "Salle C",
+       "id": "nephro"
+      },
+      {
+       "texte": "Pneumologie",
+       "valeur": "Salle D",
+       "id": "pneumo"
+      },
+      {
+       "texte": "Hématologie",
+       "valeur": "Salle E",
+       "id": "hemato"
+      }
+     ],
+     "pied": "Suivez les flèches",
+     "teinte": "bleu",
+     "source": "Panneau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "reponse": [
+      "nephro"
+     ],
+     "enonce": "Karim doit faire contrôler ses reins. Touche le service où l’envoyer.",
+     "aide": "La racine néphr- désigne le rein.",
+     "explication": "**Néphrologie** : néphr- = rein, -logie = étude."
+    },
+    {
+     "type": "zone",
+     "document": "panneau",
+     "reponse": [
+      "hemato",
+      "derma"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux services dont le nom contient la racine du « sang » et la racine de la « peau ».",
+     "aide": "Les racines sont hémat- et derm-.",
+     "explication": "**Hématologie** (hémat- = sang) et **dermatologie** (derm- = peau)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque racine grecque à la partie du corps qu’elle désigne.",
+     "paires": [
+      [
+       "cardio-",
+       "le cœur"
+      ],
+      [
+       "pneum-",
+       "le poumon"
+      ],
+      [
+       "psych-",
+       "l’âme"
+      ],
+      [
+       "derm-",
+       "la peau"
+      ]
+     ],
+     "aide": "Les services du panneau t’aident pour deux d’entre elles.",
+     "explication": "**cardio-** = cœur ; **pneum-** = poumon ; **psych-** = âme ; **derm-** = peau."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le mot savant qui convient.",
+     "texte": "Un ___ est un médecin du cœur.",
+     "reponses": [
+      [
+       "cardiologue"
+      ]
+     ],
+     "banque": [
+      "cardiologue",
+      "dermatologue",
+      "néphrologue",
+      "pneumologue"
+     ],
+     "aide": "Quelle racine veut dire « cœur » ?",
+     "explication": "Un **cardiologue** soigne le cœur : cardio- (cœur) + -logue (qui étudie)."
+    }
+   ]
+  },
+  {
+   "chapitre": "52bbd6bc-2aa3-5b92-9cd6-216cde52b1bd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Diamètre, périmètre, symétrie : lire les préfixes",
+   "competence": "analyser-document",
+   "situation": "En géométrie, Zoé s’aperçoit que « diamètre », « périmètre » et « symétrie » finissent tous par la même racine grecque, metron : la mesure. Ce sont les préfixes qui font la différence.",
+   "documents": [
+    {
+     "id": "prefixes",
+     "type": "tableau",
+     "titre": "Quelques préfixes grecs",
+     "colonnes": [
+      "Préfixe",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "péri-",
+       "autour"
+      ],
+      [
+       "dia-",
+       "à travers"
+      ],
+      [
+       "syn- / sym-",
+       "avec"
+      ],
+      [
+       "hypo-",
+       "en dessous"
+      ],
+      [
+       "hyper-",
+       "au-dessus"
+      ],
+      [
+       "anti-",
+       "contre"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "cercle",
+     "type": "figure",
+     "titre": "Un cercle de centre O",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "O",
+       "x": 5,
+       "y": 4,
+       "position": "s"
+      },
+      {
+       "id": "A",
+       "x": 2,
+       "y": 4,
+       "position": "o"
+      },
+      {
+       "id": "B",
+       "x": 8,
+       "y": 4,
+       "position": "e"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "id": "diam"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 3,
+       "id": "cercle"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cercle",
+     "reponse": [
+      "diam"
+     ],
+     "enonce": "Dia- veut dire « à travers ». Touche l’élément de la figure qui est un diamètre : une mesure faite à travers le cercle.",
+     "aide": "Cherche le segment qui traverse le cercle de part en part.",
+     "explication": "Le **segment AB**, qui passe par le centre et traverse le cercle de part en part, est un diamètre."
+    },
+    {
+     "type": "zone",
+     "document": "cercle",
+     "reponse": [
+      "cercle"
+     ],
+     "enonce": "Péri- veut dire « autour ». Touche l’élément dont la longueur est le périmètre.",
+     "aide": "Le périmètre se mesure en faisant le tour.",
+     "explication": "Le périmètre est la longueur **du cercle lui-même**, mesurée tout autour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie littéralement « symétrie » (sym- + metron) ?",
+     "options": [
+      "La mesure faite avec un autre élément",
+      "La mesure faite tout autour d’un élément",
+      "La mesure faite à travers un élément",
+      "La mesure faite en dessous d’un élément"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « syn- / sym- » du tableau.",
+     "explication": "sym- = avec, metron = mesure : **la mesure faite avec** un autre élément, c’est-à-dire une partie qui répond à l’autre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à son sens littéral.",
+     "paires": [
+      [
+       "hypertension",
+       "une tension au-dessus de la normale"
+      ],
+      [
+       "hypotension",
+       "une tension en dessous de la normale"
+      ],
+      [
+       "antidote",
+       "ce qu’on donne contre un poison"
+      ],
+      [
+       "périphérie",
+       "ce qui est autour du centre"
+      ]
+     ],
+     "aide": "Cherche le préfixe de chaque mot dans le tableau.",
+     "explication": "**hyper-** = au-dessus, **hypo-** = en dessous, **anti-** = contre, **péri-** = autour."
+    }
+   ]
+  },
+  {
+   "chapitre": "da02027c-0ddd-5e0d-8333-6f6fdb145388",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une matinée sur l’Olympe",
+   "competence": "analyser-texte",
+   "situation": "Ce matin, tous les dieux se retrouvent dans le palais de Zeus. Un petit récit les décrit l’un après l’autre : à toi de reconnaître chacun à ce qu’il fait.",
+   "documents": [
+    {
+     "id": "olympe",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur l’Olympe",
+     "blocs": [
+      "Ce matin, [[z|Zeus]], le roi des dieux, a réuni toute sa famille. Poséidon arrive le premier, les cheveux encore trempés d’embruns.",
+      "Apollon accorde sa lyre. Artémis, son arc à l’épaule, pose son gibier. Héphaïstos, couvert de suie, essuie ses mains noires.",
+      "Hermès, déjà reparti, porte un message à un voyageur."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "olympe",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche le nom du roi des dieux.",
+     "aide": "La première phrase le nomme.",
+     "explication": "**Zeus** est le roi des dieux, maître de la foudre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dieu à son domaine.",
+     "paires": [
+      [
+       "Poséidon",
+       "les mers"
+      ],
+      [
+       "Artémis",
+       "la chasse"
+      ],
+      [
+       "Héphaïstos",
+       "la forge"
+      ],
+      [
+       "Hermès",
+       "les messages et les voyageurs"
+      ]
+     ],
+     "aide": "Les indices sont dans le récit : embruns, gibier, suie, message.",
+     "explication": "**Poséidon** règne sur les mers, **Artémis** sur la chasse, **Héphaïstos** sur la forge, **Hermès** porte les messages."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hadès, le maître des Enfers, ne figure pas dans la scène. Pourquoi n’est-il pas compté parmi les douze Olympiens ?",
+     "options": [
+      "Il règne aux Enfers et ne siège pas sur l’Olympe",
+      "Il est le frère aîné de Zeus et n’a pas de pouvoir",
+      "Il est mortel comme les héros",
+      "Il est un Titan vaincu par Zeus"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’endroit où il règne.",
+     "explication": "**Hadès règne aux Enfers** : il ne siège pas sur l’Olympe, donc il n’est pas un des douze Olympiens."
+    }
+   ]
+  },
+  {
+   "chapitre": "da02027c-0ddd-5e0d-8333-6f6fdb145388",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Thésée dans le labyrinthe",
+   "competence": "analyser-texte",
+   "situation": "À Athènes, on raconte comment un jeune héros est allé affronter un monstre en Crète. Tu lis la légende, puis tu la compares aux autres exploits héroïques.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le Minotaure",
+     "blocs": [
+      "Le roi Minos de Crète a enfermé dans un labyrinthe un monstre mi-homme, mi-taureau : le Minotaure. Chaque année, des jeunes Athéniens lui sont livrés.",
+      "Thésée, fils du roi d’Athènes, se porte volontaire. À son arrivée, la princesse [[a|Ariane]] lui donne une pelote de fil.",
+      "Thésée entre dans le labyrinthe en déroulant le fil derrière lui. Il affronte le Minotaure et le tue. Puis il suit le fil pour retrouver la sortie."
+     ],
+     "source": "Récit adapté de la légende de Thésée, écrit pour l’exercice"
+    },
+    {
+     "id": "heros",
+     "type": "tableau",
+     "titre": "Les grands héros",
+     "colonnes": [
+      "Héros",
+      "Son exploit"
+     ],
+     "lignes": [
+      [
+       "Thésée",
+       "Le Minotaure et le labyrinthe"
+      ],
+      [
+       "Persée",
+       "Méduse, dont le regard pétrifie"
+      ],
+      [
+       "Ulysse",
+       "Dix ans pour rentrer chez lui"
+      ],
+      [
+       "?",
+       "Les douze travaux"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le nom de la princesse qui aide Thésée.",
+     "aide": "Elle lui donne un objet très utile.",
+     "explication": "**Ariane** donne à Thésée la pelote de fil qui lui permettra de retrouver la sortie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la légende.",
+     "items": [
+      "Ariane donne une pelote de fil à Thésée",
+      "Thésée entre dans le labyrinthe",
+      "Thésée tue le Minotaure",
+      "Thésée suit le fil pour sortir"
+     ],
+     "aide": "Le récit raconte les événements dans l’ordre.",
+     "explication": "Ariane donne le fil, Thésée entre, **tue le Minotaure**, puis suit le fil pour sortir."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé.",
+     "texte": "Thésée déroule un ___ pour retrouver la ___ du labyrinthe.",
+     "reponses": [
+      [
+       "fil"
+      ],
+      [
+       "sortie"
+      ]
+     ],
+     "banque": [
+      "fil",
+      "sortie",
+      "épée",
+      "entrée"
+     ],
+     "aide": "Que lui donne Ariane ? Que doit-il retrouver ensuite ?",
+     "explication": "Le **fil** d’Ariane lui permet de retrouver la **sortie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel héros manque dans la case « ? » du tableau, celui des douze travaux ?",
+     "options": [
+      "Héraclès",
+      "Achille",
+      "Hermès",
+      "Apollon"
+     ],
+     "reponse": 0,
+     "aide": "Il a fait douze exploits imposés.",
+     "explication": "**Héraclès** doit accomplir douze travaux. Hermès et Apollon sont des dieux, Achille le héros de la guerre de Troie."
+    }
+   ]
+  },
+  {
+   "chapitre": "da02027c-0ddd-5e0d-8333-6f6fdb145388",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi les saisons reviennent-elles ?",
+   "competence": "argumenter",
+   "situation": "Avant la science, les Grecs racontaient une histoire pour expliquer pourquoi la terre fleurit puis s’endort. Tu lis ce récit et tu juges ce qu’il explique vraiment.",
+   "documents": [
+    {
+     "id": "persephone",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Perséphone",
+     "blocs": [
+      "Déméter, déesse des moissons, vit heureuse avec sa fille Perséphone. Mais un jour, Hadès, le maître des Enfers, enlève la jeune fille et l’emmène dans son royaume.",
+      "Déméter, désespérée, cherche sa fille partout. Pendant ce temps, plus rien ne pousse : les champs restent stériles.",
+      "Zeus intervient : Perséphone pourra remonter. Mais elle a mangé des grains de [[g|grenade]] aux Enfers, et ce repas la lie à Hadès. Elle passera donc une partie de l’année auprès de lui.",
+      "Quand Perséphone revient, Déméter sourit et la terre refleurit. Quand elle repart, la terre s’endort."
+     ],
+     "source": "Récit adapté du mythe de Perséphone, écrit pour l’exercice"
+    },
+    {
+     "id": "mythes",
+     "type": "tableau",
+     "titre": "Trois mythes, trois explications",
+     "colonnes": [
+      "Le mythe",
+      "Ce qu’il explique"
+     ],
+     "lignes": [
+      [
+       "Perséphone",
+       "?"
+      ],
+      [
+       "Prométhée",
+       "La possession du feu par les hommes"
+      ],
+      [
+       "Pandore",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persephone",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche l’aliment qui oblige Perséphone à repartir chez Hadès.",
+     "aide": "Elle en mange aux Enfers : c’est un fruit.",
+     "explication": "Les grains de **grenade** mangés aux Enfers la lient à Hadès."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les événements du mythe dans l’ordre.",
+     "items": [
+      "Hadès enlève Perséphone",
+      "La terre devient stérile",
+      "Zeus ordonne que Perséphone remonte",
+      "La terre refleurit"
+     ],
+     "aide": "Suis les quatre paragraphes du récit.",
+     "explication": "Enlèvement, **terre stérile**, intervention de Zeus, puis retour de Perséphone et **terre qui refleurit**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mythe à ce qu’il explique.",
+     "paires": [
+      [
+       "Perséphone",
+       "le retour des saisons"
+      ],
+      [
+       "Prométhée",
+       "la possession du feu par les hommes"
+      ],
+      [
+       "Pandore",
+       "l’origine des malheurs humains"
+      ]
+     ],
+     "aide": "La ligne de Prométhée du tableau te montre la forme de la réponse.",
+     "explication": "**Perséphone** : saisons ; **Prométhée** : feu ; **Pandore** : malheurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le mythe de Perséphone est-il une explication scientifique des saisons ?",
+     "options": [
+      "Non : c’est un récit qui met en forme ce qu’on ne savait pas expliquer",
+      "Oui : les Grecs avaient déjà mesuré l’inclinaison de la Terre",
+      "Oui : Déméter et Perséphone sont des personnages historiques",
+      "Non : les Grecs ne se posaient pas la question des saisons"
+     ],
+     "reponse": 0,
+     "aide": "Un mythe raconte une histoire ; il ne mesure rien.",
+     "explication": "Le mythe **donne une forme narrative** à un phénomène que les Grecs ne savaient pas expliquer : il occupe la place du savoir, il ne le remplace pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le récit, que se passe-t-il quand Perséphone est auprès de sa mère ?",
+     "options": [
+      "La terre refleurit",
+      "La terre devient stérile",
+      "Les dieux se disputent",
+      "Zeus change les saisons"
+     ],
+     "reponse": 0,
+     "aide": "Relis le dernier paragraphe.",
+     "explication": "Quand elle est près de Déméter, **la terre refleurit** ; quand elle repart chez Hadès, la terre s’endort."
+    }
+   ]
+  }
+ ]
+}

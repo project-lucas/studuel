@@ -1,0 +1,2209 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "e54a6c3e-daae-5016-b229-89748abdc6fe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le seul livre que Rimbaud ait publié",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Une saison en enfer. Place le livre dans la vie de Rimbaud, puis recopie sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rimbaud et son livre",
+     "debut": 1850,
+     "fin": 1895,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1854,
+       "nom": "Naissance"
+      },
+      {
+       "id": "saison",
+       "date": 1873,
+       "nom": "Une saison en enfer"
+      },
+      {
+       "id": "ill",
+       "date": 1886,
+       "nom": "Illuminations"
+      },
+      {
+       "id": "mort",
+       "date": 1891,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Une saison en enfer",
+     "sousTitre": "Arthur Rimbaud",
+     "emoji": "🔥",
+     "lignes": [
+      {
+       "texte": "Écrit",
+       "valeur": "D’avril à août 1873"
+      },
+      {
+       "texte": "Âge de l’auteur",
+       "valeur": "Dix-huit ans"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Neuf sections en prose"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "À compte d’auteur, à Bruxelles"
+      }
+     ],
+     "pied": "Le seul livre que Rimbaud ait mené lui-même à la publication",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "saison"
+     ],
+     "enonce": "Sur la frise, touche l’événement qui correspond à la parution du livre.",
+     "aide": "Le livre est écrit et publié la même année.",
+     "explication": "Le livre paraît en **1873**, quand Rimbaud a dix-huit ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Rimbaud est né en 1854 et mort en 1891. Combien d’années a-t-il vécu ?",
+     "reponse": 37,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1891 − 1854 = **37 ans** : Rimbaud est mort très jeune, après avoir cessé d’écrire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du livre.",
+     "texte": "Le livre est écrit à ___ ans, publié à compte d’___ et composé de neuf sections en ___.",
+     "reponses": [
+      [
+       "dix-huit",
+       "18"
+      ],
+      [
+       "auteur"
+      ],
+      [
+       "prose"
+      ]
+     ],
+     "banque": [
+      "dix-huit",
+      "vingt-cinq",
+      "auteur",
+      "éditeur",
+      "prose",
+      "vers"
+     ],
+     "aide": "Tout est dans la fiche du livre.",
+     "explication": "Le livre est écrit à **dix-huit** ans, publié à compte d’**auteur**, en neuf sections en **prose**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e54a6c3e-daae-5016-b229-89748abdc6fe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les sections d’un bilan",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu dois savoir ce que contient chaque section de Une saison en enfer. Le tableau est en désordre : remets-le d’aplomb.",
+   "documents": [
+    {
+     "id": "sections",
+     "type": "tableau",
+     "titre": "Les sections du livre (en désordre)",
+     "colonnes": [
+      "Section",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "Adieu",
+       "La sortie"
+      ],
+      [
+       "Délires II : Alchimie du verbe",
+       "?"
+      ],
+      [
+       "Mauvais sang",
+       "L’origine, la race, la révolte"
+      ],
+      [
+       "Délires I : Vierge folle, l’Époux infernal",
+       "La vie commune avec Verlaine, du point de vue de l’autre"
+      ],
+      [
+       "Nuit de l’enfer",
+       "La crise"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "alch",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans « Alchimie du verbe »",
+     "blocs": [
+      "« Je m’habituai à l’hallucination [[s|simple]]… puis j’expliquai mes sophismes magiques avec l’hallucination des mots. »"
+     ],
+     "source": "Arthur Rimbaud, *Une saison en enfer* (1873), « Alchimie du verbe » (citation abrégée)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les cinq sections du tableau dans l’ordre où on les lit.",
+     "items": [
+      "Mauvais sang",
+      "Nuit de l’enfer",
+      "Délires I",
+      "Délires II",
+      "Adieu"
+     ],
+     "aide": "Le livre part de l’origine et de la révolte, et finit par la sortie.",
+     "explication": "On lit **Mauvais sang**, **Nuit de l’enfer**, **Délires I**, **Délires II**, puis **Adieu**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que contient la section « Alchimie du verbe » (la case « ? ») ?",
+     "options": [
+      "Rimbaud raconte et juge sa propre entreprise poétique",
+      "La vie commune avec Verlaine racontée par l’autre",
+      "Un hymne à l’origine et à la race de l’auteur",
+      "Le récit de ses départs vers Chypre et l’Abyssinie"
+     ],
+     "reponse": 0,
+     "aide": "Le titre parle d’une « alchimie » : de quoi Rimbaud fait-il le bilan ?",
+     "explication": "Dans « Alchimie du verbe », Rimbaud **raconte et juge sa propre entreprise poétique**, en citant même ses anciens poèmes."
+    },
+    {
+     "type": "zone",
+     "document": "alch",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui qualifie la première hallucination, celle des débuts.",
+     "aide": "Elle vient avant les « sophismes magiques » : c’est la plus modeste.",
+     "explication": "L’hallucination est d’abord **simple**, puis elle devient celle des mots : le poète décrit l’escalade de sa méthode."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque titre de Rimbaud au fait qui lui correspond.",
+     "paires": [
+      [
+       "Lettre du voyant",
+       "Elle réclame un « dérèglement de tous les sens »"
+      ],
+      [
+       "Une saison en enfer",
+       "Le seul livre que Rimbaud ait publié lui-même"
+      ],
+      [
+       "Illuminations",
+       "Publiées par Verlaine en 1886"
+      ],
+      [
+       "Le Bateau ivre",
+       "Poème écrit en 1871"
+      ]
+     ],
+     "aide": "Chaque titre est une étape du parcours de Rimbaud.",
+     "explication": "La **Lettre du voyant** fixe le programme, **Le Bateau ivre** le met en images, **Une saison en enfer** en fait le bilan, les **Illuminations** le prolongent."
+    }
+   ]
+  },
+  {
+   "chapitre": "e54a6c3e-daae-5016-b229-89748abdc6fe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Bilan ou triomphe ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le sens du livre : une réussite, ou le constat d’un échec ? Tranche avec le dialogue et les mots de Rimbaud.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Le livre est un triomphe : Rimbaud y a enfin trouvé la langue nouvelle qu’il cherchait."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Pas du tout : il récapitule son projet de voyant et il en montre l’[[e|échec]]."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Pourtant il écrit qu’il faut être absolument moderne !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Oui, mais c’est un bilan, et une rupture : après, il cessera d’écrire."
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Des mots de la conclusion",
+     "blocs": [
+      "« Il faut être absolument moderne. »",
+      "« … et il me sera loisible de posséder la [[v|vérité]] dans une âme et un corps. »"
+     ],
+     "source": "Arthur Rimbaud, *Une saison en enfer* (1873), « Adieu »"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot de Yanis qui dit ce que le livre montre du projet de voyant.",
+     "aide": "Yanis contredit Léa : le projet ne réussit pas.",
+     "explication": "Le livre montre l’**échec** du projet de voyant : c’est un bilan, pas un triomphe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du livre le dialogue et le cours soutiennent-ils ?",
+     "options": [
+      "Un bilan qui récapitule le projet de voyant et en montre l’échec",
+      "Un manifeste joyeux qui annonce de nouveaux recueils de vers",
+      "Une suite de poèmes en vers libres consacrés à un voyage",
+      "Le récit chronologique de l’enfance à Charleville"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les derniers mots de la réplique de Yanis.",
+     "explication": "Le livre est un **bilan et une rupture** : Rimbaud récapitule sa recherche, en constate l’échec, puis cesse d’écrire."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui nomme ce que Rimbaud espère posséder dans une âme et un corps.",
+     "aide": "C’est ce que cherche tout voyant.",
+     "explication": "Il espère posséder la **vérité** : c’est la dernière ambition du livre, au moment de l’adieu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : appartient-il au bilan que fait le livre, ou à la rupture qui le suit ?",
+     "categories": [
+      "Le bilan",
+      "La rupture"
+     ],
+     "items": [
+      [
+       "Il récapitule son projet de voyant",
+       0
+      ],
+      [
+       "« Alchimie du verbe » juge ses propres poèmes",
+       0
+      ],
+      [
+       "Il cesse peu à peu d’écrire",
+       1
+      ],
+      [
+       "Il part à l’étranger : Chypre, l’Abyssinie",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : regarde-t-il en arrière ou tourne-t-il la page ?",
+     "explication": "Le **bilan** passe en revue le projet et les poèmes ; la **rupture**, c’est le silence poétique et les départs qui suivent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du livre à ce qu’il fait.",
+     "paires": [
+      [
+       "La prose poétique",
+       "Elle donne des rythmes brisés, des exclamations, des formules"
+      ],
+      [
+       "Les citations de ses poèmes dans « Alchimie du verbe »",
+       "Elles permettent à l’auteur de les juger"
+      ],
+      [
+       "Les Illuminations de 1886",
+       "Elles prolongent la recherche du livre"
+      ]
+     ],
+     "aide": "Pense à ce que fait Rimbaud de ses propres poèmes dans le livre.",
+     "explication": "La **prose poétique** casse le rythme ; la **citation** sert à **juger** ; les **Illuminations** prolongent la recherche."
+    }
+   ]
+  },
+  {
+   "chapitre": "0211939c-07a4-5c00-ae9c-3bdd17389725",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Jeanne, du couvent à la vieillesse",
+   "competence": "se-reperer-temps",
+   "situation": "Tu dois raconter à l’oral la vie de Jeanne en cinq étapes. Repère la chaîne, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "chaine",
+     "titre": "La vie de Jeanne",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Jeanne sort du couvent, pleine de rêves"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle épouse Julien, séduisant et avare"
+      },
+      {
+       "id": "n3",
+       "texte": "Julien la trompe avec Rosalie, puis Gilberte"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Dépossédée, elle recueille l’enfant de Paul"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle met tout son amour sur son fils Paul, qui la ruine depuis Paris",
+      "Elle quitte la Normandie pour suivre Julien à Paris avec Paul",
+      "Elle se révolte contre son mari et demande la séparation",
+      "Elle entre au couvent pour y finir ses jours avec Rosalie"
+     ],
+     "reponse": 0,
+     "aide": "Après les trahisons, qui reçoit tout l’amour de Jeanne ?",
+     "explication": "Jeanne reporte tout son amour sur son fils **Paul**, qui la **ruine méthodiquement** depuis Paris."
+    },
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où commence la déception de Jeanne.",
+     "aide": "C’est dès le voyage de noces.",
+     "explication": "Jeanne est déçue par Julien **dès son mariage** : séduisant, il se révèle avare."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Jeanne",
+       "L’héroïne, naïve et bonne"
+      ],
+      [
+       "Julien de Lamare",
+       "Le mari séduisant et avare"
+      ],
+      [
+       "Rosalie",
+       "La bonne séduite par Julien"
+      ],
+      [
+       "L’abbé Tolbiac",
+       "Le prêtre fanatique"
+      ]
+     ],
+     "aide": "Chaque personnage marque une étape de la vie de Jeanne.",
+     "explication": "**Jeanne** est naïve et bonne, **Julien** avare, **Rosalie** séduite puis fidèle, l’abbé **Tolbiac** fanatique."
+    }
+   ]
+  },
+  {
+   "chapitre": "0211939c-07a4-5c00-ae9c-3bdd17389725",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le voyage de noces",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu étudies comment Maupassant montre les désillusions d’une jeune mariée. Lis la scène écrite pour l’exercice, puis range les épisodes du roman.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une auberge, un soir",
+     "blocs": [
+      "Jeanne contemple la mer, émerveillée. Son mari, Julien, [[a|compte]] déjà la monnaie que lui rend l’aubergiste, puis [[a|marchande]] le prix de la chambre.",
+      "Le soir, elle cherche dans ses yeux la tendresse dont elle rêvait au couvent. Elle n’y trouve qu’un homme pressé d’économiser."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de *Une vie* de Maupassant"
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les épisodes du roman (en désordre)",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le report",
+       "Jeanne met tout son amour sur son fils Paul"
+      ],
+      [
+       "La vengeance",
+       "?"
+      ],
+      [
+       "Les trahisons",
+       "Julien la trompe avec Rosalie, puis avec Gilberte de Fourville"
+      ],
+      [
+       "Le mariage",
+       "Julien, séduisant et avare, la déçoit dès le voyage de noces"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux verbes qui montrent l’avarice de Julien.",
+     "aide": "Que fait-il avec l’argent, devant Jeanne ?",
+     "explication": "Julien **compte** la monnaie et **marchande** : l’avarice se voit dans ses gestes, sans commentaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’annonce cette scène pour la suite du roman ?",
+     "options": [
+      "Les désillusions de Jeanne, déçue par son mari dès le départ",
+      "Un mariage heureux, que seule la guerre viendra troubler",
+      "La révolte immédiate de Jeanne contre l’autorité de son mari",
+      "Le triomphe de Jeanne sur sa famille et sur les voisins"
+     ],
+     "reponse": 0,
+     "aide": "La scène se passe pendant le voyage de noces.",
+     "explication": "La scène montre la **déception** de Jeanne : le roman est celui du désenchantement, non de la révolte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans le tableau (la case « ? » de la vengeance) ?",
+     "options": [
+      "Le mari trompé pousse dans un ravin la cabane où sont les amants",
+      "Jeanne chasse Rosalie du château et la renvoie à ses parents",
+      "Le baron provoque Julien en duel pour défendre sa fille",
+      "Tante Lison révèle à Jeanne la liaison de Julien avec Rosalie"
+     ],
+     "reponse": 0,
+     "aide": "Qui venge l’honneur dans l’épisode des amants ?",
+     "explication": "C’est le **mari trompé** de Gilberte qui **pousse la cabane dans un ravin**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les quatre étapes du tableau dans l’ordre du roman.",
+     "items": [
+      "Le mariage",
+      "Les trahisons",
+      "La vengeance",
+      "Le report"
+     ],
+     "aide": "Le tableau est en désordre : pars du mariage.",
+     "explication": "Le roman va du **mariage** aux **trahisons**, puis à la **vengeance**, enfin au **report** de l’amour sur Paul."
+    }
+   ]
+  },
+  {
+   "chapitre": "0211939c-07a4-5c00-ae9c-3bdd17389725",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Jeanne n’est pas Emma",
+   "competence": "argumenter",
+   "situation": "Une élève rapproche Jeanne d’Emma Bovary ; son camarade proteste. Lis le dialogue et la dernière phrase du roman, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Jeanne, c’est Emma Bovary version province : elle finit par se révolter."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Non : Jeanne ne se [[r|révolte]] jamais, c’est justement ce qui la distingue."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors il ne se passe rien dans ce roman ?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Si, mais rien d’extraordinaire : la vie use une femme qui n’a rien fait de mal."
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La dernière phrase du roman",
+     "blocs": [
+      "« La vie, voyez-vous, ça n’est jamais si [[o|bon]] ni si [[o|mauvais]] qu’on croit. »"
+     ],
+     "source": "Guy de Maupassant, *Une vie* (1883), dernière phrase"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman est réaliste",
+       "Il peint la vie ordinaire, sans héros ni aventures",
+       "?"
+      ],
+      [
+       "C’est le roman du désenchantement",
+       "La vie use peu à peu une femme sans faute",
+       "Julien trompe Jeanne, puis Paul la ruine"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui sépare Jeanne d’Emma Bovary.",
+     "aide": "Tom répond à Inès sur ce que Jeanne ne fait jamais.",
+     "explication": "Jeanne ne se **révolte** jamais : elle subit sa vie, là où Emma Bovary la refuse."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux adjectifs que la phrase finale oppose.",
+     "aide": "Cherche les deux adjectifs précédés de « si ».",
+     "explication": "La phrase oppose **bon** et **mauvais** pour dire que la vie est un entre-deux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit cette dernière phrase de la vie ?",
+     "options": [
+      "Elle n’est ni aussi belle ni aussi cruelle qu’on se l’imagine",
+      "Elle est cruelle pour tous ceux qui acceptent de la subir",
+      "Elle est belle pour celles qui se révoltent contre leur sort",
+      "Elle récompense à la fin ceux qui savent compter leur argent"
+     ],
+     "reponse": 0,
+     "aide": "La phrase pèse deux extrêmes l’un contre l’autre.",
+     "explication": "La phrase finale exprime une **résignation lucide** : la vie n’est « jamais si bon ni si mauvais qu’on croit »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Rien d’extraordinaire n’arrive : la vie quotidienne use Jeanne",
+      "Jeanne s’enfuit avec un amant et quitte la Normandie",
+      "Un naufrage sépare Jeanne de ses parents pendant des années",
+      "Jeanne dirige seule le domaine avec une grande réussite"
+     ],
+     "reponse": 0,
+     "aide": "Le réalisme peint ce qui est ordinaire.",
+     "explication": "Le **réalisme** de Maupassant tient dans l’ordinaire : **rien d’extraordinaire n’arrive**, la vie use simplement Jeanne."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : relève-t-il du roman réaliste, ou du roman d’aventures ?",
+     "categories": [
+      "Roman réaliste (Une vie)",
+      "Roman d’aventures"
+     ],
+     "items": [
+      [
+       "Une vie ordinaire, sans héros",
+       0
+      ],
+      [
+       "Des désillusions quotidiennes",
+       0
+      ],
+      [
+       "Des exploits et des évasions spectaculaires",
+       1
+      ],
+      [
+       "La lente usure du temps",
+       0
+      ],
+      [
+       "Un héros qui triomphe de tous les périls",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si le trait est quotidien ou extraordinaire.",
+     "explication": "Le roman réaliste peint la **vie ordinaire** et son **usure** ; l’aventure vit d’**exploits** et de héros."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab1e7138-6ab0-5be3-8d2c-5bdae8746d33",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman de 1967",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Vendredi ou les Limbes du Pacifique. Place Tournier sur la frise, puis complète le tableau des personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Tournier et ses romans",
+     "debut": 1920,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1924,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ven",
+       "date": 1967,
+       "nom": "Vendredi"
+      },
+      {
+       "id": "roi",
+       "date": 1970,
+       "nom": "Roi des Aulnes"
+      },
+      {
+       "id": "mort",
+       "date": 2016,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Robinson",
+       "Le naufragé, Anglais pieux et méthodique"
+      ],
+      [
+       "Vendredi",
+       "?"
+      ],
+      [
+       "Speranza",
+       "L’île elle-même, presque vivante"
+      ],
+      [
+       "Andoar",
+       "Le vieux bouc que Vendredi combat"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ven"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution de Vendredi ou les Limbes du Pacifique.",
+     "aide": "C’est le premier roman de Tournier, avant le Goncourt.",
+     "explication": "Le roman paraît en **1967** ; le prix Goncourt vient trois ans plus tard, avec *Le Roi des Aulnes*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rôle de Vendredi (la case « ? ») ?",
+     "options": [
+      "L’Araucan joyeux, libre et inventif",
+      "Le naufragé méthodique qui bâtit une colonie",
+      "Le vieux bouc que Robinson veut apprivoiser",
+      "Le mousse fugueur recueilli par Robinson"
+     ],
+     "reponse": 0,
+     "aide": "Chez Tournier, c’est lui qui apporte la joie et l’invention.",
+     "explication": "Vendredi est un **Araucan joyeux, libre et inventif** : il est le contraire du Robinson méthodique du début."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque titre ou chaque nom au fait qui lui correspond.",
+     "paires": [
+      [
+       "Michel Tournier",
+       "Philosophe de formation, élève de Claude Lévi-Strauss"
+      ],
+      [
+       "Vendredi ou les Limbes du Pacifique",
+       "Premier roman, couronné par le Grand Prix du roman de l’Académie française"
+      ],
+      [
+       "Robinson Crusoé",
+       "Roman de Defoe que Tournier réécrit"
+      ],
+      [
+       "Le Roi des Aulnes",
+       "Prix Goncourt, 1970"
+      ]
+     ],
+     "aide": "Chaque fait est lié à la carrière de Tournier ou à son modèle.",
+     "explication": "Tournier est **philosophe** de formation ; son premier roman réécrit **Robinson Crusoé** ; le **Goncourt** vient avec *Le Roi des Aulnes*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab1e7138-6ab0-5be3-8d2c-5bdae8746d33",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du cadastre à l’explosion",
+   "competence": "se-reperer-temps",
+   "situation": "Robinson commence par tout organiser sur son île. Suis les étapes de sa transformation.",
+   "documents": [
+    {
+     "id": "route",
+     "type": "chaine",
+     "titre": "Robinson sur l’île de Speranza",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Naufragé, Robinson reconstitue la civilisation"
+      },
+      {
+       "id": "n2",
+       "texte": "Il traite Vendredi en esclave et en élève"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il se laisse convertir par Vendredi"
+      },
+      {
+       "id": "n5",
+       "texte": "Un navire aborde : Robinson refuse de partir"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel événement manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Vendredi fait exploser la grotte aux poudres",
+      "Robinson incendie le navire anglais qui aborde l’île",
+      "Un orage détruit les récoltes de blé de Robinson",
+      "Andoar, le bouc, tue Vendredi et Robinson le venge"
+     ],
+     "reponse": 0,
+     "aide": "Un acte de Vendredi, dans la grotte aux poudres, détruit tout l’ordre construit.",
+     "explication": "Vendredi provoque l’**explosion** de la grotte aux poudres : **tout l’ordre** construit par Robinson est **détruit**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre étapes dans l’ordre du roman.",
+     "items": [
+      "Robinson reconstitue la civilisation : cadastre, code, calendrier",
+      "Vendredi provoque l’explosion de la grotte aux poudres",
+      "Robinson se laisse convertir par Vendredi",
+      "Robinson refuse de partir avec le navire anglais"
+     ],
+     "aide": "La chaîne est lisible, mais ici les phrases changent de forme.",
+     "explication": "Robinson **construit**, tout **explose**, il est **converti**, puis il **refuse de partir**."
+    },
+    {
+     "type": "zone",
+     "document": "route",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où l’on voit qui reste sur l’île et qui part.",
+     "aide": "À la fin, le navire anglais aborde.",
+     "explication": "À la fin, **Robinson reste** et c’est **Vendredi qui s’embarque** : le renversement est complet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la forme du roman.",
+     "texte": "Robinson tient un ___ : la voix de ce journal alterne avec le ___.",
+     "reponses": [
+      [
+       "log-book",
+       "log book",
+       "logbook"
+      ],
+      [
+       "récit",
+       "recit"
+      ]
+     ],
+     "banque": [
+      "log-book",
+      "récit",
+      "poème",
+      "dialogue"
+     ],
+     "aide": "Le journal d’un marin se nomme ainsi en anglais.",
+     "explication": "Robinson tient un **log-book** : sa voix alterne avec celle du **récit**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab1e7138-6ab0-5be3-8d2c-5bdae8746d33",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui libère qui ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le sens du roman. Lis un passage écrit pour l’exercice, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Robinson civilise Vendredi, comme chez Defoe."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ici, c’est l’[[i|inverse]] : le « sauvage » libère le civilisé."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la plage",
+     "blocs": [
+      "Le naufragé a tracé ses [[o|limites]] dans le sable et en a fait un [[o|domaine]]. Vendredi, lui, [[l|danse]] sur la plage, [[l|rit]] avec le vent, et l’île semble lui répondre."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Michel Tournier"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le renversement est complet",
+       "Chez Defoe, le civilisé instruit le sauvage ; ici, le sauvage libère le civilisé",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui dit comment Tournier traite le roman de Defoe.",
+     "aide": "Tom répond à Inès par un mot qui renverse tout.",
+     "explication": "Tournier **inverse** le roman de Defoe : c’est une **réécriture** à l’envers."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots qui montrent Robinson occupé à posséder l’île.",
+     "aide": "Pense à ce que trace un propriétaire.",
+     "explication": "Les **limites** et le **domaine** disent la logique de possession du Robinson du début."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche les deux verbes qui montrent la liberté de Vendredi.",
+     "aide": "Que fait Vendredi, qui ne s’occupe ni de bornes ni de calendrier ?",
+     "explication": "Vendredi **danse** et **rit** : jeu et joie annoncent l’autre existence qu’il offrira à Robinson."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du roman faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "À la fin, Robinson reste sur l’île et c’est Vendredi qui s’embarque",
+      "Robinson quitte l’île avec Vendredi sur le navire anglais",
+      "Robinson fait de Vendredi son contremaître et son successeur",
+      "Vendredi retourne seul dans son pays et oublie Robinson"
+     ],
+     "reponse": 0,
+     "aide": "Le roman finit par un départ inattendu.",
+     "explication": "Au départ du navire, **Robinson reste** et **Vendredi s’embarque** : le renversement est complet."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : appartient-il au début du séjour de Robinson ou à la fin ?",
+     "categories": [
+      "Au début du séjour",
+      "À la fin du séjour"
+     ],
+     "items": [
+      [
+       "Il reconstitue cadastre, code pénal et calendrier",
+       0
+      ],
+      [
+       "Il traite Vendredi en esclave et en élève",
+       0
+      ],
+      [
+       "Il se laisse convertir par Vendredi",
+       1
+      ],
+      [
+       "Il adhère au soleil et à l’île",
+       1
+      ],
+      [
+       "Il refuse de partir quand un navire aborde",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si Robinson cherche à dominer l’île ou à s’y accorder.",
+     "explication": "Au **début**, Robinson ordonne et domine ; à la **fin**, il adhère à l’île et refuse de partir."
+    }
+   ]
+  },
+  {
+   "chapitre": "a08f7ede-b089-57da-abad-4e37cb4ba4a7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une ligne en Amérique du Sud",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Vol de nuit. Place le roman dans la vie de Saint-Exupéry, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Saint-Exupéry et son roman",
+     "debut": 1900,
+     "fin": 1945,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "aero",
+       "debut": 1929,
+       "fin": 1931,
+       "nom": "Ligne",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1900,
+       "nom": "Naissance"
+      },
+      {
+       "id": "vol",
+       "date": 1931,
+       "nom": "Vol de nuit"
+      },
+      {
+       "id": "mort",
+       "date": 1944,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Vol de nuit",
+     "sousTitre": "Antoine de Saint-Exupéry",
+     "emoji": "✈️",
+     "lignes": [
+      {
+       "texte": "Lieu",
+       "valeur": "Amérique du Sud, aux débuts de l’Aéropostale"
+      },
+      {
+       "texte": "Prix",
+       "valeur": "Femina 1931"
+      },
+      {
+       "texte": "Préface",
+       "valeur": "André Gide"
+      },
+      {
+       "texte": "Personnage central",
+       "valeur": "Rivière, directeur d’exploitation"
+      }
+     ],
+     "pied": "Roman de l’action et du devoir",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "aero"
+     ],
+     "enonce": "Sur la frise, touche la période où Saint-Exupéry dirige l’Aeroposta Argentina.",
+     "aide": "La période est dessinée comme une bande, pas comme un point.",
+     "explication": "Saint-Exupéry dirige l’**Aeroposta Argentina** de 1929 à 1931 : c’est son expérience de la ligne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure sa direction de l’Aeroposta Argentina ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates qui encadrent la bande.",
+     "explication": "1931 − 1929 = **2 ans** : le roman paraît l’année où s’achève cette expérience."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du roman.",
+     "texte": "Le roman reçoit le prix ___ en 1931, avec une préface d’___ Gide.",
+     "reponses": [
+      [
+       "Femina",
+       "Fémina"
+      ],
+      [
+       "André",
+       "Andre"
+      ]
+     ],
+     "banque": [
+      "Femina",
+      "Goncourt",
+      "André",
+      "Paul",
+      "Renaudot",
+      "Jean"
+     ],
+     "aide": "La fiche donne le prix et le préfacier.",
+     "explication": "Le roman reçoit le prix **Femina** en 1931, avec une préface d’**André** Gide."
+    }
+   ]
+  },
+  {
+   "chapitre": "a08f7ede-b089-57da-abad-4e37cb4ba4a7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La nuit de Fabien",
+   "competence": "se-reperer-temps",
+   "situation": "Une nuit, trois courriers convergent vers Buenos Aires. Suis le pilote du courrier de Patagonie, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "nuit",
+     "type": "chaine",
+     "titre": "La nuit de Fabien",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Fabien est pris dans un cyclone"
+      },
+      {
+       "id": "n2",
+       "texte": "Il monte au-dessus des nuages"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Au sol, sa femme téléphone et attend"
+      },
+      {
+       "id": "n5",
+       "texte": "Rivière fait partir le courrier d’Europe"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que survient-il dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il tombe en panne sèche, loin de toute piste",
+      "Il se pose à Buenos Aires avec une heure de retard",
+      "Il retrouve la piste de Santiago grâce aux étoiles",
+      "Il est recueilli par le courrier venu du Chili"
+     ],
+     "reponse": 0,
+     "aide": "En haut, au-dessus des nuages, le carburant manque.",
+     "explication": "Au bout de sa course, Fabien est en **panne sèche** : le ciel est magnifique, mais sans issue."
+    },
+    {
+     "type": "zone",
+     "document": "nuit",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape qui montre que la ligne continue malgré la disparition de Fabien.",
+     "aide": "C’est au lever du jour.",
+     "explication": "À l’aube, **Rivière fait partir le courrier d’Europe** : la ligne continue, comme il l’exige."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre moments de la nuit de Fabien dans l’ordre.",
+     "items": [
+      "Fabien est pris dans un cyclone",
+      "Il monte au-dessus des nuages",
+      "Il est en panne sèche",
+      "Rivière fait partir le courrier d’Europe"
+     ],
+     "aide": "Du cyclone à l’aube, pense au carburant.",
+     "explication": "Fabien subit le **cyclone**, **monte**, tombe en **panne sèche**, et à l’aube le courrier d’Europe **part**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa position dans le roman.",
+     "paires": [
+      [
+       "Rivière",
+       "Le chef dur, qui refuse toute excuse"
+      ],
+      [
+       "Fabien",
+       "Le pilote perdu dans l’orage"
+      ],
+      [
+       "La femme de Fabien",
+       "L’attente et l’amour humain"
+      ],
+      [
+       "Robineau",
+       "L’inspecteur tenté par l’amitié"
+      ]
+     ],
+     "aide": "Un personnage commande, un autre vole, deux attendent ou doutent.",
+     "explication": "**Rivière** commande, **Fabien** vole, sa **femme** attend, **Robineau** hésite entre discipline et amitié."
+    }
+   ]
+  },
+  {
+   "chapitre": "a08f7ede-b089-57da-abad-4e37cb4ba4a7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tyran ou héros ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur Rivière. Lis un échange écrit pour l’exercice, puis tranche avec le cours.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans un bureau, une nuit d’orage",
+     "blocs": [
+      {
+       "didascalie": "Dans le bureau d’un directeur de ligne aérienne, une nuit d’orage."
+      },
+      {
+       "personnage": "Le directeur",
+       "replique": "Un courrier en retard, c’est une promesse qui se casse. Je n’accepte aucune [[e|excuse]]."
+      },
+      {
+       "personnage": "Le pilote",
+       "replique": "Le ciel était fermé, monsieur."
+      },
+      {
+       "personnage": "Le directeur",
+       "replique": "Alors vous repartirez demain à la même heure : la ligne ne dort pas."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Saint-Exupéry (œuvre protégée : aucune citation)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Rivière est un tyran : il sacrifie ses hommes à son courrier."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Le cours dit qu’il n’est pas cruel : il assume une question [[t|tragique]], celle de ce qui vaut d’être payé d’une vie."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui montre que le directeur ne tolère aucun manquement.",
+     "aide": "Il l’emploie pour dire qu’il ne les accepte pas.",
+     "explication": "Le directeur n’accepte aucune **excuse** : c’est la discipline sans faille, comme chez Rivière."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot de Hugo qui nomme la question que Rivière assume.",
+     "aide": "Hugo parle d’une question qui engage des vies.",
+     "explication": "Rivière assume une question **tragique** : ce qui vaut d’être payé d’une vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le passage écrit pour l’exercice et le cours appuient-ils ?",
+     "options": [
+      "La régularité de la ligne exige une discipline sans faille",
+      "Un chef doit toujours être l’ami de ses subordonnés",
+      "Un pilote peut toujours renoncer quand le ciel se ferme",
+      "Une ligne aérienne n’a pas besoin de règles strictes"
+     ],
+     "reponse": 0,
+     "aide": "Pourquoi le directeur refuse-t-il toute excuse ?",
+     "explication": "Rivière sait que la régularité de la ligne **ne tient que par une discipline sans faille** : c’est ce qui justifie sa dureté."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème du roman à l’épisode qui l’illustre.",
+     "paires": [
+      [
+       "Le devoir",
+       "Rivière exige la régularité de la ligne"
+      ],
+      [
+       "La mort",
+       "Fabien disparaît dans le cyclone"
+      ],
+      [
+       "La solitude du chef",
+       "Rivière assume seul des décisions qui coûtent des vies"
+      ],
+      [
+       "L’amour humain",
+       "La femme de Fabien attend au sol"
+      ]
+     ],
+     "aide": "Chaque thème correspond à un personnage ou à une situation.",
+     "explication": "Le **devoir** guide Rivière, la **mort** frappe Fabien, la **solitude** pèse sur le chef, l’**amour** attend au sol."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c4f38c1-b7e5-5cdd-8d50-67b9d432c898",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le voyage de Bardamu",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Voyage au bout de la nuit. Suis les étapes du voyage de Bardamu, puis lis la carte d’identité du roman.",
+   "documents": [
+    {
+     "id": "voyage",
+     "type": "chaine",
+     "titre": "Le voyage de Bardamu",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "1914 : il s’engage sur un coup de tête"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Les États-Unis : le travail à la chaîne"
+      },
+      {
+       "id": "n4",
+       "texte": "Rancy : médecin dans la banlieue misérable"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Voyage au bout de la nuit",
+     "sousTitre": "Louis-Ferdinand Céline",
+     "emoji": "🌙",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1932"
+      },
+      {
+       "texte": "Prix",
+       "valeur": "Renaudot 1932"
+      },
+      {
+       "texte": "Narrateur",
+       "valeur": "Ferdinand Bardamu"
+      },
+      {
+       "texte": "Genre associé",
+       "valeur": "Le roman picaresque"
+      }
+     ],
+     "pied": "Un antihéros traverse la guerre, les colonies, l’usine et la misère",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "L’Afrique coloniale : chaleur, fièvre, exploitation",
+      "L’Italie du Nord : les routes, les gares, les hôtels",
+      "La Russie des soviets : la planification, les kolkhozes",
+      "L’Allemagne de Weimar : les cabarets, la crise, le chômage"
+     ],
+     "reponse": 0,
+     "aide": "Entre la guerre et l’Amérique, Bardamu traverse un autre continent.",
+     "explication": "Après la guerre, Bardamu part pour l’**Afrique coloniale** : chaleur, fièvre et **exploitation**."
+    },
+    {
+     "type": "zone",
+     "document": "voyage",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Bardamu découvre le travail à la chaîne.",
+     "aide": "Pense à l’usine automobile de Détroit.",
+     "explication": "À **Détroit**, chez Ford, il découvre le **travail à la chaîne**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du roman.",
+     "texte": "Le roman paraît en ___ ; il obtient le prix ___ ; c’est un roman ___.",
+     "reponses": [
+      [
+       "1932"
+      ],
+      [
+       "Renaudot"
+      ],
+      [
+       "picaresque"
+      ]
+     ],
+     "banque": [
+      "1932",
+      "1914",
+      "Renaudot",
+      "Goncourt",
+      "picaresque",
+      "policier"
+     ],
+     "aide": "La fiche du roman donne les trois mots.",
+     "explication": "Le roman paraît en **1932**, obtient le prix **Renaudot**, et c’est un roman **picaresque**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c4f38c1-b7e5-5cdd-8d50-67b9d432c898",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Bardamu et ses compagnons",
+   "competence": "analyser-document",
+   "situation": "Pour ton oral, tu dois savoir qui est qui dans le roman. Complète le tableau, puis place l’auteur dans le temps.",
+   "documents": [
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Ferdinand Bardamu",
+       "Le narrateur, lâche, lucide et désespéré"
+      ],
+      [
+       "Robinson",
+       "Le double sombre qui suit Bardamu et échoue partout"
+      ],
+      [
+       "Lola",
+       "?"
+      ],
+      [
+       "Molly",
+       "La prostituée de Détroit, la seule vraiment bonne"
+      ],
+      [
+       "Madelon",
+       "La fiancée jalouse de Robinson"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’auteur et son roman",
+     "debut": 1890,
+     "fin": 1965,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1894,
+       "nom": "Naissance"
+      },
+      {
+       "id": "bles",
+       "date": 1914,
+       "nom": "Blessure"
+      },
+      {
+       "id": "voy",
+       "date": 1932,
+       "nom": "Voyage"
+      },
+      {
+       "id": "mort",
+       "date": 1961,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est Lola (la case « ? ») ?",
+     "options": [
+      "L’infirmière américaine rencontrée à Paris",
+      "La prostituée de Détroit, bonne et sincère",
+      "La fiancée jalouse qui assassine Robinson",
+      "La jeune patiente de Bardamu à Rancy"
+     ],
+     "reponse": 0,
+     "aide": "Elle vient d’Amérique, mais c’est à Paris que Bardamu la rencontre.",
+     "explication": "Lola est **l’infirmière américaine** que Bardamu rencontre **à Paris**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le distingue.",
+     "paires": [
+      [
+       "Robinson",
+       "Le double sombre qui suit Bardamu partout"
+      ],
+      [
+       "Molly",
+       "Rencontrée à Détroit, la seule vraiment bonne"
+      ],
+      [
+       "Madelon",
+       "La fiancée de Robinson, qui l’assassine"
+      ],
+      [
+       "Lola",
+       "L’Américaine rencontrée à Paris"
+      ]
+     ],
+     "aide": "Un personnage marque un lieu ; un autre, un lien avec Robinson.",
+     "explication": "**Robinson** est le double ; **Molly** est la bonté de Détroit ; **Madelon** met fin aux jours de Robinson ; **Lola** est l’Américaine de Paris."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "bles"
+     ],
+     "enonce": "Sur la frise, touche l’année où Céline est blessé.",
+     "aide": "C’est l’année du début de la guerre.",
+     "explication": "Céline est blessé en **1914** ; la guerre ouvre aussi le voyage de Bardamu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la blessure de 1914 de la parution du roman ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1932 − 1914 = **18 ans** : l’expérience de la guerre mûrit longtemps avant de devenir roman."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c4f38c1-b7e5-5cdd-8d50-67b9d432c898",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La voix de Bardamu",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves se disputent sur la langue du roman. Lis un passage écrit pour l’exercice, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Samia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samia",
+       "texte": "Le roman est écrit dans une langue très soignée, comme un roman classique."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Au contraire : la langue [[p|parlée]] entre dans la narration elle-même, avec ses ellipses et son rythme haché."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un dimanche de 1914",
+     "blocs": [
+      "[[o|Ben]], voilà : on est partis un dimanche, la fanfare devant, les gens sur les trottoirs qui applaudissaient…",
+      "Moi, [[o|j’me]] suis dit que tout ça finirait mal. Mais on marchait quand même, tous ensemble, vers une guerre que personne n’avait vraiment comprise…"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Céline (œuvre protégée : aucune citation)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot de Tom qui qualifie la langue entrée dans le roman.",
+     "aide": "Tom l’oppose à une langue écrite et soignée.",
+     "explication": "La langue **parlée** entre dans la narration elle-même : c’est ce qui a changé la littérature."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots qui sont des marques de langue parlée.",
+     "aide": "Ni l’un ni l’autre ne s’écriraient dans un roman classique.",
+     "explication": "**Ben** et **j’me** sont des marques d’oralité : le narrateur semble parler à voix haute."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "La syntaxe orale",
+       "Le narrateur semble parler à voix haute"
+      ],
+      [
+       "Les points de suspension",
+       "Une phrase qui s’interrompt, qui hésite"
+      ],
+      [
+       "Les ellipses et le rythme haché",
+       "Un récit rapide, heurté"
+      ]
+     ],
+     "aide": "Chaque procédé fait entendre la voix de Bardamu.",
+     "explication": "La **syntaxe orale** donne la voix ; les **points de suspension** l’interrompent ; les **ellipses** la hachent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle vision du monde l’enchaînement guerre, colonies, usine, misère appuie-t-il ?",
+     "options": [
+      "Un pessimisme radical : partout le même mensonge",
+      "Un optimisme prudent : chaque épreuve fait grandir",
+      "Un idéal de progrès : la machine libère les hommes",
+      "Une nostalgie tranquille : tout allait mieux avant"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle de « visages d’un même mensonge ».",
+     "explication": "Pour le roman, la guerre, le colonialisme, l’usine et la misère sont les **visages d’un même mensonge** : c’est un **pessimisme radical**."
+    }
+   ]
+  },
+  {
+   "chapitre": "da985b54-a5cf-573e-9f17-c4fa223a8f03",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une équipe pour descendre",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ton oral sur Voyage au centre de la Terre. Place Verne sur la frise, puis complète la distribution des personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Jules Verne et son roman",
+     "debut": 1820,
+     "fin": 1910,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1828,
+       "nom": "Naissance"
+      },
+      {
+       "id": "voy",
+       "date": 1864,
+       "nom": "Voyage au centre"
+      },
+      {
+       "id": "mort",
+       "date": 1905,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Otto Lidenbrock",
+       "Professeur de minéralogie, colérique"
+      ],
+      [
+       "Axel",
+       "?"
+      ],
+      [
+       "Hans Bjelke",
+       "Le guide islandais, silencieux"
+      ],
+      [
+       "Graüben",
+       "La fiancée d’Axel, restée à Hambourg"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "voy"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution du roman.",
+     "aide": "Verne est né quarante ans plus tôt environ.",
+     "explication": "Le roman paraît en **1864**, chez l’éditeur Hetzel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Axel (la case « ? ») ?",
+     "options": [
+      "Le narrateur, neveu du professeur, qui a peur mais suit",
+      "Le savant impatient qui déchiffre le cryptogramme",
+      "Le guide silencieux qui conduit l’expédition",
+      "L’alchimiste islandais qui a laissé le manuscrit"
+     ],
+     "reponse": 0,
+     "aide": "C’est lui qui raconte l’histoire ; son oncle est un savant.",
+     "explication": "**Axel** est le **narrateur**, le neveu **peureux** de Lidenbrock : il a peur, mais il suit."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son trait.",
+     "paires": [
+      [
+       "Lidenbrock",
+       "Le savant impatient"
+      ],
+      [
+       "Axel",
+       "Le neveu peureux"
+      ],
+      [
+       "Hans",
+       "Le guide impassible"
+      ]
+     ],
+     "aide": "Le trio est opposé : un savant, un jeune homme, un guide.",
+     "explication": "Le **savant impatient**, le **neveu peureux** et le **guide impassible** : un trio qui se complète."
+    }
+   ]
+  },
+  {
+   "chapitre": "da985b54-a5cf-573e-9f17-c4fa223a8f03",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’un volcan à l’autre",
+   "competence": "lire-carte",
+   "situation": "Les explorateurs entrent par un volcan et sortent par un autre. Repère-les sur la carte, puis remets le voyage dans l’ordre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Du Nord au Sud de l’Europe",
+     "fond": "europe",
+     "cadrage": [
+      -30,
+      34,
+      25,
+      68
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 9.99,
+       "lat": 53.55,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lon": -23.78,
+       "lat": 64.8,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lon": 15.21,
+       "lat": 38.79,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "texte": "A : Hambourg · B et C : deux volcans"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le volcan par lequel les explorateurs descendent : le Sneffels, en Islande.",
+     "aide": "L’Islande est la grande île du nord-ouest de la carte.",
+     "explication": "Le **Sneffels** est un volcan d’**Islande** : c’est la lettre B."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le volcan par lequel ils remontent : le Stromboli, en Italie.",
+     "aide": "L’Italie ressemble à une botte au sud de l’Europe.",
+     "explication": "Le **Stromboli** est un volcan d’**Italie** : c’est la lettre C, très loin de l’Islande."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces étapes du voyage dans l’ordre.",
+     "items": [
+      "Lidenbrock trouve un cryptogramme dans un manuscrit islandais",
+      "Axel déchiffre le message",
+      "Les voyageurs descendent dans le cratère du Sneffels avec Hans",
+      "Une éruption les remonte jusqu’au Stromboli"
+     ],
+     "aide": "On découvre le message, on le déchiffre, on descend, puis on remonte.",
+     "explication": "Le **cryptogramme**, le **déchiffrement**, la **descente**, puis l’**éruption** qui les remonte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur ce que les voyageurs découvrent.",
+     "texte": "Au plus profond, ils trouvent un immense ___ souterrain et un combat de ___ marins préhistoriques.",
+     "reponses": [
+      [
+       "océan",
+       "ocean"
+      ],
+      [
+       "monstres"
+      ]
+     ],
+     "banque": [
+      "océan",
+      "monstres",
+      "désert",
+      "fossiles",
+      "lac",
+      "volcans"
+     ],
+     "aide": "Le cours décrit une mer cachée sous la terre.",
+     "explication": "Ils découvrent un immense **océan** souterrain et un combat de **monstres** marins préhistoriques."
+    }
+   ]
+  },
+  {
+   "chapitre": "da985b54-a5cf-573e-9f17-c4fa223a8f03",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Instruire en amusant",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si ce roman est de la pure fantaisie. Lis le message du manuscrit, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "crypto",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le message du manuscrit",
+     "blocs": [
+      "« Descends dans le [[c|cratère]] du Yocul de Sneffels que l’ombre du Scartaris vient caresser avant les calendes de Juillet, [[v|voyageur]] audacieux, et tu parviendras au centre de la Terre. »"
+     ],
+     "source": "Jules Verne, *Voyage au centre de la Terre* (1864), message de Saknussemm"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "C’est de la pure fantaisie : personne n’a jamais vu d’océan sous la terre."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Pas seulement : Verne met en scène les [[s|sciences]] de son temps, géologie, paléontologie, minéralogie."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman instruit en amusant",
+       "Il met en scène les sciences de son temps",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "crypto",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui nomme la voie de descente indiquée par le message.",
+     "aide": "Le message désigne l’ouverture du volcan.",
+     "explication": "Le message désigne le **cratère** du Sneffels comme porte vers le centre de la Terre."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot de Karim qui nomme ce que Verne met en scène.",
+     "aide": "Karim énumère ensuite trois disciplines.",
+     "explication": "Verne met en scène les **sciences** de son temps : le roman instruit en amusant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les fossiles et l’océan peuplé de monstres préhistoriques",
+      "Un duel à l’épée entre deux savants dans une taverne",
+      "Un procès où Axel doit défendre sa fiancée Graüben",
+      "Une guerre entre l’Islande et l’Italie pour un volcan"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la paléontologie, que le cours cite.",
+     "explication": "Les **fossiles** et les **monstres préhistoriques** illustrent la **paléontologie** : c’est la science mise en récit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du roman : relève-t-il de la science ou de l’aventure ?",
+     "categories": [
+      "Science",
+      "Aventure"
+     ],
+     "items": [
+      [
+       "Le déchiffrement d’un cryptogramme",
+       1
+      ],
+      [
+       "Les galeries étudiées en minéralogie",
+       0
+      ],
+      [
+       "Les ossements et fossiles du passé de la Terre",
+       0
+      ],
+      [
+       "La soif et l’égarement dans les galeries",
+       1
+      ],
+      [
+       "L’éruption qui remonte les voyageurs",
+       1
+      ]
+     ],
+     "aide": "Une science s’étudie ; une aventure se vit.",
+     "explication": "Les **galeries**, les **fossiles** sont de la **science** ; le **cryptogramme**, l’**égarement** et l’**éruption** sont de l’**aventure**."
+    }
+   ]
+  }
+ ]
+}

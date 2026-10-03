@@ -1,0 +1,3448 @@
+{
+ "niveau": "5e",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "be1d4915-6dbd-5fe9-8eb2-ee28dd76aaa4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les règles de la bibliothèque",
+   "competence": "comprendre-langue",
+   "situation": "Lina vient d’être inscrite à la bibliothèque de son collège. Elle lit l’affiche des règles avant d’emprunter son premier livre.",
+   "documents": [
+    {
+     "id": "regles",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "School library rules",
+     "sousTitre": "Open every day",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "You can borrow three books for two weeks.",
+       "id": "emprunt"
+      },
+      {
+       "texte": "You can’t eat or drink in the library.",
+       "id": "manger"
+      },
+      {
+       "texte": "Students may use the computers for homework.",
+       "id": "ordi"
+      },
+      {
+       "texte": "You mustn’t shout.",
+       "id": "crier"
+      }
+     ],
+     "pied": "Thank you!",
+     "teinte": "violet",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regles",
+     "reponse": [
+      "emprunt"
+     ],
+     "multiple": false,
+     "enonce": "Touche la règle qui dit que Lina **a le droit d’emprunter** des livres.",
+     "aide": "Cherche la phrase affirmative avec *borrow*.",
+     "explication": "**You can borrow three books** : *can* accorde la permission, de façon courante."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire la règle « You can’t eat or drink in the library » ?",
+     "options": [
+      "C’est interdit de manger ou de boire",
+      "Tu es capable de ne pas manger",
+      "Tu peux manger si tu veux",
+      "Tu devrais éviter de boire"
+     ],
+     "reponse": 0,
+     "aide": "La forme négative de *can* refuse la permission.",
+     "explication": "**C’est interdit** : *can’t* exprime l’interdiction."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque demande selon son niveau de politesse.",
+     "categories": [
+      "Familier",
+      "Poli",
+      "Formel"
+     ],
+     "items": [
+      [
+       "Can I sit here?",
+       0
+      ],
+      [
+       "Could I borrow your pen?",
+       1
+      ],
+      [
+       "May I come in?",
+       2
+      ]
+     ],
+     "aide": "*Can* est le plus courant, *may* le plus solennel.",
+     "explication": "**Can** est familier, **could** est poli, **may** est formel : plus on monte, plus on est respectueux."
+    }
+   ]
+  },
+  {
+   "chapitre": "be1d4915-6dbd-5fe9-8eb2-ee28dd76aaa4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un concert très surveillé",
+   "competence": "manier-langue",
+   "situation": "Eva raconte à son ami Ben le concert auquel elle est allée la semaine dernière. Ses parents lui ont fixé des règles.",
+   "documents": [
+    {
+     "id": "conv",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Eva et Ben",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Were you allowed to go to the concert last week?"
+      },
+      {
+       "qui": "Eva",
+       "texte": "Yes, I was allowed to go! But I [[n|wasn’t]] allowed to stay late."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Lucky you! We will be allowed to go to the next one on our own."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conv",
+     "reponse": [
+      "n"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui montre qu’Eva **n’avait pas** la permission de rester tard.",
+     "aide": "Cherche la forme négative de *was*.",
+     "explication": "**wasn’t** : *wasn’t allowed to* exprime la permission refusée au passé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme de *be*.",
+     "texte": "Last year, we ___ allowed to wear our own clothes.",
+     "reponses": [
+      [
+       "were"
+      ]
+     ],
+     "banque": [
+      "were",
+      "was",
+      "are",
+      "be"
+     ],
+     "aide": "*We* est un pluriel, et *last year* est au passé.",
+     "explication": "**were** : *be allowed to* se met au prétérit (*we were allowed to*) pour parler d’une permission passée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hier, la prof a donné à Lola la permission de partir plus tôt. Quelle phrase est correcte ?",
+     "options": [
+      "I was allowed to leave early.",
+      "I can leave early yesterday.",
+      "I may leave early yesterday.",
+      "I am allowed leave early yesterday."
+     ],
+     "reponse": 0,
+     "aide": "Pour une permission au passé, on ne garde pas *can* ni *may*.",
+     "explication": "**I was allowed to leave early.** *Be allowed to* se conjugue à tous les temps."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Nous aurons le droit d’utiliser des téléphones ». La phrase commence par We.",
+     "items": [
+      "We",
+      "will",
+      "be",
+      "allowed",
+      "to",
+      "use",
+      "phones"
+     ],
+     "aide": "Au futur : will + be allowed to.",
+     "explication": "**We will be allowed to use phones** : will + be + allowed to + verbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "be1d4915-6dbd-5fe9-8eb2-ee28dd76aaa4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les règles de l’auberge de jeunesse",
+   "competence": "argumenter",
+   "situation": "Lou passe quelques jours dans une auberge de jeunesse en Écosse. Il lit le règlement, puis envoie un message au gérant.",
+   "documents": [
+    {
+     "id": "reglement",
+     "type": "texte",
+     "genre": "article",
+     "titre": "House rules",
+     "blocs": [
+      "Guests may use the kitchen until 9 p.m. Visitors [[f|may]] [[f|not]] enter the bedrooms.",
+      "Last summer, guests were allowed to swim in the lake, but this year it is closed. You mustn’t light fires in the garden."
+     ],
+     "source": "Règlement écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Lou et du gérant",
+     "participants": [
+      {
+       "nom": "Lou",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Gérant",
+       "emoji": "🧔",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lou",
+       "texte": "Could I use the kitchen at 10 p.m.?"
+      },
+      {
+       "qui": "Gérant",
+       "texte": "Sorry, you [[r|can’t]]. It closes at nine."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reglement",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui forment le refus **formel** du règlement.",
+     "aide": "C’est le modal le plus poli, suivi de *not*.",
+     "explication": "**may not** : formule des règlements écrits, plus formelle que *can’t*."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot par lequel le gérant **refuse** la demande de Lou.",
+     "aide": "Il refuse de façon courante, pas formelle.",
+     "explication": "**can’t** : refus courant de la permission."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lou voudrait cuisiner à 22 h. Que dit le règlement ?",
+     "options": [
+      "Non : la cuisine ferme à 21 h",
+      "Oui : tout est permis la nuit",
+      "Oui, avec un adulte",
+      "Non : les invités ne peuvent jamais cuisiner"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase du règlement.",
+     "explication": "**La cuisine ferme à 21 h** : *Guests may use the kitchen until 9 p.m.*"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire que les clients avaient le droit de nager l’été dernier.",
+     "texte": "Last summer, guests ___ ___ to swim in the lake.",
+     "reponses": [
+      [
+       "were"
+      ],
+      [
+       "allowed"
+      ]
+     ],
+     "banque": [
+      "were",
+      "allowed",
+      "was",
+      "allow"
+     ],
+     "aide": "Il faut *be allowed to* au passé : le sujet est *guests*.",
+     "explication": "**were allowed** : on conjugue *be* au prétérit, puis *allowed to*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à sa fonction.",
+     "paires": [
+      [
+       "You mustn’t light fires.",
+       "Interdiction forte"
+      ],
+      [
+       "Visitors may not enter.",
+       "Refus formel d’un règlement"
+      ],
+      [
+       "Could I use the kitchen?",
+       "Demande polie"
+      ],
+      [
+       "I was allowed to swim.",
+       "Permission au passé"
+      ]
+     ],
+     "aide": "*Mustn’t* est plus fort que *can’t*.",
+     "explication": "*Mustn’t* interdit fortement ; *may not* est la forme formelle des règlements ; *could* demande poliment ; *was allowed to* parle du passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "02d9bc22-41f8-5ac3-9908-5754e0eafb59",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Fatiguée tous les matins",
+   "competence": "comprendre-langue",
+   "situation": "Dans le journal du collège, Lola écrit à la rubrique « Conseils » : elle est toujours fatiguée le matin. Le journal lui répond.",
+   "documents": [
+    {
+     "id": "rubrique",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Ask Dr Sam",
+     "blocs": [
+      "Dear Dr Sam, I’m tired every morning. What can I do? — Lola",
+      "Dear Lola, You [[s|should]] go to bed earlier. You [[s|shouldn’t]] use your phone at night. And you [[s|should]] drink some water in the morning."
+     ],
+     "source": "Rubrique écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rubrique",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche **tous les modaux** qui donnent un conseil à Lola.",
+     "aide": "Il y en a trois, dont un négatif.",
+     "explication": "**should, shouldn’t, should** : *should* donne un conseil, *shouldn’t* le déconseille."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Tu devrais réviser pour le contrôle ». La phrase commence par You.",
+     "items": [
+      "You",
+      "should",
+      "revise",
+      "for",
+      "the",
+      "test"
+     ],
+     "aide": "Après *should*, le verbe reste à la base verbale.",
+     "explication": "**You should revise for the test** : should + verbe, sans *to*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour déconseiller de manger si tard.",
+     "texte": "You ___ eat so late. It’s bad for your sleep.",
+     "reponses": [
+      [
+       "shouldn’t"
+      ]
+     ],
+     "banque": [
+      "shouldn’t",
+      "should",
+      "can",
+      "to"
+     ],
+     "aide": "On déconseille, donc c’est négatif.",
+     "explication": "**shouldn’t** : la négation de *should* déconseille."
+    }
+   ]
+  },
+  {
+   "chapitre": "02d9bc22-41f8-5ac3-9908-5754e0eafb59",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les devoirs oubliés",
+   "competence": "manier-langue",
+   "situation": "Tim a oublié ses devoirs à la maison et il s’inquiète. Sa copine Mia lui répond par messages.",
+   "documents": [
+    {
+     "id": "msg",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Tim et Mia",
+     "participants": [
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tim",
+       "texte": "I forgot my homework! I’m in trouble!"
+      },
+      {
+       "qui": "Mia",
+       "texte": "You [[r|should]] [[r|have]] checked your bag. You’d [[u|better]] call your teacher now, or she’ll be angry."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "msg",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui disent ce que Tim **aurait dû faire** et n’a pas fait.",
+     "aide": "Cherche *should* suivi de *have*.",
+     "explication": "**should have** + participe passé : un reproche ou un regret sur le passé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à son degré.",
+     "paires": [
+      [
+       "You should rest.",
+       "Conseil ordinaire"
+      ],
+      [
+       "You’d better rest.",
+       "Conseil pressant"
+      ],
+      [
+       "You must rest.",
+       "Obligation"
+      ]
+     ],
+     "aide": "*Had better* sous-entend une menace.",
+     "explication": "*Should* conseille, *had better* presse en menaçant un peu, *must* oblige."
+    },
+    {
+     "type": "trous",
+     "enonce": "Tim s’excuse d’avoir dit une bêtise.",
+     "texte": "I’m sorry. I ___ have said that.",
+     "reponses": [
+      [
+       "shouldn’t"
+      ]
+     ],
+     "banque": [
+      "shouldn’t",
+      "didn’t",
+      "don’t",
+      "to"
+     ],
+     "aide": "Il regrette une action passée.",
+     "explication": "**shouldn’t have** + participe passé : « je n’aurais pas dû »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase donne un conseil pressant ?",
+     "options": [
+      "You’d better hurry, or we’ll miss the train.",
+      "You’d better to hurry, or we’ll miss the train.",
+      "You’d better hurrying, or we’ll miss the train.",
+      "You’d better hurried, or we’ll miss the train."
+     ],
+     "reponse": 0,
+     "aide": "*Had better* est suivi de la base verbale.",
+     "explication": "**You’d better hurry** : *had better* + base verbale, sans *to*."
+    }
+   ]
+  },
+  {
+   "chapitre": "02d9bc22-41f8-5ac3-9908-5754e0eafb59",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un contrôle lundi",
+   "competence": "argumenter",
+   "situation": "Sam est inquiet pour son contrôle d’anglais de lundi. Il écrit à son amie Kim, qui lui répond.",
+   "documents": [
+    {
+     "id": "sam",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Sam",
+     "blocs": [
+      "Dear Kim, I’m nervous about my English test on Monday. I haven’t revised much and I played video games all weekend. What do you think I should do? — Sam"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "kim",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La réponse de Kim",
+     "blocs": [
+      "Hi Sam, You should start now! You’d better not stay up too late, though. If I were you, I’d make a list of the verbs. [[q|Why]] [[q|don’t]] [[q|you]] ask Mr Brown for help? You should have started earlier, but it’s not too late."
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "kim",
+     "reponse": [
+      "q"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois mots** qui forment le conseil sous forme de **question**.",
+     "aide": "Cette tournure commence par *Why*.",
+     "explication": "**Why don’t you…?** propose un conseil sous forme de question."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de Kim est un **regret** sur le passé ?",
+     "options": [
+      "You should have started earlier.",
+      "If I were you, I’d make a list.",
+      "You’d better not stay up too late.",
+      "Why don’t you ask Mr Brown?"
+     ],
+     "reponse": 0,
+     "aide": "Cherche *should* suivi de *have*.",
+     "explication": "**You should have started earlier** : *should have* + participe passé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Sam regrette d’avoir joué tout le week-end.",
+     "texte": "I ___ have played so much.",
+     "reponses": [
+      [
+       "shouldn’t"
+      ]
+     ],
+     "banque": [
+      "shouldn’t",
+      "should",
+      "didn’t",
+      "don’t"
+     ],
+     "aide": "Il n’aurait pas dû faire cela.",
+     "explication": "**shouldn’t have played** : « je n’aurais pas dû jouer »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tournure à son rôle.",
+     "paires": [
+      [
+       "Why don’t you…?",
+       "Conseil en question"
+      ],
+      [
+       "If I were you, I’d…",
+       "On se met à la place de l’autre"
+      ],
+      [
+       "You should have…",
+       "Reproche sur le passé"
+      ],
+      [
+       "You’d better not…",
+       "Conseil pressant négatif"
+      ]
+     ],
+     "aide": "Lis le rôle comme un coup de pouce.",
+     "explication": "Chaque tournure a son rôle : question, point de vue, passé, pression."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Tu ferais mieux de ne pas oublier ton livre ». La phrase commence par You’d.",
+     "items": [
+      "You’d",
+      "better",
+      "not",
+      "forget",
+      "your",
+      "book"
+     ],
+     "aide": "*Not* se place après *better*.",
+     "explication": "**You’d better not forget your book** : had better + not + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "04dc7b15-d693-563d-8d97-a0bd1acfcc6a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Que faire samedi ?",
+   "competence": "comprendre-langue",
+   "situation": "C’est samedi et Leo s’ennuie. Il écrit à sa copine Mia pour savoir ce qu’ils pourraient faire.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Leo et Mia",
+     "participants": [
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leo",
+       "texte": "It’s Saturday! What shall we do?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "Let’s go to the cinema!"
+      },
+      {
+       "qui": "Leo",
+       "texte": "[[a|Good]] [[a|idea]]! How about having pizza after?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** par lesquels Leo **accepte** la suggestion de Mia.",
+     "aide": "Il trouve que c’est bien.",
+     "explication": "**Good idea** : une façon d’accepter une suggestion."
+    },
+    {
+     "type": "trous",
+     "enonce": "Mia propose le cinéma.",
+     "texte": "Let’s ___ to the cinema!",
+     "reponses": [
+      [
+       "go"
+      ]
+     ],
+     "banque": [
+      "go",
+      "going",
+      "to go",
+      "goes"
+     ],
+     "aide": "Après *Let’s*, on met la base verbale.",
+     "explication": "**Let’s go** : Let’s + base verbale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Leo propose de manger une pizza. Quelle phrase est correcte ?",
+     "options": [
+      "How about having pizza?",
+      "How about have pizza?",
+      "How about to have pizza?",
+      "How about has pizza?"
+     ],
+     "reponse": 0,
+     "aide": "Après *How about*, le verbe prend -ING.",
+     "explication": "**How about having** : How about + verbe en -ING."
+    }
+   ]
+  },
+  {
+   "chapitre": "04dc7b15-d693-563d-8d97-a0bd1acfcc6a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le programme du samedi",
+   "competence": "manier-langue",
+   "situation": "Le club de collège affiche des idées de sorties pour samedi. Zoé et ses amis choisissent ce qu’ils vont proposer.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Saturday ideas",
+     "sousTitre": "Club noticeboard",
+     "emoji": "📅",
+     "lignes": [
+      {
+       "texte": "2.00 p.m. – Cinema: Space Cats",
+       "id": "cine"
+      },
+      {
+       "texte": "3.30 p.m. – Swimming pool",
+       "id": "piscine"
+      },
+      {
+       "texte": "5.00 p.m. – Pizza at Luigi’s",
+       "id": "pizza"
+      }
+     ],
+     "pied": "Join us!",
+     "teinte": "violet",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "pizza"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’activité qui a lieu **en dernier**.",
+     "aide": "Compare les heures.",
+     "explication": "**Pizza at Luigi’s** : 5 h de l’après-midi est l’heure la plus tardive."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon qu’elle est correcte ou non.",
+     "categories": [
+      "Correcte",
+      "Fautive"
+     ],
+     "items": [
+      [
+       "How about going swimming?",
+       0
+      ],
+      [
+       "How about go swimming?",
+       1
+      ],
+      [
+       "Let’s go to the cinema.",
+       0
+      ],
+      [
+       "Let’s going to the cinema.",
+       1
+      ],
+      [
+       "Why don’t we meet at six?",
+       0
+      ],
+      [
+       "Why don’t we meeting at six?",
+       1
+      ]
+     ],
+     "aide": "*How about* est suivi de -ING ; *Let’s* et *Why don’t we* de la base verbale.",
+     "explication": "Après **How about** : -ING. Après **Let’s** et **Why don’t we** : la base verbale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Zoé propose de se retrouver à la piscine.",
+     "texte": "Shall we ___ at the swimming pool?",
+     "reponses": [
+      [
+       "meet"
+      ]
+     ],
+     "banque": [
+      "meet",
+      "meeting",
+      "to meet",
+      "met"
+     ],
+     "aide": "*Shall we* est suivi de la base verbale.",
+     "explication": "**Shall we meet** : Shall we + base verbale."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Pourquoi ne pas se retrouver au cinéma ». La phrase commence par Why.",
+     "items": [
+      "Why",
+      "don’t",
+      "we",
+      "meet",
+      "at",
+      "the",
+      "cinema"
+     ],
+     "aide": "La question commence par *Why don’t we*.",
+     "explication": "**Why don’t we meet at the cinema** : Why don’t we + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "04dc7b15-d693-563d-8d97-a0bd1acfcc6a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une fête surprise",
+   "competence": "argumenter",
+   "situation": "Pour l’anniversaire de Tom, Ana et Zara organisent une surprise. Ana écrit un e-mail, Zara répond par message.",
+   "documents": [
+    {
+     "id": "ana",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail d’Ana",
+     "blocs": [
+      "Hi Zara, It’s Tom’s birthday on Saturday! Why don’t we organise a surprise party? We could meet at six at the park. Shall I buy the cake? [[n|Let’s]] [[n|not]] tell him!"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "zara",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message de Zara",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zara",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zara",
+       "texte": "Good idea! But [[p|I’d]] [[p|rather]] stay indoors because it will be cold. How about having it at my place instead?"
+      }
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ana",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui proposent de **ne pas** faire quelque chose.",
+     "aide": "Ils sont tout à la fin du message.",
+     "explication": "**Let’s not** : la négation de *Let’s* se place avant le verbe."
+    },
+    {
+     "type": "zone",
+     "document": "zara",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui disent la **préférence** de Zara.",
+     "aide": "Elle préférerait rester à l’intérieur.",
+     "explication": "**I’d rather** : *would rather* + base verbale exprime une préférence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase compare deux préférences ?",
+     "options": [
+      "I’d rather stay indoors than go to the park.",
+      "I’d rather to stay indoors than going to the park.",
+      "I’d rather staying indoors than go to the park.",
+      "I’d rather stay indoors that go to the park."
+     ],
+     "reponse": 0,
+     "aide": "On compare avec *than*.",
+     "explication": "**I’d rather stay indoors than go out** : would rather + base verbale + than + base verbale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à son rôle.",
+     "paires": [
+      [
+       "I’d rather not.",
+       "Refuser poliment"
+      ],
+      [
+       "That sounds great!",
+       "Accepter"
+      ],
+      [
+       "Shall we start?",
+       "Proposer"
+      ],
+      [
+       "Let’s go, shall we?",
+       "Relancer en fin de phrase"
+      ]
+     ],
+     "aide": "Pense à ce que dit celui qui parle.",
+     "explication": "Chaque formule a son rôle : refuser, accepter, proposer ou relancer."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je préfère rester à l’intérieur plutôt que sortir ». La phrase commence par I’d.",
+     "items": [
+      "I’d",
+      "rather",
+      "stay",
+      "indoors",
+      "than",
+      "go",
+      "out"
+     ],
+     "aide": "*Than* sépare les deux préférences.",
+     "explication": "**I’d rather stay indoors than go out** : would rather + base verbale + than + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "200816cc-bdef-5387-9a4c-9ab47decf2a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un goûter au café",
+   "competence": "comprendre-langue",
+   "situation": "Max et sa sœur Eli entrent dans un petit café après l’école. Ils regardent la carte avant de commander.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Café Rosie",
+     "sousTitre": "Menu of the day",
+     "emoji": "☕",
+     "lignes": [
+      {
+       "texte": "Hot chocolate",
+       "valeur": "£2.50"
+      },
+      {
+       "texte": "Orange juice",
+       "valeur": "£2.00",
+       "id": "jus"
+      },
+      {
+       "texte": "Cheese sandwich",
+       "valeur": "£3.50"
+      },
+      {
+       "texte": "Apple cake",
+       "valeur": "£2.80",
+       "id": "gateau"
+      }
+     ],
+     "pied": "Thank you for your visit!",
+     "teinte": "ambre",
+     "source": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "jus"
+     ],
+     "multiple": false,
+     "enonce": "Max n’a presque plus d’argent. Touche la **boisson ou l’article le moins cher** de la carte.",
+     "aide": "Compare les prix un par un.",
+     "explication": "**Orange juice**, à £2.00, est le moins cher de la carte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Max commande-t-il poliment le gâteau aux pommes ?",
+     "options": [
+      "I’d like an apple cake, please.",
+      "I would to want an apple cake, please.",
+      "I want to an apple cake, please.",
+      "I like want an apple cake, please."
+     ],
+     "reponse": 0,
+     "aide": "La forme polie de *want* commence par *I’d*.",
+     "explication": "**I’d like an apple cake, please.** *Would like* est plus poli que *want*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Eli commande un sandwich.",
+     "texte": "I’d like ___ order the cheese sandwich.",
+     "reponses": [
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "to",
+      "ordering",
+      "for",
+      "that"
+     ],
+     "aide": "Après *would like*, on met *to* et la base verbale.",
+     "explication": "**I’d like to order** : would like + to + verbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "200816cc-bdef-5387-9a4c-9ab47decf2a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Si seulement j’avais plus de temps",
+   "competence": "manier-langue",
+   "situation": "Ana envoie des messages à sa cousine un soir de grosse fatigue. Elle exprime plusieurs souhaits.",
+   "documents": [
+    {
+     "id": "ana",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ana et Rose",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Rose",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "I wish I had more time! I have so much homework."
+      },
+      {
+       "qui": "Ana",
+       "texte": "I wish it [[w|would]] stop raining, too."
+      },
+      {
+       "qui": "Rose",
+       "texte": "Poor you! I wish I had studied harder for the maths test."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ana",
+     "reponse": [
+      "w"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui exprime le souhait qu’une **situation change**.",
+     "aide": "C’est un modal placé avant *stop*.",
+     "explication": "**would** : *wish* + *would* exprime le souhait que quelque chose change."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à ce qu’elle exprime.",
+     "paires": [
+      [
+       "I wish I had more time.",
+       "Regret sur le présent"
+      ],
+      [
+       "I wish I had studied harder.",
+       "Regret sur le passé"
+      ],
+      [
+       "I wish it would stop raining.",
+       "Souhait que ça change"
+      ]
+     ],
+     "aide": "Regarde le temps qui suit *wish*.",
+     "explication": "Prétérit : présent. Past perfect : passé. *Would* : changement souhaité."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux regrets.",
+     "texte": "I wish I ___ taller. I wish I ___ studied harder.",
+     "reponses": [
+      [
+       "were"
+      ],
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "were",
+      "had",
+      "am",
+      "would",
+      "have"
+     ],
+     "aide": "Le premier porte sur le présent, le second sur le passé.",
+     "explication": "**were** : forme irréelle de *be*. **had studied** : past perfect pour le passé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je voudrais qu’il arrête de pleuvoir ». La phrase commence par I.",
+     "items": [
+      "I",
+      "wish",
+      "it",
+      "would",
+      "stop",
+      "raining"
+     ],
+     "aide": "Après *wish*, on met *it would*.",
+     "explication": "**I wish it would stop raining** : wish + sujet + would + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "200816cc-bdef-5387-9a4c-9ab47decf2a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une sortie qui a mal tourné",
+   "competence": "argumenter",
+   "situation": "Chloé a fait une randonnée sous la pluie. Elle écrit un e-mail à son père, qui lui répond par message.",
+   "documents": [
+    {
+     "id": "chloe",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Chloé",
+     "blocs": [
+      "Dear Dad, I’m wet and cold. I wish I had taken my umbrella. [[o|If]] [[o|only]] I had listened to you! I regret [[g|leaving]] my phone at home. I should have checked the weather."
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "papa",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message du père",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Papa",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Papa",
+       "texte": "I wish you would call me when you’re late! Would you like a lift home?"
+      }
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chloe",
+     "reponse": [
+      "o"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui renforcent le regret de Chloé.",
+     "aide": "Ils ouvrent une phrase exclamative.",
+     "explication": "**If only** : même construction que *wish*, avec plus d’émotion."
+    },
+    {
+     "type": "zone",
+     "document": "chloe",
+     "reponse": [
+      "g"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe **en -ING** qui suit *regret*.",
+     "aide": "Il est tout près de *my phone*.",
+     "explication": "**leaving** : *regret* + -ING (« regretter d’avoir fait »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase veut dire « Je regrette d’avoir laissé mon téléphone » ?",
+     "options": [
+      "I regret leaving my phone at home.",
+      "I regret to leaving my phone at home.",
+      "I regret leave my phone at home.",
+      "I regret that leaving my phone at home."
+     ],
+     "reponse": 0,
+     "aide": "*Regret* est suivi du verbe en -ING.",
+     "explication": "**I regret leaving** : regret + -ING."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la demande du père.",
+     "texte": "I wish you ___ call me when you’re late!",
+     "reponses": [
+      [
+       "would"
+      ]
+     ],
+     "banque": [
+      "would",
+      "will",
+      "can",
+      "to"
+     ],
+     "aide": "Il souhaite que Chloé change son comportement.",
+     "explication": "**would** : *wish* + *would* demande que quelqu’un change d’habitude."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à sa nuance.",
+     "paires": [
+      [
+       "Would you like a lift?",
+       "Offre polie"
+      ],
+      [
+       "If only I had listened!",
+       "Regret fort sur le passé"
+      ],
+      [
+       "I wish you a happy birthday.",
+       "Vœu sans recul du temps"
+      ],
+      [
+       "I should have checked.",
+       "Reproche à soi-même"
+      ]
+     ],
+     "aide": "Pense au rôle de chaque phrase.",
+     "explication": "Chaque phrase a sa nuance : offre, regret fort, vœu ou reproche."
+    }
+   ]
+  },
+  {
+   "chapitre": "3cba9e1a-c179-56a4-aad7-d5420522fe23",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où est Leo ?",
+   "competence": "comprendre-langue",
+   "situation": "Leo n’est pas en classe ce matin. Max et Anna se demandent pourquoi, en envoyant des messages.",
+   "documents": [
+    {
+     "id": "msg",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Max et Anna",
+     "participants": [
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Anna",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Max",
+       "texte": "Leo isn’t in class. He might be ill."
+      },
+      {
+       "qui": "Anna",
+       "texte": "He [[m|must]] be ill! He was coughing yesterday."
+      },
+      {
+       "qui": "Max",
+       "texte": "Or he may be late. The bus is slow."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "msg",
+     "reponse": [
+      "m"
+     ],
+     "multiple": false,
+     "enonce": "Touche le modal par lequel Anna se dit **presque sûre** de la cause.",
+     "aide": "Elle ne dit pas « peut-être » mais « sûrement ».",
+     "explication": "**must** : la quasi-certitude."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque modal à son degré de certitude.",
+     "paires": [
+      [
+       "must",
+       "Presque certain"
+      ],
+      [
+       "might",
+       "Simplement possible"
+      ],
+      [
+       "can’t",
+       "Impossible"
+      ]
+     ],
+     "aide": "Du plus sûr au moins sûr, puis le contraire.",
+     "explication": "*Must* : presque sûr. *Might* : possible. *Can’t* : impossible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « He can’t be at home » ?",
+     "options": [
+      "Il ne peut pas être chez lui",
+      "Il n’a pas le droit d’être chez lui",
+      "Il ne sait pas être chez lui",
+      "Il ne doit pas rentrer chez lui"
+     ],
+     "reponse": 0,
+     "aide": "Ici, *can’t* dit que c’est impossible.",
+     "explication": "**Il ne peut pas être chez lui** : *can’t* exprime la certitude négative."
+    }
+   ]
+  },
+  {
+   "chapitre": "3cba9e1a-c179-56a4-aad7-d5420522fe23",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a mangé le gâteau ?",
+   "competence": "raisonner",
+   "situation": "Le gâteau a disparu de la cuisine à 17 h. La mère de Zoé note les indices sur chaque personne.",
+   "documents": [
+    {
+     "id": "indices",
+     "type": "tableau",
+     "titre": "Les indices",
+     "colonnes": [
+      "Suspect",
+      "Clue"
+     ],
+     "lignes": [
+      [
+       "Mia",
+       "Has chocolate on her fingers at 5.15 p.m."
+      ],
+      [
+       "Jack",
+       "At football practice from 4 p.m. to 6 p.m."
+      ],
+      [
+       "Olivia",
+       "Is on holiday in Spain this week"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "indices",
+     "reponse": [
+      "r1c0"
+     ],
+     "multiple": false,
+     "enonce": "Touche le suspect qui, d’après le tableau, **ne peut pas** avoir pris le gâteau à 17 h.",
+     "aide": "Compare l’heure du vol et l’emploi du temps de chacun.",
+     "explication": "**Jack** était à l’entraînement de 16 h à 18 h : il ne peut pas l’avoir pris."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux déductions.",
+     "texte": "Jack ___ have taken the cake. Mia ___ have eaten it.",
+     "reponses": [
+      [
+       "can’t"
+      ],
+      [
+       "must"
+      ]
+     ],
+     "banque": [
+      "can’t",
+      "must",
+      "mustn’t",
+      "to"
+     ],
+     "aide": "Un suspect est écarté, l’autre est presque certain.",
+     "explication": "**can’t have** : c’est impossible. **must have** : c’est presque sûr."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase veut dire « Olivia a peut-être pris le gâteau » ?",
+     "options": [
+      "Olivia may have taken the cake.",
+      "Olivia must have taken the cake.",
+      "Olivia can’t have taken the cake.",
+      "Olivia should take the cake."
+     ],
+     "reponse": 0,
+     "aide": "Cherche le modal de simple possibilité au passé.",
+     "explication": "**Olivia may have taken** : may + have + participe passé = peut-être."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Mia est probablement la voleuse ». La phrase commence par Mia.",
+     "items": [
+      "Mia",
+      "is",
+      "probably",
+      "the",
+      "thief"
+     ],
+     "aide": "*Probably* se place après *be*.",
+     "explication": "**Mia is probably the thief** : *probably* se met après le verbe *be*."
+    }
+   ]
+  },
+  {
+   "chapitre": "3cba9e1a-c179-56a4-aad7-d5420522fe23",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bus de huit heures",
+   "competence": "argumenter",
+   "situation": "Leo et Zoé attendent le bus du collège. Il est 8 h 15 et rien ne vient. Ils lisent aussi la météo du jour.",
+   "documents": [
+    {
+     "id": "meteo",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Weather report",
+     "blocs": [
+      "The sky is grey this morning. It’s [[l|likely]] [[l|to]] rain after lunch. Temperatures [[s|should]] reach 17 degrees in the afternoon."
+     ],
+     "source": "Bulletin écrit pour l’exercice"
+    },
+    {
+     "id": "bus",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Leo et Zoé",
+     "participants": [
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leo",
+       "texte": "The bus isn’t here. It’s quarter past eight!"
+      },
+      {
+       "qui": "Zoé",
+       "texte": "It must have left early. Or it might have broken down."
+      },
+      {
+       "qui": "Leo",
+       "texte": "It [[i|can’t]] have left early. The driver always waits!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "meteo",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** de l’expression qui dit qu’il va **probablement** pleuvoir.",
+     "aide": "Cherche un adjectif suivi de *to*.",
+     "explication": "**likely to** : *It’s likely to rain* = il va probablement pleuvoir."
+    },
+    {
+     "type": "zone",
+     "document": "meteo",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le modal de **forte probabilité** (les températures devraient atteindre 17 degrés).",
+     "aide": "Ce n’est pas *must*.",
+     "explication": "**should** exprime la forte probabilité."
+    },
+    {
+     "type": "zone",
+     "document": "bus",
+     "reponse": [
+      "i"
+     ],
+     "multiple": false,
+     "enonce": "Touche le modal par lequel Leo dit que c’est **impossible**.",
+     "aide": "Il est à la forme négative.",
+     "explication": "**can’t** : certitude négative (« c’est impossible »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « It might have broken down » ?",
+     "options": [
+      "Il est peut-être tombé en panne",
+      "Il a dû tomber en panne",
+      "Il n’a pas pu tomber en panne",
+      "Il aurait dû tomber en panne"
+     ],
+     "reponse": 0,
+     "aide": "*Might have* + participe passé : simple possibilité.",
+     "explication": "**Il est peut-être tombé en panne** : might have + participe passé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à sa traduction.",
+     "paires": [
+      [
+       "He must have missed the train.",
+       "Il a dû rater le train"
+      ],
+      [
+       "They can’t have arrived yet.",
+       "Ils ne peuvent pas être déjà arrivés"
+      ],
+      [
+       "She may have forgotten.",
+       "Elle a peut-être oublié"
+      ],
+      [
+       "You should have called.",
+       "Tu aurais dû appeler"
+      ]
+     ],
+     "aide": "Regarde le modal avant *have*.",
+     "explication": "*Must have* : déduction. *Can’t have* : impossible. *May have* : peut-être. *Should have* : reproche."
+    }
+   ]
+  },
+  {
+   "chapitre": "ff6c8aa1-5651-59b8-a45f-94ce5740e2a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mon samedi à la maison",
+   "competence": "comprendre-langue",
+   "situation": "Jade raconte sa journée du samedi à son amie anglaise Holly. Chaque verbe dit qui décide de quoi.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Jade",
+     "blocs": [
+      "Dear Holly, On Saturday, Mum [[m|makes]] me tidy my room. After lunch, she lets me watch TV. In the afternoon, I’m having my hair cut at the barber’s. See you soon! Jade"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "m"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui dit que Jade est **obligée** de ranger sa chambre.",
+     "aide": "Il est juste après *Mum*.",
+     "explication": "**makes** : *make* + complément + base verbale = obliger."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « she lets me watch TV » ?",
+     "options": [
+      "Elle m’autorise à regarder la télé",
+      "Elle m’oblige à regarder la télé",
+      "Elle regarde la télé à ma place",
+      "Elle éteint la télé"
+     ],
+     "reponse": 0,
+     "aide": "*Let* donne la permission.",
+     "explication": "**Elle m’autorise** : *let* + complément + base verbale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Jade n’aime pas ranger.",
+     "texte": "I don’t want to, but Mum ___ me tidy my room.",
+     "reponses": [
+      [
+       "makes"
+      ]
+     ],
+     "banque": [
+      "makes",
+      "lets",
+      "forces",
+      "asks"
+     ],
+     "aide": "On l’oblige à contrecœur.",
+     "explication": "**makes** : *make* + complément + base verbale, sans *to*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ff6c8aa1-5651-59b8-a45f-94ce5740e2a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les services de la semaine",
+   "competence": "manier-langue",
+   "situation": "La famille de Maya a fait réparer et nettoyer plusieurs choses cette semaine. Voici le relevé des services.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Home services",
+     "sousTitre": "Week 12",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "Hair cut",
+       "valeur": "£12",
+       "id": "cheveux"
+      },
+      {
+       "texte": "Car wash",
+       "valeur": "£8",
+       "id": "voiture"
+      },
+      {
+       "texte": "Phone screen repair",
+       "valeur": "£45",
+       "id": "telephone"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "£65",
+       "gras": true
+      }
+     ],
+     "pied": "Thank you!",
+     "teinte": "bleu",
+     "source": "Relevé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releve",
+     "reponse": [
+      "telephone"
+     ],
+     "multiple": false,
+     "enonce": "Touche la ligne qui correspond à « I had my phone repaired. »",
+     "aide": "Cherche ce qui concerne le téléphone.",
+     "explication": "**Phone screen repair** : Maya a fait réparer son téléphone, elle ne l’a pas réparé elle-même."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : l’a-t-on fait soi-même ou l’a-t-on fait faire ?",
+     "categories": [
+      "Fait soi-même",
+      "Fait faire"
+     ],
+     "items": [
+      [
+       "I washed the car.",
+       0
+      ],
+      [
+       "We had the car washed.",
+       1
+      ],
+      [
+       "She fixed her bike.",
+       0
+      ],
+      [
+       "She got her phone fixed.",
+       1
+      ],
+      [
+       "He painted the wall.",
+       0
+      ],
+      [
+       "He had the wall painted.",
+       1
+      ]
+     ],
+     "aide": "*Have* ou *get* + complément + participe passé = faire faire.",
+     "explication": "**Have / get + complément + participe passé** : on commande l’action à quelqu’un d’autre."
+    },
+    {
+     "type": "trous",
+     "enonce": "La voiture a été lavée au garage.",
+     "texte": "We had the car ___ last Friday.",
+     "reponses": [
+      [
+       "washed"
+      ]
+     ],
+     "banque": [
+      "washed",
+      "wash",
+      "washing",
+      "to wash"
+     ],
+     "aide": "Après *had the car*, on met le participe passé.",
+     "explication": "**washed** : have + complément + participe passé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « J’ai fait réparer mon vélo ». La phrase commence par I.",
+     "items": [
+      "I",
+      "had",
+      "my",
+      "bike",
+      "repaired"
+     ],
+     "aide": "Le participe passé vient en dernier.",
+     "explication": "**I had my bike repaired** : have + complément + participe passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "ff6c8aa1-5651-59b8-a45f-94ce5740e2a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une journée chez l’oncle coiffeur",
+   "competence": "argumenter",
+   "situation": "Sam a passé un samedi dans le salon de coiffure de son oncle. Il écrit un e-mail à sa grand-mère, puis discute avec son ami Luc.",
+   "documents": [
+    {
+     "id": "sam",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Sam",
+     "blocs": [
+      "Dear Gran, My uncle got me to help in his shop on Saturday. He made me sweep the floor all morning. I was [[p|made]] to wear a funny apron! Afterwards, I had my hair cut for free."
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "luc",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Luc et Sam",
+     "participants": [
+      {
+       "nom": "Luc",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Luc",
+       "texte": "Did your uncle let you cut hair?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "No! He didn’t let me touch the scissors."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sam",
+     "reponse": [
+      "p"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui montre le **passif** de *make*. Après lui, *to* réapparaît.",
+     "aide": "Cherche *I was … to wear*.",
+     "explication": "**made** : au passif, *make* est suivi de *to* (*I was made to wear*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « I was made to wear » mais « He made me sweep » ?",
+     "options": [
+      "Au passif, make est suivi de to",
+      "Parce que wear est irrégulier",
+      "Parce que sweep est un verbe d’état",
+      "Parce que was est un modal"
+     ],
+     "reponse": 0,
+     "aide": "Compare la voix active et la voix passive.",
+     "explication": "**Au passif**, *make* est suivi de **to** + verbe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire « Il ne m’a pas laissé toucher les ciseaux ».",
+     "texte": "He didn’t ___ me touch the scissors.",
+     "reponses": [
+      [
+       "let"
+      ]
+     ],
+     "banque": [
+      "let",
+      "make",
+      "get",
+      "have"
+     ],
+     "aide": "Il s’agit d’une permission refusée.",
+     "explication": "**let** : *let* + complément + base verbale = autoriser."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "Il m’a fait attendre.",
+       "He made me wait."
+      ],
+      [
+       "Je me suis fait couper les cheveux.",
+       "I had my hair cut."
+      ],
+      [
+       "Il m’a laissé sortir.",
+       "He let me go out."
+      ],
+      [
+       "J’ai réussi à le convaincre de venir.",
+       "I got him to come."
+      ]
+     ],
+     "aide": "Choisis le verbe : obliger, faire faire, autoriser, convaincre.",
+     "explication": "*Make* oblige, *have* fait faire, *let* autorise, *get … to* convainc."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Mon oncle m’a convaincu de l’aider ». La phrase commence par My.",
+     "items": [
+      "My",
+      "uncle",
+      "got",
+      "me",
+      "to",
+      "help",
+      "him"
+     ],
+     "aide": "*Get* + complément + *to* + verbe.",
+     "explication": "**My uncle got me to help him** : get + complément + to + verbe = convaincre."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fbd9384-6c6d-5558-b3c0-2136cb59dd5e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le réveil d’Alex",
+   "competence": "comprendre-langue",
+   "situation": "Alex dort encore. Sa mère lui envoie des messages pour le sortir du lit et le préparer pour l’école.",
+   "documents": [
+    {
+     "id": "msg",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Maman et Alex",
+     "participants": [
+      {
+       "nom": "Maman",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alex",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maman",
+       "texte": "Wake up, Alex! Get up and put on your school clothes. [[e|Turn]] [[e|off]] the TV, please. Look for your bag."
+      },
+      {
+       "qui": "Alex",
+       "texte": "OK! Look after the dog, please!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "msg",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui veulent dire « éteindre ».",
+     "aide": "Cherche le verbe lié à la télévision.",
+     "explication": "**turn off** : verbe à particule qui veut dire « éteindre »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son sens.",
+     "paires": [
+      [
+       "wake up",
+       "Se réveiller"
+      ],
+      [
+       "put on",
+       "Mettre (un vêtement)"
+      ],
+      [
+       "look for",
+       "Chercher"
+      ],
+      [
+       "look after",
+       "S’occuper de"
+      ]
+     ],
+     "aide": "Les sens ne se devinent pas toujours mot à mot.",
+     "explication": "Ces verbes s’apprennent comme des mots entiers."
+    },
+    {
+     "type": "trous",
+     "enonce": "Il fait froid dehors.",
+     "texte": "Please ___ on your coat. It’s cold.",
+     "reponses": [
+      [
+       "put"
+      ]
+     ],
+     "banque": [
+      "put",
+      "turn",
+      "give",
+      "look"
+     ],
+     "aide": "Quel verbe va avec un vêtement ?",
+     "explication": "**put on** : mettre un vêtement."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fbd9384-6c6d-5558-b3c0-2136cb59dd5e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La photocopieuse du collège",
+   "competence": "manier-langue",
+   "situation": "Nora doit utiliser la photocopieuse du CDI pour la première fois. Une affiche explique comment faire.",
+   "documents": [
+    {
+     "id": "mode",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "How to use the photocopier",
+     "sousTitre": "Library",
+     "emoji": "🖨️",
+     "lignes": [
+      {
+       "texte": "1. Turn the machine on.",
+       "id": "allumer"
+      },
+      {
+       "texte": "2. Put the paper in."
+      },
+      {
+       "texte": "3. Don’t give up if it stops!",
+       "id": "abandon"
+      },
+      {
+       "texte": "4. Find out the price on the screen."
+      }
+     ],
+     "pied": "Please be careful.",
+     "teinte": "bleu",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mode",
+     "reponse": [
+      "abandon"
+     ],
+     "multiple": false,
+     "enonce": "Touche la consigne qui dit de **ne pas abandonner**.",
+     "aide": "Cherche le verbe *give*.",
+     "explication": "**Don’t give up** : *give up* = abandonner."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe : le complément peut-il se glisser au milieu (particule) ou non (préposition) ?",
+     "categories": [
+      "Particule (séparable)",
+      "Préposition (inséparable)"
+     ],
+     "items": [
+      [
+       "turn on",
+       0
+      ],
+      [
+       "look after",
+       1
+      ],
+      [
+       "put off",
+       0
+      ],
+      [
+       "wait for",
+       1
+      ],
+      [
+       "listen to",
+       1
+      ],
+      [
+       "give up",
+       0
+      ]
+     ],
+     "aide": "On dit *turn the light on*, mais pas *look the baby after*.",
+     "explication": "On peut dire *turn the light on* ; on ne dit pas *look the baby after*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Le complément est un pronom : *it* se place avant la particule.",
+     "texte": "The photocopier is on. Turn ___ ___.",
+     "reponses": [
+      [
+       "it"
+      ],
+      [
+       "off"
+      ]
+     ],
+     "banque": [
+      "it",
+      "off",
+      "on",
+      "up"
+     ],
+     "aide": "Le pronom se glisse entre le verbe et la particule.",
+     "explication": "**Turn it off** : avec un pronom, on ne dit jamais *turn off it*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Elle s’occupe de son petit frère ». La phrase commence par She.",
+     "items": [
+      "She",
+      "looks",
+      "after",
+      "her",
+      "little",
+      "brother"
+     ],
+     "aide": "*Look after* reste collé.",
+     "explication": "**She looks after her little brother** : *look after* est inséparable."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fbd9384-6c6d-5558-b3c0-2136cb59dd5e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une semaine au camp d’été",
+   "competence": "argumenter",
+   "situation": "Sara écrit à sa grand-mère depuis un camp au bord d’un lac. Celle-ci lui répond par message.",
+   "documents": [
+    {
+     "id": "sara",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Sara",
+     "blocs": [
+      "Dear Gran, We got up at six today. I’m looking forward to the lake trip! We ran out of bread, so Tom went to find some. Yesterday I nearly gave up because the hill was steep, but I [[c|carried]] [[c|on]]. Love, Sara"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "gran",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Gran",
+     "participants": [
+      {
+       "nom": "Gran",
+       "emoji": "👵",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sara",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Gran",
+       "texte": "[[l|Look]] [[l|after]] your little cousin! Don’t forget to put on sun cream. What did you find out about the bears?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sara",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui veulent dire « continuer ».",
+     "aide": "Cherche un verbe suivi de *on*.",
+     "explication": "**carried on** : continuer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « We ran out of bread » ?",
+     "options": [
+      "Nous n’avions plus de pain",
+      "Nous avons couru acheter du pain",
+      "Nous avons mangé tout le pain",
+      "Nous avons jeté le pain"
+     ],
+     "reponse": 0,
+     "aide": "*Run out of* parle de quelque chose qui s’épuise.",
+     "explication": "**Nous n’avions plus de pain** : *run out of* = être à court de."
+    },
+    {
+     "type": "zone",
+     "document": "gran",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** du verbe qui veut dire « s’occuper de ».",
+     "aide": "C’est le premier verbe du message.",
+     "explication": "**look after** : s’occuper de."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son sens.",
+     "paires": [
+      [
+       "find out",
+       "Découvrir"
+      ],
+      [
+       "give up",
+       "Abandonner"
+      ],
+      [
+       "take off",
+       "Enlever"
+      ],
+      [
+       "grow up",
+       "Grandir"
+      ]
+     ],
+     "aide": "Pense au sens complet, pas mot à mot.",
+     "explication": "Ces verbes à particule s’apprennent comme du vocabulaire."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Éteins-le, s’il te plaît ». La phrase commence par Please.",
+     "items": [
+      "Please",
+      "turn",
+      "it",
+      "off"
+     ],
+     "aide": "Le pronom se place avant la particule.",
+     "explication": "**Please turn it off** : pronom avant la particule."
+    }
+   ]
+  },
+  {
+   "chapitre": "457554b1-6e8a-5d7b-a6f0-8115da8fe992",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les passions de Jade",
+   "competence": "comprendre-langue",
+   "situation": "Jade se présente sur le site de son futur club d’art. Elle parle de ce qu’elle aime et de ce qu’elle espère.",
+   "documents": [
+    {
+     "id": "profil",
+     "type": "texte",
+     "genre": "article",
+     "titre": "About me",
+     "blocs": [
+      "Hi! I’m Jade. I enjoy drawing and I’m [[p|good]] [[p|at]] painting. I want to be an artist, and I hope to study art in London."
+     ],
+     "source": "Présentation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "profil",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui précèdent un verbe en **-ING** (une préposition y est incluse).",
+     "aide": "Cherche un adjectif suivi d’une préposition, avant *painting*.",
+     "explication": "**good at painting** : après une préposition, le verbe prend -ING."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe selon ce qui le suit.",
+     "categories": [
+      "+ verbe en -ING",
+      "+ to + verbe"
+     ],
+     "items": [
+      [
+       "enjoy",
+       0
+      ],
+      [
+       "want",
+       1
+      ],
+      [
+       "hope",
+       1
+      ],
+      [
+       "finish",
+       0
+      ],
+      [
+       "decide",
+       1
+      ],
+      [
+       "avoid",
+       0
+      ]
+     ],
+     "aide": "Pense à *enjoy drawing* et *want to be*.",
+     "explication": "*Enjoy, finish, avoid* + -ING. *Want, hope, decide* + to + verbe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Jade enjoys ___ pictures.",
+     "reponses": [
+      [
+       "drawing"
+      ]
+     ],
+     "banque": [
+      "drawing",
+      "to draw",
+      "draw",
+      "draws"
+     ],
+     "aide": "*Enjoy* est suivi du verbe en -ING.",
+     "explication": "**drawing** : enjoy + -ING."
+    }
+   ]
+  },
+  {
+   "chapitre": "457554b1-6e8a-5d7b-a6f0-8115da8fe992",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une carte postale de la plage",
+   "competence": "manier-langue",
+   "situation": "Ella passe la journée à la plage avec sa famille. Elle envoie une carte postale à son ami Max.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Postcard",
+     "blocs": [
+      "Dear Max, We went to the beach [[b|to]] [[b|swim]]. I stopped playing volleyball because I was tired, then I stopped to buy an ice cream. Remember to bring your hat! Love, Ella"
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui disent **pourquoi** la famille est allée à la plage.",
+     "aide": "Cherche *to* suivi d’un verbe, juste après *the beach*.",
+     "explication": "**to swim** : l’infinitif exprime le but (« pour nager »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « I stopped to buy an ice cream » ?",
+     "options": [
+      "Je me suis arrêtée pour acheter une glace",
+      "J’ai arrêté d’acheter des glaces pour de bon",
+      "Je me suis arrêtée d’en manger à la plage",
+      "J’ai cessé de m’arrêter dans les magasins"
+     ],
+     "reponse": 0,
+     "aide": "*Stop to* indique le but de l’arrêt.",
+     "explication": "**Je me suis arrêtée pour acheter une glace** : *stop to* + verbe = s’arrêter pour faire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Ella s’est arrêtée de jouer car elle était fatiguée.",
+     "texte": "I stopped ___ volleyball: I was tired.",
+     "reponses": [
+      [
+       "playing"
+      ]
+     ],
+     "banque": [
+      "playing",
+      "to play",
+      "play",
+      "played"
+     ],
+     "aide": "Elle a cessé son activité.",
+     "explication": "**stop playing** : arrêter de jouer."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « J’ai hâte de te voir ». La phrase commence par I’m.",
+     "items": [
+      "I’m",
+      "looking",
+      "forward",
+      "to",
+      "seeing",
+      "you"
+     ],
+     "aide": "*Look forward to* est suivi d’un verbe en -ING.",
+     "explication": "**I’m looking forward to seeing you** : *to* est ici une préposition."
+    }
+   ]
+  },
+  {
+   "chapitre": "457554b1-6e8a-5d7b-a6f0-8115da8fe992",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Premières semaines dans un nouveau collège",
+   "competence": "argumenter",
+   "situation": "Nora vient d’arriver dans un nouveau collège. Elle écrit à une amie et consulte son planning de la semaine.",
+   "documents": [
+    {
+     "id": "nora",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Nora",
+     "blocs": [
+      "Hi Zoe, My new school is great. I [[t|managed]] to make friends quickly. I love playing football, but I can’t stand getting up early. Before leaving home, I always check my bag. I [[t|forgot]] to bring my lunch yesterday!"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "planning",
+     "type": "tableau",
+     "titre": "Le planning de Nora",
+     "colonnes": [
+      "Day",
+      "Activity",
+      "Why"
+     ],
+     "lignes": [
+      [
+       "Monday",
+       "Go to the library",
+       "to borrow books"
+      ],
+      [
+       "Tuesday",
+       "Join the swimming club",
+       "to keep fit"
+      ],
+      [
+       "Wednesday",
+       "Take a piano lesson",
+       "to learn new songs"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Planning écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nora",
+     "reponse": [
+      "t"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes** de l’e-mail qui sont suivis de **to + verbe**.",
+     "aide": "Ce sont des verbes de réussite et d’oubli.",
+     "explication": "**managed to** et **forgot to** : ces verbes sont suivis de *to* + verbe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « I forgot to bring my lunch » ?",
+     "options": [
+      "J’ai oublié d’apporter mon déjeuner",
+      "J’ai oublié que j’avais apporté mon déjeuner",
+      "Je me suis souvenue de l’apporter",
+      "J’ai refusé de l’apporter"
+     ],
+     "reponse": 0,
+     "aide": "*Forget to* + verbe parle d’une action qu’on n’a pas faite.",
+     "explication": "**J’ai oublié d’apporter** : *forget to* + verbe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Nora va à la bibliothèque pour emprunter des livres.",
+     "texte": "On Monday, she goes to the library ___ borrow books.",
+     "reponses": [
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "to",
+      "for",
+      "borrowing",
+      "borrow"
+     ],
+     "aide": "Le but se dit avec l’infinitif.",
+     "explication": "**to borrow** : l’infinitif de but répond à la question « pourquoi ? »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon qu’elle est correcte ou fautive.",
+     "categories": [
+      "Correcte",
+      "Fautive"
+     ],
+     "items": [
+      [
+       "She is good at swimming.",
+       0
+      ],
+      [
+       "She is good at to swim.",
+       1
+      ],
+      [
+       "He avoids being late.",
+       0
+      ],
+      [
+       "He avoids to be late.",
+       1
+      ],
+      [
+       "I went to the shop to buy bread.",
+       0
+      ],
+      [
+       "I went to the shop for buying bread.",
+       1
+      ]
+     ],
+     "aide": "Après une préposition ou *avoid* : -ING. Pour dire « pour », on utilise *to*.",
+     "explication": "*Good at* + -ING, *avoid* + -ING, but = *to* + verbe."
+    },
+    {
+     "type": "zone",
+     "document": "planning",
+     "reponse": [
+      "r2c1"
+     ],
+     "multiple": false,
+     "enonce": "Touche la case qui donne l’activité de **mercredi**.",
+     "aide": "Repère la ligne de mercredi.",
+     "explication": "**Take a piano lesson** : c’est l’activité du mercredi."
+    }
+   ]
+  },
+  {
+   "chapitre": "5888f3ad-232f-517b-a4c4-10af3352c997",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un match de football",
+   "competence": "comprendre-langue",
+   "situation": "Sam joue dans l’équipe de son collège. Son entraîneur rédige un petit portrait pour le journal de l’école.",
+   "documents": [
+    {
+     "id": "portrait",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Player of the month",
+     "blocs": [
+      "Sam plays football for our school. He runs quickly and plays well. He is [[a|always]] happy, and he plays carefully."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "portrait",
+     "reponse": [
+      "a"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’**adverbe de fréquence** du texte.",
+     "aide": "Il dit « toujours ».",
+     "explication": "**always** : adverbe de fréquence, placé après *be*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque adjectif à son adverbe.",
+     "paires": [
+      [
+       "slow",
+       "slowly"
+      ],
+      [
+       "happy",
+       "happily"
+      ],
+      [
+       "good",
+       "well"
+      ],
+      [
+       "careful",
+       "carefully"
+      ]
+     ],
+     "aide": "On ajoute -ly, sauf *good*, et *happy* devient *happily*.",
+     "explication": "Cas général : -ly. En -y : -ily. *Good* donne *well*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire qu’elle chante de manière magnifique.",
+     "texte": "She sings ___.",
+     "reponses": [
+      [
+       "beautifully"
+      ]
+     ],
+     "banque": [
+      "beautifully",
+      "beautiful",
+      "beautifuly",
+      "beauty"
+     ],
+     "aide": "Un adverbe modifie un verbe.",
+     "explication": "**beautifully** : adjectif + -ly."
+    }
+   ]
+  },
+  {
+   "chapitre": "5888f3ad-232f-517b-a4c4-10af3352c997",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une enquête sur les habitudes",
+   "competence": "lire-tableau",
+   "situation": "Dans un sondage, Ava et Ben ont répondu à des questions sur leurs habitudes. Voici leurs réponses.",
+   "documents": [
+    {
+     "id": "sondage",
+     "type": "tableau",
+     "titre": "Habits survey",
+     "colonnes": [
+      "Student",
+      "Walks to school",
+      "Is late",
+      "Does homework"
+     ],
+     "lignes": [
+      [
+       "Ava",
+       "always",
+       "never",
+       "usually"
+      ],
+      [
+       "Ben",
+       "sometimes",
+       "often",
+       "rarely"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sondage",
+     "reponse": [
+      "r0c2"
+     ],
+     "multiple": false,
+     "enonce": "Touche la case qui dit qu’**Ava n’est jamais en retard**.",
+     "aide": "Repère la ligne d’Ava, puis la colonne « Is late ».",
+     "explication": "**never** : adverbe de fréquence qui dit « jamais »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire qu’Ava n’est jamais en retard.",
+     "texte": "Ava is ___ late.",
+     "reponses": [
+      [
+       "never"
+      ]
+     ],
+     "banque": [
+      "never",
+      "always",
+      "often",
+      "usually"
+     ],
+     "aide": "Les adverbes de fréquence se placent après *be*.",
+     "explication": "**never** : après le verbe *be*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Elle n’a jamais été en retard ». La phrase commence par She.",
+     "items": [
+      "She",
+      "has",
+      "never",
+      "been",
+      "late"
+     ],
+     "aide": "L’adverbe se glisse après l’auxiliaire.",
+     "explication": "**She has never been late** : adverbe de fréquence après l’auxiliaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "I speak English well.",
+      "I speak well English.",
+      "I well speak English.",
+      "I speak English good."
+     ],
+     "reponse": 0,
+     "aide": "On n’intercale pas l’adverbe entre le verbe et son complément.",
+     "explication": "**I speak English well** : l’adverbe se place après le complément."
+    }
+   ]
+  },
+  {
+   "chapitre": "5888f3ad-232f-517b-a4c4-10af3352c997",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le concert de la chorale",
+   "competence": "analyser-texte",
+   "situation": "La chorale du collège a donné un concert. Voici un compte rendu écrit par un élève et les consignes du prochain concert.",
+   "documents": [
+    {
+     "id": "compte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Review",
+     "blocs": [
+      "Last night, our school choir sang beautifully at the town hall. The singers walked quietly onto the stage. Tom [[h|hardly]] slept before the concert, because he worked hard all week. Lately he has been very nervous, but he sang well enough to win."
+     ],
+     "source": "Compte rendu écrit pour l’exercice"
+    },
+    {
+     "id": "consigne",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Next concert",
+     "blocs": [
+      "Friday at 7 p.m. in the gym. Please sit [[q|quietly]] and switch off your phones."
+     ],
+     "source": "Consigne écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "compte",
+     "reponse": [
+      "h"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’adverbe qui veut dire **« à peine »**.",
+     "aide": "Il ressemble à *hard* mais ne veut pas dire « durement ».",
+     "explication": "**hardly** : à peine. Attention : *hard* veut dire « dur » ou « durement »."
+    },
+    {
+     "type": "zone",
+     "document": "consigne",
+     "reponse": [
+      "q"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’adverbe de **manière** qui dit comment s’asseoir.",
+     "aide": "Il se termine par -ly.",
+     "explication": "**quietly** : adverbe de manière formé avec -ly."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « Lately he has been nervous » ?",
+     "options": [
+      "Récemment, il a été nerveux",
+      "Tardivement, il a été nerveux",
+      "Il est devenu très nerveux",
+      "Il a été nerveux jusqu’à tard"
+     ],
+     "reponse": 0,
+     "aide": "*Lately* n’a rien à voir avec *late*.",
+     "explication": "**Récemment** : *lately* ne veut pas dire « tardivement »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il a chanté magnifiquement à l’école hier ». La phrase commence par He.",
+     "items": [
+      "He",
+      "sang",
+      "beautifully",
+      "at",
+      "school",
+      "yesterday"
+     ],
+     "aide": "Manière, puis lieu, puis temps.",
+     "explication": "**He sang beautifully at school yesterday** : manière → lieu → temps."
+    },
+    {
+     "type": "trous",
+     "enonce": "Tom est assez habile pour jouer.",
+     "texte": "He is skilful ___ to play.",
+     "reponses": [
+      [
+       "enough"
+      ]
+     ],
+     "banque": [
+      "enough",
+      "too",
+      "very",
+      "quite"
+     ],
+     "aide": "*Enough* se place après l’adjectif.",
+     "explication": "**skilful enough** : *enough* suit l’adjectif."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque adjectif à son adverbe.",
+     "paires": [
+      [
+       "good",
+       "well"
+      ],
+      [
+       "fast",
+       "fast"
+      ],
+      [
+       "happy",
+       "happily"
+      ],
+      [
+       "simple",
+       "simply"
+      ]
+     ],
+     "aide": "Certains adverbes ne changent pas.",
+     "explication": "*Good → well*, *fast → fast*, *happy → happily*, *simple → simply*."
+    }
+   ]
+  },
+  {
+   "chapitre": "c28cc7d0-2f2a-5a7a-9c0b-fabb9d4596df",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un déjeuner un peu spécial",
+   "competence": "comprendre-langue",
+   "situation": "Nina écrit un message à son amie pendant la pause du midi. Aujourd’hui, son rythme est différent de d’habitude.",
+   "documents": [
+    {
+     "id": "nina",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Message de Nina",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Hi Emma! I’m [[e|eating]] lunch now. I usually eat at one, but today I’m eating early. It’s raining!"
+      }
+     ],
+     "source": "Message écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nina",
+     "reponse": [
+      "e"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui dit ce que Nina **est en train de faire** maintenant.",
+     "aide": "Il est en -ING.",
+     "explication": "**eating** : *am eating* décrit une action en cours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon l’habitude ou l’action en cours.",
+     "categories": [
+      "Habitude",
+      "En cours"
+     ],
+     "items": [
+      [
+       "I play tennis every Saturday.",
+       0
+      ],
+      [
+       "I’m playing tennis now.",
+       1
+      ],
+      [
+       "She goes to school by bus.",
+       0
+      ],
+      [
+       "She is going to school now.",
+       1
+      ]
+     ],
+     "aide": "Cherche *every*, *now*, *usually*.",
+     "explication": "*Every Saturday* : habitude, présent simple. *Now* : en cours, BE + -ING."
+    },
+    {
+     "type": "trous",
+     "enonce": "Dehors, il pleut en ce moment.",
+     "texte": "Look! It ___ raining.",
+     "reponses": [
+      [
+       "is"
+      ]
+     ],
+     "banque": [
+      "is",
+      "does",
+      "are",
+      "has"
+     ],
+     "aide": "Il faut l’auxiliaire *be* avec -ING.",
+     "explication": "**is raining** : be + verbe en -ING."
+    }
+   ]
+  },
+  {
+   "chapitre": "c28cc7d0-2f2a-5a7a-9c0b-fabb9d4596df",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les horaires du train",
+   "competence": "manier-langue",
+   "situation": "Lucas voyage de Leeds à Londres avec ses parents. Il lit le panneau de la gare et discute des horaires.",
+   "documents": [
+    {
+     "id": "train",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Leeds station",
+     "sousTitre": "Departures",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "The London train leaves at 9.15",
+       "id": "londres"
+      },
+      {
+       "texte": "The York train leaves at 9.30",
+       "id": "york"
+      },
+      {
+       "texte": "The Hull train leaves at 9.45",
+       "id": "hull"
+      }
+     ],
+     "pied": "Please check the platform",
+     "teinte": "bleu",
+     "source": "Panneau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "train",
+     "reponse": [
+      "londres"
+     ],
+     "multiple": false,
+     "enonce": "Touche le train qui part **en premier**.",
+     "aide": "Compare les horaires.",
+     "explication": "**The London train**, à 9.15, part avant les autres."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase au présent simple.",
+     "texte": "She ___ (study) hard every night.",
+     "reponses": [
+      [
+       "studies"
+      ]
+     ],
+     "banque": [
+      "studies",
+      "studys",
+      "studyes",
+      "study"
+     ],
+     "aide": "À la 3e personne, *study* devient *studies*.",
+     "explication": "**studies** : consonne + y devient -ies."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "She doesn’t work here.",
+      "She don’t work here.",
+      "She doesn’t works here.",
+      "She not work here."
+     ],
+     "reponse": 0,
+     "aide": "Avec *doesn’t*, le verbe reste à la base verbale.",
+     "explication": "**She doesn’t work here** : doesn’t + base verbale."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il est toujours en train de perdre ses clés ». La phrase commence par He.",
+     "items": [
+      "He",
+      "is",
+      "always",
+      "losing",
+      "his",
+      "keys"
+     ],
+     "aide": "BE + -ING avec *always* exprime l’agacement.",
+     "explication": "**He is always losing his keys** : *always* + BE + -ING exprime l’agacement."
+    }
+   ]
+  },
+  {
+   "chapitre": "c28cc7d0-2f2a-5a7a-9c0b-fabb9d4596df",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux semaines en Écosse",
+   "competence": "argumenter",
+   "situation": "Lena passe deux semaines chez sa tante à Édimbourg. Elle écrit à son amie et lit les horaires du train pour ses sorties.",
+   "documents": [
+    {
+     "id": "lena",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Lena",
+     "blocs": [
+      "Hi Zoe, I’m [[t|staying]] with my aunt for two weeks. Usually I live in Paris. Every morning, my aunt goes to work at eight, so I make breakfast. Today it’s raining, so I’m reading in the kitchen. We [[p|are]] [[p|meeting]] my cousins on Friday!"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "gare",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Edinburgh – Glasgow",
+     "sousTitre": "Timetable",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "The train leaves at 10.05"
+      },
+      {
+       "texte": "The train arrives at 11.00"
+      }
+     ],
+     "pied": "Have a nice trip!",
+     "teinte": "bleu",
+     "source": "Horaires écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lena",
+     "reponse": [
+      "t"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui montre que la situation de Lena est **temporaire**.",
+     "aide": "Il parle de deux semaines chez sa tante.",
+     "explication": "**staying** : BE + -ING pour une situation temporaire."
+    },
+    {
+     "type": "zone",
+     "document": "lena",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** d’un **projet organisé** pour vendredi.",
+     "aide": "Cherche *are* suivi d’un verbe en -ING.",
+     "explication": "**are meeting** : BE + -ING exprime un projet déjà organisé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase de l’e-mail : habitude ou situation en cours ?",
+     "categories": [
+      "Habitude / permanent",
+      "En cours / temporaire"
+     ],
+     "items": [
+      [
+       "Usually I live in Paris.",
+       0
+      ],
+      [
+       "I’m staying with my aunt.",
+       1
+      ],
+      [
+       "My aunt goes to work at eight.",
+       0
+      ],
+      [
+       "I’m reading in the kitchen.",
+       1
+      ]
+     ],
+     "aide": "Pense à *usually*, *every*, *today*.",
+     "explication": "Présent simple : habituel. BE + -ING : en cours ou temporaire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "I ___ the answer. Please ask me!",
+     "reponses": [
+      [
+       "know"
+      ]
+     ],
+     "banque": [
+      "know",
+      "am knowing",
+      "knows",
+      "knowing"
+     ],
+     "aide": "*Know* est un verbe d’état.",
+     "explication": "**know** : un verbe d’état n’accepte pas -ING."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « The train leaves at 10.05 » au présent simple ?",
+     "options": [
+      "C’est un horaire fixe",
+      "C’est une action en cours",
+      "C’est un agacement",
+      "C’est une situation temporaire"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux horaires de gare.",
+     "explication": "**Un horaire fixe** se dit au présent simple."
+    }
+   ]
+  },
+  {
+   "chapitre": "603f58c2-40a0-5b2d-9022-e13965f7bda1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée au parc",
+   "competence": "comprendre-langue",
+   "situation": "Hier, Tom est allé au parc avec un ami. Il écrit son journal du soir.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Tom’s diary",
+     "blocs": [
+      "Yesterday I [[i|went]] to the park. I [[i|saw]] my friend Max. We played football and [[i|ate]] ice cream. It was great!"
+     ],
+     "source": "Journal écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes irréguliers** du journal.",
+     "aide": "Ils ne se terminent pas par -ed.",
+     "explication": "**went, saw, ate** : prétérits irréguliers de *go*, *see*, *eat*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son prétérit.",
+     "paires": [
+      [
+       "go",
+       "went"
+      ],
+      [
+       "see",
+       "saw"
+      ],
+      [
+       "take",
+       "took"
+      ],
+      [
+       "study",
+       "studied"
+      ]
+     ],
+     "aide": "Les irréguliers se lisent dans la liste.",
+     "explication": "*Go → went*, *see → saw*, *take → took* sont irréguliers ; *study → studied* est régulier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Hier, ils sont allés au cinéma.",
+     "texte": "Yesterday we ___ to the cinema.",
+     "reponses": [
+      [
+       "went"
+      ]
+     ],
+     "banque": [
+      "went",
+      "go",
+      "goes",
+      "going"
+     ],
+     "aide": "*Yesterday* impose le prétérit.",
+     "explication": "**went** : prétérit irrégulier de *go*."
+    }
+   ]
+  },
+  {
+   "chapitre": "603f58c2-40a0-5b2d-9022-e13965f7bda1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le week-end d’Emma et Jack",
+   "competence": "manier-langue",
+   "situation": "Emma et Jack se racontent leur week-end par messages. Jack n’a pas tout fait comme prévu.",
+   "documents": [
+    {
+     "id": "week",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Emma et Jack",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jack",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Did you go to the match?"
+      },
+      {
+       "qui": "Jack",
+       "texte": "No, I [[n|didn’t]]. I stayed home."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Did you see the new film?"
+      },
+      {
+       "qui": "Jack",
+       "texte": "Yes! I loved it."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "week",
+     "reponse": [
+      "n"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui sert à **nier** au prétérit.",
+     "aide": "Il est dans la réponse de Jack.",
+     "explication": "**didn’t** : la négation du prétérit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon qu’elle est correcte ou fautive.",
+     "categories": [
+      "Correcte",
+      "Fautive"
+     ],
+     "items": [
+      [
+       "I didn’t go to school.",
+       0
+      ],
+      [
+       "I didn’t went to school.",
+       1
+      ],
+      [
+       "Did you see the film?",
+       0
+      ],
+      [
+       "Did you saw the film?",
+       1
+      ],
+      [
+       "We stopped at six.",
+       0
+      ],
+      [
+       "We stoped at six.",
+       1
+      ]
+     ],
+     "aide": "Après *did* ou *didn’t*, le verbe est à la base verbale. *Stop* double le p.",
+     "explication": "**Did + base verbale** ; *stop* double sa consonne : *stopped*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au prétérit.",
+     "texte": "She ___ (study) all night.",
+     "reponses": [
+      [
+       "studied"
+      ]
+     ],
+     "banque": [
+      "studied",
+      "studyed",
+      "studid",
+      "studies"
+     ],
+     "aide": "Consonne + y devient -ied.",
+     "explication": "**studied** : consonne + y devient -ied."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « As-tu vu le nouveau film ? ». La phrase commence par Did.",
+     "items": [
+      "Did",
+      "you",
+      "see",
+      "the",
+      "new",
+      "film"
+     ],
+     "aide": "Après *Did you*, le verbe est à la base verbale.",
+     "explication": "**Did you see the new film?** : Did + sujet + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "603f58c2-40a0-5b2d-9022-e13965f7bda1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La visite du Grand Incendie",
+   "competence": "se-reperer-temps",
+   "situation": "Une classe est allée à Londres. Elle a étudié le Grand Incendie de 1666. Voici une frise et le compte rendu de la visite.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Great Fire of London",
+     "debut": 1660,
+     "fin": 1710,
+     "pas": 10,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "feu",
+       "date": 1666,
+       "nom": "Great Fire"
+      },
+      {
+       "id": "debut",
+       "date": 1675,
+       "nom": "Work starts"
+      },
+      {
+       "id": "fin",
+       "date": 1708,
+       "nom": "Last stone"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    },
+    {
+     "id": "visite",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Our trip to London",
+     "blocs": [
+      "Last week our class visited London. We [[i|saw]] St Paul’s Cathedral. Our guide [[i|told]] us that the fire started in 1666. She said that many houses used to be made of wood. We didn’t climb the dome because it was closed."
+     ],
+     "source": "Compte rendu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "feu"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’événement qui s’est produit en **1666**.",
+     "aide": "Repère la date sur la frise.",
+     "explication": "**Great Fire** : le Grand Incendie de Londres date de 1666."
+    },
+    {
+     "type": "zone",
+     "document": "visite",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes irréguliers** du compte rendu.",
+     "aide": "Ils ne se terminent pas par -ed.",
+     "explication": "**saw** et **told** : prétérits irréguliers de *see* et *tell*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux phrases.",
+     "texte": "The fire ___ in 1666. Before the fire, many houses ___ to be made of wood.",
+     "reponses": [
+      [
+       "started"
+      ],
+      [
+       "used"
+      ]
+     ],
+     "banque": [
+      "started",
+      "used",
+      "start",
+      "use"
+     ],
+     "aide": "Le premier verbe est daté. Le second est une habitude passée.",
+     "explication": "**started** : prétérit d’un fait daté. **used to** : habitude passée qui n’existe plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi n’écrit-on pas « The fire has started in 1666 » ?",
+     "options": [
+      "Une date précise impose le prétérit",
+      "Parce que *fire* est irrégulier",
+      "Parce que *started* est au futur",
+      "Parce qu’il manque un adverbe"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le repère de temps.",
+     "explication": "**Une date précise** impose le prétérit : *The fire started in 1666*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Nous ne sommes pas montés sur le dôme ». La phrase commence par We.",
+     "items": [
+      "We",
+      "didn’t",
+      "climb",
+      "the",
+      "dome"
+     ],
+     "aide": "Après *didn’t*, le verbe est à la base verbale.",
+     "explication": "**We didn’t climb the dome** : didn’t + base verbale."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3559 @@
+{
+ "niveau": "5e",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "b8ce18ed-61ea-5877-be7f-0baeed60a3ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La guirlande qui s’éteint d’un coup",
+   "competence": "analyser-document",
+   "situation": "Léa décore le sapin avec une guirlande de trois lampes. Hier soir, une lampe a grillé et toute la guirlande s’est éteinte. Elle regarde le schéma imprimé sur la boîte.",
+   "documents": [
+    {
+     "id": "guirlande",
+     "type": "circuit",
+     "titre": "Le schéma de la guirlande",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        4
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        2,
+        0
+       ]
+      },
+      {
+       "de": [
+        2,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "l1"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        10,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "allume": true,
+       "id": "l2"
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        10,
+        4
+       ],
+       "composant": "lampe",
+       "nom": "L3",
+       "allume": true,
+       "id": "l3"
+      },
+      {
+       "de": [
+        10,
+        4
+       ],
+       "a": [
+        6,
+        4
+       ],
+       "composant": "interrupteur-ferme",
+       "id": "inter"
+      },
+      {
+       "de": [
+        6,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures au voltmètre",
+     "colonnes": [
+      "Dipôle",
+      "Tension (V)"
+     ],
+     "lignes": [
+      [
+       "Pile",
+       4.5
+      ],
+      [
+       "Lampe L1",
+       1.5
+      ],
+      [
+       "Lampe L2",
+       1.5
+      ],
+      [
+       "Lampe L3",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "guirlande",
+     "enonce": "Dans le schéma, touche le générateur qui fait fonctionner la guirlande.",
+     "reponse": [
+      "pile"
+     ],
+     "aide": "C’est le dipôle qui fournit l’énergie au circuit.",
+     "explication": "Le **générateur** est la **pile** : sans elle, aucune lampe ne s’allumerait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment les trois lampes sont-elles montées ?",
+     "options": [
+      "En série : une seule boucle",
+      "En dérivation : trois branches",
+      "Une en série et deux en dérivation",
+      "Elles ne sont pas reliées à la pile"
+     ],
+     "reponse": 0,
+     "aide": "Suis le fil avec ton doigt : peux-tu revenir à la pile sans passer par toutes les lampes ?",
+     "explication": "Le fil forme **une seule boucle** qui traverse L1, L2 et L3 l’une après l’autre : c’est un montage **en série**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La lampe L2 grille. Que deviennent L1 et L3 ?",
+     "options": [
+      "Elles s’éteignent aussi",
+      "Elles continuent de briller",
+      "Elles brillent plus fort",
+      "Seule L3 s’éteint"
+     ],
+     "reponse": 0,
+     "aide": "Dans une seule boucle, le courant peut-il encore circuler quand elle est coupée quelque part ?",
+     "explication": "En série, la lampe grillée **coupe la boucle** : le courant ne passe plus nulle part et **tout s’éteint**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les tensions s’additionnent en série. Quelle est la tension aux bornes de L3, en volts ?",
+     "unite": "V",
+     "reponse": 1.5,
+     "aide": "La tension de la pile est égale à la somme des tensions des trois lampes.",
+     "explication": "U pile = U1 + U2 + U3, donc U3 = 4,5 − 1,5 − 1,5 = **1,5 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8ce18ed-61ea-5877-be7f-0baeed60a3ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La multiprise de la chambre",
+   "competence": "analyser-document",
+   "situation": "Sur la multiprise d’Ilyes, trois appareils sont branchés : le plafonnier, le ventilateur (avec son interrupteur) et la lampe de bureau. Le ventilateur est à l’arrêt.",
+   "documents": [
+    {
+     "id": "multiprise",
+     "type": "circuit",
+     "titre": "La multiprise schématisée",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "generateur",
+       "id": "secteur"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        4,
+        6
+       ]
+      },
+      {
+       "de": [
+        4,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        4,
+        6
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "plafonnier"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        3
+       ],
+       "composant": "interrupteur-ouvert",
+       "id": "inter"
+      },
+      {
+       "de": [
+        8,
+        3
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "moteur",
+       "nom": "M",
+       "id": "ventilo"
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "allume": true,
+       "id": "bureau"
+      }
+     ]
+    },
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Intensités mesurées dans chaque branche",
+     "colonnes": [
+      "Branche",
+      "Intensité (A)"
+     ],
+     "lignes": [
+      [
+       "Plafonnier L1",
+       0.3
+      ],
+      [
+       "Ventilateur (interrupteur ouvert)",
+       0
+      ],
+      [
+       "Lampe de bureau L2",
+       0.3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "multiprise",
+     "enonce": "Touche l’élément qui empêche le ventilateur de tourner.",
+     "reponse": [
+      "inter"
+     ],
+     "aide": "Cherche le dipôle placé dans la branche du moteur qui coupe le courant.",
+     "explication": "L’**interrupteur ouvert** coupe la branche du ventilateur : le courant ne peut plus y passer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les deux lampes restent-elles allumées alors que le ventilateur est arrêté ?",
+     "options": [
+      "Chaque branche est indépendante des autres",
+      "Les lampes sont montées en série avec le ventilateur",
+      "L’interrupteur ouvert fait briller les lampes plus fort",
+      "Le générateur ne fournit du courant qu’aux lampes"
+     ],
+     "reponse": 0,
+     "aide": "Regarde : le courant a-t-il un chemin vers L1 sans passer par le ventilateur ?",
+     "explication": "En **dérivation**, chaque branche a son propre chemin vers le générateur : couper l’une **ne change rien** aux autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après le tableau, quelle est l’intensité dans le fil principal, en ampères ?",
+     "unite": "A",
+     "reponse": 0.6,
+     "aide": "Loi des nœuds : les intensités des branches s’additionnent.",
+     "explication": "0,3 + 0 + 0,3 = **0,6 A** : le fil principal porte la somme des intensités des branches."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Ilyes ferme l’interrupteur : le ventilateur appelle alors 0,5 A. Quelle est la nouvelle intensité dans le fil principal, en ampères ?",
+     "unite": "A",
+     "reponse": 1.1,
+     "aide": "Les deux lampes gardent 0,3 A chacune. Ajoute la branche du ventilateur.",
+     "explication": "0,3 + 0,5 + 0,3 = **1,1 A**. Ajouter un appareil en dérivation **augmente** l’intensité totale."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8ce18ed-61ea-5877-be7f-0baeed60a3ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le montage raté de Tom",
+   "competence": "raisonner",
+   "situation": "Tom veut mesurer la tension aux bornes d’une lampe et l’intensité du courant. Son professeur a vu son montage : « Attention, l’un de tes appareils va créer un court-circuit ! ». Hugo, lui, a mesuré les intensités dans un autre circuit.",
+   "documents": [
+    {
+     "id": "tom",
+     "type": "circuit",
+     "titre": "Le montage de Tom",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        2,
+        0
+       ]
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        2,
+        6
+       ]
+      },
+      {
+       "de": [
+        2,
+        0
+       ],
+       "a": [
+        2,
+        6
+       ],
+       "composant": "amperemetre",
+       "id": "ampere"
+      },
+      {
+       "de": [
+        2,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ]
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        10,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L",
+       "id": "lampe"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        6,
+        3
+       ]
+      },
+      {
+       "de": [
+        6,
+        3
+       ],
+       "a": [
+        10,
+        3
+       ],
+       "composant": "voltmetre",
+       "id": "volt"
+      },
+      {
+       "de": [
+        10,
+        3
+       ],
+       "a": [
+        10,
+        0
+       ]
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        12,
+        6
+       ],
+       "a": [
+        2,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hugo",
+     "type": "tableau",
+     "titre": "Relevés d’Hugo (circuit à trois branches)",
+     "colonnes": [
+      "Où ?",
+      "Intensité (A)"
+     ],
+     "lignes": [
+      [
+       "Fil principal",
+       1.5
+      ],
+      [
+       "Branche 1",
+       0.4
+      ],
+      [
+       "Branche 2",
+       0.6
+      ],
+      [
+       "Branche 3",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tom",
+     "enonce": "Touche l’appareil de mesure dont le branchement crée un court-circuit.",
+     "reponse": [
+      "ampere"
+     ],
+     "aide": "Un ampèremètre laisse passer le courant presque sans résistance : où est-il branché par rapport à la pile ?",
+     "explication": "L’**ampèremètre** est branché **en dérivation** aux bornes de la pile : le courant le traverse sans rien d’autre pour le freiner, c’est un **court-circuit**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Tom doit-il brancher son ampèremètre pour mesurer l’intensité qui traverse la lampe ?",
+     "options": [
+      "En série, dans la boucle qui contient la lampe",
+      "En dérivation, aux bornes de la pile",
+      "En dérivation, aux bornes de la lampe",
+      "Peu importe, il mesure partout pareil"
+     ],
+     "reponse": 0,
+     "aide": "Le courant doit traverser l’appareil.",
+     "explication": "Un ampèremètre se branche **en série** : le courant à mesurer doit le **traverser**."
+    },
+    {
+     "type": "zone",
+     "document": "tom",
+     "enonce": "Touche l’appareil qui est correctement branché.",
+     "reponse": [
+      "volt"
+     ],
+     "aide": "Un voltmètre mesure une tension entre deux points : il se branche en dérivation.",
+     "explication": "Le **voltmètre** est en dérivation aux bornes de la lampe : c’est bien le bon branchement pour mesurer sa tension."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le tableau d’Hugo, quelle est l’intensité dans la branche 3, en ampères ?",
+     "unite": "A",
+     "reponse": 0.5,
+     "aide": "Le fil principal porte la somme des intensités des trois branches.",
+     "explication": "1,5 = 0,4 + 0,6 + I3, donc I3 = 1,5 − 1,0 = **0,5 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Hugo coupe la branche 2. Quelle intensité indique alors l’ampèremètre du fil principal, en ampères ?",
+     "unite": "A",
+     "reponse": 0.9,
+     "aide": "Les autres branches ne changent pas : elles portent toujours leur intensité.",
+     "explication": "Il reste les branches 1 et 3 : 0,4 + 0,5 = **0,9 A**. Les autres branches ne sont pas modifiées."
+    }
+   ]
+  },
+  {
+   "chapitre": "97000b68-7348-585f-918c-35677b956e55",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les piles de la télécommande",
+   "competence": "lire-tableau",
+   "situation": "Samir range le tiroir des piles. Il a noté la tension de quelques sources d’énergie, et il veut savoir lesquelles sont sans danger.",
+   "documents": [
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Tensions de quelques sources",
+     "colonnes": [
+      "Source",
+      "Tension (V)"
+     ],
+     "lignes": [
+      [
+       "Pile bâton",
+       1.5
+      ],
+      [
+       "Pile plate",
+       4.5
+      ],
+      [
+       "Pile 9 V",
+       9
+      ],
+      [
+       "Batterie de voiture",
+       12
+      ],
+      [
+       "Prise de la maison (secteur)",
+       230
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sources",
+     "enonce": "Touche la tension de la prise de la maison.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Cherche la dernière ligne du tableau.",
+     "explication": "La prise de la maison délivre **230 V** : c’est la tension du secteur, mortelle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La télécommande de Samir contient deux piles bâton montées en série. Quelle est la tension totale, en volts ?",
+     "unite": "V",
+     "reponse": 3,
+     "aide": "En série, les tensions s’additionnent.",
+     "explication": "1,5 + 1,5 = **3 V**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le seuil de sécurité est d’environ 25 V. Quelles sources du tableau sont au-dessus de ce seuil ?",
+     "options": [
+      "Seulement le secteur",
+      "La batterie de voiture et le secteur",
+      "Toutes, sauf la pile bâton",
+      "Aucune"
+     ],
+     "reponse": 0,
+     "aide": "Compare chaque tension à 25 V.",
+     "explication": "Seul le **secteur (230 V)** dépasse 25 V. La batterie de voiture (12 V) est en dessous."
+    }
+   ]
+  },
+  {
+   "chapitre": "97000b68-7348-585f-918c-35677b956e55",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le voltmètre aux bornes de l’interrupteur",
+   "competence": "experimenter",
+   "situation": "En salle de sciences, Inès monte une pile de 9 V, une lampe et un interrupteur. Elle place un voltmètre aux bornes de l’interrupteur pour voir ce qu’il indique selon qu’il est ouvert ou fermé.",
+   "documents": [
+    {
+     "id": "ines",
+     "type": "circuit",
+     "titre": "Le montage d’Inès (interrupteur ouvert)",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        6
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        2,
+        0
+       ]
+      },
+      {
+       "de": [
+        2,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L",
+       "id": "lampe"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        10,
+        0
+       ],
+       "composant": "interrupteur-ouvert",
+       "id": "inter"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        6,
+        3
+       ]
+      },
+      {
+       "de": [
+        6,
+        3
+       ],
+       "a": [
+        10,
+        3
+       ],
+       "composant": "voltmetre",
+       "id": "volt"
+      },
+      {
+       "de": [
+        10,
+        3
+       ],
+       "a": [
+        10,
+        0
+       ]
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        12,
+        6
+       ],
+       "a": [
+        0,
+        6
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ines",
+     "enonce": "Touche le voltmètre.",
+     "reponse": [
+      "volt"
+     ],
+     "aide": "Il est branché en dérivation, aux bornes d’un autre dipôle.",
+     "explication": "Le **voltmètre** est le dipôle marqué V, branché en dérivation aux bornes de l’interrupteur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’interrupteur est ouvert. Quelle tension le voltmètre indique-t-il, en volts ?",
+     "unite": "V",
+     "reponse": 9,
+     "aide": "Aux bornes d’un interrupteur ouvert, on retrouve toute la tension du générateur.",
+     "explication": "Un interrupteur ouvert a **toute la tension du générateur** à ses bornes : **9 V**, même si aucun courant ne circule."
+    },
+    {
+     "type": "choix",
+     "enonce": "La lampe est-elle allumée dans ce montage, et pourquoi ?",
+     "options": [
+      "Non : l’interrupteur ouvert coupe la boucle",
+      "Oui : la tension de 9 V suffit pour qu’elle brille",
+      "Oui : le voltmètre laisse passer le courant",
+      "Non : la pile est trop faible"
+     ],
+     "reponse": 0,
+     "aide": "Une tension existe sans courant, mais une lampe a besoin de courant pour briller.",
+     "explication": "Une tension existe **même sans courant**, mais la lampe ne brille que si le courant circule. La boucle est coupée : elle reste **éteinte**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Inès ferme l’interrupteur. Quelle tension le voltmètre indique-t-il maintenant, en volts ?",
+     "unite": "V",
+     "reponse": 0,
+     "aide": "Un interrupteur fermé est un simple fil : il ne consomme rien.",
+     "explication": "Un interrupteur fermé ne « consomme » rien : la tension à ses bornes est environ **0 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "97000b68-7348-585f-918c-35677b956e55",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chargeur et l’oscilloscope",
+   "competence": "analyser-document",
+   "situation": "Le chargeur de téléphone de Jade est branché sur la prise de la maison. Son professeur lui montre sur un oscilloscope la tension du secteur (ramenée ici à une petite valeur pour l’écran) et la plaque du chargeur.",
+   "documents": [
+    {
+     "id": "osc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension du secteur sur l’oscilloscope",
+     "categories": [
+      "0",
+      "2,5",
+      "5",
+      "7,5",
+      "10",
+      "12,5",
+      "15",
+      "17,5",
+      "20",
+      "22,5",
+      "25",
+      "27,5",
+      "30",
+      "32,5",
+      "35",
+      "37,5"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        4.2,
+        6,
+        4.2,
+        0,
+        -4.2,
+        -6,
+        -4.2,
+        0,
+        4.2,
+        6,
+        4.2,
+        0,
+        -4.2,
+        -6,
+        -4.2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension (V)",
+      "min": -6,
+      "max": 6,
+      "pas": 3
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "source": "Courbe schématisée pour l’exercice"
+    },
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Chargeur USB",
+     "sousTitre": "Plaque du chargeur",
+     "emoji": "🔌",
+     "lignes": [
+      {
+       "texte": "Entrée",
+       "valeur": "230 V ~ 50 Hz",
+       "id": "entree"
+      },
+      {
+       "texte": "Sortie",
+       "valeur": "5 V ⎓",
+       "id": "sortie"
+      }
+     ],
+     "pied": "Le symbole ~ indique une tension alternative, le symbole ⎓ une tension continue."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "osc",
+     "enonce": "Touche deux sommets consécutifs (les deux premiers maxima) de la courbe.",
+     "reponse": [
+      "k2",
+      "k10"
+     ],
+     "multiple": true,
+     "aide": "Un sommet est le point le plus haut d’une bosse de la courbe.",
+     "explication": "Les deux premiers maxima sont à **5 ms** et à **25 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle durée sépare ces deux sommets, en millisecondes ? C’est la durée d’une période.",
+     "unite": "ms",
+     "reponse": 20,
+     "aide": "Lis l’axe du temps sous chaque sommet et fais la différence.",
+     "explication": "25 − 5 = **20 ms** : la courbe se répète toutes les 20 ms."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette tension est-elle continue ou alternative ?",
+     "options": [
+      "Alternative : elle change de signe et se répète",
+      "Continue : elle reste toujours positive",
+      "Continue : elle est constante dans le temps",
+      "Alternative : elle est toujours nulle"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si la courbe passe au-dessus et en dessous de l’axe.",
+     "explication": "La courbe passe des valeurs positives aux valeurs négatives en se répétant : la tension est **alternative**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une période dure 20 ms, soit 0,02 s. Combien de périodes ont lieu en 1 seconde ?",
+     "unite": "périodes",
+     "reponse": 50,
+     "aide": "Divise 1 seconde par la durée d’une période.",
+     "explication": "1 ÷ 0,02 = **50** périodes par seconde, soit **50 Hz** : c’est bien la fréquence indiquée sur la plaque."
+    },
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Sur la plaque, touche la ligne qui décrit une tension continue.",
+     "reponse": [
+      "sortie"
+     ],
+     "aide": "Le symbole ⎓ est celui du continu, comme une pile.",
+     "explication": "La sortie du chargeur (5 V) est **continue**, comme celle d’une pile ; l’entrée sur le secteur est alternative."
+    }
+   ]
+  },
+  {
+   "chapitre": "d09ff7a8-4754-5594-a1f7-a3b2733342b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien de courant dans chaque appareil ?",
+   "competence": "lire-tableau",
+   "situation": "Mila prépare un exposé sur l’électricité de la maison. Elle a relevé l’intensité du courant qui traverse quelques appareils.",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Intensité du courant dans quelques appareils",
+     "colonnes": [
+      "Appareil",
+      "Intensité"
+     ],
+     "lignes": [
+      [
+       "LED",
+       "5 mA"
+      ],
+      [
+       "Lampe de poche",
+       "300 mA"
+      ],
+      [
+       "Réfrigérateur",
+       "1 A"
+      ],
+      [
+       "Plaque de cuisson",
+       "12 A"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Convertis l’intensité de la lampe de poche en ampères.",
+     "unite": "A",
+     "reponse": 0.3,
+     "aide": "1 mA = 0,001 A.",
+     "explication": "300 mA = 300 × 0,001 = **0,3 A**."
+    },
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche l’appareil traversé par le courant le plus intense.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Pense à convertir les mA en A pour comparer.",
+     "explication": "La **plaque de cuisson** (12 A) est traversée par le courant le plus intense."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de LED comme celle du tableau faut-il pour atteindre ensemble 0,1 A ? (réponds par un nombre entier)",
+     "unite": "LED",
+     "reponse": 20,
+     "aide": "Convertis 5 mA en ampères, puis divise 0,1 A par cette valeur.",
+     "explication": "5 mA = 0,005 A, et 0,1 ÷ 0,005 = **20** LED."
+    }
+   ]
+  },
+  {
+   "chapitre": "d09ff7a8-4754-5594-a1f7-a3b2733342b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La multiprise de la cuisine",
+   "competence": "resoudre",
+   "situation": "Dans la cuisine, Noé a branché quatre appareils sur la même multiprise, elle-même sur une seule prise. Le disjoncteur de la prise coupe à partir de 16 A.",
+   "documents": [
+    {
+     "id": "cuisine",
+     "type": "tableau",
+     "titre": "Les appareils branchés sur la multiprise",
+     "colonnes": [
+      "Appareil",
+      "Intensité (A)"
+     ],
+     "lignes": [
+      [
+       "Réfrigérateur",
+       1
+      ],
+      [
+       "Grille-pain",
+       6.5
+      ],
+      [
+       "Bouilloire",
+       8
+      ],
+      [
+       "Four à micro-ondes",
+       3.5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle intensité totale traverse la prise lorsque les quatre appareils fonctionnent, en ampères ?",
+     "unite": "A",
+     "reponse": 19,
+     "aide": "Les appareils sont en dérivation : les intensités s’additionnent (loi des nœuds).",
+     "explication": "1 + 6,5 + 8 + 3,5 = **19 A**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La multiprise change-t-elle la tension reçue par chaque appareil ?",
+     "options": [
+      "Non : chaque appareil reçoit toujours 230 V",
+      "Oui : la tension est partagée entre les quatre appareils",
+      "Oui : la tension monte de 1 V par appareil ajouté",
+      "Oui : la tension diminue de moitié"
+     ],
+     "reponse": 0,
+     "aide": "Les appareils sont en dérivation.",
+     "explication": "En dérivation, la tension est **la même** aux bornes de chaque appareil : **230 V**. Ce sont les **intensités** qui s’additionnent."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’intensité totale dépasse 16 A. Que se passe-t-il ?",
+     "options": [
+      "Le disjoncteur coupe le circuit, puis on le réarme",
+      "Le fusible fond, puis on le réarme tout de suite",
+      "Les appareils brillent plus fort, puis s’éteignent",
+      "La tension du secteur baisse jusqu’à 16 V"
+     ],
+     "reponse": 0,
+     "aide": "Un fusible fond, un disjoncteur se réarme.",
+     "explication": "Le **disjoncteur** coupe le circuit avant que les fils chauffent trop ; contrairement au fusible, il se **réarme**."
+    },
+    {
+     "type": "zone",
+     "document": "cuisine",
+     "enonce": "Touche l’appareil à débrancher en priorité pour réduire le plus l’intensité totale.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la plus grande valeur d’intensité.",
+     "explication": "La **bouilloire** (8 A) est l’appareil qui appelle le plus de courant : la débrancher soulage le plus la prise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Noé débranche la bouilloire. Quelle est la nouvelle intensité totale, en ampères ?",
+     "unite": "A",
+     "reponse": 11,
+     "aide": "Retire l’intensité de la bouilloire.",
+     "explication": "19 − 8 = **11 A** : c’est sous la limite de 16 A, le disjoncteur ne coupe plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "d09ff7a8-4754-5594-a1f7-a3b2733342b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les trois ampèremètres",
+   "competence": "raisonner",
+   "situation": "Au laboratoire, Camille a monté deux lampes en dérivation. Elle place un ampèremètre dans chaque branche (A1 et A2) et un autre sur le fil principal (A0).",
+   "documents": [
+    {
+     "id": "labo",
+     "type": "circuit",
+     "titre": "Le montage de Camille",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ],
+       "composant": "amperemetre",
+       "nom": "A0",
+       "id": "a0"
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        4,
+        6
+       ]
+      },
+      {
+       "de": [
+        4,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        3
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "l1"
+      },
+      {
+       "de": [
+        8,
+        3
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "amperemetre",
+       "nom": "A1",
+       "id": "a1"
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        3
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "allume": true,
+       "id": "l2"
+      },
+      {
+       "de": [
+        12,
+        3
+       ],
+       "a": [
+        12,
+        6
+       ],
+       "composant": "amperemetre",
+       "nom": "A2",
+       "id": "a2"
+      }
+     ]
+    },
+    {
+     "id": "lectures",
+     "type": "tableau",
+     "titre": "Lectures de Camille",
+     "colonnes": [
+      "Ampèremètre",
+      "Intensité (A)"
+     ],
+     "lignes": [
+      [
+       "A0",
+       1.2
+      ],
+      [
+       "A1",
+       0.7
+      ],
+      [
+       "A2",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "labo",
+     "enonce": "Touche l’ampèremètre qui mesure l’intensité totale fournie par la pile.",
+     "reponse": [
+      "a0"
+     ],
+     "aide": "Il est sur le fil principal, avant que le courant se sépare.",
+     "explication": "L’ampèremètre **A0** est sur le fil principal : il mesure l’intensité qui sort de la pile, avant la séparation en deux branches."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle intensité l’ampèremètre A2 indique-t-il, en ampères ?",
+     "unite": "A",
+     "reponse": 0.5,
+     "aide": "Loi des nœuds : l’intensité principale est la somme des intensités des branches.",
+     "explication": "1,2 = 0,7 + I2, donc I2 = **0,5 A**."
+    },
+    {
+     "type": "zone",
+     "document": "labo",
+     "enonce": "Touche la lampe parcourue par le courant le plus intense.",
+     "reponse": [
+      "l1"
+     ],
+     "aide": "Compare les valeurs de A1 et A2.",
+     "explication": "La branche de L1 porte 0,7 A contre 0,5 A pour celle de L2 : la lampe **L1** est la plus intensément parcourue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La lampe L1 grille. Quelle intensité l’ampèremètre A0 indique-t-il alors, en ampères ?",
+     "unite": "A",
+     "reponse": 0.5,
+     "aide": "La branche de L2 n’est pas modifiée : que reste-t-il dans le fil principal ?",
+     "explication": "Il ne reste que la branche de L2, qui porte toujours 0,5 A : A0 indique **0,5 A**. L’autre lampe continue de briller."
+    }
+   ]
+  },
+  {
+   "chapitre": "8536aaf8-cdf3-5206-a5e7-59301f04e085",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La caractéristique d’une résistance",
+   "competence": "lire-graphique",
+   "situation": "Pour son projet de technologie, Yanis relie une résistance à un générateur réglable. Il mesure la tension à ses bornes pour plusieurs intensités et trace la courbe.",
+   "documents": [
+    {
+     "id": "carac",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension aux bornes de la résistance en fonction de l’intensité",
+     "categories": [
+      "0",
+      "0,02",
+      "0,04",
+      "0,06",
+      "0,08",
+      "0,10"
+     ],
+     "series": [
+      {
+       "nom": "Tension U",
+       "valeurs": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension U (V)",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Intensité I (A)"
+     },
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carac",
+     "enonce": "Touche le point de la courbe qui correspond à une intensité de 0,06 A.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Repère 0,06 sur l’axe horizontal.",
+     "explication": "Le point d’abscisse **0,06 A** est le quatrième de la courbe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle tension lit-on pour cette intensité de 0,06 A, en volts ?",
+     "unite": "V",
+     "reponse": 6,
+     "aide": "Lis la hauteur du point sur l’axe vertical.",
+     "explication": "Le point est à **6 V** : pour I = 0,06 A, U = 6 V."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’allure de cette courbe ?",
+     "options": [
+      "Une droite qui passe par l’origine",
+      "Une courbe qui monte puis redescend",
+      "Une droite horizontale",
+      "Une droite qui ne passe pas par l’origine"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où commence la courbe et si elle est droite.",
+     "explication": "La courbe est une **droite passant par l’origine** : la tension est **proportionnelle** à l’intensité, c’est la loi d’Ohm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le dernier point (0,10 A et 10 V), calcule la résistance en ohms.",
+     "unite": "Ω",
+     "reponse": 100,
+     "aide": "R = U ÷ I.",
+     "explication": "R = 10 ÷ 0,10 = **100 Ω**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8536aaf8-cdf3-5206-a5e7-59301f04e085",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois résistances à identifier",
+   "competence": "calculer",
+   "situation": "Anaïs a retrouvé trois résistances sans étiquette dans un tiroir. Elle les soumet chacune à la même tension de 6 V et mesure l’intensité qui les traverse.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures voltampèremétriques",
+     "colonnes": [
+      "Résistance",
+      "Tension U (V)",
+      "Intensité I (A)",
+      "Valeur R (Ω)"
+     ],
+     "lignes": [
+      [
+       "R1",
+       6,
+       0.02,
+       "?"
+      ],
+      [
+       "R2",
+       6,
+       0.05,
+       "?"
+      ],
+      [
+       "R3",
+       6,
+       0.12,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de la résistance R1, en ohms ?",
+     "unite": "Ω",
+     "reponse": 300,
+     "aide": "Loi d’Ohm : R = U ÷ I.",
+     "explication": "R1 = 6 ÷ 0,02 = **300 Ω**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de la résistance R2, en ohms ?",
+     "unite": "Ω",
+     "reponse": 120,
+     "aide": "Même méthode : divise la tension par l’intensité.",
+     "explication": "R2 = 6 ÷ 0,05 = **120 Ω**."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la résistance qui s’oppose le moins au passage du courant.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "À même tension, la plus petite résistance laisse passer le courant le plus intense.",
+     "explication": "R3 laisse passer **0,12 A** : c’est la plus petite résistance (6 ÷ 0,12 = 50 Ω)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Anaïs remplace R2 par une résistance de 240 Ω, toujours sous 6 V. Quelle intensité la traverse, en ampères ?",
+     "unite": "A",
+     "reponse": 0.025,
+     "aide": "I = U ÷ R.",
+     "explication": "I = 6 ÷ 240 = **0,025 A**. La résistance a doublé, l’intensité a été divisée par deux (0,05 → 0,025)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8536aaf8-cdf3-5206-a5e7-59301f04e085",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Protéger la LED du veilleur",
+   "competence": "resoudre",
+   "situation": "Emma construit une veilleuse avec une LED et une pile de 9 V. Sans protection, la LED grillerait. Elle ajoute donc une résistance en série.",
+   "documents": [
+    {
+     "id": "veilleuse",
+     "type": "circuit",
+     "titre": "La veilleuse d’Emma",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        6
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        2,
+        0
+       ]
+      },
+      {
+       "de": [
+        2,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "R",
+       "id": "resistance"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        10,
+        0
+       ]
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        10,
+        6
+       ],
+       "composant": "del",
+       "nom": "LED",
+       "allume": true,
+       "id": "led"
+      },
+      {
+       "de": [
+        10,
+        6
+       ],
+       "a": [
+        0,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Fiche de la LED",
+     "sousTitre": "Données du fabricant",
+     "emoji": "💡",
+     "lignes": [
+      {
+       "texte": "Tension à ses bornes",
+       "valeur": "2 V"
+      },
+      {
+       "texte": "Intensité maximale",
+       "valeur": "20 mA"
+      }
+     ],
+     "pied": "Données écrites pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "veilleuse",
+     "enonce": "Touche la résistance de protection.",
+     "reponse": [
+      "resistance"
+     ],
+     "aide": "C’est le rectangle placé en série avec la LED.",
+     "explication": "La **résistance** est le dipôle rectangulaire : placée en série avec la LED, elle limite l’intensité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les tensions s’additionnent en série : quelle tension doit supporter la résistance, en volts ?",
+     "unite": "V",
+     "reponse": 7,
+     "aide": "La pile fournit 9 V, dont 2 V sont pour la LED.",
+     "explication": "9 − 2 = **7 V** aux bornes de la résistance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour que l’intensité soit exactement de 20 mA (0,02 A), quelle valeur de résistance faut-il, en ohms ?",
+     "unite": "Ω",
+     "reponse": 350,
+     "aide": "R = U ÷ I, avec U = 7 V et I = 0,02 A.",
+     "explication": "R = 7 ÷ 0,02 = **350 Ω**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Emma n’a qu’une résistance de 470 Ω. L’intensité est alors 7 ÷ 470 ≈ 0,015 A. Que se passe-t-il pour la LED ?",
+     "options": [
+      "Elle est protégée et brille un peu moins fort",
+      "Elle grille car l’intensité dépasse 20 mA",
+      "Elle ne s’allume pas du tout",
+      "Elle brille plus fort qu’avec 350 Ω"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,015 A à l’intensité maximale de 20 mA.",
+     "explication": "0,015 A = 15 mA, en dessous de **20 mA** : la LED est protégée. Plus la résistance est grande, plus l’intensité diminue."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8399bb4-15ec-54ce-8b03-d87f62733ffd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La plaque du four",
+   "competence": "analyser-document",
+   "situation": "Dans la cuisine, Rayane lit la plaque signalétique du four pour savoir quelle intensité il appelle et combien d’énergie il consomme.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Four électrique",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "🔥",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "230 V",
+       "id": "tension"
+      },
+      {
+       "texte": "Fréquence",
+       "valeur": "50 Hz"
+      },
+      {
+       "texte": "Puissance",
+       "valeur": "2 000 W",
+       "id": "puissance"
+      }
+     ],
+     "pied": "Valeurs arrondies."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la ligne qui indique la puissance du four.",
+     "reponse": [
+      "puissance"
+     ],
+     "aide": "La puissance se mesure en watts (W).",
+     "explication": "La **puissance** est de **2 000 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’intensité appelée par le four avec I = P ÷ U, en ampères, arrondie au dixième.",
+     "unite": "A",
+     "reponse": 8.7,
+     "tolerance": 0.05,
+     "aide": "Divise 2 000 par 230.",
+     "explication": "I = 2 000 ÷ 230 ≈ **8,7 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le four fonctionne 2 heures. Quelle énergie consomme-t-il, en kWh ?",
+     "unite": "kWh",
+     "reponse": 4,
+     "aide": "Convertis 2 000 W en kW, puis multiplie par la durée en heures.",
+     "explication": "E = P × t = 2 kW × 2 h = **4 kWh**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8399bb4-15ec-54ce-8b03-d87f62733ffd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La journée électrique d’Ilyes",
+   "competence": "calculer",
+   "situation": "Ilyes veut savoir où passe l’énergie dans sa chambre. Il a noté la puissance de chaque appareil et sa durée d’utilisation sur une journée. Le kWh coûte 0,20 € chez lui.",
+   "documents": [
+    {
+     "id": "chambre",
+     "type": "tableau",
+     "titre": "Les appareils de la chambre sur une journée",
+     "colonnes": [
+      "Appareil",
+      "Puissance (W)",
+      "Durée (h)"
+     ],
+     "lignes": [
+      [
+       "Ampoule LED",
+       8,
+       5
+      ],
+      [
+       "Chargeur de téléphone",
+       5,
+       8
+      ],
+      [
+       "Ordinateur portable",
+       60,
+       3
+      ],
+      [
+       "Radiateur",
+       1000,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, prix du kWh écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chambre",
+     "enonce": "Touche l’appareil qui consomme le plus d’énergie sur la journée.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Multiplie chaque puissance par sa durée pour comparer.",
+     "explication": "Le **radiateur** consomme 1 000 × 2 = 2 000 Wh, bien plus que les autres appareils."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie le chargeur consomme-t-il dans la journée, en wattheures ?",
+     "unite": "Wh",
+     "reponse": 40,
+     "aide": "E = P × t, avec t en heures pour obtenir des Wh.",
+     "explication": "E = 5 W × 8 h = **40 Wh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie totale consomment les quatre appareils dans la journée, en kWh ?",
+     "unite": "kWh",
+     "reponse": 2.26,
+     "aide": "Calcule l’énergie de chaque appareil en Wh, additionne, puis divise par 1 000.",
+     "explication": "40 + 40 + 180 + 2 000 = 2 260 Wh, soit **2,26 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien coûte cette énergie, en euros, arrondi au centime ?",
+     "unite": "€",
+     "reponse": 0.45,
+     "tolerance": 0.005,
+     "aide": "Coût = énergie en kWh × prix du kWh.",
+     "explication": "2,26 × 0,20 = 0,452, soit **0,45 €** arrondi au centime."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8399bb4-15ec-54ce-8b03-d87f62733ffd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "LED ou ampoule à filament ?",
+   "competence": "raisonner",
+   "situation": "Marion hésite entre deux ampoules pour la lampe de sa chambre. Elle allume sa lampe 4 heures par jour pendant 30 jours. Elle compare avec sa dernière facture d’électricité.",
+   "documents": [
+    {
+     "id": "ampoules",
+     "type": "tableau",
+     "titre": "Les deux ampoules à éclairage équivalent",
+     "colonnes": [
+      "Type",
+      "Puissance (W)",
+      "Allumage par mois (h)"
+     ],
+     "lignes": [
+      [
+       "LED",
+       8,
+       120
+      ],
+      [
+       "Filament",
+       60,
+       120
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "facture",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Facture d’électricité",
+     "sousTitre": "Un mois",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "Énergie consommée",
+       "valeur": "150 kWh"
+      },
+      {
+       "texte": "Prix du kWh",
+       "valeur": "0,20 €",
+       "id": "prix"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "30,00 €",
+       "gras": true
+      }
+     ],
+     "pied": "Facture imaginée pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "facture",
+     "enonce": "Sur la facture, touche la ligne qui donne le prix de l’énergie.",
+     "reponse": [
+      "prix"
+     ],
+     "aide": "Cherche le prix d’un kWh.",
+     "explication": "Le **prix du kWh** est de **0,20 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la LED consomme-t-elle dans le mois, en kWh ?",
+     "unite": "kWh",
+     "reponse": 0.96,
+     "aide": "E = P × t en Wh, puis divise par 1 000 pour obtenir des kWh.",
+     "explication": "8 W × 120 h = 960 Wh = **0,96 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie l’ampoule à filament consomme-t-elle dans le mois, en kWh ?",
+     "unite": "kWh",
+     "reponse": 7.2,
+     "aide": "Même méthode avec 60 W.",
+     "explication": "60 W × 120 h = 7 200 Wh = **7,2 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’euros Marion économise-t-elle en un mois avec la LED, arrondi au centime ?",
+     "unite": "€",
+     "reponse": 1.25,
+     "tolerance": 0.005,
+     "aide": "Multiplie la différence d’énergie (en kWh) par le prix du kWh de la facture.",
+     "explication": "(7,2 − 0,96) × 0,20 = 6,24 × 0,20 = 1,248, soit **1,25 €** par mois."
+    }
+   ]
+  },
+  {
+   "chapitre": "d91271ab-cddc-541e-a62b-0a2321d40e62",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La télécommande du téléviseur",
+   "competence": "observer-schema",
+   "situation": "Quand Lola appuie sur sa télécommande, le téléviseur change de chaîne. Un signal lumineux invisible (infrarouge) traverse le salon.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "La chaîne de transmission",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "emetteur",
+       "texte": "Télécommande",
+       "emoji": "🎮"
+      },
+      {
+       "id": "milieu",
+       "texte": "Air du salon",
+       "emoji": "💨"
+      },
+      {
+       "id": "recepteur",
+       "texte": "Téléviseur",
+       "emoji": "📺"
+      }
+     ],
+     "liens": [
+      {
+       "de": "emetteur",
+       "a": "milieu",
+       "texte": "envoie"
+      },
+      {
+       "de": "milieu",
+       "a": "recepteur",
+       "texte": "transporte"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche le milieu de propagation du signal.",
+     "reponse": [
+      "milieu"
+     ],
+     "aide": "C’est ce qui se trouve entre la télécommande et le téléviseur.",
+     "explication": "Le signal traverse l’**air du salon** : c’est le milieu de propagation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce signal lumineux pourrait-il se propager dans le vide ?",
+     "options": [
+      "Oui : la lumière n’a pas besoin de milieu matériel",
+      "Non : aucun signal ne se propage dans le vide",
+      "Non : seule la voix se propage dans le vide",
+      "Oui, mais seulement à très faible vitesse"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la lumière du Soleil qui arrive jusqu’à nous.",
+     "explication": "Les signaux **lumineux** se propagent dans le vide (environ **300 000 km/s**). Seul le signal sonore a besoin d’un milieu matériel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le schéma général d’une chaîne de transmission.",
+     "texte": "L’___ envoie le signal, le ___ le transporte et le ___ le reçoit.",
+     "reponses": [
+      [
+       "émetteur",
+       "emetteur"
+      ],
+      [
+       "milieu de propagation",
+       "milieu"
+      ],
+      [
+       "récepteur",
+       "recepteur"
+      ]
+     ],
+     "banque": [
+      "émetteur",
+      "milieu de propagation",
+      "récepteur",
+      "capteur"
+     ],
+     "aide": "Relis les trois cases de la chaîne de gauche à droite.",
+     "explication": "Une chaîne de transmission s’écrit **émetteur → milieu de propagation → récepteur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d91271ab-cddc-541e-a62b-0a2321d40e62",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le téléphone d’Awa est plein",
+   "competence": "calculer",
+   "situation": "Awa veut libérer de la place sur son téléphone. Elle regarde la taille de ses fichiers, qui sont tous des signaux numériques.",
+   "documents": [
+    {
+     "id": "fichiers",
+     "type": "tableau",
+     "titre": "Taille des fichiers du téléphone",
+     "colonnes": [
+      "Fichier",
+      "Taille"
+     ],
+     "lignes": [
+      [
+       "Message",
+       "2 ko"
+      ],
+      [
+       "Photo",
+       "2 Mo"
+      ],
+      [
+       "Chanson",
+       "4 Mo"
+      ],
+      [
+       "Vidéo",
+       "100 Mo"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fichiers",
+     "enonce": "Touche le fichier le plus volumineux.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Compare les tailles : un Mo est plus grand qu’un ko.",
+     "explication": "La **vidéo** (100 Mo) est la plus volumineuse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un message pèse 2 ko, soit 2 000 octets. Combien de bits contient-il ?",
+     "unite": "bits",
+     "reponse": 16000,
+     "aide": "1 octet = 8 bits.",
+     "explication": "2 000 × 8 = **16 000 bits**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de photos de 2 Mo tiennent dans 1 Go ? (1 Go = 1 000 Mo)",
+     "unite": "photos",
+     "reponse": 500,
+     "aide": "Divise 1 000 Mo par la taille d’une photo.",
+     "explication": "1 000 ÷ 2 = **500** photos."
+    },
+    {
+     "type": "choix",
+     "enonce": "Awa copie dix fois de suite la chanson numérique d’un téléphone à l’autre. Que devient la qualité du son ?",
+     "options": [
+      "Identique : un signal numérique se copie sans perte",
+      "Elle se dégrade un peu à chaque nouvelle copie",
+      "Elle s’améliore un peu à chaque copie",
+      "Elle disparaît complètement au bout de dix copies"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui distingue un signal numérique d’un signal analogique.",
+     "explication": "Un signal **numérique** (suite de 0 et de 1) se copie **sans perte** ; un signal analogique se dégrade à chaque copie."
+    }
+   ]
+  },
+  {
+   "chapitre": "d91271ab-cddc-541e-a62b-0a2321d40e62",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’arrosage automatique du jardin",
+   "competence": "analyser-document",
+   "situation": "Paul a installé un système d’arrosage connecté dans le potager. L’arrosage se déclenche dès que l’humidité du sol passe sous 30 %. Il suit les mesures de la journée sur son téléphone.",
+   "documents": [
+    {
+     "id": "systeme",
+     "type": "chaine",
+     "titre": "L’objet connecté de Paul",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "capteur",
+       "texte": "Capteur d’humidité",
+       "emoji": "🌱"
+      },
+      {
+       "id": "micro",
+       "texte": "Microcontrôleur",
+       "emoji": "🧠"
+      },
+      {
+       "id": "vanne",
+       "texte": "Électrovanne",
+       "emoji": "🚿"
+      }
+     ],
+     "liens": [
+      {
+       "de": "capteur",
+       "a": "micro",
+       "texte": "signal électrique"
+      },
+      {
+       "de": "micro",
+       "a": "vanne",
+       "texte": "ordre"
+      }
+     ]
+    },
+    {
+     "id": "humidite",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Humidité du sol mesurée au cours de la journée",
+     "categories": [
+      "8 h",
+      "10 h",
+      "12 h",
+      "14 h",
+      "16 h"
+     ],
+     "series": [
+      {
+       "nom": "Humidité",
+       "valeurs": [
+        52,
+        44,
+        36,
+        28,
+        22
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Humidité du sol",
+      "unite": "%",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Heure"
+     },
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "humidite",
+     "enonce": "Touche la première mesure qui passe sous le seuil de 30 %.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la première barre plus basse que 30.",
+     "explication": "À **14 h**, l’humidité est de 28 % : c’est la première mesure sous 30 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mesures de la journée sont sous le seuil de 30 % ?",
+     "unite": "mesures",
+     "reponse": 2,
+     "aide": "Compte les barres plus basses que 30.",
+     "explication": "Seules les mesures de **14 h** (28 %) et de **16 h** (22 %) sont sous le seuil : **2** mesures."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de la chaîne à son rôle.",
+     "paires": [
+      [
+       "Capteur",
+       "Transforme une grandeur physique en signal électrique"
+      ],
+      [
+       "Microcontrôleur",
+       "Traite le signal reçu"
+      ],
+      [
+       "Électrovanne (actionneur)",
+       "Agit sur l’environnement"
+      ]
+     ],
+     "aide": "Le capteur mesure, le microcontrôleur décide, l’actionneur agit.",
+     "explication": "Le **capteur** transforme l’humidité en signal, le **microcontrôleur** le traite, l’**actionneur** (l’électrovanne) agit en arrosant."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces signaux : analogique ou numérique ?",
+     "categories": [
+      "Analogique",
+      "Numérique"
+     ],
+     "items": [
+      [
+       "Le sillon d’un disque vinyle",
+       0
+      ],
+      [
+       "L’aiguille d’un cadran de thermomètre",
+       0
+      ],
+      [
+       "Le fichier d’une photo",
+       1
+      ],
+      [
+       "Le message envoyé par le capteur sous forme de 0 et de 1",
+       1
+      ]
+     ],
+     "aide": "Un signal numérique est une suite de 0 et de 1.",
+     "explication": "Un signal **analogique** varie de façon continue (sillon, aiguille) ; un signal **numérique** est une suite de 0 et de 1 (fichier, message codé)."
+    }
+   ]
+  },
+  {
+   "chapitre": "142c0616-d15d-5720-a485-a07be22dca5e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sources de lumière et objets éclairés",
+   "competence": "observer-schema",
+   "situation": "Lina feuillette son livre de sciences dans le jardin, au crépuscule. Elle regarde le Soleil couchant, puis la Lune qui se lève, et allume sa lampe de poche pour lire.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "schema",
+     "titre": "Ce que Lina voit autour d’elle",
+     "largeur": 320,
+     "hauteur": 150,
+     "elements": [
+      {
+       "forme": "emoji",
+       "x": 50,
+       "y": 65,
+       "emoji": "☀️",
+       "taille": 40,
+       "id": "soleil",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 125,
+       "y": 65,
+       "emoji": "🔦",
+       "taille": 40,
+       "id": "lampe",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 200,
+       "y": 65,
+       "emoji": "🌙",
+       "taille": 40,
+       "id": "lune",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 275,
+       "y": 65,
+       "emoji": "📖",
+       "taille": 40,
+       "id": "livre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 112,
+       "texte": "Soleil",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 125,
+       "y": 112,
+       "texte": "Lampe",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 112,
+       "texte": "Lune",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 112,
+       "texte": "Livre",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "enonce": "Touche les deux sources primaires de lumière.",
+     "reponse": [
+      "soleil",
+      "lampe"
+     ],
+     "multiple": true,
+     "aide": "Une source primaire produit sa propre lumière.",
+     "explication": "Le **Soleil** et la **lampe de poche** produisent leur propre lumière : ce sont des sources primaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lina voit-elle la Lune ?",
+     "options": [
+      "Elle diffuse vers ses yeux la lumière reçue du Soleil",
+      "Elle produit sa propre lumière, comme le Soleil",
+      "Elle absorbe toute la lumière reçue du Soleil",
+      "Elle est transparente et laisse passer la lumière"
+     ],
+     "reponse": 0,
+     "aide": "La Lune est-elle une source primaire ?",
+     "explication": "La Lune est un **objet diffusant** : elle renvoie la lumière du Soleil. On voit un objet quand de la lumière **arrive de lui jusqu’à notre œil**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces objets : source primaire ou objet diffusant ?",
+     "categories": [
+      "Source primaire",
+      "Objet diffusant"
+     ],
+     "items": [
+      [
+       "L’écran d’un téléphone allumé",
+       0
+      ],
+      [
+       "Un mur blanc",
+       1
+      ],
+      [
+       "La flamme d’une bougie",
+       0
+      ],
+      [
+       "La page du livre",
+       1
+      ]
+     ],
+     "aide": "Se demande : cet objet fabrique-t-il sa lumière ou la renvoie-t-il ?",
+     "explication": "Écran et flamme **produisent** leur lumière ; le mur et la page ne font que **diffuser** celle qu’ils reçoivent."
+    }
+   ]
+  },
+  {
+   "chapitre": "142c0616-d15d-5720-a485-a07be22dca5e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’ombre du pion sur l’écran",
+   "competence": "experimenter",
+   "situation": "En salle de sciences, Théo place une petite lampe, un pion et un écran blanc alignés dans une pièce sombre. Il observe l’ombre du pion sur l’écran et la dessine avec des rayons lumineux.",
+   "documents": [
+    {
+     "id": "ombre",
+     "type": "schema",
+     "titre": "Le montage de Théo (vu de dessus)",
+     "largeur": 340,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 292,
+       "y": 15,
+       "l": 16,
+       "h": 170,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 292,
+       "y": 42,
+       "l": 16,
+       "h": 116,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "portee",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        100
+       ],
+       "a": [
+        290,
+        25
+       ],
+       "fleche": "fin",
+       "teinte": "jaune"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        100
+       ],
+       "a": [
+        290,
+        42
+       ],
+       "fleche": "fin",
+       "teinte": "jaune"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        100
+       ],
+       "a": [
+        290,
+        158
+       ],
+       "fleche": "fin",
+       "teinte": "jaune"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        100
+       ],
+       "a": [
+        290,
+        175
+       ],
+       "fleche": "fin",
+       "teinte": "jaune"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 80,
+       "l": 18,
+       "h": 40,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 80,
+       "l": 18,
+       "h": 40,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "propre",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 100,
+       "r": 12,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 135,
+       "texte": "Lampe",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 148,
+       "y": 148,
+       "texte": "Pion",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 205,
+       "texte": "Écran",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ombre",
+     "enonce": "Touche l’ombre portée du pion.",
+     "reponse": [
+      "portee"
+     ],
+     "aide": "C’est la zone de l’écran privée de lumière.",
+     "explication": "L’**ombre portée** est la zone de l’écran que les rayons ne peuvent pas atteindre : le pion les bloque."
+    },
+    {
+     "type": "zone",
+     "document": "ombre",
+     "enonce": "Touche la face du pion qui forme l’ombre propre.",
+     "reponse": [
+      "propre"
+     ],
+     "aide": "Elle est du côté opposé à la lampe.",
+     "explication": "L’**ombre propre** est la face du pion qui n’est pas éclairée : celle qui tourne le dos à la lampe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les rayons sont-ils dessinés en lignes droites ?",
+     "options": [
+      "Dans l’air, la lumière se propage en ligne droite",
+      "Parce que la lumière contourne les objets",
+      "Parce que la lumière va plus vite en ligne droite",
+      "Parce qu’on ne sait pas dessiner autrement"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la propagation de la lumière dans l’air.",
+     "explication": "Dans l’air, milieu **homogène et transparent**, la lumière se propage **en ligne droite** : l’ombre a la forme du pion qui bloque les rayons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La lumière du Soleil parcourt 150 000 000 km pour arriver sur Terre, à 300 000 km/s. Combien de secondes met-elle ?",
+     "unite": "s",
+     "reponse": 500,
+     "aide": "Durée = distance ÷ vitesse.",
+     "explication": "150 000 000 ÷ 300 000 = **500 s**, soit un peu plus de 8 minutes."
+    }
+   ]
+  },
+  {
+   "chapitre": "142c0616-d15d-5720-a485-a07be22dca5e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tissu rouge sous le projecteur",
+   "competence": "analyser-document",
+   "situation": "Pour le spectacle du collège, Sacha éclaire des tissus avec des projecteurs de couleur. Il note la couleur apparente de chaque tissu et dessine ses trois projecteurs braqués sur un écran blanc.",
+   "documents": [
+    {
+     "id": "tissus",
+     "type": "tableau",
+     "titre": "Couleur apparente des tissus selon l’éclairage",
+     "colonnes": [
+      "Éclairage",
+      "Tissu rouge",
+      "Tissu vert",
+      "Tissu blanc"
+     ],
+     "lignes": [
+      [
+       "Lumière blanche",
+       "Rouge",
+       "Vert",
+       "Blanc"
+      ],
+      [
+       "Lumière verte",
+       "?",
+       "Vert",
+       "?"
+      ],
+      [
+       "Lumière rouge",
+       "Rouge",
+       "?",
+       "Rouge"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    },
+    {
+     "id": "projecteurs",
+     "type": "schema",
+     "titre": "Trois projecteurs sur un écran blanc",
+     "largeur": 320,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 85,
+       "r": 55,
+       "teinte": "corail",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 195,
+       "cy": 85,
+       "r": 55,
+       "teinte": "vert",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 140,
+       "r": 55,
+       "teinte": "bleu",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 103,
+       "r": 12,
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "centre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 70,
+       "texte": "R",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 218,
+       "y": 70,
+       "texte": "V",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 156,
+       "y": 175,
+       "texte": "B",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 208,
+       "texte": "R : rouge · V : vert · B : bleu",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quelle est la couleur apparente du tissu rouge éclairé en lumière verte ?",
+     "reponse": [
+      "noir",
+      "le noir"
+     ],
+     "placeholder": "une couleur",
+     "aide": "Le tissu rouge diffuse seulement la lumière rouge. En a-t-il à renvoyer ici ?",
+     "explication": "Le tissu rouge n’a **aucune lumière rouge** à renvoyer sous un éclairage vert : il paraît **noir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la couleur apparente du tissu blanc éclairé en lumière verte ?",
+     "options": [
+      "Vert",
+      "Blanc",
+      "Noir",
+      "Rouge"
+     ],
+     "reponse": 0,
+     "aide": "Un tissu blanc diffuse toutes les couleurs qu’il reçoit.",
+     "explication": "Le tissu blanc renvoie toute la lumière qu’il reçoit : sous une lumière verte, il paraît **vert**."
+    },
+    {
+     "type": "zone",
+     "document": "projecteurs",
+     "enonce": "Touche la zone de l’écran où les trois lumières se superposent.",
+     "reponse": [
+      "centre"
+     ],
+     "aide": "Cherche l’endroit couvert par les trois cercles à la fois.",
+     "explication": "Au **centre**, les trois faisceaux se recouvrent : la lumière des trois projecteurs s’additionne."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Sacha.",
+     "texte": "Le mélange des trois lumières rouge, verte et bleue donne du ___ : c’est la synthèse ___.",
+     "reponses": [
+      [
+       "blanc"
+      ],
+      [
+       "additive"
+      ]
+     ],
+     "banque": [
+      "blanc",
+      "noir",
+      "additive",
+      "soustractive"
+     ],
+     "aide": "C’est le principe des écrans de télévision et de téléphone.",
+     "explication": "Rouge + vert + bleu donne du **blanc** : c’est la synthèse **additive**, celle des écrans."
+    }
+   ]
+  },
+  {
+   "chapitre": "2634a046-e696-5db5-a47d-c65c8757425a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "À quelle vitesse va le son ?",
+   "competence": "lire-tableau",
+   "situation": "Au concert du collège, Nora se demande comment le son des enceintes arrive jusqu’à elle et s’il peut abîmer ses oreilles.",
+   "documents": [
+    {
+     "id": "vitesses",
+     "type": "tableau",
+     "titre": "La vitesse du son selon le milieu",
+     "colonnes": [
+      "Milieu",
+      "Vitesse (m/s)"
+     ],
+     "lignes": [
+      [
+       "Air",
+       340
+      ],
+      [
+       "Eau",
+       1500
+      ],
+      [
+       "Acier",
+       5000
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "niveaux",
+     "type": "tableau",
+     "titre": "Niveaux sonores rencontrés",
+     "colonnes": [
+      "Situation",
+      "Niveau (dB)"
+     ],
+     "lignes": [
+      [
+       "Conversation calme",
+       60
+      ],
+      [
+       "Casque à plein volume",
+       100
+      ],
+      [
+       "Devant les enceintes du concert",
+       110
+      ],
+      [
+       "Seuil de douleur",
+       120
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vitesses",
+     "enonce": "Touche le milieu dans lequel le son va le plus vite.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare les trois vitesses.",
+     "explication": "Le son va le plus vite dans l’**acier** (5 000 m/s) : plus le milieu est dense et rigide, plus il va vite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le son des enceintes met 2 s à parvenir à Nora, dans l’air. Quelle distance a-t-il parcourue, en mètres ?",
+     "unite": "m",
+     "reponse": 680,
+     "aide": "Distance = vitesse × durée, avec la vitesse dans l’air lue dans le tableau.",
+     "explication": "d = v × t = 340 × 2 = **680 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le son pourrait-il se propager entre deux astronomes dans le vide de l’espace ?",
+     "options": [
+      "Non : il lui faut un milieu matériel",
+      "Oui : le son se propage partout",
+      "Oui, plus vite que dans l’air",
+      "Oui, mais seulement quand il est grave"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’expérience de la cloche à vide.",
+     "explication": "Le son a **besoin d’un milieu matériel**. Dans le vide, **aucun son** ne se propage."
+    },
+    {
+     "type": "zone",
+     "document": "niveaux",
+     "enonce": "Touche les niveaux sonores qui dépassent 85 dB, seuil d’une exposition prolongée dangereuse.",
+     "reponse": [
+      "r1c1",
+      "r2c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "aide": "Compare chaque valeur à 85.",
+     "explication": "Le casque à plein volume (100 dB), le concert (110 dB) et le seuil de douleur (120 dB) dépassent **85 dB** : les cellules de l’oreille ne se régénèrent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "2634a046-e696-5db5-a47d-c65c8757425a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’orage qui s’approche",
+   "competence": "raisonner",
+   "situation": "Un soir d’orage, Malo compte les secondes entre l’éclair et le tonnerre, toutes les dix minutes, pour savoir si l’orage s’approche. Il utilise la règle : on divise le nombre de secondes par 3 pour avoir la distance en kilomètres.",
+   "documents": [
+    {
+     "id": "orage",
+     "type": "tableau",
+     "titre": "Les relevés de Malo",
+     "colonnes": [
+      "Heure",
+      "Secondes entre éclair et tonnerre"
+     ],
+     "lignes": [
+      [
+       "21 h 00",
+       12
+      ],
+      [
+       "21 h 10",
+       9
+      ],
+      [
+       "21 h 20",
+       6
+      ],
+      [
+       "21 h 30",
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "orage",
+     "enonce": "Touche le relevé où l’orage est le plus proche.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Moins il y a de secondes, plus l’orage est proche.",
+     "explication": "À **21 h 30**, il n’y a que 3 s entre l’éclair et le tonnerre : l’orage est au plus près."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance se trouve l’orage à 21 h 20, en kilomètres ?",
+     "unite": "km",
+     "reponse": 2,
+     "aide": "Divise le nombre de secondes par 3.",
+     "explication": "6 ÷ 3 = **2 km**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi voit-on l’éclair avant d’entendre le tonnerre ?",
+     "options": [
+      "La lumière (300 000 km/s) va bien plus vite que le son (340 m/s)",
+      "Le son part plus tard que la lumière",
+      "Le son va plus vite que la lumière",
+      "L’éclair est produit avant le tonnerre dans le nuage"
+     ],
+     "reponse": 0,
+     "aide": "Compare les vitesses de la lumière et du son.",
+     "explication": "L’éclair et le tonnerre partent **en même temps**, mais la lumière va **beaucoup plus vite** que le son : on voit avant d’entendre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de kilomètres l’orage s’est-il rapproché entre 21 h 00 et 21 h 30 ?",
+     "unite": "km",
+     "reponse": 3,
+     "aide": "Calcule la distance à 21 h 00, puis à 21 h 30, et fais la différence.",
+     "explication": "À 21 h 00 : 12 ÷ 3 = 4 km ; à 21 h 30 : 3 ÷ 3 = 1 km. Il s’est rapproché de **3 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Il a avancé de 3 km en 30 minutes, à vitesse constante. Dans combien de minutes, après 21 h 30, sera-t-il à la verticale de Malo ?",
+     "unite": "min",
+     "reponse": 10,
+     "aide": "Trouve d’abord la distance parcourue en 1 minute, puis combien de minutes il faut pour 1 km.",
+     "explication": "3 km en 30 min, soit 0,1 km par minute : il reste 1 km, donc **10 minutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2634a046-e696-5db5-a47d-c65c8757425a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sonar du bateau de pêche",
+   "competence": "modeliser",
+   "situation": "Un bateau de pêche émet un son vers le fond de la mer et capte son écho. Le son va à 1 500 m/s dans l’eau. L’équipage mesure la durée entre l’émission et le retour de l’écho en trois points.",
+   "documents": [
+    {
+     "id": "sonar",
+     "type": "schema",
+     "titre": "Le principe du sonar",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 70,
+       "l": 320,
+       "h": 140,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         10,
+         210
+        ],
+        [
+         10,
+         190
+        ],
+        [
+         90,
+         195
+        ],
+        [
+         160,
+         175
+        ],
+        [
+         220,
+         200
+        ],
+        [
+         280,
+         185
+        ],
+        [
+         330,
+         195
+        ],
+        [
+         330,
+         210
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "emoji",
+       "x": 70,
+       "y": 55,
+       "emoji": "⛵",
+       "taille": 36
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        55,
+        78
+       ],
+       "a": [
+        55,
+        185
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "epaisseur": 3,
+       "id": "aller",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        185
+       ],
+       "a": [
+        85,
+        78
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "epaisseur": 3,
+       "id": "retour",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 47,
+       "y": 135,
+       "texte": "Aller",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 93,
+       "y": 135,
+       "texte": "Écho",
+       "ancre": "debut"
+      },
+      {
+       "forme": "etiquette",
+       "x": 255,
+       "y": 125,
+       "texte": "Fond marin",
+       "vers": [
+        240,
+        188
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Durée aller-retour du son",
+     "colonnes": [
+      "Point",
+      "Durée (s)"
+     ],
+     "lignes": [
+      [
+       "A",
+       0.2
+      ],
+      [
+       "B",
+       0.6
+      ],
+      [
+       "C",
+       0.4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sonar",
+     "enonce": "Touche le trajet du son après qu’il a rebondi sur le fond.",
+     "reponse": [
+      "retour"
+     ],
+     "aide": "C’est le trajet qui revient vers le bateau.",
+     "explication": "L’**écho** est le son réfléchi par le fond : il remonte vers le bateau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au point B, quelle est la profondeur de la mer, en mètres ? (le son fait l’aller et le retour)",
+     "unite": "m",
+     "reponse": 450,
+     "aide": "Calcule d’abord la distance parcourue sur l’aller-retour, puis garde la moitié.",
+     "explication": "Distance aller-retour : 1 500 × 0,6 = 900 m. Le fond est à la moitié : **450 m**."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche le point où la mer est la plus profonde.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Plus l’écho met de temps à revenir, plus le fond est loin.",
+     "explication": "Au point **B**, l’écho met le plus de temps (0,6 s) : la mer y est la plus profonde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au point A, quelle est la profondeur, en mètres ?",
+     "unite": "m",
+     "reponse": 150,
+     "aide": "Même méthode qu’au point B.",
+     "explication": "1 500 × 0,2 ÷ 2 = **150 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mina crie face à une falaise et entend son écho 2 s plus tard. Dans l’air, à quelle distance est la falaise, en mètres ?",
+     "unite": "m",
+     "reponse": 340,
+     "aide": "Le son fait l’aller et le retour : garde la moitié de la distance parcourue.",
+     "explication": "340 × 2 ÷ 2 = **340 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d0ef04f-8098-5b96-9d88-47491b919ec7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le diapason sur l’écran",
+   "competence": "lire-graphique",
+   "situation": "Dans le laboratoire de musique, Zoé frappe un diapason devant un microphone relié à un oscilloscope. L’écran trace la tension du microphone au cours du temps.",
+   "documents": [
+    {
+     "id": "diapason",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Signal du diapason",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "series": [
+      {
+       "nom": "Tension du microphone",
+       "valeurs": [
+        0,
+        2.83,
+        4,
+        2.83,
+        0,
+        -2.83,
+        -4,
+        -2.83,
+        0,
+        2.83,
+        4,
+        2.83,
+        0,
+        -2.83,
+        -4,
+        -2.83
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension (mV)",
+      "min": -4,
+      "max": 4,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "source": "Courbe schématisée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "diapason",
+     "enonce": "Touche deux sommets consécutifs de la courbe (les deux premiers maxima).",
+     "reponse": [
+      "k2",
+      "k10"
+     ],
+     "multiple": true,
+     "aide": "Un sommet est le point le plus haut d’une bosse.",
+     "explication": "Les deux premiers sommets sont à **2 ms** et à **10 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période du signal, en millisecondes ?",
+     "unite": "ms",
+     "reponse": 8,
+     "aide": "La période est la durée entre deux sommets consécutifs.",
+     "explication": "10 − 2 = **8 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence du son en hertz, avec f = 1 ÷ T (T = 8 ms = 0,008 s).",
+     "unite": "Hz",
+     "reponse": 125,
+     "aide": "Divise 1 par la période exprimée en secondes.",
+     "explication": "f = 1 ÷ 0,008 = **125 Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature de ce son ?",
+     "options": [
+      "Un son pur : la courbe est une sinusoïde régulière",
+      "Un bruit : la courbe est très irrégulière",
+      "Un son composé : la courbe est très complexe",
+      "Un infrason, car la courbe est très lente"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si le motif est régulier.",
+     "explication": "La courbe est une **sinusoïde régulière** : c’est un **son pur**, celui d’un diapason."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d0ef04f-8098-5b96-9d88-47491b919ec7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux notes sur l’oscilloscope",
+   "competence": "analyser-document",
+   "situation": "Zoé enregistre deux notes jouées par deux instruments, A et B, et regarde leurs courbes sur le même écran de 15 ms.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Deux signaux sonores sur 15 ms",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "series": [
+      {
+       "nom": "Signal A",
+       "valeurs": [
+        0,
+        2.35,
+        3.8,
+        3.8,
+        2.35,
+        0,
+        -2.35,
+        -3.8,
+        -3.8,
+        -2.35,
+        0,
+        2.35,
+        3.8,
+        3.8,
+        2.35,
+        0
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Signal B",
+       "valeurs": [
+        0,
+        1.9,
+        1.18,
+        -1.18,
+        -1.9,
+        0,
+        1.9,
+        1.18,
+        -1.18,
+        -1.9,
+        0,
+        1.9,
+        1.18,
+        -1.18,
+        -1.9,
+        0
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension (mV)",
+      "min": -4,
+      "max": 4,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "source": "Courbes schématisées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel signal correspond au son le plus fort ?",
+     "options": [
+      "Le signal A, d’amplitude plus grande",
+      "Le signal B, qui oscille plus vite",
+      "Les deux, car ils ont la même durée",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "aide": "L’amplitude est la hauteur du motif.",
+     "explication": "Le signal **A** a la plus grande **amplitude** (4 mV contre 2 mV) : c’est le son le plus fort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de motifs complets du signal B voit-on sur les 15 ms de l’écran ?",
+     "unite": "motifs",
+     "reponse": 3,
+     "aide": "Compte combien de fois la courbe B recommence le même dessin.",
+     "explication": "Le signal B répète son motif **3 fois** en 15 ms."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En déduis la période du signal B, en millisecondes.",
+     "unite": "ms",
+     "reponse": 5,
+     "aide": "Divise la durée de l’écran par le nombre de motifs.",
+     "explication": "15 ÷ 3 = **5 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence du signal B en hertz (T = 5 ms = 0,005 s).",
+     "unite": "Hz",
+     "reponse": 200,
+     "aide": "f = 1 ÷ T.",
+     "explication": "f = 1 ÷ 0,005 = **200 Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel signal correspond au son le plus aigu ?",
+     "options": [
+      "Le signal B, de fréquence plus grande",
+      "Le signal A, d’amplitude plus grande",
+      "Le signal A, de période plus courte",
+      "Les deux ont la même hauteur"
+     ],
+     "reponse": 0,
+     "aide": "Plus la période est courte, plus la fréquence est grande.",
+     "explication": "Le signal **B** (200 Hz) a une fréquence plus grande que A (100 Hz) : son **plus aigu**. Hauteur et force sont deux caractéristiques indépendantes."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d0ef04f-8098-5b96-9d88-47491b919ec7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Que peut-on entendre ?",
+   "competence": "analyser-document",
+   "situation": "Pour un exposé, Ilan a enregistré quatre sons et relevé leur période. Il a aussi un enregistrement mystérieux, dont il ne sait pas s’il s’agit d’un son musical ou d’un bruit.",
+   "documents": [
+    {
+     "id": "periodes",
+     "type": "tableau",
+     "titre": "Période des quatre sons",
+     "colonnes": [
+      "Son",
+      "Période (ms)"
+     ],
+     "lignes": [
+      [
+       "Flûte",
+       1
+      ],
+      [
+       "Violoncelle",
+       10
+      ],
+      [
+       "Grondement d’éléphant",
+       100
+      ],
+      [
+       "Cri de chauve-souris",
+       0.02
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "mystere",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "L’enregistrement mystérieux",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0.5,
+        -1.8,
+        2.6,
+        -0.4,
+        1.2,
+        -2.9,
+        0.8,
+        1.9,
+        -1.1,
+        -2.3,
+        2.2,
+        0.3,
+        -0.7,
+        1.6,
+        -2,
+        0.9
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension (mV)",
+      "min": -3,
+      "max": 3,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "source": "Courbe écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de l’enregistrement mystérieux ?",
+     "options": [
+      "C’est un bruit : on n’y voit aucune période identifiable",
+      "C’est un son pur : la courbe est une sinusoïde",
+      "C’est un son composé : le motif se répète régulièrement",
+      "C’est un ultrason"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un motif qui se répète à intervalles réguliers.",
+     "explication": "La courbe est **irrégulière**, sans motif qui se répète : c’est un **bruit**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence de la flûte en hertz (T = 1 ms = 0,001 s).",
+     "unite": "Hz",
+     "reponse": 1000,
+     "aide": "f = 1 ÷ T, avec T en secondes.",
+     "explication": "f = 1 ÷ 0,001 = **1 000 Hz**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence du cri de la chauve-souris en hertz (T = 0,02 ms = 0,00002 s).",
+     "unite": "Hz",
+     "reponse": 50000,
+     "aide": "Convertis d’abord la période en secondes : 0,02 ms = 0,00002 s.",
+     "explication": "f = 1 ÷ 0,00002 = **50 000 Hz**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque son selon sa fréquence (flûte 1 000 Hz, violoncelle 100 Hz, éléphant 10 Hz, chauve-souris 50 000 Hz).",
+     "categories": [
+      "Infrason",
+      "Son audible",
+      "Ultrason"
+     ],
+     "items": [
+      [
+       "Flûte",
+       1
+      ],
+      [
+       "Violoncelle",
+       1
+      ],
+      [
+       "Grondement d’éléphant",
+       0
+      ],
+      [
+       "Cri de chauve-souris",
+       2
+      ]
+     ],
+     "aide": "L’oreille humaine perçoit de 20 Hz à 20 000 Hz environ.",
+     "explication": "Sous 20 Hz : **infrason** (éléphant). De 20 Hz à 20 000 Hz : **audible** (flûte, violoncelle). Au-dessus de 20 000 Hz : **ultrason** (chauve-souris)."
+    }
+   ]
+  }
+ ]
+}

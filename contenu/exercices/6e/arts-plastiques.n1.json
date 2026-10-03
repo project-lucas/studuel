@@ -1,0 +1,1281 @@
+{
+ "niveau": "6e",
+ "matiere": "arts-plastiques",
+ "exercices": [
+  {
+   "chapitre": "5a4bc8ef-ec15-5356-af90-cb8ef5afcf17",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le cercle de couleurs de Léna",
+   "competence": "observer-schema",
+   "situation": "Léna prépare ses tubes de gouache avant de peindre une affiche pour la fête du collège. Elle les range autour d’un cercle chromatique pour s’y retrouver.",
+   "documents": [
+    {
+     "id": "roue",
+     "type": "schema",
+     "titre": "Le cercle chromatique",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 47,
+       "r": 24,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "jaune",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 17,
+       "texte": "Jaune",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 228,
+       "cy": 86,
+       "r": 24,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "orange",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 258,
+       "y": 90,
+       "texte": "Orange",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 228,
+       "cy": 164,
+       "r": 24,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "magenta",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 258,
+       "y": 168,
+       "texte": "Magenta",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 203,
+       "r": 24,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "violet",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 242,
+       "texte": "Violet",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 92,
+       "cy": 164,
+       "r": 24,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "cyan",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 168,
+       "texte": "Cyan",
+       "ancre": "fin",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 92,
+       "cy": 86,
+       "r": 24,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "vert",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 90,
+       "texte": "Vert",
+       "ancre": "fin",
+       "gras": true
+      }
+     ],
+     "source": "Cercle à six couleurs dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "roue",
+     "enonce": "Touche les **trois couleurs primaires** du cercle.",
+     "reponse": [
+      "jaune",
+      "magenta",
+      "cyan"
+     ],
+     "multiple": true,
+     "aide": "Les primaires sont celles qu’aucun mélange ne permet d’obtenir : elles servent à fabriquer toutes les autres.",
+     "explication": "Les primaires sont **magenta, cyan et jaune**. Vert, orange et violet sont des secondaires : chacun naît du mélange de deux primaires."
+    },
+    {
+     "type": "zone",
+     "document": "roue",
+     "enonce": "Touche la couleur **complémentaire du jaune**.",
+     "reponse": [
+      "violet"
+     ],
+     "aide": "Une couleur complémentaire se trouve exactement en face, de l’autre côté du cercle.",
+     "explication": "Le **violet** est en face du jaune : ces deux couleurs sont complémentaires. Posées côte à côte, elles se renforcent."
+    },
+    {
+     "type": "association",
+     "enonce": "Quelle couleur Léna obtient-elle en mélangeant ces deux primaires ?",
+     "paires": [
+      [
+       "Jaune + cyan",
+       "Vert"
+      ],
+      [
+       "Jaune + magenta",
+       "Orange"
+      ],
+      [
+       "Magenta + cyan",
+       "Violet"
+      ]
+     ],
+     "aide": "Regarde, sur le cercle, la couleur secondaire qui se trouve entre les deux primaires.",
+     "explication": "Une secondaire est le mélange de **deux primaires** voisines : jaune + cyan donne du **vert**, jaune + magenta de l’**orange**, magenta + cyan du **violet**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a4bc8ef-ec15-5356-af90-cb8ef5afcf17",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le paysage qui avance et qui recule",
+   "competence": "analyser-document",
+   "situation": "Sacha hésite entre deux versions de son petit tableau : un carré posé sur un fond. Il veut que le carré semble venir vers le spectateur, sans tracer aucune ligne de perspective.",
+   "documents": [
+    {
+     "id": "cadres",
+     "type": "schema",
+     "titre": "Deux essais de Sacha",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 30,
+       "l": 130,
+       "h": 140,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "fond1"
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 75,
+       "l": 50,
+       "h": 50,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "carre1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 30,
+       "l": 130,
+       "h": 140,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "fond2"
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 75,
+       "l": 50,
+       "h": 50,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "carre2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 195,
+       "texte": "Essai 1",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 195,
+       "texte": "Essai 2",
+       "ancre": "milieu",
+       "gras": true
+      }
+     ],
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cadres",
+     "enonce": "Touche **le carré qui semble avancer** vers le spectateur.",
+     "reponse": [
+      "carre1"
+     ],
+     "aide": "Les couleurs chaudes semblent avancer, les froides semblent reculer.",
+     "explication": "Dans l’essai 1, le carré orangé, de teinte **chaude**, se détache et semble avancer ; dans l’essai 2, le carré bleu, de teinte **froide**, semble reculer dans le fond."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces couleurs dans la bonne famille.",
+     "categories": [
+      "Chaudes",
+      "Froides"
+     ],
+     "items": [
+      [
+       "Rouge",
+       0
+      ],
+      [
+       "Bleu",
+       1
+      ],
+      [
+       "Jaune",
+       0
+      ],
+      [
+       "Vert",
+       1
+      ],
+      [
+       "Orange",
+       0
+      ]
+     ],
+     "aide": "Les chaudes rappellent le feu et le soleil ; les froides rappellent l’eau et la forêt.",
+     "explication": "Les **rouges, oranges et jaunes** sont chauds et avancent ; les **bleus et verts** sont froids et reculent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sacha peint maintenant des montagnes très lointaines. Quelles couleurs va-t-il choisir pour qu’elles paraissent loin ?",
+     "options": [
+      "Des bleus et des verts, couleurs froides",
+      "Des rouges et des oranges, couleurs chaudes",
+      "Des jaunes très vifs, couleurs lumineuses",
+      "Des couleurs chaudes, mais très sombres"
+     ],
+     "reponse": 0,
+     "aide": "Pour reculer, une couleur doit appartenir à la famille qui « s’éloigne » du regard.",
+     "explication": "Les couleurs **froides** reculent : bleus et verts donnent l’impression que les montagnes sont loin, sans tracer une seule ligne de perspective."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle que Sacha retient.",
+     "texte": "Pour créer de la ___ sans ligne de perspective, on place des couleurs ___ au premier plan et des couleurs ___ au fond.",
+     "reponses": [
+      [
+       "profondeur"
+      ],
+      [
+       "chaudes"
+      ],
+      [
+       "froides"
+      ]
+     ],
+     "banque": [
+      "profondeur",
+      "chaudes",
+      "froides",
+      "saturées",
+      "sombres"
+     ],
+     "aide": "Les couleurs qui avancent vont devant, celles qui reculent vont derrière.",
+     "explication": "Les couleurs **chaudes** avancent (premier plan), les **froides** reculent (fond) : cela crée de la **profondeur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a4bc8ef-ec15-5356-af90-cb8ef5afcf17",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les échantillons de Mme Roux",
+   "competence": "lire-tableau",
+   "situation": "Mme Roux a classé cinq échantillons de peinture en notant, pour chacun, sa valeur et sa saturation. Elle demande à Mathis de s’en servir pour préparer un coucher de soleil.",
+   "documents": [
+    {
+     "id": "echantillons",
+     "type": "tableau",
+     "titre": "Fiche des échantillons",
+     "colonnes": [
+      "Échantillon",
+      "Valeur (1 très sombre, 5 très clair)",
+      "Saturation (1 terne, 5 vive)"
+     ],
+     "lignes": [
+      [
+       "Bleu de nuit",
+       1,
+       5
+      ],
+      [
+       "Rose dragée",
+       4,
+       2
+      ],
+      [
+       "Gris-bleu",
+       2,
+       1
+      ],
+      [
+       "Jaune citron",
+       5,
+       4
+      ],
+      [
+       "Vert mousse",
+       3,
+       3
+      ]
+     ],
+     "source": "Notes imaginées pour l’exercice"
+    },
+    {
+     "id": "consigne",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La consigne de Mme Roux",
+     "blocs": [
+      "Peins un coucher de soleil : le ciel est orange.",
+      "Place à côté de l’orange une couleur qui le fasse vibrer.",
+      "Tu dois garder des couleurs éclatantes : ne les mélange pas dans le même pot."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echantillons",
+     "enonce": "Touche **la saturation la plus faible** de la fiche (l’échantillon le plus terne).",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche le plus petit nombre dans la colonne de la saturation.",
+     "explication": "La saturation la plus faible est **1** : c’est le gris-bleu, le plus terne des cinq."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les échantillons **du plus sombre au plus clair**.",
+     "items": [
+      "Bleu de nuit",
+      "Gris-bleu",
+      "Vert mousse",
+      "Rose dragée",
+      "Jaune citron"
+     ],
+     "aide": "Pour cela, regarde seulement la colonne « Valeur » : 1 est le plus sombre.",
+     "explication": "On suit la valeur : **1** Bleu de nuit, **2** Gris-bleu, **3** Vert mousse, **4** Rose dragée, **5** Jaune citron."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mathis affirme : « Une couleur vive est forcément claire. » Quel échantillon prouve qu’il a tort ?",
+     "options": [
+      "Bleu de nuit",
+      "Rose dragée",
+      "Gris-bleu",
+      "Jaune citron"
+     ],
+     "reponse": 0,
+     "aide": "Cherche une couleur très saturée dont la valeur est pourtant très basse.",
+     "explication": "Le **bleu de nuit** est vif (saturation 5) et très sombre (valeur 1) : valeur et saturation sont **indépendantes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la consigne, quelle couleur Mathis posera-t-il à côté du ciel orange pour le faire vibrer ?",
+     "options": [
+      "Du bleu, qui est sa complémentaire",
+      "Du rouge, qui est sa voisine",
+      "Du jaune, qui est sa voisine",
+      "Du vert, qui est sa voisine"
+     ],
+     "reponse": 0,
+     "aide": "Sur le cercle chromatique, la complémentaire de l’orange est en face de lui.",
+     "explication": "Le **bleu** est complémentaire de l’orange : posés côte à côte, les deux se renforcent et vibrent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que Mathis doit se rappeler.",
+     "texte": "Côte à côte, deux complémentaires se ___ ; mélangées dans le même pot, elles s’___ en gris.",
+     "reponses": [
+      [
+       "renforcent"
+      ],
+      [
+       "éteignent",
+       "eteignent"
+      ]
+     ],
+     "banque": [
+      "renforcent",
+      "éteignent",
+      "séparent",
+      "colorent"
+     ],
+     "aide": "Le même couple peut donner l’effet le plus vif ou le plus terne.",
+     "explication": "Côte à côte, les complémentaires se **renforcent** ; mélangées, elles s’**éteignent** en gris. D’où la consigne : ne pas les mélanger."
+    }
+   ]
+  },
+  {
+   "chapitre": "d385ebb2-0f30-5639-af46-c6cc002f48b3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les maisons du lotissement",
+   "competence": "observer-schema",
+   "situation": "Camille dessine trois maisons dans un lotissement. Sans tracer aucune ligne, elle veut qu’on voie laquelle est la plus proche et laquelle est la plus lointaine.",
+   "documents": [
+    {
+     "id": "maisons",
+     "type": "schema",
+     "titre": "Le dessin de Camille",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 95,
+       "l": 80,
+       "h": 70,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "b",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 235,
+       "y": 50,
+       "l": 40,
+       "h": 35,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "c",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 120,
+       "l": 110,
+       "h": 90,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "a",
+       "zone": true,
+       "texte": "A"
+      }
+     ],
+     "source": "Dessin imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maisons",
+     "enonce": "Touche **la maison la plus proche** du spectateur.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "La maison la plus proche est celle qui en cache une autre.",
+     "explication": "La maison **A** est devant : elle cache une partie de B (**superposition**), elle est dessinée la plus grande et la plus basse."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les maisons **de la plus proche à la plus lointaine**.",
+     "items": [
+      "Maison A",
+      "Maison B",
+      "Maison C"
+     ],
+     "aide": "Utilise ensemble la taille et la hauteur sur la feuille.",
+     "explication": "A cache B, donc A est devant. C est plus petite et plus haute sur la feuille que B : elle est la plus **lointaine**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque procédé à sa règle.",
+     "paires": [
+      [
+       "Superposition",
+       "Ce qui cache est devant"
+      ],
+      [
+       "Étagement",
+       "Ce qui est plus haut sur la feuille est plus loin"
+      ],
+      [
+       "Taille relative",
+       "Plus c’est petit, plus c’est loin"
+      ]
+     ],
+     "aide": "Pense à ce que tu viens d’observer sur le dessin de Camille.",
+     "explication": "Trois procédés simples : la **superposition** (qui cache est devant), l’**étagement** (plus haut = plus loin) et la **taille relative** (plus petit = plus loin)."
+    }
+   ]
+  },
+  {
+   "chapitre": "d385ebb2-0f30-5639-af46-c6cc002f48b3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La route qui file vers l’horizon",
+   "competence": "observer-schema",
+   "situation": "Nour dessine une route de campagne vue de face, bordée de poteaux. Elle applique la perspective linéaire apprise en classe pour que la route paraisse partir très loin.",
+   "documents": [
+    {
+     "id": "route",
+     "type": "schema",
+     "titre": "La route de Nour",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 86,
+       "l": 280,
+       "h": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "horizon",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        215
+       ],
+       "a": [
+        160,
+        90
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        215
+       ],
+       "a": [
+        160,
+        90
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        184
+       ],
+       "a": [
+        70,
+        142
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        152
+       ],
+       "a": [
+        100,
+        126
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        127
+       ],
+       "a": [
+        125,
+        112
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 90,
+       "r": 6,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "fuite",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 70,
+       "y": 60,
+       "texte": "Poteaux",
+       "vers": [
+        70,
+        150
+       ]
+      }
+     ],
+     "source": "Dessin imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "route",
+     "enonce": "Touche **le point de fuite** de cette route.",
+     "reponse": [
+      "fuite"
+     ],
+     "aide": "C’est l’endroit où les deux bords de la route se rejoignent.",
+     "explication": "Les lignes parallèles (les bords de la route) **convergent** vers le **point de fuite**."
+    },
+    {
+     "type": "zone",
+     "document": "route",
+     "enonce": "Touche **la ligne d’horizon**.",
+     "reponse": [
+      "horizon"
+     ],
+     "aide": "Elle correspond à la hauteur des yeux du spectateur.",
+     "explication": "Le point de fuite se situe **sur la ligne d’horizon**, à hauteur d’œil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La vue est frontale : combien de points de fuite faut-il pour la dessiner ?",
+     "reponse": 1,
+     "aide": "Regarde combien d’endroits différents les lignes de la route rejoignent.",
+     "explication": "Une vue **frontale** n’a qu’**un** point de fuite. Une vue d’angle en demanderait **deux**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle de Nour.",
+     "texte": "Les lignes parallèles convergent vers un point de ___, situé sur la ligne d’___.",
+     "reponses": [
+      [
+       "fuite"
+      ],
+      [
+       "horizon"
+      ]
+     ],
+     "banque": [
+      "fuite",
+      "horizon",
+      "ombre",
+      "perspective"
+     ],
+     "aide": "Regarde les deux zones que tu viens de toucher sur le dessin.",
+     "explication": "Les lignes convergent vers un point de **fuite** situé sur la ligne d’**horizon**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d385ebb2-0f30-5639-af46-c6cc002f48b3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le paysage de montagne de Hugo",
+   "competence": "analyser-document",
+   "situation": "Hugo a dessiné un paysage avec des montagnes, des collines, une maison et deux arbres. Son professeur lui demande de retrouver tous les procédés qui donnent de la profondeur.",
+   "documents": [
+    {
+     "id": "paysage",
+     "type": "schema",
+     "titre": "Le paysage de Hugo",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         20,
+         110
+        ],
+        [
+         90,
+         45
+        ],
+        [
+         150,
+         95
+        ],
+        [
+         210,
+         40
+        ],
+        [
+         300,
+         110
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "montagnes",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 140,
+       "rx": 140,
+       "ry": 40,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "collines",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 115,
+       "l": 45,
+       "h": 35,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "maison",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 135,
+       "r": 26,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "grandarbre",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 80,
+       "cy": 125,
+       "r": 8,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "petitarbre",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         105,
+         218
+        ],
+        [
+         215,
+         218
+        ],
+        [
+         175,
+         160
+        ],
+        [
+         145,
+         160
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "sentier",
+       "zone": true
+      }
+     ],
+     "source": "Dessin imaginé pour l’exercice"
+    },
+    {
+     "id": "indices",
+     "type": "tableau",
+     "titre": "Les remarques de Hugo",
+     "colonnes": [
+      "Ce que Hugo a remarqué"
+     ],
+     "lignes": [
+      [
+       "Les montagnes sont pâles et bleutées"
+      ],
+      [
+       "Un arbre cache une partie de la maison"
+      ],
+      [
+       "Le sentier est en bas de la feuille, les collines plus haut"
+      ],
+      [
+       "Le petit arbre est minuscule à côté du grand"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paysage",
+     "enonce": "Touche **l’élément qui est caché en partie** par un arbre.",
+     "reponse": [
+      "maison"
+     ],
+     "aide": "Regarde ce qui est recouvert par le grand arbre.",
+     "explication": "La **maison** est en partie cachée par le grand arbre : ce qui cache est devant, donc l’arbre est plus proche."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque remarque de Hugo au procédé qu’elle illustre.",
+     "paires": [
+      [
+       "Montagnes pâles et bleutées",
+       "Perspective atmosphérique"
+      ],
+      [
+       "Un arbre cache la maison",
+       "Superposition"
+      ],
+      [
+       "Sentier en bas, collines plus haut",
+       "Étagement"
+      ],
+      [
+       "Un petit arbre à côté d’un grand",
+       "Taille relative"
+      ]
+     ],
+     "aide": "Les trois procédés simples sont la superposition, l’étagement et la taille relative.",
+     "explication": "Pâleur et teinte bleutée : **perspective atmosphérique**. Un arbre devant la maison : **superposition**. Plus haut = plus loin : **étagement**. Plus petit = plus loin : **taille relative**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hugo a utilisé un procédé que cet artiste de la Renaissance emploie dans les arrière-plans de ses tableaux. Lequel ?",
+     "options": [
+      "Léonard de Vinci",
+      "Jackson Pollock",
+      "Max Ernst",
+      "Marcel Duchamp"
+     ],
+     "reponse": 0,
+     "aide": "Pense au procédé qui rend les objets lointains pâles, bleutés et flous.",
+     "explication": "**Léonard de Vinci** emploie la perspective atmosphérique dans les arrière-plans de ses tableaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "2093a9de-c71f-58d1-b146-507bede95b8e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le placard de l’atelier de Maëlle",
+   "competence": "lire-tableau",
+   "situation": "Maëlle range le placard de l’atelier d’arts plastiques. Sur l’inventaire, elle doit retrouver chaque matériau et le mettre dans la bonne famille.",
+   "documents": [
+    {
+     "id": "inventaire",
+     "type": "tableau",
+     "titre": "Inventaire du placard",
+     "colonnes": [
+      "Matériau",
+      "Quantité"
+     ],
+     "lignes": [
+      [
+       "Crayons",
+       12
+      ],
+      [
+       "Fusains",
+       5
+      ],
+      [
+       "Encre (flacons)",
+       3
+      ],
+      [
+       "Gouache (tubes)",
+       8
+      ],
+      [
+       "Aquarelle (godets)",
+       6
+      ],
+      [
+       "Pastels",
+       10
+      ],
+      [
+       "Chutes de tissu",
+       7
+      ],
+      [
+       "Journaux",
+       9
+      ]
+     ],
+     "source": "Inventaire imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inventaire",
+     "enonce": "Touche le nom du matériau qui est **un bâtonnet de charbon de bois** pour dessiner.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Il laisse un trait noir et très friable.",
+     "explication": "Le **fusain** est un bâtonnet de charbon de bois : c’est un matériau de la famille des traçants."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque matériau dans sa famille.",
+     "categories": [
+      "Traçants",
+      "Peintures",
+      "Matières rapportées"
+     ],
+     "items": [
+      [
+       "Crayon",
+       0
+      ],
+      [
+       "Fusain",
+       0
+      ],
+      [
+       "Encre",
+       0
+      ],
+      [
+       "Gouache",
+       1
+      ],
+      [
+       "Aquarelle",
+       1
+      ],
+      [
+       "Pastel",
+       1
+      ],
+      [
+       "Tissu",
+       2
+      ],
+      [
+       "Journal",
+       2
+      ]
+     ],
+     "aide": "Les matières rapportées sont celles qu’on ajoute à l’œuvre, déjà fabriquées.",
+     "explication": "Traçants : crayon, fusain, encre. Peintures : gouache, aquarelle, pastel. **Matières rapportées** : papiers, tissus, objets récupérés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’objets **traçants** (crayons, fusains, encre) compte l’inventaire en tout ?",
+     "reponse": 20,
+     "aide": "Additionne seulement les trois lignes de la famille des traçants.",
+     "explication": "Crayons 12, fusains 5 et encre 3 : 12 + 5 + 3 = **20**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2093a9de-c71f-58d1-b146-507bede95b8e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois outils, trois traces",
+   "competence": "analyser-document",
+   "situation": "Un élève veut recouvrir un grand fond de la même couleur. Selon l’outil choisi, la trace sera très différente : sa professeure lui remet deux fiches, l’une sur les outils, l’autre sur les gestes.",
+   "documents": [
+    {
+     "id": "outils",
+     "type": "tableau",
+     "titre": "Trois outils pour une même couleur",
+     "colonnes": [
+      "Outil",
+      "Trace laissée"
+     ],
+     "lignes": [
+      [
+       "Pinceau",
+       "Trait précis, qui suit le geste"
+      ],
+      [
+       "Rouleau",
+       "Aplat large et régulier, sans détail"
+      ],
+      [
+       "Éponge",
+       "Surface piquetée, aux bords flous"
+      ]
+     ],
+     "source": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "gestes",
+     "type": "tableau",
+     "titre": "Cinq gestes, cinq traces",
+     "colonnes": [
+      "Geste",
+      "Ce que l’on voit"
+     ],
+     "lignes": [
+      [
+       "Tracer",
+       "Une ligne continue"
+      ],
+      [
+       "Frotter",
+       "La texture du support révélée sur le papier"
+      ],
+      [
+       "Gratter",
+       "La couche du dessus enlevée, celle du dessous visible"
+      ],
+      [
+       "Déchirer",
+       "Un bord irrégulier et effiloché"
+      ],
+      [
+       "Tamponner",
+       "Des petites taches répétées"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "L’élève veut un fond large et régulier, sans détail, en quelques secondes. Quel outil choisit-il ?",
+     "options": [
+      "Le rouleau",
+      "Le pinceau fin",
+      "L’éponge",
+      "Le crayon"
+     ],
+     "reponse": 0,
+     "aide": "Cherche, dans la fiche des outils, la trace « large et régulière ».",
+     "explication": "Le **rouleau** laisse un aplat large et régulier. Le pinceau suit le geste, l’éponge pique la surface."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque trace au geste qui la produit.",
+     "paires": [
+      [
+       "Un bord irrégulier et effiloché",
+       "Déchirer"
+      ],
+      [
+       "La texture du bois visible sur la feuille",
+       "Frotter"
+      ],
+      [
+       "Des petites taches répétées",
+       "Tamponner"
+      ],
+      [
+       "La couche du dessous qui réapparaît",
+       "Gratter"
+      ]
+     ],
+     "aide": "Relis la fiche des gestes : chaque geste y a sa trace.",
+     "explication": "Chaque geste laisse une trace **reconnaissable** : déchirer, frotter, tamponner, gratter ne produisent jamais le même effet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la professeure.",
+     "texte": "Une même ___ n’a pas le même ___ posée au pinceau, au rouleau ou à l’éponge.",
+     "reponses": [
+      [
+       "couleur"
+      ],
+      [
+       "effet"
+      ]
+     ],
+     "banque": [
+      "couleur",
+      "effet",
+      "format",
+      "support"
+     ],
+     "aide": "Le premier mot est la peinture, le second est ce que le spectateur voit.",
+     "explication": "Une même **couleur** n’a pas le même **effet** selon l’outil : le geste et l’outil font partie de l’œuvre."
+    }
+   ]
+  },
+  {
+   "chapitre": "2093a9de-c71f-58d1-b146-507bede95b8e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux artistes et le hasard",
+   "competence": "analyser-texte",
+   "situation": "Au musée, deux cartels expliquent comment deux artistes ont fait entrer le hasard dans leurs œuvres. Marion les lit pour répondre à une question de son carnet : le hasard, est-ce de la négligence ?",
+   "documents": [
+    {
+     "id": "ernst",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Cartel 1",
+     "auteur": "Cartel rédigé pour l’exercice",
+     "blocs": [
+      "Max Ernst (1891-1976) pose une feuille sur du bois, du tissu ou des feuilles, puis la frotte au crayon : c’est le [[tech|frottage]].",
+      "La texture apparaît d’elle-même. L’artiste garde les formes qui lui évoquent des paysages."
+     ]
+    },
+    {
+     "id": "pollock",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Cartel 2",
+     "auteur": "Cartel rédigé pour l’exercice",
+     "blocs": [
+      "Jackson Pollock (1912-1956) pose sa toile au sol. Il laisse couler et goutter la peinture en se déplaçant tout autour.",
+      "Il choisit ses couleurs, son geste, la hauteur de la coulure, et s’arrête quand l’équilibre lui convient."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ernst",
+     "enonce": "Touche **le mot qui nomme la technique** de Max Ernst dans le premier cartel.",
+     "reponse": [
+      "tech"
+     ],
+     "aide": "C’est le nom donné au fait de frotter un crayon sur une feuille posée sur une surface texturée.",
+     "explication": "La technique de Max Ernst est le **frottage** : la texture du support apparaît sur la feuille."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces descriptions selon l’artiste auquel elles se rapportent.",
+     "categories": [
+      "Max Ernst",
+      "Jackson Pollock"
+     ],
+     "items": [
+      [
+       "Une feuille posée sur du bois",
+       0
+      ],
+      [
+       "Une toile posée au sol",
+       1
+      ],
+      [
+       "La peinture qui coule et goutte",
+       1
+      ],
+      [
+       "Un crayon frotté sur le papier",
+       0
+      ],
+      [
+       "L’artiste tourne autour de l’œuvre",
+       1
+      ],
+      [
+       "La texture d’un tissu qui apparaît",
+       0
+      ]
+     ],
+     "aide": "Le frottage demande un support texturé et un crayon ; le dripping, de la peinture liquide.",
+     "explication": "Ernst pratique le **frottage** (feuille, crayon, texture) ; Pollock pratique le **dripping** (toile au sol, peinture qui coule)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Réponds à la question du carnet de Marion.",
+     "texte": "Provoquer un ___ et savoir le garder est un ___ ; le hasard en art est une ___, pas de la négligence.",
+     "reponses": [
+      [
+       "accident"
+      ],
+      [
+       "savoir-faire",
+       "savoir faire"
+      ],
+      [
+       "décision",
+       "decision"
+      ]
+     ],
+     "banque": [
+      "accident",
+      "savoir-faire",
+      "décision",
+      "négligence",
+      "erreur"
+     ],
+     "aide": "Pollock « choisit » et « s’arrête quand l’équilibre lui convient » : il décide.",
+     "explication": "Provoquer un **accident** et savoir le garder est un **savoir-faire** : le hasard maîtrisé est une **décision**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel artiste fait **couler** la peinture sur une toile posée au sol ?",
+     "options": [
+      "Jackson Pollock",
+      "Max Ernst",
+      "Les deux",
+      "Aucun des deux"
+     ],
+     "reponse": 0,
+     "aide": "Relis le cartel où l’artiste « se déplace tout autour » de sa toile.",
+     "explication": "**Jackson Pollock** : c’est le dripping. Max Ernst, lui, frotte un crayon sur une feuille."
+    }
+   ]
+  }
+ ]
+}

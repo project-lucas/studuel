@@ -1,0 +1,3257 @@
+{
+ "niveau": "2de",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "5731af00-4e7e-53c3-a955-cf8dc2e069c7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La température d’une journée d’avril à Annecy",
+   "competence": "lire-graphique",
+   "situation": "Un capteur installé sur le port d’Annecy relève la température toutes les trois heures. Sa fonction T associe à chaque heure h (de 0 à 24) la température en °C. Le graphique de Lina en garde la trace.",
+   "documents": [
+    {
+     "id": "temp",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température T(h) relevée au port",
+     "categories": [
+      "0",
+      "3",
+      "6",
+      "9",
+      "12",
+      "15",
+      "18",
+      "21",
+      "24"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        4,
+        2,
+        2,
+        6,
+        10,
+        14,
+        12,
+        8,
+        6
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Heure h"
+     },
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temp",
+     "enonce": "Touche le point qui donne la température à 12 h.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche l’abscisse 12 sur l’axe horizontal, puis le point au-dessus.",
+     "explication": "À h = 12, le point de la courbe est à l’ordonnée 10 : **T(12) = 10 °C**. On part de l’heure (abscisse) pour lire la température (ordonnée)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’image de 21 par la fonction T ?",
+     "reponse": 8,
+     "unite": "°C",
+     "aide": "L’image de 21, c’est la température relevée à 21 h.",
+     "explication": "On repère 21 sur l’axe horizontal et on lit l’ordonnée du point : l’image de 21 est **8** (T(21) = 8 °C)."
+    },
+    {
+     "type": "zone",
+     "document": "temp",
+     "multiple": true,
+     "enonce": "À quelles heures la température vaut-elle 2 °C ? Touche les deux points correspondants.",
+     "reponse": [
+      "k1",
+      "k2"
+     ],
+     "aide": "Trace mentalement l’horizontale d’ordonnée 2 et regarde tous les points qu’elle rencontre.",
+     "explication": "Les points d’ordonnée 2 sont ceux de **3 h et 6 h**. Un nombre peut avoir plusieurs antécédents : ici 3 et 6 sont deux antécédents de 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle heure la température est-elle la plus élevée ?",
+     "reponse": 15,
+     "unite": "h",
+     "aide": "Cherche le point le plus haut de la courbe, puis lis son abscisse.",
+     "explication": "Le point le plus haut a pour ordonnée 14 : le maximum de T est atteint en **h = 15**, soit à 15 h."
+    }
+   ]
+  },
+  {
+   "chapitre": "5731af00-4e7e-53c3-a955-cf8dc2e069c7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un enclos pour les poules de Léa",
+   "competence": "resoudre",
+   "situation": "Léa dispose de 20 m de grillage pour fermer un enclos rectangulaire. Si la largeur est x (en m), la longueur est 10 − x et l’aire vaut A(x) = x(10 − x). Elle a commencé un tableau de valeurs pour choisir la largeur.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Aire de l’enclos selon sa largeur",
+     "colonnes": [
+      "Largeur x (m)",
+      "Aire A(x) (m²)"
+     ],
+     "lignes": [
+      [
+       1,
+       9
+      ],
+      [
+       2,
+       16
+      ],
+      [
+       3,
+       21
+      ],
+      [
+       4,
+       24
+      ],
+      [
+       5,
+       25
+      ],
+      [
+       6,
+       24
+      ],
+      [
+       7,
+       21
+      ],
+      [
+       8,
+       "?"
+      ],
+      [
+       9,
+       9
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées avec A(x) = x(10 − x)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "tab",
+     "enonce": "Calcule la case manquante : quelle est l’aire A(8) ?",
+     "reponse": 16,
+     "unite": "m²",
+     "aide": "Remplace x par 8 dans A(x) = x(10 − x).",
+     "explication": "A(8) = 8 × (10 − 8) = 8 × 2 = **16** m². On remplace x par 8, on calcule l’image."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "multiple": true,
+     "enonce": "Touche les deux cases du tableau où l’aire vaut 21 m².",
+     "reponse": [
+      "r2c1",
+      "r6c1"
+     ],
+     "aide": "Parcours la colonne des aires : le nombre 21 y apparaît deux fois.",
+     "explication": "L’aire vaut 21 m² pour une largeur de **3 m** et pour une largeur de **7 m** : 21 a deux antécédents, 3 et 7."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la plus grande aire du tableau ?",
+     "reponse": 25,
+     "unite": "m²",
+     "aide": "Compare toutes les valeurs de la colonne des aires.",
+     "explication": "En parcourant la colonne, la valeur maximale est **25 m²**, atteinte pour x = 5 (un carré de 5 m de côté)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de la fonction A sur l’intervalle [1 ; 9] ?",
+     "options": [
+      "Elle croît jusqu’à x = 5 puis décroît",
+      "Elle croît sur tout l’intervalle",
+      "Elle décroît sur tout l’intervalle",
+      "Elle est constante sur l’intervalle"
+     ],
+     "reponse": 0,
+     "aide": "Lis la colonne des aires de haut en bas : monte-t-elle toujours ?",
+     "explication": "Les aires passent de 9 à 25 puis redescendent à 9 : A est **croissante sur [1 ; 5] puis décroissante sur [5 ; 9]**. On donne toujours les variations intervalle par intervalle."
+    }
+   ]
+  },
+  {
+   "chapitre": "5731af00-4e7e-53c3-a955-cf8dc2e069c7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le profil du parcours de trottinette",
+   "competence": "lire-graphique",
+   "situation": "Un parc dessine un parcours de trottinette dont l’altitude f(x) (en m, par rapport à la rue) dépend de la distance x (en dizaines de mètres). Le service technique a tracé la courbe de f et préparé un tableau de signes, mais une case est fausse.",
+   "documents": [
+    {
+     "id": "profil",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Altitude f(x) du parcours",
+     "categories": [
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "Altitude",
+       "valeurs": [
+        -5,
+        0,
+        3,
+        4,
+        3,
+        0,
+        -5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Altitude",
+      "unite": "m",
+      "min": -6,
+      "max": 6,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "x (dizaines de m)"
+     },
+     "source": "Profil imaginé pour l’exercice"
+    },
+    {
+     "id": "signes",
+     "type": "tableau",
+     "titre": "Le tableau de signes proposé",
+     "colonnes": [
+      "x",
+      "−2 ≤ x < −1",
+      "−1 < x < 3",
+      "3 < x ≤ 4"
+     ],
+     "lignes": [
+      [
+       "Signe de f(x)",
+       "−",
+       "+",
+       "+"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "profil",
+     "multiple": true,
+     "enonce": "Touche les deux points où le parcours est exactement à l’altitude de la rue (f(x) = 0).",
+     "reponse": [
+      "k1",
+      "k3"
+     ],
+     "aide": "Résoudre f(x) = 0, c’est chercher les points de la courbe situés sur l’axe horizontal.",
+     "explication": "La courbe coupe l’axe des abscisses en **x = −1 et x = 3** : ce sont les solutions de f(x) = 0. On lit des abscisses, pas des ordonnées."
+    },
+    {
+     "type": "nombre",
+     "document": "profil",
+     "enonce": "Quelle est l’altitude maximale du parcours ?",
+     "reponse": 4,
+     "unite": "m",
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le point le plus haut a pour ordonnée 4 : le **maximum de f vaut 4**, atteint en x = 1."
+    },
+    {
+     "type": "zone",
+     "document": "signes",
+     "enonce": "Touche la case du tableau de signes qui contredit la courbe.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Pour 3 < x ≤ 4, regarde de quel côté de l’axe horizontal la courbe se trouve.",
+     "explication": "Entre 3 et 4, la courbe passe **sous** l’axe des abscisses : f(x) est négative, et non positive comme l’indique la dernière case. Le signe se lit sur la position de la courbe par rapport à l’axe."
+    },
+    {
+     "type": "choix",
+     "document": "profil",
+     "enonce": "Sur quel intervalle la fonction f est-elle croissante ?",
+     "options": [
+      "De −2 à 1",
+      "De 1 à 4",
+      "De −2 à 4",
+      "De −1 à 3"
+     ],
+     "reponse": 0,
+     "aide": "Une fonction croissante a une courbe qui monte quand on avance vers la droite.",
+     "explication": "La courbe monte de x = −2 jusqu’à son maximum en x = 1, puis redescend : f est **croissante sur [−2 ; 1]**."
+    },
+    {
+     "type": "nombre",
+     "document": "profil",
+     "enonce": "Combien de nombres entiers x de l’intervalle [−2 ; 4] vérifient f(x) ≥ 0 ?",
+     "reponse": 5,
+     "aide": "Compte les points de la courbe situés sur l’axe ou au-dessus (f(x) = 0 compte aussi).",
+     "explication": "Les entiers −1, 0, 1, 2 et 3 donnent une altitude positive ou nulle : il y en a **5**. Les points d’abscisse −2 et 4 sont sous l’axe."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ed95570-6c2d-5152-b81e-57fdaaaa08c8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’abonnement du club d’escalade",
+   "competence": "calculer",
+   "situation": "Maëlle veut s’inscrire à un club d’escalade. Elle lit l’affiche des tarifs : le coût de x séances dans le mois est donné par une fonction f.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Club Grimp’Alpes",
+     "sousTitre": "Tarifs du mois",
+     "emoji": "🧗",
+     "lignes": [
+      {
+       "texte": "Inscription mensuelle (payée une seule fois)",
+       "valeur": "12 €",
+       "id": "fixe"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Entrée pour chaque séance",
+       "valeur": "3 €",
+       "id": "seance"
+      }
+     ],
+     "pied": "Tarifs imaginés pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui donne la somme à payer en plus à chaque nouvelle séance.",
+     "reponse": [
+      "seance"
+     ],
+     "aide": "Cherche le tarif qui se répète à chaque séance, pas celui payé une seule fois.",
+     "explication": "Les **3 €** de chaque séance sont le coefficient directeur a ; les 12 € d’inscription sont payés une fois, c’est l’ordonnée à l’origine b."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien Maëlle paie-t-elle pour 5 séances dans le mois ?",
+     "reponse": 27,
+     "unite": "€",
+     "aide": "Ajoute l’inscription au prix de 5 séances.",
+     "explication": "f(5) = 3 × 5 + 12 = 15 + 12 = **27 €**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’écriture de la fonction qui donne le coût de x séances.",
+     "texte": "La fonction est f(x) = ___ x + ___.",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "12"
+      ]
+     ],
+     "banque": [
+      "3",
+      "12",
+      "15",
+      "36"
+     ],
+     "aide": "Dans ax + b, a est le prix qui se répète et b le prix payé une seule fois.",
+     "explication": "On a **f(x) = 3x + 12** : 3 € par séance (a) et 12 € de forfait fixe (b). C’est une fonction affine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Maëlle a 45 € à dépenser dans le mois. Combien de séances peut-elle suivre au maximum ?",
+     "reponse": 11,
+     "aide": "Résous 3x + 12 = 45.",
+     "explication": "3x + 12 = 45 donne 3x = 33, donc x = **11** séances : f(11) = 33 + 12 = 45 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ed95570-6c2d-5152-b81e-57fdaaaa08c8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Tarif plein ou carte Ciné+ ?",
+   "competence": "lire-graphique",
+   "situation": "Le cinéma de Cléa propose deux formules : payer chaque séance au tarif plein, ou acheter une carte Ciné+ puis payer chaque séance moins cher. Le graphique compare le coût total (en €) selon le nombre x de séances.",
+   "documents": [
+    {
+     "id": "tarifs",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Coût selon le nombre de séances",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Tarif plein",
+       "valeurs": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Carte Ciné+",
+       "valeurs": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Coût",
+      "unite": "€",
+      "min": 0,
+      "max": 64,
+      "pas": 8
+     },
+     "axeX": {
+      "titre": "Nombre de séances x"
+     },
+     "source": "Tarifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tarifs",
+     "enonce": "Touche le point du tarif plein qui correspond à 6 séances.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "Repère 6 sur l’axe horizontal, puis le point de la courbe qui monte le plus vite.",
+     "explication": "Pour 6 séances au tarif plein, on lit **48 €**. Le tarif plein est la droite la plus pentue : 8 € par séance."
+    },
+    {
+     "type": "nombre",
+     "document": "tarifs",
+     "enonce": "Combien coûtent 6 séances avec la carte Ciné+ ?",
+     "reponse": 40,
+     "unite": "€",
+     "aide": "Lis l’ordonnée du point de la courbe violette d’abscisse 6.",
+     "explication": "Pour x = 6, la courbe de la carte est à l’ordonnée **40 €**."
+    },
+    {
+     "type": "nombre",
+     "document": "tarifs",
+     "enonce": "De combien d’euros le coût avec la carte augmente-t-il à chaque séance supplémentaire ?",
+     "reponse": 4,
+     "unite": "€",
+     "aide": "Calcule la différence entre deux points consécutifs de la courbe violette.",
+     "explication": "Le coût passe de 16 € à 20 € puis 24 € : il augmente de **4 € par séance**. C’est le coefficient directeur a = 4 de f(x) = 4x + 16."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 8x = 4x + 16 : pour quel nombre de séances les deux formules coûtent-elles le même prix ?",
+     "reponse": 4,
+     "aide": "Regroupe les x du même côté : 8x − 4x = 16.",
+     "explication": "8x = 4x + 16 donne 4x = 16, donc x = **4** séances : c’est l’abscisse du point où les deux courbes se croisent."
+    },
+    {
+     "type": "choix",
+     "document": "tarifs",
+     "enonce": "Cléa ira 7 fois au cinéma cette année. Que lui conseilles-tu ?",
+     "options": [
+      "La carte : 44 € au lieu de 56 €",
+      "Le tarif plein : 44 € au lieu de 56 €",
+      "Les deux formules coûtent pareil",
+      "On ne peut pas savoir"
+     ],
+     "reponse": 0,
+     "aide": "Au-delà de 4 séances, quelle courbe est la plus basse ?",
+     "explication": "Pour x = 7 : carte 4 × 7 + 16 = 44 €, tarif plein 8 × 7 = 56 €. **La carte** est plus avantageuse dès que x dépasse 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ed95570-6c2d-5152-b81e-57fdaaaa08c8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La grille tarifaire du taxi de Samir",
+   "competence": "modeliser",
+   "situation": "Samir, chauffeur de taxi, a oublié sa grille tarifaire. Il sait que le prix d’une course est une fonction affine de la distance, et il a gardé deux de ses factures. Son neveu en a tiré un petit programme Python.",
+   "documents": [
+    {
+     "id": "factures",
+     "type": "tableau",
+     "titre": "Deux courses relevées",
+     "colonnes": [
+      "Course",
+      "Distance x (km)",
+      "Prix f(x) (€)"
+     ],
+     "lignes": [
+      [
+       "Course A",
+       4,
+       11
+      ],
+      [
+       "Course B",
+       10,
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Factures imaginées pour l’exercice"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme du neveu",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def prix(km):",
+      "    return 5 + 1.5 * km",
+      "print(prix(12))"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la méthode pour déterminer une fonction affine à partir de deux points.",
+     "items": [
+      "Calculer a avec le taux d’accroissement entre les deux points",
+      "Remplacer x et f(x) d’un des points pour trouver b",
+      "Écrire f(x) = ax + b",
+      "Contrôler avec l’autre point"
+     ],
+     "aide": "On ne peut pas trouver b avant d’avoir a.",
+     "explication": "On calcule d’abord **a**, puis **b** avec un point, on écrit **f(x) = ax + b**, et on **contrôle** avec le second point."
+    },
+    {
+     "type": "nombre",
+     "document": "factures",
+     "enonce": "Calcule le coefficient directeur a de la fonction affine (en € par km).",
+     "reponse": 1.5,
+     "aide": "Divise l’écart des prix par l’écart des distances.",
+     "explication": "a = (20 − 11) ÷ (10 − 4) = 9 ÷ 6 = **1,5** : chaque kilomètre coûte 1,50 €."
+    },
+    {
+     "type": "nombre",
+     "document": "factures",
+     "enonce": "Quelle est l’ordonnée à l’origine b, c’est-à-dire le prix de la prise en charge (en €) ?",
+     "reponse": 5,
+     "aide": "Utilise f(4) = 1,5 × 4 + b = 11.",
+     "explication": "1,5 × 4 + b = 11 donne 6 + b = 11, donc b = **5** €. Contrôle : 1,5 × 10 + 5 = 20 ✓."
+    },
+    {
+     "type": "nombre",
+     "document": "prog",
+     "enonce": "Qu’affiche ce programme ? (Écris la valeur affichée.)",
+     "reponse": 23,
+     "aide": "Calcule prix(12) = 5 + 1,5 × 12.",
+     "explication": "prix(12) = 5 + 1,5 × 12 = 5 + 18 = **23**. Python affiche 23.0 : c’est le prix en euros d’une course de 12 km."
+    },
+    {
+     "type": "nombre",
+     "document": "factures",
+     "enonce": "Un client a payé 35 € : quelle distance (en km) a-t-il parcourue ?",
+     "reponse": 20,
+     "unite": "km",
+     "aide": "Résous 1,5x + 5 = 35.",
+     "explication": "1,5x + 5 = 35 donne 1,5x = 30, donc x = **20** km."
+    }
+   ]
+  },
+  {
+   "chapitre": "acc9b508-36d7-59bf-a1d2-79ea5d1bbdc3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les dalles carrées de l’abri de jardin",
+   "competence": "calculer",
+   "situation": "Tom veut recouvrir le sol carré de son abri de jardin avec des dalles. Un sol de côté c (en m) a pour aire c² (en m²). Il a rempli un tableau, mais il lui manque une valeur.",
+   "documents": [
+    {
+     "id": "dalles",
+     "type": "tableau",
+     "titre": "Aire du sol selon son côté",
+     "colonnes": [
+      "Côté c (m)",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Aire c² (m²)",
+       1,
+       4,
+       9,
+       "?",
+       25
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "dalles",
+     "enonce": "Quelle est l’aire d’un sol de 4 m de côté ?",
+     "reponse": 16,
+     "unite": "m²",
+     "aide": "Calcule 4².",
+     "explication": "4² = 4 × 4 = **16** m². C’est la case qui manquait."
+    },
+    {
+     "type": "zone",
+     "document": "dalles",
+     "enonce": "Touche la case qui donne l’aire d’un sol de 3 m de côté.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la colonne du côté 3, puis lis la case de la ligne des aires.",
+     "explication": "Pour c = 3, l’aire est **9 m²** : 3² = 9."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire d’un sol de 1,5 m de côté ?",
+     "reponse": 2.25,
+     "unite": "m²",
+     "aide": "Calcule 1,5 × 1,5.",
+     "explication": "1,5² = 1,5 × 1,5 = **2,25** m². Le tableau ne donne que des côtés entiers, mais la formule marche pour tout nombre."
+    },
+    {
+     "type": "choix",
+     "document": "dalles",
+     "enonce": "Quand le côté double (de 2 m à 4 m), que devient l’aire ?",
+     "options": [
+      "Elle est multipliée par 4",
+      "Elle est multipliée par 2",
+      "Elle est multipliée par 3",
+      "Elle est multipliée par 8"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’aire pour 2 m et l’aire pour 4 m.",
+     "explication": "On passe de 4 m² à 16 m² : l’aire est **multipliée par 4**. La fonction carré n’est pas proportionnelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "acc9b508-36d7-59bf-a1d2-79ea5d1bbdc3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La maquette d’un half-pipe",
+   "competence": "lire-graphique",
+   "situation": "Nolan construit la maquette d’une rampe de skate. À x dm du centre (de −3 à 3), la hauteur de la rampe est h(x) = x² (en dm). Il a tracé la courbe de h pour vérifier sa forme.",
+   "documents": [
+    {
+     "id": "rampe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur h(x) de la rampe",
+     "categories": [
+      "−3",
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "series": [
+      {
+       "nom": "Hauteur",
+       "valeurs": [
+        9,
+        4,
+        1,
+        0,
+        1,
+        4,
+        9
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "dm",
+      "min": 0,
+      "max": 9,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "x (dm)"
+     },
+     "source": "Maquette imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rampe",
+     "enonce": "Touche le point le plus bas de la rampe (le sommet de la parabole).",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Le sommet est le point où la courbe cesse de descendre pour remonter.",
+     "explication": "Le point le plus bas est celui d’abscisse **0** : le minimum de la fonction carré vaut 0, atteint en x = 0."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur de la rampe à x = 2,5 dm du centre ?",
+     "reponse": 6.25,
+     "unite": "dm",
+     "aide": "2,5 n’est pas marqué sur le graphique : utilise la formule h(x) = x².",
+     "explication": "h(2,5) = 2,5² = **6,25** dm. Le graphique donne l’allure (entre 4 et 9), la formule donne la valeur exacte."
+    },
+    {
+     "type": "zone",
+     "document": "rampe",
+     "multiple": true,
+     "enonce": "Touche les deux points de la rampe situés à 4 dm de hauteur.",
+     "reponse": [
+      "k1",
+      "k5"
+     ],
+     "aide": "La courbe est symétrique : cherche deux abscisses opposées.",
+     "explication": "Les abscisses **−2 et 2** donnent la même hauteur 4, car (−2)² = 2² : la fonction carré est paire."
+    },
+    {
+     "type": "nombre",
+     "document": "rampe",
+     "enonce": "Combien de nombres entiers x vérifient x² ≤ 4 ?",
+     "reponse": 5,
+     "aide": "Compte les points d’abscisse entière dont la hauteur est inférieure ou égale à 4.",
+     "explication": "Les entiers −2, −1, 0, 1 et 2 conviennent : **5** valeurs. Les solutions de x² ≤ 4 forment l’intervalle [−2 ; 2]."
+    }
+   ]
+  },
+  {
+   "chapitre": "acc9b508-36d7-59bf-a1d2-79ea5d1bbdc3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les cinq phrases de Hugo : vraies ou fausses ?",
+   "competence": "raisonner",
+   "situation": "Hugo a recopié cinq phrases sur la fonction carré et les envoie à Inès, qui n’est pas sûre de tout. Pour trancher, elle dresse un tableau de valeurs de x² sur [−3 ; 2].",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages de Hugo",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Tu es sûr de tes cinq phrases ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "A : si a < b, alors a² < b²."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "B : si 0 ≤ a < b, alors a² < b²."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "C : l’équation x² = 9 a deux solutions."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "D : x² est toujours positif ou nul."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "E : si −3 ≤ x ≤ 2, alors 4 ≤ x² ≤ 9."
+      }
+     ]
+    },
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Valeurs de x² pour x entier de −3 à 2",
+     "colonnes": [
+      "x",
+      "−3",
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "x²",
+       9,
+       4,
+       1,
+       0,
+       1,
+       4
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase de Hugo : est-elle vraie ou fausse ?",
+     "categories": [
+      "Vraie",
+      "Fausse"
+     ],
+     "items": [
+      [
+       "Phrase A",
+       1
+      ],
+      [
+       "Phrase B",
+       0
+      ],
+      [
+       "Phrase C",
+       0
+      ],
+      [
+       "Phrase D",
+       0
+      ],
+      [
+       "Phrase E",
+       1
+      ]
+     ],
+     "aide": "Teste les phrases avec des nombres : x = −3 et x = 2 donnent des carrés différents de ceux que l’ordre laisse prévoir.",
+     "explication": "B, C et D sont vraies. **A est fausse** (−3 < 2 mais 9 > 4) et **E est fausse** : x = 0 donne x² = 0, qui n’est pas compris entre 4 et 9."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel couple de nombres (a ; b) prouve que la phrase A est fausse ?",
+     "options": [
+      "a = −3 et b = 2",
+      "a = 1 et b = 2",
+      "a = 0 et b = 5",
+      "a = 2 et b = 3"
+     ],
+     "reponse": 0,
+     "aide": "Il faut a < b avec a² qui n’est pas plus petit que b² : essaie des nombres de signes différents.",
+     "explication": "Avec a = −3 et b = 2, on a bien a < b mais a² = 9 est plus grand que b² = 4. Les trois autres couples donnent a² < b² : ils ne contredisent rien."
+    },
+    {
+     "type": "nombre",
+     "document": "valeurs",
+     "enonce": "Combien d’entiers x de [−3 ; 2] ont un carré supérieur ou égal à 4 ?",
+     "reponse": 3,
+     "aide": "Regarde dans le tableau les valeurs de x² qui valent 4 ou plus.",
+     "explication": "Le carré est supérieur ou égal à 4 pour x = −3, −2 et 2 : **3** valeurs. Pour les trouver, on lit la ligne des x²."
+    },
+    {
+     "type": "trous",
+     "document": "valeurs",
+     "enonce": "Complète le bon encadrement de x² quand x varie de −3 à 2.",
+     "texte": "Pour −3 ≤ x ≤ 2, le bon encadrement est ___ ≤ x² ≤ ___.",
+     "reponses": [
+      [
+       "0"
+      ],
+      [
+       "9"
+      ]
+     ],
+     "banque": [
+      "0",
+      "4",
+      "9",
+      "2"
+     ],
+     "aide": "La valeur 0 est atteinte dans le tableau ; cherche aussi la plus grande valeur de x².",
+     "explication": "Le minimum de x² est **0** (en x = 0) et le maximum est **9** (en x = −3) : 0 ≤ x² ≤ 9. Élever les bornes au carré, comme dans la phrase E, est une erreur."
+    }
+   ]
+  },
+  {
+   "chapitre": "0336f88f-89aa-50c3-b8f0-9a437b1138d7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le score au cube du jeu de lancer",
+   "competence": "lire-graphique",
+   "situation": "Dans un jeu de lancer d’anneaux, le score d’un tour est le cube de la note x donnée par le jury : S(x) = x³. Les notes vont de −3 (pénalité) à 3. Le graphique montre le score en fonction de la note.",
+   "documents": [
+    {
+     "id": "score",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Score S(x) selon la note x",
+     "categories": [
+      "−3",
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "series": [
+      {
+       "nom": "Score",
+       "valeurs": [
+        -27,
+        -8,
+        -1,
+        0,
+        1,
+        8,
+        27
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Score",
+      "min": -27,
+      "max": 27,
+      "pas": 9
+     },
+     "axeX": {
+      "titre": "Note x"
+     },
+     "source": "Règle de jeu imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "score",
+     "enonce": "Touche le point qui correspond à la note −2.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche l’abscisse −2 sur l’axe horizontal, à gauche de 0.",
+     "explication": "Pour la note −2, le point est sous l’axe : le score est (−2)³ = **−8**. Le cube garde le signe de x."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le score pour la note 2 ?",
+     "reponse": 8,
+     "aide": "Calcule 2³ = 2 × 2 × 2.",
+     "explication": "S(2) = 2³ = 2 × 2 × 2 = **8**."
+    },
+    {
+     "type": "nombre",
+     "document": "score",
+     "enonce": "Quelle note donne un score de −27 ?",
+     "reponse": -3,
+     "aide": "Repère l’ordonnée −27 sur le graphique et lis l’abscisse du point.",
+     "explication": "Le point d’ordonnée −27 est celui d’abscisse **−3** : (−3)³ = −27. On cherche l’antécédent de −27."
+    },
+    {
+     "type": "choix",
+     "document": "score",
+     "enonce": "Comment le score évolue-t-il quand la note augmente de −3 à 3 ?",
+     "options": [
+      "Il augmente tout le temps",
+      "Il diminue puis il augmente",
+      "Il diminue tout le temps",
+      "Il reste constant"
+     ],
+     "reponse": 0,
+     "aide": "Suis la courbe de gauche à droite : monte-t-elle toujours ?",
+     "explication": "La courbe monte sans jamais redescendre : la fonction cube est **croissante** sur tout ℝ, elle n’a ni minimum ni maximum."
+    }
+   ]
+  },
+  {
+   "chapitre": "0336f88f-89aa-50c3-b8f0-9a437b1138d7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un cube de sucre : sa face et son volume",
+   "competence": "modeliser",
+   "situation": "Zoé étudie un cube d’arête x (en dm). Une face a pour aire x² (en dm²) et le cube a pour volume x³ (en dm³). Elle trace les deux courbes sur le même graphique pour les comparer, pour x entre 0 et 2.",
+   "documents": [
+    {
+     "id": "cubes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Aire d’une face et volume selon l’arête",
+     "categories": [
+      "0",
+      "0,25",
+      "0,5",
+      "0,75",
+      "1",
+      "1,25",
+      "1,5",
+      "1,75",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "Aire d’une face x²",
+       "valeurs": [
+        0,
+        0.06,
+        0.25,
+        0.56,
+        1,
+        1.56,
+        2.25,
+        3.06,
+        4
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Volume x³",
+       "valeurs": [
+        0,
+        0.02,
+        0.13,
+        0.42,
+        1,
+        1.95,
+        3.38,
+        5.36,
+        8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Arête x (dm)"
+     },
+     "source": "Valeurs calculées (arrondies au centième)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cubes",
+     "enonce": "Touche le point où l’aire d’une face et le volume sont égaux (hors arête nulle).",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche l’endroit où les deux courbes se croisent.",
+     "explication": "Les courbes se croisent pour l’arête **1 dm** : 1² = 1³ = 1. Le point de bascule des puissances est 1."
+    },
+    {
+     "type": "choix",
+     "document": "cubes",
+     "enonce": "Pour une arête comprise entre 0 et 1 dm, comment se comparent le volume et l’aire d’une face ?",
+     "options": [
+      "Le volume est plus petit que l’aire d’une face",
+      "Le volume est plus grand que l’aire d’une face",
+      "Le volume est égal à l’aire d’une face",
+      "Cela dépend du cube choisi"
+     ],
+     "reponse": 0,
+     "aide": "Entre 0 et 1, laquelle des deux courbes est la plus basse ?",
+     "explication": "Entre 0 et 1, la courbe du volume est **sous** celle de l’aire : x³ ≤ x². Élever à une puissance plus grande rapproche de 0."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume d’un cube d’arête 0,5 dm ?",
+     "reponse": 0.125,
+     "unite": "dm³",
+     "aide": "Calcule 0,5 × 0,5 × 0,5.",
+     "explication": "0,5³ = 0,25 × 0,5 = **0,125** dm³. C’est plus petit que 0,5² = 0,25."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le volume d’un cube d’arête 1,5 dm ?",
+     "reponse": 3.375,
+     "unite": "dm³",
+     "aide": "Calcule 1,5² = 2,25 puis multiplie encore par 1,5.",
+     "explication": "1,5³ = 2,25 × 1,5 = **3,375** dm³. Au-delà de 1, le volume dépasse l’aire d’une face (3,375 > 2,25)."
+    },
+    {
+     "type": "nombre",
+     "document": "cubes",
+     "enonce": "Pour une arête de 2 dm, combien de fois le volume contient-il l’aire d’une face ?",
+     "reponse": 2,
+     "aide": "Lis les deux ordonnées pour x = 2, puis divise.",
+     "explication": "Pour x = 2, le volume vaut 8 et l’aire d’une face vaut 4 : 8 ÷ 4 = **2**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0336f88f-89aa-50c3-b8f0-9a437b1138d7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cube ou carré : les phrases de Sarah",
+   "competence": "raisonner",
+   "situation": "Sarah prépare son contrôle sur la fonction cube. Elle a rempli un tableau de valeurs de x³ et noté cinq phrases dans une conversation avec Malik, qui doit lui dire lesquelles sont justes.",
+   "documents": [
+    {
+     "id": "tabc",
+     "type": "tableau",
+     "titre": "Valeurs de x³",
+     "colonnes": [
+      "x",
+      "x³"
+     ],
+     "lignes": [
+      [
+       "−4",
+       "−64"
+      ],
+      [
+       "−3",
+       "−27"
+      ],
+      [
+       "−2",
+       "−8"
+      ],
+      [
+       "−1",
+       "−1"
+      ],
+      [
+       "0",
+       "0"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "8"
+      ],
+      [
+       "3",
+       "27"
+      ],
+      [
+       "4",
+       "64"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La conversation de Sarah",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "Phrase A : l’équation x³ = −27 n’a pas de solution."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Phrase B : l’équation x³ = 8 a deux solutions."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Phrase C : si a < b, alors a³ < b³."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Phrase D : x³ a toujours le même signe que x."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Phrase E : la fonction cube a un minimum en 0."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Regarde ton tableau, il répond à presque tout !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "tabc",
+     "enonce": "Quelle est la solution de l’équation x³ = −64 ?",
+     "reponse": -4,
+     "aide": "Cherche −64 dans la colonne des x³, puis lis le x de la même ligne.",
+     "explication": "La ligne de −64 est celle de **x = −4**. Contrairement à x² = k, l’équation x³ = k a toujours exactement une solution."
+    },
+    {
+     "type": "nombre",
+     "document": "tabc",
+     "enonce": "Le tableau s’arrête à x = 4. Quelle est la solution de l’équation x³ = 125 ?",
+     "reponse": 5,
+     "aide": "Cherche un nombre dont le cube vaut 125 : 4³ = 64 est trop petit.",
+     "explication": "5³ = 5 × 5 × 5 = 125 : la solution est **5**, la seule (le cube est croissant)."
+    },
+    {
+     "type": "zone",
+     "document": "tabc",
+     "multiple": true,
+     "enonce": "Touche toutes les cases de la colonne x³ qui sont inférieures ou égales à 8.",
+     "reponse": [
+      "r0c1",
+      "r1c1",
+      "r2c1",
+      "r3c1",
+      "r4c1",
+      "r5c1",
+      "r6c1"
+     ],
+     "aide": "Les cubes augmentent avec x : cherche où la colonne dépasse 8.",
+     "explication": "Les cubes de −4 à 2 valent −64, −27, −8, −1, 0, 1 et 8 : **7 cases**. À partir de x = 3, x³ vaut 27, soit plus que 8. Donc x³ ≤ 8 équivaut à x ≤ 2."
+    },
+    {
+     "type": "categories",
+     "document": "chat",
+     "enonce": "Range chaque phrase de Sarah : est-elle vraie ou fausse ?",
+     "categories": [
+      "Vraie",
+      "Fausse"
+     ],
+     "items": [
+      [
+       "Phrase A",
+       1
+      ],
+      [
+       "Phrase B",
+       1
+      ],
+      [
+       "Phrase C",
+       0
+      ],
+      [
+       "Phrase D",
+       0
+      ],
+      [
+       "Phrase E",
+       1
+      ]
+     ],
+     "aide": "Teste avec le tableau : où x³ = −27 ? Combien de x donnent 8 ?",
+     "explication": "C et D sont vraies. **A est fausse** (x = −3), **B est fausse** (une seule solution, 2) et **E est fausse** : le cube est croissant, il passe par 0 sans minimum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le plus grand entier x tel que x³ ≤ 30 ?",
+     "reponse": 3,
+     "aide": "Compare 30 aux cubes 27 et 64.",
+     "explication": "3³ = 27 ≤ 30 mais 4³ = 64 > 30. Comme le cube est croissant, la réponse est **3**."
+    }
+   ]
+  },
+  {
+   "chapitre": "68f4b5d4-7e86-5ae9-b5b2-8243fed0fb0b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des jardins carrés pour le potager",
+   "competence": "calculer",
+   "situation": "Le jardin partagé du quartier propose des parcelles carrées. Le côté d’une parcelle d’aire A (en m²) vaut √A (en m). Le jardinier a commencé un tableau pour retrouver le côté de chaque parcelle.",
+   "documents": [
+    {
+     "id": "parcelles",
+     "type": "tableau",
+     "titre": "Côté d’une parcelle selon son aire",
+     "colonnes": [
+      "Aire A (m²)",
+      "4",
+      "9",
+      "16",
+      "25",
+      "36"
+     ],
+     "lignes": [
+      [
+       "Côté √A (m)",
+       2,
+       3,
+       "?",
+       5,
+       6
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "parcelles",
+     "enonce": "Quel est le côté d’une parcelle de 16 m² ?",
+     "reponse": 4,
+     "unite": "m",
+     "aide": "Cherche le nombre positif dont le carré vaut 16.",
+     "explication": "√16 = **4**, car 4² = 16. C’est la case manquante du tableau."
+    },
+    {
+     "type": "zone",
+     "document": "parcelles",
+     "enonce": "Touche la case qui donne le côté d’une parcelle de 9 m².",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Repère la colonne de l’aire 9, puis lis la case de la ligne du côté.",
+     "explication": "Pour une aire de 9 m², le côté vaut **3 m** : √9 = 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une parcelle fait 49 m². Quel est son côté ?",
+     "reponse": 7,
+     "unite": "m",
+     "aide": "Cherche un nombre qui, multiplié par lui-même, donne 49.",
+     "explication": "√49 = **7**, car 7 × 7 = 49. Ce n’est pas dans le tableau : on utilise la définition de la racine carrée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une petite parcelle d’herbes aromatiques fait 2,25 m². Quel est son côté ?",
+     "reponse": 1.5,
+     "unite": "m",
+     "aide": "Essaie 1,5 × 1,5.",
+     "explication": "1,5² = 2,25, donc √2,25 = **1,5** m. Une racine carrée peut être un nombre décimal."
+    }
+   ]
+  },
+  {
+   "chapitre": "68f4b5d4-7e86-5ae9-b5b2-8243fed0fb0b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pendule de la salle de sciences",
+   "competence": "modeliser",
+   "situation": "Au laboratoire, Camille mesure la période T (durée d’un aller-retour, en s) d’un pendule selon la longueur L de son fil (en m). Pour un petit pendule, on peut retenir T = 2√L. Elle a tracé le graphique de T en fonction de L.",
+   "documents": [
+    {
+     "id": "pendule",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Période T du pendule selon la longueur L",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "Période",
+       "valeurs": [
+        0,
+        1.41,
+        2,
+        2.45,
+        2.83,
+        3.16,
+        3.46,
+        3.74,
+        4
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Période T",
+      "unite": "s",
+      "min": 0,
+      "max": 4,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Longueur L (m)"
+     },
+     "source": "Formule simplifiée T ≈ 2√L ; valeurs arrondies au centième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pendule",
+     "enonce": "Touche le point qui correspond à un fil de 2 m.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche l’abscisse 2 sur l’axe horizontal.",
+     "explication": "Pour L = 2, le point a pour ordonnée 2√2 ≈ **2,83 s**."
+    },
+    {
+     "type": "nombre",
+     "document": "pendule",
+     "enonce": "Quelle est la période d’un pendule de 4 m de fil ?",
+     "reponse": 4,
+     "unite": "s",
+     "aide": "Lis l’ordonnée du dernier point, ou calcule 2 × √4.",
+     "explication": "T = 2 × √4 = 2 × 2 = **4 s**."
+    },
+    {
+     "type": "nombre",
+     "document": "pendule",
+     "enonce": "Quelle longueur de fil donne une période de 2 s ?",
+     "reponse": 1,
+     "unite": "m",
+     "aide": "Cherche l’antécédent de 2 : quelle abscisse a pour ordonnée 2 ?",
+     "explication": "On cherche L tel que 2√L = 2, donc √L = 1 et L = **1 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle longueur de fil donne une période de 3 s ? (Cette valeur n’est pas marquée sur le graphique.)",
+     "reponse": 2.25,
+     "unite": "m",
+     "aide": "Résous 2√L = 3, puis élève au carré.",
+     "explication": "2√L = 3 donne √L = 1,5 et L = 1,5² = **2,25 m**. La racine carrée se défait en élevant au carré."
+    },
+    {
+     "type": "nombre",
+     "document": "pendule",
+     "enonce": "Quand la longueur du fil est multipliée par 4 (de 1 m à 4 m), par combien la période est-elle multipliée ?",
+     "reponse": 2,
+     "aide": "Compare la période pour L = 1 et pour L = 4.",
+     "explication": "T passe de 2 s à 4 s : elle est multipliée par **2**. Il faut multiplier la longueur par 4 pour doubler √L."
+    }
+   ]
+  },
+  {
+   "chapitre": "68f4b5d4-7e86-5ae9-b5b2-8243fed0fb0b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une solution de trop dans le cahier de Chloé",
+   "competence": "raisonner",
+   "situation": "Chloé résout l’équation √(2x + 3) = x. Elle trouve deux valeurs, mais son professeur lui dit que l’une d’elles ne convient pas. À toi de comprendre pourquoi.",
+   "documents": [
+    {
+     "id": "cahier",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le cahier de Chloé",
+     "auteur": "Copie écrite pour l’exercice",
+     "blocs": [
+      "On veut résoudre √(2x + 3) = x.",
+      "J’élève au carré : 2x + 3 = x².",
+      "Donc x² − 2x − 3 = 0, soit (x − 3)(x + 1) = 0.",
+      "Je trouve x = 3 ou x = −1."
+     ]
+    },
+    {
+     "id": "verif",
+     "type": "tableau",
+     "titre": "Les deux valeurs testées dans l’équation de départ",
+     "colonnes": [
+      "Valeur de x",
+      "Membre de gauche √(2x + 3)",
+      "Membre de droite x"
+     ],
+     "lignes": [
+      [
+       "x = 3",
+       3,
+       3
+      ],
+      [
+       "x = −1",
+       "?",
+       "−1"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la méthode pour résoudre une équation avec une racine.",
+     "items": [
+      "Écrire la condition d’existence de la racine",
+      "Regarder le signe de l’autre membre",
+      "Élever au carré et résoudre",
+      "Contrôler chaque valeur dans l’équation de départ"
+     ],
+     "aide": "On vérifie les conditions avant de calculer, et les valeurs après.",
+     "explication": "On écrit d’abord la **condition d’existence**, on regarde le **signe** de l’autre membre, on **élève au carré**, puis on **contrôle** chaque valeur, car l’élévation au carré peut créer des solutions parasites."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle plus petite valeur de x l’expression √(2x + 3) existe-t-elle ?",
+     "reponse": -1.5,
+     "aide": "Il faut que 2x + 3 soit positif ou nul.",
+     "explication": "2x + 3 ≥ 0 donne x ≥ −3/2, soit x ≥ **−1,5**. L’ensemble de définition de x ↦ √(2x + 3) est [−1,5 ; +∞[."
+    },
+    {
+     "type": "nombre",
+     "document": "verif",
+     "enonce": "Complète la case manquante : que vaut √(2 × (−1) + 3) ?",
+     "reponse": 1,
+     "aide": "Calcule d’abord 2 × (−1) + 3, puis la racine.",
+     "explication": "2 × (−1) + 3 = 1 et √1 = **1**. Le membre de gauche vaut donc 1, pas −1."
+    },
+    {
+     "type": "choix",
+     "document": "verif",
+     "enonce": "Pourquoi faut-il rejeter la valeur x = −1 ?",
+     "options": [
+      "Parce que √1 = 1 ne peut pas être égal à −1",
+      "Parce que −1 est hors de l’ensemble de définition",
+      "Parce que −1 n’annule pas (x − 3)(x + 1)",
+      "Parce qu’on rejette toujours la valeur négative"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux colonnes de la ligne x = −1.",
+     "explication": "Pour x = −1, le membre de gauche vaut 1 et celui de droite −1 : l’égalité est fausse. Une racine est toujours positive ou nulle, donc **x = −1 est une solution parasite** créée par l’élévation au carré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de solutions l’équation √(2x + 3) = x a-t-elle finalement ?",
+     "reponse": 1,
+     "aide": "Garde seulement les valeurs qui vérifient l’équation de départ.",
+     "explication": "Seule la valeur x = 3 vérifie √9 = 3 : l’équation a **une** solution."
+    }
+   ]
+  },
+  {
+   "chapitre": "edc04d10-a2b2-5bd7-8771-91d651f4a52b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Partager la tablette de chocolat",
+   "competence": "lire-tableau",
+   "situation": "Julie partage une tablette de chocolat en parts égales entre n amis : chacun reçoit la fraction f(n) = 1/n de la tablette. Elle a noté quelques cas dans un tableau.",
+   "documents": [
+    {
+     "id": "parts",
+     "type": "tableau",
+     "titre": "Part reçue selon le nombre d’amis",
+     "colonnes": [
+      "Nombre d’amis n",
+      "1",
+      "2",
+      "4",
+      "5",
+      "10"
+     ],
+     "lignes": [
+      [
+       "Part f(n) = 1/n",
+       1,
+       0.5,
+       0.25,
+       0.2,
+       0.1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parts",
+     "enonce": "Touche la part que reçoit chaque ami quand ils sont 5.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Repère la colonne n = 5, puis lis la ligne des parts.",
+     "explication": "Avec 5 amis, chacun reçoit **0,2** tablette, soit 1/5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part chacun reçoit-il quand ils sont 20 ?",
+     "reponse": 0.05,
+     "aide": "Calcule 1 ÷ 20.",
+     "explication": "f(20) = 1/20 = **0,05** tablette."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’amis faut-il pour que chacun reçoive 0,125 tablette (un huitième) ?",
+     "reponse": 8,
+     "aide": "Cherche n tel que 1/n = 0,125.",
+     "explication": "1/n = 0,125 donne n = 1 ÷ 0,125 = **8** amis. On cherche l’antécédent de 0,125."
+    },
+    {
+     "type": "choix",
+     "document": "parts",
+     "enonce": "Quand le nombre d’amis augmente, que devient la part de chacun ?",
+     "options": [
+      "Elle diminue",
+      "Elle augmente",
+      "Elle reste la même",
+      "Elle devient négative"
+     ],
+     "reponse": 0,
+     "aide": "Lis le tableau de gauche à droite.",
+     "explication": "Les parts passent de 1 à 0,1 : elles **diminuent**. La fonction inverse est décroissante sur ]0 ; +∞[."
+    }
+   ]
+  },
+  {
+   "chapitre": "edc04d10-a2b2-5bd7-8771-91d651f4a52b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mille mètres à vélo, à toutes les vitesses",
+   "competence": "modeliser",
+   "situation": "Théo teste son vélo sur un tronçon de 1 km. S’il roule à la vitesse v (en km/h), il met t(v) = 1/v heure. Il note ses essais dans un tableau, mais l’un d’eux est resté vide.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Durée du tronçon selon la vitesse",
+     "colonnes": [
+      "Vitesse v (km/h)",
+      "4",
+      "5",
+      "10",
+      "20",
+      "25"
+     ],
+     "lignes": [
+      [
+       "Durée t(v) = 1/v (h)",
+       0.25,
+       0.2,
+       0.1,
+       0.05,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Essais imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche la durée du tronçon quand Théo roule à 10 km/h.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère la colonne de la vitesse 10.",
+     "explication": "À 10 km/h, le tronçon dure **0,1 h**, c’est-à-dire 6 minutes."
+    },
+    {
+     "type": "nombre",
+     "document": "essais",
+     "enonce": "Complète la case vide : quelle est la durée t(25) en heures ?",
+     "reponse": 0.04,
+     "unite": "h",
+     "aide": "Calcule 1 ÷ 25.",
+     "explication": "t(25) = 1/25 = **0,04** h."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 20 km/h, combien de minutes dure le tronçon ?",
+     "reponse": 3,
+     "unite": "min",
+     "aide": "La durée est 0,05 h ; une heure vaut 60 minutes.",
+     "explication": "0,05 h × 60 = **3 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle vitesse (en km/h) Théo met-il une demi-heure (0,5 h) ?",
+     "reponse": 2,
+     "unite": "km/h",
+     "aide": "Résous 1/v = 0,5.",
+     "explication": "1/v = 0,5 donne v = 1 ÷ 0,5 = **2** km/h : c’est la marche très lente."
+    },
+    {
+     "type": "choix",
+     "document": "essais",
+     "enonce": "Quand la vitesse double (de 10 à 20 km/h), que devient la durée ?",
+     "options": [
+      "Elle est divisée par 2",
+      "Elle est multipliée par 2",
+      "Elle est divisée par 4",
+      "Elle ne change pas"
+     ],
+     "reponse": 0,
+     "aide": "Compare les durées dans les colonnes 10 et 20.",
+     "explication": "La durée passe de 0,1 h à 0,05 h : elle est **divisée par 2**. Les grandeurs inversement proportionnelles suivent la fonction inverse."
+    }
+   ]
+  },
+  {
+   "chapitre": "edc04d10-a2b2-5bd7-8771-91d651f4a52b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’inéquation 1/x ≥ 3 de Maya",
+   "competence": "raisonner",
+   "situation": "Maya veut résoudre l’inéquation 1/x ≥ 3. Elle sait qu’il ne faut pas multiplier par x sans connaître son signe : elle passe tout d’un même côté et étudie le signe de (1 − 3x)/x. Elle teste aussi quelques valeurs.",
+   "documents": [
+    {
+     "id": "signes",
+     "type": "tableau",
+     "titre": "Le tableau de signes de Maya (a est la valeur qui annule 1 − 3x)",
+     "colonnes": [
+      "x",
+      "x < 0",
+      "0 < x < a",
+      "x > a"
+     ],
+     "lignes": [
+      [
+       "Signe de 1 − 3x",
+       "+",
+       "+",
+       "−"
+      ],
+      [
+       "Signe de x",
+       "−",
+       "+",
+       "+"
+      ],
+      [
+       "Signe de (1 − 3x)/x",
+       "−",
+       "+",
+       "−"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Ses essais",
+     "colonnes": [
+      "Valeur de x",
+      "0,2",
+      "0,25",
+      "0,5",
+      "1"
+     ],
+     "lignes": [
+      [
+       "1/x",
+       5,
+       4,
+       2,
+       1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "signes",
+     "enonce": "Quelle est la valeur interdite de l’inéquation 1/x ≥ 3 ?",
+     "reponse": 0,
+     "aide": "Quelle valeur de x ne permet pas de calculer 1/x ?",
+     "explication": "On ne peut pas diviser par zéro : **0 est la valeur interdite**, et elle sera toujours exclue de l’ensemble des solutions."
+    },
+    {
+     "type": "nombre",
+     "document": "signes",
+     "enonce": "Quelle est la valeur a qui annule 1 − 3x ? (Écris une fraction ou une valeur approchée à 0,01 près.)",
+     "reponse": 0.3333333333333333,
+     "tolerance": 0.006,
+     "aide": "Résous 1 − 3x = 0.",
+     "explication": "1 − 3x = 0 donne x = **1/3** ≈ 0,33. C’est la valeur où le numérateur change de signe."
+    },
+    {
+     "type": "zone",
+     "document": "essais",
+     "multiple": true,
+     "enonce": "Touche les essais pour lesquels 1/x ≥ 3 est vrai.",
+     "reponse": [
+      "r0c1",
+      "r0c2"
+     ],
+     "aide": "Cherche dans la ligne 1/x les valeurs supérieures ou égales à 3.",
+     "explication": "Pour x = 0,2 et x = 0,25, on trouve **5 et 4**, qui sont supérieurs à 3. Pour x = 0,5 et x = 1, on trouve 2 et 1 : trop petits."
+    },
+    {
+     "type": "trous",
+     "document": "signes",
+     "enonce": "Complète la solution de l’inéquation 1/x ≥ 3.",
+     "texte": "Les solutions sont les nombres x tels que 0 < x ≤ ___.",
+     "reponses": [
+      [
+       "1/3"
+      ]
+     ],
+     "banque": [
+      "1/3",
+      "3",
+      "0",
+      "1"
+     ],
+     "aide": "Dans le tableau, le quotient est positif ou nul seulement entre 0 et a.",
+     "explication": "Le quotient (1 − 3x)/x est positif sur ]0 ; 1/3] (nul en 1/3, le crochet est fermé) : **S = ]0 ; 1/3]**. Le crochet est ouvert en 0, valeur interdite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nombres entiers sont solutions de 1/x ≥ 3 ?",
+     "reponse": 0,
+     "aide": "Cherche un entier dans l’intervalle ]0 ; 1/3].",
+     "explication": "Aucun entier ne se trouve entre 0 (exclu) et 1/3 : il y en a **0**. Le nombre 1, par exemple, donne 1/1 = 1, qui est plus petit que 3."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a031ed0-b4ad-598f-8555-fd3e7ddc6ae1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les baskets en solde",
+   "competence": "calculer",
+   "situation": "Yanis veut acheter une paire de baskets. En magasin, une affichette annonce une remise de 25 % sur le prix de départ.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Baskets de running",
+     "sousTitre": "Soldes du week-end",
+     "emoji": "👟",
+     "lignes": [
+      {
+       "texte": "Prix de départ",
+       "valeur": "80 €",
+       "id": "depart"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Remise",
+       "valeur": "− 25 %",
+       "id": "remise"
+      }
+     ],
+     "pied": "Étiquette imaginée pour l’exercice",
+     "teinte": "corail"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne qui indique le taux de la remise.",
+     "reponse": [
+      "remise"
+     ],
+     "aide": "Cherche la ligne où figure un pourcentage.",
+     "explication": "La ligne **Remise − 25 %** donne le taux : on retire 25 % du prix de départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’euros les baskets sont-elles réduites ?",
+     "reponse": 20,
+     "unite": "€",
+     "aide": "Calcule 25 % de 80 : multiplie 80 par 25/100.",
+     "explication": "80 × 25/100 = **20 €** de remise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix soldé des baskets ?",
+     "reponse": 60,
+     "unite": "€",
+     "aide": "Enlève la remise au prix de départ.",
+     "explication": "80 − 20 = **60 €**. On peut aussi multiplier directement 80 par le coefficient 0,75."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par quel coefficient multiplie-t-on un prix pour appliquer une baisse de 25 % ?",
+     "options": [
+      "0,75",
+      "1,25",
+      "0,25",
+      "0,025"
+     ],
+     "reponse": 0,
+     "aide": "Une baisse de t % se traduit par 1 − t/100.",
+     "explication": "Baisser de 25 %, c’est multiplier par 1 − 25/100 = **0,75**. Le coefficient 1,25 correspondrait à une hausse de 25 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a031ed0-b4ad-598f-8555-fd3e7ddc6ae1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux hausses successives pour Flixo",
+   "competence": "modeliser",
+   "situation": "Le service de vidéo en ligne Flixo coûtait 12 € par mois en janvier. En mars, son prix augmente de 10 %, puis en septembre de 25 % par rapport au prix de mars.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Les prix de l’abonnement",
+     "colonnes": [
+      "Date",
+      "Évolution",
+      "Prix mensuel (€)"
+     ],
+     "lignes": [
+      [
+       "Janvier",
+       "—",
+       12
+      ],
+      [
+       "Mars",
+       "+ 10 %",
+       "?"
+      ],
+      [
+       "Septembre",
+       "+ 25 %",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Prix imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "prix",
+     "enonce": "Quel est le prix mensuel après la hausse de mars ?",
+     "reponse": 13.2,
+     "unite": "€",
+     "aide": "Multiplie 12 par le coefficient 1,10.",
+     "explication": "12 × 1,10 = **13,20 €**. Le coefficient d’une hausse de 10 % est 1 + 10/100 = 1,10."
+    },
+    {
+     "type": "nombre",
+     "document": "prix",
+     "enonce": "Quel est le prix mensuel après la hausse de septembre ?",
+     "reponse": 16.5,
+     "unite": "€",
+     "aide": "La hausse de 25 % s’applique au prix de mars, pas à celui de janvier.",
+     "explication": "13,20 × 1,25 = **16,50 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hausse globale, en pourcentage, entre janvier et septembre ?",
+     "reponse": 37.5,
+     "unite": "%",
+     "aide": "Multiplie les deux coefficients 1,10 et 1,25, puis retire 1.",
+     "explication": "1,10 × 1,25 = 1,375, donc une hausse de **37,5 %**. On vérifie : 16,50 ÷ 12 = 1,375."
+    },
+    {
+     "type": "choix",
+     "enonce": "Marie affirme : « 10 % puis 25 %, cela fait 35 % de hausse. » Que lui répondre ?",
+     "options": [
+      "Faux : on multiplie les coefficients 1,10 × 1,25 : la hausse est de 37,5 %",
+      "Vrai : les pourcentages d’évolutions successives s’additionnent",
+      "Faux : la hausse totale est de 25 % − 10 % = 15 %",
+      "Vrai : il suffit de faire la moyenne de 10 % et 25 %"
+     ],
+     "reponse": 0,
+     "aide": "Compare 35 % de 12 € avec la vraie hausse de janvier à septembre.",
+     "explication": "35 % de 12 € donneraient 16,20 € alors que le prix réel est 16,50 €. Pour des évolutions successives, on **multiplie les coefficients**, on n’additionne jamais les pourcentages."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle baisse (en %, arrondie au dixième) ramènerait le prix de septembre au prix de janvier ?",
+     "reponse": 27.3,
+     "tolerance": 0.1,
+     "unite": "%",
+     "aide": "L’évolution réciproque a pour coefficient l’inverse de 1,375.",
+     "explication": "1 ÷ 1,375 ≈ 0,7273, donc une baisse d’environ **27,3 %** — et non de 37,5 %, car la baisse s’applique à un prix plus élevé."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a031ed0-b4ad-598f-8555-fd3e7ddc6ae1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Participation et sections au lycée",
+   "competence": "resoudre",
+   "situation": "Au conseil de la vie lycéenne, on présente deux informations : l’évolution du taux de participation à l’élection des délégués, puis la composition d’un lycée. Il faut distinguer les points de pourcentage des pourcentages, et enchaîner des proportions.",
+   "documents": [
+    {
+     "id": "particip",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Taux de participation aux élections de délégués",
+     "categories": [
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Participation (%)",
+       "valeurs": [
+        40,
+        50,
+        45
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Participation",
+      "unite": "%",
+      "min": 0,
+      "max": 55,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "source": "Chiffres imaginés pour l’exercice"
+    },
+    {
+     "id": "lycee",
+     "type": "tableau",
+     "titre": "Les élèves du lycée",
+     "colonnes": [
+      "Population",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Élèves du lycée",
+       "1 200 élèves"
+      ],
+      [
+       "Part des filles dans le lycée",
+       "45 %"
+      ],
+      [
+       "Part des filles qui choisissent la section scientifique",
+       "30 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "particip",
+     "enonce": "Touche la barre de l’année où la participation a été la plus faible.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "La participation la plus faible date de **2022** : 40 %."
+    },
+    {
+     "type": "nombre",
+     "document": "particip",
+     "enonce": "De 2022 à 2023, de combien de points de pourcentage la participation a-t-elle augmenté ?",
+     "reponse": 10,
+     "unite": "points",
+     "aide": "Fais simplement la différence de deux pourcentages.",
+     "explication": "50 % − 40 % = **10 points** de pourcentage."
+    },
+    {
+     "type": "nombre",
+     "document": "particip",
+     "enonce": "Toujours de 2022 à 2023, quel est le taux d’évolution de la participation, en pourcentage ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Divise l’augmentation par la valeur de départ, 40.",
+     "explication": "(50 − 40) ÷ 40 = 0,25 : une hausse de **25 %**. Dix points de plus ne font pas 10 %, car on compare à la valeur de départ."
+    },
+    {
+     "type": "nombre",
+     "document": "lycee",
+     "enonce": "Quel pourcentage de tous les élèves du lycée représentent les filles de la section scientifique ?",
+     "reponse": 13.5,
+     "unite": "%",
+     "aide": "Multiplie les deux proportions : 0,45 × 0,30.",
+     "explication": "La proportion d’une sous-population est le produit des proportions : 0,45 × 0,30 = 0,135, soit **13,5 %**."
+    },
+    {
+     "type": "nombre",
+     "document": "lycee",
+     "enonce": "Combien d’élèves cela représente-t-il dans le lycée ?",
+     "reponse": 162,
+     "unite": "élèves",
+     "aide": "Prends 13,5 % de 1 200 élèves.",
+     "explication": "1 200 × 0,135 = **162** élèves."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6f0ce64-ca85-5f51-9cd2-7fecd9d86b4b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les pompes de la classe de 2de",
+   "competence": "lire-tableau",
+   "situation": "Au cours d’EPS, le professeur fait compter à neuf élèves le nombre de pompes réalisées en une minute. Il veut résumer la série avec la moyenne, la médiane et l’étendue.",
+   "documents": [
+    {
+     "id": "pompes",
+     "type": "tableau",
+     "titre": "Pompes réalisées en une minute",
+     "colonnes": [
+      "Élève",
+      "Pompes"
+     ],
+     "lignes": [
+      [
+       "Camille",
+       15
+      ],
+      [
+       "Yanis",
+       22
+      ],
+      [
+       "Inès",
+       9
+      ],
+      [
+       "Noah",
+       17
+      ],
+      [
+       "Lina",
+       12
+      ],
+      [
+       "Sacha",
+       33
+      ],
+      [
+       "Eva",
+       15
+      ],
+      [
+       "Malo",
+       18
+      ],
+      [
+       "Zoé",
+       12
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pompes",
+     "enonce": "Touche la case du meilleur résultat de la classe.",
+     "reponse": [
+      "r5c1"
+     ],
+     "aide": "Cherche le plus grand nombre de la colonne Pompes.",
+     "explication": "Le meilleur résultat est **33 pompes** (Sacha). C’est la valeur maximale de la série."
+    },
+    {
+     "type": "nombre",
+     "document": "pompes",
+     "enonce": "Quelle est l’étendue de la série ?",
+     "reponse": 24,
+     "aide": "Étendue = plus grande valeur − plus petite valeur.",
+     "explication": "33 − 9 = **24**. L’étendue mesure l’écart entre les deux extrêmes."
+    },
+    {
+     "type": "nombre",
+     "document": "pompes",
+     "enonce": "Quelle est la moyenne de la série ?",
+     "reponse": 17,
+     "aide": "Additionne les neuf valeurs puis divise par 9.",
+     "explication": "La somme vaut 153 et 153 ÷ 9 = **17** pompes."
+    },
+    {
+     "type": "nombre",
+     "document": "pompes",
+     "enonce": "Quelle est la médiane de la série ?",
+     "reponse": 15,
+     "aide": "Range d’abord les valeurs dans l’ordre croissant, puis prends celle du milieu.",
+     "explication": "Rangée : 9 ; 12 ; 12 ; 15 ; 15 ; 17 ; 18 ; 22 ; 33. Il y a 9 valeurs : la médiane est la 5e, soit **15**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6f0ce64-ca85-5f51-9cd2-7fecd9d86b4b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Salaire moyen ou salaire médian dans une PME ?",
+   "competence": "argumenter",
+   "situation": "Dans une petite entreprise de huit personnes, la dirigeante annonce : « Le salaire moyen est de 2 625 € ! » Un délégué du personnel trouve que ce chiffre ne reflète pas ce que gagnent les employés. Voici les salaires nets mensuels.",
+   "documents": [
+    {
+     "id": "salaires",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Salaires nets mensuels dans l’entreprise",
+     "categories": [
+      "Ana",
+      "Ben",
+      "Clo",
+      "Dan",
+      "Eli",
+      "Fab",
+      "Gus",
+      "Dir."
+     ],
+     "series": [
+      {
+       "nom": "Salaire (€)",
+       "valeurs": [
+        1500,
+        1550,
+        1600,
+        1650,
+        1700,
+        1750,
+        1800,
+        9450
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Salaire net",
+      "unite": "€",
+      "min": 0,
+      "max": 10000,
+      "pas": 2000
+     },
+     "valeurs": true,
+     "source": "Salaires imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "salaires",
+     "enonce": "Touche la barre qui tire la moyenne vers le haut.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "Cherche la valeur très éloignée des autres.",
+     "explication": "Le salaire de la direction (**9 450 €**) est bien au-dessus des sept autres : il fait monter la moyenne."
+    },
+    {
+     "type": "nombre",
+     "document": "salaires",
+     "enonce": "Calcule la moyenne des huit salaires.",
+     "reponse": 2625,
+     "unite": "€",
+     "aide": "Additionne les huit salaires puis divise par 8.",
+     "explication": "La somme vaut 21 000 € et 21 000 ÷ 8 = **2 625 €**."
+    },
+    {
+     "type": "nombre",
+     "document": "salaires",
+     "enonce": "Quel est le salaire médian ?",
+     "reponse": 1675,
+     "unite": "€",
+     "aide": "Il y a 8 valeurs : fais la moyenne de la 4e et de la 5e.",
+     "explication": "Série rangée de 8 valeurs : la médiane est la moyenne des 4e et 5e, (1 650 + 1 700) ÷ 2 = **1 675 €**."
+    },
+    {
+     "type": "nombre",
+     "document": "salaires",
+     "enonce": "Quelle est la moyenne des salaires des sept employés, direction exclue ?",
+     "reponse": 1650,
+     "unite": "€",
+     "aide": "Additionne les sept premiers salaires : 11 550 €.",
+     "explication": "11 550 ÷ 7 = **1 650 €** : bien plus proche de la médiane que la moyenne de 2 625 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour décrire ce que gagne un employé « typique » de cette entreprise, quel indicateur est le plus adapté ?",
+     "options": [
+      "La médiane, qui ignore les valeurs extrêmes",
+      "La moyenne, car elle utilise toutes les valeurs",
+      "L’étendue, car elle mesure l’écart des salaires",
+      "Le maximum, car il montre ce qui est possible"
+     ],
+     "reponse": 0,
+     "aide": "Quel indicateur ne bouge pas quand un seul salaire devient énorme ?",
+     "explication": "Sept salariés sur huit gagnent moins que la moyenne. **La médiane** (1 675 €) résume mieux la situation car elle n’est pas sensible aux valeurs extrêmes."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6f0ce64-ca85-5f51-9cd2-7fecd9d86b4b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux classes, une même moyenne",
+   "competence": "argumenter",
+   "situation": "Le professeur de maths a corrigé le même devoir dans deux classes de 8 élèves de l’option. Il constate que les deux classes ont la même moyenne et la même médiane, et se demande si elles se ressemblent vraiment.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Les notes sur 20, rangées dans l’ordre croissant",
+     "colonnes": [
+      "Rang",
+      "Classe A",
+      "Classe B"
+     ],
+     "lignes": [
+      [
+       1,
+       9,
+       3
+      ],
+      [
+       2,
+       10,
+       5
+      ],
+      [
+       3,
+       11,
+       8
+      ],
+      [
+       4,
+       11,
+       10
+      ],
+      [
+       5,
+       12,
+       13
+      ],
+      [
+       6,
+       12,
+       15
+      ],
+      [
+       7,
+       13,
+       18
+      ],
+      [
+       8,
+       14,
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes imaginées pour l’exercice"
+    },
+    {
+     "id": "resume",
+     "type": "tableau",
+     "titre": "Résumé à cinq nombres (en cours de remplissage)",
+     "colonnes": [
+      "Classe",
+      "Min",
+      "Q1",
+      "Médiane",
+      "Q3",
+      "Max"
+     ],
+     "lignes": [
+      [
+       "A",
+       9,
+       10,
+       11.5,
+       12,
+       14
+      ],
+      [
+       "B",
+       3,
+       "?",
+       11.5,
+       "?",
+       20
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "notes",
+     "enonce": "Quelle est la moyenne des notes de la classe B ?",
+     "reponse": 11.5,
+     "aide": "La somme des notes de B vaut 92.",
+     "explication": "92 ÷ 8 = **11,5**. C’est aussi la moyenne de la classe A : les moyennes ne distinguent pas les deux classes."
+    },
+    {
+     "type": "nombre",
+     "document": "notes",
+     "enonce": "Quel est le premier quartile Q1 de la classe B ?",
+     "reponse": 5,
+     "aide": "Calcule 8 ÷ 4 = 2 : prends la valeur de rang 2.",
+     "explication": "n ÷ 4 = 8 ÷ 4 = 2, entier : Q1 est la **2e valeur**, soit 5."
+    },
+    {
+     "type": "nombre",
+     "document": "notes",
+     "enonce": "Quel est le troisième quartile Q3 de la classe B ?",
+     "reponse": 15,
+     "aide": "Calcule 3 × 8 ÷ 4 = 6 : prends la valeur de rang 6.",
+     "explication": "3n ÷ 4 = 6 : Q3 est la **6e valeur**, soit 15."
+    },
+    {
+     "type": "nombre",
+     "document": "resume",
+     "enonce": "Quel est l’écart interquartile de la classe B ?",
+     "reponse": 10,
+     "aide": "Écart interquartile = Q3 − Q1. Compare avec la classe A : 12 − 10 = 2.",
+     "explication": "Q3 − Q1 = 15 − 5 = **10**, contre 2 pour la classe A."
+    },
+    {
+     "type": "choix",
+     "document": "resume",
+     "enonce": "Que peut-on dire des deux classes ?",
+     "options": [
+      "Même moyenne et même médiane, mais la classe B est bien plus dispersée",
+      "Les deux classes ont exactement le même niveau et la même dispersion",
+      "La classe A est plus dispersée, car sa médiane est plus faible",
+      "La classe B a de meilleurs résultats, car son maximum est plus grand"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’étendue et l’écart interquartile des deux classes.",
+     "explication": "Les moyennes et médianes sont égales, mais l’écart interquartile (10 contre 2) et l’étendue (17 contre 5) montrent que **la classe B est beaucoup plus dispersée**. Deux séries de même moyenne peuvent être très différentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "32e56704-95df-5107-b4a8-0293761dfcbc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sac de billes de Nina",
+   "competence": "lire-tableau",
+   "situation": "Nina range ses billes dans un sac opaque. Elle en tire une au hasard, toutes les billes ayant la même chance d’être choisies. Le tableau donne le contenu du sac.",
+   "documents": [
+    {
+     "id": "sac",
+     "type": "tableau",
+     "titre": "Contenu du sac",
+     "colonnes": [
+      "Couleur",
+      "Rouge",
+      "Bleue",
+      "Verte",
+      "Jaune",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Nombre de billes",
+       8,
+       5,
+       4,
+       3,
+       20
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sac",
+     "enonce": "Touche le nombre total d’issues possibles.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Cherche le nombre de billes du sac en tout.",
+     "explication": "Le sac contient **20 billes** : l’univers a 20 issues équiprobables."
+    },
+    {
+     "type": "nombre",
+     "document": "sac",
+     "enonce": "Quelle est la probabilité de tirer une bille rouge ?",
+     "reponse": 0.4,
+     "aide": "Nombre d’issues favorables ÷ nombre d’issues possibles.",
+     "explication": "P(rouge) = 8 ÷ 20 = **0,4**."
+    },
+    {
+     "type": "nombre",
+     "document": "sac",
+     "enonce": "Quelle est la probabilité de ne pas tirer une bille bleue ?",
+     "reponse": 0.75,
+     "aide": "Passe par l’événement contraire : 1 − P(bleue).",
+     "explication": "P(bleue) = 5 ÷ 20 = 0,25, donc P(non bleue) = 1 − 0,25 = **0,75**."
+    },
+    {
+     "type": "nombre",
+     "document": "sac",
+     "enonce": "Quelle est la probabilité de tirer une bille rouge ou une bille verte ?",
+     "reponse": 0.6,
+     "aide": "Rouge et verte sont incompatibles : additionne les effectifs.",
+     "explication": "(8 + 4) ÷ 20 = 12 ÷ 20 = **0,6**. Une bille ne peut pas être rouge et verte à la fois : on additionne."
+    }
+   ]
+  },
+  {
+   "chapitre": "32e56704-95df-5107-b4a8-0293761dfcbc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le jeu des deux dés de la fête du village",
+   "competence": "raisonner",
+   "situation": "À la fête du village, on lance deux dés équilibrés à six faces et on additionne les deux résultats. Pour étudier le jeu, Samuel a dressé le tableau à double entrée de toutes les sommes possibles.",
+   "documents": [
+    {
+     "id": "des",
+     "type": "tableau",
+     "titre": "Somme des deux dés",
+     "colonnes": [
+      "Dé 1 \\ Dé 2",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "1",
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       "2",
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      [
+       "3",
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ],
+      [
+       "4",
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      [
+       "5",
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      [
+       "6",
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "des",
+     "multiple": true,
+     "enonce": "Touche toutes les cases où la somme vaut 9.",
+     "reponse": [
+      "r2c6",
+      "r3c5",
+      "r4c4",
+      "r5c3"
+     ],
+     "aide": "Cherche les couples dont la somme est 9 : (3 ; 6), (4 ; 5)…",
+     "explication": "La somme vaut 9 pour (3 ; 6), (4 ; 5), (5 ; 4) et (6 ; 3) : **4 cases** sur 36."
+    },
+    {
+     "type": "nombre",
+     "document": "des",
+     "enonce": "Quelle est la probabilité d’obtenir une somme égale à 9 ? (Écris une fraction ou une valeur approchée à 0,01 près.)",
+     "reponse": 0.1111111111111111,
+     "tolerance": 0.006,
+     "aide": "Les 36 cases du tableau sont équiprobables.",
+     "explication": "P(somme = 9) = 4 ÷ 36 = **1/9** ≈ 0,11."
+    },
+    {
+     "type": "nombre",
+     "document": "des",
+     "enonce": "Quelle est la probabilité d’obtenir une somme supérieure ou égale à 10 ? (Fraction ou valeur approchée à 0,01 près.)",
+     "reponse": 0.16666666666666666,
+     "tolerance": 0.006,
+     "aide": "Compte les cases où la somme vaut 10, 11 ou 12, puis divise par 36.",
+     "explication": "Il y a 3 cases pour 10, 2 pour 11 et 1 pour 12, soit 6 cases : 6 ÷ 36 = **1/6** ≈ 0,17."
+    },
+    {
+     "type": "nombre",
+     "document": "des",
+     "enonce": "Quelle somme est la plus probable ?",
+     "reponse": 7,
+     "aide": "Cherche la valeur qui revient le plus souvent dans le tableau (elle forme une diagonale).",
+     "explication": "La somme **7** apparaît 6 fois sur 36 : c’est la plus fréquente, devant 6 et 8 qui apparaissent 5 fois."
+    },
+    {
+     "type": "nombre",
+     "document": "des",
+     "enonce": "Quelle est la probabilité de ne pas obtenir 7 ? (Fraction ou valeur approchée à 0,01 près.)",
+     "reponse": 0.8333333333333334,
+     "tolerance": 0.006,
+     "aide": "Utilise l’événement contraire : 1 − P(somme = 7).",
+     "explication": "P(somme = 7) = 6 ÷ 36 = 1/6, donc P(somme ≠ 7) = 1 − 1/6 = **5/6** ≈ 0,83."
+    }
+   ]
+  },
+  {
+   "chapitre": "32e56704-95df-5107-b4a8-0293761dfcbc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux boules tirées sans remise",
+   "competence": "modeliser",
+   "situation": "Une urne contient 3 boules rouges (R) et 2 boules bleues (B), indiscernables au toucher. Léa tire une première boule, la garde, puis tire une seconde boule. L’arbre pondéré résume l’expérience.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre pondéré du double tirage",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 24,
+       "cy": 130,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        24,
+        130
+       ],
+       "a": [
+        116,
+        73
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        24,
+        130
+       ],
+       "a": [
+        116,
+        187
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 65,
+       "r": 16,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "R"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 195,
+       "r": 16,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "B"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        146,
+        63
+       ],
+       "a": [
+        240,
+        30
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        146,
+        67
+       ],
+       "a": [
+        240,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        146,
+        193
+       ],
+       "a": [
+        240,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        146,
+        197
+       ],
+       "a": [
+        240,
+        230
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 58,
+       "y": 92,
+       "texte": "3/5",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 58,
+       "y": 176,
+       "texte": "2/5",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 36,
+       "texte": "1/2",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 108,
+       "texte": "1/2",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 162,
+       "texte": "3/4",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 238,
+       "texte": "1/4",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 16,
+       "l": 46,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "RR",
+       "id": "fRR",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 86,
+       "l": 46,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "RB",
+       "id": "fRB",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 146,
+       "l": 46,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "BR",
+       "id": "fBR",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 216,
+       "l": 46,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "BB",
+       "id": "fBB",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "evts",
+     "type": "tableau",
+     "titre": "Deux événements à étudier",
+     "colonnes": [
+      "Événement",
+      "Se réalise quand…"
+     ],
+     "lignes": [
+      [
+       "A",
+       "la 1re boule est rouge"
+      ],
+      [
+       "B",
+       "la 2e boule est rouge"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche l’issue « la 1re boule est bleue, puis la 2e est rouge ».",
+     "reponse": [
+      "fBR"
+     ],
+     "aide": "Suis la branche B depuis la racine, puis la branche R.",
+     "explication": "On suit la branche B puis la branche R : c’est l’issue **BR**, de probabilité 2/5 × 3/4 = 0,3."
+    },
+    {
+     "type": "nombre",
+     "document": "arbre",
+     "enonce": "Quelle est la probabilité de l’événement B : « la 2e boule est rouge » ?",
+     "reponse": 0.6,
+     "aide": "Additionne les chemins qui finissent par R : RR et BR.",
+     "explication": "On multiplie le long de chaque chemin puis on additionne : P(RR) + P(BR) = 0,3 + 0,3 = **0,6**."
+    },
+    {
+     "type": "nombre",
+     "document": "arbre",
+     "enonce": "Quelle est la probabilité de A ∩ B : « les deux boules sont rouges » ?",
+     "reponse": 0.3,
+     "aide": "Un seul chemin : multiplie 3/5 par 1/2.",
+     "explication": "P(A ∩ B) = P(RR) = 3/5 × 1/2 = **0,3**."
+    },
+    {
+     "type": "nombre",
+     "document": "evts",
+     "enonce": "Quelle est la probabilité de A ∪ B : « au moins une des deux boules est rouge » ?",
+     "reponse": 0.9,
+     "aide": "Utilise P(A ∪ B) = P(A) + P(B) − P(A ∩ B) avec P(A) = 3/5.",
+     "explication": "P(A ∪ B) = 0,6 + 0,6 − 0,3 = **0,9**. On retranche l’intersection pour ne pas la compter deux fois."
+    },
+    {
+     "type": "nombre",
+     "document": "arbre",
+     "enonce": "Quelle est la probabilité qu’aucune des deux boules ne soit rouge ?",
+     "reponse": 0.1,
+     "aide": "Un seul chemin convient : B puis B.",
+     "explication": "P(BB) = 2/5 × 1/4 = **0,1**. C’est aussi 1 − 0,9 : l’événement contraire de A ∪ B."
+    }
+   ]
+  },
+  {
+   "chapitre": "9a7eedff-74a9-5095-87f1-a7ecb7ce6d4b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pièce de Mina est-elle truquée ?",
+   "competence": "raisonner",
+   "situation": "Mina lance 100 fois une pièce de monnaie et obtient 56 fois pile. Si la pièce est équilibrée, la probabilité d’obtenir pile est p = 0,5. Mina veut savoir si son résultat est étonnant.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Le relevé de Mina",
+     "colonnes": [
+      "Nombre de lancers",
+      "Nombre de piles",
+      "Fréquence f"
+     ],
+     "lignes": [
+      [
+       100,
+       56,
+       "?"
+      ]
+     ]
+    },
+    {
+     "id": "axe",
+     "type": "droite",
+     "titre": "Fréquences possibles",
+     "min": 0.3,
+     "max": 0.7,
+     "pas": 0.1,
+     "division": 10,
+     "points": [
+      {
+       "id": "f",
+       "valeur": 0.56,
+       "nom": "f"
+      }
+     ],
+     "graduationsCliquables": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "releve",
+     "enonce": "Quelle est la fréquence observée f de pile ?",
+     "reponse": 0.56,
+     "aide": "Divise le nombre de piles par le nombre de lancers.",
+     "explication": "f = 56 ÷ 100 = **0,56**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour n = 100, quelle est la demi-largeur 1/√n de l’intervalle de fluctuation ?",
+     "reponse": 0.1,
+     "aide": "Calcule √100, puis l’inverse.",
+     "explication": "√100 = 10, donc 1/√100 = **0,1**."
+    },
+    {
+     "type": "zone",
+     "document": "axe",
+     "multiple": true,
+     "enonce": "Touche les deux bornes de l’intervalle de fluctuation [p − 1/√n ; p + 1/√n] pour p = 0,5.",
+     "reponse": [
+      "v0.4",
+      "v0.6"
+     ],
+     "aide": "Les bornes sont à 0,1 de chaque côté de p = 0,5.",
+     "explication": "L’intervalle est [0,5 − 0,1 ; 0,5 + 0,1] = **[0,4 ; 0,6]**. Les bornes sont les graduations 0,4 et 0,6."
+    },
+    {
+     "type": "choix",
+     "document": "axe",
+     "enonce": "La fréquence observée 0,56 est dans l’intervalle. Que conclut-on ?",
+     "options": [
+      "On ne rejette pas l’hypothèse d’une pièce équilibrée",
+      "On prouve que la pièce est équilibrée",
+      "On prouve que la pièce est truquée",
+      "On rejette l’hypothèse d’une pièce équilibrée"
+     ],
+     "reponse": 0,
+     "aide": "Une fréquence dans l’intervalle ne contredit pas l’hypothèse, elle ne la démontre pas non plus.",
+     "explication": "Comme 0,56 appartient à [0,4 ; 0,6], on **ne rejette pas** l’hypothèse — ce qui ne démontre pas que la pièce est équilibrée."
+    }
+   ]
+  },
+  {
+   "chapitre": "9a7eedff-74a9-5095-87f1-a7ecb7ce6d4b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les cartes rares des boîtes de céréales",
+   "competence": "raisonner",
+   "situation": "Un fabricant affirme que 25 % des boîtes de céréales contiennent une carte rare (p = 0,25). Trois associations de consommateurs vérifient : chacune ouvre un certain nombre de boîtes et compte les cartes rares.",
+   "documents": [
+    {
+     "id": "assos",
+     "type": "tableau",
+     "titre": "Les relevés des trois associations",
+     "colonnes": [
+      "Association",
+      "Boîtes ouvertes",
+      "Cartes rares",
+      "Fréquence f"
+     ],
+     "lignes": [
+      [
+       "A",
+       400,
+       130,
+       "?"
+      ],
+      [
+       "B",
+       100,
+       31,
+       0.31
+      ],
+      [
+       "C",
+       1600,
+       450,
+       0.28125
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "assos",
+     "enonce": "Quelle est la fréquence observée de cartes rares pour l’association A ?",
+     "reponse": 0.325,
+     "aide": "Divise 130 par 400.",
+     "explication": "f = 130 ÷ 400 = **0,325**."
+    },
+    {
+     "type": "nombre",
+     "document": "assos",
+     "enonce": "Quelle est la demi-largeur 1/√n de l’intervalle de fluctuation pour l’association C ?",
+     "reponse": 0.025,
+     "aide": "n = 1 600 : √1 600 = 40.",
+     "explication": "1/√1 600 = 1/40 = **0,025**. Avec un grand échantillon, l’intervalle est étroit."
+    },
+    {
+     "type": "zone",
+     "document": "assos",
+     "multiple": true,
+     "enonce": "Touche les associations dont la fréquence observée sort de l’intervalle de fluctuation au seuil de 95 %.",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "aide": "Calcule [0,25 − 1/√n ; 0,25 + 1/√n] pour chaque association puis compare à f.",
+     "explication": "Pour A : [0,20 ; 0,30] et f = 0,325 est dehors. Pour B : [0,15 ; 0,35] et f = 0,31 est dedans. Pour C : [0,225 ; 0,275] et f = 0,28125 est dehors. Ce sont **A et C**."
+    },
+    {
+     "type": "choix",
+     "document": "assos",
+     "enonce": "Que peut conclure l’association B, qui a trouvé 31 cartes rares sur 100 boîtes ?",
+     "options": [
+      "Elle ne rejette pas l’affirmation du fabricant",
+      "Elle rejette l’affirmation du fabricant",
+      "Elle prouve que l’affirmation du fabricant est vraie",
+      "Elle prouve que le fabricant a menti"
+     ],
+     "reponse": 0,
+     "aide": "Compare f = 0,31 à l’intervalle [0,15 ; 0,35].",
+     "explication": "Comme f est dans l’intervalle de fluctuation, **B ne rejette pas** l’affirmation. Cela ne la démontre pas : un petit échantillon laisse beaucoup de marge."
+    }
+   ]
+  },
+  {
+   "chapitre": "9a7eedff-74a9-5095-87f1-a7ecb7ce6d4b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle taille pour un sondage fiable ?",
+   "competence": "modeliser",
+   "situation": "Une radio veut estimer la proportion p de lycéens qui utilisent leur téléphone en cours. Elle se demande combien de personnes interroger. Un technicien a tracé la demi-largeur 1/√n de l’intervalle de fluctuation selon la taille n, et écrit un petit programme Python.",
+   "documents": [
+    {
+     "id": "largeur",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Demi-largeur 1/√n selon la taille n de l’échantillon",
+     "categories": [
+      "100",
+      "400",
+      "1 600",
+      "6 400"
+     ],
+     "series": [
+      {
+       "nom": "Demi-largeur 1/√n",
+       "valeurs": [
+        0.1,
+        0.05,
+        0.025,
+        0.0125
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "min": 0,
+      "max": 0.1,
+      "pas": 0.025
+     },
+     "axeX": {
+      "titre": "Taille n"
+     }
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme du technicien",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "from math import sqrt",
+      "n = 2500",
+      "print(1 / sqrt(n))"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "largeur",
+     "enonce": "Touche la barre dont la hauteur est la moitié de celle de la barre n = 400.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Il faut multiplier n par 4 pour diviser la demi-largeur par 2.",
+     "explication": "La barre n = 1 600 vaut 0,025, soit la moitié de 0,05 : multiplier la taille par **4** divise l’incertitude par 2."
+    },
+    {
+     "type": "nombre",
+     "document": "prog",
+     "enonce": "Qu’affiche ce programme ?",
+     "reponse": 0.02,
+     "aide": "Calcule 1 ÷ √2 500, avec √2 500 = 50.",
+     "explication": "√2 500 = 50 et 1 ÷ 50 = **0,02** : c’est la demi-largeur pour n = 2 500."
+    },
+    {
+     "type": "nombre",
+     "document": "prog",
+     "enonce": "Pour p = 0,5 et n = 2 500, quelle est la borne supérieure de l’intervalle de fluctuation ?",
+     "reponse": 0.52,
+     "aide": "Borne supérieure = p + 1/√n, et 1/√n est la valeur affichée par le programme.",
+     "explication": "0,5 + 0,02 = **0,52**. L’intervalle est [0,48 ; 0,52]."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle taille minimale n faut-il pour que la demi-largeur 1/√n soit inférieure ou égale à 0,01 ?",
+     "reponse": 10000,
+     "aide": "1/√n ≤ 0,01 revient à √n ≥ 100.",
+     "explication": "√n ≥ 100 donne n ≥ 100² = **10 000** personnes : pour passer de 0,1 à 0,01, il faut multiplier n par 100."
+    },
+    {
+     "type": "choix",
+     "enonce": "La radio sonde 10 000 de ses auditeurs, recrutés sur son compte de réseau social, pour connaître l’opinion de tous les lycéens. Est-ce fiable ?",
+     "options": [
+      "Non : échantillon biaisé, sa taille n’y change rien",
+      "Oui : 10 000 personnes suffisent toujours",
+      "Oui : la demi-largeur n’est que de 0,01",
+      "Non : il faudrait au moins 100 000 personnes"
+     ],
+     "reponse": 0,
+     "aide": "Les auditeurs de la radio ressemblent-ils à l’ensemble des lycéens ?",
+     "explication": "Un mauvais recrutement donne un échantillon **biaisé**, et un biais ne se corrige pas par la taille. L’intervalle de fluctuation suppose un tirage aléatoire dans toute la population."
+    }
+   ]
+  }
+ ]
+}

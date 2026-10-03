@@ -1,0 +1,2096 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "24bfbdc9-9d9d-5226-a43a-51b047a75d88",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du plomb à l’or",
+   "competence": "analyser-document",
+   "situation": "Baudelaire se compare à un alchimiste. Suis la transformation sur la chaîne, puis retrouve sa formule célèbre.",
+   "documents": [
+    {
+     "id": "alch",
+     "type": "chaine",
+     "titre": "Ce que fait le poète",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "boue",
+       "texte": "La boue : ce qui est laid, banal, malade"
+      },
+      {
+       "id": "forme",
+       "texte": "Le travail du langage"
+      },
+      {
+       "id": "or",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "boue",
+       "a": "forme",
+       "texte": "transformée par"
+      },
+      {
+       "de": "forme",
+       "a": "or",
+       "texte": "devient"
+      }
+     ]
+    },
+    {
+     "id": "alchi",
+     "type": "tableau",
+     "titre": "Deux métiers de transformation",
+     "colonnes": [
+      "L’alchimiste",
+      "Le poète"
+     ],
+     "lignes": [
+      [
+       "Transforme le plomb en or",
+       "Transforme la matière du monde"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "L’or : un poème beau",
+      "Un second plomb, plus lourd",
+      "Le silence du poète",
+      "Une description exacte de la boue"
+     ],
+     "reponse": 0,
+     "aide": "Le plomb devient or ; la boue devient quoi ?",
+     "explication": "La boue, transformée par le langage, devient **l’or** : un beau poème."
+    },
+    {
+     "type": "zone",
+     "document": "alch",
+     "multiple": false,
+     "reponse": [
+      "forme"
+     ],
+     "enonce": "Touche l’étape où se crée la beauté.",
+     "aide": "Ce n’est pas dans l’objet, mais dans ce que le poète en fait.",
+     "explication": "La beauté est dans **le travail du langage**, non dans l’objet choisi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule de Baudelaire.",
+     "texte": "« Tu m’as donné ta ___ et j’en ai fait de l’___. »",
+     "reponses": [
+      [
+       "boue"
+      ],
+      [
+       "or"
+      ]
+     ],
+     "banque": [
+      "boue",
+      "or",
+      "plomb",
+      "fange",
+      "argent"
+     ],
+     "aide": "La formule oppose ce qui est sale à ce qui brille.",
+     "explication": "La formule est : « Tu m’as donné ta **boue** et j’en ai fait de l’**or**. »"
+    }
+   ]
+  },
+  {
+   "chapitre": "24bfbdc9-9d9d-5226-a43a-51b047a75d88",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une charogne en deux temps",
+   "competence": "analyser-texte",
+   "situation": "Le poème « Une Charogne » est le poème matriciel de l’alchimie. Lis son résumé et suis ses étapes.",
+   "documents": [
+    {
+     "id": "deux",
+     "type": "tableau",
+     "titre": "Le poème en deux temps",
+     "colonnes": [
+      "Étape",
+      "Ce qu’elle fait"
+     ],
+     "lignes": [
+      [
+       "La découverte, en promenade",
+       "?"
+      ],
+      [
+       "La chute",
+       "Une promesse d’immortalité à la femme aimée"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le poème raconté",
+     "blocs": [
+      "Au cours d’une promenade, le poète et celle qu’il aime tombent sur un [[c|cadavre]] d’animal en [[c|décomposition]]. La description est précise, presque insoutenable.",
+      "Puis tout bascule : cette pourriture attend aussi le corps de la femme aimée. Mais le poète affirme qu’il aura gardé, dans ses vers, la « forme et l’essence divine » de ses amours décomposés."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La description précise d’un cadavre en décomposition",
+      "Un éloge de la nature au printemps",
+      "Une promesse d’immortalité à la femme aimée",
+      "Une prière adressée à Dieu pour la défunte"
+     ],
+     "reponse": 0,
+     "aide": "La découverte, c’est ce que les promeneurs voient sur leur chemin.",
+     "explication": "La découverte est la **description précise d’un cadavre**."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui nomment ce que les promeneurs découvrent.",
+     "aide": "Cherche le nom du corps et son état.",
+     "explication": "Un **cadavre** en **décomposition** : le sujet le plus repoussant."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois temps du poème.",
+     "items": [
+      "Un cadavre est décrit avec précision",
+      "Le poème se retourne vers la femme aimée",
+      "Le poète promet l’immortalité par ses vers"
+     ],
+     "aide": "On part de la découverte et on finit par la promesse.",
+     "explication": "Le poème **décrit**, puis **se retourne vers la femme**, puis **promet l’immortalité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que démontre ce poème ?",
+     "options": [
+      "Que le sujet le plus repoussant peut donner un très beau poème",
+      "Que la poésie doit toujours éviter les sujets laids",
+      "Que la nature est toujours consolante pour l’homme",
+      "Que la beauté vient toujours de l’objet décrit"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la formule « la boue et l’or ».",
+     "explication": "Le sujet le plus repoussant produit l’un des plus beaux poèmes : la **démonstration** de l’alchimie."
+    }
+   ]
+  },
+  {
+   "chapitre": "24bfbdc9-9d9d-5226-a43a-51b047a75d88",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une passante dans la boue de la ville",
+   "competence": "argumenter",
+   "situation": "Dans « Tableaux parisiens », la boue est urbaine. Observe un passage à la manière de Baudelaire, puis relie-le aux grandes notions du parcours.",
+   "documents": [
+    {
+     "id": "flan",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un flâneur sur le boulevard",
+     "blocs": [
+      "Il a plu. Le boulevard est jonché de [[b|gravats]] : on perce une rue neuve. Dans la [[b|foule]], une femme en deuil passe, soulevant d’une main le feston de sa jupe. Un regard, et elle est [[p|déjà]] loin. Il pensera à elle toute la nuit."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Baudelaire"
+    },
+    {
+     "id": "post",
+     "type": "tableau",
+     "titre": "Le recueil ne choisit pas",
+     "colonnes": [
+      "D’un côté",
+      "De l’autre"
+     ],
+     "lignes": [
+      [
+       "Spleen",
+       "Idéal"
+      ],
+      [
+       "Boue",
+       "?"
+      ],
+      [
+       "Damnation",
+       "Élévation"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flan",
+     "multiple": true,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche les deux mots qui disent la boue urbaine.",
+     "aide": "Cherche des débris et un grand nombre de gens.",
+     "explication": "Les **gravats** et la **foule** : la boue de la ville moderne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Or",
+      "Plomb",
+      "Ennui",
+      "Silence"
+     ],
+     "reponse": 0,
+     "aide": "La formule de Baudelaire oppose la boue à ce qu’il en fait.",
+     "explication": "À la **boue** répond **l’or**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce qu’elle dit.",
+     "paires": [
+      [
+       "À une passante",
+       "Une inconnue croisée une seconde, aimée, perdue à jamais"
+      ],
+      [
+       "Le flâneur",
+       "Celui qui trouve la beauté dans le passage"
+      ],
+      [
+       "Les deux postulations",
+       "L’une vers Dieu, l’autre vers Satan"
+      ],
+      [
+       "Une Charogne",
+       "Le poème matriciel du sujet repoussant"
+      ]
+     ],
+     "aide": "Pense à une rencontre, un regard, une tension, un cadavre.",
+     "explication": "La **passante** est perdue à jamais, le **flâneur** voit la beauté dans le passage, les **postulations** vont à Dieu et à Satan, la **charogne** démontre l’alchimie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : la boue (matière) ou l’or (travail de la forme) ?",
+     "categories": [
+      "La boue",
+      "L’or"
+     ],
+     "items": [
+      [
+       "La charogne",
+       0
+      ],
+      [
+       "La ville sale",
+       0
+      ],
+      [
+       "Les vieillards et les mendiantes",
+       0
+      ],
+      [
+       "Le sonnet ciselé",
+       1
+      ],
+      [
+       "Les images qui transfigurent",
+       1
+      ],
+      [
+       "Le rythme des vers",
+       1
+      ]
+     ],
+     "aide": "La matière est le sujet, l’or est l’art.",
+     "explication": "La **charogne**, la **ville sale** et les **mendiantes** sont la boue ; le **sonnet**, les **images** et le **rythme** font l’or."
+    },
+    {
+     "type": "choix",
+     "enonce": "La modernité est-elle une esthétique de la laideur ?",
+     "options": [
+      "Non : une esthétique de la transformation",
+      "Oui : elle préfère le laid au beau",
+      "Oui : elle refuse toute forme",
+      "Non : elle cherche seulement des sujets nobles"
+     ],
+     "reponse": 0,
+     "aide": "Retiens la formule du cours.",
+     "explication": "La modernité est **une esthétique de la transformation**, pas de la laideur."
+    }
+   ]
+  },
+  {
+   "chapitre": "08373edb-806d-59f0-8190-945154a17b68",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil sans ponctuation",
+   "competence": "analyser-texte",
+   "situation": "Tu étudies Apollinaire. Lis les premiers vers du « Pont Mirabeau », puis place le recueil dans sa vie.",
+   "documents": [
+    {
+     "id": "pont",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le Pont Mirabeau",
+     "blocs": [
+      "Sous le pont Mirabeau coule la [[s|Seine]]",
+      "Et nos amours",
+      "Faut-il qu’il m’en souvienne",
+      "La joie venait toujours après la peine"
+     ],
+     "source": "Guillaume Apollinaire, *Alcools* (1913), « Le Pont Mirabeau »"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Apollinaire",
+     "debut": 1880,
+     "fin": 1920,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1880,
+       "nom": "Naissance"
+      },
+      {
+       "id": "alc",
+       "date": 1913,
+       "nom": "Alcools"
+      },
+      {
+       "id": "mort",
+       "date": 1918,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pont",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le nom du fleuve.",
+     "aide": "Un fleuve de Paris, dans le premier vers.",
+     "explication": "Le poème évoque la **Seine**, sous le pont Mirabeau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de signes de ponctuation compte ce quatrain ?",
+     "reponse": 0,
+     "aide": "Apollinaire a supprimé la ponctuation sur les épreuves.",
+     "explication": "Aucun : **0**. Pour Apollinaire, « le rythme même et la coupe des vers » tiennent lieu de ponctuation."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "alc"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication du recueil.",
+     "aide": "Cinq ans avant la mort du poète.",
+     "explication": "*Alcools* paraît en **1913**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication d’Alcools de la mort d’Apollinaire ?",
+     "reponse": 5,
+     "aide": "Soustrais 1913 à 1918.",
+     "explication": "1918 − 1913 = **5 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "08373edb-806d-59f0-8190-945154a17b68",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Zone, d’un bout à l’autre",
+   "competence": "analyser-texte",
+   "situation": "Le recueil s’ouvre par « Zone ». Retrouve sa place, son premier et son dernier vers, et la façon dont le poète s’y nomme.",
+   "documents": [
+    {
+     "id": "zone",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Extraits de « Zone »",
+     "blocs": [
+      "À la fin tu es las de ce monde ancien",
+      "Bergère ô [[b|tour]] Eiffel le troupeau des ponts bêle ce matin",
+      "",
+      "Soleil cou coupé"
+     ],
+     "source": "Guillaume Apollinaire, *Alcools*, « Zone » : premier vers, un vers, dernier vers"
+    },
+    {
+     "id": "ordre",
+     "type": "tableau",
+     "titre": "Le recueil",
+     "colonnes": [
+      "Position",
+      "Le poème"
+     ],
+     "lignes": [
+      [
+       "Ouverture",
+       "?"
+      ],
+      [
+       "Entre les deux",
+       "Le Pont Mirabeau, La Chanson du mal-aimé, Marie…"
+      ],
+      [
+       "Clôture",
+       "Vendémiaire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel poème faut-il écrire en face de « Ouverture » ?",
+     "options": [
+      "Zone",
+      "Marie",
+      "Le Pont Mirabeau",
+      "La Loreley"
+     ],
+     "reponse": 0,
+     "aide": "Le recueil s’ouvre par un poème écrit en dernier.",
+     "explication": "Le recueil s’ouvre sur **Zone**, écrit en dernier."
+    },
+    {
+     "type": "zone",
+     "document": "zone",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot du deuxième vers qui désigne un monument parisien.",
+     "aide": "Un monument en fer qui devient une bergère.",
+     "explication": "La **tour** Eiffel est la bergère dont les ponts sont le troupeau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le premier vers, à qui le poète dit-il « tu » ?",
+     "options": [
+      "À lui-même",
+      "À sa mère",
+      "À Paris",
+      "Au lecteur"
+     ],
+     "reponse": 0,
+     "aide": "Le « je » devient « tu ».",
+     "explication": "Le poète **se parle à lui-même** : le « je » devient « tu »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le premier et le dernier vers.",
+     "texte": "Le premier vers : « À la fin tu es ___ de ce monde ancien » ; le dernier : « Soleil cou ___ ».",
+     "reponses": [
+      [
+       "las"
+      ],
+      [
+       "coupé"
+      ]
+     ],
+     "banque": [
+      "las",
+      "coupé",
+      "fatigué",
+      "brisé"
+     ],
+     "aide": "Relis les extraits.",
+     "explication": "Premier vers : « tu es **las** » ; dernier vers : « Soleil cou **coupé** »."
+    }
+   ]
+  },
+  {
+   "chapitre": "08373edb-806d-59f0-8190-945154a17b68",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La modernité n’est pas la table rase",
+   "competence": "argumenter",
+   "situation": "Le parcours pose une question : « modernité poétique ? ». Départage deux élèves et relie les éléments du recueil.",
+   "documents": [
+    {
+     "id": "alliage",
+     "type": "tableau",
+     "titre": "Modernité et tradition",
+     "colonnes": [
+      "Ce qu’il fait entrer",
+      "Ce qu’il conserve"
+     ],
+     "lignes": [
+      [
+       "L’aviation, la publicité, la ville industrielle",
+       "?"
+      ],
+      [
+       "Le cinéma naissant",
+       "Des vers d’une régularité parfaite"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yann",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Apollinaire est moderne parce qu’il rejette toute tradition."
+      },
+      {
+       "qui": "Yann",
+       "texte": "Faux : « Le Pont Mirabeau » est une chanson, aux vers d’une [[r|régularité]] parfaite. La modernité est un alliage."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Des chansons, des complaintes, des mythes rhénans",
+      "Des slogans de publicité, des affiches",
+      "Des films muets dans les salles de cinéma",
+      "Des machines volantes, des avions et des hangars"
+     ],
+     "reponse": 0,
+     "aide": "C’est ce qui vient du passé, en face de ce qui est neuf.",
+     "explication": "Il conserve **chansons**, **complaintes** et **mythes rhénans**."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui prouve que « Le Pont Mirabeau » n’est pas une rupture totale.",
+     "aide": "Yann parle de la forme des vers.",
+     "explication": "La **régularité** des vers prouve que le poème garde la tradition."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison ?",
+     "options": [
+      "Yann : la modernité d’Apollinaire est un alliage",
+      "Camille : Apollinaire rejette toute tradition",
+      "Camille : Apollinaire écrit seulement en vers libres",
+      "Yann : Apollinaire n’est pas moderne du tout"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le tableau : modernité et tradition coexistent.",
+     "explication": "**Yann** : la modernité est un **alliage**, pas une table rase."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque sens du titre à ce qu’il suggère.",
+     "paires": [
+      [
+       "Ce qui enivre",
+       "L’ivresse, joie ou douleur d’amour"
+      ],
+      [
+       "Ce qui brûle",
+       "La passion, la souffrance"
+      ],
+      [
+       "Ce qui distille",
+       "Des vies et des villes distillées en poèmes courts"
+      ]
+     ],
+     "aide": "Pense au sens propre des alcools.",
+     "explication": "*Alcools* : ce qui **enivre**, ce qui **brûle**, ce qui **distille** des vies et des villes."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3cadf7e-9dbc-54c1-a2bc-9aafdc09226e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois ruptures fondatrices",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur la modernité poétique. Place trois ruptures sur la frise et dans le tableau.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois jalons",
+     "debut": 1850,
+     "fin": 1920,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "bau",
+       "date": 1857,
+       "nom": "Les Fleurs du mal"
+      },
+      {
+       "id": "rim",
+       "date": 1871,
+       "nom": "Lettre du Voyant"
+      },
+      {
+       "id": "apo",
+       "date": 1913,
+       "nom": "Alcools"
+      }
+     ]
+    },
+    {
+     "id": "rup",
+     "type": "tableau",
+     "titre": "Trois ruptures",
+     "colonnes": [
+      "Auteur",
+      "Ce qu’il change",
+      "Sa formule"
+     ],
+     "lignes": [
+      [
+       "Baudelaire",
+       "La ville, la laideur, le transitoire",
+       "Le beau sujet cesse d’exister"
+      ],
+      [
+       "Rimbaud",
+       "Le poète doit se faire « voyant »",
+       "Le dérèglement de tous les sens"
+      ],
+      [
+       "Mallarmé",
+       "?",
+       "« Ce n’est point avec des idées que l’on fait des vers, c’est avec des mots »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rim"
+     ],
+     "enonce": "Sur la frise, touche l’année du « voyant » de Rimbaud.",
+     "aide": "Entre 1857 et 1913.",
+     "explication": "Rimbaud affirme sa poétique du voyant en **1871**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Mallarmé ?",
+     "options": [
+      "Tout se déplace du côté du langage",
+      "Tout se déplace du côté de la ville",
+      "Le poète décrit fidèlement les voyages",
+      "Le poème raconte une histoire"
+     ],
+     "reponse": 0,
+     "aide": "La formule parle de mots, pas d’idées.",
+     "explication": "Chez Mallarmé, tout se déplace **du côté du langage**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque auteur à sa formule.",
+     "paires": [
+      [
+       "Baudelaire",
+       "Le beau sujet cesse d’exister"
+      ],
+      [
+       "Rimbaud",
+       "Se faire voyant par le dérèglement de tous les sens"
+      ],
+      [
+       "Mallarmé",
+       "On fait des vers avec des mots"
+      ]
+     ],
+     "aide": "Chacun apporte une idée de la poésie.",
+     "explication": "**Baudelaire** : plus de beau sujet ; **Rimbaud** : le voyant ; **Mallarmé** : des mots avant les idées."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3cadf7e-9dbc-54c1-a2bc-9aafdc09226e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Avec des mots, non avec des idées",
+   "competence": "analyser-texte",
+   "situation": "Pour Mallarmé, le poème n’est pas un message. Lis sa formule, puis relève ce que la modernité change concrètement.",
+   "documents": [
+    {
+     "id": "mall",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une formule célèbre",
+     "blocs": [
+      "Ce n’est point avec des idées que l’on fait des vers, c’est avec des [[m|mots]]."
+     ],
+     "source": "Stéphane Mallarmé, formule rapportée"
+    },
+    {
+     "id": "chg",
+     "type": "tableau",
+     "titre": "Ce qui change concrètement",
+     "colonnes": [
+      "Élément",
+      "Ce qu’il devient"
+     ],
+     "lignes": [
+      [
+       "La forme",
+       "Vers libre, poème en prose, calligrammes"
+      ],
+      [
+       "Le sujet",
+       "Plus rien n’est indigne du poème"
+      ],
+      [
+       "L’image",
+       "Elle rapproche deux réalités éloignées"
+      ],
+      [
+       "Le lecteur",
+       "Il devient actif et choisit un sens"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mall",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot avec lequel, selon Mallarmé, on fait des vers.",
+     "aide": "La phrase oppose les idées à autre chose.",
+     "explication": "On fait des vers avec des **mots** : le poème crée un objet verbal."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à ce qu’il devient.",
+     "paires": [
+      [
+       "La forme",
+       "Vers libre, poème en prose, calligrammes"
+      ],
+      [
+       "Le sujet",
+       "Plus rien n’est indigne : un urinoir, un prospectus, une gare"
+      ],
+      [
+       "L’image",
+       "Elle rapproche deux réalités éloignées"
+      ],
+      [
+       "Le lecteur",
+       "Il devient actif"
+      ]
+     ],
+     "aide": "Le tableau donne chaque ligne.",
+     "explication": "La **forme** se libère, le **sujet** s’élargit, l’**image** rapproche, le **lecteur** devient actif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon Mallarmé, que fait le poème moderne ?",
+     "options": [
+      "Il crée un objet verbal",
+      "Il transmet un message clair",
+      "Il décrit fidèlement le monde",
+      "Il raconte les voyages du poète"
+     ],
+     "reponse": 0,
+     "aide": "Le poème ne transmet plus un message.",
+     "explication": "Le poème moderne **crée un objet verbal**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le risque de la modernité.",
+     "texte": "À force de travailler la langue, le poème peut devenir ___ : il perd le ___ qu’il voulait libérer.",
+     "reponses": [
+      [
+       "hermétique"
+      ],
+      [
+       "lecteur"
+      ]
+     ],
+     "banque": [
+      "hermétique",
+      "lecteur",
+      "poète",
+      "clair",
+      "éditeur"
+     ],
+     "aide": "Un poème trop obscur n’est plus lu.",
+     "explication": "Le poème peut devenir **hermétique** et perdre le **lecteur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3cadf7e-9dbc-54c1-a2bc-9aafdc09226e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un poème qui ne dit plus rien ?",
+   "competence": "argumenter",
+   "situation": "Voici un poème écrit à la manière des modernes. Deux élèves le trouvent illisible ou génial : lequel a raison ?",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Quai de gare",
+     "blocs": [
+      "Sur le quai de la [[s|gare]], le pluriel des horloges ;",
+      "un [[s|urinoir]] cite le ciel.",
+      "Le vent lit les [[s|prospectus]] mieux que nous."
+     ],
+     "source": "Poème écrit pour l’exercice, à la manière des poètes modernes"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "Ce poème ne veut rien dire : c’est de l’hermétisme."
+      },
+      {
+       "qui": "Lou",
+       "texte": "Il rapproche deux réalités éloignées et nous laisse choisir un sens."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les trois mots qui désignent des sujets jugés autrefois indignes de la poésie.",
+     "aide": "Un lieu, un objet et des papiers.",
+     "explication": "La **gare**, l’**urinoir** et les **prospectus** : plus rien n’est indigne du poème."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que Lou voit dans l’image « un urinoir cite le ciel » ?",
+     "options": [
+      "Deux réalités éloignées rapprochées",
+      "Une comparaison entre deux choses connues",
+      "Une description géométrique d’un objet",
+      "Un souvenir d’enfance"
+     ],
+     "reponse": 0,
+     "aide": "L’urinoir et le ciel n’ont rien à voir.",
+     "explication": "L’image rapproche **deux réalités éloignées** : c’est le principe moderne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque moderne à sa rupture.",
+     "paires": [
+      [
+       "Baudelaire",
+       "La ville et la laideur entrent dans le poème"
+      ],
+      [
+       "Rimbaud",
+       "Le poète voyant"
+      ],
+      [
+       "Mallarmé",
+       "Le poème crée un objet verbal"
+      ],
+      [
+       "Les surréalistes",
+       "Ils systématisent l’image rapprochant deux réalités éloignées"
+      ]
+     ],
+     "aide": "Une rupture par auteur ou groupe.",
+     "explication": "**Baudelaire** : la ville ; **Rimbaud** : le voyant ; **Mallarmé** : l’objet verbal ; **les surréalistes** : l’image rapprochante."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux ce qu’est un poème moderne ?",
+     "options": [
+      "Un poème qui prend le langage pour sujet autant que pour outil",
+      "Un poème écrit récemment, à l’époque actuelle",
+      "Un poème qui abandonne toujours la rime et le vers",
+      "Un poème qui raconte surtout un fait divers"
+     ],
+     "reponse": 0,
+     "aide": "« Moderne » n’est pas « récent ».",
+     "explication": "Est **moderne** un poème qui prend **le langage pour sujet autant que pour outil**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5585a654-ad52-5d66-a990-c91129b629c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui chez Argan ?",
+   "competence": "analyser-document",
+   "situation": "Avant d’aller voir la pièce, tu veux savoir qui est qui. Lis la fiche de la pièce, puis le tableau des personnages.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Malade imaginaire",
+     "sousTitre": "Molière",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Comédie-ballet en trois actes"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1673"
+      },
+      {
+       "texte": "Musique",
+       "valeur": "Marc-Antoine Charpentier",
+       "id": "mus"
+      }
+     ],
+     "pied": "Molière joue Argan",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Argan",
+       "Égoïste, crédule, tyrannique, terrifié par la mort"
+      ],
+      [
+       "Toinette",
+       "L’intelligence pratique : le moteur de l’action"
+      ],
+      [
+       "Béline",
+       "?"
+      ],
+      [
+       "Béralde",
+       "La voix de la raison"
+      ],
+      [
+       "Thomas Diafoirus",
+       "Le pédant qui récite son compliment appris par cœur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "mus"
+     ],
+     "enonce": "Sur la fiche, touche la ligne qui donne le nom du compositeur.",
+     "aide": "Cherche le mot « Musique ».",
+     "explication": "La musique est de **Marc-Antoine Charpentier**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire en face de Béline ?",
+     "options": [
+      "L’hypocrite intéressée",
+      "La voix de la raison",
+      "Le pédant récitant son compliment",
+      "La servante rusée"
+     ],
+     "reponse": 0,
+     "aide": "Elle se réjouit de la mort de son mari.",
+     "explication": "Béline est **l’hypocrite intéressée**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Argan",
+       "Crédule et terrifié par la mort"
+      ],
+      [
+       "Toinette",
+       "Moteur de l’action"
+      ],
+      [
+       "Béralde",
+       "Voix de la raison"
+      ],
+      [
+       "Thomas Diafoirus",
+       "Pédant au compliment appris"
+      ]
+     ],
+     "aide": "Le tableau donne chaque rôle.",
+     "explication": "**Argan** a peur, **Toinette** agit, **Béralde** raisonne, **Thomas** récite."
+    }
+   ]
+  },
+  {
+   "chapitre": "5585a654-ad52-5d66-a990-c91129b629c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La comédie de la mort",
+   "competence": "analyser-texte",
+   "situation": "Pour guérir Argan de son aveuglement, on lui fait jouer la comédie de sa propre mort. Suis le stratagème, puis lis la scène écrite à la manière de Molière.",
+   "documents": [
+    {
+     "id": "strat",
+     "type": "chaine",
+     "titre": "Le stratagème",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Argan veut marier Angélique à Thomas Diafoirus"
+      },
+      {
+       "id": "b",
+       "texte": "Angélique aime Cléante"
+      },
+      {
+       "id": "c",
+       "texte": "Toinette et Béralde lui font jouer sa mort"
+      },
+      {
+       "id": "d",
+       "texte": "?"
+      },
+      {
+       "id": "e",
+       "texte": "Argan comprend"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "e"
+      }
+     ]
+    },
+    {
+     "id": "mort",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Devant le corps",
+     "blocs": [
+      {
+       "didascalie": "Argan, étendu, fait le mort. Béline et Angélique entrent."
+      },
+      {
+       "personnage": "Béline",
+       "replique": "[[j|Enfin]] ! Que le ciel en soit loué : je n’en pouvais plus de ses lavements."
+      },
+      {
+       "personnage": "Angélique",
+       "replique": "Mon père ! Mon pauvre père !"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Molière"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Béline se réjouit, Angélique pleure",
+      "Béline pleure, Angélique se réjouit",
+      "Toinette avoue tout à Béline",
+      "Thomas Diafoirus épouse Angélique"
+     ],
+     "reponse": 0,
+     "aide": "Le faux mort met chacune à l’épreuve.",
+     "explication": "Béline **se réjouit** ; Angélique **pleure** : c’est l’épreuve de vérité."
+    },
+    {
+     "type": "zone",
+     "document": "mort",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le mot qui trahit ce que Béline pense vraiment.",
+     "aide": "Le premier mot de sa réplique.",
+     "explication": "« **Enfin** ! » : Béline révèle sa joie, donc son hypocrisie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque jeu de rôle à son acteur.",
+     "paires": [
+      [
+       "Un opéra improvisé devant Argan",
+       "Cléante et Angélique"
+      ],
+      [
+       "Un déguisement en médecin de passage",
+       "Toinette"
+      ],
+      [
+       "Le mort joué",
+       "Argan lui-même"
+      ]
+     ],
+     "aide": "Trois mises en scène, trois acteurs.",
+     "explication": "L’**opéra** : Cléante et Angélique ; le **médecin de passage** : Toinette ; le **mort** : Argan."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le cœur du parcours « spectacle et comédie » ?",
+     "options": [
+      "Jouer un rôle est le moyen d’accéder à la vérité",
+      "Le théâtre est avant tout un art mensonger",
+      "La médecine n’est qu’un jeu de société",
+      "La mort ne doit jamais être jouée sur scène"
+     ],
+     "reponse": 0,
+     "aide": "Chaque mise en scène révèle quelque chose de vrai.",
+     "explication": "**Jouer un rôle est le moyen d’accéder à la vérité** : c’est le cœur du parcours."
+    }
+   ]
+  },
+  {
+   "chapitre": "5585a654-ad52-5d66-a990-c91129b629c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une langue que le patient ne comprend pas",
+   "competence": "argumenter",
+   "situation": "Molière se moque-t-il de la médecine comme science ? Lis une consultation écrite à sa manière, puis départage deux lecteurs.",
+   "documents": [
+    {
+     "id": "consult",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La consultation",
+     "blocs": [
+      {
+       "personnage": "Le Docteur",
+       "replique": "Votre cas, Monsieur, est d’une [[j|complexion]] fort rare : le diaphragme conspire avec la rate contre l’harmonie des [[j|humeurs]]."
+      },
+      {
+       "personnage": "Le Malade",
+       "replique": "Et quel remède ?"
+      },
+      {
+       "personnage": "Le Docteur",
+       "replique": "Cent saignées, deux lavements, et ne me demandez [[p|jamais]] pourquoi."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Molière"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Karim",
+       "texte": "La pièce attaque la médecine comme science."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Non : elle vise la médecine comme pouvoir, qui parle une langue que le patient ne comprend pas."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "consult",
+     "multiple": true,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche les deux mots du jargon médical que le malade ne comprend pas.",
+     "aide": "Des mots savants, sans rapport avec la vie ordinaire.",
+     "explication": "La **complexion** et les **humeurs** : un jargon qui impressionne sans expliquer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la dernière réplique du docteur (« ne me demandez jamais pourquoi ») ?",
+     "options": [
+      "Un pouvoir qui n’a pas à se justifier",
+      "Un médecin soucieux d’expliquer",
+      "Un docteur qui doute de son savoir",
+      "Une science qui progresse"
+     ],
+     "reponse": 0,
+     "aide": "Le médecin interdit la question.",
+     "explication": "Le docteur refuse d’expliquer : c’est la médecine comme **pouvoir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison selon la scène ?",
+     "options": [
+      "Nina : la satire vise la médecine comme pouvoir",
+      "Karim : la satire vise la science médicale",
+      "Karim : le docteur est un ami d’Argan",
+      "Nina : la médecine n’est pas visée"
+     ],
+     "reponse": 0,
+     "aide": "Le docteur parle une langue obscure et interdit la question.",
+     "explication": "**Nina** : la scène vise la **médecine comme pouvoir**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque médecin à ce qu’il incarne.",
+     "paires": [
+      [
+       "Purgon",
+       "L’autorité et la menace"
+      ],
+      [
+       "Diafoirus père et fils",
+       "Le latin creux et le pédantisme"
+      ],
+      [
+       "Fleurant",
+       "Saignées et lavements"
+      ],
+      [
+       "Béralde",
+       "La nature guérit"
+      ]
+     ],
+     "aide": "Chaque personnage a un trait comique.",
+     "explication": "**Purgon** menace, les **Diafoirus** font du latin creux, **Fleurant** saigne, **Béralde** rappelle que la nature guérit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le dénouement.",
+     "texte": "Une cérémonie ___ reçoit Argan médecin, en ___ de fantaisie : « Dignus, dignus est intrare… »",
+     "reponses": [
+      [
+       "burlesque"
+      ],
+      [
+       "latin"
+      ]
+     ],
+     "banque": [
+      "burlesque",
+      "latin",
+      "solennelle",
+      "grec",
+      "grave"
+     ],
+     "aide": "Le dénouement fait rire.",
+     "explication": "Une cérémonie **burlesque** reçoit Argan en **latin** de fantaisie."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b99faf2-7229-5b90-b384-981a12ad3a7b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dorante, Araminte et Dubois",
+   "competence": "analyser-document",
+   "situation": "Tu découvres Marivaux. Lis la fiche de la pièce, puis le tableau de ses personnages.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Fausses Confidences",
+     "sousTitre": "Marivaux",
+     "emoji": "💌",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Comédie en trois actes"
+      },
+      {
+       "texte": "Écriture",
+       "valeur": "En prose"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1737"
+      }
+     ],
+     "pied": "Parcours : théâtre et stratagème",
+     "teinte": "rose"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui est-il ?"
+     ],
+     "lignes": [
+      [
+       "Araminte",
+       "Une riche veuve"
+      ],
+      [
+       "Dorante",
+       "Un jeune homme ruiné, amoureux en secret d’Araminte"
+      ],
+      [
+       "Dubois",
+       "?"
+      ],
+      [
+       "Marton",
+       "Elle est jalouse et espère une dot"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "La pièce est une comédie en ___ actes et en ___, créée en ___.",
+     "reponses": [
+      [
+       "trois"
+      ],
+      [
+       "prose"
+      ],
+      [
+       "1737"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "prose",
+      "1737",
+      "cinq",
+      "vers",
+      "1673"
+     ],
+     "aide": "Tout est sur la fiche.",
+     "explication": "Comédie en **trois** actes, en **prose**, créée en **1737**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire en face de Dubois ?",
+     "options": [
+      "Ancien valet de Dorante, il tire les ficelles",
+      "La mère d’Araminte, qui veut la remarier",
+      "Un médecin de la famille, ami du comte",
+      "Le comte que l’on promet à Araminte"
+     ],
+     "reponse": 0,
+     "aide": "Il est au service d’Araminte, mais fidèle à Dorante.",
+     "explication": "Dubois est **l’ancien valet de Dorante** : il tire les ficelles du stratagème."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son trait.",
+     "paires": [
+      [
+       "Araminte",
+       "Riche veuve"
+      ],
+      [
+       "Dorante",
+       "Jeune homme ruiné"
+      ],
+      [
+       "Marton",
+       "Espère une dot"
+      ]
+     ],
+     "aide": "Le tableau donne chaque trait.",
+     "explication": "**Araminte** est riche, **Dorante** ruiné, **Marton** espère une dot."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b99faf2-7229-5b90-b384-981a12ad3a7b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piège se referme",
+   "competence": "analyser-texte",
+   "situation": "Dubois ne ment presque jamais : il choisit comment la vérité est dite. Suis ses coups, puis écoute-le parler pour ne pas dire.",
+   "documents": [
+    {
+     "id": "coups",
+     "type": "chaine",
+     "titre": "Les coups de Dubois",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Dorante devient intendant d’Araminte"
+      },
+      {
+       "id": "b",
+       "texte": "La confidence : il est fou d’amour pour elle"
+      },
+      {
+       "id": "c",
+       "texte": "Le portrait trouvé chez Dorante"
+      },
+      {
+       "id": "d",
+       "texte": "La fausse lettre"
+      },
+      {
+       "id": "e",
+       "texte": "?"
+      },
+      {
+       "id": "f",
+       "texte": "L’aveu d’Araminte"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "e"
+      },
+      {
+       "de": "e",
+       "a": "f"
+      }
+     ]
+    },
+    {
+     "id": "duo",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une confidence",
+     "blocs": [
+      {
+       "personnage": "Dubois",
+       "replique": "Madame, je ne dirai rien. Il me suffit que vous l’[[i|ignoriez]]."
+      },
+      {
+       "personnage": "Araminte",
+       "replique": "Que dois-je ignorer ?"
+      },
+      {
+       "personnage": "Dubois",
+       "replique": "Seulement qu’il vous regarde comme on regarde ce qu’on n’ose pas demander."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marivaux"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel moment faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Araminte lui dicte une lettre annonçant son mariage",
+      "Dorante quitte la maison d’Araminte pour toujours",
+      "Marton épouse le comte à la place d’Araminte",
+      "Dubois avoue tout son plan à Madame Argante"
+     ],
+     "reponse": 0,
+     "aide": "Araminte éprouve Dorante avant d’avouer.",
+     "explication": "Avant l’aveu, Araminte **dicte à Dorante une lettre annonçant son mariage**."
+    },
+    {
+     "type": "zone",
+     "document": "duo",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le verbe qui montre que Dubois parle pour ne pas dire.",
+     "aide": "Il prétend vouloir qu’elle ne sache pas.",
+     "explication": "**Ignoriez** : en prétendant se taire, Dubois dit tout."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait du marivaudage à son effet.",
+     "paires": [
+      [
+       "Les personnages parlent pour ne pas dire",
+       "Ils se contredisent, se surveillent"
+      ],
+      [
+       "Les répliques brèves",
+       "Les silences deviennent décisifs"
+      ],
+      [
+       "Chaque mot pèse socialement",
+       "L’argent et le rang sont partout"
+      ]
+     ],
+     "aide": "Trois traits, trois effets.",
+     "explication": "On **parle pour ne pas dire**, les **silences** comptent, chaque mot **pèse socialement**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Dubois de la vérité ?",
+     "options": [
+      "Il choisit quand et comment elle est dite",
+      "Il ment toujours",
+      "Il la cache jusqu’à la fin",
+      "Il la révèle à tous au premier acte"
+     ],
+     "reponse": 0,
+     "aide": "Il ne ment presque jamais.",
+     "explication": "Dubois **choisit quand et comment la vérité est dite**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b99faf2-7229-5b90-b384-981a12ad3a7b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un scandale de comédie",
+   "competence": "argumenter",
+   "situation": "Le stratagème est-il une trahison ? Lis la scène de la lettre, écrite à la manière de Marivaux, puis départage deux élèves.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La lettre dictée",
+     "blocs": [
+      {
+       "personnage": "Araminte",
+       "replique": "Écrivez, je vous prie : « Je me marie, Monsieur… »"
+      },
+      {
+       "didascalie": "Dorante [[t|pâlit]] ; sa plume s’[[t|arrête]]."
+      },
+      {
+       "personnage": "Araminte",
+       "replique": "Eh bien ? Vous vous arrêtez ?"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marivaux"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Élise",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élise",
+       "texte": "Dubois ment à Araminte : le stratagème est une trahison."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Il ne ment presque jamais : la confidence est vraie, mais il choisit quand la dire."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui montrent le trouble de Dorante.",
+     "aide": "Un changement de teint et un geste interrompu.",
+     "explication": "Dorante **pâlit** et sa plume **s’arrête** : la scène est cruelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que cherche Araminte en dictant cette lettre ?",
+     "options": [
+      "À éprouver les sentiments de Dorante",
+      "À annoncer vraiment son mariage",
+      "À se moquer de sa pauvreté",
+      "À chasser Dorante"
+     ],
+     "reponse": 0,
+     "aide": "Elle observe sa réaction.",
+     "explication": "Araminte **éprouve** Dorante : sa réaction trahit son amour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison selon le cours ?",
+     "options": [
+      "Samir : Dubois choisit quand et comment dire la vérité",
+      "Élise : Dubois invente tout de toutes pièces",
+      "Élise : Dorante n’aime pas du tout Araminte",
+      "Samir : Dubois ne joue aucun rôle dans l’intrigue"
+     ],
+     "reponse": 0,
+     "aide": "La confidence initiale est vraie, mais fabriquée.",
+     "explication": "**Samir** : la confidence est **vraie mais fabriquée** : elle installe l’idée."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à son sens.",
+     "paires": [
+      [
+       "« Nous sommes convenus de nos faits »",
+       "Dubois annonce le pacte du stratagème"
+      ],
+      [
+       "Le marivaudage",
+       "Une langue de l’aveu retardé"
+      ],
+      [
+       "La fausse confidence",
+       "Vraie, mais fabriquée : elle installe l’idée"
+      ],
+      [
+       "Un scandale de comédie",
+       "Araminte épouse un homme sans fortune ni titre"
+      ]
+     ],
+     "aide": "Chaque notion se retrouve dans le cours.",
+     "explication": "Le **pacte**, la **langue de l’aveu retardé**, la confidence **fabriquée**, le **scandale** : un mariage sans fortune."
+    }
+   ]
+  },
+  {
+   "chapitre": "63aa2eda-1a17-5b08-8b5a-bec9f432c7ef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une machine réglée",
+   "competence": "analyser-document",
+   "situation": "Dubois n’improvise pas : sa mécanique révèle un acte après l’autre. Suis-la dans le tableau.",
+   "documents": [
+    {
+     "id": "acte",
+     "type": "tableau",
+     "titre": "Les actes de la machine",
+     "colonnes": [
+      "Acte",
+      "Sa révélation"
+     ],
+     "lignes": [
+      [
+       "I",
+       "La confidence initiale"
+      ],
+      [
+       "II",
+       "Le portrait, puis la fausse lettre"
+      ],
+      [
+       "III",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle révélation faut-il écrire pour l’acte III ?",
+     "options": [
+      "La scène du jardin",
+      "La mort de Dubois",
+      "Le départ de Dorante",
+      "Le procès d’Araminte"
+     ],
+     "reponse": 0,
+     "aide": "Acte I : confidence ; acte II : objets ; acte III : un lieu.",
+     "explication": "La révélation de l’acte III est **la scène du jardin**."
+    },
+    {
+     "type": "zone",
+     "document": "acte",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui contient le portrait et la fausse lettre.",
+     "aide": "C’est la deuxième ligne.",
+     "explication": "Au deuxième acte viennent **le portrait, puis la fausse lettre**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le spectateur connaît le stratagème avant Araminte.",
+     "texte": "Le spectateur connaît le stratagème avant Araminte : c’est l’___ ___.",
+     "reponses": [
+      [
+       "ironie"
+      ],
+      [
+       "dramatique"
+      ]
+     ],
+     "banque": [
+      "ironie",
+      "dramatique",
+      "tragique",
+      "comique",
+      "verbale"
+     ],
+     "aide": "Il est dans la confidence dès la première scène.",
+     "explication": "C’est **l’ironie dramatique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "63aa2eda-1a17-5b08-8b5a-bec9f432c7ef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’argent, partout",
+   "competence": "analyser-texte",
+   "situation": "Chez Marivaux, l’amour n’est jamais hors du système social. Observe qui veut quoi, puis lis un échange écrit à sa manière.",
+   "documents": [
+    {
+     "id": "int",
+     "type": "tableau",
+     "titre": "Qui veut quoi ?",
+     "colonnes": [
+      "Personnage",
+      "Son intérêt"
+     ],
+     "lignes": [
+      [
+       "Araminte",
+       "Elle est riche"
+      ],
+      [
+       "Dorante",
+       "Il ne l’est pas"
+      ],
+      [
+       "Marton",
+       "?"
+      ],
+      [
+       "Madame Argante",
+       "Elle veut un titre pour sa fille"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "arg",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un salon",
+     "blocs": [
+      {
+       "personnage": "Madame Argante",
+       "replique": "Le comte porte un grand [[g|nom]], ma fille, et il vous épousera sans y regarder de si près."
+      },
+      {
+       "personnage": "Araminte",
+       "replique": "Et qui sait si c’est mon [[g|bien]] qu’il épouse, ou moi ?"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marivaux"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire en face de Marton ?",
+     "options": [
+      "Elle espère une dot",
+      "Elle veut un titre",
+      "Elle est riche",
+      "Elle apporte un procès en dot"
+     ],
+     "reponse": 0,
+     "aide": "Marton est la jalouse.",
+     "explication": "Marton **espère une dot**."
+    },
+    {
+     "type": "zone",
+     "document": "arg",
+     "multiple": true,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche les deux mots où se lisent le rang et l’argent.",
+     "aide": "Un mot pour le titre, un pour la fortune.",
+     "explication": "Le **nom** (le rang) et le **bien** (la fortune) : l’argent et le rang sont partout."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la vraie difficulté des amants chez Marivaux ?",
+     "options": [
+      "Pouvoir dire leur amour malgré l’ordre social",
+      "S’aimer vraiment et sans arrière-pensée",
+      "Trouver un témoin pour leur mariage",
+      "Éviter un duel avec le comte Dorimont"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas de s’aimer.",
+     "explication": "La difficulté n’est pas de s’aimer mais de **pouvoir le dire** quand l’ordre social s’y oppose."
+    }
+   ]
+  },
+  {
+   "chapitre": "63aa2eda-1a17-5b08-8b5a-bec9f432c7ef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Victime ou actrice ?",
+   "competence": "argumenter",
+   "situation": "Araminte est-elle manipulée ou révélée à elle-même ? Observe Dubois en metteur en scène, puis pèse les arguments.",
+   "documents": [
+    {
+     "id": "dubois",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dubois à part",
+     "blocs": [
+      {
+       "personnage": "Dubois",
+       "replique": "Voilà mon premier acteur [[e|placé]] ; le second entre ; je règle mes [[e|effets]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marivaux"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Araminte est une victime : on lui ment pendant trois actes."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Au troisième acte, c’est elle qui mène : le texte ne tranche pas."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dubois",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux mots qui font de Dubois un metteur en scène.",
+     "aide": "Il place ses acteurs et règle ce qu’on verra.",
+     "explication": "**Placé** et **effets** : Dubois distribue les rôles et ménage ses effets."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison au sujet de l’acte III ?",
+     "options": [
+      "Yanis : c’est Araminte qui mène l’acte III",
+      "Anaïs : Araminte ne fait rien",
+      "Anaïs : Dubois mène l’acte III seul",
+      "Yanis : la pièce tranche pour la manipulation"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit qui mène l’acte III.",
+     "explication": "**Yanis** : **Araminte** mène l’acte III ; la pièce ne tranche pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument : manipulation ou révélation ?",
+     "categories": [
+      "Manipulation",
+      "Révélation"
+     ],
+     "items": [
+      [
+       "Araminte est trompée et poussée",
+       0
+      ],
+      [
+       "Dorante ment par omission",
+       0
+      ],
+      [
+       "Dubois exploite sa générosité",
+       0
+      ],
+      [
+       "Dorante aime vraiment",
+       1
+      ],
+      [
+       "Araminte l’aime déjà",
+       1
+      ],
+      [
+       "Le stratagème lève les obstacles sociaux",
+       1
+      ]
+     ],
+     "aide": "Une lecture accuse, l’autre dévoile.",
+     "explication": "Pour la **manipulation** : tromperie, mensonge par omission, exploitation ; pour la **révélation** : amour réel, amour déjà là, obstacles levés."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque axe de dissertation à ce que la pièce permet.",
+     "paires": [
+      [
+       "Peut-on faire naître l’amour par la ruse ?",
+       "Toute la pièce en débat"
+      ],
+      [
+       "Araminte est-elle victime ou actrice ?",
+       "Elle mène l’acte III"
+      ],
+      [
+       "Le théâtre est-il un art du stratagème ?",
+       "Dubois en est la preuve"
+      ],
+      [
+       "La comédie est-elle sociale ou psychologique ?",
+       "Les deux, l’une par l’autre"
+      ]
+     ],
+     "aide": "Chaque question se retrouve dans le cours.",
+     "explication": "La **ruse** est en débat, **Araminte** mène l’acte III, **Dubois** prouve le stratagème théâtral, la comédie est **sociale et psychologique**."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1757 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "4bed4876-8d60-5da7-ad5b-c6545cb63202",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Autour de la table du dimanche",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares l’oral sur la pièce de Lagarce. Commence par savoir qui est qui dans la famille de Louis, puis retiens sa carte d’identité.",
+   "documents": [
+    {
+     "id": "famille",
+     "type": "tableau",
+     "titre": "La famille de Louis",
+     "colonnes": [
+      "Personnage",
+      "Lien avec Louis",
+      "Ce qu’on voit de lui ou d’elle"
+     ],
+     "lignes": [
+      [
+       "La Mère",
+       "Sa mère",
+       "Elle parle beaucoup et organise le dimanche comme si de rien n’était"
+      ],
+      [
+       "Antoine",
+       "Son frère cadet",
+       "Resté au pays, colérique : il reproche à Louis son départ et son silence"
+      ],
+      [
+       "Suzanne",
+       "Sa sœur",
+       "Elle ne connaît son frère que par ses « petits mots »"
+      ],
+      [
+       "Catherine",
+       "Sa belle-sœur",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Juste la fin du monde",
+     "sousTitre": "Jean-Luc Lagarce",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Écrite en",
+       "valeur": "1990"
+      },
+      {
+       "texte": "Âge de Louis",
+       "valeur": "Trente-quatre ans"
+      },
+      {
+       "texte": "Absent depuis",
+       "valeur": "Douze ans"
+      },
+      {
+       "texte": "Parcours",
+       "valeur": "Crise personnelle, crise familiale"
+      }
+     ],
+     "pied": "Fiche rédigée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "famille",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui dit ce que Suzanne sait de son frère.",
+     "aide": "Cherche la ligne de Suzanne, puis la colonne qui décrit ce qu’on voit d’elle.",
+     "explication": "Suzanne ne connaît son frère que par ses « **petits mots** » : il n’a jamais vraiment été là."
+    },
+    {
+     "type": "choix",
+     "enonce": "Catherine n’a jamais vu Louis. Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Elle lui parle avec une politesse gênée",
+      "Elle lui reproche son silence avec colère",
+      "Elle organise le repas comme autrefois",
+      "Elle le connaît par ses petits mots"
+     ],
+     "reponse": 0,
+     "aide": "Que fait-on devant quelqu’un qu’on rencontre pour la première fois, dans une famille qui n’est pas la sienne ?",
+     "explication": "Belle-sœur qui n’a **jamais vu Louis**, Catherine parle avec une **politesse gênée**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche de la pièce.",
+     "texte": "Louis, ___ ans, revient après ___ ans d’absence pour annoncer sa ___ prochaine.",
+     "reponses": [
+      [
+       "trente-quatre",
+       "34"
+      ],
+      [
+       "douze",
+       "12"
+      ],
+      [
+       "mort"
+      ]
+     ],
+     "banque": [
+      "trente-quatre",
+      "vingt",
+      "douze",
+      "dix",
+      "mort",
+      "fête"
+     ],
+     "aide": "Tout est dans la fiche : l’âge de Louis, la durée de son absence.",
+     "explication": "Louis a **trente-quatre** ans, il revient après **douze** ans d’absence pour annoncer sa **mort** prochaine."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bed4876-8d60-5da7-ad5b-c6545cb63202",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un dimanche où il ne se passe rien",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ton exposé, tu veux montrer comment la pièce est construite : suis son plan, puis dis ce qui s’y passe vraiment.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "chaine",
+     "titre": "Le plan de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "pro",
+       "texte": "Prologue : Louis parle au spectateur"
+      },
+      {
+       "id": "p1",
+       "texte": "Première partie"
+      },
+      {
+       "id": "int",
+       "texte": "Intermède"
+      },
+      {
+       "id": "p2",
+       "texte": "Seconde partie"
+      },
+      {
+       "id": "epi",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pro",
+       "a": "p1"
+      },
+      {
+       "de": "p1",
+       "a": "int"
+      },
+      {
+       "de": "int",
+       "a": "p2"
+      },
+      {
+       "de": "p2",
+       "a": "epi"
+      }
+     ],
+     "source": "Schéma rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la dernière case « ? » du plan ?",
+     "options": [
+      "Épilogue : Louis repart sans avoir rien dit, et un cri est raconté au conditionnel",
+      "Épilogue : Louis annonce enfin sa mort à sa famille réunie",
+      "Épilogue : la famille se réconcilie autour de Louis, qui promet de revenir bientôt",
+      "Épilogue : Louis décide de rester vivre auprès des siens"
+     ],
+     "reponse": 0,
+     "aide": "La pièce est l’histoire d’un aveu qui n’aura pas lieu.",
+     "explication": "À la fin, Louis **repart sans avoir rien dit** ; l’épilogue raconte **au conditionnel** un cri qu’il n’a jamais poussé."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "multiple": false,
+     "reponse": [
+      "pro"
+     ],
+     "enonce": "Touche l’étape où le spectateur apprend que Louis va mourir.",
+     "aide": "Le spectateur le sait avant tous les personnages.",
+     "explication": "Dès le **prologue**, Louis annonce sa mort prochaine au seul spectateur : la famille, elle, ne l’apprendra jamais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il pendant le dimanche, entre le prologue et l’épilogue ?",
+     "options": [
+      "On déjeune, on se dispute, on évoque le passé : il ne se passe rien",
+      "Un coup de théâtre bouleverse toute la famille et change le cours du dimanche",
+      "Louis annonce enfin sa mort à sa mère",
+      "Louis décide de rester vivre auprès des siens"
+     ],
+     "reponse": 0,
+     "aide": "La pièce comporte-t-elle des rebondissements ? Le cours dit le contraire.",
+     "explication": "**Il ne se passe rien** : on déjeune, on se dispute, on évoque le passé, quelqu’un propose une promenade en voiture."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bed4876-8d60-5da7-ad5b-c6545cb63202",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "On parle pour ne rien dire",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur la langue de Lagarce. Lis la scène écrite pour l’exercice, puis tranche en t’appuyant sur ses mots.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Après le déjeuner",
+     "blocs": [
+      {
+       "didascalie": "Deux sœurs, une fois le repas terminé. Leur frère vient de repartir."
+      },
+      {
+       "personnage": "La Sœur",
+       "replique": "Je voulais dire — enfin, ce n’est pas ce que je voulais dire — qu’il avait l’air heureux de venir. Ou [[c|plutôt]] [[c|non]], qu’il n’avait pas l’air malheureux."
+      },
+      {
+       "personnage": "Le Frère",
+       "replique": "Enfin, tu dis ça, mais on ne sait pas. On parle, on parle, et on ne dit [[r|rien]]."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Lagarce"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat de la classe",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Cette famille parle sans arrêt : c’est donc qu’elle se dit tout."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Au contraire : on parle sans arrêt pour ne pas dire l’essentiel."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots par lesquels la sœur corrige ce qu’elle vient de dire.",
+     "aide": "Cherche le mot qui annonce une rectification, puis celui qui rejette la première idée.",
+     "explication": "La sœur se reprend avec « **plutôt** » et « **non** » : c’est la langue de Lagarce, qui se corrige en direct et cherche le mot juste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la scène soutient-elle le mieux ?",
+     "options": [
+      "Celle de Malik : on parle beaucoup pour éviter l’essentiel",
+      "Celle d’Inès : la famille se dit tout en parlant",
+      "Aucune : la scène n’a rien à voir avec ce débat",
+      "Celle d’Inès : le frère écoute attentivement chaque mot"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du Frère.",
+     "explication": "« On parle, on parle, et on ne dit **rien** » donne raison à **Malik** : dans cette famille, on parle sans arrêt pour ne pas dire l’essentiel."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la pièce à son effet.",
+     "paires": [
+      [
+       "Les phrases qui se reprennent et se corrigent",
+       "La parole cherche le mot juste et le manque"
+      ],
+      [
+       "Les monologues qui coexistent sans se répondre",
+       "Personne n’écoute vraiment"
+      ],
+      [
+       "Le « juste » du titre",
+       "Une catastrophe minimisée, jamais prononcée"
+      ]
+     ],
+     "aide": "Demande-toi ce que chaque procédé fait à la parole des personnages.",
+     "explication": "Les **reprises** disent le mot cherché et manqué, les **monologues** juxtaposent des paroles sans écoute, le **« juste »** du titre minimise la catastrophe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour une dissertation, que dit le cours sur la question « Louis est-il lâche, ou protège-t-il les siens ? »",
+     "options": [
+      "Le texte refuse de trancher",
+      "Le texte tranche : Louis est lâche",
+      "Le texte tranche : Louis protège sa famille",
+      "Le texte ne permet pas d’en parler"
+     ],
+     "reponse": 0,
+     "aide": "La pièce ne donne pas de verdict sur Louis.",
+     "explication": "Le texte **refuse de trancher** : les deux lectures restent possibles, et c’est ce qui nourrit la dissertation."
+    }
+   ]
+  },
+  {
+   "chapitre": "eba13f91-0448-55e1-9652-c396c6a593ad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Chacun ses reproches",
+   "competence": "lire-tableau",
+   "situation": "Au brouillon de ton oral, tu notes ce que chaque membre de la famille reproche à Louis, ou fait pour l’éviter.",
+   "documents": [
+    {
+     "id": "reproches",
+     "type": "tableau",
+     "titre": "Les comptes de famille",
+     "colonnes": [
+      "Personnage",
+      "Son reproche ou son geste"
+     ],
+     "lignes": [
+      [
+       "Antoine",
+       "Louis a été le préféré, celui qui a pu partir"
+      ],
+      [
+       "Suzanne",
+       "L’absence et le mystère de son frère"
+      ],
+      [
+       "La Mère",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reproches",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit ce que Suzanne reproche à son frère.",
+     "aide": "Repère la ligne de Suzanne.",
+     "explication": "Suzanne reproche à Louis son **absence** et son **mystère**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour La Mère ?",
+     "options": [
+      "Elle rejoue le dimanche d’autrefois pour empêcher le pire",
+      "Elle crie, se déclare brutale et reproche à Louis son silence",
+      "Elle ne connaît Louis que par ses petits mots",
+      "Elle n’a jamais vu Louis"
+     ],
+     "reponse": 0,
+     "aide": "Les trois autres phrases décrivent Antoine, Suzanne et Catherine.",
+     "explication": "La Mère **rejoue le dimanche d’autrefois** pour empêcher que le pire arrive."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le tableau.",
+     "texte": "Pour Antoine, Louis a été le ___, celui qui a pu ___.",
+     "reponses": [
+      [
+       "préféré",
+       "prefere"
+      ],
+      [
+       "partir"
+      ]
+     ],
+     "banque": [
+      "préféré",
+      "partir",
+      "brutal",
+      "revenir"
+     ],
+     "aide": "Relis la case d’Antoine.",
+     "explication": "Antoine reproche à Louis d’avoir été le **préféré**, celui qui a pu **partir**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eba13f91-0448-55e1-9652-c396c6a593ad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi Louis se tait",
+   "competence": "analyser-document",
+   "situation": "Une camarade s’étonne : pourquoi Louis ne dit pas la vérité ? Remonte le fil de son silence, de sa vie jusqu’au dimanche.",
+   "documents": [
+    {
+     "id": "etre",
+     "type": "tableau",
+     "titre": "Ce que Louis est, ce que cela empêche",
+     "colonnes": [
+      "Ce que Louis est",
+      "Ce que cela empêche"
+     ],
+     "lignes": [
+      [
+       "Celui qui est parti",
+       "Il ne peut plus revenir demander"
+      ],
+      [
+       "Celui qui envoie des « petits mots »",
+       "Il n’a jamais rien demandé"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du silence",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "sait",
+       "texte": "Louis sait qu’il va mourir"
+      },
+      {
+       "id": "dem",
+       "texte": "Annoncer sa mort, c’est demander quelque chose"
+      },
+      {
+       "id": "jam",
+       "texte": "Il n’a jamais rien demandé"
+      },
+      {
+       "id": "fin",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "sait",
+       "a": "dem"
+      },
+      {
+       "de": "dem",
+       "a": "jam"
+      },
+      {
+       "de": "jam",
+       "a": "fin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "dem"
+     ],
+     "enonce": "Touche l’étape qui explique pourquoi l’annonce est si difficile pour Louis.",
+     "aide": "Que fait-on, au fond, quand on annonce sa mort à quelqu’un ?",
+     "explication": "Annoncer sa mort, c’est **demander quelque chose** : de l’attention, du pardon, de l’amour. Louis n’a jamais rien demandé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie ce que Louis est à ce que cela l’empêche de faire.",
+     "paires": [
+      [
+       "Celui qui est parti",
+       "Revenir demander"
+      ],
+      [
+       "Celui qui envoie des « petits mots »",
+       "Demander quoi que ce soit"
+      ]
+     ],
+     "aide": "Repère chaque ligne du tableau.",
+     "explication": "Parti, il ne peut plus **revenir demander** ; ses « petits mots » n’ont **jamais rien demandé**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la dernière case « ? » ?",
+     "options": [
+      "Il se tait : le silence prolonge une vie tenue à distance",
+      "Il parle enfin, mais personne ne l’écoute vraiment à table",
+      "Il écrit une lettre qu’il laisse à Suzanne",
+      "Il se confie à Catherine en secret"
+     ],
+     "reponse": 0,
+     "aide": "Que fait Louis à la fin de la pièce ?",
+     "explication": "Le silence final n’est **pas un accident** : il est le **prolongement logique** d’une vie tenue à distance."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : relève-t-il de la crise personnelle de Louis ou de la crise familiale ?",
+     "categories": [
+      "Crise personnelle",
+      "Crise familiale"
+     ],
+     "items": [
+      [
+       "Louis sait qu’il va mourir",
+       0
+      ],
+      [
+       "Louis n’a jamais rien demandé",
+       0
+      ],
+      [
+       "Antoine reproche à Louis d’avoir pu partir",
+       1
+      ],
+      [
+       "La Mère rejoue le dimanche d’autrefois",
+       1
+      ],
+      [
+       "Suzanne reproche l’absence de son frère",
+       1
+      ]
+     ],
+     "aide": "La crise personnelle est celle de Louis seul ; la crise familiale met les autres en jeu.",
+     "explication": "Ce que Louis **sait** et **n’a jamais demandé** relève de sa crise **personnelle** ; les reproches et le dimanche rejoué, de la crise **familiale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eba13f91-0448-55e1-9652-c396c6a593ad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une tragédie sans catastrophe visible",
+   "competence": "argumenter",
+   "situation": "Sujet de dissertation : « Peut-on parler de tragédie moderne à propos de la pièce ? » Réunis les éléments du cours, puis tranche.",
+   "documents": [
+    {
+     "id": "trag",
+     "type": "tableau",
+     "titre": "Ce que la pièce emprunte à la tragédie",
+     "colonnes": [
+      "Élément tragique",
+      "Dans la pièce"
+     ],
+     "lignes": [
+      [
+       "Un destin connu d’avance",
+       "Le prologue"
+      ],
+      [
+       "L’unité de lieu",
+       "La maison"
+      ],
+      [
+       "L’unité de temps",
+       "?"
+      ],
+      [
+       "Un héros qui ne peut échapper à ce qu’il est",
+       "Louis"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Louis est condamné dès le prologue : c’est une tragédie."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Dans une tragédie, il y a un acte irréparable. Ici, il manque le [[g|geste]]."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’unité de temps de la pièce (la case « ? ») ?",
+     "options": [
+      "Un dimanche",
+      "Une nuit",
+      "Douze ans",
+      "Un hiver"
+     ],
+     "reponse": 0,
+     "aide": "La famille se retrouve le temps d’un déjeuner, pas plus.",
+     "explication": "La pièce tient en **un dimanche** ; les douze ans sont la durée de l’absence de Louis."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot par lequel Hugo dit ce qui manque à la pièce pour être une tragédie classique.",
+     "aide": "Il oppose l’action au simple destin.",
+     "explication": "Ce qui manque, c’est le **geste** : ici, la catastrophe est un non-événement."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : est-il présent dans la pièce, ou absent ?",
+     "categories": [
+      "Présent chez Lagarce",
+      "Absent chez Lagarce"
+     ],
+     "items": [
+      [
+       "Un destin annoncé dès le prologue",
+       0
+      ],
+      [
+       "L’unité de lieu : la maison",
+       0
+      ],
+      [
+       "Un héros prisonnier de ce qu’il est",
+       0
+      ],
+      [
+       "Un geste irréparable accompli sur scène",
+       1
+      ],
+      [
+       "Des coups de théâtre en série",
+       1
+      ]
+     ],
+     "aide": "Reprends le tableau, puis souviens-toi de ce que dit Hugo.",
+     "explication": "Destin, lieu et héros prisonnier sont là ; le **geste** et les **coups de théâtre** manquent : la catastrophe est intérieure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation les documents appuient-ils le mieux ?",
+     "options": [
+      "On peut parler de tragédie moderne : destin annoncé, unités respectées, catastrophe intérieure",
+      "Non : la pièce est une comédie de mœurs, sans aucun destin annoncé ni catastrophe",
+      "Oui : comme chez Racine, le héros meurt sur scène",
+      "Non : la pièce ne respecte ni lieu ni temps"
+     ],
+     "reponse": 0,
+     "aide": "Garde ce que la pièce a de tragique, et ce qui change.",
+     "explication": "Destin annoncé, unités de lieu et de temps, héros prisonnier : c’est une **tragédie moderne**, dont la catastrophe est **intérieure**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6781922a-51da-570b-b31f-c643352d5b32",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un géant publié sous un faux nom",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur Rabelais : place Gargantua parmi ses livres, puis retiens sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rabelais et ses livres",
+     "debut": 1530,
+     "fin": 1550,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "pan",
+       "date": 1532,
+       "nom": "Pantagruel"
+      },
+      {
+       "id": "gar",
+       "date": 1534,
+       "nom": "Gargantua"
+      },
+      {
+       "id": "tiers",
+       "date": 1546,
+       "nom": "Tiers Livre"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Gargantua",
+     "sousTitre": "1534",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Pseudonyme",
+       "valeur": "Alcofribas Nasier, anagramme de François Rabelais"
+      },
+      {
+       "texte": "Rang d’écriture",
+       "valeur": "Second livre écrit par Rabelais"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "Le père de Pantagruel"
+      },
+      {
+       "texte": "Parcours",
+       "valeur": "Rire et savoir"
+      }
+     ],
+     "pied": "Fiche rédigée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "gar"
+     ],
+     "enonce": "Touche l’année de publication de Gargantua.",
+     "aide": "Le livre porte une date sur la fiche d’identité aussi.",
+     "explication": "Gargantua paraît en **1534**, après Pantagruel (1532)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Pantagruel de Gargantua ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1534 − 1532 = **2 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Gargantua est le ___ livre écrit par Rabelais, mais il raconte la vie du ___ de Pantagruel.",
+     "reponses": [
+      [
+       "second",
+       "deuxième",
+       "deuxieme"
+      ],
+      [
+       "père",
+       "pere"
+      ]
+     ],
+     "banque": [
+      "second",
+      "premier",
+      "père",
+      "fils"
+     ],
+     "aide": "Gargantua a été écrit après Pantagruel, et il raconte la vie d’un aîné.",
+     "explication": "Écrit **après** Pantagruel, Gargantua en raconte le **père**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6781922a-51da-570b-b31f-c643352d5b32",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la naissance à Thélème",
+   "competence": "se-reperer-temps",
+   "situation": "Ton professeur te demande de raconter le livre en cinq étapes. Suis le fil, retrouve l’étape manquante, puis identifie les personnages.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du livre",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "nai",
+       "texte": "Naissance par l’oreille : « À boire ! »"
+      },
+      {
+       "id": "edu",
+       "texte": "Les deux éducations"
+      },
+      {
+       "id": "guerre",
+       "texte": "?"
+      },
+      {
+       "id": "jean",
+       "texte": "Frère Jean défend l’abbaye"
+      },
+      {
+       "id": "thel",
+       "texte": "L’abbaye de Thélème"
+      }
+     ],
+     "liens": [
+      {
+       "de": "nai",
+       "a": "edu"
+      },
+      {
+       "de": "edu",
+       "a": "guerre"
+      },
+      {
+       "de": "guerre",
+       "a": "jean"
+      },
+      {
+       "de": "jean",
+       "a": "thel"
+      }
+     ],
+     "source": "Schéma rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Une querelle de marchands de fouaces dégénère en guerre picrocholine",
+      "Gargantua devient empereur du monde après une victoire éclatante",
+      "Les sorbonnards chassent Ponocrates",
+      "Gargamelle accouche d’un second géant"
+     ],
+     "reponse": 0,
+     "aide": "C’est la guerre où Frère Jean défend l’abbaye.",
+     "explication": "Une **querelle de fouaces** déclenche la **guerre picrocholine**, où Frère Jean défend l’abbaye."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "thel"
+     ],
+     "enonce": "Touche l’étape qui montre ce que Gargantua offre à Frère Jean.",
+     "aide": "C’est un anti-monastère.",
+     "explication": "Gargantua offre l’**abbaye de Thélème** à Frère Jean, en récompense de sa défense."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il fait dans le livre.",
+     "paires": [
+      [
+       "Gargamelle",
+       "Accouche par l’oreille après un repas de tripes"
+      ],
+      [
+       "Picrochole",
+       "Se rêve empereur du monde"
+      ],
+      [
+       "Ponocrates",
+       "L’humaniste qui réforme l’éducation de Gargantua"
+      ],
+      [
+       "Frère Jean",
+       "Moine truculent qui défend l’abbaye à coups de bâton de croix"
+      ]
+     ],
+     "aide": "Chaque personnage est lié à un épisode de la chaîne.",
+     "explication": "**Gargamelle** accouche par l’oreille, **Picrochole** rêve d’empire, **Ponocrates** réforme l’éducation, **Frère Jean** se bat à coups de bâton de croix."
+    }
+   ]
+  },
+  {
+   "chapitre": "6781922a-51da-570b-b31f-c643352d5b32",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rire de Rabelais est-il innocent ?",
+   "competence": "argumenter",
+   "situation": "Sujet : « Le rire chez Rabelais n’est-il qu’un divertissement ? » Compare les deux éducations, repère le procédé comique, puis tranche.",
+   "documents": [
+    {
+     "id": "educ",
+     "type": "tableau",
+     "titre": "Les deux éducations de Gargantua",
+     "colonnes": [
+      "Critère",
+      "Les sorbonnards",
+      "Ponocrates"
+     ],
+     "lignes": [
+      [
+       "La méthode",
+       "Apprendre par cœur des livres inutiles",
+       "?"
+      ],
+      [
+       "Le ressort",
+       "La contrainte",
+       "L’apprentissage par le plaisir"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    },
+    {
+     "id": "ecole",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une journée à l’ancienne école",
+     "blocs": [
+      "Le jeune géant se levait tard, [[m|récitait]] son latin de cuisine sans en saisir un mot, puis on lui faisait [[m|répéter]] la leçon, encore et encore, pendant des années.",
+      "On ne lui parlait ni de jeux, ni de promenade, ni de la nature : un livre, un fouet, et le soir un grand sommeil."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Rabelais (langue modernisée)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ecole",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux verbes qui disent la méthode des sorbonnards.",
+     "aide": "Un verbe dit ce que le jeune géant fait de ses leçons, l’autre ce qu’on lui fait faire.",
+     "explication": "**Réciter** et **répéter** : on apprend par cœur, sans comprendre, des années durant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour la méthode de Ponocrates ?",
+     "options": [
+      "Une journée réglée : exercice physique, lectures commentées, observation directe",
+      "Des journées entières de récitation silencieuse, sans exercice ni promenade",
+      "Un apprentissage par cœur, mais plus court",
+      "Un enseignement réservé aux seuls moines"
+     ],
+     "reponse": 0,
+     "aide": "Il s’oppose point par point aux sorbonnards.",
+     "explication": "Ponocrates règle la journée : **exercice physique, lectures commentées, hygiène, observation directe**."
+    },
+    {
+     "type": "zone",
+     "document": "educ",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit ce qui fait avancer Gargantua chez Ponocrates.",
+     "aide": "C’est la ligne « Le ressort ».",
+     "explication": "Chez Ponocrates, le ressort est l’**apprentissage par le plaisir** ; chez les sorbonnards, c’est la contrainte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : est-ce un procédé du rire ou une cible de la satire ?",
+     "categories": [
+      "Procédé du rire",
+      "Cible de la satire"
+     ],
+     "items": [
+      [
+       "Les énumérations vertigineuses",
+       0
+      ],
+      [
+       "Les noms parlants",
+       0
+      ],
+      [
+       "Le latin de cuisine",
+       0
+      ],
+      [
+       "La scolastique",
+       1
+      ],
+      [
+       "La guerre de conquête",
+       1
+      ],
+      [
+       "La religion formaliste",
+       1
+      ]
+     ],
+     "aide": "Un procédé est une façon de faire rire ; une cible est ce dont on se moque.",
+     "explication": "Énumérations, noms parlants, latin de cuisine **font rire** ; la scolastique, la guerre de conquête et la religion formaliste sont **visées**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion le cours appuie-t-il sur le rire de Rabelais ?",
+     "options": [
+      "C’est une méthode : il désacralise l’autorité et rend le savoir joyeux",
+      "C’est un simple divertissement sans portée, destiné à faire passer le temps",
+      "C’est une pause entre deux passages sérieux",
+      "C’est un moyen de cacher la vérité au lecteur"
+     ],
+     "reponse": 0,
+     "aide": "Les trois autres réponses font du rire un ornement.",
+     "explication": "Le rire est une **méthode** : il **désacralise** l’autorité, la scolastique, la guerre de conquête, et rend le savoir humaniste **joyeux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7519845-d929-557e-b605-5bf2f238560a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le programme de Ponocrates",
+   "competence": "lire-tableau",
+   "situation": "Pour ton oral, tu notes ce que le programme de Ponocrates met à la place de l’éducation des sorbonnards.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "tableau",
+     "titre": "Contre quoi, pour quoi",
+     "colonnes": [
+      "Contre quoi",
+      "Ce que propose Ponocrates"
+     ],
+     "lignes": [
+      [
+       "L’apprentissage par cœur",
+       "L’observation"
+      ],
+      [
+       "Le mépris du corps",
+       "La gymnastique et la natation"
+      ],
+      [
+       "Le latin scolastique",
+       "Les langues anciennes lues dans le texte"
+      ],
+      [
+       "La répétition",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit ce que Ponocrates propose contre le mépris du corps.",
+     "aide": "Repère la ligne « Le mépris du corps ».",
+     "explication": "Contre le mépris du corps, il propose la **gymnastique** et la **natation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La conversation et le commentaire",
+      "La récitation à voix haute en classe",
+      "Le silence et la copie",
+      "Les listes à apprendre"
+     ],
+     "reponse": 0,
+     "aide": "Que met-on à la place d’une leçon qu’on répète sans la discuter ?",
+     "explication": "À la répétition, Ponocrates oppose la **conversation** et le **commentaire**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur l’idéal du programme.",
+     "texte": "C’est le rêve humaniste : l’homme ___, savant et ___, capable de juger par ___.",
+     "reponses": [
+      [
+       "complet"
+      ],
+      [
+       "sain"
+      ],
+      [
+       "lui-même",
+       "lui même"
+      ]
+     ],
+     "banque": [
+      "complet",
+      "sain",
+      "lui-même",
+      "docile",
+      "obéissant",
+      "les autres"
+     ],
+     "aide": "Le tableau mêle l’esprit (observation, langues) et le corps (gymnastique).",
+     "explication": "L’idéal est l’homme **complet**, savant et **sain**, capable de juger par **lui-même**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7519845-d929-557e-b605-5bf2f238560a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Se moquer pour dénoncer",
+   "competence": "analyser-texte",
+   "situation": "La satire de Rabelais vise des cibles précises. Lis deux scènes écrites pour l’exercice, à sa manière, et repère comment elles fonctionnent.",
+   "documents": [
+    {
+     "id": "docteur",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le docteur et les cloches",
+     "blocs": [
+      {
+       "didascalie": "Un docteur de la Sorbonne, qui a beaucoup bu, réclame les cloches."
+      },
+      {
+       "personnage": "Le Docteur",
+       "replique": "Les cloches sont à nous, [[l|donc]] nous les voulons ; [[l|car]] sans cloches, pas de clocher, et sans clocher, pas de cloches."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Rabelais"
+    },
+    {
+     "id": "roi",
+     "type": "dialogue",
+     "titre": "Dans la tente du roi",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Un conseiller",
+       "emoji": "🧔",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Picrochole",
+       "emoji": "👑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Un conseiller",
+       "texte": "Sire, vous êtes si grand que le monde ne vous suffira pas."
+      },
+      {
+       "qui": "Picrochole",
+       "texte": "Alors [[p|partageons]] le monde ce soir, avant même la première bataille."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Rabelais"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "docteur",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche les deux petits mots qui font semblant de bâtir un raisonnement.",
+     "aide": "Cherche les mots qui annoncent une conséquence et une cause.",
+     "explication": "« **Donc** » et « **car** » imitent un raisonnement, mais le propos tourne en rond : c’est de la **fausse logique**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque cible de la satire à l’épisode qui la vise.",
+     "paires": [
+      [
+       "La Sorbonne et sa scolastique",
+       "Janotus de Bragmardo et son discours bourré de fausse logique"
+      ],
+      [
+       "La guerre de conquête",
+       "Picrochole partage le monde avant d’avoir gagné"
+      ],
+      [
+       "La religion formaliste",
+       "Les moines qui prient sans agir, face à Frère Jean"
+      ]
+     ],
+     "aide": "Le docteur de la scène est dans la première paire.",
+     "explication": "Janotus vise la **Sorbonne**, Picrochole la **guerre de conquête**, les moines qui prient sans agir la **religion formaliste**."
+    },
+    {
+     "type": "zone",
+     "document": "roi",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui montre la faute de Picrochole.",
+     "aide": "Il fait quelque chose de prématuré.",
+     "explication": "Picrochole veut **partager** le monde avant même d’avoir gagné une bataille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle jouent les conseillers de Picrochole ?",
+     "options": [
+      "Ils le flattent",
+      "Ils plaident pour la paix",
+      "Ils le détournent de la guerre",
+      "Ils dénoncent sa folie"
+     ],
+     "reponse": 0,
+     "aide": "Qui plaide pour la paix ? C’est un autre personnage.",
+     "explication": "Les conseillers **flattent** Picrochole ; c’est **Grandgousier** qui plaide pour la paix."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7519845-d929-557e-b605-5bf2f238560a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Thélème, utopie pour tous ?",
+   "competence": "argumenter",
+   "situation": "Le meilleur angle de dissertation sur Gargantua est peut-être Thélème. Écoute deux élèves, complète l’argument, puis range les pour et les contre.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat sur Thélème",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Karim",
+       "texte": "Thélème, c’est le paradis : « Fais ce que voudras », sans horloge et sans contrainte."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Pas pour tout le monde : il faut être « bien né » et « bien instruit ». La liberté y est le fruit de l’[[e|éducation]], pas un droit."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Thélème est une utopie élitiste",
+       "La liberté y est le fruit de l’éducation, pas un droit",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit, selon Léa, d’où vient la liberté à Thélème.",
+     "aide": "Léa oppose ce mot à « un droit ».",
+     "explication": "La liberté y est le fruit de l’**éducation** : les Thélémites sont « bien nés, bien instruits »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "L’entrée réservée à des gens « bien nés, bien instruits »",
+      "L’abbaye sans horloge ni aucune contrainte pour ses habitants",
+      "La mixité de l’abbaye",
+      "La beauté des bâtiments"
+     ],
+     "reponse": 0,
+     "aide": "Cherche ce qui prouve que la liberté n’est pas offerte à tous.",
+     "explication": "La **clause d’entrée** (« bien nés, bien instruits ») prouve que la liberté de Thélème est réservée à une élite."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait de Thélème : séduit-il, ou limite-t-il l’utopie ?",
+     "categories": [
+      "Ce qui séduit",
+      "Ce qui limite"
+     ],
+     "items": [
+      [
+       "Une abbaye mixte",
+       0
+      ],
+      [
+       "Pas d’horloge ni de contrainte",
+       0
+      ],
+      [
+       "Une abbaye riche et belle",
+       0
+      ],
+      [
+       "Réservée aux gens bien nés et bien instruits",
+       1
+      ],
+      [
+       "La liberté vient de l’éducation, pas d’un droit",
+       1
+      ]
+     ],
+     "aide": "Ce qui limite, ce sont les conditions posées à l’entrée.",
+     "explication": "Mixité, absence de contrainte et richesse **séduisent** ; la clause « bien nés, bien instruits » **limite** l’utopie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque question de dissertation à ce que l’œuvre permet.",
+     "paires": [
+      [
+       "Le rire empêche-t-il de penser ?",
+       "Rabelais tranche : il permet de penser"
+      ],
+      [
+       "Peut-on tout dire en riant ?",
+       "Il a été censuré, mais le rire l’a aussi protégé"
+      ],
+      [
+       "Faut-il chercher un sens caché à toute œuvre comique ?",
+       "Le prologue pose la question et la laisse ouverte"
+      ]
+     ],
+     "aide": "Reprends le prologue et la thèse du livre.",
+     "explication": "Le rire **permet de penser** ; il a été **censuré mais protégé** par le rire ; le prologue **laisse ouverte** la question du sens caché."
+    }
+   ]
+  },
+  {
+   "chapitre": "956e7f5a-1592-5ce3-b2cc-a2e81d96916e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une traduction qui devient un chef-d’œuvre",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes La Bruyère à la classe : place son livre dans sa vie, puis retiens sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Bruyère et son siècle",
+     "debut": 1640,
+     "fin": 1700,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1645,
+       "nom": "Naissance de La Bruyère"
+      },
+      {
+       "id": "roi",
+       "date": 1661,
+       "nom": "Louis XIV gouverne seul"
+      },
+      {
+       "id": "car",
+       "date": 1688,
+       "nom": "Les Caractères"
+      },
+      {
+       "id": "mort",
+       "date": 1696,
+       "nom": "Mort de l’auteur"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Caractères",
+     "sousTitre": "Jean de La Bruyère",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Titre complet",
+       "valeur": "Les Caractères ou les Mœurs de ce siècle"
+      },
+      {
+       "texte": "Au départ",
+       "valeur": "Une traduction de Théophraste"
+      },
+      {
+       "texte": "Au programme",
+       "valeur": "Les livres V à X"
+      },
+      {
+       "texte": "Parcours",
+       "valeur": "La comédie sociale"
+      }
+     ],
+     "pied": "Fiche rédigée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "car"
+     ],
+     "enonce": "Touche l’année où paraissent Les Caractères.",
+     "aide": "Cherche le titre de l’œuvre sur la frise.",
+     "explication": "Les Caractères paraissent en **1688**, sous le règne de Louis XIV."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication des Caractères de la mort de leur auteur ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Lis les deux dates et soustrais.",
+     "explication": "1696 − 1688 = **8 ans** : l’œuvre a été augmentée jusqu’en 1696."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Le programme retient les livres ___ à ___ ; l’œuvre se présente d’abord comme la traduction de ___.",
+     "reponses": [
+      [
+       "V",
+       "5"
+      ],
+      [
+       "X",
+       "10"
+      ],
+      [
+       "Théophraste",
+       "Theophraste"
+      ]
+     ],
+     "banque": [
+      "V",
+      "X",
+      "Théophraste",
+      "Molière",
+      "I"
+     ],
+     "aide": "Tout est dans les lignes « Au programme » et « Au départ ».",
+     "explication": "Le programme va du livre **V** au livre **X** ; l’œuvre est d’abord une traduction de **Théophraste**."
+    }
+   ]
+  },
+  {
+   "chapitre": "956e7f5a-1592-5ce3-b2cc-a2e81d96916e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Six livres, six cibles",
+   "competence": "lire-tableau",
+   "situation": "Tu dois dire en une phrase l’objet de chacun des livres au programme. Lis le tableau, complète-le, puis ancre chaque livre à sa remarque célèbre.",
+   "documents": [
+    {
+     "id": "livres",
+     "type": "tableau",
+     "titre": "Les livres V à X",
+     "colonnes": [
+      "Livre",
+      "Son objet"
+     ],
+     "lignes": [
+      [
+       "V. De la société et de la conversation",
+       "Les fâcheux, les bavards, les vaniteux du langage"
+      ],
+      [
+       "VI. Des biens de fortune",
+       "L’argent, les partisans, les financiers enrichis"
+      ],
+      [
+       "VII. De la ville",
+       "?"
+      ],
+      [
+       "VIII. De la cour",
+       "Un pays étranger aux mœurs codées"
+      ],
+      [
+       "IX. Des grands",
+       "Les puissants : leur mépris, leur inutilité"
+      ],
+      [
+       "X. Du souverain ou de la république",
+       "Le pouvoir, la guerre : le bon prince, berger de son peuple"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour le livre VII ?",
+     "options": [
+      "La bourgeoisie qui singe la cour",
+      "Le souverain et la guerre",
+      "Les puissants et leur mépris",
+      "Les vaniteux du langage"
+     ],
+     "reponse": 0,
+     "aide": "La ville est ce qui vient juste après les biens de fortune, et juste avant la cour.",
+     "explication": "Le livre « De la ville » peint la **bourgeoisie qui singe la cour**."
+    },
+    {
+     "type": "zone",
+     "document": "livres",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui parle de l’argent et des financiers enrichis.",
+     "aide": "C’est le livre « Des biens de fortune ».",
+     "explication": "Le livre VI traite de l’**argent**, des partisans et des **financiers enrichis**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque livre à ce qu’on y retient.",
+     "paires": [
+      [
+       "VI. Des biens de fortune",
+       "Giton le riche et Phédon le pauvre"
+      ],
+      [
+       "VIII. De la cour",
+       "« La cour ne rend pas content ; elle empêche qu’on ne le soit ailleurs »"
+      ],
+      [
+       "V. De la société et de la conversation",
+       "La parole comme parade"
+      ]
+     ],
+     "aide": "Chaque livre a sa remarque ou son portrait emblématique.",
+     "explication": "Le livre VI met en scène **Giton et Phédon** ; le livre VIII, la formule sur la **cour** ; le livre V, la **parole comme parade**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces livres : sont-ils au programme ou hors programme ?",
+     "categories": [
+      "Au programme",
+      "Hors programme"
+     ],
+     "items": [
+      [
+       "Livre V",
+       0
+      ],
+      [
+       "Livre VIII",
+       0
+      ],
+      [
+       "Livre X",
+       0
+      ],
+      [
+       "Livre IV",
+       1
+      ],
+      [
+       "Livre XI",
+       1
+      ]
+     ],
+     "aide": "Le tableau commence au livre V et s’arrête au livre X.",
+     "explication": "Le programme retient les livres **V à X** ; les livres IV et XI sont **hors programme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "956e7f5a-1592-5ce3-b2cc-a2e81d96916e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un portrait sans démonstration",
+   "competence": "analyser-texte",
+   "situation": "Sujet : « Comment La Bruyère fait-il la comédie sociale ? » Lis deux portraits écrits à sa manière, puis dégage sa méthode.",
+   "documents": [
+    {
+     "id": "portraits",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux portraits",
+     "blocs": [
+      "Cléon occupe tout le fauteuil. Il parle [[v|haut]], rit le premier de ses propres mots et ne regarde personne en face.",
+      "Damon se tient près de la porte, dans un habit usé : il [[v|baisse]] la voix, s’efface et laisse passer les autres."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de La Bruyère"
+    },
+    {
+     "id": "formes",
+     "type": "tableau",
+     "titre": "Les formes des Caractères",
+     "colonnes": [
+      "Forme employée",
+      "Son usage"
+     ],
+     "lignes": [
+      [
+       "La maxime brève",
+       "Frapper"
+      ],
+      [
+       "Le portrait",
+       "Montrer"
+      ],
+      [
+       "Le dialogue, l’anecdote",
+       "?"
+      ],
+      [
+       "La réflexion d’une page",
+       "Développer"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau rédigé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "portraits",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux mots qui montrent, par la voix, la condition de chaque homme.",
+     "aide": "Un homme élève la voix, l’autre l’abaisse.",
+     "explication": "« **Haut** » pour le riche sûr de lui, « **baisse** » pour le pauvre qui s’efface : la voix trahit la condition."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Faire entendre",
+      "Démontrer une thèse",
+      "Résumer",
+      "Conclure"
+     ],
+     "reponse": 0,
+     "aide": "Le dialogue et l’anecdote donnent à entendre une parole.",
+     "explication": "Le dialogue et l’anecdote servent à **faire entendre**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : La Bruyère montre-t-il, ou démontre-t-il ?",
+     "categories": [
+      "Il montre",
+      "Il démontre"
+     ],
+     "items": [
+      [
+       "Un geste suffit à faire un caractère",
+       0
+      ],
+      [
+       "Un vêtement parle de la condition sociale",
+       0
+      ],
+      [
+       "Une manière de parler fait un portrait",
+       0
+      ],
+      [
+       "Une thèse prouvée par un raisonnement suivi",
+       1
+      ],
+      [
+       "Un enchaînement d’arguments et de conclusions",
+       1
+      ]
+     ],
+     "aide": "La Bruyère montre au lieu de démontrer.",
+     "explication": "Il **montre** : un geste, un vêtement, une manière de parler. Il ne **démontre** pas par raisonnement suivi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation les portraits appuient-ils le mieux ?",
+     "options": [
+      "Le corps, la voix et les manières trahissent la condition sociale",
+      "La Bruyère démontre par un raisonnement suivi que les riches sont mauvais",
+      "La Bruyère raconte une histoire suivie avec des personnages qui évoluent",
+      "La Bruyère traduit fidèlement les caractères de Théophraste"
+     ],
+     "reponse": 0,
+     "aide": "Reprends ce que dit « haut » et « baisse ».",
+     "explication": "Le portrait **montre** que le corps, la voix et les manières trahissent la **condition sociale** : c’est toute la comédie sociale."
+    }
+   ]
+  }
+ ]
+}

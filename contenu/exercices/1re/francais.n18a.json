@@ -1,0 +1,2290 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "390b6253-58bd-5f32-af56-498089298f2b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du film de 1952 à L’Eau des collines",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Manon des sources* pour ton cours. Place l’œuvre dans la vie de Pagnol, puis remplis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Marcel Pagnol et son histoire",
+     "debut": 1890,
+     "fin": 1980,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1895,
+       "nom": "Naissance"
+      },
+      {
+       "id": "film",
+       "date": 1952,
+       "nom": "Le film"
+      },
+      {
+       "id": "eau",
+       "date": 1963,
+       "nom": "L’Eau des collines"
+      },
+      {
+       "id": "mort",
+       "date": 1974,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Manon des sources",
+     "sousTitre": "Marcel Pagnol",
+     "emoji": "💧",
+     "lignes": [
+      {
+       "texte": "Place dans le cycle",
+       "valeur": "Second volume de L’Eau des collines"
+      },
+      {
+       "texte": "Fait suite à",
+       "valeur": "?"
+      },
+      {
+       "texte": "Décor",
+       "valeur": "Les collines de Provence"
+      },
+      {
+       "texte": "Héroïne",
+       "valeur": "Manon, bergère"
+      }
+     ],
+     "pied": "Histoire d’abord tournée au cinéma",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "film"
+     ],
+     "enonce": "Sur la frise, touche l’année où Pagnol tourne d’abord l’histoire au cinéma.",
+     "aide": "Cherche l’événement qui précède les deux romans.",
+     "explication": "Pagnol tourne d’abord *Manon des sources* au cinéma en **1952**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le film de 1952 de la réunion des deux romans sous le titre *L’Eau des collines* ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1963 − 1952 = **11 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité de l’œuvre.",
+     "texte": "*Manon des sources* est le ___ volume de *L’Eau des collines* ; il fait suite à ___, dans les ___ de Provence.",
+     "reponses": [
+      [
+       "second",
+       "deuxième"
+      ],
+      [
+       "Jean de Florette"
+      ],
+      [
+       "collines"
+      ]
+     ],
+     "banque": [
+      "second",
+      "premier",
+      "Jean de Florette",
+      "Marius",
+      "collines",
+      "plaines"
+     ],
+     "aide": "Les lignes de la carte te donnent presque tout.",
+     "explication": "C’est le **second** volume, qui fait suite à ***Jean de Florette***, dans les **collines** de Provence."
+    }
+   ]
+  },
+  {
+   "chapitre": "390b6253-58bd-5f32-af56-498089298f2b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand la vengeance se retourne",
+   "competence": "analyser-texte",
+   "situation": "Manon a découvert la vérité sur la mort de son père. Suis les étapes de sa vengeance, puis ce qui frappe les coupables.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La vengeance de Manon",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Manon, bergère, découvre la source des Bastides"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle obstrue la source du village"
+      },
+      {
+       "id": "n3",
+       "texte": "Ugolin, repoussé, se pend"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Le Papet meurt en léguant tout à Manon"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "puni",
+     "type": "tableau",
+     "titre": "Qui est puni, et comment ?",
+     "colonnes": [
+      "Qui",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "Le Papet",
+       "Par la révélation"
+      ],
+      [
+       "Le village, complice par son silence",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "La vieille Delphine révèle au Papet que Jean de Florette était son fils",
+      "Manon épouse l’instituteur et quitte aussitôt le village pour la ville",
+      "Le village découvre que Manon a bouché sa propre source par erreur",
+      "Ugolin avoue au village le crime commis contre Jean de Florette"
+     ],
+     "reponse": 0,
+     "aide": "Le Papet doit apprendre quelque chose avant de mourir.",
+     "explication": "Delphine révèle que **Jean de Florette était le fils du Papet** : il a tué son enfant sans le savoir."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où la vengeance de Manon commence à frapper tout le village.",
+     "aide": "Les fontaines se tarissent.",
+     "explication": "Elle **obstrue la source du village** : c’est le début de la punition collective."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit le tableau sur le sort des coupables.",
+     "texte": "Le Papet est puni par la ___ ; le village, complice par son ___, l’est collectivement par la ___.",
+     "reponses": [
+      [
+       "révélation"
+      ],
+      [
+       "silence"
+      ],
+      [
+       "soif"
+      ]
+     ],
+     "banque": [
+      "révélation",
+      "silence",
+      "soif",
+      "violence",
+      "fuite"
+     ],
+     "aide": "Relis le tableau, ligne par ligne.",
+     "explication": "Le Papet est puni par la **révélation**, le village (complice par son **silence**) par la **soif**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui lui arrive.",
+     "paires": [
+      [
+       "Ugolin",
+       "Repoussé par Manon, il se pend"
+      ],
+      [
+       "Delphine",
+       "Elle apprend au Papet qui était Jean de Florette"
+      ],
+      [
+       "Le Papet",
+       "Il meurt peu après, léguant tout à Manon"
+      ],
+      [
+       "Bernard, l’instituteur",
+       "L’homme juste que Manon épouse"
+      ]
+     ],
+     "aide": "Chacun a un rôle précis dans le dénouement.",
+     "explication": "**Ugolin** se pend, **Delphine** révèle, le **Papet** lègue tout à Manon, **Bernard** est l’homme juste qu’elle épouse."
+    }
+   ]
+  },
+  {
+   "chapitre": "390b6253-58bd-5f32-af56-498089298f2b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un village qui se tait",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le rôle du village. Lis le débat et une scène écrite pour l’exercice, puis tranche pour ta dissertation sur le tragique.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Le village ne sert que de décor : le seul coupable, c’est le Papet."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non : tous savaient qu’il se passait quelque chose et personne n’a parlé. C’est un chœur complice."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Alors la soif qui le frappe est méritée ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "C’est la logique de la tragédie : le crime revient sur son auteur par un chemin qu’il n’avait pas prévu."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la place",
+     "blocs": [
+      "La fontaine ne donne plus qu’un filet de boue. Les femmes attendent, les hommes se regardent. On parle de processions, on parle de la sécheresse, mais personne ne parle de la source bouchée autrefois. Chacun garde le [[s|silence]]."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marcel Pagnol"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit la faute commune des villageois.",
+     "aide": "Ils savent, et ils ne disent rien.",
+     "explication": "Le **silence** des villageois fait d’eux des complices."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique du débat le cours du chapitre appuie-t-il ?",
+     "options": [
+      "Le village est un chœur complice par son silence",
+      "Le village est un décor sans rôle dans le drame",
+      "Le village est l’unique responsable de la mort de Jean",
+      "Le village sauve Manon en lui apportant de l’eau"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le mot que le cours emploie pour le village.",
+     "explication": "Le cours fait du village un **chœur complice par son silence**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : marque du tragique, ou marque du silence collectif et des préjugés ?",
+     "categories": [
+      "Le tragique",
+      "Silence et préjugés"
+     ],
+     "items": [
+      [
+       "Le crime revient sur son auteur par un chemin imprévu",
+       0
+      ],
+      [
+       "Le Papet comprend trop tard sa perte",
+       0
+      ],
+      [
+       "Le village laisse faire sans parler",
+       1
+      ],
+      [
+       "Le mépris du village pour l’étranger",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : agit-il sur un destin, ou sur un groupe ?",
+     "explication": "La **fatalité** et la **révélation** relèvent du tragique ; le **silence** du village et le **mépris de l’étranger** sont ceux de la collectivité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui sauve la fin du livre du « pur noir » ?",
+     "options": [
+      "Manon épouse l’instituteur : la vengeance ne l’enferme pas",
+      "Le Papet rend la source au village avant de mourir",
+      "Ugolin survit et reconstruit la ferme avec Manon",
+      "Le village obtient le pardon de Manon sans le demander"
+     ],
+     "reponse": 0,
+     "aide": "Pense au dernier destin de Manon.",
+     "explication": "**Manon épouse l’instituteur** : la vengeance ne l’enferme pas, c’est la nuance qui sauve le livre."
+    }
+   ]
+  },
+  {
+   "chapitre": "10942aed-d4db-5eb1-b6b9-7757fe86d309",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui dans le roman de Prévost",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ton oral sur *Manon Lescaut*. Retrouve les personnages, puis les dates de publication.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Des Grieux",
+       "Le narrateur, fils de bonne famille qui déchoit par amour"
+      ],
+      [
+       "Manon",
+       "Charmante, légère, aimant le plaisir et l’argent"
+      ],
+      [
+       "Lescaut",
+       "Le frère de Manon, joueur et profiteur"
+      ],
+      [
+       "?",
+       "L’ami fidèle, voix de la morale"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Manon Lescaut",
+     "sousTitre": "Abbé Prévost",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Antoine François Prévost (1697-1763)"
+      },
+      {
+       "texte": "Première parution",
+       "valeur": "1731, tome VII des Mémoires et aventures d’un homme de qualité"
+      },
+      {
+       "texte": "Version corrigée",
+       "valeur": "1753"
+      },
+      {
+       "texte": "Narrateur premier",
+       "valeur": "Renoncour"
+      }
+     ],
+     "pied": "Roman saisi pour immoralité",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le personnage qui est le frère de Manon.",
+     "aide": "Il est joueur et profiteur.",
+     "explication": "**Lescaut** est le frère de Manon, joueur et profiteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Tiberge",
+      "Synnelet",
+      "Renoncour",
+      "Lescaut"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’ami qui incarne la morale.",
+     "explication": "**Tiberge** est l’ami fidèle, la voix de la morale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la première parution de la version corrigée ?",
+     "reponse": 22,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur l’affiche.",
+     "explication": "1753 − 1731 = **22 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "10942aed-d4db-5eb1-b6b9-7757fe86d309",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la fuite d’Amiens au désert de Louisiane",
+   "competence": "se-reperer-temps",
+   "situation": "Des Grieux raconte sa vie à Renoncour. Suis les grandes étapes de son récit, du coup de foudre à la mort de Manon.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le récit de Des Grieux",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Amiens : la rencontre, puis la fuite avec Manon"
+      },
+      {
+       "id": "n2",
+       "texte": "Paris : la misère, puis la trahison"
+      },
+      {
+       "id": "n3",
+       "texte": "Saint-Sulpice : la rechute le jour de la thèse"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "La Louisiane : Manon meurt dans le désert"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Saint-Lazare pour lui, l’Hôpital pour elle, puis l’évasion",
+      "Un mariage béni à Amiens avec l’accord de son père",
+      "Un retour paisible en famille, loin de Manon et de Lescaut",
+      "Une carrière brillante à la Sorbonne après sa thèse"
+     ],
+     "reponse": 0,
+     "aide": "Entre la rechute et l’exil, ils sont enfermés.",
+     "explication": "**Saint-Lazare** pour lui, l’**Hôpital** pour elle, puis l’**évasion**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Des Grieux, revenu à la religion, retombe.",
+     "aide": "Cherche la thèse en Sorbonne.",
+     "explication": "Il rechute **le jour de sa thèse**, quand Manon reparaît."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à ce qui s’y passe.",
+     "paires": [
+      [
+       "Amiens",
+       "Il rencontre Manon, qu’on envoie au couvent"
+      ],
+      [
+       "Saint-Sulpice",
+       "Le retour à la religion, vite compromis"
+      ],
+      [
+       "Saint-Lazare et l’Hôpital",
+       "Des Grieux et Manon y sont enfermés"
+      ],
+      [
+       "La Louisiane",
+       "Manon déportée ; elle meurt dans le désert"
+      ]
+     ],
+     "aide": "Chaque lieu marque un moment du récit.",
+     "explication": "**Amiens** : la rencontre ; **Saint-Sulpice** : la religion ; **Saint-Lazare et l’Hôpital** : l’enfermement ; **Louisiane** : l’exil et la mort."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi n’entend-on jamais les pensées de Manon ?",
+     "options": [
+      "Tout le roman est la parole de Des Grieux, après coup",
+      "Manon ne parle jamais dans le roman, par choix de l’auteur",
+      "Renoncour a refusé de recueillir ce que Manon disait",
+      "Manon cache ses pensées à tous, même au narrateur"
+     ],
+     "reponse": 0,
+     "aide": "Qui raconte, et quand ?",
+     "explication": "C’est le **récit de Des Grieux**, fait après coup : Manon n’est jamais analysée de l’intérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "10942aed-d4db-5eb1-b6b9-7757fe86d309",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un narrateur qui plaide sa cause",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Manon est-elle seule coupable ? Lis leur échange et la phrase de Des Grieux près de la fin, puis construis ta réponse.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "Manon est seule responsable : elle trahit, elle aime l’argent."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Mais on ne la voit que par Des Grieux, qui raconte après coup et se justifie."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Donc le roman nous demande de juger moins vite ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Il nous demande de comprendre plus que de juger."
+      }
+     ]
+    },
+    {
+     "id": "citation",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les mots du narrateur",
+     "blocs": [
+      "Pardonnez si j’achève en peu de mots un récit qui me [[t|tue]]."
+     ],
+     "source": "Abbé Prévost, *Manon Lescaut* (1731), fin du récit de Des Grieux, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "citation",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit ce que ce récit fait à celui qui le raconte.",
+     "aide": "Raconter lui coûte cher.",
+     "explication": "Le récit le **tue** : Des Grieux souffre en racontant la mort de Manon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle remarque du cours appuie la réplique de Théo ?",
+     "options": [
+      "Le narrateur se justifie autant qu’il raconte",
+      "Le narrateur n’intervient jamais dans le récit",
+      "Le narrateur est un témoin neutre des événements",
+      "Le narrateur ne connaît Manon que par Renoncour"
+     ],
+     "reponse": 0,
+     "aide": "Théo parle de justification.",
+     "explication": "Le cours note que le narrateur **se justifie autant qu’il raconte**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : ce que le dispositif du récit implique, ou ce que le rythme produit ?",
+     "categories": [
+      "Le dispositif",
+      "Le rythme"
+     ],
+     "items": [
+      [
+       "Manon n’est jamais analysée de l’intérieur",
+       0
+      ],
+      [
+       "Le narrateur se justifie autant qu’il raconte",
+       0
+      ],
+      [
+       "Évasions, duels, larmes et exil s’enchaînent",
+       1
+      ],
+      [
+       "Le lecteur n’a jamais le temps de juger",
+       1
+      ]
+     ],
+     "aide": "Un trait vient de qui raconte ; l’autre de la vitesse du récit.",
+     "explication": "Le **dispositif** (la parole de Des Grieux) explique les deux premiers ; l’**accélération constante** explique les deux autres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle question de dissertation ce roman permet-il d’aborder ?",
+     "options": [
+      "La passion est-elle une fatalité ou une faute ?",
+      "L’argent corrompt-il toujours les sentiments sincères ?",
+      "Un roman doit-il rester fidèle à la réalité historique ?",
+      "La religion peut-elle réformer les mœurs d’une société ?"
+     ],
+     "reponse": 0,
+     "aide": "Le cours donne la question en tête de la partie « dissertation ».",
+     "explication": "Le cours pose la question de la **passion : fatalité ou faute ?**"
+    }
+   ]
+  },
+  {
+   "chapitre": "c3ad46b9-7ede-549d-bc94-6750cccc9b1c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil, deux dates, un deuil",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes les *Méditations poétiques* dans la vie de Lamartine. Lis la frise et la carte d’identité du recueil.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Lamartine et Julie Charles",
+     "debut": 1790,
+     "fin": 1870,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1790,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rencontre",
+       "date": 1816,
+       "nom": "Rencontre"
+      },
+      {
+       "id": "mort",
+       "date": 1817,
+       "nom": "Mort de Julie"
+      },
+      {
+       "id": "recueil",
+       "date": 1820,
+       "nom": "Le recueil"
+      },
+      {
+       "id": "min",
+       "date": 1848,
+       "nom": "Ministre"
+      },
+      {
+       "id": "dec",
+       "date": 1869,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Méditations poétiques",
+     "sousTitre": "Alphonse de Lamartine",
+     "emoji": "🌊",
+     "lignes": [
+      {
+       "texte": "Nombre de poèmes",
+       "valeur": "Vingt-quatre"
+      },
+      {
+       "texte": "Succès",
+       "valeur": "Immédiat et considérable"
+      },
+      {
+       "texte": "Poème le plus célèbre",
+       "valeur": "?"
+      },
+      {
+       "texte": "Poème sur l’être qui manque",
+       "valeur": "« L’Isolement »"
+      }
+     ],
+     "pied": "Acte de naissance du romantisme en poésie",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "recueil"
+     ],
+     "enonce": "Touche l’année de publication du recueil.",
+     "aide": "Lamartine a alors vingt-neuf ans.",
+     "explication": "Le recueil paraît en **1820**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la mort de Julie Charles et la publication du recueil ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Repère deux dates sur la frise.",
+     "explication": "1820 − 1817 = **3 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du recueil.",
+     "texte": "Le recueil compte ___ poèmes ; le plus célèbre est « ___ ».",
+     "reponses": [
+      [
+       "vingt-quatre",
+       "24"
+      ],
+      [
+       "Le Lac",
+       "Lac"
+      ]
+     ],
+     "banque": [
+      "vingt-quatre",
+      "douze",
+      "Le Lac",
+      "Le Vallon",
+      "L’Automne"
+     ],
+     "aide": "Une ligne de la fiche donne le nombre ; le poème, c’est le plus célèbre du recueil.",
+     "explication": "Le recueil compte **vingt-quatre** poèmes ; le plus célèbre est « **Le Lac** »."
+    }
+   ]
+  },
+  {
+   "chapitre": "c3ad46b9-7ede-549d-bc94-6750cccc9b1c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’Aix-les-Bains au lac du Bourget",
+   "competence": "se-reperer-temps",
+   "situation": "Le deuil de Julie Charles nourrit tout le recueil. Suis leur histoire, puis retrouve ce que portent les poèmes.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Lamartine et Julie",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "1816 : ils se rencontrent à Aix-les-Bains"
+      },
+      {
+       "id": "n2",
+       "texte": "Ils se promettent de se revoir au bord du lac"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Elle meurt en décembre 1817"
+      },
+      {
+       "id": "n5",
+       "texte": "Le deuil nourrit tout le recueil"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "poemes",
+     "type": "tableau",
+     "titre": "Les poèmes",
+     "colonnes": [
+      "Poème",
+      "Ce qu’il porte"
+     ],
+     "lignes": [
+      [
+       "« Le Lac »",
+       "Le poète revenu seul au bord du lac du Bourget s’adresse à la nature et au temps"
+      ],
+      [
+       "« L’Isolement »",
+       "« Un seul être vous manque, et tout est dépeuplé »"
+      ],
+      [
+       "« Le Vallon », « L’Automne », « Le Golfe de Baya »",
+       "La méditation, la mort, la mémoire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Julie, trop malade, ne vient pas",
+      "Julie arrive la première au lac",
+      "Lamartine renonce au rendez-vous",
+      "Lamartine s’installe à Aix-les-Bains"
+     ],
+     "reponse": 0,
+     "aide": "Elle meurt peu après, de la poitrine.",
+     "explication": "Julie, **trop malade, ne vient pas** au rendez-vous."
+    },
+    {
+     "type": "zone",
+     "document": "poemes",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la ligne qui regroupe trois poèmes sur la méditation, la mort et la mémoire.",
+     "aide": "C’est la dernière ligne du tableau.",
+     "explication": "Ces trois poèmes sont « Le Vallon », « L’Automne » et « Le Golfe de Baya »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du recueil à ce qu’il désigne.",
+     "paires": [
+      [
+       "Elvire",
+       "Julie Charles, la femme aimée et morte"
+      ],
+      [
+       "« Le Lac »",
+       "Le lac du Bourget, revu seul"
+      ],
+      [
+       "« L’Isolement »",
+       "Le vide laissé par un seul être"
+      ],
+      [
+       "Aix-les-Bains",
+       "Le lieu de la rencontre en 1816"
+      ]
+     ],
+     "aide": "Tout vient du deuil de Julie.",
+     "explication": "**Elvire** est le nom donné à Julie Charles ; les autres éléments disent le lieu, le vide, la rencontre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le récit du deuil.",
+     "texte": "Julie Charles meurt en ___ 1817 sans avoir revu le poète au bord du ___.",
+     "reponses": [
+      [
+       "décembre"
+      ],
+      [
+       "lac"
+      ]
+     ],
+     "banque": [
+      "décembre",
+      "juin",
+      "lac",
+      "vallon",
+      "golfe"
+     ],
+     "aide": "Relis la chaîne.",
+     "explication": "Julie meurt en **décembre** 1817 sans retrouver le poète au bord du **lac**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c3ad46b9-7ede-549d-bc94-6750cccc9b1c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le poète parle-t-il de lui seul ?",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves ne s’accordent pas sur le « je » de Lamartine. Lis leur débat et deux vers authentiques du recueil, puis argumente.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Lamartine ne parle que de lui : ce n’est pas universel."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Pourtant il s’adresse au temps lui-même, comme à quelqu’un."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors la sincérité du poète touche tout le monde ?"
+      },
+      {
+       "qui": "Malo",
+       "texte": "C’est la question à poser : parle-t-il de lui ou de tous ?"
+      }
+     ]
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Deux vers du « Lac »",
+     "blocs": [
+      "Ô [[a|temps]] ! suspends ton vol, et vous, [[a|heures]] propices !",
+      "Suspendez votre cours !"
+     ],
+     "source": "Alphonse de Lamartine, « Le Lac », *Méditations poétiques* (1820)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux noms à qui le poète s’adresse.",
+     "aide": "Il parle à ce qui passe.",
+     "explication": "Le poète s’adresse au **temps** et aux **heures** : une apostrophe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse du cours soutient la réplique de Malo ?",
+     "options": [
+      "Il s’adresse au temps : l’apostrophe donne un ton universel",
+      "Il parle à un ami précis dont il cache le nom",
+      "Il décrit seulement un paysage sans parler de lui",
+      "Il imite un poète antique en gardant un masque mythologique"
+     ],
+     "reponse": 0,
+     "aide": "Qui le poète interpelle-t-il dans les deux vers ?",
+     "explication": "Les **apostrophes** (« Ô temps ! ») sont un procédé que le cours signale à l’oral."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du recueil à son effet.",
+     "paires": [
+      [
+       "Les apostrophes (« Ô temps ! »)",
+       "Le poète parle au temps comme à une personne"
+      ],
+      [
+       "Le changement de mètre et de strophe",
+       "Julie « parle » : la morte reprend la voix"
+      ],
+      [
+       "La nature confidente",
+       "Elle console et dure quand l’homme passe"
+      ],
+      [
+       "Le « je » sans masque mythologique",
+       "Le poète s’expose directement"
+      ]
+     ],
+     "aide": "Chaque procédé est présenté dans le cours du chapitre.",
+     "explication": "Ce sont les **apostrophes**, le **changement de mètre**, la **nature confidente** et le **je** sans masque."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : ce qui est neuf, ou ce qui reste classique ?",
+     "categories": [
+      "Neuf",
+      "Classique"
+     ],
+     "items": [
+      [
+       "Le « je » qui s’expose directement",
+       0
+      ],
+      [
+       "La nature miroir de l’âme",
+       0
+      ],
+      [
+       "Les alexandrins",
+       1
+      ],
+      [
+       "Les strophes régulières",
+       1
+      ]
+     ],
+     "aide": "Le cours distingue le fond du vers.",
+     "explication": "Le **je** et la **nature** sont neufs ; les **alexandrins** et les **strophes régulières** restent classiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "63c549f1-2086-5d02-9b74-fd76ba7ab4e1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un empereur, une écrivaine, trois dates",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Mémoires d’Hadrien*. Retrouve les personnages du livre, puis place Marguerite Yourcenar dans le temps.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Hadrien",
+       "Le narrateur, empereur cultivé, amoureux de la Grèce"
+      ],
+      [
+       "Trajan",
+       "Son prédécesseur, conquérant, dont il se distingue"
+      ],
+      [
+       "Plotine",
+       "L’épouse de Trajan, amie et protectrice d’Hadrien"
+      ],
+      [
+       "Antinoüs",
+       "?"
+      ],
+      [
+       "Marc Aurèle",
+       "Le destinataire, futur empereur philosophe"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Marguerite Yourcenar",
+     "debut": 1900,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1903,
+       "nom": "Naissance"
+      },
+      {
+       "id": "reprise",
+       "date": 1948,
+       "nom": "Reprise du livre"
+      },
+      {
+       "id": "pub",
+       "date": 1951,
+       "nom": "Parution"
+      },
+      {
+       "id": "acad",
+       "date": 1980,
+       "nom": "Académie"
+      },
+      {
+       "id": "mort",
+       "date": 1987,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution du livre.",
+     "aide": "Elle suit de près la reprise du manuscrit.",
+     "explication": "Le livre paraît en **1951**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du livre de l’entrée de Yourcenar à l’Académie française ?",
+     "reponse": 29,
+     "unite": "ans",
+     "aide": "Repère 1951 et 1980 sur la frise.",
+     "explication": "1980 − 1951 = **29 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour Antinoüs ?",
+     "options": [
+      "L’amour de sa vie, dont la mort le brise",
+      "Un général rival qui conteste le pouvoir d’Hadrien",
+      "Un philosophe grec qui lui enseigne la politique",
+      "Le fils adoptif de Trajan, héritier du trône"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle de la mort du jeune homme, noyé dans le Nil.",
+     "explication": "Antinoüs est l’**amour** de la vie d’Hadrien, dont la mort le brise."
+    }
+   ]
+  },
+  {
+   "chapitre": "63c549f1-2086-5d02-9b74-fd76ba7ab4e1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que fait l’empereur de son empire",
+   "competence": "analyser-texte",
+   "situation": "Lis un résumé écrit pour l’exercice, puis retrouve les actes d’Hadrien et sa fin.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’empereur à sa table",
+     "blocs": [
+      "Un vieil empereur, malade, prend la plume pour écrire à son petit-fils adoptif, Marc Aurèle. Il ne reprend pas les conquêtes de son prédécesseur Trajan : il [[f|consolide]] les [[f|frontières]], jusqu’au mur de Bretagne. Il restaure Athènes, fait bâtir la Villa Adriana et le Panthéon. Un jour, le jeune Antinoüs, qu’il aime, se noie dans le Nil."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après *Mémoires d’Hadrien* de Marguerite Yourcenar"
+    },
+    {
+     "id": "vie",
+     "type": "tableau",
+     "titre": "Étapes de la vie d’Hadrien",
+     "colonnes": [
+      "Étape",
+      "Ce qu’elle apporte"
+     ],
+     "lignes": [
+      [
+       "Sa politique",
+       "Il arrête l’expansion militaire et consolide les frontières"
+      ],
+      [
+       "Antinoüs",
+       "Jeune Bithynien noyé dans le Nil en 130"
+      ],
+      [
+       "La fin",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux mots qui disent ce qu’Hadrien fait de ses frontières, au lieu de conquérir.",
+     "aide": "Cherche un verbe et son complément.",
+     "explication": "Hadrien **consolide** les **frontières** au lieu d’étendre l’empire."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque réalisation ou épisode au lieu qu’il évoque.",
+     "paires": [
+      [
+       "Le mur",
+       "La Bretagne"
+      ],
+      [
+       "La restauration",
+       "Athènes"
+      ],
+      [
+       "La noyade d’Antinoüs",
+       "Le Nil"
+      ]
+     ],
+     "aide": "Chaque épisode du résumé a son lieu.",
+     "explication": "Le **mur** est en **Bretagne**, la **restauration** concerne **Athènes**, Antinoüs se noie dans le **Nil**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « La fin » ?",
+     "options": [
+      "La révolte juive, la maladie, la succession — et l’acceptation de la mort",
+      "Une nouvelle campagne militaire qui étend l’empire vers l’est",
+      "Un retour triomphal à Rome, couronné par le Sénat et le peuple",
+      "L’abdication d’Hadrien, qui part vivre en Grèce avec Antinoüs"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit qu’il accepte la mort.",
+     "explication": "La fin réunit la **révolte juive**, la **maladie**, la **succession** et l’**acceptation de la mort**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit le tableau sur Antinoüs.",
+     "texte": "Antinoüs, jeune ___, est noyé dans le ___ en ___.",
+     "reponses": [
+      [
+       "Bithynien"
+      ],
+      [
+       "Nil"
+      ],
+      [
+       "130"
+      ]
+     ],
+     "banque": [
+      "Bithynien",
+      "Nil",
+      "130",
+      "Tibre",
+      "Grec"
+     ],
+     "aide": "La ligne « Antinoüs » donne les trois réponses.",
+     "explication": "Antinoüs, jeune **Bithynien**, est noyé dans le **Nil** en **130**."
+    }
+   ]
+  },
+  {
+   "chapitre": "63c549f1-2086-5d02-9b74-fd76ba7ab4e1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dire « je » à la place d’un autre",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent du genre du livre. Lis leur échange et un court passage écrit pour l’exercice, à la manière de Yourcenar.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "C’est un roman historique : l’auteur raconte la vie d’Hadrien de l’extérieur."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Non : c’est Hadrien qui dit « je », dans une lettre. Elle écrit à la première personne la voix d’un autre."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Alors ce n’est pas seulement de l’histoire ?"
+      },
+      {
+       "qui": "Noé",
+       "texte": "C’est une méditation sur le pouvoir, le corps, l’art et la mort."
+      }
+     ]
+    },
+    {
+     "id": "passage",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Yourcenar",
+     "blocs": [
+      "J’ai longtemps cru que le pouvoir consistait à [[a|avancer]]. Je sais à présent qu’il consiste parfois à [[a|s’arrêter]] : tenir une frontière coûte moins de vies que la franchir. Chaque matin, je compte les jours qui me restent comme on compte les pierres d’un mur."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marguerite Yourcenar"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "passage",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux verbes que le narrateur oppose pour définir le pouvoir.",
+     "aide": "L’un est ce qu’il croyait, l’autre ce qu’il sait.",
+     "explication": "Il oppose **avancer** et **s’arrêter** : le pouvoir juste, c’est parfois la paix."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée du cours la réplique de Noé résume-t-elle ?",
+     "options": [
+      "L’écriture à la première personne d’un autre",
+      "Le journal intime d’une romancière sur son époque",
+      "Un traité d’histoire fondé sur des archives",
+      "Un récit d’aventures écrit à la troisième personne"
+     ],
+     "reponse": 0,
+     "aide": "Qui dit « je » dans le livre ?",
+     "explication": "Le cours parle du **roman historique** et de l’**écriture à la première personne** d’un autre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce qu’Hadrien fait de l’empire, ou ce qu’il subit ?",
+     "categories": [
+      "Ce qu’il fait",
+      "Ce qu’il subit"
+     ],
+     "items": [
+      [
+       "Arrêter l’expansion militaire",
+       0
+      ],
+      [
+       "Consolider les frontières",
+       0
+      ],
+      [
+       "Restaurer Athènes",
+       0
+      ],
+      [
+       "La mort d’Antinoüs",
+       1
+      ],
+      [
+       "La maladie",
+       1
+      ]
+     ],
+     "aide": "Un trait relève de sa décision, l’autre de ce qui lui arrive.",
+     "explication": "Il **arrête l’expansion**, **consolide** les frontières, **restaure** Athènes ; il **subit** la mort d’Antinoüs et la maladie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du livre à ce qu’il apporte.",
+     "paires": [
+      [
+       "Les *Carnets de notes*",
+       "Ils exposent la méthode : érudition d’un côté, magie de l’autre"
+      ],
+      [
+       "Les titres latins des six sections",
+       "Ils placent le livre dans la langue de Rome"
+      ],
+      [
+       "La forme de la lettre",
+       "Elle donne la parole à Hadrien, qui dit « je »"
+      ]
+     ],
+     "aide": "Chaque élément concerne la fabrication du livre.",
+     "explication": "Les **Carnets** disent la méthode, les **titres latins** la langue de Rome, la **lettre** la voix d’Hadrien."
+    }
+   ]
+  },
+  {
+   "chapitre": "457a1b65-6b49-53b7-8d9f-318a5bae7205",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une vie écrite pour après la mort",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes les *Mémoires d’outre-tombe* dans la vie de Chateaubriand. Lis la frise et la fiche de l’œuvre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Chateaubriand et son œuvre",
+     "debut": 1760,
+     "fin": 1850,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1768,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ame",
+       "date": 1791,
+       "nom": "Amérique"
+      },
+      {
+       "id": "mort",
+       "date": 1848,
+       "nom": "Mort"
+      },
+      {
+       "id": "pub",
+       "date": 1849,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Mémoires d’outre-tombe",
+     "sousTitre": "François-René de Chateaubriand",
+     "emoji": "🕰️",
+     "lignes": [
+      {
+       "texte": "Naissance",
+       "valeur": "Saint-Malo"
+      },
+      {
+       "texte": "Composition",
+       "valeur": "Plus de trente ans"
+      },
+      {
+       "texte": "Nombre de livres",
+       "valeur": "Quarante-deux"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "Après sa mort"
+      }
+     ],
+     "pied": "Œuvre de toute une existence",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ame"
+     ],
+     "enonce": "Touche l’année du voyage en Amérique.",
+     "aide": "Cherche l’événement de la jeunesse.",
+     "explication": "Le voyage en Amérique a lieu en **1791**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le voyage en Amérique de la mort de Chateaubriand ?",
+     "reponse": 57,
+     "unite": "ans",
+     "aide": "Repère 1791 et 1848.",
+     "explication": "1848 − 1791 = **57 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte de l’œuvre.",
+     "texte": "L’œuvre compte ___ livres, écrits sur plus de trente ans et publiés après la mort de l’auteur, en ___.",
+     "reponses": [
+      [
+       "quarante-deux",
+       "42"
+      ],
+      [
+       "1849",
+       "1850",
+       "1849-1850"
+      ]
+     ],
+     "banque": [
+      "quarante-deux",
+      "douze",
+      "1849",
+      "1831",
+      "1791"
+     ],
+     "aide": "La fiche donne le nombre ; la frise donne la date.",
+     "explication": "L’œuvre compte **quarante-deux** livres, publiés en **1849-1850**."
+    }
+   ]
+  },
+  {
+   "chapitre": "457a1b65-6b49-53b7-8d9f-318a5bae7205",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un siècle traversé",
+   "competence": "se-reperer-temps",
+   "situation": "Chateaubriand raconte son siècle autant que sa vie. Suis les grandes parties de l’œuvre.",
+   "documents": [
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Les grandes parties",
+     "colonnes": [
+      "Période",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "L’enfance en Bretagne",
+       "Le château de Combourg, le père taciturne, la sœur Lucile"
+      ],
+      [
+       "1791",
+       "Le voyage en Amérique"
+      ],
+      [
+       "L’émigration",
+       "?"
+      ],
+      [
+       "Le retour",
+       "Succès du *Génie du christianisme*, ambassade, rupture avec Napoléon"
+      ],
+      [
+       "La Restauration",
+       "La politique, l’ambassade à Rome"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "regimes",
+     "type": "chaine",
+     "titre": "Les régimes traversés",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "La Révolution"
+      },
+      {
+       "id": "n2",
+       "texte": "L’Empire"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "La monarchie de Juillet"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « L’émigration » ?",
+     "options": [
+      "La misère à Londres",
+      "Le succès à la cour de Rome",
+      "Un retour triomphal à Saint-Malo",
+      "La fondation d’un journal parisien"
+     ],
+     "reponse": 0,
+     "aide": "Les émigrés connaissent souvent la pauvreté.",
+     "explication": "Pendant l’émigration, c’est la **misère à Londres**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la chaîne des régimes.",
+     "texte": "Entre l’Empire et la monarchie de Juillet vient la ___.",
+     "reponses": [
+      [
+       "Restauration"
+      ]
+     ],
+     "banque": [
+      "Restauration",
+      "Terreur",
+      "République",
+      "Régence"
+     ],
+     "aide": "Le tableau parle de la politique et de l’ambassade à Rome.",
+     "explication": "Entre l’Empire et la monarchie de Juillet vient la **Restauration**."
+    },
+    {
+     "type": "zone",
+     "document": "parties",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la ligne où Chateaubriand rompt avec Napoléon.",
+     "aide": "Cherche aussi l’ambassade.",
+     "explication": "Après l’ambassade, c’est dans « **Le retour** » que vient la **rupture avec Napoléon**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à ce qui s’y rattache dans l’œuvre.",
+     "paires": [
+      [
+       "Combourg",
+       "L’enfance, le père, Lucile"
+      ],
+      [
+       "Londres",
+       "L’émigration et la misère"
+      ],
+      [
+       "L’Amérique",
+       "Le voyage de 1791"
+      ],
+      [
+       "Rome",
+       "L’ambassade de la Restauration"
+      ]
+     ],
+     "aide": "Chaque lieu correspond à une partie du tableau.",
+     "explication": "**Combourg** : l’enfance ; **Londres** : l’émigration ; **l’Amérique** : 1791 ; **Rome** : l’ambassade."
+    }
+   ]
+  },
+  {
+   "chapitre": "457a1b65-6b49-53b7-8d9f-318a5bae7205",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Entre deux siècles",
+   "competence": "argumenter",
+   "situation": "Deux élèves s’opposent sur la nature de l’œuvre. Lis leur échange et une phrase de l’auteur, puis conclus pour ta dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Les *Mémoires*, c’est une autobiographie : il ne parle que de lui."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Pas seulement : le « je » est à la fois intime et historique."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Il raconte donc aussi le siècle qu’il a traversé ?"
+      },
+      {
+       "qui": "Jade",
+       "texte": "Oui : l’intime devient témoignage historique."
+      }
+     ]
+    },
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase célèbre",
+     "blocs": [
+      "Je me suis rencontré entre les deux [[s|siècles]] comme au [[c|confluent]] de deux fleuves"
+     ],
+     "source": "François-René de Chateaubriand, *Mémoires d’outre-tombe*, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot de l’image qui dit que l’auteur se trouve à la jonction de deux époques.",
+     "aide": "Pense à deux fleuves qui se rejoignent.",
+     "explication": "Le **confluent** est l’image de sa place entre deux époques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique du débat l’œuvre confirme-t-elle ?",
+     "options": [
+      "Le « je » est à la fois intime et historique",
+      "Le « je » reste purement intime",
+      "Le « je » ne parle que de politique",
+      "Le « je » se cache derrière un personnage fictif"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’un « je double ».",
+     "explication": "Le cours dit que le « je » est **à la fois intime et historique**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Superposer les époques",
+       "Comparer ce qu’il fut à ce qu’il est"
+      ],
+      [
+       "La grive de Montboissier",
+       "Une mémoire involontaire avant Proust"
+      ],
+      [
+       "Napoléon, livre après livre",
+       "Un double fascinant, admiré et détesté"
+      ],
+      [
+       "Le titre « outre-tombe »",
+       "L’auteur s’adresse au lecteur depuis sa tombe"
+      ]
+     ],
+     "aide": "Chaque procédé est expliqué dans le cours.",
+     "explication": "Le cours explique la **superposition des époques**, la **grive**, le **double** Napoléon et le sens du **titre**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : sphère intime, ou histoire du siècle ?",
+     "categories": [
+      "Intime",
+      "Histoire du siècle"
+     ],
+     "items": [
+      [
+       "Le père taciturne de Combourg",
+       0
+      ],
+      [
+       "La sœur Lucile",
+       0
+      ],
+      [
+       "La rupture avec Napoléon",
+       1
+      ],
+      [
+       "La Restauration",
+       1
+      ]
+     ],
+     "aide": "Pense à ce qui relève de la famille, ou de l’État.",
+     "explication": "Le **père** et **Lucile** relèvent de l’intime ; **Napoléon** et la **Restauration** de l’histoire."
+    }
+   ]
+  },
+  {
+   "chapitre": "116457ea-6ad4-59a3-aa97-8e88a88ad1ee",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du 18 juin à Colombey",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes *Le Salut* dans la vie du général de Gaulle. Lis la frise, puis la carte d’identité du tome.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Charles de Gaulle",
+     "debut": 1890,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1890,
+       "nom": "Naissance"
+      },
+      {
+       "id": "appel",
+       "date": 1940,
+       "nom": "Appel du 18 juin"
+      },
+      {
+       "id": "lib",
+       "date": 1944,
+       "nom": "Libération de Paris"
+      },
+      {
+       "id": "dem",
+       "date": 1946,
+       "nom": "Démission"
+      },
+      {
+       "id": "pub",
+       "date": 1959,
+       "nom": "Le Salut"
+      },
+      {
+       "id": "mort",
+       "date": 1970,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Salut, 1944-1946",
+     "sousTitre": "Charles de Gaulle",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Place",
+       "valeur": "Troisième et dernier tome"
+      },
+      {
+       "texte": "Tomes précédents",
+       "valeur": "L’Appel et L’Unité"
+      },
+      {
+       "texte": "Période couverte",
+       "valeur": "Août 1944 – janvier 1946"
+      },
+      {
+       "texte": "Lieu d’écriture",
+       "valeur": "Colombey-les-Deux-Églises"
+      }
+     ],
+     "pied": "Mémoires de guerre",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "lib"
+     ],
+     "enonce": "Touche l’événement qui ouvre la période couverte par le tome.",
+     "aide": "Le tome commence en août 1944.",
+     "explication": "La **libération de Paris** (25 août 1944) ouvre la période."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’appel du 18 juin 1940 de la libération de Paris ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1944 − 1940 = **4 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte du tome.",
+     "texte": "*Le Salut* est le ___ et dernier tome, après *L’Appel* et ___ ; l’auteur l’écrit à ___.",
+     "reponses": [
+      [
+       "troisième",
+       "3e"
+      ],
+      [
+       "L’Unité",
+       "Unité"
+      ],
+      [
+       "Colombey-les-Deux-Églises",
+       "Colombey"
+      ]
+     ],
+     "banque": [
+      "troisième",
+      "deuxième",
+      "L’Unité",
+      "Marius",
+      "Colombey-les-Deux-Églises",
+      "Londres"
+     ],
+     "aide": "La fiche donne tout.",
+     "explication": "C’est le **troisième** tome, après *L’Appel* et ***L’Unité***, écrit à **Colombey-les-Deux-Églises**."
+    }
+   ]
+  },
+  {
+   "chapitre": "116457ea-6ad4-59a3-aa97-8e88a88ad1ee",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des événements, des figures",
+   "competence": "lire-tableau",
+   "situation": "Le récit de 1944-1946 se lit par ses événements et par ses figures. Complète les deux tableaux.",
+   "documents": [
+    {
+     "id": "evenements",
+     "type": "tableau",
+     "titre": "Les événements du tome",
+     "colonnes": [
+      "Événement",
+      "Ce qu’il engage"
+     ],
+     "lignes": [
+      [
+       "La libération de Paris",
+       "Le rétablissement de l’État"
+      ],
+      [
+       "L’épuration",
+       "?"
+      ],
+      [
+       "Les réformes",
+       "Le vote des femmes, les nationalisations, la Sécurité sociale"
+      ],
+      [
+       "La fin",
+       "La démission de janvier 1946, face aux partis"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "figures",
+     "type": "tableau",
+     "titre": "Les figures du récit",
+     "colonnes": [
+      "Figure",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "De Gaulle",
+       "Le narrateur et le héros, vu de l’extérieur"
+      ],
+      [
+       "La France",
+       "Personnage à part entière, qu’il faut remettre debout"
+      ],
+      [
+       "Les Alliés",
+       "?"
+      ],
+      [
+       "Les partis",
+       "L’obstacle qui le pousse à partir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « L’épuration » ?",
+     "options": [
+      "La justice d’après-guerre",
+      "Le retour des troupes alliées",
+      "La rédaction d’une nouvelle constitution",
+      "La création de la Sécurité sociale"
+     ],
+     "reponse": 0,
+     "aide": "Le mot désigne ce qui suit la guerre.",
+     "explication": "L’épuration engage **la justice d’après-guerre**."
+    },
+    {
+     "type": "zone",
+     "document": "figures",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la figure qui est l’obstacle poussant de Gaulle à partir.",
+     "aide": "Il démissionne face à eux.",
+     "explication": "Ce sont **les partis**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « Les Alliés » ?",
+     "options": [
+      "Des partenaires dont il faut arracher le respect",
+      "Des adversaires qu’il combat les armes à la main",
+      "Des conseillers qui rédigent le récit à sa place",
+      "Des spectateurs indifférents au sort de la France"
+     ],
+     "reponse": 0,
+     "aide": "La France est à remettre debout.",
+     "explication": "Les Alliés sont des **partenaires dont il faut arracher le respect**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé du tome.",
+     "texte": "De Gaulle rétablit l’___ à la Libération, puis démissionne face aux ___ en janvier 1946.",
+     "reponses": [
+      [
+       "État",
+       "Etat"
+      ],
+      [
+       "partis"
+      ]
+     ],
+     "banque": [
+      "État",
+      "Empire",
+      "partis",
+      "Alliés",
+      "armées"
+     ],
+     "aide": "Relis la première et la dernière ligne du tableau des événements.",
+     "explication": "De Gaulle rétablit l’**État**, puis démissionne face aux **partis** en janvier 1946."
+    }
+   ]
+  },
+  {
+   "chapitre": "116457ea-6ad4-59a3-aa97-8e88a88ad1ee",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« De Gaulle », vu par de Gaulle",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves débattent du statut de ces Mémoires. Lis leur échange et une page écrite pour l’exercice, à la manière de l’auteur, puis argumente.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Des Mémoires, c’est un témoignage neutre."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Il se nomme « de Gaulle » comme un personnage : l’homme devient un personnage et le récit une épopée nationale."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Donc il faut lire ce texte avec ses procédés ?"
+      },
+      {
+       "qui": "Karim",
+       "texte": "Oui, comme un texte, en se demandant ce que le récit choisit et ce qu’il tait."
+      }
+     ]
+    },
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page à la manière de l’auteur",
+     "blocs": [
+      "De [[t|Gaulle]] regarde la ville qui se relève. La France est devant lui comme une personne épuisée qu’il faut remettre debout ; il sait que l’État, les hommes et la victoire dépendent de lui. Les partis réclament le pouvoir ; il se tait, puis s’en va."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Mémoires de guerre*"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le nom par lequel l’auteur se désigne dans cette page.",
+     "aide": "Il parle de lui à la troisième personne.",
+     "explication": "L’auteur se nomme « de **Gaulle** » : il se regarde comme un personnage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique du débat le cours confirme-t-il ?",
+     "options": [
+      "L’homme devient un personnage ; le récit, une épopée nationale",
+      "Le texte est un document sans ambition littéraire",
+      "L’auteur dit « je » comme dans une autobiographie",
+      "Les faits sont rapportés sans aucun choix de l’auteur"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle de la troisième personne.",
+     "explication": "Le cours dit : **l’homme devient un personnage ; le récit, une épopée nationale**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait d’écriture à son effet.",
+     "paires": [
+      [
+       "La troisième personne",
+       "L’homme devient un personnage"
+      ],
+      [
+       "Des phrases amples au rythme ternaire",
+       "Une solennité qui élève le récit"
+      ],
+      [
+       "La France comme personne",
+       "Des images empruntées à l’histoire et à la géographie"
+      ]
+     ],
+     "aide": "Chaque trait est dans le tableau « L’écriture » du cours.",
+     "explication": "Le cours associe **troisième personne**, **phrases amples** et **France-personne** à leurs effets."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : mémoires, ou autobiographie ?",
+     "categories": [
+      "Mémoires",
+      "Autobiographie"
+     ],
+     "items": [
+      [
+       "L’histoire du pays vue par un acteur",
+       0
+      ],
+      [
+       "Les événements de 1944-1946 racontés par celui qui les a conduits",
+       0
+      ],
+      [
+       "L’histoire d’une personnalité",
+       1
+      ],
+      [
+       "Le récit d’une enfance et d’un caractère",
+       1
+      ]
+     ],
+     "aide": "Le cours oppose l’histoire vue par un acteur à celle d’une personnalité.",
+     "explication": "Les **mémoires** racontent l’histoire vue par un acteur ; l’**autobiographie** raconte l’histoire d’une personnalité."
+    }
+   ]
+  }
+ ]
+}

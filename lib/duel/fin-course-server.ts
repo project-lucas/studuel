@@ -140,8 +140,6 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
       duelsPlayed: 1,
       duelsWon: won ? 1 : 0,
       correct: stats.correct,
-      bestCombo: stats.bestCombo,
-      chapterIds: [],
     }),
     coeurPaye.saved ? validateRevisionToday(supabase, user.id) : Promise.resolve(),
     answers.length > 0

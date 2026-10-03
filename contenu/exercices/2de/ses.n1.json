@@ -1,0 +1,4325 @@
+{
+ "niveau": "2de",
+ "matiere": "ses",
+ "exercices": [
+  {
+   "chapitre": "94c8df39-d7f9-5d49-a14f-2309759f8404",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois envies, un seul samedi après-midi",
+   "competence": "lire-tableau",
+   "situation": "Maya a 12 € d’argent de poche et un seul samedi après-midi libre : elle ne peut faire qu’une sortie. Elle a noté trois envies de 0 à 10.",
+   "documents": [
+    {
+     "id": "envies",
+     "type": "tableau",
+     "titre": "Les trois envies de Maya",
+     "source": "Prix et notes imaginés pour l’exercice.",
+     "colonnes": [
+      "Activité",
+      "Prix",
+      "Note de Maya (sur 10)"
+     ],
+     "lignes": [
+      [
+       "Cinéma",
+       "9 €",
+       8
+      ],
+      [
+       "Bowling",
+       "12 €",
+       9
+      ],
+      [
+       "Patinoire",
+       "8 €",
+       6
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "envies",
+     "enonce": "Touche le prix de la seule activité qui épuise à elle seule tout le budget de Maya.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare le prix de chaque activité aux 12 € dont Maya dispose.",
+     "explication": "Le bowling coûte **12 €** : c’est exactement son budget. Les deux autres activités laisseraient quelques euros."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Maya rêve de faire le cinéma ET la patinoire. De combien d’euros dépasserait-elle son budget ?",
+     "reponse": 5,
+     "unite": "€",
+     "aide": "Additionne les deux prix, puis retire les 12 € disponibles.",
+     "explication": "9 + 8 = 17 €, et 17 − 12 = **5 €** de trop. Ses besoins dépassent ses ressources : c’est la **rareté**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maya choisit le bowling. Quel est son coût d’opportunité ?",
+     "options": [
+      "Le cinéma et la patinoire, auxquels elle renonce",
+      "Les 12 € qu’elle dépense au bowling",
+      "La note de 9 sur 10 qu’elle donne au bowling",
+      "Aucun : son budget suffit pour le bowling"
+     ],
+     "reponse": 0,
+     "aide": "Le coût d’opportunité, c’est ce qu’on abandonne en faisant un choix, pas la somme qu’on paie.",
+     "explication": "Le coût d’opportunité est **ce à quoi on renonce** : ici, les autres sorties possibles. Les 12 € sont le prix payé, pas ce dont on se prive."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à la notion d’économie qu’elle illustre.",
+     "paires": [
+      [
+       "Maya n’a que 12 € pour trois envies",
+       "La rareté"
+      ],
+      [
+       "En allant au bowling, elle ne fera ni cinéma ni patinoire",
+       "Le coût d’opportunité"
+      ],
+      [
+       "Maya dépense son argent de poche et choisit ses loisirs",
+       "Un ménage (agent économique)"
+      ]
+     ],
+     "aide": "Une phrase parle de limites, une autre de renoncement, la dernière de la personne qui consomme.",
+     "explication": "La **rareté** est le manque de ressources face aux besoins ; le **coût d’opportunité** est le renoncement lié au choix ; Maya, qui consomme, est un **ménage**."
+    }
+   ]
+  },
+  {
+   "chapitre": "94c8df39-d7f9-5d49-a14f-2309759f8404",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Kerlen : qui paie qui sur l’île ?",
+   "competence": "observer-schema",
+   "situation": "Sur l’île imaginaire de Kerlen, les ménages travaillent pour les entreprises et achètent leur production. Un économiste dessine le circuit des flux, puis relève les montants d’une année.",
+   "documents": [
+    {
+     "id": "circuit",
+     "type": "schema",
+     "titre": "Le circuit économique de Kerlen",
+     "source": "Schéma simplifié, sans banques ni État.",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 50,
+       "l": 80,
+       "h": 160,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ménages"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 50,
+       "l": 80,
+       "h": 160,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Entreprises"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 22,
+       "texte": "Flux réels en bleu, flux monétaires en orange",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 76,
+       "texte": "travail",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        84
+       ],
+       "a": [
+        245,
+        84
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "id": "travail",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 112,
+       "texte": "biens et services",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        120
+       ],
+       "a": [
+        95,
+        120
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "id": "biens",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 148,
+       "texte": "salaires",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        156
+       ],
+       "a": [
+        95,
+        156
+       ],
+       "fleche": "fin",
+       "teinte": "ambre",
+       "id": "salaires",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 184,
+       "texte": "dépenses de consommation",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        192
+       ],
+       "a": [
+        245,
+        192
+       ],
+       "fleche": "fin",
+       "teinte": "ambre",
+       "id": "depenses",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "montants",
+     "type": "tableau",
+     "titre": "Les flux d’une année à Kerlen",
+     "source": "Montants imaginés pour l’exercice.",
+     "colonnes": [
+      "Flux",
+      "Montant (millions d’euros)"
+     ],
+     "lignes": [
+      [
+       "Salaires versés par les entreprises aux ménages",
+       120
+      ],
+      [
+       "Dépenses de consommation des ménages",
+       90
+      ],
+      [
+       "Épargne des ménages (placée en banque)",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuit",
+     "enonce": "Touche la flèche du flux monétaire qui rémunère le travail des ménages.",
+     "reponse": [
+      "salaires"
+     ],
+     "aide": "Le travail va vers les entreprises ; la rémunération revient en sens inverse, sous forme d’argent.",
+     "explication": "Le travail des ménages (flux réel) est payé par des **salaires** (flux monétaire) qui vont des entreprises vers les ménages : les flux monétaires circulent en sens inverse des flux réels."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les ménages de Kerlen ne vivent que de leurs salaires : ils dépensent une partie et épargnent le reste. Quelle est leur épargne, en millions d’euros ?",
+     "reponse": 30,
+     "unite": "M€",
+     "aide": "Épargne = revenu reçu − dépenses de consommation. Lis les deux premières lignes du tableau.",
+     "explication": "120 − 90 = **30 millions d’euros** d’épargne : ce qui n’est pas dépensé est placé en banque."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les 30 millions sont placés en banque. Quel rôle joue la banque dans l’économie de l’île ?",
+     "options": [
+      "Elle finance l’économie en prêtant cet argent",
+      "Elle produit les biens que les ménages achètent",
+      "Elle rémunère le travail des ménages",
+      "Elle redistribue les revenus par l’impôt"
+     ],
+     "reponse": 0,
+     "aide": "Parmi les cinq agents du cours, un seul a pour rôle principal de financer.",
+     "explication": "Les **banques** financent : elles collectent l’épargne et la prêtent, notamment aux entreprises qui investissent. Produire, c’est le rôle des entreprises ; redistribuer, celui des administrations."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces flux : sont-ils des flux réels ou des flux monétaires ?",
+     "categories": [
+      "Flux réel",
+      "Flux monétaire"
+     ],
+     "items": [
+      [
+       "Le travail fourni par une salariée",
+       0
+      ],
+      [
+       "Le versement de son salaire",
+       1
+      ],
+      [
+       "Le pain remis à un client",
+       0
+      ],
+      [
+       "Le paiement de ce pain",
+       1
+      ],
+      [
+       "Une machine livrée à l’entreprise",
+       0
+      ],
+      [
+       "Les impôts versés à l’État",
+       1
+      ]
+     ],
+     "aide": "Un flux réel déplace un bien, un service ou du travail ; un flux monétaire déplace de l’argent.",
+     "explication": "Les flux **réels** sont le travail, le pain et la machine ; les flux **monétaires** sont le salaire, le paiement et l’impôt. Chaque flux réel a son flux monétaire en sens inverse."
+    }
+   ]
+  },
+  {
+   "chapitre": "94c8df39-d7f9-5d49-a14f-2309759f8404",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un skatepark à Valmont : qui décide quoi ?",
+   "competence": "raisonner",
+   "situation": "Le conseil municipal des jeunes de Valmont doit décider de l’avenir d’un terrain vague. Son compte rendu pose les trois questions de toute économie ; son calcul de fréquentation est un petit modèle.",
+   "documents": [
+    {
+     "id": "compte-rendu",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Compte rendu du conseil municipal des jeunes",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Le terrain vague de la rue des Peupliers accueillera un skatepark, et non un parking : c’est le choix de la majorité.",
+      "Le chantier sera confié à une entreprise locale, qui utilisera du béton recyclé plutôt que du béton neuf, un peu plus cher.",
+      "L’entrée sera gratuite pour les moins de 18 ans ; les adultes paieront 2 € la séance."
+     ]
+    },
+    {
+     "id": "calcul",
+     "type": "tableau",
+     "titre": "Le calcul de fréquentation du conseil",
+     "source": "Hypothèses imaginées pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Jeunes intéressés (hypothèse)",
+       150
+      ],
+      [
+       "Visites par jeune et par semaine (hypothèse)",
+       2
+      ],
+      [
+       "Entrées prévues par semaine",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque décision du conseil à la grande question économique à laquelle elle répond.",
+     "paires": [
+      [
+       "Un skatepark plutôt qu’un parking",
+       "Que produire ?"
+      ],
+      [
+       "Une entreprise locale et du béton recyclé",
+       "Comment produire ?"
+      ],
+      [
+       "Gratuit pour les moins de 18 ans, 2 € pour les adultes",
+       "Pour qui produire ?"
+      ]
+     ],
+     "aide": "Une décision porte sur le bien produit, une sur la méthode de fabrication, une sur ceux qui en profitent.",
+     "explication": "Choisir le bien, c’est **que** produire ; choisir la manière (entreprise, matériau), c’est **comment** produire ; fixer qui profite et à quel prix, c’est **pour qui** produire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Qui décide ? Range ces situations selon qu’elles relèvent surtout du marché ou de l’intervention publique.",
+     "categories": [
+      "Le marché",
+      "L’intervention publique"
+     ],
+     "items": [
+      [
+       "Un café du centre-ville fixe le prix de ses boissons",
+       0
+      ],
+      [
+       "La gratuité du skatepark pour les moins de 18 ans",
+       1
+      ],
+      [
+       "Une entreprise de BTP choisit ses fournisseurs de béton",
+       0
+      ],
+      [
+       "La commune finance la construction avec les impôts locaux",
+       1
+      ]
+     ],
+     "aide": "Le marché, ce sont des vendeurs et des acheteurs qui décident ; l’intervention publique, c’est la collectivité qui décide ou finance.",
+     "explication": "Le prix du café et le choix des fournisseurs relèvent du **marché** ; la gratuité et le financement par l’impôt relèvent de l’**intervention publique**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La commune finance le skatepark avec l’impôt, mais une entreprise privée le construit. Que dit cette situation de l’économie française ?",
+     "options": [
+      "Elle est mixte : marché et État y répondent ensemble aux trois questions",
+      "Elle est entièrement planifiée : l’État y décide de tout, prix compris",
+      "Elle est entièrement de marché : les prix y décident de tout seuls",
+      "Elle est un simple modèle théorique, sans lien avec une économie réelle"
+     ],
+     "reponse": 0,
+     "aide": "Un projet public réalisé par une entreprise privée mélange deux façons de décider.",
+     "explication": "Toutes les économies réelles sont **mixtes** : ici l’État (la commune) décide et finance, le marché (l’entreprise) réalise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après les hypothèses du conseil, combien d’entrées sont prévues par semaine ?",
+     "reponse": 300,
+     "aide": "Multiplie le nombre de jeunes par le nombre de visites de chacun.",
+     "explication": "150 × 2 = **300 entrées** par semaine. Ce résultat dépend entièrement des deux hypothèses de départ."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition du modèle que vient d’utiliser le conseil.",
+     "texte": "Un modèle est une ___ simplifiée de la réalité, fondée sur des ___.",
+     "reponses": [
+      [
+       "représentation"
+      ],
+      [
+       "hypothèses"
+      ]
+     ],
+     "banque": [
+      "représentation",
+      "hypothèses",
+      "statistiques",
+      "expériences"
+     ],
+     "aide": "Le conseil a supposé 150 jeunes et deux visites : ce qu’un modèle suppose au départ porte un nom.",
+     "explication": "Un modèle est une **représentation** simplifiée de la réalité fondée sur des **hypothèses** : si les jeunes ne viennent qu’une fois par semaine, la prévision tombe à 150 entrées."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a6b214e-c645-5983-bf6d-9100ad3f1121",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pourquoi tout le monde chuchote à la bibliothèque",
+   "competence": "analyser-texte",
+   "situation": "Salomé découvre la bibliothèque de son lycée. Personne ne lui a rien expliqué, et pourtant elle sent très vite ce qu’on y fait… ou pas.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le premier jour de Salomé",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Salomé entre dans la bibliothèque du lycée. Aucune affiche n’interdit de parler fort, mais tout le monde chuchote.",
+      "Quand un élève éclate de rire, plusieurs [[c|regards]] se tournent vers lui et il baisse aussitôt la voix.",
+      "À la sortie, les élèves se disent bonjour en se croisant dans le couloir ; Salomé fait comme eux, sans y penser."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "portee": [
+      1
+     ],
+     "enonce": "Touche le mot du deuxième paragraphe qui montre que la règle du silence s’impose aux élèves.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce qui arrive à celui qui s’écarte de la règle.",
+     "explication": "Les **regards** des autres sont la contrainte : personne n’est puni, mais celui qui s’écarte de la règle le sent aussitôt."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces situations : sont-elles des faits sociaux ?",
+     "categories": [
+      "Fait social",
+      "Pas un fait social"
+     ],
+     "items": [
+      [
+       "Dire bonjour en arrivant en cours",
+       0
+      ],
+      [
+       "Payer ses achats en euros en France",
+       0
+      ],
+      [
+       "Avoir mal à la tête après un coup",
+       1
+      ],
+      [
+       "Éternuer quand on est enrhumé",
+       1
+      ]
+     ],
+     "aide": "Un fait social est une manière d’agir qui existe avant l’individu et s’impose à lui. Un réflexe du corps n’en est pas un.",
+     "explication": "Dire bonjour et payer en euros sont des manières d’agir **extérieures à l’individu**, qui s’imposent à lui. Une douleur et un éternuement relèvent du corps, pas de la société."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la définition de Durkheim, pourquoi le silence de la bibliothèque est-il un fait social ?",
+     "options": [
+      "Cette manière d’agir s’impose de l’extérieur et fait réagir ceux qui s’en écartent",
+      "Chaque élève a décidé seul de chuchoter, sans se préoccuper des autres",
+      "Un règlement affiche une amende pour chaque éclat de voix prononcé",
+      "Chuchoter est un réflexe biologique que partagent tous les humains"
+     ],
+     "reponse": 0,
+     "aide": "Retiens les deux mots de la définition : « extérieure » à l’individu et « contrainte ».",
+     "explication": "Un fait social est une manière d’agir **extérieure à l’individu** et dotée d’un **pouvoir de contrainte**. Ici, aucune règle écrite : la contrainte passe par le regard des autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a6b214e-c645-5983-bf6d-9100ad3f1121",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire ou jouer : que montre une enquête ?",
+   "competence": "lire-tableau",
+   "situation": "Un sociologue étudie les loisirs des lycéens. Il mène une enquête par questionnaire auprès de 400 élèves de seconde (200 filles et 200 garçons), puis rencontre quelques élèves pour comprendre leurs réponses.",
+   "documents": [
+    {
+     "id": "enquete",
+     "type": "tableau",
+     "titre": "Loisir principal des élèves de seconde (en % de chaque groupe)",
+     "source": "Enquête imaginée pour l’exercice.",
+     "colonnes": [
+      "Loisir principal",
+      "Filles (%)",
+      "Garçons (%)"
+     ],
+     "lignes": [
+      [
+       "Lire",
+       40,
+       20
+      ],
+      [
+       "Jeux vidéo",
+       10,
+       40
+      ],
+      [
+       "Sport",
+       30,
+       30
+      ],
+      [
+       "Musique",
+       20,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "entretien",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Extrait d’un entretien avec un élève",
+     "source": "Entretien écrit pour l’exercice.",
+     "blocs": [
+      "« Je ne lis pas parce que chez moi personne ne lit, et que mes copains trouvent ça ennuyeux. Quand je joue, au moins, on se retrouve tous en ligne. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enquete",
+     "enonce": "Touche le loisir principal le plus cité chez les garçons.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la dernière colonne et cherche la plus grande valeur.",
+     "explication": "Chez les garçons, **les jeux vidéo (40 %)** dépassent la lecture (20 %), le sport (30 %) et la musique (10 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour la lecture, quel est l’écart entre les filles et les garçons, en points de pourcentage ?",
+     "reponse": 20,
+     "unite": "points",
+     "aide": "Soustrais les deux pourcentages de la ligne « Lire » : on obtient un écart en points, pas en %.",
+     "explication": "40 − 20 = **20 points de pourcentage**. On parle de points, car on compare deux pourcentages entre eux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de garçons de l’enquête (sur 200) ont les jeux vidéo pour loisir principal ?",
+     "reponse": 80,
+     "aide": "40 % de 200, c’est 200 × 0,40.",
+     "explication": "200 × 0,40 = **80 garçons**. C’est un résultat de méthode quantitative : on compte et on compare."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces outils selon la méthode du sociologue.",
+     "categories": [
+      "Méthode quantitative",
+      "Méthode qualitative"
+     ],
+     "items": [
+      [
+       "Un questionnaire envoyé à 400 élèves",
+       0
+      ],
+      [
+       "Les statistiques publiques de l’Insee",
+       0
+      ],
+      [
+       "Un entretien approfondi d’une heure avec un élève",
+       1
+      ],
+      [
+       "Observer la vie d’une classe en y participant",
+       1
+      ]
+     ],
+     "aide": "Mesurer et comparer, c’est du quantitatif ; comprendre les logiques d’action, c’est du qualitatif.",
+     "explication": "Questionnaires et statistiques permettent de **mesurer** et comparer ; entretiens et observation (même participante) permettent de **comprendre** les logiques d’action."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’extrait d’entretien que le tableau ne montre pas ?",
+     "options": [
+      "Le sens que l’élève donne à son comportement et les raisons qu’il avance",
+      "Le nombre exact d’élèves qui ne lisent jamais de livre",
+      "Une comparaison chiffrée entre les filles et les garçons",
+      "Une preuve que les jeux vidéo empêchent les élèves de lire"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que Max Weber place au centre de l’analyse.",
+     "explication": "L’entretien fait apparaître le **sens** que l’élève donne à son action. Il ne chiffre rien et ne prouve aucune cause : il complète la mesure par la compréhension."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a6b214e-c645-5983-bf6d-9100ad3f1121",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mêmes notes, orientations différentes",
+   "competence": "argumenter",
+   "situation": "Des élèves de troisième aux résultats comparables ne demandent pas la même orientation selon le métier de leurs parents. Une sociologue cherche à expliquer l’écart, sans se contenter de « les gens sont comme ça ».",
+   "documents": [
+    {
+     "id": "orientation",
+     "type": "tableau",
+     "titre": "Demandes d’orientation de troisième, à résultats comparables",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Profession des parents",
+      "Demandent la voie générale (%)"
+     ],
+     "lignes": [
+      [
+       "Cadres",
+       90
+      ],
+      [
+       "Employés",
+       74
+      ],
+      [
+       "Ouvriers",
+       62
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "paroles",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Quatre élèves racontent",
+     "source": "Témoignages écrits pour l’exercice.",
+     "blocs": [
+      "Inès : « Au collège, je n’ai jamais su qu’il existait une spécialité qui m’aurait plu. »",
+      "Karim : « Cinq ans d’études après le bac, ça coûterait beaucoup trop cher à ma famille. »",
+      "Lola : « Je me suis toujours dit que le lycée général, ce n’était pas pour moi. »",
+      "Hugo : « Mon père m’a expliqué comment choisir mes spécialités et m’a conseillé. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel écart sépare les enfants de cadres et les enfants d’ouvriers dans leur demande de voie générale, en points de pourcentage ?",
+     "reponse": 28,
+     "unite": "points",
+     "aide": "Soustrais les deux pourcentages extrêmes du tableau.",
+     "explication": "90 − 62 = **28 points de pourcentage** : à résultats comparables, le milieu social est associé à des choix différents."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut conclure la sociologue du tableau, à lui seul ?",
+     "options": [
+      "Une corrélation existe, mais il faut identifier les mécanismes qui la produisent",
+      "Les parents ouvriers refusent que leurs enfants fassent des études",
+      "Les enfants de cadres sont plus intelligents que les autres",
+      "Le métier des parents est la cause unique de l’orientation"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau relie deux variables ; relier n’est pas expliquer.",
+     "explication": "**Corrélation n’est pas causalité** : le tableau montre un lien, pas son explication. Il faut des mécanismes : information disponible, coût perçu des études, autocensure, conseils reçus."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élève au mécanisme que son témoignage illustre.",
+     "paires": [
+      [
+       "Inès",
+       "L’information disponible"
+      ],
+      [
+       "Karim",
+       "Le coût perçu des études"
+      ],
+      [
+       "Lola",
+       "L’autocensure"
+      ],
+      [
+       "Hugo",
+       "Les conseils reçus"
+      ]
+     ],
+     "aide": "Relis chaque témoignage en cherchant ce qui manque, ce qui coûte, ce qu’on se dit ou ce qu’on reçoit de sa famille.",
+     "explication": "Inès manque d’**information** ; Karim craint le **coût** des études ; Lola s’**autocensure** ; Hugo profite des **conseils** de son père."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces explications selon l’approche sociologique qu’elles mobilisent.",
+     "categories": [
+      "Holisme",
+      "Individualisme méthodologique"
+     ],
+     "items": [
+      [
+       "L’écart s’explique par la position des familles dans la société",
+       0
+      ],
+      [
+       "Chaque famille compare coûts et avantages ; l’addition crée l’écart",
+       1
+      ],
+      [
+       "Les héritages culturels reproduisent les positions sociales (Bourdieu)",
+       0
+      ],
+      [
+       "L’écart naît de l’agrégation de milliers de décisions individuelles",
+       1
+      ]
+     ],
+     "aide": "Le holisme explique par le tout ; l’individualisme méthodologique par l’agrégation d’actions individuelles.",
+     "explication": "Le **holisme** part de la société et de ses positions (c’est le cas de Bourdieu) ; l’**individualisme méthodologique** part des décisions des individus, dont l’addition produit le fait social."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cf3155e-62df-5540-8a69-c46561bc49ae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pourquoi obéit-on à un chef ? Trois pays imaginés",
+   "competence": "analyser-document",
+   "situation": "Un politiste compare trois pays imaginés. Dans chacun, on obéit au chef, mais pas pour la même raison.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Trois façons d’obéir",
+     "source": "Pays et personnages imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Pourquoi on obéit au chef"
+     ],
+     "lignes": [
+      [
+       "Royaume d’Arven",
+       "Le roi a hérité du trône de son père, comme sa famille le fait depuis dix siècles."
+      ],
+      [
+       "République de Torlan",
+       "La présidente a été désignée selon la Constitution, après une élection."
+      ],
+      [
+       "Pays de Mirvale",
+       "Le général Sorel fascine la foule : on lui prête un courage hors du commun."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays au type de domination légitime de Weber qu’il illustre.",
+     "paires": [
+      [
+       "Royaume d’Arven",
+       "Traditionnelle"
+      ],
+      [
+       "République de Torlan",
+       "Légale-rationnelle"
+      ],
+      [
+       "Pays de Mirvale",
+       "Charismatique"
+      ]
+     ],
+     "aide": "Coutume ou hérédité, règle écrite, qualités exceptionnelles : trois fondements différents.",
+     "explication": "Arven repose sur la **tradition** (l’hérédité), Torlan sur la règle écrite (**légale-rationnelle**), Mirvale sur le **charisme** prêté à un homme."
+    },
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche la case où l’on obéit parce que la règle écrite l’a désignée.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche le pays où la Constitution et l’élection comptent.",
+     "explication": "À Torlan, l’autorité vient de la **Constitution et de l’élection** : une règle écrite, pas la naissance ni la fascination."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces trois situations est la plus répandue dans les États modernes ?",
+     "options": [
+      "Celle de Torlan : le pouvoir tient à des règles écrites",
+      "Celle d’Arven : le pouvoir se transmet par hérédité",
+      "Celle de Mirvale : le pouvoir repose sur un chef charismatique",
+      "Aucune : les États modernes n’ont pas de dominations légitimes"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux concours, aux élections et aux lois écrites qui organisent l’administration.",
+     "explication": "La domination **légale-rationnelle** (règles écrites, compétence, concours) domine dans les États modernes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition du pouvoir.",
+     "texte": "Le pouvoir est la capacité d’obtenir d’autrui un ___ qu’il n’aurait pas eu ___.",
+     "reponses": [
+      [
+       "comportement"
+      ],
+      [
+       "spontanément"
+      ]
+     ],
+     "banque": [
+      "comportement",
+      "spontanément",
+      "volontairement",
+      "discours"
+     ],
+     "aide": "Obéir, c’est faire ce qu’on n’aurait pas fait de soi-même.",
+     "explication": "Le pouvoir, c’est obtenir un **comportement** qu’autrui n’aurait pas eu **spontanément** : c’est ce que montrent les trois chefs du tableau."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cf3155e-62df-5540-8a69-c46561bc49ae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un sondage et un vote à Valmont",
+   "competence": "lire-graphique",
+   "situation": "À Valmont, une élection municipale oppose la liste « Horizon » à une seule autre liste. Une politiste étudie qui vote pour Horizon, puis lit un sondage publié trois jours avant le scrutin.",
+   "documents": [
+    {
+     "id": "vote",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Vote pour la liste « Horizon » selon l’âge",
+     "source": "Résultats imaginés pour l’exercice.",
+     "categories": [
+      "18-24 ans",
+      "25-34 ans",
+      "35-49 ans",
+      "50-64 ans",
+      "65 ans et +"
+     ],
+     "series": [
+      {
+       "nom": "Votes pour Horizon",
+       "valeurs": [
+        22,
+        28,
+        31,
+        38,
+        52
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Votes pour Horizon",
+      "unite": "en %",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Tranche d’âge"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "sondage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le sondage de la semaine",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Un sondage réalisé auprès de 1 000 habitants de Valmont donne 52 % d’intentions de vote pour la liste Horizon, face à une seule liste adverse. La marge d’erreur est de plus ou moins 3 points."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vote",
+     "enonce": "Touche la tranche d’âge qui vote le plus pour la liste Horizon.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Les **65 ans et plus** (environ 52 %) votent le plus pour Horizon : la barre est la plus haute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart sépare les 65 ans et plus des 18-24 ans, en points de pourcentage ?",
+     "reponse": 30,
+     "unite": "points",
+     "tolerance": 1,
+     "aide": "Lis la valeur des deux barres extrêmes, puis soustrais.",
+     "explication": "52 − 22 = **30 points de pourcentage** : l’âge est ici une variable lourde du vote."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut dire la politiste de l’âge, d’après ce graphique ?",
+     "options": [
+      "C’est une variable lourde du vote, mais pas la seule explication",
+      "Il suffit de connaître l’âge d’un électeur pour prédire son vote",
+      "Le vote dépend uniquement de la conjoncture du moment",
+      "L’âge n’a aucun rapport avec le vote"
+     ],
+     "reponse": 0,
+     "aide": "Le cours cite l’âge parmi plusieurs variables lourdes, auxquelles s’ajoute la conjoncture.",
+     "explication": "Âge, diplôme, profession, territoire et religion sont des **variables lourdes** ; elles pèsent, mais n’expliquent pas tout : la conjoncture compte aussi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec sa marge d’erreur, quelle est la valeur la plus basse (en %) que peut prendre le score réel de la liste Horizon d’après le sondage ?",
+     "reponse": 49,
+     "unite": "%",
+     "aide": "Retire la marge d’erreur de 3 points aux 52 % annoncés.",
+     "explication": "52 − 3 = **49 %**. Le score réel est estimé entre 49 % et 55 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit en conclure le politiste sur l’issue du scrutin ?",
+     "options": [
+      "Elle reste incertaine : l’estimation va de 49 % à 55 %",
+      "Horizon va gagner, car 52 % dépasse 50 %",
+      "Horizon va perdre, car la marge d’erreur est négative",
+      "Le sondage est faux dès qu’il se trompe de 1 point"
+     ],
+     "reponse": 0,
+     "aide": "Une fourchette qui contient 50 % ne permet pas de conclure.",
+     "explication": "Un sondage est une **estimation** assortie d’une marge d’erreur, pas une prédiction. Ici la fourchette (49 % à 55 %) contient 50 % : le résultat reste ouvert."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cf3155e-62df-5540-8a69-c46561bc49ae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Verdane : un État, ses règles et ses chercheurs",
+   "competence": "raisonner",
+   "situation": "Verdane est un État imaginaire. Une politiste vérifie que les éléments d’un État s’y trouvent bien, puis classe cinq recherches menées par ses collègues.",
+   "documents": [
+    {
+     "id": "verdane",
+     "type": "tableau",
+     "titre": "Ce qu’on observe à Verdane",
+     "source": "État imaginé pour l’exercice.",
+     "colonnes": [
+      "Fait observé"
+     ],
+     "lignes": [
+      [
+       "Une île de 4 000 km² dont les frontières sont reconnues."
+      ],
+      [
+       "300 000 habitants."
+      ],
+      [
+       "Des préfets et des fonctionnaires recrutés par concours, qui appliquent les lois d’un gouvernement à l’autre."
+      ],
+      [
+       "Aucune autorité étrangère ne peut donner d’ordre à Verdane : ses lois sont votées sur l’île."
+      ],
+      [
+       "Seules la police et l’armée de Verdane sont autorisées à contraindre par la force."
+      ]
+     ]
+    },
+    {
+     "id": "recherches",
+     "type": "tableau",
+     "titre": "Cinq recherches de politistes",
+     "source": "Recherches imaginées pour l’exercice.",
+     "colonnes": [
+      "N°",
+      "Question de recherche"
+     ],
+     "lignes": [
+      [
+       1,
+       "Les diplômés votent-ils autrement que les non-diplômés ?"
+      ],
+      [
+       2,
+       "Que pensent les Verdanais d’une nouvelle taxe, d’après un sondage ?"
+      ],
+      [
+       3,
+       "Pourquoi des lycéens ont-ils bloqué leur établissement pendant un mois ?"
+      ],
+      [
+       4,
+       "Que change concrètement une nouvelle loi sur les cantines dans les écoles ?"
+      ],
+      [
+       5,
+       "Comment la Constitution partage-t-elle le pouvoir entre président et parlement ?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "verdane",
+     "enonce": "Touche le fait qui illustre la souveraineté de Verdane.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "La souveraineté, c’est l’absence de toute autorité supérieure à l’État.",
+     "explication": "Aucune autorité supérieure ne peut donner d’ordre à Verdane : c’est la **souveraineté**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la dernière ligne du tableau (seules la police et l’armée peuvent contraindre) ?",
+     "options": [
+      "Le monopole de la violence physique légitime (Weber)",
+      "Une domination charismatique exercée par l’armée de Verdane",
+      "Une séparation complète entre l’État et sa population",
+      "L’absence de toute administration permanente dans l’État"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la définition que Weber donne de l’État.",
+     "explication": "Pour **Weber**, l’État est la communauté qui revendique avec succès le **monopole de la violence physique légitime** sur un territoire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque recherche à l’objet que le politiste y étudie.",
+     "paires": [
+      [
+       "Recherche 1",
+       "Les partis et les élections"
+      ],
+      [
+       "Recherche 2",
+       "L’opinion publique et les sondages"
+      ],
+      [
+       "Recherche 3",
+       "Les mobilisations"
+      ],
+      [
+       "Recherche 4",
+       "Les politiques publiques"
+      ],
+      [
+       "Recherche 5",
+       "Les institutions et la Constitution"
+      ]
+     ],
+     "aide": "Une recherche porte sur le vote, une sur un sondage, une sur une contestation, une sur ce que fait l’État, une sur les règles du jeu.",
+     "explication": "Le vote relève de la **sociologie électorale**, le sondage de l’**opinion publique**, le blocage d’une **mobilisation**, la loi sur les cantines d’une **politique publique**, la Constitution des **institutions**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour comprendre comment des élus de Verdane préparent leur campagne, quelle méthode est la mieux adaptée ?",
+     "options": [
+      "Une méthode qualitative : entretiens avec des élus et observation de campagne",
+      "Uniquement un grand sondage auprès de 1 000 personnes interrogées",
+      "Une expérience en laboratoire menée sur un groupe d’électeurs",
+      "Aucune méthode : une campagne électorale ne s’étudie pas"
+     ],
+     "reponse": 0,
+     "aide": "Comprendre des pratiques passe par les entretiens et l’observation.",
+     "explication": "Le politiste utilise des méthodes **quantitatives et qualitatives** ; pour comprendre les pratiques d’élus, les entretiens et l’observation conviennent le mieux. L’expérience en laboratoire est presque toujours impossible."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f2e9102-9bc2-5499-8a32-d3e4ff705a3a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Boulangerie, collège, club de natation : qui produit quoi ?",
+   "competence": "analyser-document",
+   "situation": "Dans le quartier de Théo, trois organisations produisent chacune quelque chose d’utile. Théo veut comprendre ce qui les distingue, et pourquoi la cantine du collège ne coûte presque rien.",
+   "documents": [
+    {
+     "id": "quartier",
+     "type": "tableau",
+     "titre": "Trois producteurs du quartier",
+     "source": "Organisations imaginées pour l’exercice.",
+     "colonnes": [
+      "Producteur",
+      "Ce qu’il produit",
+      "Son but"
+     ],
+     "lignes": [
+      [
+       "Le Fournil (boulangerie)",
+       "Du pain, vendu à la baguette",
+       "Réaliser un profit"
+      ],
+      [
+       "Le collège public",
+       "Des cours, gratuits pour les élèves",
+       "Rendre un service financé par l’impôt"
+      ],
+      [
+       "Les Dauphins (club de natation)",
+       "Des séances pour les adhérents",
+       "Faire vivre un projet, sans redistribuer de bénéfices"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "cantine",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Cantine du collège",
+     "sousTitre": "Un repas",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Coût de production du repas",
+       "valeur": "4,00 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Prix payé par l’élève",
+       "valeur": "1,50 €",
+       "gras": true
+      }
+     ],
+     "pied": "Le reste est financé par l’impôt.",
+     "source": "Chiffres imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque producteur au type d’organisation auquel il appartient.",
+     "paires": [
+      [
+       "Le Fournil",
+       "Entreprise privée"
+      ],
+      [
+       "Le collège public",
+       "Administration publique"
+      ],
+      [
+       "Les Dauphins",
+       "Association"
+      ]
+     ],
+     "aide": "Regarde la dernière colonne : profit, service public financé par l’impôt, ou projet sans bénéfices redistribués.",
+     "explication": "Le Fournil est une **entreprise privée** (profit), le collège une **administration publique** (service financé par l’impôt), le club une **association** (un projet, sans redistribution de bénéfices)."
+    },
+    {
+     "type": "zone",
+     "document": "quartier",
+     "enonce": "Touche le but de l’organisation qui produit pour réaliser un profit.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Une seule ligne du tableau parle de profit.",
+     "explication": "Le but d’une **entreprise privée** est de réaliser un profit en vendant sa production, comme le fait Le Fournil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une production est non marchande si elle est vendue à un prix inférieur à la moitié de son coût. Quel est ce seuil pour un repas de la cantine, en euros ?",
+     "reponse": 2,
+     "unite": "€",
+     "aide": "Prends la moitié du coût de production lu sur le ticket.",
+     "explication": "La moitié de 4,00 € est **2,00 €**. Un repas vendu en dessous de ce seuil est non marchand."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le repas est payé 1,50 € par l’élève. Que peut-on en conclure ?",
+     "options": [
+      "Non marchand : il est compté dans le PIB à son coût de production",
+      "Marchand : l’élève paie quelque chose, donc il y a un prix de marché",
+      "Non marchand : il n’a pas de prix de marché, donc il est absent du PIB",
+      "Marchand : le collège est un établissement public, cela ne change rien"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1,50 € au seuil de 2,00 € que tu viens de calculer.",
+     "explication": "1,50 € est inférieur à la moitié du coût (2,00 €) : le service est **non marchand**. Il est pourtant une production, comptée dans le PIB à son coût de production."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f2e9102-9bc2-5499-8a32-d3e4ff705a3a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La zone d’activités de Valmont : petites et grandes entreprises",
+   "competence": "lire-tableau",
+   "situation": "La zone d’activités de Valmont compte 200 entreprises. Un étudiant en stage relève leur taille, leur chiffre d’affaires et leur activité pour la mairie.",
+   "documents": [
+    {
+     "id": "tailles",
+     "type": "tableau",
+     "titre": "Les entreprises de la zone selon leur taille",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Catégorie",
+      "Nombre d’entreprises",
+      "Chiffre d’affaires (millions d’euros)"
+     ],
+     "lignes": [
+      [
+       "Microentreprises",
+       160,
+       12
+      ],
+      [
+       "PME",
+       32,
+       38
+      ],
+      [
+       "ETI",
+       6,
+       30
+      ],
+      [
+       "Grandes entreprises",
+       2,
+       120
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "annuaire",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Annuaire de la zone",
+     "emoji": "🏭",
+     "lignes": [
+      {
+       "texte": "Ferme du Vallon",
+       "valeur": "élevage de vaches",
+       "id": "ferme"
+      },
+      {
+       "texte": "Menuiserie Roux",
+       "valeur": "fabrication de meubles",
+       "id": "menuiserie"
+      },
+      {
+       "texte": "Garage Durand",
+       "valeur": "réparation de voitures",
+       "id": "garage"
+      },
+      {
+       "texte": "Chantiers Lenoir",
+       "valeur": "construction de maisons",
+       "id": "chantiers"
+      },
+      {
+       "texte": "Salon Léa",
+       "valeur": "coiffure",
+       "id": "salon"
+      }
+     ],
+     "source": "Entreprises imaginées pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des entreprises de la zone les microentreprises représentent-elles, en % ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Divise le nombre de microentreprises par le nombre total (200).",
+     "explication": "160 ÷ 200 = 0,80, soit **80 %** : les très petites entreprises sont les plus nombreuses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du chiffre d’affaires total les deux grandes entreprises réalisent-elles, en % ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Additionne d’abord les quatre chiffres d’affaires (le total vaut 200 millions), puis divise.",
+     "explication": "120 ÷ 200 = 0,60, soit **60 %** : deux entreprises sur 200 concentrent l’essentiel du chiffre d’affaires."
+    },
+    {
+     "type": "zone",
+     "document": "tailles",
+     "enonce": "Touche la case du chiffre d’affaires le plus élevé.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Lis la dernière colonne et cherche la plus grande valeur.",
+     "explication": "Les **grandes entreprises** réalisent 120 millions d’euros, plus que les trois autres catégories ensemble."
+    },
+    {
+     "type": "zone",
+     "document": "annuaire",
+     "enonce": "Touche les deux entreprises du secteur secondaire (industrie et construction).",
+     "reponse": [
+      "menuiserie",
+      "chantiers"
+     ],
+     "multiple": true,
+     "aide": "Le secondaire transforme des matières ou construit ; le primaire cultive ou extrait ; le tertiaire rend des services.",
+     "explication": "La **menuiserie** (fabrication) et les **chantiers** (construction) sont du secteur secondaire. La ferme est primaire ; le garage et le salon sont du tertiaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit ce tableau de la diversité des entreprises ?",
+     "options": [
+      "Les plus petites sont les plus nombreuses, mais les plus grandes pèsent le plus lourd",
+      "Les grandes entreprises sont les plus nombreuses et les plus riches",
+      "Les microentreprises sont à la fois les plus nombreuses et les plus riches",
+      "Toutes les catégories pèsent à peu près autant dans la zone"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne des nombres et la colonne des chiffres d’affaires.",
+     "explication": "Les très petites entreprises sont les plus **nombreuses**, mais les grandes concentrent l’essentiel du **chiffre d’affaires** : taille et poids économique ne vont pas ensemble."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f2e9102-9bc2-5499-8a32-d3e4ff705a3a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La Ruche : une coopérative où chacun compte pour une voix",
+   "competence": "analyser-document",
+   "situation": "Quatre associés fondent « La Ruche », une imprimerie coopérative. L’un d’eux, Amir, a apporté plus d’argent que les autres. Il se demande ce que cela change à ses droits.",
+   "documents": [
+    {
+     "id": "statuts",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Extrait des statuts de La Ruche",
+     "source": "Statuts imaginés pour l’exercice.",
+     "blocs": [
+      "Article 1. Chaque associé dispose d’une seule [[v|voix]] aux assemblées, quel que soit le nombre de parts qu’il détient.",
+      "Article 2. Une part des bénéfices est mise en réserve ; le partage entre associés est limité."
+     ]
+    },
+    {
+     "id": "capital",
+     "type": "tableau",
+     "titre": "Les parts de capital des associés",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Associé",
+      "Part du capital (%)"
+     ],
+     "lignes": [
+      [
+       "Amir",
+       40
+      ],
+      [
+       "Binta",
+       30
+      ],
+      [
+       "Chloé",
+       20
+      ],
+      [
+       "David",
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "statuts",
+     "portee": [
+      0
+     ],
+     "enonce": "Touche le mot de l’article 1 qui traduit le principe « une personne, une voix ».",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche ce que chaque associé possède en un seul exemplaire.",
+     "explication": "Chaque associé n’a qu’**une voix**, quel que soit son capital : c’est la gouvernance des coopératives."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans La Ruche, quelle part des voix Amir détient-il, en % ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Il y a quatre associés, chacun avec une voix.",
+     "explication": "Une voix sur quatre : 1 ÷ 4 = **25 %**, malgré ses 40 % du capital."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans une société où chaque part de capital donne une voix, Amir aurait 40 % des voix. De combien de points son poids diminue-t-il dans la coopérative ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Compare ses 40 % de capital à ses 25 % de voix : l’écart se compte en points.",
+     "explication": "40 − 25 = **15 points de pourcentage** : en coopérative, le pouvoir ne suit pas l’argent apporté."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces organisations : relèvent-elles de l’économie sociale et solidaire ?",
+     "categories": [
+      "Économie sociale et solidaire",
+      "Hors économie sociale et solidaire"
+     ],
+     "items": [
+      [
+       "Une coopérative agricole",
+       0
+      ],
+      [
+       "Une mutuelle de santé",
+       0
+      ],
+      [
+       "Une association de quartier",
+       0
+      ],
+      [
+       "Une société cotée en bourse",
+       1
+      ],
+      [
+       "Une entreprise individuelle de plomberie",
+       1
+      ]
+     ],
+     "aide": "L’ESS regroupe coopératives, mutuelles, associations et fondations.",
+     "explication": "Coopératives, mutuelles, associations et fondations forment l’**économie sociale et solidaire** ; une société cotée ou une entreprise individuelle n’en font pas partie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une ville compte 2 000 salariés du secteur privé. Si elle ressemble à la moyenne nationale, combien travaillent environ dans l’économie sociale et solidaire ?",
+     "reponse": 200,
+     "tolerance": 20,
+     "aide": "L’ESS représente environ un salarié privé sur dix en France.",
+     "explication": "Un sur dix : 2 000 ÷ 10 = **environ 200 salariés**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1b336f2-5ba8-59e9-8fd8-3e2b77ecb04a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce qu’il faut pour faire tourner une pizzeria",
+   "competence": "lire-tableau",
+   "situation": "Marco ouvre une pizzeria. Il fait la liste de ce qu’il utilise pour produire, et se demande combien de temps chaque élément va servir.",
+   "documents": [
+    {
+     "id": "inventaire",
+     "type": "tableau",
+     "titre": "Ce que la pizzeria met en œuvre",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Élément utilisé",
+      "Durée d’usage"
+     ],
+     "lignes": [
+      [
+       "Un four à pizza (12 000 €)",
+       "10 ans"
+      ],
+      [
+       "Un camion de livraison",
+       "6 ans"
+      ],
+      [
+       "De la farine",
+       "Quelques jours : elle est transformée en pâte"
+      ],
+      [
+       "L’électricité du four",
+       "Consommée au fil de la production"
+      ],
+      [
+       "Un logiciel de caisse",
+       "5 ans"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inventaire",
+     "multiple": true,
+     "enonce": "Touche, dans la première colonne, les trois éléments du capital fixe (utilisés plus d’un an).",
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r4c0"
+     ],
+     "aide": "Le capital fixe sert plus d’un an ; le capital circulant est détruit ou transformé dans la production.",
+     "explication": "Le **four**, le **camion** et le **logiciel** servent plusieurs années. La farine et l’électricité sont du capital circulant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On répartit le prix du four à parts égales sur sa durée d’usage. Quelle part de son prix (amortissement) chaque année représente-t-elle, en euros ?",
+     "reponse": 1200,
+     "unite": "€",
+     "aide": "Divise le prix du four par le nombre d’années d’usage.",
+     "explication": "12 000 ÷ 10 = **1 200 € par an**. Le capital fixe s’use : on en tient compte par l’amortissement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Marco a suivi trois ans de formation en pizzeria et cuisine mieux et plus vite. De quel facteur de production parle-t-on ?",
+     "options": [
+      "Du capital humain, qui rend le travail plus productif",
+      "Du capital circulant, détruit au cours de la production",
+      "Du capital fixe, car il dure plusieurs années",
+      "Des consommations intermédiaires de la pizzeria"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit des savoirs et des compétences de la personne qui travaille.",
+     "explication": "Les savoirs et compétences qui rendent le travail plus productif forment le **capital humain** : ils améliorent la qualité du facteur travail."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1b336f2-5ba8-59e9-8fd8-3e2b77ecb04a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La pizzeria produit plus avec les mêmes heures",
+   "competence": "raisonner",
+   "situation": "En 2023, Marco a changé un peu tout dans sa pizzeria. Il compare ses deux dernières années et cherche à expliquer le résultat.",
+   "documents": [
+    {
+     "id": "prod",
+     "type": "tableau",
+     "titre": "Production et travail",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Pizzas produites",
+      "Heures travaillées",
+      "Pizzas par heure"
+     ],
+     "lignes": [
+      [
+       "2022",
+       12000,
+       3000,
+       4
+      ],
+      [
+       "2023",
+       15000,
+       3000,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "marco",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le mot de Marco",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "« En 2023, nous avons acheté un four plus rapide, suivi une formation pour toute l’équipe, et réorganisé la cuisine : l’un prépare les pâtes, l’autre garnit, le troisième enfourne. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la productivité du travail de la pizzeria en 2023, en pizzas par heure ?",
+     "reponse": 5,
+     "unite": "pizzas/h",
+     "aide": "Productivité = production ÷ quantité de travail (en heures).",
+     "explication": "15 000 ÷ 3 000 = **5 pizzas par heure**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, la productivité du travail a-t-elle augmenté entre 2022 et 2023 ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Taux de variation = (valeur finale − valeur initiale) ÷ valeur initiale.",
+     "explication": "(5 − 4) ÷ 4 = 0,25, soit une hausse de **25 %**, alors que le nombre d’heures n’a pas changé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque changement de 2023 à la source de gain de productivité qu’il illustre.",
+     "paires": [
+      [
+       "Un four plus rapide",
+       "Le progrès technique"
+      ],
+      [
+       "Une formation pour l’équipe",
+       "Le capital humain"
+      ],
+      [
+       "Un préparateur, un garnisseur, un enfourneur",
+       "L’organisation et la division des tâches"
+      ]
+     ],
+     "aide": "Une machine, des compétences, une répartition des tâches : trois sources différentes.",
+     "explication": "Le four relève du **progrès technique**, la formation du **capital humain**, la spécialisation de chacun de l’**organisation du travail**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Grâce à ces gains, Marco baisse le prix de ses pizzas de 12 € à 11 €. Quel usage des gains de productivité est-ce ?",
+     "options": [
+      "Une baisse des prix",
+      "Une hausse des salaires",
+      "Une hausse des profits",
+      "Une réduction du temps de travail"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Relis les usages possibles : prix, salaires, profits, temps de travail.",
+     "explication": "Faire payer moins cher le même produit, c’est utiliser les gains de productivité pour **baisser les prix**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1b336f2-5ba8-59e9-8fd8-3e2b77ecb04a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mille baguettes : beaucoup de bras ou beaucoup de machines ?",
+   "competence": "modeliser",
+   "situation": "Une boulangerie industrielle doit fabriquer 1 000 baguettes par jour. Deux techniques sont possibles. Son directeur compare ce que chacune coûte, avant et après une hausse de salaire.",
+   "documents": [
+    {
+     "id": "techniques",
+     "type": "tableau",
+     "titre": "Deux façons de produire 1 000 baguettes par jour",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Technique",
+      "Travailleurs",
+      "Machines"
+     ],
+     "lignes": [
+      [
+       "A",
+       10,
+       1
+      ],
+      [
+       "B",
+       2,
+       4
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "couts",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Coûts journaliers",
+     "emoji": "🥖",
+     "lignes": [
+      {
+       "texte": "Un travailleur",
+       "valeur": "100 €"
+      },
+      {
+       "texte": "Une machine",
+       "valeur": "300 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Après la hausse : un travailleur",
+       "valeur": "150 €",
+       "gras": true
+      }
+     ],
+     "source": "Coûts imaginés pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Avant la hausse, quel est le coût journalier de la technique A, en euros ?",
+     "reponse": 1300,
+     "unite": "€",
+     "aide": "Coût = travailleurs × 100 € + machines × 300 €.",
+     "explication": "10 × 100 + 1 × 300 = 1 000 + 300 = **1 300 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avant la hausse, quel est le coût journalier de la technique B, en euros ?",
+     "reponse": 1400,
+     "unite": "€",
+     "aide": "Même calcul avec 2 travailleurs et 4 machines.",
+     "explication": "2 × 100 + 4 × 300 = 200 + 1 200 = **1 400 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avant la hausse, quelle technique l’entreprise choisit-elle si elle cherche le coût le plus bas ?",
+     "options": [
+      "La technique A, intensive en travail",
+      "La technique B, intensive en capital",
+      "Les deux, car elles produisent autant",
+      "Aucune : il faut des machines pour produire"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux coûts que tu viens de calculer.",
+     "explication": "A coûte 1 300 € contre 1 400 € pour B : l’entreprise choisit la technique **intensive en travail**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après la hausse du salaire, combien d’euros par jour économise-t-elle en passant de la technique A à la technique B ?",
+     "reponse": 300,
+     "unite": "€",
+     "aide": "Recalcule les deux coûts avec un travailleur à 150 €, puis fais la différence.",
+     "explication": "A : 10 × 150 + 300 = 1 800 €. B : 2 × 150 + 1 200 = 1 500 €. Écart : **300 €**. Le travail devient relativement plus cher : on substitue des machines aux travailleurs."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la relation entre facteurs de production qu’elle illustre.",
+     "paires": [
+      [
+       "Remplacer des caissières par des caisses automatiques",
+       "Substituabilité"
+      ],
+      [
+       "Un ordinateur ne sert à rien sans personne pour l’utiliser",
+       "Complémentarité"
+      ]
+     ],
+     "aide": "Remplacer un facteur par un autre, ou les employer ensemble ?",
+     "explication": "On peut **substituer** une machine à du travail (le choix de B) ; mais certains facteurs sont **complémentaires** : ils doivent aller ensemble."
+    }
+   ]
+  },
+  {
+   "chapitre": "358b5d19-a910-52e9-92e0-6996bba8965b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que Zélie a vraiment ajouté en vendant du pain",
+   "competence": "lire-tableau",
+   "situation": "Zélie tient une boulangerie. Son comptable lui a remis les principaux postes de l’année. Elle veut savoir ce que son entreprise a réellement créé.",
+   "documents": [
+    {
+     "id": "comptes",
+     "type": "tableau",
+     "titre": "Les comptes de l’année du Fournil de Zélie",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Ventes de pain et de viennoiseries",
+       180000
+      ],
+      [
+       "Farine, beurre et levure achetés",
+       40000
+      ],
+      [
+       "Électricité et gaz achetés",
+       12000
+      ],
+      [
+       "Livraison confiée à un transporteur",
+       8000
+      ],
+      [
+       "Salaires versés",
+       70000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "comptes",
+     "multiple": true,
+     "enonce": "Touche, dans la première colonne, les trois consommations intermédiaires de la boulangerie.",
+     "reponse": [
+      "r1c0",
+      "r2c0",
+      "r3c0"
+     ],
+     "aide": "Ce sont des biens et services achetés à d’autres, détruits ou transformés dans la production. Les salaires n’en font pas partie.",
+     "explication": "La **farine**, l’**énergie** et le **transport** sont achetés à d’autres et consommés pour produire. Les salaires rémunèrent le travail de la boulangerie elle-même."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des consommations intermédiaires, en euros ?",
+     "reponse": 60000,
+     "unite": "€",
+     "aide": "Additionne les trois postes que tu viens de toucher.",
+     "explication": "40 000 + 12 000 + 8 000 = **60 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur ajoutée de la boulangerie, en euros ?",
+     "reponse": 120000,
+     "unite": "€",
+     "aide": "Valeur ajoutée = chiffre d’affaires − consommations intermédiaires.",
+     "explication": "180 000 − 60 000 = **120 000 €**. C’est ce que le travail et les machines de la boulangerie ont ajouté à ce qu’elle a acheté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les 70 000 € de salaires ne se retranchent-ils pas du chiffre d’affaires pour calculer la valeur ajoutée ?",
+     "options": [
+      "Ils ne sont pas achetés à une autre entreprise : ils partagent la valeur ajoutée",
+      "Parce que les salaires sont toujours plus faibles que les profits réalisés",
+      "Parce que les salaires ne sont pas une dépense pour l’entreprise",
+      "Parce que seuls les achats de farine comptent comme des dépenses"
+     ],
+     "reponse": 0,
+     "aide": "La valeur ajoutée se partage ensuite, entre autres, en salaires.",
+     "explication": "Les salaires sont un **partage** de la valeur ajoutée (salariés, État, prêteurs…), pas un achat à d’autres entreprises."
+    }
+   ]
+  },
+  {
+   "chapitre": "358b5d19-a910-52e9-92e0-6996bba8965b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du blé au pain : compte-t-on trois fois la même farine ?",
+   "competence": "analyser-document",
+   "situation": "Trois producteurs travaillent à la suite : un agriculteur vend du blé à un meunier, qui vend de la farine à un boulanger, qui vend du pain aux clients. Une étudiante veut mesurer la production totale.",
+   "documents": [
+    {
+     "id": "filiere",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "La filière du pain",
+     "noeuds": [
+      {
+       "id": "agri",
+       "texte": "Agriculteur",
+       "emoji": "🌾"
+      },
+      {
+       "id": "meunier",
+       "texte": "Meunier",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "boulanger",
+       "texte": "Boulanger",
+       "emoji": "🥖"
+      },
+      {
+       "id": "clients",
+       "texte": "Clients",
+       "emoji": "🧑"
+      }
+     ],
+     "liens": [
+      {
+       "de": "agri",
+       "a": "meunier",
+       "texte": "blé"
+      },
+      {
+       "de": "meunier",
+       "a": "boulanger",
+       "texte": "farine"
+      },
+      {
+       "de": "boulanger",
+       "a": "clients",
+       "texte": "pain"
+      }
+     ]
+    },
+    {
+     "id": "ventes",
+     "type": "tableau",
+     "titre": "Ventes et achats de chaque producteur (en milliers d’euros)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Producteur",
+      "Ventes",
+      "Achats à d’autres",
+      "Valeur ajoutée"
+     ],
+     "lignes": [
+      [
+       "Agriculteur",
+       80,
+       0,
+       80
+      ],
+      [
+       "Meunier",
+       130,
+       80,
+       "?"
+      ],
+      [
+       "Boulanger",
+       220,
+       130,
+       90
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "filiere",
+     "enonce": "Touche le producteur dont les ventes vont directement aux consommateurs finals.",
+     "reponse": [
+      "boulanger"
+     ],
+     "aide": "Suis les flèches jusqu’au dernier maillon avant les clients.",
+     "explication": "Le **boulanger** vend le pain aux clients : c’est le dernier maillon de la filière."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur ajoutée du meunier, en milliers d’euros ?",
+     "reponse": 50,
+     "unite": "k€",
+     "aide": "Ventes − achats à d’autres.",
+     "explication": "130 − 80 = **50 milliers d’euros** : il a transformé du blé acheté 80 en farine vendue 130."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des valeurs ajoutées des trois producteurs, en milliers d’euros ?",
+     "reponse": 220,
+     "unite": "k€",
+     "aide": "Additionne 80, la valeur ajoutée du meunier, et 90.",
+     "explication": "80 + 50 + 90 = **220 milliers d’euros**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La somme des ventes vaut 80 + 130 + 220 = 430. Que montre la comparaison avec la somme des valeurs ajoutées ?",
+     "options": [
+      "La somme des valeurs ajoutées égale le prix du pain : pas de double compte",
+      "La somme des ventes est la bonne mesure, car elle est la plus grande",
+      "Les deux sommes devraient toujours être égales entre elles, par principe",
+      "Le meunier a créé plus de richesse que le boulanger, en valeur"
+     ],
+     "reponse": 0,
+     "aide": "Compare 220 au chiffre d’affaires du boulanger.",
+     "explication": "La somme des ventes compte le blé et la farine plusieurs fois. La somme des **valeurs ajoutées (220)** égale le prix final du pain : c’est ainsi qu’on mesure la production, et le PIB."
+    }
+   ]
+  },
+  {
+   "chapitre": "358b5d19-a910-52e9-92e0-6996bba8965b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "À qui profite la valeur ajoutée du Fournil ?",
+   "competence": "raisonner",
+   "situation": "La valeur ajoutée du Fournil de Zélie est de 120 000 € cette année. Reste à la partager : le syndicat, les propriétaires et Zélie n’ont pas les mêmes priorités.",
+   "documents": [
+    {
+     "id": "partage",
+     "type": "tableau",
+     "titre": "Le partage de la valeur ajoutée du Fournil (en euros)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Bénéficiaire",
+      "Ce qu’il reçoit",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Les salariés",
+       "Salaires et cotisations",
+       72000
+      ],
+      [
+       "L’État",
+       "Impôts liés à la production",
+       6000
+      ],
+      [
+       "Les prêteurs",
+       "Intérêts",
+       9000
+      ],
+      [
+       "Les propriétaires",
+       "Dividendes",
+       15000
+      ],
+      [
+       "L’entreprise",
+       "Autofinancement",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "tract",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La réunion de fin d’année",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Le délégué du personnel demande 10 % de salaires en plus. Les propriétaires voudraient un dividende plus élevé. Zélie, elle, veut garder de quoi acheter un nouveau four."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel montant reste à l’entreprise pour s’autofinancer, en euros ?",
+     "reponse": 18000,
+     "unite": "€",
+     "aide": "Retire de la valeur ajoutée (120 000 €) tout ce qui est versé aux quatre autres bénéficiaires.",
+     "explication": "72 000 + 6 000 + 9 000 + 15 000 = 102 000 ; 120 000 − 102 000 = **18 000 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la valeur ajoutée les salariés reçoivent-ils, en % ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Divise 72 000 par la valeur ajoutée totale.",
+     "explication": "72 000 ÷ 120 000 = 0,60, soit **60 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les salaires augmentent de 10 %, sans que la valeur ajoutée ni les trois autres versements ne changent. Que reste-t-il alors pour l’autofinancement, en euros ?",
+     "reponse": 10800,
+     "unite": "€",
+     "aide": "Calcule les nouveaux salaires (72 000 × 1,10), puis retire-les, avec les autres versements, de 120 000.",
+     "explication": "Salaires : 72 000 × 1,10 = 79 200 €. Total versé : 79 200 + 6 000 + 9 000 + 15 000 = 109 200 €. Il reste 120 000 − 109 200 = **10 800 €**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque bénéficiaire à ce qu’il reçoit de la valeur ajoutée.",
+     "paires": [
+      [
+       "Les salariés",
+       "Salaires et cotisations"
+      ],
+      [
+       "Les prêteurs",
+       "Intérêts"
+      ],
+      [
+       "Les propriétaires",
+       "Dividendes"
+      ],
+      [
+       "L’État",
+       "Impôts liés à la production"
+      ]
+     ],
+     "aide": "Un prêteur reçoit l’argent qu’il a prêté, un propriétaire une part des profits.",
+     "explication": "Salariés : **salaires** ; prêteurs : **intérêts** ; propriétaires : **dividendes** ; État : **impôts** liés à la production. Le reste est l’**autofinancement**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le partage de la valeur ajoutée est-il un enjeu de conflit, comme à la réunion de Zélie ?",
+     "options": [
+      "Parce que le total est limité : augmenter une part réduit forcément les autres",
+      "Parce que la valeur ajoutée augmente quand on la partage",
+      "Parce que les salariés et les propriétaires ont les mêmes intérêts",
+      "Parce que seul l’État peut décider du partage"
+     ],
+     "reponse": 0,
+     "aide": "Reprends le calcul avec 10 % de salaires en plus : qu’arrive-t-il à l’autofinancement ?",
+     "explication": "Pour une valeur ajoutée donnée, ce que gagne un bénéficiaire est perdu par les autres : le partage oppose **salaires, profits et investissement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fff4b70-b221-596d-bc30-947f3532f2db",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée chez les Benali : ce que le PIB compte… ou pas",
+   "competence": "analyser-texte",
+   "situation": "Léa lit le journal d’une famille imaginaire pour comprendre ce que mesure le PIB. Certaines activités y laissent une trace, d’autres pas du tout.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une journée des Benali",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Mme Benali, infirmière, soigne des patients à l’hôpital toute la journée.",
+      "M. Benali assure tout le travail [[d|domestique]] : repas, ménage, enfants. Personne ne le paie pour cela.",
+      "Leur voisine vend du miel au marché et déclare ses ventes.",
+      "Le samedi, Mme Benali est bénévole dans une association d’aide alimentaire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "portee": [
+      1
+     ],
+     "enonce": "Touche le mot qui désigne le travail de M. Benali, réel mais non rémunéré.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Il s’agit de ce qu’on fait à la maison pour sa famille.",
+     "explication": "Le travail **domestique** est une production réelle, mais comme il n’est ni rémunéré ni échangé, le PIB ne le compte pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces activités : sont-elles comptées dans le PIB ?",
+     "categories": [
+      "Comptée dans le PIB",
+      "Non comptée dans le PIB"
+     ],
+     "items": [
+      [
+       "Les soins donnés à l’hôpital par Mme Benali",
+       0
+      ],
+      [
+       "Les repas préparés à la maison par M. Benali",
+       1
+      ],
+      [
+       "Le miel vendu au marché par la voisine",
+       0
+      ],
+      [
+       "Les heures de bénévolat de Mme Benali",
+       1
+      ]
+     ],
+     "aide": "Le PIB compte la production échangée ou rémunérée, marchande ou non marchande.",
+     "explication": "Les **soins** (service non marchand) et le **miel** (vente) sont comptés ; le travail **domestique** et le **bénévolat** ne le sont pas, bien qu’ils soient utiles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un accident abîme la voiture des Benali ; l’atelier la répare pour 800 €. Que devient le PIB ?",
+     "options": [
+      "Il augmente, car la réparation est une production payée",
+      "Il diminue, car la voiture a perdu de sa valeur",
+      "Il ne bouge pas, car un accident n’est pas une production",
+      "Il diminue, car la famille a dépensé 800 €"
+     ],
+     "reponse": 0,
+     "aide": "Pose-toi la question : l’atelier produit-il un service payé ?",
+     "explication": "La réparation est un service **vendu** : elle s’ajoute au PIB. C’est l’une des limites du PIB : il compte aussi des dépenses qui réparent des dégâts."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fff4b70-b221-596d-bc30-947f3532f2db",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Aldoria : le PIB a-t-il vraiment augmenté de 9,2 % ?",
+   "competence": "calculer",
+   "situation": "Un journal annonce que le PIB d’Aldoria, pays imaginaire de 20 millions d’habitants en 2022, a augmenté de 9,2 % en un an. Un économiste vérifie ce que cela veut dire.",
+   "documents": [
+    {
+     "id": "pib",
+     "type": "tableau",
+     "titre": "Le PIB d’Aldoria",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "PIB en valeur (milliards d’euros)",
+      "Indice des prix (base 100 en 2021)",
+      "PIB en volume (milliards d’euros de 2021)"
+     ],
+     "lignes": [
+      [
+       "2021",
+       500,
+       100,
+       500
+      ],
+      [
+       "2022",
+       546,
+       105,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le PIB en volume de 2022 (PIB en valeur ÷ indice des prix × 100), en milliards d’euros de 2021.",
+     "reponse": 520,
+     "unite": "Md€",
+     "aide": "Divise 546 par 105, puis multiplie par 100.",
+     "explication": "546 ÷ 105 × 100 = **520 milliards d’euros de 2021** : on a retiré l’effet de la hausse des prix."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le PIB d’Aldoria a-t-il augmenté en valeur entre 2021 et 2022 ?",
+     "reponse": 9.2,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Taux de variation = (546 − 500) ÷ 500.",
+     "explication": "(546 − 500) ÷ 500 = 46 ÷ 500 = 0,092, soit **9,2 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le PIB a-t-il augmenté en volume ? C’est le taux de croissance économique.",
+     "reponse": 4,
+     "unite": "%",
+     "aide": "Compare 520 à 500 : taux = (520 − 500) ÷ 500.",
+     "explication": "(520 − 500) ÷ 500 = 0,04, soit **4 %** de croissance en volume."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le journal se trompe-t-il en annonçant une croissance de 9,2 % ?",
+     "options": [
+      "Ce taux inclut la hausse des prix, que le PIB en volume neutralise",
+      "Ce taux oublie de compter la population du pays",
+      "Ce taux ne compte que les entreprises, pas les ménages",
+      "Ce taux est trop faible : la vraie croissance est de 10 %"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’indice des prix : que s’est-il passé de 2021 à 2022 ?",
+     "explication": "Le PIB **en valeur** augmente quand les prix augmentent. Seul le PIB **en volume** mesure la croissance : ici 4 %, pas 9,2 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PIB par habitant en 2022 (en valeur), en euros ?",
+     "reponse": 27300,
+     "unite": "€",
+     "aide": "546 milliards d’euros divisés par 20 millions d’habitants.",
+     "explication": "546 000 000 000 ÷ 20 000 000 = **27 300 €** par habitant. Cette moyenne ne dit rien de la répartition des richesses."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fff4b70-b221-596d-bc30-947f3532f2db",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois pays imaginaires, quatre indicateurs",
+   "competence": "analyser-document",
+   "situation": "Une ONG compare trois pays imaginaires. Un journaliste ne veut retenir que le PIB par habitant ; l’ONG lui demande de regarder aussi les autres indicateurs, puis un événement qui trouble la lecture du PIB.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Trois pays, quatre indicateurs",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "PIB par habitant (milliers d’euros)",
+      "IDH",
+      "Indice de Gini",
+      "Empreinte écologique (planètes)"
+     ],
+     "lignes": [
+      [
+       "Alba",
+       40,
+       0.9,
+       0.45,
+       3
+      ],
+      [
+       "Belmar",
+       32,
+       0.93,
+       0.28,
+       2.2
+      ],
+      [
+       "Corvia",
+       12,
+       0.65,
+       0.4,
+       0.9
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "maree",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Après l’accident du pétrolier",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "À Port-Lamy, un pétrolier s’est échoué près de la côte. Des entreprises spécialisées ont facturé 60 millions d’euros de travaux de dépollution des plages."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche le PIB par habitant le plus élevé.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Lis la deuxième colonne, en milliers d’euros.",
+     "explication": "**Alba** a le PIB par habitant le plus élevé (40 000 €)."
+    },
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche l’indice de Gini qui montre les inégalités les plus fortes (plus il est élevé, plus les inégalités sont grandes).",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la plus grande valeur de la colonne « Indice de Gini ».",
+     "explication": "Alba a le Gini le plus élevé (**0,45**) : c’est le pays le plus riche en moyenne, mais aussi le plus inégalitaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Belmar a un PIB par habitant plus faible qu’Alba, mais un IDH plus élevé. Pourquoi ?",
+     "options": [
+      "L’IDH ajoute la santé et l’éducation à la mesure du niveau de vie",
+      "Le PIB par habitant est toujours faux quand il est élevé",
+      "L’IDH mesure uniquement les inégalités de revenus",
+      "L’IDH compte le travail domestique, que le PIB oublie"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi ce que l’IDH ajoute au simple niveau de vie.",
+     "explication": "L’**IDH** associe niveau de vie, santé et éducation : un pays peut être moins riche en moyenne et mieux classé. Les indicateurs se lisent **ensemble**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque indicateur de la table à ce qu’il ajoute à la lecture du PIB.",
+     "paires": [
+      [
+       "IDH",
+       "La santé et l’éducation"
+      ],
+      [
+       "Indice de Gini",
+       "Les inégalités"
+      ],
+      [
+       "Empreinte écologique",
+       "La pression sur la biosphère"
+      ]
+     ],
+     "aide": "Trois colonnes du tableau, trois dimensions que le PIB ignore.",
+     "explication": "L’**IDH** ajoute santé et éducation, le **Gini** mesure les inégalités, l’**empreinte écologique** la pression exercée sur la biosphère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit l’article du PIB de la région de Port-Lamy ?",
+     "options": [
+      "La dépollution est comptée dans le PIB, mais la dégradation de la côte n’est pas déduite",
+      "Le PIB baisse du montant de la dépollution, car c’est une dépense subie",
+      "Le PIB ne peut pas augmenter après un accident écologique",
+      "Le PIB mesure aussi le préjudice subi par la nature"
+     ],
+     "reponse": 0,
+     "aide": "Le PIB additionne des productions payées ; qu’en est-il de la nature détériorée ?",
+     "explication": "Une marée noire peut **augmenter** le PIB par les dépenses de dépollution : le PIB ne déduit pas la dégradation de l’environnement, il ne mesure pas le bien-être."
+    }
+   ]
+  },
+  {
+   "chapitre": "466c1452-b017-5929-8f9b-3efc5e95fb28",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur la frise de l’économie : du boom aux crises",
+   "competence": "se-reperer-temps",
+   "situation": "Adam prépare un exposé sur l’économie française depuis 1900. Il place sur une frise la grande période de croissance et quelques crises.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Croissance et crises depuis 1900",
+     "debut": 1900,
+     "fin": 2030,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "tg",
+       "debut": 1945,
+       "fin": 1975,
+       "nom": "Croissance",
+       "teinte": "jaune"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "c73",
+       "date": 1973,
+       "nom": "1er choc pétrolier"
+      },
+      {
+       "id": "c08",
+       "date": 2008,
+       "nom": "Crise financière"
+      },
+      {
+       "id": "c20",
+       "date": 2020,
+       "nom": "Crise sanitaire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période de forte croissance de 1945 à 1975.",
+     "reponse": [
+      "tg"
+     ],
+     "aide": "Cherche la bande colorée de la frise.",
+     "explication": "Ce sont les **Trente Glorieuses** : environ 5 % de croissance par an en France."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la période de forte croissance d’après la frise ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Soustrais la date de début à la date de fin.",
+     "explication": "1975 − 1945 = **30 ans** : le nom de la période dit sa durée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque événement à sa date.",
+     "paires": [
+      [
+       "Premier choc pétrolier",
+       "1973"
+      ],
+      [
+       "Crise financière",
+       "2008"
+      ],
+      [
+       "Crise sanitaire",
+       "2020"
+      ]
+     ],
+     "aide": "Lis la place de chaque repère sur la frise.",
+     "explication": "Le choc pétrolier date de **1973**, la crise financière de **2008**, la crise sanitaire de **2020** : la croissance est irrégulière."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel rythme annuel moyen la France a-t-elle crû pendant la période colorée ?",
+     "options": [
+      "Environ 5 %",
+      "Environ 0,5 %",
+      "Environ 20 %",
+      "Environ 1 %"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Pense au rythme « tonique » de l’après-guerre : quelques pourcents par an.",
+     "explication": "Pendant les **Trente Glorieuses**, la croissance française est d’environ **5 %** par an, bien plus que depuis 1975."
+    }
+   ]
+  },
+  {
+   "chapitre": "466c1452-b017-5929-8f9b-3efc5e95fb28",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Aldoria et Borvia : combien ça fait en trente ans ?",
+   "competence": "calculer",
+   "situation": "Deux pays imaginaires, Aldoria et Borvia, ont des rythmes de croissance différents. Une économiste calcule leur croissance et se demande si Borvia, l’an dernier, est tombée en récession.",
+   "documents": [
+    {
+     "id": "ans",
+     "type": "tableau",
+     "titre": "Le PIB en volume de deux pays",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "PIB 2022 (milliards d’euros)",
+      "PIB 2023 (milliards d’euros)"
+     ],
+     "lignes": [
+      [
+       "Aldoria",
+       1000,
+       1020
+      ],
+      [
+       "Borvia",
+       800,
+       840
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "trim",
+     "type": "tableau",
+     "titre": "Borvia en 2024 : variation du PIB en volume, trimestre par trimestre",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+     ],
+     "lignes": [
+      [
+       "Variation du PIB (%)",
+       "+0,4",
+       "−0,3",
+       "−0,5",
+       "+0,2"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de croissance d’Aldoria en 2023, en % ?",
+     "reponse": 2,
+     "unite": "%",
+     "aide": "Taux = (PIB 2023 − PIB 2022) ÷ PIB 2022.",
+     "explication": "(1 020 − 1 000) ÷ 1 000 = 0,02, soit **2 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Aldoria garde ce rythme chaque année, en combien d’années sa production double-t-elle environ ?",
+     "reponse": 35,
+     "unite": "ans",
+     "tolerance": 1,
+     "aide": "À 2 % par an, les intérêts composés font doubler la production en un peu plus de trois décennies.",
+     "explication": "Une croissance de 2 % par an double la production en **environ 35 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Borvia croît de 5 % par an, comme la France des Trente Glorieuses. Par combien environ sa production est-elle multipliée en 30 ans (arrondi au dixième) ?",
+     "reponse": 4.3,
+     "tolerance": 0.1,
+     "aide": "Multiplie par 1,05 trente fois, ou utilise la touche puissance de ta calculatrice : 1,05 puissance 30.",
+     "explication": "1,05 puissance 30 ≈ **4,3** : à 5 % par an, la production est multipliée par plus de quatre en trente ans."
+    },
+    {
+     "type": "zone",
+     "document": "trim",
+     "multiple": true,
+     "enonce": "Touche les deux trimestres consécutifs qui permettent de parler de récession.",
+     "reponse": [
+      "r0c2",
+      "r0c3"
+     ],
+     "aide": "Cherche deux reculs du PIB qui se suivent.",
+     "explication": "T2 (**−0,3 %**) puis T3 (**−0,5 %**) : le PIB recule deux trimestres de suite, c’est la définition d’une récession."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le recul de Borvia est-il une récession ou une dépression ?",
+     "options": [
+      "Une récession : le recul est faible et bref",
+      "Une dépression : le PIB a reculé deux trimestres",
+      "Ni l’une ni l’autre : le PIB a augmenté en T1",
+      "Une expansion : le PIB a augmenté en T4"
+     ],
+     "reponse": 0,
+     "aide": "Une dépression est un recul durable et profond, comme après 1929.",
+     "explication": "Deux trimestres de léger recul sont une **récession**. La **dépression** désigne un recul durable et profond, comme après 1929."
+    }
+   ]
+  },
+  {
+   "chapitre": "466c1452-b017-5929-8f9b-3efc5e95fb28",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une croissance inégale : de Londres à Pékin",
+   "competence": "lire-carte",
+   "situation": "Un professeur d’économie montre sur une carte d’où est partie la croissance moderne et où elle a gagné du terrain. Il y ajoute les rythmes d’un pays ancien industrialisé.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "fond": "monde",
+     "titre": "Quatre repères sur la carte",
+     "cadrage": [
+      -12,
+      5,
+      150,
+      62
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "manchester",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "encre"
+      },
+      {
+       "id": "b",
+       "lieu": "tokyo",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "encre"
+      },
+      {
+       "id": "c",
+       "lieu": "pekin",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "encre"
+      },
+      {
+       "id": "d",
+       "lieu": "delhi",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "encre"
+      }
+     ]
+    },
+    {
+     "id": "rythmes",
+     "type": "tableau",
+     "titre": "Croissance annuelle moyenne d’un pays ancien industrialisé",
+     "source": "Chiffres arrondis, imaginés pour l’exercice.",
+     "colonnes": [
+      "Période",
+      "Croissance annuelle moyenne (%)"
+     ],
+     "lignes": [
+      [
+       "1945-1975",
+       5
+      ],
+      [
+       "1975-2008",
+       2
+      ],
+      [
+       "2008-2020",
+       0.8
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le repère situé dans le pays où démarre la révolution industrielle, à la fin du XVIIIe siècle.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il s’agit d’une île située au nord-ouest de la France.",
+     "explication": "La révolution industrielle démarre en **Angleterre** (le repère A, Manchester), à la fin du XVIIIe siècle."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le repère situé dans le pays dont la croissance a décollé à la fin du XIXe siècle, puis repris après 1945.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Ce pays d’Asie est une île à l’est du continent.",
+     "explication": "C’est le **Japon** (le repère B, Tokyo) : décollage à la fin du XIXe siècle, puis nouvel élan après 1945."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les deux repères situés dans les deux pays les plus peuplés du monde, devenus émergents.",
+     "reponse": [
+      "c",
+      "d"
+     ],
+     "aide": "Ce sont deux géants d’Asie dont la croissance a décollé dans les dernières décennies.",
+     "explication": "La **Chine** (C, Pékin) et l’**Inde** (D, Delhi) sont des pays émergents : leur croissance a accéléré dans les dernières décennies."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points le rythme de croissance a-t-il baissé entre 1945-1975 et 1975-2008 ?",
+     "reponse": 3,
+     "unite": "points",
+     "aide": "Soustrais les deux pourcentages du tableau : on obtient des points de pourcentage.",
+     "explication": "5 − 2 = **3 points de pourcentage** : depuis 1975, la croissance est nettement plus faible dans les pays anciennement industrialisés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble la carte et le tableau ?",
+     "options": [
+      "Une croissance récente, inégale selon les régions, irrégulière dans le temps",
+      "Une croissance continue et identique dans tous les pays depuis 1800 environ",
+      "Une croissance partie de Chine, arrivée en Europe seulement après 1975",
+      "Une croissance qui ne dépend que de l’inflation propre à chaque pays"
+     ],
+     "reponse": 0,
+     "aide": "Le cours résume la croissance en trois mots : récente, inégale, irrégulière.",
+     "explication": "La croissance est **récente** (révolution industrielle), **inégale** (selon les régions, avec des émergents) et **irrégulière** (rythmes différents selon les périodes)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à sa définition.",
+     "paires": [
+      [
+       "Expansion",
+       "Une hausse de la production de courte durée"
+      ],
+      [
+       "Récession",
+       "Un recul du PIB pendant au moins deux trimestres consécutifs"
+      ],
+      [
+       "Dépression",
+       "Un recul durable et profond, comme après 1929"
+      ]
+     ],
+     "aide": "Les trois termes décrivent des mouvements irréguliers de la production.",
+     "explication": "L’**expansion** est une hausse brève, la **récession** deux trimestres consécutifs de recul, la **dépression** un recul durable et profond."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e67895e-ac53-50df-bed3-8949b08ce213",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Port-Neuf : de moins en moins de sardines",
+   "competence": "lire-graphique",
+   "situation": "À Port-Neuf, port de pêche imaginaire, Paola étudie la quantité de sardines estimée dans la baie. Elle se demande aussi quelles ressources le port consomme.",
+   "documents": [
+    {
+     "id": "stock",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Stock de sardines dans la baie",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2015",
+      "2017",
+      "2019",
+      "2021",
+      "2023"
+     ],
+     "series": [
+      {
+       "nom": "Stock",
+       "valeurs": [
+        100,
+        85,
+        70,
+        55,
+        40
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Stock estimé",
+      "unite": "en milliers de tonnes",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "conso",
+     "type": "tableau",
+     "titre": "Ce que consomme le port en un an",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Ressource utilisée",
+      "Origine"
+     ],
+     "lignes": [
+      [
+       "Gazole des bateaux",
+       "Pétrole"
+      ],
+      [
+       "Poissons pêchés",
+       "Stocks de la baie"
+      ],
+      [
+       "Cuivre des moteurs",
+       "Métaux"
+      ],
+      [
+       "Bois des caisses",
+       "Forêts"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stock",
+     "enonce": "Touche l’année où le stock de sardines était le plus élevé.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "En **2015** le stock atteignait 100 milliers de tonnes, avant de décliner à chaque relevé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien, en %, le stock a-t-il baissé entre 2015 et 2023 ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Taux = (40 − 100) ÷ 100. Réponds en valeur positive.",
+     "explication": "(100 − 40) ÷ 100 = 0,60 : le stock a baissé de **60 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les sardines sont une ressource renouvelable. Pourquoi leur stock diminue-t-il ?",
+     "options": [
+      "On les pêche plus vite qu’elles ne se reconstituent",
+      "Les ressources renouvelables finissent toujours par disparaître",
+      "Les sardines sont une ressource non renouvelable",
+      "Le port n’a pas utilisé assez de gazole"
+     ],
+     "reponse": 0,
+     "aide": "Une ressource renouvelable peut s’épuiser si on la surexploite.",
+     "explication": "C’est une **surexploitation** : une ressource renouvelable se reconstitue, mais pas si on en prélève plus qu’elle ne peut en redonner."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces ressources du tableau selon qu’elles sont renouvelables ou non.",
+     "categories": [
+      "Renouvelable",
+      "Non renouvelable"
+     ],
+     "items": [
+      [
+       "Le pétrole du gazole",
+       1
+      ],
+      [
+       "Les poissons de la baie",
+       0
+      ],
+      [
+       "Le cuivre des moteurs",
+       1
+      ],
+      [
+       "Le bois des forêts",
+       0
+      ]
+     ],
+     "aide": "Une ressource non renouvelable ne se reconstitue pas à l’échelle humaine : pétrole, gaz, métaux.",
+     "explication": "Le **pétrole** et le **cuivre** (métaux) sont non renouvelables ; **poissons** et **forêts** sont renouvelables, mais peuvent être surexploités."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e67895e-ac53-50df-bed3-8949b08ce213",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une usine, une rivière : qui paie la pollution ?",
+   "competence": "observer-schema",
+   "situation": "Une usine rejette des polluants dans une rivière. Des pêcheurs voient leurs prises baisser et la commune doit dépolluer l’eau. Un économiste chiffre ce qui n’apparaît pas sur la facture de l’usine.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "La rivière et ceux qui l’utilisent",
+     "source": "Schéma imaginé pour l’exercice.",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         0,
+         120
+        ],
+        [
+         340,
+         120
+        ],
+        [
+         340,
+         165
+        ],
+        [
+         0,
+         165
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "riviere",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 148,
+       "texte": "Rivière",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "emoji",
+       "x": 70,
+       "y": 55,
+       "emoji": "🏭",
+       "taille": 44,
+       "id": "usine",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 95,
+       "texte": "Usine",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        103
+       ],
+       "a": [
+        70,
+        135
+       ],
+       "fleche": "fin",
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 112,
+       "texte": "rejets",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "emoji",
+       "x": 250,
+       "y": 55,
+       "emoji": "🎣",
+       "taille": 40,
+       "id": "pecheurs",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 95,
+       "texte": "Pêcheurs",
+       "taille": "petit"
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 195,
+       "emoji": "🏘️",
+       "taille": 40,
+       "id": "commune",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 232,
+       "texte": "Commune",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        168
+       ],
+       "a": [
+        170,
+        180
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      }
+     ]
+    },
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Une tonne de produit",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Montant par tonne (€)"
+     ],
+     "lignes": [
+      [
+       "Prix de vente",
+       70
+      ],
+      [
+       "Coût de production payé par l’usine",
+       50
+      ],
+      [
+       "Dégâts à la rivière payés par les pêcheurs et la commune",
+       30
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche l’acteur qui produit la pollution.",
+     "reponse": [
+      "usine"
+     ],
+     "aide": "Suis la flèche « rejets » jusqu’à son point de départ.",
+     "explication": "C’est l’**usine** qui rejette les polluants dans la rivière."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "multiple": true,
+     "enonce": "Touche les deux acteurs qui subissent les dégâts sans les avoir causés.",
+     "reponse": [
+      "pecheurs",
+      "commune"
+     ],
+     "aide": "Qui perd des prises ? Qui doit dépolluer l’eau ?",
+     "explication": "Les **pêcheurs** (prises en baisse) et la **commune** (dépollution) supportent un coût qu’ils n’ont pas décidé : c’est une externalité négative."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coût réel d’une tonne pour la société (production + dégâts), en euros ?",
+     "reponse": 80,
+     "unite": "€",
+     "aide": "Additionne le coût payé par l’usine et les dégâts payés par les autres.",
+     "explication": "50 + 30 = **80 €** par tonne, alors que l’usine ne paie que 50 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le prix de vente est de 70 € alors que le coût réel est de 80 €. Que peut-on dire de ce prix et de la production ?",
+     "options": [
+      "Le prix est trop bas : la quantité produite est trop élevée",
+      "Le prix est trop haut : la quantité produite est trop faible",
+      "Le prix est juste : le marché a bien tout compté",
+      "Le prix est trop bas : la production devrait rester au même niveau"
+     ],
+     "reponse": 0,
+     "aide": "Compare le prix de vente au coût réel pour la société.",
+     "explication": "Un prix qui ne compte pas la pollution **ment sur ce que coûte le produit** : il est trop bas, donc on en produit et consomme trop."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Selon le principe pollueur-payeur, quelle taxe par tonne ferait payer à l’usine le dommage causé, en euros ?",
+     "reponse": 30,
+     "unite": "€",
+     "aide": "Le pollueur doit supporter le coût de la pollution qu’il cause.",
+     "explication": "Une taxe de **30 € par tonne** ferait payer à l’usine le dommage subi par les autres : le prix intégrerait alors la pollution."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e67895e-ac53-50df-bed3-8949b08ce213",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Valmont cherche à réduire son CO₂ : mesures et points de vue",
+   "competence": "argumenter",
+   "situation": "La ville imaginaire de Valmont étudie cinq mesures contre ses émissions de CO₂. Au conseil, trois habitants défendent des visions différentes de la croissance et de l’écologie.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Cinq mesures étudiées par la ville",
+     "source": "Mesures imaginées pour l’exercice.",
+     "colonnes": [
+      "N°",
+      "Mesure"
+     ],
+     "lignes": [
+      [
+       1,
+       "Interdire les chaudières au fioul neuves"
+      ],
+      [
+       2,
+       "Faire payer 50 € par tonne de CO₂ émise"
+      ],
+      [
+       3,
+       "Plafonner à 1 000 tonnes les émissions de cinq usines, avec des droits d’émission échangeables"
+      ],
+      [
+       4,
+       "Verser 2 000 € à toute personne qui installe une pompe à chaleur"
+      ],
+      [
+       5,
+       "Imposer une étiquette énergie sur les appareils"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "voix",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois habitants s’expriment",
+     "source": "Prises de parole écrites pour l’exercice.",
+     "blocs": [
+      "Anaïs : « La technologie réglera tout : avec des éoliennes et des batteries plus performantes, on produira plus en polluant moins. »",
+      "Bastien : « Il faut répondre aux besoins d’aujourd’hui sans priver les générations futures de leurs ressources. »",
+      "Chloé : « Même avec de nouvelles techniques, on ne pourra pas produire toujours plus sans abîmer la planète : il faut produire moins. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la mesure qui fixe un plafond d’émissions et laisse s’échanger les droits : un marché de quotas.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche les mots « plafonner » et « échangeables ».",
+     "explication": "La mesure 3 est un **marché de quotas** : on fixe la quantité maximale d’émissions et le prix des droits résulte des échanges."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque habitant à la position qu’il défend.",
+     "paires": [
+      [
+       "Anaïs",
+       "Croissance verte"
+      ],
+      [
+       "Bastien",
+       "Développement durable"
+      ],
+      [
+       "Chloé",
+       "Décroissance"
+      ]
+     ],
+     "aide": "L’une fait confiance à la technique, l’une pense aux générations futures, l’une conteste le découplage.",
+     "explication": "Anaïs parie sur le **découplage** par le progrès technique (croissance verte) ; Bastien reprend la définition du **développement durable** ; Chloé conteste qu’un découplage suffise : c’est la **décroissance**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une usine émet 400 tonnes de CO₂. Quelle somme paierait-elle avec la mesure 2, en euros ?",
+     "reponse": 20000,
+     "unite": "€",
+     "aide": "Multiplie le nombre de tonnes par le prix de la tonne.",
+     "explication": "400 × 50 = **20 000 €**. C’est le principe pollueur-payeur : celui qui pollue supporte le coût."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la mesure 3, chacune des cinq usines reçoit 200 tonnes de droits. Une usine émet 260 tonnes : combien de tonnes de droits doit-elle acheter ?",
+     "reponse": 60,
+     "unite": "t",
+     "aide": "Compare ses émissions aux droits dont elle dispose.",
+     "explication": "260 − 200 = **60 tonnes** de droits à acheter à une usine qui émet moins que son quota."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la différence de principe entre la taxe (mesure 2) et le marché de quotas (mesure 3) ?",
+     "options": [
+      "La taxe fixe un prix ; le quota fixe une quantité d’émissions",
+      "La taxe fixe une quantité ; le quota fixe un prix des émissions",
+      "La taxe interdit tout rejet ; le quota autorise tout le monde",
+      "Aucune différence : ce sont deux formes d’interdiction"
+     ],
+     "reponse": 0,
+     "aide": "Taxer, c’est renchérir ; échanger des quotas, c’est plafonner.",
+     "explication": "Taxer, c’est **renchérir** le comportement polluant (le prix est fixé) ; le marché de quotas **fixe la quantité** d’émissions et le prix résulte des échanges."
+    }
+   ]
+  },
+  {
+   "chapitre": "c34c6023-5016-52d1-90a5-bef26ea06279",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un billet, un job d’été, des livres sterling : trois marchés",
+   "competence": "analyser-document",
+   "situation": "Jade et Lucas s’écrivent à quelques jours des vacances. Sans le savoir, ils parlent de trois marchés différents.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages de Jade et Lucas",
+     "source": "Dialogue écrit pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Lucas",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucas",
+       "texte": "Tu as ton billet pour le concert ?"
+      },
+      {
+       "qui": "Jade",
+       "texte": "Oui, je l’ai acheté sur une [[d|appli]] de vente entre particuliers."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Et ta sœur, elle a trouvé un job d’été ?"
+      },
+      {
+       "qui": "Jade",
+       "texte": "Oui, la mairie l’a embauchée pour juillet."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Moi, pour Londres, j’ai changé mes euros en livres. Mais l’an dernier, un inconnu m’a pris 30 € pour un billet qu’il n’a jamais livré : impossible de le retrouver."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation du dialogue au marché dont elle relève.",
+     "paires": [
+      [
+       "Acheter un billet sur une appli de vente entre particuliers",
+       "Marché de biens et services"
+      ],
+      [
+       "Être embauchée pour l’été",
+       "Marché du travail"
+      ],
+      [
+       "Changer des euros en livres",
+       "Marché des changes"
+      ]
+     ],
+     "aide": "Un bien ou un service, un travail contre salaire, des monnaies qu’on échange entre elles.",
+     "explication": "Le billet relève du **marché de biens et services**, l’embauche du **marché du travail**, le change du **marché des changes**."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui montre qu’un marché peut exister sans lieu physique.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Cherche le support en ligne qui met en relation des particuliers.",
+     "explication": "Une **appli** crée un marché **dématérialisé** : offre et demande se rencontrent sans lieu commun."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces marchés selon leur forme.",
+     "categories": [
+      "Marché physique",
+      "Marché dématérialisé"
+     ],
+     "items": [
+      [
+       "Une halle couverte le samedi matin",
+       0
+      ],
+      [
+       "Une salle de marché",
+       0
+      ],
+      [
+       "Une application de covoiturage",
+       1
+      ],
+      [
+       "Un site de vente entre particuliers",
+       1
+      ]
+     ],
+     "aide": "Un marché physique a un lieu (halle, place, salle) ; un marché dématérialisé a une plateforme.",
+     "explication": "Halle et salle de marché sont des marchés **physiques** ; application et site en ligne sont **dématérialisés**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lucas a payé un inconnu qui n’a jamais livré le billet. Quelle condition de l’échange marchand a manqué ?",
+     "options": [
+      "Des contrats garantis, pour que la parole donnée soit tenue",
+      "Une monnaie, car il a payé avec autre chose que des euros",
+      "Des vendeurs en nombre suffisant sur ce marché",
+      "Un lieu physique où se rencontrer vraiment"
+     ],
+     "reponse": 0,
+     "aide": "Sans confiance, pas d’échange : qui oblige l’inconnu à tenir sa promesse ?",
+     "explication": "L’échange suppose des **droits de propriété**, une **monnaie** et des **institutions** (contrats, tribunaux, normes) qui rendent la parole donnée sûre. Ici, rien ne garantissait la livraison."
+    }
+   ]
+  },
+  {
+   "chapitre": "c34c6023-5016-52d1-90a5-bef26ea06279",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Valmont : quatre marchés, quatre structures",
+   "competence": "lire-tableau",
+   "situation": "La ville imaginaire de Valmont compte plusieurs marchés très différents. Un étudiant en économie veut les classer selon le nombre d’offreurs et la nature du produit.",
+   "documents": [
+    {
+     "id": "marches",
+     "type": "tableau",
+     "titre": "Quatre marchés de Valmont",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Marché",
+      "Les offreurs",
+      "Le produit"
+     ],
+     "lignes": [
+      [
+       "Le blé vendu aux minotiers",
+       "Des milliers d’agriculteurs : aucun ne pèse sur le prix",
+       "Identique d’un producteur à l’autre"
+      ],
+      [
+       "L’eau du robinet",
+       "Un seul fournisseur",
+       "Le même pour tous"
+      ],
+      [
+       "Les grandes surfaces",
+       "Trois enseignes se partagent presque tout",
+       "Très variés"
+      ],
+      [
+       "Les boulangeries du centre",
+       "Une douzaine d’artisans",
+       "Différenciés par la recette et la marque"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "parts",
+     "type": "tableau",
+     "titre": "Parts de marché des grandes surfaces",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Enseigne",
+      "Part de marché (%)"
+     ],
+     "lignes": [
+      [
+       "Enseigne A",
+       45
+      ],
+      [
+       "Enseigne B",
+       35
+      ],
+      [
+       "Enseigne C",
+       15
+      ],
+      [
+       "Autres commerces",
+       5
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque marché dans sa structure.",
+     "categories": [
+      "Concurrence parfaite",
+      "Monopole",
+      "Oligopole",
+      "Concurrence monopolistique"
+     ],
+     "items": [
+      [
+       "Le blé vendu aux minotiers",
+       0
+      ],
+      [
+       "L’eau du robinet",
+       1
+      ],
+      [
+       "Les grandes surfaces",
+       2
+      ],
+      [
+       "Les boulangeries du centre",
+       3
+      ]
+     ],
+     "aide": "Compte les offreurs : très nombreux, un seul, quelques-uns, nombreux avec des produits différenciés.",
+     "explication": "Le blé : **concurrence parfaite** (modèle théorique) ; l’eau : **monopole** ; les grandes surfaces : **oligopole** ; les boulangeries : **concurrence monopolistique** (produits différenciés)."
+    },
+    {
+     "type": "zone",
+     "document": "marches",
+     "enonce": "Touche ce qui montre qu’il s’agit d’un monopole.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Un monopole, c’est un seul offreur.",
+     "explication": "**Un seul fournisseur** d’eau : c’est la définition d’un monopole."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du marché détiennent à elles deux les enseignes A et B, en % ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Additionne les deux plus grandes parts.",
+     "explication": "45 + 35 = **80 %** : quelques offreurs dominent le marché, c’est un oligopole."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le marché des boulangeries du centre n’est-il pas de concurrence parfaite ?",
+     "options": [
+      "Les produits sont différenciés par la recette et la marque",
+      "Il y a beaucoup trop d’artisans pour que la concurrence existe",
+      "Il n’y a aucun acheteur sur ce marché",
+      "Un seul artisan fixe le prix pour tous les autres"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière colonne du tableau pour les boulangeries.",
+     "explication": "La concurrence parfaite suppose des produits **homogènes** et une information parfaite. Ici les produits sont **différenciés** : c’est la concurrence monopolistique."
+    }
+   ]
+  },
+  {
+   "chapitre": "c34c6023-5016-52d1-90a5-bef26ea06279",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cimenval : un rachat, une entente, un abus ?",
+   "competence": "argumenter",
+   "situation": "Sur le marché du ciment de la région imaginaire de Cimenval, l’autorité de la concurrence examine trois affaires. Elle doit dire laquelle relève de quelle pratique, et ce qu’elle peut décider.",
+   "documents": [
+    {
+     "id": "parts",
+     "type": "tableau",
+     "titre": "Parts de marché des fabricants de ciment",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Fabricant",
+      "Avant le rachat (%)"
+     ],
+     "lignes": [
+      [
+       "Entreprise A",
+       50
+      ],
+      [
+       "Entreprise B",
+       30
+      ],
+      [
+       "Entreprise C",
+       12
+      ],
+      [
+       "Entreprise D",
+       8
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "affaires",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois dossiers",
+     "source": "Dossiers imaginés pour l’exercice.",
+     "blocs": [
+      "Dossier 1. Les entreprises A, C et D se téléphonent chaque mois pour fixer ensemble un prix minimal.",
+      "Dossier 2. L’entreprise A annonce le rachat de l’entreprise B.",
+      "Dossier 3. Un distributeur en position dominante vend à perte pendant des mois pour évincer un petit concurrent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Si A rachète B, quelle part du marché l’entreprise A détiendra-t-elle, en % ?",
+     "reponse": 80,
+     "unite": "%",
+     "aide": "Additionne les parts de A et de B.",
+     "explication": "50 + 30 = **80 %** : A dominerait presque tout le marché."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dossier à la pratique que surveille l’autorité de la concurrence.",
+     "paires": [
+      [
+       "Dossier 1",
+       "Une entente sur les prix"
+      ],
+      [
+       "Dossier 2",
+       "Une concentration"
+      ],
+      [
+       "Dossier 3",
+       "Un abus de position dominante"
+      ]
+     ],
+     "aide": "Un accord entre concurrents, un rachat, l’usage d’un pouvoir de marché pour évincer.",
+     "explication": "Fixer ensemble un prix est une **entente** ; un rachat est une **concentration** ; vendre à perte pour évincer un rival est un **abus de position dominante**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Face au rachat de B par A, que peut faire l’autorité de la concurrence ?",
+     "options": [
+      "L’interdire ou y mettre des conditions, car la concurrence serait trop réduite",
+      "L’accepter : plus une entreprise est grande, mieux le marché fonctionne",
+      "Le laisser faire : les parts de marché n’ont aucune importance",
+      "Sanctionner B, qui n’a rien décidé dans cette opération"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la part de marché de A après le rachat.",
+     "explication": "Une autorité de la concurrence peut **bloquer un rachat** ou y mettre des conditions lorsque la concentration réduirait trop la concurrence."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces biens selon qu’ils peuvent légalement s’échanger sur un marché ou non.",
+     "categories": [
+      "Échangeable sur un marché",
+      "Soustrait au marché"
+     ],
+     "items": [
+      [
+       "Un vélo d’occasion",
+       0
+      ],
+      [
+       "Une place de concert",
+       0
+      ],
+      [
+       "Un organe humain",
+       1
+      ],
+      [
+       "Une voix lors d’une élection",
+       1
+      ]
+     ],
+     "aide": "Certains échanges sont interdits par la loi : on ne vend légalement ni organes ni voix électorales.",
+     "explication": "Un vélo ou une place s’échangent légalement. Un **organe** ou une **voix électorale** ne peuvent légalement pas être vendus : tout n’est pas marchand."
+    }
+   ]
+  },
+  {
+   "chapitre": "40def777-4077-596e-9439-4e9a0c5a3ff1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le prix des tomates au marché du samedi",
+   "competence": "lire-tableau",
+   "situation": "Au marché du samedi, Ilyes relève ce que les acheteurs voudraient acheter et ce que les maraîchers voudraient vendre, selon le prix du kilo de tomates.",
+   "documents": [
+    {
+     "id": "tomates",
+     "type": "tableau",
+     "titre": "Tomates : quantités souhaitées selon le prix",
+     "source": "Relevé imaginé pour l’exercice.",
+     "colonnes": [
+      "Prix du kilo (€)",
+      "Quantité demandée (kg)",
+      "Quantité offerte (kg)"
+     ],
+     "lignes": [
+      [
+       1,
+       100,
+       20
+      ],
+      [
+       2,
+       80,
+       40
+      ],
+      [
+       3,
+       60,
+       60
+      ],
+      [
+       4,
+       40,
+       80
+      ],
+      [
+       5,
+       20,
+       100
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tomates",
+     "enonce": "Touche le prix pour lequel la quantité offerte égale la quantité demandée.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la ligne où les deux dernières colonnes affichent le même nombre.",
+     "explication": "À **3 € le kilo**, offre et demande valent chacune 60 kg : c’est le prix d’équilibre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité s’échange à ce prix d’équilibre, en kilogrammes ?",
+     "reponse": 60,
+     "unite": "kg",
+     "aide": "Lis la quantité demandée (ou offerte) à 3 €.",
+     "explication": "À l’équilibre, **60 kg** sont demandés et offerts : tout ce qui est proposé est vendu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 4 € le kilo, de combien de kilogrammes l’offre dépasse-t-elle la demande ?",
+     "reponse": 40,
+     "unite": "kg",
+     "aide": "Soustrais la quantité demandée de la quantité offerte, sur la ligne à 4 €.",
+     "explication": "80 − 40 = **40 kg** d’invendus : les maraîchers devront baisser leur prix."
+    },
+    {
+     "type": "choix",
+     "enonce": "À 2 € le kilo, la demande est de 80 kg et l’offre de 40 kg. Que va-t-il se passer ?",
+     "options": [
+      "Pénurie : des acheteurs resteront sans tomates, le prix monte",
+      "Invendus : les maraîchers vont devoir baisser leur prix",
+      "Rien : à 2 €, le marché est déjà à l’équilibre naturel",
+      "Le prix va baisser, car la demande est très forte"
+     ],
+     "reponse": 0,
+     "aide": "Qui est en excès à 2 € : les acheteurs ou les vendeurs ?",
+     "explication": "Au-dessous de l’équilibre, la demande excède l’offre : **pénurie**, et le prix **monte** vers 3 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "40def777-4077-596e-9439-4e9a0c5a3ff1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un gel de printemps sur le marché des tomates",
+   "competence": "lire-graphique",
+   "situation": "Sur un marché de tomates imaginaire, une économiste trace les courbes d’offre et de demande. Puis un gel de printemps détruit une partie de la récolte.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Offre et demande de tomates",
+     "source": "Courbes imaginées pour l’exercice.",
+     "categories": [
+      "1 €",
+      "2 €",
+      "3 €",
+      "4 €",
+      "5 €",
+      "6 €"
+     ],
+     "series": [
+      {
+       "nom": "Demande",
+       "valeurs": [
+        100,
+        85,
+        70,
+        55,
+        40,
+        25
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Offre",
+       "valeurs": [
+        10,
+        25,
+        40,
+        55,
+        70,
+        85
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité",
+      "unite": "en kg",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Prix du kilo"
+     }
+    },
+    {
+     "id": "gel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le gel de la nuit du 14 avril",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Un gel tardif a détruit une partie des plants. À chaque prix, les maraîchers proposent désormais moins de tomates qu’avant. Les consommateurs, eux, n’ont pas changé leurs habitudes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbes",
+     "enonce": "Touche le prix d’équilibre, là où les deux courbes se croisent.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le prix où l’offre et la demande indiquent la même quantité.",
+     "explication": "Les courbes se croisent à **4 €**, pour 55 kg."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité s’échange à l’équilibre, en kilogrammes ?",
+     "reponse": 55,
+     "unite": "kg",
+     "aide": "Lis la hauteur des courbes au point où elles se croisent.",
+     "explication": "À l’équilibre, la quantité offerte égale la quantité demandée : **55 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 6 € le kilo, de combien l’offre excède-t-elle la demande, en kilogrammes ?",
+     "reponse": 60,
+     "unite": "kg",
+     "aide": "Lis l’offre (85) et la demande (25) à 6 €, puis soustrais.",
+     "explication": "85 − 25 = **60 kg** d’excès d’offre : des invendus, donc le prix baissera."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que provoque le gel sur les courbes ?",
+     "options": [
+      "La courbe d’offre se déplace vers la gauche",
+      "La courbe de demande se déplace vers la gauche",
+      "On se déplace le long de la courbe d’offre",
+      "La courbe de demande se déplace vers la droite"
+     ],
+     "reponse": 0,
+     "aide": "Qui a changé de comportement : les vendeurs ou les acheteurs ? Et pour tous les prix ?",
+     "explication": "À chaque prix, les maraîchers offrent moins : toute la **courbe d’offre se déplace** vers la gauche. Le prix lui-même n’a pas changé en premier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de ce déplacement sur le nouvel équilibre ?",
+     "options": [
+      "Un prix plus élevé et une quantité échangée plus faible",
+      "Un prix plus faible et une quantité échangée plus forte",
+      "Un prix plus élevé et une quantité échangée plus forte",
+      "Un prix identique, mais une quantité plus forte"
+     ],
+     "reponse": 0,
+     "aide": "Imagine la courbe d’offre décalée vers la gauche : où croise-t-elle la demande ?",
+     "explication": "Avec moins de tomates à vendre, la rareté pousse le prix à la **hausse** ; à ce nouveau prix, les acheteurs en achètent moins."
+    }
+   ]
+  },
+  {
+   "chapitre": "40def777-4077-596e-9439-4e9a0c5a3ff1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le pain et le concert : qui supporte une hausse de prix ?",
+   "competence": "raisonner",
+   "situation": "Le prix de la baguette et celui d’une place de concert montent tous deux de 10 %. Une économiste compare ce que font les acheteurs, puis ce que gagnent les vendeurs.",
+   "documents": [
+    {
+     "id": "hausse",
+     "type": "tableau",
+     "titre": "Une hausse de prix de 10 %",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Bien",
+      "Prix avant (€)",
+      "Prix après (€)",
+      "Quantités vendues avant",
+      "Quantités vendues après"
+     ],
+     "lignes": [
+      [
+       "Baguette",
+       1,
+       1.1,
+       1000,
+       980
+      ],
+      [
+       "Place de concert",
+       40,
+       44,
+       500,
+       400
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "clients",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Ce qu’en disent deux clients",
+     "source": "Propos écrits pour l’exercice.",
+     "blocs": [
+      "Client 1 : « Même plus cher, il me faut mon pain tous les jours. »",
+      "Client 2 : « À 44 €, je préfère aller au cinéma avec des amis. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de % les quantités vendues de baguettes ont-elles baissé ?",
+     "reponse": 2,
+     "unite": "%",
+     "aide": "Taux = (980 − 1 000) ÷ 1 000, en valeur positive.",
+     "explication": "(1 000 − 980) ÷ 1 000 = 0,02, soit une baisse de **2 %** pour une hausse de prix de 10 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % les places de concert vendues ont-elles baissé ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Taux = (400 − 500) ÷ 500, en valeur positive.",
+     "explication": "(500 − 400) ÷ 500 = 0,20, soit une baisse de **20 %**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque bien à la sensibilité de sa demande au prix.",
+     "paires": [
+      [
+       "La baguette",
+       "Demande peu sensible au prix (élasticité faible)"
+      ],
+      [
+       "La place de concert",
+       "Demande très sensible au prix (élasticité forte)"
+      ]
+     ],
+     "aide": "Compare les deux baisses de quantités : laquelle réagit le plus à la même hausse de prix ?",
+     "explication": "Le pain, bien de première nécessité, a une **élasticité faible** ; la place de concert, facilement remplaçable, une **élasticité forte**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’euros la recette de la billetterie du concert (prix × places vendues) a-t-elle baissé ?",
+     "reponse": 2400,
+     "unite": "€",
+     "aide": "Recette avant : 40 × 500. Recette après : 44 × 400.",
+     "explication": "40 × 500 = 20 000 € et 44 × 400 = 17 600 € : la recette baisse de **2 400 €**. Pour le pain, elle monte de 1 000 € à 1 078 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un organisateur veut gagner plus en augmentant ses prix. Dans quel cas la hausse est-elle rentable ?",
+     "options": [
+      "Quand la demande est peu élastique, comme celle du pain",
+      "Quand la demande est très élastique, comme celle du concert",
+      "Dans tous les cas : un prix plus haut rapporte plus",
+      "Jamais : une hausse de prix fait toujours baisser la recette"
+     ],
+     "reponse": 0,
+     "aide": "Compare, pour chaque bien, la recette avant et après la hausse.",
+     "explication": "Si la demande est **peu élastique**, les quantités baissent peu : la recette augmente (pain : 1 078 €). Si elle est élastique, la recette baisse (concert)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5aa28b76-f2e0-570c-a092-2ab1bcdb1437",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand le prix ne dit pas la vérité sur la pollution",
+   "competence": "analyser-document",
+   "situation": "Une usine rejette du CO₂ en fabriquant ses produits. L’élève Camille doit comprendre pourquoi le marché ne suffit pas à régler ce problème, et quel instrument une ville choisit.",
+   "documents": [
+    {
+     "id": "raisonnement",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Le raisonnement de l’économiste",
+     "noeuds": [
+      {
+       "id": "rejet",
+       "texte": "L’usine rejette du CO₂"
+      },
+      {
+       "id": "cout",
+       "texte": "Le coût du réchauffement est supporté par tous"
+      },
+      {
+       "id": "prix",
+       "texte": "?"
+      },
+      {
+       "id": "qte",
+       "texte": "La quantité produite est trop élevée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "rejet",
+       "a": "cout"
+      },
+      {
+       "de": "cout",
+       "a": "prix"
+      },
+      {
+       "de": "prix",
+       "a": "qte"
+      }
+     ]
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Zone à faibles émissions",
+     "emoji": "🚫",
+     "lignes": [
+      {
+       "texte": "Véhicules les plus polluants",
+       "valeur": "interdits d’entrée"
+      },
+      {
+       "texte": "Autres véhicules",
+       "valeur": "autorisés"
+      }
+     ],
+     "source": "Panneau imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans le raisonnement ?",
+     "options": [
+      "Le prix du produit est trop bas",
+      "Le prix du produit est trop haut",
+      "Le prix du produit est parfaitement juste",
+      "Le prix du produit baisse puis remonte"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le prix ne compte pas le coût supporté par les autres : est-il alors trop haut ou trop bas ?",
+     "explication": "Le prix n’inclut pas le coût du réchauffement : il est **trop bas**, donc la quantité produite est trop élevée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de conclusion.",
+     "texte": "Le coût non payé s’appelle une ___ négative ; le marché présente alors une ___ de marché.",
+     "reponses": [
+      [
+       "externalité"
+      ],
+      [
+       "défaillance"
+      ]
+     ],
+     "banque": [
+      "externalité",
+      "défaillance",
+      "taxe",
+      "subvention"
+     ],
+     "aide": "Un effet non payé qu’une activité impose à autrui ; un résultat collectivement inefficace.",
+     "explication": "Une **externalité** négative est un effet non payé imposé à autrui ; le résultat inefficace du marché est une **défaillance** de marché."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le panneau de la ville interdit d’entrer aux véhicules les plus polluants. Quel instrument de politique environnementale est-ce ?",
+     "options": [
+      "La réglementation",
+      "La taxation",
+      "Un marché de quotas",
+      "Une subvention"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Interdire ou plafonner : de quel instrument s’agit-il ?",
+     "explication": "Interdire l’accès à certains véhicules est de la **réglementation**, comme les zones à faibles émissions."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque instrument à son exemple.",
+     "paires": [
+      [
+       "Réglementation",
+       "Une zone à faibles émissions"
+      ],
+      [
+       "Taxation",
+       "Un malus automobile"
+      ],
+      [
+       "Marché de quotas",
+       "Le marché carbone européen"
+      ]
+     ],
+     "aide": "Interdire, renchérir, ou plafonner et échanger des droits.",
+     "explication": "La **réglementation** interdit ; la **taxation** (malus, taxe carbone) renchérit ; le **marché de quotas** fixe un plafond et laisse s’échanger les droits."
+    }
+   ]
+  },
+  {
+   "chapitre": "5aa28b76-f2e0-570c-a092-2ab1bcdb1437",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une taxe carburant : à qui pèse-t-elle le plus ?",
+   "competence": "lire-graphique",
+   "situation": "La commune imaginaire de Valmont envisage une taxe sur les carburants. Une étude estime combien elle pèserait sur le budget des habitants, selon leur niveau de vie, avant de comparer les instruments possibles.",
+   "documents": [
+    {
+     "id": "poids",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Poids de la taxe dans le budget des ménages",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "20 % les plus modestes",
+      "2e groupe",
+      "3e groupe",
+      "4e groupe",
+      "20 % les plus aisés"
+     ],
+     "series": [
+      {
+       "nom": "Part du budget",
+       "valeurs": [
+        3,
+        2.4,
+        2,
+        1.6,
+        1.2
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du budget consacrée à la taxe",
+      "unite": "en %",
+      "min": 0,
+      "max": 4,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Niveau de vie"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "forces",
+     "type": "tableau",
+     "titre": "Trois instruments et leur force",
+     "source": "Comparaison simplifiée pour l’exercice.",
+     "colonnes": [
+      "Instrument",
+      "Sa force"
+     ],
+     "lignes": [
+      [
+       "Réglementation",
+       "Simple à comprendre"
+      ],
+      [
+       "Taxe",
+       "Efficace et source de recettes"
+      ],
+      [
+       "Marché de quotas",
+       "Plafond d’émissions garanti"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poids",
+     "enonce": "Touche le groupe pour lequel la taxe pèse le plus lourd dans le budget.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Pour les **20 % les plus modestes**, la taxe représente environ 3 % du budget : c’est la barre la plus haute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois plus lourde la taxe est-elle, en part du budget, pour les plus modestes que pour les plus aisés ?",
+     "reponse": 2.5,
+     "tolerance": 0.1,
+     "aide": "Divise la part des plus modestes (3 %) par celle des plus aisés (1,2 %).",
+     "explication": "3 ÷ 1,2 = **2,5 fois** : la taxe pèse relativement plus sur les ménages modestes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on une taxe dont le poids relatif diminue quand le niveau de vie augmente ?",
+     "options": [
+      "Une taxe régressive",
+      "Une taxe progressive",
+      "Une taxe incitative sur les riches",
+      "Une taxe pollueur-payeur"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde comment évolue la hauteur des barres quand on va des plus modestes aux plus aisés.",
+     "explication": "Une taxe qui pèse plus lourd, en proportion du budget, sur les ménages modestes est **régressive** : c’est son principal reproche."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque instrument à sa principale faiblesse.",
+     "paires": [
+      [
+       "Réglementation",
+       "Peu souple et coûteuse à contrôler"
+      ],
+      [
+       "Taxe",
+       "Peut peser davantage sur les ménages modestes"
+      ],
+      [
+       "Marché de quotas",
+       "Exige un prix suffisant et une répartition équitable des droits"
+      ]
+     ],
+     "aide": "Chaque instrument du tableau de droite a un point fort ; en voici les points faibles.",
+     "explication": "La **réglementation** est rigide et coûteuse à contrôler ; la **taxe** peut être régressive ; le **marché de quotas** demande un prix suffisant et une allocation initiale équitable."
+    }
+   ]
+  },
+  {
+   "chapitre": "5aa28b76-f2e0-570c-a092-2ab1bcdb1437",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rendre la taxe acceptable : l’exemple d’une famille rurale",
+   "competence": "argumenter",
+   "situation": "Valmont propose une taxe de 0,10 € par litre de carburant. Deux ménages réagissent très différemment. Le conseil cherche comment rendre la mesure acceptable.",
+   "documents": [
+    {
+     "id": "menages",
+     "type": "tableau",
+     "titre": "Deux ménages de Valmont",
+     "source": "Situations imaginées pour l’exercice.",
+     "colonnes": [
+      "Ménage",
+      "Revenu annuel (€)",
+      "Carburant consommé par an (litres)"
+     ],
+     "lignes": [
+      [
+       "Famille rurale modeste",
+       15000,
+       1200
+      ],
+      [
+       "Couple urbain aisé",
+       60000,
+       1500
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "projet",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le projet du conseil municipal",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Une taxe de 0,10 € par litre de carburant est proposée. Pour la rendre acceptable, le conseil étudie un chèque de 100 € par an pour les ménages modestes, un abonnement de bus gratuit dans les villages, et la publication de l’usage des recettes (pistes cyclables)."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien la famille rurale paie-t-elle de taxe par an, en euros ?",
+     "reponse": 120,
+     "unite": "€",
+     "aide": "Multiplie ses litres par 0,10 €.",
+     "explication": "1 200 × 0,10 = **120 €** par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de son revenu annuel ces 120 € représentent-ils, en % ?",
+     "reponse": 0.8,
+     "unite": "%",
+     "tolerance": 0.02,
+     "aide": "Divise 120 par 15 000, puis multiplie par 100.",
+     "explication": "120 ÷ 15 000 = 0,008, soit **0,8 %** de son revenu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le couple aisé paie 150 €, soit 0,25 % de son revenu. Que montre la comparaison ?",
+     "options": [
+      "La taxe est régressive : elle pèse plus lourd en proportion sur le ménage modeste",
+      "La taxe est progressive : elle pèse davantage sur le ménage le plus riche",
+      "La taxe est neutre : elle pèse autant en proportion sur les deux ménages",
+      "La taxe est inutile : aucun des deux ménages ne la paie vraiment"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,8 % et 0,25 % : lequel est le plus lourd ?",
+     "explication": "Le ménage modeste paie 0,8 % de son revenu contre 0,25 % pour l’aisé : la taxe est **régressive** et risque d’être mal acceptée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le chèque de 100 € par an, combien la famille rurale paie-t-elle réellement, en euros ?",
+     "reponse": 20,
+     "unite": "€",
+     "aide": "Retire le chèque de la taxe payée.",
+     "explication": "120 − 100 = **20 €** : la compensation protège les ménages modestes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure du projet au levier d’acceptabilité qu’elle illustre.",
+     "paires": [
+      [
+       "Un chèque de 100 € pour les ménages modestes",
+       "Les compensations"
+      ],
+      [
+       "Un abonnement de bus gratuit dans les villages",
+       "Les alternatives disponibles"
+      ],
+      [
+       "La publication de l’usage des recettes",
+       "L’affectation visible des recettes"
+      ]
+     ],
+     "aide": "Protéger les modestes, rendre le changement possible, montrer à quoi sert la taxe.",
+     "explication": "Le chèque est une **compensation** ; le bus gratuit une **alternative disponible** ; la publication des recettes une **affectation visible**. Une politique efficace n’est pas forcément acceptée."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2024 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "e2095096-d248-5ab1-9394-3bcb89b95376",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce créée en 1951",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *La Leçon* pour l’oral. Place la pièce dans le temps, puis relève sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "La Leçon et son théâtre",
+     "debut": 1948,
+     "fin": 1958,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "ca",
+       "date": 1950,
+       "nom": "Cantatrice chauve"
+      },
+      {
+       "id": "le",
+       "date": 1951,
+       "nom": "La Leçon"
+      },
+      {
+       "id": "hu",
+       "date": 1957,
+       "nom": "Huchette"
+      }
+     ]
+    },
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Leçon",
+     "sousTitre": "Eugène Ionesco",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "Eugène Ionesco"
+      },
+      {
+       "id": "st",
+       "texte": "Sous-titre",
+       "valeur": "« Drame comique »"
+      },
+      {
+       "id": "mv",
+       "texte": "Mouvement",
+       "valeur": "Théâtre de l’absurde"
+      },
+      {
+       "id": "pe",
+       "texte": "Personnages",
+       "valeur": "Le Professeur, l’Élève, Marie, la bonne"
+      }
+     ],
+     "pied": "Un seul acte",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "le"
+     ],
+     "enonce": "Sur la frise, touche l’année de la création de La Leçon.",
+     "aide": "La pièce vient un an après La Cantatrice chauve.",
+     "explication": "La Leçon est créée en **1951**, un an après *La Cantatrice chauve* (1950)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la pièce (1951) du début de sa série ininterrompue à la Huchette (1957) ?",
+     "reponse": 6,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1957 − 1951 = **6 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité de la pièce.",
+     "texte": "Ionesco appartient au théâtre de l’___ ; il sous-titre sa pièce « drame ___ ».",
+     "reponses": [
+      [
+       "absurde"
+      ],
+      [
+       "comique"
+      ]
+     ],
+     "banque": [
+      "absurde",
+      "comique",
+      "tragique",
+      "réaliste"
+     ],
+     "aide": "Les deux mots sont sur l’affiche : mouvement et sous-titre.",
+     "explication": "Ionesco appartient au théâtre de l’**absurde** et sous-titre sa pièce « drame **comique** » : on rit, mais d’un rire qui glace."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2095096-d248-5ab1-9394-3bcb89b95376",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du cours d’arithmétique au coup de sonnette",
+   "competence": "analyser-texte",
+   "situation": "Un spectateur te raconte la pièce dans le désordre. Remets la leçon dans l’ordre, puis lis le résumé de la fin.",
+   "documents": [
+    {
+     "id": "de",
+     "type": "tableau",
+     "titre": "Les moments de la leçon (en désordre)",
+     "colonnes": [
+      "Moment",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Philologie",
+       "Le professeur se lance dans un discours délirant sur les langues « néo-espagnoles »"
+      ],
+      [
+       "Fin",
+       "Il poignarde l’élève : quarantième meurtre de la journée"
+      ],
+      [
+       "Arithmétique",
+       "L’élève sait additionner, mais ne sait pas soustraire"
+      ],
+      [
+       "Renversement",
+       "Il s’échauffe, s’autorise et devient autoritaire"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "re",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La fin de la pièce",
+     "blocs": [
+      "Au début, l’élève répond avec vivacité. Puis le professeur s’échauffe, sa voix enfle, et l’élève, prise d’un violent mal de [[m|dents]], ne répète plus que cela. Quand tout est fini, la bonne remet de l’ordre. Alors un coup de sonnette retentit : une nouvelle élève arrive."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les quatre moments de la leçon dans l’ordre où on les voit.",
+     "items": [
+      "L’arithmétique",
+      "La philologie",
+      "Le renversement",
+      "La fin"
+     ],
+     "aide": "Le cours commence par les chiffres ; le crime vient en dernier.",
+     "explication": "Ordre de la pièce : **arithmétique**, **philologie**, **renversement**, **fin**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Selon le tableau, quel numéro porte le meurtre de l’élève dans la journée du professeur ? (donne le nombre)",
+     "reponse": 40,
+     "aide": "Cherche le mot « quarantième » dans la ligne de la fin.",
+     "explication": "Le « quarantième » meurtre de la journée : **40**."
+    },
+    {
+     "type": "zone",
+     "document": "re",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Dans le résumé, touche le mot qui dit de quoi souffre l’élève.",
+     "aide": "Il s’agit d’un mal qui revient en boucle.",
+     "explication": "Le mal de **dents** de l’élève s’aggrave à mesure que le professeur s’autorise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le coup de sonnette qui conclut la pièce ?",
+     "options": [
+      "La scène va se répéter avec une nouvelle élève",
+      "Le professeur est arrêté par la police",
+      "L’élève se relève et reprend son cours",
+      "La bonne quitte la maison pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Il retentit comme au début de la pièce.",
+     "explication": "La pièce finit comme elle a commencé : la violence se **répète**, avec une nouvelle élève."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2095096-d248-5ab1-9394-3bcb89b95376",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand le professeur hausse le ton",
+   "competence": "argumenter",
+   "situation": "Léa et Hugo débattent de *La Leçon*. Une scène écrite pour l’exercice, à la manière de Ionesco, t’aide à les départager.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Pour moi, c’est une farce : un vieux fou et une élève qui n’y comprend rien."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Regarde de près : plus le professeur parle, plus l’élève [[s|s’éteint]]. Celui qui parle domine."
+      }
+     ]
+    },
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une scène à la manière de Ionesco",
+     "blocs": [
+      {
+       "didascalie": "Le Professeur marche de long en large. L’Élève, assise, se tient la joue."
+      },
+      {
+       "personnage": "Le Professeur",
+       "replique": "Répétez avec moi, mademoiselle : le crayon, le crayon, le crayon."
+      },
+      {
+       "personnage": "L’Élève",
+       "replique": "Le… crayon… J’ai mal aux dents, monsieur."
+      },
+      {
+       "personnage": "Le Professeur",
+       "replique": "[[p|Plus]] [[p|fort]] ! Vous ne comprendrez rien à la philologie si vous ne répétez pas !"
+      },
+      {
+       "didascalie": "Sa voix enfle. Celle de l’Élève n’est plus qu’un souffle."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Ionesco"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans le débat, touche le verbe qui dit ce qui arrive à l’élève quand le professeur parle plus fort.",
+     "aide": "Hugo répond à Léa en observant l’élève.",
+     "explication": "Hugo montre que l’élève **s’éteint** pendant que le professeur parle : le langage devient un pouvoir."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans la scène, touche les deux mots par lesquels le professeur durcit le ton.",
+     "aide": "Cherche l’ordre qui suit la plainte de l’élève.",
+     "explication": "En lançant « **Plus fort** ! », le professeur ne tient plus compte de la douleur de l’élève : il s’**autorise**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la scène à son effet.",
+     "paires": [
+      [
+       "Le même mot répété (« crayon »)",
+       "Le langage se vide de sens"
+      ],
+      [
+       "La voix du professeur qui enfle",
+       "Le professeur prend le pouvoir"
+      ],
+      [
+       "Le mal de dents répété",
+       "L’élève s’efface peu à peu"
+      ]
+     ],
+     "aide": "Pense à ce que fait le mot répété, puis à qui parle de plus en plus fort.",
+     "explication": "La **répétition** vide les mots de leur sens ; la voix qui **enfle** marque la prise de pouvoir ; le mal de dents dit l’**effacement** de l’élève."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse de dissertation cette scène permet-elle le mieux d’appuyer ?",
+     "options": [
+      "Le langage peut devenir un instrument de domination",
+      "Le langage sert surtout à enseigner la grammaire",
+      "Le langage reste neutre quand le sujet est savant",
+      "Le langage rapproche toujours le maître de l’élève"
+     ],
+     "reponse": 0,
+     "aide": "Qui parle ? Qui se tait ?",
+     "explication": "La scène montre que **le langage peut devenir un instrument de domination** : celui qui parle domine, celui qui écoute s’efface."
+    }
+   ]
+  },
+  {
+   "chapitre": "8dec4e49-52a6-5533-ab19-737ad107a444",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Œdipe vu par Cocteau",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *La Machine infernale*. Lis la fiche de la pièce, puis le tableau des personnages.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Machine infernale",
+     "sousTitre": "Jean Cocteau",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "id": "cr",
+       "texte": "Création",
+       "valeur": "1934, par Louis Jouvet"
+      },
+      {
+       "id": "de",
+       "texte": "Décors",
+       "valeur": "Christian Bérard"
+      },
+      {
+       "id": "so",
+       "texte": "Source",
+       "valeur": "Œdipe roi de Sophocle"
+      },
+      {
+       "id": "ac",
+       "texte": "Actes",
+       "valeur": "Quatre"
+      }
+     ],
+     "pied": "Le mythe d’Œdipe, modernisé",
+     "teinte": "violet"
+    },
+    {
+     "id": "pe",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Chez Cocteau"
+     ],
+     "lignes": [
+      [
+       "Œdipe",
+       "Jeune homme ambitieux et vaniteux"
+      ],
+      [
+       "Jocaste",
+       "Reine coquette, obsédée par son âge"
+      ],
+      [
+       "?",
+       "Le devin que Jocaste surnomme « Zizi »"
+      ],
+      [
+       "Le Sphinx",
+       "Déesse fatiguée de tuer, qui rêve d’être aimée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "La pièce est créée en ___ par Louis ___ ; sa source est ___ roi de Sophocle.",
+     "reponses": [
+      [
+       "1934"
+      ],
+      [
+       "Jouvet"
+      ],
+      [
+       "Œdipe",
+       "Oedipe"
+      ]
+     ],
+     "banque": [
+      "1934",
+      "1951",
+      "Jouvet",
+      "Bérard",
+      "Œdipe",
+      "Antigone"
+     ],
+     "aide": "Relis la ligne « Création », puis « Source ».",
+     "explication": "La pièce est créée en **1934** par Louis **Jouvet** ; sa source est **Œdipe** roi de Sophocle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Le devin Tirésias",
+      "Le dieu Anubis",
+      "Le roi Laïos",
+      "Le jeune Créon"
+     ],
+     "reponse": 0,
+     "aide": "Le surnom « Zizi » désigne un devin.",
+     "explication": "C’est **Tirésias**, le devin que Jocaste appelle « Zizi » : un ton familier, très loin de la tragédie antique."
+    },
+    {
+     "type": "zone",
+     "document": "pe",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui décrit la reine de Thèbes.",
+     "aide": "Elle est coquette et inquiète de son âge.",
+     "explication": "**Jocaste** est une reine coquette, obsédée par son âge."
+    }
+   ]
+  },
+  {
+   "chapitre": "8dec4e49-52a6-5533-ab19-737ad107a444",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du rempart de Thèbes au palais",
+   "competence": "analyser-texte",
+   "situation": "Un carnet de mise en scène note les lieux de la pièce dans le désordre. Retrouve l’enchaînement des actes.",
+   "documents": [
+    {
+     "id": "li",
+     "type": "tableau",
+     "titre": "Le carnet de mise en scène",
+     "colonnes": [
+      "Lieu",
+      "Ce qui s’y passe"
+     ],
+     "lignes": [
+      [
+       "Dans la chambre nuptiale",
+       "Épuisés, Œdipe et Jocaste s’endorment, tandis que les indices s’accumulent"
+      ],
+      [
+       "À Thèbes, dix-sept ans plus tard",
+       "La peste, la révélation, le suicide de Jocaste, Œdipe qui s’aveugle"
+      ],
+      [
+       "Devant le Sphinx",
+       "Une jeune fille lasse donne la réponse par amour"
+      ],
+      [
+       "Sur les remparts",
+       "Des soldats voient le fantôme de Laïos, qui veut avertir Jocaste"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les quatre lieux dans l’ordre des quatre actes.",
+     "items": [
+      "Sur les remparts",
+      "Devant le Sphinx",
+      "Dans la chambre nuptiale",
+      "À Thèbes, dix-sept ans plus tard"
+     ],
+     "aide": "La dernière scène est la plus tardive : dix-sept ans plus tard.",
+     "explication": "Ordre : **remparts** (acte I), **Sphinx** (II), **chambre nuptiale** (III), **dix-sept ans plus tard** (IV)."
+    },
+    {
+     "type": "zone",
+     "document": "li",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui montre Cocteau changeant le Sphinx.",
+     "aide": "Cherche la jeune fille lasse.",
+     "explication": "Chez Cocteau, le Sphinx est une **jeune fille lasse** qui donne la réponse **par amour**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé de l’acte II.",
+     "texte": "Le Sphinx est une jeune fille ___ qui donne la réponse à Œdipe par ___.",
+     "reponses": [
+      [
+       "lasse",
+       "fatiguée"
+      ],
+      [
+       "amour"
+      ]
+     ],
+     "banque": [
+      "lasse",
+      "cruelle",
+      "amour",
+      "peur"
+     ],
+     "aide": "Le tableau emploie les deux mots.",
+     "explication": "Le Sphinx, **lasse** de tuer, donne la réponse par **amour** : Cocteau retourne la scène célèbre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la nuit de noces où les époux s’endorment pendant que les indices s’accumulent ?",
+     "options": [
+      "Les personnages ne comprennent pas les signes",
+      "Les époux se doutent déjà de la vérité",
+      "Les dieux ont oublié de surveiller Œdipe",
+      "Le spectateur ne peut rien deviner du tout"
+     ],
+     "reponse": 0,
+     "aide": "Tout est dit au spectateur ; qu’en font les personnages ?",
+     "explication": "Les indices s’accumulent, mais **les personnages ne les comprennent pas** : c’est le tragique de la pièce."
+    }
+   ]
+  },
+  {
+   "chapitre": "8dec4e49-52a6-5533-ab19-737ad107a444",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tout est dit, rien n’est entendu",
+   "competence": "argumenter",
+   "situation": "Anaïs et Malik se disputent sur le prologue. Appuie-toi sur une scène écrite pour l’exercice, à la manière de Cocteau.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Le prologue annonce toute l’histoire : plus aucune émotion possible."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Au contraire : le [[d|décalage]] entre le ton familier et la fin fatale fait l’émotion."
+      }
+     ]
+    },
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une scène à la manière de Cocteau",
+     "blocs": [
+      {
+       "personnage": "La Voix",
+       "replique": "Regarde, spectateur : une jeune reine se plaint de son écharpe, un jeune roi se réjouit de sa couronne. Tout est dit ; rien n’est entendu."
+      },
+      {
+       "personnage": "Jocaste",
+       "replique": "Cette [[e|écharpe]] m’étrangle ! Je ne sais pas pourquoi je la garde."
+      },
+      {
+       "personnage": "Œdipe",
+       "replique": "Je serai un roi que Thèbes n’oubliera jamais."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Cocteau"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Dans le débat, touche le mot qui explique d’où vient l’émotion.",
+     "aide": "Malik répond à Anaïs en parlant d’un écart.",
+     "explication": "L’émotion vient du **décalage** entre le ton familier et l’issue tragique."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Dans la scène, touche l’objet qui annonce la mort de Jocaste.",
+     "aide": "Elle l’avoue : il l’étrangle.",
+     "explication": "L’**écharpe** annonce la mort de Jocaste : c’est avec elle qu’elle se pendra."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que Cocteau change ou ce qu’il garde du mythe.",
+     "categories": [
+      "Ce qu’il change",
+      "Ce qu’il garde"
+     ],
+     "items": [
+      [
+       "Le ton familier et insolent",
+       0
+      ],
+      [
+       "Le suicide de Jocaste",
+       1
+      ],
+      [
+       "Un Sphinx amoureux",
+       0
+      ],
+      [
+       "Œdipe qui s’aveugle",
+       1
+      ],
+      [
+       "Un fantôme qui échoue à avertir",
+       0
+      ]
+     ],
+     "aide": "Le ton et les inventions changent ; l’issue ne bouge pas.",
+     "explication": "Cocteau **change** le ton, le Sphinx et le fantôme ; il **garde** l’issue : le suicide de Jocaste et l’aveuglement d’Œdipe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve la scène dont le prologue dévoile tout ?",
+     "options": [
+      "Le tragique est dans un mécanisme que rien n’enraye",
+      "Le tragique naît toujours de la surprise finale",
+      "Le tragique exige un narrateur qui se cache",
+      "Le tragique disparaît dès qu’on rit un peu"
+     ],
+     "reponse": 0,
+     "aide": "Le spectateur sait tout ; les personnages ne peuvent rien.",
+     "explication": "Le tragique n’est pas dans la surprise mais dans **le mécanisme que rien n’enraye**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a2eba37-279e-5e17-8911-334f87d3291a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman champêtre de 1846",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Mare au diable* avant l’oral. Lis l’affiche du roman, puis le tableau de ses personnages.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Mare au diable",
+     "sousTitre": "George Sand",
+     "emoji": "🌾",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "George Sand (Aurore Dupin)"
+      },
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1846"
+      },
+      {
+       "id": "ge",
+       "texte": "Genre",
+       "valeur": "Roman champêtre"
+      },
+      {
+       "id": "li",
+       "texte": "Cadre",
+       "valeur": "Le Berry"
+      }
+     ],
+     "pied": "Un roman sur la dignité des paysans",
+     "teinte": "vert"
+    },
+    {
+     "id": "pe",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui est-ce ?"
+     ],
+     "lignes": [
+      [
+       "Germain",
+       "Laboureur de vingt-huit ans, veuf, père de trois enfants"
+      ],
+      [
+       "?",
+       "Jeune fille pauvre de seize ans, qui va se placer comme bergère"
+      ],
+      [
+       "Le père Maurice",
+       "Le beau-père de Germain, sage et prudent"
+      ],
+      [
+       "La veuve",
+       "Coquette, flattée par ses soupirants"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "George Sand publie ce roman en ___ ; il appartient au roman ___.",
+     "reponses": [
+      [
+       "1846"
+      ],
+      [
+       "champêtre"
+      ]
+     ],
+     "banque": [
+      "1846",
+      "1849",
+      "champêtre",
+      "historique"
+     ],
+     "aide": "Lis les lignes « Publication » et « Genre ».",
+     "explication": "Le roman paraît en **1846** ; c’est un roman **champêtre**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Marie",
+      "La veuve",
+      "Petit-Pierre",
+      "La mère Guillette"
+     ],
+     "reponse": 0,
+     "aide": "Elle a seize ans et cherche une place de bergère.",
+     "explication": "C’est **Marie**, seize ans, pauvre et courageuse, qui va se placer comme bergère."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge a Germain d’après le tableau ?",
+     "reponse": 28,
+     "aide": "La réponse est écrite dans la case de Germain.",
+     "explication": "Germain est un laboureur de **vingt-huit ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "6a2eba37-279e-5e17-8911-334f87d3291a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le voyage de Germain",
+   "competence": "analyser-texte",
+   "situation": "Germain part demander une veuve en mariage. Suis son voyage étape par étape.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Le voyage de Germain",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Germain, 28 ans, veuf, part voir une veuve"
+      },
+      {
+       "id": "n2",
+       "texte": "Marie, 16 ans, et Petit-Pierre l’accompagnent"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "La veuve est entourée de prétendants"
+      },
+      {
+       "id": "n5",
+       "texte": "Germain comprend qu’il aime Marie"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Un brouillard les égare près de la mare, la nuit",
+      "Germain se querelle avec son beau-père à la ferme",
+      "Marie renonce à son travail et rentre chez sa mère",
+      "La veuve les accueille et leur offre un grand repas"
+     ],
+     "reponse": 0,
+     "aide": "Le titre du roman nomme le lieu de cette nuit.",
+     "explication": "Entre le départ et la visite, ils s’égarent dans le **brouillard près de la mare** et passent la nuit dehors."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui pousse Germain à renoncer à la veuve.",
+     "aide": "Il la trouve entourée de monde.",
+     "explication": "Voyant la veuve **entourée de prétendants**, Germain repart."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart d’âge entre Germain et Marie ?",
+     "reponse": 12,
+     "aide": "Lis les deux âges dans la chaîne.",
+     "explication": "28 − 16 = **12 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du roman.",
+     "texte": "De retour au village, Germain comprend qu’il aime ___ ; elle finit par ___.",
+     "reponses": [
+      [
+       "Marie"
+      ],
+      [
+       "accepter"
+      ]
+     ],
+     "banque": [
+      "Marie",
+      "la veuve",
+      "accepter",
+      "refuser"
+     ],
+     "aide": "Regarde la dernière case de la chaîne.",
+     "explication": "Germain aime **Marie** ; elle finit par **accepter**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a2eba37-279e-5e17-8911-334f87d3291a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Contre le laboureur de Holbein",
+   "competence": "argumenter",
+   "situation": "Inès et Théo se disputent sur l’ouverture du roman. Le quatrain de la gravure de Holbein, cité en épigraphe, t’aide à trancher.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Sand copie Holbein : le laboureur n’a pour horizon que la Mort."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Non, elle s’oppose à lui : elle veut montrer un paysan [[h|heureux]] et digne."
+      }
+     ]
+    },
+    {
+     "id": "ep",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "L’épigraphe de la gravure de Holbein",
+     "blocs": [
+      "À la sueur de ton visaige",
+      "Tu gagnerois ta pauvre vie,",
+      "Après long travail et usaige,",
+      "Voicy la [[m|mort]] qui te convie."
+     ],
+     "source": "Légende de la gravure de Holbein, en tête de George Sand, *La Mare au diable* (1846)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ep",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Dans le quatrain, touche le mot qui clôt la vie du laboureur.",
+     "aide": "C’est le dernier mot du dernier vers, avant « qui te convie ».",
+     "explication": "Le quatrain finit sur la **mort** : c’est la vision sombre contre laquelle Sand écrit."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Dans le débat, touche l’adjectif qui dit ce que Sand veut montrer du paysan.",
+     "aide": "Théo l’oppose à la mort de Holbein.",
+     "explication": "Sand veut un paysan **heureux** et digne, non un laboureur écrasé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix de Sand à son effet.",
+     "paires": [
+      [
+       "La gravure de Holbein en ouverture",
+       "Le point de départ contre lequel le roman écrit"
+      ],
+      [
+       "L’appendice sur les noces du Berry",
+       "Un ancrage ethnographique respectueux"
+      ],
+      [
+       "Une écriture claire, sans misérabilisme",
+       "La dignité des paysans, sans condescendance"
+      ]
+     ],
+     "aide": "Pense à ce que Sand refuse et à ce qu’elle défend.",
+     "explication": "Sand **s’oppose** à Holbein, **documente** les coutumes du Berry et écrit **sans misérabilisme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Sand assume-t-elle d’idéaliser la campagne ?",
+     "options": [
+      "Elle peint la campagne telle qu’elle pourrait être",
+      "Elle ne connaît pas la vie réelle des paysans",
+      "Elle veut se moquer des romans réalistes noirs",
+      "Elle cherche d’abord à décrire les paysages du Berry"
+     ],
+     "reponse": 0,
+     "aide": "Elle écrit contre « l’art pour l’art » : à quoi sert son roman ?",
+     "explication": "Sand peint la campagne **telle qu’elle pourrait être**, contre le réalisme noir : une littérature utile et fraternelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "d51a0d53-3bcd-55d9-a531-fe6f5e8e86aa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De Plaute à Molière",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *La Marmite*. Lis l’affiche de la pièce, puis compare-la à la comédie de Molière qu’elle a inspirée.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Marmite",
+     "sousTitre": "Plaute",
+     "emoji": "🍲",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "Plaute (vers 254 – 184 av. J.-C.)"
+      },
+      {
+       "id": "ti",
+       "texte": "Titre latin",
+       "valeur": "Aulularia"
+      },
+      {
+       "id": "mo",
+       "texte": "Modèle",
+       "valeur": "La Comédie nouvelle grecque"
+      },
+      {
+       "id": "de",
+       "texte": "Descendant",
+       "valeur": "L’Avare de Molière (1668)"
+      }
+     ],
+     "pied": "Une comédie latine",
+     "teinte": "ambre"
+    },
+    {
+     "id": "co",
+     "type": "tableau",
+     "titre": "Chez Plaute, chez Molière",
+     "colonnes": [
+      "Élément",
+      "Chez Plaute",
+      "Chez Molière"
+     ],
+     "lignes": [
+      [
+       "Le trésor",
+       "La marmite",
+       "La cassette"
+      ],
+      [
+       "Le vieil avare",
+       "Euclion",
+       "Harpagon"
+      ],
+      [
+       "Le vol",
+       "La découverte du vol par Euclion",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "Plaute écrit en ___ ; sa pièce, adaptée de modèles ___, inspire Molière.",
+     "reponses": [
+      [
+       "latin"
+      ],
+      [
+       "grecs"
+      ]
+     ],
+     "banque": [
+      "latin",
+      "grec",
+      "grecs",
+      "français"
+     ],
+     "aide": "Regarde les lignes « Titre latin » et « Modèle ».",
+     "explication": "Plaute écrit en **latin** une comédie adaptée de modèles **grecs** : la comédie est un art de la reprise."
+    },
+    {
+     "type": "zone",
+     "document": "co",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche le nom du personnage de Molière qui reprend Euclion.",
+     "aide": "Cherche la ligne du vieil avare, côté Molière.",
+     "explication": "**Harpagon** est l’Euclion de Molière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le fameux « Au voleur ! »",
+      "Le fameux « Pas un sou ! »",
+      "Le fameux « Qui va là ? »",
+      "Le fameux « À table ! »"
+     ],
+     "reponse": 0,
+     "aide": "Pense au cri de l’avare à qui l’on a pris son trésor.",
+     "explication": "Chez Molière, la découverte du vol donne le fameux « **Au voleur !** »."
+    }
+   ]
+  },
+  {
+   "chapitre": "d51a0d53-3bcd-55d9-a531-fe6f5e8e86aa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a pris la marmite ?",
+   "competence": "analyser-texte",
+   "situation": "Un dossier de l’intrigue est rangé dans le désordre. Remets-le en ordre, puis découvre comment finit la pièce.",
+   "documents": [
+    {
+     "id": "do",
+     "type": "tableau",
+     "titre": "Le dossier de l’intrigue (en désordre)",
+     "colonnes": [
+      "Épisode",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le quiproquo",
+       "Lyconide avoue sa faute envers Phédria ; Euclion croit qu’il parle de la marmite"
+      ],
+      [
+       "Le vol",
+       "L’esclave de Lyconide emporte la marmite"
+      ],
+      [
+       "La découverte",
+       "Euclion trouve chez lui une marmite pleine d’or"
+      ],
+      [
+       "Le mariage arrangé",
+       "Phédria, enceinte de Lyconide, doit épouser Mégadore, qui la prend sans dot"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La fin de la pièce",
+     "blocs": [
+      "Le dernier acte de l’*Aulularia* ne nous est pas parvenu. Ce que nous savons de la fin vient de résumés antiques : Euclion retrouve son or, le donne en [[d|dot]] et se libère de son obsession."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les quatre épisodes dans l’ordre de la pièce.",
+     "items": [
+      "La découverte",
+      "Le mariage arrangé",
+      "Le quiproquo",
+      "Le vol"
+     ],
+     "aide": "Tout part de la trouvaille de l’or.",
+     "explication": "Ordre : **découverte**, **mariage arrangé**, **quiproquo**, **vol**."
+    },
+    {
+     "type": "zone",
+     "document": "do",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case où Euclion comprend de travers un aveu.",
+     "aide": "Il croit qu’on parle de son trésor.",
+     "explication": "Lyconide parle de **Phédria**, Euclion croit qu’il parle de la **marmite** : c’est le quiproquo."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Dans le texte, touche le mot qui dit ce que devient l’or à la fin.",
+     "aide": "Euclion s’en sert pour marier sa fille.",
+     "explication": "D’après les résumés antiques, Euclion donne l’or en **dot**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le texte, comment connaît-on la fin de la pièce ?",
+     "options": [
+      "Par des résumés antiques, le texte étant perdu",
+      "Par une seconde pièce de Plaute qui la continue",
+      "Par une adaptation de Ménandre en grec",
+      "Par des notes que Molière a laissées"
+     ],
+     "reponse": 0,
+     "aide": "Le texte parle d’un dernier acte qui ne nous est pas parvenu.",
+     "explication": "Le dernier acte est perdu : on ne connaît la fin que par des **résumés antiques**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d51a0d53-3bcd-55d9-a531-fe6f5e8e86aa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un type devient un personnage",
+   "competence": "argumenter",
+   "situation": "Chloé et Yanis comparent Plaute et Molière. Une courte scène écrite pour l’exercice, à la manière de Plaute, t’aide à juger.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Molière a simplement copié Plaute."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non : il a fait un [[p|personnage]] là où Plaute avait un type."
+      }
+     ]
+    },
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une scène à la manière de Plaute",
+     "blocs": [
+      {
+       "didascalie": "Euclion fouille son esclave devant la porte de sa maison."
+      },
+      {
+       "personnage": "Euclion",
+       "replique": "Montre-moi tes mains ! Les deux. Maintenant, montre-moi les [[a|autres]]."
+      },
+      {
+       "personnage": "L’esclave",
+       "replique": "Les autres, maître ? Je n’en ai pas."
+      },
+      {
+       "personnage": "Euclion",
+       "replique": "On dit toujours cela. Et ma marmite, où est-elle ?"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Plaute"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Dans la scène, touche le mot qui rend le soupçon d’Euclion absurde.",
+     "aide": "Un homme n’a que deux mains.",
+     "explication": "Demander « les **autres** » mains montre que le soupçon d’Euclion est devenu **délirant**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait de la pièce selon le type comique qu’il illustre.",
+     "categories": [
+      "Le vieil avare",
+      "Le jeune amoureux",
+      "L’esclave rusé"
+     ],
+     "items": [
+      [
+       "Il déplace sans cesse sa marmite",
+       0
+      ],
+      [
+       "Il avoue sa faute envers Phédria",
+       1
+      ],
+      [
+       "Il emporte la marmite",
+       2
+      ],
+      [
+       "Il fouille ses esclaves",
+       0
+      ],
+      [
+       "Il est le neveu de Mégadore, épris de Phédria",
+       1
+      ]
+     ],
+     "aide": "Pense à qui tient l’or, qui aime, qui agit en cachette.",
+     "explication": "**Euclion** (vieil avare) déplace et soupçonne ; **Lyconide** (jeune amoureux) avoue sa faute ; **l’esclave** (rusé) vole la marmite."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le débat, touche le mot qui dit ce que Molière ajoute à Plaute.",
+     "aide": "Yanis oppose « type » et… ?",
+     "explication": "Molière fait un **personnage** là où Plaute proposait un type : c’est l’imitation créatrice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée de dissertation cette comparaison appuie-t-elle ?",
+     "options": [
+      "La comédie est un art de la reprise créatrice",
+      "La comédie doit toujours inventer son sujet",
+      "La comédie se limite aux bastonnades du public",
+      "La comédie appartient à une seule époque"
+     ],
+     "reponse": 0,
+     "aide": "Plaute adapte les Grecs, Molière adapte Plaute.",
+     "explication": "Plaute adapte les Grecs, Molière adapte Plaute : la comédie est un art de **l’imitation créatrice**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7afde28-c4fa-542b-93b9-8e9e188f6403",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un récit pragois de 1912",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Métamorphose* pour l’oral. Lis l’affiche du récit, puis le tableau des personnages.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Métamorphose",
+     "sousTitre": "Franz Kafka",
+     "emoji": "🪲",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "Franz Kafka (1883-1924), de Prague"
+      },
+      {
+       "id": "la",
+       "texte": "Langue",
+       "valeur": "L’allemand"
+      },
+      {
+       "id": "ec",
+       "texte": "Écriture",
+       "valeur": "1912"
+      },
+      {
+       "id": "pu",
+       "texte": "Publication",
+       "valeur": "1915"
+      }
+     ],
+     "pied": "L’insecte n’est jamais dessiné sur la couverture",
+     "teinte": "brun"
+    },
+    {
+     "id": "pe",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Gregor",
+       "Le fils dévoué, voyageur de commerce"
+      ],
+      [
+       "Le père",
+       "Ancien commerçant ruiné, qui reprend l’autorité"
+      ],
+      [
+       "La mère",
+       "Aimante mais impuissante"
+      ],
+      [
+       "?",
+       "La sœur qui nourrit Gregor, puis se lasse"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture du récit de sa publication ?",
+     "reponse": 3,
+     "aide": "Lis les lignes « Écriture » et « Publication ».",
+     "explication": "1915 − 1912 = **3 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "Kafka écrit en ___ et demande que l’insecte ne soit jamais ___ sur la couverture.",
+     "reponses": [
+      [
+       "allemand"
+      ],
+      [
+       "dessiné",
+       "représenté"
+      ]
+     ],
+     "banque": [
+      "allemand",
+      "français",
+      "dessiné",
+      "nommé"
+     ],
+     "aide": "La langue est sur l’affiche, la demande aussi.",
+     "explication": "Kafka écrit en **allemand** et veut que l’insecte ne soit **jamais dessiné** : le lecteur doit l’imaginer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Grete",
+      "Marie",
+      "Henriette",
+      "Cécile"
+     ],
+     "reponse": 0,
+     "aide": "C’est la sœur de Gregor.",
+     "explication": "C’est **Grete**, la sœur, qui passe de la tendresse à la condamnation."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7afde28-c4fa-542b-93b9-8e9e188f6403",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du lit à la promenade",
+   "competence": "analyser-texte",
+   "situation": "Suis la chute de Gregor, puis regarde ce que devient sa famille.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "La chute de Gregor",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Gregor se réveille métamorphosé en insecte"
+      },
+      {
+       "id": "n2",
+       "texte": "La famille l’enferme dans sa chambre"
+      },
+      {
+       "id": "n3",
+       "texte": "Grete le nourrit, puis se lasse"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Gregor meurt ; la famille part au soleil"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Les parents et la sœur travaillent et prennent des locataires",
+      "Gregor reprend son travail de voyageur de commerce",
+      "La famille appelle un médecin qui guérit Gregor",
+      "Le fondé de pouvoir adopte Gregor dans sa maison"
+     ],
+     "reponse": 0,
+     "aide": "Le salaire de Gregor n’entre plus : qui prend le relais ?",
+     "explication": "Sans le salaire de Gregor, les autres **travaillent et prennent des locataires**."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où la sœur change d’attitude.",
+     "aide": "Elle s’occupait de lui ; que fait-elle ensuite ?",
+     "explication": "Grete le nourrit, **puis se lasse** : sa tendresse recule."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin.",
+     "texte": "Après la mort de Gregor, la famille est ___ et part se promener au ___.",
+     "reponses": [
+      [
+       "soulagée"
+      ],
+      [
+       "soleil"
+      ]
+     ],
+     "banque": [
+      "soulagée",
+      "désespérée",
+      "soleil",
+      "cimetière"
+     ],
+     "aide": "Regarde la dernière case de la chaîne.",
+     "explication": "La famille est **soulagée** et part au **soleil** : la mort de Gregor la libère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la promenade finale ?",
+     "options": [
+      "La famille renaît à mesure que Gregor s’éteint",
+      "La famille pleure Gregor avec un grand chagrin",
+      "La famille veut venger la mort de Gregor",
+      "La famille cherche à fuir la ville pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’état de Gregor et celui de la famille.",
+     "explication": "La famille **renaît** à mesure que Gregor s’éteint : c’est l’inversion du récit."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7afde28-c4fa-542b-93b9-8e9e188f6403",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un monstre dans un bureau",
+   "competence": "argumenter",
+   "situation": "Samir et Lola débattent du fantastique de Kafka. Lis un court texte écrit pour l’exercice, à la manière de Kafka, puis tranche.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lola",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samir",
+       "texte": "Le fantastique choque tout le monde : chacun crie d’horreur."
+      },
+      {
+       "qui": "Lola",
+       "texte": "Non : personne ne s’[[e|étonne]] vraiment, et c’est cela qui inquiète."
+      }
+     ]
+    },
+    {
+     "id": "te",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un matin comme les autres",
+     "blocs": [
+      "Ce matin-là, M. Aube s’aperçut qu’il était devenu un insecte. Sa première pensée fut pour le [[t|tramway]] de sept heures. Il calcula qu’il lui restait vingt minutes, puis se demanda si le directeur accepterait un certificat médical. Sa mère, derrière la porte, frappa doucement pour lui rappeler l’heure."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Kafka"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "te",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Dans le texte, touche le mot qui montre que sa première préoccupation est un horaire de travail.",
+     "aide": "Il pense à un moyen de transport.",
+     "explication": "Sa première pensée est pour le **tramway** : le souci du travail passe avant l’horreur."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Dans le débat, touche le verbe qui dit ce que personne ne fait vraiment.",
+     "aide": "Lola corrige Samir.",
+     "explication": "Personne ne s’**étonne** : le fantastique est posé, non expliqué."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : fantastique posé ou précision administrative.",
+     "categories": [
+      "Fantastique posé",
+      "Précision administrative"
+     ],
+     "items": [
+      [
+       "Il devient un insecte",
+       0
+      ],
+      [
+       "Il calcule le temps avant le tramway",
+       1
+      ],
+      [
+       "Il pense au certificat médical",
+       1
+      ],
+      [
+       "Aucune explication n’est donnée",
+       0
+      ],
+      [
+       "Il se soucie du directeur",
+       1
+      ]
+     ],
+     "aide": "L’étrange est dit sans explication ; les détails de bureau sont exacts.",
+     "explication": "L’**insecte** et l’absence d’explication relèvent du fantastique posé ; **tramway**, **certificat** et **directeur** relèvent de la précision administrative."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit le contraste entre l’étrangeté et le ton sobre ?",
+     "options": [
+      "Une inquiétude que le style neutre rend plus forte",
+      "Une moquerie légère envers le personnage",
+      "Un récit de rêve qui s’éloigne de la réalité",
+      "Une explication logique de la métamorphose"
+     ],
+     "reponse": 0,
+     "aide": "Le style est neutre, presque comique par endroits.",
+     "explication": "Le contraste entre l’étrangeté et un ton **neutre** rend l’inquiétude plus forte."
+    }
+   ]
+  },
+  {
+   "chapitre": "c894fa2e-2f17-530b-8e44-68a36e316ce7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un train pour Rome",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *La Modification*. Lis l’affiche du roman, puis relie les personnages entre eux.",
+   "documents": [
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Modification",
+     "sousTitre": "Michel Butor",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "id": "au",
+       "texte": "Auteur",
+       "valeur": "Michel Butor (1926-2016)"
+      },
+      {
+       "id": "an",
+       "texte": "Parution",
+       "valeur": "1957, éditions de Minuit"
+      },
+      {
+       "id": "mv",
+       "texte": "Mouvement",
+       "valeur": "Le Nouveau Roman"
+      },
+      {
+       "id": "tr",
+       "texte": "Trajet",
+       "valeur": "Paris-Rome, en troisième classe"
+      }
+     ],
+     "pied": "Un roman écrit au « vous »",
+     "teinte": "bleu"
+    },
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Les liens de Léon Delmont",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Henriette, épouse, mère de quatre enfants"
+      },
+      {
+       "id": "n2",
+       "texte": "Léon Delmont, directeur d’une firme"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’affiche.",
+     "texte": "Le roman paraît en ___ ; il appartient au ___ Roman.",
+     "reponses": [
+      [
+       "1957"
+      ],
+      [
+       "Nouveau"
+      ]
+     ],
+     "banque": [
+      "1957",
+      "1947",
+      "Nouveau",
+      "Grand"
+     ],
+     "aide": "Relis « Parution » et « Mouvement ».",
+     "explication": "Le roman paraît en **1957** ; c’est l’œuvre la plus célèbre du **Nouveau** Roman."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière la case « ? » de la chaîne ?",
+     "options": [
+      "Cécile, sa maîtresse, qui vit à Rome",
+      "Marie, sa fille aînée, qui vit à Paris",
+      "Henri, son associé, qui vit à Rome",
+      "Louise, sa mère, qui vit à Paris"
+     ],
+     "reponse": 0,
+     "aide": "Delmont part pour la retrouver.",
+     "explication": "C’est **Cécile**, sa maîtresse : la liberté et le rêve, liés à Rome."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’enfants Henriette et Léon Delmont ont-ils ?",
+     "reponse": 4,
+     "aide": "Relis le premier maillon de la chaîne.",
+     "explication": "Henriette est la mère de **quatre** enfants.",
+     "unite": "enfants"
+    }
+   ]
+  },
+  {
+   "chapitre": "c894fa2e-2f17-530b-8e44-68a36e316ce7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un changement d’avis",
+   "competence": "analyser-texte",
+   "situation": "Le roman est un voyage intérieur. Suis le raisonnement de Léon Delmont.",
+   "documents": [
+    {
+     "id": "mo",
+     "type": "tableau",
+     "titre": "La modification",
+     "colonnes": [
+      "Moment",
+      "Ce que comprend Delmont"
+     ],
+     "lignes": [
+      [
+       "Peu à peu",
+       "Cécile n’existe pour lui que liée à Rome"
+      ],
+      [
+       "Donc",
+       "Il détruirait tout en l’installant à Paris"
+      ],
+      [
+       "À l’arrivée",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Il renonce, et décide d’écrire un livre sur ce voyage",
+      "Il avoue tout à sa femme et part vivre à Rome",
+      "Il installe Cécile à Paris et la présente à ses enfants",
+      "Il descend du train et rentre sans rien décider"
+     ],
+     "reponse": 0,
+     "aide": "La modification, c’est le changement de sa décision.",
+     "explication": "À l’arrivée, il a **renoncé** et décide d’**écrire un livre** sur cette expérience."
+    },
+    {
+     "type": "zone",
+     "document": "mo",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui explique pourquoi sa décision bascule.",
+     "aide": "Cherche ce qu’il craint de détruire.",
+     "explication": "Il comprend qu’il **détruirait tout** en installant Cécile à Paris."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les moments du raisonnement de Delmont dans l’ordre.",
+     "items": [
+      "Il part pour annoncer sa décision à Cécile",
+      "Il comprend que Cécile n’existe que liée à Rome",
+      "Il renonce à l’installer à Paris",
+      "Il décide d’écrire un livre"
+     ],
+     "aide": "Il part avec un projet ; il arrive avec un autre.",
+     "explication": "Delmont part avec un projet, **comprend** peu à peu, **renonce**, puis **décide d’écrire**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le roman mêle trois temps : le trajet ___, les voyages ___ et l’___ rêvé.",
+     "reponses": [
+      [
+       "présent"
+      ],
+      [
+       "passés"
+      ],
+      [
+       "avenir"
+      ]
+     ],
+     "banque": [
+      "présent",
+      "passés",
+      "avenir",
+      "futur",
+      "passé"
+     ],
+     "aide": "Souvenirs, trajet, rêve : trois temps mêlés.",
+     "explication": "Le roman mêle le trajet **présent**, les voyages **passés** et l’**avenir** rêvé."
+    }
+   ]
+  },
+  {
+   "chapitre": "c894fa2e-2f17-530b-8e44-68a36e316ce7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Vous » dans le compartiment",
+   "competence": "argumenter",
+   "situation": "Alice et Bastien débattent de ce roman où il ne se passe « rien ». Lis un court texte écrit pour l’exercice, à la manière de Butor, puis réponds.",
+   "documents": [
+    {
+     "id": "db",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Alice",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Bastien",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Alice",
+       "texte": "Ce roman est ennuyeux : il ne s’y passe rien."
+      },
+      {
+       "qui": "Bastien",
+       "texte": "Il s’y passe un changement d’avis : c’est une [[p|pensée]] qui bascule."
+      }
+     ]
+    },
+    {
+     "id": "te",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le compartiment",
+     "blocs": [
+      "Vous vous asseyez près de la fenêtre. Le paysage commence à défiler, et c’est Rome que vous voyez, non les champs. En face de vous, une femme tourne les pages d’un magazine : vous lui donnez un [[n|nom]], une profession, un mari qui l’attend. Vous ne regardez plus l’heure. Vous cherchez la phrase que vous direz demain."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Michel Butor"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "te",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Dans le texte, touche le mot qui montre que le voyageur invente une vie à une inconnue.",
+     "aide": "Il lui donne ce qui permet de l’appeler.",
+     "explication": "Le voyageur invente un **nom**, une profession et un mari à l’inconnue : il imagine des vies."
+    },
+    {
+     "type": "zone",
+     "document": "db",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le débat, touche le mot qui dit où se joue l’action du roman.",
+     "aide": "Bastien répond à Alice.",
+     "explication": "L’action est intérieure : une **pensée** qui bascule."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Un récit à la deuxième personne",
+       "Le lecteur prend la place du personnage"
+      ],
+      [
+       "Trois temps mêlés",
+       "Le présent du trajet se charge de souvenirs et de rêves"
+      ],
+      [
+       "Un seul compartiment, un seul trajet",
+       "Un roman sans aventure : l’action est intérieure"
+      ]
+     ],
+     "aide": "Pense au « vous », au mélange des temps, puis au lieu clos.",
+     "explication": "Le **« vous »** installe le lecteur ; les **trois temps** mêlent trajet, souvenirs et rêves ; l’unité de lieu rend l’action **intérieure**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ce roman appuie-t-il le mieux ?",
+     "options": [
+      "Un roman peut être l’exploration d’une conscience",
+      "Un roman doit toujours raconter une aventure",
+      "Un roman perd son intérêt quand il change de temps",
+      "Un roman exige un héros qui agit beaucoup"
+     ],
+     "reponse": 0,
+     "aide": "Il n’y a aucune péripétie extérieure.",
+     "explication": "La Modification montre qu’un roman peut être **l’exploration d’une conscience** plutôt que le récit d’une aventure."
+    }
+   ]
+  }
+ ]
+}

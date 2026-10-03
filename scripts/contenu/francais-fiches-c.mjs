@@ -883,7 +883,7 @@ Adaptée au cinéma par **Bertrand Tavernier** (2010).
 
 ## Pour la dissertation et l’oral
 - **La brièveté** : un narrateur **sobre**, qui juge en une phrase.
-- **La leçon morale** : la dernière phrase dit que la princesse « aurait sans doute été la plus heureuse, **si la vertu et la prudence eussent conduit toutes ses actions** ».
+- **La leçon morale** : la dernière phrase dit que la princesse « en aurait été sans doute la plus heureuse, **si la vertu et la prudence eussent conduit toutes ses actions** ».
 
 > La passion, chez Madame de La Fayette, ne se paie jamais autrement que par la mort ou le renoncement.`,
           },

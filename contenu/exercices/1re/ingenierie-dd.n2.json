@@ -1,0 +1,2850 @@
+{
+ "niveau": "1re",
+ "matiere": "ingenierie-dd",
+ "exercices": [
+  {
+   "chapitre": "78026717-215f-50ff-b79b-bcd211216572",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le réseau de la maison de Lucie",
+   "competence": "observer-schema",
+   "situation": "Lucie a branché tous les appareils de sa maison sur un seul équipement. Elle dessine son réseau local pour expliquer le fonctionnement à son frère.",
+   "documents": [
+    {
+     "id": "etoile",
+     "type": "schema",
+     "titre": "Le réseau de la maison",
+     "largeur": 340,
+     "hauteur": 270,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 105,
+       "l": 90,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Commutateur",
+       "id": "sw",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 15,
+       "l": 90,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Box",
+       "id": "box",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 105,
+       "l": 80,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Caméra",
+       "id": "cam",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 105,
+       "l": 80,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Thermostat",
+       "id": "th",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 195,
+       "l": 90,
+       "h": 40,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Ordinateur",
+       "id": "pc",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        55
+       ],
+       "a": [
+        170,
+        105
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        125
+       ],
+       "a": [
+        125,
+        125
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        125
+       ],
+       "a": [
+        250,
+        125
+       ],
+       "style": "pointilles",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        145
+       ],
+       "a": [
+        170,
+        195
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 258,
+       "texte": "Trait plein : câble. Pointillés : Wi-Fi.",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etoile",
+     "enonce": "Touche l’équipement central, celui auquel tous les autres sont reliés.",
+     "reponse": [
+      "sw"
+     ],
+     "aide": "C’est lui qui a un trait vers chacun des autres.",
+     "explication": "Le **commutateur** est au centre : le réseau est en **étoile**."
+    },
+    {
+     "type": "zone",
+     "document": "etoile",
+     "enonce": "Touche l’équipement relié **sans fil**.",
+     "reponse": [
+      "th"
+     ],
+     "aide": "Cherche le trait pointillé.",
+     "explication": "Le **thermostat** est relié en Wi-Fi, ce qui est indiqué par les pointillés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liaisons le schéma compte-t-il ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Compte les traits.",
+     "explication": "Quatre appareils, quatre liaisons vers le commutateur : **4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le commutateur tombe en panne. Que se passe-t-il pour ce réseau en étoile ?",
+     "options": [
+      "Tous les appareils sont coupés les uns des autres",
+      "Seul le thermostat Wi-Fi est coupé",
+      "Seule la box reste isolée",
+      "Rien : les appareils se parlent directement"
+     ],
+     "reponse": 0,
+     "aide": "Que reste-t-il comme chemin entre deux appareils ?",
+     "explication": "Dans une topologie en étoile, si le centre tombe, **tout est coupé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "78026717-215f-50ff-b79b-bcd211216572",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui peut parler à qui ?",
+   "competence": "lire-tableau",
+   "situation": "Dans un petit immeuble, la box, une caméra, un thermostat et une borne de recharge sont reliés. Tous utilisent le masque 255.255.255.0. L’installateur dresse la liste des adresses.",
+   "documents": [
+    {
+     "id": "ip",
+     "type": "tableau",
+     "titre": "Adresses IP de l’immeuble",
+     "colonnes": [
+      "Équipement",
+      "Adresse IP",
+      "Masque"
+     ],
+     "lignes": [
+      [
+       "Box",
+       "192.168.1.1",
+       "255.255.255.0"
+      ],
+      [
+       "Caméra",
+       "192.168.1.20",
+       "255.255.255.0"
+      ],
+      [
+       "Thermostat",
+       "192.168.1.35",
+       "255.255.255.0"
+      ],
+      [
+       "Borne de recharge",
+       "192.168.2.12",
+       "255.255.255.0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Adresses écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ip",
+     "enonce": "Touche les adresses des deux équipements qui sont dans le même réseau que la box.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Avec ce masque, les trois premiers octets désignent le réseau.",
+     "explication": "La box est dans le réseau **192.168.1** ; la caméra et le thermostat aussi. La borne est dans 192.168.2."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le dernier octet de l’adresse de la caméra, c’est-à-dire le numéro de la machine dans son réseau ?",
+     "reponse": [
+      "20"
+     ],
+     "placeholder": "nombre",
+     "aide": "Avec 255.255.255.0, c’est le dernier octet qui désigne la machine.",
+     "explication": "Dans 192.168.1.**20**, le dernier octet désigne la machine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour que la borne de recharge et la caméra communiquent, il faut…",
+     "options": [
+      "Un routeur entre leurs deux réseaux",
+      "Un câble direct entre les deux équipements",
+      "Un second masque identique sur chaque équipement",
+      "Rien : deux machines du même immeuble se parlent toujours"
+     ],
+     "reponse": 0,
+     "aide": "Sont-elles dans le même réseau ?",
+     "explication": "Réseaux différents (192.168.1 et 192.168.2) : seul un **routeur** les relie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque serveur à son rôle.",
+     "paires": [
+      [
+       "DHCP",
+       "Attribuer automatiquement une adresse IP"
+      ],
+      [
+       "DNS",
+       "Traduire un nom en adresse IP"
+      ],
+      [
+       "Serveur web",
+       "Envoyer les pages demandées"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fournit au client.",
+     "explication": "**DHCP** attribue les adresses, **DNS** traduit les noms, le **serveur web** envoie les pages."
+    }
+   ]
+  },
+  {
+   "chapitre": "78026717-215f-50ff-b79b-bcd211216572",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La mise à jour de la serrure connectée",
+   "competence": "raisonner",
+   "situation": "Léa veut ouvrir sa serrure connectée depuis son téléphone. La requête traverse toutes les couches du modèle OSI. Le soir, une mise à jour de 1,5 Mo est aussi envoyée à la serrure par Wi-Fi.",
+   "documents": [
+    {
+     "id": "osi",
+     "type": "tableau",
+     "titre": "Les couches traversées",
+     "colonnes": [
+      "N°",
+      "Couche",
+      "Ce qu’elle manipule"
+     ],
+     "lignes": [
+      [
+       7,
+       "Application",
+       "La requête « ouvrir la serrure »"
+      ],
+      [
+       6,
+       "Présentation",
+       "Le format et le chiffrement"
+      ],
+      [
+       5,
+       "Session",
+       "L’ouverture du dialogue"
+      ],
+      [
+       4,
+       "Transport",
+       "Les segments (TCP)"
+      ],
+      [
+       3,
+       "Réseau",
+       "Les paquets et les adresses IP"
+      ],
+      [
+       2,
+       "Liaison",
+       "Les trames et les adresses MAC"
+      ],
+      [
+       1,
+       "Physique",
+       "Les bits sur l’onde ou le câble"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "wifi",
+     "type": "tableau",
+     "titre": "La mise à jour",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Taille du fichier",
+       "1,5 Mo"
+      ],
+      [
+       "Débit de la liaison Wi-Fi",
+       "6 Mbit/s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "osi",
+     "enonce": "Touche la couche où travaille un routeur, celle de l’adresse IP.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Le routeur relie des réseaux et regarde l’adresse IP.",
+     "explication": "L’adresse IP appartient à la couche **Réseau** (3), celle des routeurs."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à sa couche.",
+     "paires": [
+      [
+       "Adresse MAC",
+       "Liaison"
+      ],
+      [
+       "Adresse IP",
+       "Réseau"
+      ],
+      [
+       "Segments TCP",
+       "Transport"
+      ],
+      [
+       "Bits sur l’onde",
+       "Physique"
+      ]
+     ],
+     "aide": "Utilise la dernière colonne du tableau.",
+     "explication": "MAC : **liaison** (2) ; IP : **réseau** (3) ; TCP : **transport** (4) ; bits : **physique** (1)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range, dans l’ordre où l’encapsulation les traite à l’envoi, ces quatre couches.",
+     "items": [
+      "Application",
+      "Transport",
+      "Réseau",
+      "Physique"
+     ],
+     "aide": "À l’envoi, les données descendent du haut vers le bas du tableau.",
+     "explication": "À l’envoi, la requête **descend** : application, transport, réseau, puis physique ; chaque couche ajoute son en-tête."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mégabits contient le fichier de 1,5 Mo ? (1 octet = 8 bits.)",
+     "reponse": 12,
+     "unite": "Mbit",
+     "tolerance": 0,
+     "aide": "Multiplie par 8.",
+     "explication": "1,5 × 8 = **12 Mbit**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps l’envoi dure-t-il ?",
+     "reponse": 2,
+     "unite": "s",
+     "tolerance": 0.01,
+     "aide": "Durée = taille en bits ÷ débit.",
+     "explication": "12 Mbit ÷ 6 Mbit/s = **2 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "20fb3674-96a8-5c92-8c84-e16aa5abe964",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mesurer le moteur du drone",
+   "competence": "modeliser",
+   "situation": "Pour modéliser le moteur de son drone, Rayan le branche sur la batterie avec un ampèremètre et un voltmètre. Il relève la tension et l’intensité.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "Mesures sur le moteur d’un drone",
+     "branches": [
+      {
+       "de": [
+        0,
+        4
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ],
+       "composant": "interrupteur-ferme"
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "amperemetre",
+       "id": "a",
+       "nom": "A"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        4
+       ],
+       "composant": "moteur",
+       "id": "m"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        4
+       ],
+       "composant": "voltmetre",
+       "id": "v",
+       "nom": "V"
+      },
+      {
+       "de": [
+        12,
+        4
+       ],
+       "a": [
+        8,
+        4
+       ]
+      },
+      {
+       "de": [
+        8,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Relevés",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Tension aux bornes du moteur (V)",
+       12
+      ],
+      [
+       "Intensité dans le moteur (A)",
+       4.5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "enonce": "Touche l’appareil qui mesure l’**intensité** du courant dans le moteur.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il se place en série, dans la même branche que le moteur.",
+     "explication": "L’**ampèremètre** se monte en série : tout le courant du moteur le traverse."
+    },
+    {
+     "type": "zone",
+     "document": "cir",
+     "enonce": "Touche l’appareil monté **en dérivation** aux bornes du moteur.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Il est branché en parallèle, sur les deux bornes du moteur.",
+     "explication": "Le **voltmètre** se place en dérivation pour mesurer la tension."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance électrique le moteur absorbe-t-il ?",
+     "reponse": 54,
+     "unite": "W",
+     "tolerance": 0.1,
+     "aide": "En électrique, la puissance est le produit de l’effort par le flux.",
+     "explication": "P = U × I = 12 × 4.5 = **54 W**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque grandeur à son rôle dans un modèle multiphysique.",
+     "paires": [
+      [
+       "Tension U",
+       "Effort électrique"
+      ],
+      [
+       "Intensité I",
+       "Flux électrique"
+      ],
+      [
+       "Force F",
+       "Effort en translation"
+      ],
+      [
+       "Vitesse v",
+       "Flux en translation"
+      ]
+     ],
+     "aide": "Le produit effort × flux donne une puissance.",
+     "explication": "**U × I** et **F × v** sont deux puissances : U et F sont des efforts, I et v des flux."
+    }
+   ]
+  },
+  {
+   "chapitre": "20fb3674-96a8-5c92-8c84-e16aa5abe964",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le démarrage du moteur de portail",
+   "competence": "lire-graphique",
+   "situation": "Un bureau d’études simule le courant de démarrage du moteur d’un portail, puis le mesure sur le prototype. Il compare les deux courbes pour savoir si son modèle est fiable.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Courant du moteur après la mise sous tension",
+     "categories": [
+      "0 s",
+      "0,1 s",
+      "0,2 s",
+      "0,3 s",
+      "0,4 s",
+      "0,5 s",
+      "0,6 s"
+     ],
+     "series": [
+      {
+       "nom": "Simulation",
+       "valeurs": [
+        12,
+        7.13,
+        4.64,
+        3.35,
+        2.69,
+        2.36,
+        2.18
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Mesure",
+       "valeurs": [
+        11,
+        7.6,
+        5.3,
+        3.9,
+        3,
+        2.5,
+        2.3
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Courant",
+      "unite": "A",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Courbes simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel courant de démarrage la simulation annonce-t-elle à l’instant 0 ?",
+     "reponse": 12,
+     "unite": "A",
+     "tolerance": 0.3,
+     "aide": "Lis la première valeur de la courbe de simulation.",
+     "explication": "La simulation part de **12 A** à la mise sous tension."
+    },
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche l’instant où la mesure et la simulation s’écartent le plus, parmi 0,1 s, 0,2 s et 0,3 s.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare l’écart vertical entre les deux courbes à chaque instant.",
+     "explication": "À **0,2 s**, la mesure (5,3 A) dépasse la simulation (4.64 A) de 0.66 A, l’écart le plus grand."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart entre la mesure et la simulation à 0,2 s ? (La simulation vaut exactement 4,64 A.)",
+     "reponse": 0.66,
+     "unite": "A",
+     "tolerance": 0.05,
+     "aide": "Écart = mesure − simulation.",
+     "explication": "5,3 − 4.64 = **0.66 A**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La mesure décroît plus lentement que la simulation. Que suggère cet écart ?",
+     "options": [
+      "L’inertie ou les frottements sont sous-estimés : on recale ces paramètres",
+      "Le moteur du prototype est défectueux : il faut le changer sans attendre",
+      "La simulation est inutile : on préfère désormais tout tester en réel",
+      "Le voltmètre donne une mesure fausse : on garde donc la simulation"
+     ],
+     "reponse": 0,
+     "aide": "Un écart entre modèle et réel met d’abord en cause le modèle.",
+     "explication": "Le modèle est trop optimiste : on **recale ses paramètres** (inertie, frottements) avant de conclure sur le produit."
+    },
+    {
+     "type": "choix",
+     "enonce": "On réduit le pas de calcul de 0,1 s à 0,01 s. Quelle est la conséquence ?",
+     "options": [
+      "Le résultat est plus précis, mais le calcul est plus long",
+      "Le résultat est moins précis, mais le calcul est plus rapide",
+      "Le résultat est identique, car le modèle ne change pas",
+      "Le calcul devient impossible, car le pas est trop petit"
+     ],
+     "reponse": 0,
+     "aide": "Pense au compromis précision / temps.",
+     "explication": "Un pas plus petit calcule plus de points : **plus précis, plus long**."
+    }
+   ]
+  },
+  {
+   "chapitre": "20fb3674-96a8-5c92-8c84-e16aa5abe964",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le monte-charge du chantier",
+   "competence": "modeliser",
+   "situation": "Une entreprise de bâtiment simule le moteur d’un monte-charge. Le treuil soulève une charge de 800 N à 0,25 m/s. Le moteur a un rendement de 0,8 et il est alimenté en 25 V.",
+   "documents": [
+    {
+     "id": "dat",
+     "type": "tableau",
+     "titre": "Données du monte-charge",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Force exercée par le câble (N)",
+       800
+      ],
+      [
+       "Vitesse de montée (m/s)",
+       0.25
+      ],
+      [
+       "Rendement du moteur",
+       0.8
+      ],
+      [
+       "Tension d’alimentation (V)",
+       25
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe ces éléments du modèle de simulation.",
+     "categories": [
+      "Variable interne (paramètre)",
+      "Variable externe (entrée)",
+      "Sortie"
+     ],
+     "items": [
+      [
+       "Résistance du moteur",
+       0
+      ],
+      [
+       "Masse de la cabine",
+       0
+      ],
+      [
+       "Tension d’alimentation",
+       1
+      ],
+      [
+       "Consigne de vitesse",
+       1
+      ],
+      [
+       "Courbe du courant relevée",
+       2
+      ]
+     ],
+     "aide": "Les paramètres décrivent les constituants ; les entrées sont imposées au modèle ; les sorties sont les résultats.",
+     "explication": "Résistance et masse sont des **paramètres** ; tension et consigne des **entrées** ; la courbe du courant est une **sortie**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance mécanique le treuil fournit-il à la charge ?",
+     "reponse": 200,
+     "unite": "W",
+     "tolerance": 0.1,
+     "aide": "En translation, P = F × v.",
+     "explication": "800 × 0.25 = **200 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance électrique le moteur absorbe-t-il ?",
+     "reponse": 250,
+     "unite": "W",
+     "tolerance": 0.1,
+     "aide": "Rendement = puissance utile ÷ puissance absorbée.",
+     "explication": "200 ÷ 0.8 = **250 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle intensité le moteur appelle-t-il ?",
+     "reponse": 10,
+     "unite": "A",
+     "tolerance": 0.05,
+     "aide": "En électrique, P = U × I.",
+     "explication": "250 ÷ 25 = **10 A**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La mesure donne 11,5 A au lieu de 10 A. Que fait-on ?",
+     "options": [
+      "On recale le modèle, par exemple le rendement ou les frottements",
+      "On ignore la mesure, car on estime que la simulation fait foi",
+      "On change le moteur directement, sans aucune autre vérification",
+      "On supprime la consigne de vitesse de ce modèle de simulation"
+     ],
+     "reponse": 0,
+     "aide": "Un écart modèle / réel conduit d’abord à corriger les hypothèses du modèle.",
+     "explication": "On **recale** les paramètres (rendement, frottements) pour que le modèle reproduise la mesure."
+    }
+   ]
+  },
+  {
+   "chapitre": "25cacea2-cb72-5faf-b058-d0ce037ec092",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Desserrer l’écrou de la roue",
+   "competence": "calculer",
+   "situation": "Au garage, Inès dévisse l’écrou de la roue avec une clé en croix. Elle pousse sur le bras avec une force de 120 N, à 0,35 m de l’écrou.",
+   "documents": [
+    {
+     "id": "cle",
+     "type": "schema",
+     "titre": "Clé en croix pour roue de voiture",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Schéma simplifié, écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 90,
+       "l": 300,
+       "h": 14,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "barre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 97,
+       "r": 12,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "O",
+       "id": "ecrou"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        30
+       ],
+       "a": [
+        270,
+        88
+       ],
+       "fleche": "fin",
+       "epaisseur": 3,
+       "teinte": "corail",
+       "id": "force"
+      },
+      {
+       "forme": "texte",
+       "x": 292,
+       "y": 55,
+       "texte": "F = 120 N",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        140
+       ],
+       "a": [
+        270,
+        140
+       ],
+       "fleche": "deux",
+       "id": "cote1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 134,
+       "texte": "0,35 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        175
+       ],
+       "a": [
+        330,
+        175
+       ],
+       "fleche": "deux",
+       "id": "cote2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 169,
+       "texte": "0,50 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        112
+       ],
+       "a": [
+        60,
+        148
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        104
+       ],
+       "a": [
+        270,
+        148
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        104
+       ],
+       "a": [
+        30,
+        183
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        330,
+        104
+       ],
+       "a": [
+        330,
+        183
+       ],
+       "style": "pointilles"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cle",
+     "enonce": "Touche la cote qui représente le **bras de levier** de la force F par rapport à l’écrou O.",
+     "reponse": [
+      "cote1"
+     ],
+     "aide": "Le bras de levier est la distance entre l’écrou et la droite d’action de la force.",
+     "explication": "Le bras de levier est la distance **0,35 m** entre O et le point où Inès appuie, pas la longueur de la clé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel moment la force exerce-t-elle par rapport à l’écrou ?",
+     "reponse": 42,
+     "unite": "N·m",
+     "tolerance": 0.1,
+     "aide": "Moment = F × d, avec d en mètres.",
+     "explication": "120 × 0.35 = **42 N·m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Inès glisse un tube sur la clé et appuie à 0,5 m de l’écrou. Quelle force lui suffit pour produire le même moment ?",
+     "reponse": 84,
+     "unite": "N",
+     "tolerance": 0.1,
+     "aide": "Même moment, bras plus long : la force diminue.",
+     "explication": "42 ÷ 0.5 = **84 N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Inès sur la longueur du bras de levier ?",
+     "options": [
+      "Plus il est grand, plus la force nécessaire est petite",
+      "Plus il est grand, plus la force nécessaire est grande",
+      "La longueur du bras n’a aucune influence",
+      "Seule la position de l’écrou compte"
+     ],
+     "reponse": 0,
+     "aide": "Compare 120 N à 0,35 m avec la force à 0,5 m.",
+     "explication": "À moment égal, **un bras plus long demande moins de force**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25cacea2-cb72-5faf-b058-d0ce037ec092",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le hauban du mât de l’éolienne",
+   "competence": "calculer",
+   "situation": "Pour tenir le mât d’une petite éolienne, on tend un hauban en acier. L’effort de traction dans le câble atteint 3 600 N en cas de tempête. Le bureau d’études compare quatre sections de câble.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Effort de traction (N)",
+       3600
+      ],
+      [
+       "Limite élastique de l’acier Re (MPa)",
+       235
+      ],
+      [
+       "Coefficient de sécurité",
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "cab",
+     "type": "tableau",
+     "titre": "Câbles proposés",
+     "colonnes": [
+      "Câble",
+      "Section (mm²)"
+     ],
+     "lignes": [
+      [
+       "A",
+       20
+      ],
+      [
+       "B",
+       30
+      ],
+      [
+       "C",
+       40
+      ],
+      [
+       "D",
+       50
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Sections écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle contrainte le câble B subit-il ?",
+     "reponse": 120,
+     "unite": "MPa",
+     "tolerance": 0.1,
+     "aide": "σ = F ÷ S, avec F en newtons et S en mm².",
+     "explication": "3600 ÷ 30 = **120 MPa**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle contrainte maximale admissible cherche-t-on à ne pas dépasser, avec le coefficient de sécurité ?",
+     "reponse": 117.5,
+     "unite": "MPa",
+     "tolerance": 0.1,
+     "aide": "Contrainte admissible = Re ÷ coefficient de sécurité.",
+     "explication": "235 ÷ 2 = **117.5 MPa**."
+    },
+    {
+     "type": "zone",
+     "document": "cab",
+     "enonce": "Touche les câbles qui respectent la contrainte admissible.",
+     "reponse": [
+      "r2c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Calcule la contrainte de chaque câble (3600 ÷ section) et compare-la à 117.5 MPa.",
+     "explication": "Contraintes : A 180 MPa, B 120 MPa, C **90 MPa**, D **72 MPa**. Seuls **C et D** sont sous 117.5 MPa."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle section minimale le câble doit-il avoir ? Arrondis au dixième par excès.",
+     "reponse": 30.7,
+     "unite": "mm²",
+     "tolerance": 0.1,
+     "aide": "S = F ÷ contrainte admissible.",
+     "explication": "3600 ÷ 117.5 ≈ 30.64 mm², soit **30.7 mm²** au minimum."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le câble le moins épais qui convient ?",
+     "options": [
+      "Le câble C",
+      "Le câble A",
+      "Le câble B",
+      "Le câble D"
+     ],
+     "reponse": 0,
+     "aide": "Il faut une section supérieure au minimum calculé.",
+     "explication": "Le câble B (30 mm²) est juste en dessous de 30.6 mm² : le plus léger qui convient est le **C**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25cacea2-cb72-5faf-b058-d0ce037ec092",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La console qui porte l’étagère",
+   "competence": "raisonner",
+   "situation": "Une console en acier est fixée au mur par une vis en haut et s’appuie en bas contre le mur. Elle porte une charge de 180 N à 0,50 m du mur. La vis est en acier de classe 8.8 : section résistante 20,1 mm², limite élastique 640 MPa.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Console fixée au mur",
+     "largeur": 340,
+     "hauteur": 250,
+     "source": "Schéma simplifié, écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 30,
+       "l": 22,
+       "h": 170,
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "forme": "texte",
+       "x": 41,
+       "y": 20,
+       "texte": "mur",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 52,
+       "y": 155,
+       "l": 250,
+       "h": 12,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 52,
+       "y": 107,
+       "l": 10,
+       "h": 60,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 57,
+       "cy": 107,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "vis",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 78,
+       "y": 105,
+       "texte": "vis V",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 57,
+       "cy": 167,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "appui",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 78,
+       "y": 197,
+       "texte": "appui A",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        255,
+        90
+       ],
+       "a": [
+        255,
+        152
+       ],
+       "fleche": "fin",
+       "epaisseur": 3,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 265,
+       "y": 125,
+       "texte": "180 N",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        57,
+        215
+       ],
+       "a": [
+        255,
+        215
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 156,
+       "y": 209,
+       "texte": "0,50 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        25,
+        107
+       ],
+       "a": [
+        25,
+        167
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 140,
+       "texte": "0,12 m",
+       "taille": "petit",
+       "ancre": "fin"
+      }
+     ]
+    },
+    {
+     "id": "vis",
+     "type": "tableau",
+     "titre": "La vis",
+     "colonnes": [
+      "Caractéristique",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Section résistante (mm²)",
+       20.1
+      ],
+      [
+       "Limite élastique Re (MPa)",
+       640
+      ],
+      [
+       "Coefficient de sécurité",
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point autour duquel on calcule les moments, pour que la force de l’appui bas ne compte pas.",
+     "reponse": [
+      "appui"
+     ],
+     "aide": "On choisit le point où passe une force inconnue qu’on veut éliminer.",
+     "explication": "Au niveau de l’**appui A**, la force d’appui a un moment nul : il ne reste que la charge et la vis."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel moment la charge exerce-t-elle par rapport à l’appui A ?",
+     "reponse": 90,
+     "unite": "N·m",
+     "tolerance": 0.1,
+     "aide": "Moment = force × distance.",
+     "explication": "180 × 0.5 = **90 N·m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle force la vis doit-elle fournir pour équilibrer ce moment ?",
+     "reponse": 750,
+     "unite": "N",
+     "tolerance": 1,
+     "aide": "Le moment de la vis par rapport à A vaut F × 0,12.",
+     "explication": "90 ÷ 0.12 = **750 N** : la vis est tirée plus de quatre fois plus fort que la charge."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle contrainte de traction la vis subit-elle ? Arrondis au dixième.",
+     "reponse": 37.3,
+     "unite": "MPa",
+     "tolerance": 0.1,
+     "aide": "σ = F ÷ S, en newtons et mm².",
+     "explication": "750 ÷ 20.1 ≈ **37.3 MPa**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La vis est-elle conforme avec son coefficient de sécurité de 2 ?",
+     "options": [
+      "Oui : 37,3 MPa est inférieur à 320 MPa",
+      "Non : 37,3 MPa dépasse la limite élastique",
+      "Oui : 640 MPa est supérieur à 37,3 MPa, sans coefficient",
+      "Impossible à dire sans connaître la masse du mur"
+     ],
+     "reponse": 0,
+     "aide": "Compare σ à Re ÷ s.",
+     "explication": "La contrainte admissible vaut 640 ÷ 2 = **320 MPa**. Avec 37.3 MPa, la vis est **conforme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0971475c-25ca-517f-b8fc-05643f9b361b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’autonomie du drone",
+   "competence": "calculer",
+   "situation": "Zoé prépare un vol de son drone. Sa batterie porte les indications ci-dessous. Elle veut savoir combien de temps il pourra rester en vol stationnaire.",
+   "documents": [
+    {
+     "id": "bat",
+     "type": "tableau",
+     "titre": "Fiche du drone",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Tension nominale de la batterie (V)",
+       11.1
+      ],
+      [
+       "Capacité de la batterie (Ah)",
+       5
+      ],
+      [
+       "Puissance électrique en vol stationnaire (W)",
+       100
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la batterie stocke-t-elle ?",
+     "reponse": 55.5,
+     "unite": "Wh",
+     "tolerance": 0.05,
+     "aide": "Énergie stockée = tension × capacité.",
+     "explication": "11.1 × 5 = **55.5 Wh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes le drone peut-il voler en stationnaire ? Arrondis au dixième.",
+     "reponse": 33.3,
+     "unite": "min",
+     "tolerance": 0.1,
+     "aide": "Durée = énergie ÷ puissance, en heures, puis passe en minutes.",
+     "explication": "55.5 ÷ 100 = 0.555 h, soit **33.3 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime l’énergie de la batterie en joules.",
+     "reponse": 199800,
+     "unite": "J",
+     "tolerance": 1,
+     "aide": "1 Wh = 3 600 J.",
+     "explication": "55.5 × 3 600 = **199800 J**."
+    },
+    {
+     "type": "zone",
+     "document": "bat",
+     "enonce": "Touche la valeur qui est une puissance.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Une puissance s’exprime en watts.",
+     "explication": "**100 W** est une puissance, donc l’énergie transférée par seconde."
+    }
+   ]
+  },
+  {
+   "chapitre": "0971475c-25ca-517f-b8fc-05643f9b361b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le scooter électrique de la livraison",
+   "competence": "calculer",
+   "situation": "Une entreprise de livraison étudie un scooter électrique : batterie de 48 V et 20 Ah. Pour rouler à vitesse stabilisée, la roue doit recevoir 1 500 W utiles.",
+   "documents": [
+    {
+     "id": "eta",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Rendement de chaque étage",
+     "categories": [
+      "Variateur",
+      "Moteur",
+      "Transmission"
+     ],
+     "series": [
+      {
+       "nom": "Rendement",
+       "valeurs": [
+        0.96,
+        0.88,
+        0.94
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Rendement",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "valeurs": true,
+     "source": "Rendements simplifiés, écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eta",
+     "enonce": "Touche l’étage qui a le **plus faible** rendement.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "Le **moteur** (0,88) est l’étage au rendement le plus faible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement global de la chaîne ? Arrondis au centième.",
+     "reponse": 0.79,
+     "tolerance": 0.005,
+     "aide": "En série, on multiplie les rendements.",
+     "explication": "0,96 × 0,88 × 0,94 ≈ **0.79** (0.794 avant arrondi)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la batterie stocke-t-elle ?",
+     "reponse": 960,
+     "unite": "Wh",
+     "tolerance": 0,
+     "aide": "Énergie = tension × capacité.",
+     "explication": "48 × 20 = **960 Wh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance la batterie doit-elle fournir pour 1 500 W utiles à la roue ? Arrondis à l’unité.",
+     "reponse": 1889,
+     "unite": "W",
+     "tolerance": 1,
+     "aide": "Puissance absorbée = puissance utile ÷ rendement global (valeur exacte).",
+     "explication": "1 500 ÷ 0.79411 ≈ **1889 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’autonomie à cette puissance, en minutes ? Arrondis au dixième.",
+     "reponse": 30.5,
+     "unite": "min",
+     "tolerance": 0.2,
+     "aide": "Durée = énergie stockée ÷ puissance absorbée, en heures, puis en minutes.",
+     "explication": "960 ÷ 1889 ≈ 0.508 h, soit **30.5 min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0971475c-25ca-517f-b8fc-05643f9b361b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La courbe de charge d’une maison",
+   "competence": "analyser-document",
+   "situation": "Une famille relève la puissance moyenne qu’appelle sa maison toutes les deux heures. Elle envisage d’installer des panneaux photovoltaïques. On suppose la puissance constante sur chaque période de deux heures.",
+   "documents": [
+    {
+     "id": "cc",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Puissance appelée par la maison",
+     "categories": [
+      "0 h",
+      "2 h",
+      "4 h",
+      "6 h",
+      "8 h",
+      "10 h",
+      "12 h",
+      "14 h",
+      "16 h",
+      "18 h",
+      "20 h",
+      "22 h"
+     ],
+     "series": [
+      {
+       "nom": "Puissance",
+       "valeurs": [
+        0.4,
+        0.3,
+        0.3,
+        1.2,
+        1.8,
+        0.9,
+        1.5,
+        0.6,
+        0.7,
+        2.4,
+        2.8,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Puissance",
+      "unite": "kW",
+      "min": 0,
+      "max": 3,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Heure du début de la période"
+     },
+     "valeurs": true,
+     "source": "Relevés simplifiés, écrits pour l’exercice"
+    },
+    {
+     "id": "pv",
+     "type": "tableau",
+     "titre": "Les panneaux envisagés",
+     "colonnes": [
+      "Caractéristique",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Puissance crête",
+       "3 kWc"
+      ],
+      [
+       "Production moyenne par jour",
+       "12 kWh"
+      ],
+      [
+       "Moment de production",
+       "De jour, avec le soleil"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cc",
+     "enonce": "Touche la période où la maison appelle la **plus grande puissance**.",
+     "reponse": [
+      "k10"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La période qui commence à **20 h** atteint 2,8 kW."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la maison consomme-t-elle entre 18 h et 22 h ?",
+     "reponse": 10.4,
+     "unite": "kWh",
+     "tolerance": 0.05,
+     "aide": "Chaque barre dure 2 h : énergie = puissance × 2 h, pour les deux périodes concernées.",
+     "explication": "(2,4 + 2,8) × 2 = **10.4 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie la maison consomme-t-elle sur la journée entière ?",
+     "reponse": 27.8,
+     "unite": "kWh",
+     "tolerance": 0.1,
+     "aide": "Additionne les douze puissances, puis multiplie par 2 h.",
+     "explication": "Somme des puissances = 13.9 kW ; × 2 h = **27.8 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la consommation du jour les panneaux couvrent-ils ? Arrondis au dixième, en pourcentage.",
+     "reponse": 43.2,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "Production moyenne ÷ consommation du jour.",
+     "explication": "12 ÷ 27.8 ≈ **43.2 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les panneaux ne couvrent-ils presque rien du pic de consommation du soir ?",
+     "options": [
+      "Ils produisent de jour : le pic arrive quand le soleil est couché",
+      "Ils ont un rendement nul après 18 h par construction",
+      "Leur puissance crête est inférieure à 1 kW",
+      "Le réseau électrique les bloque en soirée"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « moment de production » du tableau.",
+     "explication": "La production solaire est **intermittente** : elle suit le soleil, pas la consommation."
+    }
+   ]
+  },
+  {
+   "chapitre": "a877167f-7749-54e1-a061-2d7561ca6e14",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La barrière du parking",
+   "competence": "observer-schema",
+   "situation": "À l’entrée du parking de la mairie, une barrière se lève quand un conducteur valide son ticket, puis se baisse après son passage. Le service technique en dessine les états.",
+   "documents": [
+    {
+     "id": "stm",
+     "type": "schema",
+     "titre": "États de la barrière de parking",
+     "largeur": 360,
+     "hauteur": 240,
+     "source": "Diagramme simplifié, écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 30,
+       "l": 100,
+       "h": 44,
+       "arrondi": 14,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Fermée",
+       "id": "e1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 245,
+       "y": 30,
+       "l": 100,
+       "h": 44,
+       "arrondi": 14,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ouverture",
+       "id": "e2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 245,
+       "y": 166,
+       "l": 100,
+       "h": 44,
+       "arrondi": 14,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ouverte",
+       "id": "e3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 166,
+       "l": 100,
+       "h": 44,
+       "arrondi": 14,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Fermeture",
+       "id": "e4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        115,
+        52
+       ],
+       "a": [
+        245,
+        52
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "t1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        295,
+        74
+       ],
+       "a": [
+        295,
+        166
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "t2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        188
+       ],
+       "a": [
+        115,
+        188
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "t3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        166
+       ],
+       "a": [
+        65,
+        74
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "t4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 45,
+       "texte": "ticket validé",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 288,
+       "y": 122,
+       "texte": "fin de course haut",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 181,
+       "texte": "voiture passée",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 122,
+       "texte": "fin de course bas",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stm",
+     "enonce": "Touche l’état dans lequel la barrière est levée et immobile.",
+     "reponse": [
+      "e3"
+     ],
+     "aide": "Les états « Ouverture » et « Fermeture » sont des mouvements.",
+     "explication": "Dans l’état **Ouverte**, la barrière est levée et le moteur est arrêté."
+    },
+    {
+     "type": "zone",
+     "document": "stm",
+     "enonce": "Touche la transition déclenchée par le passage de la voiture.",
+     "reponse": [
+      "t3"
+     ],
+     "aide": "Cherche l’étiquette qui parle de la voiture.",
+     "explication": "La transition **Ouverte → Fermeture** est déclenchée par « voiture passée »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’états ce diagramme compte-t-il ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Compte les rectangles arrondis.",
+     "explication": "Fermée, Ouverture, Ouverte, Fermeture : **4 états**."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’étiquette « ticket validé » sur une flèche est un…",
+     "options": [
+      "Événement qui déclenche la transition",
+      "État stable du système",
+      "Action exécutée en entrant dans un état",
+      "Diagramme de séquence"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui fait passer d’un état à l’autre ?",
+     "explication": "Ce qui déclenche une transition est un **événement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a877167f-7749-54e1-a061-2d7561ca6e14",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chauffage de la salle de classe",
+   "competence": "modeliser",
+   "situation": "Dans le lycée, la salle 12 est chauffée par un radiateur piloté par une sonde. Le technicien veut montrer à Samir comment la commande corrige l’écart quand quelqu’un ouvre une fenêtre. Consigne : 21 °C ; température mesurée après l’ouverture : 18,5 °C.",
+   "documents": [
+    {
+     "id": "boucle",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Boucle de régulation du chauffage",
+     "noeuds": [
+      {
+       "id": "cons",
+       "texte": "Consigne 21 °C",
+       "emoji": "🎯"
+      },
+      {
+       "id": "comp",
+       "texte": "Comparateur"
+      },
+      {
+       "id": "corr",
+       "texte": "Correcteur"
+      },
+      {
+       "id": "rad",
+       "texte": "Radiateur"
+      },
+      {
+       "id": "salle",
+       "texte": "Salle de classe"
+      },
+      {
+       "id": "sonde",
+       "texte": "Sonde de température",
+       "emoji": "🌡️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cons",
+       "a": "comp"
+      },
+      {
+       "de": "comp",
+       "a": "corr",
+       "texte": "écart"
+      },
+      {
+       "de": "corr",
+       "a": "rad",
+       "texte": "ordre"
+      },
+      {
+       "de": "rad",
+       "a": "salle",
+       "texte": "chaleur"
+      },
+      {
+       "de": "salle",
+       "a": "sonde",
+       "texte": "température"
+      }
+     ],
+     "source": "Chaîne simplifiée : la sonde renvoie sa mesure au comparateur."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boucle",
+     "enonce": "Touche le bloc qui calcule la différence entre la consigne et la mesure.",
+     "reponse": [
+      "comp"
+     ],
+     "aide": "Il reçoit la consigne et la mesure de la sonde.",
+     "explication": "Le **comparateur** calcule l’écart entre consigne et mesure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart le comparateur calcule-t-il après l’ouverture de la fenêtre ?",
+     "reponse": 2.5,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "Écart = consigne − mesure.",
+     "explication": "21 − 18,5 = **2,5 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait le chauffage quand l’écart augmente ?",
+     "options": [
+      "Il chauffe plus fort pour rattraper la consigne",
+      "Il s’arrête, car la salle est déjà froide",
+      "Il garde la même puissance, quelle que soit la mesure",
+      "Il attend un ordre de l’utilisateur"
+     ],
+     "reponse": 0,
+     "aide": "La boucle fermée corrige l’écart.",
+     "explication": "Un écart plus grand fait **monter la puissance** : la boucle fermée compense la perturbation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces systèmes selon leur type de commande.",
+     "categories": [
+      "Boucle ouverte",
+      "Boucle fermée"
+     ],
+     "items": [
+      [
+       "Volet roulant qui descend à 20 h par horloge",
+       0
+      ],
+      [
+       "Arrosage de 10 minutes tous les matins",
+       0
+      ],
+      [
+       "Chauffage régulé par une sonde",
+       1
+      ],
+      [
+       "Régulateur de vitesse d’une voiture",
+       1
+      ],
+      [
+       "Ventilateur de processeur qui accélère avec la température",
+       1
+      ]
+     ],
+     "aide": "La boucle fermée mesure le résultat et le compare à la consigne.",
+     "explication": "Horloge et programmation envoient un ordre **sans vérifier** : boucle ouverte. Les autres mesurent le résultat : **boucle fermée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a877167f-7749-54e1-a061-2d7561ca6e14",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’alarme de la maison connectée",
+   "competence": "raisonner",
+   "situation": "Mia installe une alarme de maison connectée. Elle lit le tableau des transitions, puis relit la soirée du 12 mars, enregistrée dans le journal de l’alarme.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Transitions de l’alarme",
+     "colonnes": [
+      "État",
+      "Événement ou garde",
+      "État suivant"
+     ],
+     "lignes": [
+      [
+       "Désarmée",
+       "code correct [porte fermée]",
+       "Armée"
+      ],
+      [
+       "Désarmée",
+       "code correct [porte ouverte]",
+       "Désarmée"
+      ],
+      [
+       "Armée",
+       "mouvement détecté",
+       "Pré-alarme"
+      ],
+      [
+       "Pré-alarme",
+       "code correct",
+       "Désarmée"
+      ],
+      [
+       "Pré-alarme",
+       "après 30 s",
+       "Alarme"
+      ],
+      [
+       "Alarme",
+       "code correct",
+       "Désarmée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "jour",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Journal du 12 mars",
+     "emoji": "🔔",
+     "lignes": [
+      {
+       "texte": "21:00:00 — code saisi, porte d’entrée ouverte"
+      },
+      {
+       "texte": "21:01:00 — porte fermée, code saisi"
+      },
+      {
+       "texte": "21:30:00 — mouvement détecté dans le salon"
+      },
+      {
+       "texte": "21:30:20 — aucun code saisi"
+      },
+      {
+       "texte": "21:30:45 — aucun code saisi"
+      },
+      {
+       "texte": "21:35:00 — code correct saisi"
+      }
+     ],
+     "pied": "Journal écrit pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "enonce": "Touche la ligne qui montre une condition de garde empêchant d’armer l’alarme.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "La garde est écrite entre crochets.",
+     "explication": "« code correct **[porte ouverte]** » : la garde est fausse pour armer, l’alarme reste **Désarmée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’état de l’alarme juste après la saisie de 21:00:00 ?",
+     "options": [
+      "Désarmée",
+      "Armée",
+      "Pré-alarme",
+      "Alarme"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La porte est ouverte : regarde la deuxième ligne du tableau.",
+     "explication": "Porte ouverte : la garde est fausse, l’alarme reste **Désarmée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’état de l’alarme à 21:30:20 ?",
+     "options": [
+      "Désarmée",
+      "Armée",
+      "Pré-alarme",
+      "Alarme"
+     ],
+     "reponse": 2,
+     "ordreFixe": true,
+     "aide": "Un mouvement a été détecté à 21:30:00 sur une alarme armée, et 30 s ne sont pas écoulées.",
+     "explication": "À 21:30:20, le délai de 30 s court encore : **Pré-alarme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’état de l’alarme à 21:30:45 ?",
+     "options": [
+      "Désarmée",
+      "Armée",
+      "Pré-alarme",
+      "Alarme"
+     ],
+     "reponse": 3,
+     "ordreFixe": true,
+     "aide": "Combien de secondes se sont écoulées depuis 21:30:00 ?",
+     "explication": "45 s sans code : la transition « après 30 s » a eu lieu, l’état est **Alarme**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : la saisie du code est un ___ ; « porte fermée » est une condition de ___.",
+     "texte": "La saisie du code est un ___ ; « porte fermée » est une condition de ___.",
+     "reponses": [
+      [
+       "événement"
+      ],
+      [
+       "garde"
+      ]
+     ],
+     "banque": [
+      "événement",
+      "garde",
+      "état",
+      "action"
+     ],
+     "aide": "L’un déclenche, l’autre autorise.",
+     "explication": "Le code est l’**événement** ; « porte fermée » est la **garde**, entre crochets."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4a6eb6d-0f62-5c14-a8ed-5c038afcd609",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plateau de la trottinette",
+   "competence": "calculer",
+   "situation": "Un fabricant de trottinettes compare quatre matériaux pour un plateau de 0,0015 m³. Il veut savoir ce que pèserait chaque version.",
+   "documents": [
+    {
+     "id": "rho",
+     "type": "tableau",
+     "titre": "Masses volumiques",
+     "colonnes": [
+      "Matériau",
+      "Masse volumique (kg/m³)"
+     ],
+     "lignes": [
+      [
+       "Acier",
+       7850
+      ],
+      [
+       "Aluminium",
+       2700
+      ],
+      [
+       "Bois",
+       500
+      ],
+      [
+       "PLA",
+       1240
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rho",
+     "enonce": "Touche le matériau le plus léger à volume égal.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La masse volumique la plus faible donne la pièce la plus légère.",
+     "explication": "Le **bois** (500 kg/m³) est le plus léger."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait la masse du plateau en aluminium ?",
+     "reponse": 4.05,
+     "unite": "kg",
+     "tolerance": 0.01,
+     "aide": "Masse = masse volumique × volume.",
+     "explication": "2 700 × 0,0015 = **4.05 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait la masse du plateau en acier ? Arrondis au centième.",
+     "reponse": 11.78,
+     "unite": "kg",
+     "tolerance": 0.01,
+     "aide": "7 850 × 0,0015.",
+     "explication": "7 850 × 0,0015 = 11.775 kg, soit **11.78 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le plateau en acier est-il plus lourd que celui en aluminium ? Arrondis au dixième.",
+     "reponse": 2.9,
+     "tolerance": 0.05,
+     "aide": "Divise la masse volumique de l’acier par celle de l’aluminium.",
+     "explication": "7 850 ÷ 2 700 ≈ **2.9**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4a6eb6d-0f62-5c14-a8ed-5c038afcd609",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La potence de guidon",
+   "competence": "raisonner",
+   "situation": "Un atelier de vélos cherche un matériau léger et rigide pour une potence de guidon. Le critère retenu est l’indice E ÷ ρ, à rendre le plus grand possible, avec E en GPa et ρ en kg/m³.",
+   "documents": [
+    {
+     "id": "mat",
+     "type": "tableau",
+     "titre": "Propriétés des matériaux",
+     "colonnes": [
+      "Matériau",
+      "ρ (kg/m³)",
+      "E (GPa)"
+     ],
+     "lignes": [
+      [
+       "Acier",
+       7850,
+       210
+      ],
+      [
+       "Aluminium",
+       2700,
+       70
+      ],
+      [
+       "Titane",
+       4500,
+       110
+      ],
+      [
+       "Bois",
+       500,
+       10
+      ],
+      [
+       "PLA",
+       1240,
+       3.5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’indice E ÷ ρ de l’aluminium, en MN·m/kg. Arrondis au dixième. (E en GPa × 1 000, divisé par ρ.)",
+     "reponse": 25.9,
+     "unite": "MN·m/kg",
+     "tolerance": 0.05,
+     "aide": "70 × 1 000 ÷ 2 700.",
+     "explication": "70 000 ÷ 2 700 ≈ **25.9**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’indice E ÷ ρ du bois, en MN·m/kg.",
+     "reponse": 20,
+     "unite": "MN·m/kg",
+     "tolerance": 0.05,
+     "aide": "10 × 1 000 ÷ 500.",
+     "explication": "10 000 ÷ 500 = **20**."
+    },
+    {
+     "type": "zone",
+     "document": "mat",
+     "enonce": "Touche le matériau qui a le meilleur indice E ÷ ρ.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Calcule les cinq indices : Acier 26.8 ; Aluminium 25.9 ; Titane 24.4 ; Bois 20 ; PLA 2.8.",
+     "explication": "Indices : Acier 26.8, Aluminium 25.9, Titane 24.4, Bois 20, PLA 2.8. L’**acier** arrive en tête, de peu."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’indice de l’aluminium est proche de celui de l’acier. Comment un cadre en aluminium peut-il pourtant être plus léger ?",
+     "options": [
+      "Par des tubes plus gros, qui donnent la même rigidité avec moins de masse",
+      "En utilisant moins de matière, ce qui le rend plus rigide",
+      "Parce que sa masse volumique est supérieure à celle de l’acier",
+      "Parce que son module d’Young est plus grand que celui de l’acier"
+     ],
+     "reponse": 0,
+     "aide": "Même rigidité par kilo, mais pas la même forme de pièce.",
+     "explication": "À indice presque égal, on **élargit les tubes** pour retrouver la rigidité, sans reprendre autant de masse."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4a6eb6d-0f62-5c14-a8ed-5c038afcd609",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le boîtier de la borne de recharge",
+   "competence": "raisonner",
+   "situation": "Une entreprise doit choisir le matériau du boîtier d’une borne de recharge extérieure. Elle note trois candidats de 1 (mauvais) à 5 (excellent), pondère chaque critère par un coefficient, et regarde aussi l’énergie de fabrication. Le boîtier a un volume de 0,0008 m³.",
+   "documents": [
+    {
+     "id": "dec",
+     "type": "tableau",
+     "titre": "Matrice de décision",
+     "colonnes": [
+      "Critère",
+      "Coefficient",
+      "Aluminium recyclé",
+      "ABS",
+      "Acier galvanisé"
+     ],
+     "lignes": [
+      [
+       "Masse",
+       3,
+       4,
+       5,
+       2
+      ],
+      [
+       "Coût",
+       2,
+       3,
+       5,
+       4
+      ],
+      [
+       "Recyclage",
+       3,
+       5,
+       2,
+       5
+      ],
+      [
+       "Tenue aux UV",
+       1,
+       5,
+       2,
+       5
+      ],
+      [
+       "Masse volumique (kg/m³)",
+       "—",
+       2700,
+       1050,
+       7850
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes et valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "ene",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Énergie de fabrication",
+     "categories": [
+      "Aluminium recyclé",
+      "ABS",
+      "Acier galvanisé"
+     ],
+     "series": [
+      {
+       "nom": "Énergie",
+       "valeurs": [
+        15,
+        95,
+        25
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie",
+      "unite": "MJ/kg",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "valeurs": true,
+     "source": "Ordres de grandeur arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le score total de l’aluminium recyclé (somme coefficient × note, sur les quatre critères).",
+     "reponse": 38,
+     "tolerance": 0,
+     "aide": "3×4 + 2×3 + 3×5 + 1×5.",
+     "explication": "12 + 6 + 15 + 5 = **38**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le score total de l’ABS.",
+     "reponse": 33,
+     "tolerance": 0,
+     "aide": "3×5 + 2×5 + 3×2 + 1×2.",
+     "explication": "15 + 10 + 6 + 2 = **33**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les scores sont 38 (aluminium recyclé), 33 (ABS) et 34 (acier galvanisé). Quel matériau la matrice désigne-t-elle ?",
+     "options": [
+      "L’aluminium recyclé",
+      "L’ABS",
+      "L’acier galvanisé",
+      "Aucun, ils sont à égalité"
+     ],
+     "reponse": 0,
+     "aide": "Le meilleur score gagne.",
+     "explication": "**L’aluminium recyclé** a le meilleur total (38)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie de fabrication le boîtier en aluminium recyclé demande-t-il, en MJ ? (Masse = masse volumique × volume.)",
+     "reponse": 32.4,
+     "unite": "MJ",
+     "tolerance": 0.1,
+     "aide": "Calcule d’abord la masse, puis multiplie par l’énergie par kilo.",
+     "explication": "Masse : 2 700 × 0,0008 = 2.16 kg ; énergie : 2.16 × 15 = **32.4 MJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie de fabrication le boîtier en ABS demande-t-il, en MJ ?",
+     "reponse": 79.8,
+     "unite": "MJ",
+     "tolerance": 0.1,
+     "aide": "1 050 × 0,0008 donne la masse ; multiplie par 95.",
+     "explication": "Masse : 0.84 kg ; énergie : 0.84 × 95 = **79.8 MJ**. Plus léger, mais plus de deux fois plus d’énergie à fabriquer."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7490922-9dba-52c1-b471-7c69dc171d63",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le protocole d’essai de la trottinette",
+   "competence": "analyser-document",
+   "situation": "Le club de technologie veut vérifier l’autonomie d’une trottinette. Un élève a recopié le protocole d’essai, mais les rubriques sont dans le désordre.",
+   "documents": [
+    {
+     "id": "proto",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Protocole d’essai — notes en vrac",
+     "emoji": "📋",
+     "lignes": [
+      {
+       "texte": "Reporter les relevés dans un tableau et calculer la moyenne",
+       "id": "trait"
+      },
+      {
+       "texte": "Vérifier que l’autonomie dépasse 25 km",
+       "id": "obj"
+      },
+      {
+       "texte": "Casque obligatoire, piste dégagée, arrêt d’urgence repéré",
+       "id": "secu"
+      },
+      {
+       "texte": "Rouler à 20 km/h sur des tours de piste, jusqu’à l’arrêt",
+       "id": "mode"
+      },
+      {
+       "texte": "Batterie chargée à 100 %, charge de 75 kg, 20 °C",
+       "id": "cond"
+      },
+      {
+       "texte": "Brancher le compteur d’énergie entre la batterie et le moteur",
+       "id": "mont"
+      }
+     ],
+     "pied": "Protocole écrit pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "proto",
+     "enonce": "Touche la ligne qui donne l’**objectif** de l’essai.",
+     "reponse": [
+      "obj"
+     ],
+     "aide": "L’objectif dit quelle exigence on veut vérifier.",
+     "explication": "« **Vérifier que l’autonomie dépasse 25 km** » est l’objectif : c’est lui qui commence tout protocole."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les rubriques du protocole dans l’ordre.",
+     "items": [
+      "Objectif",
+      "Montage",
+      "Conditions",
+      "Mode opératoire",
+      "Sécurité",
+      "Traitement des résultats"
+     ],
+     "aide": "On annonce ce qu’on veut, on prépare, on exécute, puis on exploite.",
+     "explication": "**Objectif, montage, conditions, mode opératoire, sécurité, traitement** : le protocole se prépare avant qu’on touche au matériel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le protocole impose-t-il « batterie chargée à 100 %, charge de 75 kg, 20 °C » ?",
+     "options": [
+      "Pour que les essais soient comparables entre eux",
+      "Pour que la trottinette roule plus vite",
+      "Pour réduire l’usure des pneus",
+      "Pour que le compteur d’énergie reste branché"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui doit rester identique d’un essai à l’autre.",
+     "explication": "Des **conditions identiques** rendent les mesures comparables."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7490922-9dba-52c1-b471-7c69dc171d63",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’autonomie de la trottinette",
+   "competence": "raisonner",
+   "situation": "Le club mesure l’autonomie d’une trottinette sur cinq essais identiques. L’exigence 3.2 du cahier des charges demande au moins 25 km. La simulation annonçait 27 km.",
+   "documents": [
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Autonomie mesurée",
+     "colonnes": [
+      "Essai",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Autonomie (km)",
+       23.8,
+       24.6,
+       25.1,
+       24.2,
+       24.8
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    },
+    {
+     "id": "exi",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Exigence 3.2",
+     "emoji": "📐",
+     "lignes": [
+      {
+       "texte": "Autonomie minimale",
+       "valeur": "25 km"
+      },
+      {
+       "texte": "Autonomie simulée",
+       "valeur": "27 km"
+      }
+     ],
+     "pied": "Valeurs écrites pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’autonomie moyenne mesurée ?",
+     "reponse": 24.5,
+     "unite": "km",
+     "tolerance": 0.05,
+     "aide": "Additionne les cinq mesures, puis divise par 5.",
+     "explication": "(23.8 + 24.6 + 25.1 + 24.2 + 24.8) ÷ 5 = **24.5 km**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La trottinette est-elle conforme à l’exigence 3.2 ?",
+     "options": [
+      "Non : 24,5 km est inférieur aux 25 km exigés",
+      "Oui : un des essais dépasse 25 km",
+      "Oui : la simulation annonce 27 km",
+      "Impossible à dire sans une sixième mesure"
+     ],
+     "reponse": 0,
+     "aide": "Compare la moyenne, pas un essai isolé, à l’exigence.",
+     "explication": "La moyenne (24.5 km) est sous 25 km : l’écart 3 est **négatif**, le produit n’est **pas conforme**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart entre la simulation et la mesure, en pourcentage de la valeur simulée ? Arrondis au dixième.",
+     "reponse": 9.3,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "(simulation − mesure) ÷ simulation.",
+     "explication": "(27 − 24.5) ÷ 27 ≈ **9.3 %** : le modèle est optimiste."
+    },
+    {
+     "type": "zone",
+     "document": "mes",
+     "enonce": "Touche la mesure la plus éloignée de la moyenne.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Compare chaque mesure à 24,5 km.",
+     "explication": "**23,8 km** s’écarte de 0,7 km de la moyenne ; 25,1 km, de 0,6 km seulement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion est la plus complète ?",
+     "options": [
+      "Non conforme (24,5 km < 25 km) ; modèle optimiste à recaler ; réduire les frottements",
+      "Conforme, car la simulation donne 27 km et que le modèle fait foi sur le prototype",
+      "Non conforme, donc la simulation est à jeter et l’essai est à refaire entièrement",
+      "Conforme, car un essai sur cinq dépasse 25 km et que le client sera satisfait"
+     ],
+     "reponse": 0,
+     "aide": "Une bonne conclusion chiffre, explique et propose une amélioration.",
+     "explication": "Elle donne la **réponse chiffrée**, une **explication** de l’écart et une **amélioration**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7490922-9dba-52c1-b471-7c69dc171d63",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La porte de garage motorisée",
+   "competence": "raisonner",
+   "situation": "Une porte de garage doit s’ouvrir en 12 s au plus. La simulation donne 10,2 s. Le prototype est essayé six fois ; le bureau d’études résume ses résultats.",
+   "documents": [
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Durées d’ouverture mesurées",
+     "colonnes": [
+      "Essai",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Durée (s)",
+       11.1,
+       11.4,
+       11.3,
+       11.6,
+       11.2,
+       11.2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    },
+    {
+     "id": "cmp",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Trois valeurs à comparer",
+     "categories": [
+      "Exigence (maximum)",
+      "Simulation",
+      "Mesure moyenne"
+     ],
+     "series": [
+      {
+       "nom": "Durée",
+       "valeurs": [
+        12,
+        10.2,
+        11.3
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Durée d’ouverture",
+      "unite": "s",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "valeurs": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cmp",
+     "enonce": "Touche la barre qui représente la valeur à **respecter** (le cahier des charges).",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la valeur qu’impose l’exigence, pas un résultat.",
+     "explication": "**12 s** vient de l’exigence : c’est la valeur de référence pour l’écart 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée moyenne d’ouverture ?",
+     "reponse": 11.3,
+     "unite": "s",
+     "tolerance": 0.01,
+     "aide": "Additionne les six durées, puis divise par 6.",
+     "explication": "11.1 + 11.4 + 11.3 + 11.6 + 11.2 + 11.2 = 67.8 ; ÷ 6 = **11.3 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Estime l’incertitude comme la moitié de l’écart entre la plus grande et la plus petite durée.",
+     "reponse": 0.25,
+     "unite": "s",
+     "tolerance": 0.01,
+     "aide": "(max − min) ÷ 2.",
+     "explication": "(11.6 − 11.1) ÷ 2 = **0.25 s** : on écrit 11.3 ± 0.25 s."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart relatif entre la mesure moyenne et la simulation ? Arrondis au dixième, en pourcentage.",
+     "reponse": 10.8,
+     "unite": "%",
+     "tolerance": 0.1,
+     "aide": "(mesure − simulation) ÷ simulation.",
+     "explication": "(11.3 − 10.2) ÷ 10.2 ≈ **10.8 %** : le modèle est optimiste."
+    },
+    {
+     "type": "choix",
+     "enonce": "La porte est-elle conforme, en tenant compte de l’incertitude (11.3 ± 0.25 s) ?",
+     "options": [
+      "Oui : même au plus haut, 11,55 s reste sous 12 s",
+      "Non : 11,55 s dépasse l’exigence",
+      "Non : la mesure est supérieure à la simulation",
+      "Impossible à dire, l’incertitude rend tout flou"
+     ],
+     "reponse": 0,
+     "aide": "Ajoute l’incertitude à la moyenne et compare à 12 s.",
+     "explication": "11.3 + 0.25 = **11.55 s** < 12 s : le produit est **conforme**, même avec la marge d’erreur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces actions selon le mot qui les décrit.",
+     "categories": [
+      "Vérifier",
+      "Valider",
+      "Qualifier"
+     ],
+     "items": [
+      [
+       "Contrôler que le moteur fournit bien le couple de sa fiche technique",
+       0
+      ],
+      [
+       "Contrôler que la porte répond au besoin : s’ouvrir en 12 s au plus",
+       1
+      ],
+      [
+       "Mesurer les performances de la porte installée chez le client",
+       2
+      ]
+     ],
+     "aide": "Vérifier : spécification. Valider : besoin. Qualifier : performances réelles.",
+     "explication": "On **vérifie** par rapport à une spécification, on **valide** par rapport au besoin, on **qualifie** en mesurant les performances réelles."
+    }
+   ]
+  }
+ ]
+}

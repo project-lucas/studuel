@@ -1,0 +1,1940 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "b91aed45-2aff-592c-9733-27fc3c012c1c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une invitation au voyage symboliste",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Le Voyage d’Urien*. Une invitation de librairie, imaginée pour l’exercice, résume la carte d’identité du livre : lis-la, puis relève ce qu’il faut savoir.",
+   "documents": [
+    {
+     "id": "inv",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "Le Voyage d’Urien",
+     "sousTitre": "André Gide — 1893",
+     "emoji": "⛵",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Récit symboliste en prose",
+       "id": "genre"
+      },
+      {
+       "texte": "Illustré par",
+       "valeur": "Maurice Denis",
+       "id": "illus"
+      },
+      {
+       "texte": "Cercle fréquenté par Gide",
+       "valeur": "Les mardis de Mallarmé",
+       "id": "cercle"
+      },
+      {
+       "texte": "Courant",
+       "valeur": "?",
+       "id": "courant"
+      },
+      {
+       "texte": "Le voyage",
+       "valeur": "Trois grandes mers",
+       "id": "mers"
+      }
+     ],
+     "pied": "Un livre de jeunesse, pensé comme un objet d’art",
+     "teinte": "violet",
+     "source": "Document imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inv",
+     "multiple": false,
+     "reponse": [
+      "illus"
+     ],
+     "enonce": "Touche la ligne qui nomme le peintre de l’édition originale.",
+     "aide": "Cherche les mots « Illustré par ».",
+     "explication": "L’édition originale de 1893 est ornée de lithographies de **Maurice Denis**, peintre du groupe nabi."
+    },
+    {
+     "type": "choix",
+     "enonce": "La case « ? » du courant : à quel mouvement ce livre se rattache-t-il ?",
+     "options": [
+      "Le symbolisme",
+      "Le naturalisme",
+      "Le romantisme",
+      "Le surréalisme"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le cercle que fréquente Gide : celui de Mallarmé.",
+     "explication": "Le livre naît dans le cercle de Mallarmé, comme objet d’art : c’est un récit **symboliste**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du livre.",
+     "texte": "Le livre paraît en ___, avec des lithographies de ___ ; Gide a alors ___ ans.",
+     "reponses": [
+      [
+       "1893"
+      ],
+      [
+       "Maurice Denis"
+      ],
+      [
+       "vingt-trois",
+       "23"
+      ]
+     ],
+     "banque": [
+      "1893",
+      "1891",
+      "Maurice Denis",
+      "Mallarmé",
+      "vingt-trois",
+      "trente"
+     ],
+     "aide": "La date et le nom du peintre sont sur l’invitation ; l’âge de Gide, tu l’as dans le cours.",
+     "explication": "Le livre paraît en **1893**, orné par **Maurice Denis**, quand Gide a **vingt-trois** ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "b91aed45-2aff-592c-9733-27fc3c012c1c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la mer des plaisirs au pôle blanc",
+   "competence": "analyser-document",
+   "situation": "Urien et ses compagnons traversent trois mers avant le pôle. Suis leur route sur la chaîne, retrouve l’étape manquante, puis le dénouement.",
+   "documents": [
+    {
+     "id": "route",
+     "type": "chaine",
+     "titre": "La route du voyage",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Océan pathétique : tentations et plaisirs"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Mer glaciale : blanche, vers un pôle mystérieux"
+      },
+      {
+       "id": "n4",
+       "texte": "Au pôle : « HIC DESPERATUS »"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "puis"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "puis"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "enfin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle mer occupe la case « ? », entre les plaisirs et la glace ?",
+     "options": [
+      "La mer des Sargasses, immobile et morne",
+      "La mer Rouge, brûlante et vive",
+      "La mer Égée, claire et mouvante",
+      "La mer du Nord, agitée et sombre"
+     ],
+     "reponse": 0,
+     "aide": "Après les plaisirs, l’équipage s’enlise : la mer ne bouge plus.",
+     "explication": "Entre l’Océan pathétique et la mer glaciale vient la **mer des Sargasses**, immobile et morne, où l’équipage s’enlise."
+    },
+    {
+     "type": "zone",
+     "document": "route",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où le voyage devient blanc et pur.",
+     "aide": "Cherche le mot qui évoque la glace.",
+     "explication": "C’est la **mer glaciale** : blanche et pure, elle mène vers un pôle mystérieux."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les derniers temps du récit.",
+     "items": [
+      "Les voyageurs lisent « HIC DESPERATUS » au pôle",
+      "Sous la glace, ils découvrent un cadavre",
+      "Le cadavre tient un papier tout blanc",
+      "L’Envoi avoue que le voyage a été rêvé"
+     ],
+     "aide": "On passe de l’inscription à la découverte, puis à l’aveu final en vers.",
+     "explication": "On lit d’abord l’inscription, puis on trouve le **cadavre** et son **papier blanc** ; l’**Envoi** en vers révèle enfin que tout était rêvé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représentent les escales du voyage ?",
+     "options": [
+      "Des états d’âme plus que des lieux",
+      "Des ports réellement visités par Gide",
+      "Des étapes d’une expédition scientifique",
+      "Des souvenirs d’enfance de l’auteur"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux plaisirs, à l’enlisement, à la pureté : ce sont des mouvements intérieurs.",
+     "explication": "Les escales sont des **états d’âme** plus que des lieux : le paysage est allégorique."
+    }
+   ]
+  },
+  {
+   "chapitre": "b91aed45-2aff-592c-9733-27fc3c012c1c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un voyage dans la chambre de ses pensées",
+   "competence": "argumenter",
+   "situation": "Lina et Théo se disputent sur *Le Voyage d’Urien* : récit de voyage ou récit intérieur ? Lis leur échange et un pastiche écrit pour l’exercice, puis tranche.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une escale, à la manière de Gide",
+     "blocs": [
+      "Nous quittâmes la côte sans l’avoir décidé. Chaque escale ressemblait à un désir : on y descendait par [[d|envie]], on y restait par [[d|faiblesse]], et l’un d’entre nous manquait à l’appel au départ.",
+      "Puis la mer devint blanche. Aucun port n’était en vue, mais personne ne demanda où nous allions : il suffisait de marcher vers le froid."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière du *Voyage d’Urien* de Gide"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Gide raconte un vrai tour des mers : il a tout vu de ses yeux."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Non : les escales sont des états d’âme, et l’Envoi final avoue que le voyage a été rêvé."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Alors pourquoi décrire autant de paysages ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Parce que chaque paysage signifie un désir ou une tentation au lieu de simplement décrire."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les deux noms qui montrent que l’escale est un mouvement intérieur, non un lieu.",
+     "aide": "Cherche ce qui pousse à descendre et ce qui fait rester.",
+     "explication": "On descend par **envie**, on reste par **faiblesse** : l’escale est un désir, pas un port."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le débat et le texte confirment-ils ?",
+     "options": [
+      "Les escales traduisent des désirs : le voyage est intérieur",
+      "Les escales décrivent des ports visités par Gide",
+      "Le texte relate une expédition à but scientifique",
+      "Les compagnons sont de simples marins sans valeur"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse de Théo, puis le pastiche : qu’est-ce qui fait descendre à terre ?",
+     "explication": "Le texte et Théo s’accordent : les escales sont des **désirs**, et le voyage est **intérieur**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du livre à son effet.",
+     "paires": [
+      [
+       "Les paysages allégoriques",
+       "Le paysage signifie au lieu de décrire"
+      ],
+      [
+       "Le « nous » d’Urien",
+       "Les compagnons figurent les désirs d’une seule âme"
+      ],
+      [
+       "L’Envoi final en vers",
+       "Il révèle que tout a été rêvé"
+      ],
+      [
+       "Les trois mers successives",
+       "Elles scandent une quête spirituelle"
+      ]
+     ],
+     "aide": "Demande-toi à chaque fois : que lit-on à travers l’image ?",
+     "explication": "Le paysage **signifie**, le « nous » rassemble les **désirs**, l’Envoi **dévoile le rêve**, les mers **scandent la quête**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert un voyage imaginaire, d’après cette œuvre ?",
+     "options": [
+      "À explorer l’intériorité plutôt que le monde",
+      "À décrire fidèlement des lieux très lointains",
+      "À préparer une véritable expédition en mer",
+      "À remplacer la littérature par la science"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit : explorer l’intériorité, pas le monde.",
+     "explication": "Le voyage imaginaire sert à explorer **l’intériorité** : c’est la leçon du récit symboliste."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5e2253b-03dd-5333-9a15-e67c4c30e960",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le poète que personne n’a lu",
+   "competence": "lire-tableau",
+   "situation": "Pour ta fiche sur *Les Amours jaunes*, un tableau résume le destin de Corbière. Lis-le, complète la case manquante, puis retrouve qui est qui.",
+   "documents": [
+    {
+     "id": "faits",
+     "type": "tableau",
+     "titre": "Corbière en quelques faits",
+     "colonnes": [
+      "Fait",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "L’auteur",
+       "Tristan Corbière (1845-1875)"
+      ],
+      [
+       "Son père",
+       "Édouard Corbière, capitaine et auteur de romans maritimes"
+      ],
+      [
+       "La publication",
+       "À compte d’auteur, en 1873"
+      ],
+      [
+       "Son accueil",
+       "?"
+      ],
+      [
+       "Son sauvetage",
+       "Verlaine, dans *Les Poètes maudits*"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "faits",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui dit comment le recueil a été publié.",
+     "aide": "Cherche l’année 1873.",
+     "explication": "Le recueil paraît **à compte d’auteur**, en 1873 : l’auteur paie lui-même l’impression."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » : comment le recueil est-il accueilli ?",
+     "options": [
+      "Il passe totalement inaperçu",
+      "Il connaît un triomphe de librairie",
+      "Il est interdit par la censure",
+      "Il est salué par les Parnassiens"
+     ],
+     "reponse": 0,
+     "aide": "Corbière meurt jeune et presque sans lecteurs.",
+     "explication": "Le recueil passe **totalement inaperçu** : quelques exemplaires seulement sont vendus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du recueil de la mort de Corbière ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Repère les deux années du tableau et soustrais.",
+     "explication": "1875 − 1873 = **2 ans** : le poète meurt deux ans après sa seule publication."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque nom à son rôle.",
+     "paires": [
+      [
+       "Édouard Corbière",
+       "Le père, capitaine et romancier de la mer"
+      ],
+      [
+       "Verlaine",
+       "Il sauve Corbière de l’oubli"
+      ],
+      [
+       "Laforgue",
+       "Il reconnaît la modernité du poète"
+      ],
+      [
+       "Roscoff",
+       "Le port breton où vit Tristan"
+      ]
+     ],
+     "aide": "Un nom d’écrivain, un père, un lieu : chacun a sa phrase dans le cours.",
+     "explication": "**Édouard** est le père, **Verlaine** le sauveur, **Laforgue** un lecteur moderne, **Roscoff** le port du poète."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5e2253b-03dd-5333-9a15-e67c4c30e960",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les rubriques d’un recueil rebelle",
+   "competence": "lire-tableau",
+   "situation": "Le recueil est rangé en sections aux noms étranges. Lis ce tableau, puis une courte notice écrite pour l’exercice, et reconstitue ce que contient chaque partie.",
+   "documents": [
+    {
+     "id": "sections",
+     "type": "tableau",
+     "titre": "Quelques sections du recueil",
+     "colonnes": [
+      "Section",
+      "Ce qu’on y trouve"
+     ],
+     "lignes": [
+      [
+       "« Armor »",
+       "La Bretagne des pardons et des mendiants"
+      ],
+      [
+       "« Gens de mer »",
+       "?"
+      ],
+      [
+       "« Raccrocs »",
+       "Des pièces diverses, parfois écrites en Italie"
+      ],
+      [
+       "« Rondels pour après »",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "notice",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le recueil en bref",
+     "blocs": [
+      "Corbière publie son unique recueil à [[c|compte]] [[c|d’auteur]]. Presque personne ne le lit.",
+      "Le titre joue sur une expression : on dit d’un rire forcé, amer, qu’il est « jaune ». Chez Corbière, ce rire se tourne contre [[s|soi]]."
+     ],
+     "source": "Notice écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui disent que l’auteur a payé lui-même la publication.",
+     "aide": "Cherche l’expression qui suit « à ».",
+     "explication": "L’expression est **à compte d’auteur** : Corbière finance son propre livre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » de « Gens de mer » ?",
+     "options": [
+      "Les marins, loin des clichés romantiques",
+      "La Bretagne des pardons et des mendiants",
+      "L’autoportrait ironique et l’amour raté",
+      "La mort, sur un ton de berceuse"
+     ],
+     "reponse": 0,
+     "aide": "Le titre de la section annonce ceux qui vivent sur la mer.",
+     "explication": "« Gens de mer » montre les **marins**, loin des clichés romantiques."
+    },
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit contre qui le rire « jaune » est tourné.",
+     "aide": "C’est la clé du titre : une ironie qui revient vers celui qui parle.",
+     "explication": "Le rire jaune de Corbière se tourne contre **soi** : c’est une ironie dirigée contre le poète lui-même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » de « Rondels pour après » ?",
+     "options": [
+      "La mort, sur un ton de berceuse",
+      "Les marins, loin des clichés romantiques",
+      "Des pièces écrites en Italie",
+      "La Bretagne des pardons et des mendiants"
+     ],
+     "reponse": 0,
+     "aide": "« Pour après » : après quoi ? Pense à ce qui vient quand le poème s’achève.",
+     "explication": "« Rondels pour après » aborde la **mort**, sur un ton de **berceuse**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f5e2253b-03dd-5333-9a15-e67c4c30e960",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Se moquer de sa propre épitaphe",
+   "competence": "argumenter",
+   "situation": "Pour un sujet de dissertation sur le lyrisme contesté, tu t’appuies sur un vers célèbre de Corbière. Lis-le, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un vers d’« Épitaphe »",
+     "blocs": [
+      "Il se tua [[a|d’ardeur]], ou mourut de [[a|paresse]]."
+     ],
+     "source": "Tristan Corbière, « Épitaphe », *Les Amours jaunes* (1873)"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le lyrisme de Corbière est contesté",
+       "Le moi est là, mais il se moque de sa propre plainte",
+       "?"
+      ],
+      [
+       "L’ironie est son arme",
+       "Le poème se retourne contre lui-même",
+       "L’autoportrait : laid, malade, raté"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux expressions qui s’opposent dans ce vers.",
+     "aide": "Une cause qui suppose beaucoup d’énergie, une autre qui suppose son contraire.",
+     "explication": "**D’ardeur** et **paresse** s’opposent : le poète ne sait même pas de quoi il est mort, et il en rit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un poète qui écrit sa propre épitaphe en hésitant entre ces deux causes : que fait-il de sa mort ?",
+     "options": [
+      "Il s’en moque, par ironie contre lui-même",
+      "Il la pleure dans un lyrisme sincère",
+      "Il la célèbre comme un exploit héroïque",
+      "Il la présente comme une vengeance"
+     ],
+     "reponse": 0,
+     "aide": "Le vers hésite entre deux causes opposées : le ton est-il grave ?",
+     "explication": "L’hésitation est comique : le poète **se moque de lui-même**, c’est le rire jaune."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "« Épitaphe », où le poète se moque de sa propre mort",
+      "Une plainte amoureuse sincère, comme chez Lamartine",
+      "Un récit épique de combat naval",
+      "Un poème breton sans la moindre ironie"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple où le moi est présent mais ironique envers lui-même.",
+     "explication": "Le vers d’**« Épitaphe »** illustre la thèse : le « moi » s’y montre, mais pour se moquer de lui-même."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque arme de Corbière à son effet.",
+     "paires": [
+      [
+       "L’ironie, l’argot, les jeux de mots",
+       "Le poème se retourne contre lui-même"
+      ],
+      [
+       "Les tirets et les ruptures de ton",
+       "Rien ne s’installe"
+      ],
+      [
+       "L’autoportrait laid, malade et raté",
+       "Il refuse la pose du poète"
+      ]
+     ],
+     "aide": "Chaque procédé a une conséquence sur la façon dont on lit le poème.",
+     "explication": "L’**ironie** retourne le poème, les **ruptures** empêchent qu’il s’installe, l’**autoportrait** refuse la pose du poète."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le cours, quel poète peut-on opposer à Corbière sur le lyrisme ?",
+     "options": [
+      "Lamartine, au lyrisme sincère",
+      "Laforgue, au lyrisme ironique",
+      "Ronsard, poète du sonnet",
+      "Rimbaud, poète voyant"
+     ],
+     "reponse": 0,
+     "aide": "On oppose un lyrisme sincère à un lyrisme contesté.",
+     "explication": "On l’oppose à **Lamartine**, dont le lyrisme est sincère ; on le rapproche de Laforgue."
+    }
+   ]
+  },
+  {
+   "chapitre": "5895c488-1aa0-5891-8a83-d12868ddc0b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois cycles, trois femmes",
+   "competence": "lire-tableau",
+   "situation": "Ronsard a donné plusieurs recueils d’amour. Lis ce tableau de ses trois cycles, complète-le, puis relie chaque femme à ce qu’on sait d’elle.",
+   "documents": [
+    {
+     "id": "cycles",
+     "type": "tableau",
+     "titre": "Les trois cycles amoureux",
+     "colonnes": [
+      "Cycle",
+      "Date",
+      "Sa manière"
+     ],
+     "lignes": [
+      [
+       "Les Amours de Cassandre",
+       "1552",
+       "Sonnets pétrarquistes : amour idéal et inaccessible"
+      ],
+      [
+       "Les Amours de Marie",
+       "1555-1556",
+       "?"
+      ],
+      [
+       "Les Sonnets pour Hélène",
+       "1578",
+       "Le poète vieillissant s’adresse à une dame de la cour"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cycles",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la date du premier cycle, celui de Cassandre.",
+     "aide": "Cherche la ligne qui porte le nom de Cassandre.",
+     "explication": "Le cycle de Cassandre paraît en **1552**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les *Amours de Cassandre* des *Sonnets pour Hélène* ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates du tableau.",
+     "explication": "1578 − 1552 = **26 ans** : le poète d’Hélène est un homme vieillissant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » : la manière du cycle de Marie ?",
+     "options": [
+      "Le « beau style bas » : plus simple et plus sensuel",
+      "Le grand style épique des batailles",
+      "Le style mythologique, précieux et savant",
+      "Le style satirique contre la cour"
+     ],
+     "reponse": 0,
+     "aide": "Après les sonnets savants de Cassandre, Ronsard change de ton pour une jeune paysanne.",
+     "explication": "Pour Marie, Ronsard adopte le **« beau style bas »**, plus simple et plus sensuel."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque nom à ce qu’on sait de lui ou d’elle.",
+     "paires": [
+      [
+       "Cassandre",
+       "Rencontrée à Blois en 1545"
+      ],
+      [
+       "Marie",
+       "Jeune Angevine de condition modeste"
+      ],
+      [
+       "Hélène",
+       "Dame d’honneur de Catherine de Médicis"
+      ],
+      [
+       "Du Bellay",
+       "Auteur de la *Défense et illustration* (1549)"
+      ]
+     ],
+     "aide": "Chaque nom a une phrase dans le cours sur les trois femmes et la Pléiade.",
+     "explication": "**Cassandre** à Blois, **Marie** l’Angevine, **Hélène** à la cour, **Du Bellay** auteur de la *Défense*."
+    }
+   ]
+  },
+  {
+   "chapitre": "5895c488-1aa0-5891-8a83-d12868ddc0b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le poète sourd de la Pléiade",
+   "competence": "analyser-texte",
+   "situation": "Une notice écrite pour l’exercice présente le parcours de Ronsard avant ses grands recueils. Lis-la, repère les mots clés, puis range les cycles et leurs poèmes.",
+   "documents": [
+    {
+     "id": "notice",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un poète devenu chef d’école",
+     "blocs": [
+      "Devenu [[s|sourd]] très jeune, Ronsard renonce à la carrière des armes pour l’étude des Anciens au collège de Coqueret.",
+      "Avec Du Bellay, il fonde la [[p|Pléiade]]. En 1549, la *Défense et illustration de la langue française* donne le programme : imiter les Anciens et Pétrarque pour enrichir la langue."
+     ],
+     "source": "Notice écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi Ronsard renonce aux armes.",
+     "aide": "Quel handicap l’écarte du métier de soldat ?",
+     "explication": "Devenu **sourd** jeune, Ronsard se tourne vers l’étude."
+    },
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le nom du groupe qu’il fonde avec Du Bellay.",
+     "aide": "Ce nom évoque une constellation de sept étoiles.",
+     "explication": "Ronsard et Du Bellay fondent la **Pléiade**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ses trois cycles amoureux dans l’ordre de leur parution.",
+     "items": [
+      "Les Amours de Cassandre",
+      "Les Amours de Marie",
+      "Les Sonnets pour Hélène"
+     ],
+     "aide": "Du plus ancien au plus tardif : 1552, 1555-1556, 1578.",
+     "explication": "Cassandre (**1552**), puis Marie (**1555-1556**), puis Hélène (**1578**)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque poème dans l’ensemble auquel il appartient.",
+     "categories": [
+      "Cycle d’Hélène",
+      "Mort de Marie",
+      "Odes"
+     ],
+     "items": [
+      [
+       "« Quand vous serez bien vieille… »",
+       0
+      ],
+      [
+       "« Comme on voit sur la branche… »",
+       1
+      ],
+      [
+       "« Mignonne, allons voir si la rose… »",
+       2
+      ]
+     ],
+     "aide": "Un poème est une déploration, un autre s’adresse à une dame qui vieillira, le troisième est une ode.",
+     "explication": "« Quand vous serez bien vieille » appartient au cycle d’**Hélène**, « Comme on voit sur la branche » pleure **Marie**, « Mignonne, allons voir… » vient des **Odes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5895c488-1aa0-5891-8a83-d12868ddc0b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une menace en forme de sonnet",
+   "competence": "argumenter",
+   "situation": "Le carpe diem est-il une consolation ou une arme ? Lis les premiers vers d’un sonnet pour Hélène, puis son dernier vers (orthographe modernisée), et tranche.",
+   "documents": [
+    {
+     "id": "debut",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le début du sonnet",
+     "blocs": [
+      "Quand vous serez bien [[v|vieille]], au soir, à la chandelle,",
+      "Assise auprès du feu, [[a|dévidant]] et [[a|filant]],",
+      "Direz, chantant mes vers, en vous émerveillant :",
+      "« Ronsard me célébrait du temps que j’étais belle. »"
+     ],
+     "source": "Pierre de Ronsard, *Sonnets pour Hélène* (1578), vers 1 à 4, orthographe modernisée"
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le dernier vers",
+     "blocs": [
+      "« Cueillez dès aujourd’hui les roses de la vie. »"
+     ],
+     "source": "Pierre de Ronsard, *Sonnets pour Hélène* (1578), dernier vers, orthographe modernisée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debut",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche l’adjectif qui projette la belle dans l’avenir.",
+     "aide": "Le poète imagine la dame au soir de sa vie.",
+     "explication": "L’adjectif **vieille** place la belle devant l’image de son propre âge."
+    },
+    {
+     "type": "zone",
+     "document": "debut",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux participes présents qui montrent la vieille femme au travail.",
+     "aide": "Ce sont deux gestes de fileuse, au coin du feu.",
+     "explication": "**Dévidant** et **filant** : la belle, devenue vieille, file la laine près du feu."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du sonnet à son effet.",
+     "paires": [
+      [
+       "Le futur « Quand vous serez »",
+       "Il projette la belle dans sa vieillesse"
+      ],
+      [
+       "La citation « Ronsard me célébrait… »",
+       "La gloire du poète seule immortalise la belle"
+      ],
+      [
+       "L’impératif « Cueillez »",
+       "Il transforme la menace en invitation à aimer aujourd’hui"
+      ]
+     ],
+     "aide": "Demande-toi ce que chaque temps ou mode verbal fait imaginer à la belle.",
+     "explication": "Le **futur** menace, la **citation** vante la gloire du poète, l’**impératif** pousse à aimer **maintenant**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le cours, que représente le carpe diem dans ce sonnet ?",
+     "options": [
+      "Une stratégie : le poète menace la belle de vieillir",
+      "Une consolation offerte à la belle qui vieillira",
+      "Un renoncement au plaisir conseillé à la belle",
+      "Une plainte sur la mort de Marie, première muse"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’une « arme » du poète pour convaincre.",
+     "explication": "Le carpe diem est une **stratégie de séduction** : le poète menace la belle de la vieillesse pour la convaincre d’aimer."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b54cb3b-8deb-543c-9abc-12d5f261c7bb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le précepteur et son élève",
+   "competence": "se-reperer-temps",
+   "situation": "Fénelon écrit pour un prince. Place les grandes dates de sa vie sur la frise, puis retrouve ce qu’elles disent de la naissance du *Télémaque*.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Fénelon et son livre",
+     "debut": 1650,
+     "fin": 1720,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1651,
+       "nom": "Naissance"
+      },
+      {
+       "id": "prec",
+       "date": 1689,
+       "nom": "Précepteur"
+      },
+      {
+       "id": "exil",
+       "date": 1697,
+       "nom": "Exil"
+      },
+      {
+       "id": "pub",
+       "date": 1699,
+       "nom": "Télémaque publié"
+      },
+      {
+       "id": "mort",
+       "date": 1715,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "prec"
+     ],
+     "enonce": "Touche l’année où Fénelon devient le précepteur du duc de Bourgogne.",
+     "aide": "Cherche l’événement dont le nom désigne son métier d’éducateur.",
+     "explication": "Fénelon est nommé précepteur en **1689** : c’est pour son élève qu’il compose le livre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’exil de Fénelon de la publication du livre ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Repère « Exil » et « Télémaque publié » sur la frise, puis soustrais.",
+     "explication": "1699 − 1697 = **2 ans** : Fénelon était déjà exilé dans son diocèse quand le livre est publié."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du livre.",
+     "texte": "Fénelon, ___ de Cambrai, écrit pour le duc de ___, petit-fils de ___.",
+     "reponses": [
+      [
+       "archevêque"
+      ],
+      [
+       "Bourgogne"
+      ],
+      [
+       "Louis XIV"
+      ]
+     ],
+     "banque": [
+      "archevêque",
+      "évêque",
+      "Bourgogne",
+      "Anjou",
+      "Louis XIV",
+      "Louis XV"
+     ],
+     "aide": "Tout est dans le cours, au début de la fiche.",
+     "explication": "Fénelon est **archevêque** de Cambrai ; il écrit pour le duc de **Bourgogne**, petit-fils de **Louis XIV**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le livre est-il publié en 1699 ?",
+     "options": [
+      "Sans l’accord de son auteur",
+      "À la demande du roi Louis XIV",
+      "Sous le nom d’un autre écrivain",
+      "À compte d’auteur, à Cambrai"
+     ],
+     "reponse": 0,
+     "aide": "L’exil date de 1697 : l’auteur n’est plus en position de décider.",
+     "explication": "Le livre paraît **sans l’accord de Fénelon**, déjà en exil."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b54cb3b-8deb-543c-9abc-12d5f261c7bb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Salente, la ville qu’on corrige",
+   "competence": "analyser-texte",
+   "situation": "Télémaque cherche son père, mais le voyage est aussi une leçon de gouvernement. Lis cette courte notice écrite pour l’exercice, puis trie les réformes de Mentor.",
+   "documents": [
+    {
+     "id": "notice",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un voyage-leçon",
+     "blocs": [
+      "Télémaque, fils d’Ulysse, parcourt la Méditerranée pour retrouver son père. À ses côtés, [[m|Mentor]] lui donne des leçons ; il est en réalité la déesse Minerve.",
+      "À [[s|Salente]], le roi Idoménée a laissé le luxe ruiner son royaume. Mentor lui conseille de réduire le commerce de luxe, de développer l’agriculture et de simplifier sa cour."
+     ],
+     "source": "Notice écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le nom du guide de Télémaque.",
+     "aide": "C’est celui qui donne les leçons, au côté du jeune prince.",
+     "explication": "**Mentor** guide Télémaque ; derrière lui se cache la déesse Minerve."
+    },
+    {
+     "type": "zone",
+     "document": "notice",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche la ville où Mentor réforme le royaume d’Idoménée.",
+     "aide": "Cherche le nom de la cité, dans le second paragraphe.",
+     "explication": "À **Salente**, Mentor réforme le royaume sous les yeux du lecteur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ce que Mentor réduit et ce qu’il développe à Salente.",
+     "categories": [
+      "Mentor réduit",
+      "Mentor développe"
+     ],
+     "items": [
+      [
+       "Le commerce de luxe",
+       0
+      ],
+      [
+       "Le faste de la cour",
+       0
+      ],
+      [
+       "L’agriculture",
+       1
+      ],
+      [
+       "Le travail de la terre",
+       1
+      ]
+     ],
+     "aide": "Relis les verbes de la notice : « réduire » d’un côté, « développer » de l’autre.",
+     "explication": "Mentor **réduit** le commerce de luxe et le faste de la cour ; il **développe** l’agriculture et le travail de la terre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque étape du voyage à ce qu’elle enseigne.",
+     "paires": [
+      [
+       "Chypre",
+       "La tentation des plaisirs"
+      ],
+      [
+       "L’île de Calypso",
+       "L’amour et le renoncement"
+      ],
+      [
+       "La guerre en Italie",
+       "Le métier des armes"
+      ],
+      [
+       "La Bétique",
+       "Une société pastorale, sans luxe ni propriété"
+      ]
+     ],
+     "aide": "Chaque étape du voyage donne une leçon différente au futur roi.",
+     "explication": "**Chypre** : les plaisirs ; **Calypso** : l’amour et le renoncement ; l’**Italie** : les armes ; la **Bétique** : une vie simple et pastorale."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b54cb3b-8deb-543c-9abc-12d5f261c7bb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le roi que les lois gouvernent",
+   "competence": "argumenter",
+   "situation": "Inès et Tom se disputent : le *Télémaque* est-il un simple récit mythologique ? Lis leur échange, la phrase de Mentor et le tableau pour construire ton argument.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un mot de Mentor",
+     "blocs": [
+      "« Il peut tout sur les peuples ; mais les [[l|lois]] peuvent tout sur lui. »"
+     ],
+     "source": "Fénelon, *Les Aventures de Télémaque* (1699), Mentor à propos du roi de Crète — phrase donnée par le cours"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Le Télémaque n’est qu’un récit mythologique, une suite d’aventures grecques."
+      },
+      {
+       "qui": "Tom",
+       "texte": "À la cour, on l’a lu comme une critique du règne de Louis XIV, et Fénelon y a perdu la faveur du roi."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Mais l’histoire se passe dans l’Antiquité !"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Justement : une fiction plaisante peut faire passer une leçon politique."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le livre est un apologue politique",
+       "Une fiction plaisante sert une leçon sur le bon gouvernement",
+       "?"
+      ],
+      [
+       "Il fut lu comme une critique du règne",
+       "La guerre, le luxe, l’orgueil, les courtisans sont visés",
+       "La disgrâce définitive de Fénelon"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui désigne ce qui limite le pouvoir du roi.",
+     "aide": "Le roi peut tout sur les peuples, mais pas sur ce qui s’impose à lui.",
+     "explication": "Les **lois** limitent le roi : un bon roi leur obéit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit cette phrase du pouvoir royal ?",
+     "options": [
+      "Il est limité par les lois",
+      "Il est absolu et sans limite",
+      "Il est partagé avec le peuple",
+      "Il est confié à un conseiller"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la phrase : qui peut tout sur le roi ?",
+     "explication": "La phrase affirme un pouvoir **limité par les lois**, ce qui fait écho à la critique de Louis XIV."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du roman va dans la case « ? » du tableau ?",
+     "options": [
+      "Salente, où Mentor réforme le royaume d’Idoménée",
+      "L’île de Calypso, où la passion retient Télémaque",
+      "La passion de Télémaque pour la nymphe Eucharis",
+      "Le voyage à Chypre, qui tente par les plaisirs"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un épisode où l’on voit un roi corrigé par de bons conseils.",
+     "explication": "**Salente** illustre l’apologue : Mentor y fait la leçon à un roi, sous les yeux du lecteur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce qu’elle désigne.",
+     "paires": [
+      [
+       "Apologue",
+       "Une fiction plaisante au service d’une leçon"
+      ],
+      [
+       "Roman d’éducation",
+       "Un jeune héros qui apprend en voyageant"
+      ],
+      [
+       "Épopée en prose",
+       "Un récit qui prolonge l’*Odyssée*"
+      ],
+      [
+       "Critique du règne",
+       "La guerre, le luxe et les courtisans visés"
+      ]
+     ],
+     "aide": "Pense au rôle de chaque mot dans la dissertation sur le livre.",
+     "explication": "L’**apologue** enseigne, le **roman d’éducation** forme le héros, l’**épopée en prose** prolonge Homère, la **critique** vise Louis XIV."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quel sujet de dissertation ce livre est-il utile ?",
+     "options": [
+      "La littérature face au pouvoir",
+      "Le lyrisme amoureux au XVIe siècle",
+      "Le théâtre de l’absurde après 1950",
+      "La poésie engagée contre un empereur"
+     ],
+     "reponse": 0,
+     "aide": "Le livre est écrit pour un prince et lu comme une critique du roi.",
+     "explication": "Le *Télémaque* sert à réfléchir sur **la littérature et le pouvoir**, ou sur le roman d’apprentissage."
+    }
+   ]
+  },
+  {
+   "chapitre": "621d4030-df65-5b9b-a86c-e28b22ebe53d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux sœurs, une maîtresse et un absent",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ton oral sur *Les Bonnes*. Lis le tableau des personnages, complète-le, puis retrouve ce que tu dois savoir de la pièce.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il représente"
+     ],
+     "lignes": [
+      [
+       "Claire",
+       "La plus jeune : elle joue Madame avec le plus de violence"
+      ],
+      [
+       "Solange",
+       "?"
+      ],
+      [
+       "Madame",
+       "Bonne, légère, condescendante : sa gentillesse humilie"
+      ],
+      [
+       "Monsieur",
+       "Absent : on ne le voit jamais"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » : qui est Solange ?",
+     "options": [
+      "L’aînée, qui mène la cérémonie et survit",
+      "La cadette, qui meurt à la fin de la pièce",
+      "La maîtresse de maison, qui boit le tilleul",
+      "Le mari, qui est libéré de prison"
+     ],
+     "reponse": 0,
+     "aide": "Claire est la plus jeune : Solange est donc l’autre sœur.",
+     "explication": "**Solange** est l’aînée : elle mène la cérémonie et reste seule à la fin."
+    },
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le personnage qu’on ne voit jamais sur scène.",
+     "aide": "Cherche la ligne qui dit « absent ».",
+     "explication": "**Monsieur** n’apparaît jamais : on n’en parle que par les lettres et la prison."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel fait divers la pièce s’inspire-t-elle ?",
+     "options": [
+      "L’affaire des sœurs Papin, en 1933",
+      "L’affaire Dreyfus, en 1894",
+      "Le procès de Landru, en 1921",
+      "L’affaire Seznec, en 1923"
+     ],
+     "reponse": 0,
+     "aide": "Deux sœurs, servantes, un crime : un fait divers des années 1930.",
+     "explication": "La pièce s’inspire de l’**affaire des sœurs Papin** (1933)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité de la pièce.",
+     "texte": "Pièce créée en ___ par ___, en ___ acte.",
+     "reponses": [
+      [
+       "1947"
+      ],
+      [
+       "Louis Jouvet"
+      ],
+      [
+       "un",
+       "1"
+      ]
+     ],
+     "banque": [
+      "1947",
+      "1950",
+      "Louis Jouvet",
+      "Jean Vilar",
+      "un",
+      "trois"
+     ],
+     "aide": "Le cours donne la date, le metteur en scène et la structure.",
+     "explication": "Créée en **1947** par **Louis Jouvet**, c’est une pièce **en un acte**."
+    }
+   ]
+  },
+  {
+   "chapitre": "621d4030-df65-5b9b-a86c-e28b22ebe53d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du jeu au crime",
+   "competence": "analyser-document",
+   "situation": "Chaque soir, Claire et Solange jouent à tuer Madame. Suis l’engrenage qui les mène plus loin, retrouve l’étape manquante, puis remets la cérémonie dans l’ordre.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "L’engrenage",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Elles dénoncent Monsieur par lettres"
+      },
+      {
+       "id": "n2",
+       "texte": "Monsieur est libéré"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Madame ne boit pas le tilleul"
+      },
+      {
+       "id": "n5",
+       "texte": "Claire, en Madame, boit et meurt"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » ?",
+     "options": [
+      "Elles préparent un tilleul empoisonné pour Madame",
+      "Elles quittent la maison et fuient la police",
+      "Madame renvoie les deux sœurs sans explication",
+      "Solange refuse de jouer encore la cérémonie"
+     ],
+     "reponse": 0,
+     "aide": "Le tilleul que Madame ne boit pas doit avoir été préparé.",
+     "explication": "Elles préparent un **tilleul empoisonné** pour Madame, mais celle-ci ne le boit pas."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’événement qui précipite la peur d’être découvertes.",
+     "aide": "Que devient Monsieur après les lettres anonymes ?",
+     "explication": "Quand **Monsieur est libéré**, les sœurs craignent d’être découvertes et précipitent leur projet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le déroulement de la cérémonie.",
+     "items": [
+      "L’une joue Madame, l’autre la bonne",
+      "La cérémonie va jusqu’au bord du meurtre",
+      "Le réveil sonne et l’interrompt"
+     ],
+     "aide": "Le jeu commence par la distribution des rôles et se brise sur un son.",
+     "explication": "Les rôles sont distribués, la cérémonie frôle le meurtre, puis le **réveil** y met fin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui reste seule à la fin de la pièce ?",
+     "options": [
+      "Solange, avec son crime enfin réel",
+      "Claire, qui s’enfuit de la maison",
+      "Madame, qui pleure ses bonnes",
+      "Monsieur, qui sort de prison"
+     ],
+     "reponse": 0,
+     "aide": "Claire est morte : il reste l’autre sœur.",
+     "explication": "**Solange** reste seule, avec un crime désormais **réel**."
+    }
+   ]
+  },
+  {
+   "chapitre": "621d4030-df65-5b9b-a86c-e28b22ebe53d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Je te hais, donc je me hais",
+   "competence": "argumenter",
+   "situation": "Maya et Idriss débattent de la pièce. Lis la scène ci-dessous, écrite pour l’exercice à la manière de Genet, puis leur échange, et fais ton choix.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un soir de cérémonie",
+     "blocs": [
+      {
+       "didascalie": "Une chambre. Sur le lit, une robe de soie. Un réveil est posé sur la table."
+      },
+      {
+       "personnage": "Solange",
+       "replique": "Tiens-toi droite : ce soir, c’est toi Madame. Moi, je suis la bonne."
+      },
+      {
+       "personnage": "Claire",
+       "replique": "Je te regarde et je vois ma propre figure. Quand je te [[h|hais]], je me [[h|hais]]."
+      },
+      {
+       "personnage": "Solange",
+       "replique": "Chut. Le [[r|réveil]] va sonner avant la fin."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Bonnes* de Genet"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Idriss",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Genet met en scène l’affaire des sœurs Papin : c’est un fait divers sur scène."
+      },
+      {
+       "qui": "Idriss",
+       "texte": "Non : les sœurs jouent des rôles, c’est une cérémonie. Le fait divers n’est qu’un point de départ."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Alors pourquoi ce réveil sur la table ?"
+      },
+      {
+       "qui": "Idriss",
+       "texte": "Il interrompt le jeu : la cérémonie ne va jamais jusqu’au bout."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche les deux verbes qui montrent que la haine de l’autre se retourne contre soi.",
+     "aide": "Le même verbe revient deux fois dans la réplique de Claire.",
+     "explication": "Les deux **hais** disent la domination intériorisée : en haïssant l’autre, Claire se hait elle-même."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche l’objet qui annonce la fin de la cérémonie.",
+     "aide": "Solange l’évoque à la dernière réplique.",
+     "explication": "Le **réveil** interrompt la cérémonie avant qu’elle n’aille jusqu’au bout."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture de la pièce le débat soutient-il, et le texte confirme-t-il ?",
+     "options": [
+      "Une cérémonie de rôles, pas un fait divers",
+      "Un fait divers reconstitué sans aucun artifice",
+      "Un drame réaliste sur le travail domestique",
+      "Un procès rejoué devant le public du théâtre"
+     ],
+     "reponse": 0,
+     "aide": "Relis les mots d’Idriss et la distribution des rôles de Solange.",
+     "explication": "La pièce est une **cérémonie** : les sœurs jouent des **rôles**, et c’est cela qui compte plus que le fait divers."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la pièce à son effet.",
+     "paires": [
+      [
+       "Le théâtre dans le théâtre",
+       "Il pose la question : qui suis-je quand je joue l’autre ?"
+      ],
+      [
+       "Le réveil qui sonne",
+       "Il interrompt la cérémonie avant le meurtre"
+      ],
+      [
+       "Une langue somptueuse",
+       "Elle donne de la grandeur à des humiliées"
+      ],
+      [
+       "Madame, gentille et légère",
+       "Sa gentillesse humilie les deux bonnes"
+      ]
+     ],
+     "aide": "Pour chaque procédé, cherche ce qu’il fait ressentir au spectateur.",
+     "explication": "Le **jeu de rôles** interroge l’identité, le **réveil** retarde le crime, la **langue somptueuse** honore les humiliées, la **gentillesse** de Madame humilie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que désigne la « domination intériorisée » dans la pièce ?",
+     "options": [
+      "Les bonnes haïssent Madame, mais se haïssent en elle",
+      "Madame domine les bonnes par la force physique",
+      "Monsieur impose sa loi depuis la prison",
+      "Les bonnes se révoltent ouvertement contre Madame"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la phrase de Claire sur sa propre figure.",
+     "explication": "La domination est **intériorisée** quand les bonnes haïssent Madame **mais se haïssent en elle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b14914f3-8a0c-5db3-a700-77983d51631c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre générations au bord du Rhin",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ta fiche sur *Les Burgraves*. Lis le tableau des personnages, complète-le, puis retrouve ce qu’il faut savoir de la pièce.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Job",
+       "Centenaire qui cache un crime : il a jadis frappé son frère"
+      ],
+      [
+       "Magnus, Hatto, Gorlois",
+       "Ses descendants : quatre générations de seigneurs brigands"
+      ],
+      [
+       "Un mendiant mystérieux",
+       "?"
+      ],
+      [
+       "Guanhumara",
+       "Esclave et empoisonneuse : elle prépare une vengeance de cinquante ans"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le personnage centenaire qui cache un crime.",
+     "aide": "Il a frappé son frère autrefois.",
+     "explication": "**Job** est le patriarche centenaire, qui cache sa faute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » : qui est le mendiant ?",
+     "options": [
+      "L’empereur Barberousse, venu juger les siens",
+      "Magnus, un descendant de Job, déguisé",
+      "Un messager du pape envoyé en secret",
+      "Otbert, jeune homme amoureux de Régina"
+     ],
+     "reponse": 0,
+     "aide": "Le mendiant est bien plus puissant qu’il n’en a l’air.",
+     "explication": "Le mendiant se révèle être l’**empereur Frédéric Barberousse**, revenu pour juger les siens."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité de la pièce.",
+     "texte": "Drame en ___ parties, en ___, créé en ___ dans un burg des bords du ___.",
+     "reponses": [
+      [
+       "trois",
+       "3"
+      ],
+      [
+       "vers"
+      ],
+      [
+       "1843"
+      ],
+      [
+       "Rhin"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "deux",
+      "vers",
+      "prose",
+      "1843",
+      "1830",
+      "Rhin",
+      "Danube"
+     ],
+     "aide": "Tout est dans le cours, dans le paragraphe « La pièce ».",
+     "explication": "Un drame en **trois** parties, **en vers**, créé en **1843**, au bord du **Rhin**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle pièce triomphe la même saison que *Les Burgraves* ?",
+     "options": [
+      "*Lucrèce*, de Ponsard",
+      "*Hernani*, de Hugo",
+      "*Phèdre*, de Racine",
+      "*Ruy Blas*, de Hugo"
+     ],
+     "reponse": 0,
+     "aide": "Un auteur néoclassique triomphe tandis que Hugo échoue.",
+     "explication": "C’est *Lucrèce* de **Ponsard**, néoclassique, qui triomphe la même saison."
+    }
+   ]
+  },
+  {
+   "chapitre": "b14914f3-8a0c-5db3-a700-77983d51631c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le secret de Job",
+   "competence": "analyser-texte",
+   "situation": "Le drame repose sur un secret vieux de cinquante ans. Lis le résumé écrit pour l’exercice, démêle les identités, puis remets le dénouement dans l’ordre.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le crime de jadis",
+     "blocs": [
+      "Autrefois, deux demi-frères aimaient la même femme, Ginevra. L’un d’eux, [[f|Fosco]], a frappé l’autre, [[d|Donato]], et vendu Ginevra comme esclave.",
+      "Cinquante ans plus tard, au bord du Rhin, le coupable est devenu un burgrave centenaire, [[j|Job]]."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le demi-frère qui a frappé l’autre.",
+     "aide": "Cherche le sujet du verbe « a frappé ».",
+     "explication": "**Fosco** a frappé Donato et vendu Ginevra comme esclave."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage d’autrefois à son identité d’aujourd’hui.",
+     "paires": [
+      [
+       "Fosco",
+       "Job, le vieux burgrave"
+      ],
+      [
+       "Donato",
+       "Barberousse, l’empereur"
+      ],
+      [
+       "Ginevra",
+       "Guanhumara, l’esclave empoisonneuse"
+      ]
+     ],
+     "aide": "Le résumé t’en donne une : les deux autres sont dans le cours.",
+     "explication": "**Fosco** est devenu **Job**, **Donato** est **Barberousse**, **Ginevra** est **Guanhumara**."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le nom sous lequel vit aujourd’hui celui qui a frappé son frère.",
+     "aide": "C’est le centenaire de la dernière phrase.",
+     "explication": "Le coupable vit sous le nom de **Job**, patriarche des burgraves."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets le dénouement dans l’ordre.",
+     "items": [
+      "Barberousse arrête le bras d’Otbert",
+      "Les deux frères se réconcilient",
+      "Les jeunes gens sont unis",
+      "Guanhumara se tue"
+     ],
+     "aide": "Le pardon vient avant le sort réservé à Guanhumara.",
+     "explication": "Barberousse **arrête le bras d’Otbert**, les frères se **réconcilient**, les jeunes gens sont **unis** et Guanhumara **se tue**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Barberousse revient-il parmi les burgraves ?",
+     "options": [
+      "Pour juger les siens",
+      "Pour reprendre sa couronne",
+      "Pour fonder un royaume",
+      "Pour fuir l’empire"
+     ],
+     "reponse": 0,
+     "aide": "Pense au titre de la pièce : il revient chez des seigneurs brigands.",
+     "explication": "Le mendiant est l’empereur revenu **pour juger les siens**, avant le pardon final."
+    }
+   ]
+  },
+  {
+   "chapitre": "b14914f3-8a0c-5db3-a700-77983d51631c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un drame écrasé par sa grandeur",
+   "competence": "argumenter",
+   "situation": "Pourquoi une pièce de Hugo a-t-elle échoué en 1843 ? Lis une tirade écrite pour l’exercice, complète le tableau, puis distingue les faits des interprétations.",
+   "documents": [
+    {
+     "id": "tirade",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Au sommet d’un burg",
+     "blocs": [
+      {
+       "didascalie": "Un burg sur le Rhin, la nuit. Un inconnu parle aux vieux seigneurs."
+      },
+      {
+       "personnage": "L’inconnu",
+       "replique": "Vous êtes quatre [[g|générations]] sous un seul toit, et un seul [[g|crime]] sous vos quatre noms."
+      },
+      {
+       "personnage": "Un vieillard",
+       "replique": "Le Rhin garde ce que les pierres ne disent pas."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Burgraves* de Hugo"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le grandiose étouffe l’action",
+       "Quatre générations, un secret de cinquante ans, des reconnaissances en chaîne",
+       "?"
+      ],
+      [
+       "L’échec marque la fin du drame romantique à la scène",
+       "Le public préfère le néoclassique",
+       "Le triomphe de *Lucrèce* de Ponsard"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": true,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche les deux mots qui disent le poids du passé de la famille.",
+     "aide": "Un mot pour la durée des familles, un autre pour la faute commune.",
+     "explication": "Les **générations** et le **crime** montrent un passé qui écrase la pièce, d’où l’impression de gigantisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple va dans la case « ? » du tableau ?",
+     "options": [
+      "Les identités cachées de Job, Barberousse et Guanhumara",
+      "Une intrigue simple en deux scènes, jouée en prose",
+      "Un dénouement tragique sans aucune reconnaissance",
+      "Un héros unique, sans secret ni vengeance"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple où l’intrigue accumule les secrets à dévoiler.",
+     "explication": "Les **identités cachées** et les reconnaissances en chaîne illustrent le gigantisme qui étouffe l’action."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque énoncé : est-ce un fait ou une interprétation ?",
+     "categories": [
+      "Un fait",
+      "Une interprétation"
+     ],
+     "items": [
+      [
+       "Lucrèce de Ponsard triomphe la même saison",
+       0
+      ],
+      [
+       "Hugo n’écrit plus de pièce jouée sur scène",
+       0
+      ],
+      [
+       "L’échec marque la fin du drame romantique",
+       1
+      ],
+      [
+       "Le grandiose étouffe l’action",
+       1
+      ]
+     ],
+     "aide": "Un fait se vérifie ; une interprétation est une lecture que l’on propose.",
+     "explication": "Le triomphe de **Lucrèce** et l’abandon de la scène par Hugo sont des **faits** ; la **fin du drame romantique** et l’action **étouffée** sont des **interprétations**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quel sujet de dissertation *Les Burgraves* est-il un bon exemple ?",
+     "options": [
+      "Le goût du public et l’échec au théâtre",
+      "La poésie lyrique et la nature",
+      "Le roman d’apprentissage au XVIIe siècle",
+      "L’éloge de la monarchie absolue"
+     ],
+     "reponse": 0,
+     "aide": "Le cours évoque le goût du public et l’échec.",
+     "explication": "La pièce est un bon exemple pour réfléchir au **goût du public** et à **l’échec au théâtre**."
+    }
+   ]
+  }
+ ]
+}

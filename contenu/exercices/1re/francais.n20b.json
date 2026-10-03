@@ -1,0 +1,1936 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "143674d9-be7f-57c6-b345-6740660203cd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Vérone, deux familles",
+   "competence": "analyser-document",
+   "situation": "Tu fiches *Roméo et Juliette*. Lis la carte de la pièce, puis le tableau qui range les personnages par famille.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Roméo et Juliette",
+     "sousTitre": "William Shakespeare (1564-1616)",
+     "emoji": "🌹",
+     "lignes": [
+      {
+       "texte": "Composition",
+       "valeur": "Vers 1595"
+      },
+      {
+       "texte": "Lieu de l’action",
+       "valeur": "Vérone",
+       "id": "lieu"
+      },
+      {
+       "texte": "Durée de l’action",
+       "valeur": "Environ cinq jours"
+      },
+      {
+       "texte": "Source",
+       "valeur": "Un poème d’Arthur Brooke (1562)",
+       "id": "source"
+      }
+     ],
+     "pied": "Tragédie de la jeunesse et de la hâte",
+     "teinte": "violet"
+    },
+    {
+     "id": "familles",
+     "type": "tableau",
+     "titre": "Deux familles qui se haïssent",
+     "colonnes": [
+      "Personnage",
+      "Famille"
+     ],
+     "lignes": [
+      [
+       "Roméo",
+       "Les Montaigu"
+      ],
+      [
+       "Juliette",
+       "Les Capulet"
+      ],
+      [
+       "Tybalt, cousin de Juliette",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui dit dans quelle ville se passe l’action.",
+     "aide": "C’est une ville d’Italie.",
+     "explication": "L’action se passe à **Vérone**, où Montaigu et Capulet se haïssent depuis des générations."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le poème de Brooke (1562) de la composition de la pièce (vers 1595) ?",
+     "reponse": 33,
+     "aide": "Soustrais les deux dates de la carte.",
+     "explication": "1595 − 1562 = **33 ans** : Shakespeare reprend une histoire italienne déjà connue en Angleterre.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "De quelle famille est Tybalt ? (case « ? »)",
+     "options": [
+      "Les Capulet",
+      "Les Montaigu",
+      "La famille du prince",
+      "La famille de Pâris"
+     ],
+     "reponse": 0,
+     "aide": "Tybalt est le cousin de Juliette.",
+     "explication": "Cousin de Juliette, Tybalt appartient aux **Capulet**."
+    }
+   ]
+  },
+  {
+   "chapitre": "143674d9-be7f-57c6-b345-6740660203cd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la fête masquée aux tombeaux",
+   "competence": "se-reperer-temps",
+   "situation": "Suis les étapes du drame, du bal à la fin. Puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Roméo, masqué, rencontre Juliette au bal"
+      },
+      {
+       "id": "n2",
+       "texte": "Frère Laurent les marie en secret"
+      },
+      {
+       "id": "n3",
+       "texte": "Roméo tue Tybalt et il est banni"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "La lettre expliquant le stratagème n’arrive pas"
+      },
+      {
+       "id": "n6",
+       "texte": "Les amants meurent, les familles se réconcilient"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (case « ? ») ?",
+     "options": [
+      "Juliette boit un philtre qui la fait passer pour morte",
+      "Juliette s’enfuit avec Roméo hors de Vérone, la nuit",
+      "Pâris provoque Roméo en duel devant la tombe",
+      "Le prince fait enfermer Frère Laurent à Vérone"
+     ],
+     "reponse": 0,
+     "aide": "Pour éviter un mariage forcé avec Pâris, Juliette joue la mort.",
+     "explication": "Pour échapper au mariage avec Pâris, Juliette **boit un philtre** qui la fait passer pour morte."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où le hasard fait basculer l’histoire.",
+     "aide": "Un message n’arrive pas à son destinataire.",
+     "explication": "La lettre ne parvient pas à Roméo : le **hasard** devient l’instrument du destin."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Frère Laurent",
+       "Le moine conciliateur"
+      ],
+      [
+       "Mercutio",
+       "L’ami moqueur, qui maudit les deux familles en mourant"
+      ],
+      [
+       "La nourrice",
+       "La confidente bavarde et crue de Juliette"
+      ],
+      [
+       "Tybalt",
+       "Le cousin violent"
+      ]
+     ],
+     "aide": "Chacun a sa place dans le drame : conseiller, ami, confidente, ennemi.",
+     "explication": "**Frère Laurent** concilie, **Mercutio** moque et maudit, la **nourrice** bavarde, **Tybalt** est violent."
+    }
+   ]
+  },
+  {
+   "chapitre": "143674d9-be7f-57c6-b345-6740660203cd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "À l’aube, il faut partir",
+   "competence": "argumenter",
+   "situation": "Une scène écrite à la manière de Shakespeare met en jeu l’aube qui sépare les amants. Lis-la, puis cherche ce qu’elle dit des registres de la pièce.",
+   "documents": [
+    {
+     "id": "aube",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "À l’aube",
+     "blocs": [
+      {
+       "didascalie": "Une chambre, à l’aube. Un jeune homme et une jeune fille se parlent à voix basse."
+      },
+      {
+       "personnage": "Elle",
+       "replique": "Ce n’est pas encore le jour ; reste. L’oiseau qui chante n’annonce rien."
+      },
+      {
+       "personnage": "Lui",
+       "replique": "Si je reste, on me [[m|tuera]] ; si je pars, je vivrai, mais loin de toi."
+      },
+      {
+       "personnage": "Elle",
+       "replique": "Alors que le jour se fasse attendre !"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Shakespeare"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "La pièce est purement lyrique : on n’y rit jamais."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Pas du tout : la nourrice et Mercutio mêlent les obscénités au lyrisme des amants."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aube",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit le danger que court le jeune homme s’il reste.",
+     "aide": "Un verbe au futur, après « on ».",
+     "explication": "Le jeune homme court un danger de mort : « on me **tuera** ». C’est le sort de Roméo, banni de Vérone."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément de la pièce selon son registre.",
+     "categories": [
+      "Registre lyrique",
+      "Registre comique ou grivois"
+     ],
+     "items": [
+      [
+       "Les adieux des amants à l’aube",
+       0
+      ],
+      [
+       "La scène du balcon",
+       0
+      ],
+      [
+       "Les plaisanteries de Mercutio",
+       1
+      ],
+      [
+       "Les propos crus de la nourrice",
+       1
+      ]
+     ],
+     "aide": "Le cours dit que les obscénités voisinent avec le lyrisme des amants.",
+     "explication": "Les **amants** parlent un langage lyrique (l’aube, le balcon) ; **Mercutio** et la **nourrice** apportent le comique et le grivois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle remarque du dialogue le cours confirme-t-il ?",
+     "options": [
+      "Jade a raison : la pièce mêle les registres",
+      "Sam a raison : la pièce est purement lyrique",
+      "Aucun des deux : la pièce est un pur comique",
+      "Les deux : tout dépend des actes"
+     ],
+     "reponse": 0,
+     "aide": "Relis le tableau du cours : « Ce que Shakespeare mêle ».",
+     "explication": "Le théâtre élisabéthain **mêle les registres** : obscénités de la nourrice et de Mercutio à côté du lyrisme des amants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume au mieux la hâte qui domine la pièce ?",
+     "options": [
+      "Tout se joue en cinq jours",
+      "Tout se joue en un an",
+      "Tout se joue en un seul acte",
+      "Tout se joue en deux mois"
+     ],
+     "reponse": 0,
+     "aide": "Le cours donne la durée de l’action.",
+     "explication": "La tragédie de la jeunesse et de la **hâte** : tout se joue en **cinq jours**."
+    }
+   ]
+  },
+  {
+   "chapitre": "148f2945-50c4-53da-afd7-f095113c539c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un valet, une reine, un ministre",
+   "competence": "analyser-document",
+   "situation": "Tu fiches *Ruy Blas*. Lis la carte du drame, puis le tableau des trois personnages qui nouent l’intrigue.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ruy Blas",
+     "sousTitre": "Victor Hugo (1802-1885)",
+     "emoji": "👑",
+     "lignes": [
+      {
+       "texte": "Création",
+       "valeur": "1838, théâtre de la Renaissance",
+       "id": "crea"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Drame romantique"
+      },
+      {
+       "texte": "Lieu et temps",
+       "valeur": "Madrid, sous Charles II"
+      },
+      {
+       "texte": "Reine aimée du héros",
+       "valeur": "Marie de Neubourg"
+      }
+     ],
+     "pied": "Un valet devient Premier ministre",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Qui est qui ?",
+     "colonnes": [
+      "Personnage",
+      "Sa position"
+     ],
+     "lignes": [
+      [
+       "Don Salluste",
+       "Grand d’Espagne chassé de la cour par la reine"
+      ],
+      [
+       "Ruy Blas",
+       "?"
+      ],
+      [
+       "Don César de Bazan",
+       "Noble disparu, dont Ruy Blas prend la place"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "crea"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui donne l’année et le lieu de la création.",
+     "aide": "Cherche une date des années 1830.",
+     "explication": "Le drame est créé en **1838**, pour l’ouverture du théâtre de la Renaissance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Ruy Blas ? (case « ? »)",
+     "options": [
+      "Le valet de Salluste, amoureux de la reine",
+      "Un ministre du roi Charles II, venu de Madrid",
+      "Le frère aîné de don César de Bazan",
+      "Le chef d’une bande de conspirateurs"
+     ],
+     "reponse": 0,
+     "aide": "Ruy Blas prend la place de don César : quel est son vrai état ?",
+     "explication": "Ruy Blas est le **valet** de don Salluste ; il aime secrètement la reine."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le tableau.",
+     "texte": "Ruy Blas, ___ de Salluste, se fait passer pour un ___ : don César de Bazan.",
+     "reponses": [
+      [
+       "valet"
+      ],
+      [
+       "noble"
+      ]
+     ],
+     "banque": [
+      "valet",
+      "noble",
+      "roi",
+      "frère"
+     ],
+     "aide": "Le tableau dit sa position réelle et celle de don César.",
+     "explication": "Ruy Blas, **valet** de Salluste, se fait passer pour un **noble**."
+    }
+   ]
+  },
+  {
+   "chapitre": "148f2945-50c4-53da-afd7-f095113c539c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le stratagème de don Salluste",
+   "competence": "se-reperer-temps",
+   "situation": "Lis ce résumé écrit pour l’exercice, puis range les étapes du drame dans l’ordre.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le résumé du drame",
+     "blocs": [
+      "À Madrid, [[s|Salluste]], chassé de la cour par la reine, organise une vengeance avec son valet Ruy Blas.",
+      "Il le fait passer pour don César de Bazan : Ruy Blas devient courtisan, puis Premier ministre. À l’acte III, il dénonce les ministres qui pillent l’Espagne. Il gouverne bien et la reine l’aime.",
+      "Salluste tend alors un piège pour déshonorer la reine ; Ruy Blas, démasqué, le tue, avoue sa condition et boit le poison."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le nom de celui qui organise la vengeance.",
+     "aide": "Il a été chassé de la cour par la reine.",
+     "explication": "C’est **don Salluste**, grand d’Espagne chassé de la cour, qui monte le stratagème."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes du drame.",
+     "items": [
+      "Ruy Blas est présenté sous le nom de don César",
+      "Ruy Blas devient Premier ministre",
+      "Il prononce le grand discours de l’acte III",
+      "Salluste tend un piège à la reine",
+      "Ruy Blas tue Salluste et s’empoisonne"
+     ],
+     "aide": "Suis le résumé de bout en bout, de l’ascension à la mort.",
+     "explication": "Le **faux nom**, le **ministère**, le **discours** de l’acte III, le **piège**, puis la **mort** de Ruy Blas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage : noble ou homme du peuple ?",
+     "categories": [
+      "Noble",
+      "Homme du peuple"
+     ],
+     "items": [
+      [
+       "Don Salluste",
+       0
+      ],
+      [
+       "Don César de Bazan",
+       0
+      ],
+      [
+       "Marie de Neubourg, la reine",
+       0
+      ],
+      [
+       "Ruy Blas",
+       1
+      ]
+     ],
+     "aide": "Le héros est celui qui porte la livrée d’un valet.",
+     "explication": "Salluste, don César et la reine sont de la noblesse ; **Ruy Blas** est un valet, un homme du peuple."
+    }
+   ]
+  },
+  {
+   "chapitre": "148f2945-50c4-53da-afd7-f095113c539c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Bon appétit, messieurs !",
+   "competence": "analyser-texte",
+   "situation": "À l’acte III, Ruy Blas prend la parole devant les ministres. Lis les trois vers, puis cherche ce qu’ils disent du pouvoir et de ceux qui l’exercent.",
+   "documents": [
+    {
+     "id": "tirade",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Acte III, scène 2",
+     "blocs": [
+      {
+       "personnage": "Ruy Blas",
+       "replique": "Bon appétit, messieurs ! Ô ministres [[i|intègres]] !"
+      },
+      {
+       "personnage": "Ruy Blas",
+       "replique": "Conseillers [[i|vertueux]] ! voilà votre façon"
+      },
+      {
+       "personnage": "Ruy Blas",
+       "replique": "De servir, serviteurs qui [[p|pillez]] la maison !"
+      }
+     ],
+     "source": "Victor Hugo, *Ruy Blas* (1838), acte III, scène 2"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Cette pièce parle d’amour : elle n’a aucune portée politique."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Regarde la tirade : un valet accuse les puissants de piller l’État."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les deux adjectifs employés par ironie pour les ministres.",
+     "aide": "Ils les qualifient de vertueux alors qu’ils font le contraire.",
+     "explication": "Les adjectifs « **intègres** » et « **vertueux** » sont ironiques : ils disent le contraire de ce que Ruy Blas pense."
+    },
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce que Ruy Blas reproche aux ministres.",
+     "aide": "Ils s’emparent des biens qu’ils devraient protéger.",
+     "explication": "Les ministres **pillent** la maison : c’est la corruption des puissants que Ruy Blas dénonce."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison dans le débat ?",
+     "options": [
+      "Tom : la pièce a une portée politique",
+      "Inès : la pièce ne parle que d’amour",
+      "Aucun : la pièce est un pur divertissement",
+      "Inès : la politique n’entre pas dans le drame romantique"
+     ],
+     "reponse": 0,
+     "aide": "Qui parle dans la tirade, et à qui ?",
+     "explication": "**Tom** a raison : un valet, symbole du peuple, accuse les ministres de piller l’État. Le sujet politique est le cœur de la pièce."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il incarne.",
+     "paires": [
+      [
+       "Ruy Blas",
+       "Le peuple, génie sans nom"
+      ],
+      [
+       "Don Salluste",
+       "La noblesse cynique et vengeresse"
+      ],
+      [
+       "Don César",
+       "Le noble déclassé, libre et joyeux"
+      ],
+      [
+       "La reine",
+       "Une femme seule et délaissée par le roi"
+      ]
+     ],
+     "aide": "Hugo fait de chacun une figure sociale.",
+     "explication": "**Ruy Blas** incarne le peuple, **Salluste** la noblesse cynique, **don César** le déclassé joyeux, **la reine** la solitude."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9ae87bf-6843-524f-bf64-ab0b021b3f02",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la prison de Mons à la foi",
+   "competence": "se-reperer-temps",
+   "situation": "Place le recueil dans la vie de Verlaine, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Verlaine entre 1873 et 1896",
+     "debut": 1870,
+     "fin": 1900,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "revolver",
+       "date": 1873,
+       "nom": "Coups de revolver"
+      },
+      {
+       "id": "sortie",
+       "date": 1875,
+       "nom": "Sortie de prison"
+      },
+      {
+       "id": "sagesse",
+       "date": 1881,
+       "nom": "Sagesse"
+      },
+      {
+       "id": "mort",
+       "date": 1896,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Sagesse",
+     "sousTitre": "Paul Verlaine (1844-1896)",
+     "emoji": "✝️",
+     "lignes": [
+      {
+       "texte": "Écrit en grande partie à",
+       "valeur": "La prison de Mons"
+      },
+      {
+       "texte": "Événement personnel",
+       "valeur": "Conversion au catholicisme",
+       "id": "conv"
+      },
+      {
+       "texte": "Publié chez",
+       "valeur": "Un éditeur catholique"
+      },
+      {
+       "texte": "Accueil",
+       "valeur": "Presque inaperçu"
+      }
+     ],
+     "pied": "Le recueil de la conversion",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "sagesse"
+     ],
+     "enonce": "Sur la frise, touche l’événement qui correspond à la publication du recueil.",
+     "aide": "Cherche le titre du recueil sur la frise.",
+     "explication": "*Sagesse* paraît en **1881**, six ans après la sortie de prison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Verlaine passe-t-il en prison, entre les coups de revolver et sa sortie ?",
+     "reponse": 2,
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1875 − 1873 = **2 ans** : c’est la peine prononcée à Bruxelles.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du recueil.",
+     "texte": "En prison, Verlaine se tourne vers la ___ ; son recueil paraît chez un éditeur ___.",
+     "reponses": [
+      [
+       "religion"
+      ],
+      [
+       "catholique"
+      ]
+     ],
+     "banque": [
+      "religion",
+      "catholique",
+      "politique",
+      "protestant"
+     ],
+     "aide": "La carte mentionne la conversion et l’éditeur.",
+     "explication": "Verlaine se tourne vers la **religion** et publie chez un éditeur **catholique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9ae87bf-6843-524f-bf64-ab0b021b3f02",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le ciel par-dessus le toit",
+   "competence": "analyser-texte",
+   "situation": "Lis la première strophe du poème écrit depuis la cellule, puis cherche ce qu’elle dit de la prison et de la liberté.",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un poème de la cellule",
+     "blocs": [
+      "Le ciel est, par-dessus le [[t|toit]],",
+      "Si bleu, si [[c|calme]] !",
+      "Un arbre, par-dessus le [[t|toit]],",
+      "Berce sa palme."
+     ],
+     "source": "Paul Verlaine, « Le ciel est, par-dessus le toit », *Sagesse* (1881)"
+    },
+    {
+     "id": "cellule",
+     "type": "tableau",
+     "titre": "Trois poèmes écrits depuis la cellule",
+     "colonnes": [
+      "Poème",
+      "Ce qu’il dit"
+     ],
+     "lignes": [
+      [
+       "« Le ciel est, par-dessus le toit »",
+       "Le calme du ciel entrevu"
+      ],
+      [
+       "« Un grand sommeil noir »",
+       "?"
+      ],
+      [
+       "« Le son du cor s’afflige vers les bois »",
+       "La mélancolie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui se répète aux premier et troisième vers.",
+     "aide": "Il désigne ce qui couvre la maison.",
+     "explication": "Le mot « **toit** » se répète : la simplicité et la répétition font la musique du poème."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente le ciel vu depuis la cellule ?",
+     "options": [
+      "La liberté entrevue par la fenêtre",
+      "La menace d’un orage prochain",
+      "Le jugement de Dieu sur le poète",
+      "Le souvenir précis de Rimbaud"
+     ],
+     "reponse": 0,
+     "aide": "Le poète est enfermé : que voit-il passer dehors ?",
+     "explication": "Le ciel et l’arbre sont **la liberté entrevue par la fenêtre**, quand le poète est enfermé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour « Un grand sommeil noir » ?",
+     "options": [
+      "La torpeur",
+      "La fureur",
+      "La joie",
+      "La gratitude"
+     ],
+     "reponse": 0,
+     "aide": "Un sommeil noir : pense à l’engourdissement.",
+     "explication": "Le poème dit **la torpeur**, l’engourdissement du prisonnier."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9ae87bf-6843-524f-bf64-ab0b021b3f02",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qu’as-tu fait de ta jeunesse ?",
+   "competence": "argumenter",
+   "situation": "Ce poème est un examen de conscience. Lis-le, puis classe ce que la conversion change ou non dans la poésie de Verlaine.",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un examen de conscience",
+     "blocs": [
+      "Qu’as-tu [[q|fait]], ô toi que voilà",
+      "Pleurant sans cesse,",
+      "Dis, qu’as-tu [[q|fait]], toi que voilà,",
+      "De ta jeunesse ?"
+     ],
+     "source": "Paul Verlaine, *Sagesse* (1881)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lola",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Avec la conversion, Verlaine change tout : sa manière et son sujet."
+      },
+      {
+       "qui": "Lola",
+       "texte": "Non : sa manière reste la même, simple et musicale. Seul le sujet change."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": true,
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Touche les deux verbes qui posent la question du poète à lui-même.",
+     "aide": "La même question est répétée deux fois, au passé composé.",
+     "explication": "« **Fait** » est répété : la question est posée deux fois, comme un examen de conscience."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : la conversion le change, ou non ?",
+     "categories": [
+      "Elle ne le change pas",
+      "Elle le change"
+     ],
+     "items": [
+      [
+       "La simplicité",
+       0
+      ],
+      [
+       "La musicalité",
+       0
+      ],
+      [
+       "Les vers impairs",
+       0
+      ],
+      [
+       "Le refus de l’éloquence",
+       0
+      ],
+      [
+       "La faute et le repentir",
+       1
+      ],
+      [
+       "Le pardon",
+       1
+      ],
+      [
+       "L’humilité",
+       1
+      ]
+     ],
+     "aide": "Manière d’un côté, sujet de l’autre.",
+     "explication": "La **manière** reste (simplicité, musique, vers impairs, refus de l’éloquence) ; le **sujet** change (faute, pardon, humilité)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison dans le débat ?",
+     "options": [
+      "Lola : seul le sujet change, la manière reste",
+      "Hugo : la manière et le sujet changent",
+      "Lola : ni la manière ni le sujet ne changent",
+      "Hugo : la manière seule change"
+     ],
+     "reponse": 0,
+     "aide": "Le cours oppose ce que la conversion ne change pas à ce qu’elle change.",
+     "explication": "**Lola** a raison : même simplicité, même musicalité, mêmes vers impairs ; ce qui change, c’est le sujet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient la plainte personnelle, dans ce recueil ?",
+     "options": [
+      "Une prière",
+      "Un manifeste",
+      "Une satire",
+      "Un récit de voyage"
+     ],
+     "reponse": 0,
+     "aide": "Le poète s’adresse à lui-même, puis au Christ.",
+     "explication": "Pour un sujet sur le **lyrisme**, la plainte personnelle devient **prière**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d9b2d338-0269-56a9-a5e9-e120e1fde8f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dada naît à Zurich",
+   "competence": "se-reperer-temps",
+   "situation": "Place la naissance de Dada sur la frise, puis lis la carte du mouvement.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Tzara et Dada",
+     "debut": 1914,
+     "fin": 1926,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "zurich",
+       "date": 1915,
+       "nom": "Tzara à Zurich"
+      },
+      {
+       "id": "dada",
+       "date": 1916,
+       "nom": "Naissance de Dada"
+      },
+      {
+       "id": "fontaine",
+       "date": 1917,
+       "nom": "Fontaine"
+      },
+      {
+       "id": "paris",
+       "date": 1920,
+       "nom": "Tzara à Paris"
+      },
+      {
+       "id": "recueil",
+       "date": 1924,
+       "nom": "Sept manifestes"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Dada",
+     "sousTitre": "Tristan Tzara (1896-1963)",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Lieu de naissance du mouvement",
+       "valeur": "Zurich, le Cabaret Voltaire",
+       "id": "lieu"
+      },
+      {
+       "texte": "Contexte",
+       "valeur": "Une ville neutre au milieu de la guerre"
+      },
+      {
+       "texte": "Animateurs",
+       "valeur": "Tzara, Hugo Ball, Hans Arp"
+      },
+      {
+       "texte": "Recueil",
+       "valeur": "*Sept manifestes Dada* (1924)"
+      }
+     ],
+     "pied": "Une table rase, pas une école",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "dada"
+     ],
+     "enonce": "Sur la frise, touche l’événement qui marque la naissance du mouvement.",
+     "aide": "Cherche l’année du Cabaret Voltaire.",
+     "explication": "Dada naît en **1916**, à Zurich, au Cabaret Voltaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Dada (1916) de la parution des *Sept manifestes* (1924) ?",
+     "reponse": 8,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1924 − 1916 = **8 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Dada naît-il à Zurich plutôt qu’ailleurs en 1916 ?",
+     "options": [
+      "Elle est neutre, au milieu d’une guerre européenne",
+      "Elle est la capitale d’un pays en guerre ouverte",
+      "Elle est la ville natale de tous les dadaïstes",
+      "Elle est un grand centre de l’édition musicale"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « Contexte » de la carte.",
+     "explication": "Zurich est une **ville neutre** au milieu de la guerre : Dada y répond au massacre par la dérision."
+    }
+   ]
+  },
+  {
+   "chapitre": "d9b2d338-0269-56a9-a5e9-e120e1fde8f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pour faire un poème dadaïste",
+   "competence": "analyser-texte",
+   "situation": "Un professeur propose un atelier d’écriture dadaïste. Lis sa consigne (écrite pour l’exercice), puis range les refus du mouvement.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’atelier",
+     "blocs": [
+      "Prenez un journal et des ciseaux. Découpez un article mot par mot.",
+      "Mettez les mots dans un [[s|sac]] et agitez doucement.",
+      "Sortez les mots un à un : c’est le [[h|hasard]] qui compose le poème."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Tzara"
+    },
+    {
+     "id": "refus",
+     "type": "tableau",
+     "titre": "Ce que Dada refuse",
+     "colonnes": [
+      "Ce qui est refusé"
+     ],
+     "lignes": [
+      [
+       "L’art"
+      ],
+      [
+       "La logique"
+      ],
+      [
+       "La morale et le bon goût"
+      ],
+      [
+       "La psychologie"
+      ],
+      [
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recette",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui dit ce qui compose le poème dans cet atelier.",
+     "aide": "Ce n’est ni l’auteur ni une règle.",
+     "explication": "C’est le **hasard** qui compose le poème : Dada refuse la logique et l’intention."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la dernière case du tableau ?",
+     "options": [
+      "Le sens lui-même",
+      "Le papier journal",
+      "La ville de Zurich",
+      "Le rire du public"
+     ],
+     "reponse": 0,
+     "aide": "Dada ne signifie rien : que refuse-t-il donc au langage ?",
+     "explication": "Dada refuse **le sens lui-même** : « Dada ne signifie rien »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure à son rôle.",
+     "paires": [
+      [
+       "Tristan Tzara",
+       "Le poète-provocateur, auteur des manifestes"
+      ],
+      [
+       "Hugo Ball",
+       "Le fondateur du Cabaret Voltaire, auteur de poèmes phonétiques"
+      ],
+      [
+       "Hans Arp",
+       "Le peintre et sculpteur qui compose au hasard"
+      ],
+      [
+       "Marcel Duchamp",
+       "L’artiste qui expose un urinoir signé, *Fontaine*"
+      ]
+     ],
+     "aide": "Chacun a sa façon de provoquer.",
+     "explication": "**Tzara** écrit les manifestes, **Ball** fonde le cabaret, **Arp** compose au hasard, **Duchamp** expose *Fontaine*."
+    }
+   ]
+  },
+  {
+   "chapitre": "d9b2d338-0269-56a9-a5e9-e120e1fde8f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un manifeste contre les manifestes",
+   "competence": "argumenter",
+   "situation": "Un manifeste dadaïste pastiche s’en prend aux manifestes. Lis-le, puis tranche le débat entre Aïcha et Louis.",
+   "documents": [
+    {
+     "id": "manif",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Manifeste pour ne rien dire",
+     "blocs": [
+      "Dada ne veut rien, n’explique rien, ne promet rien. Lisez ce [[m|manifeste]], puis déchirez-le : c’est un programme.",
+      "Je suis [[m|contre]] les principes, comme je suis contre les écoles."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Tzara"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Aïcha",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Louis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Aïcha",
+       "texte": "Dada propose un programme esthétique précis."
+      },
+      {
+       "qui": "Louis",
+       "texte": "Faux : c’est un [[a|anti-manifeste]]. Il se contredit volontairement."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le manifeste Dada est un anti-manifeste",
+       "Il se contredit volontairement et refuse tout programme",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "manif",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui montrent le texte en train de se contredire.",
+     "aide": "Un nom de genre, et une préposition qui dit l’opposition.",
+     "explication": "On lit « **manifeste** » et « **contre** » : le texte est un manifeste qui se déclare contre les principes, donc contre lui-même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison dans le débat ?",
+     "options": [
+      "Louis : Dada est un anti-manifeste",
+      "Aïcha : Dada a un programme précis",
+      "Aïcha : Dada fonde une école",
+      "Louis : Dada défend le bon goût"
+     ],
+     "reponse": 0,
+     "aide": "Le texte promet-il quelque chose de précis ?",
+     "explication": "**Louis** a raison : Dada refuse tout programme, se contredit volontairement et ne propose pas de programme esthétique précis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « Exemple » du tableau ?",
+     "options": [
+      "Le nom même du mouvement, sans sens",
+      "Le programme esthétique précis de Dada",
+      "L’école fondée à Zurich par Tzara",
+      "Le bon goût dont Dada se réclame"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’origine du mot « dada », trouvé au hasard.",
+     "explication": "Le nom même du mouvement, **« dada »**, ne signifie rien : c’est un programme qui n’en est pas un."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un sujet sur la question « Qu’est-ce qu’un poème ? », que montre Dada ?",
+     "options": [
+      "Un cas extrême d’émancipation du langage",
+      "Une preuve que la poésie est un art d’imitation",
+      "Un retour aux règles de la poésie classique",
+      "Un éloge du poème de commande"
+     ],
+     "reponse": 0,
+     "aide": "Dada pousse la liberté jusqu’au non-sens.",
+     "explication": "Dada est l’exemple extrême de l’**émancipation du langage** : le poème n’obéit à aucune règle."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0c7a756-1ca6-58dc-8966-61cfb2245481",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du protestantisme austère aux fiançailles",
+   "competence": "se-reperer-temps",
+   "situation": "Place le livre dans la vie de Gide, puis complète sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Gide et son récit",
+     "debut": 1860,
+     "fin": 1960,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1869,
+       "nom": "Naissance"
+      },
+      {
+       "id": "fiance",
+       "date": 1895,
+       "nom": "Fiançailles"
+      },
+      {
+       "id": "libr",
+       "date": 1926,
+       "nom": "Publication"
+      },
+      {
+       "id": "nobel",
+       "date": 1947,
+       "nom": "Prix Nobel"
+      },
+      {
+       "id": "mort",
+       "date": 1951,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Si le grain ne meurt",
+     "sousTitre": "André Gide (1869-1951)",
+     "emoji": "🌾",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Autobiographie"
+      },
+      {
+       "texte": "Couvre",
+       "valeur": "L’enfance et la jeunesse"
+      },
+      {
+       "texte": "Jusqu’à",
+       "valeur": "Ses fiançailles avec Madeleine, en 1895"
+      },
+      {
+       "texte": "Titre tiré de",
+       "valeur": "L’Évangile de Jean"
+      }
+     ],
+     "pied": "Le récit sincère d’une jeunesse",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "fiance"
+     ],
+     "enonce": "Sur la frise, touche l’événement où s’arrête le récit.",
+     "aide": "Le livre va jusqu’à l’union avec sa cousine Madeleine.",
+     "explication": "Le récit s’achève à ses **fiançailles**, en 1895."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la fin du récit (1895) de la publication en librairie (1926) ?",
+     "reponse": 31,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1926 − 1895 = **31 ans** : l’auteur écrit longtemps après les faits.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte de l’œuvre.",
+     "texte": "Le titre vient de l’Évangile de ___ ; le livre va jusqu’aux ___ de Gide avec sa cousine.",
+     "reponses": [
+      [
+       "Jean"
+      ],
+      [
+       "fiançailles"
+      ]
+     ],
+     "banque": [
+      "Jean",
+      "fiançailles",
+      "Matthieu",
+      "adieux"
+     ],
+     "aide": "Relis les lignes « Titre tiré de » et « Jusqu’à ».",
+     "explication": "Le titre est tiré de l’Évangile de **Jean** ; le récit va jusqu’aux **fiançailles** de 1895."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0c7a756-1ca6-58dc-8966-61cfb2245481",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un enfant surveillé",
+   "competence": "analyser-texte",
+   "situation": "Lis un court récit d’enfance écrit à la manière de Gide, puis relie les personnes de son entourage à leur rôle.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un enfant surveillé",
+     "blocs": [
+      "On ne parlait pas de désir chez nous. Ma mère [[s|surveillait]] mes lectures, mon père n’était plus là, et la [[c|culpabilité]] s’asseyait à table avec nous."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Gide"
+    },
+    {
+     "id": "contenu",
+     "type": "tableau",
+     "titre": "Le contenu du livre",
+     "colonnes": [
+      "Période",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "L’enfance protestante",
+       "Austère et surveillée"
+      ],
+      [
+       "Les voyages en Afrique du Nord",
+       "La tuberculose, la guérison, le désir"
+      ],
+      [
+       "À Alger",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le verbe qui montre le contrôle exercé par la mère.",
+     "aide": "Elle regarde de près ce que l’enfant lit.",
+     "explication": "La mère **surveillait** ses lectures : l’enfance est « austère et surveillée »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour Alger ?",
+     "options": [
+      "La rencontre d’Oscar Wilde",
+      "La mort de sa mère",
+      "Les fiançailles avec Madeleine",
+      "Le prix Nobel de littérature"
+     ],
+     "reponse": 0,
+     "aide": "À Alger, un écrivain célèbre l’encourage à vivre librement.",
+     "explication": "À Alger, Gide rencontre **Oscar Wilde** (et Lord Alfred Douglas)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Juliette Rondeaux",
+       "La mère, aimante mais autoritaire"
+      ],
+      [
+       "Anna Shackleton",
+       "L’amie de sa mère, figure douce de l’enfance"
+      ],
+      [
+       "Madeleine Rondeaux",
+       "La cousine aimée, qu’il épousera"
+      ],
+      [
+       "Oscar Wilde",
+       "L’écrivain qui l’encourage à vivre librement"
+      ]
+     ],
+     "aide": "Chacun a une place dans l’enfance ou la jeunesse de Gide.",
+     "explication": "**Juliette** est autoritaire, **Anna** douce, **Madeleine** est la cousine épousée, **Wilde** encourage la liberté."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0c7a756-1ca6-58dc-8966-61cfb2245481",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dire vrai, est-ce tout dire ?",
+   "competence": "argumenter",
+   "situation": "Pour un sujet sur l’autobiographie, tu veux montrer que se dire vrai est à la fois un courage et une construction. Appuie-toi sur Gide.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un avertissement de Gide",
+     "blocs": [
+      "Les Mémoires ne sont jamais qu’à [[d|demi]] sincères, si grand que soit le souci de vérité : tout est toujours plus compliqué qu’on ne le dit."
+     ],
+     "source": "André Gide, *Si le grain ne meurt*, cité par le cours"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lucie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucie",
+       "texte": "Se raconter, c’est tout dire, sans aucun filtre."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Gide sait que se raconter, c’est aussi [[c|composer]]."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Se dire vrai exige du courage",
+       "Gide avoue publiquement son homosexualité",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui limite la sincérité des Mémoires.",
+     "aide": "Il dit que la sincérité n’est jamais complète.",
+     "explication": "Les Mémoires sont à **demi** sincères : même un auteur soucieux de vérité simplifie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison dans le débat ?",
+     "options": [
+      "Adam : se raconter, c’est composer",
+      "Lucie : se raconter, c’est tout dire",
+      "Lucie : la sincérité est totale",
+      "Adam : il faut cacher la vérité"
+     ],
+     "reponse": 0,
+     "aide": "La phrase de Gide parle d’une sincérité « à demi ».",
+     "explication": "**Adam** a raison : Gide sait que se raconter, c’est composer, car « tout est toujours plus compliqué qu’on ne le dit »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « Exemple » du tableau ?",
+     "options": [
+      "Le livre fait scandale à sa publication",
+      "Le livre est un succès sans polémique",
+      "Le livre est interdit par l’Église protestante",
+      "Le livre est écrit sous un faux nom"
+     ],
+     "reponse": 0,
+     "aide": "L’aveu public d’une homosexualité, à cette époque, provoque une réaction.",
+     "explication": "Le livre a fait **scandale** : Gide y avoue publiquement son homosexualité, geste rarissime qu’il assume par exigence de vérité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rapprochement le cours propose-t-il avec *Si le grain ne meurt* ?",
+     "options": [
+      "Les *Confessions* de Rousseau",
+      "Les *Maximes* de La Rochefoucauld",
+      "Les *Fables* de La Fontaine",
+      "Le *Cid* de Corneille"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’autobiographie qui prétendait déjà tout dire.",
+     "explication": "On rapproche l’œuvre des *Confessions* de **Rousseau**, qui revendiquaient déjà de tout dire."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6fdd68e-65c2-533d-b8b9-6b9f7f4eb3f4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une mère, un père, des sauvages",
+   "competence": "analyser-document",
+   "situation": "Tu fiches *Sido*. Lis la carte de l’œuvre, puis le tableau de ses trois parties.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Sido",
+     "sousTitre": "Colette (1873-1954)",
+     "emoji": "🌸",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1930"
+      },
+      {
+       "texte": "Mort de la mère de Colette",
+       "valeur": "1912"
+      },
+      {
+       "texte": "Naissance de Colette",
+       "valeur": "Saint-Sauveur-en-Puisaye"
+      },
+      {
+       "texte": "Parcours associé au bac",
+       "valeur": "La célébration du monde",
+       "id": "parcours"
+      }
+     ],
+     "pied": "Un récit de mémoire en trois parties",
+     "teinte": "violet"
+    },
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Les trois parties",
+     "colonnes": [
+      "Partie",
+      "Qui elle porte"
+     ],
+     "lignes": [
+      [
+       "*Sido*",
+       "La mère, Sidonie Landoy"
+      ],
+      [
+       "*Le Capitaine*",
+       "?"
+      ],
+      [
+       "*Les Sauvages*",
+       "Les frères et la sœur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "parcours"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui donne le parcours du bac associé à l’œuvre.",
+     "aide": "Il parle de célébrer le monde.",
+     "explication": "Le parcours associé est **la célébration du monde**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort de la mère (1912) de la publication de *Sido* (1930) ?",
+     "reponse": 18,
+     "aide": "Soustrais les deux dates de la carte.",
+     "explication": "1930 − 1912 = **18 ans** : le livre est écrit longtemps après la mort de Sido.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est évoqué dans la partie « Le Capitaine » ? (case « ? »)",
+     "options": [
+      "Le père, ancien militaire amputé",
+      "Le demi-frère aîné devenu médecin",
+      "La narratrice adulte qui se souvient",
+      "Le frère rêveur resté enfant"
+     ],
+     "reponse": 0,
+     "aide": "Le titre de la partie est un grade militaire.",
+     "explication": "Dans *Le Capitaine*, Colette évoque son **père**, ancien militaire qui a perdu une jambe."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6fdd68e-65c2-533d-b8b9-6b9f7f4eb3f4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le merle et les cerises",
+   "competence": "analyser-texte",
+   "situation": "Lis ce court texte écrit à la manière de Colette, puis cherche comment il célèbre le monde.",
+   "documents": [
+    {
+     "id": "jardin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le jardin",
+     "blocs": [
+      "Ma mère savait nommer chaque plante : le [[n|souci]], la [[n|pivoine]], le thym. Quand le merle venait aux cerises, elle le laissait faire, pour l’admirer."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Colette"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jardin",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les deux noms de fleurs qui montrent la précision de la mère.",
+     "aide": "Ce sont deux fleurs nommées exactement.",
+     "explication": "« **Souci** » et « **pivoine** » : Colette célèbre en nommant précisément, pas en disant « une fleur »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la mère laisse-t-elle le merle piller ses cerises ?",
+     "options": [
+      "Elle l’admire plus qu’elle ne regrette ses cerises",
+      "Elle ne l’a jamais vu approcher de l’arbre",
+      "Elle veut le chasser sans faire de bruit",
+      "Elle préfère de loin les cerises aux merles"
+     ],
+     "reponse": 0,
+     "aide": "Le texte dit qu’elle le laisse faire pour l’admirer.",
+     "explication": "Elle laisse le merle piller les cerises **pour l’admirer** : elle est attentive à tout ce qui vit."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le définit.",
+     "paires": [
+      [
+       "Sido",
+       "La mère, attentive à tout ce qui vit"
+      ],
+      [
+       "Le Capitaine",
+       "Le père, qui a perdu une jambe à la guerre d’Italie"
+      ],
+      [
+       "Achille",
+       "Le demi-frère aîné, devenu médecin"
+      ],
+      [
+       "Léo",
+       "Le frère rêveur, resté enfant"
+      ]
+     ],
+     "aide": "Chaque membre de la famille a sa marque.",
+     "explication": "**Sido** est attentive, le **Capitaine** a été amputé, **Achille** est médecin, **Léo** rêve."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6fdd68e-65c2-533d-b8b9-6b9f7f4eb3f4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Célébrer, c’est nommer",
+   "competence": "argumenter",
+   "situation": "Ana pense que *Sido* ne célèbre rien puisque tout y est perdu. Jules la contredit. Tranche avec le tableau et le passage.",
+   "documents": [
+    {
+     "id": "pluie",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La maison vendue",
+     "blocs": [
+      "La maison est vendue et la mère n’est plus là ; pourtant le jardin garde ses couleurs, et l’[[o|odeur]] exacte de la pluie sur la poussière chaude."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Colette"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jules",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Le livre est triste : tout est perdu, donc il ne célèbre rien."
+      },
+      {
+       "qui": "Jules",
+       "texte": "Il s’écrit du côté de la perte, et c’est de là que vient sa lumière."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Célébrer, c’est nommer précisément",
+       "Le monde se célèbre par le détail exact",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pluie",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui nomme la sensation que le texte restitue avec précision.",
+     "aide": "Il ne s’agit ni d’un bruit ni d’une couleur.",
+     "explication": "L’**odeur** de la pluie sur la poussière chaude : Colette célèbre par la sensation exacte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « Exemple » du tableau ?",
+     "options": [
+      "Pas « une fleur » mais un souci, une pivoine",
+      "Pas « un jardin » mais une prairie sans nom",
+      "Pas « une mère » mais « une femme »",
+      "Pas « un merle » mais « un oiseau »"
+     ],
+     "reponse": 0,
+     "aide": "Le cours oppose le nom exact au mot vague.",
+     "explication": "Célébrer, c’est nommer : pas « une fleur » mais un **souci**, une **pivoine**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression : Colette la choisit, ou l’évite ?",
+     "categories": [
+      "Elle la choisit",
+      "Elle l’évite"
+     ],
+     "items": [
+      [
+       "Un souci",
+       0
+      ],
+      [
+       "Une pivoine",
+       0
+      ],
+      [
+       "L’odeur exacte de la pluie sur la poussière chaude",
+       0
+      ],
+      [
+       "Une fleur",
+       1
+      ],
+      [
+       "Le printemps",
+       1
+      ]
+     ],
+     "aide": "Le cours donne l’exemple du nom exact contre le mot vague.",
+     "explication": "Colette choisit le **nom exact** (souci, pivoine, odeur exacte de la pluie) et évite le **mot vague** (une fleur, le printemps)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison dans le débat ?",
+     "options": [
+      "Jules : la perte est la source de la lumière du livre",
+      "Ana : le livre ne célèbre rien du tout",
+      "Ana : le livre est écrit du côté de la fête",
+      "Jules : le livre est un reportage sur la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit que le livre s’écrit du côté de la perte.",
+     "explication": "**Jules** a raison : le livre s’écrit **du côté de la perte** — mère morte, enfance enfuie, maison vendue — et c’est de là que vient sa lumière."
+    }
+   ]
+  }
+ ]
+}

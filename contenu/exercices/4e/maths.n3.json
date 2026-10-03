@@ -1,0 +1,3932 @@
+{
+ "niveau": "4e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "bbbcbbfa-efdd-5760-97fa-fd6d4c720ac2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le motif du carrelage glisse",
+   "competence": "geometrie",
+   "situation": "Maëlle dessine un carrelage : le petit triangle ABC glisse vers la droite et un peu vers le haut. Elle note A′, B′ et C′ les images de A, B et C.",
+   "documents": [
+    {
+     "id": "fig",
+     "type": "figure",
+     "titre": "Le triangle ABC et son image A′B′C′",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 9,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 3,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "Ap",
+       "nom": "A′",
+       "x": 5,
+       "y": 2,
+       "position": "so"
+      },
+      {
+       "id": "Bp",
+       "nom": "B′",
+       "x": 7,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "Cp",
+       "nom": "C′",
+       "x": 6,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "Ap",
+        "Bp",
+        "Cp"
+       ],
+       "teinte": "turquoise",
+       "motif": "clair"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "Ap",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Figure sur quadrillage, 1 unité = 1 carreau"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fig",
+     "enonce": "Touche l’image du point B par la translation qui transforme A en A′.",
+     "reponse": [
+      "Bp"
+     ],
+     "aide": "Repère où se trouve B dans le premier triangle, puis cherche la même place dans le second.",
+     "explication": "L’image de B est **B′** : B se trouve à droite de A dans le premier triangle, et B′ à droite de A′ dans le second. Une translation déplace tous les points de la même façon."
+    },
+    {
+     "type": "nombre",
+     "document": "fig",
+     "enonce": "De combien de carreaux le point A a-t-il glissé vers la droite pour arriver en A′ ?",
+     "reponse": 4,
+     "unite": "carreaux",
+     "aide": "Compte les carreaux entre A et A′ en ne regardant que l’horizontale.",
+     "explication": "A est à l’abscisse 1 et A′ à l’abscisse 5 : le déplacement horizontal est de 5 − 1 = **4 carreaux** vers la droite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le triangle A′B′C′ est-il retourné par rapport au triangle ABC ?",
+     "options": [
+      "Non : il a seulement glissé, il a la même orientation",
+      "Oui : il a été retourné comme dans un miroir",
+      "Oui : il a tourné d’un quart de tour autour d’un point",
+      "Non : mais il est plus petit que ABC"
+     ],
+     "reponse": 0,
+     "aide": "Compare la place de la pointe C : est-elle toujours en haut, au milieu de la base ?",
+     "explication": "La translation **fait glisser sans retourner** : le triangle garde sa forme, sa taille et son orientation. C’est ce qui la distingue d’une symétrie."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbbcbbfa-efdd-5760-97fa-fd6d4c720ac2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un nouveau carreau, même glissement",
+   "competence": "geometrie",
+   "situation": "Pour poser sa tuile en M, Maëlle suit le déplacement qui amène le point A en B, comme sur le plan ci-dessous. Elle veut savoir où tomberont les autres tuiles.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le déplacement de A vers B",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 4,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "M",
+       "x": 2,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "P",
+       "nom": "M′",
+       "x": 5,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "N",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "T",
+       "x": 6,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "K",
+       "x": 2,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "P",
+        "M"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ],
+     "source": "Figure sur quadrillage, 1 unité = 1 carreau"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point M′, image de M par la translation qui transforme A en B.",
+     "reponse": [
+      "P"
+     ],
+     "aide": "M′ doit être tel que ABM′M soit un parallélogramme : [MM′] est parallèle à [AB] et de même longueur.",
+     "explication": "Pour aller de A à B, on fait 3 carreaux vers la droite et 1 vers le haut. En partant de M (2 ; 3), on arrive en **M′ (5 ; 4)**."
+    },
+    {
+     "type": "choix",
+     "document": "plan",
+     "enonce": "Que peut-on dire des côtés [AB] et [MM′] du quadrilatère ABM′M ?",
+     "options": [
+      "Ils sont parallèles et de même longueur",
+      "Ils sont parallèles mais de longueurs différentes",
+      "Ils sont de même longueur mais pas parallèles",
+      "Ils sont perpendiculaires l’un à l’autre"
+     ],
+     "reponse": 0,
+     "aide": "Dans un parallélogramme, les côtés opposés ont la même direction et la même longueur.",
+     "explication": "ABM′M est un parallélogramme : ses côtés opposés [AB] et [MM′] sont **parallèles et de même longueur** (3 carreaux vers la droite, 1 vers le haut)."
+    },
+    {
+     "type": "nombre",
+     "document": "plan",
+     "enonce": "Le point K est en (2 ; 5). Quelle est l’abscisse de son image K′ par la même translation ?",
+     "reponse": 5,
+     "aide": "Ajoute à l’abscisse de K le déplacement horizontal de A vers B.",
+     "explication": "Le déplacement horizontal est de 3 carreaux : 2 + 3 = **5**."
+    },
+    {
+     "type": "nombre",
+     "document": "plan",
+     "enonce": "Quelle est l’ordonnée de ce même point K′ ?",
+     "reponse": 6,
+     "aide": "Ajoute à l’ordonnée de K le déplacement vertical de A vers B.",
+     "explication": "Le déplacement vertical est de 1 carreau vers le haut : 5 + 1 = **6**. Tous les points subissent le même déplacement : K′ est en (5 ; 6)."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbbcbbfa-efdd-5760-97fa-fd6d4c720ac2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux glissements, un seul résultat",
+   "competence": "raisonner",
+   "situation": "Léo veut décorer une frise : son motif P glisse d’abord en P′, puis de P′ en P″. Il se demande s’il existe un glissement unique qui irait directement de P à P″.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "figure",
+     "titre": "Les deux glissements du motif",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "P",
+       "x": 1,
+       "y": 3,
+       "position": "no"
+      },
+      {
+       "id": "P1",
+       "nom": "P′",
+       "x": 4,
+       "y": 4,
+       "position": "no"
+      },
+      {
+       "id": "P2",
+       "nom": "P″",
+       "x": 6,
+       "y": 2,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "P",
+       "a": "P1",
+       "teinte": "corail"
+      },
+      {
+       "de": "P1",
+       "a": "P2",
+       "teinte": "corail"
+      },
+      {
+       "de": "P",
+       "a": "P2",
+       "style": "pointilles",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Figure sur quadrillage, 1 unité = 1 carreau"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Théo et Inès comparent",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "Pour monter ou descendre au total, j’ai fait 1 + 2 = 3 : le motif est monté de 3 carreaux."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Regarde bien le sens de chaque déplacement avant d’additionner."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la position du motif après le premier glissement seulement.",
+     "reponse": [
+      "P1"
+     ],
+     "aide": "Le premier glissement part de P : cherche le point qui est atteint juste après.",
+     "explication": "Après le premier glissement, le motif est en **P′**. P″ n’est atteint qu’après le second glissement."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Au total, de combien de carreaux le motif a-t-il glissé vers la droite en allant de P à P″ ?",
+     "reponse": 5,
+     "unite": "carreaux",
+     "aide": "Additionne les deux déplacements horizontaux, ou compare les abscisses de P et de P″.",
+     "explication": "3 carreaux vers la droite, puis 2 de plus : 3 + 2 = **5 carreaux**. Deux translations successives s’additionnent."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Au total, de combien de carreaux le motif est-il descendu en allant de P à P″ ?",
+     "reponse": 1,
+     "unite": "carreau",
+     "aide": "Le motif monte de 1 carreau, puis descend de 2 carreaux : compte dans le bon sens.",
+     "explication": "P est à la hauteur 3 et P″ à la hauteur 2 : 1 carreau vers le haut puis 2 vers le bas donnent 1 − 2 = −1, soit **1 carreau vers le bas**."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Pourquoi Théo se trompe-t-il sur la hauteur ?",
+     "options": [
+      "Il additionne un déplacement vers le haut et un vers le bas sans tenir compte du sens",
+      "Il a oublié de compter le déplacement horizontal du motif",
+      "Il a compté les carreaux de gauche à droite au lieu de bas en haut",
+      "Il croit qu’une translation fait tourner le motif d’un quart de tour"
+     ],
+     "reponse": 0,
+     "aide": "Relis le premier déplacement vertical, puis le second : vont-ils dans le même sens ?",
+     "explication": "Un déplacement vers le haut et un vers le bas **se compensent en partie** : on compte 1 − 2 = −1, soit 1 carreau vers le bas, et non 3 vers le haut."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Léo.",
+     "texte": "Les deux glissements équivalent à ___ seule translation : 5 carreaux vers la ___ et 1 carreau vers le ___ .",
+     "reponses": [
+      [
+       "une"
+      ],
+      [
+       "droite"
+      ],
+      [
+       "bas"
+      ]
+     ],
+     "banque": [
+      "une",
+      "deux",
+      "droite",
+      "gauche",
+      "haut",
+      "bas"
+     ],
+     "aide": "Les déplacements s’ajoutent : le résultat est un déplacement unique, ni deux ni trois.",
+     "explication": "Deux translations successives équivalent à **une seule** : 5 carreaux vers la **droite** et 1 carreau vers le **bas**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f02b95-7ff3-56bb-9b80-ef14ab4de755",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pizza du mercredi soir",
+   "competence": "calculer",
+   "situation": "Léa et ses frères commandent une pizza royale coupée en 8 parts égales. Léa en a déjà mangé 3 (les parts colorées).",
+   "documents": [
+    {
+     "id": "pizza",
+     "type": "schema",
+     "titre": "La pizza royale",
+     "largeur": 220,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 110 20 A 90 90 0 0 1 173.6 46.4 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "s0"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 173.6 46.4 A 90 90 0 0 1 200 110 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "s1"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 200 110 A 90 90 0 0 1 173.6 173.6 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "s2"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 173.6 173.6 A 90 90 0 0 1 110 200 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "s3"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 110 200 A 90 90 0 0 1 46.4 173.6 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "s4"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 46.4 173.6 A 90 90 0 0 1 20 110 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "s5"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 20 110 A 90 90 0 0 1 46.4 46.4 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "s6"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 110 110 L 46.4 46.4 A 90 90 0 0 1 110 20 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "s7"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "Parts mangées"
+      },
+      {
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Parts restantes"
+      }
+     ]
+    },
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Le ticket de la pizzeria",
+     "entete": "Pizzeria Da Marco",
+     "sousTitre": "Mercredi 19:40",
+     "emoji": "🍕",
+     "lignes": [
+      {
+       "texte": "Pizza royale (800 g)",
+       "valeur": "12,00 €",
+       "id": "pizza"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "12,00 €",
+       "gras": true
+      }
+     ],
+     "pied": "Bon appétit !"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "pizza",
+     "enonce": "Combien de parts reste-t-il dans la boîte ?",
+     "reponse": 5,
+     "unite": "parts",
+     "aide": "Compte les parts qui ne sont pas colorées.",
+     "explication": "Il y a 8 parts en tout et 3 ont été mangées : 8 − 3 = **5 parts**."
+    },
+    {
+     "type": "nombre",
+     "document": "ticket",
+     "enonce": "Les parts mangées représentent les {{3/8}} de la pizza. Combien pèsent-elles ?",
+     "reponse": 300,
+     "unite": "g",
+     "aide": "Prends le poids de la pizza, divise-le par 8, puis multiplie par 3.",
+     "explication": "« Les {{3/8}} de 800 » s’écrit 800 × {{3/8}}. On calcule 800 ÷ 8 = 100, puis 100 × 3 = **300 g**."
+    },
+    {
+     "type": "nombre",
+     "document": "ticket",
+     "enonce": "Combien coûtent les 3 parts mangées par Léa, en euros ?",
+     "reponse": 4.5,
+     "unite": "€",
+     "aide": "Prends le prix de la pizza et cherche les {{3/8}} de ce prix.",
+     "explication": "Les {{3/8}} de 12 € : 12 ÷ 8 = 1,50 €, puis 1,50 × 3 = **4,50 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f02b95-7ff3-56bb-9b80-ef14ab4de755",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sac de billes de Noé",
+   "competence": "resoudre",
+   "situation": "Noé possède 72 billes. Il les trie par couleur et note, dans un tableau, la part du sac que représente chaque couleur. Il lui manque la part des billes vertes.",
+   "documents": [
+    {
+     "id": "billes",
+     "type": "tableau",
+     "titre": "Le tri des 72 billes",
+     "colonnes": [
+      "Couleur",
+      "Part du sac"
+     ],
+     "lignes": [
+      [
+       "Bleues",
+       "{{2/3}}"
+      ],
+      [
+       "Rouges",
+       "{{1/4}}"
+      ],
+      [
+       "Vertes",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "billes",
+     "enonce": "Combien Noé a-t-il de billes bleues ?",
+     "reponse": 48,
+     "unite": "billes",
+     "aide": "Prendre les {{2/3}} de 72, c’est calculer 72 × {{2/3}}.",
+     "explication": "72 ÷ 3 = 24, puis 24 × 2 = **48 billes**."
+    },
+    {
+     "type": "choix",
+     "document": "billes",
+     "enonce": "Les billes bleues et rouges font {{2/3}} + {{1/4}} du sac. Quelle fraction du sac les billes vertes représentent-elles ?",
+     "options": [
+      "{{1/12}}",
+      "{{1/7}}",
+      "{{5/12}}",
+      "{{11/12}}"
+     ],
+     "reponse": 0,
+     "aide": "Mets les deux fractions au même dénominateur (12), additionne-les, puis cherche ce qui manque pour faire 1.",
+     "explication": "{{2/3}} + {{1/4}} = {{8/12}} + {{3/12}} = {{11/12}}. Il reste 1 − {{11/12}} = **{{1/12}}** du sac."
+    },
+    {
+     "type": "nombre",
+     "document": "billes",
+     "enonce": "Combien de billes vertes y a-t-il ?",
+     "reponse": 6,
+     "unite": "billes",
+     "aide": "Prends la fraction trouvée juste avant et applique-la à 72.",
+     "explication": "Les {{1/12}} de 72 : 72 ÷ 12 = **6 billes**. Vérification : 48 + 18 + 6 = 72."
+    },
+    {
+     "type": "nombre",
+     "document": "billes",
+     "enonce": "Noé offre la moitié de ses billes rouges. Combien de billes cela représente-t-il ?",
+     "reponse": 9,
+     "unite": "billes",
+     "aide": "Commence par calculer les billes rouges : les {{1/4}} de 72. Prends ensuite la moitié.",
+     "explication": "Les billes rouges : 72 ÷ 4 = 18. La moitié de 18, c’est **9 billes** (c’est aussi {{1/2}} × {{1/4}} = {{1/8}} de 72)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f02b95-7ff3-56bb-9b80-ef14ab4de755",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien d’adhérents au club ?",
+   "competence": "raisonner",
+   "situation": "Le club cyclo de Villeneuve affiche une statistique sur ses adhérents. Hugo et Zoé cherchent à retrouver le nombre total de membres.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’affiche du club",
+     "entete": "Club cyclo de Villeneuve",
+     "emoji": "🚴",
+     "lignes": [
+      {
+       "texte": "Les filles représentent les {{3/8}} du club",
+       "id": "fraction"
+      },
+      {
+       "texte": "Nombre de filles",
+       "valeur": "18",
+       "id": "filles"
+      }
+     ],
+     "pied": "Venez nombreux !"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Hugo et Zoé calculent",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Les filles sont les {{3/8}} du club, donc je calcule 18 × {{3/8}}, ça donne 6,75 adhérents !"
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Un nombre d’adhérents qui n’est pas entier ? Il y a un problème."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Quelle est l’erreur de Hugo ?",
+     "options": [
+      "18 est la partie : pour retrouver le tout, il faut diviser par {{3/8}}",
+      "18 est le tout : il fallait bien le multiplier par {{3/8}}",
+      "Il aurait dû additionner 18 et {{3/8}}",
+      "Il aurait dû multiplier 18 par {{8/3}} puis par {{3/8}}"
+     ],
+     "reponse": 0,
+     "aide": "Les 18 filles sont une partie du club, pas le club entier. Que cherche-t-on : la partie ou le tout ?",
+     "explication": "Les 18 filles sont **la partie**. Prendre une fraction d’un nombre, c’est multiplier ; **retrouver le tout**, c’est diviser par la fraction (ou multiplier par son inverse)."
+    },
+    {
+     "type": "nombre",
+     "document": "affiche",
+     "enonce": "Combien y a-t-il d’adhérents au club en tout ?",
+     "reponse": 48,
+     "unite": "adhérents",
+     "aide": "Calcule 18 ÷ {{3/8}}, c’est-à-dire 18 × {{8/3}}. Ou cherche d’abord à quoi correspond {{1/8}} du club.",
+     "explication": "18 filles pour {{3/8}} : {{1/8}} du club, c’est 18 ÷ 3 = 6 adhérents. Le club entier, c’est 6 × 8 = **48 adhérents**."
+    },
+    {
+     "type": "nombre",
+     "document": "affiche",
+     "enonce": "Combien y a-t-il de garçons dans le club ?",
+     "reponse": 30,
+     "unite": "garçons",
+     "aide": "Les garçons sont tous les adhérents qui ne sont pas des filles.",
+     "explication": "48 − 18 = **30 garçons**. On peut aussi calculer les {{5/8}} de 48 : 48 ÷ 8 × 5 = 30."
+    },
+    {
+     "type": "nombre",
+     "document": "affiche",
+     "enonce": "Les {{2/3}} des garçons font du VTT. Combien de garçons font du VTT ?",
+     "reponse": 20,
+     "unite": "garçons",
+     "aide": "Prends les {{2/3}} du nombre de garçons que tu viens de trouver.",
+     "explication": "Les {{2/3}} de 30 : 30 ÷ 3 = 10, puis 10 × 2 = **20 garçons**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9175214a-ff51-5d25-ac1d-180fe1a65c33",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des crêpes pour toute la classe",
+   "competence": "calculer",
+   "situation": "Pour la kermesse, Camille agrandit la recette des crêpes du collège. La fiche est écrite pour 4 personnes ; elle doit adapter les quantités.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "titre": "La recette de base",
+     "entete": "Crêpes pour 4 personnes",
+     "emoji": "🥞",
+     "lignes": [
+      {
+       "texte": "Farine",
+       "valeur": "200 g",
+       "id": "farine"
+      },
+      {
+       "texte": "Œufs",
+       "valeur": "2"
+      },
+      {
+       "texte": "Lait",
+       "valeur": "40 cL",
+       "id": "lait"
+      }
+     ],
+     "pied": "Recette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "recette",
+     "enonce": "Quelle quantité de farine faut-il pour 6 personnes ?",
+     "reponse": 300,
+     "unite": "g",
+     "aide": "Écris le tableau : 4 personnes → 200 g, 6 personnes → x. Multiplie en croix.",
+     "explication": "200/4 = x/6 donne 4 × x = 200 × 6 = 1 200, donc x = 1 200 ÷ 4 = **300 g**."
+    },
+    {
+     "type": "nombre",
+     "document": "recette",
+     "enonce": "Quelle quantité de lait faut-il pour 10 personnes ?",
+     "reponse": 100,
+     "unite": "cL",
+     "aide": "Même méthode : 4 personnes → 40 cL, 10 personnes → x.",
+     "explication": "4 × x = 40 × 10 = 400, donc x = 400 ÷ 4 = **100 cL**."
+    },
+    {
+     "type": "nombre",
+     "document": "recette",
+     "enonce": "Camille dispose de 5 œufs. Pour combien de personnes peut-elle faire ses crêpes ?",
+     "reponse": 10,
+     "unite": "personnes",
+     "aide": "2 œufs → 4 personnes. Cherche le nombre de personnes pour 5 œufs.",
+     "explication": "2 × x = 4 × 5 = 20, donc x = 20 ÷ 2 = **10 personnes**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes pour trouver une valeur manquante avec le produit en croix.",
+     "items": [
+      "Écrire l’égalité de deux quotients",
+      "Multiplier en croix",
+      "Isoler l’inconnue en divisant",
+      "Vérifier en remplaçant"
+     ],
+     "aide": "On pose d’abord le problème, on calcule, et on contrôle à la fin.",
+     "explication": "On **écrit** l’égalité, on **multiplie en croix**, on **divise** pour isoler l’inconnue, puis on **vérifie** en remplaçant."
+    }
+   ]
+  },
+  {
+   "chapitre": "9175214a-ff51-5d25-ac1d-180fe1a65c33",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux magasins, deux tarifs",
+   "competence": "modeliser",
+   "situation": "Lina compare le prix des cahiers dans deux magasins de son quartier. Dans l’un, le prix est proportionnel au nombre de cahiers ; dans l’autre, on paie une carte d’abonnement.",
+   "documents": [
+    {
+     "id": "papyrus",
+     "type": "tableau",
+     "titre": "Magasin Papyrus",
+     "colonnes": [
+      "Cahiers",
+      "3",
+      "5",
+      "8"
+     ],
+     "lignes": [
+      [
+       "Prix (€)",
+       "4,50",
+       "7,50",
+       "12,00"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tarifs inventés pour l’exercice"
+    },
+    {
+     "id": "club",
+     "type": "tableau",
+     "titre": "Magasin Club : 5 € d’abonnement puis 1 € par cahier",
+     "colonnes": [
+      "Cahiers",
+      "3",
+      "5",
+      "8"
+     ],
+     "lignes": [
+      [
+       "Prix (€)",
+       "8",
+       "10",
+       "13"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tarifs inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "papyrus",
+     "enonce": "Combien coûtent 7 cahiers au magasin Papyrus ?",
+     "reponse": 10.5,
+     "unite": "€",
+     "aide": "Cherche d’abord le prix d’un seul cahier, ou multiplie en croix avec 3 cahiers → 4,50 €.",
+     "explication": "3 × x = 7 × 4,50 = 31,50, donc x = 31,50 ÷ 3 = **10,50 €** (1,50 € le cahier)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel magasin le produit en croix donne-t-il un résultat juste ?",
+     "options": [
+      "Papyrus seulement : son prix est proportionnel",
+      "Club seulement : son prix est proportionnel",
+      "Dans les deux : ce sont des tableaux de prix",
+      "Dans aucun des deux : il faut avoir des fractions"
+     ],
+     "reponse": 0,
+     "aide": "Dans un tableau de proportionnalité, le prix d’un cahier est toujours le même. Calcule-le dans chaque tableau.",
+     "explication": "Chez Papyrus, le prix d’un cahier est toujours 1,50 €. Chez Club, 8 ÷ 3 n’est pas égal à 10 ÷ 5 : le tableau **n’est pas proportionnel**, le produit en croix ne s’y applique pas."
+    },
+    {
+     "type": "nombre",
+     "document": "club",
+     "enonce": "Un élève applique à tort le produit en croix au magasin Club (3 cahiers → 8 €). Quel prix trouve-t-il pour 6 cahiers ?",
+     "reponse": 16,
+     "unite": "€",
+     "aide": "Calcule 8 × 6 ÷ 3, comme si le tableau était proportionnel.",
+     "explication": "3 × x = 6 × 8 = 48, donc x = 48 ÷ 3 = **16 €**. Ce résultat est faux, car le tableau n’est pas proportionnel."
+    },
+    {
+     "type": "nombre",
+     "document": "club",
+     "enonce": "Quel est le vrai prix de 6 cahiers au magasin Club ?",
+     "reponse": 11,
+     "unite": "€",
+     "aide": "Reprends la règle du titre : 5 € d’abonnement, puis 1 € par cahier.",
+     "explication": "5 € d’abonnement + 6 × 1 € = **11 €**. Le produit en croix annonçait 16 € : une erreur de 5 €, que rien dans le calcul ne signalait."
+    }
+   ]
+  },
+  {
+   "chapitre": "9175214a-ff51-5d25-ac1d-180fe1a65c33",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La poutre du toit",
+   "competence": "geometrie",
+   "situation": "Zoé dessine la ferme d’un toit en triangle ABC. Une poutre [MN] est parallèle au sol [BC], et les longueurs de la figure sont proportionnelles. Elle cherche la longueur de la poutre et celle du pan [AC].",
+   "documents": [
+    {
+     "id": "toit",
+     "type": "figure",
+     "titre": "La ferme du toit",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 9,
+      "ymin": -1,
+      "ymax": 7
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 4,
+       "y": 6,
+       "position": "n"
+      },
+      {
+       "id": "B",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "M",
+       "x": 2,
+       "y": 3,
+       "position": "o"
+      },
+      {
+       "id": "N",
+       "x": 6,
+       "y": 3,
+       "position": "e"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "M",
+       "longueur": "4 cm"
+      },
+      {
+       "de": "M",
+       "a": "B",
+       "longueur": "4 cm"
+      },
+      {
+       "de": "A",
+       "a": "N",
+       "longueur": "5 cm"
+      },
+      {
+       "de": "N",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "14 cm"
+      },
+      {
+       "id": "mn",
+       "de": "M",
+       "a": "N"
+      }
+     ],
+     "source": "Figure à main levée, longueurs écrites en cm"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Théo propose un calcul",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "J’écris {{4/8}} = AC/5 et je multiplie en croix : 8 × AC = 4 × 5, donc AC = 2,5."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Un pan de toit plus court que le morceau [AN] ? Ça ne va pas…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "toit",
+     "enonce": "Touche la poutre [MN].",
+     "reponse": [
+      "mn"
+     ],
+     "aide": "La poutre relie M et N, à mi-hauteur du triangle.",
+     "explication": "La poutre est le segment **[MN]**, parallèle au sol [BC]."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Pourquoi le calcul de Théo est-il faux ?",
+     "options": [
+      "Ses deux quotients ne comparent pas les segments dans le même ordre",
+      "Il aurait dû additionner 4 et 8 avant de faire sa division",
+      "Il ne fallait pas utiliser de produit en croix dans ce cas",
+      "Il a oublié de convertir les centimètres en mètres au départ"
+     ],
+     "reponse": 0,
+     "aide": "Dans {{4/8}}, 4 est AM et 8 est AB. Dans AC/5, qui est au numérateur, et qui est au dénominateur ?",
+     "explication": "Il faut {{4/8}} = 5/AC : AM sur AB, et AN sur AC, **dans le même ordre**. Théo a inversé le second quotient et obtenu un résultat absurde."
+    },
+    {
+     "type": "nombre",
+     "document": "toit",
+     "enonce": "Calcule la longueur AC. On donne AM = 4 cm, AB = AM + MB et AN = 5 cm.",
+     "reponse": 10,
+     "unite": "cm",
+     "aide": "AB = 4 + 4 = 8 cm. Écris AM sur AB égal à AN sur AC, puis multiplie en croix.",
+     "explication": "{{4/8}} = 5/AC donne 4 × AC = 8 × 5 = 40, donc AC = 40 ÷ 4 = **10 cm**."
+    },
+    {
+     "type": "nombre",
+     "document": "toit",
+     "enonce": "Calcule la longueur de la poutre MN, sachant que {{4/8}} = MN/14.",
+     "reponse": 7,
+     "unite": "cm",
+     "aide": "Multiplie en croix : 8 × MN = 4 × 14.",
+     "explication": "8 × MN = 4 × 14 = 56, donc MN = 56 ÷ 8 = **7 cm**, soit la moitié de BC."
+    },
+    {
+     "type": "trous",
+     "enonce": "Vérifie le calcul de AC par le produit en croix.",
+     "texte": "Produit en croix : 5 × 8 = ___ × AC, donc AC = 40 ÷ ___ = ___ .",
+     "reponses": [
+      [
+       "4"
+      ],
+      [
+       "4"
+      ],
+      [
+       "10"
+      ]
+     ],
+     "aide": "Dans {{4/8}} = 5/AC, le produit en croix relie 4 × AC et 8 × 5.",
+     "explication": "5 × 8 = 40 et 4 × AC doit valoir aussi 40 : AC = 40 ÷ 4 = **10 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e22f5910-eb9a-55d1-aec7-e85c209809a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les minibus du musée",
+   "competence": "resoudre",
+   "situation": "La classe de Nadia compte 47 élèves : elle part au musée en minibus de 8 places. Le professeur doit savoir combien de minibus sont pleins et combien d’élèves restent sans place.",
+   "documents": [
+    {
+     "id": "places",
+     "type": "tableau",
+     "titre": "Les places dans les minibus",
+     "colonnes": [
+      "Minibus",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Places au total",
+       "8",
+       "16",
+       "24",
+       "32",
+       "40",
+       "48"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Table de 8"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "places",
+     "enonce": "Touche le plus grand nombre de places qui ne dépasse pas 47.",
+     "reponse": [
+      "r0c5"
+     ],
+     "aide": "Parcours la ligne : cherche le dernier nombre inférieur ou égal à 47.",
+     "explication": "**40** est le plus grand multiple de 8 qui ne dépasse pas 47 : 5 minibus sont donc pleins. Le suivant, 48, dépasse 47."
+    },
+    {
+     "type": "nombre",
+     "document": "places",
+     "enonce": "Combien d’élèves restent sans place dans les 5 minibus pleins ?",
+     "reponse": 7,
+     "unite": "élèves",
+     "aide": "Retire de 47 les places occupées par les 5 minibus pleins.",
+     "explication": "47 = 8 × 5 + **7** : le quotient est 5 et le reste est 7. Ces 7 élèves ne remplissent pas un minibus complet."
+    },
+    {
+     "type": "choix",
+     "enonce": "De combien de minibus le professeur a-t-il besoin pour emmener tout le monde ?",
+     "options": [
+      "6 minibus",
+      "5 minibus",
+      "7 minibus",
+      "8 minibus"
+     ],
+     "reponse": 0,
+     "aide": "Les 7 élèves qui restent ont besoin d’un minibus de plus.",
+     "explication": "Le quotient donne les minibus **pleins** (5), mais le reste (7) oblige à en prendre un de plus : **6 minibus** en tout."
+    }
+   ]
+  },
+  {
+   "chapitre": "e22f5910-eb9a-55d1-aec7-e85c209809a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un marathon de films",
+   "competence": "calculer",
+   "situation": "Camille lance un marathon de films à l’heure indiquée sur l’horloge : il dure 250 minutes en tout. Elle veut l’exprimer en heures et minutes pour savoir quand il finira.",
+   "documents": [
+    {
+     "id": "heure",
+     "type": "horloge",
+     "titre": "L’heure de départ",
+     "heures": 14,
+     "minutes": 35,
+     "numerique": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "La division euclidienne de 250 par 60 s’écrit 250 = 60 × 4 + 10. Associe chaque nombre à son nom.",
+     "paires": [
+      [
+       "250",
+       "Le dividende"
+      ],
+      [
+       "60",
+       "Le diviseur"
+      ],
+      [
+       "4",
+       "Le quotient"
+      ],
+      [
+       "10",
+       "Le reste"
+      ]
+     ],
+     "aide": "Le dividende est ce qu’on partage ; le diviseur est le nombre par lequel on divise.",
+     "explication": "**250** est le dividende, **60** le diviseur, **4** le quotient et **10** le reste, avec 10 < 60."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures entières contiennent 250 minutes ?",
+     "reponse": 4,
+     "unite": "h",
+     "aide": "Le quotient de la division par 60 donne les heures entières.",
+     "explication": "Le quotient de la division de 250 par 60 est **4** : il y a 4 heures entières."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes restent après ces heures entières ?",
+     "reponse": 10,
+     "unite": "min",
+     "aide": "C’est le reste de la division.",
+     "explication": "Le reste vaut **10** : 250 minutes, c’est 4 h 10 min."
+    },
+    {
+     "type": "trous",
+     "document": "heure",
+     "enonce": "Camille commence à l’heure indiquée sur l’horloge. À quelle heure le marathon se termine-t-il ?",
+     "texte": "Il se termine à ___ h ___ .",
+     "reponses": [
+      [
+       "18"
+      ],
+      [
+       "45"
+      ]
+     ],
+     "banque": [
+      "14",
+      "18",
+      "19",
+      "35",
+      "45",
+      "55"
+     ],
+     "aide": "Ajoute 4 heures à 14 h 35, puis ajoute encore 10 minutes.",
+     "explication": "14 h 35 + 4 h = 18 h 35, puis + 10 min = **18 h 45**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e22f5910-eb9a-55d1-aec7-e85c209809a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dans 45 jours, quel jour ?",
+   "competence": "raisonner",
+   "situation": "Samedi, Karim commande un colis annoncé « dans 45 jours ». Sarah pense que ce sera encore un samedi. Il utilise la division euclidienne pour trouver le bon jour de la semaine.",
+   "documents": [
+    {
+     "id": "jours",
+     "type": "tableau",
+     "titre": "Le décalage depuis aujourd’hui (un samedi)",
+     "colonnes": [
+      "Samedi",
+      "Dimanche",
+      "Lundi",
+      "Mardi",
+      "Mercredi",
+      "Jeudi",
+      "Vendredi"
+     ],
+     "lignes": [
+      [
+       "0",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Décalage en jours, modulo 7"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages de Sarah et Tom",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "45 ÷ 7, ça fait 6 semaines pile : on sera encore un samedi !"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Tu es sûre ? 7 × 6, ça ne fait pas 45…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de semaines entières y a-t-il dans 45 jours ?",
+     "reponse": 6,
+     "unite": "semaines",
+     "aide": "Divise 45 par 7 : le quotient donne les semaines entières.",
+     "explication": "45 = 7 × 6 + 3 : le quotient est **6**, soit 6 semaines entières."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours restent après ces semaines entières ?",
+     "reponse": 3,
+     "unite": "jours",
+     "aide": "C’est le reste de la division de 45 par 7.",
+     "explication": "Le reste est **3** : après 6 semaines, il faut avancer de 3 jours."
+    },
+    {
+     "type": "zone",
+     "document": "jours",
+     "enonce": "Touche le jour de la semaine où arrivera le colis.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche dans le tableau le jour dont le décalage est égal au reste.",
+     "explication": "Un décalage de 3 jours depuis un samedi donne **mardi** (dimanche, lundi, mardi)."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Qu’a oublié Sarah ?",
+     "options": [
+      "Le reste : 45 = 7 × 6 + 3, donc 3 jours de plus",
+      "Le quotient de la division, qui vaut 7 et non pas 6",
+      "De compter le samedi de départ comme un jour du décalage",
+      "De diviser 45 par 6 au lieu de le diviser par 7"
+     ],
+     "reponse": 0,
+     "aide": "7 × 6 = 42. Compare avec 45.",
+     "explication": "6 semaines pile feraient 42 jours, pas 45. Il reste **3 jours**, et c’est le reste qui décale le jour de la semaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Karim commande un second colis annoncé dans 100 jours, toujours depuis un samedi. Quel jour le recevra-t-il ?",
+     "options": [
+      "Lundi",
+      "Mardi",
+      "Samedi",
+      "Dimanche"
+     ],
+     "reponse": 0,
+     "aide": "Divise 100 par 7 et regarde le reste, puis avance de ce nombre de jours depuis samedi.",
+     "explication": "100 = 7 × 14 + **2** : il reste 2 jours après 14 semaines entières. Samedi + 2 jours, c’est **lundi**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c060f999-ab79-5a71-835f-d87337f6a97d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les casiers du vestiaire",
+   "competence": "lire-tableau",
+   "situation": "Au vestiaire du gymnase, 24 casiers numérotés de 1 à 24 sont rangés en quatre rangées de six. Le coach donne aux benjamins les casiers dont le numéro est un multiple de 4.",
+   "documents": [
+    {
+     "id": "casiers",
+     "type": "tableau",
+     "titre": "Le plan des casiers",
+     "colonnes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+     ],
+     "lignes": [
+      [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "7",
+       "8",
+       "9",
+       "10",
+       "11",
+       "12"
+      ],
+      [
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18"
+      ],
+      [
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Plan écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "casiers",
+     "enonce": "Touche tous les casiers dont le numéro est un multiple de 4.",
+     "multiple": true,
+     "reponse": [
+      "r0c3",
+      "r1c1",
+      "r1c5",
+      "r2c3",
+      "r3c1",
+      "r3c5"
+     ],
+     "aide": "Un multiple de 4 s’obtient en comptant de 4 en 4 : 4, 8, 12…",
+     "explication": "Les multiples de 4 sont **4, 8, 12, 16, 20 et 24** : chacun s’écrit 4 × k avec k entier (de 1 à 6)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le casier 24.",
+     "texte": "24 = 4 × 6 : donc 24 est un ___ de 4 et 4 est un ___ de 24.",
+     "reponses": [
+      [
+       "multiple"
+      ],
+      [
+       "diviseur"
+      ]
+     ],
+     "banque": [
+      "multiple",
+      "diviseur",
+      "quotient",
+      "reste"
+     ],
+     "aide": "Dans a = b × k, a est ce qu’on obtient en comptant de b en b.",
+     "explication": "24 = 4 × 6 : 24 est un **multiple** de 4, et 4 est un **diviseur** de 24. C’est la même relation, vue de deux côtés."
+    },
+    {
+     "type": "nombre",
+     "document": "casiers",
+     "enonce": "Combien de casiers de ce plan ont un numéro multiple de 5 ?",
+     "reponse": 4,
+     "unite": "casiers",
+     "aide": "Compte de 5 en 5 : 5, 10… jusqu’à ne plus dépasser 24.",
+     "explication": "Les multiples de 5 jusqu’à 24 sont 5, 10, 15 et 20 : **4 casiers**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c060f999-ab79-5a71-835f-d87337f6a97d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les groupes de la sortie",
+   "competence": "resoudre",
+   "situation": "La classe A compte 30 élèves, la classe B en compte 45. Maëlys essaie de former des groupes de même taille dans la classe A. Elle veut ensuite que les deux classes aient le même nombre de groupes.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les essais de Maëlys (classe A, 30 élèves)",
+     "colonnes": [
+      "Groupes",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Élèves par groupe",
+       "30",
+       "15",
+       "10",
+       "7,5",
+       "6",
+       "5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "classeb",
+     "type": "tableau",
+     "titre": "Les nombres de groupes possibles en classe B",
+     "colonnes": [
+      "Classe B",
+      "Nombres de groupes possibles"
+     ],
+     "lignes": [
+      [
+       "45 élèves",
+       "1, 3, 5, 9, 15, 45"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche l’essai qui ne marche pas : on ne peut pas former de groupes complets.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Un groupe ne peut pas contenir une moitié d’élève : cherche le nombre qui n’est pas entier.",
+     "explication": "Avec 4 groupes, il faudrait **7,5 élèves** par groupe : impossible. 4 n’est pas un diviseur de 30."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nombre : est-ce un diviseur de 30 ?",
+     "categories": [
+      "Diviseur de 30",
+      "Pas un diviseur de 30"
+     ],
+     "items": [
+      [
+       "5",
+       0
+      ],
+      [
+       "8",
+       1
+      ],
+      [
+       "10",
+       0
+      ],
+      [
+       "12",
+       1
+      ],
+      [
+       "15",
+       0
+      ],
+      [
+       "20",
+       1
+      ]
+     ],
+     "aide": "Un nombre est un diviseur de 30 si 30 ÷ ce nombre tombe juste.",
+     "explication": "30 ÷ 5 = 6, 30 ÷ 10 = 3 et 30 ÷ 15 = 2 tombent juste : ce sont des **diviseurs**. 8, 12 et 20 ne divisent pas 30."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien 30 a-t-il de diviseurs en tout ?",
+     "reponse": 8,
+     "unite": "diviseurs",
+     "aide": "Cherche-les par paires : 1 × 30, 2 × 15, 3 × 10, 5 × 6.",
+     "explication": "30 = 1 × 30 = 2 × 15 = 3 × 10 = 5 × 6 : les diviseurs sont 1, 2, 3, 5, 6, 10, 15 et 30, soit **8**."
+    },
+    {
+     "type": "nombre",
+     "document": "classeb",
+     "enonce": "Quel est le plus grand nombre de groupes que les deux classes peuvent former en commun ?",
+     "reponse": 15,
+     "unite": "groupes",
+     "aide": "Cherche le plus grand diviseur commun aux listes de 30 et de 45.",
+     "explication": "Les diviseurs communs de 30 et 45 sont 1, 3, 5 et **15** : on peut faire jusqu’à 15 groupes (2 élèves par groupe en A, 3 en B)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c060f999-ab79-5a71-835f-d87337f6a97d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les bouquets du fleuriste",
+   "competence": "modeliser",
+   "situation": "Un fleuriste prépare des bouquets tous identiques, sans aucune fleur en trop. Il doit utiliser toutes ses roses et toutes ses tulipes, et il en fait le plus possible. Il remplit son bon de commande, puis demande l’avis de Hugo et Lou.",
+   "documents": [
+    {
+     "id": "bon",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Le bon de commande",
+     "entete": "Fleuriste Le Lilas",
+     "emoji": "💐",
+     "lignes": [
+      {
+       "texte": "Roses",
+       "valeur": "36",
+       "id": "roses"
+      },
+      {
+       "texte": "Tulipes",
+       "valeur": "48",
+       "id": "tulipes"
+      }
+     ],
+     "pied": "Bon écrit pour l’exercice"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Hugo et Lou réfléchissent",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Avec 9 bouquets, chacun aurait 4 roses : 36 ÷ 9 = 4. Ça marche !"
+      },
+      {
+       "qui": "Lou",
+       "texte": "Et pour les tulipes ? Il faut que ça marche pour les deux."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Pourquoi 9 bouquets ne conviennent-ils pas ?",
+     "options": [
+      "9 est un diviseur de 36 mais pas de 48",
+      "9 est un diviseur de 48 mais pas de 36",
+      "9 n’est un diviseur ni de 36 ni de 48",
+      "9 est un diviseur de 36 et de 48"
+     ],
+     "reponse": 0,
+     "aide": "Calcule 48 ÷ 9 : le résultat tombe-t-il juste ?",
+     "explication": "36 = 9 × 4, donc 9 divise 36 ; mais 48 = 9 × 5 + 3, donc 9 **ne divise pas 48**. Le nombre de bouquets doit diviser les deux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nombre : divise-t-il à la fois 36 et 48 ?",
+     "categories": [
+      "Diviseur de 36 et de 48",
+      "Ne convient pas"
+     ],
+     "items": [
+      [
+       "6",
+       0
+      ],
+      [
+       "8",
+       1
+      ],
+      [
+       "12",
+       0
+      ],
+      [
+       "9",
+       1
+      ],
+      [
+       "4",
+       0
+      ],
+      [
+       "24",
+       1
+      ]
+     ],
+     "aide": "Teste chaque nombre sur 36 ET sur 48 : il doit tomber juste deux fois.",
+     "explication": "6, 12 et 4 divisent 36 et 48. 8 et 24 divisent 48 mais pas 36 ; 9 divise 36 mais pas 48."
+    },
+    {
+     "type": "nombre",
+     "document": "bon",
+     "enonce": "Quel est le plus grand nombre de bouquets identiques que le fleuriste peut faire ?",
+     "reponse": 12,
+     "unite": "bouquets",
+     "aide": "Cherche le plus grand diviseur commun de 36 et 48.",
+     "explication": "Les diviseurs communs de 36 et 48 sont 1, 2, 3, 4, 6 et **12** : le fleuriste fait au plus 12 bouquets."
+    },
+    {
+     "type": "trous",
+     "document": "bon",
+     "enonce": "Compose un bouquet quand le fleuriste en fait 12.",
+     "texte": "Chaque bouquet contient ___ roses et ___ tulipes.",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "4"
+      ]
+     ],
+     "banque": [
+      "2",
+      "3",
+      "4",
+      "6",
+      "9",
+      "12"
+     ],
+     "aide": "Partage 36 roses puis 48 tulipes en 12 bouquets égaux.",
+     "explication": "36 ÷ 12 = **3 roses** et 48 ÷ 12 = **4 tulipes** : aucun reste, tout est utilisé."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0bf100f-b4c4-5cdb-92dd-f004e501c944",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les dossards du cross",
+   "competence": "raisonner",
+   "situation": "Le jour du cross, les cinq premiers coureurs portent des dossards numérotés. Le professeur prépare des paniers : les dossards divisibles par 5 auront une bouteille, ceux divisibles par 3 un fruit. Il ne veut poser aucune division.",
+   "documents": [
+    {
+     "id": "dossards",
+     "type": "tableau",
+     "titre": "Les cinq premiers dossards",
+     "colonnes": [
+      "Coureur A",
+      "Coureur B",
+      "Coureur C",
+      "Coureur D",
+      "Coureur E"
+     ],
+     "lignes": [
+      [
+       "340",
+       "1 252",
+       "2 715",
+       "6 003",
+       "4 580"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Numéros inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossards",
+     "enonce": "Touche tous les dossards divisibles par 5.",
+     "multiple": true,
+     "reponse": [
+      "r0c0",
+      "r0c2",
+      "r0c4"
+     ],
+     "aide": "Regarde le dernier chiffre de chaque numéro.",
+     "explication": "Un nombre est divisible par 5 s’il se termine par 0 ou 5 : **340, 2 715 et 4 580**."
+    },
+    {
+     "type": "zone",
+     "document": "dossards",
+     "enonce": "Touche tous les dossards divisibles par 3.",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r0c3"
+     ],
+     "aide": "Additionne les chiffres de chaque numéro : la somme doit être divisible par 3.",
+     "explication": "2 + 7 + 1 + 5 = 15 et 6 + 0 + 0 + 3 = 9 sont divisibles par 3 : **2 715 et 6 003**. Pour 340 (somme 7), 1 252 (10) et 4 580 (17), ce n’est pas le cas."
+    },
+    {
+     "type": "choix",
+     "document": "dossards",
+     "enonce": "Le dossard 6 003 est-il divisible par 9 ?",
+     "options": [
+      "Oui : la somme de ses chiffres vaut 9",
+      "Non : il se termine par un 3",
+      "Oui : il se termine par 03",
+      "Non : la somme de ses chiffres vaut 6"
+     ],
+     "reponse": 0,
+     "aide": "Pour 9, regarde la somme des chiffres, comme pour 3.",
+     "explication": "6 + 0 + 0 + 3 = 9, et 9 est divisible par 9 : **6 003 est divisible par 9** (6 003 = 9 × 667)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0bf100f-b4c4-5cdb-92dd-f004e501c944",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le numéro de lot effacé",
+   "competence": "resoudre",
+   "situation": "Dans un entrepôt, un numéro de lot est à moitié effacé : il s’écrit 4■72, où ■ est un chiffre. Le chef sait que le lot est divisible par 9 ; il cherche le chiffre manquant. Plus tard, Hugo vérifie un critère sur un autre numéro de lot.",
+   "documents": [
+    {
+     "id": "lot",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "L’étiquette du lot",
+     "entete": "Entrepôt du Nord",
+     "sousTitre": "Lot à identifier",
+     "emoji": "📦",
+     "lignes": [
+      {
+       "texte": "Numéro du lot",
+       "valeur": "4■72",
+       "id": "numero",
+       "gras": true
+      },
+      {
+       "texte": "Divisible par",
+       "valeur": "9"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Hugo et Lina vérifient un autre lot",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "1 236 est divisible par 2 et par 4, donc par 8 !"
+      },
+      {
+       "qui": "Lina",
+       "texte": "Pas si vite : fais la division pour voir."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "lot",
+     "enonce": "Quelle est la somme des chiffres connus du lot 4■72 ?",
+     "reponse": 13,
+     "aide": "Additionne 4, 7 et 2 sans compter le chiffre effacé.",
+     "explication": "4 + 7 + 2 = **13**."
+    },
+    {
+     "type": "nombre",
+     "document": "lot",
+     "enonce": "Quel chiffre ■ faut-il écrire pour que 4■72 soit divisible par 9 ?",
+     "reponse": 5,
+     "aide": "La somme des chiffres doit être un multiple de 9. Quel multiple de 9 suit 13 ?",
+     "explication": "13 + ■ doit valoir 18 (le multiple de 9 qui suit 13) : ■ = **5**. Le lot est 4 572."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le lot 4 572 est-il divisible par 4 ?",
+     "options": [
+      "Oui : 72 est divisible par 4",
+      "Oui : il se termine par un chiffre pair",
+      "Non : la somme de ses chiffres n’est pas divisible par 4",
+      "Non : il ne se termine pas par 0 ou 5"
+     ],
+     "reponse": 0,
+     "aide": "Pour 4, regarde le nombre formé par les deux derniers chiffres.",
+     "explication": "72 = 4 × 18 : les deux derniers chiffres forment un multiple de 4, donc **4 572 est divisible par 4**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion sur 4 572.",
+     "texte": "4 572 est divisible par 2 et par ___ , donc par ___ .",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "6"
+      ]
+     ],
+     "banque": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "8",
+      "9"
+     ],
+     "aide": "Il est divisible par 9, donc aussi par un diviseur de 9. Combine ensuite 2 avec ce diviseur.",
+     "explication": "4 572 est divisible par 9, donc par **3**. Étant divisible par 2 et par 3 (premiers entre eux), il l’est par **6**."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Hugo a-t-il raison de dire que 1 236, divisible par 2 et par 4, l’est par 8 ?",
+     "options": [
+      "Non : 2 et 4 ne sont pas premiers entre eux (reste 4)",
+      "Oui : un nombre divisible par 2 et par 4 l’est toujours par 8",
+      "Non : 1 236 n’est même pas un nombre divisible par 4",
+      "Oui : 1 236 ÷ 8 donne bien un nombre entier, sans reste"
+     ],
+     "reponse": 0,
+     "aide": "Pose la division de 1 236 par 8.",
+     "explication": "1 236 = 8 × 154 + 4 : **il n’est pas divisible par 8**. Combiner deux critères ne marche que si les deux diviseurs sont premiers entre eux."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0bf100f-b4c4-5cdb-92dd-f004e501c944",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fraction du stade plein",
+   "competence": "raisonner",
+   "situation": "Au stade de Villeneuve, le speaker annonce 1 890 places et 1 260 spectateurs. Il veut dire « le stade est rempli aux… » avec une fraction la plus simple possible, sans calculatrice.",
+   "documents": [
+    {
+     "id": "stade",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’affiche du match",
+     "entete": "Stade de Villeneuve",
+     "emoji": "⚽",
+     "lignes": [
+      {
+       "texte": "Places du stade",
+       "valeur": "1 890"
+      },
+      {
+       "texte": "Places occupées",
+       "valeur": "1 260"
+      }
+     ],
+     "pied": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "criteres",
+     "type": "tableau",
+     "titre": "Les critères de divisibilité des deux nombres",
+     "colonnes": [
+      "Critère",
+      "1 260",
+      "1 890"
+     ],
+     "lignes": [
+      [
+       "Divisible par 2",
+       "oui",
+       "oui"
+      ],
+      [
+       "Divisible par 4",
+       "oui",
+       "non"
+      ],
+      [
+       "Divisible par 5",
+       "oui",
+       "oui"
+      ],
+      [
+       "Somme des chiffres",
+       "9",
+       "18"
+      ],
+      [
+       "Divisible par 9",
+       "oui",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "criteres",
+     "enonce": "Touche la case qui prouve que 1 890 n’est pas divisible par 4.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne du critère par 4, puis la colonne de 1 890.",
+     "explication": "1 890 se termine par 90, qui n’est pas divisible par 4 : la case « **non** » de la ligne « Divisible par 4 » le montre."
+    },
+    {
+     "type": "nombre",
+     "document": "criteres",
+     "enonce": "Les deux nombres sont divisibles par 2, par 5 et par 9, donc par 90. Combien font 1 260 ÷ 90 ?",
+     "reponse": 14,
+     "aide": "1 260 ÷ 90 revient à 126 ÷ 9.",
+     "explication": "90 × 14 = 1 260, donc 1 260 ÷ 90 = **14**."
+    },
+    {
+     "type": "nombre",
+     "document": "criteres",
+     "enonce": "Combien font 1 890 ÷ 90 ?",
+     "reponse": 21,
+     "aide": "1 890 ÷ 90 revient à 189 ÷ 9.",
+     "explication": "90 × 21 = 1 890, donc 1 890 ÷ 90 = **21**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Simplifie encore la fraction {{14/21}}.",
+     "texte": "14 et 21 sont divisibles par ___ : la fraction simplifiée est ___ / ___ .",
+     "reponses": [
+      [
+       "7"
+      ],
+      [
+       "2"
+      ],
+      [
+       "3"
+      ]
+     ],
+     "banque": [
+      "2",
+      "3",
+      "5",
+      "7",
+      "9"
+     ],
+     "aide": "14 = 2 × 7 et 21 = 3 × 7 : quel facteur est commun ?",
+     "explication": "14 = 7 × 2 et 21 = 7 × 3 : on divise par **7** et on obtient **{{2/3}}**. Les deux tiers du stade sont occupés."
+    },
+    {
+     "type": "choix",
+     "enonce": "La fraction {{2/3}} peut-elle encore être simplifiée ?",
+     "options": [
+      "Non : 2 et 3 n’ont que 1 comme diviseur commun",
+      "Oui : on peut diviser 2 et 3 par 2",
+      "Oui : on peut diviser 2 et 3 par 3",
+      "Non : 2 et 3 sont tous deux des nombres pairs"
+     ],
+     "reponse": 0,
+     "aide": "Liste les diviseurs de 2, puis ceux de 3.",
+     "explication": "2 a pour diviseurs 1 et 2, 3 a pour diviseurs 1 et 3 : seul **1** est commun. Les deux nombres sont premiers entre eux, la fraction est irréductible."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d56d33e-0375-5914-8834-470c354ed4f9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les soldes de la boutique",
+   "competence": "calculer",
+   "situation": "La boutique de sport de Sofiane affiche −20 % sur tout le magasin. Il veut connaître les nouveaux prix avant d’acheter ses baskets, un sweat et une casquette.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’affiche des soldes",
+     "entete": "SOLDES : −20 %",
+     "emoji": "🏷️",
+     "lignes": [
+      {
+       "texte": "Baskets",
+       "valeur": "120 €",
+       "id": "baskets"
+      },
+      {
+       "texte": "Sweat",
+       "valeur": "45 €",
+       "id": "sweat"
+      },
+      {
+       "texte": "Casquette",
+       "valeur": "18 €",
+       "id": "casquette"
+      }
+     ],
+     "pied": "Prix avant remise, inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche l’article dont le prix avant remise est le plus élevé.",
+     "reponse": [
+      "baskets"
+     ],
+     "aide": "Compare les trois prix écrits sur l’affiche.",
+     "explication": "Les **baskets** coûtent 120 € avant remise : c’est le prix le plus élevé."
+    },
+    {
+     "type": "nombre",
+     "document": "affiche",
+     "enonce": "De combien d’euros les baskets sont-elles réduites ?",
+     "reponse": 24,
+     "unite": "€",
+     "aide": "Calcule 20 % de 120 : c’est 120 × 0,20.",
+     "explication": "20 % de 120 = 120 × 0,20 = **24 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par quel nombre faut-il multiplier un prix pour appliquer une baisse de 20 % ?",
+     "options": [
+      "0,8",
+      "0,2",
+      "1,2",
+      "0,02"
+     ],
+     "reponse": 0,
+     "aide": "Après une baisse de 20 %, on paie 80 % du prix de départ.",
+     "explication": "Le prix soldé vaut 100 % − 20 % = 80 % du prix initial : on multiplie par **0,8**."
+    },
+    {
+     "type": "nombre",
+     "document": "affiche",
+     "enonce": "Quel est le prix soldé du sweat ?",
+     "reponse": 36,
+     "unite": "€",
+     "aide": "Multiplie 45 € par le coefficient 0,8.",
+     "explication": "45 × 0,8 = **36 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d56d33e-0375-5914-8834-470c354ed4f9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prix de la place de cinéma",
+   "competence": "modeliser",
+   "situation": "Le cinéma de Valentine a modifié le prix de sa place deux années de suite. Elle veut mesurer ces évolutions et comprendre pourquoi on ne revient pas au prix de départ.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Le prix de la place de cinéma",
+     "colonnes": [
+      "Année",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Prix (€)",
+       "8,00",
+       "9,60",
+       "8,64"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Prix inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "prix",
+     "enonce": "De quel pourcentage le prix a-t-il augmenté de 2022 à 2023 ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Calcule (valeur finale − valeur initiale) ÷ valeur initiale × 100.",
+     "explication": "(9,60 − 8,00) ÷ 8,00 × 100 = 1,60 ÷ 8 × 100 = **+20 %**."
+    },
+    {
+     "type": "nombre",
+     "document": "prix",
+     "enonce": "De quel pourcentage le prix a-t-il baissé de 2023 à 2024 ?",
+     "reponse": 10,
+     "unite": "%",
+     "aide": "Cette fois, la valeur initiale est le prix de 2023.",
+     "explication": "(8,64 − 9,60) ÷ 9,60 × 100 = −0,96 ÷ 9,60 × 100 = **−10 %**."
+    },
+    {
+     "type": "choix",
+     "document": "prix",
+     "enonce": "Quelle est l’évolution globale du prix entre 2022 et 2024 ?",
+     "options": [
+      "Une hausse de 8 %",
+      "Aucune évolution",
+      "Une hausse de 10 %",
+      "Une baisse de 10 %"
+     ],
+     "reponse": 0,
+     "aide": "Ne fais pas +20 − 10 : compare directement 8,00 € et 8,64 €. Ou multiplie les coefficients 1,2 et 0,9.",
+     "explication": "Les coefficients se **multiplient** : 1,2 × 0,9 = 1,08, soit **+8 %**. Une hausse de 20 % puis une baisse de 10 % ne s’annulent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec sa carte, Valentine paie 7,20 € après une réduction de 20 %. Quel était le prix affiché de la place ?",
+     "reponse": 9,
+     "unite": "€",
+     "aide": "Le prix payé vaut 0,8 fois le prix affiché : il faut diviser, pas ajouter 20 %.",
+     "explication": "7,20 ÷ 0,8 = **9 €**. Ajouter 20 % à 7,20 € donnerait 8,64 €, ce qui serait faux : la remise porte sur le prix affiché."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d56d33e-0375-5914-8834-470c354ed4f9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La chaîne qui monte et qui descend",
+   "competence": "argumenter",
+   "situation": "Mia suit les abonnés de sa chaîne vidéo sur trois mois. Hugo remarque une hausse de 50 % puis une baisse de 50 %, et il en tire une conclusion rapide. Mia veut vérifier avec le graphique.",
+   "documents": [
+    {
+     "id": "abonnes",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les abonnés de la chaîne",
+     "categories": [
+      "Janvier",
+      "Février",
+      "Mars"
+     ],
+     "series": [
+      {
+       "nom": "Abonnés",
+       "valeurs": [
+        200,
+        300,
+        150
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Abonnés",
+      "min": 0,
+      "max": 350,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Mois"
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Hugo et Mia discutent",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Février : +50 %. Mars : −50 %. Au total, on revient à zéro : 200 abonnés comme en janvier !"
+      },
+      {
+       "qui": "Mia",
+       "texte": "Regarde plutôt le graphique de mars…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abonnes",
+     "enonce": "Touche le mois où la chaîne a le plus d’abonnés.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "C’est **février** : la chaîne compte alors 300 abonnés."
+    },
+    {
+     "type": "nombre",
+     "document": "abonnes",
+     "enonce": "De quel pourcentage le nombre d’abonnés a-t-il augmenté de janvier à février ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Lis les deux barres, puis calcule (300 − 200) ÷ 200 × 100.",
+     "explication": "(300 − 200) ÷ 200 × 100 = **+50 %**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le calcul avec les coefficients multiplicateurs.",
+     "texte": "1,5 × 0,5 = ___ , donc une baisse globale de ___ %.",
+     "reponses": [
+      [
+       "0,75"
+      ],
+      [
+       "25"
+      ]
+     ],
+     "banque": [
+      "0,75",
+      "1",
+      "25",
+      "75",
+      "50"
+     ],
+     "aide": "+50 % se traduit par ×1,5 ; −50 % par ×0,5. Multiplie les deux.",
+     "explication": "1,5 × 0,5 = **0,75** : le nombre d’abonnés est multiplié par 0,75, soit une baisse globale de **25 %** (300 → 150, et 200 → 150)."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Pourquoi Hugo se trompe-t-il quand il dit qu’on revient à 200 abonnés ?",
+     "options": [
+      "La baisse de 50 % porte sur 300 abonnés : elle en retire 150, pas 100",
+      "La hausse de 50 % porte sur 150 abonnés et non sur 200",
+      "Il aurait dû additionner 50 % et 50 % au lieu de les opposer",
+      "Une baisse de 50 % ne retire jamais plus d’un quart des abonnés"
+     ],
+     "reponse": 0,
+     "aide": "Chaque pourcentage porte sur la valeur de départ de SON étape.",
+     "explication": "Février → mars : 50 % de **300** = 150 abonnés perdus (et non 50 % de 200 = 100). On tombe à 150, pas à 200."
+    },
+    {
+     "type": "nombre",
+     "document": "abonnes",
+     "enonce": "De quel pourcentage faudrait-il augmenter 150 abonnés pour revenir à 200 ? Arrondis à l’unité.",
+     "reponse": 33,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Calcule (200 − 150) ÷ 150 × 100, en prenant bien 150 comme valeur de départ.",
+     "explication": "(200 − 150) ÷ 150 × 100 = 33,3… soit environ **+33 %**. Il faut une hausse plus forte pour remonter qu’il n’y a eu de baisse."
+    }
+   ]
+  },
+  {
+   "chapitre": "9146ff73-d337-5ad9-ba54-f90e3a56e64d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La randonnée au lac",
+   "competence": "calculer",
+   "situation": "Camille prépare une randonnée en montagne avec une carte au 1/25 000. Elle a mesuré chaque étape à la règle et veut connaître les distances réelles.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les trois étapes, mesurées sur la carte au 1/25 000",
+     "colonnes": [
+      "Étape",
+      "Longueur sur la carte (cm)"
+     ],
+     "lignes": [
+      [
+       "Refuge → lac",
+       "4"
+      ],
+      [
+       "Lac → col",
+       "6"
+      ],
+      [
+       "Col → sommet",
+       "2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase qui explique l’échelle 1/25 000.",
+     "texte": "Sur cette carte, 1 cm représente 25 000 ___ dans la réalité.",
+     "reponses": [
+      [
+       "cm"
+      ]
+     ],
+     "banque": [
+      "cm",
+      "m",
+      "km",
+      "mm"
+     ],
+     "aide": "Une échelle compare deux longueurs écrites dans la même unité : celle de la carte (ici des cm).",
+     "explication": "Une échelle de 1/25 000 signifie que 1 cm sur la carte vaut **25 000 cm** dans la réalité, c’est-à-dire 250 m."
+    },
+    {
+     "type": "nombre",
+     "document": "etapes",
+     "enonce": "Quelle est la distance réelle de l’étape refuge → lac, en mètres ?",
+     "reponse": 1000,
+     "unite": "m",
+     "aide": "Multiplie 4 cm par 25 000, puis convertis les centimètres en mètres (÷ 100).",
+     "explication": "4 × 25 000 = 100 000 cm = 1 000 m, soit **1 000 m**."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche la longueur sur la carte de l’étape la plus longue en réalité.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Plus l’étape est longue sur la carte, plus elle est longue en réalité.",
+     "explication": "C’est l’étape **lac → col** : 6 cm sur la carte, soit 6 × 250 m = 1 500 m en réalité."
+    },
+    {
+     "type": "nombre",
+     "document": "etapes",
+     "enonce": "Quelle est la longueur réelle de toute la randonnée, en kilomètres ?",
+     "reponse": 3,
+     "unite": "km",
+     "aide": "Additionne les trois mesures de la carte, puis convertis (1 cm = 250 m).",
+     "explication": "4 + 6 + 2 = 12 cm sur la carte, soit 12 × 250 m = 3 000 m = **3 km**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9146ff73-d337-5ad9-ba54-f90e3a56e64d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan de la chambre",
+   "competence": "geometrie",
+   "situation": "Inès dessine sur papier le plan de sa chambre à l’échelle 1/50. La chambre est un rectangle, et son lit y est dessiné avec les dimensions notées sur la figure. Elle veut les vraies mesures et les vraies aires.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan de la chambre au 1/50",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 7,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 7,
+       "position": "no"
+      },
+      {
+       "id": "E",
+       "x": 2,
+       "y": 2,
+       "position": "so"
+      },
+      {
+       "id": "F",
+       "x": 6,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "G",
+       "x": 6,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "H",
+       "x": 2,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "id": "chambre",
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "turquoise",
+       "motif": "clair"
+      },
+      {
+       "id": "lit",
+       "sommets": [
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "teinte": "violet",
+       "motif": "plein"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "8 cm"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "6 cm"
+      },
+      {
+       "de": "E",
+       "a": "F",
+       "longueur": "4 cm"
+      },
+      {
+       "de": "F",
+       "a": "G",
+       "longueur": "2 cm"
+      }
+     ],
+     "source": "Plan sur quadrillage, longueurs en cm sur le papier"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le lit sur le plan.",
+     "reponse": [
+      "lit"
+     ],
+     "aide": "C’est le plus petit des deux rectangles, à l’intérieur de la chambre.",
+     "explication": "Le lit est le petit rectangle **EFGH** de 4 cm sur 2 cm sur le plan."
+    },
+    {
+     "type": "nombre",
+     "document": "plan",
+     "enonce": "Quelle est la longueur réelle de la chambre, en mètres ?",
+     "reponse": 4,
+     "unite": "m",
+     "aide": "8 cm sur le plan, multiplié par 50, donne des centimètres réels : convertis ensuite en mètres.",
+     "explication": "8 × 50 = 400 cm = **4 m**. La largeur vaut 6 × 50 = 300 cm = 3 m."
+    },
+    {
+     "type": "nombre",
+     "document": "plan",
+     "enonce": "Quelle est l’aire réelle de la chambre, en m² ? Attention : l’échelle s’applique aux longueurs.",
+     "reponse": 12,
+     "unite": "m²",
+     "aide": "Calcule d’abord les deux longueurs réelles, puis multiplie-les.",
+     "explication": "Longueur réelle 4 m, largeur réelle 3 m : 4 × 3 = **12 m²**. (Sur le plan : 8 × 6 = 48 cm², et 48 × 50² = 120 000 cm² = 12 m².)"
+    },
+    {
+     "type": "nombre",
+     "document": "plan",
+     "enonce": "Quelle est l’aire réelle du lit, en m² ?",
+     "reponse": 2,
+     "unite": "m²",
+     "aide": "Passe aux dimensions réelles : 4 cm et 2 cm sur le plan, multipliés par 50.",
+     "explication": "4 × 50 = 200 cm = 2 m et 2 × 50 = 100 cm = 1 m : le lit a une aire de 2 × 1 = **2 m²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9146ff73-d337-5ad9-ba54-f90e3a56e64d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La maquette du gymnase",
+   "competence": "modeliser",
+   "situation": "Un architecte présente la maquette d’un gymnase à l’échelle 1/200. Léo veut en déduire les vraies dimensions, puis l’aire au sol et le volume du bâtiment.",
+   "documents": [
+    {
+     "id": "maquette",
+     "type": "tableau",
+     "titre": "Les dimensions de la maquette",
+     "colonnes": [
+      "Dimension",
+      "Mesure (cm)"
+     ],
+     "lignes": [
+      [
+       "Longueur",
+       "12"
+      ],
+      [
+       "Largeur",
+       "8"
+      ],
+      [
+       "Hauteur",
+       "4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Léo et Inès calculent l’aire",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Au sol : 12 × 8 = 96 cm² sur la maquette. L’échelle est 1/200, donc la vraie aire est 96 × 200 = 19 200 cm², soit 1,92 m²."
+      },
+      {
+       "qui": "Inès",
+       "texte": "1,92 m² pour un gymnase ? C’est la taille d’un lit !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maquette",
+     "enonce": "Touche la mesure de la maquette qui représente 8 m en réalité.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Convertis 8 m en cm, puis divise par 200.",
+     "explication": "8 m = 800 cm et 800 ÷ 200 = 4 cm : c’est la **hauteur** de la maquette."
+    },
+    {
+     "type": "nombre",
+     "document": "maquette",
+     "enonce": "Quelle est la longueur réelle du gymnase, en mètres ?",
+     "reponse": 24,
+     "unite": "m",
+     "aide": "Multiplie 12 cm par 200, puis convertis en mètres.",
+     "explication": "12 × 200 = 2 400 cm = **24 m**."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Quelle est l’erreur de Léo ?",
+     "options": [
+      "Une aire se multiplie par 200 × 200, pas par 200 seulement",
+      "Il aurait dû diviser l’aire de la maquette par 200 pour trouver la vraie",
+      "Il n’aurait pas dû convertir les cm² en m² à la fin du calcul",
+      "Il a mal calculé 12 × 8, qui ne vaut pas 96 comme il le dit"
+     ],
+     "reponse": 0,
+     "aide": "Une aire est un produit de deux longueurs : chacune est multipliée par 200.",
+     "explication": "Une échelle porte sur les **longueurs**. Les aires sont multipliées par 200² = **40 000**, pas par 200."
+    },
+    {
+     "type": "nombre",
+     "document": "maquette",
+     "enonce": "Quelle est la vraie aire au sol du gymnase, en m² ?",
+     "reponse": 384,
+     "unite": "m²",
+     "aide": "Passe aux dimensions réelles : 24 m de long, et la largeur réelle à calculer.",
+     "explication": "Largeur réelle : 8 × 200 = 1 600 cm = 16 m. Aire : 24 × 16 = **384 m²** (et 96 × 40 000 = 3 840 000 cm² = 384 m²)."
+    },
+    {
+     "type": "nombre",
+     "document": "maquette",
+     "enonce": "Quel est le volume réel du gymnase, en m³ ?",
+     "reponse": 3072,
+     "unite": "m³",
+     "aide": "Hauteur réelle : 4 × 200 cm = 8 m. Multiplie ensuite longueur × largeur × hauteur réelles.",
+     "explication": "24 × 16 × 8 = **3 072 m³**. Les volumes sont multipliés par 200³ = 8 000 000 par rapport à la maquette."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cf74dd8-58a4-595f-86a4-b239271d4633",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au marché avec Julie",
+   "competence": "calculer",
+   "situation": "Julie fait ses courses chez le primeur. Sur son ticket, plusieurs grandeurs apparaissent : des masses, des volumes, des prix, et des prix rapportés à une quantité.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Les prix affichés",
+     "entete": "Primeur Chez Léon",
+     "sousTitre": "Samedi 9:15",
+     "emoji": "🍎",
+     "lignes": [
+      {
+       "texte": "Pommes",
+       "valeur": "2,40 €/kg",
+       "id": "pommes"
+      },
+      {
+       "texte": "Huile d’olive",
+       "valeur": "3,50 €/L",
+       "id": "huile"
+      },
+      {
+       "texte": "Fromage",
+       "valeur": "12 €/kg",
+       "id": "fromage"
+      }
+     ],
+     "pied": "Prix inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ticket",
+     "enonce": "Touche la ligne dont le prix est exprimé par litre.",
+     "reponse": [
+      "huile"
+     ],
+     "aide": "Cherche l’unité « €/L » : c’est un prix divisé par un volume.",
+     "explication": "L’**huile d’olive** est vendue à 3,50 €/L : l’unité révèle un quotient « prix ÷ volume »."
+    },
+    {
+     "type": "nombre",
+     "document": "ticket",
+     "enonce": "Julie achète 2,5 kg de pommes. Combien paie-t-elle ?",
+     "reponse": 6,
+     "unite": "€",
+     "aide": "Prix = prix au kilo × nombre de kilos : l’unité €/kg se multiplie par des kg.",
+     "explication": "2,40 × 2,5 = **6 €**. Les kg se simplifient : il reste des euros."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque grandeur : est-elle simple ou composée ?",
+     "categories": [
+      "Grandeur simple",
+      "Grandeur composée"
+     ],
+     "items": [
+      [
+       "La masse",
+       0
+      ],
+      [
+       "La vitesse",
+       1
+      ],
+      [
+       "La durée",
+       0
+      ],
+      [
+       "Le débit",
+       1
+      ],
+      [
+       "L’aire",
+       1
+      ],
+      [
+       "La température",
+       0
+      ]
+     ],
+     "aide": "Une grandeur simple se mesure directement avec un instrument ; une composée se calcule à partir d’autres grandeurs.",
+     "explication": "La masse, la durée et la température se mesurent avec un instrument. La vitesse (distance ÷ durée), le débit (volume ÷ durée) et l’aire (longueur × longueur) se **calculent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cf74dd8-58a4-595f-86a4-b239271d4633",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La facture d’électricité",
+   "competence": "resoudre",
+   "situation": "Chez Yanis, trois appareils sont allumés un jour d’hiver. Le fournisseur facture l’énergie 0,20 € le kilowattheure (kWh). Yanis complète le tableau pour estimer sa facture du jour.",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Les appareils de la journée",
+     "colonnes": [
+      "Appareil",
+      "Puissance (kW)",
+      "Durée (h)",
+      "Énergie (kWh)"
+     ],
+     "lignes": [
+      [
+       "Four",
+       "2,4",
+       "1,5",
+       "?"
+      ],
+      [
+       "Radiateur",
+       "1,5",
+       "4",
+       "?"
+      ],
+      [
+       "Lave-vaisselle",
+       "1,2",
+       "2",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "appareils",
+     "enonce": "Quelle énergie le four consomme-t-il, en kWh ?",
+     "reponse": 3.6,
+     "unite": "kWh",
+     "aide": "Énergie = puissance × durée : l’unité kWh se lit « kW fois heure ».",
+     "explication": "2,4 × 1,5 = **3,6 kWh**."
+    },
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche l’appareil qui consomme le plus d’énergie sur la journée.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Calcule l’énergie des trois appareils, puis compare-les.",
+     "explication": "Four : 3,6 kWh ; radiateur : 1,5 × 4 = **6 kWh** ; lave-vaisselle : 1,2 × 2 = 2,4 kWh. Le radiateur consomme le plus, même s’il est moins puissant que le four."
+    },
+    {
+     "type": "nombre",
+     "document": "appareils",
+     "enonce": "Quelle énergie les trois appareils consomment-ils au total, en kWh ?",
+     "reponse": 12,
+     "unite": "kWh",
+     "aide": "Additionne les trois énergies que tu viens de calculer.",
+     "explication": "3,6 + 6 + 2,4 = **12 kWh**."
+    },
+    {
+     "type": "nombre",
+     "document": "appareils",
+     "enonce": "Combien Yanis paie-t-il pour ces 12 kWh, à 0,20 € le kWh ?",
+     "reponse": 2.4,
+     "unite": "€",
+     "aide": "Prix = énergie × prix du kWh (une grandeur composée en €/kWh).",
+     "explication": "12 × 0,20 = **2,40 €**. Les kWh se simplifient : il reste des euros."
+    }
+   ]
+  },
+  {
+   "chapitre": "2cf74dd8-58a4-595f-86a4-b239271d4633",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Miel, huile ou eau ?",
+   "competence": "argumenter",
+   "situation": "En cuisine, Lou compare trois liquides : elle a mesuré leur masse et leur volume pour les ranger du moins dense au plus dense. Hugo, lui, juge à la masse seule.",
+   "documents": [
+    {
+     "id": "liquides",
+     "type": "tableau",
+     "titre": "Les trois liquides de la cuisine",
+     "colonnes": [
+      "Liquide",
+      "Masse (g)",
+      "Volume (cm³)",
+      "Masse volumique (g/cm³)"
+     ],
+     "lignes": [
+      [
+       "Eau",
+       "500",
+       "500",
+       "1"
+      ],
+      [
+       "Huile",
+       "460",
+       "500",
+       "?"
+      ],
+      [
+       "Miel",
+       "1 400",
+       "1 000",
+       "1,4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies pour l’exercice"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Hugo et Lou comparent",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Le miel pèse 1 400 g, l’huile 460 g : le miel est donc bien plus dense !"
+      },
+      {
+       "qui": "Lou",
+       "texte": "Tu as regardé les volumes ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "liquides",
+     "enonce": "Quelle est la masse volumique de l’huile, en g/cm³ ?",
+     "reponse": 0.92,
+     "unite": "g/cm³",
+     "aide": "Masse volumique = masse ÷ volume : divise 460 g par 500 cm³.",
+     "explication": "460 ÷ 500 = **0,92 g/cm³**."
+    },
+    {
+     "type": "zone",
+     "document": "liquides",
+     "enonce": "Touche le liquide le plus dense.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare les masses volumiques des trois liquides.",
+     "explication": "Le **miel** (1,4 g/cm³) est plus dense que l’eau (1) et que l’huile (0,92) : c’est lui qui coule au fond."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Pourquoi comparer seulement les masses ne suffit-il pas ?",
+     "options": [
+      "Les volumes sont différents : il faut comparer masse ÷ volume",
+      "Une masse en grammes ne se compare pas avec une autre",
+      "La masse volumique ne dépend pas de la masse",
+      "La masse n’a pas d’unité dans ce tableau"
+     ],
+     "reponse": 0,
+     "aide": "Une masse volumique dit « combien de grammes dans 1 cm³ ». Compare les volumes des deux liquides.",
+     "explication": "Le miel et l’huile n’ont pas le même volume (1 000 cm³ et 500 cm³). Une **grandeur composée** se compare par le **quotient** masse ÷ volume, pas par une seule de ses composantes."
+    },
+    {
+     "type": "nombre",
+     "document": "liquides",
+     "enonce": "Quelle est la masse de 250 cm³ de miel, en grammes ?",
+     "reponse": 350,
+     "unite": "g",
+     "aide": "Masse = masse volumique × volume : 1,4 g par cm³, pour 250 cm³.",
+     "explication": "1,4 × 250 = **350 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "96308e0d-b349-5937-9ca8-fa0fceb05c61",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La randonnée de Camille",
+   "competence": "calculer",
+   "situation": "Camille prépare une randonnée de 3,5 km qui dure 2 h 15. Elle utilise un tableau de conversion pour exprimer ces mesures dans d’autres unités.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Le tableau de conversion des longueurs : 3,5 km",
+     "colonnes": [
+      "km",
+      "hm",
+      "dam",
+      "m",
+      "dm",
+      "cm",
+      "mm"
+     ],
+     "lignes": [
+      [
+       "3",
+       "5",
+       "0",
+       "0",
+       "·",
+       "·",
+       "·"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Chaque colonne vaut 10 fois la suivante"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "enonce": "Touche le chiffre qui indique les hectomètres.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Lis les unités en en-tête : le chiffre est sous la colonne « hm ».",
+     "explication": "Sous la colonne **hm**, on lit le chiffre 5 : 3,5 km, c’est 3 km et 5 hm."
+    },
+    {
+     "type": "nombre",
+     "document": "tab",
+     "enonce": "Combien de mètres représentent 3,5 km ?",
+     "reponse": 3500,
+     "unite": "m",
+     "aide": "1 km vaut 1 000 m. Multiplie 3,5 par 1 000.",
+     "explication": "3,5 × 1 000 = **3 500 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un panneau indique 250 cm de hauteur de passage. Combien cela fait-il de mètres ?",
+     "reponse": 2.5,
+     "unite": "m",
+     "aide": "1 m vaut 100 cm : tu passes à une unité plus grande, le nombre devient plus petit.",
+     "explication": "250 ÷ 100 = **2,5 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris la durée 2 h 15 min en heures décimales.",
+     "reponse": 2.25,
+     "unite": "h",
+     "aide": "Convertis 15 minutes en heures en divisant par 60.",
+     "explication": "15 min = 15 ÷ 60 = 0,25 h : 2 h 15 = **2,25 h**. (Jamais 2,15 h !)"
+    }
+   ]
+  },
+  {
+   "chapitre": "96308e0d-b349-5937-9ca8-fa0fceb05c61",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le gâteau de la fête",
+   "competence": "modeliser",
+   "situation": "Léa prépare un gâteau pour la fête de l’école avec une recette où les quantités sont écrites avec des unités différentes. Avant de peser, elle les convertit dans la même unité.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "titre": "La recette du gâteau",
+     "entete": "Gâteau au yaourt",
+     "emoji": "🎂",
+     "lignes": [
+      {
+       "texte": "Farine",
+       "valeur": "0,35 kg",
+       "id": "farine"
+      },
+      {
+       "texte": "Sucre",
+       "valeur": "150 g"
+      },
+      {
+       "texte": "Beurre",
+       "valeur": "80 g"
+      },
+      {
+       "texte": "Lait",
+       "valeur": "25 cL",
+       "id": "lait"
+      },
+      {
+       "texte": "Cuisson",
+       "valeur": "45 min"
+      }
+     ],
+     "pied": "Recette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "recette",
+     "enonce": "Combien de grammes de farine faut-il ?",
+     "reponse": 350,
+     "unite": "g",
+     "aide": "1 kg vaut 1 000 g : tu passes à une unité plus petite, le nombre devient plus grand.",
+     "explication": "0,35 × 1 000 = **350 g**."
+    },
+    {
+     "type": "nombre",
+     "document": "recette",
+     "enonce": "Quelle est la masse totale de farine, de sucre et de beurre, en grammes ?",
+     "reponse": 580,
+     "unite": "g",
+     "aide": "Convertis la farine en grammes avant d’additionner.",
+     "explication": "350 + 150 + 80 = **580 g**. On ne peut additionner que des masses exprimées dans la même unité."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure à son écriture équivalente.",
+     "paires": [
+      [
+       "0,6 kg",
+       "600 g"
+      ],
+      [
+       "1,2 kg",
+       "1 200 g"
+      ],
+      [
+       "5 cL",
+       "50 mL"
+      ],
+      [
+       "0,5 L",
+       "500 mL"
+      ]
+     ],
+     "aide": "Pour les masses, ×1 000 de kg à g. Pour les volumes, 1 cL vaut 10 mL et 1 L vaut 1 000 mL.",
+     "explication": "0,6 kg = 600 g ; 1,2 kg = 1 200 g ; 5 cL = **50 mL** (1 cL = 10 mL) ; 0,5 L = 500 mL."
+    },
+    {
+     "type": "nombre",
+     "document": "recette",
+     "enonce": "Le gâteau cuit 45 min. Écris cette durée en heures décimales.",
+     "reponse": 0.75,
+     "unite": "h",
+     "aide": "Pour passer des minutes aux heures, on divise par 60.",
+     "explication": "45 ÷ 60 = **0,75 h**."
+    }
+   ]
+  },
+  {
+   "chapitre": "96308e0d-b349-5937-9ca8-fa0fceb05c61",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La randonnée, étape par étape",
+   "competence": "argumenter",
+   "situation": "Un guide note la durée de chaque étape d’une sortie en montagne. Lina convertit les durées en heures décimales pour calculer, mais Max n’est pas d’accord avec l’une de ses conversions.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes de la sortie",
+     "colonnes": [
+      "Étape",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "Départ → pont",
+       "1 h 45"
+      ],
+      [
+       "Pont → col",
+       "2 h 20"
+      ],
+      [
+       "Col → arrivée",
+       "55 min"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Durées inventées pour l’exercice"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Lina et Max",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "2 h 20 min, ça fait 2,20 h : je note 2,20."
+      },
+      {
+       "qui": "Max",
+       "texte": "Non, les minutes ne se comptent pas de 10 en 10…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche la durée de l’étape la plus longue.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Convertis 1 h 45, 2 h 20 et 55 min dans la même unité (les minutes) pour comparer.",
+     "explication": "1 h 45 = 105 min, 2 h 20 = 140 min, 55 min : l’étape la plus longue est **pont → col**."
+    },
+    {
+     "type": "nombre",
+     "document": "etapes",
+     "enonce": "Écris 1 h 45 en heures décimales.",
+     "reponse": 1.75,
+     "unite": "h",
+     "aide": "45 min = 45 ÷ 60 h.",
+     "explication": "45 ÷ 60 = 0,75 : 1 h 45 = **1,75 h**."
+    },
+    {
+     "type": "nombre",
+     "document": "etapes",
+     "enonce": "Quelle est la durée totale de la sortie, en minutes ?",
+     "reponse": 300,
+     "unite": "min",
+     "aide": "Convertis chaque étape en minutes avant d’additionner : 1 h 45 = 105 min.",
+     "explication": "105 + 140 + 55 = **300 min**, soit exactement 5 h."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Pourquoi Lina se trompe-t-elle en écrivant 2,20 h ?",
+     "options": [
+      "20 min valent 20 ÷ 60 h, soit environ 0,33 h, et non 0,20 h",
+      "2 h 20 vaut exactement 2,5 h",
+      "Les heures ne peuvent pas s’écrire avec une virgule",
+      "20 min valent 20 ÷ 100 h, donc 0,20 h"
+     ],
+     "reponse": 0,
+     "aide": "Une heure compte 60 minutes, pas 100.",
+     "explication": "Les durées ne se convertissent pas de 10 en 10 : une heure = **60 min**. Donc 20 min = 20 ÷ 60 h ≈ 0,33 h et 2 h 20 ≈ 2,33 h."
+    },
+    {
+     "type": "nombre",
+     "document": "etapes",
+     "enonce": "Écris 2 h 20 en heures décimales, arrondi au centième.",
+     "reponse": 2.33,
+     "unite": "h",
+     "tolerance": 0.005,
+     "aide": "Calcule 20 ÷ 60, arrondis, puis ajoute 2.",
+     "explication": "20 ÷ 60 = 0,333… donc 2 h 20 ≈ **2,33 h**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea10d373-53b1-5f93-85bf-37fa6a6eeeae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le terrain à vendre",
+   "competence": "calculer",
+   "situation": "Une agence immobilière propose un terrain constructible et le terrain voisin, un grand champ. Les surfaces sont données en ares et en hectares : Karim les convertit en mètres carrés.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Le panneau de l’agence",
+     "entete": "TERRAIN À VENDRE",
+     "emoji": "🏡",
+     "lignes": [
+      {
+       "texte": "Terrain constructible",
+       "valeur": "5 ares",
+       "id": "terrain"
+      },
+      {
+       "texte": "Champ voisin",
+       "valeur": "2 hectares",
+       "id": "champ"
+      }
+     ],
+     "pied": "Annonce écrite pour l’exercice"
+    },
+    {
+     "id": "equiv",
+     "type": "tableau",
+     "titre": "Les unités agraires",
+     "colonnes": [
+      "Unité",
+      "Vaut en m²"
+     ],
+     "lignes": [
+      [
+       "1 are (a)",
+       "100"
+      ],
+      [
+       "1 hectare (ha)",
+       "10 000"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "À retenir"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "panneau",
+     "enonce": "Quelle est la surface du terrain constructible, en m² ?",
+     "reponse": 500,
+     "unite": "m²",
+     "aide": "1 are vaut 100 m² : multiplie 5 par 100.",
+     "explication": "5 × 100 = **500 m²**."
+    },
+    {
+     "type": "nombre",
+     "document": "panneau",
+     "enonce": "Quelle est la surface du champ voisin, en m² ?",
+     "reponse": 20000,
+     "unite": "m²",
+     "aide": "1 hectare vaut 10 000 m².",
+     "explication": "2 × 10 000 = **20 000 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le plan du terrain fait 3 m² sur le dessin de l’architecte. Combien cela fait-il de dm² ?",
+     "reponse": 300,
+     "unite": "dm²",
+     "aide": "Pour les aires, on passe d’une unité à la suivante en multipliant par 100, et non par 10.",
+     "explication": "1 m² = 100 dm², donc 3 m² = **300 dm²**. Une aire est un produit de deux longueurs : 10 × 10 = 100."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea10d373-53b1-5f93-85bf-37fa6a6eeeae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui va le plus vite ?",
+   "competence": "modeliser",
+   "situation": "Inès, Tom et Léa font une course d’entraînement. Chacun note sa vitesse moyenne avec l’unité de son application : km/h, m/s ou m/min. Pour savoir qui est le plus rapide, il faut tout convertir.",
+   "documents": [
+    {
+     "id": "vitesses",
+     "type": "tableau",
+     "titre": "Les vitesses moyennes",
+     "colonnes": [
+      "Sportif",
+      "Vitesse"
+     ],
+     "lignes": [
+      [
+       "Inès",
+       "18 km/h"
+      ],
+      [
+       "Tom",
+       "6 m/s"
+      ],
+      [
+       "Léa",
+       "300 m/min"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "vitesses",
+     "enonce": "Quelle est la vitesse d’Inès en m/s ?",
+     "reponse": 5,
+     "unite": "m/s",
+     "aide": "Pour passer des km/h aux m/s, on divise par 3,6.",
+     "explication": "18 ÷ 3,6 = **5 m/s**. (1 km/h = 1 000 m ÷ 3 600 s.)"
+    },
+    {
+     "type": "nombre",
+     "document": "vitesses",
+     "enonce": "Quelle est la vitesse de Tom en km/h ?",
+     "reponse": 21.6,
+     "unite": "km/h",
+     "aide": "Pour passer des m/s aux km/h, on multiplie par 3,6.",
+     "explication": "6 × 3,6 = **21,6 km/h**."
+    },
+    {
+     "type": "zone",
+     "document": "vitesses",
+     "enonce": "Touche les deux sportifs qui vont exactement à la même vitesse.",
+     "multiple": true,
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "aide": "Convertis la vitesse de Léa en m/s : 300 m en 1 min, c’est combien de mètres en 1 s ?",
+     "explication": "Léa : 300 m par minute = 300 ÷ 60 = 5 m/s = 18 km/h. **Inès et Léa** vont à la même vitesse."
+    },
+    {
+     "type": "nombre",
+     "document": "vitesses",
+     "enonce": "Quelle distance Tom parcourt-il en 10 minutes à 6 m/s, en kilomètres ?",
+     "reponse": 3.6,
+     "unite": "km",
+     "aide": "10 min = 600 s. Calcule la distance en mètres, puis convertis en km.",
+     "explication": "6 × 600 = 3 600 m = **3,6 km**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea10d373-53b1-5f93-85bf-37fa6a6eeeae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Remplir la piscine",
+   "competence": "resoudre",
+   "situation": "Le club de natation remplit sa petite piscine rectangulaire avec un robinet de débit constant. Le gérant veut savoir combien de litres il faut, et combien de temps durera le remplissage. Hugo propose une conversion rapide.",
+   "documents": [
+    {
+     "id": "piscine",
+     "type": "solide",
+     "titre": "La piscine du club",
+     "longueur": 5,
+     "largeur": 3,
+     "hauteur": 1.2,
+     "cubes": false,
+     "cotes": true,
+     "unite": "m"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Hugo propose une conversion",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Pour passer des m³ aux litres, je multiplie par 100 : 1 m³ = 100 L."
+      },
+      {
+       "qui": "Lou",
+       "texte": "Hmm… un volume ne se convertit pas comme une longueur."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "piscine",
+     "enonce": "Quel est le volume de la piscine, en m³ ?",
+     "reponse": 18,
+     "unite": "m³",
+     "aide": "Volume d’un pavé : longueur × largeur × hauteur.",
+     "explication": "5 × 3 × 1,2 = **18 m³**."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Quelle est la bonne conversion de 1 m³ en litres ?",
+     "options": [
+      "1 m³ = 1 000 L, car un volume se convertit de 1 000 en 1 000",
+      "1 m³ = 100 L, comme le dit Hugo",
+      "1 m³ = 10 L, car on passe d’une unité à l’autre en multipliant par 10",
+      "1 m³ = 10 000 L, car un volume compte deux colonnes"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi : 1 L = 1 dm³, et chaque unité de volume vaut 1 000 fois la suivante.",
+     "explication": "1 m³ = 1 000 dm³ et 1 dm³ = 1 L : donc **1 m³ = 1 000 L**. Une unité de volume occupe trois colonnes du tableau de conversion."
+    },
+    {
+     "type": "nombre",
+     "document": "piscine",
+     "enonce": "Combien de litres faut-il pour remplir la piscine ?",
+     "reponse": 18000,
+     "unite": "L",
+     "aide": "Multiplie le volume en m³ par 1 000.",
+     "explication": "18 × 1 000 = **18 000 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le robinet débite 25 L/min. Combien cela fait-il de litres par heure ?",
+     "reponse": 1500,
+     "unite": "L/h",
+     "aide": "Une heure contient 60 minutes : multiplie le débit par 60.",
+     "explication": "25 × 60 = **1 500 L/h**."
+    },
+    {
+     "type": "nombre",
+     "document": "piscine",
+     "enonce": "Combien d’heures faut-il pour remplir la piscine à ce débit ?",
+     "reponse": 12,
+     "unite": "h",
+     "aide": "Divise le volume total (en litres) par le débit (en litres par heure).",
+     "explication": "18 000 ÷ 1 500 = **12 h**. (Même résultat avec 18 000 ÷ 25 = 720 min = 12 h.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "787349c7-b624-5bb9-a75e-0e76edf04e0f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La voile du petit bateau",
+   "competence": "geometrie",
+   "situation": "Une voile de petit bateau a la forme d’un triangle ABC rectangle en A. Un mécanicien cherche l’angle manquant avant de découper la toile.",
+   "documents": [
+    {
+     "id": "voile",
+     "type": "figure",
+     "titre": "La voile ABC (figure à main levée)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 9,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 8,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 6,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "id": "droit",
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      },
+      {
+       "sommet": "C",
+       "de": "A",
+       "a": "B",
+       "mesure": "55°"
+      },
+      {
+       "sommet": "B",
+       "de": "C",
+       "a": "A",
+       "mesure": "?"
+      }
+     ],
+     "source": "Figure à main levée, non à l’échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voile",
+     "enonce": "Touche l’angle droit de la voile.",
+     "reponse": [
+      "droit"
+     ],
+     "aide": "Cherche le petit carré dessiné dans un angle.",
+     "explication": "L’angle droit est celui du sommet **A** : le triangle est rectangle en A."
+    },
+    {
+     "type": "nombre",
+     "document": "voile",
+     "enonce": "Combien mesure l’angle B ?",
+     "reponse": 35,
+     "unite": "°",
+     "aide": "La somme des angles d’un triangle vaut 180°, et l’angle A mesure 90°.",
+     "explication": "180 − 90 − 55 = **35°**. Les deux angles non droits d’un triangle rectangle sont complémentaires : 55 + 35 = 90."
+    },
+    {
+     "type": "choix",
+     "document": "voile",
+     "enonce": "Le triangle ABC est-il isocèle ?",
+     "options": [
+      "Non : ses trois angles (90°, 55°, 35°) sont différents",
+      "Oui : un triangle rectangle est toujours isocèle",
+      "Oui : deux de ses angles sont des angles aigus",
+      "Non : un triangle rectangle ne peut pas être isocèle"
+     ],
+     "reponse": 0,
+     "aide": "Un triangle isocèle a deux angles égaux (les angles à la base).",
+     "explication": "Ses angles mesurent 90°, 55° et 35° : **aucun n’est égal à un autre**, donc il n’est pas isocèle. (Un triangle rectangle peut l’être, avec 90°, 45°, 45°.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "787349c7-b624-5bb9-a75e-0e76edf04e0f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les baguettes du cerf-volant",
+   "competence": "raisonner",
+   "situation": "Léa construit des cerfs-volants avec trois baguettes. Avant de couper, elle teste plusieurs triplets de longueurs : tous ne permettent pas de fermer un triangle.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les essais de Léa",
+     "colonnes": [
+      "Essai",
+      "Côté 1",
+      "Côté 2",
+      "Côté 3"
+     ],
+     "lignes": [
+      [
+       "Essai A",
+       "5 cm",
+       "6 cm",
+       "10 cm"
+      ],
+      [
+       "Essai B",
+       "3 cm",
+       "4 cm",
+       "7 cm"
+      ],
+      [
+       "Essai C",
+       "2 cm",
+       "3 cm",
+       "6 cm"
+      ],
+      [
+       "Essai D",
+       "4 cm",
+       "5 cm",
+       "8 cm"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Longueurs inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche l’essai impossible : on ne peut pas en faire un triangle.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Additionne les deux plus petits côtés : le résultat doit dépasser le plus grand.",
+     "explication": "Pour l’essai C, 2 + 3 = 5, et 5 est inférieur à 6 : les baguettes ne se rejoignent pas. L’inégalité triangulaire n’est pas respectée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque essai selon ce qu’il donne.",
+     "categories": [
+      "Triangle constructible",
+      "Points alignés",
+      "Impossible"
+     ],
+     "items": [
+      [
+       "Essai A",
+       0
+      ],
+      [
+       "Essai B",
+       1
+      ],
+      [
+       "Essai C",
+       2
+      ],
+      [
+       "Essai D",
+       0
+      ]
+     ],
+     "aide": "Compare la somme des deux petits côtés au plus grand côté : plus grande, égale ou plus petite ?",
+     "explication": "A : 5 + 6 = 11 > 10, **triangle**. B : 3 + 4 = 7 = 7, **points alignés**. C : 2 + 3 = 5 < 6, **impossible**. D : 4 + 5 = 9 > 8, **triangle**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léa a déjà coupé deux baguettes de 5 cm et de 8 cm. Quelle est la plus grande longueur entière possible pour la troisième ?",
+     "reponse": 12,
+     "unite": "cm",
+     "aide": "La troisième baguette doit être strictement plus courte que la somme des deux autres.",
+     "explication": "5 + 8 = 13 : la troisième doit mesurer **moins de 13 cm**. La plus grande longueur entière possible est 12 cm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec ces mêmes baguettes de 5 cm et de 8 cm, quelle est la plus petite longueur entière possible pour la troisième ?",
+     "reponse": 4,
+     "unite": "cm",
+     "aide": "Le plus grand côté (8 cm) doit rester plus petit que la somme des deux autres : 8 < 5 + x.",
+     "explication": "8 doit être inférieur à 5 + x, donc x doit dépasser 3 : la plus petite longueur entière est **4 cm**. (Avec 3 cm, les points seraient alignés.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "787349c7-b624-5bb9-a75e-0e76edf04e0f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le pignon de la maison",
+   "competence": "argumenter",
+   "situation": "Un charpentier dessine le pignon d’une maison : un triangle ABC isocèle en A et rectangle en A. Il trace la hauteur [AH] et veut en déduire des angles et l’aire du pignon. Théo propose un calcul d’aire.",
+   "documents": [
+    {
+     "id": "pignon",
+     "type": "figure",
+     "titre": "Le pignon ABC avec sa hauteur [AH]",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 5,
+       "y": 5,
+       "position": "n"
+      },
+      {
+       "id": "B",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "H",
+       "x": 5,
+       "y": 1,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "8 cm"
+      },
+      {
+       "id": "ha",
+       "de": "A",
+       "a": "H",
+       "style": "pointilles",
+       "longueur": "4 cm"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      },
+      {
+       "sommet": "H",
+       "de": "A",
+       "a": "C",
+       "droit": true
+      }
+     ],
+     "source": "Figure à main levée"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Théo et Inès calculent l’aire",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "L’aire, c’est base × hauteur : 8 × 4 = 32 cm²."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Tu es sûr de ta formule ? Compare avec le rectangle qui entoure le pignon."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pignon",
+     "enonce": "Touche la hauteur issue de A.",
+     "reponse": [
+      "ha"
+     ],
+     "aide": "Cherche le segment pointillé, perpendiculaire à la base [BC].",
+     "explication": "La hauteur issue de A est **[AH]** : elle est perpendiculaire à [BC]."
+    },
+    {
+     "type": "nombre",
+     "document": "pignon",
+     "enonce": "Le triangle est rectangle isocèle en A. Combien mesure l’angle B ?",
+     "reponse": 45,
+     "unite": "°",
+     "aide": "Les angles à la base d’un triangle isocèle sont égaux, et la somme des angles vaut 180°.",
+     "explication": "180 − 90 = 90° pour les deux angles à la base, qui sont égaux : chacun mesure 90 ÷ 2 = **45°**."
+    },
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Quelle est l’erreur de Théo ?",
+     "options": [
+      "Il a oublié de diviser par 2 : l’aire est (base × hauteur) ÷ 2",
+      "Il a pris la mauvaise base : il fallait utiliser [AB]",
+      "Il n’avait pas le droit de multiplier 8 par 4",
+      "Il a oublié de convertir les centimètres en mètres"
+     ],
+     "reponse": 0,
+     "aide": "Un triangle est la moitié d’un rectangle de même base et de même hauteur.",
+     "explication": "L’aire d’un triangle vaut **(base × hauteur) ÷ 2**. Le rectangle de 8 cm sur 4 cm vaut 32 cm², et le triangle en est la moitié."
+    },
+    {
+     "type": "nombre",
+     "document": "pignon",
+     "enonce": "Quelle est l’aire du pignon, en cm² ?",
+     "reponse": 16,
+     "unite": "cm²",
+     "aide": "Utilise la base [BC] et la hauteur [AH] écrites sur la figure.",
+     "explication": "(8 × 4) ÷ 2 = **16 cm²**."
+    },
+    {
+     "type": "nombre",
+     "document": "pignon",
+     "enonce": "Quelle est la longueur HB, en cm ?",
+     "reponse": 4,
+     "unite": "cm",
+     "aide": "Dans un triangle isocèle en A, la hauteur issue de A coupe la base [BC] en son milieu.",
+     "explication": "Le triangle est isocèle en A : la hauteur [AH] est aussi la médiatrice de [BC], donc H est le milieu : HB = 8 ÷ 2 = **4 cm**."
+    }
+   ]
+  }
+ ]
+}

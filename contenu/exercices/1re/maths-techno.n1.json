@@ -1,0 +1,2915 @@
+{
+ "niveau": "1re",
+ "matiere": "maths-techno",
+ "exercices": [
+  {
+   "chapitre": "f63b2ab9-553a-523f-9e53-795376d29223",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les soldes de la papeterie",
+   "competence": "calculer",
+   "situation": "Léa passe devant la vitrine de la papeterie de son quartier : c’est la semaine des soldes. Elle veut savoir combien elle paiera sa calculatrice.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Papeterie du Centre",
+     "sousTitre": "Semaine des soldes",
+     "emoji": "🏷️",
+     "lignes": [
+      {
+       "texte": "Cahier 96 pages, avant soldes",
+       "valeur": "4 €",
+       "id": "cahier"
+      },
+      {
+       "texte": "Calculatrice, avant soldes",
+       "valeur": "20 €",
+       "id": "calc"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Remise sur tout le magasin",
+       "valeur": "− 25 %",
+       "gras": true,
+       "id": "remise"
+      }
+     ],
+     "pied": "Magasin imaginé pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui donne le taux de la baisse de prix.",
+     "reponse": [
+      "remise"
+     ],
+     "aide": "Cherche le pourcentage dans l’affiche.",
+     "explication": "La remise est de **25 %** : c’est elle qui permet de passer du prix d’avant au prix soldé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel nombre faut-il multiplier un prix pour appliquer cette remise de 25 % ?",
+     "reponse": 0.75,
+     "aide": "Diminuer de t %, c’est multiplier par 1 − t/100.",
+     "explication": "Baisser de 25 %, c’est multiplier par 1 − 0,25 = **0,75** (le coefficient multiplicateur)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix de la calculatrice pendant les soldes ?",
+     "reponse": 15,
+     "unite": "€",
+     "aide": "Multiplie le prix d’avant par le coefficient multiplicateur 0,75.",
+     "explication": "Prix final = prix initial × CM = 20 × 0,75 = **15 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f63b2ab9-553a-523f-9e53-795376d29223",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La chaîne vidéo de Naël qui grossit",
+   "competence": "lire-tableau",
+   "situation": "Naël tient une chaîne vidéo sur le sport. Il note chaque année son nombre d’abonnés et veut comprendre comment la chaîne a évolué sur deux ans.",
+   "documents": [
+    {
+     "id": "abos",
+     "type": "tableau",
+     "titre": "Abonnés de la chaîne de Naël",
+     "colonnes": [
+      "Année",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Abonnés",
+       2000,
+       2500,
+       2250
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abos",
+     "enonce": "Touche la case de l’année où la chaîne a eu le plus d’abonnés.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Compare les trois nombres de la ligne « Abonnés ».",
+     "explication": "Le maximum est **2 500** abonnés, en 2023."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution, en %, entre 2022 et 2023 ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Taux = (valeur finale − valeur initiale) ÷ valeur initiale.",
+     "explication": "(2 500 − 2 000) ÷ 2 000 = 500 ÷ 2 000 = 0,25 : une hausse de **25 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution, en %, entre 2023 et 2024 ? Écris un nombre négatif s’il s’agit d’une baisse.",
+     "reponse": -10,
+     "unite": "%",
+     "aide": "Le point de départ est maintenant 2023 : divise la variation par 2 500.",
+     "explication": "(2 250 − 2 500) ÷ 2 500 = −250 ÷ 2 500 = −0,10 : une baisse de **10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient multiplicateur global entre 2022 et 2024 ?",
+     "reponse": 1.125,
+     "aide": "Les coefficients de deux évolutions successives se multiplient : 1,25 × 0,9.",
+     "explication": "CM global = 1,25 × 0,9 = **1,125**. Contrôle : 2 000 × 1,125 = 2 250."
+    },
+    {
+     "type": "choix",
+     "enonce": "Naël pense : « + 25 % puis − 10 %, cela fait + 15 % ». Quelle est la vraie évolution entre 2022 et 2024 ?",
+     "options": [
+      "Une hausse de 12,5 %",
+      "Une hausse de 15 %",
+      "Une hausse de 35 %",
+      "Une hausse de 11,25 %"
+     ],
+     "reponse": 0,
+     "aide": "Le coefficient 1,125 s’écrit 1 + 0,125.",
+     "explication": "On ne peut pas ajouter des pourcentages. CM = 1,125 = 1 + 0,125 : c’est une hausse de **12,5 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f63b2ab9-553a-523f-9e53-795376d29223",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le menu de la brasserie, prix et indices",
+   "competence": "modeliser",
+   "situation": "Lina gère une brasserie. Elle compare le menu du jour d’aujourd’hui (en 2024) à celui d’il y a trois ans, en s’aidant de l’addition d’un client et d’un indice de prix.",
+   "documents": [
+    {
+     "id": "addition",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Brasserie Le Quai",
+     "sousTitre": "Addition — table 7, 2024",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "Menu du jour (entrée + plat)",
+       "valeur": "16,50 € TTC"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TVA comprise dans le prix",
+       "valeur": "10 %",
+       "id": "tva"
+      }
+     ],
+     "pied": "Addition imaginée pour l’exercice",
+     "teinte": "ambre"
+    },
+    {
+     "id": "indice",
+     "type": "tableau",
+     "titre": "Indice du prix hors taxes du menu (base 100 en 2021)",
+     "colonnes": [
+      "Année",
+      "2021",
+      "2023",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Indice",
+       100,
+       120,
+       150
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Indices imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "addition",
+     "enonce": "Touche la ligne qui donne le taux de TVA appliqué.",
+     "reponse": [
+      "tva"
+     ],
+     "aide": "C’est le pourcentage ajouté au prix hors taxes.",
+     "explication": "Le taux de TVA est de **10 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le prix TTC est de 16,50 €. Quel est le prix hors taxes du menu en 2024 ?",
+     "reponse": 15,
+     "unite": "€",
+     "aide": "Le prix TTC vaut le prix hors taxes × 1,10 : pour retrouver le prix initial, on divise.",
+     "explication": "Valeur initiale = valeur finale ÷ CM = 16,50 ÷ 1,10 = **15 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel était le prix hors taxes du menu en 2021 ?",
+     "reponse": 10,
+     "unite": "€",
+     "aide": "L’indice 150 signifie que le prix de 2024 vaut 1,5 fois celui de 2021.",
+     "explication": "Indice 150 : le prix a été multiplié par 1,5. Prix de 2021 = 15 ÷ 1,5 = **10 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution, en %, du prix entre 2023 et 2024 ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Compare les indices de 2023 et de 2024 (pas ceux de 2021).",
+     "explication": "Les indices passent de 120 à 150 : (150 − 120) ÷ 120 = 0,25, soit **+ 25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lina songe à baisser le prix de 50 % en 2025 pour « revenir au prix de 2021 ». Qu’obtiendrait-elle ?",
+     "options": [
+      "Un prix qui annule exactement la hausse de 50 %",
+      "Un prix 25 % en dessous de celui de 2021",
+      "Un prix 25 % au-dessus de celui de 2021",
+      "Un prix 50 % en dessous de celui de 2021"
+     ],
+     "reponse": 1,
+     "aide": "De 2021 à 2024, le coefficient est 1,5. Multiplie-le par 0,5.",
+     "explication": "1,5 × 0,5 = 0,75 : le prix vaudrait 75 % de celui de 2021, soit **25 % de moins**. Pour revenir au prix de départ, il faudrait une baisse d’un tiers (1 ÷ 1,5)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a37af1cc-51aa-5e17-a879-8f88143d4de8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La recette du gâteau de Julie",
+   "competence": "calculer",
+   "situation": "Julie prépare un gâteau pour l’anniversaire de son frère. Sa recette indique les quantités en fractions de kilo, et elle doit calculer sans calculatrice.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Gâteau de Julie",
+     "sousTitre": "Pour un gâteau",
+     "emoji": "🎂",
+     "lignes": [
+      {
+       "texte": "Farine",
+       "valeur": "{{1/2}} kg",
+       "id": "farine"
+      },
+      {
+       "texte": "Sucre",
+       "valeur": "{{1/4}} kg",
+       "id": "sucre"
+      },
+      {
+       "texte": "Beurre",
+       "valeur": "{{1/8}} kg",
+       "id": "beurre"
+      }
+     ],
+     "pied": "Recette imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recette",
+     "enonce": "Touche l’ingrédient dont la quantité est la plus petite.",
+     "reponse": [
+      "beurre"
+     ],
+     "aide": "Mets les fractions au même dénominateur : 4/8, 2/8, 1/8.",
+     "explication": "1/2 = 4/8, 1/4 = 2/8 et 1/8 : le plus petit est le **beurre**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids total de farine et de sucre, en kg ? Tu peux écrire une fraction ou un décimal.",
+     "reponse": 0.75,
+     "unite": "kg",
+     "aide": "Additionne avec le même dénominateur : 1/2 = 2/4.",
+     "explication": "1/2 + 1/4 = 2/4 + 1/4 = 3/4, soit **0,75 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Julie ne fait que la moitié de la recette. Quelle masse de farine utilise-t-elle, en kg ?",
+     "reponse": 0.25,
+     "unite": "kg",
+     "aide": "Prendre la moitié, c’est multiplier par 1/2.",
+     "explication": "1/2 × 1/2 = 1/4, soit **0,25 kg** de farine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec un paquet de 1 kg de sucre, combien de gâteaux Julie peut-elle faire ?",
+     "reponse": 4,
+     "aide": "Combien de fois 1/4 de kg tient-il dans 1 kg ? C’est une division par une fraction.",
+     "explication": "1 ÷ 1/4 = 1 × 4 = **4** gâteaux : diviser par une fraction, c’est multiplier par son inverse."
+    }
+   ]
+  },
+  {
+   "chapitre": "a37af1cc-51aa-5e17-a879-8f88143d4de8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des grandeurs très petites et très grandes",
+   "competence": "calculer",
+   "situation": "Tarek prépare un exposé de sciences. Il a relevé quatre grandeurs dans un tableau et doit les écrire en notation scientifique, sans calculatrice.",
+   "documents": [
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Quatre grandeurs",
+     "colonnes": [
+      "Grandeur",
+      "Valeur",
+      "Unité"
+     ],
+     "lignes": [
+      [
+       "Distance Terre–Lune",
+       "384 000",
+       "km"
+      ],
+      [
+       "Diamètre d’un globule rouge",
+       "0,000007",
+       "m"
+      ],
+      [
+       "Épaisseur d’une feuille de papier",
+       "0,0001",
+       "m"
+      ],
+      [
+       "Vitesse de la lumière",
+       "300 000",
+       "km/s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "valeurs",
+     "enonce": "Touche la valeur numérique la plus proche de zéro.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compte les zéros après la virgule.",
+     "explication": "0,000007 est le plus petit nombre positif du tableau : c’est le **globule rouge**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’écriture scientifique de la distance Terre–Lune ?",
+     "options": [
+      "3,84 × 10^5",
+      "38,4 × 10^4",
+      "3,84 × 10^4",
+      "0,384 × 10^6"
+     ],
+     "reponse": 0,
+     "aide": "Le premier facteur doit être compris entre 1 et 10.",
+     "explication": "384 000 = 3,84 × 100 000 = **3,84 × 10⁵** (38,4 et 0,384 ne sont pas entre 1 et 10)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On écrit 0,000007 = 7 × 10ⁿ. Quelle est la valeur de n ?",
+     "reponse": -6,
+     "aide": "Combien de rangs faut-il décaler la virgule vers la droite pour obtenir 7 ?",
+     "explication": "La virgule se décale de 6 rangs : 0,000007 = 7 × 10⁻⁶, donc **n = −6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de secondes la lumière met-elle pour aller de la Terre à la Lune ?",
+     "reponse": 1.28,
+     "unite": "s",
+     "aide": "Durée = distance ÷ vitesse, avec la distance en km et la vitesse en km/s.",
+     "explication": "384 000 ÷ 300 000 = 384 ÷ 300 = **1,28 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a37af1cc-51aa-5e17-a879-8f88143d4de8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La terrasse et le bassin d’Amel",
+   "competence": "modeliser",
+   "situation": "Amel aménage son jardin : une terrasse à carreler et un petit bassin à remplir. Elle a un devis et le plan du bassin ; il lui faut convertir des unités sans calculatrice.",
+   "documents": [
+    {
+     "id": "devis",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Devis du jardin",
+     "sousTitre": "Terrasse et bassin",
+     "emoji": "🪴",
+     "lignes": [
+      {
+       "texte": "Surface de la terrasse",
+       "valeur": "12 m²",
+       "id": "surface"
+      },
+      {
+       "texte": "Carreau : 40 cm × 50 cm",
+       "valeur": "1 modèle"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Pompe du bassin",
+       "valeur": "500 L par heure"
+      }
+     ],
+     "pied": "Devis imaginé pour l’exercice",
+     "teinte": "vert"
+    },
+    {
+     "id": "bassin",
+     "type": "solide",
+     "titre": "Le bassin (en décimètres)",
+     "longueur": 20,
+     "largeur": 15,
+     "hauteur": 5,
+     "cotes": true,
+     "unite": "dm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "devis",
+     "enonce": "Touche la ligne qui donne la surface à carreler.",
+     "reponse": [
+      "surface"
+     ],
+     "aide": "Cherche l’unité d’aire (m²).",
+     "explication": "La terrasse mesure **12 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire d’un carreau, en cm² ?",
+     "reponse": 2000,
+     "unite": "cm²",
+     "aide": "Aire d’un rectangle : longueur × largeur.",
+     "explication": "40 × 50 = **2 000 cm²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de carreaux faut-il pour recouvrir la terrasse (sans perte) ?",
+     "reponse": 60,
+     "aide": "1 m² = 10 000 cm² : convertis d’abord les 12 m² en cm².",
+     "explication": "12 m² = 120 000 cm² ; 120 000 ÷ 2 000 = **60** carreaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la capacité du bassin, en litres ? (1 dm³ = 1 L)",
+     "reponse": 1500,
+     "unite": "L",
+     "aide": "Volume d’un pavé : longueur × largeur × hauteur, ici en dm.",
+     "explication": "20 × 15 × 5 = 1 500 dm³ = **1 500 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures la pompe met-elle pour remplir le bassin ?",
+     "reponse": 3,
+     "unite": "h",
+     "aide": "Durée = volume ÷ débit.",
+     "explication": "1 500 L ÷ 500 L/h = **3 h**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2293e30c-934e-5c3d-8f98-035a291fae41",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le potager de Clara",
+   "competence": "geometrie",
+   "situation": "Clara agrandit son potager rectangulaire. Sa largeur est 4 m ; sa longueur dépend d’un nombre x de mètres ajoutés à 5 m.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Plan du potager",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "(x + 5) m",
+       "id": "ab"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "4 m",
+       "id": "bc"
+      },
+      {
+       "de": "D",
+       "a": "C",
+       "longueur": "(x + 5) m",
+       "id": "dc"
+      },
+      {
+       "de": "A",
+       "a": "D",
+       "longueur": "4 m",
+       "id": "ad"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "multiple": true,
+     "enonce": "Touche les deux côtés qui mesurent (x + 5) m.",
+     "reponse": [
+      "ab",
+      "dc"
+     ],
+     "aide": "Lis les mesures écrites le long de chaque côté.",
+     "explication": "Les côtés **[AB] et [DC]** mesurent (x + 5) m ; les deux autres mesurent 4 m."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle expression donne l’aire du potager, développée ?",
+     "options": [
+      "4x + 20",
+      "4x + 5",
+      "x + 20",
+      "4x + 9"
+     ],
+     "reponse": 0,
+     "aide": "Aire = largeur × longueur = 4 × (x + 5) : distribue le 4.",
+     "explication": "4(x + 5) = 4 × x + 4 × 5 = **4x + 20**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du potager, en m², quand x = 3 ?",
+     "reponse": 32,
+     "unite": "m²",
+     "aide": "Remplace x par 3 : la longueur vaut alors 8 m.",
+     "explication": "4 × (3 + 5) = 4 × 8 = **32 m²**. Avec 4x + 20 : 12 + 20 = 32, c’est cohérent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Clara veut un potager de 60 m². Quelle valeur de x convient ?",
+     "reponse": 10,
+     "aide": "Résous 4x + 20 = 60 : retire 20, puis divise par 4.",
+     "explication": "4x + 20 = 60 donne 4x = 40, donc **x = 10**. Vérification : 4 × 15 = 60."
+    }
+   ]
+  },
+  {
+   "chapitre": "2293e30c-934e-5c3d-8f98-035a291fae41",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le brouillon de Zoé : où est l’erreur ?",
+   "competence": "raisonner",
+   "situation": "Zoé a résolu une équation sur son brouillon, mais sa solution ne vérifie pas l’équation de départ. Elle prépare aussi un défi à son voisin.",
+   "documents": [
+    {
+     "id": "brouillon",
+     "type": "tableau",
+     "titre": "Le brouillon de Zoé",
+     "colonnes": [
+      "Étape",
+      "Ce que Zoé écrit"
+     ],
+     "lignes": [
+      [
+       "Étape 1",
+       "3x + 7 = 2x − 5"
+      ],
+      [
+       "Étape 2",
+       "3x − 2x = −5 + 7"
+      ],
+      [
+       "Étape 3",
+       "x = 2"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "defi",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le défi de Zoé",
+     "blocs": [
+      "Résous l’équation : (x − 4)(x + 1) = 0"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "enonce": "Touche la première étape où Zoé fait une erreur.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Quand 7 passe de l’autre côté du signe égal, que devient son signe ?",
+     "explication": "À l’étape 2, quand le + 7 passe de l’autre côté du signe égal, il devient **− 7** : Zoé a écrit + 7. Il fallait écrire −5 − 7."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la bonne solution de 3x + 7 = 2x − 5 ?",
+     "reponse": -12,
+     "aide": "Regroupe les x à gauche et les nombres à droite : 3x − 2x = −5 − 7.",
+     "explication": "3x − 2x = −5 − 7 donne **x = −12**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifie : que vaut 3x + 7 quand x prend la bonne valeur ?",
+     "reponse": -29,
+     "aide": "Remplace x par la solution trouvée à la question précédente.",
+     "explication": "3 × (−12) + 7 = −36 + 7 = **−29**, et 2 × (−12) − 5 = −29 aussi : la solution est la bonne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la plus petite des deux solutions du défi (x − 4)(x + 1) = 0 ?",
+     "reponse": -1,
+     "aide": "Un produit est nul si l’un de ses facteurs est nul : résous x − 4 = 0 et x + 1 = 0.",
+     "explication": "x − 4 = 0 donne x = 4, et x + 1 = 0 donne x = −1 : les solutions sont 4 et −1, la plus petite est **−1**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2293e30c-934e-5c3d-8f98-035a291fae41",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La plaque carrée à laquelle il manque un coin",
+   "competence": "modeliser",
+   "situation": "Un atelier découpe, dans une plaque carrée de côté x cm, un petit carré de 5 cm de côté dans un coin. Le technicien veut l’aire restante en fonction de x et contrôle ses mesures.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "figure",
+     "titre": "Plaque carrée (non à l’échelle)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 6.5
+      },
+      {
+       "id": "D",
+       "x": 6,
+       "y": 6.5
+      },
+      {
+       "id": "E",
+       "x": 6,
+       "y": 9.5
+      },
+      {
+       "id": "F",
+       "x": 1,
+       "y": 9.5,
+       "position": "no"
+      },
+      {
+       "id": "G",
+       "x": 9,
+       "y": 9.5,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "x"
+      },
+      {
+       "de": "A",
+       "a": "F",
+       "longueur": "x"
+      },
+      {
+       "de": "E",
+       "a": "G",
+       "longueur": "5"
+      },
+      {
+       "de": "G",
+       "a": "C",
+       "longueur": "5"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "D",
+        "C",
+        "G",
+        "E"
+       ],
+       "teinte": "gris",
+       "motif": "hachures"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Aires mesurées en atelier",
+     "colonnes": [
+      "x (cm)",
+      "6",
+      "7",
+      "8",
+      "10"
+     ],
+     "lignes": [
+      [
+       "Aire mesurée (cm²)",
+       11,
+       24,
+       39,
+       76
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle expression donne l’aire de la partie violette (le grand carré moins le petit) ?",
+     "options": [
+      "x² − 25",
+      "x² − 10",
+      "(x − 5)²",
+      "25 − x²"
+     ],
+     "reponse": 0,
+     "aide": "Aire d’un carré de côté c : c × c.",
+     "explication": "Grand carré : x². Petit carré : 5² = 25. Aire restante : **x² − 25**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la forme factorisée de x² − 25 ?",
+     "options": [
+      "(x − 5)(x + 5)",
+      "(x − 5)²",
+      "x(x − 25)",
+      "(x − 25)(x + 1)"
+     ],
+     "reponse": 0,
+     "aide": "Reconnais une différence de deux carrés : x² − 5².",
+     "explication": "a² − b² = (a − b)(a + b), avec a = x et b = 5 : **(x − 5)(x + 5)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire de la plaque, en cm², quand x = 9 ?",
+     "reponse": 56,
+     "unite": "cm²",
+     "aide": "Calcule 9² − 25, ou (9 − 5)(9 + 5).",
+     "explication": "81 − 25 = **56 cm²** ; avec la forme factorisée : 4 × 14 = 56."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On veut une aire de 39 cm² avec x > 5. Quelle est la valeur de x ?",
+     "reponse": 8,
+     "unite": "cm",
+     "aide": "x² − 25 = 39 donne x² = 64.",
+     "explication": "x² = 39 + 25 = 64, donc x = 8 ou x = −8 ; un côté est positif : **x = 8**."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Une des mesures du tableau ne suit pas le modèle x² − 25. Touche-la.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Calcule x² − 25 pour chaque valeur de x et compare.",
+     "explication": "Pour x = 10 : 100 − 25 = 75, pas 76. C’est **la dernière mesure** qui est fausse ; les autres (11, 24, 39) sont justes."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e4a31ca-1d9a-531c-b7cb-0278594d8a06",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le vol du drone de Jules",
+   "competence": "lire-graphique",
+   "situation": "Jules fait décoller un petit drone depuis son balcon. Un capteur a noté sa hauteur, en mètres, à chaque seconde, et on a tracé la courbe de la fonction f : temps (s) → hauteur (m).",
+   "documents": [
+    {
+     "id": "vol",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur du drone",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Hauteur",
+       "valeurs": [
+        1,
+        3,
+        5,
+        6,
+        4,
+        2,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "en m",
+      "min": 0,
+      "max": 7,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vol",
+     "enonce": "Touche l’instant où le drone est le plus haut.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe, puis regarde son abscisse.",
+     "explication": "Le sommet est atteint à l’instant **3 s**, à 6 m de hauteur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’image de 4 par f, c’est-à-dire la hauteur à l’instant 4 s ?",
+     "reponse": 4,
+     "unite": "m",
+     "aide": "L’image se lit sur l’axe des ordonnées, en face du point d’abscisse 4.",
+     "explication": "Le point de la courbe d’abscisse 4 a pour ordonnée 4 : f(4) = **4 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant le drone est-il à 2 m de hauteur, après avoir atteint son sommet ?",
+     "reponse": 5,
+     "unite": "s",
+     "aide": "Un antécédent de 2 se lit sur l’axe des abscisses, après le sommet.",
+     "explication": "Après le sommet, la courbe est à la hauteur 2 pour l’abscisse **5** : 5 est l’antécédent de 2."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quel intervalle de temps la fonction f est-elle croissante ?",
+     "options": [
+      "De 0 s à 3 s",
+      "De 3 s à 6 s",
+      "De 0 s à 6 s",
+      "De 2 s à 4 s"
+     ],
+     "reponse": 0,
+     "aide": "Suis la courbe de gauche à droite : quand monte-t-elle ?",
+     "explication": "La courbe monte de 0 s à 3 s (1 → 3 → 5 → 6), puis redescend : f est croissante sur **[0 ; 3]**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e4a31ca-1d9a-531c-b7cb-0278594d8a06",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tarif de location d’un vélo électrique",
+   "competence": "modeliser",
+   "situation": "Un loueur de vélos électriques facture un forfait de départ, puis un prix fixe par heure. Maëlle a relevé quelques prix pour trouver la règle de calcul.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Prix de la location",
+     "colonnes": [
+      "Durée x (h)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Prix y (€)",
+       4,
+       7,
+       10,
+       13,
+       19
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tarif imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur m de la droite, à partir des points (1 ; 7) et (3 ; 13).",
+     "reponse": 3,
+     "aide": "m = (yB − yA) ÷ (xB − xA).",
+     "explication": "m = (13 − 7) ÷ (3 − 1) = 6 ÷ 2 = **3** : chaque heure coûte 3 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée à l’origine p de la droite ?",
+     "reponse": 4,
+     "unite": "€",
+     "aide": "C’est le prix pour une durée x = 0.",
+     "explication": "Pour x = 0, y = 4 : l’ordonnée à l’origine est **p = 4** (le forfait de départ)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation réduite de cette droite ?",
+     "options": [
+      "y = 3x + 4",
+      "y = 4x + 3",
+      "y = 4x + 7",
+      "y = 7x"
+     ],
+     "reponse": 0,
+     "aide": "y = mx + p, avec m et p trouvés avant.",
+     "explication": "Avec m = 3 et p = 4 : **y = 3x + 4**. Vérification avec x = 5 : 15 + 4 = 19, comme dans le tableau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel serait le prix d’une location de 12 heures ?",
+     "reponse": 40,
+     "unite": "€",
+     "aide": "Remplace x par 12 dans l’équation de la droite.",
+     "explication": "y = 3 × 12 + 4 = 36 + 4 = **40 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e4a31ca-1d9a-531c-b7cb-0278594d8a06",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux droites qui se croisent dans un repère",
+   "competence": "lire-graphique",
+   "situation": "Une élève a tracé dans un repère deux droites, (d) et (d’), qui modélisent deux tarifs. Elle doit retrouver leurs équations et le point où elles se croisent.",
+   "documents": [
+    {
+     "id": "repere",
+     "type": "schema",
+     "titre": "Deux droites dans un repère",
+     "largeur": 320,
+     "hauteur": 370,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        20
+       ],
+       "a": [
+        40,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        20
+       ],
+       "a": [
+        70,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        20
+       ],
+       "a": [
+        100,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        20
+       ],
+       "a": [
+        130,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        20
+       ],
+       "a": [
+        160,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        20
+       ],
+       "a": [
+        190,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        20
+       ],
+       "a": [
+        220,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        20
+       ],
+       "a": [
+        250,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        20
+       ],
+       "a": [
+        280,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        350
+       ],
+       "a": [
+        280,
+        350
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        320
+       ],
+       "a": [
+        280,
+        320
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        290
+       ],
+       "a": [
+        280,
+        290
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        260
+       ],
+       "a": [
+        280,
+        260
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        230
+       ],
+       "a": [
+        280,
+        230
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        200
+       ],
+       "a": [
+        280,
+        200
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        170
+       ],
+       "a": [
+        280,
+        170
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        140
+       ],
+       "a": [
+        280,
+        140
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        280,
+        110
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        80
+       ],
+       "a": [
+        280,
+        80
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        50
+       ],
+       "a": [
+        280,
+        50
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        20
+       ],
+       "a": [
+        280,
+        20
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        260
+       ],
+       "a": [
+        288,
+        260
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        350
+       ],
+       "a": [
+        70,
+        12
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 274,
+       "texte": "1",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 274,
+       "texte": "2",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 274,
+       "texte": "3",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 274,
+       "texte": "4",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 274,
+       "texte": "5",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 274,
+       "texte": "6",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 324,
+       "texte": "-2",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 294,
+       "texte": "-1",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 234,
+       "texte": "1",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 204,
+       "texte": "2",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 174,
+       "texte": "3",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 144,
+       "texte": "4",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 114,
+       "texte": "5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 84,
+       "texte": "6",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 54,
+       "texte": "7",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        350
+       ],
+       "a": [
+        170.00000000000003,
+        20
+       ],
+       "teinte": "violet",
+       "id": "d",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        50
+       ],
+       "a": [
+        280,
+        290
+       ],
+       "teinte": "violet",
+       "id": "dp",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 320,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 140,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 138,
+       "y": 134,
+       "texte": "B",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 78,
+       "y": 324,
+       "texte": "A",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 32.00000000000001,
+       "texte": "(d)",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 254,
+       "y": 272,
+       "texte": "(d’)",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "repere",
+     "enonce": "Touche la droite dont le coefficient directeur est négatif.",
+     "reponse": [
+      "dp"
+     ],
+     "aide": "Une droite de coefficient directeur négatif descend quand on avance vers la droite.",
+     "explication": "La droite **(d’)** descend de gauche à droite : son coefficient directeur est négatif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les points A(0 ; −2) et B(2 ; 4) sont sur (d). Quel est son coefficient directeur ?",
+     "reponse": 3,
+     "aide": "m = (yB − yA) ÷ (xB − xA).",
+     "explication": "m = (4 − (−2)) ÷ (2 − 0) = 6 ÷ 2 = **3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation réduite de (d) ?",
+     "options": [
+      "y = 3x − 2",
+      "y = 2x − 3",
+      "y = 3x + 4",
+      "y = 2x + 4"
+     ],
+     "reponse": 0,
+     "aide": "La droite coupe l’axe des ordonnées en A(0 ; −2).",
+     "explication": "Avec m = 3 et p = −2 : **y = 3x − 2**. Contrôle avec B : 3 × 2 − 2 = 4."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée à l’origine de (d’) ? Lis-la sur le repère.",
+     "reponse": 6,
+     "aide": "C’est l’ordonnée du point où la droite coupe l’axe vertical.",
+     "explication": "(d’) coupe l’axe des ordonnées au point (0 ; 6) : l’ordonnée à l’origine est **6**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le point E(4 ; 9) appartient-il à la droite (d) ?",
+     "options": [
+      "Oui",
+      "Non"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Calcule 3 × 4 − 2 et compare avec 9.",
+     "explication": "Pour x = 4, la droite donne y = 3 × 4 − 2 = 10, pas 9 : **non**, E n’est pas sur (d)."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b91e3b8-2826-5d44-a28a-a23a36e3d51a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les cinq devoirs de Malik",
+   "competence": "lire-tableau",
+   "situation": "Malik a eu cinq devoirs de mathématiques ce trimestre. Il veut résumer sa série de notes par quelques nombres.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Les notes de Malik",
+     "colonnes": [
+      "Devoir",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+     ],
+     "lignes": [
+      [
+       "Note sur 20",
+       12,
+       8,
+       15,
+       12,
+       18
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche la note la plus basse.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Compare les cinq notes de la ligne.",
+     "explication": "La plus basse est **8**, au devoir D2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’étendue de cette série ?",
+     "reponse": 10,
+     "aide": "Étendue = maximum − minimum.",
+     "explication": "18 − 8 = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne de Malik ?",
+     "reponse": 13,
+     "aide": "Additionne les cinq notes, puis divise par 5.",
+     "explication": "(12 + 8 + 15 + 12 + 18) ÷ 5 = 65 ÷ 5 = **13**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la médiane de la série ?",
+     "reponse": 12,
+     "aide": "Range d’abord les notes dans l’ordre croissant, puis prends celle du milieu.",
+     "explication": "Rangées : 8 ; 12 ; 12 ; 15 ; 18. La valeur du milieu est la 3e : **12**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b91e3b8-2826-5d44-a28a-a23a36e3d51a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La cantine du lycée, filles et garçons",
+   "competence": "lire-tableau",
+   "situation": "Au lycée, une enquête sur 150 élèves compare le choix de la demi-pension chez les filles et chez les garçons. Le délégué veut des probabilités exactes.",
+   "documents": [
+    {
+     "id": "enquete",
+     "type": "tableau",
+     "titre": "Tableau croisé de l’enquête",
+     "colonnes": [
+      "",
+      "Demi-pensionnaires",
+      "Externes",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Filles",
+       30,
+       30,
+       60
+      ],
+      [
+       "Garçons",
+       50,
+       40,
+       90
+      ],
+      [
+       "Total",
+       80,
+       70,
+       150
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Enquête imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "enquete",
+     "enonce": "Touche l’effectif des garçons externes.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Croise la ligne « Garçons » et la colonne « Externes ».",
+     "explication": "Il y a **40** garçons externes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On choisit un élève au hasard. Quelle est la probabilité que ce soit une fille demi-pensionnaire ? Écris un décimal.",
+     "reponse": 0.2,
+     "aide": "Effectif de la case ÷ effectif total (150).",
+     "explication": "P(F ∩ D) = 30 ÷ 150 = **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On choisit une fille au hasard. Quelle est la probabilité qu’elle soit demi-pensionnaire ?",
+     "reponse": 0.5,
+     "aide": "La population de départ est maintenant l’ensemble des filles (60).",
+     "explication": "P_F(D) = 30 ÷ 60 = **0,5**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie P_D(F) ?",
+     "options": [
+      "La proportion de filles parmi les demi-pensionnaires",
+      "La proportion de demi-pensionnaires parmi les filles",
+      "La proportion d’élèves à la fois filles et demi-pensionnaires",
+      "La proportion de filles dans le lycée"
+     ],
+     "reponse": 0,
+     "aide": "Dans P_A(B), A est la condition connue : la population de départ.",
+     "explication": "P_D(F) se lit « probabilité de F sachant D » : on se limite aux **demi-pensionnaires** et on regarde la part de filles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P_D(F). Écris un décimal.",
+     "reponse": 0.375,
+     "aide": "Population de départ : les 80 demi-pensionnaires.",
+     "explication": "P_D(F) = 30 ÷ 80 = **0,375**, différente de P_F(D) = 0,5 : « sachant » change la population de référence."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b91e3b8-2826-5d44-a28a-a23a36e3d51a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les pièces défectueuses de deux machines",
+   "competence": "analyser-document",
+   "situation": "Une usine fabrique des pièces sur deux machines, A et B. Le responsable qualité a dessiné un arbre de probabilités à compléter et il dispose du contrôle d’un lot de 2 000 pièces.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre pondéré (D : pièce défectueuse)",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 24,
+       "cy": 125,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        29,
+        122
+       ],
+       "a": [
+        100,
+        54
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        29,
+        128
+       ],
+       "a": [
+        100,
+        196
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 40,
+       "l": 40,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 182,
+       "l": 40,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "B"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        54
+       ],
+       "a": [
+        236,
+        28
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        54
+       ],
+       "a": [
+        236,
+        78
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        196
+       ],
+       "a": [
+        236,
+        168
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        196
+       ],
+       "a": [
+        236,
+        224
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 14,
+       "l": 64,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "D"
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 64,
+       "l": 64,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "non D"
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 154,
+       "l": 64,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "D"
+      },
+      {
+       "forme": "rect",
+       "x": 236,
+       "y": 210,
+       "l": 64,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "non D"
+      },
+      {
+       "forme": "texte",
+       "x": 52,
+       "y": 80,
+       "texte": "0,4",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 52,
+       "y": 178,
+       "texte": "0,6",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 32,
+       "texte": "0,05",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 86,
+       "texte": "0,95",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 168,
+       "texte": "?",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 186,
+       "y": 226,
+       "texte": "?",
+       "gras": true,
+       "ancre": "fin"
+      }
+     ]
+    },
+    {
+     "id": "lot",
+     "type": "tableau",
+     "titre": "Contrôle d’un lot de 2 000 pièces",
+     "colonnes": [
+      "",
+      "Défectueuses",
+      "Conformes",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Machine A",
+       40,
+       760,
+       800
+      ],
+      [
+       "Machine B",
+       120,
+       1080,
+       1200
+      ],
+      [
+       "Total",
+       160,
+       1840,
+       2000
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Contrôle imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lot",
+     "enonce": "Touche l’effectif des pièces défectueuses de la machine B.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Croise la ligne « Machine B » et la colonne « Défectueuses ».",
+     "explication": "La machine B a produit **120** pièces défectueuses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle probabilité faut-il écrire à la place du « ? » sur la branche B → D ? Écris un décimal.",
+     "reponse": 0.1,
+     "aide": "C’est P_B(D) : la population de départ est l’ensemble des pièces de la machine B.",
+     "explication": "P_B(D) = 120 ÷ 1 200 = **0,1**. La branche B → non D vaut alors 0,9."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vaut P(A ∩ D), la probabilité qu’une pièce vienne de A et soit défectueuse ?",
+     "options": [
+      "0,02",
+      "0,05",
+      "0,4",
+      "0,45"
+     ],
+     "reponse": 0,
+     "aide": "Dans l’arbre, on multiplie les probabilités le long du chemin A puis D.",
+     "explication": "P(A ∩ D) = P(A) × P_A(D) = 0,4 × 0,05 = **0,02**. Contrôle avec le tableau : 40 ÷ 2 000 = 0,02."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité qu’une pièce du lot, prise au hasard, soit défectueuse ?",
+     "reponse": 0.08,
+     "aide": "Utilise la ligne « Total » du tableau.",
+     "explication": "P(D) = 160 ÷ 2 000 = **0,08**. On retrouve 0,02 + 0,06 avec les deux chemins de l’arbre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une pièce est défectueuse. Quelle est la probabilité qu’elle vienne de la machine B ? Écris un décimal.",
+     "reponse": 0.75,
+     "aide": "La population de départ est maintenant l’ensemble des 160 pièces défectueuses.",
+     "explication": "P_D(B) = 120 ÷ 160 = **0,75** : trois pièces défectueuses sur quatre viennent de B."
+    }
+   ]
+  },
+  {
+   "chapitre": "91e19b49-d2a0-5503-b546-ffec5bc96ec4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les carrés de carreaux de Lilou",
+   "competence": "lire-graphique",
+   "situation": "Lilou construit des carrés avec des carreaux de mosaïque. Elle note u(n) le nombre de carreaux d’un carré de côté n, et trace un diagramme en bâtons de la suite (u).",
+   "documents": [
+    {
+     "id": "carres",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Nombre de carreaux u(n)",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "u(n)",
+       "valeurs": [
+        0,
+        1,
+        4,
+        9,
+        16,
+        25
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Carreaux",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Côté n"
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carres",
+     "enonce": "Touche le bâton du rang n = 4.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Les rangs sont écrits sous les bâtons.",
+     "explication": "Le bâton du rang 4 est le cinquième en partant de la gauche (le premier est le rang 0) : il vaut **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de carreaux faut-il ajouter pour passer du carré de côté 3 à celui de côté 4 ?",
+     "reponse": 7,
+     "aide": "Calcule u(4) − u(3) en lisant le diagramme.",
+     "explication": "u(4) − u(3) = 16 − 9 = **7** carreaux de plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La suite est définie par u(n) = n². Combien de carreaux pour un carré de côté 10 ?",
+     "reponse": 100,
+     "unite": "carreaux",
+     "aide": "Remplace n par 10 dans la formule.",
+     "explication": "u(10) = 10² = **100** carreaux : avec une formule explicite, on calcule directement le rang voulu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire du sens de variation de la suite (u) d’après le diagramme ?",
+     "options": [
+      "Elle est croissante",
+      "Elle est décroissante",
+      "Elle est constante",
+      "On ne peut pas savoir"
+     ],
+     "reponse": 0,
+     "aide": "Compare chaque bâton au précédent.",
+     "explication": "Chaque bâton est plus haut que le précédent (0 < 1 < 4 < 9 < 16 < 25) : la suite est **croissante**."
+    }
+   ]
+  },
+  {
+   "chapitre": "91e19b49-d2a0-5503-b546-ffec5bc96ec4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La culture de bactéries du laboratoire",
+   "competence": "programmer",
+   "situation": "Dans un laboratoire, une culture contient 5 milliers de bactéries. Chaque heure, elles doublent, puis le technicien en prélève 3 milliers pour analyse : u(n+1) = 2u(n) − 3.",
+   "documents": [
+    {
+     "id": "culture",
+     "type": "tableau",
+     "titre": "Culture de bactéries (en milliers)",
+     "colonnes": [
+      "Heure n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       5,
+       7,
+       11,
+       19,
+       "?",
+       67
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "algo",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Algorithme de seuil",
+     "blocs": [
+      "n ← 0",
+      "u ← 5",
+      "tant que u ≤ 100 :",
+      "    n ← n + 1",
+      "    u ← 2 × u − 3",
+      "afficher n"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "culture",
+     "enonce": "Touche le terme de rang 3.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Les rangs sont écrits dans la ligne du haut : 0, 1, 2, 3…",
+     "explication": "Le terme de rang 3 est **u(3) = 19**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la case manquante u(4) avec la relation de récurrence.",
+     "reponse": 35,
+     "unite": "milliers",
+     "aide": "u(4) = 2 × u(3) − 3.",
+     "explication": "u(4) = 2 × 19 − 3 = 38 − 3 = **35**. Contrôle : 2 × 35 − 3 = 67 = u(5)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(6).",
+     "reponse": 131,
+     "unite": "milliers",
+     "aide": "Pars de u(5) = 67 : une seule étape de plus.",
+     "explication": "u(6) = 2 × 67 − 3 = 134 − 3 = **131**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La suite (u) est-elle arithmétique ?",
+     "options": [
+      "Non : les écarts 2, 4, 8… ne sont pas constants",
+      "Oui : l’écart entre deux termes est toujours 2",
+      "Oui : on multiplie toujours par 2",
+      "Non : les termes ne sont pas des entiers"
+     ],
+     "reponse": 0,
+     "aide": "Calcule u(1) − u(0), u(2) − u(1), u(3) − u(2).",
+     "explication": "7 − 5 = 2, 11 − 7 = 4, 19 − 11 = 8 : les écarts ne sont pas constants, donc la suite n’est **pas arithmétique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur l’algorithme affiche-t-il à la fin ?",
+     "reponse": 6,
+     "aide": "Calcule les termes u(5) puis u(6) et compare chacun à 100.",
+     "explication": "u(5) = 67 ≤ 100 : la boucle continue. u(6) = 131 > 100 : elle s’arrête. L’algorithme affiche **n = 6**, le premier rang où u(n) dépasse 100."
+    }
+   ]
+  },
+  {
+   "chapitre": "91e19b49-d2a0-5503-b546-ffec5bc96ec4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux chaînes vidéo : formule ou récurrence ?",
+   "competence": "modeliser",
+   "situation": "Léa et Sam suivent leur nombre d’abonnés mois après mois. Léa a donné une formule explicite, Sam une relation de récurrence. Qui finira devant ?",
+   "documents": [
+    {
+     "id": "modeles",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Deux modèles d’abonnés",
+     "sousTitre": "n = nombre de mois écoulés",
+     "emoji": "📈",
+     "lignes": [
+      {
+       "texte": "Léa : u(n) = 300 + 200n",
+       "valeur": "formule",
+       "id": "lea"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Sam : v(0) = 100 et v(n+1) = 2 × v(n)",
+       "valeur": "récurrence",
+       "id": "sam"
+      }
+     ],
+     "pied": "Modèles imaginés pour l’exercice",
+     "teinte": "violet"
+    },
+    {
+     "id": "abonnes",
+     "type": "tableau",
+     "titre": "Abonnés relevés",
+     "colonnes": [
+      "Mois n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Léa u(n)",
+       300,
+       500,
+       700,
+       900,
+       1100,
+       1300
+      ],
+      [
+       "Sam v(n)",
+       100,
+       200,
+       400,
+       800,
+       1600,
+       3200
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modeles",
+     "enonce": "Touche le modèle défini par récurrence.",
+     "reponse": [
+      "sam"
+     ],
+     "aide": "Dans une définition par récurrence, on passe d’un terme au suivant.",
+     "explication": "Le modèle de **Sam** donne v(n+1) à partir de v(n) : c’est une récurrence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés Léa aura-t-elle au mois 10 ?",
+     "reponse": 2300,
+     "aide": "Avec une formule explicite, remplace directement n par 10.",
+     "explication": "u(10) = 300 + 200 × 10 = **2 300**."
+    },
+    {
+     "type": "zone",
+     "document": "abonnes",
+     "enonce": "Touche la première case où Sam a plus d’abonnés que Léa.",
+     "reponse": [
+      "r1c5"
+     ],
+     "aide": "Compare les deux lignes colonne par colonne, en partant de la gauche.",
+     "explication": "Au mois 3, Sam a 800 contre 900 pour Léa. Au mois 4 : **1 600 contre 1 100**, Sam passe devant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés Sam aura-t-il au mois 6 ?",
+     "reponse": 6400,
+     "aide": "On avance pas à pas : v(6) = 2 × v(5).",
+     "explication": "v(6) = 2 × v(5) = 2 × 3 200 = **6 400**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne peut-on pas calculer v(10) aussi vite que u(10) ?",
+     "options": [
+      "Il faut d’abord calculer v(1), …, v(9)",
+      "Parce que v(10) n’existe pas pour cette suite",
+      "Parce que v est décroissante, ce qui bloque le calcul",
+      "Parce que v n’est pas une vraie suite de nombres"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce qu’il faut connaître pour obtenir un terme dans chaque modèle.",
+     "explication": "Avec la récurrence, chaque terme dépend du précédent : pour v(10), il faut calculer **v(1), v(2), …, v(9)**. La formule de Léa permet de sauter directement au rang voulu."
+    }
+   ]
+  },
+  {
+   "chapitre": "aedc12e6-87e6-58f7-b6b2-02dcd52e27b6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La proposition d’embauche de l’atelier",
+   "competence": "calculer",
+   "situation": "Théo vient de recevoir une proposition d’embauche dans un atelier d’usinage. Il veut savoir comment son salaire évoluera au fil des années.",
+   "documents": [
+    {
+     "id": "offre",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Atelier Perrin",
+     "sousTitre": "Proposition d’embauche",
+     "emoji": "🛠️",
+     "lignes": [
+      {
+       "texte": "Salaire mensuel de départ",
+       "valeur": "1 400 €",
+       "id": "depart"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Augmentation chaque année",
+       "valeur": "+ 30 €",
+       "id": "aug"
+      }
+     ],
+     "pied": "Offre imaginée pour l’exercice",
+     "teinte": "turquoise"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "offre",
+     "enonce": "Touche la ligne qui donne la raison de la suite des salaires.",
+     "reponse": [
+      "aug"
+     ],
+     "aide": "La raison est ce qu’on ajoute à chaque nouveau terme.",
+     "explication": "On ajoute **30 €** chaque année : la raison est r = 30. Le salaire de départ, lui, est u(0)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel sera le salaire mensuel de Théo après 5 ans d’ancienneté ?",
+     "reponse": 1550,
+     "unite": "€",
+     "aide": "Utilise u(n) = u(0) + n × r.",
+     "explication": "u(5) = 1 400 + 5 × 30 = 1 400 + 150 = **1 550 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après combien d’années son salaire atteindra-t-il 1 700 € ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Retire le salaire de départ, puis demande-toi combien d’augmentations de 30 € il faut.",
+     "explication": "1 700 − 1 400 = 300 et 300 ÷ 30 = **10** ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel modèle convient pour décrire ces salaires année après année ?",
+     "options": [
+      "Suite arithmétique de raison 30",
+      "Suite géométrique de raison 30",
+      "Suite arithmétique de raison 1 400",
+      "Suite géométrique de raison 1,03"
+     ],
+     "reponse": 0,
+     "aide": "On ajoute chaque année la même somme d’argent.",
+     "explication": "Une augmentation d’une **somme fixe** correspond à une suite **arithmétique de raison 30**."
+    }
+   ]
+  },
+  {
+   "chapitre": "aedc12e6-87e6-58f7-b6b2-02dcd52e27b6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La cuve de mazout qui se vide",
+   "competence": "modeliser",
+   "situation": "Une école consomme du mazout pour se chauffer. Le technicien relève le niveau de la cuve chaque jour et remarque qu’il baisse de façon très régulière.",
+   "documents": [
+    {
+     "id": "cuve",
+     "type": "tableau",
+     "titre": "Niveau de la cuve de mazout",
+     "colonnes": [
+      "Jour n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Niveau (L)",
+       1000,
+       965,
+       930,
+       895,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cuve",
+     "enonce": "Touche le premier terme de la suite, celui du jour 0.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le jour 0 est la première colonne de données.",
+     "explication": "Le premier terme est **u(0) = 1 000** litres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison de cette suite arithmétique ? Écris un nombre négatif si le niveau baisse.",
+     "reponse": -35,
+     "aide": "Calcule 965 − 1 000, puis 930 − 965 : le résultat est le même.",
+     "explication": "Chaque jour on retire 35 L : u(n+1) − u(n) = −35. La raison est **r = −35**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel sera le niveau de la cuve au jour 4 (case manquante) ?",
+     "reponse": 860,
+     "unite": "L",
+     "aide": "Ajoute la raison au terme du jour 3.",
+     "explication": "u(4) = 895 − 35 = **860 L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la formule explicite de cette suite ?",
+     "options": [
+      "u(n) = 1 000 − 35n",
+      "u(n) = 35 + 1 000n",
+      "u(n) = 965 − 35n",
+      "u(n) = 1 000 × 0,965ⁿ"
+     ],
+     "reponse": 0,
+     "aide": "u(n) = u(0) + n × r, avec r négatif ici.",
+     "explication": "Avec u(0) = 1 000 et r = −35 : **u(n) = 1 000 − 35n**. Contrôle : u(3) = 1 000 − 105 = 895."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de quel jour la cuve contient-elle strictement moins de 300 L ?",
+     "reponse": 21,
+     "unite": "jours",
+     "aide": "Résous 1 000 − 35n < 300, c’est-à-dire 35n > 700.",
+     "explication": "35n > 700 donne n > 20 : il faut n = **21** (au jour 20, il reste exactement 300 L, pas moins)."
+    }
+   ]
+  },
+  {
+   "chapitre": "aedc12e6-87e6-58f7-b6b2-02dcd52e27b6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux salles de sport à comparer",
+   "competence": "raisonner",
+   "situation": "Alix hésite entre deux salles de sport. Elle compare leurs tarifs sur une affiche et sur un graphique des sommes totales payées au bout de n mois.",
+   "documents": [
+    {
+     "id": "offres",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Deux salles, deux tarifs",
+     "sousTitre": "Prix payés au total",
+     "emoji": "🏋️",
+     "lignes": [
+      {
+       "texte": "Salle A : 30 € d’inscription, puis par mois",
+       "valeur": "25 €",
+       "id": "a"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Salle B : sans inscription, par mois",
+       "valeur": "35 €",
+       "id": "b"
+      }
+     ],
+     "pied": "Tarifs imaginés pour l’exercice",
+     "teinte": "bleu"
+    },
+    {
+     "id": "couts",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Somme totale payée après n mois",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Salle A",
+       "valeurs": [
+        30,
+        55,
+        80,
+        105,
+        130,
+        155,
+        180
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Salle B",
+       "valeurs": [
+        0,
+        35,
+        70,
+        105,
+        140,
+        175,
+        210
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Somme payée",
+      "unite": "en €",
+      "min": 0,
+      "max": 220,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Mois n"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couts",
+     "enonce": "Touche le mois où les deux salles ont coûté exactement la même somme.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche l’endroit où les deux courbes se croisent.",
+     "explication": "Au mois **3**, les deux salles reviennent à 105 € : 30 + 25 × 3 = 35 × 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison de la suite des sommes payées à la salle A ?",
+     "reponse": 25,
+     "unite": "€",
+     "aide": "Que ajoute-t-on à chaque mois, hors inscription ?",
+     "explication": "On ajoute **25 €** chaque mois : a(n) = 30 + 25n est arithmétique de raison 25."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 12 mois, quelle économie la salle A permet-elle par rapport à la salle B ?",
+     "reponse": 90,
+     "unite": "€",
+     "aide": "Calcule a(12) = 30 + 25 × 12 et b(12) = 35 × 12, puis la différence.",
+     "explication": "a(12) = 330 et b(12) = 420 : l’économie est de 420 − 330 = **90 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de mois a-t-on payé exactement 255 € à la salle A ?",
+     "reponse": 9,
+     "unite": "mois",
+     "aide": "Résous 30 + 25n = 255.",
+     "explication": "25n = 255 − 30 = 225, donc n = 225 ÷ 25 = **9** mois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Alix pense rester 24 mois. Quelle salle est la plus avantageuse ?",
+     "options": [
+      "A, qui coûte 210 € de moins",
+      "B, qui coûte 210 € de moins",
+      "A, qui coûte 90 € de moins",
+      "Les deux coûtent pareil"
+     ],
+     "reponse": 0,
+     "aide": "Calcule les deux sommes pour n = 24.",
+     "explication": "a(24) = 30 + 600 = 630 € et b(24) = 840 € : la salle **A** coûte 840 − 630 = 210 € de moins."
+    }
+   ]
+  },
+  {
+   "chapitre": "4fff1f52-68e2-5a21-9dfa-675bc79dfe8f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le livret d’épargne de Camille",
+   "competence": "calculer",
+   "situation": "Camille place 2 000 € sur un livret. Chaque année, la banque ajoute des intérêts calculés sur la somme déjà présente sur le livret.",
+   "documents": [
+    {
+     "id": "livret",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Banque Horizon",
+     "sousTitre": "Livret d’épargne",
+     "emoji": "🏦",
+     "lignes": [
+      {
+       "texte": "Somme déposée au départ",
+       "valeur": "2 000 €",
+       "id": "capital"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Intérêts chaque année",
+       "valeur": "5 % de la somme",
+       "id": "taux"
+      }
+     ],
+     "pied": "Taux imaginé pour l’exercice",
+     "teinte": "jaune"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livret",
+     "enonce": "Touche la ligne qui permet de trouver la raison de la suite.",
+     "reponse": [
+      "taux"
+     ],
+     "aide": "Cherche le pourcentage d’évolution.",
+     "explication": "Le taux de **5 %** par an donne la raison : q = 1 + 0,05."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de la suite des sommes présentes sur le livret ?",
+     "reponse": 1.05,
+     "aide": "Augmenter de t %, c’est multiplier par 1 + t/100.",
+     "explication": "Une hausse de 5 % correspond à un coefficient de **1,05**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme Camille aura-t-elle sur son livret après 2 ans ?",
+     "reponse": 2205,
+     "unite": "€",
+     "aide": "Utilise u(n) = u(0) × qⁿ avec n = 2.",
+     "explication": "u(2) = 2 000 × 1,05² = 2 000 × 1,1025 = **2 205 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les intérêts de la 2e année sont-ils plus élevés que ceux de la 1re ?",
+     "options": [
+      "Oui : 105 € contre 100 €",
+      "Non : ils sont identiques, 100 € chaque année",
+      "Non : ils sont plus faibles",
+      "Oui : 110 € contre 100 €"
+     ],
+     "reponse": 0,
+     "aide": "Les intérêts de la 2e année se calculent sur 2 100 €.",
+     "explication": "5 % de 2 000 = 100 €, puis 5 % de 2 100 = **105 €** : on touche des intérêts sur les intérêts."
+    }
+   ]
+  },
+  {
+   "chapitre": "4fff1f52-68e2-5a21-9dfa-675bc79dfe8f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La ville qui perd des habitants",
+   "competence": "lire-tableau",
+   "situation": "Dans une ville imaginée, la mairie suit le nombre d’habitants. Il baisse du même pourcentage chaque année, et un élu annonce « 5 % de moins par an, donc 15 % en trois ans ».",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "tableau",
+     "titre": "Habitants de la ville",
+     "colonnes": [
+      "Année n",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "Habitants",
+       40000,
+       38000,
+       36100,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "De quelle nature est la suite des nombres d’habitants ?",
+     "options": [
+      "Géométrique : le quotient est constant",
+      "Arithmétique : la différence est constante",
+      "Ni l’une ni l’autre",
+      "Géométrique : la différence est constante"
+     ],
+     "reponse": 0,
+     "aide": "Calcule 38 000 − 40 000 et 36 100 − 38 000, puis les quotients 38 000 ÷ 40 000 et 36 100 ÷ 38 000.",
+     "explication": "Les différences (−2 000 puis −1 900) varient, mais les quotients valent 0,95 à chaque fois : la suite est **géométrique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de cette suite ?",
+     "reponse": 0.95,
+     "aide": "Divise un terme par le précédent.",
+     "explication": "q = 38 000 ÷ 40 000 = **0,95**, ce qui correspond à une baisse de 5 % par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants la ville aura-t-elle l’année 3 (case manquante) ?",
+     "reponse": 34295,
+     "aide": "Multiplie le terme de l’année 2 par la raison.",
+     "explication": "u(3) = 36 100 × 0,95 = **34 295** habitants."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’élu dit que la baisse totale en trois ans est de 15 %. Que peut-on lui répondre ?",
+     "options": [
+      "Elle vaut environ 14,3 %",
+      "Elle vaut exactement 15 %",
+      "Elle vaut environ 5 %",
+      "Elle vaut environ 16 %"
+     ],
+     "reponse": 0,
+     "aide": "Compare u(3) à u(0) : calcule 34 295 ÷ 40 000.",
+     "explication": "34 295 ÷ 40 000 = 0,857375 = 1 − 0,142625 : la baisse est d’environ **14,3 %**, pas de 15 %. Les pourcentages successifs ne s’additionnent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "4fff1f52-68e2-5a21-9dfa-675bc79dfe8f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux chaînes vidéo, deux façons de grandir",
+   "competence": "raisonner",
+   "situation": "Tom gagne un nombre fixe d’abonnés chaque mois, alors qu’Eva voit les siens doubler. Une fiche résume leurs deux situations, et un graphique les compare pendant cinq mois.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Tom contre Eva",
+     "sousTitre": "Abonnés mois après mois",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "Tom : 1 000 au départ, chaque mois",
+       "valeur": "+ 500",
+       "id": "tom"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Eva : 250 au départ, chaque mois",
+       "valeur": "× 2",
+       "id": "eva"
+      }
+     ],
+     "pied": "Situation imaginée pour l’exercice",
+     "teinte": "violet"
+    },
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Abonnés après n mois",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Tom",
+       "valeurs": [
+        1000,
+        1500,
+        2000,
+        2500,
+        3000,
+        3500
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Eva",
+       "valeurs": [
+        250,
+        500,
+        1000,
+        2000,
+        4000,
+        8000
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Abonnés",
+      "min": 0,
+      "max": 8000,
+      "pas": 1000
+     },
+     "axeX": {
+      "titre": "Mois n"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbes",
+     "enonce": "Touche le premier mois où Eva a strictement plus d’abonnés que Tom.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Compare les deux courbes mois après mois : au mois 3, Eva est-elle déjà devant ?",
+     "explication": "Au mois 3 : 2 000 contre 2 500. Au mois **4** : 4 000 contre 3 000, Eva passe devant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés Tom a-t-il au mois 4 ? Lis le graphique.",
+     "reponse": 3000,
+     "tolerance": 100,
+     "aide": "Repère le point de la courbe de Tom au-dessus du mois 4.",
+     "explication": "Le point de Tom au mois 4 est à **3 000** : 1 000 + 4 × 500."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’abonnés Eva aura-t-elle au mois 6 ?",
+     "reponse": 16000,
+     "aide": "u(n) = 250 × 2ⁿ : ici n = 6, ou double deux fois le terme du mois 4.",
+     "explication": "u(6) = 250 × 2⁶ = 250 × 64 = **16 000** (on retrouve 8 000 × 2 pour passer du mois 5 au mois 6)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au mois 6, de combien d’abonnés Eva devance-t-elle Tom ?",
+     "reponse": 12000,
+     "aide": "Tom : 1 000 + 6 × 500. Retire son total à celui d’Eva.",
+     "explication": "Tom : 1 000 + 3 000 = 4 000. Écart : 16 000 − 4 000 = **12 000** abonnés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que va-t-il se passer ensuite, sachant qu’Eva multiplie par 2 chaque mois ?",
+     "options": [
+      "L’écart en faveur d’Eva continue de grandir",
+      "Tom repasse devant Eva",
+      "Les deux nombres redeviennent égaux",
+      "Eva se stabilise à 8 000"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce qu’ajoute Tom chaque mois (500) avec ce que gagne Eva.",
+     "explication": "Tom ajoute toujours 500, alors qu’Eva double : sa croissance **exponentielle** finit toujours par l’emporter sur la croissance linéaire."
+    }
+   ]
+  }
+ ]
+}

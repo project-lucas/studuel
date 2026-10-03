@@ -1,0 +1,3614 @@
+{
+ "niveau": "1re",
+ "matiere": "physique-chimie-sante",
+ "exercices": [
+  {
+   "chapitre": "c51cb50e-8260-5c0a-b55a-d1604ffdde1f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bilan de repos de Samia",
+   "competence": "calculer",
+   "situation": "Samia, 16 ans, passe un bilan de santé avant de s’inscrire au club d’athlétisme. L’infirmière note ses mesures de repos sur une fiche. Tu vas en tirer son débit cardiaque et interpréter sa tension.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Fiche de bilan",
+     "entete": "Bilan de santé — mesures de repos",
+     "sousTitre": "Samia, 16 ans",
+     "emoji": "🩺",
+     "lignes": [
+      {
+       "texte": "Fréquence cardiaque",
+       "valeur": "72 battements/min",
+       "id": "fc"
+      },
+      {
+       "texte": "Volume d’éjection systolique",
+       "valeur": "75 mL",
+       "id": "ves"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Tension artérielle",
+       "valeur": "13/8",
+       "id": "tension"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui donne le volume de sang éjecté par le cœur à chaque battement.",
+     "reponse": [
+      "ves"
+     ],
+     "aide": "Le volume d’éjection systolique (VES) est un volume : il s’exprime en mL.",
+     "explication": "Le **volume d’éjection systolique (VES)** est le volume de sang expulsé à chaque contraction : ici 75 mL."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le débit cardiaque de Samia, en litres par minute (DC = fC × VES).",
+     "reponse": 5.4,
+     "unite": "L/min",
+     "tolerance": 0.05,
+     "aide": "Multiplie les deux valeurs de la fiche, puis convertis les mL en L (1 L = 1 000 mL).",
+     "explication": "DC = fC × VES = 72 × 75 = 5 400 mL/min, soit **5,4 L/min**. C’est un ordre de grandeur normal au repos (environ 5 L/min)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sa tension est notée « 13/8 ». Que peut-on en dire ?",
+     "options": [
+      "Elle reste en dessous du seuil d’hypertension, 14/9",
+      "Elle atteint le seuil d’hypertension, 14/9",
+      "La tension systolique est de 8 cmHg",
+      "La tension diastolique est de 13 cmHg"
+     ],
+     "reponse": 0,
+     "aide": "Le premier nombre est la tension systolique, le second la diastolique. Compare chacun à 14 et à 9.",
+     "explication": "13 cmHg de systolique et 8 cmHg de diastolique : **13/8 est sous le seuil 14/9** de l’hypertension (qui se juge sur des mesures répétées)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c51cb50e-8260-5c0a-b55a-d1604ffdde1f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La poche de perfusion de M. Garnier",
+   "competence": "modeliser",
+   "situation": "À l’hôpital, l’infirmière installe une perfusion à M. Garnier. Elle accroche la poche à 0,80 m au-dessus de la veine du bras. Pour que le liquide entre dans la veine, sa pression doit dépasser celle du sang veineux.",
+   "documents": [
+    {
+     "id": "perf",
+     "type": "schema",
+     "titre": "La perfusion de M. Garnier (hors échelle)",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 270,
+       "l": 70,
+       "h": 8,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        270
+       ],
+       "a": [
+        60,
+        20
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        20
+       ],
+       "a": [
+        112,
+        20
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        20
+       ],
+       "a": [
+        112,
+        34
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "rect",
+       "x": 85,
+       "y": 34,
+       "l": 54,
+       "h": 66,
+       "arrondi": 12,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "poche",
+       "zone": true,
+       "texte": "Poche"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        100
+       ],
+       "a": [
+        112,
+        112
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 112,
+       "l": 24,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "compte",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 112,
+       "cy": 126,
+       "r": 3,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        140
+       ],
+       "a": [
+        112,
+        225
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        225
+       ],
+       "a": [
+        212,
+        225
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 212,
+       "y": 203,
+       "l": 96,
+       "h": 44,
+       "arrondi": 14,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "bras",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        226,
+        225
+       ],
+       "a": [
+        300,
+        225
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 262,
+       "texte": "Bras",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 218,
+       "texte": "veine",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        100
+       ],
+       "a": [
+        188,
+        100
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        176,
+        102
+       ],
+       "a": [
+        176,
+        223
+       ],
+       "fleche": "deux",
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 168,
+       "texte": "h = 0,80 m",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma simplifié pour l’exercice"
+    },
+    {
+     "id": "donnees",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Données",
+     "blocs": [
+      "La solution a la masse volumique de l’eau : ρ = 1 000 kg/m³. Intensité de la pesanteur : g = 9,81 N/kg.",
+      "La pression du sang veineux dépasse la pression atmosphérique de 1 200 Pa.",
+      "Relation : P = ρ × g × h."
+     ],
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "perf",
+     "enonce": "Touche l’élément dont la hauteur au-dessus du bras fixe la pression du liquide à l’entrée de la veine.",
+     "reponse": [
+      "poche"
+     ],
+     "aide": "C’est le réservoir de liquide, accroché en hauteur.",
+     "explication": "La pression ne dépend que de la hauteur de liquide au-dessus de la veine : c’est le niveau de **la poche** qui compte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la pression due à la hauteur h = 0,80 m, en pascals, arrondie à la centaine.",
+     "reponse": 7800,
+     "unite": "Pa",
+     "tolerance": 50,
+     "aide": "Écris d’abord P = ρ × g × h, puis remplace par les trois valeurs sans oublier les unités.",
+     "explication": "P = 1 000 × 9,81 × 0,80 = 7 848 Pa, soit environ **7 800 Pa**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La perfusion peut-elle s’écouler dans la veine ?",
+     "options": [
+      "Oui : 7 800 Pa dépasse largement les 1 200 Pa du sang veineux",
+      "Non : il faudrait au moins 10 000 Pa pour entrer dans une veine",
+      "Non : la pression du sang veineux est toujours supérieure",
+      "Oui : la pression du liquide n’a aucun rôle ici"
+     ],
+     "reponse": 0,
+     "aide": "Compare la pression du liquide à celle du sang veineux : laquelle est la plus grande ?",
+     "explication": "Le liquide pousse à environ 7 800 Pa contre 1 200 Pa pour le sang veineux : **il entre dans la veine**. Une poche trop basse ne coulerait plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle hauteur minimale (en cm, arrondie à l’unité) faudrait-il placer la poche pour égaler la pression du sang veineux ?",
+     "reponse": 12,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Isole h dans P = ρ × g × h, avec P = 1 200 Pa, puis convertis des mètres en centimètres.",
+     "explication": "h = P / (ρ × g) = 1 200 / (1 000 × 9,81) ≈ 0,122 m, soit **12 cm** : en dessous, la perfusion ne coule plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "c51cb50e-8260-5c0a-b55a-d1604ffdde1f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une artère carotide rétrécie",
+   "competence": "analyser-document",
+   "situation": "M. Roche, 62 ans, passe un écho-doppler de l’artère carotide : le médecin repère un rétrécissement. Il lui demande aussi de noter sa tension pendant trois jours, matin et soir.",
+   "documents": [
+    {
+     "id": "artere",
+     "type": "schema",
+     "titre": "Coupe de la carotide de M. Roche (hors échelle)",
+     "largeur": 320,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         20,
+         40
+        ],
+        [
+         300,
+         40
+        ],
+        [
+         300,
+         160
+        ],
+        [
+         20,
+         160
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 40,
+       "l": 90,
+       "h": 120,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "large",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 84,
+       "l": 50,
+       "h": 32,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "etroit",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         110,
+         40
+        ],
+        [
+         140,
+         84
+        ],
+        [
+         190,
+         84
+        ],
+        [
+         220,
+         40
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "plaque",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         110,
+         160
+        ],
+        [
+         140,
+         116
+        ],
+        [
+         190,
+         116
+        ],
+        [
+         220,
+         160
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "plaque2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        100
+       ],
+       "a": [
+        80,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        100
+       ],
+       "a": [
+        290,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 30,
+       "texte": "dépôt de graisse",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 182,
+       "texte": "sens du sang →",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    },
+    {
+     "id": "tension",
+     "type": "tableau",
+     "titre": "Automesures de tension (cmHg)",
+     "colonnes": [
+      "Jour",
+      "Matin",
+      "Soir"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       "14/9",
+       "15/9"
+      ],
+      [
+       "Mardi",
+       "14/10",
+       "14/9"
+      ],
+      [
+       "Mercredi",
+       "15/9",
+       "16/10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "artere",
+     "enonce": "Sur le schéma, touche l’endroit où le sang circule le plus vite, à débit constant.",
+     "reponse": [
+      "etroit"
+     ],
+     "aide": "À débit constant, une section plus petite oblige le sang à aller plus vite.",
+     "explication": "D = v × S est constant : là où la section est la plus petite, **dans le rétrécissement**, la vitesse est la plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le débit dans la carotide est D = 6,0 cm³/s. Dans la partie normale, la section vaut 0,30 cm². Calcule la vitesse du sang, en cm/s.",
+     "reponse": 20,
+     "unite": "cm/s",
+     "tolerance": 0.1,
+     "aide": "D = v × S, donc v = D / S.",
+     "explication": "v = D / S = 6,0 / 0,30 = **20 cm/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le rétrécissement, la section n’est plus que de 0,12 cm². Quelle est alors la vitesse du sang, en cm/s ?",
+     "reponse": 50,
+     "unite": "cm/s",
+     "tolerance": 0.1,
+     "aide": "Le débit reste le même : utilise encore v = D / S avec la nouvelle section.",
+     "explication": "v = 6,0 / 0,12 = **50 cm/s** : la section a été divisée par 2,5, la vitesse est multipliée par 2,5."
+    },
+    {
+     "type": "zone",
+     "document": "tension",
+     "enonce": "Touche la mesure de tension systolique la plus élevée du tableau.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Compare seulement le premier nombre de chaque case (la systolique).",
+     "explication": "La plus haute systolique est **16** (mercredi soir : 16/10), soit 160 mmHg."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de ces six mesures ?",
+     "options": [
+      "Chacune atteint le seuil 14/9 : elles évoquent une hypertension durable",
+      "Elles sont toutes normales, car elles restent sous 12/8",
+      "Une seule dépasse 14/9, donc ce n’est qu’un accident",
+      "On ne peut rien dire : une tension ne se mesure qu’à l’hôpital"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi le seuil de l’hypertension et la notion de mesures répétées.",
+     "explication": "Les six mesures sont **supérieures ou égales à 14/9** : cette tension élevée est durable. Le diagnostic revient au médecin."
+    }
+   ]
+  },
+  {
+   "chapitre": "068d16d6-618c-528c-af36-1b124319b813",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre produits de la pharmacie",
+   "competence": "analyser-document",
+   "situation": "En stage à la pharmacie, Hugo range quatre produits dont la molécule est notée sur l’étiquette. Il doit reconnaître la famille chimique de chacun grâce à son groupe caractéristique.",
+   "documents": [
+    {
+     "id": "produits",
+     "type": "tableau",
+     "titre": "Les produits de l’étagère",
+     "colonnes": [
+      "Produit",
+      "Usage",
+      "Formule semi-développée"
+     ],
+     "lignes": [
+      [
+       "Éthanol",
+       "gel hydroalcoolique",
+       "CH₃–CH₂–OH"
+      ],
+      [
+       "Propanone",
+       "dissolvant",
+       "CH₃–CO–CH₃"
+      ],
+      [
+       "Acide éthanoïque",
+       "vinaigre blanc",
+       "CH₃–COOH"
+      ],
+      [
+       "Éthanal",
+       "industrie chimique",
+       "CH₃–CHO"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "produits",
+     "enonce": "Touche la formule qui contient un groupe –COOH.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche un carbone lié à la fois à un O double et à un groupe OH.",
+     "explication": "Le groupe **–COOH** est celui de l’acide éthanoïque : c’est un acide carboxylique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque formule à sa fonction chimique.",
+     "paires": [
+      [
+       "CH₃–CH₂–OH",
+       "Alcool"
+      ],
+      [
+       "CH₃–CO–CH₃",
+       "Cétone"
+      ],
+      [
+       "CH₃–COOH",
+       "Acide carboxylique"
+      ],
+      [
+       "CH₃–CHO",
+       "Aldéhyde"
+      ]
+     ],
+     "aide": "Repère l’oxygène : un C=O au milieu de la chaîne n’est pas un C=O en bout de chaîne.",
+     "explication": "**–OH** seul : alcool. **C=O au milieu** : cétone. **–COOH** : acide carboxylique. **–CHO en bout de chaîne** : aldéhyde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La formule brute de la propanone est C₃H₆O. Combien d’atomes d’hydrogène compte-t-elle sur sa formule semi-développée CH₃–CO–CH₃ ?",
+     "reponse": 6,
+     "unite": "atomes",
+     "aide": "Compte les H de chaque CH₃ : deux groupes, trois H chacun.",
+     "explication": "Deux groupes CH₃ valent 2 × 3 = **6 atomes d’hydrogène**, ce qui confirme la formule brute C₃H₆O."
+    }
+   ]
+  },
+  {
+   "chapitre": "068d16d6-618c-528c-af36-1b124319b813",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq molécules, deux familles de formules",
+   "competence": "raisonner",
+   "situation": "Lina prépare un exposé sur l’isomérie. Elle a noté cinq molécules du programme et cherche lesquelles ont la même formule brute, c’est-à-dire lesquelles sont des isomères.",
+   "documents": [
+    {
+     "id": "liste",
+     "type": "tableau",
+     "titre": "Les molécules de Lina",
+     "colonnes": [
+      "Molécule",
+      "Formule semi-développée"
+     ],
+     "lignes": [
+      [
+       "A",
+       "CH₃–CH₂–OH"
+      ],
+      [
+       "B",
+       "CH₃–O–CH₃"
+      ],
+      [
+       "C",
+       "CH₃–CH₂–CH₂–OH"
+      ],
+      [
+       "D",
+       "CH₃–CH(OH)–CH₃"
+      ],
+      [
+       "E",
+       "CH₃–O–CH₂–CH₃"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liste",
+     "enonce": "Touche les deux molécules qui possèdent un groupe C–O–C.",
+     "reponse": [
+      "r1c1",
+      "r4c1"
+     ],
+     "multiple": true,
+     "aide": "Cherche un oxygène placé entre deux carbones, sans hydrogène accroché.",
+     "explication": "Les molécules **B et E** ont un oxygène entre deux carbones : ce sont des étheroxydes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque molécule selon sa formule brute.",
+     "categories": [
+      "C₂H₆O",
+      "C₃H₈O"
+     ],
+     "items": [
+      [
+       "Molécule A",
+       0
+      ],
+      [
+       "Molécule B",
+       0
+      ],
+      [
+       "Molécule C",
+       1
+      ],
+      [
+       "Molécule D",
+       1
+      ],
+      [
+       "Molécule E",
+       1
+      ]
+     ],
+     "aide": "Compte les C, les H et les O de chaque formule semi-développée.",
+     "explication": "A et B ont 2 C, 6 H, 1 O : **C₂H₆O**. C, D et E ont 3 C, 8 H, 1 O : **C₃H₈O**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules du tableau sont des isomères de la molécule C ?",
+     "reponse": 2,
+     "unite": "molécules",
+     "aide": "Un isomère de C a la même formule brute que C, mais n’est pas C.",
+     "explication": "C₃H₈O : D et E, soit **2 molécules**. A et B n’ont que 2 atomes de carbone."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition de l’isomérie.",
+     "texte": "Deux isomères ont la même formule ___ mais des formules ___ différentes.",
+     "reponses": [
+      [
+       "brute"
+      ],
+      [
+       "développées"
+      ]
+     ],
+     "banque": [
+      "brute",
+      "développées",
+      "topologique",
+      "moléculaire"
+     ],
+     "aide": "La première formule compte seulement les atomes ; la seconde montre toutes les liaisons.",
+     "explication": "Même formule **brute**, formules **développées** différentes : ce sont des molécules différentes aux propriétés différentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "068d16d6-618c-528c-af36-1b124319b813",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’acide lactique au laboratoire",
+   "competence": "observer-schema",
+   "situation": "Karim, technicien de laboratoire, reçoit un flacon étiqueté « acide lactique ». Il vérifie sa formule développée sur le schéma, puis compare trois flacons voisins.",
+   "documents": [
+    {
+     "id": "lactique",
+     "type": "schema",
+     "titre": "Acide lactique : formule développée",
+     "largeur": 320,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 2,
+       "l": 36,
+       "h": 74,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "oh",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 38,
+       "l": 124,
+       "h": 80,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cooh",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 105,
+       "texte": "C",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 105,
+       "texte": "C",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 105,
+       "texte": "C",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        100
+       ],
+       "a": [
+        120,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        100
+       ],
+       "a": [
+        190,
+        100
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 105,
+       "texte": "H",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        28,
+        100
+       ],
+       "a": [
+        50,
+        100
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 60,
+       "texte": "H",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        90
+       ],
+       "a": [
+        60,
+        68
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 150,
+       "texte": "H",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        110
+       ],
+       "a": [
+        60,
+        134
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 60,
+       "texte": "O",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        90
+       ],
+       "a": [
+        130,
+        68
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 22,
+       "texte": "H",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        52
+       ],
+       "a": [
+        130,
+        30
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 150,
+       "texte": "H",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        110
+       ],
+       "a": [
+        130,
+        134
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 60,
+       "texte": "O",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        196,
+        90
+       ],
+       "a": [
+        196,
+        68
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        204,
+        90
+       ],
+       "a": [
+        204,
+        68
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 105,
+       "texte": "O",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        100
+       ],
+       "a": [
+        242,
+        100
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 105,
+       "texte": "H",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258,
+        100
+       ],
+       "a": [
+        282,
+        100
+       ]
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "flacons",
+     "type": "tableau",
+     "titre": "Les trois flacons du rayon",
+     "colonnes": [
+      "Flacon",
+      "Formule semi-développée"
+     ],
+     "lignes": [
+      [
+       "X",
+       "CH₃–CH(OH)–COOH"
+      ],
+      [
+       "Y",
+       "CH₃–CH₂–COOH"
+      ],
+      [
+       "Z",
+       "HO–CH₂–CH₂–COOH"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lactique",
+     "enonce": "Touche le groupe hydroxyle –OH porté par le carbone central.",
+     "reponse": [
+      "oh"
+     ],
+     "aide": "Cherche un O relié à un H, au-dessus du carbone du milieu.",
+     "explication": "Le –OH lié à un carbone relié à quatre atomes est le groupe caractéristique d’un **alcool**."
+    },
+    {
+     "type": "zone",
+     "document": "lactique",
+     "enonce": "Touche le groupe carboxyle –COOH.",
+     "reponse": [
+      "cooh"
+     ],
+     "aide": "Il se trouve à l’extrémité de la molécule : un C avec un O double et un O–H.",
+     "explication": "Le carbone lié à un **O double** et à un **–OH** forme le groupe –COOH : c’est la fonction **acide carboxylique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’hydrogène l’acide lactique compte-t-il en tout sur ce schéma ?",
+     "reponse": 6,
+     "unite": "atomes",
+     "aide": "Compte chaque H dessiné : sur les carbones et sur les deux oxygènes.",
+     "explication": "3 H sur le premier carbone, 1 sur le carbone central, 1 sur l’alcool et 1 sur l’acide : **6 atomes**. La formule brute est C₃H₆O₃."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi Y et Z, quel flacon contient un isomère de l’acide lactique (flacon X) ?",
+     "options": [
+      "Seulement Z : C₃H₆O₃ comme X, mais avec une formule développée différente",
+      "Seulement Y : il a trois carbones comme X",
+      "Y et Z : ils ont tous deux trois carbones",
+      "Aucun des deux : les isomères ont des formules brutes différentes"
+     ],
+     "reponse": 0,
+     "aide": "Écris la formule brute de chaque flacon : l’isomère doit avoir exactement la même que X.",
+     "explication": "X et Z sont **C₃H₆O₃** ; Y est C₃H₆O₂ (un O de moins). Z ne diffère de X que par la place du groupe –OH : c’est un isomère."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le nom des fonctions présentes dans l’acide lactique.",
+     "texte": "Le groupe –OH sur le carbone central est une fonction ___ ; le groupe –COOH est une fonction ___.",
+     "reponses": [
+      [
+       "alcool"
+      ],
+      [
+       "acide carboxylique"
+      ]
+     ],
+     "banque": [
+      "alcool",
+      "acide carboxylique",
+      "cétone",
+      "amine"
+     ],
+     "aide": "Rappelle-toi : C–OH est la marque d’une famille, –COOH celle d’une autre.",
+     "explication": "L’acide lactique est à la fois un **alcool** et un **acide carboxylique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b95c7ad-f795-56b2-80e9-5f1374da65fc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bilan sanguin de Maëlle",
+   "competence": "analyser-document",
+   "situation": "Maëlle, 17 ans, reçoit les résultats d’une prise de sang. Chaque ligne dose une molécule du vivant : tu retrouves à quelle famille elle appartient.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Résultats du laboratoire",
+     "entete": "Bilan sanguin — résultats",
+     "sousTitre": "Maëlle, 17 ans",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Glycémie à jeun",
+       "valeur": "0,89 g/L",
+       "id": "gly"
+      },
+      {
+       "texte": "Cholestérol total",
+       "valeur": "1,75 g/L",
+       "id": "chol"
+      },
+      {
+       "texte": "Triglycérides",
+       "valeur": "0,95 g/L",
+       "id": "tg"
+      },
+      {
+       "texte": "Urée",
+       "valeur": "0,30 g/L",
+       "id": "uree"
+      }
+     ],
+     "pied": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la ligne qui dose le produit de dégradation des protéines.",
+     "reponse": [
+      "uree"
+     ],
+     "aide": "Le foie fabrique cette molécule à partir de l’ammoniac, issu des acides aminés ; le rein l’élimine.",
+     "explication": "**L’urée** est le produit de dégradation des protéines : son dosage renseigne sur la fonction rénale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dosage à la famille de molécules qu’il mesure.",
+     "paires": [
+      [
+       "Glycémie",
+       "Un glucide"
+      ],
+      [
+       "Cholestérol",
+       "Un stérol"
+      ],
+      [
+       "Triglycérides",
+       "Un triester du glycérol"
+      ],
+      [
+       "Urée",
+       "Un déchet issu des protéines"
+      ]
+     ],
+     "aide": "Le glucose est un sucre ; le cholestérol est bâti sur quatre cycles ; un triglycéride est formé d’un glycérol et de trois acides gras.",
+     "explication": "Glycémie : **glucose, un glucide**. Cholestérol : **un stérol**. Triglycérides : **un triester** du glycérol. Urée : déchet azoté des **protéines**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le fructose a la même formule brute que le glucose, C₆H₁₂O₆, mais une cétone à la place de l’aldéhyde. Que sont-ils l’un pour l’autre ?",
+     "options": [
+      "Des isomères",
+      "Le même corps pur",
+      "Un acide gras et un glycérol",
+      "Un acide aminé et un peptide"
+     ],
+     "reponse": 0,
+     "aide": "Même formule brute, formules développées différentes : cela porte un nom.",
+     "explication": "Glucose et fructose sont des **isomères** : mêmes atomes, mais fonction aldéhyde pour l’un, cétone pour l’autre."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b95c7ad-f795-56b2-80e9-5f1374da65fc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Beurre ou huile : quels acides gras ?",
+   "competence": "lire-graphique",
+   "situation": "Pour son dossier de nutrition, Sofiane compare des matières grasses. Il dispose de la composition de quatre acides gras et d’un graphique qui donne la part des acides gras saturés dans le beurre et trois huiles.",
+   "documents": [
+    {
+     "id": "acides",
+     "type": "tableau",
+     "titre": "Quatre acides gras",
+     "colonnes": [
+      "Acide gras",
+      "Atomes de carbone",
+      "Doubles liaisons C=C"
+     ],
+     "lignes": [
+      [
+       "Acide palmitique",
+       16,
+       0
+      ],
+      [
+       "Acide stéarique",
+       18,
+       0
+      ],
+      [
+       "Acide oléique",
+       18,
+       1
+      ],
+      [
+       "Acide linoléique",
+       18,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données du cours"
+    },
+    {
+     "id": "satures",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Part des acides gras saturés",
+     "categories": [
+      "Beurre",
+      "Huile d’olive",
+      "Huile de tournesol",
+      "Huile de colza"
+     ],
+     "series": [
+      {
+       "nom": "Acides gras saturés",
+       "valeurs": [
+        65,
+        15,
+        11,
+        7
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Acides gras saturés",
+      "unite": "g pour 100 g de matière grasse",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "valeurs": true,
+     "source": "Chiffres arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "satures",
+     "enonce": "Touche la matière grasse la plus riche en acides gras saturés.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "C’est **le beurre** : environ 65 g d’acides gras saturés pour 100 g de matière grasse."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque acide gras du tableau.",
+     "categories": [
+      "Saturé",
+      "Insaturé"
+     ],
+     "items": [
+      [
+       "Acide palmitique",
+       0
+      ],
+      [
+       "Acide stéarique",
+       0
+      ],
+      [
+       "Acide oléique",
+       1
+      ],
+      [
+       "Acide linoléique",
+       1
+      ]
+     ],
+     "aide": "Un acide gras saturé n’a aucune double liaison C=C ; un insaturé en a au moins une.",
+     "explication": "Palmitique et stéarique n’ont **aucune C=C** : saturés. Oléique (une) et linoléique (deux) sont **insaturés**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse d’acides gras saturés contiennent 30 g de matière grasse de beurre, en grammes ?",
+     "reponse": 19.5,
+     "unite": "g",
+     "tolerance": 0.1,
+     "aide": "65 g pour 100 g : fais un produit en croix, ou calcule 65 % de 30.",
+     "explication": "30 × 65 / 100 = **19,5 g** d’acides gras saturés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans l’huile de colza, tous les autres acides gras sont insaturés. Quelle masse d’acides gras insaturés dans 100 g de matière grasse ?",
+     "reponse": 93,
+     "unite": "g",
+     "tolerance": 0.1,
+     "aide": "100 g de matière grasse se partagent entre acides gras saturés et insaturés.",
+     "explication": "100 − 7 = **93 g** d’acides gras insaturés : l’huile de colza en est très riche."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b95c7ad-f795-56b2-80e9-5f1374da65fc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un tripeptide sous le microscope",
+   "competence": "observer-schema",
+   "situation": "En TP, Anaïs doit analyser un tripeptide fabriqué par le laboratoire. Le schéma décompose sa chaîne en groupes d’atomes ; le tableau donne la formule de trois acides α-aminés.",
+   "documents": [
+    {
+     "id": "tripeptide",
+     "type": "schema",
+     "titre": "Un tripeptide, groupe par groupe",
+     "largeur": 320,
+     "hauteur": 140,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 75,
+       "l": 34,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "amine",
+       "zone": true,
+       "texte": "H₂N"
+      },
+      {
+       "forme": "rect",
+       "x": 46,
+       "y": 75,
+       "l": 34,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "CH₂"
+      },
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 75,
+       "l": 50,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "pep1",
+       "zone": true,
+       "texte": "CO–NH"
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 75,
+       "l": 30,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "CH"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        153,
+        75
+       ],
+       "a": [
+        153,
+        56
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 133,
+       "y": 28,
+       "l": 40,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "CH₃"
+      },
+      {
+       "forme": "rect",
+       "x": 172,
+       "y": 75,
+       "l": 50,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "pep2",
+       "zone": true,
+       "texte": "CO–NH"
+      },
+      {
+       "forme": "rect",
+       "x": 226,
+       "y": 75,
+       "l": 34,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "CH₂"
+      },
+      {
+       "forme": "rect",
+       "x": 264,
+       "y": 75,
+       "l": 40,
+       "h": 30,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "acide",
+       "zone": true,
+       "texte": "COOH"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 130,
+       "texte": "Chaque case est un groupe d’atomes de la chaîne",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "aa",
+     "type": "tableau",
+     "titre": "Trois acides α-aminés",
+     "colonnes": [
+      "Acide aminé",
+      "Formule semi-développée"
+     ],
+     "lignes": [
+      [
+       "Glycine",
+       "H₂N–CH₂–COOH"
+      ],
+      [
+       "Alanine",
+       "H₂N–CH(CH₃)–COOH"
+      ],
+      [
+       "Sérine",
+       "H₂N–CH(CH₂OH)–COOH"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tripeptide",
+     "enonce": "Touche les deux liaisons peptidiques de la chaîne.",
+     "reponse": [
+      "pep1",
+      "pep2"
+     ],
+     "multiple": true,
+     "aide": "Une liaison peptidique est le groupe –CO–NH– : repère-le dans les cases.",
+     "explication": "Les deux groupes **–CO–NH–** sont les liaisons peptidiques : elles relient les trois acides aminés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules d’eau ont été libérées lors de la fabrication de ce tripeptide à partir de ses acides aminés ?",
+     "reponse": 2,
+     "unite": "molécules",
+     "aide": "Chaque liaison peptidique formée libère une molécule d’eau.",
+     "explication": "Il y a **2 liaisons peptidiques**, donc 2 molécules d’eau libérées (n acides aminés : n − 1)."
+    },
+    {
+     "type": "choix",
+     "enonce": "On casse les deux liaisons peptidiques par hydrolyse. Quels acides aminés obtient-on ?",
+     "options": [
+      "Deux glycines et une alanine",
+      "Une glycine et deux alanines",
+      "Trois glycines",
+      "Une glycine, une alanine et une sérine"
+     ],
+     "reponse": 0,
+     "aide": "Lis les groupes entre les liaisons : CH₂, puis CH avec un CH₃, puis CH₂. Compare au tableau.",
+     "explication": "CH₂ = glycine, CH(CH₃) = alanine, CH₂ = glycine : **2 glycines et 1 alanine**. Pas de CH₂OH, donc pas de sérine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’azote contient ce tripeptide ?",
+     "reponse": 3,
+     "unite": "atomes",
+     "aide": "Un azote dans le groupe terminal H₂N, et un dans chaque groupe –CO–NH–.",
+     "explication": "1 (H₂N) + 2 (deux –CO–NH–) = **3 atomes d’azote**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le devenir de l’azote des protéines dans l’organisme.",
+     "texte": "Le ___ transforme l’ammoniac en urée, que le ___ élimine dans les urines.",
+     "reponses": [
+      [
+       "foie"
+      ],
+      [
+       "rein"
+      ]
+     ],
+     "banque": [
+      "foie",
+      "rein",
+      "poumon",
+      "cœur"
+     ],
+     "aide": "Un organe fabrique, un autre filtre le sang pour éliminer.",
+     "explication": "Le **foie** fabrique l’urée à partir de l’ammoniac toxique ; le **rein** l’élimine : d’où l’intérêt de doser l’urée dans le sang."
+    }
+   ]
+  },
+  {
+   "chapitre": "0eed559d-dd98-5b87-8542-3d587409ccc2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La molécule d’eau de Camille",
+   "competence": "observer-schema",
+   "situation": "Camille dessine la molécule d’eau pour son cours de physique-chimie. Elle a noté les charges partielles : à toi de lire son schéma.",
+   "documents": [
+    {
+     "id": "eau",
+     "type": "schema",
+     "titre": "La molécule d’eau",
+     "largeur": 320,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        70
+       ],
+       "a": [
+        98,
+        128
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        70
+       ],
+       "a": [
+        222,
+        128
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 70,
+       "r": 26,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "oxy",
+       "zone": true,
+       "texte": "O"
+      },
+      {
+       "forme": "cercle",
+       "cx": 98,
+       "cy": 128,
+       "r": 16,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "h1",
+       "zone": true,
+       "texte": "H"
+      },
+      {
+       "forme": "cercle",
+       "cx": 222,
+       "cy": 128,
+       "r": 16,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "h2",
+       "zone": true,
+       "texte": "H"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 28,
+       "texte": "δ⁻",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 62,
+       "y": 134,
+       "texte": "δ⁺",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 258,
+       "y": 134,
+       "texte": "δ⁺",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 186,
+       "texte": "molécule coudée, charges partielles δ",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eau",
+     "enonce": "Touche l’atome qui porte la charge partielle négative δ⁻.",
+     "reponse": [
+      "oxy"
+     ],
+     "aide": "Un seul atome porte δ⁻ : celui du haut, au sommet de la molécule.",
+     "explication": "L’**oxygène**, plus électronégatif, attire les électrons de liaison : il porte δ⁻."
+    },
+    {
+     "type": "zone",
+     "document": "eau",
+     "enonce": "Touche les deux atomes qui portent la charge partielle positive δ⁺.",
+     "reponse": [
+      "h1",
+      "h2"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les deux atomes les plus petits.",
+     "explication": "Les **deux hydrogènes** cèdent un peu de leurs électrons à l’oxygène : chacun porte δ⁺."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la molécule d’eau entière est-elle polaire ?",
+     "options": [
+      "L’oxygène attire les électrons et la molécule est coudée : les charges ne se compensent pas",
+      "La molécule est alignée et les charges δ⁺ et δ⁻ s’annulent exactement",
+      "Les deux hydrogènes sont plus électronégatifs que l’oxygène dans la molécule",
+      "L’eau contient des ions qui se déplacent librement à l’intérieur de la molécule"
+     ],
+     "reponse": 0,
+     "aide": "Deux conditions se cumulent : une liaison O–H polaire et une forme particulière de la molécule.",
+     "explication": "Liaisons O–H polaires **et** molécule coudée : le centre des charges δ⁺ n’est pas celui des charges δ⁻. La molécule est **polaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0eed559d-dd98-5b87-8542-3d587409ccc2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un glaçon qui chauffe et qui flotte",
+   "competence": "lire-graphique",
+   "situation": "Pour une expérience, Léa chauffe régulièrement un glaçon de 55 g sorti du congélateur, jusqu’à ébullition de l’eau. Elle relève la température toutes les deux minutes. Elle regarde ensuite pourquoi la glace flotte dans son verre.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température du glaçon chauffé",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        -10,
+        0,
+        0,
+        0,
+        20,
+        40,
+        60,
+        80,
+        100,
+        100,
+        100
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": -20,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Relevés écrits pour l’exercice"
+    },
+    {
+     "id": "masse",
+     "type": "tableau",
+     "titre": "Masses volumiques à 0 °C",
+     "colonnes": [
+      "Corps",
+      "Masse volumique (g/cm³)"
+     ],
+     "lignes": [
+      [
+       "Eau liquide",
+       "1,00"
+      ],
+      [
+       "Glace",
+       "0,92"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche les points qui forment le palier de fusion de la glace.",
+     "reponse": [
+      "k1",
+      "k2",
+      "k3"
+     ],
+     "multiple": true,
+     "aide": "Pendant un changement d’état, la température reste constante : cherche les points à 0 °C.",
+     "explication": "Le palier à **0 °C** (de 2 à 6 min) est la fusion de la glace : la température ne bouge pas tant qu’il reste de la glace."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée du palier de fusion, en minutes ?",
+     "reponse": 4,
+     "unite": "min",
+     "tolerance": 0.1,
+     "aide": "Lis le temps où le palier commence et celui où il se termine, puis fais la différence.",
+     "explication": "Le palier commence à 2 min et finit à 6 min : 6 − 2 = **4 min**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il pendant ce palier ?",
+     "options": [
+      "La glace absorbe de la chaleur et fond, sans que sa température change",
+      "La glace ne reçoit plus aucune chaleur de la part du réchaud allumé",
+      "La glace se refroidit puis se réchauffe plusieurs fois en alternance",
+      "L’eau liquide qui vient de se former commence déjà à bouillir"
+     ],
+     "reponse": 0,
+     "aide": "La fusion est une transformation endothermique : elle prélève de la chaleur.",
+     "explication": "Pendant la fusion, la chaleur reçue sert à **changer l’état** (solide → liquide) et non à élever la température : le palier est horizontal."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume occupe le glaçon de 55 g, en cm³ (arrondi à l’unité) ? Utilise V = m / ρ.",
+     "reponse": 60,
+     "unite": "cm³",
+     "tolerance": 0.5,
+     "aide": "Prends la masse volumique de la glace, pas celle de l’eau liquide.",
+     "explication": "V = m / ρ = 55 / 0,92 ≈ 59,8, soit **60 cm³**. Une fois fondu, ce glaçon ne fera plus que 55 cm³ d’eau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le glaçon flotte-t-il dans l’eau liquide ?",
+     "options": [
+      "Sa masse volumique est plus faible : les liaisons hydrogène lui donnent une structure ouverte",
+      "Sa masse volumique est plus grande que celle de l’eau liquide, qu’elle écrase",
+      "Il est plus froid que l’eau liquide, donc forcément plus léger qu’elle",
+      "Il contient de grosses bulles d’air dans toute sa masse, qui le soulèvent"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux masses volumiques du tableau.",
+     "explication": "La glace (0,92 g/cm³) est **moins dense** que l’eau liquide (1,00 g/cm³) : sa structure ouverte, tenue par des liaisons hydrogène, occupe plus de volume."
+    }
+   ]
+  },
+  {
+   "chapitre": "0eed559d-dd98-5b87-8542-3d587409ccc2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le savon et le solvant : chasser le gras",
+   "competence": "experimenter",
+   "situation": "Inès nettoie une assiette grasse, puis extrait au laboratoire (sous la hotte, avec gants et lunettes) une espèce colorée d’une solution aqueuse. Elle doit comprendre la micelle de savon et choisir son solvant.",
+   "documents": [
+    {
+     "id": "micelle",
+     "type": "schema",
+     "titre": "Une micelle de savon dans l’eau",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        87
+       ],
+       "a": [
+        160,
+        55
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 45,
+       "r": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "t0",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        127,
+        106
+       ],
+       "a": [
+        99,
+        90
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 91,
+       "cy": 85,
+       "r": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "t1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        127,
+        144
+       ],
+       "a": [
+        99,
+        160
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 91,
+       "cy": 165,
+       "r": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "t2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        163
+       ],
+       "a": [
+        160,
+        195
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 205,
+       "r": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "t3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        193,
+        144
+       ],
+       "a": [
+        221,
+        160
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 229,
+       "cy": 165,
+       "r": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "t4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        193,
+        106
+       ],
+       "a": [
+        221,
+        90
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 229,
+       "cy": 85,
+       "r": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "t5",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 125,
+       "r": 36,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "graisse",
+       "zone": true,
+       "texte": "graisse"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 30,
+       "texte": "eau",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 242,
+       "texte": "chaque molécule de savon : une tête et une queue",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    },
+    {
+     "id": "liquides",
+     "type": "tableau",
+     "titre": "Les liquides du laboratoire",
+     "colonnes": [
+      "Liquide",
+      "Densité par rapport à l’eau",
+      "Miscible avec l’eau ?"
+     ],
+     "lignes": [
+      [
+       "Eau",
+       "1,00",
+       "—"
+      ],
+      [
+       "Huile d’olive",
+       "0,92",
+       "non"
+      ],
+      [
+       "Éthanol",
+       "0,79",
+       "oui"
+      ],
+      [
+       "Cyclohexane",
+       "0,78",
+       "non"
+      ],
+      [
+       "Dichlorométhane",
+       "1,33",
+       "non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "micelle",
+     "enonce": "Touche toutes les têtes hydrophiles des molécules de savon.",
+     "reponse": [
+      "t0",
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+     ],
+     "multiple": true,
+     "aide": "Les têtes sont tournées vers l’eau, à l’extérieur de la micelle.",
+     "explication": "Les **têtes hydrophiles**, chargées, sont au contact de l’eau, à l’extérieur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les queues du savon sont-elles tournées vers la gouttelette de graisse ?",
+     "options": [
+      "Les queues sont hydrophobes : elles se plaisent dans la graisse, loin de l’eau",
+      "Les queues sont chargées électriquement et attirent fortement l’eau",
+      "Les queues sont polaires et forment des liaisons hydrogène avec la graisse",
+      "Les queues sont plus lourdes que l’eau et tombent vers le centre"
+     ],
+     "reponse": 0,
+     "aide": "« Qui se ressemble s’assemble » : une longue chaîne carbonée est apolaire, comme la graisse.",
+     "explication": "La queue est une longue chaîne carbonée **apolaire** (hydrophobe) : elle se regroupe avec la graisse pendant que les têtes restent dans l’eau."
+    },
+    {
+     "type": "zone",
+     "document": "liquides",
+     "enonce": "Touche le liquide qu’on ne peut pas utiliser pour extraire une espèce de l’eau avec une ampoule à décanter.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Il faut que le solvant forme deux phases avec l’eau : regarde la dernière colonne.",
+     "explication": "L’**éthanol** est miscible avec l’eau : il formerait une seule phase, impossible à séparer dans l’ampoule."
+    },
+    {
+     "type": "categories",
+     "enonce": "Mélangé à l’eau dans une ampoule à décanter, où se place chaque liquide ?",
+     "categories": [
+      "Phase au-dessus de l’eau",
+      "Phase sous l’eau",
+      "Un seul mélange"
+     ],
+     "items": [
+      [
+       "Huile d’olive",
+       0
+      ],
+      [
+       "Cyclohexane",
+       0
+      ],
+      [
+       "Dichlorométhane",
+       1
+      ],
+      [
+       "Éthanol",
+       2
+      ]
+     ],
+     "aide": "Le moins dense est au-dessus ; un liquide miscible ne forme pas de seconde phase.",
+     "explication": "Huile et cyclohexane (densités 0,92 et 0,78) flottent. Le dichlorométhane (1,33) coule. L’éthanol est **miscible** : une seule phase."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rôle des sels biliaires dans l’intestin ?",
+     "options": [
+      "Ils forment des micelles qui dispersent les lipides",
+      "Ils hydrolysent l’amidon en glucose",
+      "Ils fabriquent l’urée à partir de l’ammoniac",
+      "Ils transportent le dioxygène vers les cellules"
+     ],
+     "reponse": 0,
+     "aide": "Pense au savon : une tête hydrophile, une queue hydrophobe.",
+     "explication": "Les sels biliaires agissent comme un savon : ils entourent les gouttelettes de graisse en **micelles** et les dispersent dans l’eau de l’intestin."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fef6dad-e1dd-5650-a6fc-37f2f82ddcf0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le petit-déjeuner de Noé",
+   "competence": "lire-tableau",
+   "situation": "Noé, 15 ans, veut savoir ce qu’apporte un bol de céréales. Il lit l’étiquette de la boîte pour une portion et en déduit l’énergie qu’il avale ce matin.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Étiquette nutritionnelle",
+     "entete": "Céréales complètes",
+     "sousTitre": "Pour une portion",
+     "lignes": [
+      {
+       "texte": "Glucides",
+       "valeur": "40 g",
+       "id": "glu"
+      },
+      {
+       "texte": "Protides",
+       "valeur": "8 g",
+       "id": "pro"
+      },
+      {
+       "texte": "Lipides",
+       "valeur": "6 g",
+       "id": "lip"
+      }
+     ],
+     "pied": "Énergie par gramme : glucides et protides 17 kJ, lipides 38 kJ. Étiquette écrite pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne du nutriment qui apporte le plus d’énergie par gramme.",
+     "reponse": [
+      "lip"
+     ],
+     "aide": "Compare 17 kJ et 38 kJ par gramme : quel nutriment est dans la deuxième catégorie ?",
+     "explication": "Les **lipides** apportent environ 38 kJ par gramme, plus du double des glucides et des protides (17 kJ)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie apportée par une portion, en kJ.",
+     "reponse": 1044,
+     "unite": "kJ",
+     "tolerance": 1,
+     "aide": "Additionne trois produits : masse × énergie par gramme, pour chaque nutriment.",
+     "explication": "E = 40 × 17 + 8 × 17 + 6 × 38 = 680 + 136 + 228 = **1 044 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette énergie en kilocalories (1 kcal = 4,18 kJ), arrondie à l’unité.",
+     "reponse": 250,
+     "unite": "kcal",
+     "tolerance": 1,
+     "aide": "Pour passer des kJ aux kcal, on divise par 4,18.",
+     "explication": "1 044 / 4,18 ≈ 249,8, soit **250 kcal** : c’est la « calorie » des étiquettes."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fef6dad-e1dd-5650-a6fc-37f2f82ddcf0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le métabolisme de Zoé",
+   "competence": "modeliser",
+   "situation": "Zoé, 17 ans, s’entraîne au handball trois fois par semaine. Elle veut estimer sa dépense énergétique journalière avec la relation de Harris et Benedict, puis la comparer à ce qu’elle mange.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Données de Zoé",
+     "blocs": [
+      "Masse : 58 kg. Taille : 165 cm. Âge : 17 ans.",
+      "Relation (femme) : MB = 655,1 + 9,56 m + 1,85 h − 4,68 a, avec m en kg, h en cm, a en années ; MB en kcal/jour.",
+      "DEJ = MB × coefficient d’activité."
+     ],
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "coef",
+     "type": "tableau",
+     "titre": "Coefficients d’activité",
+     "colonnes": [
+      "Mode de vie",
+      "Coefficient"
+     ],
+     "lignes": [
+      [
+       "Sédentaire",
+       "1,4"
+      ],
+      [
+       "Actif (sport 2 à 3 fois par semaine)",
+       "1,6"
+      ],
+      [
+       "Très actif (entraînement quotidien)",
+       "1,8"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs données pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coef",
+     "enonce": "Touche le coefficient qui correspond au mode de vie de Zoé.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Zoé fait du sport trois fois par semaine, pas tous les jours.",
+     "explication": "Avec trois séances par semaine, Zoé est **active** : coefficient 1,6."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le métabolisme de base de Zoé, en kcal/jour, arrondi à l’unité.",
+     "reponse": 1435,
+     "unite": "kcal/jour",
+     "tolerance": 1,
+     "aide": "Remplace m, h et a par 58, 165 et 17 dans la relation « femme », et calcule terme par terme.",
+     "explication": "MB = 655,1 + 9,56 × 58 + 1,85 × 165 − 4,68 × 17 = 655,1 + 554,5 + 305,3 − 79,6 ≈ **1 435 kcal/jour**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule sa dépense énergétique journalière, en kcal/jour, arrondie à l’unité.",
+     "reponse": 2296,
+     "unite": "kcal/jour",
+     "tolerance": 2,
+     "aide": "DEJ = MB × coefficient : prends le coefficient trouvé dans le tableau.",
+     "explication": "DEJ = 1 435 × 1,6 ≈ **2 296 kcal/jour**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Zoé consomme en moyenne 2 000 kcal par jour. Que peut-on dire de son bilan ?",
+     "options": [
+      "Ses apports sont inférieurs d’environ 300 kcal à sa dépense",
+      "Ses apports dépassent sa dépense d’environ 300 kcal",
+      "Ses apports couvrent exactement sa dépense",
+      "On ne peut pas comparer des kcal et des kJ"
+     ],
+     "reponse": 0,
+     "aide": "Compare 2 000 kcal à ta valeur de DEJ.",
+     "explication": "2 296 − 2 000 ≈ **296 kcal** de moins qu’elle ne dépense : ses apports sont un peu inférieurs à sa dépense estimée."
+    }
+   ]
+  },
+  {
+   "chapitre": "5fef6dad-e1dd-5650-a6fc-37f2f82ddcf0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Clara sur le sentier de la crête",
+   "competence": "analyser-document",
+   "situation": "Clara fait une randonnée de montagne. Son carnet note les moments où son corps perd de la chaleur ; une montre connectée indique l’énergie consommée et le travail mécanique de la montée.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Le carnet de Clara",
+     "entete": "Carnet de randonnée",
+     "sousTitre": "Sentier de la crête",
+     "emoji": "🥾",
+     "lignes": [
+      {
+       "texte": "9 h 30",
+       "valeur": "Un vent frais balaie la crête et refroidit sa peau",
+       "id": "vent"
+      },
+      {
+       "texte": "11 h 00",
+       "valeur": "Elle s’assoit sur un rocher glacé",
+       "id": "rocher"
+      },
+      {
+       "texte": "12 h 15",
+       "valeur": "Sa sueur s’évapore sur son dos",
+       "id": "sueur"
+      },
+      {
+       "texte": "14 h 40",
+       "valeur": "Son corps émet des infrarouges vers le ciel clair",
+       "id": "ir"
+      }
+     ],
+     "pied": "Carnet écrit pour l’exercice"
+    },
+    {
+     "id": "montre",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "La montre connectée",
+     "entete": "Bilan de la montée",
+     "sousTitre": "Durée : 2 h",
+     "emoji": "⌚",
+     "lignes": [
+      {
+       "texte": "Énergie chimique consommée",
+       "valeur": "2 000 kJ",
+       "id": "chimique"
+      },
+      {
+       "texte": "Énergie mécanique fournie",
+       "valeur": "440 kJ",
+       "id": "meca"
+      }
+     ],
+     "pied": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche la situation qui illustre un transfert de chaleur par convection.",
+     "reponse": [
+      "vent"
+     ],
+     "aide": "Dans une convection, un fluide en mouvement (air ou eau) emporte la chaleur.",
+     "explication": "Le **vent** est de l’air en mouvement : il emporte la chaleur de la peau, c’est de la convection."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche la situation où a lieu une transformation endothermique.",
+     "reponse": [
+      "sueur"
+     ],
+     "aide": "Une transformation endothermique absorbe de la chaleur : pense au changement d’état de la sueur.",
+     "explication": "L’**évaporation de la sueur** est une vaporisation : elle absorbe de la chaleur prise au corps, qui se refroidit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’énergie a été dégagée sous forme de chaleur pendant la montée, en kJ ?",
+     "reponse": 1560,
+     "unite": "kJ",
+     "tolerance": 1,
+     "aide": "Énergie chimique consommée = énergie mécanique + chaleur.",
+     "explication": "2 000 − 440 = **1 560 kJ** partent en chaleur : c’est ce qui fait chauffer le muscle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rendement du muscle de Clara pendant cette montée ?",
+     "options": [
+      "22 %",
+      "78 %",
+      "4,5 %",
+      "44 %"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "Le rendement est l’énergie utile (mécanique) divisée par l’énergie consommée.",
+     "explication": "440 / 2 000 = 0,22, soit **22 %** : un rendement typique d’un muscle (20 à 25 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucides (17 kJ par gramme) fournit l’énergie chimique consommée ? Arrondis à l’unité, en grammes.",
+     "reponse": 118,
+     "unite": "g",
+     "tolerance": 1,
+     "aide": "Divise l’énergie consommée par l’énergie apportée par un gramme de glucides.",
+     "explication": "2 000 / 17 ≈ 117,6, soit environ **118 g** de glucides."
+    }
+   ]
+  },
+  {
+   "chapitre": "84dfad8e-3ce0-5fd7-8d2d-2f378aec80a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’empois d’amidon de Tom",
+   "competence": "experimenter",
+   "situation": "Au lycée, Tom chauffe de l’empois d’amidon avec un acide dilué (lunettes et gants, comme toujours). Toutes les dix minutes, il prélève un échantillon : il ajoute de l’eau iodée, puis fait un test à la liqueur de Fehling chauffée.",
+   "documents": [
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Les tests de Tom",
+     "colonnes": [
+      "Temps (min)",
+      "Eau iodée",
+      "Liqueur de Fehling chauffée"
+     ],
+     "lignes": [
+      [
+       "0",
+       "bleu-noir",
+       "aucun précipité"
+      ],
+      [
+       "10",
+       "bleu",
+       "léger précipité rouge brique"
+      ],
+      [
+       "20",
+       "bleu pâle",
+       "précipité rouge brique net"
+      ],
+      [
+       "30",
+       "orangée, comme l’eau iodée seule",
+       "précipité rouge brique abondant"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tests",
+     "enonce": "Touche la case qui montre qu’il n’y a plus d’amidon dans l’échantillon.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "L’eau iodée ne bleuit qu’en présence d’amidon : cherche le moment où elle ne bleuit plus.",
+     "explication": "À 30 min l’eau iodée garde sa couleur orangée : **il n’y a plus d’amidon**, l’hydrolyse est achevée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le précipité rouge brique avec la liqueur de Fehling ?",
+     "options": [
+      "Il y a du glucose, un sucre réducteur, dans l’échantillon",
+      "Il reste encore beaucoup d’amidon dans l’échantillon testé",
+      "L’échantillon contient beaucoup de dioxygène dissous",
+      "L’acide chlorhydrique a disparu de l’échantillon"
+     ],
+     "reponse": 0,
+     "aide": "La liqueur de Fehling chauffée teste la fonction aldéhyde d’un sucre.",
+     "explication": "La liqueur de Fehling donne un précipité rouge brique avec les **sucres réducteurs** comme le glucose : l’amidon a bien été hydrolysé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’équation d’hydrolyse du lactose.",
+     "texte": "C₁₂H₂₂O₁₁ + ___ → glucose + ___",
+     "reponses": [
+      [
+       "H₂O"
+      ],
+      [
+       "galactose"
+      ]
+     ],
+     "banque": [
+      "H₂O",
+      "galactose",
+      "O₂",
+      "CO₂"
+     ],
+     "aide": "Une hydrolyse est une coupure par l’eau ; le lactose se coupe en deux oses.",
+     "explication": "Le lactose + **H₂O** donne du glucose et du **galactose** : C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ + C₆H₁₂O₆."
+    }
+   ]
+  },
+  {
+   "chapitre": "84dfad8e-3ce0-5fd7-8d2d-2f378aec80a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Respirer ou fermenter : le sprint d’Adam",
+   "competence": "raisonner",
+   "situation": "Adam, 16 ans, court un 1 500 m. Au départ ses muscles brûlent le glucose avec le dioxygène ; dans le dernier tour, l’apport de O₂ ne suffit plus. Le tableau compare les deux filières.",
+   "documents": [
+    {
+     "id": "filieres",
+     "type": "tableau",
+     "titre": "Deux façons de transformer le glucose",
+     "colonnes": [
+      "Critère",
+      "Filière A",
+      "Filière B"
+     ],
+     "lignes": [
+      [
+       "Équation bilan",
+       "C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O",
+       "C₆H₁₂O₆ → 2 C₃H₆O₃"
+      ],
+      [
+       "Dioxygène",
+       "nécessaire",
+       "non nécessaire"
+      ],
+      [
+       "Énergie libérée",
+       "élevée",
+       "faible, mais rapide"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "pyruvique",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "À savoir",
+     "blocs": [
+      "Dans la cellule, le glucose est d’abord transformé en acide pyruvique C₃H₄O₃, qui est ensuite brûlé :",
+      "2 C₃H₄O₃ + 5 O₂ → 6 CO₂ + 4 H₂O"
+     ],
+     "source": "Données du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "filieres",
+     "enonce": "Touche l’équation de la filière qui prend le relais dans le dernier tour, quand l’apport de dioxygène ne suffit plus.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la filière qui fonctionne sans dioxygène.",
+     "explication": "Sans assez de O₂, c’est la **filière B** (fermentation lactique) qui prend le relais : C₆H₁₂O₆ → 2 C₃H₆O₃."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules de dioxygène faut-il pour brûler complètement 3 molécules de glucose par la filière A ?",
+     "reponse": 18,
+     "unite": "molécules",
+     "aide": "L’équation consomme 6 O₂ pour une molécule de glucose : multiplie par trois.",
+     "explication": "3 × 6 = **18 molécules de O₂** (et 18 CO₂ et 18 H₂O produits)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan de la filière B.",
+     "texte": "La fermentation du glucose, sans dioxygène, produit de l’acide ___ qui s’accumule dans le ___.",
+     "reponses": [
+      [
+       "lactique"
+      ],
+      [
+       "muscle"
+      ]
+     ],
+     "banque": [
+      "lactique",
+      "muscle",
+      "pyruvique",
+      "poumon"
+     ],
+     "aide": "Regarde la formule C₃H₆O₃ de la filière B : c’est l’acide du lait caillé et de l’effort intense.",
+     "explication": "La filière B donne de l’acide **lactique** qui s’accumule dans le **muscle** quand l’effort est trop intense pour le dioxygène disponible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules de dioxygène brûlent 6 molécules d’acide pyruvique ?",
+     "reponse": 15,
+     "unite": "molécules",
+     "aide": "L’équation écrite brûle 2 acides pyruvique avec 5 O₂ : 6 est le triple de 2.",
+     "explication": "6 acides pyruvique = 3 × 2, donc 3 × 5 = **15 molécules de O₂**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la filière A est-elle préférée quand l’effort dure longtemps ?",
+     "options": [
+      "Elle libère beaucoup plus d’énergie par molécule de glucose",
+      "Elle libère son énergie plus vite que la filière B",
+      "Elle ne produit absolument aucun déchet dans la cellule",
+      "Elle n’a besoin d’aucun nutriment pour fonctionner"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière ligne du tableau : quelle filière libère le plus d’énergie ?",
+     "explication": "La respiration (filière A) libère **toute l’énergie** du glucose. La filière B est rapide mais bien moins rentable."
+    }
+   ]
+  },
+  {
+   "chapitre": "84dfad8e-3ce0-5fd7-8d2d-2f378aec80a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Après le repas : la glycémie de Jules",
+   "competence": "lire-graphique",
+   "situation": "Jules, 16 ans, a mangé un plat de pâtes. Pendant trois heures, on mesure sa glycémie. Le schéma rappelle d’où vient le glucose et où il va.",
+   "documents": [
+    {
+     "id": "glycemie",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La glycémie de Jules après le repas",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120",
+      "150",
+      "180"
+     ],
+     "series": [
+      {
+       "nom": "Glycémie",
+       "valeurs": [
+        0.9,
+        1.2,
+        1.35,
+        1.1,
+        0.95,
+        0.9,
+        0.88
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Glycémie",
+      "unite": "g/L",
+      "min": 0.6,
+      "max": 1.4,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Temps après le repas (min)"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "devenir",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le devenir de l’amidon",
+     "noeuds": [
+      {
+       "id": "amidon",
+       "texte": "Amidon des pâtes",
+       "emoji": "🍝"
+      },
+      {
+       "id": "glucose",
+       "texte": "Glucose",
+       "emoji": "🍬"
+      },
+      {
+       "id": "glycogene",
+       "texte": "Glycogène",
+       "emoji": "📦"
+      }
+     ],
+     "liens": [
+      {
+       "de": "amidon",
+       "a": "glucose",
+       "texte": "hydrolyse catalysée par une enzyme"
+      },
+      {
+       "de": "glucose",
+       "a": "glycogene",
+       "texte": "stockage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "glycemie",
+     "enonce": "Touche le moment où la glycémie de Jules est la plus élevée.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le maximum est atteint **60 minutes** après le repas : 1,35 g/L."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la glycémie a-t-elle augmenté entre le repas et son maximum, en g/L ?",
+     "reponse": 0.45,
+     "unite": "g/L",
+     "tolerance": 0.01,
+     "aide": "Soustrais la valeur de départ à la valeur maximale.",
+     "explication": "1,35 − 0,90 = **0,45 g/L** d’augmentation, due au glucose issu de l’hydrolyse de l’amidon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle hormone explique la baisse de la glycémie après 60 minutes ?",
+     "options": [
+      "L’insuline",
+      "Le glucagon",
+      "L’amylase",
+      "L’urée"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "C’est l’hormone qui fait baisser la glycémie ; son « contraire » la fait remonter.",
+     "explication": "**L’insuline** fait baisser la glycémie : le glucose est stocké en glycogène dans le foie et les muscles. Le glucagon, lui, la fait remonter ; l’amylase est une enzyme, l’urée un déchet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les événements qui suivent le repas de Jules.",
+     "items": [
+      "L’amidon est hydrolysé en glucose",
+      "Le glucose passe dans le sang : la glycémie monte",
+      "De l’insuline est libérée dans le sang",
+      "Le glucose est stocké sous forme de glycogène",
+      "La glycémie revient vers 1 g/L"
+     ],
+     "aide": "D’abord la digestion, ensuite la montée de la glycémie, puis la réponse de l’organisme.",
+     "explication": "Hydrolyse de l’amidon → glucose dans le sang → **insuline** → stockage en **glycogène** → retour de la glycémie vers 1 g/L."
+    },
+    {
+     "type": "texte",
+     "enonce": "Dans le schéma de l’amidon, quelle enzyme de la salive catalyse l’hydrolyse de l’amidon ?",
+     "reponse": [
+      "amylase",
+      "l’amylase",
+      "amylase salivaire",
+      "l’amylase salivaire"
+     ],
+     "aide": "Son nom ressemble à celui de l’amidon.",
+     "explication": "**L’amylase** (salivaire, puis pancréatique) catalyse l’hydrolyse de l’amidon en glucose."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc984748-d1c2-510a-84f4-5e1379c1073a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’étiquette de la bouteille de Léo",
+   "competence": "lire-tableau",
+   "situation": "Léo, 16 ans, vient de finir sa bouteille d’eau minérale. Avant de la jeter, il lit la composition ionique inscrite sur l’étiquette et la compare à ce qu’il a appris en cours.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Composition ionique",
+     "entete": "Eau minérale naturelle",
+     "sousTitre": "Analyse en mg/L",
+     "lignes": [
+      {
+       "texte": "Calcium Ca²⁺",
+       "valeur": "78",
+       "id": "ca"
+      },
+      {
+       "texte": "Magnésium Mg²⁺",
+       "valeur": "24",
+       "id": "mg"
+      },
+      {
+       "texte": "Sodium Na⁺",
+       "valeur": "5",
+       "id": "na"
+      },
+      {
+       "texte": "Potassium K⁺",
+       "valeur": "1",
+       "id": "k"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Hydrogénocarbonates HCO₃⁻",
+       "valeur": "357",
+       "id": "hco3"
+      },
+      {
+       "texte": "Sulfates SO₄²⁻",
+       "valeur": "10",
+       "id": "so4"
+      },
+      {
+       "texte": "Chlorures Cl⁻",
+       "valeur": "4",
+       "id": "cl"
+      },
+      {
+       "texte": "Nitrates NO₃⁻",
+       "valeur": "5",
+       "id": "no3"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne qui indique la teneur en nitrates.",
+     "reponse": [
+      "no3"
+     ],
+     "aide": "Les nitrates ont pour formule NO₃⁻.",
+     "explication": "La ligne **Nitrates NO₃⁻** indique 5 mg/L."
+    },
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche les quatre cations (ions positifs) de l’étiquette.",
+     "reponse": [
+      "ca",
+      "mg",
+      "na",
+      "k"
+     ],
+     "multiple": true,
+     "aide": "Un cation porte une charge positive : cherche les exposants « + ».",
+     "explication": "**Ca²⁺, Mg²⁺, Na⁺ et K⁺** sont des cations ; les autres ions portent une charge négative."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La limite de qualité des nitrates dans l’eau du robinet est de 50 mg/L. Combien de fois la teneur de cette eau est-elle plus faible que cette limite ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Divise la limite par la teneur lue sur l’étiquette.",
+     "explication": "50 / 5 = **10** : cette eau contient dix fois moins de nitrates que la limite."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc984748-d1c2-510a-84f4-5e1379c1073a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’eau du puits de la ferme",
+   "competence": "analyser-document",
+   "situation": "La famille Perrin boit l’eau de son puits, au bord d’un champ de maïs. Un laboratoire a analysé l’eau : le tableau compare chaque résultat à la limite de qualité fixée pour l’eau du robinet.",
+   "documents": [
+    {
+     "id": "analyse",
+     "type": "tableau",
+     "titre": "Résultats de l’analyse",
+     "colonnes": [
+      "Paramètre",
+      "Résultat",
+      "Limite de qualité"
+     ],
+     "lignes": [
+      [
+       "Nitrates",
+       "62 mg/L",
+       "50 mg/L"
+      ],
+      [
+       "Pesticide (une substance)",
+       "0,25 µg/L",
+       "0,1 µg/L"
+      ],
+      [
+       "Plomb",
+       "6 µg/L",
+       "10 µg/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "analyse",
+     "enonce": "Touche les deux résultats qui dépassent la limite de qualité.",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "aide": "Compare, ligne par ligne, la colonne « Résultat » à la colonne « Limite ».",
+     "explication": "Les **nitrates (62 > 50 mg/L)** et le **pesticide (0,25 > 0,1 µg/L)** dépassent la limite ; le plomb (6 < 10 µg/L) la respecte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la teneur en pesticide dépasse-t-elle la limite de qualité ?",
+     "reponse": 2.5,
+     "unite": "fois",
+     "tolerance": 0.05,
+     "aide": "Divise le résultat par la limite, dans la même unité (µg/L).",
+     "explication": "0,25 / 0,1 = **2,5 fois** la limite."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque origine de pollution à un polluant de l’eau.",
+     "paires": [
+      [
+       "Agricole",
+       "Nitrates et pesticides"
+      ],
+      [
+       "Domestique",
+       "Détergents et résidus de médicaments"
+      ],
+      [
+       "Industrielle",
+       "Métaux lourds et hydrocarbures"
+      ]
+     ],
+     "aide": "Pense aux champs, aux maisons, puis aux usines.",
+     "explication": "Agricole : **nitrates et pesticides**. Domestique : **détergents, médicaments**. Industrielle : **métaux lourds, hydrocarbures**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de cette analyse ?",
+     "options": [
+      "Deux limites sont dépassées : l’eau n’est pas potable en l’état",
+      "L’eau est potable, puisque le plomb est bien sous sa limite",
+      "L’eau est potable, car seuls les nitrates posent un problème",
+      "On ne peut rien conclure : une analyse ne prouve rien du tout"
+     ],
+     "reponse": 0,
+     "aide": "Pour être potable, une eau doit respecter les limites sur chaque paramètre.",
+     "explication": "Deux paramètres dépassent la limite : l’eau n’est **pas potable en l’état**. Les engrais et pesticides du champ voisin sont les premiers suspects."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc984748-d1c2-510a-84f4-5e1379c1073a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le potager de Léo : sol, engrais et rivière",
+   "competence": "analyser-document",
+   "situation": "Léo cultive trois parcelles de potager au bord d’une rivière. Il observe ses plantes et se demande ce que le sol retient, ce qui part vers la nappe, et quel engrais choisir.",
+   "documents": [
+    {
+     "id": "sol",
+     "type": "schema",
+     "titre": "Un grain du sol et les ions de la solution",
+     "largeur": 320,
+     "hauteur": 285,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        44
+       ],
+       "a": [
+        115,
+        72
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        44
+       ],
+       "a": [
+        205,
+        72
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        56,
+        115
+       ],
+       "a": [
+        84,
+        115
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        262,
+        115
+       ],
+       "a": [
+        236,
+        115
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 115,
+       "rx": 75,
+       "ry": 50,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "argile"
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 94,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 90,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 94,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 125,
+       "y": 148,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 150,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 198,
+       "y": 146,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 120,
+       "texte": "argile + humus",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 30,
+       "r": 15,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "k1",
+       "zone": true,
+       "texte": "K⁺"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 30,
+       "r": 18,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "ca",
+       "zone": true,
+       "texte": "Ca²⁺"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 115,
+       "r": 15,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "k2",
+       "zone": true,
+       "texte": "K⁺"
+      },
+      {
+       "forme": "cercle",
+       "cx": 282,
+       "cy": 115,
+       "r": 20,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "nh4",
+       "zone": true,
+       "texte": "NH₄⁺"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 205,
+       "r": 20,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "no3",
+       "zone": true,
+       "texte": "NO₃⁻"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        227
+       ],
+       "a": [
+        160,
+        258
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 276,
+       "texte": "entraîné par l’eau vers la nappe",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    },
+    {
+     "id": "parcelles",
+     "type": "tableau",
+     "titre": "Ce que Léo observe",
+     "colonnes": [
+      "Parcelle",
+      "Observation"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Feuilles jaunes, tiges grêles"
+      ],
+      [
+       "B",
+       "Racines peu développées, floraison tardive"
+      ],
+      [
+       "C",
+       "Peu de fruits, plantes fragiles"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sol",
+     "enonce": "Touche tous les ions que le complexe argilo-humique retient.",
+     "reponse": [
+      "k1",
+      "ca",
+      "k2",
+      "nh4"
+     ],
+     "multiple": true,
+     "aide": "Le complexe est chargé négativement : il attire des ions de charge opposée.",
+     "explication": "Le complexe argilo-humique, négatif, retient les **cations** K⁺, Ca²⁺ et NH₄⁺."
+    },
+    {
+     "type": "zone",
+     "document": "sol",
+     "enonce": "Touche l’ion qui n’est pas retenu et risque d’être lessivé vers la nappe.",
+     "reponse": [
+      "no3"
+     ],
+     "aide": "Un anion, chargé négativement comme le sol, est repoussé plutôt qu’attiré.",
+     "explication": "L’ion **nitrate NO₃⁻**, un anion, n’est pas retenu : il est lessivé vers la nappe et la rivière."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque observation de Léo à l’élément d’engrais qui manque probablement.",
+     "paires": [
+      [
+       "Feuilles jaunes, tiges grêles",
+       "Azote (N)"
+      ],
+      [
+       "Racines peu développées, floraison tardive",
+       "Phosphore (P)"
+      ],
+      [
+       "Peu de fruits, plantes fragiles",
+       "Potassium (K)"
+      ]
+     ],
+     "aide": "N favorise les tiges et les feuilles, P les racines et la floraison, K les fruits.",
+     "explication": "**Azote** : tiges et feuilles. **Phosphore** : racines et floraison. **Potassium** : fruits et résistance."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Un excès d’engrais arrive dans la rivière. Remets les étapes de l’eutrophisation dans l’ordre.",
+     "items": [
+      "Des nitrates et des phosphates en excès arrivent dans l’eau",
+      "Des algues prolifèrent",
+      "Les algues meurent et se décomposent",
+      "Le dioxygène de l’eau vient à manquer"
+     ],
+     "aide": "Un apport de nutriments, puis une prolifération, puis une conséquence sur le dioxygène.",
+     "explication": "Excès de nitrates et de phosphates → **prolifération d’algues** → décomposition → **manque de dioxygène** pour les animaux de la rivière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le bon usage de l’engrais pour limiter la pollution de la rivière ?",
+     "options": [
+      "La juste dose, au bon moment, loin du bord de l’eau",
+      "Une forte dose avant l’hiver, pour toute l’année",
+      "Juste avant une grosse pluie, pour arroser en même temps",
+      "Le double de la dose si les feuilles restent jaunes"
+     ],
+     "reponse": 0,
+     "aide": "Les nitrates ne sont pas retenus par le sol : un excès part vers la rivière.",
+     "explication": "Il faut **la juste dose, au bon moment**, et respecter une zone non traitée près de l’eau : le sol ne retient pas les nitrates."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc0f1386-6c65-59d3-b187-32221225edc5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le thermomètre de l’infirmerie",
+   "competence": "calculer",
+   "situation": "L’infirmière du lycée vérifie un thermomètre : elle mesure cinq fois de suite la température d’une même solution à 36,8 °C environ. Tu l’aides à présenter proprement le résultat.",
+   "documents": [
+    {
+     "id": "serie",
+     "type": "tableau",
+     "titre": "Cinq mesures successives",
+     "colonnes": [
+      "Mesure",
+      "Température (°C)"
+     ],
+     "lignes": [
+      [
+       "n° 1",
+       "36,6"
+      ],
+      [
+       "n° 2",
+       "36,8"
+      ],
+      [
+       "n° 3",
+       "36,7"
+      ],
+      [
+       "n° 4",
+       "36,9"
+      ],
+      [
+       "n° 5",
+       "36,8"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serie",
+     "enonce": "Touche la mesure la plus élevée.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Compare les cinq valeurs de la colonne de droite.",
+     "explication": "La plus élevée est **36,9 °C** (mesure n° 4)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des cinq mesures, en °C, avec deux décimales.",
+     "reponse": 36.76,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Additionne les cinq valeurs puis divise par 5.",
+     "explication": "(36,6 + 36,8 + 36,7 + 36,9 + 36,8) / 5 = 183,8 / 5 = **36,76 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’écart-type de la série vaut σ = 0,11 °C. Calcule l’incertitude-type u = σ / √n sur la moyenne, en °C, arrondie au centième.",
+     "reponse": 0.05,
+     "unite": "°C",
+     "tolerance": 0.004,
+     "aide": "Ici n = 5, et √5 ≈ 2,236.",
+     "explication": "u = 0,11 / √5 ≈ 0,049, soit **0,05 °C** arrondie au centième."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment écrire correctement le résultat de la mesure ?",
+     "options": [
+      "36,76 ± 0,05 °C",
+      "36,8 ± 0,05 °C",
+      "36,76 ± 0,05",
+      "36,76 ± 0,0492 °C"
+     ],
+     "reponse": 0,
+     "aide": "Valeur et incertitude s’arrêtent au même rang, et l’unité est obligatoire.",
+     "explication": "On écrit **36,76 ± 0,05 °C** : incertitude à un chiffre significatif, valeur arrondie au même rang, avec l’unité."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc0f1386-6c65-59d3-b187-32221225edc5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le débit cardiaque de 4 900 L/min",
+   "competence": "raisonner",
+   "situation": "Maxime a rendu sa copie : il a calculé le débit cardiaque d’un patient au repos et trouvé un résultat qui a fait sourire son professeur. Tu cherches l’erreur et refais le calcul proprement.",
+   "documents": [
+    {
+     "id": "copie",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "La copie de Maxime",
+     "entete": "Copie de Maxime",
+     "sousTitre": "Exercice 3 — débit cardiaque",
+     "emoji": "📝",
+     "lignes": [
+      {
+       "texte": "Relation",
+       "valeur": "DC = fC × VES",
+       "id": "rel"
+      },
+      {
+       "texte": "Données",
+       "valeur": "fC = 70 battements/min ; VES = 70 mL",
+       "id": "don"
+      },
+      {
+       "texte": "Calcul",
+       "valeur": "DC = 70 × 70 = 4 900",
+       "id": "calc"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Résultat",
+       "valeur": "DC = 4 900 L/min",
+       "id": "res"
+      }
+     ],
+     "pied": "Copie écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copie",
+     "enonce": "Touche la ligne où se trouve l’erreur de Maxime.",
+     "reponse": [
+      "res"
+     ],
+     "aide": "Son calcul 70 × 70 est juste : regarde l’unité écrite au résultat.",
+     "explication": "70 × 70 = 4 900, mais en **mL/min** (VES en mL). Maxime a écrit « L/min » sans convertir : l’erreur est dans **le résultat**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne le débit cardiaque correct, en L/min.",
+     "reponse": 4.9,
+     "unite": "L/min",
+     "tolerance": 0.05,
+     "aide": "1 L = 1 000 mL : convertis le résultat en litres.",
+     "explication": "4 900 mL/min = **4,9 L/min**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel réflexe aurait permis à Maxime de repérer son erreur ?",
+     "options": [
+      "Comparer son résultat à l’ordre de grandeur attendu, environ 5 L/min",
+      "Refaire le calcul exactement de la même façon",
+      "Arrondir son résultat à l’unité supérieure",
+      "Convertir la fréquence cardiaque en battements par heure"
+     ],
+     "reponse": 0,
+     "aide": "Un humain contient environ 5 L de sang : un débit de 4 900 L/min est-il plausible ?",
+     "explication": "Vérifier **l’ordre de grandeur** : au repos, le débit cardiaque est d’environ 5 L/min, donc 4 900 L/min est absurde."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes d’un calcul bien rédigé.",
+     "items": [
+      "Écrire la relation littérale",
+      "Convertir les données dans les bonnes unités",
+      "Remplacer par les valeurs et calculer",
+      "Arrondir avec un nombre de chiffres significatifs cohérent",
+      "Donner le résultat avec son unité et vérifier l’ordre de grandeur"
+     ],
+     "aide": "On écrit d’abord la formule, on termine par une vérification.",
+     "explication": "Relation littérale → conversions → calcul → arrondi → **résultat avec unité** et contrôle de l’ordre de grandeur."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc0f1386-6c65-59d3-b187-32221225edc5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La thermographie du front d’Elsa",
+   "competence": "analyser-document",
+   "situation": "Elsa, stagiaire infirmière, relève 14 fois la température cutanée du front d’un patient avec une caméra infrarouge. Elle veut aussi connaître la longueur d’onde d’émission maximale de la peau, donnée par la loi de Wien.",
+   "documents": [
+    {
+     "id": "histo",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Répartition de 14 mesures de température cutanée",
+     "categories": [
+      "34,0",
+      "34,5",
+      "35,0",
+      "35,5",
+      "36,0"
+     ],
+     "series": [
+      {
+       "nom": "Nombre de mesures",
+       "valeurs": [
+        1,
+        3,
+        6,
+        3,
+        1
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de mesures",
+      "unite": "mesures",
+      "min": 0,
+      "max": 7,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Température cutanée (°C)"
+     },
+     "valeurs": true,
+     "source": "Relevés écrits pour l’exercice"
+    },
+    {
+     "id": "wien",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Loi de Wien",
+     "blocs": [
+      "λmax × T = 2,90 × 10⁻³ m·K, avec T la température en kelvins (K).",
+      "Conversion : T (K) = θ (°C) + 273."
+     ],
+     "source": "Données du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "histo",
+     "enonce": "Touche la température mesurée le plus souvent.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus haute de l’histogramme.",
+     "explication": "La barre la plus haute (6 mesures) correspond à **35,0 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la température moyenne des 14 mesures, en °C.",
+     "reponse": 35,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "Multiplie chaque température par son nombre de mesures, additionne, puis divise par 14.",
+     "explication": "(34 × 1 + 34,5 × 3 + 35 × 6 + 35,5 × 3 + 36 × 1) / 14 = 490 / 14 = **35,0 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Elsa refait une série quatre fois plus longue (56 mesures), avec le même écart-type. Que devient l’incertitude-type u = σ / √n ?",
+     "options": [
+      "Elle est divisée par 2",
+      "Elle est multipliée par 2",
+      "Elle est divisée par 4",
+      "Elle ne change pas"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "n est multiplié par 4 : que devient √n ?",
+     "explication": "√(4n) = 2√n : l’incertitude-type est **divisée par 2**. Plus on répète, plus la moyenne est précise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde d’émission maximale de la peau à 35 °C, en micromètres (µm), arrondie au dixième.",
+     "reponse": 9.4,
+     "unite": "µm",
+     "tolerance": 0.05,
+     "aide": "Convertis d’abord 35 °C en kelvins, puis λmax = 2,90 × 10⁻³ / T, en mètres ; 1 µm = 10⁻⁶ m.",
+     "explication": "T = 35 + 273 = 308 K ; λmax = 2,90 × 10⁻³ / 308 ≈ 9,4 × 10⁻⁶ m, soit **9,4 µm** (infrarouge)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève trouve λmax ≈ 83 µm pour la même peau. Quelle erreur a-t-il commise ?",
+     "options": [
+      "Il a gardé 35 °C au lieu de 308 K dans la formule",
+      "Il a converti la température en kelvins deux fois",
+      "Il a confondu le mètre et le millimètre dans le résultat",
+      "Il a utilisé une moyenne au lieu d’une valeur isolée"
+     ],
+     "reponse": 0,
+     "aide": "Refais le calcul avec T = 35 : obtiens-tu environ 83 µm ?",
+     "explication": "2,90 × 10⁻³ / 35 ≈ 83 × 10⁻⁶ m : il a oublié de convertir en **kelvins**. C’est le piège classique de la loi de Wien."
+    }
+   ]
+  }
+ ]
+}

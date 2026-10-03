@@ -31,7 +31,7 @@ export default function RythmeBarres({
   semaines: readonly SemaineTravail[]
   /** La phrase du rythme (lib/moi/temps), sous le titre. */
   phrase: string
-  /** Sans carte : posé dans la feuille du bouton du rythme (BoutonRythme). */
+  /** Sans carte : posé dans la feuille de la tuile du record (EcranMoi). */
   nu?: boolean
 }) {
   if (semaines.length === 0) return null

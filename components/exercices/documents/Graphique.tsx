@@ -1,7 +1,7 @@
 import type { DocGraphique, Teinte } from '@/lib/exercices/types'
 import { cheminLisse } from '@/lib/exercices/courbe-lisse'
 import { cn } from '@/lib/utils'
-import { couleur, etatCible, fondCible, nombreFr, propsCible, traitCible, type ZonesDoc } from '../commun'
+import { coord, couleur, etatCible, fondCible, nombreFr, propsCible, traitCible, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
 
 /**
@@ -288,7 +288,7 @@ function Secteurs({ doc, zones }: { doc: DocGraphique; zones?: ZonesDoc }) {
     const a0 = -Math.PI / 2 + (avant[i] / total) * Math.PI * 2
     return { i, v, a0, a1: a0 + (v / total) * Math.PI * 2 }
   })
-  const pt = (a: number, r: number) => [cx + r * Math.cos(a), cy + r * Math.sin(a)] as const
+  const pt = (a: number, r: number) => [coord(cx + r * Math.cos(a)), coord(cy + r * Math.sin(a))] as const
   return (
     <figure className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
       <svg viewBox="0 0 200 190" className={cn(s.svg, 'max-w-[15rem]')} role="img" aria-label={doc.titre ?? 'Diagramme circulaire'}>

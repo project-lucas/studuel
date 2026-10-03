@@ -1,0 +1,3806 @@
+{
+ "niveau": "3e",
+ "matiere": "allemand",
+ "exercices": [
+  {
+   "chapitre": "f04b8338-b125-5b3b-9800-005d4202fbc1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les affaires du vide-grenier",
+   "competence": "manier-langue",
+   "situation": "Samedi, le quartier de Hannah organise un vide-grenier. Une affiche annonce ce qu’on y trouvera, et Hannah veut repérer les pluriels.",
+   "documents": [
+    {
+     "id": "flohmarkt",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Flohmarkt am Samstag",
+     "blocs": [
+      "Bei uns gibt es [[b|Bücher]], [[l|Lampen]], [[s|Stühle]] und [[a|Autos]] für Kinder. Kommt vorbei!"
+     ],
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flohmarkt",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le seul pluriel qui se termine par -s : c’est un mot emprunté.",
+     "aide": "Les mots empruntés prennent un -s ; les autres pluriels de l’affiche n’en ont pas.",
+     "explication": "**Autos** : *das Auto → die Autos*. Les mots d’emprunt et les abréviations font leur pluriel en **-s**, sans inflexion."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nom au singulier au pluriel qui figure sur l’affiche.",
+     "paires": [
+      [
+       "das Buch",
+       "die Bücher"
+      ],
+      [
+       "die Lampe",
+       "die Lampen"
+      ],
+      [
+       "der Stuhl",
+       "die Stühle"
+      ],
+      [
+       "das Auto",
+       "die Autos"
+      ]
+     ],
+     "aide": "Retrouve le mot dans le texte et regarde sa terminaison.",
+     "explication": "Quatre schémas : *das Buch → die Bücher* (-er), *die Lampe → die Lampen* (-n), *der Stuhl → die Stühle* (-e) et *das Auto → die Autos* (-s)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Anna achète deux journaux. »",
+     "texte": "Anna kauft zwei ___.",
+     "reponses": [
+      [
+       "Zeitungen"
+      ]
+     ],
+     "banque": [
+      "Zeitungen",
+      "Zeitunge",
+      "Zeitungs",
+      "Zeitüngen"
+     ],
+     "aide": "Presque tous les féminins prennent -n ou -en, sans inflexion.",
+     "explication": "**Anna kauft zwei Zeitungen.** *Zeitung* est féminin : la quasi-totalité des féminins font leur pluriel en **-(e)n**, jamais d’Umlaut."
+    }
+   ]
+  },
+  {
+   "chapitre": "f04b8338-b125-5b3b-9800-005d4202fbc1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mit den Freunden unterwegs",
+   "competence": "manier-langue",
+   "situation": "Lea demande à Tim ce qu’il fait samedi. Dans leurs messages, regarde ce qui arrive aux noms quand ils sont au datif pluriel.",
+   "documents": [
+    {
+     "id": "sms1",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Am Samstag",
+     "participants": [
+      {
+       "nom": "Lea",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lea",
+       "texte": "Was machst du am Samstag?"
+      },
+      {
+       "qui": "Tim",
+       "texte": "Ich fahre mit meinen [[n|Freunden]] in die Stadt."
+      },
+      {
+       "qui": "Lea",
+       "texte": "Fahrt ihr mit den [[x|Autos]] oder mit den [[n|Zügen]]?"
+      },
+      {
+       "qui": "Tim",
+       "texte": "Mit den Zügen. Nach dem Kino laufen wir zu Fuß."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms1",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux noms qui ont pris un -n au datif pluriel.",
+     "aide": "Compare avec le pluriel de base : *die Freunde*, *die Züge*.",
+     "explication": "**Freunden** et **Zügen** : au datif pluriel, le nom prend un **-n** s’il n’en a pas déjà un (*die Freunde → mit den Freunden*)."
+    },
+    {
+     "type": "zone",
+     "document": "sms1",
+     "reponse": [
+      "x"
+     ],
+     "enonce": "Touche le seul nom au datif pluriel qui n’a pas pris de -n.",
+     "aide": "Regarde comment se termine son pluriel.",
+     "explication": "**Autos** : le pluriel finit déjà par un **-s**, et on n’ajoute pas de -n après un -s (*mit den Autos*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Tim joue avec les enfants. »",
+     "texte": "Tim spielt mit den ___.",
+     "reponses": [
+      [
+       "Kindern"
+      ]
+     ],
+     "banque": [
+      "Kindern",
+      "Kinder",
+      "Kinden",
+      "Kinders"
+     ],
+     "aide": "Le pluriel est *Kinder*. Il se termine par -r, pas par -n.",
+     "explication": "**Tim spielt mit den Kindern.** *die Kinder* se termine par -r, donc le datif pluriel ajoute **-n**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nom au singulier à sa forme au datif pluriel.",
+     "paires": [
+      [
+       "der Zug",
+       "den Zügen"
+      ],
+      [
+       "das Haus",
+       "den Häusern"
+      ],
+      [
+       "die Stadt",
+       "den Städten"
+      ],
+      [
+       "das Hotel",
+       "den Hotels"
+      ]
+     ],
+     "aide": "Passe d’abord au pluriel, puis ajoute -n, sauf si le pluriel finit par -s.",
+     "explication": "*die Züge → den Zügen*, *die Häuser → den Häusern*, *die Städte → den Städten* : -n ajouté. *die Hotels → den Hotels* : après -s, rien."
+    }
+   ]
+  },
+  {
+   "chapitre": "f04b8338-b125-5b3b-9800-005d4202fbc1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un courriel et un tableau à compléter",
+   "competence": "manier-langue",
+   "situation": "Hannah écrit à Lara après une journée en ville. Son courriel contient deux noms qui ne se comportent pas comme les autres ; un tableau l’aide à trier les pluriels.",
+   "documents": [
+    {
+     "id": "mail1",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Lara",
+     "blocs": [
+      "Heute war ich in der Stadt. Ich habe eine neue [[b|Brille]] gekauft und etwas Obst. Es waren viele [[p|Leute]] da, und die Polizei hat die Straße gesperrt."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    },
+    {
+     "id": "tab1",
+     "type": "tableau",
+     "titre": "Pluriel et datif pluriel",
+     "colonnes": [
+      "Singulier",
+      "Pluriel",
+      "Datif pluriel"
+     ],
+     "lignes": [
+      [
+       "der Lehrer",
+       "die Lehrer",
+       "?"
+      ],
+      [
+       "die Lehrerin",
+       "?",
+       "?"
+      ],
+      [
+       "das Auto",
+       "die Autos",
+       "?"
+      ],
+      [
+       "das Kind",
+       "die Kinder",
+       "den Kindern"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail1",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le nom qui n’existe qu’au pluriel.",
+     "aide": "Il se traduit par « les gens ».",
+     "explication": "**Leute** : *die Leute* n’a pas de singulier."
+    },
+    {
+     "type": "zone",
+     "document": "mail1",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le nom singulier que le français traduit par un pluriel (« des lunettes »).",
+     "aide": "Il est précédé de *eine*.",
+     "explication": "**Brille** : l’allemand dit *eine Brille* (au singulier) là où le français dit « des lunettes »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la ligne *der Lehrer* du tableau : « avec les professeurs ».",
+     "texte": "mit den ___",
+     "reponses": [
+      [
+       "Lehrern"
+      ]
+     ],
+     "banque": [
+      "Lehrern",
+      "Lehrer",
+      "Lehrers",
+      "Lehreren"
+     ],
+     "aide": "Le pluriel *die Lehrer* ne finit pas par -n.",
+     "explication": "**mit den Lehrern** : *die Lehrer* ne se termine ni par -n ni par -s, donc on ajoute **-n** au datif pluriel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la ligne *die Lehrerin* : le pluriel, puis le datif pluriel.",
+     "texte": "die ___ → mit den ___",
+     "reponses": [
+      [
+       "Lehrerinnen"
+      ],
+      [
+       "Lehrerinnen"
+      ]
+     ],
+     "banque": [
+      "Lehrerinnen",
+      "Lehrerin",
+      "Lehrerins",
+      "Lehrerinen"
+     ],
+     "aide": "Les féminins en -in doublent le n au pluriel.",
+     "explication": "**die Lehrerinnen → mit den Lehrerinnen**. Les féminins en *-in* doublent le *n* et prennent -en ; le pluriel finit déjà par -n, donc rien ne s’ajoute au datif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « mit den Autos » sans -n ?",
+     "options": [
+      "Le pluriel finit déjà par -s : on n’ajoute rien",
+      "Auto est neutre, donc jamais de -n au datif",
+      "Un mot emprunté n’a pas de datif pluriel",
+      "Le -n ne s’ajoute qu’après un pluriel en -er"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière lettre de *Autos*.",
+     "explication": "**Le pluriel finit déjà par -s.** C’est la seule exception à la règle du -n au datif pluriel : *mit den Autos*."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2dc63c4-553b-5b46-a015-12ae322b4366",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une carte postale de Vienne",
+   "competence": "manier-langue",
+   "situation": "Mia est en voyage à Vienne et écrit à sa grand-mère. Elle décrit la ville, les gens et le temps.",
+   "documents": [
+    {
+     "id": "wien",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Oma",
+     "blocs": [
+      "Wir sind jetzt in Wien. Die Stadt ist [[a|groß]] und die Leute sind [[a|freundlich]]. Das Wetter bleibt [[a|schön]]. Mein Bruder hat ein neues Fahrrad."
+     ],
+     "source": "Carte postale écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "wien",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois adjectifs attributs, ceux qui suivent « ist », « sind » ou « bleibt ».",
+     "aide": "Ils viennent après le verbe, pas devant un nom.",
+     "explication": "**groß**, **freundlich** et **schön** sont attributs : ils suivent *sein* ou *bleiben*. *neues* est épithète, devant *Fahrrad*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Les enfants sont fatigués. »",
+     "texte": "Die Kinder sind ___.",
+     "reponses": [
+      [
+       "müde"
+      ]
+     ],
+     "banque": [
+      "müde",
+      "müden",
+      "müder",
+      "müdes"
+     ],
+     "aide": "Après *sein*, l’adjectif ne change pas.",
+     "explication": "**Die Kinder sind müde.** L’adjectif attribut reste à sa forme nue, même avec un sujet au pluriel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « Die Stadt ist groß » et non « große » ?",
+     "options": [
+      "Après sein, l’adjectif attribut reste invariable",
+      "Stadt est féminin, il faut donc un -e",
+      "Après ist, l’adjectif prend toujours -en",
+      "Groß est un attribut, donc il se décline"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la place de l’adjectif par rapport au verbe.",
+     "explication": "**Après *sein*, *werden* et *bleiben*, l’adjectif attribut ne se décline jamais.** Le français accorde (« grande »), l’allemand non."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2dc63c4-553b-5b46-a015-12ae322b4366",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une annonce : devant ou après ?",
+   "competence": "analyser-texte",
+   "situation": "Jonas a mis une annonce sur le tableau du lycée pour vendre des meubles. Observe où se trouvent les adjectifs.",
+   "documents": [
+    {
+     "id": "anz",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Zu verkaufen",
+     "blocs": [
+      "Ein [[e|alter]] Tisch und ein [[e|neues]] Fahrrad. Der Tisch ist [[a|stabil]], das Fahrrad ist [[a|schnell]] und die Stühle sind sehr [[a|bequem]]."
+     ],
+     "source": "Petite annonce écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "anz",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux adjectifs épithètes, ceux qui sont devant le nom.",
+     "aide": "Ils portent une terminaison, et un nom les suit tout de suite.",
+     "explication": "**alter** (*ein alter Tisch*) et **neues** (*ein neues Fahrrad*) sont devant le nom : ils se déclinent."
+    },
+    {
+     "type": "zone",
+     "document": "anz",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois adjectifs attributs, qui ne portent aucune terminaison.",
+     "aide": "Ils viennent après *ist* ou *sind*.",
+     "explication": "**stabil**, **schnell** et **bequem** suivent le verbe *sein* : ils restent invariables, même pour *die Stühle* au pluriel."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : l’adjectif est-il attribut ou épithète ?",
+     "categories": [
+      "Attribut (invariable)",
+      "Épithète (décliné)"
+     ],
+     "items": [
+      [
+       "Das Auto ist teuer.",
+       0
+      ],
+      [
+       "Ein teures Auto steht da.",
+       1
+      ],
+      [
+       "Die Kinder sind müde.",
+       0
+      ],
+      [
+       "Die müden Kinder schlafen.",
+       1
+      ]
+     ],
+     "aide": "Cherche si l’adjectif vient après le verbe ou devant le nom.",
+     "explication": "Après le verbe (*ist teuer*, *sind müde*), l’adjectif ne change pas. Devant le nom (*ein teures Auto*, *die müden Kinder*), il se décline."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le chat est très petit. » La phrase commence par Die Katze.",
+     "items": [
+      "Die Katze",
+      "ist",
+      "sehr",
+      "klein"
+     ],
+     "aide": "Le verbe est en deuxième position ; l’attribut vient en dernier.",
+     "explication": "**Die Katze ist sehr klein.** L’adjectif attribut, sans terminaison, se place après le verbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "e2dc63c4-553b-5b46-a015-12ae322b4366",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Messages dans le train : attribut, adverbe, comparatif",
+   "competence": "manier-langue",
+   "situation": "Emma discute avec Paul, qui revient d’un voyage à Hambourg. Les mêmes mots changent de rôle : adjectif, adverbe ou comparatif.",
+   "documents": [
+    {
+     "id": "train",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nach Hamburg",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "Wie war die Fahrt nach Hamburg?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Der Zug fährt [[adv|schnell]], aber er ist [[att|teuer]]."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Und dein Bruder? Er singt jetzt im Chor."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Ja, er singt [[adv|schön]]. Aber der Bus ist billiger."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "train",
+     "reponse": [
+      "adv"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux adverbes : ils décrivent un verbe, et non un nom.",
+     "aide": "En allemand, l’adverbe a la même forme que l’adjectif.",
+     "explication": "**schnell** (*fährt schnell*) et **schön** (*singt schön*) complètent un verbe : ce sont des adverbes, sans terminaison."
+    },
+    {
+     "type": "zone",
+     "document": "train",
+     "reponse": [
+      "att"
+     ],
+     "enonce": "Touche l’adjectif attribut qui suit « ist » et garde sa forme nue.",
+     "aide": "Ne choisis pas le mot qui se termine par -er.",
+     "explication": "**teuer** suit *ist* : c’est un attribut invariable. *billiger* est un comparatif : son -er est la marque du comparatif, pas un accord."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Der Bus ist billiger », que marque la terminaison -er ?",
+     "options": [
+      "Le comparatif",
+      "Le masculin singulier",
+      "Le pluriel",
+      "Le génitif"
+     ],
+     "reponse": 0,
+     "aide": "Emma et Paul comparent le train et le bus.",
+     "explication": "**Le comparatif** : *billiger* = « moins cher ». Ce n’est pas un accord avec *Bus*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase allemande à sa traduction.",
+     "paires": [
+      [
+       "Er singt schön",
+       "Il chante bien"
+      ],
+      [
+       "Das Lied ist schön",
+       "La chanson est belle"
+      ],
+      [
+       "Der Bus ist billiger",
+       "Le bus est moins cher"
+      ],
+      [
+       "Das Wetter bleibt schön",
+       "Le temps reste beau"
+      ]
+     ],
+     "aide": "*schön* est « bien » après un verbe d’action, « beau » après *sein* ou *bleiben*.",
+     "explication": "Le même mot *schön* sert d’adverbe (*singt schön* = « chante bien ») ou d’attribut (*ist schön* = « est belle »)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je trouve le film ennuyeux. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "finde",
+      "den Film",
+      "langweilig"
+     ],
+     "aide": "*finden* est en deuxième position ; l’attribut du COD vient à la fin.",
+     "explication": "**Ich finde den Film langweilig.** Avec *finden*, l’adjectif qualifie le COD et reste invariable."
+    }
+   ]
+  },
+  {
+   "chapitre": "62ec0fde-c670-5dbe-a47c-453fdbb92daf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le menu du Café zur Sonne",
+   "competence": "comprendre-langue",
+   "situation": "Jan lit l’ardoise du café en bas de chez lui. Chaque ligne a un adjectif devant un nom, avec ou sans déterminant.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Café zur Sonne",
+     "sousTitre": "Heute im Angebot",
+     "emoji": "☕",
+     "lignes": [
+      {
+       "texte": "Kalte Milch",
+       "valeur": "1,20 €",
+       "id": "f1"
+      },
+      {
+       "texte": "Frisches Brot",
+       "valeur": "2,00 €",
+       "id": "f2"
+      },
+      {
+       "texte": "Die heiße Suppe",
+       "valeur": "3,50 €",
+       "id": "w1"
+      },
+      {
+       "texte": "Ein warmer Apfelkuchen",
+       "valeur": "2,80 €",
+       "id": "m1"
+      }
+     ],
+     "pied": "Menu écrit pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "reponse": [
+      "f1",
+      "f2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux lignes où l’adjectif est employé sans déterminant (déclinaison forte).",
+     "aide": "Cherche les lignes qui commencent directement par l’adjectif.",
+     "explication": "**Kalte Milch** et **Frisches Brot** : sans article, l’adjectif porte lui-même la marque du cas (*-e* pour le féminin, *-es* pour le neutre)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « Die heiße Suppe » se termine-t-il en -e ?",
+     "options": [
+      "Parce que « die » porte déjà la marque du cas",
+      "Parce que Suppe est un nom masculin",
+      "Parce qu’il n’y a aucun déterminant",
+      "Parce que heiß est un adjectif invariable"
+     ],
+     "reponse": 0,
+     "aide": "Quel mot précède l’adjectif ?",
+     "explication": "Quand le déterminant (*die*) porte déjà la marque du cas, l’adjectif prend une terminaison faible : **-e** ici."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Au petit-déjeuner, je mange du bon pain. »",
+     "texte": "Zum Frühstück esse ich ___ Brot.",
+     "reponses": [
+      [
+       "gutes"
+      ]
+     ],
+     "banque": [
+      "gutes",
+      "guten",
+      "gute",
+      "guter"
+     ],
+     "aide": "Il n’y a pas de déterminant, et *Brot* est neutre.",
+     "explication": "**gutes** : sans déterminant, l’adjectif reprend la terminaison de l’article défini ; pour un neutre à l’accusatif, c’est **-es**."
+    }
+   ]
+  },
+  {
+   "chapitre": "62ec0fde-c670-5dbe-a47c-453fdbb92daf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les petites annonces de Lukas",
+   "competence": "manier-langue",
+   "situation": "Lukas vide sa chambre et publie une annonce. Il doit choisir la bonne terminaison pour chaque adjectif.",
+   "documents": [
+    {
+     "id": "kleinanz",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Zu verkaufen",
+     "blocs": [
+      "Verkaufe meinen [[p|alten]] Computer, einen schnellen Drucker und [[f|gute]] Bücher. Dazu gibt es [[f|frische]] Eier vom Bauernhof."
+     ],
+     "source": "Annonce écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "kleinanz",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux adjectifs employés sans déterminant (déclinaison forte).",
+     "aide": "Cherche les adjectifs qui précèdent directement un nom au pluriel.",
+     "explication": "**gute** (*gute Bücher*) et **frische** (*frische Eier*) : pas de déterminant, donc l’adjectif porte la marque du cas (*-e* au pluriel)."
+    },
+    {
+     "type": "zone",
+     "document": "kleinanz",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche l’adjectif qui suit un possessif (« meinen »).",
+     "aide": "C’est un masculin à l’accusatif.",
+     "explication": "**alten** : après le possessif *meinen*, qui marque déjà le cas, l’adjectif prend **-en**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque groupe nominal selon sa déclinaison.",
+     "categories": [
+      "Faible (après der, die, das)",
+      "Mixte (après ein, mein)",
+      "Forte (sans déterminant)"
+     ],
+     "items": [
+      [
+       "der alte Mann",
+       0
+      ],
+      [
+       "ein alter Mann",
+       1
+      ],
+      [
+       "alter Wein",
+       2
+      ],
+      [
+       "mein neues Auto",
+       1
+      ],
+      [
+       "die neue Schule",
+       0
+      ],
+      [
+       "gute Freunde",
+       2
+      ]
+     ],
+     "aide": "Regarde ce qui précède l’adjectif : article défini, article indéfini ou rien.",
+     "explication": "Après *der/die/das* : faible. Après *ein/mein* : mixte. Sans déterminant : forte (*alter Wein*, *gute Freunde*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme : « C’est une haute montagne et une voiture chère. »",
+     "texte": "Das ist ein ___ Berg und ein ___ Auto.",
+     "reponses": [
+      [
+       "hoher"
+      ],
+      [
+       "teures"
+      ]
+     ],
+     "banque": [
+      "hoher",
+      "hocher",
+      "teures",
+      "teueres",
+      "hohes"
+     ],
+     "aide": "*hoch* perd son c ; *teuer* perd son e devant une terminaison.",
+     "explication": "**ein hoher Berg** (*hoch* → *hoh-*, + *-er*) et **ein teures Auto** (*teuer* → *teur-*, + *-es*) : *ein* ne marque ni le masculin ni le neutre, l’adjectif le fait."
+    }
+   ]
+  },
+  {
+   "chapitre": "62ec0fde-c670-5dbe-a47c-453fdbb92daf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ma nouvelle chambre : lettre et grille",
+   "competence": "manier-langue",
+   "situation": "Mia emménage dans un nouveau logement. Elle décrit sa chambre à une amie, puis révise la déclinaison faible avec un tableau.",
+   "documents": [
+    {
+     "id": "zimmer",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Mia",
+     "blocs": [
+      "Mein neues Zimmer ist toll! Ein [[g|großes]] Bett steht am Fenster. Neben dem alten Schrank hängt ein [[r|rosa]] Poster. Auf dem Tisch liegt ein [[d|dunkles]] Heft."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "tabdekl",
+     "type": "tableau",
+     "titre": "La déclinaison faible",
+     "colonnes": [
+      "Cas",
+      "Masculin",
+      "Féminin",
+      "Neutre",
+      "Pluriel"
+     ],
+     "lignes": [
+      [
+       "Nominatif",
+       "der alte Mann",
+       "die alte Frau",
+       "das alte Haus",
+       "die alten Kinder"
+      ],
+      [
+       "Accusatif",
+       "den alten Mann",
+       "?",
+       "?",
+       "die alten Kinder"
+      ],
+      [
+       "Datif",
+       "dem alten Mann",
+       "der alten Frau",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zimmer",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche l’adjectif qui ne prend jamais de terminaison.",
+     "aide": "C’est une couleur empruntée.",
+     "explication": "**rosa** est invariable, comme *lila* : *ein rosa Poster*."
+    },
+    {
+     "type": "zone",
+     "document": "zimmer",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche l’adjectif qui a perdu un e pour recevoir sa terminaison.",
+     "aide": "Compare avec *dunkel*.",
+     "explication": "**dunkles** : *dunkel* perd son *e* devant une terminaison (*ein dunkles Heft*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « ein großes Bett », mais « eine große Lampe » ?",
+     "options": [
+      "Ein ne marque pas le neutre, l’adjectif le fait",
+      "Bett est féminin, l’adjectif prend donc un -e",
+      "Après ein, l’adjectif prend toujours la forme -en",
+      "Groß est un attribut, donc il se décline ici"
+     ],
+     "reponse": 0,
+     "aide": "Compare la terminaison de *ein* et celle de *eine*.",
+     "explication": "*ein* est sans marque au neutre : l’adjectif porte **-es**. *eine* marque déjà le féminin : l’adjectif se contente de **-e**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les cases du tableau : accusatif féminin et accusatif neutre.",
+     "texte": "die ___ Frau · das ___ Haus",
+     "reponses": [
+      [
+       "alte"
+      ],
+      [
+       "alte"
+      ]
+     ],
+     "banque": [
+      "alte",
+      "alten",
+      "alter",
+      "altes"
+     ],
+     "aide": "À l’accusatif, féminin et neutre ressemblent au nominatif.",
+     "explication": "**die alte Frau**, **das alte Haus** : à l’accusatif, le féminin et le neutre gardent le **-e** du nominatif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les cases du datif : le neutre, puis le pluriel.",
+     "texte": "dem ___ Haus · den ___ Kindern",
+     "reponses": [
+      [
+       "alten"
+      ],
+      [
+       "alten"
+      ]
+     ],
+     "banque": [
+      "alten",
+      "alte",
+      "alter",
+      "altes"
+     ],
+     "aide": "Au datif, l’adjectif faible prend la même terminaison partout.",
+     "explication": "**dem alten Haus**, **den alten Kindern** : au datif (et au génitif), la terminaison faible est toujours **-en**."
+    }
+   ]
+  },
+  {
+   "chapitre": "309ddd5f-f462-5553-86b3-4dd17ce4a56f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La famille de Lena",
+   "competence": "comprendre-langue",
+   "situation": "Lena présente sa famille à sa nouvelle classe. Observe les petits mots qui disent « mon », « ma » ou « notre ».",
+   "documents": [
+    {
+     "id": "fam",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Meine Familie",
+     "blocs": [
+      "Das ist meine Familie. [[m|Mein]] Vater heißt Karl, meine Mutter heißt Eva. [[u|Unser]] Hund heißt Rex."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fam",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le possessif qui veut dire « notre ».",
+     "aide": "Il ne commence pas par m-.",
+     "explication": "**Unser** : *unser Hund* = « notre chien »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque possessif à son sens.",
+     "paires": [
+      [
+       "mein",
+       "mon"
+      ],
+      [
+       "dein",
+       "ton"
+      ],
+      [
+       "unser",
+       "notre"
+      ],
+      [
+       "euer",
+       "votre"
+      ]
+     ],
+     "aide": "*euer* s’adresse à plusieurs personnes que l’on tutoie.",
+     "explication": "*mein* = mon, *dein* = ton, *unser* = notre, *euer* = votre (à plusieurs amis)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Voici mon frère et voici ma sœur. »",
+     "texte": "Das ist ___ Bruder und das ist ___ Schwester.",
+     "reponses": [
+      [
+       "mein"
+      ],
+      [
+       "meine"
+      ]
+     ],
+     "banque": [
+      "mein",
+      "meine",
+      "meinen",
+      "meiner"
+     ],
+     "aide": "Le possessif se décline comme *ein* : un -e pour le féminin.",
+     "explication": "**mein Bruder** (masculin, sans terminaison) et **meine Schwester** (féminin, -e)."
+    }
+   ]
+  },
+  {
+   "chapitre": "309ddd5f-f462-5553-86b3-4dd17ce4a56f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fête de l’école",
+   "competence": "manier-langue",
+   "situation": "C’est la fête de l’école. Un article de présentation dit avec qui chacun arrive : à chaque fois, il faut regarder QUI possède et CE QUI est possédé.",
+   "documents": [
+    {
+     "id": "fest",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Schulfest",
+     "blocs": [
+      "Heute ist Schulfest. Anna kommt mit [[f|ihrem]] Bruder. Peter kommt mit [[h|seiner]] Schwester. Die Kinder spielen mit [[k|ihren]] Freunden."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fest",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le possessif qui renvoie à un garçon, Peter.",
+     "aide": "Son radical commence par *s-*.",
+     "explication": "**seiner** : le radical *sein-* vient du possesseur (Peter, un homme)."
+    },
+    {
+     "type": "zone",
+     "document": "fest",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le possessif qui renvoie à Anna.",
+     "aide": "Son radical est *ihr-*.",
+     "explication": "**ihrem** : le radical *ihr-* vient du possesseur (Anna, une femme) ; *-em* vient de *der Bruder* au datif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « seiner » finit-il par -er ?",
+     "options": [
+      "Schwester est féminin, et le nom est au datif",
+      "Peter est un homme, donc la terminaison est -er",
+      "Le possesseur est neutre, donc on met -er",
+      "Mit demande le génitif, d’où la terminaison -er"
+     ],
+     "reponse": 0,
+     "aide": "La terminaison dépend de l’objet possédé, pas du possesseur.",
+     "explication": "La terminaison suit l’**objet possédé** : *Schwester* est féminin et au datif après *mit* ; le radical *sein-* suit le possesseur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Avez-vous vu vos parents ? » (on tutoie plusieurs amis)",
+     "texte": "Habt ihr ___ Eltern gesehen?",
+     "reponses": [
+      [
+       "eure"
+      ]
+     ],
+     "banque": [
+      "eure",
+      "euere",
+      "euer",
+      "eurer"
+     ],
+     "aide": "*euer* perd son e devant une terminaison.",
+     "explication": "**Habt ihr eure Eltern gesehen?** *euer* devient *eur-* devant une terminaison, et le pluriel prend **-e**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il met son manteau. » La phrase commence par Er.",
+     "items": [
+      "Er",
+      "zieht",
+      "sich",
+      "den Mantel",
+      "an"
+     ],
+     "aide": "Avec un vêtement, l’allemand emploie l’article et non le possessif.",
+     "explication": "**Er zieht sich den Mantel an.** Pas de possessif : *den Mantel* + *sich* (datif) disent « son manteau »."
+    }
+   ]
+  },
+  {
+   "chapitre": "309ddd5f-f462-5553-86b3-4dd17ce4a56f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au bureau des objets trouvés",
+   "competence": "raisonner",
+   "situation": "Au bureau des objets trouvés, Herr Braun vérifie à qui appartiennent plusieurs affaires. Un tableau rappelle qui est le propriétaire de chaque objet.",
+   "documents": [
+    {
+     "id": "fund",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Im Fundbüro",
+     "participants": [
+      {
+       "nom": "Herr Braun",
+       "emoji": "👨",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Frau Weiß",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Herr Braun",
+       "texte": "Guten Tag, Frau Weiß. Ist das [[p|Ihre]] Jacke?"
+      },
+      {
+       "qui": "Frau Weiß",
+       "texte": "Nein, meine Jacke ist grün. Aber das ist die Mütze von meinem Sohn."
+      },
+      {
+       "qui": "Herr Braun",
+       "texte": "Und der Schirm? Gehört er [[p|Ihrem]] Mann?"
+      },
+      {
+       "qui": "Frau Weiß",
+       "texte": "Ja, das ist [[a|seiner]]. Und die Handschuhe sind [[a|unsere]]."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "liste",
+     "type": "tableau",
+     "titre": "Liste des objets",
+     "colonnes": [
+      "Objet",
+      "Genre",
+      "Propriétaire"
+     ],
+     "lignes": [
+      [
+       "die Tasche",
+       "féminin",
+       "Frau Weiß"
+      ],
+      [
+       "das Handy",
+       "neutre",
+       "Lena, sa fille"
+      ],
+      [
+       "die Schlüssel",
+       "pluriel",
+       "Ben, son fils"
+      ]
+     ],
+     "source": "Liste écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fund",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux possessifs de politesse (« votre »).",
+     "aide": "Ils s’écrivent avec une majuscule, au milieu de la phrase.",
+     "explication": "**Ihre** et **Ihrem** : Herr Braun vouvoie Frau Weiß, donc *Ihr-* prend une majuscule."
+    },
+    {
+     "type": "zone",
+     "document": "fund",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux possessifs employés seuls, sans nom derrière.",
+     "aide": "Ils répondent à « À qui est-ce ? ».",
+     "explication": "**seiner** et **unsere** : employé seul, le possessif prend les terminaisons de l’article défini (*das ist seiner*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Herr Braun parle des propriétaires à un collègue. Complète d’après la liste.",
+     "texte": "Das ist ___ Tasche. Das ist ___ Handy. Das sind ___ Schlüssel.",
+     "reponses": [
+      [
+       "ihre"
+      ],
+      [
+       "ihr"
+      ],
+      [
+       "seine"
+      ]
+     ],
+     "banque": [
+      "ihre",
+      "ihr",
+      "seine",
+      "sein",
+      "ihrem"
+     ],
+     "aide": "Radical d’après le possesseur (femme ou homme), terminaison d’après l’objet (genre).",
+     "explication": "**ihre Tasche** (Frau Weiß, *Tasche* féminin), **ihr Handy** (Lena, *Handy* neutre : pas de terminaison), **seine Schlüssel** (Ben, pluriel)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « Ihre Jacke » prend-il une majuscule dans le dialogue ?",
+     "options": [
+      "Herr Braun vouvoie Frau Weiß : c’est la politesse",
+      "Ihre est un nom propre dans cette phrase",
+      "Ihre veut dire « leur » et prend toujours une majuscule",
+      "Ihre est placé juste après un point"
+     ],
+     "reponse": 0,
+     "aide": "Regarde à qui Herr Braun s’adresse.",
+     "explication": "Quand on **vouvoie**, le possessif s’écrit avec une majuscule : *Ihre Jacke* = « votre veste ». Sans majuscule, *ihre* voudrait dire « sa » (à elle) ou « leur »."
+    }
+   ]
+  },
+  {
+   "chapitre": "56ad254e-04ec-5598-b077-c62d23ba04f6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sur le parking de l’école",
+   "competence": "comprendre-langue",
+   "situation": "Le journal de l’école décrit les véhicules garés devant le lycée. Les propriétaires sont indiqués de deux manières différentes.",
+   "documents": [
+    {
+     "id": "park",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Auf dem Parkplatz",
+     "blocs": [
+      "Auf dem Parkplatz stehen drei Fahrzeuge. [[s|Peters]] Auto ist blau, [[s|Annas]] Roller ist rot. Das Auto [[g|des]] Lehrers ist schwarz."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "park",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux génitifs saxons : le nom du possesseur est devant, avec un -s.",
+     "aide": "Ce sont des prénoms, sans article.",
+     "explication": "**Peters** et **Annas** : le génitif saxon se place devant le nom, avec **-s** et sans apostrophe ni article."
+    },
+    {
+     "type": "zone",
+     "document": "park",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche l’article qui introduit un génitif ordinaire, placé derrière le nom.",
+     "aide": "Cet article est suivi d’un nom masculin avec -s.",
+     "explication": "**des** : *das Auto des Lehrers*. Le possesseur est derrière, avec l’article au génitif (*des*) et un **-s** au nom."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « la maison du père et la chambre de la mère ».",
+     "texte": "Das Haus ___ Vaters und das Zimmer ___ Mutter.",
+     "reponses": [
+      [
+       "des"
+      ],
+      [
+       "der"
+      ]
+     ],
+     "banque": [
+      "des",
+      "der",
+      "dem",
+      "den"
+     ],
+     "aide": "Masculin et neutre : *des* ; féminin et pluriel : *der*.",
+     "explication": "**des Vaters** (masculin : *des* + nom en -s) et **der Mutter** (féminin : *der*, le nom ne change pas)."
+    }
+   ]
+  },
+  {
+   "chapitre": "56ad254e-04ec-5598-b077-c62d23ba04f6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À qui est ce vélo ?",
+   "competence": "manier-langue",
+   "situation": "Lena veut savoir à qui appartiennent un téléphone et un vélo. Tom répond de trois manières différentes.",
+   "documents": [
+    {
+     "id": "wem",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Wessen Handy?",
+     "participants": [
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lena",
+       "texte": "Wessen Handy liegt da?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Das ist das Handy [[v|von]] meinem Bruder."
+      },
+      {
+       "qui": "Lena",
+       "texte": "Und das Fahrrad vor der Tür?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Das ist [[s|Annas]] Fahrrad. Es bleibt [[w|wegen]] des Regens hier."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "wem",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche la préposition de la tournure orale « de + datif » : le possesseur est derrière.",
+     "aide": "Elle introduit « mon frère ».",
+     "explication": "**von** : *das Handy von meinem Bruder* est la tournure orale, avec un datif."
+    },
+    {
+     "type": "zone",
+     "document": "wem",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le génitif saxon : le possesseur est devant le nom, sans article.",
+     "aide": "C’est un prénom terminé par -s.",
+     "explication": "**Annas** : *Annas Fahrrad*, sans article et sans apostrophe."
+    },
+    {
+     "type": "zone",
+     "document": "wem",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche la préposition qui régit le génitif et veut dire « à cause de ».",
+     "aide": "Elle est suivie de *des Regens*.",
+     "explication": "**wegen** : *wegen des Regens*. Les prépositions *wegen*, *trotz*, *während*, *statt* régissent le génitif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque tournure selon sa construction.",
+     "categories": [
+      "Génitif saxon",
+      "Génitif ordinaire",
+      "von + datif"
+     ],
+     "items": [
+      [
+       "Peters Auto",
+       0
+      ],
+      [
+       "das Auto des Vaters",
+       1
+      ],
+      [
+       "das Auto von meinem Vater",
+       2
+      ],
+      [
+       "Lenas Tasche",
+       0
+      ],
+      [
+       "die Tasche der Frau",
+       1
+      ],
+      [
+       "die Tasche von meiner Mutter",
+       2
+      ]
+     ],
+     "aide": "Regarde où se trouve le possesseur et s’il y a un *von*.",
+     "explication": "Le **génitif saxon** met le possesseur devant (*Lenas Tasche*), le **génitif ordinaire** derrière avec *des* ou *der*, et *von* + datif est la forme orale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Pendant l’été, nous allons à la mer. »",
+     "texte": "___ des Sommers fahren wir ans Meer.",
+     "reponses": [
+      [
+       "Während"
+      ]
+     ],
+     "banque": [
+      "Während",
+      "Wegen",
+      "Trotz",
+      "Statt"
+     ],
+     "aide": "Le sens est « pendant » : une durée.",
+     "explication": "**Während des Sommers** : *während* + génitif veut dire « pendant »."
+    }
+   ]
+  },
+  {
+   "chapitre": "56ad254e-04ec-5598-b077-c62d23ba04f6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le journal du quartier",
+   "competence": "analyser-texte",
+   "situation": "Le journal du quartier raconte les travaux de l’été. Son vocabulaire est celui de l’écrit soigné : il utilise des prépositions suivies du génitif.",
+   "documents": [
+    {
+     "id": "viertel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Bei uns im Viertel",
+     "blocs": [
+      "[[p|Während]] des Sommers war die Straße gesperrt. [[p|Trotz]] der [[f|Hitze]] arbeiteten die Männer jeden Tag. [[p|Statt]] des alten Marktes gibt es jetzt einen Parkplatz.",
+      "Der Bürgermeister war nicht da, [[p|wegen]] seiner [[f|Krankheit]]."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "tabgen",
+     "type": "tableau",
+     "titre": "L’article et le nom au génitif",
+     "colonnes": [
+      "Genre",
+      "Article",
+      "Le nom"
+     ],
+     "lignes": [
+      [
+       "Masculin",
+       "des",
+       "prend -(e)s"
+      ],
+      [
+       "Neutre",
+       "des",
+       "?"
+      ],
+      [
+       "Féminin",
+       "der",
+       "?"
+      ],
+      [
+       "Pluriel",
+       "der",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "viertel",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre prépositions qui régissent le génitif.",
+     "aide": "Le sens est : pendant, malgré, au lieu de, à cause de.",
+     "explication": "**Während**, **Trotz**, **Statt** et **wegen** régissent le génitif."
+    },
+    {
+     "type": "zone",
+     "document": "viertel",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux noms féminins au génitif.",
+     "aide": "Leur article est *der*, ou le possessif *seiner*.",
+     "explication": "**Hitze** et **Krankheit** sont féminins : au génitif, le nom ne prend aucune marque (*der Hitze*, *seiner Krankheit*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le tableau : « pendant l’année » (*das Jahr*).",
+     "texte": "während des ___",
+     "reponses": [
+      [
+       "Jahres"
+      ]
+     ],
+     "banque": [
+      "Jahres",
+      "Jahr",
+      "Jahren",
+      "Jahre"
+     ],
+     "aide": "Le nom neutre prend -(e)s au génitif, comme le masculin.",
+     "explication": "**während des Jahres** : au génitif, le nom masculin ou neutre prend **-(e)s** ; le féminin et le pluriel ne changent pas."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque préposition à son sens.",
+     "paires": [
+      [
+       "wegen",
+       "à cause de"
+      ],
+      [
+       "trotz",
+       "malgré"
+      ],
+      [
+       "während",
+       "pendant"
+      ],
+      [
+       "statt",
+       "au lieu de"
+      ]
+     ],
+     "aide": "Cherche la phrase du journal où chaque mot est utilisé.",
+     "explication": "*wegen* = à cause de, *trotz* = malgré, *während* = pendant, *statt* = au lieu de."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « À cause de la pluie, je reste à la maison. » La phrase commence par Wegen des Regens.",
+     "items": [
+      "Wegen des Regens",
+      "bleibe",
+      "ich",
+      "zu Hause"
+     ],
+     "aide": "Le groupe prépositionnel est en première position : le verbe passe devant le sujet.",
+     "explication": "**Wegen des Regens bleibe ich zu Hause.** Le groupe en tête occupe la première place ; le verbe reste en deuxième, avant *ich*."
+    }
+   ]
+  },
+  {
+   "chapitre": "767d36b0-23c9-5d5a-a234-49c83e6b76a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est le plus grand ?",
+   "competence": "lire-tableau",
+   "situation": "Trois élèves de l’équipe de volley ont été mesurés par le professeur de sport. Il note leur âge et leur taille.",
+   "documents": [
+    {
+     "id": "equipe",
+     "type": "tableau",
+     "titre": "L’équipe de volley",
+     "colonnes": [
+      "Name",
+      "Alter",
+      "Größe (cm)"
+     ],
+     "lignes": [
+      [
+       "Lena",
+       13,
+       158
+      ],
+      [
+       "Tim",
+       15,
+       172
+      ],
+      [
+       "Mia",
+       15,
+       165
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, quelle phrase est juste ?",
+     "options": [
+      "Tim ist größer als Lena",
+      "Tim ist größer wie Lena",
+      "Lena ist größer als Tim",
+      "Mia ist so groß wie Tim"
+     ],
+     "reponse": 0,
+     "aide": "Compare les tailles de Tim et de Lena, et regarde le mot qui suit *größer*.",
+     "explication": "**Tim ist größer als Lena** : Tim mesure 172 cm, Lena 158 cm. Après un comparatif, on emploie *als*, jamais *wie*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Lena est plus jeune que Tim. »",
+     "texte": "Lena ist jünger ___ Tim.",
+     "reponses": [
+      [
+       "als"
+      ]
+     ],
+     "banque": [
+      "als",
+      "wie",
+      "so",
+      "mehr"
+     ],
+     "aide": "Une inégalité s’exprime avec comparatif + ...",
+     "explication": "**Lena ist jünger als Tim.** Supériorité ou infériorité : comparatif + **als**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après les âges : « Mia est plus âgée que Lena. »",
+     "texte": "Mia ist ___ als Lena.",
+     "reponses": [
+      [
+       "älter"
+      ]
+     ],
+     "banque": [
+      "älter",
+      "alter",
+      "älteres",
+      "mehr alt"
+     ],
+     "aide": "*alt* prend un Umlaut au comparatif.",
+     "explication": "**Mia ist älter als Lena** : Mia a 15 ans, Lena 13 ; *alt → älter*, avec Umlaut."
+    }
+   ]
+  },
+  {
+   "chapitre": "767d36b0-23c9-5d5a-a234-49c83e6b76a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux smartphones à comparer",
+   "competence": "lire-tableau",
+   "situation": "Yasmin hésite entre deux smartphones. Elle compare leur prix, leur poids et la durée de leur batterie.",
+   "documents": [
+    {
+     "id": "phones",
+     "type": "tableau",
+     "titre": "Zwei Smartphones",
+     "colonnes": [
+      "",
+      "Modell A",
+      "Modell B"
+     ],
+     "lignes": [
+      [
+       "Preis (€)",
+       300,
+       450
+      ],
+      [
+       "Gewicht (g)",
+       160,
+       140
+      ],
+      [
+       "Akku (h)",
+       20,
+       30
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien d’euros le modèle B est-il plus cher que le modèle A ?",
+     "reponse": 150,
+     "unite": "€",
+     "aide": "Soustrais les deux prix.",
+     "explication": "**150 €** : 450 − 300 = 150. On écrit *Modell B ist teurer als Modell A*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Le modèle A est moins cher que le modèle B. »",
+     "texte": "Modell A ist ___ als Modell B.",
+     "reponses": [
+      [
+       "billiger"
+      ]
+     ],
+     "banque": [
+      "billiger",
+      "billig",
+      "mehr billig",
+      "billigere"
+     ],
+     "aide": "Adjectif + -er, sans mot supplémentaire.",
+     "explication": "**Modell A ist billiger als Modell B.** Le comparatif se forme avec **-er** : on n’emploie jamais *mehr* devant un adjectif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est FAUSSE d’après le tableau ?",
+     "options": [
+      "Modell B ist leichter als Modell A",
+      "Modell A ist billiger als Modell B",
+      "Modell A ist nicht so leicht wie Modell B",
+      "Modell B ist so teuer wie Modell A"
+     ],
+     "reponse": 3,
+     "aide": "Cherche la phrase qui contredit un prix, un poids ou une durée du tableau.",
+     "explication": "**Modell B ist so teuer wie Modell A** est fausse : B coûte 450 €, A 300 €. Les trois autres correspondent au tableau."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le modèle B est plus cher que le modèle A. » La phrase commence par Modell B.",
+     "items": [
+      "Modell B",
+      "ist",
+      "teurer",
+      "als",
+      "Modell A"
+     ],
+     "aide": "Comparatif, puis *als* et le second terme.",
+     "explication": "**Modell B ist teurer als Modell A.** Structure : sujet + *ist* + comparatif + **als** + second terme."
+    }
+   ]
+  },
+  {
+   "chapitre": "767d36b0-23c9-5d5a-a234-49c83e6b76a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mon allemand s’améliore",
+   "competence": "argumenter",
+   "situation": "Clara tient un petit carnet de ses révisions d’allemand. Elle a tracé son temps de travail par semaine et raconte ses progrès dans une lettre.",
+   "documents": [
+    {
+     "id": "lernzeit",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Meine Lernzeit pro Tag",
+     "categories": [
+      "Woche 1",
+      "Woche 2",
+      "Woche 3",
+      "Woche 4"
+     ],
+     "series": [
+      {
+       "nom": "Minuten",
+       "valeurs": [
+        15,
+        25,
+        40,
+        55
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Lernzeit",
+      "unite": "Minuten",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Woche"
+     },
+     "valeurs": false,
+     "source": "Données inventées pour l’exercice"
+    },
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Lena",
+     "blocs": [
+      "Ich lerne jede Woche länger Deutsch. Mein [[e|älterer]] Bruder Paul lernt mehr als ich, aber ich verstehe schon viel."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lernzeit",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la semaine pendant laquelle Clara a travaillé le plus longtemps.",
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "**Woche 4** : environ 55 minutes par jour, c’est la barre la plus haute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes de plus par jour Clara travaille-t-elle en semaine 4 qu’en semaine 1 ?",
+     "reponse": 40,
+     "unite": "minutes",
+     "aide": "Lis les deux barres, puis soustrais.",
+     "explication": "**40 minutes** : 55 − 15 = 40. *In Woche 4 lerne ich länger als in Woche 1.*"
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le comparatif qui porte, en plus, une terminaison de déclinaison.",
+     "aide": "Il est devant un nom et se termine par -er.",
+     "explication": "**älterer** : *alt → älter* (comparatif), puis *-er* (terminaison du masculin nominatif après *mein*) : *mein älterer Bruder*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase compare correctement les semaines 4 et 2 ?",
+     "options": [
+      "In Woche 4 lerne ich länger als in Woche 2",
+      "In Woche 4 lerne ich länger wie in Woche 2",
+      "In Woche 4 lerne ich mehr lang als in Woche 2",
+      "In Woche 4 lerne ich so länger als in Woche 2"
+     ],
+     "reponse": 0,
+     "aide": "Après un comparatif, on emploie *als*, et *mehr* ne se place jamais devant un adjectif.",
+     "explication": "**länger als** : adjectif + **-er**, puis *als*. *wie* sert à l’égalité (*so lang wie*), et *mehr* ne traduit pas « plus » devant un adjectif."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Plus Paul s’exerce en allemand, mieux il parle. » La phrase commence par Je mehr Deutsch.",
+     "items": [
+      "Je mehr Deutsch",
+      "Paul",
+      "übt,",
+      "desto besser",
+      "spricht er"
+     ],
+     "aide": "Après *je…*, le verbe est à la fin de la proposition ; après *desto…*, le verbe est en deuxième position.",
+     "explication": "**Je mehr Deutsch Paul übt, desto besser spricht er.** Dans la première partie le verbe est rejeté en fin de proposition ; après *desto + comparatif*, il vient aussitôt, devant le sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6ae8e29-9651-5f5d-afb2-b22204f0127d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les montagnes allemandes",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé de géographie, Ben a noté l’altitude de quatre montagnes allemandes.",
+   "documents": [
+    {
+     "id": "berge",
+     "type": "tableau",
+     "titre": "Vier Berge",
+     "colonnes": [
+      "Berg",
+      "Höhe (m)"
+     ],
+     "lignes": [
+      [
+       "Zugspitze",
+       2962
+      ],
+      [
+       "Watzmann",
+       2713
+      ],
+      [
+       "Feldberg",
+       1493
+      ],
+      [
+       "Brocken",
+       1141
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, quelle phrase est juste ?",
+     "options": [
+      "Die Zugspitze ist am höchsten",
+      "Der Brocken ist am höchsten",
+      "Der Feldberg ist am höchsten",
+      "Der Watzmann ist am höchsten"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’altitude la plus grande.",
+     "explication": "**Die Zugspitze ist am höchsten** : 2 962 m, la plus haute des quatre. Attribut : forme figée *am … -sten*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Le Brocken est le plus bas des quatre. »",
+     "texte": "Der Brocken ist am ___.",
+     "reponses": [
+      [
+       "niedrigsten"
+      ]
+     ],
+     "banque": [
+      "niedrigsten",
+      "niedrigesten",
+      "niedrigstes",
+      "niedrigste"
+     ],
+     "aide": "Après *g*, pas de *e* de liaison : adjectif + -sten.",
+     "explication": "**Der Brocken ist am niedrigsten** : *niedrig* + **-sten** ; pas de *e* de liaison, car il ne finit ni par d, t, s, ß, z ni sch."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « La Zugspitze est la plus haute montagne. » (devant un nom)",
+     "texte": "Die Zugspitze ist der ___ Berg.",
+     "reponses": [
+      [
+       "höchste"
+      ]
+     ],
+     "banque": [
+      "höchste",
+      "höchsten",
+      "am höchsten",
+      "hohe"
+     ],
+     "aide": "Devant un nom, le superlatif se décline : article + -ste.",
+     "explication": "**der höchste Berg** : devant un nom, *der* + superlatif en **-ste** ; *hoch* perd son *c* et prend l’Umlaut."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6ae8e29-9651-5f5d-afb2-b22204f0127d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mon sport préféré",
+   "competence": "manier-langue",
+   "situation": "Mia et Jan discutent de sport. Leurs messages contiennent deux sortes de superlatifs : l’un est figé, l’autre se décline.",
+   "documents": [
+    {
+     "id": "sport",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Sport und Freizeit",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Welcher Sport gefällt dir am besten?"
+      },
+      {
+       "qui": "Jan",
+       "texte": "Am liebsten spiele ich Fußball. Tim ist der [[b|beste]] Spieler unserer Klasse."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Ich schwimme am [[s|schnellsten]] in der Gruppe."
+      },
+      {
+       "qui": "Jan",
+       "texte": "Und Opa? Er ist am ältesten, aber er läuft jeden Tag."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sport",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le superlatif qui se décline parce qu’il est devant un nom.",
+     "aide": "Il est précédé de *der* et suivi de *Spieler*.",
+     "explication": "**beste** : *der beste Spieler*. Devant un nom, on emploie l’article et la forme en **-ste**, qui se décline."
+    },
+    {
+     "type": "zone",
+     "document": "sport",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le superlatif figé qui décrit la façon de nager de Mia.",
+     "aide": "Il suit « am ».",
+     "explication": "**schnellsten** : *am schnellsten* est la forme figée, utilisée avec un verbe : elle ne se décline pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon la forme du superlatif.",
+     "categories": [
+      "am + -sten (figé)",
+      "article + -ste (décliné)"
+     ],
+     "items": [
+      [
+       "Das Eis ist am besten.",
+       0
+      ],
+      [
+       "Das beste Eis kostet drei Euro.",
+       1
+      ],
+      [
+       "Er singt am schönsten.",
+       0
+      ],
+      [
+       "Das schönste Lied kommt jetzt.",
+       1
+      ]
+     ],
+     "aide": "Cherche si un nom suit le superlatif.",
+     "explication": "Avec *sein* ou un verbe (*ist am besten*, *singt am schönsten*), la forme est figée en *am … -sten*. Devant un nom (*das beste Eis*), elle se décline."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Juillet est le mois le plus chaud. »",
+     "texte": "Der Juli ist am ___.",
+     "reponses": [
+      [
+       "heißesten"
+      ]
+     ],
+     "banque": [
+      "heißesten",
+      "heißsten",
+      "heißten",
+      "heißestes"
+     ],
+     "aide": "Après *ß*, on intercale un *e* pour pouvoir prononcer.",
+     "explication": "**am heißesten** : *heiß* finit par ß, donc on ajoute un *e* de liaison avant *-sten*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ce que je préfère, c’est manger de la pizza. » La phrase commence par Am liebsten.",
+     "items": [
+      "Am liebsten",
+      "esse",
+      "ich",
+      "Pizza"
+     ],
+     "aide": "Le verbe est en deuxième position, avant le sujet.",
+     "explication": "**Am liebsten esse ich Pizza.** *am liebsten* exprime « ce que je préfère par-dessus tout » ; il occupe la première place, donc *esse* précède *ich*."
+    }
+   ]
+  },
+  {
+   "chapitre": "d6ae8e29-9651-5f5d-afb2-b22204f0127d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Records allemands",
+   "competence": "argumenter",
+   "situation": "Un jeune Français écrit à Tim depuis l’Allemagne. Il a noté le nombre d’habitants de quatre villes et raconte son voyage.",
+   "documents": [
+    {
+     "id": "staedte",
+     "type": "tableau",
+     "titre": "Vier Städte",
+     "colonnes": [
+      "Stadt",
+      "Einwohner (Millionen)"
+     ],
+     "lignes": [
+      [
+       "Berlin",
+       "3,7"
+      ],
+      [
+       "Hamburg",
+       "1,9"
+      ],
+      [
+       "München",
+       "1,5"
+      ],
+      [
+       "Köln",
+       "1,1"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres arrondis"
+    },
+    {
+     "id": "reise",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Tim",
+     "blocs": [
+      "Ich bin in Deutschland! Berlin ist die [[g|größte]] Stadt des Landes. München gefällt mir gut, aber Hamburg ist größer. Von allen Städten besuche ich Köln am [[l|liebsten]]."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reise",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le superlatif décliné devant un nom.",
+     "aide": "Il est précédé de *die*.",
+     "explication": "**größte** : *die größte Stadt*. Devant un nom, on emploie article + superlatif en **-ste** ; *groß* n’a pas de *e* de liaison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’habitants de plus Berlin compte-t-elle que Hambourg ?",
+     "reponse": 1.8,
+     "unite": "millions",
+     "aide": "Soustrais 1,9 à 3,7.",
+     "explication": "**1,8 million** : 3,7 − 1,9 = 1,8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est juste d’après le tableau ?",
+     "options": [
+      "Köln ist die kleinste der vier Städte",
+      "Hamburg ist die größte der vier Städte",
+      "München ist am größten von allen",
+      "Berlin ist die kleinste der vier Städte"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la ville qui a le moins d’habitants.",
+     "explication": "**Köln ist die kleinste der vier Städte** : 1,1 million, c’est le plus petit nombre. Le complément se dit avec *von* ou, ici, *der vier Städte*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « La plus petite ville des quatre est Cologne. »",
+     "texte": "Die ___ Stadt der vier ist Köln.",
+     "reponses": [
+      [
+       "kleinste"
+      ]
+     ],
+     "banque": [
+      "kleinste",
+      "kleinsten",
+      "am kleinsten",
+      "kleiner"
+     ],
+     "aide": "Devant un nom, le superlatif se décline.",
+     "explication": "**Die kleinste Stadt** : devant un nom, article + adjectif + **-ste**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Hambourg me plaît le plus. » La phrase commence par Hamburg.",
+     "items": [
+      "Hamburg",
+      "gefällt",
+      "mir",
+      "am besten"
+     ],
+     "aide": "*gefallen* est en deuxième position, puis le datif *mir*.",
+     "explication": "**Hamburg gefällt mir am besten.** *gut → besser → am besten* : avec un verbe, on emploie la forme figée *am besten*."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cb594f7-69cf-5649-aae3-a6b786833efe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un goûter pour Opa",
+   "competence": "comprendre-langue",
+   "situation": "Jule prépare l’anniversaire de son grand-père. Son petit mot contient plusieurs prépositions qu’il faut savoir reconnaître.",
+   "documents": [
+    {
+     "id": "opa",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Opas Geburtstag",
+     "blocs": [
+      "Morgen hat Opa Geburtstag. Ich kaufe ein Geschenk [[a|für]] meinen Opa. Wir gehen [[a|durch]] den Park und sitzen [[a|um]] einen Tisch. [[a|Ohne]] Oma feiern wir nicht."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "opa",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre prépositions qui sont toujours suivies de l’accusatif.",
+     "aide": "Pense à la liste durch · für · gegen · ohne · um.",
+     "explication": "**für**, **durch**, **um** et **ohne** régissent toujours l’accusatif, quel que soit le sens."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque préposition à son sens.",
+     "paires": [
+      [
+       "durch",
+       "à travers"
+      ],
+      [
+       "für",
+       "pour"
+      ],
+      [
+       "ohne",
+       "sans"
+      ],
+      [
+       "um",
+       "autour de"
+      ]
+     ],
+     "aide": "Retrouve chaque préposition dans le texte.",
+     "explication": "*durch* = à travers, *für* = pour, *ohne* = sans, *um* = autour de."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Le cadeau est pour ma sœur. »",
+     "texte": "Das Geschenk ist für ___ Schwester.",
+     "reponses": [
+      [
+       "die"
+      ]
+     ],
+     "banque": [
+      "die",
+      "der",
+      "dem",
+      "den"
+     ],
+     "aide": "*für* demande l’accusatif ; *Schwester* est féminin.",
+     "explication": "**für die Schwester** : accusatif féminin = *die*."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cb594f7-69cf-5649-aae3-a6b786833efe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Rendez-vous au cinéma",
+   "competence": "analyser-document",
+   "situation": "Ben et Mia organisent une soirée cinéma. Pour s’y retrouver, ils doivent distinguer l’heure approximative de l’heure précise.",
+   "documents": [
+    {
+     "id": "kino",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Heute Abend",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Wann treffen wir uns heute?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "[[g|Gegen]] vier. Der Film beginnt [[u|um]] 18 Uhr."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Super. Ich komme [[o|ohne]] Marie, sie ist krank."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Schade! Dann kaufe ich Popcorn für uns beide."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "kino",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche la préposition qui donne une heure approximative, « vers quatre heures ».",
+     "aide": "Ce n’est pas celle du film.",
+     "explication": "**Gegen** : *gegen vier* = « vers quatre heures »."
+    },
+    {
+     "type": "zone",
+     "document": "kino",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche la préposition qui donne une heure précise.",
+     "aide": "Elle est devant « 18 Uhr ».",
+     "explication": "**um** : *um 18 Uhr* = « à 18 h pile »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle heure exacte commence le film ? (en heures, sur 24 h)",
+     "reponse": 18,
+     "unite": "Uhr",
+     "aide": "Cherche la préposition de l’heure précise.",
+     "explication": "**18 Uhr** : le film commence *um 18 Uhr*, donc à l’heure précise de 18 h."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Nous jouons sans elle. » (Marie)",
+     "texte": "Wir spielen ohne ___.",
+     "reponses": [
+      [
+       "sie"
+      ]
+     ],
+     "banque": [
+      "sie",
+      "ihr",
+      "ihm",
+      "es"
+     ],
+     "aide": "*ohne* est suivi de l’accusatif.",
+     "explication": "**ohne sie** : *ohne* demande l’accusatif, et le pronom de « elle » à l’accusatif est *sie*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Nous traversons le parc. » La phrase commence par Wir.",
+     "items": [
+      "Wir",
+      "gehen",
+      "durch",
+      "den Park"
+     ],
+     "aide": "*durch* est suivi de l’accusatif.",
+     "explication": "**Wir gehen durch den Park.** *durch* + accusatif masculin (*den*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cb594f7-69cf-5649-aae3-a6b786833efe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rallye de la ville",
+   "competence": "analyser-document",
+   "situation": "Pour la semaine d’intégration, les élèves de 3e font un rallye dans la ville. La feuille de route précise l’itinéraire ; Jule et Ole échangent des messages à la veille du départ.",
+   "documents": [
+    {
+     "id": "rallye",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Stadtrallye",
+     "sousTitre": "Samstag, 9 Uhr",
+     "emoji": "🗺️",
+     "lignes": [
+      {
+       "texte": "1 · Gehen Sie durch den Park.",
+       "id": "l1"
+      },
+      {
+       "texte": "2 · Laufen Sie die Straße entlang.",
+       "id": "l2"
+      },
+      {
+       "texte": "3 · Gehen Sie um die Kirche.",
+       "id": "l3"
+      },
+      {
+       "texte": "4 · Treffpunkt: gegen 15 Uhr am Brunnen.",
+       "id": "l4"
+      }
+     ],
+     "pied": "Feuille écrite pour l’exercice",
+     "teinte": "bleu"
+    },
+    {
+     "id": "jule",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Vor dem Rallye",
+     "participants": [
+      {
+       "nom": "Jule",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ole",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jule",
+       "texte": "Kommst du mit dem Auto?"
+      },
+      {
+       "qui": "Ole",
+       "texte": "Nein, ich komme [[o|ohne]] Auto, mit dem Bus."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jule",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche la préposition qui impose toujours l’accusatif.",
+     "aide": "L’autre préposition est suivie du datif.",
+     "explication": "**ohne** régit toujours l’accusatif ; *mit* régit toujours le datif."
+    },
+    {
+     "type": "zone",
+     "document": "rallye",
+     "reponse": [
+      "l2"
+     ],
+     "enonce": "Touche la ligne où la préposition se place après le nom.",
+     "aide": "Cherche le mot qui veut dire « le long de ».",
+     "explication": "**Ligne 2** : *die Straße entlang*. *entlang* se place **après** le nom et veut dire « le long de »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Nous marchons autour de la fontaine et à travers la porte. »",
+     "texte": "Wir laufen um ___ Brunnen und gehen durch ___ Tür.",
+     "reponses": [
+      [
+       "den"
+      ],
+      [
+       "die"
+      ]
+     ],
+     "banque": [
+      "den",
+      "die",
+      "das",
+      "dem"
+     ],
+     "aide": "*um* et *durch* demandent l’accusatif ; regarde le genre de *Brunnen* et de *Tür*.",
+     "explication": "**um den Brunnen** (masculin) et **durch die Tür** (féminin) : accusatif après *um* et *durch*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Nous longeons la rue. » La phrase commence par Wir.",
+     "items": [
+      "Wir",
+      "gehen",
+      "die Straße",
+      "entlang"
+     ],
+     "aide": "*entlang* est placé après le nom.",
+     "explication": "**Wir gehen die Straße entlang.** Avec *entlang* en postposition, le nom est à l’accusatif : *die Straße*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Treffpunkt : gegen 15 Uhr » sur la feuille ?",
+     "options": [
+      "On se retrouve vers 15 heures",
+      "On se retrouve à 15 heures pile",
+      "On se retrouve avant 15 heures",
+      "On se retrouve après 15 heures"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec *um 15 Uhr*.",
+     "explication": "**Vers 15 heures** : *gegen* donne une heure approximative ; *um* donnerait l’heure précise."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Je vais à la gare pour chercher mon grand-père. »",
+     "texte": "Ich fahre zum Bahnhof, ___ Opa abzuholen.",
+     "reponses": [
+      [
+       "um"
+      ]
+     ],
+     "banque": [
+      "um",
+      "für",
+      "durch",
+      "ohne"
+     ],
+     "aide": "Devant un verbe à l’infinitif, *für* est impossible.",
+     "explication": "**um … zu** : « pour + infinitif » se dit *um … zu*. *für* introduit un groupe nominal, jamais un verbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd09c791-70ea-5173-911b-70d1064fb715",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le quotidien de Nele",
+   "competence": "comprendre-langue",
+   "situation": "Nele se présente à sa correspondante française. Elle raconte où elle habite, comment elle va à l’école et d’où vient son amie.",
+   "documents": [
+    {
+     "id": "nele",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mein Alltag",
+     "blocs": [
+      "Ich wohne [[d|bei]] meinen Eltern. Ich fahre [[d|mit]] dem Bus [[d|zur]] Schule. Meine Freundin kommt [[d|aus]] der Schweiz. Sie lernt [[d|seit]] einem Jahr Deutsch."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nele",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les cinq prépositions qui sont toujours suivies du datif.",
+     "aide": "Pense à la formule aus · bei · mit · nach · seit · von · zu.",
+     "explication": "**bei**, **mit**, **zur** (= *zu der*), **aus** et **seit** régissent toujours le datif."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque préposition à son sens.",
+     "paires": [
+      [
+       "aus",
+       "en provenance de"
+      ],
+      [
+       "bei",
+       "chez"
+      ],
+      [
+       "mit",
+       "avec, en (transport)"
+      ],
+      [
+       "seit",
+       "depuis"
+      ]
+     ],
+     "aide": "Retrouve chaque préposition dans le texte de Nele.",
+     "explication": "*aus* = hors de, *bei* = chez, *mit* = avec (ou « en » avec un moyen de transport), *seit* = depuis."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Il va en train et habite chez sa tante. »",
+     "texte": "Er fährt mit ___ Zug und wohnt bei ___ Tante.",
+     "reponses": [
+      [
+       "dem"
+      ],
+      [
+       "seiner"
+      ]
+     ],
+     "banque": [
+      "dem",
+      "den",
+      "seiner",
+      "seine"
+     ],
+     "aide": "Après ces prépositions, le datif : *der Zug* est masculin, *die Tante* féminin.",
+     "explication": "**mit dem Zug** (masculin datif : *dem*) et **bei seiner Tante** (féminin datif : *-er*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd09c791-70ea-5173-911b-70d1064fb715",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où est Mara ?",
+   "competence": "manier-langue",
+   "situation": "Lukas cherche Mara, qui enchaîne plusieurs rendez-vous. Dans leurs messages, plusieurs prépositions sont contractées avec l’article.",
+   "documents": [
+    {
+     "id": "mara",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Wo bist du?",
+     "participants": [
+      {
+       "nom": "Lukas",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mara",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lukas",
+       "texte": "Wo bist du?"
+      },
+      {
+       "qui": "Mara",
+       "texte": "Ich bin [[c|beim]] Arzt. Danach gehe ich [[c|zur]] Apotheke und dann [[c|zum]] Bahnhof."
+      },
+      {
+       "qui": "Lukas",
+       "texte": "Kommst du [[c|vom]] Arzt direkt zu mir?"
+      },
+      {
+       "qui": "Mara",
+       "texte": "Nein, erst nach dem Essen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mara",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre prépositions contractées avec l’article.",
+     "aide": "Elles se terminent par -m ou -r et remplacent *bei dem*, *zu der*, *zu dem*, *von dem*.",
+     "explication": "**beim**, **zur**, **zum** et **vom** sont des contractions obligatoires dans l’usage courant."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme pleine à sa contraction.",
+     "paires": [
+      [
+       "zu der",
+       "zur"
+      ],
+      [
+       "zu dem",
+       "zum"
+      ],
+      [
+       "bei dem",
+       "beim"
+      ],
+      [
+       "von dem",
+       "vom"
+      ]
+     ],
+     "aide": "Garde la même préposition et fusionne-la avec l’article.",
+     "explication": "*zu der → zur*, *zu dem → zum*, *bei dem → beim*, *von dem → vom*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Nous allons à la piscine. »",
+     "texte": "Wir gehen ___ Schwimmbad.",
+     "reponses": [
+      [
+       "zum"
+      ]
+     ],
+     "banque": [
+      "zum",
+      "zur",
+      "beim",
+      "vom"
+     ],
+     "aide": "*Schwimmbad* est neutre.",
+     "explication": "**zum Schwimmbad** : *zu dem* se contracte en *zum* (masculin et neutre)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Après le repas, je vais à la pharmacie. » La phrase commence par Nach dem Essen.",
+     "items": [
+      "Nach dem Essen",
+      "gehe",
+      "ich",
+      "zur Apotheke"
+     ],
+     "aide": "Le groupe de temps est en tête, donc le verbe passe avant le sujet.",
+     "explication": "**Nach dem Essen gehe ich zur Apotheke.** *nach* + datif ; le verbe reste en deuxième position."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd09c791-70ea-5173-911b-70d1064fb715",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une carte postale de Vienne et de Suisse",
+   "competence": "argumenter",
+   "situation": "Jana prépare un voyage en Autriche puis en Suisse. Elle l’annonce à sa grand-mère et lui répond au sujet de son allemand.",
+   "documents": [
+    {
+     "id": "reise",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Oma",
+     "blocs": [
+      "Morgen fahre ich mit dem Zug [[n|nach]] Wien. Am Samstag fliege ich [[i|in]] die Schweiz, [[z|zu]] meinem Onkel. Ich bleibe bei ihm bis Montag. Die Schokolade für dich ist [[a|aus]] der Schweiz."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "oma",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Oma fragt",
+     "participants": [
+      {
+       "nom": "Oma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jana",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Oma",
+       "texte": "Wie lange lernst du schon Deutsch?"
+      },
+      {
+       "qui": "Jana",
+       "texte": "Ich lerne [[s|seit]] zwei Jahren Deutsch."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reise",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche la préposition qui précède une ville sans article.",
+     "aide": "Wien est un nom de ville.",
+     "explication": "**nach** : *nach Wien*. Les villes et les pays sans article se disent avec *nach*."
+    },
+    {
+     "type": "zone",
+     "document": "reise",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche la préposition employée devant un pays avec article.",
+     "aide": "*die Schweiz* a un article.",
+     "explication": "**in** : *in die Schweiz* (accusatif). Un pays avec article demande *in* + accusatif."
+    },
+    {
+     "type": "zone",
+     "document": "reise",
+     "reponse": [
+      "z"
+     ],
+     "enonce": "Touche la préposition qui précède une personne comme but du voyage.",
+     "aide": "Elle est suivie de *meinem Onkel*.",
+     "explication": "**zu** : *zu meinem Onkel*. Pour aller chez quelqu’un, on emploie *zu* + datif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Je vais à Berlin, en Turquie et chez ma tante. »",
+     "texte": "Ich fahre ___ Berlin, ___ die Türkei und ___ meiner Tante.",
+     "reponses": [
+      [
+       "nach"
+      ],
+      [
+       "in"
+      ],
+      [
+       "zu"
+      ]
+     ],
+     "banque": [
+      "nach",
+      "in",
+      "zu",
+      "bei",
+      "aus"
+     ],
+     "aide": "Ville sans article, pays avec article, personne : trois prépositions différentes.",
+     "explication": "**nach Berlin** (ville sans article), **in die Türkei** (pays avec article, accusatif), **zu meiner Tante** (personne, datif)."
+    },
+    {
+     "type": "zone",
+     "document": "oma",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche la préposition qui exprime « depuis » dans la réponse de Jana.",
+     "aide": "Elle est devant « zwei Jahren ».",
+     "explication": "**seit** : *seit zwei Jahren* = « depuis deux ans », avec un datif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « Je connais Marie depuis deux ans » ?",
+     "options": [
+      "Ich kenne Marie seit zwei Jahren",
+      "Ich habe Marie seit zwei Jahren gekannt",
+      "Ich kannte Marie seit zwei Jahren",
+      "Ich werde Marie seit zwei Jahren kennen"
+     ],
+     "reponse": 0,
+     "aide": "Comme dans la réponse de Jana, un fait qui dure encore s’exprime avec le même temps.",
+     "explication": "**Ich kenne Marie seit zwei Jahren** : avec *seit*, l’allemand emploie le **présent** pour une situation qui dure encore."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc00a503-7d91-51e2-8703-5e8a4e2089c1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le désordre de Lena",
+   "competence": "comprendre-langue",
+   "situation": "Lena range sa chambre avant de partir. Un court texte raconte où se trouvent ses affaires et où elle les met.",
+   "documents": [
+    {
+     "id": "zimmer",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Lenas Zimmer",
+     "blocs": [
+      "Das Buch liegt auf [[d|dem]] Tisch. Eine Katze sitzt unter [[d|dem]] Stuhl. Lena legt ein Heft auf [[a|den]] Tisch. Dann geht sie in [[a|die]] Küche."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zimmer",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux articles au datif : ils répondent à la question « wo ? ».",
+     "aide": "Le livre et la chatte ne bougent pas.",
+     "explication": "**dem** (deux fois) : *auf dem Tisch*, *unter dem Stuhl* décrivent un lieu où l’on est : datif."
+    },
+    {
+     "type": "zone",
+     "document": "zimmer",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux articles à l’accusatif : ils répondent à la question « wohin ? ».",
+     "aide": "Lena met le cahier quelque part et se déplace.",
+     "explication": "**den** et **die** : *auf den Tisch*, *in die Küche* disent où l’on va ou où l’on pose quelque chose : accusatif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Le téléphone est sur le lit. »",
+     "texte": "Das Handy liegt auf ___ Bett.",
+     "reponses": [
+      [
+       "dem"
+      ]
+     ],
+     "banque": [
+      "dem",
+      "den",
+      "das",
+      "die"
+     ],
+     "aide": "*liegt* indique un lieu, pas un déplacement.",
+     "explication": "**auf dem Bett** : *wo ?* donne le datif ; *Bett* est neutre, donc *dem*."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc00a503-7d91-51e2-8703-5e8a4e2089c1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le déménagement",
+   "competence": "manier-langue",
+   "situation": "Eva et Max emménagent dans un nouvel appartement. Chaque objet doit être posé au bon endroit : ils parlent tantôt d’un mouvement, tantôt d’un lieu.",
+   "documents": [
+    {
+     "id": "umzug",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Umzug",
+     "participants": [
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eva",
+       "texte": "Wohin stelle ich die Lampe?"
+      },
+      {
+       "qui": "Max",
+       "texte": "Stell sie bitte auf den Schreibtisch. Die Pflanze steht schon neben [[d|dem]] Fenster."
+      },
+      {
+       "qui": "Eva",
+       "texte": "Und der Teppich? Ich lege ihn vor das Sofa."
+      },
+      {
+       "qui": "Max",
+       "texte": "Gut. Dann sitzt die Katze bald auf [[d|dem]] Teppich."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "umzug",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux articles au datif : ils répondent à « wo ? ».",
+     "aide": "Ils décrivent un état, pas un mouvement.",
+     "explication": "**dem** (deux fois) : *neben dem Fenster* (où la plante se trouve) et *auf dem Teppich* (où la chatte sera) sont des lieux : datif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe : action (accusatif) ou état (datif) ?",
+     "categories": [
+      "Action → accusatif (wohin ?)",
+      "État → datif (wo ?)"
+     ],
+     "items": [
+      [
+       "stellen",
+       0
+      ],
+      [
+       "stehen",
+       1
+      ],
+      [
+       "legen",
+       0
+      ],
+      [
+       "liegen",
+       1
+      ],
+      [
+       "setzen",
+       0
+      ],
+      [
+       "sitzen",
+       1
+      ]
+     ],
+     "aide": "Les verbes en *-en* qui commencent par *st-*, *l-*, *s-* vont par paires : un pour l’action, un pour l’état.",
+     "explication": "*stellen / legen / setzen* décrivent une **action** (on déplace quelque chose : accusatif) ; *stehen / liegen / sitzen* décrivent un **état** (datif)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Je pose le livre sur la table. Le livre est sur la table. »",
+     "texte": "Ich ___ das Buch auf den Tisch. Das Buch ___ auf dem Tisch.",
+     "reponses": [
+      [
+       "lege"
+      ],
+      [
+       "liegt"
+      ]
+     ],
+     "banque": [
+      "lege",
+      "liegt",
+      "legt",
+      "liege"
+     ],
+     "aide": "Premier trou : action (*legen*) ; deuxième trou : état (*liegen*).",
+     "explication": "**Ich lege** (action, accusatif : *auf den Tisch*) puis **liegt** (état, datif : *auf dem Tisch*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme pleine à sa contraction.",
+     "paires": [
+      [
+       "in das",
+       "ins"
+      ],
+      [
+       "in dem",
+       "im"
+      ],
+      [
+       "an dem",
+       "am"
+      ],
+      [
+       "auf das",
+       "aufs"
+      ]
+     ],
+     "aide": "*das* devient *-s*, *dem* devient *-m*.",
+     "explication": "*in das → ins*, *in dem → im*, *an dem → am*, *auf das → aufs*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « J’assieds l’enfant sur la chaise. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "setze",
+      "das Kind",
+      "auf den Stuhl"
+     ],
+     "aide": "*setzen* indique un mouvement : accusatif.",
+     "explication": "**Ich setze das Kind auf den Stuhl.** *setzen* (action) appelle *auf* + accusatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "cc00a503-7d91-51e2-8703-5e8a4e2089c1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Emménager, étape par étape",
+   "competence": "raisonner",
+   "situation": "Anna décrit sa nouvelle chambre dans une lettre ; elle échange aussi des messages avec son père, qui déplace les meubles. Il faut dire à chaque fois s’il y a mouvement ou non.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Mia",
+     "blocs": [
+      "Heute ziehe ich um! Das Sofa steht jetzt [[d|im]] Wohnzimmer. Den Tisch stelle ich [[a|vor]] das Fenster. [[d|Neben]] dem Sofa liegt der Teppich. [[d|Über]] dem Tisch hängt die Lampe. Morgen hänge ich ein Bild [[a|an]] die Wand."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "papa",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mit Papa",
+     "participants": [
+      {
+       "nom": "Papa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Anna",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Papa",
+       "texte": "Wo soll ich den Schrank hinstellen?"
+      },
+      {
+       "qui": "Anna",
+       "texte": "Stell ihn neben die Tür."
+      },
+      {
+       "qui": "Papa",
+       "texte": "Er steht jetzt neben der Tür. Und die Kisten?"
+      },
+      {
+       "qui": "Anna",
+       "texte": "Leg sie unter das Bett. Dann liegen sie sicher unter dem Bett."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux prépositions qui expriment un déplacement : elles sont suivies de l’accusatif.",
+     "aide": "Anna pose ou accroche quelque chose quelque part.",
+     "explication": "**vor** (*stelle ich vor das Fenster*) et **an** (*hänge ich an die Wand*) expriment un mouvement : accusatif."
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois prépositions qui expriment un lieu : elles sont suivies du datif.",
+     "aide": "Le sofa, le tapis et la lampe sont déjà en place.",
+     "explication": "**im** (= *in dem*), **Neben** et **Über** décrivent où sont les objets : datif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase du dialogue : mouvement (wohin ?) ou lieu (wo ?).",
+     "categories": [
+      "Mouvement → accusatif (wohin ?)",
+      "Lieu → datif (wo ?)"
+     ],
+     "items": [
+      [
+       "Stell ihn neben die Tür.",
+       0
+      ],
+      [
+       "Er steht jetzt neben der Tür.",
+       1
+      ],
+      [
+       "Leg sie unter das Bett.",
+       0
+      ],
+      [
+       "Sie liegen unter dem Bett.",
+       1
+      ]
+     ],
+     "aide": "Repère le verbe : *stellen* et *legen* disent un geste, *stehen* et *liegen* un état.",
+     "explication": "*Stell ihn neben die Tür* et *Leg sie unter das Bett* : mouvement, accusatif (*die*, *das*). *steht neben der Tür* et *liegen unter dem Bett* : lieu, datif (*der*, *dem*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Papa pose l’armoire à côté de la porte. Maintenant elle est à côté de la porte. »",
+     "texte": "Papa ___ den Schrank neben die Tür. Jetzt ___ er neben der Tür.",
+     "reponses": [
+      [
+       "stellt"
+      ],
+      [
+       "steht"
+      ]
+     ],
+     "banque": [
+      "stellt",
+      "steht",
+      "stehen",
+      "stelle"
+     ],
+     "aide": "Premier trou : action ; deuxième trou : état.",
+     "explication": "**stellt** (action, avec accusatif : *neben die Tür*) puis **steht** (état, avec datif : *neben der Tür*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je mets les caisses sous le lit. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "lege",
+      "die Kisten",
+      "unter das Bett"
+     ],
+     "aide": "Il y a un mouvement : accusatif.",
+     "explication": "**Ich lege die Kisten unter das Bett.** *legen* + *unter* + accusatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "cefc03ac-43b5-5bc8-9ad9-cb5eaae10195",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le week-end de Lena",
+   "competence": "comprendre-langue",
+   "situation": "Lena raconte son week-end à son correspondant. Son texte relie les phrases avec de petits mots qu’il faut repérer.",
+   "documents": [
+    {
+     "id": "wochenende",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mein Wochenende",
+     "blocs": [
+      "Am Samstag bleibe ich zu Hause, [[c|denn]] ich bin müde. Ich lese ein Buch [[c|und]] höre Musik. Am Sonntag gehe ich ins Kino [[c|oder]] ich besuche meine Oma. Das Wetter ist schlecht, [[c|aber]] ich habe gute Laune."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "wochenende",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre conjonctions de coordination du texte.",
+     "aide": "Elles relient deux éléments de même rang : cause, addition, choix, opposition.",
+     "explication": "**denn**, **und**, **oder** et **aber** sont des conjonctions de coordination : elles ne changent pas l’ordre des mots."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque conjonction à son sens.",
+     "paires": [
+      [
+       "und",
+       "et"
+      ],
+      [
+       "oder",
+       "ou"
+      ],
+      [
+       "aber",
+       "mais"
+      ],
+      [
+       "denn",
+       "car"
+      ]
+     ],
+     "aide": "Retrouve chaque mot dans le texte de Lena.",
+     "explication": "*und* = et, *oder* = ou, *aber* = mais, *denn* = car."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je reste à la maison, car je suis malade. » La phrase commence par Ich bleibe zu Hause.",
+     "items": [
+      "Ich bleibe zu Hause",
+      "denn",
+      "ich",
+      "bin",
+      "krank"
+     ],
+     "aide": "Après *denn*, l’ordre est normal : sujet puis verbe.",
+     "explication": "**Ich bleibe zu Hause, denn ich bin krank.** *denn* est une coordination : le verbe reste en deuxième position."
+    }
+   ]
+  },
+  {
+   "chapitre": "cefc03ac-43b5-5bc8-9ad9-cb5eaae10195",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi Ben ne vient pas",
+   "competence": "analyser-document",
+   "situation": "Ben et Mia parlent d’une fête. Pour expliquer pourquoi il reste chez lui, Ben utilise trois constructions qui disent la même chose, mais pas avec le même ordre des mots.",
+   "documents": [
+    {
+     "id": "party",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Die Party",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Ich komme nicht zur Party, [[k|denn]] ich bin krank."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Schade! Es regnet auch, [[a|deshalb]] bleiben viele zu Hause."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Ich bleibe zu Hause, [[s|weil]] ich Fieber habe."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Gute Besserung! Ich komme zwar spät, aber ich komme."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "party",
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche la conjonction de coordination qui veut dire « car ».",
+     "aide": "Le verbe qui suit reste en deuxième position.",
+     "explication": "**denn** : *denn ich bin krank*. Le verbe reste en deuxième position."
+    },
+    {
+     "type": "zone",
+     "document": "party",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche la conjonction de subordination : le verbe est envoyé à la fin.",
+     "aide": "Dans la phrase, le verbe *habe* est le dernier mot.",
+     "explication": "**weil** : *weil ich Fieber habe*. Après *weil*, le verbe conjugué se place à la fin."
+    },
+    {
+     "type": "zone",
+     "document": "party",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche l’adverbe de liaison qui provoque l’inversion du verbe et du sujet.",
+     "aide": "Le verbe *bleiben* précède son sujet.",
+     "explication": "**deshalb** : *deshalb bleiben viele zu Hause*. L’adverbe occupe la première place, donc le verbe passe devant le sujet."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon la place du verbe.",
+     "categories": [
+      "Verbe en 2e position (coordination)",
+      "Verbe à la fin (subordination)",
+      "Inversion (adverbe de liaison)"
+     ],
+     "items": [
+      [
+       "Ich bleibe, denn ich bin krank.",
+       0
+      ],
+      [
+       "Ich bleibe, weil ich krank bin.",
+       1
+      ],
+      [
+       "Ich bin krank, deshalb bleibe ich.",
+       2
+      ],
+      [
+       "Ich bin müde, aber ich komme.",
+       0
+      ]
+     ],
+     "aide": "Regarde la position du verbe après le mot de liaison.",
+     "explication": "*denn* et *aber* ne changent rien : sujet puis verbe. *weil* envoie le verbe à la fin. *deshalb* occupe la première place : le verbe passe devant le sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "cefc03ac-43b5-5bc8-9ad9-cb5eaae10195",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le courriel de la classe de Berlin",
+   "competence": "argumenter",
+   "situation": "Paul est en voyage scolaire à Berlin. Pour rassurer ses parents, il leur envoie un courriel soigné qui joue avec les couples de conjonctions.",
+   "documents": [
+    {
+     "id": "klassenfahrt",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Eltern",
+     "blocs": [
+      "Die Klassenfahrt nach Berlin ist nicht nur lustig, [[s|sondern]] auch lehrreich. Das Hotel ist zwar klein, aber sehr sauber. Wir haben [[w|weder]] Handy [[w|noch]] Computer im Zimmer. Wir fahren nicht mit dem Bus, [[s|sondern]] mit dem Zug. Entweder gehen wir ins Museum oder wir besuchen den Reichstag."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "klassenfahrt",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux « sondern » du courriel.",
+     "aide": "Ils suivent une négation (*nicht nur*, *nicht*).",
+     "explication": "**sondern** (deux fois) : après une négation, il rectifie ou ajoute (*nicht nur … sondern auch*, *nicht mit dem Bus, sondern mit dem Zug*)."
+    },
+    {
+     "type": "zone",
+     "document": "klassenfahrt",
+     "reponse": [
+      "w"
+     ],
+     "multiple": true,
+     "enonce": "Touche le couple qui veut dire « ni… ni ».",
+     "aide": "La phrase est déjà négative : pas de *nicht*.",
+     "explication": "**weder … noch** : *weder Handy noch Computer*. Ce couple contient déjà la négation."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque couple à son sens.",
+     "paires": [
+      [
+       "entweder … oder",
+       "ou bien … ou bien"
+      ],
+      [
+       "weder … noch",
+       "ni … ni"
+      ],
+      [
+       "sowohl … als auch",
+       "aussi bien … que"
+      ],
+      [
+       "zwar … aber",
+       "certes … mais"
+      ]
+     ],
+     "aide": "Pense au courriel de Paul pour les deux premiers.",
+     "explication": "*entweder … oder* = ou bien … ou bien ; *weder … noch* = ni … ni ; *sowohl … als auch* = aussi bien … que ; *zwar … aber* = certes … mais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « nicht mit dem Bus, sondern mit dem Zug » et non « aber » ?",
+     "options": [
+      "La première partie est négative et on la rectifie",
+      "Aber est interdit devant une préposition",
+      "Sondern est plus poli que aber",
+      "La virgule est supprimée avec sondern"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le mot qui précède la virgule dans la première partie.",
+     "explication": "**La première partie est négative (*nicht*) et la seconde la rectifie** : c’est le cas de *sondern*. *aber* s’emploie sans négation ou pour une simple opposition."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il n’est pas seulement intelligent, mais aussi gentil. » La phrase commence par Er.",
+     "items": [
+      "Er",
+      "ist",
+      "nicht nur klug",
+      "sondern",
+      "auch nett"
+     ],
+     "aide": "Le verbe est en deuxième position, puis le couple *nicht nur … sondern auch*.",
+     "explication": "**Er ist nicht nur klug, sondern auch nett.** Le couple *nicht nur … sondern auch* ne modifie pas la place du verbe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Je n’ai ni temps ni argent. »",
+     "texte": "Ich habe ___ Zeit ___ Geld.",
+     "reponses": [
+      [
+       "weder"
+      ],
+      [
+       "noch"
+      ]
+     ],
+     "banque": [
+      "weder",
+      "noch",
+      "nicht",
+      "entweder"
+     ],
+     "aide": "Le couple veut dire « ni… ni ».",
+     "explication": "**Ich habe weder Zeit noch Geld.** Le couple *weder … noch* est déjà négatif : on n’ajoute pas *nicht*."
+    }
+   ]
+  },
+  {
+   "chapitre": "3fbce238-20b2-58e6-8151-86349b454de2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "D’où viens-tu ? Où vas-tu ?",
+   "competence": "comprendre-langue",
+   "situation": "Lena, une jeune Française, bavarde avec Tom sur le quai d’une gare allemande. Il lui demande d’où elle vient et où elle va.",
+   "documents": [
+    {
+     "id": "bahnhof",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Am Bahnhof",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lena",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Woher kommst du?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Ich komme [[o|aus]] Frankreich. Jetzt wohne ich in Lyon."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Und wohin fährst du morgen?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Ich fahre [[d|nach]] Berlin."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bahnhof",
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche la préposition qui dit d’où vient Lena.",
+     "aide": "Elle est suivie de *Frankreich*.",
+     "explication": "**aus** : *Ich komme aus Frankreich*. Il répond à la question *woher ?*."
+    },
+    {
+     "type": "zone",
+     "document": "bahnhof",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche la préposition qui dit où Lena va, devant une ville sans article.",
+     "aide": "Elle est devant *Berlin*.",
+     "explication": "**nach** : *nach Berlin*. Il répond à la question *wohin ?*, pour une ville ou un pays sans article."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque question à son sens.",
+     "paires": [
+      [
+       "wo ?",
+       "la localisation (où)"
+      ],
+      [
+       "wohin ?",
+       "la destination (vers où)"
+      ],
+      [
+       "woher ?",
+       "l’origine (d’où)"
+      ]
+     ],
+     "aide": "*hin* s’éloigne du locuteur, *her* se rapproche.",
+     "explication": "*wo ?* = où l’on est ; *wohin ?* = où l’on va ; *woher ?* = d’où l’on vient."
+    }
+   ]
+  },
+  {
+   "chapitre": "3fbce238-20b2-58e6-8151-86349b454de2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Avec ou sans mouvement ?",
+   "competence": "manier-langue",
+   "situation": "Lea écrit à Tom, qui court d’un rendez-vous à l’autre. Selon qu’il est quelque part ou qu’il s’y rend, l’allemand change de préposition.",
+   "documents": [
+    {
+     "id": "tom",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Termine",
+     "participants": [
+      {
+       "nom": "Lea",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lea",
+       "texte": "Wo bist du gerade?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich bin [[b|beim]] Arzt. Danach gehe ich auf die Post."
+      },
+      {
+       "qui": "Lea",
+       "texte": "Und am Wochenende?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich fahre [[m|ans]] Meer, und danach aufs Land zu meiner Tante."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tom",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui dit que Tom est chez le médecin (sans mouvement).",
+     "aide": "Il répond à *wo ?* et se termine par -m.",
+     "explication": "**beim** = *bei dem* : on est chez le médecin, sans mouvement. Pour y aller, on dirait *zum Arzt*."
+    },
+    {
+     "type": "zone",
+     "document": "tom",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit que Tom va au bord de la mer.",
+     "aide": "Il répond à *wohin ?* et se termine par -s.",
+     "explication": "**ans** = *an das* : *an* + accusatif, car il y a un mouvement vers le bord de la mer."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression : avec ou sans mouvement ?",
+     "categories": [
+      "Avec mouvement (wohin ?)",
+      "Sans mouvement (wo ?)"
+     ],
+     "items": [
+      [
+       "ans Meer",
+       0
+      ],
+      [
+       "am Meer",
+       1
+      ],
+      [
+       "aufs Land",
+       0
+      ],
+      [
+       "auf dem Land",
+       1
+      ],
+      [
+       "nach Hause",
+       0
+      ],
+      [
+       "zu Hause",
+       1
+      ]
+     ],
+     "aide": "Les formes contractées en *-s* (*ans*, *aufs*) sont des accusatifs : elles disent un mouvement.",
+     "explication": "*ans Meer*, *aufs Land* et *nach Hause* disent un **mouvement** ; *am Meer*, *auf dem Land* et *zu Hause* disent un **lieu**. Elles vont toujours par paires."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Je vais chez ma grand-mère et je suis ensuite chez elle. »",
+     "texte": "Ich gehe ___ meiner Oma und bin dann ___ meiner Oma.",
+     "reponses": [
+      [
+       "zu"
+      ],
+      [
+       "bei"
+      ]
+     ],
+     "banque": [
+      "zu",
+      "bei",
+      "nach",
+      "aus"
+     ],
+     "aide": "Aller chez quelqu’un : *zu*. Être chez quelqu’un : *bei*.",
+     "explication": "**zu meiner Oma** (mouvement vers une personne) et **bei meiner Oma** (lieu). Le français dit « chez » dans les deux cas, pas l’allemand."
+    }
+   ]
+  },
+  {
+   "chapitre": "3fbce238-20b2-58e6-8151-86349b454de2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Plan de voyage en Europe",
+   "competence": "lire-carte",
+   "situation": "Un jeune voyageur prépare un parcours en Europe. Une carte montre les pays traversés ; son courriel dit comment il y va, d’où il revient et où il séjourne.",
+   "documents": [
+    {
+     "id": "karte",
+     "type": "carte",
+     "titre": "Reiseziele",
+     "fond": "europe",
+     "cadrage": [
+      -6,
+      40,
+      22,
+      56
+     ],
+     "regions": [
+      {
+       "code": "FRA",
+       "teinte": "ciel",
+       "etiquette": "Frankreich"
+      },
+      {
+       "code": "DEU",
+       "teinte": "ciel",
+       "etiquette": "Deutschland"
+      },
+      {
+       "code": "CHE",
+       "teinte": "ciel",
+       "etiquette": "Schweiz"
+      },
+      {
+       "code": "AUT",
+       "teinte": "ciel",
+       "etiquette": "Österreich"
+      }
+     ],
+     "regionsCliquables": true,
+     "source": "Carte écrite pour l’exercice"
+    },
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Hallo Clara",
+     "blocs": [
+      "Ich komme gerade [[v|von]] der Arbeit. Morgen fahre ich nach Wien, am Samstag dann in die Schweiz, zu meinem Bruder. Er lebt seit zwei Jahren im Ausland."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "karte",
+     "reponse": [
+      "CHE"
+     ],
+     "enonce": "Touche le pays devant lequel on dit « in die » pour y aller.",
+     "aide": "Parmi ces pays, un seul a un article.",
+     "explication": "**La Suisse** : *in die Schweiz*. Les pays avec article (*die Schweiz*, *die Türkei*) demandent *in* + accusatif ; les autres demandent *nach* (*nach Österreich*, *nach Frankreich*)."
+    },
+    {
+     "type": "zone",
+     "document": "karte",
+     "reponse": [
+      "AUT"
+     ],
+     "enonce": "Touche le pays où se trouve Wien.",
+     "aide": "Wien est la capitale de ce pays voisin de l’Allemagne.",
+     "explication": "**L’Autriche** : *nach Wien*. Une ville sans article se dit avec *nach*."
+    },
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche la préposition qui dit d’où revient le voyageur (l’origine).",
+     "aide": "Elle est devant *der Arbeit*.",
+     "explication": "**von** : *von der Arbeit* indique un point de départ ; elle répond à la question *woher ?*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Ma tante habite à la campagne. Aujourd’hui, nous allons à la campagne. »",
+     "texte": "Meine Tante wohnt ___ Land. Heute fahren wir ___ Land.",
+     "reponses": [
+      [
+       "auf dem"
+      ],
+      [
+       "aufs",
+       "auf das"
+      ]
+     ],
+     "banque": [
+      "auf dem",
+      "aufs",
+      "auf den",
+      "ans"
+     ],
+     "aide": "Premier trou : lieu (datif). Deuxième trou : mouvement (accusatif contracté).",
+     "explication": "**auf dem Land** (où ? datif) et **aufs Land** (où ? accusatif, *auf das* contracté en *aufs*) : l’expression se présente par paires."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je reviens de mon travail. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "komme",
+      "von",
+      "der Arbeit"
+     ],
+     "aide": "*von* est suivi du datif.",
+     "explication": "**Ich komme von der Arbeit.** *von* + datif féminin (*der Arbeit*) indique l’origine."
+    }
+   ]
+  }
+ ]
+}

@@ -6,9 +6,7 @@ describe('l’avatar prêt à afficher', () => {
     expect(avatarAffiche({ portrait: '7' })).toEqual({ src: '/images/profil/7.webp', visage: true })
   })
 
-  it('rend l’avatar composé en image autonome sans blason', () => {
-    const a = avatarAffiche({})
-    expect(a.visage).toBe(false)
-    expect(a.src.startsWith('data:image/svg+xml')).toBe(true)
+  it('rend le premier blason pour un compte d’avant sans portrait (plus d’avatar dessiné)', () => {
+    expect(avatarAffiche({})).toEqual({ src: '/images/profil/2.webp', visage: true })
   })
 })

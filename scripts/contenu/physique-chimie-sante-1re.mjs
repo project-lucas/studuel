@@ -651,7 +651,7 @@ Un **acide gras** est un acide carboxylique à longue chaîne carbonée.
 | Acide palmitique | 16 carbones, aucune | **Saturé** |
 | Acide stéarique | 18 carbones, aucune | **Saturé** |
 | Acide oléique | 18 carbones, une | **Mono-insaturé** |
-| Acide α-linoléique | 18 carbones, trois | **Poly-insaturé** (oméga-3) |
+| Acide α-linolénique | 18 carbones, trois | **Poly-insaturé** (oméga-3) |
 
 Un acide gras **saturé** n'a que des liaisons simples C–C ; un **insaturé** a au moins une double liaison C=C. Les graisses animales sont riches en saturés, les huiles végétales en insaturés.
 

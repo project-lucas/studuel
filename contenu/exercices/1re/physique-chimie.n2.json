@@ -1,0 +1,4546 @@
+{
+ "niveau": "1re",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "6f24fb68-a590-5850-92ca-cf4ee568891e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le morceau de sucre du café",
+   "competence": "calculer",
+   "situation": "Léo sucre son café avec un morceau de saccharose C₁₂H₂₂O₁₁ de masse 6,0 g. Il se demande combien de molécules il avale.",
+   "documents": [
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses molaires atomiques",
+     "colonnes": [
+      "Élément",
+      "Symbole",
+      "Masse molaire atomique (g/mol)"
+     ],
+     "lignes": [
+      [
+       "Carbone",
+       "C",
+       "12,0"
+      ],
+      [
+       "Hydrogène",
+       "H",
+       "1,0"
+      ],
+      [
+       "Oxygène",
+       "O",
+       "16,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "masses",
+     "enonce": "Une molécule de saccharose compte 12 atomes de C, 22 de H et 11 de O. Touche la masse molaire atomique de l’élément dont elle contient le plus d’atomes.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Compare les nombres 12, 22 et 11 : cherche le plus grand, puis l’élément correspondant.",
+     "explication": "Avec **22 atomes**, c’est l’hydrogène qui domine : sa masse molaire atomique est de 1,0 g/mol."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la masse molaire du saccharose, en g/mol.",
+     "reponse": 342,
+     "unite": "g/mol",
+     "aide": "Additionne la contribution de chaque élément : nombre d’atomes × masse molaire atomique.",
+     "explication": "M = 12 × 12,0 + 22 × 1,0 + 11 × 16,0 = 144 + 22 + 176 = **342 g/mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de matière représente le morceau de 6,0 g ? Donne le résultat en mmol, arrondi au dixième.",
+     "reponse": 17.5,
+     "tolerance": 0.1,
+     "unite": "mmol",
+     "aide": "n = m / M donne des mol : multiplie par 1 000 pour passer en mmol.",
+     "explication": "n = m / M = 6,0 / 342 ≈ 0,0175 mol, soit **17,5 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de molécules le morceau contient-il ? Donne le résultat en 10²¹ molécules, arrondi au dixième (N(A) = 6,02 × 10²³ mol⁻¹).",
+     "reponse": 10.6,
+     "tolerance": 0.1,
+     "unite": "× 10²¹ molécules",
+     "aide": "N = n × N(A), avec n en mol (0,0175 mol).",
+     "explication": "N = n × N(A) = 0,01754 × 6,02 × 10²³ ≈ 1,06 × 10²², soit **10,6 × 10²¹ molécules**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f24fb68-a590-5850-92ca-cf4ee568891e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le flacon de sérum physiologique",
+   "competence": "calculer",
+   "situation": "Inès soigne le nez de son petit frère avec des dosettes de sérum physiologique. Elle lit l’étiquette et veut savoir combien de chlorure de sodium il y a dans une dosette. On donne M(Na) = 23,0 g/mol et M(Cl) = 35,5 g/mol.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Sérum physiologique",
+     "sousTitre": "Dosettes à usage nasal",
+     "emoji": "💧",
+     "lignes": [
+      {
+       "texte": "Chlorure de sodium NaCl",
+       "valeur": "0,9 g pour 100 mL",
+       "id": "compo"
+      },
+      {
+       "texte": "Eau purifiée",
+       "valeur": "qsp 100 mL"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Contenance d’une dosette",
+       "valeur": "5,0 mL",
+       "id": "dosette"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne qui permet de calculer la concentration en masse du soluté.",
+     "reponse": [
+      "compo"
+     ],
+     "aide": "Il faut une masse de soluté et le volume de solution qui la contient.",
+     "explication": "La ligne **« 0,9 g pour 100 mL »** donne la masse de NaCl dans un volume connu de solution."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en masse t du sérum, en g/L.",
+     "reponse": 9,
+     "tolerance": 0.05,
+     "unite": "g/L",
+     "aide": "100 mL = 0,100 L : divise la masse par le volume en litres.",
+     "explication": "t = m / V = 0,9 g / 0,100 L = **9,0 g/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en quantité de matière C du sérum, en mol/L, arrondie au millième.",
+     "reponse": 0.154,
+     "tolerance": 0.001,
+     "unite": "mol/L",
+     "aide": "Passe de t à C avec t = C × M, où M(NaCl) = 23,0 + 35,5.",
+     "explication": "M(NaCl) = 58,5 g/mol, donc C = t / M = 9,0 / 58,5 ≈ **0,154 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de NaCl une dosette de 5,0 mL contient-elle ? Réponds en mmol, arrondie au centième.",
+     "reponse": 0.77,
+     "tolerance": 0.01,
+     "unite": "mmol",
+     "aide": "n = C × V avec V = 5,0 × 10⁻³ L : le résultat sort en mol avant conversion en mmol.",
+     "explication": "n = C × V = 0,1538 × 5,0 × 10⁻³ ≈ 7,7 × 10⁻⁴ mol, soit **0,77 mmol**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6f24fb68-a590-5850-92ca-cf4ee568891e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une gamme de glucose pour le TP",
+   "competence": "resoudre",
+   "situation": "Au laboratoire, Malik doit préparer 100,0 mL de solution de glucose à 0,025 mol/L, mais il part d’une solution mère à 0,50 mol/L qu’il fabrique lui-même à partir de glucose solide (M = 180 g/mol).",
+   "documents": [
+    {
+     "id": "mere",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Solution mère de glucose",
+     "sousTitre": "C₆H₁₂O₆ — 250,0 mL",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Concentration",
+       "valeur": "0,50 mol/L"
+      },
+      {
+       "texte": "Masse molaire M",
+       "valeur": "180 g/mol"
+      },
+      {
+       "texte": "Volume de la fiole",
+       "valeur": "250,0 mL"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "verrerie",
+     "type": "tableau",
+     "titre": "Verrerie disponible sur la paillasse",
+     "colonnes": [
+      "Verrerie",
+      "Volume (mL)"
+     ],
+     "lignes": [
+      [
+       "Pipette jaugée",
+       "2,0"
+      ],
+      [
+       "Pipette jaugée",
+       "5,0"
+      ],
+      [
+       "Pipette jaugée",
+       "10,0"
+      ],
+      [
+       "Fiole jaugée",
+       "50,0"
+      ],
+      [
+       "Fiole jaugée",
+       "100,0"
+      ],
+      [
+       "Fiole jaugée",
+       "250,0"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose solide faut-il dissoudre pour préparer la solution mère de 250,0 mL à 0,50 mol/L ?",
+     "reponse": 22.5,
+     "tolerance": 0.1,
+     "unite": "g",
+     "aide": "Calcule d’abord n = C × V (V en L), puis m = n × M.",
+     "explication": "n = 0,50 × 0,2500 = 0,125 mol, puis m = 0,125 × 180 = **22,5 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de solution mère faut-il prélever pour obtenir 100,0 mL de solution fille à 0,025 mol/L ? Réponds en mL.",
+     "reponse": 5,
+     "tolerance": 0.05,
+     "unite": "mL",
+     "aide": "La quantité de soluté ne change pas pendant la dilution : C(mère) × V(prélevé) = C(fille) × V(fille).",
+     "explication": "V(prélevé) = C(fille) × V(fille) / C(mère) = 0,025 × 100,0 / 0,50 = **5,0 mL**."
+    },
+    {
+     "type": "zone",
+     "document": "verrerie",
+     "enonce": "Touche le volume de la pipette jaugée à utiliser pour ce prélèvement.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Il faut une pipette jaugée dont le volume est exactement celui que tu viens de calculer.",
+     "explication": "La pipette jaugée de **5,0 mL** prélève exactement le volume voulu, avec la précision d’un trait de jauge."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le facteur de dilution de cette opération ?",
+     "reponse": 20,
+     "tolerance": 0.01,
+     "aide": "Facteur de dilution = C(mère) / C(fille).",
+     "explication": "F = C(mère) / C(fille) = 0,50 / 0,025 = **20**. On retrouve aussi V(fille) / V(prélevé) = 100,0 / 5,0."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les gestes de la dilution.",
+     "items": [
+      "Prélever 5,0 mL de solution mère à la pipette jaugée",
+      "Verser ce volume dans la fiole jaugée de 100,0 mL",
+      "Compléter avec de l’eau distillée jusqu’au trait de jauge",
+      "Boucher la fiole et homogénéiser"
+     ],
+     "aide": "On prélève d’abord, on complète ensuite, et on mélange en dernier.",
+     "explication": "On **prélève** à la pipette, on **verse** dans la fiole, on **complète au trait de jauge**, puis on **bouche et on homogénéise**."
+    }
+   ]
+  },
+  {
+   "chapitre": "454dd839-1258-5110-894b-d290c5a37467",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sirop de menthe bleu au spectrophotomètre",
+   "competence": "lire-graphique",
+   "situation": "Au lycée, Sana étudie un sirop bleu dilué. Le spectrophotomètre lui donne le spectre d’absorption de la solution : l’absorbance A en fonction de la longueur d’onde λ.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre d’absorption du sirop dilué",
+     "categories": [
+      "400",
+      "450",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "750"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance A",
+       "valeurs": [
+        0.05,
+        0.07,
+        0.1,
+        0.22,
+        0.62,
+        0.55,
+        0.2,
+        0.06
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 0.8,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Longueur d’onde λ (nm)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche la longueur d’onde à laquelle Sana doit régler son spectrophotomètre pour la suite des mesures.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "On travaille là où la solution absorbe le plus.",
+     "explication": "On règle l’appareil à **λ(max) = 600 nm**, le maximum d’absorption : la mesure y est la plus sensible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis l’absorbance de la solution à 500 nm.",
+     "reponse": 0.1,
+     "tolerance": 0.01,
+     "aide": "Repère le point d’abscisse 500 nm, puis lis son ordonnée.",
+     "explication": "À 500 nm, la courbe donne **A = 0,10**. L’absorbance n’a pas d’unité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Sana mesure-t-elle à λ(max) plutôt qu’à 450 nm ?",
+     "options": [
+      "La variation d’absorbance y est la plus forte, donc la mesure y est la plus sensible",
+      "L’absorbance n’y dépend plus de la concentration, ce qui évite toute erreur",
+      "À cette longueur d’onde, la solution n’absorbe plus du tout la lumière",
+      "La loi de Beer-Lambert n’y est valable que pour une seule concentration"
+     ],
+     "reponse": 0,
+     "aide": "Au maximum, un petit changement de concentration provoque un grand changement d’absorbance.",
+     "explication": "À λ(max), l’absorbance varie le plus avec la concentration : **sensibilité maximale** et petite erreur de réglage sans conséquence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le sirop absorbe surtout vers 600 nm (orangé). Quelle couleur la solution a-t-elle pour l’œil ?",
+     "options": [
+      "Bleue, la couleur complémentaire de la lumière absorbée",
+      "Orange, la couleur même de la lumière absorbée par elle",
+      "Verte, car 600 nm est au milieu du spectre visible",
+      "Incolore, car elle absorbe toute la lumière qu’elle reçoit"
+     ],
+     "reponse": 0,
+     "aide": "L’œil perçoit la lumière qui n’est pas absorbée.",
+     "explication": "La solution absorbe l’orangé et nous renvoie le reste : elle paraît **bleue**, couleur complémentaire de l’orangé."
+    }
+   ]
+  },
+  {
+   "chapitre": "454dd839-1258-5110-894b-d290c5a37467",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cuivre de la solution inconnue",
+   "competence": "modeliser",
+   "situation": "Léa prépare cinq solutions étalons de sulfate de cuivre(II) et mesure leur absorbance à λ(max). Elle veut en déduire la concentration d’une solution de concentration inconnue, dont l’absorbance est A = 0,54.",
+   "documents": [
+    {
+     "id": "gamme",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Droite d’étalonnage A = f(C)",
+     "categories": [
+      "0",
+      "2,0",
+      "4,0",
+      "6,0",
+      "8,0",
+      "10,0"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance A",
+       "valeurs": [
+        0,
+        0.15,
+        0.3,
+        0.45,
+        0.6,
+        0.75
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 0.8,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Concentration C (mmol/L)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gamme",
+     "enonce": "Touche l’étalon dont l’absorbance vaut 0,45.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche 0,45 sur l’axe vertical, puis le point de la courbe à cette hauteur.",
+     "explication": "Le point d’ordonnée 0,45 correspond à l’étalon à **6,0 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Détermine la concentration de la solution inconnue (A = 0,54), en mmol/L.",
+     "reponse": 7.2,
+     "tolerance": 0.1,
+     "unite": "mmol/L",
+     "aide": "La droite passe par l’origine : A = k × C, avec k = A / C pour n’importe quel étalon.",
+     "explication": "k = 0,15 / 2,0 = 0,075 L/mmol, donc C = A / k = 0,54 / 0,075 = **7,2 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On dilue cette solution inconnue 4 fois. Quelle absorbance mesure-t-on pour la solution diluée ?",
+     "reponse": 0.135,
+     "tolerance": 0.003,
+     "aide": "L’absorbance est proportionnelle à la concentration : diviser C par 4 divise A par 4.",
+     "explication": "C devient 7,2 / 4 = 1,8 mmol/L, donc A = 0,075 × 1,8 = **0,135**, soit 0,54 / 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léa veut prédire l’absorbance d’une solution à 30 mmol/L avec la même droite (elle trouverait 2,25). Que penses-tu de cette prédiction ?",
+     "options": [
+      "Elle est douteuse : la loi de Beer-Lambert n’est valable que pour une solution diluée",
+      "Elle est exacte : la droite d’étalonnage est valable à toutes les concentrations",
+      "Elle est fausse : une absorbance ne peut jamais dépasser la valeur 1",
+      "Elle est exacte, à condition de changer de cuve entre deux mesures"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux limites de la loi A = k × C.",
+     "explication": "Hors de la gamme étudiée, la droite s’incurve : la loi **n’est valable que pour des solutions diluées**, la prédiction est donc douteuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "454dd839-1258-5110-894b-d290c5a37467",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bleu de la boisson sportive",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire contrôle le colorant bleu d’une boisson sportive. La boisson est diluée 10 fois avant la mesure. L’absorbance de la boisson diluée, à la longueur d’onde choisie, est A = 0,35. La masse molaire du colorant est prise égale à 800 g/mol.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre du colorant",
+     "categories": [
+      "450",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "750"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance A",
+       "valeurs": [
+        0.06,
+        0.1,
+        0.28,
+        0.7,
+        0.45,
+        0.12,
+        0.04
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 0.8,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Longueur d’onde λ (nm)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    },
+    {
+     "id": "etalons",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Étalonnage à la longueur d’onde choisie",
+     "categories": [
+      "0",
+      "2,0",
+      "4,0",
+      "6,0",
+      "8,0",
+      "10,0"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance A",
+       "valeurs": [
+        0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 0.6,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Concentration C (µmol/L)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche la longueur d’onde à laquelle les étalons et la boisson ont dû être mesurés.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Pour une mesure précise, on se place au maximum du spectre.",
+     "explication": "On mesure à **λ(max) = 600 nm**, où la sensibilité est la meilleure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Détermine la concentration du colorant dans la boisson diluée, en µmol/L.",
+     "reponse": 7,
+     "tolerance": 0.1,
+     "unite": "µmol/L",
+     "aide": "La droite d’étalonnage est A = k × C avec k = 0,10 / 2,0 ; isole C.",
+     "explication": "k = 0,050 L/µmol, donc C(diluée) = A / k = 0,35 / 0,050 = **7,0 µmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration du colorant dans la boisson d’origine, en µmol/L ?",
+     "reponse": 70,
+     "tolerance": 1,
+     "unite": "µmol/L",
+     "aide": "La boisson a été diluée 10 fois : le facteur de dilution se rétablit.",
+     "explication": "C(boisson) = 10 × C(diluée) = 10 × 7,0 = **70 µmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Exprime cette concentration en masse, en mg/L (M = 800 g/mol).",
+     "reponse": 56,
+     "tolerance": 1,
+     "unite": "mg/L",
+     "aide": "t = C × M avec C en mol/L (70 µmol/L = 70 × 10⁻⁶ mol/L), puis conversion g → mg.",
+     "explication": "t = C × M = 70 × 10⁻⁶ × 800 = 0,056 g/L, soit **56 mg/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi a-t-on dilué la boisson avant de mesurer son absorbance ?",
+     "options": [
+      "Non diluée, elle aurait donné A = 3,5, hors de la gamme où la droite d’étalonnage est valable",
+      "Pour que le colorant change de couleur et devienne mesurable par le spectrophotomètre",
+      "Parce que le spectrophotomètre ne mesure que des solutions incolores",
+      "Pour faire disparaître le sucre, qui absorbe à la même longueur d’onde"
+     ],
+     "reponse": 0,
+     "aide": "Calcule l’absorbance attendue avec 10 fois plus de colorant.",
+     "explication": "Avec 10 fois plus de colorant, A serait de 3,5 : bien au-delà de la gamme d’étalonnage (0,5 au plus), où **la loi de Beer-Lambert n’est plus fiable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "53cc07d6-5389-5a8b-8f1c-5b86a9e78935",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le ruban de magnésium du feu d’artifice",
+   "competence": "calculer",
+   "situation": "Dans un feu d’artifice, le magnésium brûle en produisant une lumière blanche éblouissante : 2 Mg + O₂ → 2 MgO. Elsa étudie cette réaction avec 0,30 mol de magnésium et 0,10 mol de dioxygène. On donne M(Mg) = 24,3 g/mol et M(O) = 16,0 g/mol.",
+   "documents": [
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Tableau d’avancement",
+     "colonnes": [
+      "État du système",
+      "Mg",
+      "O₂",
+      "MgO"
+     ],
+     "lignes": [
+      [
+       "État initial (x = 0)",
+       "0,30",
+       "0,10",
+       "0"
+      ],
+      [
+       "En cours (x)",
+       "0,30 − 2x",
+       "0,10 − x",
+       "2x"
+      ],
+      [
+       "État final (x = x max)",
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Quantités en mol"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tableau",
+     "enonce": "Touche la case qui donne la quantité de dioxygène à l’état initial.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la colonne O₂, puis la ligne de l’état initial.",
+     "explication": "À l’état initial, il y a **0,10 mol** de dioxygène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de l’avancement maximal x(max), en mol ?",
+     "reponse": 0.1,
+     "tolerance": 0.001,
+     "unite": "mol",
+     "aide": "Le réactif limitant est épuisé le premier : n(initial) − coefficient × x(max) = 0 pour lui.",
+     "explication": "Mg : 0,30 − 2x = 0 donne x = 0,15 mol. O₂ : 0,10 − x = 0 donne x = 0,10 mol. Le plus petit l’emporte : **x(max) = 0,10 mol**, le dioxygène est limitant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de magnésium reste-t-il à l’état final, en mol ?",
+     "reponse": 0.1,
+     "tolerance": 0.001,
+     "unite": "mol",
+     "aide": "Remplace x par x(max) dans l’expression 0,30 − 2x.",
+     "explication": "n(Mg) = 0,30 − 2 × 0,10 = **0,10 mol** de magnésium non consumé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse d’oxyde de magnésium MgO se forme ? Réponds en g, arrondie au dixième.",
+     "reponse": 8.1,
+     "tolerance": 0.05,
+     "unite": "g",
+     "aide": "n(MgO) = 2x(max), puis m = n × M avec M(MgO) = 24,3 + 16,0.",
+     "explication": "n(MgO) = 2 × 0,10 = 0,20 mol ; m = 0,20 × 40,3 = 8,06 g, soit **8,1 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "53cc07d6-5389-5a8b-8f1c-5b86a9e78935",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le zinc attaqué par l’acide",
+   "competence": "lire-graphique",
+   "situation": "Pour son TP, Hugo plonge 1,31 g de zinc (M = 65,4 g/mol) dans 50,0 mL d’acide chlorhydrique à 0,50 mol/L : Zn + 2 H₃O⁺ → Zn²⁺ + H₂ + 2 H₂O. Il recueille le dihydrogène et note son volume. Volume molaire : 24 L/mol.",
+   "documents": [
+    {
+     "id": "volume",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Volume de dihydrogène recueilli",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "series": [
+      {
+       "nom": "V(H₂)",
+       "valeurs": [
+        0,
+        110,
+        190,
+        250,
+        285,
+        300,
+        300,
+        300
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Volume de H₂",
+      "unite": "mL",
+      "min": 0,
+      "max": 350,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "volume",
+     "enonce": "Touche la première date à laquelle la réaction est terminée.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Quand la réaction s’arrête, plus aucun gaz ne se dégage : la courbe devient horizontale.",
+     "explication": "Le plateau commence à **t = 5 min** : le volume ne change plus, la réaction est terminée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de dihydrogène s’est formée au total, en mol ? Arrondie au dix-millième.",
+     "reponse": 0.0125,
+     "tolerance": 0.0002,
+     "unite": "mol",
+     "aide": "Lis le volume du plateau (en mL), convertis-le en L, puis n = V / V(m).",
+     "explication": "V = 300 mL = 0,300 L donc n(H₂) = 0,300 / 24 = **0,0125 mol**. Comme H₂ a pour coefficient 1, x(max) = 0,0125 mol."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le réactif limitant ? On a n(Zn) = 0,0200 mol et n(H₃O⁺) = 0,0250 mol.",
+     "options": [
+      "H₃O⁺ : 0,0250 / 2 = 0,0125, plus petit que 0,0200 / 1",
+      "Le zinc, car sa quantité initiale est la plus faible des deux",
+      "Aucun : le mélange est stœchiométrique, tout est consommé",
+      "Le dihydrogène, car c’est le dernier corps à se former"
+     ],
+     "reponse": 0,
+     "aide": "Divise chaque quantité initiale par son coefficient stœchiométrique avant de comparer.",
+     "explication": "Zn : 0,0200 / 1 = 0,0200 ; H₃O⁺ : 0,0250 / 2 = 0,0125. Le plus petit rapport désigne **H₃O⁺**, qui retrouve la valeur de x(max) lue sur le graphique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de zinc reste-t-il à la fin ? Réponds en g, arrondie au centième.",
+     "reponse": 0.49,
+     "tolerance": 0.01,
+     "unite": "g",
+     "aide": "n(Zn) restant = n(Zn) initial − x(max), puis m = n × M.",
+     "explication": "n(Zn) = 0,0200 − 0,0125 = 0,0075 mol ; m = 0,0075 × 65,4 ≈ **0,49 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "53cc07d6-5389-5a8b-8f1c-5b86a9e78935",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le rendement d’une usine d’ammoniac",
+   "competence": "raisonner",
+   "situation": "Une usine fabrique de l’ammoniac pour les engrais : N₂ + 3 H₂ → 2 NH₃. Un essai démarre avec 4,0 mol de diazote et 9,0 mol de dihydrogène. On donne M(NH₃) = 17,0 g/mol.",
+   "documents": [
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Tableau d’avancement de l’essai",
+     "colonnes": [
+      "État du système",
+      "N₂",
+      "+ 3 H₂",
+      "→ 2 NH₃"
+     ],
+     "lignes": [
+      [
+       "État initial (x = 0)",
+       "4,0",
+       "9,0",
+       "0"
+      ],
+      [
+       "En cours (x)",
+       "4,0 − x",
+       "9,0 − 3x",
+       "2x"
+      ],
+      [
+       "État final (x = x max)",
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Quantités en mol"
+    },
+    {
+     "id": "compte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Compte rendu de l’essai",
+     "sousTitre": "Réacteur à 450 °C, catalyseur à base de fer",
+     "emoji": "🏭",
+     "lignes": [
+      {
+       "texte": "Ammoniac recueilli",
+       "valeur": "85 g",
+       "id": "recueilli"
+      },
+      {
+       "texte": "Pression",
+       "valeur": "200 bar"
+      }
+     ],
+     "pied": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tableau",
+     "enonce": "Touche l’expression qui donne la quantité de dihydrogène en cours de réaction.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la colonne H₂ et la ligne « En cours ».",
+     "explication": "La case **9,0 − 3x** tient compte du coefficient 3 de H₂ dans l’équation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le réactif limitant ?",
+     "options": [
+      "Le dihydrogène : 9,0 / 3 = 3,0 est plus petit que 4,0 / 1",
+      "Le diazote, car 4,0 mol est inférieur à 9,0 mol",
+      "Aucun : les deux sont épuisés ensemble",
+      "L’ammoniac, qui se forme en plus petite quantité"
+     ],
+     "reponse": 0,
+     "aide": "Ne compare pas les quantités brutes : divise chacune par son coefficient.",
+     "explication": "N₂ : 4,0 / 1 = 4,0 ; H₂ : 9,0 / 3 = 3,0. **H₂ est limitant**, même si sa quantité brute est la plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse maximale d’ammoniac peut-on former ? Réponds en g.",
+     "reponse": 102,
+     "tolerance": 1,
+     "unite": "g",
+     "aide": "x(max) = 3,0 mol ; n(NH₃) = 2x(max) ; puis m = n × M.",
+     "explication": "n(NH₃) = 2 × 3,0 = 6,0 mol ; m = 6,0 × 17,0 = **102 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de diazote reste-t-il à l’état final, en mol ?",
+     "reponse": 1,
+     "tolerance": 0.01,
+     "unite": "mol",
+     "aide": "Remplace x par x(max) dans 4,0 − x.",
+     "explication": "n(N₂) = 4,0 − 3,0 = **1,0 mol**, qui n’a pas réagi faute de dihydrogène."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement de l’essai, en %, arrondi à l’unité.",
+     "reponse": 83,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "Rendement = masse obtenue / masse maximale (même unité).",
+     "explication": "η = 85 / 102 ≈ 0,83, soit **83 %** : la réaction n’est jamais totale et chaque manipulation perd un peu de produit."
+    }
+   ]
+  },
+  {
+   "chapitre": "c56bcb52-bd04-5593-a12e-30432ee07bef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fer du sel de Mohr au laboratoire",
+   "competence": "observer-schema",
+   "situation": "Au laboratoire, Camille titre 10,0 mL d’une solution de sulfate de fer(II) de concentration inconnue, placés dans un bécher, par une solution de sulfate de cérium(IV) à 0,020 mol/L, versée à la burette : Ce⁴⁺ + Fe²⁺ → Ce³⁺ + Fe³⁺. L’équivalence est repérée par le changement de couleur persistant d’un indicateur coloré, pour un volume versé V(E) = 15,0 mL.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Le montage de titrage",
+     "largeur": 320,
+     "hauteur": 270,
+     "source": "Schéma simplifié",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 250,
+       "l": 240,
+       "h": 10,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 20,
+       "l": 8,
+       "h": 230,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        64,
+        80
+       ],
+       "a": [
+        140,
+        80
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 30,
+       "l": 22,
+       "h": 140,
+       "arrondi": 4,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "burette",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        143,
+        60
+       ],
+       "a": [
+        150,
+        60
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        143,
+        90
+       ],
+       "a": [
+        150,
+        90
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        143,
+        120
+       ],
+       "a": [
+        150,
+        120
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 144,
+       "y": 170,
+       "l": 14,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        151,
+        178
+       ],
+       "a": [
+        151,
+        200
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 200,
+       "l": 110,
+       "h": 46,
+       "arrondi": 6,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "becher",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 136,
+       "y": 238,
+       "l": 30,
+       "h": 5,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 151,
+       "y": 226,
+       "texte": "Fe²⁺",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 246,
+       "l": 142,
+       "h": 4,
+       "teinte": "gris",
+       "motif": "plein"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche le récipient qui contient le réactif titrant, de concentration connue.",
+     "reponse": [
+      "burette"
+     ],
+     "aide": "Le titrant se verse peu à peu, goutte à goutte, par le haut.",
+     "explication": "Le titrant, de concentration connue, est dans la **burette graduée**."
+    },
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche le récipient qui contient le réactif titré, de concentration inconnue.",
+     "reponse": [
+      "becher"
+     ],
+     "aide": "Le titré est prélevé avec précision, puis reçoit le titrant.",
+     "explication": "Le titré (10,0 mL de solution de fer(II)) est dans le **bécher**, sur l’agitateur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en ions Fe²⁺ de la solution titrée, en mol/L ?",
+     "reponse": 0.03,
+     "tolerance": 0.0005,
+     "unite": "mol/L",
+     "aide": "Les coefficients valent 1 : C(titré) × V(titré) = C(titrant) × V(E).",
+     "explication": "C(Fe²⁺) = C(Ce⁴⁺) × V(E) / V(titré) = 0,020 × 15,0 / 10,0 = **0,030 mol/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille ajoute par erreur 20 mL d’eau distillée dans le bécher avant de titrer. Que devient le volume équivalent V(E) ?",
+     "options": [
+      "Il ne change pas : seule la quantité de matière du titré compte",
+      "Il double, car le volume du bécher a été multiplié par trois environ",
+      "Il diminue, car le titré est devenu plus dilué dans le bécher",
+      "Il devient nul, car l’eau distillée empêche toute réaction chimique"
+     ],
+     "reponse": 0,
+     "aide": "À l’équivalence, c’est une quantité de matière qui compte, pas une concentration.",
+     "explication": "La quantité de Fe²⁺ dans le bécher est la même : il faut le même volume de titrant. **V(E) reste 15,0 mL**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c56bcb52-bd04-5593-a12e-30432ee07bef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’acide du déboucheur dilué",
+   "competence": "lire-graphique",
+   "situation": "Théo vérifie l’étiquette d’un produit d’entretien à base d’acide chlorhydrique. Il le dilue 20 fois, puis titre 10,0 mL de cette solution par de la soude (HO⁻) à 0,100 mol/L en suivant le pH. Réaction support : H₃O⁺ + HO⁻ → 2 H₂O.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Titrage pH-métrique",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "pH",
+       "valeurs": [
+        0.9,
+        1,
+        1.1,
+        1.3,
+        1.5,
+        1.7,
+        2,
+        7,
+        11.9,
+        12.2,
+        12.3
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "pH",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Volume de soude versé (mL)"
+     },
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ph",
+     "enonce": "Touche le point qui correspond à l’équivalence, au milieu du saut de pH.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "Cherche le moment où le pH bondit très vite : l’équivalence est au centre du saut.",
+     "explication": "Le saut de pH est centré sur **V(E) = 14,0 mL** : c’est l’équivalence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en H₃O⁺ de la solution diluée, en mol/L.",
+     "reponse": 0.14,
+     "tolerance": 0.001,
+     "unite": "mol/L",
+     "aide": "Les coefficients valent 1 : C(titré) × V(titré) = C(soude) × V(E).",
+     "explication": "C = 0,100 × 14,0 / 10,0 = **0,140 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration du produit d’entretien avant la dilution, en mol/L ?",
+     "reponse": 2.8,
+     "tolerance": 0.02,
+     "unite": "mol/L",
+     "aide": "Le produit a été dilué 20 fois : multiplie la concentration par le facteur de dilution.",
+     "explication": "C(produit) = 20 × 0,140 = **2,80 mol/L**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après avoir versé 8 mL de soude (avant l’équivalence), quel est le réactif limitant dans le bécher ?",
+     "options": [
+      "Le titrant, les ions HO⁻ versés sont consommés dès qu’ils arrivent",
+      "Le titré, les ions H₃O⁺ ont tous disparu depuis longtemps",
+      "Aucun des deux, car le pH reste inférieur à 7",
+      "Les molécules d’eau formées par la réaction"
+     ],
+     "reponse": 0,
+     "aide": "Avant l’équivalence, il reste du titré : qui disparaît entièrement ?",
+     "explication": "Avant l’équivalence, il reste du titré ; chaque HO⁻ versé réagit aussitôt. **Le titrant est limitant**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c56bcb52-bd04-5593-a12e-30432ee07bef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le fer d’un complément alimentaire",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire contrôle un complément alimentaire. Un comprimé est dissous dans une fiole jaugée de 100,0 mL (tout le fer est sous forme Fe²⁺). On titre 20,0 mL de cette solution par du permanganate de potassium à 2,00 × 10⁻³ mol/L : MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O. M(Fe) = 55,8 g/mol.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Complément alimentaire",
+     "sousTitre": "Comprimés de fer",
+     "emoji": "💊",
+     "lignes": [
+      {
+       "texte": "Fer (Fe)",
+       "valeur": "14 mg par comprimé",
+       "id": "fer"
+      },
+      {
+       "texte": "Vitamine C",
+       "valeur": "80 mg"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Volumes équivalents mesurés",
+     "colonnes": [
+      "Essai",
+      "V(E) en mL"
+     ],
+     "lignes": [
+      [
+       "Essai 1 (dosage rapide)",
+       "5,6"
+      ],
+      [
+       "Essai 2",
+       "5,0"
+      ],
+      [
+       "Essai 3",
+       "5,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures simulées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche les deux volumes équivalents à retenir pour la suite (les essais précis et concordants).",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Le premier essai, fait rapidement, sert seulement de repère.",
+     "explication": "Les essais 2 et 3 donnent **V(E) = 5,0 mL**, concordants : on les retient. L’essai rapide ne sert qu’à situer l’équivalence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’ions MnO₄⁻ a été versée à l’équivalence ? Réponds en µmol.",
+     "reponse": 10,
+     "tolerance": 0.1,
+     "unite": "µmol",
+     "aide": "n = C × V avec V(E) = 5,0 × 10⁻³ L ; convertis en µmol (× 10⁶).",
+     "explication": "n(MnO₄⁻) = 2,00 × 10⁻³ × 5,0 × 10⁻³ = 1,0 × 10⁻⁵ mol, soit **10 µmol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À l’équivalence, quelle relation relie les quantités de matière de titré et de titrant ?",
+     "options": [
+      "n(Fe²⁺) = 5 × n(MnO₄⁻), à cause des coefficients de l’équation",
+      "n(Fe²⁺) = n(MnO₄⁻), car ils réagissent un pour un",
+      "n(MnO₄⁻) = 5 × n(Fe²⁺), car il y a plus de permanganate",
+      "n(Fe²⁺) = 8 × n(MnO₄⁻), à cause des ions H⁺"
+     ],
+     "reponse": 0,
+     "aide": "Un ion MnO₄⁻ réagit avec combien d’ions Fe²⁺, d’après l’équation ?",
+     "explication": "L’équation montre 1 MnO₄⁻ pour 5 Fe²⁺ : **n(Fe²⁺) = 5 × n(MnO₄⁻)** à l’équivalence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de Fe²⁺ contient la prise de 20,0 mL titrée ? Réponds en µmol.",
+     "reponse": 50,
+     "tolerance": 0.5,
+     "unite": "µmol",
+     "aide": "Multiplie la quantité de MnO₄⁻ par le coefficient de la relation à l’équivalence.",
+     "explication": "n(Fe²⁺) = 5 × 10 µmol = **50 µmol** dans 20,0 mL."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de fer contient un comprimé, en mg ? Arrondis au dixième et compare à l’étiquette.",
+     "reponse": 14,
+     "tolerance": 0.1,
+     "unite": "mg",
+     "aide": "Le comprimé est dissous dans 100,0 mL : multiplie par 100,0 / 20,0, puis m = n × M.",
+     "explication": "n(Fe²⁺) dans 100,0 mL = 50 × 5 = 250 µmol ; m = 250 × 10⁻⁶ × 55,8 = 0,01395 g ≈ **14,0 mg** : conforme à l’étiquette."
+    }
+   ]
+  },
+  {
+   "chapitre": "134cb4ab-2c1c-5af4-a886-1d2b2812381d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La molécule d’eau du verre",
+   "competence": "observer-schema",
+   "situation": "Salomé dessine la molécule d’eau pour son exposé. Dans son schéma de Lewis, chaque trait court épais représente un doublet non liant, et chaque trait long un doublet liant entre deux atomes.",
+   "documents": [
+    {
+     "id": "eau",
+     "type": "schema",
+     "titre": "La molécule d’eau H₂O",
+     "largeur": 320,
+     "hauteur": 190,
+     "source": "Schéma de Lewis simplifié",
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 22,
+       "texte": "Molécule d’eau",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        146.8,
+        102.2
+       ],
+       "a": [
+        105.3,
+        140.5
+       ],
+       "id": "liaisonG",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        173.2,
+        102.2
+       ],
+       "a": [
+        214.7,
+        140.5
+       ],
+       "id": "liaisonD",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        141,
+        71
+       ],
+       "a": [
+        153,
+        64
+       ],
+       "epaisseur": 3,
+       "id": "dnlG",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        167,
+        64
+       ],
+       "a": [
+        179,
+        71
+       ],
+       "epaisseur": 3,
+       "id": "dnlD",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 90,
+       "r": 18,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "oxygene"
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 150,
+       "r": 14,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "hG"
+      },
+      {
+       "forme": "cercle",
+       "cx": 225,
+       "cy": 150,
+       "r": 14,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "hD"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eau",
+     "enonce": "Touche les deux doublets non liants de l’atome d’oxygène.",
+     "reponse": [
+      "dnlG",
+      "dnlD"
+     ],
+     "multiple": true,
+     "aide": "Un doublet non liant n’est partagé avec aucun autre atome : il ne relie rien.",
+     "explication": "Les deux **traits courts épais** posés sur l’oxygène sont ses doublets non liants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons de valence possède un atome d’oxygène (colonne 16) ?",
+     "reponse": 6,
+     "tolerance": 0,
+     "aide": "Pour les colonnes 13 à 18, retranche 10 au numéro de colonne.",
+     "explication": "Colonne 16 − 10 = **6 électrons de valence**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre total d’électrons de valence de la molécule H₂O ?",
+     "reponse": 8,
+     "tolerance": 0,
+     "aide": "Additionne ceux de l’oxygène et de chacun des deux hydrogènes (1 chacun).",
+     "explication": "6 + 2 × 1 = **8 électrons**, soit 4 doublets : 2 liants et 2 non liants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la molécule d’eau est-elle coudée et non linéaire ?",
+     "options": [
+      "Les deux doublets non liants de l’oxygène repoussent les liaisons",
+      "Les deux atomes d’hydrogène se repoussent à cause de leur charge",
+      "L’oxygène forme une double liaison avec chaque hydrogène",
+      "Un hydrogène est plus gros que l’autre"
+     ],
+     "reponse": 0,
+     "aide": "Tous les doublets, liants comme non liants, se repoussent.",
+     "explication": "Les 4 doublets autour de O s’écartent au maximum : la molécule est **coudée** à cause des deux doublets non liants."
+    }
+   ]
+  },
+  {
+   "chapitre": "134cb4ab-2c1c-5af4-a886-1d2b2812381d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’ammoniac du produit ménager",
+   "competence": "raisonner",
+   "situation": "Un nettoyant pour vitres contient de l’ammoniac NH₃. Nadia veut dessiner son schéma de Lewis à partir de la classification périodique.",
+   "documents": [
+    {
+     "id": "periodique",
+     "type": "tableau",
+     "titre": "Extrait du tableau périodique",
+     "colonnes": [
+      "Élément",
+      "Symbole",
+      "Colonne"
+     ],
+     "lignes": [
+      [
+       "Hydrogène",
+       "H",
+       "1"
+      ],
+      [
+       "Carbone",
+       "C",
+       "14"
+      ],
+      [
+       "Azote",
+       "N",
+       "15"
+      ],
+      [
+       "Oxygène",
+       "O",
+       "16"
+      ],
+      [
+       "Chlore",
+       "Cl",
+       "17"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "periodique",
+     "enonce": "Touche la colonne de l’élément qui possède 6 électrons de valence.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Pour les colonnes 13 à 18, nombre d’électrons de valence = colonne − 10.",
+     "explication": "Colonne 16 − 10 = 6 : c’est l’**oxygène**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre total d’électrons de valence de NH₃ ?",
+     "reponse": 8,
+     "tolerance": 0,
+     "aide": "Azote : colonne 15 ; hydrogène : colonne 1 (trois atomes).",
+     "explication": "N : 15 − 10 = 5 ; 3 H : 3 × 1 = 3 ; total **8 électrons**, soit 4 doublets."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces atomes selon le nombre de doublets non liants qu’ils portent dans leur molécule usuelle.",
+     "categories": [
+      "Aucun doublet non liant",
+      "Un doublet non liant",
+      "Deux doublets non liants",
+      "Trois doublets non liants"
+     ],
+     "items": [
+      [
+       "C dans CH₄",
+       0
+      ],
+      [
+       "N dans NH₃",
+       1
+      ],
+      [
+       "O dans H₂O",
+       2
+      ],
+      [
+       "Cl dans HCl",
+       3
+      ]
+     ],
+     "aide": "Atome entouré de 8 électrons : combien font les liaisons, combien reste-t-il en doublets non liants ?",
+     "explication": "C : 4 liaisons, 0 doublet non liant. N : 3 liaisons, **1 doublet**. O : 2 liaisons, **2 doublets**. Cl : 1 liaison, **3 doublets**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes pour établir un schéma de Lewis.",
+     "items": [
+      "Compter le total des électrons de valence",
+      "Placer les liaisons simples entre atomes voisins",
+      "Compléter les octets avec des doublets non liants",
+      "Former une liaison double ou triple si un atome reste incomplet"
+     ],
+     "aide": "On compte avant de dessiner, et on ne passe aux liaisons multiples qu’en dernier recours.",
+     "explication": "On **compte** les électrons, on place les **liaisons simples**, on complète avec les **doublets non liants**, et si besoin on forme une **liaison multiple**."
+    }
+   ]
+  },
+  {
+   "chapitre": "134cb4ab-2c1c-5af4-a886-1d2b2812381d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dioxyde de carbone des bulles",
+   "competence": "raisonner",
+   "situation": "Dans une boisson gazeuse, le gaz qui forme les bulles est le dioxyde de carbone CO₂, de squelette O–C–O. Alexis a posé ses liaisons simples et complété les octets des atomes d’oxygène, mais il hésite devant son premier schéma.",
+   "documents": [
+    {
+     "id": "essai",
+     "type": "schema",
+     "titre": "Premier essai d’Alexis",
+     "largeur": 320,
+     "hauteur": 140,
+     "source": "Schéma de Lewis à corriger",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        78,
+        70
+       ],
+       "a": [
+        142,
+        70
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        178,
+        70
+       ],
+       "a": [
+        242,
+        70
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        52,
+        42
+       ],
+       "a": [
+        68,
+        42
+       ],
+       "epaisseur": 3,
+       "id": "dnl1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        52,
+        98
+       ],
+       "a": [
+        68,
+        98
+       ],
+       "epaisseur": 3,
+       "id": "dnl2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        26,
+        62
+       ],
+       "a": [
+        26,
+        78
+       ],
+       "epaisseur": 3,
+       "id": "dnl3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        252,
+        42
+       ],
+       "a": [
+        268,
+        42
+       ],
+       "epaisseur": 3,
+       "id": "dnl4",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        252,
+        98
+       ],
+       "a": [
+        268,
+        98
+       ],
+       "epaisseur": 3,
+       "id": "dnl5",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        294,
+        62
+       ],
+       "a": [
+        294,
+        78
+       ],
+       "epaisseur": 3,
+       "id": "dnl6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 70,
+       "r": 17,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "oG",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 70,
+       "r": 17,
+       "texte": "C",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "carbone",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 70,
+       "r": 17,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "oD",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "valence",
+     "type": "tableau",
+     "titre": "Électrons de valence",
+     "colonnes": [
+      "Atome",
+      "Colonne",
+      "Électrons de valence"
+     ],
+     "lignes": [
+      [
+       "Carbone",
+       "14",
+       "4"
+      ],
+      [
+       "Oxygène",
+       "16",
+       "6"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le nombre total d’électrons de valence de la molécule CO₂ ?",
+     "reponse": 16,
+     "tolerance": 0,
+     "aide": "Un atome de carbone et deux atomes d’oxygène : additionne leurs électrons de valence.",
+     "explication": "4 + 2 × 6 = **16 électrons**, soit 8 doublets à répartir."
+    },
+    {
+     "type": "zone",
+     "document": "essai",
+     "enonce": "Touche l’atome qui ne respecte pas la règle de l’octet dans ce premier essai.",
+     "reponse": [
+      "carbone"
+     ],
+     "aide": "Compte les électrons autour de chaque atome : chaque liaison simple en apporte 2 à chacun de ses atomes.",
+     "explication": "Le carbone n’est entouré que de **4 électrons** (deux liaisons simples) au lieu de 8 : l’octet n’est pas respecté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment corriger le schéma sans changer le nombre total d’électrons ?",
+     "options": [
+      "Former une double liaison C=O de chaque côté, en retirant un doublet non liant à chaque oxygène",
+      "Ajouter deux doublets non liants sur le carbone, qui sera alors entouré de 8 électrons",
+      "Placer un atome d’hydrogène à côté du carbone pour compléter son octet",
+      "Remplacer chaque liaison simple par un doublet non liant sur le carbone"
+     ],
+     "reponse": 0,
+     "aide": "Un doublet non liant de l’oxygène peut devenir un second doublet liant.",
+     "explication": "Chaque oxygène met en commun un doublet non liant : on obtient **O=C=O**, avec le carbone entouré de 8 électrons et le total de 16 conservé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le schéma correct O=C=O, quel est le nombre total de doublets non liants (sur toute la molécule) ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Chaque oxygène garde 2 doublets non liants ; le carbone n’en porte aucun.",
+     "explication": "2 oxygènes × 2 doublets non liants = **4 doublets**."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’eau est coudée alors que CO₂ est linéaire. Quelle explication est la bonne ?",
+     "options": [
+      "L’oxygène de l’eau porte deux doublets non liants, le carbone de CO₂ n’en porte aucun",
+      "Dans l’eau, l’oxygène est lié par deux liaisons doubles, ce qui courbe la molécule",
+      "Le carbone de CO₂ est plus gros que l’oxygène et force les atomes à s’aligner",
+      "L’eau est liquide à 20 °C alors que CO₂ est un gaz, donc leurs formes diffèrent"
+     ],
+     "reponse": 0,
+     "aide": "Compare les doublets non liants autour de l’atome central dans les deux molécules.",
+     "explication": "Autour de O dans H₂O, 2 doublets non liants **repoussent** les liaisons : molécule coudée. Autour de C dans CO₂, aucun : molécule **linéaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d630931a-cf2a-5240-be77-50fcd4099449",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les atomes se disputent les électrons",
+   "competence": "lire-tableau",
+   "situation": "Camille compare l’électronégativité de quelques atomes pour savoir dans quelle liaison le doublet d’électrons est le plus déplacé.",
+   "documents": [
+    {
+     "id": "chi",
+     "type": "tableau",
+     "titre": "Électronégativité (échelle de Pauling)",
+     "colonnes": [
+      "Élément",
+      "Symbole",
+      "Électronégativité"
+     ],
+     "lignes": [
+      [
+       "Hydrogène",
+       "H",
+       "2,20"
+      ],
+      [
+       "Carbone",
+       "C",
+       "2,55"
+      ],
+      [
+       "Azote",
+       "N",
+       "3,04"
+      ],
+      [
+       "Oxygène",
+       "O",
+       "3,44"
+      ],
+      [
+       "Chlore",
+       "Cl",
+       "3,16"
+      ],
+      [
+       "Fluor",
+       "F",
+       "3,98"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chi",
+     "enonce": "Touche l’électronégativité de l’atome qui attire le plus les électrons d’une liaison.",
+     "reponse": [
+      "r5c2"
+     ],
+     "aide": "Cherche la plus grande valeur du tableau.",
+     "explication": "Le **fluor** (3,98) est l’élément le plus électronégatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la molécule HCl, quel atome porte la charge partielle δ− ?",
+     "options": [
+      "Le chlore, plus électronégatif que l’hydrogène",
+      "L’hydrogène, car c’est le plus petit des deux atomes",
+      "Aucun : les deux atomes portent exactement la même charge",
+      "Les deux, qui se partagent la charge δ− à égalité"
+     ],
+     "reponse": 0,
+     "aide": "Le doublet est déplacé vers l’atome le plus électronégatif.",
+     "explication": "Le doublet se rapproche du **chlore** : il porte δ−, l’hydrogène porte δ+."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces liaisons selon qu’elles sont polarisées ou non.",
+     "categories": [
+      "Liaison polarisée",
+      "Liaison non polarisée"
+     ],
+     "items": [
+      [
+       "H–Cl",
+       0
+      ],
+      [
+       "O=O",
+       1
+      ],
+      [
+       "O–H",
+       0
+      ],
+      [
+       "H–H",
+       1
+      ],
+      [
+       "Cl–Cl",
+       1
+      ]
+     ],
+     "aide": "Une liaison entre deux atomes identiques a une électronégativité identique des deux côtés.",
+     "explication": "H–Cl et O–H relient deux atomes d’électronégativités **différentes** : polarisées. O=O, H–H et Cl–Cl relient deux atomes **identiques** : non polarisées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi C–H, N–H et O–H, quelle liaison est la plus polarisée ?",
+     "options": [
+      "O–H : l’écart d’électronégativité (1,24) est le plus grand",
+      "C–H : le carbone est au centre de la molécule",
+      "N–H : l’azote est le plus électronégatif des trois",
+      "Elles le sont également, car l’hydrogène est commun"
+     ],
+     "reponse": 0,
+     "aide": "Calcule l’écart d’électronégativité pour chaque liaison.",
+     "explication": "Écarts : C–H 0,35 ; N–H 0,84 ; O–H 1,24. **O–H** est la plus polarisée."
+    }
+   ]
+  },
+  {
+   "chapitre": "d630931a-cf2a-5240-be77-50fcd4099449",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Eau et gaz carbonique : deux molécules, deux polarités",
+   "competence": "observer-schema",
+   "situation": "Dans une boisson gazeuse se côtoient l’eau et le dioxyde de carbone. Yanis se demande pourquoi l’une est polaire et pas l’autre alors que leurs liaisons sont toutes polarisées.",
+   "documents": [
+    {
+     "id": "molecules",
+     "type": "schema",
+     "titre": "Géométrie des deux molécules",
+     "largeur": 340,
+     "hauteur": 190,
+     "source": "Schéma simplifié",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        59,
+        82
+       ],
+       "a": [
+        44,
+        108
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        81,
+        82
+       ],
+       "a": [
+        96,
+        108
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 70,
+       "r": 16,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "oEau",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 35,
+       "cy": 120,
+       "r": 13,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "hEau1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 120,
+       "r": 13,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "hEau2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 168,
+       "texte": "H₂O",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        214,
+        92
+       ],
+       "a": [
+        235,
+        92
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        94
+       ],
+       "a": [
+        256,
+        94
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        214,
+        98
+       ],
+       "a": [
+        235,
+        98
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        100
+       ],
+       "a": [
+        256,
+        100
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 95,
+       "r": 14,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "oCO2a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 95,
+       "r": 14,
+       "texte": "C",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "cCO2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 95,
+       "r": 14,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "oCO2b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 168,
+       "texte": "CO₂",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "chi",
+     "type": "tableau",
+     "titre": "Électronégativité (Pauling)",
+     "colonnes": [
+      "Élément",
+      "Électronégativité"
+     ],
+     "lignes": [
+      [
+       "Hydrogène",
+       "2,20"
+      ],
+      [
+       "Carbone",
+       "2,55"
+      ],
+      [
+       "Oxygène",
+       "3,44"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "molecules",
+     "enonce": "Touche l’atome qui porte la charge partielle δ− dans la molécule d’eau.",
+     "reponse": [
+      "oEau"
+     ],
+     "aide": "Compare l’électronégativité de l’oxygène et de l’hydrogène.",
+     "explication": "L’**oxygène** (3,44) attire les doublets plus que l’hydrogène (2,20) : il porte δ−."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’écart d’électronégativité dans une liaison O–H.",
+     "reponse": 1.24,
+     "tolerance": 0.01,
+     "aide": "Soustrais la plus petite valeur à la plus grande.",
+     "explication": "3,44 − 2,20 = **1,24** : la liaison O–H est fortement polarisée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi CO₂ est-elle apolaire alors que ses liaisons C=O sont polarisées ?",
+     "options": [
+      "Sa géométrie linéaire et symétrique compense les polarités des deux liaisons",
+      "Ses liaisons C=O ne sont pas du tout polarisées, car elles sont doubles",
+      "Le carbone attire plus les électrons que les deux oxygènes réunis",
+      "Elle est un gaz, et un gaz est toujours apolaire"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux deux effets qui s’opposent de part et d’autre du carbone.",
+     "explication": "Chaque liaison C=O est polarisée, mais les deux effets sont opposés et de même grandeur : ils **s’annulent**. CO₂ est apolaire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces molécules.",
+     "categories": [
+      "Molécule polaire",
+      "Molécule apolaire"
+     ],
+     "items": [
+      [
+       "H₂O",
+       0
+      ],
+      [
+       "CO₂",
+       1
+      ],
+      [
+       "O₂",
+       1
+      ],
+      [
+       "HCl",
+       0
+      ]
+     ],
+     "aide": "Une molécule est polaire si ses liaisons sont polarisées et ses charges partielles ne se compensent pas.",
+     "explication": "H₂O (coudée) et HCl : polaires. CO₂ (linéaire, symétrique) et O₂ (liaison non polarisée) : **apolaires**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d630931a-cf2a-5240-be77-50fcd4099449",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi la propanone bout plus haut que le butane",
+   "competence": "argumenter",
+   "situation": "Un laborantin range deux liquides à masse molaire identique : le butane (gaz de briquet liquéfié) et la propanone (dissolvant). Il compare leurs températures d’ébullition et prépare le choix d’un solvant pour deux solutés.",
+   "documents": [
+    {
+     "id": "teb",
+     "type": "tableau",
+     "titre": "Deux molécules de même masse molaire",
+     "colonnes": [
+      "Molécule",
+      "Formule semi-développée",
+      "M (g/mol)",
+      "T d’ébullition (°C)"
+     ],
+     "lignes": [
+      [
+       "Butane",
+       "CH₃−CH₂−CH₂−CH₃",
+       "58",
+       "−1"
+      ],
+      [
+       "Propanone",
+       "CH₃−CO−CH₃",
+       "58",
+       "56"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "solvants",
+     "type": "tableau",
+     "titre": "Deux solvants usuels",
+     "colonnes": [
+      "Solvant",
+      "Nature"
+     ],
+     "lignes": [
+      [
+       "Eau",
+       "Polaire"
+      ],
+      [
+       "Cyclohexane",
+       "Apolaire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range ces solutés selon le solvant qui les dissout le mieux.",
+     "categories": [
+      "Dans l’eau",
+      "Dans le cyclohexane"
+     ],
+     "items": [
+      [
+       "Chlorure de sodium NaCl",
+       0
+      ],
+      [
+       "Sucre",
+       0
+      ],
+      [
+       "Diiode I₂",
+       1
+      ],
+      [
+       "Huile de tournesol",
+       1
+      ]
+     ],
+     "aide": "Semblable dissout semblable : polaire ou ionique avec polaire, apolaire avec apolaire.",
+     "explication": "NaCl (ionique) et le sucre (polaire) vont dans l’**eau**. Le diiode et l’huile (apolaires) vont dans le **cyclohexane**."
+    },
+    {
+     "type": "zone",
+     "document": "teb",
+     "enonce": "Touche la molécule polaire du tableau, sachant qu’elle contient une liaison C=O très polarisée.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Le butane ne contient que des liaisons C–C et C–H, très peu polarisées.",
+     "explication": "La **propanone** possède une liaison C=O, fortement polarisée car l’oxygène est très électronégatif, et ses charges ne se compensent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de degrés la propanone bout-elle plus haut que le butane ?",
+     "reponse": 57,
+     "tolerance": 0.5,
+     "unite": "°C",
+     "aide": "Attention au signe de la température d’ébullition du butane : 56 − (−1).",
+     "explication": "56 − (−1) = **57 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer cet écart alors que les masses molaires sont identiques ?",
+     "options": [
+      "Les molécules polaires s’attirent davantage, il faut plus d’énergie pour les séparer",
+      "La propanone est plus lourde que le butane, donc plus difficile à vaporiser",
+      "Le butane est plus polaire, ce qui l’empêche de bouillir facilement",
+      "La propanone contient moins d’atomes de carbone, donc elle chauffe plus vite"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux attractions entre molécules : à masse comparable, laquelle s’attire le plus ?",
+     "explication": "Les molécules **polaires s’attirent davantage** : à masse comparable, elles bouillent plus haut."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le diiode I₂ est un solide apolaire. Quelle justification est correcte ?",
+     "options": [
+      "Sa liaison I–I relie deux atomes identiques, elle n’est donc pas polarisée",
+      "Les atomes d’iode ont la plus grande électronégativité du tableau périodique",
+      "La molécule I₂ est coudée, ce qui compense les charges",
+      "Un solide ne peut jamais être polaire"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui rend une liaison polarisée ?",
+     "explication": "Les deux atomes d’iode ont la même électronégativité : **aucune polarisation**, donc une molécule apolaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "60576256-7dd9-537d-a22a-83fc034c4437",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La glace qui fond dans le verre",
+   "competence": "analyser-document",
+   "situation": "Noé regarde un glaçon fondre dans un verre d’eau, puis l’eau s’évaporer d’une casserole sur le feu. Il se demande ce qui se passe à l’échelle des molécules H₂O.",
+   "documents": [
+    {
+     "id": "etats",
+     "type": "chaine",
+     "titre": "Les trois états de l’eau",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "glace",
+       "texte": "Glace",
+       "emoji": "🧊"
+      },
+      {
+       "id": "liquide",
+       "texte": "Eau liquide",
+       "emoji": "💧"
+      },
+      {
+       "id": "vapeur",
+       "texte": "Vapeur",
+       "emoji": "☁️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "glace",
+       "a": "liquide",
+       "texte": "fusion"
+      },
+      {
+       "de": "liquide",
+       "a": "vapeur",
+       "texte": "ébullition"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etats",
+     "enonce": "Touche l’état dans lequel les molécules d’eau interagissent le moins entre elles.",
+     "reponse": [
+      "vapeur"
+     ],
+     "aide": "Dans quel état les molécules sont-elles les plus éloignées les unes des autres ?",
+     "explication": "Dans la **vapeur**, les molécules sont très éloignées et n’interagissent presque plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand la glace fond, que se passe-t-il à l’intérieur des molécules d’eau ?",
+     "options": [
+      "Les liaisons covalentes O–H restent intactes, seules les interactions entre molécules changent",
+      "Les liaisons covalentes O–H se rompent, car la molécule reçoit de l’énergie en fondant",
+      "Les atomes d’hydrogène quittent les molécules d’eau pour former d’autres atomes",
+      "Les molécules d’eau se transforment peu à peu en molécules de dihydrogène"
+     ],
+     "reponse": 0,
+     "aide": "La fusion est un changement d’état, pas une réaction chimique.",
+     "explication": "Fondre ou vaporiser un corps moléculaire ne casse **aucune liaison covalente** : seules les interactions entre molécules sont en jeu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Que rompt chacun de ces phénomènes ?",
+     "categories": [
+      "Interactions entre molécules",
+      "Liaisons covalentes"
+     ],
+     "items": [
+      [
+       "Fusion de la glace",
+       0
+      ],
+      [
+       "Ébullition de l’eau",
+       0
+      ],
+      [
+       "Combustion du méthane",
+       1
+      ],
+      [
+       "Électrolyse de l’eau",
+       1
+      ],
+      [
+       "Vaporisation de l’éthanol",
+       0
+      ]
+     ],
+     "aide": "Un changement d’état ne change pas la nature des molécules ; une réaction chimique, si.",
+     "explication": "Les changements d’état (fusion, ébullition, vaporisation) rompent des **interactions faibles**. Combustion et électrolyse sont des réactions : elles rompent des **liaisons covalentes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "60576256-7dd9-537d-a22a-83fc034c4437",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi le gaz du briquet est liquide sous pression",
+   "competence": "lire-graphique",
+   "situation": "Anaïs compare les températures d’ébullition de six alcanes, des hydrocarbures dont la chaîne carbonée s’allonge d’un atome de carbone à chaque étape.",
+   "documents": [
+    {
+     "id": "alcanes",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Température d’ébullition de six alcanes",
+     "categories": [
+      "CH₄",
+      "C₂H₆",
+      "C₃H₈",
+      "C₄H₁₀",
+      "C₅H₁₂",
+      "C₆H₁₄"
+     ],
+     "series": [
+      {
+       "nom": "T d’ébullition",
+       "valeurs": [
+        -162,
+        -89,
+        -42,
+        -1,
+        36,
+        69
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "T d’ébullition",
+      "unite": "°C",
+      "min": -200,
+      "max": 100,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Alcane"
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies, à pression normale"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alcanes",
+     "enonce": "Touche tous les alcanes qui sont gazeux à 20 °C sous pression normale.",
+     "reponse": [
+      "k0",
+      "k1",
+      "k2",
+      "k3"
+     ],
+     "multiple": true,
+     "aide": "Un corps est gazeux à 20 °C quand sa température d’ébullition est inférieure à 20 °C.",
+     "explication": "Le méthane, l’éthane, le propane et le butane bouillent **sous 20 °C** : ils sont gazeux. Pentane (36 °C) et hexane (69 °C) sont liquides."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de degrés l’hexane bout-il plus haut que le pentane ?",
+     "reponse": 33,
+     "tolerance": 0.5,
+     "unite": "°C",
+     "aide": "Soustrais les deux températures lues sur le graphique.",
+     "explication": "69 − 36 = **33 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la température d’ébullition augmente-t-elle quand la chaîne s’allonge ?",
+     "options": [
+      "Les interactions de Van der Waals augmentent avec la taille des molécules",
+      "Les liaisons covalentes C–C deviennent de plus en plus fortes",
+      "Les liaisons hydrogène se multiplient entre les molécules d’alcane",
+      "Les molécules deviennent de plus en plus polaires"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux interactions entre molécules voisines, pas à celles à l’intérieur d’une molécule.",
+     "explication": "Plus la molécule est grosse, plus les **interactions de Van der Waals** entre molécules sont fortes : il faut plus d’énergie pour les séparer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand l’hexane liquide bout, que faut-il rompre ?",
+     "options": [
+      "Des interactions entre molécules, aucune liaison covalente",
+      "Les liaisons covalentes C–H de chaque molécule d’hexane",
+      "Les liaisons covalentes C–C de la chaîne carbonée entière",
+      "Des liaisons ioniques entre les molécules d’hexane"
+     ],
+     "reponse": 0,
+     "aide": "L’ébullition est un changement d’état.",
+     "explication": "Une ébullition ne rompt que les **interactions entre molécules** : les molécules d’hexane gazeuses sont les mêmes."
+    }
+   ]
+  },
+  {
+   "chapitre": "60576256-7dd9-537d-a22a-83fc034c4437",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’anomalie de l’eau et le sel de cuisine",
+   "competence": "raisonner",
+   "situation": "Maëlle compare l’eau aux hydrures d’éléments de la même colonne que l’oxygène. Elle s’intéresse ensuite à ce qui se passe quand on met du sel dans l’eau. Ordres de grandeur : liaison covalente O–H ≈ 460 kJ/mol ; liaison hydrogène ≈ 20 kJ/mol.",
+   "documents": [
+    {
+     "id": "hydrures",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Température d’ébullition de quatre hydrures",
+     "categories": [
+      "H₂O (18)",
+      "H₂S (34)",
+      "H₂Se (81)",
+      "H₂Te (130)"
+     ],
+     "series": [
+      {
+       "nom": "T d’ébullition",
+       "valeurs": [
+        100,
+        -60,
+        -41,
+        -2
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "T d’ébullition",
+      "unite": "°C",
+      "min": -100,
+      "max": 100,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Hydrure (masse molaire en g/mol)"
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "liaison",
+     "type": "schema",
+     "titre": "Deux molécules d’eau voisines",
+     "largeur": 340,
+     "hauteur": 190,
+     "source": "Schéma simplifié",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        73.3,
+        111.1
+       ],
+       "a": [
+        95,
+        96.7
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        53.5,
+        134.6
+       ],
+       "a": [
+        44.9,
+        154
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        238.7,
+        81.8
+       ],
+       "a": [
+        261.7,
+        68.1
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        238.7,
+        98.2
+       ],
+       "a": [
+        261.7,
+        111.9
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        117,
+        90
+       ],
+       "a": [
+        209,
+        90
+       ],
+       "style": "pointilles",
+       "epaisseur": 2,
+       "id": "hydrogene",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 120,
+       "r": 16,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 90,
+       "r": 12,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 165,
+       "r": 12,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 225,
+       "cy": 90,
+       "r": 16,
+       "texte": "O",
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 62,
+       "r": 12,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 118,
+       "r": 12,
+       "texte": "H",
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 30,
+       "texte": "Molécule 1",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 30,
+       "texte": "Molécule 2",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hydrures",
+     "enonce": "Touche l’hydrure dont la température d’ébullition s’écarte de la tendance des autres.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Pour les trois autres, la température d’ébullition croît avec la masse molaire.",
+     "explication": "L’**eau** bout à 100 °C alors que la tendance des hydrures suivants prévoirait un point d’ébullition bien plus bas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle interaction explique cette température d’ébullition anormalement haute ?",
+     "options": [
+      "Les liaisons hydrogène entre molécules d’eau",
+      "Les liaisons covalentes O–H, plus fortes que les liaisons S–H",
+      "Les liaisons ioniques entre les atomes d’oxygène",
+      "Les interactions de Van der Waals, plus faibles qu’ailleurs"
+     ],
+     "reponse": 0,
+     "aide": "Un hydrogène lié à un atome très électronégatif (O, N ou F) peut interagir avec une autre molécule.",
+     "explication": "Les **liaisons hydrogène**, plus fortes que Van der Waals, retiennent les molécules d’eau entre elles : il faut plus d’énergie pour les séparer."
+    },
+    {
+     "type": "zone",
+     "document": "liaison",
+     "enonce": "Touche la liaison hydrogène entre les deux molécules.",
+     "reponse": [
+      "hydrogene"
+     ],
+     "aide": "C’est la liaison en pointillés : elle relie deux molécules, pas deux atomes d’une même molécule.",
+     "explication": "La liaison hydrogène est le trait en pointillés, entre un **H de la molécule 1** et l’**O de la molécule 2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois une liaison covalente O–H est-elle plus énergétique qu’une liaison hydrogène ? Arrondis à l’unité.",
+     "reponse": 23,
+     "tolerance": 0.5,
+     "aide": "Divise les deux énergies : 460 kJ/mol par 20 kJ/mol.",
+     "explication": "460 / 20 = **23** : les interactions faibles sont 10 à 100 fois moins énergétiques que les liaisons covalentes."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Le sel de cuisine NaCl se dissout dans l’eau. Remets les étapes dans l’ordre.",
+     "items": [
+      "Dissociation : les ions du cristal se séparent",
+      "Solvatation : les molécules d’eau s’orientent autour de chaque ion",
+      "Dispersion : les ions entourés se répartissent dans la solution"
+     ],
+     "aide": "Les ions se séparent d’abord, puis se font entourer, enfin se répandent.",
+     "explication": "La dissolution suit l’ordre **dissociation → solvatation → dispersion**. L’eau y réussit parce qu’elle est polaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "841c6593-1c81-5171-be0e-fb5fc2590dd0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un lac qui se réchauffe",
+   "competence": "lire-graphique",
+   "situation": "Pendant une canicule, des poissons meurent dans un étang. Un biologiste explique que l’eau chaude contient moins de dioxygène dissous. Il consulte la solubilité du dioxygène dans l’eau en fonction de la température.",
+   "documents": [
+    {
+     "id": "o2",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Solubilité du dioxygène dans l’eau",
+     "categories": [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40"
+     ],
+     "series": [
+      {
+       "nom": "Solubilité de O₂",
+       "valeurs": [
+        14.6,
+        11.3,
+        9.1,
+        7.5,
+        6.4
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Solubilité de O₂",
+      "unite": "mg/L",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Température (°C)"
+     },
+     "source": "Valeurs arrondies, à pression normale"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis la solubilité du dioxygène à 20 °C, en mg/L.",
+     "reponse": 9.1,
+     "tolerance": 0.3,
+     "unite": "mg/L",
+     "aide": "Repère 20 °C sur l’axe horizontal.",
+     "explication": "À 20 °C, la solubilité du dioxygène est d’environ **9,1 mg/L**."
+    },
+    {
+     "type": "zone",
+     "document": "o2",
+     "enonce": "Touche la température à laquelle l’eau peut dissoudre le moins de dioxygène.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le point le plus bas de la courbe.",
+     "explication": "La courbe est la plus basse à **40 °C** : c’est là que l’eau retient le moins de O₂."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la solubilité diminue-t-elle quand l’eau passe de 10 °C à 30 °C ? Réponds en mg/L.",
+     "reponse": 3.8,
+     "tolerance": 0.2,
+     "unite": "mg/L",
+     "aide": "Lis les deux valeurs et soustrais la plus petite à la plus grande.",
+     "explication": "11,3 − 7,5 = **3,8 mg/L** de moins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle règle générale cette courbe illustre-t-elle ?",
+     "options": [
+      "La solubilité d’un gaz diminue quand la température augmente",
+      "La solubilité d’un gaz augmente quand la température augmente",
+      "La solubilité d’un gaz ne dépend pas de la température",
+      "La solubilité d’un gaz dépend seulement du volume d’eau"
+     ],
+     "reponse": 0,
+     "aide": "Lis comment varie la courbe de gauche à droite.",
+     "explication": "Pour un gaz, la solubilité **diminue** avec la température, contrairement à un solide : une boisson gazeuse tiède se dégaze."
+    }
+   ]
+  },
+  {
+   "chapitre": "841c6593-1c81-5171-be0e-fb5fc2590dd0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Extraire le diiode de l’eau",
+   "competence": "experimenter",
+   "situation": "En TP, Lilou dispose d’une solution aqueuse brune de diiode I₂, espèce apolaire. Elle veut extraire le diiode avec un solvant organique, dans une ampoule à décanter.",
+   "documents": [
+    {
+     "id": "solvants",
+     "type": "tableau",
+     "titre": "Les liquides disponibles",
+     "colonnes": [
+      "Liquide",
+      "Masse volumique (g/mL)",
+      "Miscible à l’eau ?"
+     ],
+     "lignes": [
+      [
+       "Eau (solution de départ)",
+       "1,00",
+       "—"
+      ],
+      [
+       "Éthanol",
+       "0,79",
+       "Oui"
+      ],
+      [
+       "Cyclohexane",
+       "0,78",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "ampoule",
+     "type": "schema",
+     "titre": "Ampoule à décanter après agitation et repos",
+     "largeur": 300,
+     "hauteur": 250,
+     "source": "Schéma simplifié",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         130,
+         50
+        ],
+        [
+         170,
+         50
+        ],
+        [
+         215,
+         150
+        ],
+        [
+         165,
+         210
+        ],
+        [
+         135,
+         210
+        ],
+        [
+         85,
+         150
+        ]
+       ],
+       "teinte": "encre",
+       "motif": "aucun"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         105.25,
+         105
+        ],
+        [
+         194.75,
+         105
+        ],
+        [
+         215,
+         150
+        ],
+        [
+         85,
+         150
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "haut",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         85,
+         150
+        ],
+        [
+         215,
+         150
+        ],
+        [
+         165,
+         210
+        ],
+        [
+         135,
+         210
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "bas",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 28,
+       "l": 36,
+       "h": 22,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 14,
+       "l": 20,
+       "h": 14,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 210,
+       "l": 20,
+       "h": 10,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        220
+       ],
+       "a": [
+        150,
+        238
+       ],
+       "epaisseur": 2
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "solvants",
+     "enonce": "Touche le solvant extracteur qui convient pour extraire le diiode de l’eau.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Un solvant extracteur doit mieux dissoudre l’espèce que l’eau (le diiode est apolaire) et ne pas être miscible à l’eau.",
+     "explication": "Le **cyclohexane** est apolaire donc dissout bien I₂, et n’est pas miscible à l’eau. L’éthanol, miscible à l’eau, ne séparerait pas les phases."
+    },
+    {
+     "type": "zone",
+     "document": "ampoule",
+     "enonce": "Touche la phase qui contient le diiode extrait, une fois le cyclohexane ajouté.",
+     "reponse": [
+      "haut"
+     ],
+     "aide": "La phase la moins dense surnage : compare les masses volumiques du tableau.",
+     "explication": "Le cyclohexane (0,78 g/mL) est moins dense que l’eau (1,00 g/mL) : la phase organique est **au-dessus**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de l’extraction.",
+     "items": [
+      "Verser le mélange et le solvant dans l’ampoule à décanter",
+      "Agiter en dégazant régulièrement",
+      "Laisser décanter jusqu’à séparation nette des deux phases",
+      "Récupérer chaque phase séparément"
+     ],
+     "aide": "Le dégazage se fait pendant l’agitation, avant le repos.",
+     "explication": "On **verse**, on **agite en dégazant** (les vapeurs font monter la pression), on **laisse décanter**, puis on **récupère** chaque phase."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lilou verse 50 mL de cyclohexane. Quelle est sa masse, en g ?",
+     "reponse": 39,
+     "tolerance": 0.5,
+     "unite": "g",
+     "aide": "m = ρ × V, avec ρ = 0,78 g/mL.",
+     "explication": "m = ρ × V = 0,78 × 50 = **39 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "841c6593-1c81-5171-be0e-fb5fc2590dd0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La caféine du thé",
+   "competence": "raisonner",
+   "situation": "Léo veut extraire la caféine de 250 mL d’un thé concentré à 0,30 g/L de caféine, à l’aide d’un solvant. La caféine se dissout dans l’eau à environ 22 g/L. Il vérifie ensuite son extrait par chromatographie sur couche mince (CCM).",
+   "documents": [
+    {
+     "id": "solvants",
+     "type": "tableau",
+     "titre": "Les solvants envisagés",
+     "colonnes": [
+      "Solvant",
+      "ρ (g/mL)",
+      "Caféine (g/L)",
+      "Miscible ?"
+     ],
+     "lignes": [
+      [
+       "Dichlorométhane",
+       "1,33",
+       "≈ 140",
+       "Non"
+      ],
+      [
+       "Éthanol",
+       "0,79",
+       "≈ 15",
+       "Oui"
+      ],
+      [
+       "Cyclohexane",
+       "0,78",
+       "< 1",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur, valeurs arrondies"
+    },
+    {
+     "id": "ccm",
+     "type": "schema",
+     "titre": "Plaque CCM",
+     "largeur": 320,
+     "hauteur": 240,
+     "source": "Plaque simplifiée, écrite pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 15,
+       "l": 260,
+       "h": 190,
+       "arrondi": 6,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        45
+       ],
+       "a": [
+        280,
+        45
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 285,
+       "y": 40,
+       "texte": "front",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        175
+       ],
+       "a": [
+        280,
+        175
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 285,
+       "y": 170,
+       "texte": "dépôt",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 95,
+       "cy": 100,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheCaf",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 95,
+       "cy": 135,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheAutre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 95,
+       "y": 226,
+       "texte": "Thé",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 100,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheExtrait",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 226,
+       "texte": "Extrait",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 225,
+       "cy": 100,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheRef",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 225,
+       "y": 226,
+       "texte": "Caféine",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "solvants",
+     "enonce": "Touche le solvant extracteur qui convient le mieux.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Il doit dissoudre mieux la caféine que l’eau (22 g/L) et ne pas se mélanger à l’eau.",
+     "explication": "Le **dichlorométhane** dissout la caféine bien mieux que l’eau (140 g/L contre 22 g/L) et n’est pas miscible. L’éthanol l’est, le cyclohexane dissout trop peu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans l’ampoule à décanter, où se trouve la phase organique, qui contient la caféine ?",
+     "options": [
+      "En dessous de la phase aqueuse, car 1,33 g/mL est supérieur à 1,00 g/mL",
+      "Au-dessus de la phase aqueuse, car un solvant organique surnage toujours",
+      "Mélangée à l’eau, car la caféine est soluble dans l’eau",
+      "Au-dessus, car l’ampoule contient plus de solvant que d’eau"
+     ],
+     "reponse": 0,
+     "aide": "Compare la masse volumique du solvant à celle de l’eau.",
+     "explication": "La phase la **plus dense** est en bas : le dichlorométhane (1,33 g/mL) passe sous le thé aqueux (1,00 g/mL)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de caféine contiennent les 250 mL de thé ? Réponds en g.",
+     "reponse": 0.075,
+     "tolerance": 0.001,
+     "unite": "g",
+     "aide": "m = t × V, avec V en litres.",
+     "explication": "m = 0,30 g/L × 0,250 L = **0,075 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après extraction et évaporation du solvant, Léo récupère 0,060 g de caféine. Quel est le rendement de l’extraction, en % ?",
+     "reponse": 80,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "Rendement = masse récupérée / masse initialement présente.",
+     "explication": "η = 0,060 / 0,075 = 0,80, soit **80 %**."
+    },
+    {
+     "type": "zone",
+     "document": "ccm",
+     "enonce": "Dans la colonne du thé, touche la tache qui correspond à la caféine.",
+     "reponse": [
+      "tacheCaf"
+     ],
+     "aide": "Une même espèce migre à la même hauteur que sa référence.",
+     "explication": "La tache du thé à la **même hauteur** que la caféine pure est la caféine ; l’autre tache est une autre espèce du thé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut-on pour l’extrait ?",
+     "options": [
+      "Il contient de la caféine, et aucune autre espèce visible sur cette plaque",
+      "Il contient de la caféine et la même autre espèce que le thé",
+      "Il ne contient pas de caféine, car il y a une seule tache",
+      "Il est identique au thé, car les deux contiennent de la caféine"
+     ],
+     "reponse": 0,
+     "aide": "Compare la hauteur de la tache de l’extrait à celle de la caféine pure.",
+     "explication": "Une seule tache, à la hauteur de la référence : l’extrait contient **de la caféine seule**, la seconde espèce du thé n’a pas été extraite."
+    }
+   ]
+  },
+  {
+   "chapitre": "52065d4e-909f-58ac-a46a-e6c5c7a2153d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le gaz du briquet",
+   "competence": "observer-schema",
+   "situation": "Dans un briquet, le gaz est du butane. Mila lit son étiquette, puis cherche comment le dessiner en formule topologique parmi deux dessins.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Recharge de gaz pour briquet",
+     "sousTitre": "Gaz liquéfié",
+     "emoji": "🔥",
+     "lignes": [
+      {
+       "texte": "Composant",
+       "valeur": "butane"
+      },
+      {
+       "texte": "Formule semi-développée",
+       "valeur": "CH₃−CH₂−CH₂−CH₃"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "topo",
+     "type": "schema",
+     "titre": "Deux formules topologiques",
+     "largeur": 320,
+     "hauteur": 160,
+     "source": "Chaque extrémité et chaque sommet est un atome de carbone",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M30 110 L70 80 L110 110 L150 80",
+       "ferme": false,
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M200 120 L240 95 L280 120 M240 95 L240 50",
+       "ferme": false,
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 148,
+       "texte": "A",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 148,
+       "texte": "B",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes de carbone compte une molécule de butane ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Compte les groupes CH₃ et CH₂ de la formule semi-développée.",
+     "explication": "CH₃, CH₂, CH₂, CH₃ : **4 atomes de carbone**, d’où le préfixe « but- »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’hydrogène compte-t-elle ?",
+     "reponse": 10,
+     "tolerance": 0,
+     "aide": "Additionne les hydrogènes de chaque groupe : 3, 2, 2 et 3.",
+     "explication": "3 + 2 + 2 + 3 = **10 atomes** ; la formule brute est **C₄H₁₀**."
+    },
+    {
+     "type": "zone",
+     "document": "topo",
+     "enonce": "Touche la formule topologique de la molécule de butane (chaîne de quatre carbones à la suite).",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Dans une formule topologique, chaque extrémité et chaque sommet de la ligne est un carbone ; compte-les.",
+     "explication": "La formule **A** est une ligne brisée de 4 carbones à la suite : c’est le butane."
+    },
+    {
+     "type": "zone",
+     "document": "topo",
+     "enonce": "Touche la molécule qui est un isomère du butane (même formule brute C₄H₁₀, enchaînement différent).",
+     "reponse": [
+      "B"
+     ],
+     "aide": "Compte aussi les carbones de la formule B : elle n’a pas la même forme que A.",
+     "explication": "La formule **B** a aussi 4 carbones, mais ramifiés autour d’un carbone central : c’est le méthylpropane, isomère du butane."
+    }
+   ]
+  },
+  {
+   "chapitre": "52065d4e-909f-58ac-a46a-e6c5c7a2153d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les familles du rayon du laboratoire",
+   "competence": "raisonner",
+   "situation": "Sofia range les flacons du laboratoire : chacun porte le nom d’une molécule organique. Elle doit les classer par famille, puis nommer deux molécules d’après leur formule.",
+   "documents": [
+    {
+     "id": "flacons",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Flacons du rayon",
+     "sousTitre": "Produits usuels",
+     "emoji": "🧴",
+     "lignes": [
+      {
+       "texte": "Gel hydroalcoolique",
+       "valeur": "éthanol"
+      },
+      {
+       "texte": "Dissolvant",
+       "valeur": "propanone"
+      },
+      {
+       "texte": "Vinaigre",
+       "valeur": "acide éthanoïque"
+      },
+      {
+       "texte": "Arôme de poire",
+       "valeur": "éthanoate d’éthyle"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "formules",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Deux molécules à nommer",
+     "blocs": [
+      "Molécule 1 : CH₃−CH₂−CH₂−OH",
+      "Molécule 2 : CH₃−CH(OH)−CH₂−CH₃"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque nom à sa famille.",
+     "paires": [
+      [
+       "éthanol",
+       "alcool"
+      ],
+      [
+       "propanone",
+       "cétone"
+      ],
+      [
+       "acide éthanoïque",
+       "acide carboxylique"
+      ],
+      [
+       "éthanoate d’éthyle",
+       "ester"
+      ]
+     ],
+     "aide": "Repère la terminaison : -ol, -one, acide …-oïque, -oate de …-yle.",
+     "explication": "**-ol** : alcool ; **-one** : cétone ; **acide …-oïque** : acide carboxylique ; **-oate de …-yle** : ester."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le nom de la molécule 1 ?",
+     "options": [
+      "propan-1-ol",
+      "butan-1-ol",
+      "propanal",
+      "propan-2-ol"
+     ],
+     "reponse": 0,
+     "aide": "Compte les carbones de la chaîne (3), puis place le groupe OH au plus petit indice.",
+     "explication": "3 carbones : « prop- » ; fonction alcool : « -ol » ; le OH est sur le carbone 1 : **propan-1-ol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le nom de la molécule 2 ?",
+     "options": [
+      "butan-2-ol",
+      "butan-3-ol",
+      "butan-1-ol",
+      "butanal"
+     ],
+     "reponse": 0,
+     "aide": "Numérote la chaîne de façon à donner le plus petit indice à la fonction alcool.",
+     "explication": "La chaîne a 4 carbones et le OH est sur un carbone du milieu. Numérotée du bon côté, l’indice est 2 : **butan-2-ol**, pas butan-3-ol."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes pour nommer une molécule.",
+     "items": [
+      "Repérer la chaîne principale, la plus longue",
+      "La numéroter pour donner les plus petits indices",
+      "Nommer les ramifications avec leur indice",
+      "Ajouter la terminaison de la famille"
+     ],
+     "aide": "On part de la chaîne, on finit par la terminaison.",
+     "explication": "On repère la **chaîne principale**, on la **numérote**, on nomme les **ramifications**, puis on ajoute la **terminaison**."
+    }
+   ]
+  },
+  {
+   "chapitre": "52065d4e-909f-58ac-a46a-e6c5c7a2153d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois isomères aux points d’ébullition différents",
+   "competence": "raisonner",
+   "situation": "Un technicien étudie trois molécules de même formule brute C₅H₁₂, utilisées dans des carburants. Il remarque que leurs températures d’ébullition sont très différentes.",
+   "documents": [
+    {
+     "id": "isomeres",
+     "type": "schema",
+     "titre": "Trois formules topologiques",
+     "largeur": 380,
+     "hauteur": 170,
+     "source": "Chaque extrémité et chaque sommet est un atome de carbone",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M15 115 L45 95 L75 115 L105 95 L135 115",
+       "ferme": false,
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M165 115 L195 95 L225 115 L255 95 M195 95 L195 60",
+       "ferme": false,
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M300 95 L360 95 M330 65 L330 125",
+       "ferme": false,
+       "id": "C",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 75,
+       "y": 152,
+       "texte": "A",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 215,
+       "y": 152,
+       "texte": "B",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 330,
+       "y": 152,
+       "texte": "C",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "teb",
+     "type": "tableau",
+     "titre": "Températures d’ébullition",
+     "colonnes": [
+      "Nom",
+      "T d’ébullition (°C)"
+     ],
+     "lignes": [
+      [
+       "pentane",
+       "36,1"
+      ],
+      [
+       "2-méthylbutane",
+       "27,8"
+      ],
+      [
+       "2,2-diméthylpropane",
+       "9,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "isomeres",
+     "enonce": "Touche la molécule dont la chaîne principale est la plus longue.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Cherche la plus longue suite de carbones sans ramification.",
+     "explication": "La molécule **A** a une chaîne de 5 carbones à la suite."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque formule à son nom.",
+     "paires": [
+      [
+       "A",
+       "pentane"
+      ],
+      [
+       "B",
+       "2-méthylbutane"
+      ],
+      [
+       "C",
+       "2,2-diméthylpropane"
+      ]
+     ],
+     "aide": "Chaîne principale + ramifications : B a une chaîne de 4 carbones et un méthyle sur le carbone 2 ; C a 3 carbones et deux méthyles.",
+     "explication": "**A** : chaîne de 5 carbones, pentane. **B** : chaîne de 4 carbones + un méthyle en 2. **C** : chaîne de 3 carbones + deux méthyles sur le carbone 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes d’hydrogène compte chacune de ces molécules ?",
+     "reponse": 12,
+     "tolerance": 0,
+     "aide": "Les trois sont isomères : même formule brute C₅H₁₂.",
+     "explication": "Les isomères ont la même formule brute : C₅H₁₂, soit **12 atomes d’hydrogène**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de degrés le pentane bout-il plus haut que le 2,2-diméthylpropane ?",
+     "reponse": 26.6,
+     "tolerance": 0.1,
+     "unite": "°C",
+     "aide": "Soustrais les deux températures du tableau.",
+     "explication": "36,1 − 9,5 = **26,6 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la molécule la plus ramifiée bout-elle le plus bas ?",
+     "options": [
+      "Ses molécules s’emboîtent moins bien, donc les interactions de Van der Waals sont plus faibles",
+      "Ses liaisons covalentes C–C sont plus faciles à rompre, donc elle se vaporise vite",
+      "Elle est plus polaire que les deux autres, donc elle s’évapore plus facilement",
+      "Elle contient moins d’atomes de carbone que les deux autres"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la forme des molécules et à ce qui les retient entre elles.",
+     "explication": "Une chaîne **ramifiée** s’emboîte moins bien : moins de contacts, donc des interactions de Van der Waals **plus faibles** et une ébullition plus basse."
+    }
+   ]
+  },
+  {
+   "chapitre": "b703169a-36f6-5de7-add8-cf3fac278e4b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le montage à reflux du laboratoire",
+   "competence": "observer-schema",
+   "situation": "En TP, Adam réalise une synthèse qui doit chauffer longtemps un mélange de liquides volatils. Son professeur lui montre le chauffage à reflux : le ballon est chauffé, et un tube vertical surmonte le ballon.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Le chauffage à reflux",
+     "largeur": 320,
+     "hauteur": 300,
+     "source": "Schéma simplifié",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 285,
+       "l": 260,
+       "h": 10,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 30,
+       "l": 8,
+       "h": 255,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        38,
+        95
+       ],
+       "a": [
+        134,
+        95
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        38,
+        162
+       ],
+       "a": [
+        140,
+        162
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 245,
+       "l": 100,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "chauffe",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 205,
+       "r": 36,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "ballon",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 150,
+       "l": 20,
+       "h": 24,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 134,
+       "y": 30,
+       "l": 32,
+       "h": 120,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "refrigerant",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 135,
+       "cy": 215,
+       "r": 3,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 152,
+       "cy": 226,
+       "r": 3,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 168,
+       "cy": 213,
+       "r": 3,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        128
+       ],
+       "a": [
+        134,
+        128
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "bleu",
+       "id": "eauEntree",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        166,
+        50
+       ],
+       "a": [
+        230,
+        50
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "bleu",
+       "id": "eauSortie",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche le réfrigérant du montage.",
+     "reponse": [
+      "refrigerant"
+     ],
+     "aide": "C’est le tube vertical placé au-dessus du ballon, parcouru par de l’eau froide.",
+     "explication": "Le **réfrigérant** est le tube vertical qui surmonte le ballon : l’eau froide y circule."
+    },
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche l’endroit par où l’eau froide doit entrer dans le réfrigérant.",
+     "reponse": [
+      "eauEntree"
+     ],
+     "aide": "L’eau doit remplir toute l’enveloppe en montant, pour que le tube soit refroidi sur toute sa hauteur.",
+     "explication": "L’eau entre **par le bas** et sort par le haut : ainsi l’enveloppe est toujours pleine d’eau froide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rôle du réfrigérant dans un chauffage à reflux ?",
+     "options": [
+      "Condenser les vapeurs, qui retombent dans le ballon : on chauffe sans rien perdre",
+      "Refroidir le mélange réactionnel pour ralentir la réaction chimique",
+      "Mesurer la température du mélange pendant le chauffage du ballon",
+      "Évacuer les gaz produits vers l’extérieur du laboratoire"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que deviennent les vapeurs qui montent dans le tube froid.",
+     "explication": "Les vapeurs se **condensent** dans le réfrigérant et retombent dans le ballon : le chauffage accélère la réaction sans perte de matière."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi servent les grains de pierre ponce placés dans le ballon ?",
+     "options": [
+      "À réguler l’ébullition",
+      "À catalyser la réaction",
+      "À colorer le mélange",
+      "À absorber la chaleur du chauffe-ballon"
+     ],
+     "reponse": 0,
+     "aide": "Ils évitent que le liquide ne bouille brutalement.",
+     "explication": "La **pierre ponce** régule l’ébullition et évite les à-coups."
+    }
+   ]
+  },
+  {
+   "chapitre": "b703169a-36f6-5de7-add8-cf3fac278e4b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’aspirine du TP de chimie",
+   "competence": "resoudre",
+   "situation": "Chloé synthétise de l’aspirine (C₉H₈O₄) à partir de 2,0 g d’acide salicylique (C₇H₆O₃) et d’un grand excès d’anhydride éthanoïque, avec quelques gouttes d’acide sulfurique. Elle suit le protocole ci-dessous et obtient 2,1 g de cristaux purifiés.",
+   "documents": [
+    {
+     "id": "protocole",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Protocole de la synthèse",
+     "sousTitre": "Quatre étapes",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Mélanger les réactifs et chauffer 10 min",
+       "valeur": "Étape 1",
+       "id": "e1"
+      },
+      {
+       "texte": "Refroidir dans l’eau glacée, filtrer les cristaux sur Büchner",
+       "valeur": "Étape 2",
+       "id": "e2"
+      },
+      {
+       "texte": "Dissoudre à chaud dans l’éthanol, refroidir lentement",
+       "valeur": "Étape 3",
+       "id": "e3"
+      },
+      {
+       "texte": "Mesurer la température de fusion, faire une CCM",
+       "valeur": "Étape 4",
+       "id": "e4"
+      }
+     ],
+     "pied": "Protocole simplifié, écrit pour l’exercice"
+    },
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses molaires",
+     "colonnes": [
+      "Espèce",
+      "M (g/mol)"
+     ],
+     "lignes": [
+      [
+       "Acide salicylique C₇H₆O₃",
+       "138"
+      ],
+      [
+       "Aspirine C₉H₈O₄",
+       "180"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "protocole",
+     "enonce": "Touche l’étape de purification du produit solide.",
+     "reponse": [
+      "e3"
+     ],
+     "aide": "Pour un solide, on dissout à chaud et on laisse cristalliser : les impuretés restent en solution.",
+     "explication": "L’**étape 3** est une recristallisation : le produit cristallise, les impuretés plus solubles restent dans la solution."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’acide salicylique Chloé engage-t-elle ? Réponds en mmol, arrondie au dixième.",
+     "reponse": 14.5,
+     "tolerance": 0.1,
+     "unite": "mmol",
+     "aide": "n = m / M, avec M = 138 g/mol.",
+     "explication": "n = 2,0 / 138 ≈ 0,0145 mol, soit **14,5 mmol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement de la synthèse, en %, arrondi à l’unité. L’anhydride est en large excès : l’acide salicylique est le réactif limitant, et chaque mole d’acide donne une mole d’aspirine.",
+     "reponse": 80.5,
+     "tolerance": 1,
+     "unite": "%",
+     "aide": "Rendement = n(obtenu) / n(maximal) ; n(obtenu) = 2,1 / 180.",
+     "explication": "n(aspirine) = 2,1 / 180 ≈ 11,7 mmol ; n(max) = 14,5 mmol ; η = 11,7 / 14,5 ≈ **0,81**, soit environ 81 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’acide sulfurique est un catalyseur de cette synthèse. Quel est son effet ?",
+     "options": [
+      "Il accélère la réaction sans modifier l’état final",
+      "Il augmente la quantité d’aspirine finalement obtenue",
+      "Il est consommé complètement par la réaction",
+      "Il remplace l’anhydride éthanoïque comme réactif"
+     ],
+     "reponse": 0,
+     "aide": "Un catalyseur agit sur la vitesse, pas sur le bilan.",
+     "explication": "Un catalyseur **accélère** la transformation sans être consommé et **sans modifier l’état final**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b703169a-36f6-5de7-add8-cf3fac278e4b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’arôme de banane",
+   "competence": "analyser-document",
+   "situation": "Dans un TP, Inès synthétise l’éthanoate de 3-méthylbutyle, arôme de banane, à partir de 0,10 mol de 3-méthylbutan-1-ol et de 0,20 mol d’acide éthanoïque (un pour un dans l’équation). Après purification, elle pèse 8,5 g d’ester. M(ester) = 130 g/mol.",
+   "documents": [
+    {
+     "id": "teb",
+     "type": "tableau",
+     "titre": "Températures d’ébullition",
+     "colonnes": [
+      "Espèce",
+      "T d’ébullition (°C)"
+     ],
+     "lignes": [
+      [
+       "Acide éthanoïque",
+       "118"
+      ],
+      [
+       "3-méthylbutan-1-ol",
+       "131"
+      ],
+      [
+       "Éthanoate de 3-méthylbutyle",
+       "142"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "ccm",
+     "type": "schema",
+     "titre": "CCM du produit",
+     "largeur": 320,
+     "hauteur": 240,
+     "source": "Plaque simplifiée, écrite pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 15,
+       "l": 260,
+       "h": 190,
+       "arrondi": 6,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        45
+       ],
+       "a": [
+        280,
+        45
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 285,
+       "y": 40,
+       "texte": "front",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        175
+       ],
+       "a": [
+        280,
+        175
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 285,
+       "y": 170,
+       "texte": "dépôt",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 95,
+       "cy": 100,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheEster",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 95,
+       "cy": 135,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheAlcool",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 95,
+       "y": 226,
+       "texte": "Brut",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 100,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tachePurifie",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 226,
+       "texte": "Purifié",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 225,
+       "cy": 100,
+       "rx": 12,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "tacheRef",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 225,
+       "y": 226,
+       "texte": "Ester",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ccm",
+     "enonce": "Dans la colonne du produit brut, touche la tache qui ne correspond pas à l’ester.",
+     "reponse": [
+      "tacheAlcool"
+     ],
+     "aide": "L’ester pur sert de référence : une espèce identique migre à la même hauteur.",
+     "explication": "La tache du bas n’est pas à la hauteur de la référence : c’est une **impureté** (l’alcool restant)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du produit purifié ?",
+     "options": [
+      "Il est pur : une seule tache, à la hauteur de la référence",
+      "Il est impur : la tache est plus petite que celle du brut",
+      "Il n’est pas l’ester : il manque la tache du bas",
+      "On ne peut rien conclure sans connaître sa masse"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne du produit purifié à celle de la référence.",
+     "explication": "Une seule tache, **à la même hauteur** que l’ester de référence : le produit purifié est l’ester, et il est pur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le réactif limitant ?",
+     "options": [
+      "Le 3-méthylbutan-1-ol : 0,10 mol contre 0,20 mol d’acide",
+      "L’acide éthanoïque, car il est en plus grande quantité",
+      "Aucun : le mélange est stœchiométrique",
+      "L’ester, qui se forme en dernier"
+     ],
+     "reponse": 0,
+     "aide": "Les coefficients valent 1 : compare directement les quantités.",
+     "explication": "Les coefficients valent tous 1 : le plus petit des deux, l’**alcool** (0,10 mol), limite la réaction."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse maximale d’ester peut-on obtenir ? Réponds en g.",
+     "reponse": 13,
+     "tolerance": 0.1,
+     "unite": "g",
+     "aide": "n(ester max) = n(alcool) ; puis m = n × M.",
+     "explication": "n(max) = 0,10 mol ; m = 0,10 × 130 = **13,0 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement de la synthèse, en %, arrondi à l’unité.",
+     "reponse": 65,
+     "tolerance": 0.6,
+     "unite": "%",
+     "aide": "Rendement = masse obtenue / masse maximale.",
+     "explication": "η = 8,5 / 13,0 ≈ 0,654, soit environ **65 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On distille le mélange brut. Quelle espèce passe en premier dans le distillat ?",
+     "options": [
+      "L’acide éthanoïque, de température d’ébullition la plus basse",
+      "L’ester, car c’est le produit voulu",
+      "Le 3-méthylbutan-1-ol, car il est à l’origine du mélange",
+      "Les trois espèces passent en même temps"
+     ],
+     "reponse": 0,
+     "aide": "Une distillation sépare par températures d’ébullition croissantes.",
+     "explication": "Les espèces distillent dans l’ordre de leurs températures d’ébullition : **l’acide éthanoïque** (118 °C) passe d’abord."
+    }
+   ]
+  },
+  {
+   "chapitre": "c303e245-ec87-50c3-b25e-e5255205ddf4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux flammes au bec Bunsen",
+   "competence": "lire-tableau",
+   "situation": "Lou allume un bec Bunsen au gaz de ville (méthane). Avec l’entrée d’air ouverte, la flamme est bleue ; avec l’entrée d’air fermée, elle devient jaune et laisse du noir sur une soucoupe placée au-dessus.",
+   "documents": [
+    {
+     "id": "flammes",
+     "type": "tableau",
+     "titre": "Les deux observations de Lou",
+     "colonnes": [
+      "Essai",
+      "Flamme",
+      "Dépôt noir",
+      "Entrée d’air"
+     ],
+     "lignes": [
+      [
+       "Essai A",
+       "Bleue, nette",
+       "Aucun",
+       "Ouverte"
+      ],
+      [
+       "Essai B",
+       "Jaune, fumeuse",
+       "Suie",
+       "Fermée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flammes",
+     "enonce": "Touche l’essai dans lequel la combustion est incomplète.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Une combustion incomplète manque de dioxygène et laisse de la suie.",
+     "explication": "L’**essai B** (flamme jaune, suie, entrée d’air fermée) est une combustion incomplète : le dioxygène manque."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels produits se forment dans l’essai A, combustion complète du méthane ?",
+     "options": [
+      "Du dioxyde de carbone et de l’eau",
+      "Du monoxyde de carbone et de la suie",
+      "Du dihydrogène et du carbone",
+      "Du dioxygène et de l’eau"
+     ],
+     "reponse": 0,
+     "aide": "Une combustion complète d’un hydrocarbure produit toujours les mêmes deux espèces.",
+     "explication": "La combustion complète d’un hydrocarbure donne **CO₂ et H₂O**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le monoxyde de carbone formé dans l’essai B est-il dangereux ?",
+     "options": [
+      "Il se fixe sur l’hémoglobine à la place du dioxygène",
+      "Il brûle la peau au contact de l’air chaud",
+      "Il détruit le dioxygène de l’air de la salle",
+      "Il dissout la suie dans le sang"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que transporte l’hémoglobine.",
+     "explication": "Le CO, inodore et incolore, **prend la place du dioxygène** sur l’hémoglobine : c’est un gaz mortel."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Dans quel ordre ajuste-t-on l’équation d’une combustion ?",
+     "items": [
+      "Ajuster les atomes de carbone",
+      "Ajuster les atomes d’hydrogène",
+      "Ajuster les atomes d’oxygène"
+     ],
+     "aide": "L’oxygène est présent dans plusieurs espèces : on le règle en dernier.",
+     "explication": "On ajuste le **carbone**, puis l’**hydrogène**, puis l’**oxygène**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c303e245-ec87-50c3-b25e-e5255205ddf4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La cartouche de gaz du camping",
+   "competence": "calculer",
+   "situation": "Pour son bivouac, Tom emporte une cartouche de gaz butane C₄H₁₀. Il veut savoir quelle énergie elle libère et quelle masse de dioxyde de carbone il rejette, en comparant avec un feu de bois. M(C₄H₁₀) = 58,0 g/mol et M(CO₂) = 44,0 g/mol.",
+   "documents": [
+    {
+     "id": "cartouche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Cartouche de gaz",
+     "sousTitre": "Butane pour réchaud",
+     "emoji": "⛺",
+     "lignes": [
+      {
+       "texte": "Contenu",
+       "valeur": "450 g"
+      },
+      {
+       "texte": "Formule",
+       "valeur": "C₄H₁₀"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    },
+    {
+     "id": "pouvoir",
+     "type": "tableau",
+     "titre": "Pouvoir calorifique",
+     "colonnes": [
+      "Combustible",
+      "MJ par kg"
+     ],
+     "lignes": [
+      [
+       "Bois",
+       "15"
+      ],
+      [
+       "Éthanol",
+       "27"
+      ],
+      [
+       "Butane",
+       "46"
+      ],
+      [
+       "Hydrogène",
+       "120"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète l’équation de la combustion complète du butane.",
+     "texte": "2 C₄H₁₀ + ___ O₂ → ___ CO₂ + 10 H₂O",
+     "reponses": [
+      [
+       "13"
+      ],
+      [
+       "8"
+      ]
+     ],
+     "banque": [
+      "5",
+      "8",
+      "10",
+      "13"
+     ],
+     "aide": "Ajuste d’abord le carbone (2 × 4 atomes), puis l’hydrogène, puis l’oxygène.",
+     "explication": "Carbone : 2 × 4 = **8** CO₂. Hydrogène : 2 × 10 = 20 = 10 × 2, déjà équilibré. Oxygène : 8 × 2 + 10 = 26, donc **13** O₂."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie libère la combustion complète de toute la cartouche ? Réponds en MJ.",
+     "reponse": 20.7,
+     "tolerance": 0.1,
+     "unite": "MJ",
+     "aide": "E = m × pouvoir calorifique, avec m en kg.",
+     "explication": "E = 0,450 × 46 = **20,7 MJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de bois libérerait la même énergie ? Réponds en kg, arrondie au centième.",
+     "reponse": 1.38,
+     "tolerance": 0.02,
+     "unite": "kg",
+     "aide": "Divise l’énergie par le pouvoir calorifique du bois.",
+     "explication": "m = 20,7 / 15 = **1,38 kg** de bois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de dioxyde de carbone la cartouche rejette-t-elle ? Réponds en kg, arrondie au centième.",
+     "reponse": 1.37,
+     "tolerance": 0.02,
+     "unite": "kg",
+     "aide": "n(butane) = m / M ; l’équation donne 8 CO₂ pour 2 C₄H₁₀, soit 4 CO₂ par butane.",
+     "explication": "n(C₄H₁₀) = 450 / 58,0 ≈ 7,76 mol ; n(CO₂) = 4 × 7,76 ≈ 31,0 mol ; m = 31,0 × 44,0 ≈ 1 366 g, soit **1,37 kg**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c303e245-ec87-50c3-b25e-e5255205ddf4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le méthane vu par les énergies de liaison",
+   "competence": "raisonner",
+   "situation": "Un ingénieur veut retrouver l’énergie libérée par la combustion du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, à partir des énergies de liaison. Il compare ensuite son résultat aux pouvoirs calorifiques usuels. M(CH₄) = 16,0 g/mol.",
+   "documents": [
+    {
+     "id": "liaisons",
+     "type": "tableau",
+     "titre": "Énergies de liaison",
+     "colonnes": [
+      "Liaison",
+      "Énergie (kJ/mol)"
+     ],
+     "lignes": [
+      [
+       "C–H",
+       "413"
+      ],
+      [
+       "O=O",
+       "498"
+      ],
+      [
+       "C=O (dans CO₂)",
+       "805"
+      ],
+      [
+       "O–H",
+       "463"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "pouvoir",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Pouvoir calorifique de quelques combustibles",
+     "categories": [
+      "Bois",
+      "Éthanol",
+      "Butane",
+      "Méthane",
+      "Hydrogène"
+     ],
+     "series": [
+      {
+       "nom": "Pouvoir calorifique",
+       "valeurs": [
+        15,
+        27,
+        46,
+        50,
+        120
+       ]
+      }
+     ],
+     "axeY": {
+      "titre": "Pouvoir calorifique",
+      "unite": "MJ/kg",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie faut-il fournir pour rompre toutes les liaisons des réactifs (4 C–H et 2 O=O), pour une mole de CH₄ ?",
+     "reponse": 2648,
+     "tolerance": 1,
+     "unite": "kJ",
+     "aide": "Additionne 4 × (énergie C–H) et 2 × (énergie O=O).",
+     "explication": "4 × 413 + 2 × 498 = 1 652 + 996 = **2 648 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est libérée en formant toutes les liaisons des produits (2 C=O et 4 O–H) ?",
+     "reponse": 3462,
+     "tolerance": 1,
+     "unite": "kJ",
+     "aide": "Une molécule de CO₂ compte 2 liaisons C=O ; deux molécules d’eau comptent 4 liaisons O–H.",
+     "explication": "2 × 805 + 4 × 463 = 1 610 + 1 852 = **3 462 kJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le bilan énergétique de la réaction, rompre moins former, en kJ/mol. Attention au signe.",
+     "reponse": -814,
+     "tolerance": 1,
+     "unite": "kJ/mol",
+     "aide": "Bilan = énergie dépensée pour rompre − énergie libérée en formant.",
+     "explication": "2 648 − 3 462 = **−814 kJ/mol** : le signe négatif traduit une réaction exothermique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En déduis l’énergie libérée par 1,00 kg de méthane, en MJ, arrondie au dixième.",
+     "reponse": 50.9,
+     "tolerance": 0.2,
+     "unite": "MJ",
+     "aide": "n = m / M pour 1 000 g, puis multiplie par 814 kJ/mol et convertis en MJ.",
+     "explication": "n = 1 000 / 16,0 = 62,5 mol ; E = 62,5 × 814 ≈ 50 900 kJ, soit **50,9 MJ**."
+    },
+    {
+     "type": "zone",
+     "document": "pouvoir",
+     "enonce": "Touche le combustible du graphique dont le pouvoir calorifique est le plus proche de ton résultat.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compare 50,9 MJ/kg aux barres du graphique.",
+     "explication": "Le **méthane** (50 MJ/kg) : le calcul par les énergies de liaison retrouve bien l’ordre de grandeur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Brûler du bois libère aussi du dioxyde de carbone. En quoi le bilan carbone diffère-t-il de celui du méthane fossile ?",
+     "options": [
+      "Le carbone du bois a été prélevé récemment par photosynthèse",
+      "Le bois ne produit pas de dioxyde de carbone en brûlant",
+      "Le bois libère moins d’énergie, donc moins de carbone",
+      "Le carbone du bois est stocké depuis des millions d’années"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’origine du carbone dans les deux combustibles.",
+     "explication": "Le carbone de la **biomasse** a été prélevé récemment à l’atmosphère ; celui d’un combustible fossile était stocké depuis des millions d’années : c’est un ajout net."
+    }
+   ]
+  }
+ ]
+}

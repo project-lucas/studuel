@@ -1,0 +1,3927 @@
+{
+ "niveau": "5e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "aa054ed6-5670-5eaa-9c54-52e601153f2b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La boîte de conserve de Mamie",
+   "competence": "calculer",
+   "situation": "Mamie range ses conserves. Sa boîte de haricots est un cylindre : une étiquette en papier, bien rectangulaire, en fait exactement le tour. Aide Inès à étudier cette boîte.",
+   "documents": [
+    {
+     "id": "boite",
+     "type": "schema",
+     "titre": "La boîte de conserve",
+     "largeur": 320,
+     "hauteur": 240,
+     "source": "Schéma non à l’échelle",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M80 70 L80 180 A80 22 0 0 0 240 180 L240 70 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "flanc",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 70,
+       "rx": 80,
+       "ry": 22,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "dessus",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        70
+       ],
+       "a": [
+        240,
+        70
+       ],
+       "id": "rayon",
+       "zone": true,
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 57,
+       "texte": "4 cm",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        268,
+        70
+       ],
+       "a": [
+        268,
+        180
+       ],
+       "fleche": "deux",
+       "id": "hauteur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 296,
+       "y": 130,
+       "texte": "11 cm",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 226,
+       "texte": "π ≈ 3,14",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boite",
+     "enonce": "Touche le segment qui représente le **rayon** du disque de base.",
+     "reponse": [
+      "rayon"
+     ],
+     "aide": "Le rayon va du centre du disque jusqu’à son bord.",
+     "explication": "Le rayon part du **centre** du disque de base et rejoint son bord : ici, 4 cm. Le segment vertical, lui, est la hauteur de la boîte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’étiquette fait exactement le tour de la boîte. Quelle est la **longueur** de cette bande de papier, en cm ? (π ≈ 3,14)",
+     "unite": "cm",
+     "reponse": 25.12,
+     "aide": "Déroulée, l’étiquette est un rectangle dont la longueur est le tour du disque de base, c’est-à-dire son périmètre.",
+     "explication": "La surface latérale déroulée est un rectangle dont la longueur est le périmètre de la base : 2 × π × R = 2 × 3,14 × 4 = **25,12 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** de la boîte, en cm³, arrondi à l’unité ? (π ≈ 3,14)",
+     "unite": "cm³",
+     "reponse": 553,
+     "aide": "Volume du cylindre : aire du disque de base × hauteur, avec une aire de disque égale à π × R × R.",
+     "explication": "V = π × R² × h = 3,14 × 4 × 4 × 11 = 552,64 cm³, soit **553 cm³** à l’unité près."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa054ed6-5670-5eaa-9c54-52e601153f2b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’abri de jardin de Karim",
+   "competence": "geometrie",
+   "situation": "Karim construit un abri de jardin. Sa forme est un prisme droit dont la base est le pignon (la façade avant, en forme de maison). Les arêtes cachées sont en pointillés ; le schéma n’est pas à l’échelle.",
+   "documents": [
+    {
+     "id": "abri",
+     "type": "figure",
+     "titre": "L’abri en perspective cavalière",
+     "source": "Schéma réalisé pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 9,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "D",
+       "x": 3,
+       "y": 4.5,
+       "position": "no"
+      },
+      {
+       "id": "E",
+       "x": 1,
+       "y": 3,
+       "position": "o"
+      },
+      {
+       "id": "M",
+       "x": 3,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "A2",
+       "x": 3.4,
+       "y": 2.4,
+       "cache": true
+      },
+      {
+       "id": "B2",
+       "x": 7.4,
+       "y": 2.4,
+       "cache": true
+      },
+      {
+       "id": "C2",
+       "x": 7.4,
+       "y": 4.4,
+       "cache": true
+      },
+      {
+       "id": "D2",
+       "x": 5.4,
+       "y": 5.9,
+       "cache": true
+      },
+      {
+       "id": "E2",
+       "x": 3.4,
+       "y": 4.4,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "4 m"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "2 m"
+      },
+      {
+       "id": "cd",
+       "de": "C",
+       "a": "D",
+       "longueur": "2,5 m"
+      },
+      {
+       "id": "de",
+       "de": "D",
+       "a": "E"
+      },
+      {
+       "id": "ea",
+       "de": "E",
+       "a": "A"
+      },
+      {
+       "id": "ec",
+       "de": "E",
+       "a": "C",
+       "style": "pointilles"
+      },
+      {
+       "id": "dm",
+       "de": "M",
+       "a": "D",
+       "style": "pointilles"
+      },
+      {
+       "id": "bb2",
+       "de": "B",
+       "a": "B2",
+       "longueur": "3 m"
+      },
+      {
+       "id": "cc2",
+       "de": "C",
+       "a": "C2"
+      },
+      {
+       "id": "dd2",
+       "de": "D",
+       "a": "D2"
+      },
+      {
+       "id": "b2c2",
+       "de": "B2",
+       "a": "C2"
+      },
+      {
+       "id": "c2d2",
+       "de": "C2",
+       "a": "D2"
+      },
+      {
+       "de": "A",
+       "a": "A2",
+       "style": "pointilles"
+      },
+      {
+       "de": "A2",
+       "a": "B2",
+       "style": "pointilles"
+      },
+      {
+       "de": "A2",
+       "a": "E2",
+       "style": "pointilles"
+      },
+      {
+       "de": "E",
+       "a": "E2",
+       "style": "pointilles"
+      },
+      {
+       "de": "E2",
+       "a": "D2",
+       "style": "pointilles"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "M",
+       "de": "D",
+       "a": "C",
+       "droit": true
+      }
+     ],
+     "textes": [
+      {
+       "x": 2.45,
+       "y": 3.3,
+       "texte": "1,5 m",
+       "teinte": "bleu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abri",
+     "enonce": "Touche **la hauteur du triangle** qui forme le haut du pignon (le pointillé perpendiculaire à la base du triangle).",
+     "reponse": [
+      "dm"
+     ],
+     "aide": "Cherche le segment qui part du sommet D et tombe à angle droit sur le segment [EC].",
+     "explication": "La hauteur du triangle est **[DM]** : elle part du sommet D et rejoint [EC] à angle droit (le petit carré le montre). Elle mesure 1,5 m."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le pignon a 5 côtés.",
+     "texte": "Ce prisme a ___ faces, ___ sommets et ___ arêtes.",
+     "reponses": [
+      [
+       "7"
+      ],
+      [
+       "10"
+      ],
+      [
+       "15"
+      ]
+     ],
+     "aide": "Une base à n côtés donne n + 2 faces, 2 × n sommets et 3 × n arêtes.",
+     "explication": "Avec n = 5 : n + 2 = **7 faces** (deux pignons et cinq rectangles), 2 × 5 = **10 sommets**, 3 × 5 = **15 arêtes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire du pignon** (la base du prisme), en m² ? Décompose-le en un rectangle et un triangle.",
+     "unite": "m²",
+     "reponse": 11,
+     "aide": "Rectangle : 4 m sur 2 m. Triangle : base 4 m, hauteur 1,5 m, donc (base × hauteur) ÷ 2.",
+     "explication": "Rectangle : 4 × 2 = 8 m². Triangle : (4 × 1,5) ÷ 2 = 3 m². Aire de la base : 8 + 3 = **11 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** de l’abri, en m³ ?",
+     "unite": "m³",
+     "reponse": 33,
+     "aide": "Volume d’un prisme droit : aire de la base × hauteur. Ici la hauteur du prisme est la profondeur de l’abri.",
+     "explication": "V = aire de la base × hauteur = 11 × 3 = **33 m³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les deux pans du toit sont des rectangles de 2,5 m de large. Quelle est leur **aire totale**, en m² ?",
+     "unite": "m²",
+     "reponse": 15,
+     "aide": "Chaque pan est un rectangle de 2,5 m (le côté incliné du pignon) sur 3 m (la profondeur).",
+     "explication": "Un pan : 2,5 × 3 = 7,5 m². Deux pans : 2 × 7,5 = **15 m²** de tuiles à prévoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa054ed6-5670-5eaa-9c54-52e601153f2b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une cuve pour l’eau de pluie",
+   "competence": "modeliser",
+   "situation": "Le grand-père de Léa fabrique une cuve cylindrique pour récupérer l’eau de pluie du jardin. Elle n’a pas de couvercle. Il découpe la tôle d’après un patron : un rectangle et un disque.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "La fiche de fabrication",
+     "entete": "Cuve cylindrique",
+     "sousTitre": "Cuve ouverte, sans couvercle",
+     "emoji": "🪣",
+     "lignes": [
+      {
+       "texte": "Diamètre de la base",
+       "valeur": "1 m",
+       "id": "diametre"
+      },
+      {
+       "texte": "Hauteur",
+       "valeur": "1,2 m",
+       "id": "hauteur"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Valeur de π retenue",
+       "valeur": "3,14"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "patron",
+     "type": "figure",
+     "titre": "Le patron de la cuve",
+     "source": "Patron à l’échelle : 1 carreau = 25 cm",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 15,
+      "ymin": 0,
+      "ymax": 11
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 13.56,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 13.56,
+       "y": 5.8,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 5.8,
+       "position": "no"
+      },
+      {
+       "id": "O",
+       "x": 4,
+       "y": 7.8,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "polygones": [
+      {
+       "id": "rect",
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ],
+     "cercles": [
+      {
+       "id": "disque",
+       "centre": "O",
+       "rayon": 2,
+       "teinte": "bleu"
+      }
+     ],
+     "textes": [
+      {
+       "x": 12.1,
+       "y": 3.4,
+       "texte": "1,2 m",
+       "teinte": "bleu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "patron",
+     "enonce": "Touche la partie du patron qui s’enroule autour de la cuve pour former **sa paroi**.",
+     "reponse": [
+      "rect"
+     ],
+     "aide": "La surface latérale d’un cylindre, une fois déroulée, est un rectangle.",
+     "explication": "La paroi de la cuve est la **surface latérale** : déroulée, elle forme le grand rectangle. Le disque est le fond."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **longueur** du rectangle, en m ? (π ≈ 3,14)",
+     "unite": "m",
+     "reponse": 3.14,
+     "aide": "Le rectangle fait exactement le tour du fond : sa longueur est le périmètre du disque.",
+     "explication": "Longueur du rectangle = périmètre du disque = π × diamètre = 3,14 × 1 = **3,14 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de **litres** d’eau la cuve peut-elle contenir ? Attention, le rayon n’est pas le diamètre. (1 m³ = 1 000 L)",
+     "unite": "L",
+     "reponse": 942,
+     "aide": "Le rayon est la moitié du diamètre : 0,5 m. Calcule d’abord le volume en m³.",
+     "explication": "R = 0,5 m. V = π × R² × h = 3,14 × 0,25 × 1,2 = 0,942 m³. Comme 1 m³ = 1 000 L, la cuve contient **942 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La cuve est ouverte : il faut la paroi et un seul disque de fond. Quelle **surface de tôle** faut-il, en m², arrondie au dixième ?",
+     "unite": "m²",
+     "reponse": 4.6,
+     "aide": "Paroi : 3,14 × 1,2. Fond : π × R², avec R = 0,5 m. Additionne les deux avant d’arrondir.",
+     "explication": "Paroi : 3,14 × 1,2 = 3,768 m². Fond : 3,14 × 0,5 × 0,5 = 0,785 m². Total : 4,553 m², soit **4,6 m²** au dixième près."
+    },
+    {
+     "type": "choix",
+     "enonce": "Son voisin veut une cuve de **rayon 1 m** (le double), avec la même hauteur 1,2 m. Son volume sera…",
+     "options": [
+      "multiplié par 2",
+      "multiplié par 4",
+      "multiplié par 8",
+      "identique"
+     ],
+     "reponse": 1,
+     "aide": "Calcule le volume de la grande cuve avec R = 1 m, puis compare à 0,942 m³.",
+     "explication": "Avec R = 1 m : V = 3,14 × 1 × 1 × 1,2 = 3,768 m³, et 3,768 ÷ 0,942 = 4. Le rayon est au **carré** dans la formule : doubler R multiplie le volume par **4**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0663da05-a754-5e88-94c1-0c33cd7640fc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le logo du skate-park",
+   "competence": "geometrie",
+   "situation": "Le skate-park de la ville a un nouveau logo : deux traînées parallèles (d) et (d′) coupées par une barre oblique (s). Le graphiste a codé un angle de 50° et a tracé trois autres angles.",
+   "documents": [
+    {
+     "id": "logo",
+     "type": "figure",
+     "titre": "Le logo du skate-park",
+     "source": "Logo dessiné pour l’exercice : (d) et (d′) sont parallèles",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 4.2,
+       "y": 2.2,
+       "cache": true
+      },
+      {
+       "id": "B",
+       "x": 6.717,
+       "y": 5.2,
+       "cache": true
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 2.2,
+       "cache": true
+      },
+      {
+       "id": "E",
+       "x": 0.9,
+       "y": 2.2,
+       "cache": true
+      },
+      {
+       "id": "F",
+       "x": 3.417,
+       "y": 5.2,
+       "cache": true
+      },
+      {
+       "id": "G",
+       "x": 9,
+       "y": 5.2,
+       "cache": true
+      },
+      {
+       "id": "H",
+       "x": 3.364,
+       "y": 1.204,
+       "cache": true
+      },
+      {
+       "id": "K",
+       "x": 7.617,
+       "y": 6.272,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "E",
+        "C"
+       ],
+       "nom": "(d)"
+      },
+      {
+       "par": [
+        "F",
+        "G"
+       ],
+       "nom": "(d′)"
+      },
+      {
+       "par": [
+        "H",
+        "K"
+       ],
+       "nom": "(s)"
+      }
+     ],
+     "angles": [
+      {
+       "id": "a1",
+       "sommet": "A",
+       "de": "C",
+       "a": "B",
+       "mesure": "50°"
+      },
+      {
+       "id": "a2",
+       "sommet": "B",
+       "de": "F",
+       "a": "A"
+      },
+      {
+       "id": "a3",
+       "sommet": "B",
+       "de": "G",
+       "a": "K"
+      },
+      {
+       "id": "a4",
+       "sommet": "B",
+       "de": "A",
+       "a": "G"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "logo",
+     "enonce": "Touche l’angle **alterne-interne** de l’angle de 50°.",
+     "reponse": [
+      "a2"
+     ],
+     "aide": "Alternes-internes : de part et d’autre de la sécante, et entre les deux droites parallèles.",
+     "explication": "L’angle de 50° est entre les deux droites, à droite de (s). Son alterne-interne est entre les droites aussi, mais **de l’autre côté** de (s) : c’est l’angle en bas à gauche du point du haut."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les droites (d) et (d′) sont parallèles. Que mesure cet angle alterne-interne, en degrés ?",
+     "unite": "°",
+     "reponse": 50,
+     "aide": "Quand deux droites sont parallèles, que dit-on de deux angles alternes-internes ?",
+     "explication": "Les droites sont parallèles, **donc** les angles alternes-internes sont égaux : il mesure **50°**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de rédaction.",
+     "texte": "Les droites (d) et (d′) sont parallèles, donc les angles alternes-internes sont ___.",
+     "reponses": [
+      [
+       "égaux",
+       "egaux"
+      ]
+     ],
+     "banque": [
+      "égaux",
+      "supplémentaires",
+      "complémentaires",
+      "droits"
+     ],
+     "aide": "Pense à la propriété qui permet de calculer un angle.",
+     "explication": "Si deux droites sont parallèles, leurs angles alternes-internes sont **égaux**. C’est la propriété qui permet de calculer un angle."
+    }
+   ]
+  },
+  {
+   "chapitre": "0663da05-a754-5e88-94c1-0c33cd7640fc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La passerelle du parc",
+   "competence": "raisonner",
+   "situation": "Sur le plan d’une passerelle, la main courante (d) et la rambarde (d′) sont parallèles. Une barre de renfort (s) les coupe en A et en B. L’angle ∠CAB mesure 62°.",
+   "documents": [
+    {
+     "id": "passerelle",
+     "type": "figure",
+     "titre": "La passerelle du parc",
+     "source": "Schéma réalisé pour l’exercice : (d) et (d′) sont parallèles",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 4.2,
+       "y": 2.2,
+       "position": "se"
+      },
+      {
+       "id": "B",
+       "x": 5.795,
+       "y": 5.2,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 2.2,
+       "position": "n"
+      },
+      {
+       "id": "E",
+       "x": 0.9,
+       "y": 2.2,
+       "position": "n"
+      },
+      {
+       "id": "F",
+       "x": 2.495,
+       "y": 5.2,
+       "position": "s"
+      },
+      {
+       "id": "G",
+       "x": 9,
+       "y": 5.2,
+       "position": "s"
+      },
+      {
+       "id": "H",
+       "x": 3.59,
+       "y": 1.052,
+       "position": "o"
+      },
+      {
+       "id": "K",
+       "x": 6.452,
+       "y": 6.436,
+       "position": "e"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "E",
+        "C"
+       ],
+       "nom": "(d)"
+      },
+      {
+       "par": [
+        "F",
+        "G"
+       ],
+       "nom": "(d′)"
+      },
+      {
+       "par": [
+        "H",
+        "K"
+       ],
+       "nom": "(s)"
+      }
+     ],
+     "angles": [
+      {
+       "id": "cab",
+       "sommet": "A",
+       "de": "C",
+       "a": "B",
+       "mesure": "62°"
+      },
+      {
+       "id": "bae",
+       "sommet": "A",
+       "de": "B",
+       "a": "E"
+      },
+      {
+       "id": "fba",
+       "sommet": "B",
+       "de": "F",
+       "a": "A"
+      },
+      {
+       "id": "abg",
+       "sommet": "B",
+       "de": "A",
+       "a": "G"
+      },
+      {
+       "id": "gbk",
+       "sommet": "B",
+       "de": "G",
+       "a": "K"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle ∠FBA, en degrés ?",
+     "unite": "°",
+     "reponse": 62,
+     "aide": "Compare ∠FBA et ∠CAB : de quel côté de (s) sont-ils, et par rapport aux deux droites ?",
+     "explication": "∠CAB et ∠FBA sont **alternes-internes** et (d) // (d′) : ils sont égaux. ∠FBA = **62°**."
+    },
+    {
+     "type": "zone",
+     "document": "passerelle",
+     "enonce": "Touche **tous** les angles tracés qui mesurent 118°.",
+     "multiple": true,
+     "reponse": [
+      "bae",
+      "abg"
+     ],
+     "aide": "Cherche les angles adjacents à un angle de 62° (ils forment avec lui un angle plat), ou leurs alternes-internes.",
+     "explication": "∠BAE est supplémentaire de ∠CAB : 180° − 62° = 118°. ∠ABG est l’alterne-interne de ∠BAE : lui aussi **118°**. Les trois autres angles mesurent 62°."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle ∠GBK, en degrés ?",
+     "unite": "°",
+     "reponse": 62,
+     "aide": "Compare ∠GBK et ∠CAB : ils sont à la même place, chacun à son point d’intersection.",
+     "explication": "∠GBK et ∠CAB sont **correspondants** et (d) // (d′) : ils sont égaux, donc ∠GBK = **62°**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété permet d’affirmer que ∠GBK = ∠CAB ?",
+     "options": [
+      "Les correspondants sont égaux si les droites sont parallèles",
+      "Les angles opposés par le sommet sont toujours égaux entre eux",
+      "La somme des angles d’un triangle est égale à 180°",
+      "Deux angles adjacents sur une droite sont supplémentaires"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la position des deux angles : même place, chacun à une intersection différente.",
+     "explication": "Les droites (d) et (d′) sont parallèles : les angles **correspondants** sont égaux. Il n’y a ni triangle ni angles opposés par le sommet ici."
+    }
+   ]
+  },
+  {
+   "chapitre": "0663da05-a754-5e88-94c1-0c33cd7640fc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les relevés de l’architecte",
+   "competence": "argumenter",
+   "situation": "Camille, architecte, contrôle si des poutres sont parallèles. Pour chaque couple de poutres, elle mesure deux angles formés avec une poutre sécante. Elle a noté ses quatre relevés.",
+   "documents": [
+    {
+     "id": "releve1",
+     "type": "figure",
+     "titre": "Le premier relevé",
+     "source": "Relevé inventé pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 4.2,
+       "y": 2.2,
+       "position": "se"
+      },
+      {
+       "id": "B",
+       "x": 5.06,
+       "y": 5.2,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 2.2,
+       "position": "n"
+      },
+      {
+       "id": "E",
+       "x": 0.9,
+       "y": 2.2,
+       "position": "n"
+      },
+      {
+       "id": "F",
+       "x": 1.76,
+       "y": 5.2,
+       "position": "s"
+      },
+      {
+       "id": "G",
+       "x": 9,
+       "y": 5.2,
+       "position": "s"
+      },
+      {
+       "id": "H",
+       "x": 3.842,
+       "y": 0.95,
+       "position": "o"
+      },
+      {
+       "id": "K",
+       "x": 5.446,
+       "y": 6.546,
+       "position": "e"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "E",
+        "C"
+       ],
+       "nom": "(d)"
+      },
+      {
+       "par": [
+        "F",
+        "G"
+       ],
+       "nom": "(d′)"
+      },
+      {
+       "par": [
+        "H",
+        "K"
+       ],
+       "nom": "(s)"
+      }
+     ],
+     "angles": [
+      {
+       "id": "cab",
+       "sommet": "A",
+       "de": "C",
+       "a": "B",
+       "mesure": "74°"
+      },
+      {
+       "id": "bae",
+       "sommet": "A",
+       "de": "B",
+       "a": "E"
+      },
+      {
+       "id": "fba",
+       "sommet": "B",
+       "de": "F",
+       "a": "A",
+       "mesure": "74°"
+      }
+     ]
+    },
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Les quatre relevés de Camille",
+     "source": "Mesures inventées pour l’exercice",
+     "colonnes": [
+      "Relevé",
+      "Couple d’angles",
+      "Angle 1",
+      "Angle 2"
+     ],
+     "lignes": [
+      [
+       "Relevé 1",
+       "alternes-internes",
+       "74°",
+       "74°"
+      ],
+      [
+       "Relevé 2",
+       "correspondants",
+       "58°",
+       "61°"
+      ],
+      [
+       "Relevé 3",
+       "correspondants",
+       "112°",
+       "112°"
+      ],
+      [
+       "Relevé 4",
+       "alternes-internes",
+       "95°",
+       "85°"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releves",
+     "enonce": "Touche le nom de **chaque relevé** pour lequel les poutres sont parallèles.",
+     "multiple": true,
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "aide": "Si deux alternes-internes (ou deux correspondants) sont égaux, les droites sont parallèles.",
+     "explication": "Les relevés **1** (74° et 74°) et **3** (112° et 112°) ont des angles égaux : les poutres sont parallèles. Dans les relevés 2 et 4, les angles sont différents."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le relevé 4, comment Camille doit-elle justifier que les poutres ne sont pas parallèles ?",
+     "options": [
+      "Les alternes-internes sont inégaux (95° ≠ 85°), donc pas parallèles",
+      "Les angles mesurent 95° et 85° : les poutres sont presque parallèles",
+      "On ne peut rien conclure sans mesurer un troisième angle de plus",
+      "Les angles sont différents, donc les poutres sont perpendiculaires"
+     ],
+     "reponse": 0,
+     "aide": "Si les poutres étaient parallèles, que vaudraient les alternes-internes ?",
+     "explication": "Si les poutres étaient parallèles, les alternes-internes seraient égaux. Ils ne le sont pas : par la **contraposée**, les poutres ne sont **pas** parallèles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le relevé 1 (voir la figure), ∠BAE est adjacent à ∠CAB sur la droite (d). Que mesure ∠BAE, en degrés ?",
+     "unite": "°",
+     "reponse": 106,
+     "aide": "Les angles ∠BAE et ∠CAB forment ensemble un angle plat.",
+     "explication": "Ces deux angles sont **supplémentaires** : 180° − 74° = **106°**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la rédaction qui démontre que (d) et (d′) sont parallèles dans le relevé 1.",
+     "items": [
+      "Les angles alternes-internes ∠CAB et ∠FBA mesurent tous deux 74°.",
+      "Or si deux angles alternes-internes sont égaux, alors les droites sont parallèles.",
+      "Donc les droites (d) et (d′) sont parallèles."
+     ],
+     "aide": "Une démonstration suit toujours le même fil : ce que je sais, la propriété que j’emploie, ce que j’en conclus.",
+     "explication": "On cite d’abord **la donnée** (les deux angles de 74°), puis **la propriété** (réciproque des alternes-internes), enfin **la conclusion**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e4a9465-55d7-51be-92de-8f9113f15a47",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trois fanions du club de voile",
+   "competence": "geometrie",
+   "situation": "Le club de voile hisse trois fanions triangulaires. Sur le plan du bosco, les côtés de même longueur portent le même codage, et quelques longueurs sont écrites en cm.",
+   "documents": [
+    {
+     "id": "fanions",
+     "type": "figure",
+     "titre": "Le plan des trois fanions",
+     "source": "Plan dessiné à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0.3,
+      "ymax": 10.8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0.8,
+       "y": 1.8,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5.8,
+       "y": 1.8,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 3.675,
+       "y": 4.581,
+       "position": "n"
+      },
+      {
+       "id": "D",
+       "x": 7.6,
+       "y": 1.8,
+       "position": "so"
+      },
+      {
+       "id": "E",
+       "x": 10.1,
+       "y": 1.8,
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": 8.85,
+       "y": 5.6,
+       "position": "n"
+      },
+      {
+       "id": "G",
+       "x": 4.2,
+       "y": 7.2,
+       "position": "so"
+      },
+      {
+       "id": "H",
+       "x": 7.7,
+       "y": 7.2,
+       "position": "se"
+      },
+      {
+       "id": "I",
+       "x": 5.95,
+       "y": 10.231,
+       "position": "n"
+      }
+     ],
+     "segments": [
+      {
+       "de": "B",
+       "a": "A",
+       "longueur": "5 cm"
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "longueur": "4 cm"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "3,5 cm"
+      },
+      {
+       "de": "E",
+       "a": "D",
+       "longueur": "2,5 cm"
+      },
+      {
+       "de": "D",
+       "a": "F",
+       "codage": 1,
+       "longueur": "4 cm"
+      },
+      {
+       "de": "E",
+       "a": "F",
+       "codage": 1
+      },
+      {
+       "de": "G",
+       "a": "H",
+       "codage": 1
+      },
+      {
+       "de": "G",
+       "a": "I",
+       "codage": 1
+      },
+      {
+       "de": "H",
+       "a": "I",
+       "codage": 1
+      }
+     ],
+     "polygones": [
+      {
+       "id": "t1",
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "id": "t2",
+       "sommets": [
+        "D",
+        "E",
+        "F"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "id": "t3",
+       "sommets": [
+        "G",
+        "H",
+        "I"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ],
+     "textes": [
+      {
+       "x": 3.3,
+       "y": 1,
+       "texte": "Fanion 1"
+      },
+      {
+       "x": 8.85,
+       "y": 1,
+       "texte": "Fanion 2"
+      },
+      {
+       "x": 5.95,
+       "y": 6.4,
+       "texte": "Fanion 3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fanions",
+     "enonce": "Touche le fanion **équilatéral**.",
+     "reponse": [
+      "t3"
+     ],
+     "aide": "Un triangle équilatéral a trois côtés égaux : regarde les codages.",
+     "explication": "Le fanion 3 a ses **trois côtés codés pareil** : il est équilatéral."
+    },
+    {
+     "type": "zone",
+     "document": "fanions",
+     "enonce": "Touche le fanion **quelconque** : celui qui n’a aucun côté égal à un autre.",
+     "reponse": [
+      "t1"
+     ],
+     "aide": "Compare les longueurs écrites : 5 cm, 4 cm et 3,5 cm.",
+     "explication": "Le fanion 1 a trois côtés différents (5 cm, 4 cm, 3,5 cm) : il est **quelconque**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **périmètre** du fanion 2, en cm ? Les deux côtés codés ont la même longueur.",
+     "unite": "cm",
+     "reponse": 10.5,
+     "aide": "Le côté [DF] mesure 4 cm. Les côtés codés pareil ont la même longueur : que mesure [EF] ?",
+     "explication": "[EF] a le même codage que [DF] : il mesure aussi 4 cm. Périmètre : 4 + 4 + 2,5 = **10,5 cm**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Un triangle équilatéral est un cas particulier de triangle ___.",
+     "reponses": [
+      [
+       "isocèle",
+       "isocele"
+      ]
+     ],
+     "banque": [
+      "isocèle",
+      "rectangle",
+      "quelconque",
+      "obtusangle"
+     ],
+     "aide": "Un triangle équilatéral a au moins deux côtés égaux : il en a même trois.",
+     "explication": "Trois côtés égaux, c’est en particulier deux côtés égaux : un triangle équilatéral est un cas particulier de triangle **isocèle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e4a9465-55d7-51be-92de-8f9113f15a47",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les baguettes du cerf-volant",
+   "competence": "raisonner",
+   "situation": "Lila fabrique des cerfs-volants. Elle choisit trois baguettes dans sa boîte pour former les côtés d’un triangle. Mais toutes les combinaisons ne marchent pas !",
+   "documents": [
+    {
+     "id": "baguettes",
+     "type": "tableau",
+     "titre": "La boîte de baguettes de Lila",
+     "source": "Longueurs inventées pour l’exercice",
+     "colonnes": [
+      "Baguette",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "lignes": [
+      [
+       "Longueur (cm)",
+       30,
+       40,
+       50,
+       70,
+       100
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque choix de trois baguettes : peut-on construire un triangle ?",
+     "categories": [
+      "Triangle possible",
+      "Points alignés",
+      "Triangle impossible"
+     ],
+     "items": [
+      [
+       "A, B et C",
+       0
+      ],
+      [
+       "A, B et D",
+       1
+      ],
+      [
+       "A, C et E",
+       2
+      ],
+      [
+       "B, C et D",
+       0
+      ]
+     ],
+     "aide": "Compare la plus longue baguette à la somme des deux autres.",
+     "explication": "A, B, C : 30 + 40 = 70 > 50 → **possible**. A, B, D : 30 + 40 = 70 = 70 → **alignés**. A, C, E : 30 + 50 = 80 < 100 → **impossible**. B, C, D : 40 + 50 = 90 > 70 → **possible**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec les baguettes A, B et C, quel est le **périmètre** du triangle, en cm ?",
+     "unite": "cm",
+     "reponse": 120,
+     "aide": "Additionne les trois longueurs lues dans le tableau.",
+     "explication": "30 + 40 + 50 = **120 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lila garde A (30 cm) et B (40 cm) et cherche une troisième baguette, de longueur entière en cm. Quelle est la **plus grande** longueur possible pour former un vrai triangle ?",
+     "unite": "cm",
+     "reponse": 69,
+     "aide": "Le plus long côté doit être strictement plus petit que la somme des deux autres : 30 + 40 = 70.",
+     "explication": "Si la troisième baguette est la plus longue, elle doit être **strictement inférieure** à 30 + 40 = 70 cm. Avec 70, les points seraient alignés. La plus grande valeur entière est **69 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e4a9465-55d7-51be-92de-8f9113f15a47",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le fanion de Maé et le catalogue",
+   "competence": "raisonner",
+   "situation": "Maé dessine un fanion pour son équipe. Elle consulte aussi le catalogue d’un fabricant, qui propose quatre fanions dont on connaît les trois côtés.",
+   "documents": [
+    {
+     "id": "fanion",
+     "type": "figure",
+     "titre": "Le fanion de Maé",
+     "source": "Dessin à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "codage": 1,
+       "longueur": "4 cm"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      },
+      {
+       "id": "abc",
+       "sommet": "B",
+       "de": "A",
+       "a": "C"
+      }
+     ]
+    },
+    {
+     "id": "catalogue",
+     "type": "tableau",
+     "titre": "Le catalogue du fabricant",
+     "source": "Catalogue inventé pour l’exercice",
+     "colonnes": [
+      "Fanion",
+      "Côtés (cm)"
+     ],
+     "lignes": [
+      [
+       "Fanion 1",
+       "6 – 6 – 6"
+      ],
+      [
+       "Fanion 2",
+       "5 – 5 – 8"
+      ],
+      [
+       "Fanion 3",
+       "4 – 5 – 10"
+      ],
+      [
+       "Fanion 4",
+       "4 – 6 – 7"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fanion",
+     "enonce": "Touche l’**hypoténuse** du triangle ABC.",
+     "reponse": [
+      "bc"
+     ],
+     "aide": "L’hypoténuse est le côté opposé à l’angle droit.",
+     "explication": "L’angle droit est en A : le côté opposé est **[BC]**. C’est l’hypoténuse, le plus long côté du triangle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature du triangle ABC ?",
+     "options": [
+      "Rectangle et isocèle en A",
+      "Équilatéral",
+      "Rectangle mais pas isocèle",
+      "Isocèle mais pas rectangle"
+     ],
+     "reponse": 0,
+     "aide": "Le carré indique un angle droit ; les petits traits indiquent des côtés égaux.",
+     "explication": "Il a un **angle droit** en A (rectangle) et deux côtés égaux [AB] et [AC] (isocèle) : les deux classements se combinent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle ∠ABC, en degrés ?",
+     "unite": "°",
+     "reponse": 45,
+     "aide": "Les deux angles à la base d’un triangle isocèle sont égaux ; les deux angles aigus d’un triangle rectangle sont complémentaires.",
+     "explication": "Les angles aigus sont égaux (isocèle) et leur somme vaut 90° (complémentaires) : chacun mesure 90° ÷ 2 = **45°**."
+    },
+    {
+     "type": "zone",
+     "document": "catalogue",
+     "enonce": "Touche la case des côtés du fanion **impossible à construire**.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Vérifie l’inégalité triangulaire : le plus grand côté doit être plus petit que la somme des deux autres.",
+     "explication": "Fanion 3 : 4 + 5 = 9, et 9 < 10. Le plus grand côté dépasse la somme des deux autres : le triangle est **impossible**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fanion constructible à sa nature (d’après ses côtés).",
+     "paires": [
+      [
+       "Fanion 1 (6 – 6 – 6)",
+       "Équilatéral"
+      ],
+      [
+       "Fanion 2 (5 – 5 – 8)",
+       "Isocèle, pas équilatéral"
+      ],
+      [
+       "Fanion 4 (4 – 6 – 7)",
+       "Quelconque"
+      ]
+     ],
+     "aide": "Compte les côtés de même longueur : trois, deux ou aucun.",
+     "explication": "Fanion 1 : trois côtés égaux, **équilatéral**. Fanion 2 : deux côtés égaux, **isocèle**. Fanion 4 : trois côtés différents, **quelconque**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d5f4625-9e1c-58d4-8ddf-4562775b253a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les allées du parc triangulaire",
+   "competence": "geometrie",
+   "situation": "Un petit parc a la forme d’un triangle ABC. Le jardinier a tracé trois allées : [AI], [BH] et [CK]. Chacune est une droite remarquable du triangle. Sur le plan, BC mesure 10 cm.",
+   "documents": [
+    {
+     "id": "parc",
+     "type": "figure",
+     "titre": "Le plan du parc",
+     "source": "Plan dessiné à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 2.5,
+       "y": 9,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 7,
+       "position": "e"
+      },
+      {
+       "id": "I",
+       "x": 5,
+       "y": 4,
+       "position": "se"
+      },
+      {
+       "id": "H",
+       "x": 3.378,
+       "y": 8.73,
+       "position": "o"
+      },
+      {
+       "id": "K",
+       "x": 1.893,
+       "y": 5.762,
+       "position": "o"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "id": "bi",
+       "de": "B",
+       "a": "I",
+       "codage": 1
+      },
+      {
+       "id": "ic",
+       "de": "I",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "id": "ai",
+       "de": "A",
+       "a": "I",
+       "style": "pointilles"
+      },
+      {
+       "id": "bh",
+       "de": "B",
+       "a": "H",
+       "style": "pointilles"
+      },
+      {
+       "id": "ck",
+       "de": "C",
+       "a": "K",
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "id": "droit",
+       "sommet": "H",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      },
+      {
+       "sommet": "C",
+       "de": "A",
+       "a": "K",
+       "mesure": "α"
+      },
+      {
+       "sommet": "C",
+       "de": "K",
+       "a": "B",
+       "mesure": "α"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque nom à l’allée qui lui correspond.",
+     "paires": [
+      [
+       "Médiane",
+       "[AI]"
+      ],
+      [
+       "Hauteur",
+       "[BH]"
+      ],
+      [
+       "Bissectrice",
+       "[CK]"
+      ]
+     ],
+     "aide": "La médiane coupe un côté en deux parties égales (codage), la hauteur tombe à angle droit, la bissectrice coupe un angle en deux (α et α).",
+     "explication": "[AI] va au **milieu** de [BC] (les deux parties ont le même codage) : médiane. [BH] tombe à **angle droit** sur [AC] : hauteur. [CK] partage l’angle ∠ACB en deux angles égaux (α) : bissectrice."
+    },
+    {
+     "type": "nombre",
+     "enonce": "I est le milieu de [BC] et BC = 10 cm. Que mesure BI, en cm ?",
+     "unite": "cm",
+     "reponse": 5,
+     "aide": "I partage [BC] en deux parties égales.",
+     "explication": "I est le milieu de [BC] : BI = BC ÷ 2 = 10 ÷ 2 = **5 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "parc",
+     "enonce": "Touche **l’angle droit** formé par la hauteur [BH] et le côté [AC].",
+     "reponse": [
+      "droit"
+     ],
+     "aide": "Cherche le petit carré dans la figure.",
+     "explication": "Le petit carré en H montre l’**angle droit** : une hauteur est perpendiculaire au côté opposé."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d5f4625-9e1c-58d4-8ddf-4562775b253a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un puits à égale distance des trois villages",
+   "competence": "raisonner",
+   "situation": "Trois villages A, B et C veulent creuser un puits à la même distance de chacun. L’ingénieur trace les trois médiatrices du triangle ABC : elles se coupent en O. Le puits est à 5 km du village A.",
+   "documents": [
+    {
+     "id": "villages",
+     "type": "figure",
+     "titre": "Les trois villages et leurs médiatrices",
+     "source": "Plan inventé pour l’exercice (1 carreau = 1 km)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 11
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0.802,
+       "y": 3.79,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 10.424,
+       "y": 4.632,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 6.368,
+       "y": 10.424,
+       "position": "ne"
+      },
+      {
+       "id": "M",
+       "x": 5.613,
+       "y": 4.211,
+       "position": "s"
+      },
+      {
+       "id": "N",
+       "x": 8.396,
+       "y": 7.528,
+       "position": "se"
+      },
+      {
+       "id": "P",
+       "x": 3.585,
+       "y": 7.107,
+       "position": "o"
+      },
+      {
+       "id": "O",
+       "x": 5.5,
+       "y": 5.5,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "M",
+       "codage": 1
+      },
+      {
+       "de": "M",
+       "a": "B",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "N",
+       "codage": 2
+      },
+      {
+       "de": "N",
+       "a": "C",
+       "codage": 2
+      },
+      {
+       "de": "C",
+       "a": "P",
+       "codage": 3
+      },
+      {
+       "de": "P",
+       "a": "A",
+       "codage": 3
+      },
+      {
+       "id": "oa",
+       "de": "O",
+       "a": "A",
+       "longueur": "5 km"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "M",
+        "O"
+       ]
+      },
+      {
+       "par": [
+        "N",
+        "O"
+       ]
+      },
+      {
+       "par": [
+        "P",
+        "O"
+       ]
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 5,
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "M",
+       "de": "B",
+       "a": "O",
+       "droit": true
+      },
+      {
+       "sommet": "N",
+       "de": "C",
+       "a": "O",
+       "droit": true
+      },
+      {
+       "sommet": "P",
+       "de": "A",
+       "a": "O",
+       "droit": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villages",
+     "enonce": "Touche l’endroit où creuser le **puits**, le point de rencontre des trois médiatrices.",
+     "reponse": [
+      "O"
+     ],
+     "aide": "Une médiatrice passe par le milieu d’un côté et lui est perpendiculaire.",
+     "explication": "Les trois médiatrices se coupent en **O**, le centre du cercle qui passe par les trois villages."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le puits est à 5 km du village A. À quelle distance est-il du village C, en km ?",
+     "unite": "km",
+     "reponse": 5,
+     "aide": "Les trois sommets sont sur le même cercle de centre O.",
+     "explication": "O est le centre du cercle circonscrit : il est à égale distance des trois sommets. OC = OA = **5 km**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi O est-il à la même distance de A et de B ?",
+     "options": [
+      "Il est sur la médiatrice de [AB]",
+      "Il est sur la bissectrice de ∠BAC",
+      "Il est sur la hauteur issue de C",
+      "Il est sur la médiane issue de C"
+     ],
+     "reponse": 0,
+     "aide": "Tout point d’une certaine droite est à égale distance des extrémités d’un segment.",
+     "explication": "Tout point de la **médiatrice** d’un segment [AB] est à égale distance de A et de B. O est sur la médiatrice de [AB] : OA = OB."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le cercle de centre O qui passe par A passe aussi par B et C. Quel est son **diamètre**, en km ?",
+     "unite": "km",
+     "reponse": 10,
+     "aide": "Le rayon est la distance OA ; le diamètre vaut deux rayons.",
+     "explication": "Le rayon vaut 5 km, donc le diamètre vaut 2 × 5 = **10 km**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0d5f4625-9e1c-58d4-8ddf-4562775b253a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La plaque triangulaire en équilibre",
+   "competence": "raisonner",
+   "situation": "Nina découpe une plaque de carton triangulaire ABC. Elle veut la poser en équilibre sur la pointe d’un crayon. Elle trace les trois médianes et note les dimensions de la plaque.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "figure",
+     "titre": "Les médianes de la plaque",
+     "source": "Schéma à main levée : les longueurs ne sont pas respectées",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 14,
+      "ymin": 0,
+      "ymax": 14
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 5.954,
+       "y": 12.953,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 13,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "A1",
+       "x": 7,
+       "y": 1,
+       "position": "s",
+       "nom": "A′"
+      },
+      {
+       "id": "B1",
+       "x": 9.477,
+       "y": 6.977,
+       "position": "ne",
+       "nom": "B′"
+      },
+      {
+       "id": "C1",
+       "x": 3.477,
+       "y": 6.977,
+       "position": "no",
+       "nom": "C′"
+      },
+      {
+       "id": "G",
+       "x": 6.651,
+       "y": 4.984,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "id": "ac",
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "A1",
+       "codage": 1
+      },
+      {
+       "de": "A1",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "C",
+       "a": "B1",
+       "codage": 2
+      },
+      {
+       "de": "B1",
+       "a": "A",
+       "codage": 2
+      },
+      {
+       "de": "A",
+       "a": "C1",
+       "codage": 3
+      },
+      {
+       "de": "C1",
+       "a": "B",
+       "codage": 3
+      },
+      {
+       "id": "aa1",
+       "de": "A",
+       "a": "A1",
+       "style": "pointilles"
+      },
+      {
+       "id": "bb1",
+       "de": "B",
+       "a": "B1",
+       "style": "pointilles"
+      },
+      {
+       "id": "cc1",
+       "de": "C",
+       "a": "C1",
+       "style": "pointilles"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Fiche de la plaque",
+     "entete": "Plaque ABC en carton",
+     "emoji": "📐",
+     "lignes": [
+      {
+       "texte": "Côté [BC]",
+       "valeur": "10 cm"
+      },
+      {
+       "texte": "Hauteur issue de A",
+       "valeur": "8 cm"
+      },
+      {
+       "texte": "Médiane [AA′]",
+       "valeur": "12 cm"
+      }
+     ],
+     "pied": "Données inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche le **centre de gravité** de la plaque, le point où elle tiendra en équilibre.",
+     "reponse": [
+      "G"
+     ],
+     "aide": "C’est le point de rencontre des trois médianes.",
+     "explication": "Les trois médianes se coupent en **G**, le centre de gravité : c’est là que la plaque tient en équilibre sur une pointe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance **AG**, en cm ? (G est aux deux tiers de la médiane en partant du sommet.)",
+     "unite": "cm",
+     "reponse": 8,
+     "aide": "Calcule les deux tiers de 12 cm : 12 ÷ 3 = 4, puis 4 × 2.",
+     "explication": "AG = {{2/3}} de AA′ = {{2/3}} × 12 = **8 cm**. (Il reste GA′ = 4 cm.)"
+    },
+    {
+     "type": "choix",
+     "enonce": "Nina veut suspendre la plaque horizontalement à un fil, en un seul point. Où doit-elle accrocher le fil ?",
+     "options": [
+      "Au point G, où se coupent les médianes",
+      "Au point où se coupent les trois hauteurs",
+      "Au point où se coupent les médiatrices",
+      "Au sommet A de la plaque"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit du point d’équilibre de la plaque.",
+     "explication": "Le point d’équilibre est le **centre de gravité**, à l’intersection des médianes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire** de la plaque ABC, en cm² ? (aire = (base × hauteur) ÷ 2)",
+     "unite": "cm²",
+     "reponse": 40,
+     "aide": "Prends [BC] comme base : la fiche donne sa longueur et la hauteur qui lui correspond.",
+     "explication": "Base BC = 10 cm, hauteur issue de A = 8 cm : aire = (10 × 8) ÷ 2 = **40 cm²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La médiane [AA′] coupe la plaque en deux triangles, ABA′ et AA′C. Quelle est l’**aire** du triangle ABA′, en cm² ?",
+     "unite": "cm²",
+     "reponse": 20,
+     "aide": "Une médiane partage le triangle en deux triangles de même aire.",
+     "explication": "Une médiane coupe le triangle en deux triangles de **même aire** : 40 ÷ 2 = **20 cm²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9086e61e-ef07-5002-b9ff-0af6236e657d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fanion de la régate",
+   "competence": "calculer",
+   "situation": "Sur le plan d’un fanion triangulaire, la couturière a noté deux angles : 66° en A et 51° en B. L’angle en C est effacé.",
+   "documents": [
+    {
+     "id": "fanion",
+     "type": "figure",
+     "titre": "Le plan du fanion",
+     "source": "Plan dessiné à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 3.838,
+       "y": 7.374,
+       "position": "n"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "angles": [
+      {
+       "id": "angA",
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "mesure": "66°"
+      },
+      {
+       "id": "angB",
+       "sommet": "B",
+       "de": "C",
+       "a": "A",
+       "mesure": "51°"
+      },
+      {
+       "id": "angC",
+       "sommet": "C",
+       "de": "A",
+       "a": "B",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle en C, en degrés ?",
+     "unite": "°",
+     "reponse": 63,
+     "aide": "Dans un triangle, la somme des trois angles est toujours la même.",
+     "explication": "La somme des angles d’un triangle vaut 180° : 180 − 66 − 51 = **63°**."
+    },
+    {
+     "type": "zone",
+     "document": "fanion",
+     "enonce": "Touche **le plus petit** des trois angles du triangle.",
+     "reponse": [
+      "angB"
+     ],
+     "aide": "Compare 66°, 51° et l’angle que tu viens de calculer.",
+     "explication": "Les trois angles mesurent 66°, 51° et 63° : le plus petit est celui de **51°**, en B."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle ce triangle, d’après ses angles ?",
+     "options": [
+      "Acutangle",
+      "Rectangle",
+      "Obtusangle",
+      "Équilatéral"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde si l’un des angles est droit ou obtus.",
+     "explication": "Les trois angles (66°, 51°, 63°) sont **aigus** : le triangle est acutangle. Il n’est pas équilatéral : les angles ne valent pas tous 60°."
+    }
+   ]
+  },
+  {
+   "chapitre": "9086e61e-ef07-5002-b9ff-0af6236e657d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pignon de la grange",
+   "competence": "raisonner",
+   "situation": "Le pignon d’une grange est un triangle isocèle ABC de sommet C : l’angle au sommet mesure 100°. Le charpentier prolonge le côté [AB] jusqu’en E pour poser une poutre.",
+   "documents": [
+    {
+     "id": "pignon",
+     "type": "figure",
+     "titre": "Le pignon de la grange",
+     "source": "Plan dessiné à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 4.356,
+       "position": "n"
+      },
+      {
+       "id": "E",
+       "x": 11,
+       "y": 1,
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "B",
+       "a": "E"
+      },
+      {
+       "id": "ca",
+       "de": "C",
+       "a": "A",
+       "codage": 1
+      },
+      {
+       "id": "cb",
+       "de": "C",
+       "a": "B",
+       "codage": 1
+      }
+     ],
+     "angles": [
+      {
+       "id": "sommet",
+       "sommet": "C",
+       "de": "A",
+       "a": "B",
+       "mesure": "100°"
+      },
+      {
+       "id": "baseA",
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "mesure": "α"
+      },
+      {
+       "id": "baseB",
+       "sommet": "B",
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "id": "ext",
+       "sommet": "B",
+       "de": "C",
+       "a": "E",
+       "mesure": "β"
+      }
+     ]
+    },
+    {
+     "id": "pignons",
+     "type": "tableau",
+     "titre": "Trois autres pignons isocèles",
+     "source": "Données inventées pour l’exercice",
+     "colonnes": [
+      "Pignon",
+      "Angle au sommet",
+      "Angle à la base"
+     ],
+     "lignes": [
+      [
+       "Pignon n° 1",
+       "80°",
+       "?"
+      ],
+      [
+       "Pignon n° 2",
+       "?",
+       "35°"
+      ],
+      [
+       "Pignon n° 3",
+       "90°",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pignon",
+     "enonce": "Touche **les deux angles à la base** du triangle isocèle ABC.",
+     "multiple": true,
+     "reponse": [
+      "baseA",
+      "baseB"
+     ],
+     "aide": "Les angles à la base sont ceux qui touchent le côté inégal, [AB].",
+     "explication": "Le triangle est isocèle en C : les angles à la base sont ceux en **A** et en **B**. Ils sont égaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle α, en degrés ?",
+     "unite": "°",
+     "reponse": 40,
+     "aide": "Les deux angles à la base sont égaux et la somme des trois angles vaut 180°.",
+     "explication": "180 − 100 = 80° pour les deux angles à la base ; ils sont égaux : α = 80 ÷ 2 = **40°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle extérieur β, en degrés ?",
+     "unite": "°",
+     "reponse": 140,
+     "aide": "β et l’angle intérieur en B forment un angle plat (180°).",
+     "explication": "β complète l’angle intérieur de 40° à 180° : 180 − 40 = **140°**. On retrouve aussi 100 + 40 = 140, la somme des deux angles non adjacents."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est une autre façon de trouver β ?",
+     "options": [
+      "Additionner l’angle au sommet (100°) et l’angle en A (40°)",
+      "Doubler l’angle au sommet puis retrancher l’angle en A",
+      "Soustraire l’angle en A (40°) à l’angle au sommet (100°)",
+      "Multiplier entre eux les angles en A et en C"
+     ],
+     "reponse": 0,
+     "aide": "Un angle extérieur est égal à la somme des deux angles intérieurs qui ne sont pas adjacents à lui.",
+     "explication": "L’angle extérieur en B est égal à la somme des deux angles intérieurs **non adjacents** : en C (100°) et en A (40°). 100 + 40 = 140°."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le tableau, le pignon n° 2 a des angles à la base de 35°. Que mesure son angle au sommet, en degrés ?",
+     "unite": "°",
+     "reponse": 110,
+     "aide": "Additionne les deux angles à la base, puis retire le total de 180°.",
+     "explication": "Angles à la base : 35 + 35 = 70°. Angle au sommet : 180 − 70 = **110°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9086e61e-ef07-5002-b9ff-0af6236e657d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une erreur dans le carnet de l’architecte",
+   "competence": "raisonner",
+   "situation": "Un architecte note les angles de quatre triangles de sa maquette. Certaines mesures sont à retrouver, et l’une des lignes contient une erreur. Inès et Hugo cherchent laquelle.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Le carnet de l’architecte",
+     "source": "Mesures inventées pour l’exercice",
+     "colonnes": [
+      "Triangle",
+      "∠A",
+      "∠B",
+      "∠C"
+     ],
+     "lignes": [
+      [
+       "T1",
+       "54°",
+       "71°",
+       "?"
+      ],
+      [
+       "T2",
+       "90°",
+       "38°",
+       "?"
+      ],
+      [
+       "T3",
+       "105°",
+       "45°",
+       "40°"
+      ],
+      [
+       "T4",
+       "?",
+       "65°",
+       "65°"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "echange",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message d’Inès et Hugo",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Pour T4, j’ai trouvé ∠A = 65°, puisque les deux autres angles font 65°."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Attends… 65° + 65° + 65° = 195°. Ça ne fait pas 180° !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dans le triangle T1, que mesure ∠C, en degrés ?",
+     "unite": "°",
+     "reponse": 55,
+     "aide": "La somme des angles d’un triangle vaut 180°.",
+     "explication": "54 + 71 = 125, et 180 − 125 = **55°**."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le nom du triangle qui **n’existe pas** : ses trois angles sont impossibles.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Additionne les trois angles de chaque triangle où ils sont tous connus.",
+     "explication": "T3 : 105 + 45 + 40 = 190°, or la somme doit valoir 180°. **T3 est impossible**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’erreur d’Inès pour le triangle T4 ?",
+     "options": [
+      "Elle a recopié 65° au lieu de calculer 180° − 65° − 65°",
+      "Elle a oublié que la somme des angles vaut 90°",
+      "Elle a cru que T4 était un triangle rectangle",
+      "Elle a additionné au lieu de retrancher les deux angles"
+     ],
+     "reponse": 0,
+     "aide": "Que vaut la somme des trois angles ? Calcule le troisième angle avec cette somme.",
+     "explication": "Le troisième angle ne se « recopie » pas : 180 − 65 − 65 = **50°**. T4 est un triangle isocèle de sommet A."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’angle extérieur de T1 en C est le supplémentaire de ∠C. Quelle est sa mesure, en degrés ?",
+     "unite": "°",
+     "reponse": 125,
+     "aide": "Tu peux soustraire ∠C à 180°, ou additionner les deux autres angles du triangle.",
+     "explication": "180 − 55 = 125°. On retrouve aussi 54 + 71 = **125°**, la somme des deux angles intérieurs non adjacents."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le triangle T2 a un angle droit en A. Que mesure ∠C, en degrés ?",
+     "unite": "°",
+     "reponse": 52,
+     "aide": "Les deux angles aigus d’un triangle rectangle sont complémentaires.",
+     "explication": "Les angles aigus sont complémentaires : 90 − 38 = **52°**. (Ou : 180 − 90 − 38 = 52°.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "19cfb78c-c238-52eb-b5fd-40f855ef8e6d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le pliage du papillon",
+   "competence": "geometrie",
+   "situation": "Léa plie sa feuille quadrillée le long de la droite (d) tracée en traits mixtes, puis elle perce le point M avec la pointe de son compas. Le trou fait apparaître le symétrique de M par rapport à (d).",
+   "documents": [
+    {
+     "id": "feuille",
+     "type": "figure",
+     "titre": "La feuille quadrillée de Léa",
+     "source": "Figure dessinée pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "M",
+       "x": 2,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "N",
+       "x": 8,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "P",
+       "x": 8,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "Q",
+       "x": 2,
+       "y": 3,
+       "position": "so"
+      },
+      {
+       "id": "R",
+       "x": 7,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "U",
+       "x": 5,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "V",
+       "x": 5,
+       "y": 8,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "U",
+        "V"
+       ],
+       "nom": "(d)",
+       "style": "axe"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "feuille",
+     "enonce": "Touche le **symétrique** de M par rapport à la droite (d).",
+     "reponse": [
+      "N"
+     ],
+     "aide": "M est à 3 carreaux de (d). Où est le point à 3 carreaux de l’autre côté, à la même hauteur ?",
+     "explication": "M est à 3 carreaux à gauche de (d), à la hauteur 5. Son symétrique est 3 carreaux à droite, à la même hauteur : c’est **N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On appelle M′ le symétrique de M. Combien de carreaux séparent M de M′ ?",
+     "unite": "carreaux",
+     "reponse": 6,
+     "aide": "M et M′ sont à la même distance de (d), chacun d’un côté.",
+     "explication": "M est à 3 carreaux de l’axe, M′ aussi, de l’autre côté : MM′ = 3 + 3 = **6 carreaux**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La droite (d) est la ___ du segment [MM′].",
+     "reponses": [
+      [
+       "médiatrice",
+       "mediatrice"
+      ]
+     ],
+     "banque": [
+      "médiatrice",
+      "médiane",
+      "hauteur",
+      "bissectrice"
+     ],
+     "aide": "Cette droite est perpendiculaire à [MM′] en son milieu.",
+     "explication": "L’axe de symétrie est perpendiculaire à [MM′] et passe par son milieu : c’est la **médiatrice** de [MM′]."
+    }
+   ]
+  },
+  {
+   "chapitre": "19cfb78c-c238-52eb-b5fd-40f855ef8e6d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le demi-tour du triangle",
+   "competence": "geometrie",
+   "situation": "Sur un logo, le triangle ABC a subi une symétrie centrale de centre O : on obtient le triangle A′B′C′. Le logo est dessiné à l’échelle, en cm.",
+   "documents": [
+    {
+     "id": "logo",
+     "type": "figure",
+     "titre": "Le logo",
+     "source": "Logo dessiné pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 3,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "B",
+       "x": 4.5,
+       "y": 2,
+       "position": "so"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 7,
+       "position": "no"
+      },
+      {
+       "id": "O",
+       "x": 6,
+       "y": 4,
+       "position": "s"
+      },
+      {
+       "id": "A2",
+       "x": 9,
+       "y": 3,
+       "position": "se",
+       "nom": "A′"
+      },
+      {
+       "id": "B2",
+       "x": 7.5,
+       "y": 6,
+       "position": "ne",
+       "nom": "B′"
+      },
+      {
+       "id": "C2",
+       "x": 7,
+       "y": 1,
+       "position": "se",
+       "nom": "C′"
+      }
+     ],
+     "segments": [
+      {
+       "de": "B",
+       "a": "O",
+       "longueur": "2,5 cm"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "A2",
+        "B2",
+        "C2"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "logo",
+     "enonce": "Touche le **symétrique du point C** par rapport au centre O.",
+     "reponse": [
+      "C2"
+     ],
+     "aide": "Le symétrique de C est sur la droite (CO), de l’autre côté de O, à la même distance.",
+     "explication": "O doit être le milieu de [CC′]. En partant de C, on traverse O et on avance d’autant : on arrive en **C′**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure le segment [BB′], en cm ?",
+     "unite": "cm",
+     "reponse": 5,
+     "aide": "O est le milieu de [BB′].",
+     "explication": "O est le milieu de [BB′] : BB′ = 2 × BO = 2 × 2,5 = **5 cm**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : pour tout point M et son symétrique M′.",
+     "texte": "Le centre O est le ___ du segment [MM′], et les points M, O et M′ sont ___.",
+     "reponses": [
+      [
+       "milieu"
+      ],
+      [
+       "alignés",
+       "alignes"
+      ]
+     ],
+     "banque": [
+      "milieu",
+      "alignés",
+      "médiatrice",
+      "parallèles"
+     ],
+     "aide": "La symétrie centrale est un demi-tour autour de O.",
+     "explication": "O est le **milieu** de [MM′] : les points M, O et M′ sont donc **alignés**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de l’aire du triangle A′B′C′ par rapport à celle de ABC ?",
+     "options": [
+      "Elle est égale, car la symétrie centrale conserve les aires",
+      "Elle est deux fois plus grande, car on double les distances",
+      "Elle est deux fois plus petite, car on retourne la figure",
+      "On ne peut pas savoir sans calculer les deux aires"
+     ],
+     "reponse": 0,
+     "aide": "Une figure et son image sont superposables.",
+     "explication": "La symétrie centrale conserve les longueurs, les angles et les **aires** : les deux triangles sont superposables."
+    }
+   ]
+  },
+  {
+   "chapitre": "19cfb78c-c238-52eb-b5fd-40f855ef8e6d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vitrail de la chapelle",
+   "competence": "geometrie",
+   "situation": "Pour le vitrail d’une chapelle, le maître verrier dessine la moitié gauche ABCD d’un motif, puis complète la droite. Il hésite entre une symétrie par rapport à l’axe (d) et une symétrie de centre O. Il note aussi les formes de quatre verrières.",
+   "documents": [
+    {
+     "id": "vitrail",
+     "type": "figure",
+     "titre": "La moitié gauche du vitrail",
+     "source": "Figure dessinée pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 9
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 2,
+       "y": 5,
+       "position": "o"
+      },
+      {
+       "id": "B",
+       "x": 3,
+       "y": 7,
+       "position": "no"
+      },
+      {
+       "id": "C",
+       "x": 5,
+       "y": 6,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 4,
+       "y": 3,
+       "position": "so"
+      },
+      {
+       "id": "O",
+       "x": 6,
+       "y": 4,
+       "position": "se"
+      },
+      {
+       "id": "P",
+       "x": 9,
+       "y": 7,
+       "position": "ne"
+      },
+      {
+       "id": "Q",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "R",
+       "x": 3,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "S",
+       "x": 8,
+       "y": 7,
+       "position": "ne"
+      },
+      {
+       "id": "U",
+       "x": 6,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "V",
+       "x": 6,
+       "y": 9,
+       "cache": true
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "U",
+        "V"
+       ],
+       "nom": "(d)",
+       "style": "axe"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "verrieres",
+     "type": "tableau",
+     "titre": "Les quatre verrières",
+     "source": "Données inventées pour l’exercice",
+     "colonnes": [
+      "Verrière",
+      "Axes de symétrie",
+      "Centre de symétrie"
+     ],
+     "lignes": [
+      [
+       "Verrière 1",
+       "4",
+       "oui"
+      ],
+      [
+       "Verrière 2",
+       "0",
+       "oui"
+      ],
+      [
+       "Verrière 3",
+       "3",
+       "non"
+      ],
+      [
+       "Verrière 4",
+       "1",
+       "non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vitrail",
+     "enonce": "Touche le **symétrique du point B par rapport à l’axe (d)**.",
+     "reponse": [
+      "P"
+     ],
+     "aide": "B est à 3 carreaux de (d), à la hauteur 7 : cherche le point à 3 carreaux de l’autre côté, à la même hauteur.",
+     "explication": "Le symétrique par rapport à la droite (d) garde la même hauteur (7) et se place à 3 carreaux de l’autre côté de l’axe : c’est **P**. Q est le symétrique de B par rapport au point O."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le point A est en (2 ; 5). Quelle est l’**abscisse** de son symétrique par rapport à l’axe (d), qui est la droite d’abscisse 6 ?",
+     "reponse": 10,
+     "aide": "A est à 4 carreaux de l’axe : combien manque-t-il à partir de l’axe, de l’autre côté ?",
+     "explication": "A est à 6 − 2 = 4 carreaux de l’axe. Son symétrique est 4 carreaux de l’autre côté : 6 + 4 = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la symétrie de **centre O (6 ; 4)**, quelle est l’**ordonnée** du symétrique de A (2 ; 5) ?",
+     "reponse": 3,
+     "aide": "O est le milieu de [AA″] : l’ordonnée de O est la moyenne des deux ordonnées.",
+     "explication": "O est le milieu : (5 + y) ÷ 2 = 4, donc y = 8 − 5 = **3**. Le symétrique de A est le point (10 ; 3)."
+    },
+    {
+     "type": "association",
+     "enonce": "Chaque verrière a l’une de ces formes. Associe-les d’après le tableau.",
+     "paires": [
+      [
+       "Verrière 1",
+       "Carré"
+      ],
+      [
+       "Verrière 2",
+       "Parallélogramme"
+      ],
+      [
+       "Verrière 3",
+       "Triangle équilatéral"
+      ],
+      [
+       "Verrière 4",
+       "Triangle isocèle"
+      ]
+     ],
+     "aide": "Compte les axes de symétrie et regarde s’il y a un centre.",
+     "explication": "Le **carré** a 4 axes et un centre. Le **parallélogramme** a un centre mais aucun axe. Le **triangle équilatéral** a 3 axes mais pas de centre. Le **triangle isocèle** a 1 axe et pas de centre."
+    }
+   ]
+  },
+  {
+   "chapitre": "976943e2-0af9-5422-9763-97684cd3b157",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le potager de Mamie",
+   "competence": "geometrie",
+   "situation": "Mamie dessine le plan de son potager, un parallélogramme ABCD. Les côtés qui portent le même codage ont la même longueur, et le côté [AB] mesure 6 cm. Elle a aussi tracé les deux diagonales.",
+   "documents": [
+    {
+     "id": "potager",
+     "type": "figure",
+     "titre": "Le plan du potager",
+     "source": "Plan dessiné à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 8.902,
+       "y": 5.078,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 2.902,
+       "y": 5.078,
+       "position": "no"
+      },
+      {
+       "id": "O",
+       "x": 4.951,
+       "y": 3.039,
+       "position": "s"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "codage": 1,
+       "longueur": "6 cm"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "codage": 2
+      },
+      {
+       "id": "cd",
+       "de": "C",
+       "a": "D",
+       "codage": 1
+      },
+      {
+       "id": "da",
+       "de": "D",
+       "a": "A",
+       "codage": 2
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "style": "pointilles"
+      },
+      {
+       "de": "B",
+       "a": "D",
+       "style": "pointilles"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "D",
+       "mesure": "65°"
+      },
+      {
+       "sommet": "B",
+       "de": "A",
+       "a": "C",
+       "mesure": "?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "potager",
+     "enonce": "Touche le **centre de symétrie** du potager.",
+     "reponse": [
+      "O"
+     ],
+     "aide": "C’est le point où se coupent les deux diagonales.",
+     "explication": "Le centre de symétrie d’un parallélogramme est le point d’intersection de ses diagonales : **O**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure le côté [DC], en cm ?",
+     "unite": "cm",
+     "reponse": 6,
+     "aide": "Cherche le côté codé comme [AB].",
+     "explication": "Dans un parallélogramme, les côtés opposés ont la même longueur : DC = AB = **6 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "potager",
+     "enonce": "Touche le côté **parallèle** à [AD].",
+     "reponse": [
+      "bc"
+     ],
+     "aide": "Dans un parallélogramme, les côtés opposés sont parallèles.",
+     "explication": "Le côté opposé à [AD] est **[BC]** : il lui est parallèle (et de même longueur)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que mesure l’angle ∠ABC marqué « ? », en degrés ?",
+     "unite": "°",
+     "reponse": 115,
+     "aide": "Deux angles consécutifs d’un parallélogramme sont supplémentaires.",
+     "explication": "∠DAB et ∠ABC sont consécutifs : leur somme vaut 180°. ∠ABC = 180 − 65 = **115°**."
+    }
+   ]
+  },
+  {
+   "chapitre": "976943e2-0af9-5422-9763-97684cd3b157",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carreau de faïence",
+   "competence": "raisonner",
+   "situation": "Un artisan fabrique un carreau de faïence ABCD. Il a codé les diagonales : elles se coupent en O, à angle droit. Quelle est la nature exacte de ce quadrilatère ?",
+   "documents": [
+    {
+     "id": "carreau",
+     "type": "figure",
+     "titre": "Le carreau ABCD",
+     "source": "Dessin à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 4,
+       "position": "o"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 7,
+       "position": "n"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 4,
+       "position": "e"
+      },
+      {
+       "id": "D",
+       "x": 5,
+       "y": 1,
+       "position": "s"
+      },
+      {
+       "id": "O",
+       "x": 5,
+       "y": 4,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "B",
+       "a": "A",
+       "longueur": "5 cm"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "de": "A",
+       "a": "O",
+       "codage": 1,
+       "longueur": "4 cm"
+      },
+      {
+       "de": "O",
+       "a": "C",
+       "codage": 1
+      },
+      {
+       "de": "B",
+       "a": "O",
+       "codage": 2
+      },
+      {
+       "de": "O",
+       "a": "D",
+       "codage": 2
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "O",
+       "de": "A",
+       "a": "B",
+       "droit": true
+      }
+     ],
+     "textes": [
+      {
+       "x": 5.85,
+       "y": 5.5,
+       "texte": "3 cm",
+       "teinte": "bleu"
+      }
+     ]
+    },
+    {
+     "id": "diagonales",
+     "type": "tableau",
+     "titre": "Les diagonales de chaque figure",
+     "source": "Tableau du cours",
+     "colonnes": [
+      "Figure",
+      "Même milieu",
+      "Même longueur",
+      "Angle droit"
+     ],
+     "lignes": [
+      [
+       "Parallélogramme",
+       "oui",
+       "non",
+       "non"
+      ],
+      [
+       "Rectangle",
+       "oui",
+       "oui",
+       "non"
+      ],
+      [
+       "Losange",
+       "oui",
+       "non",
+       "oui"
+      ],
+      [
+       "Carré",
+       "oui",
+       "oui",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "diagonales",
+     "enonce": "Touche, dans le tableau, **le nom de la figure** qui correspond au carreau ABCD.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Dans ABCD, les diagonales se coupent en leur milieu, sont perpendiculaires, mais n’ont pas la même longueur (AC = 8 cm, BD = 6 cm).",
+     "explication": "Même milieu : oui (codages). Perpendiculaires : oui (angle droit). Même longueur : non (8 cm et 6 cm). C’est un **losange**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **périmètre** du carreau, en cm ? (AB = 5 cm)",
+     "unite": "cm",
+     "reponse": 20,
+     "aide": "Un losange a quatre côtés égaux.",
+     "explication": "Un losange a ses quatre côtés égaux : 4 × 5 = **20 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire** du carreau, en cm² ? (aire du losange = (D × d) ÷ 2, avec D et d les deux diagonales)",
+     "unite": "cm²",
+     "reponse": 24,
+     "aide": "Les diagonales entières sont deux fois plus longues que AO et BO : AC = 2 × 4 et BD = 2 × 3.",
+     "explication": "O est le milieu des diagonales : AC = 8 cm et BD = 6 cm. Aire = (8 × 6) ÷ 2 = **24 cm²**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle information supplémentaire permettrait d’affirmer que ABCD est un **carré** ?",
+     "options": [
+      "Ses diagonales auraient la même longueur",
+      "Ses diagonales seraient perpendiculaires",
+      "Ses diagonales se couperaient en leur milieu",
+      "Ses côtés opposés seraient parallèles"
+     ],
+     "reponse": 0,
+     "aide": "Un carré est à la fois un rectangle et un losange : que manque-t-il à ce losange ?",
+     "explication": "ABCD est déjà un losange (diagonales perpendiculaires, milieu commun). Pour être aussi un rectangle, il lui faut des diagonales de **même longueur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "976943e2-0af9-5422-9763-97684cd3b157",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le cadre de la vitrine",
+   "competence": "argumenter",
+   "situation": "Un menuisier fabrique un cadre EFGH pour une vitrine. Il a mesuré les diagonales : elles semblent se couper en leur milieu M. Hugo et Léa discutent de la manière de démontrer que EFGH est un parallélogramme.",
+   "documents": [
+    {
+     "id": "cadre",
+     "type": "figure",
+     "titre": "Le cadre EFGH",
+     "source": "Plan dessiné à l’échelle pour l’exercice",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 6.5
+     },
+     "points": [
+      {
+       "id": "E",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "F",
+       "x": 9,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "G",
+       "x": 11,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "H",
+       "x": 3,
+       "y": 5,
+       "position": "no"
+      },
+      {
+       "id": "M",
+       "x": 6,
+       "y": 3,
+       "position": "s"
+      },
+      {
+       "id": "K",
+       "x": 3,
+       "y": 1,
+       "position": "so"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ef",
+       "de": "E",
+       "a": "F",
+       "longueur": "8 cm"
+      },
+      {
+       "id": "fg",
+       "de": "F",
+       "a": "G"
+      },
+      {
+       "id": "gh",
+       "de": "G",
+       "a": "H"
+      },
+      {
+       "id": "he",
+       "de": "H",
+       "a": "E"
+      },
+      {
+       "de": "E",
+       "a": "M",
+       "codage": 1
+      },
+      {
+       "de": "M",
+       "a": "G",
+       "codage": 1
+      },
+      {
+       "de": "F",
+       "a": "M",
+       "codage": 2
+      },
+      {
+       "de": "M",
+       "a": "H",
+       "codage": 2
+      },
+      {
+       "id": "hk",
+       "de": "H",
+       "a": "K",
+       "style": "pointilles",
+       "longueur": "4 cm"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "K",
+       "de": "H",
+       "a": "F",
+       "droit": true
+      }
+     ]
+    },
+    {
+     "id": "discussion",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La discussion de Hugo et Léa",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Les côtés [EF] et [HG] ont la même longueur, donc EFGH est un parallélogramme."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Pas si vite : ça ne suffit pas. Moi, je regarde les diagonales."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété du codage de la figure permet de démontrer que EFGH est un parallélogramme ?",
+     "options": [
+      "Ses diagonales se coupent en leur milieu",
+      "Ses quatre côtés sont égaux",
+      "Ses diagonales sont perpendiculaires",
+      "Il possède un angle droit"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les petits traits sur les diagonales, autour du point M.",
+     "explication": "Les deux diagonales sont codées en leur milieu M : un quadrilatère dont les **diagonales se coupent en leur milieu** est un parallélogramme."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la rédaction de la démonstration.",
+     "items": [
+      "Les diagonales [EG] et [FH] ont le même milieu M (codage).",
+      "Or un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme.",
+      "Donc EFGH est un parallélogramme."
+     ],
+     "aide": "Donnée, propriété, conclusion.",
+     "explication": "On cite **la donnée** (le milieu commun), puis **la propriété** employée, et on termine par **la conclusion**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’argument de Hugo ne suffit-il pas ?",
+     "options": [
+      "Il faut aussi que ces deux côtés soient parallèles",
+      "Il faut que les quatre côtés soient égaux",
+      "Il faut que ces côtés fassent un angle droit",
+      "Il faut que les diagonales soient perpendiculaires"
+     ],
+     "reponse": 0,
+     "aide": "Dans la liste des façons de démontrer, un seul critère parle de deux côtés opposés.",
+     "explication": "Deux côtés opposés de même longueur ne suffisent pas : il faut qu’ils soient **à la fois parallèles et de même longueur**."
+    },
+    {
+     "type": "zone",
+     "document": "cadre",
+     "enonce": "Touche la **hauteur** du parallélogramme relative à la base [EF].",
+     "reponse": [
+      "hk"
+     ],
+     "aide": "Une hauteur est perpendiculaire à la base : cherche le petit carré.",
+     "explication": "La hauteur relative à [EF] est **[HK]** : elle est perpendiculaire à la base (angle droit en K) et mesure 4 cm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire** du parallélogramme EFGH, en cm² ?",
+     "unite": "cm²",
+     "reponse": 32,
+     "aide": "Aire d’un parallélogramme : base × hauteur.",
+     "explication": "Base EF = 8 cm, hauteur HK = 4 cm : aire = 8 × 4 = **32 cm²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d9ae244-c659-5946-9fac-e27dddca6eeb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’aquarium de Noé",
+   "competence": "calculer",
+   "situation": "Noé a reçu un aquarium en forme de pavé droit. Le vendeur a écrit ses dimensions en décimètres sur le schéma. Noé veut savoir combien d’eau il peut y verser.",
+   "documents": [
+    {
+     "id": "aquarium",
+     "type": "solide",
+     "titre": "L’aquarium (dimensions en dm)",
+     "longueur": 5,
+     "largeur": 3,
+     "hauteur": 2,
+     "cotes": true,
+     "unite": "dm",
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** de l’aquarium, en dm³ ?",
+     "unite": "dm³",
+     "reponse": 30,
+     "aide": "Volume d’un pavé droit : longueur × largeur × hauteur.",
+     "explication": "V = L × l × h = 5 × 3 × 2 = **30 dm³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de litres d’eau l’aquarium contient-il quand il est plein ?",
+     "options": [
+      "30 L",
+      "300 L",
+      "3 L",
+      "3 000 L"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Un volume de 1 dm³ correspond à une contenance de 1 L.",
+     "explication": "Comme **1 dm³ = 1 L**, un volume de 30 dm³ contient **30 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Noé remplit l’aquarium d’eau seulement jusqu’à une hauteur de 1 dm. Combien de litres d’eau a-t-il versés ?",
+     "unite": "L",
+     "reponse": 15,
+     "aide": "L’eau forme un pavé de même longueur et même largeur, mais de hauteur 1 dm.",
+     "explication": "Volume d’eau : 5 × 3 × 1 = 15 dm³, soit **15 L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d9ae244-c659-5946-9fac-e27dddca6eeb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La pyramide du bac à sable",
+   "competence": "geometrie",
+   "situation": "Dans un bac à sable, Louise moule une pyramide à base carrée : 6 cm de côté. Elle repère sur son schéma la hauteur de la pyramide, la hauteur d’une face triangulaire et une arête.",
+   "documents": [
+    {
+     "id": "pyramide",
+     "type": "schema",
+     "titre": "La pyramide de Louise",
+     "largeur": 320,
+     "hauteur": 260,
+     "source": "Schéma non à l’échelle",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         160,
+         40
+        ],
+        [
+         40,
+         215
+        ],
+        [
+         200,
+         215
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         160,
+         40
+        ],
+        [
+         200,
+         215
+        ],
+        [
+         280,
+         170
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        120,
+        170
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        170
+       ],
+       "a": [
+        40,
+        215
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        170
+       ],
+       "a": [
+        280,
+        170
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        280,
+        170
+       ],
+       "id": "arete",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        160,
+        192.5
+       ],
+       "style": "pointilles",
+       "id": "hauteur",
+       "zone": true,
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        120,
+        215
+       ],
+       "id": "apotheme",
+       "zone": true,
+       "epaisseur": 3
+      },
+      {
+       "forme": "etiquette",
+       "x": 238,
+       "y": 85,
+       "texte": "4 cm",
+       "vers": [
+        160,
+        120
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 62,
+       "y": 105,
+       "texte": "5 cm",
+       "vers": [
+        135,
+        150
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 240,
+       "texte": "6 cm",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pyramide",
+     "enonce": "Touche la **hauteur de la pyramide**.",
+     "reponse": [
+      "hauteur"
+     ],
+     "aide": "La hauteur part du sommet et tombe perpendiculairement à la base, pas sur un côté.",
+     "explication": "La hauteur de la pyramide part du sommet et rejoint la base à **angle droit**, en son centre : c’est le pointillé vertical, de 4 cm. Le segment de 5 cm est la hauteur d’une face triangulaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** de la pyramide, en cm³ ? (volume = (aire de la base × hauteur) ÷ 3)",
+     "unite": "cm³",
+     "reponse": 48,
+     "aide": "La base est un carré de 6 cm de côté : calcule son aire, puis utilise la hauteur de la pyramide (pas celle de la face).",
+     "explication": "Aire de la base : 6 × 6 = 36 cm². Volume : (36 × 4) ÷ 3 = 144 ÷ 3 = **48 cm³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel serait le volume d’un **prisme droit** de même base et de même hauteur (4 cm), en cm³ ?",
+     "unite": "cm³",
+     "reponse": 144,
+     "aide": "Pour un prisme : aire de la base × hauteur, sans diviser par 3.",
+     "explication": "V = aire de la base × hauteur = 36 × 4 = **144 cm³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de pyramides pleines de sable faut-il verser pour remplir ce prisme ?",
+     "options": [
+      "2",
+      "3",
+      "4",
+      "6"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Compare 144 cm³ et 48 cm³.",
+     "explication": "144 ÷ 48 = **3**. Une pyramide occupe exactement le **tiers** du prisme de même base et de même hauteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "8d9ae244-c659-5946-9fac-e27dddca6eeb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bassin de la ferme",
+   "competence": "modeliser",
+   "situation": "Chez Ambre, un bassin en forme de pavé droit sert d’abreuvoir. Un camion doit livrer un tas de sable pour les travaux. Elle regarde la fiche du bassin et le bon de livraison avant d’organiser le chantier.",
+   "documents": [
+    {
+     "id": "bassin",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "La fiche du bassin",
+     "entete": "Bassin rectangulaire",
+     "sousTitre": "Plan de la ferme",
+     "emoji": "🚰",
+     "lignes": [
+      {
+       "texte": "Longueur",
+       "valeur": "4 m",
+       "id": "long"
+      },
+      {
+       "texte": "Largeur",
+       "valeur": "250 cm",
+       "id": "larg"
+      },
+      {
+       "texte": "Profondeur",
+       "valeur": "80 cm",
+       "id": "prof"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "livraison",
+     "type": "tableau",
+     "titre": "Le bon de livraison",
+     "source": "Bon inventé pour l’exercice",
+     "colonnes": [
+      "Matériau",
+      "Forme du tas",
+      "Dimensions"
+     ],
+     "lignes": [
+      [
+       "Sable",
+       "pyramide à base carrée",
+       "côté 3 m, hauteur 2 m"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bassin",
+     "enonce": "Touche la dimension du bassin qui **n’est pas écrite en mètres**.",
+     "reponse": [
+      "larg"
+     ],
+     "aide": "Cherche l’unité écrite après chaque nombre.",
+     "explication": "La largeur est donnée en **cm** (250 cm), les deux autres dimensions en mètres. Avant de calculer, il faut tout exprimer dans la même unité : 250 cm = 2,5 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume** du bassin, en m³ ?",
+     "unite": "m³",
+     "reponse": 8,
+     "aide": "Convertis la largeur et la profondeur en mètres, puis multiplie les trois dimensions.",
+     "explication": "Largeur : 250 cm = 2,5 m. Profondeur : 80 cm = 0,8 m. V = 4 × 2,5 × 0,8 = **8 m³**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de litres d’eau le bassin contient-il quand il est plein ?",
+     "options": [
+      "8 000 L",
+      "800 L",
+      "80 L",
+      "80 000 L"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Un mètre cube vaut 1 000 litres.",
+     "explication": "Comme 1 m³ = 1 000 L, un volume de 8 m³ contient 8 × 1 000 = **8 000 L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **volume du tas de sable**, en m³ ? (pyramide : (aire de la base × hauteur) ÷ 3)",
+     "unite": "m³",
+     "reponse": 6,
+     "aide": "Aire de la base carrée : 3 × 3. Puis multiplie par la hauteur et divise par 3.",
+     "explication": "Base : 3 × 3 = 9 m². Volume : (9 × 2) ÷ 3 = 18 ÷ 3 = **6 m³**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Ambre vide tout le tas de sable dans le bassin vide. Il reste de la place : combien de **litres** pourrait-on encore y mettre ?",
+     "unite": "L",
+     "reponse": 2000,
+     "aide": "Compare le volume du bassin et celui du tas, puis convertis la différence en litres.",
+     "explication": "8 − 6 = 2 m³ de place restante, soit 2 × 1 000 = **2 000 L**."
+    }
+   ]
+  }
+ ]
+}

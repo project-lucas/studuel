@@ -1,0 +1,3298 @@
+{
+ "niveau": "2de",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "b14995b7-4d6a-5eaa-8cd0-71ba94a53e56",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les souvenirs de Gran",
+   "competence": "comprendre-langue",
+   "situation": "Ben envoie une photo de sa grand-mère au bord de la mer. Elle lui raconte comment elle vivait autrefois. Repère comment elle parle de ses anciennes habitudes.",
+   "documents": [
+    {
+     "id": "gran",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Gran",
+       "emoji": "👵",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Gran, you look so relaxed in this photo!"
+      },
+      {
+       "qui": "Gran",
+       "texte": "I [[u|used]] [[u|to]] live in a noisy flat. Now I live by the sea."
+      },
+      {
+       "qui": "Gran",
+       "texte": "Every morning I [[w|would]] take the 7.15 train to work. Now I walk on the beach with my dog."
+      },
+      {
+       "qui": "Ben",
+       "texte": "It sounds so different!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gran",
+     "reponse": [
+      "u"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui montrent que Gran ne vit plus dans un appartement bruyant.",
+     "aide": "Cherche la structure qui parle d’un état passé, aujourd’hui terminé.",
+     "explication": "**used to** + base verbale exprime un état ou une habitude passés et révolus : Gran a vécu dans un appartement bruyant, mais ce n’est plus le cas."
+    },
+    {
+     "type": "zone",
+     "document": "gran",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le mot qui annonce une action répétée tous les matins dans le passé.",
+     "aide": "Il sert à raconter une habitude passée, surtout dans un récit.",
+     "explication": "**would** + base verbale exprime une habitude passée répétée : chaque matin, Gran prenait le train."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la négation.",
+     "texte": "Gran didn’t ___ live by the sea when she was young.",
+     "reponses": [
+      [
+       "use"
+      ]
+     ],
+     "banque": [
+      "use",
+      "used",
+      "using",
+      "uses"
+     ],
+     "aide": "À la forme négative, avec *didn’t*, la structure perd son -d.",
+     "explication": "À la négation, on écrit **didn’t use to** : *didn’t* porte déjà le prétérit, donc *use* perd son -d."
+    }
+   ]
+  },
+  {
+   "chapitre": "b14995b7-4d6a-5eaa-8cd0-71ba94a53e56",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Maya, hier et aujourd’hui",
+   "competence": "manier-langue",
+   "situation": "Maya a déménagé de Leeds à Bath. Sa vie a changé : son tableau compare les habitudes de ses dix ans et celles d’aujourd’hui.",
+   "documents": [
+    {
+     "id": "maya",
+     "type": "tableau",
+     "titre": "Maya’s life",
+     "colonnes": [
+      "",
+      "When Maya was ten",
+      "Today"
+     ],
+     "lignes": [
+      [
+       "Home",
+       "a flat in Leeds",
+       "a house in Bath"
+      ],
+      [
+       "Saturday",
+       "play football",
+       "go swimming"
+      ],
+      [
+       "School run",
+       "walk with her dad",
+       "take the bus"
+      ],
+      [
+       "August",
+       "visit her gran by the sea",
+       "work in a café"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maya",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche la case qui dit comment Maya va à l’école aujourd’hui.",
+     "aide": "Cherche la ligne « School run » et la colonne « Today ».",
+     "explication": "Aujourd’hui, Maya **takes the bus** : c’est une habitude présente, qui se dit au présent simple."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris une phrase sur le logement de Maya quand elle avait dix ans. Le premier mot est « Maya ».",
+     "items": [
+      "Maya",
+      "used",
+      "to",
+      "live",
+      "in",
+      "a",
+      "flat"
+     ],
+     "aide": "Il s’agit d’un état passé révolu : la structure est *used to* + base verbale.",
+     "explication": "**Maya used to live in a flat** : *used to* + base verbale pour un état passé qui n’existe plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase NE PEUT PAS se dire avec « would » ?",
+     "options": [
+      "Maya would live in a flat in Leeds.",
+      "Maya would play football every Saturday.",
+      "Maya would walk to school with her dad.",
+      "Maya would visit her gran every August."
+     ],
+     "reponse": 0,
+     "aide": "*Would* accepte des actions répétées, pas des états. Quel verbe est un état ?",
+     "explication": "**Maya would live in a flat** est impossible : *live* décrit ici un état, et *would* refuse les états. Pour un état passé, seul *used to* convient."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase à ce qu’elle exprime.",
+     "paires": [
+      [
+       "I used to live in Leeds.",
+       "Autrefois oui, plus maintenant"
+      ],
+      [
+       "I’m used to the rain.",
+       "J’y suis habitué"
+      ],
+      [
+       "We would visit Gran every August.",
+       "Habitude passée répétée, dans un récit"
+      ],
+      [
+       "I usually walk to school.",
+       "Habitude présente"
+      ]
+     ],
+     "aide": "Repère le *be used to*, qui parle d’un état actuel, et le présent simple avec *usually*.",
+     "explication": "**used to** : révolu ; **be used to** : habitué ; **would** : habitude répétée du récit ; présent simple + *usually* : habitude présente."
+    }
+   ]
+  },
+  {
+   "chapitre": "b14995b7-4d6a-5eaa-8cd0-71ba94a53e56",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un nouveau départ à Glasgow",
+   "competence": "manier-langue",
+   "situation": "Sam vient de déménager de Cardiff à Glasgow pour un nouveau travail. Il écrit à son amie Aisha et a noté son emploi du temps avant et après.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Sam’s email",
+     "blocs": [
+      "Dear Aisha,",
+      "Glasgow is great! In Cardiff I used to cycle to work, but here I take the underground. At first I wasn’t used to the crowds, but now I’m getting used to them. I’m also used to [[g|getting]] up early, because the office opens at seven. My neighbour says I’ll soon be used to [[g|living]] in the rain!",
+      "See you soon, Sam"
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    },
+    {
+     "id": "emploi",
+     "type": "tableau",
+     "titre": "Sam’s routine",
+     "colonnes": [
+      "",
+      "Cardiff",
+      "Glasgow"
+     ],
+     "lignes": [
+      [
+       "Work",
+       "cycle",
+       "underground"
+      ],
+      [
+       "Wake-up",
+       "7.30",
+       "6.00"
+      ],
+      [
+       "Weather",
+       "dry",
+       "rainy"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux verbes en -ING qui suivent « be used to ».",
+     "aide": "Dans *be used to*, *to* est une préposition : le verbe qui suit prend -ING.",
+     "explication": "**getting** et **living** : après *be used to*, *used* est un adjectif et *to* une préposition, donc le verbe se met en -ING."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la lettre et le tableau, quelle phrase est exacte ?",
+     "options": [
+      "Sam used to cycle to work, but now he takes the underground.",
+      "Sam is used to cycle to work, and he still does it.",
+      "Sam used to take the underground, but now he cycles.",
+      "Sam is getting used to cycling to work in Glasgow."
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Work » : que faisait Sam à Cardiff, et que fait-il à Glasgow ?",
+     "explication": "**Sam used to cycle to work, but now he takes the underground** : *used to* exprime une habitude passée terminée ; le tableau confirme le changement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après la ligne « Wake-up ».",
+     "texte": "Sam used to get up at 7.30. Now he’s used to ___ up at six.",
+     "reponses": [
+      [
+       "getting"
+      ]
+     ],
+     "banque": [
+      "getting",
+      "get",
+      "got",
+      "gets"
+     ],
+     "aide": "*Be used to* est suivi d’un verbe en -ING.",
+     "explication": "**getting** : après *be used to*, on emploie le verbe en -ING (*he’s used to getting up*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon ce qu’elle exprime.",
+     "categories": [
+      "Passé révolu (used to)",
+      "Habitué (be used to + -ING)",
+      "Habitude présente"
+     ],
+     "items": [
+      [
+       "I used to cycle to work.",
+       0
+      ],
+      [
+       "I’m used to getting up at six.",
+       1
+      ],
+      [
+       "I take the underground every day.",
+       2
+      ],
+      [
+       "He used to live in Cardiff.",
+       0
+      ],
+      [
+       "She’s used to working late.",
+       1
+      ],
+      [
+       "We often walk to the station.",
+       2
+      ]
+     ],
+     "aide": "Cherche *used to* + base verbale, *be used to* + -ING, ou un simple présent avec *every day* / *often*.",
+     "explication": "*Used to* + base verbale : passé révolu ; *be used to* + -ING : habitué ; présent simple + adverbe : habitude présente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures plus tôt Sam se lève-t-il à Glasgow qu’à Cardiff ?",
+     "reponse": 1.5,
+     "unite": "h",
+     "aide": "Compare 7.30 et 6.00 : de 6.00 à 7.30, il y a une heure et demie.",
+     "explication": "De 6.00 à 7.30, il y a **1,5 h** (1 h 30)."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd47bfd3-6bc0-5c8d-b855-b6963b1ec465",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les règles du camp Willow",
+   "competence": "comprendre-langue",
+   "situation": "Lena est en colonie de vacances au camp Willow. L’affiche du camp explique ce que le directeur, Mr Hill, impose, permet ou organise.",
+   "documents": [
+    {
+     "id": "regles",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Summer camp rules",
+     "sousTitre": "Camp Willow — week 1",
+     "emoji": "⛺",
+     "lignes": [
+      {
+       "texte": "Mr Hill makes us clean the kitchen.",
+       "id": "l1"
+      },
+      {
+       "texte": "Mr Hill lets us choose the evening game.",
+       "id": "l2"
+      },
+      {
+       "texte": "Mr Hill gets the cook to prepare our snacks.",
+       "id": "l3"
+      }
+     ],
+     "pied": "Have fun!",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regles",
+     "reponse": [
+      "l1"
+     ],
+     "enonce": "Touche la ligne où les enfants sont obligés : ils n’ont pas le choix.",
+     "aide": "Quel verbe exprime la contrainte ?",
+     "explication": "**Mr Hill makes us clean the kitchen** : *make* exprime la contrainte, suivi du complément et de la base verbale."
+    },
+    {
+     "type": "zone",
+     "document": "regles",
+     "reponse": [
+      "l2"
+     ],
+     "enonce": "Touche la ligne où les enfants ont la permission de décider.",
+     "aide": "Quel verbe exprime la permission ?",
+     "explication": "**Mr Hill lets us choose the evening game** : *let* exprime la permission, suivi de la base verbale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le petit mot qui manque.",
+     "texte": "Lena got her brother ___ help her with the tent.",
+     "reponses": [
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "to",
+      "for",
+      "with",
+      "at"
+     ],
+     "aide": "Un seul des quatre verbes (*make, have, get, let*) prend un petit mot devant la base verbale.",
+     "explication": "**to** : *get* est le seul des quatre verbes à se construire avec *to* (*I got him to help me*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd47bfd3-6bc0-5c8d-b855-b6963b1ec465",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La facture du garage Riverside",
+   "competence": "manier-langue",
+   "situation": "Carla n’a rien réparé elle-même : elle a confié sa voiture au garage Riverside. Sa facture le montre ligne par ligne.",
+   "documents": [
+    {
+     "id": "facture",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Riverside Garage",
+     "sousTitre": "Invoice — Carla Dunn",
+     "emoji": "🔧",
+     "lignes": [
+      {
+       "texte": "Brakes checked",
+       "valeur": "£40",
+       "id": "brakes"
+      },
+      {
+       "texte": "Oil changed",
+       "valeur": "£35",
+       "id": "oil"
+      },
+      {
+       "texte": "Windscreen repaired",
+       "valeur": "£90",
+       "id": "screen"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "£165",
+       "gras": true,
+       "id": "total"
+      }
+     ],
+     "pied": "Thank you!",
+     "source": "Facture écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "facture",
+     "reponse": [
+      "oil"
+     ],
+     "enonce": "Touche la ligne qui correspond à la phrase « Carla had her oil changed ».",
+     "aide": "Cherche le service qui parle de l’huile (*oil*).",
+     "explication": "**Oil changed** : *Carla had her oil changed* veut dire qu’elle a fait changer son huile par le garage."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris la phrase : « Carla a fait vérifier ses freins. » Le premier mot est « Carla ».",
+     "items": [
+      "Carla",
+      "had",
+      "her",
+      "brakes",
+      "checked"
+     ],
+     "aide": "Structure : *have* + objet + participe passé.",
+     "explication": "**Carla had her brakes checked** : *have* + objet + participe passé, pour faire faire une chose par un tiers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Carla had her windscreen repaired » ?",
+     "options": [
+      "Carla a fait réparer son pare-brise par le garage",
+      "Carla a réparé son pare-brise elle-même, au garage",
+      "Carla a promis de réparer son pare-brise bientôt",
+      "Carla ne répare jamais son pare-brise"
+     ],
+     "reponse": 0,
+     "aide": "Qui a fait le travail, d’après la facture ?",
+     "explication": "**Carla a fait réparer son pare-brise par le garage** : *have* + objet + participe passé, l’exécutant n’est pas Carla."
+    },
+    {
+     "type": "categories",
+     "enonce": "Qui fait l’action ? Range chaque phrase.",
+     "categories": [
+      "Je le fais moi-même",
+      "Quelqu’un le fait pour moi"
+     ],
+     "items": [
+      [
+       "I cut my hair.",
+       0
+      ],
+      [
+       "I had my hair cut.",
+       1
+      ],
+      [
+       "She got her car repaired.",
+       1
+      ],
+      [
+       "He repaired his bike.",
+       0
+      ]
+     ],
+     "aide": "Cherche la structure *have / get* + objet + participe passé : l’action est confiée à un tiers.",
+     "explication": "*I cut my hair* : moi ; *I had my hair cut* et *She got her car repaired* : un professionnel ; *He repaired his bike* : lui."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd47bfd3-6bc0-5c8d-b855-b6963b1ec465",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le voyage scolaire de Zoe au pays de Galles",
+   "competence": "manier-langue",
+   "situation": "Zoe revient d’un voyage scolaire au pays de Galles. Elle raconte à son ami Jack ce que leur professeur, Mr Fox, leur a imposé, permis ou fait organiser.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Zoe’s email",
+     "blocs": [
+      "Hi Jack,",
+      "The school trip to Wales was great but tough! Mr Fox [[a|made]] us walk ten kilometres on the first day, and he let us rest only at lunch. I got my sister to lend me her camera, so I have loads of photos. When I get home, I’ll have them printed at the shop.",
+      "See you on Monday! Zoe"
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Jack",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jack",
+       "texte": "Did Mr Fox let you use your phone?"
+      },
+      {
+       "qui": "Zoe",
+       "texte": "No! They were all kept in a box."
+      },
+      {
+       "qui": "Jack",
+       "texte": "Poor you! Who took the group photo?"
+      },
+      {
+       "qui": "Zoe",
+       "texte": "Mr Fox had the hostel manager [[b|take]] it."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe qui montre que Mr Fox a imposé la longue marche : les élèves n’avaient pas le choix.",
+     "aide": "Quel verbe exprime la contrainte ?",
+     "explication": "**made** : *make* exprime la contrainte (*Mr Fox made us walk*), suivi du complément et de la base verbale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Au passif, « Mr Fox let us rest » devient…",
+     "options": [
+      "We were allowed to rest.",
+      "We were let rest.",
+      "We were let to rest.",
+      "We were made to rest."
+     ],
+     "reponse": 0,
+     "aide": "Au passif, *let* est remplacé par un autre verbe de permission, suivi de *to*.",
+     "explication": "**We were allowed to rest.** : au passif, on remplace *let* par *allow*."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le verbe qui suit « had the hostel manager » : sans *to*, avec la base verbale.",
+     "aide": "Avec *have*, on ne met pas *to* devant le verbe.",
+     "explication": "**take** : *have* + complément + base verbale, sans *to* (*Mr Fox had the manager take the photo*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le courriel de Zoe.",
+     "texte": "Zoe will have her photos ___ at the shop.",
+     "reponses": [
+      [
+       "printed"
+      ]
+     ],
+     "banque": [
+      "printed",
+      "print",
+      "printing",
+      "prints"
+     ],
+     "aide": "*Have* + objet + participe passé : l’action est faite par quelqu’un d’autre.",
+     "explication": "**printed** : *have* + objet + participe passé, le magasin imprimera les photos."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe à son sens.",
+     "paires": [
+      [
+       "make",
+       "obliger"
+      ],
+      [
+       "let",
+       "permettre"
+      ],
+      [
+       "get",
+       "persuader, obtenir de"
+      ],
+      [
+       "have",
+       "faire faire par un professionnel"
+      ]
+     ],
+     "aide": "Pense à la contrainte, à la permission, à la persuasion et au service rendu par un métier.",
+     "explication": "*Make* : obliger ; *let* : permettre ; *get* : persuader ; *have* : faire faire par quelqu’un dont c’est le rôle."
+    }
+   ]
+  },
+  {
+   "chapitre": "365a65f2-f3de-5e28-8847-39105a05c01a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le vélo de Tom",
+   "competence": "comprendre-langue",
+   "situation": "Dans le journal d’une petite ville, un article raconte une histoire arrivée à Tom : son vélo a disparu, puis a été retrouvé. Repère les verbes au passif.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Local news",
+     "blocs": [
+      "Last Friday, Tom’s bike [[p|was]] [[p|stolen]] outside the library. Nobody saw the thief.",
+      "Yesterday the bike [[p|was]] [[p|found]] in the river by a fisherman. The police returned it to Tom."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche tous les mots qui forment les deux verbes au passif.",
+     "aide": "Un passif = *be* conjugué + participe passé. Il y en a deux dans l’article.",
+     "explication": "**was stolen** et **was found** : *be* (ici au prétérit) + participe passé. *Saw* et *returned* sont des verbes actifs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’article ne dit-il pas qui a volé le vélo ?",
+     "options": [
+      "On ne sait pas qui est le voleur",
+      "Le voleur est évident pour tout le monde",
+      "Le complément d’agent est toujours interdit",
+      "Le verbe est au présent, pas au passé"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui suit : « Nobody saw the thief. »",
+     "explication": "**On ne sait pas qui est le voleur** : on emploie le passif quand l’agent est inconnu."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le passif.",
+     "texte": "The bike was ___ in the river.",
+     "reponses": [
+      [
+       "found"
+      ]
+     ],
+     "banque": [
+      "found",
+      "find",
+      "finding",
+      "finds"
+     ],
+     "aide": "Après *was*, on met le participe passé.",
+     "explication": "**found** : le passif se forme avec *be* + participe passé (*was found*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "365a65f2-f3de-5e28-8847-39105a05c01a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les nouvelles du musée de Hartley",
+   "competence": "manier-langue",
+   "situation": "Le musée de Hartley publie un bulletin mensuel. Cette fois, il parle de ses horaires, d’un vol, de travaux et d’une enquête.",
+   "documents": [
+    {
+     "id": "bulletin",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Hartley Museum News",
+     "blocs": [
+      "Hartley Museum is opened every day at nine. Last night, two paintings were stolen.",
+      "At the moment, the roof is being repaired, and the new hall will be opened in May. The police say that the case [[pp|has]] [[pp|been]] [[pp|solved]]."
+     ],
+     "source": "Bulletin imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bulletin",
+     "reponse": [
+      "pp"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois mots qui forment le verbe au present perfect passif.",
+     "aide": "Le present perfect passif se forme avec *has / have* + *been* + participe passé.",
+     "explication": "**has been solved** : *has* + *been* + participe passé, le present perfect passif."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe passif au temps qu’il porte.",
+     "paires": [
+      [
+       "is opened every day",
+       "Présent simple"
+      ],
+      [
+       "were stolen",
+       "Prétérit"
+      ],
+      [
+       "is being repaired",
+       "Présent en -ING"
+      ],
+      [
+       "will be opened",
+       "Futur"
+      ],
+      [
+       "has been solved",
+       "Present perfect"
+      ]
+     ],
+     "aide": "C’est *be* qui porte le temps : regarde sa forme (*is*, *were*, *is being*, *will be*, *has been*).",
+     "explication": "Le passif garde le même participe ; seul *be* change : *is* (présent), *were* (prétérit), *is being* (-ING), *will be* (futur), *has been* (present perfect)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris la phrase au passif : « Le rapport a été publié. » Le premier mot est « The ».",
+     "items": [
+      "The",
+      "report",
+      "has",
+      "been",
+      "published"
+     ],
+     "aide": "Present perfect passif : *has* + *been* + participe passé.",
+     "explication": "**The report has been published** : *has been* + participe passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette nuit, on a volé deux tableaux. Quelle phrase le dit ?",
+     "options": [
+      "Two paintings were stolen.",
+      "Two paintings are stolen.",
+      "Two paintings have stolen.",
+      "Two paintings was stolen."
+     ],
+     "reponse": 0,
+     "aide": "Le vol est passé et daté (« cette nuit »), et *paintings* est au pluriel.",
+     "explication": "**Two paintings were stolen.** : *be* au prétérit pluriel (*were*) + participe passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "365a65f2-f3de-5e28-8847-39105a05c01a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les prix de l’école d’Oakfield",
+   "competence": "analyser-document",
+   "situation": "À l’école d’Oakfield, trois élèves ont reçu un prix lors de la remise des récompenses. Un article parle aussi de l’ancienne bibliothèque de Millbrook, dont on raconte des choses.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Prize-giving",
+     "colonnes": [
+      "Pupil",
+      "Prize",
+      "Given by"
+     ],
+     "lignes": [
+      [
+       "Ella",
+       "a book",
+       "Mr Reed"
+      ],
+      [
+       "Sam",
+       "a medal",
+       "the head"
+      ],
+      [
+       "Nina",
+       "a trophy",
+       "Ms Grey"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "biblio",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Millbrook Library",
+     "blocs": [
+      "The old library of Millbrook is [[i|said]] to have been built in 1850. It is [[i|believed]] that the building will be closed next year, but nobody knows for sure."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prix",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui dit qui a donné la médaille.",
+     "aide": "Cherche la ligne de la médaille, puis la colonne « Given by ».",
+     "explication": "La médaille a été donnée par **the head** (colonne « Given by »)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le tableau.",
+     "texte": "Sam was ___ a medal by the head.",
+     "reponses": [
+      [
+       "given"
+      ]
+     ],
+     "banque": [
+      "given",
+      "give",
+      "gave",
+      "giving"
+     ],
+     "aide": "Après *was*, on met le participe passé.",
+     "explication": "**given** : *Sam was given a medal* — on commence par la personne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase passive correspond à « Mr Reed gave Ella a book » ?",
+     "options": [
+      "Ella was given a book by Mr Reed.",
+      "Ella gave a book by Mr Reed.",
+      "Ella was gave a book by Mr Reed.",
+      "Ella given a book was by Mr Reed."
+     ],
+     "reponse": 0,
+     "aide": "Le passif de *give* : *be* + participe passé, en commençant par la personne.",
+     "explication": "**Ella was given a book by Mr Reed.** : le participe passé de *give* est *given*, et l’anglais commence volontiers par la personne."
+    },
+    {
+     "type": "zone",
+     "document": "biblio",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes passés des tournures impersonnelles (« on dit que », « on croit que »).",
+     "aide": "Ils suivent *is* et expriment ce que l’on raconte ou pense.",
+     "explication": "**said** et **believed** : *is said to…* et *is believed that…* sont des tournures impersonnelles."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque tournure à sa traduction.",
+     "paires": [
+      [
+       "It is said that…",
+       "On dit que…"
+      ],
+      [
+       "He is said to have left",
+       "Il aurait quitté…"
+      ],
+      [
+       "It is believed that…",
+       "On croit que…"
+      ],
+      [
+       "He is said to be…",
+       "Il serait…"
+      ]
+     ],
+     "aide": "*To have* + participe passé après *is said* renvoie au passé ; *to be* au présent.",
+     "explication": "*It is said that…* : on dit que ; *is said to have left* : aurait quitté ; *is believed that…* : on croit que ; *is said to be…* : serait."
+    }
+   ]
+  },
+  {
+   "chapitre": "92c7f3de-f6a1-502a-aa3e-188bd7873580",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que Lucy a dit à Max",
+   "competence": "comprendre-langue",
+   "situation": "Lucy a dit trois choses à Max pendant la récréation. Max les répète à Sam, mais au passé : le tableau met les paroles de Lucy en face de ce que Max rapporte.",
+   "documents": [
+    {
+     "id": "paroles",
+     "type": "tableau",
+     "titre": "Lucy’s words",
+     "colonnes": [
+      "Lucy said:",
+      "Max told Sam:"
+     ],
+     "lignes": [
+      [
+       "“I am hungry.”",
+       "Lucy said she was hungry."
+      ],
+      [
+       "“I like this song.”",
+       "Lucy said she liked that song."
+      ],
+      [
+       "“I have finished.”",
+       "Lucy said she had finished."
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paroles",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case où « am » est devenu « was » au discours indirect.",
+     "aide": "Cherche la phrase de la colonne de droite qui correspond à « I am hungry ».",
+     "explication": "**Lucy said she was hungry** : un présent (*am*) recule d’un cran et devient un prétérit (*was*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le discours indirect de « I will win. »",
+     "texte": "Lucy said she ___ win.",
+     "reponses": [
+      [
+       "would"
+      ]
+     ],
+     "banque": [
+      "would",
+      "was",
+      "has",
+      "is"
+     ],
+     "aide": "Au discours indirect passé, *will* devient son équivalent au passé.",
+     "explication": "**would** : *will* devient *would* quand le verbe introducteur est au passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "Lucy told me that she was hungry.",
+      "Lucy said me that she was hungry.",
+      "Lucy told that she was hungry.",
+      "Lucy said me she hungry."
+     ],
+     "reponse": 0,
+     "aide": "Un seul des deux verbes (*say* ou *tell*) accepte un complément de personne juste après lui.",
+     "explication": "**Lucy told me that she was hungry.** : *tell* exige un complément de personne, *say* n’en a jamais (*said me* est une faute lourde)."
+    }
+   ]
+  },
+  {
+   "chapitre": "92c7f3de-f6a1-502a-aa3e-188bd7873580",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les consignes de Mr Ellis",
+   "competence": "manier-langue",
+   "situation": "Lundi, Mr Ellis a donné des consignes à la classe 2B, puis il a posé deux questions. Elena les rapporte à une camarade absente.",
+   "documents": [
+    {
+     "id": "consignes",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Mr Ellis, class 2B",
+     "sousTitre": "What he said on Monday",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "“Open your books.”",
+       "id": "l1"
+      },
+      {
+       "texte": "“Don’t talk during the test.”",
+       "id": "l2"
+      },
+      {
+       "texte": "“Where is your homework?”",
+       "id": "l3"
+      },
+      {
+       "texte": "“Do you understand?”",
+       "id": "l4"
+      }
+     ],
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "consignes",
+     "reponse": [
+      "l4"
+     ],
+     "enonce": "Touche la phrase qui, rapportée, s’introduit par « if » (il n’y a pas de mot interrogatif).",
+     "aide": "Une question sans mot interrogatif (*where, what…*) s’introduit par *if* ou *whether*.",
+     "explication": "**“Do you understand?”** : question fermée, donc *He asked if we understood*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Rapporte la question « Where is your homework? » Le premier mot est « He ».",
+     "items": [
+      "He",
+      "asked",
+      "where",
+      "our",
+      "homework",
+      "was"
+     ],
+     "aide": "Plus d’inversion ni de *do*, le verbe recule d’un cran et le pronom s’adapte.",
+     "explication": "**He asked where our homework was** : pas d’inversion, *is* devient *was*, *your* devient *our*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Rapporte l’ordre négatif « Don’t talk. »",
+     "texte": "He told us ___ to talk during the test.",
+     "reponses": [
+      [
+       "not"
+      ]
+     ],
+     "banque": [
+      "not",
+      "no",
+      "don’t",
+      "doesn’t"
+     ],
+     "aide": "Un ordre négatif se rapporte avec un infinitif négatif.",
+     "explication": "**not** : un ordre négatif devient *not to* + base verbale (*He told us not to talk*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase de Mr Ellis à sa version rapportée.",
+     "paires": [
+      [
+       "“Open your books.”",
+       "He told us to open our books."
+      ],
+      [
+       "“Don’t talk during the test.”",
+       "He told us not to talk during the test."
+      ],
+      [
+       "“Where is your homework?”",
+       "He asked where our homework was."
+      ],
+      [
+       "“Do you understand?”",
+       "He asked if we understood."
+      ]
+     ],
+     "aide": "Ordre : *told us (not) to* ; question avec mot interrogatif : *asked where* ; question fermée : *asked if*.",
+     "explication": "Ordre : infinitif (*told us to / not to*) ; question : *asked where…* sans inversion, ou *asked if…* quand il n’y a pas de mot interrogatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "92c7f3de-f6a1-502a-aa3e-188bd7873580",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’interview avant le festival",
+   "competence": "analyser-document",
+   "situation": "Une journaliste du lycée a interviewé le directeur du festival de musique. Elle a rédigé un brouillon rapportant l’interview, mais il contient deux fautes de discours indirect. À toi de les trouver.",
+   "documents": [
+    {
+     "id": "interview",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "The interview",
+     "participants": [
+      {
+       "nom": "Reporter",
+       "emoji": "🎤",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Director",
+       "emoji": "🎪",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Reporter",
+       "texte": "How do you feel today?"
+      },
+      {
+       "qui": "Director",
+       "texte": "We are very excited today. We have sold 5,000 tickets, and we will open the gates tomorrow."
+      },
+      {
+       "qui": "Reporter",
+       "texte": "Do you expect rain?"
+      },
+      {
+       "qui": "Director",
+       "texte": "Not at all!"
+      }
+     ],
+     "source": "Interview écrite pour l’exercice"
+    },
+    {
+     "id": "brouillon",
+     "type": "texte",
+     "genre": "article",
+     "titre": "The journalist’s draft",
+     "blocs": [
+      "The director said [[m|me]] that they were very excited. He said they had sold 5,000 tickets and that they would open the gates.",
+      "I asked him [[d|did]] he expect rain. He answered that he was sure the weather would be fine."
+     ],
+     "source": "Brouillon écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot en trop dans la première phrase : *say* n’a pas de complément de personne.",
+     "aide": "Cherche un pronom qui suit directement *said*.",
+     "explication": "**said me** est une faute : *say* ne prend pas de complément de personne (*He said that…* ou *He told me that…*)."
+    },
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche l’auxiliaire qui n’a rien à faire dans une question indirecte.",
+     "aide": "Dans une question indirecte, il n’y a ni inversion ni *do*.",
+     "explication": "**did** est en trop : la question indirecte s’écrit *I asked him if he expected rain*, sans *do*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Rapporte « we will open the gates tomorrow ».",
+     "texte": "He said they would open the gates ___.",
+     "reponses": [
+      [
+       "the next day"
+      ]
+     ],
+     "banque": [
+      "the next day",
+      "tomorrow",
+      "the day before",
+      "then"
+     ],
+     "aide": "Au discours indirect passé, *tomorrow* change de forme.",
+     "explication": "**the next day** : *tomorrow* devient *the next day* au discours indirect passé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris la bonne version de la question de la journaliste. Le premier mot est « I ».",
+     "items": [
+      "I",
+      "asked",
+      "him",
+      "if",
+      "he",
+      "expected",
+      "rain"
+     ],
+     "aide": "Question fermée : *if* ; le verbe recule d’un cran, sans *do*.",
+     "explication": "**I asked him if he expected rain** : *if*, pas d’inversion et *expect* devient *expected*."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot du discours direct à sa forme au discours indirect.",
+     "paires": [
+      [
+       "will",
+       "would"
+      ],
+      [
+       "must",
+       "had to"
+      ],
+      [
+       "tomorrow",
+       "the next day"
+      ],
+      [
+       "yesterday",
+       "the day before"
+      ],
+      [
+       "here",
+       "there"
+      ]
+     ],
+     "aide": "Tout se déplace d’un cran vers le passé et vers l’éloignement.",
+     "explication": "*Will* devient *would*, *must* devient *had to*, *tomorrow* devient *the next day*, *yesterday* devient *the day before*, *here* devient *there*."
+    }
+   ]
+  },
+  {
+   "chapitre": "8276dae0-32df-5f05-b2bc-df822d05522f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre repères sur l’apparence",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé sur l’apparence, Inès a placé quatre repères culturels sur une frise : un mouvement de peintres, un concours, un chanteur et une photographe.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Four landmarks",
+     "debut": 1840,
+     "fin": 2000,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "pre",
+       "date": 1848,
+       "nom": "Pre-Raphaelites"
+      },
+      {
+       "id": "miss",
+       "date": 1921,
+       "nom": "Miss America"
+      },
+      {
+       "id": "ziggy",
+       "date": 1972,
+       "nom": "Ziggy Stardust"
+      },
+      {
+       "id": "sherman",
+       "date": 1977,
+       "nom": "Film Stills"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "pre"
+     ],
+     "enonce": "Touche l’événement le plus ancien de la frise.",
+     "aide": "Cherche le repère le plus à gauche.",
+     "explication": "Les **Pre-Raphaelites** (1848) : un mouvement de peintres anglais qui a imposé un canon de beauté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le premier concours Miss America de Ziggy Stardust ?",
+     "reponse": 51,
+     "unite": "ans",
+     "aide": "Soustrais la date de Miss America de celle de Ziggy Stardust.",
+     "explication": "1972 − 1921 = **51 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque repère à ce qu’il montre.",
+     "paires": [
+      [
+       "The Pre-Raphaelites",
+       "Une longue chevelure et un teint pâle"
+      ],
+      [
+       "Miss America",
+       "Un concours qui fixe une norme de beauté"
+      ],
+      [
+       "David Bowie",
+       "Un jeu avec les identités et le genre"
+      ],
+      [
+       "Cindy Sherman",
+       "Une photographe qui joue des rôles de femmes stéréotypés"
+      ]
+     ],
+     "aide": "Pense à ce que chaque nom a montré : un canon de beauté, un concours, un jeu avec les identités, des rôles stéréotypés.",
+     "explication": "Préraphaélites : un canon de beauté ; Miss America : une norme ; Bowie : des identités mouvantes ; Sherman : les stéréotypes féminins."
+    }
+   ]
+  },
+  {
+   "chapitre": "8276dae0-32df-5f05-b2bc-df822d05522f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le blog de Maya sur la mode",
+   "competence": "comprendre-langue",
+   "situation": "Maya tient un blog sur la mode et l’apparence. Elle y parle de normes de beauté, d’estime de soi et de l’histoire des modes qui ont dit « non » à la norme.",
+   "documents": [
+    {
+     "id": "blog",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Maya’s blog",
+     "blocs": [
+      "Last week, a teacher showed us old photos of beauty pageants. Everybody had to fit the same stereotype of the “perfect” look. It made me think about my own outfit and my own looks.",
+      "Body shaming is hurtful: I know girls who were mocked at school. But the body positivity movement shows all kinds of bodies on social media, and it has helped my self-esteem. I try to [[s|stand]] [[s|out]], not to conform."
+     ],
+     "source": "Blog écrit pour l’exercice"
+    },
+    {
+     "id": "modes",
+     "type": "tableau",
+     "titre": "Fashion as a message",
+     "colonnes": [
+      "Who",
+      "When",
+      "What"
+     ],
+     "lignes": [
+      [
+       "Mary Quant",
+       "1960s",
+       "the miniskirt"
+      ],
+      [
+       "Vivienne Westwood",
+       "1970s",
+       "punk fashion"
+      ],
+      [
+       "David Bowie",
+       "1972",
+       "Ziggy Stardust"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "blog",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui veulent dire « se démarquer ».",
+     "aide": "C’est le contraire de se conformer.",
+     "explication": "**stand out** signifie se démarquer, être différent des autres."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot du blog à sa traduction.",
+     "paires": [
+      [
+       "self-esteem",
+       "l’estime de soi"
+      ],
+      [
+       "body shaming",
+       "le fait de moquer le physique de quelqu’un"
+      ],
+      [
+       "outfit",
+       "la tenue"
+      ],
+      [
+       "to conform",
+       "se conformer"
+      ]
+     ],
+     "aide": "Repère le mot qui parle de moquerie, celui qui parle de vêtements et celui qui parle de confiance en soi.",
+     "explication": "*Self-esteem* : estime de soi ; *body shaming* : moquerie du physique ; *outfit* : tenue ; *to conform* : se conformer."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Mocking someone’s body is called body ___.",
+     "reponses": [
+      [
+       "shaming"
+      ]
+     ],
+     "banque": [
+      "shaming",
+      "building",
+      "language",
+      "lifting"
+     ],
+     "aide": "Maya écrit que cette pratique est blessante (*hurtful*).",
+     "explication": "**body shaming** : le fait de moquer le physique de quelqu’un."
+    },
+    {
+     "type": "zone",
+     "document": "modes",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui nomme le style de mode né pour contester dans les années 1970.",
+     "aide": "Cherche la ligne des années 1970, puis la colonne « What ».",
+     "explication": "**punk fashion** : le punk de Vivienne Westwood, une mode de contestation."
+    }
+   ]
+  },
+  {
+   "chapitre": "8276dae0-32df-5f05-b2bc-df822d05522f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La publicité « Perfect Skin »",
+   "competence": "argumenter",
+   "situation": "Une marque lance une crème avec une affiche qui fait parler. Deux amis, Zoe et Léo, en discutent par messages. À toi de décrire, d’interpréter puis de juger l’affiche.",
+   "documents": [
+    {
+     "id": "pub",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Perfect Skin",
+     "sousTitre": "The new cream",
+     "emoji": "🧴",
+     "lignes": [
+      {
+       "texte": "Flawless skin in 7 days!",
+       "id": "l1"
+      },
+      {
+       "texte": "Be perfect or stay unnoticed.",
+       "id": "l2"
+      },
+      {
+       "texte": "A free sample with every order.",
+       "id": "l3"
+      }
+     ],
+     "source": "Publicité imaginée pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoe",
+       "texte": "Did you see the Perfect Skin ad?"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Yes. On the one hand, the ad looks fun. On the other hand, it puts pressure on girls to be perfect."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pub",
+     "reponse": [
+      "l2"
+     ],
+     "enonce": "Touche la phrase qui menace ceux qui ne rentrent pas dans la norme.",
+     "aide": "Une phrase promet, une autre offre un cadeau, une autre menace.",
+     "explication": "**Be perfect or stay unnoticed.** : l’affiche laisse entendre qu’on n’existe pas si l’on n’est pas parfait."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase d’analyse : décrire, interpréter ou juger ?",
+     "categories": [
+      "Je décris",
+      "J’interprète",
+      "Je juge"
+     ],
+     "items": [
+      [
+       "In the foreground, we can see a woman in a long coat.",
+       0
+      ],
+      [
+       "In the background, there is a white wall.",
+       0
+      ],
+      [
+       "The advertiser wants us to believe that this look is perfect.",
+       1
+      ],
+      [
+       "It conveys the idea that happiness depends on looks.",
+       1
+      ],
+      [
+       "In my opinion, this image reinforces beauty standards.",
+       2
+      ],
+      [
+       "I’m convinced that the ad is misleading.",
+       2
+      ]
+     ],
+     "aide": "Décrire : ce qu’on voit. Interpréter : ce que l’image veut dire. Juger : ce que j’en pense.",
+     "explication": "*In the foreground, we can see…* : je décris ; *The advertiser wants us to believe…* : j’interprète ; *In my opinion…* : je juge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut nous faire croire cette publicité ?",
+     "options": [
+      "Qu’il faut être parfait pour compter",
+      "Que chacun devrait s’habiller comme il le souhaite",
+      "Que la crème coûte moins cher qu’ailleurs",
+      "Que l’apparence n’a aucune importance"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième ligne de l’affiche : que se passe-t-il si l’on n’est pas parfait ?",
+     "explication": "**Qu’il faut être parfait pour compter** : l’affiche impose une norme et menace de rester invisible ceux qui n’y répondent pas."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le connecteur de Léo.",
+     "texte": "On the one hand, the ad looks fun. ___ the other hand, it puts pressure on girls.",
+     "reponses": [
+      [
+       "On"
+      ]
+     ],
+     "banque": [
+      "On",
+      "In",
+      "At",
+      "By"
+     ],
+     "aide": "Léo oppose deux points de vue : *on the one hand… on the other hand…*",
+     "explication": "**On** : l’expression est *on the one hand… on the other hand…*, D’un côté… de l’autre…"
+    }
+   ]
+  },
+  {
+   "chapitre": "df21aa72-719b-5a27-ae37-8fe4c3031612",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La famille d’Asha",
+   "competence": "lire-tableau",
+   "situation": "Asha a 13 ans et vit à Leicester. Elle présente sa famille dans un exposé en anglais : voici le tableau qu’elle projette devant sa classe.",
+   "documents": [
+    {
+     "id": "famille",
+     "type": "tableau",
+     "titre": "Asha’s relatives",
+     "colonnes": [
+      "Name",
+      "Relationship",
+      "Age"
+     ],
+     "lignes": [
+      [
+       "Rohan",
+       "brother",
+       "15"
+      ],
+      [
+       "Nina",
+       "sister",
+       "11"
+      ],
+      [
+       "Mr Patel",
+       "grandfather",
+       "78"
+      ],
+      [
+       "Mrs Patel",
+       "grandmother",
+       "75"
+      ],
+      [
+       "Dev",
+       "cousin",
+       "13"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "famille",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux cases qui désignent les siblings d’Asha.",
+     "aide": "*Sibling* désigne un frère ou une sœur.",
+     "explication": "**brother** et **sister** : *sibling* désigne un frère ou une sœur ; les grands-parents et le cousin ne sont pas des siblings."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des âges des siblings d’Asha ?",
+     "reponse": 26,
+     "aide": "Additionne l’âge de son frère et celui de sa sœur.",
+     "explication": "15 + 11 = **26**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "relatives",
+       "les membres de la famille"
+      ],
+      [
+       "sibling",
+       "le frère ou la sœur"
+      ],
+      [
+       "the elderly",
+       "les personnes âgées"
+      ],
+      [
+       "a blended family",
+       "une famille recomposée"
+      ]
+     ],
+     "aide": "*Relatives* regroupe toute la famille ; *the elderly* prend un article.",
+     "explication": "*Relatives* : membres de la famille ; *sibling* : frère ou sœur ; *the elderly* : personnes âgées ; *a blended family* : famille recomposée."
+    }
+   ]
+  },
+  {
+   "chapitre": "df21aa72-719b-5a27-ae37-8fe4c3031612",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La montre du grand-père",
+   "competence": "comprendre-langue",
+   "situation": "Leo discute avec son grand-père des différences entre leurs deux époques, en particulier du logement. Une étude invente quelques chiffres sur l’accès à la propriété.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Grandpa",
+       "emoji": "👴",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Grandpa",
+       "texte": "When I was twenty-five, I owned my own flat. Now my grandson still lives with his parents!"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Grandpa, flats are very expensive today. And you inherited some money from your father."
+      },
+      {
+       "qui": "Grandpa",
+       "texte": "True. Your great-grandfather [[h|handed]] [[h|down]] this old watch to me, and one day I will give it to you."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "proprio",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Home ownership by age group",
+     "categories": [
+      "25–34",
+      "35–44",
+      "45–54",
+      "65 and over"
+     ],
+     "series": [
+      {
+       "nom": "Homeowners",
+       "valeurs": [
+        30,
+        55,
+        70,
+        80
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Homeowners",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Age group"
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots du message de Grandpa qui signifient « transmettre ».",
+     "aide": "C’est un verbe à particule qui parle de la montre transmise de père en fils.",
+     "explication": "**handed down** : *to hand down* signifie transmettre un objet ou une tradition."
+    },
+    {
+     "type": "trous",
+     "enonce": "Exprime l’opposition entre deux générations.",
+     "texte": "My grandfather bought a flat at twenty-five, ___ I will rent for years.",
+     "reponses": [
+      [
+       "whereas"
+      ]
+     ],
+     "banque": [
+      "whereas",
+      "because",
+      "so",
+      "unless"
+     ],
+     "aide": "Le mot doit opposer deux situations.",
+     "explication": "**whereas** exprime une opposition (alors que)."
+    },
+    {
+     "type": "zone",
+     "document": "proprio",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la barre du groupe d’âge qui compte le moins de propriétaires.",
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "Les **25–34 ans** ont la barre la plus basse : 30 % de propriétaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de propriétaires des 65 ans et plus dépasse-t-elle celle des 25–34 ans ?",
+     "reponse": 50,
+     "unite": "points",
+     "aide": "Soustrais 30 de 80.",
+     "explication": "80 − 30 = **50 points**."
+    }
+   ]
+  },
+  {
+   "chapitre": "df21aa72-719b-5a27-ae37-8fe4c3031612",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Boomers et jeunes adultes",
+   "competence": "argumenter",
+   "situation": "Un journal local compare le logement des baby boomers et celui des jeunes adultes d’aujourd’hui. Il s’appuie sur des chiffres inventés pour l’exercice et sur un court article.",
+   "documents": [
+    {
+     "id": "graphe",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Where people live at thirty (%)",
+     "categories": [
+      "Own a home",
+      "Rent",
+      "Live with parents"
+     ],
+     "series": [
+      {
+       "nom": "Baby boomers",
+       "valeurs": [
+        65,
+        25,
+        10
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Young adults today",
+       "valeurs": [
+        30,
+        45,
+        25
+       ],
+       "teinte": "jaune"
+      }
+     ],
+     "axeY": {
+      "titre": "Share of people",
+      "unite": "%",
+      "min": 0,
+      "max": 80,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Two generations",
+     "blocs": [
+      "Baby boomers, born between 1946 and 1964, could buy a house in their twenties, [[w|whereas]] many young Britons now rent.",
+      "Some teenagers answer “OK boomer” when an older person criticises them. Meanwhile, the elderly say that every generation has its own problems."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le mot qui exprime une opposition entre les deux générations.",
+     "aide": "Il se traduit par « alors que ».",
+     "explication": "**whereas** exprime une opposition : *Baby boomers could buy a house, whereas many young Britons now rent.*"
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de propriétaires des jeunes adultes est-elle inférieure à celle des baby boomers ?",
+     "reponse": 35,
+     "unite": "points",
+     "aide": "Compare les deux barres de la catégorie « Own a home ».",
+     "explication": "65 − 30 = **35 points**."
+    },
+    {
+     "type": "zone",
+     "document": "graphe",
+     "reponse": [
+      "k1",
+      "k2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux catégories où les jeunes adultes sont plus nombreux que les baby boomers.",
+     "aide": "Compare les deux séries catégorie par catégorie.",
+     "explication": "**Rent** (45 contre 25) et **Live with parents** (25 contre 10) : les jeunes adultes y sont plus nombreux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans l’article, à quoi sert l’expression « OK boomer » ?",
+     "options": [
+      "Les jeunes s’en servent pour répondre à une critique d’un aîné",
+      "Les aînés l’emploient pour féliciter les jeunes",
+      "C’est le nom officiel d’une génération née après 1964",
+      "C’est un slogan des syndicats de retraités"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui commence par « Some teenagers… ».",
+     "explication": "**Les jeunes s’en servent pour répondre à une critique d’un aîné** : c’est une formule moqueuse."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression d’argumentation à sa traduction.",
+     "paires": [
+      [
+       "Unlike their parents, young people…",
+       "Contrairement à leurs parents, les jeunes…"
+      ],
+      [
+       "This is a matter of…",
+       "C’est une question de…"
+      ],
+      [
+       "To some extent, I agree that…",
+       "Dans une certaine mesure, je suis d’accord pour dire que…"
+      ],
+      [
+       "whereas",
+       "alors que"
+      ]
+     ],
+     "aide": "Repère *unlike* (contrairement à) et *to some extent* (dans une certaine mesure).",
+     "explication": "*Unlike* : contrairement à ; *a matter of* : une question de ; *to some extent* : dans une certaine mesure ; *whereas* : alors que."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c6c605c-72dc-58f6-ad1e-a0d14fbed7fd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq dates pour se souvenir",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé sur la mémoire et la réconciliation, Hugo a placé cinq repères sur une frise : un lieu sacré rendu, une décision de justice, une commission, des excuses officielles et une statue.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Five turning points",
+     "debut": 1980,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "uluru",
+       "date": 1985,
+       "nom": "Uluru returned"
+      },
+      {
+       "id": "mabo",
+       "date": 1992,
+       "nom": "Mabo ruling"
+      },
+      {
+       "id": "tutu",
+       "date": 1996,
+       "nom": "Truth Commission"
+      },
+      {
+       "id": "rudd",
+       "date": 2008,
+       "nom": "National Apology"
+      },
+      {
+       "id": "colston",
+       "date": 2020,
+       "nom": "Colston statue"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "uluru"
+     ],
+     "enonce": "Touche l’événement le plus ancien de la frise.",
+     "aide": "Cherche le repère le plus à gauche.",
+     "explication": "**Uluru returned** (1985) : le lieu sacré a été rendu à ses propriétaires traditionnels, les Anangu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’arrêt Mabo des excuses nationales (National Apology) ?",
+     "reponse": 16,
+     "unite": "ans",
+     "aide": "Soustrais 1992 de 2008.",
+     "explication": "2008 − 1992 = **16 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "heritage",
+       "le patrimoine"
+      ],
+      [
+       "to apologise",
+       "présenter ses excuses"
+      ],
+      [
+       "to pay tribute to",
+       "rendre hommage à"
+      ],
+      [
+       "to tear down a statue",
+       "déboulonner une statue"
+      ]
+     ],
+     "aide": "Pense aux repères de la frise : un lieu, des excuses, une statue.",
+     "explication": "*Heritage* : patrimoine ; *to apologise* : présenter ses excuses ; *to pay tribute to* : rendre hommage à ; *to tear down a statue* : déboulonner une statue."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c6c605c-72dc-58f6-ad1e-a0d14fbed7fd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’exposé de Rhea sur l’Australie",
+   "competence": "comprendre-langue",
+   "situation": "Rhea prépare un exposé sur les excuses de l’Australie aux Aborigènes et sur le lieu sacré d’Uluru. Elle présente son texte et une carte du pays.",
+   "documents": [
+    {
+     "id": "expose",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Rhea’s presentation",
+     "blocs": [
+      "On 13 February 2008, the Australian Prime Minister, Kevin Rudd, [[v|apologised]] to the Stolen Generations: Aboriginal children who had been taken from their families.",
+      "This apology did not erase the past, but it acknowledged the suffering of thousands of families.",
+      "Rhea’s class also studied Uluru, a sacred place in the Red Centre, far from the coast. It was given back to its traditional owners, the Anangu, in 1985."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Australia",
+     "fond": "monde",
+     "cadrage": [
+      110,
+      -46,
+      157,
+      -8
+     ],
+     "regions": [
+      {
+       "code": "AUS",
+       "teinte": "sable"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 131.04,
+       "lat": -25.34,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lon": 115.86,
+       "lat": -31.95,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lon": 151.21,
+       "lat": -33.87,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "d",
+       "lon": 130.84,
+       "lat": -12.46,
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "expose",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui signifie « présenter ses excuses ».",
+     "aide": "C’est un verbe au prétérit qui suit le nom du Premier ministre.",
+     "explication": "**apologised** : *to apologise* signifie présenter ses excuses."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume la portée de ces excuses ?",
+     "options": [
+      "Elles reconnaissent la souffrance sans effacer le passé",
+      "Elles effacent complètement les fautes du passé",
+      "Elles rendent toutes les terres aux familles aborigènes",
+      "Elles interdisent de parler de l’histoire coloniale"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième phrase du texte.",
+     "explication": "**Elles reconnaissent la souffrance sans effacer le passé** : *This apology did not erase the past, but it acknowledged the suffering.*"
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la lettre qui marque Uluru, d’après la description du texte (« far from the coast »).",
+     "aide": "Trois villes sont au bord de la mer ; une seule lettre est au cœur du pays.",
+     "explication": "Uluru est dans le « Red Centre », loin de la côte : c’est le point **A**, au centre du pays."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’expression.",
+     "texte": "After the speech, many people wanted to pay ___ to the victims.",
+     "reponses": [
+      [
+       "tribute"
+      ]
+     ],
+     "banque": [
+      "tribute",
+      "legacy",
+      "heritage",
+      "partition"
+     ],
+     "aide": "*To pay … to* signifie rendre hommage à.",
+     "explication": "**tribute** : *to pay tribute to* signifie rendre hommage à."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c6c605c-72dc-58f6-ad1e-a0d14fbed7fd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faut-il déboulonner la statue ?",
+   "competence": "argumenter",
+   "situation": "À Bristol, la statue d’un marchand a été renversée en 2020. Un article raconte les faits ; deux amis, Nia et Sam, en débattent par messages.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Bristol, June 2020",
+     "blocs": [
+      "On 7 June 2020, during a demonstration in Bristol, protesters pulled down the statue of Edward Colston, a merchant who had profited from the slave trade.",
+      "They rolled the statue to the water and threw it into the [[h|harbour]]. It was later taken out and put on display in a museum."
+     ],
+     "source": "Article écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Nia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nia",
+       "texte": "Some people [[o|argue]] that the statue should stay, with a plaque that explains who Colston was."
+      },
+      {
+       "qui": "Sam",
+       "texte": "But others [[o|claim]] that a slave trader should not be honoured in a public square."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche l’endroit où les manifestants ont jeté la statue.",
+     "aide": "C’est un mot britannique pour « port ».",
+     "explication": "La statue a été jetée dans le **harbour** (le port)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument.",
+     "categories": [
+      "Pour déboulonner",
+      "Contre déboulonner"
+     ],
+     "items": [
+      [
+       "The statue honours a man who profited from slavery.",
+       0
+      ],
+      [
+       "Public squares should not celebrate slave traders.",
+       0
+      ],
+      [
+       "History should be explained, not erased.",
+       1
+      ],
+      [
+       "Removing statues does not change what happened.",
+       1
+      ]
+     ],
+     "aide": "Certains arguments veulent retirer la statue, d’autres la garder avec une explication.",
+     "explication": "Les deux premiers arguments demandent de retirer la statue ; les deux derniers défendent de la garder pour expliquer l’histoire."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "reponse": [
+      "o"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux verbes qui introduisent deux avis opposés.",
+     "aide": "Ils se traduisent par « soutenir » et « prétendre ».",
+     "explication": "**argue** et **claim** : *Some people argue that…, while others claim that…* introduit deux avis opposés."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon verbe.",
+     "texte": "In June 2020, protesters ___ down the statue of Colston.",
+     "reponses": [
+      [
+       "pulled"
+      ]
+     ],
+     "banque": [
+      "pulled",
+      "pull",
+      "pulling",
+      "pulls"
+     ],
+     "aide": "L’événement est passé et daté.",
+     "explication": "**pulled** : prétérit de *to pull down*."
+    }
+   ]
+  },
+  {
+   "chapitre": "69c95063-8975-5603-9f45-919a01de8058",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre mobilisations",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé en anglais, Karim a classé dans un tableau quatre mobilisations, de 1834 à 2013, avec l’année et ce qui s’est passé.",
+   "documents": [
+    {
+     "id": "mobilisations",
+     "type": "tableau",
+     "titre": "Four mobilisations",
+     "colonnes": [
+      "Year",
+      "What happened"
+     ],
+     "lignes": [
+      [
+       "1834",
+       "Six farm workers are deported for forming a union"
+      ],
+      [
+       "1984",
+       "British miners go on strike against Margaret Thatcher"
+      ],
+      [
+       "2006",
+       "Tarana Burke starts using the words “Me Too”"
+      ],
+      [
+       "2013",
+       "The hashtag #BlackLivesMatter appears"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mobilisations",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche la case de l’année où des ouvriers agricoles ont été déportés pour avoir fondé un syndicat.",
+     "aide": "Cherche la ligne qui parle de *union*.",
+     "explication": "**1834** : les Tolpuddle Martyrs, six ouvriers agricoles déportés pour avoir formé un syndicat."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déportation de 1834 de la grève des mineurs de 1984 ?",
+     "reponse": 150,
+     "unite": "ans",
+     "aide": "Soustrais 1834 de 1984.",
+     "explication": "1984 − 1834 = **150 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "a trade union",
+       "un syndicat"
+      ],
+      [
+       "to go on strike",
+       "faire grève"
+      ],
+      [
+       "to raise awareness",
+       "sensibiliser"
+      ],
+      [
+       "a demonstration",
+       "une manifestation"
+      ]
+     ],
+     "aide": "Pense à ce que font les mineurs en 1984 et à ce que fait une personne qui lance un hashtag.",
+     "explication": "*A trade union* : syndicat ; *to go on strike* : faire grève ; *to raise awareness* : sensibiliser ; *a demonstration* : manifestation."
+    }
+   ]
+  },
+  {
+   "chapitre": "69c95063-8975-5603-9f45-919a01de8058",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment va-t-on travailler ?",
+   "competence": "analyser-document",
+   "situation": "Dans une ville imaginaire, une enquête demande aux habitants comment ils vont travailler. Un article explique ce qui change dans les grandes villes du monde anglophone.",
+   "documents": [
+    {
+     "id": "trajets",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "How do people get to work?",
+     "categories": [
+      "Car",
+      "Train",
+      "Bus",
+      "Bike",
+      "On foot"
+     ],
+     "series": [
+      {
+       "nom": "Workers",
+       "valeurs": [
+        48,
+        25,
+        12,
+        8,
+        7
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Workers",
+      "unite": "%",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "villes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Cities on the move",
+     "blocs": [
+      "Cities grow, and [[s|urban]] [[s|sprawl]] pushes people to live far from their jobs: they become commuters.",
+      "In London, since 2003, drivers have paid a congestion charge to enter the centre. In New York, the High Line, an old railway above the streets, was turned into a park in 2009."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajets",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la barre du moyen de transport le plus utilisé.",
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La **voiture** (*car*) est la plus utilisée : 48 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des travailleurs utilise un transport en commun (train ou bus) ?",
+     "reponse": 37,
+     "unite": "%",
+     "aide": "Additionne la barre du train et celle du bus.",
+     "explication": "25 + 12 = **37 %**."
+    },
+    {
+     "type": "zone",
+     "document": "villes",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui signifient « étalement urbain ».",
+     "aide": "C’est la cause qui pousse les gens à vivre loin de leur travail.",
+     "explication": "**urban sprawl** : l’étalement urbain, qui fait de beaucoup d’habitants des *commuters*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le connecteur de conséquence.",
+     "texte": "The charge is high. As a ___, many commuters now choose the train.",
+     "reponses": [
+      [
+       "consequence"
+      ]
+     ],
+     "banque": [
+      "consequence",
+      "question",
+      "difference",
+      "protest"
+     ],
+     "aide": "Le connecteur introduit ce qui découle d’un fait.",
+     "explication": "**consequence** : *As a consequence* introduit une conséquence (par conséquent)."
+    }
+   ]
+  },
+  {
+   "chapitre": "69c95063-8975-5603-9f45-919a01de8058",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des syndicats aux hashtags",
+   "competence": "argumenter",
+   "situation": "Une enseignante demande à sa classe : « Comment protester a-t-il changé ? » Un article compare 1834 et aujourd’hui, puis deux amis, Leo et Mia, préparent une manifestation.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "From unions to hashtags",
+     "blocs": [
+      "In 1834, six farm workers from Tolpuddle were deported for forming a union. Today, a hashtag can bring thousands of people together within hours: #MeToo spread in 2017, after Tarana Burke had used the words “Me Too” in 2006.",
+      "Protest has not disappeared: it has changed its tools and moved online."
+     ],
+     "source": "Article écrit pour l’exercice, d’après des faits historiques"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leo",
+       "texte": "We need to [[r|raise]] [[r|awareness]] about the closing of our youth club."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Let’s organise a demonstration on Saturday and start a hashtag. As a consequence, more people will join us."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple : mobilisation d’hier ou d’aujourd’hui ?",
+     "categories": [
+      "Hier (1834 – 1985)",
+      "Aujourd’hui (réseaux sociaux)"
+     ],
+     "items": [
+      [
+       "Six workers form a union.",
+       0
+      ],
+      [
+       "Miners go on strike.",
+       0
+      ],
+      [
+       "A hashtag spreads in a few hours.",
+       1
+      ],
+      [
+       "Tarana Burke’s words become #MeToo.",
+       1
+      ]
+     ],
+     "aide": "Cherche ce qui passe par un syndicat ou une grève, et ce qui passe par un hashtag.",
+     "explication": "Syndicat et grève : mobilisations d’hier ; hashtag et #MeToo : mobilisations d’aujourd’hui, par les réseaux sociaux."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui veulent dire « sensibiliser ».",
+     "aide": "Le verbe veut dire « lever » ; le nom veut dire « conscience ».",
+     "explication": "**raise awareness** : sensibiliser le public."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déportation des ouvriers de Tolpuddle du hashtag #MeToo de 2017 ?",
+     "reponse": 183,
+     "unite": "ans",
+     "aide": "Soustrais 1834 de 2017.",
+     "explication": "2017 − 1834 = **183 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le connecteur de Mia.",
+     "texte": "___ a consequence, more people will join us.",
+     "reponses": [
+      [
+       "As"
+      ]
+     ],
+     "banque": [
+      "As",
+      "On",
+      "By",
+      "For"
+     ],
+     "aide": "Le connecteur introduit une conséquence.",
+     "explication": "**As** : on dit *As a consequence* (par conséquent)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion l’article tire-t-il ?",
+     "options": [
+      "La protestation a changé d’outils, elle n’a pas disparu",
+      "Les hashtags ont totalement remplacé les syndicats",
+      "Les manifestations sont devenues impossibles",
+      "Les jeunes ne se mobilisent plus du tout"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de l’article.",
+     "explication": "**La protestation a changé d’outils, elle n’a pas disparu** : elle s’est déplacée en ligne."
+    }
+   ]
+  },
+  {
+   "chapitre": "88ee4f8d-d674-51fe-8e9a-63141c33224d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De Vérone à New York",
+   "competence": "comprendre-langue",
+   "situation": "Une pièce de Shakespeare du XVIe siècle a inspiré une comédie musicale américaine. Ce tableau met les deux histoires en face l’une de l’autre.",
+   "documents": [
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Two stories, one plot",
+     "colonnes": [
+      "Romeo and Juliet (about 1595)",
+      "West Side Story (1957)"
+     ],
+     "lignes": [
+      [
+       "Verona",
+       "New York"
+      ],
+      [
+       "The Montagues",
+       "The Jets"
+      ],
+      [
+       "The Capulets",
+       "The Sharks"
+      ],
+      [
+       "Romeo",
+       "Tony"
+      ],
+      [
+       "Juliet",
+       "Maria"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tableau",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case du gang qui remplace les Capulets dans West Side Story.",
+     "aide": "Cherche la ligne des Capulets, puis la colonne de droite.",
+     "explication": "**The Sharks** prennent la place des Capulets ; les Jets remplacent les Montagues."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "plot",
+       "l’intrigue"
+      ],
+      [
+       "to retell",
+       "raconter à nouveau"
+      ],
+      [
+       "a remake",
+       "une nouvelle version d’un film"
+      ],
+      [
+       "the Wild West",
+       "le Far West"
+      ]
+     ],
+     "aide": "L’intrigue est le fil de l’histoire ; un *remake* est un film tourné de nouveau.",
+     "explication": "*Plot* : intrigue ; *to retell* : raconter à nouveau ; *a remake* : nouvelle version d’un film ; *the Wild West* : le Far West."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que West Side Story change par rapport à la pièce de Shakespeare ?",
+     "options": [
+      "L’intrigue reste la même, mais elle se passe dans le New York des gangs",
+      "L’intrigue disparaît et les personnages sont nouveaux",
+      "L’histoire se passe toujours à Vérone, mais au XXe siècle",
+      "Les deux amoureux sont du même clan et se marient"
+     ],
+     "reponse": 0,
+     "aide": "Compare la première ligne du tableau avec les noms des groupes rivaux.",
+     "explication": "**L’intrigue reste la même, mais elle se passe dans le New York des gangs** : deux clans rivaux, deux jeunes amoureux."
+    }
+   ]
+  },
+  {
+   "chapitre": "88ee4f8d-d674-51fe-8e9a-63141c33224d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cowboy au cinéma",
+   "competence": "se-reperer-temps",
+   "situation": "Un ciné-club étudie l’image du cowboy, depuis les spectacles de Buffalo Bill jusqu’aux films récents. Il a une affiche et une frise.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Stagecoach",
+     "sousTitre": "A western classic",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "A film by John Ford",
+       "id": "ford"
+      },
+      {
+       "texte": "Starring John Wayne",
+       "id": "wayne"
+      },
+      {
+       "texte": "1939",
+       "id": "annee"
+      }
+     ],
+     "source": "Affiche écrite pour l’exercice"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "The cowboy through time",
+     "debut": 1880,
+     "fin": 2020,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "bill",
+       "date": 1883,
+       "nom": "Wild West show"
+      },
+      {
+       "id": "sign",
+       "date": 1923,
+       "nom": "Hollywoodland sign"
+      },
+      {
+       "id": "stage",
+       "date": 1939,
+       "nom": "Stagecoach"
+      },
+      {
+       "id": "brokeback",
+       "date": 2005,
+       "nom": "Brokeback Mountain"
+      },
+      {
+       "id": "lalaland",
+       "date": 2016,
+       "nom": "La La Land"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "wayne"
+     ],
+     "enonce": "Touche la ligne qui nomme l’acteur vedette du film.",
+     "aide": "Il joue le héros du western.",
+     "explication": "**Starring John Wayne** : l’acteur est l’icône du western classique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Stagecoach (1939) de Brokeback Mountain (2005) ?",
+     "reponse": 66,
+     "unite": "ans",
+     "aide": "Soustrais 1939 de 2005.",
+     "explication": "2005 − 1939 = **66 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "brokeback"
+     ],
+     "enonce": "Touche le film de la frise qui montre deux cowboys amoureux et bouscule le mythe viril.",
+     "aide": "C’est un film d’Ang Lee, sorti en 2005.",
+     "explication": "**Brokeback Mountain** (2005) montre deux cowboys amoureux : le mythe du cowboy viril est remis en question."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "This version ___ from the original.",
+     "reponses": [
+      [
+       "departs"
+      ]
+     ],
+     "banque": [
+      "departs",
+      "depart",
+      "to depart",
+      "departing"
+     ],
+     "aide": "Le sujet est singulier : *this version*.",
+     "explication": "**departs** : *it departs from the original* signifie qu’elle s’éloigne de l’original."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque film à ce qu’il montre.",
+     "paires": [
+      [
+       "Stagecoach",
+       "Un western de John Ford avec John Wayne, en 1939"
+      ],
+      [
+       "Brokeback Mountain",
+       "Un film d’Ang Lee sur deux cowboys amoureux, en 2005"
+      ],
+      [
+       "La La Land",
+       "Deux jeunes artistes rêvent de réussir à Los Angeles, en 2016"
+      ],
+      [
+       "Once Upon a Time in Hollywood",
+       "Hollywood se met en scène, en 2019"
+      ]
+     ],
+     "aide": "Retiens une date et un détail pour chaque film.",
+     "explication": "*Stagecoach* : western de 1939 ; *Brokeback Mountain* : cowboys amoureux (2005) ; *La La Land* : jeunes artistes à Los Angeles (2016) ; *Once Upon a Time in Hollywood* : Hollywood se met en scène (2019)."
+    }
+   ]
+  },
+  {
+   "chapitre": "88ee4f8d-d674-51fe-8e9a-63141c33224d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux Robin des Bois",
+   "competence": "analyser-document",
+   "situation": "Le cinéclub de ta classe compare deux versions d’une même légende : une version classique et une version moderne imaginée pour l’exercice. Ana et Tom en discutent par messages.",
+   "documents": [
+    {
+     "id": "versions",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Two versions of a legend",
+     "blocs": [
+      "Version A. Robin lives in Sherwood Forest. He steals from the rich to give to the poor, and the Sheriff of Nottingham hunts him.",
+      "Version B. Robin is a young hacker in a modern city. He leaks secret bank files and shares the money with poor families, and a security chief hunts him."
+     ],
+     "source": "Résumés écrits pour l’exercice"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Do you prefer version A or version B?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "I prefer A. Version B really [[d|departs]] from the legend, but it gives the hero a modern world."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément dans la bonne version.",
+     "categories": [
+      "Version A",
+      "Version B"
+     ],
+     "items": [
+      [
+       "Robin lives in Sherwood Forest.",
+       0
+      ],
+      [
+       "The Sheriff of Nottingham hunts Robin.",
+       0
+      ],
+      [
+       "Robin is a young hacker.",
+       1
+      ],
+      [
+       "Robin leaks secret bank files.",
+       1
+      ]
+     ],
+     "aide": "Relis les deux paragraphes du texte.",
+     "explication": "La version A garde la forêt de Sherwood et le shérif ; la version B transporte l’histoire dans une ville moderne."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe qui dit que la version B s’éloigne de l’original.",
+     "aide": "C’est un verbe au présent, avec -s.",
+     "explication": "**departs** : *it departs from the original* signifie qu’elle s’éloigne de l’original."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du critique.",
+     "texte": "The director ___ the story by setting it in modern London.",
+     "reponses": [
+      [
+       "updates"
+      ]
+     ],
+     "banque": [
+      "updates",
+      "update",
+      "updating",
+      "to update"
+     ],
+     "aide": "Le sujet est *the director* : 3e personne du singulier.",
+     "explication": "**updates** : *the director updates the story by…* signifie que le réalisateur actualise l’histoire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel élément de la légende la version B conserve-t-elle ?",
+     "options": [
+      "Robin aide des familles pauvres",
+      "Robin vit dans la forêt de Sherwood",
+      "Robin est chassé par le shérif de Nottingham",
+      "Robin tire à l’arc"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce que fait Robin dans les deux versions.",
+     "explication": "**Robin aide des familles pauvres** : c’est le cœur de la légende, conservé dans la version B ; la forêt et le shérif ont disparu."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression à sa traduction.",
+     "paires": [
+      [
+       "This version is more faithful to…",
+       "Cette version est plus fidèle à…"
+      ],
+      [
+       "It departs from the original.",
+       "Elle s’éloigne de l’original."
+      ],
+      [
+       "What strikes me is that…",
+       "Ce qui me frappe, c’est que…"
+      ],
+      [
+       "The director updates the story by…",
+       "Le réalisateur actualise l’histoire en…"
+      ]
+     ],
+     "aide": "Repère *faithful* (fidèle) et *strikes* (frappe).",
+     "explication": "*Faithful to* : fidèle à ; *departs from* : s’éloigne de ; *what strikes me* : ce qui me frappe ; *updates* : actualise."
+    }
+   ]
+  },
+  {
+   "chapitre": "192f7341-41ff-5999-bcad-d340db74e803",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La frise du Commonwealth",
+   "competence": "se-reperer-temps",
+   "situation": "Pour comprendre comment l’Empire britannique est devenu le Commonwealth, Selma a placé huit repères sur une frise, de 1926 à 2022.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "From Empire to Commonwealth",
+     "debut": 1920,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "balfour",
+       "date": 1926,
+       "nom": "Balfour declaration"
+      },
+      {
+       "id": "westminster",
+       "date": 1931,
+       "nom": "Westminster Statute"
+      },
+      {
+       "id": "inde",
+       "date": 1947,
+       "nom": "India independent"
+      },
+      {
+       "id": "londres",
+       "date": 1949,
+       "nom": "London declaration"
+      },
+      {
+       "id": "ghana",
+       "date": 1957,
+       "nom": "Ghana independent"
+      },
+      {
+       "id": "afsud",
+       "date": 1961,
+       "nom": "South Africa leaves"
+      },
+      {
+       "id": "gabon",
+       "date": 2022,
+       "nom": "Gabon and Togo join"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "afsud"
+     ],
+     "enonce": "Touche l’événement qui montre un pays qui quitte le Commonwealth à cause de l’apartheid.",
+     "aide": "Cherche le repère du début des années 1960.",
+     "explication": "**South Africa leaves** (1961) : l’Afrique du Sud de l’apartheid quitte le Commonwealth."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déclaration Balfour (1926) de l’indépendance de l’Inde (1947) ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Soustrais 1926 de 1947.",
+     "explication": "1947 − 1926 = **21 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à sa traduction.",
+     "paires": [
+      [
+       "a colony",
+       "une colonie"
+      ],
+      [
+       "independence",
+       "l’indépendance"
+      ],
+      [
+       "a member state",
+       "un État membre"
+      ],
+      [
+       "the Crown",
+       "la Couronne"
+      ]
+     ],
+     "aide": "Pense à ce que les pays de la frise gagnent ou quittent.",
+     "explication": "*A colony* : colonie ; *independence* : indépendance ; *a member state* : État membre ; *the Crown* : la Couronne."
+    }
+   ]
+  },
+  {
+   "chapitre": "192f7341-41ff-5999-bcad-d340db74e803",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois correspondants, trois pays",
+   "competence": "lire-carte",
+   "situation": "Trois élèves de pays du Commonwealth écrivent à une classe de seconde pour se présenter. À toi de retrouver leur pays sur la carte grâce à ce qu’ils racontent.",
+   "documents": [
+    {
+     "id": "lettres",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Three penfriends",
+     "blocs": [
+      "Kofi, from Accra: My country was the first in sub-Saharan Africa to become independent, in 1957.",
+      "Priya, from Delhi: My country became independent on 15 August 1947, and it was divided into two states.",
+      "Thabo, from Cape Town: My country left the Commonwealth in 1961 because of apartheid, and came back in 1994."
+     ],
+     "source": "Lettres écrites pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Africa and Asia",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      -38,
+      100,
+      40
+     ],
+     "regionsCliquables": true,
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "GHA"
+     ],
+     "enonce": "Touche le pays de Kofi, qui écrit d’Accra, la capitale.",
+     "aide": "C’est le premier pays d’Afrique subsaharienne indépendant, en 1957, sur la côte du golfe de Guinée.",
+     "explication": "**Le Ghana** : Accra est sa capitale ; c’est la première colonie d’Afrique subsaharienne devenue indépendante (1957)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années l’Afrique du Sud est-elle restée hors du Commonwealth ?",
+     "reponse": 33,
+     "unite": "ans",
+     "aide": "Soustrais 1961 de 1994.",
+     "explication": "1994 − 1961 = **33 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "ZAF"
+     ],
+     "enonce": "Touche le pays de Thabo, qui écrit du Cap.",
+     "aide": "Il se trouve à la pointe sud de l’Afrique.",
+     "explication": "**L’Afrique du Sud** : le Cap en est l’une des capitales ; le pays a quitté le Commonwealth en 1961 et l’a rejoint en 1994."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Priya.",
+     "texte": "India ___ independence on 15 August 1947.",
+     "reponses": [
+      [
+       "gained"
+      ]
+     ],
+     "banque": [
+      "gained",
+      "gain",
+      "gains",
+      "gaining"
+     ],
+     "aide": "L’événement est passé et daté.",
+     "explication": "**gained** : prétérit de *to gain independence* (accéder à l’indépendance)."
+    }
+   ]
+  },
+  {
+   "chapitre": "192f7341-41ff-5999-bcad-d340db74e803",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une famille de 56 pays",
+   "competence": "analyser-document",
+   "situation": "Un journal des lycéens présente la composition du Commonwealth et ses grandes rencontres. À toi de croiser le tableau et l’article.",
+   "documents": [
+    {
+     "id": "membres",
+     "type": "tableau",
+     "titre": "Four members",
+     "colonnes": [
+      "Country",
+      "Status",
+      "Fact"
+     ],
+     "lignes": [
+      [
+       "Canada",
+       "Commonwealth realm",
+       "Charles III is its head of state"
+      ],
+      [
+       "Jamaica",
+       "Commonwealth realm",
+       "Charles III is its head of state"
+      ],
+      [
+       "India",
+       "Republic",
+       "Stays in under the 1949 London declaration"
+      ],
+      [
+       "Gabon",
+       "Republic",
+       "Joined in 2022, never a British colony"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "sommets",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Meeting up",
+     "blocs": [
+      "Every two years or so, the heads of government meet at a summit called CHOGM. Every four years, athletes take part in the Commonwealth Games, first held in [[h|Hamilton]], Canada, in 1930."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "membres",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le pays du tableau qui n’a jamais été une colonie britannique.",
+     "aide": "Cherche la ligne qui le dit explicitement.",
+     "explication": "**Gabon** : il a adhéré en 2022 sans avoir jamais été une colonie britannique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque pays.",
+     "categories": [
+      "Royaume (le roi est chef d’État)",
+      "République"
+     ],
+     "items": [
+      [
+       "Canada",
+       0
+      ],
+      [
+       "Jamaica",
+       0
+      ],
+      [
+       "India",
+       1
+      ],
+      [
+       "Gabon",
+       1
+      ]
+     ],
+     "aide": "La colonne « Status » du tableau donne la réponse.",
+     "explication": "Canada et Jamaica sont des *Commonwealth realms* ; India et Gabon sont des républiques."
+    },
+    {
+     "type": "zone",
+     "document": "sommets",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche la ville qui a accueilli les premiers Commonwealth Games.",
+     "aide": "Elle se trouve au Canada.",
+     "explication": "**Hamilton** (Canada) a accueilli les premiers jeux, en 1930."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la déclaration de Londres (1949) de l’adhésion du Gabon (2022) ?",
+     "reponse": 73,
+     "unite": "ans",
+     "aide": "Soustrais 1949 de 2022.",
+     "explication": "2022 − 1949 = **73 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le Gabon a-t-il pu rejoindre le Commonwealth ?",
+     "options": [
+      "L’adhésion est volontaire, même sans passé colonial britannique",
+      "Le Gabon a obtenu l’indépendance en 1957 grâce au Royaume-Uni",
+      "Seules les anciennes colonies peuvent rejoindre le groupe",
+      "Le roi Charles III a imposé son entrée au sommet"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière colonne du tableau.",
+     "explication": "**L’adhésion est volontaire, même sans passé colonial britannique** : le Gabon et le Togo ont rejoint le Commonwealth en 2022."
+    }
+   ]
+  }
+ ]
+}

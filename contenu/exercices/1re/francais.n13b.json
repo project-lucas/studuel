@@ -1,0 +1,2100 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "af12adc3-19c5-5474-99b9-f7f39fc82514",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un garagiste et des signes",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Roi des Aulnes*. Situe le roman dans l’œuvre de Tournier, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Tournier et ses romans",
+     "debut": 1920,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1924,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ven",
+       "date": 1967,
+       "nom": "Vendredi"
+      },
+      {
+       "id": "rda",
+       "date": 1970,
+       "nom": "Le Roi des Aulnes"
+      },
+      {
+       "id": "mort",
+       "date": 2016,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Abel Tiffauges",
+       "Garagiste parisien, géant maladroit et solitaire"
+      ],
+      [
+       "Nestor",
+       "?"
+      ],
+      [
+       "Éphraïm",
+       "Enfant juif rescapé d’Auschwitz"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rda"
+     ],
+     "enonce": "Touche le repère qui date la publication du roman.",
+     "aide": "Il paraît quelques années après *Vendredi*.",
+     "explication": "*Le Roi des Aulnes* paraît en **1970** et reçoit le prix Goncourt."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent *Vendredi* du *Roi des Aulnes* ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1970 − 1967 = **3 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Nestor ?",
+     "options": [
+      "L’ami étrange du collège Saint-Christophe, mort dans un incendie",
+      "Le garde-chasse de Göring, qui vit au domaine de Rominten",
+      "Le rabatteur d’enfants de l’école d’élite de Kaltenborn",
+      "Un soldat de l’unité des pigeons voyageurs de 1939"
+     ],
+     "reponse": 0,
+     "aide": "Nestor appartient à l’enfance de Tiffauges.",
+     "explication": "Nestor est l’**ami étrange du collège Saint-Christophe**, qui meurt dans un incendie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le récit.",
+     "texte": "Tiffauges tient un journal, les « Écrits ___ », où il se persuade que le monde lui envoie des ___.",
+     "reponses": [
+      [
+       "sinistres"
+      ],
+      [
+       "signes"
+      ]
+     ],
+     "banque": [
+      "sinistres",
+      "secrets",
+      "signes",
+      "lettres"
+     ],
+     "aide": "Un adjectif qui dit l’inquiétude, et ce que Tiffauges croit lire autour de lui.",
+     "explication": "Les « Écrits **sinistres** » : le monde lui envoie des **signes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "af12adc3-19c5-5474-99b9-f7f39fc82514",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Saint-Christophe à Kaltenborn",
+   "competence": "analyser-texte",
+   "situation": "Suis la route de Tiffauges, de son enfance à Kaltenborn, puis relie les figures du porteur.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Tiffauges",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Au collège Saint-Christophe, il vénère Nestor"
+      },
+      {
+       "id": "n2",
+       "texte": "Accusé à tort, il échappe au procès (guerre)"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il devient garde-chasse chez Göring, à Rominten"
+      },
+      {
+       "id": "n5",
+       "texte": "Rabatteur d’enfants pour l’école de Kaltenborn"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Soldat, puis prisonnier en Prusse-Orientale",
+      "Chef d’un orchestre militaire en Allemagne",
+      "Réfugié dans un monastère de Bavière",
+      "Pilote d’un avion de la Luftwaffe"
+     ],
+     "reponse": 0,
+     "aide": "La guerre le mène jusqu’en Prusse-Orientale, avant Rominten.",
+     "explication": "Tiffauges est **soldat** (unité de pigeons voyageurs), puis **prisonnier en Prusse-Orientale**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où Tiffauges parcourt les campagnes pour recruter des garçons.",
+     "aide": "C’est la dernière étape avant l’effondrement du Reich.",
+     "explication": "À Kaltenborn, il est **rabatteur d’enfants** pour la napola, école d’élite nazie : il s’y sent enfin à sa place."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure à ce qu’elle représente.",
+     "paires": [
+      [
+       "Saint Christophe",
+       "Le géant qui porte l’enfant pour le sauver"
+      ],
+      [
+       "L’ogre",
+       "Celui qui enlève l’enfant pour le dévorer"
+      ],
+      [
+       "Le Roi des Aulnes",
+       "Celui qui arrache l’enfant à son père"
+      ]
+     ],
+     "aide": "Trois façons de s’occuper d’un enfant, du salut à la capture.",
+     "explication": "**Saint Christophe** sauve, l’**ogre** dévore, le **Roi des Aulnes** arrache l’enfant à son père."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la fin du roman.",
+     "items": [
+      "Le Reich s’effondre",
+      "Tiffauges prend Éphraïm sur ses épaules",
+      "Il s’enfonce dans le marais en le portant"
+     ],
+     "aide": "L’effondrement précède le geste de porter, qui précède la disparition dans le marais.",
+     "explication": "Dans l’effondrement du Reich, Tiffauges **porte Éphraïm** et **s’enfonce dans le marais**."
+    }
+   ]
+  },
+  {
+   "chapitre": "af12adc3-19c5-5474-99b9-f7f39fc82514",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Porter, c’est aimer et capturer",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation sur la réécriture des mythes, lis un pastiche écrit pour l’exercice, puis montre l’ambivalence du « porteur ».",
+   "documents": [
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le passeur du gué",
+     "blocs": [
+      "Ce soir-là, le passeur du gué souleva l’enfant sur ses épaules. Il était lourd comme un sac de grain et léger comme un oiseau.",
+      "Au milieu du courant, l’homme sentit qu’il pourrait le [[c|garder]] pour toujours, comme on garde ce qu’on a pris. Il ne le fit pas : il traversa jusqu’à l’autre rive et le [[p|posa]] sur la terre ferme."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Michel Tournier"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le verbe qui dit la tentation de capturer l’enfant.",
+     "aide": "Porter peut devenir prendre pour soi.",
+     "explication": "**Garder** l’enfant pour toujours, comme ce qu’on a pris : c’est le côté de l’ogre."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe du geste qui sauve l’enfant.",
+     "aide": "Le passeur est au bout du gué, sur l’autre rive.",
+     "explication": "Il **pose** l’enfant sur la terre ferme : c’est le geste de saint Christophe."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : relève-t-il du porteur qui sauve, ou du ravisseur ?",
+     "categories": [
+      "Le porteur qui sauve",
+      "Le ravisseur"
+     ],
+     "items": [
+      [
+       "Un géant qui traverse le fleuve avec l’enfant sur ses épaules",
+       0
+      ],
+      [
+       "Un monstre qui enlève l’enfant pour le dévorer",
+       1
+      ],
+      [
+       "Un roi surnaturel qui arrache l’enfant à son père",
+       1
+      ],
+      [
+       "Un homme qui dépose l’enfant sain et sauf sur l’autre rive",
+       0
+      ]
+     ],
+     "aide": "Dans les figures du « porteur », les uns sauvent, les autres capturent.",
+     "explication": "**Saint Christophe** porte pour sauver ; l’**ogre** et le **Roi des Aulnes** capturent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la dernière image du roman, où Tiffauges s’enfonce dans le marais en portant Éphraïm ?",
+     "options": [
+      "L’ogre devient porteur : saint Christophe plutôt qu’ogre",
+      "Le porteur devient ogre : il emporte l’enfant pour le dévorer",
+      "Le héros renonce enfin à toute figure de porteur",
+      "Le Roi des Aulnes l’emporte sur saint Christophe"
+     ],
+     "reponse": 0,
+     "aide": "L’enfant juif est rescapé d’Auschwitz : Tiffauges le sauve peut-être.",
+     "explication": "**Inversion finale** : l’ogre devient porteur, dans un geste qui le sauve peut-être."
+    }
+   ]
+  },
+  {
+   "chapitre": "037e322b-37f4-57c0-90c7-aa2b22d7d9c7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le roi apprend qu’il va mourir",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le roi se meurt*. Situe la pièce dans la vie d’Ionesco, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Ionesco et sa pièce",
+     "debut": 1900,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1909,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rhi",
+       "date": 1959,
+       "nom": "Rhinocéros"
+      },
+      {
+       "id": "roi",
+       "date": 1962,
+       "nom": "Le roi se meurt"
+      },
+      {
+       "id": "mort",
+       "date": 1994,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Bérenger Ier",
+       "Le roi : un homme ordinaire, couronné"
+      ],
+      [
+       "Marguerite",
+       "?"
+      ],
+      [
+       "Marie",
+       "La seconde reine, jeune et aimante : elle le retient dans l’illusion"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "roi"
+     ],
+     "enonce": "Touche le repère qui date la création de la pièce, en décembre.",
+     "aide": "Elle est jouée trois ans après *Rhinocéros*.",
+     "explication": "*Le roi se meurt* est créé en décembre **1962**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent *Rhinocéros* du *Roi se meurt* ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1962 − 1959 = **3 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Marguerite, la première reine ?",
+     "options": [
+      "Lucide et sévère : elle l’aide à se détacher",
+      "Jeune et rêveuse : elle l’endort de promesses",
+      "Fidèle et muette : elle prie à son chevet",
+      "Hautaine et cruelle : elle le chasse du trône"
+     ],
+     "reponse": 0,
+     "aide": "Marguerite s’oppose à Marie, qui retient le roi dans l’illusion.",
+     "explication": "Marguerite est **lucide et sévère** : elle aide le roi à se détacher."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la représentation.",
+     "texte": "La pièce se joue d’un seul ___, sans ___.",
+     "reponses": [
+      [
+       "tenant"
+      ],
+      [
+       "entracte"
+      ]
+     ],
+     "banque": [
+      "tenant",
+      "souffle",
+      "entracte",
+      "décor"
+     ],
+     "aide": "Elle ne s’interrompt à aucun moment.",
+     "explication": "La pièce se joue **d’un seul tenant**, **sans entracte**."
+    }
+   ]
+  },
+  {
+   "chapitre": "037e322b-37f4-57c0-90c7-aa2b22d7d9c7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Apprends-moi à mourir",
+   "competence": "analyser-texte",
+   "situation": "Suis la pièce de l’annonce à l’effacement du roi, puis lis le royaume comme un miroir.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La fin d’un roi",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "On annonce au roi sa mort, à la fin du spectacle"
+      },
+      {
+       "id": "n2",
+       "texte": "Il se révolte et ordonne à son corps d’obéir"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Marguerite le guide ; le royaume rétrécit"
+      },
+      {
+       "id": "n5",
+       "texte": "Le roi s’efface sur son trône"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il demande qu’on lui apprenne à mourir",
+      "Il fait arrêter le médecin et le garde",
+      "Il quitte le palais et part en voyage",
+      "Il cède la couronne à la reine Marie"
+     ],
+     "reponse": 0,
+     "aide": "Il comprend que personne ne sait mourir, et le dit.",
+     "explication": "Le roi demande qu’**on lui apprenne à mourir** : personne ne sait."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape de la fin de la pièce.",
+     "aide": "Tout disparaît, y compris le roi.",
+     "explication": "Tout disparaît, et le roi **s’efface sur son trône**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque signe du royaume à ce qu’il dit du roi.",
+     "paires": [
+      [
+       "Le palais se lézarde",
+       "Le corps se défait"
+      ],
+      [
+       "Le garde annonce tout sur un ton officiel",
+       "Le rituel royal devient dérisoire"
+      ],
+      [
+       "Les pouvoirs du roi cessent d’obéir",
+       "Il n’est plus qu’un homme"
+      ],
+      [
+       "Juliette raconte sa vie pénible",
+       "Le roi découvre la vie des autres trop tard"
+      ]
+     ],
+     "aide": "Le royaume est un miroir : chaque signe renvoie au roi.",
+     "explication": "Le décor et les personnages disent tous **ce qui arrive au roi**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur les deux reines.",
+     "texte": "Marguerite pousse le roi vers l’___, Marie entretient le ___.",
+     "reponses": [
+      [
+       "acceptation"
+      ],
+      [
+       "déni",
+       "deni"
+      ]
+     ],
+     "banque": [
+      "acceptation",
+      "reproche",
+      "déni",
+      "courage"
+     ],
+     "aide": "L’une aide à se détacher, l’autre retient dans l’illusion.",
+     "explication": "**L’acceptation** contre le **déni** : les deux reines incarnent deux attitudes devant la mort."
+    }
+   ]
+  },
+  {
+   "chapitre": "037e322b-37f4-57c0-90c7-aa2b22d7d9c7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rire devant la mort ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le ton de la pièce. Départage-les, puis lis un pastiche écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "La pièce est la plus grave d’Ionesco : elle abandonne tout comique."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Pas du tout : le rire persiste, mais il est [[g|grinçant]]. C’est une tragédie mêlée de farce."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans une loge de concierge",
+     "blocs": [
+      {
+       "didascalie": "Le plafond se [[l|lézarde]]."
+      },
+      {
+       "personnage": "Le Concierge",
+       "replique": "Midi, vous dites ? Mais je n’ai pas fini de balayer !"
+      },
+      {
+       "personnage": "La Voisine",
+       "replique": "On balaie jusqu’au bout, monsieur. Regardez l’[[h|horloge]] : elle va aussi vite que vous."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Eugène Ionesco"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche l’adjectif qui dit, selon Noé, le rire qui reste dans la pièce.",
+     "aide": "Le rire n’a pas disparu, mais il fait mal.",
+     "explication": "Le rire persiste, **grinçant** : tragédie et farce se mêlent."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui désigne le dispositif qui mesure la vie qui reste.",
+     "aide": "C’est un objet qui marque le temps, comme dans la pièce d’Ionesco.",
+     "explication": "L’**horloge** : dans la pièce, la durée du spectacle est celle de l’agonie."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui dit que le décor se défait, comme le corps du personnage.",
+     "aide": "Dans la pièce d’Ionesco, le palais fait de même.",
+     "explication": "Le plafond se **lézarde** : le décor se défait avec le corps."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque idée de dissertation à son sens.",
+     "paires": [
+      [
+       "Tragédie et farce",
+       "Une mort annoncée, mêlée de gags"
+      ],
+      [
+       "Le temps réel",
+       "Le spectateur vit l’agonie à la vitesse du roi"
+      ],
+      [
+       "Les deux reines",
+       "L’acceptation contre le déni"
+      ]
+     ],
+     "aide": "Ces trois pistes sont celles du cours « Pour la dissertation et l’oral ».",
+     "explication": "**Tragédie et farce**, **temps réel**, **les deux reines** : les trois pistes du cours."
+    }
+   ]
+  },
+  {
+   "chapitre": "4072c52f-8895-5423-9dc7-0b2cc23fce92",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une momie, un papyrus, un lord",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Roman de la momie*. Situe le roman dans la vie de Gautier, puis retrouve qui aime qui.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Gautier et son roman",
+     "debut": 1810,
+     "fin": 1875,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1811,
+       "nom": "Naissance"
+      },
+      {
+       "id": "mau",
+       "date": 1835,
+       "nom": "Mlle de Maupin"
+      },
+      {
+       "id": "rom",
+       "date": 1858,
+       "nom": "Roman en volume"
+      },
+      {
+       "id": "mort",
+       "date": 1872,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Qui aime qui ?",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Tahoser",
+       "Fille du grand prêtre"
+      ],
+      [
+       "Poëri",
+       "?"
+      ],
+      [
+       "Le pharaon",
+       "Il aime Tahoser et l’élève au rang de reine"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mau"
+     ],
+     "enonce": "Touche le repère de la préface où Gautier défend l’art pour l’art.",
+     "aide": "Elle précède le roman de plus de vingt ans.",
+     "explication": "La préface de *Mademoiselle de Maupin* date de **1835**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 23,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent *Mademoiselle de Maupin* de la publication du roman en volume ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1858 − 1835 = **23 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Poëri ?",
+     "options": [
+      "Un Hébreu, aimé de Tahoser",
+      "Un prêtre égyptien, rival du pharaon",
+      "Un savant allemand, découvreur de la tombe",
+      "Un jeune lord anglais, amoureux de la momie"
+     ],
+     "reponse": 0,
+     "aide": "Tahoser va vivre chez lui pour être près de lui.",
+     "explication": "**Poëri** est un **Hébreu**, aimé de Tahoser — qui lui-même aime Ra’hel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la dédicace.",
+     "texte": "Le roman est dédié à Ernest ___, archéologue ___.",
+     "reponses": [
+      [
+       "Feydeau"
+      ],
+      [
+       "amateur"
+      ]
+     ],
+     "banque": [
+      "Feydeau",
+      "Mariette",
+      "amateur",
+      "officiel"
+     ],
+     "aide": "Un ami qui a documenté Gautier sur l’Égypte antique.",
+     "explication": "Gautier dédie le roman à **Ernest Feydeau**, archéologue **amateur** qui l’a documenté."
+    }
+   ]
+  },
+  {
+   "chapitre": "4072c52f-8895-5423-9dc7-0b2cc23fce92",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du papyrus à la mer Rouge",
+   "competence": "analyser-texte",
+   "situation": "Suis le fil du roman, de la tombe retrouvée à la mort de Tahoser.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Un lord et Rumphius trouvent une tombe intacte"
+      },
+      {
+       "id": "n2",
+       "texte": "Tahoser, déguisée, va vivre chez Poëri"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Plaies d’Égypte, fuite des Hébreux, mer Rouge"
+      },
+      {
+       "id": "n5",
+       "texte": "Tahoser meurt ; elle reçoit le tombeau royal"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Le pharaon la fait ramener au palais",
+      "Poëri l’épouse sous les yeux de Ra’hel",
+      "Moïse la conduit hors d’Égypte avec les Hébreux",
+      "Le lord anglais l’arrache à son tombeau"
+     ],
+     "reponse": 0,
+     "aide": "Le pharaon aime Tahoser et ne veut pas la perdre.",
+     "explication": "Le pharaon, qui l’aime, la **fait ramener au palais**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche l’étape qui forme le prologue moderne du roman.",
+     "aide": "C’est la première étape, qui authentifie le récit antique.",
+     "explication": "Le lord et Rumphius découvrent la tombe et le **papyrus** : le roman en est la traduction."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à celui ou à celle qu’il aime.",
+     "paires": [
+      [
+       "Tahoser",
+       "Poëri"
+      ],
+      [
+       "Poëri",
+       "Ra’hel"
+      ],
+      [
+       "Le pharaon",
+       "Tahoser"
+      ],
+      [
+       "Le jeune lord anglais",
+       "La momie"
+      ]
+     ],
+     "aide": "Un amour ne se rend pas toujours : chaque personnage aime quelqu’un d’autre.",
+     "explication": "**Tahoser** aime Poëri, qui aime **Ra’hel** ; le **pharaon** aime Tahoser ; le **lord** ne se mariera jamais, amoureux de la momie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la construction du roman.",
+     "texte": "Le roman est la ___ d’un papyrus, découvert dans la Vallée des ___.",
+     "reponses": [
+      [
+       "traduction"
+      ],
+      [
+       "Rois"
+      ]
+     ],
+     "banque": [
+      "traduction",
+      "copie",
+      "Rois",
+      "Reines"
+     ],
+     "aide": "Le récit antique est authentifié par un récit moderne.",
+     "explication": "Le roman **est** la **traduction** d’un papyrus de la Vallée des **Rois**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4072c52f-8895-5423-9dc7-0b2cc23fce92",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’art pour l’art",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation sur le « culte de la forme », lis une phrase de Gautier, un pastiche écrit pour l’exercice et classe les priorités du roman.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La doctrine de Gautier",
+     "blocs": [
+      "« Il n’y a de vraiment [[b|beau]] que ce qui ne peut servir à rien. »"
+     ],
+     "source": "Théophile Gautier, préface de *Mademoiselle de Maupin* (1835)"
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la table de la momie",
+     "blocs": [
+      "Sur la petite table, un [[o|miroir]] de bronze poli, un peigne d’ivoire et un coffret d’ébène incrusté d’or : tout y est couleur, éclat, matière."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Théophile Gautier"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot que Gautier érige en valeur suprême.",
+     "aide": "Le mot s’oppose à ce qui « peut servir ».",
+     "explication": "Pour Gautier, seul compte le **beau**, qui n’a pas à être utile."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche l’objet dans lequel on se regarde.",
+     "aide": "Le bronze y est poli pour renvoyer une image.",
+     "explication": "Le **miroir** de bronze poli : un objet décrit pour sa matière et son éclat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : est-il au premier plan du projet de Gautier, ou passe-t-il au second ?",
+     "categories": [
+      "Au premier plan",
+      "Au second plan"
+     ],
+     "items": [
+      [
+       "L’exactitude des couleurs et des objets",
+       0
+      ],
+      [
+       "Les rites décrits d’après les égyptologues",
+       0
+      ],
+      [
+       "La psychologie des personnages",
+       1
+      ],
+      [
+       "L’utilité du récit",
+       1
+      ]
+     ],
+     "aide": "La beauté visuelle prime sur la psychologie.",
+     "explication": "Couleurs, objets et rites **d’abord** ; psychologie et utilité **ensuite** : c’est l’art pour l’art."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque piste de dissertation à son idée.",
+     "paires": [
+      [
+       "Le roman à cadre",
+       "Le récit moderne authentifie le récit antique"
+      ],
+      [
+       "L’exotisme",
+       "Romantique, nourri de science"
+      ],
+      [
+       "L’art pour l’art",
+       "La beauté prime sur l’utilité"
+      ]
+     ],
+     "aide": "Ces trois pistes viennent du cours « Pour la dissertation et l’oral ».",
+     "explication": "**Cadre**, **exotisme** et **art pour l’art** structurent la lecture du roman."
+    }
+   ]
+  },
+  {
+   "chapitre": "03672500-a62c-52fa-ac2d-c862b21804db",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une vie en vers",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Roman inachevé*. Situe le recueil dans la vie d’Aragon, puis relis les épisodes qu’il raconte.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Aragon et son recueil",
+     "debut": 1890,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1897,
+       "nom": "Naissance"
+      },
+      {
+       "id": "com",
+       "date": 1927,
+       "nom": "Communiste"
+      },
+      {
+       "id": "rec",
+       "date": 1956,
+       "nom": "Le recueil"
+      },
+      {
+       "id": "mort",
+       "date": 1982,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "epis",
+     "type": "tableau",
+     "titre": "Les épisodes d’une vie",
+     "colonnes": [
+      "Épisode",
+      "Ce qu’il porte"
+     ],
+     "lignes": [
+      [
+       "L’enfance",
+       "Un secret de naissance : il croit que sa mère est sa sœur"
+      ],
+      [
+       "La guerre de 1914",
+       "?"
+      ],
+      [
+       "Le surréalisme",
+       "La rupture avec Breton"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rec"
+     ],
+     "enonce": "Touche le repère qui date la publication du recueil.",
+     "aide": "C’est l’année du rapport Khrouchtchev.",
+     "explication": "*Le Roman inachevé* paraît en **1956**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 29,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’adhésion d’Aragon au communisme de la publication du recueil ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1956 − 1927 = **29 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour la guerre de 1914 ?",
+     "options": [
+      "Le premier effondrement",
+      "Le début de la gloire littéraire",
+      "Le retour de la rime",
+      "La rencontre avec Elsa"
+     ],
+     "reponse": 0,
+     "aide": "Dans le récit de sa vie, cette guerre est un choc pour le jeune poète.",
+     "explication": "La guerre de 1914 est **le premier effondrement**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la présentation du recueil.",
+     "texte": "Aragon présente son recueil comme une ___ en ___.",
+     "reponses": [
+      [
+       "autobiographie"
+      ],
+      [
+       "vers"
+      ]
+     ],
+     "banque": [
+      "autobiographie",
+      "biographie",
+      "vers",
+      "prose"
+     ],
+     "aide": "Il raconte sa propre vie, d’une certaine façon.",
+     "explication": "Le recueil est une **autobiographie en vers**."
+    }
+   ]
+  },
+  {
+   "chapitre": "03672500-a62c-52fa-ac2d-c862b21804db",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La rime et la mémoire",
+   "competence": "analyser-texte",
+   "situation": "Suis le fil d’une vie racontée en vers, puis découvre pourquoi Aragon défend la rime.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du recueil",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "L’enfance et le secret de sa naissance"
+      },
+      {
+       "id": "n2",
+       "texte": "La guerre de 1914"
+      },
+      {
+       "id": "n3",
+       "texte": "Le surréalisme et la rupture avec Breton"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Elsa Triolet : l’amour"
+      },
+      {
+       "id": "n6",
+       "texte": "La vieillesse qui commence"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel épisode manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Les voyages et l’URSS : l’engagement",
+      "La mort d’Elsa et la fin de la poésie",
+      "Le retour à la foi de son enfance",
+      "La fuite hors de France pendant la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Entre le surréalisme et l’amour, c’est le moment de l’engagement.",
+     "explication": "Les **voyages** et l’**URSS** : c’est l’engagement du poète."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’épisode où le poète rompt avec un ancien compagnon.",
+     "aide": "Il s’agit du groupe qu’il a fondé avec Breton.",
+     "explication": "Le **surréalisme** et la **rupture avec Breton**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix formel à son effet.",
+     "paires": [
+      [
+       "L’alternance des mètres",
+       "Alexandrins, vers de quatorze syllabes, octosyllabes"
+      ],
+      [
+       "Le retour de la rime",
+       "Ce que les modernes avaient abandonné"
+      ],
+      [
+       "Refrains et enjambements",
+       "La musique des vers"
+      ]
+     ],
+     "aide": "Le cours dit : « Choix — Ce qu’il vise ».",
+     "explication": "**Mètres variés**, **rime retrouvée** et **refrains** donnent au recueil sa musique."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la défense de la rime.",
+     "texte": "La rime est l’appui de la ___ ; elle rend la poésie ___ et chantable.",
+     "reponses": [
+      [
+       "mémoire",
+       "memoire"
+      ],
+      [
+       "populaire"
+      ]
+     ],
+     "banque": [
+      "mémoire",
+      "raison",
+      "populaire",
+      "savante"
+     ],
+     "aide": "Elle aide à retenir les vers et à les chanter.",
+     "explication": "Appui de la **mémoire**, la rime rend la poésie **populaire** et chantable."
+    }
+   ]
+  },
+  {
+   "chapitre": "03672500-a62c-52fa-ac2d-c862b21804db",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le « je » se raconte",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation sur le lyrisme autobiographique, lis un quatrain écrit pour l’exercice, à la manière d’Aragon, puis dégage ses effets.",
+   "documents": [
+    {
+     "id": "quat",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Quatrain pour l’exercice",
+     "blocs": [
+      "Je cherche mon nom dans le [[r|temps]]",
+      "Comme on cherche une clef [[s|perdue]] ;",
+      "Là où mon enfance m’[[r|attend]],",
+      "Sur une porte jamais [[s|vue]]."
+     ],
+     "source": "Quatrain écrit pour l’exercice, à la manière de Louis Aragon"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le recueil est un lyrisme autobiographique",
+       "Le « je » se raconte en vers, entre aveu et mise en scène",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quat",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui riment aux vers 1 et 3.",
+     "aide": "Cherche la même sonorité à la fin des deux vers.",
+     "explication": "**Temps** et **attend** riment : la rime est un appui de la mémoire."
+    },
+    {
+     "type": "zone",
+     "document": "quat",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux mots qui riment aux vers 2 et 4.",
+     "aide": "Cherche la même sonorité à la fin des deux autres vers.",
+     "explication": "**Perdue** et **vue** riment : le quatrain est à rimes croisées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du recueil faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Le secret de naissance : Aragon élevé en croyant sa mère sa sœur",
+      "Le rapport Khrouchtchev et l’écrasement de Budapest",
+      "Le retour de la rime et la défense du chant",
+      "Les poèmes d’Aragon mis en musique par Ferré et Ferrat"
+     ],
+     "reponse": 0,
+     "aide": "L’exemple doit montrer le « je » qui se raconte lui-même.",
+     "explication": "Le **secret de naissance** : le « je » se confie, en vers."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque idée à ce qu’elle dit de la poésie d’Aragon.",
+     "paires": [
+      [
+       "La rime",
+       "Rend les vers mémorables"
+      ],
+      [
+       "Les refrains",
+       "Donnent la musique des vers"
+      ],
+      [
+       "Ferré et Ferrat",
+       "Ont mis des poèmes d’Aragon en musique"
+      ]
+     ],
+     "aide": "Ces trois éléments disent le lien entre poésie et chanson.",
+     "explication": "**Rime**, **refrains** et **mise en musique** : la poésie d’Aragon est mémorable et chantable."
+    }
+   ]
+  },
+  {
+   "chapitre": "b95c19bc-2ab7-57a6-bdcb-7dee8fc175b8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un charpentier et un fait divers",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Rouge et le Noir*. Situe le roman dans la vie de Stendhal, puis identifie ses trois personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Stendhal et son roman",
+     "debut": 1780,
+     "fin": 1845,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1783,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ber",
+       "date": 1828,
+       "nom": "Affaire Berthet"
+      },
+      {
+       "id": "rn",
+       "date": 1830,
+       "nom": "Rouge et Noir"
+      },
+      {
+       "id": "mort",
+       "date": 1842,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il incarne"
+     ],
+     "lignes": [
+      [
+       "Julien Sorel",
+       "Fils d’un charpentier de Verrières"
+      ],
+      [
+       "Madame de Rênal",
+       "?"
+      ],
+      [
+       "Mathilde de La Mole",
+       "L’amour de tête, héroïque et romanesque"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ber"
+     ],
+     "enonce": "Touche le repère du fait divers dont s’inspire le roman.",
+     "aide": "Un ancien séminariste a tiré sur son ancienne maîtresse dans une église.",
+     "explication": "L’**affaire Berthet** (1828) inspire le roman."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent le fait divers de la publication du roman ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1830 − 1828 = **2 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Madame de Rênal ?",
+     "options": [
+      "L’amour tendre et sincère, sans calcul",
+      "L’amour de tête, héroïque et romanesque",
+      "L’ambition d’un notable parvenu et vulgaire",
+      "La piété intransigeante d’un janséniste"
+     ],
+     "reponse": 0,
+     "aide": "Elle s’oppose à Mathilde, dont l’amour est de tête.",
+     "explication": "Madame de Rênal incarne l’**amour tendre et sincère**, sans calcul."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le sous-titre du roman.",
+     "texte": "Le roman est sous-titré « Chronique de ___ », année de la révolution de ___.",
+     "reponses": [
+      [
+       "1830"
+      ],
+      [
+       "Juillet"
+      ]
+     ],
+     "banque": [
+      "1830",
+      "1815",
+      "Juillet",
+      "Février"
+     ],
+     "aide": "Le roman paraît quelques mois après un événement politique de cette année-là.",
+     "explication": "« Chronique de **1830** » : l’année de la révolution de **Juillet**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b95c19bc-2ab7-57a6-bdcb-7dee8fc175b8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du séminaire à l’église de Verrières",
+   "competence": "analyser-texte",
+   "situation": "Suis le fil du roman, de la maison des Rênal à la fin de Julien.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Julien",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Précepteur chez M. de Rênal, il séduit sa femme"
+      },
+      {
+       "id": "n2",
+       "texte": "Il entre au séminaire de Besançon"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Une lettre de Madame de Rênal ruine tout"
+      },
+      {
+       "id": "n5",
+       "texte": "Il tire sur elle pendant la messe, à Verrières"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "À Paris, secrétaire du marquis de La Mole, il obtient un titre et un régiment",
+      "Il retourne chez son père charpentier et reprend l’atelier familial",
+      "Il rejoint l’armée de Napoléon et gagne ses galons sur le champ de bataille",
+      "Il épouse Madame de Rênal et s’installe à Verrières"
+     ],
+     "reponse": 0,
+     "aide": "La lettre qui ruine tout arrive au moment où Julien allait réussir à Paris.",
+     "explication": "À **Paris**, Julien est secrétaire du **marquis de La Mole** ; Mathilde lui obtient un titre et un régiment."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape de l’acte qui perd Julien.",
+     "aide": "Il agit dans une église, pendant un office.",
+     "explication": "Julien tire sur Madame de Rênal **pendant la messe** : cet acte le mène à l’échafaud."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à son sens.",
+     "paires": [
+      [
+       "Le rouge",
+       "L’armée, fermée depuis Napoléon"
+      ],
+      [
+       "Le noir",
+       "L’Église, seule voie d’ascension sous la Restauration"
+      ],
+      [
+       "« Chronique de 1830 »",
+       "Le sous-titre du roman"
+      ],
+      [
+       "Le procès",
+       "Julien accuse la société de le condamner"
+      ]
+     ],
+     "aide": "Deux couleurs, un sous-titre, un épisode final.",
+     "explication": "**Rouge** et **noir** désignent deux voies d’ascension ; le **procès** retourne l’accusation contre les juges."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la fin du roman.",
+     "items": [
+      "Julien refuse de se défendre et accuse la société",
+      "Il est guillotiné",
+      "Mathilde l’enterre",
+      "Madame de Rênal meurt trois jours après"
+     ],
+     "aide": "Du procès à la mort de Madame de Rênal.",
+     "explication": "Procès, **guillotine**, enterrement par **Mathilde**, puis mort de **Madame de Rênal**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b95c19bc-2ab7-57a6-bdcb-7dee8fc175b8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un paysan devant ses juges",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation, lis la plaidoirie de Julien, puis tranche un débat entre deux élèves.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La plaidoirie de Julien",
+     "blocs": [
+      "« Messieurs, je n’ai point l’honneur d’appartenir à votre classe, vous voyez en moi un [[p|paysan]] qui s’est [[r|révolté]] contre la bassesse de sa fortune. »"
+     ],
+     "source": "Stendhal, *Le Rouge et le Noir* (1830), le procès de Julien (citation donnée par le cours)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "À son procès, Julien s’excuse humblement pour obtenir la clémence des jurés."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Au contraire : il refuse de se défendre et [[a|accuse]] ses juges de condamner un paysan qui a voulu s’élever."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot par lequel Julien revendique son origine sociale.",
+     "aide": "Il dit à ses juges qu’il n’est pas de leur classe.",
+     "explication": "Julien se dit **paysan** : il endosse l’origine qu’on lui reproche."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui dit son attitude face à sa condition.",
+     "aide": "Il ne s’est pas résigné à sa place.",
+     "explication": "Julien s’est **révolté** contre la bassesse de sa fortune."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le débat et la plaidoirie permettent-ils d’appuyer ?",
+     "options": [
+      "Julien retourne l’accusation contre ses juges",
+      "Julien supplie ses juges de lui accorder le pardon",
+      "Julien nie avoir tiré sur Madame de Rênal",
+      "Julien s’excuse d’avoir quitté sa classe"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Théo et le ton de la plaidoirie.",
+     "explication": "Julien **accuse la société** de condamner en lui un paysan qui a voulu s’élever."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque marque de Stendhal à son effet.",
+     "paires": [
+      [
+       "L’ironie du narrateur",
+       "Il dit souvent le contraire de ce qu’il montre"
+      ],
+      [
+       "Le discours indirect libre",
+       "La pensée du personnage entre dans le récit"
+      ],
+      [
+       "La focalisation serrée",
+       "On suit les calculs du héros"
+      ]
+     ],
+     "aide": "Ce sont les trois marques du style de Stendhal dans le cours.",
+     "explication": "**Ironie**, **discours indirect libre** et **focalisation serrée** donnent accès à la conscience du héros."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3d6d804-9657-5c18-9fca-14232c2a048c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un faux dévot chez Orgon",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Tartuffe*. Situe la pièce dans la vie de Molière, puis sépare les lucides des aveugles.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Molière et sa pièce",
+     "debut": 1620,
+     "fin": 1675,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "v1",
+       "date": 1664,
+       "nom": "1re version"
+      },
+      {
+       "id": "aut",
+       "date": 1669,
+       "nom": "Autorisée"
+      },
+      {
+       "id": "mort",
+       "date": 1673,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Orgon",
+       "Riche bourgeois, aveuglé par Tartuffe"
+      ],
+      [
+       "Tartuffe",
+       "?"
+      ],
+      [
+       "Mariane",
+       "Fille d’Orgon, qui aime Valère"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "aut"
+     ],
+     "enonce": "Touche le repère de l’année où la pièce est enfin autorisée.",
+     "aide": "Elle a été interdite plusieurs années.",
+     "explication": "La pièce est autorisée en **1669**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la première version de l’autorisation définitive ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1669 − 1664 = **5 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Tartuffe ?",
+     "options": [
+      "Un faux dévot à la piété ostentatoire",
+      "Un vrai dévot, sincère et désintéressé",
+      "Un médecin imaginaire, soigneur des riches",
+      "Un officier du roi chargé d’arrêter Orgon"
+     ],
+     "reponse": 0,
+     "aide": "Il joue la piété pour s’enrichir chez Orgon.",
+     "explication": "Tartuffe est un **faux dévot**, à la piété **ostentatoire**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage : est-il lucide sur Tartuffe, ou aveugle ?",
+     "categories": [
+      "Lucide",
+      "Aveugle"
+     ],
+     "items": [
+      [
+       "Dorine",
+       0
+      ],
+      [
+       "Cléante",
+       0
+      ],
+      [
+       "Elmire",
+       0
+      ],
+      [
+       "Orgon",
+       1
+      ],
+      [
+       "Madame Pernelle",
+       1
+      ]
+     ],
+     "aide": "Orgon et sa mère partagent le même aveuglement.",
+     "explication": "**Dorine**, **Cléante** et **Elmire** voient clair ; **Orgon** et **Madame Pernelle** sont aveugles."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3d6d804-9657-5c18-9fca-14232c2a048c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piège sous la table",
+   "competence": "analyser-texte",
+   "situation": "Suis le fil de la pièce, de l’aveuglement d’Orgon à l’arrivée de l’exempt.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Orgon recueille Tartuffe, lui promet Mariane"
+      },
+      {
+       "id": "n2",
+       "texte": "Il en fait son héritier, lui confie une cassette"
+      },
+      {
+       "id": "n3",
+       "texte": "Elmire cache Orgon sous une table : le piège"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Un exempt du roi arrête Tartuffe"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Orgon le chasse, mais trop tard : la famille est expulsée",
+      "Orgon pardonne à Tartuffe et lui rend la cassette",
+      "Tartuffe épouse Mariane malgré Valère et Orgon",
+      "Madame Pernelle découvre la vérité et chasse Tartuffe"
+     ],
+     "reponse": 0,
+     "aide": "Tartuffe possède la donation et la cassette.",
+     "explication": "Orgon, enfin détrompé, le chasse **trop tard** : Tartuffe **fait expulser la famille**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui démasque Tartuffe aux yeux d’Orgon.",
+     "aide": "Il faut qu’Orgon entende de ses oreilles.",
+     "explication": "Orgon, caché **sous une table**, entend Tartuffe courtiser sa femme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Mariane",
+       "La fille d’Orgon, qui aime Valère"
+      ],
+      [
+       "Cléante",
+       "Il distingue la piété sincère de la grimace"
+      ],
+      [
+       "Dorine",
+       "La servante lucide"
+      ],
+      [
+       "Madame Pernelle",
+       "Elle partage l’aveuglement d’Orgon"
+      ]
+     ],
+     "aide": "Un amour contrarié, une voix de la raison, une servante, une mère aveugle.",
+     "explication": "Chaque personnage prend position **pour ou contre Tartuffe**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la construction de la pièce.",
+     "texte": "Le personnage-titre n’entre qu’au ___ acte : il a d’abord été construit par les ___ des autres.",
+     "reponses": [
+      [
+       "troisième",
+       "3e",
+       "troisieme"
+      ],
+      [
+       "paroles"
+      ]
+     ],
+     "banque": [
+      "troisième",
+      "premier",
+      "paroles",
+      "gestes"
+     ],
+     "aide": "Tartuffe est longtemps absent de la scène.",
+     "explication": "Tartuffe n’entre qu’au **troisième** acte, après avoir été construit par les **paroles** des autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3d6d804-9657-5c18-9fca-14232c2a048c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le Ciel et ses accommodements",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation sur le vrai et le faux dévot, lis deux répliques de Tartuffe et tranche un débat entre deux élèves.",
+   "documents": [
+    {
+     "id": "rep",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Deux répliques de Tartuffe",
+     "blocs": [
+      {
+       "didascalie": "Acte III, scène 2"
+      },
+      {
+       "personnage": "Tartuffe",
+       "replique": "Couvrez ce [[s|sein]] que je ne saurais voir."
+      },
+      {
+       "didascalie": "Acte IV, scène 5"
+      },
+      {
+       "personnage": "Tartuffe",
+       "replique": "Le Ciel défend, de vrai, certains contentements ; / Mais on trouve avec lui des [[a|accommodements]]."
+      }
+     ],
+     "source": "Molière, *Le Tartuffe* (1664-1669)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Louis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Tartuffe est sincèrement pieux : il croit à ce qu’il dit."
+      },
+      {
+       "qui": "Louis",
+       "texte": "Non : sa morale s’[[m|arrange]] avec ses désirs. Pour lui, le Ciel a des accommodements."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rep",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui montre que la morale de Tartuffe s’arrange avec ses intérêts.",
+     "aide": "Après « Le Ciel défend », il y a un « Mais ».",
+     "explication": "Les **accommodements** : la religion de Tartuffe se plie à ce qu’il veut."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le verbe par lequel Louis dit ce que Tartuffe fait de sa morale.",
+     "aide": "Louis s’oppose à Maya : la morale de Tartuffe est souple.",
+     "explication": "Sa morale **s’arrange** : c’est la marque du faux dévot."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture les répliques de Tartuffe permettent-elles d’appuyer ?",
+     "options": [
+      "Tartuffe est un faux dévot, dont la piété sert ses désirs",
+      "Tartuffe est un dévot sincère, victime des calomnies",
+      "Tartuffe est un homme de science, ami d’Orgon",
+      "Tartuffe est un officier du roi, déguisé en dévot"
+     ],
+     "reponse": 0,
+     "aide": "Il demande de couvrir un sein, puis admet que le Ciel a des accommodements.",
+     "explication": "Sa **piété ostentatoire** sert ses **désirs** : Molière vise l’**hypocrisie religieuse**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à ce qu’il révèle de la pièce.",
+     "paires": [
+      [
+       "Cléante",
+       "Il distingue la piété sincère de la grimace"
+      ],
+      [
+       "La cabale des dévots",
+       "Elle y voit une attaque contre la religion"
+      ],
+      [
+       "Le dénouement par le roi",
+       "Un hommage obligé, et fragile"
+      ]
+     ],
+     "aide": "Un personnage, un groupe, un dénouement.",
+     "explication": "**Cléante** défend la vraie piété ; la **cabale** attaque la pièce ; le **roi** démasque l’imposteur."
+    }
+   ]
+  }
+ ]
+}

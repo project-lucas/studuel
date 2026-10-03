@@ -1,0 +1,2309 @@
+{
+ "niveau": "2de",
+ "matiere": "espagnol",
+ "exercices": [
+  {
+   "chapitre": "0f1e0d1e-c934-50c7-a7c7-fe95c62ab731",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une affiche de 1964 : quelle Espagne ?",
+   "competence": "analyser-document",
+   "situation": "Au grenier, Marta trouve une affiche touristique qui ressemble à celles des années 1960. Elle se demande si elle montre toute l’Espagne ou seulement quelques images.",
+   "documents": [
+    {
+     "id": "cartel",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "¡Visite España!",
+     "sousTitre": "Cartel turístico",
+     "emoji": "☀️",
+     "lignes": [
+      {
+       "texte": "Sol y playa todo el año",
+       "id": "sol"
+      },
+      {
+       "texte": "Flamenco y toros en cada pueblo",
+       "id": "flam"
+      },
+      {
+       "texte": "Paella para todos",
+       "id": "paella"
+      }
+     ],
+     "pied": "¡Venga a conocer el país de la fiesta!",
+     "teinte": "ambre",
+     "source": "Affiche imaginée pour l’exercice, dans le style des années 1960"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cartel",
+     "reponse": [
+      "paella"
+     ],
+     "enonce": "Touche la ligne de l’affiche qui annonce un **plat**.",
+     "aide": "Cherche le plat de riz, spécialité de Valence.",
+     "explication": "**Paella para todos** : la paella est le plat valencien que l’affiche présente comme symbole du pays."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre surtout cette affiche ?",
+     "options": [
+      "Des clichés : l’Espagne réduite à quelques images",
+      "Les paysages différents des 17 communautés",
+      "Le programme d’une visite guidée de Madrid",
+      "Un plan de la côte de Galice"
+     ],
+     "reponse": 0,
+     "aide": "Soleil, flamenco, toros, paella : combien d’images différentes ? Est-ce tout le pays ?",
+     "explication": "L’affiche réduit l’Espagne à **quelques clichés** (soleil, flamenco, toros, paella) : un cliché n’est pas toujours faux, il est surtout incomplet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule qui sert à contredire un cliché.",
+     "texte": "Se suele ___ que en España hay sol todo el año.",
+     "reponses": [
+      [
+       "pensar"
+      ]
+     ],
+     "banque": [
+      "pensar",
+      "pienso",
+      "pensando",
+      "piensa"
+     ],
+     "aide": "Après *se suele*, on met un infinitif.",
+     "explication": "**Se suele pensar que…, pero en realidad…** : *soler* + infinitif exprime l’habitude, ici une idée répandue qu’on va nuancer."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f1e0d1e-c934-50c7-a7c7-fe95c62ab731",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Visiter Madrid avec une amie madrilène",
+   "competence": "se-reperer-temps",
+   "situation": "Tom arrive à Madrid. Lucía, sa correspondante, lui explique le programme et lui rappelle quelques dates de la ville.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Lucía et de Tom",
+     "participants": [
+      {
+       "nom": "Lucía",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucía",
+       "texte": "¡Bienvenido a Madrid, Tom! Mañana empezamos en la Puerta del Sol, el kilómetro cero de las carreteras de España."
+      },
+      {
+       "qui": "Tom",
+       "texte": "¿Y es verdad que se comen doce [[u|uvas]] allí?"
+      },
+      {
+       "qui": "Lucía",
+       "texte": "Sí, a medianoche, el 31 de diciembre. Por la tarde vamos al Reina Sofía, donde está el *Guernica* de Picasso."
+      },
+      {
+       "qui": "Tom",
+       "texte": "¿Y el Retiro?"
+      },
+      {
+       "qui": "Lucía",
+       "texte": "El domingo. El Paseo del Prado y el Retiro son patrimonio de la UNESCO desde 2021."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Madrid, de 1550 à 2050",
+     "debut": 1550,
+     "fin": 2050,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "movida",
+       "debut": 1980,
+       "fin": 1989,
+       "nom": "La Movida",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "cap",
+       "date": 1561,
+       "nom": "Madrid, capital"
+      },
+      {
+       "id": "guer",
+       "date": 1937,
+       "nom": "Guernica"
+      },
+      {
+       "id": "unesco",
+       "date": 2021,
+       "nom": "Paisaje de la Luz"
+      }
+     ],
+     "source": "Repères d’histoire de Madrid"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche ce que l’on mange à minuit, le 31 décembre, à la Puerta del Sol.",
+     "aide": "Il y en a douze, un par coup de minuit : ce sont des fruits.",
+     "explication": "**Las uvas** : on mange douze raisins à minuit, un à chaque coup de cloche, le 31 décembre."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cap"
+     ],
+     "enonce": "Touche l’événement qui fait de Madrid la **capitale** : Philippe II y installe la cour.",
+     "aide": "C’est le plus ancien des trois événements de la frise.",
+     "explication": "**1561** : Philippe II installe la cour à Madrid, qui devient la capitale."
+    },
+    {
+     "type": "nombre",
+     "reponse": 460,
+     "enonce": "Combien d’années séparent l’installation de la capitale (1561) de l’inscription du Paseo del Prado et du Retiro à l’UNESCO (2021) ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "2021 − 1561 = **460 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu ou repère à ce qu’il faut en retenir.",
+     "paires": [
+      [
+       "La Puerta del Sol",
+       "Le kilomètre zéro des routes d’Espagne"
+      ],
+      [
+       "Le musée Reina Sofía",
+       "Le *Guernica* de Picasso"
+      ],
+      [
+       "La Movida",
+       "Une explosion culturelle des années 1980"
+      ],
+      [
+       "Le Paseo del Prado et le Retiro",
+       "Le « Paysage de la lumière » (UNESCO)"
+      ]
+     ],
+     "aide": "Relis les messages de Lucía et regarde la frise.",
+     "explication": "La Puerta del Sol est le **kilomètre zéro**, le Reina Sofía garde *Guernica*, la **Movida** date des années 1980 et le Prado-Retiro forme le **Paysage de la lumière**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f1e0d1e-c934-50c7-a7c7-fe95c62ab731",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La mer en danger : Galice et Murcie",
+   "competence": "lire-carte",
+   "situation": "Pour un exposé, Hugo compare deux atteintes à la mer espagnole. Il a un article et une carte muette pour situer les deux cas.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Espagne et ses côtes",
+     "fond": "europe",
+     "cadrage": [
+      -12,
+      35,
+      5,
+      45
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -9,
+       "lat": 43.1,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lon": -0.8,
+       "lat": 37.7,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "madrid",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "ambre"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    },
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Dos golpes al mar",
+     "blocs": [
+      "El *Prestige* era un petrolero. En 2002 se hundió frente a las costas de Galicia y la marea negra llegó a las playas. Miles de voluntarios las limpiaron y nació el movimiento *Nunca Máis*.",
+      "La Mar Menor, en Murcia, es una laguna contaminada por la agricultura intensiva. En 2022, una ley le dio [[p|personalidad]] [[p|jurídica]]: fue una primera en Europa."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le repère qui correspond à la **Galice**, touchée par la marée noire du *Prestige*.",
+     "aide": "La Galice est tout au nord-ouest de la péninsule.",
+     "explication": "**A** : la Galice occupe le nord-ouest de l’Espagne, face à l’Atlantique."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le repère qui correspond à la **Mar Menor**, la lagune de Murcie.",
+     "aide": "Murcie est sur la côte méditerranéenne, au sud-est.",
+     "explication": "**B** : la Mar Menor est une lagune de la région de Murcie, au sud-est de l’Espagne."
+    },
+    {
+     "type": "zone",
+     "document": "art",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui désignent le **statut juridique** donné à la Mar Menor en 2022.",
+     "aide": "C’est un nom suivi d’un adjectif : la lagune devient comme une « personne » devant la loi.",
+     "explication": "**personalidad jurídica** : en 2022, la Mar Menor a reçu la personnalité juridique, une première en Europe."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "enonce": "Combien d’années séparent le naufrage du *Prestige* de la loi sur la Mar Menor ?",
+     "aide": "Relève les deux années dans l’article.",
+     "explication": "2022 − 2002 = **20 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature de chaque cas, dans l’ordre de l’article (le *Prestige*, puis la Mar Menor) ?",
+     "options": [
+      "Un accident de pétrolier, puis une pollution agricole lente",
+      "Une marée noire en Méditerranée, puis une pollution en Atlantique",
+      "Deux naufrages de pétroliers survenus à vingt ans d’écart",
+      "Une pollution par les engrais, puis un accident de pétrolier"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’origine de chaque pollution dans l’article.",
+     "explication": "Le *Prestige* est un **accident** (marée noire), la Mar Menor est polluée **lentement** par l’agriculture intensive : deux causes, deux façons de protéger la mer."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2c23e67-374d-5cae-9fd8-f6d6d329779d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le règlement de la salle de classe",
+   "competence": "comprendre-langue",
+   "situation": "Dans son nouveau lycée, Noa lit le règlement affiché près de la porte de la salle d’espagnol.",
+   "documents": [
+    {
+     "id": "normas",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Normas de la clase",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "Entra en silencio.",
+       "id": "n1"
+      },
+      {
+       "texte": "Apaga el móvil.",
+       "id": "n2"
+      },
+      {
+       "texte": "No corras por el pasillo.",
+       "id": "n3"
+      },
+      {
+       "texte": "No comas en clase.",
+       "id": "n4"
+      }
+     ],
+     "teinte": "violet",
+     "source": "Panneau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "normas",
+     "reponse": [
+      "n3",
+      "n4"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux **défenses** (ordres négatifs) du règlement.",
+     "aide": "Cherche le petit mot *no* au début de la phrase.",
+     "explication": "**No corras** et **no comas** : à l’impératif négatif, on met *no* devant le verbe."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel temps est le verbe de « No comas en clase » ?",
+     "options": [
+      "Au subjonctif présent",
+      "À l’impératif affirmatif",
+      "À l’indicatif présent",
+      "Au futur de l’indicatif"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi la formule : l’impératif négatif = *no* + …",
+     "explication": "**Subjonctif présent** : l’impératif négatif se forme avec *no* + subjonctif présent (*comas*, *corras*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la nouvelle règle : « N’utilise pas le portable en classe. »",
+     "texte": "No ___ el móvil en clase.",
+     "reponses": [
+      [
+       "uses"
+      ]
+     ],
+     "banque": [
+      "uses",
+      "usa",
+      "usas",
+      "usar"
+     ],
+     "aide": "Défense à *tú* : *no* + subjonctif présent. Pense à *comer → comas*.",
+     "explication": "**No uses** : verbe *usar*, subjonctif présent, personne *tú*."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2c23e67-374d-5cae-9fd8-f6d6d329779d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les ordres de maman avant le dîner",
+   "competence": "manier-langue",
+   "situation": "Lucas rentre à la maison. Sa mère lui écrit une série de consignes, et lui répond avec quelques demandes.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Mamá et de Lucas",
+     "participants": [
+      {
+       "nom": "Mamá",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mamá",
+       "texte": "Lucas, [[i|haz]] los deberes y [[i|sal]] con el perro, por favor."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Vale. ¿Y la cena?"
+      },
+      {
+       "qui": "Mamá",
+       "texte": "[[i|Ten]] paciencia. [[i|Ven]] a la cocina a las nueve y come la sopa."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "¿Puedo ver la tele? [[i|Di]] que sí, mamá."
+      },
+      {
+       "qui": "Mamá",
+       "texte": "Ahora no. Lávate las manos y no llegues tarde a la mesa."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche toutes les formes d’impératif **tú irrégulières** (celles des « huit irréguliers »).",
+     "aide": "Il y en a cinq : celles de *hacer*, *salir*, *tener*, *venir* et *decir*.",
+     "explication": "**haz, sal, ten, ven, di** : ce sont cinq des huit irréguliers à la personne *tú*. *Come* et *lávate* sont réguliers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’infinitif de la forme « **ten** » dans « Ten paciencia » ?",
+     "options": [
+      "tener",
+      "tenir",
+      "tenar",
+      "tenor"
+     ],
+     "reponse": 0,
+     "aide": "Dans la liste des irréguliers, pense à *tener → ten*.",
+     "explication": "**tener** : l’impératif tú est *ten*, comme *venir → ven*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la défense de la mère.",
+     "texte": "No ___ tarde a la mesa.",
+     "reponses": [
+      [
+       "llegues"
+      ]
+     ],
+     "banque": [
+      "llegues",
+      "llega",
+      "llegas",
+      "llegar"
+     ],
+     "aide": "Au négatif, on passe au subjonctif présent.",
+     "explication": "**No llegues** : *no* + subjonctif présent de *llegar*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ne te lève pas de la table. » La phrase commence par *No*.",
+     "items": [
+      "No",
+      "te",
+      "levantes",
+      "de la mesa"
+     ],
+     "aide": "Au négatif, le pronom se place **devant** le verbe.",
+     "explication": "**No te levantes de la mesa** : à l’impératif négatif, les pronoms se placent devant le verbe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ordre affirmatif à sa défense (tú).",
+     "paires": [
+      [
+       "haz",
+       "no hagas"
+      ],
+      [
+       "di",
+       "no digas"
+      ],
+      [
+       "sal",
+       "no salgas"
+      ],
+      [
+       "ve",
+       "no vayas"
+      ]
+     ],
+     "aide": "Le négatif vient de la forme *yo* du subjonctif : *hago → hagas*.",
+     "explication": "**haz → no hagas**, **di → no digas**, **sal → no salgas**, **ve → no vayas** : le négatif passe toujours par le subjonctif."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2c23e67-374d-5cae-9fd8-f6d6d329779d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au camp d’été : pronoms et impératifs",
+   "competence": "manier-langue",
+   "situation": "Au camp d’été, Marta, la monitrice, donne ses consignes à Dani et aux autres jeunes. Un tableau résume les formes les plus piégeuses.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Marta et de Dani",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Dani",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "¡Buenos días! [[l|Levantaos]], que son las siete."
+      },
+      {
+       "qui": "Dani",
+       "texte": "¿Qué hacemos primero?"
+      },
+      {
+       "qui": "Marta",
+       "texte": "Lavaos los dientes y sentaos a desayunar. Y las mochilas: no las [[n|olvidéis]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Des ordres avec pronoms",
+     "colonnes": [
+      "Verbe",
+      "Affirmatif",
+      "Négatif"
+     ],
+     "lignes": [
+      [
+       "decir + me + lo (tú)",
+       "?",
+       "no me lo digas"
+      ],
+      [
+       "levantarse (tú)",
+       "levántate",
+       "no te levantes"
+      ],
+      [
+       "sentarse (nosotros)",
+       "sentémonos",
+       "no nos sentemos"
+      ],
+      [
+       "lavarse (vosotros)",
+       "lavaos",
+       "no os lavéis"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche l’impératif **vosotros** du verbe *levantarse* dans les messages.",
+     "aide": "Il se termine par *-aos* : le *-d* de l’infinitif en *-ad* tombe devant *os*.",
+     "explication": "**Levantaos** : *levantad* + *os* → le -d tombe devant *os*."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "dímelo",
+      "dimelo"
+     ],
+     "enonce": "Complète la case « ? » : « Dis-le-moi » (tú), en un mot.",
+     "placeholder": "dímelo",
+     "aide": "Impératif tú de *decir*, puis *me* + *lo* soudés à la fin, avec un accent écrit.",
+     "explication": "**dímelo** : *di* + *me* + *lo* ; l’accent écrit garde l’accent tonique sur le *í*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète en t’aidant du tableau : « Ne vous asseyez pas par terre, les enfants ! »",
+     "texte": "No os ___ en el suelo, chicos.",
+     "reponses": [
+      [
+       "sentéis"
+      ]
+     ],
+     "banque": [
+      "sentéis",
+      "sentad",
+      "sentaos",
+      "sentados"
+     ],
+     "aide": "Compare avec *no os lavéis* : le négatif passe au subjonctif, pronom devant.",
+     "explication": "**No os sentéis** : *no* + *os* + subjonctif présent *(vosotros)*."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche l’impératif **négatif** adressé à plusieurs jeunes (*vosotros*).",
+     "aide": "Marta emploie *no las* devant le verbe, avec un -éis.",
+     "explication": "**olvidéis** : *no las olvidéis* = *no* + pronom + subjonctif *(vosotros)*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Marta parle maintenant à la directrice du camp (*usted*). Comment lui dit-elle « Levez-vous » ?",
+     "options": [
+      "Levántese",
+      "Levántate",
+      "Levantaos",
+      "Levántense"
+     ],
+     "reponse": 0,
+     "aide": "Pour *usted*, l’impératif emprunte le subjonctif présent ; le pronom se soude à la fin.",
+     "explication": "**Levántese** : subjonctif *levante* + pronom *se* soudé, avec accent écrit."
+    }
+   ]
+  },
+  {
+   "chapitre": "2aee1ab0-684b-522d-9089-53ec4ebdf184",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une sortie à Tolède : lire l’affiche",
+   "competence": "comprendre-langue",
+   "situation": "Le lycée organise une excursion à Tolède. Inès lit l’affiche du hall pour savoir quoi faire.",
+   "documents": [
+    {
+     "id": "cartel",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Excursión a Toledo",
+     "sousTitre": "Cartel del instituto",
+     "emoji": "🚌",
+     "lignes": [
+      {
+       "texte": "Salida",
+       "valeur": "a las 8, por la mañana",
+       "id": "sal"
+      },
+      {
+       "texte": "Autobús",
+       "valeur": "para Toledo",
+       "id": "bus"
+      },
+      {
+       "texte": "Inscripción",
+       "valeur": "para el viernes",
+       "id": "ins"
+      },
+      {
+       "texte": "Precio",
+       "valeur": "quince euros",
+       "id": "pre"
+      }
+     ],
+     "teinte": "violet",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cartel",
+     "reponse": [
+      "ins"
+     ],
+     "enonce": "Touche la ligne qui donne la **date limite** pour s’inscrire.",
+     "aide": "La date limite se dit avec *para* (« pour vendredi »).",
+     "explication": "**Inscripción : para el viernes** : *para* + jour = date limite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « a las 8, **por** la mañana », que marque *por* ?",
+     "options": [
+      "Le moment de la journée",
+      "La destination du bus",
+      "La cause du départ",
+      "Le but de l’excursion"
+     ],
+     "reponse": 0,
+     "aide": "On dit aussi *por la tarde*, *por la noche*.",
+     "explication": "***Por* la mañana** : *por* sert à situer un moment de la journée (le matin)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux phrases.",
+     "texte": "El autobús sale ___ Toledo. Gracias ___ venir.",
+     "reponses": [
+      [
+       "para"
+      ],
+      [
+       "por"
+      ]
+     ],
+     "banque": [
+      "para",
+      "por",
+      "a",
+      "de"
+     ],
+     "aide": "Premier trou : une destination ; second trou : on remercie « à cause de ».",
+     "explication": "**sale para Toledo** (destination) et **gracias por venir** (cause)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2aee1ab0-684b-522d-9089-53ec4ebdf184",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un cadeau d’anniversaire entre amis",
+   "competence": "manier-langue",
+   "situation": "Sofía fête son anniversaire. Álex lui offre un cadeau, puis ils se parlent par messages.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Sofía et d’Álex",
+     "participants": [
+      {
+       "nom": "Sofía",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Álex",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sofía",
+       "texte": "Gracias por venir a mi cumpleaños, Álex."
+      },
+      {
+       "qui": "Álex",
+       "texte": "Esto es para ti. Lo compré por veinte euros."
+      },
+      {
+       "qui": "Sofía",
+       "texte": "¡Qué bonito! Mañana te llamo por teléfono para darte las gracias otra vez."
+      },
+      {
+       "qui": "Álex",
+       "texte": "Gracias a ti. Ahora tengo que estudiar para el [[d|lunes]], pero por la tarde estoy libre."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète le message de Sofía.",
+     "texte": "Te llamo ___ teléfono ___ darte las gracias.",
+     "reponses": [
+      [
+       "por"
+      ],
+      [
+       "para"
+      ]
+     ],
+     "banque": [
+      "por",
+      "para",
+      "a",
+      "en"
+     ],
+     "aide": "Premier trou : le moyen de communication ; second trou : le but, devant un infinitif.",
+     "explication": "**por teléfono** (moyen) et **para darte** (but + infinitif)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces morceaux de phrases selon la préposition qui manque.",
+     "categories": [
+      "por",
+      "para"
+     ],
+     "items": [
+      [
+       "Gracias ___ venir",
+       0
+      ],
+      [
+       "Lo compré ___ veinte euros",
+       0
+      ],
+      [
+       "Esto es ___ ti",
+       1
+      ],
+      [
+       "Estudiar ___ el lunes",
+       1
+      ],
+      [
+       "___ mí, es un regalo muy bonito",
+       1
+      ]
+     ],
+     "aide": "Pose-toi la question : « dans quel but ? » (para) ou « à cause de quoi, pour quel prix ? » (por).",
+     "explication": "**Por** : cause (*gracias por*) et prix (*por veinte euros*). **Para** : destinataire, date limite, point de vue."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le jour pour lequel Álex doit **étudier**.",
+     "aide": "C’est un jour de la semaine, après *para el*.",
+     "explication": "**El lunes** : *estudiar para el lunes* = préparer quelque chose pour une date limite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « **por** la tarde estoy libre », *por* exprime…",
+     "options": [
+      "Un moment de la journée",
+      "Une destination précise",
+      "Un prix payé en euros",
+      "Un point de vue personnel"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec *por la mañana*.",
+     "explication": "**Por la tarde** : moment de la journée."
+    }
+   ]
+  },
+  {
+   "chapitre": "2aee1ab0-684b-522d-9089-53ec4ebdf184",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Marcos part pour Séville, via Cordoue",
+   "competence": "lire-carte",
+   "situation": "Marcos écrit à Clara pour annoncer son voyage. Sur une carte, tu repères sa destination et sa ville de passage.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Marcos",
+     "blocs": [
+      "Querida Clara:",
+      "Gracias por tu mensaje. Esta semana trabajo por mi [[h|hermano]], que está enfermo.",
+      "El viernes salgo de Madrid para Sevilla y paso por Córdoba para ver a mis primos. ¡Por fin voy a conocer tu ciudad!",
+      "Te llamo por teléfono para contarte el viaje. Un abrazo, Marcos"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "mapa",
+     "type": "carte",
+     "titre": "Madrid et l’Andalousie",
+     "fond": "europe",
+     "cadrage": [
+      -10,
+      35.5,
+      0,
+      44
+     ],
+     "lieux": [
+      {
+       "id": "mad",
+       "lieu": "madrid",
+       "nom": "Madrid",
+       "symbole": "point"
+      },
+      {
+       "id": "cor",
+       "lon": -4.78,
+       "lat": 37.89,
+       "nom": "Córdoba",
+       "symbole": "point"
+      },
+      {
+       "id": "sev",
+       "lieu": "seville",
+       "nom": "Sevilla",
+       "symbole": "point"
+      }
+     ],
+     "source": "Fond de carte simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mapa",
+     "reponse": [
+      "sev"
+     ],
+     "enonce": "Touche la ville **vers laquelle** Marcos part (destination).",
+     "aide": "Relis : *salgo de Madrid para…*",
+     "explication": "**Sevilla** : *salgo para Sevilla*, *para* exprime la destination."
+    },
+    {
+     "type": "zone",
+     "document": "mapa",
+     "reponse": [
+      "cor"
+     ],
+     "enonce": "Touche la ville que Marcos **traverse** en chemin.",
+     "aide": "Relis : *paso por…*",
+     "explication": "**Córdoba** : *paso por Córdoba*, *por* exprime le lieu traversé."
+    },
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui dit pour **qui** Marcos travaille à sa place.",
+     "aide": "C’est un membre de la famille, malade cette semaine.",
+     "explication": "**hermano** : *trabajo por mi hermano* = je travaille à sa place."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « trabajo **por** mi hermano » ?",
+     "options": [
+      "Je travaille à la place de mon frère",
+      "Je travaille pour mon frère, qui est mon patron",
+      "Je travaille afin d’aller voir mon frère",
+      "Je travaille près de chez mon frère"
+     ],
+     "reponse": 0,
+     "aide": "*Por* peut vouloir dire « à la place de » ou « en faveur de ».",
+     "explication": "**À la place de mon frère** : *trabajar por alguien* ; *trabajar para alguien* voudrait dire qu’il est le patron."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète deux phrases inspirées de la lettre.",
+     "texte": "Esta semana trabajo ___ mi hermano. El viernes salgo ___ Sevilla.",
+     "reponses": [
+      [
+       "por"
+      ],
+      [
+       "para"
+      ]
+     ],
+     "banque": [
+      "por",
+      "para",
+      "de",
+      "a"
+     ],
+     "aide": "Premier trou : à la place de quelqu’un ; second trou : destination.",
+     "explication": "**trabajo por mi hermano** (à sa place) et **salgo para Sevilla** (destination)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c2c1c34-c99f-5efd-9de8-e36dee8a407a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’agenda de Lola",
+   "competence": "comprendre-langue",
+   "situation": "Lola note ses projets de la semaine dans son agenda. Tu lis ses phrases pour repérer les petites prépositions.",
+   "documents": [
+    {
+     "id": "agenda",
+     "type": "tableau",
+     "titre": "Agenda de Lola",
+     "colonnes": [
+      "Día",
+      "Plan"
+     ],
+     "lignes": [
+      [
+       "lunes",
+       "Voy a la piscina a las ocho."
+      ],
+      [
+       "miércoles",
+       "Estoy en casa de mi abuela."
+      ],
+      [
+       "sábado",
+       "Vengo a verte en tren."
+      ]
+     ],
+     "source": "Agenda écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "agenda",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case où Lola indique une **heure**.",
+     "aide": "L’heure s’annonce avec la préposition *a* + *las*.",
+     "explication": "**a las ocho** : pour l’heure, on emploie *a* (a las ocho)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Estoy **en** casa de mi abuela », pourquoi *en* et non *a* ?",
+     "options": [
+      "Lola est déjà sur place, sans mouvement",
+      "Lola va vers la maison de sa grand-mère",
+      "Parce que *abuela* désigne une personne",
+      "Parce qu’on parle ici d’une heure précise"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec *Voy a la piscina*, où il y a un déplacement.",
+     "explication": "**En** : le lieu où l’on est, sans mouvement ; **a** : le mouvement et la destination."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du samedi.",
+     "texte": "Los sábados vengo ___ verte ___ tren.",
+     "reponses": [
+      [
+       "a"
+      ],
+      [
+       "en"
+      ]
+     ],
+     "banque": [
+      "a",
+      "en",
+      "de",
+      "por"
+     ],
+     "aide": "*Venir a* + infinitif ; pour le moyen de transport, *a pie* est une exception.",
+     "explication": "**vengo a verte** (verbe de mouvement + infinitif) et **en tren** (moyen de transport)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c2c1c34-c99f-5efd-9de8-e36dee8a407a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre pour un week-end à Tolède",
+   "competence": "manier-langue",
+   "situation": "Irene écrit à Teo pour l’inviter à Tolède. Tu observes où elle met un a devant une personne, et où elle n’en met pas.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Irene",
+     "blocs": [
+      "Hola, Teo:",
+      "El sábado voy a Toledo a ver a mis abuelos. Llego a las [[h|diez]], en tren.",
+      "Quiero mucho a mis abuelos y también a su perro, Toby. Tengo dos primos allí, pero no conozco a nadie más.",
+      "Busco un compañero de viaje: ¿vienes?"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Dans la lettre d’Irene, range ces phrases selon qu’il y a un *a* devant le complément ou non.",
+     "categories": [
+      "On met a",
+      "Pas de a"
+     ],
+     "items": [
+      [
+       "Quiero mucho ___ mis abuelos",
+       0
+      ],
+      [
+       "Quiero también ___ su perro",
+       0
+      ],
+      [
+       "No conozco ___ nadie más",
+       0
+      ],
+      [
+       "Tengo ___ dos primos allí",
+       1
+      ],
+      [
+       "Busco ___ un compañero de viaje",
+       1
+      ]
+     ],
+     "aide": "Personne précise, animal familier ou *nadie* : *a*. Après *tener*, ou pour une personne quelconque : rien.",
+     "explication": "*A* devant **mis abuelos**, **su perro**, **nadie** ; pas de *a* après **tener** ni pour **un compañero** (n’importe lequel)."
+    },
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche l’**heure** à laquelle Irene arrive à Tolède.",
+     "aide": "Elle arrive « a las… ».",
+     "explication": "**diez** : *llego a las diez*, l’heure se dit avec *a las*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase d’Irene.",
+     "texte": "Llego ___ las diez, ___ tren.",
+     "reponses": [
+      [
+       "a"
+      ],
+      [
+       "en"
+      ]
+     ],
+     "banque": [
+      "a",
+      "en",
+      "de",
+      "por"
+     ],
+     "aide": "L’heure : *a las*. Le transport : *en tren*.",
+     "explication": "**a las diez, en tren**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Irene écrit-elle « Quiero mucho **a** mis abuelos » ?",
+     "options": [
+      "Le complément est une personne précise",
+      "Il y a un mouvement vers un lieu",
+      "On indique l’heure",
+      "Le verbe *querer* impose toujours *a*"
+     ],
+     "reponse": 0,
+     "aide": "Avec *querer*, tout dépend de ce qui suit : une chose ou une personne ?",
+     "explication": "**Personne précise** : *querer a alguien* = aimer quelqu’un ; *querer algo* = vouloir quelque chose."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c2c1c34-c99f-5efd-9de8-e36dee8a407a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Excursion à Ségovie : fiche et messages",
+   "competence": "analyser-document",
+   "situation": "Marta et Hugo préparent une excursion à Ségovie. Ils lisent la fiche du voyage, puis se mettent d’accord par messages.",
+   "documents": [
+    {
+     "id": "ficha",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Excursión a Segovia",
+     "sousTitre": "Sábados de verano",
+     "emoji": "🚌",
+     "lignes": [
+      {
+       "texte": "Salida",
+       "valeur": "a las ocho, en autobús",
+       "id": "sal"
+      },
+      {
+       "texte": "Llegada",
+       "valeur": "a las diez",
+       "id": "lleg"
+      },
+      {
+       "texte": "Comida",
+       "valeur": "en el centro",
+       "id": "com"
+      },
+      {
+       "texte": "Regreso",
+       "valeur": "a las diecinueve horas",
+       "id": "reg"
+      }
+     ],
+     "teinte": "turquoise",
+     "source": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Marta et de Hugo",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "¿Vienes a Segovia el sábado, Hugo? Hay un autobús."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Sí, quiero ir. Voy a [[p|pie]] a la estación."
+      },
+      {
+       "qui": "Marta",
+       "texte": "Yo no conozco a nadie del grupo. ¿Y tú?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Conozco a Lucía. Lucía me llama dentro de una hora para decidir."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ficha",
+     "reponse": [
+      "sal"
+     ],
+     "enonce": "Touche la ligne de la fiche qui indique le **moyen de transport**.",
+     "aide": "On dit *en autobús*, *en tren*, *en coche*.",
+     "explication": "**Salida : en autobús** : pour un moyen de transport, on emploie *en* (sauf *a pie* et *a caballo*)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 9,
+     "unite": "h",
+     "enonce": "Combien d’heures le groupe passe-t-il à Ségovie entre l’arrivée et le départ du retour ?",
+     "aide": "Retranche l’heure d’arrivée à l’heure du retour (19 h).",
+     "explication": "19 h − 10 h = **9 heures**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète deux phrases de la fiche.",
+     "texte": "El autobús sale ___ las ocho y comemos ___ el centro.",
+     "reponses": [
+      [
+       "a"
+      ],
+      [
+       "en"
+      ]
+     ],
+     "banque": [
+      "a",
+      "en",
+      "de",
+      "por"
+     ],
+     "aide": "L’heure : *a las*. Le lieu où l’on est : *en*.",
+     "explication": "**a las ocho** (heure) et **en el centro** (lieu, sans mouvement)."
+    },
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui complète l’expression « **à pied** » dans les messages.",
+     "aide": "Cette expression garde *a* et ne dit pas *en*.",
+     "explication": "**a pie** : exception à la règle *en tren, en coche*, on dit *a pie* et *a caballo*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Hugo avec « Lucía me llama **dentro de** una hora » ?",
+     "options": [
+      "Lucía m’appelle dans une heure",
+      "Lucía m’a appelé il y a une heure",
+      "Lucía m’appelle depuis une heure",
+      "Lucía m’appelle pendant une heure"
+     ],
+     "reponse": 0,
+     "aide": "*Dentro de* + durée annonce un délai dans le futur.",
+     "explication": "**Dans une heure** : *dentro de* + durée = délai futur."
+    }
+   ]
+  },
+  {
+   "chapitre": "06e09431-d14d-5b9e-8e35-c93c22cbb919",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sara se présente en classe",
+   "competence": "comprendre-langue",
+   "situation": "Sara, une élève chilienne, se présente à sa nouvelle classe. Tu relèves ce qu’elle dit de sa vie à Madrid et de son français.",
+   "documents": [
+    {
+     "id": "pres",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Presentación de Sara",
+     "blocs": [
+      "Hola, me llamo Sara y soy chilena.",
+      "Vivo en Madrid desde hace dos años. En mi clase [[h|hay]] veinte alumnos.",
+      "Llevo un año estudiando francés: empecé hace doce meses."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pres",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui veut dire « il y a » au sens de « il existe ».",
+     "aide": "Ce n’est pas *hace* : il s’agit de dire que des élèves existent dans la classe.",
+     "explication": "**hay** : *hay* sert à dire qu’une chose existe ; *hace* + durée situe un événement dans le passé."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "ans",
+     "enonce": "Depuis combien d’années Sara vit-elle à Madrid ?",
+     "aide": "Repère *desde hace* dans le texte.",
+     "explication": "**2 ans** : *desde hace dos años* indique la durée d’une situation qui continue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Sara a commencé le français il y a douze mois. »",
+     "texte": "Sara empezó a estudiar francés ___ doce meses.",
+     "reponses": [
+      [
+       "hace"
+      ]
+     ],
+     "banque": [
+      "hace",
+      "hay",
+      "desde",
+      "dentro"
+     ],
+     "aide": "« Il y a » + durée, pour un moment passé, se dit avec le verbe *hacer*.",
+     "explication": "**hace doce meses** : *hace* + durée situe un événement dans le passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit Sara avec « Llevo un año estudiando francés » ?",
+     "options": [
+      "Elle étudie le français depuis un an et continue",
+      "Elle a arrêté le français il y a un an",
+      "Elle commencera le français dans un an",
+      "Elle étudie le français pendant un an seulement"
+     ],
+     "reponse": 0,
+     "aide": "*Llevar* + durée + gérondif : l’action est toujours en cours.",
+     "explication": "**Depuis un an, et ça continue** : *llevar* + durée + gérondif, avec un verbe au présent."
+    }
+   ]
+  },
+  {
+   "chapitre": "06e09431-d14d-5b9e-8e35-c93c22cbb919",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La frise de Lucía à Séville",
+   "competence": "se-reperer-temps",
+   "situation": "Lucía s’est installée à Séville. Sur sa frise personnelle, elle note ses étapes importantes. Nous sommes en 2026.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Lucía à Séville",
+     "debut": 2018,
+     "fin": 2026,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "llega",
+       "date": 2019,
+       "nom": "Llega a Sevilla"
+      },
+      {
+       "id": "inst",
+       "date": 2022,
+       "nom": "Entra al instituto"
+      },
+      {
+       "id": "guit",
+       "date": 2024,
+       "nom": "Empieza la guitarra"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "inst"
+     ],
+     "enonce": "Touche l’événement qui date de « **hace cuatro años** » (nous sommes en 2026).",
+     "aide": "Retranche quatre ans à 2026.",
+     "explication": "**2022** : 2026 − 4 = 2022, Lucía entre au lycée (*Entra al instituto*)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7,
+     "unite": "ans",
+     "enonce": "Depuis combien d’années Lucía vit-elle à Séville ?",
+     "aide": "Compte les années entre son arrivée et 2026.",
+     "explication": "2026 − 2019 = **7 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la tournure la plus idiomatique.",
+     "texte": "Lucía lleva siete años ___ en Sevilla.",
+     "reponses": [
+      [
+       "viviendo"
+      ]
+     ],
+     "banque": [
+      "viviendo",
+      "vivir",
+      "vive",
+      "vivido"
+     ],
+     "aide": "*Llevar* + durée + gérondif.",
+     "explication": "**viviendo** : *llevar* + durée + gérondif = « ça fait sept ans qu’elle vit »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Cela fait sept ans que Lucía vit à Séville. » La phrase commence par *Hace*.",
+     "items": [
+      "Hace",
+      "siete años",
+      "que",
+      "Lucía vive",
+      "en Sevilla"
+     ],
+     "aide": "*Hace* + durée + *que* + présent.",
+     "explication": "**Hace siete años que Lucía vive en Sevilla** : le verbe reste au présent car la situation continue."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à son sens.",
+     "paires": [
+      [
+       "hace dos años",
+       "Il y a deux ans (moment passé)"
+      ],
+      [
+       "desde hace dos años",
+       "Depuis deux ans (durée en cours)"
+      ],
+      [
+       "al cabo de dos días",
+       "Au bout de deux jours"
+      ],
+      [
+       "dentro de dos días",
+       "Dans deux jours (futur)"
+      ]
+     ],
+     "aide": "Distingue le moment passé, la durée qui continue et le futur.",
+     "explication": "**hace** = moment passé, **desde hace** = durée en cours, **al cabo de** = au bout de, **dentro de** = délai futur."
+    }
+   ]
+  },
+  {
+   "chapitre": "06e09431-d14d-5b9e-8e35-c93c22cbb919",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Nico écrit d’Oaxaca : calendrier et lettre",
+   "competence": "analyser-document",
+   "situation": "Nico voyage au Mexique. Il écrit à Rosa et tient un petit calendrier de son séjour. Le jour 15 est le jour où il écrit sa lettre.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Nico",
+     "blocs": [
+      "Querida Rosa:",
+      "Te escribo desde Oaxaca. Llegué hace dos semanas y ya estoy mejor de la fiebre.",
+      "Ayer fui al médico: cuando por fin me recibió, yo llevaba una hora esperando.",
+      "[[d|Dentro]] de una semana vuelvo a Madrid. ¡Un abrazo! Nico"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "cal",
+     "type": "tableau",
+     "titre": "Calendrier du séjour de Nico",
+     "colonnes": [
+      "Día",
+      "Qué pasa"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Llegada a Oaxaca"
+      ],
+      [
+       "8",
+       "Empieza la fiebre"
+      ],
+      [
+       "15",
+       "Hoy: Nico escribe a Rosa"
+      ],
+      [
+       "22",
+       "Vuelo a Madrid"
+      ]
+     ],
+     "source": "Calendrier écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cal",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche l’événement qui date de « **hace una semana** » (le jour 15 est aujourd’hui).",
+     "aide": "Retranche 7 jours au jour 15.",
+     "explication": "**Jour 8** : 15 − 7 = 8, c’est le début de la fièvre."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le calendrier, quelle phrase de Nico est exacte ?",
+     "options": [
+      "Llevo una semana con fiebre.",
+      "Llevo dos semanas con fiebre.",
+      "Llevo tres días con fiebre.",
+      "Llevo un mes con fiebre."
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La fièvre commence le jour 8, et nous sommes au jour 15.",
+     "explication": "**Una semana** : du jour 8 au jour 15, sept jours ; *llevar* + durée dit que ça continue."
+    },
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui annonce un **délai dans le futur** (« dans une semaine »).",
+     "aide": "Il commence par *d* et s’emploie avec *de* + durée.",
+     "explication": "**Dentro** : *dentro de una semana* = dans une semaine, le jour 22 au calendrier."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Cela fait une semaine que j’ai de la fièvre. » La phrase commence par *Hace*.",
+     "items": [
+      "Hace",
+      "una semana",
+      "que",
+      "tengo",
+      "fiebre"
+     ],
+     "aide": "*Hace* + durée + *que* + présent.",
+     "explication": "**Hace una semana que tengo fiebre** : la fièvre continue, donc le présent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la lettre, au passé.",
+     "texte": "Cuando el médico me recibió, yo ___ una hora esperando.",
+     "reponses": [
+      [
+       "llevaba"
+      ]
+     ],
+     "banque": [
+      "llevaba",
+      "llevo",
+      "llevé",
+      "llevaré"
+     ],
+     "aide": "Au passé, la durée en cours se met à l’imparfait.",
+     "explication": "**llevaba** : *llevaba una hora esperando* = « ça faisait une heure que j’attendais »."
+    }
+   ]
+  },
+  {
+   "chapitre": "0933b441-0b01-5b69-bb49-5d82429907ec",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le train de Madrid à Tolède",
+   "competence": "comprendre-langue",
+   "situation": "Pablo prépare une journée à Tolède. Il lit l’horaire du train affiché à la gare.",
+   "documents": [
+    {
+     "id": "tren",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Tren Madrid–Toledo",
+     "sousTitre": "Horario del sábado",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "Ida: Madrid → Toledo",
+       "valeur": "las ocho y cuarto",
+       "id": "ida"
+      },
+      {
+       "texte": "Vuelta: Toledo → Madrid",
+       "valeur": "las cinco y media",
+       "id": "vuelta"
+      },
+      {
+       "texte": "Billete de ida y vuelta",
+       "valeur": "treinta y cinco euros",
+       "id": "precio"
+      }
+     ],
+     "teinte": "bleu",
+     "source": "Horaire imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tren",
+     "reponse": [
+      "vuelta"
+     ],
+     "enonce": "Touche la ligne du train qui **ramène** Pablo à Madrid.",
+     "aide": "*Ida* = aller, *vuelta* = retour.",
+     "explication": "**Vuelta : Toledo → Madrid** : *la vuelta* est le retour."
+    },
+    {
+     "type": "nombre",
+     "reponse": 35,
+     "unite": "€",
+     "enonce": "Quel est le prix du billet aller-retour, en chiffres ?",
+     "aide": "Lis le nombre écrit en toutes lettres : *treinta y …*.",
+     "explication": "**35 €** : *treinta y cinco*, au-delà de 30 on écrit en trois mots avec *y*."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle heure part le train aller (« las ocho y cuarto ») ?",
+     "options": [
+      "8 h 15",
+      "7 h 45",
+      "8 h 30",
+      "8 h 45"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "*Y cuarto* ajoute un quart d’heure ; *menos cuarto* en retire un.",
+     "explication": "**8 h 15** : *y cuarto* = et quart ; *y media* = et demie ; *menos cuarto* = moins le quart."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’heure du train retour : 17 h 30.",
+     "texte": "Son las cinco ___ media.",
+     "reponses": [
+      [
+       "y"
+      ]
+     ],
+     "banque": [
+      "y",
+      "con",
+      "menos",
+      "de"
+     ],
+     "aide": "Pour la demie, on ajoute une demi-heure à l’heure pleine.",
+     "explication": "**Son las cinco y media** : 17 h 30 se lit « las cinco y media »."
+    }
+   ]
+  },
+  {
+   "chapitre": "0933b441-0b01-5b69-bb49-5d82429907ec",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les places d’un concert en toutes lettres",
+   "competence": "lire-tableau",
+   "situation": "Un stade annonce son concert. Léa doit lire les nombres de places et les écrire correctement en espagnol, en respectant les accords.",
+   "documents": [
+    {
+     "id": "entradas",
+     "type": "tableau",
+     "titre": "Concierto en el estadio",
+     "colonnes": [
+      "Zona",
+      "Entradas",
+      "Precio (euros)"
+     ],
+     "lignes": [
+      [
+       "Pista",
+       500,
+       80
+      ],
+      [
+       "Grada",
+       205,
+       45
+      ],
+      [
+       "Palco",
+       101,
+       120
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on le nombre de places de la **pista** (500 entradas) ?",
+     "options": [
+      "quinientas entradas",
+      "cincocientas entradas",
+      "quinientos entradas",
+      "quinientas de entradas"
+     ],
+     "reponse": 0,
+     "aide": "*Quinientos* est irrégulier, et la centaine s’accorde avec le nom féminin.",
+     "explication": "**quinientas entradas** : 500 = *quinientos* (irrégulier), accordé au féminin avec *entradas*."
+    },
+    {
+     "type": "texte",
+     "reponse": [
+      "doscientas cinco"
+     ],
+     "enonce": "Écris en toutes lettres le nombre d’entradas de la **grada** : « ___ entradas ».",
+     "placeholder": "doscientas …",
+     "aide": "Deux cents au féminin, puis cinq, sans *y* entre la centaine et l’unité.",
+     "explication": "**doscientas cinco** : la centaine s’accorde (*doscientas*) et le *y* n’apparaît qu’entre dizaines et unités."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour le **palco** (101 entradas).",
+     "texte": "Hay ___ entradas en el palco.",
+     "reponses": [
+      [
+       "ciento una"
+      ]
+     ],
+     "banque": [
+      "ciento una",
+      "ciento uno",
+      "cien una",
+      "ciento y una"
+     ],
+     "aide": "101 à 199 : *ciento*. *Uno* s’accorde devant un nom féminin.",
+     "explication": "**ciento una entradas** : de 101 à 199 on dit *ciento*, et *uno* devient *una* devant un nom féminin ; pas de *y*."
+    },
+    {
+     "type": "nombre",
+     "reponse": 806,
+     "enonce": "Combien de places y a-t-il en tout dans les trois zones ?",
+     "aide": "Additionne la colonne « Entradas ».",
+     "explication": "500 + 205 + 101 = **806 places**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 40000,
+     "unite": "€",
+     "enonce": "Si toutes les places de la pista sont vendues, combien cela rapporte-t-il, en euros ?",
+     "aide": "Nombre d’entradas × prix d’une entrée, pour la ligne « Pista ».",
+     "explication": "500 × 80 = **40 000 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0933b441-0b01-5b69-bb49-5d82429907ec",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lire des dates et une heure en espagnol",
+   "competence": "se-reperer-temps",
+   "situation": "Pour un exposé, Inés prépare quatre repères sur l’Espagne et doit les lire à voix haute. Elle s’aide d’une frise et de l’horloge de la gare.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre dates espagnoles",
+     "debut": 1450,
+     "fin": 2050,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "colon",
+       "date": 1492,
+       "nom": "Colón en América"
+      },
+      {
+       "id": "cap",
+       "date": 1561,
+       "nom": "Madrid, capital"
+      },
+      {
+       "id": "cons",
+       "date": 1978,
+       "nom": "Constitución"
+      },
+      {
+       "id": "flam",
+       "date": 2010,
+       "nom": "Flamenco, UNESCO"
+      }
+     ],
+     "source": "Repères d’histoire de l’Espagne"
+    },
+    {
+     "id": "reloj",
+     "type": "horloge",
+     "titre": "Reloj de la estación",
+     "heures": 9,
+     "minutes": 45,
+     "numerique": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cap"
+     ],
+     "enonce": "Touche l’événement du **siglo dieciséis** (XVIe siècle).",
+     "aide": "Le XVIe siècle va de 1501 à 1600.",
+     "explication": "**1561** : Madrid devient capitale au XVIe siècle (*el siglo dieciséis*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque année de la frise à sa lecture à voix haute.",
+     "paires": [
+      [
+       "1492",
+       "mil cuatrocientos noventa y dos"
+      ],
+      [
+       "1561",
+       "mil quinientos sesenta y uno"
+      ],
+      [
+       "1978",
+       "mil novecientos setenta y ocho"
+      ],
+      [
+       "2010",
+       "dos mil diez"
+      ]
+     ],
+     "aide": "*Quinientos* et *novecientos* sont irréguliers ; *y* seulement entre dizaines et unités ; *mil* est invariable.",
+     "explication": "On lit l’année comme un nombre : **mil cuatrocientos noventa y dos**, **mil quinientos sesenta y uno**, **mil novecientos setenta y ocho**, **dos mil diez**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 69,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’arrivée de Colón en Amérique de l’installation de la capitale à Madrid ?",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1561 − 1492 = **69 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le flamenco entre à l’UNESCO en 2010. Comment dit-on le siècle ?",
+     "options": [
+      "el siglo veintiuno",
+      "el siglo veinte",
+      "el siglo dieciocho",
+      "el siglo veintidós"
+     ],
+     "reponse": 0,
+     "aide": "2010 est une année du XXIe siècle ; au-delà de dix, on emploie le cardinal.",
+     "explication": "**el siglo veintiuno** : 2010 appartient au XXIe siècle, et on lit le cardinal (*veintiuno*) au-delà de dix."
+    },
+    {
+     "type": "trous",
+     "enonce": "Lis l’horloge de la gare : il est 9 h 45.",
+     "texte": "Son las ___ menos cuarto.",
+     "reponses": [
+      [
+       "diez"
+      ]
+     ],
+     "banque": [
+      "diez",
+      "nueve",
+      "once",
+      "ocho"
+     ],
+     "aide": "*Menos cuarto* se rattache à l’heure **suivante**.",
+     "explication": "**Son las diez menos cuarto** : 9 h 45 = dix heures moins le quart."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0606240-8745-5ee6-9cb9-7cc403416785",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Chez abuelita, un petit café",
+   "competence": "comprendre-langue",
+   "situation": "Ana rend visite à sa grand-mère. Elles échangent quelques messages très affectueux.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ana et de sa abuelita",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Abuelita",
+       "emoji": "👵",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Abuelita, ¿me preparas un [[c|cafecito]]?"
+      },
+      {
+       "qui": "Abuelita",
+       "texte": "Claro, cariño. Espera un momentito."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le **diminutif** de *café* dans le message d’Ana.",
+     "aide": "Il se termine par *-cito*.",
+     "explication": "**cafecito** : après une voyelle accentuée en *-é*, le diminutif prend *-cito*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que marque surtout le suffixe de *abuelita* dans ces messages ?",
+     "options": [
+      "L’affection",
+      "La petite taille de la grand-mère",
+      "Le mépris",
+      "Une grande taille"
+     ],
+     "reponse": 0,
+     "aide": "Une grand-mère n’est pas « petite » : pense à la tendresse.",
+     "explication": "**L’affection** : le diminutif dit souvent la tendresse plus que la taille."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le diminutif de *café*.",
+     "texte": "cafe___",
+     "reponses": [
+      [
+       "cito"
+      ]
+     ],
+     "banque": [
+      "cito",
+      "ito",
+      "ecito",
+      "illo"
+     ],
+     "aide": "Après une voyelle *-e*, on emploie le suffixe à *c*.",
+     "explication": "**cafecito** : après *-e*, *-n* ou *-r*, on emploie *-cito*."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0606240-8745-5ee6-9cb9-7cc403416785",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un goûter à la mexicaine",
+   "competence": "manier-langue",
+   "situation": "Au Mexique, une mère et son fils s’écrivent. Leurs mots sont pleins de diminutifs.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Mamá et de son hijo",
+     "participants": [
+      {
+       "nom": "Mamá",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hijo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mamá",
+       "texte": "Mijito, ¿quieres un juguito y un poquito de pan?"
+      },
+      {
+       "qui": "Hijo",
+       "texte": "Sí, mamá. [[a|Ahorita]] voy, estoy con mi amiguito Beto."
+      },
+      {
+       "qui": "Mamá",
+       "texte": "Qué bien. Dile que traiga a su perrito."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche l’**adverbe** auquel le fils a ajouté un diminutif.",
+     "aide": "Il s’agit d’*ahora*, devenu *ahor…*",
+     "explication": "**ahorita** : en Amérique latine, le diminutif s’accroche même aux adverbes (*ahora → ahorita*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on *poquito* et non *pocito* ?",
+     "options": [
+      "Pour garder le son /k/ de *poco*",
+      "Parce que *poco* est un nom féminin",
+      "Parce que le suffixe est *-cito*",
+      "Parce que le mot est devenu autonome"
+     ],
+     "reponse": 0,
+     "aide": "En espagnol, *c* devant *i* se prononce comme un *z*, pas comme un *k*.",
+     "explication": "**On garde le son /k/** : *poco → poquito*, comme *amigo → amiguito* ; l’orthographe change pour que la consonne ne change pas de son."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le diminutif de *amigo*.",
+     "texte": "ami___",
+     "reponses": [
+      [
+       "guito"
+      ]
+     ],
+     "banque": [
+      "guito",
+      "gito",
+      "cito",
+      "ito"
+     ],
+     "aide": "On veut garder le son de *g* dur devant *i*.",
+     "explication": "**amiguito** : on ajoute un *u* pour garder le son /g/ dur devant *i*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot en -azo, -ote ou -ucho à son sens.",
+     "paires": [
+      [
+       "codazo",
+       "Un coup de coude"
+      ],
+      [
+       "grandote",
+       "Grand et gros"
+      ],
+      [
+       "cuartucho",
+       "Une pièce misérable"
+      ],
+      [
+       "perrazo",
+       "Un énorme chien"
+      ]
+     ],
+     "aide": "*-azo* peut vouloir dire « coup » ou « énorme » ; *-ucho* est péjoratif.",
+     "explication": "**codazo** (coup donné avec le coude), **grandote** (gros, grand), **cuartucho** (pièce misérable), **perrazo** (énorme chien)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mots : vrai diminutif, ou mot devenu autonome ?",
+     "categories": [
+      "Diminutif",
+      "Mot autonome"
+     ],
+     "items": [
+      [
+       "perrito",
+       0
+      ],
+      [
+       "mesita",
+       0
+      ],
+      [
+       "cafecito",
+       0
+      ],
+      [
+       "bombilla",
+       1
+      ],
+      [
+       "ventanilla",
+       1
+      ],
+      [
+       "zapatilla",
+       1
+      ]
+     ],
+     "aide": "Un mot autonome a pris un sens à part : une bombilla n’est pas une « petite bombe ».",
+     "explication": "*Perrito, mesita, cafecito* sont de vrais diminutifs ; **bombilla** (ampoule), **ventanilla** (guichet), **zapatilla** (chausson) sont des mots à apprendre à part."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0606240-8745-5ee6-9cb9-7cc403416785",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les suffixes selon les régions",
+   "competence": "analyser-document",
+   "situation": "Pour un exposé sur la langue vivante, Rafa regroupe dans un tableau trois diminutifs régionaux et lit un court texte sur le surnom des habitants du Costa Rica.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Des suffixes selon les régions",
+     "colonnes": [
+      "Suffixe",
+      "Exemple",
+      "Où l’entend-on"
+     ],
+     "lignes": [
+      [
+       "-ico",
+       "pequeñico",
+       "Aragon, Murcie, Costa Rica"
+      ],
+      [
+       "-illo",
+       "chiquillo",
+       "Andalousie"
+      ],
+      [
+       "-ín",
+       "pequeñín",
+       "Asturies"
+      ]
+     ],
+     "source": "Tableau d’après le cours"
+    },
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Los ticos",
+     "blocs": [
+      "En Costa Rica, la gente usa tanto el sufijo *-ico* (*un momentico*, *un poquitico*) que a los costarricenses los llaman los [[t|ticos]]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le suffixe typique des **Asturies**.",
+     "aide": "Cherche la ligne où la dernière colonne dit « Asturies ».",
+     "explication": "**-ín** : *pequeñín* est typique des Asturies."
+    },
+    {
+     "type": "zone",
+     "document": "art",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le **surnom** des habitants du Costa Rica, formé sur le suffixe *-ico*.",
+     "aide": "C’est un mot court, qui se termine par *-os* et qui commence par *t*.",
+     "explication": "**Ticos** : les Costaricains disent *-ico* si souvent qu’on les surnomme les *ticos*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : *pequeño* dans le parler d’Aragon ou de Murcie.",
+     "texte": "pequeñ___",
+     "reponses": [
+      [
+       "ico"
+      ]
+     ],
+     "banque": [
+      "ico",
+      "ito",
+      "ín",
+      "illo"
+     ],
+     "aide": "Cherche dans le tableau le suffixe d’Aragon et de Murcie.",
+     "explication": "**pequeñico** : le suffixe *-ico* est celui d’Aragon, de Murcie et du Costa Rica."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à son sens.",
+     "paires": [
+      [
+       "casucha",
+       "Une maison misérable"
+      ],
+      [
+       "palabrota",
+       "Un gros mot"
+      ],
+      [
+       "cabezón",
+       "Qui a une grosse tête"
+      ]
+     ],
+     "aide": "*-ucho* est péjoratif, *-ota* dit « gros », *-azo* un coup, *-ón* le grand.",
+     "explication": "**casucha** (-ucho, misérable), **palabrota** (-ota, grossier), **cabezón** (-ón, grosse tête)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lequel de ces suffixes est surtout entendu en **Andalousie** ?",
+     "options": [
+      "-illo",
+      "-ico",
+      "-ín",
+      "-ón"
+     ],
+     "reponse": 0,
+     "aide": "Cherche *chiquillo* dans le tableau.",
+     "explication": "**-illo** : *chiquillo* est très fréquent en Andalousie."
+    }
+   ]
+  }
+ ]
+}

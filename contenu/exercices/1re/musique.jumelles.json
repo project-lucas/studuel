@@ -1,0 +1,1835 @@
+{
+ "niveau": "1re",
+ "matiere": "musique",
+ "exercices": [
+  {
+   "chapitre": "49a68504-975d-5e98-9139-3bfdfa5f34f3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux interprètes, une partition",
+   "competence": "lire-tableau",
+   "situation": "Deux pianistes jouent le même passage d’une même partition. Camille compare leurs choix dans un tableau et en déduit ce que décide un interprète.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Le même passage, deux interprétations",
+     "colonnes": [
+      "Critère",
+      "Interprète A",
+      "Interprète B"
+     ],
+     "lignes": [
+      [
+       "Tempo (pulsations par minute)",
+       60,
+       80
+      ],
+      [
+       "Durée du passage",
+       "3 min 00 s",
+       "2 min 15 s"
+      ],
+      [
+       "Nuances",
+       "Très douces, peu de relief",
+       "Contrastées : le thème ressort"
+      ],
+      [
+       "Phrasé",
+       "Notes très liées",
+       "Notes plus détachées"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "comp",
+     "enonce": "Touche **le tempo le plus rapide**.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Plus il y a de pulsations par minute, plus la musique va vite.",
+     "explication": "L’interprète B joue à **80** pulsations par minute, contre 60 pour A : c’est le tempo le plus rapide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de secondes la version B est-elle plus courte que la version A ?",
+     "unite": "secondes",
+     "reponse": 45,
+     "aide": "Passe les deux durées en secondes avant de soustraire : 3 min = 180 s.",
+     "explication": "A dure 180 s, B dure 135 s : 180 − 135 = **45 secondes**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix de l’interprète à ce qu’il change à l’écoute.",
+     "paires": [
+      [
+       "Le tempo",
+       "L’énergie, la respiration de la phrase"
+      ],
+      [
+       "Les nuances",
+       "Le relief, ce qui passe au premier plan"
+      ],
+      [
+       "Le phrasé",
+       "Le sens : où la phrase respire"
+      ],
+      [
+       "L’instrument",
+       "La couleur, l’équilibre, la puissance"
+      ]
+     ],
+     "aide": "Le tableau compare le tempo, les nuances et le phrasé : relie chaque ligne à son effet.",
+     "explication": "**Tempo** : énergie ; **nuances** : relief ; **phrasé** : sens de la phrase ; **instrument** : couleur et puissance. Un interprète ne « restitue » pas : il choisit."
+    }
+   ]
+  },
+  {
+   "chapitre": "49a68504-975d-5e98-9139-3bfdfa5f34f3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Bach avec les instruments de son temps",
+   "competence": "analyser-document",
+   "situation": "Un ensemble « historiquement informé » joue le même Bach qu’un grand orchestre moderne. Clara reçoit une fiche comparant les deux versions et doit retrouver laquelle est laquelle.",
+   "documents": [
+    {
+     "id": "versions",
+     "type": "tableau",
+     "titre": "Deux versions d’un même concerto",
+     "colonnes": [
+      "Critère",
+      "Version A",
+      "Version B"
+     ],
+     "lignes": [
+      [
+       "Diapason (la)",
+       "440 Hz",
+       "415 Hz"
+      ],
+      [
+       "Cordes",
+       "En acier",
+       "En boyau"
+      ],
+      [
+       "Effectif",
+       "60 musiciens",
+       "22 musiciens"
+      ],
+      [
+       "Articulation",
+       "Appuyée, continue",
+       "Plus légère"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs imaginés ; diapasons usuels"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "versions",
+     "enonce": "Les musiciens « historiquement informés » jouent sur des cordes anciennes. Touche **la case qui décrit leurs cordes**.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Ils utilisent des cordes en boyau, comme à l’époque de Bach.",
+     "explication": "La **version B** joue sur des cordes en **boyau** : c’est la version historiquement informée. La version A, en acier, est celle de l’orchestre moderne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de hertz le diapason de la version B est-il plus bas que celui de la version A ?",
+     "unite": "Hz",
+     "reponse": 25,
+     "aide": "Lis les deux valeurs dans la ligne « Diapason », puis soustrais.",
+     "explication": "440 − 415 = **25 Hz** : le diapason ancien est plus bas qu’aujourd’hui."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique : orchestre moderne ou pratique d’époque ?",
+     "categories": [
+      "Orchestre moderne",
+      "Pratique d’époque"
+     ],
+     "items": [
+      [
+       "Cordes en acier",
+       0
+      ],
+      [
+       "Cordes en boyau",
+       1
+      ],
+      [
+       "Diapason à 440 Hz",
+       0
+      ],
+      [
+       "Diapason plus bas",
+       1
+      ],
+      [
+       "Effectif réduit",
+       1
+      ],
+      [
+       "Articulation appuyée et continue",
+       0
+      ]
+     ],
+     "aide": "Reprends les colonnes A et B du tableau.",
+     "explication": "La musique **historiquement informée** rejoue le répertoire avec les moyens de l’époque : **diapason plus bas, cordes en boyau, effectifs réduits, articulation plus légère**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le contraste entre les deux versions ?",
+     "options": [
+      "Une partition s’entend très différemment : aucune version n’est LA fidèle",
+      "La version A est la seule qui respecte vraiment la partition écrite",
+      "La version B est erronée à cause de son diapason plus bas que A",
+      "Les deux versions sonnent de façon identique à l’oreille"
+     ],
+     "reponse": 0,
+     "aide": "Le même Bach devient méconnaissable : qu’est-ce que cela prouve ?",
+     "explication": "Le même Bach devient méconnaissable : cela montre que **« la » version fidèle n’existe pas**. Chaque interprétation est un choix."
+    }
+   ]
+  },
+  {
+   "chapitre": "49a68504-975d-5e98-9139-3bfdfa5f34f3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Écouter deux fois, comparer",
+   "competence": "lire-graphique",
+   "situation": "Inès prépare une écoute active : elle compare le tempo de deux interprétations d’un même morceau, section par section. Elle note aussi comment organiser son écoute et comment en parler.",
+   "documents": [
+    {
+     "id": "tempo",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tempo de deux interprétations",
+     "categories": [
+      "Début",
+      "Thème",
+      "Reprise",
+      "Fin"
+     ],
+     "series": [
+      {
+       "nom": "Interprétation A",
+       "valeurs": [
+        80,
+        80,
+        80,
+        70
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Interprétation B",
+       "valeurs": [
+        72,
+        84,
+        66,
+        50
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Tempo",
+      "unite": "pulsations/min",
+      "min": 40,
+      "max": 90,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Section du morceau"
+     },
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "notes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les notes d’Inès",
+     "auteur": "Notes écrites pour l’exercice",
+     "blocs": [
+      "Je compare deux interprétations du même passage : c’est le raccourci le plus efficace pour voir ce que décide un interprète.",
+      "Dans l’interprétation B, la dernière section est presque suspendue, alors qu’A garde presque le même tempo jusqu’au bout."
+     ],
+     "source": "Notes écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tempo",
+     "enonce": "Touche **la section où les deux interprétations diffèrent le plus**.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Pour chaque section, calcule l’écart entre les deux tempos.",
+     "explication": "Les écarts sont de 8, 4, 14 puis **20** pulsations par minute : c’est à la **fin** que les deux interprétations diffèrent le plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de pulsations par minute l’interprétation B ralentit-elle entre la reprise et la fin ?",
+     "unite": "pulsations/min",
+     "reponse": 16,
+     "aide": "Lis la courbe de B pour la reprise, puis pour la fin.",
+     "explication": "B passe de 66 à 50 pulsations par minute : 66 − 50 = **16**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase relève d’une écoute active, avec des mots d’analyse et non de goût ?",
+     "options": [
+      "B ralentit nettement à la fin : la phrase paraît suspendue",
+      "J’aime moins la version B que la version A",
+      "La version B est tout simplement la meilleure",
+      "B est triste, car le pianiste devait être triste"
+     ],
+     "reponse": 0,
+     "aide": "Une phrase d’analyse s’appuie sur ce qu’on entend (tempo, section), pas sur ce qu’on aime.",
+     "explication": "La bonne phrase dit **ce qu’on a entendu**, avec des mots d’analyse (le tempo, la fin). Les autres expriment un goût ou une supposition sur la vie du musicien."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste d’écoute : avant, pendant ou après ?",
+     "categories": [
+      "Avant",
+      "Pendant",
+      "Après"
+     ],
+     "items": [
+      [
+       "Me demander ce que je vais chercher",
+       0
+      ],
+      [
+       "Noter un retour du thème",
+       1
+      ],
+      [
+       "Noter une rupture",
+       1
+      ],
+      [
+       "Raconter ce que j’ai entendu avec des mots d’analyse",
+       2
+      ],
+      [
+       "Choisir un repère : instrument, forme, retour de thème",
+       0
+      ],
+      [
+       "Comparer mes notes avec celles d’un camarade",
+       2
+      ]
+     ],
+     "aide": "Avant : se préparer. Pendant : repérer les retours et les ruptures. Après : raconter.",
+     "explication": "**Avant** : on se prépare (que vais-je chercher ?). **Pendant** : on repère retours et ruptures. **Après** : on raconte ce qu’on a entendu, avec des mots d’analyse."
+    }
+   ]
+  },
+  {
+   "chapitre": "3039a2eb-8f6b-57a1-b68e-44d8c6d707e0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois fins de phrase",
+   "competence": "analyser-document",
+   "situation": "Lina écoute trois phrases d’une chanson et note, pour chacune, comment elle se termine. Elle veut mettre un nom sur ce qu’elle ressent à la fin de chaque phrase.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Le carnet d’écoute de Lina",
+     "colonnes": [
+      "Phrase",
+      "Ce que j’entends à la fin"
+     ],
+     "lignes": [
+      [
+       "Phrase 1",
+       "La dominante puis la tonique : la phrase se ferme"
+      ],
+      [
+       "Phrase 2",
+       "On s’arrête sur la dominante : la phrase reste ouverte"
+      ],
+      [
+       "Phrase 3",
+       "La dominante, puis un autre degré que la tonique : surprise"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes d’écoute imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche **la phrase qui paraît achevée** à l’oreille.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Une phrase achevée se termine par la tonique, après la dominante.",
+     "explication": "La **phrase 1** se termine par dominante → tonique : l’oreille entend la phrase se fermer. C’est la cadence parfaite."
+    },
+    {
+     "type": "association",
+     "enonce": "Donne à chaque fin de phrase le nom de sa cadence.",
+     "paires": [
+      [
+       "Phrase 1",
+       "Cadence parfaite"
+      ],
+      [
+       "Phrase 2",
+       "Cadence suspensive"
+      ],
+      [
+       "Phrase 3",
+       "Cadence rompue"
+      ]
+     ],
+     "aide": "Parfaite : dominante puis tonique. Suspensive : on s’arrête sur la dominante. Rompue : un autre degré.",
+     "explication": "**Phrase 1** : cadence parfaite (dominante → tonique) ; **phrase 2** : cadence suspensive (arrêt sur la dominante) ; **phrase 3** : cadence rompue (dominante → autre degré)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit la cadence de la phrase 3 ?",
+     "options": [
+      "La surprise : l’attente est déjouée",
+      "L’achèvement : la phrase se ferme",
+      "L’attente : la phrase reste ouverte",
+      "Un silence qui annonce la fin du morceau"
+     ],
+     "reponse": 0,
+     "aide": "La dominante promet la tonique, mais elle ne vient pas.",
+     "explication": "Dans une **cadence rompue**, la dominante n’est pas suivie de la tonique : l’attente est **déjouée**, d’où la surprise."
+    }
+   ]
+  },
+  {
+   "chapitre": "3039a2eb-8f6b-57a1-b68e-44d8c6d707e0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre textures sur un piano-roll",
+   "competence": "observer-schema",
+   "situation": "Un logiciel de musique affiche chaque ligne mélodique sous forme de barres : l’abscisse est le temps, la hauteur est la hauteur du son. Raphaël a affiché quatre extraits de textures différentes.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Quatre extraits, quatre textures",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 14,
+       "y": 10,
+       "l": 148,
+       "h": 84,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 22,
+       "y": 36,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 42,
+       "y": 26,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 20,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 30,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 40,
+       "l": 24,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 116,
+       "y": 32,
+       "l": 14,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 24,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 48,
+       "l": 16,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 45,
+       "y": 38,
+       "l": 10,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 59,
+       "y": 32,
+       "l": 16,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 79,
+       "y": 42,
+       "l": 10,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 93,
+       "y": 52,
+       "l": 22,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 119,
+       "y": 44,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 36,
+       "l": 16,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 60,
+       "l": 19,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 50,
+       "l": 13,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 54,
+       "y": 44,
+       "l": 19,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 74,
+       "y": 54,
+       "l": 13,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 88,
+       "y": 64,
+       "l": 25,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 114,
+       "y": 56,
+       "l": 15,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 48,
+       "l": 19,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 178,
+       "y": 10,
+       "l": 148,
+       "h": 84,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 186,
+       "y": 50,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 40,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 34,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 44,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 254,
+       "y": 54,
+       "l": 24,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 280,
+       "y": 46,
+       "l": 14,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 296,
+       "y": 38,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 14,
+       "y": 126,
+       "l": 148,
+       "h": 84,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 22,
+       "y": 140,
+       "l": 22,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 48,
+       "y": 136,
+       "l": 16,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 144,
+       "l": 24,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 138,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 118,
+       "y": 146,
+       "l": 26,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 22,
+       "y": 164,
+       "l": 12,
+       "h": 6,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 38,
+       "y": 170,
+       "l": 20,
+       "h": 6,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 62,
+       "y": 162,
+       "l": 14,
+       "h": 6,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 168,
+       "l": 26,
+       "h": 6,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 160,
+       "l": 22,
+       "h": 6,
+       "teinte": "turquoise",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 188,
+       "l": 30,
+       "h": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 62,
+       "y": 186,
+       "l": 18,
+       "h": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 192,
+       "l": 20,
+       "h": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 108,
+       "y": 186,
+       "l": 16,
+       "h": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 190,
+       "l": 22,
+       "h": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 178,
+       "y": 126,
+       "l": 148,
+       "h": 84,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 186,
+       "y": 148,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 138,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 132,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 142,
+       "l": 12,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 254,
+       "y": 152,
+       "l": 24,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 280,
+       "y": 144,
+       "l": 14,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 296,
+       "y": 136,
+       "l": 18,
+       "h": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 186,
+       "y": 164,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 186,
+       "y": 176,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 186,
+       "y": 188,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 154,
+       "l": 12,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 166,
+       "l": 12,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 178,
+       "l": 12,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 148,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 160,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 172,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 158,
+       "l": 12,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 170,
+       "l": 12,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 182,
+       "l": 12,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 254,
+       "y": 168,
+       "l": 24,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 254,
+       "y": 180,
+       "l": 24,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 254,
+       "y": 192,
+       "l": 24,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 280,
+       "y": 160,
+       "l": 14,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 280,
+       "y": 172,
+       "l": 14,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 280,
+       "y": 184,
+       "l": 14,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 296,
+       "y": 152,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 296,
+       "y": 164,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 296,
+       "y": 176,
+       "l": 18,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 98,
+       "l": 40,
+       "h": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "1",
+       "id": "t1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 232,
+       "y": 98,
+       "l": 40,
+       "h": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "2",
+       "id": "t2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 214,
+       "l": 40,
+       "h": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "3",
+       "id": "t3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 232,
+       "y": 214,
+       "l": 40,
+       "h": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "4",
+       "id": "t4",
+       "zone": true
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "Une ligne mélodique"
+      },
+      {
+       "teinte": "gris",
+       "motif": "plein",
+       "texte": "Un accord (plusieurs sons)"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche **le numéro de la texture qui superpose plusieurs lignes mélodiques indépendantes**.",
+     "reponse": [
+      "t3"
+     ],
+     "aide": "Cherche l’extrait où trois lignes de couleurs différentes ne suivent pas le même dessin.",
+     "explication": "L’extrait **3** montre trois lignes qui ne dessinent pas la même mélodie : c’est la **polyphonie** (fugue, motet)."
+    },
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche **le numéro de la texture où une seule mélodie est soutenue par des blocs d’accords**.",
+     "reponse": [
+      "t4"
+     ],
+     "aide": "Les accords sont les blocs gris, placés sous la mélodie violette.",
+     "explication": "L’extrait **4** est une **homophonie** : une mélodie accompagnée, comme dans une chanson ou un choral."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes mélodiques compte l’extrait 3 ?",
+     "unite": "lignes",
+     "reponse": 3,
+     "aide": "Compte les couleurs différentes dans l’extrait 3.",
+     "explication": "Il y a **3 lignes** : violette, turquoise et ambre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque texture à un exemple.",
+     "paires": [
+      [
+       "Monodie",
+       "Chant grégorien"
+      ],
+      [
+       "Homophonie",
+       "Chanson, choral"
+      ],
+      [
+       "Polyphonie",
+       "Fugue, motet"
+      ],
+      [
+       "Hétérophonie",
+       "Musiques traditionnelles"
+      ]
+     ],
+     "aide": "La monodie est la plus simple : une seule ligne, sans accompagnement.",
+     "explication": "**Monodie** : chant grégorien ; **homophonie** : chanson, choral ; **polyphonie** : fugue, motet ; **hétérophonie** : musiques traditionnelles (variantes simultanées d’une même ligne)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3039a2eb-8f6b-57a1-b68e-44d8c6d707e0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le moment où tout change",
+   "competence": "analyser-document",
+   "situation": "Au concours d’analyse, Sofia écoute « Lever de lune », une pièce imaginée pour l’exercice. Elle a noté l’intensité (de 1, très doux, à 5, très fort) puis rempli un journal d’écoute. Elle cherche le moment qui révèle l’intention du compositeur.",
+   "documents": [
+    {
+     "id": "inten",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Intensité au fil de la pièce",
+     "categories": [
+      "0:00",
+      "0:45",
+      "1:30",
+      "2:10",
+      "2:40"
+     ],
+     "series": [
+      {
+       "nom": "Intensité",
+       "valeurs": [
+        1,
+        2,
+        3,
+        5,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Intensité (1 = très doux, 5 = très fort)",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Moment de la pièce"
+     },
+     "valeurs": false,
+     "source": "Pièce imaginée pour l’exercice"
+    },
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Le journal d’écoute de Sofia",
+     "colonnes": [
+      "Moment",
+      "Texture",
+      "Mode",
+      "Cadence"
+     ],
+     "lignes": [
+      [
+       "0:00",
+       "Monodie : flûte seule",
+       "Mineur",
+       "Phrase ouverte"
+      ],
+      [
+       "0:45",
+       "Homophonie : flûte et cordes",
+       "Mineur",
+       "Suspensive"
+      ],
+      [
+       "1:30",
+       "Homophonie",
+       "Mineur",
+       "Parfaite"
+      ],
+      [
+       "2:10",
+       "Polyphonie : trois lignes",
+       "Majeur",
+       "Rompue"
+      ],
+      [
+       "2:40",
+       "Homophonie",
+       "Majeur",
+       "Parfaite"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inten",
+     "enonce": "Touche **le moment où l’intensité fait le plus grand bond** par rapport au précédent.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compare l’écart entre deux points voisins : cherche le plus grand saut.",
+     "explication": "Entre 1:30 (intensité 3) et 2:10 (intensité 5), l’intensité gagne **2 niveaux**, le plus grand bond du graphique."
+    },
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche **le moment où la texture et le mode changent en même temps**.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Lis les colonnes « Texture » et « Mode » : cherche la ligne où les deux changent.",
+     "explication": "À **2:10**, on passe de l’homophonie à la polyphonie et du mineur au majeur : une vraie rupture."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le moment de 2:10 est-il le plus révélateur pour l’analyse ?",
+     "options": [
+      "Un changement de texture ou de mode est un geste du compositeur",
+      "C’est le moment le plus long de toute la pièce entendue",
+      "C’est le seul moment où l’on entend la flûte jouer seule",
+      "C’est là que l’intensité est la plus faible de la pièce"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit que l’intention se lit au moment de la rupture.",
+     "explication": "C’est au moment de la **rupture** que l’intention se lit le mieux : un changement de texture ou de mode est **toujours un geste, jamais un hasard**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de secondes séparent l’entrée des cordes (0:45) de la rupture (2:10) ?",
+     "unite": "secondes",
+     "reponse": 85,
+     "aide": "Passe tout en secondes : 2:10 = 130 s, 0:45 = 45 s.",
+     "explication": "2 min 10 s = 130 s et 0 min 45 s = 45 s : 130 − 45 = **85 secondes**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque cadence du journal à son effet.",
+     "paires": [
+      [
+       "Parfaite",
+       "Achèvement : la phrase se ferme"
+      ],
+      [
+       "Suspensive",
+       "Attente : la phrase reste ouverte"
+      ],
+      [
+       "Rompue",
+       "Surprise : l’attente est déjouée"
+      ]
+     ],
+     "aide": "Reprends les trois cadences notées par Sofia dans la colonne de droite.",
+     "explication": "**Parfaite** : achèvement ; **suspensive** : attente ; **rompue** : surprise. À 2:10, la cadence rompue renforce la rupture."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed27800d-9d17-571b-8f98-2cee1b03dd53",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un siècle d’outils sonores",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Maël place sur une frise quelques dates de la musique enregistrée et électronique, pour voir comment les outils ont changé la façon de composer.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Des outils qui changent la musique",
+     "debut": 1900,
+     "fin": 2000,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "a1900",
+       "debut": 1900,
+       "fin": 1909,
+       "nom": "Années 1900",
+       "teinte": "ambre"
+      },
+      {
+       "id": "a1950",
+       "debut": 1950,
+       "fin": 1959,
+       "nom": "Années 1950",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "schaeffer",
+       "date": 1948,
+       "nom": "Musique concrète"
+      },
+      {
+       "id": "midi",
+       "date": 1983,
+       "nom": "Norme MIDI"
+      }
+     ],
+     "source": "Repères de cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Le multipiste fait du studio un instrument. Touche **la période** de son apparition.",
+     "reponse": [
+      "a1950"
+     ],
+     "aide": "Le cours situe le multipiste dans les années 1950.",
+     "explication": "Le **multipiste** apparaît dans les **années 1950** : le studio devient un instrument."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche **l’événement qui permet aux machines de dialoguer entre elles**.",
+     "reponse": [
+      "midi"
+     ],
+     "aide": "Pense à la norme qui transporte des instructions, et non du son.",
+     "explication": "La **norme MIDI** (1983) permet aux machines de dialoguer entre elles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la musique concrète de Schaeffer de la norme MIDI ?",
+     "unite": "ans",
+     "reponse": 35,
+     "aide": "Lis les deux dates sur la frise, puis soustrais.",
+     "explication": "1983 − 1948 = **35 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque outil à ce qu’il change.",
+     "paires": [
+      [
+       "Microphone et disque",
+       "L’œuvre devient un objet qu’on possède"
+      ],
+      [
+       "Musique concrète",
+       "Le son enregistré du réel devient matériau"
+      ],
+      [
+       "Multipiste",
+       "Le studio devient un instrument"
+      ],
+      [
+       "MIDI",
+       "Les machines dialoguent entre elles"
+      ]
+     ],
+     "aide": "La musique concrète utilise des bruits réels : une porte, un train.",
+     "explication": "**Microphone et disque** : l’œuvre devient un objet ; **musique concrète** : le son du réel devient matériau ; **multipiste** : le studio devient un instrument ; **MIDI** : les machines dialoguent."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed27800d-9d17-571b-8f98-2cee1b03dd53",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le même fichier, deux sons",
+   "competence": "comprendre-langue",
+   "situation": "Hugo a deux fichiers du même morceau. Il les envoie sur deux synthétiseurs et s’étonne : le même fichier ne sonne pas pareil d’une machine à l’autre.",
+   "documents": [
+    {
+     "id": "fichiers",
+     "type": "tableau",
+     "titre": "Les deux fichiers de Hugo",
+     "colonnes": [
+      "Fichier",
+      "Ce qu’il contient",
+      "Poids"
+     ],
+     "lignes": [
+      [
+       "morceau.mid",
+       "Des instructions : quelle note, quelle intensité, quelle durée",
+       "20 Ko"
+      ],
+      [
+       "morceau.wav",
+       "Le son enregistré lui-même",
+       "40 Mo"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Poids arrondis, imaginés pour l’exercice"
+    },
+    {
+     "id": "machines",
+     "type": "schema",
+     "titre": "Un fichier, deux machines",
+     "largeur": 320,
+     "hauteur": 180,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 14,
+       "y": 68,
+       "l": 92,
+       "h": 40,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "morceau.mid"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        108,
+        80
+       ],
+       "a": [
+        198,
+        44
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        108,
+        96
+       ],
+       "a": [
+        198,
+        134
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 20,
+       "l": 106,
+       "h": 44,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "texte": "Synthé A",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 253,
+       "y": 80,
+       "texte": "sonne comme un piano",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 112,
+       "l": 106,
+       "h": 44,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Synthé B",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 253,
+       "y": 172,
+       "texte": "sonne comme un saxophone",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fichiers",
+     "enonce": "Touche **le fichier qui contient le son lui-même**.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Un des deux fichiers est un enregistrement ; l’autre ne contient que des consignes.",
+     "explication": "Le fichier **.wav** contient le son enregistré. Le fichier .mid ne contient que des instructions."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le fichier .wav pèse combien de fois plus que le fichier .mid ? (1 Mo = 1 000 Ko)",
+     "unite": "fois",
+     "reponse": 2000,
+     "aide": "Convertis d’abord 40 Mo en Ko, puis divise par 20 Ko.",
+     "explication": "40 Mo = 40 000 Ko ; 40 000 ÷ 20 = **2 000 fois** plus lourd. Des instructions pèsent très peu, un son enregistré beaucoup."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : le MIDI le transporte-t-il ?",
+     "categories": [
+      "Le MIDI le transporte",
+      "Le MIDI ne le transporte pas"
+     ],
+     "items": [
+      [
+       "Quelle note jouer",
+       0
+      ],
+      [
+       "Avec quelle intensité",
+       0
+      ],
+      [
+       "Pendant combien de temps",
+       0
+      ],
+      [
+       "Le son d’un vrai piano",
+       1
+      ],
+      [
+       "Une voix enregistrée",
+       1
+      ],
+      [
+       "L’écho d’une salle de concert",
+       1
+      ]
+     ],
+     "aide": "Le MIDI transporte des instructions : note, intensité, durée. Jamais de son.",
+     "explication": "Le **MIDI** transporte **quelle note, quelle intensité, quelle durée**. Il ne transporte **pas de son** : ni piano, ni voix, ni acoustique d’une salle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le synthé A et le synthé B sonnent-ils différemment avec le même fichier ?",
+     "options": [
+      "Le fichier ne donne que des instructions : chaque machine fait son son",
+      "Le synthé B déforme volontairement toutes les notes du fichier",
+      "Le fichier contient en réalité deux enregistrements différents",
+      "Le synthé A lit le fichier beaucoup plus vite que le synthé B"
+     ],
+     "reponse": 0,
+     "aide": "Relis la colonne « Ce qu’il contient » pour le fichier .mid.",
+     "explication": "Un fichier MIDI ne contient **que des instructions** : chaque machine fabrique son propre son à partir de ces notes. D’où des résultats différents."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed27800d-9d17-571b-8f98-2cee1b03dd53",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Filtrer, empiler, moduler",
+   "competence": "analyser-document",
+   "situation": "Le synthé de l’atelier musique affiche le spectre d’un son : l’intensité de chacune de ses huit premières harmoniques, avant et après un filtre. Lola doit comprendre comment ce synthé fabrique son timbre.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre simplifié d’un son",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Son riche (avant le filtre)",
+       "valeurs": [
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Après le filtre",
+       "valeurs": [
+        8,
+        7,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Intensité",
+      "min": 0,
+      "max": 8,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Numéro de l’harmonique"
+     },
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "notice",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Notice du synthé de l’atelier",
+     "auteur": "Notice écrite pour l’exercice",
+     "blocs": [
+      "**Mode A** : on part d’un son très simple et on empile des harmoniques pour construire le timbre.",
+      "**Mode B** : on part d’un son riche en harmoniques et on filtre ce qu’on ne veut pas garder.",
+      "**Mode C** : on module la fréquence d’un oscillateur par celle d’un autre oscillateur."
+     ],
+     "source": "Notice écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche **la première harmonique que le filtre supprime complètement**.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le premier point de la courbe « après le filtre » qui tombe à zéro.",
+     "explication": "À partir de l’**harmonique 5**, la courbe filtrée tombe à zéro : le filtre ne laisse plus rien passer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’harmoniques le filtre supprime-t-il complètement ?",
+     "unite": "harmoniques",
+     "reponse": 4,
+     "aide": "Compte les points à zéro sur la courbe « après le filtre ».",
+     "explication": "Les harmoniques **5, 6, 7 et 8** sont à zéro : le filtre en supprime **4**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mode de la notice au nom de sa synthèse.",
+     "paires": [
+      [
+       "Mode A",
+       "Synthèse additive"
+      ],
+      [
+       "Mode B",
+       "Synthèse soustractive"
+      ],
+      [
+       "Mode C",
+       "Synthèse FM"
+      ]
+     ],
+     "aide": "Additive : on ajoute des harmoniques. Soustractive : on retire. FM : modulation de fréquence.",
+     "explication": "**Mode A** : synthèse **additive** (on empile) ; **mode B** : synthèse **soustractive** (on filtre, comme sur le graphique) ; **mode C** : synthèse **FM** (on module)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque matériau sonore : musique concrète ou son entièrement synthétique ?",
+     "categories": [
+      "Musique concrète",
+      "Son synthétique"
+     ],
+     "items": [
+      [
+       "Une porte qui claque, enregistrée",
+       0
+      ],
+      [
+       "Un train enregistré en gare",
+       0
+      ],
+      [
+       "Un son créé par un oscillateur seul",
+       1
+      ],
+      [
+       "Un son filtré par le synthé de l’atelier",
+       1
+      ]
+     ],
+     "aide": "La musique concrète part de sons du réel enregistrés, comme chez Pierre Schaeffer en 1948.",
+     "explication": "La **musique concrète** de Schaeffer utilise des sons du réel enregistrés ; l’**électroacoustique** élargit ensuite le matériau à tout son possible, y compris entièrement synthétique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un morceau est généré à partir d’une simple phrase tapée par un utilisateur. Quelle question cela rouvre-t-il le plus directement ?",
+     "options": [
+      "Qui est l’auteur du morceau ?",
+      "Combien de pistes comporte l’enregistrement ?",
+      "Le morceau est-il en mode majeur ?",
+      "Faut-il un microphone pour le jouer ?"
+     ],
+     "reponse": 0,
+     "aide": "Chaque nouvel outil déplace la frontière entre interpréter et fabriquer.",
+     "explication": "L’intelligence artificielle générative repose la question de ce qu’est un **auteur** : celui qui tape la phrase, le programme ou ceux dont il s’inspire ?"
+    }
+   ]
+  }
+ ]
+}

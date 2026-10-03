@@ -1,0 +1,2174 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "356220af-27cc-5951-b438-50d5817f26c3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux camps devant Troie",
+   "competence": "analyser-document",
+   "situation": "Tu fiches la grande épopée grecque pour ton cours. Repère son identité, puis les deux camps qui s’affrontent devant Troie.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Iliade",
+     "sousTitre": "Homère",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "id": "date",
+       "texte": "Composition",
+       "valeur": "Vers le VIIIe siècle av. J.-C."
+      },
+      {
+       "id": "chants",
+       "texte": "Forme",
+       "valeur": "Vingt-quatre chants en hexamètres"
+      },
+      {
+       "id": "duree",
+       "texte": "Durée racontée",
+       "valeur": "Cinquante et un jours de la dixième année"
+      },
+      {
+       "id": "sujet",
+       "texte": "Sujet annoncé",
+       "valeur": "La colère d’Achille"
+      }
+     ],
+     "pied": "Épopée fondatrice",
+     "teinte": "ambre"
+    },
+    {
+     "id": "camps",
+     "type": "tableau",
+     "titre": "Les deux camps",
+     "colonnes": [
+      "Camp",
+      "Ses héros"
+     ],
+     "lignes": [
+      [
+       "Les Achéens (Grecs)",
+       "Achille, Agamemnon, Patrocle, Ulysse, Nestor, Ajax"
+      ],
+      [
+       "Les Troyens",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour les Troyens ?",
+     "options": [
+      "Hector, Priam, Andromaque, Pâris, Hélène",
+      "Achille, Hector, Ajax, Nestor, Priam",
+      "Agamemnon, Hélène, Ulysse, Pâris, Ajax",
+      "Patrocle, Briséis, Priam, Nestor, Hélène"
+     ],
+     "reponse": 0,
+     "aide": "Hector est le champion de Troie, et Priam son roi.",
+     "explication": "Les Troyens ont pour héros **Hector, Priam, Andromaque, Pâris et Hélène**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "chants"
+     ],
+     "enonce": "Touche la ligne qui dit en combien de chants le poème est composé.",
+     "aide": "Cherche un nombre écrit en toutes lettres.",
+     "explication": "Le poème compte **vingt-quatre chants**, en hexamètres."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "Le poème raconte la ___ d’Achille ; la guerre de Troie est née de l’enlèvement d’Hélène par le Troyen ___.",
+     "reponses": [
+      [
+       "colère"
+      ],
+      [
+       "Pâris"
+      ]
+     ],
+     "banque": [
+      "colère",
+      "joie",
+      "Pâris",
+      "Hector",
+      "Ulysse"
+     ],
+     "aide": "Le premier mot annonce le sujet du poème.",
+     "explication": "Le sujet annoncé est **la colère** d’Achille ; Hélène a été enlevée par **Pâris**."
+    },
+    {
+     "type": "zone",
+     "document": "camps",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui nomme les héros de l’armée grecque.",
+     "aide": "Les Achéens sont les Grecs.",
+     "explication": "Les héros grecs sont **Achille, Agamemnon, Patrocle, Ulysse, Nestor et Ajax**."
+    }
+   ]
+  },
+  {
+   "chapitre": "356220af-27cc-5951-b438-50d5817f26c3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la colère aux funérailles",
+   "competence": "analyser-texte",
+   "situation": "Le poème ne raconte pas toute la guerre de Troie, mais quelques jours. Suis la colère d’Achille jusqu’à la scène qui clôt le poème.",
+   "documents": [
+    {
+     "id": "colere",
+     "type": "chaine",
+     "titre": "La colère d’Achille",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Agamemnon prend Briséis à Achille"
+      },
+      {
+       "id": "n2",
+       "texte": "Achille se retire du combat"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Achille revient et tue Hector"
+      },
+      {
+       "id": "n5",
+       "texte": "Priam supplie Achille de rendre le corps"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "chant",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le dernier chant",
+     "blocs": [
+      "Priam entre sous la tente d’Achille. Il se jette à ses pieds et le [[s|supplie]] de lui rendre le corps de son fils Hector.",
+      "Alors les deux ennemis [[p|pleurent]] ensemble, l’un son fils, l’autre son ami."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Patrocle revêt les armes d’Achille et meurt, tué par Hector",
+      "Hector emporte Briséis à Troie et se réfugie dans les murs",
+      "Agamemnon s’excuse et rend Briséis à Achille",
+      "Les Grecs rentrent chez eux et abandonnent le siège"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui fait sortir Achille de sa colère ?",
+     "explication": "L’étape manquante est **la mort de Patrocle**, tué par Hector : elle ramène Achille au combat."
+    },
+    {
+     "type": "zone",
+     "document": "chant",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le verbe qui dit ce que Priam demande à Achille.",
+     "aide": "Priam est un vieux roi qui s’humilie.",
+     "explication": "Priam **supplie** Achille de lui rendre le corps de son fils : la grandeur passe par la pitié."
+    },
+    {
+     "type": "zone",
+     "document": "chant",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui montre que la pitié réunit les ennemis.",
+     "aide": "Achille et Priam partagent la même émotion.",
+     "explication": "Les deux ennemis **pleurent** ensemble : le poème montre le coût de la guerre pour tous."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans l’action.",
+     "paires": [
+      [
+       "Agamemnon",
+       "Il prend Briséis à Achille"
+      ],
+      [
+       "Patrocle",
+       "Il revêt les armes d’Achille et meurt"
+      ],
+      [
+       "Hector",
+       "Il tue Patrocle, puis meurt de la main d’Achille"
+      ],
+      [
+       "Priam",
+       "Il vient supplier Achille de lui rendre le corps de son fils"
+      ]
+     ],
+     "aide": "Suis les noms dans l’ordre de la chaîne.",
+     "explication": "**Agamemnon** offense, **Patrocle** meurt en armure d’Achille, **Hector** tue puis est tué, **Priam** supplie."
+    }
+   ]
+  },
+  {
+   "chapitre": "356220af-27cc-5951-b438-50d5817f26c3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une épopée qui ne chante pas la guerre",
+   "competence": "argumenter",
+   "situation": "Le poème célèbre-t-il la guerre ? Lis une scène écrite à la manière de l’épopée, puis un débat, et construis la réponse.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les adieux, à la manière de l’épopée",
+     "blocs": [
+      "Hector, au casque ombragé d’un panache de crin, tend les bras vers son fils. L’enfant, effrayé, se rejette contre le sein de sa nourrice : il a peur du [[c|casque]] de bronze.",
+      "Le père enlève le casque, et la mère, qui pleurait, sourit à travers ses larmes."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de l’*Iliade*"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Idris",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "L’*Iliade* glorifie la guerre : on n’y parle que de combats et de héros."
+      },
+      {
+       "qui": "Idris",
+       "texte": "Regarde la scène d’Hector et d’Andromaque : le poème montre ce que la guerre coûte aux familles."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Mais il prend parti pour les Grecs ?"
+      },
+      {
+       "qui": "Idris",
+       "texte": "Non : sa compassion est [[e|égale]] pour les deux camps, jusqu’aux funérailles d’Hector."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’objet qui effraie l’enfant.",
+     "aide": "C’est une pièce de l’armure du père.",
+     "explication": "L’enfant a peur du **casque** de son père : la guerre entre jusque dans la tendresse familiale."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit comment le poème traite les deux camps.",
+     "aide": "Il ne prend pas parti.",
+     "explication": "La compassion est **égale** pour les Grecs et les Troyens : le poème n’en choisit aucun."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le texte et le dialogue appuient-ils ?",
+     "options": [
+      "Le poème montre le coût de la guerre, avec compassion pour les deux camps",
+      "Le poème glorifie la guerre sans rien montrer de ses victimes",
+      "Le poème prend parti pour les Troyens contre les Grecs",
+      "Le poème n’est qu’un catalogue de généalogies et de bateaux"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique d’Idris.",
+     "explication": "Le poème **ne célèbre pas la guerre** : il en montre **le coût**, avec une compassion égale pour les deux camps."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de l’épopée à son exemple.",
+     "paires": [
+      [
+       "Épithète de nature",
+       "Achille « aux pieds légers »"
+      ],
+      [
+       "Comparaison développée",
+       "Le guerrier comparé à un lion, un incendie, une vague"
+      ],
+      [
+       "Catalogue",
+       "Le dénombrement des vaisseaux"
+      ],
+      [
+       "Intervention des dieux",
+       "Athéna et Héra pour les Grecs, Apollon et Aphrodite pour Troie"
+      ]
+     ],
+     "aide": "Chaque procédé donne à l’épopée son ampleur.",
+     "explication": "L’**épithète** est une formule fixe, la **comparaison** s’étend, le **catalogue** énumère, les **dieux** prennent parti."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e084d60-56de-55d2-936a-c369b3ab5dca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil publié sans son auteur",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur le recueil de Rimbaud. Place-le dans le temps, puis relève ses caractéristiques.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rimbaud et ses textes",
+     "debut": 1850,
+     "fin": 1895,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1854,
+       "nom": "Naissance"
+      },
+      {
+       "id": "saison",
+       "date": 1873,
+       "nom": "Une saison en enfer"
+      },
+      {
+       "id": "pub",
+       "date": 1886,
+       "nom": "Illuminations"
+      },
+      {
+       "id": "mort",
+       "date": 1891,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Illuminations",
+     "sousTitre": "Arthur Rimbaud",
+     "emoji": "🌅",
+     "lignes": [
+      {
+       "id": "forme",
+       "texte": "Forme",
+       "valeur": "Poèmes en prose et quelques vers libres"
+      },
+      {
+       "id": "ecrit",
+       "texte": "Écrites",
+       "valeur": "Vers 1873-1875"
+      },
+      {
+       "id": "edit",
+       "texte": "Publiées par",
+       "valeur": "Verlaine, en 1886"
+      }
+     ],
+     "pied": "Recueil de visions",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "edit"
+     ],
+     "enonce": "Touche la ligne qui dit qui fait paraître le recueil.",
+     "aide": "Rimbaud est alors parti pour l’Afrique et le commerce.",
+     "explication": "**Verlaine** fait paraître le recueil en 1886 : Rimbaud n’y a pris aucune part."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution d’*Une saison en enfer* de celle des *Illuminations* ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1886 − 1873 = **13 ans** : *Une saison en enfer* est le seul livre que Rimbaud ait fait imprimer lui-même."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mort"
+     ],
+     "enonce": "Touche l’année de la mort de Rimbaud.",
+     "aide": "Il meurt à Marseille, bien après avoir cessé d’écrire.",
+     "explication": "Rimbaud meurt en **1891**, à Marseille."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Les *Illuminations* sont surtout des poèmes en ___ ; elles sont publiées par ___.",
+     "reponses": [
+      [
+       "prose"
+      ],
+      [
+       "Verlaine"
+      ]
+     ],
+     "banque": [
+      "prose",
+      "vers",
+      "Verlaine",
+      "Baudelaire",
+      "Hugo"
+     ],
+     "aide": "Rimbaud n’a pas choisi l’éditeur.",
+     "explication": "Ce sont des poèmes en **prose**, publiés par **Verlaine** en 1886."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e084d60-56de-55d2-936a-c369b3ab5dca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Aube : la poursuite d’une déesse",
+   "competence": "analyser-texte",
+   "situation": "Les *Illuminations* n’ont ni récit ni sujet stable, mais « Aube » est une petite aventure. Lis le résumé, puis repère les thèmes du recueil.",
+   "documents": [
+    {
+     "id": "aube",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le fil d’« Aube »",
+     "blocs": [
+      "Dans « Aube », le poète poursuit la [[d|déesse]]-aube à travers la campagne. Il la rejoint au bout de sa course et l’embrasse : « J’ai embrassé l’aube d’été. »",
+      "Le poème s’achève sur son [[r|réveil]]."
+     ],
+     "source": "Résumé écrit pour l’exercice ; vers cité : Arthur Rimbaud, « Aube »"
+    },
+    {
+     "id": "themes",
+     "type": "tableau",
+     "titre": "Quelques thèmes du recueil",
+     "colonnes": [
+      "Titre",
+      "Thème"
+     ],
+     "lignes": [
+      [
+       "Villes",
+       "La ville moderne et fantastique"
+      ],
+      [
+       "Enfance",
+       "?"
+      ],
+      [
+       "Départ",
+       "La rupture : « Assez vu. »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour « Enfance » ?",
+     "options": [
+      "L’enfance et l’émerveillement",
+      "Le deuil et le remords",
+      "La guerre et la politique",
+      "Le commerce et le voyage"
+     ],
+     "reponse": 0,
+     "aide": "Le titre le dit déjà.",
+     "explication": "« Enfance » développe le thème de **l’enfance et de l’émerveillement**, comme « Aube »."
+    },
+    {
+     "type": "zone",
+     "document": "aube",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui désigne ce que le poète poursuit.",
+     "aide": "L’aube prend la forme d’un être divin.",
+     "explication": "Le poète poursuit **la déesse**-aube : l’aube est personnifiée."
+    },
+    {
+     "type": "zone",
+     "document": "aube",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui marque la fin du poème.",
+     "aide": "C’est le moment où le poète sort du rêve.",
+     "explication": "Le poème s’achève sur **le réveil** du poète."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois moments d’« Aube ».",
+     "items": [
+      "Le poète s’élance à la poursuite de l’aube",
+      "Il l’embrasse au bout de sa course",
+      "Il s’éveille"
+     ],
+     "aide": "La poursuite précède l’étreinte, le réveil clôt le poème.",
+     "explication": "Ordre : **poursuite**, **étreinte** (« J’ai embrassé l’aube d’été »), **réveil**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e084d60-56de-55d2-936a-c369b3ab5dca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Voir ce qui n’existe pas",
+   "competence": "argumenter",
+   "situation": "Que fait un poème comme ceux des *Illuminations* : décrire le réel ou inventer ? Lis le programme du voyant, écoute un débat, puis conclus.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le programme du voyant",
+     "blocs": [
+      "Je dis qu’il faut être voyant, se faire voyant.",
+      "Le Poète se fait voyant par un long, immense et raisonné [[d|dérèglement]] de tous les sens."
+     ],
+     "source": "Arthur Rimbaud, lettre à Paul Demeny, 15 mai 1871"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Les *Illuminations* décrivent des villes que Rimbaud a vues."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Non : ses villes sont suspendues, avec des ponts de cristal. Le poème ne décrit plus, il [[p|produit]] une réalité."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors le lecteur doit chercher l’histoire cachée ?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Il n’y en a pas : ce sont des visions juxtaposées, avec des changements brusques."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui dit comment le poète se fait voyant.",
+     "aide": "Le poète bouleverse ses sens.",
+     "explication": "Le poète se fait voyant par **le dérèglement** de tous les sens : c’est le programme que réalisent les *Illuminations*."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce que fait le poème, d’après Paul.",
+     "aide": "Il ne décrit plus.",
+     "explication": "Le poème **produit** une réalité : il invente un monde plutôt que de rendre compte du réel."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : ce que font les *Illuminations*, ou ce qu’elles ne font pas.",
+     "categories": [
+      "Ce qu’elles font",
+      "Ce qu’elles ne font pas"
+     ],
+     "items": [
+      [
+       "Juxtaposer des visions",
+       0
+      ],
+      [
+       "Produire une réalité",
+       0
+      ],
+      [
+       "Raconter une histoire suivie",
+       1
+      ],
+      [
+       "Décrire un voyage réel",
+       1
+      ]
+     ],
+     "aide": "Le débat dit qu’il n’y a ni histoire cachée ni description.",
+     "explication": "Les *Illuminations* **juxtaposent des visions** et **produisent une réalité** ; elles ne racontent **pas d’histoire suivie** ni de **voyage réel**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse les *Illuminations* donnent-elles à la question : la poésie doit-elle rendre compte du réel ou inventer ?",
+     "options": [
+      "Elles répondent : inventer un monde, des visions",
+      "Elles répondent : décrire fidèlement ce que l’on voit",
+      "Elles répondent : raconter une histoire vraie en vers",
+      "Elles répondent : imiter les règles de la tragédie"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux villes suspendues et aux ponts de cristal.",
+     "explication": "Les *Illuminations* répondent **inventer** : le poète voyant produit un monde au lieu de décrire le réel."
+    }
+   ]
+  },
+  {
+   "chapitre": "70390723-2cbd-5cef-b0df-14472fbae1e0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un sacrifice pour des vents",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur la tragédie de Racine. Démêle les personnages, puis retrouve les repères de l’œuvre.",
+   "documents": [
+    {
+     "id": "liens",
+     "type": "chaine",
+     "titre": "Qui est qui ?",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "?"
+      },
+      {
+       "id": "n2",
+       "texte": "Iphigénie"
+      },
+      {
+       "id": "n3",
+       "texte": "Achille"
+      },
+      {
+       "id": "n4",
+       "texte": "Ériphile"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "est le père de"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "croit l’épouser"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "est aimé par"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Iphigénie",
+     "sousTitre": "Jean Racine",
+     "emoji": "⛵",
+     "lignes": [
+      {
+       "id": "auteur",
+       "texte": "Auteur",
+       "valeur": "Jean Racine"
+      },
+      {
+       "id": "creation",
+       "texte": "Création",
+       "valeur": "Août 1674, à Versailles"
+      },
+      {
+       "id": "source",
+       "texte": "Inspirée de",
+       "valeur": "Euripide"
+      },
+      {
+       "id": "lieu",
+       "texte": "Lieu de l’action",
+       "valeur": "Aulis, où la flotte grecque est immobilisée"
+      }
+     ],
+     "pied": "Tragédie",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Agamemnon, le roi qui doit sacrifier sa fille",
+      "Calchas, le devin qui réclame le sacrifice",
+      "Ulysse, qui raconte le dénouement",
+      "Arcas, le serviteur porteur de la lettre"
+     ],
+     "reponse": 0,
+     "aide": "Il est le père d’Iphigénie et le chef de l’armée.",
+     "explication": "La case « ? » est **Agamemnon** : roi ou père ? Il doit sacrifier sa fille pour rendre les vents."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "creation"
+     ],
+     "enonce": "Touche la ligne qui dit où et quand la pièce est créée.",
+     "aide": "C’est dans un lieu royal, en 1674.",
+     "explication": "La pièce est créée en **août 1674, à Versailles**, lors des fêtes de la conquête de la Franche-Comté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "La flotte grecque est immobilisée à ___ ; les vents se lèveront si Agamemnon sacrifie sa ___.",
+     "reponses": [
+      [
+       "Aulis"
+      ],
+      [
+       "fille"
+      ]
+     ],
+     "banque": [
+      "Aulis",
+      "Troie",
+      "Trézène",
+      "fille",
+      "femme",
+      "sœur"
+     ],
+     "aide": "Le lieu est sur la fiche.",
+     "explication": "La flotte est immobilisée à **Aulis** ; Agamemnon doit sacrifier sa **fille**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son dilemme.",
+     "paires": [
+      [
+       "Agamemnon",
+       "Roi ou père ? Il cède à l’ambition, puis hésite"
+      ],
+      [
+       "Clytemnestre",
+       "La mère révoltée, qui accuse"
+      ],
+      [
+       "Achille",
+       "Le fiancé fougueux, prêt à défier l’armée"
+      ],
+      [
+       "Ériphile",
+       "La rivale jalouse, victime de son propre secret"
+      ]
+     ],
+     "aide": "Chaque personnage veut quelque chose de différent.",
+     "explication": "**Agamemnon** hésite, **Clytemnestre** accuse, **Achille** défie, **Ériphile** est jalouse."
+    }
+   ]
+  },
+  {
+   "chapitre": "70390723-2cbd-5cef-b0df-14472fbae1e0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piège d’Aulis",
+   "competence": "analyser-texte",
+   "situation": "Les étapes de l’action sont données en désordre. Rétablis leur suite, repère le mot qui ouvre la pièce, puis découvre qui est la vraie victime.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Cinq temps de l’action (en désordre)",
+     "colonnes": [
+      "Temps",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "La dénonciation",
+       "Ériphile, jalouse, révèle le projet de fuite"
+      ],
+      [
+       "Le piège",
+       "Agamemnon fait venir sa fille sous prétexte de la marier à Achille"
+      ],
+      [
+       "Le remords",
+       "Il tente de la renvoyer, mais Arcas, porteur de sa lettre, manque les voyageuses"
+      ],
+      [
+       "Le retournement",
+       "Calchas révèle qu’Ériphile est la victime réclamée par les dieux"
+      ],
+      [
+       "La vérité",
+       "Achille veut la sauver, Clytemnestre supplie, Iphigénie accepte de mourir par obéissance"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le premier vers",
+     "blocs": [
+      "Oui, c’est Agamemnon, c’est ton [[r|roi]] qui t’éveille."
+     ],
+     "source": "Jean Racine, *Iphigénie* (1674), premier vers"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les cinq temps de l’action dans l’ordre.",
+     "items": [
+      "Le piège du faux mariage",
+      "Le remords d’Agamemnon",
+      "L’acceptation d’Iphigénie",
+      "La dénonciation d’Ériphile",
+      "Le retournement de Calchas"
+     ],
+     "aide": "La dénonciation précède la révélation de Calchas.",
+     "explication": "Ordre : **piège**, **remords**, **vérité**, **dénonciation**, **retournement**."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui explique pourquoi la lettre d’Agamemnon n’arrête pas Iphigénie.",
+     "aide": "Le messager n’a pas rencontré les voyageuses.",
+     "explication": "La lettre est portée par **Arcas, qui manque les voyageuses** : elle n’arrive jamais."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le titre par lequel Agamemnon se présente avant d’être père.",
+     "aide": "Il parle à son serviteur Arcas.",
+     "explication": "Agamemnon se présente comme **roi** avant d’être père : tout son dilemme est là."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Ériphile, d’après Calchas ?",
+     "options": [
+      "Une autre Iphigénie, fille d’Hélène et de Thésée",
+      "La sœur cadette d’Iphigénie, née à Aulis",
+      "La captive de Clytemnestre, née en Thrace",
+      "La fille d’Ulysse et de Calchas, élevée à Troie"
+     ],
+     "reponse": 0,
+     "aide": "La préface de Racine s’appuie sur une autre tradition antique.",
+     "explication": "Calchas révèle qu’Ériphile est **une autre Iphigénie, fille d’Hélène et de Thésée** : c’est elle que les dieux réclament."
+    }
+   ]
+  },
+  {
+   "chapitre": "70390723-2cbd-5cef-b0df-14472fbae1e0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Racine corrige Euripide",
+   "competence": "argumenter",
+   "situation": "Racine réécrit un mythe en changeant son dénouement. Lis le tableau, puis la réponse d’Iphigénie à son père, et construis un argument.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Deux dénouements",
+     "colonnes": [
+      "",
+      "Euripide",
+      "Racine"
+     ],
+     "lignes": [
+      [
+       "Le sacrifice",
+       "Artémis substitue une biche à Iphigénie",
+       "?"
+      ],
+      [
+       "La vraisemblance",
+       "Elle en souffre : c’est un coup de théâtre divin",
+       "Elle est sauve"
+      ],
+      [
+       "La victime",
+       "Iphigénie est sauvée",
+       "Ériphile, devenue coupable, meurt"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "rep",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Iphigénie répond à son père",
+     "blocs": [
+      {
+       "personnage": "Iphigénie",
+       "replique": "Mon père, / Cessez de vous troubler, vous n’êtes point trahi : / Quand vous commanderez, vous serez [[o|obéi]]."
+      }
+     ],
+     "source": "Jean Racine, *Iphigénie* (1674), acte IV, scène 4"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Racine ?",
+     "options": [
+      "Racine invente Ériphile, et c’est elle qui meurt sur l’autel",
+      "Racine garde la biche et ajoute des dieux sur scène",
+      "Racine sauve Iphigénie grâce à la lettre d’Agamemnon",
+      "Racine supprime le sacrifice et réconcilie les camps"
+     ],
+     "reponse": 0,
+     "aide": "Un personnage nouveau prend la place de la victime.",
+     "explication": "Racine **invente Ériphile** : elle prend la place de la victime, ce qui sauve la vraisemblance."
+    },
+    {
+     "type": "zone",
+     "document": "rep",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui dit l’attitude d’Iphigénie face au sacrifice.",
+     "aide": "Elle ne se révolte pas contre son père.",
+     "explication": "Iphigénie accepte de mourir par **obéissance** : elle est la fille soumise."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : Euripide ou Racine ?",
+     "categories": [
+      "Chez Euripide",
+      "Chez Racine"
+     ],
+     "items": [
+      [
+       "Une biche prend la place d’Iphigénie",
+       0
+      ],
+      [
+       "Un coup de théâtre divin dénoue l’action",
+       0
+      ],
+      [
+       "Ériphile se tue sur l’autel",
+       1
+      ],
+      [
+       "La victime réclamée par les dieux devient une coupable",
+       1
+      ]
+     ],
+     "aide": "Le tableau donne les deux dénouements.",
+     "explication": "Chez **Euripide**, une **biche** et un **coup de théâtre divin** ; chez **Racine**, **Ériphile** se tue et la victime devient **coupable**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce passage de la réponse d’Iphigénie ?",
+     "options": [
+      "Elle se soumet à l’autorité paternelle avec dignité",
+      "Elle exige de son père qu’il renonce au sacrifice",
+      "Elle menace Agamemnon de dénoncer son projet",
+      "Elle s’enfuit du camp pour échapper à Calchas"
+     ],
+     "reponse": 0,
+     "aide": "Elle dit « vous serez obéi ».",
+     "explication": "Iphigénie **se soumet à l’autorité paternelle** avec dignité : c’est la fille soumise, prête à mourir pour obéir."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2eb641f-8b52-57a8-ad9c-8e53b8c30f91",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un manuscrit au château",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes un court récit de Gide. Place-le parmi ses livres, puis fais le tour de son décor et de son narrateur.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Trois livres de Gide",
+     "debut": 1905,
+     "fin": 1915,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "porte",
+       "date": 1909,
+       "nom": "La Porte étroite"
+      },
+      {
+       "id": "isa",
+       "date": 1911,
+       "nom": "Isabelle"
+      },
+      {
+       "id": "caves",
+       "date": 1914,
+       "nom": "Les Caves du Vatican"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Isabelle",
+     "sousTitre": "André Gide",
+     "emoji": "🏚️",
+     "lignes": [
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Un récit, au sens gidien"
+      },
+      {
+       "id": "narr",
+       "texte": "Narrateur",
+       "valeur": "Gérard Lacase, étudiant"
+      },
+      {
+       "id": "lieu",
+       "texte": "Lieu",
+       "valeur": "La Quartfourche, un château normand délabré"
+      },
+      {
+       "id": "these",
+       "texte": "Sa thèse porte sur",
+       "valeur": "?"
+      }
+     ],
+     "pied": "Narrateur unique, ironie discrète",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "isa"
+     ],
+     "enonce": "Sur la frise, touche la parution d’*Isabelle*.",
+     "aide": "Le livre se place entre *La Porte étroite* et *Les Caves du Vatican*.",
+     "explication": "*Isabelle* paraît en **1911**, entre *La Porte étroite* (1909) et *Les Caves du Vatican* (1914)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *La Porte étroite* d’*Isabelle* ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1911 − 1909 = **2 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la fiche ?",
+     "options": [
+      "Bossuet",
+      "Racine",
+      "Pascal",
+      "Montaigne"
+     ],
+     "reponse": 0,
+     "aide": "C’est un orateur religieux du XVIIe siècle.",
+     "explication": "Gérard Lacase prépare une thèse sur **Bossuet** : c’est pour cela qu’il vient consulter un manuscrit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "Gérard vient étudier un ___ au château ; il y découvre une ancienne ___ d’amour.",
+     "reponses": [
+      [
+       "manuscrit"
+      ],
+      [
+       "lettre"
+      ]
+     ],
+     "banque": [
+      "manuscrit",
+      "tableau",
+      "lettre",
+      "photographie",
+      "carte"
+     ],
+     "aide": "La lettre déclenche son rêve.",
+     "explication": "Gérard vient étudier un **manuscrit** ; il trouve par hasard une ancienne **lettre** d’amour, qui fait naître son rêve."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2eb641f-8b52-57a8-ad9c-8e53b8c30f91",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le rêve et le réel",
+   "competence": "analyser-document",
+   "situation": "Gérard invente une héroïne à partir d’une lettre. Suis les étapes de son rêve, compare l’image et la personne, puis identifie les habitants du château.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "titre": "Du rêve à la désillusion",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Gérard découvre une lettre d’amour ancienne"
+      },
+      {
+       "id": "n2",
+       "texte": "Il rêve d’une femme qu’il n’a jamais vue"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Le domaine se vend, les arbres sont abattus"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Isabelle : le rêve et le réel",
+     "colonnes": [
+      "",
+      "Dans le rêve de Gérard",
+      "Dans la réalité"
+     ],
+     "lignes": [
+      [
+       "Isabelle",
+       "Une héroïne née d’une lettre",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Isabelle paraît enfin au château",
+      "Isabelle épouse Gérard au château",
+      "Gérard renonce à son manuscrit",
+      "Casimir révèle un secret de famille"
+     ],
+     "reponse": 0,
+     "aide": "Entre le rêve et la vente du domaine, quelqu’un apparaît.",
+     "explication": "La case « ? » est **l’arrivée d’Isabelle** : la réalité détruit l’image rêvée."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où naît le rêve de Gérard.",
+     "aide": "Il imagine une femme qu’il n’a jamais vue.",
+     "explication": "Le rêve naît à l’étape où Gérard **rêve d’une femme qu’il n’a jamais vue**, à partir d’une simple lettre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Égoïste, calculatrice, indifférente à son fils",
+      "Douce, fidèle, attentive à son fils infirme",
+      "Absente, morte depuis longtemps, oubliée de tous",
+      "Cachée, protégée par le vieux domaine, inconnue"
+     ],
+     "reponse": 0,
+     "aide": "Le réel est plus médiocre que le rêve.",
+     "explication": "La véritable Isabelle est **égoïste, calculatrice et indifférente à son fils** : c’est la désillusion."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Gérard Lacase",
+       "Étudiant qui prépare une thèse, narrateur"
+      ],
+      [
+       "M. Floche",
+       "Vieil érudit, possesseur des documents"
+      ],
+      [
+       "L’abbé Santal",
+       "Le précepteur de Casimir"
+      ],
+      [
+       "Casimir",
+       "Le fils infirme d’Isabelle, attachant"
+      ]
+     ],
+     "aide": "Chacun appartient au décor du château ou à l’étude de Gérard.",
+     "explication": "**Gérard** étudie et raconte, **M. Floche** possède les documents, l’**abbé Santal** instruit Casimir, **Casimir** est l’enfant infirme d’Isabelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2eb641f-8b52-57a8-ad9c-8e53b8c30f91",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’héroïne que Gérard s’invente",
+   "competence": "argumenter",
+   "situation": "Gide accuse-t-il les femmes ou la littérature ? Lis une rêverie écrite pour l’exercice, puis un débat, et conclus.",
+   "documents": [
+    {
+     "id": "reverie",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une rêverie, à la manière de Gide",
+     "blocs": [
+      "Je tenais la lettre ; le papier était jauni, l’encre pâlie. Je ne savais [[r|rien]] de celle qui l’avait écrite, et c’est pourquoi je la savais si belle.",
+      "Chaque soir, j’ajoutais un trait à son visage, et chaque matin je m’étonnais de ne pas la rencontrer dans le jardin."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’André Gide"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "*Isabelle*, c’est une histoire d’amour qui finit mal."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Non : c’est l’histoire d’un rêve qui meurt quand le réel paraît."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Alors Gide critique les femmes ?"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Il critique plutôt la littérature, qui fabrique des attentes."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reverie",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui montre que le rêveur manque d’information.",
+     "aide": "Il ne connaît pas celle qui a écrit la lettre.",
+     "explication": "Le rêveur ne sait **rien** de la femme qui a écrit : c’est ce manque d’information qui nourrit son rêve."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le débat soutient-il pour *Isabelle* ?",
+     "options": [
+      "Un rêve qui meurt quand la réalité paraît, et une critique de la littérature",
+      "Une simple histoire d’amour qui finit mal par la faute des femmes",
+      "Un récit policier sur la disparition d’un manuscrit précieux",
+      "Une chronique sociale sur la modernisation des campagnes"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux dernières répliques de Léo.",
+     "explication": "*Isabelle* montre un **rêve qui meurt quand le réel paraît**, et accuse la littérature de fabriquer des attentes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du livre : côté rêve romanesque ou côté réel ?",
+     "categories": [
+      "Le rêve romanesque",
+      "Le réel"
+     ],
+     "items": [
+      [
+       "Une lettre d’amour trouvée par hasard",
+       0
+      ],
+      [
+       "Une héroïne inventée sans l’avoir vue",
+       0
+      ],
+      [
+       "Une femme égoïste et indifférente à son fils",
+       1
+      ],
+      [
+       "Un château délabré, qui se vend",
+       1
+      ]
+     ],
+     "aide": "Le rêve naît d’un manque d’information ; le réel le corrige.",
+     "explication": "**La lettre** et **l’héroïne inventée** relèvent du rêve ; **la femme égoïste** et **le château qui se vend** relèvent du réel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de conclusion de dissertation le livre permet-il le mieux d’appuyer ?",
+     "options": [
+      "Le personnage rêvé par un autre est détruit par la rencontre avec le réel",
+      "Le personnage rêvé par un autre est toujours plus grand que le réel",
+      "Le roman doit fabriquer des attentes et jamais les corriger",
+      "Le narrateur ne doit rien révéler de son propre rêve au lecteur"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que devient l’image quand Isabelle paraît.",
+     "explication": "Le livre montre que **le personnage rêvé est détruit par la rencontre avec le réel** : c’est la lucidité que Gide demande au lecteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "df044a56-fce5-5073-86da-5de96ef7a59e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’Angleterre des Saxons et des Normands",
+   "competence": "analyser-document",
+   "situation": "Tu fiches un roman de chevalerie du début du XIXe siècle. Repère son genre, place-le dans la vie de Scott, puis relie ses personnages.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ivanhoé",
+     "sousTitre": "Walter Scott",
+     "emoji": "🛡️",
+     "lignes": [
+      {
+       "id": "epoque",
+       "texte": "Époque",
+       "valeur": "Fin du XIIe siècle"
+      },
+      {
+       "id": "pays",
+       "texte": "Pays",
+       "valeur": "Angleterre"
+      },
+      {
+       "id": "conflit",
+       "texte": "Conflit",
+       "valeur": "Saxons vaincus contre Normands conquérants"
+      },
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "?"
+      }
+     ],
+     "pied": "Roman paru en 1819",
+     "teinte": "ambre"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Walter Scott romancier",
+     "debut": 1810,
+     "fin": 1835,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "wav",
+       "date": 1814,
+       "nom": "Waverley"
+      },
+      {
+       "id": "ivan",
+       "date": 1819,
+       "nom": "Ivanhoé"
+      },
+      {
+       "id": "mort",
+       "date": 1832,
+       "nom": "Mort de Scott"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel genre faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Roman historique",
+      "Roman épistolaire",
+      "Roman d’anticipation",
+      "Roman policier"
+     ],
+     "reponse": 0,
+     "aide": "Une intrigue fictive nouée dans une époque documentée.",
+     "explication": "Le livre **fixe le roman historique** : une intrigue fictive dans une époque documentée."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ivan"
+     ],
+     "enonce": "Touche la date de parution d’*Ivanhoé*.",
+     "aide": "Le roman vient après *Waverley*.",
+     "explication": "*Ivanhoé* paraît en **1819**, cinq ans après *Waverley* (1814)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "Au tournoi d’Ashby, le chevalier inconnu porte la devise « ___ », qui veut dire le « ___ ».",
+     "reponses": [
+      [
+       "Desdichado"
+      ],
+      [
+       "déshérité"
+      ]
+     ],
+     "banque": [
+      "Desdichado",
+      "Ivanhoé",
+      "déshérité",
+      "vainqueur",
+      "vaincu"
+     ],
+     "aide": "La devise est espagnole.",
+     "explication": "La devise est « **Desdichado** », qui signifie **le déshérité**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son portrait.",
+     "paires": [
+      [
+       "Cedric",
+       "Le père saxon d’Ivanhoé, fier de sa lignée"
+      ],
+      [
+       "Rowena",
+       "Sa pupille, héritière saxonne"
+      ],
+      [
+       "Bois-Guilbert",
+       "Le templier fier, épris de Rebecca"
+      ],
+      [
+       "Isaac d’York",
+       "Le père de Rebecca, prêteur humilié par tous"
+      ]
+     ],
+     "aide": "Chacun appartient à un camp ou à un milieu différent.",
+     "explication": "**Cedric** est le père saxon, **Rowena** sa pupille, **Bois-Guilbert** le templier épris de Rebecca, **Isaac** le père de Rebecca."
+    }
+   ]
+  },
+  {
+   "chapitre": "df044a56-fce5-5073-86da-5de96ef7a59e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du tournoi au duel judiciaire",
+   "competence": "analyser-texte",
+   "situation": "Le roman enchaîne tournoi, siège et duel. Suis ses grands épisodes, lis la scène d’entrée du chevalier inconnu, puis comprends le sort de Rebecca.",
+   "documents": [
+    {
+     "id": "episodes",
+     "type": "chaine",
+     "titre": "Les grands épisodes",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le tournoi d’Ashby"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Le duel judiciaire"
+      },
+      {
+       "id": "n4",
+       "texte": "Richard reparaît"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "tournoi",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’entrée du chevalier inconnu",
+     "blocs": [
+      "Un chevalier inconnu paraît dans la lice, la [[v|visière]] baissée. Sur son écu, une seule devise.",
+      "Il bat tous ses adversaires, et la foule se demande qui se cache sous l’armure."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Walter Scott"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel épisode manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Le siège de Torquilstone",
+      "La bataille de Hastings",
+      "La prise de Jérusalem",
+      "Le sacre de Richard"
+     ],
+     "reponse": 0,
+     "aide": "C’est là qu’ont lieu enlèvements et délivrance.",
+     "explication": "L’épisode manquant est **le siège de Torquilstone**, entre le tournoi et le duel."
+    },
+    {
+     "type": "zone",
+     "document": "tournoi",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui explique que le chevalier reste inconnu.",
+     "aide": "Elle cache son visage.",
+     "explication": "La **visière** baissée cache son visage : le chevalier garde l’incognito."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque épisode à ce qui s’y passe.",
+     "paires": [
+      [
+       "Le tournoi d’Ashby",
+       "L’entrée en scène du chevalier déshérité"
+      ],
+      [
+       "Le siège de Torquilstone",
+       "Enlèvements et délivrance"
+      ],
+      [
+       "Le duel judiciaire",
+       "Rebecca est sauvée in extremis"
+      ],
+      [
+       "La fin",
+       "Richard reparaît, Ivanhoé épouse Rowena"
+      ]
+     ],
+     "aide": "Chaque épisode a son enjeu : un chevalier, des captifs, une accusée, un roi.",
+     "explication": "**Ashby** présente le chevalier déshérité, **Torquilstone** enchaîne enlèvements et délivrance, le **duel** sauve Rebecca, la **fin** rétablit l’ordre."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quoi Rebecca est-elle accusée ?",
+     "options": [
+      "De sorcellerie, par le templier Bois-Guilbert",
+      "De trahison, par le prince Jean et ses amis",
+      "De vol, par le père saxon d’Ivanhoé",
+      "D’espionnage, par les chevaliers normands"
+     ],
+     "reponse": 0,
+     "aide": "Elle est jeune, juive, et Bois-Guilbert est épris d’elle.",
+     "explication": "Rebecca est accusée de **sorcellerie** par le templier **Bois-Guilbert** ; le duel judiciaire la sauve in extremis."
+    }
+   ]
+  },
+  {
+   "chapitre": "df044a56-fce5-5073-86da-5de96ef7a59e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La recette du roman historique",
+   "competence": "analyser-texte",
+   "situation": "Ce roman fixe un genre nouveau. Lis un pastiche, puis complète la recette et range ce qui est inventé et ce qui est historique.",
+   "documents": [
+    {
+     "id": "salle",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la grande salle, à la manière de Scott",
+     "blocs": [
+      "Les serfs parlent le [[l|saxon]] ; leurs maîtres parlent le [[l|français]] des Normands, à la table haute.",
+      "On murmure que le prince [[p|Jean]] complote pendant l’absence du roi."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Walter Scott"
+    },
+    {
+     "id": "recette",
+     "type": "tableau",
+     "titre": "La recette du roman historique",
+     "colonnes": [
+      "Ingrédient",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "Une intrigue fictive",
+       "?"
+      ],
+      [
+       "Des personnages réels",
+       "En arrière-plan"
+      ],
+      [
+       "La couleur locale",
+       "Langue et costumes reconstitués"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "salle",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche les deux langues qui opposent Saxons et Normands.",
+     "aide": "Elles disent qui domine et qui est dominé.",
+     "explication": "Les serfs parlent **saxon**, les maîtres **français** : c’est de la couleur locale qui marque le conflit."
+    },
+    {
+     "type": "zone",
+     "document": "salle",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le nom d’un personnage historique laissé à l’arrière-plan.",
+     "aide": "Il complote pendant l’absence du roi.",
+     "explication": "Le prince **Jean** est un personnage réel qui reste à l’arrière-plan de l’intrigue fictive."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la recette ?",
+     "options": [
+      "Nouée dans une époque documentée",
+      "Transposée dans le monde actuel",
+      "Inspirée uniquement d’un rêve du héros",
+      "Empruntée à une pièce de théâtre antique"
+     ],
+     "reponse": 0,
+     "aide": "La fiction se développe dans un cadre réel.",
+     "explication": "L’intrigue fictive est **nouée dans une époque documentée** : voilà la recette du roman historique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : inventé par Scott ou historique ?",
+     "categories": [
+      "Inventé",
+      "Historique"
+     ],
+     "items": [
+      [
+       "Wilfred d’Ivanhoé, chevalier saxon",
+       0
+      ],
+      [
+       "Rebecca, jeune juive accusée de sorcellerie",
+       0
+      ],
+      [
+       "Le roi Richard Cœur de Lion",
+       1
+      ],
+      [
+       "Le prince Jean, qui complote",
+       1
+      ]
+     ],
+     "aide": "Les personnages réels sont des rois ou des princes.",
+     "explication": "**Ivanhoé** et **Rebecca** sont inventés ; **Richard Cœur de Lion** et le **prince Jean** sont des figures historiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "97792bac-dee7-5911-8076-e130ca4fec72",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un valet bavard et son maître",
+   "competence": "analyser-document",
+   "situation": "Tu fiches un roman étrange du XVIIIe siècle. Retrouve ce qu’on sait de lui, ce qui interrompt le récit, puis les petits faits du texte.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Jacques le fataliste et son maître",
+     "sousTitre": "Denis Diderot",
+     "emoji": "🐎",
+     "lignes": [
+      {
+       "id": "auteur",
+       "texte": "Auteur",
+       "valeur": "Denis Diderot (1713-1784)"
+      },
+      {
+       "id": "ecrit",
+       "texte": "Écrit",
+       "valeur": "Vers 1765-1780"
+      },
+      {
+       "id": "pub",
+       "texte": "Publié",
+       "valeur": "1796, après la mort de l’auteur"
+      },
+      {
+       "id": "voy",
+       "texte": "Voyage",
+       "valeur": "On ne sait ni d’où ils viennent ni où ils vont"
+      }
+     ],
+     "pied": "Un anti-roman",
+     "teinte": "ambre"
+    },
+    {
+     "id": "amours",
+     "type": "chaine",
+     "titre": "Un récit interrompu",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Jacques"
+      },
+      {
+       "id": "n2",
+       "texte": "Ses amours"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "veut raconter"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "sont interrompues par l’histoire de"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Madame de La Pommeraye",
+      "Le marquis des Arcis",
+      "L’hôtesse du Grand-Cerf",
+      "Le capitaine de Jacques"
+     ],
+     "reponse": 0,
+     "aide": "C’est une histoire racontée dans une auberge, la plus célèbre du livre.",
+     "explication": "L’histoire de **Madame de La Pommeraye**, racontée par l’hôtesse, est la plus célèbre de celles qui interrompent les amours de Jacques."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche la ligne qui dit quand le livre est publié.",
+     "aide": "Diderot n’est plus là pour le voir.",
+     "explication": "Le livre est publié en **1796**, après la mort de Diderot."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort de Diderot de la publication du roman ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la fiche et soustrais.",
+     "explication": "1796 − 1784 = **12 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le cours.",
+     "texte": "Jacques répète que tout est « écrit là-haut, sur le grand ___ » ; il a été blessé au ___ à la bataille de Fontenoy.",
+     "reponses": [
+      [
+       "rouleau"
+      ],
+      [
+       "genou"
+      ]
+     ],
+     "banque": [
+      "rouleau",
+      "livre",
+      "mur",
+      "genou",
+      "bras",
+      "pied"
+     ],
+     "aide": "Une formule du capitaine, et une blessure à une articulation.",
+     "explication": "Jacques répète que tout est écrit sur **le grand rouleau** ; il a été blessé au **genou** à Fontenoy."
+    }
+   ]
+  },
+  {
+   "chapitre": "97792bac-dee7-5911-8076-e130ca4fec72",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’hôtesse du Grand-Cerf",
+   "competence": "analyser-texte",
+   "situation": "Dans une auberge, une histoire en cache une autre. Lis le résumé, identifie ce qui interrompt le récit de Jacques, puis relie les personnages.",
+   "documents": [
+    {
+     "id": "hotesse",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une histoire à l’auberge",
+     "blocs": [
+      "À l’auberge du [[a|Grand-Cerf]], l’hôtesse raconte à Jacques et à son maître l’histoire de Madame de La Pommeraye.",
+      "Abandonnée par le marquis des Arcis, elle prépare sa [[v|vengeance]] : elle lui fera épouser une ancienne fille de joie."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "interrompt",
+     "type": "tableau",
+     "titre": "Ce qui interrompt le récit de Jacques",
+     "colonnes": [
+      "Ce qui interrompt",
+      "Le détail"
+     ],
+     "lignes": [
+      [
+       "Des incidents et des rencontres",
+       "Sur la route"
+      ],
+      [
+       "D’autres histoires",
+       "?"
+      ],
+      [
+       "Le narrateur lui-même",
+       "Il s’adresse au lecteur, se moque de ses attentes et propose plusieurs suites possibles"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hotesse",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le nom de l’auberge où est racontée l’histoire.",
+     "aide": "Un animal figure dans son nom.",
+     "explication": "L’histoire est racontée à l’auberge du **Grand-Cerf**, par l’hôtesse."
+    },
+    {
+     "type": "zone",
+     "document": "hotesse",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit ce que prépare Madame de La Pommeraye.",
+     "aide": "Elle a été abandonnée.",
+     "explication": "Madame de La Pommeraye prépare sa **vengeance** contre le marquis des Arcis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Celle de Madame de La Pommeraye, la plus célèbre",
+      "Celle de Fontenoy, racontée par le maître",
+      "Celle de Schiller, qui traduit le texte en allemand",
+      "Celle du capitaine, qui parle du grand rouleau"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’histoire que raconte l’hôtesse.",
+     "explication": "Parmi les autres histoires, **celle de Madame de La Pommeraye** est la plus célèbre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Jacques",
+       "Le valet bavard, blessé au genou à Fontenoy"
+      ],
+      [
+       "Le maître",
+       "Sans nom, dépendant de son valet, amateur de tabac et de montres"
+      ],
+      [
+       "L’hôtesse",
+       "Elle raconte l’histoire de Madame de La Pommeraye"
+      ],
+      [
+       "Le capitaine",
+       "Celui qui a appris le fatalisme à Jacques"
+      ]
+     ],
+     "aide": "Un valet, un maître, une conteuse, un initiateur.",
+     "explication": "**Jacques** est le valet bavard, le **maître** n’a pas de nom, l’**hôtesse** conte une histoire, le **capitaine** a enseigné le fatalisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "97792bac-dee7-5911-8076-e130ca4fec72",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où allaient-ils ?",
+   "competence": "argumenter",
+   "situation": "Le livre démonte le roman de son temps. Lis son début, complète le tableau thèse-argument-exemple, puis relie les procédés à leurs effets.",
+   "documents": [
+    {
+     "id": "incipit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les premières lignes",
+     "blocs": [
+      "Comment s’étaient-ils rencontrés ? Par [[h|hasard]], comme tout le monde.",
+      "Comment s’appelaient-ils ? Que [[l|vous]] importe ?"
+     ],
+     "source": "Denis Diderot, *Jacques le fataliste*, incipit"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Thèse, argument, exemple",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Diderot ne tranche pas la question de la liberté",
+       "Il montre la contradiction de son héros",
+       "?"
+      ],
+      [
+       "Le livre est un anti-roman",
+       "Il démonte ses propres procédés",
+       "L’incipit refuse nom, origine et but des personnages"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "incipit",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot par lequel le narrateur s’adresse directement au lecteur.",
+     "aide": "Il lui dit que ce n’est pas son affaire.",
+     "explication": "Le narrateur dit **vous** : il s’adresse au lecteur et se moque de ses attentes."
+    },
+    {
+     "type": "zone",
+     "document": "incipit",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui dit comment les deux hommes se sont rencontrés.",
+     "aide": "Ce n’est ni un plan ni un projet.",
+     "explication": "Ils se sont rencontrés par **hasard**, « comme tout le monde » : le roman refuse l’intrigue préparée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Jacques professe le fatalisme mais agit comme s’il était libre",
+      "Jacques cesse de parler et se laisse mener sans réagir",
+      "Le maître prouve par ses actes que tout est écrit",
+      "Le narrateur affirme que l’homme est entièrement libre"
+     ],
+     "reponse": 0,
+     "aide": "Il répète que tout est écrit, et pourtant il choisit.",
+     "explication": "Jacques **professe le fatalisme mais agit comme s’il était libre** : Diderot montre la contradiction sans trancher."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du livre à son effet.",
+     "paires": [
+      [
+       "Le narrateur s’adresse au lecteur",
+       "Il le prend à témoin et se moque de ses attentes"
+      ],
+      [
+       "Les digressions assumées",
+       "Jacques n’achève jamais l’histoire de ses amours"
+      ],
+      [
+       "Le dialogue permanent",
+       "Une oralité qui donne l’impression d’une conversation"
+      ],
+      [
+       "Plusieurs suites possibles",
+       "La liberté du lecteur devient le vrai sujet"
+      ]
+     ],
+     "aide": "Chaque procédé met le lecteur en jeu.",
+     "explication": "Le **narrateur** prend le lecteur à témoin, les **digressions** retardent le récit, le **dialogue** donne l’oralité, les **suites possibles** font du lecteur le vrai sujet."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3513 @@
+{
+ "niveau": "1re",
+ "matiere": "biologie-physiopathologie",
+ "exercices": [
+  {
+   "chapitre": "734017e7-7d24-5609-836b-fdccc5f842a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sandwich de Théo, de la bouche au côlon",
+   "competence": "observer-schema",
+   "situation": "Théo, 16 ans, a mangé un sandwich jambon-beurre à midi. Son professeur lui demande de suivre le trajet du sandwich sur un schéma simplifié, et de repérer les organes qui versent leurs sécrétions sans voir passer les aliments.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "L’appareil digestif (schéma simplifié)",
+     "largeur": 320,
+     "hauteur": 320,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 15,
+       "l": 115,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "bouche",
+       "zone": true,
+       "texte": "Bouche"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 57,
+       "l": 115,
+       "h": 28,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "oeso",
+       "zone": true,
+       "texte": "Œsophage"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 95,
+       "l": 115,
+       "h": 42,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "estomac",
+       "zone": true,
+       "texte": "Estomac"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 147,
+       "l": 115,
+       "h": 56,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "grele",
+       "zone": true,
+       "texte": "Intestin grêle"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 213,
+       "l": 115,
+       "h": 50,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "colon",
+       "zone": true,
+       "texte": "Côlon"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 15,
+       "l": 120,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "salivaires",
+       "zone": true,
+       "texte": "Glandes salivaires"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 105,
+       "l": 120,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "foie",
+       "zone": true,
+       "texte": "Foie"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 170,
+       "l": 120,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "pancreas",
+       "zone": true,
+       "texte": "Pancréas"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        31
+       ],
+       "a": [
+        135,
+        31
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        121
+       ],
+       "a": [
+        135,
+        165
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        186
+       ],
+       "a": [
+        135,
+        188
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 295,
+       "texte": "Une flèche = une sécrétion déversée dans le tube",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche l’organe où arrive le sandwich juste après l’œsophage.",
+     "reponse": [
+      "estomac"
+     ],
+     "aide": "Suis la colonne de gauche de haut en bas : le tube digestif se lit dans l’ordre.",
+     "explication": "Après l’œsophage, les aliments arrivent dans **l’estomac**, où ils sont brassés et mélangés au suc gastrique."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche les trois glandes annexes : aucun aliment ne les traverse.",
+     "reponse": [
+      "salivaires",
+      "foie",
+      "pancreas"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les organes qui ont une flèche : ils envoient leurs sécrétions vers le tube.",
+     "explication": "Les **glandes salivaires, le foie et le pancréas** sont les glandes annexes : elles déversent salive, bile et suc pancréatique dans le tube digestif sans être traversées par les aliments."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque racine médicale à l’organe qu’elle désigne.",
+     "paires": [
+      [
+       "gastr(o)",
+       "Estomac"
+      ],
+      [
+       "hépat(o)",
+       "Foie"
+      ],
+      [
+       "entér(o)",
+       "Intestin"
+      ],
+      [
+       "stomat(o)",
+       "Bouche"
+      ]
+     ],
+     "aide": "Une gastrite touche l’estomac ; une hépatite touche un autre organe annexe.",
+     "explication": "**gastr(o)** : estomac ; **hépat(o)** : foie ; **entér(o)** : intestin ; **stomat(o)** : bouche. Ces racines se combinent avec des suffixes pour former les mots médicaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "734017e7-7d24-5609-836b-fdccc5f842a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les cinq tubes à essais de Nora",
+   "competence": "experimenter",
+   "situation": "Au lycée, Nora prépare cinq tubes contenant de l’amidon, puis les place 30 minutes dans des conditions différentes. Elle recherche ensuite l’amidon et le maltose dans chaque tube. Le tableau donne ses résultats.",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "tableau",
+     "titre": "Résultats de l’expérience sur l’amylase salivaire",
+     "colonnes": [
+      "Tube",
+      "Contenu et conditions",
+      "Amidon après 30 min",
+      "Maltose après 30 min"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Amidon + salive, 37 °C, pH 7",
+       "absent",
+       "présent"
+      ],
+      [
+       "B",
+       "Amidon + salive, 0 °C",
+       "présent",
+       "absent"
+      ],
+      [
+       "C",
+       "Amidon + salive chauffée à 100 °C puis refroidie à 37 °C",
+       "présent",
+       "absent"
+      ],
+      [
+       "D",
+       "Amidon + salive, 37 °C, pH 2",
+       "présent",
+       "absent"
+      ],
+      [
+       "E",
+       "Amidon + eau (pas de salive), 37 °C",
+       "présent",
+       "absent"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Expérience décrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la case qui montre que l’amidon a disparu dans un tube.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Regarde la colonne « Amidon » : cherche la seule case où il n’y en a plus.",
+     "explication": "Seul le tube A ne contient plus d’amidon : **absent**. Il contient du maltose : l’amidon a été digéré en maltose par l’amylase."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert le tube E, où la salive est remplacée par de l’eau ?",
+     "options": [
+      "À montrer que l’amidon ne disparaît pas sans enzyme",
+      "À montrer que l’eau digère l’amidon à 37 °C",
+      "À fabriquer davantage de maltose dans le tube",
+      "À prouver que la salive contient de l’amidon"
+     ],
+     "reponse": 0,
+     "aide": "Un tube témoin est identique aux autres, sauf pour le facteur qu’on teste : ici, la salive.",
+     "explication": "Le tube E est le **témoin** : sans salive, donc sans amylase, l’amidon reste présent et aucun maltose n’apparaît. C’est bien la salive qui digère l’amidon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble les tubes B, C et D ?",
+     "options": [
+      "L’enzyme n’agit bien qu’à une température et un pH adaptés",
+      "L’amylase digère l’amidon même à 0 °C si on attend longtemps",
+      "Un pH de 2 accélère la digestion de l’amidon dans le tube",
+      "Chauffer la salive à 100 °C renforce l’action de l’amylase"
+     ],
+     "reponse": 0,
+     "aide": "Dans ces trois tubes, la salive est là, mais l’amidon n’est pas digéré. Qu’est-ce qui a changé ?",
+     "explication": "Dans B, C et D, l’amidon n’est pas digéré malgré la salive : **l’enzyme a besoin d’une température optimale (37 °C) et d’un pH optimal** pour agir."
+    },
+    {
+     "type": "association",
+     "enonce": "Les enzymes sont spécifiques. Associe chaque enzyme à son substrat.",
+     "paires": [
+      [
+       "Amylase",
+       "Amidon"
+      ],
+      [
+       "Pepsine",
+       "Protéines"
+      ],
+      [
+       "Lipase",
+       "Triglycérides"
+      ],
+      [
+       "Maltase",
+       "Maltose"
+      ]
+     ],
+     "aide": "Le nom de l’enzyme rappelle souvent celui du substrat : la maltase agit sur le maltose.",
+     "explication": "**Amylase → amidon ; pepsine → protéines ; lipase → triglycérides ; maltase → maltose**. Chaque enzyme n’hydrolyse qu’un substrat précis : c’est la spécificité."
+    }
+   ]
+  },
+  {
+   "chapitre": "734017e7-7d24-5609-836b-fdccc5f842a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des selles grasses et un pancréas atrophié",
+   "competence": "analyser-document",
+   "situation": "M. Lemoine, 58 ans, a maigri et ses selles sont grasses. Le laboratoire a dosé les enzymes de son duodénum, et un scanner a examiné son pancréas. Le deuxième document rappelle comment on digère les graisses.",
+   "documents": [
+    {
+     "id": "labo",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Résultats de M. Lemoine",
+     "entete": "Laboratoire — résultats",
+     "sousTitre": "M. Lemoine, 58 ans",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Signes",
+       "valeur": "selles grasses",
+       "id": "signes"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Bile",
+       "valeur": "normale",
+       "id": "bile"
+      },
+      {
+       "texte": "Lipase",
+       "valeur": "8 % de la normale",
+       "id": "lipase"
+      },
+      {
+       "texte": "Scanner pancréas",
+       "valeur": "atrophie",
+       "id": "scanner"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice"
+    },
+    {
+     "id": "graisses",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "La digestion des graisses",
+     "noeuds": [
+      {
+       "id": "tg",
+       "texte": "Triglycérides",
+       "emoji": "🧈"
+      },
+      {
+       "id": "gouttes",
+       "texte": "Fines gouttelettes",
+       "emoji": "💧"
+      },
+      {
+       "id": "ag",
+       "texte": "Acides gras + monoglycérides",
+       "emoji": "🔬"
+      }
+     ],
+     "liens": [
+      {
+       "de": "tg",
+       "a": "gouttes",
+       "texte": "bile"
+      },
+      {
+       "de": "gouttes",
+       "a": "ag",
+       "texte": "lipase"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "labo",
+     "enonce": "Touche la ligne qui montre quelle enzyme digestive fait défaut.",
+     "reponse": [
+      "lipase"
+     ],
+     "aide": "La bile n’est pas une enzyme : cherche un nom qui se termine en « -ase ».",
+     "explication": "La **lipase** du suc duodénal est tombée à 8 % de la normale : le pancréas ne produit presque plus cette enzyme."
+    },
+    {
+     "type": "zone",
+     "document": "graisses",
+     "enonce": "Touche ce que la bile fabrique à partir des triglycérides.",
+     "reponse": [
+      "gouttes"
+     ],
+     "aide": "La bile n’hydrolyse pas : elle découpe les graisses en toutes petites parties.",
+     "explication": "Les sels biliaires **émulsionnent** les graisses en **fines gouttelettes**, ce qui augmente la surface sur laquelle la lipase peut agir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les graisses ne sont-elles pas digérées alors que la bile est normale ?",
+     "options": [
+      "Les gouttelettes ne sont pas hydrolysées sans lipase",
+      "La bile détruit la lipase dès son arrivée dans le duodénum",
+      "Sans lipase, le foie cesse de fabriquer la bile",
+      "Le scanner montre que la vésicule biliaire est enlevée"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la chaîne : la bile prépare le travail, mais qui hydrolyse les triglycérides ?",
+     "explication": "La bile émulsionne, mais seule la **lipase** hydrolyse les triglycérides. Sans elle, les gouttelettes restent intactes et les graisses sont éliminées dans les selles."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément selon son rôle dans la digestion.",
+     "categories": [
+      "Enzyme qui hydrolyse",
+      "Augmente la surface d’action"
+     ],
+     "items": [
+      [
+       "Lipase",
+       0
+      ],
+      [
+       "Trypsine",
+       0
+      ],
+      [
+       "Pepsine",
+       0
+      ],
+      [
+       "Bile",
+       1
+      ],
+      [
+       "Mastication",
+       1
+      ],
+      [
+       "Brassage de l’estomac",
+       1
+      ]
+     ],
+     "aide": "Une enzyme est une protéine qui coupe un substrat ; les autres fragmentent ou émulsionnent.",
+     "explication": "**Lipase, trypsine, pepsine** sont des enzymes. **Bile, mastication, brassage** fragmentent les aliments ou les graisses : ils augmentent la surface offerte aux enzymes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel traitement est cohérent avec le mécanisme de la maladie de M. Lemoine ?",
+     "options": [
+      "Des enzymes pancréatiques prises pendant les repas",
+      "Un régime strict sans gluten à vie, sans exception",
+      "Un bronchodilatateur inhalé de courte durée",
+      "Une ablation de la vésicule biliaire en urgence"
+     ],
+     "reponse": 0,
+     "aide": "Justifier un traitement, c’est montrer qu’il corrige ce qui manque ou ce qui dysfonctionne.",
+     "explication": "Il manque la lipase : on **remplace les enzymes pancréatiques** au moment des repas, ce qui rétablit la digestion des graisses."
+    }
+   ]
+  },
+  {
+   "chapitre": "de7f6cd7-d785-5092-8ca2-b810b3237f5f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux vaisseaux dans une villosité",
+   "competence": "observer-schema",
+   "situation": "Pour son exposé, Ambre dessine une villosité de l’intestin grêle : un repli de la muqueuse d’environ 1 mm. Elle y place les deux vaisseaux par lesquels les nutriments rejoignent la circulation.",
+   "documents": [
+    {
+     "id": "villo",
+     "type": "schema",
+     "titre": "Coupe d’une villosité intestinale",
+     "largeur": 320,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 20,
+       "l": 130,
+       "h": 230,
+       "arrondi": 60,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "paroi"
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 75,
+       "l": 26,
+       "h": 150,
+       "arrondi": 13,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "capillaire",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 60,
+       "l": 26,
+       "h": 165,
+       "arrondi": 13,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "chylifere",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 88,
+       "y": 146,
+       "texte": "Capillaire",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 88,
+       "y": 160,
+       "texte": "sanguin",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        91,
+        153
+       ],
+       "a": [
+        112,
+        153
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 138,
+       "texte": "Vaisseau",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 152,
+       "texte": "lymphatique",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        229,
+        146
+       ],
+       "a": [
+        179,
+        146
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 60,
+       "texte": "Entérocytes",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        229,
+        56
+       ],
+       "a": [
+        215,
+        56
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 280,
+       "texte": "Lumière de l’intestin (aliments digérés)",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villo",
+     "enonce": "Touche le vaisseau qui emporte le glucose absorbé vers la veine porte.",
+     "reponse": [
+      "capillaire"
+     ],
+     "aide": "Le glucose est une molécule hydrophile : elle passe directement dans le sang.",
+     "explication": "Le glucose gagne **le capillaire sanguin**, puis la veine porte qui le conduit au foie."
+    },
+    {
+     "type": "zone",
+     "document": "villo",
+     "enonce": "Touche le vaisseau qui emporte les chylomicrons, chargés de graisses.",
+     "reponse": [
+      "chylifere"
+     ],
+     "aide": "Les graisses ne voyagent pas librement dans le sang : elles prennent une autre voie.",
+     "explication": "Les triglycérides emballés en chylomicrons passent dans **le chylifère**, vaisseau lymphatique central de la villosité, avant de rejoindre le sang."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le trajet du glucose après son absorption.",
+     "texte": "Les capillaires de la villosité rejoignent la ___ qui conduit le sang vers le ___.",
+     "reponses": [
+      [
+       "veine porte"
+      ],
+      [
+       "foie"
+      ]
+     ],
+     "banque": [
+      "veine porte",
+      "foie",
+      "cœur",
+      "veine cave",
+      "poumon"
+     ],
+     "aide": "La voie sanguine passe par un vaisseau « porte » avant de rejoindre un organe qui trie les nutriments.",
+     "explication": "Les capillaires intestinaux se jettent dans **la veine porte**, qui conduit le sang vers **le foie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "de7f6cd7-d785-5092-8ca2-b810b3237f5f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fibroscopie de M. Garnier",
+   "competence": "analyser-document",
+   "situation": "M. Garnier, 52 ans, a vomi du sang. Le gastro-entérologue lui a fait une fibroscopie pour examiner son tube digestif supérieur. Voici le compte rendu de l’examen.",
+   "documents": [
+    {
+     "id": "cr",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Compte rendu de la fibroscopie",
+     "entete": "Compte rendu de fibroscopie",
+     "sousTitre": "M. Garnier, 52 ans",
+     "emoji": "🩺",
+     "lignes": [
+      {
+       "texte": "Motif",
+       "valeur": "hématémèse",
+       "id": "motif"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Œsophage",
+       "valeur": "muqueuse normale",
+       "id": "oeso"
+      },
+      {
+       "texte": "Estomac",
+       "valeur": "ulcère de 1 cm",
+       "id": "estomac"
+      },
+      {
+       "texte": "Duodénum",
+       "valeur": "muqueuse normale",
+       "id": "duo"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Prélèvements",
+       "valeur": "4 biopsies",
+       "id": "biopsies"
+      }
+     ],
+     "pied": "Compte rendu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cr",
+     "enonce": "Touche la ligne qui décrit une perte de substance de la muqueuse.",
+     "reponse": [
+      "estomac"
+     ],
+     "aide": "Cherche le mot qui désigne une lésion de la muqueuse, pas une zone « normale ».",
+     "explication": "Un **ulcère** est une perte de substance de la muqueuse : il siège ici dans l’estomac."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à sa définition.",
+     "paires": [
+      [
+       "Hématémèse",
+       "Vomissement de sang"
+      ],
+      [
+       "Rectorragie",
+       "Saignement par l’anus"
+      ],
+      [
+       "Polype",
+       "Excroissance de la muqueuse"
+      ],
+      [
+       "Ulcère",
+       "Perte de substance de la muqueuse"
+      ]
+     ],
+     "aide": "Le préfixe « hémat- » renvoie au sang ; « -émèse » au vomissement.",
+     "explication": "**Hématémèse** : vomissement de sang ; **rectorragie** : saignement par l’anus ; **polype** : excroissance de la muqueuse ; **ulcère** : perte de substance de la muqueuse."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Dans quel ordre le tube souple de la fibroscopie traverse-t-il le corps de M. Garnier ?",
+     "items": [
+      "Bouche",
+      "Pharynx",
+      "Œsophage",
+      "Estomac",
+      "Duodénum"
+     ],
+     "aide": "Le tube suit le trajet des aliments, de l’entrée jusqu’au début de l’intestin grêle.",
+     "explication": "Par la bouche : **bouche → pharynx → œsophage → estomac → duodénum**. C’est une fibroscopie œso-gastro-duodénale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour explorer le côlon de M. Garnier, par où faudrait-il introduire le tube ?",
+     "options": [
+      "Par l’anus, pour une coloscopie",
+      "Par la bouche, comme pour son estomac",
+      "Par le nez, au niveau des fosses nasales",
+      "Par une petite incision de la peau du ventre"
+     ],
+     "reponse": 0,
+     "aide": "Il faut rejoindre le côlon par l’extrémité du tube digestif la plus proche de lui.",
+     "explication": "Le côlon s’explore **par l’anus** : c’est la coloscopie. La fibroscopie œso-gastro-duodénale, elle, passe par la bouche."
+    }
+   ]
+  },
+  {
+   "chapitre": "de7f6cd7-d785-5092-8ca2-b810b3237f5f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lina, 6 ans, ne grandit plus",
+   "competence": "raisonner",
+   "situation": "Lina, 6 ans, a souvent la diarrhée, le ventre ballonné et ne grandit plus comme les autres enfants. Son médecin a prescrit un bilan sanguin et une fibroscopie avec biopsie du duodénum. Les résultats arrivent.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan de Lina",
+     "colonnes": [
+      "Examen",
+      "Résultat de Lina",
+      "Valeur de référence"
+     ],
+     "lignes": [
+      [
+       "Hémoglobine",
+       "9,5 g/dL",
+       "11,5 à 13,5 g/dL"
+      ],
+      [
+       "Anticorps spécifiques du gluten",
+       "présents",
+       "absents"
+      ],
+      [
+       "Biopsie du duodénum",
+       "atrophie des villosités",
+       "villosités normales"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, bilan écrit pour l’exercice"
+    },
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "titre": "Menu de la cantine",
+     "entete": "Menu de la cantine",
+     "sousTitre": "Jeudi",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Salade de riz",
+       "id": "riz"
+      },
+      {
+       "texte": "Pâtes au blé",
+       "id": "pates"
+      },
+      {
+       "texte": "Pain de seigle",
+       "id": "seigle"
+      },
+      {
+       "texte": "Pommes de terre vapeur",
+       "id": "pdt"
+      },
+      {
+       "texte": "Soupe d’orge perlé",
+       "id": "orge"
+      },
+      {
+       "texte": "Yaourt nature",
+       "id": "yaourt"
+      }
+     ],
+     "pied": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la case qui montre la lésion de l’intestin de Lina.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La lésion concerne les villosités : elle se voit sur un prélèvement du duodénum.",
+     "explication": "La biopsie montre une **atrophie des villosités** : la surface d’absorption de l’intestin s’est effondrée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de g/dL son hémoglobine est-elle sous la limite basse de la valeur de référence ?",
+     "reponse": 2,
+     "unite": "g/dL",
+     "aide": "Soustrais son résultat à la plus petite valeur de référence (11,5).",
+     "explication": "11,5 − 9,5 = **2 g/dL** sous la limite basse : c’est une anémie, due ici à un fer mal absorbé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément du dossier de Lina.",
+     "categories": [
+      "Signe clinique",
+      "Signe paraclinique"
+     ],
+     "items": [
+      [
+       "Diarrhée chronique",
+       0
+      ],
+      [
+       "Ballonnements",
+       0
+      ],
+      [
+       "Retard de croissance",
+       0
+      ],
+      [
+       "Anticorps dans le sang",
+       1
+      ],
+      [
+       "Biopsie du duodénum",
+       1
+      ],
+      [
+       "Hémoglobine basse",
+       1
+      ]
+     ],
+     "aide": "Le signe clinique se constate chez le patient ; le paraclinique vient d’un examen complémentaire.",
+     "explication": "**Clinique** : diarrhée, ballonnements, retard de croissance. **Paraclinique** : anticorps, biopsie, hémoglobine, car ils viennent d’examens complémentaires."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le mécanisme qui mène aux signes de Lina.",
+     "items": [
+      "Le gluten déclenche une réaction immunitaire",
+      "Les villosités du duodénum s’atrophient",
+      "La surface d’absorption s’effondre",
+      "Les nutriments et le fer ne sont plus absorbés",
+      "Diarrhée, anémie et retard de croissance"
+     ],
+     "aide": "Pars de la cause (le gluten) et termine par les signes que l’on observe.",
+     "explication": "Réaction immunitaire → **atrophie des villosités** → moins de surface → nutriments non absorbés → carences et diarrhée."
+    },
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche les trois plats que Lina devra éviter : ils contiennent du gluten.",
+     "reponse": [
+      "pates",
+      "seigle",
+      "orge"
+     ],
+     "multiple": true,
+     "aide": "Le gluten est une protéine de trois céréales : le blé, l’orge et le seigle.",
+     "explication": "**Pâtes au blé, pain de seigle, soupe d’orge** contiennent du gluten. Le riz et les pommes de terre n’en contiennent pas : le régime sans gluten est à vie."
+    }
+   ]
+  },
+  {
+   "chapitre": "21d4364c-64de-57ed-a542-ada4fd8596ae",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le cœur de Salomé à l’échographie",
+   "competence": "observer-schema",
+   "situation": "Salomé, 17 ans, passe une échographie cardiaque avant de s’inscrire au club de natation. Le médecin lui montre un schéma de son cœur vu de face (la droite de la patiente est à gauche de l’image), puis lui lit ses mesures.",
+   "documents": [
+    {
+     "id": "coeur",
+     "type": "schema",
+     "titre": "Le cœur vu de face",
+     "largeur": 320,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 24,
+       "texte": "Veines caves",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        32
+       ],
+       "a": [
+        90,
+        72
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 24,
+       "texte": "Veines pulmonaires",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        32
+       ],
+       "a": [
+        230,
+        72
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 76,
+       "l": 120,
+       "h": 66,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "od",
+       "zone": true,
+       "texte": "Oreillette droite"
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 76,
+       "l": 120,
+       "h": 66,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "og",
+       "zone": true,
+       "texte": "Oreillette gauche"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 150,
+       "l": 120,
+       "h": 80,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "vd",
+       "zone": true,
+       "texte": "Ventricule droit"
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 150,
+       "l": 120,
+       "h": 95,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "vg",
+       "zone": true,
+       "texte": "Ventricule gauche"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        232
+       ],
+       "a": [
+        90,
+        262
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 282,
+       "texte": "Artère pulmonaire",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        247
+       ],
+       "a": [
+        230,
+        262
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 282,
+       "texte": "Aorte",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    },
+    {
+     "id": "echo",
+     "type": "tableau",
+     "titre": "Échographie de Salomé au repos",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Volume du ventricule gauche en fin de diastole",
+       "135 mL"
+      ],
+      [
+       "Volume du ventricule gauche en fin de systole",
+       "60 mL"
+      ],
+      [
+       "Fréquence cardiaque",
+       "72 battements/min"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coeur",
+     "enonce": "Touche la cavité qui reçoit le sang riche en dioxygène venant des poumons.",
+     "reponse": [
+      "og"
+     ],
+     "aide": "Le sang des poumons revient par les veines pulmonaires : suis la flèche.",
+     "explication": "Les veines pulmonaires se jettent dans **l’oreillette gauche**, qui reçoit le sang riche en O₂."
+    },
+    {
+     "type": "zone",
+     "document": "coeur",
+     "enonce": "Touche la cavité qui envoie le sang dans l’aorte, vers tout le corps.",
+     "reponse": [
+      "vg"
+     ],
+     "aide": "Cherche d’où part la flèche « Aorte ».",
+     "explication": "L’aorte part du **ventricule gauche**, dont la paroi est la plus épaisse : il doit propulser le sang dans tout l’organisme."
+    },
+    {
+     "type": "nombre",
+     "document": "echo",
+     "enonce": "Calcule le volume d’éjection systolique (VES) de Salomé.",
+     "reponse": 75,
+     "unite": "mL",
+     "aide": "VES = volume en fin de diastole − volume en fin de systole.",
+     "explication": "135 − 60 = **75 mL** : c’est le volume que le ventricule gauche envoie dans l’aorte à chaque battement."
+    }
+   ]
+  },
+  {
+   "chapitre": "21d4364c-64de-57ed-a542-ada4fd8596ae",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tour du corps d’une goutte de sang",
+   "competence": "raisonner",
+   "situation": "Élodie, sédentaire, et Karim, nageur, comparent leur cœur lors d’un cours de ST2S. Ils dessinent d’abord le trajet d’une goutte de sang, puis comparent leurs mesures au repos.",
+   "documents": [
+    {
+     "id": "circuit",
+     "type": "chaine",
+     "disposition": "cycle",
+     "titre": "Le trajet d’une goutte de sang",
+     "noeuds": [
+      {
+       "id": "vg",
+       "texte": "Ventricule gauche"
+      },
+      {
+       "id": "organes",
+       "texte": "Organes"
+      },
+      {
+       "id": "od",
+       "texte": "Oreillette droite"
+      },
+      {
+       "id": "vd",
+       "texte": "Ventricule droit"
+      },
+      {
+       "id": "poumons",
+       "texte": "Poumons"
+      },
+      {
+       "id": "og",
+       "texte": "Oreillette gauche"
+      }
+     ],
+     "liens": [
+      {
+       "de": "vg",
+       "a": "organes",
+       "texte": "aorte"
+      },
+      {
+       "de": "organes",
+       "a": "od",
+       "texte": "veines caves"
+      },
+      {
+       "de": "od",
+       "a": "vd",
+       "texte": "valve tricuspide"
+      },
+      {
+       "de": "vd",
+       "a": "poumons",
+       "texte": "artère pulmonaire"
+      },
+      {
+       "de": "poumons",
+       "a": "og",
+       "texte": "veines pulmonaires"
+      },
+      {
+       "de": "og",
+       "a": "vg",
+       "texte": "valve mitrale"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures au repos",
+     "colonnes": [
+      "",
+      "Élodie (sédentaire)",
+      "Karim (nageur)"
+     ],
+     "lignes": [
+      [
+       "Fréquence cardiaque (battements/min)",
+       75,
+       50
+      ],
+      [
+       "VES (mL)",
+       68,
+       100
+      ],
+      [
+       "Débit cardiaque (L/min)",
+       "?",
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuit",
+     "enonce": "Touche l’étape où le sang se charge en dioxygène.",
+     "reponse": [
+      "poumons"
+     ],
+     "aide": "Le sang s’enrichit en O₂ là où l’air arrive au contact du sang.",
+     "explication": "Dans **les poumons**, le sang pauvre en O₂ venu du ventricule droit se charge en dioxygène avant de revenir au cœur gauche."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément selon le sang qu’il contient.",
+     "categories": [
+      "Sang riche en O₂",
+      "Sang pauvre en O₂"
+     ],
+     "items": [
+      [
+       "Aorte",
+       0
+      ],
+      [
+       "Veines pulmonaires",
+       0
+      ],
+      [
+       "Oreillette gauche",
+       0
+      ],
+      [
+       "Veines caves",
+       1
+      ],
+      [
+       "Artère pulmonaire",
+       1
+      ],
+      [
+       "Ventricule droit",
+       1
+      ]
+     ],
+     "aide": "Le sang est riche en O₂ après son passage dans les poumons, pauvre en O₂ après son passage dans les organes.",
+     "explication": "Cœur gauche, aorte et veines pulmonaires : sang **riche en O₂**. Veines caves, cœur droit et artère pulmonaire : sang **pauvre en O₂**."
+    },
+    {
+     "type": "nombre",
+     "document": "mesures",
+     "enonce": "Calcule le débit cardiaque d’Élodie, en litres par minute.",
+     "reponse": 5.1,
+     "unite": "L/min",
+     "tolerance": 0.01,
+     "aide": "DC = fréquence cardiaque × VES, puis convertis des mL en L (1 L = 1 000 mL).",
+     "explication": "75 × 68 = 5 100 mL/min, soit **5,1 L/min**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le cœur de Karim bat plus lentement, mais son débit est presque le même. Pourquoi ?",
+     "options": [
+      "Chaque battement éjecte plus de sang",
+      "Son cœur bat plus vite à chaque effort",
+      "Son sang circule dans des vaisseaux plus larges",
+      "Son cœur ne se remplit presque plus du tout"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les deux lignes du tableau : le débit combine la fréquence et un autre facteur.",
+     "explication": "DC = fC × VES : Karim a **un VES plus grand** (100 mL contre 68 mL), ce qui compense sa fréquence plus basse. Son cœur d’athlète travaille plus économiquement."
+    }
+   ]
+  },
+  {
+   "chapitre": "21d4364c-64de-57ed-a542-ada4fd8596ae",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le ventricule gauche pendant 0,8 seconde",
+   "competence": "lire-graphique",
+   "situation": "Léo, étudiant en ST2S, observe l’échographie d’un ventricule gauche pendant un cycle de 0,8 s : il note le volume toutes les 0,1 s. Il compare ensuite le repos et l’effort.",
+   "documents": [
+    {
+     "id": "volume",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Volume du ventricule gauche pendant un cycle cardiaque",
+     "categories": [
+      "0",
+      "0,1",
+      "0,2",
+      "0,3",
+      "0,4",
+      "0,5",
+      "0,6",
+      "0,7",
+      "0,8"
+     ],
+     "series": [
+      {
+       "nom": "Volume",
+       "valeurs": [
+        130,
+        130,
+        95,
+        65,
+        60,
+        80,
+        105,
+        125,
+        130
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Volume du ventricule",
+      "unite": "mL",
+      "min": 0,
+      "max": 140,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, courbe écrite pour l’exercice"
+    },
+    {
+     "id": "effort",
+     "type": "tableau",
+     "titre": "Repos et effort",
+     "colonnes": [
+      "",
+      "Au repos",
+      "À l’effort"
+     ],
+     "lignes": [
+      [
+       "Fréquence cardiaque (battements/min)",
+       "?",
+       150
+      ],
+      [
+       "VES (mL)",
+       70,
+       90
+      ],
+      [
+       "Débit cardiaque (L/min)",
+       "?",
+       13.5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "volume",
+     "enonce": "Touche l’instant où le ventricule est le plus vide.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le point le plus bas de la courbe.",
+     "explication": "Le volume est minimal à **0,4 s** : 60 mL, le volume en fin de systole."
+    },
+    {
+     "type": "nombre",
+     "document": "volume",
+     "enonce": "Lis la courbe et calcule le volume d’éjection systolique (VES).",
+     "reponse": 70,
+     "unite": "mL",
+     "aide": "Volume en fin de diastole (le plus grand) − volume en fin de systole (le plus petit).",
+     "explication": "130 − 60 = **70 mL** : le ventricule éjecte 70 mL à chaque battement."
+    },
+    {
+     "type": "choix",
+     "document": "volume",
+     "enonce": "Que se passe-t-il entre 0,4 s et 0,8 s ?",
+     "options": [
+      "Le cœur se relâche : les ventricules se remplissent, les sigmoïdes sont fermées",
+      "La systole ventriculaire : les valves sigmoïdes sont ouvertes",
+      "L’éjection du sang dans l’aorte se poursuit pendant ce temps",
+      "Les valves auriculo-ventriculaires restent fermées pendant ce temps"
+     ],
+     "reponse": 0,
+     "aide": "Le volume du ventricule augmente de nouveau : le sang y rentre.",
+     "explication": "Le volume remonte : c’est la **diastole**. Les sigmoïdes sont fermées, les valves auriculo-ventriculaires ouvertes, le ventricule se remplit."
+    },
+    {
+     "type": "nombre",
+     "document": "effort",
+     "enonce": "Un cycle dure 0,8 s. Calcule le débit cardiaque de Léo au repos, en L/min.",
+     "reponse": 5.25,
+     "unite": "L/min",
+     "tolerance": 0.05,
+     "aide": "D’abord fC = 60 ÷ durée du cycle, puis DC = fC × VES (VES lu plus haut).",
+     "explication": "fC = 60 ÷ 0,8 = 75 battements/min ; DC = 75 × 70 = 5 250 mL/min, soit **5,25 L/min**."
+    },
+    {
+     "type": "choix",
+     "document": "effort",
+     "enonce": "À l’effort, quelle grandeur contribue le plus à l’augmentation du débit ?",
+     "options": [
+      "La fréquence cardiaque, qui double (75 → 150)",
+      "Le VES, qui double aussi (70 → 140 mL)",
+      "Le VES et la fréquence, de façon identique",
+      "Le volume de fin de systole, qui augmente beaucoup"
+     ],
+     "reponse": 0,
+     "aide": "Compare le rapport entre effort et repos pour la fréquence, puis pour le VES.",
+     "explication": "La fréquence est **multipliée par 2** (75 → 150) ; le VES passe de 70 à 90 mL, soit environ +30 %. C’est donc surtout l’accélération du cœur qui augmente le débit."
+    }
+   ]
+  },
+  {
+   "chapitre": "a977969e-015e-5879-b7e1-c0db9cd65ff3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois vaisseaux sous le microscope",
+   "competence": "observer-schema",
+   "situation": "Pour son cours de ST2S, Maëlys observe la coupe de trois vaisseaux sanguins au microscope : une artère, une veine et un capillaire. Le schéma les repère par une lettre.",
+   "documents": [
+    {
+     "id": "vaisseaux",
+     "type": "schema",
+     "titre": "Trois vaisseaux en coupe transversale",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 90,
+       "r": 45,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 90,
+       "r": 17,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 90,
+       "r": 45,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 90,
+       "r": 38,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 90,
+       "r": 14,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 90,
+       "r": 10,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 35,
+       "y": 150,
+       "l": 50,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "va",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 150,
+       "l": 50,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "vb",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 235,
+       "y": 150,
+       "l": 50,
+       "h": 30,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "vc",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 205,
+       "texte": "Coupes transversales, échelles différentes",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vaisseaux",
+     "enonce": "Touche la lettre du vaisseau dont la paroi est la plus épaisse.",
+     "reponse": [
+      "va"
+     ],
+     "aide": "Compare, pour chaque vaisseau, l’épaisseur de la couronne autour de la lumière blanche.",
+     "explication": "Le vaisseau **A**, une artère, a la paroi la plus épaisse : sa média élastique et musculaire amortit les à-coups de sang sous forte pression."
+    },
+    {
+     "type": "zone",
+     "document": "vaisseaux",
+     "enonce": "Touche la lettre du vaisseau dont la paroi n’est faite que d’un endothélium.",
+     "reponse": [
+      "vc"
+     ],
+     "aide": "Cherche le vaisseau le plus fin : c’est celui où se font les échanges.",
+     "explication": "Le vaisseau **C**, un capillaire, a une paroi réduite à un seul endothélium sur une lame basale : les échanges avec les tissus y sont faciles."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque vaisseau à sa fonction.",
+     "paires": [
+      [
+       "Artère",
+       "Conduit le sang sous forte pression depuis le cœur"
+      ],
+      [
+       "Veine",
+       "Ramène le sang à basse pression vers le cœur"
+      ],
+      [
+       "Capillaire",
+       "Permet les échanges entre sang et tissus"
+      ]
+     ],
+     "aide": "Une artère « s’éloigne » du cœur ; une veine y « retourne » ; le troisième vaisseau est le plus fin.",
+     "explication": "**Artère** : sang sous forte pression depuis le cœur ; **veine** : retour à basse pression, avec des valvules anti-reflux ; **capillaire** : échanges."
+    }
+   ]
+  },
+  {
+   "chapitre": "a977969e-015e-5879-b7e1-c0db9cd65ff3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une hémorragie et un cœur qui s’emballe",
+   "competence": "raisonner",
+   "situation": "Chloé, 20 ans, s’est blessée à la jambe et a perdu beaucoup de sang. Les secouristes mesurent sa tension et son pouls. Le schéma rappelle comment l’organisme surveille sa pression artérielle.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les mesures de Chloé",
+     "colonnes": [
+      "Mesure",
+      "Avant l’accident",
+      "Après l’hémorragie"
+     ],
+     "lignes": [
+      [
+       "Tension artérielle (cmHg)",
+       "12/8",
+       "8/5"
+      ],
+      [
+       "Fréquence cardiaque (battements/min)",
+       70,
+       115
+      ],
+      [
+       "VES (mL)",
+       70,
+       35
+      ],
+      [
+       "Débit cardiaque (L/min)",
+       "4,9",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "arc",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "L’arc réflexe de la pression artérielle",
+     "noeuds": [
+      {
+       "id": "recepteurs",
+       "texte": "Récepteurs"
+      },
+      {
+       "id": "afferente",
+       "texte": "Voie afférente"
+      },
+      {
+       "id": "centre",
+       "texte": "Centre nerveux"
+      },
+      {
+       "id": "efferente",
+       "texte": "Voie efférente"
+      },
+      {
+       "id": "effecteurs",
+       "texte": "Effecteurs"
+      }
+     ],
+     "liens": [
+      {
+       "de": "recepteurs",
+       "a": "afferente"
+      },
+      {
+       "de": "afferente",
+       "a": "centre"
+      },
+      {
+       "de": "centre",
+       "a": "efferente"
+      },
+      {
+       "de": "efferente",
+       "a": "effecteurs"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la valeur de tension qui révèle une hypotension.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Une tension est basse quand la systolique est inférieure à 9 cmHg.",
+     "explication": "Une systolique de **8 cmHg** est inférieure à 9 : c’est une hypotension, conséquence de la perte de sang."
+    },
+    {
+     "type": "zone",
+     "document": "arc",
+     "enonce": "Touche l’élément de l’arc réflexe situé dans le bulbe rachidien.",
+     "reponse": [
+      "centre"
+     ],
+     "aide": "Le bulbe est un morceau du tronc cérébral : il reçoit les messages et décide de la réponse.",
+     "explication": "Le **centre nerveux** de la régulation cardiaque se trouve dans le bulbe rachidien."
+    },
+    {
+     "type": "categories",
+     "enonce": "Après l’hémorragie, comment évolue chaque élément ?",
+     "categories": [
+      "Augmente",
+      "Diminue"
+     ],
+     "items": [
+      [
+       "Fréquence cardiaque",
+       0
+      ],
+      [
+       "Action du sympathique",
+       0
+      ],
+      [
+       "Contraction des vaisseaux",
+       0
+      ],
+      [
+       "Étirement des barorécepteurs",
+       1
+      ],
+      [
+       "Messages envoyés au bulbe",
+       1
+      ],
+      [
+       "Action du parasympathique",
+       1
+      ]
+     ],
+     "aide": "La pression chute : les barorécepteurs sont moins étirés. Pense à ce que fait le bulbe en réponse.",
+     "explication": "Moins d’étirement, donc **moins de messages** et moins de parasympathique. Le bulbe augmente le **sympathique** : le cœur s’accélère et les vaisseaux se resserrent."
+    },
+    {
+     "type": "nombre",
+     "document": "mesures",
+     "enonce": "Calcule le débit cardiaque de Chloé après l’hémorragie, en L/min (arrondi au dixième).",
+     "reponse": 4,
+     "unite": "L/min",
+     "tolerance": 0.05,
+     "aide": "DC = fréquence cardiaque × VES, puis passe des mL aux L.",
+     "explication": "115 × 35 = 4 025 mL/min, soit **environ 4,0 L/min** : malgré la tachycardie, le débit baisse, car le VES a chuté."
+    }
+   ]
+  },
+  {
+   "chapitre": "a977969e-015e-5879-b7e1-c0db9cd65ff3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dossier cardiologique de M. Perrin",
+   "competence": "analyser-document",
+   "situation": "M. Perrin, 61 ans, se plaint d’essoufflements. Son cardiologue consigne les résultats d’une épreuve d’effort et d’une échographie, puis envisage d’autres examens.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Dossier de M. Perrin",
+     "entete": "Dossier de M. Perrin",
+     "sousTitre": "61 ans, épreuve d’effort",
+     "emoji": "❤️",
+     "lignes": [
+      {
+       "texte": "Tension répétée",
+       "valeur": "16/10 cmHg",
+       "id": "tension"
+      },
+      {
+       "texte": "ECG d’effort, R–R",
+       "valeur": "0,40 s",
+       "id": "rr"
+      },
+      {
+       "texte": "Écho : fin diastole",
+       "valeur": "140 mL",
+       "id": "vtd"
+      },
+      {
+       "texte": "Écho : fin systole",
+       "valeur": "70 mL",
+       "id": "vts"
+      },
+      {
+       "texte": "Doppler carotide",
+       "valeur": "sang accéléré",
+       "id": "doppler"
+      }
+     ],
+     "pied": "Dossier écrit pour l’exercice"
+    },
+    {
+     "id": "examens",
+     "type": "tableau",
+     "titre": "Les techniques d’exploration",
+     "colonnes": [
+      "Technique",
+      "Ce qu’elle utilise"
+     ],
+     "lignes": [
+      [
+       "ECG",
+       "Des électrodes sur la peau"
+      ],
+      [
+       "Échographie",
+       "Des ultrasons"
+      ],
+      [
+       "Doppler",
+       "Des ultrasons réfléchis par les globules"
+      ],
+      [
+       "Angiographie",
+       "Un produit de contraste iodé et des rayons X"
+      ],
+      [
+       "Scintigraphie",
+       "Un traceur radioactif et une gamma-caméra"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Principes simplifiés"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche la ligne qui évoque une hypertension artérielle.",
+     "reponse": [
+      "tension"
+     ],
+     "aide": "L’hypertension se repère à partir de 14/9 cmHg, de façon répétée.",
+     "explication": "**16/10 cmHg**, mesurée trois fois au repos, dépasse 14/9 : c’est évocateur d’une hypertension artérielle."
+    },
+    {
+     "type": "nombre",
+     "document": "dossier",
+     "enonce": "Quelle est sa fréquence cardiaque à l’effort, déduite de l’ECG ?",
+     "reponse": 150,
+     "unite": "battements/min",
+     "aide": "fC = 60 ÷ durée d’un cycle, mesurée entre deux pics R.",
+     "explication": "60 ÷ 0,40 = **150 battements/min**."
+    },
+    {
+     "type": "nombre",
+     "document": "dossier",
+     "enonce": "Calcule son débit cardiaque à l’effort, en L/min.",
+     "reponse": 10.5,
+     "unite": "L/min",
+     "tolerance": 0.05,
+     "aide": "D’abord le VES (différence entre les deux volumes de l’échographie), puis DC = fC × VES.",
+     "explication": "VES = 140 − 70 = 70 mL ; DC = 150 × 70 = 10 500 mL/min, soit **10,5 L/min**."
+    },
+    {
+     "type": "zone",
+     "document": "examens",
+     "enonce": "Touche la technique qui permettrait de visualiser une artère coronaire bouchée aux rayons X.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Il faut injecter un produit qui rend les vaisseaux visibles.",
+     "explication": "L’**angiographie** (ici une coronarographie) utilise un produit de contraste iodé injecté dans les artères et des rayons X."
+    },
+    {
+     "type": "choix",
+     "document": "dossier",
+     "enonce": "Le Doppler d’une artère carotide montre une accélération locale du sang. Que cela suggère-t-il ?",
+     "options": [
+      "Un rétrécissement de l’artère à cet endroit",
+      "Une dilatation de l’artère sur tout son trajet",
+      "Une absence totale de circulation de sang",
+      "Une baisse de la vitesse du sang partout"
+     ],
+     "reponse": 0,
+     "aide": "Un fluide qui passe dans un passage plus étroit va plus vite.",
+     "explication": "Le Doppler mesure la **vitesse du sang** : une accélération locale évoque un **rétrécissement** (sténose) de l’artère."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ce74df7-e927-56b1-9d3d-ffba7a0edbdc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une plaque dans l’artère coronaire",
+   "competence": "observer-schema",
+   "situation": "Le Dr Fabre montre à M. Brun la coupe d’une de ses artères coronaires. On y voit la lumière où passe le sang, et une plaque qui s’est formée dans la paroi.",
+   "documents": [
+    {
+     "id": "artere",
+     "type": "schema",
+     "titre": "Coupe d’une artère coronaire",
+     "largeur": 320,
+     "hauteur": 270,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 125,
+       "r": 105,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "paroi"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 125,
+       "r": 72,
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "lumiere",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 122,
+       "cy": 172,
+       "rx": 36,
+       "ry": 24,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "plaque",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 42,
+       "texte": "Paroi",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 105,
+       "texte": "Lumière",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 260,
+       "texte": "Coupe transversale",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "artere",
+     "enonce": "Touche l’élément qui rétrécit la lumière de l’artère.",
+     "reponse": [
+      "plaque"
+     ],
+     "aide": "Cherche ce qui ne devrait pas se trouver dans le passage libre du sang.",
+     "explication": "La **plaque d’athérome**, faite de lipides, de cellules et de fibres, fait saillie dans la lumière et la rétrécit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on ce rétrécissement de la lumière d’une artère ?",
+     "options": [
+      "Une sténose",
+      "Une embolie",
+      "Une nécrose",
+      "Une ischémie"
+     ],
+     "reponse": 0,
+     "aide": "Ce mot désigne seulement le rétrécissement, pas ses conséquences sur l’organe.",
+     "explication": "On parle de **sténose** : le sang passe moins. L’ischémie est le manque de sang qui en résulte, la nécrose la mort des cellules."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la formation de la plaque et ses complications.",
+     "items": [
+      "Le LDL-cholestérol en excès pénètre dans l’intima",
+      "Les macrophages deviennent des cellules spumeuses",
+      "La plaque d’athérome se forme sous sa chape fibreuse",
+      "La lumière de l’artère se rétrécit : sténose",
+      "La plaque se rompt et un caillot se forme"
+     ],
+     "aide": "Cinq étapes : le dépôt de lipides en premier, la rupture de la plaque en dernier.",
+     "explication": "LDL dans l’intima → **cellules spumeuses** → plaque et chape fibreuse → **sténose** → rupture et caillot, qui peut boucher l’artère."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ce74df7-e927-56b1-9d3d-ffba7a0edbdc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Angor ou infarctus ? Deux dossiers aux urgences",
+   "competence": "analyser-document",
+   "situation": "Deux patients arrivent aux urgences pour une douleur dans la poitrine. L’infirmière note leurs critères dans un tableau pour aider le médecin à distinguer un angor d’un infarctus du myocarde.",
+   "documents": [
+    {
+     "id": "patients",
+     "type": "tableau",
+     "titre": "Les deux patients",
+     "colonnes": [
+      "Critère",
+      "M. Roux, 55 ans",
+      "Mme Lopez, 63 ans"
+     ],
+     "lignes": [
+      [
+       "Circonstance",
+       "Montée d’escaliers",
+       "Au repos, devant la télévision"
+      ],
+      [
+       "Durée de la douleur",
+       "3 minutes",
+       "40 minutes"
+      ],
+      [
+       "Effet de la trinitrine",
+       "La douleur cède",
+       "Aucun effet"
+      ],
+      [
+       "ECG",
+       "Normal au repos",
+       "Anomalies caractéristiques"
+      ],
+      [
+       "Troponine (µg/L)",
+       "0,01",
+       "2,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Dossiers écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "patients",
+     "enonce": "Touche la case qui prouve que des cellules du myocarde sont mortes.",
+     "reponse": [
+      "r4c2"
+     ],
+     "aide": "La troponine est libérée par les cellules du myocarde détruites : cherche sa valeur élevée.",
+     "explication": "Une troponine à **2,5 µg/L** est très élevée : les cellules nécrosées du myocarde l’ont libérée dans le sang."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : angor ou infarctus du myocarde ?",
+     "categories": [
+      "Angor",
+      "Infarctus du myocarde"
+     ],
+     "items": [
+      [
+       "Douleur à l’effort qui cède au repos",
+       0
+      ],
+      [
+       "Sténose : ischémie transitoire",
+       0
+      ],
+      [
+       "Cède à la trinitrine",
+       0
+      ],
+      [
+       "Douleur de plus de 20 minutes, au repos",
+       1
+      ],
+      [
+       "Occlusion complète d’une coronaire",
+       1
+      ],
+      [
+       "Troponine élevée",
+       1
+      ]
+     ],
+     "aide": "L’angor est transitoire ; l’infarctus est durable et laisse des cellules nécrosées.",
+     "explication": "**Angor** : sténose, ischémie transitoire, douleur à l’effort qui cède. **Infarctus** : occlusion complète, douleur prolongée, nécrose avec troponine élevée."
+    },
+    {
+     "type": "nombre",
+     "document": "patients",
+     "enonce": "Combien de fois la troponine de Mme Lopez dépasse-t-elle celle de M. Roux ?",
+     "reponse": 250,
+     "aide": "Divise la valeur la plus élevée par la plus faible.",
+     "explication": "2,5 ÷ 0,01 = **250** : la troponine de Mme Lopez est 250 fois plus élevée, signe d’une nécrose."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel traitement permet de rouvrir l’artère bouchée de Mme Lopez ?",
+     "options": [
+      "Une angioplastie avec pose d’un stent",
+      "Du repos à la maison et de la trinitrine",
+      "Un régime sans gluten à vie",
+      "Un bronchodilatateur inhalé"
+     ],
+     "reponse": 0,
+     "aide": "Il faut rouvrir mécaniquement ou chimiquement l’artère, au plus vite.",
+     "explication": "On rouvre l’artère par **angioplastie** : un ballonnet écrase la plaque, puis un **stent** maintient l’artère ouverte. Chaque minute compte : on appelle le 15."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ce74df7-e927-56b1-9d3d-ffba7a0edbdc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dossier de M. Delmas, 58 ans",
+   "competence": "analyser-document",
+   "situation": "M. Delmas, 58 ans, est fumeur et sédentaire. Son médecin traitant dresse le bilan de ses facteurs de risque cardio-vasculaires et lui explique comment un infarctus peut survenir.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Dossier de M. Delmas",
+     "entete": "Dossier de M. Delmas",
+     "sousTitre": "58 ans",
+     "emoji": "🩺",
+     "lignes": [
+      {
+       "texte": "Âge",
+       "valeur": "58 ans",
+       "id": "age"
+      },
+      {
+       "texte": "Sexe",
+       "valeur": "masculin",
+       "id": "sexe"
+      },
+      {
+       "texte": "Père",
+       "valeur": "infarctus à 52 ans",
+       "id": "pere"
+      },
+      {
+       "texte": "Tabac",
+       "valeur": "20 cigarettes/jour",
+       "id": "tabac"
+      },
+      {
+       "texte": "Tension répétée",
+       "valeur": "15/10 cmHg",
+       "id": "tension"
+      },
+      {
+       "texte": "LDL-cholestérol",
+       "valeur": "élevé",
+       "id": "ldl"
+      },
+      {
+       "texte": "Activité physique",
+       "valeur": "aucune",
+       "id": "sport"
+      }
+     ],
+     "pied": "Dossier écrit pour l’exercice"
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "De la plaque à l’infarctus",
+     "noeuds": [
+      {
+       "id": "plaque",
+       "texte": "Plaque d’athérome"
+      },
+      {
+       "id": "rupture",
+       "texte": "Rupture de la plaque"
+      },
+      {
+       "id": "caillot",
+       "texte": "Caillot qui bouche la coronaire"
+      },
+      {
+       "id": "manque",
+       "texte": "Manque de dioxygène dans le myocarde"
+      },
+      {
+       "id": "mort",
+       "texte": "Mort des cellules du myocarde"
+      }
+     ],
+     "liens": [
+      {
+       "de": "plaque",
+       "a": "rupture"
+      },
+      {
+       "de": "rupture",
+       "a": "caillot"
+      },
+      {
+       "de": "caillot",
+       "a": "manque"
+      },
+      {
+       "de": "manque",
+       "a": "mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche les trois lignes qui sont des facteurs de risque non modifiables.",
+     "reponse": [
+      "age",
+      "sexe",
+      "pere"
+     ],
+     "multiple": true,
+     "aide": "Ce sont ceux sur lesquels M. Delmas ne peut rien changer : son âge, son sexe, et un facteur lié à sa famille.",
+     "explication": "**Âge, sexe masculin et hérédité** (père infarctus à 52 ans) ne se modifient pas. Tabac, tension, LDL et sédentarité, eux, sont modifiables."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape que l’on appelle la nécrose.",
+     "reponse": [
+      "mort"
+     ],
+     "aide": "Le préfixe « nécr- » renvoie à la mort.",
+     "explication": "La **nécrose** est la mort des cellules du myocarde, qui ne se régénèrent pas : c’est pourquoi il faut rouvrir l’artère très vite."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot du vocabulaire cardio-vasculaire à sa définition.",
+     "paires": [
+      [
+       "Ischémie",
+       "Apport insuffisant de sang et de dioxygène"
+      ],
+      [
+       "Sténose",
+       "Rétrécissement d’un vaisseau"
+      ],
+      [
+       "Embolie",
+       "Obstruction par un caillot venu d’ailleurs"
+      ],
+      [
+       "Nécrose",
+       "Mort de cellules ou d’un tissu"
+      ],
+      [
+       "Anévrisme",
+       "Dilatation d’une artère"
+      ]
+     ],
+     "aide": "Le sens de « ischémie » est dans la chaîne : c’est l’étape juste avant la mort des cellules.",
+     "explication": "**Ischémie** : manque de sang et d’O₂ ; **sténose** : rétrécissement ; **embolie** : caillot venu d’ailleurs ; **nécrose** : mort cellulaire ; **anévrisme** : dilatation d’une artère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle prévention est cohérente avec les facteurs modifiables de son dossier ?",
+     "options": [
+      "Arrêter de fumer, bouger chaque jour, surveiller tension et LDL",
+      "Rajeunir de dix ans, changer de sexe, effacer son hérédité",
+      "Fumer seulement le week-end, rester assis le reste du temps",
+      "Manger davantage de graisses saturées pour protéger ses artères"
+     ],
+     "reponse": 0,
+     "aide": "La prévention agit uniquement sur ce qu’on peut changer : tabac, tension, LDL, sédentarité.",
+     "explication": "La prévention agit sur les facteurs **modifiables** : ne plus fumer, bouger 30 minutes par jour, manger équilibré et surveiller tension, glycémie et cholestérol."
+    }
+   ]
+  },
+  {
+   "chapitre": "80f01940-fb6e-5480-adf0-622d44c0886d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le trajet de l’air de Kévin",
+   "competence": "observer-schema",
+   "situation": "Kévin court tous les matins. Pour comprendre où va l’air qu’il respire, sa sœur lui montre un schéma simplifié de l’appareil respiratoire.",
+   "documents": [
+    {
+     "id": "resp",
+     "type": "schema",
+     "titre": "L’appareil respiratoire (schéma simplifié)",
+     "largeur": 320,
+     "hauteur": 310,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 90,
+       "cy": 215,
+       "rx": 55,
+       "ry": 80,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 230,
+       "cy": 215,
+       "rx": 55,
+       "ry": 80,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 22,
+       "rx": 28,
+       "ry": 14,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "fosses",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 42,
+       "l": 40,
+       "h": 20,
+       "arrondi": 6,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "pharynx",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 142,
+       "y": 66,
+       "l": 36,
+       "h": 22,
+       "arrondi": 6,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "larynx",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 92,
+       "l": 28,
+       "h": 60,
+       "arrondi": 6,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "trachee",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        152
+       ],
+       "a": [
+        115,
+        195
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        152
+       ],
+       "a": [
+        205,
+        195
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 240,
+       "r": 15,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "alveole",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 118,
+       "y": 26,
+       "texte": "Fosses nasales",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 134,
+       "y": 56,
+       "texte": "Pharynx",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 136,
+       "y": 82,
+       "texte": "Larynx",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 126,
+       "texte": "Trachée",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 148,
+       "texte": "Bronches",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 305,
+       "texte": "Poumons",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 275,
+       "texte": "Alvéole",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 289,
+       "texte": "(agrandie)",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resp",
+     "enonce": "Touche l’organe situé juste sous le larynx.",
+     "reponse": [
+      "trachee"
+     ],
+     "aide": "Suis le trajet de l’air de haut en bas, après le larynx.",
+     "explication": "Sous le larynx se trouve **la trachée**, un conduit maintenu ouvert par des anneaux de cartilage."
+    },
+    {
+     "type": "zone",
+     "document": "resp",
+     "enonce": "Touche la structure où le dioxygène passe de l’air vers le sang.",
+     "reponse": [
+      "alveole"
+     ],
+     "aide": "C’est tout au bout du trajet : un petit sac entouré de capillaires.",
+     "explication": "Les échanges gazeux ont lieu dans **les alvéoles**, à travers la barrière alvéolo-capillaire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque structure à son rôle.",
+     "paires": [
+      [
+       "Trachée",
+       "Reste ouverte grâce à ses anneaux de cartilage"
+      ],
+      [
+       "Cils de l’épithélium",
+       "Remontent le mucus chargé de particules"
+      ],
+      [
+       "Bronchioles",
+       "Règlent le passage de l’air avec leur muscle lisse"
+      ],
+      [
+       "Alvéoles",
+       "Siège des échanges gazeux"
+      ]
+     ],
+     "aide": "Les bronchioles n’ont pas de cartilage : leur paroi contient un autre tissu.",
+     "explication": "**Trachée** : cartilage ; **cils** : remontent le mucus ; **bronchioles** : muscle lisse qui règle le débit d’air ; **alvéoles** : échanges gazeux."
+    }
+   ]
+  },
+  {
+   "chapitre": "80f01940-fb6e-5480-adf0-622d44c0886d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les gaz du sang à l’entrée des poumons",
+   "competence": "lire-tableau",
+   "situation": "Inès, étudiante infirmière, doit expliquer à un patient dans quel sens le dioxygène et le dioxyde de carbone passent dans les poumons. Elle s’appuie sur un tableau de pressions partielles et sur la répartition du CO₂ dans le sang.",
+   "documents": [
+    {
+     "id": "pressions",
+     "type": "tableau",
+     "titre": "Pressions partielles (mmHg)",
+     "colonnes": [
+      "Milieu",
+      "O₂",
+      "CO₂"
+     ],
+     "lignes": [
+      [
+       "Air des alvéoles",
+       100,
+       40
+      ],
+      [
+       "Sang arrivant aux poumons",
+       40,
+       46
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "co2",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Formes de transport du CO₂ dans le sang",
+     "categories": [
+      "Ions hydrogénocarbonate",
+      "Carbaminohémoglobine",
+      "CO₂ dissous"
+     ],
+     "series": [
+      {
+       "nom": "Part du CO₂ transporté (%)",
+       "valeurs": [
+        70,
+        20,
+        10
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "pressions",
+     "enonce": "De combien de mmHg la pression partielle de O₂ de l’air des alvéoles dépasse-t-elle celle du sang arrivant aux poumons ?",
+     "reponse": 60,
+     "unite": "mmHg",
+     "aide": "Soustrais la plus petite pression de O₂ à la plus grande.",
+     "explication": "100 − 40 = **60 mmHg** : c’est cet écart qui fait diffuser le dioxygène de l’air alvéolaire vers le sang."
+    },
+    {
+     "type": "choix",
+     "document": "pressions",
+     "enonce": "Dans quel sens le CO₂ diffuse-t-il au niveau des alvéoles ?",
+     "options": [
+      "Du sang vers l’air des alvéoles, car 46 est supérieur à 40",
+      "De l’air des alvéoles vers le sang, car 40 est inférieur à 46",
+      "Il ne diffuse pas : les deux pressions sont trop proches",
+      "Du sang vers l’air des alvéoles, car 46 est inférieur à 100"
+     ],
+     "reponse": 0,
+     "aide": "Un gaz diffuse du milieu où sa pression partielle est la plus forte vers celui où elle est la plus faible.",
+     "explication": "Le CO₂ passe du sang (**46 mmHg**) vers l’air alvéolaire (**40 mmHg**) : il est ensuite rejeté à l’expiration."
+    },
+    {
+     "type": "zone",
+     "document": "co2",
+     "enonce": "Touche la forme de transport majoritaire du CO₂.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "Environ **70 %** du CO₂ est transporté sous forme d’ions hydrogénocarbonate HCO₃⁻."
+    },
+    {
+     "type": "nombre",
+     "document": "co2",
+     "enonce": "Quel pourcentage du CO₂ n’est pas transporté sous forme d’hydrogénocarbonate ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Additionne les deux autres formes de transport.",
+     "explication": "20 + 10 = **30 %** : la carbaminohémoglobine (20 %) et le CO₂ dissous (10 %)."
+    }
+   ]
+  },
+  {
+   "chapitre": "80f01940-fb6e-5480-adf0-622d44c0886d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au sprint, l’hémoglobine donne plus d’O₂",
+   "competence": "lire-graphique",
+   "situation": "Après un sprint, les muscles de Yanis sont chauds et acides. Sa prof de sciences lui montre deux courbes de saturation de l’hémoglobine en O₂, au repos et à l’effort, et un tableau des conditions dans le muscle.",
+   "documents": [
+    {
+     "id": "sat",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Saturation de l’hémoglobine selon la pression d’O₂",
+     "categories": [
+      "20",
+      "40",
+      "60",
+      "80",
+      "100"
+     ],
+     "series": [
+      {
+       "nom": "Muscle au repos",
+       "valeurs": [
+        32,
+        75,
+        90,
+        95,
+        98
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Muscle en effort",
+       "valeurs": [
+        22,
+        60,
+        82,
+        92,
+        96
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Saturation de l’hémoglobine",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Pression partielle d’O₂ (mmHg)"
+     },
+     "valeurs": false,
+     "source": "Courbes schématiques, valeurs arrondies"
+    },
+    {
+     "id": "cond",
+     "type": "tableau",
+     "titre": "Conditions dans le muscle",
+     "colonnes": [
+      "Condition",
+      "Au repos",
+      "À l’effort"
+     ],
+     "lignes": [
+      [
+       "Température (°C)",
+       37,
+       39
+      ],
+      [
+       "pH",
+       "7,40",
+       "7,30"
+      ],
+      [
+       "Production de CO₂",
+       "modérée",
+       "élevée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sat",
+     "enonce": "Touche la pression d’O₂ pour laquelle l’écart entre les deux courbes est le plus grand.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare, pour chaque pression, la hauteur des deux courbes.",
+     "explication": "À **40 mmHg**, les courbes sont séparées de 15 points ; l’écart est plus petit partout ailleurs."
+    },
+    {
+     "type": "nombre",
+     "document": "sat",
+     "enonce": "À 40 mmHg, de combien de points la saturation diminue-t-elle à l’effort par rapport au repos ?",
+     "reponse": 15,
+     "unite": "points de %",
+     "aide": "Lis la saturation au repos, puis à l’effort, pour 40 mmHg.",
+     "explication": "75 − 60 = **15 points** : l’hémoglobine est moins saturée, donc elle a libéré davantage de dioxygène."
+    },
+    {
+     "type": "zone",
+     "document": "cond",
+     "enonce": "Touche la valeur qui montre que le muscle est plus acide à l’effort.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Plus un milieu est acide, plus son pH est bas.",
+     "explication": "Le pH passe de 7,40 à **7,30** : le muscle en activité est plus acide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels changements diminuent l’affinité de l’hémoglobine pour l’O₂ ?",
+     "options": [
+      "Une baisse du pH",
+      "Une hausse de la concentration en CO₂",
+      "Une hausse de la température",
+      "Une baisse de la température",
+      "Une hausse du pH"
+     ],
+     "reponse": [
+      0,
+      1,
+      2
+     ],
+     "aide": "Compare avec le tableau : trois conditions changent à l’effort.",
+     "explication": "Une **baisse du pH, une hausse du CO₂ et une hausse de la température** diminuent l’affinité : c’est l’effet Bohr."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’effet de l’effort sur la courbe de saturation.",
+     "texte": "À l’effort, la courbe se déplace vers la ___ : pour une même pression d’O₂, l’hémoglobine est ___ saturée.",
+     "reponses": [
+      [
+       "droite"
+      ],
+      [
+       "moins"
+      ]
+     ],
+     "banque": [
+      "droite",
+      "gauche",
+      "moins",
+      "plus"
+     ],
+     "aide": "La courbe « effort » est en dessous de la courbe « repos », pour une même pression d’O₂.",
+     "explication": "La courbe se décale vers **la droite** : à pression d’O₂ égale, l’hémoglobine est **moins** saturée, donc cède plus d’O₂ au muscle."
+    }
+   ]
+  },
+  {
+   "chapitre": "22aad1df-1f4d-53c7-8d43-3f7d86b4a815",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le spirogramme de Clara",
+   "competence": "lire-graphique",
+   "situation": "Clara, 22 ans, souffle dans un spiromètre lors d’une visite médicale. L’appareil enregistre le volume d’air mobilisé : d’abord quelques respirations calmes, puis une inspiration et une expiration les plus profondes possible, puis le retour au calme.",
+   "documents": [
+    {
+     "id": "spiro",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spirogramme de Clara",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "series": [
+      {
+       "nom": "Volume",
+       "valeurs": [
+        1.2,
+        1.7,
+        1.2,
+        1.7,
+        1.2,
+        4.5,
+        0,
+        1.2,
+        1.7,
+        1.2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Volume mesuré",
+      "unite": "L",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice ; 0 L = fin d’une expiration forcée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spiro",
+     "enonce": "Touche l’instant de l’inspiration la plus profonde.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le sommet est atteint à **5 s** : 4,5 L, au bout d’une inspiration forcée."
+    },
+    {
+     "type": "nombre",
+     "document": "spiro",
+     "enonce": "Quel est le volume courant de Clara, c’est-à-dire l’air mobilisé à chaque respiration calme ?",
+     "reponse": 0.5,
+     "unite": "L",
+     "tolerance": 0.05,
+     "aide": "Mesure l’écart entre le haut et le bas des petites oscillations du début.",
+     "explication": "1,7 − 1,2 = **0,5 L** : c’est le volume courant d’un adulte au repos."
+    },
+    {
+     "type": "nombre",
+     "document": "spiro",
+     "enonce": "Quelle est sa capacité vitale, de l’expiration forcée à l’inspiration forcée ?",
+     "reponse": 4.5,
+     "unite": "L",
+     "tolerance": 0.05,
+     "aide": "Mesure l’écart entre le point le plus haut et le point le plus bas de toute la courbe.",
+     "explication": "4,5 − 0 = **4,5 L** : la capacité vitale est l’air total qu’on peut mobiliser entre l’expiration et l’inspiration forcées."
+    }
+   ]
+  },
+  {
+   "chapitre": "22aad1df-1f4d-53c7-8d43-3f7d86b4a815",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux souffles, deux rapports de Tiffeneau",
+   "competence": "calculer",
+   "situation": "Hugo, 30 ans, sert de témoin. Lina, 17 ans, siffle depuis plusieurs semaines. Le pneumologue mesure leur capacité vitale (CV) et leur VEMS, puis refait la mesure de Lina après un bronchodilatateur.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures de spirométrie",
+     "colonnes": [
+      "Mesure",
+      "Hugo (témoin)",
+      "Lina avant",
+      "Lina après bronchodilatateur"
+     ],
+     "lignes": [
+      [
+       "CV (L)",
+       "4,5",
+       "4,0",
+       "4,0"
+      ],
+      [
+       "VEMS (L)",
+       "3,6",
+       "2,4",
+       "3,4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "mesures",
+     "enonce": "Calcule le rapport de Tiffeneau de Lina avant le médicament (VEMS ÷ CV), en pourcentage.",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Divise le VEMS de Lina par sa capacité vitale, puis multiplie par 100.",
+     "explication": "2,4 ÷ 4,0 = 0,6 soit **60 %**."
+    },
+    {
+     "type": "choix",
+     "document": "mesures",
+     "enonce": "Que dit ce rapport de Lina avant le médicament ?",
+     "options": [
+      "Il est inférieur à 70 % : trouble ventilatoire obstructif",
+      "Il est supérieur à 70 % : poumons parfaitement normaux",
+      "Il est égal à celui de Hugo, qui vaut 80 %",
+      "Il prouve que son volume résiduel est trop élevé"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec la limite d’environ 70 %.",
+     "explication": "**60 % < 70 %** : l’air sort difficilement, car les bronches sont rétrécies. C’est un trouble ventilatoire obstructif. Hugo, lui, est à 80 %."
+    },
+    {
+     "type": "nombre",
+     "document": "mesures",
+     "enonce": "Calcule le rapport de Tiffeneau de Lina après le bronchodilatateur, en pourcentage.",
+     "reponse": 85,
+     "unite": "%",
+     "aide": "Même calcul, avec le VEMS après le médicament.",
+     "explication": "3,4 ÷ 4,0 = 0,85 soit **85 %**."
+    },
+    {
+     "type": "choix",
+     "document": "mesures",
+     "enonce": "Que montre le retour du rapport à 85 % après le médicament ?",
+     "options": [
+      "L’obstruction est réversible : cela évoque un asthme",
+      "L’obstruction est définitive : cela évoque une BPCO",
+      "Les bronches sont détruites par le tabac depuis longtemps",
+      "Le médicament a augmenté la capacité vitale de 2 litres"
+     ],
+     "reponse": 0,
+     "aide": "Dans l’asthme l’obstruction s’efface après le bronchodilatateur, dans la BPCO elle reste.",
+     "explication": "Le médicament relâche le muscle lisse et l’obstruction disparaît : elle est **réversible**, ce qui évoque un **asthme**. Dans la BPCO, elle ne l’est pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "22aad1df-1f4d-53c7-8d43-3f7d86b4a815",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les nuits sifflantes de Sofia",
+   "competence": "raisonner",
+   "situation": "Sofia, 15 ans, tousse et siffle la nuit. Son pneumologue a rempli son dossier et lui a prescrit trois types de mesures. Il lui explique pourquoi chacune est utile.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Dossier de Sofia",
+     "entete": "Dossier de Sofia",
+     "sousTitre": "15 ans",
+     "emoji": "🫁",
+     "lignes": [
+      {
+       "texte": "Signes",
+       "valeur": "sifflements, toux",
+       "id": "signes"
+      },
+      {
+       "texte": "Maison",
+       "valeur": "acariens, père fumeur",
+       "id": "env"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Rapport avant médicament",
+       "valeur": "62 %",
+       "id": "avant"
+      },
+      {
+       "texte": "Rapport après médicament",
+       "valeur": "88 %",
+       "id": "apres"
+      }
+     ],
+     "pied": "Dossier écrit pour l’exercice"
+    },
+    {
+     "id": "ttt",
+     "type": "tableau",
+     "titre": "Les mesures prescrites",
+     "colonnes": [
+      "Mesure",
+      "Quand ?"
+     ],
+     "lignes": [
+      [
+       "Bronchodilatateur inhalé de courte durée",
+       "pendant la crise"
+      ],
+      [
+       "Corticoïde inhalé",
+       "tous les jours"
+      ],
+      [
+       "Éviction des acariens et du tabac",
+       "en permanence"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Traitements simplifiés"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche la valeur qui montre que les bronches de Sofia se sont rouvertes.",
+     "reponse": [
+      "apres"
+     ],
+     "aide": "Le bronchodilatateur relâche le muscle lisse : cherche la mesure faite après.",
+     "explication": "Après le bronchodilatateur, le rapport remonte à **88 %** : l’obstruction est réversible, ce qui évoque un asthme."
+    },
+    {
+     "type": "nombre",
+     "document": "dossier",
+     "enonce": "De combien de points le rapport VEMS ÷ CV a-t-il augmenté après le bronchodilatateur ?",
+     "reponse": 26,
+     "unite": "points",
+     "aide": "Soustrais la valeur avant le médicament à la valeur après.",
+     "explication": "88 − 62 = **26 points** : une remontée nette, signe d’une obstruction réversible."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le mécanisme d’une crise d’asthme.",
+     "items": [
+      "Contact avec un allergène ou un irritant",
+      "Les bronches enflammées, hyperréactives, réagissent",
+      "Contraction du muscle lisse, œdème, excès de mucus",
+      "Les bronchioles se rétrécissent",
+      "Gêne à l’expiration, sifflements"
+     ],
+     "aide": "Pars du déclencheur, termine par les signes que ressent Sofia.",
+     "explication": "Déclencheur → bronches **hyperréactives** → bronchoconstriction, œdème et mucus → rétrécissement → gêne expiratoire et sifflements."
+    },
+    {
+     "type": "association",
+     "document": "ttt",
+     "enonce": "Associe chaque mesure à son action.",
+     "paires": [
+      [
+       "Bronchodilatateur de courte durée",
+       "Relâche le muscle lisse des bronchioles"
+      ],
+      [
+       "Corticoïde inhalé",
+       "Réduit l’inflammation des bronches"
+      ],
+      [
+       "Éviction des acariens et du tabac",
+       "Évite le contact avec les déclencheurs"
+      ]
+     ],
+     "aide": "Justifier un traitement, c’est dire comment il corrige le mécanisme de la crise.",
+     "explication": "Le **bronchodilatateur** traite la crise ; le **corticoïde** est un traitement de fond contre l’inflammation ; l’**éviction** prévient les crises."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fumée de son père aggrave-t-elle l’asthme de Sofia ?",
+     "options": [
+      "Les irritants du tabac enflamment ses bronches",
+      "La nicotine paralyse le muscle lisse de ses bronches",
+      "Le monoxyde de carbone dilate toutes ses bronchioles",
+      "Les goudrons détruisent la lumière de ses alvéoles"
+     ],
+     "reponse": 0,
+     "aide": "Le tabagisme passif est un facteur déclenchant : que font les irritants de la fumée sur des bronches déjà sensibles ?",
+     "explication": "Les **irritants** de la fumée, même respirée passivement, enflamment les bronches de Sofia et augmentent le mucus. C’est pourquoi le tabac est à éviter."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa02339a-503c-51d6-aef0-7311673a7fa8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Décoder le jargon du service de médecine",
+   "competence": "manier-langue",
+   "situation": "Léonie, stagiaire dans un service de médecine, lit le tableau de service d’un étage. Elle doit comprendre chaque terme en le découpant : racine, préfixe, suffixe.",
+   "documents": [
+    {
+     "id": "service",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Tableau de service",
+     "entete": "Tableau de service",
+     "sousTitre": "Mardi",
+     "emoji": "🏥",
+     "lignes": [
+      {
+       "texte": "Chambre 3",
+       "valeur": "gastrite",
+       "id": "gastrite"
+      },
+      {
+       "texte": "Chambre 5",
+       "valeur": "hémiplégie",
+       "id": "hemiplegie"
+      },
+      {
+       "texte": "Bloc",
+       "valeur": "cholécystectomie",
+       "id": "chole"
+      },
+      {
+       "texte": "Chambre 8",
+       "valeur": "dyspnée",
+       "id": "dyspnee"
+      },
+      {
+       "texte": "Laboratoire",
+       "valeur": "glycémie",
+       "id": "glycemie"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "service",
+     "enonce": "Touche le mot qui désigne l’ablation d’un organe.",
+     "reponse": [
+      "chole"
+     ],
+     "aide": "Le suffixe de l’ablation est « -ectomie ».",
+     "explication": "La **cholécystectomie** est l’ablation de la vésicule biliaire : cholécyst(o) + -ectomie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque suffixe à son sens.",
+     "paires": [
+      [
+       "-ite",
+       "Inflammation"
+      ],
+      [
+       "-plégie",
+       "Paralysie"
+      ],
+      [
+       "-émie",
+       "Présence dans le sang"
+      ],
+      [
+       "-ectomie",
+       "Ablation"
+      ]
+     ],
+     "aide": "La gastrite est une inflammation de l’estomac ; la glycémie est le taux de sucre dans le sang.",
+     "explication": "**-ite** : inflammation ; **-plégie** : paralysie ; **-émie** : présence dans le sang ; **-ectomie** : ablation."
+    },
+    {
+     "type": "trous",
+     "enonce": "Décompose le mot « dyspnée » avec la racine du programme.",
+     "texte": "Dans « dyspnée », le préfixe ___ indique une ___, et -pnée désigne la respiration.",
+     "reponses": [
+      [
+       "dys-"
+      ],
+      [
+       "difficulté"
+      ]
+     ],
+     "banque": [
+      "dys-",
+      "hyper-",
+      "difficulté",
+      "absence"
+     ],
+     "aide": "Une dyspnée, c’est « respirer avec ... ».",
+     "explication": "**dys-** indique une **difficulté** ou une anomalie : dyspnée = difficulté à respirer."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa02339a-503c-51d6-aef0-7311673a7fa8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe de troponine de M. Henry",
+   "competence": "lire-graphique",
+   "situation": "M. Henry, 59 ans, est arrivé aux urgences avec une douleur dans la poitrine. L’infirmière dose sa troponine toutes les heures. Léa, stagiaire, doit rédiger l’analyse du document.",
+   "documents": [
+    {
+     "id": "tropo",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Troponine de M. Henry",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Troponine",
+       "valeurs": [
+        0.01,
+        0.05,
+        0.3,
+        0.9,
+        1.6,
+        2.1,
+        2.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Troponine",
+      "unite": "µg/L",
+      "min": 0,
+      "max": 3,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Heures après l’arrivée"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "ref",
+     "type": "tableau",
+     "titre": "Valeur de référence",
+     "colonnes": [
+      "Dosage",
+      "Valeur de référence"
+     ],
+     "lignes": [
+      [
+       "Troponine",
+       "moins de 0,1 µg/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeur de référence écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tropo",
+     "enonce": "Touche la première heure où la troponine dépasse la valeur de référence.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "La référence est 0,1 µg/L : repère le premier point au-dessus.",
+     "explication": "À **2 h**, la troponine vaut 0,3 µg/L, au-dessus de 0,1 µg/L ; à 1 h, elle valait 0,05 µg/L."
+    },
+    {
+     "type": "nombre",
+     "document": "tropo",
+     "enonce": "Combien de fois la troponine à 6 h dépasse-t-elle celle de 0 h ?",
+     "reponse": 250,
+     "aide": "Divise la valeur à 6 h par la valeur à 0 h.",
+     "explication": "2,5 ÷ 0,01 = **250 fois** : décrire avec des valeurs, c’est citer des chiffres lus sur la courbe."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la démarche d’analyse d’une courbe.",
+     "items": [
+      "Lire le titre, la source, les axes et leurs unités",
+      "Décrire en citant des valeurs précises",
+      "Comparer à une référence",
+      "Interpréter avec une connaissance du cours",
+      "Conclure en répondant à la question"
+     ],
+     "aide": "On lit avant de décrire, on décrit avant d’interpréter.",
+     "explication": "**Lire → décrire → comparer → interpréter → conclure** : c’est la démarche à appliquer à chaque document."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase associe une idée, une donnée chiffrée et une explication ?",
+     "options": [
+      "La troponine passe de 0,01 à 2,5 µg/L en 6 heures : elle est libérée par les cellules nécrosées du myocarde.",
+      "La troponine passe de 0,01 à 2,5 µg/L en 6 heures, ce qui est une valeur élevée pour un patient.",
+      "La troponine augmente énormément, ce qui prouve que le patient fait un infarctus du myocarde.",
+      "La troponine augmente avec le temps, comme le montre la courbe qui monte de gauche à droite."
+     ],
+     "reponse": 0,
+     "aide": "Cherche la phrase qui cite des chiffres du document ET dit pourquoi la troponine monte.",
+     "explication": "La bonne phrase donne l’**idée** (elle augmente), la **donnée** (0,01 → 2,5 µg/L en 6 h) et l’**explication** (libérée par les cellules nécrosées)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa02339a-503c-51d6-aef0-7311673a7fa8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le dossier de M. Lefèvre : raisonner pas à pas",
+   "competence": "raisonner",
+   "situation": "M. Lefèvre, 62 ans, ressent une douleur dans la poitrine en montant les escaliers. Son dossier regroupe l’entretien avec le médecin et les résultats des examens. Tu dois raisonner en physiopathologie.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Dossier de M. Lefèvre",
+     "entete": "Dossier de M. Lefèvre",
+     "sousTitre": "62 ans",
+     "emoji": "🩺",
+     "lignes": [
+      {
+       "texte": "Douleur",
+       "valeur": "en étau, à l’effort",
+       "id": "douleur"
+      },
+      {
+       "texte": "Durée",
+       "valeur": "3 min, cède au repos",
+       "id": "duree"
+      },
+      {
+       "texte": "Âge",
+       "valeur": "62 ans",
+       "id": "age"
+      },
+      {
+       "texte": "Père",
+       "valeur": "infarctus à 55 ans",
+       "id": "pere"
+      },
+      {
+       "texte": "Tabac",
+       "valeur": "15 cigarettes/jour",
+       "id": "tabac"
+      },
+      {
+       "texte": "Tension répétée",
+       "valeur": "15/9 cmHg",
+       "id": "tension"
+      }
+     ],
+     "pied": "Dossier écrit pour l’exercice"
+    },
+    {
+     "id": "examens",
+     "type": "tableau",
+     "titre": "Les examens",
+     "colonnes": [
+      "Examen",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "ECG de repos",
+       "normal"
+      ],
+      [
+       "ECG d’effort",
+       "anomalies à l’effort"
+      ],
+      [
+       "Troponine",
+       "0,01 µg/L, normale"
+      ],
+      [
+       "Coronarographie",
+       "sténose d’une artère coronaire"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément du dossier.",
+     "categories": [
+      "Signe clinique",
+      "Signe paraclinique"
+     ],
+     "items": [
+      [
+       "Douleur en étau à l’effort",
+       0
+      ],
+      [
+       "Douleur qui cède au repos",
+       0
+      ],
+      [
+       "ECG d’effort anormal",
+       1
+      ],
+      [
+       "Troponine normale",
+       1
+      ],
+      [
+       "Sténose vue en coronarographie",
+       1
+      ]
+     ],
+     "aide": "Le patient décrit ce qu’il ressent ; les examens complémentaires donnent des résultats.",
+     "explication": "**Clinique** : douleur à l’effort, douleur qui cède au repos. **Paraclinique** : ECG, troponine, coronarographie, qui viennent d’examens complémentaires."
+    },
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche les deux lignes qui sont des facteurs de risque modifiables.",
+     "reponse": [
+      "tabac",
+      "tension"
+     ],
+     "multiple": true,
+     "aide": "Ce sont ceux sur lesquels on peut agir pour la prévention : mode de vie, tension.",
+     "explication": "Le **tabac** et la **tension artérielle** sont modifiables. L’âge et l’hérédité (père infarctus à 55 ans) ne le sont pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes du raisonnement physiopathologique.",
+     "items": [
+      "Rappel physiologique",
+      "Signes cliniques",
+      "Signes paracliniques",
+      "Mécanisme",
+      "Facteurs de risque",
+      "Traitements",
+      "Prévention"
+     ],
+     "aide": "On part du fonctionnement normal et on termine par ce qu’on peut éviter.",
+     "explication": "Rappel → cliniques → paracliniques → **mécanisme** → facteurs de risque → traitements → prévention : c’est le plan de chaque pathologie."
+    },
+    {
+     "type": "choix",
+     "document": "examens",
+     "enonce": "Pourquoi conclure à un angor et non à un infarctus ?",
+     "options": [
+      "La sténose est partielle : ischémie transitoire, troponine normale",
+      "La coronarographie montre une occlusion complète de l’artère",
+      "La douleur dure plus de 20 minutes et ne cède pas au repos",
+      "L’ECG de repos montre un sus-décalage du segment ST"
+     ],
+     "reponse": 0,
+     "aide": "Croise la durée de la douleur et la troponine : que montrent-elles de la nécrose ?",
+     "explication": "La douleur cède en 3 minutes, la troponine est **normale** et la coronarographie montre une **sténose**, pas une occlusion : ischémie transitoire, donc angor."
+    }
+   ]
+  }
+ ]
+}

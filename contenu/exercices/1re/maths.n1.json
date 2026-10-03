@@ -1,0 +1,2698 @@
+{
+ "niveau": "1re",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "fbef6f22-850c-5e27-9bd0-ee37f32d82f4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les premiers termes de Léa",
+   "competence": "lire-tableau",
+   "situation": "Léa étudie la suite (u) définie pour tout entier n par u(n) = n² + 1. Elle a recopié ses premiers termes dans un tableau, mais il reste une case à remplir.",
+   "documents": [
+    {
+     "id": "termes",
+     "type": "tableau",
+     "titre": "Les termes de la suite (u)",
+     "colonnes": [
+      "Rang n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       1,
+       2,
+       5,
+       10,
+       17,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "termes",
+     "enonce": "Touche dans le tableau le terme de rang 3, noté u(3).",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Repère la colonne dont le rang n vaut 3, puis descends à la ligne de u(n).",
+     "explication": "Le terme de rang 3 est dans la colonne **n = 3** : u(3) = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le terme manquant u(5).",
+     "reponse": 26,
+     "aide": "Remplace n par 5 dans la formule n² + 1.",
+     "explication": "u(5) = 5² + 1 = 25 + 1 = **26**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans calculer les termes précédents, donne u(10).",
+     "reponse": 101,
+     "aide": "Avec une formule explicite, on remplace directement n par 10.",
+     "explication": "Une définition explicite permet d’aller droit au but : u(10) = 10² + 1 = **101**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Au vu du tableau, comment semble évoluer la suite ?",
+     "options": [
+      "Elle semble croissante",
+      "Elle semble décroissante",
+      "Elle semble constante",
+      "Elle alterne : un terme monte, le suivant descend"
+     ],
+     "reponse": 0,
+     "aide": "Compare chaque terme au précédent : 1, 2, 5, 10, 17…",
+     "explication": "Chaque terme est plus grand que le précédent : la suite **semble croissante** (on le démontre avec le signe de u(n+1) − u(n))."
+    }
+   ]
+  },
+  {
+   "chapitre": "fbef6f22-850c-5e27-9bd0-ee37f32d82f4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un creux au rang 3",
+   "competence": "lire-graphique",
+   "situation": "Au tableau, le professeur trace le diagramme en bâtons de la suite (u) définie par u(n) = (n − 3)². Chaque bâton représente un terme, pour n allant de 0 à 6.",
+   "documents": [
+    {
+     "id": "batons",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les termes de (u) pour n de 0 à 6",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "u(n)",
+       "valeurs": [
+        9,
+        4,
+        1,
+        0,
+        1,
+        4,
+        9
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "u(n)",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Rang n"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "batons",
+     "enonce": "Touche le terme le plus petit de la suite.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le bâton le plus court.",
+     "explication": "Le plus petit terme est u(3) = (3 − 3)² = **0**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La suite est-elle monotone (toujours croissante, ou toujours décroissante) ?",
+     "options": [
+      "Non : elle baisse puis monte",
+      "Oui : elle est croissante",
+      "Oui : elle est décroissante",
+      "Non : elle est constante"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les bâtons de gauche à droite : montent-ils tous ?",
+     "explication": "Les bâtons **baissent** de n = 0 à n = 3, puis **montent** : la suite n’est ni croissante ni décroissante sur tous les rangs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(7) avec la formule u(n) = (n − 3)².",
+     "reponse": 16,
+     "aide": "Remplace n par 7 puis élève au carré.",
+     "explication": "u(7) = (7 − 3)² = 4² = **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de quel rang n a-t-on u(n+1) > u(n) pour tous les rangs suivants ? On rappelle que u(n+1) − u(n) = 2n − 5.",
+     "reponse": 3,
+     "aide": "Cherche le premier entier n pour lequel 2n − 5 est strictement positif.",
+     "explication": "Pour n = 2, 2n − 5 = −1 < 0 ; pour n = 3, 2n − 5 = 1 > 0, et ensuite c’est toujours positif. La suite croît strictement à partir du rang **3**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fbef6f22-850c-5e27-9bd0-ee37f32d82f4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une suite qui s’emballe",
+   "competence": "raisonner",
+   "situation": "Camille étudie la suite (u) définie par récurrence. Elle calcule les premiers termes à la main, remplit un tableau, puis propose une formule pour aller plus vite.",
+   "documents": [
+    {
+     "id": "consigne",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Définition de la suite",
+     "blocs": [
+      "Suite (u) : u(0) = 2 et, pour tout entier n, u(n+1) = 3 × u(n) − 2."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "termes",
+     "type": "tableau",
+     "titre": "Les premiers termes de (u)",
+     "colonnes": [
+      "Rang n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "u(n)",
+       2,
+       4,
+       10,
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(3) avec la relation de récurrence.",
+     "reponse": 28,
+     "aide": "Multiplie u(2) par 3 puis retire 2.",
+     "explication": "u(3) = 3 × u(2) − 2 = 3 × 10 − 2 = **28**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(4).",
+     "reponse": 82,
+     "aide": "Pars du terme que tu viens de trouver.",
+     "explication": "u(4) = 3 × 28 − 2 = 84 − 2 = **82**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(5).",
+     "reponse": 244,
+     "aide": "Même geste, à partir de u(4).",
+     "explication": "u(5) = 3 × 82 − 2 = 246 − 2 = **244**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille propose la formule explicite u(n) = 3ⁿ + 1. Elle vérifie qu’elle donne bien u(0), u(1), …, u(5). Que peut-on en conclure ?",
+     "options": [
+      "Elle colle aux six premiers termes, mais il faudrait le démontrer pour tout n",
+      "Elle est démontrée : six termes exacts suffisent",
+      "Elle est fausse, une récurrence n’a jamais de formule explicite",
+      "Elle est fausse dès u(2)"
+     ],
+     "reponse": 0,
+     "aide": "Six vérifications couvrent-elles tous les entiers ?",
+     "explication": "Vérifier quelques termes **ne démontre rien** pour tous les rangs. La formule est plausible (c’est bien la bonne), mais il faut la prouver."
+    },
+    {
+     "type": "choix",
+     "enonce": "On calcule u(n+1) − u(n) = 2 × u(n) − 2. Sachant que tous les termes sont supérieurs ou égaux à 2, que dire du sens de variation ?",
+     "options": [
+      "u(n+1) − u(n) > 0 : la suite est croissante",
+      "u(n+1) − u(n) < 0 : la suite est décroissante",
+      "Le signe change : la suite n’est pas monotone",
+      "On ne peut rien dire sans calculer tous les termes"
+     ],
+     "reponse": 0,
+     "aide": "Si u(n) ≥ 2, que vaut 2 × u(n) − 2 au minimum ?",
+     "explication": "Si u(n) ≥ 2, alors 2u(n) − 2 ≥ 2 > 0 : la différence est **positive** pour tout n, donc la suite est **croissante**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eeebd464-f6a5-54f6-a01f-7f7e881bc51e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tarif de la salle d’escalade",
+   "competence": "modeliser",
+   "situation": "Maya s’inscrit dans une salle d’escalade. Elle note u(n) la somme totale qu’elle a payée après n mois d’abonnement, inscription comprise : u(0) = 20 €.",
+   "documents": [
+    {
+     "id": "tarif",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Escalade du Vieux Port",
+     "sousTitre": "Tarifs de l’année",
+     "emoji": "🧗",
+     "lignes": [
+      {
+       "texte": "Inscription (une seule fois)",
+       "valeur": "20 €",
+       "id": "inscription"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Abonnement, chaque mois",
+       "valeur": "15 €",
+       "id": "mois"
+      }
+     ],
+     "pied": "Salle imaginée pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tarif",
+     "enonce": "Touche la ligne qui donne la raison de la suite (ce qu’on ajoute chaque mois).",
+     "reponse": [
+      "mois"
+     ],
+     "aide": "La raison est ce qui s’ajoute à chaque nouveau terme.",
+     "explication": "On ajoute **15 €** chaque mois : la raison est r = 15. L’inscription, elle, n’est payée qu’une fois : c’est u(0)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien Maya a-t-elle payé en tout après 4 mois ?",
+     "reponse": 80,
+     "aide": "Utilise u(n) = u(0) + n × r.",
+     "explication": "u(4) = 20 + 4 × 15 = 20 + 60 = **80 €**.",
+     "unite": "€"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après combien de mois Maya a-t-elle payé 125 € en tout ?",
+     "reponse": 7,
+     "aide": "Retire d’abord l’inscription, puis cherche combien de mensualités de 15 € il faut.",
+     "explication": "125 − 20 = 105 et 105 ÷ 15 = **7** mois.",
+     "unite": "mois"
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel type est la suite (u) ?",
+     "options": [
+      "Arithmétique de raison 15",
+      "Géométrique de raison 15",
+      "Arithmétique de raison 20",
+      "Géométrique de raison 1,15"
+     ],
+     "reponse": 0,
+     "aide": "On passe d’un terme au suivant en ajoutant ou en multipliant ?",
+     "explication": "On **ajoute** toujours 15 € : la suite est **arithmétique de raison 15**."
+    }
+   ]
+  },
+  {
+   "chapitre": "eeebd464-f6a5-54f6-a01f-7f7e881bc51e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le scooter qui perd de la valeur",
+   "competence": "calculer",
+   "situation": "Hugo a acheté un scooter 3 000 €. Chaque année, sa valeur de revente baisse, et il a noté les valeurs des premières années dans un tableau.",
+   "documents": [
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Valeur du scooter",
+     "colonnes": [
+      "Année n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Valeur (€)",
+       3000,
+       2700,
+       2430,
+       2187,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature de la suite des valeurs ?",
+     "options": [
+      "Géométrique : le quotient est constant",
+      "Arithmétique : la différence est constante",
+      "Ni l’une ni l’autre",
+      "Arithmétique : le quotient est constant"
+     ],
+     "reponse": 0,
+     "aide": "Calcule 2700 − 3000 puis 2430 − 2700 : sont-ils égaux ? Essaie aussi les quotients.",
+     "explication": "Les différences valent −300 puis −270 : elles varient. Les quotients valent 0,9 à chaque fois : la suite est **géométrique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de cette suite ?",
+     "reponse": 0.9,
+     "aide": "Divise un terme par le précédent.",
+     "explication": "q = 2700 ÷ 3000 = **0,9**, ce qui correspond à une baisse de 10 % par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur du scooter la 4e année (case manquante).",
+     "reponse": 1968.3,
+     "aide": "Multiplie la valeur de la 3e année par la raison.",
+     "explication": "u(4) = 2187 × 0,9 = **1 968,3 €**.",
+     "unite": "€",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Hugo pense que deux baisses de 10 % font 20 %. Quel est le **vrai** pourcentage de baisse entre l’année 0 et l’année 2 ?",
+     "reponse": 19,
+     "aide": "Compare 2430 à 3000 : quelle part de la valeur initiale a disparu ?",
+     "explication": "La valeur passe de 3 000 à 2 430 : elle a perdu 570 €, soit 570 ÷ 3 000 = 0,19. C’est une baisse de **19 %** (0,9 × 0,9 = 0,81).",
+     "unite": "%"
+    }
+   ]
+  },
+  {
+   "chapitre": "eeebd464-f6a5-54f6-a01f-7f7e881bc51e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La vidéo qui fait le tour du lycée",
+   "competence": "modeliser",
+   "situation": "Inès publie une vidéo le jour 0. Un article de blog imaginaire raconte comment elle s’est répandue, et un tableau résume l’audience. Tu vas prévoir la suite.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Buzz au lycée",
+     "blocs": [
+      "Le jour 0, une seule personne regarde la vidéo d’Inès.",
+      "Chaque jour qui suit, chaque nouveau spectateur la partage à trois personnes qui ne l’avaient pas encore vue, et ces trois personnes la regardent."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    },
+    {
+     "id": "audience",
+     "type": "tableau",
+     "titre": "L’audience jour après jour",
+     "colonnes": [
+      "Jour",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Nouveaux spectateurs",
+       1,
+       3,
+       9,
+       27,
+       81
+      ],
+      [
+       "Total depuis le début",
+       1,
+       4,
+       13,
+       40,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Les nouveaux spectateurs forment une suite géométrique. Quelle est sa raison ?",
+     "reponse": 3,
+     "aide": "Divise le nombre de nouveaux spectateurs d’un jour par celui de la veille.",
+     "explication": "9 ÷ 3 = 27 ÷ 9 = **3** : chaque jour, il y a trois fois plus de nouveaux spectateurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le total des spectateurs depuis le début, au jour 4.",
+     "reponse": 121,
+     "aide": "Additionne 1 + 3 + 9 + 27 + 81, ou ajoute 81 au total du jour 3.",
+     "explication": "40 + 81 = **121** spectateurs au total."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nouveaux spectateurs le jour 6 ?",
+     "reponse": 729,
+     "aide": "Le jour n, il y a 3ⁿ nouveaux spectateurs.",
+     "explication": "u(6) = 1 × 3⁶ = **729**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le total depuis le début au jour 6, avec la formule 1 + q + q² + … + qⁿ = (1 − qⁿ⁺¹) ÷ (1 − q).",
+     "reponse": 1093,
+     "aide": "Ici q = 3 et n = 6 : calcule 3⁷ = 2 187.",
+     "explication": "(1 − 3⁷) ÷ (1 − 3) = (1 − 2 187) ÷ (−2) = −2 186 ÷ (−2) = **1 093**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le premier jour où il y a plus de 10 000 nouveaux spectateurs en une seule journée ?",
+     "reponse": 9,
+     "aide": "Calcule 3⁷, 3⁸, 3⁹ jusqu’à dépasser 10 000.",
+     "explication": "3⁸ = 6 561 (pas assez) et 3⁹ = 19 683 : c’est le jour **9**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f1f102fd-877d-5c7c-8d82-0b9e961183bf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une parabole à lire",
+   "competence": "lire-graphique",
+   "situation": "On a tracé la courbe d’une fonction f du second degré, f(x) = x² − 4x + 3, à partir de quelques points entre x = −1 et x = 5.",
+   "documents": [
+    {
+     "id": "parabole",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La courbe de f",
+     "categories": [
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        8,
+        3,
+        0,
+        -1,
+        0,
+        3,
+        8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": -2,
+      "max": 8,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parabole",
+     "enonce": "Touche le sommet de la parabole.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Le sommet est le point où la courbe change de sens.",
+     "explication": "Le sommet est en **x = 2**, au point de coordonnées (2 ; −1) : c’est le minimum de la fonction."
+    },
+    {
+     "type": "zone",
+     "document": "parabole",
+     "enonce": "Touche les deux points où la courbe coupe l’axe des abscisses (les racines).",
+     "reponse": [
+      "k2",
+      "k4"
+     ],
+     "aide": "Ces points ont une ordonnée égale à 0.",
+     "explication": "Les racines sont **x = 1** et **x = 3** : on a f(1) = 0 et f(3) = 0.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’équation x = … de l’axe de symétrie ? Donne la valeur.",
+     "reponse": 2,
+     "aide": "L’axe passe par le sommet ; il est à égale distance des deux racines.",
+     "explication": "La parabole est symétrique par rapport à la droite verticale **x = 2**, milieu de 1 et 3, et abscisse du sommet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la forme de la parabole sur le signe de a ?",
+     "options": [
+      "a est positif : parabole tournée vers le haut",
+      "a est négatif : parabole tournée vers le haut",
+      "a est positif : parabole tournée vers le bas",
+      "a est négatif : parabole tournée vers le bas"
+     ],
+     "reponse": 0,
+     "aide": "Le sommet est-il un minimum ou un maximum ?",
+     "explication": "La courbe a un **minimum** : elle est tournée vers le haut, donc **a > 0** (ici a = 1)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f1f102fd-877d-5c7c-8d82-0b9e961183bf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le lancer du ballon",
+   "competence": "modeliser",
+   "situation": "Au gymnase, Lila lance un ballon droit vers le haut. La hauteur du ballon au bout de t secondes est h(t) = −5t² + 20t, en mètres. Elle a relevé quelques valeurs.",
+   "documents": [
+    {
+     "id": "lancer",
+     "type": "tableau",
+     "titre": "Hauteur du ballon",
+     "colonnes": [
+      "Temps t (s)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Hauteur h (m)",
+       0,
+       15,
+       20,
+       "?",
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Modèle simplifié, valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la hauteur manquante h(3).",
+     "reponse": 15,
+     "aide": "Remplace t par 3 : −5 × 9 + 20 × 3.",
+     "explication": "h(3) = −5 × 9 + 60 = −45 + 60 = **15 m**.",
+     "unite": "m"
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant (en secondes) le ballon est-il le plus haut ? Utilise t = −b ÷ (2a).",
+     "reponse": 2,
+     "aide": "Ici a = −5 et b = 20.",
+     "explication": "L’abscisse du sommet est t = −20 ÷ (2 × (−5)) = −20 ÷ (−10) = **2 s**.",
+     "unite": "s"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur maximale du ballon ?",
+     "reponse": 20,
+     "aide": "Calcule h à l’instant du sommet.",
+     "explication": "h(2) = −5 × 4 + 20 × 2 = −20 + 40 = **20 m**.",
+     "unite": "m"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien de secondes le ballon est-il à plus de 15 m ? Résous −5t² + 20t − 15 > 0, c’est-à-dire t² − 4t + 3 < 0.",
+     "reponse": 2,
+     "aide": "Cherche les racines de t² − 4t + 3 : le trinôme est négatif entre elles.",
+     "explication": "Le trinôme t² − 4t + 3 a pour racines 1 et 3 et il est négatif entre elles (a = 1 > 0) : le ballon dépasse 15 m entre t = 1 et t = 3, soit pendant **2 s**.",
+     "unite": "s"
+    }
+   ]
+  },
+  {
+   "chapitre": "f1f102fd-877d-5c7c-8d82-0b9e961183bf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’enclos de Mathilde",
+   "competence": "modeliser",
+   "situation": "Mathilde dispose de 40 m de grillage pour clôturer un enclos rectangulaire contre un mur : le mur sert de quatrième côté. Elle pose x mètres pour la longueur des deux côtés perpendiculaires au mur.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Plan de l’enclos",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 12,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 2,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 10,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 10,
+       "y": 6,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 2,
+       "y": 6,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "D",
+       "longueur": "x"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "x"
+      },
+      {
+       "de": "D",
+       "a": "C",
+       "longueur": "40 − 2x"
+      },
+      {
+       "de": "A",
+       "a": "B",
+       "style": "pointilles"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "textes": [
+      {
+       "x": 6,
+       "y": 0.4,
+       "texte": "Mur"
+      }
+     ],
+     "source": "Plan schématique, hors échelle"
+    },
+    {
+     "id": "aires",
+     "type": "tableau",
+     "titre": "Quelques aires calculées",
+     "colonnes": [
+      "x (m)",
+      "2",
+      "5",
+      "15",
+      "18"
+     ],
+     "lignes": [
+      [
+       "Aire A(x) (m²)",
+       72,
+       150,
+       150,
+       72
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’expression de l’aire A(x) de l’enclos ?",
+     "options": [
+      "A(x) = x(40 − 2x) = −2x² + 40x",
+      "A(x) = x(40 − x) = −x² + 40x",
+      "A(x) = 2x(40 − 2x) = −4x² + 80x",
+      "A(x) = x² + (40 − 2x)"
+     ],
+     "reponse": 0,
+     "aide": "Aire d’un rectangle : largeur × longueur, avec les dimensions du plan.",
+     "explication": "Largeur x et longueur 40 − 2x : A(x) = x(40 − 2x) = **−2x² + 40x**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le tableau donne la même aire pour x = 5 et x = 15. Quelle est l’abscisse du sommet de la parabole ?",
+     "reponse": 10,
+     "aide": "Le sommet est au milieu de deux abscisses qui donnent la même valeur.",
+     "explication": "L’axe de symétrie passe par le milieu de 5 et 15 : **x = 10** (on le retrouve par −b ÷ (2a) = −40 ÷ (−4))."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire maximale de l’enclos ?",
+     "reponse": 200,
+     "aide": "Calcule A à l’abscisse du sommet.",
+     "explication": "A(10) = 10 × (40 − 20) = 10 × 20 = **200 m²**.",
+     "unite": "m²"
+    },
+    {
+     "type": "nombre",
+     "enonce": "On veut une aire de 192 m². Calcule le discriminant Δ de −2x² + 40x − 192 = 0.",
+     "reponse": 64,
+     "aide": "Δ = b² − 4ac avec a = −2, b = 40 et c = −192.",
+     "explication": "Δ = 40² − 4 × (−2) × (−192) = 1 600 − 1 536 = **64**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la plus petite valeur de x qui donne une aire de 192 m² ?",
+     "reponse": 8,
+     "aide": "Racines : (−b ± √Δ) ÷ (2a), avec √64 = 8.",
+     "explication": "x = (−40 − 8) ÷ (−4) = 12 et x = (−40 + 8) ÷ (−4) = 8. La plus petite est **8 m** (A(8) = 8 × 24 = 192).",
+     "unite": "m"
+    }
+   ]
+  },
+  {
+   "chapitre": "b7e9b515-1990-52f7-8eed-93a4c14d2ff0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tangente en un point",
+   "competence": "lire-graphique",
+   "situation": "On étudie la fonction f définie par f(x) = x². On s’intéresse à la tangente à sa courbe au point A d’abscisse 3. Voici quelques points de la courbe.",
+   "documents": [
+    {
+     "id": "carre",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La courbe de f(x) = x²",
+     "categories": [
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        1,
+        0,
+        1,
+        4,
+        9,
+        16
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": 0,
+      "max": 16,
+      "pas": 4
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carre",
+     "enonce": "Touche le point A de la courbe, d’abscisse 3.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Repère l’abscisse 3 sur l’axe horizontal.",
+     "explication": "Le point A est celui d’abscisse **3**, d’ordonnée f(3) = 9."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis f(3), l’ordonnée du point A.",
+     "reponse": 9,
+     "aide": "Monte jusqu’au point A et lis sur l’axe vertical.",
+     "explication": "f(3) = 3² = **9**, donc A(3 ; 9)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre dérivé f′(3), avec f′(x) = 2x.",
+     "reponse": 6,
+     "aide": "Remplace x par 3 dans 2x.",
+     "explication": "f′(3) = 2 × 3 = **6** : c’est le coefficient directeur de la tangente en A."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de la tangente en A, d’après y = f′(3)(x − 3) + f(3) ?",
+     "options": [
+      "y = 6x − 9",
+      "y = 6x − 18",
+      "y = 9x − 6",
+      "y = 3x + 9"
+     ],
+     "reponse": 0,
+     "aide": "Développe 6(x − 3) + 9.",
+     "explication": "y = 6(x − 3) + 9 = 6x − 18 + 9 = **6x − 9**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7e9b515-1990-52f7-8eed-93a4c14d2ff0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les dérivées du tableau noir",
+   "competence": "calculer",
+   "situation": "Au tableau, le professeur a écrit quatre fonctions et leurs dérivées, mais il a effacé les dérivées. À toi de les retrouver. Léo, lui, propose ensuite une dérivée pour un produit.",
+   "documents": [
+    {
+     "id": "fonctions",
+     "type": "tableau",
+     "titre": "Fonctions à dériver",
+     "colonnes": [
+      "Fonction",
+      "Sa dérivée"
+     ],
+     "lignes": [
+      [
+       "f(x) = x⁴",
+       "?"
+      ],
+      [
+       "g(x) = 1/x, pour x ≠ 0",
+       "?"
+      ],
+      [
+       "h(x) = √x, pour x > 0",
+       "?"
+      ],
+      [
+       "k(x) = 5x² − 3x",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fonctions choisies pour l’exercice"
+    },
+    {
+     "id": "leo",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La proposition de Léo",
+     "blocs": [
+      "Pour p(x) = x²(x + 1), Léo écrit : p′(x) = 2x × 1 = 2x."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque fonction à sa dérivée.",
+     "paires": [
+      [
+       "f(x) = x⁴",
+       "4x³"
+      ],
+      [
+       "g(x) = 1/x",
+       "−1/x²"
+      ],
+      [
+       "h(x) = √x",
+       "1/(2√x)"
+      ],
+      [
+       "k(x) = 5x² − 3x",
+       "10x − 3"
+      ]
+     ],
+     "aide": "Rappelle-toi les dérivées usuelles : xⁿ, 1/x, √x, et dérive terme à terme pour k.",
+     "explication": "(xⁿ)′ = n·xⁿ⁻¹ donne **4x³** ; (1/x)′ = **−1/x²** ; (√x)′ = **1/(2√x)** ; (5x² − 3x)′ = 5 × 2x − 3 = **10x − 3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule k′(2).",
+     "reponse": 17,
+     "aide": "k′(x) = 10x − 3 ; remplace x par 2.",
+     "explication": "k′(2) = 10 × 2 − 3 = 20 − 3 = **17**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’erreur de Léo pour dériver le produit x²(x + 1) ?",
+     "options": [
+      "Il a dérivé chaque facteur et multiplié les dérivées",
+      "Il a oublié de développer le produit",
+      "Il a confondu dérivée et primitive",
+      "Il a dérivé x² avec la formule d’une somme"
+     ],
+     "reponse": 0,
+     "aide": "Quelle est la formule de dérivation d’un produit u × v ?",
+     "explication": "La dérivée d’un produit n’est **pas** le produit des dérivées : (uv)′ = u′v + uv′."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule correctement p′(1), avec p′ = u′v + uv′ où u(x) = x² et v(x) = x + 1.",
+     "reponse": 5,
+     "aide": "u′(x) = 2x et v′(x) = 1 ; calcule chaque terme en x = 1.",
+     "explication": "p′(1) = 2 × 1 × (1 + 1) + 1² × 1 = 4 + 1 = **5**. (Avec p(x) = x³ + x², on retrouve p′(1) = 3 + 2 = 5.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "b7e9b515-1990-52f7-8eed-93a4c14d2ff0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une fonction qui monte, descend, remonte",
+   "competence": "raisonner",
+   "situation": "On étudie f(x) = 2x³ − 3x² − 12x + 5 sur ℝ. Un tableau de valeurs et la courbe correspondante ont été tracés pour x de −2 à 3. Il s’agit de relier la dérivée au comportement de f.",
+   "documents": [
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Valeurs de f",
+     "colonnes": [
+      "x",
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "f(x)",
+       1,
+       12,
+       5,
+       -8,
+       -15,
+       -4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    },
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La courbe de f",
+     "categories": [
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        1,
+        12,
+        5,
+        -8,
+        -15,
+        -4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": -16,
+      "max": 16,
+      "pas": 4
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée de f ?",
+     "options": [
+      "f′(x) = 6x² − 6x − 12 = 6(x − 2)(x + 1)",
+      "f′(x) = 6x² − 6x − 12 = 6(x − 4)(x + 3)",
+      "f′(x) = 2x² − 3x − 12",
+      "f′(x) = 6x² − 3x − 12"
+     ],
+     "reponse": 0,
+     "aide": "Dérive terme à terme : (2x³)′ = 6x², (3x²)′ = 6x, (12x)′ = 12. Factorise ensuite.",
+     "explication": "f′(x) = 6x² − 6x − 12. En factorisant : 6(x² − x − 2) = **6(x − 2)(x + 1)**, de racines 2 et −1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(0).",
+     "reponse": -12,
+     "aide": "Remplace x par 0 dans 6x² − 6x − 12.",
+     "explication": "f′(0) = **−12** : la courbe descend en x = 0, avec une pente de −12."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche le maximum local de f sur le graphique.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche le sommet de la bosse, là où la courbe cesse de monter.",
+     "explication": "Le maximum local est en **x = −1** : f′ s’annule et passe de positive à négative, avec f(−1) = 12."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire du signe de f′ et du sens de variation de f sur ]−1 ; 2[ ?",
+     "options": [
+      "f′ est négative et f est décroissante",
+      "f′ est positive et f est décroissante",
+      "f′ est négative et f est croissante",
+      "f′ est positive et f est croissante"
+     ],
+     "reponse": 0,
+     "aide": "Essaie f′(0) : quel est son signe ? Regarde aussi la courbe entre −1 et 2.",
+     "explication": "Sur ]−1 ; 2[, f′(x) = 6(x − 2)(x + 1) < 0 (par exemple f′(0) = −12) : **f est décroissante**, comme le montre la courbe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne l’ordonnée à l’origine de la tangente à la courbe en x = 1, d’équation y = f′(1)(x − 1) + f(1).",
+     "reponse": 4,
+     "aide": "Calcule f′(1) puis développe : y = f′(1)x − f′(1) + f(1).",
+     "explication": "f(1) = −8 et f′(1) = 6 − 6 − 12 = −12. Alors y = −12(x − 1) − 8 = −12x + 12 − 8 = **−12x + 4** : l’ordonnée à l’origine est 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f37b297-bf85-5425-869c-9a597dcbc303",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe qui monte et qui redescend",
+   "competence": "lire-graphique",
+   "situation": "La courbe d’une fonction f est tracée pour x entre 0 et 6. Tu vas y lire des valeurs et repérer ses extremums.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La courbe de f sur [0 ; 6]",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        2,
+        5,
+        7,
+        6,
+        3,
+        1,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Courbe imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis la valeur de f(4).",
+     "reponse": 3,
+     "aide": "Place-toi à l’abscisse 4 puis lis l’ordonnée du point de la courbe.",
+     "explication": "Au point d’abscisse 4, l’ordonnée vaut **3** : f(4) = 3.",
+     "tolerance": 0.1
+    },
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point où f atteint son maximum.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le maximum de f est atteint en **x = 2**, avec f(2) = 7."
+    },
+    {
+     "type": "zone",
+     "document": "f",
+     "enonce": "Touche le point où f atteint son minimum.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le point le plus bas de la courbe.",
+     "explication": "Le minimum de f est atteint en **x = 5**, avec f(5) = 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sur quels intervalles la fonction f est-elle croissante ?",
+     "options": [
+      "[0 ; 2] et [5 ; 6]",
+      "[2 ; 5] seulement",
+      "[0 ; 6] en entier",
+      "[0 ; 5] seulement"
+     ],
+     "reponse": 0,
+     "aide": "Parcours la courbe de gauche à droite et note quand elle monte.",
+     "explication": "La courbe **monte** de x = 0 à 2, **descend** de 2 à 5, puis **remonte** de 5 à 6 : f est croissante sur [0 ; 2] et sur [5 ; 6]."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f37b297-bf85-5425-869c-9a597dcbc303",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une boîte pas comme les autres",
+   "competence": "raisonner",
+   "situation": "Noé étudie la fonction f définie sur ]0 ; +∞[ par f(x) = x + 4/x. Il a calculé sa dérivée, f′(x) = 1 − 4/x², et quelques valeurs de f dans un tableau.",
+   "documents": [
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Valeurs de f",
+     "colonnes": [
+      "x",
+      "1",
+      "2",
+      "4",
+      "8"
+     ],
+     "lignes": [
+      [
+       "f(x)",
+       5,
+       4,
+       5,
+       8.5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur interdite de l’ensemble de définition de x + 4/x ?",
+     "reponse": 0,
+     "aide": "Il y a une division : par quel nombre ne peut-on pas diviser ?",
+     "explication": "On ne divise jamais par 0 : la valeur interdite est **0** (d’où ]0 ; +∞[)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur positive de x la dérivée f′(x) = 1 − 4/x² s’annule-t-elle ?",
+     "reponse": 2,
+     "aide": "Résous 1 = 4/x², c’est-à-dire x² = 4, avec x > 0.",
+     "explication": "1 − 4/x² = 0 ⇔ x² = 4 ⇔ x = 2 (car x > 0). La dérivée s’annule en **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "f est décroissante sur ]0 ; 2] puis croissante sur [2 ; +∞[. Quel est le minimum de f ?",
+     "reponse": 4,
+     "aide": "Le minimum est la valeur de f là où elle change de sens.",
+     "explication": "Le minimum est atteint en x = 2 et vaut f(2) = 2 + 4/2 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de solutions l’équation f(x) = 3 admet-elle ?",
+     "reponse": 0,
+     "aide": "Compare 3 au minimum de f.",
+     "explication": "f(x) ≥ 4 pour tout x > 0 : l’équation f(x) = 3 n’a **aucune** solution."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de solutions l’équation f(x) = 5 admet-elle ?",
+     "reponse": 2,
+     "aide": "Regarde le tableau : f vaut déjà 5 pour deux valeurs de x. Utilise les variations.",
+     "explication": "f décroît de +∞ à 4 sur ]0 ; 2] puis croît de 4 à +∞ : 5 est atteint **deux fois**, en x = 1 et en x = 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f37b297-bf85-5425-869c-9a597dcbc303",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Encadrer une solution",
+   "competence": "raisonner",
+   "situation": "On veut montrer que l’équation x³ + x − 1 = 0 admet une unique solution α dans [0 ; 1], puis l’encadrer. On pose f(x) = x³ + x − 1.",
+   "documents": [
+    {
+     "id": "consigne",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La question",
+     "blocs": [
+      "f(x) = x³ + x − 1, sur l’intervalle [0 ; 1].",
+      "On veut prouver que f(x) = 0 a une seule solution α et en donner un encadrement précis."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "balayage",
+     "type": "tableau",
+     "titre": "Un début de balayage à la calculatrice",
+     "colonnes": [
+      "x",
+      "0",
+      "0,6",
+      "0,65",
+      "0,7",
+      "1"
+     ],
+     "lignes": [
+      [
+       "f(x)",
+       -1,
+       -0.184,
+       -0.075,
+       0.043,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que peut-on affirmer à propos de f, de f′(x) = 3x² + 1 et du nombre de solutions de f(x) = 0 dans [0 ; 1] ?",
+     "options": [
+      "f est strictement croissante : une unique solution",
+      "f est continue, sans plus : au moins une solution seulement",
+      "f est strictement décroissante : une unique solution",
+      "f′ s’annule en 0 : deux solutions possibles"
+     ],
+     "reponse": 0,
+     "aide": "Quel est le signe de 3x² + 1 ? Et où se trouve 0 par rapport à f(0) et f(1) ?",
+     "explication": "3x² + 1 > 0 : f est **strictement croissante**. Comme f(0) = −1 < 0 < 1 = f(1), le théorème des valeurs intermédiaires donne **une unique** solution α."
+    },
+    {
+     "type": "zone",
+     "document": "balayage",
+     "enonce": "Dans le tableau, touche les deux valeurs de f entre lesquelles le signe change.",
+     "reponse": [
+      "r0c3",
+      "r0c4"
+     ],
+     "aide": "Cherche où l’on passe d’une valeur négative à une valeur positive.",
+     "explication": "Le signe change entre f(0,65) = −0,075 et f(0,7) = 0,043 : donc α se trouve entre **0,65 et 0,7**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f(0,68), arrondi au millième.",
+     "reponse": -0.006,
+     "aide": "Calcule 0,68³ = 0,314432, puis ajoute 0,68 et retire 1.",
+     "explication": "f(0,68) = 0,314432 + 0,68 − 1 = −0,005568, soit environ **−0,006**.",
+     "tolerance": 0.0006
+    },
+    {
+     "type": "choix",
+     "enonce": "Sachant f(0,68) ≈ −0,006 et f(0,69) ≈ 0,019, quel est l’encadrement de α au centième ?",
+     "options": [
+      "0,68 < α < 0,69",
+      "0,65 < α < 0,68",
+      "0,69 < α < 0,7",
+      "0,6 < α < 0,65"
+     ],
+     "reponse": 0,
+     "aide": "f est strictement croissante : cherche où f change de signe.",
+     "explication": "f(0,68) < 0 < f(0,69) et f est strictement croissante : **0,68 < α < 0,69**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e6b74138-8a5a-5b0b-8d07-3e2b40009735",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe de l’exponentielle",
+   "competence": "lire-graphique",
+   "situation": "On a tracé la fonction exponentielle pour x de −2 à 2, à partir de valeurs arrondies au centième. Observe bien sa forme.",
+   "documents": [
+    {
+     "id": "exp",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La courbe de la fonction exponentielle",
+     "categories": [
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "eˣ",
+       "valeurs": [
+        0.14,
+        0.37,
+        1,
+        2.72,
+        7.39
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "eˣ",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies au centième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "exp",
+     "enonce": "Touche le point d’abscisse 0 : celui qui illustre e⁰ = 1.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Repère l’abscisse 0 puis vérifie que l’ordonnée vaut 1.",
+     "explication": "En **x = 0**, la courbe passe par le point (0 ; 1) : e⁰ = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis une valeur approchée de e¹ = e, au dixième.",
+     "reponse": 2.7,
+     "aide": "Place-toi à l’abscisse 1 et lis l’ordonnée.",
+     "explication": "e¹ ≈ **2,7** (plus précisément 2,718…).",
+     "tolerance": 0.1
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de l’équation eˣ = −3 ?",
+     "options": [
+      "Aucune solution, car eˣ > 0",
+      "Une unique solution, qui est négative",
+      "Une unique solution, qui est positive",
+      "Exactement deux solutions opposées"
+     ],
+     "reponse": 0,
+     "aide": "La courbe est-elle jamais en dessous de l’axe des abscisses ?",
+     "explication": "La courbe reste **strictement au-dessus** de l’axe des abscisses : eˣ > 0 pour tout x, donc eˣ = −3 est **impossible**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La courbe de la fonction exponentielle, regardée de gauche à droite, est…",
+     "options": [
+      "Toujours croissante",
+      "D’abord décroissante, puis croissante",
+      "Toujours décroissante",
+      "Constante"
+     ],
+     "reponse": 0,
+     "aide": "Compare les ordonnées quand x augmente.",
+     "explication": "Les ordonnées augmentent sans cesse : la fonction est **strictement croissante** sur ℝ (sa dérivée est elle-même, donc positive)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e6b74138-8a5a-5b0b-8d07-3e2b40009735",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les erreurs de Sam",
+   "competence": "analyser-document",
+   "situation": "Sam a dérivé quatre fonctions de la forme e^u pour s’entraîner. Deux de ses réponses sont fausses. À toi de retrouver lesquelles et de calculer les bonnes valeurs.",
+   "documents": [
+    {
+     "id": "sam",
+     "type": "tableau",
+     "titre": "Les réponses de Sam",
+     "colonnes": [
+      "Fonction",
+      "Dérivée trouvée par Sam"
+     ],
+     "lignes": [
+      [
+       "e^(3x)",
+       "e^(3x)"
+      ],
+      [
+       "e^(−x)",
+       "−e^(−x)"
+      ],
+      [
+       "e^(x²)",
+       "e^(x²)"
+      ],
+      [
+       "e^(2x+1)",
+       "2e^(2x+1)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Exercice imaginé"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sam",
+     "enonce": "Touche les deux dérivées fausses.",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "aide": "Pour (e^u)′, la formule est u′ × e^u. Compare à chaque ligne.",
+     "explication": "Pour e^(3x), on attend **3e^(3x)** ; pour e^(x²), on attend **2x e^(x²)**. Les deux autres lignes sont justes.",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’erreur commune aux deux réponses fausses ?",
+     "options": [
+      "Sam a oublié le facteur u′",
+      "Sam a dérivé u au lieu de e^u",
+      "Sam a changé le signe de l’exposant",
+      "Sam a confondu e^u et u^e"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce que Sam a écrit avec u′ × e^u.",
+     "explication": "Dans les deux cas, Sam a recopié e^u sans multiplier par **u′** (3 pour 3x, 2x pour x²)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la dérivée de e^(3x) en x = 0.",
+     "reponse": 3,
+     "aide": "La dérivée est 3e^(3x) ; que vaut e⁰ ?",
+     "explication": "(e^(3x))′ = 3e^(3x), donc en 0 : 3 × e⁰ = 3 × 1 = **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la dérivée de e^(x²) en x = 1, arrondie au centième.",
+     "reponse": 5.44,
+     "aide": "La dérivée est 2x e^(x²) ; en x = 1, calcule 2 × e¹ avec e ≈ 2,718.",
+     "explication": "(e^(x²))′ = 2x e^(x²), donc en 1 : 2 × e ≈ 2 × 2,71828 ≈ **5,44**.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "e6b74138-8a5a-5b0b-8d07-3e2b40009735",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le minimum caché dans (x − 1)eˣ",
+   "competence": "raisonner",
+   "situation": "On étudie la fonction f définie sur ℝ par f(x) = (x − 1)eˣ. On a calculé quelques valeurs et tracé la courbe correspondante. Le but : relier le signe de f′ aux variations.",
+   "documents": [
+    {
+     "id": "valeurs",
+     "type": "tableau",
+     "titre": "Quelques valeurs de f",
+     "colonnes": [
+      "x",
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "lignes": [
+      [
+       "f(x)",
+       -0.41,
+       -0.74,
+       -1,
+       0,
+       7.39
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au centième"
+    },
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La courbe de f",
+     "categories": [
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        -0.41,
+        -0.74,
+        -1,
+        0,
+        7.39
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": -2,
+      "max": 8,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que vaut f′(x), avec la formule du produit (uv)′ = u′v + uv′ ?",
+     "options": [
+      "f′(x) = x eˣ",
+      "f′(x) = (x − 1)eˣ",
+      "f′(x) = eˣ",
+      "f′(x) = (x − 2)eˣ"
+     ],
+     "reponse": 0,
+     "aide": "Prends u(x) = x − 1 et v(x) = eˣ : u′ = 1 et v′ = eˣ.",
+     "explication": "f′(x) = 1 × eˣ + (x − 1)eˣ = eˣ(1 + x − 1) = **x eˣ**."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quoi dépend le signe de f′(x) = x eˣ ?",
+     "options": [
+      "Uniquement du signe de x, car eˣ > 0",
+      "Du signe de eˣ seulement",
+      "Du signe de x et de eˣ, tous deux variables",
+      "Il est toujours positif"
+     ],
+     "reponse": 0,
+     "aide": "L’exponentielle peut-elle être négative ou nulle ?",
+     "explication": "eˣ est toujours strictement positif : le signe de x eˣ est celui de **x**. f′ est négative pour x < 0 et positive pour x > 0."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le minimum de f ?",
+     "reponse": -1,
+     "aide": "f′ change de signe en x = 0 : calcule f(0).",
+     "explication": "f décroît puis croît, avec un changement de sens en 0. Le minimum est f(0) = (0 − 1)e⁰ = **−1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous f(x) = 0 : donne la solution.",
+     "reponse": 1,
+     "aide": "Un produit est nul si l’un de ses facteurs l’est ; eˣ peut-il être nul ?",
+     "explication": "(x − 1)eˣ = 0 avec eˣ ≠ 0 donne x − 1 = 0, donc x = **1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′(−1), arrondie au centième.",
+     "reponse": -0.37,
+     "aide": "f′(−1) = −1 × e⁻¹ = −1/e ; e ≈ 2,718.",
+     "explication": "f′(−1) = −e⁻¹ = −1/e ≈ **−0,37** : f décroît bien en x = −1.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "9bf31f67-44bf-5ca0-963a-d1fd6e5a0efa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un point sur le cercle trigonométrique",
+   "competence": "geometrie",
+   "situation": "Sur le cercle trigonométrique de centre O et de rayon 1, le point M est associé à un réel x. On a tracé la figure : I(1 ; 0) est l’origine des arcs, J(0 ; 1) est le point en haut.",
+   "documents": [
+    {
+     "id": "cercle",
+     "type": "figure",
+     "titre": "Le cercle trigonométrique",
+     "cadre": {
+      "xmin": -1.5,
+      "xmax": 1.5,
+      "ymin": -1.5,
+      "ymax": 1.5
+     },
+     "axes": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "I",
+       "x": 1,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "J",
+       "x": 0,
+       "y": 1,
+       "position": "ne"
+      },
+      {
+       "id": "M",
+       "x": 0.5,
+       "y": 0.87,
+       "position": "ne"
+      },
+      {
+       "id": "H",
+       "x": 0.5,
+       "y": 0,
+       "position": "s"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 1
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "M"
+      },
+      {
+       "de": "M",
+       "a": "H",
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "O",
+       "de": "I",
+       "a": "M",
+       "mesure": "x"
+      }
+     ],
+     "source": "Valeurs lues avec deux décimales"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cercle",
+     "enonce": "Touche le point M associé au réel x sur le cercle.",
+     "reponse": [
+      "M"
+     ],
+     "aide": "M est le point du cercle relié à O par un trait plein, au-dessus de l’axe.",
+     "explication": "M est le point du cercle tel que l’arc IM a pour longueur x."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis cos x : l’abscisse de M. (Valeur approchée au dixième.)",
+     "reponse": 0.5,
+     "aide": "Le pied H du pointillé est sur l’axe horizontal : lis son abscisse.",
+     "explication": "Les coordonnées de M sont (cos x ; sin x). L’abscisse de M est **0,5** : cos x = 0,5.",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis sin x : l’ordonnée de M, arrondie au centième.",
+     "reponse": 0.87,
+     "aide": "Lis la hauteur du segment pointillé MH.",
+     "explication": "L’ordonnée de M vaut environ **0,87** : sin x ≈ 0,87 (c’est √3 ÷ 2).",
+     "tolerance": 0.02
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec cos x = 1/2 et sin x = √3/2, quelle est la valeur de x, parmi les angles remarquables ?",
+     "options": [
+      "π/3",
+      "π/6",
+      "π/4",
+      "π/2"
+     ],
+     "reponse": 0,
+     "aide": "Dans la table des valeurs remarquables, cherche la ligne où cos = 1/2.",
+     "explication": "Le tableau donne cos(π/3) = 1/2 et sin(π/3) = √3/2 : x = **π/3** (soit 60°)."
+    }
+   ]
+  },
+  {
+   "chapitre": "9bf31f67-44bf-5ca0-963a-d1fd6e5a0efa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cosinus et sinus face à face",
+   "competence": "lire-graphique",
+   "situation": "On a tracé les valeurs du cosinus et du sinus pour des réels x multiples de π/6, entre 0 et π. Observe comment elles se répondent.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Cosinus et sinus entre 0 et π",
+     "categories": [
+      "0",
+      "π/6",
+      "π/3",
+      "π/2",
+      "2π/3",
+      "5π/6",
+      "π"
+     ],
+     "series": [
+      {
+       "nom": "cos x",
+       "valeurs": [
+        1,
+        0.87,
+        0.5,
+        0,
+        -0.5,
+        -0.87,
+        -1
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "sin x",
+       "valeurs": [
+        0,
+        0.5,
+        0.87,
+        1,
+        0.87,
+        0.5,
+        0
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Valeur",
+      "min": -1,
+      "max": 1,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies au centième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbes",
+     "enonce": "Touche l’abscisse pour laquelle le sinus vaut 1.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe du sinus.",
+     "explication": "sin x = 1 pour x = **π/2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la valeur de cos(2π/3), au dixième.",
+     "reponse": -0.5,
+     "aide": "Place-toi sur 2π/3 et lis la courbe du cosinus.",
+     "explication": "cos(2π/3) = **−0,5** : le cosinus est négatif après π/2.",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec les valeurs exactes cos(π/6) = √3/2 et sin(π/6) = 1/2, calcule cos²(π/6) + sin²(π/6).",
+     "reponse": 1,
+     "aide": "Élève chaque valeur au carré : (√3/2)² = 3/4.",
+     "explication": "(√3/2)² + (1/2)² = 3/4 + 1/4 = **1**, comme annoncé par cos² x + sin² x = 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Compare cos(5π/6) et cos(π/6) sur le graphique : quel lien existe-t-il ?",
+     "options": [
+      "Ils sont opposés",
+      "Ils sont égaux",
+      "Ils sont inverses l’un de l’autre",
+      "Il n’y a aucun lien"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi la propriété de cos(π − x), avec x = π/6.",
+     "explication": "cos(5π/6) ≈ −0,87 et cos(π/6) ≈ 0,87. Comme 5π/6 = π − π/6, on a cos(π − x) = **−cos x**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9bf31f67-44bf-5ca0-963a-d1fd6e5a0efa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La marée du port de Pen-Bleu",
+   "competence": "modeliser",
+   "situation": "Dans un port imaginaire, la hauteur d’eau h(t), en mètres, t heures après minuit, est donnée sur un demi-jour par la formule ci-dessous. La courbe donne un aperçu du phénomène.",
+   "documents": [
+    {
+     "id": "formule",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La formule de la marée",
+     "blocs": [
+      "h(t) = 5 + 3 sin(πt / 6), pour t entre 0 et 12, h(t) en mètres.",
+      "Rappel : pour tout réel a, −1 ≤ sin a ≤ 1."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "maree",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur d’eau au cours des 12 premières heures",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "h(t)",
+       "valeurs": [
+        5,
+        6.5,
+        7.6,
+        8,
+        7.6,
+        6.5,
+        5,
+        3.5,
+        2.4,
+        2,
+        2.4,
+        3.5,
+        5
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "h(t) en mètres",
+      "min": 0,
+      "max": 9,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Heure t"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies au dixième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la hauteur d’eau à 1 h du matin, sachant sin(π/6) = 1/2.",
+     "reponse": 6.5,
+     "aide": "Remplace t par 1 : πt/6 = π/6.",
+     "explication": "h(1) = 5 + 3 × sin(π/6) = 5 + 3 × 0,5 = **6,5 m**.",
+     "unite": "m"
+    },
+    {
+     "type": "zone",
+     "document": "maree",
+     "enonce": "Touche l’heure de la marée haute (le maximum).",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "La marée haute a lieu à **3 h** : h(3) = 8 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur maximale de l’eau ? (Pense à la valeur maximale de sinus.)",
+     "reponse": 8,
+     "aide": "Le sinus ne dépasse jamais 1.",
+     "explication": "Comme sin ≤ 1, h(t) ≤ 5 + 3 × 1 = **8 m**, atteint en t = 3 (sin(π/2) = 1).",
+     "unite": "m"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur minimale de l’eau ?",
+     "reponse": 2,
+     "aide": "Le sinus ne descend jamais sous −1.",
+     "explication": "Comme sin ≥ −1, h(t) ≥ 5 − 3 = **2 m**, atteint en t = 9 (sin(3π/2) = −1).",
+     "unite": "m"
+    },
+    {
+     "type": "zone",
+     "document": "maree",
+     "enonce": "Touche toutes les heures où la hauteur d’eau vaut exactement 5 m (le niveau moyen).",
+     "reponse": [
+      "k0",
+      "k6",
+      "k12"
+     ],
+     "aide": "h(t) = 5 quand sin(πt/6) = 0.",
+     "explication": "h(t) = 5 quand sin(πt/6) = 0, c’est-à-dire pour **t = 0, 6 et 12**.",
+     "multiple": true
+    }
+   ]
+  },
+  {
+   "chapitre": "f58e41b0-582c-5015-a57e-cb0694e50381",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un triangle rectangle sur la grille",
+   "competence": "geometrie",
+   "situation": "Dans un repère orthonormé, on a placé trois points A, B et C sur un quadrillage. Tu vas calculer des produits scalaires avec les coordonnées lues sur la figure.",
+   "documents": [
+    {
+     "id": "fig",
+     "type": "figure",
+     "titre": "Le triangle ABC",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "angles": [
+      {
+       "id": "droit",
+       "sommet": "A",
+       "de": "B",
+       "a": "C",
+       "droit": true
+      }
+     ],
+     "source": "Figure à l’échelle du quadrillage"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fig",
+     "enonce": "Touche l’angle droit de la figure.",
+     "reponse": [
+      "droit"
+     ],
+     "aide": "Cherche le coin marqué d’un petit carré.",
+     "explication": "L’angle droit est en **A** : les côtés [AB] et [AC] suivent le quadrillage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec AB(4 ; 0) et AC(0 ; 3), calcule le produit scalaire AB · AC.",
+     "reponse": 0,
+     "aide": "u · v = x x′ + y y′ : multiplie les abscisses, puis les ordonnées, et additionne.",
+     "explication": "AB · AC = 4 × 0 + 0 × 3 = **0** : les vecteurs sont orthogonaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis les coordonnées de BC(−4 ; 3) sur la figure, puis calcule AB · BC.",
+     "reponse": -16,
+     "aide": "Utilise AB(4 ; 0) et BC(−4 ; 3).",
+     "explication": "AB · BC = 4 × (−4) + 0 × 3 = **−16**. Le produit scalaire est un nombre, ici négatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que traduit le résultat AB · AC = 0 ?",
+     "options": [
+      "Les droites (AB) et (AC) sont perpendiculaires",
+      "Les droites (AB) et (AC) sont parallèles",
+      "Les points A, B et C sont alignés",
+      "Les vecteurs AB et AC sont égaux"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi le critère d’orthogonalité de deux vecteurs non nuls.",
+     "explication": "Deux vecteurs non nuls sont orthogonaux si et seulement si leur produit scalaire est **nul** : le triangle est rectangle en A."
+    }
+   ]
+  },
+  {
+   "chapitre": "f58e41b0-582c-5015-a57e-cb0694e50381",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le travail d’une force",
+   "competence": "modeliser",
+   "situation": "En physique, le travail d’une force constante F sur un déplacement AB vaut W = F · AB = ‖F‖ × ‖AB‖ × cos θ, où θ est l’angle entre la force et le déplacement. Un technicien étudie trois situations.",
+   "documents": [
+    {
+     "id": "situations",
+     "type": "tableau",
+     "titre": "Trois situations de traction",
+     "colonnes": [
+      "Situation",
+      "Force (N)",
+      "Angle θ",
+      "Distance (m)",
+      "Travail (J)"
+     ],
+     "lignes": [
+      [
+       "A",
+       60,
+       "60°",
+       10,
+       "?"
+      ],
+      [
+       "B",
+       40,
+       "90°",
+       5,
+       "?"
+      ],
+      [
+       "C",
+       100,
+       "0°",
+       8,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situations imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le travail W dans la situation A. On donne cos 60° = 0,5.",
+     "reponse": 300,
+     "aide": "W = 60 × 10 × cos 60°.",
+     "explication": "W = 60 × 10 × 0,5 = **300 J**.",
+     "unite": "J"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le travail dans la situation B.",
+     "reponse": 0,
+     "aide": "Que vaut cos 90° ?",
+     "explication": "cos 90° = 0 donc W = 40 × 5 × 0 = **0 J**.",
+     "unite": "J"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le travail dans la situation C.",
+     "reponse": 800,
+     "aide": "Que vaut cos 0° ?",
+     "explication": "cos 0° = 1 donc W = 100 × 8 × 1 = **800 J**.",
+     "unite": "J"
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le travail est-il nul dans la situation B ?",
+     "options": [
+      "F et AB sont orthogonaux : produit nul",
+      "La force est nulle dans cette situation",
+      "Le déplacement est nul dans cette situation",
+      "F et AB sont parallèles, de même sens"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’angle dans le tableau et pense au critère d’orthogonalité.",
+     "explication": "Un angle de 90° signifie que F et AB sont orthogonaux : F · AB = **0**. La force ne « pousse » pas dans le sens du déplacement."
+    }
+   ]
+  },
+  {
+   "chapitre": "f58e41b0-582c-5015-a57e-cb0694e50381",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Al-Kashi dans un triangle quelconque",
+   "competence": "raisonner",
+   "situation": "Un triangle ABC a pour côtés AB = 5, AC = 6 et BC = 7. Il n’est pas rectangle : on veut retrouver ses angles avec le produit scalaire et le théorème d’Al-Kashi. Un petit tableau de cosinus t’aide à convertir en degrés.",
+   "documents": [
+    {
+     "id": "triangle",
+     "type": "figure",
+     "titre": "Le triangle ABC",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2.2,
+       "y": 6.88,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "5"
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "longueur": "6"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "7"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ],
+     "source": "Figure à main levée, longueurs en cm"
+    },
+    {
+     "id": "cosinus",
+     "type": "tableau",
+     "titre": "Quelques cosinus",
+     "colonnes": [
+      "Angle",
+      "57°",
+      "58°",
+      "77°",
+      "78°",
+      "79°"
+     ],
+     "lignes": [
+      [
+       "Cosinus",
+       0.545,
+       0.53,
+       0.225,
+       0.208,
+       0.191
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule AB · AC avec la formule par les normes seules : AB · AC = ½ (AB² + AC² − BC²).",
+     "reponse": 6,
+     "aide": "AB² = 25, AC² = 36 et BC² = 49.",
+     "explication": "AB · AC = ½ (25 + 36 − 49) = ½ × 12 = **6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Déduis cos A, sachant que AB · AC = AB × AC × cos A.",
+     "reponse": 0.2,
+     "aide": "Divise AB · AC par AB × AC = 30.",
+     "explication": "cos A = 6 ÷ (5 × 6) = 6 ÷ 30 = **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À l’aide du tableau, quelle est la mesure de l’angle A, au degré près ?",
+     "reponse": 78,
+     "aide": "Cherche dans le tableau le cosinus le plus proche de 0,2.",
+     "explication": "0,2 est plus proche de cos 78° = 0,208 que de cos 79° = 0,191 : l’angle A mesure environ **78°**.",
+     "unite": "°"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec Al-Kashi, calcule cos B = (AB² + BC² − AC²) ÷ (2 × AB × BC), arrondi au centième.",
+     "reponse": 0.54,
+     "aide": "AB² = 25, BC² = 49, AC² = 36 ; le dénominateur vaut 70.",
+     "explication": "cos B = (25 + 49 − 36) ÷ 70 = 38 ÷ 70 ≈ **0,54** : B mesure environ 57°.",
+     "tolerance": 0.006
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le plus grand angle du triangle ?",
+     "options": [
+      "L’angle A, face à [BC]",
+      "L’angle B, face au côté [AC]",
+      "L’angle C, face au côté [AB]",
+      "Les trois angles sont égaux"
+     ],
+     "reponse": 0,
+     "aide": "Compare les mesures de A et de B : 78° et environ 57°. Où est le côté de longueur 7 ?",
+     "explication": "A ≈ 78° est le plus grand angle, et il est face au plus long côté [BC] (7 cm)."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c396887-8da2-5d89-8ea1-1f50c893ed29",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Milieu, pente et distance",
+   "competence": "geometrie",
+   "situation": "Dans un repère orthonormé, on a placé trois points sur un quadrillage : A(1 ; 1), B(5 ; 3) et C(2 ; 5). On s’intéresse à la droite (AB).",
+   "documents": [
+    {
+     "id": "fig",
+     "type": "figure",
+     "titre": "Le triangle ABC",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 2,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "source": "Figure à l’échelle du quadrillage"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fig",
+     "enonce": "Touche le segment [AB].",
+     "reponse": [
+      "ab"
+     ],
+     "aide": "C’est celui qui relie A(1 ; 1) à B(5 ; 3).",
+     "explication": "Le segment [AB] relie **A(1 ; 1) et B(5 ; 3)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’ordonnée du milieu M de [AB] ?",
+     "reponse": 2,
+     "aide": "Moyenne des ordonnées de A et de B.",
+     "explication": "y(M) = (1 + 3) ÷ 2 = **2** (et x(M) = (1 + 5) ÷ 2 = 3)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient directeur de la droite (AB) ?",
+     "reponse": 0.5,
+     "aide": "m = (y(B) − y(A)) ÷ (x(B) − x(A)).",
+     "explication": "m = (3 − 1) ÷ (5 − 1) = 2 ÷ 4 = **0,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la distance AB, arrondie au centième.",
+     "reponse": 4.47,
+     "aide": "AB = √((x(B) − x(A))² + (y(B) − y(A))²).",
+     "explication": "AB = √(4² + 2²) = √20 ≈ **4,47**.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "7c396887-8da2-5d89-8ea1-1f50c893ed29",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cercle du jardin",
+   "competence": "raisonner",
+   "situation": "Dans un repère orthonormé, un bassin circulaire a pour équation x² + y² − 4x + 2y − 4 = 0. Quatre points marquent l’emplacement de quatre statues. Il faut ramener l’équation à une forme lisible.",
+   "documents": [
+    {
+     "id": "eq",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "L’équation du bassin",
+     "blocs": [
+      "x² + y² − 4x + 2y − 4 = 0",
+      "On complète les carrés : x² − 4x = (x − 2)² − 4 et y² + 2y = (y + 1)² − 1."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "statues",
+     "type": "figure",
+     "titre": "Les quatre statues",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 7,
+      "ymin": -3,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "P",
+       "x": 2,
+       "y": 2,
+       "position": "ne"
+      },
+      {
+       "id": "Q",
+       "x": 4,
+       "y": 1,
+       "position": "ne"
+      },
+      {
+       "id": "R",
+       "x": 5,
+       "y": -1,
+       "position": "se"
+      },
+      {
+       "id": "S",
+       "x": 0,
+       "y": -1,
+       "position": "o"
+      }
+     ],
+     "source": "Positions imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Après avoir complété les carrés, on obtient (x − 2)² + (y + 1)² = k. Quelle est la valeur de k ?",
+     "reponse": 9,
+     "aide": "Ajoute 4 et 1 des deux côtés, puis n’oublie pas le −4 de l’équation.",
+     "explication": "x² − 4x + y² + 2y = 4 donne (x − 2)² − 4 + (y + 1)² − 1 = 4, donc (x − 2)² + (y + 1)² = 4 + 4 + 1 = **9**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le centre Ω du cercle ?",
+     "options": [
+      "Ω(2 ; −1), lu dans (x − 2)² + (y + 1)²",
+      "Ω(−2 ; 1), signes recopiés tels quels",
+      "Ω(4 ; −2), coefficients de x et de y",
+      "Ω(2 ; 1), signe de y oublié"
+     ],
+     "reponse": 0,
+     "aide": "Dans (x − a)² + (y − b)² = r², le centre est (a ; b) : attention aux signes.",
+     "explication": "On lit (x − 2)² + (y − (−1))² = 9 : le centre est **Ω(2 ; −1)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rayon du cercle ?",
+     "reponse": 3,
+     "aide": "r² = 9 ; un rayon est positif.",
+     "explication": "r² = 9 donc r = **3**."
+    },
+    {
+     "type": "zone",
+     "document": "statues",
+     "enonce": "Touche les deux statues situées exactement sur le bassin.",
+     "reponse": [
+      "P",
+      "R"
+     ],
+     "aide": "Un point (x ; y) est sur le cercle si (x − 2)² + (y + 1)² = 9.",
+     "explication": "P(2 ; 2) : 0 + 9 = 9 ; R(5 ; −1) : 9 + 0 = 9. Pour Q : 4 + 4 = 8 ; pour S : 4 + 0 = 4. Seules **P et R** sont sur le cercle.",
+     "multiple": true
+    }
+   ]
+  },
+  {
+   "chapitre": "7c396887-8da2-5d89-8ea1-1f50c893ed29",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un triangle rectangle caché",
+   "competence": "raisonner",
+   "situation": "Dans un repère orthonormé, trois points A, B et C sont donnés par leurs coordonnées. Un élève prétend que le triangle ABC est rectangle. Tu vas vérifier de deux façons, puis décrire son cercle circonscrit.",
+   "documents": [
+    {
+     "id": "coordonnees",
+     "type": "tableau",
+     "titre": "Coordonnées des points",
+     "colonnes": [
+      "",
+      "A",
+      "B",
+      "C"
+     ],
+     "lignes": [
+      [
+       "Abscisse",
+       -1,
+       5,
+       1
+      ],
+      [
+       "Ordonnée",
+       1,
+       3,
+       5
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Points choisis pour l’exercice"
+    },
+    {
+     "id": "fig",
+     "type": "figure",
+     "titre": "Le triangle ABC",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 6,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": -1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 3,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur de la droite (CA).",
+     "reponse": 2,
+     "aide": "m = (y(A) − y(C)) ÷ (x(A) − x(C)).",
+     "explication": "m = (1 − 5) ÷ (−1 − 1) = (−4) ÷ (−2) = **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur de la droite (CB).",
+     "reponse": -0.5,
+     "aide": "m = (y(B) − y(C)) ÷ (x(B) − x(C)).",
+     "explication": "m = (3 − 5) ÷ (5 − 1) = −2 ÷ 4 = **−0,5**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le produit des deux coefficients directeurs vaut 2 × (−0,5) = −1. Que peut-on conclure ?",
+     "options": [
+      "Perpendiculaires : rectangle en C",
+      "Parallèles : elles ne se coupent pas",
+      "Le triangle est rectangle en A, car AB est le plus long côté",
+      "Le triangle est isocèle en C, car les pentes sont proches"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi la condition m × m′ = −1.",
+     "explication": "Deux droites sont perpendiculaires si le produit de leurs coefficients directeurs vaut **−1** : le triangle est **rectangle en C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le cercle circonscrit a pour diamètre l’hypoténuse [AB] et pour centre son milieu I(2 ; 2). Calcule son rayon au carré r².",
+     "reponse": 10,
+     "aide": "r² = IA² ; ou calcule AB² ÷ 4 avec AB² = 6² + 2².",
+     "explication": "IA² = (−1 − 2)² + (1 − 2)² = 9 + 1 = **10** (et AB² ÷ 4 = 40 ÷ 4 = 10)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de ce cercle circonscrit ?",
+     "options": [
+      "(x − 2)² + (y − 2)² = 10",
+      "(x − 2)² + (y − 2)² = 40",
+      "(x + 2)² + (y + 2)² = 10 (centre de signe opposé)",
+      "(x − 5)² + (y − 3)² = 10"
+     ],
+     "reponse": 0,
+     "aide": "Centre I(2 ; 2) et r² = 10 : (x − a)² + (y − b)² = r².",
+     "explication": "Le centre est I(2 ; 2) et r² = 10 : **(x − 2)² + (y − 2)² = 10**. On vérifie avec C : (1 − 2)² + (5 − 2)² = 1 + 9 = 10."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3326 @@
+{
+ "niveau": "1re",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "91ce9a25-bac2-5780-9c0f-87e9d88aa931",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Beaucoup de champs, peu de paysans",
+   "competence": "lire-graphique",
+   "situation": "Sacha prépare un exposé sur les campagnes françaises. Un paradoxe l’intrigue : les champs couvrent la moitié du pays, mais on y croise de moins en moins d’agriculteurs.",
+   "documents": [
+    {
+     "id": "paradoxe",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "L’agriculture en France : deux mesures",
+     "source": "Ordres de grandeur arrondis : la surface agricole utile couvre environ la moitié du territoire ; les agriculteurs forment moins de 2 % des actifs.",
+     "categories": [
+      "Part du territoire occupée",
+      "Part des actifs employés"
+     ],
+     "series": [
+      {
+       "nom": "En %",
+       "valeurs": [
+        50,
+        2
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "Part",
+      "unite": "en %",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paradoxe",
+     "enonce": "Touche la barre qui montre la place de l’agriculture dans l’espace.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la mesure qui parle du territoire, pas des actifs.",
+     "explication": "La première barre (**environ 50 %**) donne la part du territoire couverte par la surface agricole utile : les champs occupent encore l’essentiel de l’espace rural."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du territoire n’est pas occupée par la surface agricole utile ? (prends 50 % pour la surface agricole)",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Le territoire, c’est 100 %.",
+     "explication": "100 − 50 = **50 %** : une moitié du territoire est cultivée ou pâturée, l’autre est en forêts, villes, routes, montagnes…"
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment expliquer ce paradoxe ?",
+     "options": [
+      "Les exploitations se concentrent et les machines remplacent les bras",
+      "Les agriculteurs ont abandonné les terres sans que personne les cultive",
+      "Les champs sont devenus trop petits pour nourrir la population",
+      "La population française a diminué et mange moins qu’autrefois"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui permet de produire autant avec moins de personnes.",
+     "explication": "La **concentration des exploitations, la mécanisation et la hausse des rendements** permettent de cultiver autant de terres avec beaucoup moins de personnes."
+    }
+   ]
+  },
+  {
+   "chapitre": "91ce9a25-bac2-5780-9c0f-87e9d88aa931",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois fermes, trois agricultures",
+   "competence": "analyser-document",
+   "situation": "Un journaliste de radio visite trois exploitations dans trois régions du monde. Il doit expliquer à ses auditeurs qu’« agriculture » ne veut pas dire la même chose partout.",
+   "documents": [
+    {
+     "id": "portraits",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois carnets de visite",
+     "source": "Textes écrits pour l’exercice (exploitations imaginaires).",
+     "blocs": [
+      "**Ferme Lemoine (Eure-et-Loir).** Deux salariés pilotent des tracteurs guidés par satellite sur 280 hectares. Le blé et le colza sont vendus à l’export.",
+      "**Parcelle de Mariama (Sahel).** Une famille cultive du mil sur deux hectares, d’abord pour se nourrir. Le surplus se vend au marché du bourg.",
+      "**Domaine Agrosur (Mato Grosso, Brésil).** Des [[f|investisseurs]] ont réuni 40 000 hectares de soja, gérés par une société de gestion à plusieurs milliers de kilomètres."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque carnet à son type d’agriculture.",
+     "paires": [
+      [
+       "Ferme Lemoine",
+       "Productiviste"
+      ],
+      [
+       "Parcelle de Mariama",
+       "Vivrière"
+      ],
+      [
+       "Domaine Agrosur",
+       "De firme"
+      ]
+     ],
+     "aide": "Regarde qui cultive, pour qui et avec quels moyens.",
+     "explication": "Les Lemoine pratiquent une agriculture **productiviste** (mécanisée, intensive, exportatrice) ; Mariama une agriculture **vivrière** (d’abord pour nourrir sa famille) ; Agrosur une agriculture **de firme**, pilotée par des investisseurs."
+    },
+    {
+     "type": "zone",
+     "document": "portraits",
+     "enonce": "Touche le mot qui montre que le domaine brésilien est une agriculture de firme.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Qui finance et décide, à des milliers de kilomètres ?",
+     "explication": "Le mot **investisseurs** est le signe de l’agriculture de firme : le capital vient de l’extérieur et la gestion est confiée à une société."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelles régions du monde l’agriculture de firme est-elle particulièrement développée ?",
+     "options": [
+      "L’Amérique du Sud et l’Europe de l’Est",
+      "L’Europe de l’Ouest et le Japon",
+      "L’Asie du Sud-Est et la Scandinavie",
+      "L’Amérique du Nord et le Maghreb"
+     ],
+     "reponse": 0,
+     "aide": "Le carnet brésilien en donne un exemple.",
+     "explication": "L’agriculture de firme domine surtout en **Amérique du Sud et en Europe de l’Est**, où de très grandes surfaces peuvent être réunies."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle agriculture nourrit encore des centaines de millions de personnes dans une grande partie du Sud ?",
+     "options": [
+      "L’agriculture vivrière",
+      "L’agriculture de firme",
+      "L’agriculture productiviste d’exportation",
+      "L’agriculture biologique de luxe"
+     ],
+     "reponse": 0,
+     "aide": "Relis le carnet de Mariama.",
+     "explication": "L’**agriculture vivrière** nourrit encore des centaines de millions de personnes : elle ne vise pas l’exportation."
+    }
+   ]
+  },
+  {
+   "chapitre": "91ce9a25-bac2-5780-9c0f-87e9d88aa931",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui achète les terres des autres ?",
+   "competence": "analyser-document",
+   "situation": "Amara, élève de 1re, doit rédiger la légende d’un croquis sur l’accaparement des terres. Elle dispose d’un communiqué d’entreprise et d’une carte du monde.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Où achète-t-on des terres à l’étranger ?",
+     "source": "Croquis simplifié d’après le cours ; les contours sont approximatifs.",
+     "fond": "monde",
+     "aires": [
+      {
+       "id": "afrique",
+       "contour": [
+        [
+         -17,
+         15
+        ],
+        [
+         35,
+         15
+        ],
+        [
+         40,
+         5
+        ],
+        [
+         40,
+         -15
+        ],
+        [
+         32,
+         -30
+        ],
+        [
+         15,
+         -34
+        ],
+        [
+         10,
+         -5
+        ],
+        [
+         -10,
+         5
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "etiquette": "Afrique"
+      },
+      {
+       "id": "ameriquelat",
+       "contour": [
+        [
+         -100,
+         20
+        ],
+        [
+         -60,
+         12
+        ],
+        [
+         -38,
+         -5
+        ],
+        [
+         -55,
+         -35
+        ],
+        [
+         -70,
+         -52
+        ],
+        [
+         -80,
+         -5
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "etiquette": "Amérique latine"
+      },
+      {
+       "id": "amnord",
+       "contour": [
+        [
+         -125,
+         32
+        ],
+        [
+         -72,
+         32
+        ],
+        [
+         -72,
+         52
+        ],
+        [
+         -125,
+         52
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "etiquette": "Amérique du Nord"
+      },
+      {
+       "id": "europe",
+       "contour": [
+        [
+         -10,
+         43
+        ],
+        [
+         12,
+         43
+        ],
+        [
+         12,
+         56
+        ],
+        [
+         -5,
+         56
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "etiquette": "Europe"
+      }
+     ]
+    },
+    {
+     "id": "communique",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Communiqué d’une société d’investissement",
+     "source": "Texte écrit pour l’exercice (société imaginaire).",
+     "blocs": [
+      "« Orion Terres a signé un bail de 99 ans pour 120 000 hectares. Notre objectif est de [[s|sécuriser]] l’approvisionnement en céréales de nos clients. Les villages voisins ont été informés du projet. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux zones où l’accaparement des terres se concentre surtout.",
+     "reponse": [
+      "afrique",
+      "ameriquelat"
+     ],
+     "multiple": true,
+     "aide": "Le cours cite deux continents, au Sud.",
+     "explication": "Le *land grabbing* se concentre surtout en **Afrique** et en **Amérique latine**."
+    },
+    {
+     "type": "zone",
+     "document": "communique",
+     "enonce": "Touche le mot qui explique pourquoi la société loue ces terres.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche le verbe qui exprime l’objectif d’approvisionnement.",
+     "explication": "Le mot **sécuriser** résume l’objectif : États et firmes assurent leur approvisionnement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle critique centrale vise ces opérations ?",
+     "options": [
+      "Elles risquent d’évincer les paysanneries locales",
+      "Elles font baisser les prix mondiaux du blé",
+      "Elles réduisent les rendements des terres louées",
+      "Elles empêchent la mécanisation des campagnes"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ceux qui cultivaient déjà ces terres.",
+     "explication": "La critique centrale : l’achat ou la location de grandes surfaces risque d’**évincer les paysanneries locales**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : critique du modèle productiviste ou réponse apportée ?",
+     "categories": [
+      "Critique",
+      "Réponse"
+     ],
+     "items": [
+      [
+       "Pollution des sols et de l’eau par les nitrates",
+       0
+      ],
+      [
+       "Émissions de méthane de l’élevage intensif",
+       0
+      ],
+      [
+       "Érosion de la biodiversité",
+       0
+      ],
+      [
+       "Agriculture biologique",
+       1
+      ],
+      [
+       "Circuits courts",
+       1
+      ],
+      [
+       "Agroécologie",
+       1
+      ]
+     ],
+     "aide": "Une critique dénonce un effet ; une réponse propose une pratique.",
+     "explication": "Pollutions, méthane et érosion de la biodiversité sont des **critiques** du modèle productiviste ; agriculture biologique, circuits courts et agroécologie sont des **réponses**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bce972f-9de5-5079-b573-8346a54e35e6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée au village de Valmeyrac",
+   "competence": "analyser-texte",
+   "situation": "Noé passe les vacances dans un village de moyenne montagne. Il note tout ce qu’il voit : il découvre que la campagne ne sert pas qu’à cultiver.",
+   "documents": [
+    {
+     "id": "village",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le carnet de Noé",
+     "source": "Texte écrit pour l’exercice (village imaginaire).",
+     "blocs": [
+      "Le matin, la ferme des Roux livre son lait à la laiterie voisine, et la scierie s’active. Dans les rues, beaucoup de volets sont fermés : ce sont des résidences secondaires, que leurs propriétaires parisiens n’ouvrent qu’en août.",
+      "L’après-midi, des [[r|randonneurs]] suivent le sentier qui monte au col. Au-dessus, une zone Natura 2000 protège les tourbières et les oiseaux rares."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque observation de Noé à la fonction qu’elle illustre.",
+     "paires": [
+      [
+       "La ferme et la scierie",
+       "Fonction productive"
+      ],
+      [
+       "Les résidences secondaires",
+       "Fonction résidentielle"
+      ],
+      [
+       "Le sentier de randonnée",
+       "Fonction récréative"
+      ],
+      [
+       "La zone Natura 2000",
+       "Fonction écologique"
+      ]
+     ],
+     "aide": "Production, habitat, loisirs, protection.",
+     "explication": "La ferme et la scierie relèvent de la fonction **productive** ; les résidences secondaires de la fonction **résidentielle** ; le sentier de la fonction **récréative** ; la zone Natura 2000 de la fonction **écologique**."
+    },
+    {
+     "type": "zone",
+     "document": "village",
+     "enonce": "Touche le mot qui désigne ceux qui profitent de la fonction récréative.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Qui marche sur le sentier ?",
+     "explication": "Les **randonneurs** sont des visiteurs de loisirs : c’est la fonction récréative, celle des citadins qui viennent se détendre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le carnet de Noé sur les espaces ruraux d’aujourd’hui ?",
+     "options": [
+      "Plusieurs fonctions se superposent sur le même territoire",
+      "Une seule fonction, l’agriculture, y domine toujours",
+      "Les fonctions y sont rangées dans des lieux séparés",
+      "La production y a disparu au profit des loisirs"
+     ],
+     "reponse": 0,
+     "aide": "Compte les fonctions repérées dans un seul village.",
+     "explication": "Les espaces ruraux sont **multifonctionnels** : plusieurs fonctions se **superposent** sur les mêmes territoires."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bce972f-9de5-5079-b573-8346a54e35e6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les Diallo quittent la ville, Lina cherche un week-end vert",
+   "competence": "lire-tableau",
+   "situation": "La famille Diallo vient de quitter un appartement de ville pour une maison dans un village. Leur cousine Lina, restée en ville, compare leurs frais et leur quotidien avec les siens, puis cherche où partir pour un week-end de tourisme vert.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Où va le tourisme vert ?",
+     "source": "Carte simplifiée d’après le cours.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "chamonix",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "arcachon",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "deauville",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "gueret",
+       "symbole": "lettre",
+       "lettre": "D"
+      },
+      {
+       "id": "e",
+       "lieu": "chartres",
+       "symbole": "lettre",
+       "lettre": "E"
+      }
+     ]
+    },
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Deux familles, deux modes de vie",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Famille de Lina (ville)",
+      "Famille Diallo (village)"
+     ],
+     "lignes": [
+      [
+       "Loyer ou mensualité",
+       "950 €",
+       "620 €"
+      ],
+      [
+       "Trajet vers le travail",
+       "20 min en tramway",
+       "45 min en voiture"
+      ],
+      [
+       "Distance au médecin",
+       "300 m",
+       "12 km"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois lieux situés en montagne ou sur le littoral, où se concentrent les flux touristiques.",
+     "reponse": [
+      "a",
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Cherche la montagne, puis deux sites au bord de la mer.",
+     "explication": "**A** (Chamonix, en montagne), **B** (Arcachon) et **C** (Deauville) sont sur le littoral ou en montagne. Guéret et Chartres sont des campagnes bien moins visitées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’euros les Diallo économisent-ils chaque mois sur le logement ?",
+     "reponse": 330,
+     "unite": "€",
+     "aide": "Soustrais les deux montants du tableau.",
+     "explication": "950 − 620 = **330 €** d’économie par mois : c’est l’avantage du logement moins cher."
+    },
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche la case qui montre la forte dépendance des Diallo à la voiture.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le trajet quotidien en voiture.",
+     "explication": "La case **45 min en voiture** montre la dépendance à l’automobile, contrepartie de la vie à la campagne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle contrepartie la fonction résidentielle impose-t-elle à une famille comme les Diallo ?",
+     "options": [
+      "Des services plus éloignés et des trajets en voiture",
+      "Un logement beaucoup plus cher qu’en ville",
+      "L’obligation de travailler dans l’agriculture",
+      "L’interdiction de posséder une résidence secondaire"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les lignes « trajet » et « médecin ».",
+     "explication": "Le logement moins cher a pour contrepartie une **forte dépendance à la voiture** et des **services publics plus éloignés**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bce972f-9de5-5079-b573-8346a54e35e6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rochebrune : le même sol pour quatre projets",
+   "competence": "analyser-document",
+   "situation": "Dans la commune de Rochebrune, un éleveur, un lotisseur, une entreprise d’énergie et un hôtelier lorgnent les mêmes terrains. Le maire cherche si ces fonctions peuvent cohabiter.",
+   "documents": [
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Compte rendu du conseil municipal",
+     "source": "Texte écrit pour l’exercice (commune imaginaire).",
+     "blocs": [
+      "L’éleveur veut garder ses prairies pour son troupeau. Le lotisseur propose de construire quarante maisons sur les mêmes prairies.",
+      "L’entreprise d’énergie projette un champ d’éoliennes en crête, alors que l’hôtelier craint que les pales ne [[c|gâchent]] la vue qui attire ses clients. Les deux projets [[c|s’opposent]] devant le conseil."
+     ]
+    },
+    {
+     "id": "sols",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les usages du sol de la commune",
+     "source": "Chiffres imaginés pour l’exercice, en % de la surface.",
+     "categories": [
+      "Prairies et cultures",
+      "Forêt et espaces protégés",
+      "Habitat existant",
+      "Terrains convoités"
+     ],
+     "series": [
+      {
+       "nom": "Part de la surface",
+       "valeurs": [
+        55,
+        25,
+        6,
+        14
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conseil",
+     "enonce": "Touche les deux mots qui montrent que ces fonctions entrent en conflit.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Cherche ce que redoute l’hôtelier et ce que font les deux projets.",
+     "explication": "Les mots **gâchent** et **s’opposent** montrent que les fonctions ne se complètent pas mais se disputent le même espace."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la surface de la commune est occupée par les prairies, les cultures et les terrains convoités ensemble ?",
+     "reponse": 69,
+     "unite": "%",
+     "aide": "Additionne les parts concernées.",
+     "explication": "55 + 14 = **69 %** de la surface sont en jeu pour l’agriculture ou pour les projets."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : les fonctions se complètent ou s’excluent ?",
+     "categories": [
+      "Elles se complètent",
+      "Elles s’excluent"
+     ],
+     "items": [
+      [
+       "Une ferme qui vend ses produits aux hôtes du gîte voisin",
+       0
+      ],
+      [
+       "Un parc naturel qui finance un sentier et protège les haies",
+       0
+      ],
+      [
+       "Quarante maisons sur les prairies de l’éleveur",
+       1
+      ],
+      [
+       "Des éoliennes qui masquent la vue vantée par un hôtel",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si chaque activité aide l’autre ou lui prend sa place.",
+     "explication": "Quand les fonctions se **complètent**, le territoire est dynamique ; quand elles s’**excluent**, la campagne se fragmente."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mot décrit le mieux la situation de Rochebrune ?",
+     "options": [
+      "Fragmentation",
+      "Multifonctionnalité harmonieuse",
+      "Désertification",
+      "Périurbanisation réussie"
+     ],
+     "reponse": 0,
+     "aide": "Les fonctions s’y excluent.",
+     "explication": "Rochebrune connaît la **fragmentation** : les fonctions ne coexistent pas, elles se disputent le même sol."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfaf5907-7981-5c81-807e-b407ffa66491",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un entrepôt sur les champs de Saint-Hilaire",
+   "competence": "analyser-document",
+   "situation": "Dans la commune de Saint-Hilaire, un panneau annonce un projet de zone logistique. Clémence, 16 ans, le lit en rentrant du lycée.",
+   "documents": [
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "ENQUÊTE PUBLIQUE",
+     "sousTitre": "Mairie de Saint-Hilaire",
+     "emoji": "📢",
+     "source": "Panneau imaginé pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Projet : zone logistique de 12 hectares",
+       "id": "projet"
+      },
+      {
+       "texte": "Terrains concernés : terres cultivées",
+       "id": "terres"
+      },
+      {
+       "texte": "Du 3 au 24 mars",
+       "id": "dates"
+      },
+      {
+       "texte": "Registre ouvert en mairie à tous les habitants",
+       "id": "registre"
+      }
+     ],
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "panneau",
+     "enonce": "Touche la ligne qui montre quel usage du sol serait déplacé.",
+     "reponse": [
+      "terres"
+     ],
+     "aide": "Cherche ce que l’entrepôt remplacerait.",
+     "explication": "La ligne **Terrains concernés : terres cultivées** montre le conflit d’usage : un entrepôt contre des champs."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert cette enquête publique ?",
+     "options": [
+      "À faire participer les habitants au projet d’aménagement",
+      "À interdire définitivement tout projet de construction",
+      "À fixer le prix des terres agricoles",
+      "À choisir l’entreprise qui construira l’entrepôt"
+     ],
+     "reponse": 0,
+     "aide": "Le registre est ouvert à tous les habitants.",
+     "explication": "L’**enquête publique** est un outil de régulation qui fait participer les habitants aux projets d’aménagement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque projet à ce qu’il déplace.",
+     "paires": [
+      [
+       "Les lotissements",
+       "Des terres agricoles"
+      ],
+      [
+       "Les éoliennes",
+       "Le paysage et les usages"
+      ],
+      [
+       "Les carrières",
+       "Le sol et l’eau"
+      ],
+      [
+       "Les entrepôts logistiques",
+       "Des surfaces considérables"
+      ]
+     ],
+     "aide": "Pense à ce que chaque projet prend ou transforme.",
+     "explication": "Les **lotissements** prennent des terres agricoles, les **éoliennes** changent le paysage, les **carrières** touchent le sol et l’eau, les **entrepôts** consomment des surfaces considérables."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfaf5907-7981-5c81-807e-b407ffa66491",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Notre-Dame-des-Landes au ZAN",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Hugo trace une frise de l’artificialisation des sols : un projet abandonné, puis une loi qui fixe des objectifs chiffrés.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’artificialisation des sols : de 2018 à 2050",
+     "source": "Frise établie d’après le cours.",
+     "debut": 2015,
+     "fin": 2050,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "ndl",
+       "date": 2018,
+       "nom": "Abandon de NDDL"
+      },
+      {
+       "id": "loi",
+       "date": 2021,
+       "nom": "Loi Climat"
+      },
+      {
+       "id": "moitie",
+       "date": 2031,
+       "nom": "Rythme divisé par 2"
+      },
+      {
+       "id": "zan",
+       "date": 2050,
+       "nom": "ZAN atteint"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui fixe l’objectif de zéro artificialisation nette.",
+     "reponse": [
+      "loi"
+     ],
+     "aide": "Quelle loi de 2021 fixe l’objectif ?",
+     "explication": "C’est la **loi Climat et résilience de 2021** qui fixe l’objectif du ZAN."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi de l’échéance du ZAN ?",
+     "reponse": 29,
+     "unite": "ans",
+     "aide": "Soustrais les deux années de la frise.",
+     "explication": "2050 − 2021 = **29 ans** : l’objectif est lointain, pas immédiat."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la frise.",
+     "texte": "La loi Climat et résilience prévoit de réduire de ___ le rythme d’artificialisation d’ici ___, puis d’atteindre le ZAN en ___.",
+     "reponses": [
+      [
+       "moitié"
+      ],
+      [
+       "2031"
+      ],
+      [
+       "2050"
+      ]
+     ],
+     "banque": [
+      "moitié",
+      "tiers",
+      "2031",
+      "2040",
+      "2050",
+      "2018"
+     ],
+     "aide": "Cherche l’année marquée sur la frise pour le rythme divisé par deux.",
+     "explication": "La loi vise **la moitié** du rythme d’ici **2031**, puis le **ZAN en 2050**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’objectif de ZAN crée-t-il des tensions entre communes ?",
+     "options": [
+      "Certaines ont déjà construit, d’autres voudraient encore le faire",
+      "Il interdit à toutes les communes de construire des routes",
+      "Il oblige à détruire les villes déjà bâties",
+      "Il rend les agriculteurs propriétaires de tous les terrains"
+     ],
+     "reponse": 0,
+     "aide": "Elles ne partent pas du même point.",
+     "explication": "Le ZAN crée des tensions **entre communes** : celles qui ont déjà construit et celles qui voudraient encore le faire."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfaf5907-7981-5c81-807e-b407ffa66491",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Huit hectares, quatre demandes",
+   "competence": "raisonner",
+   "situation": "Au conseil municipal de Villeneuve-les-Prés, quatre acteurs réclament la même parcelle de 8 hectares. Léonie, conseillère, doit éclairer le débat.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Notes du conseil municipal",
+     "source": "Texte écrit pour l’exercice (commune imaginaire).",
+     "blocs": [
+      "L’[[a|agricultrice]] Mme Perrin cultive la parcelle depuis vingt ans. Le [[a|promoteur]] Kaplan veut y bâtir un lotissement. Le [[a|logisticien]] Sud-Express y rêve d’un entrepôt. L’[[a|association]] Les Haies Vives demande de la classer pour protéger les haies et les insectes."
+     ]
+    },
+    {
+     "id": "demandes",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Surface réclamée par chaque acteur",
+     "source": "Chiffres imaginés pour l’exercice, en hectares.",
+     "categories": [
+      "Agricultrice",
+      "Promoteur",
+      "Logisticien",
+      "Association"
+     ],
+     "series": [
+      {
+       "nom": "Hectares demandés",
+       "valeurs": [
+        8,
+        5,
+        6,
+        3
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "unite": "en hectares",
+      "min": 0,
+      "max": 9,
+      "pas": 1
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "enonce": "Touche les quatre mots qui désignent les acteurs en conflit.",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "aide": "Cherche les noms de métiers ou de groupes.",
+     "explication": "Une **agricultrice**, un **promoteur**, un **logisticien** et une **association** : chacun défend un usage différent du même sol."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’hectares sont demandés en tout ?",
+     "reponse": 22,
+     "unite": "ha",
+     "aide": "Additionne les quatre barres.",
+     "explication": "8 + 5 + 6 + 3 = **22 hectares** demandés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’hectares sont demandés en trop par rapport à la parcelle disponible ?",
+     "reponse": 14,
+     "unite": "ha",
+     "aide": "Compare le total avec les 8 hectares de la parcelle.",
+     "explication": "22 − 8 = **14 hectares** de trop : on ne peut pas satisfaire tout le monde."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque outil de régulation à son rôle.",
+     "paires": [
+      [
+       "Le PLU",
+       "Fixer les règles d’utilisation des sols"
+      ],
+      [
+       "La SAFER",
+       "Réguler le marché du foncier agricole"
+      ],
+      [
+       "Les zones agricoles protégées",
+       "Sanctuariser des terres"
+      ],
+      [
+       "L’enquête publique",
+       "Faire participer les habitants"
+      ]
+     ],
+     "aide": "Un outil organise, régule, protège ou consulte.",
+     "explication": "Le **PLU** fixe l’utilisation des sols, la **SAFER** régule le foncier agricole, les **zones agricoles protégées** sanctuarisent des terres, l’**enquête publique** fait participer les habitants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui tranche, au final, entre ces demandes également légitimes ?",
+     "options": [
+      "Le conseil municipal, par un arbitrage politique",
+      "Un calcul technique qui désigne l’usage le plus rentable",
+      "Le tirage au sort entre les quatre acteurs",
+      "L’agriculteur, qui occupe déjà la parcelle"
+     ],
+     "reponse": 0,
+     "aide": "Chacun a de bonnes raisons de demander la parcelle.",
+     "explication": "Quand plusieurs projets légitimes visent la même parcelle, c’est un **arbitrage politique**, pas un calcul technique. Les outils l’organisent, sans supprimer le conflit."
+    }
+   ]
+  },
+  {
+   "chapitre": "e67f688f-e582-58f6-a974-e0ef2eddd3d7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelles campagnes gagnent, lesquelles décrochent ?",
+   "competence": "lire-carte",
+   "situation": "Pour son croquis, Anaïs veut distinguer sur la France des campagnes qui attirent de nouveaux habitants et d’autres qui se vident et vieillissent.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les campagnes françaises : un croquis",
+     "source": "Croquis simplifié d’après le cours ; les contours sont approximatifs.",
+     "fond": "france",
+     "aires": [
+      {
+       "id": "diag",
+       "contour": [
+        [
+         4,
+         50
+        ],
+        [
+         6.2,
+         48.8
+        ],
+        [
+         3.5,
+         45.8
+        ],
+        [
+         0.5,
+         43
+        ],
+        [
+         -1.2,
+         43.4
+        ],
+        [
+         0.5,
+         45.8
+        ],
+        [
+         2.5,
+         47.8
+        ],
+        [
+         3.5,
+         49.8
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "hachures"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -1.2,
+       "lat": 45.7,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lon": 6.4,
+       "lat": 45.3,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche l’espace où se cumulent vieillissement et recul des services.",
+     "reponse": [
+      "diag"
+     ],
+     "aide": "Cherche la bande hachurée qui traverse le pays en diagonale.",
+     "explication": "La **diagonale des faibles densités** cumule vieillissement et recul des services : c’est une campagne fragile."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux repères qui sont des campagnes attractives.",
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "multiple": true,
+     "aide": "Pense au littoral atlantique et aux vallées alpines.",
+     "explication": "Le **littoral atlantique (A)** et les **vallées alpines (B)** attirent retraités, actifs et résidences secondaires. La zone hachurée est au contraire fragile."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque type de campagne à son principal risque.",
+     "paires": [
+      [
+       "Les campagnes des villes",
+       "L’artificialisation des terres"
+      ],
+      [
+       "Les campagnes attractives",
+       "La flambée des prix du logement"
+      ],
+      [
+       "Les campagnes fragiles",
+       "Les déserts médicaux"
+      ]
+     ],
+     "aide": "Un risque par type : terres, logement, soins.",
+     "explication": "Les campagnes **des villes** subissent l’**artificialisation** ; les **attractives** voient le **logement renchérir** pour les habitants permanents ; les **fragiles** voient apparaître des **déserts médicaux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e67f688f-e582-58f6-a974-e0ef2eddd3d7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois communes, trois trajectoires",
+   "competence": "lire-graphique",
+   "situation": "Inès habite Saint-Cyr-des-Monts. Elle compare l’évolution de sa commune avec deux autres, puis en discute avec son cousin Malik, qui vit près d’une grande ville.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Population de trois communes, base 100 en 2010",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Les Rives (périurbaine)",
+      "Port-Sablé (littorale)",
+      "Saint-Cyr-des-Monts"
+     ],
+     "series": [
+      {
+       "nom": "2010",
+       "valeurs": [
+        100,
+        100,
+        100
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "2020",
+       "valeurs": [
+        116,
+        108,
+        91
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Population",
+      "unite": "base 100 en 2010",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": true
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Messages écrits pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Malik",
+       "texte": "Alors, comment ça se passe au village ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Le médecin part à la retraite et personne ne le remplace. Le plus proche est à 35 km."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Et l’école ferme une classe. Je prends la [[v|voiture]] pour tout : il n’y a ni bus ni train."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la commune qui perd des habitants entre 2010 et 2020.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre de 2020 qui passe sous 100.",
+     "explication": "**Saint-Cyr-des-Monts** passe de 100 à 91 : c’est la seule commune qui perd des habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de % la population des Rives a-t-elle augmenté entre 2010 et 2020 ?",
+     "reponse": 16,
+     "unite": "%",
+     "aide": "Base 100 : lis la barre de 2020 et retire 100.",
+     "explication": "116 − 100 = **16 %** : la commune périurbaine profite de la périurbanisation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Saint-Cyr-des-Monts comptait 2 000 habitants en 2010. Combien en a-t-elle perdu en 2020 ?",
+     "reponse": 180,
+     "unite": "habitants",
+     "aide": "Elle a perdu 9 % de sa population.",
+     "explication": "100 − 91 = 9 % ; 9 % de 2 000 = 2 000 × 0,09 = **180 habitants** perdus."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui montre la dépendance des ruraux à un mode de transport.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Quel moyen de transport Inès utilise-t-elle pour « tout » ?",
+     "explication": "La **voiture** est indispensable dans la plupart des espaces ruraux, faute de bus et de train."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel type de campagne appartient la commune d’Inès ?",
+     "options": [
+      "Une campagne fragile",
+      "Une campagne des villes",
+      "Une campagne attractive",
+      "Une campagne touristique du littoral"
+     ],
+     "reponse": 0,
+     "aide": "Population en baisse, médecin parti, classe fermée.",
+     "explication": "Population en baisse, désert médical, services qui reculent : c’est une **campagne fragile**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e67f688f-e582-58f6-a974-e0ef2eddd3d7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Banane, cyclones et carburant",
+   "competence": "analyser-document",
+   "situation": "Pour comprendre la diversité des espaces ruraux français, Mathis étudie les départements et régions d’outre-mer (DROM), puis une tribune d’une habitante d’une campagne éloignée.",
+   "documents": [
+    {
+     "id": "drom",
+     "type": "tableau",
+     "titre": "Les espaces ruraux des DROM",
+     "source": "Tableau de synthèse d’après le cours.",
+     "colonnes": [
+      "Spécificité",
+      "Ce qu’elle implique"
+     ],
+     "lignes": [
+      [
+       "Une forte croissance démographique",
+       "Une pression sur le foncier"
+      ],
+      [
+       "Une agriculture d’exportation",
+       "Banane, canne à sucre"
+      ],
+      [
+       "Des contraintes foncières et des risques naturels",
+       "Cyclones, volcanisme, submersion"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "tribune",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Tribune d’une habitante",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Je m’appelle Nadia. Je fais le plein deux fois par mois, 50 litres à chaque fois, pour aller travailler à 40 km. Le jour où le litre augmente de 20 centimes, c’est une dépense de plus pour moi, chaque mois.",
+      "Il n’y a pas d’alternative : sans ma [[v|voiture]], je ne peux ni travailler ni voir un médecin. C’est cela que les manifestants de 2018 ont voulu faire entendre."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "drom",
+     "enonce": "Touche la case qui nomme les productions agricoles d’exportation des DROM.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « agriculture d’exportation ».",
+     "explication": "Les DROM exportent surtout de la **banane** et de la **canne à sucre**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que provoque la forte croissance démographique des DROM sur les espaces ruraux ?",
+     "options": [
+      "Une pression sur le foncier",
+      "Un abandon massif des terres agricoles",
+      "Une baisse des risques naturels",
+      "La disparition de l’agriculture d’exportation"
+     ],
+     "reponse": 0,
+     "aide": "Plus d’habitants, la même quantité de terres.",
+     "explication": "Plus d’habitants pour des terres limitées : la croissance démographique crée une **pression sur le foncier**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle dépense supplémentaire par mois représente pour Nadia une hausse de 20 centimes le litre ?",
+     "reponse": 20,
+     "unite": "€",
+     "aide": "Calcule les litres consommés en un mois.",
+     "explication": "2 pleins de 50 litres = 100 litres ; 100 × 0,20 € = **20 € de plus par mois**."
+    },
+    {
+     "type": "zone",
+     "document": "tribune",
+     "enonce": "Touche le mot qui montre pourquoi le carburant est une question sociale à la campagne.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Quel objet rend Nadia indépendante des transports en commun ?",
+     "explication": "La **voiture** reste indispensable : le prix du carburant a donc une portée sociale directe, comme l’a montré le mouvement des gilets jaunes en 2018."
+    }
+   ]
+  },
+  {
+   "chapitre": "b100d8ea-f69f-532a-a898-de02cff07405",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui finance quoi dans un village ?",
+   "competence": "observer-schema",
+   "situation": "Lucie, élève de 1re, veut comprendre qui décide et qui paie quand on aménage une commune rurale. Elle dessine un schéma des échelons de l’action publique.",
+   "documents": [
+    {
+     "id": "echelons",
+     "type": "schema",
+     "titre": "Les échelons de l’aménagement rural",
+     "source": "Schéma d’après le cours.",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 15,
+       "l": 240,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Union européenne",
+       "id": "ue",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        51
+       ],
+       "a": [
+        160,
+        66
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 67,
+       "l": 240,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "État",
+       "id": "etat",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        103
+       ],
+       "a": [
+        160,
+        118
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 119,
+       "l": 240,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Régions",
+       "id": "reg",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        155
+       ],
+       "a": [
+        160,
+        170
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 171,
+       "l": 240,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Intercommunalités, PNR",
+       "id": "loc",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 228,
+       "texte": "Du cadre européen aux projets locaux",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echelons",
+     "enonce": "Touche l’échelon qui finance la PAC.",
+     "reponse": [
+      "ue"
+     ],
+     "aide": "La PAC est une politique européenne.",
+     "explication": "La **Politique agricole commune** est financée par l’**Union européenne**, première dépense agricole du continent."
+    },
+    {
+     "type": "zone",
+     "document": "echelons",
+     "enonce": "Touche l’échelon qui gère une partie des fonds européens et anime le développement économique.",
+     "reponse": [
+      "reg"
+     ],
+     "aide": "Il se situe entre l’État et les communes.",
+     "explication": "Les **régions** gèrent une partie des fonds européens et animent le développement économique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque outil de financement à ce qu’il finance.",
+     "paires": [
+      [
+       "PAC, premier pilier",
+       "Les aides directes au revenu des agriculteurs"
+      ],
+      [
+       "PAC, second pilier (LEADER)",
+       "Le développement rural"
+      ],
+      [
+       "Fonds structurels (FEDER, FSE)",
+       "Équipements, numérique et projets locaux"
+      ]
+     ],
+     "aide": "Revenu, développement rural, équipements.",
+     "explication": "Le **premier pilier** de la PAC verse des aides directes ; le **second pilier**, avec le programme LEADER, finance le développement rural ; les **fonds structurels** soutiennent équipements et projets locaux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une politique rurale efficace ne se décrète-t-elle pas d’en haut ?",
+     "options": [
+      "Elle combine un cadre européen, des fonds nationaux et des projets locaux",
+      "Elle relève uniquement des communes, sans aucune aide extérieure",
+      "Elle dépend seulement des agriculteurs et de leurs syndicats",
+      "Elle est réservée aux régions qui ont un parc naturel"
+     ],
+     "reponse": 0,
+     "aide": "Relis les quatre niveaux du schéma.",
+     "explication": "Une politique rurale efficace **combine** un cadre européen, des financements nationaux et des projets portés localement."
+    }
+   ]
+  },
+  {
+   "chapitre": "b100d8ea-f69f-532a-a898-de02cff07405",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Relais de la Vallée, un village qui se bat",
+   "competence": "analyser-document",
+   "situation": "À Saint-Orens-le-Haut, la commune a repris le dernier commerce du village et en a fait un lieu de vie. Zoé, stagiaire à l’intercommunalité, doit en présenter les services.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Relais de la Vallée",
+     "sousTitre": "Épicerie, coworking et paniers du jeudi",
+     "emoji": "🏡",
+     "source": "Affiche imaginée pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Épicerie-bar : le seul commerce du village, ouvert 7 jours sur 7",
+       "id": "epicerie"
+      },
+      {
+       "texte": "Coworking : 8 postes avec fibre optique",
+       "id": "cowork"
+      },
+      {
+       "texte": "Jeudi : paniers de légumes des fermes voisines",
+       "id": "paniers"
+      },
+      {
+       "texte": "Randonnées guidées sur le patrimoine local",
+       "id": "rando"
+      }
+     ],
+     "teinte": "vert"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui montre une commune qui maintient son dernier service.",
+     "reponse": [
+      "epicerie"
+     ],
+     "aide": "Cherche le mot « seul » : que garde la commune ?",
+     "explication": "L’**épicerie-bar**, seul commerce du village, est reprise par la commune pour **maintenir le dernier service**."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui offre un ancrage aux télétravailleurs.",
+     "reponse": [
+      "cowork"
+     ],
+     "aide": "Un espace partagé de travail et le haut débit.",
+     "explication": "Le **coworking** avec fibre optique est un tiers-lieu : il ancre les télétravailleurs dans la commune."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque initiative à ce qu’elle apporte.",
+     "paires": [
+      [
+       "Les paniers de légumes (AMAP)",
+       "Un revenu et un débouché direct"
+      ],
+      [
+       "Le tiers-lieu et le coworking",
+       "Un ancrage pour les télétravailleurs"
+      ],
+      [
+       "La reprise du commerce par la commune",
+       "Le maintien du dernier service"
+      ],
+      [
+       "Les randonnées sur le patrimoine",
+       "Une ressource non délocalisable"
+      ]
+     ],
+     "aide": "Pense à ce que chacun reçoit : un revenu, des clients, un service.",
+     "explication": "Les **AMAP** offrent un débouché direct, les **tiers-lieux** ancrent les télétravailleurs, la **reprise du commerce** maintient le dernier service, l’**écotourisme** est une ressource qu’on ne peut pas délocaliser."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel plan national a étendu le très haut débit aux campagnes, rendant le coworking possible ?",
+     "options": [
+      "Le plan France Très Haut Débit",
+      "Le plan Marshall d’aide à l’Europe",
+      "Le plan Vigipirate de sécurité",
+      "Le plan Orsec de secours civil"
+     ],
+     "reponse": 0,
+     "aide": "Son nom dit ce qu’il équipe.",
+     "explication": "Le plan **France Très Haut Débit** a étendu la couverture numérique aux campagnes : sans fibre, pas de coworking."
+    }
+   ]
+  },
+  {
+   "chapitre": "b100d8ea-f69f-532a-a898-de02cff07405",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une maison de santé : qui décide, qui paie ?",
+   "competence": "raisonner",
+   "situation": "Deux maires débattent d’un même sujet : où mettre les moyens publics ? Le conseil de Saint-Aubin-les-Roches veut une maison de santé ; Mélanie, élève de 1re, calcule ce qu’il restera à la commune.",
+   "documents": [
+    {
+     "id": "tribunes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux tribunes de maires",
+     "source": "Textes écrits pour l’exercice (communes imaginaires).",
+     "blocs": [
+      "**Maire de Saint-Aubin-les-Roches.** « Les moyens doivent aller d’abord aux territoires qui [[d|décrochent]] : sans médecin, nous perdrons nos habitants. »",
+      "**Maire de Val-Joyeux.** « Soutenons plutôt ceux qui [[r|réussissent]] : chaque euro y attire des habitants et des entreprises. »"
+     ]
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Plan de financement de la maison de santé (coût : 900 000 €)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Financeur",
+      "Part du coût"
+     ],
+     "lignes": [
+      [
+       "Fonds européen FEDER",
+       "30 %"
+      ],
+      [
+       "État (contrat de plan)",
+       "25 %"
+      ],
+      [
+       "Région",
+       "20 %"
+      ],
+      [
+       "Commune",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tribunes",
+     "enonce": "Touche le mot qui désigne les territoires que veut aider le maire de Saint-Aubin.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Quel verbe dit que ces territoires reculent ?",
+     "explication": "Le maire de Saint-Aubin veut aider les territoires qui **décrochent** : c’est l’un des deux pôles du débat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument selon la position qu’il défend.",
+     "categories": [
+      "Aider ceux qui décrochent",
+      "Soutenir ceux qui réussissent"
+     ],
+     "items": [
+      [
+       "Sans médecin, la commune perdra ses habitants",
+       0
+      ],
+      [
+       "Un euro investi ici attire entreprises et habitants",
+       1
+      ],
+      [
+       "Les services reculent plus vite dans la diagonale des faibles densités",
+       0
+      ],
+      [
+       "Les dynamiques qui marchent entraînent le reste du territoire",
+       1
+      ]
+     ],
+     "aide": "Un camp parle de rattraper, l’autre de prolonger l’élan.",
+     "explication": "Le débat de l’aménagement rural : **concentrer les moyens** sur les territoires en difficulté, ou **soutenir les dynamiques** qui marchent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part du coût la commune doit-elle financer ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Le total des parts fait 100 %.",
+     "explication": "30 + 25 + 20 = 75 % ; 100 − 75 = **25 %** à la charge de la commune."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme représente cette part pour la commune ?",
+     "reponse": 225000,
+     "unite": "€",
+     "aide": "Calcule 25 % du coût total.",
+     "explication": "25 % de 900 000 € = 900 000 × 0,25 = **225 000 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce plan de financement sur l’aménagement rural ?",
+     "options": [
+      "Plusieurs niveaux se partagent décisions et financements",
+      "Les communes financent seules leurs équipements",
+      "L’Union européenne décide de tout, sans les régions",
+      "L’État finance désormais la totalité des équipements ruraux"
+     ],
+     "reponse": 0,
+     "aide": "Compte les financeurs.",
+     "explication": "Le plan associe **Union européenne, État, région et commune** : l’aménagement résulte d’un jeu à plusieurs niveaux, et reste un **choix politique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa5be4ed-f2f9-563b-a522-e2b3e9bb2263",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les grandes dates du décollage chinois",
+   "competence": "se-reperer-temps",
+   "situation": "Wen, lycéen à Lyon, prépare un exposé sur la Chine. Il commence par une frise des grandes étapes de son développement.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Chine de 1978 à 2015",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1975,
+     "fin": 2015,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "deng",
+       "date": 1978,
+       "nom": "Réformes de Deng"
+      },
+      {
+       "id": "omc",
+       "date": 2001,
+       "nom": "Entrée à l’OMC"
+      },
+      {
+       "id": "enfant",
+       "date": 2015,
+       "nom": "Fin enfant unique"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui marque l’entrée de la Chine dans le commerce mondial organisé.",
+     "reponse": [
+      "omc"
+     ],
+     "aide": "Cherche le sigle de l’Organisation mondiale du commerce.",
+     "explication": "En **2001**, la Chine entre à l’**OMC** : son commerce s’insère dans les règles mondiales."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les réformes de Deng Xiaoping de l’entrée à l’OMC ?",
+     "reponse": 23,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "2001 − 1978 = **23 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que décide Deng Xiaoping en 1978 ?",
+     "options": [
+      "Des réformes et l’ouverture aux capitaux étrangers",
+      "La fermeture totale du pays au commerce extérieur",
+      "La création de la politique de l’enfant unique",
+      "L’entrée immédiate de la Chine à l’OMC"
+     ],
+     "reponse": 0,
+     "aide": "C’est le point de départ du décollage.",
+     "explication": "En **1978**, Deng Xiaoping lance des **réformes économiques** et ouvre la Chine aux investissements étrangers."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa5be4ed-f2f9-563b-a522-e2b3e9bb2263",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La Chine riche des côtes",
+   "competence": "lire-carte",
+   "situation": "Pour son croquis, Wen repère trois villes qui racontent le développement chinois : une zone économique spéciale, un grand centre du delta du Yangzi et une métropole de l’intérieur.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois villes de Chine",
+     "source": "Croquis d’après le cours.",
+     "fond": "monde",
+     "cadrage": [
+      72,
+      16,
+      136,
+      52
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "shenzhen",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "chongqing",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville qui est la zone économique spéciale emblématique de l’ouverture.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Créée en 1980, elle borde Hong Kong.",
+     "explication": "**Shenzhen (B)** est la ZES emblématique, créée en 1980."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux villes du littoral oriental, qui concentre richesse, usines exportatrices et métropoles.",
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "multiple": true,
+     "aide": "Cherche les deux villes proches de la côte.",
+     "explication": "**Shanghai (A)** et **Shenzhen (B)** sont sur le littoral oriental, qui concentre la richesse."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville de l’intérieur, que les plans « Go West » veulent aider à rattraper son retard.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Elle est loin de la côte, sur le Yangzi en amont.",
+     "explication": "**Chongqing (C)** est au cœur du pays, dans l’intérieur et l’Ouest, moins développés que le littoral."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes du décollage chinois de la plus ancienne à la plus récente.",
+     "items": [
+      "Les réformes de Deng Xiaoping",
+      "Les premières zones économiques spéciales",
+      "L’entrée à l’OMC",
+      "La montée en gamme vers l’électronique et l’IA"
+     ],
+     "aide": "Les quatre dates : 1978, 1980, 2001, puis « depuis ».",
+     "explication": "D’abord les **réformes (1978)**, puis les **ZES (1980)**, l’**OMC (2001)**, et depuis la **montée en gamme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa5be4ed-f2f9-563b-a522-e2b3e9bb2263",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mingming reste au village",
+   "competence": "analyser-document",
+   "situation": "Wei travaille sur un chantier de Shenzhen ; son fils Mingming vit au Gansu. Lan, une camarade de classe, compare leur situation aux écarts de richesse entre territoires chinois.",
+   "documents": [
+    {
+     "id": "pib",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "PIB par habitant dans quatre territoires chinois, vers 2022",
+     "source": "Ordres de grandeur arrondis, en milliers de yuans.",
+     "categories": [
+      "Pékin",
+      "Shanghai",
+      "Guizhou",
+      "Gansu"
+     ],
+     "series": [
+      {
+       "nom": "PIB par habitant",
+       "valeurs": [
+        190,
+        180,
+        52,
+        45
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "PIB par habitant",
+      "unite": "en milliers de yuans",
+      "min": 0,
+      "max": 200,
+      "pas": 50
+     },
+     "valeurs": true
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Wei à sa sœur",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Ma chère Lan, je travaille depuis six ans sur un chantier de Shenzhen. Mon permis de résidence, le [[h|hukou]], reste attaché à notre village du Gansu : l’école publique d’ici refuse donc Mingming.",
+      "Il vit chez sa grand-mère. Chaque mois, je lui envoie une partie de ma paie ; je ne le vois qu’au Nouvel An."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pib",
+     "enonce": "Touche le territoire le moins riche par habitant.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "Le **Gansu** (environ 45 000 yuans par habitant) est le territoire le moins riche de ce graphique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de PIB par habitant entre Pékin et le Gansu, en milliers de yuans ?",
+     "reponse": 145,
+     "unite": "milliers",
+     "aide": "Soustrais les deux valeurs écrites sur les barres.",
+     "explication": "190 − 45 = **145 milliers de yuans** : la Chine est riche sur ses côtes et en développement dans ses marges."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme le permis de résidence qui attache Wei à son village.",
+     "reponse": [
+      "h"
+     ],
+     "aide": "Le mot est écrit juste après « permis de résidence ».",
+     "explication": "Le **hukou** attache un habitant à sa région d’origine et limite l’accès aux services urbains."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur les travailleurs migrants.",
+     "texte": "Les migrants, ou ___, travaillent en ville sans pleinement accéder aux ___ sociaux.",
+     "reponses": [
+      [
+       "mingong"
+      ],
+      [
+       "droits"
+      ]
+     ],
+     "banque": [
+      "mingong",
+      "droits",
+      "salaires",
+      "hukou",
+      "remises",
+      "impôts"
+     ],
+     "aide": "Un nom pour ces travailleurs venus des campagnes, puis ce qui leur manque.",
+     "explication": "Les **mingong** travaillent en ville **sans pleinement accéder aux droits** sociaux, à cause du hukou."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que cette migration est « juridiquement organisée » ?",
+     "options": [
+      "Le hukou rattache chacun à son lieu d’origine",
+      "Une loi interdit à tout paysan de quitter son village",
+      "L’État impose un salaire unique dans toutes les villes",
+      "Les migrants reçoivent un logement gratuit en arrivant"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que décide le permis de résidence.",
+     "explication": "La plus grande migration interne de l’histoire est **juridiquement organisée** : le **hukou** rattache chacun à son lieu d’origine et conditionne ses droits en ville."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2456136-45f2-5920-9f2f-2758f3cc9528",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La Chine et l’air du monde",
+   "competence": "lire-graphique",
+   "situation": "Sofia cherche, pour un exposé sur le climat, quelle part des émissions mondiales de CO2 revient à la Chine.",
+   "documents": [
+    {
+     "id": "co2",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les émissions mondiales de CO2, vers 2022",
+     "source": "Ordres de grandeur arrondis, en % du total mondial.",
+     "categories": [
+      "Chine",
+      "Reste du monde"
+     ],
+     "series": [
+      {
+       "nom": "Part des émissions",
+       "valeurs": [
+        30,
+        70
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "co2",
+     "enonce": "Touche la part qui représente la Chine.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus petite des deux parts.",
+     "explication": "La Chine est le **premier émetteur mondial** : environ **30 %** des émissions de CO2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des émissions mondiales vient du reste du monde ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Le total fait 100 %.",
+     "explication": "100 − 30 = **70 %** viennent du reste du monde, qui compte pourtant plus de 190 pays."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il ajouter pour comprendre les « deux visages » énergétiques de la Chine ?",
+     "options": [
+      "Elle est aussi la première à investir dans le renouvelable",
+      "Elle ne consomme presque plus de charbon pour son électricité",
+      "Elle n’exporte aucun équipement d’énergie propre à l’étranger",
+      "Elle a renoncé à toute neutralité carbone pour l’avenir"
+     ],
+     "reponse": 0,
+     "aide": "Un gros émetteur peut aussi être un gros investisseur.",
+     "explication": "La Chine est à la fois **premier émetteur** de CO2 et **premier investisseur** dans les énergies renouvelables ; elle fabrique la majorité des panneaux solaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2456136-45f2-5920-9f2f-2758f3cc9528",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Soif au Nord, eau au Sud",
+   "competence": "lire-carte",
+   "situation": "Pékin manque d’eau, alors que le Yangzi, au sud, charrie des volumes immenses. Zhao, ingénieur stagiaire, étudie la carte des grands aménagements chinois.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’eau en Chine : des aménagements géants",
+     "source": "Croquis d’après le cours ; le tracé est approximatif.",
+     "fond": "monde",
+     "cadrage": [
+      72,
+      16,
+      136,
+      52
+     ],
+     "fleuves": [
+      "yangzi"
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "pekin",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 111.3,
+       "lat": 30.8,
+       "symbole": "etoile",
+       "teinte": "corail"
+      }
+     ],
+     "traits": [
+      {
+       "id": "transfert",
+       "points": [
+        [
+         119.4,
+         32.3
+        ],
+        [
+         117.2,
+         36.7
+        ],
+        [
+         116.3,
+         38.6
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "bleu",
+       "epaisseur": 3
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville du Nord qui manque d’eau.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est la capitale.",
+     "explication": "**Pékin (A)**, comme Tianjin, souffre d’un déficit d’eau : le Nord est sec alors que le Sud est humide."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la grosse flèche qui achemine l’eau vers le Nord.",
+     "reponse": [
+      "transfert"
+     ],
+     "aide": "Elle part du grand fleuve du Sud et monte vers la capitale.",
+     "explication": "Le **transfert Sud-Nord** est un gigantesque réseau d’aqueducs qui achemine l’eau du Yangzi vers le Nord."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le barrage des Trois-Gorges, bâti sur le Yangzi.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Il se trouve plus à l’ouest, sur le grand fleuve du Sud.",
+     "explication": "Le **barrage des Trois-Gorges (étoile)** produit de l’électricité et régule les crues du Yangzi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le transfert Sud-Nord prend l’eau du ___ pour l’amener vers le ___.",
+     "texte": "Le transfert Sud-Nord prend l’eau du ___ pour l’amener vers le ___.",
+     "reponses": [
+      [
+       "Yangzi",
+       "fleuve Yangzi"
+      ],
+      [
+       "Nord"
+      ]
+     ],
+     "banque": [
+      "Yangzi",
+      "Nord",
+      "Sud",
+      "fleuve Jaune",
+      "Mékong"
+     ],
+     "aide": "Le fleuve est tracé sur la carte ; la destination est la région sèche.",
+     "explication": "L’eau est prise au **Yangzi** et amenée vers le **Nord**, autour de Pékin et Tianjin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le coût humain du barrage des Trois-Gorges ?",
+     "options": [
+      "Le déplacement de plus d’un million de personnes",
+      "La disparition complète du fleuve Yangzi",
+      "L’abandon de toute production d’électricité",
+      "La fermeture du port de Shanghai"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux villages noyés par le lac de retenue.",
+     "explication": "La retenue d’eau a entraîné le **déplacement de plus d’un million de personnes** : le coût social des grands aménagements est lourd."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2456136-45f2-5920-9f2f-2758f3cc9528",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un hiver de pollution à Xinhe",
+   "competence": "analyser-document",
+   "situation": "Dans la ville imaginaire de Xinhe, dans le Nord, un hiver de pollution a tout changé. Mei, élève de 1re, relie ce récit à la politique nationale chinoise et aux chiffres des émissions.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’hiver où l’air est devenu gris",
+     "source": "Récit écrit pour l’exercice (ville imaginaire).",
+     "blocs": [
+      "À Xinhe, l’air est devenu gris dès novembre. Les chauffages et les usines à charbon crachaient jour et nuit. Les enfants toussaient à l’école et les hôpitaux s’emplissaient.",
+      "Les habitants se sont [[m|mobilisés]] : pétitions, manifestations pacifiques. La municipalité a fermé des usines et durci les normes de contrôle des émissions."
+     ]
+    },
+    {
+     "id": "emissions",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Part des émissions mondiales de CO2, vers 2022",
+     "source": "Ordres de grandeur arrondis, en %.",
+     "categories": [
+      "Chine",
+      "États-Unis",
+      "Inde",
+      "Union européenne"
+     ],
+     "series": [
+      {
+       "nom": "Part des émissions",
+       "valeurs": [
+        30,
+        13,
+        8,
+        7
+       ],
+       "teinte": "gris"
+      }
+     ],
+     "axeY": {
+      "unite": "en %",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la chaîne d’événements racontée à Xinhe.",
+     "items": [
+      "Les pics de pollution deviennent fréquents",
+      "Des enfants tombent malades",
+      "Les habitants se mobilisent",
+      "Les normes sont durcies et des usines fermées"
+     ],
+     "aide": "Cause, conséquence sanitaire, réaction locale, réponse politique.",
+     "explication": "Pollution → **conséquences sanitaires** → **mobilisations locales** → **réponse politique** : normes, fermetures d’usines, contrôle des émissions."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui montre la réaction des habitants.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Quel verbe dit qu’ils se sont mis en mouvement ?",
+     "explication": "Les habitants se sont **mobilisés** : les conséquences sanitaires de la pollution ont provoqué des mobilisations locales."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de la Chine dépasse-t-elle celle des États-Unis ?",
+     "reponse": 17,
+     "unite": "points",
+     "aide": "Soustrais les deux valeurs du graphique.",
+     "explication": "30 − 13 = **17 points** : la Chine est loin devant le deuxième émetteur."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque problème à la réponse de la Chine.",
+     "paires": [
+      [
+       "Le manque d’eau au Nord",
+       "Le transfert Sud-Nord"
+      ],
+      [
+       "Les pics de pollution de l’air",
+       "Des normes plus strictes et des usines fermées"
+      ],
+      [
+       "La dépendance extérieure en ressources",
+       "Les nouvelles routes de la soie"
+      ],
+      [
+       "Les émissions de CO2",
+       "L’objectif de neutralité carbone en 2060"
+      ]
+     ],
+     "aide": "Une réponse par problème : eau, air, approvisionnement, climat.",
+     "explication": "Eau → **transfert Sud-Nord** ; pollution → **normes et fermetures** ; dépendance → **nouvelles routes de la soie** ; CO2 → **neutralité carbone visée en 2060**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « les corrections chinoises se font à la même échelle que les dégâts » ?",
+     "options": [
+      "Les réponses sont aussi gigantesques que les problèmes",
+      "Les dégâts ont disparu dès les premières mesures prises",
+      "La Chine corrige ses dégâts seulement à l’échelle locale",
+      "Les corrections coûtent beaucoup moins cher que les dégâts"
+     ],
+     "reponse": 0,
+     "aide": "Pense au transfert Sud-Nord, aux renouvelables, aux fermetures d’usines.",
+     "explication": "Aucune économie n’a consommé autant de ressources aussi vite : les corrections sont donc **à la même échelle** que les dégâts."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c1fdcc5-af58-57cb-8c40-ac52d938c88c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La ruée vers les villes",
+   "competence": "lire-graphique",
+   "situation": "Lin prépare un exposé sur l’urbanisation chinoise. Il trace un graphique du taux d’urbanisation sur quarante ans.",
+   "documents": [
+    {
+     "id": "urb",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Le taux d’urbanisation de la Chine",
+     "source": "Chiffres arrondis, en % de la population.",
+     "categories": [
+      "1980",
+      "2000",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Part de la population urbaine",
+       "valeurs": [
+        19,
+        36,
+        61
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Population urbaine",
+      "unite": "en %",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "urb",
+     "enonce": "Touche l’année où plus de la moitié des Chinois vivent en ville.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point qui dépasse 50 %.",
+     "explication": "En **2020**, 61 % des Chinois sont urbains : c’est la seule date où la part dépasse la moitié."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points le taux d’urbanisation a-t-il progressé entre 1980 et 2020 ?",
+     "reponse": 42,
+     "unite": "points",
+     "aide": "Soustrais les deux valeurs.",
+     "explication": "61 − 19 = **42 points** en quarante ans : l’urbanisation la plus rapide et la plus massive de l’histoire."
+    },
+    {
+     "type": "choix",
+     "enonce": "En 2020, combien de Chinois sur dix vivent en ville ?",
+     "options": [
+      "Environ six sur dix",
+      "Environ deux sur dix",
+      "Environ neuf sur dix",
+      "Environ quatre sur dix"
+     ],
+     "reponse": 0,
+     "aide": "Lis la dernière valeur de la courbe.",
+     "explication": "61 % ≈ **six Chinois sur dix**, contre moins de deux sur dix en 1980."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c1fdcc5-af58-57cb-8c40-ac52d938c88c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Villes géantes et ville fantôme",
+   "competence": "lire-carte",
+   "situation": "Pour son dossier, Chen compare des métropoles chinoises à pleine croissance et une ville nouvelle restée presque vide.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre grandes villes de Chine",
+     "source": "Croquis d’après le cours.",
+     "fond": "monde",
+     "cadrage": [
+      98,
+      18,
+      128,
+      46
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "shenzhen",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "pekin",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "chongqing",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "reportage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Reportage à Nouveau-Lac",
+     "source": "Texte écrit pour l’exercice (ville imaginaire).",
+     "blocs": [
+      "Les tours de Nouveau-Lac sont sorties de terre en 2012 : métro, écoles, parcs, avenues à six voies. La ville a été conçue pour 300 000 habitants.",
+      "Huit ans plus tard, seuls 15 000 habitants y vivent. Les immeubles restent [[v|vides]] et les avenues sont désertes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la métropole autour de laquelle s’organise la région urbaine du delta du Yangzi.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est la grande place financière de la façade orientale.",
+     "explication": "**Shanghai (A)** organise le delta du Yangzi, avec son quartier d’affaires de Pudong."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ville à sa spécialité.",
+     "paires": [
+      [
+       "Shanghai",
+       "Une place financière mondiale"
+      ],
+      [
+       "Shenzhen",
+       "Un pôle technologique majeur"
+      ],
+      [
+       "Pékin",
+       "Le pôle politique du Nord"
+      ]
+     ],
+     "aide": "Finance, technologie, pouvoir.",
+     "explication": "**Shanghai** est une des premières places financières, **Shenzhen** un pôle technologique majeur et **Pékin**, avec Tianjin, le pôle politique et industriel du Nord."
+    },
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche le mot qui montre pourquoi Nouveau-Lac est une « ville fantôme ».",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche l’adjectif qui décrit les immeubles.",
+     "explication": "Des immeubles **vides** : la ville a été construite avant d’être peuplée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des 300 000 habitants prévus vit réellement à Nouveau-Lac ?",
+     "reponse": 5,
+     "unite": "%",
+     "aide": "Divise 15 000 par 300 000.",
+     "explication": "15 000 ÷ 300 000 = 0,05 : **5 %** seulement des habitants prévus sont présents."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre Nouveau-Lac de la manière de bâtir les villes en Chine ?",
+     "options": [
+      "La ville est construite pour précéder la demande, avec des excès",
+      "La ville naît toujours après l’arrivée des habitants",
+      "L’État ne construit jamais de villes nouvelles",
+      "Les villes nouvelles se remplissent immédiatement"
+     ],
+     "reponse": 0,
+     "aide": "Elle est construite avant d’être peuplée.",
+     "explication": "En Chine, la ville **n’attend pas la demande** : elle est construite pour la **précéder**, avec les excès que cela suppose."
+    }
+   ]
+  },
+  {
+   "chapitre": "6c1fdcc5-af58-57cb-8c40-ac52d938c88c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Yuncheng : 600 000 logements, 120 000 habitants",
+   "competence": "raisonner",
+   "situation": "Dans la ville imaginaire de Yuncheng, un promoteur a lancé un quartier géant. Rui, élève de 1re, calcule ce qui est resté vide et cherche pourquoi cela fragilise l’économie.",
+   "documents": [
+    {
+     "id": "quartier",
+     "type": "tableau",
+     "titre": "Le quartier de Yuncheng",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Logements construits",
+       "600 000"
+      ],
+      [
+       "Habitants installés",
+       "120 000"
+      ],
+      [
+       "Personnes par logement (moyenne)",
+       "3"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dette",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "emprunt",
+       "texte": "Le promoteur emprunte"
+      },
+      {
+       "id": "construit",
+       "texte": "Il construit en masse"
+      },
+      {
+       "id": "inconnu",
+       "texte": "?"
+      },
+      {
+       "id": "creance",
+       "texte": "La dette devient impayable"
+      }
+     ],
+     "liens": [
+      {
+       "de": "emprunt",
+       "a": "construit"
+      },
+      {
+       "de": "construit",
+       "a": "inconnu"
+      },
+      {
+       "de": "inconnu",
+       "a": "creance"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants les 600 000 logements pourraient-ils accueillir ?",
+     "reponse": 1800000,
+     "unite": "habitants",
+     "aide": "Multiplie les logements par trois personnes.",
+     "explication": "600 000 × 3 = **1 800 000 habitants** possibles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des logements est vide ? (arrondis à l’unité, en %)",
+     "reponse": 93,
+     "unite": "%",
+     "aide": "Compte d’abord les logements occupés : 120 000 ÷ 3.",
+     "explication": "120 000 ÷ 3 = 40 000 logements occupés ; 560 000 sont vides, soit 560 000 ÷ 600 000 ≈ 93,3, donc **93 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel maillon complète la chaîne ?",
+     "options": [
+      "Une grande partie des logements ne trouve pas d’acheteur",
+      "Les prix des logements baissent à zéro dès la construction",
+      "Les habitants remboursent la dette du promoteur",
+      "L’État interdit toute nouvelle construction"
+     ],
+     "reponse": 0,
+     "aide": "Entre construire en masse et ne plus pouvoir rembourser.",
+     "explication": "Des logements **invendus** privent le promoteur de recettes : c’est l’**endettement des promoteurs immobiliers**, fragilité de l’urbanisation chinoise."
+    },
+    {
+     "type": "zone",
+     "document": "dette",
+     "enonce": "Touche le maillon qui illustre la fragilité économique de cette urbanisation.",
+     "reponse": [
+      "creance"
+     ],
+     "aide": "Cherche le dernier maillon de la chaîne.",
+     "explication": "La **dette impayable** est la fragilité : l’endettement des promoteurs menace tout le secteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle autre limite de l’urbanisation chinoise touche les migrants ?",
+     "options": [
+      "Le hukou, qui limite leur accès aux services urbains",
+      "Une interdiction de vivre en ville après 40 ans",
+      "Un impôt réservé aux habitants des villes nouvelles",
+      "L’obligation de retourner au village chaque hiver"
+     ],
+     "reponse": 0,
+     "aide": "Un permis de résidence rattaché à la région d’origine.",
+     "explication": "Le **hukou** limite l’accès des migrants aux services urbains : c’est l’une des limites de l’urbanisation, avec le prix du logement et la pollution."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b90c53d-6be0-5f47-8ce1-255fe02de3c5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Sept ports sur dix",
+   "competence": "lire-graphique",
+   "situation": "Nour compte les ports à conteneurs parmi les dix premiers mondiaux. Elle veut savoir quelle part revient à la Chine.",
+   "documents": [
+    {
+     "id": "ports",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les dix premiers ports à conteneurs du monde",
+     "source": "Nombre de ports sur dix, d’après le cours.",
+     "categories": [
+      "Ports chinois",
+      "Autres ports"
+     ],
+     "series": [
+      {
+       "nom": "Nombre de ports",
+       "valeurs": [
+        7,
+        3
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ports",
+     "enonce": "Touche la part qui représente les ports chinois.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus grande part.",
+     "explication": "**Sept** des dix premiers ports à conteneurs du monde sont chinois : Shanghai, Ningbo-Zhoushan, Shenzhen, Canton, Qingdao, Tianjin et Hong Kong."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de ports du classement ne sont pas chinois ?",
+     "reponse": 3,
+     "unite": "ports",
+     "aide": "Le classement compte dix ports.",
+     "explication": "10 − 7 = **3 ports** non chinois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on l’ensemble qui associe ports, sidérurgie, pétrochimie et chantiers navals ?",
+     "options": [
+      "Une zone industrialo-portuaire (ZIP)",
+      "Une zone économique spéciale",
+      "Un parc naturel régional",
+      "Une zone de revitalisation rurale"
+     ],
+     "reponse": 0,
+     "aide": "Son nom parle d’industrie et de port.",
+     "explication": "Une **ZIP** associe ports, industries lourdes, chantiers navals et zones logistiques, notamment sur le littoral chinois."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b90c53d-6be0-5f47-8ce1-255fe02de3c5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Entre les détroits et les typhons",
+   "competence": "lire-carte",
+   "situation": "Pour comprendre la force et la fragilité du littoral chinois, Karim repère sur une carte quatre points essentiels.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le littoral chinois et ses routes",
+     "source": "Croquis d’après le cours.",
+     "fond": "monde",
+     "cadrage": [
+      72,
+      -5,
+      136,
+      50
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 101,
+       "lat": 3,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 113,
+       "lat": 13,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "chongqing",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le détroit de Malacca, entre la Malaisie et Sumatra.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Il est tout au sud, près de l’équateur.",
+     "explication": "Le **détroit de Malacca (B)** est stratégique : une part majeure de l’approvisionnement énergétique de la Chine y passe."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la mer où les tensions menacent les routes commerciales chinoises.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Elle borde le littoral au sud-est.",
+     "explication": "Les tensions en **mer de Chine méridionale (C)** menacent les routes commerciales."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la métropole de l’intérieur qui accueille aujourd’hui des industries venues du littoral.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Elle est desservie par le Yangzi et le rail.",
+     "explication": "**Chongqing (D)** accueille des industries grâce au rail et aux fleuves."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui pousse certaines industries à quitter le littoral ?",
+     "options": [
+      "La hausse des salaires et du coût du foncier",
+      "La disparition des ports",
+      "La fermeture des zones économiques spéciales",
+      "L’interdiction d’exporter par la mer"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux coûts qui augmentent sur la côte.",
+     "explication": "La **hausse des salaires**, la **congestion** et le coût du foncier poussent des industries vers l’intérieur, où elles sont desservies par le rail et les fleuves."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque vulnérabilité à ce qu’elle expose.",
+     "paires": [
+      [
+       "La dépendance aux détroits",
+       "L’approvisionnement énergétique"
+      ],
+      [
+       "Les tensions en mer de Chine méridionale",
+       "Les routes commerciales"
+      ],
+      [
+       "Les typhons et la montée du niveau marin",
+       "Les littoraux eux-mêmes"
+      ]
+     ],
+     "aide": "Énergie, routes, rivages.",
+     "explication": "Les **détroits** exposent l’**approvisionnement énergétique**, la **mer de Chine méridionale** les **routes commerciales**, les **typhons** et la **montée du niveau marin** les **littoraux eux-mêmes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b90c53d-6be0-5f47-8ce1-255fe02de3c5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faut-il quitter la côte ?",
+   "competence": "raisonner",
+   "situation": "Le directeur de l’usine Hexin Électronique hésite : rester sur la côte ou partir vers l’intérieur ? Aya, sa stagiaire, rassemble une note interne et des chiffres.",
+   "documents": [
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Note interne de l’entreprise",
+     "source": "Texte écrit pour l’exercice (entreprise imaginaire).",
+     "blocs": [
+      "À Dongguan, nos [[c|salaires]] ont augmenté de 500 euros en treize ans. Le prix du [[c|foncier]] explose et la [[c|congestion]] des routes retarde nos camions.",
+      "À Chongqing, desservie par le rail et le fleuve, une usine coûterait moins cher à faire fonctionner."
+     ]
+    },
+    {
+     "id": "salaires",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Salaire mensuel moyen d’un ouvrier",
+     "source": "Chiffres imaginés pour l’exercice, en euros.",
+     "categories": [
+      "Littoral",
+      "Intérieur"
+     ],
+     "series": [
+      {
+       "nom": "2010",
+       "valeurs": [
+        300,
+        200
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "2023",
+       "valeurs": [
+        800,
+        600
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Salaire",
+      "unite": "en euros par mois",
+      "min": 0,
+      "max": 900,
+      "pas": 100
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "note",
+     "enonce": "Touche les trois mots qui désignent les coûts qui poussent l’entreprise à partir.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Cherche ce qui augmente, et ce qui bloque les camions.",
+     "explication": "Les **salaires**, le **foncier** et la **congestion** poussent les industries à quitter le littoral."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’euros le salaire mensuel moyen sur le littoral a-t-il augmenté entre 2010 et 2023 ?",
+     "reponse": 500,
+     "unite": "€",
+     "aide": "Soustrais les deux barres du littoral.",
+     "explication": "800 − 300 = **500 €** de hausse sur la côte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2023, de combien d’euros le salaire du littoral dépasse-t-il celui de l’intérieur ?",
+     "reponse": 200,
+     "unite": "€",
+     "aide": "Compare les deux barres de 2023.",
+     "explication": "800 − 600 = **200 €** : l’intérieur reste moins cher, ce qui explique le rééquilibrage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle décision cette note prépare-t-elle ?",
+     "options": [
+      "Déplacer une partie de la production vers l’intérieur",
+      "Fermer toute activité en Chine",
+      "Doubler les effectifs sur le littoral",
+      "Installer l’usine au milieu du désert de Gobi"
+     ],
+     "reponse": 0,
+     "aide": "Relis le dernier paragraphe.",
+     "explication": "Face à la hausse des coûts, une partie des industries se déplace vers l’**intérieur** : c’est le **rééquilibrage** en cours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : pourquoi le littoral attire, ou ce qui le fragilise ?",
+     "categories": [
+      "Un atout du littoral",
+      "Une vulnérabilité"
+     ],
+     "items": [
+      [
+       "L’accès direct aux marchés mondiaux",
+       0
+      ],
+      [
+       "La proximité des zones économiques spéciales",
+       0
+      ],
+      [
+       "La main-d’œuvre migrante bon marché",
+       0
+      ],
+      [
+       "Les typhons",
+       1
+      ],
+      [
+       "La dépendance au détroit de Malacca",
+       1
+      ],
+      [
+       "Les tensions en mer de Chine méridionale",
+       1
+      ]
+     ],
+     "aide": "Un atout apporte un avantage ; une vulnérabilité expose à un risque.",
+     "explication": "Accès aux marchés, ZES et main-d’œuvre sont des **atouts** ; typhons, détroits et tensions maritimes sont des **vulnérabilités**."
+    }
+   ]
+  },
+  {
+   "chapitre": "521d5941-4d01-5a3a-94fa-79d2d33b6f26",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le village de Mingyu",
+   "competence": "analyser-texte",
+   "situation": "Mingyu, 14 ans, vit dans un village du centre de la Chine. Ses parents travaillent dans une usine de la côte : sa vie raconte celle de centaines de millions de ruraux.",
+   "documents": [
+    {
+     "id": "village",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le village de Mingyu",
+     "source": "Récit écrit pour l’exercice (village imaginaire).",
+     "blocs": [
+      "Mingyu vit avec sa grand-mère. Ses parents sont partis travailler à la ville : ils sont ce qu’on appelle des mingong. Dans les ruelles, on croise surtout des enfants et des personnes âgées.",
+      "Chaque mois, ses parents envoient de l’[[r|argent]] au village : il fait vivre toute la maison. Les champs appartiennent au collectif du village : la famille ne possède que le droit de les utiliser."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "village",
+     "enonce": "Touche le mot qui désigne ce que les parents envoient chaque mois (les remises).",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Qu’envoie-t-on à sa famille pour la faire vivre ?",
+     "explication": "Les **remises**, c’est de l’**argent** envoyé par un migrant à sa famille restée au village : il fait vivre une partie des campagnes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui vit surtout dans le village de Mingyu ?",
+     "options": [
+      "Des enfants et des personnes âgées",
+      "Des cadres et des ingénieurs",
+      "Des ouvriers venus de la ville",
+      "Des touristes étrangers"
+     ],
+     "reponse": 0,
+     "aide": "Les actifs sont partis à la ville.",
+     "explication": "Les **mingong** sont partis : les villages abritent surtout des **enfants** (« laissés à l’arrière ») et des **personnes âgées**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que possède la famille de Mingyu sur ses champs ?",
+     "options": [
+      "Seulement le droit de les utiliser",
+      "La pleine propriété, avec le droit de les vendre",
+      "Rien, ils n’ont jamais le droit d’y cultiver",
+      "La moitié de la propriété, l’autre moitié à l’État"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du récit.",
+     "explication": "La terre appartient à l’**État ou au collectif** : les paysans en ont l’**usage**, pas la propriété."
+    }
+   ]
+  },
+  {
+   "chapitre": "521d5941-4d01-5a3a-94fa-79d2d33b6f26",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des campagnes qui ne se ressemblent pas",
+   "competence": "lire-carte",
+   "situation": "Fang, lycéenne, veut montrer que les campagnes chinoises ne sont pas toutes semblables. Elle réunit une carte et le revenu moyen des ruraux et des urbains.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois types de campagnes chinoises",
+     "source": "Croquis simplifié d’après le cours ; les contours sont approximatifs.",
+     "fond": "monde",
+     "cadrage": [
+      72,
+      16,
+      136,
+      52
+     ],
+     "aires": [
+      {
+       "id": "ne",
+       "contour": [
+        [
+         123,
+         49
+        ],
+        [
+         133,
+         48
+        ],
+        [
+         134,
+         43
+        ],
+        [
+         125,
+         41.5
+        ],
+        [
+         121,
+         44
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "A"
+      },
+      {
+       "id": "ouest",
+       "contour": [
+        [
+         80,
+         42
+        ],
+        [
+         96,
+         42
+        ],
+        [
+         100,
+         34
+        ],
+        [
+         92,
+         30
+        ],
+        [
+         80,
+         32
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "etiquette": "B"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "c",
+       "lieu": "pekin",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "revenus",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Revenu annuel moyen par habitant, vers 2022",
+     "source": "Chiffres arrondis, en milliers de yuans.",
+     "categories": [
+      "Habitant des campagnes",
+      "Habitant des villes"
+     ],
+     "series": [
+      {
+       "nom": "Revenu",
+       "valeurs": [
+        20,
+        49
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Revenu",
+      "unite": "en milliers de yuans",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la région de grandes cultures céréalières mécanisées.",
+     "reponse": [
+      "ne"
+     ],
+     "aide": "Cherche les plaines du Nord-Est.",
+     "explication": "Les **plaines du Nord-Est (A)** sont spécialisées dans les grandes cultures céréalières mécanisées."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la région d’élevage pastoral pauvre, dans les marges de l’Ouest.",
+     "reponse": [
+      "ouest"
+     ],
+     "aide": "Elle est tout à l’ouest du pays.",
+     "explication": "Les **marges de l’Ouest (B)** relèvent d’un élevage pastoral pauvre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles activités se développent dans les campagnes périurbaines, autour de villes comme Pékin ?",
+     "options": [
+      "Le maraîchage et le tourisme",
+      "L’extraction de charbon et la pêche en haute mer",
+      "La culture céréalière sur de très grandes plaines",
+      "Le pastoralisme nomade"
+     ],
+     "reponse": 0,
+     "aide": "Les citadins sont tout près.",
+     "explication": "Près des villes, les campagnes se tournent vers le **maraîchage** et le **tourisme**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de revenu annuel entre un urbain et un rural, en milliers de yuans ?",
+     "reponse": 29,
+     "unite": "milliers",
+     "aide": "Soustrais les deux valeurs.",
+     "explication": "49 − 20 = **29 milliers de yuans** : l’écart de revenu entre villes et campagnes reste important."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque type de campagne à son agriculture.",
+     "paires": [
+      [
+       "Les plaines du Nord-Est",
+       "Mécanisée et céréalière"
+      ],
+      [
+       "Les deltas",
+       "Intensive"
+      ],
+      [
+       "Les campagnes périurbaines",
+       "Maraîchage et tourisme"
+      ],
+      [
+       "Les marges de l’Ouest",
+       "Pastorale et pauvre"
+      ]
+     ],
+     "aide": "Quatre types, quatre agricultures.",
+     "explication": "Nord-Est : **mécanisée et céréalière** ; deltas : **intensive** ; périurbain : **maraîchage et tourisme** ; Ouest : **pastorale et pauvre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "521d5941-4d01-5a3a-94fa-79d2d33b6f26",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Shuangqiao, village Taobao, et Hautes-Terres",
+   "competence": "analyser-document",
+   "situation": "Deux villages chinois n’ont rien en commun, ou presque : l’un vend ses paniers en ligne, l’autre se vide. Jia, étudiant, a recueilli un témoignage et noté quelques chiffres.",
+   "documents": [
+    {
+     "id": "entretien",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Entretien à Shuangqiao",
+     "source": "Entretien imaginé pour l’exercice (village imaginaire).",
+     "blocs": [
+      "« Chez nous, tout a changé quand nous avons appris à vendre nos paniers de bambou en [[w|ligne]]. Mon père, lui, ne paie plus de taxe agricole depuis 2006.",
+      "Mais la commune veut un parc industriel sur nos champs. Nous les cultivons, mais ils appartiennent au collectif : si le projet se fait, nous n’aurons pas notre mot à dire. »"
+     ]
+    },
+    {
+     "id": "villages",
+     "type": "tableau",
+     "titre": "Deux villages comparés",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Shuangqiao (vente en ligne)",
+      "Hautes-Terres (élevage pastoral)"
+     ],
+     "lignes": [
+      [
+       "Revenu moyen par habitant et par an",
+       "14 000 yuans",
+       "5 000 yuans"
+      ],
+      [
+       "Jeunes adultes présents au village",
+       "Beaucoup reviennent",
+       "Presque tous partis"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "entretien",
+     "enonce": "Touche le mot qui montre la modernisation d’un village par le numérique.",
+     "reponse": [
+      "w"
+     ],
+     "aide": "Cherche comment les paniers sont vendus.",
+     "explication": "Vendre **en ligne** est la marque d’un « village Taobao » : l’e-commerce agricole transforme certaines campagnes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart de revenu moyen entre les deux villages ?",
+     "reponse": 9000,
+     "unite": "yuans",
+     "aide": "Soustrais les deux valeurs de la première ligne.",
+     "explication": "14 000 − 5 000 = **9 000 yuans** par habitant et par an."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : signe de modernisation ou signe de fragilité ?",
+     "categories": [
+      "Modernisation",
+      "Fragilité"
+     ],
+     "items": [
+      [
+       "L’e-commerce agricole",
+       0
+      ],
+      [
+       "La mécanisation et les serres",
+       0
+      ],
+      [
+       "Les enfants laissés à l’arrière",
+       1
+      ],
+      [
+       "L’élevage pastoral pauvre des marges de l’Ouest",
+       1
+      ],
+      [
+       "Un écart de revenu important avec les villes",
+       1
+      ]
+     ],
+     "aide": "Les campagnes ne se sont pas seulement vidées : elles se sont spécialisées.",
+     "explication": "Certaines campagnes se **modernisent** (e-commerce, mécanisation) ; d’autres restent **fragiles** (pauvreté, enfants laissés à l’arrière, écart de revenu)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure à son effet attendu.",
+     "paires": [
+      [
+       "La suppression de la taxe agricole (2006)",
+       "Une charge de moins pour les paysans"
+      ],
+      [
+       "L’assouplissement du hukou",
+       "Une installation en ville plus facile"
+      ],
+      [
+       "Les plans de revitalisation rurale",
+       "Des équipements et des services"
+      ],
+      [
+       "Les villages Taobao",
+       "La vente en ligne depuis la campagne"
+      ]
+     ],
+     "aide": "Une mesure, un effet.",
+     "explication": "Les **politiques publiques** : **taxe agricole supprimée en 2006**, **hukou assoupli**, **revitalisation rurale** (équipements), **villages Taobao** (vente en ligne)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que risque la famille si le projet de parc industriel se réalise ?",
+     "options": [
+      "Perdre ses champs, dont elle n’a que l’usage",
+      "Devenir propriétaire de tout le parc",
+      "Recevoir automatiquement un permis de résidence urbain",
+      "Voir disparaître la vente en ligne"
+     ],
+     "reponse": 0,
+     "aide": "Elle cultive les champs, mais ne les possède pas.",
+     "explication": "La terre appartient à l’**État ou au collectif** : les paysans n’ont que l’**usage**, ce qui **fragilise leur position** face aux projets d’aménagement."
+    }
+   ]
+  }
+ ]
+}

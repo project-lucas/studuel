@@ -1,0 +1,1989 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "6fc59ef3-1889-5c9b-b53b-f2d05282def5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les malheurs d’un sage de Babylone",
+   "competence": "se-reperer-temps",
+   "situation": "Tu dois raconter à l’oral le destin de Zadig. Repère les étapes de ses malheurs, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "destin",
+     "type": "chaine",
+     "titre": "Le destin de Zadig",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Zadig, jeune Babylonien sage et vertueux"
+      },
+      {
+       "id": "n2",
+       "texte": "Accusé de vol pour avoir décrit chien et cheval"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il fuit et il est réduit en esclavage"
+      },
+      {
+       "id": "n5",
+       "texte": "Il retrouve le trône et la reine"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il devient premier ministre et aime la reine Astarté",
+      "Il est nommé juge suprême et épouse la fille du roi",
+      "Il part en pèlerinage et retrouve son maître Sétoc",
+      "Il écrit un traité sur la justice pour le roi Moabdar"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’ascension, juste avant la chute.",
+     "explication": "Zadig devient **premier ministre** et **aime la reine Astarté** : c’est l’ascension qui précède sa chute."
+    },
+    {
+     "type": "zone",
+     "document": "destin",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’épisode où la sagacité de Zadig lui vaut d’abord des ennuis.",
+     "aide": "Il a décrit des animaux qu’il n’avait jamais vus.",
+     "explication": "Zadig est accusé de **vol** pour avoir décrit un chien et un cheval sans les avoir vus : sa sagacité l’expose."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Zadig",
+       "Le sage persécuté"
+      ],
+      [
+       "Astarté",
+       "La reine aimée"
+      ],
+      [
+       "Sétoc",
+       "Le marchand qui achète Zadig, puis devient son ami"
+      ],
+      [
+       "Jesrad",
+       "L’ange déguisé en ermite"
+      ]
+     ],
+     "aide": "Chacun apparaît à un moment précis du destin de Zadig.",
+     "explication": "**Zadig** est persécuté, **Astarté** est la reine qu’il aime, **Sétoc** l’achète puis devient son ami, **Jesrad** est un ange sous l’habit d’un ermite."
+    }
+   ]
+  },
+  {
+   "chapitre": "6fc59ef3-1889-5c9b-b53b-f2d05282def5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un cheval et un chien, un procès",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu étudies la page la plus célèbre du conte. Lis la scène écrite pour l’exercice, puis complète le tableau.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans un bois, près de Babylone",
+     "blocs": [
+      "Des serviteurs cherchent un cheval et un chien échappés. Zadig, qui passe, les décrit avec précision sans les avoir jamais vus : il a lu les [[t|traces]] dans le sable.",
+      "Aussitôt, on l’accuse de les avoir [[v|volés]]."
+     ],
+     "source": "Texte écrit pour l’exercice, inspiré d’un épisode de *Zadig* de Voltaire (1748)"
+    },
+    {
+     "id": "episode",
+     "type": "tableau",
+     "titre": "L’épisode du chien et du cheval",
+     "colonnes": [
+      "Épisode",
+      "Ce qu’il montre"
+     ],
+     "lignes": [
+      [
+       "Ce que fait Zadig",
+       "Il décrit les animaux sans les avoir vus, d’après leurs traces"
+      ],
+      [
+       "Sa portée",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit comment Zadig devine les deux animaux.",
+     "aide": "Il ne les a pas vus : il lit autre chose.",
+     "explication": "Zadig lit des **traces** : il raisonne à partir d’indices, comme plus tard un détective."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit de quoi on accuse Zadig.",
+     "aide": "Une accusation à la fin de la scène.",
+     "explication": "On l’accuse de les avoir **volés** : sa sagacité lui vaut d’abord des ennuis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un ancêtre du raisonnement policier",
+      "Un hymne à la justice des rois de Babylone",
+      "Une leçon sur les dangers des voyages en mer",
+      "Une preuve que Zadig a bien volé les animaux"
+     ],
+     "reponse": 0,
+     "aide": "Zadig raisonne à partir de traces, comme un enquêteur.",
+     "explication": "La page est souvent citée comme un **ancêtre du raisonnement policier**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois moments de la scène dans l’ordre.",
+     "items": [
+      "Zadig observe des traces dans le sable",
+      "Il décrit les animaux sans les avoir vus",
+      "On l’accuse de vol"
+     ],
+     "aide": "Il observe, il déduit, puis il en paie le prix.",
+     "explication": "Zadig **observe**, puis **décrit**, puis il est **accusé** : sa sagacité se retourne contre lui."
+    }
+   ]
+  },
+  {
+   "chapitre": "6fc59ef3-1889-5c9b-b53b-f2d05282def5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tout mal engendre-t-il un bien ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent ce que Voltaire pense de la providence dans Zadig. Lis le dialogue et la phrase de l’ermite, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Elsa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elsa",
+       "texte": "Voltaire pense que tout ce qui arrive est pour le mieux : il le dit dans Zadig."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Dans Zadig, oui : il est encore proche de l’[[o|optimisme]] de Leibniz. Il changera d’avis dans Candide."
+      }
+     ]
+    },
+    {
+     "id": "mal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les mots de l’ermite",
+     "blocs": [
+      "« Il n’y a point de [[m|mal]] dont il ne naisse un [[b|bien]]. »"
+     ],
+     "source": "Voltaire, *Zadig* (1748), explication de l’ermite Jesrad"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le conte défend la providence",
+       "Chaque mal engendre un bien dans l’ordre général",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mal",
+     "multiple": true,
+     "reponse": [
+      "m",
+      "b"
+     ],
+     "enonce": "Touche les deux mots que la phrase de l’ermite oppose.",
+     "aide": "Un mot qui fait souffrir, un mot qui console.",
+     "explication": "La phrase oppose le **mal** et le **bien** : l’un engendre l’autre dans l’ordre général."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot de Karim qui nomme la philosophie dont Voltaire est encore proche.",
+     "aide": "Karim cite le nom de Leibniz juste après.",
+     "explication": "Voltaire est encore proche de l’**optimisme** de Leibniz ; *Candide* le démolira après le tremblement de terre de Lisbonne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Jesrad, ange déguisé en ermite, commet des actes apparemment monstrueux",
+      "Zadig renonce à Astarté et vit en ermite pour le reste de ses jours",
+      "Sétoc vend Zadig comme esclave et le laisse mourir de faim",
+      "Moabdar fait exécuter Zadig sur la place publique de Babylone"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’ermite qui explique, par des actes surprenants.",
+     "explication": "**Jesrad**, ange déguisé, commet sous ses yeux des actes **apparemment monstrueux**, puis explique que chaque mal engendre un bien."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : est-ce un malheur subi par Zadig, ou une cible de la satire de Voltaire ?",
+     "categories": [
+      "Un malheur de Zadig",
+      "Une cible de la satire"
+     ],
+     "items": [
+      [
+       "Des trahisons amoureuses",
+       0
+      ],
+      [
+       "Sa fuite et son esclavage",
+       0
+      ],
+      [
+       "La justice et ses procès absurdes",
+       1
+      ],
+      [
+       "Les courtisans jaloux",
+       1
+      ],
+      [
+       "Les querelles religieuses",
+       1
+      ]
+     ],
+     "aide": "Les malheurs frappent le héros ; la satire vise la société.",
+     "explication": "Zadig **subit** trahisons, fuite et esclavage ; Voltaire **vise** la **justice**, les **courtisans** et les **querelles religieuses**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c8bd3b4-9aa8-5127-9e0d-20fb8c82f0db",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Zazie arrive à Paris",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ton oral sur Zazie dans le métro. Lis la carte d’identité du roman, puis complète le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Zazie dans le métro",
+     "sousTitre": "Raymond Queneau",
+     "emoji": "🚇",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1959"
+      },
+      {
+       "texte": "Héroïne",
+       "valeur": "Zazie, gamine délurée de province"
+      },
+      {
+       "texte": "Séjour",
+       "valeur": "Deux jours à Paris"
+      },
+      {
+       "texte": "Son désir",
+       "valeur": "Prendre le métro"
+      }
+     ],
+     "pied": "Obstacle : le métro est en grève",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Zazie",
+       "La gamine au vocabulaire cru"
+      ],
+      [
+       "Gabriel",
+       "?"
+      ],
+      [
+       "Marceline",
+       "Sa femme, douce et discrète"
+      ],
+      [
+       "Charles",
+       "Le chauffeur de taxi, ami de Gabriel"
+      ],
+      [
+       "Jeanne Lalochère",
+       "La mère de Zazie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du roman.",
+     "texte": "Zazie vient passer ___ jours à Paris et veut absolument prendre le ___.",
+     "reponses": [
+      [
+       "deux",
+       "2"
+      ],
+      [
+       "métro",
+       "metro"
+      ]
+     ],
+     "banque": [
+      "deux",
+      "cinq",
+      "métro",
+      "taxi",
+      "train",
+      "fiacre"
+     ],
+     "aide": "La fiche indique la durée du séjour et le désir de Zazie.",
+     "explication": "Zazie vient passer **deux** jours à Paris et veut absolument prendre le **métro**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Gabriel (la case « ? ») ?",
+     "options": [
+      "L’oncle de Zazie, danseur de charme dans un cabaret",
+      "Le chauffeur de taxi qui conduit Zazie à Paris",
+      "Le mari de la mère de Zazie, resté en province",
+      "Le directeur du cabaret où travaille Marceline"
+     ],
+     "reponse": 0,
+     "aide": "Zazie est chez lui pendant son séjour parisien.",
+     "explication": "Gabriel est l’**oncle** de Zazie, **danseur de charme** dans un cabaret : c’est chez lui qu’elle séjourne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque titre ou chaque nom à son fait.",
+     "paires": [
+      [
+       "Exercices de style",
+       "Livre de Queneau paru en 1947"
+      ],
+      [
+       "Zazie dans le métro",
+       "Roman paru en 1959, grand succès"
+      ],
+      [
+       "Louis Malle",
+       "Adapte le roman au cinéma en 1960"
+      ],
+      [
+       "L’Oulipo",
+       "Fondé par Queneau en 1960 avec François Le Lionnais"
+      ]
+     ],
+     "aide": "Ces repères tiennent en quatorze ans, de 1947 à 1960.",
+     "explication": "*Exercices de style* date de **1947**, *Zazie* de **1959**, le film de Malle et l’**Oulipo** de **1960**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c8bd3b4-9aa8-5127-9e0d-20fb8c82f0db",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux jours, un métro en grève",
+   "competence": "se-reperer-temps",
+   "situation": "Zazie ne veut qu’une chose, prendre le métro. Suis ses deux jours à Paris, puis relie les personnages à leurs répliques.",
+   "documents": [
+    {
+     "id": "jours",
+     "type": "chaine",
+     "titre": "Les deux jours de Zazie",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Zazie débarque à Paris chez son oncle Gabriel"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle veut prendre le métro : il est en grève"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Endormie, elle est ramenée à sa mère"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle répond : « J’ai vieilli. »"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Une bagarre générale à la brasserie, une virée dans Paris",
+      "Un voyage à Londres avec Charles et la veuve Mouaque",
+      "Un concours de danse où Gabriel remporte le premier prix",
+      "Une enquête de police sur la disparition de Laverdure"
+     ],
+     "reponse": 0,
+     "aide": "Zazie ne prend pas le métro, mais elle visite Paris autrement.",
+     "explication": "Faute de métro, Zazie vit une **bagarre générale** à la brasserie et une **virée dans Paris**."
+    },
+    {
+     "type": "zone",
+     "document": "jours",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où Zazie répond à la question « qu’est-ce que tu as fait ? ».",
+     "aide": "C’est la dernière de la chaîne.",
+     "explication": "À la fin, elle répond « **J’ai vieilli** » : une réplique inattendue pour une gamine de deux jours à Paris."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le distingue.",
+     "paires": [
+      [
+       "Laverdure",
+       "Le perroquet qui répète « Tu causes, tu causes, c’est tout ce que tu sais faire »"
+      ],
+      [
+       "Trouscaillon",
+       "Il change sans cesse d’identité et de fonction"
+      ],
+      [
+       "La veuve Mouaque",
+       "La compagne de route"
+      ],
+      [
+       "Charles",
+       "Le chauffeur de taxi, ami de Gabriel"
+      ]
+     ],
+     "aide": "Chacun a un trait de comédie ou un rôle précis.",
+     "explication": "**Laverdure** répète, **Trouscaillon** change d’identité, la **veuve Mouaque** accompagne, **Charles** conduit."
+    }
+   ]
+  },
+  {
+   "chapitre": "4c8bd3b4-9aa8-5127-9e0d-20fb8c82f0db",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Doukipudonktan",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves se disputent sur la langue du roman. Lis un passage écrit pour l’exercice, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Samia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samia",
+       "texte": "Le premier mot du roman, « Doukipudonktan », est une faute d’orthographe de Queneau."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Non : c’est du français [[f|parlé]], transcrit tel qu’on l’entend."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur le trottoir",
+     "blocs": [
+      "— [[p|Ouskonva]] ? demanda la gamine, plantée au milieu du trottoir.",
+      "— [[p|Tuvoirabyentô]], répondit l’oncle, et ils s’en allèrent."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Queneau (œuvre protégée : aucune citation)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot de Karim qui qualifie le français transcrit par Queneau.",
+     "aide": "Karim l’oppose à une orthographe correcte.",
+     "explication": "Queneau écrit le français **parlé** en le transcrivant phonétiquement : c’est son « néo-français »."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots écrits comme on les prononce.",
+     "aide": "Lis-les à voix haute : tu entends une phrase entière.",
+     "explication": "**Ouskonva** (« où est-ce qu’on va ») et **Tuvoirabyentô** (« tu verras bientôt ») sont écrits **comme ils se prononcent**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « Doukipudonktan », premier mot du roman ?",
+     "options": [
+      "D’où qu’ils puent donc tant ?",
+      "D’où qu’il vient donc tant ?",
+      "Dis-moi qui pue donc tant ?",
+      "D’où qu’on part donc tant ?"
+     ],
+     "reponse": 0,
+     "aide": "Prononce le mot à voix haute en le coupant en syllabes.",
+     "explication": "« Doukipudonktan » transcrit « **D’où qu’ils puent donc tant ?** » : le roman s’ouvre sur une phrase entendue, non écrite."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du roman : jeu sur la langue, ou intrigue ?",
+     "categories": [
+      "Jeu sur la langue",
+      "Intrigue"
+     ],
+     "items": [
+      [
+       "La transcription phonétique des mots",
+       0
+      ],
+      [
+       "Les jeux de mots et les parodies",
+       0
+      ],
+      [
+       "Le métro est en grève",
+       1
+      ],
+      [
+       "La bagarre générale dans la brasserie",
+       1
+      ],
+      [
+       "Les ruptures de registre",
+       0
+      ]
+     ],
+     "aide": "Le jeu travaille les mots ; l’intrigue raconte des événements.",
+     "explication": "La **transcription**, les **jeux de mots** et les **ruptures de registre** jouent sur la langue ; la **grève** et la **bagarre** font l’intrigue."
+    }
+   ]
+  },
+  {
+   "chapitre": "5543e7c3-0644-5939-90a1-25a6911df05c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un récit dans un récit",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ton oral sur Manon Lescaut. Place le roman dans son siècle, puis comprends qui raconte quoi.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Manon Lescaut dans son siècle",
+     "debut": 1710,
+     "fin": 1790,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "roi",
+       "date": 1715,
+       "nom": "Mort de Louis XIV"
+      },
+      {
+       "id": "man",
+       "date": 1731,
+       "nom": "Manon Lescaut"
+      },
+      {
+       "id": "rev",
+       "date": 1789,
+       "nom": "Révolution"
+      }
+     ]
+    },
+    {
+     "id": "cadre",
+     "type": "chaine",
+     "titre": "Le dispositif du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Renoncour croise à Pacy des filles qu’on déporte"
+      },
+      {
+       "id": "n2",
+       "texte": "À Calais, deux ans après, il retrouve Des Grieux"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "man"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution du roman de l’abbé Prévost.",
+     "aide": "Elle tombe entre deux repères de l’histoire de France.",
+     "explication": "Le roman paraît en **1731**, sous le règne de Louis XV, bien avant la Révolution."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Des Grieux lui raconte son histoire avec Manon",
+      "Renoncour raconte à Des Grieux son propre voyage",
+      "Manon écrit à Renoncour pour justifier ses actes",
+      "Tiberge confie à Renoncour le secret de Des Grieux"
+     ],
+     "reponse": 0,
+     "aide": "Le roman est un récit rapporté par le marquis.",
+     "explication": "Des Grieux **raconte son histoire** au marquis, qui la recueille : tout le roman est donc **sa parole**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le point de vue du roman.",
+     "texte": "Tout le roman est la parole de ___, à la ___ personne, racontée après coup.",
+     "reponses": [
+      [
+       "Des Grieux",
+       "des grieux"
+      ],
+      [
+       "première",
+       "1re"
+      ]
+     ],
+     "banque": [
+      "Des Grieux",
+      "Manon",
+      "Tiberge",
+      "première",
+      "troisième",
+      "deuxième"
+     ],
+     "aide": "Nous ne voyons Manon que par les yeux de celui qui l’aime.",
+     "explication": "Tout le roman est la parole de **Des Grieux**, à la **première** personne : on ne voit Manon que par ses yeux."
+    }
+   ]
+  },
+  {
+   "chapitre": "5543e7c3-0644-5939-90a1-25a6911df05c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’Amiens à la Louisiane",
+   "competence": "se-reperer-temps",
+   "situation": "Du coup de foudre à la mort dans le désert, l’intrigue passe par plusieurs lieux. Remets-la en ordre, puis relie les personnages à leur trait.",
+   "documents": [
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "Les lieux du roman (en désordre)",
+     "colonnes": [
+      "Lieu",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "La Louisiane",
+       "?"
+      ],
+      [
+       "Saint-Sulpice",
+       "Des Grieux s’y retire après la trahison de Manon avec M. de B…"
+      ],
+      [
+       "Amiens",
+       "Rencontre de Des Grieux, dix-sept ans, et de Manon : coup de foudre et fuite"
+      ],
+      [
+       "Saint-Lazare et l’Hôpital",
+       "Des Grieux est enfermé à Saint-Lazare, Manon à l’Hôpital"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre lieux dans l’ordre de l’intrigue.",
+     "items": [
+      "Amiens",
+      "Saint-Sulpice",
+      "Saint-Lazare et l’Hôpital",
+      "La Louisiane"
+     ],
+     "aide": "On part du coup de foudre et on finit par l’exil.",
+     "explication": "L’intrigue va d’**Amiens** à **Saint-Sulpice**, puis à **Saint-Lazare et l’Hôpital**, enfin à la **Louisiane**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il en Louisiane (la case « ? ») ?",
+     "options": [
+      "Manon meurt au désert ; Des Grieux l’enterre de ses mains",
+      "Manon épouse Synnelet et reste vivre sur la colonie",
+      "Des Grieux retrouve Tiberge et rentre en France avec lui",
+      "Manon et Des Grieux fondent une exploitation prospère"
+     ],
+     "reponse": 0,
+     "aide": "Le roman finit dans un désert, loin de la France.",
+     "explication": "En Louisiane, après le duel avec Synnelet et la fuite, **Manon meurt** et Des Grieux l’**enterre de ses mains**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son trait.",
+     "paires": [
+      [
+       "Des Grieux",
+       "Noble et sincère, mais aussi menteur et voleur"
+      ],
+      [
+       "Manon",
+       "Jamais analysée de l’intérieur, tendre et infidèle"
+      ],
+      [
+       "Tiberge",
+       "L’ami fidèle, toujours écouté, jamais suivi"
+      ],
+      [
+       "Lescaut",
+       "Le frère de Manon, qui l’entraîne dans la vie de jeu"
+      ]
+     ],
+     "aide": "Le roman oppose un narrateur contradictoire à ceux qui l’entourent.",
+     "explication": "**Des Grieux** est double, **Manon** insaisissable, **Tiberge** fidèle mais ignoré, **Lescaut** entraîne au jeu."
+    }
+   ]
+  },
+  {
+   "chapitre": "5543e7c3-0644-5939-90a1-25a6911df05c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui nous parle de Manon ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Manon est-elle une manipulatrice ? Lis un passage écrit pour l’exercice, puis tranche.",
+   "documents": [
+    {
+     "id": "aveu",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Des Grieux se justifie",
+     "blocs": [
+      "Je ne veux point m’excuser. J’avais dix-sept ans, un cœur trop tendre, et la [[f|fatalité]] fit le reste.",
+      "Manon était belle, et je ne vis rien d’autre : comment lui en vouloir ?"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de l’abbé Prévost"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Elsa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elsa",
+       "texte": "Manon est une manipulatrice : elle ruine Des Grieux."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Mais on ne la voit que par les [[y|yeux]] de Des Grieux, qui se justifie."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aveu",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot par lequel Des Grieux présente sa déchéance.",
+     "aide": "Il ne se dit pas coupable : il parle d’une force qui l’emporte.",
+     "explication": "Des Grieux présente sa déchéance comme une **fatalité** : c’est une manière de s’excuser."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "y"
+     ],
+     "enonce": "Touche le mot de Karim qui montre le point de vue du roman.",
+     "aide": "Karim parle de la façon dont on voit Manon.",
+     "explication": "On ne voit Manon que par les **yeux** de Des Grieux : c’est le point à ne jamais oublier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le dispositif du roman permet-il d’appuyer ?",
+     "options": [
+      "Le portrait de Manon est celui d’un homme qui l’aime et se justifie",
+      "Manon expose elle-même ses pensées à un marquis attentif",
+      "Le narrateur juge sévèrement Des Grieux à la fin du récit",
+      "Le roman est un témoignage neutre et sans point de vue"
+     ],
+     "reponse": 0,
+     "aide": "Qui parle, après coup, à la première personne ?",
+     "explication": "Nous voyons Manon **par les yeux de l’homme qui l’aime et qui se justifie** : son portrait est partial."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "Le récit rapporté par Renoncour",
+       "Un récit dans un récit, qui donne la parole à Des Grieux"
+      ],
+      [
+       "La narration à la première personne, après coup",
+       "Des Grieux se justifie et présente son sort comme une fatalité"
+      ],
+      [
+       "Les coups de théâtre, évasions et duels",
+       "Une accélération qui ne laisse jamais le temps de juger"
+      ]
+     ],
+     "aide": "Chaque procédé joue sur la façon dont on lit l’histoire.",
+     "explication": "Le **cadre** donne la parole ; la **première personne** justifie ; l’**accélération** empêche de juger : c’est le « plaisir du romanesque »."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e533eb3-48e0-5a8e-82e7-10fc36ceea98",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un talisman en trois parties",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur La Peau de chagrin. Lis la carte d’identité du roman, puis complète le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Peau de chagrin",
+     "sousTitre": "Honoré de Balzac",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1831"
+      },
+      {
+       "texte": "Place dans l’œuvre",
+       "valeur": "Études philosophiques, La Comédie humaine"
+      },
+      {
+       "texte": "Parties",
+       "valeur": "Le Talisman · La Femme sans cœur · L’Agonie"
+      },
+      {
+       "texte": "Objet central",
+       "valeur": "Une peau d’onagre"
+      }
+     ],
+     "pied": "Parcours : les romans de l’énergie",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il représente"
+     ],
+     "lignes": [
+      [
+       "Raphaël de Valentin",
+       "L’intelligence et l’ambition, brûlées par l’envie de vivre"
+      ],
+      [
+       "Fœdora",
+       "La société parisienne, séduisante et vide"
+      ],
+      [
+       "Pauline",
+       "?"
+      ],
+      [
+       "L’antiquaire",
+       "Le vieillard qui a survécu en ne désirant rien"
+      ],
+      [
+       "Rastignac",
+       "L’ami cynique, qui enseigne l’art de réussir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du roman.",
+     "texte": "Publié en ___, le roman appartient aux ___ de La Comédie humaine.",
+     "reponses": [
+      [
+       "1831"
+      ],
+      [
+       "Études philosophiques",
+       "études philosophiques",
+       "Etudes philosophiques"
+      ]
+     ],
+     "banque": [
+      "1831",
+      "1834",
+      "Études philosophiques",
+      "Scènes de la vie privée"
+     ],
+     "aide": "La fiche donne la date et la place du roman dans l’œuvre de Balzac.",
+     "explication": "Publié en **1831**, le roman ouvre les **Études philosophiques** de *La Comédie humaine*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de parties compte le roman ?",
+     "reponse": 3,
+     "unite": "parties",
+     "aide": "Compte les titres séparés par des points.",
+     "explication": "Le roman compte **trois parties** : *Le Talisman*, *La Femme sans cœur*, *L’Agonie*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente Pauline (la case « ? ») ?",
+     "options": [
+      "L’amour désintéressé, longtemps ignoré parce que pauvre",
+      "La société parisienne, séduisante mais froide",
+      "Le cynisme de l’ami qui réussit dans le monde",
+      "La sagesse du vieillard qui ne désire rien"
+     ],
+     "reponse": 0,
+     "aide": "Elle s’oppose à Fœdora : l’une a un cœur, l’autre non.",
+     "explication": "Pauline représente l’**amour désintéressé**, longtemps ignoré **parce qu’elle est pauvre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e533eb3-48e0-5a8e-82e7-10fc36ceea98",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pacte",
+   "competence": "analyser-texte",
+   "situation": "Raphaël vient de tout perdre. Lis le résumé de l’épisode du talisman, puis la phrase gravée sur la peau.",
+   "documents": [
+    {
+     "id": "pacte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Chez l’antiquaire",
+     "blocs": [
+      "Raphaël, ruiné, a perdu son dernier napoléon au jeu. Chez l’antiquaire, il reçoit une peau d’onagre qui exauce tous les [[s|souhaits]]. Il souhaite aussitôt un banquet, et le trouve en sortant. Mais à chaque souhait, la peau [[r|rétrécit]]."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après *La Peau de chagrin* de Balzac (1831)"
+    },
+    {
+     "id": "inscr",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La phrase gravée sur la peau",
+     "blocs": [
+      "« Si tu me possèdes, tu posséderas tout, mais ta [[v|vie]] m’appartiendra. »"
+     ],
+     "source": "Honoré de Balzac, *La Peau de chagrin* (1831)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pacte",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui dit ce que fait la peau à chaque souhait exaucé.",
+     "aide": "Elle devient plus petite chaque fois.",
+     "explication": "À chaque souhait, la peau **rétrécit** : c’est la vie de Raphaël qui se mesure."
+    },
+    {
+     "type": "zone",
+     "document": "inscr",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit ce que le possesseur de la peau doit en échange.",
+     "aide": "Le prix est plus grand que de l’argent.",
+     "explication": "Le possesseur donne sa **vie** : « ta vie m’appartiendra »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois parties du roman dans l’ordre.",
+     "items": [
+      "Le Talisman",
+      "La Femme sans cœur",
+      "L’Agonie"
+     ],
+     "aide": "Le roman va de la rencontre avec la peau à la mort.",
+     "explication": "Le roman va du **Talisman** à **La Femme sans cœur** (récit rétrospectif), puis à **L’Agonie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle loi du roman tient dans la phrase gravée ?",
+     "options": [
+      "Vouloir, c’est vivre ; vivre, c’est se consumer",
+      "Travailler, c’est mériter ; mériter, c’est recevoir",
+      "Aimer, c’est souffrir ; souffrir, c’est renoncer",
+      "Savoir, c’est pouvoir ; pouvoir, c’est jouir"
+     ],
+     "reponse": 0,
+     "aide": "La peau exauce les souhaits, mais elle rétrécit.",
+     "explication": "Toute la loi du roman tient là : **vouloir, c’est vivre ; vivre, c’est se consumer**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e533eb3-48e0-5a8e-82e7-10fc36ceea98",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un objet impossible dans un Paris réel",
+   "competence": "argumenter",
+   "situation": "Une élève prétend que le roman est un conte de fées. Son camarade n’est pas d’accord. Lis le dialogue et le tableau, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "La Peau de chagrin est un conte de fées : rien n’y est réel."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Au contraire : l’objet est impossible, mais le monde autour est minutieusement [[d|documenté]]."
+      }
+     ]
+    },
+    {
+     "id": "real",
+     "type": "tableau",
+     "titre": "Le pacte fantastique",
+     "colonnes": [
+      "L’élément impossible",
+      "Le monde qui l’entoure"
+     ],
+     "lignes": [
+      [
+       "Le talisman, emprunté au conte",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot de Hugo qui dit comment le monde du roman est décrit.",
+     "aide": "Le contraire d’un décor vague.",
+     "explication": "Le monde du roman est minutieusement **documenté** : c’est le réalisme fantastique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un Paris minutieusement décrit : maison de jeu, antiquaire, orgie",
+      "Un royaume imaginaire gouverné par une fée",
+      "Une île déserte où personne n’a jamais vécu",
+      "Un village de province sans aucune description précise"
+     ],
+     "reponse": 0,
+     "aide": "Le roman est fantastique par l’objet, réaliste par le décor.",
+     "explication": "Autour du talisman, un **Paris minutieusement décrit** : la maison de jeu du Palais-Royal, le magasin d’antiquités, l’orgie chez Taillefer."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : est-il impossible, ou minutieusement documenté ?",
+     "categories": [
+      "Élément impossible",
+      "Monde documenté"
+     ],
+     "items": [
+      [
+       "Une peau qui rétrécit à chaque souhait",
+       0
+      ],
+      [
+       "Des souhaits aussitôt exaucés",
+       0
+      ],
+      [
+       "La maison de jeu du Palais-Royal",
+       1
+      ],
+      [
+       "Le magasin d’antiquités",
+       1
+      ],
+      [
+       "L’orgie chez Taillefer",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : cela pourrait-il exister dans le Paris de 1830 ?",
+     "explication": "Le **talisman** et ses effets sont **impossibles** ; la **maison de jeu**, le **magasin** et l’**orgie** appartiennent à un Paris **documenté**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit ce mélange du fantastique et du réel ?",
+     "options": [
+      "La fable en devient d’autant plus dure",
+      "Le roman devient un simple conte pour enfants",
+      "La peau cesse d’avoir un sens symbolique",
+      "Le lecteur prend le roman pour un reportage"
+     ],
+     "reponse": 0,
+     "aide": "Un objet impossible placé dans un monde parfaitement exact.",
+     "explication": "Un objet impossible dans un monde **parfaitement documenté** rend la fable **d’autant plus dure**."
+    }
+   ]
+  },
+  {
+   "chapitre": "268285b6-96b8-59a5-92b8-fb6eded739ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Vouloir, pouvoir, savoir",
+   "competence": "analyser-texte",
+   "situation": "L’antiquaire explique à Raphaël ce qui use la vie. Lis ses mots, puis relie chaque verbe à son effet.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les mots de l’antiquaire",
+     "blocs": [
+      "« Vouloir nous [[b|brûle]] et Pouvoir nous [[d|détruit]] ; mais SAVOIR laisse notre faible organisation dans un perpétuel état de calme. »"
+     ],
+     "source": "Honoré de Balzac, *La Peau de chagrin* (1831), parole de l’antiquaire"
+    },
+    {
+     "id": "verbes",
+     "type": "tableau",
+     "titre": "Trois verbes",
+     "colonnes": [
+      "Verbe",
+      "Son effet sur la vie"
+     ],
+     "lignes": [
+      [
+       "Vouloir",
+       "Il brûle"
+      ],
+      [
+       "Pouvoir",
+       "Il détruit"
+      ],
+      [
+       "Savoir",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le verbe qui dit l’effet de Vouloir.",
+     "aide": "C’est le premier effet cité.",
+     "explication": "**Vouloir** nous **brûle** : le désir consume la vie."
+    },
+    {
+     "type": "zone",
+     "document": "loi",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe qui dit l’effet de Pouvoir.",
+     "aide": "C’est le deuxième effet cité.",
+     "explication": "**Pouvoir** nous **détruit** : exercer sa puissance épuise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de Savoir (la case « ? ») ?",
+     "options": [
+      "Il conserve la vie, dans un perpétuel état de calme",
+      "Il détruit la vie, mais plus lentement que Pouvoir",
+      "Il brûle la vie, comme Vouloir mais en secret",
+      "Il exauce les souhaits sans rien coûter à la vie"
+     ],
+     "reponse": 0,
+     "aide": "Le troisième verbe s’oppose aux deux premiers.",
+     "explication": "**Savoir** laisse la vie dans un **perpétuel état de calme** : c’est le seul verbe qui **conserve**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe à son effet.",
+     "paires": [
+      [
+       "Vouloir",
+       "Il brûle"
+      ],
+      [
+       "Pouvoir",
+       "Il détruit"
+      ],
+      [
+       "Savoir",
+       "Il conserve"
+      ]
+     ],
+     "aide": "Un verbe consume, un autre ruine, le dernier préserve.",
+     "explication": "**Vouloir** brûle, **Pouvoir** détruit, **Savoir** conserve : Raphaël l’apprend **trop tard**."
+    }
+   ]
+  },
+  {
+   "chapitre": "268285b6-96b8-59a5-92b8-fb6eded739ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La même force qui crée et qui détruit",
+   "competence": "raisonner",
+   "situation": "Raphaël essaie tout pour sauver sa peau. Lis ses tentatives, puis range ce que son énergie produit.",
+   "documents": [
+    {
+     "id": "tentatives",
+     "type": "tableau",
+     "titre": "Les tentatives de Raphaël",
+     "colonnes": [
+      "Tentative",
+      "Son issue"
+     ],
+     "lignes": [
+      [
+       "Mesurer la peau au crayon",
+       "Elle rétrécit quand même"
+      ],
+      [
+       "Consulter le physicien, le chimiste, le mécanicien",
+       "?"
+      ],
+      [
+       "Ne plus rien désirer : régime, silence, retraite",
+       "Pauline revient : en la désirant, il meurt"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’issue de la consultation des savants (la case « ? ») ?",
+     "options": [
+      "Tous échouent à étirer la peau",
+      "L’un d’eux réussit à ralentir son rétrécissement",
+      "Le chimiste la remplace par une peau neuve",
+      "Le physicien la cache dans un laboratoire fermé"
+     ],
+     "reponse": 0,
+     "aide": "Balzac fait de la science moderne un personnage impuissant.",
+     "explication": "**Tous échouent** à étirer ou à altérer la peau : la science moderne est **impuissante**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque épisode : est-ce la création ou la destruction que produit l’énergie de Raphaël ?",
+     "categories": [
+      "Création",
+      "Destruction"
+     ],
+     "items": [
+      [
+       "Écrire une Théorie de la volonté dans une mansarde",
+       0
+      ],
+      [
+       "Travailler avec acharnement quand il est pauvre",
+       0
+      ],
+      [
+       "L’orgie",
+       1
+      ],
+      [
+       "Le jeu",
+       1
+      ],
+      [
+       "La passion pour Fœdora",
+       1
+      ]
+     ],
+     "aide": "Le même élan pousse Raphaël vers l’œuvre ou vers la ruine.",
+     "explication": "La **Théorie de la volonté** et le **travail** sont de la **création** ; l’**orgie**, le **jeu** et la **passion pour Fœdora** sont de la **destruction**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le roman de l’énergie de Raphaël ?",
+     "options": [
+      "Elle ne se divise pas : la même force crée et détruit",
+      "Elle est toujours bonne si elle sert un travail",
+      "Elle est toujours mauvaise quand elle mène au plaisir",
+      "Elle disparaît dès que Raphaël devient riche"
+     ],
+     "reponse": 0,
+     "aide": "Le roman ne choisit pas entre création et destruction.",
+     "explication": "Le roman **ne condamne pas l’énergie** : il montre qu’elle **ne se divise pas**. Le génie et la ruine ont la **même source**."
+    }
+   ]
+  },
+  {
+   "chapitre": "268285b6-96b8-59a5-92b8-fb6eded739ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une thèse, un style",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent de la morale du roman. Lis le passage écrit pour l’exercice, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "inv",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Chez l’antiquaire",
+     "blocs": [
+      "Tout s’entassait là : [[e|armures]], [[e|idoles]], [[e|tableaux]], [[e|porcelaines]], une ville entière de siècles morts, [[h|immense]], [[h|vertigineuse]], dont aucun inventaire ne verrait la fin."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Balzac"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Balzac condamne le désir : c’est une faute morale."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Non : il montre que l’énergie ne se [[d|divise]] pas, la même force crée et détruit."
+      }
+     ]
+    },
+    {
+     "id": "axes",
+     "type": "tableau",
+     "titre": "Un axe de dissertation",
+     "colonnes": [
+      "Question",
+      "Ce que le roman répond"
+     ],
+     "lignes": [
+      [
+       "Le désir est-il une force de vie ou de mort ?",
+       "?"
+      ],
+      [
+       "La science peut-elle contre le destin ?",
+       "L’échec des savants dit non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inv",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les quatre objets de l’énumération.",
+     "aide": "Cherche les noms d’objets séparés par des virgules.",
+     "explication": "L’**énumération** accumule **armures**, **idoles**, **tableaux** et **porcelaines** : c’est la description saturée de Balzac."
+    },
+    {
+     "type": "zone",
+     "document": "inv",
+     "multiple": true,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche les deux adjectifs qui amplifient l’image de la ville de siècles.",
+     "aide": "Ils disent la démesure.",
+     "explication": "**Immense** et **vertigineuse** sont des **hyperboles** : le style de Balzac pousse tout à l’excès."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe de Tom qui dit ce que l’énergie ne peut pas faire.",
+     "aide": "Tom répond à Inès en parlant d’une énergie indivisible.",
+     "explication": "L’énergie ne se **divise** pas : on ne peut pas garder la création et écarter la destruction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Il refuse de choisir : le désir est les deux",
+      "Il y voit uniquement une force de vie",
+      "Il y voit uniquement une force de mort",
+      "Il ne s’intéresse pas à cette question"
+     ],
+     "reponse": 0,
+     "aide": "Le roman ne tranche pas entre vie et mort.",
+     "explication": "Le roman **refuse de choisir** : le désir est **à la fois** force de vie et de mort."
+    }
+   ]
+  },
+  {
+   "chapitre": "6106cd81-6bc9-5c86-8240-d07a338b4574",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux livres en un volume",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ton oral sur le volume Sido, suivi de Les Vrilles de la vigne. Place Colette sur la frise, puis complète le tableau.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Colette et ses deux livres",
+     "debut": 1870,
+     "fin": 1960,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1873,
+       "nom": "Naissance"
+      },
+      {
+       "id": "vri",
+       "date": 1908,
+       "nom": "Les Vrilles"
+      },
+      {
+       "id": "sido",
+       "date": 1930,
+       "nom": "Sido"
+      },
+      {
+       "id": "mort",
+       "date": 1954,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "sido",
+     "type": "tableau",
+     "titre": "Les trois parties de Sido",
+     "colonnes": [
+      "Partie",
+      "Qui elle porte"
+     ],
+     "lignes": [
+      [
+       "Sido",
+       "La mère, Sidonie Landoy"
+      ],
+      [
+       "Le Capitaine",
+       "Le père, ancien militaire amputé"
+      ],
+      [
+       "Les Sauvages",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "sido"
+     ],
+     "enonce": "Sur la frise, touche l’année de parution de Sido.",
+     "aide": "Elle est postérieure à Les Vrilles de la vigne.",
+     "explication": "*Sido* paraît en **1930**, longtemps après *Les Vrilles de la vigne* (1908)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui porte la partie « Les Sauvages » (la case « ? ») ?",
+     "options": [
+      "Les frères et la sœur de Colette",
+      "Les animaux de Colette, Toby-Chien et Kiki",
+      "Les voisins du jardin de Sido",
+      "Les artistes que Colette rencontre au music-hall"
+     ],
+     "reponse": 0,
+     "aide": "Après la mère et le père, qui reste dans la famille ?",
+     "explication": "Les **Sauvages** sont les **frères et la sœur** de Colette, silencieux et indépendants, à peine domestiqués."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la naissance de Sido.",
+     "texte": "Colette écrit Sido en ___, longtemps après la mort de sa ___.",
+     "reponses": [
+      [
+       "1930"
+      ],
+      [
+       "mère",
+       "mere"
+      ]
+     ],
+     "banque": [
+      "1930",
+      "1908",
+      "mère",
+      "fille",
+      "sœur"
+     ],
+     "aide": "Regarde la frise, puis la première partie du livre.",
+     "explication": "Colette écrit *Sido* en **1930**, longtemps après la mort de sa **mère**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6106cd81-6bc9-5c86-8240-d07a338b4574",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un recueil sans intrigue",
+   "competence": "analyser-document",
+   "situation": "Tu dois montrer que Les Vrilles de la vigne n’est pas un roman. Lis le tableau, puis range les textes des deux livres.",
+   "documents": [
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Les textes des Vrilles de la vigne",
+     "colonnes": [
+      "Type de texte",
+      "Exemples"
+     ],
+     "lignes": [
+      [
+       "Le texte liminaire",
+       "Le rossignol pris dans les vrilles, qui chante pour ne plus s’attacher"
+      ],
+      [
+       "Les dialogues d’animaux",
+       "?"
+      ],
+      [
+       "Les souvenirs d’enfance",
+       "« Nuit blanche », « Jour gris », « Le Dernier Feu »"
+      ],
+      [
+       "Les chroniques",
+       "Les femmes, la scène, le maquillage"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quels sont les dialogues d’animaux (la case « ? ») ?",
+     "options": [
+      "La chienne Toby-Chien et la chatte Kiki-la-Doucette",
+      "Le rossignol et le jardin de la mère de Colette",
+      "Le Capitaine et ses livres reliés restés blancs",
+      "La mère de Colette et les chenilles du jardin"
+     ],
+     "reponse": 0,
+     "aide": "Un chien et un chat, aux noms de personnages.",
+     "explication": "**Toby-Chien** et **Kiki-la-Doucette** dialoguent : l’animal y a le même statut que l’humain."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : appartient-il à Sido (1930) ou à Les Vrilles de la vigne (1908) ?",
+     "categories": [
+      "Sido (1930)",
+      "Les Vrilles de la vigne (1908)"
+     ],
+     "items": [
+      [
+       "Trois parties : la mère, le père, les frères et la sœur",
+       0
+      ],
+      [
+       "Des textes écrits pour la presse, sans intrigue commune",
+       1
+      ],
+      [
+       "Des dialogues entre animaux",
+       1
+      ],
+      [
+       "Le Capitaine dont les volumes reliés sont blancs",
+       0
+      ],
+      [
+       "Un rossignol pris dans les vrilles",
+       1
+      ]
+     ],
+     "aide": "L’un est un récit de mémoire ; l’autre rassemble des textes de formes variées.",
+     "explication": "*Sido* est un **récit de mémoire** en trois parties ; *Les Vrilles* réunit des **textes de presse** de formes variées."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la forme des Vrilles.",
+     "texte": "La forme est ___ : conte, chronique, poème en prose, ___.",
+     "reponses": [
+      [
+       "libre"
+      ],
+      [
+       "dialogue"
+      ]
+     ],
+     "banque": [
+      "libre",
+      "fixe",
+      "dialogue",
+      "sonnet"
+     ],
+     "aide": "Le recueil mêle des genres sans règle commune.",
+     "explication": "La forme est **libre** : conte, chronique, poème en prose, **dialogue**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6106cd81-6bc9-5c86-8240-d07a338b4574",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Regarder, c’est célébrer",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur la nature de Sido. Lis un passage écrit pour l’exercice, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "jardin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Après l’orage",
+     "blocs": [
+      "Après l’orage, le jardin sent la [[o|poussière]] mouillée et la [[o|menthe]] écrasée. Sido, pieds nus sur le gravier tiède, [[v|guette]] le ciel, nomme chaque plante et rend aux chenilles leur feuille."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Colette"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Sido est l’autobiographie complète de Colette."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Non : c’est un récit de [[m|mémoire]], écrit du côté de la perte."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "On ne célèbre bien que ce qu’on n’a plus",
+       "Le livre est écrit longtemps après la mort de la mère",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jardin",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots qui nomment des odeurs.",
+     "aide": "Cherche ce que sent le jardin.",
+     "explication": "La **poussière** mouillée et la **menthe** écrasée : Colette écrit par **sensations**."
+    },
+    {
+     "type": "zone",
+     "document": "jardin",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe qui dit l’attention de Sido aux signes du temps.",
+     "aide": "Elle regarde le ciel avant de bouger.",
+     "explication": "Sido **guette** le ciel : elle est attentive aux signes du temps et apprend à sa fille à regarder."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot de Karim qui nomme la nature du livre.",
+     "aide": "Karim l’oppose à une autobiographie complète.",
+     "explication": "*Sido* est un récit de **mémoire** : ni roman, ni autobiographie suivie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Sido refuse de quitter son jardin, même pour voir sa fille",
+      "Sido voyage à travers l’Europe avec sa fille Colette",
+      "Sido dirige un théâtre de music-hall à Paris",
+      "Sido écrit des chroniques pour un journal du soir"
+     ],
+     "reponse": 0,
+     "aide": "La mère reste attachée à un lieu qu’elle aime.",
+     "explication": "Sido **refuse de quitter son jardin**, même pour voir sa fille : ce souvenir se célèbre d’autant mieux qu’il est perdu."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Colette à son effet.",
+     "paires": [
+      [
+       "Les notations concrètes",
+       "Le monde se sent avant de s’expliquer"
+      ],
+      [
+       "Les énumérations rythmées",
+       "Des phrases amples, qui dessinent le jardin"
+      ],
+      [
+       "L’animal au même statut que l’humain",
+       "Un culte du vivant"
+      ]
+     ],
+     "aide": "Chaque procédé célèbre le monde par les sens.",
+     "explication": "Les **notations concrètes** donnent les sensations, les **énumérations** l’ampleur, l’**animal** le culte du vivant."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2811 @@
+{
+ "niveau": "1re",
+ "matiere": "droit-economie",
+ "exercices": [
+  {
+   "chapitre": "00d72e69-5f60-5886-bf83-64cd973be88b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les biens de Salomé, étudiante et commerçante",
+   "competence": "lire-tableau",
+   "situation": "Salomé, étudiante à Nantes, vend des bougies sur Internet. Elle possède plusieurs biens, matériels ou non : le tableau dit ce qu’elle en fait.",
+   "documents": [
+    {
+     "id": "biens",
+     "type": "tableau",
+     "titre": "Les biens de Salomé",
+     "source": "Situation imaginée pour l’exercice.",
+     "colonnes": [
+      "Bien de Salomé",
+      "Ce qu’elle en fait"
+     ],
+     "lignes": [
+      [
+       "Un appartement à Nantes",
+       "Elle loue une chambre à un étudiant, 640 € par mois pendant 9 mois"
+      ],
+      [
+       "Un scooter",
+       "Elle s’en sert pour aller en cours"
+      ],
+      [
+       "Le nom « Bulle de Lune »",
+       "Elle l’a fait déposer à l’INPI pour sa boutique en ligne"
+      ],
+      [
+       "Ses droits d’auteur sur les photos du site",
+       "Elle a pris elle-même toutes les photos"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "biens",
+     "multiple": true,
+     "enonce": "Touche les deux biens qui n’ont pas d’existence matérielle.",
+     "reponse": [
+      "r2c0",
+      "r3c0"
+     ],
+     "aide": "Un bien incorporel ne se touche pas : c’est un droit, un signe, une création.",
+     "explication": "Le nom déposé (une **marque**) et les **droits d’auteur** sont des biens incorporels : on ne peut pas les toucher. L’appartement et le scooter sont des biens corporels."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel total de loyers Salomé encaisse-t-elle sur les 9 mois de location de la chambre ?",
+     "reponse": 5760,
+     "unite": "€",
+     "aide": "Multiplie le loyer mensuel par le nombre de mois.",
+     "explication": "640 × 9 = **5 760 €**. Percevoir ces loyers, c’est exercer le *fructus*, l’un des attributs du droit de propriété."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque geste de Salomé à l’attribut du droit de propriété qu’il exerce.",
+     "paires": [
+      [
+       "Rouler en scooter pour aller en cours",
+       "Usus : utiliser la chose"
+      ],
+      [
+       "Encaisser les loyers de la chambre",
+       "Fructus : percevoir les fruits"
+      ],
+      [
+       "Vendre son scooter à la fin de l’année",
+       "Abusus : disposer de la chose"
+      ]
+     ],
+     "aide": "Utiliser, percevoir les fruits, disposer : trouve le verbe de chaque geste.",
+     "explication": "Se servir du bien = **usus** ; en tirer un revenu = **fructus** ; le vendre, le donner ou le détruire = **abusus**."
+    }
+   ]
+  },
+  {
+   "chapitre": "00d72e69-5f60-5886-bf83-64cd973be88b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fumée de la pizzeria de Karim",
+   "competence": "argumenter",
+   "situation": "Lucie vit au-dessus de la pizzeria « Chez Karim », ouverte en mars. Elle a écrit au gérant : le four à bois enfume son salon. Karim, lui, répond qu’il respecte toutes les règles de sécurité.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La lettre de Lucie Perrin",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Monsieur, depuis l’ouverture de votre pizzeria, votre four à bois rejette [[f|chaque]] [[f|soir]], de 18 h à 23 h, une épaisse fumée qui entre dans mon salon.",
+      "Mon linge sent la cendre, je ne peux plus ouvrir mes fenêtres, et cela dure depuis des mois. Je vous demande de réparer ce dommage."
+     ]
+    },
+    {
+     "id": "frais",
+     "type": "tableau",
+     "titre": "Les dépenses de Lucie depuis mars",
+     "source": "Montants imaginés pour l’exercice.",
+     "colonnes": [
+      "Dépense",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Lavage des rideaux",
+       85
+      ],
+      [
+       "Linge repris à la teinturerie",
+       120
+      ],
+      [
+       "Purificateur d’air",
+       195
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche les mots qui montrent que la gêne se répète régulièrement.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Cherche l’expression qui donne le rythme de la nuisance.",
+     "explication": "**« chaque soir »** : la fumée revient tous les jours. Un trouble répété et durable est plus facilement jugé anormal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lucie doit-elle prouver une faute de Karim pour obtenir réparation ?",
+     "options": [
+      "Non : il suffit que le trouble dépasse les inconvénients normaux du voisinage",
+      "Oui : sans faute de Karim, aucune réparation n’est jamais possible",
+      "Oui : elle doit prouver que Karim veut volontairement lui nuire",
+      "Non : mais seulement si Karim a déjà été condamné pour une faute"
+     ],
+     "reponse": 0,
+     "aide": "Dans le trouble anormal de voisinage, regarde le trouble subi, pas le comportement du voisin.",
+     "explication": "Le voisin obtient réparation **sans avoir à prouver une faute** : il suffit que le trouble soit anormal. Que Karim respecte les règles de sécurité ne change rien."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le raisonnement juridique appliqué à cette situation.",
+     "items": [
+      "Qualification : Karim exerce son droit de propriété, Lucie subit une fumée répétée",
+      "Règle : nul ne doit causer à autrui un trouble anormal de voisinage",
+      "Solution : Lucie peut obtenir réparation et des mesures pour réduire la fumée"
+     ],
+     "aide": "On qualifie les faits, puis on énonce la règle, enfin on conclut.",
+     "explication": "La méthode est toujours la même : **qualification, règle, solution**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme de frais Lucie peut-elle réclamer au total, en euros ?",
+     "reponse": 400,
+     "unite": "€",
+     "aide": "Additionne les trois dépenses du tableau.",
+     "explication": "85 + 120 + 195 = **400 €** de frais à réclamer en réparation du trouble."
+    }
+   ]
+  },
+  {
+   "chapitre": "00d72e69-5f60-5886-bf83-64cd973be88b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le renard de Camille sur 200 T-shirts",
+   "competence": "analyser-document",
+   "situation": "Camille, illustratrice, découvre que Yanis vend des T-shirts ornés de son dessin de renard. Il lui répond par SMS. Que dit le droit de la propriété intellectuelle ?",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les SMS de Camille et Yanis",
+     "source": "Échange imaginé pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Yanis",
+       "texte": "J’ai [[c|imprimé]] ton renard sur 200 T-shirts, je les vends 25 € pièce."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Tu ne m’as rien demandé !"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Tu n’as rien déposé nulle part, donc c’est libre de droits."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Je l’ai dessiné en 2024. Il est à moi, et je veux qu’on cite mon nom."
+      }
+     ]
+    },
+    {
+     "id": "durees",
+     "type": "tableau",
+     "titre": "Les durées de protection",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Droit",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "Droit moral de l’auteur",
+       "Perpétuel et inaliénable"
+      ],
+      [
+       "Droits patrimoniaux de l’auteur",
+       "Sa vie entière + 70 ans après sa mort"
+      ],
+      [
+       "Marque déposée",
+       "10 ans, renouvelables indéfiniment"
+      ],
+      [
+       "Brevet",
+       "20 ans"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui décrit la reproduction du dessin faite sans autorisation.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche le verbe de la première réplique de Yanis.",
+     "explication": "Yanis a **imprimé** le dessin sur des T-shirts : c’est une reproduction, un droit patrimonial réservé à l’auteur."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment s’appelle l’atteinte à un droit de propriété intellectuelle ? (un mot)",
+     "reponse": [
+      "contrefaçon",
+      "la contrefaçon",
+      "contrefacon"
+     ],
+     "placeholder": "Un mot",
+     "aide": "Ce mot désigne aussi la fabrication de faux sacs de luxe.",
+     "explication": "Reproduire une œuvre sans l’accord de son auteur est une **contrefaçon**, sanctionnée civilement et pénalement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser de l’argument de Yanis : « Tu n’as rien déposé nulle part, donc c’est libre » ?",
+     "options": [
+      "Il a tort : une œuvre originale est protégée dès sa création, sans aucune formalité",
+      "Il a raison : seule une œuvre déposée à l’INPI est protégée par la loi",
+      "Il a raison : un dessin n’est protégé qu’après dix ans d’existence",
+      "Il a tort : mais Camille doit d’abord payer pour obtenir cette protection"
+     ],
+     "reponse": 0,
+     "aide": "Le dépôt à l’INPI concerne les marques et les brevets, pas le droit d’auteur.",
+     "explication": "Le droit d’auteur naît **dès la création** de l’œuvre originale, sans dépôt ni formalité. Le dépôt à l’INPI est réservé à la propriété industrielle."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque prérogative de Camille dans la bonne catégorie de droits.",
+     "categories": [
+      "Droit moral",
+      "Droits patrimoniaux"
+     ],
+     "items": [
+      [
+       "Être citée comme l’auteur du dessin",
+       0
+      ],
+      [
+       "S’opposer à une déformation du renard",
+       0
+      ],
+      [
+       "Autoriser ou interdire l’impression sur des T-shirts",
+       1
+      ],
+      [
+       "Toucher une rémunération sur les ventes",
+       1
+      ]
+     ],
+     "aide": "Le droit moral protège la personne de l’auteur ; les droits patrimoniaux protègent son revenu.",
+     "explication": "Paternité et respect de l’œuvre relèvent du **droit moral** ; reproduction et rémunération des **droits patrimoniaux**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le dessinateur fictif Armand Roche est mort en 1985. En quelle année ses droits patrimoniaux s’éteignent-ils ?",
+     "reponse": 2055,
+     "aide": "Reprends la durée des droits patrimoniaux dans le tableau.",
+     "explication": "Les droits patrimoniaux durent la vie de l’auteur + 70 ans : 1985 + 70 = **2055**. Son droit moral, lui, ne s’éteint jamais."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d89c016-ea86-5018-ae44-91c9ddc802e5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui fait quoi à Valmont ?",
+   "competence": "lire-tableau",
+   "situation": "Valmont est une petite ville imaginaire. Cinq acteurs y rythment la vie économique : le tableau dit ce que fait chacun.",
+   "documents": [
+    {
+     "id": "acteurs",
+     "type": "tableau",
+     "titre": "Les acteurs de Valmont",
+     "source": "Ville et acteurs imaginés pour l’exercice.",
+     "colonnes": [
+      "Acteur",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "La famille Benali",
+       "Elle achète ses courses avec ses salaires"
+      ],
+      [
+       "La boulangerie « Au fournil »",
+       "Elle vend son pain à un prix qui couvre ses coûts"
+      ],
+      [
+       "La Banque du Centre",
+       "Elle prête de l’argent aux entreprises de la ville"
+      ],
+      [
+       "La mairie",
+       "Elle gère l’école publique, gratuite, financée par les impôts"
+      ],
+      [
+       "Cycles Berg, entreprise allemande",
+       "Elle vend des vélos aux habitants de Valmont"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque acteur à son agent économique.",
+     "paires": [
+      [
+       "La famille Benali",
+       "Ménages"
+      ],
+      [
+       "La boulangerie « Au fournil »",
+       "Société non financière"
+      ],
+      [
+       "La Banque du Centre",
+       "Société financière"
+      ],
+      [
+       "La mairie",
+       "Administration publique"
+      ],
+      [
+       "Cycles Berg",
+       "Reste du monde"
+      ]
+     ],
+     "aide": "Relis la colonne « Ce qu’il fait » : consommer, produire, financer, redistribuer, échanger avec l’étranger.",
+     "explication": "Consommer = **ménage** ; produire pour vendre = **société non financière** ; financer = **société financière** ; services gratuits = **administration publique** ; acteur étranger = **reste du monde**."
+    },
+    {
+     "type": "zone",
+     "document": "acteurs",
+     "enonce": "Touche la case qui décrit une production non marchande.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Une production non marchande est gratuite ou presque : elle ne se vend pas à son coût.",
+     "explication": "L’école publique est **gratuite**, financée par les impôts : c’est une production non marchande. Le pain et les vélos, eux, sont vendus."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ce que produisent les acteurs de Valmont.",
+     "categories": [
+      "Bien",
+      "Service"
+     ],
+     "items": [
+      [
+       "Les baguettes de la boulangerie",
+       0
+      ],
+      [
+       "Les cours de l’école publique",
+       1
+      ],
+      [
+       "Les vélos de Cycles Berg",
+       0
+      ],
+      [
+       "Le prêt accordé par la Banque du Centre",
+       1
+      ]
+     ],
+     "aide": "Un bien est matériel et se stocke ; un service est immatériel.",
+     "explication": "Baguettes et vélos sont des **biens** matériels ; l’enseignement et le prêt sont des **services**, immatériels."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d89c016-ea86-5018-ae44-91c9ddc802e5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un samedi à 55 euros",
+   "competence": "calculer",
+   "situation": "Théo a un samedi libre. Il hésite entre un concert et un petit boulot. Le soir, il commandera une pizza à partager : aura-t-il encore faim pour la dernière part ?",
+   "documents": [
+    {
+     "id": "options",
+     "type": "tableau",
+     "titre": "Les options de Théo pour son samedi",
+     "source": "Situation et montants imaginés pour l’exercice.",
+     "colonnes": [
+      "Option",
+      "Durée",
+      "Gain ou prix"
+     ],
+     "lignes": [
+      [
+       "Job à la pizzeria",
+       "5 h",
+       "11 € de l’heure"
+      ],
+      [
+       "Baby-sitting",
+       "5 h",
+       "40 € en tout"
+      ],
+      [
+       "Tondre des pelouses",
+       "5 h",
+       "45 € en tout"
+      ],
+      [
+       "Concert",
+       "5 h",
+       "Place à 20 €"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "pizza",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La satisfaction de Théo à chaque part de pizza",
+     "source": "Notes imaginées pour l’exercice.",
+     "categories": [
+      "1re part",
+      "2e part",
+      "3e part",
+      "4e part",
+      "5e part"
+     ],
+     "series": [
+      {
+       "nom": "Satisfaction apportée par la part",
+       "valeurs": [
+        10,
+        7,
+        4,
+        2,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Satisfaction",
+      "unite": "sur 10",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Part mangée"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien Théo gagnerait-il en travaillant les 5 heures à la pizzeria ?",
+     "reponse": 55,
+     "unite": "€",
+     "aide": "Multiplie le tarif horaire par la durée.",
+     "explication": "11 × 5 = **55 €**. C’est le meilleur gain possible pour ce samedi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Théo va au concert, quel est le coût total de sa soirée, place comprise et gain perdu compris ?",
+     "reponse": 75,
+     "unite": "€",
+     "aide": "Ajoute au prix de la place la valeur de la meilleure option à laquelle il renonce.",
+     "explication": "Le coût d’opportunité est la meilleure option abandonnée : le job à **55 €**. Coût total : 20 + 55 = **75 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Théo choisit finalement le baby-sitting. Quel est son coût d’opportunité ?",
+     "options": [
+      "55 €, le gain du job à la pizzeria",
+      "40 €, le gain du baby-sitting",
+      "45 €, le gain des pelouses tondues",
+      "95 €, la somme de deux gains"
+     ],
+     "reponse": 0,
+     "aide": "Parmi les options abandonnées, retiens celle qui rapporte le plus.",
+     "explication": "Le coût d’opportunité est la valeur de la **meilleure** option abandonnée : entre 55 € et 45 €, c’est **55 €**."
+    },
+    {
+     "type": "zone",
+     "document": "pizza",
+     "enonce": "Touche la première part qui apporte moins de 3 points de satisfaction.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Lis la hauteur des barres de gauche à droite : repère la première sous 3.",
+     "explication": "C’est la **4e part** (2 points). L’utilité marginale est décroissante : plus on mange, moins la part suivante apporte."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d89c016-ea86-5018-ae44-91c9ddc802e5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien de cookies Maëlle doit-elle cuire ?",
+   "competence": "modeliser",
+   "situation": "Maëlle vend des cookies faits maison. Plus elle en cuit dans la journée, plus le dernier lui coûte cher (four, beurre, temps). Jusqu’où produire ?",
+   "documents": [
+    {
+     "id": "couts",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Coût marginal et recette marginale",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500"
+     ],
+     "series": [
+      {
+       "nom": "Coût marginal",
+       "valeurs": [
+        1.2,
+        1.8,
+        2.4,
+        3,
+        3.6
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Recette marginale (prix 3 €)",
+       "valeurs": [
+        3,
+        3,
+        3,
+        3,
+        3
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Euros par cookie",
+      "unite": "€",
+      "min": 0,
+      "max": 4,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Cookies cuits dans la journée"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "noel",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le marché de Noël",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "En décembre, Maëlle tient un stand au marché de Noël. La demande est telle qu’elle vend chaque cookie 3,60 €. Ses coûts de production restent identiques."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couts",
+     "enonce": "Avec un prix de vente de 3 €, touche la production où le coût marginal est égal à la recette marginale.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point où les deux courbes se croisent.",
+     "explication": "Les courbes se croisent à **400 cookies** : Cm = Rm = 3 €. C’est l’optimum de Maëlle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Maëlle cuisait 500 cookies, combien perdrait-elle sur le dernier cookie ?",
+     "reponse": 0.6,
+     "unite": "€",
+     "aide": "Compare, à 500 cookies, le coût marginal et le prix de vente.",
+     "explication": "À 500 : Cm = 3,60 € et Rm = 3 €. Le dernier cookie fait perdre 3,60 − 3 = **0,60 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maëlle cuit aujourd’hui 200 cookies à 3 € pièce. Que lui conseille le raisonnement à la marge ?",
+     "options": [
+      "Augmenter sa production, car chaque cookie rapporte plus qu’il ne coûte",
+      "Réduire sa production, car chaque cookie coûte plus qu’il ne rapporte",
+      "La maintenir, car 200 est un chiffre rond et facile à gérer",
+      "La maintenir, car le coût marginal est inférieur au coût moyen"
+     ],
+     "reponse": 0,
+     "aide": "À 200, compare le coût marginal (1,80 €) à la recette marginale (3 €).",
+     "explication": "À 200 cookies, Rm (3 €) dépasse Cm (1,80 €) : chaque cookie de plus rapporte 1,20 €. Il faut **augmenter** la production."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au marché de Noël, le prix passe à 3,60 €. Jusqu’à combien de cookies Maëlle a-t-elle intérêt à produire ?",
+     "reponse": 500,
+     "aide": "Cherche la production où le coût marginal vaut 3,60 €.",
+     "explication": "Avec Rm = 3,60 €, l’égalité Cm = Rm se produit à **500 cookies**. Quand le prix monte, l’optimum monte aussi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle de décision du producteur.",
+     "texte": "Un producteur augmente sa production tant que la recette ___ dépasse le coût ___.",
+     "reponses": [
+      [
+       "marginale"
+      ],
+      [
+       "marginal"
+      ]
+     ],
+     "banque": [
+      "marginale",
+      "marginal",
+      "moyenne",
+      "total"
+     ],
+     "aide": "Ce sont les mêmes mots que sur les courbes du graphique.",
+     "explication": "Tant que la recette **marginale** dépasse le coût **marginal**, une unité de plus augmente le profit : on produit."
+    }
+   ]
+  },
+  {
+   "chapitre": "94492a47-450c-5ae4-9f9b-5b469b5f3a7f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le circuit entre ménages et entreprises",
+   "competence": "observer-schema",
+   "situation": "Dans un pays très simplifié, il n’y a que deux agents : les ménages et les entreprises. Le schéma montre ce qu’ils s’échangent.",
+   "documents": [
+    {
+     "id": "circuit",
+     "type": "schema",
+     "titre": "Un circuit économique élémentaire",
+     "source": "Schéma simplifié pour l’exercice.",
+     "largeur": 360,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 20,
+       "l": 80,
+       "h": 190,
+       "arrondi": 10,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ménages"
+      },
+      {
+       "forme": "rect",
+       "x": 270,
+       "y": 20,
+       "l": 80,
+       "h": 190,
+       "arrondi": 10,
+       "teinte": "jaune",
+       "motif": "clair",
+       "texte": "Entreprises"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        50
+       ],
+       "a": [
+        270,
+        50
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 37,
+       "l": 150,
+       "h": 26,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Travail",
+       "id": "travail",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        95
+       ],
+       "a": [
+        90,
+        95
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 82,
+       "l": 150,
+       "h": 26,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Salaires",
+       "id": "salaires",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        140
+       ],
+       "a": [
+        90,
+        140
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 127,
+       "l": 150,
+       "h": 26,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Biens et services",
+       "id": "biens",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        185
+       ],
+       "a": [
+        270,
+        185
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 172,
+       "l": 150,
+       "h": 26,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Dépenses",
+       "id": "depenses",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuit",
+     "enonce": "Touche le flux réel qui part des ménages vers les entreprises.",
+     "reponse": [
+      "travail"
+     ],
+     "aide": "Un flux réel est un bien, un service ou du travail, pas de l’argent.",
+     "explication": "Le **travail** est fourni par les ménages aux entreprises : c’est un flux réel. Les salaires, eux, sont un flux monétaire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque flux du schéma dans sa catégorie.",
+     "categories": [
+      "Flux réel",
+      "Flux monétaire"
+     ],
+     "items": [
+      [
+       "Le travail",
+       0
+      ],
+      [
+       "Les biens et services",
+       0
+      ],
+      [
+       "Les salaires",
+       1
+      ],
+      [
+       "Les dépenses de consommation",
+       1
+      ]
+     ],
+     "aide": "Ce qui se compte en euros est un flux monétaire.",
+     "explication": "Travail et biens et services sont des flux **réels** ; salaires et dépenses sont des flux **monétaires**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle du circuit.",
+     "texte": "À chaque flux réel correspond un flux monétaire en sens ___.",
+     "reponses": [
+      [
+       "inverse",
+       "contraire",
+       "opposé"
+      ]
+     ],
+     "banque": [
+      "inverse",
+      "identique",
+      "variable",
+      "croisé"
+     ],
+     "aide": "Regarde les flèches : le travail va vers les entreprises, et le salaire ?",
+     "explication": "Le travail va vers les entreprises, le salaire vers les ménages : les flux monétaires circulent en sens **inverse** des flux réels."
+    }
+   ]
+  },
+  {
+   "chapitre": "94492a47-450c-5ae4-9f9b-5b469b5f3a7f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pizzas ou gâteaux : qui fait quoi ?",
+   "competence": "raisonner",
+   "situation": "Maya et Noé tiennent ensemble un stand de pizzas et de gâteaux. Chacun a deux heures de travail. Faut-il que chacun fasse un peu de tout ?",
+   "documents": [
+    {
+     "id": "prod",
+     "type": "tableau",
+     "titre": "Ce que chacun produit en une heure",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Producteur",
+      "Pizzas",
+      "Gâteaux"
+     ],
+     "lignes": [
+      [
+       "Maya",
+       12,
+       3
+      ],
+      [
+       "Noé",
+       6,
+       3
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Calcule le coût d’opportunité d’un gâteau pour chacun.",
+     "texte": "Pour Maya, un gâteau coûte ___ pizzas ; pour Noé, un gâteau coûte ___ pizzas.",
+     "reponses": [
+      [
+       "4"
+      ],
+      [
+       "2"
+      ]
+     ],
+     "aide": "Divise le nombre de pizzas par le nombre de gâteaux produits dans la même heure.",
+     "explication": "Maya : 12 ÷ 3 = **4** pizzas par gâteau. Noé : 6 ÷ 3 = **2** pizzas par gâteau."
+    },
+    {
+     "type": "zone",
+     "document": "prod",
+     "enonce": "Touche le producteur qui a l’avantage comparatif dans les gâteaux.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "C’est celui pour qui un gâteau coûte le moins de pizzas.",
+     "explication": "**Noé** : un gâteau ne lui coûte que 2 pizzas, contre 4 pour Maya. C’est lui qui doit se concentrer sur les gâteaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chacun partage d’abord ses 2 h (1 h de pizzas, 1 h de gâteaux). Puis Maya fait 2 h de pizzas et Noé 2 h de gâteaux. Combien de pizzas en plus pour le même nombre de gâteaux ?",
+     "reponse": 6,
+     "aide": "Calcule le total de pizzas dans chaque cas, puis la différence.",
+     "explication": "Sans spécialisation : 12 + 6 = 18 pizzas et 3 + 3 = 6 gâteaux. Avec : 24 pizzas et 6 gâteaux. Gain : 24 − 18 = **6 pizzas**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Noé est moins efficace que Maya en pizzas. A-t-il intérêt à échanger avec elle ?",
+     "options": [
+      "Oui : il se spécialise là où son désavantage est le plus faible",
+      "Non : il ne peut rien produire mieux que Maya",
+      "Non : un producteur moins efficace perd toujours à l’échange",
+      "Oui : mais seulement s’il devient meilleur que Maya en pizzas"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’idée de David Ricardo : un avantage comparatif, pas absolu.",
+     "explication": "Même moins efficace en tout, Noé a un **avantage comparatif** dans les gâteaux : l’échange profite aux deux."
+    }
+   ]
+  },
+  {
+   "chapitre": "94492a47-450c-5ae4-9f9b-5b469b5f3a7f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une île sans banque : pourquoi la monnaie ?",
+   "competence": "analyser-document",
+   "situation": "Sur l’île de Port-Lenn, il n’y a ni banque ni monnaie : on troque. Zoé, couturière, voudrait du poisson, mais le pêcheur Titouan cherche autre chose qu’une veste.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le marché de Port-Lenn",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Zoé coud des vestes chaudes et voudrait du poisson frais. Titouan en pêche tous les matins, mais il n’a pas besoin de veste : il cherche un [[m|moteur]] pour son bateau.",
+      "Zoé perd une matinée à chercher quelqu’un qui possède un moteur, veut une veste et accepterait de lui céder du poisson."
+     ]
+    },
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Le prix d’un panier de courses de base",
+     "source": "Prix imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Prix du panier (€)"
+     ],
+     "lignes": [
+      [
+       2022,
+       100
+      ],
+      [
+       2024,
+       125
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche ce que Titouan cherche et que Zoé ne peut pas lui offrir.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cherche l’objet que Titouan désire à la place d’une veste.",
+     "explication": "Titouan veut un **moteur** : c’est le problème du troc, il faut une double coïncidence des besoins."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque situation à la fonction de la monnaie qu’elle illustre.",
+     "paires": [
+      [
+       "Zoé affiche sa veste à 80 €",
+       "Unité de compte"
+      ],
+      [
+       "Titouan règle son poisson par virement",
+       "Intermédiaire des échanges"
+      ],
+      [
+       "Zoé garde 500 € pour la rentrée suivante",
+       "Réserve de valeur"
+      ]
+     ],
+     "aide": "Mesurer, payer, conserver : trois fonctions, trois verbes.",
+     "explication": "Un prix en euros = **unité de compte** ; un paiement accepté de tous = **intermédiaire des échanges** ; garder pour plus tard = **réserve de valeur**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2022, Zoé place 500 € de côté. En 2024, combien de paniers ces 500 € permettent-ils d’acheter ?",
+     "reponse": 4,
+     "aide": "Divise 500 € par le prix du panier en 2024.",
+     "explication": "500 ÷ 125 = **4 paniers**, contre 500 ÷ 100 = 5 en 2022. L’inflation a rongé la réserve de valeur de la monnaie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces moyens de paiement selon la forme de monnaie.",
+     "categories": [
+      "Monnaie fiduciaire",
+      "Monnaie scripturale"
+     ],
+     "items": [
+      [
+       "Les pièces de 2 €",
+       0
+      ],
+      [
+       "Un virement bancaire",
+       1
+      ],
+      [
+       "Les billets du porte-monnaie",
+       0
+      ],
+      [
+       "Un paiement par carte",
+       1
+      ]
+     ],
+     "aide": "La monnaie fiduciaire se tient dans la main ; l’autre est une écriture sur un compte.",
+     "explication": "Billets et pièces sont de la monnaie **fiduciaire** ; virement et carte déplacent des dépôts, c’est de la monnaie **scripturale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cff584ba-72f2-50e4-bb00-f599510cc9f7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée à la boulangerie de Léa",
+   "competence": "lire-tableau",
+   "situation": "Léa dirige une boulangerie. Le tableau résume une journée de production : ce qui entre (inputs) et ce qui sort (output).",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "Une journée à la boulangerie",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Quantité"
+     ],
+     "lignes": [
+      [
+       "Boulangers",
+       4
+      ],
+      [
+       "Heures de travail par boulanger",
+       7
+      ],
+      [
+       "Fours",
+       2
+      ],
+      [
+       "Farine utilisée (kg)",
+       200
+      ],
+      [
+       "Baguettes produites",
+       1120
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journee",
+     "enonce": "Touche la quantité qui représente l’output de la journée.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "L’output est ce qui sort de la production.",
+     "explication": "Les **1 120 baguettes** sont l’output. Boulangers, fours et farine sont des inputs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de baguettes produit chaque boulanger en moyenne sur la journée ?",
+     "reponse": 280,
+     "unite": "baguettes",
+     "aide": "Divise la production par le nombre de boulangers.",
+     "explication": "1 120 ÷ 4 = **280 baguettes** par boulanger : c’est la productivité du travail par tête."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments par facteur de production.",
+     "categories": [
+      "Travail",
+      "Capital fixe",
+      "Capital circulant"
+     ],
+     "items": [
+      [
+       "Les 4 boulangers",
+       0
+      ],
+      [
+       "Les 2 fours",
+       1
+      ],
+      [
+       "Les 200 kg de farine",
+       2
+      ],
+      [
+       "L’énergie consommée pendant la cuisson",
+       2
+      ],
+      [
+       "Le pétrin acheté il y a dix ans",
+       1
+      ]
+     ],
+     "aide": "Le capital fixe dure plusieurs années ; le capital circulant est détruit dans la production.",
+     "explication": "Les boulangers sont le **travail** ; fours et pétrin du **capital fixe** ; farine et énergie du **capital circulant** (détruits à la production)."
+    }
+   ]
+  },
+  {
+   "chapitre": "cff584ba-72f2-50e4-bb00-f599510cc9f7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une machine à l’atelier textile",
+   "competence": "calculer",
+   "situation": "L’atelier « Fil d’Ouest » fabrique des T-shirts. En 2025, il achète une machine de découpe et se sépare de deux postes de travail. Le directeur compare les deux années.",
+   "documents": [
+    {
+     "id": "prod",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "T-shirts produits par an",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2024 (10 salariés)",
+      "2025 (8 salariés)"
+     ],
+     "series": [
+      {
+       "nom": "Production",
+       "valeurs": [
+        15,
+        16.8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "T-shirts produits",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 20,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true
+    },
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Coût mensuel comparé",
+     "source": "Montants imaginés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Coût par mois (€)"
+     ],
+     "lignes": [
+      [
+       "Un salarié (salaire et cotisations)",
+       2500
+      ],
+      [
+       "La machine (achat réparti et entretien)",
+       4000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la productivité par salarié en 2025, en T-shirts par an ?",
+     "reponse": 2100,
+     "unite": "T-shirts",
+     "aide": "Convertis 16,8 milliers en T-shirts, puis divise par le nombre de salariés de 2025.",
+     "explication": "16 800 ÷ 8 = **2 100 T-shirts** par salarié. En 2024 : 15 000 ÷ 10 = 1 500."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de pour cent la productivité par salarié a-t-elle augmenté entre 2024 et 2025 ?",
+     "reponse": 40,
+     "unite": "%",
+     "aide": "Gain = (valeur 2025 − valeur 2024) ÷ valeur 2024 × 100.",
+     "explication": "(2 100 − 1 500) ÷ 1 500 × 100 = **+ 40 %**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’analyse du directeur.",
+     "texte": "En achetant la machine, l’atelier substitue du ___ au ___.",
+     "reponses": [
+      [
+       "capital"
+      ],
+      [
+       "travail"
+      ]
+     ],
+     "banque": [
+      "capital",
+      "travail",
+      "capital humain",
+      "information"
+     ],
+     "aide": "Deux postes disparaissent, une machine arrive.",
+     "explication": "La machine (du **capital**) remplace deux salariés (du **travail**) : c’est une substitution du capital au travail."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chaque mois, combien l’atelier économise-t-il en remplaçant deux salariés par la machine ?",
+     "reponse": 1000,
+     "unite": "€",
+     "aide": "Compare le coût de 2 salariés au coût de la machine.",
+     "explication": "2 × 2 500 = 5 000 € de salaires évités, moins 4 000 € de machine : **1 000 € d’économie** par mois."
+    }
+   ]
+  },
+  {
+   "chapitre": "cff584ba-72f2-50e4-bb00-f599510cc9f7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Domino Logistique investit",
+   "competence": "raisonner",
+   "situation": "Domino Logistique trie des colis. En deux ans, l’entreprise a lancé quatre projets d’investissement et son directeur veut savoir si son personnel travaille plus efficacement.",
+   "documents": [
+    {
+     "id": "colis",
+     "type": "tableau",
+     "titre": "Activité de l’entrepôt",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Année",
+      "Heures travaillées",
+      "Colis traités"
+     ],
+     "lignes": [
+      [
+       2022,
+       80000,
+       960000
+      ],
+      [
+       2024,
+       84000,
+       1134000
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "projets",
+     "type": "tableau",
+     "titre": "Les quatre projets d’investissement",
+     "source": "Projets et montants imaginés pour l’exercice.",
+     "colonnes": [
+      "Projet",
+      "Montant (€)"
+     ],
+     "lignes": [
+      [
+       "Un second entrepôt, pour traiter plus de colis",
+       1200000
+      ],
+      [
+       "Un tapis de tri automatique : même personnel, tri plus rapide",
+       380000
+      ],
+      [
+       "Un chariot neuf pour remplacer un chariot hors service",
+       45000
+      ],
+      [
+       "La formation de 20 salariés aux nouveaux outils",
+       60000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la productivité horaire du travail en 2024, en colis par heure ?",
+     "reponse": 13.5,
+     "unite": "colis par heure",
+     "aide": "Divise les colis traités par les heures travaillées.",
+     "explication": "1 134 000 ÷ 84 000 = **13,5 colis par heure**. En 2022 : 960 000 ÷ 80 000 = 12."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de pour cent la productivité horaire a-t-elle augmenté entre 2022 et 2024 ?",
+     "reponse": 12.5,
+     "unite": "%",
+     "aide": "Calcule d’abord la productivité horaire de 2022.",
+     "explication": "(13,5 − 12) ÷ 12 × 100 = **+ 12,5 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les colis traités ont augmenté d’environ 18 %, les heures travaillées de 5 %. Que peut-on en conclure ?",
+     "options": [
+      "Les salariés produisent davantage par heure : il y a un gain de productivité",
+      "Les salariés produisent moins par heure : la productivité a baissé",
+      "La productivité est stable, car la production et les heures ont toutes deux augmenté",
+      "On ne peut rien dire, car le nombre de salariés n’est pas connu précisément"
+     ],
+     "reponse": 0,
+     "aide": "Compare la hausse de l’output à celle de l’input.",
+     "explication": "L’output augmente **plus vite** que l’input travail : la production par heure s’élève, c’est un gain de productivité."
+    },
+    {
+     "type": "zone",
+     "document": "projets",
+     "enonce": "Touche le projet qui renforce le capital humain de l’entreprise.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Le capital humain, ce sont les compétences des personnes.",
+     "explication": "La **formation des salariés** accroît leurs compétences : c’est un investissement en capital humain."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque projet selon le type d’investissement.",
+     "categories": [
+      "Capacité",
+      "Productivité",
+      "Remplacement",
+      "Immatériel"
+     ],
+     "items": [
+      [
+       "Un second entrepôt pour traiter plus de colis",
+       0
+      ],
+      [
+       "Un tapis de tri qui accélère le travail avec le même personnel",
+       1
+      ],
+      [
+       "Un chariot neuf à la place d’un chariot hors service",
+       2
+      ],
+      [
+       "La formation de 20 salariés",
+       3
+      ]
+     ],
+     "aide": "Plus de production, meilleure production, même production, ou ce qui ne se touche pas.",
+     "explication": "Produire plus = **capacité** ; produire mieux = **productivité** ; renouveler = **remplacement** ; former, rechercher = **immatériel**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c1e3b50-c6c9-580b-b399-ab4cedce1a65",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des oranges au jus : la valeur ajoutée",
+   "competence": "calculer",
+   "situation": "Valérie cultive des oranges, la presserie Pulpe en fait du jus, l’épicerie du coin le vend aux habitants. Combien de richesse chacun crée-t-il vraiment ?",
+   "documents": [
+    {
+     "id": "filiere",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "verger",
+       "texte": "Verger de Valérie",
+       "emoji": "🍊"
+      },
+      {
+       "id": "presserie",
+       "texte": "Presserie Pulpe",
+       "emoji": "🏭"
+      },
+      {
+       "id": "epicerie",
+       "texte": "Épicerie du coin",
+       "emoji": "🏪"
+      },
+      {
+       "id": "clients",
+       "texte": "Clients",
+       "emoji": "🧑"
+      }
+     ],
+     "liens": [
+      {
+       "de": "verger",
+       "a": "presserie",
+       "texte": "vend 1 000 €"
+      },
+      {
+       "de": "presserie",
+       "a": "epicerie",
+       "texte": "vend 1 500 €"
+      },
+      {
+       "de": "epicerie",
+       "a": "clients",
+       "texte": "vend 2 000 €"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur ajoutée de la presserie, en euros ?",
+     "reponse": 500,
+     "unite": "€",
+     "aide": "Valeur ajoutée = ce qu’elle vend − ce qu’elle a acheté pour produire.",
+     "explication": "La presserie vend 1 500 € et achète 1 000 € d’oranges : 1 500 − 1 000 = **500 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des valeurs ajoutées des trois producteurs, en euros ?",
+     "reponse": 2000,
+     "unite": "€",
+     "aide": "Le verger n’a acheté aucune consommation intermédiaire. Calcule la VA de l’épicerie, puis additionne les trois.",
+     "explication": "1 000 (verger) + 500 (presserie) + 500 (épicerie) = **2 000 €**, soit exactement le prix payé par les clients."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi additionne-t-on les valeurs ajoutées et non les chiffres d’affaires ?",
+     "options": [
+      "Pour ne pas compter plusieurs fois les mêmes produits intermédiaires",
+      "Pour que le total soit toujours plus grand que le prix final",
+      "Parce que le chiffre d’affaires ne se mesure jamais en euros",
+      "Pour compter aussi les impôts que paient les clients finaux"
+     ],
+     "reponse": 0,
+     "aide": "Les oranges figurent dans le chiffre d’affaires du verger, de la presserie, et de l’épicerie.",
+     "explication": "Additionner les chiffres d’affaires (4 500 €) compterait les oranges trois fois. La somme des VA (**2 000 €**) les compte **une seule fois**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c1e3b50-c6c9-580b-b399-ab4cedce1a65",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le PIB du pays de Marvillon",
+   "competence": "modeliser",
+   "situation": "Les statisticiens de Marvillon, pays imaginaire de 50 000 habitants, calculent le produit intérieur brut de l’année.",
+   "documents": [
+    {
+     "id": "branches",
+     "type": "tableau",
+     "titre": "La comptabilité nationale de Marvillon (en millions d’euros)",
+     "source": "Pays et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Élément",
+      "Millions d’euros"
+     ],
+     "lignes": [
+      [
+       "Valeur ajoutée de l’agriculture",
+       120
+      ],
+      [
+       "Valeur ajoutée de l’industrie",
+       480
+      ],
+      [
+       "Valeur ajoutée du commerce et des services marchands",
+       1150
+      ],
+      [
+       "Valeur ajoutée des écoles, hôpitaux et administrations publiques",
+       350
+      ],
+      [
+       "Impôts sur les produits (TVA…)",
+       190
+      ],
+      [
+       "Subventions sur les produits",
+       40
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des valeurs ajoutées des quatre branches, en millions d’euros ?",
+     "reponse": 2100,
+     "unite": "M€",
+     "aide": "N’additionne que les lignes « valeur ajoutée ».",
+     "explication": "120 + 480 + 1 150 + 350 = **2 100 M€**."
+    },
+    {
+     "type": "zone",
+     "document": "branches",
+     "enonce": "Touche la ligne dont la production n’a pas de prix de marché et est évaluée à son coût de production.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Pense à ce qui est gratuit pour l’usager.",
+     "explication": "Écoles, hôpitaux publics et administrations : leur production est **non marchande**, donc évaluée à son coût de production."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le PIB de Marvillon, en millions d’euros.",
+     "reponse": 2250,
+     "unite": "M€",
+     "aide": "PIB = somme des VA + impôts sur les produits − subventions sur les produits.",
+     "explication": "2 100 + 190 − 40 = **2 250 M€**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le PIB par habitant, en euros ?",
+     "reponse": 45000,
+     "unite": "€",
+     "aide": "Passe le PIB en euros (1 M€ = 1 000 000 €) avant de diviser par 50 000 habitants.",
+     "explication": "2 250 000 000 ÷ 50 000 = **45 000 €** par habitant."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c1e3b50-c6c9-580b-b399-ab4cedce1a65",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le partage de la valeur ajoutée de l’Atelier Verdier",
+   "competence": "analyser-document",
+   "situation": "L’Atelier Verdier a créé 600 000 € de valeur ajoutée. Elle se partage entre plusieurs destinataires. Puis l’État corrige les inégalités par l’impôt : le barème en témoigne.",
+   "documents": [
+    {
+     "id": "partage",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Le partage de la valeur ajoutée de l’Atelier Verdier (en %)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Salaires et cotisations",
+      "Impôts sur la production",
+      "Intérêts aux prêteurs",
+      "Dividendes aux actionnaires",
+      "Autofinancement"
+     ],
+     "series": [
+      {
+       "nom": "Part de la valeur ajoutée",
+       "valeurs": [
+        65,
+        5,
+        5,
+        10,
+        15
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bareme",
+     "type": "tableau",
+     "titre": "Un barème de l’impôt sur le revenu (simplifié)",
+     "source": "Barème simplifié et arrondi pour l’exercice.",
+     "colonnes": [
+      "Part du revenu imposable",
+      "Taux"
+     ],
+     "lignes": [
+      [
+       "Jusqu’à 11 000 €",
+       "0 %"
+      ],
+      [
+       "De 11 000 € à 28 000 €",
+       "11 %"
+      ],
+      [
+       "De 28 000 € à 80 000 €",
+       "30 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "partage",
+     "multiple": true,
+     "enonce": "Touche les deux parts qui constituent des revenus du capital.",
+     "reponse": [
+      "k2",
+      "k3"
+     ],
+     "aide": "Les revenus du capital rémunèrent ceux qui ont prêté ou apporté de l’argent.",
+     "explication": "Les **intérêts** (prêteurs) et les **dividendes** (actionnaires) sont des revenus du capital. Les salaires sont des revenus du travail."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque revenu à sa nature.",
+     "paires": [
+      [
+       "Le salaire d’une infirmière",
+       "Revenu du travail"
+      ],
+      [
+       "Le loyer perçu par un propriétaire",
+       "Revenu du capital"
+      ],
+      [
+       "Le revenu d’une boulangère indépendante",
+       "Revenu mixte"
+      ]
+     ],
+     "aide": "Le revenu mixte mélange le travail et le capital de la même personne.",
+     "explication": "Salaire = **travail** ; loyer = **capital** ; revenu d’un indépendant = **mixte** (son travail et son capital à la fois)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un célibataire a un revenu imposable de 40 000 €. Quel est le montant de son impôt, en euros ?",
+     "reponse": 5470,
+     "unite": "€",
+     "aide": "Applique chaque taux seulement à la part du revenu qui se trouve dans sa tranche.",
+     "explication": "0 % sur 11 000 € ; 11 % × 17 000 = 1 870 € ; 30 % × 12 000 = 3 600 € ; total **5 470 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un autre célibataire a un revenu imposable de 22 000 €. Quel est son taux moyen d’imposition, en pourcentage ?",
+     "reponse": 5.5,
+     "unite": "%",
+     "aide": "Calcule son impôt (11 % de la part au-dessus de 11 000 €), puis divise par son revenu.",
+     "explication": "Impôt : 11 % × 11 000 = 1 210 €. Taux moyen : 1 210 ÷ 22 000 × 100 = **5,5 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le taux moyen du premier célibataire est de 13,7 % : plus que les 5,5 % du second. Que montre cette comparaison ?",
+     "options": [
+      "L’impôt est progressif : plus le revenu est élevé, plus la part payée augmente",
+      "L’impôt est proportionnel : tous les revenus paient exactement le même taux",
+      "L’impôt est dégressif : les revenus élevés paient une part plus faible",
+      "L’impôt est forfaitaire : chacun paie la même somme quel que soit son revenu"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux taux moyens et relis la définition d’un impôt progressif.",
+     "explication": "Le taux moyen croît avec le revenu : l’impôt est **progressif**. C’est un outil de redistribution, qui réduit les inégalités de la répartition primaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "26cfa6a4-ac56-51ad-a15c-d717a64561d4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le budget de la famille Marchand",
+   "competence": "lire-tableau",
+   "situation": "La famille Marchand dispose de 2 500 € de revenu disponible par mois. Le tableau détaille ce qu’elle consomme.",
+   "documents": [
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Les dépenses mensuelles de la famille Marchand",
+     "source": "Budget imaginé pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Dépense (€)"
+     ],
+     "lignes": [
+      [
+       "Logement",
+       750
+      ],
+      [
+       "Alimentation",
+       500
+      ],
+      [
+       "Transports",
+       300
+      ],
+      [
+       "Loisirs et autres dépenses",
+       650
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche le poste qui pèse le plus lourd dans le budget.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche la dépense la plus élevée de la colonne de droite.",
+     "explication": "Le **logement** (750 €) est le premier poste de dépense, devant les loisirs (650 €)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle somme la famille épargne-t-elle chaque mois, en euros ?",
+     "reponse": 300,
+     "unite": "€",
+     "aide": "Revenu disponible = consommation + épargne.",
+     "explication": "Consommation : 750 + 500 + 300 + 650 = 2 200 €. Épargne : 2 500 − 2 200 = **300 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’épargne de la famille, en pourcentage ?",
+     "reponse": 12,
+     "unite": "%",
+     "aide": "Taux d’épargne = épargne ÷ revenu disponible × 100.",
+     "explication": "300 ÷ 2 500 × 100 = **12 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "26cfa6a4-ac56-51ad-a15c-d717a64561d4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pouvoir d’achat de Sofiane recule-t-il ?",
+   "competence": "lire-graphique",
+   "situation": "Sofiane est salarié depuis trois ans. Son revenu augmente chaque année, mais les prix aussi. Son pouvoir d’achat progresse-t-il vraiment ?",
+   "documents": [
+    {
+     "id": "var",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Variation annuelle du revenu de Sofiane et des prix (en %)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Revenu de Sofiane",
+       "valeurs": [
+        3,
+        2,
+        4
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Prix",
+       "valeurs": [
+        6,
+        4,
+        1
+       ],
+       "teinte": "jaune"
+      }
+     ],
+     "axeY": {
+      "titre": "Variation sur un an",
+      "unite": "en %",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "panier",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Le panier hebdomadaire de Sofiane",
+     "entete": "Supermarché Les Halles",
+     "sousTitre": "Début 2022",
+     "emoji": "🛒",
+     "lignes": [
+      {
+       "texte": "Fruits et légumes",
+       "valeur": "30 €"
+      },
+      {
+       "texte": "Pain et produits laitiers",
+       "valeur": "22 €"
+      },
+      {
+       "texte": "Viande, poisson, épicerie",
+       "valeur": "28 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "80 €",
+       "gras": true,
+       "id": "total"
+      }
+     ],
+     "pied": "Source : ticket imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En 2022, quelle est la variation approchée du pouvoir d’achat de Sofiane, en points de pourcentage ?",
+     "reponse": -3,
+     "unite": "%",
+     "aide": "Variation approchée = variation du revenu − variation des prix.",
+     "explication": "3 − 6 = **− 3 %** : le revenu augmente moins vite que les prix, le pouvoir d’achat baisse d’environ 3 %."
+    },
+    {
+     "type": "zone",
+     "document": "var",
+     "enonce": "Touche l’année où le pouvoir d’achat de Sofiane augmente.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche l’année où la barre du revenu dépasse celle des prix.",
+     "explication": "En **2024**, le revenu progresse de 4 % et les prix de 1 % : le pouvoir d’achat augmente d’environ 3 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Début 2022, son panier coûte 80 €. Les prix augmentent de 6 % : combien coûte alors le même panier ?",
+     "reponse": 84.8,
+     "unite": "€",
+     "aide": "Multiplie 80 par 1,06.",
+     "explication": "80 × 1,06 = **84,80 €** pour exactement les mêmes produits."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle du pouvoir d’achat.",
+     "texte": "Si le revenu augmente ___ vite que les prix, le pouvoir d’achat ___.",
+     "reponses": [
+      [
+       "plus"
+      ],
+      [
+       "augmente",
+       "progresse"
+      ]
+     ],
+     "banque": [
+      "plus",
+      "moins",
+      "augmente",
+      "baisse"
+     ],
+     "aide": "Regarde l’année 2024 du graphique.",
+     "explication": "Quand le revenu augmente **plus** vite que les prix, le pouvoir d’achat **augmente**."
+    }
+   ]
+  },
+  {
+   "chapitre": "26cfa6a4-ac56-51ad-a15c-d717a64561d4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois ménages, trois façons de répartir",
+   "competence": "analyser-document",
+   "situation": "Trois ménages de revenus très différents répartissent leur argent. Le tableau décrit leur budget ; le graphique, l’évolution du budget moyen des Français sur soixante ans.",
+   "documents": [
+    {
+     "id": "menages",
+     "type": "tableau",
+     "titre": "Trois ménages (en € par mois)",
+     "source": "Budgets imaginés pour l’exercice.",
+     "colonnes": [
+      "Ménage",
+      "Revenu disponible",
+      "Consommation",
+      "Dont alimentation"
+     ],
+     "lignes": [
+      [
+       "A",
+       2000,
+       1800,
+       540
+      ],
+      [
+       "B",
+       4000,
+       3200,
+       640
+      ],
+      [
+       "C",
+       8000,
+       5600,
+       840
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "structure",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La part de chaque poste dans le budget moyen (en %)",
+     "source": "Chiffres arrondis, imaginés d’après l’ordre de grandeur des données de l’INSEE.",
+     "categories": [
+      "Alimentation",
+      "Logement",
+      "Transports",
+      "Loisirs et communication"
+     ],
+     "series": [
+      {
+       "nom": "1960",
+       "valeurs": [
+        35,
+        10,
+        12,
+        6
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "2020",
+       "valeurs": [
+        17,
+        27,
+        14,
+        10
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du budget",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Poste de dépense"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’épargne du ménage B, en pourcentage ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Épargne = revenu − consommation.",
+     "explication": "Épargne : 4 000 − 3 200 = 800 €. Taux : 800 ÷ 4 000 × 100 = **20 %**."
+    },
+    {
+     "type": "zone",
+     "document": "structure",
+     "enonce": "Touche le poste dont la part a le plus augmenté entre 1960 et 2020.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare, poste par poste, la barre de 1960 et celle de 2020.",
+     "explication": "Le **logement** passe de 10 % à 27 % du budget : c’est la plus forte hausse (+ 17 points)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient budgétaire de l’alimentation pour le ménage A, en pourcentage de sa consommation ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Coefficient = dépense pour le poste ÷ consommation totale × 100.",
+     "explication": "540 ÷ 1 800 × 100 = **30 %**. Pour B : 640 ÷ 3 200 = 20 %. Pour C : 840 ÷ 5 600 = 15 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Du ménage A au ménage B, quelle est la propension marginale à consommer ?",
+     "reponse": 0.7,
+     "aide": "Divise la hausse de la consommation par la hausse du revenu.",
+     "explication": "Consommation : + 1 400 € (3 200 − 1 800). Revenu : + 2 000 €. 1 400 ÷ 2 000 = **0,7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble le tableau et le graphique pour l’alimentation ?",
+     "options": [
+      "Plus le revenu augmente, plus la part de l’alimentation diminue : c’est la loi d’Engel",
+      "Plus le revenu augmente, plus la part de l’alimentation augmente aussi",
+      "La part de l’alimentation reste la même, quel que soit le revenu",
+      "La part de l’alimentation diminue seulement quand les prix augmentent"
+     ],
+     "reponse": 0,
+     "aide": "Compare les coefficients de A, B et C, puis les barres de 1960 et 2020.",
+     "explication": "Les coefficients baissent de A à C (30 %, 20 %, 15 %) et la part de l’alimentation a diminué entre 1960 et 2020 : c’est la **loi d’Engel**."
+    }
+   ]
+  },
+  {
+   "chapitre": "47702bef-54e5-516f-8d03-8f429794a4b4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui peut prêter, qui doit emprunter ?",
+   "competence": "lire-tableau",
+   "situation": "Dans la ville de Rochemont, trois agents ont mis de l’argent de côté et réalisé des investissements cette année. Qui a de quoi prêter, et qui doit emprunter ?",
+   "documents": [
+    {
+     "id": "agents",
+     "type": "tableau",
+     "titre": "Épargne et investissement de trois agents",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Agent",
+      "Épargne (€)",
+      "Investissement (€)"
+     ],
+     "lignes": [
+      [
+       "Famille Garnier",
+       5000,
+       0
+      ],
+      [
+       "Boulangerie Moulin",
+       30000,
+       80000
+      ],
+      [
+       "Mairie de Rochemont",
+       120000,
+       200000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "agents",
+     "enonce": "Touche l’agent qui a une capacité de financement.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Une capacité de financement existe quand l’épargne dépasse l’investissement.",
+     "explication": "La **famille Garnier** épargne 5 000 € et n’investit rien : elle peut prêter. Les deux autres investissent plus qu’ils n’épargnent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le besoin de financement de la boulangerie Moulin, en euros ?",
+     "reponse": 50000,
+     "unite": "€",
+     "aide": "Besoin = investissement − épargne.",
+     "explication": "80 000 − 30 000 = **50 000 €** à trouver à l’extérieur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque agent selon sa situation.",
+     "categories": [
+      "Capacité de financement",
+      "Besoin de financement"
+     ],
+     "items": [
+      [
+       "La famille Garnier",
+       0
+      ],
+      [
+       "La boulangerie Moulin",
+       1
+      ],
+      [
+       "La mairie de Rochemont",
+       1
+      ]
+     ],
+     "aide": "Compare l’épargne et l’investissement de chaque ligne.",
+     "explication": "Les ménages ont en général une capacité de financement ; entreprises et administrations un **besoin** de financement."
+    }
+   ]
+  },
+  {
+   "chapitre": "47702bef-54e5-516f-8d03-8f429794a4b4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des cuves pour la brasserie du Phare",
+   "competence": "argumenter",
+   "situation": "Awa dirige la brasserie du Phare et veut acheter de nouvelles cuves. Elle hésite entre trois façons de payer.",
+   "documents": [
+    {
+     "id": "projet",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le projet d’Awa",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Awa Diallo veut acheter des cuves pour 240 000 €. Elle a mis de côté 90 000 € de [[b|bénéfices]] non distribués.",
+      "Sa banque lui propose un prêt pour le reste, avec 6 000 € d’intérêts par an pendant cinq ans. Un ami lui conseille plutôt de vendre des parts de la société à de nouveaux associés."
+     ]
+    },
+    {
+     "id": "modes",
+     "type": "tableau",
+     "titre": "Trois modes de financement",
+     "source": "Résumé du cours.",
+     "colonnes": [
+      "Mode",
+      "Avantage",
+      "Limite"
+     ],
+     "lignes": [
+      [
+       "Autofinancement",
+       "Aucune dette, indépendance",
+       "Ressources souvent insuffisantes"
+      ],
+      [
+       "Emprunt bancaire",
+       "Contrôle conservé",
+       "Intérêts à payer, remboursement"
+      ],
+      [
+       "Vente de parts (actions)",
+       "Rien à rembourser",
+       "Pouvoir et bénéfices partagés"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "projet",
+     "enonce": "Touche le mot qui désigne l’origine des 90 000 € d’autofinancement.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "L’autofinancement vient des résultats que l’entreprise garde.",
+     "explication": "Ce sont les **bénéfices** non distribués : l’entreprise les réinvestit au lieu de les verser aux actionnaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le besoin de financement externe de la brasserie, en euros ?",
+     "reponse": 150000,
+     "unite": "€",
+     "aide": "Besoin externe = coût du projet − autofinancement.",
+     "explication": "240 000 − 90 000 = **150 000 €** à financer par emprunt ou par apport de capital."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Awa emprunte, quel total d’intérêts paiera-t-elle sur les cinq ans, en euros ?",
+     "reponse": 30000,
+     "unite": "€",
+     "aide": "Multiplie les intérêts annuels par le nombre d’années.",
+     "explication": "6 000 × 5 = **30 000 €** d’intérêts, en plus du remboursement des 150 000 €."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mode de financement à sa nature.",
+     "paires": [
+      [
+       "Les bénéfices gardés par l’entreprise",
+       "Financement interne : autofinancement"
+      ],
+      [
+       "Le prêt accordé par la banque",
+       "Financement indirect : crédit intermédié"
+      ],
+      [
+       "La vente de parts à de nouveaux associés",
+       "Financement direct : titres de propriété"
+      ]
+     ],
+     "aide": "Interne ou externe ? Et si externe, avec ou sans intermédiaire ?",
+     "explication": "Ses propres ressources = **autofinancement** ; passer par une banque = **financement indirect** ; émettre des titres = **financement direct**."
+    }
+   ]
+  },
+  {
+   "chapitre": "47702bef-54e5-516f-8d03-8f429794a4b4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Banque ou marché financier ?",
+   "competence": "observer-schema",
+   "situation": "La société Optilux veut lever de l’argent. Elle peut passer par sa banque ou émettre des titres. Le schéma montre les deux circuits ; l’avis d’opération d’un épargnant montre l’une des deux voies.",
+   "documents": [
+    {
+     "id": "circuits",
+     "type": "schema",
+     "titre": "Les deux circuits de financement",
+     "source": "Schéma simplifié pour l’exercice.",
+     "largeur": 360,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 95,
+       "l": 90,
+       "h": 60,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Épargnants"
+      },
+      {
+       "forme": "rect",
+       "x": 260,
+       "y": 95,
+       "l": 90,
+       "h": 60,
+       "arrondi": 8,
+       "teinte": "jaune",
+       "motif": "clair",
+       "texte": "Optilux"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 15,
+       "l": 90,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Banque",
+       "id": "banque",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 195,
+       "l": 120,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Marché financier",
+       "id": "marche",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        95
+       ],
+       "a": [
+        135,
+        40
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        40
+       ],
+       "a": [
+        300,
+        95
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        155
+       ],
+       "a": [
+        120,
+        210
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        210
+       ],
+       "a": [
+        300,
+        155
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 78,
+       "y": 62,
+       "texte": "Dépôts",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 282,
+       "y": 62,
+       "texte": "Crédit",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 18,
+       "y": 190,
+       "texte": "Achat de titres",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 190,
+       "texte": "Fonds levés",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "avis",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "L’avis d’opération d’un épargnant",
+     "entete": "Courtier Le Phare",
+     "sousTitre": "Achat de titres",
+     "emoji": "📄",
+     "lignes": [
+      {
+       "texte": "Titre",
+       "valeur": "Obligation Optilux"
+      },
+      {
+       "texte": "Valeur d’une obligation",
+       "valeur": "1 000 €"
+      },
+      {
+       "texte": "Taux d’intérêt annuel",
+       "valeur": "3 %"
+      },
+      {
+       "texte": "Nombre de titres achetés",
+       "valeur": "12"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Remboursement à l’échéance",
+       "valeur": "Oui",
+       "gras": true
+      }
+     ],
+     "pied": "Avis imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuits",
+     "enonce": "Touche l’intermédiaire du financement indirect.",
+     "reponse": [
+      "banque"
+     ],
+     "aide": "Dans le financement indirect, une institution collecte l’épargne et prête à son tour.",
+     "explication": "La **banque** collecte les dépôts et accorde des crédits : c’est le financement indirect, ou intermédié. Le marché financier met en relation directe épargnants et entreprises."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à sa définition.",
+     "paires": [
+      [
+       "Action",
+       "Part de propriété du capital, dividende variable"
+      ],
+      [
+       "Obligation",
+       "Prêt remboursé à l’échéance, avec intérêts"
+      ],
+      [
+       "Marché primaire",
+       "Émission de titres neufs"
+      ],
+      [
+       "Marché secondaire",
+       "Revente de titres déjà émis"
+      ]
+     ],
+     "aide": "Une action est une part, une obligation un prêt ; le marché primaire est celui de la naissance des titres.",
+     "explication": "Action = titre de **propriété** ; obligation = titre de **créance** ; marché primaire = **émission** ; marché secondaire = **revente**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel total d’intérêts l’épargnant touchera-t-il chaque année avec ses 12 obligations, en euros ?",
+     "reponse": 360,
+     "unite": "€",
+     "aide": "Calcule d’abord l’intérêt annuel d’une obligation : 3 % de 1 000 €.",
+     "explication": "1 000 × 3 % = 30 € par obligation ; 30 × 12 = **360 € par an**. L’obligation est un titre de créance qui rapporte un intérêt."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces opérations crée de la monnaie ?",
+     "options": [
+      "Un crédit de la banque, inscrit sur le compte de l’emprunteur",
+      "L’achat d’une obligation sur le marché financier par un épargnant",
+      "La revente d’une action entre deux épargnants sur le marché boursier",
+      "Le dépôt de billets sur un livret d’épargne par un ménage"
+     ],
+     "reponse": 0,
+     "aide": "Une seule de ces opérations inscrit une somme nouvelle sur un compte.",
+     "explication": "Quand une banque accorde un **crédit**, elle crée de la monnaie scripturale ; les autres opérations ne font que transférer de la monnaie existante."
+    }
+   ]
+  },
+  {
+   "chapitre": "368be0b7-5183-5e6f-b436-3c727a0c94ef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le prix des fraises au marché",
+   "competence": "lire-graphique",
+   "situation": "Au marché de Plougastel, les producteurs de fraises et les acheteurs se rencontrent chaque matin. Le graphique montre ce qu’ils offrent et demandent selon le prix du kilo.",
+   "documents": [
+    {
+     "id": "marche",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Offre et demande de fraises",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2 €",
+      "4 €",
+      "6 €",
+      "8 €",
+      "10 €"
+     ],
+     "series": [
+      {
+       "nom": "Demande",
+       "valeurs": [
+        100,
+        80,
+        60,
+        40,
+        20
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Offre",
+       "valeurs": [
+        20,
+        40,
+        60,
+        80,
+        100
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Kilos par jour",
+      "unite": "kg",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Prix du kilo"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "marche",
+     "enonce": "Touche le prix d’équilibre du marché.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "À l’équilibre, la quantité offerte égale la quantité demandée : les courbes se croisent.",
+     "explication": "Les courbes se croisent à **6 €** le kilo : c’est le prix d’équilibre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité s’échange à l’équilibre, en kilos par jour ?",
+     "reponse": 60,
+     "unite": "kg",
+     "aide": "Lis la hauteur du point d’intersection.",
+     "explication": "À 6 €, l’offre et la demande valent chacune **60 kg** par jour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il si le kilo est vendu 10 € ?",
+     "options": [
+      "Un excédent d’offre : des invendus, donc le prix tend à baisser",
+      "Un excédent de demande : une pénurie, donc le prix tend à monter",
+      "L’équilibre : l’offre et la demande sont égales à ce prix",
+      "Un excédent d’offre : des invendus, donc le prix tend à monter"
+     ],
+     "reponse": 0,
+     "aide": "À 10 €, compare la hauteur de l’offre et celle de la demande.",
+     "explication": "À 10 €, l’offre (100 kg) dépasse la demande (20 kg) : **80 kg invendus**. Les vendeurs baissent leur prix."
+    }
+   ]
+  },
+  {
+   "chapitre": "368be0b7-5183-5e6f-b436-3c727a0c94ef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ciné+ augmente son abonnement",
+   "competence": "calculer",
+   "situation": "La plateforme Ciné+ augmente son abonnement de 8 à 9 € par mois. Ses dirigeants veulent savoir si les abonnés sont sensibles au prix, et si la hausse était une bonne idée.",
+   "documents": [
+    {
+     "id": "abos",
+     "type": "tableau",
+     "titre": "Avant et après la hausse",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Avant",
+      "Après"
+     ],
+     "lignes": [
+      [
+       "Prix de l’abonnement (€ par mois)",
+       8,
+       9
+      ],
+      [
+       "Nombre d’abonnés",
+       40000,
+       34000
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "elast",
+     "type": "tableau",
+     "titre": "Quelques élasticités-prix de la demande",
+     "source": "Valeurs illustratives imaginées pour l’exercice.",
+     "colonnes": [
+      "Bien",
+      "Élasticité-prix"
+     ],
+     "lignes": [
+      [
+       "Baguette de pain",
+       "− 0,3"
+      ],
+      [
+       "Concert",
+       "− 1,8"
+      ],
+      [
+       "Carburant",
+       "− 0,2"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de pour cent le prix de l’abonnement a-t-il augmenté ?",
+     "reponse": 12.5,
+     "unite": "%",
+     "aide": "Variation en % = (prix après − prix avant) ÷ prix avant × 100.",
+     "explication": "(9 − 8) ÷ 8 × 100 = **+ 12,5 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le nombre d’abonnés a baissé de 15 %. Quelle est l’élasticité-prix de la demande ?",
+     "reponse": -1.2,
+     "aide": "e = variation en % de la quantité demandée ÷ variation en % du prix.",
+     "explication": "− 15 ÷ 12,5 = **− 1,2**. Supérieure à 1 en valeur absolue : la demande est élastique."
+    },
+    {
+     "type": "zone",
+     "document": "elast",
+     "enonce": "Touche le bien dont la demande est la plus sensible au prix.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare les élasticités en valeur absolue : la plus grande indique la plus forte sensibilité.",
+     "explication": "Le **concert** a l’élasticité la plus forte en valeur absolue (1,8) : un petit changement de prix déplace beaucoup la demande. Pain et carburant sont peu élastiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le chiffre d’affaires mensuel de Ciné+ après la hausse, en euros ?",
+     "reponse": 306000,
+     "unite": "€",
+     "aide": "Multiplie le prix par le nombre d’abonnés après.",
+     "explication": "34 000 × 9 = **306 000 €**, contre 40 000 × 8 = 320 000 € avant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure de cette hausse de prix ?",
+     "options": [
+      "Elle a réduit le chiffre d’affaires, car la demande est élastique",
+      "Elle a augmenté le chiffre d’affaires, car la demande est élastique",
+      "Elle a réduit le chiffre d’affaires, car la demande est peu élastique",
+      "Elle a laissé le chiffre d’affaires inchangé, car l’élasticité est égale à 1"
+     ],
+     "reponse": 0,
+     "aide": "Compare le chiffre d’affaires avant (320 000 €) et après.",
+     "explication": "Avec une élasticité de − 1,2, les abonnés réagissent plus que proportionnellement au prix : le chiffre d’affaires **baisse** (de 320 000 à 306 000 €)."
+    }
+   ]
+  },
+  {
+   "chapitre": "368be0b7-5183-5e6f-b436-3c727a0c94ef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La livraison de repas à Brémont",
+   "competence": "analyser-document",
+   "situation": "À Brémont, ville imaginaire, plusieurs plateformes se partagent la livraison de repas. Une enquête soupçonne les plus gros acteurs de s’être entendus.",
+   "documents": [
+    {
+     "id": "parts",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les parts de marché de la livraison de repas à Brémont (en %)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Plateforme A",
+      "Plateforme B",
+      "Plateforme C",
+      "Plateforme D",
+      "Autres petits acteurs"
+     ],
+     "series": [
+      {
+       "nom": "Part de marché",
+       "valeurs": [
+        30,
+        26,
+        20,
+        14,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "id": "enquete",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’enquête de l’Autorité de la concurrence",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Les enquêteurs ont retrouvé des messages dans lesquels les trois premières plateformes fixent ensemble un prix minimum de livraison. Elles ont convenu de ne pas se faire concurrence sur ce point. Un nouvel entrant, faute de [[l|licences]], n’a jamais pu s’installer."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’indice de concentration des trois premières plateformes, en pourcentage ?",
+     "reponse": 76,
+     "unite": "%",
+     "aide": "Additionne les parts des trois plus grosses plateformes.",
+     "explication": "30 + 26 + 20 = **76 %** : le marché est très concentré."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle structure de marché ce graphique révèle-t-il ?",
+     "options": [
+      "Un oligopole : quelques vendeurs dominent la plus grande part du marché",
+      "Un monopole : un seul vendeur détient la totalité du marché",
+      "Une concurrence parfaite : des vendeurs très nombreux, sans pouvoir sur le prix",
+      "Un marché sans offre, car aucune part n’atteint 50 %"
+     ],
+     "reponse": 0,
+     "aide": "Compte combien de vendeurs se partagent l’essentiel du marché.",
+     "explication": "Quatre plateformes détiennent 90 % du marché : c’est un **oligopole**, où chaque vendeur a un fort pouvoir et agit en tenant compte des autres."
+    },
+    {
+     "type": "trous",
+     "enonce": "Qualifie l’entente décrite dans l’article.",
+     "texte": "Un cartel est ___ et sanctionné par l’___ de la concurrence.",
+     "reponses": [
+      [
+       "interdit"
+      ],
+      [
+       "autorité",
+       "Autorité"
+      ]
+     ],
+     "banque": [
+      "interdit",
+      "autorisé",
+      "Autorité",
+      "Assemblée"
+     ],
+     "aide": "Les entreprises s’entendent sur le prix au lieu de se concurrencer.",
+     "explication": "Une entente sur les prix est un **cartel** : il est **interdit** et sanctionné par l’**Autorité** de la concurrence et la Commission européenne."
+    },
+    {
+     "type": "zone",
+     "document": "enquete",
+     "enonce": "Touche le mot qui désigne l’obstacle dont parle l’article pour un nouvel entrant.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "C’est une autorisation administrative qu’il faut obtenir pour exercer.",
+     "explication": "Les **licences** sont une barrière à l’entrée de nature réglementaire : elles protègent les opérateurs installés."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon son rôle sur un marché concurrentiel.",
+     "categories": [
+      "Barrière à l’entrée",
+      "Façon d’échapper à la concurrence"
+     ],
+     "items": [
+      [
+       "Un brevet détenu par un concurrent installé",
+       0
+      ],
+      [
+       "Un investissement initial de cinq millions d’euros",
+       0
+      ],
+      [
+       "Un nouveau service que personne d’autre ne propose",
+       1
+      ],
+      [
+       "Une marque haut de gamme qui différencie le produit",
+       1
+      ]
+     ],
+     "aide": "Une barrière empêche d’arriver ; l’innovation et la différenciation permettent de se démarquer.",
+     "explication": "Brevets et gros investissements **freinent l’entrée** de concurrents ; innover et différencier permettent d’**échapper** à l’intensité concurrentielle."
+    }
+   ]
+  }
+ ]
+}

@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { dailyQuests } from '@/lib/quests'
+import { fetchQuestContext } from '@/lib/quests-server'
 import { toDayKey } from '@/lib/streak'
 import { contributeToClan } from '@/lib/clan-week-server'
 import type { ClanReward } from '@/lib/clan-week'
@@ -80,7 +81,9 @@ export async function claimDailyQuests(): Promise<QuestClaimOutcome> {
   const user = await getCurrentUser()
   if (!user) return { claimed: false, gems: 0, xp: 0, allDone: false }
 
-  const ids = dailyQuests(toDayKey(new Date()), user.id).map((q) => q.id)
+  const ids = dailyQuests(toDayKey(new Date()), user.id, await fetchQuestContext(supabase, user.id)).map(
+    (q) => q.id,
+  )
 
   const { data, error } = await supabase.rpc('quest_claim', { p_quest_ids: ids })
   if (error || !data) {

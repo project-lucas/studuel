@@ -1,0 +1,3317 @@
+{
+ "niveau": "1re",
+ "matiere": "biotechnologies",
+ "exercices": [
+  {
+   "chapitre": "9986c725-731a-5c56-b904-c4905832ba57",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq applications, cinq couleurs",
+   "competence": "lire-tableau",
+   "situation": "Pour la journée portes ouvertes du lycée, Camille prépare un panneau sur les biotechnologies. Elle a listé cinq applications croisées dans ses recherches et doit les ranger par couleur.",
+   "documents": [
+    {
+     "id": "applis",
+     "type": "tableau",
+     "titre": "Les applications repérées par Camille",
+     "colonnes": [
+      "Application",
+      "Être vivant ou molécule utilisé"
+     ],
+     "lignes": [
+      [
+       "Fabriquer de l’insuline",
+       "bactéries modifiées"
+      ],
+      [
+       "Rendre une lessive efficace à froid",
+       "enzymes"
+      ],
+      [
+       "Extraire une molécule intéressante",
+       "éponge marine"
+      ],
+      [
+       "Nettoyer un sol pollué",
+       "bactéries"
+      ],
+      [
+       "Obtenir une variété de blé résistante",
+       "plants sélectionnés"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "applis",
+     "enonce": "Touche l’application qui relève des biotechnologies jaunes (protection de l’environnement).",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Les biotechnologies jaunes dépolluent : cherche la ligne qui parle de pollution.",
+     "explication": "Nettoyer un sol pollué avec des bactéries relève des biotechnologies **jaunes** : on protège l’environnement."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque application à la couleur de biotechnologie qui lui correspond.",
+     "paires": [
+      [
+       "Fabriquer de l’insuline",
+       "Rouge (santé)"
+      ],
+      [
+       "Lessive à base d’enzymes",
+       "Blanche (industrie)"
+      ],
+      [
+       "Molécule d’une éponge marine",
+       "Bleue (biodiversité marine)"
+      ],
+      [
+       "Variété de blé sélectionnée",
+       "Verte (agriculture)"
+      ]
+     ],
+     "aide": "Rouge : santé. Blanche : procédés industriels. Verte : agriculture. Bleue : mer.",
+     "explication": "L’insuline soigne (**rouge**), les enzymes de lessive sont un procédé industriel (**blanche**), l’éponge vient de la mer (**bleue**), le blé relève de l’agriculture (**verte**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le tableau, combien d’applications ne relèvent ni de la santé, ni de l’industrie, ni de l’agriculture ?",
+     "reponse": 2,
+     "aide": "Retire du compte l’insuline, la lessive, le médicament et le blé.",
+     "explication": "Il reste le **sol pollué** (jaune) et la molécule de l’éponge marine (bleue), soit **2** applications."
+    }
+   ]
+  },
+  {
+   "chapitre": "9986c725-731a-5c56-b904-c4905832ba57",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le yaourt sans lactose de l’équipe de Zoé",
+   "competence": "experimenter",
+   "situation": "Zoé et son groupe veulent produire un yaourt sans lactose. Leur hypothèse : une lactase ajoutée au lait avant la fermentation transforme le lactose en glucose. Ils testent trois tubes avec une bandelette qui détecte le glucose.",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "tableau",
+     "titre": "Les trois tubes de l’équipe",
+     "colonnes": [
+      "Tube",
+      "Contenu",
+      "Bandelette glucose"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Lait + lactase, 30 min à 37 °C",
+       "positive"
+      ],
+      [
+       "B",
+       "Lait seul, 30 min à 37 °C",
+       "négative"
+      ],
+      [
+       "C",
+       "Solution de glucose à 1 g·L⁻¹",
+       "positive"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche le tube qui joue le rôle de témoin positif de la bandelette.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Un témoin positif doit réagir à coup sûr : quel tube contient du glucose dès le départ ?",
+     "explication": "Le tube **C** contient du glucose : la bandelette doit y réagir. S’il avait été négatif, la bandelette serait en cause."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve le résultat négatif du tube B ?",
+     "options": [
+      "Le lait seul ne donne pas de glucose, donc il vient de la lactase",
+      "La lactase est inefficace dans le lait à 37 °C pendant 30 min",
+      "La bandelette ne sait pas détecter le glucose dans le lait",
+      "Le lait contient déjà tout le glucose avant l’expérience"
+     ],
+     "reponse": 0,
+     "aide": "Compare A et B : un seul facteur change entre les deux tubes.",
+     "explication": "Le tube B est le **témoin négatif** : mêmes conditions que A, sauf la lactase. Comme il ne réagit pas, le glucose du tube A vient bien de la lactase."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la démarche de l’équipe.",
+     "items": [
+      "Partir du besoin : un yaourt pour les intolérants au lactose",
+      "Émettre l’hypothèse : la lactase hydrolyse le lactose",
+      "Prévoir les tubes avec leurs témoins",
+      "Réaliser les tubes et lire les bandelettes",
+      "Conclure et rendre compte à l’écrit"
+     ],
+     "aide": "On commence par un besoin, on termine par la communication des résultats.",
+     "explication": "Besoin, **hypothèse**, expérience avec **témoins**, mise en œuvre, puis exploitation et compte rendu : c’est la démarche expérimentale."
+    }
+   ]
+  },
+  {
+   "chapitre": "9986c725-731a-5c56-b904-c4905832ba57",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Blog ou revue : à qui se fier ?",
+   "competence": "argumenter",
+   "situation": "Pour son dossier sur les brevets du vivant, Enzo a trouvé trois sources. Avant de les citer dans sa sitographie, son groupe doit juger leur fiabilité, puis séparer les arguments des opinions.",
+   "documents": [
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Les trois sources d’Enzo",
+     "colonnes": [
+      "Source",
+      "Auteur",
+      "Date",
+      "Références"
+     ],
+     "lignes": [
+      [
+       "Blog « Vivant Libre »",
+       "anonyme",
+       "non datée",
+       "aucune"
+      ],
+      [
+       "Article d’une revue scientifique",
+       "équipe d’un laboratoire, nommée",
+       "2024",
+       "14 références"
+      ],
+      [
+       "Forum de discussion",
+       "pseudonyme",
+       "2021",
+       "aucune"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sources",
+     "enonce": "Touche la source qu’Enzo peut citer en priorité.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Vérifie l’auteur, la date et les références.",
+     "explication": "L’article scientifique a un **auteur identifié**, une **date** et des **références** : c’est la source la plus fiable des trois."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces phrases : argument appuyé sur des sources ou simple opinion ?",
+     "categories": [
+      "Argument appuyé sur des sources",
+      "Opinion"
+     ],
+     "items": [
+      [
+       "Selon l’article de 2024, 80 % des essais ont été validés",
+       0
+      ],
+      [
+       "Modifier le vivant, c’est jouer à Dieu",
+       1
+      ],
+      [
+       "La loi encadre cette technique, voir le texte cité en référence 9",
+       0
+      ],
+      [
+       "Moi, je trouve ça dégoûtant",
+       1
+      ],
+      [
+       "Les données du tableau 2 montrent une baisse du risque",
+       0
+      ]
+     ],
+     "aide": "Un argument renvoie à un fait vérifiable ou à une source ; une opinion exprime un ressenti.",
+     "explication": "Un **argument** s’appuie sur des données et des sources. Une **opinion** exprime un ressenti : elle ne suffit pas à justifier une décision bioéthique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque outil numérique à son usage au laboratoire.",
+     "paires": [
+      [
+       "Tableur-grapheur",
+       "Tracer une courbe d’étalonnage"
+      ],
+      [
+       "Base de données",
+       "Chercher une séquence par mots clés"
+      ],
+      [
+       "Logiciel de visualisation 3D",
+       "Observer une protéine dans l’espace"
+      ],
+      [
+       "Outil collaboratif",
+       "Co-écrire un compte rendu"
+      ]
+     ],
+     "aide": "Pense à ce que chaque outil permet de produire ou de chercher.",
+     "explication": "Le **tableur-grapheur** trace les courbes, la **base de données** se interroge par mots clés et filtres, la **3D** montre les molécules, l’outil **collaboratif** sert au travail d’équipe."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebe4cc3f-16ca-589c-9139-325f7df474fa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’étiquette du flacon de soude",
+   "competence": "analyser-document",
+   "situation": "En début de TP, Malik doit préparer une solution à partir d’un flacon de soude. Avant d’y toucher, il lit l’étiquette.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Étiquette du flacon",
+     "entete": "Hydroxyde de sodium",
+     "sousTitre": "Solution à 2 mol·L⁻¹ (soude)",
+     "emoji": "🧴",
+     "lignes": [
+      {
+       "texte": "Mention d’avertissement",
+       "valeur": "DANGER",
+       "gras": true,
+       "id": "mention"
+      },
+      {
+       "texte": "H314 : provoque de graves brûlures de la peau et de graves lésions des yeux",
+       "id": "h"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "P280 : porter des gants et une protection des yeux",
+       "id": "p"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice",
+     "teinte": "corail"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la mention d’avertissement.",
+     "reponse": [
+      "mention"
+     ],
+     "aide": "C’est un seul mot, en majuscules, qui indique la gravité.",
+     "explication": "La mention d’avertissement est **DANGER** : elle est réservée aux dangers les plus graves (l’autre mention possible est « Attention »)."
+    },
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne qui est un conseil de prudence (phrase P).",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Les conseils de prudence commencent par la lettre P et disent quoi faire.",
+     "explication": "La phrase **P280** est un conseil de prudence : elle dit comment se protéger. La phrase H décrit seulement le danger."
+    },
+    {
+     "type": "association",
+     "enonce": "Avec l’exemple de la soude, relie chaque terme à sa situation.",
+     "paires": [
+      [
+       "Danger",
+       "La soude est corrosive"
+      ],
+      [
+       "Situation exposante",
+       "Verser la soude sans lunettes"
+      ],
+      [
+       "Événement dangereux",
+       "Une projection dans l’œil"
+      ],
+      [
+       "Dommage",
+       "Brûlure de l’œil"
+      ]
+     ],
+     "aide": "Suis l’ordre : propriété, contact, déclenchement, lésion.",
+     "explication": "Le **danger** est une propriété, la **situation exposante** met en contact, l’**événement dangereux** déclenche, le **dommage** est la lésion."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebe4cc3f-16ca-589c-9139-325f7df474fa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ensemencer une gélose sans se mettre en danger",
+   "competence": "analyser-document",
+   "situation": "Léa doit ensemencer une gélose à partir d’une culture d’*Escherichia coli* K12 (groupe de risque 1). Son professeur lui demande de représenter la chaîne de transmission, puis de classer les étapes du TP selon leur risque.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "culture",
+       "texte": "Culture dans le tube",
+       "emoji": "🧫"
+      },
+      {
+       "id": "sortie",
+       "texte": "Aérosol à l’ouverture du tube"
+      },
+      {
+       "id": "air",
+       "texte": "Air de la paillasse"
+      },
+      {
+       "id": "entree",
+       "texte": "Voie respiratoire"
+      },
+      {
+       "id": "pers",
+       "texte": "Manipulateur",
+       "emoji": "🧑‍🔬"
+      }
+     ],
+     "liens": [
+      {
+       "de": "culture",
+       "a": "sortie"
+      },
+      {
+       "de": "sortie",
+       "a": "air"
+      },
+      {
+       "de": "air",
+       "a": "entree"
+      },
+      {
+       "de": "entree",
+       "a": "pers"
+      }
+     ]
+    },
+    {
+     "id": "risques",
+     "type": "tableau",
+     "titre": "Étapes du TP (probabilité et gravité notées de 1 à 4)",
+     "colonnes": [
+      "Étape",
+      "Probabilité",
+      "Gravité"
+     ],
+     "lignes": [
+      [
+       "Ouvrir le tube de culture",
+       3,
+       2
+      ],
+      [
+       "Verser de l’éthanol près de la flamme",
+       2,
+       4
+      ],
+      [
+       "Jeter les boîtes en DASRI",
+       1,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Échelle écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche le maillon qui est le réservoir de micro-organismes.",
+     "reponse": [
+      "culture"
+     ],
+     "aide": "Le réservoir est l’endroit où vivent et se multiplient les micro-organismes.",
+     "explication": "Le **réservoir** est la culture dans le tube. Ensuite viennent la voie de sortie (l’aérosol), le mode de transmission (l’air), la voie d’entrée et la personne exposée."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque voie d’exposition à un exemple de laboratoire.",
+     "paires": [
+      [
+       "Contact",
+       "Projection sur la peau"
+      ],
+      [
+       "Inhalation",
+       "Aérosol à l’ensemencement"
+      ],
+      [
+       "Ingestion",
+       "Pipetage à la bouche"
+      ]
+     ],
+     "aide": "Contact : peau, œil. Inhalation : on respire. Ingestion : on avale.",
+     "explication": "La projection touche la peau (**contact**), l’aérosol se respire (**inhalation**) et le pipetage à la bouche (interdit !) fait avaler (**ingestion**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le score de risque est probabilité × gravité. Dans le tableau, quel est le score de l’étape « Ouvrir le tube de culture » ?",
+     "reponse": 6,
+     "aide": "Multiplie les deux nombres de la ligne.",
+     "explication": "3 × 2 = **6** : le risque combine la probabilité du dommage et sa gravité."
+    },
+    {
+     "type": "zone",
+     "document": "risques",
+     "enonce": "Touche l’étape dont le score de risque est le plus élevé.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Calcule le score de chacune des trois lignes avant de comparer.",
+     "explication": "Scores : 3 × 2 = 6, 2 × 4 = **8**, 1 × 2 = 2. L’éthanol près de la flamme domine : même peu probable, son dommage est grave."
+    }
+   ]
+  },
+  {
+   "chapitre": "ebe4cc3f-16ca-589c-9139-325f7df474fa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Analyser le mode opératoire d’un TP d’ensemencement",
+   "competence": "raisonner",
+   "situation": "Le groupe d’Hugo analyse les risques du mode opératoire du TP. Il doit repérer une mesure de prévention, ranger les éléments par nature, puis décider quelles étapes demandent une vigilance renforcée.",
+   "documents": [
+    {
+     "id": "mode",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Mode opératoire",
+     "blocs": [
+      "1. Désinfecter la paillasse à l’éthanol à 70 %.",
+      "2. Ouvrir le tube de culture d’*E. coli* K12 près du bec Bunsen.",
+      "3. Prélever 1 mL de culture avec une [[p|propipette]].",
+      "4. Étaler sur la gélose avec un râteau en verre.",
+      "5. Jeter les boîtes ensemencées en DASRI."
+     ]
+    },
+    {
+     "id": "cotation",
+     "type": "tableau",
+     "titre": "Cotation des étapes (probabilité × gravité)",
+     "colonnes": [
+      "Étape",
+      "Probabilité",
+      "Gravité"
+     ],
+     "lignes": [
+      [
+       "Verser de l’éthanol près de la flamme",
+       2,
+       4
+      ],
+      [
+       "Prélever à la propipette",
+       1,
+       2
+      ],
+      [
+       "Étaler au râteau en verre",
+       3,
+       3
+      ],
+      [
+       "Jeter en DASRI",
+       1,
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Échelle de 1 à 4 écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mode",
+     "enonce": "Touche le matériel qui évite l’ingestion lors du prélèvement.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Quel objet remplace la bouche pour aspirer le liquide ?",
+     "explication": "La **propipette** évite le pipetage à la bouche, qui exposerait par ingestion."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : danger, situation exposante ou dommage ?",
+     "categories": [
+      "Danger",
+      "Situation exposante",
+      "Dommage"
+     ],
+     "items": [
+      [
+       "La flamme du bec Bunsen",
+       0
+      ],
+      [
+       "L’éthanol, liquide inflammable",
+       0
+      ],
+      [
+       "Verser l’éthanol près de la flamme",
+       1
+      ],
+      [
+       "Ouvrir le tube de culture",
+       1
+      ],
+      [
+       "Brûlure de la main",
+       2
+      ]
+     ],
+     "aide": "Une situation exposante est une action ; un dommage est une lésion ; un danger est une propriété.",
+     "explication": "La flamme et l’éthanol sont des **dangers** (propriétés). Verser et ouvrir sont des **situations exposantes** (actions). La brûlure est le **dommage**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de la démarche d’analyse des risques.",
+     "items": [
+      "Lire la procédure et repérer les situations exposantes",
+      "Identifier les événements dangereux probables",
+      "Estimer le risque : probabilité × gravité",
+      "Relier les mesures de prévention aux risques identifiés"
+     ],
+     "aide": "On repère d’abord, on termine par la prévention.",
+     "explication": "On repère les **situations exposantes**, on identifie les **événements dangereux**, on **estime** le risque, puis on **relie** les mesures de prévention."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une étape est jugée à risque élevé si son score atteint au moins 8. Combien d’étapes du tableau le sont ?",
+     "reponse": 2,
+     "aide": "Calcule les quatre scores : 8, 2, 9 et 3.",
+     "explication": "Scores : 2 × 4 = **8**, 1 × 2 = 2, 3 × 3 = **9**, 1 × 3 = 3. Deux étapes atteignent le seuil : l’éthanol et le râteau en verre."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe03ae69-9ff2-5a5c-87d5-bfea214fa2ad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La paillasse de Louis avant le TP",
+   "competence": "observer-schema",
+   "situation": "Louis arrive en TP. Sa voisine remarque que sa paillasse n’est pas prête : certains objets n’ont rien à y faire. Avant de commencer, il doit aussi se laver les mains.",
+   "documents": [
+    {
+     "id": "paillasse",
+     "type": "schema",
+     "titre": "Vue de dessus de la paillasse",
+     "largeur": 320,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 30,
+       "l": 280,
+       "h": 140,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 70,
+       "y": 100,
+       "emoji": "🎒",
+       "taille": 40,
+       "id": "sac",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 150,
+       "y": 100,
+       "emoji": "☕",
+       "taille": 40,
+       "id": "cafe",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 230,
+       "y": 100,
+       "emoji": "🧪",
+       "taille": 40,
+       "id": "tubes",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 190,
+       "texte": "Paillasse de Louis",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paillasse",
+     "multiple": true,
+     "enonce": "Touche les deux objets qui n’ont rien à faire sur la paillasse.",
+     "reponse": [
+      "sac",
+      "cafe"
+     ],
+     "aide": "Au laboratoire, on ne boit pas, on ne mange pas, et les sacs sont rangés ailleurs.",
+     "explication": "Le **sac** et le **gobelet de café** sont à ranger : la paillasse reste dégagée, et on ne boit ni ne mange au laboratoire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque équipement : protection collective (EPC) ou individuelle (EPI) ?",
+     "categories": [
+      "EPC",
+      "EPI"
+     ],
+     "items": [
+      [
+       "Hotte chimique",
+       0
+      ],
+      [
+       "Poste de sécurité microbiologique",
+       0
+      ],
+      [
+       "Rince-œil",
+       0
+      ],
+      [
+       "Blouse en coton fermée",
+       1
+      ],
+      [
+       "Lunettes de protection",
+       1
+      ],
+      [
+       "Gants adaptés",
+       1
+      ]
+     ],
+     "aide": "Une EPC protège tout le laboratoire ; un EPI protège seulement celui qui le porte.",
+     "explication": "Hotte, poste de sécurité et rince-œil protègent **tout le laboratoire** (EPC). Blouse, lunettes et gants protègent **la personne qui les porte** (EPI)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes du lavage des mains.",
+     "items": [
+      "Mouiller les mains",
+      "Savonner au moins 30 secondes",
+      "Rincer abondamment",
+      "Sécher avec un essuie-mains à usage unique"
+     ],
+     "aide": "On mouille avant de savonner et on termine par le séchage.",
+     "explication": "On **mouille**, on **savonne** 30 secondes en insistant sur les ongles et les pouces, on **rince**, puis on **sèche** avec un essuie-mains à usage unique."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe03ae69-9ff2-5a5c-87d5-bfea214fa2ad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où jeter les déchets du TP de Jade ?",
+   "competence": "analyser-document",
+   "situation": "Jade termine son TP d’ensemencement. Sur sa paillasse restent des déchets de natures très différentes : chacun a son conteneur, et la paillasse doit être désinfectée proprement.",
+   "documents": [
+    {
+     "id": "dechets",
+     "type": "tableau",
+     "titre": "Les déchets du TP de Jade",
+     "colonnes": [
+      "Déchet",
+      "Nature"
+     ],
+     "lignes": [
+      [
+       "Boîte de Petri avec colonies",
+       "culture bactérienne"
+      ],
+      [
+       "Cône de micropipette utilisé",
+       "plastique souillé"
+      ],
+      [
+       "Lame de verre cassée",
+       "verre souillé par une culture"
+      ],
+      [
+       "Éthanol usagé",
+       "solvant"
+      ],
+      [
+       "Essuie-mains neuf",
+       "papier propre"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dechets",
+     "enonce": "Touche le déchet qui doit aller dans un collecteur rigide (objet coupant souillé).",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche l’objet qui peut couper ou piquer.",
+     "explication": "La **lame de verre cassée**, souillée par une culture, va dans un collecteur rigide DASRI : elle peut blesser et infecter."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque déchet dans son conteneur.",
+     "categories": [
+      "Sac DASRI",
+      "Collecteur rigide DASRI",
+      "Bidon de déchets chimiques",
+      "Déchets ménagers"
+     ],
+     "items": [
+      [
+       "Boîte de Petri avec colonies",
+       0
+      ],
+      [
+       "Cône de micropipette utilisé",
+       0
+      ],
+      [
+       "Lame de verre cassée",
+       1
+      ],
+      [
+       "Éthanol usagé",
+       2
+      ],
+      [
+       "Essuie-mains neuf",
+       3
+      ]
+     ],
+     "aide": "Culture : DASRI. Coupant : collecteur rigide. Solvant : jamais à l’évier. Papier propre : ménager.",
+     "explication": "Cultures et cônes souillés vont en **sac DASRI**, le verre souillé en **collecteur rigide**, le solvant dans un **bidon chimique** (jamais à l’évier), le papier propre en **déchets ménagers**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Jade pulvérise le désinfectant puis essuie aussitôt la paillasse. Que peut-on dire ?",
+     "options": [
+      "Le désinfectant n’a pas agi : il faut respecter son temps de contact",
+      "La paillasse est parfaitement stérile grâce à l’essuyage immédiat",
+      "Le désinfectant agit mieux quand on le retire très vite",
+      "Une désinfection n’est utile qu’après la manipulation"
+     ],
+     "reponse": 0,
+     "aide": "Un désinfectant a besoin de temps sur la surface.",
+     "explication": "Un désinfectant n’agit que s’il reste **assez longtemps** au contact de la surface : l’essuyer aussitôt annule son action. Et la désinfection ne **stérilise** pas la paillasse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle de désinfection de la paillasse.",
+     "texte": "On désinfecte la paillasse ___ la manipulation pour protéger le produit, et ___ pour protéger les personnes suivantes.",
+     "reponses": [
+      [
+       "avant"
+      ],
+      [
+       "après"
+      ]
+     ],
+     "banque": [
+      "avant",
+      "après",
+      "pendant",
+      "jamais"
+     ],
+     "aide": "Une fois pour protéger l’échantillon, une fois pour protéger les suivants.",
+     "explication": "On désinfecte **avant** (protéger le produit d’une contamination) et **après** (protéger les suivants)."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe03ae69-9ff2-5a5c-87d5-bfea214fa2ad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel équipement pour quelle situation ?",
+   "competence": "raisonner",
+   "situation": "Le professeur de biotechnologies présente le plan du laboratoire et quatre situations d’urgence ou de risque. Les élèves doivent désigner, pour chaque situation, l’équipement collectif à utiliser.",
+   "documents": [
+    {
+     "id": "situations",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "colonnes": [
+      "N°",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "S1",
+       "Préparer une solution avec des vapeurs toxiques"
+      ],
+      [
+       "S2",
+       "Ouvrir une culture à risque d’aérosols"
+      ],
+      [
+       "S3",
+       "Une projection de soude atteint l’œil"
+      ],
+      [
+       "S4",
+       "Le vêtement d’un élève est inondé d’acide"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situations écrites pour l’exercice"
+    },
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan du laboratoire",
+     "largeur": 320,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 280,
+       "h": 150,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 30,
+       "l": 80,
+       "h": 40,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "hotte",
+       "zone": true,
+       "texte": "Hotte"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 30,
+       "l": 80,
+       "h": 40,
+       "arrondi": 4,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "psm",
+       "zone": true,
+       "texte": "PSM"
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 30,
+       "l": 80,
+       "h": 40,
+       "arrondi": 4,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "rince",
+       "zone": true,
+       "texte": "Rince-œil"
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 120,
+       "l": 80,
+       "h": 40,
+       "arrondi": 4,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "douche",
+       "zone": true,
+       "texte": "Douche"
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 135,
+       "texte": "Paillasses",
+       "taille": "normal",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Pour la situation S4, touche l’équipement à utiliser.",
+     "reponse": [
+      "douche"
+     ],
+     "aide": "Une large surface du corps est atteinte, pas seulement l’œil.",
+     "explication": "Un vêtement inondé d’acide impose la **douche de sécurité** : on rince abondamment toute la surface atteinte."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque situation à l’équipement collectif adapté.",
+     "paires": [
+      [
+       "S1 : vapeurs toxiques",
+       "Hotte chimique"
+      ],
+      [
+       "S2 : aérosols de culture",
+       "Poste de sécurité microbiologique"
+      ],
+      [
+       "S3 : projection dans l’œil",
+       "Rince-œil"
+      ],
+      [
+       "S4 : vêtement inondé",
+       "Douche de sécurité"
+      ]
+     ],
+     "aide": "La hotte évacue les vapeurs, le poste aspire et filtre l’air, le rince-œil et la douche rincent.",
+     "explication": "La **hotte** évacue les vapeurs toxiques, le **poste de sécurité** aspire et filtre l’air des aérosols, le **rince-œil** traite l’œil et la **douche** le corps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour S1, pourquoi la hotte vaut-elle mieux que de simples lunettes et des gants ?",
+     "options": [
+      "C’est une protection collective : elle évacue les vapeurs pour tout le laboratoire",
+      "Les gants et les lunettes sont interdits dès qu’on utilise un produit chimique",
+      "La hotte rend inutile toute blouse et toute précaution personnelle",
+      "La hotte désinfecte les vapeurs et les rend sans danger pour tous"
+     ],
+     "reponse": 0,
+     "aide": "Dans la prévention, quel type de protection privilégie-t-on d’abord ?",
+     "explication": "On privilégie d’abord la **protection collective** : la hotte évacue les vapeurs pour tous. La protection individuelle vient **en complément**, pas à sa place."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Pour S3, touche l’équipement à utiliser en premier.",
+     "reponse": [
+      "rince"
+     ],
+     "aide": "Seul l’œil est touché.",
+     "explication": "Pour une projection dans l’œil, on utilise le **rince-œil** sans attendre, pendant plusieurs minutes."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e106d46-15aa-59e2-b205-794287e83d93",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche de TP de Camille : dosage du glucose",
+   "competence": "lire-tableau",
+   "situation": "Camille dose le glucose d’un sérum au spectrophotomètre. Elle range ses notes sur une fiche de TP et prépare aussi une solution étalon dans une fiole jaugée.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Fiche de TP",
+     "entete": "Dosage du glucose du sérum",
+     "sousTitre": "Notes de Camille",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Mesurande",
+       "valeur": "concentration en glucose du sérum",
+       "id": "mesurande"
+      },
+      {
+       "texte": "Indication du spectrophotomètre",
+       "valeur": "0,452",
+       "id": "indication"
+      },
+      {
+       "texte": "Valeur mesurée",
+       "valeur": "5,2 mmol·L⁻¹",
+       "id": "valeur"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Étalon : 0,45 g de glucose dans une fiole jaugée de 50,0 mL",
+       "id": "etalon"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui donne l’indication de l’instrument, c’est-à-dire ce qu’il affiche.",
+     "reponse": [
+      "indication"
+     ],
+     "aide": "L’indication est un nombre brut, sans conversion en concentration.",
+     "explication": "L’**indication** du spectrophotomètre est **0,452** : c’est ce qu’il affiche. La valeur mesurée (5,2 mmol·L⁻¹) vient d’un calcul."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration en masse de la solution étalon, en g·L⁻¹ ? (0,45 g dans 50,0 mL)",
+     "reponse": 9,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "Convertis d’abord 50,0 mL en litres, puis divise la masse par le volume.",
+     "explication": "50,0 mL = 0,0500 L, donc ρ = m / V = 0,45 / 0,0500 = **9,0 g·L⁻¹**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque grandeur à son unité du Système international ou usuelle.",
+     "paires": [
+      [
+       "Masse",
+       "kg"
+      ],
+      [
+       "Temps",
+       "s"
+      ],
+      [
+       "Quantité de matière",
+       "mol"
+      ],
+      [
+       "Concentration en masse",
+       "g·L⁻¹"
+      ]
+     ],
+     "aide": "Les trois premières sont des grandeurs de base ; la dernière est dérivée (masse divisée par volume).",
+     "explication": "Masse (**kg**), temps (**s**) et quantité de matière (**mol**) sont des grandeurs de base ; la concentration en masse m / V s’exprime en **g·L⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e106d46-15aa-59e2-b205-794287e83d93",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quelle verrerie pour prélever 10 mL de sérum ?",
+   "competence": "analyser-document",
+   "situation": "Le technicien du laboratoire doit prélever 10 mL de sérum, préparer 100 mL d’une solution et rincer des flacons. Il dispose de la verrerie du tableau et doit choisir selon l’exactitude demandée.",
+   "documents": [
+    {
+     "id": "verrerie",
+     "type": "tableau",
+     "titre": "Verrerie disponible",
+     "colonnes": [
+      "Verrerie",
+      "Volume",
+      "Tolérance"
+     ],
+     "lignes": [
+      [
+       "Pipette jaugée, classe A",
+       "10 mL",
+       "± 0,02 mL"
+      ],
+      [
+       "Pipette graduée",
+       "10 mL",
+       "± 0,05 mL"
+      ],
+      [
+       "Éprouvette graduée",
+       "10 mL",
+       "± 0,2 mL"
+      ],
+      [
+       "Bécher",
+       "50 mL",
+       "indicatif"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tolérances données à titre d’exemple pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "verrerie",
+     "enonce": "Touche la verrerie la plus exacte pour prélever 10 mL.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "La plus exacte est celle dont la tolérance est la plus petite.",
+     "explication": "La **pipette jaugée** a la tolérance la plus faible (± 0,02 mL) : c’est elle qu’on choisit pour un volume précis."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois l’éprouvette graduée est-elle moins exacte que la pipette jaugée ? (rapport des tolérances)",
+     "reponse": 10,
+     "aide": "Divise la tolérance de l’éprouvette par celle de la pipette jaugée.",
+     "explication": "0,2 / 0,02 = **10** : l’erreur possible avec l’éprouvette est dix fois plus grande."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verrerie : contient (« in »), délivre (« ex ») ou indicative ?",
+     "categories": [
+      "Verrerie « in »",
+      "Verrerie « ex »",
+      "Verrerie indicative"
+     ],
+     "items": [
+      [
+       "Fiole jaugée",
+       0
+      ],
+      [
+       "Pipette jaugée",
+       1
+      ],
+      [
+       "Pipette graduée",
+       1
+      ],
+      [
+       "Bécher",
+       2
+      ],
+      [
+       "Erlenmeyer",
+       2
+      ]
+     ],
+     "aide": "« in » : elle contient son volume. « ex » : elle le délivre. Bécher et erlenmeyer : jamais pour mesurer.",
+     "explication": "La **fiole jaugée** contient son volume (« in ») ; les **pipettes** le délivrent (« ex ») ; le **bécher** et l’**erlenmeyer** ont des graduations seulement indicatives."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour préparer exactement 100 mL d’une solution étalon, quelle verrerie choisit-on ?",
+     "options": [
+      "Une fiole jaugée de 100 mL",
+      "Un bécher de 100 mL gradué",
+      "Une éprouvette graduée de 100 mL",
+      "Une pipette graduée de 10 mL"
+     ],
+     "reponse": 0,
+     "aide": "Pour préparer une solution, on veut un volume contenu exactement.",
+     "explication": "La **fiole jaugée** est étalonnée « in » : elle contient exactement son volume, c’est la verrerie de préparation d’une solution."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e106d46-15aa-59e2-b205-794287e83d93",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre relevés de glucose : sont-ils comparables ?",
+   "competence": "raisonner",
+   "situation": "Quatre élèves ont relevé le glucose dans des échantillons. Leur professeur veut savoir quels résultats se comparent directement, puis vérifier la masse volumique du sérum à partir d’une pesée.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Résultats des quatre élèves",
+     "colonnes": [
+      "Élève",
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Théo",
+       "ρ(glucose, sérum)",
+       "0,95 g·L⁻¹"
+      ],
+      [
+       "Inès",
+       "ρ(glucose, urine)",
+       "0,02 g·L⁻¹"
+      ],
+      [
+       "Sam",
+       "ρ(glucose, sérum)",
+       "0,91 g·L⁻¹"
+      ],
+      [
+       "Lina",
+       "C(glucose, sérum)",
+       "5,2 mmol·L⁻¹"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "pesee",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Pesée de Théo",
+     "entete": "Masse volumique du sérum",
+     "sousTitre": "Prélèvement à la pipette jaugée",
+     "emoji": "⚖️",
+     "lignes": [
+      {
+       "texte": "Volume prélevé",
+       "valeur": "5,00 mL"
+      },
+      {
+       "texte": "Tolérance de la pipette",
+       "valeur": "± 0,015 mL"
+      },
+      {
+       "texte": "Masse pesée",
+       "valeur": "5,15 g"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releves",
+     "multiple": true,
+     "enonce": "Touche les deux grandeurs directement comparables (même entité, même matrice, même unité).",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "aide": "Repère les indices entre parenthèses : ils donnent l’entité puis la matrice.",
+     "explication": "ρ(glucose, sérum) pour Théo et pour Sam : même entité, **même matrice**, même unité. Inès a mesuré une autre matrice (urine) ; Lina utilise une autre grandeur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la valeur de Lina en g·L⁻¹ (M(glucose) = 180 g·mol⁻¹), arrondie au centième.",
+     "reponse": 0.94,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.005,
+     "aide": "Multiplie la concentration en quantité de matière par la masse molaire.",
+     "explication": "ρ = C × M = 5,2 × 10⁻³ mol·L⁻¹ × 180 g·mol⁻¹ = 0,936, soit **0,94 g·L⁻¹** : cette valeur devient comparable à celles de Théo et de Sam."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle condition rend deux valeurs de concentration comparables ?",
+     "options": [
+      "Même entité, même matrice et même unité",
+      "Même élève et même jour de mesure",
+      "Même instrument et même nombre de chiffres",
+      "Même grandeur et même ordre de grandeur"
+     ],
+     "reponse": 0,
+     "aide": "Les indices servent à préciser quoi, et dans quoi.",
+     "explication": "Deux valeurs sont comparables si elles portent sur la **même entité**, dans la **même matrice**, exprimées dans la **même unité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la masse volumique du sérum d’après la pesée de Théo, en g·mL⁻¹ ?",
+     "reponse": 1.03,
+     "unite": "g·mL⁻¹",
+     "tolerance": 0.005,
+     "aide": "Masse volumique = masse divisée par volume.",
+     "explication": "ρ = m / V = 5,15 g / 5,00 mL = **1,03 g·mL⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Compte tenu de la tolérance de la pipette, quel volume maximal a pu être réellement prélevé ?",
+     "reponse": 5.015,
+     "unite": "mL",
+     "tolerance": 0.0005,
+     "aide": "Ajoute la tolérance au volume nominal.",
+     "explication": "5,00 + 0,015 = **5,015 mL** : le volume réel est compris entre 4,985 et 5,015 mL."
+    }
+   ]
+  },
+  {
+   "chapitre": "4014bdbc-478c-51e8-ab37-3e66ace6c938",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un étalon, un essai, une concentration",
+   "competence": "calculer",
+   "situation": "Noé dose le glucose d’un échantillon avec un étalon unique. Le spectrophotomètre a donné les absorbances du tableau et il doit en déduire la concentration de l’essai.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures de Noé",
+     "colonnes": [
+      "Solution",
+      "C (mmol·L⁻¹)",
+      "Absorbance A"
+     ],
+     "lignes": [
+      [
+       "Étalon",
+       "4,0",
+       "0,320"
+      ],
+      [
+       "Essai",
+       "?",
+       "0,240"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche l’absorbance de l’essai.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "L’essai est la ligne dont la concentration est inconnue.",
+     "explication": "L’absorbance de l’essai est **0,240** : c’est la case de la ligne « Essai », colonne « Absorbance A »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois équations du modèle de mesure.",
+     "items": [
+      "Équation aux grandeurs",
+      "Équation aux unités",
+      "Équation aux valeurs numériques"
+     ],
+     "aide": "On écrit la formule, on vérifie les unités, puis on remplace par les nombres.",
+     "explication": "On écrit l’**équation aux grandeurs**, on contrôle l’homogénéité avec l’**équation aux unités**, puis on calcule avec l’**équation aux valeurs numériques**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration de l’essai avec C(essai) = C(étalon) × A(essai) / A(étalon).",
+     "reponse": 3,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "Multiplie 4,0 par 0,240 puis divise par 0,320.",
+     "explication": "C(essai) = 4,0 × 0,240 / 0,320 = **3,0 mmol·L⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4014bdbc-478c-51e8-ab37-3e66ace6c938",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La gamme d’étalonnage de glucose",
+   "competence": "lire-graphique",
+   "situation": "Maya a préparé cinq étalons de glucose et mesuré leur absorbance pour tracer une gamme d’étalonnage. Elle doit y lire la concentration de quatre essais, mais certains ne se lisent pas.",
+   "documents": [
+    {
+     "id": "gamme",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Gamme d’étalonnage",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0,
+        0.1,
+        0.2,
+        0.3,
+        0.4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 0.5,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Concentration (mmol·L⁻¹)"
+     },
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Absorbances des essais",
+     "colonnes": [
+      "Essai",
+      "Absorbance"
+     ],
+     "lignes": [
+      [
+       "Essai 1",
+       "0,26"
+      ],
+      [
+       "Essai 2",
+       "0,52"
+      ],
+      [
+       "Essai 3",
+       "0,14"
+      ],
+      [
+       "Essai 4",
+       "0,45"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gamme",
+     "enonce": "Touche le point de la gamme dont l’absorbance vaut 0,30.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Suis le graphique : quelle concentration donne A = 0,30 ?",
+     "explication": "L’absorbance 0,30 correspond à l’étalon de **6 mmol·L⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la concentration de l’essai 1 (A = 0,26) ?",
+     "reponse": 5.2,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.1,
+     "aide": "La droite passe par l’origine : 0,10 d’absorbance par 2 mmol·L⁻¹.",
+     "explication": "La pente est de 0,05 par mmol·L⁻¹, donc C = 0,26 / 0,05 = **5,2 mmol·L⁻¹**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Quels essais se lisent sur la gamme, et lesquels sont hors de l’intervalle de mesure ?",
+     "categories": [
+      "Lisible sur la gamme",
+      "Hors de l’intervalle"
+     ],
+     "items": [
+      [
+       "Essai 1 : A = 0,26",
+       0
+      ],
+      [
+       "Essai 2 : A = 0,52",
+       1
+      ],
+      [
+       "Essai 3 : A = 0,14",
+       0
+      ],
+      [
+       "Essai 4 : A = 0,45",
+       1
+      ]
+     ],
+     "aide": "La gamme s’arrête à l’absorbance 0,40.",
+     "explication": "Les essais 1 et 3 sont **dans** l’intervalle (0 à 0,40). Les essais 2 et 4 le dépassent : on ne lit **jamais** un essai hors de la gamme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faire pour l’essai 2 (A = 0,52) ?",
+     "options": [
+      "Le diluer puis refaire la mesure dans la gamme",
+      "Prolonger la droite et lire la valeur sur le prolongement",
+      "Utiliser la valeur de l’étalon le plus concentré",
+      "Retirer la mesure sans la mentionner dans le compte rendu"
+     ],
+     "reponse": 0,
+     "aide": "La linéarité n’est vérifiée que dans l’intervalle de la gamme.",
+     "explication": "On **dilue** l’essai pour revenir dans l’intervalle, puis on tient compte de la dilution. Rien ne prouve que la droite se prolonge au-delà de la gamme."
+    }
+   ]
+  },
+  {
+   "chapitre": "4014bdbc-478c-51e8-ab37-3e66ace6c938",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La série de dosage est-elle validée ?",
+   "competence": "raisonner",
+   "situation": "Lors d’une séance de dosage, un étalon de contrôle de valeur cible 4,00 mmol·L⁻¹ est dosé à chaque série, avec une erreur maximale tolérée (EMT) de 0,20 mmol·L⁻¹. Quatre séries sont à valider, puis un essai à calculer.",
+   "documents": [
+    {
+     "id": "controle",
+     "type": "tableau",
+     "titre": "Étalon de contrôle (cible 4,00 ; EMT 0,20 mmol·L⁻¹)",
+     "colonnes": [
+      "Série",
+      "Valeur mesurée (mmol·L⁻¹)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "4,12"
+      ],
+      [
+       "B",
+       "4,26"
+      ],
+      [
+       "C",
+       "3,75"
+      ],
+      [
+       "D",
+       "3,81"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "dosage",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Dosage de la série A",
+     "entete": "Étalon unique",
+     "sousTitre": "Spectrophotomètre",
+     "emoji": "🔬",
+     "lignes": [
+      {
+       "texte": "C(étalon)",
+       "valeur": "5,00 mmol·L⁻¹"
+      },
+      {
+       "texte": "A(étalon)",
+       "valeur": "0,400"
+      },
+      {
+       "texte": "A(essai)",
+       "valeur": "0,360"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la borne basse de l’intervalle d’acceptabilité du contrôle ?",
+     "reponse": 3.8,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.001,
+     "aide": "Intervalle = valeur cible ± EMT.",
+     "explication": "Borne basse = 4,00 − 0,20 = **3,80 mmol·L⁻¹** ; borne haute = 4,20 mmol·L⁻¹."
+    },
+    {
+     "type": "zone",
+     "document": "controle",
+     "multiple": true,
+     "enonce": "Touche les valeurs qui font refuser la série.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "aide": "Une valeur est acceptée si elle est comprise entre 3,80 et 4,20.",
+     "explication": "Les séries **B** (4,26 > 4,20) et **C** (3,75 < 3,80) sortent de l’intervalle. A (4,12) et D (3,81) sont acceptées."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’étalon de contrôle doit-il être indépendant de l’étalon de dosage ?",
+     "options": [
+      "Sinon on vérifierait un résultat avec l’outil qui l’a produit",
+      "Parce qu’un étalon de contrôle est toujours plus concentré",
+      "Parce que le contrôle remplace l’étalon pour le calcul",
+      "Parce que deux étalons évitent de refaire l’étalonnage"
+     ],
+     "reponse": 0,
+     "aide": "L’étalon de dosage sert à calculer ; le contrôle sert à vérifier.",
+     "explication": "Si le même étalon servait aux deux, une erreur de préparation passerait inaperçue : on **vérifierait avec l’outil qui a produit le résultat**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque situation selon le type d’erreur.",
+     "categories": [
+      "Aléatoire",
+      "Systématique",
+      "Grossière"
+     ],
+     "items": [
+      [
+       "Le ménisque est lu un peu différemment à chaque fois",
+       0
+      ],
+      [
+       "Un étalon mal préparé décale toutes les mesures",
+       1
+      ],
+      [
+       "Le spectrophotomètre est déréglé",
+       1
+      ],
+      [
+       "Deux cuves sont inversées lors de la lecture",
+       2
+      ],
+      [
+       "Une dilution est faite avec un mauvais volume",
+       2
+      ]
+     ],
+     "aide": "Aléatoire : varie d’une mesure à l’autre. Systématique : décale toujours dans le même sens. Grossière : faute ponctuelle.",
+     "explication": "Le ménisque donne une erreur **aléatoire**. Un étalon mal préparé ou un appareil déréglé donne une erreur **systématique**. Cuves inversées ou mauvaise dilution sont des erreurs **grossières**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans la fiche de dosage, calcule la concentration de l’essai (C(étalon) × A(essai) / A(étalon)).",
+     "reponse": 4.5,
+     "unite": "mmol·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "Multiplie 5,00 par 0,360 puis divise par 0,400.",
+     "explication": "C(essai) = 5,00 × 0,360 / 0,400 = **4,50 mmol·L⁻¹**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab078f25-d17e-54c1-81c9-88601db0e864",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Découvrir le microscope de Nina",
+   "competence": "observer-schema",
+   "situation": "Nina utilise le microscope optique du lycée pour la première fois. Elle doit reconnaître ses pièces, calculer le grossissement et remettre dans l’ordre sa démarche de mise au point.",
+   "documents": [
+    {
+     "id": "microscope",
+     "type": "schema",
+     "titre": "Le microscope optique",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 215,
+       "l": 150,
+       "h": 18,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "base",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 70,
+       "l": 18,
+       "h": 148,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 70,
+       "l": 55,
+       "h": 14,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 60,
+       "l": 40,
+       "h": 84,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 25,
+       "l": 24,
+       "h": 36,
+       "arrondi": 3,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "oculaire",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 144,
+       "l": 50,
+       "h": 12,
+       "arrondi": 3,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "revolver",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 129,
+       "y": 156,
+       "l": 10,
+       "h": 22,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "o1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 156,
+       "l": 10,
+       "h": 22,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "o2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 161,
+       "y": 156,
+       "l": 10,
+       "h": 22,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "o3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 188,
+       "l": 110,
+       "h": 8,
+       "arrondi": 2,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "platine",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 262,
+       "cy": 150,
+       "r": 15,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "macro",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 262,
+       "cy": 188,
+       "r": 9,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "micro",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "microscope",
+     "enonce": "Touche l’oculaire, la pièce où Nina place son œil.",
+     "reponse": [
+      "oculaire"
+     ],
+     "aide": "Il se trouve tout en haut du tube.",
+     "explication": "L’**oculaire** est en haut du tube : c’est là qu’on regarde. Son grossissement est de × 10."
+    },
+    {
+     "type": "zone",
+     "document": "microscope",
+     "enonce": "Touche la pièce que Nina tourne pour changer d’objectif.",
+     "reponse": [
+      "revolver"
+     ],
+     "aide": "Elle porte les objectifs côte à côte, juste sous le tube.",
+     "explication": "C’est le **revolver** : on le tourne pour amener un autre objectif devant la préparation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec l’oculaire × 10 et l’objectif × 10, quel est le grossissement total ?",
+     "reponse": 100,
+     "aide": "Le grossissement total est le produit des deux grossissements.",
+     "explication": "10 × 10 = **× 100** : c’est le bon réglage pour repérer la préparation au début."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la démarche d’utilisation du microscope.",
+     "items": [
+      "Allumer et placer l’objectif le plus faible",
+      "Poser la lame et centrer la préparation",
+      "Mettre au point : vis macrométrique puis micrométrique",
+      "Passer à l’objectif supérieur sans toucher à la vis macrométrique",
+      "Avec l’objectif × 100, déposer une goutte d’huile à immersion"
+     ],
+     "aide": "On commence avec l’objectif le plus faible et on termine par l’immersion.",
+     "explication": "On part toujours de l’objectif le plus **faible**, on centre, on règle, puis on monte en grossissement avec la seule vis **micrométrique**. L’huile n’est utile qu’avec l’objectif **× 100**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab078f25-d17e-54c1-81c9-88601db0e864",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une coloration de Gram étape par étape",
+   "competence": "analyser-document",
+   "situation": "Alice réalise une coloration de Gram sur quatre frottis de bactéries. Son professeur lui demande de repérer les étapes clés, puis de classer les lames d’après leur couleur.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "frottis",
+       "texte": "Frottis séché et fixé à la chaleur"
+      },
+      {
+       "id": "violet",
+       "texte": "Colorant : cristal violet"
+      },
+      {
+       "id": "lugol",
+       "texte": "Lugol"
+      },
+      {
+       "id": "alcool",
+       "texte": "Alcool"
+      },
+      {
+       "id": "fuchsine",
+       "texte": "Fuchsine"
+      }
+     ],
+     "liens": [
+      {
+       "de": "frottis",
+       "a": "violet"
+      },
+      {
+       "de": "violet",
+       "a": "lugol"
+      },
+      {
+       "de": "lugol",
+       "a": "alcool"
+      },
+      {
+       "de": "alcool",
+       "a": "fuchsine"
+      }
+     ]
+    },
+    {
+     "id": "lames",
+     "type": "tableau",
+     "titre": "Résultats des quatre lames",
+     "colonnes": [
+      "Lame",
+      "Forme",
+      "Couleur finale"
+     ],
+     "lignes": [
+      [
+       "1",
+       "bacilles",
+       "violette"
+      ],
+      [
+       "2",
+       "coques",
+       "rose"
+      ],
+      [
+       "3",
+       "bacilles",
+       "rose"
+      ],
+      [
+       "4",
+       "coques en grappes",
+       "violette"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche le réactif qui joue le rôle de mordant, c’est-à-dire qui fixe le premier colorant.",
+     "reponse": [
+      "lugol"
+     ],
+     "aide": "C’est un réactif à base d’iode, ajouté juste après le premier colorant.",
+     "explication": "Le **Lugol** fixe le colorant dans la paroi : c’est le mordant."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "enonce": "Touche l’étape la plus critique de la coloration.",
+     "reponse": [
+      "alcool"
+     ],
+     "aide": "Une erreur de durée à cette étape fausse tout le résultat.",
+     "explication": "La **décoloration à l’alcool** est le point critique : trop longue ou trop courte, elle change la couleur finale des bactéries."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque lame d’après sa couleur finale.",
+     "categories": [
+      "Gram positif",
+      "Gram négatif"
+     ],
+     "items": [
+      [
+       "Lame 1 : bacilles violets",
+       0
+      ],
+      [
+       "Lame 2 : coques roses",
+       1
+      ],
+      [
+       "Lame 3 : bacilles roses",
+       1
+      ],
+      [
+       "Lame 4 : coques violettes en grappes",
+       0
+      ]
+     ],
+     "aide": "Gram positif : paroi épaisse qui retient le colorant.",
+     "explication": "Les bactéries **violettes** sont Gram positif (peptidoglycane épais) ; les **roses** sont Gram négatif (peptidoglycane fin et membrane externe)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Alice a laissé l’alcool agir beaucoup trop longtemps. Que risque-t-elle de voir ?",
+     "options": [
+      "Des bactéries Gram positif qui apparaissent roses",
+      "Des bactéries Gram négatif qui restent violettes",
+      "Toutes les bactéries restent violettes, quelle que soit leur paroi",
+      "Aucune bactérie visible, car elles ont été détruites"
+     ],
+     "reponse": 0,
+     "aide": "Une décoloration trop poussée enlève aussi le colorant des parois épaisses.",
+     "explication": "Trop d’alcool décolore même les **Gram positif** : ils prennent la fuchsine et paraissent roses. On valide donc avec des **souches témoins** connues."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab078f25-d17e-54c1-81c9-88601db0e864",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mesurer une levure avec l’oculaire micrométrique",
+   "competence": "modeliser",
+   "situation": "Julien observe une levure et une bactérie avec un oculaire micrométrique. Il doit mesurer les deux cellules et comparer leurs tailles, en tenant compte du grossissement utilisé.",
+   "documents": [
+    {
+     "id": "levure",
+     "type": "schema",
+     "titre": "Levure observée à × 400",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 24,
+       "texte": "Grossissement × 400",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 120,
+       "cy": 100,
+       "rx": 50,
+       "ry": 30,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "cellule",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 100,
+       "r": 10,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 68,
+       "r": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "bourgeon",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        100
+       ],
+       "a": [
+        70,
+        148
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        100
+       ],
+       "a": [
+        170,
+        148
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        150
+       ],
+       "a": [
+        320,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        150
+       ],
+       "a": [
+        20,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        150
+       ],
+       "a": [
+        45,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        150
+       ],
+       "a": [
+        70,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        150
+       ],
+       "a": [
+        95,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        150
+       ],
+       "a": [
+        120,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        145,
+        150
+       ],
+       "a": [
+        145,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        150
+       ],
+       "a": [
+        170,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        195,
+        150
+       ],
+       "a": [
+        195,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        150
+       ],
+       "a": [
+        220,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        150
+       ],
+       "a": [
+        245,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        150
+       ],
+       "a": [
+        270,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        295,
+        150
+       ],
+       "a": [
+        295,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        320,
+        150
+       ],
+       "a": [
+        320,
+        160
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 180,
+       "texte": "Graduations de l’oculaire",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "etalonnage",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Étalonnage de l’oculaire",
+     "entete": "Valeur d’une graduation",
+     "sousTitre": "Fiche de Julien",
+     "emoji": "📏",
+     "lignes": [
+      {
+       "texte": "À × 400",
+       "valeur": "1 graduation = 2,5 µm"
+      },
+      {
+       "texte": "À × 1 000",
+       "valeur": "1 graduation = 1,0 µm"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Bactérie observée à × 1 000",
+       "valeur": "2 graduations"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "turquoise"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "levure",
+     "enonce": "Touche le bourgeon, signature d’une levure.",
+     "reponse": [
+      "bourgeon"
+     ],
+     "aide": "C’est la petite cellule fille qui pousse sur la cellule mère.",
+     "explication": "Le **bourgeon** est la petite cellule fille accrochée à la cellule mère : c’est ainsi que la levure se reproduit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille de la levure, sans compter le bourgeon ? Compte les graduations sous la cellule.",
+     "reponse": 10,
+     "unite": "µm",
+     "tolerance": 0.1,
+     "aide": "Les lignes pointillées t’indiquent où la cellule commence et finit sur la règle.",
+     "explication": "La cellule couvre **4 graduations** : 4 × 2,5 µm = **10 µm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une graduation vaut-elle 1,0 µm à × 1 000 et 2,5 µm à × 400 ?",
+     "options": [
+      "Plus l’image est agrandie, plus une graduation couvre peu de longueur réelle",
+      "Le fabricant a gravé des graduations différentes pour chaque objectif",
+      "L’huile à immersion réduit la taille réelle des cellules observées sur la lame",
+      "À fort grossissement, les cellules vivantes rétrécissent un peu"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que fait un plus fort grossissement à la taille de l’image.",
+     "explication": "2,5 × 400 = 1 000 = 1,0 × 1 000 : la règle est fixe, mais l’objet est plus agrandi ; elle recouvre donc une **longueur réelle plus petite**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la levure est-elle plus longue que la bactérie de la fiche d’étalonnage (2 graduations à × 1 000) ?",
+     "reponse": 5,
+     "aide": "Calcule d’abord la taille de la bactérie en µm.",
+     "explication": "La bactérie mesure 2 × 1,0 = **2 µm** ; la levure 10 µm ; le rapport est 10 / 2 = **5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b51d5cb9-3b24-549b-8cbf-4142713235a6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois cellules sous le microscope de Sara",
+   "competence": "observer-schema",
+   "situation": "Sara a croisé trois cellules dans un échantillon d’eau de mare. Elle les a dessinées côte à côte, sans respecter les tailles, et doit les identifier.",
+   "documents": [
+    {
+     "id": "cellules",
+     "type": "schema",
+     "titre": "Trois cellules observées (tailles non respectées)",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 90,
+       "l": 50,
+       "h": 18,
+       "arrondi": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "bacterie",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 53,
+       "y": 135,
+       "texte": "A",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 100,
+       "rx": 32,
+       "ry": 24,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "levure",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 100,
+       "r": 9,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 202,
+       "cy": 72,
+       "r": 11,
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 135,
+       "texte": "B",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 285,
+       "cy": 100,
+       "r": 34,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "algue",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 270,
+       "cy": 92,
+       "rx": 9,
+       "ry": 5,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 298,
+       "cy": 108,
+       "rx": 9,
+       "ry": 5,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 280,
+       "cy": 118,
+       "rx": 9,
+       "ry": 5,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 285,
+       "y": 150,
+       "texte": "C",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cellules",
+     "enonce": "Touche la cellule qui bourgeonne : c’est une levure.",
+     "reponse": [
+      "levure"
+     ],
+     "aide": "Cherche la cellule ovale qui porte une petite cellule fille.",
+     "explication": "La cellule **B** porte un **bourgeon** : c’est une levure, un champignon unicellulaire."
+    },
+    {
+     "type": "zone",
+     "document": "cellules",
+     "enonce": "Touche la micro-algue, reconnaissable à ses chloroplastes verts.",
+     "reponse": [
+      "algue"
+     ],
+     "aide": "Cherche la cellule où l’on voit des organites verts.",
+     "explication": "La cellule **C** contient des **chloroplastes** verts : c’est une micro-algue photosynthétique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque type de micro-organisme à son signe distinctif.",
+     "paires": [
+      [
+       "Bactérie",
+       "Pas de noyau : ADN libre dans le cytoplasme"
+      ],
+      [
+       "Levure",
+       "Bourgeonnement"
+      ],
+      [
+       "Micro-algue",
+       "Chloroplastes verts"
+      ],
+      [
+       "Moisissure",
+       "Filaments et appareil sporifère"
+      ]
+     ],
+     "aide": "La bactérie est procaryote, les trois autres sont eucaryotes.",
+     "explication": "La **bactérie** n’a pas de noyau, la **levure** bourgeonne, la **micro-algue** porte des chloroplastes et la **moisissure** forme des filaments avec un appareil sporifère."
+    }
+   ]
+  },
+  {
+   "chapitre": "b51d5cb9-3b24-549b-8cbf-4142713235a6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois cellules mystère à identifier",
+   "competence": "lire-tableau",
+   "situation": "Mehdi a mesuré trois cellules inconnues, X, Y et Z, et noté ses observations. Il sait qu’il y a une bactérie, une levure et une micro-algue.",
+   "documents": [
+    {
+     "id": "mystere",
+     "type": "tableau",
+     "titre": "Observations de Mehdi",
+     "colonnes": [
+      "Cellule",
+      "Taille",
+      "Noyau",
+      "Paroi",
+      "Chloroplastes"
+     ],
+     "lignes": [
+      [
+       "X",
+       "1 µm",
+       "absent",
+       "peptidoglycane",
+       "non"
+      ],
+      [
+       "Y",
+       "8 µm",
+       "présent",
+       "chitine et glucanes",
+       "non"
+      ],
+      [
+       "Z",
+       "20 µm",
+       "présent",
+       "cellulose",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mystere",
+     "enonce": "Touche la cellule procaryote.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Une cellule procaryote n’a pas de noyau.",
+     "explication": "La cellule **X** n’a pas de noyau : son ADN est libre dans le cytoplasme, c’est une cellule procaryote."
+    },
+    {
+     "type": "association",
+     "enonce": "Identifie chaque cellule.",
+     "paires": [
+      [
+       "Cellule X",
+       "Bactérie"
+      ],
+      [
+       "Cellule Y",
+       "Levure"
+      ],
+      [
+       "Cellule Z",
+       "Micro-algue"
+      ]
+     ],
+     "aide": "Chloroplastes : micro-algue. Chitine : champignon. Peptidoglycane : bactérie.",
+     "explication": "X est une **bactérie** (peptidoglycane, 1 µm), Y une **levure** (chitine, 8 µm), Z une **micro-algue** (chloroplastes, cellulose)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la cellule Y est-elle plus grande que la cellule X ? (rapport des tailles)",
+     "reponse": 8,
+     "aide": "Divise la taille de Y par celle de X.",
+     "explication": "8 µm / 1 µm = **8**. Les levures sont bien plus grandes que les bactéries."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces cellules : procaryotes ou eucaryotes ?",
+     "categories": [
+      "Procaryote",
+      "Eucaryote"
+     ],
+     "items": [
+      [
+       "Escherichia coli",
+       0
+      ],
+      [
+       "Une Archée",
+       0
+      ],
+      [
+       "Saccharomyces cerevisiae",
+       1
+      ],
+      [
+       "Chlorella",
+       1
+      ],
+      [
+       "Une cellule humaine",
+       1
+      ]
+     ],
+     "aide": "Seules les Bactéries et les Archées sont procaryotes.",
+     "explication": "*E. coli* (bactérie) et les **Archées** sont procaryotes. Levure, *Chlorella* et cellule humaine sont **eucaryotes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b51d5cb9-3b24-549b-8cbf-4142713235a6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel microscope a pris ces clichés ?",
+   "competence": "analyser-document",
+   "situation": "Un dossier de presse présente trois clichés sans préciser l’appareil. Louise doit identifier lesquels viennent d’un microscope électronique, mesurer une mitochondrie, puis situer les êtres vivants dans l’arbre du vivant.",
+   "documents": [
+    {
+     "id": "cliches",
+     "type": "tableau",
+     "titre": "Trois clichés",
+     "colonnes": [
+      "Cliché",
+      "Aspect",
+      "Échelle",
+      "Détail visible"
+     ],
+     "lignes": [
+      [
+       "A",
+       "noir et blanc",
+       "barre de 500 nm = 2,0 cm",
+       "double membrane d’une mitochondrie, longue de 4,0 cm sur le cliché"
+      ],
+      [
+       "B",
+       "en couleur",
+       "barre de 10 µm",
+       "cellules ovales avec bourgeons"
+      ],
+      [
+       "C",
+       "noir et blanc",
+       "barre de 100 nm",
+       "ribosomes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Clichés décrits pour l’exercice"
+    },
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Les trois domaines du vivant",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        110
+       ],
+       "a": [
+        60,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        42
+       ],
+       "a": [
+        60,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        42
+       ],
+       "a": [
+        100,
+        42
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        100
+       ],
+       "a": [
+        100,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        160
+       ],
+       "a": [
+        100,
+        160
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 30,
+       "l": 90,
+       "h": 24,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "bact",
+       "zone": true,
+       "texte": "Bactéries"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 88,
+       "l": 90,
+       "h": 24,
+       "arrondi": 4,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "arch",
+       "zone": true,
+       "texte": "Archées"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 148,
+       "l": 90,
+       "h": 24,
+       "arrondi": 4,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "euc",
+       "zone": true,
+       "texte": "Eucaryotes"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        160
+       ],
+       "a": [
+        225,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        130
+       ],
+       "a": [
+        225,
+        190
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        130
+       ],
+       "a": [
+        250,
+        130
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        160
+       ],
+       "a": [
+        250,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        225,
+        190
+       ],
+       "a": [
+        250,
+        190
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 134,
+       "texte": "Levures",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 164,
+       "texte": "Humains",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 194,
+       "texte": "Plantes",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cliches",
+     "multiple": true,
+     "enonce": "Touche les deux clichés obtenus au microscope électronique.",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "aide": "Un cliché en noir et blanc qui montre des ribosomes ou la double membrane d’une mitochondrie dépasse les limites de la microscopie optique.",
+     "explication": "Les clichés **A** et **C** (noir et blanc, détails d’organites, barres en nanomètres) viennent d’un microscope **électronique**. Le cliché B, en couleur et à l’échelle de 10 µm, vient d’un microscope optique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur réelle de la mitochondrie du cliché A, en nm ?",
+     "reponse": 1000,
+     "unite": "nm",
+     "tolerance": 5,
+     "aide": "2,0 cm sur le cliché représentent 500 nm : combien de fois 2,0 cm dans 4,0 cm ?",
+     "explication": "4,0 cm correspondent à deux fois 2,0 cm, soit 2 × 500 = **1 000 nm**, c’est-à-dire 1 µm."
+    },
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche le domaine qui regroupe à la fois les levures et les humains.",
+     "reponse": [
+      "euc"
+     ],
+     "aide": "Les levures, les humains et les plantes ont tous un noyau.",
+     "explication": "Levures, humains et plantes sont des **Eucaryotes** : leurs cellules ont un noyau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on qu’une levure est plus proche parente de l’être humain que d’une bactérie ?",
+     "options": [
+      "Elle appartient au même domaine, celui des Eucaryotes",
+      "Elle est visible au microscope optique, comme l’humain",
+      "Elle bourgeonne comme les cellules humaines se divisent",
+      "Elle vit dans le même milieu que les bactéries digestives"
+     ],
+     "reponse": 0,
+     "aide": "Regarde à quel domaine de l’arbre appartient chacun des trois.",
+     "explication": "L’arbre phylogénétique place **levures et humains dans le même domaine** (Eucaryotes) ; la bactérie est dans un autre domaine : la parenté est plus proche."
+    }
+   ]
+  },
+  {
+   "chapitre": "0069b625-558b-5f1d-9cb8-ce925008e15b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le poste d’ensemencement de Yanis",
+   "competence": "observer-schema",
+   "situation": "Yanis prépare son poste pour ensemencer une gélose. Il a allumé un bec Bunsen, mais quelque chose cloche sur sa paillasse. Il doit aussi se rappeler l’ordre de préparation.",
+   "documents": [
+    {
+     "id": "poste",
+     "type": "schema",
+     "titre": "La paillasse de Yanis (vue de dessus)",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 20,
+       "l": 310,
+       "h": 190,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 115,
+       "r": 72,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "zone-asepsie",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 120,
+       "emoji": "🔥",
+       "taille": 36,
+       "id": "bec",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 125,
+       "y": 90,
+       "emoji": "🧪",
+       "taille": 30
+      },
+      {
+       "forme": "emoji",
+       "x": 198,
+       "y": 92,
+       "emoji": "🧫",
+       "taille": 30
+      },
+      {
+       "forme": "rect",
+       "x": 270,
+       "y": 165,
+       "l": 22,
+       "h": 12,
+       "arrondi": 4,
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "bouchon",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 281,
+       "y": 195,
+       "texte": "Bouchon",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 40,
+       "texte": "Zone d’asepsie autour du bec",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poste",
+     "enonce": "Touche le bouchon posé au mauvais endroit : on ne pose jamais un bouchon stérile sur la paillasse.",
+     "reponse": [
+      "bouchon"
+     ],
+     "aide": "Il est hors de la zone claire autour du bec.",
+     "explication": "Le **bouchon** doit être tenu dans la main pendant l’ensemencement : posé sur la paillasse, il est contaminé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la préparation du poste d’ensemencement.",
+     "items": [
+      "Désinfecter la paillasse",
+      "Allumer le bec Bunsen",
+      "Disposer le matériel dans la zone d’asepsie",
+      "Ouvrir les tubes près de la flamme",
+      "Flamber l’anse avant usage"
+     ],
+     "aide": "La zone d’asepsie n’existe qu’une fois le bec allumé.",
+     "explication": "On **désinfecte**, on **allume** le bec (il crée la zone d’asepsie), on **dispose** le matériel dans cette zone, on **ouvre** les tubes, puis on **flambe** l’anse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi flambe-t-on l’anse avant ET après usage ?",
+     "options": [
+      "Avant pour la stériliser, après pour détruire la culture restante et protéger",
+      "Avant pour la refroidir, après pour la sécher et la ranger sur le support",
+      "Avant et après pour la désinfecter à l’éthanol exactement de la même façon",
+      "Pour que la gélose reste chaude et que les colonies poussent plus vite"
+     ],
+     "reponse": 0,
+     "aide": "Le travail aseptique protège dans les deux sens.",
+     "explication": "Avant : l’anse devient **stérile** (la culture est protégée). Après : on détruit la culture restante (le **manipulateur** est protégé)."
+    }
+   ]
+  },
+  {
+   "chapitre": "0069b625-558b-5f1d-9cb8-ce925008e15b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel procédé pour stériliser quel objet ?",
+   "competence": "analyser-document",
+   "situation": "La technicienne du laboratoire doit stériliser cinq objets avant la séance de TP. Chacun a sa contrainte, et un cycle d’autoclave est enregistré pour contrôler la durée de stérilisation.",
+   "documents": [
+    {
+     "id": "objets",
+     "type": "tableau",
+     "titre": "Les objets à stériliser",
+     "colonnes": [
+      "Objet",
+      "Contrainte"
+     ],
+     "lignes": [
+      [
+       "Milieu gélosé en flacon",
+       "supporte la chaleur humide"
+      ],
+      [
+       "Solution de vitamines",
+       "détruite par la chaleur"
+      ],
+      [
+       "Pipettes en verre vides",
+       "supportent la chaleur sèche"
+      ],
+      [
+       "Boîtes de Petri en plastique",
+       "fondent à la chaleur, usage unique"
+      ],
+      [
+       "Anse métallique",
+       "à stériliser sur place, en une seconde"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "cycle",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Cycle d’autoclave",
+     "categories": [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40",
+      "50",
+      "60"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        20,
+        70,
+        105,
+        121,
+        121,
+        121,
+        95
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 0,
+      "max": 140,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "source": "Enregistrement écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "objets",
+     "enonce": "Touche l’objet qui ne supporte pas la chaleur : il sera stérilisé par filtration.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche l’objet dont la contrainte est la chaleur.",
+     "explication": "La **solution de vitamines** est thermosensible : elle est stérilisée par filtration sur membrane de 0,22 µm."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque objet à son procédé de stérilisation.",
+     "paires": [
+      [
+       "Milieu gélosé en flacon",
+       "Autoclave, 121 °C, 20 min"
+      ],
+      [
+       "Solution de vitamines",
+       "Filtration sur membrane 0,22 µm"
+      ],
+      [
+       "Pipettes en verre vides",
+       "Four Pasteur, chaleur sèche"
+      ],
+      [
+       "Boîtes de Petri en plastique",
+       "Irradiation gamma industrielle"
+      ],
+      [
+       "Anse métallique",
+       "Flambage"
+      ]
+     ],
+     "aide": "Chaleur humide, filtration, chaleur sèche, rayons gamma, flamme.",
+     "explication": "Le milieu passe à l’**autoclave**, les vitamines à la **filtration**, le verre vide au **four Pasteur**, les boîtes plastique sont **irradiées** à l’usine, l’anse est **flambée**."
+    },
+    {
+     "type": "zone",
+     "document": "cycle",
+     "enonce": "Touche le premier point où la température atteint 121 °C.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le moment où la courbe devient horizontale.",
+     "explication": "Le plateau de **121 °C** débute à la minute 30 : c’est à partir de là que compte la durée de stérilisation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le barème est 121 °C pendant 20 min, décompté dès que 121 °C est atteint. À quelle minute du cycle le plateau se termine-t-il ?",
+     "reponse": 50,
+     "unite": "min",
+     "aide": "Ajoute la durée du palier au moment où il commence.",
+     "explication": "Le plateau commence à 30 min et dure 20 min : il se termine à **50 min**, comme le montre la courbe, avant le refroidissement."
+    }
+   ]
+  },
+  {
+   "chapitre": "0069b625-558b-5f1d-9cb8-ce925008e15b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi les boîtes de Léo sont-elles couvertes de colonies ?",
+   "competence": "raisonner",
+   "situation": "Léo a ensemencé une gélose, mais le lendemain elle est envahie de colonies variées. Sa professeure lui fait comparer cinq boîtes témoins, puis relire son propre récit pour retrouver ses fautes.",
+   "documents": [
+    {
+     "id": "boites",
+     "type": "tableau",
+     "titre": "Cinq boîtes après incubation",
+     "colonnes": [
+      "Boîte",
+      "Traitement",
+      "Colonies"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Fermée, jamais ouverte",
+       "0"
+      ],
+      [
+       "2",
+       "Ouverte 10 min près d’un bec Bunsen allumé",
+       "2"
+      ],
+      [
+       "3",
+       "Ouverte 10 min loin de toute flamme",
+       "14"
+      ],
+      [
+       "4",
+       "Touchée avec un doigt",
+       "58"
+      ],
+      [
+       "5",
+       "Frottée sur une poignée de porte",
+       "31"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le récit de Léo",
+     "blocs": [
+      "Léo doit ensemencer une gélose. Il désinfecte sa paillasse, allume le bec Bunsen puis prend son tube stérile.",
+      "Pour gagner du temps, il [[e|pose]] le bouchon sur la paillasse, ouvre la boîte [[e|loin]] de la flamme et étale avec une anse qu’il a oublié de [[e|flamber]].",
+      "Le lendemain, sa boîte est couverte de colonies de formes variées."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boites",
+     "enonce": "Touche la boîte qui sert de témoin : elle montre que la gélose est stérile au départ.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la boîte qui n’a subi aucun traitement.",
+     "explication": "La boîte **1**, fermée, n’a aucune colonie : le milieu était bien **stérile** avant les manipulations."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure en comparant les boîtes 2 et 3 ?",
+     "options": [
+      "La zone d’asepsie du bec Bunsen limite les contaminants de l’air",
+      "Le bec Bunsen stérilise toute la gélose pendant l’ouverture",
+      "Les micro-organismes se développent mieux près de la chaleur",
+      "La durée d’ouverture a été différente pour les deux boîtes"
+     ],
+     "reponse": 0,
+     "aide": "Même durée d’ouverture, seule la place par rapport à la flamme change.",
+     "explication": "Près de la flamme : **2 colonies** ; loin : **14**. Les courants d’air chaud éloignent les particules : c’est la **zone d’asepsie**. Elle réduit la contamination sans la supprimer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de colonies de plus la boîte 3 compte-t-elle que la boîte 2 ?",
+     "reponse": 12,
+     "aide": "Soustrais les deux nombres du tableau.",
+     "explication": "14 − 2 = **12 colonies** de plus loin de la flamme."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "multiple": true,
+     "enonce": "Touche les trois mots qui trahissent une faute d’asepsie dans le récit de Léo.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche trois gestes : le bouchon, l’emplacement de la boîte, l’anse.",
+     "explication": "Léo **pose** le bouchon sur la paillasse, ouvre la boîte **loin** de la flamme et oublie de **flamber** l’anse : trois fautes qui expliquent la contamination."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la boîte 4, touchée avec un doigt, compte-t-elle autant de colonies ?",
+     "options": [
+      "La peau porte de nombreux micro-organismes qui se déposent sur la gélose",
+      "Le doigt stérilise la gélose et favorise les colonies de la bactérie étudiée",
+      "La chaleur du doigt fait pousser les colonies plus vite sur la gélose",
+      "Le doigt apporte les nutriments qui manquent au milieu de culture"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux micro-organismes environnementaux.",
+     "explication": "La peau est couverte de **micro-organismes** : ils se déposent et se multiplient sur la gélose. C’est pour cela qu’on travaille en asepsie."
+    }
+   ]
+  }
+ ]
+}

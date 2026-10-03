@@ -18,9 +18,11 @@ const moi = joueur({ id: 'moi', nom: 'Sacha', moi: true, trophees: 120, trophees
 const lea = joueur({ id: 'lea', nom: 'Léa', trophees: 300, tropheesSemaine: 12, secondesSemaine: 7800 })
 const rayan = joueur({ id: 'rayan', nom: 'Rayan', trophees: 40, tropheesSemaine: 30, secondesSemaine: 9000 })
 
-/** Les noms au pied des colonnes, de gauche à droite. */
+/** Les lignes du classement, de haut en bas : « Rayan », « Léa », « Toi ». */
 const ordre = () =>
-  [...document.querySelectorAll('ol > li')].map((li) => li.lastElementChild?.textContent)
+  [...document.querySelectorAll('ol > li > button')].map(
+    (b) => /^\d+e?r? : (.+?) ·/.exec(b.getAttribute('aria-label') ?? '')?.[1],
+  )
 
 afterEach(() => {
   cleanup()
@@ -28,32 +30,42 @@ afterEach(() => {
 })
 
 describe('ClassementAmis', () => {
-  it('range les colonnes aux trophées, la mienne marquée', () => {
+  it('s’ouvre au temps de travail de la semaine, ma ligne marquée', () => {
     render(<ClassementAmis joueurs={[moi, lea, rayan]} complet />)
+    expect(ordre()).toEqual(['Rayan', 'Léa', 'Toi'])
+    expect(document.querySelector('button[data-moi]')?.textContent).toContain('Toi')
+    expect(screen.getByText('Encore 1 h 40 de travail pour passer devant Léa.')).toBeTruthy()
+  })
+
+  it('les trophées reclassent tout le monde', () => {
+    render(<ClassementAmis joueurs={[moi, lea, rayan]} complet />)
+    fireEvent.click(screen.getByRole('button', { name: 'Trophées' }))
     expect(ordre()).toEqual(['Léa', 'Toi', 'Rayan'])
-    expect(document.querySelector('li[data-moi]')?.textContent).toContain('Toi')
     expect(screen.getByText('Encore 181 trophées pour passer devant Léa.')).toBeTruthy()
   })
 
-  it('le temps de travail reclasse tout le monde', () => {
+  it('écrit la valeur de chacun au bout de sa barre', () => {
     render(<ClassementAmis joueurs={[moi, lea, rayan]} complet />)
-    fireEvent.click(screen.getByRole('button', { name: /Temps de travail/ }))
-    expect(ordre()).toEqual(['Rayan', 'Léa', 'Toi'])
-    expect(screen.getByText('Encore 1 h 40 de travail pour passer devant Léa.')).toBeTruthy()
+    const lignes = [...document.querySelectorAll('ol > li > button')].map((b) => b.textContent)
+    expect(lignes[0]).toContain('2 h 30')
+    expect(lignes[2]).toContain('30 min')
   })
 
   it('nomme le challenger : la meilleure semaine, même dernier au total', () => {
     render(<ClassementAmis joueurs={[moi, lea, rayan]} complet />)
     expect(screen.getByRole('button', { name: /Rayan.*challenger de la semaine/ })).toBeTruthy()
     expect(screen.queryByRole('button', { name: /Léa.*challenger/ })).toBeNull()
+    expect(screen.getByText(/Challenger/)).toBeTruthy()
   })
 
-  it('toucher une colonne dit son détail', () => {
+  it('toucher une ligne dit son détail, la retoucher rend la phrase', () => {
     render(<ClassementAmis joueurs={[moi, lea, rayan]} complet />)
-    // Au départ, c'est ma colonne.
-    expect(screen.getByText(/^Toi · 120 trophées/)).toBeTruthy()
-    fireEvent.click(screen.getByRole('button', { name: /^1er : Léa/ }))
+    const ligneLea = screen.getByRole('button', { name: /^2e : Léa/ })
+    fireEvent.click(ligneLea)
     expect(screen.getByText('Léa · 300 trophées (+12 cette semaine) · 2 h 10 de travail cette semaine')).toBeTruthy()
+    expect(ligneLea.getAttribute('aria-pressed')).toBe('true')
+    fireEvent.click(ligneLea)
+    expect(screen.getByText('Encore 1 h 40 de travail pour passer devant Léa.')).toBeTruthy()
   })
 
   it('seul : une invitation, pas de légende', () => {

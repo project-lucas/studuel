@@ -2843,7 +2843,7 @@ Axel, perdu seul dans les galeries, vit une **épreuve** qui ressemble à un **r
 **Conte philosophique** sur la **providence** et le **mal**.
 
 | Où en est Voltaire | Ce qui suivra |
-| Encore **proche de l’optimisme de Leibniz** | Il le **démolira douze ans plus tard** dans *Candide* — **après le tremblement de terre de Lisbonne** |
+| Encore **proche de l’optimisme de Leibniz** | Il le **démolira onze ans plus tard** dans *Candide* — **après le tremblement de terre de Lisbonne** |
 
 Ironie, **rythme rapide**, satire de la **justice**, des **courtisans** et des **querelles religieuses**.
 

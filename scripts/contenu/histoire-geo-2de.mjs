@@ -535,7 +535,7 @@ L'Occident y redécouvre Aristote, Galien et Ptolémée.
 
 ## Les voyages
 | La date | Le navigateur | L'exploit |
-| **1487** | **Bartolomeu Dias** | Il passe le cap de Bonne-Espérance |
+| **1488** | **Bartolomeu Dias** | Il passe le cap de Bonne-Espérance |
 | **12 octobre 1492** | **Christophe Colomb**, pour la Castille | Il touche les Antilles, croyant avoir rejoint l'Asie |
 | **1498** | **Vasco de Gama** | Il atteint l'Inde |
 | **1519-1522** | **Magellan**, puis Elcano | Le premier tour du monde |
@@ -549,7 +549,7 @@ L'Occident y redécouvre Aristote, Galien et Ptolémée.
           questions: [
             ['Quel événement de 1453 rend plus difficile la route terrestre vers l’Asie ?', ['La prise de Constantinople par les Ottomans', 'La chute de Grenade', 'La peste noire', 'La guerre de Cent Ans'], 0, 'Le commerce des épices passe désormais par des intermédiaires ottomans.'],
             ['Quel navire permet les grandes explorations portugaises ?', ['La caravelle', 'La galère', 'Le drakkar', 'Le galion'], 0, 'Légère et gréée pour remonter au vent.'],
-            ['Qui franchit le cap de Bonne-Espérance en 1487 ?', ['Bartolomeu Dias', 'Vasco de Gama', 'Christophe Colomb', 'Magellan'], 0, 'La route maritime vers l’Inde devient envisageable.'],
+            ['Qui franchit le cap de Bonne-Espérance en 1488 ?', ['Bartolomeu Dias', 'Vasco de Gama', 'Christophe Colomb', 'Magellan'], 0, 'La route maritime vers l’Inde devient envisageable.', 'Qui franchit le cap de Bonne-Espérance en 1487 ?'],
             ['Qui atteint l’Inde par la mer en 1498 ?', ['Vasco de Gama', 'Cabral', 'Colomb', 'Amerigo Vespucci'], 0, 'Il ouvre la route des épices au profit du Portugal.'],
             ['Que croit avoir atteint Colomb en octobre 1492 ?', ['Les Indes, c’est-à-dire l’Asie', 'Un continent inconnu', 'L’Afrique australe', 'Le Groenland'], 0, 'D’où le nom d’Indiens donné aux habitants.'],
             ['Le traité de Tordesillas de 1494 partage le monde entre Portugal et Castille.', ['Vrai', 'Faux'], 0, 'Une ligne dans l’Atlantique : le Brésil tombe côté portugais.'],

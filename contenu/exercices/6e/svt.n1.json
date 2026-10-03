@@ -1,0 +1,3946 @@
+{
+ "niveau": "6e",
+ "matiere": "svt",
+ "exercices": [
+  {
+   "chapitre": "b71f99c4-65f3-5068-976e-9d874d5122ad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une cellule de feuille sous le microscope",
+   "competence": "observer-schema",
+   "situation": "En classe de sciences, Inès regarde une feuille de plante au microscope. Elle a dessiné ce qu’elle voit : une seule cellule, bien nette.",
+   "documents": [
+    {
+     "id": "cellule",
+     "type": "schema",
+     "titre": "Cellule d’une feuille (schéma du cahier d’Inès)",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 18,
+       "y": 20,
+       "l": 284,
+       "h": 176,
+       "arrondi": 10,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "paroi",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 32,
+       "l": 260,
+       "h": 152,
+       "arrondi": 6,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "cyto"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 218,
+       "cy": 108,
+       "rx": 58,
+       "ry": 52,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "vacuole",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 92,
+       "cy": 105,
+       "r": 28,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "noyau",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 98,
+       "cy": 99,
+       "r": 8,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 62,
+       "cy": 58,
+       "rx": 13,
+       "ry": 8,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "c1",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 140,
+       "cy": 52,
+       "rx": 13,
+       "ry": 8,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "c2",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 58,
+       "cy": 156,
+       "rx": 13,
+       "ry": 8,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "c3",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 132,
+       "cy": 160,
+       "rx": 13,
+       "ry": 8,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "c4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 100,
+       "r": 2,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 130,
+       "r": 2,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 110,
+       "r": 2,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 60,
+       "r": 2,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 150,
+       "r": 2,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 218,
+       "texte": "Une cellule vue au microscope",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Touche l’élément qui contient l’information génétique de la cellule.",
+     "reponse": [
+      "noyau"
+     ],
+     "aide": "C’est une bulle bien arrondie, plutôt près du milieu de la cellule, avec une petite tache au centre.",
+     "explication": "C’est le **noyau** : il contient l’information génétique et commande la cellule."
+    },
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Les chloroplastes contiennent la chlorophylle. Touche tous les chloroplastes du schéma.",
+     "reponse": [
+      "c1",
+      "c2",
+      "c3",
+      "c4"
+     ],
+     "multiple": true,
+     "aide": "Ce sont de petits éléments en forme de grains, il y en a plusieurs. Cherche-les tout autour du noyau.",
+     "explication": "Il y a **quatre chloroplastes** sur le schéma. C’est dans les chloroplastes que se fait la photosynthèse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le schéma sous les yeux.",
+     "texte": "Cette cellule est une cellule ___ : elle est entourée d’une ___ rigide qui lui donne sa forme.",
+     "reponses": [
+      [
+       "végétale"
+      ],
+      [
+       "paroi"
+      ]
+     ],
+     "banque": [
+      "végétale",
+      "animale",
+      "paroi",
+      "membrane",
+      "vacuole"
+     ],
+     "aide": "Une cellule qui a des chloroplastes et une enveloppe rigide est celle d’une plante.",
+     "explication": "C’est une cellule **végétale** : elle a une **paroi** rigide, des chloroplastes et une grande vacuole."
+    }
+   ]
+  },
+  {
+   "chapitre": "b71f99c4-65f3-5068-976e-9d874d5122ad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre échantillons, deux sortes de cellules",
+   "competence": "lire-tableau",
+   "situation": "Lors d’un atelier au laboratoire du collège, Malik observe quatre échantillons au microscope. Il note ce qu’il voit dans un tableau, puis il doit les trier.",
+   "documents": [
+    {
+     "id": "obs",
+     "type": "tableau",
+     "titre": "Les notes de Malik",
+     "colonnes": [
+      "Échantillon",
+      "Paroi",
+      "Chloroplastes",
+      "Noyau"
+     ],
+     "lignes": [
+      [
+       "A — feuille de lierre",
+       "oui",
+       "oui",
+       "oui"
+      ],
+      [
+       "B — cellules de la joue (frottis)",
+       "non",
+       "non",
+       "oui"
+      ],
+      [
+       "C — feuille de salade",
+       "oui",
+       "oui",
+       "oui"
+      ],
+      [
+       "D — peau d’une grenouille",
+       "non",
+       "non",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’échantillons du tableau possèdent une paroi ?",
+     "reponse": 2,
+     "aide": "Relis la colonne « Paroi » et compte les « oui ».",
+     "explication": "Les échantillons **A** et **C** ont une paroi : **2** échantillons."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque échantillon dans la bonne sorte de cellule, d’après les notes de Malik.",
+     "categories": [
+      "Cellule animale",
+      "Cellule végétale"
+     ],
+     "items": [
+      [
+       "A — feuille de lierre",
+       1
+      ],
+      [
+       "B — joue",
+       0
+      ],
+      [
+       "C — feuille de salade",
+       1
+      ],
+      [
+       "D — peau de grenouille",
+       0
+      ]
+     ],
+     "aide": "La paroi et les chloroplastes appartiennent à un seul des deux types de cellules.",
+     "explication": "Paroi et chloroplastes : **cellule végétale** (A et C). Ni l’un ni l’autre : **cellule animale** (B et D)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une cellule de la feuille de lierre mesure 0,02 mm. Combien de cellules alignées bout à bout faut-il pour couvrir 1 mm ?",
+     "unite": "cellules",
+     "reponse": 50,
+     "aide": "Cherche combien de fois 0,02 entre dans 1. Tu peux aussi compter : 0,02 × 10 = 0,2.",
+     "explication": "1 ÷ 0,02 = **50** cellules. C’est pourquoi il faut un microscope pour les voir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Au microscope, les cellules de la feuille de salade ont des angles droits, celles de la joue sont arrondies. Qu’est-ce qui l’explique ?",
+     "options": [
+      "La paroi rigide de la cellule végétale",
+      "Le noyau, plus gros dans la cellule végétale",
+      "La membrane, qui n’existe que dans la cellule animale",
+      "Le cytoplasme, plus gélatineux chez les plantes"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que la cellule de la feuille a « en plus ».",
+     "explication": "C’est la **paroi** rigide qui donne sa forme à la cellule végétale. La membrane et le noyau existent dans toutes les cellules."
+    }
+   ]
+  },
+  {
+   "chapitre": "b71f99c4-65f3-5068-976e-9d874d5122ad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un seul être, une cellule… ou des milliards",
+   "competence": "raisonner",
+   "situation": "Léo prépare un exposé : « Tout ce qui vit est fait de cellules ». Il a trouvé un tableau de tailles et un schéma de division. Aide-le à mettre en ordre ses idées.",
+   "documents": [
+    {
+     "id": "etres",
+     "type": "tableau",
+     "titre": "Cinq êtres vivants à la loupe",
+     "colonnes": [
+      "Être vivant",
+      "Taille",
+      "Cellules"
+     ],
+     "lignes": [
+      [
+       "Bactérie",
+       "0,002 mm",
+       "1"
+      ],
+      [
+       "Paramécie",
+       "0,2 mm",
+       "1"
+      ],
+      [
+       "Levure",
+       "0,008 mm",
+       "1"
+      ],
+      [
+       "Fourmi",
+       "5 mm",
+       "très nombreuses"
+      ],
+      [
+       "Être humain",
+       "1,70 m",
+       "30 000 milliards"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "division",
+     "type": "chaine",
+     "titre": "Une cellule qui se divise",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "1 cellule"
+      },
+      {
+       "id": "n2",
+       "texte": "2 cellules"
+      },
+      {
+       "id": "n4",
+       "texte": "4 cellules"
+      },
+      {
+       "id": "n8",
+       "texte": "8 cellules"
+      },
+      {
+       "id": "n16",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "division"
+      },
+      {
+       "de": "n2",
+       "a": "n4",
+       "texte": "division"
+      },
+      {
+       "de": "n4",
+       "a": "n8",
+       "texte": "division"
+      },
+      {
+       "de": "n8",
+       "a": "n16",
+       "texte": "division"
+      }
+     ],
+     "source": "Chaque cellule se divise en deux cellules"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe ces êtres vivants d’après le tableau.",
+     "categories": [
+      "Unicellulaire",
+      "Pluricellulaire"
+     ],
+     "items": [
+      [
+       "Bactérie",
+       0
+      ],
+      [
+       "Paramécie",
+       0
+      ],
+      [
+       "Levure",
+       0
+      ],
+      [
+       "Fourmi",
+       1
+      ],
+      [
+       "Être humain",
+       1
+      ]
+     ],
+     "aide": "Regarde la colonne « Cellules » : combien de cellules chaque être vivant possède-t-il ?",
+     "explication": "Une seule cellule : **unicellulaire** (bactérie, paramécie, levure). Des cellules très nombreuses, organisées en tissus : **pluricellulaire** (fourmi, humain)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la bactérie est-elle plus petite que la paramécie ?",
+     "reponse": 100,
+     "unite": "fois",
+     "aide": "Divise la taille de la paramécie par celle de la bactérie.",
+     "explication": "0,2 ÷ 0,002 = **100** : la paramécie est 100 fois plus grande que la bactérie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre de cellules remplace le « ? » dans le schéma de division ?",
+     "reponse": 16,
+     "aide": "À chaque division, le nombre de cellules double.",
+     "explication": "8 cellules qui se divisent donnent 8 × 2 = **16** cellules."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir d’une seule cellule, combien de divisions de suite faut-il pour obtenir 64 cellules ?",
+     "reponse": 6,
+     "aide": "Continue la chaîne : 16, puis 32, puis 64. Compte les divisions depuis le début.",
+     "explication": "1 → 2 → 4 → 8 → 16 → 32 → 64 : il faut **6** divisions."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase qui résume ton exposé.",
+     "texte": "Une cellule ne naît jamais de rien : elle vient toujours de la ___ d’une ___ précédente.",
+     "reponses": [
+      [
+       "division"
+      ],
+      [
+       "cellule"
+      ]
+     ],
+     "banque": [
+      "division",
+      "cellule",
+      "membrane",
+      "bactérie",
+      "paroi"
+     ],
+     "aide": "Le schéma montre comment on passe d’une cellule à deux.",
+     "explication": "Toute cellule vient de la **division** d’une **cellule** précédente : c’est ainsi qu’on grandit et que les blessures cicatrisent."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac14a405-8cc2-51a0-8e0b-6823bfa23e5b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois animaux autour de la mare",
+   "competence": "lire-tableau",
+   "situation": "Lors d’une sortie à la mare, Zoé observe un canard, une libellule et une chauve-souris. Elle note ce qu’ils possèdent dans un tableau.",
+   "documents": [
+    {
+     "id": "attributs",
+     "type": "tableau",
+     "titre": "Ce que possède chaque animal",
+     "colonnes": [
+      "Animal",
+      "Squelette interne",
+      "Poils",
+      "Plumes",
+      "Mamelles",
+      "6 pattes"
+     ],
+     "lignes": [
+      [
+       "Chauve-souris",
+       "oui",
+       "oui",
+       "non",
+       "oui",
+       "non"
+      ],
+      [
+       "Canard",
+       "oui",
+       "non",
+       "oui",
+       "non",
+       "non"
+      ],
+      [
+       "Libellule",
+       "non",
+       "non",
+       "non",
+       "non",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "attributs",
+     "enonce": "Touche la case qui montre que le canard possède des plumes.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne du canard, puis la colonne « Plumes ».",
+     "explication": "Dans la ligne du canard, la colonne « Plumes » indique **oui**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’animaux du tableau ont un squelette interne ?",
+     "reponse": 2,
+     "aide": "Compte les « oui » dans la colonne « Squelette interne ».",
+     "explication": "La chauve-souris et le canard ont un squelette interne : **2** animaux."
+    },
+    {
+     "type": "choix",
+     "enonce": "La chauve-souris vole, comme le canard. Pourquoi ne la range-t-on pas avec les oiseaux ?",
+     "options": [
+      "Parce qu’elle possède des poils et des mamelles",
+      "Parce qu’elle vole la nuit",
+      "Parce qu’elle vit dans les grottes",
+      "Parce qu’elle est plus petite qu’un canard"
+     ],
+     "reponse": 0,
+     "aide": "On classe les êtres vivants d’après ce qu’ils possèdent, pas d’après ce qu’ils font.",
+     "explication": "Elle a des **poils** et des **mamelles** : c’est un **mammifère**. Voler ou vivre dans une grotte ne sert pas à classer."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac14a405-8cc2-51a0-8e0b-6823bfa23e5b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tri des animaux du naturaliste",
+   "competence": "raisonner",
+   "situation": "Un naturaliste a ramassé six animaux dans un jardin et sur la plage. Il les décrit dans son carnet, puis les range dans trois grandes boîtes.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Le carnet du naturaliste",
+     "colonnes": [
+      "Animal",
+      "Ce qu’on observe"
+     ],
+     "lignes": [
+      [
+       "Fourmi",
+       "Squelette externe, 6 pattes articulées"
+      ],
+      [
+       "Araignée",
+       "Squelette externe, 8 pattes articulées"
+      ],
+      [
+       "Escargot",
+       "Corps mou, une coquille"
+      ],
+      [
+       "Truite",
+       "Squelette interne avec vertèbres"
+      ],
+      [
+       "Grenouille",
+       "Squelette interne avec vertèbres, quatre membres"
+      ],
+      [
+       "Moule",
+       "Corps mou, deux coquilles"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche la description de l’animal qui possède des vertèbres ET quatre membres.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Deux animaux ont des vertèbres, un seul a aussi quatre membres.",
+     "explication": "C’est la **grenouille** : vertèbres et quatre membres."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque animal dans son groupe.",
+     "categories": [
+      "Vertébrés",
+      "Arthropodes",
+      "Mollusques"
+     ],
+     "items": [
+      [
+       "Fourmi",
+       1
+      ],
+      [
+       "Araignée",
+       1
+      ],
+      [
+       "Escargot",
+       2
+      ],
+      [
+       "Truite",
+       0
+      ],
+      [
+       "Grenouille",
+       0
+      ],
+      [
+       "Moule",
+       2
+      ]
+     ],
+     "aide": "Le groupe dépend de l’attribut : squelette interne, squelette externe avec pattes articulées, ou corps mou.",
+     "explication": "**Vertébrés** : truite, grenouille. **Arthropodes** : fourmi, araignée. **Mollusques** : escargot, moule."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le naturaliste capture 3 fourmis et 2 araignées. Combien de pattes ont-elles en tout ?",
+     "reponse": 34,
+     "unite": "pattes",
+     "aide": "Une fourmi a 6 pattes, une araignée 8. Calcule chaque groupe, puis additionne.",
+     "explication": "3 × 6 = 18 et 2 × 8 = 16 ; 18 + 16 = **34** pattes."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’araignée est un arthropode, comme la fourmi. Pourquoi n’est-ce pas un insecte ?",
+     "options": [
+      "Elle a 8 pattes, un insecte en a 6",
+      "Elle n’a pas de squelette externe visible",
+      "Elle a un corps mou comme l’escargot",
+      "Elle a des vertèbres comme la truite"
+     ],
+     "reponse": 0,
+     "aide": "Compare le nombre de pattes dans le carnet.",
+     "explication": "Un insecte a **6 pattes**, l’araignée en a **8** : c’est un arachnide."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac14a405-8cc2-51a0-8e0b-6823bfa23e5b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les boîtes emboîtées du vivant",
+   "competence": "observer-schema",
+   "situation": "Dans le muséum, un panneau montre les groupes d’êtres vivants rangés comme des boîtes emboîtées. À côté, un tableau donne le nom scientifique de quelques espèces.",
+   "documents": [
+    {
+     "id": "boites",
+     "type": "schema",
+     "titre": "Les groupes emboîtés",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 300,
+       "h": 232,
+       "arrondi": 10,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "vert",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 28,
+       "texte": "Vertébrés : vertèbres",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 44,
+       "l": 84,
+       "h": 70,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "ois",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 70,
+       "texte": "Oiseaux",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 90,
+       "texte": "plumes",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 44,
+       "l": 190,
+       "h": 190,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "mam",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 62,
+       "texte": "Mammifères : poils, mamelles",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 122,
+       "l": 166,
+       "h": 100,
+       "arrondi": 8,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "pri",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 42,
+       "y": 140,
+       "texte": "Primates : pouce opposable",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "emoji",
+       "x": 70,
+       "y": 185,
+       "emoji": "🐒",
+       "taille": 36
+      },
+      {
+       "forme": "emoji",
+       "x": 150,
+       "y": 185,
+       "emoji": "🧑",
+       "taille": 36
+      },
+      {
+       "forme": "emoji",
+       "x": 90,
+       "y": 100,
+       "emoji": "🐺",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 150,
+       "y": 100,
+       "emoji": "🦇",
+       "taille": 28
+      }
+     ]
+    },
+    {
+     "id": "noms",
+     "type": "tableau",
+     "titre": "Noms scientifiques",
+     "colonnes": [
+      "Nom courant",
+      "Nom scientifique"
+     ],
+     "lignes": [
+      [
+       "Être humain",
+       "Homo sapiens"
+      ],
+      [
+       "Loup",
+       "Canis lupus"
+      ],
+      [
+       "Chat",
+       "Felis catus"
+      ],
+      [
+       "Lion",
+       "Panthera leo"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Noms en latin, les mêmes dans tous les pays"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boites",
+     "enonce": "Touche la plus petite boîte : celle des êtres qui possèdent TOUS les attributs des autres boîtes qui l’entourent.",
+     "reponse": [
+      "pri"
+     ],
+     "aide": "Une boîte incluse dans une autre partage tous les attributs de la plus grande. Cherche la boîte tout au fond.",
+     "explication": "Les **primates** possèdent les attributs des mammifères et des vertébrés, plus le pouce opposable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans combien de boîtes se trouve un primate (la sienne comprise) ?",
+     "reponse": 3,
+     "aide": "Compte les boîtes qui entourent les primates, la leur comprise.",
+     "explication": "Un primate est dans la boîte des **primates**, des **mammifères** et des **vertébrés** : **3** boîtes."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces groupes du plus large au plus précis.",
+     "items": [
+      "Vertébrés",
+      "Mammifères",
+      "Primates",
+      "Homo sapiens (l’espèce humaine)"
+     ],
+     "aide": "Chaque boîte contient la suivante.",
+     "explication": "On part des **vertébrés**, puis les **mammifères**, les **primates**, et enfin l’**espèce** humaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un chimpanzé est un primate. Que peut-on affirmer d’après le schéma ?",
+     "options": [
+      "Il a des vertèbres, des poils, des mamelles et un pouce opposable",
+      "Il a des plumes et des poils sur tout le corps",
+      "Il a un pouce opposable mais ni poils ni mamelles",
+      "Il n’est pas un mammifère, car il ressemble à l’humain"
+     ],
+     "reponse": 0,
+     "aide": "Un primate possède les attributs de toutes les boîtes qui l’entourent.",
+     "explication": "Il est dans les trois boîtes : il a les **vertèbres**, les **poils et mamelles** et le **pouce opposable**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le nom scientifique du loup ? (deux mots)",
+     "reponse": [
+      "Canis lupus"
+     ],
+     "aide": "Cherche la ligne « Loup » du tableau.",
+     "explication": "Le loup s’appelle **Canis lupus**, un nom en deux mots, en latin, compris dans tous les pays."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cd9957e-24d3-5f58-8560-236933326f10",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La carrière aux quatre couches",
+   "competence": "observer-schema",
+   "situation": "Samir visite une carrière avec sa classe. Le guide lui montre quatre couches de roche et un fossile différent dans chacune.",
+   "documents": [
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "La paroi de la carrière",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 22,
+       "y": 20,
+       "texte": "Surface du sol",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 28,
+       "l": 280,
+       "h": 46,
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "c1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 74,
+       "l": 280,
+       "h": 46,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "c2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 120,
+       "l": 280,
+       "h": 46,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "c3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 166,
+       "l": 280,
+       "h": 46,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "c4",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 58,
+       "emoji": "🐌",
+       "taille": 26
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 56,
+       "texte": "Coquille d’escargot",
+       "ancre": "debut"
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 104,
+       "emoji": "🦴",
+       "taille": 26
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 102,
+       "texte": "Os de dinosaure",
+       "ancre": "debut"
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 150,
+       "emoji": "🌿",
+       "taille": 26
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 148,
+       "texte": "Fougère fossile",
+       "ancre": "debut"
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 196,
+       "emoji": "🪲",
+       "taille": 26
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 194,
+       "texte": "Trilobite",
+       "ancre": "debut"
+      }
+     ],
+     "source": "Coupe imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche la couche de roche la plus ancienne.",
+     "reponse": [
+      "c4"
+     ],
+     "aide": "Plus une couche est profonde, plus elle s’est déposée il y a longtemps.",
+     "explication": "La couche la plus profonde, tout en bas, est la **plus ancienne**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les fossiles du plus ancien au plus récent.",
+     "items": [
+      "Trilobite",
+      "Fougère fossile",
+      "Os de dinosaure",
+      "Coquille d’escargot"
+     ],
+     "aide": "Commence par le bas de la paroi et remonte vers la surface.",
+     "explication": "On lit la paroi **de bas en haut** : trilobite, fougère, os de dinosaure, coquille d’escargot."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le trilobite n’existe plus aujourd’hui. Que prouve son fossile ?",
+     "options": [
+      "Des espèces différentes des actuelles ont vécu autrefois",
+      "Les espèces ne changent jamais au cours du temps",
+      "La roche est un être vivant qui grandit lentement",
+      "Le trilobite vit encore quelque part sous la terre"
+     ],
+     "reponse": 0,
+     "aide": "Un fossile est un reste ou une trace d’un être vivant du passé.",
+     "explication": "Les fossiles prouvent que des espèces **différentes des actuelles** ont vécu et ont disparu."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cd9957e-24d3-5f58-8560-236933326f10",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des papillons dans une forêt qui noircit",
+   "competence": "lire-graphique",
+   "situation": "Près d’une usine, la suie noircit peu à peu les troncs d’une forêt. Des chercheurs comptent, tous les dix ans, la part de papillons foncés dans la population (les autres sont clairs). Les oiseaux repèrent plus facilement les papillons qui contrastent avec l’écorce.",
+   "documents": [
+    {
+     "id": "papillons",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de papillons foncés",
+     "categories": [
+      "Année 0",
+      "Année 10",
+      "Année 20",
+      "Année 30"
+     ],
+     "series": [
+      {
+       "nom": "Papillons foncés",
+       "valeurs": [
+        2,
+        10,
+        55,
+        90
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Papillons foncés",
+      "unite": "pour 100 papillons",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps depuis l’ouverture de l’usine"
+     },
+     "source": "Chiffres inventés pour l’exercice, inspirés d’un cas célèbre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "papillons",
+     "enonce": "Touche la première barre où les papillons foncés sont plus nombreux que les clairs (plus de 50 pour 100).",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la première barre qui dépasse la graduation 50.",
+     "explication": "À l’**année 20**, il y a 55 papillons foncés pour 100 : c’est la première fois qu’ils sont majoritaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À l’année 30, combien de papillons clairs y a-t-il pour 100 papillons ?",
+     "reponse": 10,
+     "unite": "papillons",
+     "aide": "Il y a 100 papillons en tout : retire les foncés.",
+     "explication": "100 − 90 = **10** papillons clairs pour 100."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes qui font changer la population de papillons.",
+     "items": [
+      "Les papillons varient : certains sont clairs, d’autres foncés",
+      "Les troncs noircissent : le milieu change",
+      "Les foncés, mieux cachés, survivent plus souvent",
+      "Ils laissent plus de descendants",
+      "Sur de nombreuses générations, les foncés deviennent majoritaires"
+     ],
+     "aide": "Pars de la variation entre les individus, puis du changement du milieu.",
+     "explication": "Variation → milieu qui change → avantage → plus de descendants → l’**espèce** se transforme sur des générations."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un papillon clair devient-il foncé au cours de sa vie parce que les troncs noircissent ?",
+     "options": [
+      "Non : les foncés, mieux cachés, survivent et ont plus de descendants",
+      "Oui : chaque papillon s’adapte en changeant de couleur",
+      "Oui : la suie le colore peu à peu au fil de sa vie",
+      "Non : les papillons clairs disparaissent tous en une nuit"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas l’individu qui s’adapte pendant sa vie.",
+     "explication": "C’est l’**espèce** qui change, parce que certains individus laissent plus de descendants que d’autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "8cd9957e-24d3-5f58-8560-236933326f10",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une longue histoire, des crises et des menaces",
+   "competence": "analyser-document",
+   "situation": "Pour la fête de la Terre, le club de sciences du collège prépare une affiche. Elle compare l’âge de la vie et celui d’une grande extinction, puis liste des menaces pour la biodiversité d’aujourd’hui.",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Il y a combien de temps ? (l’extinction de masse est celle des dinosaures non-aviens)",
+     "categories": [
+      "Apparition de la vie",
+      "Extinction de masse"
+     ],
+     "series": [
+      {
+       "nom": "Il y a…",
+       "valeurs": [
+        3800,
+        66
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Il y a combien de temps",
+      "unite": "en millions d’années",
+      "min": 0,
+      "max": 4000,
+      "pas": 1000
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "menaces",
+     "type": "tableau",
+     "titre": "Quatre situations observées",
+     "colonnes": [
+      "Situation",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Une zone humide est comblée pour construire un parking : les grenouilles disparaissent."
+      ],
+      [
+       "B",
+       "Du pétrole s’échappe d’un bateau et recouvre les oiseaux de mer."
+      ],
+      [
+       "C",
+       "On pêche tant de morues que l’espèce n’arrive plus à se renouveler."
+      ],
+      [
+       "D",
+       "Un été trop chaud fait fondre une partie de la banquise et prive les phoques de leur habitat."
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temps",
+     "enonce": "Touche l’événement le plus ancien.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "La **vie** est apparue il y a 3 800 millions d’années : c’est l’événement le plus ancien."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’années (Ma) se sont écoulées entre l’apparition de la vie et l’extinction des dinosaures non-aviens ?",
+     "reponse": 3734,
+     "unite": "Ma",
+     "aide": "Soustrais les deux valeurs lues sur le graphique.",
+     "explication": "3 800 − 66 = **3 734** millions d’années."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’apparition de la vie est environ combien de fois plus ancienne que cette extinction ? (arrondi à l’unité)",
+     "reponse": 58,
+     "tolerance": 1,
+     "unite": "fois",
+     "aide": "Divise 3 800 par 66.",
+     "explication": "3 800 ÷ 66 ≈ **58** : la vie est environ 58 fois plus ancienne."
+    },
+    {
+     "type": "categories",
+     "enonce": "Quelle menace pour la biodiversité illustre chaque situation ?",
+     "categories": [
+      "Destruction des milieux",
+      "Pollution",
+      "Surexploitation",
+      "Réchauffement"
+     ],
+     "items": [
+      [
+       "A",
+       0
+      ],
+      [
+       "B",
+       1
+      ],
+      [
+       "C",
+       2
+      ],
+      [
+       "D",
+       3
+      ]
+     ],
+     "aide": "Relis chaque situation : que fait l’être humain, ou que change-t-il dans le milieu ?",
+     "explication": "A : **destruction du milieu** ; B : **pollution** ; C : **surexploitation** ; D : **réchauffement**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La girafe a un long cou. Quelle est l’explication correcte ?",
+     "options": [
+      "Les girafes au cou plus long ont eu plus de descendants, génération après génération",
+      "Les girafes ont allongé leur cou en tirant dessus pour atteindre les feuilles",
+      "Chaque girafe a vu son cou grandir à force de s’étirer",
+      "Les girafes ont décidé de grandir pour survivre"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi : ce n’est pas l’individu qui s’adapte pendant sa vie.",
+     "explication": "C’est l’**espèce** qui change : les individus aux variations avantageuses laissent **plus de descendants**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a96e9734-6df3-535c-aa09-d18ce65f4d9b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plateau du self",
+   "competence": "analyser-document",
+   "situation": "À la cantine, Nina choisit son plateau du jour. Elle veut savoir à quoi sert chaque aliment qu’elle va manger.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Self du collège",
+     "sousTitre": "Plateau du jour",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Entrée : carottes râpées",
+       "id": "carottes"
+      },
+      {
+       "texte": "Plat : steak haché",
+       "id": "steak"
+      },
+      {
+       "texte": "Féculent : pâtes",
+       "id": "pates"
+      },
+      {
+       "texte": "Dessert : pomme",
+       "id": "pomme"
+      },
+      {
+       "texte": "Boisson : eau",
+       "id": "eau"
+      }
+     ],
+     "pied": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche l’aliment du plateau qui apporte surtout des protides, les matériaux de construction du corps.",
+     "reponse": [
+      "steak"
+     ],
+     "aide": "Les protides se trouvent dans la viande, le poisson, les œufs.",
+     "explication": "Le **steak haché** est riche en protides : ils servent à construire et à réparer le corps."
+    },
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche les deux aliments riches en glucides, le carburant de l’organisme.",
+     "reponse": [
+      "pates",
+      "pomme"
+     ],
+     "multiple": true,
+     "aide": "Pain, pâtes, riz et fruits sont riches en glucides.",
+     "explication": "Les **pâtes** et la **pomme** apportent des glucides : le carburant de l’organisme."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé de Nina.",
+     "texte": "Les glucides sont le ___ de l’organisme, et les protides sont ses matériaux de ___.",
+     "reponses": [
+      [
+       "carburant"
+      ],
+      [
+       "construction"
+      ]
+     ],
+     "banque": [
+      "carburant",
+      "construction",
+      "réserve",
+      "protection",
+      "décoration"
+     ],
+     "aide": "Pense à une voiture : le carburant la fait rouler.",
+     "explication": "Les glucides sont le **carburant**, les protides les matériaux de **construction**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a96e9734-6df3-535c-aa09-d18ce65f4d9b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’étiquette de la barre de céréales",
+   "competence": "lire-tableau",
+   "situation": "Sacha emporte une barre de céréales de 40 g pour le goûter. Elle regarde l’étiquette pour savoir ce que la barre lui apporte.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Barre de céréales",
+     "sousTitre": "Valeurs pour 100 g",
+     "emoji": "🍫",
+     "lignes": [
+      {
+       "texte": "Énergie",
+       "valeur": "460 kcal"
+      },
+      {
+       "texte": "Lipides (graisses)",
+       "valeur": "18 g",
+       "id": "lipides"
+      },
+      {
+       "texte": "Glucides (sucres)",
+       "valeur": "66 g",
+       "id": "glucides"
+      },
+      {
+       "texte": "dont sucres",
+       "valeur": "28 g"
+      },
+      {
+       "texte": "Fibres",
+       "valeur": "4 g",
+       "id": "fibres"
+      },
+      {
+       "texte": "Protides (protéines)",
+       "valeur": "6 g",
+       "id": "protides"
+      },
+      {
+       "texte": "Sel",
+       "valeur": "0,4 g"
+      }
+     ],
+     "pied": "Valeurs arrondies, produit imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne du nutriment présent en plus grande quantité dans cette barre.",
+     "reponse": [
+      "glucides"
+     ],
+     "aide": "Compare les quantités en grammes : cherche la plus grande.",
+     "explication": "Les **glucides** (66 g pour 100 g) dominent : la barre est surtout une réserve de carburant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de grammes de glucides la barre de 40 g apporte-t-elle ? (arrondi au dixième)",
+     "reponse": 26.4,
+     "tolerance": 0.05,
+     "unite": "g",
+     "aide": "La barre pèse 40 g, soit 40 % de 100 g. Calcule 40 % de 66.",
+     "explication": "66 × 40 ÷ 100 = **26,4 g** de glucides."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sacha se dit : « Cette barre contient des glucides, des lipides et des protides : je peux ne manger que ça toute la journée. » Qu’en penses-tu ?",
+     "options": [
+      "Non : un seul aliment ne peut jamais couvrir tous les besoins",
+      "Oui : elle contient tous les nutriments en quantité suffisante",
+      "Oui, à condition de ne pas boire d’eau",
+      "Non : les barres ne contiennent aucun nutriment"
+     ],
+     "reponse": 0,
+     "aide": "Il faut aussi des vitamines, des minéraux, de l’eau, des fibres, en quantités variées.",
+     "explication": "**Aucun aliment seul** ne couvre tous les besoins : il faut varier les aliments sur la semaine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nutriment de l’étiquette à son rôle.",
+     "paires": [
+      [
+       "Glucides",
+       "Carburant principal"
+      ],
+      [
+       "Protides",
+       "Matériaux de construction"
+      ],
+      [
+       "Lipides",
+       "Réserve d’énergie"
+      ],
+      [
+       "Fibres",
+       "Font fonctionner l’intestin"
+      ]
+     ],
+     "aide": "Relis le rôle de chaque famille de nutriments dans ton cours.",
+     "explication": "**Glucides** : carburant ; **protides** : construction ; **lipides** : réserve ; **fibres** : intestin."
+    }
+   ]
+  },
+  {
+   "chapitre": "a96e9734-6df3-535c-aa09-d18ce65f4d9b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux élèves de 13 ans, deux assiettes différentes",
+   "competence": "raisonner",
+   "situation": "Hugo et Léo ont tous deux 13 ans. Le diététicien du collège compare leurs besoins en énergie et leur explique ce que deviennent les aliments qu’ils mangent.",
+   "documents": [
+    {
+     "id": "besoins",
+     "type": "tableau",
+     "titre": "Les besoins en énergie par jour",
+     "colonnes": [
+      "Personne",
+      "Âge",
+      "Activité",
+      "Énergie (kcal)"
+     ],
+     "lignes": [
+      [
+       "Hugo",
+       "13 ans",
+       "peu actif",
+       "2 400"
+      ],
+      [
+       "Léo",
+       "13 ans",
+       "football 6 h par semaine",
+       "3 000"
+      ],
+      [
+       "Mme Roux",
+       "70 ans",
+       "promenades",
+       "2 000"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, ordres de grandeur"
+    },
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "titre": "Du repas au sang",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "ali",
+       "texte": "Aliments"
+      },
+      {
+       "id": "dig",
+       "texte": "Digestion"
+      },
+      {
+       "id": "abs",
+       "texte": "Absorption dans l’intestin grêle"
+      },
+      {
+       "id": "sang",
+       "texte": "Sang"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ali",
+       "a": "dig"
+      },
+      {
+       "de": "dig",
+       "a": "abs"
+      },
+      {
+       "de": "abs",
+       "a": "sang"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel supplément d’énergie, par jour, Léo doit-il apporter par rapport à Hugo ?",
+     "reponse": 600,
+     "unite": "kcal",
+     "aide": "Soustrais les deux valeurs de la dernière colonne.",
+     "explication": "3 000 − 2 400 = **600 kcal** de plus par jour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hugo et Léo ont le même âge. Quel facteur explique l’écart entre leurs besoins ?",
+     "options": [
+      "L’activité physique",
+      "L’âge",
+      "Le prénom",
+      "La couleur de leurs vêtements"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui change entre les deux garçons dans le tableau ?",
+     "explication": "Ils ont le même âge : seule change l’**activité physique**, qui augmente les besoins."
+    },
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche l’étape où les nutriments traversent la paroi de l’intestin pour passer dans le sang.",
+     "reponse": [
+      "abs"
+     ],
+     "aide": "Les nutriments n’entrent dans le sang qu’après la digestion.",
+     "explication": "C’est l’**absorption** dans l’**intestin grêle** : les nutriments passent alors dans le sang."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication du diététicien.",
+     "texte": "La digestion réduit les aliments en ___ assez petits pour traverser la paroi de l’___ grêle.",
+     "reponses": [
+      [
+       "nutriments"
+      ],
+      [
+       "intestin"
+      ]
+     ],
+     "banque": [
+      "nutriments",
+      "intestin",
+      "estomac",
+      "sang",
+      "fibres"
+     ],
+     "aide": "Les aliments sont trop gros pour passer dans le sang tels quels.",
+     "explication": "La digestion fabrique des **nutriments**, assez petits pour traverser la paroi de l’**intestin** grêle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hier, Léo a mangé une pizza au déjeuner. Doit-il considérer que son alimentation est ratée ?",
+     "options": [
+      "Non : l’équilibre se juge sur la semaine entière",
+      "Oui : un seul repas déséquilibré gâche tous les autres",
+      "Oui : il ne doit plus jamais manger de féculents",
+      "Non : plus rien n’est à surveiller dans son assiette"
+     ],
+     "reponse": 0,
+     "aide": "Équilibré ne veut pas dire parfait à chaque repas.",
+     "explication": "Une alimentation équilibrée est **variée sur la semaine** ; un repas ne la rend pas mauvaise."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c61fab7-0860-5302-af34-7442657abdab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le pouls de Yanis après la course",
+   "competence": "lire-graphique",
+   "situation": "En EPS, Yanis prend son pouls au repos, juste après une course de 3 minutes, puis pendant sa récupération. Il note le nombre de battements du cœur par minute.",
+   "documents": [
+    {
+     "id": "pouls",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le pouls de Yanis",
+     "categories": [
+      "Au repos",
+      "Après la course",
+      "3 min après",
+      "10 min après"
+     ],
+     "series": [
+      {
+       "nom": "Battements par minute",
+       "valeurs": [
+        70,
+        160,
+        110,
+        75
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Pouls",
+      "unite": "battements par minute",
+      "min": 0,
+      "max": 200,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Moment de la mesure"
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pouls",
+     "enonce": "Touche le moment où le cœur de Yanis bat le plus vite.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le pouls est le plus rapide **juste après la course**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de battements par minute le pouls a-t-il augmenté entre le repos et la fin de la course ?",
+     "reponse": 90,
+     "unite": "battements",
+     "aide": "Soustrais le pouls au repos du pouls après la course.",
+     "explication": "160 − 70 = **90** battements de plus par minute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le cœur de Yanis bat-il plus vite pendant l’effort ?",
+     "options": [
+      "Pour livrer plus vite dioxygène et nutriments aux muscles",
+      "Parce que son cœur est en difficulté après la course",
+      "Pour fabriquer beaucoup plus de sang pendant l’effort",
+      "Pour refroidir les poumons qui ont chauffé en courant"
+     ],
+     "reponse": 0,
+     "aide": "Le sang est le livreur : que doivent recevoir les muscles qui travaillent ?",
+     "explication": "Le cœur n’est pas en difficulté : il **livre plus vite** dioxygène et nutriments aux muscles."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c61fab7-0860-5302-af34-7442657abdab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que contient l’air qu’on respire",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé, Lina compare la composition de l’air qu’elle inspire et celle de l’air qu’elle expire. Elle complète aussi un schéma du trajet du dioxygène.",
+   "documents": [
+    {
+     "id": "air",
+     "type": "tableau",
+     "titre": "Composition de l’air",
+     "colonnes": [
+      "Gaz",
+      "Air inspiré",
+      "Air expiré"
+     ],
+     "lignes": [
+      [
+       "Dioxygène",
+       "21 %",
+       "16 %"
+      ],
+      [
+       "Dioxyde de carbone",
+       "0,04 %",
+       "4 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "titre": "Le trajet du dioxygène",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "air",
+       "texte": "Air",
+       "emoji": "🌬️"
+      },
+      {
+       "id": "poumons",
+       "texte": "Poumons",
+       "emoji": "🫁"
+      },
+      {
+       "id": "alv",
+       "texte": "?"
+      },
+      {
+       "id": "sang",
+       "texte": "Sang",
+       "emoji": "🩸"
+      }
+     ],
+     "liens": [
+      {
+       "de": "air",
+       "a": "poumons"
+      },
+      {
+       "de": "poumons",
+       "a": "alv"
+      },
+      {
+       "de": "alv",
+       "a": "sang"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage la part de dioxygène baisse-t-elle entre l’air inspiré et l’air expiré ?",
+     "reponse": 5,
+     "unite": "points",
+     "aide": "Soustrais 16 % de 21 %.",
+     "explication": "21 − 16 = **5** points : le corps a gardé du dioxygène."
+    },
+    {
+     "type": "zone",
+     "document": "air",
+     "enonce": "Touche la case qui donne la part de dioxyde de carbone dans l’air expiré.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Ligne « Dioxyde de carbone », colonne « Air expiré ».",
+     "explication": "L’air expiré contient **4 %** de dioxyde de carbone, 100 fois plus que l’air inspiré."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel nom remplace le « ? » : les minuscules sacs très nombreux où le dioxygène passe dans le sang ?",
+     "reponse": [
+      "alvéoles",
+      "alvéoles pulmonaires",
+      "les alvéoles",
+      "les alvéoles pulmonaires"
+     ],
+     "aide": "Leur paroi est extrêmement fine. Leur nom commence par « alv ».",
+     "explication": "Ce sont les **alvéoles pulmonaires** : le dioxygène y passe de l’air vers le sang."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’air expiré contient-il plus de dioxyde de carbone que l’air inspiré ?",
+     "options": [
+      "Les organes produisent du dioxyde de carbone ; le sang le porte aux poumons",
+      "Les poumons fabriquent du dioxyde de carbone à partir de l’air qu’ils reçoivent",
+      "Le cœur produit du dioxyde de carbone à chacun de ses battements",
+      "L’air se transforme en dioxyde de carbone en traversant le nez"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la respiration cellulaire : elle a lieu dans chaque organe.",
+     "explication": "La **respiration cellulaire** libère de l’énergie et produit du dioxyde de carbone, évacué par les poumons."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c61fab7-0860-5302-af34-7442657abdab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plan de livraison du sang",
+   "competence": "analyser-document",
+   "situation": "Mme Garcia propose à sa classe de dessiner la circulation comme un plan de livraison : le sang part du cœur, passe par quatre « bureaux », et revient. Un tableau compare ensuite ce qui change au repos et pendant l’effort.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Le plan de livraison",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 125,
+       "r": 26,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "coeur",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 125,
+       "emoji": "❤️",
+       "taille": 28
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 20,
+       "l": 110,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "poumons",
+       "zone": true,
+       "texte": "Poumons"
+      },
+      {
+       "forme": "rect",
+       "x": 195,
+       "y": 20,
+       "l": 110,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "muscles",
+       "zone": true,
+       "texte": "Muscles"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 186,
+       "l": 110,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "intestin",
+       "zone": true,
+       "texte": "Intestin grêle"
+      },
+      {
+       "forme": "rect",
+       "x": 195,
+       "y": 186,
+       "l": 110,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "reins",
+       "zone": true,
+       "texte": "Reins"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        136,
+        108
+       ],
+       "a": [
+        100,
+        66
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        184,
+        108
+       ],
+       "a": [
+        220,
+        66
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        136,
+        142
+       ],
+       "a": [
+        100,
+        184
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        184,
+        142
+       ],
+       "a": [
+        220,
+        184
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 168,
+       "texte": "Le sang circule",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 92,
+       "texte": "cœur = pompe",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "effort",
+     "type": "tableau",
+     "titre": "Au repos et pendant l’effort",
+     "colonnes": [
+      "",
+      "Au repos",
+      "Pendant l’effort"
+     ],
+     "lignes": [
+      [
+       "Battements du cœur par minute",
+       "75",
+       "150"
+      ],
+      [
+       "Respirations par minute",
+       "15",
+       "45"
+      ],
+      [
+       "Part du sang envoyée aux muscles",
+       "20 %",
+       "80 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, ordres de grandeur"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’organe où les nutriments sont absorbés pour passer dans le sang.",
+     "reponse": [
+      "intestin"
+     ],
+     "aide": "Les nutriments viennent des aliments, après la digestion.",
+     "explication": "C’est dans l’**intestin grêle** que les nutriments passent dans le sang."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien est multipliée la fréquence de la respiration pendant l’effort ?",
+     "reponse": 3,
+     "aide": "Divise 45 par 15.",
+     "explication": "45 ÷ 15 = **3** : on respire 3 fois plus souvent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pendant l’effort, le sang est envoyé en priorité vers les muscles. Pourquoi ?",
+     "options": [
+      "Ils consomment beaucoup plus de dioxygène et de nutriments",
+      "Ils ont besoin de se débarrasser de leur sang",
+      "Ils ne produisent aucun déchet quand ils travaillent",
+      "Les autres organes n’ont plus besoin de rien du tout"
+     ],
+     "reponse": 0,
+     "aide": "Un muscle qui travaille libère plus d’énergie : de quoi a-t-il besoin ?",
+     "explication": "Un muscle qui travaille a besoin de plus de **dioxygène** et de **nutriments** : le sang est redistribué vers lui."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’organe qui filtre le sang et fabrique l’urine.",
+     "reponse": [
+      "reins"
+     ],
+     "aide": "L’urine évacue l’urée, un déchet.",
+     "explication": "Les **reins** filtrent le sang et fabriquent l’urine, qui évacue l’urée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque organe à ce que le sang y livre ou en emporte.",
+     "paires": [
+      [
+       "Poumons",
+       "Reçoivent le dioxygène, rejettent le dioxyde de carbone"
+      ],
+      [
+       "Intestin grêle",
+       "Laisse passer les nutriments dans le sang"
+      ],
+      [
+       "Reins",
+       "Évacuent l’urée"
+      ],
+      [
+       "Cœur",
+       "Pompe le sang sans arrêt"
+      ]
+     ],
+     "aide": "Pense à ce que chaque organe fait pour le sang.",
+     "explication": "Poumons : gaz ; intestin : nutriments ; reins : **urée** ; cœur : **pompe** qui fait circuler le sang."
+    }
+   ]
+  },
+  {
+   "chapitre": "70ef7f33-c6e9-505d-aca6-a52213207f2e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plant de blé dans le champ",
+   "competence": "observer-schema",
+   "situation": "Alix observe le blé qui pousse dans le champ de son grand-père. Elle dessine la plante, le sol, le Soleil et ce que la plante reçoit.",
+   "documents": [
+    {
+     "id": "ble",
+     "type": "schema",
+     "titre": "Un plant de blé",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 10,
+       "l": 280,
+       "h": 125,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 135,
+       "l": 280,
+       "h": 85,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 268,
+       "cy": 42,
+       "r": 20,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "soleil",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        135
+       ],
+       "a": [
+        120,
+        50
+       ],
+       "teinte": "vert"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 120,
+       "cy": 42,
+       "rx": 8,
+       "ry": 20,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "epi",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         112
+        ],
+        [
+         84,
+         90
+        ],
+        [
+         118,
+         99
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "f1",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         96
+        ],
+        [
+         156,
+         74
+        ],
+        [
+         122,
+         83
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "f2",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         116,
+         135
+        ],
+        [
+         124,
+         135
+        ],
+        [
+         96,
+         196
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "r1",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         117,
+         135
+        ],
+        [
+         123,
+         135
+        ],
+        [
+         120,
+         204
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "r2",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         116,
+         135
+        ],
+        [
+         124,
+         135
+        ],
+        [
+         146,
+         196
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "r3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        244,
+        52
+       ],
+       "a": [
+        162,
+        78
+       ],
+       "fleche": "fin",
+       "teinte": "jaune"
+      },
+      {
+       "forme": "texte",
+       "x": 246,
+       "y": 96,
+       "texte": "Lumière",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        44
+       ],
+       "a": [
+        100,
+        76
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 30,
+       "texte": "Gaz de l’air",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        175
+       ],
+       "a": [
+        152,
+        170
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 238,
+       "y": 192,
+       "texte": "Eau et sels",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 238,
+       "y": 206,
+       "texte": "minéraux du sol",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ble",
+     "enonce": "Touche la source de lumière dont la plante a besoin.",
+     "reponse": [
+      "soleil"
+     ],
+     "aide": "Elle brille dans le ciel.",
+     "explication": "La lumière vient du **Soleil** : elle permet à la plante de fabriquer sa matière."
+    },
+    {
+     "type": "zone",
+     "document": "ble",
+     "enonce": "Touche les trois parties de la plante qui absorbent l’eau et les sels minéraux.",
+     "reponse": [
+      "r1",
+      "r2",
+      "r3"
+     ],
+     "multiple": true,
+     "aide": "Elles sont cachées sous la terre.",
+     "explication": "Ce sont les **racines** : elles absorbent l’eau et les sels minéraux du sol."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la liste de ce dont la plante a besoin.",
+     "texte": "La plante a besoin de lumière, d’eau, de sels minéraux et de ___ qu’elle prend dans l’___.",
+     "reponses": [
+      [
+       "dioxyde de carbone"
+      ],
+      [
+       "air"
+      ]
+     ],
+     "banque": [
+      "dioxyde de carbone",
+      "air",
+      "dioxygène",
+      "sol",
+      "fumier"
+     ],
+     "aide": "Ce gaz entre par les feuilles : c’est lui qui sert à fabriquer la matière avec la lumière.",
+     "explication": "La plante prélève le **dioxyde de carbone** dans l’**air** : c’est la photosynthèse."
+    }
+   ]
+  },
+  {
+   "chapitre": "70ef7f33-c6e9-505d-aca6-a52213207f2e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un kilo de blé, un kilo de bœuf",
+   "competence": "analyser-document",
+   "situation": "Pour un exposé sur l’alimentation, Camille compare l’eau nécessaire pour produire un kilo de blé, de poulet ou de bœuf. Elle trace aussi la chaîne qui va du champ à l’assiette.",
+   "documents": [
+    {
+     "id": "eau",
+     "type": "tableau",
+     "titre": "Eau utilisée pour produire 1 kg",
+     "colonnes": [
+      "Aliment",
+      "Eau utilisée (litres)"
+     ],
+     "lignes": [
+      [
+       "Blé",
+       "1 500"
+      ],
+      [
+       "Poulet",
+       "4 300"
+      ],
+      [
+       "Bœuf",
+       "15 000"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis"
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Du champ à l’assiette",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "ble",
+       "texte": "Blé",
+       "emoji": "🌾"
+      },
+      {
+       "id": "poule",
+       "texte": "Poulet",
+       "emoji": "🐔"
+      },
+      {
+       "id": "humain",
+       "texte": "Humain",
+       "emoji": "🧑"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ble",
+       "a": "poule",
+       "texte": "est mangé par"
+      },
+      {
+       "de": "poule",
+       "a": "humain",
+       "texte": "est mangé par"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche le producteur primaire de cette chaîne alimentaire.",
+     "reponse": [
+      "ble"
+     ],
+     "aide": "C’est l’être vivant qui produit sa propre matière sans manger.",
+     "explication": "Le **blé** est une plante : il produit sa matière avec la lumière. C’est le **producteur primaire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois plus d’eau faut-il pour 1 kg de bœuf que pour 1 kg de blé ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Divise 15 000 par 1 500.",
+     "explication": "15 000 ÷ 1 500 = **10** fois plus d’eau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Camille cuisine 3 kg de poulet. Quelle quantité d’eau a été utilisée pour les produire ?",
+     "reponse": 12900,
+     "unite": "litres",
+     "aide": "Multiplie l’eau utilisée pour 1 kg par 3.",
+     "explication": "4 300 × 3 = **12 900** litres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi produire de la viande demande-t-il plus de ressources que produire des céréales ?",
+     "options": [
+      "À chaque maillon, une grande part de l’énergie est perdue",
+      "Les animaux n’ont besoin d’aucun aliment pour grandir, rien ne se perd",
+      "Le blé consomme beaucoup plus d’eau que le bœuf, par kilo",
+      "Les animaux produisent plus de matière que les plantes"
+     ],
+     "reponse": 0,
+     "aide": "Un animal mange des végétaux avant d’être mangé.",
+     "explication": "Un animal doit d’abord manger beaucoup de végétaux : à chaque **maillon**, une grande partie de l’**énergie** est perdue."
+    }
+   ]
+  },
+  {
+   "chapitre": "70ef7f33-c6e9-505d-aca6-a52213207f2e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux parcelles, deux façons de cultiver",
+   "competence": "analyser-document",
+   "situation": "Mme Roux cultive du blé. Elle compare ce que donnent ses parcelles pendant quatre ans, selon qu’elle ne fait rien, qu’elle apporte de l’engrais ou qu’elle alterne les cultures. Elle regarde aussi une parcelle intensive et une parcelle biologique voisines.",
+   "documents": [
+    {
+     "id": "rendements",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Rendement du blé par parcelle",
+     "categories": [
+      "Année 1",
+      "Année 2",
+      "Année 3",
+      "Année 4"
+     ],
+     "series": [
+      {
+       "nom": "Sans apport",
+       "valeurs": [
+        70,
+        64,
+        58,
+        52
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Avec engrais",
+       "valeurs": [
+        70,
+        70,
+        69,
+        70
+       ],
+       "teinte": "ciel"
+      },
+      {
+       "nom": "Avec rotation des cultures",
+       "valeurs": [
+        70,
+        69,
+        70,
+        70
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "Rendement",
+      "unite": "quintaux par hectare",
+      "min": 40,
+      "max": 80,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année de culture"
+     },
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "modeles",
+     "type": "tableau",
+     "titre": "Deux parcelles voisines",
+     "colonnes": [
+      "Parcelle",
+      "Méthode",
+      "Rendement (quintaux par hectare)",
+      "Traitements aux pesticides par an"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Intensive",
+       "80",
+       "4"
+      ],
+      [
+       "B",
+       "Biologique",
+       "60",
+       "0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Sur la parcelle « Sans apport », de combien le rendement a-t-il baissé entre l’année 1 et l’année 4 ?",
+     "reponse": 18,
+     "unite": "quintaux",
+     "aide": "Lis la valeur de la première et de la dernière année, puis soustrais.",
+     "explication": "70 − 52 = **18** quintaux par hectare en moins : les cultures ont appauvri le sol en sels minéraux."
+    },
+    {
+     "type": "zone",
+     "document": "rendements",
+     "enonce": "Touche l’année où l’écart entre « Sans apport » et « Avec engrais » est le plus grand.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Compare les deux courbes année par année : à quel moment sont-elles le plus éloignées ?",
+     "explication": "À l’**année 4** : 70 contre 52, un écart de 18 quintaux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mme Roux veut garder son rendement sans acheter d’engrais. Quelle pratique le graphique soutient-il ?",
+     "options": [
+      "Alterner les espèces cultivées d’une année à l’autre",
+      "Cultiver le même blé chaque année sans rien changer",
+      "Arrêter complètement d’arroser les cultures du champ",
+      "Récolter le blé plus tôt dans la saison, avant l’été"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la courbe qui reste stable sans engrais.",
+     "explication": "La **rotation des cultures** ménage le sol : le rendement reste stable sans engrais."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le rendement de la parcelle biologique B représente quel pourcentage de celui de la parcelle intensive A ?",
+     "reponse": 75,
+     "unite": "%",
+     "aide": "Divise 60 par 80, puis multiplie par 100.",
+     "explication": "60 ÷ 80 = 0,75 : **75 %** du rendement de la parcelle intensive."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque conséquence dans le modèle qui la provoque le plus souvent.",
+     "categories": [
+      "Agriculture intensive",
+      "Agriculture biologique"
+     ],
+     "items": [
+      [
+       "Beaucoup de production",
+       0
+      ],
+      [
+       "Eau polluée par les engrais et pesticides",
+       0
+      ],
+      [
+       "Rendements souvent inférieurs",
+       1
+      ],
+      [
+       "Pesticides largement évités",
+       1
+      ]
+     ],
+     "aide": "Pense à ce que chaque modèle donne et à ce qu’il coûte.",
+     "explication": "**Intensive** : beaucoup de production mais pollution. **Biologique** : peu de pesticides mais rendements souvent inférieurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "97a493ed-ceed-57c3-bdcb-2455e67162c9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le pain qui lève",
+   "competence": "analyser-document",
+   "situation": "Camille fait son premier pain avec son grand-père. Elle a noté la recette sur un papier, mais les étapes sont écrites dans le désordre.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Pain de Camille",
+     "sousTitre": "Notes prises en vrac",
+     "emoji": "🍞",
+     "lignes": [
+      {
+       "texte": "500 g de farine"
+      },
+      {
+       "texte": "300 mL d’eau"
+      },
+      {
+       "texte": "10 g de sel"
+      },
+      {
+       "texte": "1 sachet de levure de boulanger",
+       "id": "levure"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Enfourner 30 minutes"
+      },
+      {
+       "texte": "Pétrir 10 minutes"
+      },
+      {
+       "texte": "Laisser lever 1 heure : la pâte double de volume"
+      },
+      {
+       "texte": "Mélanger farine, eau, sel et levure"
+      }
+     ],
+     "pied": "Recette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recette",
+     "enonce": "Touche l’ingrédient qui est un micro-organisme.",
+     "reponse": [
+      "levure"
+     ],
+     "aide": "Un micro-organisme est un être vivant minuscule, visible seulement au microscope.",
+     "explication": "La **levure** est un champignon microscopique : c’est un être vivant."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication du grand-père.",
+     "texte": "La levure produit du ___ qui fait gonfler la pâte : c’est une ___.",
+     "reponses": [
+      [
+       "dioxyde de carbone"
+      ],
+      [
+       "fermentation"
+      ]
+     ],
+     "banque": [
+      "dioxyde de carbone",
+      "fermentation",
+      "dioxygène",
+      "pasteurisation",
+      "eau"
+     ],
+     "aide": "La transformation du pain par la levure porte un nom précis, comme pour le yaourt.",
+     "explication": "La levure produit du **dioxyde de carbone** : la pâte lève. C’est une **fermentation**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes du pain dans l’ordre.",
+     "items": [
+      "Mélanger farine, eau, sel et levure",
+      "Pétrir 10 minutes",
+      "Laisser lever 1 heure",
+      "Enfourner 30 minutes"
+     ],
+     "aide": "On prépare la pâte avant de la faire lever, et on cuit à la fin.",
+     "explication": "On **mélange**, on **pétrit**, on laisse **lever**, puis on **enfourne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "97a493ed-ceed-57c3-bdcb-2455e67162c9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le yaourt fait maison",
+   "competence": "lire-graphique",
+   "situation": "Samuel prépare deux pots de lait avec un peu de yaourt (qui contient des bactéries). Il met le premier dans un four tiède à 40 °C et le second au réfrigérateur à 4 °C. Il compte les bactéries toutes les deux heures.",
+   "documents": [
+    {
+     "id": "bacteries",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Les bactéries dans chaque pot",
+     "categories": [
+      "0 h",
+      "2 h",
+      "4 h",
+      "6 h",
+      "8 h"
+     ],
+     "series": [
+      {
+       "nom": "Pot à 40 °C",
+       "valeurs": [
+        1,
+        4,
+        16,
+        64,
+        256
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Pot à 4 °C",
+       "valeurs": [
+        1,
+        1,
+        1,
+        2,
+        2
+       ],
+       "teinte": "ciel"
+      }
+     ],
+     "axeY": {
+      "titre": "Bactéries",
+      "unite": "millions par mL",
+      "min": 0,
+      "max": 300,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps depuis le début"
+     },
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de bactéries par mL le pot à 40 °C contient-il au bout de 6 heures ?",
+     "reponse": 64,
+     "unite": "millions",
+     "aide": "Repère 6 h sur l’axe horizontal et lis la courbe du pot tiède.",
+     "explication": "Au bout de 6 heures, le pot à 40 °C contient **64** millions de bactéries par mL."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la courbe du pot au réfrigérateur ?",
+     "options": [
+      "Le froid ralentit la multiplication des bactéries sans les tuer",
+      "Le froid tue toutes les bactéries",
+      "Les bactéries se multiplient aussi vite au froid qu’au chaud",
+      "Le froid fait disparaître l’eau du lait"
+     ],
+     "reponse": 0,
+     "aide": "Observe : le nombre de bactéries n’est jamais nul, il augmente très lentement.",
+     "explication": "Le froid **ralentit** la multiplication, mais les bactéries sont toujours là : le froid ne tue pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 8 heures, combien de fois plus de bactéries y a-t-il dans le pot à 40 °C que dans le pot à 4 °C ?",
+     "reponse": 128,
+     "unite": "fois",
+     "aide": "Lis les deux valeurs à 8 h, puis divise la plus grande par la plus petite.",
+     "explication": "256 ÷ 2 = **128** fois plus de bactéries dans le pot tiède."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Samuel.",
+     "texte": "Le yaourt est fabriqué par des ___ qui se multiplient dans le lait quand il fait ___.",
+     "reponses": [
+      [
+       "bactéries"
+      ],
+      [
+       "chaud"
+      ]
+     ],
+     "banque": [
+      "bactéries",
+      "chaud",
+      "froid",
+      "levures",
+      "sec"
+     ],
+     "aide": "Regarde dans quel pot elles se multiplient le plus.",
+     "explication": "Ce sont des **bactéries** : elles transforment le lait en yaourt quand la température est **chaude** (tiède)."
+    }
+   ]
+  },
+  {
+   "chapitre": "97a493ed-ceed-57c3-bdcb-2455e67162c9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le garde-manger de Mamie",
+   "competence": "analyser-document",
+   "situation": "Dans le garde-manger de sa grand-mère, Anaïs trouve des pots, des boîtes et des paquets. Elle lit les étiquettes et apprend comment chacun se conserve.",
+   "documents": [
+    {
+     "id": "jambon",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Jambon blanc",
+     "sousTitre": "Conservation",
+     "emoji": "🥓",
+     "lignes": [
+      {
+       "texte": "À consommer jusqu’au 14/10",
+       "id": "dlc",
+       "gras": true
+      },
+      {
+       "texte": "À conserver au réfrigérateur"
+      }
+     ],
+     "pied": "Étiquette imaginée pour l’exercice"
+    },
+    {
+     "id": "biscuits",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Biscuits sablés",
+     "sousTitre": "Conservation",
+     "emoji": "🍪",
+     "lignes": [
+      {
+       "texte": "À consommer de préférence avant fin 06/2027",
+       "id": "ddm",
+       "gras": true
+      },
+      {
+       "texte": "À conserver au sec"
+      }
+     ],
+     "pied": "Étiquette imaginée pour l’exercice"
+    },
+    {
+     "id": "garde",
+     "type": "tableau",
+     "titre": "Le garde-manger de Mamie",
+     "colonnes": [
+      "Aliment",
+      "Comment il se conserve"
+     ],
+     "lignes": [
+      [
+       "Confiture",
+       "Beaucoup de sucre"
+      ],
+      [
+       "Jambon sec",
+       "Salé"
+      ],
+      [
+       "Abricots secs",
+       "Séchés au soleil"
+      ],
+      [
+       "Steak haché",
+       "Congélateur à −18 °C"
+      ],
+      [
+       "Yaourt",
+       "Réfrigérateur à 4 °C"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Anaïs trouve les biscuits deux semaines après la date de leur étiquette. Sont-ils dangereux ?",
+     "options": [
+      "Non : elle indique seulement une baisse de qualité possible",
+      "Oui : cette date ne doit jamais être dépassée, jamais",
+      "Oui : les micro-organismes les ont tous détruits depuis",
+      "Non : mais seulement s’ils ont été congelés avant"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le sigle de cette mention : DLC ou DDM ? La DDM veut dire « de préférence avant ».",
+     "explication": "C’est une **DDM** : une baisse de **qualité** est possible, pas un danger."
+    },
+    {
+     "type": "zone",
+     "document": "jambon",
+     "enonce": "Touche la mention du jambon qu’il ne faut jamais dépasser.",
+     "reponse": [
+      "dlc"
+     ],
+     "aide": "Elle commence par « à consommer jusqu’au… ».",
+     "explication": "C’est la **DLC** : sur un produit frais, on ne la dépasse pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Que retire chaque méthode aux micro-organismes ?",
+     "categories": [
+      "La chaleur est retirée (froid)",
+      "L’eau n’est plus disponible"
+     ],
+     "items": [
+      [
+       "Confiture",
+       1
+      ],
+      [
+       "Jambon sec",
+       1
+      ],
+      [
+       "Abricots secs",
+       1
+      ],
+      [
+       "Steak haché",
+       0
+      ],
+      [
+       "Yaourt",
+       0
+      ]
+     ],
+     "aide": "Le sel, le sucre et le séchage agissent sur l’eau ; le réfrigérateur et le congélateur agissent sur la température.",
+     "explication": "Sucre, sel, séchage : l’**eau** devient indisponible. Réfrigérateur, congélateur : on retire la **chaleur**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque technique à son effet.",
+     "paires": [
+      [
+       "Congélateur (−18 °C)",
+       "Arrête presque la multiplication"
+      ],
+      [
+       "Séchage",
+       "Retire l’eau"
+      ],
+      [
+       "Stérilisation (plus de 100 °C)",
+       "Élimine les micro-organismes"
+      ],
+      [
+       "Pasteurisation (70 °C)",
+       "Détruit une grande partie des micro-organismes"
+      ]
+     ],
+     "aide": "Relis les noms : chaque technique a une température ou une action propre.",
+     "explication": "Congélateur : **arrête presque** ; séchage : **retire l’eau** ; stérilisation : **élimine** ; pasteurisation : détruit **une grande partie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Anaïs veut recongeler un reste de steak qui a décongelé. Que doit-elle faire ?",
+     "options": [
+      "Ne pas le recongeler : les micro-organismes se sont remis à se multiplier",
+      "Le recongeler sans crainte : le froid tue tous les micro-organismes",
+      "Le recongeler, à condition de l’avoir salé avant de le remettre",
+      "Le laisser dehors quelques heures pour qu’il sèche complètement"
+     ],
+     "reponse": 0,
+     "aide": "Le froid met les micro-organismes en pause, il ne les tue pas.",
+     "explication": "**Jamais** : le froid met en pause ; une fois décongelé, les micro-organismes ont repris leur multiplication."
+    }
+   ]
+  },
+  {
+   "chapitre": "6798a012-7a4d-5227-a2c4-1e0a89ad556b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du têtard à la grenouille",
+   "competence": "observer-schema",
+   "situation": "Au printemps, Éloïse observe la mare près de chez elle : des œufs de grenouille, puis des têtards qui nagent. Elle dessine toutes les étapes de la vie d’une grenouille.",
+   "documents": [
+    {
+     "id": "cycle",
+     "type": "chaine",
+     "titre": "La vie d’une grenouille",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "oeuf",
+       "texte": "Œuf dans l’eau",
+       "emoji": "🥚"
+      },
+      {
+       "id": "tetard",
+       "texte": "Têtard",
+       "emoji": "🐟"
+      },
+      {
+       "id": "jeune",
+       "texte": "Jeune grenouille",
+       "emoji": "🐸"
+      },
+      {
+       "id": "adulte",
+       "texte": "Grenouille adulte",
+       "emoji": "🐸"
+      }
+     ],
+     "liens": [
+      {
+       "de": "oeuf",
+       "a": "tetard"
+      },
+      {
+       "de": "tetard",
+       "a": "jeune",
+       "texte": "métamorphose"
+      },
+      {
+       "de": "jeune",
+       "a": "adulte"
+      },
+      {
+       "de": "adulte",
+       "a": "oeuf",
+       "texte": "ponte"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cycle",
+     "enonce": "Touche l’étape qui est la larve de la grenouille.",
+     "reponse": [
+      "tetard"
+     ],
+     "aide": "La larve vit dans l’eau et ne ressemble pas à l’adulte.",
+     "explication": "Le **têtard** est la **larve** : il se transforme ensuite en grenouille."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le têtard devient une grenouille par ___ : c’est un développement ___.",
+     "reponses": [
+      [
+       "métamorphose"
+      ],
+      [
+       "indirect"
+      ]
+     ],
+     "banque": [
+      "métamorphose",
+      "indirect",
+      "direct",
+      "fécondation",
+      "division"
+     ],
+     "aide": "Le schéma indique le mot qui décrit la transformation entre le têtard et la jeune grenouille.",
+     "explication": "La larve se transforme par **métamorphose** : c’est un développement **indirect**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un chaton ressemble à un chat adulte, en plus petit. Quel type de développement a-t-il ?",
+     "options": [
+      "Un développement direct",
+      "Un développement indirect",
+      "Une métamorphose",
+      "Une reproduction asexuée"
+     ],
+     "reponse": 0,
+     "aide": "Y a-t-il une larve qui se transforme ?",
+     "explication": "Le jeune ressemble à l’adulte : le développement est **direct**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6798a012-7a4d-5227-a2c4-1e0a89ad556b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fleur, l’abeille et la future graine",
+   "competence": "observer-schema",
+   "situation": "Sur un pommier en fleur, Théo observe une abeille qui va de fleur en fleur. Son professeur lui montre une coupe de fleur pour expliquer comment naissent les fruits.",
+   "documents": [
+    {
+     "id": "fleur",
+     "type": "schema",
+     "titre": "Coupe d’une fleur",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        245
+       ],
+       "a": [
+        160,
+        180
+       ],
+       "teinte": "vert"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 95,
+       "cy": 100,
+       "rx": 48,
+       "ry": 18,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 225,
+       "cy": 100,
+       "rx": 48,
+       "ry": 18,
+       "teinte": "rose",
+       "motif": "plein"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         152,
+         55
+        ],
+        [
+         160,
+         40
+        ],
+        [
+         168,
+         55
+        ],
+        [
+         165,
+         135
+        ],
+        [
+         155,
+         135
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "pistil",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 155,
+       "rx": 36,
+       "ry": 28,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "ovaire",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 148,
+       "cy": 158,
+       "r": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 172,
+       "cy": 158,
+       "r": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 146,
+       "r": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 30,
+       "r": 3,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 162,
+       "cy": 22,
+       "r": 3,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 172,
+       "cy": 32,
+       "r": 3,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "etiquette",
+       "x": 70,
+       "y": 28,
+       "texte": "Pollen",
+       "vers": [
+        148,
+        30
+       ]
+      },
+      {
+       "forme": "emoji",
+       "x": 262,
+       "y": 40,
+       "emoji": "🐝",
+       "taille": 34
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        244,
+        48
+       ],
+       "a": [
+        180,
+        38
+       ],
+       "fleche": "fin",
+       "style": "pointilles",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 22,
+       "y": 212,
+       "texte": "Les petits ronds",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 22,
+       "y": 226,
+       "texte": "de l’ovaire : les ovules",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fleur",
+     "enonce": "Touche l’organe que le pollen doit atteindre pour qu’il y ait pollinisation.",
+     "reponse": [
+      "pistil"
+     ],
+     "aide": "C’est le tube fin au centre de la fleur, que l’abeille visite.",
+     "explication": "Le pollen doit atteindre le **pistil** : c’est la pollinisation."
+    },
+    {
+     "type": "zone",
+     "document": "fleur",
+     "enonce": "Touche la partie de la fleur qui deviendra le fruit après la fécondation.",
+     "reponse": [
+      "ovaire"
+     ],
+     "aide": "Cette partie contient les ovules, qui deviendront des graines.",
+     "explication": "L’**ovaire** devient le **fruit**, et les ovules deviennent des **graines**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre ce qui se passe chez une plante à fleurs.",
+     "items": [
+      "Le pollen atteint le pistil",
+      "Il y a fécondation",
+      "L’ovaire devient un fruit et l’ovule une graine",
+      "Les graines sont dispersées"
+     ],
+     "aide": "Il faut d’abord que le pollen arrive, la dispersion vient en dernier.",
+     "explication": "Pollinisation → fécondation → **fruit et graine** → dispersion des graines, loin de la plante mère."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque situation : pollinisation ou dispersion des graines ?",
+     "categories": [
+      "Pollinisation",
+      "Dispersion des graines"
+     ],
+     "items": [
+      [
+       "Une abeille butine de fleur en fleur",
+       0
+      ],
+      [
+       "Le vent emporte le pollen du noisetier",
+       0
+      ],
+      [
+       "Un écureuil enterre des noisettes",
+       1
+      ],
+      [
+       "Le vent emporte les graines du pissenlit",
+       1
+      ]
+     ],
+     "aide": "La pollinisation transporte du pollen ; la dispersion déplace des graines.",
+     "explication": "Le transport du **pollen** est la pollinisation ; l’éloignement des **graines** est la dispersion."
+    }
+   ]
+  },
+  {
+   "chapitre": "6798a012-7a4d-5227-a2c4-1e0a89ad556b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Beaucoup d’œufs ou peu de petits ?",
+   "competence": "raisonner",
+   "situation": "Léa compare des animaux de la ferme et de la mare. Elle compare aussi deux façons d’avoir de nouveaux fraisiers dans son potager.",
+   "documents": [
+    {
+     "id": "animaux",
+     "type": "tableau",
+     "titre": "Quatre animaux",
+     "colonnes": [
+      "Animal",
+      "Fécondation",
+      "Œufs ou petits par ponte ou portée"
+     ],
+     "lignes": [
+      [
+       "Morue",
+       "externe, dans l’eau",
+       "plusieurs millions d’œufs"
+      ],
+      [
+       "Grenouille rousse",
+       "externe, dans l’eau",
+       "environ 2 000 œufs"
+      ],
+      [
+       "Poule",
+       "interne",
+       "environ 12 œufs par couvée"
+      ],
+      [
+       "Chatte",
+       "interne",
+       "environ 4 petits par portée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis"
+    },
+    {
+     "id": "fraisier",
+     "type": "tableau",
+     "titre": "Les fraisiers de Léa",
+     "colonnes": [
+      "Méthode",
+      "Ce que fait Léa",
+      "Nouveaux plants"
+     ],
+     "lignes": [
+      [
+       "Stolons",
+       "Elle repique un stolon du pied qu’elle préfère",
+       "Identiques au pied d’origine"
+      ],
+      [
+       "Graines",
+       "Elle sème les graines de ses fraises",
+       "Tous différents"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque animal selon son type de fécondation.",
+     "categories": [
+      "Fécondation externe",
+      "Fécondation interne"
+     ],
+     "items": [
+      [
+       "Morue",
+       0
+      ],
+      [
+       "Grenouille rousse",
+       0
+      ],
+      [
+       "Poule",
+       1
+      ],
+      [
+       "Chatte",
+       1
+      ]
+     ],
+     "aide": "Relis la colonne « Fécondation » du premier tableau.",
+     "explication": "Morue et grenouille : fécondation **externe**. Poule et chatte : fécondation **interne**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La grenouille rousse pond environ 2 000 œufs ; une chatte met au monde 4 petits. Combien de fois plus la grenouille a-t-elle de descendants au départ ?",
+     "reponse": 500,
+     "unite": "fois",
+     "aide": "Divise 2 000 par 4.",
+     "explication": "2 000 ÷ 4 = **500** fois plus."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication pour la morue.",
+     "texte": "La fécondation de la morue est ___ : les cellules reproductrices sont libérées dans l’___, et peu de descendants survivent.",
+     "reponses": [
+      [
+       "externe"
+      ],
+      [
+       "eau"
+      ]
+     ],
+     "banque": [
+      "externe",
+      "interne",
+      "eau",
+      "air",
+      "sol"
+     ],
+     "aide": "Regarde la colonne « Fécondation » et rappelle-toi où ont lieu les rencontres.",
+     "explication": "Fécondation **externe**, dans l’**eau** : il en faut beaucoup, car peu survivent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léa veut des fraisiers identiques à son meilleur pied. Que doit-elle choisir ?",
+     "options": [
+      "Repiquer des stolons : un seul pied, descendants identiques",
+      "Semer des graines : les plants seront identiques",
+      "Semer des graines : un seul pied suffit",
+      "Attendre les abeilles : les plants seront identiques"
+     ],
+     "reponse": 0,
+     "aide": "Une reproduction qui demande un seul individu donne des copies.",
+     "explication": "Les **stolons** donnent des plants **identiques** : c’est une reproduction asexuée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à son exemple ou à sa description.",
+     "paires": [
+      [
+       "Reproduction asexuée",
+       "Les stolons du fraisier"
+      ],
+      [
+       "Reproduction sexuée",
+       "Spermatozoïde et ovule ; descendants tous différents"
+      ],
+      [
+       "Fécondation interne",
+       "Dans le corps de la femelle, moins de descendants mieux protégés"
+      ],
+      [
+       "Fécondation externe",
+       "Cellules libérées dans l’eau, il en faut beaucoup"
+      ]
+     ],
+     "aide": "Pense au nombre d’individus nécessaires et à l’endroit où les cellules se rencontrent.",
+     "explication": "L’**asexuée** copie un parent ; la **sexuée** mélange deux cellules ; l’**interne** protège ; l’**externe** compense par le nombre."
+    }
+   ]
+  },
+  {
+   "chapitre": "c5ff4f24-ac14-508b-badc-19eb829c9e6f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La courbe de taille de Noé",
+   "competence": "lire-graphique",
+   "situation": "Noé regarde la courbe de taille de son carnet de santé. À l’adolescence, on grandit vite : c’est un signe de la puberté.",
+   "documents": [
+    {
+     "id": "taille",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La taille de Noé",
+     "categories": [
+      "9 ans",
+      "10 ans",
+      "11 ans",
+      "12 ans",
+      "13 ans",
+      "14 ans",
+      "15 ans"
+     ],
+     "series": [
+      {
+       "nom": "Taille",
+       "valeurs": [
+        133,
+        137,
+        142,
+        149,
+        158,
+        163,
+        166
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Taille",
+      "unite": "cm",
+      "min": 120,
+      "max": 170,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Âge"
+     },
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "taille",
+     "enonce": "Touche l’âge où Noé mesure 142 cm.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point qui se trouve à la hauteur 142 sur l’axe vertical.",
+     "explication": "À **11 ans**, Noé mesure 142 cm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de centimètres Noé a-t-il grandi entre 12 ans et 13 ans ?",
+     "reponse": 9,
+     "unite": "cm",
+     "aide": "Lis la taille à 12 ans et à 13 ans, puis soustrais.",
+     "explication": "158 − 149 = **9 cm** : c’est son année de plus forte croissance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sam a 12 ans et n’a pas encore commencé à grandir vite. Que peut-on dire ?",
+     "options": [
+      "C’est normal : la puberté commence à des âges variables",
+      "C’est un problème : on doit grandir vite dès 12 ans",
+      "Il ne deviendra jamais adulte, il faut s’inquiéter",
+      "Il est en retard sur tous les autres élèves de son âge"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit le cours sur l’âge de la puberté.",
+     "explication": "Il n’y a pas d’âge « normal » : il y a une **fourchette**. Être en avance ou en retard ne veut rien dire."
+    }
+   ]
+  },
+  {
+   "chapitre": "c5ff4f24-ac14-508b-badc-19eb829c9e6f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Six élèves de la classe, six calendriers",
+   "competence": "lire-tableau",
+   "situation": "Mme Lemoine, infirmière scolaire, a demandé à six élèves d’une classe de 3e à quel âge ils ont remarqué leurs premiers changements. Elle veut leur montrer que chacun a son propre rythme.",
+   "documents": [
+    {
+     "id": "puberte",
+     "type": "tableau",
+     "titre": "Âge des premiers changements",
+     "colonnes": [
+      "Prénom",
+      "Âge"
+     ],
+     "lignes": [
+      [
+       "Alice",
+       "10 ans"
+      ],
+      [
+       "Bastien",
+       "12 ans"
+      ],
+      [
+       "Chloé",
+       "11 ans"
+      ],
+      [
+       "Dylan",
+       "13 ans"
+      ],
+      [
+       "Emma",
+       "14 ans"
+      ],
+      [
+       "Farid",
+       "15 ans"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Réponses imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "puberte",
+     "enonce": "Touche l’âge le plus tardif de la classe.",
+     "reponse": [
+      "r5c1"
+     ],
+     "aide": "Cherche le plus grand nombre de la colonne « Âge ».",
+     "explication": "C’est **15 ans**, l’âge de Farid."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart d’âge y a-t-il entre l’élève le plus précoce et le plus tardif ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Soustrais le plus petit âge du plus grand.",
+     "explication": "15 − 10 = **5 ans** d’écart : la puberté commence dans une fourchette large."
+    },
+    {
+     "type": "choix",
+     "enonce": "Alice a commencé à 10 ans et Farid à 15 ans. Que dit-on de leurs situations ?",
+     "options": [
+      "Aucun n’est en avance ou en retard : l’âge varie dans une fourchette",
+      "Alice est malade et Farid va très bien, tout est normal",
+      "Farid est en retard et doit absolument se faire soigner",
+      "Seule Chloé a un rythme normal, les autres non"
+     ],
+     "reponse": 0,
+     "aide": "Relis le cours : à quel âge la puberté commence-t-elle ?",
+     "explication": "Elle commence **entre 10 et 15 ans** : chacun a son rythme, et cette variation est normale."
+    },
+    {
+     "type": "categories",
+     "enonce": "À la puberté, qui voit chacun de ces changements ?",
+     "categories": [
+      "Chez le garçon",
+      "Chez la fille",
+      "Chez tous les deux"
+     ],
+     "items": [
+      [
+       "La voix mue",
+       0
+      ],
+      [
+       "Les testicules produisent des spermatozoïdes",
+       0
+      ],
+      [
+       "Les seins se développent",
+       1
+      ],
+      [
+       "Le bassin s’élargit",
+       1
+      ],
+      [
+       "Les premières règles apparaissent",
+       1
+      ],
+      [
+       "La croissance devient rapide",
+       2
+      ]
+     ],
+     "aide": "Les organes reproducteurs et les caractères sexuels secondaires ne sont pas les mêmes ; la croissance rapide concerne tout le monde.",
+     "explication": "Garçon : voix, spermatozoïdes. Fille : seins, bassin, règles. Les deux : **croissance rapide**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c5ff4f24-ac14-508b-badc-19eb829c9e6f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des premières cellules à la naissance",
+   "competence": "raisonner",
+   "situation": "Pour le cours d’éducation à la santé, Mme Lemoine propose une frise des grandes étapes, puis un tableau sur ce qui évite une grossesse et ce qui protège des infections sexuellement transmissibles (IST).",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "titre": "De la fécondation à la naissance",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "oeuf",
+       "texte": "Cellule-œuf (fécondation dans une trompe)"
+      },
+      {
+       "id": "div",
+       "texte": "La cellule-œuf se divise"
+      },
+      {
+       "id": "nid",
+       "texte": "?"
+      },
+      {
+       "id": "emb",
+       "texte": "Embryon"
+      },
+      {
+       "id": "foe",
+       "texte": "Fœtus (fin du 2e mois)"
+      },
+      {
+       "id": "nai",
+       "texte": "Naissance (accouchement)"
+      }
+     ],
+     "liens": [
+      {
+       "de": "oeuf",
+       "a": "div"
+      },
+      {
+       "de": "div",
+       "a": "nid"
+      },
+      {
+       "de": "nid",
+       "a": "emb"
+      },
+      {
+       "de": "emb",
+       "a": "foe"
+      },
+      {
+       "de": "foe",
+       "a": "nai"
+      }
+     ]
+    },
+    {
+     "id": "moyens",
+     "type": "tableau",
+     "titre": "Ce que chaque moyen évite",
+     "colonnes": [
+      "Moyen",
+      "Évite une grossesse",
+      "Protège des IST"
+     ],
+     "lignes": [
+      [
+       "Pilule",
+       "oui",
+       "non"
+      ],
+      [
+       "Préservatif",
+       "oui",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quel mot remplace le « ? » : la fixation de l’embryon dans l’utérus ?",
+     "reponse": [
+      "nidation",
+      "la nidation"
+     ],
+     "aide": "Ce mot commence par « nid », comme l’endroit où l’on s’installe.",
+     "explication": "C’est la **nidation** : l’embryon se fixe dans l’utérus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La grossesse dure environ 9 mois. Combien de mois reste-t-il environ, une fois le stade de fœtus atteint (fin du 2e mois) ?",
+     "reponse": 7,
+     "unite": "mois",
+     "aide": "Soustrais la durée écoulée de la durée totale.",
+     "explication": "9 − 2 = **7 mois** environ."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque organe ou lieu à son rôle.",
+     "paires": [
+      [
+       "Trompe",
+       "Lieu de la fécondation"
+      ],
+      [
+       "Utérus",
+       "Accueille l’embryon lors de la nidation"
+      ],
+      [
+       "Placenta",
+       "Assure les échanges avec la mère"
+      ],
+      [
+       "Cordon ombilical",
+       "Apporte dioxygène et nutriments, évacue les déchets"
+      ]
+     ],
+     "aide": "Relis les étapes : où se passe chacune ?",
+     "explication": "Trompe : **fécondation** ; utérus : **nidation** ; placenta : **échanges** ; cordon : apports et déchets."
+    },
+    {
+     "type": "zone",
+     "document": "moyens",
+     "enonce": "Touche la case qui montre le seul moyen du tableau qui protège aussi des IST.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne qui a « oui » dans la colonne « Protège des IST ».",
+     "explication": "Le **préservatif** est le seul moyen qui protège **aussi** des IST."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il quand l’ovule libéré par un ovaire n’est pas fécondé ?",
+     "options": [
+      "La paroi de l’utérus est évacuée : ce sont les règles",
+      "L’ovule devient peu à peu un fœtus dans l’utérus",
+      "L’utérus se met à fabriquer un placenta à vide",
+      "Les trompes se referment définitivement chaque mois"
+     ],
+     "reponse": 0,
+     "aide": "Cela se produit à peu près une fois par mois.",
+     "explication": "Sans fécondation, la paroi de l’utérus est évacuée : ce sont les **règles**, environ une fois par mois."
+    }
+   ]
+  }
+ ]
+}

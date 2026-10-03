@@ -1,0 +1,2029 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "e1120c64-63f5-55ac-8966-02d9e9a36fe3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète déçu par 1848",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur les *Poèmes antiques*. Replace le recueil dans la vie de son auteur, puis relis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Leconte de Lisle",
+     "debut": 1815,
+     "fin": 1890,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1818,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rev",
+       "date": 1848,
+       "nom": "Révolution"
+      },
+      {
+       "id": "rec",
+       "date": 1852,
+       "nom": "Poèmes antiques"
+      },
+      {
+       "id": "acad",
+       "date": 1886,
+       "nom": "Académie"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Poèmes antiques",
+     "sousTitre": "Charles Leconte de Lisle",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1852",
+       "id": "pub"
+      },
+      {
+       "texte": "Origine de l’auteur",
+       "valeur": "La Réunion",
+       "id": "origine"
+      },
+      {
+       "texte": "Sources",
+       "valeur": "Grèce antique, mythologie indienne",
+       "id": "sources"
+      },
+      {
+       "texte": "Mouvement",
+       "valeur": "?",
+       "id": "mouv"
+      }
+     ],
+     "pied": "Il succède à Victor Hugo à l’Académie",
+     "teinte": "turquoise"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rec"
+     ],
+     "enonce": "Touche, sur la frise, le repère qui correspond au recueil.",
+     "aide": "Cherche le titre du recueil.",
+     "explication": "Les *Poèmes antiques* paraissent en **1852**, quatre ans après la révolution de 1848."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la révolution de 1848 de la parution du recueil ?",
+     "reponse": 4,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1852 − 1848 = **4 ans** : déçu par l’échec de 1848, Leconte de Lisle se détourne de l’actualité.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mouvement faut-il écrire dans la case « ? » de la fiche ?",
+     "options": [
+      "Le Parnasse",
+      "Le romantisme",
+      "Le symbolisme",
+      "Le surréalisme"
+     ],
+     "reponse": 0,
+     "aide": "Le recueil impose son auteur comme chef de file d’un mouvement qui n’a pas encore de nom.",
+     "explication": "Le recueil impose Leconte de Lisle comme chef de file du **Parnasse**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e1120c64-63f5-55ac-8966-02d9e9a36fe3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la Grèce à l’Inde",
+   "competence": "analyser-document",
+   "situation": "Le recueil puise à plusieurs sources. Range-les, puis retrouve les trois principes du Parnasse.",
+   "documents": [
+    {
+     "id": "contenu",
+     "type": "tableau",
+     "titre": "Le contenu du recueil",
+     "colonnes": [
+      "Source",
+      "Quelques poèmes"
+     ],
+     "lignes": [
+      [
+       "La Grèce",
+       "« Hélène », « Niobé », « Khirôn »"
+      ],
+      [
+       "?",
+       "« Bhagavat », « La Vision de Brahma »"
+      ],
+      [
+       "Poésies diverses et chansons écossaises",
+       "« Midi », « Juin », « La Fille aux cheveux de lin »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle source faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les hymnes védiques et la mythologie indienne",
+      "Les contes populaires de la Bretagne",
+      "La Bible et les Évangiles",
+      "Les chansons de geste du Moyen Âge"
+     ],
+     "reponse": 0,
+     "aide": "« Bhagavat » et « La Vision de Brahma » viennent d’un même univers.",
+     "explication": "Ces poèmes viennent de la **mythologie indienne** et des hymnes **védiques** : Leconte de Lisle est l’un des premiers en France à puiser dans les textes sanskrits."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque poème à sa source.",
+     "paires": [
+      [
+       "« Hélène »",
+       "La Grèce antique"
+      ],
+      [
+       "« Bhagavat »",
+       "La mythologie indienne"
+      ],
+      [
+       "« Midi »",
+       "Les poésies diverses"
+      ]
+     ],
+     "aide": "Appuie-toi sur le tableau.",
+     "explication": "« **Hélène** » vient de la Grèce, « **Bhagavat** » de l’Inde, « **Midi** » des poésies diverses."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les trois mots d’ordre du Parnasse.",
+     "texte": "Le Parnasse tient en trois mots : ___, érudition, culte de la ___.",
+     "reponses": [
+      [
+       "impersonnalité"
+      ],
+      [
+       "forme"
+      ]
+     ],
+     "banque": [
+      "impersonnalité",
+      "forme",
+      "confidence",
+      "musique",
+      "liberté"
+     ],
+     "aide": "Le premier mot dit que le « je » s’efface ; le dernier désigne ce qu’on sculpte.",
+     "explication": "Le Parnasse tient en trois mots : **impersonnalité**, **érudition**, culte de la **forme**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre repères dans l’ordre.",
+     "items": [
+      "Naissance à La Réunion",
+      "Échec de la révolution de 1848",
+      "Publication des *Poèmes antiques*",
+      "Recueil *Le Parnasse contemporain* de ses disciples"
+     ],
+     "aide": "Du plus ancien au plus récent : 1818, 1848, 1852, 1866.",
+     "explication": "Ordre : **naissance** (1818), **1848**, ***Poèmes antiques*** (1852), ***Le Parnasse contemporain*** (1866)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e1120c64-63f5-55ac-8966-02d9e9a36fe3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Contre l’aveu des angoisses du cœur",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si ce recueil parle d’abord de son auteur. Lis des fragments de sa préface, puis tranche.",
+   "documents": [
+    {
+     "id": "preface",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La préface",
+     "blocs": [
+      "Leconte de Lisle condamne l’« [[a|aveu]] public des angoisses du cœur », qu’il juge « une vanité et une profanation gratuites ».",
+      "« Les émotions personnelles n’y ont laissé que peu de traces. »"
+     ],
+     "source": "Charles Leconte de Lisle, préface des *Poèmes antiques* (1852), fragments"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Elias",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Manon",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elias",
+       "texte": "Un recueil de poèmes, c’est toujours le poète qui se confie."
+      },
+      {
+       "qui": "Manon",
+       "texte": "Pas celui-ci : la préface refuse les confidences et réclame une poésie impersonnelle."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "preface",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui désigne ce que Leconte de Lisle condamne dans la poésie romantique.",
+     "aide": "Ce qui est condamné se fait « en public ».",
+     "explication": "Il condamne l’**aveu** public des angoisses du cœur : le lyrisme personnel."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui la préface donne-t-elle raison ?",
+     "options": [
+      "À Manon : la poésie doit être impersonnelle",
+      "À Elias : le poète doit se confier au lecteur",
+      "Aux deux : le poète se confie sans le dire",
+      "À aucun : la préface ne parle pas de poésie"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que Leconte de Lisle condamne et ce qu’il réclame.",
+     "explication": "La préface refuse l’aveu public : **Manon** a raison, le Parnasse veut une poésie **impersonnelle**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : lyrisme romantique ou poésie parnassienne ?",
+     "categories": [
+      "Lyrisme romantique",
+      "Poésie parnassienne"
+     ],
+     "items": [
+      [
+       "La confidence des angoisses du cœur",
+       0
+      ],
+      [
+       "Le « je » qui s’efface",
+       1
+      ],
+      [
+       "Le savoir qui nourrit le poème",
+       1
+      ],
+      [
+       "L’expression personnelle de Lamartine et de Musset",
+       0
+      ]
+     ],
+     "aide": "Le Parnasse réagit contre le lyrisme personnel.",
+     "explication": "Les **confidences** et l’expression personnelle sont romantiques ; l’**effacement du « je »** et le **savoir** sont parnassiens."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque nom à son rapport au Parnasse.",
+     "paires": [
+      [
+       "Gautier",
+       "Sa doctrine de « l’art pour l’art » le rapproche du Parnasse"
+      ],
+      [
+       "Les symbolistes",
+       "Ils reprocheront au Parnasse sa froideur"
+      ],
+      [
+       "Verlaine",
+       "Un temps disciple, il publie dans *Le Parnasse contemporain*"
+      ]
+     ],
+     "aide": "Pense à ceux qui l’ont précédé, suivi ou rejoint.",
+     "explication": "**Gautier** défend l’art pour l’art ; les **symbolistes** contesteront la froideur ; **Verlaine** est un temps disciple."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8fea22f-cafe-5eef-9c43-f9e4f3114745",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un premier recueil à vingt-deux ans",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur les *Poèmes saturniens*. Retiens la carte d’identité, puis les quatre sections du recueil.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Poèmes saturniens",
+     "sousTitre": "Paul Verlaine",
+     "emoji": "🪐",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1866",
+       "id": "pub"
+      },
+      {
+       "texte": "Âge du poète",
+       "valeur": "Vingt-deux ans",
+       "id": "age"
+      },
+      {
+       "texte": "Éditeur",
+       "valeur": "Lemerre",
+       "id": "editeur"
+      },
+      {
+       "texte": "Nature",
+       "valeur": "Premier livre",
+       "id": "nature"
+      }
+     ],
+     "pied": "Verlaine est né en 1844",
+     "teinte": "violet"
+    },
+    {
+     "id": "sections",
+     "type": "tableau",
+     "titre": "Les sections du recueil",
+     "colonnes": [
+      "Section",
+      "Ce qu’elle porte"
+     ],
+     "lignes": [
+      [
+       "Melancholia",
+       "Le cœur"
+      ],
+      [
+       "Eaux-fortes",
+       "Les tableaux"
+      ],
+      [
+       "Paysages tristes",
+       "?"
+      ],
+      [
+       "Caprices",
+       "Les pièces brèves"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "age"
+     ],
+     "enonce": "Touche la ligne qui dit l’âge du poète à la parution.",
+     "aide": "Verlaine est encore très jeune.",
+     "explication": "Verlaine publie son premier livre à **vingt-deux ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifie : de combien d’années la parution suit-elle la naissance de Verlaine ?",
+     "reponse": 22,
+     "aide": "Soustrais 1844 de la date de parution.",
+     "explication": "1866 − 1844 = **22 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour « Paysages tristes » ?",
+     "options": [
+      "Le crépuscule",
+      "La mer et les bateaux",
+      "Les fêtes galantes",
+      "L’enfance du poète"
+     ],
+     "reponse": 0,
+     "aide": "Le titre parle de paysages, et la section est tournée vers le soir.",
+     "explication": "La section « Paysages tristes » porte le **crépuscule**, la mélancolie du soir."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : d’où vient le titre du recueil ?",
+     "texte": "Le titre vient de ___, planète des ___.",
+     "reponses": [
+      [
+       "Saturne"
+      ],
+      [
+       "mélancoliques"
+      ]
+     ],
+     "banque": [
+      "Saturne",
+      "mélancoliques",
+      "Vénus",
+      "rêveurs",
+      "poètes"
+     ],
+     "aide": "Les « saturniens » naissent sous une mauvaise étoile.",
+     "explication": "Le titre vient de **Saturne**, planète des **mélancoliques**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8fea22f-cafe-5eef-9c43-f9e4f3114745",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les sanglots des violons",
+   "competence": "analyser-texte",
+   "situation": "Tu analyses la première strophe de « Chanson d’automne » : lis-la, puis relie ce que Verlaine invente à son effet.",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Chanson d’automne",
+     "blocs": [
+      "Les [[t|sanglots]] longs",
+      "Des violons",
+      "De l’automne",
+      "Blessent mon cœur",
+      "D’une [[t|langueur]]",
+      "Monotone."
+     ],
+     "source": "Paul Verlaine, « Chanson d’automne », *Poèmes saturniens* (1866), première strophe"
+    },
+    {
+     "id": "proc",
+     "type": "tableau",
+     "titre": "Ce que Verlaine invente",
+     "colonnes": [
+      "Procédé",
+      "Son effet"
+     ],
+     "lignes": [
+      [
+       "Les vers impairs",
+       "Le déséquilibre voulu"
+      ],
+      [
+       "Les rythmes brisés, les répétitions",
+       "?"
+      ],
+      [
+       "Les sonorités douces, les sujets flous",
+       "Suggérer un état plutôt que décrire"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui expriment la tristesse dans la strophe.",
+     "aide": "Un mot de pleurs, un mot de faiblesse.",
+     "explication": "Les **sanglots** et la **langueur** disent la mélancolie de l’automne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La musicalité avant tout",
+      "Une description précise du paysage",
+      "Un récit des aventures du poète",
+      "Une démonstration morale"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la célèbre formule de l’« Art poétique ».",
+     "explication": "Les rythmes brisés et les répétitions créent la **musicalité avant tout**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Chanson d’automne », qu’imitent les vers très courts et les sonorités nasales ?",
+     "options": [
+      "La plainte du violon",
+      "Le bruit de la pluie sur les toits",
+      "Le pas lent d’un promeneur",
+      "La voix d’une femme inconnue"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième vers de la strophe.",
+     "explication": "Les vers courts et les sonorités nasales imitent la **plainte du violon**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque poème du recueil à ce qu’on en retient.",
+     "paires": [
+      [
+       "« Chanson d’automne »",
+       "Les violons de l’automne"
+      ],
+      [
+       "« Mon rêve familier »",
+       "Une femme inconnue, aimée et aimante"
+      ],
+      [
+       "« Nevermore »",
+       "Le souvenir"
+      ]
+     ],
+     "aide": "Chaque titre appelle une image ou un thème précis.",
+     "explication": "« **Chanson d’automne** » : les violons ; « **Mon rêve familier** » : la femme inconnue ; « **Nevermore** » : le souvenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8fea22f-cafe-5eef-9c43-f9e4f3114745",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De la musique avant toute chose",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si Verlaine est encore un poète parnassien. Lis deux passages et départage-les.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Deux passages de Verlaine",
+     "blocs": [
+      "Je fais souvent ce rêve étrange et pénétrant",
+      "D’une femme inconnue, et que j’aime, et qui m’aime",
+      "",
+      "De la [[m|musique]] avant toute chose,",
+      "Et pour cela préfère l’Impair."
+     ],
+     "source": "Paul Verlaine, « Mon rêve familier » (*Poèmes saturniens*, 1866), vers 1-2 ; « Art poétique » (*Jadis et naguère*, 1884)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nolan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Verlaine publie chez Lemerre et garde le sonnet : c’est un parnassien."
+      },
+      {
+       "qui": "Nolan",
+       "texte": "Oui, mais il cherche moins à décrire qu’à suggérer un état : il annonce autre chose."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui, dans l’« Art poétique », passe avant toute chose.",
+     "aide": "Il s’agit d’un art qui s’écoute.",
+     "explication": "La **musique** passe avant toute chose : la musicalité est le cœur de la poétique de Verlaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture les deux passages soutiennent-ils le mieux ?",
+     "options": [
+      "Il garde des formes fixes mais annonce le symbolisme",
+      "Verlaine rejette toute forme poétique et écrit en prose",
+      "Verlaine décrit avec précision des paysages réels",
+      "Verlaine imite exactement la sculpture parnassienne"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que le deuxième passage préfère.",
+     "explication": "Il garde le **sonnet** mais préfère la **musique** et le vers **impair** : il ouvre la voie au **symbolisme**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : héritage du Parnasse, ou annonce du symbolisme ?",
+     "categories": [
+      "Héritage parnassien",
+      "Annonce du symbolisme"
+     ],
+     "items": [
+      [
+       "Le prologue et l’épilogue du recueil",
+       0
+      ],
+      [
+       "La publication chez Lemerre, éditeur du Parnasse",
+       0
+      ],
+      [
+       "Les vers impairs",
+       1
+      ],
+      [
+       "Les rythmes brisés et les répétitions",
+       1
+      ]
+     ],
+     "aide": "Le recueil garde un pied dans le Parnasse et ouvre la voie à la musicalité.",
+     "explication": "Le **prologue**, l’**épilogue** et l’**éditeur** viennent du Parnasse ; les **vers impairs** et les **rythmes brisés** annoncent le **symbolisme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un sujet sur la poésie et la musique, pourquoi citer Verlaine ?",
+     "options": [
+      "Parce que la musicalité y passe avant le sens et la description",
+      "Parce qu’il a composé la musique de ses poèmes",
+      "Parce qu’il refuse toute rime et tout rythme",
+      "Parce qu’il écrit seulement des chansons populaires"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’« Art poétique » et au vers impair.",
+     "explication": "Verlaine donne la **musicalité** avant toute chose : l’exemple à citer pour poésie et musique."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b7d58dc-ba40-55c2-9278-ae7a22e59083",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète rare et célèbre",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur les *Poésies* de Mallarmé. Place-le dans le temps, puis retiens ses poèmes les plus connus.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Mallarmé",
+     "debut": 1840,
+     "fin": 1900,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1842,
+       "nom": "Naissance"
+      },
+      {
+       "id": "celeb",
+       "date": 1884,
+       "nom": "Célébrité"
+      },
+      {
+       "id": "mort",
+       "date": 1898,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "poemes",
+     "type": "tableau",
+     "titre": "Les poèmes principaux",
+     "colonnes": [
+      "Poème",
+      "Ce qu’on en retient"
+     ],
+     "lignes": [
+      [
+       "« Brise marine »",
+       "« La chair est triste, hélas ! et j’ai lu tous les livres »"
+      ],
+      [
+       "« L’Azur »",
+       "L’idéal qui écrase"
+      ],
+      [
+       "*L’Après-midi d’un faune*",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "celeb"
+     ],
+     "enonce": "Touche l’année où Mallarmé devient célèbre grâce à Huysmans et à Verlaine.",
+     "aide": "Cherche le mot « célébrité ».",
+     "explication": "En **1884**, *À rebours* de Huysmans et *Les Poètes maudits* de Verlaine le font connaître."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel âge Mallarmé meurt-il (1898 − 1842) ?",
+     "reponse": 56,
+     "aide": "Soustrais la date de naissance de celle de la mort.",
+     "explication": "1898 − 1842 = **56 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour *L’Après-midi d’un faune* ?",
+     "options": [
+      "Une églogue qui inspirera Debussy",
+      "Un roman sur la vie des artistes",
+      "Un drame joué au théâtre de l’Odéon",
+      "Un recueil de fables en prose"
+     ],
+     "reponse": 0,
+     "aide": "Un compositeur célèbre s’en est inspiré.",
+     "explication": "*L’Après-midi d’un faune* est une **églogue** qui inspirera le *Prélude* de **Debussy**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b7d58dc-ba40-55c2-9278-ae7a22e59083",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Fuir ! là-bas fuir !",
+   "competence": "analyser-texte",
+   "situation": "Tu lis les deux premiers vers de « Brise marine », puis tu replaces Mallarmé dans la chronologie de son œuvre.",
+   "documents": [
+    {
+     "id": "brise",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Brise marine",
+     "blocs": [
+      "La chair est triste, hélas ! et j’ai lu tous les [[l|livres]].",
+      "Fuir ! là-bas fuir ! Je sens que des oiseaux sont ivres"
+     ],
+     "source": "Stéphane Mallarmé, « Brise marine », vers 1-2"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brise",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui désigne ce que le poète a lu en totalité.",
+     "aide": "Ce sont des objets de papier.",
+     "explication": "Le poète a lu tous les **livres** : le savoir ne suffit plus, il veut **fuir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel thème de Mallarmé ce début de poème illustre-t-il ?",
+     "options": [
+      "La fuite hors du réel",
+      "La joie du retour chez soi",
+      "La description d’une bataille",
+      "L’éloge de la vie quotidienne"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le verbe répété au début du deuxième vers.",
+     "explication": "Le poète veut **fuir** : c’est la fuite hors du réel, un thème central de Mallarmé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre jalons de l’œuvre dans l’ordre.",
+     "items": [
+      "Succès de 1884",
+      "Poèmes rassemblés en 1887",
+      "*Un coup de dés* (1897)",
+      "Édition posthume de 1899"
+     ],
+     "aide": "Du plus ancien au plus récent.",
+     "explication": "Ordre : **1884**, **1887**, ***Un coup de dés*** (1897), édition **posthume** de 1899."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à ce qu’il symbolise ou désigne.",
+     "paires": [
+      [
+       "Le cygne pris dans la glace",
+       "Le poète prisonnier de son idéal"
+      ],
+      [
+       "Les « mardis »",
+       "Les réunions de la rue de Rome"
+      ],
+      [
+       "*Un coup de dés*",
+       "La mise en page comme moyen poétique"
+      ]
+     ],
+     "aide": "Pense à l’image, au lieu, à l’innovation.",
+     "explication": "Le **cygne** est le poète prisonnier ; les **mardis** se tenaient rue de Rome ; ***Un coup de dés*** invente la mise en page poétique."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b7d58dc-ba40-55c2-9278-ae7a22e59083",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peindre l’effet, pas la chose",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Mallarmé est-il obscur par maladresse ou par choix ? Lis sa formule, puis tranche.",
+   "documents": [
+    {
+     "id": "formule",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Sa poétique",
+     "blocs": [
+      "Peindre non la [[c|chose]], mais l’[[e|effet]] qu’elle produit.",
+      "Un coup de dés jamais n’abolira le hasard."
+     ],
+     "source": "Stéphane Mallarmé, formule de sa poétique ; *Un coup de dés jamais n’abolira le hasard* (1897)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alice",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "Mallarmé est obscur parce qu’il écrit mal."
+      },
+      {
+       "qui": "Alice",
+       "texte": "Non : l’obscurité est voulue, pour que le lecteur participe au sens."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formule",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit ce que le poème doit peindre.",
+     "aide": "Ce n’est pas la chose elle-même.",
+     "explication": "Le poème doit peindre l’**effet** que la chose produit, non la chose."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui la formule de Mallarmé donne-t-elle raison ?",
+     "options": [
+      "À Alice : l’obscurité est voulue",
+      "À Théo : Mallarmé écrit mal et obscurément",
+      "Aux deux : tout poème est obscur",
+      "À aucun : Mallarmé refuse de suggérer"
+     ],
+     "reponse": 0,
+     "aide": "Ce que Mallarmé peint, c’est l’effet, pas la chose.",
+     "explication": "Le poème **suggère** au lieu de décrire : l’obscurité est **voulue**, **Alice** a raison."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : Mallarmé le cherche, ou le refuse ?",
+     "categories": [
+      "Il le cherche",
+      "Il le refuse"
+     ],
+     "items": [
+      [
+       "Suggérer par les mots qui résonnent",
+       0
+      ],
+      [
+       "Une syntaxe déplacée, des ellipses",
+       0
+      ],
+      [
+       "Décrire la chose avec précision",
+       1
+      ],
+      [
+       "Un sens livré d’emblée au lecteur",
+       1
+      ]
+     ],
+     "aide": "Souviens-toi : suggérer, non décrire.",
+     "explication": "Il **cherche** la suggestion et la syntaxe déplacée ; il **refuse** la description et le sens livré d’emblée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un sujet sur l’émancipation du langage poétique, que retenir de *Un coup de dés* ?",
+     "options": [
+      "La mise en page devient un moyen poétique",
+      "Le retour à la régularité de l’alexandrin",
+      "La disparition complète des mots",
+      "La reprise fidèle des formes de Baudelaire"
+     ],
+     "reponse": 0,
+     "aide": "Le texte éclate sur la page.",
+     "explication": "Le poème **éclate le texte sur la page** : la **mise en page** devient un moyen poétique."
+    }
+   ]
+  },
+  {
+   "chapitre": "5bcb0e68-6902-5871-940b-a067ac92de8b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un martyr en Arménie",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Polyeucte*. Retiens le cadre de la pièce, puis qui est qui autour de Polyeucte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Polyeucte",
+     "sousTitre": "Pierre Corneille",
+     "emoji": "✝️",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Tragédie chrétienne",
+       "id": "genre"
+      },
+      {
+       "texte": "Création",
+       "valeur": "Vers 1642-1643",
+       "id": "creation"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "L’Arménie",
+       "id": "lieu"
+      },
+      {
+       "texte": "Empereur",
+       "valeur": "Décie",
+       "id": "empereur"
+      }
+     ],
+     "pied": "Corneille (1606-1684), auteur du *Cid*",
+     "teinte": "ambre"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Position"
+     ],
+     "lignes": [
+      [
+       "Polyeucte",
+       "Seigneur arménien, récemment marié à Pauline"
+      ],
+      [
+       "Pauline",
+       "Fille du gouverneur Félix"
+      ],
+      [
+       "Néarque",
+       "?"
+      ],
+      [
+       "Sévère",
+       "Chevalier que Pauline avait aimé, cru mort"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne qui dit où se déroule l’action.",
+     "aide": "Cherche un pays d’Orient.",
+     "explication": "L’action se déroule en **Arménie**, sous l’empereur Décie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le cadre de la pièce.",
+     "texte": "L’action se passe en ___, sous l’empereur ___.",
+     "reponses": [
+      [
+       "Arménie"
+      ],
+      [
+       "Décie"
+      ]
+     ],
+     "banque": [
+      "Arménie",
+      "Décie",
+      "Grèce",
+      "Néron",
+      "Rome"
+     ],
+     "aide": "Tout est sur la fiche.",
+     "explication": "L’action se passe en **Arménie**, sous l’empereur **Décie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire pour Néarque (la case « ? ») ?",
+     "options": [
+      "L’ami qui conseille à Polyeucte le baptême secret",
+      "Le gouverneur calculateur qui craint pour sa place",
+      "Le chevalier romain qui promet de protéger les chrétiens",
+      "Le messager qui annonce la mort de Sévère"
+     ],
+     "reponse": 0,
+     "aide": "Néarque est un confident de Polyeucte, pas un rival.",
+     "explication": "Néarque est l’**ami** qui conseille à Polyeucte le **baptême secret**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5bcb0e68-6902-5871-940b-a067ac92de8b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’un baptême secret à une conversion",
+   "competence": "analyser-document",
+   "situation": "Polyeucte va de l’amour humain à l’amour de Dieu. Suis les étapes de la pièce, puis retrouve le rôle de chacun.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Polyeucte se fait baptiser en secret"
+      },
+      {
+       "id": "n2",
+       "texte": "Pauline reste fidèle à son mari par devoir"
+      },
+      {
+       "id": "n3",
+       "texte": "Il brise les idoles en plein sacrifice public"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Sa mort convertit Pauline, puis Félix"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait Polyeucte une fois condamné (la case « ? ») ?",
+     "options": [
+      "Il refuse d’abjurer et cède même sa femme à Sévère",
+      "Il abjure et retrouve la confiance de Félix",
+      "Il s’enfuit avec Pauline et Néarque",
+      "Il demande à Sévère de le sauver"
+     ],
+     "reponse": 0,
+     "aide": "Polyeucte ne renonce pas à sa foi, malgré le prix à payer.",
+     "explication": "Condamné, Polyeucte **refuse d’abjurer** et **cède sa femme à Sévère**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape de l’éclat public de Polyeucte.",
+     "aide": "Il agit au milieu d’une cérémonie païenne.",
+     "explication": "Exalté par sa conversion, Polyeucte **brise les idoles** en plein sacrifice public."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le caractérise.",
+     "paires": [
+      [
+       "Néarque",
+       "Il conseille le baptême secret"
+      ],
+      [
+       "Félix",
+       "Gouverneur lâche et calculateur"
+      ],
+      [
+       "Sévère",
+       "Magnanime, il promet de protéger les chrétiens"
+      ],
+      [
+       "Pauline",
+       "Elle aime Sévère mais choisit son devoir"
+      ]
+     ],
+     "aide": "Chacun a une qualité ou un défaut bien marqué.",
+     "explication": "**Néarque** conseille ; **Félix** calcule ; **Sévère** est magnanime ; **Pauline** choisit son devoir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le martyre de Polyeucte n’est-il pas montré sur scène ?",
+     "options": [
+      "Par respect des bienséances de la tragédie classique",
+      "Parce que Corneille n’ose pas parler de religion",
+      "Parce que la pièce se termine avant la mort",
+      "Parce que Polyeucte est gracié à la dernière minute"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux règles du théâtre classique.",
+     "explication": "Le martyre se passe **hors scène** par respect des **bienséances** classiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "5bcb0e68-6902-5871-940b-a067ac92de8b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Plus grand que l’amour",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent pourquoi Polyeucte renonce à Pauline. Lis la célèbre réplique et départage-les.",
+   "documents": [
+    {
+     "id": "replique",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Polyeucte parle à Pauline",
+     "blocs": [
+      {
+       "personnage": "Polyeucte",
+       "replique": "Je vous aime, beaucoup [[r|moins]] que mon Dieu, mais bien [[r|plus]] que moi-même."
+      }
+     ],
+     "source": "Pierre Corneille, *Polyeucte* (vers 1642-1643)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "Polyeucte quitte Pauline parce qu’il ne l’aime plus."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Au contraire : il l’aime encore, mais il a trouvé plus grand."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "replique",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui classent les amours de Polyeucte.",
+     "aide": "Un mot dit « moins que Dieu », l’autre « plus que lui-même ».",
+     "explication": "**Moins** que Dieu, mais **plus** que lui-même : Pauline passe avant lui, mais après Dieu."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui la réplique donne-t-elle raison ?",
+     "options": [
+      "À Yanis : il l’aime encore, mais place Dieu plus haut",
+      "À Sarah : il ne l’aime plus du tout",
+      "Aux deux : il hésite entre l’amour et la haine",
+      "À aucun : Polyeucte ne parle pas d’amour"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique : aime-t-il Pauline, oui ou non ?",
+     "explication": "Polyeucte dit « **je vous aime** » : il ne renonce pas par indifférence, mais parce qu’il a trouvé **plus grand**. **Yanis** a raison."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il relève de la foi, ou du devoir ?",
+     "categories": [
+      "La foi",
+      "Le devoir"
+     ],
+     "items": [
+      [
+       "Le baptême de Polyeucte",
+       0
+      ],
+      [
+       "Le refus d’abjurer",
+       0
+      ],
+      [
+       "La fidélité de Pauline à son époux",
+       1
+      ],
+      [
+       "Le choix de Pauline : son devoir plutôt que Sévère",
+       1
+      ]
+     ],
+     "aide": "Le héros cornélien se dépasse, soit par la grâce, soit par le devoir.",
+     "explication": "Le **baptême** et le **refus d’abjurer** relèvent de la foi ; la **fidélité** et le **choix de Pauline** relèvent du devoir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la pièce pour un sujet sur le héros cornélien ?",
+     "options": [
+      "Le héros se dépasse, de l’amour humain à l’amour de Dieu",
+      "Le héros renonce à tout et reste passif",
+      "Le héros agit uniquement par intérêt personnel",
+      "Le héros est vaincu par ses passions"
+     ],
+     "reponse": 0,
+     "aide": "Pense au titre de la fiche : l’héroïsme devient sainteté.",
+     "explication": "Le héros **se dépasse** : Polyeucte va de l’**amour humain** à l’**amour de Dieu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "04e36880-6f69-59d0-b575-9924640d5c40",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux amis sans nom",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Pour un oui ou pour un non*. Retiens les dates, puis les personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Pour un oui ou pour un non",
+     "sousTitre": "Nathalie Sarraute",
+     "emoji": "🎙️",
+     "lignes": [
+      {
+       "texte": "Pièce radiophonique",
+       "valeur": "1981",
+       "id": "radio"
+      },
+      {
+       "texte": "Créée au théâtre",
+       "valeur": "1986",
+       "id": "theatre"
+      },
+      {
+       "texte": "Mouvement",
+       "valeur": "Nouveau Roman",
+       "id": "mouv"
+      },
+      {
+       "texte": "Personnages principaux",
+       "valeur": "Deux, sans nom",
+       "id": "persos"
+      }
+     ],
+     "pied": "Sarraute (1900-1999)",
+     "teinte": "gris"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "H1",
+       "Celui qui a dit « C’est bien… ça » et ne comprend pas"
+      ],
+      [
+       "H2",
+       "?"
+      ],
+      [
+       "H3 et F",
+       "Des voisins appelés comme juges"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "theatre"
+     ],
+     "enonce": "Touche la ligne qui dit quand la pièce est créée au théâtre.",
+     "aide": "La pièce est d’abord écrite pour la radio.",
+     "explication": "Elle est créée au théâtre en **1986**, après sa version radiophonique de 1981."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la version radiophonique de la création au théâtre ?",
+     "reponse": 5,
+     "aide": "Soustrais les deux dates de la fiche.",
+     "explication": "1986 − 1981 = **5 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire pour H2 (la case « ? ») ?",
+     "options": [
+      "Celui qui s’est senti blessé et rompt",
+      "Un voisin qui sert de témoin",
+      "Le narrateur qui commente l’action",
+      "Un ami qui réconcilie les deux hommes"
+     ],
+     "reponse": 0,
+     "aide": "H1 cherche à comprendre pourquoi H2 s’éloigne.",
+     "explication": "H2 est celui qui s’est senti **blessé** par la phrase et qui **rompt**."
+    }
+   ]
+  },
+  {
+   "chapitre": "04e36880-6f69-59d0-b575-9924640d5c40",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pour un presque-rien",
+   "competence": "analyser-document",
+   "situation": "Toute la pièce naît d’une phrase. Suis la dispute et retrouve ce que Sarraute appelle des tropismes.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La dispute",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "H1 demande pourquoi H2 ne le voit plus"
+      },
+      {
+       "id": "n2",
+       "texte": "La réponse tarde, puis vient, dérisoire"
+      },
+      {
+       "id": "n3",
+       "texte": "Un jour, H1 lui a dit « C’est bien… ça »"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Rupture consommée, sans fait qui l’explique"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait la pièce de ce presque-rien (la case « ? ») ?",
+     "options": [
+      "Elle le rejoue, le conteste et appelle des témoins imaginaires",
+      "Elle l’oublie vite et passe à une autre dispute",
+      "Elle l’explique par un événement ancien",
+      "Elle le résout par une réconciliation des deux amis"
+     ],
+     "reponse": 0,
+     "aide": "Le travail de la pièce est de faire exister ce presque-rien.",
+     "explication": "La pièce **rejoue la scène**, la **conteste** et appelle des **témoins imaginaires** pour faire exister ce presque-rien."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où l’on découvre la phrase qui a tout déclenché.",
+     "aide": "Cherche les guillemets.",
+     "explication": "La phrase « **C’est bien… ça** » est le déclencheur dérisoire de la rupture."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : que sont les tropismes ?",
+     "texte": "Les tropismes sont des mouvements ___ infimes qui précèdent la ___.",
+     "reponses": [
+      [
+       "intérieurs"
+      ],
+      [
+       "parole"
+      ]
+     ],
+     "banque": [
+      "intérieurs",
+      "parole",
+      "extérieurs",
+      "pensée",
+      "rupture"
+     ],
+     "aide": "Le mot vient de la biologie : il s’agit de ce qui se passe avant de parler.",
+     "explication": "Les **tropismes** sont des mouvements **intérieurs** infimes qui précèdent la **parole**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage ou groupe à son rôle.",
+     "paires": [
+      [
+       "H1",
+       "Il a dit la phrase et ne comprend pas"
+      ],
+      [
+       "H2",
+       "Il s’est senti blessé et rompt"
+      ],
+      [
+       "H3 et F",
+       "Des voisins appelés comme juges, qui ne comprennent rien"
+      ]
+     ],
+     "aide": "Pense à celui qui parle, à celui qui souffre, à ceux qui jugent.",
+     "explication": "**H1** a dit la phrase ; **H2** a été blessé ; **H3 et F** sont des juges qui ne comprennent rien."
+    }
+   ]
+  },
+  {
+   "chapitre": "04e36880-6f69-59d0-b575-9924640d5c40",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le drame est dans les mots",
+   "competence": "argumenter",
+   "situation": "Une pièce où il ne se passe rien peut-elle être dramatique ? Lis une scène écrite pour l’exercice, à la manière de Nathalie Sarraute, puis tranche.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un compliment de trop",
+     "blocs": [
+      {
+       "didascalie": "Deux amis, après un silence."
+      },
+      {
+       "personnage": "A",
+       "replique": "Je voulais juste… te dire que ton texte, enfin… c’est bien."
+      },
+      {
+       "personnage": "B",
+       "replique": "Tu dis « bien »… comment ?"
+      },
+      {
+       "personnage": "A",
+       "replique": "Mais… normalement."
+      },
+      {
+       "personnage": "B",
+       "replique": "Non. Il y avait une [[p|pause]], avant le mot."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Nathalie Sarraute"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Il ne se passe rien : ce n’est pas du théâtre."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Tout se passe dans les mots : une pause suffit à blesser."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui montre ce qui blesse B dans le compliment.",
+     "aide": "Ce n’est pas le mot « bien », mais ce qui le précède.",
+     "explication": "C’est la **pause** avant le mot qui blesse : un presque-rien dans l’intonation."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui la scène donne-t-elle raison ?",
+     "options": [
+      "À Karim : une intonation suffit à créer le drame",
+      "À Jade : sans action, il n’y a pas de théâtre",
+      "Aux deux : le drame vient d’un événement extérieur",
+      "À aucun : B n’a aucune raison d’être vexé"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce dont B se plaint précisément.",
+     "explication": "B reproche une **pause** : le drame est dans les **mots eux-mêmes**, comme le dit **Karim**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que disent les mots, ou ce que fait sentir l’intonation ?",
+     "categories": [
+      "Ce que disent les mots",
+      "Ce que fait sentir l’intonation"
+     ],
+     "items": [
+      [
+       "Le sens littéral d’un compliment",
+       0
+      ],
+      [
+       "Une pause avant le mot",
+       1
+      ],
+      [
+       "Un accent de condescendance",
+       1
+      ],
+      [
+       "Une phrase polie et banale",
+       0
+      ]
+     ],
+     "aide": "Les tropismes sont ce qui se joue sous la banalité des mots.",
+     "explication": "Les **mots** disent un compliment poli ; la **pause** et l’**accent** laissent sentir la condescendance : ce sont les **tropismes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation cette scène appuie-t-elle ?",
+     "options": [
+      "Le théâtre peut se passer d’action : tout y est parole",
+      "Le théâtre doit toujours raconter une intrigue riche",
+      "Le théâtre ne peut pas montrer de conflit",
+      "Le théâtre est réservé aux grands sujets historiques"
+     ],
+     "reponse": 0,
+     "aide": "Rapproche la scène du dépouillement de Beckett et Ionesco.",
+     "explication": "Sarraute montre un théâtre **sans action** où tout **est parole** : le conflit naît du langage ordinaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "073f4400-81df-5f00-ace8-51df288259a2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un manifeste avant Hernani",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur la *Préface de Cromwell*. Place-la dans la chronologie de Hugo, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Hugo et le drame romantique",
+     "debut": 1825,
+     "fin": 1833,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "prefa",
+       "date": 1827,
+       "nom": "Cromwell"
+      },
+      {
+       "id": "herna",
+       "date": 1830,
+       "nom": "Hernani"
+      },
+      {
+       "id": "ndp",
+       "date": 1831,
+       "nom": "Quasimodo"
+      },
+      {
+       "id": "trib",
+       "date": 1832,
+       "nom": "Triboulet"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Préface de Cromwell",
+     "sousTitre": "Victor Hugo",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Date",
+       "valeur": "1827",
+       "id": "date"
+      },
+      {
+       "texte": "La pièce préfacée",
+       "valeur": "Plus de six mille vers, injouable",
+       "id": "piece"
+      },
+      {
+       "texte": "Nature du texte",
+       "valeur": "?",
+       "id": "nature"
+      }
+     ],
+     "pied": "Hugo avait vingt-cinq ans",
+     "teinte": "rose"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "prefa"
+     ],
+     "enonce": "Touche le repère qui correspond à la préface.",
+     "aide": "Cherche le titre de la pièce préfacée.",
+     "explication": "La préface paraît en **1827**, trois ans avant *Hernani*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la préface de la création d’*Hernani* ?",
+     "reponse": 3,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1830 − 1827 = **3 ans** : la préface prépare *Hernani* et sa bataille.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la fiche ?",
+     "options": [
+      "Le manifeste de la génération romantique",
+      "Une farce destinée au théâtre de foire",
+      "Un traité de grammaire française",
+      "Un récit de voyage en Orient"
+     ],
+     "reponse": 0,
+     "aide": "La préface est devenue bien plus célèbre que la pièce.",
+     "explication": "La préface est devenue le **manifeste** de la génération romantique."
+    }
+   ]
+  },
+  {
+   "chapitre": "073f4400-81df-5f00-ace8-51df288259a2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les trois âges et les règles à abolir",
+   "competence": "analyser-document",
+   "situation": "Hugo raconte l’histoire de la poésie en trois âges, puis il réclame la fin de certaines règles. Complète et classe.",
+   "documents": [
+    {
+     "id": "ages",
+     "type": "chaine",
+     "titre": "Les trois âges : temps primitifs, Antiquité, temps modernes",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "?"
+      },
+      {
+       "id": "n2",
+       "texte": "L’épopée"
+      },
+      {
+       "id": "n3",
+       "texte": "Le drame"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      }
+     ]
+    },
+    {
+     "id": "regles",
+     "type": "tableau",
+     "titre": "Les règles du théâtre classique",
+     "colonnes": [
+      "Règle",
+      "Sort chez Hugo"
+     ],
+     "lignes": [
+      [
+       "Unités de temps et de lieu",
+       "Abolies"
+      ],
+      [
+       "Unité d’action",
+       "Conservée"
+      ],
+      [
+       "Séparation des genres",
+       "Abolie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel genre faut-il écrire pour les temps primitifs (la case « ? ») ?",
+     "options": [
+      "L’ode, le lyrique",
+      "La comédie de mœurs",
+      "Le roman-feuilleton",
+      "La fable en vers"
+     ],
+     "reponse": 0,
+     "aide": "Hugo classe les genres du plus ancien au plus récent : ode, épopée, drame.",
+     "explication": "Aux temps primitifs correspond l’**ode**, le lyrique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois âges de la poésie dans l’ordre.",
+     "items": [
+      "L’ode",
+      "L’épopée",
+      "Le drame"
+     ],
+     "aide": "Du plus ancien au plus récent.",
+     "explication": "Ordre : l’**ode**, l’**épopée**, puis le **drame**, né avec le christianisme."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque règle : abolie ou conservée par Hugo ?",
+     "categories": [
+      "Abolie",
+      "Conservée"
+     ],
+     "items": [
+      [
+       "L’unité de temps",
+       0
+      ],
+      [
+       "L’unité de lieu",
+       0
+      ],
+      [
+       "La séparation des genres",
+       0
+      ],
+      [
+       "L’unité d’action",
+       1
+      ]
+     ],
+     "aide": "Une seule des trois unités survit.",
+     "explication": "Hugo **abolit** les unités de temps et de lieu et la séparation des genres ; il **conserve** l’unité d’action."
+    },
+    {
+     "type": "zone",
+     "document": "regles",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui dit ce qui arrive aux unités de temps et de lieu.",
+     "aide": "Cherche la colonne « Sort chez Hugo ».",
+     "explication": "Les unités de temps et de lieu sont **abolies**."
+    }
+   ]
+  },
+  {
+   "chapitre": "073f4400-81df-5f00-ace8-51df288259a2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sublime et le grotesque",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le grotesque. Lis deux phrases célèbres de la préface, puis tranche.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux phrases de la préface",
+     "blocs": [
+      "Tout ce qui est dans la [[n|nature]] est dans l’[[n|art]].",
+      "Le drame est la poésie complète."
+     ],
+     "source": "Victor Hugo, préface de *Cromwell* (1827)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Eliott",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eliott",
+       "texte": "Le grotesque, chez Hugo, c’est du laid gratuit."
+      },
+      {
+       "qui": "Sana",
+       "texte": "Non : il fait ressortir le beau par contraste."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les deux noms que Hugo met en rapport dans la première phrase.",
+     "aide": "L’un désigne le monde, l’autre la création.",
+     "explication": "Hugo affirme que tout ce qui est dans la **nature** est dans l’**art** : le drame doit montrer toute la vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui la préface donne-t-elle raison ?",
+     "options": [
+      "À Sana : le grotesque fait ressortir le beau",
+      "À Eliott : le grotesque est du laid gratuit",
+      "Aux deux : le grotesque est inutile",
+      "À aucun : Hugo refuse tout grotesque"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi ce que le grotesque n’est pas.",
+     "explication": "Le grotesque n’est pas le laid gratuit : il fait **ressortir le beau par contraste**. **Sana** a raison."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure grotesque à son créateur ou à son usage.",
+     "paires": [
+      [
+       "Sganarelle et Méphistophélès",
+       "Exemples de grotesque cités par Hugo"
+      ],
+      [
+       "Quasimodo",
+       "Personnage grotesque créé par Hugo en 1831"
+      ],
+      [
+       "Triboulet",
+       "Personnage grotesque créé par Hugo en 1832"
+      ]
+     ],
+     "aide": "Hugo cite des exemples, puis il en crée lui-même.",
+     "explication": "Hugo cite **Sganarelle** et **Méphistophélès** ; il créera **Quasimodo** (1831) et **Triboulet** (1832)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un sujet sur les règles du théâtre, que peut-on opposer à la Préface ?",
+     "options": [
+      "L’*Art poétique* de Boileau (1674)",
+      "Les comédies de Molière sans aucune règle",
+      "Les romans de Balzac sur la société",
+      "Les poèmes de Ronsard sur l’amour"
+     ],
+     "reponse": 0,
+     "aide": "Boileau date de 1674, bien avant le romantisme.",
+     "explication": "On oppose la Préface à l’***Art poétique* de Boileau** (1674), qui défend les règles classiques."
+    }
+   ]
+  }
+ ]
+}

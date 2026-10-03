@@ -1,0 +1,3780 @@
+{
+ "niveau": "1re",
+ "matiere": "biochimie-biologie",
+ "exercices": [
+  {
+   "chapitre": "a59eada7-900e-5ce1-9e48-610535959f4e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’étiquette du yaourt de Maëlle",
+   "competence": "lire-tableau",
+   "situation": "Maëlle, en première STL, prépare une fiche de TP sur la valeur énergétique d’un yaourt nature de 125 g. Elle part de l’étiquette du pot.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Étiquette du yaourt nature",
+     "entete": "Yaourt nature",
+     "sousTitre": "Valeurs nutritionnelles pour 100 g",
+     "emoji": "🥛",
+     "lignes": [
+      {
+       "texte": "Protéines",
+       "valeur": "3,5 g",
+       "id": "prot"
+      },
+      {
+       "texte": "Glucides",
+       "valeur": "4,7 g",
+       "id": "gluc"
+      },
+      {
+       "texte": "Lipides",
+       "valeur": "3,2 g",
+       "id": "lip"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Pot de 125 g",
+       "valeur": "",
+       "gras": true
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice",
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne qui indique la masse de lipides pour 100 g.",
+     "reponse": [
+      "lip"
+     ],
+     "aide": "Les lipides sont les graisses : cherche leur nom dans la liste.",
+     "explication": "Le yaourt contient **3,2 g** de lipides pour 100 g."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie apportée par 100 g de yaourt, avec 4 kcal par gramme de protides ou de glucides et 9 kcal par gramme de lipides.",
+     "reponse": 61.6,
+     "unite": "kcal",
+     "tolerance": 0.5,
+     "aide": "Multiplie chaque masse par son apport par gramme, puis additionne les trois résultats.",
+     "explication": "3,5 × 4 + 4,7 × 4 + 3,2 × 9 = 14 + 18,8 + 28,8 = **61,6 kcal** pour 100 g."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie apporte le pot entier de 125 g ?",
+     "reponse": 77,
+     "unite": "kcal",
+     "tolerance": 0.5,
+     "aide": "125 g, c’est 1,25 fois 100 g.",
+     "explication": "1,25 × 61,6 = **77 kcal** : on multiplie l’énergie pour 100 g par 1,25."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59eada7-900e-5ce1-9e48-610535959f4e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pain, les lentilles et la lysine",
+   "competence": "analyser-document",
+   "situation": "Yanis devient végétarien et veut comprendre pourquoi son lycée propose du riz avec des lentilles. Le tableau compare trois aliments pour deux acides aminés essentiels.",
+   "documents": [
+    {
+     "id": "aa",
+     "type": "tableau",
+     "titre": "Teneur en deux acides aminés essentiels",
+     "colonnes": [
+      "Aliment",
+      "Lysine",
+      "Méthionine"
+     ],
+     "lignes": [
+      [
+       "Riz",
+       "faible",
+       "correcte"
+      ],
+      [
+       "Lentilles",
+       "élevée",
+       "faible"
+      ],
+      [
+       "Pain",
+       "faible",
+       "correcte"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données qualitatives simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aa",
+     "enonce": "Touche la case qui montre que les lentilles apportent beaucoup de lysine.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Repère la ligne « Lentilles » puis la colonne « Lysine ».",
+     "explication": "Les lentilles sont **riches en lysine** : elles compensent le déficit du riz."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi associer riz et lentilles dans un même repas ?",
+     "options": [
+      "Chacun apporte l’acide aminé qui manque à l’autre",
+      "Ensemble, ils fournissent beaucoup plus de lipides",
+      "Les lentilles rendent le riz digestible pour l’organisme",
+      "Les deux aliments apportent de la vitamine C en quantité"
+     ],
+     "reponse": 0,
+     "aide": "Compare, ligne par ligne, ce qui est faible chez l’un et élevé chez l’autre.",
+     "explication": "Un acide aminé **essentiel** ne peut pas être fabriqué : l’association couvre les **besoins qualitatifs**, chaque aliment comblant le déficit de l’autre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque constituant dans sa catégorie.",
+     "categories": [
+      "Macronutriment",
+      "Micronutriment"
+     ],
+     "items": [
+      [
+       "Glucides",
+       0
+      ],
+      [
+       "Lipides",
+       0
+      ],
+      [
+       "Protides",
+       0
+      ],
+      [
+       "Vitamine C",
+       1
+      ],
+      [
+       "Vitamine D",
+       1
+      ],
+      [
+       "Fer",
+       1
+      ]
+     ],
+     "aide": "Les macronutriments se comptent en dizaines de grammes par jour, les autres en milligrammes.",
+     "explication": "**Glucides, lipides, protides** sont des macronutriments ; **vitamines et oligo-éléments** (comme le fer) sont des micronutriments."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59eada7-900e-5ce1-9e48-610535959f4e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bilan énergétique de Karim",
+   "competence": "raisonner",
+   "situation": "Karim, 17 ans, joue au basket trois fois par semaine. Son infirmière scolaire estime son besoin énergétique à 2 800 kcal par jour. Il a noté ce qu’il a mangé pendant une journée et lit aussi l’emballage d’une barre de céréales.",
+   "documents": [
+    {
+     "id": "ration",
+     "type": "tableau",
+     "titre": "Journée de Karim : masses des constituants (en g)",
+     "colonnes": [
+      "Repas",
+      "Glucides",
+      "Lipides",
+      "Protides"
+     ],
+     "lignes": [
+      [
+       "Petit-déjeuner",
+       80,
+       20,
+       15
+      ],
+      [
+       "Déjeuner",
+       120,
+       35,
+       40
+      ],
+      [
+       "Goûter",
+       50,
+       15,
+       5
+      ],
+      [
+       "Dîner",
+       90,
+       30,
+       30
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Journée écrite pour l’exercice"
+    },
+    {
+     "id": "barre",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Emballage d’une barre de céréales",
+     "entete": "Barre croustillante",
+     "sousTitre": "« Riche en fibres »",
+     "emoji": "🍫",
+     "lignes": [
+      {
+       "texte": "Allégation en gros sur le paquet",
+       "valeur": "« Riche en fibres »",
+       "id": "alleg"
+      },
+      {
+       "texte": "Conseil des autorités de santé",
+       "valeur": "≥ 5 fruits et légumes par jour",
+       "id": "reco"
+      }
+     ],
+     "pied": "Emballage écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse totale de glucides Karim a-t-il mangée dans la journée ?",
+     "reponse": 340,
+     "unite": "g",
+     "aide": "Additionne la colonne « Glucides » des quatre repas.",
+     "explication": "80 + 120 + 50 + 90 = **340 g** de glucides."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie totale de sa journée (4 kcal par g de glucide ou de protide, 9 kcal par g de lipide).",
+     "reponse": 2620,
+     "unite": "kcal",
+     "aide": "Totaux de la journée : 340 g de glucides, 100 g de lipides, 90 g de protides.",
+     "explication": "340 × 4 + 100 × 9 + 90 × 4 = 1 360 + 900 + 360 = **2 620 kcal**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de kilocalories sa ration est-elle inférieure à son besoin de 2 800 kcal ?",
+     "reponse": 180,
+     "unite": "kcal",
+     "aide": "Soustrais l’énergie apportée du besoin.",
+     "explication": "2 800 − 2 620 = **180 kcal** de moins que son besoin quantitatif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de l’énergie vient des lipides ? Arrondis à l’unité, en pourcentage.",
+     "reponse": 34,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Énergie des lipides ÷ énergie totale, puis × 100.",
+     "explication": "900 ÷ 2 620 ≈ 0,344 : environ **34 %** de l’énergie vient des lipides."
+    },
+    {
+     "type": "zone",
+     "document": "barre",
+     "enonce": "Touche la ligne qui est une allégation et non une recommandation.",
+     "reponse": [
+      "alleg"
+     ],
+     "aide": "Une allégation est une phrase portée par l’emballage, avec un but commercial.",
+     "explication": "« Riche en fibres » est une **allégation** (argument du fabricant) ; la recommandation de cinq fruits et légumes vient des autorités de santé."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cf1f66d-ee98-52a7-97a4-1cce0eaeeab4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le voyage d’un morceau de pain",
+   "competence": "observer-schema",
+   "situation": "Théo mâche un morceau de pain à la cantine. Sur ce schéma simplifié, il retrouve le trajet du pain et les organes qui déversent leurs sécrétions dans le tube.",
+   "documents": [
+    {
+     "id": "tube",
+     "type": "schema",
+     "titre": "Le système digestif (schéma simplifié)",
+     "largeur": 320,
+     "hauteur": 310,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 15,
+       "l": 95,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "bouche",
+       "zone": true,
+       "texte": "Bouche"
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 57,
+       "l": 95,
+       "h": 28,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "oeso",
+       "zone": true,
+       "texte": "Œsophage"
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 95,
+       "l": 95,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "estomac",
+       "zone": true,
+       "texte": "Estomac"
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 145,
+       "l": 95,
+       "h": 55,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "grele",
+       "zone": true,
+       "texte": "Intestin grêle"
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 210,
+       "l": 95,
+       "h": 50,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "gros",
+       "zone": true,
+       "texte": "Gros intestin"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 15,
+       "l": 105,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "salivaires",
+       "zone": true,
+       "texte": "Glandes salivaires"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 105,
+       "l": 105,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "foie",
+       "zone": true,
+       "texte": "Foie"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 170,
+       "l": 105,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "pancreas",
+       "zone": true,
+       "texte": "Pancréas"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        31
+       ],
+       "a": [
+        205,
+        31
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        121
+       ],
+       "a": [
+        205,
+        150
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        125,
+        186
+       ],
+       "a": [
+        205,
+        178
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 290,
+       "texte": "Les flèches montrent où se déversent les sécrétions",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche l’organe où l’amidon du pain commence à être hydrolysé par l’amylase salivaire.",
+     "reponse": [
+      "bouche"
+     ],
+     "aide": "La salive est mélangée au pain dès la mastication.",
+     "explication": "L’amylase salivaire agit dès la **bouche** : l’amidon y est déjà coupé en maltose."
+    },
+    {
+     "type": "zone",
+     "document": "tube",
+     "enonce": "Touche les trois glandes annexes du tube digestif.",
+     "multiple": true,
+     "reponse": [
+      "salivaires",
+      "foie",
+      "pancreas"
+     ],
+     "aide": "Une glande annexe n’est pas un morceau du tube : elle y déverse sa sécrétion par un canal.",
+     "explication": "**Glandes salivaires, foie et pancréas** sont les glandes annexes : elles fabriquent salive, bile et suc pancréatique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où se trouve le pain pendant qu’il traverse l’estomac ?",
+     "options": [
+      "Dans la lumière du tube, donc encore dans le milieu extérieur",
+      "Dans le milieu intérieur, comme le sang du cœur",
+      "Dans la paroi de l’estomac, sous les muscles lisses",
+      "Dans la cellule, au contact direct du noyau"
+     ],
+     "reponse": 0,
+     "aide": "La lumière est l’intérieur creux du tube.",
+     "explication": "La **lumière** du tube digestif appartient au **milieu extérieur** : les aliments n’entrent dans l’organisme qu’après absorption."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cf1f66d-ee98-52a7-97a4-1cce0eaeeab4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre tubes à essais, une salive",
+   "competence": "experimenter",
+   "situation": "Au lycée, Lina teste l’action de la salive sur de l’empois d’amidon. Elle prépare quatre tubes, les laisse 20 minutes puis ajoute de l’eau iodée (bleu-noir si l’amidon est présent) et de la liqueur de Fehling chauffée (précipité rouge brique si du sucre réducteur est présent).",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "tableau",
+     "titre": "Conditions et résultats après 20 minutes",
+     "colonnes": [
+      "Tube",
+      "Contenu",
+      "Température",
+      "Eau iodée",
+      "Fehling"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Empois + salive",
+       "37 °C",
+       "jaune-orangé",
+       "rouge brique"
+      ],
+      [
+       "2",
+       "Empois + eau",
+       "37 °C",
+       "bleu-noir",
+       "bleu (négatif)"
+      ],
+      [
+       "3",
+       "Empois + salive",
+       "0 °C",
+       "bleu-noir",
+       "bleu (négatif)"
+      ],
+      [
+       "4",
+       "Empois + salive bouillie",
+       "37 °C",
+       "bleu-noir",
+       "bleu (négatif)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats classiques du TP"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la case du contenu du tube témoin, celui qui ne contient pas de salive.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Le témoin ne contient pas l’élément dont on teste l’effet.",
+     "explication": "Le tube **2** (empois + eau) est le **témoin** : il montre que l’amidon ne disparaît pas tout seul."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tubes contiennent encore de l’amidon après 20 minutes ?",
+     "reponse": 3,
+     "aide": "Compte les tubes où l’eau iodée donne une coloration bleu-noir.",
+     "explication": "Les tubes **2, 3 et 4** sont bleu-noir : l’amidon y est intact, soit **3 tubes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tire-t-on du tube 1 comparé au tube 2 ?",
+     "options": [
+      "La salive hydrolyse l’amidon en sucre réducteur",
+      "L’eau transforme l’amidon en sucre réducteur",
+      "La chaleur de 37 °C suffit à détruire l’amidon",
+      "La salive est elle-même un sucre réducteur"
+     ],
+     "reponse": 0,
+     "aide": "Une seule condition change entre les deux tubes : la salive.",
+     "explication": "Seul le tube 1 perd son amidon et donne un précipité rouge brique : la **salive hydrolyse l’amidon** en maltose."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tube à l’explication de son résultat.",
+     "paires": [
+      [
+       "Tube 2",
+       "Pas d’enzyme : l’amidon reste intact"
+      ],
+      [
+       "Tube 3",
+       "Enzyme ralentie à 0 °C, mais non détruite"
+      ],
+      [
+       "Tube 4",
+       "Enzyme dénaturée par l’ébullition"
+      ]
+     ],
+     "aide": "Une enzyme froide est ralentie ; une enzyme bouillie est détruite pour de bon.",
+     "explication": "Tube 2 : pas d’amylase ; tube 3 : **0 °C** ralentit l’enzyme ; tube 4 : l’**ébullition dénature** l’amylase, définitivement."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cf1f66d-ee98-52a7-97a4-1cce0eaeeab4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pepsine ou trypsine : à chacune son pH",
+   "competence": "lire-graphique",
+   "situation": "Un élève de STL compare l’activité de deux enzymes digestives en fonction du pH. Il a aussi relevé le pH moyen de trois compartiments du tube digestif.",
+   "documents": [
+    {
+     "id": "ph",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Activité enzymatique selon le pH",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "series": [
+      {
+       "nom": "Pepsine",
+       "valeurs": [
+        60,
+        100,
+        70,
+        30,
+        10,
+        0,
+        0,
+        0,
+        0
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Trypsine",
+       "valeurs": [
+        0,
+        0,
+        0,
+        5,
+        10,
+        40,
+        80,
+        100,
+        70
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Activité",
+      "unite": "% du maximum",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "pH"
+     },
+     "valeurs": false,
+     "source": "Courbes simplifiées"
+    },
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "pH moyen de trois compartiments",
+     "colonnes": [
+      "Compartiment",
+      "pH moyen"
+     ],
+     "lignes": [
+      [
+       "Estomac",
+       2
+      ],
+      [
+       "Bouche",
+       7
+      ],
+      [
+       "Intestin grêle",
+       8
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis sur le graphique le pH optimal de la pepsine.",
+     "reponse": 2,
+     "aide": "Cherche le sommet de la courbe de la pepsine.",
+     "explication": "La courbe de la pepsine culmine à 100 % pour un pH de **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À pH 6, de combien de points la trypsine est-elle en dessous de son activité maximale ?",
+     "reponse": 60,
+     "unite": "points",
+     "aide": "Lis son activité à pH 6, puis soustrais-la de 100.",
+     "explication": "À pH 6, la trypsine est à 40 % : 100 − 40 = **60 points** sous son maximum."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la pepsine ne digère-t-elle plus les protéines dans l’intestin grêle ?",
+     "options": [
+      "À pH 8, son activité est nulle",
+      "Elle y est dénaturée par l’eau du suc",
+      "Les sels biliaires la détruisent entièrement",
+      "Il n’y a plus de protéines dans l’intestin"
+     ],
+     "reponse": 0,
+     "aide": "Compare le pH de l’intestin grêle à la courbe de la pepsine.",
+     "explication": "L’intestin grêle est à pH 8, où la pepsine a une activité **nulle** : chaque enzyme a son pH optimal."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque enzyme dans le compartiment où son pH optimal est atteint.",
+     "categories": [
+      "Bouche (pH 7)",
+      "Estomac (pH 2)",
+      "Intestin grêle (pH 8)"
+     ],
+     "items": [
+      [
+       "Amylase salivaire",
+       0
+      ],
+      [
+       "Pepsine",
+       1
+      ],
+      [
+       "Trypsine",
+       2
+      ],
+      [
+       "Lipase pancréatique",
+       2
+      ]
+     ],
+     "aide": "Une enzyme travaille là où le pH est proche de son optimum.",
+     "explication": "Amylase salivaire : bouche ; pepsine : estomac ; **trypsine et lipase pancréatique** : intestin grêle, à pH voisin de 8."
+    }
+   ]
+  },
+  {
+   "chapitre": "02f2dc13-0617-5697-80ed-7a67fee5d5fb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une paroi qui multiplie sa surface",
+   "competence": "lire-tableau",
+   "situation": "Une fiche de cours de STL décrit les trois niveaux de replis qui agrandissent la surface de l’intestin grêle. Tu en calcules l’effet total.",
+   "documents": [
+    {
+     "id": "surface",
+     "type": "tableau",
+     "titre": "Les replis de l’intestin grêle",
+     "colonnes": [
+      "Niveau",
+      "Structure",
+      "Surface multipliée par"
+     ],
+     "lignes": [
+      [
+       "Organe",
+       "replis circulaires",
+       3
+      ],
+      [
+       "Tissu",
+       "villosités",
+       10
+      ],
+      [
+       "Cellule",
+       "microvillosités de l’entérocyte",
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Facteurs arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "surface",
+     "enonce": "Touche la case qui nomme la structure portée par la membrane de l’entérocyte.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Un entérocyte est une cellule : cherche le niveau « Cellule ».",
+     "explication": "Les **microvillosités** sont portées par la membrane apicale de l’entérocyte : elles multiplient la surface par 20."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur total la surface est-elle multipliée en cumulant les trois niveaux ?",
+     "reponse": 600,
+     "aide": "Les trois effets se multiplient entre eux.",
+     "explication": "3 × 10 × 20 = **600** : la surface d’échange est multipliée par 600."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert cette surface d’échange immense ?",
+     "options": [
+      "À faire passer davantage de nutriments vers le milieu intérieur",
+      "À produire davantage d’enzymes dans la lumière",
+      "À ralentir le brassage du chyme dans le grêle",
+      "À stocker le glycogène à l’intérieur des villosités"
+     ],
+     "reponse": 0,
+     "aide": "Plus la surface est grande, plus les échanges sont nombreux.",
+     "explication": "Une grande surface permet une **absorption** rapide et abondante des nutriments (environ 200 m² pour quelques mètres de tube)."
+    }
+   ]
+  },
+  {
+   "chapitre": "02f2dc13-0617-5697-80ed-7a67fee5d5fb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’entérocyte, une cellule polarisée",
+   "competence": "observer-schema",
+   "situation": "Dans une coupe d’intestin grêle observée au microscope, Camille repère les cellules de la paroi. Elle les schématise pour comprendre comment le glucose passe de la lumière au sang.",
+   "documents": [
+    {
+     "id": "cellule",
+     "type": "schema",
+     "titre": "Un entérocyte (schéma simplifié)",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 18,
+       "texte": "Lumière intestinale",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 155,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 175,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 195,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 42,
+       "l": 10,
+       "h": 24,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 68,
+       "l": 140,
+       "h": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "apicale",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 77,
+       "l": 140,
+       "h": 100,
+       "teinte": "turquoise",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 125,
+       "r": 24,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 177,
+       "l": 140,
+       "h": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "basale",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 235,
+       "r": 26,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "capillaire",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 235,
+       "r": 26,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "chylifere",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 40,
+       "y": 120,
+       "texte": "Noyau",
+       "vers": [
+        138,
+        125
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 275,
+       "y": 100,
+       "texte": "Jonctions",
+       "vers": [
+        232,
+        85
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 275,
+       "texte": "Capillaire sanguin",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 275,
+       "texte": "Chylifère",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Touche la membrane apicale, celle qui est côté lumière et porte les microvillosités.",
+     "reponse": [
+      "apicale"
+     ],
+     "aide": "Apical veut dire « vers le sommet », ici vers la lumière.",
+     "explication": "La membrane **apicale** porte la bordure en brosse de microvillosités ; la membrane **basale** est du côté du sang."
+    },
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Touche le vaisseau par lequel le glucose absorbé quitte l’intestin.",
+     "reponse": [
+      "capillaire"
+     ],
+     "aide": "Les nutriments hydrosolubles passent dans le sang, pas dans la lymphe.",
+     "explication": "Le glucose rejoint le **capillaire sanguin**, puis la veine porte hépatique ; les lipides, eux, passent par le chylifère."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque molécule à son mode de passage dans l’entérocyte.",
+     "paires": [
+      [
+       "Acides gras",
+       "Diffusion simple"
+      ],
+      [
+       "Fructose",
+       "Transport passif facilité"
+      ],
+      [
+       "Glucose entrant avec Na⁺",
+       "Transport actif (co-transport)"
+      ]
+     ],
+     "aide": "Seul le transport actif va contre le gradient et consomme de l’énergie.",
+     "explication": "Les acides gras traversent la bicouche ; le fructose passe par un transporteur selon son gradient ; le glucose entre contre son gradient grâce au **gradient de Na⁺**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les nutriments doivent-ils traverser les entérocytes et non passer entre eux ?",
+     "options": [
+      "Les jonctions serrées soudent les cellules entre elles",
+      "Les cellules sont séparées par de la bile",
+      "Les microvillosités bloquent les espaces voisins",
+      "Le noyau retient les molécules entre les cellules"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui relie deux cellules voisines sur le schéma.",
+     "explication": "Les **jonctions serrées** ferment l’espace entre cellules : le passage se fait à travers la cellule, ce qui permet un tri par les transporteurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "02f2dc13-0617-5697-80ed-7a67fee5d5fb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où vont le glucose et les lipides ?",
+   "competence": "raisonner",
+   "situation": "Après un repas riche en pâtes et en fromage, un médecin prélève du sang à trois endroits et du chyle dans un chylifère. Tu suis le devenir des nutriments à partir de ses mesures.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Concentrations une heure après le repas (g·L⁻¹)",
+     "colonnes": [
+      "Liquide prélevé",
+      "Glucose",
+      "Triglycérides"
+     ],
+     "lignes": [
+      [
+       "Veine porte hépatique (avant le foie)",
+       1.8,
+       0.2
+      ],
+      [
+       "Veine sus-hépatique (après le foie)",
+       1.3,
+       0.2
+      ],
+      [
+       "Chyle (chylifère)",
+       1,
+       6
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "glycogene",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le devenir du glucose dans le foie",
+     "noeuds": [
+      {
+       "id": "glu",
+       "texte": "Glucose sanguin",
+       "emoji": "🩸"
+      },
+      {
+       "id": "hep",
+       "texte": "Hépatocyte",
+       "emoji": "🔬"
+      },
+      {
+       "id": "gly",
+       "texte": "?",
+       "emoji": "📦"
+      }
+     ],
+     "liens": [
+      {
+       "de": "glu",
+       "a": "hep",
+       "texte": "entre dans"
+      },
+      {
+       "de": "hep",
+       "a": "gly",
+       "texte": "glycogénogenèse"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle concentration de glucose le foie a-t-il retirée du sang qui le traverse ?",
+     "reponse": 0.5,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.01,
+     "aide": "Compare la veine porte (avant) et la veine sus-hépatique (après).",
+     "explication": "1,8 − 1,3 = **0,5 g·L⁻¹** : le foie a stocké du glucose sous forme de glycogène."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la valeur qui montre que les lipides absorbés passent surtout par la lymphe.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la plus forte concentration de triglycérides.",
+     "explication": "Le chyle contient **6 g·L⁻¹** de triglycérides, contre 0,2 dans le sang porte : les lipides empruntent la voie lymphatique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente le nœud « ? » : la forme sous laquelle le glucose est mis en réserve dans l’hépatocyte ?",
+     "options": [
+      "Le glycogène",
+      "L’amidon",
+      "Le maltose",
+      "Le cholestérol"
+     ],
+     "reponse": 0,
+     "aide": "La glycogénogenèse fabrique la réserve de glucose chez l’animal.",
+     "explication": "La glycogénogenèse met le glucose en réserve sous forme de **glycogène**, que la glycogénolyse pourra libérer."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque processus dans la cellule où il se déroule.",
+     "categories": [
+      "Hépatocyte",
+      "Adipocyte"
+     ],
+     "items": [
+      [
+       "Glycogénogenèse",
+       0
+      ],
+      [
+       "Glycogénolyse",
+       0
+      ],
+      [
+       "Lipogenèse",
+       1
+      ],
+      [
+       "Lipolyse",
+       1
+      ]
+     ],
+     "aide": "Le foie gère le glycogène ; le tissu adipeux gère les triglycérides.",
+     "explication": "L’**hépatocyte** stocke et libère le glycogène ; l’**adipocyte** stocke les triglycérides (lipogenèse) et libère des acides gras (lipolyse)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le trajet d’un triglycéride alimentaire.",
+     "items": [
+      "Hydrolyse en acides gras et monoglycérides dans la lumière",
+      "Absorption par l’entérocyte",
+      "Réassemblage en triglycérides et formation des chylomicrons",
+      "Passage dans le chylifère, puis la lymphe",
+      "Arrivée dans le sang près du cœur"
+     ],
+     "aide": "Le foie n’est pas la première étape pour les lipides.",
+     "explication": "Les lipides sont digérés, absorbés, réassemblés en chylomicrons, puis suivent la **lymphe** avant de rejoindre le sang **sans passer d’abord par le foie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab9e8e28-7b9b-58cd-b635-6af53da956d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un verre de glucose pour Inès",
+   "competence": "lire-graphique",
+   "situation": "Au laboratoire d’analyses, Inès (17 ans, en bonne santé) accepte de passer une hyperglycémie provoquée : elle boit 75 g de glucose à jeun, puis on mesure sa glycémie toutes les 30 minutes.",
+   "documents": [
+    {
+     "id": "hgpo",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Glycémie d’Inès après 75 g de glucose",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Glycémie",
+       "valeurs": [
+        0.9,
+        1.3,
+        1.4,
+        1.2,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Glycémie",
+      "unite": "g·L⁻¹",
+      "min": 0.6,
+      "max": 1.6,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hgpo",
+     "enonce": "Touche le moment où la glycémie d’Inès est la plus élevée.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "La glycémie culmine à **60 min** (1,4 g·L⁻¹)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la glycémie d’Inès à jeun ?",
+     "reponse": 0.9,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.05,
+     "aide": "À jeun, c’est avant la prise de glucose : temps 0.",
+     "explication": "À t = 0, la glycémie est de **0,9 g·L⁻¹**, proche de la valeur de consigne de 1 g·L⁻¹."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la glycémie a-t-elle augmenté entre le début et le maximum ?",
+     "reponse": 0.5,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.05,
+     "aide": "Soustrais la valeur à jeun de la valeur maximale.",
+     "explication": "1,4 − 0,9 = **0,5 g·L⁻¹** : puis l’insuline la fait redescendre."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab9e8e28-7b9b-58cd-b635-6af53da956d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux courbes, un diagnostic",
+   "competence": "analyser-document",
+   "situation": "Deux patients passent la même hyperglycémie provoquée. Le laboratoire trace leurs courbes et rappelle le schéma de la régulation de la glycémie.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Glycémie après 75 g de glucose",
+     "categories": [
+      "0",
+      "30",
+      "60",
+      "90",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Patient A",
+       "valeurs": [
+        0.9,
+        1.3,
+        1.4,
+        1.2,
+        1
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Patient B",
+       "valeurs": [
+        1.2,
+        1.9,
+        2.2,
+        2.3,
+        2.1
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Glycémie",
+      "unite": "g·L⁻¹",
+      "min": 0.6,
+      "max": 2.6,
+      "pas": 0.4
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures imaginées pour l’exercice"
+    },
+    {
+     "id": "boucle",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Après un repas riche en glucides",
+     "noeuds": [
+      {
+       "id": "hyper",
+       "texte": "Hyperglycémie",
+       "emoji": "📈"
+      },
+      {
+       "id": "beta",
+       "texte": "Cellules β",
+       "emoji": "🔬"
+      },
+      {
+       "id": "hormone",
+       "texte": "?",
+       "emoji": "💉"
+      },
+      {
+       "id": "eff",
+       "texte": "Foie, muscles",
+       "emoji": "🫀"
+      }
+     ],
+     "liens": [
+      {
+       "de": "hyper",
+       "a": "beta",
+       "texte": "détectée par"
+      },
+      {
+       "de": "beta",
+       "a": "hormone",
+       "texte": "sécrètent"
+      },
+      {
+       "de": "hormone",
+       "a": "eff",
+       "texte": "agit sur"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien la glycémie du patient B dépasse-t-elle celle du patient A à 120 minutes ?",
+     "reponse": 1.1,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.05,
+     "aide": "Lis les deux valeurs à 120 minutes.",
+     "explication": "2,1 − 1,0 = **1,1 g·L⁻¹** d’écart."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère la glycémie du patient B à 2 h, supérieure à 2 g·L⁻¹ ?",
+     "options": [
+      "Un diabète : la régulation ne ramène pas la glycémie à la normale",
+      "Une hypoglycémie provoquée par un excès d’insuline dans le sang",
+      "Une régulation normale, comme pour le patient A pendant ce test",
+      "Une absence totale de glucose absorbé par l’intestin"
+     ],
+     "reponse": 0,
+     "aide": "Le seuil à 2 h est de 2 g·L⁻¹ ; compare-le à la courbe.",
+     "explication": "Une glycémie à 2 h **supérieure à 2 g·L⁻¹** évoque un **diabète** : le glucose reste dans le sang."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle hormone remplace le « ? » dans la chaîne ?",
+     "reponse": [
+      "insuline",
+      "l’insuline",
+      "linsuline"
+     ],
+     "placeholder": "une hormone",
+     "aide": "C’est la seule hormone hypoglycémiante.",
+     "explication": "Les cellules β des îlots de Langerhans sécrètent l’**insuline**, qui fait baisser la glycémie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément à son rôle dans la boucle de régulation.",
+     "paires": [
+      [
+       "Cellules β du pancréas",
+       "Capteur"
+      ],
+      [
+       "Insuline",
+       "Messager"
+      ],
+      [
+       "Foie et muscles",
+       "Effecteurs"
+      ],
+      [
+       "Glycémie",
+       "Grandeur régulée"
+      ]
+     ],
+     "aide": "Capteur → messager → effecteur : relis la chaîne de gauche à droite.",
+     "explication": "Les cellules β **détectent**, l’insuline **transmet** par le sang, le foie et les muscles **agissent**, et la glycémie est la **grandeur régulée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab9e8e28-7b9b-58cd-b635-6af53da956d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois dossiers au service de diabétologie",
+   "competence": "raisonner",
+   "situation": "Dans un service de santé, une technicienne de laboratoire reçoit trois dossiers. Elle doit relier chaque bilan au bon diagnostic avant le rendez-vous du médecin.",
+   "documents": [
+    {
+     "id": "bilans",
+     "type": "tableau",
+     "titre": "Les trois bilans",
+     "colonnes": [
+      "Patient",
+      "Glycémie",
+      "Insuline",
+      "Autre élément du dossier"
+     ],
+     "lignes": [
+      [
+       "Léo, 14 ans",
+       "2,6 g·L⁻¹ à jeun",
+       "très basse",
+       "anticorps anti-cellules β présents"
+      ],
+      [
+       "Mme Dubois, 55 ans",
+       "1,6 g·L⁻¹ à jeun",
+       "élevée",
+       "surpoids, anticorps absents"
+      ],
+      [
+       "Samir, 17 ans",
+       "0,5 g·L⁻¹",
+       "basse",
+       "trois heures d’effort sans manger"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Dossiers imaginés pour l’exercice"
+    },
+    {
+     "id": "repere",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Valeurs de référence",
+     "entete": "Glycémie à jeun",
+     "sousTitre": "Valeurs de référence",
+     "lignes": [
+      {
+       "texte": "Valeur de consigne",
+       "valeur": "≈ 1 g·L⁻¹"
+      },
+      {
+       "texte": "Intervalle normal",
+       "valeur": "0,7 à 1,1 g·L⁻¹",
+       "id": "normal"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque patient à l’état le plus probable.",
+     "paires": [
+      [
+       "Léo",
+       "Diabète de type 1"
+      ],
+      [
+       "Mme Dubois",
+       "Diabète de type 2"
+      ],
+      [
+       "Samir",
+       "Hypoglycémie d’effort"
+      ]
+     ],
+     "aide": "Observe d’abord la glycémie, puis l’insuline et l’élément du dossier.",
+     "explication": "Léo : cellules β détruites (auto-immunité). Mme Dubois : insuline élevée mais **inefficace**. Samir : glycémie trop basse après un effort prolongé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la glycémie de Léo dépasse-t-elle la limite haute de l’intervalle normal ?",
+     "reponse": 1.5,
+     "unite": "g·L⁻¹",
+     "tolerance": 0.05,
+     "aide": "Compare 2,6 à la limite haute de la fiche.",
+     "explication": "2,6 − 1,1 = **1,5 g·L⁻¹** au-dessus de la limite haute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mme Dubois a-t-elle une glycémie élevée alors que son insuline est élevée ?",
+     "options": [
+      "Ses cellules sont résistantes à l’insuline",
+      "Ses cellules α sécrètent trop de glucagon",
+      "Ses cellules β ont été détruites par ses anticorps",
+      "Son foie ne produit plus du tout de glycogène"
+     ],
+     "reponse": 0,
+     "aide": "L’insuline est présente : c’est son effet qui pose problème.",
+     "explication": "Dans le diabète de type 2, l’insuline est présente mais **peu efficace** : les cellules y sont résistantes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel traitement est indispensable pour Léo ?",
+     "options": [
+      "Des injections d’insuline",
+      "Un régime pauvre en sel uniquement",
+      "Des injections de glucagon",
+      "Une simple augmentation de l’activité physique"
+     ],
+     "reponse": 0,
+     "aide": "Son pancréas ne fabrique presque plus l’hormone hypoglycémiante.",
+     "explication": "Ses cellules β sont détruites : sans insuline et sans autre hormone hypoglycémiante, il faut des **injections d’insuline**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle hormone, sécrétée par les cellules α, aide Samir à remonter sa glycémie ?",
+     "options": [
+      "Le glucagon",
+      "L’insuline",
+      "La testostérone",
+      "L’ADH"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’hormone qui stimule la glycogénolyse dans le foie.",
+     "explication": "Le **glucagon** stimule la glycogénolyse hépatique : la glycémie remonte."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ebcf0eb-1261-5872-85b2-fe691a02bb5f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le chemin de l’urine",
+   "competence": "observer-schema",
+   "situation": "Pendant un stage d’infirmier, Noé doit expliquer le trajet de l’urine à un patient. Il le résume en cinq étapes sur un schéma en chaîne.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Du rein à l’extérieur",
+     "noeuds": [
+      {
+       "id": "rein",
+       "texte": "Rein",
+       "emoji": "🫘"
+      },
+      {
+       "id": "ureteres",
+       "texte": "Uretère",
+       "emoji": "〰️"
+      },
+      {
+       "id": "vessie",
+       "texte": "Vessie",
+       "emoji": "🎈"
+      },
+      {
+       "id": "uretre",
+       "texte": "Urètre",
+       "emoji": "〰️"
+      },
+      {
+       "id": "ext",
+       "texte": "Extérieur",
+       "emoji": "🚽"
+      }
+     ],
+     "liens": [
+      {
+       "de": "rein",
+       "a": "ureteres"
+      },
+      {
+       "de": "ureteres",
+       "a": "vessie"
+      },
+      {
+       "de": "vessie",
+       "a": "uretre"
+      },
+      {
+       "de": "uretre",
+       "a": "ext"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche l’organe où l’urine est stockée avant d’être évacuée.",
+     "reponse": [
+      "vessie"
+     ],
+     "aide": "C’est un réservoir.",
+     "explication": "La **vessie** stocke l’urine."
+    },
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche le conduit qui sort de la vessie.",
+     "reponse": [
+      "uretre"
+     ],
+     "aide": "Ne confonds pas avec le conduit qui vient du rein.",
+     "explication": "L’**urètre** évacue l’urine hors de la vessie ; l’**uretère** la conduit du rein à la vessie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les reins filtrent environ 180 L de plasma par jour et rejettent 1,5 L d’urine. Quel volume est réabsorbé chaque jour ?",
+     "reponse": 178.5,
+     "unite": "L",
+     "tolerance": 0.1,
+     "aide": "Soustrais le volume d’urine du volume filtré.",
+     "explication": "180 − 1,5 = **178,5 L** retournent dans le sang."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ebcf0eb-1261-5872-85b2-fe691a02bb5f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Plasma, urine primitive, urine définitive",
+   "competence": "lire-tableau",
+   "situation": "Un laboratoire analyse trois liquides : le plasma, le filtrat obtenu dans la capsule de Bowman (urine primitive) et l’urine rejetée (urine définitive). Tu en déduis ce que fait le néphron.",
+   "documents": [
+    {
+     "id": "liquides",
+     "type": "tableau",
+     "titre": "Concentrations (g·L⁻¹)",
+     "colonnes": [
+      "Molécule",
+      "Plasma",
+      "Urine primitive",
+      "Urine définitive"
+     ],
+     "lignes": [
+      [
+       "Protéines",
+       70,
+       "≈ 0",
+       0
+      ],
+      [
+       "Glucose",
+       1,
+       1,
+       0
+      ],
+      [
+       "Urée",
+       0.3,
+       0.3,
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liquides",
+     "enonce": "Touche la case qui montre que les protéines ne passent pas la barrière de filtration.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Regarde les protéines dans l’urine primitive.",
+     "explication": "Les grosses protéines restent dans le sang : leur concentration est **≈ 0** dans l’urine primitive."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le fait que le glucose soit à 1 g·L⁻¹ dans l’urine primitive mais à 0 dans l’urine définitive ?",
+     "options": [
+      "Le glucose est réabsorbé dans les tubes du néphron",
+      "Le glucose est filtré par le glomérule uniquement dans l’urine définitive",
+      "Le glucose est détruit par les podocytes",
+      "Le glucose est sécrété par les tubes vers le sang"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne « urine primitive » à la colonne « urine définitive ».",
+     "explication": "Le glucose filtré est **réabsorbé** dans le tube proximal : il retourne dans le sang."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur la concentration d’urée est-elle multipliée entre l’urine primitive et l’urine définitive ? Arrondis à l’unité.",
+     "reponse": 67,
+     "tolerance": 0.5,
+     "aide": "Divise la concentration finale par la concentration initiale.",
+     "explication": "20 ÷ 0,3 ≈ **67** : l’eau est réabsorbée, l’urée reste et se concentre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser d’une urine contenant des protéines ?",
+     "options": [
+      "La barrière de filtration est probablement lésée",
+      "Les tubes réabsorbent trop de protéines",
+      "La personne a bu trop d’eau",
+      "L’ADH a été sécrétée en excès"
+     ],
+     "reponse": 0,
+     "aide": "Normalement, les protéines restent dans le sang.",
+     "explication": "Des protéines (ou des globules rouges) dans l’urine signalent une **lésion de la barrière de filtration**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ebcf0eb-1261-5872-85b2-fe691a02bb5f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand le glucose passe dans l’urine",
+   "competence": "modeliser",
+   "situation": "Mme Roche, 62 ans, a une bandelette urinaire positive au glucose. Sa glycémie à jeun est de 2,4 g·L⁻¹. Tu étudies la quantité de glucose éliminée selon la glycémie, avec un filtrat de 180 L par jour.",
+   "documents": [
+    {
+     "id": "urine",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Glucose éliminé dans l’urine selon la glycémie",
+     "categories": [
+      "1,0",
+      "1,4",
+      "1,8",
+      "2,2",
+      "2,6"
+     ],
+     "series": [
+      {
+       "nom": "Glucose urinaire",
+       "valeurs": [
+        0,
+        0,
+        0,
+        72,
+        144
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Glucose éliminé",
+      "unite": "g par jour",
+      "min": 0,
+      "max": 160,
+      "pas": 40
+     },
+     "axeX": {
+      "titre": "Glycémie (g·L⁻¹)"
+     },
+     "valeurs": false,
+     "source": "Valeurs modélisées pour l’exercice"
+    },
+    {
+     "id": "compte",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Dossier de Mme Roche",
+     "entete": "Mme Roche",
+     "sousTitre": "62 ans",
+     "emoji": "📋",
+     "lignes": [
+      {
+       "texte": "Glycémie à jeun",
+       "valeur": "2,4 g·L⁻¹"
+      },
+      {
+       "texte": "Bandelette urinaire (glucose)",
+       "valeur": "positive",
+       "id": "bande"
+      },
+      {
+       "texte": "Volume filtré par jour",
+       "valeur": "180 L"
+      }
+     ],
+     "pied": "Dossier écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "urine",
+     "enonce": "Touche la glycémie à partir de laquelle du glucose apparaît dans l’urine.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le premier point au-dessus de zéro.",
+     "explication": "Le glucose apparaît dès **2,2 g·L⁻¹** : au-delà de ≈ 1,8 g·L⁻¹ les transporteurs sont saturés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose le glomérule filtre-t-il par jour quand la glycémie est de 2,2 g·L⁻¹ ?",
+     "reponse": 396,
+     "unite": "g",
+     "aide": "Multiplie la glycémie par le volume filtré.",
+     "explication": "180 × 2,2 = **396 g** de glucose filtrés par jour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour une glycémie de 1,8 g·L⁻¹, aucun glucose n’est éliminé. Quelle masse maximale de glucose les tubes peuvent-ils donc réabsorber par jour ?",
+     "reponse": 324,
+     "unite": "g",
+     "aide": "À 1,8 g·L⁻¹ tout le glucose filtré est réabsorbé : calcule la masse filtrée.",
+     "explication": "180 × 1,8 = **324 g** : c’est la capacité maximale de réabsorption."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse de glucose est éliminée par jour chez Mme Roche (glycémie 2,4 g·L⁻¹) ?",
+     "reponse": 108,
+     "unite": "g",
+     "aide": "Masse filtrée moins capacité maximale de réabsorption.",
+     "explication": "180 × 2,4 = 432 g filtrés ; 432 − 324 = **108 g** éliminés dans l’urine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la cause de l’apparition du glucose dans l’urine au-delà du seuil ?",
+     "options": [
+      "Les transporteurs de réabsorption sont saturés",
+      "Les podocytes laissent passer plus de glucose",
+      "Les tubes sécrètent du glucose vers l’urine",
+      "L’ADH détruit le glucose dans le tube collecteur"
+     ],
+     "reponse": 0,
+     "aide": "Les transporteurs sont en nombre limité.",
+     "explication": "Les transporteurs de réabsorption ne peuvent pas aller plus vite : l’excédent est éliminé, c’est la **glycosurie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "18b2360a-0b76-5c42-b0ea-2a22f97b6d29",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une coupe de testicule au microscope",
+   "competence": "observer-schema",
+   "situation": "Lors d’un TP d’histologie, Lucas observe une coupe de testicule et la schématise : de gros cercles vides au centre, des petits amas de cellules entre eux.",
+   "documents": [
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "Coupe schématique d’un testicule",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 70,
+       "r": 38,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "tube1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 70,
+       "r": 14,
+       "teinte": "ambre",
+       "motif": "points"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 70,
+       "r": 38,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "tube2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 70,
+       "r": 14,
+       "teinte": "ambre",
+       "motif": "points"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 175,
+       "r": 38,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "tube3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 175,
+       "r": 14,
+       "teinte": "ambre",
+       "motif": "points"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 60,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ley1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 150,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ley2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 150,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ley3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 235,
+       "texte": "Les petits disques pleins sont des groupes de cellules",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche les trois tubes séminifères, où se déroule la spermatogenèse.",
+     "multiple": true,
+     "reponse": [
+      "tube1",
+      "tube2",
+      "tube3"
+     ],
+     "aide": "La spermatogenèse a lieu à l’intérieur de structures arrondies et creuses.",
+     "explication": "Les **tubes séminifères** abritent la spermatogenèse, avec les cellules de Sertoli qui nourrissent les cellules germinales."
+    },
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche les groupes de cellules de Leydig, qui se trouvent entre les tubes.",
+     "multiple": true,
+     "reponse": [
+      "ley1",
+      "ley2",
+      "ley3"
+     ],
+     "aide": "Ce sont les petits groupes situés entre les grands cercles.",
+     "explication": "Les **cellules de Leydig** sont entre les tubes et sécrètent la testostérone dans le sang."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient la testostérone sécrétée par les cellules de Leydig ?",
+     "options": [
+      "Elle passe dans le sang et agit sur des cellules cibles",
+      "Elle est déversée dans la lumière des tubes séminifères",
+      "Elle est détruite sur place par les cellules de Sertoli",
+      "Elle quitte l’organisme avec le sperme sans agir"
+     ],
+     "reponse": 0,
+     "aide": "Une hormone est transportée par le sang jusqu’à ses cibles.",
+     "explication": "La testostérone est une **hormone** : sécrétée dans le sang, elle agit à distance sur les organes cibles et sur l’axe hypothalamo-hypophysaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "18b2360a-0b76-5c42-b0ea-2a22f97b6d29",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des rats castrés et un dosage de LH",
+   "competence": "experimenter",
+   "situation": "Un laboratoire compare trois lots de rats mâles : témoins, castrés, et castrés recevant de la testostérone. Il dose la LH dans le sang et pèse les vésicules séminales (glandes annexes).",
+   "documents": [
+    {
+     "id": "rats",
+     "type": "tableau",
+     "titre": "Résultats des trois lots",
+     "colonnes": [
+      "Lot",
+      "Testostérone (ng·mL⁻¹)",
+      "LH (UI·L⁻¹)",
+      "Vésicules séminales (mg)"
+     ],
+     "lignes": [
+      [
+       "A : témoins",
+       3,
+       2,
+       250
+      ],
+      [
+       "B : castrés",
+       0,
+       8,
+       60
+      ],
+      [
+       "C : castrés + testostérone",
+       3,
+       2,
+       240
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur la LH est-elle multipliée après castration ?",
+     "reponse": 4,
+     "aide": "Divise la LH du lot B par celle du lot A.",
+     "explication": "8 ÷ 2 = **4** : sans testicules, la LH augmente fortement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du lot C par rapport au lot B ?",
+     "options": [
+      "La testostérone freine la sécrétion de LH et restaure les vésicules",
+      "La testostérone stimule la sécrétion de LH par l’hypophyse",
+      "La castration n’a aucun effet sur l’hypophyse ni sur la LH",
+      "Les vésicules séminales produisent elles-mêmes la testostérone"
+     ],
+     "reponse": 0,
+     "aide": "Compare LH et vésicules entre B et C.",
+     "explication": "Chez C, la testostérone ramène la LH à 2 et les vésicules à 240 mg : la testostérone exerce un **rétrocontrôle négatif** et entretient les organes cibles."
+    },
+    {
+     "type": "zone",
+     "document": "rats",
+     "enonce": "Touche la valeur de LH qui montre la disparition du rétrocontrôle négatif.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche le lot sans testostérone.",
+     "explication": "Sans testostérone, la LH monte à **8 UI·L⁻¹** : plus rien ne la freine."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la cascade de régulation.",
+     "items": [
+      "L’hypothalamus sécrète la GnRH",
+      "L’hypophyse sécrète la LH",
+      "Les cellules de Leydig sont stimulées",
+      "La testostérone est sécrétée dans le sang"
+     ],
+     "aide": "Chaque glande stimule la suivante.",
+     "explication": "**GnRH → LH → cellules de Leydig → testostérone** : c’est une cascade de régulation."
+    }
+   ]
+  },
+  {
+   "chapitre": "18b2360a-0b76-5c42-b0ea-2a22f97b6d29",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Stéroïdes anabolisants : le bilan d’un sportif",
+   "competence": "raisonner",
+   "situation": "Un sportif de 24 ans prend pendant trois mois des stéroïdes anabolisants de synthèse, proches de la testostérone. Son médecin compare ses résultats avant, pendant et après le traitement.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan hormonal et spermatique",
+     "colonnes": [
+      "Mesure",
+      "Avant",
+      "Pendant",
+      "3 mois après arrêt"
+     ],
+     "lignes": [
+      [
+       "LH (UI·L⁻¹)",
+       5,
+       0.5,
+       4
+      ],
+      [
+       "FSH (UI·L⁻¹)",
+       4,
+       0.6,
+       3.5
+      ],
+      [
+       "Spermatozoïdes (millions·mL⁻¹)",
+       60,
+       5,
+       45
+      ],
+      [
+       "Volume d’un testicule (mL)",
+       20,
+       14,
+       19
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "cause",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Ce que provoquent les stéroïdes",
+     "noeuds": [
+      {
+       "id": "ster",
+       "texte": "Stéroïdes de synthèse",
+       "emoji": "💊"
+      },
+      {
+       "id": "axe",
+       "texte": "?",
+       "emoji": "🧠"
+      },
+      {
+       "id": "test",
+       "texte": "Testicules peu stimulés",
+       "emoji": "🔬"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ster",
+       "a": "axe",
+       "texte": "rétrocontrôle négatif"
+      },
+      {
+       "de": "axe",
+       "a": "test"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage la LH a-t-elle diminué pendant le traitement ?",
+     "reponse": 90,
+     "unite": "%",
+     "aide": "Calcule (5 − 0,5) ÷ 5 puis multiplie par 100.",
+     "explication": "(5 − 0,5) ÷ 5 = 0,9 : la LH a baissé de **90 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente le « ? » dans la chaîne ?",
+     "options": [
+      "Hypothalamus et hypophyse : GnRH, LH et FSH diminuent",
+      "Les cellules de Leydig : elles produisent plus de LH",
+      "Le sang : il transporte plus de testostérone naturelle",
+      "Les vésicules séminales : elles stimulent l’hypophyse"
+     ],
+     "reponse": 0,
+     "aide": "Le rétrocontrôle négatif agit sur les étages qui sont au-dessus du testicule.",
+     "explication": "La testostérone en excès freine la sécrétion de **GnRH, de LH et de FSH** par l’hypothalamus et l’hypophyse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur la concentration de spermatozoïdes est-elle divisée pendant le traitement ?",
+     "reponse": 12,
+     "aide": "Divise la valeur « Avant » par la valeur « Pendant ».",
+     "explication": "60 ÷ 5 = **12** : la production de spermatozoïdes chute faute de FSH et de LH."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la testostérone naturelle du sportif baisse-t-elle pendant le traitement ?",
+     "options": [
+      "Les cellules de Leydig ne sont plus stimulées par la LH",
+      "Les tubes séminifères se remplissent de stéroïdes",
+      "Les cellules de Sertoli sécrètent trop de FSH",
+      "Le sang élimine la testostérone plus vite"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui stimule les cellules de Leydig ?",
+     "explication": "Sans LH, les **cellules de Leydig** ne sont plus stimulées : la testostérone naturelle chute, et les testicules diminuent de volume."
+    },
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la valeur qui montre que la fertilité est presque revenue trois mois après l’arrêt.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Cherche la ligne des spermatozoïdes, colonne « 3 mois après arrêt ».",
+     "explication": "Les spermatozoïdes remontent à **45 millions·mL⁻¹** : l’axe se réactive quand le rétrocontrôle cesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfa8a56f-b14e-5ad2-8da5-7c9e11bff8e6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les hormones d’un cycle de 28 jours",
+   "competence": "lire-graphique",
+   "situation": "Dans un laboratoire d’analyses, une technicienne trace les dosages sanguins d’une femme de 24 ans tout au long de son cycle. Elle te demande de les lire.",
+   "documents": [
+    {
+     "id": "cycle",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Œstrogènes et progestérone au cours du cycle",
+     "categories": [
+      "1",
+      "4",
+      "7",
+      "10",
+      "13",
+      "16",
+      "19",
+      "22",
+      "25",
+      "28"
+     ],
+     "series": [
+      {
+       "nom": "Œstrogènes",
+       "valeurs": [
+        10,
+        20,
+        40,
+        70,
+        100,
+        50,
+        60,
+        80,
+        50,
+        15
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Progestérone",
+       "valeurs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        60,
+        90,
+        100,
+        70,
+        10
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Concentration",
+      "unite": "% du maximum",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Jour du cycle"
+     },
+     "valeurs": false,
+     "source": "Courbes simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À quel jour du cycle la concentration en œstrogènes est-elle maximale avant l’ovulation ?",
+     "reponse": 13,
+     "aide": "Regarde le sommet de la première bosse de la courbe des œstrogènes.",
+     "explication": "Les œstrogènes atteignent leur pic au **jour 13**, juste avant l’ovulation."
+    },
+    {
+     "type": "zone",
+     "document": "cycle",
+     "enonce": "Touche le jour où la progestérone est la plus élevée.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "Cherche la plus haute valeur de la courbe de progestérone.",
+     "explication": "La progestérone culmine au **jour 22**, en pleine phase lutéale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle hormone domine pendant la phase lutéale ?",
+     "options": [
+      "La progestérone",
+      "La LH",
+      "La testostérone",
+      "La FSH"
+     ],
+     "reponse": 0,
+     "aide": "Elle est sécrétée par le corps jaune.",
+     "explication": "Le corps jaune sécrète la **progestérone**, qui prépare l’endomètre à la nidation."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfa8a56f-b14e-5ad2-8da5-7c9e11bff8e6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi la pilule bloque-t-elle l’ovulation ?",
+   "competence": "analyser-document",
+   "situation": "Sarah, 18 ans, vient de commencer une pilule combinée. Elle compare ses dosages de LH avec ceux d’un cycle naturel et lit la notice.",
+   "documents": [
+    {
+     "id": "lh",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "LH au cours du cycle",
+     "categories": [
+      "1",
+      "4",
+      "7",
+      "10",
+      "13",
+      "16",
+      "19",
+      "22",
+      "25",
+      "28"
+     ],
+     "series": [
+      {
+       "nom": "Cycle naturel",
+       "valeurs": [
+        5,
+        5,
+        6,
+        10,
+        100,
+        15,
+        6,
+        5,
+        5,
+        5
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Sous pilule combinée",
+       "valeurs": [
+        5,
+        5,
+        5,
+        5,
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "LH",
+      "unite": "% du pic naturel",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Jour du cycle"
+     },
+     "valeurs": false,
+     "source": "Courbes simplifiées"
+    },
+    {
+     "id": "notice",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Notice (extrait)",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chaque comprimé contient un œstrogène de synthèse et un progestatif de synthèse.",
+      "À prendre tous les jours à heure fixe pendant 21 jours."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lh",
+     "enonce": "Touche le jour où le cycle naturel présente le pic de LH.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le jour où la LH s’envole dans le cycle naturel.",
+     "explication": "Le pic de LH se produit au **jour 13** ; il déclenche l’ovulation environ 36 heures plus tard."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel pourcentage du pic naturel la LH de Sarah se maintient-elle au jour 13 ?",
+     "reponse": 6,
+     "unite": "%",
+     "tolerance": 1,
+     "aide": "Lis la valeur de la courbe sous pilule au jour 13.",
+     "explication": "Sous pilule, la LH reste à **6 %** du pic naturel : il n’y a pas de pic."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’explication.",
+     "texte": "Les hormones de la pilule exercent un rétrocontrôle ___ permanent : il n’y a pas de ___ de LH, donc pas d’___.",
+     "reponses": [
+      [
+       "négatif"
+      ],
+      [
+       "pic"
+      ],
+      [
+       "ovulation"
+      ]
+     ],
+     "banque": [
+      "négatif",
+      "positif",
+      "pic",
+      "creux",
+      "ovulation",
+      "menstruation"
+     ],
+     "aide": "Le pic de LH est ce qui déclenche l’ovulation.",
+     "explication": "Un rétrocontrôle **négatif** permanent supprime le **pic** de LH : pas d’**ovulation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel second effet du progestatif contribue à la contraception ?",
+     "options": [
+      "Il épaissit la glaire cervicale et bloque les spermatozoïdes",
+      "Il détruit l’ovocyte avant la fécondation",
+      "Il augmente la FSH et fait mûrir plusieurs follicules",
+      "Il empêche le corps jaune de dégénérer"
+     ],
+     "reponse": 0,
+     "aide": "Il agit au niveau du col de l’utérus.",
+     "explication": "Le progestatif épaissit la **glaire cervicale** : barrière supplémentaire pour les spermatozoïdes."
+    }
+   ]
+  },
+  {
+   "chapitre": "bfa8a56f-b14e-5ad2-8da5-7c9e11bff8e6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le protocole de FIV de Mme Lefèvre",
+   "competence": "raisonner",
+   "situation": "Mme Lefèvre, 34 ans, suit une fécondation in vitro (FIV). Voici le calendrier de son protocole et le résultat de l’échographie du jour 12.",
+   "documents": [
+    {
+     "id": "agenda",
+     "type": "tableau",
+     "titre": "Calendrier du protocole",
+     "colonnes": [
+      "Quand",
+      "Geste"
+     ],
+     "lignes": [
+      [
+       "Jours 1 à 10",
+       "Analogue de la GnRH : bloque le cycle naturel"
+      ],
+      [
+       "Jours 3 à 12",
+       "Injection quotidienne de FSH"
+      ],
+      [
+       "Jeudi 22 h",
+       "Injection déclenchante : imite le pic de LH"
+      ],
+      [
+       "Samedi 8 h",
+       "Ponction des ovocytes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Protocole imaginé pour l’exercice"
+    },
+    {
+     "id": "echo",
+     "type": "tableau",
+     "titre": "Échographie du jour 12 : diamètre des follicules (mm)",
+     "colonnes": [
+      "Follicule",
+      "Diamètre"
+     ],
+     "lignes": [
+      [
+       "1",
+       20
+      ],
+      [
+       "2",
+       19
+      ],
+      [
+       "3",
+       18
+      ],
+      [
+       "4",
+       12
+      ],
+      [
+       "5",
+       9
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes du protocole.",
+     "items": [
+      "Bloquer le cycle naturel",
+      "Injecter de la FSH pour faire mûrir plusieurs follicules",
+      "Déclencher l’ovulation par une injection qui imite le pic de LH",
+      "Ponctionner les ovocytes puis les féconder au laboratoire"
+     ],
+     "aide": "Lis la colonne « Quand » dans le calendrier.",
+     "explication": "Blocage, **FSH**, déclenchement par injection imitant la **LH**, puis ponction et fécondation en laboratoire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures séparent l’injection déclenchante de la ponction ?",
+     "reponse": 34,
+     "unite": "h",
+     "aide": "De jeudi 22 h à vendredi 22 h : 24 h. Ajoute ce qui reste.",
+     "explication": "24 h + 10 h (de 22 h à 8 h) = **34 h** : la ponction a lieu juste avant l’ovulation, attendue environ 36 h après le pic de LH."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le médecin considère comme mûrs les follicules d’au moins 18 mm. Combien Mme Lefèvre en compte-t-elle ?",
+     "reponse": 3,
+     "aide": "Compte les follicules de 18 mm et plus.",
+     "explication": "Les follicules **1, 2 et 3** atteignent 18 mm ou plus : **3** follicules sont mûrs."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque traitement à son rôle.",
+     "paires": [
+      [
+       "Analogue de la GnRH",
+       "Bloque le cycle naturel"
+      ],
+      [
+       "FSH",
+       "Fait mûrir plusieurs follicules"
+      ],
+      [
+       "Injection déclenchante",
+       "Imite le pic de LH"
+      ]
+     ],
+     "aide": "Relis l’ordre du protocole.",
+     "explication": "Chaque produit **agit sur un étage de la régulation** : blocage, croissance folliculaire, ovulation provoquée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ponctionne-t-on avant l’ovulation et non après ?",
+     "options": [
+      "Après l’ovulation, les ovocytes seraient libérés dans les trompes",
+      "Avant l’ovulation, les ovocytes sont déjà fécondés",
+      "La ponction après l’ovulation détruit l’endomètre",
+      "Les follicules ne contiennent des ovocytes qu’après l’ovulation"
+     ],
+     "reponse": 0,
+     "aide": "Que devient l’ovocyte quand le follicule se rompt ?",
+     "explication": "Une fois l’ovulation faite, l’ovocyte est expulsé du follicule : il faut le **recueillir juste avant**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1bea2126-b86c-5c04-b80f-457899a4d889",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien de chromosomes ?",
+   "competence": "lire-tableau",
+   "situation": "Un enseignant de STL fait compléter la fiche suivante sur le nombre de chromosomes dans différentes cellules humaines.",
+   "documents": [
+    {
+     "id": "cell",
+     "type": "tableau",
+     "titre": "Nombre de chromosomes",
+     "colonnes": [
+      "Cellule",
+      "Chromosomes"
+     ],
+     "lignes": [
+      [
+       "Cellule de peau",
+       46
+      ],
+      [
+       "Spermatozoïde",
+       "?"
+      ],
+      [
+       "Cellule-œuf",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Fiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes contient un spermatozoïde ?",
+     "reponse": 23,
+     "aide": "Un gamète a la moitié du nombre de chromosomes d’une cellule de peau.",
+     "explication": "Un gamète est **haploïde** : n = 23."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes contient une cellule-œuf ?",
+     "reponse": 46,
+     "aide": "Elle reçoit les chromosomes de deux gamètes.",
+     "explication": "23 + 23 = **46** : la fécondation rétablit la diploïdie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque cellule.",
+     "categories": [
+      "Diploïde (2n)",
+      "Haploïde (n)"
+     ],
+     "items": [
+      [
+       "Cellule de peau",
+       0
+      ],
+      [
+       "Cellule-œuf",
+       0
+      ],
+      [
+       "Spermatozoïde",
+       1
+      ],
+      [
+       "Ovule mûr",
+       1
+      ],
+      [
+       "Neurone",
+       0
+      ]
+     ],
+     "aide": "Seuls les gamètes sont haploïdes.",
+     "explication": "Les cellules somatiques et la cellule-œuf sont **diploïdes** ; les **gamètes** sont haploïdes."
+    }
+   ]
+  },
+  {
+   "chapitre": "1bea2126-b86c-5c04-b80f-457899a4d889",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux divisions pour quatre cellules",
+   "competence": "observer-schema",
+   "situation": "Dans un cours, Margaux suit la méiose d’une cellule modèle à 2n = 4 : une paire de grands chromosomes (un d’origine paternelle, un d’origine maternelle) et une paire de petits.",
+   "documents": [
+    {
+     "id": "meiose",
+     "type": "schema",
+     "titre": "La méiose d’une cellule 2n = 4",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 50,
+       "r": 38,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 32,
+       "l": 5,
+       "h": 32,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 32,
+       "l": 5,
+       "h": 32,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 167,
+       "y": 40,
+       "l": 5,
+       "h": 18,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 179,
+       "y": 40,
+       "l": 5,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 30,
+       "texte": "Cellule initiale",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 46,
+       "texte": "2n = 4",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        90
+       ],
+       "a": [
+        90,
+        118
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        90
+       ],
+       "a": [
+        230,
+        118
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 38,
+       "y": 100,
+       "texte": "Méiose I",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 90,
+       "cy": 150,
+       "r": 32,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "fille1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 77,
+       "y": 133,
+       "l": 5,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 83,
+       "y": 133,
+       "l": 5,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 98,
+       "y": 140,
+       "l": 5,
+       "h": 16,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 140,
+       "l": 5,
+       "h": 16,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 150,
+       "r": 32,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "fille2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 217,
+       "y": 133,
+       "l": 5,
+       "h": 28,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 223,
+       "y": 133,
+       "l": 5,
+       "h": 28,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 238,
+       "y": 140,
+       "l": 5,
+       "h": 16,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 140,
+       "l": 5,
+       "h": 16,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        185
+       ],
+       "a": [
+        50,
+        205
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        185
+       ],
+       "a": [
+        130,
+        205
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        185
+       ],
+       "a": [
+        190,
+        205
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        185
+       ],
+       "a": [
+        270,
+        205
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 38,
+       "y": 195,
+       "texte": "Méiose II",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 240,
+       "r": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "gam1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 41,
+       "y": 226,
+       "l": 5,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 55,
+       "y": 232,
+       "l": 5,
+       "h": 14,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 240,
+       "r": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "gam2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 121,
+       "y": 226,
+       "l": 5,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 232,
+       "l": 5,
+       "h": 14,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 240,
+       "r": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "gam3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 181,
+       "y": 226,
+       "l": 5,
+       "h": 24,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 195,
+       "y": 232,
+       "l": 5,
+       "h": 14,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 240,
+       "r": 26,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "gam4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 261,
+       "y": 226,
+       "l": 5,
+       "h": 24,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 275,
+       "y": 232,
+       "l": 5,
+       "h": 14,
+       "teinte": "corail",
+       "motif": "plein"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "meiose",
+     "enonce": "Touche les deux cellules obtenues à la fin de la méiose I.",
+     "multiple": true,
+     "reponse": [
+      "fille1",
+      "fille2"
+     ],
+     "aide": "La méiose I est la première division : elle donne deux cellules.",
+     "explication": "La méiose I donne **2 cellules haploïdes**, dont chaque chromosome est encore formé de deux chromatides."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes contient chaque cellule finale (après la méiose II) ?",
+     "reponse": 2,
+     "aide": "Compte les traits dans une cellule du bas.",
+     "explication": "Chaque cellule finale a **n = 2** chromosomes, à une seule chromatide."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la méiose I est-elle dite réductionnelle ?",
+     "options": [
+      "Les chromosomes homologues se séparent : le nombre de chromosomes est divisé par deux",
+      "Les chromatides de chaque chromosome se séparent : le nombre de cellules double",
+      "L’ADN est réduit de moitié sans séparation de chromosomes",
+      "Les chromosomes disparaissent pendant la division"
+     ],
+     "reponse": 0,
+     "aide": "Compare le nombre de chromosomes de la cellule initiale et d’une cellule fille.",
+     "explication": "La séparation des **homologues** fait passer de 4 à 2 chromosomes par cellule : c’est la **réduction**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes dans l’ordre.",
+     "items": [
+      "Les chromosomes homologues s’apparient",
+      "Les homologues se séparent : deux cellules haploïdes",
+      "Les chromatides de chaque chromosome se séparent",
+      "Quatre cellules haploïdes sont obtenues"
+     ],
+     "aide": "La méiose I précède la méiose II.",
+     "explication": "Appariement, séparation des homologues (**méiose I**), séparation des chromatides (**méiose II**), quatre cellules haploïdes."
+    }
+   ]
+  },
+  {
+   "chapitre": "1bea2126-b86c-5c04-b80f-457899a4d889",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un caryotype à 47 chromosomes",
+   "competence": "raisonner",
+   "situation": "Un nouveau-né porte une trisomie 21. Le généticien compare le compte rendu de son caryotype avec le schéma de l’ovogenèse.",
+   "documents": [
+    {
+     "id": "cr",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Compte rendu du caryotype",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le caryotype compte 47 chromosomes.",
+      "Les paires 1 à 20 et 22 sont normales (2 chromosomes chacune).",
+      "La paire 21 compte 3 chromosomes. Les chromosomes sexuels sont XX."
+     ]
+    },
+    {
+     "id": "ovo",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "L’ovogenèse",
+     "noeuds": [
+      {
+       "id": "ov1",
+       "texte": "Ovocyte I",
+       "emoji": "🔵"
+      },
+      {
+       "id": "ov2",
+       "texte": "Ovocyte II",
+       "emoji": "🟣"
+      },
+      {
+       "id": "zy",
+       "texte": "Cellule-œuf",
+       "emoji": "🟠"
+      }
+     ],
+     "liens": [
+      {
+       "de": "ov1",
+       "a": "ov2",
+       "texte": "méiose I"
+      },
+      {
+       "de": "ov2",
+       "a": "zy",
+       "texte": "méiose II (si fécondation)"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Un gamète anormal porte 24 chromosomes (deux chromosomes 21). Combien de chromosomes la cellule-œuf compte-t-elle après fécondation par un gamète normal ?",
+     "reponse": 47,
+     "aide": "Additionne les chromosomes des deux gamètes.",
+     "explication": "24 + 23 = **47** chromosomes : le caryotype montre bien trois chromosomes 21."
+    },
+    {
+     "type": "zone",
+     "document": "ovo",
+     "enonce": "Touche l’étape dans laquelle la méiose est bloquée à l’ovulation.",
+     "reponse": [
+      "ov2"
+     ],
+     "aide": "L’ovocyte expulsé n’a pas fini sa méiose.",
+     "explication": "L’ovocyte libéré à l’ovulation est un **ovocyte II bloqué en métaphase II** ; la méiose s’achève si un spermatozoïde y pénètre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une cellule germinale subit une non-disjonction des chromosomes 21 en méiose I. Combien de ses quatre gamètes sont anormaux ?",
+     "reponse": 4,
+     "aide": "Une cellule fille a deux chromosomes 21, l’autre aucun ; la méiose II ne rétablit rien.",
+     "explication": "Les deux cellules filles de la méiose I sont anormales : après la méiose II, **les 4 gamètes** le sont (2 en excès, 2 en défaut)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une femme est porteuse d’une mutation de l’ADN mitochondrial. Qui peut en hériter ?",
+     "options": [
+      "Tous ses enfants",
+      "Seulement ses fils",
+      "Seulement ses filles",
+      "Aucun de ses enfants"
+     ],
+     "reponse": 0,
+     "aide": "Les mitochondries du spermatozoïde ne sont pas conservées.",
+     "explication": "Le génome mitochondrial est transmis par la **mère seulement** : tous ses enfants le reçoivent ; un père ne le transmet jamais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel terme décrit la réunion des génomes nucléaires des deux gamètes à la fécondation ?",
+     "options": [
+      "L’additivité des génomes",
+      "La réduction chromosomique",
+      "Le crossing-over",
+      "La non-disjonction"
+     ],
+     "reponse": 0,
+     "aide": "On additionne 23 + 23.",
+     "explication": "À la fécondation, les génomes nucléaires s’**additionnent** : la diploïdie est rétablie."
+    }
+   ]
+  },
+  {
+   "chapitre": "992fd801-ffab-59a8-8141-2b38f2c9016a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux parents sains, un enfant malade",
+   "competence": "analyser-document",
+   "situation": "Dans un cabinet de conseil génétique, une famille consulte. Voici l’arbre généalogique d’une maladie héréditaire : deux parents sains ont un enfant atteint et un enfant sain.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "Arbre généalogique",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 24,
+       "l": 32,
+       "h": 32,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "pere",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 40,
+       "r": 17,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "mere",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        116,
+        40
+       ],
+       "a": [
+        203,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        160,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        100
+       ],
+       "a": [
+        220,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        100
+       ],
+       "a": [
+        100,
+        120
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        100
+       ],
+       "a": [
+        220,
+        120
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 124,
+       "l": 32,
+       "h": 32,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "fils",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 140,
+       "r": 17,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "fille",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 195,
+       "texte": "Carré : homme ; rond : femme ; plein : personne atteinte",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche la personne atteinte par la maladie.",
+     "reponse": [
+      "fils"
+     ],
+     "aide": "Cherche le symbole plein.",
+     "explication": "Le **fils** est atteint (carré plein)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de l’allèle responsable de la maladie ?",
+     "options": [
+      "Il est récessif",
+      "Il est dominant",
+      "Il est porté par le chromosome Y",
+      "Il est mitochondrial"
+     ],
+     "reponse": 0,
+     "aide": "Les parents sont sains, l’enfant est atteint.",
+     "explication": "Deux parents sains peuvent avoir un enfant atteint seulement si l’allèle est **récessif**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le génotype des deux parents (A : sain, a : malade) ?",
+     "options": [
+      "A//a, hétérozygotes",
+      "A//A, homozygotes dominants",
+      "a//a, homozygotes récessifs",
+      "A//a pour l’un, a//a pour l’autre"
+     ],
+     "reponse": 0,
+     "aide": "Chacun porte un allèle a qu’ils ont transmis à leur fils.",
+     "explication": "Ils sont **hétérozygotes A//a** : sains, mais porteurs de l’allèle récessif."
+    }
+   ]
+  },
+  {
+   "chapitre": "992fd801-ffab-59a8-8141-2b38f2c9016a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La drépanocytose, de l’ADN au globule",
+   "competence": "modeliser",
+   "situation": "Un couple est porteur sain de la drépanocytose. Le généticien dresse un échiquier de croisement et rappelle les étapes de l’apparition de la maladie. A est l’allèle normal, S l’allèle muté.",
+   "documents": [
+    {
+     "id": "echiquier",
+     "type": "tableau",
+     "titre": "Échiquier de croisement",
+     "colonnes": [
+      "Gamètes",
+      "A",
+      "S"
+     ],
+     "lignes": [
+      [
+       "A",
+       "A//A",
+       "A//S"
+      ],
+      [
+       "S",
+       "A//S",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document écrit pour l’exercice"
+    },
+    {
+     "id": "molec",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "De la mutation à la maladie",
+     "noeuds": [
+      {
+       "id": "m1",
+       "texte": "Mutation GAG → GTG",
+       "emoji": "🧬"
+      },
+      {
+       "id": "m2",
+       "texte": "Valine à la place de l’acide glutamique",
+       "emoji": "🔬"
+      },
+      {
+       "id": "m3",
+       "texte": "Fibres d’hémoglobine S",
+       "emoji": "🧵"
+      },
+      {
+       "id": "m4",
+       "texte": "Globules en faucille",
+       "emoji": "🩸"
+      }
+     ],
+     "liens": [
+      {
+       "de": "m1",
+       "a": "m2"
+      },
+      {
+       "de": "m2",
+       "a": "m3"
+      },
+      {
+       "de": "m3",
+       "a": "m4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel génotype remplace le « ? » dans la case en bas à droite ?",
+     "options": [
+      "S//S",
+      "A//S",
+      "A//A",
+      "S//A et A//A"
+     ],
+     "reponse": 0,
+     "aide": "La case reçoit un allèle S de chaque parent.",
+     "explication": "Le gamète S d’un parent et le gamète S de l’autre donnent **S//S** : seuls les homozygotes sont malades."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité, en pourcentage, que leur enfant soit malade ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Une case sur quatre.",
+     "explication": "Une case sur quatre : **1/4 = 25 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité, en pourcentage, que leur enfant soit hétérozygote, donc porteur sain ?",
+     "reponse": 50,
+     "unite": "%",
+     "aide": "Compte les cases A//S.",
+     "explication": "Deux cases sur quatre : **1/2 = 50 %**."
+    },
+    {
+     "type": "zone",
+     "document": "molec",
+     "enonce": "Touche l’étape qui est la conséquence directe de la mutation sur la protéine.",
+     "reponse": [
+      "m2"
+     ],
+     "aide": "La mutation change un acide aminé de la chaîne β.",
+     "explication": "La mutation remplace l’**acide glutamique par la valine** en position 6 : c’est la modification de la protéine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à sa définition.",
+     "paires": [
+      [
+       "Allèle",
+       "Version d’un gène"
+      ],
+      [
+       "Hétérozygote",
+       "Deux allèles différents"
+      ],
+      [
+       "Génotype",
+       "Combinaison des allèles"
+      ],
+      [
+       "Phénotype",
+       "Ce qu’on observe, du moléculaire à l’organisme"
+      ]
+     ],
+     "aide": "Tu en as besoin pour lire l’échiquier.",
+     "explication": "Le **génotype** est la combinaison d’allèles ; le **phénotype** est le caractère observable, ici la forme des globules."
+    }
+   ]
+  },
+  {
+   "chapitre": "992fd801-ffab-59a8-8141-2b38f2c9016a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une famille, des millions de combinaisons",
+   "competence": "raisonner",
+   "situation": "Un couple de lycéens en conseil génétique (une fille atteinte dans la famille) veut comprendre l’arbre généalogique de la maladie et la diversité de leurs futurs enfants.",
+   "documents": [
+    {
+     "id": "arbre3",
+     "type": "schema",
+     "titre": "Arbre généalogique",
+     "largeur": 320,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 24,
+       "l": 32,
+       "h": 32,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "pere3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 40,
+       "r": 17,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "mere3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        116,
+        40
+       ],
+       "a": [
+        203,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        160,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        100
+       ],
+       "a": [
+        220,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        100
+       ],
+       "a": [
+        100,
+        120
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        100
+       ],
+       "a": [
+        220,
+        120
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 140,
+       "r": 17,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "fille3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 204,
+       "y": 124,
+       "l": 32,
+       "h": 32,
+       "teinte": "encre",
+       "motif": "clair",
+       "id": "fils3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 195,
+       "texte": "Carré : homme ; rond : femme ; plein : atteint(e)",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "brass",
+     "type": "tableau",
+     "titre": "Gamètes différents par brassage interchromosomique",
+     "colonnes": [
+      "Paires de chromosomes",
+      "1",
+      "2",
+      "3",
+      "4",
+      "23"
+     ],
+     "lignes": [
+      [
+       "Gamètes différents",
+       2,
+       4,
+       8,
+       "?",
+       "2²³"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "L’allèle responsable de la maladie est-il dominant ou récessif, et pourquoi ?",
+     "options": [
+      "Récessif : deux parents sains ont une fille atteinte",
+      "Dominant : un parent au moins serait atteint",
+      "Dominant : la fille est atteinte donc l’allèle domine",
+      "Récessif : la maladie atteint seulement les garçons"
+     ],
+     "reponse": 0,
+     "aide": "Les parents sont sains, l’enfant est atteint.",
+     "explication": "Deux parents sains ayant une enfant atteinte : l’allèle est **récessif** et les parents sont hétérozygotes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le gène est-il porté par le chromosome X ?",
+     "options": [
+      "Non : la fille atteinte a un père sain qui lui a transmis son X",
+      "Oui : seule une fille peut être atteinte par ce type de gène",
+      "Non : aucun gène ne peut être porté par un gonosome",
+      "Oui : le père porte l’allèle sur son chromosome Y sain"
+     ],
+     "reponse": 0,
+     "aide": "Si le gène était sur X, le père de la fille atteinte aurait eu son X porteur de l’allèle.",
+     "explication": "Une fille atteinte d’une maladie récessive liée à X aurait un père atteint : le père est sain, donc le gène est sur un **autosome**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité, en pourcentage, que leur prochain enfant soit atteint ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Les parents sont A//a.",
+     "explication": "Chaque enfant a **1/4 = 25 %** de risque d’être a//a, indépendamment des précédents."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de gamètes différents le brassage interchromosomique permet-il avec 4 paires de chromosomes ?",
+     "reponse": 16,
+     "aide": "Chaque paire double le nombre : 2, 4, 8…",
+     "explication": "2⁴ = **16** gamètes différents."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de gamètes différents l’être humain peut-il produire par ce seul brassage (23 paires) ? Donne le nombre exact.",
+     "reponse": 8388608,
+     "aide": "Calcule 2²³ : 2²⁰ vaut 1 048 576.",
+     "explication": "2²³ = 1 048 576 × 8 = **8 388 608**, soit environ 8 millions."
+    }
+   ]
+  }
+ ]
+}

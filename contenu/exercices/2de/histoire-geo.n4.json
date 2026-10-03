@@ -1,0 +1,3391 @@
+{
+ "niveau": "2de",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "ad73844b-2c72-55cb-b3ad-beda315db5b3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux géants émergents face à face",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé de géographie, Nina compare le Brésil et l’Inde, deux puissances émergentes du G20. Elle a rangé ses notes dans un tableau.",
+   "documents": [
+    {
+     "id": "compar",
+     "type": "tableau",
+     "titre": "Le Brésil et l’Inde en quatre critères",
+     "source": "Chiffres arrondis.",
+     "colonnes": [
+      "Critère",
+      "Brésil",
+      "Inde"
+     ],
+     "lignes": [
+      [
+       "Population",
+       "Environ 215 millions",
+       "Plus de 1,4 milliard"
+      ],
+      [
+       "Urbanisation",
+       "Plus de 85 %",
+       "Encore majoritairement rurale"
+      ],
+      [
+       "Moteur économique",
+       "Agriculture exportatrice",
+       "Services et numérique"
+      ],
+      [
+       "Héritage pesant",
+       "Esclavage et question foncière",
+       "Système des castes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "compar",
+     "enonce": "Touche la case qui donne la population de l’Inde.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la ligne « Population », puis la colonne de l’Inde.",
+     "explication": "L’Inde compte **plus de 1,4 milliard** d’habitants : c’est le pays le plus peuplé du monde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lequel de ces deux pays est le plus urbanisé ?",
+     "options": [
+      "Le Brésil, avec plus de 85 % de citadins",
+      "L’Inde, dont la population est surtout urbaine",
+      "Les deux pays, avec la même part de citadins",
+      "Le tableau ne permet pas de comparer"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Urbanisation » : l’un des deux pays est encore majoritairement rural.",
+     "explication": "Le **Brésil** compte plus de 85 % de citadins ; l’Inde reste majoritairement rurale."
+    },
+    {
+     "type": "zone",
+     "document": "compar",
+     "enonce": "Touche la case qui décrit le moteur économique de l’Inde.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Ce moteur n’est ni l’agriculture ni l’industrie de masse.",
+     "explication": "Le moteur de l’Inde, ce sont les **services et le numérique**, avec une industrialisation de masse faible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 1 000 Brésiliens, combien vivent en ville au minimum ?",
+     "reponse": 850,
+     "unite": "personnes",
+     "aide": "« Plus de 85 % » : calcule 85 % de 1 000.",
+     "explication": "85 % de 1 000 = 1 000 × 0,85 = **850** : au moins 850 Brésiliens sur 1 000 sont des citadins."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad73844b-2c72-55cb-b3ad-beda315db5b3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Même richesse moyenne, deux pays",
+   "competence": "lire-graphique",
+   "situation": "Karim lit deux fiches de pays imaginaires, A et B. Leur PIB par habitant est identique : il se demande si leurs habitants vivent pour autant de la même façon.",
+   "documents": [
+    {
+     "id": "indic",
+     "type": "tableau",
+     "titre": "Trois indicateurs",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Pays A",
+      "Pays B"
+     ],
+     "lignes": [
+      [
+       "PIB par habitant",
+       "12 000 $",
+       "12 000 $"
+      ],
+      [
+       "IDH",
+       "0,79",
+       "0,72"
+      ],
+      [
+       "Indice de Gini",
+       "0,29",
+       "0,58"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "parts",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Qui reçoit le revenu national ?",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "20 % les plus pauvres",
+      "20 % les plus riches"
+     ],
+     "series": [
+      {
+       "nom": "Pays A",
+       "valeurs": [
+        9,
+        36
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Pays B",
+       "valeurs": [
+        3,
+        60
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Part du revenu national",
+      "unite": "en %",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "indic",
+     "enonce": "Touche la case qui montre le pays où les revenus sont répartis le moins également.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "L’indice de Gini mesure l’inégalité des revenus : plus il est élevé, plus les écarts sont grands.",
+     "explication": "Le pays B a un indice de Gini de **0,58**, contre 0,29 pour le pays A : ses revenus sont bien moins également répartis."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le pays B, combien de fois la part du revenu des 20 % les plus riches dépasse-t-elle celle des 20 % les plus pauvres ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Divise la part des plus riches par celle des plus pauvres.",
+     "explication": "60 ÷ 3 = **20** : dans le pays B, les plus riches reçoivent vingt fois plus que les plus pauvres (contre 36 ÷ 9 = 4 fois dans le pays A)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le PIB par habitant ne suffit-il pas pour comparer ces deux pays ?",
+     "options": [
+      "Il ne dit rien de la façon dont la richesse est partagée",
+      "Il est toujours inexact dans les pays émergents, où l’on compte mal",
+      "Il mesure uniquement la santé et l’éducation des habitants",
+      "Il est calculé de la même façon dans tous les pays du monde"
+     ],
+     "reponse": 0,
+     "aide": "Les deux pays ont le même PIB par habitant et pourtant des graphiques très différents.",
+     "explication": "Le PIB par habitant est une moyenne : il **ne dit rien du partage** de la richesse. Il faut y ajouter l’indice de Gini."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de Karim.",
+     "texte": "Le PIB par habitant mesure la ___ produite, mais c’est l’indice de ___ qui mesure l’inégalité des revenus.",
+     "reponses": [
+      [
+       "richesse"
+      ],
+      [
+       "Gini"
+      ]
+     ],
+     "banque": [
+      "richesse",
+      "Gini",
+      "population",
+      "espérance de vie"
+     ],
+     "aide": "Un indicateur mesure la production, l’autre le partage.",
+     "explication": "Le PIB par habitant mesure la **richesse** produite ; l’indice de **Gini** mesure l’inégalité de sa répartition."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad73844b-2c72-55cb-b3ad-beda315db5b3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Joana à São Paulo, Sunita à Delhi",
+   "competence": "analyser-document",
+   "situation": "Deux femmes de 34 et 29 ans, l’une au Brésil, l’autre en Inde, racontent leur quotidien. En les lisant, tu vas distinguer ce que les deux pays partagent et ce qui les sépare.",
+   "documents": [
+    {
+     "id": "joana",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Portrait de Joana, São Paulo (Brésil)",
+     "source": "Portrait imaginé pour l’exercice.",
+     "blocs": [
+      "Joana a 34 ans. Elle vit dans une favela de São Paulo, à plus d’une heure de bus du quartier fermé où elle fait le ménage quatre jours par semaine.",
+      "Elle travaille dans le secteur [[i|informel]] : ni contrat, ni cotisation, ni protection sociale. Depuis quelques années, une aide versée par l’État lui permet de garder ses enfants à l’école."
+     ]
+    },
+    {
+     "id": "sunita",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Portrait de Sunita, Delhi (Inde)",
+     "source": "Portrait imaginé pour l’exercice.",
+     "blocs": [
+      "Sunita a 29 ans. Née dans un village du Bihar, un État pauvre, elle a rejoint Delhi avec son mari. Elle vend des légumes sur un trottoir, sans autorisation ni protection : c’est aussi du travail informel. Le couple vit dans un bidonville.",
+      "Sa famille appartient à une [[c|caste]] défavorisée : cet héritage a longtemps fermé à ses parents l’accès à certains métiers."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sunita",
+     "enonce": "Touche le mot qui désigne une inégalité liée à la naissance, que l’on retrouve en Inde.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche dans le second paragraphe : c’est un héritage familial, pas un choix.",
+     "explication": "La **caste** se transmet à la naissance : en Inde, l’inégalité se lit aussi dans la naissance, ce qui n’a pas d’équivalent au Brésil."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait selon le ou les pays qu’il décrit.",
+     "categories": [
+      "Brésil",
+      "Inde",
+      "Les deux"
+     ],
+     "items": [
+      [
+       "Des favelas à côté de quartiers fermés, dans une même ville",
+       0
+      ],
+      [
+       "Un Sudeste riche face à un Nordeste pauvre",
+       0
+      ],
+      [
+       "Des castes qui pèsent sur l’avenir",
+       1
+      ],
+      [
+       "Un Kerala avancé face à un Bihar en retard",
+       1
+      ],
+      [
+       "Des bidonvilles dans les mégapoles",
+       2
+      ],
+      [
+       "Un secteur informel énorme",
+       2
+      ],
+      [
+       "Une croissance forte mais irrégulière",
+       2
+      ]
+     ],
+     "aide": "Les points communs figurent dans le dernier tableau du cours : bidonvilles, informel, croissance irrégulière.",
+     "explication": "Spécifiques au **Brésil** : les contrastes sociaux et spatiaux (favelas, Sudeste/Nordeste). Spécifiques à l’**Inde** : castes et écart Kerala/Bihar. Communs aux **deux** : bidonvilles, informel, croissance irrégulière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble les deux portraits ?",
+     "options": [
+      "Le développement avance, mais une part de la population reste hors de la protection sociale",
+      "Le développement a supprimé le travail informel dans les deux pays émergents",
+      "Les inégalités ne concernent que les États les plus pauvres de chaque pays",
+      "La croissance forte a fait disparaître les bidonvilles des grandes villes"
+     ],
+     "reponse": 0,
+     "aide": "Relève ce que Joana et Sunita ont en commun dans leur travail.",
+     "explication": "Joana et Sunita travaillent toutes deux dans l’**informel**, sans protection : « le développement y avance, l’écart y demeure »."
+    }
+   ]
+  },
+  {
+   "chapitre": "1923e92a-6b02-5285-88c6-adb89805bcbd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le Japon en quatre repères",
+   "competence": "lire-tableau",
+   "situation": "Hana prépare une fiche sur le Japon, « laboratoire mondial du vieillissement ». Elle a relevé quatre chiffres clés.",
+   "documents": [
+    {
+     "id": "reperes",
+     "type": "tableau",
+     "titre": "Les repères démographiques du Japon",
+     "source": "Chiffres arrondis.",
+     "colonnes": [
+      "Repère",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Population",
+       "Environ 124 millions, en baisse depuis 2010 environ"
+      ],
+      [
+       "Part des 65 ans et plus",
+       "Près de 29 %"
+      ],
+      [
+       "Espérance de vie",
+       "Plus de 84 ans"
+      ],
+      [
+       "Indice de fécondité",
+       "Environ 1,3 enfant par femme"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reperes",
+     "enonce": "Touche la case qui donne l’espérance de vie au Japon.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne qui parle de la durée de la vie.",
+     "explication": "L’espérance de vie dépasse **84 ans** : elle est exceptionnelle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien de Japonais sur 100 ont moins de 65 ans ?",
+     "reponse": 71,
+     "unite": "personnes",
+     "tolerance": 1,
+     "aide": "Si 29 personnes sur 100 ont 65 ans ou plus, combien restent ?",
+     "explication": "100 − 29 = **71** : environ 71 Japonais sur 100 ont moins de 65 ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour que la population se renouvelle sans migration, il faut environ 2,1 enfants par femme. Que dit alors la fécondité du tableau ?",
+     "options": [
+      "Chaque génération est moins nombreuse que la précédente",
+      "Chaque génération est plus nombreuse que la précédente",
+      "La population se renouvelle exactement à l’identique",
+      "La fécondité n’a aucun effet sur la population"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1,3 et 2,1.",
+     "explication": "Avec **1,3 enfant par femme**, très en dessous de 2,1, chaque génération est moins nombreuse : la population baisse."
+    }
+   ]
+  },
+  {
+   "chapitre": "1923e92a-6b02-5285-88c6-adb89805bcbd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Haruka et l’école qui a fermé",
+   "competence": "lire-graphique",
+   "situation": "Haruka a 16 ans et vit dans un village de montagne japonais. Son récit s’appuie sur une évolution que le graphique ci-dessous permet de mesurer.",
+   "documents": [
+    {
+     "id": "vieux",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les 65 ans et plus dans la population du Japon",
+     "source": "Chiffres arrondis, au pourcent près.",
+     "categories": [
+      "1960",
+      "1980",
+      "2000",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "65 ans et plus",
+       "valeurs": [
+        6,
+        9,
+        17,
+        29
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la population",
+      "unite": "en %",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "haruka",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le village de Haruka",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Dans mon village de montagne, l’école a fermé il y a deux ans, faute d’élèves. Je prends maintenant un car chaque matin pour rejoindre la ville voisine.",
+      "Beaucoup de maisons sont [[v|vides]] : mes cousins sont partis travailler à Tokyo. Il ne reste surtout que des grands-parents."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de points de plus représente la part des 65 ans et plus en 2020 par rapport à 2000 ?",
+     "reponse": 12,
+     "unite": "points",
+     "aide": "Lis la hauteur des deux dernières barres et fais la différence.",
+     "explication": "29 − 17 = **12 points** : le vieillissement s’accélère."
+    },
+    {
+     "type": "zone",
+     "document": "vieux",
+     "enonce": "Touche la date à partir de laquelle plus d’un Japonais sur quatre a 65 ans ou plus.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Un Japonais sur quatre correspond à 25 % : cherche la première barre qui dépasse ce niveau.",
+     "explication": "Seule la barre de **2020** (29 %) dépasse 25 % ; en 2000, la part n’atteint que 17 %."
+    },
+    {
+     "type": "zone",
+     "document": "haruka",
+     "enonce": "Touche le mot qui montre que le village se vide de ses habitants.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche l’adjectif qui décrit les maisons dans le second paragraphe.",
+     "explication": "Les maisons **vides** illustrent les « villages fantômes » : les jeunes partent vers Tokyo, les campagnes se vident."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait parmi les causes ou les conséquences du vieillissement japonais.",
+     "categories": [
+      "Cause",
+      "Conséquence"
+     ],
+     "items": [
+      [
+       "Le coût du logement",
+       0
+      ],
+      [
+       "La difficulté à concilier travail et famille",
+       0
+      ],
+      [
+       "Une immigration longtemps très faible",
+       0
+      ],
+      [
+       "La fermeture d’écoles",
+       1
+      ],
+      [
+       "Des villages fantômes",
+       1
+      ],
+      [
+       "Une pénurie de main-d’œuvre dans les soins",
+       1
+      ]
+     ],
+     "aide": "Une cause explique la faible natalité ; une conséquence est ce que le vieillissement produit ensuite.",
+     "explication": "Logement cher, difficulté de concilier travail et famille, immigration faible : ce sont des **causes**. Écoles fermées, villages fantômes, pénurie de main-d’œuvre : des **conséquences**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1923e92a-6b02-5285-88c6-adb89805bcbd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un pays qui cherche des réponses",
+   "competence": "analyser-document",
+   "situation": "Ichiro, 72 ans, travaille encore dans un entrepôt près d’Osaka. Son quotidien illustre les réponses que le Japon invente face à son vieillissement.",
+   "documents": [
+    {
+     "id": "reponses",
+     "type": "tableau",
+     "titre": "Les réponses du Japon",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Réponse",
+      "État"
+     ],
+     "lignes": [
+      [
+       "Robotique et automatisation",
+       "Développées, notamment dans les soins"
+      ],
+      [
+       "Emploi des seniors",
+       "Souvent au-delà de 70 ans"
+      ],
+      [
+       "Travail des femmes",
+       "Encouragé"
+      ],
+      [
+       "Ouverture aux travailleurs étrangers",
+       "Prudente"
+      ],
+      [
+       "Crèches et aides à la garde",
+       "En place"
+      ],
+      [
+       "Revitalisation rurale",
+       "Engagée"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "ichiro",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une journée dans l’entrepôt",
+     "source": "Reportage imaginé pour l’exercice.",
+     "blocs": [
+      "Ichiro, 72 ans, travaille quatre jours par semaine dans un entrepôt de logistique. Un [[r|robot]] porte les colis les plus lourds, il surveille les écrans.",
+      "Sa fille, qui travaille aussi, a obtenu une place en crèche pour son petit-fils."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ichiro",
+     "enonce": "Touche le mot qui illustre une réponse technique à la pénurie de main-d’œuvre.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche ce qui remplace un effort physique dans l’entrepôt.",
+     "explication": "Le **robot** porte les charges : la robotique et l’automatisation compensent le manque de bras."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réponse du tableau au problème qu’elle vise.",
+     "paires": [
+      [
+       "Les robots dans les soins",
+       "Des soignants qui manquent"
+      ],
+      [
+       "L’emploi des seniors au-delà de 70 ans",
+       "Des retraites qui coûtent cher"
+      ],
+      [
+       "Les crèches et les aides à la garde",
+       "Des enfants qui ne naissent pas assez"
+      ],
+      [
+       "La revitalisation rurale",
+       "Des villages qui se vident"
+      ]
+     ],
+     "aide": "Pour chaque réponse, demande-toi quelle conséquence du vieillissement elle cherche à corriger.",
+     "explication": "Robots : **manque de soignants**. Seniors au travail : **retraites** moins lourdes. Crèches : **natalité**. Revitalisation rurale : **villages qui se vident**."
+    },
+    {
+     "type": "zone",
+     "document": "reponses",
+     "enonce": "Touche la case qui montre la prudence du Japon face à l’arrivée de travailleurs étrangers.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Un mot du tableau résume l’attitude du pays sur cette ligne.",
+     "explication": "L’ouverture aux travailleurs étrangers est **prudente** : le Japon n’a pas massivement recours à l’immigration."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le Japon compte environ 124 millions d’habitants, dont près de 29 % ont 65 ans ou plus. Combien de personnes de 65 ans et plus cela représente-t-il, en millions (arrondi à l’unité) ?",
+     "reponse": 36,
+     "unite": "millions",
+     "aide": "Calcule 29 % de 124.",
+     "explication": "124 × 0,29 = 35,96 ; arrondi à l’unité : **36 millions** de personnes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure de l’ensemble de ces réponses ?",
+     "options": [
+      "Aucune n’a inversé la tendance au vieillissement à ce jour",
+      "Le recours massif à l’immigration a inversé la tendance",
+      "La robotique a rajeuni la population du pays",
+      "Les politiques familiales ont rétabli la natalité"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la conclusion du cours sur ces réponses.",
+     "explication": "Toutes ces mesures **n’ont pas inversé la tendance** : elles atténuent les effets du vieillissement sans le faire reculer."
+    }
+   ]
+  },
+  {
+   "chapitre": "112922bd-10ff-540c-8d02-3c9072661973",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une population qui change d’allure",
+   "competence": "lire-tableau",
+   "situation": "Léo prépare un exposé sur la population française : environ 68 millions d’habitants, qui croissent encore lentement. Il a noté l’évolution de quatre indicateurs.",
+   "documents": [
+    {
+     "id": "mouvement",
+     "type": "tableau",
+     "titre": "Le mouvement d’ensemble",
+     "source": "D’après le cours ; chiffres arrondis.",
+     "colonnes": [
+      "Indicateur",
+      "Évolution"
+     ],
+     "lignes": [
+      [
+       "Fécondité",
+       "Longtemps la plus élevée d’Europe, descendue autour de 1,6 enfant par femme"
+      ],
+      [
+       "Accroissement naturel",
+       "Il se réduit fortement"
+      ],
+      [
+       "Solde migratoire",
+       "Il devient le principal moteur de la croissance"
+      ],
+      [
+       "Plus de 65 ans",
+       "Plus de 21 %, et en hausse"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mouvement",
+     "enonce": "Touche la case qui nomme le principal moteur de la croissance de la population française.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Il ne s’agit ni des naissances ni des décès.",
+     "explication": "Le **solde migratoire** (entrées moins sorties) devient le principal moteur de la croissance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien de personnes de plus de 65 ans compte la France, en prenant 21 % de 68 millions (arrondi au million) ?",
+     "reponse": 14,
+     "unite": "millions",
+     "aide": "Calcule 68 × 0,21.",
+     "explication": "68 × 0,21 = 14,28 ; arrondi au million : **14 millions**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le tableau de la fécondité française ?",
+     "options": [
+      "Elle a baissé : elle était la plus élevée d’Europe",
+      "Elle a nettement progressé depuis quelques années",
+      "Elle est restée stable depuis plusieurs décennies",
+      "Elle a toujours été la plus faible d’Europe"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première ligne : « longtemps » annonce un changement.",
+     "explication": "La fécondité, longtemps la plus élevée d’Europe, est **descendue** autour de 1,6 enfant par femme."
+    }
+   ]
+  },
+  {
+   "chapitre": "112922bd-10ff-540c-8d02-3c9072661973",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où la France gagne et perd des habitants",
+   "competence": "lire-carte",
+   "situation": "Maëlys compare quatre villes de France pour comprendre pourquoi certains territoires attirent et d’autres se vident. La carte indique la diagonale des faibles densités.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes et la diagonale des faibles densités",
+     "source": "Tracé schématique de la diagonale ; villes repérées pour l’exercice.",
+     "fond": "france",
+     "fleuves": false,
+     "aires": [
+      {
+       "id": "diag",
+       "contour": [
+        [
+         5.2,
+         49.6
+        ],
+        [
+         6.2,
+         48.8
+        ],
+        [
+         5,
+         47.4
+        ],
+        [
+         4,
+         46.2
+        ],
+        [
+         3.5,
+         44.8
+        ],
+        [
+         2.2,
+         43.7
+        ],
+        [
+         0.6,
+         43.2
+        ],
+        [
+         -0.4,
+         43.4
+        ],
+        [
+         -0.2,
+         44.2
+        ],
+        [
+         1,
+         44.8
+        ],
+        [
+         1.6,
+         45.9
+        ],
+        [
+         2,
+         47
+        ],
+        [
+         3.2,
+         48
+        ],
+        [
+         4,
+         49.2
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "surTerre": true,
+       "etiquette": "Faibles densités",
+       "etiquetteA": [
+        5,
+        47.3
+       ]
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "la-rochelle",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "montpellier",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "aurillac",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "gueret",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la diagonale des faibles densités.",
+     "reponse": [
+      "diag"
+     ],
+     "aide": "C’est la bande qui va du Nord-Est au Massif central, puis au Sud-Ouest.",
+     "explication": "La **diagonale des faibles densités** est une bande peu peuplée qui s’étire du Nord-Est au Massif central et au Sud-Ouest."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux villes situées sur un littoral qui gagne des habitants.",
+     "reponse": [
+      "a",
+      "b"
+     ],
+     "multiple": true,
+     "aide": "Les littoraux atlantique et méditerranéen attirent la population.",
+     "explication": "La Rochelle (littoral **atlantique**) et Montpellier (littoral **méditerranéen**) appartiennent aux territoires qui gagnent des habitants."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux villes situées dans la diagonale des faibles densités.",
+     "reponse": [
+      "c",
+      "d"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les deux villes de l’intérieur, dans la bande dessinée sur la carte.",
+     "explication": "Aurillac (Cantal) et Guéret (Creuse) sont dans la **diagonale** : territoires peu denses, qui perdent des habitants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel phénomène étend les villes bien au-delà de leurs limites administratives ?",
+     "options": [
+      "La périurbanisation",
+      "La désindustrialisation",
+      "La métropolisation",
+      "La littoralisation"
+     ],
+     "reponse": 0,
+     "aide": "Le mot contient « autour de la ville ».",
+     "explication": "La **périurbanisation** étend l’habitat et les activités au-delà des limites de la ville, loin des centres."
+    }
+   ]
+  },
+  {
+   "chapitre": "112922bd-10ff-540c-8d02-3c9072661973",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre territoires, quatre dispositifs",
+   "competence": "analyser-document",
+   "situation": "Une chargée de mission en aménagement doit choisir quel dispositif de l’État convient à chaque territoire. Elle part d’un graphique sur la fécondité et de quatre situations observées.",
+   "documents": [
+    {
+     "id": "fec",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Fécondité en France",
+     "source": "Chiffres arrondis à 0,1 enfant par femme.",
+     "categories": [
+      "2010",
+      "2015",
+      "2020",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Enfants par femme",
+       "valeurs": [
+        2,
+        2,
+        1.8,
+        1.6
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Fécondité",
+      "unite": "enfants par femme",
+      "min": 1,
+      "max": 2.2,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "cas",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Quatre situations",
+     "source": "Texte écrit pour l’exercice ; communes et villes imaginaires.",
+     "blocs": [
+      "Dans la commune de Saint-Aubin, plus aucun guichet pour les papiers administratifs : la caisse d’allocations est à 40 km.",
+      "Dans un quartier de grande ville, le chômage est bien plus élevé qu’ailleurs dans l’agglomération et les logements sont dégradés.",
+      "Au centre de Valombre, ville moyenne, les vitrines vides se multiplient.",
+      "Dans plusieurs villages de montagne, les jeunes partent faute d’emplois et les écoles ferment. Le dernier médecin a pris sa retraite : le village est devenu un [[d|désert]] [[d|médical]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien la fécondité a-t-elle baissé entre 2010 et 2024 ?",
+     "reponse": 0.4,
+     "unite": "enfant par femme",
+     "tolerance": 0.05,
+     "aide": "Lis la valeur de 2010 et celle de 2024 sur la courbe.",
+     "explication": "2,0 − 1,6 = **0,4 enfant par femme** de moins en quatorze ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce graphique suffit-il pour dire que la population française diminue ?",
+     "options": [
+      "Non : la fécondité baisse, mais le solde migratoire soutient encore la croissance",
+      "Oui : une fécondité en baisse fait toujours diminuer la population",
+      "Oui : la France perd des habitants chaque année depuis 2010",
+      "Non : la fécondité française est restée stable depuis 2010"
+     ],
+     "reponse": 0,
+     "aide": "La fécondité n’est qu’un des moteurs de la population : rappelle-toi lequel est devenu le principal.",
+     "explication": "La courbe baisse, mais la population croît encore, grâce au **solde migratoire** : la baisse de la fécondité ne dit pas tout."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche l’expression qui désigne un territoire où l’accès aux soins est difficile.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Elle se trouve dans le dernier paragraphe, après le départ du médecin.",
+     "explication": "Un **désert médical** est un territoire où l’accès aux soins est difficile, faute de médecins proches."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation au dispositif de l’État qui lui correspond.",
+     "paires": [
+      [
+       "Un quartier cumulant chômage et logements dégradés",
+       "La politique de la ville"
+      ],
+      [
+       "Une commune sans guichet pour ses démarches",
+       "Les Maisons France Services"
+      ],
+      [
+       "Un centre de ville moyenne aux vitrines vides",
+       "Action cœur de ville"
+      ],
+      [
+       "Des campagnes en déprise aux écoles qui ferment",
+       "Les zones de revitalisation rurale"
+      ]
+     ],
+     "aide": "Chaque dispositif cible un type de territoire : quartiers, services publics, villes moyennes, campagnes.",
+     "explication": "Quartier en difficulté : **politique de la ville**. Accès aux services publics : **Maisons France Services**. Ville moyenne : **Action cœur de ville**. Campagnes en déprise : **zones de revitalisation rurale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a0e2ce8a-947b-5ae8-b6cf-1685a6e997c5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre parcours, quatre mots",
+   "competence": "analyser-texte",
+   "situation": "Une association d’aide aux exilés présente quatre parcours à des lycéens. Pour les comprendre, il faut employer chaque mot de la migration à bon escient.",
+   "documents": [
+    {
+     "id": "parcours",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Quatre parcours",
+     "source": "Portraits imaginés pour l’exercice.",
+     "blocs": [
+      "Karim a fui les combats qui ont détruit sa ville. Il vit dans un camp, à 80 km de chez lui, à l’[[i|intérieur]] de son pays.",
+      "Leïla a quitté son pays pour échapper à des persécutions. Elle a déposé un dossier dans le pays d’accueil et attend la décision.",
+      "Joseph, ingénieur, est parti travailler à Montréal pour un meilleur salaire.",
+      "Amina a fui la guerre. Le pays qui l’accueille lui a reconnu le statut de réfugiée, défini par la convention de Genève de 1951."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parcours",
+     "enonce": "Touche le mot qui montre que Karim n’a pas quitté son pays.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "Cherche, dans la première phrase, où se trouve le camp de Karim.",
+     "explication": "Karim vit à l’**intérieur** de son pays : il n’a franchi aucune frontière internationale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne au terme qui la désigne.",
+     "paires": [
+      [
+       "Karim",
+       "Déplacé interne"
+      ],
+      [
+       "Leïla",
+       "Demandeur d’asile"
+      ],
+      [
+       "Joseph",
+       "Migrant économique"
+      ],
+      [
+       "Amina",
+       "Réfugiée"
+      ]
+     ],
+     "aide": "Demande-toi à chaque fois : a-t-elle franchi une frontière ? Attend-elle une décision ou l’a-t-elle déjà obtenue ?",
+     "explication": "Karim : **déplacé interne**. Leïla attend la décision : **demandeur d’asile**. Joseph part pour un salaire : **migrant économique**. Amina a obtenu le statut : **réfugiée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Karim n’est-il pas un réfugié ?",
+     "options": [
+      "Il n’a pas franchi de frontière internationale",
+      "Il n’a subi aucune violence dans sa ville",
+      "Il a refusé de déposer une demande d’asile",
+      "Il est parti uniquement pour un meilleur salaire"
+     ],
+     "reponse": 0,
+     "aide": "Le statut de réfugié concerne une personne qui a quitté son pays.",
+     "explication": "Un **déplacé interne** reste dans son pays : sans frontière franchie, il n’est pas réfugié au sens de la convention de Genève."
+    }
+   ]
+  },
+  {
+   "chapitre": "a0e2ce8a-947b-5ae8-b6cf-1685a6e997c5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des flux qui ne vont pas tous vers le Nord",
+   "competence": "lire-carte",
+   "situation": "Sarah prépare une affiche sur les migrations. Elle a tracé quatre flèches, qui relient des villes de pays d’origine et de destination, pour illustrer des flux réels. Toutes ne traversent pas la planète.",
+   "documents": [
+    {
+     "id": "flux",
+     "type": "carte",
+     "titre": "Quatre exemples de flux migratoires",
+     "source": "Schéma illustratif : les flèches relient des villes, elles ne tracent pas des itinéraires.",
+     "fond": "monde",
+     "cadrage": [
+      -105,
+      -40,
+      40,
+      56
+     ],
+     "lieux": [
+      {
+       "id": "mexico",
+       "lieu": "mexico",
+       "symbole": "point",
+       "nom": "Mexico"
+      },
+      {
+       "id": "chicago",
+       "lieu": "chicago",
+       "symbole": "point",
+       "nom": "Chicago"
+      },
+      {
+       "id": "lagos",
+       "lieu": "lagos",
+       "symbole": "point",
+       "nom": "Lagos"
+      },
+      {
+       "id": "londres",
+       "lieu": "londres",
+       "symbole": "point",
+       "nom": "Londres"
+      },
+      {
+       "id": "kinshasa",
+       "lieu": "kinshasa",
+       "symbole": "point",
+       "nom": "Kinshasa"
+      },
+      {
+       "id": "joburg",
+       "lieu": "johannesburg",
+       "symbole": "point",
+       "nom": "Johannesburg"
+      },
+      {
+       "id": "lima",
+       "lieu": "lima",
+       "symbole": "point",
+       "nom": "Lima"
+      },
+      {
+       "id": "santiago",
+       "lieu": "santiago",
+       "symbole": "point",
+       "nom": "Santiago"
+      }
+     ],
+     "traits": [
+      {
+       "id": "t1",
+       "points": [
+        "mexico",
+        "chicago"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "t2",
+       "points": [
+        "lagos",
+        "londres"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "t3",
+       "points": [
+        "kinshasa",
+        "johannesburg"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "t4",
+       "points": [
+        "lima",
+        "santiago"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "flux",
+     "enonce": "Touche les deux flèches qui restent à l’intérieur de la même région du monde (flux Sud-Sud).",
+     "reponse": [
+      "t3",
+      "t4"
+     ],
+     "multiple": true,
+     "aide": "Pour chacune, regarde si le départ et l’arrivée sont sur le même continent.",
+     "explication": "Kinshasa → Johannesburg reste en **Afrique**, Lima → Santiago en **Amérique du Sud** : ce sont des flux Sud-Sud, plus nombreux que les flux Sud-Nord."
+    },
+    {
+     "type": "zone",
+     "document": "flux",
+     "enonce": "Touche la flèche qui va de l’Afrique de l’Ouest vers l’Europe.",
+     "reponse": [
+      "t2"
+     ],
+     "aide": "Repère Lagos, sur le golfe de Guinée, puis une ville européenne.",
+     "explication": "La flèche **Lagos → Londres** relie l’Afrique de l’Ouest à l’Europe : c’est un flux Sud-Nord."
+    },
+    {
+     "type": "choix",
+     "enonce": "Deux flèches sur quatre restent dans la même région du monde. Que dit le cours des migrations internationales ?",
+     "options": [
+      "Environ un migrant sur deux se déplace dans sa propre région du monde",
+      "La plupart des migrants quittent le Sud pour s’installer au Nord",
+      "Les migrants les plus pauvres sont ceux qui vont le plus loin",
+      "Les migrations Sud-Sud sont aujourd’hui très rares et récentes"
+     ],
+     "reponse": 0,
+     "aide": "Les flux Sud-Sud sont plus nombreux que les flux Sud-Nord.",
+     "explication": "Un migrant sur deux reste dans sa propre région : les flux **Sud-Sud** dépassent les flux Sud-Nord. Partir loin coûte cher."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque effet : pour qui est-il un apport ou un coût principal ?",
+     "categories": [
+      "Pays de départ",
+      "Pays d’arrivée",
+      "Migrant"
+     ],
+     "items": [
+      [
+       "Des remises massives",
+       0
+      ],
+      [
+       "La fuite des cerveaux",
+       0
+      ],
+      [
+       "Un rajeunissement et des cotisations",
+       1
+      ],
+      [
+       "Des débats politiques sur l’intégration",
+       1
+      ],
+      [
+       "Une mobilité sociale possible",
+       2
+      ],
+      [
+       "Discrimination et précarité fréquentes",
+       2
+      ]
+     ],
+     "aide": "Le cours classe les effets en trois colonnes : départ, arrivée, migrant.",
+     "explication": "**Départ** : remises, fuite des cerveaux. **Arrivée** : rajeunissement, cotisations, débats sur l’intégration. **Migrant** : mobilité sociale possible, discrimination et précarité."
+    }
+   ]
+  },
+  {
+   "chapitre": "a0e2ce8a-947b-5ae8-b6cf-1685a6e997c5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La lettre de Youssef",
+   "competence": "analyser-document",
+   "situation": "Youssef, ingénieur installé à Lyon, écrit à sa sœur restée dans leur village. Sa lettre et un tableau d’effets te permettent de mesurer ce que la migration apporte… et coûte.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Youssef à sa sœur Salma",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Ma chère Salma, je suis arrivé à Lyon il y a trois ans. Chaque mois, je vous envoie 250 euros ; avec ces envois, le village a pu réparer le toit du dispensaire.",
+      "Mais le dispensaire n’a plus de [[c|pharmacien]] et deux [[c|infirmières]] sont aussi parties à l’étranger. Je me demande parfois si j’aurais dû rester."
+     ]
+    },
+    {
+     "id": "effets",
+     "type": "tableau",
+     "titre": "Les effets de la migration",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Pour qui",
+      "L’apport",
+      "Le coût"
+     ],
+     "lignes": [
+      [
+       "Pays de départ",
+       "Des remises massives, parfois supérieures à l’aide publique au développement",
+       "La fuite des cerveaux"
+      ],
+      [
+       "Pays d’arrivée",
+       "Main-d’œuvre, rajeunissement, cotisations",
+       "Des débats politiques sur l’intégration"
+      ],
+      [
+       "Migrant",
+       "Une mobilité sociale possible",
+       "Discrimination et précarité fréquentes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche les deux mots qui montrent le départ de personnes qualifiées du village.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche les deux métiers de la santé dont parle Youssef dans le second paragraphe.",
+     "explication": "Le **pharmacien** et les **infirmières** partis à l’étranger illustrent ce que le cours appelle la fuite des cerveaux."
+    },
+    {
+     "type": "zone",
+     "document": "effets",
+     "enonce": "Touche la case qui décrit l’apport que représentent, pour le village, les 250 euros envoyés chaque mois.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "L’argent envoyé par les migrants à leur famille porte un nom : cherche-le dans la colonne « L’apport ».",
+     "explication": "Ces envois sont des **remises** : elles apportent des ressources au pays de départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’euros Youssef envoie-t-il à son village en une année ?",
+     "reponse": 3000,
+     "unite": "euros",
+     "aide": "Il envoie 250 euros par mois, pendant 12 mois.",
+     "explication": "250 × 12 = **3 000 euros** par an."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le tableau du départ de Youssef pour son pays d’origine ?",
+     "options": [
+      "Il apporte des remises mais prive le pays de personnes qualifiées",
+      "Il apporte uniquement des bénéfices, sans aucun coût pour le pays",
+      "Il prive le pays de qualifiés sans lui apporter aucune ressource",
+      "Il n’a aucun effet, car les migrants restent dans leur pays"
+     ],
+     "reponse": 0,
+     "aide": "Lis la ligne « Pays de départ » : elle a deux colonnes.",
+     "explication": "Pour le pays de départ, l’**apport** (remises) et le **coût** (fuite des cerveaux) vont ensemble : les effets sont à la fois positifs et négatifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "4edd000e-886b-5be1-bd03-ea4e756328e1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pourquoi part-on en déplacement ?",
+   "competence": "lire-graphique",
+   "situation": "Dans une commune imaginaire, un office du tourisme a interrogé les personnes qui passent un week-end sur place. Il veut savoir qui compte comme touriste.",
+   "documents": [
+    {
+     "id": "sejours",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Durée du séjour des visiteurs",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Moins d’une journée",
+      "1 nuit",
+      "2 nuits",
+      "3 nuits et plus"
+     ],
+     "series": [
+      {
+       "nom": "Visiteurs",
+       "valeurs": [
+        40,
+        25,
+        20,
+        15
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des visiteurs",
+      "unite": "en %",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Durée du séjour"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sejours",
+     "enonce": "Touche la catégorie de visiteurs qui n’est pas comptée comme touriste (aucune nuitée).",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Un touriste passe au moins une nuit hors de son environnement habituel.",
+     "explication": "Les visiteurs de **moins d’une journée** sont des excursionnistes : sans nuitée, ils ne sont pas des touristes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des visiteurs de la commune sont des touristes (au moins une nuit) ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Additionne les trois dernières barres, ou retire la première à 100.",
+     "explication": "25 + 20 + 15 = **60 %** (ou 100 − 40) : six visiteurs sur dix passent au moins une nuit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 1 000 visiteurs, combien sont des excursionnistes ?",
+     "reponse": 400,
+     "unite": "visiteurs",
+     "aide": "Applique la part de la première barre à 1 000.",
+     "explication": "40 % de 1 000 = **400** excursionnistes."
+    }
+   ]
+  },
+  {
+   "chapitre": "4edd000e-886b-5be1-bd03-ea4e756328e1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mettre en tourisme ce qu’on a… ou ce qu’on construit",
+   "competence": "analyser-document",
+   "situation": "Une agence de voyages présente deux destinations très différentes : les États-Unis, espace touristique ancien, et Dubaï, destination créée de toutes pièces en une trentaine d’années.",
+   "documents": [
+    {
+     "id": "deux",
+     "type": "tableau",
+     "titre": "Deux modèles touristiques",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Critère",
+      "États-Unis",
+      "Dubaï"
+     ],
+     "lignes": [
+      [
+       "Ancienneté",
+       "Espace touristique ancien",
+       "Trente ans de construction"
+      ],
+      [
+       "Ressource",
+       "Atouts existants : nature et patrimoine",
+       "Destination créée de toutes pièces"
+      ],
+      [
+       "Sites",
+       "New York, Yellowstone, Grand Canyon, Orlando",
+       "Burj Khalifa, îles artificielles, centres commerciaux climatisés"
+      ],
+      [
+       "Tourisme intérieur",
+       "Massif",
+       "Faible"
+      ],
+      [
+       "Levier de transport",
+       "Hubs aéroportuaires mondiaux",
+       "Le hub d’Emirates"
+      ],
+      [
+       "Objectif",
+       "Une activité parmi d’autres",
+       "Se diversifier hors de la rente pétrolière"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deux",
+     "enonce": "Touche la case qui montre pourquoi Dubaï a développé le tourisme.",
+     "reponse": [
+      "r5c2"
+     ],
+     "aide": "Pense à l’économie de la région avant le tourisme : la rente du pétrole.",
+     "explication": "Dubaï veut se **diversifier hors de la rente pétrolière** : le tourisme sert à créer d’autres revenus."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque site : est-il une attraction existante ou construite ?",
+     "categories": [
+      "Atout existant",
+      "Équipement construit"
+     ],
+     "items": [
+      [
+       "Yellowstone",
+       0
+      ],
+      [
+       "Grand Canyon",
+       0
+      ],
+      [
+       "Les îles artificielles",
+       1
+      ],
+      [
+       "Le Burj Khalifa",
+       1
+      ]
+     ],
+     "aide": "Un parc naturel ou un canyon existent sans intervention humaine ; une île artificielle non.",
+     "explication": "Yellowstone et le Grand Canyon sont des **atouts naturels existants**. Les îles artificielles et le Burj Khalifa sont des **équipements construits**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle joue la compagnie Emirates pour Dubaï ?",
+     "options": [
+      "Elle en fait un hub aérien au carrefour de l’Europe, de l’Asie et de l’Afrique",
+      "Elle gère les hôtels de luxe de la ville pour les touristes étrangers",
+      "Elle remplace le tourisme intérieur massif par un tourisme étranger",
+      "Elle finance le dessalement de l’eau consommée par les touristes"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau parle d’un « hub » : pense à une correspondance aérienne.",
+     "explication": "Emirates fait de Dubaï un **hub** : les voyageurs y passent entre l’Europe, l’Asie et l’Afrique, ce qui nourrit le tourisme."
+    },
+    {
+     "type": "trous",
+     "enonce": "Résume l’opposition entre les deux modèles.",
+     "texte": "Les États-Unis mettent en tourisme ce qu’ils ___ ; Dubaï met en tourisme ce qu’il ___.",
+     "reponses": [
+      [
+       "ont"
+      ],
+      [
+       "construit"
+      ]
+     ],
+     "banque": [
+      "ont",
+      "construit",
+      "détruit",
+      "importent"
+     ],
+     "aide": "Reviens à la ligne « Ressource ».",
+     "explication": "Les États-Unis valorisent des atouts **existants** ; Dubaï **construit** sa destination."
+    }
+   ]
+  },
+  {
+   "chapitre": "4edd000e-886b-5be1-bd03-ea4e756328e1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand le tourisme dépasse le lieu",
+   "competence": "analyser-document",
+   "situation": "Dans une ville côtière imaginaire, Éloïse voit les loyers monter et les commerçants de son quartier remplacés par des boutiques de souvenirs. Un tableau chiffre ce que le tourisme apporte et ce qu’il coûte.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le quartier d’Éloïse",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Chaque été, la vieille ville de Marsane reçoit bien plus de visiteurs que d’habitants. Les ruelles sont embouteillées dès dix heures.",
+      "Éloïse a dû quitter son appartement : le propriétaire l’a transformé en location pour touristes, à trois fois le loyer. Dans la rue, la boulangerie a cédé la place à une boutique de [[s|souvenirs]]."
+     ]
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Bilan du tourisme à Marsane",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Il y a dix ans",
+      "Aujourd’hui"
+     ],
+     "lignes": [
+      [
+       "Visiteurs par an (milliers)",
+       800,
+       2000
+      ],
+      [
+       "Emplois liés au tourisme",
+       1200,
+       2400
+      ],
+      [
+       "Loyer moyen d’un appartement (€/mois)",
+       500,
+       1100
+      ],
+      [
+       "Habitants permanents",
+       9000,
+       7500
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Par combien le nombre de visiteurs a-t-il été multiplié en dix ans ?",
+     "reponse": 2.5,
+     "unite": "fois",
+     "aide": "Divise le nombre de visiteurs d’aujourd’hui par celui d’il y a dix ans.",
+     "explication": "2 000 ÷ 800 = **2,5** : le nombre de visiteurs a été multiplié par 2,5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants permanents Marsane a-t-elle perdus en dix ans ?",
+     "reponse": 1500,
+     "unite": "habitants",
+     "aide": "Compare les deux colonnes de la ligne « Habitants permanents ».",
+     "explication": "9 000 − 7 500 = **1 500** habitants de moins : le tourisme chasse une partie des résidents."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui illustre la transformation d’un commerce de quartier sous l’effet du tourisme.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche ce qui remplace la boulangerie dans la dernière phrase.",
+     "explication": "La boutique de **souvenirs** remplace le commerce du quotidien : c’est un effet du surtourisme sur la vie du quartier."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel phénomène du cours Marsane illustre-t-elle ?",
+     "options": [
+      "Le surtourisme : une fréquentation excessive qui chasse les habitants",
+      "Le tourisme intérieur massif des habitants de la ville",
+      "La création d’un hub aérien international pour toute la région",
+      "La diversification d’une économie fondée sur la rente pétrolière"
+     ],
+     "reponse": 0,
+     "aide": "Plusieurs indices : visiteurs bien plus nombreux que les habitants, loyers qui flambent, habitants partis.",
+     "explication": "Fréquentation excessive, hausse des loyers et départ des habitants : c’est le **surtourisme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison des emplois et des habitants ?",
+     "options": [
+      "Le tourisme crée des emplois mais peut faire partir une partie des résidents",
+      "Le tourisme n’a créé aucun emploi et n’a pas changé le nombre d’habitants",
+      "Le nombre d’emplois a baissé alors que celui des habitants a augmenté",
+      "Le tourisme n’est la cause d’aucun changement visible dans la ville"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les lignes « Emplois » et « Habitants permanents » : l’une monte, l’autre baisse.",
+     "explication": "Les emplois liés au tourisme **doublent**, mais la ville perd des habitants : les apports et les coûts coexistent."
+    }
+   ]
+  },
+  {
+   "chapitre": "96cafc7e-c18b-5699-b777-565c317a5a4b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trois routes de la Méditerranée",
+   "competence": "lire-carte",
+   "situation": "Un journaliste prépare un reportage sur les migrations en Méditerranée. Il doit retrouver, sur une carte, les trois grandes routes qui traversent le bassin.",
+   "documents": [
+    {
+     "id": "routes",
+     "type": "carte",
+     "titre": "Trois routes migratoires",
+     "source": "Schéma : les flèches relient des régions, elles ne tracent pas des itinéraires exacts.",
+     "fond": "mediterranee",
+     "cadrage": [
+      -10,
+      27,
+      34,
+      46
+     ],
+     "frontieres": true,
+     "etiquettes": [
+      {
+       "texte": "Maroc",
+       "lon": -5.5,
+       "lat": 32,
+       "style": "pays"
+      },
+      {
+       "texte": "Algérie",
+       "lon": 3,
+       "lat": 31.5,
+       "style": "pays"
+      },
+      {
+       "texte": "Tunisie",
+       "lon": 9.3,
+       "lat": 34,
+       "style": "pays"
+      },
+      {
+       "texte": "Libye",
+       "lon": 17,
+       "lat": 30.8,
+       "style": "pays"
+      },
+      {
+       "texte": "Espagne",
+       "lon": -3.5,
+       "lat": 40,
+       "style": "pays"
+      },
+      {
+       "texte": "Italie",
+       "lon": 10.6,
+       "lat": 43.3,
+       "style": "pays"
+      },
+      {
+       "texte": "Grèce",
+       "lon": 22,
+       "lat": 39.8,
+       "style": "pays"
+      },
+      {
+       "texte": "Turquie",
+       "lon": 32,
+       "lat": 38.7,
+       "style": "pays"
+      }
+     ],
+     "traits": [
+      {
+       "id": "occidentale",
+       "points": [
+        "rabat",
+        "seville"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "centrale",
+       "points": [
+        [
+         12,
+         33.2
+        ],
+        [
+         13.8,
+         37
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "orientale",
+       "points": [
+        [
+         27.1,
+         38.4
+        ],
+        "athenes"
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "routes",
+     "enonce": "Touche la route qui mène de la Libye et de la Tunisie vers l’Italie et Malte.",
+     "reponse": [
+      "centrale"
+     ],
+     "aide": "Cherche la flèche qui part de l’Afrique du Nord et traverse le centre de la mer.",
+     "explication": "C’est la **route centrale**, la plus meurtrière de la Méditerranée."
+    },
+    {
+     "type": "zone",
+     "document": "routes",
+     "enonce": "Touche la route qui mène de la Turquie vers la Grèce.",
+     "reponse": [
+      "orientale"
+     ],
+     "aide": "Elle se trouve à l’est du bassin.",
+     "explication": "C’est la **route orientale** : de la Turquie vers la Grèce, puis les Balkans."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque route à son tracé.",
+     "paires": [
+      [
+       "Route occidentale",
+       "Du Maroc vers l’Espagne"
+      ],
+      [
+       "Route centrale",
+       "De la Libye et de la Tunisie vers l’Italie"
+      ],
+      [
+       "Route orientale",
+       "De la Turquie vers la Grèce"
+      ]
+     ],
+     "aide": "Les trois noms indiquent la position de la route dans le bassin : ouest, centre, est.",
+     "explication": "Occidentale : **Maroc → Espagne**. Centrale : **Libye et Tunisie → Italie et Malte**. Orientale : **Turquie → Grèce**."
+    }
+   ]
+  },
+  {
+   "chapitre": "96cafc7e-c18b-5699-b777-565c317a5a4b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une nuit sur un navire de sauvetage",
+   "competence": "analyser-texte",
+   "situation": "Un écart de richesse sépare les deux rives de la Méditerranée. Un récit imaginé montre les acteurs que cet écart met en mouvement, et un graphique donne des ordres de grandeur.",
+   "documents": [
+    {
+     "id": "pib",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Richesse par habitant de six pays",
+     "source": "Ordres de grandeur arrondis du PIB par habitant, vers 2022.",
+     "categories": [
+      "France",
+      "Espagne",
+      "Grèce",
+      "Turquie",
+      "Maroc",
+      "Égypte"
+     ],
+     "series": [
+      {
+       "nom": "PIB par habitant",
+       "valeurs": [
+        40,
+        30,
+        20,
+        10,
+        4,
+        4
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "PIB par habitant",
+      "unite": "en milliers de dollars",
+      "min": 0,
+      "max": 45,
+      "pas": 5
+     },
+     "valeurs": false
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Journal de bord",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "À 3 h du matin, l’équipage du navire d’une ONG de sauvetage repère un canot surchargé, parti de la côte libyenne.",
+      "À bord, 48 personnes : elles ont payé des [[p|passeurs]], qui les ont abandonnées en mer dès le départ.",
+      "Les garde-côtes italiens sont prévenus par radio. Ils désignent le port où les rescapés pourront débarquer."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le PIB par habitant de la France dépasse-t-il celui du Maroc ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Lis les deux barres : 40 milliers de dollars contre combien ?",
+     "explication": "40 ÷ 4 = **10** : c’est le rapport « de un à dix » du cours."
+    },
+    {
+     "type": "zone",
+     "document": "pib",
+     "enonce": "Touche les deux pays dont la richesse par habitant est la plus faible.",
+     "reponse": [
+      "k4",
+      "k5"
+     ],
+     "multiple": true,
+     "aide": "Cherche les deux barres les plus courtes.",
+     "explication": "Le **Maroc** et l’**Égypte** (4 000 dollars environ par habitant) ont les plus faibles revenus de ces six pays."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui désigne ceux qui ont organisé la traversée.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Ils ont été payés par les passagers, puis les ont abandonnés.",
+     "explication": "Les **passeurs** organisent la traversée, et exploitent les migrants."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur du récit à son rôle.",
+     "paires": [
+      [
+       "L’équipage du navire d’une ONG",
+       "Il secourt les passagers en mer"
+      ],
+      [
+       "Les passeurs",
+       "Ils organisent la traversée et exploitent les migrants"
+      ],
+      [
+       "Les garde-côtes italiens",
+       "Ils contrôlent et désignent le port de débarquement"
+      ]
+     ],
+     "aide": "Relis le récit : chaque acteur y fait une action précise.",
+     "explication": "L’**ONG secourt**, les **passeurs organisent et exploitent**, les **garde-côtes contrôlent** et indiquent le port."
+    }
+   ]
+  },
+  {
+   "chapitre": "96cafc7e-c18b-5699-b777-565c317a5a4b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fermer une route, en ouvrir une autre",
+   "competence": "analyser-document",
+   "situation": "Un institut imaginaire compte, année après année, les traversées sur deux routes de la Méditerranée. Deux responsables commentent ces chiffres.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Arrivées par route",
+     "source": "Chiffres imaginés pour l’exercice, en milliers de personnes.",
+     "categories": [
+      "Année 1",
+      "Année 2",
+      "Année 3",
+      "Année 4"
+     ],
+     "series": [
+      {
+       "nom": "Route centrale",
+       "valeurs": [
+        100,
+        70,
+        50,
+        30
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Route occidentale",
+       "valeurs": [
+        20,
+        30,
+        50,
+        70
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Arrivées",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "propos",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux points de vue",
+     "source": "Propos imaginés pour l’exercice.",
+     "blocs": [
+      "Un responsable d’un pays d’accueil : « Nous avons renforcé le contrôle sur la route centrale, et les arrivées y ont baissé. »",
+      "Une responsable d’ONG : « Les traversées ne s’arrêtent pas, elles [[r|changent]] de route, et les nouveaux passages sont souvent plus dangereux. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbes",
+     "enonce": "Touche l’année où les deux routes reçoivent autant d’arrivées.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point où les deux courbes se croisent.",
+     "explication": "En **année 3**, les deux routes comptent 50 000 arrivées : c’est le point où les courbes se croisent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le total des arrivées sur les deux routes a-t-il baissé entre l’année 1 et l’année 4, en milliers ?",
+     "reponse": 20,
+     "unite": "milliers",
+     "aide": "Additionne les deux routes pour l’année 1, puis pour l’année 4.",
+     "explication": "Année 1 : 100 + 20 = 120. Année 4 : 30 + 70 = 100. 120 − 100 = **20 milliers** de moins : la baisse sur la route centrale est largement compensée ailleurs."
+    },
+    {
+     "type": "zone",
+     "document": "propos",
+     "enonce": "Touche le mot de la responsable d’ONG qui dit que les flux se déplacent.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche le verbe qui s’applique à la route.",
+     "explication": "Les traversées **changent** de route : fermer une route n’en supprime pas le besoin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ensemble les deux documents ?",
+     "options": [
+      "Fermer une route déplace les flux vers une autre sans les supprimer",
+      "Fermer une route a fait disparaître les traversées en Méditerranée",
+      "Les arrivées ont augmenté partout après le renforcement des contrôles",
+      "Le contrôle d’une route n’a aucun effet sur les autres routes"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’évolution des deux courbes : l’une baisse, l’autre monte.",
+     "explication": "La route centrale baisse, la route occidentale monte : les flux **se reportent**, ce qui allonge et renchérit les trajets sans les supprimer."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc1cc4e3-d1f4-5586-8d21-13751f2eaef4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où vont les habitants d’une commune chaque semaine ?",
+   "competence": "lire-graphique",
+   "situation": "Dans une commune périurbaine imaginaire, la mairie a compté les déplacements de ses habitants pour décider où investir dans les transports.",
+   "documents": [
+    {
+     "id": "motifs",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les motifs de déplacement des habitants",
+     "source": "Répartition imaginée pour l’exercice.",
+     "categories": [
+      "Domicile-travail",
+      "Domicile-études",
+      "Achats",
+      "Loisirs"
+     ],
+     "series": [
+      {
+       "nom": "Part des déplacements",
+       "valeurs": [
+        40,
+        15,
+        25,
+        20
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "motifs",
+     "enonce": "Touche le motif qui représente le plus de déplacements.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur du graphique.",
+     "explication": "Les trajets **domicile-travail** (40 %) sont le premier motif de déplacement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des déplacements correspond aux trajets contraints, c’est-à-dire au travail et aux études ?",
+     "reponse": 55,
+     "unite": "%",
+     "aide": "Additionne les deux secteurs « Domicile-travail » et « Domicile-études ».",
+     "explication": "40 + 15 = **55 %** : plus de la moitié des déplacements sont des trajets quotidiens contraints."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est exacte d’après le graphique ?",
+     "options": [
+      "Les trajets pour le travail et les études dépassent la moitié des déplacements",
+      "Les loisirs sont le premier motif de déplacement des habitants",
+      "Les achats sont plus fréquents que les trajets domicile-travail",
+      "Les trajets domicile-études sont plus nombreux que ceux vers le travail"
+     ],
+     "reponse": 0,
+     "aide": "Compare les parts : additionne si besoin.",
+     "explication": "Le travail et les études réunis font **55 %** des déplacements : plus de la moitié."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc1cc4e3-d1f4-5586-8d21-13751f2eaef4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Toutes les lignes mènent à Paris",
+   "competence": "lire-carte",
+   "situation": "Un cabinet d’aménagement étudie le réseau de grande vitesse. Sur son schéma, les lignes à grande vitesse partent toutes de la capitale, et une seule liaison relie deux villes de province.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "carte",
+     "titre": "Le réseau ferroviaire à grande vitesse (schéma)",
+     "source": "Schéma : les lignes sont rectilignes, elles ne reproduisent pas le tracé exact.",
+     "fond": "france",
+     "fleuves": false,
+     "lieux": [
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "point",
+       "nom": "Paris"
+      },
+      {
+       "id": "lyon",
+       "lieu": "lyon",
+       "symbole": "point",
+       "nom": "Lyon"
+      },
+      {
+       "id": "marseille",
+       "lieu": "marseille",
+       "symbole": "point",
+       "nom": "Marseille"
+      },
+      {
+       "id": "bordeaux",
+       "lieu": "bordeaux",
+       "symbole": "point",
+       "nom": "Bordeaux"
+      },
+      {
+       "id": "lille",
+       "lieu": "lille",
+       "symbole": "point",
+       "nom": "Lille"
+      },
+      {
+       "id": "aurillac",
+       "lieu": "aurillac",
+       "symbole": "point",
+       "nom": "Aurillac"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        "paris",
+        "lyon",
+        "marseille"
+       ],
+       "style": "ligne",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "points": [
+        "paris",
+        "bordeaux"
+       ],
+       "style": "ligne",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "points": [
+        "paris",
+        "lille"
+       ],
+       "style": "ligne",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "transv",
+       "points": [
+        "bordeaux",
+        "lyon"
+       ],
+       "style": "pointilles",
+       "teinte": "violet",
+       "epaisseur": 2
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche la ville vers laquelle convergent presque toutes les lignes.",
+     "reponse": [
+      "paris"
+     ],
+     "aide": "Une seule ville est le point de départ de plusieurs lignes en éventail.",
+     "explication": "**Paris** est le centre d’un réseau radial : autoroutes, LGV et réseau ferré convergent vers la capitale."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche la liaison transversale, qui relie deux villes de province sans passer par Paris.",
+     "reponse": [
+      "transv"
+     ],
+     "aide": "C’est la seule liaison qui ne part pas de la capitale.",
+     "explication": "La liaison **Bordeaux – Lyon** est transversale : de province à province, elle est lente."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche la ville laissée à l’écart de ces lignes à grande vitesse.",
+     "reponse": [
+      "aurillac"
+     ],
+     "aide": "Une seule ville du schéma n’est touchée par aucune ligne.",
+     "explication": "**Aurillac** n’est desservie par aucune ligne à grande vitesse : la grande vitesse met à l’écart les territoires non desservis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment qualifie-t-on l’organisation de ce réseau ?",
+     "options": [
+      "Radiale, centrée sur Paris",
+      "En damier, avec des liaisons partout",
+      "En anneau autour de la capitale",
+      "Linéaire, d’un littoral à l’autre"
+     ],
+     "reponse": 0,
+     "aide": "Les lignes partent de Paris comme les rayons d’une roue.",
+     "explication": "Le réseau est **radial** : « en étoile », avec Paris au centre."
+    }
+   ]
+  },
+  {
+   "chapitre": "fc1cc4e3-d1f4-5586-8d21-13751f2eaef4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quarante kilomètres pour aller travailler",
+   "competence": "calculer",
+   "situation": "Maëlle travaille dans une métropole, à 40 km de chez elle. Avec les données de sa situation, tu vas calculer ce que ce trajet lui coûte, puis ce que le télétravail et les nouveaux aménagements changeraient.",
+   "documents": [
+    {
+     "id": "maelle",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le quotidien de Maëlle",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Maëlle habite un village périurbain, à 40 km de la métropole où elle travaille. Il n’y a ni gare ni car aux bonnes heures : elle n’a pas d’autre choix que la [[v|voiture]].",
+      "Quand le prix du carburant monte, son budget en souffre : on dit de ces ménages qu’ils sont vulnérables à la mobilité."
+     ]
+    },
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Les données de Maëlle",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Distance domicile-travail (aller)",
+       "40 km"
+      ],
+      [
+       "Jours travaillés par mois",
+       "20"
+      ],
+      [
+       "Consommation de sa voiture",
+       "6 litres aux 100 km"
+      ],
+      [
+       "Prix du carburant",
+       "1,75 € le litre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maelle",
+     "enonce": "Touche le mot qui montre que Maëlle n’a pas d’alternative aux transports collectifs.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche le moyen de transport qu’elle est obligée d’utiliser.",
+     "explication": "Faute de gare et de car, c’est la **voiture** qui domine dans les espaces peu denses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de kilomètres Maëlle parcourt-elle en un mois pour aller travailler et rentrer chez elle ?",
+     "reponse": 1600,
+     "unite": "km",
+     "aide": "Un aller-retour fait 2 × 40 km ; multiplie par le nombre de jours travaillés.",
+     "explication": "40 × 2 × 20 = **1 600 km** par mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’euros dépense-t-elle en carburant chaque mois pour ces trajets ?",
+     "reponse": 168,
+     "unite": "euros",
+     "aide": "Calcule d’abord les litres consommés (1 600 km à 6 L aux 100 km), puis multiplie par le prix.",
+     "explication": "1 600 × 6 ÷ 100 = 96 litres ; 96 × 1,75 = **168 euros** par mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si Maëlle télétravaille 2 jours sur 5 (soit 8 jours par mois), combien de kilomètres économise-t-elle par mois ?",
+     "reponse": 640,
+     "unite": "km",
+     "aide": "Chaque jour de télétravail évite un aller-retour de 80 km.",
+     "explication": "8 × 80 = **640 km** de moins par mois : le télétravail réduit les déplacements sans nouvelle infrastructure."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque levier d’aménagement à son objet.",
+     "paires": [
+      [
+       "Les RER métropolitains",
+       "Les déplacements de masse"
+      ],
+      [
+       "Le covoiturage et les plans vélo",
+       "Les courtes distances"
+      ],
+      [
+       "La réouverture de petites lignes",
+       "Le désenclavement ferroviaire"
+      ],
+      [
+       "Le télétravail",
+       "La baisse du nombre de trajets"
+      ]
+     ],
+     "aide": "Chaque levier agit sur un type de déplacement différent.",
+     "explication": "RER : **déplacements de masse**. Covoiturage et vélo : **courtes distances**. Petites lignes : **désenclavement**. Télétravail : **moins de trajets**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f837d9fe-6056-5ec1-bb02-8fdac417942b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des déserts, une savane et un delta",
+   "competence": "lire-carte",
+   "situation": "Zodwa prépare un voyage dans l’Afrique australe. Sur la carte, quatre lieux sont repérés : un port du désert du Namib, un delta, une ville de la façade méditerranéenne et la métropole de l’intérieur.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre lieux d’Afrique australe",
+     "source": "Lieux repérés pour l’exercice.",
+     "fond": "monde",
+     "cadrage": [
+      8,
+      -38,
+      42,
+      -8
+     ],
+     "deserts": [
+      "namib",
+      "kalahari"
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "le-cap",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 22.9,
+       "lat": -19.3,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "johannesburg",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 14.5,
+       "lat": -22.95,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le port installé au bord du désert du Namib, sur la côte atlantique.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Le Namib borde l’océan Atlantique, à l’ouest de la carte.",
+     "explication": "Le lieu **D** est Walvis Bay, port de la Namibie, au bord du désert du Namib."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le delta intérieur de l’Okavango, célèbre pour son tourisme de nature.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le delta se trouve au nord du Kalahari, loin de toute côte.",
+     "explication": "Le lieu **B** est le delta de l’Okavango, au nord, loin de la mer : un delta intérieur."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville de la façade méditerranéenne, à l’extrémité sud-ouest du continent.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Une seule lettre est tout au sud-ouest de la carte.",
+     "explication": "Le lieu **A** est Le Cap, qui a un climat méditerranéen."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la position des déserts du Namib et du Kalahari, comment évoluent les précipitations ?",
+     "options": [
+      "Elles décroissent d’est en ouest",
+      "Elles décroissent d’ouest en est",
+      "Elles sont les mêmes partout",
+      "Elles décroissent du nord au sud"
+     ],
+     "reponse": 0,
+     "aide": "Les déserts sont à l’ouest du territoire.",
+     "explication": "Les déserts se trouvent à l’ouest : les précipitations **décroissent d’est en ouest**, et la ressource limitante est l’eau."
+    }
+   ]
+  },
+  {
+   "chapitre": "f837d9fe-6056-5ec1-bb02-8fdac417942b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au Cap, la pluie tombe l’hiver",
+   "competence": "lire-graphique",
+   "situation": "Le Cap, sur la façade méditerranéenne de l’Afrique du Sud, a connu en 2018 une crise majeure de l’eau. Le diagramme du climat de la ville aide à comprendre pourquoi l’eau y est fragile.",
+   "documents": [
+    {
+     "id": "climat",
+     "type": "graphique",
+     "forme": "climat",
+     "titre": "Le climat du Cap (Afrique du Sud)",
+     "source": "Moyennes mensuelles arrondies, ordres de grandeur.",
+     "categories": [
+      "J",
+      "F",
+      "M",
+      "A",
+      "M",
+      "J",
+      "J",
+      "A",
+      "S",
+      "O",
+      "N",
+      "D"
+     ],
+     "series": [
+      {
+       "nom": "Températures",
+       "valeurs": [
+        21,
+        21,
+        20,
+        18,
+        15,
+        13,
+        13,
+        13,
+        14,
+        17,
+        18,
+        20
+       ]
+      },
+      {
+       "nom": "Précipitations",
+       "valeurs": [
+        15,
+        17,
+        20,
+        41,
+        69,
+        93,
+        82,
+        77,
+        40,
+        30,
+        20,
+        14
+       ]
+      }
+     ]
+    },
+    {
+     "id": "crise",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une ville au bord du « jour zéro »",
+     "source": "Texte écrit pour l’exercice, d’après le cours.",
+     "blocs": [
+      "En 2018, Le Cap a connu une crise majeure de l’eau : après des années de [[s|sécheresse]], les barrages étaient presque vides.",
+      "Les autorités ont compté à rebours les jours avant le « jour zéro », où l’eau courante aurait pu être coupée."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "climat",
+     "enonce": "Touche le mois le plus arrosé au Cap.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche la plus haute barre de précipitations.",
+     "explication": "C’est **juin**, avec environ 93 mm : la pluie tombe en hiver (hémisphère Sud)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mois reçoivent moins de 25 mm de précipitations ?",
+     "reponse": 5,
+     "unite": "mois",
+     "aide": "Compte les barres inférieures à 25 mm, de novembre à mars.",
+     "explication": "Janvier, février, mars, novembre et décembre : **5 mois** secs, c’est l’été austral."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un tel climat rend-il l’approvisionnement en eau fragile ?",
+     "options": [
+      "L’été est très sec alors que la ville a besoin d’eau toute l’année",
+      "La pluie tombe en été, quand les barrages sont déjà pleins",
+      "Les températures baissent trop pour que l’eau reste liquide",
+      "Il pleut de la même façon chaque mois, sans réserve possible"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les mois d’été : la pluie y est presque absente.",
+     "explication": "La pluie est concentrée en **hiver** et l’été est sec : les barrages doivent servir toute l’année, et une sécheresse peut les vider."
+    },
+    {
+     "type": "zone",
+     "document": "crise",
+     "enonce": "Touche le mot qui explique pourquoi les barrages étaient presque vides.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche, dans la première phrase, l’événement climatique qui a duré plusieurs années.",
+     "explication": "Les **sécheresses** sont récurrentes en Afrique australe, et la variabilité d’une année à l’autre est forte."
+    }
+   ]
+  },
+  {
+   "chapitre": "f837d9fe-6056-5ec1-bb02-8fdac417942b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des mines de l’intérieur aux ports",
+   "competence": "analyser-document",
+   "situation": "Une société minière imaginaire exporte ses minerais d’Afrique australe vers l’Asie. La carte schématise ses corridors de transport ; le texte résume ses contraintes.",
+   "documents": [
+    {
+     "id": "corridors",
+     "type": "carte",
+     "titre": "Des corridors vers les ports",
+     "source": "Schéma : les corridors sont rectilignes, villes et ports repérés pour l’exercice.",
+     "fond": "monde",
+     "cadrage": [
+      10,
+      -35,
+      42,
+      -14
+     ],
+     "lieux": [
+      {
+       "id": "jo",
+       "lieu": "johannesburg",
+       "symbole": "point",
+       "nom": "Johannesburg"
+      },
+      {
+       "id": "durban",
+       "lon": 31.03,
+       "lat": -29.86,
+       "symbole": "point",
+       "nom": "Durban"
+      },
+      {
+       "id": "harare",
+       "lon": 31.05,
+       "lat": -17.83,
+       "symbole": "point",
+       "nom": "Harare"
+      },
+      {
+       "id": "beira",
+       "lon": 34.85,
+       "lat": -19.84,
+       "symbole": "point",
+       "nom": "Beira"
+      },
+      {
+       "id": "windhoek",
+       "lon": 17.08,
+       "lat": -22.56,
+       "symbole": "point"
+      },
+      {
+       "id": "walvis",
+       "lon": 14.5,
+       "lat": -22.95,
+       "symbole": "point"
+      }
+     ],
+     "etiquettes": [
+      {
+       "texte": "Walvis Bay",
+       "lon": 15.4,
+       "lat": -24.5,
+       "style": "ville"
+      }
+     ],
+     "traits": [
+      {
+       "id": "c1",
+       "points": [
+        "johannesburg",
+        [
+         31.03,
+         -29.86
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "c3",
+       "points": [
+        [
+         31.05,
+         -17.83
+        ],
+        [
+         34.85,
+         -19.84
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "id": "c4",
+       "points": [
+        [
+         17.08,
+         -22.56
+        ],
+        [
+         14.5,
+         -22.95
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "epaisseur": 2
+      }
+     ]
+    },
+    {
+     "id": "mines",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les minerais de la région",
+     "source": "Texte écrit pour l’exercice, d’après le cours.",
+     "blocs": [
+      "L’Afrique du Sud extrait de l’or, du platine, du chrome et du charbon. Le Botswana tire sa richesse des diamants, la Zambie du cuivre, la Namibie de l’uranium.",
+      "Presque toutes ces mines sont à l’intérieur des terres : sans corridor jusqu’à un port, les minerais ne peuvent pas partir à l’exportation."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "corridors",
+     "enonce": "Touche le corridor qui relie l’intérieur du Zimbabwe au port mozambicain de Beira.",
+     "reponse": [
+      "c3"
+     ],
+     "aide": "Repère Beira sur la côte de l’océan Indien, et la flèche qui s’y termine.",
+     "explication": "Le corridor **Harare – Beira** relie l’intérieur du Zimbabwe à un port de l’océan Indien."
+    },
+    {
+     "type": "zone",
+     "document": "corridors",
+     "enonce": "Touche le corridor qui mène à un port de l’océan Atlantique.",
+     "reponse": [
+      "c4"
+     ],
+     "aide": "Les autres corridors vont vers la côte est.",
+     "explication": "Walvis Bay est un port **atlantique** de la Namibie : le corridor **Windhoek – Walvis Bay** ouvre la région à l’Atlantique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays à la ressource minière qui fait sa richesse.",
+     "paires": [
+      [
+       "Le Botswana",
+       "Les diamants"
+      ],
+      [
+       "La Zambie",
+       "Le cuivre"
+      ],
+      [
+       "La Namibie",
+       "L’uranium"
+      ],
+      [
+       "L’Afrique du Sud",
+       "L’or, le platine, le chrome et le charbon"
+      ]
+     ],
+     "aide": "Relis le premier paragraphe du texte.",
+     "explication": "Botswana : **diamants**. Zambie : **cuivre**. Namibie : **uranium**. Afrique du Sud : **or, platine, chrome, charbon**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les corridors de transport vont-ils des mines vers les ports ?",
+     "options": [
+      "Les minerais, extraits à l’intérieur, doivent partir par la mer",
+      "Les mines sont situées sur la côte, près des ports",
+      "Les ports fournissent l’eau dont les mines ont besoin",
+      "Les touristes utilisent ces corridors pour aller aux mines"
+     ],
+     "reponse": 0,
+     "aide": "Où sont situées les mines, d’après le second paragraphe ?",
+     "explication": "Les mines de l’intérieur sont reliées aux ports par les **corridors** : c’est par la mer que les minerais partent à l’exportation."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8362455-18b6-520a-b812-4d9810fa2ce2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une région d’écarts",
+   "competence": "lire-tableau",
+   "situation": "Dans une classe, Nomvula compare six pays d’Afrique australe : un géant économique côtoie quelques-uns des pays les plus pauvres du monde.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Le niveau de développement de six pays",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Pays",
+      "Sa position"
+     ],
+     "lignes": [
+      [
+       "Afrique du Sud",
+       "Une large part du PIB régional : industrie, mines, finance, services"
+      ],
+      [
+       "Botswana",
+       "Un revenu par habitant intermédiaire"
+      ],
+      [
+       "Namibie",
+       "Un revenu par habitant intermédiaire"
+      ],
+      [
+       "Mozambique",
+       "Parmi les pays les plus pauvres du monde"
+      ],
+      [
+       "Malawi",
+       "Parmi les pays les plus pauvres du monde"
+      ],
+      [
+       "Zimbabwe",
+       "Parmi les pays les plus pauvres du monde"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche le pays qui domine économiquement l’Afrique australe.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Il concentre une large part du PIB régional.",
+     "explication": "L’**Afrique du Sud** produit une large part du PIB de la région : c’est le pays le plus industrialisé du continent."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque pays dans sa catégorie de développement.",
+     "categories": [
+      "Poids dominant",
+      "Revenu intermédiaire",
+      "Parmi les plus pauvres"
+     ],
+     "items": [
+      [
+       "Afrique du Sud",
+       0
+      ],
+      [
+       "Botswana",
+       1
+      ],
+      [
+       "Namibie",
+       1
+      ],
+      [
+       "Mozambique",
+       2
+      ],
+      [
+       "Malawi",
+       2
+      ],
+      [
+       "Zimbabwe",
+       2
+      ]
+     ],
+     "aide": "Relis la colonne de droite de chaque ligne.",
+     "explication": "Afrique du Sud : **poids dominant**. Botswana et Namibie : **revenu intermédiaire**. Mozambique, Malawi, Zimbabwe : **parmi les plus pauvres**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce tableau pour l’ensemble de la région ?",
+     "options": [
+      "Des niveaux de développement très inégaux",
+      "Un niveau de développement partout équivalent",
+      "Une région uniformément parmi les plus riches",
+      "Une région uniformément parmi les plus pauvres"
+     ],
+     "reponse": 0,
+     "aide": "Compare la première ligne avec les trois dernières.",
+     "explication": "Le pays le plus industrialisé du continent côtoie des pays parmi les plus pauvres du monde : l’Afrique australe est une **région d’écarts**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8362455-18b6-520a-b812-4d9810fa2ce2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ségrégation d’hier, quartiers d’aujourd’hui",
+   "competence": "se-reperer-temps",
+   "situation": "Thandi habite Kwamoya, une ville sud-africaine imaginaire. Pour comprendre pourquoi son quartier et celui de sa cousine sont si différents, elle replace l’histoire dans le temps.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’Afrique du Sud depuis 1940",
+     "source": "Dates du cours.",
+     "debut": 1940,
+     "fin": 2000,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "apartheid",
+       "debut": 1948,
+       "fin": 1991,
+       "nom": "Apartheid",
+       "teinte": "brun"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "debut",
+       "date": 1948,
+       "nom": "Début de l’apartheid"
+      },
+      {
+       "id": "mandela",
+       "date": 1994,
+       "nom": "Élection de Mandela"
+      }
+     ]
+    },
+    {
+     "id": "villes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux quartiers de Kwamoya",
+     "source": "Texte écrit pour l’exercice ; ville imaginaire.",
+     "blocs": [
+      "Thandi vit dans un [[t|township]], un quartier périphérique pauvre où l’eau et l’électricité sont irrégulières. Le travail est à une heure de bus.",
+      "Sa cousine habite à quelques kilomètres, dans un quartier fermé, avec des rues gardées et des jardins."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période pendant laquelle la ségrégation était légale en Afrique du Sud.",
+     "reponse": [
+      "apartheid"
+     ],
+     "aide": "Cherche la période colorée de la frise.",
+     "explication": "Sous l’**apartheid** (1948-1991), les populations étaient séparées par la loi : accès inégal à la terre, à l’école, à l’emploi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années la ségrégation légale a-t-elle duré, de 1948 à 1991 ?",
+     "reponse": 43,
+     "unite": "ans",
+     "aide": "Soustrais la date de début à la date de fin de la période.",
+     "explication": "1991 − 1948 = **43 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche le mot qui désigne un quartier périphérique pauvre, hérité de la ségrégation.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "Le premier paragraphe décrit l’endroit où vit Thandi.",
+     "explication": "Un **township** est un quartier périphérique pauvre, hérité de l’apartheid."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ces deux quartiers sont-ils encore si différents après l’élection de Nelson Mandela en 1994 ?",
+     "options": [
+      "Une ségrégation s’abolit en un jour, mais sa géographie met des générations à s’effacer",
+      "La ségrégation légale n’a jamais été abolie, elle est restée en vigueur",
+      "Les townships ont été détruits en 1994 et reconstruits en quartiers fermés",
+      "Les deux quartiers ont toujours reçu les mêmes services publics"
+     ],
+     "reponse": 0,
+     "aide": "La loi a changé en 1991 et 1994, mais la ville construite pendant l’apartheid, elle, est restée.",
+     "explication": "La loi change vite, pas la **géographie** : townships et quartiers fermés perdurent, et le pays reste parmi les plus inégalitaires du monde."
+    }
+   ]
+  },
+  {
+   "chapitre": "c8362455-18b6-520a-b812-4d9810fa2ce2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un ministre, quatre problèmes, quatre leviers",
+   "competence": "argumenter",
+   "situation": "La ministre du développement d’un pays imaginaire d’Afrique australe reçoit quatre dossiers. Pour chacun, elle doit choisir le levier le mieux adapté, à l’aide de deux tableaux : les défis et les leviers de la région.",
+   "documents": [
+    {
+     "id": "defis",
+     "type": "tableau",
+     "titre": "Les défis communs",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le défi",
+      "Son contenu"
+     ],
+     "lignes": [
+      [
+       "Le chômage des jeunes",
+       "Massif"
+      ],
+      [
+       "L’économie informelle",
+       "Sans protection ni cotisation"
+      ],
+      [
+       "La dépendance aux matières premières",
+       "Donc aux cours mondiaux"
+      ],
+      [
+       "L’endettement et la corruption",
+       "Une marge de manœuvre réduite"
+      ],
+      [
+       "L’épidémie de VIH",
+       "Elle a lourdement pesé sur l’espérance de vie"
+      ],
+      [
+       "Les réseaux d’électricité et d’eau",
+       "Insuffisants"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "leviers",
+     "type": "tableau",
+     "titre": "Les leviers",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le levier",
+      "Son apport"
+     ],
+     "lignes": [
+      [
+       "L’intégration régionale par la SADC",
+       "Un marché élargi"
+      ],
+      [
+       "La zone de libre-échange continentale africaine",
+       "Des débouchés"
+      ],
+      [
+       "Les investissements chinois et européens",
+       "Des infrastructures"
+      ],
+      [
+       "La transition vers le solaire et l’éolien",
+       "Une électricité moins dépendante du charbon"
+      ],
+      [
+       "Industrialisation, formation, gouvernance",
+       "La valeur ajoutée locale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "defis",
+     "enonce": "Touche le défi qui a lourdement pesé sur l’espérance de vie de la région.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "C’est un problème sanitaire.",
+     "explication": "L’**épidémie de VIH** a lourdement pesé sur l’espérance de vie."
+    },
+    {
+     "type": "zone",
+     "document": "leviers",
+     "enonce": "Touche le levier qui permet de moins dépendre du charbon.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Il concerne des énergies renouvelables.",
+     "explication": "La transition vers le **solaire et l’éolien** réduit la dépendance au charbon, très forte en Afrique du Sud."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dossier de la ministre au levier le mieux adapté.",
+     "paires": [
+      [
+       "Un pays qui exporte seulement du minerai brut",
+       "Industrialisation, formation, gouvernance"
+      ],
+      [
+       "Des producteurs qui manquent de débouchés",
+       "Un marché élargi par l’intégration régionale"
+      ],
+      [
+       "Des routes, des barrages et des réseaux insuffisants",
+       "Des investissements étrangers pour les infrastructures"
+      ],
+      [
+       "Des coupures d’électricité fréquentes à cause du charbon",
+       "Le solaire et l’éolien"
+      ]
+     ],
+     "aide": "Reprends l’apport de chaque levier, dans la colonne de droite du tableau.",
+     "explication": "Minerai brut : **valeur ajoutée locale**. Débouchés : **marché élargi**. Infrastructures : **investissements**. Électricité : **solaire et éolien**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la ministre cite-t-elle souvent le Botswana en exemple ?",
+     "options": [
+      "Parce que ce pays a su bien administrer sa rente minière",
+      "Parce que ce pays n’a aucune ressource minière à exporter",
+      "Parce que ce pays est le plus industrialisé du continent",
+      "Parce que ce pays a mis fin à la dépendance aux matières premières"
+     ],
+     "reponse": 0,
+     "aide": "Le Botswana tire sa richesse des diamants.",
+     "explication": "Le **Botswana** est souvent cité comme exemple de rente minière bien administrée : la gouvernance compte autant que la ressource."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d1756e1-21f4-5d4b-9059-10e1605c5e9c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Thabo part pour les mines d’or",
+   "competence": "analyser-texte",
+   "situation": "Thabo vit dans un village du Lesotho. Comme beaucoup d’hommes de sa région, il part travailler dans les mines d’or d’Afrique du Sud.",
+   "documents": [
+    {
+     "id": "thabo",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’histoire de Thabo",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Thabo a 22 ans. Chaque année, il quitte son village du Lesotho pour les mines d’or du [[w|Witwatersrand]], en Afrique du Sud, où il signe un contrat de neuf mois.",
+      "Sur place, il est logé avec des centaines d’autres mineurs dans des [[c|compounds]], loin de sa famille. Il envoie une partie de son salaire à ses parents."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "thabo",
+     "enonce": "Touche le nom de la région où se trouvent les mines d’or qui attirent les travailleurs depuis la fin du XIXe siècle.",
+     "reponse": [
+      "w"
+     ],
+     "aide": "C’est un nom propre dans la première phrase.",
+     "explication": "Le **Witwatersrand** est la région des mines d’or d’Afrique du Sud, qui attire la main-d’œuvre depuis la fin du XIXe siècle."
+    },
+    {
+     "type": "zone",
+     "document": "thabo",
+     "enonce": "Touche le mot qui désigne le logement collectif des travailleurs migrants dans les mines.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche le lieu où Thabo dort avec des centaines de mineurs.",
+     "explication": "Les **compounds** font partie du système du travail migrant, qui organise la circulation de la main-d’œuvre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mois par an Thabo passe-t-il dans son village du Lesotho ?",
+     "reponse": 3,
+     "unite": "mois",
+     "aide": "Il passe neuf mois à la mine sur les douze mois de l’année.",
+     "explication": "12 − 9 = **3 mois** par an auprès de sa famille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’histoire de Thabo sur la géographie actuelle de la région ?",
+     "options": [
+      "Cette circulation ancienne explique encore la géographie du peuplement",
+      "Les mines ont fait disparaître toute migration de travail dans la région",
+      "Les migrants s’installent aujourd’hui uniquement dans les campagnes",
+      "Les travailleurs du Lesotho ne quittent jamais leur pays pour travailler"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase du cours sur l’héritage minier.",
+     "explication": "Les mines ont organisé de grandes migrations : cette **circulation ancienne** explique encore la géographie du peuplement."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d1756e1-21f4-5d4b-9059-10e1605c5e9c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’où viennent les migrants de Johannesburg ?",
+   "competence": "analyser-document",
+   "situation": "Une association de Johannesburg a interrogé des migrants installés dans la métropole. Son enquête, imaginée ici, éclaire une réalité que le cours résume : l’Afrique du Sud attire, mais elle inquiète aussi.",
+   "documents": [
+    {
+     "id": "origines",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Pays d’origine des migrants interrogés",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Zimbabwe",
+      "Mozambique",
+      "Lesotho",
+      "Malawi",
+      "Autres"
+     ],
+     "series": [
+      {
+       "nom": "Part des migrants",
+       "valeurs": [
+        40,
+        25,
+        15,
+        10,
+        10
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des migrants interrogés",
+      "unite": "en %",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     }
+    },
+    {
+     "id": "temoignage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un quartier de Johannesburg",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Dans un quartier de Johannesburg, des commerçants venus des pays voisins tiennent de petits magasins. Ils font vivre leur famille et fournissent des services à leurs clients.",
+      "En 2008 et en 2015, des violences [[x|xénophobes]] ont visé des étrangers, dans un contexte de concurrence pour l’emploi."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "origines",
+     "enonce": "Touche le pays d’origine le plus fréquent parmi les migrants interrogés.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le **Zimbabwe** (40 %) est le premier pays d’origine, devant le Mozambique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des migrants interrogés vient du Zimbabwe ou du Mozambique ?",
+     "reponse": 65,
+     "unite": "%",
+     "aide": "Additionne les deux premières barres.",
+     "explication": "40 + 25 = **65 %** : les deux pays sont les premières sources de migrants, comme le dit le cours."
+    },
+    {
+     "type": "zone",
+     "document": "temoignage",
+     "enonce": "Touche le mot qui désigne les violences dirigées contre des étrangers.",
+     "reponse": [
+      "x"
+     ],
+     "aide": "C’est un adjectif du second paragraphe.",
+     "explication": "Les violences **xénophobes** de 2008 et 2015 ont révélé une tension sociale liée à la concurrence pour l’emploi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase résume le mieux les deux documents ?",
+     "options": [
+      "L’Afrique du Sud attire les migrants de la région, mais leur présence suscite des tensions",
+      "L’Afrique du Sud attire les migrants de la région, et cela ne suscite aucune tension",
+      "Les migrants quittent l’Afrique du Sud, qui n’offre ni emploi ni commerce",
+      "Les migrants de la région viennent tous d’un seul pays voisin"
+     ],
+     "reponse": 0,
+     "aide": "Un document parle d’origines, l’autre de ce que l’accueil produit.",
+     "explication": "L’Afrique du Sud est un **pôle d’attraction** régional, mais l’arrivée des migrants alimente aussi des tensions : « terre promise » et territoire où l’on redoute celui qui arrive."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d1756e1-21f4-5d4b-9059-10e1605c5e9c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre voyageurs, quatre mobilités",
+   "competence": "se-reperer-temps",
+   "situation": "Mpho, Joaquim, Sophie et Nomsa traversent les frontières d’Afrique australe pour des raisons très différentes. Une frise replace dans le temps ce qui a façonné ces mobilités.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques repères autour de Johannesburg",
+     "source": "Dates du cours et de l’histoire de la région.",
+     "debut": 1880,
+     "fin": 2020,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "or",
+       "date": 1886,
+       "nom": "Ruée vers l’or"
+      },
+      {
+       "id": "apartheid",
+       "date": 1948,
+       "nom": "Début de l’apartheid"
+      },
+      {
+       "id": "mandela",
+       "date": 1994,
+       "nom": "Élection de Mandela"
+      },
+      {
+       "id": "xeno",
+       "date": 2008,
+       "nom": "Violences xénophobes"
+      }
+     ]
+    },
+    {
+     "id": "voyageurs",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Quatre voyageurs",
+     "source": "Portraits imaginés pour l’exercice.",
+     "blocs": [
+      "Mpho prépare un diplôme d’ingénieure dans une université sud-africaine : elle a quitté son pays pour étudier.",
+      "Joaquim vend des produits au marché, le long d’un corridor : chaque semaine, il passe la frontière sans déclarer ses marchandises.",
+      "Sophie, touriste européenne, passe une semaine de safari dans un parc national du nord de la région.",
+      "Nomsa travaille à Johannesburg et envoie chaque mois de l’argent à sa mère restée au Lesotho."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "La ruée vers l’or",
+      "Le début de l’apartheid",
+      "L’élection de Mandela",
+      "Les violences xénophobes de 2008"
+     ],
+     "aide": "Lis les dates sur la frise, de gauche à droite.",
+     "explication": "Ruée vers l’or (**1886**) → début de l’apartheid (**1948**) → élection de Mandela (**1994**) → violences xénophobes (**2008**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la ruée vers l’or de l’élection de Nelson Mandela ?",
+     "reponse": 108,
+     "unite": "ans",
+     "aide": "Soustrais la date de la ruée vers l’or à celle de l’élection.",
+     "explication": "1994 − 1886 = **108 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui a révélé des tensions sociales liées à la concurrence pour l’emploi.",
+     "reponse": [
+      "xeno"
+     ],
+     "aide": "Il s’agit de violences contre des étrangers.",
+     "explication": "Les **violences xénophobes** de 2008 (et de 2015) ont révélé ces tensions."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque voyageur à sa forme de mobilité.",
+     "paires": [
+      [
+       "Mpho",
+       "Mobilité étudiante"
+      ],
+      [
+       "Joaquim",
+       "Commerce transfrontalier informel"
+      ],
+      [
+       "Sophie",
+       "Tourisme international"
+      ],
+      [
+       "Nomsa",
+       "Remises de la diaspora"
+      ]
+     ],
+     "aide": "Pour chacun, cherche ce qui motive son déplacement.",
+     "explication": "Mpho : **mobilité étudiante**. Joaquim : **commerce transfrontalier informel**. Sophie : **tourisme international**. Nomsa : **remises** de la diaspora."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la ruée vers l’or de la fin du XIXe siècle explique-t-elle encore des mobilités actuelles ?",
+     "options": [
+      "Elle a fait de Johannesburg un pôle d’attraction qui draine la main-d’œuvre régionale",
+      "Elle a fixé toute la population régionale dans les campagnes depuis lors",
+      "Elle a interdit l’arrivée de travailleurs étrangers dans les villes minières",
+      "Elle a supprimé le commerce transfrontalier le long des grands corridors"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que la frise dit de Johannesburg et au rôle des mines dans le cours.",
+     "explication": "Les mines ont créé un **pôle d’attraction** autour de Johannesburg : cette circulation ancienne explique encore la géographie du peuplement."
+    }
+   ]
+  }
+ ]
+}

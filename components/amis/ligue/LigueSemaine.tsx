@@ -189,10 +189,12 @@ function ListeLigue({
     <div className="border-t border-border/70 pt-1">
       {/* La boîte qui défile, fondue en haut et en bas : on voit qu'il y a
           des joueurs au-delà. Le fondu est sur la boîte INTÉRIEURE, pour ne
-          pas effacer le filet qui la sépare de l'en-tête. */}
+          pas effacer le filet qui la sépare de l'en-tête. Hauteur : cinq
+          lignes et demie (ma ligne, deux au-dessus, deux au-dessous, une
+          demie qui invite à défiler) — à huit, la liste mangeait l'écran. */}
       <div
         ref={boite}
-        className="relative -mx-2 max-h-[27rem] overflow-y-auto overscroll-contain px-0.5 py-2 [mask-image:linear-gradient(to_bottom,transparent,black_14px,black_calc(100%-14px),transparent)] [scrollbar-width:thin]"
+        className="relative -mx-2 max-h-[17.5rem] overflow-y-auto overscroll-contain px-0.5 py-2 [mask-image:linear-gradient(to_bottom,transparent,black_14px,black_calc(100%-14px),transparent)] [scrollbar-width:thin]"
       >
         <ol aria-label={`Classement de la ligue ${echelon(index).nom}`} className="flex flex-col gap-0.5">
           {groupe.map((m) => {

@@ -1,0 +1,898 @@
+{
+ "niveau": "3e",
+ "matiere": "latin",
+ "exercices": [
+  {
+   "chapitre": "bd37ed59-9fb8-43c8-b2c8-55ab245e359c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq étapes pour préparer un discours",
+   "competence": "comprendre-langue",
+   "situation": "Julia doit défendre un camarade devant la classe, comme un avocat romain. Son professeur lui donne la recette de l’orateur : cinq étapes, dont une est cachée.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "titre": "La préparation d’un discours",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "inventio",
+       "texte": "inventio : trouver les idées",
+       "emoji": "💡"
+      },
+      {
+       "id": "dispositio",
+       "texte": "?",
+       "emoji": "🗂️"
+      },
+      {
+       "id": "elocutio",
+       "texte": "elocutio : choisir les mots",
+       "emoji": "✍️"
+      },
+      {
+       "id": "memoria",
+       "texte": "memoria : apprendre par cœur",
+       "emoji": "🧠"
+      },
+      {
+       "id": "actio",
+       "texte": "actio : parler devant le public",
+       "emoji": "🎤"
+      }
+     ],
+     "liens": [
+      {
+       "de": "inventio",
+       "a": "dispositio"
+      },
+      {
+       "de": "dispositio",
+       "a": "elocutio"
+      },
+      {
+       "de": "elocutio",
+       "a": "memoria"
+      },
+      {
+       "de": "memoria",
+       "a": "actio"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape se cache derrière le « ? » : mettre les idées en ordre ?",
+     "options": [
+      "dispositio",
+      "memoria",
+      "actio",
+      "elocutio"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les trois autres noms sont déjà dans la chaîne.",
+     "explication": "La **dispositio** met en ordre les idées trouvées pendant l’inventio."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "reponse": [
+      "actio"
+     ],
+     "enonce": "Touche l’étape où l’orateur prononce enfin son discours.",
+     "aide": "C’est la dernière de la chaîne.",
+     "explication": "L’**actio** est la prononciation du discours, avec la voix et les gestes."
+    },
+    {
+     "type": "association",
+     "enonce": "Un orateur veut instruire, plaire et émouvoir. Associe chaque but à ce qu’il vise.",
+     "paires": [
+      [
+       "instruire",
+       "expliquer clairement les faits"
+      ],
+      [
+       "plaire",
+       "séduire par de beaux mots"
+      ],
+      [
+       "émouvoir",
+       "toucher les sentiments des juges"
+      ]
+     ],
+     "aide": "Instruire, c’est apprendre quelque chose à l’auditoire.",
+     "explication": "**Instruire** explique, **plaire** séduit, **émouvoir** touche les sentiments : l’orateur romain cherche les trois."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd37ed59-9fb8-43c8-b2c8-55ab245e359c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cicéron attaque Catilina",
+   "competence": "analyser-texte",
+   "situation": "En 63 av. J.-C., Cicéron est consul. Devant le Sénat, il lance une phrase restée célèbre contre Catilina, soupçonné de préparer un complot. Tu lis la phrase, puis tu la replaces dans la vie de Cicéron.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’ouverture de la première Catilinaire",
+     "auteur": "Cicéron, Première Catilinaire, début (63 av. J.-C.)",
+     "blocs": [
+      "Quo usque tandem [[v|abutere]], [[c|Catilina]], patientia nostra ?"
+     ],
+     "source": "Citation brève"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Cicéron",
+     "debut": -110,
+     "fin": -40,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "naissance",
+       "date": -106,
+       "nom": "Naissance de Cicéron"
+      },
+      {
+       "id": "consulat",
+       "date": -63,
+       "nom": "Consulat de Cicéron"
+      },
+      {
+       "id": "mort",
+       "date": -43,
+       "nom": "Mort de Cicéron"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe de la phrase, celui qui veut dire « abuser ».",
+     "aide": "C’est le mot qui suit « quo usque tandem » (« jusqu’à quand »).",
+     "explication": "**abutere** (« tu abuseras ») est le verbe : c’est un reproche direct."
+    },
+    {
+     "type": "zone",
+     "document": "phrase",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le nom de celui à qui Cicéron s’adresse.",
+     "aide": "C’est un nom propre, celui du conspirateur.",
+     "explication": "Cicéron interpelle **Catilina**, qu’il accuse de comploter contre la République."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de la phrase de Cicéron ?",
+     "options": [
+      "Jusqu’à quand, Catilina, abuseras-tu de notre patience ?",
+      "Pendant combien de temps, Catilina, cesseras-tu de nous écouter ?",
+      "Jusqu’à quand, Sénat, supporteras-tu la patience de Catilina ?",
+      "Jusqu’où, Catilina, ira ta patience envers nous ?"
+     ],
+     "reponse": 0,
+     "aide": "Cherche patientia nostra : « notre patience ».",
+     "explication": "**« Jusqu’à quand, Catilina, abuseras-tu de notre patience ? »** : *nostra* = notre, *patientia* = patience."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "consulat"
+     ],
+     "enonce": "Touche l’événement qui correspond à l’année de ce discours.",
+     "aide": "Cicéron le prononce alors qu’il est consul.",
+     "explication": "Le discours date de **63 av. J.-C.**, l’année du consulat de Cicéron."
+    },
+    {
+     "type": "nombre",
+     "enonce": "D’après la frise, combien d’années séparent le consulat de Cicéron de sa mort ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Soustrais : de -63 à -43.",
+     "explication": "De 63 à 43 av. J.-C., il s’écoule **20 ans** (63 − 43 = 20)."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd37ed59-9fb8-43c8-b2c8-55ab245e359c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Civis Romanus sum » : la phrase qui protège",
+   "competence": "raisonner",
+   "situation": "Marcus est un commerçant romain arrêté à tort dans une ville lointaine. Pour se défendre, il n’a qu’une phrase, mais elle suffit à faire reculer l’officier.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’arrestation de Marcus",
+     "blocs": [
+      "Marcus, négociant romain, est arrêté par un officier qui l’accuse sans preuve. Il ne se laisse pas impressionner : « [[c|Civis]] Romanus sum ! » s’écrie-t-il.",
+      "L’officier hésite, puis recule : un citoyen a le droit d’être jugé selon la loi, et Marcus ne sera pas condamné sans procès."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    },
+    {
+     "id": "spqr",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "SPQR",
+     "sousTitre": "La devise de la République",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "S — Senatus",
+       "valeur": "le Sénat",
+       "id": "senat"
+      },
+      {
+       "texte": "PQ — PopulusQue",
+       "valeur": "et le peuple",
+       "id": "peuple"
+      },
+      {
+       "texte": "R — Romanus",
+       "valeur": "romain",
+       "id": "romain"
+      }
+     ],
+     "pied": "Senatus PopulusQue Romanus",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot latin qui signifie « citoyen ».",
+     "aide": "C’est le premier mot de la phrase de Marcus.",
+     "explication": "**civis** veut dire « citoyen » : *civis Romanus sum* = « je suis citoyen romain »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette phrase protège-t-elle Marcus ?",
+     "options": [
+      "Un citoyen a le droit d’être jugé selon la loi",
+      "Seuls les magistrats ont le droit de parler latin",
+      "Elle prouve que Marcus est sénateur à vie",
+      "Elle oblige l’officier à payer une amende"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux droits du citoyen.",
+     "explication": "Être citoyen, c’est avoir des droits, dont celui d’être **jugé selon la loi**, partout dans l’Empire."
+    },
+    {
+     "type": "zone",
+     "document": "spqr",
+     "reponse": [
+      "peuple"
+     ],
+     "enonce": "Touche la ligne de la devise qui désigne le peuple.",
+     "aide": "Populus veut dire « peuple ».",
+     "explication": "**PopulusQue** : « et le peuple ». SPQR = le Sénat et le peuple romain."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution de la République à son rôle.",
+     "paires": [
+      [
+       "les magistrats",
+       "ils gouvernent"
+      ],
+      [
+       "le Sénat",
+       "il conseille"
+      ],
+      [
+       "les comices",
+       "ils votent"
+      ]
+     ],
+     "aide": "Les comices sont les assemblées du peuple.",
+     "explication": "Les **magistrats** gouvernent, le **Sénat** conseille, les **comices** (assemblées du peuple) votent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces droits, lequel appartient au citoyen romain ?",
+     "options": [
+      "Voter dans les assemblées du peuple",
+      "Gouverner seul comme consul à vie",
+      "Siéger au Sénat dès la naissance",
+      "Ne payer aucun impôt"
+     ],
+     "reponse": 0,
+     "aide": "Les comices sont des assemblées de vote.",
+     "explication": "Le citoyen peut **voter** dans les comices. Les consuls changent chaque année et le Sénat n’est pas héréditaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd78a47d-b225-4366-a857-12250aa1ed3f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mare Nostrum : la mer de Rome",
+   "competence": "lire-carte",
+   "situation": "Lucie regarde une carte de la Méditerranée sur laquelle son professeur a posé quatre grandes villes de l’Empire, marquées par des lettres. Elle doit les reconnaître.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes autour de la Méditerranée",
+     "fond": "mediterranee",
+     "cadrage": [
+      -6,
+      30,
+      36,
+      46
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "carthage",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lieu": "alexandrie",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      },
+      {
+       "id": "d",
+       "lieu": "athenes",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail"
+      }
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la lettre qui marque Rome, la capitale de l’Empire.",
+     "aide": "Rome est en Italie, sur la péninsule en forme de botte.",
+     "explication": "**A** est Rome, au cœur de l’Italie."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la lettre qui marque Alexandrie, la grande ville d’Égypte.",
+     "aide": "Elle se trouve tout au sud-est de la carte, sur la côte africaine.",
+     "explication": "**C** est Alexandrie, en Égypte, à l’extrémité sud-est de la Méditerranée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les Romains appelaient-ils la Méditerranée Mare Nostrum, « notre mer » ?",
+     "options": [
+      "Parce que presque toutes ses côtes appartenaient à l’Empire",
+      "Parce que les Romains l’avaient découverte les premiers",
+      "Parce que seuls les navires romains pouvaient y naviguer",
+      "Parce que Rome était au centre exact de la mer"
+     ],
+     "reponse": 0,
+     "aide": "Regarde combien de villes de la carte sont sur ses rivages.",
+     "explication": "À l’apogée de l’Empire, **presque toutes les côtes** de la Méditerranée étaient romaines : elle devenait « notre mer »."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd78a47d-b225-4366-a857-12250aa1ed3f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’Auguste à la chute : une frise à lire",
+   "competence": "se-reperer-temps",
+   "situation": "Pour préparer un exposé, Hugo a dressé la frise des grands repères de l’Empire romain. Il doit s’en servir pour répondre aux questions de sa classe.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’Empire romain",
+     "debut": -50,
+     "fin": 500,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "trajan",
+       "debut": 98,
+       "fin": 117,
+       "nom": "Trajan",
+       "teinte": "ambre"
+      },
+      {
+       "id": "marc",
+       "debut": 161,
+       "fin": 180,
+       "nom": "Marc Aurèle",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "auguste",
+       "date": -27,
+       "nom": "Auguste empereur"
+      },
+      {
+       "id": "neron",
+       "date": 64,
+       "nom": "Incendie de Rome"
+      },
+      {
+       "id": "caracalla",
+       "date": 212,
+       "nom": "Édit de Caracalla"
+      },
+      {
+       "id": "chute",
+       "date": 476,
+       "nom": "Fin de l’Occident"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "marc"
+     ],
+     "enonce": "Touche la période du règne de l’« empereur philosophe ».",
+     "aide": "C’est l’empereur dont le nom commence par Marc.",
+     "explication": "**Marc Aurèle** (161-180) est l’empereur philosophe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Trajan règne de 98 à 117. Combien d’années dure son règne ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates.",
+     "explication": "117 − 98 = **19 ans** de règne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’édit de Caracalla de la fin de l’Empire d’Occident ?",
+     "reponse": 264,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise, puis soustrais.",
+     "explication": "476 − 212 = **264 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change l’édit de Caracalla en 212 ?",
+     "options": [
+      "Presque tous les habitants libres deviennent citoyens",
+      "Tous les esclaves de l’Empire sont libérés",
+      "Les provinces ne paient plus d’impôts à Rome",
+      "Le latin devient la seule langue autorisée"
+     ],
+     "reponse": 0,
+     "aide": "Le mot clé est « citoyenneté ».",
+     "explication": "L’édit de Caracalla accorde la **citoyenneté** à presque tous les habitants libres de l’Empire."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd78a47d-b225-4366-a857-12250aa1ed3f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Nemausus, une ville gauloise devenue romaine",
+   "competence": "analyser-document",
+   "situation": "Des archéologues fouillent le sol de Nîmes, que les Romains appelaient Nemausus. Leur inventaire mêle des vestiges romains et des traces de la tradition gauloise : à toi de trier.",
+   "documents": [
+    {
+     "id": "inventaire",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’inventaire de la fouille",
+     "blocs": [
+      "À Nemausus, les archéologues ont dégagé un [[r|forum]], des [[r|thermes]], un [[r|aqueduc]] et des [[r|arènes]]. Sur des tombes, ils ont lu des [[r|inscriptions]] en latin.",
+      "Dans le même quartier, un atelier de poterie gauloise fabrique encore des vases à l’ancienne, et un temple reste dédié à une divinité gauloise."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Où est Nîmes ?",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "nimes",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      },
+      {
+       "id": "d",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail"
+      }
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inventaire",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les cinq éléments de l’inventaire qui montrent la romanisation.",
+     "aide": "Pense aux bâtiments publics romains et à la langue de Rome.",
+     "explication": "**Forum, thermes, aqueduc, arènes** et **inscriptions en latin** : ce sont les marques de la romanisation. Poterie et temple gaulois sont des traditions locales."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la lettre qui marque Nîmes, ville du sud de la France.",
+     "aide": "Nîmes est près du Rhône et de la Méditerranée, pas à Paris ni à Toulouse.",
+     "explication": "**A** est Nîmes, dans le sud-est de la France, près du Rhône."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition de la romanisation.",
+     "texte": "La romanisation diffuse la langue ___, le ___ romain et les villes avec forum, thermes et arènes.",
+     "reponses": [
+      [
+       "latine",
+       "latin"
+      ],
+      [
+       "droit"
+      ]
+     ],
+     "banque": [
+      "latine",
+      "droit",
+      "gauloise",
+      "commerce"
+     ],
+     "aide": "Pense à ce qu’on lit sur les inscriptions et à ce qui règle les procès.",
+     "explication": "La **langue latine** et le **droit** romain se diffusent avec la ville romaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après l’édit de Caracalla (212), que devient un habitant libre de Nemausus ?",
+     "options": [
+      "Il est citoyen romain",
+      "Il reste étranger à l’Empire",
+      "Il devient sénateur",
+      "Il devient esclave de Rome"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "L’édit accorde la citoyenneté à presque tous les habitants libres.",
+     "explication": "Par l’édit de 212, presque tous les habitants libres, dont ceux de Nemausus, deviennent **citoyens romains**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbf3f7aa-d247-4789-9ef6-db5638ee669e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La jeune fille et l’eau",
+   "competence": "manier-langue",
+   "situation": "Pour son premier thème latin, Chloé reçoit une seule phrase. Elle doit la lire avec méthode : le verbe d’abord, puis le sujet, puis le complément.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase à traduire",
+     "blocs": [
+      "[[s|Puella]] [[o|aquam]] [[v|portat]]."
+     ],
+     "source": "Phrase écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe conjugué de la phrase.",
+     "aide": "Cherche le mot qui se termine par -t, à la fin de la phrase.",
+     "explication": "**portat** est le verbe : sa terminaison **-t** indique « il / elle ». Le verbe est en fin de phrase."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot de la phrase à sa fonction.",
+     "paires": [
+      [
+       "Puella",
+       "sujet (nominatif)"
+      ],
+      [
+       "aquam",
+       "COD (accusatif)"
+      ],
+      [
+       "portat",
+       "verbe"
+      ]
+     ],
+     "aide": "Le sujet est au nominatif, le COD à l’accusatif (terminaison -am).",
+     "explication": "*Puella* est au **nominatif** : c’est le sujet. *Aquam* est à l’**accusatif** : c’est le COD."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de la phrase ?",
+     "options": [
+      "La jeune fille porte l’eau",
+      "L’eau porte la jeune fille",
+      "La jeune fille aime l’eau",
+      "La jeune fille et l’eau"
+     ],
+     "reponse": 0,
+     "aide": "Reconstruis : sujet, verbe, puis COD.",
+     "explication": "**La jeune fille porte l’eau.** *Puella* est le sujet, *portat* le verbe et *aquam* le COD."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbf3f7aa-d247-4789-9ef6-db5638ee669e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui aime qui ? Les cas décident",
+   "competence": "analyser-texte",
+   "situation": "Dans un petit texte sur un marin et une jeune fille, trois phrases utilisent les mêmes mots, mais pas aux mêmes cas. Lire la terminaison, c’est comprendre qui fait quoi.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois phrases à traduire",
+     "blocs": [
+      "Nauta puellam videt.",
+      "Nauta puellae rosam dat.",
+      "Puella [[c|nautam]] amat.",
+      "Mots utiles : nauta, le marin ; rosa, la rose ; videt, il voit ; dat, il donne ; amat, elle aime."
+     ],
+     "source": "Phrases écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Dans la troisième phrase, touche le COD.",
+     "aide": "Le COD est à l’accusatif : cherche la terminaison -m.",
+     "explication": "**nautam** est à l’accusatif (terminaison -am) : c’est le COD, « le marin »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de la troisième phrase, « Puella nautam amat » ?",
+     "options": [
+      "La jeune fille aime le marin",
+      "Le marin aime la jeune fille",
+      "La jeune fille voit le marin",
+      "Le marin donne une rose à la jeune fille"
+     ],
+     "reponse": 0,
+     "aide": "Le sujet est au nominatif : lequel des deux mots l’est ?",
+     "explication": "*Puella* est au nominatif (sujet), *nautam* à l’accusatif (COD) : **la jeune fille aime le marin**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la traduction de la deuxième phrase, « Nauta puellae rosam dat ».",
+     "texte": "Le marin ___ une rose ___ la jeune fille.",
+     "reponses": [
+      [
+       "donne"
+      ],
+      [
+       "à"
+      ]
+     ],
+     "banque": [
+      "donne",
+      "à",
+      "de",
+      "prend"
+     ],
+     "aide": "Dat veut dire « il donne », et puellae est au datif.",
+     "explication": "**Le marin donne une rose à la jeune fille.** *Puellae* est au datif : complément d’attribution, « à la jeune fille »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la traduction de la première phrase, « Nauta puellam videt ». Commence par « Le marin ».",
+     "items": [
+      "Le marin",
+      "voit",
+      "la jeune fille"
+     ],
+     "aide": "Sujet, verbe, complément.",
+     "explication": "**Le marin voit la jeune fille.** *Nauta* est le sujet, *videt* le verbe, *puellam* le COD."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbf3f7aa-d247-4789-9ef6-db5638ee669e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Traduire la première phrase de César",
+   "competence": "manier-langue",
+   "situation": "Léo traduit l’ouverture de *La Guerre des Gaules*, de César. Sa traduction mot à mot fait rire Zoé : il manque une méthode, et tu vas la lui rendre.",
+   "documents": [
+    {
+     "id": "cesar",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le début de La Guerre des Gaules",
+     "auteur": "César, La Guerre des Gaules, livre I, début",
+     "blocs": [
+      "[[g|Gallia]] [[v|est]] omnis [[v|divisa]] in partes tres…"
+     ],
+     "source": "Citation brève, texte original"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "La version de Léo",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "J’ai traduit mot à mot : « La Gaule est tout divisée dans parties trois »."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Ça ne ressemble pas à du français… Tu as sauté la méthode !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cesar",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le sujet de la phrase : le mot au nominatif qui nomme le pays dont on parle.",
+     "aide": "Le sujet est le premier mot de la phrase.",
+     "explication": "**Gallia**, « la Gaule », est au nominatif : c’est le sujet."
+    },
+    {
+     "type": "zone",
+     "document": "cesar",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux mots qui forment le verbe (« est divisée »).",
+     "aide": "Le verbe a un auxiliaire (« être ») et un participe.",
+     "explication": "**est divisa** forme le verbe : « est divisée ». Le verbe est ici en deux mots."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la meilleure traduction de la phrase ?",
+     "options": [
+      "La Gaule dans son ensemble est divisée en trois parties",
+      "La Gaule est tout divisée dans parties trois",
+      "Toute la division de la Gaule est en trois parties",
+      "La Gaule divise tout en trois parties"
+     ],
+     "reponse": 0,
+     "aide": "Omnis qualifie Gallia, comme « toute la Gaule ».",
+     "explication": "**La Gaule dans son ensemble est divisée en trois parties.** *Omnis* se rapporte à *Gallia* ; on reconstruit une phrase française naturelle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque auteur latin à son œuvre.",
+     "paires": [
+      [
+       "César",
+       "La Guerre des Gaules"
+      ],
+      [
+       "Virgile",
+       "L’Énéide"
+      ],
+      [
+       "Ovide",
+       "Les Métamorphoses"
+      ],
+      [
+       "Cicéron",
+       "Les Catilinaires"
+      ]
+     ],
+     "aide": "Cicéron est l’orateur qui s’en prend à Catilina.",
+     "explication": "**César** : *La Guerre des Gaules* ; **Virgile** : *l’Énéide* ; **Ovide** : *les Métamorphoses* ; **Cicéron** : *les Catilinaires*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle erreur Léo a-t-il commise ?",
+     "options": [
+      "Il a traduit mot à mot, sans reformuler en français",
+      "Il a pris le verbe pour le sujet de la phrase",
+      "Il a confondu le nominatif et le génitif",
+      "Il a oublié de chercher l’auteur du texte"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière étape de la méthode de traduction.",
+     "explication": "Léo a traduit **mot à mot**. Il faut repérer le verbe, le sujet, les compléments, puis **reconstruire une phrase française naturelle**."
+    }
+   ]
+  }
+ ]
+}

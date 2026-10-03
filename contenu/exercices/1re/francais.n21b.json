@@ -1,0 +1,2162 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "0ee865fe-9de5-53e2-b391-8f16f87afed0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un joueur de viole dans sa cabane",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches « Tous les matins du monde ». Place le roman dans la vie de Quignard, puis retiens ce qui fait son cadre.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Pascal Quignard",
+     "debut": 1940,
+     "fin": 2010,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1948,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rom",
+       "date": 1991,
+       "nom": "Roman et film"
+      },
+      {
+       "id": "gon",
+       "date": 2002,
+       "nom": "Goncourt"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Tous les matins du monde",
+     "sousTitre": "Pascal Quignard",
+     "emoji": "🎻",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Court roman, en chapitres très brefs"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "France, XVIIe siècle"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "Monsieur de Sainte Colombe"
+      },
+      {
+       "texte": "Instrument",
+       "valeur": "La viole de gambe"
+      }
+     ],
+     "pied": "Sainte Colombe et Marin Marais ont réellement existé",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Touche l’année de parution du roman (et du film d’Alain Corneau).",
+     "aide": "Cherche l’événement qui rassemble le roman et le film.",
+     "explication": "Le roman paraît en **1991**, l’année du film d’Alain Corneau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du roman du prix Goncourt de Quignard (pour « Les Ombres errantes ») ?",
+     "reponse": 11,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "2002 − 1991 = **11 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte du roman.",
+     "texte": "Sainte Colombe joue de la ___ de gambe, seul dans une ___ au fond de son jardin.",
+     "reponses": [
+      [
+       "viole"
+      ],
+      [
+       "cabane"
+      ]
+     ],
+     "banque": [
+      "viole",
+      "cabane",
+      "guitare",
+      "maison"
+     ],
+     "aide": "L’instrument figure sur la carte ; l’endroit est celui où le héros se retire du monde.",
+     "explication": "Sainte Colombe joue de la **viole** de gambe, seul dans une **cabane** au fond de son jardin."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ee865fe-9de5-53e2-b391-8f16f87afed0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le maître et l’élève chassé",
+   "competence": "analyser-document",
+   "situation": "Suis le fil du roman, retrouve l’étape manquante, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Sainte Colombe perd sa femme"
+      },
+      {
+       "id": "n2",
+       "texte": "Il se retire dans une cabane et joue seul"
+      },
+      {
+       "id": "n3",
+       "texte": "Il chasse Marais, trop soucieux de plaire"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Marais revient écouter en secret"
+      },
+      {
+       "id": "n6",
+       "texte": "Dernière leçon, la nuit, dans la cabane"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Marais devient musicien du roi",
+      "Marais ruiné quitte la France",
+      "Madeleine épouse Marin Marais",
+      "Sainte Colombe rejoint la cour"
+     ],
+     "reponse": 0,
+     "aide": "Après son rejet, Marais réussit là où son maître refuse de réussir.",
+     "explication": "Chassé par son maître, Marais devient **musicien du roi**, célèbre et riche : l’inverse de Sainte Colombe."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Sainte Colombe refuse Marais.",
+     "aide": "Cherche le verbe qui dit ce que fait Sainte Colombe à Marais.",
+     "explication": "Sainte Colombe **chasse** Marais, jugé trop soucieux de plaire."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Sainte Colombe",
+       "Joueur de viole retiré du monde"
+      ],
+      [
+       "Marin Marais",
+       "Jeune musicien ambitieux et doué"
+      ],
+      [
+       "Madeleine",
+       "Aimée puis abandonnée par Marais"
+      ],
+      [
+       "Baugin",
+       "Peintre, ami de Sainte Colombe"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait dans le fil du roman.",
+     "explication": "**Sainte Colombe** se retire du monde, **Marais** est ambitieux, **Madeleine** est abandonnée par lui, **Baugin** est le peintre ami."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’opposition qui structure le livre.",
+     "texte": "La musique de ___ s’oppose à la musique ___.",
+     "reponses": [
+      [
+       "cour"
+      ],
+      [
+       "vraie"
+      ]
+     ],
+     "banque": [
+      "cour",
+      "vraie",
+      "église",
+      "savante"
+     ],
+     "aide": "Une musique pour plaire au roi, une autre pour les morts.",
+     "explication": "Le livre oppose la musique **de cour**, qui cherche le succès, à la musique **vraie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ee865fe-9de5-53e2-b391-8f16f87afed0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Jouer pour qui ?",
+   "competence": "argumenter",
+   "situation": "Camille et Nabil débattent de la raison pour laquelle Sainte Colombe joue. Un passage écrit pour l’exercice, à la manière de Quignard, nourrit leur discussion.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nabil",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Sainte Colombe joue pour devenir célèbre, comme Marais."
+      },
+      {
+       "qui": "Nabil",
+       "texte": "Il joue pour sa femme morte, pas pour la gloire."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Mais elle est morte : qui l’entend ?"
+      },
+      {
+       "qui": "Nabil",
+       "texte": "La musique est faite pour atteindre les morts."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Quignard",
+     "blocs": [
+      "Il jouait. La cabane était froide. La viole chantait à voix basse pour une [[m|morte]] qui ne répondait pas. Quand l’archet se taisait, il écoutait le silence qui venait après. Il n’avait besoin d’aucun public."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Pascal Quignard"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit pour qui Sainte Colombe joue.",
+     "aide": "C’est le mot que Nabil emploie dans sa première réplique, sous une autre forme.",
+     "explication": "Il joue pour une **morte** : la viole parle à celle qui n’est plus là."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage soutient-il ?",
+     "options": [
+      "Nabil : il joue pour sa femme morte, pas pour la gloire",
+      "Camille : il joue pour devenir célèbre",
+      "Camille : il joue pour un public nombreux",
+      "Nabil : il joue pour distraire les gens de la cour"
+     ],
+     "reponse": 0,
+     "aide": "Le passage dit qu’il n’a besoin d’aucun public.",
+     "explication": "Pour Sainte Colombe, la musique sert à **atteindre les morts** : il n’a besoin d’aucun public, comme le dit Nabil."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait d’écriture du passage à son effet.",
+     "paires": [
+      [
+       "Des phrases courtes et sèches",
+       "Une écriture sans effets"
+      ],
+      [
+       "Un seul auditeur, la morte",
+       "Une musique faite pour atteindre les morts"
+      ],
+      [
+       "Aucun public, aucune cour",
+       "Le refus du succès"
+      ]
+     ],
+     "aide": "Compare la forme des phrases, puis ce qu’elles disent.",
+     "explication": "Les phrases courtes donnent une langue **sèche, sans effets** ; l’unique auditrice est la **morte** ; l’absence de public dit le **refus du succès**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : musique de cour ou musique vraie ?",
+     "categories": [
+      "Musique de cour",
+      "Musique vraie"
+     ],
+     "items": [
+      [
+       "Plaire au roi",
+       0
+      ],
+      [
+       "Gagner de l’argent et la célébrité",
+       0
+      ],
+      [
+       "Dire ce que les mots ne disent pas",
+       1
+      ],
+      [
+       "Atteindre les morts",
+       1
+      ]
+     ],
+     "aide": "La première cherche le succès, la seconde le silence et la mémoire.",
+     "explication": "La musique de **cour** cherche le roi, l’argent et la célébrité ; la musique **vraie** dit ce que les mots ne disent pas et atteint les morts."
+    }
+   ]
+  },
+  {
+   "chapitre": "3163cb72-edfc-5f22-a1b1-5f57032b2dac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une affaire toulousaine",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches le « Traité sur la tolérance ». Remets l’affaire Calas dans son ordre, puis retiens la carte d’identité du livre.",
+   "documents": [
+    {
+     "id": "aff",
+     "type": "frise",
+     "titre": "L’affaire Calas",
+     "debut": 1760,
+     "fin": 1766,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "fils",
+       "date": 1761,
+       "nom": "Fils pendu"
+      },
+      {
+       "id": "exe",
+       "date": 1762,
+       "nom": "Calas exécuté"
+      },
+      {
+       "id": "tra",
+       "date": 1763,
+       "nom": "Traité"
+      },
+      {
+       "id": "reh",
+       "date": 1765,
+       "nom": "Réhabilitation"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Traité sur la tolérance",
+     "sousTitre": "Voltaire",
+     "emoji": "⚖️",
+     "lignes": [
+      {
+       "texte": "Affaire",
+       "valeur": "Calas, à Toulouse"
+      },
+      {
+       "texte": "Voltaire vit à",
+       "valeur": "Ferney, près de Genève"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "1763"
+      },
+      {
+       "texte": "Jean Calas",
+       "valeur": "Marchand protestant, condamné sans preuve"
+      }
+     ],
+     "pied": "Un livre de combat pour réhabiliter un innocent",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aff",
+     "multiple": false,
+     "reponse": [
+      "reh"
+     ],
+     "enonce": "Touche l’année où le jugement est cassé et Calas réhabilité.",
+     "aide": "C’est la dernière date de la frise.",
+     "explication": "Le jugement est cassé en **1765** : Calas est réhabilité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’exécution de Calas de sa réhabilitation ?",
+     "reponse": 3,
+     "aide": "Repère les deux événements sur la frise.",
+     "explication": "1765 − 1762 = **3 ans** : trois ans de campagne pour Voltaire.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du livre.",
+     "texte": "Le livre part de l’affaire ___, jugée à ___.",
+     "reponses": [
+      [
+       "Calas"
+      ],
+      [
+       "Toulouse"
+      ]
+     ],
+     "banque": [
+      "Calas",
+      "Sirven",
+      "Toulouse",
+      "Paris"
+     ],
+     "aide": "Lis les deux premières lignes de la carte.",
+     "explication": "Le livre part de l’affaire **Calas**, jugée à **Toulouse**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3163cb72-edfc-5f22-a1b1-5f57032b2dac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un innocent roué vif",
+   "competence": "analyser-texte",
+   "situation": "Voici un résumé de l’affaire Calas, non chronologique. Retrouve les mots clés, remets les événements en ordre et reconnais les acteurs.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Résumé de l’affaire",
+     "blocs": [
+      "Le *Traité* naît d’une affaire toulousaine. Quand le jugement est cassé, en 1765, Calas est réhabilité, trois ans après sa mort. Tout avait commencé en 1761 : le fils d’un marchand protestant est retrouvé pendu, et la rumeur accuse le père de l’avoir tué pour l’empêcher de se convertir. Sans preuve, sur la seule [[c|clameur]] [[c|publique]], les juges condamnent Jean Calas : il est roué vif en mars 1762."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui disent sur quoi repose la condamnation.",
+     "aide": "Il n’y a aucune preuve : que reste-t-il ?",
+     "explication": "Les juges se fondent sur la seule **clameur publique**, sans preuve."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les événements dans l’ordre où ils se produisent.",
+     "items": [
+      "Le fils Marc-Antoine est retrouvé pendu",
+      "Le père est accusé de l’avoir tué",
+      "Jean Calas est roué vif",
+      "Le jugement est cassé"
+     ],
+     "aide": "Le texte commence par la fin : relis-le en cherchant les dates.",
+     "explication": "L’affaire commence par la **mort du fils**, puis l’**accusation du père**, l’**exécution** (mars 1762) et la **cassation** (1765)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la famille Calas est-elle soupçonnée ?",
+     "options": [
+      "Elle est protestante : la rumeur y voit un mobile religieux",
+      "Elle est riche : on veut s’emparer de ses biens",
+      "Elle est étrangère : on la soupçonne d’espionnage",
+      "Elle est noble : on veut abaisser sa maison"
+     ],
+     "reponse": 0,
+     "aide": "Pour la rumeur, le père voulait empêcher son fils de se convertir.",
+     "explication": "La famille est **protestante** : on accuse le père d’avoir tué son fils pour l’empêcher de se convertir au catholicisme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure à son rôle dans l’affaire.",
+     "paires": [
+      [
+       "Jean Calas",
+       "Le marchand protestant, victime d’une erreur judiciaire"
+      ],
+      [
+       "Marc-Antoine",
+       "Le fils retrouvé mort"
+      ],
+      [
+       "Les juges de Toulouse",
+       "Le fanatisme au pouvoir"
+      ],
+      [
+       "Voltaire",
+       "L’avocat de l’opinion"
+      ]
+     ],
+     "aide": "Pense à ce que chacun subit ou fait.",
+     "explication": "**Calas** est la victime, **Marc-Antoine** le fils retrouvé mort, les **juges** incarnent le fanatisme, **Voltaire** défend l’innocent devant l’opinion."
+    }
+   ]
+  },
+  {
+   "chapitre": "3163cb72-edfc-5f22-a1b1-5f57032b2dac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tolérer, ce n’est pas supprimer",
+   "competence": "argumenter",
+   "situation": "Jade et Karim discutent de ce que veut Voltaire. La Prière à Dieu, qui clôt le livre, tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Voltaire veut supprimer toute religion."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Non : il veut que les différences de croyance ne servent plus à haïr."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Mais il écrit « Écrasons l’infâme » !"
+      },
+      {
+       "qui": "Karim",
+       "texte": "Il vise le fanatisme, pas la foi."
+      }
+     ]
+    },
+    {
+     "id": "pri",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La Prière à Dieu",
+     "blocs": [
+      "« Fais que les petites [[d|différences]] entre les vêtements qui couvrent nos débiles corps… ne soient pas des signaux de [[h|haine]] et de [[h|persécution]]. »"
+     ],
+     "source": "Voltaire, *Traité sur la tolérance* (1763), « Prière à Dieu » — extrait donné par le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pri",
+     "multiple": true,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que les différences ne doivent pas provoquer.",
+     "aide": "Ce sont deux noms, à la fin de la phrase.",
+     "explication": "Les différences ne doivent pas devenir des signaux de **haine** et de **persécution**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique la Prière confirme-t-elle ?",
+     "options": [
+      "Karim : Voltaire combat le fanatisme, non la religion",
+      "Jade : Voltaire veut supprimer toute religion",
+      "Jade : Voltaire souhaite des signaux de reconnaissance",
+      "Karim : Voltaire excuse les persécutions religieuses"
+     ],
+     "reponse": 0,
+     "aide": "La prière parle de différences, pas de suppression.",
+     "explication": "La Prière demande que les différences ne servent pas à **persécuter** : Voltaire combat le **fanatisme**, non la religion."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce que Voltaire dénonce ou ce qu’il défend.",
+     "categories": [
+      "Ce qu’il dénonce",
+      "Ce qu’il défend"
+     ],
+     "items": [
+      [
+       "Le fanatisme",
+       0
+      ],
+      [
+       "Une condamnation sans preuve",
+       0
+      ],
+      [
+       "La liberté de conscience",
+       1
+      ],
+      [
+       "La justice",
+       1
+      ],
+      [
+       "La raison",
+       1
+      ]
+     ],
+     "aide": "Pense à l’affaire Calas, puis à ce que le livre réclame.",
+     "explication": "Voltaire **dénonce** le fanatisme et la condamnation sans preuve ; il **défend** la liberté de conscience, la justice et la raison."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que le livre mêle.",
+     "texte": "Le livre mêle récit, argumentation et ___ ; Voltaire y invente le rôle de l’___.",
+     "reponses": [
+      [
+       "ironie"
+      ],
+      [
+       "intellectuel"
+      ]
+     ],
+     "banque": [
+      "ironie",
+      "intellectuel",
+      "poésie",
+      "historien"
+     ],
+     "aide": "Un procédé qui dit le contraire de ce qu’on pense ; un homme de lettres qui prend une cause.",
+     "explication": "Le livre mêle **récit**, **argumentation** et **ironie** ; Voltaire y invente le rôle de l’**intellectuel** qui universalise une cause."
+    }
+   ]
+  },
+  {
+   "chapitre": "d72b5737-9f8f-5383-8aa5-b50395cded77",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui dans la légende ?",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur « Tristan et Iseult ». Identifie les personnages, puis la façon dont la légende nous est parvenue.",
+   "documents": [
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Tristan",
+       "Le chevalier, neveu du roi Marc"
+      ],
+      [
+       "Iseult la Blonde",
+       "La reine, guérisseuse"
+      ],
+      [
+       "Le roi Marc",
+       "?"
+      ],
+      [
+       "Brangien",
+       "La servante, responsable du philtre"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "trans",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Comment la légende nous est parvenue",
+     "blocs": [
+      "Il n’existe pas un seul *Tristan*, mais des versions fragmentaires du XIIe siècle. Béroul et Thomas d’Angleterre écrivent en français ; Gottfried de Strasbourg écrit en allemand ; Marie de France compose, en français, le *Lai du chèvrefeuille*. Le texte qu’on lit aujourd’hui est le plus souvent la reconstitution de Joseph Bédier, en 1900."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui dit qui est responsable du philtre.",
+     "aide": "Cherche la servante d’Iseult.",
+     "explication": "Le philtre est confié à **Brangien**, la servante d’Iseult."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "L’oncle trahi, partagé entre colère et tendresse",
+      "Le chevalier qui vainc le Morholt d’Irlande",
+      "Le nain qui guette les amants à la cour",
+      "La femme que Tristan épouse loin d’Iseult"
+     ],
+     "reponse": 0,
+     "aide": "Il est le mari promis d’Iseult la Blonde, et l’oncle de Tristan.",
+     "explication": "Le roi Marc est **l’oncle trahi**, partagé entre colère et tendresse."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque auteur selon la langue de sa version.",
+     "categories": [
+      "Écrit en français",
+      "Écrit en allemand"
+     ],
+     "items": [
+      [
+       "Béroul",
+       0
+      ],
+      [
+       "Thomas d’Angleterre",
+       0
+      ],
+      [
+       "Gottfried de Strasbourg",
+       1
+      ],
+      [
+       "Marie de France (Lai du chèvrefeuille)",
+       0
+      ]
+     ],
+     "aide": "Une seule version est allemande.",
+     "explication": "**Béroul**, **Thomas d’Angleterre** et **Marie de France** écrivent en français ; **Gottfried de Strasbourg** écrit en allemand."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit le texte de la version que l’on lit.",
+     "texte": "Le texte le plus souvent lu est la reconstitution de Joseph ___, en ___.",
+     "reponses": [
+      [
+       "Bédier"
+      ],
+      [
+       "1900"
+      ]
+     ],
+     "banque": [
+      "Bédier",
+      "Béroul",
+      "1900",
+      "1578"
+     ],
+     "aide": "Cherche le dernier nom propre du texte.",
+     "explication": "On lit le plus souvent la reconstitution de Joseph **Bédier**, publiée en **1900**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d72b5737-9f8f-5383-8aa5-b50395cded77",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du philtre aux tombes",
+   "competence": "analyser-document",
+   "situation": "Voici les grandes étapes de la légende. Il en manque une : retrouve-la et relie les lieux à ce qui s’y passe.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la légende",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Tristan ramène Iseult la Blonde au roi Marc"
+      },
+      {
+       "id": "n2",
+       "texte": "Sur le bateau, ils boivent le philtre"
+      },
+      {
+       "id": "n3",
+       "texte": "Ils fuient dans la forêt du Morrois"
+      },
+      {
+       "id": "n4",
+       "texte": "Tristan épouse Iseult aux Blanches Mains"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      },
+      {
+       "id": "n6",
+       "texte": "Iseult la Blonde meurt sur son corps"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Tristan, blessé, croit la voile noire et meurt",
+      "Tristan se réconcilie avec le roi Marc",
+      "Tristan rentre victorieux en Cornouailles",
+      "Iseult aux Blanches Mains meurt de jalousie"
+     ],
+     "reponse": 0,
+     "aide": "Il attend un navire, et une voile annonce la réponse.",
+     "explication": "Blessé, Tristan attend la voile blanche : on lui dit qu’elle est noire, il croit Iseult absente et **meurt**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui déclenche la passion des amants.",
+     "aide": "Cherche le moment où ils boivent par erreur.",
+     "explication": "C’est le **philtre**, bu par erreur sur le bateau, qui déclenche la passion."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du récit.",
+     "texte": "Sur leurs tombes pousse une ___ que l’on coupe en ___.",
+     "reponses": [
+      [
+       "ronce"
+      ],
+      [
+       "vain"
+      ]
+     ],
+     "banque": [
+      "ronce",
+      "vigne",
+      "vain",
+      "secret"
+     ],
+     "aide": "Ce que l’on coupe repousse toujours.",
+     "explication": "Sur les tombes des amants pousse une **ronce** que l’on coupe en **vain**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à son rôle dans la légende.",
+     "paires": [
+      [
+       "La Cornouailles",
+       "Le royaume du roi Marc"
+      ],
+      [
+       "L’Irlande",
+       "Le pays d’Iseult la Blonde"
+      ],
+      [
+       "La forêt du Morrois",
+       "Le refuge des amants en fuite"
+      ]
+     ],
+     "aide": "Reprends les étapes du fil de la légende.",
+     "explication": "La **Cornouailles** est le royaume de Marc, l’**Irlande** le pays d’Iseult la Blonde, le **Morrois** le refuge des amants."
+    }
+   ]
+  },
+  {
+   "chapitre": "d72b5737-9f8f-5383-8aa5-b50395cded77",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Coupables ou innocents ?",
+   "competence": "argumenter",
+   "situation": "Zoé et Inès ne jugent pas les amants de la même façon. Un tableau des épisodes clés les aide à trancher.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Ils ont trahi le roi : ils sont coupables."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Le philtre rend leur amour [[i|irrésistible]] et innocent : ils ne l’ont pas choisi."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Mais ils fuient !"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Ils obéissent à une force qu’ils ne maîtrisent pas."
+      }
+     ]
+    },
+    {
+     "id": "epi",
+     "type": "tableau",
+     "titre": "Trois épisodes clés",
+     "colonnes": [
+      "Idée",
+      "Épisode qui l’illustre"
+     ],
+     "lignes": [
+      [
+       "L’amour n’est pas choisi",
+       "Le philtre bu par erreur sur le bateau"
+      ],
+      [
+       "La passion ignore la loi",
+       "?"
+      ],
+      [
+       "L’amour dépasse la mort",
+       "Une ronce pousse sur leurs tombes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot d’Inès qui dit que l’amour des amants ne peut pas être refusé.",
+     "aide": "C’est un adjectif, dans la première réplique d’Inès.",
+     "explication": "Le philtre rend l’amour **irrésistible** : les amants ne l’ont pas choisi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le tableau des épisodes soutient-il ?",
+     "options": [
+      "Inès : le philtre rend l’amour irrésistible et innocent",
+      "Zoé : le philtre prouve la culpabilité des amants",
+      "Zoé : le philtre est une ruse du roi Marc",
+      "Inès : le philtre est un poison qui tue Iseult"
+     ],
+     "reponse": 0,
+     "aide": "Que dit la première ligne du tableau ?",
+     "explication": "Le philtre est bu **par erreur** : l’amour n’est pas choisi, il est donc **irrésistible et innocent**, comme le dit Inès."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel épisode illustre « la passion ignore la loi » (case « ? ») ?",
+     "options": [
+      "Marc voit une épée entre les amants endormis",
+      "Les amants se marient devant le roi Marc",
+      "Tristan défie le roi Marc en duel",
+      "Iseult s’enfuit seule en Irlande"
+     ],
+     "reponse": 0,
+     "aide": "Dans la forêt, le roi surprend les amants.",
+     "explication": "Dans la forêt, Marc surprend les amants endormis, **séparés par une épée**, et les épargne : la passion ignore la loi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la thèse de Denis de Rougemont.",
+     "texte": "Le récit fonde le mythe occidental de la ___ contre la ___.",
+     "reponses": [
+      [
+       "passion"
+      ],
+      [
+       "loi"
+      ]
+     ],
+     "banque": [
+      "passion",
+      "loi",
+      "guerre",
+      "foi"
+     ],
+     "aide": "Un amour contre un interdit.",
+     "explication": "Le récit fonde le mythe de la **passion** contre la **loi** (Denis de Rougemont, *L’Amour et l’Occident*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a89d7b9d-cdda-564a-aeed-e0ab102f56a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Vingt-quatre textes sans intrigue",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches « Tropismes ». Place le livre dans la vie de Nathalie Sarraute, puis retiens sa forme.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Nathalie Sarraute",
+     "debut": 1900,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1900,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pub",
+       "date": 1939,
+       "nom": "Tropismes"
+      },
+      {
+       "id": "reed",
+       "date": 1957,
+       "nom": "Réédition"
+      },
+      {
+       "id": "mort",
+       "date": 1999,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Tropismes",
+     "sousTitre": "Nathalie Sarraute",
+     "emoji": "🔍",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1939, dans l’indifférence"
+      },
+      {
+       "texte": "Édition de 1957",
+       "valeur": "Vingt-quatre textes brefs"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Sans intrigue"
+      },
+      {
+       "texte": "Personnages",
+       "valeur": "Sans nom : « ils », « elle », « on »"
+      }
+     ],
+     "pied": "Rattaché au Nouveau Roman",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "reed"
+     ],
+     "enonce": "Touche l’année où le livre est réédité et devient un texte de référence.",
+     "aide": "Cherche l’événement qui suit la parution de 1939.",
+     "explication": "Le livre est réédité en **1957** : il devient un texte de référence du Nouveau Roman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution de « Tropismes » de sa réédition ?",
+     "reponse": 18,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1957 − 1939 = **18 ans** : le livre était d’abord passé inaperçu.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte du livre.",
+     "texte": "Les textes n’ont pas d’___ et leurs personnages n’ont pas de ___.",
+     "reponses": [
+      [
+       "intrigue"
+      ],
+      [
+       "nom"
+      ]
+     ],
+     "banque": [
+      "intrigue",
+      "nom",
+      "titre",
+      "narrateur"
+     ],
+     "aide": "Regarde les lignes « Forme » et « Personnages ».",
+     "explication": "Les textes n’ont pas d’**intrigue** et leurs personnages n’ont pas de **nom** : « ils », « elle », « on »."
+    }
+   ]
+  },
+  {
+   "chapitre": "a89d7b9d-cdda-564a-aeed-e0ab102f56a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qu’est-ce qu’un tropisme ?",
+   "competence": "analyser-document",
+   "situation": "Le mot « tropisme » est la clé du livre. Remonte à son origine, puis relie chaque procédé à son effet.",
+   "documents": [
+    {
+     "id": "not",
+     "type": "tableau",
+     "titre": "De la biologie à la littérature",
+     "colonnes": [
+      "Notion",
+      "Ce qu’il faut retenir"
+     ],
+     "lignes": [
+      [
+       "Le mot « tropisme »",
+       "Un mouvement d’un organisme vers la lumière ou la chaleur"
+      ],
+      [
+       "Chez Sarraute",
+       "?"
+      ],
+      [
+       "Leur durée",
+       "Ils se produisent en un instant"
+      ],
+      [
+       "Leur lieu",
+       "Sous la conversation"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Un mouvement intérieur infime, sous les mots",
+      "Un portrait détaillé de chaque personnage",
+      "Une péripétie qui fait avancer l’intrigue",
+      "Un récit de voyage dans un pays lointain"
+     ],
+     "reponse": 0,
+     "aide": "Sarraute transporte le mot de la biologie dans la vie intérieure.",
+     "explication": "Chez Sarraute, un tropisme est un **mouvement intérieur infime** (attirance, recul, humiliation…), qui se produit sous la conversation."
+    },
+    {
+     "type": "zone",
+     "document": "not",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui dit où se produisent les tropismes.",
+     "aide": "Regarde la ligne « Leur lieu ».",
+     "explication": "Les tropismes se produisent **sous la conversation**, en un instant."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé d’écriture à son effet.",
+     "paires": [
+      [
+       "Phrases longues, comparaisons développées",
+       "Dire l’impalpable"
+      ],
+      [
+       "Des bêtes, des liquides, des insectes",
+       "Des images concrètes pour les tropismes"
+      ],
+      [
+       "Le présent et l’imparfait",
+       "Des scènes sans début ni fin"
+      ],
+      [
+       "« ils », « elle », « on »",
+       "Des personnages sans nom"
+      ]
+     ],
+     "aide": "Chaque procédé est un trait de l’écriture du livre.",
+     "explication": "Les **phrases longues** disent l’impalpable ; les **images concrètes** (bêtes, liquides, insectes) le rendent sensible ; le **présent et l’imparfait** installent des scènes sans début ni fin ; les pronoms effacent les **personnages**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’origine du mot.",
+     "texte": "Le mot « tropisme » vient de la ___ : c’est un mouvement vers une source de lumière ou de ___.",
+     "reponses": [
+      [
+       "biologie"
+      ],
+      [
+       "chaleur"
+      ]
+     ],
+     "banque": [
+      "biologie",
+      "musique",
+      "chaleur",
+      "bruit"
+     ],
+     "aide": "La première ligne du tableau donne la source du mot.",
+     "explication": "Le mot vient de la **biologie** : un mouvement vers une source de lumière ou de **chaleur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a89d7b9d-cdda-564a-aeed-e0ab102f56a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand il ne se passe rien",
+   "competence": "argumenter",
+   "situation": "Paul et Lou lisent le même court passage, écrit pour l’exercice à la manière de Sarraute, et ne s’accordent pas.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Paul",
+       "texte": "Il ne se passe rien dans ce texte : il est vide."
+      },
+      {
+       "qui": "Lou",
+       "texte": "Au contraire : tout se passe sous la conversation, c’est un tropisme."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Mais personne ne dit rien de grave."
+      },
+      {
+       "qui": "Lou",
+       "texte": "C’est justement ce qu’on ne dit pas qui bouge."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Sarraute",
+     "blocs": [
+      "Ils s’étaient assis autour de la table, et elle souriait. Quelque chose avait glissé, presque rien, un mot de trop dit sur un ton léger, et sous la phrase aimable quelque chose de tiède et de visqueux s’était mis à remuer, comme un [[i|insecte]] qu’on frôle. Elle continuait à sourire. On parlait de la pluie."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Nathalie Sarraute"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche l’image concrète qui rend sensible le mouvement intérieur.",
+     "aide": "C’est une comparaison avec un petit animal.",
+     "explication": "La comparaison avec un **insecte** rend sensible l’impalpable : un tropisme prend l’apparence d’une bête."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce qu’on dit, ou ce qui se passe dessous ?",
+     "categories": [
+      "La conversation",
+      "Le tropisme"
+     ],
+     "items": [
+      [
+       "On parlait de la pluie",
+       0
+      ],
+      [
+       "Elle continuait à sourire",
+       0
+      ],
+      [
+       "Quelque chose de tiède et de visqueux se met à remuer",
+       1
+      ],
+      [
+       "Quelque chose avait glissé, presque rien",
+       1
+      ]
+     ],
+     "aide": "La conversation est ce qu’on voit ; le tropisme est ce qui glisse en dessous.",
+     "explication": "La **conversation** : la pluie et le sourire ; le **tropisme** : ce qui glisse et remue sous la phrase aimable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage soutient-il ?",
+     "options": [
+      "Lou : tout se passe sous la conversation",
+      "Paul : le texte ne raconte rien et n’a aucun sens",
+      "Paul : la scène raconte un crime à demi-mot",
+      "Lou : le texte décrit un voyage en train"
+     ],
+     "reponse": 0,
+     "aide": "Que se passe-t-il sous la phrase aimable ?",
+     "explication": "Sous la conversation, un mouvement intérieur remue : c’est un **tropisme**, comme le dit Lou."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du passage à son effet.",
+     "paires": [
+      [
+       "Une image d’insecte",
+       "Rendre sensible l’impalpable"
+      ],
+      [
+       "L’imparfait (« souriait », « continuait »)",
+       "Une scène sans début ni fin"
+      ],
+      [
+       "« Ils », « elle », « on »",
+       "Le refus du personnage classique"
+      ]
+     ],
+     "aide": "Pense à ce que chaque procédé fait ressentir.",
+     "explication": "L’**insecte** rend l’impalpable sensible ; l’**imparfait** installe une scène sans début ni fin ; les **pronoms** refusent le personnage classique."
+    }
+   ]
+  },
+  {
+   "chapitre": "68d194fe-01f3-5cac-8c40-49f0e29ca4f1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un aspirant dans la forêt des Ardennes",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches « Un balcon en forêt ». Place l’auteur dans le temps, puis retiens le cadre de l’histoire.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Julien Gracq",
+     "debut": 1900,
+     "fin": 2010,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1910,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rom",
+       "date": 1958,
+       "nom": "Un balcon en forêt"
+      },
+      {
+       "id": "mort",
+       "date": 2007,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Un balcon en forêt",
+     "sousTitre": "Julien Gracq (Louis Poirier)",
+     "emoji": "🌲",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1958"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "Les Ardennes, automne 1939 à mai 1940"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "L’aspirant Grange"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Une « maison forte » perdue dans la forêt"
+      }
+     ],
+     "pied": "Le roman de l’attente et du désastre",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Touche l’année de parution du roman.",
+     "aide": "Cherche l’événement qui porte le titre du roman.",
+     "explication": "Le roman paraît en **1958**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Julien Gracq a-t-il à sa mort ?",
+     "reponse": 97,
+     "aide": "Soustrais l’année de naissance à l’année de la mort.",
+     "explication": "2007 − 1910 = **97 ans** : Gracq a vécu presque un siècle.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le cadre du roman.",
+     "texte": "Grange commande une « maison ___ » perdue dans la ___ des Ardennes.",
+     "reponses": [
+      [
+       "forte"
+      ],
+      [
+       "forêt"
+      ]
+     ],
+     "banque": [
+      "forte",
+      "blanche",
+      "forêt",
+      "plaine"
+     ],
+     "aide": "Regarde les lignes « Héros » et « Lieu ».",
+     "explication": "Grange commande une « maison **forte** » perdue dans la **forêt** des Ardennes."
+    }
+   ]
+  },
+  {
+   "chapitre": "68d194fe-01f3-5cac-8c40-49f0e29ca4f1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De l’attente au désastre",
+   "competence": "analyser-document",
+   "situation": "Suis le fil du roman, retrouve l’étape manquante, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Automne 1939 : Grange à la maison forte"
+      },
+      {
+       "id": "n2",
+       "texte": "La drôle de guerre : l’attente, la forêt"
+      },
+      {
+       "id": "n3",
+       "texte": "Il rencontre Mona, jeune veuve du village"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "La maison forte est encerclée"
+      },
+      {
+       "id": "n6",
+       "texte": "Blessé, Grange rentre à la maison vide"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Mai 1940 : l’offensive allemande balaie tout",
+      "Grange est promu capitaine et quitte la forêt",
+      "Mona quitte le village pour Paris",
+      "Les Allemands signent l’armistice avec Grange"
+     ],
+     "reponse": 0,
+     "aide": "L’attente est brisée d’un coup, au printemps 1940.",
+     "explication": "En **mai 1940**, l’offensive allemande balaie tout en quelques heures : c’est la fin de l’attente."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n6"
+     ],
+     "enonce": "Touche l’étape qui clôt le roman.",
+     "aide": "C’est la dernière case du fil.",
+     "explication": "Le roman se clôt sur **Grange blessé, qui revient à la maison vide**, se couche et ferme les yeux."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Grange",
+       "L’aspirant rêveur, heureux dans l’attente"
+      ],
+      [
+       "Mona",
+       "La jeune veuve libre et enfantine"
+      ],
+      [
+       "Varin",
+       "Le capitaine lucide, qui sait que rien ne tiendra"
+      ],
+      [
+       "Olivon, Hervouët, Gourcuff",
+       "Les trois soldats de la maison forte"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait dans l’histoire.",
+     "explication": "**Grange** rêve, **Mona** aime librement, le capitaine **Varin** est lucide, les trois autres sont les **soldats** de la maison forte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la période d’attente.",
+     "texte": "Avant l’offensive, c’est la « ___ de guerre » : on attend sans combattre.",
+     "reponses": [
+      [
+       "drôle"
+      ]
+     ],
+     "banque": [
+      "drôle",
+      "grande",
+      "longue",
+      "petite"
+     ],
+     "aide": "Le nom d’une période où il ne se passe rien.",
+     "explication": "C’est la **drôle** de guerre : une période d’attente sans combats."
+    }
+   ]
+  },
+  {
+   "chapitre": "68d194fe-01f3-5cac-8c40-49f0e29ca4f1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une guerre sans combat",
+   "competence": "argumenter",
+   "situation": "Sam et Eva ne s’accordent pas sur le genre du roman. Un passage écrit pour l’exercice, à la manière de Gracq, les départage.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "C’est un roman de guerre : l’action y tient la première place."
+      },
+      {
+       "qui": "Eva",
+       "texte": "Non : c’est un roman de l’attente, où la forêt est un personnage."
+      },
+      {
+       "qui": "Sam",
+       "texte": "Mais la guerre éclate à la fin !"
+      },
+      {
+       "qui": "Eva",
+       "texte": "Elle brise d’un coup une longue rêverie."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Gracq",
+     "blocs": [
+      "La [[n|neige]] avait tout effacé des sentiers, et la forêt, au-delà des fenêtres étroites, se tenait immobile comme une [[b|bête]] qui attend. Le [[s|silence]] pesait sur la maison forte ; les hommes parlaient bas, sans savoir pourquoi. Rien ne bougeait que la lumière, qui virait lentement au gris."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Julien Gracq"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui compare la forêt à un être vivant.",
+     "aide": "C’est un animal, dans une comparaison.",
+     "explication": "La forêt est comparée à une **bête** qui attend : elle devient un personnage."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": true,
+     "reponse": [
+      "n",
+      "s"
+     ],
+     "enonce": "Touche les deux mots qui installent le rêve éveillé.",
+     "aide": "L’un est blanc et efface les sentiers, l’autre pèse sur les hommes.",
+     "explication": "La **neige** et le **silence** installent un rêve éveillé, loin de l’action."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage confirme-t-il ?",
+     "options": [
+      "Eva : roman de l’attente, la forêt est un personnage",
+      "Sam : c’est un roman d’action, plein de combats",
+      "Sam : le passage décrit une bataille au grand jour",
+      "Eva : la forêt est un simple décor sans importance"
+     ],
+     "reponse": 0,
+     "aide": "Le passage montre un silence et une forêt qui attend, pas de combat.",
+     "explication": "Le passage décrit un silence, une forêt qui attend : c’est **l’attente**, où la **forêt est un personnage**, comme le dit Eva."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du passage à son effet.",
+     "paires": [
+      [
+       "La neige",
+       "Elle efface les repères et installe le rêve éveillé"
+      ],
+      [
+       "Le silence",
+       "Il pèse sur les hommes : la tension de l’attente"
+      ],
+      [
+       "La forêt comparée à une bête",
+       "La forêt est un personnage"
+      ]
+     ],
+     "aide": "Pense à ce que chaque élément fait ressentir.",
+     "explication": "La **neige** efface les repères, le **silence** pèse, la comparaison avec une **bête** fait de la forêt un personnage."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c374ac5-b505-5f76-88f0-a4a2296311c4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une famille sur une concession",
+   "competence": "analyser-document",
+   "situation": "Tu fiches « Un barrage contre le Pacifique ». Lis la carte du roman et le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Un barrage contre le Pacifique",
+     "sousTitre": "Marguerite Duras",
+     "emoji": "🌊",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1950"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "Indochine française, années 1930"
+      },
+      {
+       "texte": "Nature",
+       "valeur": "Roman largement autobiographique"
+      },
+      {
+       "texte": "Prix",
+       "valeur": "A failli obtenir le Goncourt"
+      }
+     ],
+     "pied": "Une mère contre la mer et l’administration",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Sa situation"
+     ],
+     "lignes": [
+      [
+       "La mère",
+       "Veuve, institutrice"
+      ],
+      [
+       "Joseph",
+       "?"
+      ],
+      [
+       "Suzanne",
+       "La fille, dix-sept ans"
+      ],
+      [
+       "Monsieur Jo",
+       "Riche héritier laid et timide, qui convoite Suzanne"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui dit qui convoite Suzanne.",
+     "aide": "Cherche un héritier timide.",
+     "explication": "**Monsieur Jo**, riche héritier laid et timide, convoite Suzanne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Le frère de Suzanne, chasseur désœuvré",
+      "Le fiancé de Suzanne, riche héritier",
+      "Un paysan qui aide la mère",
+      "Un fonctionnaire de l’administration"
+     ],
+     "reponse": 0,
+     "aide": "Joseph est le frère de Suzanne.",
+     "explication": "**Joseph** est le frère de Suzanne, vingt ans, chasseur et désœuvré."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte du roman.",
+     "texte": "L’histoire se passe en ___ française, dans les années ___.",
+     "reponses": [
+      [
+       "Indochine"
+      ],
+      [
+       "1930"
+      ]
+     ],
+     "banque": [
+      "Indochine",
+      "Algérie",
+      "1930",
+      "1960"
+     ],
+     "aide": "La ligne « Cadre » donne les deux réponses.",
+     "explication": "L’histoire se passe en **Indochine** française, dans les années **1930**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c374ac5-b505-5f76-88f0-a4a2296311c4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La mère contre la mer",
+   "competence": "analyser-document",
+   "situation": "Suis la lutte de la mère contre la mer, retrouve l’étape manquante, puis relie les personnages à leur situation.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "La mère achète une concession"
+      },
+      {
+       "id": "n2",
+       "texte": "On lui a vendu une terre envahie par la mer"
+      },
+      {
+       "id": "n3",
+       "texte": "Avec les paysans, elle bâtit des barrages"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle espère un mariage et un diamant"
+      },
+      {
+       "id": "n6",
+       "texte": "Bague vendue, argent dilapidé, la mère meurt"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Le Pacifique emporte les barrages",
+      "La mer se retire et la terre devient fertile",
+      "L’administration rachète la concession",
+      "Les paysans achèvent le barrage avec succès"
+     ],
+     "reponse": 0,
+     "aide": "Que devient un barrage de rondins face au Pacifique ?",
+     "explication": "**Le Pacifique emporte les barrages** : la lutte de la mère est héroïque et vaine."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape qui dit ce que la mère espère de Monsieur Jo.",
+     "aide": "Elle espère le mariage de sa fille et une pierre précieuse.",
+     "explication": "La mère espère de Monsieur Jo un **mariage** pour Suzanne et un **diamant**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa situation.",
+     "paires": [
+      [
+       "La mère",
+       "Veuve et institutrice, qui lutte contre la mer"
+      ],
+      [
+       "Joseph",
+       "Le frère, chasseur désœuvré"
+      ],
+      [
+       "Suzanne",
+       "La fille, regardée et marchandée"
+      ],
+      [
+       "Monsieur Jo",
+       "L’héritier laid et timide qui la convoite"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait dans le fil du roman.",
+     "explication": "La **mère** lutte, **Joseph** est désœuvré, **Suzanne** est regardée et marchandée, **Monsieur Jo** la convoite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dénonce le roman.",
+     "texte": "L’administration coloniale, ___, a vendu à la mère une terre impossible à cultiver.",
+     "reponses": [
+      [
+       "corrompue"
+      ]
+     ],
+     "banque": [
+      "corrompue",
+      "généreuse",
+      "absente",
+      "étrangère"
+     ],
+     "aide": "Elle a trompé la mère pour de l’argent.",
+     "explication": "L’administration coloniale est **corrompue** : elle a vendu une terre régulièrement envahie par la mer."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c374ac5-b505-5f76-88f0-a4a2296311c4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Héroïque et vaine",
+   "competence": "argumenter",
+   "situation": "Maé et Théo jugent la mère différemment. Un passage écrit pour l’exercice, à la manière de Duras, les aide à trancher.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maé",
+       "texte": "La mère est ridicule : elle s’entête à lutter contre la mer."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Elle est tragique : sa lutte est héroïque et vaine."
+      },
+      {
+       "qui": "Maé",
+       "texte": "Vaine, donc inutile."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Inutile, mais pas ridicule : elle ne se résigne pas."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Duras",
+     "blocs": [
+      "La mère regarde la mer. La mer monte. Elle avait cru qu’on pouvait arrêter l’eau avec des [[m|troncs]] et du [[m|courage]]. La mer est revenue la nuit, comme chaque année. La mère ne dit rien. Elle regarde encore."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marguerite Duras"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui disent les moyens dont dispose la mère.",
+     "aide": "L’un est un matériau, l’autre une qualité morale.",
+     "explication": "La mère n’a que des **troncs** et du **courage** face à la mer."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du passage à son effet.",
+     "paires": [
+      [
+       "La répétition du mot « mer »",
+       "Le ressassement qui tend l’écriture"
+      ],
+      [
+       "Le silence de la mère",
+       "Une lutte vaine, sans plainte"
+      ],
+      [
+       "Les troncs contre l’eau",
+       "Une lutte héroïque et vaine"
+      ]
+     ],
+     "aide": "Pense à ce que chaque détail fait ressentir.",
+     "explication": "La **répétition** donne le ressassement ; le **silence** dit une lutte sans plainte ; les **troncs** face à l’eau, une lutte héroïque et vaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage confirme-t-il ?",
+     "options": [
+      "Théo : sa lutte est tragique, héroïque et vaine",
+      "Maé : sa lutte est ridicule et comique",
+      "Maé : la mère gagne et arrête la mer",
+      "Théo : la mère renonce dès le premier jour"
+     ],
+     "reponse": 0,
+     "aide": "La mère revient chaque année, la mer aussi.",
+     "explication": "La mère s’obstine avec ses troncs et son courage, et la mer revient : sa lutte est **héroïque et vaine**, comme le dit Théo."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : héroïque ou vain ?",
+     "categories": [
+      "Héroïque",
+      "Vain"
+     ],
+     "items": [
+      [
+       "La mère construit des barrages avec les paysans",
+       0
+      ],
+      [
+       "Elle refuse de se résigner",
+       0
+      ],
+      [
+       "La mer emporte les barrages",
+       1
+      ],
+      [
+       "La mer envahit la concession chaque année",
+       1
+      ]
+     ],
+     "aide": "Ce que fait la mère est héroïque ; ce que fait la mer rend tout inutile.",
+     "explication": "Ce que **la mère** fait est héroïque ; ce que **la mer** fait rend tout vain."
+    }
+   ]
+  }
+ ]
+}

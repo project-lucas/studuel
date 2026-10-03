@@ -1,0 +1,3183 @@
+{
+ "niveau": "5e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "445027f4-5377-5bdc-9603-a8f5af992480",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une frise de Luther à Henri IV",
+   "competence": "se-reperer-temps",
+   "situation": "Mathis prépare un exposé sur les guerres de Religion. Il place sur une frise les dates à retenir, du moment où Luther critique l’Église jusqu’à l’édit de Nantes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les conflits religieux, de 1510 à 1600",
+     "source": "Dates du cours.",
+     "debut": 1510,
+     "fin": 1600,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "thtses",
+       "date": 1517,
+       "nom": "95 thèses"
+      },
+      {
+       "id": "debut",
+       "date": 1562,
+       "nom": "Début des guerres"
+      },
+      {
+       "id": "saint",
+       "date": 1572,
+       "nom": "Saint-Barthélemy"
+      },
+      {
+       "id": "roi",
+       "date": 1589,
+       "nom": "Henri IV roi"
+      },
+      {
+       "id": "conv",
+       "date": 1593,
+       "nom": "Conversion"
+      },
+      {
+       "id": "nantes",
+       "date": 1598,
+       "nom": "Édit de Nantes"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement de **1572**.",
+     "reponse": [
+      "saint"
+     ],
+     "aide": "Cherche la graduation de 1570, puis avance de deux ans.",
+     "explication": "En **1572**, le massacre de la Saint-Barthélemy tue plusieurs milliers de protestants à Paris et en province."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le début des guerres de Religion de l’édit de Nantes ?",
+     "unite": "ans",
+     "reponse": 36,
+     "aide": "Soustrais la date de début à la date de l’édit.",
+     "explication": "1598 − 1562 = **36** : la guerre civile dure trente-six ans, et l’édit de Nantes y met fin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel événement a lieu entre l’arrivée d’Henri IV sur le trône et l’édit de Nantes ?",
+     "options": [
+      "Sa conversion au catholicisme",
+      "Le massacre de la Saint-Barthélemy",
+      "La publication des 95 thèses",
+      "Le début des guerres de Religion"
+     ],
+     "reponse": 0,
+     "aide": "Henri IV devient roi en 1589 et l’édit est de 1598 : cherche une date entre les deux.",
+     "explication": "Henri IV se convertit en **1593**, entre 1589 et 1598 : les trois autres événements sont antérieurs à son règne."
+    }
+   ]
+  },
+  {
+   "chapitre": "445027f4-5377-5bdc-9603-a8f5af992480",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois croyants, trois façons de croire",
+   "competence": "analyser-texte",
+   "situation": "Au XVIe siècle, l’Europe se divise en plusieurs Églises. Trois personnages imaginés racontent leur façon de pratiquer : un luthérien, une calviniste et un jésuite catholique.",
+   "documents": [
+    {
+     "id": "temoins",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois témoignages",
+     "auteur": "Témoignages imaginés pour l’exercice.",
+     "blocs": [
+      "**Hans, marchand à Wittenberg, 1530.** « Notre pasteur s’est marié l’an dernier et personne ne s’en étonne. Chez nous, tout le monde lit la Bible en allemand, car elle seule fait autorité en matière de foi. Nous ne gardons que deux sacrements : le baptême et l’eucharistie. »",
+      "**Jeanne, drapière réfugiée à Genève, 1555.** « Ici, le temple est nu : ni statues ni décors. Notre pasteur répète que Dieu a [[p|choisi]] d’avance ceux qui seront sauvés. Pour nous aussi, seule la Bible fait autorité. »",
+      "**Père Antoine, jésuite, 1575.** « J’enseigne dans un collège et je prépare mon départ en mission. Nos prêtres sont désormais formés dans des séminaires, comme l’a décidé le concile de Trente. Rome publie aussi la liste des livres interdits : l’Index. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à sa confession.",
+     "paires": [
+      [
+       "Hans, à Wittenberg",
+       "Luthérien"
+      ],
+      [
+       "Jeanne, à Genève",
+       "Calviniste"
+      ],
+      [
+       "Père Antoine",
+       "Jésuite catholique"
+      ]
+     ],
+     "aide": "Cherche dans chaque témoignage le lieu et les pratiques décrites.",
+     "explication": "Hans est **luthérien** (Wittenberg, pasteur marié, deux sacrements), Jeanne est **calviniste** (Genève, prédestination), le père Antoine est un **jésuite catholique** (concile de Trente, Index)."
+    },
+    {
+     "type": "zone",
+     "document": "temoins",
+     "enonce": "Touche le mot du témoignage de Jeanne qui exprime la **prédestination**.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "La prédestination, c’est l’idée que Dieu décide à l’avance : cherche le verbe de cette décision.",
+     "explication": "Pour les calvinistes, Dieu a **choisi** d’avance ceux qui seront sauvés : c’est la prédestination."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel point commun les témoignages de Hans et de Jeanne montrent-ils ?",
+     "options": [
+      "Pour eux, la Bible est la seule autorité en matière de foi",
+      "Ils obéissent au pape et à la liste des livres interdits",
+      "Ils gardent les sept sacrements de l’Église catholique",
+      "Ils pensent que Dieu n’a rien décidé d’avance pour personne"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase sur la Bible dans chacun des deux témoignages.",
+     "explication": "Luthériens et calvinistes sont protestants : ils s’appuient sur la **Bible seule**, et non sur l’autorité de Rome."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase à partir du témoignage du père Antoine.",
+     "texte": "Le concile de ___ a décidé que les prêtres seraient formés dans des ___.",
+     "reponses": [
+      [
+       "Trente"
+      ],
+      [
+       "séminaires",
+       "séminaire"
+      ]
+     ],
+     "banque": [
+      "Trente",
+      "séminaires",
+      "Genève",
+      "monastères"
+     ],
+     "aide": "Le père Antoine cite le concile et le lieu de formation des prêtres.",
+     "explication": "Le concile de **Trente** (1545-1563) réaffirme les dogmes et crée les **séminaires** : c’est la réaction catholique."
+    }
+   ]
+  },
+  {
+   "chapitre": "445027f4-5377-5bdc-9603-a8f5af992480",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De Genève aux Pays-Bas, puis l’édit de Nantes",
+   "competence": "lire-carte",
+   "situation": "Zoé suit la route des idées de Luther et de Calvin sur une carte de l’Europe. Puis elle lit un résumé de l’édit de Nantes, qui met fin à trente-six ans de guerre civile.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quelques villes de la Réforme",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -8,
+      44,
+      16,
+      58
+     ],
+     "source": "Villes citées dans le cours.",
+     "lieux": [
+      {
+       "id": "wittenberg",
+       "lon": 12.65,
+       "lat": 51.87,
+       "nom": "Wittenberg",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "geneve",
+       "lieu": "geneve",
+       "nom": "Genève",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "nom": "Paris",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "edimbourg",
+       "lieu": "edimbourg",
+       "nom": "Édimbourg",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "amsterdam",
+       "lieu": "amsterdam",
+       "nom": "Amsterdam",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "edit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "L’édit de Nantes, en résumé",
+     "auteur": "Résumé écrit pour l’exercice : ce n’est pas le texte de l’édit.",
+     "blocs": [
+      "Après trente-six ans de guerre civile, le roi Henri IV veut ramener la paix dans le royaume.",
+      "Il accorde aux protestants la liberté de conscience : personne ne peut être poursuivi pour sa foi.",
+      "Leur culte est autorisé, mais seulement dans [[l|certains]] [[l|lieux]] fixés par l’édit.",
+      "Ils gardent aussi des places de sûreté, des villes fortes où ils peuvent se défendre.",
+      "En 1685, Louis XIV révoquera l’édit."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Calvin développe sa doctrine.",
+     "reponse": [
+      "geneve"
+     ],
+     "aide": "Calvin s’y est réfugié ; la ville est située au sud-est de la France, près des Alpes.",
+     "explication": "Calvin développe sa doctrine à **Genève**, qui devient une cité strictement réglée."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Depuis Genève, le calvinisme gagne la France, l’Écosse et les Pays-Bas. Touche les **trois villes** de la carte qui se trouvent dans ces pays.",
+     "reponse": [
+      "paris",
+      "edimbourg",
+      "amsterdam"
+     ],
+     "aide": "Écarte Wittenberg (Allemagne) et Genève (Suisse) : il reste trois villes.",
+     "explication": "**Paris** (France), **Édimbourg** (Écosse) et **Amsterdam** (Pays-Bas) sont dans les trois pays gagnés par le calvinisme."
+    },
+    {
+     "type": "zone",
+     "document": "edit",
+     "enonce": "Touche les deux mots qui montrent que le culte protestant reste **encadré**.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Cherche dans le troisième paragraphe les mots qui limitent les endroits où l’on peut prier.",
+     "explication": "Le culte n’est autorisé que dans **certains lieux** : l’édit organise une coexistence, pas une liberté totale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années l’édit de Nantes (1598) est-il resté en vigueur avant sa révocation ?",
+     "unite": "ans",
+     "reponse": 87,
+     "aide": "Le résumé donne l’année de la révocation ; soustrais 1598.",
+     "explication": "1685 − 1598 = **87** ans : Louis XIV révoque l’édit en 1685."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Henri IV signe-t-il l’édit de Nantes ?",
+     "options": [
+      "Pour arrêter la guerre en organisant la coexistence des deux religions",
+      "Pour proclamer la tolérance religieuse au sens moderne",
+      "Pour interdire le protestantisme dans tout le royaume",
+      "Pour rendre les protestants plus nombreux que les catholiques"
+     ],
+     "reponse": 0,
+     "aide": "Relis le premier paragraphe du résumé : que veut le roi après trente-six ans de guerre ?",
+     "explication": "L’édit **ne proclame pas la tolérance moderne** : il organise une **coexistence** pour mettre fin à la guerre civile."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2ec4edc-e919-54ad-be52-a5e38bcf152e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du roi Henri IV au Roi-Soleil",
+   "competence": "se-reperer-temps",
+   "situation": "Camille veut comprendre comment le pouvoir du roi s’est renforcé. Elle trace une frise de 1580 à 1720 avec deux règnes et quelques dates clés.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Vers la monarchie absolue",
+     "source": "Dates du cours.",
+     "debut": 1580,
+     "fin": 1720,
+     "pas": 20,
+     "periodes": [
+      {
+       "id": "henri",
+       "debut": 1589,
+       "fin": 1610,
+       "nom": "Henri IV",
+       "teinte": "ambre"
+      },
+      {
+       "id": "louis",
+       "debut": 1661,
+       "fin": 1715,
+       "nom": "Règne personnel de Louis XIV",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "richelieu",
+       "date": 1624,
+       "nom": "Richelieu"
+      },
+      {
+       "id": "fronde",
+       "date": 1648,
+       "nom": "La Fronde"
+      },
+      {
+       "id": "seul",
+       "date": 1661,
+       "nom": "Louis XIV seul"
+      },
+      {
+       "id": "versailles",
+       "date": 1682,
+       "nom": "Cour à Versailles"
+      },
+      {
+       "id": "revocation",
+       "date": 1685,
+       "nom": "Révocation"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui fixe la cour à **Versailles**.",
+     "reponse": [
+      "versailles"
+     ],
+     "aide": "Cherche l’événement qui porte le nom de Versailles, vers la fin du règne.",
+     "explication": "La cour est fixée à **Versailles** en 1682 : la noblesse y vit sous les yeux du roi."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la Fronde du moment où Louis XIV décide de gouverner seul ?",
+     "unite": "ans",
+     "reponse": 13,
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1661 − 1648 = **13** ans : le jeune roi garde de la Fronde un souvenir durable avant de gouverner seul."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel événement a lieu avant le règne personnel de Louis XIV ?",
+     "options": [
+      "La Fronde",
+      "L’installation de la cour à Versailles",
+      "La révocation de l’édit de Nantes"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "Le règne personnel commence en 1661 : cherche une date plus ancienne.",
+     "explication": "La **Fronde** (1648-1653) précède 1661 ; Versailles (1682) et la révocation (1685) viennent après."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2ec4edc-e919-54ad-be52-a5e38bcf152e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre écrite depuis Versailles",
+   "competence": "analyser-texte",
+   "situation": "En 1683, un gentilhomme installé à la cour écrit à son cousin resté sur ses terres. Sa lettre montre ce que Versailles change dans la vie de la noblesse.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Versailles, 1683",
+     "auteur": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Cher cousin,",
+      "Depuis que le roi a fixé la cour ici, je n’ai plus une journée à moi. Dès le matin, il faut assister à son lever, puis suivre l’[[e|étiquette]] : chacun a sa place, son tour, son geste.",
+      "Je n’ai plus le temps de visiter mes terres. Pour obtenir une charge ou une pension, je dépends de la faveur du roi.",
+      "Hier encore, une fête magnifique : des portraits, des artistes pensionnés, des feux d’artifice. Tout parle de la gloire du Roi-Soleil."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne les règles strictes de la cour.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche le mot qui annonce « chacun a sa place, son tour, son geste ».",
+     "explication": "L’**étiquette** fixe la place et les gestes de chacun : elle occupe la noblesse du matin au soir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la lettre, pourquoi le gentilhomme ne peut-il plus agir en seigneur indépendant ?",
+     "options": [
+      "Il passe ses journées à la cour et dépend des faveurs du roi",
+      "Il a perdu toutes ses terres à cause de la Fronde",
+      "Il est devenu ministre et gère les finances du royaume",
+      "Il doit rester chez lui pour surveiller ses paysans"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux premiers paragraphes : que fait-il toute la journée, et de qui dépend-il ?",
+     "explication": "Retenue à Versailles, la noblesse est **domestiquée** : elle dépend du roi pour les charges et les pensions."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces moyens de gouverner de Louis XIV selon leur but.",
+     "categories": [
+      "Dominer la noblesse",
+      "Faire briller le Roi-Soleil",
+      "Enrichir et défendre le royaume"
+     ],
+     "items": [
+      [
+       "Fixer la cour à Versailles",
+       0
+      ],
+      [
+       "Imposer l’étiquette",
+       0
+      ],
+      [
+       "Commander des portraits et des fêtes",
+       1
+      ],
+      [
+       "Pensionner des artistes",
+       1
+      ],
+      [
+       "Créer des manufactures royales",
+       2
+      ],
+      [
+       "Entretenir une armée permanente",
+       2
+      ]
+     ],
+     "aide": "Demande-toi : cela occupe-t-il les nobles, cela célèbre-t-il le roi, ou cela produit-il de la richesse et de la force ?",
+     "explication": "Versailles et l’étiquette **dominent la noblesse** ; portraits, fêtes et artistes **font briller le Roi-Soleil** ; les manufactures de Colbert et l’armée **enrichissent et défendent** le royaume."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que cherchent à montrer les fêtes, les portraits et les artistes dont parle le gentilhomme ?",
+     "options": [
+      "La grandeur du roi, présenté comme le Roi-Soleil",
+      "La pauvreté du royaume après les famines",
+      "Le pouvoir des nobles face au roi",
+      "La victoire des protestants sur les catholiques"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la lettre.",
+     "explication": "Portraits, fêtes et académies construisent l’**image** du roi : le Roi-Soleil, au centre d’un royaume qu’il gouverne seul."
+    }
+   ]
+  },
+  {
+   "chapitre": "a2ec4edc-e919-54ad-be52-a5e38bcf152e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un tisserand quitte le royaume",
+   "competence": "analyser-document",
+   "situation": "En 1686, un maître tisserand protestant décide de fuir la France, un an après la révocation de l’édit de Nantes. Théo lit sa lettre, puis replace cet événement dans la fin du règne de Louis XIV.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un tisserand, 1686",
+     "auteur": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Depuis la révocation de l’édit de Nantes, l’an dernier, notre temple est fermé et nos pasteurs sont partis. On nous demande de nous convertir.",
+      "Je dirige un [[q|atelier]] de douze [[q|ouvriers]] et je forme des [[q|apprentis]]. Le roi interdit de quitter le royaume, mais nous partirons de nuit pour la Hollande, avec nos outils et tout ce que nous savons faire."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La fin du règne personnel de Louis XIV",
+     "source": "Dates du cours.",
+     "debut": 1660,
+     "fin": 1720,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "regne",
+       "debut": 1661,
+       "fin": 1715,
+       "nom": "Règne personnel",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "revoc",
+       "date": 1685,
+       "nom": "Révocation"
+      },
+      {
+       "id": "f93",
+       "date": 1693,
+       "nom": "Famine"
+      },
+      {
+       "id": "f09",
+       "date": 1709,
+       "nom": "Famine"
+      },
+      {
+       "id": "mort",
+       "date": 1715,
+       "nom": "Mort du roi"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la révocation de l’édit de Nantes de la première famine ?",
+     "unite": "ans",
+     "reponse": 8,
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1693 − 1685 = **8** ans : les famines s’ajoutent aux guerres et aux difficultés du royaume."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": true,
+     "enonce": "Touche les **trois mots** qui montrent que le tisserand emploie et forme du monde.",
+     "reponse": [
+      "q"
+     ],
+     "aide": "Cherche l’endroit où il travaille et les personnes qui travaillent avec lui.",
+     "explication": "Un **atelier**, des **ouvriers**, des **apprentis** : un artisan qualifié qui emporte avec lui son savoir-faire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le départ de milliers de protestants comme lui est-il un désastre économique ?",
+     "options": [
+      "Beaucoup étaient des artisans qualifiés qui emportaient leur savoir-faire",
+      "Ils refusaient de payer l’impôt et de faire vivre les villes du royaume",
+      "Ils étaient trop nombreux et le royaume manquait de logements pour tous",
+      "Ils construisaient eux-mêmes des forteresses pour le compte du roi"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que l’atelier du tisserand produisait et à ce qu’il emporte en partant.",
+     "explication": "La révocation chasse **des dizaines de milliers de protestants**, souvent artisans et commerçants qualifiés : c’est un désastre économique autant qu’humain."
+    },
+    {
+     "type": "categories",
+     "enonce": "Un roi absolu n’est pas libre de tout : il est tenu par les lois fondamentales du royaume. Classe ces actions.",
+     "categories": [
+      "Le roi peut",
+      "Le roi ne peut pas"
+     ],
+     "items": [
+      [
+       "Faire les lois",
+       0
+      ],
+      [
+       "Rendre la justice",
+       0
+      ],
+      [
+       "Choisir ses ministres",
+       0
+      ],
+      [
+       "Changer l’ordre de succession",
+       1
+      ],
+      [
+       "Vendre ou donner le domaine royal",
+       1
+      ]
+     ],
+     "aide": "Souviens-toi : absolu ne veut pas dire arbitraire. Les lois fondamentales protègent la succession et le domaine.",
+     "explication": "Le roi réunit les pouvoirs, mais il **ne peut ni changer l’ordre de succession ni aliéner le domaine royal**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que laissent en 1715, d’après la frise, les dernières années du règne ?",
+     "options": [
+      "Des famines et des guerres coûteuses laissent un royaume affaibli",
+      "Une paix durable qui rétablit les finances du royaume",
+      "Un roi dont le pouvoir est limité par des assemblées élues",
+      "Un royaume enrichi par le retour des protestants"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les événements placés entre 1685 et 1715 sur la frise.",
+     "explication": "Les famines de **1693 et 1709**, s’ajoutant aux guerres et aux finances épuisées, laissent à la mort du roi un royaume affaibli."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9026b5d-4908-5eaf-9eb1-22885e5f9dbc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trois piliers du développement durable",
+   "competence": "observer-schema",
+   "situation": "Sa classe prépare une affiche sur le développement durable. Maëlle dessine les trois piliers sous la forme de trois cercles qui se recouvrent.",
+   "documents": [
+    {
+     "id": "piliers",
+     "type": "schema",
+     "titre": "Les trois piliers",
+     "largeur": 360,
+     "hauteur": 340,
+     "source": "Schéma du cours.",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 120,
+       "r": 80,
+       "teinte": "jaune",
+       "motif": "aucun",
+       "id": "eco",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 210,
+       "r": 80,
+       "teinte": "rose",
+       "motif": "aucun",
+       "id": "social",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 210,
+       "r": 80,
+       "teinte": "vert",
+       "motif": "aucun",
+       "id": "env",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 180,
+       "cy": 180,
+       "rx": 24,
+       "ry": 20,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "centre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 20,
+       "texte": "Économique",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 322,
+       "texte": "Social",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 322,
+       "texte": "Environnemental",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "piliers",
+     "enonce": "Touche le pilier qui concerne la **santé**, l’**éducation** et le **logement** pour tous.",
+     "reponse": [
+      "social"
+     ],
+     "aide": "Trois piliers : économique, social, environnemental. Lequel parle des personnes ?",
+     "explication": "Le pilier **social** demande santé, éducation, logement et équité pour tous."
+    },
+    {
+     "type": "zone",
+     "document": "piliers",
+     "enonce": "Touche la zone où les **trois piliers** se croisent : c’est là qu’un projet est durable.",
+     "reponse": [
+      "centre"
+     ],
+     "aide": "Cherche la zone qui se trouve à l’intérieur des trois cercles à la fois.",
+     "explication": "Un projet n’est **durable** que s’il satisfait les **trois piliers à la fois** : c’est la zone du centre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un projet crée beaucoup d’emplois, mais pollue la rivière du village. Combien de piliers respecte-t-il ?",
+     "options": [
+      "Un seul : il n’est pas durable",
+      "Les trois : il est durable",
+      "Deux : il est durable",
+      "Aucun des trois piliers"
+     ],
+     "reponse": 0,
+     "aide": "Les emplois relèvent du pilier économique. Que dit la pollution sur le pilier environnemental ?",
+     "explication": "Il ne respecte que le pilier **économique** : sans le social et l’environnemental, il n’est **pas durable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9026b5d-4908-5eaf-9eb1-22885e5f9dbc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel projet pour la commune de Port-Clair ?",
+   "competence": "lire-tableau",
+   "situation": "Le maire de Port-Clair, ville imaginée, hésite entre quatre projets. Il les passe au crible des trois piliers du développement durable : emplois, bénéfice pour tous, respect de l’environnement.",
+   "documents": [
+    {
+     "id": "projets",
+     "type": "tableau",
+     "titre": "Quatre projets pour la commune",
+     "source": "Projets imaginés pour l’exercice.",
+     "colonnes": [
+      "Projet",
+      "Crée des emplois",
+      "Profite à tous les habitants",
+      "Préserve l’environnement"
+     ],
+     "lignes": [
+      [
+       "A. Une usine qui rejette ses déchets dans la rivière",
+       "Oui",
+       "Non",
+       "Non"
+      ],
+      [
+       "B. Une réserve naturelle entièrement clôturée",
+       "Non",
+       "Non",
+       "Oui"
+      ],
+      [
+       "C. Un quartier de logements avec tramway et énergie solaire",
+       "Oui",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "D. Un parc solaire dont l’électricité est trop chère pour les habitants",
+       "Oui",
+       "Non",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "projets",
+     "enonce": "Touche le projet qui respecte les **trois piliers**.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la ligne où il n’y a que des « Oui ».",
+     "explication": "Le projet **C** coche les trois colonnes : économique, social et environnemental. C’est le seul durable."
+    },
+    {
+     "type": "zone",
+     "document": "projets",
+     "enonce": "Touche le projet qui est **viable** (économie + environnement) mais pas **équitable**.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Viable = emplois ET environnement. Équitable = emplois ET profit pour tous. Cherche « Oui », « Non », « Oui ».",
+     "explication": "Le projet **D** crée des emplois et préserve l’environnement (viable), mais l’électricité est trop chère pour les habitants : il n’est pas équitable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il changer pour que le projet D devienne durable ?",
+     "options": [
+      "Baisser le prix de l’électricité pour que tous en profitent",
+      "Supprimer les emplois qu’il a créés dans la commune",
+      "Installer d’autres panneaux sans changer le prix de vente",
+      "Cesser de préserver l’environnement autour du parc"
+     ],
+     "reponse": 0,
+     "aide": "Quel pilier est « Non » pour le projet D ?",
+     "explication": "Il manque le pilier **social** : en rendant l’électricité accessible à tous, le projet D satisferait les trois piliers."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Le développement durable se joue à toutes les échelles. Range ces actions du plus local au plus mondial.",
+     "items": [
+      "Un tri sélectif dans un collège",
+      "Une piste cyclable dans une ville",
+      "Un accord climatique mondial"
+     ],
+     "aide": "Pars du collège, passe à la ville, finis par le monde.",
+     "explication": "Du **local** au **mondial** : le collège, la ville, puis l’accord entre États. Les échelles se répondent."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9026b5d-4908-5eaf-9eb1-22885e5f9dbc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "PIB, IDH et empreinte : comparer quatre pays",
+   "competence": "analyser-document",
+   "situation": "Pour son exposé, Ismaël compare quatre pays imaginés avec trois indicateurs, puis place sur une frise les grandes étapes qui ont conduit à parler de développement durable.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du premier sommet de la Terre aux objectifs de 2030",
+     "source": "Dates du cours.",
+     "debut": 1970,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "stockholm",
+       "date": 1972,
+       "nom": "Stockholm"
+      },
+      {
+       "id": "brundtland",
+       "date": 1987,
+       "nom": "Rapport Brundtland"
+      },
+      {
+       "id": "rio",
+       "date": 1992,
+       "nom": "Sommet de Rio"
+      },
+      {
+       "id": "odd",
+       "date": 2015,
+       "nom": "17 objectifs"
+      },
+      {
+       "id": "echeance",
+       "date": 2030,
+       "nom": "Échéance"
+      }
+     ]
+    },
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Quatre pays comparés",
+     "source": "Pays et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "PIB par habitant ($)",
+      "IDH",
+      "Empreinte (planètes)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "60 000",
+       "0,95",
+       "4,0"
+      ],
+      [
+       "B",
+       "12 000",
+       "0,80",
+       "1,8"
+      ],
+      [
+       "C",
+       "2 000",
+       "0,50",
+       "0,8"
+      ],
+      [
+       "D",
+       "24 000",
+       "0,76",
+       "2,6"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le premier sommet de la Terre de celui de Rio ?",
+     "unite": "ans",
+     "reponse": 20,
+     "aide": "Lis les dates de Stockholm et de Rio sur la frise.",
+     "explication": "1992 − 1972 = **20** ans entre le premier sommet de la Terre et celui de Rio, où le terme se popularise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le pays D a un PIB par habitant deux fois plus élevé que le pays B, mais un IDH plus faible. Que montre cet écart ?",
+     "options": [
+      "Le PIB par habitant ne suffit pas à mesurer le développement",
+      "Le PIB par habitant mesure à lui seul le développement",
+      "Plus un pays est riche, plus son IDH est élevé",
+      "L’IDH ne dépend pas de l’éducation ni de la santé"
+     ],
+     "reponse": 0,
+     "aide": "Compare le PIB et l’IDH des pays B et D.",
+     "explication": "L’IDH combine **richesse, espérance de vie et éducation** : un pays plus riche peut avoir un IDH plus faible. Le PIB par habitant ne suffit pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois l’empreinte écologique du pays A est-elle plus grande que celle du pays C ?",
+     "unite": "fois",
+     "reponse": 5,
+     "aide": "Divise l’empreinte de A par celle de C.",
+     "explication": "4,0 ÷ 0,8 = **5** : l’empreinte du pays A est cinq fois plus lourde que celle du pays C."
+    },
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche l’IDH du pays dont l’**empreinte écologique** est la plus lourde.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Repère d’abord la plus grande empreinte, puis lis l’IDH sur la même ligne.",
+     "explication": "Le pays **A** a l’empreinte la plus lourde (4,0) et un IDH de **0,95**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le pays A ne peut-il pas servir de modèle de développement durable pour tous ?",
+     "options": [
+      "Si toute l’humanité vivait comme lui, il faudrait quatre planètes",
+      "Son IDH est trop faible pour offrir une bonne éducation",
+      "Son PIB par habitant est trop bas pour créer des emplois",
+      "Son empreinte est inférieure à celle de la planète"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne « Empreinte (planètes) ».",
+     "explication": "Avec une empreinte de **4,0 planètes**, ce mode de vie n’est pas généralisable : le développement durable est né de ce constat."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec7397cc-48b8-5347-ba45-a9bc9806dc43",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un milliard de plus, de plus en plus vite",
+   "competence": "lire-graphique",
+   "situation": "Inès veut comprendre pourquoi on parle d’une croissance sans précédent. Elle lit un graphique qui donne l’année où la Terre atteint chaque milliard d’habitants.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "L’année où l’humanité atteint chaque milliard",
+     "source": "Chiffres arrondis, d’après l’ONU.",
+     "categories": [
+      "Vers 1800",
+      "1927",
+      "1960",
+      "1974",
+      "1987",
+      "1999",
+      "2011",
+      "2022"
+     ],
+     "series": [
+      {
+       "nom": "Population mondiale",
+       "valeurs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Population mondiale",
+      "unite": "milliards",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche l’année où l’humanité atteint **8 milliards** d’habitants.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "C’est la barre la plus haute du graphique.",
+     "explication": "L’humanité atteint 8 milliards en **2022**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années faut-il pour passer de 7 à 8 milliards d’habitants ?",
+     "unite": "ans",
+     "reponse": 11,
+     "aide": "Lis les années des deux dernières barres et soustrais.",
+     "explication": "2022 − 2011 = **11** ans pour gagner un milliard d’habitants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que remarques-tu sur le temps qu’il faut pour gagner un milliard d’humains de plus ?",
+     "options": [
+      "Il se raccourcit : de plus d’un siècle à une dizaine d’années",
+      "Il s’allonge : de plus en plus de temps est nécessaire",
+      "Il reste identique d’un milliard à l’autre",
+      "Il disparaît dès que la population dépasse 5 milliards"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’écart entre les premières barres et l’écart entre les dernières.",
+     "explication": "Il faut plus d’un siècle pour passer de 1 à 2 milliards, mais seulement **11 à 14 ans** pour les derniers : la croissance s’est fortement accélérée."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec7397cc-48b8-5347-ba45-a9bc9806dc43",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois pays, trois phases de la transition",
+   "competence": "lire-tableau",
+   "situation": "Yanis étudie trois pays imaginés pour comprendre la transition démographique. Il lit leur taux de natalité, leur taux de mortalité et leur fécondité, puis les classe par phase.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Trois pays comparés",
+     "source": "Pays et chiffres imaginés pour l’exercice. Les taux sont des naissances ou des décès pour 1 000 habitants par an (‰).",
+     "colonnes": [
+      "Pays",
+      "Natalité (‰)",
+      "Mortalité (‰)",
+      "Enfants par femme"
+     ],
+     "lignes": [
+      [
+       "X",
+       38,
+       35,
+       "5,6"
+      ],
+      [
+       "Y",
+       38,
+       9,
+       "4,9"
+      ],
+      [
+       "Z",
+       10,
+       9,
+       "1,6"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’accroissement naturel du pays Y.",
+     "unite": "‰",
+     "reponse": 29,
+     "aide": "Accroissement naturel = natalité − mortalité.",
+     "explication": "38 − 9 = **29 ‰** : la population de Y augmente de 29 personnes pour 1 000 habitants chaque année."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays à la phase de la transition démographique qu’il traverse.",
+     "paires": [
+      [
+       "Pays X",
+       "Phase 1 : la population stagne"
+      ],
+      [
+       "Pays Y",
+       "Phase 2 : la population explose"
+      ],
+      [
+       "Pays Z",
+       "Phase 3 : la population se stabilise"
+      ]
+     ],
+     "aide": "Regarde ce que fait la mortalité par rapport à la natalité dans chaque pays.",
+     "explication": "**X** : natalité et mortalité fortes, la population stagne. **Y** : la mortalité a chuté, la natalité reste forte, la population explose. **Z** : les deux sont faibles, la population se stabilise."
+    },
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche la **seule** fécondité qui passe sous le seuil de renouvellement des générations (2,1 enfants par femme).",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Compare chaque valeur de la dernière colonne à 2,1.",
+     "explication": "Seul le pays **Z** est sous 2,1 (1,6 enfant par femme) : les générations ne se renouvellent plus tout à fait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel problème le pays Z risque-t-il de rencontrer ?",
+     "options": [
+      "Le vieillissement de sa population",
+      "Une explosion de sa population jeune",
+      "Un manque d’écoles pour les enfants",
+      "Une mortalité qui reste très forte"
+     ],
+     "reponse": 0,
+     "aide": "Peu de naissances et une mortalité faible : quelle tranche d’âge devient plus nombreuse ?",
+     "explication": "Avec peu de naissances et une mortalité faible, la population **vieillit** : c’est le cas des pays du Nord, qui doivent financer les retraites."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec7397cc-48b8-5347-ba45-a9bc9806dc43",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une jeunesse nombreuse, un village qui vieillit",
+   "competence": "lire-carte",
+   "situation": "Deux élèves racontent leur quotidien : Mariama à Niamey, au Niger, et Kenji dans un village du Japon. Lana lit leurs récits avec une carte du monde pour comprendre que les défis démographiques ne sont pas les mêmes partout.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Où vivent les humains ?",
+     "fond": "monde",
+     "regionsCliquables": true,
+     "cadrage": [
+      -20,
+      -40,
+      160,
+      60
+     ],
+     "source": "Fond de carte mondial.",
+     "lieux": [
+      {
+       "id": "niamey",
+       "lieu": "niamey",
+       "nom": "Niamey",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "recits",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux élèves, deux défis",
+     "auteur": "Récits imaginés pour l’exercice.",
+     "blocs": [
+      "**À Niamey, au Niger.** Mariama, 12 ans, partage sa classe avec soixante élèves. Chaque année, la ville accueille de nouveaux habitants et de nouveaux quartiers sortent de terre, souvent sans routes ni eau courante : l’[[u|urbanisation]] est rapide et difficile à maîtriser.",
+      "**Dans un village du Japon.** Kenji, 14 ans, est l’un des rares enfants du village : l’école a fermé il y a deux ans. Sa grand-mère, comme presque tous les habitants, a plus de soixante-dix ans. Le pays se demande comment financer les [[r|retraites]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les **deux pays** qui comptent plus de 1,4 milliard d’habitants chacun.",
+     "reponse": [
+      "CHN",
+      "IND"
+     ],
+     "aide": "Ils sont tous les deux en Asie : l’un est au nord de l’autre.",
+     "explication": "La **Chine** et l’**Inde** dépassent chacune 1,4 milliard d’habitants. L’Asie concentre près de 60 % de l’humanité."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu au défi démographique qu’il illustre.",
+     "paires": [
+      [
+       "Niamey, au Niger",
+       "Scolariser, loger et soigner une population jeune qui croît vite"
+      ],
+      [
+       "Un village du Japon",
+       "Financer les retraites d’une population qui vieillit"
+      ]
+     ],
+     "aide": "Dans quel récit les écoles sont-elles pleines ? Dans lequel ferment-elles ?",
+     "explication": "Au **Sud**, il faut nourrir, loger et scolariser une jeunesse nombreuse ; au **Nord**, le défi est le vieillissement et le financement des retraites."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville du premier récit.",
+     "reponse": [
+      "niamey"
+     ],
+     "aide": "Niamey est la capitale du Niger, en Afrique de l’Ouest.",
+     "explication": "**Niamey** est dans l’Afrique subsaharienne, une région encore en phase 2 de la transition démographique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la même politique démographique ne peut-elle pas convenir au Niger et au Japon ?",
+     "options": [
+      "L’un doit gérer une jeunesse nombreuse, l’autre une population qui vieillit",
+      "Les deux pays sont dans la même phase de la transition démographique",
+      "Les deux pays comptent plus de 1,4 milliard d’habitants",
+      "Aucun des deux pays ne connaît de problème démographique"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’âge des habitants dans les deux récits.",
+     "explication": "**Deux mondes démographiques** coexistent : l’un gère une jeunesse nombreuse, l’autre une population qui vieillit. Ce ne sont pas les mêmes politiques."
+    },
+    {
+     "type": "zone",
+     "document": "recits",
+     "enonce": "Touche le mot du récit qui désigne la croissance rapide des villes.",
+     "reponse": [
+      "u"
+     ],
+     "aide": "Cherche le mot qui parle de la ville qui s’étend et accueille de nouveaux habitants.",
+     "explication": "L’**urbanisation** est rapide au Sud et souvent mal maîtrisée : manque de logements, de routes, d’eau."
+    }
+   ]
+  },
+  {
+   "chapitre": "0afccf60-b288-5dbc-a319-d50cfb5c2997",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Développés, émergents ou PMA : où sont-ils ?",
+   "competence": "lire-carte",
+   "situation": "Nora colorie un planisphère pour repérer trois groupes de pays : les pays développés, les pays émergents et les pays les moins avancés (PMA). Elle n’a coloré que quelques exemples.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois groupes de pays",
+     "fond": "monde",
+     "regionsCliquables": true,
+     "cadrage": [
+      -125,
+      -40,
+      155,
+      58
+     ],
+     "source": "Quelques pays pris pour exemples (cours).",
+     "regions": [
+      {
+       "code": "USA",
+       "teinte": "bleu"
+      },
+      {
+       "code": "JPN",
+       "teinte": "bleu"
+      },
+      {
+       "code": "AUS",
+       "teinte": "bleu"
+      },
+      {
+       "code": "CHN",
+       "teinte": "ambre"
+      },
+      {
+       "code": "IND",
+       "teinte": "ambre"
+      },
+      {
+       "code": "BRA",
+       "teinte": "ambre"
+      },
+      {
+       "code": "ZAF",
+       "teinte": "ambre"
+      },
+      {
+       "code": "NER",
+       "teinte": "corail"
+      },
+      {
+       "code": "TCD",
+       "teinte": "corail"
+      },
+      {
+       "code": "MLI",
+       "teinte": "corail"
+      },
+      {
+       "code": "ETH",
+       "teinte": "corail"
+      },
+      {
+       "code": "COD",
+       "teinte": "corail"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "bleu",
+       "texte": "Pays développés"
+      },
+      {
+       "teinte": "ambre",
+       "texte": "Pays émergents"
+      },
+      {
+       "teinte": "corail",
+       "texte": "Pays les moins avancés (PMA)"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays **émergent** situé en Afrique.",
+     "reponse": [
+      "ZAF"
+     ],
+     "aide": "Regarde la légende : cherche le groupe des pays émergents, puis celui qui est tout au sud de l’Afrique.",
+     "explication": "L’**Afrique du Sud** est un pays émergent : croissance rapide, industrialisation et fortes inégalités internes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pays les moins avancés (PMA) sont coloriés sur la carte ?",
+     "reponse": 5,
+     "aide": "Repère la couleur des PMA dans la légende et compte les pays coloriés ainsi.",
+     "explication": "Il y a **5** PMA coloriés : le Niger, le Tchad, le Mali, l’Éthiopie et la République démocratique du Congo. Tous sont en Afrique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays au groupe auquel il appartient.",
+     "paires": [
+      [
+       "Japon",
+       "Pays développé"
+      ],
+      [
+       "Brésil",
+       "Pays émergent"
+      ],
+      [
+       "Tchad",
+       "Pays les moins avancés (PMA)"
+      ]
+     ],
+     "aide": "Retrouve la teinte de chaque pays sur la carte, puis cherche-la dans la légende.",
+     "explication": "Le **Japon** est développé, le **Brésil** est émergent, le **Tchad** est un PMA."
+    }
+   ]
+  },
+  {
+   "chapitre": "0afccf60-b288-5dbc-a319-d50cfb5c2997",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Même pays, deux adresses : Camille et Davi",
+   "competence": "lire-graphique",
+   "situation": "Elias compare l’indice de développement humain (IDH) de cinq pays, puis lit le récit de deux enfants qui vivent dans la même grande ville d’un pays émergent.",
+   "documents": [
+    {
+     "id": "idh",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "L’IDH de cinq pays",
+     "source": "Chiffres arrondis au centième (PNUD, 2021).",
+     "categories": [
+      "Norvège",
+      "France",
+      "Brésil",
+      "Inde",
+      "Niger"
+     ],
+     "series": [
+      {
+       "nom": "IDH",
+       "valeurs": [
+        0.96,
+        0.9,
+        0.75,
+        0.63,
+        0.39
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "IDH",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Pays"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux adresses, une même ville",
+     "auteur": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Camille habite au vingtième étage d’une tour, dans le quartier d’affaires d’une grande ville du Brésil. Son père travaille dans une banque et la famille voyage chaque été.",
+      "À vingt minutes de là, Davi vit dans un [[b|bidonville]] bâti sur une colline. Il n’y a pas d’eau courante dans sa rue et l’école la plus proche est loin."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis sur le graphique l’IDH du Brésil.",
+     "reponse": 0.75,
+     "tolerance": 0.01,
+     "aide": "Repère la barre du Brésil et lis sa hauteur sur l’axe de gauche.",
+     "explication": "L’IDH du Brésil est d’environ **0,75** : un pays émergent, entre les pays développés et les pays les moins avancés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart d’IDH y a-t-il entre la Norvège et le Niger ?",
+     "reponse": 0.57,
+     "tolerance": 0.005,
+     "aide": "Soustrais l’IDH du Niger à celui de la Norvège.",
+     "explication": "0,96 − 0,39 = **0,57** : la Norvège dépasse 0,95, alors que plusieurs pays d’Afrique subsaharienne restent sous 0,45."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot du récit qui désigne un quartier pauvre et précaire.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche l’endroit où vit Davi.",
+     "explication": "Davi vit dans un **bidonville**, à côté d’un quartier d’affaires : les inégalités existent à l’intérieur d’une même ville."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le récit à propos d’un pays émergent comme le Brésil ?",
+     "options": [
+      "Il peut avoir de fortes inégalités à l’intérieur même d’une ville",
+      "Il n’a plus aucun habitant pauvre dans ses grandes villes",
+      "Il compte uniquement des quartiers d’affaires et des tours",
+      "Il a le même niveau de vie dans toutes les régions"
+     ],
+     "reponse": 0,
+     "aide": "Compare la vie de Camille et celle de Davi.",
+     "explication": "Les pays **émergents** connaissent une croissance rapide mais de **fortes inégalités internes** : bidonvilles et quartiers d’affaires peuvent se côtoyer."
+    }
+   ]
+  },
+  {
+   "chapitre": "0afccf60-b288-5dbc-a319-d50cfb5c2997",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La pauvreté recule : comment ?",
+   "competence": "analyser-document",
+   "situation": "Samia lit un graphique sur la part de la population mondiale qui vit en pauvreté extrême, puis l’histoire de Fatou, dans un village d’un pays très pauvre. Elle cherche ce qui aide à réduire les écarts.",
+   "documents": [
+    {
+     "id": "pauvrete",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de la population mondiale en pauvreté extrême",
+     "source": "Ordres de grandeur arrondis, d’après la Banque mondiale.",
+     "categories": [
+      "1990",
+      "2000",
+      "2010",
+      "2019"
+     ],
+     "series": [
+      {
+       "nom": "Pauvreté extrême",
+       "valeurs": [
+        36,
+        29,
+        16,
+        9
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la population mondiale",
+      "unite": "%",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "fatou",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Fatou et sa famille",
+     "auteur": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Fatou vit dans un village d’un pays très pauvre. Grâce à un [[m|microcrédit]], elle a emprunté une petite somme pour acheter un moulin à grain.",
+      "Sa fille Awa va à l’école : elle sera la première de la famille à savoir lire.",
+      "Son frère travaille loin du pays et lui envoie de l’argent chaque mois."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de la population mondiale en pauvreté extrême a-t-elle baissé entre 1990 et 2019 ?",
+     "unite": "points",
+     "reponse": 27,
+     "aide": "Lis la première et la dernière barre, puis soustrais.",
+     "explication": "36 − 9 = **27** points : l’extrême pauvreté a fortement reculé en trente ans."
+    },
+    {
+     "type": "zone",
+     "document": "pauvrete",
+     "enonce": "Touche la première année où cette part passe **sous 20 %**.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Lis les barres de gauche à droite et arrête-toi à la première qui est sous la graduation 20.",
+     "explication": "En **2010**, la part est de 16 % : c’est la première fois qu’elle passe sous 20 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En 2019, environ 9 % des 8 milliards d’humains vivent en pauvreté extrême. Combien cela fait-il de millions de personnes ?",
+     "unite": "millions",
+     "reponse": 720,
+     "aide": "8 milliards = 8 000 millions. Calcule 9 % de 8 000.",
+     "explication": "9 % de 8 000 millions = 8 000 × 0,09 = **720 millions** : un chiffre voisin des 700 millions du cours, donc encore très élevé."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moment de l’histoire de Fatou au levier qui réduit les écarts.",
+     "paires": [
+      [
+       "Fatou emprunte une petite somme pour son moulin",
+       "Un microcrédit"
+      ],
+      [
+       "Awa va à l’école",
+       "La scolarisation"
+      ],
+      [
+       "Le frère envoie de l’argent chaque mois",
+       "Un transfert de migrant"
+      ]
+     ],
+     "aide": "Lis les trois paragraphes : chacun montre un levier différent.",
+     "explication": "Microcrédits, scolarisation et **transferts** des migrants (supérieurs à l’aide publique au développement) réduisent les écarts."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du graphique et du récit ?",
+     "options": [
+      "L’extrême pauvreté a reculé mais reste forte : il faut agir encore",
+      "L’extrême pauvreté a disparu du monde entier depuis l’année 2019",
+      "L’extrême pauvreté augmente de plus en plus depuis l’année 1990",
+      "L’extrême pauvreté ne recule que dans les pays les plus riches"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la tendance des barres, puis le chiffre de 2019.",
+     "explication": "Les inégalités demeurent, mais le monde de 2020 n’est pas celui de 1990 : les progrès sont réels, il reste environ **700 millions** de personnes en pauvreté extrême."
+    }
+   ]
+  },
+  {
+   "chapitre": "0465db80-dd5d-5ee7-81ab-7be62edcfd41",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un tiers de la nourriture qui n’est pas mangée",
+   "competence": "lire-graphique",
+   "situation": "Au collège, Hugo apprend que la planète produit assez de nourriture pour tous, et pourtant que des gens ont faim. Il regarde ce que devient la nourriture produite.",
+   "documents": [
+    {
+     "id": "nourriture",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Que devient la nourriture produite ?",
+     "source": "Chiffres arrondis : environ un tiers est perdu ou gaspillé.",
+     "categories": [
+      "Mangée",
+      "Perdue ou gaspillée"
+     ],
+     "series": [
+      {
+       "nom": "Nourriture produite",
+       "valeurs": [
+        67,
+        33
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nourriture",
+     "enonce": "Touche la part de nourriture qui **ne nourrit personne**.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche l’étiquette qui parle de perte ou de gaspillage.",
+     "explication": "**Environ un tiers** de la nourriture produite est perdu ou gaspillé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 300 millions de tonnes produites (chiffre imaginé), combien de millions de tonnes sont perdues ou gaspillées ? Arrondis à l’unité.",
+     "unite": "Mt",
+     "reponse": 100,
+     "tolerance": 2,
+     "aide": "Un tiers de 300, c’est 300 ÷ 3.",
+     "explication": "300 ÷ 3 = **100** millions de tonnes, soit environ 33 % : de quoi nourrir de nombreuses personnes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on faire pour nourrir plus d’humains sans produire davantage ?",
+     "options": [
+      "Réduire le gaspillage et les pertes",
+      "Cultiver toujours plus de terres",
+      "Augmenter la consommation de viande",
+      "Importer moins de nourriture"
+     ],
+     "reponse": 0,
+     "aide": "Que devient le tiers de nourriture du graphique ?",
+     "explication": "Réduire le **gaspillage** et améliorer le stockage et les transports fait partie des pistes pour nourrir une humanité en croissance."
+    }
+   ]
+  },
+  {
+   "chapitre": "0465db80-dd5d-5ee7-81ab-7be62edcfd41",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux exploitations, deux façons de cultiver",
+   "competence": "lire-tableau",
+   "situation": "Karim compare deux exploitations agricoles imaginées : l’une cultive pour nourrir sa famille, l’autre pour vendre sur le marché mondial. Il lit leurs moyens et leurs rendements.",
+   "documents": [
+    {
+     "id": "expl",
+     "type": "tableau",
+     "titre": "Deux exploitations comparées",
+     "source": "Exploitations imaginées pour l’exercice.",
+     "colonnes": [
+      "Critère",
+      "Exploitation A",
+      "Exploitation B"
+     ],
+     "lignes": [
+      [
+       "Surface cultivée",
+       "2 ha",
+       "150 ha"
+      ],
+      [
+       "Moyens",
+       "Houe et semences gardées d’une année sur l’autre",
+       "Tracteurs, engrais, semences sélectionnées"
+      ],
+      [
+       "Eau",
+       "Seulement la pluie",
+       "Irrigation"
+      ],
+      [
+       "Rendement (tonnes par hectare)",
+       1,
+       8
+      ],
+      [
+       "Destination de la récolte",
+       "La famille",
+       "Le marché mondial"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "expl",
+     "enonce": "Touche la case qui montre que l’exploitation A pratique une **agriculture vivrière**.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "L’agriculture vivrière sert d’abord à nourrir le producteur et sa famille.",
+     "explication": "La récolte de l’exploitation A est destinée à **la famille** : c’est une agriculture vivrière."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de tonnes l’exploitation B récolte-t-elle ?",
+     "unite": "tonnes",
+     "reponse": 1200,
+     "aide": "Production = surface × rendement.",
+     "explication": "150 ha × 8 t par ha = **1 200 tonnes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que risque l’exploitation A si la pluie ne tombe pas ?",
+     "options": [
+      "Perdre une grande partie de la récolte qui nourrit la famille",
+      "Gagner plus d’argent en vendant sa récolte",
+      "Passer immédiatement à l’irrigation par aspersion",
+      "Voir ses rendements dépasser ceux de l’exploitation B"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Eau » : de quoi dépend l’exploitation A ?",
+     "explication": "Avec peu de moyens et seulement la pluie, l’exploitation A est **très exposée aux aléas** : une sécheresse peut priver la famille de nourriture."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le modèle de l’exploitation B.",
+     "texte": "Le modèle B augmente les rendements, mais il consomme beaucoup d’___ et d’___.",
+     "reponses": [
+      [
+       "eau"
+      ],
+      [
+       "intrants",
+       "intrant"
+      ]
+     ],
+     "banque": [
+      "eau",
+      "intrants",
+      "vent",
+      "poissons"
+     ],
+     "aide": "La révolution verte a augmenté les rendements en Asie par l’irrigation et les engrais.",
+     "explication": "Irrigation et engrais, c’est de l’**eau** et des **intrants** : un prix à payer pour de forts rendements."
+    }
+   ]
+  },
+  {
+   "chapitre": "0465db80-dd5d-5ee7-81ab-7be62edcfd41",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du maïs qui pourrit, des familles qui ont faim",
+   "competence": "analyser-document",
+   "situation": "Dans un pays imaginé d’Afrique de l’Est, la récolte est bonne et pourtant des familles ne mangent pas à leur faim. Anna lit un article et un tableau pour chercher la vraie cause.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une bonne récolte, des greniers vides",
+     "auteur": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Dans une région d’Afrique de l’Est, la récolte de maïs a été bonne cette année. Mais faute de [[c|routes]] praticables et de [[c|silos]] pour la stocker, une grande partie du maïs pourrit au bord des champs.",
+      "À trois cents kilomètres de là, dans une ville du même pays, des familles ne peuvent plus acheter de maïs : les prix ont flambé."
+     ]
+    },
+    {
+     "id": "cereales",
+     "type": "tableau",
+     "titre": "Les céréales du pays",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Céréales du pays",
+      "Millions de tonnes"
+     ],
+     "lignes": [
+      [
+       "Récolte de l’année",
+       12
+      ],
+      [
+       "Besoins de la population",
+       10
+      ],
+      [
+       "Pertes après la récolte",
+       3
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de tonnes de céréales restent disponibles après les pertes ?",
+     "unite": "Mt",
+     "reponse": 9,
+     "aide": "Récolte − pertes.",
+     "explication": "12 − 3 = **9** millions de tonnes disponibles, contre 10 de besoins : il en manque 1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le tableau sur la production du pays ?",
+     "options": [
+      "Elle suffirait aux besoins, mais les pertes la font passer sous eux",
+      "Elle est très insuffisante : le pays doit tout importer du monde",
+      "Elle est deux fois plus grande que les besoins de la population",
+      "Elle est inférieure aux pertes enregistrées après la récolte"
+     ],
+     "reponse": 0,
+     "aide": "Compare d’abord la récolte aux besoins, puis retire les pertes.",
+     "explication": "La récolte (12) dépasse les besoins (10), mais après **3 millions de tonnes de pertes** il reste 9 : trop peu. Le problème n’est pas seulement la quantité produite."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui expliquent pourquoi une partie de la récolte est perdue.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce qui manque pour transporter et pour conserver le maïs.",
+     "explication": "Sans **routes** pour le transporter ni **silos** pour le stocker, le maïs se perd : c’est un problème d’accès, pas de production."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de la récolte est perdu ?",
+     "unite": "%",
+     "reponse": 25,
+     "aide": "Divise les pertes par la récolte, puis multiplie par 100.",
+     "explication": "3 ÷ 12 = 0,25, soit **25 %** : un quart de la récolte est perdu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle piste aiderait le plus ce pays à assurer la sécurité alimentaire ?",
+     "options": [
+      "Améliorer le stockage et les transports",
+      "Réduire encore la surface cultivée",
+      "Importer toutes les céréales du monde",
+      "Faire monter les prix du maïs"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la cause des pertes dans l’article.",
+     "explication": "**Stockage et transports** font partie des pistes pour assurer la sécurité alimentaire : l’accès de tous, à tout moment, à une nourriture suffisante et saine."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4196e09-df46-5618-b0c1-b914f610834c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui consomme l’eau douce ?",
+   "competence": "lire-graphique",
+   "situation": "Léo se demande qui utilise l’eau douce prélevée dans le monde : les habitants, les usines ou les champs ? Il lit un graphique en secteurs.",
+   "documents": [
+    {
+     "id": "usages",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les usages de l’eau prélevée dans le monde",
+     "source": "Chiffres arrondis (cours).",
+     "categories": [
+      "Agriculture (irrigation)",
+      "Industrie",
+      "Usages domestiques"
+     ],
+     "series": [
+      {
+       "nom": "Part des prélèvements",
+       "valeurs": [
+        70,
+        20,
+        10
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "usages",
+     "enonce": "Touche l’usage qui consomme **le plus** d’eau.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur du graphique.",
+     "explication": "L’**agriculture**, avec environ 70 % des prélèvements, est de loin le premier consommateur d’eau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des prélèvements représentent ensemble l’industrie et les usages domestiques ?",
+     "unite": "%",
+     "reponse": 30,
+     "aide": "Additionne les deux secteurs concernés.",
+     "explication": "20 + 10 = **30 %** : l’agriculture à elle seule en consomme plus du double."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un pays veut économiser l’eau en priorité. Où peut-il gagner le plus ?",
+     "options": [
+      "Dans l’agriculture, par exemple avec le goutte-à-goutte",
+      "Dans les usages domestiques, en fermant les robinets",
+      "Dans l’industrie, en arrêtant toutes les usines",
+      "Nulle part : aucun usage ne peut baisser"
+     ],
+     "reponse": 0,
+     "aide": "Regarde quel secteur pèse le plus lourd.",
+     "explication": "L’irrigation pèse 70 % : économiser l’eau en agriculture (goutte-à-goutte) a le plus d’effet."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4196e09-df46-5618-b0c1-b914f610834c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Six pays imaginés face au stress hydrique",
+   "competence": "lire-tableau",
+   "situation": "Lina compare le volume d’eau disponible par habitant et par an dans six pays imaginés. Elle utilise les seuils du cours : stress hydrique sous 1 700 m³ et pénurie sous 1 000 m³.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Eau disponible par habitant",
+     "source": "Pays et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Pays",
+      "Eau par habitant et par an (m³)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "4 800"
+      ],
+      [
+       "B",
+       "1 400"
+      ],
+      [
+       "C",
+       "800"
+      ],
+      [
+       "D",
+       "2 100"
+      ],
+      [
+       "E",
+       "1 650"
+      ],
+      [
+       "F",
+       "950"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche le volume le plus faible du tableau.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche le plus petit nombre de la colonne.",
+     "explication": "Le pays **C** n’a que 800 m³ par habitant et par an : c’est le plus mal pourvu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque pays selon sa situation.",
+     "categories": [
+      "Ni stress ni pénurie",
+      "Stress hydrique",
+      "Pénurie"
+     ],
+     "items": [
+      [
+       "Pays A",
+       0
+      ],
+      [
+       "Pays B",
+       1
+      ],
+      [
+       "Pays C",
+       2
+      ],
+      [
+       "Pays D",
+       0
+      ],
+      [
+       "Pays E",
+       1
+      ],
+      [
+       "Pays F",
+       2
+      ]
+     ],
+     "aide": "Stress hydrique : moins de 1 700 m³ ; pénurie : moins de 1 000 m³. Une pénurie est un cas plus grave.",
+     "explication": "**A** (4 800) et **D** (2 100) dépassent 1 700 ; **B** (1 400) et **E** (1 650) sont en stress hydrique ; **C** (800) et **F** (950) sont sous 1 000 : pénurie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le pays A dispose-t-il de plus d’eau par habitant que le pays C ?",
+     "unite": "fois",
+     "reponse": 6,
+     "aide": "Divise le volume de A par celui de C.",
+     "explication": "4 800 ÷ 800 = **6** : l’eau est très inégalement répartie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de m³ par habitant le pays E doit-il augmenter son volume pour sortir du stress hydrique ?",
+     "unite": "m³",
+     "reponse": 50,
+     "aide": "Le seuil est de 1 700 m³ : compare-le à la valeur de E.",
+     "explication": "1 700 − 1 650 = **50** m³ : le pays E est tout juste en stress hydrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4196e09-df46-5618-b0c1-b914f610834c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fleuves partagés et eau cachée dans nos produits",
+   "competence": "analyser-document",
+   "situation": "Samir étudie deux façons dont l’eau devient un enjeu : des fleuves que plusieurs pays se partagent au Proche-Orient et en Égypte, et l’eau « cachée » dans les produits qu’on échange.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quelques fleuves du Proche-Orient",
+     "fond": "mediterranee",
+     "cadrage": [
+      25,
+      24,
+      50,
+      38
+     ],
+     "fleuves": [
+      "nil",
+      "tigre",
+      "euphrate",
+      "jourdain"
+     ],
+     "source": "Fleuves cités dans le cours.",
+     "lieux": [
+      {
+       "id": "caire",
+       "lieu": "le-caire",
+       "nom": "Le Caire",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "bagdad",
+       "lieu": "bagdad",
+       "nom": "Bagdad",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "jerusalem",
+       "lieu": "jerusalem",
+       "nom": "Jérusalem",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "damas",
+       "lieu": "damas",
+       "nom": "Damas",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "virtuelle",
+     "type": "tableau",
+     "titre": "L’eau virtuelle de quelques produits",
+     "source": "Chiffres arrondis (cours).",
+     "colonnes": [
+      "Produit",
+      "Eau nécessaire pour le produire"
+     ],
+     "lignes": [
+      [
+       "1 kg de bœuf",
+       "15 000 litres"
+      ],
+      [
+       "1 tee-shirt en coton",
+       "2 700 litres"
+      ],
+      [
+       "1 tasse de café",
+       "140 litres"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située au bord du **Tigre**.",
+     "reponse": [
+      "bagdad"
+     ],
+     "aide": "Le Tigre et l’Euphrate coulent côte à côte vers le golfe Persique : repère le fleuve le plus à l’est.",
+     "explication": "**Bagdad** est située sur le Tigre. Le Tigre et l’Euphrate sont deux fleuves partagés entre plusieurs pays."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située au bord du **Nil**.",
+     "reponse": [
+      "caire"
+     ],
+     "aide": "Le Nil coule du sud vers le nord, vers la Méditerranée.",
+     "explication": "**Le Caire** est sur le Nil, fleuve dont les eaux sont partagées entre plusieurs pays riverains."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un fleuve partagé entre plusieurs pays peut-il provoquer des conflits ?",
+     "options": [
+      "Chaque pays veut garder sa part, et l’eau prélevée en amont manque en aval",
+      "Les fleuves coulent toujours dans des sens différents selon les pays",
+      "Un fleuve ne contient jamais assez d’eau pour un seul pays",
+      "Les pays riverains n’ont jamais besoin d’eau pour leurs cultures"
+     ],
+     "reponse": 0,
+     "aide": "Que devient l’eau que le premier pays prélève, pour le pays situé en aval ?",
+     "explication": "Nil, Jourdain, Tigre et Euphrate sont des sources de **conflits entre pays riverains** : ce que l’un prélève en amont manque à l’autre en aval."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un pays importe 1 000 kg de bœuf. Combien de millions de litres d’eau virtuelle cela représente-t-il ?",
+     "unite": "millions de L",
+     "reponse": 15,
+     "aide": "1 000 kg × 15 000 litres, puis exprime le résultat en millions.",
+     "explication": "1 000 × 15 000 = 15 000 000 litres, soit **15 millions** de litres : importer un produit, c’est importer l’eau qui a servi à le faire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi importer des produits à forte eau virtuelle peut-il aider un pays en pénurie d’eau ?",
+     "options": [
+      "Il évite d’utiliser sa propre eau pour les produire",
+      "Il fait tomber plus de pluie sur son territoire",
+      "Il remplit directement ses nappes d’eau souterraines",
+      "Il supprime tous ses besoins en eau potable"
+     ],
+     "reponse": 0,
+     "aide": "Relis le tableau : de quoi le bœuf a-t-il besoin pour être produit ?",
+     "explication": "L’eau virtuelle est celle qui a servi à **produire** le bien : un pays qui l’importe économise l’eau de ses propres nappes et fleuves."
+    }
+   ]
+  },
+  {
+   "chapitre": "cae7a8b6-8739-5d2d-b9a3-5893ff36c18e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "D’où vient l’énergie du monde ?",
+   "competence": "lire-graphique",
+   "situation": "Axel veut savoir d’où vient l’énergie que consomme l’humanité. Il lit un graphique en secteurs qui montre le mix énergétique mondial.",
+   "documents": [
+    {
+     "id": "mix",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Le mix énergétique mondial",
+     "source": "Chiffres arrondis (ordre de grandeur).",
+     "categories": [
+      "Pétrole",
+      "Charbon",
+      "Gaz naturel",
+      "Nucléaire",
+      "Renouvelables"
+     ],
+     "series": [
+      {
+       "nom": "Part du mix",
+       "valeurs": [
+        31,
+        27,
+        23,
+        4,
+        15
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mix",
+     "enonce": "Touche la source d’énergie la plus utilisée dans le monde.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "Le **pétrole** est la première source d’énergie, avec environ 31 % du mix."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Additionne le pétrole, le charbon et le gaz naturel : quelle part du mix représentent ces trois énergies fossiles ?",
+     "unite": "%",
+     "reponse": 81,
+     "tolerance": 1,
+     "aide": "31 + 27 + 23.",
+     "explication": "31 + 27 + 23 = **81 %** : les fossiles pèsent encore environ 80 % du mix mondial."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du graphique ?",
+     "options": [
+      "Les énergies fossiles fournissent environ quatre cinquièmes de l’énergie",
+      "Les énergies renouvelables fournissent plus de la moitié de l’énergie",
+      "Le nucléaire est la première source d’énergie mondiale",
+      "Le charbon a disparu du mix énergétique"
+     ],
+     "reponse": 0,
+     "aide": "Reprends le résultat de ton addition.",
+     "explication": "Environ 80 % de l’énergie vient encore des fossiles : leur combustion émet du CO₂, première cause du réchauffement."
+    }
+   ]
+  },
+  {
+   "chapitre": "cae7a8b6-8739-5d2d-b9a3-5893ff36c18e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Nina et Karim débattent de l’énergie",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves échangent des messages à propos de l’énergie du futur. Leur discussion fait apparaître les atouts et les limites de chaque source.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Une discussion sur l’énergie",
+     "source": "Dialogue imaginé pour l’exercice.",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Karim",
+       "texte": "Pour moi, le nucléaire, c’est l’avenir : presque pas de CO₂ !"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Oui, mais il y a les [[p|déchets]] radioactifs et le risque d’[[p|accident]] : Tchernobyl en 1986, Fukushima en 2011."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Alors le solaire et l’éolien !"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Ils sont intermittents : pas de soleil la nuit, pas de vent certains jours."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Donc aucune énergie n’est parfaite ?"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Non. La première énergie propre est celle qu’on ne consomme pas !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "multiple": true,
+     "enonce": "Touche les **deux mots** de Nina qui donnent les problèmes du nucléaire.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce qui reste après l’usage du combustible et ce qui peut arriver en cas de panne grave.",
+     "explication": "Les **déchets** radioactifs et le risque d’**accident** sont les principaux inconvénients du nucléaire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque énergie à son principal problème.",
+     "paires": [
+      [
+       "Le nucléaire",
+       "Les déchets et le risque d’accident"
+      ],
+      [
+       "Le solaire et l’éolien",
+       "L’intermittence"
+      ],
+      [
+       "Le charbon, le pétrole et le gaz",
+       "Leur combustion émet du CO₂"
+      ]
+     ],
+     "aide": "Un des problèmes figure dans la discussion pour chaque énergie sauf une : celle qu’on brûle.",
+     "explication": "Le nucléaire pose le problème des **déchets** et des accidents, les renouvelables sont **intermittentes**, les fossiles émettent du **CO₂**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les deux accidents nucléaires cités par Nina ?",
+     "unite": "ans",
+     "reponse": 25,
+     "aide": "Soustrais l’année de Tchernobyl à celle de Fukushima.",
+     "explication": "2011 − 1986 = **25** ans entre Tchernobyl et Fukushima."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Nina par « la première énergie propre est celle qu’on ne consomme pas » ?",
+     "options": [
+      "Il faut d’abord consommer moins d’énergie",
+      "Il faut arrêter toute production d’électricité",
+      "Il faut brûler plus de charbon pour se chauffer",
+      "Il faut construire uniquement des centrales nucléaires"
+     ],
+     "reponse": 0,
+     "aide": "Pense au premier levier de la transition énergétique.",
+     "explication": "La **sobriété** est le premier levier : même une énergie renouvelable n’est jamais sans impact."
+    }
+   ]
+  },
+  {
+   "chapitre": "cae7a8b6-8739-5d2d-b9a3-5893ff36c18e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un lycée réduit sa consommation d’énergie",
+   "competence": "analyser-document",
+   "situation": "Le lycée de Léna veut réduire sa facture d’énergie. Un plan en six actions est affiché dans le hall, et un tableau donne l’électricité prise sur le réseau à chaque étape.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Plan énergie du lycée",
+     "sousTitre": "Six actions pour consommer moins",
+     "lignes": [
+      {
+       "texte": "Éteindre les lumières des salles vides"
+      },
+      {
+       "texte": "Organiser un ramassage scolaire en bus plutôt que des trajets en voiture"
+      },
+      {
+       "texte": "Remplacer les vieilles ampoules par des LED"
+      },
+      {
+       "texte": "Régler le chauffage avec des capteurs de présence"
+      },
+      {
+       "texte": "Poser des panneaux solaires sur le toit"
+      },
+      {
+       "texte": "Remplacer la chaudière au fioul par une chaudière à granulés de bois"
+      }
+     ],
+     "pied": "Plan imaginé pour l’exercice.",
+     "teinte": "violet"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Électricité prise sur le réseau",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Étape",
+      "Électricité du réseau (kWh par an)"
+     ],
+     "lignes": [
+      [
+       "Avant le plan",
+       "100 000"
+      ],
+      [
+       "Après la sobriété",
+       "92 000"
+      ],
+      [
+       "Après l’efficacité",
+       "80 000"
+      ],
+      [
+       "Après les panneaux solaires",
+       "60 000"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque action du plan dans son levier de la transition énergétique.",
+     "categories": [
+      "Sobriété",
+      "Efficacité",
+      "Substitution"
+     ],
+     "items": [
+      [
+       "Éteindre les lumières des salles vides",
+       0
+      ],
+      [
+       "Ramassage scolaire en bus plutôt qu’en voiture",
+       0
+      ],
+      [
+       "Remplacer les vieilles ampoules par des LED",
+       1
+      ],
+      [
+       "Chauffage réglé par des capteurs de présence",
+       1
+      ],
+      [
+       "Panneaux solaires sur le toit",
+       2
+      ],
+      [
+       "Chaudière à granulés de bois à la place du fioul",
+       2
+      ]
+     ],
+     "aide": "Sobriété : consommer moins. Efficacité : consommer mieux. Substitution : remplacer une énergie fossile par une énergie décarbonée.",
+     "explication": "**Sobriété** : éteindre, covoiturer en bus. **Efficacité** : LED et capteurs, pour le même service avec moins d’énergie. **Substitution** : solaire et bois remplacent le fioul."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’électricité le plan permet-il d’économiser en tout ?",
+     "unite": "kWh par an",
+     "reponse": 40000,
+     "aide": "Compare la ligne « Avant le plan » à la dernière ligne.",
+     "explication": "100 000 − 60 000 = **40 000** kWh par an."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape fait baisser le plus l’électricité prise sur le réseau ?",
+     "options": [
+      "Les panneaux solaires (20 000 kWh en moins)",
+      "La sobriété (8 000 kWh en moins)",
+      "L’efficacité (12 000 kWh en moins)",
+      "Aucune : toutes les étapes économisent autant"
+     ],
+     "reponse": 0,
+     "aide": "Calcule la baisse à chaque étape en soustrayant deux lignes voisines.",
+     "explication": "Sobriété : 8 000 ; efficacité : 12 000 ; panneaux solaires : **20 000** kWh. La substitution pèse le plus ici, mais il faut les trois leviers."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Dans quel ordre faut-il appliquer les trois leviers de la transition énergétique ?",
+     "items": [
+      "Sobriété",
+      "Efficacité",
+      "Substitution"
+     ],
+     "aide": "Consommer moins d’abord, puis consommer mieux, puis changer de source.",
+     "explication": "**Sobriété**, puis **efficacité**, puis **substitution** : la première énergie propre est celle qu’on ne consomme pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "0aa371be-c900-5ad2-860f-cd710f11d87d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du CO₂ au réchauffement : la chaîne",
+   "competence": "observer-schema",
+   "situation": "Sa professeure demande à Elsa de compléter la chaîne qui relie nos activités au réchauffement du climat. Il manque la dernière étape.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Une chaîne de causes",
+     "disposition": "colonne",
+     "source": "Chaîne du cours.",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Fossiles brûlés, déforestation, agriculture"
+      },
+      {
+       "id": "n2",
+       "texte": "Émissions de CO₂ et de méthane"
+      },
+      {
+       "id": "n3",
+       "texte": "Effet de serre renforcé"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? »",
+     "options": [
+      "Un réchauffement du climat",
+      "Un refroidissement du climat",
+      "La disparition de l’effet de serre",
+      "Une baisse des émissions de CO₂"
+     ],
+     "reponse": 0,
+     "aide": "Un effet de serre renforcé retient plus de chaleur.",
+     "explication": "L’effet de serre renforcé provoque le **réchauffement** : environ +1,2 °C depuis l’ère préindustrielle."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape qui vient directement des **activités humaines**.",
+     "reponse": [
+      "n1"
+     ],
+     "aide": "Cherche la première étape de la chaîne.",
+     "explication": "La combustion des fossiles, la déforestation et l’agriculture sont des **activités humaines** : elles sont à l’origine des émissions."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève propose de supprimer l’effet de serre pour stopper le réchauffement. Pourquoi a-t-il tort ?",
+     "options": [
+      "Il est naturel et indispensable : sans lui, la Terre serait à −18 °C",
+      "Il n’existe que depuis l’invention des usines et des machines",
+      "Il ne dépend ni du CO₂ ni du méthane présents dans l’air",
+      "Il refroidit toujours la planète, même quand il se renforce"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi : le problème n’est pas l’effet de serre lui-même.",
+     "explication": "Le problème est son **renforcement** par les émissions humaines, pas l’effet de serre naturel."
+    }
+   ]
+  },
+  {
+   "chapitre": "0aa371be-c900-5ad2-860f-cd710f11d87d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre régions face au changement global",
+   "competence": "lire-carte",
+   "situation": "Sur une carte du monde, Hugo repère quatre lieux qui illustrent les effets très inégaux du changement global : un delta, le Sahel, les régions polaires.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Des effets très inégaux",
+     "fond": "monde",
+     "reperes": true,
+     "cadrage": [
+      -30,
+      0,
+      130,
+      75
+     ],
+     "source": "Lieux cités ou illustrant le cours.",
+     "lieux": [
+      {
+       "id": "dacca",
+       "lieu": "dacca",
+       "nom": "Dacca",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "alexandrie",
+       "lieu": "alexandrie",
+       "nom": "Alexandrie",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "tombouctou",
+       "lieu": "tombouctou",
+       "nom": "Tombouctou",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "mourmansk",
+       "lieu": "mourmansk",
+       "nom": "Mourmansk",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les **deux villes** situées sur de grands deltas, densément peuplés et exposés à la montée de la mer (delta du Gange au Bangladesh, delta du Nil).",
+     "reponse": [
+      "dacca",
+      "alexandrie"
+     ],
+     "aide": "L’une est en Asie du Sud, l’autre en Afrique du Nord, au bord de la Méditerranée.",
+     "explication": "**Dacca** (Bangladesh) et **Alexandrie** (delta du Nil) sont dans de grands deltas, très peuplés et vulnérables."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque région à ce qu’elle subit.",
+     "paires": [
+      [
+       "Les États insulaires du Pacifique",
+       "Menacés de submersion"
+      ],
+      [
+       "Le Sahel",
+       "Une sécheresse qui s’aggrave"
+      ],
+      [
+       "Les régions polaires",
+       "Un réchauffement deux à trois fois plus rapide"
+      ],
+      [
+       "Les grands deltas",
+       "Densément peuplés et exposés"
+      ]
+     ],
+     "aide": "Pense à la montée de la mer, à la pluie qui manque, à la glace qui fond.",
+     "explication": "Les effets du changement global sont **très inégaux** selon les régions."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située au **Sahel**, où la sécheresse s’aggrave.",
+     "reponse": [
+      "tombouctou"
+     ],
+     "aide": "Le Sahel est une bande qui borde le sud du Sahara, en Afrique de l’Ouest.",
+     "explication": "**Tombouctou**, au Mali, est dans le Sahel, où la sécheresse s’aggrave."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située dans une **région polaire**, au nord du cercle polaire arctique.",
+     "reponse": [
+      "mourmansk"
+     ],
+     "aide": "Repère le cercle polaire arctique tracé sur la carte, puis la ville située au-dessus.",
+     "explication": "**Mourmansk**, en Russie, est au nord du cercle polaire : les régions polaires se réchauffent 2 à 3 fois plus vite que la moyenne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi parle-t-on de « justice climatique » à propos des îles du Pacifique ?",
+     "options": [
+      "Parce que ceux qui émettent le moins subissent souvent le plus",
+      "Parce que ces îles émettent plus de gaz que les grands pays",
+      "Parce que ces îles n’ont aucun problème de climat",
+      "Parce que ces îles décident seules des règles mondiales"
+     ],
+     "reponse": 0,
+     "aide": "Compare la part des émissions de ces îles et ce qu’elles subissent.",
+     "explication": "Les pays qui émettent le **moins** subissent souvent le **plus** : c’est le cœur du problème de justice climatique."
+    }
+   ]
+  },
+  {
+   "chapitre": "0aa371be-c900-5ad2-860f-cd710f11d87d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Atténuer ou s’adapter ? Le plan de Port-Soleil",
+   "competence": "analyser-document",
+   "situation": "La ville imaginée de Port-Soleil prépare un plan climat. Chloé trie ses actions, puis lit les propos de deux délégués réunis dans une conférence internationale.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Plan climat de Port-Soleil",
+     "sousTitre": "Six actions décidées par la ville",
+     "lignes": [
+      {
+       "texte": "Remplacer les bus diesel par des bus électriques"
+      },
+      {
+       "texte": "Construire une digue le long du littoral"
+      },
+      {
+       "texte": "Replanter une forêt au nord de la ville"
+      },
+      {
+       "texte": "Créer des îlots de fraîcheur avec des arbres et des fontaines"
+      },
+      {
+       "texte": "Isoler les bâtiments publics pour consommer moins d’énergie"
+      },
+      {
+       "texte": "Installer un système d’alerte aux cyclones"
+      }
+     ],
+     "pied": "Plan imaginé pour l’exercice.",
+     "teinte": "turquoise"
+    },
+    {
+     "id": "delegues",
+     "type": "texte",
+     "genre": "article",
+     "titre": "À la conférence internationale",
+     "auteur": "Propos imaginés pour l’exercice.",
+     "blocs": [
+      "**Le délégué d’une île du Pacifique.** « Notre pays émet très peu de gaz à effet de serre, et pourtant la mer monte jusqu’à nos maisons. »",
+      "**La déléguée d’un grand pays industriel.** « Nous voulons agir, mais nous ne réduirons pas nos émissions les premiers : nous attendons que les [[a|autres]] fassent leur part. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe les actions du plan : atténuent-elles le changement climatique ou aident-elles à s’y adapter ?",
+     "categories": [
+      "Atténuation",
+      "Adaptation"
+     ],
+     "items": [
+      [
+       "Bus électriques à la place des bus diesel",
+       0
+      ],
+      [
+       "Forêt replantée au nord de la ville",
+       0
+      ],
+      [
+       "Bâtiments publics mieux isolés",
+       0
+      ],
+      [
+       "Digue le long du littoral",
+       1
+      ],
+      [
+       "Îlots de fraîcheur en ville",
+       1
+      ],
+      [
+       "Alerte aux cyclones",
+       1
+      ]
+     ],
+     "aide": "Atténuer, c’est réduire les émissions. S’adapter, c’est vivre avec les effets déjà inévitables.",
+     "explication": "**Atténuation** : transports, reforestation, sobriété. **Adaptation** : digues, îlots de fraîcheur, alertes. Il faut les deux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le propos du délégué du Pacifique ?",
+     "options": [
+      "Ceux qui émettent le moins subissent souvent le plus",
+      "Les petites îles sont les premières responsables des émissions",
+      "Le niveau de la mer ne dépend pas du réchauffement",
+      "Les pays industriels sont les premiers touchés par la mer"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce que le pays émet et ce qu’il subit.",
+     "explication": "C’est le cœur de la **justice climatique** : les États insulaires émettent peu mais sont menacés de submersion."
+    },
+    {
+     "type": "zone",
+     "document": "delegues",
+     "enonce": "Touche le mot qui montre que la déléguée attend l’effort des autres États.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche ce que la déléguée attend des autres pays.",
+     "explication": "Chaque État est tenté d’attendre l’effort des **autres** : c’est ce qui rend la négociation climatique difficile, car le climat est un bien commun."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La température moyenne mondiale a augmenté d’environ 1,2 °C. Une région polaire se réchauffe au moins deux fois plus vite. De combien de °C au minimum s’est-elle réchauffée ?",
+     "unite": "°C",
+     "reponse": 2.4,
+     "aide": "Multiplie 1,2 par 2.",
+     "explication": "1,2 × 2 = **2,4 °C** au minimum : les régions polaires se réchauffent deux à trois fois plus vite."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque instance de la gouvernance mondiale à son rôle.",
+     "paires": [
+      [
+       "Le GIEC",
+       "L’expertise scientifique"
+      ],
+      [
+       "Les COP",
+       "La négociation annuelle"
+      ],
+      [
+       "L’accord de Paris (2015)",
+       "L’engagement des États"
+      ]
+     ],
+     "aide": "L’un des trois est composé de scientifiques, un autre se réunit chaque année.",
+     "explication": "Le **GIEC** produit l’expertise, les **COP** négocient chaque année, l’**accord de Paris** engage les États."
+    }
+   ]
+  },
+  {
+   "chapitre": "78be057d-ebc3-57b0-bb56-40a5eb2b9854",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une explosion dans le désert, un incendie près d’un quartier",
+   "competence": "analyser-texte",
+   "situation": "Alma lit deux récits d’accidents industriels imaginés. Dans les deux cas, un événement dangereux se produit, mais les conséquences sont très différentes.",
+   "documents": [
+    {
+     "id": "recits",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux accidents",
+     "auteur": "Récits imaginés pour l’exercice.",
+     "blocs": [
+      "Dans le désert, à cent kilomètres de tout village, une usine de gaz [[a|explose]]. Personne n’est blessé.",
+      "À Valmont, une usine chimique a été construite à deux cents mètres d’un [[v|quartier]] où vivent trois mille [[v|habitants]]. Un incendie s’y déclare : il faut évacuer des centaines de personnes et plusieurs sont blessées."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recits",
+     "enonce": "Touche le mot qui désigne l’**événement dangereux** du premier récit.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche le verbe qui dit ce qui arrive à l’usine.",
+     "explication": "L’**aléa** est l’événement dangereux possible : ici, l’explosion de l’usine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans lequel des deux récits y a-t-il une catastrophe ?",
+     "options": [
+      "À Valmont, où l’incendie touche des habitants",
+      "Dans le désert, où l’usine a explosé",
+      "Dans les deux, car il y a une usine à chaque fois",
+      "Dans aucun des deux récits"
+     ],
+     "reponse": 0,
+     "aide": "Une catastrophe est la réalisation d’un risque : des personnes doivent être exposées.",
+     "explication": "**Sans population exposée, un aléa n’est pas un risque.** À Valmont, des habitants vivent tout près : le risque se réalise."
+    },
+    {
+     "type": "zone",
+     "document": "recits",
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui montrent que Valmont est vulnérable.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "La vulnérabilité, c’est ce qui est exposé : cherche qui vit près de l’usine.",
+     "explication": "Le **quartier** et ses **habitants** sont exposés : c’est ce qui rend Valmont vulnérable."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition du risque.",
+     "texte": "Le risque est le croisement d’un ___ et d’une ___.",
+     "reponses": [
+      [
+       "aléa"
+      ],
+      [
+       "vulnérabilité",
+       "vulnerabilite"
+      ]
+     ],
+     "banque": [
+      "aléa",
+      "vulnérabilité",
+      "catastrophe",
+      "prévention"
+     ],
+     "aide": "Risque = aléa × vulnérabilité.",
+     "explication": "**Risque = aléa × vulnérabilité** : l’événement dangereux, croisé avec la fragilité de ce qui est exposé."
+    }
+   ]
+  },
+  {
+   "chapitre": "78be057d-ebc3-57b0-bb56-40a5eb2b9854",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une chronologie des catastrophes technologiques",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Noé place sur une frise six catastrophes technologiques citées dans son cours. Il veut ensuite les classer par type.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Six catastrophes de 1980 à 2020",
+     "source": "Dates du cours.",
+     "debut": 1980,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "bhopal",
+       "date": 1984,
+       "nom": "Bhopal"
+      },
+      {
+       "id": "tchernobyl",
+       "date": 1986,
+       "nom": "Tchernobyl"
+      },
+      {
+       "id": "erika",
+       "date": 1999,
+       "nom": "Erika"
+      },
+      {
+       "id": "azf",
+       "date": 2001,
+       "nom": "AZF"
+      },
+      {
+       "id": "fukushima",
+       "date": 2011,
+       "nom": "Fukushima"
+      },
+      {
+       "id": "lubrizol",
+       "date": 2019,
+       "nom": "Lubrizol"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la catastrophe qui mêle **risque naturel et risque technologique**.",
+     "reponse": [
+      "fukushima"
+     ],
+     "aide": "Un séisme et un tsunami ont déclenché l’accident d’une centrale nucléaire.",
+     "explication": "**Fukushima** (2011) a été déclenchée par un séisme et un tsunami : les risques naturels et technologiques se combinent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque catastrophe à sa nature.",
+     "paires": [
+      [
+       "Bhopal (1984)",
+       "Catastrophe industrielle en Inde"
+      ],
+      [
+       "Tchernobyl (1986)",
+       "Accident nucléaire"
+      ],
+      [
+       "Erika (1999)",
+       "Marée noire"
+      ]
+     ],
+     "aide": "Un nom de navire évoque une marée noire ; un nom de centrale, le nucléaire.",
+     "explication": "**Bhopal** est une catastrophe industrielle, **Tchernobyl** un accident nucléaire, l’**Erika** une marée noire sur les côtes françaises."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’explosion d’AZF de l’incendie de Lubrizol ?",
+     "unite": "ans",
+     "reponse": 18,
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "2019 − 2001 = **18** ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’ont en commun AZF et Lubrizol ?",
+     "options": [
+      "Deux accidents industriels français, près de grandes villes",
+      "Deux marées noires survenues sur les côtes françaises",
+      "Deux accidents nucléaires survenus en France",
+      "Deux catastrophes survenues en Inde"
+     ],
+     "reponse": 0,
+     "aide": "AZF a frappé Toulouse et Lubrizol, Rouen.",
+     "explication": "**AZF** (Toulouse, 2001) et **Lubrizol** (Rouen, 2019) sont des accidents industriels qui ont touché des villes françaises."
+    }
+   ]
+  },
+  {
+   "chapitre": "78be057d-ebc3-57b0-bb56-40a5eb2b9854",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Valmont réduit sa vulnérabilité",
+   "competence": "analyser-document",
+   "situation": "Après un incendie, le maire d’une commune imaginée présente ce qui a été fait autour de l’usine. Rémi lit son rapport et situe sur une carte deux accidents réels en France.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux accidents industriels en France",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -6,
+      41,
+      10,
+      52
+     ],
+     "source": "Accidents cités dans le cours.",
+     "lieux": [
+      {
+       "id": "toulouse",
+       "lieu": "toulouse",
+       "nom": "Toulouse",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "rouen",
+       "lieu": "rouen",
+       "nom": "Rouen",
+       "symbole": "point",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "rapport",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le rapport du maire",
+     "auteur": "Rapport imaginé pour l’exercice.",
+     "blocs": [
+      "Nous avons dressé la carte des zones exposées autour de l’usine.",
+      "Les contrôles et les normes ont été renforcés, comme l’exige la directive européenne Seveso.",
+      "Le plan de prévention des risques technologiques interdit de construire de nouvelles maisons à moins de trois cents mètres de l’usine.",
+      "Chaque année, un exercice d’évacuation est organisé dans l’école voisine et les sirènes sont testées."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où l’usine **AZF** a explosé en 2001.",
+     "reponse": [
+      "toulouse"
+     ],
+     "aide": "AZF est une explosion célèbre dans le sud-ouest de la France.",
+     "explication": "L’explosion de l’usine AZF a frappé **Toulouse** en 2001."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où l’usine **Lubrizol** a brûlé en 2019.",
+     "reponse": [
+      "rouen"
+     ],
+     "aide": "Cherche une ville normande, traversée par la Seine.",
+     "explication": "L’incendie de l’usine Lubrizol a touché **Rouen** en 2019."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure du rapport à l’action de prévention qu’elle illustre.",
+     "paires": [
+      [
+       "Dresser la carte des zones exposées",
+       "Connaître"
+      ],
+      [
+       "Appliquer la directive Seveso et renforcer les contrôles",
+       "Réglementer"
+      ],
+      [
+       "Interdire de nouvelles maisons près de l’usine",
+       "Aménager"
+      ],
+      [
+       "Organiser un exercice d’évacuation",
+       "Informer et former"
+      ]
+     ],
+     "aide": "Reprends les quatre paragraphes du rapport dans l’ordre.",
+     "explication": "**Connaître**, **réglementer**, **aménager**, **informer et former** : les actions de la prévention. Il faut aussi prévoir les secours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le maire peut-il supprimer l’aléa industriel autour de l’usine ?",
+     "options": [
+      "Non : on réduit la vulnérabilité en éloignant les habitations",
+      "Oui : il suffit d’interdire toute activité industrielle",
+      "Oui : un exercice d’évacuation supprime le danger",
+      "Non : la prévention ne change rien au risque"
+     ],
+     "reponse": 0,
+     "aide": "Relis le rapport : les mesures portent-elles sur l’usine ou sur ce qui l’entoure ?",
+     "explication": "On ne supprime pas un aléa industriel : on réduit la **vulnérabilité**, par l’aménagement autour des sites classés."
+    }
+   ]
+  }
+ ]
+}

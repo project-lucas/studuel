@@ -1,0 +1,4753 @@
+{
+ "niveau": "1re",
+ "matiere": "si",
+ "exercices": [
+  {
+   "chapitre": "965511b9-9909-5162-949c-dd04588440e1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pousser le portail du jardin",
+   "competence": "observer-schema",
+   "situation": "Karim referme à la main le vantail de son portail automatique. Vu de dessus, il pousse près de la poignée, perpendiculairement au vantail, avec une force de 40 N.",
+   "documents": [
+    {
+     "id": "portail",
+     "type": "schema",
+     "titre": "Le vantail vu de dessus",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 14,
+       "y": 70,
+       "l": 22,
+       "h": 60,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 25,
+       "y": 62,
+       "texte": "Pilier",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 94,
+       "l": 250,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "vantail",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 100,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "gonds",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 100,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "poignee",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 86,
+       "texte": "Poignée",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        175
+       ],
+       "a": [
+        240,
+        108
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 150,
+       "texte": "F = 40 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        120
+       ],
+       "a": [
+        240,
+        120
+       ],
+       "fleche": "deux",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 136,
+       "texte": "d = 1,2 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 190,
+       "texte": "Vue de dessus, vantail perpendiculaire à F",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "portail",
+     "reponse": [
+      "gonds"
+     ],
+     "enonce": "Touche la liaison autour de laquelle le vantail tourne.",
+     "aide": "Le vantail ne peut que pivoter : cherche le point fixe du pilier.",
+     "explication": "Les **gonds** forment une liaison pivot : le vantail ne tourne qu’autour de leur axe."
+    },
+    {
+     "type": "nombre",
+     "reponse": 48,
+     "unite": "N·m",
+     "tolerance": 0,
+     "enonce": "Calcule le moment de la force de Karim par rapport à l’axe des gonds.",
+     "aide": "La force est perpendiculaire au vantail : M = F × d, avec d en mètres.",
+     "explication": "M = F × d = 40 × 1,2 = **48 N·m**. Le bras de levier est la distance entre la poignée et les gonds."
+    },
+    {
+     "type": "nombre",
+     "reponse": 80,
+     "unite": "N",
+     "tolerance": 0,
+     "enonce": "Karim pousse maintenant à 0,6 m des gonds. Quelle force doit-il exercer pour obtenir le même moment ?",
+     "aide": "Le moment reste 48 N·m : F = M / d.",
+     "explication": "F = M / d = 48 / 0,6 = **80 N**. Plus le bras de levier est court, plus il faut pousser fort."
+    }
+   ]
+  },
+  {
+   "chapitre": "965511b9-9909-5162-949c-dd04588440e1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les liaisons de la nacelle du drone",
+   "competence": "modeliser",
+   "situation": "Léa modélise la nacelle caméra d’un drone. Pour quatre liaisons, elle a noté les mouvements relatifs autorisés (1) ou bloqués (0) dans le repère de la pièce : x en avant, z perpendiculaire au contact.",
+   "documents": [
+    {
+     "id": "mobilites",
+     "type": "tableau",
+     "titre": "Mouvements autorisés (1) ou bloqués (0)",
+     "source": "Situation imaginée pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Liaison",
+      "Tx",
+      "Ty",
+      "Tz",
+      "Rx",
+      "Ry",
+      "Rz"
+     ],
+     "lignes": [
+      [
+       "L1",
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       "L2",
+       1,
+       1,
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       "L3",
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       "L4",
+       1,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mobilites",
+     "reponse": [
+      "r0c4"
+     ],
+     "enonce": "Touche la case qui indique l’unique rotation autorisée par la liaison L1.",
+     "aide": "Dans la ligne L1, cherche le seul 1 : sa colonne commence par R.",
+     "explication": "L1 n’autorise que la rotation autour de x (colonne **Rx**) : un seul degré de liberté en rotation, c’est une pivot."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque liaison à son nom.",
+     "paires": [
+      [
+       "L1",
+       "Pivot"
+      ],
+      [
+       "L2",
+       "Ponctuelle"
+      ],
+      [
+       "L3",
+       "Encastrement"
+      ],
+      [
+       "L4",
+       "Glissière"
+      ]
+     ],
+     "aide": "Compte les 1 de chaque ligne : 0, 1 ou 5 mouvements autorisés.",
+     "explication": "L1 (une rotation) est une **pivot** ; L2 (cinq mouvements, sauf la translation normale au contact) une **ponctuelle** ; L3 (aucun) un **encastrement** ; L4 (une translation) une **glissière**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "tolerance": 0,
+     "enonce": "Combien de degrés de liberté la liaison L2 laisse-t-elle au solide ?",
+     "aide": "Compte les 1 dans la ligne L2.",
+     "explication": "La ligne L2 compte cinq 1 : la ponctuelle laisse **5 degrés de liberté**, seule la translation Tz, normale au contact, est supprimée."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "tolerance": 0,
+     "enonce": "Combien de mouvements la liaison L1 supprime-t-elle, sur les six possibles dans l’espace ?",
+     "aide": "Un solide libre en possède six ; retire ceux que L1 autorise.",
+     "explication": "Six moins un degré de liberté : la pivot supprime **5 mouvements**."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Léa suppose les liaisons « parfaites ». Que cela signifie-t-il ?",
+     "options": [
+      "Elles transmettent des efforts illimités",
+      "Elles autorisent tous les mouvements possibles",
+      "Elles sont sans jeu et sans frottement",
+      "Elles bloquent toujours trois mouvements"
+     ],
+     "aide": "C’est une hypothèse de modélisation, à nommer comme telle.",
+     "explication": "Une liaison parfaite est supposée **sans jeu et sans frottement** : c’est une hypothèse de modélisation, pas la réalité."
+    }
+   ]
+  },
+  {
+   "chapitre": "965511b9-9909-5162-949c-dd04588440e1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le coup de pédale du vélo électrique",
+   "competence": "calculer",
+   "situation": "Sur un vélo à assistance électrique, Inès appuie verticalement sur la pédale avec 300 N. La manivelle du pédalier mesure 0,17 m. On cherche le moment qu’elle applique à l’axe du pédalier selon la position de la manivelle.",
+   "documents": [
+    {
+     "id": "pedalier",
+     "type": "schema",
+     "titre": "Pédalier, manivelle à 30° sous l’horizontale",
+     "largeur": 340,
+     "hauteur": 230,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 60,
+       "r": 8,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "axe",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 44,
+       "y": 48,
+       "texte": "O",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        60
+       ],
+       "a": [
+        207.2,
+        145
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "cercle",
+       "cx": 207.2,
+       "cy": 145,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 217.2,
+       "y": 137,
+       "texte": "A",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        207.2,
+        145
+       ],
+       "a": [
+        207.2,
+        215
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 225.2,
+       "y": 205,
+       "texte": "F = 300 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        207.2,
+        60
+       ],
+       "a": [
+        207.2,
+        139
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        60
+       ],
+       "a": [
+        207.2,
+        60
+       ],
+       "style": "pointilles",
+       "fleche": "fin",
+       "epaisseur": 2,
+       "id": "bras",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 151,
+       "texte": "OA = 0,17 m",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 78,
+       "texte": "α = 30°",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "positions",
+     "type": "tableau",
+     "titre": "Quatre positions de la manivelle",
+     "source": "Situation imaginée pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Position",
+      "Angle α avec l’horizontale"
+     ],
+     "lignes": [
+      [
+       "P1",
+       "60°"
+      ],
+      [
+       "P2",
+       "0°"
+      ],
+      [
+       "P3",
+       "90°"
+      ],
+      [
+       "P4",
+       "30°"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pedalier",
+     "reponse": [
+      "bras"
+     ],
+     "enonce": "Touche le bras de levier de la force F par rapport à l’axe O.",
+     "aide": "C’est la distance perpendiculaire entre O et la droite d’action de F, qui est verticale.",
+     "explication": "Le **bras de levier** est le segment horizontal tiré de O jusqu’à la droite d’action verticale de F."
+    },
+    {
+     "type": "nombre",
+     "reponse": 51,
+     "unite": "N·m",
+     "tolerance": 0,
+     "enonce": "Manivelle horizontale (position P2) : calcule le moment de F par rapport à O.",
+     "aide": "Manivelle horizontale : le bras de levier vaut toute la longueur OA.",
+     "explication": "d = OA = 0,17 m, donc M = 300 × 0,17 = **51 N·m**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 44.2,
+     "unite": "N·m",
+     "tolerance": 0.1,
+     "enonce": "Manivelle à 30° (position P4) : calcule le moment, arrondi au dixième de N·m.",
+     "aide": "Le bras de levier vaut d = OA × cos 30°, avec cos 30° ≈ 0,866.",
+     "explication": "d = 0,17 × cos 30° ≈ 0,147 m, donc M = 300 × 0,147 ≈ **44,2 N·m**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "P2 (0°)",
+      "P4 (30°)",
+      "P1 (60°)",
+      "P3 (90°)"
+     ],
+     "enonce": "Range les positions de la manivelle du plus grand moment au plus petit.",
+     "aide": "Plus la manivelle est inclinée, plus le bras de levier raccourcit.",
+     "explication": "M = F × OA × cos α décroît quand α croît : **0°, 30°, 60°, puis 90°**, où le moment est nul."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "À 90°, pourquoi le moment est-il nul malgré les 300 N ?",
+     "options": [
+      "La force diminue quand la manivelle monte",
+      "La droite d’action passe par l’axe O",
+      "Le pédalier n’est plus lié au cadre",
+      "La manivelle devient plus courte"
+     ],
+     "aide": "Que vaut le bras de levier quand la manivelle est verticale ?",
+     "explication": "Manivelle verticale, la droite d’action de F passe par O : le **bras de levier est nul**, donc le moment aussi (le point mort)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f7dd0de-e026-54a3-ae5f-45f572565854",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Isoler le robot tondeuse",
+   "competence": "observer-schema",
+   "situation": "Un robot tondeuse est posé sur une pelouse plane. Pour étudier son équilibre, Samir l’isole : le trait pointillé entoure tout ce qui appartient au robot.",
+   "documents": [
+    {
+     "id": "robot",
+     "type": "schema",
+     "titre": "Le robot isolé",
+     "largeur": 340,
+     "hauteur": 215,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        55
+       ],
+       "a": [
+        280,
+        55
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        55
+       ],
+       "a": [
+        280,
+        165
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        165
+       ],
+       "a": [
+        70,
+        165
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        165
+       ],
+       "a": [
+        70,
+        55
+       ],
+       "style": "pointilles",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 70,
+       "l": 160,
+       "h": 40,
+       "arrondi": 10,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 78,
+       "l": 40,
+       "h": 22,
+       "teinte": "gris",
+       "motif": "plein",
+       "texte": "M"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 135,
+       "r": 20,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 135,
+       "r": 20,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        155
+       ],
+       "a": [
+        320,
+        155
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 90,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "g",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 176,
+       "y": 84,
+       "texte": "G",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        90
+       ],
+       "a": [
+        170,
+        135
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "poids",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 176,
+       "y": 132,
+       "texte": "P",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        195
+       ],
+       "a": [
+        120,
+        157
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "sol-av",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 126,
+       "y": 190,
+       "texte": "Sol → roue avant",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        205
+       ],
+       "a": [
+        230,
+        157
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "sol-ar",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 236,
+       "y": 200,
+       "texte": "Sol → roue arrière",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        100
+       ],
+       "a": [
+        120,
+        114
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "interne",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 110,
+       "y": 22,
+       "texte": "Couple moteur → roue",
+       "vers": [
+        118,
+        108
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "tolerance": 0,
+     "enonce": "Combien d’actions extérieures figurent dans le bilan du robot isolé ?",
+     "aide": "On ne compte que ce qui traverse la frontière pointillée ou agit à distance sur le robot.",
+     "explication": "Le poids et les deux actions du sol : **3 actions extérieures**. Le couple moteur → roue est interne."
+    },
+    {
+     "type": "zone",
+     "document": "robot",
+     "reponse": [
+      "interne"
+     ],
+     "enonce": "Touche l’action qui ne doit pas figurer dans le bilan.",
+     "aide": "Cherche l’action dont les deux extrémités sont à l’intérieur du pointillé.",
+     "explication": "Le **couple moteur → roue** s’exerce entre deux parties du robot, à l’intérieur de la frontière : une action intérieure n’entre jamais dans le bilan."
+    },
+    {
+     "type": "zone",
+     "document": "robot",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le point d’application du poids.",
+     "aide": "Le poids est une action à distance appliquée en un point particulier du robot.",
+     "explication": "Le poids s’applique au **centre de gravité G**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Parmi ces actions, laquelle s’exerce à distance, sans contact ?",
+     "options": [
+      "Le poids du robot",
+      "L’action du sol sur la roue avant",
+      "L’action du sol sur la roue arrière",
+      "Le couple du moteur sur la roue"
+     ],
+     "aide": "Les trois autres passent par une surface de contact.",
+     "explication": "Le **poids** s’exerce sans contact ; les actions du sol sont des actions de contact."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f7dd0de-e026-54a3-ae5f-45f572565854",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Déplacer le torseur d’un bras de robot",
+   "competence": "calculer",
+   "situation": "Un bras de robot porte une pièce de 50 N à son extrémité A. Le pivot du bras est en O ; un point B est situé à 0,2 m de O. On compte positifs les moments dans le sens direct (anti-horaire).",
+   "documents": [
+    {
+     "id": "bras",
+     "type": "schema",
+     "titre": "Le bras vu de côté",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 100,
+       "r": 8,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 88,
+       "texte": "O",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        100
+       ],
+       "a": [
+        260,
+        100
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "cercle",
+       "cx": 127,
+       "cy": 100,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 122,
+       "y": 90,
+       "texte": "B",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 100,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 264,
+       "y": 90,
+       "texte": "A",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        100
+       ],
+       "a": [
+        260,
+        165
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 268,
+       "y": 150,
+       "texte": "F = 50 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        135
+       ],
+       "a": [
+        260,
+        135
+       ],
+       "fleche": "deux",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 150,
+       "texte": "OA = 0,6 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        60
+       ],
+       "a": [
+        127,
+        60
+       ],
+       "fleche": "deux",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 93,
+       "y": 52,
+       "texte": "OB = 0,2 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "torseur",
+     "type": "tableau",
+     "titre": "Torseur de l’action de la pièce, en A",
+     "source": "Situation imaginée pour l’exercice",
+     "colonnes": [
+      "Résultante",
+      "Moment en A"
+     ],
+     "lignes": [
+      [
+       "50 N, vers le bas",
+       "0 N·m"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "N",
+     "tolerance": 0,
+     "enonce": "Quelle est la valeur de la résultante du torseur transporté au point O ?",
+     "aide": "Quand on change de point, la résultante change-t-elle ?",
+     "explication": "La résultante ne dépend pas du point : elle reste égale à **50 N**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 30,
+     "unite": "N·m",
+     "tolerance": 0,
+     "enonce": "Calcule la valeur du moment en O de la force de 50 N, sans tenir compte du signe.",
+     "aide": "Le bras de levier de F par rapport à O est la distance OA, car F est perpendiculaire au bras.",
+     "explication": "M = F × OA = 50 × 0,6 = **30 N·m** en valeur absolue."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Quel est le signe de ce moment en O ?",
+     "options": [
+      "Positif, car la force est verticale",
+      "Négatif, car le sens est horaire",
+      "Nul, car la force passe par O",
+      "Positif, car la force est vers le bas"
+     ],
+     "aide": "Le point A est à droite de O et la force le pousse vers le bas : dans quel sens tourne le bras ?",
+     "explication": "La force fait tourner le bras dans le **sens horaire**, donc le moment en O est **négatif** : −30 N·m."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "unite": "N·m",
+     "tolerance": 0,
+     "enonce": "Quelle est la valeur du moment en B, sans tenir compte du signe ?",
+     "aide": "Le bras de levier par rapport à B est la distance BA = OA − OB.",
+     "explication": "BA = 0,6 − 0,2 = 0,4 m, donc M = 50 × 0,4 = **20 N·m** : le moment a changé, la résultante non."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f7dd0de-e026-54a3-ae5f-45f572565854",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La potence de la station météo",
+   "competence": "raisonner",
+   "situation": "Une station météo est fixée en B à l’extrémité d’une potence AB de 0,8 m, horizontale. La potence est articulée en A sur un mur et retenue en B par un câble BC incliné de 30°. On néglige le poids de la potence ; la station pèse 120 N.",
+   "documents": [
+    {
+     "id": "potence",
+     "type": "schema",
+     "titre": "La potence isolée",
+     "largeur": 340,
+     "hauteur": 230,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 14,
+       "y": 10,
+       "l": 16,
+       "h": 200,
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        34,
+        150
+       ],
+       "a": [
+        254,
+        150
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        254,
+        150
+       ],
+       "a": [
+        34,
+        23
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 34,
+       "cy": 150,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 168,
+       "texte": "A",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 254,
+       "cy": 150,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 142,
+       "texte": "B",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 34,
+       "cy": 23,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 44,
+       "y": 19,
+       "texte": "C",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        254,
+        150
+       ],
+       "a": [
+        254,
+        215
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 268,
+       "y": 205,
+       "texte": "P = 120 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 214,
+       "y": 140,
+       "texte": "30°",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "etiquette",
+       "x": 100,
+       "y": 205,
+       "texte": "Action en A : ?",
+       "vers": [
+        38,
+        156
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 120,
+       "texte": "Câble",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "potence",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le point où se coupent les droites d’action des trois forces appliquées à la potence.",
+     "aide": "Le câble et la station agissent au même point de la potence.",
+     "explication": "Le câble et le poids agissent en **B** ; pour que trois forces non parallèles s’équilibrent, la troisième passe aussi par B."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle est la direction de l’action de l’articulation en A ?",
+     "options": [
+      "Suivant AB, donc horizontale",
+      "Verticale, vers le haut",
+      "Suivant AC, donc verticale",
+      "Parallèle au câble BC"
+     ],
+     "aide": "Elle doit passer par A et par le point de concours B.",
+     "explication": "Les trois droites d’action sont concourantes en B : celle de A passe par A et B, donc **suivant AB**, horizontale."
+    },
+    {
+     "type": "nombre",
+     "reponse": 240,
+     "unite": "N",
+     "tolerance": 0.5,
+     "enonce": "Calcule la tension T du câble.",
+     "aide": "Équilibre vertical en B : la composante verticale de T vaut P, soit T × sin 30° = P.",
+     "explication": "T = P / sin 30° = 120 / 0,5 = **240 N**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 208,
+     "unite": "N",
+     "tolerance": 0.5,
+     "enonce": "Calcule l’intensité de l’action en A, arrondie à l’unité.",
+     "aide": "Équilibre horizontal : l’action en A compense la composante horizontale de T, T × cos 30°.",
+     "explication": "A = T × cos 30° = P / tan 30° = 120 / 0,577 ≈ **208 N**. Le triangle des forces (P, T, A) se ferme."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Isoler la potence",
+      "Faire le bilan des actions extérieures",
+      "Reconnaître trois forces concourantes en B",
+      "Tracer le triangle des forces à l’échelle",
+      "Mesurer les inconnues et vérifier"
+     ],
+     "enonce": "Remets dans l’ordre les étapes de la résolution graphique.",
+     "aide": "Toute résolution de statique commence par isoler un solide.",
+     "explication": "On **isole**, on fait le **bilan**, on reconnaît les forces **concourantes**, on trace le **triangle des forces** puis on mesure et on vérifie."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d7fdbea-400c-56d1-bd7e-59cc15657f29",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le robot tondeuse dans la pente",
+   "competence": "lire-tableau",
+   "situation": "Un robot tondeuse est à l’arrêt sur une pente. Le sol doit lui fournir une composante tangentielle de 36 N pour le retenir ; la composante normale du contact est de 90 N.",
+   "documents": [
+    {
+     "id": "terrains",
+     "type": "tableau",
+     "titre": "Coefficient de frottement des roues selon le terrain",
+     "source": "Valeurs imaginées pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Terrain",
+      "Coefficient f"
+     ],
+     "lignes": [
+      [
+       "Herbe sèche",
+       "0,6"
+      ],
+      [
+       "Herbe mouillée",
+       "0,35"
+      ],
+      [
+       "Gravier",
+       "0,5"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 54,
+     "unite": "N",
+     "tolerance": 0,
+     "enonce": "Quelle composante tangentielle maximale le contact peut-il fournir sur herbe sèche ?",
+     "aide": "Sans glissement, T ≤ f × N, avec N = 90 N.",
+     "explication": "T max = f × N = 0,6 × 90 = **54 N**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Reste immobile",
+      "Glisse"
+     ],
+     "items": [
+      [
+       "Herbe sèche",
+       0
+      ],
+      [
+       "Herbe mouillée",
+       1
+      ],
+      [
+       "Gravier",
+       0
+      ]
+     ],
+     "enonce": "Classe chaque terrain : le robot y reste-t-il immobile ou glisse-t-il ?",
+     "aide": "Compare 36 N à f × 90 pour chaque terrain.",
+     "explication": "Herbe sèche 54 N et gravier 45 N dépassent 36 N : il reste. Herbe mouillée : 31,5 N < 36 N, il **glisse**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.4,
+     "tolerance": 0.001,
+     "enonce": "Quel coefficient de frottement minimal évite tout glissement, avec N = 90 N et T = 36 N ?",
+     "aide": "À la limite, T = f × N, donc f = T / N.",
+     "explication": "f = T / N = 36 / 90 = **0,4**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d7fdbea-400c-56d1-bd7e-59cc15657f29",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel couple pour tenir le bras du robot ?",
+   "competence": "calculer",
+   "situation": "Un bras de robot horizontal de 0,5 m est maintenu à l’arrêt par le couple C de son moteur, placé sur le pivot O. Le bras pèse 20 N (appliqués en son milieu G) et porte une charge de 30 N à son extrémité A.",
+   "documents": [
+    {
+     "id": "bras",
+     "type": "schema",
+     "titre": "Le bras isolé",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 110,
+       "r": 8,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 36,
+       "y": 98,
+       "texte": "O",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        110
+       ],
+       "a": [
+        250,
+        110
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 110,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 144,
+       "y": 100,
+       "texte": "G",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 110,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 254,
+       "y": 100,
+       "texte": "A",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        110
+       ],
+       "a": [
+        150,
+        165
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 158,
+       "y": 160,
+       "texte": "P = 20 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        110
+       ],
+       "a": [
+        250,
+        175
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 258,
+       "y": 170,
+       "texte": "Q = 30 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "etiquette",
+       "x": 105,
+       "y": 38,
+       "texte": "Couple moteur C : inconnu",
+       "vers": [
+        46,
+        104
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 95,
+       "y": 180,
+       "texte": "Pivot : X, Y inconnues",
+       "vers": [
+        48,
+        118
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        130
+       ],
+       "a": [
+        250,
+        130
+       ],
+       "fleche": "deux",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 146,
+       "texte": "OA = 0,5 m",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Moteur du bras",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "⚙️",
+     "source": "Situation imaginée pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "24 V"
+      },
+      {
+       "texte": "Couple maximal de maintien",
+       "valeur": "30 N·m",
+       "gras": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "En quel point écrire la somme des moments pour obtenir C sans autre inconnue ?",
+     "options": [
+      "En O, où passent X et Y",
+      "En A, où agit la charge",
+      "En G, au milieu du bras",
+      "En un point du sol"
+     ],
+     "aide": "Choisis le point où passent le plus d’inconnues : leur moment y est nul.",
+     "explication": "En **O**, les moments de X et de Y sont nuls : il ne reste que C et les deux poids."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "unite": "N·m",
+     "tolerance": 0,
+     "enonce": "Écris la somme des moments en O et calcule le couple C de maintien.",
+     "aide": "C équilibre P × OG + Q × OA, avec OG = 0,25 m.",
+     "explication": "C = 20 × 0,25 + 30 × 0,5 = 5 + 15 = **20 N·m**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "N",
+     "tolerance": 0,
+     "enonce": "Calcule la composante verticale Y de l’action du pivot.",
+     "aide": "Somme des forces sur y = 0 : Y compense P et Q.",
+     "explication": "Y = P + Q = 20 + 30 = **50 N**, dirigée vers le haut."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "N",
+     "tolerance": 0,
+     "enonce": "Le moteur est limité à 30 N·m. Quelle charge Q maximale le bras peut-il tenir ?",
+     "aide": "C = 5 + 0,5 × Q : résous 30 = 5 + 0,5 × Q.",
+     "explication": "30 = 5 + 0,5 × Q, donc Q = 25 / 0,5 = **50 N**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d7fdbea-400c-56d1-bd7e-59cc15657f29",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le drone posé sur la rampe",
+   "competence": "modeliser",
+   "situation": "Un drone de 1,5 kg est posé sur une plateforme inclinée de 25° par rapport à l’horizontale. On prend g = 9,8 N/kg. On cherche si ses patins le retiennent, le contact sur la plateforme étant modélisé par une seule action de composantes N et T.",
+   "documents": [
+    {
+     "id": "rampe",
+     "type": "schema",
+     "titre": "Le drone sur la plateforme",
+     "largeur": 340,
+     "hauteur": 220,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         40,
+         190
+        ],
+        [
+         275.6,
+         80.1
+        ],
+        [
+         275.6,
+         190
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         130.6,
+         147.7
+        ],
+        [
+         185,
+         122.4
+        ],
+        [
+         169.8,
+         89.8
+        ],
+        [
+         115.4,
+         115.1
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150.2,
+       "cy": 118.7,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150.2,
+        118.7
+       ],
+       "a": [
+        150.2,
+        173.7
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "p",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 156.2,
+       "y": 170.7,
+       "texte": "P",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        157.8,
+        135.1
+       ],
+       "a": [
+        134.6,
+        85.2
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "n",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 128.5,
+       "y": 80.7,
+       "texte": "N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        157.8,
+        135.1
+       ],
+       "a": [
+        207.7,
+        111.8
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail",
+       "id": "t",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 211.7,
+       "y": 127.8,
+       "texte": "T",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 184,
+       "texte": "25°",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "patins",
+     "type": "tableau",
+     "titre": "Coefficient de frottement des patins",
+     "source": "Valeurs imaginées pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Matériau du patin",
+      "Coefficient f"
+     ],
+     "lignes": [
+      [
+       "Caoutchouc sec",
+       "0,80"
+      ],
+      [
+       "Mousse",
+       "0,40"
+      ],
+      [
+       "Plastique lisse",
+       "0,30"
+      ],
+      [
+       "Caoutchouc humide",
+       "0,55"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rampe",
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche la composante tangentielle de l’action de contact.",
+     "aide": "La composante tangentielle est parallèle à la surface de contact.",
+     "explication": "La composante **T** est parallèle à la plateforme : c’est elle qui retient le drone, dans la limite T ≤ f × N."
+    },
+    {
+     "type": "nombre",
+     "reponse": 13.3,
+     "unite": "N",
+     "tolerance": 0.05,
+     "enonce": "Calcule N, composante normale du contact, arrondie au dixième.",
+     "aide": "P = m × g, puis N = P × cos 25° (cos 25° ≈ 0,906).",
+     "explication": "P = 1,5 × 9,8 = 14,7 N, puis N = 14,7 × cos 25° ≈ **13,3 N**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6.2,
+     "unite": "N",
+     "tolerance": 0.05,
+     "enonce": "Calcule T, composante tangentielle nécessaire à l’équilibre, arrondie au dixième.",
+     "aide": "T équilibre la composante du poids le long de la pente : P × sin 25° (sin 25° ≈ 0,423).",
+     "explication": "T = 14,7 × sin 25° ≈ **6,2 N**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Reste immobile",
+      "Glisse"
+     ],
+     "items": [
+      [
+       "Caoutchouc sec",
+       0
+      ],
+      [
+       "Mousse",
+       1
+      ],
+      [
+       "Plastique lisse",
+       1
+      ],
+      [
+       "Caoutchouc humide",
+       0
+      ]
+     ],
+     "enonce": "Sachant que f doit dépasser T / N, classe chaque patin.",
+     "aide": "Calcule T / N = tan 25° ≈ 0,47 et compare-le à f.",
+     "explication": "T / N = tan 25° ≈ 0,47 : le caoutchouc (0,80 et 0,55) dépasse cette valeur et **retient** ; la mousse (0,40) et le plastique (0,30) **glissent**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 38.7,
+     "unite": "°",
+     "tolerance": 0.1,
+     "enonce": "Avec des patins en caoutchouc sec (f = 0,8), jusqu’à quel angle d’inclinaison le drone reste-t-il immobile ? Arrondis au dixième de degré.",
+     "aide": "À la limite, tan α = f : cherche l’angle dont la tangente vaut 0,8.",
+     "explication": "tan α = 0,8 donne α = arctan 0,8 ≈ **38,7°** : c’est l’angle d’adhérence."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d9f191e-d710-51bb-a0fa-ff48a07f4f3b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le moteur du vélo à assistance électrique",
+   "competence": "calculer",
+   "situation": "Le moteur d’un vélo à assistance électrique fonctionne à sa puissance nominale. Julie lit sa plaque signalétique pour comprendre où va l’énergie de la batterie.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Moteur de moyeu",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "🚲",
+     "source": "Situation imaginée pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Tension d’alimentation",
+       "valeur": "48 V"
+      },
+      {
+       "texte": "Intensité nominale",
+       "valeur": "5 A"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Puissance mécanique utile",
+       "valeur": "192 W",
+       "gras": true,
+       "id": "putile"
+      },
+      {
+       "texte": "Résistance des bobinages",
+       "valeur": "0,4 Ω"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "reponse": [
+      "putile"
+     ],
+     "enonce": "Touche la ligne qui donne la puissance réellement fournie à la roue.",
+     "aide": "La puissance utile est celle qui sort du moteur, sous forme mécanique.",
+     "explication": "La **puissance mécanique utile** (192 W) est celle qui sort du moteur et entraîne la roue."
+    },
+    {
+     "type": "nombre",
+     "reponse": 240,
+     "unite": "W",
+     "tolerance": 0,
+     "enonce": "Calcule la puissance électrique absorbée par le moteur.",
+     "aide": "En électrique, P = U × I.",
+     "explication": "P = U × I = 48 × 5 = **240 W**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.8,
+     "tolerance": 0.001,
+     "enonce": "Calcule le rendement du moteur (un nombre inférieur à 1).",
+     "aide": "Rendement = puissance utile / puissance absorbée.",
+     "explication": "η = 192 / 240 = **0,8**, soit 80 % : les 20 % restants partent en pertes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.36,
+     "unite": "kWh",
+     "tolerance": 0.001,
+     "enonce": "Le moteur tourne 1 h 30 à sa puissance nominale. Quelle énergie électrique consomme-t-il, en kWh ?",
+     "aide": "E = P × Δt : convertis 240 W en kW et 1 h 30 en 1,5 h.",
+     "explication": "E = 0,24 kW × 1,5 h = **0,36 kWh**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d9f191e-d710-51bb-a0fa-ff48a07f4f3b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du pack batterie à la roue",
+   "competence": "analyser-document",
+   "situation": "Sur le même vélo à assistance électrique, un bureau d’études décrit la chaîne d’énergie entre la batterie et la roue. Chaque maillon est caractérisé par son rendement.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne d’énergie, de la batterie à la roue",
+     "source": "Rendements imaginés pour l’exercice",
+     "noeuds": [
+      {
+       "id": "bat",
+       "texte": "Batterie η = 0,97",
+       "emoji": "🔋"
+      },
+      {
+       "id": "ctl",
+       "texte": "Contrôleur η = 0,95",
+       "emoji": "🎛️"
+      },
+      {
+       "id": "mot",
+       "texte": "Moteur η = 0,80",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "red",
+       "texte": "Réducteur η = 0,90",
+       "emoji": "🔩"
+      }
+     ],
+     "liens": [
+      {
+       "de": "bat",
+       "a": "ctl",
+       "texte": "énergie électrique"
+      },
+      {
+       "de": "ctl",
+       "a": "mot",
+       "texte": "électricité adaptée"
+      },
+      {
+       "de": "mot",
+       "a": "red",
+       "texte": "rotation rapide"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque maillon à sa fonction.",
+     "paires": [
+      [
+       "Batterie",
+       "Stocke l’énergie électrique"
+      ],
+      [
+       "Contrôleur",
+       "Adapte la tension envoyée au moteur"
+      ],
+      [
+       "Moteur",
+       "Convertit l’électricité en rotation"
+      ],
+      [
+       "Réducteur",
+       "Diminue la vitesse et augmente le couple"
+      ]
+     ],
+     "aide": "Suis le trajet de l’énergie : stockage, adaptation, conversion, transmission.",
+     "explication": "La **batterie** stocke, le **contrôleur** adapte, le **moteur** convertit, le **réducteur** transmet en abaissant la vitesse et en augmentant le couple."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "reponse": [
+      "mot"
+     ],
+     "enonce": "Touche le maillon qui plafonne le rendement de la chaîne.",
+     "aide": "Cherche le plus petit rendement.",
+     "explication": "Le **moteur** (0,80) est le maillon le plus mauvais : c’est lui qu’il faut améliorer en premier."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.66,
+     "tolerance": 0.005,
+     "enonce": "Calcule le rendement global de la chaîne, arrondi au centième.",
+     "aide": "Les rendements des maillons successifs se multiplient.",
+     "explication": "η = 0,97 × 0,95 × 0,80 × 0,90 ≈ **0,66**, soit 66 % : un tiers de l’énergie est perdu."
+    },
+    {
+     "type": "nombre",
+     "reponse": 377,
+     "unite": "W",
+     "tolerance": 1,
+     "enonce": "Pour fournir 250 W à la roue, quelle puissance la batterie doit-elle débiter ? Arrondis à l’unité.",
+     "aide": "P(batterie) = P(roue) / η global, avec η ≈ 0,663.",
+     "explication": "P = 250 / 0,663 ≈ **377 W** : la différence est dissipée en pertes."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.74,
+     "tolerance": 0.005,
+     "enonce": "Un moyeu à entraînement direct supprimerait le réducteur. Quel serait le rendement global ? Arrondis au centième.",
+     "aide": "Retire le maillon du réducteur du produit.",
+     "explication": "η = 0,97 × 0,95 × 0,80 ≈ **0,74** : supprimer une conversion gagne huit points."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d9f191e-d710-51bb-a0fa-ff48a07f4f3b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Relever la toile du store",
+   "competence": "modeliser",
+   "situation": "Un store motorisé enroule sa toile autour d’un tube de 0,03 m de rayon. La toile et sa lame pèsent 60 N et montent à vitesse constante de 0,1 m/s. Le moteur est alimenté sous 24 V et appelle 0,5 A.",
+   "documents": [
+    {
+     "id": "tube",
+     "type": "schema",
+     "titre": "Le tube enrouleur",
+     "largeur": 340,
+     "hauteur": 210,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 85,
+       "r": 40,
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 85,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        85
+       ],
+       "a": [
+        160,
+        85
+       ],
+       "id": "rayon",
+       "zone": true,
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 132,
+       "y": 78,
+       "texte": "r = 0,03 m",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        85
+       ],
+       "a": [
+        160,
+        175
+       ],
+       "teinte": "brun",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        120
+       ],
+       "a": [
+        160,
+        150
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 140,
+       "texte": "F = 60 N",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        140
+       ],
+       "a": [
+        240,
+        90
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 120,
+       "texte": "v = 0,1 m/s",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 195,
+       "texte": "Toile et lame",
+       "taille": "petit",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 40,
+       "y": 190,
+       "texte": "Tube enrouleur",
+       "vers": [
+        95,
+        115
+       ]
+      }
+     ]
+    },
+    {
+     "id": "moteur",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Moteur du store",
+     "sousTitre": "En fonctionnement",
+     "emoji": "🪟",
+     "source": "Situation imaginée pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "24 V"
+      },
+      {
+       "texte": "Intensité",
+       "valeur": "0,5 A"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tube",
+     "reponse": [
+      "rayon"
+     ],
+     "enonce": "Touche le bras de levier de la force F par rapport à l’axe du tube.",
+     "aide": "La toile se détache du tube perpendiculairement au rayon.",
+     "explication": "Le **rayon du tube** est le bras de levier de F : c’est la distance entre l’axe et la droite d’action."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3.33,
+     "unite": "rad/s",
+     "tolerance": 0.01,
+     "enonce": "Calcule la vitesse angulaire du tube, en rad/s, arrondie au centième.",
+     "aide": "La toile monte à la vitesse linéaire du bord du tube : v = ω × r.",
+     "explication": "ω = v / r = 0,1 / 0,03 ≈ **3,33 rad/s**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 31.8,
+     "unite": "tr/min",
+     "tolerance": 0.1,
+     "enonce": "Exprime cette vitesse en tours par minute, arrondie au dixième.",
+     "aide": "N = ω × 60 / (2π).",
+     "explication": "N = 3,33 × 60 / (2π) ≈ **31,8 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1.8,
+     "unite": "N·m",
+     "tolerance": 0.001,
+     "enonce": "Calcule le couple que doit fournir le tube pour tenir la toile.",
+     "aide": "Le moment de F par rapport à l’axe vaut F × r.",
+     "explication": "C = F × r = 60 × 0,03 = **1,8 N·m**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "W",
+     "tolerance": 0.01,
+     "enonce": "Calcule la puissance mécanique utile, avec P = C × ω.",
+     "aide": "Tu peux vérifier avec P = F × v.",
+     "explication": "P = C × ω = 1,8 × 3,33 = **6 W**, et P = F × v = 60 × 0,1 donne bien 6 W."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.5,
+     "tolerance": 0.001,
+     "enonce": "Calcule le rendement de l’ensemble moteur et tube, sachant que le moteur absorbe U × I.",
+     "aide": "Puissance absorbée : 24 × 0,5 = 12 W.",
+     "explication": "η = 6 / 12 = **0,5** : la moitié de l’énergie électrique est perdue."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e6e9099-9524-5f0a-a06d-9cfd606ffe66",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les points d’une pale de drone",
+   "competence": "observer-schema",
+   "situation": "Une pale d’hélice de drone tourne à la vitesse angulaire constante de 300 rad/s. Elle mesure 0,12 m de l’axe à l’extrémité. On suit trois de ses points, pris à 3 cm, 6 cm et 12 cm de l’axe.",
+   "documents": [
+    {
+     "id": "pale",
+     "type": "schema",
+     "titre": "Pale vue de dessus, avec les vitesses des points A, B et C",
+     "largeur": 340,
+     "hauteur": 190,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 130,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        130
+       ],
+       "a": [
+        300,
+        130
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "cercle",
+       "cx": 202.5,
+       "cy": 130,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 199.5,
+       "y": 148,
+       "texte": "A",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 130,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 148,
+       "texte": "B",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "cercle",
+       "cx": 300,
+       "cy": 130,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 297,
+       "y": 148,
+       "texte": "C",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        202.5,
+        130
+       ],
+       "a": [
+        202.5,
+        112
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        130
+       ],
+       "a": [
+        235,
+        94
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        300,
+        130
+       ],
+       "a": [
+        300,
+        58
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 146,
+       "y": 148,
+       "texte": "axe",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 30,
+       "texte": "Flèches : longueur proportionnelle à v",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 180,
+       "texte": "AO = 3 cm   BO = 6 cm   CO = 12 cm",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pale",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le point de la pale qui se déplace le plus vite.",
+     "aide": "v = ω × R : à ω constant, regarde la distance à l’axe.",
+     "explication": "Le point **C**, le plus éloigné de l’axe, a la plus grande vitesse linéaire."
+    },
+    {
+     "type": "nombre",
+     "reponse": 36,
+     "unite": "m/s",
+     "tolerance": 0,
+     "enonce": "Calcule la vitesse linéaire du point C.",
+     "aide": "v = ω × R, avec R = 0,12 m.",
+     "explication": "v = 300 × 0,12 = **36 m/s**."
+    },
+    {
+     "type": "choix",
+     "reponse": 2,
+     "enonce": "Comparée à celle de A, la vitesse angulaire du point C est…",
+     "options": [
+      "quatre fois plus grande",
+      "quatre fois plus petite",
+      "la même",
+      "nulle"
+     ],
+     "ordreFixe": false,
+     "aide": "Tous les points d’un solide qui tourne partagent la même grandeur angulaire.",
+     "explication": "Tous les points d’un solide en rotation ont la **même vitesse angulaire** ; seule la vitesse linéaire diffère."
+    },
+    {
+     "type": "nombre",
+     "reponse": 18,
+     "unite": "m/s",
+     "tolerance": 0,
+     "enonce": "Calcule la vitesse linéaire du point B.",
+     "aide": "B est à 0,06 m de l’axe.",
+     "explication": "v = 300 × 0,06 = **18 m/s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e6e9099-9524-5f0a-a06d-9cfd606ffe66",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La double réduction du robot tondeuse",
+   "competence": "calculer",
+   "situation": "Le moteur d’un robot tondeuse tourne à 3 000 tr/min. Il entraîne la roue du robot par deux étages de réduction successifs. Les rayons de chaque paire de roues dentées sont donnés dans la chaîne.",
+   "documents": [
+    {
+     "id": "train",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Chaîne cinématique du robot",
+     "source": "Situation imaginée pour l’exercice",
+     "noeuds": [
+      {
+       "id": "mot",
+       "texte": "Moteur 3 000 tr/min",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "e1",
+       "texte": "Étage 1 : 1,5 cm vers 6 cm"
+      },
+      {
+       "id": "e2",
+       "texte": "Étage 2 : 1 cm vers 10 cm"
+      },
+      {
+       "id": "roue",
+       "texte": "Roue de rayon 9 cm",
+       "emoji": "🛞"
+      }
+     ],
+     "liens": [
+      {
+       "de": "mot",
+       "a": "e1"
+      },
+      {
+       "de": "e1",
+       "a": "e2"
+      },
+      {
+       "de": "e2",
+       "a": "roue"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "train",
+     "reponse": [
+      "e2"
+     ],
+     "enonce": "Touche l’étage qui divise le plus la vitesse de rotation.",
+     "aide": "Compare les rapports R(entrée) / R(sortie) de chaque étage.",
+     "explication": "Étage 1 : 1,5 / 6 = 0,25 ; étage 2 : 1 / 10 = 0,1. C’est l’**étage 2** qui réduit le plus."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.25,
+     "tolerance": 0.001,
+     "enonce": "Quel est le rapport ω(sortie) / ω(entrée) du premier étage ?",
+     "aide": "Le rapport vaut R(entrée) / R(sortie).",
+     "explication": "ω(sortie) / ω(entrée) = 1,5 / 6 = **0,25**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 75,
+     "unite": "tr/min",
+     "tolerance": 0.1,
+     "enonce": "Quelle est la vitesse de rotation de la roue du robot ?",
+     "aide": "Multiplie la vitesse du moteur par les deux rapports de réduction.",
+     "explication": "N = 3 000 × 0,25 × 0,1 = **75 tr/min**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7.85,
+     "unite": "rad/s",
+     "tolerance": 0.01,
+     "enonce": "Convertis cette vitesse en rad/s, arrondie au centième.",
+     "aide": "ω = 2π × N / 60.",
+     "explication": "ω = 2π × 75 / 60 ≈ **7,85 rad/s**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.71,
+     "unite": "m/s",
+     "tolerance": 0.005,
+     "enonce": "Calcule la vitesse d’avance du robot, arrondie au centième.",
+     "aide": "v = ω × R, avec R = 0,09 m.",
+     "explication": "v = 7,85 × 0,09 ≈ **0,71 m/s**, soit environ 2,5 km/h."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e6e9099-9524-5f0a-a06d-9cfd606ffe66",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La course du portail coulissant",
+   "competence": "lire-graphique",
+   "situation": "Un portail coulissant démarre, atteint sa vitesse de croisière, puis freine avant d’arriver en butée. Le constructeur donne le graphique de sa vitesse pendant la manœuvre d’ouverture.",
+   "documents": [
+    {
+     "id": "vitesse",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse du portail pendant l’ouverture",
+     "source": "Mesures imaginées pour l’exercice",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse",
+       "valeurs": [
+        0,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "m/s",
+      "min": 0,
+      "max": 0.5,
+      "pas": 0.1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Motorisation de portail",
+     "sousTitre": "Notice du constructeur",
+     "emoji": "🚪",
+     "source": "Situation imaginée pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Course totale",
+       "valeur": "4,8 m"
+      },
+      {
+       "texte": "Vitesse de croisière",
+       "valeur": "0,4 m/s"
+      },
+      {
+       "texte": "Accélération et freinage",
+       "valeur": "identiques"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vitesse",
+     "reponse": [
+      "k1"
+     ],
+     "enonce": "Touche l’instant où le portail atteint sa vitesse de croisière.",
+     "aide": "Cherche le premier point où la courbe cesse de monter.",
+     "explication": "À **t = 2 s**, la vitesse atteint 0,4 m/s puis reste constante."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.2,
+     "unite": "m/s²",
+     "tolerance": 0.001,
+     "enonce": "Calcule l’accélération du portail pendant le démarrage.",
+     "aide": "a = variation de vitesse / durée, entre t = 0 et t = 2 s.",
+     "explication": "a = (0,4 − 0) / 2 = **0,2 m/s²**, constante : c’est un mouvement uniformément varié."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.4,
+     "unite": "m",
+     "tolerance": 0.001,
+     "enonce": "Quelle distance le portail parcourt-il pendant ce démarrage ?",
+     "aide": "Pour un mouvement uniformément varié partant de l’arrêt, d = ½ × a × t².",
+     "explication": "d = ½ × 0,2 × 2² = **0,4 m**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "s",
+     "tolerance": 0.01,
+     "enonce": "Combien de temps dure la phase à vitesse constante ?",
+     "aide": "Retire de la course totale les distances de démarrage et de freinage, puis divise par 0,4 m/s.",
+     "explication": "Distance à vitesse constante : 4,8 − 0,4 − 0,4 = 4 m, durée 4 / 0,4 = **10 s**."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Pendant cette phase à vitesse constante, que vaut l’accélération du portail ?",
+     "options": [
+      "0,4 m/s²",
+      "Nulle",
+      "0,2 m/s²",
+      "Égale à la vitesse"
+     ],
+     "aide": "Une vitesse constante en valeur et en direction ne varie pas.",
+     "explication": "Mouvement rectiligne uniforme : l’accélération est **nulle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "822147b0-97e3-5755-8bb7-62e2248f8a38",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le signal de la sonde de vent",
+   "competence": "lire-graphique",
+   "situation": "Une station météo mesure la vitesse du vent avec un anémomètre. Il délivre une tension périodique, relevée ici sur deux motifs successifs.",
+   "documents": [
+    {
+     "id": "sonde",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension délivrée par l’anémomètre",
+     "source": "Relevé imaginé pour l’exercice",
+     "categories": [
+      "0",
+      "2,5",
+      "5",
+      "7,5",
+      "10",
+      "12,5",
+      "15",
+      "17,5",
+      "20",
+      "22,5",
+      "25",
+      "27,5",
+      "30",
+      "32,5",
+      "35",
+      "37,5"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        1.41,
+        2,
+        1.41,
+        0,
+        -1.41,
+        -2,
+        -1.41,
+        0,
+        1.41,
+        2,
+        1.41,
+        0,
+        -1.41,
+        -2,
+        -1.41
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": -2,
+      "max": 2,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "unite": "ms",
+     "tolerance": 0,
+     "enonce": "Lis la période T de ce signal.",
+     "aide": "Cherche la durée au bout de laquelle le motif recommence, par exemple entre deux sommets.",
+     "explication": "Le premier sommet est à 5 ms, le suivant à 25 ms : T = **20 ms**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 50,
+     "unite": "Hz",
+     "tolerance": 0,
+     "enonce": "Calcule la fréquence du signal.",
+     "aide": "f = 1 / T, avec T en secondes.",
+     "explication": "f = 1 / T = 1 / 0,020 = **50 Hz**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "V",
+     "tolerance": 0,
+     "enonce": "Quelle est l’amplitude du signal, c’est-à-dire l’écart entre ses valeurs extrêmes ?",
+     "aide": "Relève la valeur maximale et la valeur minimale de la tension.",
+     "explication": "Extrêmes : +2 V et −2 V, soit un écart de **4 V**."
+    }
+   ]
+  },
+  {
+   "chapitre": "822147b0-97e3-5755-8bb7-62e2248f8a38",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Numériser la sonde de température",
+   "competence": "lire-graphique",
+   "situation": "La sonde de température d’une station météo délivre une tension comprise entre 0 et 4 V. Un convertisseur de 3 bits la numérise en prélevant un échantillon toutes les 0,1 ms.",
+   "documents": [
+    {
+     "id": "echantillons",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Huit échantillons prélevés",
+     "source": "Relevé imaginé pour l’exercice",
+     "categories": [
+      "0",
+      "0,1",
+      "0,2",
+      "0,3",
+      "0,4",
+      "0,5",
+      "0,6",
+      "0,7"
+     ],
+     "series": [
+      {
+       "nom": "Tension de l’échantillon",
+       "valeurs": [
+        0.4,
+        1.3,
+        2.1,
+        2.8,
+        3.4,
+        2.7,
+        1.8,
+        0.6
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": 0,
+      "max": 4,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 8,
+     "tolerance": 0,
+     "enonce": "Combien de niveaux le convertisseur de 3 bits distingue-t-il ?",
+     "aide": "Un mot de n bits code 2 puissance n valeurs.",
+     "explication": "2³ = **8 niveaux**, numérotés de 0 à 7."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.5,
+     "unite": "V",
+     "tolerance": 0,
+     "enonce": "Calcule le quantum du convertisseur, c’est-à-dire l’écart entre deux niveaux.",
+     "aide": "Quantum = pleine échelle / nombre de niveaux, avec 4 V de pleine échelle.",
+     "explication": "q = 4 / 8 = **0,5 V**."
+    },
+    {
+     "type": "zone",
+     "document": "echantillons",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche l’échantillon qui, une fois arrondi au niveau le plus proche, vaut 3,0 V.",
+     "aide": "Arrondis chaque tension à un multiple de 0,5 V.",
+     "explication": "2,8 V est le plus proche du niveau 3,0 V : c’est l’échantillon prélevé à **0,3 ms**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 7,
+     "tolerance": 0,
+     "enonce": "Quel numéro de niveau (en décimal) code l’échantillon de 3,4 V ?",
+     "aide": "Divise la tension par le quantum puis arrondis.",
+     "explication": "3,4 / 0,5 = 6,8, arrondi à **7**, soit 111 en binaire."
+    },
+    {
+     "type": "nombre",
+     "reponse": 10,
+     "unite": "kHz",
+     "tolerance": 0,
+     "enonce": "Quelle est la fréquence d’échantillonnage ?",
+     "aide": "Un échantillon toutes les 0,1 ms : f = 1 / T.",
+     "explication": "f = 1 / 0,0001 s = **10 000 Hz**, soit 10 kHz."
+    }
+   ]
+  },
+  {
+   "chapitre": "822147b0-97e3-5755-8bb7-62e2248f8a38",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Régler la vitesse de la lame du robot",
+   "competence": "analyser-document",
+   "situation": "Le moteur de la lame d’un robot tondeuse est alimenté en 24 V par un signal à modulation de largeur d’impulsion (MLI). Le tableau donne sa vitesse selon le rapport cyclique ; le graphique montre le signal de commande actuel.",
+   "documents": [
+    {
+     "id": "mli",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Signal logique de commande (1 = tension appliquée)",
+     "source": "Relevé imaginé pour l’exercice",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5"
+     ],
+     "series": [
+      {
+       "nom": "État",
+       "valeurs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "État",
+      "min": 0,
+      "max": 1,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "vitesses",
+     "type": "tableau",
+     "titre": "Vitesse de la lame",
+     "source": "Mesures imaginées pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Rapport cyclique",
+      "25 %",
+      "50 %",
+      "75 %",
+      "100 %"
+     ],
+     "lignes": [
+      [
+       "Vitesse (tr/min)",
+       1050,
+       2100,
+       3150,
+       4200
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mli",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche l’instant où le signal retombe à 0 pour la première fois.",
+     "aide": "Cherche la première barre absente.",
+     "explication": "Le signal passe à 0 à **t = 1,5 ms** : l’impulsion dure 1,5 ms."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "ms",
+     "tolerance": 0,
+     "enonce": "Quelle est la période du signal ?",
+     "aide": "La période est la durée d’un motif complet : de la première montée à la suivante.",
+     "explication": "Le signal remonte à 1 à t = 2 ms : T = **2 ms**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 75,
+     "unite": "%",
+     "tolerance": 0,
+     "enonce": "Quel est le rapport cyclique de ce signal ?",
+     "aide": "Fraction de la période pendant laquelle le signal vaut 1.",
+     "explication": "Le signal vaut 1 pendant 1,5 ms sur 2 ms : 1,5 / 2 = **75 %**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 18,
+     "unite": "V",
+     "tolerance": 0.01,
+     "enonce": "Quelle est la tension moyenne appliquée au moteur ?",
+     "aide": "Tension moyenne = rapport cyclique × 24 V.",
+     "explication": "U moyenne = 0,75 × 24 = **18 V**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 70,
+     "unite": "%",
+     "tolerance": 0.1,
+     "enonce": "Quel rapport cyclique faut-il pour que la lame tourne à 2 940 tr/min ?",
+     "aide": "La vitesse est proportionnelle au rapport cyclique : 4 200 tr/min correspondent à 100 %.",
+     "explication": "2 940 / 4 200 = 0,70, soit un rapport cyclique de **70 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e05d27c4-3c3c-5a5f-8b7c-23c14aeae7d3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’octet de la sonde de la station météo",
+   "competence": "lire-tableau",
+   "situation": "La sonde d’une station météo envoie la température de l’air sous la forme d’un octet : huit bits, du poids le plus fort au poids le plus faible. Léo reçoit 00011110.",
+   "documents": [
+    {
+     "id": "octet",
+     "type": "tableau",
+     "titre": "L’octet reçu, bit par bit",
+     "source": "Situation imaginée pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Poids du bit",
+      "Bit reçu"
+     ],
+     "lignes": [
+      [
+       "128",
+       0
+      ],
+      [
+       "64",
+       0
+      ],
+      [
+       "32",
+       0
+      ],
+      [
+       "16",
+       1
+      ],
+      [
+       "8",
+       1
+      ],
+      [
+       "4",
+       1
+      ],
+      [
+       "2",
+       1
+      ],
+      [
+       "1",
+       0
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "octet",
+     "reponse": [
+      "r3c1",
+      "r4c1",
+      "r5c1",
+      "r6c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche tous les bits qui valent 1 dans l’octet reçu.",
+     "aide": "Parcours la colonne « Bit reçu » : il y a quatre 1.",
+     "explication": "Les bits à 1 sont ceux de poids **16, 8, 4 et 2**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 30,
+     "unite": "°C",
+     "tolerance": 0,
+     "enonce": "Quelle température, en degrés Celsius, cet octet code-t-il ?",
+     "aide": "Additionne les poids des bits qui valent 1.",
+     "explication": "16 + 8 + 4 + 2 = **30**, soit 30 °C."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Quel octet code la température de 21 °C ?",
+     "options": [
+      "00101001",
+      "00010101",
+      "00010110",
+      "00011001"
+     ],
+     "aide": "Décompose 21 en somme de puissances de 2 : 16 + 4 + 1.",
+     "explication": "21 = 16 + 4 + 1, donc les bits de poids 16, 4 et 1 valent 1 : **00010101**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e05d27c4-3c3c-5a5f-8b7c-23c14aeae7d3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La trame de l’imprimante 3D",
+   "competence": "analyser-document",
+   "situation": "Un ordinateur envoie à une imprimante 3D une trame de quatre octets, écrits en hexadécimal, pour régler la température de la buse. Le dernier octet est un bit de parité paire, que l’on doit encore calculer.",
+   "documents": [
+    {
+     "id": "trame",
+     "type": "tableau",
+     "titre": "Trame envoyée à l’imprimante",
+     "source": "Situation imaginée pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Octet",
+      "Contenu (hexadécimal)",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "1",
+       "7E",
+       "Début de trame"
+      ],
+      [
+       "2",
+       "03",
+       "Adresse de l’imprimante"
+      ],
+      [
+       "3",
+       "C8",
+       "Consigne de température"
+      ],
+      [
+       "4",
+       "?",
+       "Parité de l’octet 3"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trame",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’octet qui contient la consigne de température.",
+     "aide": "Lis la colonne « Rôle ».",
+     "explication": "L’octet 3, **C8**, porte la consigne."
+    },
+    {
+     "type": "nombre",
+     "reponse": 200,
+     "unite": "°C",
+     "tolerance": 0,
+     "enonce": "Quelle température demande l’ordinateur ? Convertis C8 en décimal.",
+     "aide": "C vaut 12 et 8 vaut 8 : le poids du premier chiffre est 16.",
+     "explication": "C8 = 12 × 16 + 8 = **200**, soit 200 °C."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’écriture binaire de la consigne.",
+     "texte": "En binaire, C8 s’écrit ___ puis ___ (quatre bits chacun).",
+     "reponses": [
+      [
+       "1100"
+      ],
+      [
+       "1000"
+      ]
+     ],
+     "banque": [
+      "1100",
+      "1000",
+      "0011",
+      "1010",
+      "0101"
+     ],
+     "aide": "Un chiffre hexadécimal vaut exactement quatre bits : C = 12, 8 = 8.",
+     "explication": "C = 12 = **1100** et 8 = **1000** : C8 = 11001000."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1,
+     "tolerance": 0,
+     "enonce": "Quelle valeur (0 ou 1) le bit de parité doit-il prendre pour que le nombre total de 1 soit pair ?",
+     "aide": "Compte les 1 de 11001000 : s’ils sont en nombre impair, il faut en ajouter un.",
+     "explication": "11001000 contient trois 1 : pour en avoir un nombre pair, le bit de parité vaut **1**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que permet le bit de parité à la réception ?",
+     "options": [
+      "Détecter une erreur, sans la localiser",
+      "Corriger automatiquement un bit faux",
+      "Compresser l’octet avant l’envoi",
+      "Chiffrer le message transmis"
+     ],
+     "aide": "Le bit de parité signale qu’un nombre impair de bits a changé.",
+     "explication": "Un bit de parité permet de **détecter** une erreur sur un nombre impair de bits, sans dire lequel : il ne la corrige pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "e05d27c4-3c3c-5a5f-8b7c-23c14aeae7d3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les photos de la station météo",
+   "competence": "calculer",
+   "situation": "Une station météo photographie le ciel toutes les 10 minutes et enregistre chaque image sur sa carte mémoire. L’ingénieur compare un codage en couleurs et un codage en niveaux de gris. On prend 1 Mo = 1 000 000 octets.",
+   "documents": [
+    {
+     "id": "formats",
+     "type": "tableau",
+     "titre": "Deux formats d’image",
+     "source": "Situation imaginée pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Format",
+      "Définition",
+      "Codage de chaque pixel"
+     ],
+     "lignes": [
+      [
+       "Couleur",
+       "640 × 480",
+       "3 octets (rouge, vert, bleu)"
+      ],
+      [
+       "Niveaux de gris",
+       "640 × 480",
+       "1 octet"
+      ]
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Station météo",
+     "sousTitre": "Programme d’enregistrement",
+     "emoji": "🌤️",
+     "source": "Situation imaginée pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Une photo toutes les",
+       "valeur": "10 min"
+      },
+      {
+       "texte": "Durée d’enregistrement",
+       "valeur": "24 h"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 16777216,
+     "tolerance": 0,
+     "enonce": "Combien de couleurs différentes un pixel du format couleur peut-il prendre ?",
+     "aide": "Il y a 24 bits par pixel : un mot de n bits code 2 puissance n valeurs.",
+     "explication": "3 octets = 24 bits, donc 2²⁴ = **16 777 216 couleurs**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 921600,
+     "unite": "octets",
+     "tolerance": 0,
+     "enonce": "Quelle est la taille d’une image couleur, en octets ?",
+     "aide": "Nombre de pixels × octets par pixel.",
+     "explication": "640 × 480 × 3 = **921 600 octets**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 144,
+     "tolerance": 0,
+     "enonce": "Combien de photos la station enregistre-t-elle en 24 h ?",
+     "aide": "Une photo toutes les 10 minutes : combien de fois 10 minutes dans une journée ?",
+     "explication": "24 × 60 / 10 = **144 photos**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 132.7,
+     "unite": "Mo",
+     "tolerance": 0.05,
+     "enonce": "Quel volume de données les photos couleur occupent-elles en 24 h, en Mo, arrondi au dixième ?",
+     "aide": "Taille d’une image × nombre de photos, puis divise par 1 000 000.",
+     "explication": "921 600 × 144 = 132 710 400 octets, soit **132,7 Mo**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 44.2,
+     "unite": "Mo",
+     "tolerance": 0.05,
+     "enonce": "Même question en niveaux de gris, arrondie au dixième de Mo.",
+     "aide": "Une image en gris compte 640 × 480 × 1 octets.",
+     "explication": "307 200 × 144 = 44 236 800 octets, soit **44,2 Mo** : trois fois moins."
+    },
+    {
+     "type": "association",
+     "enonce": "Le mot 01000001 est lu par trois programmes différents. Associe chaque lecture à son résultat.",
+     "paires": [
+      [
+       "Entier non signé",
+       "65"
+      ],
+      [
+       "Caractère ASCII",
+       "La lettre A"
+      ],
+      [
+       "Pixel en niveaux de gris",
+       "Un gris foncé"
+      ]
+     ],
+     "aide": "01000001 vaut 64 + 1 ; 65 est aussi le code ASCII de A ; dans une image 0 est noir et 255 blanc.",
+     "explication": "Rien dans le mot n’indique ce qu’il représente : c’est la **convention du programme** qui l’interprète. 65, la lettre A ou un gris foncé."
+    }
+   ]
+  },
+  {
+   "chapitre": "dea4b032-d12d-5cbf-bb6c-4a3090850f0e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand le portail a-t-il le droit de s’ouvrir ?",
+   "competence": "lire-tableau",
+   "situation": "Un portail automatique ne démarre son moteur M que si la télécommande T est pressée et si la cellule photoélectrique C signale la voie libre (1 = vrai).",
+   "documents": [
+    {
+     "id": "table",
+     "type": "tableau",
+     "titre": "Table de vérité du portail",
+     "source": "Situation imaginée pour l’exercice",
+     "colonnes": [
+      "T",
+      "C",
+      "M"
+     ],
+     "lignes": [
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       1,
+       1
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Quel opérateur logique relie T et C pour donner M ?",
+     "options": [
+      "OU",
+      "ET",
+      "OU exclusif",
+      "NON-OU"
+     ],
+     "aide": "M ne vaut 1 que si toutes les entrées valent 1.",
+     "explication": "M vaut 1 seulement quand T **et** C valent 1 : c’est l’opérateur **ET**."
+    },
+    {
+     "type": "zone",
+     "document": "table",
+     "reponse": [
+      "r3c2"
+     ],
+     "enonce": "Touche la sortie qui autorise l’ouverture du portail.",
+     "aide": "Cherche le seul 1 de la colonne M.",
+     "explication": "Seule la ligne T = 1, C = 1 donne **M = 1**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 8,
+     "tolerance": 0,
+     "enonce": "On ajoute un troisième capteur : combien de lignes compterait la nouvelle table de vérité ?",
+     "aide": "Une fonction à n entrées a 2 puissance n lignes.",
+     "explication": "2³ = **8 lignes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dea4b032-d12d-5cbf-bb6c-4a3090850f0e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les capteurs de sécurité de la lame",
+   "competence": "analyser-document",
+   "situation": "Deux capteurs surveillent la lame d’un robot tondeuse : a vaut 1 si le robot est basculé, b vaut 1 s’il est soulevé. Un technicien teste trois sorties s1, s2 et s3 qui combinent a et b avec trois opérateurs différents.",
+   "documents": [
+    {
+     "id": "sorties",
+     "type": "tableau",
+     "titre": "Trois sorties logiques",
+     "source": "Situation imaginée pour l’exercice",
+     "colonnes": [
+      "a",
+      "b",
+      "s1",
+      "s2",
+      "s3"
+     ],
+     "lignes": [
+      [
+       0,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       1,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque sortie à son opérateur.",
+     "paires": [
+      [
+       "s1",
+       "NON-ET"
+      ],
+      [
+       "s2",
+       "NON-OU"
+      ],
+      [
+       "s3",
+       "OU exclusif"
+      ]
+     ],
+     "aide": "NON-ET : l’inverse du ET. NON-OU : l’inverse du OU. OU exclusif : 1 si les entrées diffèrent.",
+     "explication": "s1 est 0 seulement pour 1 et 1 : **NON-ET**. s2 est 1 seulement pour 0 et 0 : **NON-OU**. s3 vaut 1 quand a et b diffèrent : **OU exclusif**."
+    },
+    {
+     "type": "zone",
+     "document": "sorties",
+     "reponse": [
+      "r1c4",
+      "r2c4"
+     ],
+     "multiple": true,
+     "enonce": "Touche toutes les cases de la colonne s3 qui valent 1.",
+     "aide": "Un OU exclusif vaut 1 quand les deux entrées sont différentes.",
+     "explication": "s3 vaut 1 sur les lignes **a = 0, b = 1** et **a = 1, b = 0**."
+    },
+    {
+     "type": "choix",
+     "reponse": 3,
+     "enonce": "La lame ne doit tourner que si aucun des deux capteurs n’est activé. Quel opérateur faut-il ?",
+     "options": [
+      "NON-ET",
+      "OU exclusif",
+      "ET",
+      "NON-OU"
+     ],
+     "aide": "La sortie doit valoir 1 seulement pour a = 0 et b = 0.",
+     "explication": "La sortie vaut 1 uniquement pour a = 0 et b = 0 : c’est le **NON-OU**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 16,
+     "tolerance": 0,
+     "enonce": "Avec quatre capteurs, combien de lignes aurait la table de vérité ?",
+     "aide": "Une fonction à n entrées a 2 puissance n lignes.",
+     "explication": "2⁴ = **16 lignes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dea4b032-d12d-5cbf-bb6c-4a3090850f0e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tout faire avec des portes NON-ET",
+   "competence": "modeliser",
+   "situation": "Un fabricant de cartes pour imprimante 3D ne veut stocker qu’un seul type de porte : la NON-ET (NAND). Il relie ces portes de trois façons. Sur chaque montage, deux fils reliés à une même porte forment une seule entrée.",
+   "documents": [
+    {
+     "id": "ma",
+     "type": "schema",
+     "titre": "Montage A",
+     "largeur": 340,
+     "hauteur": 100,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 110 30 H 132 A 20 20 0 0 1 132 70 H 110 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 122,
+       "y": 55,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 156,
+       "cy": 50,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 54,
+       "texte": "e",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        50
+       ],
+       "a": [
+        75,
+        50
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        75,
+        50
+       ],
+       "a": [
+        75,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        75,
+        40
+       ],
+       "a": [
+        110,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        75,
+        50
+       ],
+       "a": [
+        75,
+        60
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        75,
+        60
+       ],
+       "a": [
+        110,
+        60
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        50
+       ],
+       "a": [
+        230,
+        50
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 236,
+       "y": 54,
+       "texte": "s",
+       "taille": "normal",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "mb",
+     "type": "schema",
+     "titre": "Montage B",
+     "largeur": 340,
+     "hauteur": 100,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 80 20 H 102 A 20 20 0 0 1 102 60 H 80 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 92,
+       "y": 45,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 126,
+       "cy": 40,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 190 30 H 212 A 20 20 0 0 1 212 70 H 190 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 202,
+       "y": 55,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 236,
+       "cy": 50,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 34,
+       "texte": "a",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 74,
+       "texte": "b",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        30
+       ],
+       "a": [
+        80,
+        30
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        70
+       ],
+       "a": [
+        60,
+        70
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        70
+       ],
+       "a": [
+        60,
+        50
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        50
+       ],
+       "a": [
+        80,
+        50
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        40
+       ],
+       "a": [
+        160,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        190,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        40
+       ],
+       "a": [
+        160,
+        60
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        60
+       ],
+       "a": [
+        190,
+        60
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        50
+       ],
+       "a": [
+        310,
+        50
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 314,
+       "y": 54,
+       "texte": "s",
+       "taille": "normal",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "mc",
+     "type": "schema",
+     "titre": "Montage C",
+     "largeur": 340,
+     "hauteur": 130,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 60 10 H 82 A 20 20 0 0 1 82 50 H 60 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 35,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 106,
+       "cy": 30,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 60 70 H 82 A 20 20 0 0 1 82 110 H 60 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 95,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 106,
+       "cy": 90,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 190 40 H 212 A 20 20 0 0 1 212 80 H 190 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "ps",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 202,
+       "y": 65,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 236,
+       "cy": 60,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 34,
+       "texte": "a",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 94,
+       "texte": "b",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        30
+       ],
+       "a": [
+        40,
+        30
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        30
+       ],
+       "a": [
+        40,
+        20
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        20
+       ],
+       "a": [
+        60,
+        20
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        30
+       ],
+       "a": [
+        40,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        40
+       ],
+       "a": [
+        60,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        90
+       ],
+       "a": [
+        40,
+        90
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        90
+       ],
+       "a": [
+        40,
+        80
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        80
+       ],
+       "a": [
+        60,
+        80
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        90
+       ],
+       "a": [
+        40,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        100
+       ],
+       "a": [
+        60,
+        100
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        30
+       ],
+       "a": [
+        150,
+        30
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        30
+       ],
+       "a": [
+        150,
+        50
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        50
+       ],
+       "a": [
+        190,
+        50
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        90
+       ],
+       "a": [
+        150,
+        90
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        90
+       ],
+       "a": [
+        150,
+        70
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        70
+       ],
+       "a": [
+        190,
+        70
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        60
+       ],
+       "a": [
+        310,
+        60
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 314,
+       "y": 64,
+       "texte": "s",
+       "taille": "normal",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque montage à la fonction logique qu’il réalise.",
+     "paires": [
+      [
+       "Montage A",
+       "NON"
+      ],
+      [
+       "Montage B",
+       "ET"
+      ],
+      [
+       "Montage C",
+       "OU"
+      ]
+     ],
+     "aide": "Teste chaque montage avec des valeurs d’entrée simples (0 et 1).",
+     "explication": "A : s = NON-ET(e, e) = **NON e**. B : un NON-ET suivi d’un inverseur donne **ET**. C : deux inverseurs puis un NON-ET donnent **OU**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0,
+     "tolerance": 0,
+     "enonce": "Dans le montage A, que vaut la sortie s quand e vaut 1 ?",
+     "aide": "Un NON-ET dont les deux entrées valent 1 donne 0.",
+     "explication": "NON-ET(1, 1) = **0** : le montage inverse bien son entrée."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1,
+     "tolerance": 0,
+     "enonce": "Dans le montage C, que vaut la sortie s quand a = 0 et b = 1 ?",
+     "aide": "Les deux portes d’entrée inversent a et b : la dernière reçoit 1 et 0.",
+     "explication": "Les inverseurs donnent 1 et 0 ; NON-ET(1, 0) = **1**, comme a OU b."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "tolerance": 0,
+     "enonce": "Combien de portes NON-ET faut-il au total pour réaliser un OU ?",
+     "aide": "Compte les portes du montage C.",
+     "explication": "Deux inverseurs et une porte finale : **3 portes**."
+    },
+    {
+     "type": "zone",
+     "document": "mc",
+     "reponse": [
+      "ps"
+     ],
+     "enonce": "Dans le montage C, touche la porte qui produit la sortie finale s.",
+     "aide": "Elle se trouve tout à droite, après les deux inverseurs.",
+     "explication": "La porte de **sortie** combine les deux entrées inversées et produit s."
+    }
+   ]
+  },
+  {
+   "chapitre": "fef117e9-5f1c-50ec-8e98-c12b99b1e7c9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le logigramme du store motorisé",
+   "competence": "observer-schema",
+   "situation": "Le moteur d’un store ne doit monter que si on appuie sur le bouton M et si le store n’a pas atteint sa fin de course haute F. Le fabricant fournit le logigramme de la commande S.",
+   "documents": [
+    {
+     "id": "logi",
+     "type": "schema",
+     "titre": "Logigramme de la commande de montée",
+     "largeur": 340,
+     "hauteur": 160,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         50,
+         92
+        ],
+        [
+         50,
+         128
+        ],
+        [
+         80,
+         110
+        ]
+       ],
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "non",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 84,
+       "cy": 110,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 58,
+       "y": 114,
+       "texte": "1",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 130 45 H 152 A 20 20 0 0 1 152 85 H 130 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 142,
+       "y": 70,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 59,
+       "texte": "M",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        55
+       ],
+       "a": [
+        130,
+        55
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 114,
+       "texte": "F",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        110
+       ],
+       "a": [
+        50,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        88,
+        110
+       ],
+       "a": [
+        105,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        110
+       ],
+       "a": [
+        105,
+        85
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        85
+       ],
+       "a": [
+        130,
+        75
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        172,
+        65
+       ],
+       "a": [
+        250,
+        65
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 69,
+       "texte": "S",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 150,
+       "texte": "M : bouton « monter »    F : fin de course haut atteinte",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "logi",
+     "reponse": [
+      "non"
+     ],
+     "enonce": "Touche la porte qui inverse le signal de fin de course.",
+     "aide": "C’est la porte au petit rond, à un seul fil d’entrée.",
+     "explication": "La porte **NON** inverse F : elle donne 1 tant que la fin de course n’est pas atteinte."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle équation décrit la sortie S ?",
+     "options": [
+      "S = M ET (NON F)",
+      "S = M OU (NON F)",
+      "S = F ET (NON M)",
+      "S = NON (M ET F)"
+     ],
+     "aide": "Une porte ET relie M au signal F inversé par la porte NON.",
+     "explication": "Le ET reçoit M et le complément de F : **S = M ET (NON F)**, qu’on note M · /F."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0,
+     "tolerance": 0,
+     "enonce": "Le bouton est pressé (M = 1) mais la fin de course est atteinte (F = 1). Que vaut S ?",
+     "aide": "Calcule d’abord la sortie de la porte NON, puis celle du ET.",
+     "explication": "NON(1) = 0 ; ET(1, 0) = **0** : le moteur s’arrête en butée."
+    }
+   ]
+  },
+  {
+   "chapitre": "fef117e9-5f1c-50ec-8e98-c12b99b1e7c9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Autoriser le décollage du drone",
+   "competence": "raisonner",
+   "situation": "Un drone ne décolle que si sa liaison radio R est établie et s’il dispose d’au moins un moyen de se positionner : un capteur optique O ou le GPS G. Un ingénieur a écrit la table de vérité de l’autorisation S.",
+   "documents": [
+    {
+     "id": "table",
+     "type": "tableau",
+     "titre": "Table de vérité de l’autorisation S",
+     "source": "Situation imaginée pour l’exercice",
+     "colonnes": [
+      "O",
+      "G",
+      "R",
+      "S"
+     ],
+     "lignes": [
+      [
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       1,
+       1,
+       1
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "table",
+     "reponse": [
+      "r3c3",
+      "r5c3",
+      "r7c3"
+     ],
+     "multiple": true,
+     "enonce": "Touche les cases de S qui valent 1 : ce sont les lignes retenues par la somme de produits.",
+     "aide": "Parcours la colonne S, ligne par ligne.",
+     "explication": "S vaut 1 sur les trois lignes **011, 101 et 111**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "tolerance": 0,
+     "enonce": "Combien de produits la somme de produits compte-t-elle ?",
+     "aide": "On écrit un produit par ligne où la sortie vaut 1.",
+     "explication": "Une ligne à 1, un produit : **3 produits**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quel produit la méthode de la somme de produits écrit-elle pour la ligne O = 1, G = 0, R = 1 ?",
+     "options": [
+      "O ET (NON G) ET R",
+      "(NON O) ET G ET R",
+      "O ET G ET (NON R)",
+      "(NON O) ET (NON G) ET R"
+     ],
+     "aide": "Une entrée qui vaut 0 est complémentée ; une entrée qui vaut 1 reste telle quelle.",
+     "explication": "G vaut 0, donc on écrit NON G ; O et R valent 1 : le produit est **O ET (NON G) ET R**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle forme simplifiée est équivalente ?",
+     "options": [
+      "S = R ET (O OU G)",
+      "S = R OU (O ET G)",
+      "S = R ET O ET G",
+      "S = (O ET G) OU (NON R)"
+     ],
+     "aide": "Factorise R dans les trois produits, puis regroupe.",
+     "explication": "Les trois produits contiennent R et au moins un des deux moyens de positionnement : le drone décolle si R **et** (O **ou** G)."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Le complément (NON)",
+      "Le ET",
+      "Le OU"
+     ],
+     "enonce": "Range les opérations logiques de la plus prioritaire à la moins prioritaire.",
+     "aide": "Comme en algèbre, le ET se comporte comme une multiplication.",
+     "explication": "Priorités : **complément**, puis **ET**, puis **OU**. Sans parenthèses correctes, le montage serait faux."
+    }
+   ]
+  },
+  {
+   "chapitre": "fef117e9-5f1c-50ec-8e98-c12b99b1e7c9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Analyser et alléger la commande de l’imprimante",
+   "competence": "raisonner",
+   "situation": "Une imprimante 3D utilise le logigramme ci-dessous pour sa sortie de commande S. Le bureau d’études cherche un montage équivalent moins coûteux, d’après le catalogue des boîtiers de portes disponibles.",
+   "documents": [
+    {
+     "id": "imp",
+     "type": "schema",
+     "titre": "Logigramme de la commande de l’imprimante",
+     "largeur": 340,
+     "hauteur": 160,
+     "source": "Situation imaginée pour l’exercice",
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 80 20 H 102 A 20 20 0 0 1 102 60 H 80 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "porte-x",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 92,
+       "y": 45,
+       "texte": "&",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         80,
+         100
+        ],
+        [
+         80,
+         136
+        ],
+        [
+         110,
+         118
+        ]
+       ],
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "porte-y",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 114,
+       "cy": 118,
+       "r": 4,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 88,
+       "y": 122,
+       "texte": "1",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 190 60 Q 218 60 234 80 Q 218 100 190 100 Q 200 80 190 60 Z",
+       "ferme": true,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 210,
+       "y": 85,
+       "texte": "≥1",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 34,
+       "texte": "a",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        30
+       ],
+       "a": [
+        80,
+        30
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 54,
+       "texte": "b",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        50
+       ],
+       "a": [
+        80,
+        50
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 118,
+       "texte": "c",
+       "taille": "normal",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        118
+       ],
+       "a": [
+        80,
+        118
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        122,
+        40
+       ],
+       "a": [
+        150,
+        40
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        40
+       ],
+       "a": [
+        150,
+        70
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        70
+       ],
+       "a": [
+        194,
+        70
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 122,
+       "y": 36,
+       "texte": "X",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        118
+       ],
+       "a": [
+        150,
+        118
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        118
+       ],
+       "a": [
+        150,
+        90
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        90
+       ],
+       "a": [
+        194,
+        90
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 122,
+       "y": 114,
+       "texte": "Y",
+       "taille": "petit",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        234,
+        80
+       ],
+       "a": [
+        290,
+        80
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 296,
+       "y": 84,
+       "texte": "S",
+       "taille": "normal",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "boitiers",
+     "type": "tableau",
+     "titre": "Catalogue des boîtiers",
+     "source": "Prix imaginés pour l’exercice",
+     "enteteLignes": true,
+     "colonnes": [
+      "Boîtier",
+      "Contenu",
+      "Prix"
+     ],
+     "lignes": [
+      [
+       "A",
+       "4 portes NON-ET",
+       "0,40 €"
+      ],
+      [
+       "B",
+       "6 portes NON",
+       "0,35 €"
+      ],
+      [
+       "C",
+       "4 portes ET",
+       "0,40 €"
+      ],
+      [
+       "D",
+       "4 portes OU",
+       "0,40 €"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "imp",
+     "reponse": [
+      "porte-x"
+     ],
+     "enonce": "Touche la porte qui produit le signal intermédiaire X.",
+     "aide": "X est le signal qui sort de la porte reliée à a et à b.",
+     "explication": "La porte **ET** reçoit a et b : sa sortie est X = a · b."
+    },
+    {
+     "type": "choix",
+     "reponse": 1,
+     "enonce": "Quelle équation décrit la sortie S ?",
+     "options": [
+      "S = (a ET b) ET (NON c)",
+      "S = (a ET b) OU (NON c)",
+      "S = NON (a OU b) ET c",
+      "S = (a OU b) ET (NON c)"
+     ],
+     "aide": "Écris X = a · b et Y = /c, puis S est la sortie d’une porte OU.",
+     "explication": "X = a ET b, Y = NON c, et S = X OU Y : **S = (a ET b) OU (NON c)**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 5,
+     "tolerance": 0,
+     "enonce": "Dresse la table de vérité : sur combien de lignes S vaut-il 1 ?",
+     "aide": "S vaut 1 quand c = 0 (quatre lignes) ou quand a, b et c valent tous 1.",
+     "explication": "Quatre lignes avec c = 0, plus la ligne 111 : **5 lignes**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle équation, écrite avec des NON-ET seulement, est équivalente à S ?",
+     "options": [
+      "NON-ET ( NON-ET (a, b), c )",
+      "NON-ET (a, b, c)",
+      "NON-ET ( NON-ET (a, c), b )",
+      "NON-ET ( a, NON-ET (b, c) )"
+     ],
+     "aide": "Teste a = 1, b = 1, c = 1 : S doit valoir 1 ; puis a = 0, b = 0, c = 1 : S doit valoir 0.",
+     "explication": "Par la règle de De Morgan, NON-ET (NON-ET (a, b), c) = (a ET b) OU (NON c) : **deux portes NON-ET** suffisent."
+    },
+    {
+     "type": "nombre",
+     "reponse": 0.75,
+     "unite": "€",
+     "tolerance": 0.005,
+     "enonce": "Le montage d’origine exige un boîtier NON, un ET et un OU ; la version en NON-ET n’exige que le boîtier A. Quelle économie par carte, en euros ?",
+     "aide": "Additionne les prix des trois boîtiers B, C et D, puis retire celui du boîtier A.",
+     "explication": "Montage d’origine : 0,35 + 0,40 + 0,40 = 1,15 € ; version NON-ET : 0,40 €. Économie : **0,75 €**."
+    }
+   ]
+  }
+ ]
+}

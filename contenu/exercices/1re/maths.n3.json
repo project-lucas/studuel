@@ -1,0 +1,2092 @@
+{
+ "niveau": "1re",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "f8997215-8985-5b89-a0b6-13e8a50fbfb9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les abonnés de la chaîne de Camille",
+   "competence": "programmer",
+   "situation": "Camille a lancé sa chaîne vidéo avec 400 abonnés. Chaque mois, leur nombre augmente de 10 %, donc u(0) = 400 et u(n+1) = 1,1 × u(n). Elle écrit un programme pour savoir à partir de quel mois elle dépassera 600 abonnés.",
+   "documents": [
+    {
+     "id": "suivi",
+     "type": "tableau",
+     "titre": "Les premiers mois",
+     "colonnes": [
+      "Mois n",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Abonnés u(n)",
+       "400",
+       "440",
+       "484",
+       "532,4",
+       "585,64"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "suivi",
+     "enonce": "Touche la dernière case où le nombre d’abonnés est encore **inférieur à 600**.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Lis le tableau de gauche à droite et arrête-toi juste avant de dépasser 600.",
+     "explication": "Au mois 4, u(4) = 585,64 est encore sous 600 : c’est la dernière case avant le dépassement. Un algorithme de seuil s’arrête **dès que** la valeur franchit le seuil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u(5), arrondi à l’unité (nombre d’abonnés).",
+     "reponse": 644,
+     "tolerance": 0.5,
+     "unite": "abonnés",
+     "aide": "Multiplie u(4) par 1,1.",
+     "explication": "u(5) = 585,64 × 1,1 = 644,204, soit **644** abonnés. Méthode : on passe d’un terme au suivant en multipliant par la raison."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle condition écrire après while pour que la boucle continue tant que le seuil n’est pas atteint ?",
+     "options": [
+      "u est inférieur à 600",
+      "u est supérieur à 600",
+      "u est égal à 600",
+      "n est inférieur à 600"
+     ],
+     "reponse": 0,
+     "aide": "La condition est celle pour continuer : le contraire de ce qu’on attend.",
+     "explication": "On attend u > 600, donc on continue tant que **u < 600** (while u < 600). Avec la condition inverse, la boucle ne démarrerait même pas, puisque u(0) = 400."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le programme part de n = 0 et u = 400, et ajoute 1 à n à chaque tour. Quelle valeur de n renvoie-t-il ?",
+     "reponse": 5,
+     "aide": "Cherche le premier rang où le tableau (complété) dépasse 600.",
+     "explication": "u(4) = 585,64 < 600 mais u(5) ≈ 644 > 600 : la boucle s’arrête avec **n = 5**. On relit toujours un algorithme à la main sur les premiers tours."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8997215-8985-5b89-a0b6-13e8a50fbfb9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Approcher √3 avec la méthode de Newton",
+   "competence": "calculer",
+   "situation": "Salomé veut une valeur approchée de √3 sans toucher à la touche racine. Elle applique la méthode de Newton à f(x) = x² − 3, qui s’annule en √3, en partant de x₀ = 2. Son tableau de calcul est à moitié rempli.",
+   "documents": [
+    {
+     "id": "newton",
+     "type": "tableau",
+     "titre": "Méthode de Newton pour f(x) = x² − 3",
+     "colonnes": [
+      "n",
+      "xₙ",
+      "f(xₙ)",
+      "f′(xₙ)",
+      "xₙ₊₁"
+     ],
+     "lignes": [
+      [
+       "0",
+       "2",
+       "1",
+       "4",
+       "1,75"
+      ],
+      [
+       "1",
+       "1,75",
+       "0,0625",
+       "?",
+       "?"
+      ]
+     ],
+     "source": "Calculs écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "newton",
+     "enonce": "Touche la case qui montre que x₁ est déjà bien plus proche d’une solution que x₀.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Une solution de f(x) = 0 rend f(x) égal à 0 : cherche la valeur de f la plus proche de 0.",
+     "explication": "f(x₀) = 1 mais f(x₁) = **0,0625** : on s’est beaucoup rapproché de 0, donc d’une solution de f(x) = 0."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée de f(x) = x² − 3 ?",
+     "options": [
+      "f′(x) = 2x",
+      "f′(x) = x²",
+      "f′(x) = 2x − 3",
+      "f′(x) = x − 3"
+     ],
+     "reponse": 0,
+     "aide": "La dérivée de x² est 2x et celle d’une constante est 0.",
+     "explication": "On dérive terme à terme : (x²)′ = 2x et (−3)′ = 0, donc **f′(x) = 2x**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Complète la case manquante : calcule f′(x₁) pour x₁ = 1,75.",
+     "reponse": 3.5,
+     "aide": "Utilise f′(x) = 2x avec x = 1,75.",
+     "explication": "f′(1,75) = 2 × 1,75 = **3,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule x₂ = x₁ − f(x₁) / f′(x₁), arrondi au dix-millième.",
+     "reponse": 1.7321,
+     "tolerance": 0.0001,
+     "aide": "x₂ = 1,75 − 0,0625 ÷ 3,5. Calcule d’abord la division.",
+     "explication": "0,0625 ÷ 3,5 ≈ 0,017857, donc x₂ = 1,75 − 0,017857 ≈ **1,7321**, qui est bien une valeur approchée de √3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Salomé essaie de partir de x₀ = 0. Que se passe-t-il ?",
+     "options": [
+      "Elle ne peut pas calculer x₁, car f′(0) = 0",
+      "Elle trouve directement x₁ = √3",
+      "Elle trouve x₁ = 0 et la méthode s’arrête",
+      "Elle obtient x₁ = 3 sans difficulté"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la formule : par quoi divise-t-on ? Que vaut f′(0) ?",
+     "explication": "f′(0) = 2 × 0 = 0 : on diviserait par zéro. La méthode **exige f′(xₙ) non nul** — c’est pourquoi on choisit un point de départ adapté."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8997215-8985-5b89-a0b6-13e8a50fbfb9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Euler contre l’exponentielle",
+   "competence": "modeliser",
+   "situation": "Pour construire la fonction exponentielle point par point, Inès utilise la méthode d’Euler avec un pas h = 0,25 : y(0) = 1 et y(k+1) = (1 + h) × y(k). Elle s’arrête à x = 1, après 4 pas, et compare son résultat à la vraie courbe.",
+   "documents": [
+    {
+     "id": "pas",
+     "type": "tableau",
+     "titre": "Les pas de la méthode d’Euler",
+     "colonnes": [
+      "Pas k",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Abscisse x",
+       "0",
+       "0,25",
+       "0,5",
+       "0,75",
+       "1"
+      ],
+      [
+       "y(k)",
+       "1",
+       "1,25",
+       "?",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "comparaison",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Euler (h = 0,25) et exponentielle",
+     "categories": [
+      "0",
+      "0,25",
+      "0,5",
+      "0,75",
+      "1"
+     ],
+     "series": [
+      {
+       "nom": "Méthode d’Euler",
+       "valeurs": [
+        1,
+        1.25,
+        1.5625,
+        1.9531,
+        2.4414
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Exponentielle",
+       "valeurs": [
+        1,
+        1.284,
+        1.6487,
+        2.117,
+        2.7183
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Valeur",
+      "min": 1,
+      "max": 3,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées et arrondies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule y(2) dans la ligne du tableau.",
+     "reponse": 1.5625,
+     "aide": "y(2) = 1,25 × y(1).",
+     "explication": "y(2) = 1,25 × 1,25 = **1,5625**. À chaque pas on multiplie par 1 + h = 1,25."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule y(4), arrondi au centième : c’est la valeur d’Euler pour x = 1.",
+     "reponse": 2.44,
+     "tolerance": 0.005,
+     "aide": "Continue : y(3) = 1,25 × y(2), puis y(4) = 1,25 × y(3).",
+     "explication": "y(3) = 1,953125 puis y(4) = 2,44140625, soit **2,44** : une valeur approchée de e."
+    },
+    {
+     "type": "zone",
+     "document": "comparaison",
+     "enonce": "Touche l’abscisse où l’écart entre les deux courbes est le **plus grand**.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Compare la distance verticale entre les deux courbes à chaque abscisse.",
+     "explication": "Les deux courbes partent du même point, puis s’écartent de plus en plus : l’écart est maximal pour **x = 1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour x = 1, quel est l’écart entre l’exponentielle (2,7183) et ta valeur d’Euler, arrondi au centième ?",
+     "reponse": 0.28,
+     "tolerance": 0.005,
+     "aide": "Soustrais la valeur d’Euler à celle de l’exponentielle.",
+     "explication": "2,7183 − 2,4414 = 0,2769, soit environ **0,28**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Inès peut-elle réduire cet écart ?",
+     "options": [
+      "En prenant un pas h plus petit",
+      "En prenant un pas h plus grand",
+      "En changeant la valeur de y(0)",
+      "En remplaçant 1 + h par 1 − h"
+     ],
+     "reponse": 0,
+     "aide": "Sur un petit pas, l’approximation f(x + h) ≈ f(x) + h f′(x) est plus juste.",
+     "explication": "Plus le pas est petit, plus l’approximation de chaque pas est précise : un **pas h plus petit** donne en général une meilleure approximation."
+    }
+   ]
+  },
+  {
+   "chapitre": "9eeabf8f-9ac2-573a-8be1-b8784779ea16",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment les élèves de 1re viennent au lycée",
+   "competence": "calculer",
+   "situation": "Le lycée a interrogé les 120 élèves de Première sur leur moyen de transport principal pour venir en cours. Le résultat est représenté dans un diagramme en barres.",
+   "documents": [
+    {
+     "id": "transports",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Moyen de transport des 120 élèves de Première",
+     "categories": [
+      "Bus",
+      "À pied",
+      "Vélo",
+      "Voiture"
+     ],
+     "series": [
+      {
+       "nom": "Élèves",
+       "valeurs": [
+        54,
+        30,
+        18,
+        18
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Élèves",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Moyen de transport"
+     },
+     "valeurs": true,
+     "source": "Effectifs inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "transports",
+     "enonce": "Touche le moyen de transport le plus utilisé.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre la plus haute est celle du **bus** : 54 élèves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle proportion des élèves vient à pied ? Donne-la en pourcentage.",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "proportion = partie / tout, avec 120 élèves au total.",
+     "explication": "30 ÷ 120 = 1/4 = **25 %**. On compare la partie (30) au tout (120)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des élèves prend le bus ?",
+     "reponse": 45,
+     "unite": "%",
+     "aide": "Divise 54 par 120. Pense à simplifier la fraction.",
+     "explication": "54 ÷ 120 = 0,45, soit **45 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des élèves vient à vélo **ou** en voiture ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Additionne d’abord les deux effectifs, puis compare au total.",
+     "explication": "18 + 18 = 36 élèves, et 36 ÷ 120 = 0,3, soit **30 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9eeabf8f-9ac2-573a-8be1-b8784779ea16",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les internes du lycée Jean-Moulin",
+   "competence": "calculer",
+   "situation": "Le journal du lycée publie des chiffres sur les internes, mais personne ne les a mis en ordre. Aide Noé à retrouver les effectifs sans calculatrice.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Lycée Jean-Moulin",
+     "sousTitre": "Les chiffres de la rentrée",
+     "emoji": "🏫",
+     "lignes": [
+      {
+       "texte": "Élèves du lycée",
+       "valeur": "1 250",
+       "id": "eleves"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Internes",
+       "valeur": "40 % des élèves",
+       "id": "internes"
+      },
+      {
+       "texte": "Internes en Première",
+       "valeur": "30 % des internes",
+       "id": "internes1"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Externes au self hier",
+       "valeur": "525",
+       "id": "self"
+      }
+     ],
+     "pied": "Lycée imaginé pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chiffres",
+     "enonce": "Touche la ligne qui donne le **tout**, la population de départ pour tous les pourcentages.",
+     "reponse": [
+      "eleves"
+     ],
+     "aide": "Le tout est la population dont on prend un pourcentage pour la première fois.",
+     "explication": "Les 40 % d’internes se prennent sur l’ensemble des élèves : le tout est **1 250**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien y a-t-il d’internes ?",
+     "reponse": 500,
+     "unite": "élèves",
+     "aide": "10 % de 1 250 vaut 125. Combien de fois 10 % dans 40 % ?",
+     "explication": "40 % de 1 250 = 0,4 × 1 250 = **500** internes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de **tous** les élèves du lycée représentent les internes de Première ? Réponds en pourcentage.",
+     "reponse": 12,
+     "unite": "%",
+     "aide": "Les pourcentages de sous-populations se multiplient : 0,4 × 0,3.",
+     "explication": "0,4 × 0,3 = 0,12, soit **12 %** des élèves. Contrôle : 30 % de 500 = 150 et 150 ÷ 1 250 = 0,12."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Hier, 525 externes ont déjeuné au self : quel pourcentage des externes cela représente-t-il ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Calcule d’abord le nombre d’externes : 1 250 moins les internes.",
+     "explication": "Il y a 1 250 − 500 = 750 externes, et 525 ÷ 750 = 0,7, soit **70 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9eeabf8f-9ac2-573a-8be1-b8784779ea16",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle classe aime le plus les maths ?",
+   "competence": "raisonner",
+   "situation": "Fabien et Jade comparent le nombre d’élèves qui ont choisi la spécialité maths dans trois classes de Première. Fabien est sûr de lui, mais les classes n’ont pas toutes le même effectif.",
+   "documents": [
+    {
+     "id": "classes",
+     "type": "tableau",
+     "titre": "La spécialité maths en Première",
+     "colonnes": [
+      "Classe",
+      "1re A",
+      "1re B",
+      "1re C"
+     ],
+     "lignes": [
+      [
+       "Élèves",
+       "40",
+       "25",
+       "35"
+      ],
+      [
+       "En spé maths",
+       "14",
+       "10",
+       "7"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs inventés pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Fabien",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Fabien",
+       "texte": "La 1re A a 14 élèves en spé maths, la B seulement 10. La A est la classe la plus matheuse !"
+      },
+      {
+       "qui": "Jade",
+       "texte": "Mais elles n’ont pas le même nombre d’élèves…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle proportion de la 1re A a choisi la spé maths ? Donne-la en pourcentage.",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "proportion = partie / tout : 14 sur 40.",
+     "explication": "14 ÷ 40 = 0,35, soit **35 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle classe la proportion d’élèves en spé maths est-elle la plus grande ?",
+     "options": [
+      "La 1re B (40 %)",
+      "La 1re A (35 %)",
+      "La 1re C (20 %)",
+      "Elles ont la même proportion"
+     ],
+     "reponse": 0,
+     "aide": "Calcule la proportion de chaque classe : 10 ÷ 25, puis 7 ÷ 35.",
+     "explication": "1re A : 35 %. 1re B : 10 ÷ 25 = 0,4, soit **40 %**. 1re C : 7 ÷ 35 = 20 %. La B a la plus forte proportion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle erreur commet Fabien dans son message ?",
+     "options": [
+      "Il compare des effectifs au lieu de comparer des proportions",
+      "Il additionne des pourcentages au lieu de les multiplier",
+      "Il confond une hausse et une baisse",
+      "Il calcule le tout au lieu de la partie"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse de Jade : les classes ont-elles le même effectif ?",
+     "explication": "14 contre 10 compare deux **effectifs** de classes de tailles différentes. Pour comparer, il faut les proportions : 35 % contre 40 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle proportion de l’ensemble des trois classes a choisi la spé maths ? Donne-la en pourcentage.",
+     "reponse": 31,
+     "unite": "%",
+     "aide": "Additionne les effectifs des trois classes (le tout), puis ceux de la spé (la partie).",
+     "explication": "Tout : 40 + 25 + 35 = 100 élèves ; partie : 14 + 10 + 7 = 31. La proportion est 31 ÷ 100 = **31 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves de la 1re C devraient en plus choisir la spé maths pour que la classe atteigne 40 % ?",
+     "reponse": 7,
+     "unite": "élèves",
+     "aide": "Calcule 40 % de 35, puis retire les 7 élèves déjà inscrits.",
+     "explication": "40 % de 35 = 0,4 × 35 = 14 élèves, il en manque 14 − 7 = **7**."
+    }
+   ]
+  },
+  {
+   "chapitre": "34a7462d-ef4f-543f-b711-f9b0c3869a32",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les soldes d’hiver",
+   "competence": "calculer",
+   "situation": "Au rayon sport, une affiche annonce les remises des soldes. Lola veut savoir combien coûtent ses articles préférés une fois la remise appliquée.",
+   "documents": [
+    {
+     "id": "soldes",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Soldes d’hiver",
+     "sousTitre": "Prix avant remise et remise",
+     "emoji": "🏷️",
+     "lignes": [
+      {
+       "texte": "Baskets — 90 €",
+       "valeur": "−20 %",
+       "id": "baskets"
+      },
+      {
+       "texte": "Sweat — 45 €",
+       "valeur": "−10 %",
+       "id": "sweat"
+      },
+      {
+       "texte": "Casquette — 15 €",
+       "valeur": "−40 %",
+       "id": "casquette"
+      }
+     ],
+     "pied": "Magasin imaginé pour l’exercice",
+     "teinte": "corail"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "soldes",
+     "enonce": "Touche l’article qui bénéficie de la **plus forte remise en pourcentage**.",
+     "reponse": [
+      "casquette"
+     ],
+     "aide": "Compare les pourcentages, pas les prix.",
+     "explication": "La casquette est soldée de **40 %**, la plus forte remise, même si c’est elle qui coûte le moins cher."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par quel coefficient multiplie-t-on un prix pour une baisse de 20 % ?",
+     "options": [
+      "× 0,8",
+      "× 0,2",
+      "× 1,2",
+      "× 0,98"
+     ],
+     "reponse": 0,
+     "aide": "Diminuer de t %, c’est multiplier par 1 − t/100.",
+     "explication": "1 − 20/100 = 1 − 0,2 = **0,8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix des baskets après remise ?",
+     "reponse": 72,
+     "unite": "€",
+     "aide": "Valeur finale = valeur initiale × coefficient multiplicateur.",
+     "explication": "90 × 0,8 = **72 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix du sweat après remise ?",
+     "reponse": 40.5,
+     "unite": "€",
+     "aide": "Le coefficient d’une baisse de 10 % est 0,9.",
+     "explication": "45 × 0,9 = **40,50 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "34a7462d-ef4f-543f-b711-f9b0c3869a32",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’abonnement qui monte et qui descend",
+   "competence": "calculer",
+   "situation": "Maëlys suit le prix mensuel de son abonnement de streaming depuis 2021. Le prix de 2024 n’est pas encore affiché : la plateforme annonce simplement une baisse de 10 % par rapport à 2023.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Prix mensuel de l’abonnement",
+     "colonnes": [
+      "Année",
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "lignes": [
+      [
+       "Prix (€)",
+       "8",
+       "10",
+       "11",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Prix inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prix",
+     "enonce": "Touche l’année où le prix a augmenté de **10 %** par rapport à l’année précédente.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Calcule 10 × 1,1, puis compare avec 8 × 1,1.",
+     "explication": "10 × 1,1 = 11 : c’est l’augmentation de **2022 à 2023**. Entre 2021 et 2022, le prix passe de 8 à 10, soit +25 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel sera le prix en 2024, après la baisse de 10 % ?",
+     "reponse": 9.9,
+     "unite": "€",
+     "aide": "Une baisse de 10 % : multiplie le prix de 2023 par 0,9.",
+     "explication": "11 × 0,9 = **9,90 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution global entre 2021 et 2024, en pourcentage ?",
+     "reponse": 23.75,
+     "unite": "%",
+     "aide": "taux = (valeur finale − valeur initiale) / valeur initiale, avec 9,9 et 8.",
+     "explication": "(9,9 − 8) ÷ 8 = 1,9 ÷ 8 = 0,2375, soit **+23,75 %**. Les taux ne s’additionnent pas : +25 % + 10 % − 10 % ferait +25 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle baisse (en pourcentage, nombre positif) annulerait exactement la hausse de 25 % de 2021 à 2022 ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Le coefficient réciproque est 1 / 1,25.",
+     "explication": "1 ÷ 1,25 = 0,8 : il faut multiplier par 0,8, soit une baisse de **20 %** (de 10 à 8)."
+    }
+   ]
+  },
+  {
+   "chapitre": "34a7462d-ef4f-543f-b711-f9b0c3869a32",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les élections de délégués : points ou pourcentage ?",
+   "competence": "raisonner",
+   "situation": "Le journal du lycée commente la participation aux élections des délégués. Sana relit l’article et le compare au graphique : elle a un doute sur un chiffre.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Participation aux élections (en %)",
+     "categories": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Participation",
+       "valeurs": [
+        40,
+        44,
+        55,
+        44
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Participation",
+      "unite": "%",
+      "min": 30,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Au journal du lycée",
+     "blocs": [
+      "Les élèves se sont mobilisés : la participation aux élections des délégués bondit de 11 % entre 2022 et 2023, avant de retomber l’année suivante."
+     ],
+     "auteur": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche l’année où la participation a le **plus augmenté** par rapport à l’année précédente.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare la montée de la courbe d’une année à la suivante.",
+     "explication": "De 44 % à 55 %, la hausse est de 11 points : c’est la plus forte, en **2023**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de **points de pourcentage** la participation augmente-t-elle de 2022 à 2023 ?",
+     "reponse": 11,
+     "unite": "points",
+     "aide": "Soustrais les deux taux de participation.",
+     "explication": "55 − 44 = **11 points**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **taux d’évolution** de la participation entre 2022 et 2023, en pourcentage ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "taux = (valeur finale − valeur initiale) / valeur initiale, avec 44 et 55.",
+     "explication": "(55 − 44) ÷ 44 = 11 ÷ 44 = 0,25, soit **+25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que reproche-t-on à l’article quand il écrit « bondit de 11 % » ?",
+     "options": [
+      "Il confond une hausse de 11 points avec une hausse de 11 %",
+      "Il oublie que la participation a baissé en 2024",
+      "Il compare 2021 et 2023 au lieu de 2022 et 2023",
+      "Il donne un taux supérieur à 100 %"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec tes deux calculs précédents : 11 est-il un nombre de points ou un taux ?",
+     "explication": "La hausse est de 11 **points**, mais de **25 %** en taux d’évolution. L’article mélange les deux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La participation retombe de 55 % à 44 % en 2024. De combien de pour cent baisse-t-elle ? (nombre positif)",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Divise la baisse (11 points) par la valeur de départ de cette évolution.",
+     "explication": "(44 − 55) ÷ 55 = −0,2 : une baisse de **20 %**. C’est le taux réciproque d’une hausse de 25 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7e0ae53-7f58-5d9f-8d9c-17146318b0cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le contrôle corrigé d’Anaïs",
+   "competence": "calculer",
+   "situation": "Anaïs a fait quatre calculs d’automatismes sans calculatrice. Son professeur lui demande de retrouver ses erreurs avant de les corriger.",
+   "documents": [
+    {
+     "id": "copie",
+     "type": "tableau",
+     "titre": "Les résultats d’Anaïs",
+     "colonnes": [
+      "Calcul",
+      "Résultat d’Anaïs"
+     ],
+     "lignes": [
+      [
+       "3/4 + 1/8",
+       "4/12"
+      ],
+      [
+       "2/3 × 3/4",
+       "1/2"
+      ],
+      [
+       "10² × 10³",
+       "10⁵"
+      ],
+      [
+       "(x + 2)²",
+       "x² + 4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copie",
+     "enonce": "Touche les **deux** résultats faux.",
+     "reponse": [
+      "r0c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Refais chaque calcul de tête : 10² × 10³ s’obtient en additionnant les exposants.",
+     "explication": "3/4 + 1/8 ≠ 4/12 et (x + 2)² ≠ x² + 4. Les deux autres sont justes : 2/3 × 3/4 = 6/12 = 1/2 et 10² × 10³ = 10⁵."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule 3/4 + 1/8. Tu peux répondre par une fraction ou un décimal.",
+     "reponse": 0.875,
+     "aide": "Mets les deux fractions sur le même dénominateur : 3/4 = …/8.",
+     "explication": "3/4 = 6/8 donc 6/8 + 1/8 = 7/8 = **0,875**. On additionne des fractions de même dénominateur, pas les numérateurs et les dénominateurs entre eux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le développement de (x + 2)² ?",
+     "options": [
+      "x² + 4x + 4",
+      "x² + 4",
+      "x² + 2x + 4",
+      "x² + 2x + 2"
+     ],
+     "reponse": 0,
+     "aide": "Utilise (a + b)² = a² + 2ab + b² avec a = x et b = 2.",
+     "explication": "(x + 2)² = x² + 2 × x × 2 + 2² = **x² + 4x + 4**. Le double produit 4x ne disparaît jamais."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7e0ae53-7f58-5d9f-8d9c-17146318b0cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lyon–Marseille en train",
+   "competence": "calculer",
+   "situation": "Lina prend le train Lyon–Marseille. Elle lit la fiche horaire sur le quai et veut en tirer la vitesse moyenne du train, d’abord en km/h puis en m/s.",
+   "documents": [
+    {
+     "id": "horaires",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Train Lyon → Marseille",
+     "sousTitre": "Fiche du voyage",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "Départ de Lyon",
+       "valeur": "9 h 15",
+       "id": "depart"
+      },
+      {
+       "texte": "Arrivée à Marseille",
+       "valeur": "11 h 00",
+       "id": "arrivee"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Distance parcourue",
+       "valeur": "189 km",
+       "id": "distance"
+      }
+     ],
+     "pied": "Horaires imaginés pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "horaires",
+     "enonce": "Touche la ligne qui donne l’heure de fin du voyage.",
+     "reponse": [
+      "arrivee"
+     ],
+     "aide": "Cherche l’heure d’arrivée.",
+     "explication": "L’arrivée est à **11 h 00**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée du trajet, exprimée en heures sous forme décimale ?",
+     "reponse": 1.75,
+     "unite": "h",
+     "aide": "De 9 h 15 à 11 h 00, combien d’heures et de minutes ? Et 45 min, quelle fraction d’heure ?",
+     "explication": "De 9 h 15 à 11 h 00, il s’écoule 1 h 45 min. 45 min = 3/4 d’heure = 0,75 h : la durée est **1,75 h**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse moyenne du train, en km/h ?",
+     "reponse": 108,
+     "unite": "km/h",
+     "aide": "v = d / t, avec d = 189 km et t = 1,75 h.",
+     "explication": "v = 189 ÷ 1,75 = **108 km/h**. Contrôle d’ordre de grandeur : 190 ÷ 2 ≈ 95, donc le résultat est plausible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette vitesse en m/s.",
+     "reponse": 30,
+     "unite": "m/s",
+     "aide": "Pour passer de km/h à m/s, on divise par 3,6.",
+     "explication": "108 ÷ 3,6 = **30 m/s** (30 m par seconde, soit 108 km par heure)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si le train roulait à 126 km/h sur la même distance, combien de minutes durerait le trajet ?",
+     "reponse": 90,
+     "unite": "min",
+     "aide": "On isole t dans v = d / t : t = d / v.",
+     "explication": "t = d ÷ v = 189 ÷ 126 = 1,5 h, soit **90 minutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7e0ae53-7f58-5d9f-8d9c-17146318b0cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le terrain remodelé",
+   "competence": "modeliser",
+   "situation": "Karim possède un terrain carré de côté x (en mètres). Pour un projet de potager, il en retire une bande de 3 m sur un côté et en ajoute une de 3 m sur le côté voisin : le terrain devient un rectangle dont l’aire vaut 40 m².",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le nouveau terrain (figure non à l’échelle)",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 5
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 10,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 10,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "x + 3"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "x − 3"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "D",
+       "droit": true
+      }
+     ],
+     "source": "Figure dessinée pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Karim",
+       "texte": "J’ai résolu x² = 49 : je trouve x = 7 ou x = −7."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Alors il y a deux terrains possibles ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle expression donne l’aire du nouveau rectangle ?",
+     "options": [
+      "Le produit (x + 3) × (x − 3)",
+      "La somme (x + 3) + (x − 3)",
+      "Le carré x² diminué de 3",
+      "Le double de la somme des deux côtés"
+     ],
+     "reponse": 0,
+     "aide": "L’aire d’un rectangle est longueur × largeur.",
+     "explication": "Aire = longueur × largeur = **(x + 3)(x − 3)**. La somme ou le double de la somme donneraient un périmètre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le développement de (x + 3)(x − 3) ?",
+     "options": [
+      "x² moins 9",
+      "x² moins 6x plus 9",
+      "x² plus 9",
+      "x² moins 6"
+     ],
+     "reponse": 0,
+     "aide": "C’est une identité remarquable du type (a + b)(a − b).",
+     "explication": "(a + b)(a − b) = a² − b², donc (x + 3)(x − 3) = **x² − 9** (x² moins 9)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous x² − 9 = 40 avec x > 0 : que vaut x ?",
+     "reponse": 7,
+     "unite": "m",
+     "aide": "Ajoute 9 aux deux membres, puis cherche le nombre positif dont le carré est 49.",
+     "explication": "x² − 9 = 40 donne x² = 49, donc x = 7 ou x = −7. Comme x est une longueur, **x = 7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Karim élimine-t-il la solution x = −7 ?",
+     "options": [
+      "Parce que x est une longueur, donc positive",
+      "Parce que (−7)² ne vaut pas 49",
+      "Parce que −7 est un nombre impair",
+      "Parce que x doit être supérieur à 10"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’énoncé : que représente x ?",
+     "explication": "(−7)² = 49 convient pour l’équation, mais x est le côté d’un carré : une longueur ne peut pas être négative. On garde **x = 7**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le périmètre du nouveau terrain ?",
+     "reponse": 28,
+     "unite": "m",
+     "aide": "Calcule les deux côtés avec x = 7, puis double leur somme.",
+     "explication": "Longueur : 7 + 3 = 10 m. Largeur : 7 − 3 = 4 m. Périmètre : 2 × (10 + 4) = **28 m**. Contrôle : 10 × 4 = 40 m², l’aire annoncée."
+    }
+   ]
+  },
+  {
+   "chapitre": "38705f94-a0f6-55fc-8ced-8408a7d278f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le lancer de Malo",
+   "competence": "lire-graphique",
+   "situation": "Au handball, Malo lance le ballon vers le but. La courbe donne la hauteur du ballon (en mètres) en fonction de la distance parcourue horizontalement (en mètres).",
+   "documents": [
+    {
+     "id": "tir",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur du ballon selon la distance",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Hauteur",
+       "valeurs": [
+        1,
+        3.5,
+        5,
+        5.5,
+        5,
+        3.5,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "m",
+      "min": 0,
+      "max": 6,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Distance (m)"
+     },
+     "valeurs": false,
+     "source": "Trajectoire dessinée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tir",
+     "enonce": "Touche le point où le ballon est le plus haut.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le sommet est atteint pour une distance de **3 m** : c’est le maximum de la fonction."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’image de 2 : à quelle hauteur est le ballon quand il a parcouru 2 m ?",
+     "reponse": 5,
+     "unite": "m",
+     "aide": "On part de 2 sur l’axe des abscisses, on monte à la courbe, on lit l’ordonnée.",
+     "explication": "Au point d’abscisse 2, l’ordonnée vaut **5** : l’image de 2 est 5."
+    },
+    {
+     "type": "zone",
+     "document": "tir",
+     "enonce": "Touche les deux points où le ballon est à une hauteur de 1 m (les antécédents de 1).",
+     "reponse": [
+      "k0",
+      "k6"
+     ],
+     "multiple": true,
+     "aide": "Pars de 1 sur l’axe des ordonnées et cherche les points de la courbe à cette hauteur.",
+     "explication": "Le ballon est à 1 m au départ (distance 0) et à l’arrivée (distance 6) : les antécédents de 1 sont **0 et 6**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien le nombre 5 a-t-il d’antécédents par cette fonction ?",
+     "options": [
+      "Deux : 2 et 4",
+      "Un seul : 3",
+      "Aucun",
+      "Trois"
+     ],
+     "reponse": 0,
+     "aide": "Trace mentalement la droite horizontale à la hauteur 5 et compte ses points communs avec la courbe.",
+     "explication": "La courbe passe à la hauteur 5 pour les distances **2 et 4** : le nombre 5 a deux antécédents. Un nombre n’a qu’une image, mais peut avoir plusieurs antécédents."
+    }
+   ]
+  },
+  {
+   "chapitre": "38705f94-a0f6-55fc-8ced-8408a7d278f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trottinettes : quel tarif choisir ?",
+   "competence": "modeliser",
+   "situation": "Deux loueurs proposent des trottinettes en libre-service. Anaïs compare leurs tarifs pour des durées de location de 0 à 20 minutes.",
+   "documents": [
+    {
+     "id": "tarifs",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Prix selon la durée de location",
+     "categories": [
+      "0",
+      "4",
+      "8",
+      "12",
+      "16",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "Tarif A",
+       "valeurs": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Tarif B",
+       "valeurs": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Durée (min)"
+     },
+     "valeurs": false,
+     "source": "Tarifs inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix de départ du tarif A, pour une durée de 0 minute ?",
+     "reponse": 6,
+     "unite": "€",
+     "aide": "Lis l’ordonnée du point de la courbe A situé sur l’axe vertical.",
+     "explication": "Pour 0 minute, le tarif A vaut **6 €** : c’est l’ordonnée à l’origine p de sa droite."
+    },
+    {
+     "type": "zone",
+     "document": "tarifs",
+     "enonce": "Touche la durée pour laquelle les deux tarifs sont égaux.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche l’abscisse où les deux courbes se croisent.",
+     "explication": "Les deux courbes se croisent pour **12 minutes** : les deux tarifs valent alors 9 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient directeur de la droite du tarif A, en euros par minute ?",
+     "reponse": 0.25,
+     "aide": "m = (y₂ − y₁) / (x₂ − x₁) avec deux points de la courbe, par exemple (0 ; 6) et (20 ; 11).",
+     "explication": "m = (11 − 6) ÷ (20 − 0) = 5 ÷ 20 = **0,25** : le tarif A augmente de 0,25 € par minute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le tarif B passe par l’origine et est proportionnel à la durée. Quel est son prix pour 15 minutes ?",
+     "reponse": 11.25,
+     "unite": "€",
+     "aide": "Trouve le prix d’une minute avec un point du graphique, par exemple (12 ; 9).",
+     "explication": "B(12) = 9 donc B(x) = 0,75 x. Pour 15 minutes : 0,75 × 15 = **11,25 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quelles durées le tarif A est-il moins cher que le tarif B ?",
+     "options": [
+      "Pour plus de 12 minutes",
+      "Pour moins de 12 minutes",
+      "Pour toutes les durées",
+      "Pour aucune durée"
+     ],
+     "reponse": 0,
+     "aide": "Regarde quelle courbe est en dessous de l’autre après le point d’intersection.",
+     "explication": "Après l’abscisse 12, la courbe A est **en dessous** de la courbe B : le tarif A est moins cher pour plus de 12 minutes."
+    }
+   ]
+  },
+  {
+   "chapitre": "38705f94-a0f6-55fc-8ced-8408a7d278f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La cuve qui se vide",
+   "competence": "modeliser",
+   "situation": "Une cuve se vide à débit constant. Un technicien relève le volume d’eau à deux instants, puis dessine la courbe de l’évolution du volume V(t), où t est le temps en minutes depuis le début.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Deux relevés",
+     "colonnes": [
+      "Instant t (min)",
+      "2",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Volume V (L)",
+       "50",
+       "20"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés inventés pour l’exercice"
+    },
+    {
+     "id": "cuve",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Volume d’eau dans la cuve",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "series": [
+      {
+       "nom": "Volume",
+       "valeurs": [
+        70,
+        60,
+        50,
+        40,
+        30,
+        20,
+        10,
+        0
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Volume",
+      "unite": "L",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Courbe tracée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur m de la droite à partir des deux relevés du tableau.",
+     "reponse": -10,
+     "unite": "L/min",
+     "aide": "m = (V₂ − V₁) / (t₂ − t₁) avec (2 ; 50) et (5 ; 20).",
+     "explication": "m = (20 − 50) ÷ (5 − 2) = −30 ÷ 3 = **−10** : la cuve perd 10 L par minute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Déduis-en l’ordonnée à l’origine p, c’est-à-dire le volume au départ (t = 0).",
+     "reponse": 70,
+     "unite": "L",
+     "aide": "p = V(2) − m × 2, ou lis la courbe pour t = 0.",
+     "explication": "p = 50 − (−10) × 2 = 50 + 20 = **70 L** : V(t) = −10 t + 70. La courbe le confirme à t = 0."
+    },
+    {
+     "type": "zone",
+     "document": "cuve",
+     "enonce": "Touche le point où la cuve est vide.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "La cuve est vide quand V(t) = 0 : cherche l’ordonnée 0.",
+     "explication": "La courbe atteint l’axe des abscisses pour **t = 7**. On le retrouve par calcul : −10 t + 70 = 0 donne t = 7."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quel instant t reste-t-il 25 L dans la cuve ?",
+     "reponse": 4.5,
+     "unite": "min",
+     "aide": "Résous −10 t + 70 = 25.",
+     "explication": "−10 t + 70 = 25 donne −10 t = −45, donc t = **4,5 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quelles valeurs de t l’expression −10 t + 70 est-elle positive ?",
+     "options": [
+      "t inférieur à 7",
+      "t supérieur à 7",
+      "t inférieur à 70",
+      "t supérieur à 70"
+     ],
+     "reponse": 0,
+     "aide": "Le zéro est en t = 7. Une fonction affine décroissante est positive avant son zéro.",
+     "explication": "La pente est négative (m = −10), donc V(t) est positive à gauche de son zéro : **pour t < 7**."
+    }
+   ]
+  },
+  {
+   "chapitre": "205ecc6c-c6c0-54ed-9d7e-c8c9d107fa62",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trajets des élèves du club de vélo",
+   "competence": "calculer",
+   "situation": "Neuf élèves du club de vélo ont noté le temps de leur trajet quotidien jusqu’au lycée. Le diagramme donne leurs durées en minutes.",
+   "documents": [
+    {
+     "id": "trajets",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Durée du trajet (en minutes)",
+     "categories": [
+      "Inès",
+      "Tom",
+      "Zoé",
+      "Léo",
+      "Eva",
+      "Noa",
+      "Max",
+      "Lou",
+      "Sam"
+     ],
+     "series": [
+      {
+       "nom": "Durée",
+       "valeurs": [
+        15,
+        5,
+        25,
+        10,
+        34,
+        8,
+        15,
+        20,
+        12
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Durée",
+      "unite": "min",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Élève"
+     },
+     "valeurs": true,
+     "source": "Durées inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajets",
+     "enonce": "Touche l’élève qui a le trajet le plus long.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "**Eva** a le trajet le plus long : 34 minutes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la médiane de cette série ?",
+     "reponse": 15,
+     "unite": "min",
+     "aide": "Range les 9 valeurs dans l’ordre croissant : la médiane est la 5e.",
+     "explication": "Rangées : 5 ; 8 ; 10 ; 12 ; **15** ; 15 ; 20 ; 25 ; 34. La 5e valeur est **15 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne de cette série ?",
+     "reponse": 16,
+     "unite": "min",
+     "aide": "Additionne les 9 durées, puis divise par 9.",
+     "explication": "La somme vaut 144 et 144 ÷ 9 = **16 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’étendue de cette série ?",
+     "reponse": 29,
+     "unite": "min",
+     "aide": "étendue = maximum − minimum.",
+     "explication": "34 − 5 = **29 minutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "205ecc6c-c6c0-54ed-9d7e-c8c9d107fa62",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le club de théâtre du lycée",
+   "competence": "calculer",
+   "situation": "Le lycée compte 160 élèves en Première. Le professeur de théâtre a dressé un tableau croisé des élèves selon leur sexe et leur inscription au club. On choisit un élève au hasard ; F désigne « c’est une fille » et T « l’élève fait du théâtre ».",
+   "documents": [
+    {
+     "id": "croise",
+     "type": "tableau",
+     "titre": "Les élèves de Première et le théâtre",
+     "colonnes": [
+      "Élèves",
+      "Théâtre",
+      "Pas de théâtre",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Filles",
+       "36",
+       "54",
+       "90"
+      ],
+      [
+       "Garçons",
+       "14",
+       "56",
+       "70"
+      ],
+      [
+       "Total",
+       "50",
+       "110",
+       "160"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Effectifs inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "croise",
+     "enonce": "Touche la case qui donne le nombre de filles qui font du théâtre.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Croise la ligne « Filles » et la colonne « Théâtre ».",
+     "explication": "La case à l’intersection est **36** : 36 filles font du théâtre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule P(F ∩ T) : la probabilité que l’élève soit une fille et fasse du théâtre.",
+     "reponse": 0.225,
+     "aide": "Parmi **tous** les élèves : effectif de « fille et théâtre » divisé par l’effectif total.",
+     "explication": "P(F ∩ T) = 36 ÷ 160 = **0,225**. Le dénominateur est le total, 160."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la probabilité que l’élève fasse du théâtre sachant que c’est une fille.",
+     "reponse": 0.4,
+     "aide": "Le mot « sachant » restreint la population : on ne regarde que les filles.",
+     "explication": "On se restreint aux 90 filles : 36 ÷ 90 = **0,4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction donne la probabilité que l’élève soit une fille, sachant qu’il fait du théâtre ?",
+     "options": [
+      "36 / 50",
+      "36 / 90",
+      "36 / 160",
+      "50 / 160"
+     ],
+     "reponse": 0,
+     "aide": "La population restreinte est celle qui suit « sachant ». Combien d’élèves font du théâtre ?",
+     "explication": "On se restreint aux 50 élèves du club : 36 filles sur 50, soit **36 / 50** = 0,72."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la probabilité que l’élève ne fasse pas de théâtre.",
+     "reponse": 0.6875,
+     "aide": "P(non T) = 1 − P(T), ou lis directement l’effectif de la colonne « Pas de théâtre ».",
+     "explication": "P(T) = 50 ÷ 160 = 0,3125, donc P(non T) = 1 − 0,3125 = **0,6875** (= 110 ÷ 160)."
+    }
+   ]
+  },
+  {
+   "chapitre": "205ecc6c-c6c0-54ed-9d7e-c8c9d107fa62",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux classes, une même médiane",
+   "competence": "raisonner",
+   "situation": "Deux classes de Première ont passé le même contrôle de maths. Les profs résument chaque série par cinq indicateurs. Mia affirme que les deux classes sont « pareilles », puisque leur médiane est identique.",
+   "documents": [
+    {
+     "id": "indic",
+     "type": "tableau",
+     "titre": "Résultats du contrôle (sur 20)",
+     "colonnes": [
+      "Indicateur",
+      "Classe A",
+      "Classe B"
+     ],
+     "lignes": [
+      [
+       "Minimum",
+       "4",
+       "7"
+      ],
+      [
+       "Q₁",
+       "8",
+       "9"
+      ],
+      [
+       "Médiane",
+       "11",
+       "11"
+      ],
+      [
+       "Q₃",
+       "14",
+       "12"
+      ],
+      [
+       "Maximum",
+       "18",
+       "15"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Notes inventées pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Les deux classes ont 11 de médiane : elles ont donc les mêmes résultats !"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Pas si vite…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "indic",
+     "enonce": "Touche la valeur Q₃ de la classe A : la note en dessous de laquelle se trouvent au moins 75 % de ses élèves.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Q₃ est le troisième quartile : cherche la ligne qui porte ce nom, colonne de la classe A.",
+     "explication": "Le troisième quartile de la classe A vaut **14**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’écart interquartile de la classe A.",
+     "reponse": 6,
+     "aide": "écart interquartile = Q₃ − Q₁.",
+     "explication": "14 − 8 = **6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’écart interquartile de la classe B.",
+     "reponse": 3,
+     "aide": "Même formule : Q₃ − Q₁.",
+     "explication": "12 − 9 = **3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de la dispersion des notes des deux classes ?",
+     "options": [
+      "Les notes de la classe B sont plus regroupées",
+      "Les notes de la classe A sont plus regroupées",
+      "Les deux classes ont la même dispersion",
+      "On ne peut rien dire sans les moyennes"
+     ],
+     "reponse": 0,
+     "aide": "Compare les écarts interquartiles : le plus petit correspond à la série la plus resserrée.",
+     "explication": "L’écart interquartile de B (3) est plus petit que celui de A (6) : les notes de **B sont plus regroupées autour de la médiane**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que répondre à Mia, qui dit « même médiane, donc mêmes résultats » ?",
+     "options": [
+      "La médiane ne dit rien de la dispersion : les classes diffèrent",
+      "Elle a raison : la médiane résume toute la série",
+      "Elle a raison, mais seulement si Q₁ est identique",
+      "Elle a tort : les médianes sont en réalité différentes"
+     ],
+     "reponse": 0,
+     "aide": "Relis les autres lignes du tableau : minimum, maximum, quartiles…",
+     "explication": "Une médiane partage la série en deux moitiés mais **ne mesure pas la dispersion** : ici les écarts interquartiles (6 et 3) et les étendues (14 et 8) diffèrent."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ed01545-72d3-5b02-8bda-76c1948db04f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Chloé prépare l’épreuve de juin",
+   "competence": "analyser-document",
+   "situation": "Chloé est en Première et passera l’épreuve anticipée de mathématiques en juin. Elle a recopié les principales informations de l’épreuve sur une fiche.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’épreuve anticipée de maths",
+     "sousTitre": "Ce que Chloé doit retenir",
+     "emoji": "📝",
+     "lignes": [
+      {
+       "texte": "Durée",
+       "valeur": "2 heures",
+       "id": "duree"
+      },
+      {
+       "texte": "Note totale",
+       "valeur": "20 points"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Partie 1 — Automatismes",
+       "valeur": "6 points",
+       "id": "auto"
+      },
+      {
+       "texte": "Partie 2 — Exercices",
+       "valeur": "14 points",
+       "id": "exo"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Calculatrice",
+       "valeur": "interdite",
+       "id": "calc"
+      }
+     ],
+     "pied": "Fiche rédigée pour l’exercice",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui indique combien de temps dure l’épreuve.",
+     "reponse": [
+      "duree"
+     ],
+     "aide": "Cherche la ligne « Durée ».",
+     "explication": "L’épreuve dure **2 heures**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la note totale représentent les automatismes ? Réponds en pourcentage.",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "proportion = partie / tout : 6 points sur 20.",
+     "explication": "6 ÷ 20 = 0,3, soit **30 %** de la note : une partie courte, mais bien rentable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chloé vise 20 minutes pour les automatismes. Combien de minutes lui reste-t-il pour la partie exercices ?",
+     "reponse": 100,
+     "unite": "min",
+     "aide": "2 heures = 120 minutes.",
+     "explication": "2 h = 120 min, et 120 − 20 = **100 minutes** pour les exercices."
+    },
+    {
+     "type": "choix",
+     "enonce": "Chloé veut utiliser sa calculatrice pour la partie exercices. Est-ce permis ?",
+     "options": [
+      "Non : elle est interdite pendant toute l’épreuve",
+      "Oui, pour la partie exercices uniquement",
+      "Oui, pour la partie automatismes uniquement",
+      "Oui, avec le mode examen activé"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « Calculatrice » de la fiche.",
+     "explication": "La fiche l’indique : la calculatrice est **interdite pendant toute l’épreuve**, automatismes comme exercices."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ed01545-72d3-5b02-8bda-76c1948db04f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le planning de Yanis",
+   "competence": "raisonner",
+   "situation": "Yanis a préparé un planning pour les 2 heures de l’épreuve. Il hésite à y ajouter un temps de relecture.",
+   "documents": [
+    {
+     "id": "planning",
+     "type": "tableau",
+     "titre": "Le planning de Yanis",
+     "colonnes": [
+      "Étape",
+      "Durée (min)"
+     ],
+     "lignes": [
+      [
+       "Automatismes",
+       "30"
+      ],
+      [
+       "Exercice 1",
+       "40"
+      ],
+      [
+       "Exercice 2",
+       "40"
+      ],
+      [
+       "Relecture",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Planning imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "L’épreuve dure 2 h. Quelle durée Yanis peut-il consacrer à la relecture ?",
+     "reponse": 10,
+     "unite": "min",
+     "aide": "Additionne les durées connues et retire-les de 120 minutes.",
+     "explication": "30 + 40 + 40 = 110 minutes, donc il reste 120 − 110 = **10 minutes** de relecture."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage de la durée de l’épreuve Yanis consacre-t-il aux automatismes ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "proportion = partie / tout : 30 min sur 120 min.",
+     "explication": "30 ÷ 120 = 1/4 = **25 %** du temps."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les automatismes valent 6 points sur 20. Quel pourcentage de la note représentent-ils ?",
+     "reponse": 30,
+     "unite": "%",
+     "aide": "Compare 6 à 20.",
+     "explication": "6 ÷ 20 = 0,3, soit **30 %** des points."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire du choix de Yanis pour les automatismes ?",
+     "options": [
+      "Il y passe 25 % du temps pour 30 % des points : c’est rentable",
+      "Il y passe 30 % du temps pour 25 % des points : c’est coûteux",
+      "Il y passe autant de temps que de points : c’est neutre",
+      "Il devrait y passer plus de temps que sur les exercices"
+     ],
+     "reponse": 0,
+     "aide": "Compare la part du temps et la part des points rapportés.",
+     "explication": "Les automatismes rapportent **30 % des points** en n’occupant que **25 % du temps** : c’est la partie la plus rentable de l’épreuve, il ne faut pas s’y éterniser."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ed01545-72d3-5b02-8bda-76c1948db04f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le brouillon de Sacha",
+   "competence": "raisonner",
+   "situation": "Sacha a répondu aux questions d’automatismes d’un sujet d’entraînement, mais certains résultats ne sont pas vraisemblables. Un bon réflexe de l’épreuve est de contrôler l’ordre de grandeur avant de rendre sa copie.",
+   "documents": [
+    {
+     "id": "copie",
+     "type": "tableau",
+     "titre": "Les réponses de Sacha",
+     "colonnes": [
+      "Question",
+      "Réponse de Sacha"
+     ],
+     "lignes": [
+      [
+       "Un prix de 40 € baisse de 25 % : nouveau prix ?",
+       "50 €"
+      ],
+      [
+       "Probabilité de tirer une carte rouge dans un jeu de 32 cartes ?",
+       "1/2"
+      ],
+      [
+       "Calcule 49 × 21.",
+       "10 290"
+      ],
+      [
+       "18 filles sur 24 élèves : quelle proportion de filles ?",
+       "1,33"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Réponses inventées pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Sacha",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Prof",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sacha",
+       "texte": "Je bloque sur la question 2 de l’exercice 1 et je perds un temps fou."
+      },
+      {
+       "qui": "Prof",
+       "texte": "Le résultat est donné dans l’énoncé : utilise-le pour la suite."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "copie",
+     "enonce": "Touche les **trois** réponses invraisemblables.",
+     "reponse": [
+      "r0c0",
+      "r2c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Un prix après une baisse ne peut pas monter, 49 × 21 est proche de 50 × 20, et une proportion ne dépasse jamais 1.",
+     "explication": "Après une baisse le prix ne peut pas augmenter ; 49 × 21 doit être proche de 1 000, pas de 10 000 ; une proportion est toujours inférieure ou égale à 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Corrige la première réponse : quel est le prix de 40 € après une baisse de 25 % ?",
+     "reponse": 30,
+     "unite": "€",
+     "aide": "Le coefficient d’une baisse de 25 % est 0,75. Ou : retire le quart de 40.",
+     "explication": "40 × 0,75 = **30 €** (on retire 10 €, le quart de 40)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Corrige la troisième réponse : combien vaut 49 × 21 ?",
+     "reponse": 1029,
+     "aide": "49 × 21 = 49 × 20 + 49.",
+     "explication": "49 × 20 = 980 et 980 + 49 = **1 029**, proche de l’estimation 50 × 20 = 1 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Corrige la dernière réponse : quelle est la proportion de filles, sous forme décimale ?",
+     "reponse": 0.75,
+     "aide": "Simplifie 18 / 24 par 6.",
+     "explication": "18 ÷ 24 = 3/4 = **0,75**. Le résultat de Sacha, plus grand que 1, était impossible pour une proportion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Sacha d’une question d’exercice qui résiste, d’après le conseil de son prof ?",
+     "options": [
+      "Elle admet le résultat donné et continue",
+      "Elle passe tout l’exercice et n’y revient pas",
+      "Elle devine un résultat approximatif",
+      "Elle abandonne la copie à ce moment"
+     ],
+     "reponse": 0,
+     "aide": "Relis le message de Prof : le résultat est donné dans l’énoncé.",
+     "explication": "Les questions s’enchaînent : quand l’une résiste, on **admet son résultat** (souvent donné) et on continue, car la suite en dépend rarement autrement."
+    }
+   ]
+  }
+ ]
+}

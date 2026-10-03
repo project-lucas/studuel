@@ -1,0 +1,3837 @@
+{
+ "niveau": "1re",
+ "matiere": "spcl",
+ "exercices": [
+  {
+   "chapitre": "107e042d-818a-5b99-aecd-ef8c2e5676cd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce pour contrôler la balance",
+   "competence": "lire-tableau",
+   "situation": "Nora contrôle la balance du laboratoire avec une pièce de 2 € dont la masse officielle est 8,50 g. Elle la pèse cinq fois de suite.",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Cinq pesées de la même pièce",
+     "colonnes": [
+      "Pesée n°",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Masse (g)",
+       "8,51",
+       "8,50",
+       "8,51",
+       "8,52",
+       "8,51"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "reponse": [
+      "r0c4"
+     ],
+     "enonce": "Touche la pesée qui donne la plus grande masse.",
+     "aide": "Compare les cinq valeurs au centième de gramme près.",
+     "explication": "La pesée n° 4 donne **8,52 g** : c’est la plus grande valeur de la série."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des cinq pesées, en grammes.",
+     "reponse": 8.51,
+     "unite": "g",
+     "tolerance": 0.001,
+     "aide": "Additionne les cinq masses puis divise par 5.",
+     "explication": "x̄ = (8,51 + 8,50 + 8,51 + 8,52 + 8,51) / 5 = 42,55 / 5 = **8,51 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart sépare cette moyenne de la masse officielle de 8,50 g ? Donne-le en grammes.",
+     "reponse": 0.01,
+     "unite": "g",
+     "tolerance": 0.001,
+     "aide": "Soustrais la masse officielle à la moyenne.",
+     "explication": "Écart = 8,51 − 8,50 = **0,01 g** : la moyenne est très proche de la référence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les pesées sont toutes proches les unes des autres, et leur moyenne est proche de 8,50 g. Elles sont…",
+     "options": [
+      "fidèles et justes",
+      "fidèles mais pas justes",
+      "justes mais peu fidèles",
+      "ni fidèles ni justes"
+     ],
+     "reponse": 0,
+     "aide": "La fidélité regarde la dispersion ; la justesse regarde l’écart à la référence.",
+     "explication": "Dispersion très faible (**fidélité**) et moyenne proche de la valeur de référence (**justesse**) : les pesées sont **fidèles et justes**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "107e042d-818a-5b99-aecd-ef8c2e5676cd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois tireurs, trois cibles",
+   "competence": "analyser-document",
+   "situation": "Trois élèves tirent cinq fois sur une cible. Leurs impacts illustrent trois balances de laboratoire : chacune pèse cinq fois la même masse de référence, au centre de la cible.",
+   "documents": [
+    {
+     "id": "cibles",
+     "type": "schema",
+     "titre": "Impacts des cinq pesées sur chaque cible",
+     "largeur": 330,
+     "hauteur": 160,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 70,
+       "r": 42,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 70,
+       "r": 28,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 70,
+       "r": 14,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 70,
+       "r": 42,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 70,
+       "r": 28,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 165,
+       "cy": 70,
+       "r": 14,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 275,
+       "cy": 70,
+       "r": 42,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 275,
+       "cy": 70,
+       "r": 28,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 275,
+       "cy": 70,
+       "r": 14,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 33,
+       "cy": 60,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 73,
+       "cy": 46,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 47,
+       "cy": 96,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 81,
+       "cy": 82,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 57,
+       "cy": 67,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 189,
+       "cy": 52,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 192,
+       "cy": 55,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 58,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 187,
+       "cy": 54,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 191,
+       "cy": 51,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 68,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 277,
+       "cy": 73,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 275,
+       "cy": 66,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 279,
+       "cy": 70,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 273,
+       "cy": 73,
+       "r": 3.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 35,
+       "y": 120,
+       "l": 40,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "A",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 120,
+       "l": 40,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "B",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 255,
+       "y": 120,
+       "l": 40,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "C",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "C",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cibles",
+     "reponse": [
+      "B"
+     ],
+     "enonce": "Le zéro d’une balance est décalé : toutes les pesées sont trop fortes de la même quantité. Touche l’étiquette de la cible qui lui correspond.",
+     "aide": "Un décalage constant éloigne tous les impacts du centre dans le même sens, sans les disperser.",
+     "explication": "Un zéro décalé est une **erreur systématique** : les impacts restent groupés (fidélité) mais loin du centre (défaut de justesse). C’est la cible **B**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque cible à son verdict.",
+     "paires": [
+      [
+       "Cible A",
+       "Juste en moyenne, peu fidèle"
+      ],
+      [
+       "Cible B",
+       "Fidèle, mais pas juste"
+      ],
+      [
+       "Cible C",
+       "Fidèle et juste"
+      ]
+     ],
+     "aide": "Regarde d’abord si les impacts sont groupés, puis où se trouve leur centre.",
+     "explication": "A : impacts dispersés autour du centre, **juste en moyenne mais peu fidèle**. B : groupés loin du centre, **fidèle mais pas juste**. C : groupés au centre, **fidèle et juste**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour améliorer la balance de la cible A, quelle démarche réduit le mieux l’effet de la dispersion ?",
+     "options": [
+      "Répéter la pesée et calculer la moyenne des résultats",
+      "Refaire le zéro de la balance avant chaque pesée",
+      "Remplacer la masse de référence par une plus lourde",
+      "Ne garder que la pesée qui paraît la plus juste"
+     ],
+     "reponse": 0,
+     "aide": "La dispersion vient d’erreurs aléatoires : qu’est-ce qui les atténue quand on cumule les mesures ?",
+     "explication": "La dispersion provient d’erreurs **aléatoires** qui se compensent en partie : répéter la mesure et en prendre la **moyenne** réduit l’incertitude, comme le montre u(x̄) = s / √n."
+    }
+   ]
+  },
+  {
+   "chapitre": "107e042d-818a-5b99-aecd-ef8c2e5676cd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le cyclohexane bout-il à la bonne température ?",
+   "competence": "raisonner",
+   "situation": "Au laboratoire, un groupe mesure six fois la température d’ébullition du cyclohexane pur. La valeur de référence des tables est 80,7 °C. Le groupe veut savoir si son résultat est compatible avec cette référence.",
+   "documents": [
+    {
+     "id": "serie",
+     "type": "tableau",
+     "titre": "Six mesures de la température d’ébullition",
+     "colonnes": [
+      "Mesure n°",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "θ (°C)",
+       "81,9",
+       "82,3",
+       "81,6",
+       "82,0",
+       "82,1",
+       "81,7"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Thermomètre électronique",
+     "sousTitre": "Extrait de la notice du constructeur",
+     "emoji": "🌡️",
+     "lignes": [
+      {
+       "texte": "Résolution",
+       "valeur": "0,1 °C"
+      },
+      {
+       "texte": "Tolérance",
+       "valeur": "± 0,5 °C",
+       "id": "tol"
+      },
+      {
+       "texte": "Dernier étalonnage",
+       "valeur": "jamais vérifié"
+      }
+     ],
+     "pied": "Notice écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "serie",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la mesure la plus éloignée de la valeur de référence, 80,7 °C.",
+     "aide": "Cherche la plus grande valeur de la série.",
+     "explication": "La mesure n° 2, **82,3 °C**, est la plus éloignée de 80,7 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des six mesures, en °C, arrondie au centième.",
+     "reponse": 81.93,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Additionne les six valeurs puis divise par 6.",
+     "explication": "x̄ = 491,6 / 6 ≈ **81,93 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’écart-type de la série vaut s ≈ 0,258 °C. Calcule l’incertitude-type u(x̄) = s / √n, en °C, arrondie au millième.",
+     "reponse": 0.105,
+     "unite": "°C",
+     "tolerance": 0.0005,
+     "aide": "Ici n = 6 mesures : divise s par √6 ≈ 2,45.",
+     "explication": "u(x̄) = 0,258 / √6 ≈ **0,105 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour une seule mesure de ce thermomètre, la notice donne une tolérance Δ = ± 0,5 °C. Calcule l’incertitude-type u = Δ / √3, en °C, arrondie au centième.",
+     "reponse": 0.29,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Divise Δ par √3 ≈ 1,73.",
+     "explication": "u = 0,5 / √3 ≈ **0,29 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le z-score z = |x̄ − x_réf| / u(x̄), arrondi à l’unité (prends u = 0,105 °C).",
+     "reponse": 12,
+     "tolerance": 0.5,
+     "aide": "Écart à la référence : 81,93 − 80,7, à diviser par l’incertitude-type.",
+     "explication": "z = (81,93 − 80,7) / 0,105 ≈ **12**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure, et que faire ?",
+     "options": [
+      "Incompatible : chercher une erreur systématique (étalonnage du thermomètre)",
+      "Compatible : la moyenne de six mesures est proche de la référence",
+      "Incompatible : refaire la même série sans rien changer au montage",
+      "Compatible : l’incertitude est trop faible pour qu’on puisse juger"
+     ],
+     "reponse": 0,
+     "aide": "Compare z au seuil de 2 donné dans le cours, puis relis la ligne « Dernier étalonnage » de la notice.",
+     "explication": "Un z de 12 dépasse largement 2 : le résultat n’est **pas compatible** avec la référence. Répéter la mesure ne corrige pas un décalage : on soupçonne une **erreur systématique**, ici un thermomètre jamais étalonné."
+    }
+   ]
+  },
+  {
+   "chapitre": "64406e4c-bdf6-5f8a-97ae-4eea97193e89",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’étiquette du flacon d’acide",
+   "competence": "analyser-document",
+   "situation": "Au fond de la salle de TP, Malo doit utiliser de l’acide chlorhydrique. Avant de dévisser le bouchon, il lit l’étiquette du flacon.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Acide chlorhydrique 37 %",
+     "sousTitre": "Flacon de 1 L",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Pictogrammes",
+       "valeur": "corrosion · point d’exclamation"
+      },
+      {
+       "texte": "Mention d’avertissement",
+       "valeur": "DANGER",
+       "id": "mention",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "H290",
+       "valeur": "Peut être corrosif pour les métaux",
+       "id": "h290"
+      },
+      {
+       "texte": "H314",
+       "valeur": "Provoque des brûlures de la peau et des lésions oculaires graves",
+       "id": "h314"
+      },
+      {
+       "texte": "H335",
+       "valeur": "Peut irriter les voies respiratoires",
+       "id": "h335"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "P280",
+       "valeur": "Porter des gants de protection et un équipement de protection des yeux",
+       "id": "p280"
+      },
+      {
+       "texte": "P261",
+       "valeur": "Éviter de respirer les vapeurs",
+       "id": "p261"
+      }
+     ],
+     "pied": "Étiquette simplifiée, écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "reponse": [
+      "mention"
+     ],
+     "enonce": "Touche la ligne qui indique la gravité globale du danger.",
+     "aide": "Une seule ligne porte un mot d’alerte en capitales : « Danger » ou « Attention ».",
+     "explication": "La **mention d’avertissement** « DANGER » est la plus grave des deux possibles (l’autre est « Attention »)."
+    },
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "reponse": [
+      "h314",
+      "h335"
+     ],
+     "enonce": "Touche les deux mentions de danger qui menacent directement ta santé.",
+     "aide": "Parmi les phrases H, cherche celles qui parlent de peau, d’yeux ou de voies respiratoires.",
+     "explication": "H314 (brûlures de la peau et lésions des yeux) et H335 (irritation des voies respiratoires) visent le corps. H290 ne concerne que les **métaux**.",
+     "multiple": true
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque code de l’étiquette à son sens.",
+     "paires": [
+      [
+       "H314",
+       "Brûlures de la peau et lésions des yeux"
+      ],
+      [
+       "H335",
+       "Irritation des voies respiratoires"
+      ],
+      [
+       "P280",
+       "Gants et protection des yeux"
+      ]
+     ],
+     "aide": "La lettre H décrit un danger, la lettre P donne un conseil de prudence.",
+     "explication": "Les phrases **H** décrivent la nature du danger (H314, H335) ; les phrases **P** disent quoi faire (P280 : gants et protection des yeux)."
+    }
+   ]
+  },
+  {
+   "chapitre": "64406e4c-bdf6-5f8a-97ae-4eea97193e89",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le placard mal rangé",
+   "competence": "observer-schema",
+   "situation": "Le placard de produits du laboratoire a été rangé à la va-vite par un remplaçant. Le professeur te demande de repérer les flacons dangereusement voisins, puis de dire où chaque famille doit aller.",
+   "documents": [
+    {
+     "id": "placard",
+     "type": "schema",
+     "titre": "Le placard, vu de face",
+     "largeur": 330,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 310,
+       "h": 220,
+       "arrondi": 6,
+       "teinte": "brun",
+       "motif": "aucun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        105
+       ],
+       "a": [
+        320,
+        105
+       ],
+       "epaisseur": 3,
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        190
+       ],
+       "a": [
+        320,
+        190
+       ],
+       "epaisseur": 3,
+       "teinte": "brun"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 55,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "HCl",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "hcl",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 55,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "NaOH",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "naoh",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 155,
+       "y": 55,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "NaCl",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "nacl",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 55,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Sucre",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "sucre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 53,
+       "y": 50,
+       "texte": "acide",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 118,
+       "y": 50,
+       "texte": "base",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 183,
+       "y": 50,
+       "texte": "neutre",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 248,
+       "y": 50,
+       "texte": "neutre",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 140,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Éthanol",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "eth",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 140,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "KMnO₄",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "kmno4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 155,
+       "y": 140,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "CuSO₄",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cuso4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 140,
+       "l": 56,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "KCl",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "kcl",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 53,
+       "y": 135,
+       "texte": "inflammable",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 118,
+       "y": 135,
+       "texte": "oxydant",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 183,
+       "y": 135,
+       "texte": "sel",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 248,
+       "y": 135,
+       "texte": "sel",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "placard",
+     "reponse": [
+      "hcl",
+      "naoh",
+      "eth",
+      "kmno4"
+     ],
+     "enonce": "Touche les quatre flacons placés à côté d’un produit avec lequel ils sont incompatibles.",
+     "aide": "Deux règles du cours : jamais un acide près d’une base, jamais un oxydant près d’un inflammable.",
+     "explication": "Sur l’étagère du haut, l’**acide** (HCl) touche la **base** (NaOH) ; sur celle du bas, l’**inflammable** (éthanol) touche l’**oxydant** (KMnO₄). Ces deux couples sont à séparer.",
+     "multiple": true
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque produit dans l’armoire qui lui convient.",
+     "categories": [
+      "Armoire ventilée des inflammables",
+      "Armoire des acides",
+      "Armoire des bases"
+     ],
+     "items": [
+      [
+       "Éthanol",
+       0
+      ],
+      [
+       "Acétone",
+       0
+      ],
+      [
+       "Acide chlorhydrique",
+       1
+      ],
+      [
+       "Acide sulfurique",
+       1
+      ],
+      [
+       "Soude",
+       2
+      ],
+      [
+       "Ammoniaque",
+       2
+      ]
+     ],
+     "aide": "On range par famille : ce que le produit risque de faire (brûler, attaquer, neutraliser).",
+     "explication": "Les **inflammables** vont dans une armoire ventilée ; les **acides** ensemble ; les **bases** ensemble, loin des acides."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le flacon de permanganate de potassium (comburant) est déplacé. Où faut-il le ranger ?",
+     "options": [
+      "Avec les autres oxydants, à l’écart de tout produit inflammable",
+      "Dans l’armoire des inflammables, pour gagner de la place sur l’étagère",
+      "À côté de la soude, car ce sont deux solides qui ne risquent rien",
+      "Sous la hotte, flacon ouvert, pour qu’il puisse s’aérer en permanence"
+     ],
+     "reponse": 0,
+     "aide": "Un comburant favorise la combustion : à côté de quoi ne faut-il jamais le laisser ?",
+     "explication": "On stocke par **familles compatibles** : un oxydant ne se range **jamais** près d’un inflammable ; il reste avec les oxydants, flacon fermé."
+    }
+   ]
+  },
+  {
+   "chapitre": "64406e4c-bdf6-5f8a-97ae-4eea97193e89",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Avant de toucher au flacon : lire, se protéger, ranger",
+   "competence": "analyser-document",
+   "situation": "Léa et Karim vont manipuler plusieurs produits pendant le TP. Le professeur leur remet un extrait de la fiche de données de sécurité de l’acide chlorhydrique et le tableau des produits du chariot.",
+   "documents": [
+    {
+     "id": "fds",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Fiche de données de sécurité",
+     "sousTitre": "Acide chlorhydrique 37 % — extrait",
+     "emoji": "📄",
+     "lignes": [
+      {
+       "texte": "Rubrique 2 — Dangers",
+       "valeur": "H290 · H314 · H335"
+      },
+      {
+       "texte": "Rubrique 4 — Yeux",
+       "valeur": "Rincer abondamment à l’eau",
+       "id": "r4"
+      },
+      {
+       "texte": "Rubrique 7 — Stockage",
+       "valeur": "À l’écart des bases et des oxydants (eau de Javel)",
+       "id": "r7"
+      },
+      {
+       "texte": "Rubrique 8 — Protection",
+       "valeur": "Gants, lunettes, hotte",
+       "id": "r8"
+      }
+     ],
+     "pied": "Extrait simplifié, écrit pour l’exercice"
+    },
+    {
+     "id": "chariot",
+     "type": "tableau",
+     "titre": "Les produits du chariot",
+     "colonnes": [
+      "Produit",
+      "Pictogrammes · mention",
+      "Phrases H"
+     ],
+     "lignes": [
+      [
+       "Acétone",
+       "flamme, point d’exclamation · Danger",
+       "H225 H319 H336"
+      ],
+      [
+       "Dichlorométhane",
+       "silhouette à l’étoile, point d’exclamation · Attention",
+       "H315 H319 H336 H351"
+      ],
+      [
+       "Éthanol 96 %",
+       "flamme, point d’exclamation · Danger",
+       "H225 H319"
+      ],
+      [
+       "Acide chlorhydrique 37 %",
+       "corrosion, point d’exclamation · Danger",
+       "H290 H314 H335"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données simplifiées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chariot",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case du pictogramme qui signale un danger grave pour la santé à long terme (substance cancérogène, mutagène…).",
+     "aide": "Ce pictogramme représente une silhouette avec une étoile sur la poitrine.",
+     "explication": "Le **dichlorométhane** porte la silhouette à l’étoile : sa phrase H351 (susceptible de provoquer le cancer) le confirme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels produits faut-il tenir à l’écart de toute flamme ?",
+     "options": [
+      "Acétone",
+      "Dichlorométhane",
+      "Éthanol 96 %",
+      "Acide chlorhydrique 37 %"
+     ],
+     "reponse": [
+      0,
+      2
+     ],
+     "aide": "Cherche le pictogramme flamme et la phrase H225 (liquide et vapeurs très inflammables).",
+     "explication": "**L’acétone** et **l’éthanol** portent la flamme et H225. Le dichlorométhane et l’acide chlorhydrique ne sont pas inflammables."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève veut ranger le flacon d’acide près d’une bouteille d’eau de Javel pour gagner de la place. Que lui dit la rubrique 7 ?",
+     "options": [
+      "De ne pas le faire : l’acide doit rester à l’écart de l’eau de Javel",
+      "De le faire : les deux produits sont des liquides d’usage courant",
+      "De le faire, à condition de les placer sous la hotte",
+      "De ne le faire que si le bouchon de l’acide est bien serré"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « Stockage » : de quoi l’acide doit-il être séparé ?",
+     "explication": "La rubrique 7 demande de stocker l’acide **à l’écart des bases et des oxydants**, dont l’eau de Javel : mélangés, ils libèrent du **dichlore toxique**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre les gestes à faire pour un TP avec cet acide.",
+     "items": [
+      "Lire l’étiquette et la fiche de données de sécurité",
+      "Mettre la blouse, les lunettes et les gants",
+      "Se placer sous la hotte",
+      "Manipuler l’acide",
+      "Refermer le flacon et le ranger avec les acides"
+     ],
+     "aide": "On lit avant d’agir, on se protège avant de manipuler, on range en dernier.",
+     "explication": "D’abord **lire** (avant la manipulation, pas après l’accident), puis **se protéger**, **se placer sous la hotte**, **manipuler**, enfin **ranger** par famille."
+    }
+   ]
+  },
+  {
+   "chapitre": "66d17b6a-2283-59c9-b3ca-c543c78fe1d0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux recettes pour la même molécule",
+   "competence": "lire-tableau",
+   "situation": "Une entreprise hésite entre deux procédés pour fabriquer le même arôme alimentaire. Un technicien résume leurs caractéristiques dans un tableau.",
+   "documents": [
+    {
+     "id": "procedes",
+     "type": "tableau",
+     "titre": "Les deux procédés comparés",
+     "colonnes": [
+      "Critère",
+      "Procédé A",
+      "Procédé B"
+     ],
+     "lignes": [
+      [
+       "Nombre d’étapes",
+       "6",
+       "3"
+      ],
+      [
+       "Solvant",
+       "Dichlorométhane",
+       "Eau"
+      ],
+      [
+       "Température (°C)",
+       "120",
+       "25"
+      ],
+      [
+       "Déchets (kg par kg de produit)",
+       "8,0",
+       "1,5"
+      ],
+      [
+       "Catalyseur",
+       "non",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "procedes",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case du solvant le plus conforme à la chimie verte.",
+     "aide": "Le cours cite deux solvants à privilégier : l’eau et l’éthanol.",
+     "explication": "L’**eau** est le solvant le moins dangereux : le procédé B respecte le principe « solvants plus sûrs »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois moins de déchets le procédé B produit-il que le procédé A ? Arrondis au dixième.",
+     "reponse": 5.3,
+     "tolerance": 0.05,
+     "aide": "Divise les déchets de A par ceux de B.",
+     "explication": "8,0 / 1,5 ≈ **5,3** : B produit environ cinq fois moins de déchets."
+    },
+    {
+     "type": "choix",
+     "enonce": "Travailler à 25 °C plutôt qu’à 120 °C illustre surtout quel principe de la chimie verte ?",
+     "options": [
+      "Économiser de l’énergie",
+      "Utiliser une matière première renouvelable",
+      "Éviter les étapes de protection",
+      "Concevoir un produit dégradable"
+     ],
+     "reponse": 0,
+     "aide": "Chauffer à 120 °C coûte de l’énergie : que gagne-t-on à rester à température ambiante ?",
+     "explication": "Réaliser la synthèse à température et pression ambiantes **économise l’énergie** : c’est l’un des principes de la chimie verte."
+    }
+   ]
+  },
+  {
+   "chapitre": "66d17b6a-2283-59c9-b3ca-c543c78fe1d0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux voies vers l’éthanol : laquelle gaspille le moins d’atomes ?",
+   "competence": "calculer",
+   "situation": "Samir compare deux manières de fabriquer de l’éthanol C₂H₅OH, utilisé comme solvant. Il veut calculer l’économie d’atomes de chaque voie avant de proposer la plus verte à son professeur.",
+   "documents": [
+    {
+     "id": "voies",
+     "type": "tableau",
+     "titre": "Les deux voies de synthèse",
+     "colonnes": [
+      "Voie",
+      "Équation",
+      "Sous-produit"
+     ],
+     "lignes": [
+      [
+       "A — addition",
+       "C₂H₄ + H₂O → C₂H₅OH",
+       "aucun"
+      ],
+      [
+       "B — substitution",
+       "C₂H₅Cl + NaOH → C₂H₅OH + NaCl",
+       "NaCl"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Équations simplifiées"
+    },
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses molaires atomiques (g/mol)",
+     "colonnes": [
+      "H",
+      "C",
+      "O",
+      "Na",
+      "Cl"
+     ],
+     "lignes": [
+      [
+       "1,0",
+       "12,0",
+       "16,0",
+       "23,0",
+       "35,5"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voies",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche la voie dont l’économie d’atomes est de 100 %.",
+     "aide": "Dans une addition, que devient chaque atome des réactifs ?",
+     "explication": "Dans la voie **A**, tous les atomes des réactifs se retrouvent dans l’éthanol : économie d’atomes de **100 %**. La voie B rejette NaCl."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Voie B : calcule la somme des masses molaires des réactifs C₂H₅Cl et NaOH, en g/mol.",
+     "reponse": 104.5,
+     "unite": "g/mol",
+     "tolerance": 0.05,
+     "aide": "M(C₂H₅Cl) = 2 × 12,0 + 5 × 1,0 + 35,5 ; M(NaOH) = 23,0 + 16,0 + 1,0.",
+     "explication": "M(C₂H₅Cl) = 64,5 g/mol et M(NaOH) = 40,0 g/mol : somme = **104,5 g/mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’économie d’atomes de la voie B, en pourcentage arrondi à l’unité (M(C₂H₅OH) = 46,0 g/mol).",
+     "reponse": 44,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise la masse molaire du produit voulu par la somme des réactifs, puis multiplie par 100.",
+     "explication": "Économie d’atomes = 46,0 / 104,5 × 100 ≈ **44 %** : plus de la moitié de la matière part en déchet (NaCl)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour obtenir 1 mol d’éthanol par la voie B, quelle masse de NaCl se forme en même temps ? Réponds en grammes.",
+     "reponse": 58.5,
+     "unite": "g",
+     "tolerance": 0.05,
+     "aide": "Une mole de NaCl se forme pour une mole d’éthanol ; M(NaCl) = 23,0 + 35,5.",
+     "explication": "M(NaCl) = **58,5 g/mol** : on produit 58,5 g de sel pour 46,0 g d’éthanol, donc plus de déchet que de produit."
+    }
+   ]
+  },
+  {
+   "chapitre": "66d17b6a-2283-59c9-b3ca-c543c78fe1d0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Recycler le solvant d’une usine pharmaceutique",
+   "competence": "analyser-document",
+   "situation": "Une usine fabrique un principe actif en lots. Pour chaque lot, elle utilise un solvant organique qu’on peut récupérer. La direction demande un bilan : que gagne-t-on à le recycler, et sur quels plans ?",
+   "documents": [
+    {
+     "id": "cycle",
+     "type": "chaine",
+     "titre": "Le parcours du solvant",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "synthese",
+       "texte": "Synthèse du lot",
+       "emoji": "⚗️"
+      },
+      {
+       "id": "extraction",
+       "texte": "Extraction du produit",
+       "emoji": "🧴"
+      },
+      {
+       "id": "distillation",
+       "texte": "Traitement du solvant usagé",
+       "emoji": "🔥"
+      },
+      {
+       "id": "recupere",
+       "texte": "Solvant récupéré",
+       "emoji": "🛢️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "synthese",
+       "a": "extraction"
+      },
+      {
+       "de": "extraction",
+       "a": "distillation"
+      },
+      {
+       "de": "distillation",
+       "a": "recupere"
+      },
+      {
+       "de": "recupere",
+       "a": "synthese"
+      }
+     ]
+    },
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Les données de l’usine",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Solvant utilisé par lot",
+       "500 L"
+      ],
+      [
+       "Part de solvant récupérée",
+       "90 %"
+      ],
+      [
+       "Nombre de lots par an",
+       "20"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cycle",
+     "reponse": [
+      "distillation"
+     ],
+     "enonce": "Touche l’étape qui permet de récupérer le solvant usagé pour le réutiliser.",
+     "aide": "Le cours cite la technique qui sépare un solvant du reste par vaporisation puis condensation.",
+     "explication": "Le solvant usagé est récupéré par **distillation**, puis renvoyé vers la synthèse : c’est la boucle du cycle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de solvant neuf faut-il acheter pour un lot, une fois le recyclage en place ? Réponds en litres.",
+     "reponse": 50,
+     "unite": "L",
+     "tolerance": 0.5,
+     "aide": "Si 90 % sont récupérés, quelle part reste à acheter ?",
+     "explication": "Il manque 10 % : 500 × (1 − 0,90) = **50 L** de solvant neuf par lot."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel volume de solvant est récupéré sur une année de 20 lots ? Réponds en litres.",
+     "reponse": 9000,
+     "unite": "L",
+     "tolerance": 1,
+     "aide": "Calcule d’abord le volume récupéré par lot, puis multiplie par 20.",
+     "explication": "500 × 0,90 = 450 L récupérés par lot ; 450 × 20 = **9 000 L** par an."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque effet du recyclage dans le plan où il se mesure.",
+     "categories": [
+      "Environnemental",
+      "Économique",
+      "Social"
+     ],
+     "items": [
+      [
+       "Moins de solvant à produire et à incinérer",
+       0
+      ],
+      [
+       "Moins d’eau consommée pour les nettoyages",
+       0
+      ],
+      [
+       "Baisse du coût d’achat du solvant",
+       1
+      ],
+      [
+       "Baisse du coût de traitement des déchets",
+       1
+      ],
+      [
+       "Moins d’exposition des salariés aux vapeurs",
+       2
+      ],
+      [
+       "Emplois créés dans la filière de recyclage",
+       2
+      ]
+     ],
+     "aide": "Rejets, ressources : environnement ; argent : économie ; salariés, riverains, emplois : social.",
+     "explication": "Les trois plans d’un procédé sont l’**environnemental** (rejets, ressources), l’**économique** (coûts) et le **social** (sécurité, emplois)."
+    }
+   ]
+  },
+  {
+   "chapitre": "aad28990-b793-57bd-9233-a2f7393703d2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le montage à reflux de l’atelier arôme",
+   "competence": "observer-schema",
+   "situation": "Zoé prépare l’arôme de banane. Le professeur a monté le chauffage à reflux et lui demande de repérer chaque élément avant de lancer le chauffage.",
+   "documents": [
+    {
+     "id": "reflux",
+     "type": "schema",
+     "titre": "Chauffage à reflux, vu de face",
+     "largeur": 320,
+     "hauteur": 305,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 215,
+       "l": 120,
+       "h": 50,
+       "arrondi": 18,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "chauffe",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 190,
+       "r": 46,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "ballon",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 214,
+       "rx": 33,
+       "ry": 12,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 149,
+       "cy": 216,
+       "r": 2.5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 163,
+       "cy": 219,
+       "r": 2.5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 174,
+       "cy": 213,
+       "r": 2.5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 100,
+       "l": 20,
+       "h": 46,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 18,
+       "l": 40,
+       "h": 84,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "refrig",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        151,
+        18
+       ],
+       "a": [
+        151,
+        100
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        169,
+        18
+       ],
+       "a": [
+        169,
+        100
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "rect",
+       "x": 106,
+       "y": 74,
+       "l": 34,
+       "h": 12,
+       "arrondi": 3,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "bas",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 34,
+       "l": 34,
+       "h": 12,
+       "arrondi": 3,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "haut",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 270,
+       "l": 140,
+       "h": 14,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 299,
+       "texte": "support élévateur",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reflux",
+     "reponse": [
+      "refrig"
+     ],
+     "enonce": "Touche le réfrigérant.",
+     "aide": "C’est le grand tube vertical, au-dessus du ballon, parcouru par de l’eau.",
+     "explication": "Le **réfrigérant** est le tube vertical qui surmonte le ballon : l’eau qui circule dans son manchon condense les vapeurs."
+    },
+    {
+     "type": "zone",
+     "document": "reflux",
+     "reponse": [
+      "bas"
+     ],
+     "enonce": "Touche le tuyau par lequel l’eau froide doit entrer dans le réfrigérant.",
+     "aide": "L’eau doit remplir le manchon de bas en haut : où commence-t-elle ?",
+     "explication": "L’eau entre par le **bas** et sort par le haut : le manchon reste plein d’eau et le refroidissement est efficace."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du montage à son rôle.",
+     "paires": [
+      [
+       "Ballon",
+       "Contient les réactifs et la pierre ponce"
+      ],
+      [
+       "Chauffe-ballon",
+       "Chauffe le mélange"
+      ],
+      [
+       "Réfrigérant",
+       "Condense les vapeurs qui retombent"
+      ]
+     ],
+     "aide": "Pense à ce qui se passe, de bas en haut, pendant le chauffage.",
+     "explication": "Le **ballon** contient le mélange, le **chauffe-ballon** apporte l’énergie, le **réfrigérant** condense les vapeurs qui retombent dans le ballon : on chauffe longtemps sans perte de matière."
+    }
+   ]
+  },
+  {
+   "chapitre": "aad28990-b793-57bd-9233-a2f7393703d2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Extraire l’arôme de banane avec l’ampoule à décanter",
+   "competence": "experimenter",
+   "situation": "Hugo a obtenu l’arôme de banane dissous dans de l’eau. Pour l’en extraire, il choisit un solvant dans le tableau, puis utilise une ampoule à décanter contenant de l’eau et le solvant choisi.",
+   "documents": [
+    {
+     "id": "solvants",
+     "type": "tableau",
+     "titre": "Quatre liquides disponibles",
+     "colonnes": [
+      "Liquide",
+      "ρ (g/mL)",
+      "Miscible à l’eau",
+      "Dissout l’arôme"
+     ],
+     "lignes": [
+      [
+       "Eau",
+       "1,00",
+       "—",
+       "non"
+      ],
+      [
+       "Éthanol",
+       "0,79",
+       "oui",
+       "oui"
+      ],
+      [
+       "Cyclohexane",
+       "0,78",
+       "non",
+       "oui"
+      ],
+      [
+       "Dichlorométhane",
+       "1,33",
+       "non",
+       "oui"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données simplifiées pour l’exercice"
+    },
+    {
+     "id": "ampoule",
+     "type": "schema",
+     "titre": "L’ampoule après agitation et repos (eau et cyclohexane)",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         118.5,
+         95
+        ],
+        [
+         201.5,
+         95
+        ],
+        [
+         215,
+         110
+        ],
+        [
+         215,
+         160
+        ],
+        [
+         105,
+         160
+        ],
+        [
+         105,
+         110
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "haut",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         105,
+         160
+        ],
+        [
+         215,
+         160
+        ],
+        [
+         215,
+         190
+        ],
+        [
+         175,
+         235
+        ],
+        [
+         145,
+         235
+        ],
+        [
+         105,
+         190
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "points",
+       "id": "bas",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M150 20 L170 20 L170 60 L215 110 L215 190 L175 235 L175 262 L145 262 L145 235 L105 190 L105 110 L150 60 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 8,
+       "l": 28,
+       "h": 12,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 244,
+       "l": 60,
+       "h": 8,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 282,
+       "texte": "ampoule à décanter",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quels liquides du tableau peuvent servir de solvant extracteur de l’arôme ?",
+     "options": [
+      "Éthanol",
+      "Cyclohexane",
+      "Dichlorométhane",
+      "Eau"
+     ],
+     "reponse": [
+      1,
+      2
+     ],
+     "aide": "Un bon extracteur est non miscible à l’eau ET dissout bien l’arôme : cherche les deux « bonnes » colonnes.",
+     "explication": "Il faut un liquide **non miscible à l’eau** qui **dissout bien l’arôme** : le cyclohexane et le dichlorométhane. L’éthanol se mélange à l’eau ; l’eau ne dissout pas l’arôme.",
+     "ordreFixe": true
+    },
+    {
+     "type": "zone",
+     "document": "ampoule",
+     "reponse": [
+      "haut"
+     ],
+     "enonce": "Hugo a choisi le cyclohexane. Touche la phase organique, celle qui contient l’arôme.",
+     "aide": "Compare la masse volumique du cyclohexane (0,78 g/mL) à celle de l’eau (1,00 g/mL).",
+     "explication": "Le cyclohexane (0,78 g/mL) est **moins dense** que l’eau (1,00 g/mL) : la phase organique flotte, elle est en **haut**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si Hugo avait choisi le dichlorométhane (1,33 g/mL), où serait la phase organique ?",
+     "options": [
+      "En bas, car ce liquide est plus dense que l’eau",
+      "En haut, car il dissout mieux l’arôme que l’eau",
+      "En bas, car il est plus volatil que l’eau",
+      "En haut, car il n’est pas miscible avec l’eau"
+     ],
+     "reponse": 0,
+     "aide": "La position des phases dépend seulement de leurs masses volumiques.",
+     "explication": "La phase la plus **dense** est en bas : 1,33 g/mL > 1,00 g/mL, donc la phase organique serait **en bas**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Hugo verse 40 mL de cyclohexane dans l’ampoule. Quelle masse de cyclohexane cela représente-t-il ? Réponds en grammes.",
+     "reponse": 31.2,
+     "unite": "g",
+     "tolerance": 0.05,
+     "aide": "La masse se calcule avec la masse volumique : m = ρ × V.",
+     "explication": "m = ρ × V = 0,78 g/mL × 40 mL = **31,2 g**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les gestes de l’extraction dans le bon ordre.",
+     "items": [
+      "Verser le mélange dans l’ampoule et boucher",
+      "Retourner l’ampoule et agiter en dégazant",
+      "Poser l’ampoule sur son support et laisser décanter",
+      "Retirer le bouchon",
+      "Ouvrir le robinet et recueillir la phase du bas"
+     ],
+     "aide": "On ne vide jamais une ampoule bouchée : à quel moment ôte-t-on le bouchon ?",
+     "explication": "On remplit et on bouche, on **agite en dégazant**, on laisse **décanter**, puis on **retire le bouchon** avant d’ouvrir le robinet pour recueillir la phase inférieure."
+    }
+   ]
+  },
+  {
+   "chapitre": "aad28990-b793-57bd-9233-a2f7393703d2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le protocole de la synthèse de l’acétate d’isoamyle",
+   "competence": "analyser-document",
+   "situation": "Maëlle va synthétiser l’acétate d’isoamyle. Elle reçoit le protocole du TP et doit comprendre le rôle de chaque étape avant de choisir sa verrerie.",
+   "documents": [
+    {
+     "id": "protocole",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Protocole du TP",
+     "sousTitre": "Synthèse de l’acétate d’isoamyle",
+     "emoji": "🍌",
+     "lignes": [
+      {
+       "texte": "1. Mettre dans un ballon 10 mL d’alcool isoamylique, 20 mL d’acide éthanoïque, quelques gouttes d’acide sulfurique et de la pierre ponce.",
+       "id": "e1"
+      },
+      {
+       "texte": "2. Chauffer à reflux pendant 30 minutes.",
+       "id": "e2"
+      },
+      {
+       "texte": "3. Refroidir, verser sur de l’eau salée dans une ampoule, agiter en dégazant, décanter.",
+       "id": "e3"
+      },
+      {
+       "texte": "4. Laver la phase organique par une solution d’hydrogénocarbonate de sodium.",
+       "id": "e4"
+      },
+      {
+       "texte": "5. Sécher sur sulfate de magnésium anhydre et filtrer.",
+       "id": "e5"
+      },
+      {
+       "texte": "6. Distiller et recueillir l’ester.",
+       "id": "e6"
+      }
+     ],
+     "pied": "Protocole écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "protocole",
+     "reponse": [
+      "e3"
+     ],
+     "enonce": "Touche l’étape où l’ester est séparé de la phase aqueuse par différence de densité, avec de l’eau salée.",
+     "aide": "Cherche l’étape qui utilise l’ampoule à décanter.",
+     "explication": "À l’étape **3**, l’eau salée diminue la solubilité de l’ester dans l’eau (relargage) : il se retrouve dans la phase du haut, moins dense, que l’on sépare par décantation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque opération dans le temps de la synthèse où elle intervient.",
+     "categories": [
+      "Transformer",
+      "Isoler",
+      "Purifier"
+     ],
+     "items": [
+      [
+       "Chauffage à reflux",
+       0
+      ],
+      [
+       "Décantation en ampoule",
+       1
+      ],
+      [
+       "Filtration sous vide",
+       1
+      ],
+      [
+       "Distillation",
+       2
+      ],
+      [
+       "Lavage à l’hydrogénocarbonate",
+       2
+      ],
+      [
+       "Séchage sur sulfate de magnésium",
+       2
+      ]
+     ],
+     "aide": "Transformer : on fait réagir. Isoler : on sépare le produit du milieu. Purifier : on enlève les impuretés restantes.",
+     "explication": "Le **reflux** transforme ; la **décantation** et la **filtration** isolent ; le **lavage**, le **séchage** et la **distillation** purifient."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure du protocole à la verrerie adaptée.",
+     "paires": [
+      [
+       "20 mL d’acide éthanoïque en excès",
+       "Éprouvette graduée"
+      ],
+      [
+       "10,0 mL d’alcool isoamylique à doser précisément",
+       "Pipette jaugée"
+      ],
+      [
+       "Quelques grammes de sulfate de magnésium",
+       "Balance"
+      ]
+     ],
+     "aide": "Un volume précis demande de la verrerie précise ; un réactif en excès se mesure approximativement.",
+     "explication": "Un volume **approximatif** (réactif en excès) se prélève à l’**éprouvette**, un volume **précis** à la **pipette jaugée**, un solide se **pèse**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les réactifs occupent environ 30 mL. Le ballon ne doit être rempli qu’à moitié au plus : quel est le plus petit ballon qui convient ?",
+     "options": [
+      "50 mL",
+      "100 mL",
+      "250 mL",
+      "500 mL"
+     ],
+     "reponse": 1,
+     "aide": "Un ballon de 50 mL ne peut contenir que 25 mL de liquide au plus.",
+     "explication": "Avec 30 mL de liquides et un ballon rempli à moitié au plus, il faut une contenance d’au moins 60 mL : le plus petit ballon courant qui convient est celui de **100 mL**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "c3d67f85-7fa1-5f25-8445-4a93b12bdef7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le banc Kofler contrôle l’acide benzoïque",
+   "competence": "lire-tableau",
+   "situation": "Camille a synthétisé de l’acide benzoïque. Elle mesure sa température de fusion sur un banc Kofler avant et après recristallisation. La valeur tabulée de l’acide benzoïque pur est 122 °C.",
+   "documents": [
+    {
+     "id": "fusion",
+     "type": "tableau",
+     "titre": "Intervalles de fusion mesurés",
+     "colonnes": [
+      "Échantillon",
+      "Début de fusion (°C)",
+      "Fin de fusion (°C)"
+     ],
+     "lignes": [
+      [
+       "Produit brut",
+       "116",
+       "120"
+      ],
+      [
+       "Produit recristallisé",
+       "121",
+       "122"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fusion",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la température qui coïncide avec la valeur tabulée de 122 °C.",
+     "aide": "Cherche 122 dans le tableau.",
+     "explication": "C’est la fin de fusion du produit **recristallisé**, **122 °C** : elle égale la valeur tabulée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la largeur de l’intervalle de fusion du produit brut, en °C ?",
+     "reponse": 4,
+     "unite": "°C",
+     "tolerance": 0.1,
+     "aide": "Soustrais la température de début à celle de fin.",
+     "explication": "120 − 116 = **4 °C**. Un produit pur fond sur un intervalle étroit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ces mesures ?",
+     "options": [
+      "Le produit recristallisé est plus pur : il fond plus haut et sur un intervalle plus étroit",
+      "Le produit brut est plus pur : il fond plus bas et sur un intervalle plus large",
+      "Les deux produits sont aussi purs : seule la température de début change",
+      "Le produit recristallisé est impur : il fond sur un intervalle trop étroit"
+     ],
+     "reponse": 0,
+     "aide": "Les impuretés abaissent la température de fusion et l’étalent.",
+     "explication": "Un solide impur fond **plus bas** et sur un **intervalle** plus large ; la recristallisation a **purifié** le produit, qui fond à 121–122 °C."
+    }
+   ]
+  },
+  {
+   "chapitre": "c3d67f85-7fa1-5f25-8445-4a93b12bdef7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire la plaque de CCM de l’ester",
+   "competence": "analyser-document",
+   "situation": "Après une estérification, Inès dépose sur une plaque de CCM le réactif, son produit brut et un ester de référence pur. Elle élue, révèle, puis mesure à la règle.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "schema",
+     "titre": "La plaque révélée",
+     "largeur": 320,
+     "hauteur": 275,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 20,
+       "l": 220,
+       "h": 235,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        45
+       ],
+       "a": [
+        270,
+        45
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        225
+       ],
+       "a": [
+        270,
+        225
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 56,
+       "y": 38,
+       "texte": "front du solvant",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 56,
+       "y": 217,
+       "texte": "ligne de dépôt",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 171,
+       "rx": 11,
+       "ry": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "r",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 171,
+       "rx": 11,
+       "ry": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "pbas",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 99,
+       "rx": 11,
+       "ry": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "phaut",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 220,
+       "cy": 99,
+       "rx": 11,
+       "ry": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "ref",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 246,
+       "texte": "R",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 246,
+       "texte": "P",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 246,
+       "texte": "Réf.",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "tache révélée"
+      }
+     ],
+     "source": "R : réactif · P : produit brut · Réf. : ester pur"
+    },
+    {
+     "id": "regle",
+     "type": "tableau",
+     "titre": "Distances mesurées depuis la ligne de dépôt",
+     "colonnes": [
+      "Repère",
+      "Distance (cm)"
+     ],
+     "lignes": [
+      [
+       "Front du solvant",
+       "6,0"
+      ],
+      [
+       "Tache du réactif R",
+       "1,8"
+      ],
+      [
+       "Tache du bas de P",
+       "1,8"
+      ],
+      [
+       "Tache du haut de P",
+       "4,2"
+      ],
+      [
+       "Tache de la référence",
+       "4,2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "reponse": [
+      "pbas"
+     ],
+     "enonce": "Touche la tache du produit brut qui prouve qu’il reste du réactif.",
+     "aide": "Cherche la tache de P située au même niveau que celle du réactif R.",
+     "explication": "La tache du bas de **P** est à la même hauteur que **R** : le produit brut contient encore du réactif de départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rapport frontal de l’ester de référence (distance de la tache / distance du front), sans unité.",
+     "reponse": 0.7,
+     "tolerance": 0.005,
+     "aide": "Divise 4,2 cm par 6,0 cm.",
+     "explication": "Rf = 4,2 / 6,0 = **0,70**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tirer de la plaque ?",
+     "options": [
+      "L’ester est bien formé, mais la transformation est incomplète : le produit brut contient du réactif",
+      "La transformation est complète : le produit brut ne contient que l’ester de référence",
+      "L’ester n’est pas formé : le produit brut ne contient que le réactif de départ",
+      "Le produit brut est pur : ses deux taches correspondent à la même espèce"
+     ],
+     "reponse": 0,
+     "aide": "Compare les niveaux des taches de P avec ceux de R et de la référence.",
+     "explication": "La tache du haut de P est à **Rf = 0,70**, comme l’ester de référence : il est formé. La tache du bas est à **Rf = 0,30**, comme le réactif : il en reste. Le produit est **impur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c3d67f85-7fa1-5f25-8445-4a93b12bdef7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel rendement pour l’aspirine du TP ?",
+   "competence": "raisonner",
+   "situation": "En TP, Théo synthétise de l’aspirine à partir d’acide salicylique et d’anhydride éthanoïque, selon l’équation C₇H₆O₃ + C₄H₆O₃ → C₉H₈O₄ + C₂H₄O₂. Il veut identifier le réactif limitant, puis calculer son rendement.",
+   "documents": [
+    {
+     "id": "cr",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Compte rendu de TP",
+     "sousTitre": "Synthèse de l’aspirine",
+     "emoji": "💊",
+     "lignes": [
+      {
+       "texte": "Acide salicylique introduit",
+       "valeur": "2,0 g"
+      },
+      {
+       "texte": "Anhydride éthanoïque introduit",
+       "valeur": "5,0 mL"
+      },
+      {
+       "texte": "Aspirine obtenue après recristallisation",
+       "valeur": "1,9 g",
+       "id": "obtenue"
+      }
+     ],
+     "pied": "Compte rendu écrit pour l’exercice"
+    },
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données sur les espèces",
+     "colonnes": [
+      "Espèce",
+      "M (g/mol)",
+      "ρ (g/mL)"
+     ],
+     "lignes": [
+      [
+       "Acide salicylique C₇H₆O₃",
+       "138,0",
+       "—"
+      ],
+      [
+       "Anhydride éthanoïque C₄H₆O₃",
+       "102,0",
+       "1,08"
+      ],
+      [
+       "Aspirine C₉H₈O₄",
+       "180,0",
+       "—"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "donnees",
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la donnée qui permet de passer du volume d’anhydride éthanoïque à sa masse.",
+     "aide": "Un volume se convertit en masse avec une masse volumique.",
+     "explication": "La **masse volumique** de l’anhydride, 1,08 g/mL, donne m = ρ × V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité de matière d’acide salicylique introduit, en mol, arrondie à 10⁻⁴ près.",
+     "reponse": 0.0145,
+     "unite": "mol",
+     "tolerance": 0.00005,
+     "aide": "n = m / M avec m = 2,0 g et M = 138,0 g/mol.",
+     "explication": "n = 2,0 / 138,0 ≈ **0,0145 mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité de matière d’anhydride éthanoïque introduit, en mol, arrondie à 10⁻⁴ près.",
+     "reponse": 0.0529,
+     "unite": "mol",
+     "tolerance": 0.00005,
+     "aide": "Passe d’abord du volume à la masse : m = ρ × V, puis n = m / M.",
+     "explication": "m = 1,08 × 5,0 = 5,4 g ; n = 5,4 / 102,0 ≈ **0,0529 mol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le réactif limitant ?",
+     "options": [
+      "L’acide salicylique",
+      "L’anhydride éthanoïque",
+      "Les deux : ils sont en proportions stœchiométriques",
+      "Aucun : l’équation n’a pas de réactif limitant"
+     ],
+     "reponse": 0,
+     "aide": "Les coefficients sont tous égaux à 1 : le réactif limitant est celui dont la quantité est la plus petite.",
+     "explication": "0,0145 mol d’acide salicylique contre 0,0529 mol d’anhydride : **l’acide salicylique** est épuisé en premier, l’anhydride est en excès.",
+     "ordreFixe": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse maximale d’aspirine peut-on obtenir ? Réponds en grammes, au dixième.",
+     "reponse": 2.6,
+     "unite": "g",
+     "tolerance": 0.05,
+     "aide": "n(max) = n du réactif limitant ; m = n × M(aspirine) avec M = 180,0 g/mol.",
+     "explication": "n(max) = 0,0145 mol ; m(max) = 0,0145 × 180,0 ≈ **2,6 g**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rendement de la synthèse, en pourcentage arrondi à l’unité.",
+     "reponse": 73,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Rendement = masse obtenue / masse maximale, multiplié par 100.",
+     "explication": "η = 1,9 / 2,6 ≈ 0,73, soit **73 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "63eeb696-8889-5ff9-9d88-d1440f713a96",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre réactions, quatre familles",
+   "competence": "analyser-document",
+   "situation": "Le professeur écrit au tableau quatre équations de réactions rencontrées en synthèse. Il demande de les ranger par famille avant de les étudier.",
+   "documents": [
+    {
+     "id": "eq",
+     "type": "tableau",
+     "titre": "Les quatre réactions",
+     "colonnes": [
+      "Réaction",
+      "Équation"
+     ],
+     "lignes": [
+      [
+       "A",
+       "CH₃–CH₂–Br + HO⁻ → CH₃–CH₂–OH + Br⁻"
+      ],
+      [
+       "B",
+       "CH₃–CH=CH₂ + H₂ → CH₃–CH₂–CH₃"
+      ],
+      [
+       "C",
+       "CH₃–CH₂–CH₂–OH → CH₃–CH=CH₂ + H₂O"
+      ],
+      [
+       "D",
+       "CH₃–CO₂H + HO⁻ → CH₃–CO₂⁻ + H₂O"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Équations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eq",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche l’équation où une liaison double C=C apparaît dans les produits.",
+     "aide": "Compare réactifs et produits : cherche une liaison double qui n’existe pas côté réactifs.",
+     "explication": "Dans **C**, l’alcool perd H₂O et il se forme une liaison **C=C** : c’est une élimination."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réaction à sa famille.",
+     "paires": [
+      [
+       "Réaction A",
+       "Substitution"
+      ],
+      [
+       "Réaction B",
+       "Addition"
+      ],
+      [
+       "Réaction C",
+       "Élimination"
+      ],
+      [
+       "Réaction D",
+       "Acide-base"
+      ]
+     ],
+     "aide": "Une liaison double qui disparaît évoque une addition ; qui apparaît, une élimination ; Br remplacé par OH, une substitution ; un H⁺ qui passe, une réaction acide-base.",
+     "explication": "**A** : Br est remplacé par OH (substitution). **B** : la liaison C=C disparaît (addition). **C** : une liaison C=C apparaît (élimination). **D** : transfert d’un ion H⁺ (acide-base)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Dans la réaction C, le propan-1-ol perd une molécule d’___ : c’est une réaction d’___.",
+     "reponses": [
+      [
+       "eau"
+      ],
+      [
+       "élimination",
+       "elimination"
+      ]
+     ],
+     "banque": [
+      "eau",
+      "élimination",
+      "addition",
+      "dihydrogène"
+     ],
+     "aide": "Regarde ce que contient le produit autre que l’alcène.",
+     "explication": "Le second produit de C est **H₂O** : l’alcool a perdu de l’**eau** et une liaison double s’est formée, c’est une **élimination**."
+    }
+   ]
+  },
+  {
+   "chapitre": "63eeb696-8889-5ff9-9d88-d1440f713a96",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où le chloroéthane est-il attaqué ?",
+   "competence": "modeliser",
+   "situation": "Pour comprendre pourquoi le chloroéthane réagit avec les ions hydroxyde, Anaïs étudie la polarité de ses liaisons à l’aide d’un tableau d’électronégativités.",
+   "documents": [
+    {
+     "id": "chi",
+     "type": "tableau",
+     "titre": "Électronégativités",
+     "colonnes": [
+      "Élément",
+      "H",
+      "C",
+      "O",
+      "Cl"
+     ],
+     "lignes": [
+      [
+       "Électronégativité",
+       "2,2",
+       "2,6",
+       "3,4",
+       "3,2"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs de l’échelle de Pauling"
+    },
+    {
+     "id": "mol",
+     "type": "schema",
+     "titre": "Chloroéthane CH₃–CH₂–Cl",
+     "largeur": 320,
+     "hauteur": 130,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 40,
+       "l": 70,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "CH₃",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "ch3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        62
+       ],
+       "a": [
+        125,
+        62
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 40,
+       "l": 70,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "CH₂",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "ch2",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        195,
+        62
+       ],
+       "a": [
+        230,
+        62
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 40,
+       "l": 70,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "Cl",
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cl",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 112,
+       "texte": "Les liaisons C–H sont peu polarisées",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mol",
+     "reponse": [
+      "ch2"
+     ],
+     "enonce": "Touche le groupe qui porte le carbone de charge partielle δ+, site électrophile.",
+     "aide": "Quel carbone est lié à l’atome le plus électronégatif ?",
+     "explication": "Le chlore (3,2) attire les électrons de la liaison avec le carbone (2,6) : le carbone de **CH₂** porte une charge partielle **δ+**, c’est un site **électrophile**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la différence d’électronégativité entre le chlore et le carbone.",
+     "reponse": 0.6,
+     "tolerance": 0.01,
+     "aide": "Soustrais la plus petite valeur à la plus grande.",
+     "explication": "3,2 − 2,6 = **0,6** : la liaison C–Cl est nettement polarisée, Cl porte δ−."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque site : nucléophile (riche en électrons) ou électrophile (pauvre en électrons).",
+     "categories": [
+      "Site nucléophile",
+      "Site électrophile"
+     ],
+     "items": [
+      [
+       "Oxygène de l’ion HO⁻",
+       0
+      ],
+      [
+       "Chlore de R–Cl (δ−)",
+       0
+      ],
+      [
+       "Carbone lié à Cl dans R–Cl",
+       1
+      ],
+      [
+       "Carbone du groupe C=O",
+       1
+      ]
+     ],
+     "aide": "Une charge négative ou δ− est riche en électrons ; une charge δ+ en est pauvre.",
+     "explication": "HO⁻ (charge négative) et le chlore (δ−) sont **nucléophiles**. Les carbones liés à un atome plus électronégatif (Cl, ou O du C=O) sont **δ+** : **électrophiles**."
+    }
+   ]
+  },
+  {
+   "chapitre": "63eeb696-8889-5ff9-9d88-d1440f713a96",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Suivre les doublets : l’ion hydroxyde attaque le chloroéthane",
+   "competence": "modeliser",
+   "situation": "Mehdi doit écrire le mécanisme de la réaction entre le chloroéthane et l’ion hydroxyde HO⁻ à l’aide de flèches courbes, puis relier cette réaction à deux autres transformations du cours.",
+   "documents": [
+    {
+     "id": "meca",
+     "type": "schema",
+     "titre": "Mécanisme avec flèches courbes",
+     "largeur": 340,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 118,
+       "texte": "HO⁻",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 38,
+       "cy": 98,
+       "r": 2,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 46,
+       "cy": 98,
+       "r": 2,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 118,
+       "texte": "CH₃–CH₂",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 90,
+       "texte": "δ+",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        208,
+        114
+       ],
+       "a": [
+        248,
+        114
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 118,
+       "texte": "Cl",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 275,
+       "y": 90,
+       "texte": "δ−",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        42,
+        92
+       ],
+       "a": [
+        164,
+        100
+       ],
+       "fleche": "fin",
+       "courbe": -0.35,
+       "teinte": "violet",
+       "epaisseur": 2,
+       "id": "a1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        228,
+        111
+       ],
+       "a": [
+        272,
+        104
+       ],
+       "fleche": "fin",
+       "courbe": -0.5,
+       "teinte": "violet",
+       "epaisseur": 2,
+       "id": "a2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 52,
+       "texte": "flèche 1",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 66,
+       "texte": "flèche 2",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "autres",
+     "type": "tableau",
+     "titre": "Deux transformations du cours",
+     "colonnes": [
+      "Transformation",
+      "Réactif(s)",
+      "Produit"
+     ],
+     "lignes": [
+      [
+       "Hydrogénation d’un aldéhyde",
+       "propanal CH₃–CH₂–CHO et H₂ (Ni)",
+       "?"
+      ],
+      [
+       "Déshydratation d’un alcool",
+       "éthanol, acide, chauffage",
+       "éthène et eau"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "meca",
+     "reponse": [
+      "a2"
+     ],
+     "enonce": "Touche la flèche qui représente le départ de l’ion chlorure Cl⁻.",
+     "aide": "Dans la flèche qui s’éloigne du carbone vers Cl, quelle liaison se rompt ?",
+     "explication": "La **flèche 2** part du doublet de la liaison C–Cl et pointe vers le chlore, qui part avec le doublet sous forme d’ion **Cl⁻**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’où part la flèche 1 ?",
+     "options": [
+      "D’un doublet non liant de l’oxygène de HO⁻",
+      "De l’atome de carbone, vers l’atome d’oxygène",
+      "Du chlore, vers un atome d’hydrogène voisin",
+      "De la charge δ+ portée par le carbone vers HO⁻"
+     ],
+     "reponse": 0,
+     "aide": "Une flèche courbe part toujours d’un doublet d’électrons, jamais d’une charge.",
+     "explication": "Une flèche courbe représente le mouvement d’un **doublet**. La flèche 1 part d’un **doublet non liant de l’oxygène** (site nucléophile) vers le carbone δ+ (site électrophile)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’équation de la réaction.",
+     "texte": "CH₃–CH₂–Cl + HO⁻ → CH₃–CH₂–___ + ___",
+     "reponses": [
+      [
+       "OH"
+      ],
+      [
+       "Cl⁻"
+      ]
+     ],
+     "banque": [
+      "OH",
+      "Cl⁻",
+      "H₂O",
+      "Cl"
+     ],
+     "aide": "Un groupe est remplacé par un autre ; l’atome de chlore part avec le doublet.",
+     "explication": "Le groupe **OH** remplace Cl, qui part sous forme d’ion **Cl⁻** : CH₃–CH₂–Cl + HO⁻ → CH₃–CH₂–OH + Cl⁻."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le nom du produit de l’hydrogénation du propanal, indiqué par « ? » dans le tableau ?",
+     "reponse": [
+      "propan-1-ol",
+      "propan 1 ol",
+      "1-propanol",
+      "propanol"
+     ],
+     "aide": "L’hydrogénation d’un aldéhyde donne un alcool primaire de même chaîne carbonée.",
+     "explication": "L’addition de H₂ sur le groupe C=O de CH₃–CH₂–CHO donne CH₃–CH₂–CH₂OH : le **propan-1-ol**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La déshydratation de l’éthanol en éthène est une réaction…",
+     "options": [
+      "d’élimination",
+      "de substitution",
+      "d’addition",
+      "acide-base"
+     ],
+     "reponse": 0,
+     "aide": "Une molécule perd un petit groupe et une liaison double se forme.",
+     "explication": "L’éthanol perd H₂O et une liaison C=C apparaît : c’est une **élimination**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "a764617f-b186-572f-9f22-403bfffdd22e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois tubes, trois précipités",
+   "competence": "analyser-document",
+   "situation": "Un technicien verse quelques gouttes de soude dans trois tubes contenant chacun une solution d’un sel métallique différent. Un précipité se forme dans chaque tube.",
+   "documents": [
+    {
+     "id": "tubes",
+     "type": "schema",
+     "titre": "Les trois tubes après ajout de soude",
+     "largeur": 330,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 38,
+       "y": 30,
+       "l": 44,
+       "h": 110,
+       "arrondi": 10,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 80,
+       "l": 40,
+       "h": 58,
+       "arrondi": 8,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 60,
+       "cy": 128,
+       "rx": 16,
+       "ry": 8,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 22,
+       "texte": "+ soude",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 152,
+       "l": 40,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "A",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 143,
+       "y": 30,
+       "l": 44,
+       "h": 110,
+       "arrondi": 10,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 80,
+       "l": 40,
+       "h": 58,
+       "arrondi": 8,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 165,
+       "cy": 128,
+       "rx": 16,
+       "ry": 8,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 22,
+       "texte": "+ soude",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 152,
+       "l": 40,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "B",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 248,
+       "y": 30,
+       "l": 44,
+       "h": 110,
+       "arrondi": 10,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 80,
+       "l": 40,
+       "h": 58,
+       "arrondi": 8,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 270,
+       "cy": 128,
+       "rx": 16,
+       "ry": 8,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 22,
+       "texte": "+ soude",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 152,
+       "l": 40,
+       "h": 26,
+       "arrondi": 6,
+       "texte": "C",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "c",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tubes",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’étiquette du tube qui contient des ions Fe³⁺.",
+     "aide": "Avec la soude, les ions Fe³⁺ donnent un précipité de la couleur de la rouille.",
+     "explication": "Les ions **Fe³⁺** donnent avec la soude un précipité **rouille** : c’est le tube **C**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réactif d’identification à ce qu’il révèle.",
+     "paires": [
+      [
+       "Nitrate d’argent",
+       "Cl⁻ : précipité blanc qui noircit"
+      ],
+      [
+       "Chlorure de baryum",
+       "SO₄²⁻ : précipité blanc"
+      ],
+      [
+       "Soude",
+       "Cu²⁺, Fe²⁺, Fe³⁺ : précipités colorés"
+      ]
+     ],
+     "aide": "Le chlore et l’argent, le sulfate et le baryum : chaque réactif a sa cible.",
+     "explication": "Le **nitrate d’argent** révèle les ions chlorure, le **chlorure de baryum** les ions sulfate, la **soude** les ions métalliques selon la couleur du précipité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi réaliser aussi le même test sur de l’eau distillée ?",
+     "options": [
+      "Pour comparer à un témoin dont on connaît le résultat",
+      "Pour augmenter la quantité de précipité formé",
+      "Pour dissoudre le précipité en excès",
+      "Pour remplacer le réactif d’identification"
+     ],
+     "reponse": 0,
+     "aide": "Un test ne se lit bien que s’il est comparé à une référence.",
+     "explication": "Le **témoin** donne le résultat attendu quand l’ion est absent : on compare le résultat de l’échantillon à cette référence connue."
+    }
+   ]
+  },
+  {
+   "chapitre": "a764617f-b186-572f-9f22-403bfffdd22e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Propan-1-ol ou propanal ? Le spectre infrarouge tranche",
+   "competence": "lire-graphique",
+   "situation": "Deux flacons ont perdu leur étiquette : l’un contient du propan-1-ol CH₃–CH₂–CH₂OH, l’autre du propanal CH₃–CH₂–CHO. Un technicien enregistre le spectre infrarouge de chacun.",
+   "documents": [
+    {
+     "id": "sa",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre IR du flacon A",
+     "categories": [
+      "3900",
+      "3700",
+      "3500",
+      "3300",
+      "3100",
+      "2900",
+      "2700",
+      "2500",
+      "2300",
+      "2100",
+      "1900",
+      "1700",
+      "1500",
+      "1300",
+      "1100",
+      "900"
+     ],
+     "series": [
+      {
+       "nom": "Transmittance",
+       "valeurs": [
+        95,
+        93,
+        70,
+        36,
+        62,
+        40,
+        85,
+        95,
+        95,
+        95,
+        95,
+        93,
+        80,
+        78,
+        50,
+        85
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Transmittance",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "σ (cm⁻¹)"
+     },
+     "source": "Spectre simplifié, écrit pour l’exercice"
+    },
+    {
+     "id": "sb",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre IR du flacon B",
+     "categories": [
+      "3900",
+      "3700",
+      "3500",
+      "3300",
+      "3100",
+      "2900",
+      "2700",
+      "2500",
+      "2300",
+      "2100",
+      "1900",
+      "1700",
+      "1500",
+      "1300",
+      "1100",
+      "900"
+     ],
+     "series": [
+      {
+       "nom": "Transmittance",
+       "valeurs": [
+        95,
+        95,
+        95,
+        94,
+        90,
+        55,
+        80,
+        95,
+        95,
+        95,
+        92,
+        12,
+        85,
+        82,
+        78,
+        88
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Transmittance",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "σ (cm⁻¹)"
+     },
+     "source": "Spectre simplifié, écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sa",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Sur le spectre A, touche le point du minimum de transmittance : il correspond à la bande large d’une liaison O–H.",
+     "aide": "Les bandes pointent vers le bas : cherche le creux le plus profond de la zone des grands nombres d’onde.",
+     "explication": "Le creux le plus profond du spectre A est à **3 300 cm⁻¹**, bande large caractéristique de la liaison **O–H** d’un alcool."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel spectre est celui du propanal CH₃–CH₂–CHO ?",
+     "options": [
+      "Le spectre B : bande intense vers 1 700 cm⁻¹, pas de bande O–H",
+      "Le spectre A : bande large vers 3 300 cm⁻¹",
+      "Les deux : ils contiennent tous les deux des liaisons C–H",
+      "Aucun : il faudrait un spectre UV-visible pour trancher"
+     ],
+     "reponse": 0,
+     "aide": "Le propanal possède un groupe C=O mais pas de groupe O–H.",
+     "explication": "Le propanal contient un **C=O** (bande intense et fine vers 1 700 cm⁻¹) et pas de O–H : c’est le **spectre B**. Le spectre A, avec sa bande large à 3 300 cm⁻¹, est celui du propan-1-ol."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque liaison à la bande qui la caractérise.",
+     "paires": [
+      [
+       "O–H d’un alcool",
+       "Vers 3 300 cm⁻¹, bande large"
+      ],
+      [
+       "C=O",
+       "Vers 1 700 cm⁻¹, bande intense et fine"
+      ],
+      [
+       "C–H",
+       "Vers 2 900 cm⁻¹, bandes fines"
+      ]
+     ],
+     "aide": "Le nombre d’onde diminue de gauche à droite ; O–H est au-dessus de C–H, lui-même au-dessus de C=O.",
+     "explication": "O–H d’un alcool : **3 200 – 3 400 cm⁻¹**, bande large. C–H : **2 850 – 3 100 cm⁻¹**, bandes fines. C=O : **1 650 – 1 750 cm⁻¹**, bande intense et fine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La bande C=O du spectre B est à σ = 1 700 cm⁻¹. Calcule la longueur d’onde correspondante, en micromètres, arrondie au centième (λ = 1/σ ; 1 cm = 10⁴ µm).",
+     "reponse": 5.88,
+     "unite": "µm",
+     "tolerance": 0.005,
+     "aide": "Passe d’abord σ en cm⁻¹ à λ en cm, puis convertis en µm.",
+     "explication": "λ = 1 / 1 700 cm ≈ 5,88 × 10⁻⁴ cm = **5,88 µm** : on est bien dans le domaine infrarouge (2,5 à 25 µm)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a764617f-b186-572f-9f22-403bfffdd22e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au laboratoire d’analyses : un sel inconnu et un colorant",
+   "competence": "raisonner",
+   "situation": "Kévin reçoit deux échantillons : une solution minérale à identifier par des tests d’ions, et un colorant alimentaire à caractériser par son spectre UV-visible.",
+   "documents": [
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Tests sur la solution minérale",
+     "colonnes": [
+      "Test",
+      "Réactif ajouté",
+      "Observation"
+     ],
+     "lignes": [
+      [
+       "T1",
+       "Nitrate d’argent",
+       "précipité blanc qui noircit à la lumière"
+      ],
+      [
+       "T2",
+       "Chlorure de baryum",
+       "aucun précipité"
+      ],
+      [
+       "T3",
+       "Soude",
+       "précipité rouille"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    },
+    {
+     "id": "uv",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectre d’absorption du colorant",
+     "categories": [
+      "400",
+      "450",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "750"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0.05,
+        0.08,
+        0.15,
+        0.35,
+        0.75,
+        0.92,
+        0.6,
+        0.2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Longueur d’onde (nm)"
+     },
+     "source": "Spectre simplifié, écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tests",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche l’observation qui prouve la présence d’ions chlorure.",
+     "aide": "Le nitrate d’argent est le réactif des ions chlorure.",
+     "explication": "Un **précipité blanc qui noircit à la lumière** avec le nitrate d’argent est le signe des ions **Cl⁻**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels ions la solution contient-elle d’après les trois tests ?",
+     "options": [
+      "Cl⁻",
+      "SO₄²⁻",
+      "Fe³⁺",
+      "Cu²⁺"
+     ],
+     "reponse": [
+      0,
+      2
+     ],
+     "aide": "T2 écarte un ion ; T1 et T3 en désignent deux autres.",
+     "explication": "T1 : **Cl⁻**. T2 : pas de précipité, donc **pas de SO₄²⁻**. T3 : précipité rouille, donc **Fe³⁺** (Cu²⁺ donnerait du bleu). La solution est du chlorure de fer(III).",
+     "ordreFixe": true
+    },
+    {
+     "type": "zone",
+     "document": "uv",
+     "reponse": [
+      "k5"
+     ],
+     "enonce": "Touche la longueur d’onde du maximum d’absorption du colorant.",
+     "aide": "Cherche la plus haute valeur d’absorbance.",
+     "explication": "Le maximum d’absorbance (0,92) est atteint à **λmax = 650 nm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce colorant absorbe surtout vers 650 nm (lumière rouge). Quelle couleur la solution paraît-elle avoir ?",
+     "options": [
+      "Bleu-vert",
+      "Rouge",
+      "Jaune",
+      "Incolore"
+     ],
+     "reponse": 0,
+     "aide": "Une solution a la couleur complémentaire de celle qu’elle absorbe.",
+     "explication": "Une molécule qui absorbe la lumière rouge vers 650 nm paraît de la **couleur complémentaire**, **bleu-vert**.",
+     "ordreFixe": true
+    },
+    {
+     "type": "choix",
+     "enonce": "On modifie la molécule en lui ajoutant des doubles liaisons conjuguées. Comment λmax évolue-t-il ?",
+     "options": [
+      "Il se déplace vers de plus grandes longueurs d’onde",
+      "Il se déplace vers de plus petites longueurs d’onde",
+      "Il reste identique, seule l’absorbance change",
+      "Il passe dans le domaine de l’infrarouge lointain"
+     ],
+     "reponse": 0,
+     "aide": "Plus il y a de liaisons conjuguées, plus la molécule absorbe à grande longueur d’onde.",
+     "explication": "Plus une molécule possède de doubles liaisons **conjuguées**, plus elle absorbe à **grande longueur d’onde**."
+    }
+   ]
+  },
+  {
+   "chapitre": "95b6d4cf-95b1-5a36-9c9d-d5fd225889f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La droite d’étalonnage du colorant de la boisson",
+   "competence": "lire-graphique",
+   "situation": "Sacha veut connaître la concentration du colorant bleu d’une boisson. Elle prépare six solutions étalons, mesure leur absorbance au spectrophotomètre, puis mesure celle de la boisson diluée : A = 0,40.",
+   "documents": [
+    {
+     "id": "etal",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Absorbance des solutions étalons",
+     "categories": [
+      "0,00",
+      "0,10",
+      "0,20",
+      "0,30",
+      "0,40",
+      "0,50"
+     ],
+     "series": [
+      {
+       "nom": "A",
+       "valeurs": [
+        0,
+        0.16,
+        0.32,
+        0.48,
+        0.64,
+        0.8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance A",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Concentration (mmol/L)"
+     },
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etal",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche la concentration de l’étalon dont l’absorbance vaut 0,48.",
+     "aide": "Repère 0,48 sur l’axe des ordonnées, puis descends jusqu’à l’abscisse du point.",
+     "explication": "Le point d’ordonnée 0,48 a pour abscisse **0,30 mmol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur k de la droite A = k × c, en L/mol (prends le dernier point : c = 0,50 mmol/L, A = 0,80).",
+     "reponse": 1600,
+     "unite": "L/mol",
+     "tolerance": 1,
+     "aide": "Attention aux unités : 0,50 mmol/L = 0,50 × 10⁻³ mol/L.",
+     "explication": "k = A / c = 0,80 / (0,50 × 10⁻³ mol/L) = **1 600 L/mol**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration de la boisson diluée (A = 0,40), en 10⁻⁴ mol/L.",
+     "reponse": 2.5,
+     "unite": "× 10⁻⁴ mol/L",
+     "tolerance": 0.01,
+     "aide": "c = A / k, avec k en L/mol.",
+     "explication": "c = 0,40 / 1 600 = 2,5 × 10⁻⁴ mol/L, soit **2,5** en unités de 10⁻⁴ mol/L."
+    }
+   ]
+  },
+  {
+   "chapitre": "95b6d4cf-95b1-5a36-9c9d-d5fd225889f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Titrer le vinaigre avec de la soude",
+   "competence": "experimenter",
+   "situation": "Lina dose l’acide éthanoïque CH₃COOH d’un vinaigre. Elle dilue le vinaigre 10 fois, puis titre V_A = 10,0 mL de cette solution par de la soude (HO⁻, Na⁺) à C_B = 0,100 mol/L en suivant le pH. L’équation de la réaction est CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "schema",
+     "titre": "Le montage de titrage",
+     "largeur": 320,
+     "hauteur": 275,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 250,
+       "l": 90,
+       "h": 12,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 72,
+       "y": 20,
+       "l": 8,
+       "h": 232,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 40,
+       "l": 70,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 14,
+       "l": 14,
+       "h": 134,
+       "arrondi": 2,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "burette",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        60
+       ],
+       "a": [
+        157,
+        60
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        90
+       ],
+       "a": [
+        157,
+        90
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        120
+       ],
+       "a": [
+        157,
+        120
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 148,
+       "l": 22,
+       "h": 7,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        157,
+        155
+       ],
+       "a": [
+        157,
+        186
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 185,
+       "l": 90,
+       "h": 62,
+       "arrondi": 4,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "becher",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 236,
+       "l": 24,
+       "h": 6,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 249,
+       "l": 130,
+       "h": 16,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 196,
+       "y": 100,
+       "l": 14,
+       "h": 22,
+       "arrondi": 3,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        203,
+        122
+       ],
+       "a": [
+        190,
+        238
+       ],
+       "epaisseur": 3,
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 218,
+       "y": 112,
+       "texte": "sonde de pH",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "pH du mélange en fonction du volume de soude versé",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16"
+     ],
+     "series": [
+      {
+       "nom": "pH",
+       "valeurs": [
+        2.8,
+        4.1,
+        4.5,
+        4.8,
+        5.1,
+        5.5,
+        8.8,
+        11.9,
+        12.2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "pH",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Volume de soude versé (mL)"
+     },
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "reponse": [
+      "becher"
+     ],
+     "enonce": "Touche le récipient qui contient la solution titrée, le vinaigre dilué.",
+     "aide": "La solution titrante est dans l’instrument gradué en hauteur ; l’autre récipient reçoit la solution à doser.",
+     "explication": "Le **bécher** contient la solution titrée (vinaigre dilué, avec la sonde de pH et le barreau aimanté) ; la **burette** contient la soude titrante."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "reponse": [
+      "k6"
+     ],
+     "enonce": "Touche le volume de soude versé à l’équivalence, au milieu du saut de pH.",
+     "aide": "L’équivalence se situe au saut de pH, là où la courbe monte le plus vite.",
+     "explication": "Le pH passe de 5,5 à 11,9 autour de **V_E = 12 mL** : c’est le saut de pH qui repère l’équivalence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À l’équivalence, C_A × V_A = C_B × V_E. Calcule la concentration C_A du vinaigre dilué, en mol/L.",
+     "reponse": 0.12,
+     "unite": "mol/L",
+     "tolerance": 0.001,
+     "aide": "Les coefficients stœchiométriques sont égaux à 1 : C_A = C_B × V_E / V_A.",
+     "explication": "C_A = 0,100 × 12,0 / 10,0 = **0,120 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le vinaigre a été dilué 10 fois. Calcule sa concentration d’origine, en mol/L.",
+     "reponse": 1.2,
+     "unite": "mol/L",
+     "tolerance": 0.01,
+     "aide": "La dilution divise la concentration par 10 : il faut la remultiplier.",
+     "explication": "C = 10 × 0,120 = **1,20 mol/L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration en masse d’acide éthanoïque du vinaigre, en g/L (M = 60,0 g/mol).",
+     "reponse": 72,
+     "unite": "g/L",
+     "tolerance": 0.5,
+     "aide": "t = C × M.",
+     "explication": "t = 1,20 × 60,0 = **72 g/L**."
+    }
+   ]
+  },
+  {
+   "chapitre": "95b6d4cf-95b1-5a36-9c9d-d5fd225889f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Combien de fer dans un comprimé ?",
+   "competence": "raisonner",
+   "situation": "Un comprimé est annoncé à 80 mg de fer(II). Une élève le dissout dans une fiole jaugée de 100,0 mL d’eau acidifiée. Elle titre trois prises de 20,0 mL par une solution de permanganate de potassium à 0,0100 mol/L selon MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O. On donne M(Fe) = 55,8 g/mol.",
+   "documents": [
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Comprimés de fer",
+     "sousTitre": "Extrait de la notice",
+     "emoji": "💊",
+     "lignes": [
+      {
+       "texte": "Fer(II) par comprimé",
+       "valeur": "80 mg",
+       "id": "annonce"
+      },
+      {
+       "texte": "Tolérance sur le contenu",
+       "valeur": "± 5 %",
+       "id": "tol"
+      }
+     ],
+     "pied": "Notice écrite pour l’exercice"
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Volumes de permanganate versés à l’équivalence",
+     "colonnes": [
+      "Essai",
+      "V_E (mL)"
+     ],
+     "lignes": [
+      [
+       "1",
+       "5,6"
+      ],
+      [
+       "2",
+       "5,8"
+      ],
+      [
+       "3",
+       "5,7"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Comment repère-t-on l’équivalence dans ce titrage ?",
+     "options": [
+      "À la teinte violette qui persiste dans le bécher",
+      "Au saut de conductivité du mélange réactionnel",
+      "À la disparition de toute coloration du mélange",
+      "À un dégagement gazeux brutal dans le bécher"
+     ],
+     "reponse": 0,
+     "aide": "L’ion permanganate est coloré : que devient sa couleur tant qu’il y a du fer(II) à oxyder ?",
+     "explication": "Tant qu’il reste du Fe²⁺, le permanganate versé est consommé et se décolore ; à l’équivalence, la **teinte violette persiste** : le permanganate sert d’indicateur à lui seul."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du calcul de la masse de fer dans le comprimé.",
+     "items": [
+      "Calculer la moyenne des trois volumes équivalents",
+      "Calculer n(MnO₄⁻) = C × V_E",
+      "En déduire n(Fe²⁺) dans la prise : 5 × n(MnO₄⁻)",
+      "Passer à la fiole entière : × 100,0 / 20,0",
+      "Calculer la masse m = n × M(Fe)"
+     ],
+     "aide": "On part de la mesure et on remonte vers la grandeur cherchée.",
+     "explication": "D’abord la **moyenne** de V_E, puis **n(MnO₄⁻)**, puis **n(Fe²⁺)** dans la prise avec le coefficient 5, puis la **fiole entière**, enfin la **masse**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le volume équivalent moyen, en mL.",
+     "reponse": 5.7,
+     "unite": "mL",
+     "tolerance": 0.005,
+     "aide": "Additionne les trois essais et divise par 3.",
+     "explication": "V_E = (5,6 + 5,8 + 5,7) / 3 = **5,70 mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la quantité de fer(II) dans une prise de 20,0 mL, en 10⁻⁴ mol, arrondie au centième.",
+     "reponse": 2.85,
+     "unite": "× 10⁻⁴ mol",
+     "tolerance": 0.005,
+     "aide": "n(MnO₄⁻) = 0,0100 × 5,70 × 10⁻³ ; puis n(Fe²⁺) = 5 × n(MnO₄⁻).",
+     "explication": "n(MnO₄⁻) = 5,70 × 10⁻⁵ mol ; n(Fe²⁺) = 5 × 5,70 × 10⁻⁵ = 2,85 × 10⁻⁴ mol, soit **2,85** en unités de 10⁻⁴ mol."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En déduire la masse de fer(II) contenue dans un comprimé, en mg, arrondie au dixième.",
+     "reponse": 79.5,
+     "unite": "mg",
+     "tolerance": 0.2,
+     "aide": "La fiole de 100,0 mL contient 5 fois la prise de 20,0 mL ; m = n × M.",
+     "explication": "n(fiole) = 5 × 2,85 × 10⁻⁴ = 1,425 × 10⁻³ mol ; m = 1,425 × 10⁻³ × 55,8 ≈ 0,0795 g = **79,5 mg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le contenu mesuré est-il conforme à la notice ?",
+     "options": [
+      "Oui : 79,5 mg est dans l’intervalle 76 à 84 mg",
+      "Non : 79,5 mg est inférieur aux 80 mg annoncés",
+      "Oui : 79,5 mg est supérieur à la valeur annoncée",
+      "Non : l’intervalle de tolérance va de 80 à 84 mg"
+     ],
+     "reponse": 0,
+     "aide": "Calcule l’intervalle autorisé : 80 mg ± 5 %.",
+     "explication": "5 % de 80 mg font 4 mg : l’intervalle autorisé est **76 à 84 mg**, et 79,5 mg y est : le comprimé est **conforme**."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2013 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "efd45025-e850-5788-a424-671236edf444",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un livre où l’auteur se met à l’épreuve",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes les *Essais* à l’oral. Place le livre dans la vie de Montaigne, puis explique ce que veut dire « essai ».",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Montaigne et son livre",
+     "debut": 1530,
+     "fin": 1600,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1533,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ess",
+       "date": 1580,
+       "nom": "Premiers Essais"
+      },
+      {
+       "id": "mort",
+       "date": 1592,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Essais",
+     "sousTitre": "Michel de Montaigne",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Sens du mot « essai »",
+       "valeur": "Tentative, mise à l’épreuve"
+      },
+      {
+       "texte": "Au programme",
+       "valeur": "« Des Cannibales » et « Des Coches »"
+      },
+      {
+       "texte": "Parcours",
+       "valeur": "Notre monde vient d’en trouver un autre"
+      },
+      {
+       "texte": "Sujet du livre",
+       "valeur": "Lui-même, pour examiner l’homme"
+      }
+     ],
+     "pied": "Un livre augmenté jusqu’à la mort de l’auteur",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ess"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraissent les premiers *Essais*.",
+     "aide": "Ils paraissent douze ans avant la mort de Montaigne.",
+     "explication": "Les *Essais* paraissent à partir de **1580**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années Montaigne a-t-il pu augmenter son livre après sa parution ?",
+     "reponse": 12,
+     "aide": "Il l’enrichit jusqu’à sa mort : soustrais deux dates de la frise.",
+     "explication": "1592 − 1580 = **12 ans** : le livre est augmenté jusqu’à la mort de l’auteur.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "Le mot « essai » signifie ___ ; Montaigne n’écrit pas un ___ mais ___ en avançant.",
+     "reponses": [
+      [
+       "tentative"
+      ],
+      [
+       "traité"
+      ],
+      [
+       "pense"
+      ]
+     ],
+     "banque": [
+      "tentative",
+      "traité",
+      "pense",
+      "roman",
+      "conclut",
+      "victoire"
+     ],
+     "aide": "Relis la première ligne de la fiche et le début de l’exercice.",
+     "explication": "« Essai » signifie **tentative** ; Montaigne n’écrit pas un **traité** : il **pense** en avançant."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque chapitre à son sujet.",
+     "paires": [
+      [
+       "Des Cannibales",
+       "Des Tupinambas rencontrés à Rouen"
+      ],
+      [
+       "Des Coches",
+       "La conquête du Nouveau Monde"
+      ]
+     ],
+     "aide": "L’un part de la rencontre d’un peuple, l’autre de dépenses de princes.",
+     "explication": "**Des Cannibales** part des Tupinambas ; **Des Coches** glisse vers la conquête du Nouveau Monde."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd45025-e850-5788-a424-671236edf444",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Barbare, selon qui ?",
+   "competence": "analyser-texte",
+   "situation": "Montaigne a rencontré à Rouen des Tupinambas du Brésil. Lis sa phrase célèbre (orthographe modernisée), puis oppose leurs pratiques à celles de l’Europe.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La phrase célèbre",
+     "blocs": [
+      "Chacun appelle [[b|barbarie]] ce qui n’est pas de son [[u|usage]]."
+     ],
+     "source": "Montaigne, *Essais*, « Des Cannibales » (orthographe modernisée)"
+    },
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Chez eux, chez nous",
+     "colonnes": [
+      "Où ?",
+      "Ce qui se pratique"
+     ],
+     "lignes": [
+      [
+       "Chez les Tupinambas",
+       "L’anthropophagie rituelle sur un ennemi mort"
+      ],
+      [
+       "En Europe",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot que chacun applique à ce qui lui est étranger.",
+     "aide": "C’est le mot que l’on dit à propos de « l’autre ».",
+     "explication": "Chacun appelle **barbarie** ce qui n’est pas de son usage : le mot juge celui qui parle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : la pratique européenne à laquelle Montaigne oppose l’anthropophagie rituelle ?",
+     "options": [
+      "La torture de vivants, au nom de la religion",
+      "Le commerce des épices avec l’Orient",
+      "Les banquets des princes dans leurs coches",
+      "Les tournois de la noblesse"
+     ],
+     "reponse": 0,
+     "aide": "Chez les Tupinambas, l’ennemi est mort ; en Europe, il est…",
+     "explication": "En Europe, on pratique la **torture de vivants**, au nom de la religion : c’est pire, dit Montaigne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le mot « usage » dans la phrase ?",
+     "options": [
+      "Que « barbare » juge l’habitude de celui qui parle",
+      "Que les peuples utilisent tous les mêmes outils",
+      "Que Montaigne trouve l’usage des Tupinambas absurde",
+      "Que le mot « barbare » est un terme scientifique"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que « barbare » décrit, d’après la phrase.",
+     "explication": "Le mot **barbare** cesse de désigner l’autre : il désigne **le jugement de celui qui le prononce**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de cette comparaison sur le lecteur européen ?",
+     "options": [
+      "Il doit se regarder lui-même avant de juger l’autre",
+      "Il doit admirer sans réserve les Tupinambas",
+      "Il doit renoncer à toute règle morale",
+      "Il doit refuser de lire les récits de voyage"
+     ],
+     "reponse": 0,
+     "aide": "C’est le premier grand texte à retourner le regard contre l’Europe.",
+     "explication": "Le regard est **retourné contre l’Europe** : le lecteur est invité à se juger avant de juger l’autre."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd45025-e850-5788-a424-671236edf444",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des villes rasées, une rencontre manquée",
+   "competence": "argumenter",
+   "situation": "Dans « Des Coches », Montaigne passe des dépenses des princes à la conquête de l’Amérique. Lis un extrait de la formule célèbre, puis place les arguments dans un débat.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un chapitre qui glisse",
+     "blocs": [
+      "Montaigne dénonce « tant de villes [[v|rasées]], tant de nations [[v|exterminées]] »."
+     ],
+     "source": "Montaigne, *Essais*, « Des Coches » (orthographe modernisée) ; mise en contexte rédigée pour l’exercice"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Montaigne s’indigne parce qu’il déteste les Espagnols."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Plus précisément : il oppose leur supériorité [[t|technique]] à leur infériorité [[m|morale]]."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux mots qui disent le sort des villes et des nations.",
+     "aide": "Ils sont accolés à « villes » et « nations ».",
+     "explication": "Les villes sont **rasées**, les nations **exterminées** : Montaigne dénonce la destruction des civilisations américaines."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche l’adjectif qui marque, selon Hugo, l’infériorité des conquérants.",
+     "aide": "Il s’oppose à « technique ».",
+     "explication": "L’infériorité des conquérants est **morale** : ils ont gagné par les armes, non par la valeur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que regrette Montaigne à propos de la rencontre avec le Nouveau Monde ?",
+     "options": [
+      "Qu’elle ait été un massacre plutôt qu’un échange",
+      "Qu’elle ait appauvri la langue française",
+      "Qu’elle ait eu lieu trop tard",
+      "Que les Européens n’aient pas assez écrit"
+     ],
+     "reponse": 0,
+     "aide": "Il aurait aimé que cette rencontre soit autre chose qu’un carnage.",
+     "explication": "La rencontre **aurait pu être un échange** ; elle a été un **massacre**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque chapitre à ce qu’il fait voir.",
+     "paires": [
+      [
+       "Des Cannibales",
+       "Le mot « barbare » juge celui qui parle"
+      ],
+      [
+       "Des Coches",
+       "Un échange possible tourné en massacre"
+      ],
+      [
+       "L’ensemble des Essais",
+       "Un auteur qui pense en avançant"
+      ]
+     ],
+     "aide": "Pense au parcours : « notre monde vient d’en trouver un autre ».",
+     "explication": "**Cannibales** : le jugement de celui qui parle ; **Coches** : un massacre au lieu d’un échange ; **Essais** : une pensée qui avance."
+    }
+   ]
+  },
+  {
+   "chapitre": "17aa74fc-6fd2-58ee-a5bd-8582b4a1b214",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un continent que personne n’avait prévu",
+   "competence": "se-reperer-temps",
+   "situation": "En 1492, l’Europe apprend l’existence d’un continent inconnu. Place cette date sur la frise parmi les repères de la vie de Montaigne et vois ce qu’elle remet en cause.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du Nouveau Monde aux Essais",
+     "debut": 1480,
+     "fin": 1600,
+     "pas": 20,
+     "periodes": [
+      {
+       "id": "gdr",
+       "debut": 1562,
+       "fin": 1598,
+       "nom": "Guerres de religion",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "dec",
+       "date": 1492,
+       "nom": "Découverte"
+      },
+      {
+       "id": "ess",
+       "date": 1580,
+       "nom": "Essais"
+      },
+      {
+       "id": "mort",
+       "date": 1592,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "dec"
+     ],
+     "enonce": "Sur la frise, touche l’événement qui ébranle l’autorité des Anciens.",
+     "aide": "L’Europe apprend l’existence d’un continent inconnu.",
+     "explication": "La **découverte de 1492** montre l’existence d’un continent que ni la Bible ni les Anciens n’avaient prévu."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la découverte de la parution des premiers *Essais* ?",
+     "reponse": 88,
+     "aide": "Soustrais 1492 de la date de parution.",
+     "explication": "1580 − 1492 = **88 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur les autorités qui n’avaient pas prévu ce continent.",
+     "texte": "Le continent n’avait été prévu ni par la ___, ni par ___, ni par Ptolémée.",
+     "reponses": [
+      [
+       "Bible"
+      ],
+      [
+       "Aristote"
+      ]
+     ],
+     "banque": [
+      "Bible",
+      "Aristote",
+      "Platon",
+      "Homère"
+     ],
+     "aide": "Une autorité religieuse et une autorité philosophique.",
+     "explication": "Ni la **Bible**, ni **Aristote**, ni Ptolémée : l’autorité des Anciens vacille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la devise de Montaigne, qui résume sa méthode du doute ?",
+     "options": [
+      "« Que sais-je ? »",
+      "« Je pense, donc je suis »",
+      "« Rien ne sert de courir »",
+      "« Connais-toi toi-même »"
+     ],
+     "reponse": 0,
+     "aide": "Sa devise est une question.",
+     "explication": "Sa devise est « **Que sais-je ?** » : le doute comme discipline de la pensée."
+    }
+   ]
+  },
+  {
+   "chapitre": "17aa74fc-6fd2-58ee-a5bd-8582b4a1b214",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Relativiser sans tout permettre",
+   "competence": "analyser-document",
+   "situation": "Montaigne déplace nos certitudes : la « nature » n’est souvent que l’habitude. Mais il juge pourtant. Lis le tableau pour comprendre cette nuance.",
+   "documents": [
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Le relativisme de Montaigne",
+     "colonnes": [
+      "Ce que Montaigne dit",
+      "Ce que cela veut dire"
+     ],
+     "lignes": [
+      [
+       "Ce que nous appelons « nature »",
+       "N’est souvent que l’habitude"
+      ],
+      [
+       "Ce que nous appelons « barbarie »",
+       "N’est que l’usage d’un autre"
+      ],
+      [
+       "Ce qu’il ne dit pas",
+       "?"
+      ],
+      [
+       "Ce qu’il juge fermement",
+       "La torture, l’avidité, la cruauté des conquérants"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Que tout se vaut",
+      "Que seul l’usage français est juste",
+      "Que le doute est inutile",
+      "Que les Anciens avaient raison"
+     ],
+     "reponse": 0,
+     "aide": "Montaigne relativise, mais il condamne la cruauté.",
+     "explication": "Il ne dit **pas que tout se vaut** : il juge fermement la torture, l’avidité, la cruauté."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : Montaigne le relativise, ou il le condamne.",
+     "categories": [
+      "Il relativise",
+      "Il condamne"
+     ],
+     "items": [
+      [
+       "Ce qu’on appelle « nature »",
+       0
+      ],
+      [
+       "Ce qu’on appelle « barbarie »",
+       0
+      ],
+      [
+       "La torture",
+       1
+      ],
+      [
+       "L’avidité des conquérants",
+       1
+      ],
+      [
+       "La cruauté des conquérants",
+       1
+      ]
+     ],
+     "aide": "Cherche la ligne « Ce qu’il juge fermement ».",
+     "explication": "Il **relativise** nature et barbarie ; il **condamne** torture, avidité et cruauté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le relativisme est chez lui un ___ critique, pas une ___ morale.",
+     "reponses": [
+      [
+       "instrument"
+      ],
+      [
+       "démission"
+      ]
+     ],
+     "banque": [
+      "instrument",
+      "démission",
+      "victoire",
+      "excuse"
+     ],
+     "aide": "Un outil pour réfléchir, pas un abandon de la morale.",
+     "explication": "Le relativisme est un **instrument** critique, pas une **démission** morale."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot de Montaigne à sa vraie portée.",
+     "paires": [
+      [
+       "Nature",
+       "Souvent l’habitude"
+      ],
+      [
+       "Barbarie",
+       "L’usage d’un autre"
+      ],
+      [
+       "Doute",
+       "Une discipline de la pensée"
+      ]
+     ],
+     "aide": "Le tableau et le cours donnent les trois équivalences.",
+     "explication": "**Nature** : habitude ; **barbarie** : usage d’un autre ; **doute** : discipline de la pensée."
+    }
+   ]
+  },
+  {
+   "chapitre": "17aa74fc-6fd2-58ee-a5bd-8582b4a1b214",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un bon sauvage qui tend un miroir",
+   "competence": "argumenter",
+   "situation": "Montaigne décrit une société parfaite en apparence. Est-ce de l’ethnographie ou une manière de critiquer la France ? Lis le résumé, puis suis le débat.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le portrait des Tupinambas",
+     "blocs": [
+      "Dans son portrait, Montaigne décrit une société sans [[m|commerce]], sans [[m|écriture]], sans [[m|magistrature]], sans [[m|propriété]].",
+      "Le tableau est trop beau pour être exact : il sert à faire voir, par contraste, une France déchirée par les [[g|guerres]] de religion."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Adam",
+       "texte": "Montaigne raconte fidèlement ce qui se passe au Brésil."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Il sait que son portrait est idéalisé : c’est un [[r|miroir]] tendu à l’Europe."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les quatre éléments que la société décrite ne connaît pas.",
+     "aide": "Ils sont tous précédés de « sans ».",
+     "explication": "**Commerce, écriture, magistrature, propriété** : l’absence de ce qui structure l’Europe."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot qui nomme ce qui déchire la France à l’époque de Montaigne.",
+     "aide": "Le conflit est religieux.",
+     "explication": "La France est déchirée par les **guerres** de religion."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot de Zoé qui définit la fonction du portrait.",
+     "aide": "Un objet qui renvoie notre propre image.",
+     "explication": "Le portrait est un **miroir** : il montre les vices de la société européenne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la fonction de ce portrait idéalisé ?",
+     "options": [
+      "Une utopie critique, qui rend visibles les vices de la France",
+      "Un reportage fidèle et précis sur la vie au Brésil",
+      "Une publicité pour de futurs voyages vers l’Amérique",
+      "Une copie d’un récit de voyage de Jean-Jacques Rousseau"
+     ],
+     "reponse": 0,
+     "aide": "Le résumé dit « par contraste ».",
+     "explication": "C’est une **utopie critique** : un miroir tendu à l’Europe, pas une ethnographie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce qu’elle désigne.",
+     "paires": [
+      [
+       "Les allongeails",
+       "Les ajouts de Montaigne d’une édition à l’autre"
+      ],
+      [
+       "Le « bon sauvage »",
+       "Un mythe que Rousseau reprendra"
+      ],
+      [
+       "La forme des Essais",
+       "Une pensée qui bouge, refuse de conclure"
+      ]
+     ],
+     "aide": "Chaque notion est dans la section « L’écriture comme mouvement » ou « Le mythe du bon sauvage ».",
+     "explication": "Les **allongeails** sont les ajouts ; le **bon sauvage** annonce Rousseau ; la **forme** dit la thèse : une pensée honnête bouge."
+    }
+   ]
+  },
+  {
+   "chapitre": "6668b03c-9c51-573f-8996-0abd1c5cae8e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un second recueil plus sombre",
+   "competence": "analyser-document",
+   "situation": "Tu fiches le second recueil des *Fables*. Rassemble les repères, puis rappelle les procédés qui font de la fable un art.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Fables, livres VII à XI",
+     "sousTitre": "Jean de La Fontaine",
+     "emoji": "🦁",
+     "lignes": [
+      {
+       "texte": "Second recueil",
+       "valeur": "1678"
+      },
+      {
+       "texte": "Premier recueil (livres I à VI)",
+       "valeur": "1668"
+      },
+      {
+       "texte": "Sources",
+       "valeur": "Ésope et Phèdre"
+      },
+      {
+       "texte": "Vers",
+       "valeur": "Vers libres, alexandrins et octosyllabes"
+      }
+     ],
+     "pied": "Parcours : imagination et pensée au XVIIe siècle",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le premier recueil du second ?",
+     "reponse": 10,
+     "aide": "Soustrais les deux dates de l’affiche.",
+     "explication": "1678 − 1668 = **10 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "La Fontaine emprunte ses sujets à ___ et à ___, et écrit en ___ libres.",
+     "reponses": [
+      [
+       "Ésope"
+      ],
+      [
+       "Phèdre"
+      ],
+      [
+       "vers"
+      ]
+     ],
+     "banque": [
+      "Ésope",
+      "Phèdre",
+      "vers",
+      "Homère",
+      "Virgile",
+      "prose"
+     ],
+     "aide": "Cherche « Sources » et « Vers ».",
+     "explication": "Il emprunte à **Ésope** et à **Phèdre** et écrit en **vers** libres."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de La Fontaine à son effet.",
+     "paires": [
+      [
+       "Les vers libres",
+       "Le mètre épouse le rythme du récit"
+      ],
+      [
+       "Les dialogues",
+       "La fable devient une petite scène"
+      ],
+      [
+       "Les changements de ton",
+       "Du burlesque au grave"
+      ],
+      [
+       "La chute",
+       "Nette, souvent en un vers"
+      ]
+     ],
+     "aide": "Chaque procédé est détaillé dans le cours, section « Une forme brève et savante ».",
+     "explication": "**Vers libres** : rythme du récit ; **dialogues** : petite scène ; **changements de ton** : burlesque au grave ; **chute** : en un vers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume le principe de La Fontaine sur la morale ?",
+     "options": [
+      "Le conte fait passer le précepte avec lui",
+      "La morale doit ouvrir chaque fable",
+      "La morale est inutile et à supprimer",
+      "Seul un roi peut conclure une fable"
+     ],
+     "reponse": 0,
+     "aide": "Une morale nue apporte de l’ennui.",
+     "explication": "Le principe : « une morale nue apporte de l’ennui : le conte fait passer le **précepte** avec lui »."
+    }
+   ]
+  },
+  {
+   "chapitre": "6668b03c-9c51-573f-8996-0abd1c5cae8e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le mal qui répand la terreur",
+   "competence": "analyser-texte",
+   "situation": "Les premiers vers des « Animaux malades de la peste » ouvrent le livre VII. Lis-les, puis observe la forme et la place de la morale dans les fables.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les premiers vers",
+     "blocs": [
+      "Un mal qui répand la terreur,",
+      "Mal que le [[c|Ciel]] en sa fureur",
+      "Inventa pour punir les crimes de la terre,",
+      "La [[p|peste]] (puisqu’il faut l’appeler par son nom),"
+     ],
+     "source": "Jean de La Fontaine, *Fables*, livre VII, « Les Animaux malades de la peste »"
+    },
+    {
+     "id": "mor",
+     "type": "tableau",
+     "titre": "La place de la morale",
+     "colonnes": [
+      "Où elle se trouve",
+      "Ce que cela implique"
+     ],
+     "lignes": [
+      [
+       "En tête ou en fin de fable",
+       "Explicite"
+      ],
+      [
+       "Absente ou ironique",
+       "?"
+      ],
+      [
+       "Contredite par le récit",
+       "La fable devient un piège à lecture rapide"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui nomme le fléau.",
+     "aide": "Le poète le nomme enfin, après des périphrases.",
+     "explication": "Le fléau est la **peste**, nommée « par son nom » après une longue périphrase."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui désigne l’origine du fléau.",
+     "aide": "C’est l’instance qui punit les crimes de la terre.",
+     "explication": "Le **Ciel** envoie le mal pour punir : l’apologue prend un ton de grandeur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ces vers de longueurs différentes ?",
+     "options": [
+      "Des vers libres, mêlant vers courts et vers longs",
+      "Une suite régulière d’alexandrins sans variation",
+      "De la prose rimée sans mesure de vers fixe",
+      "Un sonnet de quatorze vers à rimes embrassées"
+     ],
+     "reponse": 0,
+     "aide": "Compte à l’oreille : le premier est plus court que le troisième.",
+     "explication": "La Fontaine emploie des **vers libres**, alternant octosyllabes et alexandrins : le mètre épouse le récit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : que doit faire le lecteur quand la morale est absente ou ironique ?",
+     "options": [
+      "Conclure lui-même",
+      "Ignorer la fable",
+      "Attendre la fable suivante",
+      "Chercher la morale dans la préface"
+     ],
+     "reponse": 0,
+     "aide": "La liberté laissée au lecteur est une force.",
+     "explication": "Le lecteur doit **conclure lui-même** : c’est cette part de liberté qui fait que ces fables ne vieillissent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "6668b03c-9c51-573f-8996-0abd1c5cae8e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Puissant ou misérable ?",
+   "competence": "argumenter",
+   "situation": "Dans la même fable, La Fontaine fait dire à un animal une phrase restée célèbre. Lis-la, puis tranche le débat sur le masque animal.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "La morale de la cour",
+     "blocs": [
+      "Selon que vous serez [[p|puissant]] ou [[p|misérable]],",
+      "Les [[j|jugements]] de cour vous rendront blanc ou noir."
+     ],
+     "source": "Jean de La Fontaine, *Fables*, livre VII, « Les Animaux malades de la peste »"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maël",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Salomé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maël",
+       "texte": "La Fontaine parle vraiment d’animaux."
+      },
+      {
+       "qui": "Salomé",
+       "texte": "Non : c’est un [[m|masque]]. Le lion, c’est le roi."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux adjectifs qui opposent les puissants aux faibles.",
+     "aide": "Ils sont reliés par « ou ».",
+     "explication": "Les **puissants** et les **misérables** : la justice dépend de la place sociale."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Salomé dit que les animaux cachent autre chose.",
+     "aide": "C’est un objet que l’on porte devant le visage.",
+     "explication": "Les animaux sont un **masque** : l’apologue dit ce qu’un sujet ne peut pas dire en son nom."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la fable à ce qu’il représente.",
+     "paires": [
+      [
+       "Le lion",
+       "Le roi"
+      ],
+      [
+       "La cour",
+       "Un théâtre d’hypocrisie"
+      ],
+      [
+       "La justice",
+       "Elle se règle sur la force"
+      ]
+     ],
+     "aide": "Le cours résume la satire dans trois lignes.",
+     "explication": "Le **lion** est le roi, la **cour** un théâtre d’hypocrisie, la **justice** se règle sur la force."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi La Fontaine recourt-il au masque animal pour parler de la cour ?",
+     "options": [
+      "Pour dire ce qu’un sujet de Louis XIV ne pouvait pas dire en son nom",
+      "Pour amuser uniquement les enfants du roi et leurs précepteurs",
+      "Parce qu’il ignorait tout de la cour et de ses usages réels",
+      "Parce que les animaux parlent plus clairement que les hommes"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux risques à l’époque de Louis XIV.",
+     "explication": "L’apologue permet de dire, **sous le masque animal**, ce qu’un sujet de Louis XIV ne pouvait pas dire en son nom."
+    }
+   ]
+  },
+  {
+   "chapitre": "c01c222d-5a80-5e80-b212-19611e82b25d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux Persans écrivent depuis Paris",
+   "competence": "analyser-document",
+   "situation": "Tu présentes les *Lettres persanes*. Rassemble les repères du roman, puis distingue les deux voyageurs.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Lettres persanes",
+     "sousTitre": "Montesquieu",
+     "emoji": "✉️",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Roman épistolaire"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "1721, anonyme, à Amsterdam"
+      },
+      {
+       "texte": "Nombre de lettres",
+       "valeur": "161"
+      },
+      {
+       "texte": "Voyageurs",
+       "valeur": "Usbek et Rica, partis d’Ispahan"
+      }
+     ],
+     "pied": "Parcours : le regard éloigné",
+     "teinte": "violet"
+    },
+    {
+     "id": "voix",
+     "type": "tableau",
+     "titre": "Deux voix, deux tons",
+     "colonnes": [
+      "",
+      "Rica",
+      "Usbek"
+     ],
+     "lignes": [
+      [
+       "Son ton",
+       "Jeune, gai, moqueur",
+       "?"
+      ],
+      [
+       "Ce qu’il fait",
+       "Le portrait satirique de la société française",
+       "Il réfléchit sur les lois, la justice, la religion, le despotisme"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec l’affiche.",
+     "texte": "Les *Lettres persanes* sont un roman ___ de ___ lettres, publié à ___ en 1721.",
+     "reponses": [
+      [
+       "épistolaire"
+      ],
+      [
+       "161"
+      ],
+      [
+       "Amsterdam"
+      ]
+     ],
+     "banque": [
+      "épistolaire",
+      "historique",
+      "161",
+      "100",
+      "Amsterdam",
+      "Paris"
+     ],
+     "aide": "Lis « Genre », « Nombre de lettres » et « Publication ».",
+     "explication": "Un roman **épistolaire** de **161** lettres, publié anonymement à **Amsterdam** en 1721."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le ton d’Usbek (la case « ? ») ?",
+     "options": [
+      "Grave",
+      "Gai et moqueur",
+      "Naïf",
+      "Joyeux"
+     ],
+     "reponse": 0,
+     "aide": "Rica est jeune et moqueur : Usbek est son contraire.",
+     "explication": "Usbek est **grave** : il réfléchit sur les lois, la justice, le despotisme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à son rôle.",
+     "paires": [
+      [
+       "Ispahan",
+       "La ville d’où partent Usbek et Rica"
+      ],
+      [
+       "Roxane",
+       "Elle écrit la dernière lettre"
+      ],
+      [
+       "Les eunuques",
+       "Ils surveillent le sérail et reçoivent des lettres"
+      ],
+      [
+       "Rica",
+       "Le voyageur moqueur"
+      ]
+     ],
+     "aide": "Le sérail est resté en Perse.",
+     "explication": "**Ispahan** : départ ; **Roxane** : dernière lettre ; **eunuques** : sérail ; **Rica** : le portrait satirique."
+    }
+   ]
+  },
+  {
+   "chapitre": "c01c222d-5a80-5e80-b212-19611e82b25d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment peut-on être Persan ?",
+   "competence": "analyser-texte",
+   "situation": "À Paris, on s’étonne de voir un Persan. Lis la célèbre exclamation, puis regarde comment les deux voyageurs décrivent les institutions françaises.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une exclamation célèbre",
+     "blocs": [
+      "« Ah ! ah ! Monsieur est Persan ? C’est une chose bien extraordinaire ! Comment peut-on être [[p|Persan]] ? »"
+     ],
+     "source": "Montesquieu, *Lettres persanes* (1721), lettre de Rica"
+    },
+    {
+     "id": "desc",
+     "type": "tableau",
+     "titre": "Un regard éloigné",
+     "colonnes": [
+      "Ce qui est décrit",
+      "Comment il apparaît"
+     ],
+     "lignes": [
+      [
+       "Le roi",
+       "Un grand magicien qui fait croire que le papier est de l’argent"
+      ],
+      [
+       "Le pape",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui est devenu, pour les Parisiens, une chose « bien extraordinaire ».",
+     "aide": "C’est l’origine de Rica.",
+     "explication": "Être **Persan** paraît extraordinaire : l’habitude ne protège plus l’étonné."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette exclamation sur les Parisiens ?",
+     "options": [
+      "Ils trouvent étrange ce qui n’est pas leur habitude",
+      "Ils admirent profondément la Perse et ses coutumes",
+      "Ils n’ont jamais rencontré d’étranger de leur vie",
+      "Ils sont parfaitement neutres devant toute nouveauté"
+     ],
+     "reponse": 0,
+     "aide": "Qui, ici, voit l’autre comme une curiosité ?",
+     "explication": "Les Parisiens jugent **étrange** ce qui n’est pas leur habitude : le regard éloigné retourne le regard sur eux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le pape est-il présenté dans la case « ? » ?",
+     "options": [
+      "Comme un autre magicien, qui fait croire que trois ne font qu’un",
+      "Comme un grand savant qui prouve que trois font trois",
+      "Comme un voyageur persan",
+      "Comme un roi qui dirige l’Église"
+     ],
+     "reponse": 0,
+     "aide": "Le roi est un magicien : le pape aussi.",
+     "explication": "Le pape est **un autre magicien** qui fait croire que trois ne font qu’un."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le principe du regard éloigné.",
+     "texte": "Le procédé : faire décrire nos ___ par quelqu’un qui ne les ___ pas.",
+     "reponses": [
+      [
+       "usages"
+      ],
+      [
+       "comprend"
+      ]
+     ],
+     "banque": [
+      "usages",
+      "comprend",
+      "lois",
+      "aime"
+     ],
+     "aide": "Il décrit sans savoir pourquoi on fait ainsi.",
+     "explication": "On fait décrire **nos usages** par quelqu’un qui ne les **comprend** pas : le familier devient étrange."
+    }
+   ]
+  },
+  {
+   "chapitre": "c01c222d-5a80-5e80-b212-19611e82b25d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le penseur de la liberté, tyran chez lui",
+   "competence": "argumenter",
+   "situation": "Pendant que les voyageurs philosophent, le sérail d’Ispahan se révolte. Lis ce résumé de la dernière lettre, puis relie-le au sujet de dissertation.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La dernière lettre",
+     "blocs": [
+      "Roxane, restée au sérail d’Ispahan, écrit à Usbek : elle l’a [[t|trahi]], elle s’est [[e|empoisonnée]], et elle ne l’a [[j|jamais]] aimé."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le penseur de la liberté est un tyran chez lui",
+       "Usbek condamne le despotisme à Paris mais l’exerce au sérail",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le verbe qui dit ce que Roxane a fait à la confiance d’Usbek.",
+     "aide": "Roxane n’a pas été fidèle.",
+     "explication": "Roxane l’a **trahi** : elle révèle sa révolte."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui annonce la fin de Roxane.",
+     "aide": "Elle met fin à ses jours.",
+     "explication": "Elle s’est **empoisonnée** : le roman finit en tragédie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La dernière lettre de Roxane",
+      "Le portrait du roi en magicien",
+      "L’exclamation « Comment peut-on être Persan ? »",
+      "Le voyage de Rica à Paris"
+     ],
+     "reponse": 0,
+     "aide": "Où voit-on la révolte du sérail ?",
+     "explication": "L’exemple est la **dernière lettre de Roxane** : le despote chez lui est trahi."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du roman : satire de la société, ou tragédie du sérail.",
+     "categories": [
+      "Satire (Paris)",
+      "Tragédie (Ispahan)"
+     ],
+     "items": [
+      [
+       "Le roi en grand magicien",
+       0
+      ],
+      [
+       "Le pape en autre magicien",
+       0
+      ],
+      [
+       "La surveillance des eunuques",
+       1
+      ],
+      [
+       "Le poison de Roxane",
+       1
+      ],
+      [
+       "La révolte des femmes d’Usbek",
+       1
+      ]
+     ],
+     "aide": "La satire est dans les portraits de la France, la tragédie dans le sérail.",
+     "explication": "La **satire** est parisienne (roi et pape en magiciens) ; la **tragédie** se joue au sérail (eunuques, poison, révolte)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le roman en faisant tenir ensemble ces deux registres ?",
+     "options": [
+      "Que le penseur de la liberté était un tyran chez lui",
+      "Que la satire est plus importante que la tragédie",
+      "Que Montesquieu défend le despotisme",
+      "Que le sérail est un simple décor"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la leçon cinglante de la fin.",
+     "explication": "La leçon est cinglante : le **penseur de la liberté était un tyran chez lui**, et le roman unit satire et tragédie."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d643ae0-554c-5aed-a48f-6b4926c13f31",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pourquoi passer par la Perse ?",
+   "competence": "se-reperer-temps",
+   "situation": "En 1721, attaquer de front la monarchie, l’Église ou la justice expose à la censure. Place le roman parmi ses repères, puis explique l’intérêt du détour.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Montesquieu et son temps",
+     "debut": 1710,
+     "fin": 1750,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "reg",
+       "debut": 1715,
+       "fin": 1723,
+       "nom": "Régence",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "louis",
+       "date": 1715,
+       "nom": "Mort de Louis XIV"
+      },
+      {
+       "id": "lp",
+       "date": 1721,
+       "nom": "Lettres persanes"
+      },
+      {
+       "id": "edl",
+       "date": 1748,
+       "nom": "De l’esprit des lois"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "lp"
+     ],
+     "enonce": "Sur la frise, touche la parution des *Lettres persanes*.",
+     "aide": "Elle a lieu pendant la période de la Régence.",
+     "explication": "Les *Lettres persanes* paraissent en **1721**, sous la Régence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les *Lettres persanes* de *De l’esprit des lois* ?",
+     "reponse": 27,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1748 − 1721 = **27 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel avantage du détour est résumé par « ce dont on rit cesse d’être sacré » ?",
+     "options": [
+      "Faire rire désacralise les institutions",
+      "Éviter toute critique des institutions",
+      "Plaire au roi et à la cour",
+      "Faire oublier la Régence"
+     ],
+     "reponse": 0,
+     "aide": "Le détour permet d’échapper à la censure, de dépayser et de faire rire.",
+     "explication": "Faire rire **désacralise** : ce dont on rit cesse d’être sacré."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque cible du roman à ce qui est dénoncé.",
+     "paires": [
+      [
+       "La monarchie absolue",
+       "La vanité de la cour"
+      ],
+      [
+       "L’Église",
+       "Ses querelles théologiques, son intolérance"
+      ],
+      [
+       "La justice",
+       "Sa lenteur et sa vénalité"
+      ]
+     ],
+     "aide": "Le cours détaille six cibles dans un tableau ; trois suffisent ici.",
+     "explication": "**Monarchie** : vanité de la cour ; **Église** : querelles et intolérance ; **justice** : lenteur et vénalité."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d643ae0-554c-5aed-a48f-6b4926c13f31",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le peuple qui demanda un roi",
+   "competence": "analyser-document",
+   "situation": "Au cœur du roman, un conte politique : l’apologue des Troglodytes. Lis la fiche et le tableau en désordre, puis remets de l’ordre dans le récit.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’apologue des Troglodytes",
+     "sousTitre": "Montesquieu",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Où ?",
+       "valeur": "Lettres XI à XIV"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Récit inséré, conte politique"
+      },
+      {
+       "texte": "Question posée",
+       "valeur": "Quelles institutions rendent la liberté possible ?"
+      }
+     ],
+     "pied": "Annonce *De l’esprit des lois* (1748)",
+     "teinte": "violet"
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes du conte (en désordre)",
+     "colonnes": [
+      "Étape",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "La suite",
+       "Elle demande un roi, parce que la vertu est trop exigeante"
+      ],
+      [
+       "Un peuple égoïste",
+       "Il s’autodétruit"
+      ],
+      [
+       "Une petite communauté vertueuse",
+       "Elle prospère"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de lettres forment l’apologue, des lettres XI à XIV ?",
+     "reponse": 4,
+     "aide": "Compte XI, XII, XIII, XIV.",
+     "explication": "XI, XII, XIII, XIV : **quatre** lettres forment le récit inséré.",
+     "unite": "lettres"
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois temps du conte dans l’ordre.",
+     "items": [
+      "Un peuple égoïste s’autodétruit",
+      "Une petite communauté vertueuse prospère",
+      "Elle demande un roi"
+     ],
+     "aide": "Le conte commence par ce qui est mauvais, puis par ce qui est bon.",
+     "explication": "D’abord l’**autodestruction** des égoïstes, puis la **prospérité** des vertueux, enfin la **demande d’un roi**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la communauté vertueuse demande-t-elle un roi ?",
+     "options": [
+      "Parce que la vertu est trop exigeante",
+      "Parce qu’elle a été vaincue",
+      "Parce qu’un roi vertueux l’a conquise",
+      "Parce qu’elle manque de nourriture"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière ligne du tableau.",
+     "explication": "La vertu est **trop exigeante** : elle prospère, puis réclame un roi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle question ce conte pose-t-il, et à quel livre mène-t-elle ?",
+     "options": [
+      "Quelles institutions rendent la liberté possible ? (*De l’esprit des lois*)",
+      "Qui doit gouverner la Perse après Usbek ? (*Les Fourberies de Scapin*)",
+      "Comment éviter le mariage à tout prix ? (*Le Mariage de Figaro*)",
+      "Que reste-t-il de nous après la mort ? (*Les Essais de Montaigne*)"
+     ],
+     "reponse": 0,
+     "aide": "Relis « Question posée » et le pied de la fiche.",
+     "explication": "La question est « **quelles institutions rendent la liberté possible ?** » : elle donnera *De l’esprit des lois* (1748)."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d643ae0-554c-5aed-a48f-6b4926c13f31",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sérail, modèle réduit du despotisme",
+   "competence": "argumenter",
+   "situation": "Le sérail n’est pas un décor exotique : c’est un laboratoire du despotisme. Lis ce court texte écrit pour l’exercice, puis réponds aux axes de dissertation.",
+   "documents": [
+    {
+     "id": "seraill",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Au sérail d’Ispahan",
+     "blocs": [
+      "Tout repose sur la [[s|surveillance]] des eunuques et sur la [[p|punition]]. Aucune loi n’est écrite : on obéit par [[t|peur]]. Quand la peur lâche, tout s’effondre."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "axes",
+     "type": "tableau",
+     "titre": "Axes de dissertation",
+     "colonnes": [
+      "Question",
+      "Ce que permet l’œuvre"
+     ],
+     "lignes": [
+      [
+       "Le rire est-il une arme efficace contre le pouvoir ?",
+       "Toute la satire y répond"
+      ],
+      [
+       "Le regard étranger est-il neutre ?",
+       "?"
+      ],
+      [
+       "Peut-on dénoncer le despotisme et l’exercer ?",
+       "La contradiction d’Usbek est la trouvaille du livre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "seraill",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux mécanismes par lesquels le pouvoir s’exerce au sérail.",
+     "aide": "Il y en a deux avant « Aucune loi ».",
+     "explication": "Surveillance et punition : voilà comment le sérail obtient l’obéissance."
+    },
+    {
+     "type": "zone",
+     "document": "seraill",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le sentiment qui fait obéir, faute de lois.",
+     "aide": "Aucune loi n’est écrite : c’est la crainte qui tient.",
+     "explication": "On obéit par **peur** : le despotisme sans lois se maintient par la terreur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : le regard étranger est-il neutre ?",
+     "options": [
+      "Non : Usbek juge, et il est lui-même jugé",
+      "Oui : les Persans ne jugent jamais",
+      "Oui : Rica reste toujours silencieux",
+      "Seulement dans les lettres de Roxane"
+     ],
+     "reponse": 0,
+     "aide": "Usbek dénonce le despotisme tout en l’exerçant.",
+     "explication": "**Non** : Usbek juge — et il est lui-même jugé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mécanisme du sérail à sa conséquence.",
+     "paires": [
+      [
+       "Surveillance, eunuques, punitions",
+       "L’obéissance obtenue par la peur"
+      ],
+      [
+       "Aucune loi",
+       "L’effondrement final"
+      ]
+     ],
+     "aide": "Le tableau « Le sérail comme laboratoire » du cours résume ces deux lignes.",
+     "explication": "La **peur** obtient l’obéissance ; l’absence de **loi** conduit à l’effondrement final."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le sérail est-il pour Montesquieu un modèle réduit du pouvoir absolu ?",
+     "options": [
+      "Parce que, faute de lois, la terreur finit par s’écrouler",
+      "Parce qu’il imite Versailles jusque dans ses décors",
+      "Parce qu’il montre un despotisme heureux et durable",
+      "Parce qu’il oppose Rica à Roxane tout au long du livre"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que devient le despotisme sans lois.",
+     "explication": "Sans lois, le despotisme ne tient que par la **terreur** — et finit par s’écrouler."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ca80f97-1cc7-5326-a5d5-2c17b99547e2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un mariage sans amour à la cour de Henri II",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur le premier grand roman d’analyse. Présente-le, puis démêle qui aime qui.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Princesse de Clèves",
+     "sousTitre": "Madame de Lafayette",
+     "emoji": "👑",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1678, anonyme"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "La cour de Henri II, 1558-1559"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Premier grand roman d’analyse"
+      },
+      {
+       "texte": "Parcours",
+       "valeur": "Individu, morale et société"
+      }
+     ],
+     "pied": "Les mouvements intérieurs comptent plus que l’action",
+     "teinte": "violet"
+    },
+    {
+     "id": "liens",
+     "type": "chaine",
+     "titre": "Mariage et passion",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n",
+       "texte": "Duc de Nemours"
+      },
+      {
+       "id": "p",
+       "texte": "Princesse de Clèves"
+      },
+      {
+       "id": "c",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n",
+       "a": "p"
+      },
+      {
+       "de": "p",
+       "a": "c"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec l’affiche.",
+     "texte": "Le roman paraît en ___, de façon ___, et se déroule à la cour de ___.",
+     "reponses": [
+      [
+       "1678"
+      ],
+      [
+       "anonyme"
+      ],
+      [
+       "Henri II"
+      ]
+     ],
+     "banque": [
+      "1678",
+      "1721",
+      "anonyme",
+      "signée",
+      "Henri II",
+      "Louis XIV"
+     ],
+     "aide": "Cherche « Publication » et « Cadre ».",
+     "explication": "Le roman paraît en **1678**, de façon **anonyme**, et se déroule à la cour de **Henri II**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » : celui qu’elle épouse sans amour ?",
+     "options": [
+      "Le prince de Clèves",
+      "Le duc de Guise",
+      "Le roi Henri II",
+      "Le vidame de Chartres"
+     ],
+     "reponse": 0,
+     "aide": "Il l’aime passionnément, mais elle ne l’aime pas.",
+     "explication": "Elle épouse **le prince de Clèves**, qui l’aime passionnément."
+    },
+    {
+     "type": "zone",
+     "document": "liens",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le personnage dont elle tombe amoureuse : le coup de foudre est réciproque et silencieux.",
+     "aide": "Ce n’est pas son mari.",
+     "explication": "C’est **le duc de Nemours**, dont elle tombe amoureuse."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Madame de Chartres",
+       "Sa mère mourante, qui la met en garde"
+      ],
+      [
+       "Le prince de Clèves",
+       "Son mari, qui meurt de jalousie"
+      ],
+      [
+       "Le duc de Nemours",
+       "Il entend l’aveu, caché"
+      ]
+     ],
+     "aide": "La mère, le mari, l’amoureux : trois étapes du roman.",
+     "explication": "**Madame de Chartres** avertit ; **Clèves** meurt de jalousie ; **Nemours** entend l’aveu, caché."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ca80f97-1cc7-5326-a5d5-2c17b99547e2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’aveu qui change tout",
+   "competence": "se-reperer-temps",
+   "situation": "La scène de l’aveu est au cœur du roman. Lis la phrase célèbre, puis remets l’intrigue dans l’ordre.",
+   "documents": [
+    {
+     "id": "aveu",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La scène de l’aveu",
+     "blocs": [
+      "« Eh bien, Monsieur, lui répondit-elle en se jetant à ses genoux, je vais vous faire un [[a|aveu]] que l’on n’a jamais fait à un [[m|mari]]. »"
+     ],
+     "source": "Madame de Lafayette, *La Princesse de Clèves* (1678)"
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes de l’intrigue (en désordre)",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le refus",
+       "Libre, la princesse refuse d’épouser Nemours"
+      ],
+      [
+       "Le témoin",
+       "?"
+      ],
+      [
+       "La mort",
+       "Rongé par la jalousie, le prince de Clèves meurt"
+      ],
+      [
+       "Le mariage",
+       "Mademoiselle de Chartres, seize ans, épouse le prince sans amour"
+      ],
+      [
+       "L’aveu",
+       "Elle avoue à son mari qu’elle aime un autre homme, sans le nommer"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aveu",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui nomme ce que la princesse s’apprête à faire.",
+     "aide": "Le mot est dans la phrase qu’elle dit à son mari.",
+     "explication": "Elle va faire un **aveu** : c’est le cœur de la scène."
+    },
+    {
+     "type": "zone",
+     "document": "aveu",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui désigne celui à qui l’aveu est fait.",
+     "aide": "La phrase dit que cet aveu n’a jamais été fait à…",
+     "explication": "L’aveu est fait à son **mari** : c’est ce qui scandalise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » de l’étape du témoin ?",
+     "options": [
+      "Nemours, caché, entend tout",
+      "Madame de Chartres écoute à la porte",
+      "Le roi lit la lettre de la princesse",
+      "Un page répète l’aveu à la cour"
+     ],
+     "reponse": 0,
+     "aide": "Il aime déjà la princesse et se cache.",
+     "explication": "**Nemours**, caché, entend tout."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes de l’intrigue dans l’ordre.",
+     "items": [
+      "Mademoiselle de Chartres épouse le prince sans amour",
+      "La princesse avoue à son mari qu’elle aime un autre homme",
+      "Le prince de Clèves meurt de jalousie",
+      "La princesse refuse d’épouser Nemours"
+     ],
+     "aide": "Le mariage ouvre l’histoire, le refus la ferme.",
+     "explication": "**Mariage**, **aveu**, **mort** du prince, **refus** : voilà l’ordre du roman."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ca80f97-1cc7-5326-a5d5-2c17b99547e2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi refuse-t-elle ?",
+   "competence": "argumenter",
+   "situation": "La fin du roman est un des sujets de dissertation les plus fréquents. Lis la dernière phrase du livre, puis range les arguments des quatre lectures possibles.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La dernière phrase",
+     "blocs": [
+      "Sa vie, qui fut assez [[c|courte]], laissa des exemples de [[v|vertu]] inimitables."
+     ],
+     "source": "Madame de Lafayette, *La Princesse de Clèves* (1678), dernière phrase du roman"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Ambre",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ambre",
+       "texte": "Elle refuse par orgueil : elle ne veut pas être quittée."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Non, c’est de la sagesse : elle connaît la nature du désir."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot par lequel le narrateur qualifie les exemples laissés par la princesse.",
+     "aide": "C’est une qualité morale.",
+     "explication": "Le narrateur parle d’exemples de **vertu** : mais cette phrase ne tranche pas la raison du refus."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’adjectif qui dit que la vie de la princesse fut brève.",
+     "aide": "Elle meurt jeune.",
+     "explication": "Sa vie fut **courte** : elle meurt jeune, après s’être retirée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque argument selon la lecture du refus qu’il appuie.",
+     "categories": [
+      "Orgueil",
+      "Sagesse",
+      "Peur",
+      "Liberté"
+     ],
+     "items": [
+      [
+       "Elle ne veut pas être quittée",
+       0
+      ],
+      [
+       "Elle sait que le désir ne dure pas",
+       1
+      ],
+      [
+       "Elle redoute le monde et la cour",
+       2
+      ],
+      [
+       "Elle choisit de ne dépendre de personne",
+       3
+      ]
+     ],
+     "aide": "Chaque argument correspond à une ligne du tableau « Lecture possible ».",
+     "explication": "**Orgueil** : être quittée ; **sagesse** : le désir ; **peur** : le monde ; **liberté** : ne dépendre de personne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles raisons la princesse donne-t-elle elle-même à son refus ?",
+     "options": [
+      "Le devoir envers le mort, et la passion de Nemours qui s’éteindrait",
+      "Son orgueil, et sa jalousie envers Nemours et ses rivales",
+      "Sa peur de la cour, de la reine et de la mère de Nemours",
+      "Son amour secret pour un autre homme que Nemours"
+     ],
+     "reponse": 0,
+     "aide": "Deux raisons : l’une regarde le passé, l’autre l’avenir.",
+     "explication": "Le **devoir** envers le mort et la **certitude** que la passion de Nemours ne durerait pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ce refus permet-il le mieux ?",
+     "options": [
+      "Le texte laisse ouvertes plusieurs lectures du refus",
+      "Le refus est unanimement une preuve de vertu",
+      "Le refus prouve que la princesse n’aimait pas Nemours",
+      "Le refus montre que le roman est une comédie"
+     ],
+     "reponse": 0,
+     "aide": "Le roman a fait scandale dès 1678.",
+     "explication": "Le texte **laisse les quatre lectures ouvertes** : c’est ce qui en fait un sujet de dissertation fréquent."
+    }
+   ]
+  }
+ ]
+}

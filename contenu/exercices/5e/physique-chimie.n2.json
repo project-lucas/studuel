@@ -1,0 +1,5128 @@
+{
+ "niveau": "5e",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "325b9123-94f9-5ab6-a91e-c0f05f425523",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le Système solaire du club d’astronomie",
+   "competence": "observer-schema",
+   "situation": "Pour le club d’astronomie, Inès dessine le Système solaire sur le tableau. Elle a rangé les planètes dans l’ordre en partant du Soleil.",
+   "documents": [
+    {
+     "id": "systeme",
+     "type": "schema",
+     "titre": "Le dessin d’Inès",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 100,
+       "r": 26,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "soleil",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 145,
+       "texte": "Soleil",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 78,
+       "cy": 100,
+       "r": 4,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "mercure",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 78,
+       "y": 68,
+       "texte": "Mercure",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 104,
+       "cy": 100,
+       "r": 6,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "venus",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 104,
+       "y": 146,
+       "texte": "Vénus",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 100,
+       "r": 6,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "terre",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 68,
+       "texte": "Terre",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 156,
+       "cy": 100,
+       "r": 5,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "mars",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 156,
+       "y": 146,
+       "texte": "Mars",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 192,
+       "cy": 100,
+       "r": 14,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "jupiter",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 192,
+       "y": 68,
+       "texte": "Jupiter",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 232,
+       "cy": 100,
+       "r": 12,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "saturne",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 146,
+       "texte": "Saturne",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 268,
+       "cy": 100,
+       "r": 9,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "uranus",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 268,
+       "y": 68,
+       "texte": "Uranus",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 303,
+       "cy": 100,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "neptune",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 303,
+       "y": 146,
+       "texte": "Neptune",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 185,
+       "texte": "Tailles et distances non respectées",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "systeme",
+     "enonce": "Touche l’étoile du Système solaire, celle qui produit sa propre lumière.",
+     "reponse": [
+      "soleil"
+     ],
+     "aide": "Parmi les astres dessinés, une seule étoile est au centre du système.",
+     "explication": "Le **Soleil** est une étoile : il produit sa propre lumière. Les planètes ne font que la diffuser."
+    },
+    {
+     "type": "zone",
+     "document": "systeme",
+     "multiple": true,
+     "enonce": "Touche les quatre planètes gazeuses.",
+     "reponse": [
+      "jupiter",
+      "saturne",
+      "uranus",
+      "neptune"
+     ],
+     "aide": "Les planètes gazeuses sont les quatre plus éloignées du Soleil.",
+     "explication": "Les planètes gazeuses sont **Jupiter, Saturne, Uranus et Neptune**. Les quatre plus proches (Mercure, Vénus, la Terre, Mars) sont telluriques, donc rocheuses."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de planètes sont plus proches du Soleil que la Terre ?",
+     "reponse": 2,
+     "unite": "planètes",
+     "aide": "Compte les astres dessinés entre le Soleil et la Terre.",
+     "explication": "Entre le Soleil et la Terre, il y a **Mercure et Vénus** : 2 planètes."
+    }
+   ]
+  },
+  {
+   "chapitre": "325b9123-94f9-5ab6-a91e-c0f05f425523",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de temps la lumière met-elle pour arriver ?",
+   "competence": "lire-tableau",
+   "situation": "Pour un exposé, Malo a relevé le temps que met la lumière à nous parvenir depuis trois astres. Il veut en déduire les distances. La lumière va à 300 000 km/s dans le vide.",
+   "documents": [
+    {
+     "id": "duree",
+     "type": "tableau",
+     "titre": "Durée du trajet de la lumière",
+     "colonnes": [
+      "Astre",
+      "Durée du trajet"
+     ],
+     "lignes": [
+      [
+       "Lune",
+       "1,3 s"
+      ],
+      [
+       "Soleil",
+       "500 s"
+      ],
+      [
+       "Neptune",
+       "4,0 h"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs simplifiées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance Terre-Lune, en km ? (d = v × t)",
+     "reponse": 390000,
+     "unite": "km",
+     "aide": "Multiplie la vitesse de la lumière en km/s par la durée en secondes.",
+     "explication": "On utilise **d = v × t** : d = 300 000 km/s × 1,3 s = **390 000 km**."
+    },
+    {
+     "type": "zone",
+     "document": "duree",
+     "enonce": "Touche l’astre dont la lumière met le plus de temps à nous parvenir.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Compare les durées : attention, une est en heures et les autres en secondes.",
+     "explication": "4,0 h, c’est beaucoup plus que 500 s : c’est **Neptune**, le plus lointain."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance la lumière parcourt-elle en 4,0 h pour atteindre Neptune ? Réponds en milliards de km.",
+     "reponse": 4.32,
+     "unite": "milliards de km",
+     "aide": "Convertis d’abord 4,0 h en secondes (1 h = 3 600 s), puis applique d = v × t.",
+     "explication": "4,0 h = 14 400 s. **d = v × t** = 300 000 × 14 400 = 4 320 000 000 km, soit **4,32 milliards de km**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand Malo regarde la Lune, comment la voit-il ?",
+     "options": [
+      "Telle qu’elle était il y a 1,3 s",
+      "Telle qu’elle est à cet instant précis",
+      "Telle qu’elle sera dans 1,3 s",
+      "Telle qu’elle était il y a 500 s"
+     ],
+     "reponse": 0,
+     "aide": "La lumière met du temps pour venir jusqu’à nous : regarder loin, c’est regarder tôt.",
+     "explication": "La lumière de la Lune met 1,3 s : on la voit **telle qu’elle était il y a 1,3 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "325b9123-94f9-5ab6-a91e-c0f05f425523",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un message radio vers le robot de Mars",
+   "competence": "lire-graphique",
+   "situation": "Une sonde est posée sur Mars. Léa travaille au centre de contrôle : le message qu’elle envoie voyage à la vitesse de la lumière. Elle veut savoir combien de temps il met pour aller sur Mars, puis pour recevoir la réponse.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Distance parcourue par la lumière",
+     "categories": [
+      "0 s",
+      "100 s",
+      "200 s",
+      "300 s",
+      "400 s",
+      "500 s"
+     ],
+     "series": [
+      {
+       "nom": "Distance",
+       "valeurs": [
+        0,
+        30,
+        60,
+        90,
+        120,
+        150
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Distance parcourue",
+      "unite": "en millions de km",
+      "min": 0,
+      "max": 150,
+      "pas": 30
+     },
+     "axeX": {
+      "titre": "Durée du trajet"
+     },
+     "source": "Calculs avec 300 000 km/s"
+    },
+    {
+     "id": "dist",
+     "type": "tableau",
+     "titre": "Distance de la Terre",
+     "colonnes": [
+      "Astre",
+      "Distance (millions de km)"
+     ],
+     "lignes": [
+      [
+       "Mars",
+       "225"
+      ],
+      [
+       "Jupiter",
+       "780"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Distances arrondies, à un moment donné"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis la courbe : quelle distance la lumière parcourt-elle en 300 s ?",
+     "reponse": 90,
+     "unite": "millions de km",
+     "aide": "Cherche le point de la courbe sous 300 s et lis sa hauteur sur l’axe vertical.",
+     "explication": "Au point 300 s, la courbe est à **90 millions de km** (300 000 km/s × 300 s = 90 000 000 km)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Mars est à 225 millions de km. Combien de secondes le message met-il pour y arriver ?",
+     "reponse": 750,
+     "unite": "s",
+     "aide": "Pense à d = v × t, donc t = d ÷ v. Écris 225 millions de km avec tous ses zéros.",
+     "explication": "t = d ÷ v = 225 000 000 km ÷ 300 000 km/s = **750 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léa reçoit la réponse après un aller-retour. Combien de minutes cela fait-il ?",
+     "reponse": 25,
+     "unite": "min",
+     "aide": "Un aller-retour, c’est deux trajets de 750 s.",
+     "explication": "Aller-retour : 2 × 750 s = 1 500 s, soit 1 500 ÷ 60 = **25 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Même question pour Jupiter (780 millions de km) : combien de secondes met la lumière pour un aller simple ?",
+     "reponse": 2600,
+     "unite": "s",
+     "aide": "Applique la même relation, avec 780 000 000 km.",
+     "explication": "t = d ÷ v = 780 000 000 ÷ 300 000 = **2 600 s**, soit un peu plus de 43 minutes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Proxima du Centaure est à 4,2 années-lumière. Qu’observe-t-on quand on la regarde ?",
+     "options": [
+      "Telle qu’elle était il y a 4,2 ans",
+      "Telle qu’elle est aujourd’hui",
+      "Telle qu’elle sera dans 4,2 ans",
+      "Telle qu’elle était il y a 4,2 minutes"
+     ],
+     "reponse": 0,
+     "aide": "Une année-lumière, c’est la distance parcourue par la lumière en un an.",
+     "explication": "La lumière met 4,2 ans : on voit Proxima **telle qu’elle était il y a 4,2 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e15eaa3-663a-5071-9b8e-0353e35d0887",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De l’atome à la planète : une échelle de tailles",
+   "competence": "lire-tableau",
+   "situation": "Au club de sciences, Nora doit ranger des objets du plus petit au plus grand. Elle a relevé leurs ordres de grandeur dans un tableau, mais pas dans l’ordre.",
+   "documents": [
+    {
+     "id": "echelle",
+     "type": "tableau",
+     "titre": "Les ordres de grandeur",
+     "colonnes": [
+      "Objet",
+      "Taille"
+     ],
+     "lignes": [
+      [
+       "Planète",
+       "10⁷ m"
+      ],
+      [
+       "Atome",
+       "10⁻¹⁰ m"
+      ],
+      [
+       "Organisme",
+       "1 m"
+      ],
+      [
+       "Cellule",
+       "10⁻⁵ m"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces objets du plus petit au plus grand.",
+     "items": [
+      "Atome",
+      "Cellule",
+      "Organisme",
+      "Planète"
+     ],
+     "aide": "Plus l’exposant de 10 est grand, plus l’objet est grand : 10⁻¹⁰ est le plus petit.",
+     "explication": "On range par exposant croissant : **atome (10⁻¹⁰ m), cellule (10⁻⁵ m), organisme (1 m), planète (10⁷ m)**."
+    },
+    {
+     "type": "zone",
+     "document": "echelle",
+     "enonce": "Touche l’ordre de grandeur de la taille d’une cellule.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche la ligne « Cellule » et regarde la colonne « Taille ».",
+     "explication": "Une cellule mesure environ **10⁻⁵ m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une cellule fait 10⁻⁵ m et un atome 10⁻¹⁰ m. La cellule est 10 puissance combien de fois plus grande que l’atome ? (écris l’exposant)",
+     "reponse": 5,
+     "aide": "Passe de 10⁻¹⁰ à 10⁻⁵ : combien de crans de 10 as-tu montés ?",
+     "explication": "De 10⁻¹⁰ à 10⁻⁵, on monte de **5** crans : la cellule est 10⁵ fois plus grande que l’atome."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e15eaa3-663a-5071-9b8e-0353e35d0887",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le spectre d’une étoile lointaine",
+   "competence": "observer-schema",
+   "situation": "Un astronome a décomposé la lumière d’une étoile très lointaine : il obtient un spectre rayé de traits noirs. Il le compare aux spectres de référence de trois éléments, relevés en laboratoire.",
+   "documents": [
+    {
+     "id": "spectres",
+     "type": "schema",
+     "titre": "Spectre de l’étoile et spectres de référence",
+     "largeur": 340,
+     "hauteur": 270,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 28,
+       "texte": "Étoile lointaine",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 34,
+       "l": 300,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        34
+       ],
+       "a": [
+        60,
+        60
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        34
+       ],
+       "a": [
+        100,
+        60
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        34
+       ],
+       "a": [
+        150,
+        60
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        34
+       ],
+       "a": [
+        200,
+        60
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        34
+       ],
+       "a": [
+        250,
+        60
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 92,
+       "texte": "Hydrogène",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 98,
+       "l": 300,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "h",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        98
+       ],
+       "a": [
+        60,
+        124
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        98
+       ],
+       "a": [
+        150,
+        124
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        98
+       ],
+       "a": [
+        250,
+        124
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 150,
+       "texte": "Hélium",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 156,
+       "l": 300,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "he",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        156
+       ],
+       "a": [
+        100,
+        182
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        156
+       ],
+       "a": [
+        200,
+        182
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 208,
+       "texte": "Sodium",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 214,
+       "l": 300,
+       "h": 26,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "na",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        214
+       ],
+       "a": [
+        80,
+        240
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        175,
+        214
+       ],
+       "a": [
+        175,
+        240
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        285,
+        214
+       ],
+       "a": [
+        285,
+        240
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "source": "Spectres schématiques écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectres",
+     "enonce": "Touche le spectre de référence de l’élément dont aucun trait ne se retrouve dans l’étoile.",
+     "reponse": [
+      "na"
+     ],
+     "aide": "Compare la position des traits de chaque spectre de référence avec ceux de l’étoile.",
+     "explication": "Les traits du **sodium** ne tombent jamais sur ceux de l’étoile : cet élément n’y est pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de traits noirs de l’étoile correspondent à ceux de l’hydrogène ?",
+     "reponse": 3,
+     "unite": "traits",
+     "aide": "Cherche les traits de l’étoile qui sont exactement à la même position que ceux de l’hydrogène.",
+     "explication": "Trois traits de l’étoile sont à la place de ceux de l’hydrogène : **3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels éléments cette étoile contient-elle ?",
+     "options": [
+      "L’hydrogène et l’hélium",
+      "L’hydrogène et le sodium",
+      "L’hélium et le sodium",
+      "Les trois éléments"
+     ],
+     "reponse": 0,
+     "aide": "Vérifie que tous les traits de l’étoile sont expliqués par les éléments retenus.",
+     "explication": "Les 5 traits de l’étoile viennent de l’**hydrogène (3) et de l’hélium (2)**. Le sodium n’explique aucun trait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un spectre permet-il d’identifier un élément sans y aller ?",
+     "options": [
+      "Chaque élément absorbe ou émet des couleurs précises",
+      "Tous les éléments donnent le même spectre",
+      "Il suffit de mesurer la taille de l’étoile",
+      "Les traits noirs indiquent la température de la Terre"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la « signature » de chaque élément dans la lumière.",
+     "explication": "Chaque élément a **ses couleurs propres** : c’est sa signature, lisible à des millions d’années-lumière."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e15eaa3-663a-5071-9b8e-0353e35d0887",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "D’où viennent les atomes de ton corps ?",
+   "competence": "analyser-document",
+   "situation": "Pour un exposé, Yanis cherche d’où viennent les atomes de son corps. Il trouve un tableau sur la composition d’un corps humain et un court texte.",
+   "documents": [
+    {
+     "id": "corps",
+     "type": "tableau",
+     "titre": "Les éléments du corps humain",
+     "colonnes": [
+      "Élément",
+      "Part de la masse (%)"
+     ],
+     "lignes": [
+      [
+       "Oxygène",
+       65
+      ],
+      [
+       "Carbone",
+       18
+      ],
+      [
+       "Hydrogène",
+       10
+      ],
+      [
+       "Azote",
+       3
+      ],
+      [
+       "Autres éléments",
+       4
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres arrondis"
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Poussières d’étoiles",
+     "blocs": [
+      "L’hydrogène de ton corps date de peu après la naissance de l’Univers.",
+      "Le carbone et l’oxygène ont été fabriqués au cœur d’étoiles. Quand elles ont explosé, elles ont dispersé ces atomes dans l’espace, bien avant la naissance du Soleil."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "corps",
+     "enonce": "Touche la case de l’élément qui s’est formé peu après la naissance de l’Univers.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Relis le texte : une seule ligne du tableau est citée comme « ancienne ».",
+     "explication": "C’est l’**hydrogène** : il date de peu après la naissance de l’Univers."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces éléments selon l’endroit où ils se sont formés.",
+     "categories": [
+      "Peu après la naissance de l’Univers",
+      "Au cœur des étoiles"
+     ],
+     "items": [
+      [
+       "Hydrogène",
+       0
+      ],
+      [
+       "Hélium",
+       0
+      ],
+      [
+       "Carbone",
+       1
+      ],
+      [
+       "Oxygène",
+       1
+      ],
+      [
+       "Fer",
+       1
+      ]
+     ],
+     "aide": "Seuls l’hydrogène et l’hélium sont plus anciens que les étoiles.",
+     "explication": "**Hydrogène et hélium** viennent du début de l’Univers ; **carbone, oxygène et fer** sont fabriqués au cœur des étoiles."
+    },
+    {
+     "type": "nombre",
+     "document": "corps",
+     "enonce": "Parmi l’oxygène, le carbone et l’hydrogène, quelle part de la masse du corps vient d’atomes fabriqués dans des étoiles ? Réponds en %.",
+     "reponse": 83,
+     "unite": "%",
+     "aide": "Additionne seulement les deux éléments qui sont nés dans les étoiles.",
+     "explication": "Oxygène (65 %) + carbone (18 %) = **83 %** : l’hydrogène ne compte pas, il est plus ancien."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre l’histoire des atomes de carbone de ton corps.",
+     "items": [
+      "Une étoile fabrique du carbone en son cœur",
+      "L’étoile explose et disperse ses atomes",
+      "Les atomes se retrouvent dans un nuage de gaz",
+      "Le Soleil et les planètes se forment"
+     ],
+     "aide": "Les atomes doivent d’abord être fabriqués, puis dispersés, avant de former de nouveaux astres.",
+     "explication": "Fabriqués dans une étoile, dispersés par son explosion, rassemblés dans un nuage, puis intégrés au **Soleil et aux planètes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « nous sommes faits de poussières d’étoiles » ?",
+     "options": [
+      "Beaucoup de nos atomes ont été fabriqués dans des étoiles",
+      "Notre corps contient de petites étoiles",
+      "Nous sommes faits d’atomes qui n’existent que sur Terre",
+      "Notre corps brille comme une étoile"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à l’origine du carbone et de l’oxygène.",
+     "explication": "Les atomes de **carbone, d’oxygène, de fer…** de notre corps sont nés au cœur d’étoiles disparues."
+    }
+   ]
+  },
+  {
+   "chapitre": "07f64309-fc58-5a91-86c7-46957272cbf8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La maquette d’atome de Jules",
+   "competence": "observer-schema",
+   "situation": "Jules a construit une maquette d’atome de carbone pour le cours. Les billes du centre forment le noyau, les billes sur les cercles sont en mouvement autour.",
+   "documents": [
+    {
+     "id": "atome",
+     "type": "schema",
+     "titre": "Maquette d’un atome de carbone",
+     "largeur": 340,
+     "hauteur": 255,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 120,
+       "r": 62,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 120,
+       "r": 100,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 120,
+       "r": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "p1",
+       "zone": true,
+       "texte": "+"
+      },
+      {
+       "forme": "cercle",
+       "cx": 188,
+       "cy": 120,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 179,
+       "cy": 136,
+       "r": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "p2",
+       "zone": true,
+       "texte": "+"
+      },
+      {
+       "forme": "cercle",
+       "cx": 161,
+       "cy": 136,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "n2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 152,
+       "cy": 120,
+       "r": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "p3",
+       "zone": true,
+       "texte": "+"
+      },
+      {
+       "forme": "cercle",
+       "cx": 161,
+       "cy": 104,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 179,
+       "cy": 104,
+       "r": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "p4",
+       "zone": true,
+       "texte": "+"
+      },
+      {
+       "forme": "cercle",
+       "cx": 199,
+       "cy": 137,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 163,
+       "cy": 153,
+       "r": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "p5",
+       "zone": true,
+       "texte": "+"
+      },
+      {
+       "forme": "cercle",
+       "cx": 136,
+       "cy": 124,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "n5",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 156,
+       "cy": 89,
+       "r": 8,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "p6",
+       "zone": true,
+       "texte": "+"
+      },
+      {
+       "forme": "cercle",
+       "cx": 195,
+       "cy": 97,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "n6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 224,
+       "cy": 150,
+       "r": 8,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "e1",
+       "zone": true,
+       "texte": "−"
+      },
+      {
+       "forme": "cercle",
+       "cx": 116,
+       "cy": 90,
+       "r": 8,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "e2",
+       "zone": true,
+       "texte": "−"
+      },
+      {
+       "forme": "cercle",
+       "cx": 258,
+       "cy": 168,
+       "r": 8,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "e3",
+       "zone": true,
+       "texte": "−"
+      },
+      {
+       "forme": "cercle",
+       "cx": 122,
+       "cy": 208,
+       "r": 8,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "e4",
+       "zone": true,
+       "texte": "−"
+      },
+      {
+       "forme": "cercle",
+       "cx": 82,
+       "cy": 72,
+       "r": 8,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "e5",
+       "zone": true,
+       "texte": "−"
+      },
+      {
+       "forme": "cercle",
+       "cx": 218,
+       "cy": 32,
+       "r": 8,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "e6",
+       "zone": true,
+       "texte": "−"
+      },
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 238,
+       "r": 7,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 42,
+       "y": 242,
+       "texte": "Proton (+)",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 238,
+       "r": 7,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 137,
+       "y": 242,
+       "texte": "Neutron",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 238,
+       "r": 7,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 227,
+       "y": 242,
+       "texte": "Électron (−)",
+       "ancre": "debut",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "atome",
+     "multiple": true,
+     "enonce": "Touche toutes les particules du noyau qui n’ont aucune charge électrique.",
+     "reponse": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "n6"
+     ],
+     "aide": "Utilise la légende : quelle particule du noyau n’est pas marquée « + » ?",
+     "explication": "Les **neutrons** ont une charge nulle : il y en a 6 dans le noyau."
+    },
+    {
+     "type": "nombre",
+     "document": "atome",
+     "enonce": "Combien d’électrons tournent autour du noyau sur la maquette ?",
+     "reponse": 6,
+     "unite": "électrons",
+     "aide": "Compte les billes sur les deux cercles.",
+     "explication": "Il y a 2 électrons sur le petit cercle et 4 sur le grand : **6 électrons**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Il y a 6 protons et 6 électrons. Que peut-on dire de cet atome ?",
+     "options": [
+      "Il est électriquement neutre",
+      "Il est chargé positivement",
+      "Il est chargé négativement",
+      "Il est un ion"
+     ],
+     "reponse": 0,
+     "aide": "Compare le nombre de charges + et de charges −.",
+     "explication": "6 charges + et 6 charges − se compensent : l’atome est **électriquement neutre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07f64309-fc58-5a91-86c7-46957272cbf8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Atomes ou ions ? Les relevés de laboratoire",
+   "competence": "lire-tableau",
+   "situation": "Au laboratoire, Camille note le nombre de protons et d’électrons de quatre espèces chimiques. Elle veut savoir lesquelles sont des atomes et lesquelles sont des ions.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Relevés de Camille",
+     "colonnes": [
+      "Espèce",
+      "Protons",
+      "Électrons"
+     ],
+     "lignes": [
+      [
+       "A",
+       6,
+       6
+      ],
+      [
+       "B",
+       1,
+       0
+      ],
+      [
+       "C",
+       8,
+       8
+      ],
+      [
+       "D",
+       8,
+       10
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releves",
+     "multiple": true,
+     "enonce": "Touche les espèces qui sont des atomes électriquement neutres.",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "aide": "Un atome neutre a autant de protons que d’électrons.",
+     "explication": "A (6 et 6) et C (8 et 8) ont autant de protons que d’électrons : ce sont des **atomes neutres**. B et D sont des ions."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque espèce à son élément chimique.",
+     "paires": [
+      [
+       "A",
+       "Carbone"
+      ],
+      [
+       "B",
+       "Hydrogène"
+      ],
+      [
+       "C",
+       "Oxygène"
+      ]
+     ],
+     "aide": "Le nombre de protons identifie l’élément : 1, 6 et 8.",
+     "explication": "**1 proton = hydrogène, 6 = carbone, 8 = oxygène** : c’est le nombre de protons qui donne l’élément."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les espèces C et D sont-elles de même élément chimique ?",
+     "options": [
+      "Oui, elles ont le même nombre de protons",
+      "Non, elles n’ont pas le même nombre d’électrons",
+      "Non, l’une est un atome et l’autre un ion",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui identifie un élément : les protons ou les électrons ?",
+     "explication": "Seul le nombre de **protons** compte : 8 pour C et D, c’est de l’oxygène. D a simplement gagné des électrons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons l’espèce D a-t-elle gagnés par rapport à l’atome d’oxygène C ?",
+     "reponse": 2,
+     "unite": "électrons",
+     "aide": "Compare les électrons de D (10) à ceux de l’atome neutre C.",
+     "explication": "10 − 8 = **2 électrons** gagnés : D est un ion, donc chargé négativement."
+    }
+   ]
+  },
+  {
+   "chapitre": "07f64309-fc58-5a91-86c7-46957272cbf8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les formules de la cuisine",
+   "competence": "analyser-document",
+   "situation": "Dans la cuisine d’Amine, plusieurs substances portent une formule chimique : l’eau du robinet, l’eau gazeuse, le gaz de la gazinière, un colorant bleu. Il veut comprendre ce que disent les formules.",
+   "documents": [
+    {
+     "id": "formules",
+     "type": "tableau",
+     "titre": "Formules relevées",
+     "colonnes": [
+      "Nom",
+      "Formule"
+     ],
+     "lignes": [
+      [
+       "Eau",
+       "H₂O"
+      ],
+      [
+       "Dioxygène",
+       "O₂"
+      ],
+      [
+       "Dioxyde de carbone",
+       "CO₂"
+      ],
+      [
+       "Méthane",
+       "CH₄"
+      ],
+      [
+       "Monoxyde de carbone",
+       "CO"
+      ],
+      [
+       "Cobalt (colorant bleu)",
+       "Co"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Formules du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe ces écritures : un seul atome ou une molécule ?",
+     "categories": [
+      "Un seul atome",
+      "Une molécule"
+     ],
+     "items": [
+      [
+       "Co (cobalt)",
+       0
+      ],
+      [
+       "CO (monoxyde de carbone)",
+       1
+      ],
+      [
+       "O₂ (dioxygène)",
+       1
+      ],
+      [
+       "CH₄ (méthane)",
+       1
+      ]
+     ],
+     "aide": "Une molécule est un assemblage d’atomes ; regarde les majuscules : « Co » n’en a qu’une.",
+     "explication": "**Co** est un seul atome (cobalt). **CO, O₂ et CH₄** sont des molécules : plusieurs atomes assemblés."
+    },
+    {
+     "type": "zone",
+     "document": "formules",
+     "enonce": "Touche la formule de la molécule qui contient exactement 5 atomes.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "L’indice compte les atomes qui le précèdent ; additionne tous les atomes.",
+     "explication": "CH₄ = 1 atome de carbone + 4 atomes d’hydrogène = **5 atomes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’atomes contiennent en tout 2 molécules de dioxyde de carbone (CO₂) ?",
+     "reponse": 6,
+     "unite": "atomes",
+     "aide": "Compte d’abord les atomes d’une seule molécule CO₂.",
+     "explication": "Une molécule CO₂ a 1 + 2 = 3 atomes ; deux molécules : 2 × 3 = **6 atomes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un atome d’hydrogène a 1 proton et un atome d’oxygène en a 8. Combien de protons y a-t-il dans une molécule d’eau H₂O ?",
+     "reponse": 10,
+     "unite": "protons",
+     "aide": "H₂O : deux atomes d’hydrogène et un atome d’oxygène.",
+     "explication": "2 × 1 + 8 = **10 protons**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les écritures « Co » et « CO » désignent-elles la même substance ?",
+     "options": [
+      "Non, la casse change la substance",
+      "Oui, la casse n’a pas d’importance",
+      "Oui, ce sont deux écritures du cobalt",
+      "Non, mais seulement à l’oral"
+     ],
+     "reponse": 0,
+     "aide": "Compte les majuscules dans chaque écriture.",
+     "explication": "**Co** est le cobalt, **CO** est le monoxyde de carbone (un C et un O) : la casse compte."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5136ad7-3fd6-5d57-8178-39c8697ad58a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Jade dans le train, Théo sur le quai",
+   "competence": "raisonner",
+   "situation": "Jade part en train. Elle envoie un message à son ami Théo, resté sur le quai pour lui dire au revoir.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Les messages de Jade et Théo",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Je suis assise dans le TER. Par la fenêtre, je te vois défiler avec tout le quai !"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Moi je ne bouge pas, c’est toi qui t’éloignes."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Le train sort de la gare à 36 km/h."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque description : immobile ou en mouvement ?",
+     "categories": [
+      "Immobile",
+      "En mouvement"
+     ],
+     "items": [
+      [
+       "Jade, dans le référentiel du train",
+       0
+      ],
+      [
+       "Jade, dans le référentiel du quai",
+       1
+      ],
+      [
+       "Théo, dans le référentiel du quai",
+       0
+      ],
+      [
+       "Théo, dans le référentiel du train",
+       1
+      ]
+     ],
+     "aide": "Un objet est immobile quand il ne change pas de position par rapport à celui qui l’observe.",
+     "explication": "Jade est **immobile par rapport au train** mais **en mouvement par rapport au quai** ; pour Théo, c’est l’inverse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Jade et Théo ont-ils tous les deux raison ?",
+     "options": [
+      "Le mouvement dépend du référentiel",
+      "Un des deux se trompe forcément",
+      "Le train ne roule pas vraiment",
+      "Le quai se déplace aussi"
+     ],
+     "reponse": 0,
+     "aide": "Chacun observe depuis un endroit différent.",
+     "explication": "Un mouvement ne se décrit **jamais dans l’absolu** : il dépend du référentiel d’observation."
+    },
+    {
+     "type": "nombre",
+     "document": "sms",
+     "enonce": "Quelle est la vitesse du train, en m/s ?",
+     "reponse": 10,
+     "unite": "m/s",
+     "aide": "Pour passer des km/h aux m/s, on divise par 3,6.",
+     "explication": "On divise par 3,6 : 36 ÷ 3,6 = **10 m/s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5136ad7-3fd6-5d57-8178-39c8697ad58a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un skateur et un cycliste filmés au ralenti",
+   "competence": "observer-schema",
+   "situation": "Sur le parking du collège, Hugo filme un skateur et un cycliste qui passent l’un après l’autre. Il note leur position toutes les 0,5 s : ce sont deux chronophotographies. Sur le dessin, 10 unités représentent 1 m sur le terrain.",
+   "documents": [
+    {
+     "id": "chrono",
+     "type": "schema",
+     "titre": "Deux chronophotographies",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 15,
+       "y": 26,
+       "texte": "Chronophotographie A",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 32,
+       "l": 310,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "sa",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 74,
+       "texte": "M0",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 74,
+       "texte": "M1",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 75,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 75,
+       "y": 74,
+       "texte": "M2",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 74,
+       "texte": "M3",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 74,
+       "texte": "M4",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 52,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 74,
+       "texte": "M5",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 15,
+       "y": 112,
+       "texte": "Chronophotographie B",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 118,
+       "l": 310,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "sb",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 138,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 160,
+       "texte": "M0",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 138,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 160,
+       "texte": "M1",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 138,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 160,
+       "texte": "M2",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 138,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 160,
+       "texte": "M3",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 138,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 160,
+       "texte": "M4",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 138,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 160,
+       "texte": "M5",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        200
+       ],
+       "a": [
+        130,
+        200
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 222,
+       "texte": "10 m sur le terrain",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chrono",
+     "enonce": "L’une des deux chronophotographies montre un mouvement uniforme. Touche-la.",
+     "reponse": [
+      "sb"
+     ],
+     "aide": "Dans un mouvement uniforme, les positions sont régulièrement espacées.",
+     "explication": "Sur la chronophotographie **B**, l’écart est toujours le même : le mouvement est uniforme. Sur A, il augmente : le skateur accélère."
+    },
+    {
+     "type": "nombre",
+     "document": "chrono",
+     "enonce": "Dans B, deux positions voisines sont séparées de 40 unités, donc de 4 m. Quelle est la vitesse du cycliste, en m/s ?",
+     "reponse": 8,
+     "unite": "m/s",
+     "aide": "Applique v = d ÷ t avec d = 4 m et t = 0,5 s.",
+     "explication": "**v = d ÷ t** = 4 m ÷ 0,5 s = **8 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette vitesse en km/h.",
+     "reponse": 28.8,
+     "unite": "km/h",
+     "aide": "Des m/s aux km/h, on multiplie par 3,6.",
+     "explication": "8 m/s × 3,6 = **28,8 km/h**."
+    },
+    {
+     "type": "nombre",
+     "document": "chrono",
+     "enonce": "Dans A, le skateur passe de M0 à M5 : 150 unités, soit 15 m, en 5 × 0,5 s = 2,5 s. Quelle est sa vitesse moyenne, en m/s ?",
+     "reponse": 6,
+     "unite": "m/s",
+     "aide": "Vitesse moyenne = distance totale ÷ durée totale.",
+     "explication": "v = d ÷ t = 15 m ÷ 2,5 s = **6 m/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire du mouvement du skateur ?",
+     "options": [
+      "Il est accéléré",
+      "Il est uniforme",
+      "Il est ralenti",
+      "Il est immobile"
+     ],
+     "reponse": 0,
+     "aide": "Regarde comment l’écart entre les positions évolue.",
+     "explication": "Les positions s’écartent de plus en plus : sa vitesse augmente, le mouvement est **accéléré**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5136ad7-3fd6-5d57-8178-39c8697ad58a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bus de la ligne 4 en zone 30",
+   "competence": "lire-graphique",
+   "situation": "Le bus de la ligne 4 roule dans une rue de la ville. Un capteur a relevé sa distance parcourue toutes les 10 s. Mina veut savoir s’il respecte la limitation de vitesse.",
+   "documents": [
+    {
+     "id": "bus",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Distance parcourue par le bus",
+     "categories": [
+      "0 s",
+      "10 s",
+      "20 s",
+      "30 s",
+      "40 s",
+      "50 s",
+      "60 s"
+     ],
+     "series": [
+      {
+       "nom": "Distance",
+       "valeurs": [
+        0,
+        50,
+        100,
+        150,
+        150,
+        150,
+        250
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Distance parcourue",
+      "unite": "en m",
+      "min": 0,
+      "max": 250,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "source": "Relevés écrits pour l’exercice"
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "ZONE 30",
+     "sousTitre": "Rue des Écoles",
+     "emoji": "🚸",
+     "lignes": [
+      {
+       "texte": "Vitesse maximale",
+       "valeur": "30 km/h"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bus",
+     "multiple": true,
+     "enonce": "Touche les trois instants entre lesquels le bus n’avance plus : sa distance ne change pas.",
+     "reponse": [
+      "k3",
+      "k4",
+      "k5"
+     ],
+     "aide": "Cherche la partie plate de la courbe.",
+     "explication": "Entre **30 s et 50 s**, la distance reste à 150 m : le bus est arrêté."
+    },
+    {
+     "type": "nombre",
+     "document": "bus",
+     "enonce": "Combien de temps le bus reste-t-il arrêté, en secondes ?",
+     "reponse": 20,
+     "unite": "s",
+     "aide": "Repère le début et la fin de la partie plate.",
+     "explication": "Arrêt de 30 s à 50 s : 50 − 30 = **20 s**."
+    },
+    {
+     "type": "nombre",
+     "document": "bus",
+     "enonce": "Entre 0 s et 30 s, le bus roule à vitesse constante. Quelle est sa vitesse, en m/s ?",
+     "reponse": 5,
+     "unite": "m/s",
+     "aide": "Il parcourt 150 m pendant 30 s.",
+     "explication": "v = d ÷ t = 150 m ÷ 30 s = **5 m/s**."
+    },
+    {
+     "type": "nombre",
+     "document": "bus",
+     "enonce": "Entre 50 s et 60 s, le bus redémarre. Quelle est sa vitesse moyenne sur ce passage, en km/h ?",
+     "reponse": 36,
+     "unite": "km/h",
+     "aide": "Calcule d’abord en m/s (distance parcourue en 10 s), puis multiplie par 3,6.",
+     "explication": "Il parcourt 250 − 150 = 100 m en 10 s : 10 m/s, soit 10 × 3,6 = **36 km/h**."
+    },
+    {
+     "type": "choix",
+     "document": "panneau",
+     "enonce": "Entre 50 s et 60 s, le bus respecte-t-il la limite de la zone 30 ?",
+     "options": [
+      "Non, il dépasse 30 km/h",
+      "Oui, il roule bien en dessous de 30 km/h",
+      "Oui, car il vient de repartir",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "aide": "Compare la vitesse trouvée à 30 km/h.",
+     "explication": "36 km/h est supérieur à 30 km/h : le bus **dépasse la limite** sur ce passage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur toute la minute, le bus a parcouru 250 m. Quelle est sa vitesse moyenne ? Réponds en m/s, arrondi au dixième.",
+     "reponse": 4.2,
+     "tolerance": 0.05,
+     "unite": "m/s",
+     "aide": "Divise la distance totale par la durée totale, arrêt compris.",
+     "explication": "v = 250 m ÷ 60 s ≈ **4,2 m/s**. L’arrêt fait baisser la vitesse moyenne."
+    }
+   ]
+  },
+  {
+   "chapitre": "329f4753-6e4f-5440-a91c-b17954859ac8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un livre posé sur le bureau",
+   "competence": "observer-schema",
+   "situation": "Léo a posé son manuel de physique sur son bureau. Le livre ne bouge pas. Il dessine les deux forces qui s’exercent sur le livre.",
+   "documents": [
+    {
+     "id": "livre",
+     "type": "schema",
+     "titre": "Les forces sur le livre",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 150,
+       "l": 260,
+       "h": 18,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 168,
+       "l": 14,
+       "h": 50,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 266,
+       "y": 168,
+       "l": 14,
+       "h": 50,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 100,
+       "l": 120,
+       "h": 50,
+       "teinte": "jaune",
+       "motif": "clair",
+       "texte": "Livre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        125
+       ],
+       "a": [
+        140,
+        226
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 122,
+       "y": 215,
+       "texte": "A",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        150
+       ],
+       "a": [
+        200,
+        50
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 218,
+       "y": 60,
+       "texte": "B",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livre",
+     "enonce": "Touche la flèche qui représente le poids du livre (l’attraction de la Terre).",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le poids est vertical et dirigé vers le bas.",
+     "explication": "Le poids est une force **verticale, vers le bas** : c’est la flèche A."
+    },
+    {
+     "type": "zone",
+     "document": "livre",
+     "enonce": "Touche la flèche qui représente la force exercée par le bureau sur le livre.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le bureau soutient le livre : dans quel sens pousse-t-il ?",
+     "explication": "Le bureau **pousse le livre vers le haut** : c’est la flèche B."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le poids du livre vaut 5 N. Quelle est la valeur de la force exercée par le bureau ?",
+     "reponse": 5,
+     "unite": "N",
+     "aide": "Le livre est immobile : les deux forces se compensent.",
+     "explication": "Le livre est immobile, donc les forces se compensent : le bureau exerce aussi **5 N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le livre reste-t-il immobile ?",
+     "options": [
+      "Les deux forces se compensent",
+      "Aucune force ne s’exerce sur lui",
+      "Le poids est plus grand que la force du bureau",
+      "Le bureau est plus lourd que le livre"
+     ],
+     "reponse": 0,
+     "aide": "Compare la longueur et le sens des deux flèches.",
+     "explication": "Même valeur, même direction, sens opposés : les forces **se compensent** et le livre reste immobile."
+    }
+   ]
+  },
+  {
+   "chapitre": "329f4753-6e4f-5440-a91c-b17954859ac8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au gymnase : effets des forces et interactions",
+   "competence": "analyser-document",
+   "situation": "Pendant le cours d’éducation physique, Lina note quatre scènes dans un tableau. Ensuite, un skateur s’éloigne d’un mur en le poussant : elle veut comprendre ce qui se passe.",
+   "documents": [
+    {
+     "id": "scenes",
+     "type": "tableau",
+     "titre": "Quatre scènes observées",
+     "colonnes": [
+      "Scène",
+      "Ce qu’on observe"
+     ],
+     "lignes": [
+      [
+       "Un ballon frappé par un joueur",
+       "Il était immobile, il part"
+      ],
+      [
+       "Un vélo qui freine",
+       "Il roulait à 6 m/s, il roule à 2 m/s"
+      ],
+      [
+       "Un tir dévié par le gardien",
+       "La balle part vers la gauche"
+      ],
+      [
+       "Une éponge pressée",
+       "Elle s’aplatit"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    },
+    {
+     "id": "mur",
+     "type": "schema",
+     "titre": "Le skateur pousse le mur",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 50,
+       "h": 150,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 118,
+       "y": 100,
+       "emoji": "🧒",
+       "taille": 52
+      },
+      {
+       "forme": "emoji",
+       "x": 118,
+       "y": 150,
+       "emoji": "🛹",
+       "taille": 38
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        92
+       ],
+       "a": [
+        28,
+        92
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "sm",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 48,
+       "y": 80,
+       "texte": "A",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        128
+       ],
+       "a": [
+        180,
+        128
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "ms",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 116,
+       "texte": "B",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "document": "scenes",
+     "enonce": "Associe chaque scène à l’effet de la force qu’elle montre.",
+     "paires": [
+      [
+       "Ballon frappé",
+       "Mise en mouvement"
+      ],
+      [
+       "Vélo qui freine",
+       "Modification de la vitesse"
+      ],
+      [
+       "Tir dévié",
+       "Modification de la trajectoire"
+      ],
+      [
+       "Éponge pressée",
+       "Déformation"
+      ]
+     ],
+     "aide": "Lis la colonne « Ce qu’on observe » : qu’est-ce qui change à chaque fois ?",
+     "explication": "Le ballon **se met en mouvement**, le vélo **change de vitesse**, le tir **change de trajectoire**, l’éponge **se déforme**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces interactions.",
+     "categories": [
+      "De contact",
+      "À distance"
+     ],
+     "items": [
+      [
+       "La main qui pousse un chariot",
+       0
+      ],
+      [
+       "Un aimant qui attire un clou",
+       1
+      ],
+      [
+       "La Terre qui attire la Lune",
+       1
+      ],
+      [
+       "Le sol qui soutient un livre",
+       0
+      ],
+      [
+       "Les frottements de l’air sur un vélo",
+       0
+      ]
+     ],
+     "aide": "Une interaction de contact exige que les objets se touchent.",
+     "explication": "Contact : **main, sol, air**. À distance : **magnétisme et gravitation**, sans toucher."
+    },
+    {
+     "type": "zone",
+     "document": "mur",
+     "enonce": "Touche la flèche qui représente la force exercée par le mur sur le skateur.",
+     "reponse": [
+      "ms"
+     ],
+     "aide": "C’est cette force qui éloigne le skateur du mur : dans quel sens est-il poussé ?",
+     "explication": "Le mur **pousse le skateur** vers la droite : c’est la flèche B."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le skateur pousse le mur avec une force de 80 N. Quelle est la valeur de la force exercée par le mur sur le skateur ?",
+     "reponse": 80,
+     "unite": "N",
+     "aide": "C’est le principe des actions réciproques.",
+     "explication": "Les deux forces ont **la même valeur** (80 N) et des sens opposés."
+    }
+   ]
+  },
+  {
+   "chapitre": "329f4753-6e4f-5440-a91c-b17954859ac8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un palet de hockey sur la glace puis sur le sable",
+   "competence": "raisonner",
+   "situation": "Au centre sportif, un palet glisse sur la glace à vitesse constante, puis il entre sur une bande de sable. Léa a filmé la scène : une position toutes les 0,2 s. Sur le dessin, 40 unités représentent 1 m.",
+   "documents": [
+    {
+     "id": "palet",
+     "type": "schema",
+     "titre": "Chronophotographie du palet",
+     "largeur": 340,
+     "hauteur": 130,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 22,
+       "texte": "Une position toutes les 0,2 s",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        15,
+        55
+       ],
+       "a": [
+        325,
+        55
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "cercle",
+       "cx": 30,
+       "cy": 55,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m0",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 80,
+       "texte": "M0",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 55,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 80,
+       "texte": "M1",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 55,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 80,
+       "texte": "M2",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 55,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 80,
+       "texte": "M3",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 55,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 80,
+       "texte": "M4",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 55,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m5",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 80,
+       "texte": "M5",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        108
+       ],
+       "a": [
+        110,
+        108
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 124,
+       "texte": "2 m sur le terrain",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "forces",
+     "type": "schema",
+     "titre": "Les forces sur le palet, sur le sable",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 130,
+       "l": 300,
+       "h": 12,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 100,
+       "l": 80,
+       "h": 30,
+       "teinte": "gris",
+       "motif": "plein",
+       "texte": "Palet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        115
+       ],
+       "a": [
+        150,
+        185
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "p",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 135,
+       "y": 180,
+       "texte": "A",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        195,
+        100
+       ],
+       "a": [
+        195,
+        30
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "r",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 212,
+       "y": 40,
+       "texte": "B",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        115
+       ],
+       "a": [
+        70,
+        115
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "f",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 95,
+       "y": 104,
+       "texte": "C",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        80
+       ],
+       "a": [
+        310,
+        80
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 70,
+       "texte": "Mouvement",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "palet",
+     "enonce": "Entre M0 et M3, deux positions voisines sont séparées de 40 unités, soit 1 m. Quelle est la vitesse du palet, en m/s ?",
+     "reponse": 5,
+     "unite": "m/s",
+     "aide": "v = d ÷ t avec d = 1 m et t = 0,2 s.",
+     "explication": "**v = d ÷ t** = 1 m ÷ 0,2 s = **5 m/s**."
+    },
+    {
+     "type": "zone",
+     "document": "palet",
+     "enonce": "Touche la première position où l’on voit que le palet a ralenti (écart plus petit que d’habitude).",
+     "reponse": [
+      "m4"
+     ],
+     "aide": "Cherche le premier écart plus petit que 40 unités.",
+     "explication": "L’écart passe de 40 à 30 unités entre M3 et M4 : c’est en **M4** qu’on voit le ralentissement."
+    },
+    {
+     "type": "choix",
+     "document": "palet",
+     "enonce": "Entre M0 et M3, que peut-on dire des forces qui s’exercent sur le palet ?",
+     "options": [
+      "Elles se compensent",
+      "Elles ne se compensent pas",
+      "Il n’y a aucune force",
+      "Le palet est poussé en continu"
+     ],
+     "reponse": 0,
+     "aide": "Le palet garde une vitesse constante sur une ligne droite.",
+     "explication": "Mouvement **rectiligne uniforme** : les forces se compensent. Un objet n’a pas besoin de force pour continuer d’avancer."
+    },
+    {
+     "type": "zone",
+     "document": "forces",
+     "enonce": "Touche la force qui explique que le palet ralentisse sur le sable.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Cette force s’oppose au mouvement : de quel côté pointe-t-elle ?",
+     "explication": "Les frottements du sable (flèche C) sont **opposés au mouvement** : ils freinent le palet."
+    },
+    {
+     "type": "nombre",
+     "document": "forces",
+     "enonce": "Le poids du palet vaut 1,6 N. Quelle est la valeur de la force exercée par le sol sur le palet (flèche B) ?",
+     "reponse": 1.6,
+     "unite": "N",
+     "aide": "Verticalement, le palet ne monte ni ne descend.",
+     "explication": "Verticalement, les forces se compensent : la force du sol vaut **1,6 N**, comme le poids."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f739b6b-8153-5184-8714-ef636bf0fb32",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mathis, 40 kg, rêve de Lune",
+   "competence": "calculer",
+   "situation": "Mathis a une masse de 40 kg. Pour un exposé sur l’espace, il veut savoir combien il pèserait sur la Terre et sur la Lune.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "tableau",
+     "titre": "Intensité de la pesanteur",
+     "colonnes": [
+      "Astre",
+      "g (N/kg)"
+     ],
+     "lignes": [
+      [
+       "Terre",
+       "9,8"
+      ],
+      [
+       "Lune",
+       "1,6"
+      ],
+      [
+       "Mars",
+       "3,7"
+      ],
+      [
+       "Jupiter",
+       "24,8"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la valeur de g pour la Lune.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Lune » et lis la colonne g.",
+     "explication": "Sur la Lune, **g = 1,6 N/kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids de Mathis sur Terre, en N ? (P = m × g)",
+     "reponse": 392,
+     "unite": "N",
+     "aide": "Multiplie sa masse en kg par g.",
+     "explication": "**P = m × g** = 40 kg × 9,8 N/kg = **392 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel serait son poids sur la Lune, en N ?",
+     "reponse": 64,
+     "unite": "N",
+     "aide": "Même relation, avec la valeur de g de la Lune.",
+     "explication": "P = 40 kg × 1,6 N/kg = **64 N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle serait la masse de Mathis sur la Lune ?",
+     "options": [
+      "Toujours 40 kg",
+      "Environ 6,7 kg",
+      "Environ 64 kg",
+      "Environ 392 kg"
+     ],
+     "reponse": 0,
+     "aide": "La masse est la quantité de matière.",
+     "explication": "La masse ne dépend pas de l’astre : elle reste de **40 kg**. Seul le poids change."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f739b6b-8153-5184-8714-ef636bf0fb32",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un échantillon de roche sur Mars",
+   "competence": "calculer",
+   "situation": "Le robot d’exploration de Mars a ramassé un échantillon de roche. Pour l’exercice, une ingénieure du centre de contrôle explique comment elle a trouvé sa masse.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "tableau",
+     "titre": "Intensité de la pesanteur",
+     "colonnes": [
+      "Astre",
+      "g (N/kg)"
+     ],
+     "lignes": [
+      [
+       "Terre",
+       "9,8"
+      ],
+      [
+       "Lune",
+       "1,6"
+      ],
+      [
+       "Mars",
+       "3,7"
+      ],
+      [
+       "Jupiter",
+       "24,8"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Au centre de contrôle",
+     "participants": [
+      {
+       "nom": "Ingénieure",
+       "emoji": "👩‍🔬",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Élève",
+       "emoji": "🧑‍🎓",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ingénieure",
+       "texte": "Le dynamomètre du robot indique 111 N pour l’échantillon, posé sur le sol de Mars."
+      },
+      {
+       "qui": "Élève",
+       "texte": "Et sur Terre, combien pèserait-il ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "dial",
+     "enonce": "Quelle est la masse de l’échantillon, en kg ? (m = P ÷ g, avec g de Mars)",
+     "reponse": 30,
+     "unite": "kg",
+     "aide": "Divise le poids lu sur le dynamomètre par la valeur de g de Mars.",
+     "explication": "P = m × g donc **m = P ÷ g** = 111 N ÷ 3,7 N/kg = **30 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel serait le poids de cet échantillon sur Terre, en N ?",
+     "reponse": 294,
+     "unite": "N",
+     "aide": "La masse ne change pas, mais g change.",
+     "explication": "P = 30 kg × 9,8 N/kg = **294 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Et sur Jupiter, en N ?",
+     "reponse": 744,
+     "unite": "N",
+     "aide": "Prends la valeur de g de Jupiter dans le tableau.",
+     "explication": "P = 30 kg × 24,8 N/kg = **744 N**."
+    },
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche l’astre sur lequel un objet pèse le plus lourd.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la plus grande valeur de g.",
+     "explication": "Le plus grand g est celui de **Jupiter** : 24,8 N/kg."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le tableau sur la masse de l’échantillon quand on le transporte de Mars à Jupiter ?",
+     "options": [
+      "Elle reste égale à 30 kg",
+      "Elle devient 744 kg",
+      "Elle diminue",
+      "Elle est multipliée par 24,8"
+     ],
+     "reponse": 0,
+     "aide": "Quelle grandeur dépend de l’astre : la masse ou le poids ?",
+     "explication": "La masse est la même partout : **30 kg**. Le poids, lui, dépend de l’astre."
+    }
+   ]
+  },
+  {
+   "chapitre": "1f739b6b-8153-5184-8714-ef636bf0fb32",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sac à dos de Maël sur la Terre et sur la Lune",
+   "competence": "lire-graphique",
+   "situation": "Maël dit qu’il emporterait son sac à dos de 3 kg sur la Lune « pour qu’il soit plus léger ». Léa trace un graphique du poids en fonction de la masse sur la Terre et sur la Lune pour le contredire.",
+   "documents": [
+    {
+     "id": "poids",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Poids en fonction de la masse",
+     "categories": [
+      "0 kg",
+      "1 kg",
+      "2 kg",
+      "3 kg",
+      "4 kg",
+      "5 kg"
+     ],
+     "series": [
+      {
+       "nom": "Sur la Terre",
+       "valeurs": [
+        0,
+        9.8,
+        19.6,
+        29.4,
+        39.2,
+        49
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Sur la Lune",
+       "valeurs": [
+        0,
+        1.6,
+        3.2,
+        4.8,
+        6.4,
+        8
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Poids",
+      "unite": "en N",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Masse"
+     },
+     "source": "Valeurs calculées avec g = 9,8 N/kg et g = 1,6 N/kg"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message de Maël",
+     "participants": [
+      {
+       "nom": "Maël",
+       "emoji": "🧑",
+       "cote": "droite"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👩",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maël",
+       "texte": "Sur la Lune, mon sac de 3 kg ne ferait plus que 0,5 kg."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Regarde mon graphique avant de répondre."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poids",
+     "enonce": "Touche la masse pour laquelle l’écart entre le poids sur la Terre et le poids sur la Lune est le plus grand.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Compare l’écart vertical entre les deux courbes à chaque masse.",
+     "explication": "L’écart augmente avec la masse : il est le plus grand pour **5 kg**."
+    },
+    {
+     "type": "nombre",
+     "document": "poids",
+     "enonce": "Lis le graphique : quel est le poids du sac de 3 kg sur la Terre, en N ?",
+     "reponse": 29.4,
+     "tolerance": 1,
+     "unite": "N",
+     "aide": "Cherche le point de la courbe violette au-dessus de 3 kg.",
+     "explication": "Sur la Terre, 3 kg pèsent **29,4 N** (3 × 9,8)."
+    },
+    {
+     "type": "nombre",
+     "document": "poids",
+     "enonce": "Sur la Lune, un objet pèse 4,8 N. Quelle est sa masse, en kg ?",
+     "reponse": 3,
+     "unite": "kg",
+     "aide": "Utilise m = P ÷ g avec g = 1,6 N/kg.",
+     "explication": "m = P ÷ g = 4,8 N ÷ 1,6 N/kg = **3 kg**. C’est le sac de Maël : sa masse n’a pas changé."
+    },
+    {
+     "type": "choix",
+     "document": "sms",
+     "enonce": "Que devient réellement la masse du sac de Maël sur la Lune ?",
+     "options": [
+      "Elle reste de 3 kg",
+      "Elle devient 0,5 kg",
+      "Elle devient 4,8 kg",
+      "Elle devient 29,4 kg"
+     ],
+     "reponse": 0,
+     "aide": "Seul le poids dépend de l’astre.",
+     "explication": "La masse est une quantité de matière : elle ne change pas, **3 kg**. Seul son poids passe de 29,4 N à 4,8 N."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la courbe de la Lune est-elle plus basse que celle de la Terre ?",
+     "options": [
+      "La Lune a moins de masse, elle attire moins",
+      "La Lune est bien plus loin du Soleil que la Terre",
+      "Il n’y a pas d’air autour de la Lune",
+      "Les objets perdent de la masse sur la Lune"
+     ],
+     "reponse": 0,
+     "aide": "La force d’attraction dépend de la masse de l’astre.",
+     "explication": "L’attraction gravitationnelle dépend de la **masse de l’astre** : la Lune attire moins, donc g est plus petit (1,6 N/kg)."
+    }
+   ]
+  },
+  {
+   "chapitre": "de7dec4c-a53a-5f6e-8d1b-702d6e9ae51d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La barre chocolatée du goûter",
+   "competence": "analyser-document",
+   "situation": "Après le sport, Inès mange une barre chocolatée. Elle lit l’étiquette pour savoir quelle énergie elle contient.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "L’étiquette de la barre",
+     "entete": "Barre chocolatée",
+     "sousTitre": "Valeurs pour 100 g",
+     "emoji": "🍫",
+     "lignes": [
+      {
+       "texte": "Énergie",
+       "valeur": "2 090 kJ (500 kcal)",
+       "id": "energie",
+       "gras": true
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Protéines",
+       "valeur": "6 g"
+      },
+      {
+       "texte": "Glucides",
+       "valeur": "60 g"
+      },
+      {
+       "texte": "Lipides",
+       "valeur": "25 g"
+      }
+     ],
+     "pied": "Étiquette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne qui indique l’énergie contenue dans 100 g de barre.",
+     "reponse": [
+      "energie"
+     ],
+     "aide": "L’énergie s’exprime en kJ ou en kcal.",
+     "explication": "La ligne « Énergie » donne **2 090 kJ**, soit environ 500 kcal."
+    },
+    {
+     "type": "nombre",
+     "document": "etiquette",
+     "enonce": "Écris cette énergie en joules (1 kJ = 1 000 J).",
+     "reponse": 2090000,
+     "unite": "J",
+     "aide": "Multiplie par 1 000 pour passer des kJ aux J.",
+     "explication": "2 090 kJ × 1 000 = **2 090 000 J**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sous quelle forme l’énergie est-elle stockée dans la barre ?",
+     "options": [
+      "Chimique",
+      "Cinétique",
+      "Lumineuse",
+      "De position"
+     ],
+     "reponse": 0,
+     "aide": "Les aliments contiennent de l’énergie stockée dans les liaisons entre atomes.",
+     "explication": "Les aliments stockent de l’énergie **chimique**, que le corps utilise pour bouger ou se chauffer."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque objet à la forme d’énergie qui le caractérise.",
+     "paires": [
+      [
+       "Un vélo qui roule",
+       "Cinétique"
+      ],
+      [
+       "Une pile",
+       "Chimique"
+      ],
+      [
+       "Une plaque chauffante",
+       "Thermique"
+      ],
+      [
+       "Un pot sur un balcon",
+       "De position"
+      ]
+     ],
+     "aide": "Pense à ce qui est lié au mouvement, à la hauteur, à la chaleur.",
+     "explication": "Vélo : **cinétique** (mouvement) ; pile : **chimique** ; plaque : **thermique** ; pot sur le balcon : **de position** (hauteur)."
+    }
+   ]
+  },
+  {
+   "chapitre": "de7dec4c-a53a-5f6e-8d1b-702d6e9ae51d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le barrage et sa centrale électrique",
+   "competence": "observer-schema",
+   "situation": "Un barrage de montagne retient l’eau d’un lac. Lina veut savoir quelle énergie possède 1 tonne d’eau (1 000 kg) du lac. Elle a repéré plusieurs longueurs sur le schéma. La surface du lac est à 40 m au-dessus de la centrale.",
+   "documents": [
+    {
+     "id": "barrage",
+     "type": "schema",
+     "titre": "Coupe d’un barrage",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 50,
+       "l": 110,
+       "h": 90,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         130,
+         50
+        ],
+        [
+         150,
+         50
+        ],
+        [
+         175,
+         140
+        ],
+        [
+         130,
+         140
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 140,
+       "l": 300,
+       "h": 18,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 112,
+       "l": 70,
+       "h": 28,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Centrale"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        50
+       ],
+       "a": [
+        275,
+        50
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        140
+       ],
+       "a": [
+        290,
+        140
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        285,
+        52
+       ],
+       "a": [
+        285,
+        138
+       ],
+       "fleche": "deux",
+       "teinte": "violet",
+       "id": "h",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 98,
+       "texte": "40 m",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        22,
+        32
+       ],
+       "a": [
+        128,
+        32
+       ],
+       "fleche": "deux",
+       "teinte": "violet",
+       "id": "l",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 75,
+       "y": 22,
+       "texte": "120 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        132,
+        176
+       ],
+       "a": [
+        174,
+        176
+       ],
+       "fleche": "deux",
+       "teinte": "violet",
+       "id": "e",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 153,
+       "y": 195,
+       "texte": "20 m",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "barrage",
+     "enonce": "Touche la longueur à utiliser pour calculer l’énergie de position de l’eau : sa hauteur au-dessus de la centrale.",
+     "reponse": [
+      "h"
+     ],
+     "aide": "La hauteur se mesure à la verticale, depuis la surface du lac.",
+     "explication": "La hauteur à prendre est la **distance verticale de 40 m** entre la surface du lac et la centrale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie de position de 1 000 kg d’eau (Epp = m × g × h, avec g = 9,8 N/kg), en J.",
+     "reponse": 392000,
+     "unite": "J",
+     "aide": "Multiplie 1 000 kg, 9,8 N/kg et 40 m.",
+     "explication": "**Epp = m × g × h** = 1 000 × 9,8 × 40 = **392 000 J**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si le lac était deux fois plus haut (h = 80 m), quelle serait l’énergie de position de la même eau, en J ?",
+     "reponse": 784000,
+     "unite": "J",
+     "aide": "Epp est proportionnelle à la hauteur.",
+     "explication": "Epp double quand h double : 1 000 × 9,8 × 80 = **784 000 J**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces sources d’énergie.",
+     "categories": [
+      "Renouvelables",
+      "Non renouvelables"
+     ],
+     "items": [
+      [
+       "L’eau d’un barrage",
+       0
+      ],
+      [
+       "Le vent",
+       0
+      ],
+      [
+       "Le charbon",
+       1
+      ],
+      [
+       "L’uranium",
+       1
+      ],
+      [
+       "Le pétrole",
+       1
+      ]
+     ],
+     "aide": "Une source renouvelable se reconstitue à l’échelle humaine.",
+     "explication": "**Eau et vent** sont renouvelables ; **charbon, uranium et pétrole** ont des réserves limitées."
+    }
+   ]
+  },
+  {
+   "chapitre": "de7dec4c-a53a-5f6e-8d1b-702d6e9ae51d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La facture du radiateur de Samir",
+   "competence": "calculer",
+   "situation": "Samir a laissé son radiateur de 1 000 W allumé 2 heures. Il compare cette énergie à des reperes du cours : une pomme soulevée, une barre chocolatée.",
+   "documents": [
+    {
+     "id": "reperes",
+     "type": "tableau",
+     "titre": "Des ordres de grandeur",
+     "colonnes": [
+      "Action",
+      "Énergie"
+     ],
+     "lignes": [
+      [
+       "Soulever une pomme d’un mètre",
+       "1 J"
+      ],
+      [
+       "Une barre chocolatée",
+       "10⁶ J"
+      ],
+      [
+       "Un radiateur de 1 000 W pendant 1 h",
+       "3,6 × 10⁶ J"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur du cours"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message de Samir",
+     "participants": [
+      {
+       "nom": "Samir",
+       "emoji": "🧑",
+       "cote": "droite"
+      },
+      {
+       "nom": "Mamie",
+       "emoji": "👵",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samir",
+       "texte": "J’ai laissé le radiateur de 1 000 W allumé deux heures !"
+      },
+      {
+       "qui": "Mamie",
+       "texte": "Combien d’énergie cela représente ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reperes",
+     "enonce": "Touche l’énergie qui correspond à 1 kWh.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "1 kWh est l’énergie consommée par un appareil de 1 000 W pendant 1 h.",
+     "explication": "1 kWh = **3,6 × 10⁶ J** : c’est la ligne du radiateur de 1 000 W pendant 1 h."
+    },
+    {
+     "type": "nombre",
+     "document": "sms",
+     "enonce": "Quelle énergie le radiateur a-t-il consommée en 2 h, en kWh ?",
+     "reponse": 2,
+     "unite": "kWh",
+     "aide": "En 1 h, il consomme 1 kWh.",
+     "explication": "1 kWh par heure, pendant 2 h : **2 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris cette énergie en joules.",
+     "reponse": 7200000,
+     "unite": "J",
+     "aide": "1 kWh vaut 3,6 × 10⁶ J.",
+     "explication": "2 × 3 600 000 J = **7 200 000 J**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une barre chocolatée vaut environ 10⁶ J. Combien de barres représentent les 7 200 000 J du radiateur ?",
+     "reponse": 7.2,
+     "unite": "barres",
+     "aide": "Divise 7 200 000 par 1 000 000.",
+     "explication": "7 200 000 ÷ 1 000 000 = **7,2 barres**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour vérifier le repère du tableau : une pomme de 0,1 kg est soulevée de 1 m. Calcule son énergie de position, avec g = 9,8 N/kg.",
+     "reponse": 0.98,
+     "tolerance": 0.01,
+     "unite": "J",
+     "aide": "Epp = m × g × h avec m = 0,1 kg et h = 1 m.",
+     "explication": "**Epp = m × g × h** = 0,1 × 9,8 × 1 = **0,98 J**, soit environ 1 J : le repère est bon."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c602e2c-32c5-5631-ab24-4db2daaad74e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La lampe de poche de Zoé",
+   "competence": "observer-schema",
+   "situation": "Zoé explore la cave avec une lampe de poche. Elle se demande comment l’énergie de la pile se transforme en lumière.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Dans la lampe de poche",
+     "noeuds": [
+      {
+       "id": "pile",
+       "texte": "Pile",
+       "emoji": "🔋"
+      },
+      {
+       "id": "lampe",
+       "texte": "Lampe",
+       "emoji": "💡"
+      },
+      {
+       "id": "lumiere",
+       "texte": "Lumière",
+       "emoji": "✨"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pile",
+       "a": "lampe"
+      },
+      {
+       "de": "lampe",
+       "a": "lumiere"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’élément qui reçoit de l’énergie électrique et la convertit.",
+     "reponse": [
+      "lampe"
+     ],
+     "aide": "Qui reçoit l’énergie de la pile ?",
+     "explication": "La **lampe** reçoit l’énergie électrique et la convertit en énergie lumineuse (et un peu de thermique)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La pile convertit l’énergie ___ en énergie ___.",
+     "reponses": [
+      [
+       "chimique"
+      ],
+      [
+       "électrique",
+       "electrique"
+      ]
+     ],
+     "banque": [
+      "chimique",
+      "électrique",
+      "lumineuse",
+      "cinétique"
+     ],
+     "aide": "Une pile stocke de l’énergie dans des substances chimiques.",
+     "explication": "Une pile convertit de l’énergie **chimique** en énergie **électrique**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque appareil à sa conversion.",
+     "paires": [
+      [
+       "Pile",
+       "Chimique → électrique"
+      ],
+      [
+       "Panneau photovoltaïque",
+       "Lumineuse → électrique"
+      ],
+      [
+       "Alternateur",
+       "Cinétique → électrique"
+      ],
+      [
+       "Moteur électrique",
+       "Électrique → cinétique"
+      ]
+     ],
+     "aide": "Regarde ce que chaque appareil reçoit et ce qu’il fournit.",
+     "explication": "Pile : chimique → électrique ; panneau : lumineuse → électrique ; alternateur : cinétique → électrique ; moteur : électrique → cinétique."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c602e2c-32c5-5631-ab24-4db2daaad74e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans la cuisine : trois façons de transférer la chaleur",
+   "competence": "observer-schema",
+   "situation": "Dans la cuisine, la soupe chauffe sur la plaque. La cuillère reste dans la casserole, une fenêtre laisse passer le soleil. Inès repère trois transferts d’énergie thermique sur son dessin.",
+   "documents": [
+    {
+     "id": "cuisine",
+     "type": "schema",
+     "titre": "La casserole sur la plaque",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 175,
+       "l": 150,
+       "h": 14,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 100,
+       "l": 110,
+       "h": 75,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 66,
+       "y": 118,
+       "l": 98,
+       "h": 51,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        152
+       ],
+       "a": [
+        92,
+        38
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        108,
+        128
+       ],
+       "a": [
+        82,
+        58
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 66,
+       "y": 78,
+       "texte": "A",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        148,
+        162
+       ],
+       "a": [
+        148,
+        122
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 142,
+       "texte": "B",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "emoji",
+       "x": 290,
+       "y": 40,
+       "emoji": "🌞",
+       "taille": 40
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        268,
+        60
+       ],
+       "a": [
+        205,
+        112
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 246,
+       "y": 100,
+       "texte": "C",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque flèche au mode de transfert thermique qu’elle représente.",
+     "paires": [
+      [
+       "Flèche A",
+       "Conduction"
+      ],
+      [
+       "Flèche B",
+       "Convection"
+      ],
+      [
+       "Flèche C",
+       "Rayonnement"
+      ]
+     ],
+     "aide": "A suit un solide, B suit un liquide en mouvement, C traverse l’espace entre le Soleil et la fenêtre.",
+     "explication": "A : **conduction** (de proche en proche dans la cuillère). B : **convection** (l’eau chaude monte). C : **rayonnement** (sans support matériel)."
+    },
+    {
+     "type": "zone",
+     "document": "cuisine",
+     "enonce": "Touche le transfert qui n’a pas besoin de matière pour se faire.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Entre le Soleil et nous, il y a du vide.",
+     "explication": "Le **rayonnement** (flèche C) se propage sans support matériel, même dans le vide."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle.",
+     "texte": "La chaleur va toujours du corps le plus ___ vers le corps le plus ___.",
+     "reponses": [
+      [
+       "chaud"
+      ],
+      [
+       "froid"
+      ]
+     ],
+     "banque": [
+      "chaud",
+      "froid",
+      "lourd",
+      "léger"
+     ],
+     "aide": "Une cuillère froide dans de la soupe chaude se réchauffe.",
+     "explication": "La chaleur passe **du plus chaud au plus froid**, jamais l’inverse spontanément."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le manche de la cuillère devient-il chaud ?",
+     "options": [
+      "L’énergie passe de proche en proche dans le métal",
+      "Le manche reçoit des rayons du Soleil",
+      "Le manche est poussé par l’eau qui monte",
+      "Le manche fabrique sa propre chaleur"
+     ],
+     "reponse": 0,
+     "aide": "La cuillère est un solide en contact avec la soupe chaude.",
+     "explication": "C’est de la **conduction** : l’énergie thermique se transmet de proche en proche dans le solide."
+    }
+   ]
+  },
+  {
+   "chapitre": "5c602e2c-32c5-5631-ab24-4db2daaad74e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De la centrale à la lampe : quel rendement ?",
+   "competence": "analyser-document",
+   "situation": "Maël visite une centrale thermique qui alimente sa ville. Il observe ensuite le rendement de deux lampes de sa classe, pour comparer la façon dont elles convertissent l’énergie.",
+   "documents": [
+    {
+     "id": "centrale",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Une centrale thermique au charbon",
+     "noeuds": [
+      {
+       "id": "charbon",
+       "texte": "Charbon",
+       "emoji": "⚫"
+      },
+      {
+       "id": "chaudiere",
+       "texte": "Chaudière",
+       "emoji": "🔥"
+      },
+      {
+       "id": "turbine",
+       "texte": "Turbine",
+       "emoji": "🌀"
+      },
+      {
+       "id": "alternateur",
+       "texte": "Alternateur",
+       "emoji": "⚡"
+      }
+     ],
+     "liens": [
+      {
+       "de": "charbon",
+       "a": "chaudiere"
+      },
+      {
+       "de": "chaudiere",
+       "a": "turbine"
+      },
+      {
+       "de": "turbine",
+       "a": "alternateur"
+      }
+     ]
+    },
+    {
+     "id": "lampes",
+     "type": "tableau",
+     "titre": "Deux lampes",
+     "colonnes": [
+      "Lampe",
+      "Énergie reçue (J)",
+      "Énergie lumineuse (J)"
+     ],
+     "lignes": [
+      [
+       "Incandescence",
+       100,
+       5
+      ],
+      [
+       "LED",
+       20,
+       7
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "document": "centrale",
+     "enonce": "Complète l’énergie présente à chaque étape de la centrale.",
+     "texte": "Le charbon contient de l’énergie ___. La chaudière produit de l’énergie ___, qui met en mouvement la turbine : énergie ___. L’alternateur la convertit en énergie ___.",
+     "reponses": [
+      [
+       "chimique"
+      ],
+      [
+       "thermique"
+      ],
+      [
+       "cinétique"
+      ],
+      [
+       "électrique",
+       "electrique"
+      ]
+     ],
+     "banque": [
+      "chimique",
+      "thermique",
+      "cinétique",
+      "électrique",
+      "lumineuse"
+     ],
+     "aide": "Suis la chaîne : chaque appareil change la forme de l’énergie.",
+     "explication": "Charbon : **chimique** ; chaudière : **thermique** ; turbine : **cinétique** ; alternateur : **électrique**."
+    },
+    {
+     "type": "nombre",
+     "document": "lampes",
+     "enonce": "Quel est le rendement de la lampe à incandescence, en % ? (rendement = énergie utile ÷ énergie reçue)",
+     "reponse": 5,
+     "unite": "%",
+     "aide": "L’énergie utile est l’énergie lumineuse.",
+     "explication": "rendement = 5 J ÷ 100 J = 0,05, soit **5 %**."
+    },
+    {
+     "type": "nombre",
+     "document": "lampes",
+     "enonce": "Quel est le rendement de la LED, en % ?",
+     "reponse": 35,
+     "unite": "%",
+     "aide": "Divise l’énergie lumineuse par l’énergie reçue, puis multiplie par 100.",
+     "explication": "rendement = 7 J ÷ 20 J = 0,35, soit **35 %**."
+    },
+    {
+     "type": "zone",
+     "document": "lampes",
+     "enonce": "Touche la lampe qui a le meilleur rendement.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare les deux rendements que tu viens de calculer.",
+     "explication": "La **LED** (35 %) convertit bien mieux l’énergie reçue en lumière que l’incandescence (5 %)."
+    },
+    {
+     "type": "nombre",
+     "document": "lampes",
+     "enonce": "La lampe à incandescence doit produire 7 J de lumière. Quelle énergie doit-elle recevoir, en J ?",
+     "reponse": 140,
+     "unite": "J",
+     "aide": "Son rendement est de 5 % : énergie reçue = énergie utile ÷ rendement.",
+     "explication": "7 J ÷ 0,05 = **140 J**. Le reste part en chaleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "b75e090d-266d-5866-b981-9c6ec13d21b5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La trottinette de Théo",
+   "competence": "calculer",
+   "situation": "Théo roule en trottinette dans la cour. Avec elle, il a une masse totale de 60 kg. Le compteur affiche 18 km/h. Il veut connaître son énergie cinétique.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Les relevés de Théo",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse (Théo + trottinette)",
+       "60 kg"
+      ],
+      [
+       "Vitesse au compteur",
+       "18 km/h"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releve",
+     "enonce": "Touche la valeur qu’il faut convertir avant d’appliquer la formule de l’énergie cinétique.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Dans la formule, la vitesse doit être en m/s.",
+     "explication": "La vitesse est en **km/h** : il faut la convertir en m/s."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse en m/s.",
+     "reponse": 5,
+     "unite": "m/s",
+     "aide": "Des km/h aux m/s, on divise par 3,6.",
+     "explication": "18 ÷ 3,6 = **5 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie cinétique de Théo (Ec = ½ × m × v²).",
+     "reponse": 750,
+     "unite": "J",
+     "aide": "v² signifie v × v : 5 × 5 = 25.",
+     "explication": "**Ec = ½ × m × v²** = 0,5 × 60 × 5² = 0,5 × 60 × 25 = **750 J**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Théo roule avec un ami de même masse, soit 120 kg au total, à la même vitesse. Que devient l’énergie cinétique ?",
+     "options": [
+      "Elle double",
+      "Elle est multipliée par 4",
+      "Elle ne change pas",
+      "Elle est divisée par 2"
+     ],
+     "reponse": 0,
+     "aide": "Ec est proportionnelle à la masse.",
+     "explication": "La masse double, donc Ec **double** : 1 500 J."
+    }
+   ]
+  },
+  {
+   "chapitre": "b75e090d-266d-5866-b981-9c6ec13d21b5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe d’énergie d’une trottinette électrique",
+   "competence": "lire-graphique",
+   "situation": "Sur un circuit fermé, Clara teste une trottinette électrique ; avec elle dessus, l’ensemble a une masse de 50 kg. Elle calcule l’énergie cinétique pour plusieurs vitesses et trace la courbe.",
+   "documents": [
+    {
+     "id": "ec",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Énergie cinétique selon la vitesse",
+     "categories": [
+      "0 m/s",
+      "2 m/s",
+      "4 m/s",
+      "6 m/s",
+      "8 m/s",
+      "10 m/s"
+     ],
+     "series": [
+      {
+       "nom": "Énergie cinétique",
+       "valeurs": [
+        0,
+        100,
+        400,
+        900,
+        1600,
+        2500
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie cinétique",
+      "unite": "en J",
+      "min": 0,
+      "max": 2500,
+      "pas": 500
+     },
+     "axeX": {
+      "titre": "Vitesse"
+     },
+     "source": "Calculs avec m = 50 kg"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "ec",
+     "enonce": "Lis la courbe : quelle est l’énergie cinétique à 6 m/s, en J ?",
+     "reponse": 900,
+     "tolerance": 50,
+     "unite": "J",
+     "aide": "Cherche le point au-dessus de 6 m/s.",
+     "explication": "À 6 m/s, l’énergie cinétique est de **900 J** (0,5 × 50 × 6²)."
+    },
+    {
+     "type": "zone",
+     "document": "ec",
+     "enonce": "Touche la première vitesse pour laquelle l’énergie cinétique dépasse 1 000 J.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Compare chaque point à 1 000 J.",
+     "explication": "À 6 m/s on a 900 J, à **8 m/s** on atteint 1 600 J."
+    },
+    {
+     "type": "nombre",
+     "document": "ec",
+     "enonce": "De 4 m/s à 8 m/s, la vitesse double. Par combien l’énergie cinétique est-elle multipliée ?",
+     "reponse": 4,
+     "aide": "Divise l’énergie à 8 m/s par l’énergie à 4 m/s.",
+     "explication": "1 600 ÷ 400 = **4** : la vitesse est au carré dans la formule."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Clara roule à 36 km/h. Quelle est son énergie cinétique, en J ? (convertis d’abord, puis utilise la courbe)",
+     "reponse": 2500,
+     "tolerance": 100,
+     "unite": "J",
+     "aide": "Convertis 36 km/h en m/s en divisant par 3,6.",
+     "explication": "36 ÷ 3,6 = 10 m/s : sur la courbe, **2 500 J**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la courbe monte-t-elle de plus en plus vite ?",
+     "options": [
+      "La vitesse est au carré dans Ec",
+      "La masse augmente avec la vitesse",
+      "Clara pédale plus fort",
+      "Le sol est de plus en plus lisse"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la formule Ec = ½ × m × v².",
+     "explication": "Ec dépend de **v²** : quand v double, Ec est multipliée par 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "b75e090d-266d-5866-b981-9c6ec13d21b5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Distance d’arrêt d’une voiture sur route mouillée",
+   "competence": "analyser-document",
+   "situation": "Lors d’un atelier de sécurité routière, Amir étudie l’arrêt d’une voiture de 1 000 kg sur chaussée mouillée. Le temps de réaction du conducteur est de 1 s. Il dispose du tableau des distances et du graphique de l’énergie cinétique.",
+   "documents": [
+    {
+     "id": "arret",
+     "type": "tableau",
+     "titre": "Distances d’arrêt",
+     "colonnes": [
+      "Vitesse (km/h)",
+      "Réaction (m)",
+      "Freinage (m)",
+      "Arrêt (m)"
+     ],
+     "lignes": [
+      [
+       36,
+       10,
+       10,
+       20
+      ],
+      [
+       72,
+       20,
+       40,
+       60
+      ],
+      [
+       108,
+       30,
+       90,
+       "?"
+      ]
+     ],
+     "source": "Valeurs simplifiées pour l’exercice, chaussée mouillée"
+    },
+    {
+     "id": "ecvoiture",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Énergie cinétique de la voiture",
+     "categories": [
+      "36 km/h",
+      "72 km/h",
+      "108 km/h"
+     ],
+     "series": [
+      {
+       "nom": "Énergie cinétique",
+       "valeurs": [
+        50,
+        200,
+        450
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie cinétique",
+      "unite": "en kJ",
+      "min": 0,
+      "max": 500,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Vitesse"
+     },
+     "valeurs": false,
+     "source": "Calculs pour m = 1 000 kg"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "arret",
+     "enonce": "Quelle est la distance d’arrêt à 108 km/h, en m ?",
+     "reponse": 120,
+     "unite": "m",
+     "aide": "La distance d’arrêt est la somme de deux distances.",
+     "explication": "distance d’arrêt = réaction + freinage = 30 + 90 = **120 m**."
+    },
+    {
+     "type": "zone",
+     "document": "ecvoiture",
+     "enonce": "Touche la barre de la vitesse qui est le double de 36 km/h.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Double de 36 : 2 × 36.",
+     "explication": "2 × 36 = 72 km/h : c’est la **deuxième barre**, à 200 kJ."
+    },
+    {
+     "type": "nombre",
+     "document": "ecvoiture",
+     "enonce": "Vérifie la première barre : quelle est l’énergie cinétique de la voiture de 1 000 kg à 36 km/h, en kJ ? (convertis d’abord la vitesse en m/s)",
+     "reponse": 50,
+     "unite": "kJ",
+     "aide": "36 km/h = 10 m/s, puis Ec = ½ × m × v².",
+     "explication": "Ec = 0,5 × 1 000 × 10² = 50 000 J = **50 kJ**."
+    },
+    {
+     "type": "nombre",
+     "document": "ecvoiture",
+     "enonce": "De 36 à 108 km/h, la vitesse est multipliée par 3. Par combien l’énergie cinétique est-elle multipliée ?",
+     "reponse": 9,
+     "aide": "Divise l’énergie de la dernière barre par celle de la première.",
+     "explication": "450 ÷ 50 = **9** : la vitesse ×3 donne l’énergie ×9."
+    },
+    {
+     "type": "choix",
+     "document": "arret",
+     "enonce": "De 36 à 72 km/h, de quel facteur la distance de freinage est-elle multipliée ?",
+     "options": [
+      "4",
+      "2",
+      "3",
+      "8"
+     ],
+     "reponse": 0,
+     "aide": "Compare 10 m et 40 m.",
+     "explication": "40 ÷ 10 = **4** : la distance de freinage suit le carré de la vitesse, comme l’énergie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le conducteur regarde son téléphone. Quelle distance s’allonge ?",
+     "options": [
+      "La distance de réaction",
+      "La distance de freinage",
+      "Aucune des deux",
+      "Les deux de la même façon"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui change : le temps pour réagir ou la façon de freiner ?",
+     "explication": "Le conducteur met plus de temps à réagir : c’est la **distance de réaction** qui s’allonge."
+    }
+   ]
+  },
+  {
+   "chapitre": "e62c3f56-4c33-537b-89b6-1175140c90dd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une bille qui tombe de la table",
+   "competence": "lire-tableau",
+   "situation": "Samia lâche une bille du haut d’une table. Elle note l’énergie de position et l’énergie cinétique de la bille à trois moments de sa chute, en négligeant les frottements.",
+   "documents": [
+    {
+     "id": "bille",
+     "type": "tableau",
+     "titre": "Énergies de la bille",
+     "colonnes": [
+      "Moment",
+      "Énergie de position (J)",
+      "Énergie cinétique (J)"
+     ],
+     "lignes": [
+      [
+       "En haut",
+       10,
+       0
+      ],
+      [
+       "Au milieu",
+       5,
+       "?"
+      ],
+      [
+       "En bas",
+       0,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice, frottements négligés"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "bille",
+     "enonce": "Quelle est l’énergie cinétique de la bille au milieu de la chute, en J ?",
+     "reponse": 5,
+     "unite": "J",
+     "aide": "La somme des deux énergies reste la même qu’en haut.",
+     "explication": "La somme se conserve : 10 J − 5 J = **5 J** d’énergie cinétique."
+    },
+    {
+     "type": "nombre",
+     "document": "bille",
+     "enonce": "Quelle est l’énergie cinétique juste avant l’arrivée sur le sol, en J ?",
+     "reponse": 10,
+     "unite": "J",
+     "aide": "En bas, il ne reste plus d’énergie de position.",
+     "explication": "Toute l’énergie de position (10 J) s’est convertie en énergie cinétique : **10 J**."
+    },
+    {
+     "type": "zone",
+     "document": "bille",
+     "enonce": "Touche le moment où l’énergie cinétique est la plus grande.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "La bille va de plus en plus vite pendant sa chute.",
+     "explication": "C’est **en bas** : la bille va le plus vite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vaut la somme « énergie de position + énergie cinétique » à chaque moment ?",
+     "options": [
+      "Toujours 10 J",
+      "Toujours 0 J",
+      "Elle augmente sans cesse",
+      "Elle diminue sans cesse"
+     ],
+     "reponse": 0,
+     "aide": "Additionne les deux valeurs de chaque ligne.",
+     "explication": "À chaque moment la somme vaut **10 J** : l’énergie se conserve, elle change seulement de forme."
+    }
+   ]
+  },
+  {
+   "chapitre": "e62c3f56-4c33-537b-89b6-1175140c90dd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Voiture thermique ou voiture électrique ?",
+   "competence": "raisonner",
+   "situation": "La famille de Kenza hésite entre une voiture à essence et une voiture électrique. Elle compare l’énergie qu’il faut fournir pour un même trajet, qui demande 27 MJ d’énergie utile au mouvement.",
+   "documents": [
+    {
+     "id": "rend",
+     "type": "tableau",
+     "titre": "Rendements",
+     "colonnes": [
+      "Voiture",
+      "Rendement"
+     ],
+     "lignes": [
+      [
+       "Thermique",
+       "30 %"
+      ],
+      [
+       "Électrique",
+       "90 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur du cours"
+    },
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le trajet",
+     "noeuds": [
+      {
+       "id": "recue",
+       "texte": "Énergie reçue",
+       "emoji": "⛽"
+      },
+      {
+       "id": "moteur",
+       "texte": "Moteur",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "utile",
+       "texte": "Énergie utile : 27 MJ",
+       "emoji": "🛣️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "recue",
+       "a": "moteur"
+      },
+      {
+       "de": "moteur",
+       "a": "utile"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "rend",
+     "enonce": "Quelle énergie la voiture thermique doit-elle recevoir, en MJ ? (énergie reçue = énergie utile ÷ rendement)",
+     "reponse": 90,
+     "unite": "MJ",
+     "aide": "30 % s’écrit 0,3.",
+     "explication": "27 MJ ÷ 0,3 = **90 MJ**."
+    },
+    {
+     "type": "nombre",
+     "document": "rend",
+     "enonce": "Même question pour la voiture électrique, en MJ.",
+     "reponse": 30,
+     "unite": "MJ",
+     "aide": "90 % s’écrit 0,9.",
+     "explication": "27 MJ ÷ 0,9 = **30 MJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est dissipée par la voiture thermique pour ce trajet, en MJ ? (énergie reçue = énergie utile + énergie dissipée)",
+     "reponse": 63,
+     "unite": "MJ",
+     "aide": "Soustrais l’énergie utile de l’énergie reçue.",
+     "explication": "90 MJ − 27 MJ = **63 MJ** dissipés."
+    },
+    {
+     "type": "zone",
+     "document": "rend",
+     "enonce": "Touche le type de voiture qui a le meilleur rendement.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare 30 % et 90 %.",
+     "explication": "La voiture **électrique** (90 %) convertit mieux l’énergie reçue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient l’énergie dissipée par le moteur ?",
+     "options": [
+      "Elle part en chaleur dans l’air ambiant",
+      "Elle disparaît complètement du système",
+      "Elle se transforme en essence neuve",
+      "Elle est détruite par les frottements"
+     ],
+     "reponse": 0,
+     "aide": "L’énergie ne se crée pas et ne se détruit pas.",
+     "explication": "Elle est **dissipée sous forme de chaleur** : elle n’a pas disparu, elle est devenue inutilisable."
+    }
+   ]
+  },
+  {
+   "chapitre": "e62c3f56-4c33-537b-89b6-1175140c90dd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Isoler la maison de Lola",
+   "competence": "analyser-document",
+   "situation": "La maison de Lola n’est pas isolée : elle perd beaucoup de chaleur en hiver. Un artisan lui montre un schéma de la maison et un graphique de la répartition des pertes.",
+   "documents": [
+    {
+     "id": "maison",
+     "type": "schema",
+     "titre": "La maison",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         65,
+         90
+        ],
+        [
+         170,
+         30
+        ],
+        [
+         275,
+         90
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "toit",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 90,
+       "l": 180,
+       "h": 90,
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "murs",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 112,
+       "l": 40,
+       "h": 36,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "fenetre",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 180,
+       "l": 200,
+       "h": 16,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "sol",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 212,
+       "y": 140,
+       "texte": "Murs",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 135,
+       "y": 166,
+       "texte": "Fenêtre",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 70,
+       "texte": "Toit",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 193,
+       "texte": "Sol",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "pertes",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Où part la chaleur ?",
+     "categories": [
+      "Toit",
+      "Murs",
+      "Air renouvelé",
+      "Fenêtres",
+      "Sol"
+     ],
+     "series": [
+      {
+       "nom": "Part des pertes",
+       "valeurs": [
+        30,
+        25,
+        20,
+        15,
+        10
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des pertes",
+      "unite": "en %",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "valeurs": true,
+     "source": "Répartition typique d’une maison non isolée, chiffres arrondis"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maison",
+     "enonce": "Touche la partie de la maison par laquelle part le plus de chaleur.",
+     "reponse": [
+      "toit"
+     ],
+     "aide": "Cherche la plus grande barre du graphique parmi les parties dessinées sur le schéma.",
+     "explication": "Le **toit** laisse partir 30 % de la chaleur : c’est la plus grosse perte."
+    },
+    {
+     "type": "nombre",
+     "document": "pertes",
+     "enonce": "Un jour d’hiver, le chauffage fournit 100 kWh à la maison. Quelle énergie part par le toit, en kWh ?",
+     "reponse": 30,
+     "unite": "kWh",
+     "aide": "Prends 30 % de 100 kWh.",
+     "explication": "30 % de 100 kWh = **30 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lola isole le toit : les pertes par le toit sont divisées par 2. Quelle énergie économise-t-elle, en kWh ?",
+     "reponse": 15,
+     "unite": "kWh",
+     "aide": "Moitié de 30 kWh.",
+     "explication": "Les pertes passent de 30 à 15 kWh : elle économise **15 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Elle installe aussi des doubles vitrages : les pertes par les fenêtres sont aussi divisées par 2. Quelle économie totale, en kWh ?",
+     "reponse": 22.5,
+     "unite": "kWh",
+     "aide": "Les fenêtres perdent 15 kWh sur les 100 ; ajoute leur économie à celle du toit.",
+     "explication": "Fenêtres : 15 ÷ 2 = 7,5 kWh économisés. Total : 15 + 7,5 = **22,5 kWh**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient la chaleur qui sort de la maison ?",
+     "options": [
+      "Elle se dissipe dans l’air",
+      "Elle disparaît complètement",
+      "Elle se transforme en froid",
+      "Elle est détruite par le mur"
+     ],
+     "reponse": 0,
+     "aide": "L’énergie ne se détruit pas.",
+     "explication": "L’énergie n’a pas disparu : elle est **dissipée dans l’environnement**, trop diluée pour être récupérée."
+    }
+   ]
+  },
+  {
+   "chapitre": "557f795d-4fa9-526a-8dbd-96b02c71657a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La lampe de chevet d’Alice",
+   "competence": "observer-schema",
+   "situation": "Alice a monté un petit circuit pour sa lampe de chevet. Elle regarde le schéma de son circuit avec sa grande sœur.",
+   "documents": [
+    {
+     "id": "circuit1",
+     "type": "circuit",
+     "titre": "Le circuit d’Alice",
+     "branches": [
+      {
+       "de": [
+        0,
+        3
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L",
+       "allume": true,
+       "id": "lampe"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        6,
+        3
+       ],
+       "composant": "interrupteur-ferme",
+       "id": "inter"
+      },
+      {
+       "de": [
+        6,
+        3
+       ],
+       "a": [
+        0,
+        3
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuit1",
+     "enonce": "Touche le générateur du circuit.",
+     "reponse": [
+      "pile"
+     ],
+     "aide": "Le générateur fournit l’énergie électrique.",
+     "explication": "La **pile** est le générateur : elle fournit l’énergie au circuit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la lampe brille-t-elle ?",
+     "options": [
+      "Le circuit est fermé, sans coupure",
+      "Le circuit est ouvert côté pile",
+      "La pile est en court-circuit",
+      "Il n’y a pas de fils dans le circuit"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’interrupteur.",
+     "explication": "L’interrupteur est fermé : la boucle est complète, le courant circule, la lampe brille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passerait-il si on ouvrait l’interrupteur ?",
+     "options": [
+      "La lampe s’éteindrait",
+      "La lampe brillerait plus fort",
+      "La pile exploserait",
+      "Rien ne changerait"
+     ],
+     "reponse": 0,
+     "aide": "Un interrupteur ouvert coupe la boucle.",
+     "explication": "La boucle serait coupée : plus aucun courant ne circulerait, la lampe s’**éteindrait**."
+    },
+    {
+     "type": "choix",
+     "document": "circuit1",
+     "enonce": "Dans la lampe, comment circule le courant conventionnel ? (il sort de la borne + de la pile)",
+     "options": [
+      "De la droite vers la gauche",
+      "De la gauche vers la droite",
+      "Il ne circule pas",
+      "Dans les deux sens"
+     ],
+     "reponse": 0,
+     "aide": "Le + de la pile est en bas à gauche : suis le fil jusqu’à la lampe.",
+     "explication": "Le courant sort du **+** en bas à gauche, monte par la droite et traverse la lampe **de droite à gauche** pour revenir au −."
+    }
+   ]
+  },
+  {
+   "chapitre": "557f795d-4fa9-526a-8dbd-96b02c71657a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le testeur de conducteurs du club de bricolage",
+   "competence": "experimenter",
+   "situation": "Au club de bricolage, Noé a fabriqué un testeur : il place chaque objet dans la zone de test et regarde si la lampe brille. Il note ses résultats.",
+   "documents": [
+    {
+     "id": "testeur",
+     "type": "circuit",
+     "titre": "Le testeur",
+     "branches": [
+      {
+       "de": [
+        0,
+        3
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        6,
+        3
+       ],
+       "composant": "interrupteur-ouvert",
+       "nom": "Test"
+      },
+      {
+       "de": [
+        6,
+        3
+       ],
+       "a": [
+        0,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Résultats de Noé",
+     "colonnes": [
+      "Objet testé",
+      "La lampe brille ?"
+     ],
+     "lignes": [
+      [
+       "Clou en fer",
+       "Oui"
+      ],
+      [
+       "Gomme",
+       "Non"
+      ],
+      [
+       "Mine de crayon (graphite)",
+       "Oui"
+      ],
+      [
+       "Règle en plastique",
+       "Non"
+      ],
+      [
+       "Eau salée",
+       "Oui"
+      ],
+      [
+       "Cuillère en bois",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résultats écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resultats",
+     "multiple": true,
+     "enonce": "Touche les objets qui sont des isolants.",
+     "reponse": [
+      "r1c0",
+      "r3c0",
+      "r5c0"
+     ],
+     "aide": "Un isolant ne laisse pas passer le courant : la lampe reste éteinte.",
+     "explication": "**La gomme, la règle en plastique et la cuillère en bois** n’allument pas la lampe : ce sont des isolants."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque milieu aux porteurs de charge du courant.",
+     "paires": [
+      [
+       "Un métal (le clou)",
+       "Les électrons libres"
+      ],
+      [
+       "Une solution ionique (l’eau salée)",
+       "Les ions"
+      ]
+     ],
+     "aide": "Le courant est un déplacement ordonné de porteurs de charge.",
+     "explication": "Dans un **métal**, ce sont les **électrons libres** ; dans une **solution ionique**, ce sont les **ions**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces matériaux.",
+     "categories": [
+      "Conducteurs",
+      "Isolants"
+     ],
+     "items": [
+      [
+       "Le cuivre",
+       0
+      ],
+      [
+       "Le verre",
+       1
+      ],
+      [
+       "Le corps humain",
+       0
+      ],
+      [
+       "Le caoutchouc",
+       1
+      ],
+      [
+       "L’air sec",
+       1
+      ]
+     ],
+     "aide": "Les métaux et le corps humain sont conducteurs ; le verre et le plastique non.",
+     "explication": "**Cuivre et corps humain** sont conducteurs ; **verre, caoutchouc et air sec** sont isolants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne faut-il pas toucher une prise électrique avec les mains mouillées ?",
+     "options": [
+      "Le corps humain est conducteur, surtout mouillé",
+      "L’eau est un isolant parfait",
+      "La prise fonctionne mal avec de l’eau",
+      "Le courant ne passe que par les mains sèches"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la conductibilité du corps.",
+     "explication": "Le **corps humain est conducteur**, et d’autant plus s’il est humide : il peut être traversé par le courant."
+    }
+   ]
+  },
+  {
+   "chapitre": "557f795d-4fa9-526a-8dbd-96b02c71657a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi la deuxième lampe de Maya reste éteinte",
+   "competence": "raisonner",
+   "situation": "Maya a monté deux lampes en série avec une pile. En voulant accrocher un fil, elle a branché un fil directement aux bornes de la deuxième lampe, L2. Elle n’en comprend pas la conséquence.",
+   "documents": [
+    {
+     "id": "montage",
+     "type": "circuit",
+     "titre": "Le montage de Maya",
+     "branches": [
+      {
+       "de": [
+        0,
+        4
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "l1"
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "id": "l2"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        2
+       ]
+      },
+      {
+       "de": [
+        8,
+        2
+       ],
+       "a": [
+        8,
+        4
+       ]
+      },
+      {
+       "de": [
+        8,
+        4
+       ],
+       "a": [
+        4,
+        4
+       ]
+      },
+      {
+       "de": [
+        4,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        4,
+        2
+       ]
+      },
+      {
+       "de": [
+        4,
+        2
+       ],
+       "a": [
+        8,
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le message de Maya",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Papa",
+       "emoji": "👨",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "L2 est éteinte alors que L1 brille ! Elle est grillée ?"
+      },
+      {
+       "qui": "Papa",
+       "texte": "Regarde bien le fil que tu as ajouté…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "montage",
+     "enonce": "Touche la lampe qui est éteinte.",
+     "reponse": [
+      "l2"
+     ],
+     "aide": "Une lampe allumée brille sur le schéma.",
+     "explication": "C’est **L2** : elle n’est pas traversée par le courant."
+    },
+    {
+     "type": "association",
+     "document": "montage",
+     "enonce": "Associe chaque lampe à ce qui se passe pour elle.",
+     "paires": [
+      [
+       "Lampe L1",
+       "Traversée par le courant"
+      ],
+      [
+       "Lampe L2",
+       "Court-circuitée : plus de courant"
+      ]
+     ],
+     "aide": "Regarde quelle lampe brille et quelle lampe a un fil qui la contourne.",
+     "explication": "L1 est dans la boucle principale : elle est **traversée par le courant**. Le fil relie directement les bornes de L2 : elle est **court-circuitée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi L2 est-elle éteinte ?",
+     "options": [
+      "Le courant passe par le fil, pas par L2",
+      "La pile est presque complètement vide",
+      "L2 est branchée à l’envers du courant",
+      "L1 consomme tout le courant de la pile"
+     ],
+     "reponse": 0,
+     "aide": "Le courant passe par le chemin sans lampe.",
+     "explication": "Le fil relie directement les bornes de L2 : le courant **passe par le fil** et non par la lampe."
+    },
+    {
+     "type": "choix",
+     "document": "montage",
+     "enonce": "Dans la partie horizontale du fil ajouté, dans quel sens circule le courant conventionnel ? (il sort du + de la pile, en bas à gauche)",
+     "options": [
+      "De la droite vers la gauche",
+      "De la gauche vers la droite",
+      "Il ne circule pas",
+      "Dans les deux sens"
+     ],
+     "reponse": 0,
+     "aide": "Suis le fil depuis le + : en bas vers la droite, puis vers le haut jusqu’au fil.",
+     "explication": "Le courant monte par la droite, arrive au fil et le parcourt **de la droite vers la gauche**, avant de traverser L1."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passerait-il si le fil reliait directement les deux bornes de la pile ?",
+     "options": [
+      "Un courant énorme chaufferait les fils",
+      "Les deux lampes brilleraient beaucoup plus fort",
+      "Rien, le circuit serait ouvert",
+      "Le courant changerait de sens"
+     ],
+     "reponse": 0,
+     "aide": "C’est un vrai court-circuit.",
+     "explication": "C’est un **court-circuit** : l’intensité devient énorme, les fils chauffent et peuvent provoquer un incendie."
+    }
+   ]
+  }
+ ]
+}

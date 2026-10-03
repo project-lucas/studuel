@@ -1,0 +1,3689 @@
+{
+ "niveau": "1re",
+ "matiere": "si",
+ "exercices": [
+  {
+   "chapitre": "e73f25af-e175-56eb-b869-38a3d1d60b21",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le moteur du portail des Tilleuls",
+   "competence": "lire-tableau",
+   "situation": "Le portail de la résidence des Tilleuls s’ouvre quand un habitant appuie sur sa télécommande (T = 1) ou quand le capteur enterré devant la grille détecte une voiture (P = 1). On note M = 1 quand le moteur d’ouverture est alimenté.",
+   "documents": [
+    {
+     "id": "tv",
+     "type": "tableau",
+     "titre": "Table de vérité du moteur d’ouverture",
+     "colonnes": [
+      "T (télécommande)",
+      "P (voiture détectée)",
+      "M (moteur)"
+     ],
+     "lignes": [
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ]
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tv",
+     "multiple": true,
+     "reponse": [
+      "r1c2",
+      "r2c2",
+      "r3c2"
+     ],
+     "enonce": "Touche les trois cases de la colonne M où le moteur est alimenté.",
+     "aide": "Cherche dans la colonne M les cases qui valent 1.",
+     "explication": "Le moteur est alimenté dans **trois lignes sur quatre** : dès que T ou P vaut 1. Seule la ligne T = 0, P = 0 le laisse arrêté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle équation logique décrit ce fonctionnement ?",
+     "options": [
+      "M = T ET P",
+      "M = NON T OU NON P",
+      "M = T OU P",
+      "M = T OU NON P"
+     ],
+     "reponse": 2,
+     "aide": "Le moteur tourne si l’une OU l’autre des conditions est remplie.",
+     "explication": "M vaut 1 dès que T **ou** P vaut 1 : **M = T + P** (fonction OU). Le ET n’aurait donné 1 que sur la dernière ligne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le fil de la télécommande se coince : T reste à 1. Que vaut M, quelle que soit la valeur de P ?",
+     "reponse": 1,
+     "tolerance": 0,
+     "aide": "Pense à la règle a + 1 du tableau des propriétés.",
+     "explication": "M = T + P = 1 + P = **1** : 1 est l’élément absorbant du OU (a + 1 = 1). Le portail reste ouvert tant que le fil est coincé."
+    }
+   ]
+  },
+  {
+   "chapitre": "e73f25af-e175-56eb-b869-38a3d1d60b21",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un câblage trop compliqué",
+   "competence": "raisonner",
+   "situation": "En ouvrant le coffret du portail des Tilleuls, Yanis relève l’équation câblée par l’ancien installateur : M = (T + P) . (T + NON P). Il la simplifie pour savoir si tout ce câblage est utile.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes de la simplification",
+     "colonnes": [
+      "Étape",
+      "Expression",
+      "Règle appliquée"
+     ],
+     "lignes": [
+      [
+       "1",
+       "(T + P) . (T + NON P)",
+       "Équation relevée"
+      ],
+      [
+       "2",
+       "T + P . NON P",
+       "?"
+      ],
+      [
+       "3",
+       "T + 0",
+       "?"
+      ],
+      [
+       "4",
+       "T",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque passage d’une étape à la suivante à la règle appliquée.",
+     "paires": [
+      [
+       "De l’étape 1 à l’étape 2",
+       "Distributivité du OU sur le ET"
+      ],
+      [
+       "De l’étape 2 à l’étape 3",
+       "Complémentarité : a . NON a = 0"
+      ],
+      [
+       "De l’étape 3 à l’étape 4",
+       "Élément neutre du OU : a + 0 = a"
+      ]
+     ],
+     "aide": "Regarde ce qui change entre deux lignes : un terme factorisé, un terme qui disparaît, un 0 qui s’efface.",
+     "explication": "On factorise T avec **la distributivité du OU sur le ET**, puis **P . NON P = 0** (complémentarité), puis **T + 0 = T** (élément neutre du OU)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifie l’équation de l’étape 1 pour T = 0 et P = 1. Que vaut M ?",
+     "reponse": 0,
+     "tolerance": 0,
+     "aide": "Calcule chaque parenthèse : (0 + 1) puis (0 + NON 1).",
+     "explication": "(0 + 1) = 1 et (0 + NON 1) = 0 + 0 = 0, donc M = 1 . 0 = **0**, comme T = 0 dans l’équation simplifiée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Yanis sur ce câblage ?",
+     "options": [
+      "M dépend de T et de P : l’équation ne peut pas se simplifier",
+      "M dépend uniquement de P : la télécommande ne sert à rien",
+      "M dépend uniquement de T : le capteur P ne sert à rien ici",
+      "M vaut toujours 1 : le portail reste ouvert en permanence"
+     ],
+     "reponse": 2,
+     "aide": "Relis la dernière ligne du tableau.",
+     "explication": "L’équation se réduit à **M = T** : le capteur de présence P n’a aucune influence sur le moteur. Le câblage de P est inutile (ou mal pensé)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le câblage d’origine utilise 1 inverseur, 2 portes OU et 1 porte ET. En reliant directement T au moteur, combien de portes Yanis économise-t-il ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Additionne toutes les portes du montage d’origine ; il n’en reste aucune.",
+     "explication": "1 + 2 + 1 = **4 portes** économisées : moins de composants, de consommation et de pannes possibles."
+    }
+   ]
+  },
+  {
+   "chapitre": "e73f25af-e175-56eb-b869-38a3d1d60b21",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le portail tout en NON-ET",
+   "competence": "observer-schema",
+   "situation": "Le fabricant du portail n’a qu’un seul modèle de porte logique en stock : la NON-ET (NAND). Camille doit réaliser M = T + P avec trois portes NON-ET. Sur les deux premières, les deux entrées sont reliées entre elles.",
+   "documents": [
+    {
+     "id": "mont",
+     "type": "schema",
+     "titre": "Le montage de Camille",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Schéma imaginé pour l’exercice",
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 54,
+       "texte": "T",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 154,
+       "texte": "P",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        32,
+        50
+       ],
+       "a": [
+        70,
+        50
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        32,
+        150
+       ],
+       "a": [
+        70,
+        150
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 30,
+       "l": 70,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "NON-ET",
+       "id": "g1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 130,
+       "l": 70,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "NON-ET",
+       "id": "g2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 80,
+       "l": 70,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "NON-ET",
+       "id": "g3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        50
+       ],
+       "a": [
+        190,
+        50
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        50
+       ],
+       "a": [
+        190,
+        90
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        90
+       ],
+       "a": [
+        220,
+        90
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        150
+       ],
+       "a": [
+        190,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        150
+       ],
+       "a": [
+        190,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        110
+       ],
+       "a": [
+        220,
+        110
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        100
+       ],
+       "a": [
+        316,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 326,
+       "y": 104,
+       "texte": "M",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 82,
+       "texte": "entrées reliées",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 182,
+       "texte": "entrées reliées",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mont",
+     "reponse": [
+      "g3"
+     ],
+     "enonce": "Touche la porte dont la sortie commande le moteur (M).",
+     "aide": "Suis le fil jusqu’à la lettre M.",
+     "explication": "La sortie de la porte de droite (**G3**) est reliée à M : c’est elle qui commande le moteur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "T = 0 et P = 1. Quelle est la valeur de la sortie de la porte G1 ?",
+     "reponse": 1,
+     "tolerance": 0,
+     "aide": "Une NON-ET dont les deux entrées valent 0 : calcule 0 . 0, puis complémente.",
+     "explication": "G1 reçoit T = 0 sur ses deux entrées : NON(0 . 0) = NON 0 = **1**. Une NON-ET à entrées reliées est un simple inverseur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Toujours avec T = 0 et P = 1, quelle est la valeur de la sortie de G2 ?",
+     "reponse": 0,
+     "tolerance": 0,
+     "aide": "Même méthode : P = 1 arrive sur les deux entrées.",
+     "explication": "NON(1 . 1) = NON 1 = **0**. G1 et G2 fournissent donc NON T = 1 et NON P = 0."
+    },
+    {
+     "type": "choix",
+     "enonce": "G3 calcule NON(NON T . NON P). Quelle expression obtient-on avec la loi de De Morgan ?",
+     "options": [
+      "T ET P",
+      "T OU P",
+      "NON T OU NON P",
+      "NON (T OU P)"
+     ],
+     "reponse": 1,
+     "aide": "De Morgan : on complémente chaque terme et on échange les opérateurs. Ici, le complément s’applique à un produit de deux compléments.",
+     "explication": "NON(NON T . NON P) = NON(NON T) + NON(NON P) = **T + P** (involution). Trois NON-ET suffisent donc à réaliser un OU."
+    }
+   ]
+  },
+  {
+   "chapitre": "86324655-df8d-5398-bd2b-2d80cbae983e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le store de la terrasse",
+   "competence": "lire-tableau",
+   "situation": "Le store de la terrasse du café de Margaux se rentre (R = 1) quand le vent est fort (V = 1) ou quand il pleut (P = 1). Le capteur de soleil S n’intervient pas. Le tableau de Karnaugh place les huit combinaisons ; ses colonnes suivent le code de Gray.",
+   "documents": [
+    {
+     "id": "k",
+     "type": "tableau",
+     "titre": "Tableau de Karnaugh de R (store rentré)",
+     "colonnes": [
+      "V / S P",
+      "00",
+      "01",
+      "11",
+      "10"
+     ],
+     "lignes": [
+      [
+       "V = 0",
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       "V = 1",
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases du tableau valent 1 ?",
+     "reponse": 6,
+     "tolerance": 0,
+     "aide": "Compte ligne par ligne : deux cases à 1 en haut, puis la ligne du bas.",
+     "explication": "Deux cases à 1 sur la ligne V = 0 et quatre sur la ligne V = 1 : **6 cases**."
+    },
+    {
+     "type": "zone",
+     "document": "k",
+     "multiple": true,
+     "reponse": [
+      "r1c1",
+      "r1c2",
+      "r1c3",
+      "r1c4"
+     ],
+     "enonce": "Touche le groupe de quatre cases qui donne le terme V.",
+     "aide": "Cherche une ligne entière de 1 : une puissance de 2 et un rectangle.",
+     "explication": "Toute la ligne **V = 1** vaut 1 : un groupe de 4 cases. S et P y prennent toutes leurs valeurs, ces deux variables disparaissent : il ne reste que V."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation simplifiée de R ?",
+     "options": [
+      "R = V ET P",
+      "R = V OU S",
+      "R = S OU P",
+      "R = V OU P"
+     ],
+     "reponse": 3,
+     "aide": "Un second groupe de quatre cases occupe les colonnes où P = 1 (01 et 11) sur les deux lignes.",
+     "explication": "Le groupe de la ligne V = 1 donne V, le groupe des colonnes S P = 01 et 11 donne P : **R = V + P**. Le soleil S n’y figure pas, comme dans le cahier des charges."
+    }
+   ]
+  },
+  {
+   "chapitre": "86324655-df8d-5398-bd2b-2d80cbae983e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Déployer le store sans danger",
+   "competence": "raisonner",
+   "situation": "Le store se déploie (D = 1) quand il n’y a pas de vent et que le soleil est fort (S = 1) ou que le patron appuie sur le bouton manuel (M = 1). Estelle remplit le tableau de Karnaugh de D pour réduire le nombre de portes du coffret.",
+   "documents": [
+    {
+     "id": "k",
+     "type": "tableau",
+     "titre": "Tableau de Karnaugh de D (store déployé)",
+     "colonnes": [
+      "V / S M",
+      "00",
+      "01",
+      "11",
+      "10"
+     ],
+     "lignes": [
+      [
+       "V = 0",
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       "V = 1",
+       0,
+       0,
+       0,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "k",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r0c3"
+     ],
+     "enonce": "Touche le groupe de deux cases dont le terme garde NON V et M.",
+     "aide": "M reste égal à 1 et V égal à 0 dans tout le groupe : S, lui, change.",
+     "explication": "Les cases **S M = 01 et 11** de la ligne V = 0 : V = 0 et M = 1 ne changent pas, S passe de 0 à 1 et disparaît. Terme : NON V . M."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la lecture du groupe de gauche.",
+     "texte": "Le groupe S M = 01 et 11 élimine la variable ___ : il reste NON V et ___.",
+     "reponses": [
+      [
+       "S"
+      ],
+      [
+       "M"
+      ]
+     ],
+     "banque": [
+      "S",
+      "V",
+      "M"
+     ],
+     "aide": "Une variable disparaît quand elle prend les deux valeurs dans le groupe.",
+     "explication": "Dans le groupe, **S** vaut tantôt 0 tantôt 1 : elle disparaît ; **M** reste à 1 et NON V reste vrai. Terme : NON V . M."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation simplifiée de D ?",
+     "options": [
+      "D = NON V ET S ET M",
+      "D = V ET (S OU M)",
+      "D = NON V OU S OU M",
+      "D = NON V ET (S OU M)"
+     ],
+     "reponse": 3,
+     "aide": "Il y a deux groupes de deux cases, qui se chevauchent sur la case S M = 11.",
+     "explication": "Deux groupes : NON V . M et NON V . S. On factorise : **D = NON V . (S + M)**. Le chevauchement est autorisé et même recommandé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avant simplification, D s’écrit avec trois termes de trois variables (9 variables en tout). Combien de variables restent dans NON V . M + NON V . S ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Compte les variables de chaque terme : chacun en garde deux.",
+     "explication": "2 variables dans chacun des **2 termes** : 4 variables au lieu de 9. Moins de portes, moins de câblage."
+    }
+   ]
+  },
+  {
+   "chapitre": "86324655-df8d-5398-bd2b-2d80cbae983e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre capteurs, des cas impossibles",
+   "competence": "modeliser",
+   "situation": "Le store d’un restaurant reçoit quatre informations : le vent V, la pluie P, le gel G et le mode maintenance M. Le cahier des charges fixe quand il se rentre (R = 1). Hugo dresse le tableau de Karnaugh de R, avec les cas qui ne peuvent pas se produire.",
+   "documents": [
+    {
+     "id": "cdc",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Cahier des charges",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le store se rentre :",
+      "1) si le vent est fort ;",
+      "2) si la maintenance est demandée ;",
+      "3) s’il pleut et qu’il ne gèle pas ;",
+      "sinon il reste sorti. En maintenance, la plateforme du technicien est verrouillée par vent fort : M = 1 et V = 1 ne se produisent jamais."
+     ]
+    },
+    {
+     "id": "k4",
+     "type": "tableau",
+     "titre": "Tableau de Karnaugh de R",
+     "colonnes": [
+      "V P / G M",
+      "00",
+      "01",
+      "11",
+      "10"
+     ],
+     "lignes": [
+      [
+       "V P = 00",
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       "V P = 01",
+       1,
+       1,
+       1,
+       0
+      ],
+      [
+       "V P = 11",
+       1,
+       "φ",
+       "φ",
+       1
+      ],
+      [
+       "V P = 10",
+       1,
+       "φ",
+       "φ",
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "k4",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case : pluie, pas de gel, pas de maintenance, pas de vent.",
+     "aide": "Les lignes sont repérées par V P, les colonnes par G M.",
+     "explication": "Pluie sans vent : ligne **V P = 01** ; pas de gel et pas de maintenance : colonne **G M = 00**. La case vaut 1 (règle 3)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases du tableau sont des cas indifférents (φ) ?",
+     "reponse": 4,
+     "tolerance": 0,
+     "aide": "Quelles combinaisons le cahier des charges déclare-t-il impossibles ?",
+     "explication": "M = 1 avec V = 1 ne se produit jamais : lignes V P = 11 et 10, colonnes G M = 01 et 11 : **4 cases φ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases compte le plus grand groupe qui donne le terme V ? Les φ s’utilisent librement.",
+     "reponse": 8,
+     "tolerance": 0,
+     "aide": "V vaut 1 sur les deux dernières lignes, pour toutes les colonnes.",
+     "explication": "Les deux lignes V = 1 forment un rectangle de **8 cases**, dont 4 φ qu’on a le droit d’inclure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Ce groupe de 8 cases laisse constante une seule variable sur quatre. Combien de variables élimine-t-il ?",
+     "reponse": 3,
+     "tolerance": 0,
+     "aide": "Quatre variables au départ, une seule reste constante dans le groupe.",
+     "explication": "Seule V reste constante : P, G et M disparaissent, soit **3 variables** éliminées. Un groupe deux fois plus grand élimine une variable de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation simplifiée de R ?",
+     "options": [
+      "R = V OU M OU P OU NON G",
+      "R = V OU M OU (P ET NON G)",
+      "R = (V ET M) OU (P ET NON G)",
+      "R = V OU (P ET G) OU M"
+     ],
+     "reponse": 1,
+     "aide": "Trois groupes : V (8 cases), M (8 cases) et un groupe de 4 cases pour la pluie sans gel.",
+     "explication": "Groupes de 8 pour **V** et **M**, groupe de 4 pour **P . NON G** (lignes P = 1, colonnes G = 0) : **R = V + M + P . NON G**. Les φ ont agrandi les groupes."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b6c5c66-0348-521e-84e8-c28724a965e4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les ordres radio du drone de Lina",
+   "competence": "analyser-document",
+   "situation": "Lina pilote un drone d’inspection de toiture. Les ordres de sa manette (monter, avancer, tourner) voyagent par radio jusqu’au contrôleur de vol. Elle se demande ce qui peut mal tourner sur ce trajet.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le trajet d’un ordre",
+     "noeuds": [
+      {
+       "id": "man",
+       "texte": "Manette de Lina"
+      },
+      {
+       "id": "radio",
+       "texte": "Liaison radio 2,4 GHz"
+      },
+      {
+       "id": "cdv",
+       "texte": "Contrôleur de vol"
+      }
+     ],
+     "liens": [
+      {
+       "de": "man",
+       "a": "radio",
+       "texte": "ordre émis"
+      },
+      {
+       "de": "radio",
+       "a": "cdv",
+       "texte": "ordre reçu"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "reponse": [
+      "radio"
+     ],
+     "enonce": "Un brouilleur sature une seule partie du trajet pour rendre le drone sourd. Touche-la.",
+     "aide": "Un brouilleur émet des ondes parasites : où voyagent les ondes ?",
+     "explication": "Le brouilleur sature la **liaison radio** : les ordres n’arrivent plus, la disponibilité du service est perdue."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque attaque à l’exigence de sécurité qu’elle viole.",
+     "paires": [
+      [
+       "Un inconnu écoute les ordres envoyés par radio",
+       "Confidentialité"
+      ],
+      [
+       "Un parasite change l’ordre « monter » en « descendre »",
+       "Intégrité"
+      ],
+      [
+       "Un brouilleur empêche le drone de recevoir quoi que ce soit",
+       "Disponibilité"
+      ],
+      [
+       "Un inconnu envoie des ordres en se faisant passer pour Lina",
+       "Authentification"
+      ]
+     ],
+     "aide": "Demande-toi à chaque fois : qu’est-ce qui n’est plus garanti ? Le secret, l’exactitude, l’accès au service ou l’identité de l’émetteur ?",
+     "explication": "Écoute : **confidentialité**. Ordre modifié : **intégrité**. Brouillage : **disponibilité**. Faux pilote : **authentification**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La manette ajoute à chaque octet un bit de parité paire (le nombre total de 1, bit de parité compris, doit être pair). Quel bit ajoute-t-elle à l’octet 0110 1011 ?",
+     "reponse": 1,
+     "tolerance": 0,
+     "aide": "Compte les 1 de l’octet : leur nombre est-il pair ou impair ?",
+     "explication": "L’octet contient **cinq** 1, un nombre impair : il faut ajouter un **1** pour atteindre six, un nombre pair."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b6c5c66-0348-521e-84e8-c28724a965e4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chiffrer la vidéo du drone",
+   "competence": "raisonner",
+   "situation": "Un drone de surveillance envoie sa vidéo en direct à la tablette du pilote. Le bureau d’études compare deux méthodes de chiffrement avant de choisir comment protéger ce flux et comment échanger les clés.",
+   "documents": [
+    {
+     "id": "cmp",
+     "type": "tableau",
+     "titre": "Deux méthodes de chiffrement",
+     "colonnes": [
+      "Critère",
+      "Symétrique",
+      "Asymétrique"
+     ],
+     "lignes": [
+      [
+       "Clés",
+       "La même clé chiffre et déchiffre",
+       "Clé publique pour chiffrer, clé privée pour déchiffrer"
+      ],
+      [
+       "Vitesse",
+       "Rapide",
+       "Lente"
+      ],
+      [
+       "Difficulté",
+       "Il faut transmettre la clé au destinataire",
+       "Aucune : elle règle l’échange de clés"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Caractéristiques simplifiées"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel chiffrement protège le flux vidéo lui-même ?",
+     "options": [
+      "Asymétrique, car on n’a aucune clé à échanger",
+      "Symétrique, car il est rapide sur un flux continu",
+      "Aucun : la vidéo n’a pas besoin de confidentialité",
+      "Asymétrique, car il est le plus rapide des deux"
+     ],
+     "reponse": 1,
+     "aide": "Une vidéo envoie beaucoup de données sans arrêt : quelle méthode du tableau est rapide ?",
+     "explication": "Le **symétrique** est rapide : il convient à un flux continu. Son seul défaut, l’échange de la clé, se règle avec l’asymétrique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre les étapes d’une connexion sécurisée, à la manière de HTTPS.",
+     "items": [
+      "Le drone envoie sa clé publique à la tablette",
+      "La tablette crée une clé de session symétrique",
+      "Elle chiffre cette clé avec la clé publique du drone",
+      "Le drone la déchiffre avec sa clé privée",
+      "La vidéo est ensuite chiffrée avec la clé de session"
+     ],
+     "aide": "D’abord l’asymétrique pour échanger une clé, ensuite le symétrique pour le flux.",
+     "explication": "L’**asymétrique** transmet la clé de session sans jamais envoyer la clé privée ; le **symétrique** chiffre ensuite le trafic, bien plus vite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Six drones d’une flotte doivent pouvoir dialoguer chacun avec chacun, en symétrique avec une clé distincte par paire. Combien de clés faut-il ?",
+     "reponse": 15,
+     "tolerance": 0,
+     "aide": "Compte les paires : 6 × 5 couples ordonnés, mais la paire A–B est la même que B–A.",
+     "explication": "6 × 5 / 2 = **15 clés** à distribuer en secret. C’est la difficulté propre au chiffrement symétrique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un pirate intercepte la clé publique du drone. Que peut-il en faire ?",
+     "options": [
+      "Rien : seule la clé privée, jamais transmise, déchiffre",
+      "Déchiffrer la clé de session, puis toute la vidéo",
+      "Se faire passer pour le drone auprès de la tablette",
+      "Déchiffrer les messages que la tablette a déjà reçus"
+     ],
+     "reponse": 0,
+     "aide": "Relis le tableau : quelle clé déchiffre, et laquelle voyage ?",
+     "explication": "La clé publique ne sert qu’à **chiffrer** : la clé privée, qui déchiffre, n’est jamais transmise. L’intercepter ne sert à rien."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b6c5c66-0348-521e-84e8-c28724a965e4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une mise à jour suspecte",
+   "competence": "analyser-document",
+   "situation": "Le constructeur du drone publie une mise à jour du logiciel de vol, avec l’empreinte de chaque fichier et sa signature. Avant de l’installer, Lina calcule l’empreinte des fichiers téléchargés et compare.",
+   "documents": [
+    {
+     "id": "emp",
+     "type": "tableau",
+     "titre": "Empreintes des fichiers (8 premiers caractères)",
+     "colonnes": [
+      "Fichier",
+      "Empreinte publiée",
+      "Empreinte calculée"
+     ],
+     "lignes": [
+      [
+       "vol-2.4.bin",
+       "9f3a1c7e",
+       "9f3a1c7e"
+      ],
+      [
+       "cartes-2.4.bin",
+       "b81d04aa",
+       "b81d04aa"
+      ],
+      [
+       "gps-2.4.bin",
+       "5c2e77d0",
+       "e07b92a4"
+      ]
+     ],
+     "source": "Empreintes imaginées pour l’exercice"
+    },
+    {
+     "id": "sig",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "La signature d’un fichier",
+     "noeuds": [
+      {
+       "id": "e1",
+       "texte": "L’éditeur calcule l’empreinte"
+      },
+      {
+       "id": "e2",
+       "texte": "Il la chiffre avec sa clé privée"
+      },
+      {
+       "id": "e3",
+       "texte": "Le drone la déchiffre avec la clé publique"
+      },
+      {
+       "id": "e4",
+       "texte": "Il compare avec l’empreinte du fichier reçu"
+      }
+     ],
+     "liens": [
+      {
+       "de": "e1",
+       "a": "e2"
+      },
+      {
+       "de": "e2",
+       "a": "e3",
+       "texte": "signature"
+      },
+      {
+       "de": "e3",
+       "a": "e4"
+      }
+     ],
+     "source": "Schéma simplifié"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "emp",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le fichier que Lina ne doit pas installer.",
+     "aide": "Compare l’empreinte publiée et l’empreinte calculée, ligne par ligne.",
+     "explication": "L’empreinte calculée de **gps-2.4.bin** diffère de celle qui est publiée : le fichier a été altéré, ou corrompu pendant le téléchargement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le fichier altéré ne diffère de l’original que par un seul bit. Que dit-on de son empreinte ?",
+     "options": [
+      "Elle est presque identique à l’originale",
+      "Elle diffère seulement d’un caractère",
+      "Elle est entièrement différente de l’originale",
+      "Elle ne change pas : l’empreinte a une taille fixe"
+     ],
+     "reponse": 2,
+     "aide": "Regarde les deux empreintes de la troisième ligne : l’une ressemble-t-elle à l’autre ?",
+     "explication": "Une fonction de hachage est **très sensible** : la moindre modification change l’empreinte entièrement. C’est ce qui rend l’altération détectable."
+    },
+    {
+     "type": "zone",
+     "document": "sig",
+     "reponse": [
+      "e2"
+     ],
+     "enonce": "Touche l’étape où l’éditeur prouve que c’est bien lui qui a publié le fichier.",
+     "aide": "Seul l’éditeur possède cette clé : laquelle, publique ou privée ?",
+     "explication": "En chiffrant l’empreinte avec sa **clé privée**, l’éditeur signe : n’importe qui la vérifie avec sa clé publique, mais lui seul peut la produire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces garanties selon ce qui les apporte.",
+     "categories": [
+      "Signature numérique",
+      "Chiffrement du fichier"
+     ],
+     "items": [
+      [
+       "Origine de l’éditeur garantie",
+       0
+      ],
+      [
+       "Non-répudiation de l’éditeur",
+       0
+      ],
+      [
+       "Contenu illisible pour un tiers",
+       1
+      ],
+      [
+       "Confidentialité du logiciel",
+       1
+      ]
+     ],
+     "aide": "La signature garantit l’origine ; le chiffrement protège le contenu.",
+     "explication": "La **signature** apporte l’authentification et la non-répudiation, pas la confidentialité : le fichier peut rester en clair. Le **chiffrement** protège le contenu."
+    }
+   ]
+  },
+  {
+   "chapitre": "1ada4420-b501-5e0d-a457-80d054e44d04",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la girouette au serveur",
+   "competence": "observer-schema",
+   "situation": "La station météo du jardin de Nolwenn relève le vent et la pluie. Les capteurs parlent à la station, la station à la box de la maison, et la box à un serveur de prévisions sur Internet.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le chemin d’une mesure",
+     "noeuds": [
+      {
+       "id": "cap",
+       "texte": "Capteurs"
+      },
+      {
+       "id": "sta",
+       "texte": "Station"
+      },
+      {
+       "id": "box",
+       "texte": "Box"
+      },
+      {
+       "id": "srv",
+       "texte": "Serveur"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cap",
+       "a": "sta",
+       "texte": "Bluetooth, 3 m"
+      },
+      {
+       "de": "sta",
+       "a": "box",
+       "texte": "Wi-Fi, maison"
+      },
+      {
+       "de": "box",
+       "a": "srv",
+       "texte": "Internet"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque liaison de la chaîne à l’échelle du réseau.",
+     "paires": [
+      [
+       "Capteurs ↔ station : Bluetooth, 3 m",
+       "PAN"
+      ],
+      [
+       "Station ↔ box : Wi-Fi dans la maison",
+       "LAN"
+      ],
+      [
+       "Box ↔ serveur : Internet",
+       "WAN"
+      ]
+     ],
+     "aide": "PAN : quelques mètres autour d’une personne ; LAN : un bâtiment ; WAN : une étendue géographique large.",
+     "explication": "Quelques mètres en Bluetooth : **PAN**. Le Wi-Fi d’une maison : **LAN**. Internet : **WAN**."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "reponse": [
+      "box"
+     ],
+     "enonce": "Touche l’équipement qui relie le réseau de la maison à Internet.",
+     "aide": "Quel équipement relie deux réseaux différents et choisit le chemin ?",
+     "explication": "C’est la **box**, qui joue le rôle de routeur entre le réseau local et Internet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Trois capteurs sont reliés directement à la station et à rien d’autre. Quelle topologie dessinent-ils ?",
+     "options": [
+      "Bus",
+      "Anneau",
+      "Maillée",
+      "Étoile"
+     ],
+     "reponse": 3,
+     "aide": "Tous sont reliés à un nœud central.",
+     "explication": "Tous les capteurs partent d’un nœud central, la station : c’est une topologie **en étoile**. Si la station tombe, tout s’arrête."
+    }
+   ]
+  },
+  {
+   "chapitre": "1ada4420-b501-5e0d-a457-80d054e44d04",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les adresses de la maison de Nolwenn",
+   "competence": "lire-tableau",
+   "situation": "Nolwenn a branché quatre équipements sur son réseau domestique. Elle relève leurs adresses IP et leur masque, puis cherche lesquels peuvent se parler directement, sans passer par un routeur.",
+   "documents": [
+    {
+     "id": "ip",
+     "type": "tableau",
+     "titre": "Équipements du réseau",
+     "colonnes": [
+      "Équipement",
+      "Adresse IP",
+      "Masque de sous-réseau"
+     ],
+     "lignes": [
+      [
+       "Station météo",
+       "192.168.1.20",
+       "255.255.255.0"
+      ],
+      [
+       "Capteur de sol",
+       "192.168.1.35",
+       "255.255.255.0"
+      ],
+      [
+       "Ordinateur du bureau",
+       "192.168.2.10",
+       "255.255.255.0"
+      ],
+      [
+       "Imprimante",
+       "192.168.1.50",
+       "255.255.255.0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Adresses imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Avec le masque 255.255.255.0, combien d’octets de l’adresse IP désignent le réseau ?",
+     "reponse": 3,
+     "tolerance": 0,
+     "aide": "Chaque 255 du masque couvre un octet de la partie réseau.",
+     "explication": "Trois octets valent 255 : les trois premiers (**192.168.1**) désignent le réseau, le dernier désigne la machine."
+    },
+    {
+     "type": "zone",
+     "document": "ip",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche l’équipement qui doit passer par un routeur pour parler à la station météo.",
+     "aide": "Compare les trois premiers octets de chaque adresse avec ceux de la station.",
+     "explication": "L’ordinateur est en **192.168.2.x**, la station en 192.168.1.x : réseaux différents, il faut un routeur. Les trois autres sont dans le même réseau."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque numéro de port à l’application de la station qui l’écoute.",
+     "paires": [
+      [
+       "80",
+       "HTTP (page web de la station)"
+      ],
+      [
+       "21",
+       "FTP (envoi de fichiers)"
+      ],
+      [
+       "1883",
+       "MQTT (mesures des capteurs)"
+      ]
+     ],
+     "aide": "Le numéro de port désigne l’application destinataire sur la machine.",
+     "explication": "Le port **80** est celui de HTTP, le **21** celui de FTP et le **1883** celui de MQTT. L’adresse IP trouve la machine ; le port trouve l’application."
+    },
+    {
+     "type": "choix",
+     "enonce": "Nolwenn change de box. Que se passe-t-il pour les adresses de la station ?",
+     "options": [
+      "Les deux adresses changent toutes les deux",
+      "L’IP peut changer, la MAC reste la même",
+      "L’IP reste fixe, c’est la MAC qui change",
+      "Aucune des deux adresses ne peut changer"
+     ],
+     "reponse": 1,
+     "aide": "Laquelle est attribuée par le réseau, laquelle l’est en usine ?",
+     "explication": "L’adresse **IP** est logique et attribuée par le réseau : elle peut changer. L’adresse **MAC** est physique, attribuée en usine, unique : elle ne change pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "1ada4420-b501-5e0d-a457-80d054e44d04",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "MQTT sur la station du lycée",
+   "competence": "modeliser",
+   "situation": "Le lycée équipe son toit d’une station météo. Un capteur de vent envoie une mesure toutes les 10 minutes à un courtier MQTT. Trois applications s’abonnent à ce sujet : l’appli du lycée, un écran du hall et une archive. Les fichiers de mise à jour, eux, voyagent autrement.",
+   "documents": [
+    {
+     "id": "mq",
+     "type": "schema",
+     "titre": "Publication-abonnement",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Schéma imaginé pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 80,
+       "l": 84,
+       "h": 44,
+       "arrondi": 6,
+       "texte": "Capteur de vent",
+       "id": "cap"
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 70,
+       "l": 84,
+       "h": 64,
+       "arrondi": 6,
+       "texte": "Courtier",
+       "id": "crt",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 246,
+       "y": 14,
+       "l": 84,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Appli",
+       "id": "a1"
+      },
+      {
+       "forme": "rect",
+       "x": 246,
+       "y": 80,
+       "l": 84,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Écran",
+       "id": "a2"
+      },
+      {
+       "forme": "rect",
+       "x": 246,
+       "y": 146,
+       "l": 84,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Archive",
+       "id": "a3"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        94,
+        102
+       ],
+       "a": [
+        128,
+        102
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        212,
+        90
+       ],
+       "a": [
+        246,
+        34
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        212,
+        102
+       ],
+       "a": [
+        246,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        212,
+        114
+       ],
+       "a": [
+        246,
+        166
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 111,
+       "y": 72,
+       "texte": "publie",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 156,
+       "texte": "sujet : meteo/vent",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "fl",
+     "type": "tableau",
+     "titre": "Les flux du lycée",
+     "colonnes": [
+      "Flux",
+      "Ce qui compte"
+     ],
+     "lignes": [
+      [
+       "Mise à jour du logiciel de la station",
+       "Le fichier doit arriver entier et dans l’ordre"
+      ],
+      [
+       "Caméra du ciel en direct",
+       "L’image doit arriver à temps ; en retard, elle ne sert plus"
+      ],
+      [
+       "Cumul de pluie du mois",
+       "Aucune mesure ne doit être perdue"
+      ],
+      [
+       "Annonce vocale en direct",
+       "Pas de décalage entre l’émission et l’écoute"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mq",
+     "reponse": [
+      "crt"
+     ],
+     "enonce": "Touche l’élément qui reçoit les mesures et les distribue aux abonnés.",
+     "aide": "Il se place entre le capteur et les applications.",
+     "explication": "Le **courtier** (broker) reçoit chaque message publié et le redistribue à tous les abonnés du sujet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de messages le capteur envoie-t-il en une heure ?",
+     "reponse": 6,
+     "tolerance": 0,
+     "aide": "Une heure compte 60 minutes ; une mesure part toutes les 10 minutes.",
+     "explication": "60 / 10 = **6 messages** : le capteur publie une seule fois, quel que soit le nombre d’abonnés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de messages le courtier distribue-t-il en une heure ?",
+     "reponse": 18,
+     "tolerance": 0,
+     "aide": "Chaque message publié est copié pour chacun des abonnés du schéma.",
+     "explication": "6 messages × 3 abonnés = **18 messages** distribués. La charge est portée par le courtier, pas par le capteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le lycée ajoute un quatrième abonné. Que faut-il modifier côté capteur ?",
+     "options": [
+      "Il faut ajouter une liaison vers ce nouvel abonné",
+      "Il faut doubler la fréquence des mesures",
+      "Il faut lui donner l’adresse IP du nouvel abonné",
+      "Rien : il publie sans connaître ses abonnés"
+     ],
+     "reponse": 3,
+     "aide": "Dans la publication-abonnement, qui connaît la liste des abonnés ?",
+     "explication": "Le capteur publie sur un sujet sans savoir qui l’écoute : **rien à modifier**. C’est la raison du succès de MQTT pour les objets connectés."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces flux selon le protocole de transport qui leur convient.",
+     "categories": [
+      "TCP",
+      "UDP"
+     ],
+     "items": [
+      [
+       "Mise à jour du logiciel de la station",
+       0
+      ],
+      [
+       "Cumul de pluie du mois",
+       0
+      ],
+      [
+       "Caméra du ciel en direct",
+       1
+      ],
+      [
+       "Annonce vocale en direct",
+       1
+      ]
+     ],
+     "aide": "Relis la colonne « Ce qui compte » : fiabilité complète ou rapidité avant tout ?",
+     "explication": "Un fichier ou un cumul exigent **TCP** : accusés de réception, retransmission, ordre. Une image ou une voix en direct acceptent de perdre un paquet : **UDP**, plus rapide."
+    }
+   ]
+  },
+  {
+   "chapitre": "afcec768-8598-5845-9a92-fe4964b444c6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’éclairage du vélo de Malo",
+   "competence": "observer-schema",
+   "situation": "Le vélo à assistance électrique de Malo a un petit réseau 6 V pour l’éclairage : un phare à l’avant, un feu rouge à l’arrière, et un interrupteur au guidon. Le phare absorbe 0,5 A et le feu 0,1 A.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "Le circuit d’éclairage",
+     "source": "Schéma imaginé pour l’exercice",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        4
+       ],
+       "composant": "pile",
+       "nom": "6 V"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ],
+       "composant": "interrupteur-ferme",
+       "nom": "K"
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        4,
+        4
+       ],
+       "composant": "lampe",
+       "nom": "Phare",
+       "allume": true,
+       "id": "phare"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        4
+       ],
+       "composant": "lampe",
+       "nom": "Feu",
+       "allume": true,
+       "id": "feu"
+      },
+      {
+       "de": [
+        0,
+        4
+       ],
+       "a": [
+        4,
+        4
+       ]
+      },
+      {
+       "de": [
+        4,
+        4
+       ],
+       "a": [
+        8,
+        4
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "reponse": [
+      "feu"
+     ],
+     "enonce": "Le phare grille. Touche la lampe qui continue de briller.",
+     "aide": "Les deux lampes sont sur des branches séparées, chacune reliée directement à la batterie.",
+     "explication": "Les deux lampes sont **en dérivation** : couper une branche n’affecte pas l’autre. Le feu arrière reste allumé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle intensité la batterie débite-t-elle quand les deux lampes brillent ?",
+     "reponse": 0.6,
+     "unite": "A",
+     "tolerance": 0,
+     "aide": "Au nœud, la somme des intensités entrantes égale la somme des sortantes.",
+     "explication": "Loi des nœuds : 0,5 + 0,1 = **0,6 A**. En dérivation, les intensités s’additionnent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle tension a-t-on aux bornes du feu arrière ?",
+     "reponse": 6,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "En dérivation, la tension est la même aux bornes de chaque branche.",
+     "explication": "Chaque branche est reliée aux bornes de la batterie : le feu reçoit **6 V**, comme le phare."
+    }
+   ]
+  },
+  {
+   "chapitre": "afcec768-8598-5845-9a92-fe4964b444c6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire la batterie du vélo",
+   "competence": "calculer",
+   "situation": "Le calculateur du vélo mesure la tension de la batterie (36 V, jusqu’à 42 V pleine charge) avec un pont diviseur de tension, car son entrée n’accepte que 3,3 V. Hélène vérifie que le pont est bien dimensionné.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "Le pont diviseur",
+     "source": "Schéma imaginé pour l’exercice",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        6
+       ],
+       "composant": "pile",
+       "nom": "36 V"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "R1",
+       "id": "r1"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "resistance",
+       "nom": "R2",
+       "id": "r2"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ],
+       "composant": "voltmetre",
+       "nom": "U2",
+       "id": "vm"
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "car",
+     "type": "tableau",
+     "titre": "Caractéristiques",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "R1",
+       "120 kΩ"
+      ],
+      [
+       "R2",
+       "10 kΩ"
+      ],
+      [
+       "Tension maximale de l’entrée du calculateur",
+       "3,3 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "reponse": [
+      "r2"
+     ],
+     "enonce": "Touche la résistance aux bornes de laquelle on prélève la tension envoyée au calculateur.",
+     "aide": "Le voltmètre est en dérivation sur l’un des deux dipôles.",
+     "explication": "Le voltmètre mesure U2 aux bornes de **R2** : c’est cette tension, plus faible que celle de la batterie, que le calculateur lit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle intensité traverse le pont avec la batterie à 36 V ? Arrondis au centième de mA.",
+     "reponse": 0.28,
+     "unite": "mA",
+     "tolerance": 0.005,
+     "aide": "R1 et R2 sont en série : additionne-les en ohms, puis I = U / R.",
+     "explication": "R = 120 + 10 = 130 kΩ ; I = 36 / 130 000 ≈ 0,000 277 A, soit **0,28 mA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle tension U2 le calculateur reçoit-il avec la batterie à 36 V ? Arrondis au centième de volt.",
+     "reponse": 2.77,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "Pont diviseur : U2 = U × R2 / (R1 + R2).",
+     "explication": "U2 = 36 × 10 / 130 ≈ **2,77 V**, bien sous 3,3 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Batterie pleine à 42 V : quelle tension U2 ? Arrondis au centième de volt.",
+     "reponse": 3.23,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "Même formule, avec 42 V à la place de 36 V.",
+     "explication": "U2 = 42 × 10 / 130 ≈ **3,23 V** : inférieur à 3,3 V, l’entrée du calculateur est protégée même batterie pleine."
+    }
+   ]
+  },
+  {
+   "chapitre": "afcec768-8598-5845-9a92-fe4964b444c6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le réseau 24 V du vélo cargo",
+   "competence": "modeliser",
+   "situation": "Sur un vélo cargo, un réseau 24 V alimente un phare (R2) et un chargeur USB (R3), montés en dérivation derrière une résistance de protection R1. Louane veut prévoir les courants, y compris quand on débranche le phare.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "Le réseau 24 V",
+     "source": "Schéma imaginé pour l’exercice",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        6
+       ],
+       "composant": "pile",
+       "nom": "24 V"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "R1",
+       "id": "r1"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        10,
+        0
+       ]
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        14,
+        0
+       ]
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        10,
+        6
+       ],
+       "composant": "resistance",
+       "nom": "R2",
+       "id": "r2"
+      },
+      {
+       "de": [
+        14,
+        0
+       ],
+       "a": [
+        14,
+        6
+       ],
+       "composant": "resistance",
+       "nom": "R3",
+       "id": "r3"
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        10,
+        6
+       ]
+      },
+      {
+       "de": [
+        10,
+        6
+       ],
+       "a": [
+        14,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "val",
+     "type": "tableau",
+     "titre": "Valeurs des résistances",
+     "colonnes": [
+      "Résistance",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "R1 (protection)",
+       "4 Ω"
+      ],
+      [
+       "R2 (phare)",
+       "6 Ω"
+      ],
+      [
+       "R3 (chargeur USB)",
+       "12 Ω"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "reponse": [
+      "r1"
+     ],
+     "enonce": "Touche la résistance traversée par la totalité du courant débité par la batterie.",
+     "aide": "Cherche le dipôle placé avant que le fil ne se divise en deux branches.",
+     "explication": "**R1** est en série avec l’ensemble : tout le courant de la batterie la traverse avant de se partager entre R2 et R3."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre les étapes pour trouver les courants de chaque branche.",
+     "items": [
+      "Calculer la résistance équivalente de R2 et R3 en dérivation",
+      "Ajouter R1 pour obtenir la résistance totale",
+      "Calculer le courant total I = E / R totale",
+      "Calculer la tension aux bornes du groupe R2 et R3",
+      "En déduire le courant de chaque branche"
+     ],
+     "aide": "On simplifie d’abord le circuit, puis on remonte vers chaque branche.",
+     "explication": "On réduit le circuit (équivalent, puis série), on trouve I, puis on **redescend** : tension du groupe, courants des branches avec la loi d’Ohm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la résistance équivalente de R2 et R3 en dérivation ?",
+     "reponse": 4,
+     "unite": "Ω",
+     "tolerance": 0,
+     "aide": "Pour deux résistances en dérivation : R = R2 × R3 / (R2 + R3).",
+     "explication": "6 × 12 / (6 + 12) = 72 / 18 = **4 Ω**. La résistance équivalente d’une dérivation est plus petite que chaque branche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel courant traverse le chargeur USB (R3) ?",
+     "reponse": 1,
+     "unite": "A",
+     "tolerance": 0,
+     "aide": "Résistance totale 8 Ω, donc I = 3 A ; la tension aux bornes du groupe vaut 3 A × 4 Ω.",
+     "explication": "Le groupe voit 3 × 4 = 12 V, donc I3 = 12 / 12 = **1 A** (et I2 = 12 / 6 = 2 A : 1 + 2 = 3 A, loi des nœuds)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On débranche le phare (R2). Quel courant traverse alors le chargeur USB ?",
+     "reponse": 1.5,
+     "unite": "A",
+     "tolerance": 0,
+     "aide": "Il ne reste que R1 et R3 en série : calcule leur somme, puis I = E / R.",
+     "explication": "R1 et R3 en série : 4 + 12 = 16 Ω ; I = 24 / 16 = **1,5 A**. Le chargeur reçoit plus de courant, car le groupe offre moins de résistance au partage."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b78b60-a13d-531e-a9d0-e02b6e3d362a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La batterie du robot tondeuse",
+   "competence": "analyser-document",
+   "situation": "Le robot tondeuse de Joséphine fonctionne avec une batterie qui se modélise par une force électromotrice E en série avec une résistance interne r. Quand l’herbe est dense, la lame appelle un courant plus fort.",
+   "documents": [
+    {
+     "id": "pl",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Batterie du robot",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "🔋",
+     "lignes": [
+      {
+       "texte": "Force électromotrice E",
+       "valeur": "18 V",
+       "id": "e"
+      },
+      {
+       "texte": "Résistance interne r",
+       "valeur": "0,15 Ω",
+       "id": "r"
+      },
+      {
+       "texte": "Courant maximal",
+       "valeur": "25 A",
+       "id": "imax"
+      }
+     ],
+     "pied": "Plaque écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pl",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche la ligne qui donne la résistance interne de la batterie.",
+     "aide": "La résistance interne se note r et s’exprime en ohms.",
+     "explication": "La ligne **« Résistance interne r : 0,15 Ω »** : c’est elle qui fait chuter la tension quand le courant augmente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La lame appelle 12 A. Quelle tension la batterie délivre-t-elle ?",
+     "reponse": 16.2,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "Utilise U = E − r × I.",
+     "explication": "U = 18 − 0,15 × 12 = 18 − 1,8 = **16,2 V**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au courant maximal de 25 A, quelle tension délivre-t-elle ?",
+     "reponse": 14.25,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "Même relation, avec 25 A à la place de 12 A.",
+     "explication": "U = 18 − 0,15 × 25 = 18 − 3,75 = **14,25 V** : plus le courant appelé est fort, plus la tension chute."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b78b60-a13d-531e-a9d0-e02b6e3d362a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La LED « en marche » du robot",
+   "competence": "calculer",
+   "situation": "Joséphine ajoute à son robot une LED rouge qui s’allume quand il tond. Elle est alimentée en 12 V. Il faut une résistance en série pour que la LED ne grille pas.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "La LED et sa résistance",
+     "source": "Schéma imaginé pour l’exercice",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        4
+       ],
+       "composant": "pile",
+       "nom": "12 V"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "R",
+       "id": "res"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        4
+       ],
+       "composant": "del",
+       "nom": "LED",
+       "allume": true,
+       "id": "led"
+      },
+      {
+       "de": [
+        12,
+        4
+       ],
+       "a": [
+        6,
+        4
+       ]
+      },
+      {
+       "de": [
+        6,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ]
+      }
+     ]
+    },
+    {
+     "id": "car",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Tension aux bornes de la LED allumée",
+       "2,0 V"
+      ],
+      [
+       "Courant maximal de la LED",
+       "20 mA"
+      ],
+      [
+       "Valeurs normalisées disponibles (Ω)",
+       "390 – 470 – 560 – 680"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "reponse": [
+      "res"
+     ],
+     "enonce": "Touche le composant qui limite le courant dans la LED.",
+     "aide": "Il est monté en série avec la LED.",
+     "explication": "La **résistance** en série limite le courant. Sans elle, la LED grille."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur minimale de R, en ohms, garde le courant à 20 mA ou moins ?",
+     "reponse": 500,
+     "unite": "Ω",
+     "tolerance": 0,
+     "aide": "Loi des mailles : la résistance reçoit 12 V − 2 V. Puis R = U / I, avec I = 0,020 A.",
+     "explication": "U aux bornes de R = 12 − 2 = 10 V ; R = 10 / 0,020 = **500 Ω** au moins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la plus petite valeur normalisée du tableau qui protège la LED ?",
+     "options": [
+      "390 Ω",
+      "470 Ω",
+      "560 Ω",
+      "680 Ω"
+     ],
+     "reponse": 2,
+     "ordreFixe": true,
+     "aide": "Elle doit être supérieure ou égale à 500 Ω.",
+     "explication": "390 et 470 Ω sont en dessous de 500 Ω : le courant dépasserait 20 mA (10 / 470 ≈ 21,3 mA). La plus petite qui convient est **560 Ω**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec R = 560 Ω, quelle intensité traverse la LED ? Arrondis au dixième de mA.",
+     "reponse": 17.9,
+     "unite": "mA",
+     "tolerance": 0.05,
+     "aide": "I = 10 V / 560 Ω, à convertir en milliampères.",
+     "explication": "I = 10 / 560 ≈ 0,0179 A, soit **17,9 mA** : sous la limite de 20 mA."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance la résistance dissipe-t-elle en chaleur ? Arrondis au centième de watt.",
+     "reponse": 0.18,
+     "unite": "W",
+     "tolerance": 0.005,
+     "aide": "P = U × I, avec U = 10 V et I = 0,0179 A.",
+     "explication": "P = 10 × 0,0179 ≈ **0,18 W** : toute cette puissance est dissipée en chaleur, c’est le rôle d’une résistance."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b78b60-a13d-531e-a9d0-e02b6e3d362a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le délai de la minuterie du robot",
+   "competence": "modeliser",
+   "situation": "Le robot tondeuse attend la fin de la charge d’un condensateur avant de lancer sa lame : c’est un délai. Un condensateur de 100 µF se charge à travers une résistance de 47 kΩ, sous 12 V. Léo relève la tension aux bornes du condensateur.",
+   "documents": [
+    {
+     "id": "val",
+     "type": "tableau",
+     "titre": "Le montage",
+     "colonnes": [
+      "Composant",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Source E",
+       "12 V"
+      ],
+      [
+       "Résistance R",
+       "47 kΩ"
+      ],
+      [
+       "Condensateur C",
+       "100 µF"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "ch",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Charge du condensateur",
+     "categories": [
+      "0",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+     ],
+     "series": [
+      {
+       "nom": "Tension aux bornes du condensateur",
+       "valeurs": [
+        0,
+        7.86,
+        10.57,
+        11.51,
+        11.83,
+        11.94
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Relevé simulé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la constante de temps τ de la charge, en secondes.",
+     "reponse": 4.7,
+     "unite": "s",
+     "tolerance": 0,
+     "aide": "τ = R × C, avec R en ohms et C en farads : 100 µF = 0,000 1 F.",
+     "explication": "τ = 47 000 × 0,000 1 = **4,7 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis sur la courbe la tension aux bornes du condensateur à 10 s, en volts.",
+     "reponse": 10.6,
+     "unite": "V",
+     "tolerance": 0.3,
+     "aide": "Repère 10 sur l’axe horizontal, puis monte jusqu’à la courbe.",
+     "explication": "À 10 s, la tension vaut environ **10,6 V** : le condensateur est déjà aux neuf dixièmes de E."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "reponse": [
+      "k5"
+     ],
+     "enonce": "Le condensateur est considéré chargé à 99 % au bout de 5 τ. Touche le premier relevé qui dépasse cet instant.",
+     "aide": "Calcule 5 τ en secondes, puis cherche le premier relevé après cet instant.",
+     "explication": "5 τ = 5 × 4,7 = 23,5 s : le premier relevé après est celui de **25 s**, où la tension atteint environ 11,94 V (99 % de 12 V font 11,88 V)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est stockée dans le condensateur chargé sous 12 V ? Réponds en millijoules.",
+     "reponse": 7.2,
+     "unite": "mJ",
+     "tolerance": 0,
+     "aide": "E = ½ × C × U², avec C en farads et U en volts.",
+     "explication": "E = ½ × 0,000 1 × 12² = 0,007 2 J, soit **7,2 mJ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léo remplace le condensateur par un modèle de 220 µF. Au bout de combien de secondes la charge est-elle à 99 % ? Arrondis à la seconde.",
+     "reponse": 52,
+     "unite": "s",
+     "tolerance": 0.5,
+     "aide": "Recalcule τ avec la nouvelle capacité, puis multiplie par 5.",
+     "explication": "τ = 47 000 × 0,000 22 ≈ 10,3 s ; 5 τ = **52 s** environ. Une capacité plus grande allonge le délai."
+    }
+   ]
+  },
+  {
+   "chapitre": "89c4b583-459b-52b4-9a22-41749c30fca4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pince du bras de robot",
+   "competence": "observer-schema",
+   "situation": "La pince d’un bras de robot est fermée par un moteur de 12 V qui absorbe 1,5 A. Le microcontrôleur, lui, ne peut fournir que 20 mA sous 3,3 V : un transistor fait le lien entre les deux.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "De la commande à la pince",
+     "noeuds": [
+      {
+       "id": "mc",
+       "texte": "Microcontrôleur"
+      },
+      {
+       "id": "tr",
+       "texte": "Transistor"
+      },
+      {
+       "id": "mo",
+       "texte": "Moteur de la pince"
+      }
+     ],
+     "liens": [
+      {
+       "de": "mc",
+       "a": "tr",
+       "texte": "20 mA, 3,3 V"
+      },
+      {
+       "de": "tr",
+       "a": "mo",
+       "texte": "1,5 A, 12 V"
+      }
+     ],
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ch",
+     "reponse": [
+      "tr"
+     ],
+     "enonce": "Touche l’élément qui commande le fort courant du moteur à partir du faible courant du microcontrôleur.",
+     "aide": "Un faible courant en commande, un fort courant commandé : quel composant ?",
+     "explication": "Le **transistor** : un courant faible sur son électrode de commande contrôle un courant fort entre les deux autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le courant du moteur est combien de fois plus grand que celui du microcontrôleur ?",
+     "reponse": 75,
+     "tolerance": 0,
+     "aide": "Passe tout en ampères ou en milliampères : 1,5 A = 1 500 mA.",
+     "explication": "1 500 mA / 20 mA = **75** : le courant commandé est 75 fois le courant de commande."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’où vient l’énergie qui fait tourner la pince ?",
+     "options": [
+      "Du transistor, qui amplifie la puissance du signal",
+      "Du microcontrôleur, qui la transmet par son signal",
+      "Du moteur, qui produit sa propre énergie",
+      "De l’alimentation 12 V, que le transistor ouvre et ferme"
+     ],
+     "reponse": 3,
+     "aide": "Le transistor ne fournit pas d’énergie : il l’aiguille.",
+     "explication": "Le transistor **module** l’énergie sans la fournir : elle vient toujours de l’alimentation. Il ne fait qu’ouvrir et fermer le robinet."
+    }
+   ]
+  },
+  {
+   "chapitre": "89c4b583-459b-52b4-9a22-41749c30fca4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La diode qui sauve le transistor",
+   "competence": "raisonner",
+   "situation": "Le moteur de la pince est une bobine : on coupe son courant avec le transistor, représenté ici par un interrupteur ouvert. Sans précaution, cette coupure brutale détruirait le transistor. Une diode est montée aux bornes du moteur.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "Le moteur, son interrupteur et sa diode",
+     "source": "Schéma imaginé pour l’exercice",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        6
+       ],
+       "composant": "pile",
+       "nom": "12 V"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "moteur",
+       "nom": "M",
+       "id": "mot"
+      },
+      {
+       "de": [
+        12,
+        6
+       ],
+       "a": [
+        12,
+        0
+       ],
+       "composant": "diode",
+       "nom": "D",
+       "id": "dio"
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        6,
+        6
+       ],
+       "composant": "interrupteur-ouvert",
+       "nom": "K",
+       "id": "sw"
+      },
+      {
+       "de": [
+        6,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        12,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "car",
+     "type": "tableau",
+     "titre": "Caractéristiques",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Inductance du moteur L",
+       "50 mH"
+      ],
+      [
+       "Courant avant la coupure I",
+       "2 A"
+      ],
+      [
+       "Tension de seuil de la diode",
+       "0,7 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "reponse": [
+      "dio"
+     ],
+     "enonce": "Touche la diode de roue libre.",
+     "aide": "Elle est montée aux bornes du moteur, en inverse par rapport à l’alimentation.",
+     "explication": "La diode **D**, en parallèle sur le moteur : elle ne conduit pas pendant la marche et ne s’active qu’à la coupure."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’interrupteur K s’ouvre. Que fait la diode ?",
+     "options": [
+      "Elle conduit : le courant de la bobine s’écoule par elle",
+      "Elle reste bloquée, comme pendant la marche normale",
+      "Elle bloque la bobine pour que son courant s’arrête",
+      "Elle se met en court-circuit avec la batterie"
+     ],
+     "reponse": 0,
+     "aide": "Le courant d’une bobine ne peut pas s’arrêter d’un coup : il lui faut un chemin.",
+     "explication": "Le courant de la bobine continue dans le même sens : la diode **conduit** et lui offre un chemin pour s’éteindre, sans surtension."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est stockée dans le moteur juste avant la coupure ? Réponds en joules.",
+     "reponse": 0.1,
+     "unite": "J",
+     "tolerance": 0,
+     "aide": "E = ½ × L × I², avec L en henrys : 50 mH = 0,05 H.",
+     "explication": "E = ½ × 0,05 × 2² = **0,1 J**. C’est cette énergie que la diode doit évacuer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant que la diode conduit, quelle est approximativement la tension à ses bornes, en volts ?",
+     "reponse": 0.7,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "Une diode qui conduit présente sa tension de seuil.",
+     "explication": "Une diode au silicium qui conduit garde environ **0,7 V** à ses bornes, valeur du tableau."
+    }
+   ]
+  },
+  {
+   "chapitre": "89c4b583-459b-52b4-9a22-41749c30fca4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dimensionner la commande de la pince",
+   "competence": "modeliser",
+   "situation": "Sacha doit choisir la résistance RB placée entre le microcontrôleur et la base du transistor de la pince. Le moteur absorbe 0,5 A. Il faut fournir à la base au moins le courant qui sature le transistor, sans dépasser ce que peut donner le microcontrôleur.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "La commande du moteur",
+     "largeur": 340,
+     "hauteur": 200,
+     "source": "Schéma imaginé pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 112,
+       "l": 90,
+       "h": 50,
+       "arrondi": 4
+      },
+      {
+       "forme": "texte",
+       "x": 55,
+       "y": 133,
+       "texte": "Micro-",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 55,
+       "y": 148,
+       "texte": "contrôleur",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 55,
+       "y": 178,
+       "texte": "3,3 V · 20 mA max",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        137
+       ],
+       "a": [
+        135,
+        137
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 127,
+       "l": 50,
+       "h": 20,
+       "arrondi": 4,
+       "texte": "RB",
+       "id": "rb",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        185,
+        137
+       ],
+       "a": [
+        232,
+        137
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 137,
+       "r": 18,
+       "texte": "T"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        30
+       ],
+       "a": [
+        300,
+        30
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 258,
+       "y": 20,
+       "texte": "+12 V",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        30
+       ],
+       "a": [
+        250,
+        45
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 225,
+       "y": 45,
+       "l": 50,
+       "h": 34,
+       "arrondi": 4,
+       "texte": "Moteur"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        79
+       ],
+       "a": [
+        250,
+        119
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        300,
+        30
+       ],
+       "a": [
+        300,
+        52
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        288,
+        52
+       ],
+       "a": [
+        312,
+        52
+       ]
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         288,
+         78
+        ],
+        [
+         312,
+         78
+        ],
+        [
+         300,
+         54
+        ]
+       ],
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        300,
+        78
+       ],
+       "a": [
+        300,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        110
+       ],
+       "a": [
+        300,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        155
+       ],
+       "a": [
+        250,
+        175
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        175
+       ],
+       "a": [
+        265,
+        175
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 192,
+       "texte": "0 V",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "car",
+     "type": "tableau",
+     "titre": "Caractéristiques",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Courant du moteur",
+       "0,5 A"
+      ],
+      [
+       "Gain en courant minimal du transistor",
+       "50"
+      ],
+      [
+       "Tension base-émetteur (conduction)",
+       "0,7 V"
+      ],
+      [
+       "Sortie du microcontrôleur",
+       "3,3 V, 20 mA au plus"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "reponse": [
+      "rb"
+     ],
+     "enonce": "Touche le composant qui limite le courant envoyé à la base du transistor.",
+     "aide": "Il est en série entre la sortie du microcontrôleur et le transistor.",
+     "explication": "La résistance **RB** limite le courant de base, comme la résistance en série d’une LED limite son courant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel courant de base minimal faut-il pour commander 0,5 A, avec un gain de 50 ? Réponds en milliampères.",
+     "reponse": 10,
+     "unite": "mA",
+     "tolerance": 0,
+     "aide": "Courant de base = courant du moteur / gain.",
+     "explication": "0,5 A / 50 = 0,01 A, soit **10 mA**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle résistance RB maximale donne ce courant de base ? La tension aux bornes de RB est 3,3 − 0,7 V.",
+     "reponse": 260,
+     "unite": "Ω",
+     "tolerance": 0,
+     "aide": "U aux bornes de RB = 2,6 V ; R = U / I avec I = 0,010 A.",
+     "explication": "R = 2,6 / 0,010 = **260 Ω** : au-delà, le courant de base serait trop faible pour saturer le transistor."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle valeur de RB convient : assez de courant de base, sans dépasser les 20 mA du microcontrôleur ?",
+     "options": [
+      "100 Ω",
+      "220 Ω",
+      "470 Ω",
+      "1 kΩ"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Calcule le courant de base de chaque valeur : 2,6 V divisé par RB.",
+     "explication": "Avec 220 Ω : 2,6 / 220 ≈ 11,8 mA, entre 10 et 20 mA. **100 Ω** donnerait 26 mA (trop) ; **470 Ω** et **1 kΩ**, 5,5 et 2,6 mA (trop peu)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre ce qui se passe quand Sacha ferme la pince, puis la rouvre.",
+     "items": [
+      "Le microcontrôleur applique 3,3 V à RB",
+      "Un courant de base circule",
+      "Le transistor se sature, interrupteur fermé",
+      "Le courant du moteur circule depuis le 12 V",
+      "À la coupure, la diode évacue le courant du moteur"
+     ],
+     "aide": "Suis le trajet : commande, transistor, moteur, puis coupure.",
+     "explication": "La commande fournit un petit courant de base, le transistor **sature**, le moteur reçoit son courant ; à la coupure, la **diode de roue libre** évite la surtension."
+    }
+   ]
+  },
+  {
+   "chapitre": "da735532-cb33-54aa-898c-9ddbfd9ea906",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Tester l’entrée de la carte de l’imprimante",
+   "competence": "lire-graphique",
+   "situation": "Éloïse teste l’entrée analogique de la carte d’une imprimante 3D. Elle envoie un signal avec un générateur de fonctions et regarde l’écran de l’oscilloscope. Chaque carreau de l’écran est une division.",
+   "documents": [
+    {
+     "id": "osc",
+     "type": "schema",
+     "titre": "Oscillogramme",
+     "largeur": 340,
+     "hauteur": 295,
+     "source": "Oscillogramme simulé pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 300,
+       "h": 240,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        20
+       ],
+       "a": [
+        50,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        20
+       ],
+       "a": [
+        80,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        20
+       ],
+       "a": [
+        110,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        20
+       ],
+       "a": [
+        140,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        20
+       ],
+       "a": [
+        170,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        20
+       ],
+       "a": [
+        200,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        20
+       ],
+       "a": [
+        230,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        20
+       ],
+       "a": [
+        260,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        20
+       ],
+       "a": [
+        290,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        50
+       ],
+       "a": [
+        320,
+        50
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        80
+       ],
+       "a": [
+        320,
+        80
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        110
+       ],
+       "a": [
+        320,
+        110
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        140
+       ],
+       "a": [
+        320,
+        140
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        170
+       ],
+       "a": [
+        320,
+        170
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        200
+       ],
+       "a": [
+        320,
+        200
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        230
+       ],
+       "a": [
+        320,
+        230
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 20 140 L 25 124.5 L 30 110 L 35 97.6 L 40 88 L 45 82 L 50 80 L 55 82 L 60 88 L 65 97.6 L 70 110 L 75 124.5 L 80 140 L 85 155.5 L 90 170 L 95 182.4 L 100 192 L 105 198 L 110 200 L 115 198 L 120 192 L 125 182.4 L 130 170 L 135 155.5 L 140 140 L 145 124.5 L 150 110 L 155 97.6 L 160 88 L 165 82 L 170 80 L 175 82 L 180 88 L 185 97.6 L 190 110 L 195 124.5 L 200 140 L 205 155.5 L 210 170 L 215 182.4 L 220 192 L 225 198 L 230 200 L 235 198 L 240 192 L 245 182.4 L 250 170 L 255 155.5 L 260 140 L 265 124.5 L 270 110 L 275 97.6 L 280 88 L 285 82 L 290 80 L 295 82 L 300 88 L 305 97.6 L 310 110 L 315 124.5 L 320 140",
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 282,
+       "texte": "Base de temps : 0,5 ms/div",
+       "taille": "petit",
+       "ancre": "debut",
+       "id": "bt",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 320,
+       "y": 282,
+       "texte": "Sensibilité : 2 V/div",
+       "taille": "petit",
+       "ancre": "fin",
+       "id": "sv",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "osc",
+     "reponse": [
+      "bt"
+     ],
+     "enonce": "Touche le réglage qui donne la durée d’une division horizontale.",
+     "aide": "Une durée se mesure en secondes : cherche l’unité s/div.",
+     "explication": "La **base de temps** (0,5 ms/div) donne la durée d’une division horizontale ; la sensibilité verticale donne les volts par division."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une période occupe 4 divisions. Quelle est sa durée, en millisecondes ?",
+     "reponse": 2,
+     "unite": "ms",
+     "tolerance": 0,
+     "aide": "Divisions × base de temps.",
+     "explication": "4 × 0,5 ms = **2 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence du signal, en hertz ?",
+     "reponse": 500,
+     "unite": "Hz",
+     "tolerance": 0,
+     "aide": "f = 1 / T, avec T en secondes.",
+     "explication": "f = 1 / 0,002 s = **500 Hz**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le signal monte de 2 divisions au-dessus de l’axe central à 2 divisions en dessous. Quelle est sa tension crête à crête, en volts ?",
+     "reponse": 8,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "Compte les divisions entre le point haut et le point bas, puis multiplie par la sensibilité.",
+     "explication": "4 divisions × 2 V/div = **8 V** crête à crête."
+    }
+   ]
+  },
+  {
+   "chapitre": "da735532-cb33-54aa-898c-9ddbfd9ea906",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un pont diviseur à vérifier",
+   "competence": "raisonner",
+   "situation": "Éloïse a monté un pont diviseur 5 V qui fournit la tension de référence de 2,5 V de la carte. Les deux résistances de 10 kΩ ont une tolérance de 5 %. Le cahier des charges demande 2,5 V à 0,15 V près.",
+   "documents": [
+    {
+     "id": "cir",
+     "type": "circuit",
+     "titre": "Le montage mesuré",
+     "source": "Schéma imaginé pour l’exercice",
+     "branches": [
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        0,
+        6
+       ],
+       "composant": "pile",
+       "nom": "5 V"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "R1",
+       "id": "r1"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        6
+       ],
+       "composant": "resistance",
+       "nom": "R2",
+       "id": "r2"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        12,
+        0
+       ]
+      },
+      {
+       "de": [
+        8,
+        6
+       ],
+       "a": [
+        12,
+        6
+       ]
+      },
+      {
+       "de": [
+        12,
+        0
+       ],
+       "a": [
+        12,
+        6
+       ],
+       "composant": "voltmetre",
+       "nom": "V",
+       "id": "vm"
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        8,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "res",
+     "type": "tableau",
+     "titre": "Les trois sources d’information",
+     "colonnes": [
+      "Source",
+      "Valeur de U2"
+     ],
+     "lignes": [
+      [
+       "Calcul à la main",
+       "?"
+      ],
+      [
+       "Simulation",
+       "2,50 V"
+      ],
+      [
+       "Mesure au multimètre",
+       "2,43 V"
+      ],
+      [
+       "Cahier des charges",
+       "2,5 V ± 0,15 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cir",
+     "reponse": [
+      "vm"
+     ],
+     "enonce": "Touche l’appareil monté en dérivation, aux bornes de R2.",
+     "aide": "Un voltmètre se branche en dérivation, un ampèremètre en série.",
+     "explication": "Le **voltmètre** est en dérivation sur R2 : c’est ainsi qu’on mesure une tension."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule U2 avec les valeurs nominales des résistances, en volts.",
+     "reponse": 2.5,
+     "unite": "V",
+     "tolerance": 0,
+     "aide": "Pont diviseur : U2 = 5 × R2 / (R1 + R2), avec R1 = R2.",
+     "explication": "U2 = 5 × 10 / (10 + 10) = **2,5 V** : les deux résistances égales partagent la tension en deux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart relatif entre le calcul et la mesure, en pourcentage ? Arrondis au dixième.",
+     "reponse": 2.8,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "Écart relatif = (calcul − mesure) / calcul, puis × 100.",
+     "explication": "(2,50 − 2,43) / 2,50 = 0,028, soit **2,8 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le pire cas de la tolérance (R1 à +5 %, R2 à −5 %), quelle valeur minimale prend U2 ? Arrondis au centième de volt.",
+     "reponse": 2.38,
+     "unite": "V",
+     "tolerance": 0.006,
+     "aide": "R1 = 10,5 kΩ et R2 = 9,5 kΩ ; applique la formule du pont diviseur.",
+     "explication": "U2 = 5 × 9,5 / (10,5 + 9,5) = 47,5 / 20 ≈ **2,38 V** : la mesure de 2,43 V est dans cet intervalle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut Éloïse ?",
+     "options": [
+      "Le montage est conforme : l’écart s’explique par la tolérance",
+      "Le montage est raté : un écart de mesure est un échec",
+      "La simulation est fausse : il faut la refaire sans tolérance",
+      "Le multimètre est défectueux : il faut en changer"
+     ],
+     "reponse": 0,
+     "aide": "Compare la mesure au cahier des charges, puis à l’intervalle de tolérance.",
+     "explication": "La mesure (2,43 V) respecte 2,5 ± 0,15 V, et l’écart avec la simulation est un **composant légèrement hors valeur nominale**. Un écart n’est pas un échec : c’est une information."
+    }
+   ]
+  },
+  {
+   "chapitre": "da735532-cb33-54aa-898c-9ddbfd9ea906",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chariot de l’imprimante, du signal à la vitesse",
+   "competence": "modeliser",
+   "situation": "Le moteur pas à pas du chariot d’une imprimante 3D avance d’un micropas à chaque impulsion du signal STEP. Léa relève ce signal à l’oscilloscope, calcule la vitesse prévue du chariot, puis la compare à une mesure.",
+   "documents": [
+    {
+     "id": "osc",
+     "type": "schema",
+     "titre": "Signal STEP",
+     "largeur": 340,
+     "hauteur": 295,
+     "source": "Oscillogramme simulé pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 300,
+       "h": 240,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        20
+       ],
+       "a": [
+        50,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        20
+       ],
+       "a": [
+        80,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        20
+       ],
+       "a": [
+        110,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        20
+       ],
+       "a": [
+        140,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        20
+       ],
+       "a": [
+        170,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        20
+       ],
+       "a": [
+        200,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        20
+       ],
+       "a": [
+        230,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        20
+       ],
+       "a": [
+        260,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        20
+       ],
+       "a": [
+        290,
+        260
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        50
+       ],
+       "a": [
+        320,
+        50
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        80
+       ],
+       "a": [
+        320,
+        80
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        110
+       ],
+       "a": [
+        320,
+        110
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        140
+       ],
+       "a": [
+        320,
+        140
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        170
+       ],
+       "a": [
+        320,
+        170
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        200
+       ],
+       "a": [
+        320,
+        200
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        230
+       ],
+       "a": [
+        320,
+        230
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 20 200 L 50 200 L 50 125 L 80 125 L 80 200 L 170 200 L 170 125 L 200 125 L 200 200 L 290 200 L 290 125 L 320 125",
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 282,
+       "texte": "Base de temps : 0,2 ms/div",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 320,
+       "y": 282,
+       "texte": "Sensibilité : 2 V/div",
+       "taille": "petit",
+       "ancre": "fin"
+      }
+     ]
+    },
+    {
+     "id": "meca",
+     "type": "tableau",
+     "titre": "Le mécanisme",
+     "colonnes": [
+      "Caractéristique",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Pas du moteur",
+       "200 pas par tour"
+      ],
+      [
+       "Micropas",
+       "16 micropas par pas"
+      ],
+      [
+       "Poulie du chariot",
+       "20 dents, pas de 2 mm"
+      ],
+      [
+       "Vitesse mesurée au chronomètre",
+       "15,2 mm/s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Les impulsions se répètent toutes les 4 divisions. Quelle est la durée d’une période, en millisecondes ?",
+     "reponse": 0.8,
+     "unite": "ms",
+     "tolerance": 0,
+     "aide": "Divisions × base de temps (0,2 ms/div).",
+     "explication": "4 × 0,2 ms = **0,8 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence des impulsions, en hertz ?",
+     "reponse": 1250,
+     "unite": "Hz",
+     "tolerance": 0,
+     "aide": "f = 1 / T, avec T = 0,000 8 s.",
+     "explication": "f = 1 / 0,000 8 = **1 250 Hz**, soit 1 250 micropas par seconde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de micropas fait un tour du moteur ?",
+     "reponse": 3200,
+     "tolerance": 0,
+     "aide": "Multiplie les pas par tour par les micropas par pas.",
+     "explication": "200 × 16 = **3 200 micropas** par tour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse prévue du chariot, en mm/s ? Arrondis au dixième.",
+     "reponse": 15.6,
+     "unite": "mm/s",
+     "tolerance": 0.05,
+     "aide": "Tours par seconde = 1 250 / 3 200 ; la poulie avance de 20 × 2 mm par tour.",
+     "explication": "1 250 / 3 200 ≈ 0,39 tr/s ; la poulie avance de 40 mm par tour : 0,390 625 × 40 ≈ **15,6 mm/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La vitesse mesurée est de 15,2 mm/s, soit environ 2,7 % de moins. Que traduit cet écart ?",
+     "options": [
+      "Un phénomène réel non modélisé, comme le jeu de la courroie",
+      "Une panne du moteur, qu’il faut remplacer immédiatement",
+      "Un échec de conception : le projet doit être abandonné",
+      "Une erreur de lecture de l’oscilloscope, forcément"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que révèle un écart entre le calcul et la mesure.",
+     "explication": "Le calcul ne connaît que le **modèle** : le jeu de la courroie ou la tolérance de la poulie n’y figurent pas. Un écart est une information, pas un échec."
+    }
+   ]
+  }
+ ]
+}

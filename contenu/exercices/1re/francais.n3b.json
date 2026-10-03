@@ -1,0 +1,2099 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "9b65d71f-0eb9-5aec-ab8d-f93858155deb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un officier de retour en Corse",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Colomba*. Place la nouvelle parmi les œuvres de Mérimée, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Mérimée et la Corse",
+     "debut": 1825,
+     "fin": 1875,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "mat",
+       "date": 1829,
+       "nom": "Mateo Falcone"
+      },
+      {
+       "id": "col",
+       "date": 1840,
+       "nom": "Colomba"
+      },
+      {
+       "id": "mort",
+       "date": 1870,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Orso della Rebbia",
+       "Ancien officier de Napoléon, il rentre en Corse après la mort de son père"
+      ],
+      [
+       "Colomba",
+       "Sa sœur, qui veut la vendetta"
+      ],
+      [
+       "Lydia Nevil",
+       "?"
+      ],
+      [
+       "L’avocat Barricini",
+       "Le maire, ennemi des della Rebbia"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "col"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraît *Colomba*.",
+     "aide": "Le titre de la nouvelle est écrit sur la frise.",
+     "explication": "*Colomba* paraît en **1840** dans la *Revue des Deux Mondes*, un an après le voyage de Mérimée en Corse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Mateo Falcone*, déjà situé en Corse, de *Colomba* ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1840 − 1829 = **11 ans** : Mérimée revient à la Corse onze ans après *Mateo Falcone*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Lydia Nevil ?",
+     "options": [
+      "Une jeune Anglaise en voyage, qui aime Orso",
+      "La fille de l’avocat, promise à Orso",
+      "Un bandit d’honneur qui cache Orso",
+      "La sœur d’Orso, qui chante les voceri"
+     ],
+     "reponse": 0,
+     "aide": "Son père est un colonel anglais.",
+     "explication": "**Lydia Nevil** est une jeune Anglaise en voyage, fille du colonel sir Thomas Nevil : elle aime Orso et l’épousera."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b65d71f-0eb9-5aec-ab8d-f93858155deb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la vendetta au maquis",
+   "competence": "analyser-document",
+   "situation": "Orso veut la justice, sa sœur veut la vengeance. Suis les étapes de l’histoire jusqu’au dénouement.",
+   "documents": [
+    {
+     "id": "action",
+     "type": "chaine",
+     "titre": "L’action",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Orso rentre en Corse après la mort de son père"
+      },
+      {
+       "id": "n2",
+       "texte": "Colomba réclame la vendetta"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Blessé, Orso se cache dans le maquis"
+      },
+      {
+       "id": "n5",
+       "texte": "Innocenté, il épouse Lydia"
+      },
+      {
+       "id": "n6",
+       "texte": "Colomba retrouve le vieux Barricini près de Pise"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Attaqué en chemin, Orso tue les deux fils Barricini",
+      "Orso se réconcilie avec les Barricini après un procès",
+      "Lydia Nevil quitte la Corse avec son père, le colonel",
+      "Orso se livre aux gendarmes de Bastia, sans résister"
+     ],
+     "reponse": 0,
+     "aide": "C’est ce qui l’oblige à se cacher dans le maquis.",
+     "explication": "Attaqué en chemin, **Orso tue les deux fils Barricini** en légitime défense : c’est le coup double."
+    },
+    {
+     "type": "zone",
+     "document": "action",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape où Orso devient un fugitif.",
+     "aide": "Cherche l’endroit où il se cache.",
+     "explication": "Après le coup double, Orso doit **se cacher dans le maquis**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la description du coup double.",
+     "texte": "Le coup double d’Orso : deux ___ de fusil, deux ___, et le bras ___ blessé.",
+     "reponses": [
+      [
+       "coups"
+      ],
+      [
+       "morts"
+      ],
+      [
+       "gauche"
+      ]
+     ],
+     "banque": [
+      "coups",
+      "morts",
+      "gauche",
+      "droit"
+     ],
+     "aide": "Deux fils Barricini tombent, Orso est touché à un bras.",
+     "explication": "Le coup double, c’est deux **coups** de fusil, deux **morts**, le bras **gauche** blessé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Brandolaccio et Castriconi",
+       "Deux bandits d’honneur qui aident Orso"
+      ],
+      [
+       "Sir Thomas Nevil",
+       "Colonel anglais, père de Lydia"
+      ],
+      [
+       "Orlanduccio et Vincentello",
+       "Les deux fils de l’avocat, tués par Orso"
+      ]
+     ],
+     "aide": "Des bandits, un Anglais, des fils : trois familles de personnages.",
+     "explication": "**Brandolaccio** et **Castriconi** aident Orso, **sir Thomas Nevil** est le père de Lydia, **Orlanduccio** et **Vincentello** sont les fils Barricini."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b65d71f-0eb9-5aec-ab8d-f93858155deb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La loi contre la coutume",
+   "competence": "argumenter",
+   "situation": "Orso incarne la loi, Colomba la coutume. Lis la phrase terrible de Colomba au vieux Barricini, puis oppose les deux personnages.",
+   "documents": [
+    {
+     "id": "parole",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La parole de Colomba",
+     "blocs": [
+      "« Il me les fallait tous les deux… Les [[r|rameaux]] sont coupés ; et si la [[r|souche]] n’était pas pourrie, je l’eusse arrachée. »"
+     ],
+     "source": "Prosper Mérimée, *Colomba* (1840) — Colomba au vieux Barricini, d’après le cours"
+    },
+    {
+     "id": "duo",
+     "type": "tableau",
+     "titre": "Deux visions de la justice",
+     "colonnes": [
+      "",
+      "Orso",
+      "Colomba"
+     ],
+     "lignes": [
+      [
+       "Formation",
+       "Formé sur le continent",
+       "Fidèle à la coutume corse"
+      ],
+      [
+       "Ce qu’il ou elle veut",
+       "La justice",
+       "La vendetta"
+      ],
+      [
+       "Ce qu’il ou elle incarne",
+       "La loi moderne",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parole",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots de la métaphore végétale.",
+     "aide": "Un arbre a des branches et un pied.",
+     "explication": "La phrase file une métaphore : les **rameaux** (les fils) sont coupés, mais la **souche** (le vieux Barricini) reste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que désigne la « souche » dans la bouche de Colomba ?",
+     "options": [
+      "Le vieux Barricini, qu’elle aurait voulu atteindre aussi",
+      "Orso, son frère, qu’elle voudrait protéger des Barricini",
+      "La famille della Rebbia, dont elle est si fière",
+      "Le maquis, où Orso s’est caché après le coup double"
+     ],
+     "reponse": 0,
+     "aide": "Les rameaux sont les fils ; qui reste, quand les fils sont morts ?",
+     "explication": "Les **rameaux** sont les fils Barricini ; la **souche**, c’est le vieux **Barricini** lui-même, que Colomba aurait voulu atteindre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La coutume archaïque",
+      "La loi moderne",
+      "La justice des tribunaux",
+      "La neutralité de l’observateur"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau oppose deux colonnes : si Orso est la loi moderne, Colomba est son contraire.",
+     "explication": "Colomba incarne **la coutume archaïque**, face à la loi moderne que représente Orso."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments : appartiennent-ils à Orso ou à Colomba ?",
+     "categories": [
+      "Orso",
+      "Colomba"
+     ],
+     "items": [
+      [
+       "La justice",
+       0
+      ],
+      [
+       "Le continent",
+       0
+      ],
+      [
+       "Ancien officier de Napoléon",
+       0
+      ],
+      [
+       "La vendetta",
+       1
+      ],
+      [
+       "Les voceri",
+       1
+      ],
+      [
+       "Les rumeurs et les preuves montées",
+       1
+      ]
+     ],
+     "aide": "Les voceri sont des chants funèbres improvisés qui entretiennent la haine.",
+     "explication": "Orso est lié à **la justice**, au **continent** et à l’armée ; Colomba à **la vendetta**, aux **voceri** et aux **preuves montées**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1a614ea3-57b9-5d42-9a21-d31f9ea99566",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Huit contes pour la cour",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur les *Contes de ma mère l’Oye*. Place Perrault dans son siècle, puis retrouve le sommaire du recueil.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Perrault et son recueil",
+     "debut": 1625,
+     "fin": 1700,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1628,
+       "nom": "Naissance"
+      },
+      {
+       "id": "acad",
+       "date": 1671,
+       "nom": "Académie"
+      },
+      {
+       "id": "contes",
+       "date": 1697,
+       "nom": "Les Contes"
+      }
+     ]
+    },
+    {
+     "id": "sommaire",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Histoires ou contes du temps passé",
+     "sousTitre": "Les huit contes en prose",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "La Belle au bois dormant"
+      },
+      {
+       "texte": "Le Petit Chaperon rouge"
+      },
+      {
+       "texte": "La Barbe bleue"
+      },
+      {
+       "texte": "Le Maître Chat ou le Chat botté"
+      },
+      {
+       "texte": "Les Fées"
+      },
+      {
+       "texte": "Cendrillon"
+      },
+      {
+       "texte": "?",
+       "id": "manque"
+      },
+      {
+       "texte": "Le Petit Poucet"
+      }
+     ],
+     "pied": "Paru en 1697, sous le nom du fils de Perrault",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "contes"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraît le recueil.",
+     "aide": "Le recueil est celui qui porte le titre « Les Contes ».",
+     "explication": "Le recueil paraît en **1697**, sous le nom du fils de Perrault."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’entrée de Perrault à l’Académie française de la parution des contes ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1697 − 1671 = **26 ans** : Perrault est un académicien de longue date, avant d’être un conteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel conte faut-il écrire à la place du « ? » dans le sommaire ?",
+     "options": [
+      "Riquet à la houppe",
+      "Blanche-Neige",
+      "La Belle et la Bête",
+      "Peau d’Âne"
+     ],
+     "reponse": 0,
+     "aide": "Le recueil est celui des huit contes en prose, et celui-ci a pour héros un prince laid et spirituel.",
+     "explication": "Le huitième conte en prose est **Riquet à la houppe** ; *Peau d’Âne* est un conte en vers de Perrault, qui n’est pas dans le recueil de prose."
+    }
+   ]
+  },
+  {
+   "chapitre": "1a614ea3-57b9-5d42-9a21-d31f9ea99566",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les loups de salon",
+   "competence": "analyser-texte",
+   "situation": "Chaque conte se termine par une moralité en vers. Lis celle du Petit Chaperon rouge, puis le geste de Perrault conteur.",
+   "documents": [
+    {
+     "id": "morale",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "La moralité du Petit Chaperon rouge",
+     "blocs": [
+      "Mais hélas ! qui ne sait que ces loups [[d|doucereux]],",
+      "De tous les loups sont les plus dangereux"
+     ],
+     "source": "Charles Perrault, « Le Petit Chaperon rouge » (1697), fin de la moralité"
+    },
+    {
+     "id": "gestes",
+     "type": "tableau",
+     "titre": "Ce que fait Perrault",
+     "colonnes": [
+      "Geste",
+      "Son effet"
+     ],
+     "lignes": [
+      [
+       "Il écrit des récits jusque-là oraux et populaires",
+       "Une langue élégante et brève, pour un public de cour"
+      ],
+      [
+       "Il ajoute des moralités en vers",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "morale",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche l’adjectif qui caractérise ces loups.",
+     "aide": "Ils parlent doucement pour séduire.",
+     "explication": "Les loups sont **doucereux** : ce sont les séducteurs aux manières douces des salons, plus dangereux que ceux de la forêt."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Des leçons souvent ironiques, parfois décalées",
+      "Des prières pour remercier les fées du conte",
+      "Des résumés fidèles qui répètent l’histoire",
+      "Des chansons populaires reprises telles quelles"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la moralité du Chaperon : elle parle de la cour, pas de la forêt.",
+     "explication": "Les moralités sont **souvent ironiques**, parfois **en décalage** avec le récit : celle du Chaperon vise les séducteurs de salon."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les grands moments du conte chez Perrault.",
+     "items": [
+      "La fillette rencontre le loup dans le bois",
+      "Le loup arrive le premier chez la grand-mère",
+      "La fillette se couche près de lui",
+      "Le loup la mange"
+     ],
+     "aide": "Le loup prend de l’avance sur la fillette.",
+     "explication": "La fillette **rencontre le loup**, qui **arrive le premier** chez la grand-mère ; elle **se couche près de lui** et il **la mange** : Perrault n’offre aucun sauvetage."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : la fin de ce conte n’est pas celle que tu connais.",
+     "texte": "Chez Perrault, le Petit Chaperon rouge est ___ ; la fin heureuse vient des frères ___.",
+     "reponses": [
+      [
+       "mangée"
+      ],
+      [
+       "Grimm"
+      ]
+     ],
+     "banque": [
+      "mangée",
+      "sauvée",
+      "Grimm",
+      "Perrault"
+     ],
+     "aide": "Pense à la version de 1812.",
+     "explication": "Chez Perrault, la fillette est **mangée** ; la fin heureuse vient des frères **Grimm** (1812)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1a614ea3-57b9-5d42-9a21-d31f9ea99566",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les Modernes écrivent des contes",
+   "competence": "argumenter",
+   "situation": "Perrault est l’un des chefs des Modernes. Lis un échange sur son travail de conteur, puis range ce qui sépare Anciens et Modernes.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "Perrault ne fait que recopier des histoires de nourrice."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Non : il les met en langue [[p|élégante]] pour un public de [[p|cour]], et il ajoute des moralités."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Mais c’est un travail d’écrivain !"
+      },
+      {
+       "qui": "Adam",
+       "texte": "Justement : écrire des contes français, c’est un geste polémique."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le conte instruit en plaisant",
+       "La moralité invite le lecteur à juger par lui-même",
+       "?"
+      ],
+      [
+       "Les contes sont un geste de Moderne",
+       "Écrire en français plutôt qu’imiter l’Antiquité",
+       "Le Siècle de Louis le Grand place les modernes au-dessus des Anciens"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui disent comment et pour qui Perrault écrit.",
+     "aide": "Cherche une qualité de langue et un public.",
+     "explication": "Perrault écrit en langue **élégante** pour un public de **cour** : il transforme des récits oraux en littérature raffinée."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque conte au thème que le cours lui attribue.",
+     "paires": [
+      [
+       "Le Petit Poucet",
+       "La ruse du faible"
+      ],
+      [
+       "La Barbe bleue",
+       "La curiosité punie"
+      ],
+      [
+       "Riquet à la houppe",
+       "La beauté et l’esprit"
+      ],
+      [
+       "Cendrillon",
+       "La bonté récompensée"
+      ]
+     ],
+     "aide": "Chaque conte met en scène une qualité ou un défaut.",
+     "explication": "*Le Petit Poucet* : **la ruse du faible** ; *La Barbe bleue* : **la curiosité punie** ; *Riquet* : **beauté et esprit** ; *Cendrillon* : **la bonté récompensée**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces gestes : sont-ils ceux des Anciens ou des Modernes ?",
+     "categories": [
+      "Les Anciens",
+      "Les Modernes"
+     ],
+     "items": [
+      [
+       "Imiter l’Antiquité",
+       0
+      ],
+      [
+       "Admirer d’abord les auteurs grecs et latins",
+       0
+      ],
+      [
+       "Placer son siècle au-dessus de l’Antiquité",
+       1
+      ],
+      [
+       "Écrire des contes en français",
+       1
+      ]
+     ],
+     "aide": "Perrault lit son poème de 1687 à l’Académie.",
+     "explication": "Les **Anciens** imitent l’Antiquité ; les **Modernes** placent leur siècle au-dessus d’elle et écrivent des contes français."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La moralité du Petit Chaperon, qui met en garde contre les loups de salon",
+      "Le frontispice du recueil, portant « Contes de ma mère l’Oye »",
+      "La fin heureuse de Cendrillon chez les frères Grimm",
+      "Les contes en vers, comme *Grisélidis*"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple de moralité qui invite à juger.",
+     "explication": "La **moralité du Petit Chaperon rouge** invite à comprendre la menace des séducteurs de salon : le conte instruit en plaisant."
+    }
+   ]
+  },
+  {
+   "chapitre": "89dd1d5d-7764-5824-9698-4344242c836c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une amitié qui dure un demi-siècle",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur la correspondance de Gide et Valéry. Place les repères de leur amitié, puis oppose leurs tempéraments.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Gide, Valéry et leurs lettres",
+     "debut": 1885,
+     "fin": 1960,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "renc",
+       "date": 1890,
+       "nom": "Rencontre"
+      },
+      {
+       "id": "parque",
+       "date": 1917,
+       "nom": "La Jeune Parque"
+      },
+      {
+       "id": "pub",
+       "date": 1955,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "temp",
+     "type": "tableau",
+     "titre": "Deux tempéraments",
+     "colonnes": [
+      "Écrivain",
+      "Tempérament"
+     ],
+     "lignes": [
+      [
+       "Gide",
+       "Le sincère, l’inquiet, l’autobiographe"
+      ],
+      [
+       "Valéry",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraît la correspondance.",
+     "aide": "Elle paraît après la mort des deux hommes.",
+     "explication": "La correspondance paraît en **1955**, dix ans après la mort de Valéry."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent leur rencontre de la parution de *La Jeune Parque* ?",
+     "reponse": 27,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1917 − 1890 = **27 ans** : leur amitié est déjà ancienne quand Valéry revient à la poésie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel tempérament faut-il écrire dans la case « ? » pour Valéry ?",
+     "options": [
+      "L’intellectuel, le sceptique, l’analyste",
+      "Le sincère, l’inquiet, l’autobiographe",
+      "Le prêcheur, le moraliste, le polémiste",
+      "Le voyageur, le romancier, le reporter"
+     ],
+     "reponse": 0,
+     "aide": "Valéry est l’opposé de Gide dans le tableau.",
+     "explication": "**Valéry** est l’intellectuel, le sceptique, l’analyste : l’opposé du sincère Gide, avec qui il se lit et se corrige."
+    }
+   ]
+  },
+  {
+   "chapitre": "89dd1d5d-7764-5824-9698-4344242c836c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce qu’on lit dans leurs lettres",
+   "competence": "analyser-document",
+   "situation": "Une correspondance donne accès à l’atelier des écrivains. Lis ce qui est né de leur amitié, puis les grands épisodes qu’elle éclaire.",
+   "documents": [
+    {
+     "id": "oeuvres",
+     "type": "tableau",
+     "titre": "Quelques œuvres nées pendant leur amitié",
+     "colonnes": [
+      "",
+      "Gide",
+      "Valéry"
+     ],
+     "lignes": [
+      [
+       "Première",
+       "*Les Nourritures terrestres* (1897)",
+       "*Monsieur Teste* (1896)"
+      ],
+      [
+       "Deuxième",
+       "*L’Immoraliste* (1902)",
+       "*La Jeune Parque* (1917)"
+      ],
+      [
+       "Troisième",
+       "*Les Faux-Monnayeurs* (1925)",
+       "*Charmes* (1922)"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le silence de Valéry",
+     "blocs": [
+      "Valéry s’éloigne de la poésie : il se consacre aux [[m|mathématiques]] et à ses [[m|Cahiers]].",
+      "Gide fonde la NRF. Quand Valéry revient enfin à la poésie, c’est en partie à l’appel de son ami."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oeuvres",
+     "multiple": false,
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche l’œuvre la plus ancienne du tableau.",
+     "aide": "Compare les dates : la plus petite gagne.",
+     "explication": "*Monsieur Teste* date de **1896** : c’est l’œuvre la plus ancienne du tableau, un an avant *Les Nourritures terrestres*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Les Nourritures terrestres* de *L’Immoraliste* ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Lis les deux dates dans la colonne de Gide.",
+     "explication": "1902 − 1897 = **5 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux occupations de Valéry pendant son silence poétique.",
+     "aide": "Une discipline scientifique et ses carnets.",
+     "explication": "Pendant son silence, Valéry se consacre aux **mathématiques** et à ses **Cahiers**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque épisode de leur correspondance à ce qu’il éclaire.",
+     "paires": [
+      [
+       "Les débuts symbolistes",
+       "L’influence de Mallarmé et de ses mardis"
+      ],
+      [
+       "Le silence de Valéry",
+       "Les mathématiques et les Cahiers"
+      ],
+      [
+       "La fondation de la NRF",
+       "Le pouvoir éditorial"
+      ],
+      [
+       "Les doutes sur la littérature",
+       "Le cœur de leur dialogue"
+      ]
+     ],
+     "aide": "Chaque épisode renvoie à une facette de leur amitié d’écrivains.",
+     "explication": "Les débuts symbolistes : **Mallarmé** ; le silence : **mathématiques** ; la NRF : **pouvoir éditorial** ; les doutes : **cœur du dialogue**."
+    }
+   ]
+  },
+  {
+   "chapitre": "89dd1d5d-7764-5824-9698-4344242c836c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi lire des lettres d’écrivains ?",
+   "competence": "argumenter",
+   "situation": "Un élève pense qu’une correspondance n’a aucun intérêt littéraire. Une camarade n’est pas d’accord. Lis leur échange, puis construis l’argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noé",
+       "texte": "Des lettres d’amis, ça n’a aucun intérêt littéraire : l’œuvre, c’est le livre publié."
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Au contraire : la lettre donne accès à l’[[a|atelier]], et aux [[a|hésitations]] que l’œuvre publiée efface."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Mais ce n’est qu’une conversation !"
+      },
+      {
+       "qui": "Chloé",
+       "texte": "C’est un genre à part entière, où l’on se construit face à un autre."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La lettre est un genre où l’on se construit face à un autre",
+       "L’ami pousse l’autre à retrouver sa voie",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux mots qui disent ce qu’une correspondance donne à voir.",
+     "aide": "Un lieu de travail et des doutes.",
+     "explication": "La lettre donne accès à l’**atelier** et aux **hésitations** que l’œuvre publiée efface."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "*La Jeune Parque* (1917), dédiée à Gide, qui presse Valéry",
+      "*Les Faux-Monnayeurs* (1925), roman publié par Gide",
+      "*Monsieur Teste* (1896), personnage créé par Valéry",
+      "*Charmes* (1922), recueil de poèmes publié par Valéry"
+     ],
+     "reponse": 0,
+     "aide": "Il faut une œuvre qui naît de l’appel d’un ami.",
+     "explication": "*La Jeune Parque* est **dédiée à Gide**, qui presse Valéry de rassembler ses anciens vers : l’amitié fait naître l’œuvre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces traits : appartiennent-ils à Gide ou à Valéry ?",
+     "categories": [
+      "Gide",
+      "Valéry"
+     ],
+     "items": [
+      [
+       "Le sincère",
+       0
+      ],
+      [
+       "L’inquiet",
+       0
+      ],
+      [
+       "L’autobiographe",
+       0
+      ],
+      [
+       "L’intellectuel",
+       1
+      ],
+      [
+       "Le sceptique",
+       1
+      ],
+      [
+       "L’analyste",
+       1
+      ]
+     ],
+     "aide": "Un tempérament du cœur contre un tempérament de la tête.",
+     "explication": "**Gide** est sincère, inquiet, autobiographe ; **Valéry** est intellectuel, sceptique, analyste : deux tempéraments opposés qui se corrigent."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0daa992-5131-58fa-a65a-8e689152ca7a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un triomphe à la Porte-Saint-Martin",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Cyrano de Bergerac*. Retrouve la date et le genre de la pièce, puis les personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cyrano de Bergerac",
+     "sousTitre": "Edmond Rostand",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Création",
+       "valeur": "28 décembre 1897",
+       "id": "creation"
+      },
+      {
+       "texte": "Théâtre",
+       "valeur": "La Porte-Saint-Martin"
+      },
+      {
+       "texte": "Rôle-titre",
+       "valeur": "Constant Coquelin"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Comédie héroïque en cinq actes et en vers"
+      }
+     ],
+     "pied": "Un triomphe jamais démenti",
+     "teinte": "corail"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Cyrano",
+       "Cadet de Gascogne, bretteur et poète"
+      ],
+      [
+       "Roxane",
+       "Sa cousine, qu’il aime en secret"
+      ],
+      [
+       "Christian",
+       "Beau et sans esprit"
+      ],
+      [
+       "Ragueneau",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "creation"
+     ],
+     "enonce": "Touche la ligne qui donne la date de la première.",
+     "aide": "Cherche un jour, un mois et une année.",
+     "explication": "La pièce est créée le **28 décembre 1897**, au théâtre de la Porte-Saint-Martin : le public applaudit de longues minutes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Ragueneau ?",
+     "options": [
+      "Le pâtissier-poète, qui nourrit les poètes",
+      "Le puissant rival, qui envoie les cadets au siège",
+      "L’ami fidèle et raisonnable de Cyrano",
+      "L’acteur que Cyrano chasse de la scène"
+     ],
+     "reponse": 0,
+     "aide": "Ce personnage mêle cuisine et poésie.",
+     "explication": "**Ragueneau** est le pâtissier-poète, qui nourrit les poètes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le genre de la pièce.",
+     "texte": "Cyrano est une comédie ___ en cinq actes et en ___.",
+     "reponses": [
+      [
+       "héroïque"
+      ],
+      [
+       "vers"
+      ]
+     ],
+     "banque": [
+      "héroïque",
+      "vers",
+      "tragique",
+      "prose"
+     ],
+     "aide": "Tout est dans la fiche, à la ligne « Genre ».",
+     "explication": "Cyrano est une comédie **héroïque** en cinq actes et en **vers** : elle ressuscite le drame romantique."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0daa992-5131-58fa-a65a-8e689152ca7a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des mots prêtés, quinze ans de silence",
+   "competence": "analyser-document",
+   "situation": "Cyrano aime Roxane, mais son nez lui interdit d’espérer. Suis la ruse qui dure toute la pièce, jusqu’à la vérité.",
+   "documents": [
+    {
+     "id": "ruse",
+     "type": "chaine",
+     "titre": "La ruse de Cyrano",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Cyrano aime Roxane, mais son nez l’arrête"
+      },
+      {
+       "id": "n2",
+       "texte": "Il prête ses mots à Christian, que Roxane aime"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Au siège d’Arras, Christian meurt au combat"
+      },
+      {
+       "id": "n5",
+       "texte": "Quinze ans plus tard, Roxane comprend"
+      },
+      {
+       "id": "n6",
+       "texte": "Cyrano meurt, avec son panache"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle scène manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "La scène du balcon",
+      "La tirade des nez",
+      "Le duel avec Montfleury",
+      "La mort de Cyrano"
+     ],
+     "reponse": 0,
+     "aide": "Cyrano parle dans l’ombre ; Christian reçoit le baiser.",
+     "explication": "C’est **la scène du balcon** : Cyrano parle dans l’ombre, Christian recueille le baiser."
+    },
+    {
+     "type": "zone",
+     "document": "ruse",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où Roxane comprend la vérité.",
+     "aide": "Elle l’entend lire une lettre.",
+     "explication": "Quinze ans plus tard, au couvent, Roxane **comprend** en entendant Cyrano lire la dernière lettre par cœur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la scène de la vérité.",
+     "texte": "Roxane comprend en entendant Cyrano lire la ___ lettre par cœur, à la ___ tombée.",
+     "reponses": [
+      [
+       "dernière"
+      ],
+      [
+       "nuit"
+      ]
+     ],
+     "banque": [
+      "dernière",
+      "nuit",
+      "première",
+      "aube"
+     ],
+     "aide": "Il lit dans le noir, sans voir le texte.",
+     "explication": "Elle comprend en l’entendant lire la **dernière** lettre par cœur, à la **nuit** tombée."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Le Bret",
+       "L’ami fidèle et raisonnable"
+      ],
+      [
+       "Le comte de Guiche",
+       "Le puissant rival, qui envoie les cadets au siège"
+      ],
+      [
+       "Carbon de Castel-Jaloux",
+       "Le capitaine des cadets de Gascogne"
+      ],
+      [
+       "Montfleury",
+       "L’acteur que Cyrano chasse de scène à l’acte I"
+      ]
+     ],
+     "aide": "Un ami, un rival, un capitaine, un acteur.",
+     "explication": "**Le Bret** est l’ami, **de Guiche** le rival, **Carbon de Castel-Jaloux** le capitaine des cadets, **Montfleury** l’acteur chassé de scène."
+    }
+   ]
+  },
+  {
+   "chapitre": "b0daa992-5131-58fa-a65a-8e689152ca7a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du roc au cap, jusqu’à la péninsule",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves se disputent sur la tirade des nez : simple moquerie de soi, ou arme du héros ? Lis un extrait authentique et leur échange, puis range les registres de la pièce.",
+   "documents": [
+    {
+     "id": "tirade",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La tirade des nez",
+     "blocs": [
+      {
+       "personnage": "Cyrano",
+       "replique": "C’est un [[r|roc]] !… c’est un [[r|pic]] !… c’est un [[r|cap]] !"
+      }
+     ],
+     "source": "Edmond Rostand, *Cyrano de Bergerac* (1897), acte I, scène 4"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nils",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "Cyrano se moque de son nez : il est ridicule, c’est tout."
+      },
+      {
+       "qui": "Nils",
+       "texte": "Regarde : il l’enfle par [[h|hyperbole]] pour [[h|braver]] ceux qui se moquent. L’humour est son arme."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les trois noms de relief que Cyrano applique à son nez.",
+     "aide": "Ce sont des mots de géographie, de plus en plus grands.",
+     "explication": "Le nez devient un **roc**, un **pic**, un **cap** : l’image grossit à chaque mot."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche les deux mots par lesquels Nils nomme le procédé et son but.",
+     "aide": "Un mot pour le procédé, un mot pour ce que Cyrano fait face à ses moqueurs.",
+     "explication": "Cyrano emploie l’**hyperbole** pour **braver** ceux qui se moquent : l’humour est son arme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Cyrano en transformant son nez en roc, pic et cap ?",
+     "options": [
+      "Il retourne la moquerie en tirade virtuose",
+      "Il avoue qu’il a honte de son visage",
+      "Il décrit fidèlement la géographie de la Gascogne",
+      "Il demande à Christian de parler pour lui"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la façon dont l’image enfle à chaque mot.",
+     "explication": "Cyrano **retourne la moquerie en tirade virtuose** : il rit de son nez avant les autres et prend l’avantage."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces moments : quel registre domine ?",
+     "categories": [
+      "Comique",
+      "Lyrique",
+      "Héroïque",
+      "Pathétique"
+     ],
+     "items": [
+      [
+       "La tirade des nez",
+       0
+      ],
+      [
+       "La scène du balcon",
+       1
+      ],
+      [
+       "Le courage des cadets au siège d’Arras",
+       2
+      ],
+      [
+       "La bûche jetée par un laquais",
+       3
+      ],
+      [
+       "La dernière lettre lue à Roxane",
+       3
+      ]
+     ],
+     "aide": "La pièce mêle le rire et les larmes : le comique côtoie le pathétique.",
+     "explication": "La **tirade des nez** est comique ; le **balcon**, lyrique ; le **courage des cadets**, héroïque ; la **bûche** et la **lettre**, pathétiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "df8d05d0-8285-5357-9056-f74b30f43c93",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du roman satirique à l’essai de vingt ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *De l’esprit des lois*. Place l’ouvrage dans la vie de Montesquieu, puis retrouve les trois gouvernements.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Montesquieu et ses deux grands livres",
+     "debut": 1685,
+     "fin": 1755,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1689,
+       "nom": "Naissance"
+      },
+      {
+       "id": "lp",
+       "date": 1721,
+       "nom": "Lettres persanes"
+      },
+      {
+       "id": "el",
+       "date": 1748,
+       "nom": "L’Esprit des lois"
+      }
+     ]
+    },
+    {
+     "id": "gouv",
+     "type": "tableau",
+     "titre": "Les trois gouvernements",
+     "colonnes": [
+      "Gouvernement",
+      "Son ressort"
+     ],
+     "lignes": [
+      [
+       "La république",
+       "La vertu"
+      ],
+      [
+       "La monarchie",
+       "L’honneur"
+      ],
+      [
+       "Le despotisme",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "el"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraît *De l’esprit des lois*.",
+     "aide": "Le livre paraît anonymement à Genève.",
+     "explication": "*De l’esprit des lois* paraît en **1748**, anonymement, à Genève."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les *Lettres persanes* de *L’Esprit des lois* ?",
+     "reponse": 27,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1748 − 1721 = **27 ans** : il faut une vingtaine d’années de travail pour écrire le grand livre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : quel est le ressort du despotisme ?",
+     "options": [
+      "La crainte",
+      "La vertu",
+      "L’honneur",
+      "La liberté"
+     ],
+     "reponse": 0,
+     "aide": "La république a la vertu, la monarchie l’honneur : le despotisme fonctionne autrement.",
+     "explication": "Le ressort du despotisme est **la crainte**."
+    }
+   ]
+  },
+  {
+   "chapitre": "df8d05d0-8285-5357-9056-f74b30f43c93",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Que le pouvoir arrête le pouvoir",
+   "competence": "analyser-texte",
+   "situation": "Montesquieu veut empêcher qu’on abuse du pouvoir. Suis l’enchaînement de son raisonnement, puis lis la phrase célèbre où il le résume.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du raisonnement",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Les lois sont des rapports nécessaires"
+      },
+      {
+       "id": "n2",
+       "texte": "Chaque gouvernement a son ressort"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il faut que les pouvoirs se limitent"
+      },
+      {
+       "id": "n5",
+       "texte": "Législatif, exécutif, judiciaire"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La phrase célèbre",
+     "blocs": [
+      "Pour qu’on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le pouvoir arrête le pouvoir."
+     ],
+     "source": "Montesquieu, *De l’esprit des lois* (1748), livre XI, chapitre 4"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "On peut abuser du pouvoir quand on le détient",
+      "Le peuple doit toujours obéir sans discuter",
+      "Le climat décide seul de toutes les lois",
+      "Un roi vertueux suffit à garantir la liberté"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un danger pour justifier la séparation des pouvoirs.",
+     "explication": "L’idée est que le pouvoir peut être **abusé** par celui qui le détient : d’où la nécessité de le limiter."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui énonce la solution de Montesquieu.",
+     "aide": "Cherche le verbe « se limiter ».",
+     "explication": "La solution est que **les pouvoirs se limitent** les uns les autres."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase célèbre.",
+     "texte": "Il faut que, par la disposition des ___, le pouvoir arrête le ___.",
+     "reponses": [
+      [
+       "choses"
+      ],
+      [
+       "pouvoir"
+      ]
+     ],
+     "banque": [
+      "choses",
+      "pouvoir",
+      "lois",
+      "peuple"
+     ],
+     "aide": "Relis le texte du document 2.",
+     "explication": "Il faut que, par la disposition des **choses**, le pouvoir arrête le **pouvoir**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque pouvoir à sa fonction.",
+     "paires": [
+      [
+       "Législatif",
+       "Faire la loi"
+      ],
+      [
+       "Exécutif",
+       "L’appliquer"
+      ],
+      [
+       "Judiciaire",
+       "Punir les crimes et juger les différends"
+      ]
+     ],
+     "aide": "Un pouvoir fait la loi, un autre l’applique, un troisième juge.",
+     "explication": "Le pouvoir **législatif** fait la loi, l’**exécutif** l’applique, le **judiciaire** punit les crimes et juge les différends."
+    }
+   ]
+  },
+  {
+   "chapitre": "df8d05d0-8285-5357-9056-f74b30f43c93",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ironie qui dénonce",
+   "competence": "argumenter",
+   "situation": "Montesquieu observe, compare, explique : il écrit aussi avec ironie. Lis le début célèbre du chapitre sur l’esclavage, puis construis l’argument du philosophe.",
+   "documents": [
+    {
+     "id": "iro",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le début du chapitre sur l’esclavage",
+     "blocs": [
+      "Si j’[[c|avais]] à soutenir le droit que nous avons eu de rendre les nègres esclaves, voici ce que je [[c|dirais]] :"
+     ],
+     "source": "Montesquieu, *De l’esprit des lois* (1748), livre XV, chapitre 5, « De l’esclavage des nègres »"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La liberté politique naît de l’équilibre des pouvoirs",
+       "Le pouvoir arrête le pouvoir",
+       "?"
+      ],
+      [
+       "Il n’y a pas de loi bonne partout",
+       "Il faut rapporter la loi à un peuple, à son climat, à ses mœurs",
+       "La théorie des climats"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "iro",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux verbes qui montrent que Montesquieu énonce une hypothèse et non sa conviction.",
+     "aide": "Le conditionnel et l’imparfait de la proposition en « si ».",
+     "explication": "Les verbes **avais** et **dirais** posent une hypothèse : Montesquieu prête des arguments à un défenseur de l’esclavage sans les faire siens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet de ce début ironique ?",
+     "options": [
+      "Montrer l’absurdité de l’esclavage en feignant de le défendre",
+      "Défendre sérieusement l’esclavage au nom de la tradition",
+      "Annoncer une loi qui interdit l’esclavage en France",
+      "Décrire sans jugement les usages du commerce du sucre"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit qu’il feint d’argumenter en sa faveur.",
+     "explication": "Le chapitre est célèbre : Montesquieu **feint** de défendre l’esclavage pour en montrer **l’absurdité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "L’Angleterre, dont il observe les institutions",
+      "Le despotisme, régime où règne la seule crainte",
+      "La monarchie, régime fondé sur le sens de l’honneur",
+      "La Perse imaginaire des *Lettres persanes*"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit que l’idée est inspirée de l’observation d’un pays voisin.",
+     "explication": "La séparation des pouvoirs est inspirée de l’observation de **l’Angleterre**, où Montesquieu a vécu plus d’un an."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de l’ouvrage à ce qu’il illustre.",
+     "paires": [
+      [
+       "La théorie des climats",
+       "Une thèse contestée, qui fonde une approche comparatiste"
+      ],
+      [
+       "Le chapitre sur l’esclavage",
+       "Une ironie qui feint de défendre pour mieux condamner"
+      ],
+      [
+       "La séparation des pouvoirs",
+       "Une idée reprise par l’article 16 de la Déclaration de 1789"
+      ],
+      [
+       "La mise à l’Index (1751)",
+       "La réaction de l’Église à l’ouvrage"
+      ]
+     ],
+     "aide": "Chaque élément renvoie à un moment de l’ouvrage ou de sa réception.",
+     "explication": "Les **climats** : thèse contestée mais comparatiste ; l’**esclavage** : ironie ; la **séparation des pouvoirs** : article 16 de 1789 ; l’**Index** : réaction de l’Église."
+    }
+   ]
+  },
+  {
+   "chapitre": "0745ed3c-2759-5288-8243-2f91c0b98545",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un érudit de vingt-trois ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *De la dignité de l’homme*. Place le texte dans la vie de Pic de la Mirandole, puis relève ce qu’il devait être.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Pic de la Mirandole",
+     "debut": 1460,
+     "fin": 1500,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1463,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ecrit",
+       "date": 1486,
+       "nom": "Le discours"
+      },
+      {
+       "id": "mort",
+       "date": 1494,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "De la dignité de l’homme",
+     "sousTitre": "Jean Pic de la Mirandole",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Écrit en",
+       "valeur": "1486"
+      },
+      {
+       "texte": "Projet",
+       "valeur": "Une dispute publique à Rome sur neuf cents thèses"
+      },
+      {
+       "texte": "Sort du projet",
+       "valeur": "Le pape en interdit la tenue"
+      },
+      {
+       "texte": "Publié",
+       "valeur": "En 1496, après la mort de l’auteur"
+      }
+     ],
+     "pied": "Texte emblématique de l’humanisme",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Pic a-t-il quand il écrit son discours ?",
+     "reponse": 23,
+     "unite": "ans",
+     "aide": "Soustrais sa date de naissance à la date du discours.",
+     "explication": "1486 − 1463 = **23 ans** : le texte est écrit par un érudit de vingt-trois ans."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mort"
+     ],
+     "enonce": "Touche l’année de la mort de Pic.",
+     "aide": "Il meurt à trente et un ans.",
+     "explication": "Pic meurt en **1494**, à trente et un ans, deux ans avant la publication de son discours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le projet de Pic.",
+     "texte": "Pic voulait ouvrir une dispute publique à Rome sur ___ thèses, mais le ___ en interdit la tenue.",
+     "reponses": [
+      [
+       "neuf cents",
+       "900"
+      ],
+      [
+       "pape"
+      ]
+     ],
+     "banque": [
+      "neuf cents",
+      "trente",
+      "pape",
+      "roi"
+     ],
+     "aide": "Tout est dans la fiche, aux lignes « Projet » et « Sort du projet ».",
+     "explication": "Pic voulait une dispute sur **neuf cents** thèses, mais le **pape** en interdit la tenue."
+    }
+   ]
+  },
+  {
+   "chapitre": "0745ed3c-2759-5288-8243-2f91c0b98545",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dieu, Adam et la place qui manque",
+   "competence": "analyser-texte",
+   "situation": "Pic raconte la création sous la forme d’une scène. Suis l’argument pas à pas, puis relis le résumé de la scène fondatrice.",
+   "documents": [
+    {
+     "id": "arg",
+     "type": "chaine",
+     "titre": "L’argument de Pic",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Dieu a achevé la création"
+      },
+      {
+       "id": "n2",
+       "texte": "Plus ni place ni nature à donner à l’homme"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "L’homme choisit ce qu’il veut être"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La scène fondatrice",
+     "blocs": [
+      "Quand le monde est achevé, tous les êtres ont leur place. Pour l’homme, il ne reste ni place ni nature disponible.",
+      "Dieu s’adresse alors à [[a|Adam]] : il ne lui donne ni place fixe, ni visage propre, ni fonction particulière. À lui de choisir ce qu’il veut être.",
+      "L’homme peut [[d|dégénérer]] vers les formes inférieures, ou s’élever vers les formes divines."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après Pic de la Mirandole, *De la dignité de l’homme* (1486)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Dieu ne lui assigne ni place fixe ni forme propre",
+      "Dieu lui donne la place du plus haut des anges",
+      "Dieu lui impose une nature animale",
+      "Dieu l’exclut de la création"
+     ],
+     "reponse": 0,
+     "aide": "L’homme est le seul être à qui rien n’est assigné.",
+     "explication": "Dieu ne lui assigne **ni place fixe ni forme propre** : c’est ce qui laisse à l’homme la liberté de se choisir."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le personnage à qui Dieu s’adresse dans la scène.",
+     "aide": "C’est le premier homme.",
+     "explication": "Dieu parle à **Adam** : le texte met en scène la condition de tout homme."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe qui dit que l’homme peut s’abaisser vers les formes inférieures.",
+     "aide": "C’est l’opposé de « s’élever ».",
+     "explication": "L’homme peut **dégénérer** vers l’animal ou s’élever vers l’ange : le choix lui appartient."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque idée de la scène à ce qu’elle dit de l’homme.",
+     "paires": [
+      [
+       "Aucune place fixe",
+       "Il est ce qu’il se fait"
+      ],
+      [
+       "Aucune forme propre",
+       "Il peut dégénérer vers l’animal ou s’élever vers l’ange"
+      ],
+      [
+       "Le choix lui appartient",
+       "Il devient le sculpteur de lui-même"
+      ]
+     ],
+     "aide": "Chaque absence est aussi une liberté.",
+     "explication": "Sans place fixe, l’homme **est ce qu’il se fait** ; sans forme propre, il peut **dégénérer ou s’élever** ; le choix lui appartient : il est le **sculpteur de lui-même**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0745ed3c-2759-5288-8243-2f91c0b98545",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’homme se fait-il lui-même ?",
+   "competence": "argumenter",
+   "situation": "Camille pense que Pic donne à l’homme une nature fixe. Éliott pense le contraire. Lis leur échange, puis construis l’argument de dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Éliott",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Pour Pic, l’homme a une nature fixe, comme le chat ou le cheval."
+      },
+      {
+       "qui": "Éliott",
+       "texte": "Au contraire : Dieu ne lui a donné aucune place fixe, et il est ce qu’il se [[f|fait]]."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Alors tout dépend de l’éducation ?"
+      },
+      {
+       "qui": "Éliott",
+       "texte": "Oui : si l’homme se fait, l’éducation est décisive."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’homme n’a pas de nature fixe",
+       "Dieu ne lui a laissé ni place ni forme propre",
+       "?"
+      ],
+      [
+       "Si l’homme se fait, l’éducation est tout",
+       "Il faut apprendre pour choisir de s’élever",
+       "Le projet de concilier les savoirs"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui montre qu’Éliott défend l’idée d’un homme qui se construit.",
+     "aide": "Le verbe « faire » à la forme réfléchie.",
+     "explication": "L’homme est ce qu’il se **fait** : il n’a pas de nature fixe, il se construit par ses choix."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La scène où Dieu s’adresse à Adam",
+      "La condamnation des thèses par Innocent VIII en 1487",
+      "Le cercle de Marsile Ficin à Florence",
+      "La publication par son neveu en 1496"
+     ],
+     "reponse": 0,
+     "aide": "Il faut une scène du texte où l’homme reçoit une condition sans place fixe.",
+     "explication": "La scène où **Dieu s’adresse à Adam** illustre que l’homme n’a ni place ni forme propre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces idées : Pic les affirme-t-il ou non ?",
+     "categories": [
+      "Pic l’affirme",
+      "Pic ne l’affirme pas"
+     ],
+     "items": [
+      [
+       "L’homme n’a pas de nature fixe",
+       0
+      ],
+      [
+       "L’éducation est décisive",
+       0
+      ],
+      [
+       "Les philosophies peuvent s’accorder",
+       0
+      ],
+      [
+       "L’homme est condamné à sa place dès sa naissance",
+       1
+      ],
+      [
+       "Un seul philosophe détient toute la vérité",
+       1
+      ]
+     ],
+     "aide": "Pic veut concilier Platon, Aristote, la Kabbale et les Pères de l’Église.",
+     "explication": "Pic affirme que l’homme **n’a pas de nature fixe**, que **l’éducation est décisive** et que les **philosophies peuvent s’accorder** ; il rejette une place imposée et le monopole d’un seul philosophe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce texte est-il considéré comme un manifeste de l’humanisme ?",
+     "options": [
+      "Il fait de la liberté et de l’éducation son centre",
+      "Il condamne le savoir des Anciens au profit de la foi",
+      "Il décrit fidèlement la vie de la cour de Florence",
+      "Il demande au pape d’interdire toute dispute savante"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle de confiance dans l’homme et de retour aux textes.",
+     "explication": "C’est un **manifeste de l’humanisme** parce qu’il fait de la **liberté** de l’homme et de l’**éducation** le centre de la dignité humaine."
+    }
+   ]
+  }
+ ]
+}

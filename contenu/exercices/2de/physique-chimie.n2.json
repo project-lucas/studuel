@@ -1,0 +1,5839 @@
+{
+ "niveau": "2de",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "1d74eec5-d615-5c6e-a540-bf3b0314550d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un skieur sur la piste rouge",
+   "competence": "observer-schema",
+   "situation": "Pour son club, Axel filme un skieur qui descend une longue piste droite. Il repère sa position toutes les 1,0 s : c’est une chronophotographie. L’échelle est donnée sous le dessin.",
+   "documents": [
+    {
+     "id": "chrono",
+     "type": "schema",
+     "titre": "Chronophotographie du skieur",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        110
+       ],
+       "a": [
+        320,
+        110
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m0",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 138,
+       "texte": "M0",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 80,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 138,
+       "texte": "M1",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 120,
+       "y": 138,
+       "texte": "M2",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 138,
+       "texte": "M3",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 200,
+       "y": 138,
+       "texte": "M4",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m5",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 138,
+       "texte": "M5",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "m6",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 138,
+       "texte": "M6",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 30,
+       "texte": "Une position toutes les 1,0 s",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        175
+       ],
+       "a": [
+        140,
+        175
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 196,
+       "texte": "30 m sur le terrain",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice, vue de dessus"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chrono",
+     "enonce": "Touche la position du skieur 4,0 s après le départ en M0.",
+     "reponse": [
+      "m4"
+     ],
+     "aide": "Une position est notée toutes les 1,0 s : compte les intervalles depuis M0.",
+     "explication": "Il y a 1,0 s entre deux positions : après 4,0 s, le skieur est en **M4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec l’échelle, quelle distance sépare M1 de M3 sur le terrain ?",
+     "reponse": 24,
+     "unite": "m",
+     "aide": "Sur le dessin, M1M3 mesure 80 unités et la règle en mesure 100 : elle vaut 30 m.",
+     "explication": "M1M3 = 80 unités, soit 80/100 × 30 m = **24 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On estime la vitesse en M2 par v = M1M3 / (2τ), avec τ = 1,0 s. Quelle est la valeur de v en M2 ?",
+     "reponse": 12,
+     "unite": "m·s⁻¹",
+     "aide": "Divise la distance M1M3 par la durée 2τ = 2,0 s.",
+     "explication": "v(M2) ≈ M1M3 / (2τ) = 24 m / 2,0 s = **12 m·s⁻¹**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les points sont alignés et régulièrement espacés. Que dire du vecteur vitesse du skieur ?",
+     "options": [
+      "Il ne change pas : même direction, même valeur",
+      "Sa valeur augmente à chaque nouvelle position",
+      "Sa direction change à chaque nouvel instant",
+      "Il est nul puisque le skieur reste sur la piste"
+     ],
+     "reponse": 0,
+     "aide": "Compare les distances entre deux positions successives.",
+     "explication": "Distances égales en des durées égales : la valeur est constante ; trajectoire droite : la direction l’est aussi. Le vecteur vitesse **ne varie pas** (mouvement rectiligne uniforme)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d74eec5-d615-5c6e-a540-bf3b0314550d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La nacelle de la grande roue",
+   "competence": "observer-schema",
+   "situation": "Dans une fête foraine, une nacelle tourne à vitesse de valeur constante. Maëlle veut comprendre pourquoi son vecteur vitesse change quand même : elle compare la vitesse en M1 et en M3.",
+   "documents": [
+    {
+     "id": "roue",
+     "type": "schema",
+     "titre": "Trajectoire et vecteurs vitesse",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 125,
+       "r": 80,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        125
+       ],
+       "a": [
+        250,
+        125
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        125
+       ],
+       "a": [
+        170,
+        45
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 125,
+       "r": 3,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 145,
+       "texte": "centre C",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 125,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 130,
+       "texte": "M1",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 45,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 30,
+       "texte": "M3",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        125
+       ],
+       "a": [
+        250,
+        75
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "v1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        45
+       ],
+       "a": [
+        120,
+        45
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "v3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 215,
+       "texte": "Nacelle à vitesse de valeur constante : 2,0 m·s⁻¹ ↔ 50 unités",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "constr",
+     "type": "schema",
+     "titre": "Construction de la variation de vitesse",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 150,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        150
+       ],
+       "a": [
+        200,
+        100
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "a1",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        150
+       ],
+       "a": [
+        150,
+        150
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "a3",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        100
+       ],
+       "a": [
+        150,
+        150
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "a2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 210,
+       "y": 170,
+       "texte": "point commun",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 215,
+       "texte": "Les deux vecteurs vitesse reportés depuis un même point",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Mêmes vecteurs, mêmes longueurs"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "roue",
+     "enonce": "Touche le vecteur vitesse de la nacelle quand elle passe en M1.",
+     "reponse": [
+      "v1"
+     ],
+     "aide": "Le vecteur vitesse part du point où se trouve la nacelle et il est tangent au cercle.",
+     "explication": "En M1, le vecteur vitesse est tangent au cercle et part de M1 : c’est la flèche **verticale** qui quitte M1."
+    },
+    {
+     "type": "zone",
+     "document": "constr",
+     "enonce": "La variation du vecteur vitesse relie les extrémités des deux vecteurs. Touche-la.",
+     "reponse": [
+      "a2"
+     ],
+     "aide": "Elle ne part pas du point commun : elle joint l’extrémité du premier vecteur à celle du second.",
+     "explication": "La variation Δv = v₃ − v₁ se trace de l’extrémité de v₁ à l’extrémité de v₃ : c’est la flèche **oblique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’échelle est 2,0 m·s⁻¹ pour 50 unités. La flèche de variation mesure 70,7 unités. Quelle est la valeur de Δv ? (Arrondis à 0,1 m·s⁻¹.)",
+     "reponse": 2.8,
+     "unite": "m·s⁻¹",
+     "tolerance": 0.05,
+     "aide": "Produit en croix : 50 unités ↔ 2,0 m·s⁻¹.",
+     "explication": "70,7 unités ↔ 70,7 × 2,0 / 50 = 2,83 : Δv ≈ **2,8 m·s⁻¹**. Elle n’est pas nulle alors que la valeur de la vitesse ne change pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Vers où la variation du vecteur vitesse est-elle dirigée dans ce mouvement circulaire uniforme ?",
+     "options": [
+      "Vers le centre du cercle décrit par la nacelle",
+      "Dans le sens du mouvement, tangente au cercle",
+      "Vers l’extérieur, à l’opposé du centre",
+      "Nulle part : elle est égale au vecteur nul"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la flèche oblique : de quel côté du cercle pointe-t-elle depuis le milieu de l’arc M1M3 ?",
+     "explication": "Entre M1 et M3, Δv pointe vers l’intérieur de la trajectoire : **vers le centre**. C’est aussi le sens de la somme des forces qui agissent sur la nacelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "1d74eec5-d615-5c6e-a540-bf3b0314550d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le wagon du train fantôme freine",
+   "competence": "raisonner",
+   "situation": "À la fête foraine, un wagon de train fantôme roule vers la droite puis freine avant le quai. Une caméra relève son abscisse toutes les τ = 0,50 s ; le schéma donne les directions possibles pour les forces.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Positions du wagon",
+     "colonnes": [
+      "Position",
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+     ],
+     "lignes": [
+      [
+       "Abscisse x (m)",
+       "0",
+       "5,0",
+       "9,0",
+       "12,0",
+       "14,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "forces",
+     "type": "schema",
+     "titre": "Directions possibles pour la somme des forces",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 90,
+       "l": 100,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        110
+       ],
+       "a": [
+        255,
+        110
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "avant",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        110
+       ],
+       "a": [
+        85,
+        110
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "arriere",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        110
+       ],
+       "a": [
+        170,
+        30
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "haut",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        110
+       ],
+       "a": [
+        170,
+        190
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "bas",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 85,
+       "texte": "sens du",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 100,
+       "texte": "mouvement →",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur de la vitesse en M1 : v(M1) = M0M2 / (2τ).",
+     "reponse": 9,
+     "unite": "m·s⁻¹",
+     "tolerance": 0.05,
+     "aide": "M0M2 est la différence des abscisses de M2 et M0.",
+     "explication": "M0M2 = 9,0 − 0 = 9,0 m ; 2τ = 1,0 s ; v(M1) = 9,0 / 1,0 = **9,0 m·s⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule de même la valeur de la vitesse en M3.",
+     "reponse": 5,
+     "unite": "m·s⁻¹",
+     "tolerance": 0.05,
+     "aide": "Utilise M2M4 et la même durée 2τ.",
+     "explication": "M2M4 = 14,0 − 9,0 = 5,0 m ; v(M3) = 5,0 / 1,0 = **5,0 m·s⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la valeur de la vitesse a-t-elle diminué entre M1 et M3 ?",
+     "reponse": 4,
+     "unite": "m·s⁻¹",
+     "tolerance": 0.05,
+     "aide": "Soustrais les deux vitesses calculées.",
+     "explication": "9,0 − 5,0 = **4,0 m·s⁻¹**."
+    },
+    {
+     "type": "zone",
+     "document": "forces",
+     "enonce": "Touche la flèche qui indique le sens de la somme des forces appliquées au wagon pendant le freinage.",
+     "reponse": [
+      "arriere"
+     ],
+     "aide": "Le vecteur variation de vitesse a le même sens que la somme des forces. Dans quel sens la vitesse change-t-elle ?",
+     "explication": "La vitesse diminue : Δv est dirigée vers l’**arrière**, donc la somme des forces aussi (les freins l’emportent sur les autres forces horizontales)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si les forces appliquées au wagon se compensaient, que verrait-on sur les relevés ?",
+     "options": [
+      "Des écarts constants entre deux positions successives",
+      "Des écarts de plus en plus grands entre positions",
+      "Des écarts de plus en plus petits entre positions",
+      "Des positions qui reviennent en arrière sans cesse"
+     ],
+     "reponse": 0,
+     "aide": "Si la somme des forces est nulle, le vecteur vitesse ne varie pas.",
+     "explication": "Forces qui se compensent : vitesse constante, donc le wagon parcourrait des **distances égales** pendant des durées égales. Ici les écarts diminuent : elles ne se compensent pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "25e61fb2-54c0-5300-9f1d-92e9e9cf73ab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un robot explorateur de 40 kg",
+   "competence": "lire-tableau",
+   "situation": "Une équipe prépare un petit robot-explorateur de 40 kg. Elle veut savoir quel poids il aura sur chaque astre visité. Le tableau donne la valeur g de la pesanteur à la surface de chaque astre.",
+   "documents": [
+    {
+     "id": "g",
+     "type": "tableau",
+     "titre": "Pesanteur à la surface de trois astres",
+     "colonnes": [
+      "Astre",
+      "Terre",
+      "Lune",
+      "Mars"
+     ],
+     "lignes": [
+      [
+       "g (N·kg⁻¹)",
+       "9,8",
+       "1,6",
+       "3,7"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "g",
+     "enonce": "Touche la case de l’astre où un objet est le plus léger à porter.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Le poids est proportionnel à g : cherche le plus petit g.",
+     "explication": "Le poids P = m × g est le plus faible là où g est le plus faible : **la Lune** (1,6 N·kg⁻¹)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids du robot sur la Lune ?",
+     "reponse": 64,
+     "unite": "N",
+     "tolerance": 0.5,
+     "aide": "Utilise P = m × g avec g lu dans le tableau.",
+     "explication": "P = m × g = 40 kg × 1,6 N·kg⁻¹ = **64 N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est son poids sur Terre ?",
+     "reponse": 392,
+     "unite": "N",
+     "tolerance": 0.5,
+     "aide": "Même relation, avec la valeur de g pour la Terre.",
+     "explication": "P = 40 × 9,8 = **392 N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la masse du robot sur la Lune ?",
+     "options": [
+      "40 kg, la même que sur Terre",
+      "6,5 kg, car la Lune attire moins",
+      "64 kg, car g y est plus petit",
+      "392 kg, la même valeur qu’en newtons"
+     ],
+     "reponse": 0,
+     "aide": "La masse mesure la quantité de matière, pas l’attraction du lieu.",
+     "explication": "La masse ne dépend pas du lieu : le robot garde ses **40 kg**. Seul son poids change."
+    }
+   ]
+  },
+  {
+   "chapitre": "25e61fb2-54c0-5300-9f1d-92e9e9cf73ab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sac suspendu au dynamomètre",
+   "competence": "experimenter",
+   "situation": "Au CDI, Inès suspend son sac à un dynamomètre accroché à un support fixe. Le sac est immobile. Elle veut vérifier la masse du sac à partir de l’indication de l’appareil.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Le sac au bout du dynamomètre",
+     "largeur": 340,
+     "hauteur": 262,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 8,
+       "l": 100,
+       "h": 14,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        22
+       ],
+       "a": [
+        170,
+        60
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 60,
+       "l": 40,
+       "h": 70,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "dyna"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 100,
+       "texte": "24,5 N",
+       "ancre": "milieu",
+       "taille": "normal",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        130
+       ],
+       "a": [
+        170,
+        150
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 150,
+       "l": 70,
+       "h": 56,
+       "arrondi": 14,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 183,
+       "texte": "sac",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        178
+       ],
+       "a": [
+        170,
+        252
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "poids",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        140
+       ],
+       "a": [
+        170,
+        66
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "fil",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 100,
+       "texte": "dynamomètre",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        100
+       ],
+       "a": [
+        148,
+        100
+       ],
+       "teinte": "gris",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice ; g ≈ 9,8 N·kg⁻¹"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche la flèche qui représente le poids du sac, c’est-à-dire l’action de la Terre sur lui.",
+     "reponse": [
+      "poids"
+     ],
+     "aide": "Le poids est vertical et dirigé vers le bas.",
+     "explication": "Le poids est vertical, vers le bas, appliqué au centre de gravité du sac : c’est la flèche du **bas**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque action exercée sur le sac : action de contact ou action à distance ?",
+     "categories": [
+      "Action de contact",
+      "Action à distance"
+     ],
+     "items": [
+      [
+       "Le poids du sac, dû à l’attraction de la Terre",
+       1
+      ],
+      [
+       "La force exercée par le crochet du dynamomètre",
+       0
+      ],
+      [
+       "La résistance de l’air sur le sac",
+       0
+      ],
+      [
+       "L’attraction d’un aimant posé près du sac",
+       1
+      ]
+     ],
+     "aide": "Y a-t-il un contact matériel entre l’auteur de l’action et le sac ?",
+     "explication": "Le fil, le crochet et l’air touchent le sac : **contact**. La pesanteur et l’aimant agissent sans toucher : **à distance**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le dynamomètre indique 24,5 N. Quelle est la masse du sac ? (g ≈ 9,8 N·kg⁻¹)",
+     "reponse": 2.5,
+     "unite": "kg",
+     "tolerance": 0.05,
+     "aide": "Le poids vaut P = m × g : isole la masse m.",
+     "explication": "Le sac est immobile : le dynamomètre mesure son poids. m = P / g = 24,5 / 9,8 = **2,5 kg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le sac tire vers le bas sur le crochet avec une force de 24,5 N. Que fait le crochet sur le sac ?",
+     "options": [
+      "Il exerce une force de 24,5 N, vers le haut",
+      "Il exerce une force de 24,5 N, vers le bas",
+      "Il n’exerce aucune force, le sac est immobile",
+      "Il exerce une force de 2,5 N, vers le haut"
+     ],
+     "reponse": 0,
+     "aide": "Principe des actions réciproques : même direction, même valeur, sens opposé.",
+     "explication": "Si A agit sur B, B agit sur A avec une force de même valeur et de **sens opposé** : **24,5 N vers le haut**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25e61fb2-54c0-5300-9f1d-92e9e9cf73ab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un satellite de 500 kg autour de la Terre",
+   "competence": "modeliser",
+   "situation": "Un petit satellite d’observation de 500 kg tourne autour de la Terre à 600 km d’altitude. Des ingénieurs étudient la force de gravitation exercée par la Terre sur lui et comment elle change avec la distance.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Masse de la Terre",
+       "5,97 × 10²⁴ kg"
+      ],
+      [
+       "Rayon de la Terre",
+       "6 371 km"
+      ],
+      [
+       "Constante G",
+       "6,67 × 10⁻¹¹ N·m²·kg⁻²"
+      ],
+      [
+       "Altitude du satellite",
+       "600 km"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Force exercée par la Terre sur le satellite",
+     "categories": [
+      "1 R",
+      "2 R",
+      "3 R",
+      "4 R"
+     ],
+     "series": [
+      {
+       "nom": "Force",
+       "valeurs": [
+        4.9,
+        1.23,
+        0.54,
+        0.31
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Force",
+      "unite": "kN",
+      "min": 0,
+      "max": 6,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Distance au centre de la Terre (R = rayon terrestre)"
+     },
+     "valeurs": false,
+     "source": "Calcul écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance d entre le satellite et le centre de la Terre ?",
+     "reponse": 6971,
+     "unite": "km",
+     "tolerance": 0.5,
+     "aide": "Le centre de la Terre est à un rayon terrestre sous la surface : ajoute l’altitude.",
+     "explication": "d = rayon + altitude = 6 371 + 600 = **6 971 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la force de gravitation F = G × m(Terre) × m(satellite) / d² (convertis d en mètres). Donne F en kN, arrondie à 0,1 kN.",
+     "reponse": 4.1,
+     "unite": "kN",
+     "tolerance": 0.05,
+     "aide": "Convertis d en mètres (6,971 × 10⁶ m) avant de calculer.",
+     "explication": "F = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ × 500 / (6,971 × 10⁶)² ≈ 4,1 × 10³ N, soit **4,1 kN**."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Sur la courbe, touche la distance pour laquelle la force vaut environ 1,2 kN.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Repère 1,2 kN sur l’axe vertical, puis lis la distance sous le point.",
+     "explication": "À **2 R** la courbe vaut 1,23 kN, soit environ 1,2 kN."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la force à 1 R et à 3 R : combien de fois la force est-elle plus petite à 3 R qu’à 1 R ?",
+     "reponse": 9,
+     "tolerance": 0.5,
+     "aide": "Divise la valeur lue à 1 R par la valeur lue à 3 R.",
+     "explication": "4,9 / 0,54 ≈ 9 : à une distance triple, la force est divisée par 3² = **9**, car F varie en 1/d²."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle force le satellite exerce-t-il sur la Terre ?",
+     "options": [
+      "La même valeur, 4,1 kN, mais de sens opposé",
+      "Une force presque nulle car sa masse est faible",
+      "Une force 500 fois plus petite que celle de la Terre",
+      "Une force de 4,1 kN dirigée dans le même sens"
+     ],
+     "reponse": 0,
+     "aide": "Principe des actions réciproques.",
+     "explication": "Les deux corps s’attirent avec des forces de **même valeur** et de sens opposés, même si les masses sont très différentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "10278a4d-480a-5704-863f-74e8302f6310",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq observations dans la journée de Karim",
+   "competence": "analyser-document",
+   "situation": "Karim note cinq observations au cours de sa journée. Pour chacune, il veut savoir si les forces qui s’exercent sur le système se compensent ou non, en utilisant le principe d’inertie.",
+   "documents": [
+    {
+     "id": "obs",
+     "type": "tableau",
+     "titre": "Les observations de Karim",
+     "colonnes": [
+      "Système observé",
+      "Ce que Karim constate"
+     ],
+     "lignes": [
+      [
+       "Un livre posé sur son bureau",
+       "Il ne bouge pas"
+      ],
+      [
+       "Un train sur une voie droite",
+       "Vitesse constante : 80 km/h"
+      ],
+      [
+       "Une pierre lâchée sans vitesse",
+       "Elle va de plus en plus vite"
+      ],
+      [
+       "Une voiture dans un rond-point",
+       "Vitesse constante en valeur, direction qui change"
+      ],
+      [
+       "Un palet sur table à coussin d’air",
+       "Il glisse en ligne droite, sans changer de vitesse"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "obs",
+     "enonce": "Touche les deux observations où le vecteur vitesse varie.",
+     "reponse": [
+      "r2c1",
+      "r3c1"
+     ],
+     "aide": "Le vecteur vitesse varie si sa valeur ou sa direction change.",
+     "explication": "La pierre change de **valeur** de vitesse ; la voiture change de **direction** : dans les deux cas, le vecteur vitesse varie.",
+     "multiple": true
+    },
+    {
+     "type": "categories",
+     "enonce": "Pour chaque système, les forces se compensent-elles ?",
+     "categories": [
+      "Les forces se compensent",
+      "Les forces ne se compensent pas"
+     ],
+     "items": [
+      [
+       "Le livre posé sur le bureau",
+       0
+      ],
+      [
+       "Le train à vitesse constante en ligne droite",
+       0
+      ],
+      [
+       "La pierre qui tombe",
+       1
+      ],
+      [
+       "La voiture dans le rond-point",
+       1
+      ],
+      [
+       "Le palet sur coussin d’air",
+       0
+      ]
+     ],
+     "aide": "Vecteur vitesse constant : les forces se compensent. Vecteur vitesse qui varie : elles ne se compensent pas.",
+     "explication": "Immobile ou en mouvement rectiligne uniforme : la somme des forces est **nulle**. Si le vecteur vitesse varie, la somme n’est **pas nulle**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour entretenir le mouvement du train à vitesse constante en ligne droite, faut-il une force qui l’emporte sur les autres ?",
+     "options": [
+      "Non : les forces se compensent, il continue tout seul",
+      "Oui : sans force vers l’avant, il s’arrêterait aussitôt",
+      "Oui : la force doit être plus grande que les frottements",
+      "Non : aucune force ne s’exerce alors sur le train"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’énoncé du principe d’inertie.",
+     "explication": "Il faut une force pour **changer** un mouvement, pas pour l’entretenir : le moteur compense exactement les frottements, la somme des forces est nulle."
+    }
+   ]
+  },
+  {
+   "chapitre": "10278a4d-480a-5704-863f-74e8302f6310",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La bille et la plume tombent dans deux tubes",
+   "competence": "experimenter",
+   "situation": "En classe, Louis lâche en même temps une bille et une plume dans deux tubes identiques : le tube A contient de l’air, dans le tube B on a fait le vide. Une caméra relève aussi la chute de la bille toutes les 0,10 s.",
+   "documents": [
+    {
+     "id": "bille",
+     "type": "tableau",
+     "titre": "Chute de la bille (tube A)",
+     "colonnes": [
+      "Instant (s)",
+      "0",
+      "0,10",
+      "0,20",
+      "0,30",
+      "0,40"
+     ],
+     "lignes": [
+      [
+       "Hauteur parcourue (cm)",
+       "0",
+       "4,9",
+       "19,6",
+       "44,1",
+       "78,4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "tubes",
+     "type": "schema",
+     "titre": "Les deux tubes à un même instant",
+     "largeur": 340,
+     "hauteur": 258,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 20,
+       "l": 90,
+       "h": 190,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 210,
+       "y": 20,
+       "l": 90,
+       "h": 190,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 150,
+       "r": 12,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "billeA"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 90,
+       "rx": 14,
+       "ry": 6,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "plumeA",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 150,
+       "r": 12,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "billeB"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 270,
+       "cy": 150,
+       "rx": 14,
+       "ry": 6,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "plumeB",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 228,
+       "texte": "Tube A : air",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 228,
+       "texte": "Tube B : vide",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 248,
+       "texte": "Photo prise au même instant après le lâcher",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Estime la vitesse de la bille à t = 0,20 s : divise la distance parcourue entre 0,10 s et 0,30 s par 0,20 s.",
+     "reponse": 196,
+     "unite": "cm·s⁻¹",
+     "tolerance": 1,
+     "aide": "Distance entre les instants 0,10 s et 0,30 s : 44,1 − 4,9.",
+     "explication": "v ≈ (44,1 − 4,9) / 0,20 = 39,2 / 0,20 = **196 cm·s⁻¹**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Estime de la même façon la vitesse à t = 0,30 s. De combien a-t-elle augmenté en 0,10 s ?",
+     "reponse": 98,
+     "unite": "cm·s⁻¹",
+     "tolerance": 1,
+     "aide": "Calcule v(0,30 s) avec les hauteurs à 0,20 s et 0,40 s, puis fais la différence.",
+     "explication": "v(0,30 s) ≈ (78,4 − 19,6) / 0,20 = 294 cm·s⁻¹ ; 294 − 196 = **98 cm·s⁻¹** de plus en 0,10 s : la bille accélère de façon régulière."
+    },
+    {
+     "type": "zone",
+     "document": "tubes",
+     "enonce": "Touche la plume du tube où elle tombe moins vite que la bille.",
+     "reponse": [
+      "plumeA"
+     ],
+     "aide": "Compare la hauteur de la plume à celle de la bille dans chaque tube.",
+     "explication": "Dans le tube d’air, la plume est restée en retard : **plume du tube A**. Dans le vide, elle suit la bille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la plume est-elle en retard dans l’air ?",
+     "options": [
+      "La résistance de l’air agit beaucoup plus sur elle que sur la bille",
+      "La plume est plus légère donc elle subit moins de pesanteur",
+      "La pesanteur ne s’exerce que sur les objets lourds de la bille",
+      "La plume est attirée vers le haut par la paroi du tube"
+     ],
+     "reponse": 0,
+     "aide": "Dans le vide, bille et plume tombent ensemble : qu’est-ce qui change dans l’air ?",
+     "explication": "Dans le vide, plume et bille tombent ensemble (chute libre : seul le poids agit). Dans l’air, c’est la **résistance de l’air** qui sépare les deux."
+    }
+   ]
+  },
+  {
+   "chapitre": "10278a4d-480a-5704-863f-74e8302f6310",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le saut en parachute de Salomé",
+   "competence": "raisonner",
+   "situation": "Salomé et son équipement pèsent 80 kg. Elle saute d’un avion, tombe, ouvre son parachute à 15 s puis atterrit. Un capteur enregistre la valeur de sa vitesse ; le schéma compare le poids et les frottements de l’air à trois moments.",
+   "documents": [
+    {
+     "id": "vit",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse de Salomé",
+     "categories": [
+      "0 s",
+      "5 s",
+      "10 s",
+      "15 s",
+      "20 s",
+      "25 s",
+      "30 s",
+      "35 s"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse",
+       "valeurs": [
+        0,
+        35,
+        50,
+        50,
+        12,
+        5,
+        5,
+        5
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "m·s⁻¹",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Mesures simplifiées, écrites pour l’exercice"
+    },
+    {
+     "id": "bilan",
+     "type": "schema",
+     "titre": "Bilan des forces à trois moments",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 14,
+       "texte": "Chute accélérée",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 14,
+       "texte": "Parachute, freinage",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 280,
+       "y": 14,
+       "texte": "Vitesse constante",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 135,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 135,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 280,
+       "cy": 135,
+       "r": 8,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        135
+       ],
+       "a": [
+        60,
+        205
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "pA",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        135
+       ],
+       "a": [
+        60,
+        105
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "fA",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        135
+       ],
+       "a": [
+        170,
+        205
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "pC",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        135
+       ],
+       "a": [
+        170,
+        30
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "fC",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        135
+       ],
+       "a": [
+        280,
+        205
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "pD",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        135
+       ],
+       "a": [
+        280,
+        65
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "fD",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 228,
+       "texte": "Poids vers le bas, frottements de l’air vers le haut",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vit",
+     "enonce": "Touche les trois instants où Salomé, parachute ouvert, a une vitesse constante.",
+     "reponse": [
+      "k5",
+      "k6",
+      "k7"
+     ],
+     "aide": "Cherche les points qui sont à la même hauteur et après l’ouverture du parachute.",
+     "explication": "Après l’ouverture (15 s), la vitesse se stabilise à 5 m·s⁻¹ à 25 s, 30 s et 35 s : **k5, k6, k7**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la valeur de la vitesse a-t-elle diminué entre 15 s et 25 s ?",
+     "reponse": 45,
+     "unite": "m·s⁻¹",
+     "tolerance": 0.5,
+     "aide": "Lis la vitesse à 15 s et à 25 s.",
+     "explication": "50 − 5 = **45 m·s⁻¹** de moins en 10 s."
+    },
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la flèche des frottements de l’air pendant la phase où Salomé ralentit.",
+     "reponse": [
+      "fC"
+     ],
+     "aide": "Si elle ralentit, la somme des forces est dirigée vers le haut : quelle flèche doit être la plus longue ?",
+     "explication": "Quand elle ralentit, la somme des forces est dirigée **vers le haut** : les frottements (vers le haut) sont plus intenses que le poids. C’est la flèche du milieu, la plus longue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une fois la vitesse constante (30 s), les forces se compensent. Quelle est la valeur de la force de frottement exercée par l’air ? (g ≈ 9,8 N·kg⁻¹)",
+     "reponse": 784,
+     "unite": "N",
+     "tolerance": 1,
+     "aide": "Il faut d’abord calculer le poids de Salomé.",
+     "explication": "Le poids vaut P = m × g = 80 × 9,8 = 784 N. Le vecteur vitesse est constant : les frottements compensent le poids, ils valent **784 N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 0 s et 10 s, la vitesse augmente. Que peut-on en conclure ?",
+     "options": [
+      "Les forces ne se compensent pas : le poids l’emporte",
+      "Les forces se compensent : elle est en chute libre",
+      "Les frottements de l’air sont supérieurs à son poids",
+      "Aucune force ne s’exerce sur Salomé durant ce temps"
+     ],
+     "reponse": 0,
+     "aide": "Que dit le principe d’inertie quand le vecteur vitesse varie ?",
+     "explication": "Le vecteur vitesse varie : les forces **ne se compensent pas**. Elle accélère vers le bas, donc le poids l’emporte sur les frottements encore faibles."
+    }
+   ]
+  },
+  {
+   "chapitre": "832cbafb-fb8a-5c07-90ff-6933a2096979",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lou au concert du lycée",
+   "competence": "analyser-document",
+   "situation": "Lou assiste au concert de son lycée, assise à 34 m de la scène. Elle entend la guitare d’Hugo alors que celle-ci est loin d’elle. Le schéma montre la chaîne qui relie la guitare à son oreille.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "De la guitare à l’oreille",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "guitare",
+       "texte": "Corde de guitare",
+       "emoji": "🎸"
+      },
+      {
+       "id": "milieu",
+       "texte": "?"
+      },
+      {
+       "id": "oreille",
+       "texte": "Oreille de Lou",
+       "emoji": "👂"
+      }
+     ],
+     "liens": [
+      {
+       "de": "guitare",
+       "a": "milieu",
+       "texte": "fait vibrer"
+      },
+      {
+       "de": "milieu",
+       "a": "oreille",
+       "texte": "transmet à"
+      }
+     ]
+    },
+    {
+     "id": "celerites",
+     "type": "tableau",
+     "titre": "Célérité du son selon le milieu",
+     "colonnes": [
+      "Milieu",
+      "Air à 20 °C",
+      "Eau"
+     ],
+     "lignes": [
+      [
+       "Célérité (m·s⁻¹)",
+       "340",
+       "1 500"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche la source du son, l’objet qui vibre.",
+     "reponse": [
+      "guitare"
+     ],
+     "aide": "Un son naît d’un objet qui vibre.",
+     "explication": "La source du son est l’objet qui **vibre** : la corde de guitare."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel milieu matériel transmet la vibration de la guitare à l’oreille de Lou ? (un mot)",
+     "reponse": [
+      "air",
+      "l’air",
+      "l'air",
+      "lair"
+     ],
+     "aide": "Lou et la scène sont dans une salle, pas dans l’eau.",
+     "explication": "Le son se propage de proche en proche dans un milieu matériel : ici **l’air** de la salle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps le son met-il pour parcourir les 34 m jusqu’à Lou ?",
+     "reponse": 0.1,
+     "unite": "s",
+     "tolerance": 0.005,
+     "aide": "Utilise v = d / Δt, donc Δt = d / v, avec la célérité dans l’air.",
+     "explication": "Δt = d / v = 34 m / 340 m·s⁻¹ = **0,10 s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand le son passe, que font les molécules d’air entre la scène et Lou ?",
+     "options": [
+      "Elles oscillent autour de leur position d’équilibre",
+      "Elles voyagent de la scène jusqu’à l’oreille de Lou",
+      "Elles restent immobiles, seule l’énergie bouge",
+      "Elles se déplacent dans le sens opposé à la source"
+     ],
+     "reponse": 0,
+     "aide": "Le son transporte de l’énergie, pas de la matière.",
+     "explication": "Chaque molécule **oscille autour de sa position** et transmet la perturbation à sa voisine : il n’y a pas de transport de matière."
+    }
+   ]
+  },
+  {
+   "chapitre": "832cbafb-fb8a-5c07-90ff-6933a2096979",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sonar du bateau de pêche",
+   "competence": "lire-graphique",
+   "situation": "Le sonar d’un bateau de pêche émet une brève impulsion sonore vers le fond. Le capteur enregistre la tension électrique du microphone : le pic du début est l’émission, le petit pic suivant est l’écho renvoyé par le fond.",
+   "documents": [
+    {
+     "id": "sonar",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Signal du sonar",
+     "categories": [
+      "0",
+      "20",
+      "40",
+      "60",
+      "80",
+      "100",
+      "120"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        4,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Enregistrement simplifié, écrit pour l’exercice"
+    },
+    {
+     "id": "celerites",
+     "type": "tableau",
+     "titre": "Célérité du son",
+     "colonnes": [
+      "Milieu",
+      "Air à 20 °C",
+      "Eau de mer"
+     ],
+     "lignes": [
+      [
+       "Célérité (m·s⁻¹)",
+       "340",
+       "1 500"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sonar",
+     "enonce": "Touche l’instant où le sonar reçoit l’écho.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "L’écho est le second pic, plus petit que l’émission.",
+     "explication": "Le petit pic suivant l’émission arrive à **80 ms** : c’est l’écho."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée Δt de l’aller-retour du son, en secondes ?",
+     "reponse": 0.08,
+     "unite": "s",
+     "tolerance": 0.0005,
+     "aide": "Lis l’instant de l’écho en millisecondes, puis convertis en secondes.",
+     "explication": "Δt = 80 ms = **0,080 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la profondeur du fond sous le bateau ? (Le son se propage dans l’eau de mer.)",
+     "reponse": 60,
+     "unite": "m",
+     "tolerance": 0.5,
+     "aide": "Le son fait l’aller ET le retour : utilise d = v × Δt / 2.",
+     "explication": "d = v × Δt / 2 = 1 500 × 0,080 / 2 = **60 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi divise-t-on par 2 la distance v × Δt ?",
+     "options": [
+      "Le son a parcouru le trajet aller puis le trajet retour",
+      "La célérité diminue de moitié en arrivant au fond",
+      "L’écho est deux fois plus faible que le signal émis",
+      "Le micro est situé à mi-profondeur sous le bateau"
+     ],
+     "reponse": 0,
+     "aide": "Que parcourt l’onde pendant la durée Δt ?",
+     "explication": "Pendant Δt, l’onde parcourt la profondeur **deux fois** (aller et retour) : on divise donc par 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une autre fois, le fond est à 150 m. Quelle durée Δt le sonar mesurera-t-il ? (en secondes)",
+     "reponse": 0.2,
+     "unite": "s",
+     "tolerance": 0.005,
+     "aide": "Inverse la relation : Δt = 2d / v.",
+     "explication": "Δt = 2 × d / v = 2 × 150 / 1 500 = **0,20 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "832cbafb-fb8a-5c07-90ff-6933a2096979",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Localiser un claquement dans le gymnase",
+   "competence": "modeliser",
+   "situation": "Dans un gymnase, deux microphones A et B enregistrent le claquement de mains d’un élève. On veut savoir où il se trouvait grâce au retard entre les deux enregistrements. Le son se propage à 340 m·s⁻¹.",
+   "documents": [
+    {
+     "id": "sig",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Signaux reçus par les deux micros",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "Micro A",
+       "valeurs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Micro B",
+       "valeurs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "unité arbitraire",
+      "min": 0,
+      "max": 1,
+      "pas": 0.25
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Enregistrement simplifié, écrit pour l’exercice"
+    },
+    {
+     "id": "pos",
+     "type": "tableau",
+     "titre": "Positions possibles du claquement",
+     "colonnes": [
+      "Position",
+      "Distance à A (m)",
+      "Distance à B (m)"
+     ],
+     "lignes": [
+      [
+       "P1",
+       "2,00",
+       "2,85"
+      ],
+      [
+       "P2",
+       "1,50",
+       "3,20"
+      ],
+      [
+       "P3",
+       "3,00",
+       "3,90"
+      ],
+      [
+       "P4",
+       "4,10",
+       "4,95"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sig",
+     "enonce": "Touche l’instant où le claquement arrive au micro A.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le pic de la courbe du micro A.",
+     "explication": "Le pic du micro A est à **4 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le retard Δt du micro B sur le micro A ?",
+     "reponse": 5,
+     "unite": "ms",
+     "tolerance": 0.05,
+     "aide": "Soustrais les deux instants de réception.",
+     "explication": "B reçoit le pic à 9 ms et A à 4 ms : Δt = 9 − 4 = **5 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la différence de distance d(B) − d(A), en m, avec Δt = (d₂ − d₁) / v.",
+     "reponse": 1.7,
+     "unite": "m",
+     "tolerance": 0.01,
+     "aide": "Convertis Δt en secondes avant de multiplier par la célérité.",
+     "explication": "d(B) − d(A) = v × Δt = 340 × 0,005 = **1,70 m**."
+    },
+    {
+     "type": "zone",
+     "document": "pos",
+     "enonce": "Touche la position du tableau compatible avec ce retard.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Calcule d(B) − d(A) pour chaque ligne et cherche 1,70 m.",
+     "explication": "P1 : 0,85 m ; **P2 : 3,20 − 1,50 = 1,70 m** ; P3 : 0,90 m ; P4 : 0,85 m. Seule la position P2 convient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le micro B reçoit-il le claquement après le micro A ?",
+     "options": [
+      "Il est plus éloigné de la source : le son met plus de temps",
+      "Le son se propage plus vite vers le micro A que vers B",
+      "Le son est plus fort pour A, donc il arrive plus tôt",
+      "Le micro B enregistre avec un délai de fonctionnement"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la durée de propagation d = v × Δt.",
+     "explication": "La célérité est la même dans tout le gymnase : le micro **le plus éloigné** reçoit le son plus tard."
+    }
+   ]
+  },
+  {
+   "chapitre": "5cc746c4-a49e-5347-b16a-7c67b478b260",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le haut-parleur de test de Chloé",
+   "competence": "lire-graphique",
+   "situation": "En cours de physique, Chloé relie un générateur de basses fréquences à un haut-parleur. Un capteur affiche la tension du signal au cours du temps. Elle veut trouver la période, puis la fréquence du son émis.",
+   "documents": [
+    {
+     "id": "osc",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Signal du générateur",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4",
+      "4,5",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        0.71,
+        1,
+        0.71,
+        0,
+        -0.71,
+        -1,
+        -0.71,
+        0,
+        0.71,
+        1
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": -1,
+      "max": 1,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Signal simulé"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "osc",
+     "enonce": "Touche les deux instants où la tension est maximale.",
+     "reponse": [
+      "k2",
+      "k10"
+     ],
+     "aide": "Cherche les deux sommets de la courbe.",
+     "explication": "La tension est maximale à **1 ms** et à **5 ms**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période T du signal ? (durée entre deux sommets consécutifs)",
+     "reponse": 4,
+     "unite": "ms",
+     "tolerance": 0.05,
+     "aide": "Soustrais les instants des deux sommets.",
+     "explication": "T = 5 − 1 = **4,0 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence du son ? (Convertis T en secondes.)",
+     "reponse": 250,
+     "unite": "Hz",
+     "tolerance": 0.5,
+     "aide": "Utilise f = 1 / T avec T en secondes.",
+     "explication": "f = 1 / T = 1 / 0,0040 s = **250 Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le son de 250 Hz est-il audible par une personne en bonne santé ?",
+     "options": [
+      "Oui, car 250 Hz est compris entre 20 Hz et 20 000 Hz",
+      "Non, car c’est un infrason, trop grave pour l’oreille",
+      "Non, car c’est un ultrason, trop aigu pour l’oreille",
+      "Oui, car 250 Hz est supérieur à 20 000 Hz"
+     ],
+     "reponse": 0,
+     "aide": "Compare à la plage de fréquences audibles de l’oreille humaine.",
+     "explication": "L’oreille humaine perçoit de 20 Hz à 20 000 Hz : un son de 250 Hz est **audible** (un son plutôt grave)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5cc746c4-a49e-5347-b16a-7c67b478b260",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Bruits de la ville et du concert",
+   "competence": "analyser-document",
+   "situation": "Le délégué d’une classe prépare un exposé sur le bruit. Il regroupe les niveaux sonores de cinq situations et le texte d’un panneau d’information collé à l’entrée d’une salle de concert.",
+   "documents": [
+    {
+     "id": "niv",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Niveaux sonores typiques",
+     "categories": [
+      "Chuchotement",
+      "Conversation",
+      "Rue passante",
+      "Concert",
+      "Décollage d’un avion"
+     ],
+     "series": [
+      {
+       "nom": "Niveau",
+       "valeurs": [
+        30,
+        60,
+        80,
+        100,
+        120
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Niveau sonore",
+      "unite": "dB",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Protégeons nos oreilles",
+     "emoji": "🎧",
+     "lignes": [
+      {
+       "texte": "Dès 85 dB : bouchons ou casque conseillés"
+      },
+      {
+       "texte": "Au-delà de 100 dB : pauses régulières"
+      }
+     ],
+     "pied": "Texte écrit pour l’exercice",
+     "teinte": "jaune"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "niv",
+     "enonce": "Touche la situation dont le niveau est proche du seuil de douleur.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Le seuil de douleur est proche de 120 dB.",
+     "explication": "Le seuil de douleur se situe vers **120 dB** : c’est le décollage d’un avion."
+    },
+    {
+     "type": "zone",
+     "document": "niv",
+     "enonce": "Selon le panneau, pour quelles situations les bouchons sont-ils conseillés ? Touche-les.",
+     "reponse": [
+      "k3",
+      "k4"
+     ],
+     "aide": "Cherche les barres qui dépassent 85 dB.",
+     "explication": "Dès 85 dB : le **concert** (100 dB) et le **décollage** (120 dB). La rue passante (80 dB) est juste en dessous.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de fois l’intensité sonore est-elle plus grande dans la rue (80 dB) que dans la conversation (60 dB) ?",
+     "reponse": 100,
+     "tolerance": 0.5,
+     "aide": "Chaque tranche de 10 dB multiplie l’intensité par 10.",
+     "explication": "+ 20 dB = deux fois + 10 dB : l’intensité est multipliée par 10 × 10 = **100**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Deux enceintes identiques à 100 dB chacune jouent côte à côte. Quel niveau sonore reçoit-on ?",
+     "reponse": 103,
+     "unite": "dB",
+     "tolerance": 0.5,
+     "aide": "Les décibels ne s’additionnent pas comme des nombres ordinaires : deux sources identiques ajoutent 3 dB.",
+     "explication": "Deux sources identiques côte à côte ajoutent **3 dB** : 100 + 3 = **103 dB**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après un concert très fort, Léo a des acouphènes. Que peut-on dire des cellules ciliées abîmées ?",
+     "options": [
+      "Elles sont détruites définitivement et ne se régénèrent pas",
+      "Elles se régénèrent complètement après une nuit de repos",
+      "Elles se régénèrent en quelques semaines si on se repose",
+      "Elles ne sont jamais touchées par un niveau sonore élevé"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que l’on sait des dégâts d’une exposition excessive.",
+     "explication": "Les cellules ciliées de l’oreille interne détruites **ne se régénèrent pas** : acouphènes et perte d’audition sont irréversibles."
+    }
+   ]
+  },
+  {
+   "chapitre": "5cc746c4-a49e-5347-b16a-7c67b478b260",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux instruments sur la même note",
+   "competence": "analyser-document",
+   "situation": "Maïa joue un La à la guitare, puis Noé joue le même La à la flûte. Elle reconnaît pourtant tout de suite quel instrument joue. Un logiciel donne le spectre de chaque son : fréquences présentes et amplitudes relatives.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Spectres des deux sons",
+     "categories": [
+      "220 Hz",
+      "440 Hz",
+      "660 Hz",
+      "880 Hz",
+      "1 100 Hz"
+     ],
+     "series": [
+      {
+       "nom": "Guitare",
+       "valeurs": [
+        1,
+        0.7,
+        0.5,
+        0.3,
+        0.15
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Flûte",
+       "valeurs": [
+        1,
+        0.15,
+        0.05,
+        0,
+        0
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Amplitude relative",
+      "unite": "",
+      "min": 0,
+      "max": 1,
+      "pas": 0.25
+     },
+     "axeX": {
+      "titre": "Fréquence"
+     },
+     "valeurs": false,
+     "source": "Spectres simplifiés, écrits pour l’exercice"
+    },
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Fréquences de quatre notes La",
+     "colonnes": [
+      "Note",
+      "La1",
+      "La2",
+      "La3",
+      "La4"
+     ],
+     "lignes": [
+      [
+       "Fréquence (Hz)",
+       "110",
+       "220",
+       "440",
+       "880"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche la fréquence du son fondamental, la plus basse de chaque spectre.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Le fondamental est la plus petite fréquence présente.",
+     "explication": "Le fondamental est la plus basse fréquence présente : **220 Hz**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période du son fondamental ? Donne-la en ms, arrondie à 0,1 ms.",
+     "reponse": 4.5,
+     "unite": "ms",
+     "tolerance": 0.05,
+     "aide": "Utilise T = 1 / f et convertis les secondes en millisecondes.",
+     "explication": "T = 1 / f = 1 / 220 ≈ 0,0045 s, soit **4,5 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les harmoniques sont des multiples du fondamental. Quelle est la fréquence de l’harmonique de rang 6 ?",
+     "reponse": 1320,
+     "unite": "Hz",
+     "tolerance": 0.5,
+     "aide": "Multiplie la fréquence du fondamental par le rang.",
+     "explication": "6 × 220 = **1 320 Hz**."
+    },
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Quelle note du tableau correspond à l’harmonique de rang 4 du La2 ? Touche-la.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Calcule 4 × 220 Hz, puis cherche dans le tableau.",
+     "explication": "4 × 220 = 880 Hz : c’est la note **La4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui permet à Maïa de reconnaître la guitare et la flûte sur la même note ?",
+     "options": [
+      "Le timbre, lié aux harmoniques présents dans le signal",
+      "La hauteur, car les deux notes n’ont pas la même fréquence",
+      "L’intensité, car la guitare joue toujours plus fort",
+      "La période, qui n’est pas la même pour les deux sons"
+     ],
+     "reponse": 0,
+     "aide": "Les deux instruments ont le même fondamental : qu’est-ce qui diffère ?",
+     "explication": "Même fondamental donc même **hauteur** ; mais les harmoniques diffèrent : c’est le **timbre** qui permet de distinguer les instruments."
+    }
+   ]
+  },
+  {
+   "chapitre": "18184ff1-a5ec-54f4-852e-eeb91f921bba",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le circuit de la lampe de chevet",
+   "competence": "lire-tableau",
+   "situation": "Sacha monte un circuit avec une pile, deux lampes et un ampèremètre, tous sur une seule boucle. Elle relève les mesures dans un tableau.",
+   "documents": [
+    {
+     "id": "circ",
+     "type": "circuit",
+     "titre": "Circuit de Sacha",
+     "branches": [
+      {
+       "de": [
+        0,
+        4
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "nom": "Pile",
+       "id": "pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "l1"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        4
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "allume": true,
+       "id": "l2"
+      },
+      {
+       "de": [
+        8,
+        4
+       ],
+       "a": [
+        4,
+        4
+       ]
+      },
+      {
+       "de": [
+        4,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ],
+       "composant": "amperemetre",
+       "nom": "A",
+       "id": "amp"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Relevés de Sacha",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Intensité lue sur l’ampèremètre",
+       "0,25 A"
+      ],
+      [
+       "Tension aux bornes de la pile",
+       "6,0 V"
+      ],
+      [
+       "Tension aux bornes de L1",
+       "2,5 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circ",
+     "enonce": "Touche l’appareil qui mesure l’intensité du courant.",
+     "reponse": [
+      "amp"
+     ],
+     "aide": "L’intensité se mesure avec un ampèremètre, noté A.",
+     "explication": "L’intensité se mesure avec un **ampèremètre**, monté en série dans la boucle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant qui traverse la lampe L2 ?",
+     "reponse": 0.25,
+     "unite": "A",
+     "tolerance": 0.005,
+     "aide": "Dans un circuit en série, comment varie l’intensité ?",
+     "explication": "Dans un circuit en série, l’intensité est la **même partout** : 0,25 A, comme sur l’ampèremètre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la tension aux bornes de la lampe L2 ?",
+     "reponse": 3.5,
+     "unite": "V",
+     "tolerance": 0.05,
+     "aide": "Loi des mailles en série : la tension de la pile est la somme des tensions aux bornes des récepteurs.",
+     "explication": "6,0 = U(L1) + U(L2), donc U(L2) = 6,0 − 2,5 = **3,5 V**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment faut-il brancher un voltmètre pour mesurer la tension aux bornes de L1 ?",
+     "options": [
+      "En dérivation, aux deux bornes de la lampe L1",
+      "En série, juste avant la lampe L1 dans la boucle",
+      "En série avec la pile, à côté de l’ampèremètre",
+      "En dérivation aux bornes de l’ampèremètre"
+     ],
+     "reponse": 0,
+     "aide": "Une tension se mesure aux bornes d’un dipôle.",
+     "explication": "Le voltmètre se branche **en dérivation**, aux bornes du dipôle dont on veut la tension."
+    }
+   ]
+  },
+  {
+   "chapitre": "18184ff1-a5ec-54f4-852e-eeb91f921bba",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le phare de vélo à deux lampes",
+   "competence": "raisonner",
+   "situation": "Théo équipe son vélo d’un phare : deux lampes L1 et L2 sont montées en dérivation sur une même pile. Il place deux ampèremètres pour étudier le courant.",
+   "documents": [
+    {
+     "id": "phare",
+     "type": "circuit",
+     "titre": "Le circuit du phare",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "nom": "Pile"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        3,
+        0
+       ],
+       "composant": "amperemetre",
+       "nom": "A",
+       "id": "aGen"
+      },
+      {
+       "de": [
+        3,
+        0
+       ],
+       "a": [
+        7,
+        0
+       ]
+      },
+      {
+       "de": [
+        3,
+        0
+       ],
+       "a": [
+        3,
+        3
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "l1"
+      },
+      {
+       "de": [
+        3,
+        3
+       ],
+       "a": [
+        3,
+        6
+       ],
+       "composant": "amperemetre",
+       "nom": "A1",
+       "id": "a1"
+      },
+      {
+       "de": [
+        7,
+        0
+       ],
+       "a": [
+        7,
+        6
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "allume": true,
+       "id": "l2"
+      },
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        3,
+        6
+       ]
+      },
+      {
+       "de": [
+        3,
+        6
+       ],
+       "a": [
+        7,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Mesures de Théo",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Ampèremètre A (courant de la pile)",
+       "0,80 A"
+      ],
+      [
+       "Ampèremètre A1 (courant dans L1)",
+       "0,30 A"
+      ],
+      [
+       "Tension aux bornes de L1",
+       "4,5 V"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phare",
+     "enonce": "Touche l’ampèremètre qui mesure le courant débité par la pile.",
+     "reponse": [
+      "aGen"
+     ],
+     "aide": "Le courant débité par la pile est le courant total, avant qu’il se partage entre les branches.",
+     "explication": "L’ampèremètre **A**, placé entre la pile et le nœud, est traversé par tout le courant débité par la pile."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant qui traverse la lampe L2 ?",
+     "reponse": 0.5,
+     "unite": "A",
+     "tolerance": 0.005,
+     "aide": "Loi des nœuds : l’intensité qui arrive est égale à celle qui repart.",
+     "explication": "Au nœud : 0,80 = I(L1) + I(L2), donc I(L2) = 0,80 − 0,30 = **0,50 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la tension aux bornes de la lampe L2 ?",
+     "reponse": 4.5,
+     "unite": "V",
+     "tolerance": 0.05,
+     "aide": "Deux branches placées entre les deux mêmes nœuds ont la même tension.",
+     "explication": "Les lampes sont en dérivation : elles ont la **même tension**, soit 4,5 V."
+    },
+    {
+     "type": "choix",
+     "enonce": "Théo dévisse la lampe L1. Que se passe-t-il pour la lampe L2 ?",
+     "options": [
+      "Elle reste allumée, avec la même tension à ses bornes",
+      "Elle s’éteint aussi, car le circuit est coupé",
+      "Elle brille moins, car la tension se partage",
+      "Elle brille plus, car la tension est doublée"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’éclairage d’une maison, où les lampes sont indépendantes.",
+     "explication": "En dérivation, retirer une lampe ne modifie pas la tension de l’autre : L2 **reste allumée** de la même façon."
+    }
+   ]
+  },
+  {
+   "chapitre": "18184ff1-a5ec-54f4-852e-eeb91f921bba",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un circuit mixte pour la guirlande",
+   "competence": "raisonner",
+   "situation": "Une guirlande comporte une lampe L1 en série avec un groupe formé de la lampe L2 et d’un résistor R montés en dérivation. Les cases « ? » du tableau sont à trouver avec la loi des nœuds et la loi des mailles.",
+   "documents": [
+    {
+     "id": "mixte",
+     "type": "circuit",
+     "titre": "Schéma de la guirlande",
+     "branches": [
+      {
+       "de": [
+        0,
+        6
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "pile",
+       "nom": "G"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        6,
+        0
+       ],
+       "composant": "lampe",
+       "nom": "L1",
+       "allume": true,
+       "id": "l1"
+      },
+      {
+       "de": [
+        6,
+        0
+       ],
+       "a": [
+        10,
+        0
+       ]
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        10,
+        6
+       ],
+       "composant": "lampe",
+       "nom": "L2",
+       "allume": true,
+       "id": "l2"
+      },
+      {
+       "de": [
+        10,
+        0
+       ],
+       "a": [
+        14,
+        0
+       ]
+      },
+      {
+       "de": [
+        14,
+        0
+       ],
+       "a": [
+        14,
+        6
+       ],
+       "composant": "resistance",
+       "nom": "R",
+       "id": "r"
+      },
+      {
+       "de": [
+        14,
+        6
+       ],
+       "a": [
+        10,
+        6
+       ]
+      },
+      {
+       "de": [
+        10,
+        6
+       ],
+       "a": [
+        0,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Relevés",
+     "colonnes": [
+      "Dipôle",
+      "Tension U (V)",
+      "Intensité I (A)"
+     ],
+     "lignes": [
+      [
+       "Générateur",
+       "12,0",
+       "0,60"
+      ],
+      [
+       "L1",
+       "5,0",
+       "?"
+      ],
+      [
+       "L2",
+       "?",
+       "0,35"
+      ],
+      [
+       "R",
+       "?",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant qui traverse L1 ? (L1 est en série avec le générateur.)",
+     "reponse": 0.6,
+     "unite": "A",
+     "tolerance": 0.005,
+     "aide": "Quel dipôle voit passer tout le courant du générateur ?",
+     "explication": "L1 est en série avec le générateur : tout le courant le traverse, soit **0,60 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la tension aux bornes du groupe formé de L2 et de R ?",
+     "reponse": 7,
+     "unite": "V",
+     "tolerance": 0.05,
+     "aide": "Maille : la tension du générateur est la somme des tensions de L1 et du groupe en dérivation.",
+     "explication": "12,0 = 5,0 + U(groupe), donc U(groupe) = **7,0 V**."
+    },
+    {
+     "type": "zone",
+     "document": "mixte",
+     "enonce": "Touche les deux dipôles qui ont la même tension à leurs bornes.",
+     "reponse": [
+      "l2",
+      "r"
+     ],
+     "aide": "Cherche les dipôles montés en dérivation entre les mêmes nœuds.",
+     "explication": "L2 et R sont en dérivation : ils ont la même tension, **7,0 V**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant dans le résistor R ?",
+     "reponse": 0.25,
+     "unite": "A",
+     "tolerance": 0.005,
+     "aide": "Loi des nœuds : le courant total se partage entre L2 et R.",
+     "explication": "0,60 = 0,35 + I(R), donc I(R) = **0,25 A**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle loi permet de calculer la tension 7,0 V du groupe en dérivation ?",
+     "options": [
+      "La loi des mailles, qui relie les tensions d’une maille",
+      "La loi des nœuds, qui relie les intensités d’un nœud",
+      "La loi d’Ohm, appliquée directement au générateur",
+      "La loi de la réflexion, appliquée aux fils du circuit"
+     ],
+     "reponse": 0,
+     "aide": "Dans cette question, tu additionnes des tensions.",
+     "explication": "On additionne des **tensions** le long d’une maille : c’est la loi des mailles. La loi des nœuds, elle, sert pour les intensités."
+    }
+   ]
+  },
+  {
+   "chapitre": "bf193743-4add-5715-9623-983d7003215b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le résistor récupéré dans une vieille radio",
+   "competence": "lire-graphique",
+   "situation": "Zoé a récupéré un composant dans une vieille radio. Pour connaître sa résistance, elle le branche sur une alimentation réglable et relève la tension à ses bornes pour plusieurs intensités du courant.",
+   "documents": [
+    {
+     "id": "car",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension aux bornes du composant",
+     "categories": [
+      "0 mA",
+      "10 mA",
+      "20 mA",
+      "30 mA",
+      "40 mA"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        1.5,
+        3,
+        4.5,
+        6
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": 0,
+      "max": 7,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Intensité du courant"
+     },
+     "valeurs": false,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "car",
+     "enonce": "Touche l’intensité pour laquelle la tension aux bornes du composant vaut 4,5 V.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Repère 4,5 V sur l’axe vertical, puis lis l’intensité sous le point.",
+     "explication": "À **30 mA**, la courbe indique 4,5 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la résistance du composant avec le point à 40 mA : R = U / I (convertis l’intensité en ampères).",
+     "reponse": 150,
+     "unite": "Ω",
+     "tolerance": 0.5,
+     "aide": "Utilise U = R × I avec I en ampères : 40 mA = 0,040 A.",
+     "explication": "U = R × I donc R = U / I = 6,0 / 0,040 = **150 Ω**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle tension aux bornes du composant pour un courant de 25 mA ?",
+     "reponse": 3.75,
+     "unite": "V",
+     "tolerance": 0.05,
+     "aide": "Pour un conducteur ohmique, U est proportionnelle à I. Ou utilise U = R × I avec R = 150 Ω.",
+     "explication": "U = R × I = 150 × 0,025 = **3,75 V**, valeur entre 3,0 V (20 mA) et 4,5 V (30 mA)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété de la courbe montre que le composant est un conducteur ohmique ?",
+     "options": [
+      "C’est une droite qui passe par l’origine du repère",
+      "C’est une courbe qui monte de plus en plus vite",
+      "C’est une droite qui coupe l’axe des tensions à 1 V",
+      "C’est une courbe qui se stabilise à partir de 30 mA"
+     ],
+     "reponse": 0,
+     "aide": "La tension et l’intensité sont proportionnelles.",
+     "explication": "Une droite passant par l’origine traduit la **proportionnalité** de U et de I : c’est la caractéristique d’un conducteur ohmique."
+    }
+   ]
+  },
+  {
+   "chapitre": "bf193743-4add-5715-9623-983d7003215b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un résistor et une ampoule de lampe de poche",
+   "competence": "experimenter",
+   "situation": "En TP, Karim trace la caractéristique de deux dipôles : un résistor (courbe bleue) et l’ampoule d’une lampe de poche (courbe violette). Il relève la tension à leurs bornes pour des intensités de 0 à 50 mA.",
+   "documents": [
+    {
+     "id": "carac",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension en fonction de l’intensité",
+     "categories": [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40",
+      "50"
+     ],
+     "series": [
+      {
+       "nom": "Résistor",
+       "valeurs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Ampoule",
+       "valeurs": [
+        0,
+        0.7,
+        2,
+        3.6,
+        5.6,
+        8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "V",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Intensité (mA)"
+     },
+     "valeurs": false,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Lequel de ces deux dipôles est un conducteur ohmique ?",
+     "options": [
+      "Le résistor, dont la caractéristique est une droite",
+      "L’ampoule, dont la caractéristique est une courbe",
+      "Les deux, car les deux courbes montent",
+      "Aucun, car les deux passent par l’origine"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’allure de chaque courbe.",
+     "explication": "Seul le **résistor** a une droite passant par l’origine : U = R × I. L’ampoule n’est pas ohmique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la résistance du résistor ? (Utilise le point à 50 mA : 5 V.)",
+     "reponse": 100,
+     "unite": "Ω",
+     "tolerance": 0.5,
+     "aide": "R = U / I avec I en ampères.",
+     "explication": "R = 5,0 / 0,050 = **100 Ω** (et à 20 mA : 2,0 / 0,020 = 100 Ω aussi)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la résistance de l’ampoule à 50 mA ?",
+     "reponse": 160,
+     "unite": "Ω",
+     "tolerance": 0.5,
+     "aide": "Lis la tension de l’ampoule à 50 mA, puis divise par l’intensité en ampères.",
+     "explication": "U = 8,0 V pour I = 0,050 A : R = 8,0 / 0,050 = **160 Ω**."
+    },
+    {
+     "type": "zone",
+     "document": "carac",
+     "enonce": "À part l’origine, touche l’intensité pour laquelle les deux dipôles ont la même tension (donc la même résistance).",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche où les deux courbes se croisent.",
+     "explication": "À **20 mA**, les deux courbes passent par 2,0 V : même tension, même résistance (100 Ω)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la résistance de l’ampoule augmente-t-elle quand l’intensité augmente ?",
+     "options": [
+      "Le filament s’échauffe et sa résistance augmente",
+      "Le filament s’use et sa résistance diminue",
+      "La pile se décharge et sa tension diminue",
+      "Le résistor chauffe moins que l’ampoule"
+     ],
+     "reponse": 0,
+     "aide": "Que devient un filament parcouru par un courant ?",
+     "explication": "Le courant échauffe le filament (effet Joule) et sa **résistance augmente avec la température** : l’ampoule n’est pas ohmique."
+    }
+   ]
+  },
+  {
+   "chapitre": "bf193743-4add-5715-9623-983d7003215b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La bouilloire du matin",
+   "competence": "modeliser",
+   "situation": "Avant de partir au lycée, Camille fait chauffer l’eau du thé dans une bouilloire. La plaque signalétique donne ses caractéristiques. Elle se demande quelle intensité traverse la bouilloire et ce que coûte l’électricité consommée.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Bouilloire 1,7 L",
+     "sousTitre": "Plaque signalétique",
+     "emoji": "☕",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "230 V ~ 50 Hz"
+      },
+      {
+       "texte": "Puissance",
+       "valeur": "2 000 W"
+      },
+      {
+       "texte": "Capacité",
+       "valeur": "1,7 L"
+      }
+     ],
+     "pied": "Texte écrit pour l’exercice",
+     "teinte": "bleu"
+    },
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Utilisation quotidienne de quatre appareils",
+     "colonnes": [
+      "Appareil",
+      "Puissance (W)",
+      "Durée par jour (h)"
+     ],
+     "lignes": [
+      [
+       "Bouilloire",
+       "2 000",
+       "0,25"
+      ],
+      [
+       "Radiateur",
+       "1 000",
+       "3"
+      ],
+      [
+       "Chargeur de téléphone",
+       "10",
+       "8"
+      ],
+      [
+       "Lave-linge",
+       "2 200",
+       "1,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant dans la bouilloire ? (P = U × I ; arrondis à 0,1 A.)",
+     "reponse": 8.7,
+     "unite": "A",
+     "tolerance": 0.05,
+     "aide": "Isole I : I = P / U.",
+     "explication": "I = P / U = 2 000 / 230 ≈ **8,7 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la résistance de la bouilloire ? (U = R × I ; arrondis à l’unité.)",
+     "reponse": 26,
+     "unite": "Ω",
+     "tolerance": 0.5,
+     "aide": "Isole R : R = U / I, avec l’intensité calculée juste avant.",
+     "explication": "R = U / I = 230 / 8,7 ≈ 26,4, soit **26 Ω**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La bouilloire fonctionne 3 minutes. Quelle énergie consomme-t-elle en kWh ? (E = P × Δt, avec P en kW et Δt en h.)",
+     "reponse": 0.1,
+     "unite": "kWh",
+     "tolerance": 0.005,
+     "aide": "P = 2 kW ; 3 minutes = 0,05 h.",
+     "explication": "E = P × Δt = 2 kW × 0,05 h = **0,10 kWh**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’électricité coûte 0,25 € le kWh (prix écrit pour l’exercice). Combien coûtent ces 3 minutes de chauffe, en centimes ?",
+     "reponse": 2.5,
+     "unite": "centimes",
+     "tolerance": 0.05,
+     "aide": "Multiplie l’énergie en kWh par le prix du kWh, puis convertis en centimes.",
+     "explication": "0,10 kWh × 0,25 €/kWh = 0,025 € = **2,5 centimes**."
+    },
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche l’appareil qui consomme le plus d’énergie par jour (E = P × Δt).",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Calcule P × durée pour chaque ligne et compare.",
+     "explication": "Bouilloire 0,5 kWh ; radiateur 3,0 kWh ; chargeur 0,08 kWh ; **lave-linge 2,2 × 1,5 = 3,3 kWh**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a1924c3-a54f-5202-b576-c0977f2c92bf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du Soleil à la Lune, vus depuis la Terre",
+   "competence": "observer-schema",
+   "situation": "Une nuit de pleine Lune, Inès regarde le ciel. Le schéma montre le trajet de la lumière du Soleil jusqu’à la Terre, directement ou après avoir touché la Lune. Elle veut savoir combien de temps cette lumière voyage.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Trajets de la lumière",
+     "largeur": 340,
+     "hauteur": 254,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 110,
+       "r": 34,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "soleil",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 55,
+       "y": 160,
+       "texte": "Soleil",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 150,
+       "r": 14,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 182,
+       "texte": "Terre (observatrice)",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "cercle",
+       "cx": 285,
+       "cy": 52,
+       "r": 11,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "lune",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 285,
+       "y": 34,
+       "texte": "Lune",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        100
+       ],
+       "a": [
+        268,
+        56
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "ambre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        92,
+        118
+       ],
+       "a": [
+        204,
+        145
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "ambre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        64
+       ],
+       "a": [
+        232,
+        140
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "ambre",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 212,
+       "texte": "Distance Terre–Soleil : 1,5 × 10¹¹ m",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 226,
+       "texte": "Distance Terre–Lune : 3,84 × 10⁸ m",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 165,
+       "y": 242,
+       "texte": "Schéma hors échelle",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice ; c = 3,00 × 10⁸ m·s⁻¹"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche l’astre que l’observatrice ne voit que parce qu’il renvoie la lumière reçue.",
+     "reponse": [
+      "lune"
+     ],
+     "aide": "Cet astre ne produit pas sa propre lumière.",
+     "explication": "La **Lune** est un objet diffusant : elle renvoie la lumière du Soleil, elle n’en produit pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Source primaire ou objet diffusant ? Classe chaque objet.",
+     "categories": [
+      "Source primaire",
+      "Objet diffusant"
+     ],
+     "items": [
+      [
+       "Le Soleil",
+       0
+      ],
+      [
+       "Une lampe de bureau allumée",
+       0
+      ],
+      [
+       "Un écran de téléphone allumé",
+       0
+      ],
+      [
+       "La Lune",
+       1
+      ],
+      [
+       "Une page de cahier",
+       1
+      ],
+      [
+       "Le mur de la classe",
+       1
+      ]
+     ],
+     "aide": "Une source primaire produit sa lumière ; un objet diffusant renvoie celle qu’il reçoit.",
+     "explication": "Soleil, lampe et écran **produisent** leur lumière ; la Lune, la page et le mur la **renvoient** dans toutes les directions."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps la lumière du Soleil met-elle pour atteindre la Terre ? (t = d / c ; donne la durée en minutes, arrondie à 0,1 min.)",
+     "reponse": 8.3,
+     "unite": "min",
+     "tolerance": 0.05,
+     "aide": "Calcule d’abord t en secondes, puis divise par 60.",
+     "explication": "t = 1,5 × 10¹¹ / 3,00 × 10⁸ = 500 s, soit **8,3 min** (environ 8 minutes)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps la lumière met-elle pour aller de la Lune à la Terre ? (arrondis à 0,1 s)",
+     "reponse": 1.3,
+     "unite": "s",
+     "tolerance": 0.05,
+     "aide": "Même relation avec la distance Terre–Lune.",
+     "explication": "t = 3,84 × 10⁸ / 3,00 × 10⁸ = 1,28 s, soit environ **1,3 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a1924c3-a54f-5202-b576-c0977f2c92bf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux lampes, deux spectres",
+   "competence": "analyser-document",
+   "situation": "En TP, Nolan observe avec un spectroscope deux lampes. Pour la lampe 1, il voit quelques raies lumineuses isolées ; pour la lampe 2, une bande colorée continue. Le schéma reporte ses observations avec la longueur d’onde de chaque raie.",
+   "documents": [
+    {
+     "id": "spec",
+     "type": "schema",
+     "titre": "Spectres observés",
+     "largeur": 340,
+     "hauteur": 258,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 14,
+       "texte": "Lampe 1 : gaz à basse pression chaud",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 42,
+       "l": 300,
+       "h": 46,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "rect",
+       "x": 51,
+       "y": 42,
+       "l": 4,
+       "h": 46,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "r405",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 53,
+       "y": 100,
+       "texte": "405",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 69.6,
+       "y": 42,
+       "l": 4,
+       "h": 46,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "r436",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 71.6,
+       "y": 112,
+       "texte": "436",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 135.6,
+       "y": 42,
+       "l": 4,
+       "h": 46,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "r546",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 137.6,
+       "y": 100,
+       "texte": "546",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 154.79999999999998,
+       "y": 42,
+       "l": 4,
+       "h": 46,
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "r578",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 156.79999999999998,
+       "y": 112,
+       "texte": "578",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 134,
+       "texte": "Lampe 2 : filament chaud",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 144,
+       "l": 24,
+       "h": 36,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 74,
+       "y": 144,
+       "l": 30,
+       "h": 36,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 144,
+       "l": 42,
+       "h": 36,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 146,
+       "y": 144,
+       "l": 24,
+       "h": 36,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 144,
+       "l": 24,
+       "h": 36,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 194,
+       "y": 144,
+       "l": 96,
+       "h": 36,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        196
+       ],
+       "a": [
+        320,
+        196
+       ],
+       "epaisseur": 1
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        192
+       ],
+       "a": [
+        50,
+        200
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 212,
+       "texte": "400",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        192
+       ],
+       "a": [
+        110,
+        200
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 212,
+       "texte": "500",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        192
+       ],
+       "a": [
+        170,
+        200
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 212,
+       "texte": "600",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        192
+       ],
+       "a": [
+        230,
+        200
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 212,
+       "texte": "700",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        290,
+        192
+       ],
+       "a": [
+        290,
+        200
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 212,
+       "texte": "800",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 226,
+       "texte": "λ (nm)",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 232,
+       "l": 30,
+       "h": 14,
+       "teinte": "violet",
+       "motif": "hachures",
+       "id": "uv",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 35,
+       "y": 243,
+       "texte": "UV",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 232,
+       "l": 240,
+       "h": 14,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "vis",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 243,
+       "texte": "visible",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 290,
+       "y": 232,
+       "l": 30,
+       "h": 14,
+       "teinte": "corail",
+       "motif": "hachures",
+       "id": "ir",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 305,
+       "y": 243,
+       "texte": "IR",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma simplifié ; longueurs d’onde arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spec",
+     "enonce": "Touche la raie de la lampe 1 qui a la plus petite longueur d’onde.",
+     "reponse": [
+      "r405"
+     ],
+     "aide": "Lis les valeurs écrites sous chaque raie.",
+     "explication": "La plus petite longueur d’onde est **405 nm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de nm la longueur d’onde de la raie la plus à droite dépasse-t-elle celle de la raie la plus à gauche ?",
+     "reponse": 173,
+     "unite": "nm",
+     "tolerance": 0.5,
+     "aide": "Soustrais la plus petite des deux valeurs lues à la plus grande.",
+     "explication": "578 − 405 = **173 nm**."
+    },
+    {
+     "type": "zone",
+     "document": "spec",
+     "enonce": "Touche le domaine des radiations de longueur d’onde supérieure à 800 nm.",
+     "reponse": [
+      "ir"
+     ],
+     "aide": "Regarde l’axe en nm : au-delà de 800, de quel côté du visible es-tu ?",
+     "explication": "Au-delà de 800 nm, on est dans les **infrarouges**, invisibles à l’œil."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle source est la plus probable pour la lampe 2 ?",
+     "options": [
+      "Un solide chaud, comme un filament d’ampoule",
+      "Un gaz chaud à basse pression, comme la lampe 1",
+      "Un laser qui émet une seule radiation",
+      "Un objet diffusant qui n’émet aucune lumière"
+     ],
+     "reponse": 0,
+     "aide": "Un spectre continu et un spectre de raies n’ont pas la même origine.",
+     "explication": "Un solide chaud émet un **spectre continu**, dont l’aspect dépend de sa température ; un gaz chaud à basse pression donne des raies."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi servent les raies de la lampe 1 ?",
+     "options": [
+      "À identifier l’élément chimique qui a émis la lumière",
+      "À mesurer la température du filament de la lampe",
+      "À connaître la distance entre la lampe et l’œil",
+      "À savoir si la lumière traverse un milieu transparent"
+     ],
+     "reponse": 0,
+     "aide": "Chaque élément a ses propres raies.",
+     "explication": "Les raies d’émission sont propres à chaque élément : c’est ainsi qu’on **identifie la composition** d’une source, même une étoile."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a1924c3-a54f-5202-b576-c0977f2c92bf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La chambre noire de la cour du lycée",
+   "competence": "modeliser",
+   "situation": "Pour une fête de la science, des élèves fabriquent une chambre noire : une grande boîte percée d’un petit trou, avec un écran à 0,20 m derrière le trou. Ils photographient l’image d’un arbre de 12 m de haut depuis plusieurs distances.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "La chambre noire",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        40,
+        40
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "brun"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 128,
+       "texte": "Arbre",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 28,
+       "texte": "sommet",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        20
+       ],
+       "a": [
+        150,
+        100
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        120
+       ],
+       "a": [
+        150,
+        200
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 215,
+       "texte": "trou",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 30,
+       "l": 8,
+       "h": 170,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 215,
+       "texte": "écran",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        40
+       ],
+       "a": [
+        250,
+        173.63636363636363
+       ],
+       "teinte": "violet",
+       "epaisseur": 2,
+       "id": "rayB",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        250,
+        110
+       ],
+       "teinte": "violet",
+       "epaisseur": 2,
+       "id": "rayA",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        110
+       ],
+       "a": [
+        250,
+        173.63636363636363
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "ambre"
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 150,
+       "texte": "image",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 238,
+       "texte": "Schéma hors échelle : arbre de 12 m, écran à 0,20 m du trou",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Hauteur de l’image selon la distance",
+     "colonnes": [
+      "Mesure",
+      "Essai 1",
+      "Essai 2",
+      "Essai 3",
+      "Essai 4"
+     ],
+     "lignes": [
+      [
+       "Distance arbre–trou (m)",
+       "30",
+       "20",
+       "10",
+       "40"
+      ],
+      [
+       "Hauteur de l’image (cm)",
+       "8,0",
+       "?",
+       "24",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche le rayon de lumière qui part du sommet de l’arbre et passe par le trou.",
+     "reponse": [
+      "rayB"
+     ],
+     "aide": "La lumière se propage en ligne droite : ce rayon descend vers l’écran.",
+     "explication": "Le rayon issu du **sommet** traverse le trou en ligne droite et arrive plus bas sur l’écran : l’image est renversée."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’image de l’arbre sur l’écran est :",
+     "options": [
+      "Renversée, car les rayons se croisent au trou",
+      "Droite, car la lumière va tout droit",
+      "Renversée, car l’écran est plus bas que l’arbre",
+      "Droite, car le trou est plus grand que l’arbre"
+     ],
+     "reponse": 0,
+     "aide": "Suis les deux rayons, celui du sommet et celui de la base, jusqu’à l’écran.",
+     "explication": "Les rayons se croisent au trou (propagation rectiligne) : le haut de l’arbre donne le bas de l’image. L’image est **renversée**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans les essais 1 et 3, calcule le produit (hauteur de l’image) × (distance arbre–trou). Quelle valeur constante obtiens-tu (en cm·m) ?",
+     "reponse": 240,
+     "unite": "cm·m",
+     "tolerance": 0.5,
+     "aide": "Multiplie 8,0 par 30, puis 24 par 10.",
+     "explication": "8,0 × 30 = 240 et 24 × 10 = 240 : le produit est constant, égal à **240 cm·m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle hauteur d’image obtient-on à 20 m de l’arbre ?",
+     "reponse": 12,
+     "unite": "cm",
+     "tolerance": 0.1,
+     "aide": "Hauteur = 240 / distance.",
+     "explication": "h = 240 / 20 = **12 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Et à 40 m de l’arbre ?",
+     "reponse": 6,
+     "unite": "cm",
+     "tolerance": 0.1,
+     "aide": "Même relation que pour l’essai 2.",
+     "explication": "h = 240 / 40 = **6,0 cm** : plus on s’éloigne, plus l’image est petite."
+    }
+   ]
+  },
+  {
+   "chapitre": "c1b89b34-d967-591e-857b-13b0f4a1ebd3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un laser sur le miroir de la salle de bain",
+   "competence": "geometrie",
+   "situation": "Maya envoie un faisceau laser sur le miroir de la salle de bain. Elle représente le faisceau par un rayon et trace la normale au miroir au point d’incidence I.",
+   "documents": [
+    {
+     "id": "fig",
+     "type": "figure",
+     "titre": "Réflexion sur le miroir",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0.6,
+      "ymax": 7.5
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "I",
+       "x": 5,
+       "y": 2,
+       "nom": "I",
+       "position": "se"
+      },
+      {
+       "id": "S",
+       "x": 1.644,
+       "y": 6,
+       "nom": "S",
+       "position": "o"
+      },
+      {
+       "id": "R",
+       "x": 8.356,
+       "y": 6,
+       "nom": "R",
+       "position": "e"
+      },
+      {
+       "id": "N",
+       "x": 5,
+       "y": 7,
+       "nom": "N",
+       "position": "n"
+      },
+      {
+       "id": "M1",
+       "x": 0.5,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "M2",
+       "x": 9.5,
+       "y": 2,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "id": "miroir",
+       "de": "M1",
+       "a": "M2"
+      },
+      {
+       "id": "normale",
+       "de": "I",
+       "a": "N",
+       "style": "pointilles"
+      },
+      {
+       "id": "inc",
+       "de": "S",
+       "a": "I"
+      },
+      {
+       "id": "refl",
+       "de": "I",
+       "a": "R"
+      }
+     ],
+     "angles": [
+      {
+       "id": "ai",
+       "sommet": "I",
+       "de": "N",
+       "a": "S",
+       "mesure": "40°"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fig",
+     "enonce": "Touche le rayon réfléchi.",
+     "reponse": [
+      "refl"
+     ],
+     "aide": "Le rayon incident arrive sur le miroir ; le rayon réfléchi en repart.",
+     "explication": "Le rayon **IR** est le rayon réfléchi : il part du point d’incidence I."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de l’angle de réflexion ?",
+     "reponse": 40,
+     "unite": "°",
+     "tolerance": 0.5,
+     "aide": "Que dit la loi de la réflexion ?",
+     "explication": "L’angle de réflexion est égal à l’angle d’incidence : **40°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel angle fait le rayon réfléchi avec la surface du miroir ? (La normale est perpendiculaire au miroir.)",
+     "reponse": 50,
+     "unite": "°",
+     "tolerance": 0.5,
+     "aide": "Les angles se mesurent par rapport à la normale ; entre la normale et le miroir il y a 90°.",
+     "explication": "90° − 40° = **50°** entre le rayon réfléchi et le miroir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le miroir est une surface très polie. Quel type de réflexion y a-t-il ?",
+     "options": [
+      "Une réflexion spéculaire, qui donne une image nette",
+      "Une réflexion diffuse, qui renvoie dans toutes les directions",
+      "Une réfraction, car la lumière entre dans le verre",
+      "Une absorption totale, car la surface est brillante"
+     ],
+     "reponse": 0,
+     "aide": "Une surface polie renvoie un faisceau dans une seule direction.",
+     "explication": "Sur une surface **polie**, la réflexion est **spéculaire** : un rayon donne un seul rayon réfléchi. Une surface rugueuse donne une réflexion diffuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "c1b89b34-d967-591e-857b-13b0f4a1ebd3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le rayon laser dans l’aquarium",
+   "competence": "experimenter",
+   "situation": "Léa éclaire la surface de l’eau d’un aquarium avec un laser. Elle mesure l’angle du rayon avec la normale, dans l’air (i₁) et dans l’eau (i₂), pour plusieurs inclinaisons. Elle essaie ensuite un autre liquide, plus épais.",
+   "documents": [
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Mesures de Léa pour l’eau",
+     "colonnes": [
+      "Angle",
+      "Essai 1",
+      "Essai 2",
+      "Essai 3"
+     ],
+     "lignes": [
+      [
+       "i₁ dans l’air (°)",
+       "20",
+       "40",
+       "60"
+      ],
+      [
+       "i₂ dans l’eau (°)",
+       "14,9",
+       "28,9",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "L’essai 2 de Léa",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 110,
+       "l": 280,
+       "h": 90,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 182,
+       "texte": "eau (n = 1,33)",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 95,
+       "y": 50,
+       "texte": "air (n = 1,00)",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        110
+       ],
+       "a": [
+        310,
+        110
+       ],
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        20
+       ],
+       "a": [
+        170,
+        200
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 185,
+       "y": 24,
+       "texte": "normale",
+       "ancre": "debut",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        102.9,
+        30
+       ],
+       "a": [
+        170,
+        110
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "inc",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        110
+       ],
+       "a": [
+        214.2,
+        190
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "violet",
+       "id": "refr",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche le rayon réfracté.",
+     "reponse": [
+      "refr"
+     ],
+     "aide": "Le rayon réfracté est celui qui a changé de direction en traversant la surface.",
+     "explication": "Le rayon réfracté est celui qui continue **dans l’eau**, en se rapprochant de la normale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la loi de Snell-Descartes n₁ × sin i₁ = n₂ × sin i₂, calcule i₂ pour l’essai 3 (arrondis à l’unité).",
+     "reponse": 41,
+     "unite": "°",
+     "tolerance": 0.6,
+     "aide": "sin i₂ = (1,00 × sin 60°) / 1,33 ; utilise la fonction arcsin de la calculatrice.",
+     "explication": "sin i₂ = 0,866 / 1,33 ≈ 0,651 donc i₂ ≈ 40,6°, soit **41°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec l’essai 2, calcule l’indice n de l’eau : n = sin i₁ / sin i₂ (arrondis au centième, air : n = 1,00).",
+     "reponse": 1.33,
+     "tolerance": 0.02,
+     "aide": "Divise sin 40° par sin 28,9°.",
+     "explication": "n = sin 40° / sin 28,9° = 0,643 / 0,483 ≈ **1,33**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand le rayon passe de l’air à l’eau, comment se comporte-t-il ?",
+     "options": [
+      "Il se rapproche de la normale, car l’eau est plus réfringente",
+      "Il s’écarte de la normale, car l’eau est plus dense",
+      "Il ne change pas de direction, car i₁ est petit",
+      "Il se réfléchit totalement dès que i₁ dépasse 30°"
+     ],
+     "reponse": 0,
+     "aide": "Compare i₂ à i₁ dans le tableau.",
+     "explication": "i₂ est plus petit que i₁ : dans un milieu **plus réfringent** (n plus grand), le rayon se **rapproche** de la normale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le liquide épais, Léa mesure i₁ = 60° et i₂ = 35°. Quel est son indice n ? (arrondis au centième)",
+     "reponse": 1.51,
+     "tolerance": 0.02,
+     "aide": "n × sin 35° = 1,00 × sin 60°.",
+     "explication": "n = sin 60° / sin 35° = 0,866 / 0,574 ≈ **1,51**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c1b89b34-d967-591e-857b-13b0f4a1ebd3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sous l’eau, la lampe de Nina et la fibre optique",
+   "competence": "raisonner",
+   "situation": "Nina plonge dans une piscine avec une lampe étanche et l’oriente vers la surface. Elle fait varier l’angle d’incidence dans l’eau. Plus tard, elle découvre que le même phénomène guide la lumière dans une fibre optique.",
+   "documents": [
+    {
+     "id": "mes",
+     "type": "tableau",
+     "titre": "Lumière allant de l’eau vers l’air",
+     "colonnes": [
+      "Mesure",
+      "Essai 1",
+      "Essai 2",
+      "Essai 3",
+      "Essai 4"
+     ],
+     "lignes": [
+      [
+       "Angle d’incidence i₁ dans l’eau",
+       "30°",
+       "45°",
+       "50°",
+       "60°"
+      ],
+      [
+       "Rayon réfracté dans l’air",
+       "i₂ = 42°",
+       "i₂ = 70°",
+       "aucun",
+       "aucun"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies, n(eau) = 1,33"
+    },
+    {
+     "id": "fibre",
+     "type": "schema",
+     "titre": "Un rayon dans une fibre optique",
+     "largeur": 340,
+     "hauteur": 205,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 80,
+       "l": 320,
+       "h": 60,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 160,
+       "texte": "cœur de la fibre (verre)",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 66,
+       "texte": "gaine",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        110
+       ],
+       "a": [
+        70,
+        80
+       ],
+       "teinte": "corail",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        80
+       ],
+       "a": [
+        130,
+        140
+       ],
+       "teinte": "corail",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        140
+       ],
+       "a": [
+        190,
+        80
+       ],
+       "teinte": "corail",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        80
+       ],
+       "a": [
+        250,
+        140
+       ],
+       "teinte": "corail",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        140
+       ],
+       "a": [
+        320,
+        100
+       ],
+       "fleche": "fin",
+       "epaisseur": 2,
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 80,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p0",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 140,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 80,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 140,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 110,
+       "r": 7,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "milieu",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 196,
+       "texte": "Angles exagérés pour la lisibilité",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Vérifie l’essai 1 : calcule i₂ avec 1,33 × sin 30° = 1,00 × sin i₂ (arrondis à l’unité).",
+     "reponse": 42,
+     "unite": "°",
+     "tolerance": 0.6,
+     "aide": "sin i₂ = 1,33 × sin 30°, puis arcsin.",
+     "explication": "sin i₂ = 1,33 × 0,5 = 0,665 donc i₂ ≈ 41,7°, soit **42°**."
+    },
+    {
+     "type": "zone",
+     "document": "mes",
+     "enonce": "Touche le premier essai (par angle croissant) pour lequel il n’y a plus aucun rayon réfracté.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche la case « aucun » dans la deuxième ligne, puis lis l’angle au-dessus.",
+     "explication": "À partir de **50°**, plus de rayon réfracté : toute la lumière est réfléchie (réflexion totale)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’angle limite θ vérifie 1,33 × sin θ = 1,00 × sin 90°. Calcule-le (arrondi à l’unité).",
+     "reponse": 49,
+     "unite": "°",
+     "tolerance": 0.6,
+     "aide": "sin θ = 1 / 1,33 ; utilise arcsin.",
+     "explication": "sin θ = 1 / 1,33 ≈ 0,752 donc θ ≈ 48,8°, soit **49°** : au-delà, plus de rayon réfracté."
+    },
+    {
+     "type": "zone",
+     "document": "fibre",
+     "enonce": "Touche tous les points où le rayon subit une réflexion totale contre la gaine.",
+     "reponse": [
+      "p0",
+      "p1",
+      "p2",
+      "p3"
+     ],
+     "aide": "Cherche les points où le rayon change de direction contre la paroi.",
+     "explication": "Aux points de contact avec la gaine, le rayon est **totalement réfléchi** : il reste prisonnier de la fibre.",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la lumière reste-t-elle guidée dans la fibre sur des kilomètres ?",
+     "options": [
+      "Elle subit des réflexions totales successives",
+      "Elle est réfractée à chaque fois dans la gaine",
+      "Elle se disperse comme dans un prisme à la sortie",
+      "Elle est absorbée puis réémise par le verre"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que fait un rayon qui dépasse l’angle limite.",
+     "explication": "Le cœur est plus réfringent que la gaine : au-delà de l’angle limite, la **réflexion totale** renvoie le rayon vers l’intérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "2599252f-5986-55e6-8f92-f5761239c652",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les loupes du club photo",
+   "competence": "observer-schema",
+   "situation": "Le club photo du lycée possède deux sortes de lentilles de verre, A et B, et trois loupes de distances focales différentes. Aïssa doit ranger les lentilles et calculer leur vergence.",
+   "documents": [
+    {
+     "id": "prof",
+     "type": "schema",
+     "titre": "Les deux lentilles vues en coupe",
+     "largeur": 340,
+     "hauteur": 205,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 85 30 Q 125 100 85 170 Q 45 100 85 30 Z",
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 215 30 L 295 30 Q 265 100 295 170 L 215 170 Q 245 100 215 30 Z",
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 195,
+       "texte": "Lentille A",
+       "ancre": "milieu",
+       "taille": "normal"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 195,
+       "texte": "Lentille B",
+       "ancre": "milieu",
+       "taille": "normal"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "loupes",
+     "type": "tableau",
+     "titre": "Les trois loupes",
+     "colonnes": [
+      "Loupe",
+      "Loupe 1",
+      "Loupe 2",
+      "Loupe 3"
+     ],
+     "lignes": [
+      [
+       "Distance focale f′ (cm)",
+       "50",
+       "25",
+       "10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prof",
+     "enonce": "Touche la lentille convergente.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Une lentille convergente est plus épaisse au centre qu’aux bords.",
+     "explication": "La lentille **A** est plus épaisse au centre qu’aux bords : elle est convergente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vergence de la loupe 2, de distance focale 25 cm ? (C = 1 / f′, avec f′ en mètres.)",
+     "reponse": 4,
+     "unite": "δ",
+     "tolerance": 0.05,
+     "aide": "Convertis 25 cm en mètres avant de calculer.",
+     "explication": "f′ = 0,25 m ; C = 1 / 0,25 = **4,0 δ**."
+    },
+    {
+     "type": "zone",
+     "document": "loupes",
+     "enonce": "Touche la loupe la plus convergente, celle qui a la plus grande vergence.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "La vergence est l’inverse de la distance focale : la plus petite f′ donne la plus grande vergence.",
+     "explication": "La loupe 3 a la plus petite distance focale (10 cm) : sa vergence (10 δ) est la plus grande. **Loupe 3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une paire de lunettes de lecture porte l’inscription « +2,5 ». Quelle est la distance focale de ses verres, en cm ?",
+     "reponse": 40,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Le « +2,5 » est une vergence en dioptries : f′ = 1 / C, puis convertis en cm.",
+     "explication": "f′ = 1 / 2,5 = 0,40 m, soit **40 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2599252f-5986-55e6-8f92-f5761239c652",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La loupe qui concentre le soleil",
+   "competence": "experimenter",
+   "situation": "Une élève tient une loupe dans un faisceau de lumière parallèle à l’axe optique. Elle observe que les rayons se rassemblent en un petit point lumineux. Le schéma est gradué en centimètres à partir du centre optique O.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Une lentille convergente éclairée par un faisceau parallèle",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        120
+       ],
+       "a": [
+        320,
+        120
+       ],
+       "epaisseur": 1,
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 100 40 Q 114 120 100 200 Q 86 120 100 40 Z",
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "lent"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        70
+       ],
+       "a": [
+        100,
+        70
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        70
+       ],
+       "a": [
+        320,
+        143.33333333333331
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        95
+       ],
+       "a": [
+        100,
+        95
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        95
+       ],
+       "a": [
+        320,
+        131.66666666666666
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        145
+       ],
+       "a": [
+        100,
+        145
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        145
+       ],
+       "a": [
+        320,
+        108.33333333333334
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        170
+       ],
+       "a": [
+        100,
+        170
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        170
+       ],
+       "a": [
+        320,
+        96.66666666666667
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 120,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "fp",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 120,
+       "r": 4,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "O",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 100,
+       "y": 218,
+       "texte": "O",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        214
+       ],
+       "a": [
+        130,
+        224
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 238,
+       "texte": "2",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        214
+       ],
+       "a": [
+        160,
+        224
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 238,
+       "texte": "4",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        214
+       ],
+       "a": [
+        190,
+        224
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 238,
+       "texte": "6",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        214
+       ],
+       "a": [
+        220,
+        224
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 238,
+       "texte": "8",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        214
+       ],
+       "a": [
+        250,
+        224
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 238,
+       "texte": "10",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        219
+       ],
+       "a": [
+        250,
+        219
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 238,
+       "texte": "cm",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche le foyer image F′, le point où se rassemblent les rayons.",
+     "reponse": [
+      "fp"
+     ],
+     "aide": "C’est le point de convergence des rayons parallèles à l’axe.",
+     "explication": "Les rayons parallèles à l’axe se rassemblent au **foyer image F′**, sur l’axe optique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis sur la graduation la distance focale f′ de la lentille, c’est-à-dire la distance OF′.",
+     "reponse": 10,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Cherche la graduation située sous le point F′.",
+     "explication": "F′ est à la graduation 10 : f′ = OF′ = **10 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vergence de la lentille : C = 1 / f′, avec f′ en mètres.",
+     "reponse": 10,
+     "unite": "δ",
+     "tolerance": 0.1,
+     "aide": "Convertis 10 cm en 0,10 m.",
+     "explication": "C = 1 / 0,10 = **10 δ**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une autre lentille a une vergence de 5 δ. Quelle est sa distance focale, en cm ?",
+     "reponse": 20,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "f′ = 1 / C, en mètres, puis convertis.",
+     "explication": "f′ = 1 / 5 = 0,20 m, soit **20 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comparée à la lentille de 10 δ, la lentille de 5 δ est :",
+     "options": [
+      "Moins convergente, avec un foyer plus éloigné de la lentille",
+      "Plus convergente, avec un foyer plus proche de la lentille",
+      "Aussi convergente, mais plus épaisse au centre",
+      "Divergente, car sa vergence est plus petite"
+     ],
+     "reponse": 0,
+     "aide": "Compare les distances focales : 10 cm et 20 cm.",
+     "explication": "f′ = 20 cm contre 10 cm : le foyer est plus loin, la lentille fait converger **moins fortement**. Une vergence faible ne veut pas dire divergente."
+    }
+   ]
+  },
+  {
+   "chapitre": "2599252f-5986-55e6-8f92-f5761239c652",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Aya et ses lunettes pour voir au tableau",
+   "competence": "raisonner",
+   "situation": "Aya ne voit pas nettement le tableau de loin. L’opticien lui explique le défaut de son œil sur un schéma, puis lui remet une ordonnance : les verres de ses lunettes sont des lentilles de vergence négative.",
+   "documents": [
+    {
+     "id": "oeil",
+     "type": "schema",
+     "titre": "L’œil d’Aya, modélisé",
+     "largeur": 340,
+     "hauteur": 246,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 175,
+       "cy": 115,
+       "rx": 150,
+       "ry": 85,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 70 55 Q 90 115 70 175 Q 50 115 70 55 Z",
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "crist",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 270 55 Q 310 115 270 175",
+       "teinte": "corail",
+       "id": "retine",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        115
+       ],
+       "a": [
+        320,
+        115
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        85
+       ],
+       "a": [
+        70,
+        85
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        85
+       ],
+       "a": [
+        290,
+        125
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        145
+       ],
+       "a": [
+        70,
+        145
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        145
+       ],
+       "a": [
+        290,
+        105
+       ],
+       "teinte": "ambre",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 115,
+       "r": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "image",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 205,
+       "texte": "cristallin",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 205,
+       "texte": "rétine",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 238,
+       "texte": "Œil d’Aya sans correction : rayons venant de l’infini",
+       "ancre": "milieu",
+       "taille": "petit",
+       "italique": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "ordo",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Ordonnance d’optique",
+     "sousTitre": "Vision de loin",
+     "emoji": "👓",
+     "lignes": [
+      {
+       "texte": "Œil droit (OD)",
+       "valeur": "−2,5 δ"
+      },
+      {
+       "texte": "Œil gauche (OG)",
+       "valeur": "−2,0 δ"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oeil",
+     "enonce": "Touche l’endroit où se forme l’image nette d’un objet lointain avec cet œil.",
+     "reponse": [
+      "image"
+     ],
+     "aide": "Regarde où les rayons se croisent après le cristallin.",
+     "explication": "Les rayons se rassemblent au point marqué, **en avant de la rétine** : l’image est floue sur la rétine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le défaut de vision d’Aya ?",
+     "options": [
+      "La myopie : l’image se forme en avant de la rétine",
+      "L’hypermétropie : l’image se forme derrière la rétine",
+      "La presbytie : le cristallin est devenu moins souple",
+      "Aucun : l’image se forme bien sur la rétine"
+     ],
+     "reponse": 0,
+     "aide": "Compare la position de l’image à celle de la rétine.",
+     "explication": "Image formée **en avant** de la rétine : c’est la **myopie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type de lentille corrige ce défaut, comme le dit l’ordonnance ?",
+     "options": [
+      "Une lentille divergente, de vergence négative",
+      "Une lentille convergente, de vergence positive",
+      "Une lentille convergente, de vergence négative",
+      "Une lentille divergente, de vergence positive"
+     ],
+     "reponse": 0,
+     "aide": "Il faut éloigner le point où se forment les images : lentille divergente.",
+     "explication": "La myopie se corrige par une lentille **divergente**, dont la vergence est **négative**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur absolue de la distance focale du verre de l’œil droit ? (|f′| = 1 / |C|, en cm)",
+     "reponse": 40,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Prends la valeur absolue de la vergence : 2,5 δ.",
+     "explication": "|f′| = 1 / 2,5 = 0,40 m = **40 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur absolue de la distance focale du verre de l’œil gauche, en cm ?",
+     "reponse": 50,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Même calcul avec 2,0 δ.",
+     "explication": "|f′| = 1 / 2,0 = 0,50 m = **50 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "997b009c-d4b0-5c4e-a327-61445a21fadd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Thomas observe un timbre à la loupe",
+   "competence": "lire-tableau",
+   "situation": "Thomas déplace un timbre devant une lentille convergente de distance focale 10 cm. Dans trois essais, il note où se trouve l’objet (OA) et où se forme l’image (OA′), et s’il peut la recueillir sur un écran.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les trois essais de Thomas",
+     "colonnes": [
+      "Mesure",
+      "Essai 1",
+      "Essai 2",
+      "Essai 3"
+     ],
+     "lignes": [
+      [
+       "OA (cm)",
+       "−30",
+       "−15",
+       "−5"
+      ],
+      [
+       "OA′ (cm)",
+       "15",
+       "30",
+       "−10"
+      ],
+      [
+       "Image recueillie sur un écran ?",
+       "oui",
+       "oui",
+       "non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche l’essai où l’image est virtuelle : on ne peut pas la recueillir sur un écran.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "Une image virtuelle ne se projette pas ; regarde la dernière ligne.",
+     "explication": "Dans l’essai 3, l’image ne se recueille pas sur un écran : elle est **virtuelle**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le grandissement de l’essai 1 : γ = OA′ / OA.",
+     "reponse": -0.5,
+     "tolerance": 0.02,
+     "aide": "Divise 15 par −30 (garde le signe).",
+     "explication": "γ = 15 / (−30) = **−0,5** : image renversée, deux fois plus petite que l’objet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le grandissement de l’essai 3.",
+     "reponse": 2,
+     "tolerance": 0.02,
+     "aide": "Divise −10 par −5.",
+     "explication": "γ = (−10) / (−5) = **2** : image droite et deux fois plus grande que l’objet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel essai Thomas utilise-t-il la lentille comme une loupe ?",
+     "options": [
+      "Dans l’essai 3, objet entre la lentille et le foyer",
+      "Dans l’essai 1, objet très loin de la lentille",
+      "Dans l’essai 2, objet entre le foyer et 2f′",
+      "Dans les trois, car la lentille est convergente"
+     ],
+     "reponse": 0,
+     "aide": "Une loupe donne une image virtuelle, droite et agrandie.",
+     "explication": "Objet entre la lentille et le foyer (5 cm < 10 cm) : image **virtuelle, droite, agrandie** : c’est une loupe."
+    }
+   ]
+  },
+  {
+   "chapitre": "997b009c-d4b0-5c4e-a327-61445a21fadd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’image du timbre à travers la lentille",
+   "competence": "geometrie",
+   "situation": "Salomé étudie un objet AB de 1,5 cm de haut placé à 3 cm d’une lentille convergente de distance focale 2 cm. Elle a tracé deux rayons : le rayon parallèle à l’axe, qui repart par F′, et le rayon passant par le centre optique O. Un carreau mesure 1 cm.",
+   "documents": [
+    {
+     "id": "fig",
+     "type": "figure",
+     "titre": "Construction de l’image",
+     "cadre": {
+      "xmin": -4,
+      "xmax": 7,
+      "ymin": -4,
+      "ymax": 3
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": -3,
+       "y": 0,
+       "nom": "A",
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": -3,
+       "y": 1.5,
+       "nom": "B",
+       "position": "no"
+      },
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "nom": "O",
+       "position": "se"
+      },
+      {
+       "id": "F",
+       "x": -2,
+       "y": 0,
+       "nom": "F",
+       "position": "so"
+      },
+      {
+       "id": "Fp",
+       "x": 2,
+       "y": 0,
+       "nom": "F′",
+       "position": "se"
+      },
+      {
+       "id": "Ap",
+       "x": 6,
+       "y": 0,
+       "nom": "A′",
+       "position": "no"
+      },
+      {
+       "id": "Bp",
+       "x": 6,
+       "y": -3,
+       "nom": "B′",
+       "position": "se"
+      },
+      {
+       "id": "L1",
+       "x": 0,
+       "y": 2.6,
+       "cache": true
+      },
+      {
+       "id": "L2",
+       "x": 0,
+       "y": -3.6,
+       "cache": true
+      },
+      {
+       "id": "H",
+       "x": 0,
+       "y": 1.5,
+       "cache": true
+      },
+      {
+       "id": "X1",
+       "x": -4,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "X2",
+       "x": 7,
+       "y": 0,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "id": "axe",
+       "de": "X1",
+       "a": "X2",
+       "style": "pointilles"
+      },
+      {
+       "id": "lentille",
+       "de": "L1",
+       "a": "L2"
+      },
+      {
+       "id": "obj",
+       "de": "A",
+       "a": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "img",
+       "de": "Ap",
+       "a": "Bp",
+       "teinte": "violet"
+      },
+      {
+       "id": "r1a",
+       "de": "B",
+       "a": "H",
+       "teinte": "corail"
+      },
+      {
+       "id": "r1b",
+       "de": "H",
+       "a": "Bp",
+       "teinte": "corail"
+      },
+      {
+       "id": "r2",
+       "de": "B",
+       "a": "Bp",
+       "teinte": "corail"
+      }
+     ],
+     "source": "Construction écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fig",
+     "enonce": "Touche l’image A′B′ de l’objet.",
+     "reponse": [
+      "img"
+     ],
+     "aide": "L’image se forme là où les deux rayons se croisent.",
+     "explication": "Les deux rayons se coupent en B′ : l’image est le segment **A′B′**, sous l’axe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la position de l’image avec 1/OA′ − 1/OA = 1/OF′ (OA = −3 cm, OF′ = 2 cm).",
+     "reponse": 6,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Ici 1/OA′ = 1/OF′ + 1/OA = 1/2 + 1/(−3).",
+     "explication": "1/OA′ = 1/2 − 1/3 = 1/6 donc OA′ = **6 cm** : cela correspond à ce qu’on lit sur la figure."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le grandissement γ = OA′ / OA.",
+     "reponse": -2,
+     "tolerance": 0.02,
+     "aide": "Garde le signe de OA (négatif).",
+     "explication": "γ = 6 / (−3) = **−2** : l’image est renversée et deux fois plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur de l’image A′B′ ?",
+     "reponse": 3,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Hauteur de l’image = |γ| × hauteur de l’objet.",
+     "explication": "|γ| × AB = 2 × 1,5 = **3,0 cm** : on la lit aussi sur la figure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature de l’image A′B′ ?",
+     "options": [
+      "Réelle, renversée et agrandie",
+      "Virtuelle, droite et agrandie",
+      "Réelle, renversée et plus petite",
+      "Virtuelle, renversée et agrandie"
+     ],
+     "reponse": 0,
+     "aide": "L’objet est au-delà du foyer objet ; γ est négatif et |γ| > 1.",
+     "explication": "Objet au-delà de F : image **réelle** (elle se projette sur un écran), γ < 0 donc **renversée**, |γ| = 2 donc **agrandie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "997b009c-d4b0-5c4e-a327-61445a21fadd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vidéoprojecteur de Léo",
+   "competence": "modeliser",
+   "situation": "Léo construit un vidéoprojecteur avec une lentille convergente de distance focale 10 cm et une diapositive de 2,0 cm de haut, éclairée par une lampe. Il règle la distance diapositive-lentille pour que l’image se forme nette sur le mur. Les distances sont des mesures algébriques depuis O.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Le montage",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 80,
+       "l": 40,
+       "h": 60,
+       "arrondi": 6,
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 160,
+       "texte": "lampe",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 85,
+       "l": 8,
+       "h": 50,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "diapo",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 74,
+       "y": 160,
+       "texte": "diapositive",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 140 70 Q 165 110 140 150 Q 115 110 140 70 Z",
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "lentille",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 172,
+       "texte": "lentille",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 300,
+       "y": 30,
+       "l": 10,
+       "h": 160,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "mur",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 205,
+       "texte": "mur",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        110
+       ],
+       "a": [
+        300,
+        110
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice, hors échelle"
+    },
+    {
+     "id": "regl",
+     "type": "tableau",
+     "titre": "Trois réglages",
+     "colonnes": [
+      "Mesure",
+      "Réglage 1",
+      "Réglage 2",
+      "Réglage 3"
+     ],
+     "lignes": [
+      [
+       "Diapositive : OA (cm)",
+       "−15",
+       "−12",
+       "−11"
+      ],
+      [
+       "Mur : OA′ (cm)",
+       "30",
+       "?",
+       "110"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche l’objet dont la lentille donne une image sur le mur.",
+     "reponse": [
+      "diapo"
+     ],
+     "aide": "L’objet est ce qu’on éclaire, devant la lentille.",
+     "explication": "L’objet est la **diapositive**, éclairée par la lampe : la lentille en forme une image sur le mur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour le réglage 2, calcule la distance OA′ du mur : 1/OA′ = 1/OF′ + 1/OA.",
+     "reponse": 60,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "1/OA′ = 1/10 + 1/(−12) ; calcule avec des fractions de même dénominateur.",
+     "explication": "1/OA′ = 1/10 − 1/12 = 1/60 donc OA′ = **60 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le grandissement du réglage 2 : γ = OA′ / OA.",
+     "reponse": -5,
+     "tolerance": 0.05,
+     "aide": "Divise 60 par −12.",
+     "explication": "γ = 60 / (−12) = **−5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur de l’image sur le mur, avec ce réglage ?",
+     "reponse": 10,
+     "unite": "cm",
+     "tolerance": 0.5,
+     "aide": "Hauteur de l’image = |γ| × hauteur de la diapositive.",
+     "explication": "|−5| × 2,0 = **10 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "regl",
+     "enonce": "Touche le réglage qui donne la plus grande image sur le mur.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Le grandissement est le rapport OA′/OA : compare les trois réglages.",
+     "explication": "Réglage 1 : γ = −2 ; réglage 2 : γ = −5 ; **réglage 3 : γ = 110/(−11) = −10**. C’est la plus grande image."
+    }
+   ]
+  }
+ ]
+}

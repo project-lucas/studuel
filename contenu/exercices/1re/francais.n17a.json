@@ -1,0 +1,2121 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "61bb7f61-e685-528e-ab50-a0af393c8e2e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil de 1942",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Yeux d’Elsa*. Place le recueil dans la vie d’Aragon et dans la guerre, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Aragon et son recueil",
+     "debut": 1890,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1897,
+       "nom": "Naissance d’Aragon"
+      },
+      {
+       "id": "yeux",
+       "date": 1942,
+       "nom": "Les Yeux d’Elsa"
+      },
+      {
+       "id": "mort",
+       "date": 1982,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Yeux d’Elsa",
+     "sousTitre": "Louis Aragon",
+     "emoji": "👁️",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Recueil de poèmes",
+       "id": "genre"
+      },
+      {
+       "texte": "Adressé à",
+       "valeur": "Elsa Triolet, sa femme",
+       "id": "ded"
+      },
+      {
+       "texte": "Publié à",
+       "valeur": "Neuchâtel, en Suisse",
+       "id": "lieu"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Rime et vers réguliers",
+       "id": "forme"
+      }
+     ],
+     "pied": "Paru en pleine Occupation",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "yeux"
+     ],
+     "enonce": "Touche sur la frise l’année de parution du recueil.",
+     "aide": "Le recueil paraît pendant l’Occupation, entre 1940 et 1944.",
+     "explication": "Le recueil paraît en **1942**, en pleine Occupation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance d’Aragon de la parution du recueil ?",
+     "reponse": 45,
+     "unite": "ans",
+     "aide": "Soustrais la date de naissance à la date de parution.",
+     "explication": "1942 − 1897 = **45 ans** : Aragon a quarante-cinq ans quand il publie le recueil."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "ded"
+     ],
+     "enonce": "Dans la carte d’identité, touche la ligne qui dit à qui le recueil est adressé.",
+     "aide": "Le titre du recueil donne déjà le prénom de la destinataire.",
+     "explication": "Le poème-titre s’adresse à **Elsa Triolet**, la femme d’Aragon."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec ce que tu as lu dans la fiche.",
+     "texte": "Le recueil paraît en ___, un pays où la ___ de Vichy ne peut l’atteindre.",
+     "reponses": [
+      [
+       "Suisse"
+      ],
+      [
+       "censure"
+      ]
+     ],
+     "banque": [
+      "Suisse",
+      "Belgique",
+      "censure",
+      "monnaie",
+      "Italie"
+     ],
+     "aide": "Relis la ligne « Publié à » de la fiche ; Vichy contrôle ce qu’on peut imprimer.",
+     "explication": "Publié en **Suisse**, le recueil échappe à la **censure** de Vichy."
+    }
+   ]
+  },
+  {
+   "chapitre": "61bb7f61-e685-528e-ab50-a0af393c8e2e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sous l’amour, la France",
+   "competence": "analyser-texte",
+   "situation": "Aragon fait passer son message sous les apparences d’un amour de légende. Lis un court poème écrit pour l’exercice, puis démasque la double lecture.",
+   "documents": [
+    {
+     "id": "dbl",
+     "type": "tableau",
+     "titre": "La contrebande poétique",
+     "colonnes": [
+      "Ce qui passe la censure",
+      "Ce que le lecteur français entend"
+     ],
+     "lignes": [
+      [
+       "Un poème d’amour pour Elsa",
+       "?"
+      ],
+      [
+       "Une évocation du Moyen Âge : troubadours, chevaliers",
+       "La défaite et l’espoir de libération"
+      ]
+     ]
+    },
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un poème « à la manière d’Aragon »",
+     "blocs": [
+      "Elle est partie, la dame aux cheveux de brume,",
+      "Le chevalier la cherche dans tout le [[p|pays]] ;",
+      "Les [[s|soldats]] passent, les troubadours se taisent,",
+      "Mais la chanson demeure au creux des fenêtres."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Aragon"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le pays occupé",
+      "Le Moyen Âge réel",
+      "L’amour du lecteur",
+      "La vie d’Elsa"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la phrase : la femme aimée y devient aussi…",
+     "explication": "Sous le poème d’amour, le lecteur de 1942 entend **le pays occupé** : la femme aimée devient aussi la France."
+    },
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Dans le poème, touche le mot qui dévoile ce que la dame représente aussi.",
+     "aide": "Le chevalier cherche la dame dans tout un territoire.",
+     "explication": "Le chevalier cherche la dame dans tout le **pays** : l’amour désigne en même temps la France."
+    },
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui rappelle la présence de l’occupant.",
+     "aide": "Qui passe dans les rues, pendant que les troubadours se taisent ?",
+     "explication": "Les **soldats** qui passent rappellent l’Occupation, sous les décors de légende."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque poème du recueil à ce qu’il évoque.",
+     "paires": [
+      [
+       "« Les Yeux d’Elsa »",
+       "L’amour, où passe le malheur du temps"
+      ],
+      [
+       "« La Nuit de Dunkerque »",
+       "La défaite et le rembarquement de mai-juin 1940"
+      ],
+      [
+       "« Cantique à Elsa »",
+       "L’amour et la légende"
+      ]
+     ],
+     "aide": "Un de ces poèmes parle ouvertement d’un épisode de la guerre.",
+     "explication": "Le poème-titre dit l’**amour** et le malheur du temps ; « La Nuit de Dunkerque » la **défaite de 1940** ; le « Cantique à Elsa » l’**amour et la légende**."
+    }
+   ]
+  },
+  {
+   "chapitre": "61bb7f61-e685-528e-ab50-a0af393c8e2e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi revenir à la rime ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : le retour d’Aragon à la rime est-il un recul ? Lis leur échange, complète l’argument, puis choisis ta conclusion de dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maëlle",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maëlle",
+       "texte": "Aragon revient à la rime : c’est un retour en arrière, il renie le surréalisme."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Pas du tout. Un vers qui rime se [[r|retient]] par cœur, donc il peut circuler en cachette."
+      },
+      {
+       "qui": "Maëlle",
+       "texte": "Alors la forme ne serait pas un simple décor ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Non : le vers régulier devient une arme pour transmettre et chanter."
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le vers régulier sert la Résistance",
+       "?",
+       "Les poèmes mis en musique par Ferré, Ferrat et Brassens"
+      ],
+      [
+       "Aragon invente une forme neuve",
+       "La fin d’un vers rime avec le début du suivant",
+       "La rime enjambée"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui donne la raison pour laquelle la rime aide à résister.",
+     "aide": "Hugo dit ce que fait l’élève d’un vers qui rime : il le garde en mémoire.",
+     "explication": "Un vers qui rime se **retient** par cœur : c’est ce qui lui permet de circuler sans être imprimé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel argument faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Il se retient par cœur, se transmet et se chante",
+      "Il est plus simple à publier en Suisse qu’en France",
+      "Il prolonge fidèlement l’écriture surréaliste",
+      "Il évite toute allusion à l’amour ou à la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Reprends l’argument de Hugo : à quoi sert un poème qu’on sait par cœur ?",
+     "explication": "Le vers régulier **se retient par cœur, se transmet et se chante** : c’est pourquoi la mise en musique prolonge sa vie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix d’Aragon à son effet.",
+     "paires": [
+      [
+       "Un recueil adressé à Elsa",
+       "L’amour peut parler aussi de la France occupée"
+      ],
+      [
+       "Des vers rimés et réguliers",
+       "Un poème qu’on retient et qu’on chante"
+      ],
+      [
+       "La rime enjambée",
+       "La fin d’un vers rime avec le début du suivant"
+      ]
+     ],
+     "aide": "Chaque choix de forme a une conséquence sur la façon dont le poème circule.",
+     "explication": "L’**adresse à Elsa** permet la double lecture ; la **rime régulière** aide la mémoire et le chant ; la **rime enjambée** est l’invention formelle d’Aragon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation sur la poésie engagée ce recueil permet-il d’appuyer ?",
+     "options": [
+      "On peut résister sans slogan, par l’amour et la mémoire",
+      "Une poésie engagée doit renoncer à toute forme travaillée",
+      "La poésie n’a de valeur que loin des événements du monde",
+      "Le vers libre est la seule forme possible pour résister"
+     ],
+     "reponse": 0,
+     "aide": "Aragon parle de la guerre en parlant d’amour, avec des vers faits pour être retenus.",
+     "explication": "Le recueil montre qu’on peut **résister sans slogan, par l’amour et la mémoire**, et que la forme régulière est une arme de transmission."
+    }
+   ]
+  },
+  {
+   "chapitre": "23e0d27d-5df4-5f0c-8e50-0c4f0f5307e0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui répond à qui, à Genève ?",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur la *Lettre à d’Alembert*. Place-la dans la vie de Rousseau, puis identifie les figures du débat.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Rousseau et sa Lettre",
+     "debut": 1700,
+     "fin": 1790,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1712,
+       "nom": "Naissance"
+      },
+      {
+       "id": "lettre",
+       "date": 1758,
+       "nom": "Lettre à d’Alembert"
+      },
+      {
+       "id": "mort",
+       "date": 1778,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "deb",
+     "type": "tableau",
+     "titre": "Les figures du débat",
+     "colonnes": [
+      "Figure",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "D’Alembert",
+       "Philosophe encyclopédiste, auteur de l’article « Genève »"
+      ],
+      [
+       "Alceste",
+       "?"
+      ],
+      [
+       "Le peuple de Genève",
+       "Le destinataire qu’il faut protéger"
+      ],
+      [
+       "Voltaire",
+       "Installé près de Genève, il soutient le projet de théâtre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "lettre"
+     ],
+     "enonce": "Touche sur la frise l’année de la *Lettre à d’Alembert*.",
+     "aide": "Rousseau vit alors retiré à Montmorency, vingt ans avant sa mort.",
+     "explication": "La Lettre date de **1758**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la Lettre de la mort de Rousseau ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1778 − 1758 = **20 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Alceste ?",
+     "options": [
+      "Le héros du *Misanthrope*, que Rousseau défend",
+      "Un acteur de Genève qui s’oppose au projet",
+      "Le directeur du théâtre que d’Alembert veut ouvrir",
+      "Un ami de Diderot qui prend le parti du théâtre"
+     ],
+     "reponse": 0,
+     "aide": "Rousseau attaque longuement *Le Misanthrope* de Molière.",
+     "explication": "Alceste est le héros du *Misanthrope* : Rousseau lui donne raison et reproche à Molière de **faire rire de l’homme vertueux**."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le nom de celui qui, installé près de Genève, soutient le projet de théâtre.",
+     "aide": "Un philosophe célèbre, ami de d’Alembert, vit alors près de la ville.",
+     "explication": "**Voltaire**, installé près de Genève, soutient le projet de théâtre."
+    }
+   ]
+  },
+  {
+   "chapitre": "23e0d27d-5df4-5f0c-8e50-0c4f0f5307e0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Contre le théâtre, pour la fête",
+   "competence": "argumenter",
+   "situation": "Un camarade te demande de résumer la thèse de Rousseau. Lis le résumé, puis range ses reproches et sa proposition.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La thèse en bref",
+     "blocs": [
+      "D’Alembert propose d’ouvrir un théâtre à Genève. Rousseau, qui prend la parole comme [[c|citoyen]] de cette ville, répond par une longue lettre publique : le théâtre, dit-il, amollit les mœurs. On y pleure sur des malheurs imaginaires, et ces larmes tiennent lieu d’action réelle.",
+      "Il attaque aussi *Le Misanthrope* : Molière y fait rire d’Alceste, l’homme vertueux. Enfin, dans la salle obscure, les spectateurs restent passifs et isolés. À la place, Rousseau veut des fêtes publiques en plein air, où le peuple est à la fois acteur et spectateur."
+     ],
+     "source": "Résumé rédigé pour l’exercice, d’après la *Lettre à d’Alembert sur les spectacles* (1758)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui dit au nom de quoi Rousseau prend la parole.",
+     "aide": "Il est né à Genève et défend les mœurs de sa ville.",
+     "explication": "Rousseau répond **en citoyen** de Genève : c’est pour sa patrie qu’il craint les effets du théâtre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée : reproche de Rousseau au théâtre, ou proposition à la place ?",
+     "categories": [
+      "Reproche au théâtre",
+      "Proposition à la place"
+     ],
+     "items": [
+      [
+       "Il amollit les mœurs",
+       0
+      ],
+      [
+       "Il rend le vice aimable",
+       0
+      ],
+      [
+       "Il isole les spectateurs",
+       0
+      ],
+      [
+       "Des fêtes publiques en plein air",
+       1
+      ],
+      [
+       "Un peuple à la fois acteur et spectateur",
+       1
+      ]
+     ],
+     "aide": "Cherche ce que Rousseau veut supprimer, puis ce qu’il veut mettre à la place.",
+     "explication": "**Amollir, rendre le vice aimable, isoler** : trois reproches. **Les fêtes en plein air** où le peuple est acteur : sa proposition."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon ce résumé, pourquoi les larmes versées au théâtre ne servent-elles à rien ?",
+     "options": [
+      "Elles tiennent lieu d’action réelle : on pleure au lieu d’agir",
+      "Elles consolent les spectateurs et les rendent meilleurs",
+      "Elles empêchent les acteurs de bien jouer leur rôle",
+      "Elles coûtent trop cher à la ville de Genève"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la première phrase du résumé qui parle des larmes.",
+     "explication": "On pleure sur des malheurs imaginaires : ces larmes **tiennent lieu d’action réelle**. Le spectateur se croit vertueux sans rien faire."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque reproche à son détail.",
+     "paires": [
+      [
+       "Il amollit les mœurs",
+       "Les larmes sur des malheurs fictifs remplacent l’action"
+      ],
+      [
+       "Il rend le vice aimable",
+       "Molière fait rire d’Alceste, l’homme vertueux"
+      ],
+      [
+       "Il isole les citoyens",
+       "Salle obscure, spectateurs passifs"
+      ]
+     ],
+     "aide": "Chaque reproche s’appuie sur un exemple précis du résumé.",
+     "explication": "Le théâtre **amollit** par ses larmes, **rend le vice aimable** avec *Le Misanthrope*, **isole** dans la salle obscure."
+    }
+   ]
+  },
+  {
+   "chapitre": "23e0d27d-5df4-5f0c-8e50-0c4f0f5307e0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Se rassembler, ou s’isoler ?",
+   "competence": "argumenter",
+   "situation": "Zoé et Ilyès ne comprennent pas la même chose de la *Lettre à d’Alembert*. Lis une phrase célèbre, leur débat, puis le tableau pour trancher.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase de la Lettre",
+     "blocs": [
+      "« On croit s’assembler au spectacle, et c’est là que chacun s’[[i|isole]]. »"
+     ],
+     "auteur": "Jean-Jacques Rousseau",
+     "source": "Jean-Jacques Rousseau, *Lettre à d’Alembert sur les spectacles* (1758)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ilyès",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Rousseau déteste les rassemblements : il veut que chacun reste chez soi."
+      },
+      {
+       "qui": "Ilyès",
+       "texte": "Non, il veut un autre rassemblement : la fête, où le peuple est à la fois [[a|acteur]] et spectateur."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Et pour faire une fête, il faut un grand décor ?"
+      },
+      {
+       "qui": "Ilyès",
+       "texte": "Même pas : un piquet couronné de fleurs au milieu d’une place suffit."
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le théâtre isole ceux qui s’y rassemblent",
+       "Dans une salle obscure, les spectateurs sont passifs",
+       "?"
+      ],
+      [
+       "La fête rassemble vraiment",
+       "Le peuple y est à la fois acteur et spectateur",
+       "Le piquet couronné de fleurs au milieu d’une place"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui dit ce que devient chacun, au spectacle.",
+     "aide": "Le verbe qui s’oppose à « s’assembler ».",
+     "explication": "Chacun **s’isole** : la salle réunit les corps, mais sépare les citoyens."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui dit le rôle du peuple dans la fête, à la différence du théâtre.",
+     "aide": "Au théâtre, on regarde ; à la fête, que fait aussi le peuple ?",
+     "explication": "Dans la fête, le peuple est **acteur** et spectateur : personne n’est réduit à regarder."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule de la Lettre faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "« chacun s’isole »",
+      "« je suis, je vis, j’existe »",
+      "« Comment peut-on être Persan ? »",
+      "« une fête vraie »"
+     ],
+     "reponse": 0,
+     "aide": "Cherche, dans le premier document, la phrase qui illustre l’isolement des spectateurs.",
+     "explication": "L’exemple de la première ligne est la formule **« chacun s’isole »** : elle résume le reproche d’isolement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, Zoé ou Ilyès ?",
+     "options": [
+      "Ilyès : Rousseau oppose au théâtre une autre forme de rassemblement",
+      "Zoé : Rousseau préfère que les citoyens restent isolés chez eux",
+      "Zoé : Rousseau juge la fête plus dangereuse que le théâtre",
+      "Ilyès : Rousseau veut un théâtre plus grand et mieux éclairé"
+     ],
+     "reponse": 0,
+     "aide": "Rousseau reproche au théâtre d’isoler : que propose-t-il à la place ?",
+     "explication": "**Ilyès** a raison : Rousseau ne condamne pas le rassemblement, il lui oppose la **fête**, où le peuple est acteur."
+    }
+   ]
+  },
+  {
+   "chapitre": "67e3134c-74a7-5a07-adf2-de99ca6e6116",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une Inca dans un roman de lettres",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Lettres d’une Péruvienne* à ta classe. Place le roman parmi ses repères, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Graffigny et son roman",
+     "debut": 1690,
+     "fin": 1760,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1695,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pers",
+       "date": 1721,
+       "nom": "Lettres persanes"
+      },
+      {
+       "id": "pub",
+       "date": 1747,
+       "nom": "Roman de Graffigny"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Lettres d’une Péruvienne",
+     "sousTitre": "Françoise de Graffigny",
+     "emoji": "💌",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Roman épistolaire",
+       "id": "genre"
+      },
+      {
+       "texte": "Héroïne",
+       "valeur": "Zilia, une jeune Inca",
+       "id": "her"
+      },
+      {
+       "texte": "Elle écrit d’abord sur",
+       "valeur": "Des quipus",
+       "id": "quipus"
+      },
+      {
+       "texte": "L’autrice séjourne à Cirey chez",
+       "valeur": "Voltaire et Émilie du Châtelet",
+       "id": "cirey"
+      }
+     ],
+     "pied": "Un grand succès du siècle des Lumières",
+     "teinte": "rose"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année de parution du roman de Graffigny.",
+     "aide": "Le roman paraît plus de vingt ans après *Lettres persanes*.",
+     "explication": "Le roman paraît en **1747**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Lettres persanes* du roman de Graffigny ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Soustrais la date des *Lettres persanes* à celle du roman.",
+     "explication": "1747 − 1721 = **26 ans** : Graffigny s’inscrit dans la lignée des *Lettres persanes*."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "her"
+     ],
+     "enonce": "Dans la carte d’identité, touche la ligne qui présente l’héroïne.",
+     "aide": "Cherche le nom d’une jeune femme et son peuple d’origine.",
+     "explication": "L’héroïne est **Zilia**, une jeune Inca."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le roman est dit ___ parce qu’il est composé de ___.",
+     "reponses": [
+      [
+       "épistolaire"
+      ],
+      [
+       "lettres"
+      ]
+     ],
+     "banque": [
+      "épistolaire",
+      "historique",
+      "lettres",
+      "poèmes",
+      "dialogues"
+     ],
+     "aide": "Relis la ligne « Genre » de la fiche.",
+     "explication": "Un roman **épistolaire** est fait de **lettres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "67e3134c-74a7-5a07-adf2-de99ca6e6116",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Cuzco à une chambre à soi",
+   "competence": "se-reperer-temps",
+   "situation": "Suis le parcours de Zilia, de son enlèvement jusqu’à son choix final, puis retrouve qui sont ceux qu’elle croise.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Zilia",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Zilia est enlevée le jour de ses noces avec Aza"
+      },
+      {
+       "id": "n2",
+       "texte": "Des Français la capturent en mer"
+      },
+      {
+       "id": "n3",
+       "texte": "Déterville la recueille"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle les refuse et choisit l’étude et l’amitié"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle retrouve Aza, converti, qui va épouser une Espagnole",
+      "Elle épouse Déterville et s’installe à Paris en France",
+      "Elle repart au Pérou retrouver Aza, resté fidèle",
+      "Elle devient la gouvernante de Céline à Paris"
+     ],
+     "reponse": 0,
+     "aide": "Le dénouement parle de « les refuser tous deux » : qui est le second ?",
+     "explication": "Zilia **retrouve Aza**, mais il s’est **converti** et va **épouser une Espagnole** : elle refuse alors Aza et Déterville."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où Zilia choisit sa propre vie plutôt que le mariage.",
+     "aide": "C’est la dernière étape de la chaîne.",
+     "explication": "Le **refus final** du mariage était inouï pour l’époque : Zilia choisit l’étude, l’amitié et l’indépendance."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Zilia",
+       "La jeune Inca qui écrit ses lettres"
+      ],
+      [
+       "Aza",
+       "Son fiancé, retrouvé converti"
+      ],
+      [
+       "Déterville",
+       "Le chevalier qui la recueille et espère l’épouser"
+      ],
+      [
+       "Céline",
+       "La sœur de Déterville, devenue son amie"
+      ]
+     ],
+     "aide": "Un seul de ces personnages est la narratrice du roman.",
+     "explication": "**Zilia** écrit ; **Aza** est son fiancé ; **Déterville** la recueille ; **Céline**, sa sœur, devient l’amie de Zilia."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Zilia écrit d’abord sur des ___, cordelettes nouées des Incas, puis en ___, qu’elle apprend.",
+     "reponses": [
+      [
+       "quipus"
+      ],
+      [
+       "français"
+      ]
+     ],
+     "banque": [
+      "quipus",
+      "parchemins",
+      "français",
+      "espagnol",
+      "anglais"
+     ],
+     "aide": "Zilia ne connaît pas la langue des Français à son arrivée.",
+     "explication": "Elle écrit d’abord sur des **quipus**, puis en **français** : écrire, c’est survivre, comprendre, exister."
+    }
+   ]
+  },
+  {
+   "chapitre": "67e3134c-74a7-5a07-adf2-de99ca6e6116",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le regard d’une étrangère",
+   "competence": "argumenter",
+   "situation": "Lis une lettre de Zilia écrite pour l’exercice, compare les deux romans épistolaires du siècle, puis tire ta conclusion de dissertation.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre de Zilia",
+     "blocs": [
+      "Mon cher Aza,",
+      "Ici, les hommes s’enferment dans de petites [[m|maisons]] roulantes qu’ils nomment carrosses, et chacun salue l’autre en se penchant, sans jamais le regarder dans les yeux.",
+      "Les femmes passent des heures à [[p|parer]] leur visage ; personne ne songe à leur apprendre à penser. Je cherche encore pourquoi ces usages seraient plus raisonnables que les nôtres."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Graffigny"
+    },
+    {
+     "id": "cmp",
+     "type": "tableau",
+     "titre": "Deux romans par lettres",
+     "colonnes": [
+      "Critère",
+      "Lettres persanes",
+      "Lettres d’une Péruvienne"
+     ],
+     "lignes": [
+      [
+       "Date",
+       "1721",
+       "1747"
+      ],
+      [
+       "Regard éloigné de",
+       "Deux Persans",
+       "?"
+      ],
+      [
+       "Fin",
+       "Roxane, révoltée, s’empoisonne",
+       "Zilia choisit l’étude et l’amitié"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit à quoi les femmes occupent leur temps.",
+     "aide": "Le regard neuf de Zilia se pose sur le visage des femmes.",
+     "explication": "Les femmes passent leur temps à **parer** leur visage : leur éducation se réduit à des ornements."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Zilia décrit un carrosse sans le comprendre.",
+     "aide": "Elle ne connaît pas le mot « carrosse » : par quoi le remplace-t-elle ?",
+     "explication": "Pour Zilia, un carrosse est une petite **maison** roulante : un objet banal devient une énigme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Une jeune Inca",
+      "Un diplomate persan",
+      "Un chevalier français",
+      "Une princesse espagnole"
+     ],
+     "reponse": 0,
+     "aide": "Relis la lettre : qui est Zilia ?",
+     "explication": "Dans le roman de Graffigny, le regard éloigné est celui d’**une jeune Inca**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Un objet décrit sans son nom",
+       "L’usage banal devient une énigme"
+      ],
+      [
+       "Une narratrice étrangère",
+       "La satire passe par un regard neuf"
+      ],
+      [
+       "Un visage paré, un esprit négligé",
+       "La critique de l’éducation des femmes"
+      ]
+     ],
+     "aide": "Pense à ce que ressent le lecteur quand Zilia décrit sans comprendre.",
+     "explication": "Décrire sans nommer rend l’usage **étrange** ; l’étrangère porte la **satire** ; l’image du visage paré critique l’**éducation des femmes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle différence le tableau fait-il apparaître entre les fins des deux romans ?",
+     "options": [
+      "Zilia, contrairement à Roxane, choisit une vie indépendante",
+      "Les deux héroïnes meurent empoisonnées à la fin",
+      "Les deux héroïnes épousent le premier prétendant",
+      "Aucune des deux ne parvient à écrire sa lettre"
+     ],
+     "reponse": 0,
+     "aide": "Compare la dernière ligne du tableau pour chacun des deux romans.",
+     "explication": "Roxane se révolte et meurt ; **Zilia** choisit l’étude et l’amitié : une **héroïne qui choisit sa vie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f38d4b41-f101-560d-88b6-cf200be8583d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une carte postale de Provence",
+   "competence": "analyser-document",
+   "situation": "Tu reçois une « carte postale » du moulin de Daudet. Lis-la avec soin : tout n’y est pas vrai.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "carte-postale",
+     "entete": "Fontvieille",
+     "sousTitre": "Lettres de mon moulin · Alphonse Daudet",
+     "emoji": "🌾",
+     "lignes": [
+      {
+       "texte": "Le dispositif",
+       "valeur": "Un narrateur écrit depuis un vieux moulin de Provence",
+       "id": "disp"
+      },
+      {
+       "texte": "Premiers contes dans les journaux",
+       "valeur": "1866",
+       "id": "prem"
+      },
+      {
+       "texte": "Réunis en recueil",
+       "valeur": "1869",
+       "id": "rec"
+      },
+      {
+       "texte": "Le moulin",
+       "valeur": "Daudet ne l’a jamais possédé",
+       "id": "moulin"
+      }
+     ],
+     "pied": "Une trentaine de contes et chroniques",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "disp"
+     ],
+     "enonce": "Touche la ligne qui dit d’où le narrateur est censé écrire.",
+     "aide": "Cherche le mot « moulin » dans la première ligne.",
+     "explication": "Le narrateur écrit depuis un **vieux moulin de Provence**."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "moulin"
+     ],
+     "enonce": "Touche la ligne qui montre que ce dispositif est une fiction.",
+     "aide": "Daudet vivait à Paris, loin de la Provence des contes.",
+     "explication": "Daudet **n’a jamais possédé** ce moulin : le cadre est inventé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre les premiers contes dans les journaux et leur réunion en recueil ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Soustrais la première date à la seconde.",
+     "explication": "1869 − 1866 = **3 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque conte à ce qu’il raconte.",
+     "paires": [
+      [
+       "« La Chèvre de M. Seguin »",
+       "Blanquette préfère une nuit de liberté à la sécurité du piquet"
+      ],
+      [
+       "« Le Secret de maître Cornille »",
+       "Le dernier meunier feint de moudre du blé"
+      ],
+      [
+       "« La Mule du pape »",
+       "Une mule garde son coup de pied pendant sept ans"
+      ],
+      [
+       "« L’Arlésienne »",
+       "Jan, amoureux fatal, se suicide"
+      ]
+     ],
+     "aide": "Un de ces contes met en scène un meunier ruiné par la minoterie à vapeur.",
+     "explication": "**Seguin** : la liberté ; **Cornille** : le monde ancien vaincu par le progrès ; la **mule** : la rancune de sept ans ; **L’Arlésienne** : le drame de Jan."
+    }
+   ]
+  },
+  {
+   "chapitre": "f38d4b41-f101-560d-88b6-cf200be8583d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La chèvre qui voulait de l’air",
+   "competence": "analyser-texte",
+   "situation": "Lis le résumé de « La Chèvre de M. Seguin », puis suis les étapes de la chèvre et retrouve ce que chaque personnage représente.",
+   "documents": [
+    {
+     "id": "conte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le conte en résumé",
+     "blocs": [
+      "M. Seguin perdait toutes ses chèvres : elles s’ennuyaient au [[p|piquet]], s’échappaient vers la montagne et le loup les mangeait.",
+      "Blanquette, la dernière, rêve elle aussi de liberté. Elle s’échappe, passe une nuit heureuse sur la montagne, puis se bat contre le loup jusqu’au matin.",
+      "Au matin, le loup la mange. Le conte laisse chacun devant une question : préfère-t-on la [[s|sécurité]] ou la liberté ?"
+     ],
+     "source": "Résumé rédigé pour l’exercice, d’après « La Chèvre de M. Seguin » (1869)"
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes de Blanquette",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "M. Seguin perd ses chèvres"
+      },
+      {
+       "id": "n2",
+       "texte": "Blanquette s’échappe"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Le loup la mange"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conte",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui nomme ce que les chèvres de M. Seguin fuient.",
+     "aide": "C’est ce qui les retient et les attache, dans la première phrase.",
+     "explication": "Les chèvres s’ennuient au **piquet** : c’est lui que Blanquette préfère quitter, quitte à en mourir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle passe une nuit libre et se bat contre le loup",
+      "Elle revient au piquet avant la nuit et se rendort",
+      "Elle se réfugie chez le poète Gringoire",
+      "M. Seguin la retrouve et la ramène à l’étable"
+     ],
+     "reponse": 0,
+     "aide": "Entre sa fuite et sa fin, la chèvre vit une nuit unique.",
+     "explication": "Blanquette **passe une nuit libre sur la montagne et se bat contre le loup** jusqu’au matin."
+    },
+    {
+     "type": "zone",
+     "document": "conte",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que le conte oppose à la liberté.",
+     "aide": "La dernière phrase pose le choix : liberté ou… ?",
+     "explication": "Le conte est un apologue : **sécurité** ou liberté ?"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il représente.",
+     "paires": [
+      [
+       "Blanquette",
+       "La chèvre qui choisit la liberté, au prix de sa vie"
+      ],
+      [
+       "Maître Cornille",
+       "La fierté d’un monde ancien vaincu par le progrès"
+      ],
+      [
+       "Le berger des « Étoiles »",
+       "L’amour pur et silencieux"
+      ],
+      [
+       "Jan",
+       "L’amour fatal, qui mène au suicide"
+      ]
+     ],
+     "aide": "Un seul de ces personnages est une chèvre, un autre un meunier.",
+     "explication": "**Blanquette** : la liberté ; **Cornille** : la fierté d’un monde ancien ; le **berger** : l’amour pur ; **Jan** : l’amour fatal."
+    }
+   ]
+  },
+  {
+   "chapitre": "f38d4b41-f101-560d-88b6-cf200be8583d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sous le soleil, de la tristesse",
+   "competence": "argumenter",
+   "situation": "Sana pense que Daudet n’écrit que pour amuser les enfants. Nolan n’est pas d’accord. Lis leur échange, classe les ingrédients du recueil, puis choisis ta conclusion.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nolan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sana",
+       "texte": "Ce sont des contes pour enfants : tout y est drôle et léger."
+      },
+      {
+       "qui": "Nolan",
+       "texte": "Pas du tout : sous l’humour, il y a de la [[m|mélancolie]]. Maître Cornille ne moud plus rien et fait semblant."
+      },
+      {
+       "qui": "Sana",
+       "texte": "Et alors ? C’est juste une histoire de meunier."
+      },
+      {
+       "qui": "Nolan",
+       "texte": "C’est une Provence qui disparaît : la minoterie à vapeur a ruiné le moulin."
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Sous le charme, une Provence qui disparaît",
+       "Le progrès ruine les métiers anciens",
+       "?"
+      ],
+      [
+       "« La Chèvre de M. Seguin » est un apologue",
+       "Un petit récit pose une question de morale",
+       "Liberté ou sécurité ?"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Nolan nomme ce qui se cache sous l’humour.",
+     "aide": "Un sentiment de tristesse douce, lié au passé qui s’en va.",
+     "explication": "Sous l’humour, Daudet cache de la **mélancolie** : celle d’une Provence qui disparaît."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Maître Cornille et la minoterie à vapeur",
+      "Le berger des « Étoiles »",
+      "Blanquette et le loup",
+      "La mule du pape et son coup de pied"
+     ],
+     "reponse": 0,
+     "aide": "Cherche, dans le dialogue, le meunier ruiné par le progrès.",
+     "explication": "**Maître Cornille**, ruiné par la **minoterie à vapeur**, illustre un monde ancien vaincu par le progrès."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il fait sourire, ou il laisse un fond de tristesse ?",
+     "categories": [
+      "Ce qui fait sourire",
+      "Ce qui attriste en dessous"
+     ],
+     "items": [
+      [
+       "L’oralité et la légèreté du ton",
+       0
+      ],
+      [
+       "Le coup de pied que la mule garde sept ans",
+       0
+      ],
+      [
+       "Les moulins ruinés par l’industrie",
+       1
+      ],
+      [
+       "Les traditions perdues et les villages vidés",
+       1
+      ],
+      [
+       "Maître Cornille qui feint de moudre du blé",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si la scène amuse ou si elle montre quelque chose qui disparaît.",
+     "explication": "L’**oralité** et la **mule** amusent ; les **moulins ruinés**, les **traditions perdues** et **Cornille** disent la nostalgie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation le recueil permet-il d’appuyer ?",
+     "options": [
+      "Le conte peut cacher une nostalgie sous la légèreté",
+      "Le conte est un genre réservé aux jeunes enfants",
+      "Le recueil décrit fidèlement la vie de Daudet",
+      "Le progrès y est présenté comme un bienfait unanime"
+     ],
+     "reponse": 0,
+     "aide": "Relis la thèse du premier rang du tableau.",
+     "explication": "Le recueil montre que **la légèreté et l’humour masquent une nostalgie constante** : un monde rural menacé par l’industrie."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0fd943c-2302-5f3f-ae94-c4ffef827b57",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la Perse à Paris",
+   "competence": "lire-carte",
+   "situation": "Deux Persans, Usbek et Rica, quittent Ispahan, voyagent en Europe et écrivent à leurs amis, à leurs eunuques et aux femmes de leur sérail, restées en Perse. Situe leur voyage sur la carte, puis identifie les personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le voyage des deux Persans",
+     "fond": "monde",
+     "cadrage": [
+      -10,
+      25,
+      65,
+      58
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 51.68,
+       "lat": 32.65,
+       "nom": "Ispahan",
+       "symbole": "point",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "paris",
+       "nom": "Paris",
+       "symbole": "point",
+       "teinte": "corail"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        [
+         51.68,
+         32.65
+        ],
+        [
+         2.35,
+         48.86
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Usbek",
+       "Le philosophe, sérieux, jaloux et despote chez lui"
+      ],
+      [
+       "Rica",
+       "?"
+      ],
+      [
+       "Roxane",
+       "L’épouse révoltée"
+      ],
+      [
+       "Le grand eunuque",
+       "Le gardien du sérail"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la ville d’où partent Usbek et Rica, où le sérail est resté.",
+     "aide": "Le sérail reste en Perse, loin du voyage.",
+     "explication": "Usbek et Rica quittent **Ispahan** ; leur sérail y est resté."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la ville où les deux Persans observent les Français.",
+     "aide": "Les deux voyageurs écrivent depuis la capitale du royaume de France.",
+     "explication": "Les Persans découvrent la France depuis **Paris**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Rica ?",
+     "options": [
+      "Le jeune voyageur, moqueur et léger",
+      "Un vieux philosophe sérieux et jaloux",
+      "Une épouse du sérail qui se révolte",
+      "Un magistrat de Bordeaux qui publie le livre"
+     ],
+     "reponse": 0,
+     "aide": "Rica s’oppose à Usbek : il est plus jeune et moins grave.",
+     "explication": "Rica est **jeune, moqueur et léger** : son regard amuse là où celui d’Usbek est plus sérieux."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé du dispositif.",
+     "texte": "Deux ___ voyagent en ___ et écrivent à leurs amis, à leurs ___ et aux femmes de leur sérail.",
+     "reponses": [
+      [
+       "Persans"
+      ],
+      [
+       "Europe"
+      ],
+      [
+       "eunuques"
+      ]
+     ],
+     "banque": [
+      "Persans",
+      "Français",
+      "Europe",
+      "Asie",
+      "eunuques",
+      "médecins"
+     ],
+     "aide": "Relis la situation, en haut de l’exercice.",
+     "explication": "Deux **Persans** voyagent en **Europe** et écrivent à leurs amis, à leurs **eunuques** et aux femmes du sérail."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0fd943c-2302-5f3f-ae94-c4ffef827b57",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les magiciens de Paris",
+   "competence": "analyser-texte",
+   "situation": "Lis une lettre de Rica écrite pour l’exercice, puis retrouve ce qu’elle vise et comment l’apologue des Troglodytes continue le raisonnement.",
+   "documents": [
+    {
+     "id": "mag",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre de Rica",
+     "blocs": [
+      "Rica à son ami, de Paris.",
+      "Le roi de France est un grand [[m|magicien]] : il fait croire à ses sujets que de simples papiers valent de l’argent. Il y a un autre magicien plus fort encore, le pape : il leur fait croire que trois ne font qu’un. Ces gens ont l’esprit si doux qu’ils croient tout, et personne ne s’en étonne, sauf moi."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Lettres persanes*"
+    },
+    {
+     "id": "tro",
+     "type": "tableau",
+     "titre": "L’apologue des Troglodytes (lettres XI à XIV)",
+     "colonnes": [
+      "Peuple",
+      "Sort"
+     ],
+     "lignes": [
+      [
+       "Les Troglodytes égoïstes",
+       "?"
+      ],
+      [
+       "Les Troglodytes vertueux",
+       "Ils prospèrent, puis demandent un roi"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mag",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel Rica désigne le roi.",
+     "aide": "Rica compare le pouvoir du roi à un tour de passe-passe.",
+     "explication": "Pour Rica, le roi est un grand **magicien** : il fait croire des choses qu’il ne comprend pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Rica traite-t-il le roi et le pape de « magiciens » ?",
+     "options": [
+      "Il décrit sans comprendre : tout lui paraît un tour de magie",
+      "Il croit vraiment que le roi et le pape ont des pouvoirs magiques",
+      "Il veut flatter le roi pour obtenir une pension de la cour",
+      "Il imite le langage des *Mille et Une Nuits* pour distraire ses amis"
+     ],
+     "reponse": 0,
+     "aide": "Rica est un étranger : il ne connaît ni les finances ni la théologie du pays.",
+     "explication": "Un étranger qui ne comprend pas les **raisons** d’une croyance la décrit comme un **tour de magie** : c’est le regard éloigné."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque cible de la satire à ce qui est moqué.",
+     "paires": [
+      [
+       "Le roi",
+       "L’idée que le papier vaut de l’argent"
+      ],
+      [
+       "Le pape",
+       "L’idée que trois ne font qu’un"
+      ],
+      [
+       "Les Troglodytes",
+       "La question des institutions qui rendent la liberté possible"
+      ]
+     ],
+     "aide": "Les deux premiers sont dans la lettre ; le troisième, dans le tableau.",
+     "explication": "Rica s’étonne du **papier-monnaie** et de la **Trinité** ; l’apologue pose la question des **institutions** de la liberté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Il s’autodétruit",
+      "Il devient le plus riche de la région",
+      "Il se choisit un roi vertueux",
+      "Il est sauvé par les eunuques"
+     ],
+     "reponse": 0,
+     "aide": "Un peuple où chacun ne pense qu’à soi peut-il durer ?",
+     "explication": "Un peuple égoïste **s’autodétruit** ; un peuple vertueux prospère : l’apologue interroge les institutions de la liberté."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0fd943c-2302-5f3f-ae94-c4ffef827b57",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un modèle réduit du despotisme",
+   "competence": "argumenter",
+   "situation": "Camille ne voit dans le sérail qu’un décor exotique. Ethan veut y lire de la politique. Lis leur débat et la lettre de Roxane écrite pour l’exercice, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ethan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Le sérail, c’est juste un décor oriental pour faire exotique."
+      },
+      {
+       "qui": "Ethan",
+       "texte": "Non : c’est un modèle réduit du [[d|despotisme]] : Usbek y règne par la crainte, et tout s’écroule."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Mais Usbek est un philosophe de la liberté !"
+      },
+      {
+       "qui": "Ethan",
+       "texte": "Justement : ses idées s’arrêtent à la porte de chez lui."
+      }
+     ]
+    },
+    {
+     "id": "rox",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre de Roxane",
+     "blocs": [
+      "Roxane à Usbek.",
+      "Tu m’as laissée sous la garde de tes eunuques et tu as cru que la [[c|crainte]] suffisait à tenir un sérail. Elle ne tient qu’un temps. J’ai trahi ta confiance ; j’ai pris le poison. Quand tu liras cette lettre, je serai libre, et je ne t’ai jamais aimé."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Lettres persanes*"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui dit ce que le sérail représente en petit.",
+     "aide": "Ethan parle d’un pouvoir absolu qui s’exerce par la crainte.",
+     "explication": "Le sérail est un modèle réduit du **despotisme** : un pouvoir sans lois, qui finit par s’écrouler."
+    },
+    {
+     "type": "zone",
+     "document": "rox",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui dit sur quoi reposait le pouvoir d’Usbek dans le sérail.",
+     "aide": "Roxane dit que cela « ne tient qu’un temps ».",
+     "explication": "Usbek croyait la **crainte** suffisante pour tenir son sérail : c’est ce qui s’écroule."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : Usbek voyageur, ou Usbek chez lui ?",
+     "categories": [
+      "Le philosophe voyageur",
+      "Le despote du sérail"
+     ],
+     "items": [
+      [
+       "Il s’interroge sur la liberté avec ses amis",
+       0
+      ],
+      [
+       "Il observe les usages français depuis Paris",
+       0
+      ],
+      [
+       "Il fait garder ses femmes par des eunuques",
+       1
+      ],
+      [
+       "Il se fait obéir par la crainte",
+       1
+      ]
+     ],
+     "aide": "Distingue ce qu’il dit dans ses lettres à ses amis et ce qu’il impose dans son sérail.",
+     "explication": "Le **penseur** de la liberté s’interroge et observe ; le **despote** garde ses femmes et règne par la crainte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation le sérail permet-il d’appuyer ?",
+     "options": [
+      "La fiction peut critiquer le pouvoir sans l’attaquer de front",
+      "Un roman ne peut jamais porter de critique politique",
+      "Le despotisme est solide quand il repose sur la crainte",
+      "Le sérail est un simple décor sans lien avec la France"
+     ],
+     "reponse": 0,
+     "aide": "Le roman parle de la Perse, mais pense à la monarchie française.",
+     "explication": "Le sérail permet de parler du **pouvoir** et de la condition des femmes : la fiction porte une **critique politique** sans danger direct."
+    }
+   ]
+  },
+  {
+   "chapitre": "9fe9cd1b-9a25-5a09-8d19-926d111d5b19",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une mère, une fille, deux provinces",
+   "competence": "se-reperer-temps",
+   "situation": "Madame de Sévigné écrit à sa fille, Madame de Grignan, qui part vivre en Provence en 1671, au château de Grignan. Place les lieux et les dates de cette correspondance.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Entre Paris, les Rochers et Grignan",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "pa",
+       "lieu": "paris",
+       "nom": "Paris",
+       "symbole": "point"
+      },
+      {
+       "id": "ro",
+       "lon": -1.2,
+       "lat": 48.12,
+       "nom": "Les Rochers",
+       "symbole": "point"
+      },
+      {
+       "id": "gr",
+       "lon": 4.9,
+       "lat": 44.42,
+       "nom": "Grignan",
+       "symbole": "point"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        "paris",
+        [
+         4.9,
+         44.42
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "La vie et les lettres",
+     "debut": 1620,
+     "fin": 1730,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1626,
+       "nom": "Naissance"
+      },
+      {
+       "id": "dep",
+       "date": 1671,
+       "nom": "Fille partie"
+      },
+      {
+       "id": "mort",
+       "date": 1696,
+       "nom": "Mort"
+      },
+      {
+       "id": "pub",
+       "date": 1725,
+       "nom": "Publication"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "gr"
+     ],
+     "enonce": "Touche le lieu où vit Madame de Grignan, loin de sa mère.",
+     "aide": "C’est le point au bout de la flèche des lettres.",
+     "explication": "Madame de Grignan vit à **Grignan**, en Provence : c’est là que partent les lettres."
+    },
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année où les lettres commencent à être publiées.",
+     "aide": "Elles paraissent après la mort de leur autrice.",
+     "explication": "Les lettres sont publiées à partir de **1725**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort de Madame de Sévigné du début de la publication ?",
+     "reponse": 29,
+     "unite": "ans",
+     "aide": "Soustrais la date de sa mort à celle de la publication.",
+     "explication": "1725 − 1696 = **29 ans** : elle ne pensait pas être publiée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La plupart des lettres sont adressées à sa ___, Madame de ___, partie vivre en ___ en 1671.",
+     "reponses": [
+      [
+       "fille"
+      ],
+      [
+       "Grignan"
+      ],
+      [
+       "Provence"
+      ]
+     ],
+     "banque": [
+      "fille",
+      "cousine",
+      "Grignan",
+      "La Fayette",
+      "Provence",
+      "Bretagne"
+     ],
+     "aide": "Relis la situation : à qui écrit-elle ?",
+     "explication": "Elle écrit à sa **fille**, Madame de **Grignan**, partie vivre en **Provence** en 1671."
+    }
+   ]
+  },
+  {
+   "chapitre": "9fe9cd1b-9a25-5a09-8d19-926d111d5b19",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une nouvelle pour la poste",
+   "competence": "analyser-texte",
+   "situation": "Lis une lettre écrite pour l’exercice, dans l’esprit de Madame de Sévigné, qui raconte la mort de Vatel. Puis relève les traits de son style.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre à la manière de Madame de Sévigné",
+     "blocs": [
+      "Ma chère fille, je ne sais par où commencer, tant la [[n|nouvelle]] est affreuse.",
+      "Vatel, le maître d’hôtel, attendait la [[m|marée]] pour le grand dîner ; elle n’arrivait pas. Il a perdu la tête et s’est [[t|transpercé]] de son épée. Voyez comme on peut mourir d’un poisson !",
+      "Je vous embrasse mille fois, car vous me manquez à chaque ligne."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Madame de Sévigné"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit pourquoi Vatel perd la tête.",
+     "aide": "Il attendait un produit de la mer qui n’arrivait pas.",
+     "explication": "Vatel attend la **marée**, le poisson frais : elle n’arrive pas, et il perd la tête."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le verbe qui dit la mort de Vatel.",
+     "aide": "Il se jette sur son épée.",
+     "explication": "Vatel s’est **transpercé** de son épée : la nouvelle est grave, et dite sans détour."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait de style à son exemple dans la lettre.",
+     "paires": [
+      [
+       "Une annonce frappante",
+       "Je ne sais par où commencer, tant la nouvelle est affreuse"
+      ],
+      [
+       "Le passage du grave au léger",
+       "Voyez comme on peut mourir d’un poisson !"
+      ],
+      [
+       "Un ton affectueux",
+       "Vous me manquez à chaque ligne"
+      ]
+     ],
+     "aide": "Pour chaque phrase, demande-toi si elle annonce, plaisante ou parle à la fille.",
+     "explication": "L’**annonce frappante** ouvre la lettre ; le **grave au léger** vient avec la plaisanterie sur le poisson ; la fin est **affectueuse**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les lettres de Madame de Sévigné paraissent-elles si vivantes ?",
+     "options": [
+      "Elle écrit sans se relire et sans penser être publiée",
+      "Elle les a retravaillées pour la publication à Paris",
+      "Elle les écrit toujours dans le même ordre strict",
+      "Elle les fait relire par sa fille avant l’envoi"
+     ],
+     "reponse": 0,
+     "aide": "Elle écrit comme on converse.",
+     "explication": "Elle écrit **sans se relire** et **sans imaginer être publiée** : c’est ce qui rend ses lettres si vivantes, comme une conversation."
+    }
+   ]
+  },
+  {
+   "chapitre": "9fe9cd1b-9a25-5a09-8d19-926d111d5b19",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une lettre peut-elle être une œuvre ?",
+   "competence": "argumenter",
+   "situation": "Léa pense qu’une lettre privée n’est pas de la littérature. Karim n’est pas d’accord. Lis la phrase célèbre, leur débat, puis le tableau pour construire ta réponse.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une annonce célèbre",
+     "blocs": [
+      "Je m’en vais vous mander la chose la plus [[a|étonnante]], la plus [[a|surprenante]], la plus [[a|merveilleuse]], la plus [[a|miraculeuse]]…"
+     ],
+     "source": "Madame de Sévigné, lettre à Coulanges, 15 décembre 1670"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Une lettre privée, ce n’est pas de la littérature : elle l’écrit sans se relire."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Au contraire : c’est ce qui rend ses lettres si [[v|vivantes]]. Elle écrit comme on converse."
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Une lettre privée peut devenir une œuvre",
+       "Le ton oral donne de la vie à la nouvelle",
+       "?"
+      ],
+      [
+       "La lettre dit le XVIIe siècle par les détails",
+       "On y voit la cour de Louis XIV de très près",
+       "La mort de Vatel"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les quatre adjectifs qui annoncent la nouvelle.",
+     "aide": "Ils se suivent, tous au superlatif.",
+     "explication": "**Étonnante, surprenante, merveilleuse, miraculeuse** : l’accumulation prépare la nouvelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit cette accumulation d’adjectifs ?",
+     "options": [
+      "Elle retarde l’annonce et attise la curiosité du destinataire",
+      "Elle démontre une thèse philosophique par étapes",
+      "Elle prépare une réponse polie à une question reçue",
+      "Elle décrit en détail un événement déjà connu de tous"
+     ],
+     "reponse": 0,
+     "aide": "On attend la nouvelle, et elle n’arrive pas encore.",
+     "explication": "L’accumulation **retarde l’annonce** et **attise la curiosité** : on lit comme on écoute quelqu’un qui raconte."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot par lequel Karim défend la valeur de la spontanéité.",
+     "aide": "C’est ce que Léa voit comme un défaut, et Karim comme une qualité.",
+     "explication": "L’écriture sans retouche rend les lettres **vivantes** : c’est ce qui les fait entrer en littérature."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple, pris dans le premier document, faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La formule d’annonce « la chose la plus étonnante… »",
+      "Le procès de Fouquet suivi de près",
+      "Les foins et les paysans des Rochers",
+      "La santé et le temps qu’il fait aux Rochers"
+     ],
+     "reponse": 0,
+     "aide": "La case illustre le « ton oral » : cherche la phrase de la lettre qui parle comme on converse.",
+     "explication": "L’exemple du **ton oral** est la formule d’annonce : « la chose la plus étonnante… », une nouvelle dite comme à voix haute."
+    }
+   ]
+  }
+ ]
+}

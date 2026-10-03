@@ -1,0 +1,3663 @@
+{
+ "niveau": "1re",
+ "matiere": "nsi",
+ "exercices": [
+  {
+   "chapitre": "53b26f6c-f960-5e34-adc7-f3714b4fff47",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les quatre voyants de la serrure",
+   "competence": "calculer",
+   "situation": "Jade ouvre le coffre de son club d’informatique : la serrure affiche un nombre avec quatre voyants. Un voyant allumé vaut 1, un voyant éteint vaut 0, et chaque voyant a un poids.",
+   "documents": [
+    {
+     "id": "voyants",
+     "type": "tableau",
+     "titre": "L’afficheur de la serrure",
+     "colonnes": [
+      "Voyant",
+      "Poids 8",
+      "Poids 4",
+      "Poids 2",
+      "Poids 1"
+     ],
+     "lignes": [
+      [
+       "État (1 = allumé)",
+       1,
+       0,
+       1,
+       1
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Afficheur imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voyants",
+     "enonce": "Touche le voyant allumé qui a le plus grand poids.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Les poids décroissent de gauche à droite : cherche le premier 1 en partant de la gauche.",
+     "explication": "Le voyant de poids **8** est allumé : c’est le bit de poids fort, celui qui pèse le plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre décimal la serrure affiche-t-elle ?",
+     "reponse": 11,
+     "aide": "Additionne les poids des seuls voyants allumés.",
+     "explication": "Voyants allumés : 8, 2 et 1. 8 + 2 + 1 = **11**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour afficher le nombre 6, quelle ligne de voyants (poids 8, 4, 2, 1) faut-il obtenir ?",
+     "options": [
+      "0110",
+      "1100",
+      "0011",
+      "1001"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Décompose 6 en somme de poids : 6 = 4 + 2.",
+     "explication": "6 = 4 + 2 : seuls les voyants de poids 4 et 2 sont allumés, soit **0110**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de nombres différents (0 compris) les quatre voyants peuvent-ils afficher ?",
+     "reponse": 16,
+     "aide": "Chaque voyant a 2 états : multiplie 2 par lui-même quatre fois.",
+     "explication": "Avec n bits on code 2ⁿ valeurs : 2⁴ = **16** nombres, de 0 à 15."
+    }
+   ]
+  },
+  {
+   "chapitre": "53b26f6c-f960-5e34-adc7-f3714b4fff47",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le numéro du casier",
+   "competence": "calculer",
+   "situation": "Le casier numéro 45 doit être affiché sur un panneau à voyants. Anaïs convertit 45 en binaire par divisions successives par 2 et note ses calculs ; trois cases restent à compléter.",
+   "documents": [
+    {
+     "id": "div",
+     "type": "tableau",
+     "titre": "Les divisions d’Anaïs",
+     "colonnes": [
+      "Opération",
+      "Quotient",
+      "Reste"
+     ],
+     "lignes": [
+      [
+       "45 ÷ 2",
+       22,
+       1
+      ],
+      [
+       "22 ÷ 2",
+       11,
+       "?"
+      ],
+      [
+       "11 ÷ 2",
+       5,
+       1
+      ],
+      [
+       "5 ÷ 2",
+       "?",
+       1
+      ],
+      [
+       "2 ÷ 2",
+       1,
+       0
+      ],
+      [
+       "1 ÷ 2",
+       0,
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Calculs écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le reste de la division 22 ÷ 2 ?",
+     "reponse": 0,
+     "aide": "22 est-il pair ou impair ?",
+     "explication": "22 = 2 × 11 + 0 : le reste est **0**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le quotient de la division 5 ÷ 2 ?",
+     "reponse": 2,
+     "aide": "Combien de fois 2 tient-il entièrement dans 5 ?",
+     "explication": "5 = 2 × 2 + 1 : le quotient est **2**."
+    },
+    {
+     "type": "zone",
+     "document": "div",
+     "enonce": "Touche le reste qui donne le premier chiffre (à gauche) de l’écriture binaire de 45.",
+     "reponse": [
+      "r5c2"
+     ],
+     "aide": "Les restes se lisent de bas en haut.",
+     "explication": "On lit les restes **de bas en haut** : le dernier reste, celui de 1 ÷ 2, devient le chiffre de gauche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’écriture binaire de 45 ?",
+     "options": [
+      "101101",
+      "110101",
+      "101011",
+      "100111"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Lis la colonne des restes de bas en haut : 1, 0, 1, 1, 0, 1.",
+     "explication": "Restes lus de bas en haut : 1, 0, 1, 1, 0, 1, soit **101101**. Vérification : 32 + 8 + 4 + 1 = 45."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chiffres binaires (bits) compte l’écriture de 45 ?",
+     "reponse": 6,
+     "aide": "Une division = un reste = un bit.",
+     "explication": "Il y a 6 divisions donc 6 restes : l’écriture compte **6 bits**."
+    }
+   ]
+  },
+  {
+   "chapitre": "53b26f6c-f960-5e34-adc7-f3714b4fff47",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un mot, plusieurs lectures",
+   "competence": "analyser-document",
+   "situation": "Le logiciel de Malik reçoit le mot 01000001 sans aucune indication. Il doit aussi combiner deux mots de 4 bits, A et B, avec une addition et avec une opération logique.",
+   "documents": [
+    {
+     "id": "lectures",
+     "type": "tableau",
+     "titre": "Le mot 01000001 lu de trois façons",
+     "colonnes": [
+      "On le lit comme…",
+      "On obtient"
+     ],
+     "lignes": [
+      [
+       "un entier",
+       "65"
+      ],
+      [
+       "un caractère ASCII",
+       "la lettre A"
+      ],
+      [
+       "un pixel en niveaux de gris",
+       "une nuance de gris"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Valeurs usuelles du codage ASCII"
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Deux mots de 4 bits",
+     "colonnes": [
+      "Mot",
+      "Bit 3",
+      "Bit 2",
+      "Bit 1",
+      "Bit 0"
+     ],
+     "lignes": [
+      [
+       "A",
+       1,
+       0,
+       1,
+       1
+      ],
+      [
+       "B",
+       0,
+       1,
+       1,
+       0
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Mots écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lectures",
+     "enonce": "Touche la case qui dit ce que représente le mot lu comme un caractère ASCII.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « caractère ASCII ».",
+     "explication": "Lu comme caractère ASCII, 01000001 est **la lettre A**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui décide qu’un même mot de 8 bits est lu comme un entier plutôt que comme une lettre ?",
+     "options": [
+      "La convention du programme qui l’interprète",
+      "Le nombre de 1 présents dans le mot",
+      "La valeur du premier bit en partant de la gauche",
+      "La longueur du fichier qui contient le mot"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que contient le mot : y a-t-il une indication sur sa nature ?",
+     "explication": "Rien dans le mot ne dit ce qu’il représente : c’est la **convention du programme** qui l’interprète."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On additionne A et B comme des entiers. Quel est le résultat en décimal ?",
+     "reponse": 17,
+     "aide": "Convertis d’abord A et B en décimal avec les poids 8, 4, 2, 1.",
+     "explication": "A = 8 + 2 + 1 = 11 et B = 4 + 2 = 6. 11 + 6 = **17**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bits faut-il au minimum pour écrire cette somme en binaire ?",
+     "reponse": 5,
+     "aide": "Avec 4 bits on va jusqu’à 15 seulement.",
+     "explication": "17 dépasse 15, le maximum sur 4 bits. 17 = 10001 en binaire : il faut **5 bits** (la somme a produit une retenue)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que donne l’opération logique A ET B, bit à bit (sans retenue) ?",
+     "options": [
+      "0010",
+      "1111",
+      "1101",
+      "0100"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Pour chaque colonne, le résultat vaut 1 seulement si les DEUX bits valent 1.",
+     "explication": "Colonne par colonne : 1 ET 0 = 0, 0 ET 1 = 0, 1 ET 1 = 1, 1 ET 0 = 0. Résultat **0010**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c45be451-72c7-5d73-94fc-42ec8abb49c8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le film et la fibre",
+   "competence": "lire-tableau",
+   "situation": "Samia veut télécharger un film et comparer l’offre de fibre de son opérateur avec les unités de la taille du fichier. Elle ne confond plus kilooctet et kibioctet.",
+   "documents": [
+    {
+     "id": "multiples",
+     "type": "tableau",
+     "titre": "Les multiples de l’octet",
+     "colonnes": [
+      "Préfixe décimal",
+      "Valeur",
+      "Préfixe binaire",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "kilooctet (ko)",
+       "1 000 octets",
+       "kibioctet (Kio)",
+       "1 024 octets"
+      ],
+      [
+       "mégaoctet (Mo)",
+       "10⁶ octets",
+       "mébioctet (Mio)",
+       "2²⁰ octets"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Valeurs normalisées"
+    },
+    {
+     "id": "offre",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "OFFRE FIBRE",
+     "sousTitre": "Débit maximal annoncé",
+     "emoji": "📡",
+     "lignes": [
+      {
+       "texte": "Débit descendant",
+       "valeur": "400 Mb/s",
+       "id": "debit",
+       "gras": true
+      },
+      {
+       "texte": "Engagement",
+       "valeur": "12 mois"
+      }
+     ],
+     "pied": "Affiche écrite pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "multiples",
+     "enonce": "Touche la case qui donne la valeur d’un kibioctet.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Le kibioctet est un préfixe binaire : cherche « Kio ».",
+     "explication": "Un kibioctet vaut **1 024 octets** (2¹⁰), alors qu’un kilooctet vaut 1 000 octets."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’octets contient un fichier de 3 Kio ?",
+     "reponse": 3072,
+     "aide": "Multiplie 3 par la valeur d’un kibioctet.",
+     "explication": "3 × 1 024 = **3 072 octets**."
+    },
+    {
+     "type": "zone",
+     "document": "offre",
+     "enonce": "Touche la ligne de l’affiche qui est exprimée en bits par seconde.",
+     "reponse": [
+      "debit"
+     ],
+     "aide": "Regarde la lettre minuscule ou majuscule dans l’unité.",
+     "explication": "Le « b » minuscule de Mb/s désigne le **bit** : le débit est annoncé en mégabits par seconde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 400 Mb/s, combien de mégaoctets (Mo) arrivent au maximum par seconde ?",
+     "reponse": 50,
+     "unite": "Mo/s",
+     "aide": "Un octet vaut 8 bits : divise par 8.",
+     "explication": "400 ÷ 8 = **50 Mo/s** : un débit en Mb/s est huit fois plus grand que le même débit en Mo/s."
+    }
+   ]
+  },
+  {
+   "chapitre": "c45be451-72c7-5d73-94fc-42ec8abb49c8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La couleur du logo du club",
+   "competence": "calculer",
+   "situation": "Le club de robotique choisit pour son logo le code web #3C00FF : trois octets écrits en hexadécimal, pour le rouge, le vert et le bleu. Eliott veut le décoder et estimer le poids de l’image.",
+   "documents": [
+    {
+     "id": "couleur",
+     "type": "tableau",
+     "titre": "Le code #3C00FF découpé",
+     "colonnes": [
+      "Canal",
+      "Rouge",
+      "Vert",
+      "Bleu"
+     ],
+     "lignes": [
+      [
+       "Octet en hexadécimal",
+       "3C",
+       "00",
+       "FF"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Code choisi pour l’exercice"
+    },
+    {
+     "id": "hexa",
+     "type": "tableau",
+     "titre": "Un chiffre hexadécimal = quatre bits",
+     "colonnes": [
+      "Chiffre hexadécimal",
+      "Quatre bits"
+     ],
+     "lignes": [
+      [
+       "0",
+       "0000"
+      ],
+      [
+       "3",
+       "0011"
+      ],
+      [
+       "C",
+       "1100"
+      ],
+      [
+       "F",
+       "1111"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Extrait de la table de conversion"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couleur",
+     "enonce": "Touche le canal dont l’octet vaut 00 : la couleur éteinte.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche l’octet formé de deux zéros.",
+     "explication": "L’octet du vert est **00** : ce canal est éteint, la couleur est un mélange de rouge et de bleu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’écrit l’octet 3C du canal rouge en binaire (huit bits) ?",
+     "options": [
+      "00111100",
+      "11000011",
+      "00110011",
+      "11001100"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Remplace chaque chiffre hexadécimal par ses quatre bits, dans le même ordre.",
+     "explication": "3 donne 0011 et C donne 1100 : l’octet s’écrit **00111100**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur décimale de l’octet 3C ?",
+     "reponse": 60,
+     "aide": "Un chiffre hexadécimal de rang 1 pèse 16 : 3 × 16 + C, avec C = 12.",
+     "explication": "3 × 16 + 12 = 48 + 12 = **60**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une image du logo fait 200 pixels de large sur 100 de haut, à 3 octets par pixel. Quel est son poids brut, avant compression, en octets ?",
+     "reponse": 60000,
+     "unite": "octets",
+     "aide": "Largeur × hauteur × 3 octets.",
+     "explication": "200 × 100 × 3 = **60 000 octets**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c45be451-72c7-5d73-94fc-42ec8abb49c8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le café qui devient « cafÃ© »",
+   "competence": "analyser-document",
+   "situation": "Léa envoie un SMS à Tom. Son message est codé en UTF-8, mais le téléphone de Tom lit les octets avec une autre table de lecture : le « é » s’affiche mal.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "On se retrouve au café !"
+      },
+      {
+       "qui": "Tom",
+       "texte": "J’ai reçu : « On se retrouve au [[m|cafÃ©]] ! »"
+      }
+     ],
+     "source": "Échange écrit pour l’exercice"
+    },
+    {
+     "id": "octets",
+     "type": "tableau",
+     "titre": "Les octets du « é » en UTF-8, lus avec la mauvaise table",
+     "colonnes": [
+      "Octet (hexadécimal)",
+      "Caractère affiché"
+     ],
+     "lignes": [
+      [
+       "C3",
+       "Ã"
+      ],
+      [
+       "A9",
+       "©"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Table de lecture imaginée pour l’exercice, d’après le codage réel de « é » en UTF-8 (C3 A9)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot abîmé dans le message reçu par Tom.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Compare avec ce que Léa a écrit.",
+     "explication": "Le mot **cafÃ©** remplace « café » : les octets de « é » ont été mal interprétés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur combien d’octets le « é » est-il codé en UTF-8 ?",
+     "reponse": 2,
+     "unite": "octets",
+     "aide": "Compte les lignes du tableau.",
+     "explication": "Le tableau liste deux octets, C3 et A9 : le « é » occupe **2 octets** en UTF-8."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien de caractères parasites le « é » est-il remplacé dans le message de Tom ?",
+     "reponse": 2,
+     "aide": "Chaque octet est lu comme un caractère indépendant.",
+     "explication": "Chaque octet donne un caractère : « Ã » puis « © ». Le « é » devient **2 caractères**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’octets occupe le mot « café » en UTF-8, sachant que les lettres de l’alphabet latin non accentué tiennent sur un octet ?",
+     "reponse": 5,
+     "unite": "octets",
+     "aide": "c, a et f valent un octet chacun.",
+     "explication": "3 lettres ASCII × 1 octet + « é » sur 2 octets = **5 octets**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui est faux, ici : les octets envoyés, ou la façon de les lire ?",
+     "options": [
+      "La façon de les lire : l’octet est intact, c’est la table de lecture qui est erronée",
+      "Les octets envoyés : le réseau les a abîmés pendant le transport du message",
+      "Les deux : le téléphone de Léa et le réseau ont tous deux modifié le texte",
+      "Aucun des deux : le « é » n’a pas d’écriture binaire et ne peut pas être codé"
+     ],
+     "reponse": 0,
+     "aide": "Les mêmes octets, lus avec une autre table, donnent d’autres caractères.",
+     "explication": "Les octets sont **intacts** : ce sont les mêmes C3 et A9. Seule la table de lecture, donc l’encodage supposé par le téléphone de Tom, est fausse."
+    }
+   ]
+  },
+  {
+   "chapitre": "09fa54a0-678b-50c8-86bc-1bdfcea63801",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans les entrailles de la tablette",
+   "competence": "observer-schema",
+   "situation": "Noémie ouvre en pensée sa tablette pour comprendre ce qu’elle contient. Elle dessine les quatre grandes parties d’un ordinateur selon le modèle de von Neumann.",
+   "documents": [
+    {
+     "id": "von",
+     "type": "schema",
+     "titre": "L’architecture d’un ordinateur",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 140,
+       "h": 46,
+       "arrondi": 8,
+       "texte": "Commande",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "uc",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 20,
+       "l": 140,
+       "h": 46,
+       "arrondi": 8,
+       "texte": "Calcul (UAL)",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "ual",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 112,
+       "l": 300,
+       "h": 46,
+       "arrondi": 8,
+       "texte": "Mémoire",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "mem",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 196,
+       "l": 300,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Entrées-sorties",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "es",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        43
+       ],
+       "a": [
+        180,
+        43
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        66
+       ],
+       "a": [
+        90,
+        112
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        66
+       ],
+       "a": [
+        250,
+        112
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        158
+       ],
+       "a": [
+        170,
+        196
+       ],
+       "fleche": "deux"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "von",
+     "enonce": "Touche la partie qui effectue les calculs.",
+     "reponse": [
+      "ual"
+     ],
+     "aide": "UAL signifie unité arithmétique et logique.",
+     "explication": "C’est l’**unité arithmétique et logique** (UAL) qui calcule."
+    },
+    {
+     "type": "zone",
+     "document": "von",
+     "enonce": "Touche la partie qui contient à la fois le programme et les données.",
+     "reponse": [
+      "mem"
+     ],
+     "aide": "Programme et données partagent le même endroit : c’est l’idée décisive du modèle.",
+     "explication": "La **mémoire** contient à la fois les données et le programme."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque partie à son rôle.",
+     "paires": [
+      [
+       "Commande",
+       "Elle séquence les instructions"
+      ],
+      [
+       "Calcul (UAL)",
+       "Elle effectue les opérations"
+      ],
+      [
+       "Mémoire",
+       "Elle garde programme et données"
+      ],
+      [
+       "Entrées-sorties",
+       "Elles relient la machine au monde"
+      ]
+     ],
+     "aide": "Relis les noms des boîtes du schéma.",
+     "explication": "L’unité de commande séquence, l’UAL calcule, la mémoire stocke programme et données, les entrées-sorties relient la machine au monde extérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "09fa54a0-678b-50c8-86bc-1bdfcea63801",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le programme de la minuterie",
+   "competence": "raisonner",
+   "situation": "Un petit processeur de démonstration exécute un programme de quatre instructions rangées en mémoire. Il possède une case de travail, l’accumulateur, qui vaut 0 au départ. Maëlys suit le cycle charger, décoder, exécuter.",
+   "documents": [
+    {
+     "id": "memoire",
+     "type": "tableau",
+     "titre": "La mémoire du processeur de démonstration",
+     "colonnes": [
+      "Adresse",
+      "Instruction"
+     ],
+     "lignes": [
+      [
+       0,
+       "CHARGER 5"
+      ],
+      [
+       1,
+       "AJOUTER 3"
+      ],
+      [
+       2,
+       "DOUBLER"
+      ],
+      [
+       3,
+       "AFFICHER"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Mini-langage inventé pour l’exercice"
+    },
+    {
+     "id": "effets",
+     "type": "tableau",
+     "titre": "Ce que fait chaque instruction",
+     "colonnes": [
+      "Instruction",
+      "Effet sur l’accumulateur"
+     ],
+     "lignes": [
+      [
+       "CHARGER n",
+       "il prend la valeur n"
+      ],
+      [
+       "AJOUTER n",
+       "on lui ajoute n"
+      ],
+      [
+       "DOUBLER",
+       "on le multiplie par 2"
+      ],
+      [
+       "AFFICHER",
+       "sa valeur est écrite à l’écran"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Mini-langage inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "memoire",
+     "enonce": "Le compteur ordinal vaut 2. Touche la case de l’instruction qui va être chargée.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Le compteur ordinal contient l’adresse de la prochaine instruction.",
+     "explication": "À l’adresse 2 se trouve **DOUBLER** : c’est cette instruction que le processeur charge."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de l’accumulateur juste après l’instruction AJOUTER 3 ?",
+     "reponse": 8,
+     "aide": "Il valait 5 après CHARGER 5.",
+     "explication": "CHARGER 5 donne 5, puis AJOUTER 3 donne 5 + 3 = **8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel nombre le programme affiche-t-il à l’écran ?",
+     "reponse": 16,
+     "aide": "Double la valeur de l’accumulateur avant AFFICHER.",
+     "explication": "DOUBLER donne 8 × 2 = 16, et AFFICHER écrit **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le processeur est cadencé à 2 GHz et chaque instruction demande 4 cycles d’horloge. Combien d’instructions exécute-t-il par seconde ?",
+     "reponse": 500000000,
+     "aide": "2 GHz = 2 milliards de cycles par seconde.",
+     "explication": "2 000 000 000 cycles ÷ 4 cycles par instruction = **500 millions** d’instructions par seconde."
+    }
+   ]
+  },
+  {
+   "chapitre": "09fa54a0-678b-50c8-86bc-1bdfcea63801",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le jeu qui charge",
+   "competence": "analyser-document",
+   "situation": "Léo lance un jeu vidéo : le jeu est copié du SSD vers la mémoire vive avant de s’exécuter, puis le processeur travaille avec ses registres et son cache. Il veut comprendre pourquoi toutes ces mémoires coexistent.",
+   "documents": [
+    {
+     "id": "memoires",
+     "type": "tableau",
+     "titre": "Les mémoires d’un ordinateur",
+     "colonnes": [
+      "Mémoire",
+      "Temps d’accès",
+      "Capacité typique",
+      "Efface à l’arrêt ?"
+     ],
+     "lignes": [
+      [
+       "SSD",
+       "100 000 ns",
+       "1 To",
+       "non"
+      ],
+      [
+       "Registres",
+       "0,3 ns",
+       "quelques mots",
+       "oui"
+      ],
+      [
+       "Mémoire vive",
+       "100 ns",
+       "16 Go",
+       "oui"
+      ],
+      [
+       "Cache",
+       "2 ns",
+       "quelques Mo",
+       "oui"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Ordres de grandeur arrondis"
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le carnet de Léo",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "J’appuie sur « Jouer » : le jeu est d’abord copié du SSD dans la mémoire vive, puis le processeur en charge des morceaux dans son cache.",
+      "Quand j’éteins l’ordinateur, la mémoire vive se vide, mais mes parties sauvegardées sur le SSD sont toujours là."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces mémoires de la plus rapide à la plus lente.",
+     "items": [
+      "Registres",
+      "Cache",
+      "Mémoire vive",
+      "SSD"
+     ],
+     "aide": "Compare les temps d’accès : plus il est petit, plus la mémoire est rapide.",
+     "explication": "0,3 ns, 2 ns, 100 ns, 100 000 ns : **registres, cache, mémoire vive, SSD**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la mémoire vive est-elle plus rapide que le SSD ?",
+     "reponse": 1000,
+     "aide": "Divise le temps d’accès du SSD par celui de la mémoire vive.",
+     "explication": "100 000 ns ÷ 100 ns = **1 000** : la mémoire vive est environ mille fois plus rapide."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces mémoires selon qu’elles gardent ou non leur contenu quand la machine est éteinte.",
+     "categories": [
+      "Volatile",
+      "Persistante"
+     ],
+     "items": [
+      [
+       "Registres",
+       0
+      ],
+      [
+       "Cache",
+       0
+      ],
+      [
+       "Mémoire vive",
+       0
+      ],
+      [
+       "SSD",
+       1
+      ],
+      [
+       "Disque dur",
+       1
+      ]
+     ],
+     "aide": "Regarde la dernière colonne du tableau et le carnet de Léo.",
+     "explication": "Registres, cache et mémoire vive s’effacent à l’arrêt (**volatiles**) ; SSD et disque dur gardent leurs données (**persistants**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne met-on pas tout le jeu directement dans les registres, les plus rapides ?",
+     "options": [
+      "Plus une mémoire est rapide, plus elle coûte cher et plus elle est petite",
+      "Les registres sont persistants et ne peuvent plus être effacés une fois écrits",
+      "Les registres ne savent mémoriser que des lettres et jamais des nombres",
+      "Le processeur n’a pas le droit de lire dans ses propres registres"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne des capacités.",
+     "explication": "Les registres ne contiennent que quelques mots : la hiérarchie des mémoires est un compromis entre **vitesse, coût et taille**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b3a41d5-4016-5a4b-b56d-734107f3058d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois façons de dire la même chose",
+   "competence": "analyser-document",
+   "situation": "Hugo compare trois écritures d’un même ordre : mettre la valeur 97 dans un registre du processeur, d’abord en langage machine, puis en assembleur, enfin en langage de haut niveau.",
+   "documents": [
+    {
+     "id": "langages",
+     "type": "tableau",
+     "titre": "Un même ordre, trois langages",
+     "colonnes": [
+      "Langage",
+      "Écriture"
+     ],
+     "lignes": [
+      [
+       "Machine",
+       "10110000 01100001"
+      ],
+      [
+       "Assembleur",
+       "MOV AL, 61h"
+      ],
+      [
+       "Haut niveau",
+       "al = 97"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Exemple pour un processeur de la famille x86 ; 61h = 97 en décimal"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "langages",
+     "enonce": "Touche l’écriture que le processeur exécute réellement, sans aucune traduction.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le processeur ne comprend que le binaire.",
+     "explication": "Le **langage machine** est le binaire réellement exécuté."
+    },
+    {
+     "type": "zone",
+     "document": "langages",
+     "enonce": "Touche l’écriture qui remplace chaque instruction par un mot mnémonique.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "MOV est l’abréviation de « move », déplacer.",
+     "explication": "L’**assembleur** est la traduction lisible du langage machine : un mot mnémonique par instruction."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le même programme en langage machine ne tourne-t-il pas sur toutes les familles de processeurs ?",
+     "options": [
+      "Chaque famille de processeurs a son propre jeu d’instructions",
+      "Le binaire s’écrit différemment selon la couleur de la carte mère",
+      "Les processeurs récents refusent de lire du binaire trop ancien",
+      "Le langage machine ne contient que des lettres propres à une marque"
+     ],
+     "reponse": 0,
+     "aide": "Le jeu d’instructions est l’ensemble des instructions élémentaires qu’un processeur sait exécuter.",
+     "explication": "Le langage machine dépend du **jeu d’instructions** : un exécutable compilé est lié à une plateforme."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b3a41d5-4016-5a4b-b56d-734107f3058d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’erreur qui arrive en retard",
+   "competence": "programmer",
+   "situation": "Priya teste deux petits programmes Python. Le programme A contient une division par zéro au milieu ; le programme B oublie une parenthèse à la dernière ligne. Elle veut prévoir ce que chacun affiche avant de les lancer.",
+   "documents": [
+    {
+     "id": "a",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Programme A",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "print(\"début\")",
+      "total = 10",
+      "print(total)",
+      "print(total / 0)",
+      "print(\"fin\")"
+     ]
+    },
+    {
+     "id": "b",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Programme B",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "print(\"début\")",
+      "total = 10",
+      "print(total"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes le programme A affiche-t-il avant de s’arrêter sur une erreur ?",
+     "reponse": 2,
+     "aide": "Python exécute les lignes l’une après l’autre jusqu’à la division par zéro.",
+     "explication": "Python affiche **début** puis **10** ; la ligne 4 provoque l’erreur d’exécution, donc « fin » n’est jamais affiché."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes le programme B affiche-t-il ?",
+     "reponse": 0,
+     "aide": "Une erreur de syntaxe est détectée avant le lancement, même en Python.",
+     "explication": "L’erreur de syntaxe est détectée à l’analyse du fichier, avant la première exécution : **0 ligne** s’affiche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’erreur du programme A n’est-elle signalée qu’à la ligne 4 ?",
+     "options": [
+      "C’est une erreur d’exécution : elle n’apparaît que quand la ligne est atteinte",
+      "Python lit toujours les lignes dans un ordre aléatoire avant de choisir",
+      "Python ne détecte aucune erreur tant que le fichier n’est pas enregistré",
+      "La division par zéro est autorisée jusqu’à la quatrième ligne d’un fichier"
+     ],
+     "reponse": 0,
+     "aide": "Distingue une erreur de syntaxe d’une erreur d’exécution.",
+     "explication": "La syntaxe de la ligne 4 est correcte ; la division par zéro n’est détectée que **quand la ligne est atteinte**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à sa description.",
+     "paires": [
+      [
+       "Compilation",
+       "Traduit tout le programme avant l’exécution"
+      ],
+      [
+       "Interprétation",
+       "Traduit instruction par instruction, pendant l’exécution"
+      ],
+      [
+       "Erreur de syntaxe",
+       "Détectée avant le lancement"
+      ],
+      [
+       "Division par zéro",
+       "Détectée quand la ligne est atteinte"
+      ]
+     ],
+     "aide": "Reprends ce que tu viens d’observer sur A et B.",
+     "explication": "Compiler traduit tout avant ; interpréter traduit au fil de l’exécution ; la syntaxe est vérifiée avant, la division par zéro à l’exécution."
+    }
+   ]
+  },
+  {
+   "chapitre": "6b3a41d5-4016-5a4b-b56d-734107f3058d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le compte qui n’est jamais exact",
+   "competence": "raisonner",
+   "situation": "Samir écrit un petit programme pour vérifier une addition de prix. À son grand étonnement, ses tests d’égalité donnent des résultats inattendus. Il cherche à comprendre pourquoi, puis à écrire une comparaison fiable.",
+   "documents": [
+    {
+     "id": "flottants",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le test de Samir",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "a = 0.1 + 0.2",
+      "print(a == 0.3)",
+      "print(abs(a - 0.3) < 1e-9)"
+     ]
+    },
+    {
+     "id": "boucle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La somme de dix pas",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "s = 0",
+      "for i in range(10):",
+      "    s = s + 0.1",
+      "print(s == 1.0)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il à la ligne 2 du premier programme (print(a == 0.3)) ?",
+     "options": [
+      "False",
+      "True",
+      "0.3",
+      "Une erreur"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "0,1 + 0,2 ne donne pas exactement 0,3 en machine.",
+     "explication": "La somme vaut 0,30000000000000004 environ : l’égalité est fausse, Python affiche **False**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il à la ligne 3 du premier programme (la comparaison avec une tolérance) ?",
+     "options": [
+      "True",
+      "False",
+      "0.3",
+      "Une erreur"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "L’écart entre a et 0.3 est-il inférieur à 1e-9 ?",
+     "explication": "L’écart est de l’ordre de 5 × 10⁻¹⁷, très inférieur à 10⁻⁹ : Python affiche **True**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il à la fin du second programme (print(s == 1.0)) ?",
+     "options": [
+      "False",
+      "True",
+      "10",
+      "Une erreur"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Dix additions de 0,1 accumulent de petites erreurs.",
+     "explication": "La somme vaut 0,9999999999999999 : elle n’est pas égale à 1,0, Python affiche **False**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi 0,1 + 0,2 ne donne-t-il pas exactement 0,3 ?",
+     "options": [
+      "0,1 n’a pas d’écriture binaire finie : il est stocké de façon approchée",
+      "Python se trompe toujours dans les additions de nombres décimaux",
+      "Le résultat est arrondi au centième avant d’être comparé à 0,3",
+      "Les nombres décimaux ne sont jamais acceptés dans un programme"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’écriture de 1/3 en décimal : elle ne finit jamais.",
+     "explication": "Comme 1/3 en décimal, 0,1 s’écrit avec une **infinité de chiffres en binaire** : l’ordinateur le garde approché."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les lignes d’une fonction qui compare deux flottants comme à la ligne 3 du premier programme.",
+     "items": [
+      "def presque_egal(a, b):",
+      "ecart = a - b",
+      "ecart = abs(ecart)",
+      "return ecart < 1e-9"
+     ],
+     "aide": "On définit la fonction, on calcule l’écart, on prend sa valeur absolue, puis on le compare à la tolérance.",
+     "explication": "La fonction est définie, puis l’écart est calculé et passé en valeur absolue, avant d’être comparé à la **tolérance** 10⁻⁹."
+    }
+   ]
+  },
+  {
+   "chapitre": "2015778f-3989-5198-836a-def00516e7a2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui s’interpose entre le logiciel et la machine ?",
+   "competence": "observer-schema",
+   "situation": "Rayan ouvre un logiciel de dessin sur son ordinateur. Le logiciel ne connaît pas la marque du disque ni de l’imprimante : une couche du système s’occupe de tout.",
+   "documents": [
+    {
+     "id": "couches",
+     "type": "schema",
+     "titre": "Les couches d’un ordinateur",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 20,
+       "l": 260,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Applications",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "apps",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 100,
+       "l": 260,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Système d’exploitation",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "noyau",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 180,
+       "l": 260,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Matériel",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "materiel",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        70
+       ],
+       "a": [
+        170,
+        100
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        150
+       ],
+       "a": [
+        170,
+        180
+       ],
+       "fleche": "deux"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couches",
+     "enonce": "Touche la couche qui s’interpose entre les applications et le matériel.",
+     "reponse": [
+      "noyau"
+     ],
+     "aide": "C’est elle qui gère les processus, la mémoire, les fichiers et les périphériques.",
+     "explication": "Le **système d’exploitation** s’interpose entre le matériel et les applications : sans lui, chaque logiciel devrait connaître chaque composant."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fonction du système à ce qu’elle garantit.",
+     "paires": [
+      [
+       "Gérer les processus",
+       "L’illusion que tout tourne en même temps"
+      ],
+      [
+       "Gérer la mémoire",
+       "Un logiciel qui plante n’emporte pas la machine"
+      ],
+      [
+       "Gérer les fichiers",
+       "Une arborescence avec des droits par utilisateur"
+      ],
+      [
+       "Gérer les périphériques",
+       "Une interface uniforme grâce aux pilotes"
+      ]
+     ],
+     "aide": "Les quatre fonctions sont dans le cours.",
+     "explication": "Le système gère les **processus** (ordonnanceur), la **mémoire** (cloisonnement), les **fichiers** (arborescence, droits) et les **périphériques** (pilotes)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le logiciel de dessin veut enregistrer un fichier sur le disque. Comment accède-t-il au matériel ?",
+     "options": [
+      "Il demande un service au noyau : c’est un appel système",
+      "Il écrit directement sur les circuits du disque dur",
+      "Il demande l’accès à un autre logiciel de dessin",
+      "Il copie d’abord son code dans la mémoire du disque"
+     ],
+     "reponse": 0,
+     "aide": "Une application est en mode utilisateur : pas d’accès direct au matériel.",
+     "explication": "Une application en mode utilisateur ne touche pas le matériel : elle fait un **appel système**, une demande de service au noyau."
+    }
+   ]
+  },
+  {
+   "chapitre": "2015778f-3989-5198-836a-def00516e7a2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où est passée la photo de l’été ?",
+   "competence": "observer-schema",
+   "situation": "Jules cherche la photo « ete.jpg » sur son ordinateur. Il s’aide de l’arborescence de ses dossiers pour la retrouver et pour écrire son chemin.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "L’arborescence de l’ordinateur de Jules",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        38
+       ],
+       "a": [
+        80,
+        66
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        38
+       ],
+       "a": [
+        260,
+        66
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        92
+       ],
+       "a": [
+        80,
+        120
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        146
+       ],
+       "a": [
+        55,
+        174
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        146
+       ],
+       "a": [
+        175,
+        174
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        55,
+        200
+       ],
+       "a": [
+        60,
+        224
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        175,
+        200
+       ],
+       "a": [
+        175,
+        224
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 12,
+       "l": 50,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "/",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "racine",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 45,
+       "y": 66,
+       "l": 70,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "home",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "home"
+      },
+      {
+       "forme": "rect",
+       "x": 225,
+       "y": 66,
+       "l": 70,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "etc",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "etc"
+      },
+      {
+       "forme": "rect",
+       "x": 45,
+       "y": 120,
+       "l": 70,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "lea",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "lea"
+      },
+      {
+       "forme": "rect",
+       "x": 5,
+       "y": 174,
+       "l": 100,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "Documents",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "docs"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 174,
+       "l": 80,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "Photos",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "photos"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 224,
+       "l": 100,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "rapport.txt",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "rapport"
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 224,
+       "l": 80,
+       "h": 26,
+       "arrondi": 8,
+       "texte": "ete.jpg",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "ete"
+      }
+     ],
+     "source": "Arborescence inventée pour l’exercice : les rectangles jaunes sont des fichiers"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche le répertoire racine de l’arborescence.",
+     "reponse": [
+      "racine"
+     ],
+     "aide": "C’est le point de départ d’un chemin absolu.",
+     "explication": "La **racine**, notée /, contient tous les autres répertoires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le chemin absolu du fichier ete.jpg ?",
+     "options": [
+      "/home/lea/Photos/ete.jpg",
+      "/home/lea/Documents/ete.jpg",
+      "/etc/Photos/ete.jpg",
+      "/Photos/lea/home/ete.jpg"
+     ],
+     "reponse": 0,
+     "aide": "Un chemin absolu part de la racine et descend de répertoire en répertoire.",
+     "explication": "On part de la racine : home, puis lea, puis Photos, puis le fichier : **/home/lea/Photos/ete.jpg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de répertoires faut-il traverser, de la racine jusqu’au dossier qui contient ete.jpg ?",
+     "reponse": 3,
+     "aide": "Compte home, lea, et le dossier du fichier.",
+     "explication": "La racine mène à **home**, puis **lea**, puis **Photos** : trois répertoires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le répertoire courant est /home/lea. Quel chemin relatif désigne rapport.txt ?",
+     "options": [
+      "Documents/rapport.txt",
+      "/home/lea/Documents/rapport.txt",
+      "Photos/rapport.txt",
+      "home/Documents/rapport.txt"
+     ],
+     "reponse": 0,
+     "aide": "Un chemin relatif part du répertoire courant, sans la racine.",
+     "explication": "Depuis lea, on descend dans Documents : **Documents/rapport.txt**. Le chemin absolu serait /home/lea/Documents/rapport.txt."
+    },
+    {
+     "type": "choix",
+     "enonce": "Jules renomme ete.jpg en ete.txt. Que devient le contenu du fichier ?",
+     "options": [
+      "Il ne change pas : l’extension n’est qu’une convention de nom",
+      "Il est converti en texte par le système d’exploitation",
+      "Il est effacé, car un fichier texte ne contient pas d’image",
+      "Il est copié dans le répertoire racine par sécurité"
+     ],
+     "reponse": 0,
+     "aide": "Le système lit l’extension pour choisir l’application d’ouverture, rien de plus.",
+     "explication": "L’extension n’est qu’une **convention de nom** : les octets du fichier sont inchangés."
+    }
+   ]
+  },
+  {
+   "chapitre": "2015778f-3989-5198-836a-def00516e7a2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Gratuit, libre, simultané : trois idées reçues",
+   "competence": "analyser-document",
+   "situation": "Lina prépare un exposé sur les logiciels. Elle a relevé quatre logiciels fictifs et observe aussi comment le système donne la main à trois programmes à tour de rôle.",
+   "documents": [
+    {
+     "id": "logiciels",
+     "type": "tableau",
+     "titre": "Quatre logiciels fictifs",
+     "colonnes": [
+      "Logiciel",
+      "Prix",
+      "Code source",
+      "Droit de modifier et republier"
+     ],
+     "lignes": [
+      [
+       "Notia",
+       "gratuit",
+       "fermé",
+       "non"
+      ],
+      [
+       "Dessinix",
+       "15 €",
+       "ouvert",
+       "oui"
+      ],
+      [
+       "Vidéor",
+       "gratuit",
+       "ouvert",
+       "oui"
+      ],
+      [
+       "Sonore",
+       "40 €",
+       "fermé",
+       "non"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Logiciels inventés pour l’exercice"
+    },
+    {
+     "id": "tranches",
+     "type": "tableau",
+     "titre": "Qui a le processeur, tranche après tranche ?",
+     "colonnes": [
+      "Tranche de temps",
+      "Processus qui s’exécute"
+     ],
+     "lignes": [
+      [
+       "0 à 10 ms",
+       "A"
+      ],
+      [
+       "10 à 20 ms",
+       "B"
+      ],
+      [
+       "20 à 30 ms",
+       "C"
+      ],
+      [
+       "30 à 40 ms",
+       "A"
+      ],
+      [
+       "40 à 50 ms",
+       "B"
+      ],
+      [
+       "50 à 60 ms",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Ordonnancement écrit pour l’exercice : le système donne la main à tour de rôle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Trie ces logiciels selon qu’ils sont libres (code ouvert, modifiable, redistribuable) ou non.",
+     "categories": [
+      "Libre",
+      "Non libre"
+     ],
+     "items": [
+      [
+       "Notia",
+       1
+      ],
+      [
+       "Dessinix",
+       0
+      ],
+      [
+       "Vidéor",
+       0
+      ],
+      [
+       "Sonore",
+       1
+      ]
+     ],
+     "aide": "Un logiciel libre se reconnaît à ses libertés, pas à son prix.",
+     "explication": "**Dessinix** et **Vidéor** sont libres ; **Notia** et **Sonore** sont fermés."
+    },
+    {
+     "type": "zone",
+     "document": "logiciels",
+     "enonce": "Touche le logiciel qui prouve qu’un logiciel libre peut être payant.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche un prix non nul avec un code ouvert.",
+     "explication": "**Dessinix** coûte 15 € et son code est ouvert : libre ne veut pas dire gratuit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le logiciel Notia à propos de l’idée « gratuit veut dire libre » ?",
+     "options": [
+      "Qu’un logiciel gratuit peut avoir un code fermé",
+      "Qu’un logiciel gratuit est toujours modifiable",
+      "Qu’un logiciel fermé ne peut jamais être gratuit",
+      "Qu’un logiciel gratuit n’utilise aucun processus"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les colonnes « Prix » et « Code source » de Notia.",
+     "explication": "Notia est **gratuit mais fermé** : gratuit ne veut pas dire libre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel processus s’exécute pendant la tranche de 50 à 60 ms ?",
+     "options": [
+      "C",
+      "A",
+      "B",
+      "Aucun"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les processus se suivent dans le même ordre : A, B, puis ?",
+     "explication": "Les tranches suivent le cycle A, B, C : de 50 à 60 ms, c’est **C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le processus A termine sa tranche à 10 ms. Combien de millisecondes attend-il avant de reprendre le processeur ?",
+     "reponse": 20,
+     "unite": "ms",
+     "aide": "Regarde la prochaine ligne où A apparaît.",
+     "explication": "A reprend à 30 ms : il attend 30 − 10 = **20 ms**. Ces tranches très courtes donnent l’illusion que tout tourne en même temps."
+    }
+   ]
+  },
+  {
+   "chapitre": "26f0630d-db73-52ed-9c92-e3b79c2cb577",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le poste de travail du CDI",
+   "competence": "observer-schema",
+   "situation": "Au CDI du lycée, Chloé installe un poste de travail. Elle branche six périphériques sur l’unité centrale et se demande dans quel sens l’information circule pour chacun.",
+   "documents": [
+    {
+     "id": "bureau",
+     "type": "schema",
+     "titre": "Un poste de travail",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        55,
+        56
+       ],
+       "a": [
+        170,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        56
+       ],
+       "a": [
+        170,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        285,
+        56
+       ],
+       "a": [
+        170,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        55,
+        204
+       ],
+       "a": [
+        170,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        204
+       ],
+       "a": [
+        170,
+        150
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        285,
+        204
+       ],
+       "a": [
+        170,
+        150
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 110,
+       "l": 110,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Unité centrale",
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "uc"
+      },
+      {
+       "forme": "rect",
+       "x": 5,
+       "y": 20,
+       "l": 100,
+       "h": 36,
+       "arrondi": 8,
+       "texte": "Clavier",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "clavier",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 20,
+       "l": 100,
+       "h": 36,
+       "arrondi": 8,
+       "texte": "Micro",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "micro",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 235,
+       "y": 20,
+       "l": 100,
+       "h": 36,
+       "arrondi": 8,
+       "texte": "Haut-parleur",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "hp",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 5,
+       "y": 204,
+       "l": 100,
+       "h": 36,
+       "arrondi": 8,
+       "texte": "Imprimante",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "imprimante",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 204,
+       "l": 100,
+       "h": 36,
+       "arrondi": 8,
+       "texte": "Écran tactile",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "tactile",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 235,
+       "y": 204,
+       "l": 100,
+       "h": 36,
+       "arrondi": 8,
+       "texte": "Clé USB",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "usb",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bureau",
+     "enonce": "Touche les deux périphériques de sortie, ceux qui restituent des données au monde réel.",
+     "reponse": [
+      "hp",
+      "imprimante"
+     ],
+     "multiple": true,
+     "aide": "Une sortie produit du son, de l’image ou du papier à partir des données.",
+     "explication": "Le **haut-parleur** et l’**imprimante** sont des périphériques de sortie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque périphérique dans sa famille.",
+     "categories": [
+      "Entrée",
+      "Sortie",
+      "Entrée-sortie"
+     ],
+     "items": [
+      [
+       "Clavier",
+       0
+      ],
+      [
+       "Micro",
+       0
+      ],
+      [
+       "Haut-parleur",
+       1
+      ],
+      [
+       "Imprimante",
+       1
+      ],
+      [
+       "Écran tactile",
+       2
+      ],
+      [
+       "Clé USB",
+       2
+      ]
+     ],
+     "aide": "L’écran tactile affiche et capte le toucher ; la clé USB lit et écrit.",
+     "explication": "Clavier et micro **entrent** de l’information ; haut-parleur et imprimante **en sortent** ; écran tactile et clé USB font **les deux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le micro est-il un périphérique d’entrée ?",
+     "options": [
+      "Il convertit une grandeur du monde réel, le son, en données",
+      "Il convertit des données en ondes sonores audibles",
+      "Il stocke les données de façon permanente",
+      "Il relie deux ordinateurs entre eux par un câble"
+     ],
+     "reponse": 0,
+     "aide": "Pense au sens : du monde réel vers l’ordinateur.",
+     "explication": "Un périphérique d’**entrée** convertit une grandeur du monde réel (ici le son) en données pour l’ordinateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "26f0630d-db73-52ed-9c92-e3b79c2cb577",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Disque dur ou SSD pour la médiathèque ?",
+   "competence": "lire-tableau",
+   "situation": "Le club vidéo doit copier 120 Go de rushes sur un disque. Mathis compare un disque dur et un SSD d’après leur fiche technique.",
+   "documents": [
+    {
+     "id": "disques",
+     "type": "tableau",
+     "titre": "Deux supports de stockage",
+     "colonnes": [
+      "Support",
+      "Capacité",
+      "Prix",
+      "Débit de copie",
+      "Pièces mobiles"
+     ],
+     "lignes": [
+      [
+       "Disque dur",
+       "2 To",
+       "60 €",
+       "150 Mo/s",
+       "oui"
+      ],
+      [
+       "SSD",
+       "1 To",
+       "70 €",
+       "500 Mo/s",
+       "non"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Chiffres arrondis, fiches inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "disques",
+     "enonce": "Touche la case qui explique pourquoi le disque dur craint les chocs.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Cherche la colonne des pièces mobiles.",
+     "explication": "Le disque dur contient des **pièces mobiles** (plateaux et tête de lecture) : un choc peut les abîmer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix du disque dur par téraoctet ?",
+     "reponse": 30,
+     "unite": "€/To",
+     "aide": "Divise le prix par la capacité.",
+     "explication": "60 € ÷ 2 To = **30 € par To**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel inconvénient du SSD ressort du tableau ?",
+     "options": [
+      "Il coûte plus cher au téraoctet que le disque dur",
+      "Il est plus lent que le disque dur à la copie",
+      "Il perd son contenu quand on l’éteint à la prise",
+      "Il contient des plateaux qui tournent en permanence"
+     ],
+     "reponse": 0,
+     "aide": "Calcule aussi le prix du SSD par téraoctet : 70 € pour 1 To.",
+     "explication": "Le SSD coûte **70 € par To** contre 30 € pour le disque dur : plus rapide, mais plus cher au téraoctet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de secondes dure la copie des 120 Go sur le disque dur ? (on compte 1 Go = 1 000 Mo)",
+     "reponse": 800,
+     "unite": "s",
+     "aide": "120 Go = 120 000 Mo ; divise par le débit en Mo/s.",
+     "explication": "120 000 Mo ÷ 150 Mo/s = **800 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de secondes dure la même copie sur le SSD ?",
+     "reponse": 240,
+     "unite": "s",
+     "aide": "Même calcul avec 500 Mo/s.",
+     "explication": "120 000 Mo ÷ 500 Mo/s = **240 s** : plus de trois fois plus vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "26f0630d-db73-52ed-9c92-e3b79c2cb577",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le processeur qui guette le clavier",
+   "competence": "raisonner",
+   "situation": "Un processeur doit détecter les frappes sur un clavier. Dans un premier système, il va regarder lui-même si une touche est enfoncée, toutes les 10 ms. Dans un second, c’est le clavier qui le prévient.",
+   "documents": [
+    {
+     "id": "frappes",
+     "type": "tableau",
+     "titre": "Les trois frappes de Yanis",
+     "colonnes": [
+      "Frappe",
+      "Instant d’arrivée (ms)"
+     ],
+     "lignes": [
+      [
+       "Touche A",
+       12
+      ],
+      [
+       "Touche B",
+       25
+      ],
+      [
+       "Touche C",
+       31
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Chronologie inventée pour l’exercice"
+    },
+    {
+     "id": "systeme",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le système de scrutation",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le processeur vérifie le clavier aux instants 0, 10, 20, 30, 40 ms…",
+      "Chaque vérification lui coûte 5 µs de calcul, qu’une touche ait été frappée ou non. Une frappe n’est prise en compte qu’à la vérification suivante."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps la frappe B attend-elle avant d’être détectée par scrutation ?",
+     "reponse": 5,
+     "unite": "ms",
+     "aide": "Prochaine vérification après 25 ms ?",
+     "explication": "B arrive à 25 ms ; la prochaine vérification est à 30 ms : attente de **5 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’attente totale des trois frappes A, B et C ?",
+     "reponse": 22,
+     "unite": "ms",
+     "aide": "A arrive à 12 (vérifiée à 20), C arrive à 31 (vérifiée à 40).",
+     "explication": "A : 20 − 12 = 8 ms ; B : 5 ms ; C : 40 − 31 = 9 ms. Total **22 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de vérifications le processeur fait-il en une seconde, à raison d’une toutes les 10 ms ?",
+     "reponse": 100,
+     "aide": "1 s = 1 000 ms.",
+     "explication": "1 000 ms ÷ 10 ms = **100 vérifications** par seconde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de microsecondes de calcul par seconde sont consommées par ces vérifications, même si personne ne tape ?",
+     "reponse": 500,
+     "unite": "µs",
+     "aide": "100 vérifications de 5 µs.",
+     "explication": "100 × 5 µs = **500 µs** par seconde, dépensées pour rien quand aucune touche n’est frappée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le second système, quand le processeur apprend-il qu’une touche est frappée ?",
+     "options": [
+      "Tout de suite : le clavier envoie une interruption",
+      "À la prochaine vérification qu’il décide de faire",
+      "Seulement quand l’utilisateur relâche la touche",
+      "Quand la mémoire vive est pleine"
+     ],
+     "reponse": 0,
+     "aide": "Le périphérique demande l’attention du processeur.",
+     "explication": "Avec une **interruption**, le périphérique prévient lui-même le processeur : plus d’attente ni de vérifications inutiles."
+    }
+   ]
+  },
+  {
+   "chapitre": "944fa77d-2abd-5a1a-b241-8ceafcb4358c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est sur le même réseau qu’Inès ?",
+   "competence": "lire-tableau",
+   "situation": "Inès veut imprimer depuis son PC puis ouvrir un site web. Le masque de son réseau est 255.255.255.0 : les trois premiers octets d’une adresse désignent le réseau, le dernier la machine.",
+   "documents": [
+    {
+     "id": "machines",
+     "type": "tableau",
+     "titre": "Les machines concernées (masque 255.255.255.0)",
+     "colonnes": [
+      "Machine",
+      "Adresse IP"
+     ],
+     "lignes": [
+      [
+       "PC d’Inès",
+       "192.168.1.42"
+      ],
+      [
+       "Imprimante",
+       "192.168.1.10"
+      ],
+      [
+       "Box (passerelle)",
+       "192.168.1.1"
+      ],
+      [
+       "Serveur du site",
+       "203.0.113.5"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Adresses imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "machines",
+     "enonce": "Touche les deux machines que le PC d’Inès peut joindre directement, parce qu’elles sont sur son réseau.",
+     "reponse": [
+      "r1c0",
+      "r2c0"
+     ],
+     "multiple": true,
+     "aide": "Compare les trois premiers octets avec 192.168.1.",
+     "explication": "L’**imprimante** (192.168.1) et la **box** (192.168.1) partagent le réseau du PC ; le serveur du site est ailleurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui le PC d’Inès remet-il un paquet destiné au serveur du site ?",
+     "options": [
+      "À la passerelle, c’est-à-dire à la box",
+      "Directement au serveur, en cherchant son adresse MAC",
+      "À l’imprimante, qui la renvoie vers Internet",
+      "Au commutateur, qui connaît toutes les adresses IP"
+     ],
+     "reponse": 0,
+     "aide": "Le destinataire est-il sur le même réseau ?",
+     "explication": "Le serveur n’est pas sur le réseau local : on remet le paquet à la **passerelle**, qui est le routeur."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à sa description.",
+     "paires": [
+      [
+       "Adresse MAC",
+       "Gravée à la fabrication, valable sur le réseau local"
+      ],
+      [
+       "Adresse IP",
+       "Attribuée par le réseau, valable partout"
+      ],
+      [
+       "Masque",
+       "Sépare la partie réseau et la partie machine"
+      ],
+      [
+       "Passerelle",
+       "Remet les paquets destinés à d’autres réseaux"
+      ]
+     ],
+     "aide": "Pense à qui attribue chaque adresse.",
+     "explication": "La MAC est physique, l’IP logique ; le masque sépare réseau et machine ; la passerelle relie à l’extérieur."
+    }
+   ]
+  },
+  {
+   "chapitre": "944fa77d-2abd-5a1a-b241-8ceafcb4358c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du PC 1 au PC 3",
+   "competence": "observer-schema",
+   "situation": "Dans un lycée, deux réseaux sont reliés par un routeur. Alex, sur le PC 1, envoie un fichier au PC 2, puis un message au PC 3. Le masque de tous les réseaux est 255.255.255.0.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "schema",
+     "titre": "Deux réseaux reliés par un routeur",
+     "largeur": 340,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 2,
+       "y": 2,
+       "l": 336,
+       "h": 148,
+       "arrondi": 10,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 2,
+       "y": 228,
+       "l": 336,
+       "h": 70,
+       "arrondi": 10,
+       "teinte": "turquoise",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        49
+       ],
+       "a": [
+        150,
+        95
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        255,
+        49
+       ],
+       "a": [
+        190,
+        95
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        129
+       ],
+       "a": [
+        170,
+        175
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        209
+       ],
+       "a": [
+        170,
+        245
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 15,
+       "l": 150,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "PC 1 · 192.168.1.10",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "pc1"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 15,
+       "l": 150,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "PC 2 · 192.168.1.20",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "pc2"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 95,
+       "l": 140,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Commutateur",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "commut",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 143,
+       "texte": "Réseau 192.168.1.0",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 175,
+       "l": 150,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Routeur",
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "routeur",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 245,
+       "l": 150,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "PC 3 · 192.168.2.30",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "pc3"
+      },
+      {
+       "forme": "texte",
+       "x": 48,
+       "y": 262,
+       "texte": "Réseau 2",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice, masque 255.255.255.0"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche l’équipement qui relie les deux réseaux entre eux.",
+     "reponse": [
+      "routeur"
+     ],
+     "aide": "Il relie des réseaux différents, d’après l’adresse IP.",
+     "explication": "Le **routeur** relie des réseaux différents et choisit le prochain saut."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche l’équipement qui distribue les trames dans le réseau local d’après l’adresse MAC.",
+     "reponse": [
+      "commut"
+     ],
+     "aide": "Il travaille avec les adresses physiques.",
+     "explication": "Le **commutateur** distribue les trames dans un réseau local, d’après les adresses MAC."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour envoyer un paquet du PC 1 au PC 2, que fait le PC 1 ?",
+     "options": [
+      "Il parle directement au PC 2, qui est sur le même réseau",
+      "Il remet le paquet à la passerelle, qui le transmet",
+      "Il interroge le serveur DNS pour connaître le réseau",
+      "Il passe par le PC 3, qui joue le rôle de relais"
+     ],
+     "reponse": 0,
+     "aide": "Compare 192.168.1.10 et 192.168.1.20 avec le masque 255.255.255.0.",
+     "explication": "Les trois premiers octets sont identiques : le PC 2 est sur **le même réseau**, on lui parle directement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour envoyer un paquet du PC 1 au PC 3 (192.168.2.30), que fait le PC 1 ?",
+     "options": [
+      "Il remet le paquet à la passerelle, c’est-à-dire au routeur",
+      "Il parle directement au PC 3, en trouvant son adresse MAC",
+      "Il supprime le paquet, car un autre réseau est inaccessible",
+      "Il envoie le paquet à tous les PC du premier réseau"
+     ],
+     "reponse": 0,
+     "aide": "192.168.2 est-il égal à 192.168.1 ?",
+     "explication": "Le PC 3 est sur **un autre réseau** : le paquet est remis à la passerelle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un paquet part du PC 1 avec un TTL de 64 et traverse 3 routeurs avant d’arriver. Quel est son TTL à l’arrivée ?",
+     "reponse": 61,
+     "aide": "Le TTL est décrémenté à chaque routeur.",
+     "explication": "64 − 3 = **61**."
+    }
+   ]
+  },
+  {
+   "chapitre": "944fa77d-2abd-5a1a-b241-8ceafcb4358c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le voyage d’un paquet",
+   "competence": "raisonner",
+   "situation": "Un routeur du lycée consulte sa table de routage pour deux paquets : l’un vers un PC du laboratoire, l’autre vers un serveur lointain. Un troisième paquet voyage avec un TTL très faible.",
+   "documents": [
+    {
+     "id": "routage",
+     "type": "tableau",
+     "titre": "La table de routage du routeur",
+     "colonnes": [
+      "Destination",
+      "Prochain saut"
+     ],
+     "lignes": [
+      [
+       "Réseau 192.168.1.0 (masque 255.255.255.0)",
+       "livré directement"
+      ],
+      [
+       "Réseau 192.168.2.0 (masque 255.255.255.0)",
+       "10.0.0.2"
+      ],
+      [
+       "Tout autre réseau",
+       "10.0.0.1"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Table inventée pour l’exercice"
+    },
+    {
+     "id": "ttl",
+     "type": "tableau",
+     "titre": "Un paquet de TTL 3 traverse quatre routeurs",
+     "colonnes": [
+      "Passage",
+      "TTL du paquet en sortie"
+     ],
+     "lignes": [
+      [
+       "Départ du PC",
+       3
+      ],
+      [
+       "Routeur 1",
+       2
+      ],
+      [
+       "Routeur 2",
+       1
+      ],
+      [
+       "Routeur 3",
+       "?"
+      ],
+      [
+       "Routeur 4",
+       "—"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Trajet écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "routage",
+     "enonce": "Un paquet est destiné à 192.168.2.77. Touche la case qui donne le prochain saut choisi par le routeur.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "À quel réseau appartient 192.168.2.77 ?",
+     "explication": "192.168.2.77 est dans le réseau 192.168.2.0 : le prochain saut est **10.0.0.2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un paquet est destiné à 8.8.8.8, absent des deux premiers réseaux. Quel prochain saut le routeur choisit-il ?",
+     "options": [
+      "10.0.0.1",
+      "10.0.0.2",
+      "192.168.1.0",
+      "8.8.8.8"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde la dernière ligne de la table.",
+     "explication": "8.8.8.8 est dans « tout autre réseau » : le prochain saut est **10.0.0.1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le TTL du paquet en sortie du routeur 3 ?",
+     "reponse": 0,
+     "aide": "Il diminue de 1 à chaque routeur.",
+     "explication": "Le TTL passe de 1 à **0** à la sortie du routeur 3."
+    },
+    {
+     "type": "zone",
+     "document": "ttl",
+     "enonce": "Touche le routeur qui détruit le paquet, parce que son TTL est tombé à zéro.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Un paquet dont le TTL atteint zéro est détruit.",
+     "explication": "Le TTL atteint zéro au **routeur 3** : le paquet est détruit, il n’atteint jamais le routeur 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel problème le champ TTL évite-t-il ?",
+     "options": [
+      "Qu’un paquet mal routé tourne indéfiniment dans le réseau",
+      "Qu’un paquet soit lu par un autre ordinateur du réseau",
+      "Qu’un paquet arrive dans le désordre chez le destinataire",
+      "Qu’un paquet soit trop gros pour passer par un routeur"
+     ],
+     "reponse": 0,
+     "aide": "Le TTL limite le nombre de routeurs traversés.",
+     "explication": "Le TTL détruit un paquet qui a traversé trop de routeurs : il empêche un paquet **mal routé de tourner indéfiniment**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f56d2923-9ba1-592d-99f2-0670d90b4753",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le message qui ne répond pas",
+   "competence": "raisonner",
+   "situation": "Camille envoie un message à Théo par un réseau qui perd parfois des paquets. Elle attend un accusé de réception ; sans nouvelle avant la fin d’un délai de garde, elle renvoie le message.",
+   "documents": [
+    {
+     "id": "echange",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "env",
+       "texte": "Camille envoie le message",
+       "emoji": "✉️"
+      },
+      {
+       "id": "recu",
+       "texte": "Théo reçoit le message",
+       "emoji": "📥"
+      },
+      {
+       "id": "ack",
+       "texte": "Théo renvoie un accusé",
+       "emoji": "✅"
+      },
+      {
+       "id": "ok",
+       "texte": "Camille reçoit l’accusé",
+       "emoji": "📨"
+      }
+     ],
+     "liens": [
+      {
+       "de": "env",
+       "a": "recu"
+      },
+      {
+       "de": "recu",
+       "a": "ack"
+      },
+      {
+       "de": "ack",
+       "a": "ok"
+      }
+     ],
+     "titre": "Un échange sans perte",
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echange",
+     "enonce": "Touche l’étape qui permet à Camille de savoir que son message est bien arrivé.",
+     "reponse": [
+      "ok"
+     ],
+     "aide": "Camille n’est sûre de rien tant qu’elle n’a pas reçu une réponse.",
+     "explication": "C’est la **réception de l’accusé** qui prouve à Camille que le message est arrivé."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’accusé n’arrive pas avant la fin du délai de garde. Que fait Camille ?",
+     "options": [
+      "Elle renvoie le message",
+      "Elle envoie un message plus court",
+      "Elle attend sans fin l’accusé",
+      "Elle efface définitivement le message"
+     ],
+     "reponse": 0,
+     "aide": "Le délai de garde sert précisément à décider quand renvoyer.",
+     "explication": "Sans accusé avant le **délai de garde**, l’émetteur **retransmet** le message."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe ce qui se perd au problème créé.",
+     "paires": [
+      [
+       "Le message est perdu",
+       "Camille renvoie : c’est la bonne réaction"
+      ],
+      [
+       "L’accusé est perdu",
+       "Camille renvoie un message déjà reçu : Théo le compte deux fois"
+      ]
+     ],
+     "aide": "Dans les deux cas Camille ne reçoit rien, mais Théo n’a pas la même information.",
+     "explication": "Si le **message** se perd, la retransmission est correcte ; si l’**accusé** se perd, Théo reçoit le message **en double**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f56d2923-9ba1-592d-99f2-0670d90b4753",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’accusé qui s’est égaré",
+   "competence": "analyser-document",
+   "situation": "Un émetteur envoie deux messages à un récepteur avec le protocole du bit alterné : le premier porte le numéro 0, le suivant le numéro 1. Le journal ci-dessous a été relevé pendant l’échange.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Le journal de l’échange",
+     "colonnes": [
+      "Temps",
+      "Émetteur",
+      "Récepteur"
+     ],
+     "lignes": [
+      [
+       "1",
+       "envoie le message n° 0",
+       "reçoit n° 0, attendu : le garde et envoie ACK 0"
+      ],
+      [
+       "2",
+       "n’a rien reçu : le délai de garde court",
+       "(l’ACK 0 se perd en route)"
+      ],
+      [
+       "3",
+       "délai écoulé : renvoie le message n° 0",
+       "reçoit n° 0 : ?"
+      ],
+      [
+       "4",
+       "reçoit l’ACK 0 : envoie le message n° 1",
+       "reçoit n° 1, attendu : le garde et envoie ACK 1"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche la case où l’on apprend que l’accusé de réception s’est perdu.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la phrase entre parenthèses.",
+     "explication": "À l’instant 2, **l’ACK 0 se perd en route** : l’émetteur ne reçoit rien."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le message n° 0 a-t-il été envoyé sur le réseau ?",
+     "reponse": 2,
+     "aide": "Regarde les lignes 1 et 3 de la colonne Émetteur.",
+     "explication": "Une première fois à l’instant 1, puis une retransmission à l’instant 3 : **2 envois**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À l’instant 3, que fait le récepteur en recevant le message n° 0 alors qu’il attend le n° 1 ?",
+     "options": [
+      "Il jette le doublon et renvoie l’ACK 0",
+      "Il garde le message une seconde fois",
+      "Il ne répond pas et attend le message n° 1",
+      "Il demande à l’émetteur de recommencer depuis le début"
+     ],
+     "reponse": 0,
+     "aide": "Le numéro reçu est le précédent : le récepteur comprend que son accusé s’est perdu.",
+     "explication": "Le numéro reçu est **le précédent** : le récepteur jette le doublon et **réacquitte**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de messages différents le récepteur a-t-il gardés à la fin du journal ?",
+     "reponse": 2,
+     "aide": "Le doublon n’est pas gardé.",
+     "explication": "Il a gardé le message n° 0 (une seule fois) et le message n° 1 : **2 messages**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f56d2923-9ba1-592d-99f2-0670d90b4753",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "TCP, UDP et le téléchargement lent",
+   "competence": "analyser-document",
+   "situation": "Une plateforme choisit son protocole selon le service et cherche pourquoi un envoi message par message est lent. Maël compare les besoins de cinq applications, puis le débit du bit alterné et d’une fenêtre TCP.",
+   "documents": [
+    {
+     "id": "applis",
+     "type": "tableau",
+     "titre": "Les besoins de cinq applications",
+     "colonnes": [
+      "Application",
+      "Besoin principal"
+     ],
+     "lignes": [
+      [
+       "Téléchargement d’un fichier",
+       "Chaque octet doit arriver, dans l’ordre"
+      ],
+      [
+       "Appel vidéo en direct",
+       "Un paquet en retard est inutile"
+      ],
+      [
+       "Chargement d’une page web",
+       "Contenu complet et dans l’ordre"
+      ],
+      [
+       "Envoi d’un courriel",
+       "Aucune perte n’est admise"
+      ],
+      [
+       "Conversation vocale",
+       "Un paquet retransmis arriverait trop tard"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "debits",
+     "type": "tableau",
+     "titre": "Messages en vol sur un même lien",
+     "colonnes": [
+      "Protocole",
+      "Messages en vol",
+      "Taille d’un message",
+      "Aller-retour"
+     ],
+     "lignes": [
+      [
+       "Bit alterné",
+       1,
+       "1 000 octets",
+       "100 ms"
+      ],
+      [
+       "TCP, fenêtre de 10",
+       10,
+       "1 000 octets",
+       "100 ms"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Valeurs choisies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Choisis le protocole adapté à chaque application.",
+     "categories": [
+      "TCP",
+      "UDP"
+     ],
+     "items": [
+      [
+       "Téléchargement d’un fichier",
+       0
+      ],
+      [
+       "Appel vidéo en direct",
+       1
+      ],
+      [
+       "Chargement d’une page web",
+       0
+      ],
+      [
+       "Envoi d’un courriel",
+       0
+      ],
+      [
+       "Conversation vocale",
+       1
+      ]
+     ],
+     "aide": "Pour la voix et la vidéo en direct, un paquet retransmis arrive trop tard pour être joué.",
+     "explication": "**TCP** pour ce qui ne tolère aucune perte (fichier, page web, courriel) ; **UDP** pour la voix et la vidéo en direct, où le retard est pire que la perte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le bit alterné, un seul message de 1 000 octets circule par aller-retour de 100 ms. Quel est le débit utile, en octets par seconde ?",
+     "reponse": 10000,
+     "unite": "octets/s",
+     "aide": "Combien d’allers-retours en une seconde ?",
+     "explication": "10 allers-retours par seconde × 1 000 octets = **10 000 octets/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec une fenêtre de 10 messages en vol, quel est le débit utile, en octets par seconde ?",
+     "reponse": 100000,
+     "unite": "octets/s",
+     "aide": "Même calcul, mais 10 messages par aller-retour.",
+     "explication": "10 allers-retours × 10 messages × 1 000 octets = **100 000 octets/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fenêtre TCP accélère-t-elle le transfert, par rapport au bit alterné ?",
+     "options": [
+      "Plusieurs messages sont en vol en même temps",
+      "Elle supprime les accusés de réception, qui ralentissent tout",
+      "Elle remplace l’adresse IP par une adresse plus courte",
+      "Elle permet de ne plus jamais retransmettre un message perdu"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne « Messages en vol » des deux lignes.",
+     "explication": "Des numéros de séquence **longs** permettent plusieurs messages en vol : le canal n’attend plus chaque accusé avant d’envoyer la suite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi n’utilise-t-on pas UDP pour télécharger un fichier ?",
+     "options": [
+      "UDP ne garantit ni l’arrivée, ni l’ordre des paquets",
+      "UDP est plus lent que TCP sur tous les réseaux",
+      "UDP ne sait pas envoyer plus de dix octets",
+      "UDP exige un compte chez le fournisseur d’accès"
+     ],
+     "reponse": 0,
+     "aide": "Chaque octet du fichier doit arriver, dans l’ordre.",
+     "explication": "UDP n’offre **aucune garantie** : un fichier téléchargé exige que chaque octet arrive, dans l’ordre, donc TCP."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b0944ea-299a-57f2-acd4-2e2058b22b24",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La recherche de Zoé",
+   "competence": "analyser-document",
+   "situation": "Zoé tape « chat » dans la barre de recherche d’un site. Son navigateur envoie une requête au serveur, qui renvoie une réponse. Voici les premières lignes des deux messages.",
+   "documents": [
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La requête du navigateur",
+     "auteur": "Requête écrite pour l’exercice",
+     "blocs": [
+      "GET /recherche?mot=chat HTTP/1.1",
+      "Host: www.exemple.fr"
+     ]
+    },
+    {
+     "id": "rep",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La réponse du serveur",
+     "auteur": "Réponse écrite pour l’exercice",
+     "blocs": [
+      "HTTP/1.1 200 OK",
+      "Content-Type: text/html"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quelle méthode HTTP le navigateur utilise-t-il ? (un seul mot)",
+     "reponse": [
+      "GET",
+      "get"
+     ],
+     "aide": "C’est le premier mot de la requête.",
+     "explication": "La requête commence par **GET** : les paramètres sont placés dans l’URL."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où voit-on le mot cherché, « chat », dans cette requête ?",
+     "options": [
+      "Dans l’URL, après le point d’interrogation",
+      "Dans le corps de la requête, caché de l’URL",
+      "Dans la deuxième ligne, celle du nom du serveur",
+      "Il n’apparaît pas : c’est le serveur qui le devine"
+     ],
+     "reponse": 0,
+     "aide": "Lis la première ligne de la requête.",
+     "explication": "Avec GET, les données passent **dans l’URL** : « ?mot=chat »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le code de statut renvoyé par le serveur ?",
+     "reponse": 200,
+     "aide": "Regarde la première ligne de la réponse.",
+     "explication": "Le code **200** signifie « succès »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui prend l’initiative de cet échange ?",
+     "options": [
+      "Le client : le navigateur de Zoé",
+      "Le serveur, qui devine ce que Zoé veut",
+      "Les deux, en même temps",
+      "Le routeur placé entre eux"
+     ],
+     "reponse": 0,
+     "aide": "Le serveur ne fait que répondre.",
+     "explication": "Dans le modèle client-serveur, c’est **toujours le client** qui demande."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b0944ea-299a-57f2-acd4-2e2058b22b24",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les requêtes d’une seule page",
+   "competence": "lire-tableau",
+   "situation": "Emma ouvre la page d’accueil d’un site de recettes. Les outils de développement de son navigateur affichent la liste des requêtes envoyées pour la construire.",
+   "documents": [
+    {
+     "id": "requetes",
+     "type": "tableau",
+     "titre": "Le journal du navigateur",
+     "colonnes": [
+      "N°",
+      "Ressource demandée",
+      "Code de statut"
+     ],
+     "lignes": [
+      [
+       1,
+       "/index.html",
+       200
+      ],
+      [
+       2,
+       "/style.css",
+       200
+      ],
+      [
+       3,
+       "/logo.png",
+       200
+      ],
+      [
+       4,
+       "/vieille-image.png",
+       404
+      ],
+      [
+       5,
+       "/ancienne-page",
+       301
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de requêtes HTTP ont été nécessaires pour construire cette page ?",
+     "reponse": 5,
+     "aide": "Compte les lignes du journal.",
+     "explication": "Chaque ressource (page, style, image…) demande sa requête : **5 requêtes**."
+    },
+    {
+     "type": "zone",
+     "document": "requetes",
+     "enonce": "Touche le code qui signale une ressource introuvable.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "C’est le code le plus célèbre des erreurs du web.",
+     "explication": "Le code **404** signifie « ressource introuvable »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de requêtes ont réussi, c’est-à-dire ont un code de statut commençant par 2 ?",
+     "reponse": 3,
+     "aide": "Cherche les codes 200.",
+     "explication": "Les requêtes 1, 2 et 3 renvoient 200 : **3 requêtes** ont réussi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le code 301 de la dernière ligne ?",
+     "options": [
+      "Une redirection vers une autre adresse",
+      "Une erreur interne du serveur",
+      "Un accès interdit à la ressource",
+      "Un succès sans contenu renvoyé"
+     ],
+     "reponse": 0,
+     "aide": "Les codes qui commencent par 3 sont des redirections.",
+     "explication": "Les codes **301 et 302** sont des redirections : la ressource a changé d’adresse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le 404 signale une faute de quel côté ?",
+     "options": [
+      "Du client : il a demandé une ressource absente",
+      "Du serveur : il est tombé en panne",
+      "Du réseau : un câble a été débranché",
+      "Du navigateur : il a mal affiché la page"
+     ],
+     "reponse": 0,
+     "aide": "Le premier chiffre situe la faute : 4 pour le client, 5 pour le serveur.",
+     "explication": "Un code commençant par **4** est une faute du client (ici une ressource demandée qui n’existe pas)."
+    }
+   ]
+  },
+  {
+   "chapitre": "1b0944ea-299a-57f2-acd4-2e2058b22b24",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le mot de passe qui voyage à découvert",
+   "competence": "raisonner",
+   "situation": "Léa écrit le formulaire de connexion de son site, puis observe les requêtes d’un visiteur d’une page à l’autre. Elle découvre deux choses : où vont les données, et comment le site reconnaît Léa.",
+   "documents": [
+    {
+     "id": "form",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le formulaire de connexion",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "<form action=\"/connexion\" method=\"get\">",
+      "  <input name=\"id\">",
+      "  <input name=\"mdp\" type=\"password\">",
+      "  <button>Entrer</button>",
+      "</form>"
+     ]
+    },
+    {
+     "id": "cookies",
+     "type": "tableau",
+     "titre": "Trois requêtes successives",
+     "colonnes": [
+      "Requête",
+      "Cookie envoyé",
+      "Réponse du serveur"
+     ],
+     "lignes": [
+      [
+       "1",
+       "aucun",
+       "page de connexion ; dépose le cookie session=k7"
+      ],
+      [
+       "2",
+       "session=k7",
+       "« Bonjour Léa ! »"
+      ],
+      [
+       "3",
+       "aucun (navigation privée)",
+       "« Connectez-vous »"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Après la validation du formulaire, où apparaît le mot de passe saisi ?",
+     "options": [
+      "Dans l’URL, l’historique et les journaux du serveur",
+      "Dans le corps de la requête, invisible dans l’URL",
+      "Nulle part, car le champ est de type password",
+      "Dans le cookie, que seul le serveur peut lire"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la valeur de method.",
+     "explication": "Avec **GET**, les champs passent dans l’URL : le mot de passe se retrouve dans l’URL, l’historique et les journaux du serveur."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle valeur faut-il donner à l’attribut method pour que les données passent dans le corps de la requête ?",
+     "reponse": [
+      "post",
+      "POST"
+     ],
+     "aide": "C’est l’autre méthode HTTP, celle des formulaires qui modifient.",
+     "explication": "La méthode **POST** place les données dans le corps de la requête."
+    },
+    {
+     "type": "zone",
+     "document": "cookies",
+     "enonce": "Touche la réponse où le serveur reconnaît Léa.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Quelle requête envoie un cookie ?",
+     "explication": "À la requête 2, le navigateur renvoie le cookie **session=k7** : le serveur sait que c’est Léa."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le serveur ne reconnaît-il pas Léa à la requête 3 ?",
+     "options": [
+      "Aucun cookie n’est envoyé, et HTTP est sans état",
+      "Le serveur a oublié l’adresse IP de Léa pendant la nuit",
+      "La navigation privée a supprimé le mot de passe",
+      "Le cadenas du navigateur n’était pas affiché"
+     ],
+     "reponse": 0,
+     "aide": "HTTP ne garde aucun souvenir d’une requête à l’autre.",
+     "explication": "HTTP est **sans état** : sans cookie, le serveur ne se souvient de rien."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le navigateur de Léa affiche un cadenas HTTPS. Que cela garantit-il ?",
+     "options": [
+      "La confidentialité et l’identité du serveur, pas son honnêteté",
+      "L’honnêteté du site, qui ne peut pas être frauduleux",
+      "L’absence de cookies dans toutes les requêtes",
+      "La même chose que le code de statut 200"
+     ],
+     "reponse": 0,
+     "aide": "Un site frauduleux peut aussi afficher un cadenas.",
+     "explication": "HTTPS chiffre l’échange et authentifie le serveur par un certificat ; il **ne garantit pas l’honnêteté** du site."
+    }
+   ]
+  },
+  {
+   "chapitre": "10f1cbac-9c1d-59a3-abe7-410bcc60f1f1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois langages dans la page de Samia",
+   "competence": "analyser-document",
+   "situation": "Samia construit la page d’accueil de son club. Elle y trouve trois extraits de code écrits dans trois langages différents, chacun avec son rôle.",
+   "documents": [
+    {
+     "id": "extraits",
+     "type": "tableau",
+     "titre": "Trois extraits de la page",
+     "colonnes": [
+      "Extrait",
+      "Code"
+     ],
+     "lignes": [
+      [
+       "1",
+       "<h1>Bienvenue</h1>"
+      ],
+      [
+       "2",
+       "h1 { color: violet; }"
+      ],
+      [
+       "3",
+       "bouton.onclick = bonjour;"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Extraits écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "extraits",
+     "enonce": "Touche l’extrait écrit en HTML.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Il utilise des balises entre chevrons.",
+     "explication": "L’extrait 1 est du **HTML** : une balise de titre décrit la structure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel langage est écrit l’extrait 2, qui change la couleur du titre ?",
+     "options": [
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "Python"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Il s’occupe de l’apparence : couleurs, polices, marges.",
+     "explication": "Le **CSS** décrit la présentation d’une page."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait à son rôle.",
+     "paires": [
+      [
+       "Extrait 1",
+       "La structure et le sens : un titre"
+      ],
+      [
+       "Extrait 2",
+       "La présentation : la couleur"
+      ],
+      [
+       "Extrait 3",
+       "Le comportement : réagir à un clic"
+      ]
+     ],
+     "aide": "HTML, CSS et JavaScript ont chacun un rôle distinct.",
+     "explication": "**HTML** : structure ; **CSS** : présentation ; **JavaScript** : comportement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi sépare-t-on la structure, la présentation et le comportement ?",
+     "options": [
+      "Pour changer l’apparence sans toucher au contenu",
+      "Pour que la page se charge plus lentement",
+      "Pour qu’un seul langage puisse tout faire",
+      "Pour empêcher le navigateur de lire la page"
+     ],
+     "reponse": 0,
+     "aide": "Pense au site qui change de thème sans changer ses textes.",
+     "explication": "Cette séparation permet de **changer toute l’apparence sans toucher au contenu**, et aide l’accessibilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "10f1cbac-9c1d-59a3-abe7-410bcc60f1f1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La liste de courses dans le navigateur",
+   "competence": "observer-schema",
+   "situation": "Pierre écrit une liste de courses en HTML. Le navigateur la transforme en un arbre d’objets, le DOM, que JavaScript peut modifier pour ajouter un article sans recharger la page.",
+   "documents": [
+    {
+     "id": "html",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le code HTML de la liste",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "<body>",
+      "  <h1>Courses</h1>",
+      "  <ul>",
+      "    <li>Pomme</li>",
+      "    <li>Poire</li>",
+      "  </ul>",
+      "</body>"
+     ]
+    },
+    {
+     "id": "dom",
+     "type": "schema",
+     "titre": "L’arbre du DOM",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        43
+       ],
+       "a": [
+        65,
+        85
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        43
+       ],
+       "a": [
+        245,
+        85
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        113
+       ],
+       "a": [
+        190,
+        160
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        113
+       ],
+       "a": [
+        285,
+        160
+       ]
+      },
+      {
+       "forme": "rect",
+       "x": 135,
+       "y": 15,
+       "l": 70,
+       "h": 28,
+       "arrondi": 8,
+       "texte": "body",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "body"
+      },
+      {
+       "forme": "rect",
+       "x": 35,
+       "y": 85,
+       "l": 60,
+       "h": 28,
+       "arrondi": 8,
+       "texte": "h1",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "h1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 85,
+       "l": 60,
+       "h": 28,
+       "arrondi": 8,
+       "texte": "ul",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "ul",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 160,
+       "l": 80,
+       "h": 28,
+       "arrondi": 8,
+       "texte": "li : Pomme",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "li1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 245,
+       "y": 160,
+       "l": 80,
+       "h": 28,
+       "arrondi": 8,
+       "texte": "li : Poire",
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "li2",
+       "zone": true
+      }
+     ],
+     "source": "Arbre déduit du code ci-contre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dom",
+     "enonce": "Touche l’élément parent des deux éléments li.",
+     "reponse": [
+      "ul"
+     ],
+     "aide": "Dans le code, les li sont à l’intérieur d’une autre balise.",
+     "explication": "Les deux li sont des enfants de **ul**, la liste."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’éléments l’arbre contient-il, body compris ?",
+     "reponse": 5,
+     "aide": "Compte les rectangles du schéma.",
+     "explication": "body, h1, ul et les deux li : **5 éléments**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pierre veut qu’un clic sur un bouton ajoute un article. Quel mécanisme associe la fonction à l’action de l’utilisateur ?",
+     "options": [
+      "Un gestionnaire d’événement",
+      "Une feuille de style CSS",
+      "Un code de statut HTTP",
+      "Un cookie"
+     ],
+     "reponse": 0,
+     "aide": "Un événement est une action détectable, comme un clic.",
+     "explication": "Un **gestionnaire d’événement** est une fonction appelée quand l’événement se produit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après l’ajout d’un troisième article par JavaScript, combien d’enfants l’élément ul possède-t-il ?",
+     "reponse": 3,
+     "aide": "Il en avait deux au départ.",
+     "explication": "JavaScript modifie l’arbre du DOM : ul a maintenant **3 enfants**."
+    }
+   ]
+  },
+  {
+   "chapitre": "10f1cbac-9c1d-59a3-abe7-410bcc60f1f1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La validation que l’on contourne",
+   "competence": "raisonner",
+   "situation": "Un site d’inscription contient un champ « âge » vérifié par le navigateur. Karim relève quatre envois reçus un soir et se demande ce que la validation côté client protège vraiment.",
+   "documents": [
+    {
+     "id": "champ",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le champ du formulaire",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "<input name=\"age\" type=\"number\" min=\"0\" max=\"120\">"
+     ]
+    },
+    {
+     "id": "envois",
+     "type": "tableau",
+     "titre": "Quatre envois",
+     "colonnes": [
+      "Envoi",
+      "Passe par la page ?",
+      "Arrive au serveur ?",
+      "Valeur envoyée"
+     ],
+     "lignes": [
+      [
+       "Formulaire de la page",
+       "oui",
+       "oui",
+       "15"
+      ],
+      [
+       "Formulaire de la page",
+       "oui",
+       "non (bloqué par le navigateur)",
+       "150"
+      ],
+      [
+       "Requête écrite à la main",
+       "non",
+       "oui",
+       "-5"
+      ],
+      [
+       "Programme d’un pirate",
+       "non",
+       "oui",
+       "abc"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "envois",
+     "enonce": "Touche les deux valeurs invalides qui ont quand même atteint le serveur.",
+     "reponse": [
+      "r2c3",
+      "r3c3"
+     ],
+     "multiple": true,
+     "aide": "Regarde les envois qui ne passent pas par la page.",
+     "explication": "**-5** et **abc** sont arrivés au serveur : ces requêtes n’ont pas traversé la page."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de requêtes sur quatre arrivent au serveur ?",
+     "reponse": 3,
+     "aide": "Une seule est bloquée.",
+     "explication": "Seule la requête de 150 est bloquée par le navigateur : **3 requêtes** arrivent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la validation du navigateur ne protège-t-elle pas le serveur ?",
+     "options": [
+      "N’importe qui peut envoyer la requête sans passer par la page",
+      "Le navigateur refuse toujours toutes les valeurs",
+      "Le serveur ne peut pas lire les requêtes valides",
+      "Les champs de type number sont interdits sur un serveur"
+     ],
+     "reponse": 0,
+     "aide": "Compare les envois 3 et 4 avec le formulaire.",
+     "explication": "Le code côté client est sous le contrôle du visiteur : une validation y est **un confort, jamais une sécurité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où faut-il vérifier la valeur de l’âge pour être en sécurité ?",
+     "options": [
+      "Côté serveur, à la réception de la requête",
+      "Côté client, avec un script plus long",
+      "Dans l’historique du navigateur du visiteur",
+      "Dans la feuille de style de la page"
+     ],
+     "reponse": 0,
+     "aide": "Le serveur est le seul lieu sûr, et le seul qui accède aux données.",
+     "explication": "Toute donnée reçue doit être **revérifiée côté serveur**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Sous quelle clé le serveur lira-t-il la valeur de ce champ ? (un mot)",
+     "reponse": [
+      "age",
+      "âge"
+     ],
+     "aide": "Regarde l’attribut name.",
+     "explication": "L’attribut **name** devient la clé : le serveur lira la valeur sous « age »."
+    }
+   ]
+  }
+ ]
+}

@@ -87,7 +87,7 @@ export default function OuvrirCoffre({ pret }: { pret: CoffrePret }) {
 
   return (
     <div className={styles.pret}>
-      <CoffreDessin ouvert className={styles.pretCoffre} />
+      <CoffreDessin niveau={pret.niveau} ouvert className={styles.pretCoffre} />
       <div className="min-w-0 flex-1">
         <p className="font-heading text-[15px] leading-tight font-extrabold">Ton coffre est ouvert&nbsp;!</p>
         <p className="text-xs font-bold text-foreground/75">
@@ -101,9 +101,9 @@ export default function OuvrirCoffre({ pret }: { pret: CoffrePret }) {
       <Feuille open={ouverte} onClose={fermer} label={`Coffre d’équipe, niveau ${pret.niveau}`}>
         <div className={cn(styles.ouvertureScene, 'flex flex-col items-center gap-3 pt-4 text-center')}>
           {resultat?.ok ? (
-            <CoffreDessin ouvert className={cn('size-32', styles.ouverture)} />
+            <CoffreDessin niveau={pret.niveau} ouvert className={cn('size-32', styles.ouverture)} />
           ) : (
-            <CoffreDessin className={cn('size-32', pending && styles.secoue)} />
+            <CoffreDessin niveau={pret.niveau} className={cn('size-32', pending && styles.secoue)} />
           )}
 
           {resultat === null || pending ? (

@@ -201,6 +201,15 @@ export function annee(n: number, court = false): string {
 }
 
 /** Un nombre écrit à la française (virgule, espace fine des milliers). */
+/**
+ * Une coordonnée calculée (cosinus, sinus) écrite dans la page, au centième.
+ * Node et le navigateur ne rendent pas toujours le même dernier chiffre : sans
+ * arrondi, le HTML du serveur ne correspondait plus à l'hydratation.
+ */
+export function coord(n: number): number {
+  return Math.round(n * 100) / 100
+}
+
 export function nombreFr(n: number): string {
   const arrondi = Math.round(n * 1000) / 1000
   const [e, d] = String(Math.abs(arrondi)).split('.')

@@ -1,0 +1,864 @@
+{
+ "niveau": "1re",
+ "matiere": "llcer-anglais",
+ "exercices": [
+  {
+   "chapitre": "795921cd-11c1-5ccd-9590-25c30806702d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une frise pour l’exposition « Monsters »",
+   "competence": "se-reperer-temps",
+   "situation": "La médiathèque prépare une exposition sur les monstres de la littérature anglaise. Sam doit placer les grands romans gothiques sur une frise et ne pas confondre les dates ni les auteurs.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Four Gothic landmarks",
+     "debut": 1750,
+     "fin": 1900,
+     "pas": 25,
+     "evenements": [
+      {
+       "id": "otranto",
+       "date": 1764,
+       "nom": "The Castle of Otranto"
+      },
+      {
+       "id": "frank",
+       "date": 1818,
+       "nom": "Frankenstein"
+      },
+      {
+       "id": "jekyll",
+       "date": 1886,
+       "nom": "Jekyll and Hyde"
+      },
+      {
+       "id": "dracula",
+       "date": 1897,
+       "nom": "Dracula"
+      }
+     ],
+     "source": "Dates de première publication"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche **le roman qui lance le genre gothique**, le plus ancien de la frise.",
+     "reponse": [
+      "otranto"
+     ],
+     "aide": "Cherche le point le plus à gauche : c’est le roman publié en premier.",
+     "explication": "*The Castle of Otranto* (1764, Horace Walpole) est le premier roman gothique : c’est le point **le plus à gauche** de la frise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication de *Frankenstein* de celle de *Dracula* ?",
+     "unite": "ans",
+     "reponse": 79,
+     "aide": "Lis les deux dates sur la frise, puis soustrais la plus ancienne de la plus récente.",
+     "explication": "*Dracula* paraît en 1897 et *Frankenstein* en 1818 : 1897 − 1818 = **79 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque roman à son auteur.",
+     "paires": [
+      [
+       "Frankenstein",
+       "Mary Shelley"
+      ],
+      [
+       "Dracula",
+       "Bram Stoker"
+      ],
+      [
+       "Dr Jekyll and Mr Hyde",
+       "Robert Louis Stevenson"
+      ],
+      [
+       "The Picture of Dorian Gray",
+       "Oscar Wilde"
+      ]
+     ],
+     "aide": "Frankenstein est le seul de la liste écrit par une autrice.",
+     "explication": "**Frankenstein** : Mary Shelley (1818) ; **Dracula** : Bram Stoker (1897) ; **Dr Jekyll and Mr Hyde** : Stevenson (1886) ; **Dorian Gray** : Oscar Wilde (1890)."
+    }
+   ]
+  },
+  {
+   "chapitre": "795921cd-11c1-5ccd-9590-25c30806702d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le manuscrit de Hollowmere",
+   "competence": "analyser-texte",
+   "situation": "Le club de lecture lit un court texte gothique écrit pour l’occasion. Léa doit y retrouver les motifs du genre et repérer comment l’auteur prépare la peur.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "The Hollowmere manuscript",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Nobody in Hollowmere spoke of the old [[l|castle]] after dark. Its ruined towers stood above the village, and the children said that a family [[c|curse]] kept the house empty.",
+      "One winter evening, the steward found a [[m|manuscript]] in the [[l|cellar]]. Its author was unknown, and its last page was torn. He read it by candlelight, and the portrait on the stairs seemed to watch him.",
+      "Little did he know that this was the last quiet evening of his life."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche **les deux mots qui nomment les lieux clos et inquiétants** du récit.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Un château et un souterrain : cherche un bâtiment et une pièce sous le sol.",
+     "explication": "Le **castle** et la **cellar** sont les lieux typiques du roman gothique : des espaces clos, anciens, dont on ne sort pas facilement."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche **le mot qui désigne le motif dont on ne peut pas vérifier l’origine**.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Il s’agit d’un écrit retrouvé, dont l’auteur est inconnu.",
+     "explication": "Le **manuscript** retrouvé est un motif classique : on ne sait pas qui l’a écrit, donc on ne peut pas vérifier le récit."
+    },
+    {
+     "type": "choix",
+     "enonce": "La phrase « Little did he know that this was the last quiet evening of his life. » est un exemple de…",
+     "options": [
+      "foreshadowing",
+      "unreliable narrator",
+      "free indirect speech",
+      "serialisation"
+     ],
+     "reponse": 0,
+     "aide": "Le narrateur annonce discrètement ce qui va arriver.",
+     "explication": "Le narrateur annonce un malheur à venir sans le décrire : c’est du **foreshadowing**, l’annonce discrète d’un événement futur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque motif gothique à ce qu’il produit.",
+     "paires": [
+      [
+       "Le château, le souterrain",
+       "L’espace clos dont on ne sort pas"
+      ],
+      [
+       "Le portrait animé",
+       "Le passé qui revient"
+      ],
+      [
+       "Le manuscrit retrouvé",
+       "Un récit dont on ne peut vérifier l’origine"
+      ],
+      [
+       "La malédiction familiale",
+       "La faute qui se transmet"
+      ]
+     ],
+     "aide": "Pense à ce que chaque motif fait ressentir au lecteur : enfermement, retour, doute, héritage.",
+     "explication": "Le **château** enferme ; le **portrait** fait revenir le passé ; le **manuscrit** rend le récit invérifiable ; la **malédiction** fait payer aux enfants la faute des parents."
+    }
+   ]
+  },
+  {
+   "chapitre": "795921cd-11c1-5ccd-9590-25c30806702d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La lettre du créateur et le tableau des monstres",
+   "competence": "argumenter",
+   "situation": "Pour un exposé, Inès croise deux documents : une lettre imaginée dans l’esprit de *Frankenstein* et un tableau qui compare quatre monstres gothiques. Elle veut comprendre d’où vient la peur dans chaque œuvre.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "A letter from the creator",
+     "auteur": "Texte écrit pour l’exercice, à la manière de Mary Shelley",
+     "blocs": [
+      "My dear Margaret,",
+      "I have done what no man had done: I gave life to a creature made of dead matter. He opened his eyes, and I [[a|fled]] the room. I told myself that he would die, or vanish, or that I had dreamed him.",
+      "But he lived. He learned our language alone, in the woods, and he came back to me with no weapon except his voice. He asked for a name, a companion, a place among men. I [[a|refused]] him everything, and I [[a|abandoned]] him to the woods, and called it prudence.",
+      "I did not make him cruel. I made him alone; the cruelty came after."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Four Gothic monsters",
+     "colonnes": [
+      "Work",
+      "Author",
+      "Date",
+      "What the monster reveals"
+     ],
+     "lignes": [
+      [
+       "Frankenstein",
+       "Mary Shelley",
+       1818,
+       "A creature made by science"
+      ],
+      [
+       "Dr Jekyll and Mr Hyde",
+       "R. L. Stevenson",
+       1886,
+       "The hidden side of a respectable man"
+      ],
+      [
+       "The Picture of Dorian Gray",
+       "Oscar Wilde",
+       1890,
+       "A portrait that ages in the man’s place"
+      ],
+      [
+       "Dracula",
+       "Bram Stoker",
+       1897,
+       "Fear of the foreigner and of contagion"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche **les trois mots qui montrent comment le créateur traite sa créature**.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche trois verbes qui disent le rejet : fuir, refuser, laisser seul.",
+     "explication": "**fled**, **refused**, **abandoned** : le créateur fuit, refuse et abandonne. C’est cet abandon qui, dans le roman, rend le monstre cruel."
+    },
+    {
+     "type": "choix",
+     "document": "lettre",
+     "enonce": "Selon la lettre, pourquoi la créature devient-elle cruelle ?",
+     "options": [
+      "Parce qu’elle est née mauvaise",
+      "Parce que son créateur l’a abandonnée",
+      "Parce qu’une malédiction pèse sur sa famille",
+      "Parce qu’elle a lu un manuscrit maudit"
+     ],
+     "reponse": 1,
+     "aide": "Relis la dernière phrase : « I did not make him cruel. I made him alone. »",
+     "explication": "Le créateur dit lui-même : « I made him alone ; the cruelty came after ». La créature ne naît pas mauvaise : elle le **devient d’être abandonnée**."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "enonce": "Touche **le titre de l’œuvre que cette lettre imite**.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Une créature faite de matière morte, un créateur qui s’enfuit : cherche l’œuvre où le monstre est fabriqué.",
+     "explication": "La lettre imite **Frankenstein** : une créature fabriquée à partir de matière morte, puis abandonnée par son créateur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication de *Frankenstein* de celle de *The Picture of Dorian Gray* ?",
+     "unite": "ans",
+     "reponse": 72,
+     "aide": "Lis les deux dates dans la colonne « Date » du tableau.",
+     "explication": "1890 − 1818 = **72 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion de l’exposé d’Inès.",
+     "texte": "Le monstre de Shelley ne naît pas mauvais : il le devient parce qu’il est ___ par son créateur. Le roman pose donc la question de la ___ du créateur.",
+     "reponses": [
+      [
+       "abandonné",
+       "abandonnee",
+       "abandonnée"
+      ],
+      [
+       "responsabilité",
+       "responsabilite"
+      ]
+     ],
+     "banque": [
+      "abandonné",
+      "responsabilité",
+      "félicité",
+      "punition",
+      "malédiction"
+     ],
+     "aide": "Reprends les mots de la lettre : le créateur « abandoned » sa créature.",
+     "explication": "Le monstre est **abandonné** par son créateur ; le roman interroge donc sa **responsabilité** : le créateur répond-il de ce qu’il a fabriqué ?"
+    }
+   ]
+  },
+  {
+   "chapitre": "b504aa24-0f02-59e4-9167-e2d99b083b61",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La bibliothèque du club de lecture",
+   "competence": "lire-tableau",
+   "situation": "Le club de lecture du lycée a commencé une étagère de romans du XIXe siècle. Samir doit lire sa fiche récapitulative, puis relier les romans de Dickens à ce qu’ils dénoncent.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Our reading list",
+     "colonnes": [
+      "Novel",
+      "Author",
+      "Year"
+     ],
+     "lignes": [
+      [
+       "Pride and Prejudice",
+       "Jane Austen",
+       1813
+      ],
+      [
+       "Jane Eyre",
+       "Charlotte Brontë",
+       1847
+      ],
+      [
+       "Wuthering Heights",
+       "Emily Brontë",
+       1847
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Dates de première publication"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "enonce": "Touche **les deux dates identiques** : deux romans sont parus la même année.",
+     "multiple": true,
+     "reponse": [
+      "r1c2",
+      "r2c2"
+     ],
+     "aide": "Parcours la colonne « Year » : deux cases ont la même valeur.",
+     "explication": "*Jane Eyre* (Charlotte) et *Wuthering Heights* (Emily) paraissent **tous deux en 1847**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Pride and Prejudice* de *Jane Eyre* ?",
+     "unite": "ans",
+     "reponse": 34,
+     "aide": "Soustrais la plus petite année de la plus grande.",
+     "explication": "1847 − 1813 = **34 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque roman de Dickens à ce qu’il met en accusation.",
+     "paires": [
+      [
+       "Oliver Twist",
+       "Les workhouses et le sort des orphelins"
+      ],
+      [
+       "Hard Times",
+       "La ville industrielle et l’utilitarisme"
+      ],
+      [
+       "Great Expectations",
+       "L’argent qui fabrique un gentleman"
+      ]
+     ],
+     "aide": "*Hard Times* signifie « temps difficiles » : pense à l’industrie.",
+     "explication": "**Oliver Twist** dénonce les workhouses ; **Hard Times** la ville industrielle et l’utilitarisme ; **Great Expectations** l’argent qui fabrique un gentleman."
+    }
+   ]
+  },
+  {
+   "chapitre": "b504aa24-0f02-59e4-9167-e2d99b083b61",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le village de Netherby",
+   "competence": "analyser-texte",
+   "situation": "Nina étudie un texte écrit dans l’esprit des romans de Jane Austen. Elle doit y repérer l’argent, comprendre l’ironie du narrateur et revoir les notions du chapitre.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "The gentleman of Netherby",
+     "auteur": "Texte écrit pour l’exercice, à la manière de Jane Austen",
+     "blocs": [
+      "It was generally agreed in the village of Netherby that Mr Ashworth, who had lately [[m|inherited]] four thousand pounds a year, could not possibly remain single. Mrs Pole, who had five daughters and a very small [[m|income]], agreed with the village most warmly; indeed, she had agreed with it for three weeks, which is the length of time Mr Ashworth had been in the neighbourhood.",
+      "Her eldest daughter, who was thought to have a good heart and no [[m|fortune]], was therefore taught to smile more often. It was observed by all that she smiled very prettily whenever Mr Ashworth’s carriage was in sight."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche **les trois mots qui parlent d’argent** et montrent que le mariage est aussi un marché.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Cherche ce qu’on reçoit en héritage, ce qu’on gagne et ce qu’on possède.",
+     "explication": "**inherited**, **income**, **fortune** : l’argent est au cœur de la conversation du village, bien avant les sentiments."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait le narrateur avec la phrase « she had agreed with it for three weeks, which is the length of time Mr Ashworth had been in the neighbourhood » ?",
+     "options": [
+      "Il se moque de la hâte de Mrs Pole à épouser l’avis du village",
+      "Il admire la patience de Mrs Pole, qui attend depuis longtemps",
+      "Il note simplement une durée, sans aucun jugement sur elle",
+      "Il s’emporte contre l’avis du village tout entier"
+     ],
+     "reponse": 0,
+     "aide": "Trois semaines : c’est exactement le temps depuis lequel Mr Ashworth est arrivé.",
+     "explication": "Le narrateur fait comme si l’opinion de Mrs Pole était ancienne, alors qu’elle date de l’arrivée du riche célibataire : c’est de l’**ironie**, qui laisse le lecteur conclure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que suggère l’expression « a good heart and no fortune » sur le mariage dans cette société ?",
+     "options": [
+      "Un bon cœur pèse moins lourd qu’une fortune pour se marier",
+      "Les bons cœurs sont très rares dans les petits villages",
+      "La fortune vient toujours de la bonté du cœur",
+      "L’héroïne refusera d’épouser un homme riche"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que la fille doit faire : sourire davantage dès que la voiture du riche apparaît.",
+     "explication": "La jeune fille a des qualités, mais pas d’argent : on lui apprend donc à sourire. Le **mariage est un marché** autant qu’un sentiment."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion du chapitre à sa définition.",
+     "paires": [
+      [
+       "Irony",
+       "Dire le contraire de ce qu’on affirme"
+      ],
+      [
+       "Free indirect speech",
+       "Les pensées d’un personnage rapportées sans verbe introducteur"
+      ],
+      [
+       "Entail",
+       "Une substitution successorale qui prive les filles de l’héritage"
+      ],
+      [
+       "Serialisation",
+       "La publication d’un roman par épisodes"
+      ]
+     ],
+     "aide": "« Entail » est le mot qui explique pourquoi les filles n’héritent pas.",
+     "explication": "**Irony** : dire le contraire ; **free indirect speech** : discours indirect libre ; **entail** : substitution successorale ; **serialisation** : publication en feuilletons."
+    }
+   ]
+  },
+  {
+   "chapitre": "b504aa24-0f02-59e4-9167-e2d99b083b61",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une gouvernante écrit à son employeur",
+   "competence": "analyser-document",
+   "situation": "Dans un exposé sur la société victorienne, Yanis croise une lettre imaginée dans l’esprit de *Jane Eyre* et le tableau des romans de Dickens. Il cherche ce qui les rapproche.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "A governess writes",
+     "auteur": "Texte écrit pour l’exercice, à la manière de Charlotte Brontë",
+     "blocs": [
+      "Sir,",
+      "I [[w|earn]] twenty pounds a year, and you [[w|pay]] me to teach your daughters, not to agree with you. I came to this house as a governess, poor and unknown, and I will not be treated as a piece of furniture. My [[w|wages]] buy my work. They do not buy my opinions, nor my silence.",
+      "I ask only to be spoken to as an equal in conscience, if not in rank.",
+      "Yours, E. M."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "dickens",
+     "type": "tableau",
+     "titre": "Three novels by Dickens",
+     "colonnes": [
+      "Novel",
+      "What it accuses"
+     ],
+     "lignes": [
+      [
+       "Oliver Twist",
+       "The workhouses and the fate of orphans"
+      ],
+      [
+       "Hard Times",
+       "The industrial town and utilitarianism"
+      ],
+      [
+       "Great Expectations",
+       "Money that makes a gentleman"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "D’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche **les trois mots qui montrent que la narratrice dépend de l’argent d’un employeur**.",
+     "reponse": [
+      "w"
+     ],
+     "aide": "Un verbe pour ce qu’elle gagne, un verbe pour ce qu’on lui verse, un nom pour son salaire.",
+     "explication": "**earn**, **pay**, **wages** : elle vit de son salaire, donc elle dépend de celui qui l’emploie. C’est ce qui rend sa revendication plus forte."
+    },
+    {
+     "type": "choix",
+     "document": "lettre",
+     "enonce": "À quel roman des sœurs Brontë cette lettre fait-elle le plus penser ?",
+     "options": [
+      "*Jane Eyre*",
+      "*Wuthering Heights*",
+      "*Pride and Prejudice*",
+      "*Great Expectations*"
+     ],
+     "reponse": 0,
+     "aide": "Une héroïne pauvre, gouvernante, exige d’être traitée en égale : lequel des quatre romans est de Charlotte Brontë ?",
+     "explication": "*Jane Eyre* (Charlotte Brontë, 1847) met en scène une héroïne pauvre qui **exige d’être traitée en égale**. *Wuthering Heights* est d’Emily et brise la linéarité du récit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que la lettre et les trois romans de Dickens du tableau ont en commun ?",
+     "options": [
+      "L’argent et le rang social pèsent sur la vie des héros",
+      "Ils sont tous racontés par un narrateur à la première personne",
+      "Ils racontent tous un mariage heureux entre deux familles",
+      "Ils se passent tous dans un vieux château hanté"
+     ],
+     "reponse": 0,
+     "aide": "Relis les colonnes « What it accuses » : cherche le point commun avec « wages » et « rank ».",
+     "explication": "La gouvernante lutte contre la dépendance de l’argent ; Dickens attaque workhouses, industrie et argent qui fabrique un gentleman. Dans tous les cas, **l’argent et la classe sociale** pèsent sur la vie des personnages."
+    },
+    {
+     "type": "association",
+     "enonce": "Quel roman de Dickens choisirais-tu pour illustrer chaque situation ?",
+     "paires": [
+      [
+       "Un enfant orphelin envoyé dans un workhouse",
+       "Oliver Twist"
+      ],
+      [
+       "Une ville d’usines où seuls comptent les faits et le profit",
+       "Hard Times"
+      ],
+      [
+       "Un jeune homme dont la fortune fait un gentleman",
+       "Great Expectations"
+      ]
+     ],
+     "aide": "Reprends la colonne de droite du tableau pour chacune des trois situations.",
+     "explication": "**Workhouse** : *Oliver Twist* ; **ville industrielle, utilitarisme** : *Hard Times* ; **argent qui fabrique un gentleman** : *Great Expectations*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de la conclusion de Yanis.",
+     "texte": "Dans *Jane Eyre*, l’héroïne exige d’être traitée en ___ malgré sa ___.",
+     "reponses": [
+      [
+       "égale",
+       "egale",
+       "égal"
+      ],
+      [
+       "pauvreté",
+       "pauvrete"
+      ]
+     ],
+     "banque": [
+      "égale",
+      "pauvreté",
+      "supérieure",
+      "richesse",
+      "servante"
+     ],
+     "aide": "La lettre dit : « as an equal in conscience, if not in rank ».",
+     "explication": "L’héroïne exige d’être traitée en **égale** malgré sa **pauvreté** : c’est exactement ce que dit la gouvernante de la lettre."
+    }
+   ]
+  },
+  {
+   "chapitre": "2400793d-1b62-5816-b488-9a1fa8572d48",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La maison au bout de la route",
+   "competence": "analyser-texte",
+   "situation": "Mia prépare son premier commentaire en anglais. Avant d’écrire, elle lit un court texte écrit pour l’exercice et repère ce qui permet d’analyser : lexique, temps, étapes.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "The house",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "The house stood at the end of a [[d|cracked]] road. Its windows were dark and its garden [[d|rotten]] with [[d|weeds]], and the wind tore at the shutters. Mary, who had come back after [[t|ten]] [[t|years]], felt nothing at all, or so she told herself."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche **les trois mots du champ lexical de la dégradation**.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Cherche ce qui est abîmé : une route, un jardin, ce qui pousse sans soin.",
+     "explication": "**cracked**, **rotten**, **weeds** forment un champ lexical de la dégradation : c’est le « how » du commentaire, le moyen qui produit l’effet."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche **les deux mots qui disent combien de temps s’est écoulé**.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "Mary est revenue après un certain nombre d’années.",
+     "explication": "**ten years** : c’est un repère de temps. Avant d’analyser, on repère toujours le setting, c’est-à-dire le cadre dans le temps et dans l’espace."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois phrases dans l’ordre d’un paragraphe de commentaire : **what, how, why**.",
+     "items": [
+      "Mary comes back to the house of her childhood.",
+      "The lexical field of decay (“cracked”, “rotten”) makes the house look dead.",
+      "The reader senses sadness and unease."
+     ],
+     "aide": "D’abord ce que dit le texte, puis par quels moyens, enfin pour quel effet.",
+     "explication": "**What** : Mary revient ; **how** : le champ lexical de la dégradation ; **why** : le lecteur ressent tristesse et malaise. Sauter le « how » donnerait un simple résumé."
+    }
+   ]
+  },
+  {
+   "chapitre": "2400793d-1b62-5816-b488-9a1fa8572d48",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le brouillon de Sam",
+   "competence": "analyser-document",
+   "situation": "Sam a écrit un brouillon de commentaire sur le texte de la maison. Son professeur lui demande de repérer les erreurs fréquentes et de reformuler avec les expressions utiles.",
+   "documents": [
+    {
+     "id": "brouillon",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sam’s draft",
+     "auteur": "Brouillon d’élève écrit pour l’exercice",
+     "blocs": [
+      "In this extract, Mary come back to her house after ten years.",
+      "She see a house with dark windows and a rotten garden.",
+      "The [[a|author]] is sad and lonely, because he is describing a dead place.",
+      "In the text it says that the garden was in a bad state, and then the wind blows."
+     ],
+     "source": "Brouillon écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "enonce": "Touche **le mot qui confond l’auteur et le narrateur**.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "On ne peut pas déduire l’humeur de l’auteur d’un texte de fiction.",
+     "explication": "Le mot **author** est la faute : le narrateur est une construction de l’auteur. On ne dit pas que l’auteur est triste ; on dit que le **narrateur** crée une atmosphère triste."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase du brouillon selon l’erreur principale.",
+     "categories": [
+      "Raconte au lieu d’analyser",
+      "Confond auteur et narrateur",
+      "Citation absente ou inexacte"
+     ],
+     "items": [
+      [
+       "« Mary come back to her house after ten years. »",
+       0
+      ],
+      [
+       "« She see a house with dark windows and a rotten garden. »",
+       0
+      ],
+      [
+       "« The author is sad and lonely… »",
+       1
+      ],
+      [
+       "« In the text it says that the garden was in a bad state… »",
+       2
+      ]
+     ],
+     "aide": "Les deux premières phrases décrivent ce qui se passe ; la troisième parle de l’auteur ; la quatrième ne cite rien d’exact.",
+     "explication": "Les deux premières phrases **racontent** ; la troisième **confond auteur et narrateur** ; la quatrième renvoie au texte sans **citation exacte**. À chaque fois, il manque le « how »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Reformule le début d’un vrai commentaire.",
+     "texte": "The text ___ with the return of a woman to her childhood home. This is ___ by the lexical field of decay. It ___ be argued that the house mirrors her feelings.",
+     "reponses": [
+      [
+       "deals"
+      ],
+      [
+       "emphasised",
+       "emphasized"
+      ],
+      [
+       "could"
+      ]
+     ],
+     "banque": [
+      "deals",
+      "emphasised",
+      "could",
+      "speaks",
+      "emphasise",
+      "should"
+     ],
+     "aide": "Utilise les expressions du cours : « The text deals with… », « This is emphasised by… », « It could be argued that… ».",
+     "explication": "**deals** (The text deals with…), **emphasised** (This is emphasised by…), **could** (It could be argued that…) : trois expressions utiles pour introduire, appuyer et nuancer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces phrases tirées du brouillon et de sa correction, laquelle est un bon « how » ?",
+     "options": [
+      "The lexical field of decay (“dark”, “rotten”) makes it lifeless.",
+      "Mary comes back to a house she has not seen for ten years.",
+      "The reader feels uneasy and a little sad for Mary.",
+      "The author is probably a sad person who lives alone."
+     ],
+     "reponse": 0,
+     "aide": "Le « how » nomme un procédé précis et s’appuie sur des mots du texte.",
+     "explication": "Le **how** nomme un procédé (le champ lexical de la dégradation) et cite des mots du texte. La deuxième phrase est un « what », la troisième un « why », la quatrième une confusion auteur-narrateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "2400793d-1b62-5816-b488-9a1fa8572d48",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "M. Pemberton, le plus généreux de la paroisse",
+   "competence": "argumenter",
+   "situation": "Léo prépare un commentaire d’un texte satirique écrit pour l’exercice. Il a noté quelques relevés : il doit corriger une citation, relier procédés et effets, puis construire un paragraphe.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "The generous Mr Pemberton",
+     "auteur": "Texte écrit pour l’exercice, dans l’esprit d’une satire victorienne",
+     "blocs": [
+      "Mr Pemberton was the most generous man in the parish. Every Christmas he gave a shilling to the poor, and he counted them carefully, so that none should receive two.",
+      "When the winter came and the poor were hungry, he explained at length that hunger was good for the character. He was very warm that night, by the fire."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Les relevés de Léo",
+     "colonnes": [
+      "Procédé noté",
+      "Citation relevée"
+     ],
+     "lignes": [
+      [
+       "Irony",
+       "“the most generous man in the parish”"
+      ],
+      [
+       "Precision of the count",
+       "“he gave a shilling to each of the poor”"
+      ],
+      [
+       "Contrast with the hungry poor",
+       "“He was very warm that night, by the fire.”"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releves",
+     "enonce": "Une citation doit être **exacte**. Touche la case où Léo a **déformé** le texte.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare chaque citation avec le texte, mot à mot. Une seule diffère.",
+     "explication": "Le texte dit « he gave a shilling **to the poor** », et non « to each of the poor ». La citation doit être **exacte, courte et entre guillemets**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à l’effet qu’il produit dans ce texte.",
+     "paires": [
+      [
+       "L’ironie sur « generous »",
+       "Le lecteur voit l’hypocrisie derrière l’éloge"
+      ],
+      [
+       "Le contraste entre les affamés et le feu",
+       "L’indignation du lecteur devant l’égoïsme"
+      ],
+      [
+       "Le décompte minutieux des pauvres",
+       "La charité réduite à une comptabilité mesquine"
+      ]
+     ],
+     "aide": "Pour chaque procédé, pose la question « pour quel effet ? » : le « why » de l’analyse.",
+     "explication": "L’**ironie** dévoile l’hypocrisie ; le **contraste** (faim et chaleur du feu) provoque l’indignation ; le **décompte** montre une charité mesquine, réduite à un calcul."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois phrases dans l’ordre d’un paragraphe de commentaire.",
+     "items": [
+      "WHAT: The narrator calls Mr Pemberton the most generous man in the parish.",
+      "HOW: He then counts the poor so that none receives two: the praise is contradicted by the facts.",
+      "WHY: It could be argued that the narrator makes charity look like self-satisfaction."
+     ],
+     "aide": "Un paragraphe suit l’ordre what, how, why.",
+     "explication": "On commence par **ce que dit** le texte (what), on montre **par quels moyens** (how), puis on conclut sur **l’effet** (why). L’expression « It could be argued that… » introduit une thèse nuancée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel mot décrit le mieux le ton du narrateur ?",
+     "options": [
+      "Satirical",
+      "Nostalgic",
+      "Detached",
+      "Admiring"
+     ],
+     "reponse": 0,
+     "aide": "Le narrateur dit « the most generous » mais montre un homme avare : il se moque de la société.",
+     "explication": "Le ton est **satirical** : l’éloge est ironique, et le texte se moque de la fausse charité. Detached (neutre) ne rend pas compte de la moquerie."
+    }
+   ]
+  }
+ ]
+}

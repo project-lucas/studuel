@@ -1,0 +1,3740 @@
+{
+ "niveau": "3e",
+ "matiere": "allemand",
+ "exercices": [
+  {
+   "chapitre": "69c4595a-9fe5-5a40-b550-9ebe8fb5cfec",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un samedi chargé pour Lena",
+   "competence": "comprendre-langue",
+   "situation": "Mia veut voir Lena ce week-end. Lena lui répond par SMS et donne ses horaires : à toi de repérer comment elle dit le temps.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Samstag",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lena",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Hast du am Samstag Zeit?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Nur am Nachmittag. [[u|Um]] zehn Uhr habe ich Training."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Und im Juli? Fährst du weg?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Ja, im Juli fahre ich zu meiner Oma."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche la préposition qui donne l’heure précise du Training.",
+     "aide": "C’est le petit mot placé juste devant « zehn Uhr ».",
+     "explication": "**um** s’emploie devant une heure précise : *um zehn Uhr*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces compléments de temps selon la préposition qui leur convient.",
+     "categories": [
+      "am",
+      "im",
+      "um"
+     ],
+     "items": [
+      [
+       "Montag",
+       0
+      ],
+      [
+       "Abend",
+       0
+      ],
+      [
+       "Januar",
+       1
+      ],
+      [
+       "Sommer",
+       1
+      ],
+      [
+       "acht Uhr",
+       2
+      ],
+      [
+       "Mitternacht",
+       2
+      ]
+     ],
+     "aide": "Jours et moments de la journée : am. Mois et saisons : im. Heures précises : um.",
+     "explication": "**am** : jours et moments de la journée ; **im** : mois et saisons ; **um** : heure précise."
+    },
+    {
+     "type": "trous",
+     "enonce": "Lena propose : « Je suis libre le samedi après-midi. » Complète.",
+     "texte": "Ich habe ___ Samstagnachmittag Zeit.",
+     "reponses": [
+      [
+       "am"
+      ]
+     ],
+     "banque": [
+      "am",
+      "im",
+      "um",
+      "in"
+     ],
+     "aide": "Samstagnachmittag est un moment précis d’un jour.",
+     "explication": "**Ich habe am Samstagnachmittag Zeit.** *am* s’emploie pour les jours et les parties de la journée."
+    }
+   ]
+  },
+  {
+   "chapitre": "69c4595a-9fe5-5a40-b550-9ebe8fb5cfec",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre de Vienne",
+   "competence": "analyser-texte",
+   "situation": "Jonas passe quelques jours à Vienne et écrit à sa correspondante Paula. Son courrier est plein de repères de temps.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Paula",
+     "blocs": [
+      "Liebe Paula, vor zwei Wochen habe ich meine Reise geplant, und jetzt bin ich in Wien! Ich bleibe [[b|von]] Montag [[b|bis]] Freitag. [[h|Morgens]] gehe ich ins Museum, [[h|abends]] esse ich mit Freunden. In einer Woche bin ich wieder zu Hause. Bis bald! Jonas"
+     ],
+     "source": "Courrier écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "b"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux petits mots qui disent « du lundi au vendredi ».",
+     "aide": "Cherche une préposition de départ et une préposition d’arrivée autour des jours.",
+     "explication": "**von … bis** se traduit par « de … à » : *von Montag bis Freitag*."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux adverbes qui disent ce que Jonas fait d’habitude, le matin et le soir.",
+     "aide": "Ils se terminent par un -s et décrivent une habitude.",
+     "explication": "**morgens** et **abends** (avec le -s) disent le matin et le soir « en général »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit Jonas dans « In einer Woche bin ich wieder zu Hause » ?",
+     "options": [
+      "Il rentre dans une semaine",
+      "Il est rentré il y a une semaine",
+      "Il rentre pour une semaine",
+      "Il rentre depuis une semaine"
+     ],
+     "reponse": 0,
+     "aide": "Pense au futur : *in* + datif exprime un moment à venir.",
+     "explication": "**in einer Woche** = « dans une semaine » : on compte à partir de maintenant. Pour « il y a », on dirait *vor einer Woche*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression de temps à sa traduction.",
+     "paires": [
+      [
+       "vor zwei Wochen",
+       "il y a deux semaines"
+      ],
+      [
+       "in zwei Wochen",
+       "dans deux semaines"
+      ],
+      [
+       "seit zwei Wochen",
+       "depuis deux semaines"
+      ],
+      [
+       "während der Ferien",
+       "pendant les vacances"
+      ]
+     ],
+     "aide": "Vor = passé, in = futur, seit = depuis, während = pendant.",
+     "explication": "**vor** + datif : il y a ; **in** + datif : dans ; **seit** + datif : depuis ; **während** + génitif : pendant."
+    }
+   ]
+  },
+  {
+   "chapitre": "69c4595a-9fe5-5a40-b550-9ebe8fb5cfec",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Échange scolaire à Hambourg",
+   "competence": "raisonner",
+   "situation": "Frau Brandt organise un échange entre Lyon et Hambourg. Elle affiche le programme, et pendant l’arrivée, une élève prévient son correspondant.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Schüleraustausch Lyon–Hamburg",
+     "sousTitre": "Programm",
+     "emoji": "🚆",
+     "lignes": [
+      {
+       "texte": "Ankunft",
+       "valeur": "am Montag, um 8 Uhr",
+       "id": "ankunft"
+      },
+      {
+       "texte": "Dauer",
+       "valeur": "von Montag bis Freitag",
+       "id": "dauer"
+      },
+      {
+       "texte": "Sport",
+       "valeur": "jeden Nachmittag",
+       "id": "sport"
+      },
+      {
+       "texte": "Pause",
+       "valeur": "während der Mittagszeit",
+       "id": "pause"
+      },
+      {
+       "texte": "Abreise",
+       "valeur": "am Samstag",
+       "id": "abreise"
+      }
+     ],
+     "pied": "Anmeldung bis morgen!",
+     "source": "Affiche écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Am Bahnhof",
+     "participants": [
+      {
+       "nom": "Lisa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lisa",
+       "texte": "Wo seid ihr? Ich warte [[s|seit]] zehn Minuten am Bahnhof."
+      },
+      {
+       "qui": "Max",
+       "texte": "Wir sind in fünf Minuten da."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "sport"
+     ],
+     "enonce": "Touche la ligne dont le complément de temps est à l’accusatif, sans préposition.",
+     "aide": "Cherche une expression de temps qui commence par un déterminant et pas par une préposition.",
+     "explication": "**jeden Nachmittag** est un accusatif sans préposition : une habitude qui se répète."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "pause"
+     ],
+     "enonce": "Touche la ligne qui contient une préposition suivie du génitif.",
+     "aide": "Cette préposition veut dire « pendant ».",
+     "explication": "**während** est suivie du génitif : *während der Mittagszeit*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Frau Brandt écrit : « Lundi à huit heures, nous partons pour Hambourg. » Remets la phrase en ordre.",
+     "items": [
+      "Am Montag um acht Uhr",
+      "fahren",
+      "wir",
+      "nach Hamburg"
+     ],
+     "aide": "La phrase commence par le complément de temps : le verbe vient juste après, puis le sujet.",
+     "explication": "**Am Montag um acht Uhr fahren wir nach Hamburg.** Le complément de temps ouvre la phrase : le verbe reste en deuxième position et le sujet passe derrière lui."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le programme : « L’échange dure du lundi au vendredi. »",
+     "texte": "Der Austausch dauert ___ Montag ___ Freitag.",
+     "reponses": [
+      [
+       "von"
+      ],
+      [
+       "bis"
+      ]
+     ],
+     "banque": [
+      "von",
+      "bis",
+      "ab",
+      "seit"
+     ],
+     "aide": "Il faut une préposition de départ et une préposition d’arrivée.",
+     "explication": "**Der Austausch dauert von Montag bis Freitag.** *von … bis* = « de … à »."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche la préposition qui dit que Lisa attend « depuis » dix minutes.",
+     "aide": "Cette préposition est suivie du datif et, en allemand, le verbe reste au présent.",
+     "explication": "**seit** = depuis ; avec elle, l’allemand garde le présent : *Ich warte seit zehn Minuten*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Wir sind in fünf Minuten da » ?",
+     "options": [
+      "Nous serons là dans cinq minutes",
+      "Nous étions là il y a cinq minutes",
+      "Nous sommes là depuis cinq minutes",
+      "Nous sommes là pendant cinq minutes"
+     ],
+     "reponse": 0,
+     "aide": "Pour parler de l’avenir, l’allemand dit *in* + datif.",
+     "explication": "**in fünf Minuten** = « dans cinq minutes ». Le présent suffit pour l’avenir quand un complément de temps le précise."
+    }
+   ]
+  },
+  {
+   "chapitre": "23b027cc-b04e-572e-b286-76f0ae9bd02d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un samedi chez Oma",
+   "competence": "comprendre-langue",
+   "situation": "Tom demande à Lea ce qu’elle a fait hier. Elle raconte, et Tom répond à son tour : repère les verbes qui portent le récit.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Was hast du gemacht?",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lea",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Was [[h|hast]] du gestern gemacht?"
+      },
+      {
+       "qui": "Lea",
+       "texte": "Ich [[s|war]] bei Oma. Ich [[s|bin]] mit dem Zug gefahren und [[h|habe]] Kuchen gebacken."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich [[h|habe]] Fußball gespielt."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux formes du verbe « sein » dans le message de Lea.",
+     "aide": "Cherche les mots qui veulent dire « étais » et « suis ».",
+     "explication": "**war** (prétérit) et **bin** (présent) sont deux formes de *sein*."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois formes de « haben » qui servent d’auxiliaire.",
+     "aide": "Elles sont devant un participe : gemacht, gebacken, gespielt.",
+     "explication": "**hast**, **habe**, **habe** sont des formes de *haben* qui forment le parfait de *machen*, *backen* et *spielen*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces verbes selon l’auxiliaire qu’ils prennent au parfait.",
+     "categories": [
+      "haben",
+      "sein"
+     ],
+     "items": [
+      [
+       "spielen",
+       0
+      ],
+      [
+       "essen",
+       0
+      ],
+      [
+       "machen",
+       0
+      ],
+      [
+       "fahren",
+       1
+      ],
+      [
+       "kommen",
+       1
+      ],
+      [
+       "fliegen",
+       1
+      ]
+     ],
+     "aide": "Les verbes de déplacement d’un point à un autre prennent sein.",
+     "explication": "**sein** avec *fahren, kommen, fliegen* (déplacement) ; **haben** avec *spielen, essen, machen*."
+    }
+   ]
+  },
+  {
+   "chapitre": "23b027cc-b04e-572e-b286-76f0ae9bd02d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un colis, un frère et un faux ami",
+   "competence": "analyser-texte",
+   "situation": "Une petite-fille remercie sa grand-mère dans une lettre. Attention : un mot ressemble à l’anglais « to become », mais il ne veut pas dire ce que tu crois.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Oma",
+     "blocs": [
+      "Liebe Oma, danke für dein Paket! Ich habe es gestern [[b|bekommen]]. Mein Bruder wird bald Arzt. Er hat ein Stipendium [[b|bekommen]]. Ich bin müde geworden, weil wir viel gearbeitet haben. Bis bald!"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "b"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux fois où le verbe « bekommen » apparaît.",
+     "aide": "C’est un participe II qui commence par be-.",
+     "explication": "**bekommen** apparaît deux fois : *Paket bekommen* et *Stipendium bekommen*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Ich habe es gestern bekommen » ?",
+     "options": [
+      "Je l’ai reçu hier",
+      "Je suis devenu cela hier",
+      "Je l’ai gardé hier",
+      "Je l’ai donné hier"
+     ],
+     "reponse": 0,
+     "aide": "*bekommen* a un sens très précis : ce n’est pas « devenir ».",
+     "explication": "**bekommen** = « recevoir ». « Devenir » se dit *werden* : *Ich werde Arzt*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Mon frère devient médecin. »",
+     "texte": "Mein Bruder ___ Arzt.",
+     "reponses": [
+      [
+       "wird"
+      ]
+     ],
+     "banque": [
+      "wird",
+      "ist",
+      "bekommt",
+      "hat"
+     ],
+     "aide": "Pour dire « devenir », l’allemand emploie werden.",
+     "explication": "**Mein Bruder wird Arzt.** *werden* + nom = « devenir ». *bekommt* voudrait dire « reçoit »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je suis devenu fatigué. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "bin",
+      "müde",
+      "geworden"
+     ],
+     "aide": "Au parfait, l’auxiliaire est en deuxième position et le participe à la fin.",
+     "explication": "**Ich bin müde geworden.** *werden* forme son parfait avec *sein* : *bin … geworden*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Ich bin müde geworden » et non « Ich habe müde geworden » ?",
+     "options": [
+      "werden est l’un des quatre verbes à part avec sein",
+      "müde est un verbe de déplacement",
+      "geworden est un verbe fort donc il prend sein",
+      "bin est la forme polie de habe"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi des quatre verbes à part : sein, bleiben, werden, passieren.",
+     "explication": "**werden** fait partie des quatre verbes qui forment leur parfait avec *sein*, comme *sein*, *bleiben* et *passieren*."
+    }
+   ]
+  },
+  {
+   "chapitre": "23b027cc-b04e-572e-b286-76f0ae9bd02d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Papa attend Nora",
+   "competence": "raisonner",
+   "situation": "Nora rentre en retard, et son père lui écrit. Puis un article local annonce la carrière d’un cuisinier. Dans les deux documents, des auxiliaires à ne pas confondre.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Wo bist du?",
+     "participants": [
+      {
+       "nom": "Papa",
+       "emoji": "👨",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Papa",
+       "texte": "Wo bist du? Was [[s|ist]] passiert?"
+      },
+      {
+       "qui": "Nora",
+       "texte": "Der Bus [[s|ist]] nicht gekommen. Ich [[s|bin]] zu Fuß gelaufen."
+      },
+      {
+       "qui": "Papa",
+       "texte": "Du hast bestimmt Hunger. Ich [[h|habe]] Pizza gemacht."
+      },
+      {
+       "qui": "Nora",
+       "texte": "Super! Ich bin gleich da."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "presse",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Neues aus dem Viertel",
+     "blocs": [
+      "Mein Bruder wird Koch. Er wird bald in Berlin arbeiten. Das Restaurant wird gerade gebaut."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois « sein » qui servent d’auxiliaire au parfait.",
+     "aide": "Chacun est suivi d’un participe : passiert, gekommen, gelaufen.",
+     "explication": "**ist** (… passiert), **ist** (… gekommen) et **bin** (… gelaufen) sont des auxiliaires. Les autres « bist » et « bin » sont des verbes pleins."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le seul « haben » qui sert ici d’auxiliaire.",
+     "aide": "L’autre « hast » est suivi d’un nom : Hunger.",
+     "explication": "**habe** forme le parfait de *machen*. *Du hast Hunger* utilise *haben* comme verbe plein (« avoir faim »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Nora dit-elle « Ich bin zu Fuß gelaufen » ?",
+     "options": [
+      "laufen est un déplacement d’un point à un autre",
+      "laufen est un verbe qui change de voyelle",
+      "zu Fuß exige toujours le verbe sein",
+      "Parce que le sujet est ich"
+     ],
+     "reponse": 0,
+     "aide": "Demande-toi si Nora va d’un endroit à un autre.",
+     "explication": "**sein** s’emploie avec les verbes de déplacement d’un point à un autre : *Ich bin gelaufen*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases selon l’auxiliaire du parfait.",
+     "categories": [
+      "haben",
+      "sein"
+     ],
+     "items": [
+      [
+       "Ich … das Auto gefahren (j’ai conduit la voiture)",
+       0
+      ],
+      [
+       "Ich … nach Köln gefahren",
+       1
+      ],
+      [
+       "Er … eingeschlafen",
+       1
+      ],
+      [
+       "Wir … Fußball gespielt",
+       0
+      ],
+      [
+       "Es … schon passiert",
+       1
+      ],
+      [
+       "Sie … einen Brief geschrieben",
+       0
+      ]
+     ],
+     "aide": "Un verbe de mouvement avec un COD prend haben.",
+     "explication": "**haben** quand il y a un COD (*das Auto gefahren*) ou pour la plupart des verbes ; **sein** pour le déplacement (*nach Köln gefahren*) et le changement d’état (*eingeschlafen*, *passiert*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase de l’article à sa traduction.",
+     "paires": [
+      [
+       "Er wird Koch",
+       "Il devient cuisinier"
+      ],
+      [
+       "Er wird arbeiten",
+       "Il travaillera"
+      ],
+      [
+       "Das Restaurant wird gebaut",
+       "Le restaurant est construit"
+      ]
+     ],
+     "aide": "Regarde ce qui suit werden : un nom, un infinitif ou un participe.",
+     "explication": "**werden** + nom = devenir ; + infinitif = futur ; + participe II = passif."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9623262-cdfd-5fed-9dfe-c6df75188108",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le tableau des trois formes",
+   "competence": "lire-tableau",
+   "situation": "Un camarade a commencé à recopier les trois formes de quatre verbes. Observe le tableau et complète ce qui manque.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Trois temps primitifs",
+     "colonnes": [
+      "Infinitif",
+      "Prétérit",
+      "Participe II"
+     ],
+     "lignes": [
+      [
+       "machen",
+       "machte",
+       "gemacht"
+      ],
+      [
+       "spielen",
+       "spielte",
+       "?"
+      ],
+      [
+       "fahren",
+       "fuhr",
+       "gefahren"
+      ],
+      [
+       "nehmen",
+       "nahm",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux prétérits en -te : ce sont des verbes faibles.",
+     "aide": "Le prétérit d’un verbe faible se termine par -te.",
+     "explication": "**machte** et **spielte** se terminent par -te : *machen* et *spielen* sont faibles."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le participe II de « spielen » ?",
+     "reponse": [
+      "gespielt"
+     ],
+     "aide": "Verbe faible : ge- + radical + -t.",
+     "explication": "**gespielt** : *ge-* + *spiel* + *-t*."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le participe II de « nehmen » ?",
+     "reponse": [
+      "genommen"
+     ],
+     "aide": "Verbe fort : ge- + radical modifié + -en.",
+     "explication": "**genommen** : *ge-* + *nomm* (la voyelle a changé) + *-en*."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9623262-cdfd-5fed-9dfe-c6df75188108",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le voyage de Lukas",
+   "competence": "manier-langue",
+   "situation": "Sophie et Max parlent du voyage de Lukas à Bonn. Plusieurs verbes forts changent de voyelle : saurais-tu les reconnaître ?",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Lukas fährt nach Bonn",
+     "participants": [
+      {
+       "nom": "Sophie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sophie",
+       "texte": "Was macht Lukas? Er [[v|fährt]] heute nach Bonn, oder?"
+      },
+      {
+       "qui": "Max",
+       "texte": "Ja, er [[v|fährt]] mit dem Zug. Er [[v|liest]] ein Buch und er [[v|schläft]] ein bisschen."
+      },
+      {
+       "qui": "Sophie",
+       "texte": "Und du? Du gibst ihm das Ticket?"
+      },
+      {
+       "qui": "Max",
+       "texte": "Ja, ich gebe ihm das Ticket. Wir fahren zusammen zum Bahnhof."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche les formes de la 3e personne du singulier dont la voyelle a changé par rapport à l’infinitif.",
+     "aide": "Cherche les ä et le ie : fahren, lesen, schlafen.",
+     "explication": "**fährt** (a → ä), **liest** (e → ie), **schläft** (a → ä) : la voyelle change à la 3e personne du singulier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec « nehmen » : « Lukas prend le train et toi tu prends le bus. »",
+     "texte": "Lukas ___ den Zug und du ___ den Bus.",
+     "reponses": [
+      [
+       "nimmt"
+      ],
+      [
+       "nimmst"
+      ]
+     ],
+     "banque": [
+      "nimmt",
+      "nimmst",
+      "nehme",
+      "nehmt"
+     ],
+     "aide": "Avec nehmen, la voyelle e devient i aux 2e et 3e personnes du singulier.",
+     "explication": "**Lukas nimmt den Zug und du nimmst den Bus.** *nehmen* : e → i, avec *-t* pour *er* et *-st* pour *du*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces verbes selon le changement de voyelle à la 2e personne du singulier.",
+     "categories": [
+      "e → i",
+      "e → ie",
+      "a → ä"
+     ],
+     "items": [
+      [
+       "sprechen (du sprichst)",
+       0
+      ],
+      [
+       "geben (du gibst)",
+       0
+      ],
+      [
+       "sehen (du siehst)",
+       1
+      ],
+      [
+       "lesen (du liest)",
+       1
+      ],
+      [
+       "fahren (du fährst)",
+       2
+      ],
+      [
+       "schlafen (du schläfst)",
+       2
+      ]
+     ],
+     "aide": "Compare la voyelle de l’infinitif avec celle de la forme entre parenthèses.",
+     "explication": "**e → i** : *sprechen, geben* ; **e → ie** : *sehen, lesen* ; **a → ä** : *fahren, schlafen*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Max dit-il « Wir fahren » avec un a et non « Wir fähren » ?",
+     "options": [
+      "L’alternance ne touche que du et er/sie/es",
+      "Wir est une forme de politesse",
+      "fahren est un verbe faible au pluriel",
+      "Le ä n’existe pas dans le nord de l’Allemagne"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les formes du pluriel dans le message : fahren, geben…",
+     "explication": "**wir fahren** : l’alternance a → ä n’existe qu’à *du* et *er/sie/es* ; elle disparaît au pluriel."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9623262-cdfd-5fed-9dfe-c6df75188108",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le compte rendu de la visite",
+   "competence": "analyser-texte",
+   "situation": "Un élève raconte sa visite chez Marie. Son texte cache des participes de tous les types : forts, mixtes, en -ieren. Un second document propose de compléter un tableau.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Bei Marie",
+     "blocs": [
+      "Gestern habe ich Marie besucht. Wir haben lange [[s|gesprochen]]. Sie hat mir ein Buch [[m|gebracht]], und ich habe ihr einen Brief [[s|geschrieben]]. Ihr Bruder hat in Lyon [[i|studiert]]. Er hat auch mit uns [[i|telefoniert]]."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "À toi de jouer",
+     "colonnes": [
+      "Infinitif",
+      "Prétérit",
+      "Participe II"
+     ],
+     "lignes": [
+      [
+       "denken",
+       "dachte",
+       "?"
+      ],
+      [
+       "essen",
+       "aß",
+       "?"
+      ],
+      [
+       "googeln",
+       "googelte",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes de verbes forts (ils se terminent par -en).",
+     "aide": "Cherche ge- … -en avec une voyelle modifiée.",
+     "explication": "**gesprochen** (*sprechen*) et **geschrieben** (*schreiben*) sont des participes forts."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes qui n’ont pas de « ge- » : ce sont des verbes en -ieren.",
+     "aide": "Ils se terminent par -iert.",
+     "explication": "**studiert** et **telefoniert** viennent de *studieren* et *telefonieren* : les verbes en -ieren sont faibles et sans ge-."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le participe d’un verbe mixte : radical modifié et terminaison faible.",
+     "aide": "Il se termine par -t, mais le radical n’est plus celui de l’infinitif (bringen).",
+     "explication": "**gebracht** : *bringen* est mixte, le radical change (*brach-*) mais la terminaison est faible (*-t*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les participes II du tableau.",
+     "texte": "denken → ___ · essen → ___ · googeln → ___",
+     "reponses": [
+      [
+       "gedacht"
+      ],
+      [
+       "gegessen"
+      ],
+      [
+       "gegoogelt"
+      ]
+     ],
+     "aide": "Mixte : ge- + radical modifié + -t. Fort : ge- … -en. Faible : ge- … -t.",
+     "explication": "**gedacht** (mixte), **gegessen** (fort), **gegoogelt** (faible, comme tout verbe nouveau)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le participe de « besuchen » est-il « besucht » et non « gebesucht » ?",
+     "options": [
+      "be- est un préverbe inséparable : pas de ge-",
+      "besuchen est un verbe fort qui change de voyelle",
+      "besuchen se termine par -ieren comme studieren",
+      "Le participe se forme ici avec sein et non haben"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le début du verbe : be-.",
+     "explication": "**besucht** : les préverbes inséparables (*be-, ver-, er-*…) refusent le *ge-*."
+    }
+   ]
+  },
+  {
+   "chapitre": "cad5c6bf-e3a1-5759-a79e-8ac9b48b24b2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les règles de la piscine",
+   "competence": "comprendre-langue",
+   "situation": "À l’entrée de la piscine municipale, une affiche rappelle les règles. Chaque ligne emploie un verbe de modalité différent.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Schwimmbad",
+     "sousTitre": "Die Regeln",
+     "emoji": "🏊",
+     "lignes": [
+      {
+       "texte": "Du musst vor dem Schwimmen duschen.",
+       "id": "r1"
+      },
+      {
+       "texte": "Du darfst nicht rennen.",
+       "id": "r2"
+      },
+      {
+       "texte": "Du kannst im Kiosk ein Eis kaufen.",
+       "id": "r3"
+      },
+      {
+       "texte": "Du sollst bei Gewitter aus dem Wasser kommen.",
+       "id": "r4"
+      }
+     ],
+     "pied": "Viel Spaß!",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "r2"
+     ],
+     "enonce": "Touche la règle qui exprime une interdiction.",
+     "aide": "Cherche le modal qui parle du droit, avec nicht.",
+     "explication": "**Du darfst nicht rennen** : *dürfen* + *nicht* dit l’interdiction (« tu n’as pas le droit »)."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "r3"
+     ],
+     "enonce": "Touche la ligne qui dit simplement ce qu’on est capable ou en mesure de faire.",
+     "aide": "C’est le modal de la possibilité, de la capacité.",
+     "explication": "**Du kannst im Kiosk ein Eis kaufen** : *können* exprime la possibilité."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque modal à son idée principale.",
+     "paires": [
+      [
+       "können",
+       "pouvoir (capacité)"
+      ],
+      [
+       "dürfen",
+       "avoir le droit"
+      ],
+      [
+       "müssen",
+       "devoir (nécessité)"
+      ],
+      [
+       "wollen",
+       "vouloir (volonté ferme)"
+      ]
+     ],
+     "aide": "Pense à ce que chaque modal exprime : capacité, droit, nécessité, volonté.",
+     "explication": "**können** : capacité ; **dürfen** : droit ; **müssen** : nécessité ; **wollen** : volonté ferme."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je veux nager aujourd’hui. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "will",
+      "heute",
+      "schwimmen"
+     ],
+     "aide": "Le modal est en deuxième position, l’infinitif part à la fin.",
+     "explication": "**Ich will heute schwimmen.** Le modal conjugué est en 2e position, l’infinitif à la fin de la phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "cad5c6bf-e3a1-5759-a79e-8ac9b48b24b2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pas obligé ou pas le droit ?",
+   "competence": "comprendre-langue",
+   "situation": "Nils discute avec son père avant le week-end. Entre « pas obligé » et « interdit », un seul mot change tout.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Das Wochenende",
+     "participants": [
+      {
+       "nom": "Papa",
+       "emoji": "👨",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nils",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Papa",
+       "texte": "Du musst heute nicht aufräumen. Aber du [[d|darfst]] nicht so lange fernsehen."
+      },
+      {
+       "qui": "Nils",
+       "texte": "Ich muss nicht aufräumen? Super! Ich will mit Ben ins Kino gehen."
+      },
+      {
+       "qui": "Papa",
+       "texte": "Du kannst gehen. Aber du [[s|sollst]] um zehn Uhr zu Hause sein, sagt Mama."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le modal qui, avec « nicht », exprime une interdiction.",
+     "aide": "C’est le modal du droit.",
+     "explication": "**darfst … nicht** : « tu n’as pas le droit de ». Une interdiction, et non une absence d’obligation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Du musst heute nicht aufräumen » ?",
+     "options": [
+      "Tu n’es pas obligé de ranger",
+      "Tu n’as pas le droit de ranger",
+      "Tu ne peux pas ranger",
+      "Tu dois ranger deux fois"
+     ],
+     "reponse": 0,
+     "aide": "Müssen + nicht nie veut dire « interdit ».",
+     "explication": "**müssen + nicht** = « ne pas être obligé » : l’action est facultative, pas interdite."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le modal qui rapporte une consigne venue de Mama.",
+     "aide": "Il exprime un ordre qui vient d’une autre personne.",
+     "explication": "**sollst** : *sollen* rapporte une consigne extérieure (« on t’a dit de… »)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il reste à la maison parce qu’il doit travailler. » La phrase commence par Er bleibt zu Hause.",
+     "items": [
+      "Er bleibt zu Hause",
+      "weil",
+      "er",
+      "arbeiten",
+      "muss"
+     ],
+     "aide": "Après weil, tout part à la fin : l’infinitif, puis le modal conjugué.",
+     "explication": "**Er bleibt zu Hause, weil er arbeiten muss.** Dans la subordonnée, le verbe conjugué (le modal) est tout à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "cad5c6bf-e3a1-5759-a79e-8ac9b48b24b2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une excuse et une invitation",
+   "competence": "raisonner",
+   "situation": "Emma s’excuse auprès de Clara pour une fête manquée. Clara lui envoie alors une nouvelle invitation. Deux documents, six modaux à bien comprendre.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Clara",
+     "blocs": [
+      "Liebe Clara, es tut mir leid: Ich habe gestern nicht zu deiner Party [[d|kommen]] [[d|können]]. Ich [[p|musste]] für Mathe lernen, weil wir heute eine Arbeit schreiben müssen. Mama sagt, ich soll früh schlafen. Nächste Woche will ich dich besuchen. Dann darf ich auch länger bleiben. Deine Emma"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "invit",
+     "type": "fiche",
+     "modele": "invitation",
+     "entete": "Clara lädt dich ein",
+     "sousTitre": "Party am Samstag",
+     "emoji": "🎉",
+     "lignes": [
+      {
+       "texte": "Du kannst kommen!",
+       "id": "k"
+      },
+      {
+       "texte": "Du darfst Freunde mitbringen.",
+       "id": "d"
+      },
+      {
+       "texte": "Du musst nichts mitbringen.",
+       "id": "m"
+      }
+     ],
+     "pied": "Ich freue mich auf dich!",
+     "source": "Invitation écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le modal conjugué au prétérit.",
+     "aide": "Le prétérit de müssen se termine par -te.",
+     "explication": "**musste** est le prétérit de *müssen* : sans inflexion, avec la terminaison *-te*."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux verbes qui forment le « double infinitif » du parfait.",
+     "aide": "À la fin de la phrase, le participe est remplacé par deux infinitifs.",
+     "explication": "**kommen können** : au parfait, un modal suivi d’un infinitif ne prend pas de participe. C’est le « double infinitif »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « … parce que nous devons écrire un devoir. » La phrase commence par weil.",
+     "items": [
+      "weil",
+      "wir",
+      "eine Arbeit",
+      "schreiben",
+      "müssen"
+     ],
+     "aide": "Dans la subordonnée, l’infinitif puis le modal conjugué sont tout à la fin.",
+     "explication": "**weil wir eine Arbeit schreiben müssen.** Le modal conjugué ferme la subordonnée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète au parfait : « Hier, je n’ai pas pu venir. »",
+     "texte": "Ich habe gestern nicht kommen ___.",
+     "reponses": [
+      [
+       "können"
+      ]
+     ],
+     "banque": [
+      "können",
+      "gekonnt",
+      "konnte",
+      "kann"
+     ],
+     "aide": "Avec un infinitif dépendant, le modal ne prend pas de participe.",
+     "explication": "**Ich habe gestern nicht kommen können.** Double infinitif : l’infinitif du modal (*können*) à la toute fin."
+    },
+    {
+     "type": "zone",
+     "document": "invit",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche la ligne qui donne une autorisation.",
+     "aide": "Cherche le modal du droit.",
+     "explication": "**Du darfst Freunde mitbringen** : *dürfen* donne l’autorisation (« tu as le droit de »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Du musst nichts mitbringen » ?",
+     "options": [
+      "Tu n’es pas obligé d’apporter quoi que ce soit",
+      "Tu n’as pas le droit d’apporter quoi que ce soit",
+      "Tu ne sais pas apporter quoi que ce soit",
+      "Tu dois tout apporter"
+     ],
+     "reponse": 0,
+     "aide": "Müssen + négation ne dit pas l’interdiction.",
+     "explication": "**müssen + nichts** : aucune obligation. Clara dit à son invitée qu’elle peut venir les mains vides."
+    }
+   ]
+  },
+  {
+   "chapitre": "162e7a35-e97d-546e-bef9-b6784356df19",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le matin de Leo",
+   "competence": "comprendre-langue",
+   "situation": "Leo raconte sa matinée. Dans son récit, quatre petits mots sont partis à la fin de leur phrase : les préverbes séparables.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ein Morgen",
+     "blocs": [
+      "Leo steht um sieben Uhr [[p|auf]]. Er isst ein Brot und ruft Tom [[p|an]]. Dann geht er mit Tom zum Bus. Um acht Uhr kommt er in der Schule [[p|an]]. Mittags kauft er in der Pause [[p|ein]]."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre préverbes séparés qui ferment leur phrase.",
+     "aide": "Ils sont tout seuls à la fin : ils étaient collés au verbe à l’infinitif.",
+     "explication": "**auf, an, an, ein** : dans une principale, le préverbe quitte le verbe et va en fin de phrase."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe de Leo à son sens.",
+     "paires": [
+      [
+       "aufstehen",
+       "se lever"
+      ],
+      [
+       "anrufen",
+       "téléphoner à"
+      ],
+      [
+       "ankommen",
+       "arriver"
+      ],
+      [
+       "einkaufen",
+       "faire les courses"
+      ]
+     ],
+     "aide": "Reconstitue le verbe : préverbe + radical.",
+     "explication": "**aufstehen** (se lever), **anrufen** (appeler), **ankommen** (arriver), **einkaufen** (faire les courses)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il se lève à sept heures. » La phrase commence par Er.",
+     "items": [
+      "Er",
+      "steht",
+      "um sieben Uhr",
+      "auf"
+     ],
+     "aide": "Le verbe est en 2e position, le préverbe tout à la fin.",
+     "explication": "**Er steht um sieben Uhr auf.** Le verbe conjugué est en 2e position, le préverbe ferme la phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "162e7a35-e97d-546e-bef9-b6784356df19",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un week-end en famille",
+   "competence": "manier-langue",
+   "situation": "Tom raconte son week-end à Lea. Au parfait, certains participes ont un ge- au milieu, d’autres n’en ont pas du tout.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Das Wochenende",
+     "participants": [
+      {
+       "nom": "Lea",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lea",
+       "texte": "Was hast du am Wochenende gemacht?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich habe Fußball gespielt und meine Großeltern [[n|besucht]]. Ich habe auch ein neues Gericht [[n|probiert]]."
+      },
+      {
+       "qui": "Lea",
+       "texte": "Hast du etwas [[g|mitgebracht]]?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ja, Kuchen. Und ich bin früh [[g|eingeschlafen]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes qui n’ont pas de ge-.",
+     "aide": "L’un commence par un préverbe inséparable (be-), l’autre vient d’un verbe en -ieren.",
+     "explication": "**besucht** (préverbe inséparable *be-*) et **probiert** (verbe en *-ieren*) n’ont pas de ge-."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes où le ge- s’est glissé entre le préverbe et le radical.",
+     "aide": "Ce sont des verbes séparables : mit- et ein-.",
+     "explication": "**mitgebracht** et **eingeschlafen** : le ge- s’intercale entre le préverbe séparable et le radical."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris les participes II.",
+     "texte": "aufräumen → ___ · kopieren → ___ · vergessen → ___",
+     "reponses": [
+      [
+       "aufgeräumt"
+      ],
+      [
+       "kopiert"
+      ],
+      [
+       "vergessen"
+      ]
+     ],
+     "aide": "Séparable : ge- au milieu. En -ieren et inséparable : pas de ge-.",
+     "explication": "**aufgeräumt** (ge- intercalé), **kopiert** (-ieren, sans ge-), **vergessen** (préverbe ver- inséparable, sans ge-)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Tom dit-il « Ich bin früh eingeschlafen » avec « bin » ?",
+     "options": [
+      "einschlafen exprime un changement d’état",
+      "ein- est un préverbe inséparable",
+      "Tom parle de lui-même",
+      "Tous les verbes séparables prennent sein"
+     ],
+     "reponse": 0,
+     "aide": "Passer de l’éveil au sommeil, c’est changer d’état.",
+     "explication": "**einschlafen** exprime un changement d’état : au parfait, il prend **sein**."
+    }
+   ]
+  },
+  {
+   "chapitre": "162e7a35-e97d-546e-bef9-b6784356df19",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Je t’appelle quand tu arrives",
+   "competence": "raisonner",
+   "situation": "Eva et Ben s’organisent par SMS. Plusieurs verbes y sont séparables, un autre refuse de se séparer, et l’un d’eux se recolle dans une subordonnée.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Pläne",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Kommst du heute [[p|mit]]?"
+      },
+      {
+       "qui": "Eva",
+       "texte": "Ich rufe dich [[p|an]], wenn mein Zug [[r|ankommt]]."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Okay. Ich habe dein Paket [[b|bekommen]]."
+      },
+      {
+       "qui": "Eva",
+       "texte": "Super! Ich hole es morgen [[p|ab]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois préverbes détachés, tout seuls à la fin de leur phrase.",
+     "aide": "Ils sont séparés de leur verbe : mitkommen, anrufen, abholen.",
+     "explication": "**mit, an, ab** : dans une principale, le préverbe séparable va à la fin."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui s’est « recollé » parce qu’il est dans une subordonnée.",
+     "aide": "Il est après « wenn » et son préverbe est revenu devant lui.",
+     "explication": "**ankommt** : en subordonnée, le verbe conjugué part à la fin et rejoint son préverbe."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le participe qui n’a pas de ge- parce que son préverbe est inséparable.",
+     "aide": "Il commence par be-.",
+     "explication": "**bekommen** : *be-* est inséparable, donc pas de *ge-* (et le verbe veut dire « recevoir »)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je t’appelle quand il arrive. » La phrase commence par Ich.",
+     "items": [
+      "Ich",
+      "rufe",
+      "dich",
+      "an",
+      "wenn",
+      "er",
+      "ankommt"
+     ],
+     "aide": "La principale se termine par le préverbe ; la subordonnée recolle le verbe à la fin.",
+     "explication": "**Ich rufe dich an, wenn er ankommt.** Principale : préverbe séparé à la fin ; subordonnée : *ankommt* recollé et en dernière position."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec zu : « Je n’ai pas envie de me lever tôt, ni le temps de rendre visite à Oma. »",
+     "texte": "Ich habe keine Lust, früh ___ (aufstehen), und keine Zeit, Oma ___ (besuchen).",
+     "reponses": [
+      [
+       "aufzustehen"
+      ],
+      [
+       "zu besuchen"
+      ]
+     ],
+     "aide": "Séparable : zu s’intercale. Inséparable : zu reste devant.",
+     "explication": "**aufzustehen** (le *zu* s’intercale) et **zu besuchen** (*be-* est inséparable : *zu* reste devant)."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a3658f3-c285-528d-b4cb-fcc46efab45e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les vacances approchent",
+   "competence": "comprendre-langue",
+   "situation": "Lina et Tom discutent des vacances. Dans leurs messages, on retrouve le pronom réfléchi : mich, dich, sich…",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Ferien",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Ich freue [[r|mich]] [[a|auf]] die Ferien!"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich auch! Ich interessiere [[r|mich]] für Sport. Und du?"
+      },
+      {
+       "qui": "Lina",
+       "texte": "Ich wasche [[r|mich]] schnell, dann kommen wir."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois pronoms réfléchis de la 1re personne.",
+     "aide": "Ils sont juste après le verbe : freue, interessiere, wasche.",
+     "explication": "**mich** apparaît trois fois : accusatif du réfléchi à la 1re personne du singulier."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la préposition qui accompagne « sich freuen » pour se réjouir de ce qui vient.",
+     "aide": "Elle est suivie de l’accusatif et parle de l’avenir.",
+     "explication": "**sich freuen auf** + accusatif : se réjouir d’un événement à venir."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Nous nous agaçons du mauvais temps. »",
+     "texte": "Wir ärgern uns ___ das schlechte Wetter.",
+     "reponses": [
+      [
+       "über"
+      ]
+     ],
+     "banque": [
+      "über",
+      "auf",
+      "für",
+      "an"
+     ],
+     "aide": "Sich ärgern se construit avec une préposition suivie de l’accusatif.",
+     "explication": "**Wir ärgern uns über das schlechte Wetter.** *sich ärgern über* + accusatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a3658f3-c285-528d-b4cb-fcc46efab45e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mich ou mir ?",
+   "competence": "manier-langue",
+   "situation": "Après le sport, une élève raconte sa soirée. Selon la phrase, le pronom réfléchi est à l’accusatif ou au datif.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Nach dem Sport",
+     "blocs": [
+      "Nach dem Sport wasche ich [[a|mich]]. Dann putze ich [[d|mir]] die Zähne und kaufe [[d|mir]] ein Eis. Ich sehe [[d|mir]] einen Film an, und ich freue [[a|mich]] auf das Wochenende."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois pronoms réfléchis au datif.",
+     "aide": "Ils s’écrivent mir et apparaissent quand la phrase a déjà un COD.",
+     "explication": "**mir** (3 fois) : au datif, parce que *die Zähne*, *ein Eis* et *einen Film* sont déjà des COD."
+    },
+    {
+     "type": "zone",
+     "document": "journal",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux pronoms réfléchis à l’accusatif.",
+     "aide": "Ils s’écrivent mich et il n’y a pas de COD dans leur phrase.",
+     "explication": "**mich** (2 fois) : à l’accusatif, car ni *wasche* ni *freue … auf* n’ont de COD."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Ich kaufe mir ein Eis » et non « Ich kaufe mich ein Eis » ?",
+     "options": [
+      "La phrase contient déjà un COD : ein Eis",
+      "kaufen est un verbe pronominal à l’accusatif",
+      "ein Eis est un complément de temps",
+      "mir est la forme de politesse"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le COD dans la phrase.",
+     "explication": "Dès qu’il y a un COD (*ein Eis*), le réfléchi passe au **datif** : *mir*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon pronom.",
+     "texte": "Max kauft ___ ein Buch, und wir freuen ___ auf Samstag.",
+     "reponses": [
+      [
+       "sich"
+      ],
+      [
+       "uns"
+      ]
+     ],
+     "banque": [
+      "sich",
+      "uns",
+      "euch",
+      "dich",
+      "dir"
+     ],
+     "aide": "À la 3e personne, le datif et l’accusatif sont identiques.",
+     "explication": "**Max kauft sich ein Buch, und wir freuen uns auf Samstag.** *sich* (3e personne, datif) et *uns* (1re personne du pluriel)."
+    }
+   ]
+  },
+  {
+   "chapitre": "0a3658f3-c285-528d-b4cb-fcc46efab45e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une lettre pour Oma",
+   "competence": "argumenter",
+   "situation": "Une élève écrit à sa grand-mère. Elle se réjouit, s’agace, s’intéresse… et chaque verbe pronominal a sa préposition.",
+   "documents": [
+    {
+     "id": "brief",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Oma",
+     "blocs": [
+      "Liebe Oma, ich freue mich sehr [[f|auf]] deinen Besuch im Sommer. Mein Bruder hat [[s|sich]] leider verspätet, deshalb ärgere ich mich über ihn. Interessierst du dich noch für Gartenarbeit? Erinnerst du dich an Opas Geburtstag? Ich möchte mir ein neues Fahrrad kaufen."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le pronom réfléchi de la 3e personne (« mon frère s’est… »).",
+     "aide": "Il s’écrit avec un s et ne change pas entre accusatif et datif.",
+     "explication": "**sich** est le réfléchi de la 3e personne du singulier : *Mein Bruder hat sich verspätet*."
+    },
+    {
+     "type": "zone",
+     "document": "brief",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche la préposition qui accompagne « freue mich » quand on attend la visite.",
+     "aide": "Elle parle de ce qui va venir.",
+     "explication": "**sich freuen auf** : se réjouir de ce qui vient. Pour ce qui est arrivé, on dit *sich freuen über*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe pronominal à sa préposition.",
+     "paires": [
+      [
+       "sich freuen (ce qui vient)",
+       "auf"
+      ],
+      [
+       "sich freuen (ce qui est arrivé)",
+       "über"
+      ],
+      [
+       "sich interessieren",
+       "für"
+      ],
+      [
+       "sich erinnern",
+       "an"
+      ]
+     ],
+     "aide": "Le sens (ce qui vient ou ce qui est arrivé) distingue les deux sich freuen.",
+     "explication": "**auf** (ce qui vient), **über** (ce qui est arrivé), **für** (s’intéresser à), **an** (se souvenir de) : toutes avec l’accusatif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces verbes : pronominal en allemand ou non ?",
+     "categories": [
+      "Pronominal en allemand",
+      "Pas pronominal en allemand"
+     ],
+     "items": [
+      [
+       "sich verspäten",
+       0
+      ],
+      [
+       "sich freuen",
+       0
+      ],
+      [
+       "sich interessieren",
+       0
+      ],
+      [
+       "aufstehen",
+       1
+      ],
+      [
+       "heißen",
+       1
+      ],
+      [
+       "spazieren gehen",
+       1
+      ]
+     ],
+     "aide": "Aufstehen, heißen et spazieren gehen sont pronominaux en français seulement.",
+     "explication": "*aufstehen* (se lever), *heißen* (s’appeler) et *spazieren gehen* (se promener) n’ont **pas** de pronom en allemand ; *sich verspäten* en a un alors que le français dit « être en retard »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je souris parce que je me réjouis. » La phrase commence par Ich lächle.",
+     "items": [
+      "Ich lächle",
+      "weil",
+      "ich",
+      "mich",
+      "freue"
+     ],
+     "aide": "En subordonnée, le pronom réfléchi suit le sujet, et le verbe est à la fin.",
+     "explication": "**Ich lächle, weil ich mich freue.** Dans la subordonnée, le réfléchi vient après le sujet et le verbe conjugué ferme la phrase."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b75b12e-6b58-576e-8a78-c2843ce7bf9e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Que fais-tu aujourd’hui ?",
+   "competence": "comprendre-langue",
+   "situation": "Nina et Jan se demandent ce qu’ils font aujourd’hui. Repère les terminaisons du présent.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Heute",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jan",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Was [[b|machst]] du heute?"
+      },
+      {
+       "qui": "Jan",
+       "texte": "Ich [[a|spiele]] Fußball. Und du?"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Ich [[a|lerne]]. Mein Bruder spielt auch."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux verbes conjugués à la 1re personne du singulier.",
+     "aide": "Ils se terminent par -e et suivent « Ich ».",
+     "explication": "**spiele** et **lerne** : à *ich*, la terminaison du présent est **-e**."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la forme conjuguée à la 2e personne du singulier.",
+     "aide": "Elle se termine par -st.",
+     "explication": "**machst** : à *du*, la terminaison est **-st**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Tu apprends beaucoup et nous jouons ensemble. »",
+     "texte": "Du ___ viel, und wir ___ zusammen.",
+     "reponses": [
+      [
+       "lernst"
+      ],
+      [
+       "spielen"
+      ]
+     ],
+     "banque": [
+      "lernst",
+      "lernt",
+      "spielen",
+      "spielt"
+     ],
+     "aide": "Du : terminaison -st. Wir : terminaison -en.",
+     "explication": "**Du lernst viel, und wir spielen zusammen.** *du* → *-st* ; *wir* → *-en*."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b75b12e-6b58-576e-8a78-c2843ce7bf9e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carnet de conjugaison",
+   "competence": "lire-tableau",
+   "situation": "Un élève prépare sa fiche de conjugaison. Il a laissé deux cases vides : à toi de voir quelle règle de prononciation s’applique.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Présent : ich et du",
+     "colonnes": [
+      "Verbe",
+      "ich",
+      "du"
+     ],
+     "lignes": [
+      [
+       "arbeiten",
+       "arbeite",
+       "arbeitest"
+      ],
+      [
+       "heißen",
+       "heiße",
+       "heißt"
+      ],
+      [
+       "sammeln",
+       "sammle",
+       "sammelst"
+      ],
+      [
+       "finden",
+       "finde",
+       "?"
+      ],
+      [
+       "sitzen",
+       "sitze",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case où le e du radical tombe à la 1re personne.",
+     "aide": "Cherche un verbe en -eln.",
+     "explication": "**sammle** : avec les verbes en *-eln*, le *e* du radical tombe à *ich*."
+    },
+    {
+     "type": "texte",
+     "enonce": "Complète la case : « du » + finden.",
+     "reponse": [
+      "findest"
+     ],
+     "aide": "Le radical se termine par -d : on intercale un e.",
+     "explication": "**findest** : après -d ou -t, on glisse un *e* pour pouvoir prononcer *-st* (comme *du arbeitest*)."
+    },
+    {
+     "type": "texte",
+     "enonce": "Complète la case : « du » + sitzen.",
+     "reponse": [
+      "sitzt"
+     ],
+     "aide": "Le radical se termine par -z : le -st perd son s.",
+     "explication": "**sitzt** : après -s, -ß, -z, -x, la terminaison *-st* perd son *s* (comme *du heißt*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « du heißt » et non « du heißst » ?",
+     "options": [
+      "Après ß, le -st perd son s",
+      "ß est une consonne muette",
+      "heißen est un verbe fort",
+      "Après ß on ajoute un e"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la lettre qui précède la terminaison -st.",
+     "explication": "**du heißt** : quand le radical finit par -s, -ß, -z ou -x, le *s* de *-st* disparaît."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b75b12e-6b58-576e-8a78-c2843ce7bf9e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Depuis trois ans à Berlin",
+   "competence": "raisonner",
+   "situation": "Paul veut aller à Berlin et interroge Mia, qui y habite. Leur discussion mêle habitude, moment présent et avenir.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Berlin",
+     "participants": [
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Paul",
+       "texte": "Wohnst du schon lange in Berlin?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "Ja, ich wohne [[s|seit]] drei Jahren hier. Jeden Samstag laufe ich im Park."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Cool! Morgen fahre ich auch nach Berlin."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Super! Ich zeige dir die Stadt, und du siehst viel."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit que Mia habite à Berlin « depuis » trois ans.",
+     "aide": "C’est une préposition suivie du datif.",
+     "explication": "**seit** + datif : une action commencée dans le passé et qui continue. Le verbe reste **au présent**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases selon la valeur du présent.",
+     "categories": [
+      "Moment présent",
+      "Habitude",
+      "Avenir proche"
+     ],
+     "items": [
+      [
+       "Er schläft jetzt.",
+       0
+      ],
+      [
+       "Ich lese gerade ein Buch.",
+       0
+      ],
+      [
+       "Montags spielt sie Tennis.",
+       1
+      ],
+      [
+       "Jeden Samstag laufe ich im Park.",
+       1
+      ],
+      [
+       "Morgen fahre ich nach Berlin.",
+       2
+      ],
+      [
+       "Nächste Woche kommt Paul.",
+       2
+      ]
+     ],
+     "aide": "Cherche l’adverbe de temps : jetzt, jeden…, morgen.",
+     "explication": "Un même présent dit trois choses : **le moment** (*jetzt, gerade*), **l’habitude** (*jeden Samstag, montags*) et **l’avenir proche** (*morgen, nächste Woche*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Tu dors longtemps et il mange beaucoup. »",
+     "texte": "Du ___ (schlafen) lange, und er ___ (essen) viel.",
+     "reponses": [
+      [
+       "schläfst"
+      ],
+      [
+       "isst"
+      ]
+     ],
+     "banque": [
+      "schläfst",
+      "schläft",
+      "isst",
+      "esst"
+     ],
+     "aide": "Schlafen : a → ä à du. Essen : e → i à er.",
+     "explication": "**Du schläfst lange, und er isst viel.** *schlafen* : a → ä ; *essen* : e → i à la 3e personne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « Je travaille ici depuis deux ans » ?",
+     "options": [
+      "Ich arbeite seit zwei Jahren hier",
+      "Ich habe seit zwei Jahren hier gearbeitet",
+      "Ich werde seit zwei Jahren hier arbeiten",
+      "Ich arbeitete seit zwei Jahren hier"
+     ],
+     "reponse": 0,
+     "aide": "Avec seit, l’allemand garde le temps du moment présent.",
+     "explication": "**Ich arbeite seit zwei Jahren hier.** *seit* + présent pour une action commencée dans le passé qui dure encore."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Demain, il va à Berlin (en voiture). » La phrase commence par Morgen.",
+     "items": [
+      "Morgen",
+      "fährt",
+      "er",
+      "nach Berlin"
+     ],
+     "aide": "Le complément de temps ouvre la phrase : le verbe vient ensuite, puis le sujet.",
+     "explication": "**Morgen fährt er nach Berlin.** Le présent suffit pour dire l’avenir ; *fahren* change de voyelle à *er* (a → ä)."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef0289ad-13b1-53f9-9766-e3dc59375a88",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le petit renard",
+   "competence": "comprendre-langue",
+   "situation": "Un conte raconte l’histoire d’un renard et d’une pomme. Les contes se racontent au prétérit : repère-le.",
+   "documents": [
+    {
+     "id": "conte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Der kleine Fuchs",
+     "blocs": [
+      "Es war einmal ein kleiner Fuchs. Er [[g|ging]] durch den Wald und [[g|fand]] einen Apfel. Er nahm ihn und kam nach Hause. Dort sah er seine Mutter und gab ihr den Apfel."
+     ],
+     "source": "Conte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conte",
+     "reponse": [
+      "g"
+     ],
+     "multiple": true,
+     "enonce": "Touche les prétérits de « gehen » et de « finden ».",
+     "aide": "Ce sont deux verbes forts : la voyelle a changé.",
+     "explication": "**ging** (*gehen*) et **fand** (*finden*) : verbes forts, voyelle modifiée et aucune terminaison à la 3e personne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque infinitif à son prétérit, tel qu’il apparaît dans le conte.",
+     "paires": [
+      [
+       "kommen",
+       "kam"
+      ],
+      [
+       "sehen",
+       "sah"
+      ],
+      [
+       "geben",
+       "gab"
+      ],
+      [
+       "nehmen",
+       "nahm"
+      ]
+     ],
+     "aide": "Dans le conte, retrouve la forme de chaque verbe.",
+     "explication": "**kam**, **sah**, **gab**, **nahm** : des prétérits forts, sans terminaison à la 3e personne du singulier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Il était une fois un renard. »",
+     "texte": "Es ___ einmal ein Fuchs.",
+     "reponses": [
+      [
+       "war"
+      ]
+     ],
+     "banque": [
+      "war",
+      "ist",
+      "wurde",
+      "hatte"
+     ],
+     "aide": "C’est le prétérit de sein.",
+     "explication": "**Es war einmal ein Fuchs.** *war* est le prétérit de *sein*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef0289ad-13b1-53f9-9766-e3dc59375a88",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où étais-tu hier ?",
+   "competence": "analyser-document",
+   "situation": "Eva et Jonas échangent des SMS. Observe quels verbes sont au prétérit et lesquels sont au parfait.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Gestern",
+     "participants": [
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jonas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eva",
+       "texte": "Wo [[o|warst]] du gestern? Ich [[o|konnte]] dich nicht erreichen."
+      },
+      {
+       "qui": "Jonas",
+       "texte": "Ich [[o|war]] bei Oma. Ich [[o|hatte]] kein Handy dabei."
+      },
+      {
+       "qui": "Eva",
+       "texte": "Und was habt ihr gemacht?"
+      },
+      {
+       "qui": "Jonas",
+       "texte": "Wir haben Karten gespielt, und ich [[o|musste]] Kuchen essen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "o"
+     ],
+     "multiple": true,
+     "enonce": "Touche les cinq prétérits : ce sont les seuls que la langue parlée garde.",
+     "aide": "Cherche les formes de sein, haben et des modaux.",
+     "explication": "**warst, war, hatte, konnte, musste** : *sein*, *haben* et les modaux gardent le prétérit à l’oral."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Jonas dit-il « Wir haben Karten gespielt » plutôt que « Wir spielten Karten » ?",
+     "options": [
+      "À l’oral on raconte au parfait, sauf avec sein, haben et les modaux",
+      "Parce que spielen est un verbe fort qui n’a pas de prétérit",
+      "Parce que le prétérit n’existe pas pour les verbes faibles",
+      "Parce que Karten est au pluriel et exige le parfait"
+     ],
+     "reponse": 0,
+     "aide": "Les verbes ordinaires se racontent au parfait dans un message.",
+     "explication": "À l’oral, on raconte au **parfait**. Seuls *sein*, *haben*, *werden* et les modaux gardent le prétérit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec « sein » et « haben » : « Où étiez-vous hier, et aviez-vous faim ? »",
+     "texte": "Wo ___ ihr gestern, und ___ ihr Hunger?",
+     "reponses": [
+      [
+       "wart"
+      ],
+      [
+       "hattet"
+      ]
+     ],
+     "banque": [
+      "wart",
+      "waren",
+      "hattet",
+      "hatten"
+     ],
+     "aide": "Ihr : le prétérit se termine par -t pour ihr.",
+     "explication": "**Wo wart ihr gestern, und hattet ihr Hunger?** *ihr wart*, *ihr hattet*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque modal à son prétérit.",
+     "paires": [
+      [
+       "können",
+       "konnte"
+      ],
+      [
+       "dürfen",
+       "durfte"
+      ],
+      [
+       "müssen",
+       "musste"
+      ],
+      [
+       "wollen",
+       "wollte"
+      ]
+     ],
+     "aide": "Pas d’inflexion : on enlève le tréma et on ajoute -te.",
+     "explication": "Prétérit des modaux : **konnte, durfte, musste, wollte** : sans inflexion, avec *-te*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef0289ad-13b1-53f9-9766-e3dc59375a88",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Récit écrit, message oral",
+   "competence": "raisonner",
+   "situation": "Lea raconte sa soirée deux fois : dans un petit récit écrit, puis dans un message à Max. Compare les temps utilisés.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ein langer Abend",
+     "blocs": [
+      "Nachdem Lea nach Hause gekommen [[p|war]], aß sie schnell. Sie [[p|hatte]] lange gearbeitet. Dann nahm sie ihr Buch und las bis elf Uhr. Am nächsten Morgen blieb sie lange im Bett, weil sie spät eingeschlafen [[p|war]]."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Max fragt",
+     "participants": [
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lea",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Max",
+       "texte": "Wie war dein Abend?"
+      },
+      {
+       "qui": "Lea",
+       "texte": "Ich [[a|habe]] bis elf gelesen. Ich [[a|bin]] spät eingeschlafen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois auxiliaires du plus-que-parfait.",
+     "aide": "Ce sont des prétérits de sein ou de haben suivis d’un participe II.",
+     "explication": "**war** (… gekommen), **hatte** (… gearbeitet), **war** (… eingeschlafen) : prétérit de l’auxiliaire + participe II."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Après que Tom avait travaillé, il mangea. » La phrase commence par Nachdem.",
+     "items": [
+      "Nachdem",
+      "Tom",
+      "gearbeitet",
+      "hatte",
+      "aß",
+      "er"
+     ],
+     "aide": "Après nachdem, le plus-que-parfait finit la subordonnée ; ensuite, le verbe de la principale ouvre.",
+     "explication": "**Nachdem Tom gearbeitet hatte, aß er.** Subordonnée : participe puis auxiliaire à la fin ; principale : verbe avant le sujet."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces verbes selon la famille de leur prétérit.",
+     "categories": [
+      "Faible",
+      "Fort",
+      "Mixte"
+     ],
+     "items": [
+      [
+       "spielen → spielte",
+       0
+      ],
+      [
+       "lernen → lernte",
+       0
+      ],
+      [
+       "gehen → ging",
+       1
+      ],
+      [
+       "nehmen → nahm",
+       1
+      ],
+      [
+       "bringen → brachte",
+       2
+      ],
+      [
+       "denken → dachte",
+       2
+      ]
+     ],
+     "aide": "Faible : -te seulement. Fort : voyelle changée. Mixte : les deux.",
+     "explication": "**Faibles** : *spielte, lernte* ; **forts** : *ging, nahm* ; **mixtes** : *brachte, dachte* (radical modifié et terminaison -te)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les deux documents racontent la même soirée. Pourquoi ne choisissent-ils pas le même temps ?",
+     "options": [
+      "Le récit écrit se raconte au prétérit, le message oral au parfait",
+      "Le prétérit est réservé aux verbes forts, le parfait aux faibles",
+      "Après nachdem, le prétérit est toujours remplacé par le parfait",
+      "Lea est une enfant, Max un adulte : l’âge décide du temps"
+     ],
+     "reponse": 0,
+     "aide": "Compare un récit écrit à un SMS : le registre change.",
+     "explication": "En allemand, **prétérit** et **parfait** s’opposent par le registre : écrit narratif pour l’un, oral et messages pour l’autre."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux auxiliaires du parfait dans le message de Lea.",
+     "aide": "Ils sont devant gelesen et eingeschlafen.",
+     "explication": "**habe** (… gelesen) et **bin** (… eingeschlafen) : auxiliaires du parfait ; *einschlafen* est un changement d’état, donc *sein*."
+    }
+   ]
+  },
+  {
+   "chapitre": "7435e27a-38d0-58f2-9f8f-342b80bf673d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une carte postale de Hambourg",
+   "competence": "comprendre-langue",
+   "situation": "Lukas écrit à sa mère depuis Hambourg. Il raconte sa journée avec le temps des lettres et des messages : le parfait.",
+   "documents": [
+    {
+     "id": "postkarte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Liebe Mama",
+     "blocs": [
+      "Liebe Mama, heute habe ich Hamburg [[h|gesehen]]. Wir sind mit dem Schiff [[m|gefahren]], und ich habe viele Fotos [[h|gemacht]]. Am Abend sind wir ins Hotel [[m|gegangen]]. Bis bald!"
+     ],
+     "source": "Carte postale écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "postkarte",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes de verbes de déplacement : ils se conjuguent avec sein.",
+     "aide": "Ils sont précédés de « sind » : on va d’un point à un autre.",
+     "explication": "**gefahren** et **gegangen** : verbes de déplacement, donc *sind … gefahren*, *sind … gegangen*."
+    },
+    {
+     "type": "zone",
+     "document": "postkarte",
+     "reponse": [
+      "h"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes qui se conjuguent avec haben.",
+     "aide": "Ils sont précédés de « habe ».",
+     "explication": "**gesehen** et **gemacht** : *sehen* et *machen* prennent *haben*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « J’ai vu un film. »",
+     "texte": "Ich ___ einen Film gesehen.",
+     "reponses": [
+      [
+       "habe"
+      ]
+     ],
+     "banque": [
+      "habe",
+      "bin",
+      "ist",
+      "hat"
+     ],
+     "aide": "Sehen n’exprime pas un déplacement.",
+     "explication": "**Ich habe einen Film gesehen.** *sehen* prend *haben*."
+    }
+   ]
+  },
+  {
+   "chapitre": "7435e27a-38d0-58f2-9f8f-342b80bf673d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un jeudi bien rempli",
+   "competence": "manier-langue",
+   "situation": "Ben raconte sa journée de jeudi dans un courriel. Les participes de son texte se forment de quatre façons différentes.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Mein Donnerstag",
+     "blocs": [
+      "Gestern habe ich viel erlebt. Ich bin früh [[s|aufgestanden]] und habe mit Oma telefoniert. Sie hat mir eine Geschichte [[n|erzählt]], und ich habe alles [[n|verstanden]]. Danach habe ich Mathe gelernt und Pizza gegessen."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux participes qui n’ont pas de ge- à cause d’un préverbe inséparable.",
+     "aide": "Ils commencent par er- et ver-.",
+     "explication": "**erzählt** et **verstanden** : les préverbes *er-* et *ver-* sont inséparables, donc pas de ge-."
+    },
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le participe où ge- s’est glissé entre le préverbe et le radical.",
+     "aide": "Il commence par auf-.",
+     "explication": "**aufgestanden** : le ge- s’intercale dans un verbe séparable (*auf* + *ge* + *standen*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris les participes II.",
+     "texte": "einladen → ___ · reparieren → ___ · bezahlen → ___",
+     "reponses": [
+      [
+       "eingeladen"
+      ],
+      [
+       "repariert"
+      ],
+      [
+       "bezahlt"
+      ]
+     ],
+     "aide": "Séparable : ge- au milieu. En -ieren ou préverbe inséparable : pas de ge-.",
+     "explication": "**eingeladen** (séparable), **repariert** (-ieren) et **bezahlt** (préverbe be- inséparable)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Ben dit-il « Ich bin früh aufgestanden » avec « bin » ?",
+     "options": [
+      "aufstehen exprime un changement d’état",
+      "auf- est un préverbe inséparable",
+      "Ben parle de lui-même",
+      "Tous les verbes séparables prennent sein"
+     ],
+     "reponse": 0,
+     "aide": "Passer de couché à debout, c’est changer d’état.",
+     "explication": "**aufstehen** : changement d’état, donc *sein* au parfait."
+    }
+   ]
+  },
+  {
+   "chapitre": "7435e27a-38d0-58f2-9f8f-342b80bf673d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La classe 9b à Prague",
+   "competence": "raisonner",
+   "situation": "Pendant la sortie scolaire, un élève écrit à sa professeure, puis un SMS compare le parfait et le prétérit. Deux documents, une question : quel temps, pourquoi ?",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "An Frau Wolf",
+     "blocs": [
+      "Liebe Frau Wolf, wir sind gut in Prag gelandet. Am Montag haben wir das Schloss besucht. Ich glaube, dass alle viel gelernt [[f|haben]]. Leider ist Elias im Zug eingeschlafen, weil er schlecht geschlafen [[f|hat]]."
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Der Film",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "Gestern habe ich einen Film gesehen."
+      },
+      {
+       "qui": "Ana",
+       "texte": "Welchen?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Er [[w|war]] lustig. Ich habe viel gelacht."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux auxiliaires qui ferment une subordonnée, après le participe.",
+     "aide": "Ils sont après « gelernt » et « geschlafen ».",
+     "explication": "**haben** et **hat** sont à la toute fin : dans une subordonnée, l’auxiliaire du parfait vient après le participe."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il dit qu’elle est restée à la maison. » La phrase commence par Er sagt.",
+     "items": [
+      "Er sagt",
+      "dass",
+      "sie",
+      "zu Hause",
+      "geblieben",
+      "ist"
+     ],
+     "aide": "Après dass, tout part à la fin : le participe, puis l’auxiliaire.",
+     "explication": "**Er sagt, dass sie zu Hause geblieben ist.** Subordonnée : participe II puis auxiliaire conjugué, tout à la fin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec ist ou sind : « Anna est partie à Cologne et ses parents sont restés à la maison. »",
+     "texte": "Anna ___ nach Köln gereist, und ihre Eltern ___ zu Hause geblieben.",
+     "reponses": [
+      [
+       "ist"
+      ],
+      [
+       "sind"
+      ]
+     ],
+     "banque": [
+      "ist",
+      "sind",
+      "hat",
+      "haben"
+     ],
+     "aide": "Reisen et bleiben se conjuguent avec sein ; accorde avec le sujet.",
+     "explication": "**Anna ist nach Köln gereist, und ihre Eltern sind zu Hause geblieben.** *reisen* (déplacement) et *bleiben* prennent *sein*."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche l’unique verbe de ce SMS qui est au prétérit.",
+     "aide": "Il décrit le film : il était drôle.",
+     "explication": "**war** : le prétérit de *sein*, même à l’oral. Les autres verbes sont au parfait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Tom dit-il « habe gesehen » mais « war » ?",
+     "options": [
+      "À l’oral, sein garde le prétérit, les autres verbes le parfait",
+      "Parce que Film est masculin et exige war au lieu de ist",
+      "Parce que war est le participe II de sein dans cette phrase",
+      "Parce que le parfait ne s’emploie jamais avec lustig"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux verbes qui gardent le prétérit même à l’oral.",
+     "explication": "À l’oral, on emploie le **parfait** pour presque tous les verbes, mais *sein*, *haben*, *werden* et les modaux restent au **prétérit** : *Er war lustig*."
+    }
+   ]
+  },
+  {
+   "chapitre": "a82490ac-3425-5595-91bb-714161fb7cdf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les projets de l’été",
+   "competence": "comprendre-langue",
+   "situation": "Marie demande à Paul ce qu’il fera cet été. Il répond au futur : repère la construction werden + infinitif.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Sommer",
+     "participants": [
+      {
+       "nom": "Marie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marie",
+       "texte": "Was [[w|wirst]] du im Sommer machen?"
+      },
+      {
+       "qui": "Paul",
+       "texte": "Ich [[w|werde]] nach Italien [[i|fahren]]. Meine Schwester [[w|wird]] auch [[i|kommen]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "w"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois formes conjuguées de « werden ».",
+     "aide": "Elles sont en 2e position : wirst, werde, wird.",
+     "explication": "**wirst, werde, wird** : le présent de *werden* est l’auxiliaire du futur."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux infinitifs qui ferment les phrases au futur.",
+     "aide": "Ils sont tout à la fin de leur phrase.",
+     "explication": "**fahren** et **kommen** : au futur, l’infinitif part à la fin et *werden* reste en 2e position."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Tu travailleras en juillet et nous nous baignerons en août. »",
+     "texte": "Du ___ im Juli arbeiten, und wir ___ im August schwimmen.",
+     "reponses": [
+      [
+       "wirst"
+      ],
+      [
+       "werden"
+      ]
+     ],
+     "banque": [
+      "wirst",
+      "wird",
+      "werden",
+      "werdet"
+     ],
+     "aide": "Du : wirst. Wir : werden.",
+     "explication": "**Du wirst im Juli arbeiten, und wir werden im August schwimmen.** *werden* + infinitif."
+    }
+   ]
+  },
+  {
+   "chapitre": "a82490ac-3425-5595-91bb-714161fb7cdf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bulletin météo",
+   "competence": "analyser-texte",
+   "situation": "La radio locale annonce le temps des prochains jours. Certaines phrases emploient le futur, d’autres le présent : à toi de comprendre quand le futur est utile.",
+   "documents": [
+    {
+     "id": "wetter",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Das Wetter",
+     "blocs": [
+      "Morgen [[g|regnet]] es im Norden. Im Süden [[f|wird]] es sonnig sein. Am Samstag [[f|wird]] es dann wärmer werden."
+     ],
+     "source": "Bulletin écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "wetter",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le verbe au présent qui exprime ici l’avenir.",
+     "aide": "Un adverbe de temps (morgen) suffit à situer l’action.",
+     "explication": "**regnet** est au présent : avec *morgen*, le présent suffit pour parler de l’avenir."
+    },
+    {
+     "type": "zone",
+     "document": "wetter",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux « wird » qui forment un futur avec un infinitif.",
+     "aide": "Ils sont suivis de « sein » et de « werden » à l’infinitif.",
+     "explication": "**wird … sein** et **wird … werden** : *werden* + infinitif à la fin = futur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases : le présent suffit-il, ou le futur est-il utile ?",
+     "categories": [
+      "Le présent suffit",
+      "Le futur est utile"
+     ],
+     "items": [
+      [
+       "Morgen fahre ich nach Wien.",
+       0
+      ],
+      [
+       "Nächste Woche kommt Tom.",
+       0
+      ],
+      [
+       "Am Montag habe ich Training.",
+       0
+      ],
+      [
+       "Das wird nicht einfach sein.",
+       1
+      ],
+      [
+       "Du wirst jetzt aufräumen!",
+       1
+      ],
+      [
+       "Ich werde dir helfen.",
+       1
+      ]
+     ],
+     "aide": "Un adverbe de temps rend le futur inutile ; une promesse ou un ordre l’appelle.",
+     "explication": "Avec un **adverbe de temps**, le présent suffit. Sans repère de temps, pour une **promesse**, une **prédiction** ou une **insistance**, on emploie le futur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Ne t’inquiète pas, je ne t’oublierai pas. »",
+     "texte": "Keine Sorge, ich ___ dich nicht vergessen.",
+     "reponses": [
+      [
+       "werde"
+      ]
+     ],
+     "banque": [
+      "werde",
+      "wirst",
+      "wird",
+      "werden"
+     ],
+     "aide": "Ich : la forme de werden est en -e.",
+     "explication": "**Keine Sorge, ich werde dich nicht vergessen.** Une promesse, sans repère de temps : le futur s’impose."
+    }
+   ]
+  },
+  {
+   "chapitre": "a82490ac-3425-5595-91bb-714161fb7cdf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Où est donc Max ?",
+   "competence": "raisonner",
+   "situation": "Max ne répond pas au téléphone. Clara et Ben cherchent à comprendre. Attention : un futur allemand ne parle pas toujours de l’avenir.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Wo ist Max?",
+     "participants": [
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clara",
+       "texte": "Wo ist Max? Er antwortet nicht."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Er wird [[w|wohl]] schlafen."
+      },
+      {
+       "qui": "Clara",
+       "texte": "Dann wird er es vergessen haben!"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Er wird bestimmt bald kommen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à sa traduction.",
+     "paires": [
+      [
+       "Er wird wohl schlafen",
+       "Il doit dormir"
+      ],
+      [
+       "Er wird es vergessen haben",
+       "Il a dû l’oublier"
+      ],
+      [
+       "Er wird bestimmt bald kommen",
+       "Il viendra sûrement bientôt"
+      ],
+      [
+       "Er wird Arzt",
+       "Il devient médecin"
+      ]
+     ],
+     "aide": "Tous commencent par werden, mais ce qui suit change le sens.",
+     "explication": "*wohl* + futur = supposition sur le présent ; futur II = supposition sur le passé ; *bald* = vrai futur ; *werden* + nom = devenir."
+    },
+    {
+     "type": "zone",
+     "document": "dial",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le petit mot qui transforme ce futur en supposition.",
+     "aide": "Il se traduit par « sans doute, probablement ».",
+     "explication": "**wohl** renforce la supposition : *Er wird wohl schlafen* = « il doit dormir »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases : vrai futur ou supposition sur le présent ?",
+     "categories": [
+      "Futur (l’avenir)",
+      "Supposition (le présent)"
+     ],
+     "items": [
+      [
+       "Wir werden nächste Woche reisen.",
+       0
+      ],
+      [
+       "Ich werde dir morgen helfen.",
+       0
+      ],
+      [
+       "Das Konzert wird bald beginnen.",
+       0
+      ],
+      [
+       "Sie wird wohl noch schlafen.",
+       1
+      ],
+      [
+       "Er wird wohl krank sein.",
+       1
+      ],
+      [
+       "Er wird wohl zu Hause sein.",
+       1
+      ]
+     ],
+     "aide": "Cherche wohl, ou un repère comme morgen ou bald.",
+     "explication": "Avec **wohl**, le futur dit une hypothèse sur le présent ; avec un repère comme **morgen** ou **bald**, il parle vraiment de l’avenir."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je crois qu’il viendra. » La phrase commence par Ich glaube.",
+     "items": [
+      "Ich glaube",
+      "dass",
+      "er",
+      "kommen",
+      "wird"
+     ],
+     "aide": "En subordonnée, c’est werden qui ferme la phrase, après l’infinitif.",
+     "explication": "**Ich glaube, dass er kommen wird.** Subordonnée : l’infinitif, puis *werden* conjugué en dernier."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Elle a dû rater le bus. »",
+     "texte": "Sie wird den Bus verpasst ___.",
+     "reponses": [
+      [
+       "haben"
+      ]
+     ],
+     "banque": [
+      "haben",
+      "hat",
+      "sein",
+      "worden"
+     ],
+     "aide": "Le futur II se forme avec werden + participe II + infinitif de l’auxiliaire.",
+     "explication": "**Sie wird den Bus verpasst haben.** Futur II : *werden* + participe + *haben*, une supposition sur le passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "8ddb8658-38c9-5fad-bcfd-9f0a258ecbec",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une recette de crêpes",
+   "competence": "comprendre-langue",
+   "situation": "Une recette de Pfannkuchen donne ses consignes à l’impératif. Observe comment l’ordre est formé quand on dit « tu ».",
+   "documents": [
+    {
+     "id": "rezept",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Pfannkuchen",
+     "sousTitre": "Für zwei Personen",
+     "emoji": "🥞",
+     "lignes": [
+      {
+       "texte": "Nimm eine große Schüssel.",
+       "id": "l1"
+      },
+      {
+       "texte": "Gib Mehl, Eier und Milch dazu.",
+       "id": "l2"
+      },
+      {
+       "texte": "Rühre alles gut.",
+       "id": "l3"
+      },
+      {
+       "texte": "Mach die Pfanne heiß.",
+       "id": "l4"
+      }
+     ],
+     "pied": "Guten Appetit!",
+     "source": "Recette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rezept",
+     "reponse": [
+      "l1",
+      "l2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux consignes dont l’impératif a gardé le changement de voyelle e → i.",
+     "aide": "Cherche nehmen et geben.",
+     "explication": "**Nimm** (*nehmen*) et **Gib** (*geben*) gardent la voyelle des 2e et 3e personnes : *du nimmst*, *du gibst*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à l’impératif de « kommen ».",
+     "paires": [
+      [
+       "du",
+       "Komm!"
+      ],
+      [
+       "ihr",
+       "Kommt!"
+      ],
+      [
+       "Sie",
+       "Kommen Sie!"
+      ],
+      [
+       "wir",
+       "Kommen wir!"
+      ]
+     ],
+     "aide": "Seuls Sie et wir gardent le pronom.",
+     "explication": "**Komm!** (du), **Kommt!** (ihr), **Kommen Sie!** (politesse), **Kommen wir!** (allons-y)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Donne-moi le sel ! »",
+     "items": [
+      "Gib",
+      "mir",
+      "das Salz"
+     ],
+     "aide": "Le verbe ouvre la phrase, sans pronom : le datif vient avant l’accusatif.",
+     "explication": "**Gib mir das Salz!** Le verbe ouvre la phrase, sans *du*."
+    }
+   ]
+  },
+  {
+   "chapitre": "8ddb8658-38c9-5fad-bcfd-9f0a258ecbec",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les consignes de Frau Weiß",
+   "competence": "manier-langue",
+   "situation": "Dans la classe, Frau Weiß donne des consignes à tous les élèves, puis à Jonas seul. Écoute bien à qui elle parle.",
+   "documents": [
+    {
+     "id": "klasse",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Im Klassenzimmer",
+     "participants": [
+      {
+       "nom": "Frau Weiß",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jonas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Frau Weiß",
+       "texte": "[[i|Seid]] bitte ruhig und [[i|öffnet]] eure Hefte. Jonas, [[d|lies]] den Text. [[d|Sprich]] laut und langsam!"
+      },
+      {
+       "qui": "Jonas",
+       "texte": "Soll ich auch die Fragen lesen?"
+      },
+      {
+       "qui": "Frau Weiß",
+       "texte": "Ja, aber nicht so schnell."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "klasse",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux impératifs adressés à toute la classe (ihr).",
+     "aide": "Ils se terminent par -t ou -d et n’ont pas de pronom.",
+     "explication": "**Seid** (*sein*) et **öffnet** (*öffnen*) sont des impératifs à *ihr* : la forme du présent, sans pronom."
+    },
+    {
+     "type": "zone",
+     "document": "klasse",
+     "reponse": [
+      "d"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux impératifs adressés à Jonas seul (du).",
+     "aide": "Ils n’ont pas de terminaison et gardent e → ie et e → i.",
+     "explication": "**Lies** (*lesen*) et **Sprich** (*sprechen*) : le radical sans terminaison, avec la voyelle des 2e et 3e personnes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Écris l’impératif à « du ».",
+     "texte": "fahren : ___ bitte langsam! · schlafen : ___ jetzt!",
+     "reponses": [
+      [
+       "Fahr",
+       "Fahre"
+      ],
+      [
+       "Schlaf",
+       "Schlafe"
+      ]
+     ],
+     "aide": "Avec a → ä, l’inflexion se perd à l’impératif.",
+     "explication": "**Fahr!** et **Schlaf!** : l’inflexion *a → ä* disparaît à l’impératif (alors que *du fährst*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Arbeite! » avec un -e final ?",
+     "options": [
+      "Parce que le radical finit par -t : le e est obligatoire",
+      "Parce que arbeiten est un verbe fort qui change de voyelle",
+      "Parce que arbeiten possède un préverbe séparable",
+      "Parce que tous les impératifs prennent un -e final"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière lettre du radical : arbeit-.",
+     "explication": "**Arbeite!** : après -d, -t, -ig, le *-e* est obligatoire. Ailleurs, il est facultatif et soutenu (*Gehe!*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8ddb8658-38c9-5fad-bcfd-9f0a258ecbec",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ordres, consignes et services",
+   "competence": "raisonner",
+   "situation": "Dans un immeuble, l’affiche du règlement mêle plusieurs façons d’ordonner. Plus loin, deux amis se demandent un service : on adoucit l’ordre autrement.",
+   "documents": [
+    {
+     "id": "haus",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Hausordnung",
+     "sousTitre": "Bitte lesen",
+     "emoji": "🏢",
+     "lignes": [
+      {
+       "texte": "Nicht rauchen!",
+       "id": "r1"
+      },
+      {
+       "texte": "Bitte Schuhe ausziehen!",
+       "id": "r2"
+      },
+      {
+       "texte": "Seien Sie bitte leise.",
+       "id": "r3"
+      },
+      {
+       "texte": "Schließen Sie die Tür.",
+       "id": "r4"
+      }
+     ],
+     "pied": "Danke!",
+     "source": "Affiche écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Ein Gefallen",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Hilf mir [[m|mal]], Tom! Ich finde meinen Schlüssel nicht."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Such [[m|doch]] im Auto. Gib mir [[m|bitte]] deine Tasche."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "haus",
+     "reponse": [
+      "r1",
+      "r2"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux consignes données à l’infinitif, sans verbe conjugué.",
+     "aide": "Elles ne contiennent ni Sie ni forme conjuguée.",
+     "explication": "**Nicht rauchen!** et **Bitte Schuhe ausziehen!** : l’infinitif seul sert aux panneaux et aux consignes."
+    },
+    {
+     "type": "zone",
+     "document": "haus",
+     "reponse": [
+      "r3"
+     ],
+     "enonce": "Touche la ligne qui emploie l’impératif de politesse du verbe « sein ».",
+     "aide": "Cherche une forme de sein suivie de Sie.",
+     "explication": "**Seien Sie bitte leise** : impératif de politesse de *sein* ; le pronom *Sie* se maintient."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois petits mots qui adoucissent l’ordre.",
+     "aide": "Ils se traduisent par un peu, donc, s’il te plaît.",
+     "explication": "**mal**, **doch**, **bitte** : sans eux, l’impératif paraîtrait sec."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Appelle-moi demain ! »",
+     "items": [
+      "Ruf",
+      "mich",
+      "morgen",
+      "an"
+     ],
+     "aide": "Le verbe ouvre la phrase ; le préverbe séparable part à la fin.",
+     "explication": "**Ruf mich morgen an!** *anrufen* : le préverbe *an* passe à la fin."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pronom à l’impératif de « gehen ».",
+     "paires": [
+      [
+       "du",
+       "Geh!"
+      ],
+      [
+       "ihr",
+       "Geht!"
+      ],
+      [
+       "Sie",
+       "Gehen Sie!"
+      ],
+      [
+       "wir",
+       "Gehen wir!"
+      ]
+     ],
+     "aide": "Seuls Sie et wir gardent le pronom.",
+     "explication": "**Geh!** (du), **Geht!** (ihr), **Gehen Sie!** (politesse), **Gehen wir!** (allons-y)."
+    }
+   ]
+  },
+  {
+   "chapitre": "acebc17f-d953-5af6-8129-008553b71d05",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au café",
+   "competence": "comprendre-langue",
+   "situation": "Dans un café de Vienne, un client commande avec politesse. Observe les formes qui adoucissent la demande.",
+   "documents": [
+    {
+     "id": "cafe",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Im Café",
+     "participants": [
+      {
+       "nom": "Kellnerin",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Gast",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Kellnerin",
+       "texte": "Guten Tag! Was [[p|möchten]] Sie?"
+      },
+      {
+       "qui": "Gast",
+       "texte": "Ich [[p|hätte]] gern einen Tee. [[p|Könnten]] Sie mir auch ein Wasser bringen?"
+      },
+      {
+       "qui": "Kellnerin",
+       "texte": "Natürlich. [[p|Würden]] Sie lieber drinnen sitzen?"
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cafe",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les quatre formes de politesse (subjonctif II).",
+     "aide": "Ce sont möchten, hätte, Könnten et Würden.",
+     "explication": "**möchten, hätte, Könnten, Würden** : le subjonctif II adoucit la phrase et la rend polie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « Ich hätte gern einen Tee » plutôt que « Ich will einen Tee » ?",
+     "options": [
+      "Il rend la demande polie : le présent ferait un ordre brusque",
+      "Parce que hätte est le prétérit de haben et parle du passé",
+      "Parce que gern est obligatoire avec le verbe haben",
+      "Parce que l’infinitif doit venir en première position"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’effet produit sur le serveur.",
+     "explication": "Le **subjonctif II** est l’outil de la politesse : *Ich hätte gern…* sonne comme une demande, *Ich will…* comme un ordre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son subjonctif II simple.",
+     "paires": [
+      [
+       "sein",
+       "wäre"
+      ],
+      [
+       "haben",
+       "hätte"
+      ],
+      [
+       "können",
+       "könnte"
+      ],
+      [
+       "werden",
+       "würde"
+      ]
+     ],
+     "aide": "On part du prétérit et on ajoute une inflexion.",
+     "explication": "**wäre, hätte, könnte, würde** : formes simples fréquentes, construites sur le prétérit avec inflexion."
+    }
+   ]
+  },
+  {
+   "chapitre": "acebc17f-d953-5af6-8129-008553b71d05",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Si j’étais riche",
+   "competence": "manier-langue",
+   "situation": "Dans sa lettre, Jonas rêve d’une vie au bord de la mer. Pour rêver, l’allemand utilise le subjonctif II.",
+   "documents": [
+    {
+     "id": "traum",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Mein Traum",
+     "blocs": [
+      "Wenn ich reich [[s|wäre]], würde ich ein Haus am Meer kaufen. [[s|Hätte]] ich dort ein Boot, würde ich jeden Tag segeln. Aber ich habe nur wenig Geld, deshalb arbeite ich im Sommer."
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "traum",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux formes simples du subjonctif II.",
+     "aide": "Ce sont des formes de sein et de haben.",
+     "explication": "**wäre** (*sein*) et **Hätte** (*haben*) sont les formes simples. Dans « Hätte ich… », *wenn* a disparu."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Si nous avions plus de temps, nous resterions plus longtemps. »",
+     "texte": "Wenn wir mehr Zeit ___, ___ wir länger bleiben.",
+     "reponses": [
+      [
+       "hätten"
+      ],
+      [
+       "würden"
+      ]
+     ],
+     "banque": [
+      "hätten",
+      "würden",
+      "wären",
+      "hatten"
+     ],
+     "aide": "Hypothèse : subjonctif II de haben, puis würde + infinitif.",
+     "explication": "**Wenn wir mehr Zeit hätten, würden wir länger bleiben.** *hätten* (forme simple) + *würden* + infinitif."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre, sans « wenn » : « S’il était ici, il aiderait. » La phrase commence par Wäre.",
+     "items": [
+      "Wäre",
+      "er hier",
+      "würde",
+      "er",
+      "helfen"
+     ],
+     "aide": "Sans wenn, le verbe prend la première place ; l’infinitif de la principale est à la fin.",
+     "explication": "**Wäre er hier, würde er helfen.** Sans *wenn*, le verbe est en première position."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase à son emploi.",
+     "paires": [
+      [
+       "Wenn er nur hier wäre!",
+       "un souhait"
+      ],
+      [
+       "Du solltest mehr schlafen",
+       "un conseil"
+      ],
+      [
+       "Könnten Sie mir helfen?",
+       "une demande polie"
+      ],
+      [
+       "Hätte ich Zeit, würde ich kommen",
+       "une hypothèse irréelle"
+      ]
+     ],
+     "aide": "Souhait, conseil, politesse, irréel : les trois emplois et un tour sans wenn.",
+     "explication": "*wenn nur…* = souhait ; *solltest* = conseil ; *Könnten Sie…* = politesse ; *Hätte ich…, würde ich…* = hypothèse irréelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "acebc17f-d953-5af6-8129-008553b71d05",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un entraîneur et un caprice de glace",
+   "competence": "raisonner",
+   "situation": "Dans la presse locale, un entraîneur parle de son équipe. Plus loin, un enfant apprend à demander poliment. Deux documents, plusieurs subjonctifs.",
+   "documents": [
+    {
+     "id": "presse",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Der Trainer spricht",
+     "blocs": [
+      "Der Trainer sagte, er [[i|sei]] zufrieden. Er tut aber so, als ob er alles [[a|wüsste]]. Die Spieler [[w|wären]] lieber im Urlaub."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Ein Eis",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mama",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Ich will ein Eis."
+      },
+      {
+       "qui": "Mama",
+       "texte": "Wie bitte? Sag das noch einmal höflich."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Ich möchte bitte ein Eis. Könntest du mir Geld geben?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "presse",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le subjonctif I qui rapporte les paroles de l’entraîneur.",
+     "aide": "Il apparaît après « sagte » et se traduit par « il est ».",
+     "explication": "**sei** : subjonctif I de *sein*, typique du discours indirect de la presse. Il suffit de le reconnaître."
+    },
+    {
+     "type": "zone",
+     "document": "presse",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe au subjonctif II après « als ob ».",
+     "aide": "C’est le verbe qui suit « alles ».",
+     "explication": "**wüsste** : après *als ob*, le subjonctif II est de règle (*wissen* → *wüsste*)."
+    },
+    {
+     "type": "zone",
+     "document": "presse",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche la forme de « sein » qui dit ce que les joueurs préféreraient.",
+     "aide": "Elle s’écrit avec ä.",
+     "explication": "**wären** : subjonctif II de *sein* ; il exprime ce qui n’est pas réel (« seraient plutôt en vacances »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la mère de Ben réagit-elle à « Ich will ein Eis » ?",
+     "options": [
+      "Le présent sonne comme un ordre brusque",
+      "Parce que ein Eis exige un verbe au prétérit",
+      "Parce que Ben aurait dû employer l’impératif",
+      "Parce que will est un verbe faible mal conjugué"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec la phrase polie de Ben, plus bas.",
+     "explication": "*Ich will…* sonne comme un ordre ; **Ich möchte bitte…** et **Könntest du…?** (subjonctif II) rendent la demande acceptable."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Pourriez-vous m’aider ? »",
+     "items": [
+      "Könnten",
+      "Sie",
+      "mir",
+      "helfen"
+     ],
+     "aide": "Question : le verbe conjugué ouvre la phrase ; l’infinitif part à la fin.",
+     "explication": "**Könnten Sie mir helfen?** Subjonctif II de *können*, très poli, en première place pour une question."
+    }
+   ]
+  }
+ ]
+}

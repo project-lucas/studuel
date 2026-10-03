@@ -1,0 +1,2098 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "c214824b-08e1-5fba-b106-ad1746c0b16d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux couleurs, deux carrières",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur Stendhal pour l’oral. Commence par la carte d’identité du roman, puis explique son titre mystérieux.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Rouge et le Noir",
+     "sousTitre": "Stendhal",
+     "emoji": "📕",
+     "lignes": [
+      {
+       "texte": "Héros",
+       "valeur": "Julien Sorel"
+      },
+      {
+       "texte": "Sous-titre",
+       "valeur": "Chronique de 1830",
+       "id": "st"
+      },
+      {
+       "texte": "Premier cadre",
+       "valeur": "Verrières, en province"
+      }
+     ],
+     "pied": "Paru l’année de la révolution de Juillet",
+     "teinte": "violet"
+    },
+    {
+     "id": "titre",
+     "type": "tableau",
+     "titre": "Le titre du roman",
+     "colonnes": [
+      "Couleur",
+      "La carrière",
+      "Sous quel régime"
+     ],
+     "lignes": [
+      [
+       "Le rouge",
+       "L’uniforme militaire",
+       "?"
+      ],
+      [
+       "Le noir",
+       "La soutane",
+       "La Restauration"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "st"
+     ],
+     "enonce": "Sur la carte, touche la ligne qui dit de quelle époque le roman se veut la chronique.",
+     "aide": "Cherche l’année qui suit « Chronique de ».",
+     "explication": "Le sous-titre, « **Chronique de 1830** », annonce que le roman peint la société de son temps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel régime faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "L’Empire",
+      "La Révolution",
+      "La monarchie de Juillet",
+      "La Terreur"
+     ],
+     "reponse": 0,
+     "aide": "Pense au régime de Napoléon, dont l’armée offrait des carrières aux jeunes ambitieux.",
+     "explication": "L’uniforme militaire renvoie à **l’Empire** ; la soutane, à la Restauration."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément sous la couleur du titre qu’il illustre.",
+     "categories": [
+      "Le rouge",
+      "Le noir"
+     ],
+     "items": [
+      [
+       "L’uniforme de l’officier",
+       0
+      ],
+      [
+       "La soutane du prêtre",
+       1
+      ],
+      [
+       "L’Empire",
+       0
+      ],
+      [
+       "La Restauration",
+       1
+      ]
+     ],
+     "aide": "Chaque couleur renvoie à une carrière et au régime qui la rend possible.",
+     "explication": "Le **rouge** : l’uniforme et l’Empire. Le **noir** : la soutane et la Restauration. Julien est né trop tard pour être officier."
+    }
+   ]
+  },
+  {
+   "chapitre": "c214824b-08e1-5fba-b106-ad1746c0b16d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Verrières, Besançon, Paris",
+   "competence": "se-reperer-temps",
+   "situation": "Julien monte les échelons de la société. Suis son parcours sur la chaîne, puis remets dans l’ordre les étapes de son séjour à Paris.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Julien",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Verrières : précepteur chez M. de Rênal"
+      },
+      {
+       "id": "n2",
+       "texte": "Besançon : le séminaire"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Une lettre de Mme de Rênal le dénonce"
+      },
+      {
+       "id": "n5",
+       "texte": "Le coup de feu pendant la messe"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "livre2",
+     "type": "tableau",
+     "titre": "Le livre second, en désordre",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "L’effondrement",
+       "Une lettre dictée par un confesseur dénonce Julien"
+      ],
+      [
+       "La place",
+       "Secrétaire du marquis de La Mole"
+      ],
+      [
+       "La réussite",
+       "Un titre et un régiment obtenus pour Julien"
+      ],
+      [
+       "L’amour",
+       "Mathilde de La Mole, un duel d’amour-propre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » de la chaîne ?",
+     "options": [
+      "Paris : secrétaire du marquis de La Mole",
+      "Paris : officier de l’armée de l’Empire",
+      "Verrières : maire à la place de M. de Rênal",
+      "Besançon : directeur du séminaire"
+     ],
+     "reponse": 0,
+     "aide": "Après le séminaire, Julien quitte la province pour la capitale.",
+     "explication": "Julien devient **secrétaire du marquis de La Mole** à Paris : c’est le livre second."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui ruine le mariage prévu avec Mathilde.",
+     "aide": "Quel écrit arrive au pire moment ?",
+     "explication": "La **lettre de Mme de Rênal**, dictée par son confesseur, détruit l’avenir de Julien."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre étapes du livre second.",
+     "items": [
+      "La place",
+      "L’amour",
+      "La réussite",
+      "L’effondrement"
+     ],
+     "aide": "On commence par l’emploi chez le marquis et on finit par la chute.",
+     "explication": "Julien obtient **la place**, séduit Mathilde (**l’amour**), connaît **la réussite**, puis **l’effondrement** causé par la lettre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à ce qui s’y passe.",
+     "paires": [
+      [
+       "Verrières",
+       "Précepteur et liaison avec Mme de Rênal"
+      ],
+      [
+       "Besançon",
+       "Le séminaire, sous la protection de l’abbé Pirard"
+      ],
+      [
+       "Paris",
+       "Secrétaire du marquis et amour de Mathilde"
+      ],
+      [
+       "L’église de Verrières",
+       "Le coup de feu pendant la messe"
+      ]
+     ],
+     "aide": "Un lieu pour chaque étape de l’ascension, puis un lieu pour la chute.",
+     "explication": "Chaque lieu marque une étape : **Verrières**, **Besançon**, **Paris**, puis l’**église** où tout s’achève."
+    }
+   ]
+  },
+  {
+   "chapitre": "c214824b-08e1-5fba-b106-ad1746c0b16d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un héros qu’on suit sans l’approuver",
+   "competence": "analyser-texte",
+   "situation": "Deux lycéens se disputent sur Julien : faut-il l’admirer ? Lis un passage écrit à la manière de Stendhal, puis tranche.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une soirée d’Armand",
+     "blocs": [
+      "Armand, fils d’un tonnelier, avait fixé l’heure de son audace : avant la fin de la soirée, il prendrait la main de la jeune veuve. Il [[c|comptait]] les minutes et [[c|calculait]] son effet. Ce n’était pas l’amour qui le faisait trembler, c’était la peur d’être ridicule.",
+      "Demain il serait trop tard. Fallait-il rester toute sa vie un fils de tonnelier ? Le notaire, ce soir-là, le trouva fort aimable et ne vit rien."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stendhal"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mehdi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Le narrateur ne montre que ce que fait Armand, jamais ce qu’il pense."
+      },
+      {
+       "qui": "Mehdi",
+       "texte": "Faux : on entend ses calculs et sa peur, et pourtant le narrateur sourit de lui."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux verbes qui montrent que le héros calcule.",
+     "aide": "Cherche ce qu’il fait des minutes et de son effet.",
+     "explication": "Armand **comptait** les minutes et **calculait** son effet : l’ambition règle chacun de ses gestes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les pensées d’Armand (« Demain il serait trop tard… ») ne sont pas entre guillemets. Quel procédé les fait entendre dans le récit ?",
+     "options": [
+      "Le discours indirect libre",
+      "Le discours direct",
+      "La description d’un décor",
+      "La prosopopée"
+     ],
+     "reponse": 0,
+     "aide": "La pensée passe dans le récit sans verbe introducteur.",
+     "explication": "C’est le **discours indirect libre** : la pensée du personnage entre dans la voix du narrateur."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le passage, qui a raison dans le débat ?",
+     "options": [
+      "Mehdi : le texte donne accès à ses pensées tout en le tournant en ironie",
+      "Chloé : le texte ne dévoile aucune des pensées du héros",
+      "Chloé : le narrateur approuve en tout ce que fait le héros",
+      "Mehdi : le narrateur ne porte jamais aucun jugement"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase sur la peur d’être ridicule et celle du notaire.",
+     "explication": "**Mehdi** : on lit les calculs et la peur d’Armand de l’intérieur, mais le narrateur garde la distance de l’ironie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces traits de Julien : ce qui le condamne ou ce qui le grandit ?",
+     "categories": [
+      "Ce qui le condamne",
+      "Ce qui le grandit"
+     ],
+     "items": [
+      [
+       "Il ment et calcule par ambition",
+       0
+      ],
+      [
+       "Il tire sur une femme qu’il aime",
+       0
+      ],
+      [
+       "Il est courageux",
+       1
+      ],
+      [
+       "Il est loyal envers Pirard",
+       1
+      ],
+      [
+       "Il est sincère avec Fouqué",
+       1
+      ]
+     ],
+     "aide": "Le roman refuse de trancher : il montre les deux faces.",
+     "explication": "Julien **ment** et **tire sur une femme qu’il aime**, mais il est **courageux**, **loyal** et **sincère** : un héros ambivalent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque apport du roman à ce qu’il devient.",
+     "paires": [
+      [
+       "Le héros ambitieux",
+       "Le modèle de tout le XIXe siècle"
+      ],
+      [
+       "L’ironie stendhalienne",
+       "Une voix narrative à distance"
+      ],
+      [
+       "La focalisation interne serrée",
+       "On suit les calculs du personnage"
+      ]
+     ],
+     "aide": "Un apport pour le personnage, un pour la voix, un pour le point de vue.",
+     "explication": "Le **héros ambitieux** fait école, l’**ironie** installe la distance, la **focalisation interne** nous enferme dans ses calculs."
+    }
+   ]
+  },
+  {
+   "chapitre": "2360d954-43fc-5b0a-a5bd-355b790bd3c4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ni modèle ni monstre",
+   "competence": "analyser-document",
+   "situation": "Ta professeure te demande de préparer le parcours « le personnage de roman, esthétiques et valeurs ». Commence par balancer le bon et le mauvais chez Julien.",
+   "documents": [
+    {
+     "id": "amb",
+     "type": "tableau",
+     "titre": "Un personnage ambivalent",
+     "colonnes": [
+      "Ce qu’il fait de condamnable",
+      "Ce qui le grandit"
+     ],
+     "lignes": [
+      [
+       "Il ment, calcule, séduit par ambition",
+       "Il est courageux"
+      ],
+      [
+       "Il trahit",
+       "?"
+      ],
+      [
+       "Il tire sur une femme qu’il aime",
+       "Il atteint une grandeur que personne autour de lui n’atteint"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "par",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le parcours",
+     "sousTitre": "Le Rouge et le Noir",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Parcours",
+       "valeur": "Le personnage de roman, esthétiques et valeurs"
+      },
+      {
+       "texte": "Époque peinte",
+       "valeur": "La Restauration finissante, en 1830",
+       "id": "ep"
+      },
+      {
+       "texte": "Narrateur",
+       "valeur": "Ironique, à distance"
+      }
+     ],
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, en face de « Il trahit » ?",
+     "options": [
+      "Il est loyal envers Pirard et sincère avec Fouqué",
+      "Il est riche et noble de naissance, sans souci",
+      "Il est aimé de tous ses voisins de Verrières",
+      "Il est fidèle à Mathilde jusqu’au bout"
+     ],
+     "reponse": 0,
+     "aide": "Julien trahit certains, mais reste fidèle à d’autres.",
+     "explication": "En face de la trahison, le tableau place sa **loyauté** envers l’abbé Pirard et sa **sincérité** avec Fouqué."
+    },
+    {
+     "type": "zone",
+     "document": "par",
+     "multiple": false,
+     "reponse": [
+      "ep"
+     ],
+     "enonce": "Sur la fiche, touche la ligne qui dit quelle période politique le roman peint.",
+     "aide": "C’est la ligne de l’époque.",
+     "explication": "Le roman peint **la Restauration finissante**, en 1830."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : le roman refuse de ___, et crée un héros ___.",
+     "texte": "Le roman refuse de ___ : Julien est un héros ___, à la fois condamnable et grand.",
+     "reponses": [
+      [
+       "trancher"
+      ],
+      [
+       "ambivalent"
+      ]
+     ],
+     "banque": [
+      "trancher",
+      "ambivalent",
+      "juger",
+      "exemplaire",
+      "condamner"
+     ],
+     "aide": "Le tableau montre deux colonnes qui se répondent.",
+     "explication": "Le roman **refuse de trancher** : Julien est **ambivalent**, on épouse son point de vue sans l’approuver."
+    }
+   ]
+  },
+  {
+   "chapitre": "2360d954-43fc-5b0a-a5bd-355b790bd3c4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui Stendhal frappe de son ironie",
+   "competence": "analyser-texte",
+   "situation": "Stendhal ne dit jamais « je me moque » : il écrit le contraire de ce qu’il pense. Repère ses cibles dans un salon inventé à sa manière.",
+   "documents": [
+    {
+     "id": "cibles",
+     "type": "tableau",
+     "titre": "Les cibles de la satire",
+     "colonnes": [
+      "Lieu",
+      "Ce qui est visé"
+     ],
+     "lignes": [
+      [
+       "Verrières",
+       "La province vénale"
+      ],
+      [
+       "Le séminaire",
+       "?"
+      ],
+      [
+       "Le faubourg Saint-Germain",
+       "L’ennui doré"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "salon",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans un salon du faubourg",
+     "blocs": [
+      "Dans le grand salon, sous les dorures, chacun s’[[e|ennuyait]] avec beaucoup d’élégance. On y parlait de tout avec prudence, c’est-à-dire de rien. Personne ne bâilla : c’eût été une impolitesse, et la politesse était la seule affaire que l’on prît au sérieux."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stendhal"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire en face du séminaire ?",
+     "options": [
+      "L’hypocrisie",
+      "La générosité",
+      "La bravoure",
+      "La simplicité"
+     ],
+     "reponse": 0,
+     "aide": "Le séminaire est un lieu où l’on doit paraître pieux plus qu’être pieux.",
+     "explication": "Le séminaire sert à viser l’**hypocrisie**."
+    },
+    {
+     "type": "zone",
+     "document": "salon",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le verbe qui illustre « l’ennui doré » dans le salon.",
+     "aide": "Que fait-on, sous les dorures ?",
+     "explication": "Le salon doré est le lieu où l’on **s’ennuie** avec élégance : c’est l’ennui doré."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le narrateur écrit que chacun s’ennuie « avec beaucoup d’élégance ». Que fait-il ?",
+     "options": [
+      "Il se moque en louant ce qu’il critique",
+      "Il admire sincèrement leur élégance",
+      "Il décrit un décor sans jugement",
+      "Il plaint les invités"
+     ],
+     "reponse": 0,
+     "aide": "Il dit le contraire de ce qu’il montre.",
+     "explication": "C’est de l’**ironie** : l’éloge apparent masque la critique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait d’écriture à son effet.",
+     "paires": [
+      [
+       "La phrase sèche",
+       "La rapidité"
+      ],
+      [
+       "Le discours indirect libre",
+       "La pensée du personnage entendue dans le récit"
+      ],
+      [
+       "La lecture du Code civil",
+       "Se corriger du lyrisme"
+      ]
+     ],
+     "aide": "Pense à ce que Stendhal veut éviter : le « beau style ».",
+     "explication": "La phrase **sèche** va vite, le **discours indirect libre** fait entendre le personnage, et le **Code civil** sert de modèle de sobriété."
+    }
+   ]
+  },
+  {
+   "chapitre": "2360d954-43fc-5b0a-a5bd-355b790bd3c4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le crime d’un homme à qui l’on retire sa place",
+   "competence": "argumenter",
+   "situation": "Est-ce un simple crime passionnel ? Pèse la lecture sociale du roman avec un tableau d’arguments, un débat et les questions de dissertation.",
+   "documents": [
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman peint une société bloquée",
+       "Le mépris pour les talents sans naissance ferme les issues",
+       "?"
+      ],
+      [
+       "Le crime n’est pas seulement passionnel",
+       "On retire à Julien la place qu’il avait arrachée",
+       "Il accuse la société devant le jury"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Julien tire parce qu’il est jaloux, c’est un crime passionnel et rien d’autre."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Pas seulement : la lettre lui [[l|retire]] d’un coup la place qu’il avait arrachée."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Dans le débat, touche le verbe qui dit ce que la lettre fait à la place de Julien.",
+     "aide": "Relis la réplique de Léo.",
+     "explication": "La lettre lui **retire** la place arrachée : le crime a aussi une dimension sociale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Julien, né trop tard pour être officier, doit passer par la soutane",
+      "Julien devient maire de Verrières dès l’âge de vingt ans",
+      "Mathilde renonce à tout pour vivre avec lui, sans ambition",
+      "M. de Rênal protège Julien du début à la fin du livre"
+     ],
+     "reponse": 0,
+     "aide": "Pense au titre du roman : quelles carrières sont ouvertes à un fils de charpentier ?",
+     "explication": "Julien est **né trop tard** : il aurait été officier sous l’Empire, il est séminariste sous la Restauration."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque question de dissertation à ce que le roman permet de répondre.",
+     "paires": [
+      [
+       "Un personnage doit-il être un modèle ?",
+       "Non : Julien ne l’est pas"
+      ],
+      [
+       "Le roman doit-il peindre son temps ?",
+       "Le sous-titre y répond, mais le roman excède la chronique"
+      ],
+      [
+       "Peut-on s’attacher à un personnage immoral ?",
+       "La focalisation interne fait précisément cela"
+      ],
+      [
+       "L’ambition est-elle une valeur ?",
+       "Une énergie que la société gâche"
+      ]
+     ],
+     "aide": "Chaque réponse découle d’un trait du roman vu en cours.",
+     "explication": "Julien n’est **pas un modèle** ; le roman **excède la chronique** ; la **focalisation interne** rend attachant un héros immoral ; l’ambition est une énergie **gâchée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion le roman appuie-t-il le mieux ?",
+     "options": [
+      "Une société bloquée peut gâcher l’énergie de ceux qu’elle écarte",
+      "Un héros doit toujours se conformer à la morale de son siècle",
+      "L’ambition est toujours récompensée dans la société de 1830",
+      "Un roman doit se contenter de raconter une passion amoureuse"
+     ],
+     "reponse": 0,
+     "aide": "Retiens la thèse du tableau et l’argument de Léo.",
+     "explication": "Le roman montre une société **bloquée**, où l’énergie individuelle n’a plus d’issue légitime."
+    }
+   ]
+  },
+  {
+   "chapitre": "28e61bf4-ac4c-530e-9568-c9471421c5fd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une lettre d’un empereur mourant",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes Yourcenar à l’oral. Place d’abord Hadrien dans son siècle, puis relève la forme du livre sur sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie d’Hadrien",
+     "debut": 70,
+     "fin": 140,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 76,
+       "nom": "Naissance"
+      },
+      {
+       "id": "emp",
+       "date": 117,
+       "nom": "Il devient empereur"
+      },
+      {
+       "id": "anti",
+       "date": 130,
+       "nom": "Mort d’Antinoüs"
+      },
+      {
+       "id": "mort",
+       "date": 138,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Mémoires d’Hadrien",
+     "sousTitre": "Marguerite Yourcenar",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1951"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Une longue lettre"
+      },
+      {
+       "texte": "Destinataire",
+       "valeur": "Marc Aurèle, petit-fils adoptif"
+      },
+      {
+       "texte": "Sections",
+       "valeur": "Six, aux titres latins"
+      }
+     ],
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "anti"
+     ],
+     "enonce": "Sur la frise, touche l’année où Antinoüs se noie dans le Nil.",
+     "aide": "Cherche l’événement qui n’est ni une naissance ni une mort de l’empereur.",
+     "explication": "Antinoüs est noyé dans le Nil en **130**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Hadrien a-t-il à sa mort ?",
+     "reponse": 62,
+     "aide": "Soustrais l’année de sa naissance à celle de sa mort.",
+     "explication": "138 − 76 = **62 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité.",
+     "texte": "Le livre est une ___ lettre adressée à ___ ; elle se divise en ___ sections.",
+     "reponses": [
+      [
+       "longue"
+      ],
+      [
+       "Marc Aurèle"
+      ],
+      [
+       "six"
+      ]
+     ],
+     "banque": [
+      "longue",
+      "courte",
+      "Marc Aurèle",
+      "Trajan",
+      "six",
+      "dix"
+     ],
+     "aide": "Tout est sur la fiche.",
+     "explication": "Le livre est une **longue** lettre adressée à **Marc Aurèle**, en **six** sections."
+    }
+   ]
+  },
+  {
+   "chapitre": "28e61bf4-ac4c-530e-9568-c9471421c5fd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Six titres latins, un récit rétrospectif",
+   "competence": "analyser-document",
+   "situation": "Les six sections du livre portent des titres latins. Retrouve celui qui manque et ce que chacun annonce, puis explique la forme du récit.",
+   "documents": [
+    {
+     "id": "titres",
+     "type": "chaine",
+     "titre": "Les six sections du livre",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "s1",
+       "texte": "Animula vagula blandula"
+      },
+      {
+       "id": "s2",
+       "texte": "Varius multiplex multiformis"
+      },
+      {
+       "id": "s3",
+       "texte": "Tellus stabilita"
+      },
+      {
+       "id": "s4",
+       "texte": "?"
+      },
+      {
+       "id": "s5",
+       "texte": "Disciplina augusta"
+      },
+      {
+       "id": "s6",
+       "texte": "Patientia"
+      }
+     ],
+     "liens": [
+      {
+       "de": "s1",
+       "a": "s2"
+      },
+      {
+       "de": "s2",
+       "a": "s3"
+      },
+      {
+       "de": "s3",
+       "a": "s4"
+      },
+      {
+       "de": "s4",
+       "a": "s5"
+      },
+      {
+       "de": "s5",
+       "a": "s6"
+      }
+     ]
+    },
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le résumé du livre",
+     "blocs": [
+      "Un empereur malade écrit à son petit-fils adoptif, alors adolescent. Il [[r|reprend]] toute sa vie, de ses débuts de soldat jusqu’à la mort qui approche. Le récit est donc [[r|rétrospectif]] : l’homme qui parle sait déjà comment tout finit."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel titre faut-il écrire à la place de la case « ? », sachant que cette section raconte le siècle d’or et Antinoüs ?",
+     "options": [
+      "Saeculum aureum",
+      "Pax augusta",
+      "Imperium aeternum",
+      "Fortuna varia"
+     ],
+     "reponse": 0,
+     "aide": "Le titre latin reprend la formule « le siècle d’or ».",
+     "explication": "La quatrième section est **Saeculum aureum** : le siècle d’or, et Antinoüs."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque titre à ce qu’il annonce.",
+     "paires": [
+      [
+       "Tellus stabilita",
+       "La terre pacifiée"
+      ],
+      [
+       "Saeculum aureum",
+       "Le siècle d’or et Antinoüs"
+      ],
+      [
+       "Disciplina augusta",
+       "L’ordre impérial"
+      ],
+      [
+       "Patientia",
+       "La maladie et la mort"
+      ]
+     ],
+     "aide": "Traduis chaque titre en mot clé : terre, siècle d’or, discipline, patience.",
+     "explication": "**Tellus stabilita** : la terre pacifiée ; **Saeculum aureum** : le siècle d’or ; **Disciplina augusta** : l’ordre ; **Patientia** : la mort qui vient."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui disent que le récit regarde en arrière.",
+     "aide": "Cherche un verbe et un adjectif.",
+     "explication": "Hadrien **reprend** sa vie : le récit est **rétrospectif**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle personne est écrit le livre ?",
+     "options": [
+      "À la première personne",
+      "À la troisième personne",
+      "À la deuxième personne du pluriel",
+      "Il alterne entre plusieurs narrateurs"
+     ],
+     "reponse": 0,
+     "aide": "Hadrien écrit une lettre sur sa propre vie.",
+     "explication": "Le livre est écrit à la **première personne** : c’est la conscience d’Hadrien qui parle."
+    }
+   ]
+  },
+  {
+   "chapitre": "28e61bf4-ac4c-530e-9568-c9471421c5fd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Entre l’érudition et la magie",
+   "competence": "analyser-texte",
+   "situation": "Yourcenar disait vouloir un « pied dans l’érudition, l’autre dans la magie ». Voici un passage écrit à sa manière : repère la politique, l’intime et le style.",
+   "documents": [
+    {
+     "id": "pass",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une voix d’empereur",
+     "blocs": [
+      "J’ai appris tard que gouverner consiste à déplacer les [[p|bornes]] le moins possible. Les légions que j’ai [[p|rappelées]] derrière le fleuve m’ont valu des railleries ; je les préfère aux victoires qui vident un empire.",
+      "Ce soir, mon corps me prévient : il est des [[i|chevaux]] que je ne monterai plus, des [[i|eaux]] dont je ne goûterai plus la fraîcheur."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Yourcenar"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noé",
+       "texte": "C’est une biographie : tout y est vrai, daté et sourcé."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Non, c’est un roman : une romancière fait parler Hadrien à la première personne."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pass",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui montrent la politique de consolidation d’Hadrien.",
+     "aide": "Il ne conquiert pas : il arrête, il recule.",
+     "explication": "Les **bornes** à peine déplacées, les légions **rappelées** : Hadrien arrête l’expansion."
+    },
+    {
+     "type": "zone",
+     "document": "pass",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les deux mots qui relèvent des notations intimes du corps.",
+     "aide": "Pense à ce qu’un cavalier perd quand il vieillit.",
+     "explication": "Les **chevaux** et les **eaux** sont des notations intimes : le corps qui lâche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui prouve que ce livre n’est pas une simple biographie ?",
+     "options": [
+      "Une romancière fait parler Hadrien à la première personne",
+      "Il n’y est jamais question d’histoire romaine",
+      "Hadrien y raconte l’histoire d’un autre empereur",
+      "Il est écrit par un historien du XXe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Qui dit « je » dans le passage ?",
+     "explication": "Le « **je** » d’Hadrien est écrit par Yourcenar : c’est une fiction appuyée sur des sources historiques réelles."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait de style à son effet.",
+     "paires": [
+      [
+       "La phrase ample, aphoristique",
+       "La gravité"
+      ],
+      [
+       "Les grandes fresques",
+       "Guerres, voyages, réformes"
+      ],
+      [
+       "Les notations intimes",
+       "Le goût de l’eau, la fatigue, le sommeil"
+      ]
+     ],
+     "aide": "Chaque trait donne un ton ou un contenu.",
+     "explication": "La phrase **ample** donne la gravité, les **fresques** les grands événements, les **notations intimes** le corps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le livre est autant une ___ qu’un roman historique.",
+     "options": [
+      "Méditation sur le pouvoir, l’art, le corps et la mort",
+      "Chronique militaire de la conquête des provinces romaines",
+      "Biographie savante de l’empereur Marc Aurèle",
+      "Enquête policière sur la mort d’Antinoüs dans le Nil"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit que le livre dépasse la reconstitution historique.",
+     "explication": "Le livre est autant une **méditation** sur le pouvoir, l’art, le corps et la mort qu’un roman historique."
+    }
+   ]
+  },
+  {
+   "chapitre": "46bdc52b-5a4e-5a5c-9667-fe6e4b302d88",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois textes, deux manifestes",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ton oral, tu dois situer les textes fondateurs du Nouveau Roman. Lis le tableau, puis place-les sur la frise.",
+   "documents": [
+    {
+     "id": "trois",
+     "type": "tableau",
+     "titre": "Trois textes à connaître",
+     "colonnes": [
+      "Texte",
+      "Auteur",
+      "Date",
+      "Statut"
+     ],
+     "lignes": [
+      [
+       "L’Ère du soupçon",
+       "Nathalie Sarraute",
+       "1956",
+       "Manifeste"
+      ],
+      [
+       "Pour un nouveau roman",
+       "Alain Robbe-Grillet",
+       "1963",
+       "Manifeste"
+      ],
+      [
+       "La Modification",
+       "Michel Butor",
+       "1957",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les textes sur la frise",
+     "debut": 1950,
+     "fin": 1970,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "sar",
+       "date": 1956,
+       "nom": "L’Ère du soupçon"
+      },
+      {
+       "id": "but",
+       "date": 1957,
+       "nom": "La Modification"
+      },
+      {
+       "id": "rob",
+       "date": 1963,
+       "nom": "Pour un nouveau roman"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, à propos de La Modification ?",
+     "options": [
+      "L’exemple célèbre, écrit à la deuxième personne du pluriel",
+      "Un manifeste publié en 1963 par Robbe-Grillet",
+      "Un essai de Sarraute sur l’ère du soupçon",
+      "Un roman policier à narrateur omniscient classique"
+     ],
+     "reponse": 0,
+     "aide": "Les deux premières lignes sont des manifestes ; celle-ci est un roman.",
+     "explication": "La Modification est un **roman**, « l’exemple le plus célèbre », écrit à la **deuxième personne du pluriel**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "rob"
+     ],
+     "enonce": "Sur la frise, touche l’année où Robbe-Grillet publie son manifeste.",
+     "aide": "Un manifeste est publié en 1956, l’autre bien plus tard.",
+     "explication": "Robbe-Grillet publie *Pour un nouveau roman* en **1963**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les deux manifestes ?",
+     "reponse": 7,
+     "aide": "Soustrais la date du premier manifeste à celle du second.",
+     "explication": "1963 − 1956 = **7 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "46bdc52b-5a4e-5a5c-9667-fe6e4b302d88",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La gomme et l’homme sans nom",
+   "competence": "analyser-texte",
+   "situation": "Tu étudies un passage écrit à la manière du Nouveau Roman : pas de héros, pas de psychologie, mais un objet décrit comme une figure géométrique.",
+   "documents": [
+    {
+     "id": "gomme",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la table",
+     "blocs": [
+      "Sur la table, une gomme : un [[g|parallélépipède]] blanc, dont l’une des faces est entamée en biais. Elle est posée à quatre [[g|centimètres]] du bord.",
+      "Un homme entre. On ne sait ni son [[p|nom]], ni ce qu’il [[p|pense]]. Il regarde la gomme."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière du Nouveau Roman"
+    },
+    {
+     "id": "refus",
+     "type": "tableau",
+     "titre": "Ce qui disparaît",
+     "colonnes": [
+      "Ce qui disparaît",
+      "Ce que cela signifie"
+     ],
+     "lignes": [
+      [
+       "Le personnage",
+       "Plus de nom parfois, plus de portrait, plus de biographie"
+      ],
+      [
+       "L’intrigue",
+       "?"
+      ],
+      [
+       "La psychologie",
+       "Les motivations cèdent aux sensations et aux objets"
+      ],
+      [
+       "L’auteur omniscient",
+       "Personne ne domine plus le récit"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gomme",
+     "multiple": true,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche les deux mots qui décrivent la gomme comme une forme mesurée.",
+     "aide": "Cherche un mot de géométrie et une unité de mesure.",
+     "explication": "Le **parallélépipède** et les quatre **centimètres** : la description est géométrique, sans métaphore."
+    },
+    {
+     "type": "zone",
+     "document": "gomme",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui montrent que le personnage n’a ni identité ni psychologie.",
+     "aide": "Le narrateur avoue ce qu’il ne sait pas.",
+     "explication": "On ne connaît ni son **nom**, ni ce qu’il **pense** : plus de portrait, plus de psychologie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire en face de « L’intrigue » ?",
+     "options": [
+      "Plus de chronologie claire ni de dénouement : le récit tourne",
+      "Une intrigue encore plus compliquée, pleine de coups de théâtre",
+      "Un dénouement toujours donné par un narrateur omniscient",
+      "Une enquête menée du début à la fin par un détective"
+     ],
+     "reponse": 0,
+     "aide": "L’intrigue classique avec début, milieu et fin disparaît.",
+     "explication": "L’intrigue disparaît : **plus de chronologie claire, plus de dénouement**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément mis à la place à sa forme.",
+     "paires": [
+      [
+       "La description",
+       "Portée à un degré inédit : objets décrits pendant des pages"
+      ],
+      [
+       "La répétition et la variation",
+       "Des principes de composition, chez Simon et Butor"
+      ],
+      [
+       "Le lecteur",
+       "Il reconstitue et accepte de ne pas tout savoir"
+      ]
+     ],
+     "aide": "Pense à ce qui remplace le personnage et l’intrigue.",
+     "explication": "La **description** devient centrale, la **répétition** compose le livre, le **lecteur** fait le travail."
+    }
+   ]
+  },
+  {
+   "chapitre": "46bdc52b-5a4e-5a5c-9667-fe6e4b302d88",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le Nouveau Roman détruit-il le roman ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent : le Nouveau Roman détruit-il le roman ? Lis un passage à la deuxième personne, à la manière de Butor, pour les départager.",
+   "documents": [
+    {
+     "id": "train",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le train",
+     "blocs": [
+      "[[v|Vous]] avez posé la valise sur le porte-bagages. [[v|Vous]] regardez le contrôleur qui s’éloigne dans le couloir. [[v|Vous]] ne savez pas encore pourquoi vous avez pris ce train."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Butor"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lucas",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucas",
+       "texte": "Plus de personnage, plus d’intrigue : le Nouveau Roman détruit le roman."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Il le déplace : montrer les conventions comme conventions, c’est encore écrire un roman."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "train",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les trois pronoms qui fixent la personne du récit.",
+     "aide": "Le pronom se répète au début de chaque phrase.",
+     "explication": "Le récit est écrit à la **deuxième personne du pluriel**, comme *La Modification*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui, dans ce passage, donne raison à Zoé ?",
+     "options": [
+      "Sans nom ni psychologie, il reste un récit avec lieu et gestes",
+      "Il ne contient plus aucun mot de la langue française courante",
+      "Il raconte une intrigue complète avec un dénouement clair",
+      "Il décrit longuement les pensées profondes du voyageur"
+     ],
+     "reponse": 0,
+     "aide": "Le texte raconte-t-il encore quelque chose ?",
+     "explication": "Le passage reste un **récit** (un train, une valise, un contrôleur) : le roman est déplacé, pas détruit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : refusé ou mis à la place par le Nouveau Roman ?",
+     "categories": [
+      "Refusé",
+      "Mis à la place"
+     ],
+     "items": [
+      [
+       "Le personnage biographié",
+       0
+      ],
+      [
+       "L’intrigue avec dénouement",
+       0
+      ],
+      [
+       "L’auteur omniscient",
+       0
+      ],
+      [
+       "La description minutieuse",
+       1
+      ],
+      [
+       "La répétition et la variation",
+       1
+      ],
+      [
+       "Le lecteur qui reconstitue",
+       1
+      ]
+     ],
+     "aide": "Pense à ce que les auteurs rejettent, puis à ce qu’ils inventent.",
+     "explication": "Sont refusés le **personnage**, l’**intrigue** et l’**auteur omniscient** ; la **description**, la **répétition** et le **lecteur actif** les remplacent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque auteur à son texte.",
+     "paires": [
+      [
+       "Nathalie Sarraute",
+       "L’Ère du soupçon"
+      ],
+      [
+       "Alain Robbe-Grillet",
+       "Pour un nouveau roman"
+      ],
+      [
+       "Michel Butor",
+       "La Modification"
+      ]
+     ],
+     "aide": "Deux manifestes et un roman.",
+     "explication": "**Sarraute** : *L’Ère du soupçon* ; **Robbe-Grillet** : *Pour un nouveau roman* ; **Butor** : *La Modification*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ce chapitre permet-il d’appuyer ?",
+     "options": [
+      "Une esthétique et une vision du monde : un réel d’objets et d’incertitude",
+      "Le Nouveau Roman a supprimé définitivement le genre du roman",
+      "Le Nouveau Roman est une école organisée avec un chef et un programme",
+      "Le Nouveau Roman revient au roman psychologique du XIXe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Le Nouveau Roman est un « air de famille », pas une école.",
+     "explication": "C’est une **esthétique** et une **vision du monde**, qui déplace le roman sans le détruire."
+    }
+   ]
+  },
+  {
+   "chapitre": "c68f0059-2698-5608-b26c-386783ade93a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Autrefois, aujourd’hui : la mort de Léopoldine",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes le recueil de Hugo. Repère l’architecture du livre, puis la date qui le coupe en deux.",
+   "documents": [
+    {
+     "id": "livres",
+     "type": "tableau",
+     "titre": "Les livres du recueil (extrait)",
+     "colonnes": [
+      "N°",
+      "Titre",
+      "Ensemble"
+     ],
+     "lignes": [
+      [
+       "I",
+       "Aurore",
+       "Autrefois"
+      ],
+      [
+       "II",
+       "L’Âme en fleur",
+       "Autrefois"
+      ],
+      [
+       "III",
+       "Les Luttes et les Rêves",
+       "?"
+      ],
+      [
+       "IV",
+       "Pauca meae",
+       "Aujourd’hui"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Léopoldine et le recueil",
+     "debut": 1840,
+     "fin": 1860,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "noy",
+       "date": 1843,
+       "nom": "Léopoldine se noie à Villequier"
+      },
+      {
+       "id": "pub",
+       "date": 1856,
+       "nom": "Publication"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel ensemble faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Autrefois",
+      "Aujourd’hui",
+      "En marche",
+      "Au bord de l’infini"
+     ],
+     "reponse": 0,
+     "aide": "Les livres I à III appartiennent au même ensemble.",
+     "explication": "Le livre III, *Les Luttes et les Rêves*, est dans **Autrefois**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "noy"
+     ],
+     "enonce": "Sur la frise, touche la date de la mort de Léopoldine.",
+     "aide": "La mort précède de loin la publication.",
+     "explication": "Léopoldine meurt noyée à Villequier en **1843**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort de Léopoldine de la publication du recueil ?",
+     "reponse": 13,
+     "aide": "Soustrais 1843 à 1856.",
+     "explication": "1856 − 1843 = **13 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "c68f0059-2698-5608-b26c-386783ade93a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Départ au matin, enfants à l’usine",
+   "competence": "analyser-texte",
+   "situation": "Le recueil passe de la douleur intime à la misère sociale. Lis deux courts extraits et rattache-les à leurs livres.",
+   "documents": [
+    {
+     "id": "demain",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un départ à l’aube",
+     "blocs": [
+      "Demain, dès l’aube, à l’heure où blanchit la campagne,",
+      "Je [[p|partirai]]. Vois-tu, je sais que tu m’attends."
+     ],
+     "source": "Victor Hugo, *Les Contemplations*, « Demain, dès l’aube… »"
+    },
+    {
+     "id": "mel",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Une question sur l’enfance",
+     "blocs": [
+      "Où vont tous ces [[e|enfants]] dont pas un seul ne rit ?"
+     ],
+     "source": "Victor Hugo, *Les Contemplations*, livre III, « Melancholia »"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Relie chaque livre à ce qu’il contient.",
+     "paires": [
+      [
+       "I — Aurore",
+       "L’enfance, la nature, la bataille romantique"
+      ],
+      [
+       "II — L’Âme en fleur",
+       "L’amour et la sensualité"
+      ],
+      [
+       "III — Les Luttes et les Rêves",
+       "La misère et l’enfance exploitée"
+      ],
+      [
+       "IV — Pauca meae",
+       "Le deuil"
+      ]
+     ],
+     "aide": "Chaque livre a son thème : enfance, amour, misère, deuil.",
+     "explication": "**Aurore** : l’enfance ; **L’Âme en fleur** : l’amour ; **Les Luttes et les Rêves** : la misère ; **Pauca meae** : le deuil."
+    },
+    {
+     "type": "zone",
+     "document": "demain",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui annonce le voyage du poète vers la tombe de sa fille.",
+     "aide": "Un verbe au futur, dans le deuxième vers.",
+     "explication": "Le poète dit « Je **partirai** » : le voyage vers la tombe de Léopoldine."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel livre appartient « Demain, dès l’aube… » ?",
+     "options": [
+      "Pauca meae",
+      "Aurore",
+      "L’Âme en fleur",
+      "Les Luttes et les Rêves"
+     ],
+     "reponse": 0,
+     "aide": "C’est le texte-phare du livre du deuil.",
+     "explication": "Le poème ouvre le deuil de **Pauca meae**."
+    },
+    {
+     "type": "zone",
+     "document": "mel",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui montre que « Melancholia » parle de l’enfance exploitée.",
+     "aide": "Le poème s’interroge sur un groupe d’êtres.",
+     "explication": "Le mot **enfants** rappelle l’enfance exploitée du livre III."
+    }
+   ]
+  },
+  {
+   "chapitre": "c68f0059-2698-5608-b26c-386783ade93a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand je vous parle de moi",
+   "competence": "argumenter",
+   "situation": "Le recueil est-il une autobiographie ? Un élève le croit ; la préface de Hugo répond.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maëlle",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maëlle",
+       "texte": "Les Contemplations racontent les faits de la vie de Hugo, jour après jour."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Non : c’est le récit d’une vie intérieure, joie, amour, révolte, deuil et foi."
+      }
+     ]
+    },
+    {
+     "id": "pref",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La préface",
+     "blocs": [
+      "Quand je vous parle de moi, je vous parle de [[u|vous]]. Ah ! insensé, qui crois que je ne suis pas [[u|toi]] !"
+     ],
+     "source": "Victor Hugo, préface des *Contemplations*"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pref",
+     "multiple": true,
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche les deux pronoms par lesquels Hugo offre son « je » au lecteur.",
+     "aide": "Il s’adresse directement à celui qui lit.",
+     "explication": "Par **vous** et **toi**, Hugo fait de son « je » un miroir pour le lecteur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la préface soutient-elle ?",
+     "options": [
+      "Le « je » est offert au lecteur comme un miroir universel",
+      "Le recueil est une chronique des faits de l’exil à Guernesey",
+      "Hugo y refuse toute émotion personnelle pour rester neutre",
+      "Le poète écrit uniquement pour ses proches et sa famille"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase : de qui parle-t-il, et à qui ?",
+     "explication": "Hugo parle de lui mais **à chacun** : son « je » est universel."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : vie intérieure (« Mémoires d’une âme ») ou autobiographie de faits ?",
+     "categories": [
+      "Vie intérieure",
+      "Faits de la vie"
+     ],
+     "items": [
+      [
+       "La joie de l’amour",
+       0
+      ],
+      [
+       "La révolte devant la misère",
+       0
+      ],
+      [
+       "La foi mise à l’épreuve par le deuil",
+       0
+      ],
+      [
+       "La liste des adresses de Hugo",
+       1
+      ],
+      [
+       "Le calendrier de ses déménagements",
+       1
+      ]
+     ],
+     "aide": "Le parcours parle d’une âme, pas d’un emploi du temps.",
+     "explication": "Les **sentiments** (joie, révolte, foi) relèvent des Mémoires d’une âme ; **adresses** et **déménagements** seraient des faits."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : dans Pauca meae, la douleur passe du ___ intime à la ___ adressée à ___.",
+     "texte": "Dans *Pauca meae*, la douleur passe du ___ intime à la ___ adressée à ___.",
+     "reponses": [
+      [
+       "récit"
+      ],
+      [
+       "question"
+      ],
+      [
+       "Dieu"
+      ]
+     ],
+     "banque": [
+      "récit",
+      "question",
+      "Dieu",
+      "roi",
+      "réponse",
+      "description"
+     ],
+     "aide": "Le deuil se raconte, puis il interroge.",
+     "explication": "La douleur passe du **récit** intime à la **question** adressée à **Dieu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b59ac516-6963-5ba9-a644-76e6bd504e4a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil condamné, un recueil augmenté",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’entrée « Baudelaire » de ton cahier. Place les dates du recueil, puis parcours ses sections.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Baudelaire et son recueil",
+     "debut": 1855,
+     "fin": 1870,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "cond",
+       "date": 1857,
+       "nom": "Condamnation"
+      },
+      {
+       "id": "edi",
+       "date": 1861,
+       "nom": "Seconde édition"
+      },
+      {
+       "id": "mort",
+       "date": 1867,
+       "nom": "Mort de Baudelaire"
+      }
+     ]
+    },
+    {
+     "id": "sections",
+     "type": "tableau",
+     "titre": "Les sections du recueil (1861)",
+     "colonnes": [
+      "Section",
+      "Ce qu’elle met en jeu"
+     ],
+     "lignes": [
+      [
+       "Spleen et Idéal",
+       "L’élévation et l’enlisement"
+      ],
+      [
+       "?",
+       "L’ivresse comme échappatoire"
+      ],
+      [
+       "Révolte",
+       "Le blasphème"
+      ],
+      [
+       "La Mort",
+       "Le dernier voyage, seul espoir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "edi"
+     ],
+     "enonce": "Sur la frise, touche l’année de la seconde édition, augmentée de « Tableaux parisiens ».",
+     "aide": "Elle suit de quatre ans la condamnation.",
+     "explication": "La seconde édition paraît en **1861**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle section faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Le Vin",
+      "Tableaux parisiens",
+      "Fleurs du mal",
+      "La Mort"
+     ],
+     "reponse": 0,
+     "aide": "Quelle section parle d’ivresse ?",
+     "explication": "La section de l’ivresse est **Le Vin**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la condamnation de la seconde édition ?",
+     "reponse": 4,
+     "aide": "Soustrais 1857 à 1861.",
+     "explication": "1861 − 1857 = **4 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "b59ac516-6963-5ba9-a644-76e6bd504e4a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un ciel qui pèse, une nature qui parle",
+   "competence": "analyser-texte",
+   "situation": "Deux notions clés de Baudelaire : le spleen et les correspondances. Lis un vers de chacun, puis définis-les.",
+   "documents": [
+    {
+     "id": "spleen",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Spleen",
+     "blocs": [
+      "Quand le ciel bas et lourd pèse comme un [[c|couvercle]]",
+      "Sur l’esprit gémissant en proie aux longs ennuis,"
+     ],
+     "source": "Charles Baudelaire, *Les Fleurs du mal*, « Spleen »"
+    },
+    {
+     "id": "corr",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Correspondances",
+     "blocs": [
+      "Les [[s|parfums]], les [[s|couleurs]] et les [[s|sons]] se répondent."
+     ],
+     "source": "Charles Baudelaire, *Les Fleurs du mal*, « Correspondances »"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spleen",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot auquel Baudelaire compare le ciel.",
+     "aide": "Il compare le ciel à un objet qui ferme et qui écrase.",
+     "explication": "Le ciel est comparé à un **couvercle** : il enferme et écrase l’esprit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette comparaison du ciel à un couvercle ?",
+     "options": [
+      "Un esprit enfermé, écrasé par le temps et l’ennui",
+      "Une promenade agréable sous un ciel d’été",
+      "Le désir joyeux de voyager",
+      "Une ivresse qui libère le poète"
+     ],
+     "reponse": 0,
+     "aide": "Pense au sens de « peser » et de « couvercle ».",
+     "explication": "Le couvercle exprime un esprit **enfermé** et **écrasé** : c’est le spleen."
+    },
+    {
+     "type": "zone",
+     "document": "corr",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les trois éléments qui se répondent selon « Correspondances ».",
+     "aide": "Il y en a trois, chacun lié à un sens.",
+     "explication": "Les **parfums**, les **couleurs** et les **sons** se répondent : tout est symbole."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux définitions.",
+     "texte": "Le spleen est une angoisse sans ___ ; le poète est celui qui ___ le langage des correspondances.",
+     "reponses": [
+      [
+       "objet"
+      ],
+      [
+       "déchiffre"
+      ]
+     ],
+     "banque": [
+      "objet",
+      "déchiffre",
+      "ennui",
+      "invente",
+      "cause"
+     ],
+     "aide": "Le spleen n’a pas de cause précise ; le poète lit un langage caché.",
+     "explication": "Le spleen est une angoisse **sans objet** ; le poète **déchiffre** la « forêt de symboles »."
+    }
+   ]
+  },
+  {
+   "chapitre": "b59ac516-6963-5ba9-a644-76e6bd504e4a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Classique de facture, révolutionnaire de matière",
+   "competence": "argumenter",
+   "situation": "Pourquoi le recueil a-t-il scandalisé ? Un élève accuse la forme ; l’autre défend la matière. Départage-les.",
+   "documents": [
+    {
+     "id": "contraste",
+     "type": "tableau",
+     "titre": "Deux faces de Baudelaire",
+     "colonnes": [
+      "Baudelaire reste…",
+      "Baudelaire est…"
+     ],
+     "lignes": [
+      [
+       "Classique de facture",
+       "?"
+      ],
+      [
+       "Sonnets, alexandrins, rimes régulières",
+       "La charogne, la vieillesse, la ville sale, la prostituée"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ismaël",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Baudelaire a cassé la forme : plus de sonnets, plus de rimes."
+      },
+      {
+       "qui": "Ismaël",
+       "texte": "Faux : il garde les sonnets, les [[f|alexandrins]], les [[f|rimes]] régulières ; c’est la matière qui choque."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle formule faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Révolutionnaire de matière",
+      "Révolutionnaire de forme",
+      "Classique de matière",
+      "Hostile à toute poésie"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau oppose la facture à ce que le poète choisit de dire.",
+     "explication": "**Révolutionnaire de matière** : c’est ce qu’il met dans ses vers qui scandalise."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux éléments de forme qui, selon Ismaël, restent classiques.",
+     "aide": "Il cite les vers et ce qui les fait sonner.",
+     "explication": "Les **alexandrins** et les **rimes** restent réguliers : la forme est classique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison selon le tableau ?",
+     "options": [
+      "Ismaël : la forme est classique, c’est la matière qui scandalise",
+      "Nora : la forme est brisée, la matière est classique",
+      "Nora : tout est révolutionnaire, forme et matière",
+      "Ismaël : rien ne scandalise dans le recueil"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que dit la seconde ligne du tableau.",
+     "explication": "**Ismaël** : le tableau place les sonnets et les rimes du côté de la facture classique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : facture classique ou matière scandaleuse ?",
+     "categories": [
+      "Facture classique",
+      "Matière scandaleuse"
+     ],
+     "items": [
+      [
+       "Le sonnet",
+       0
+      ],
+      [
+       "L’alexandrin",
+       0
+      ],
+      [
+       "La rime régulière",
+       0
+      ],
+      [
+       "La charogne",
+       1
+      ],
+      [
+       "La prostituée",
+       1
+      ],
+      [
+       "La ville sale",
+       1
+      ]
+     ],
+     "aide": "La forme est le moule, la matière est le contenu.",
+     "explication": "Le **sonnet**, l’**alexandrin** et la **rime** sont la forme ; la **charogne**, la **prostituée** et la **ville sale** sont la matière."
+    }
+   ]
+  }
+ ]
+}

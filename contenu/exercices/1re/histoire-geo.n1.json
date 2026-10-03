@@ -1,0 +1,3661 @@
+{
+ "niveau": "1re",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "7f5f03d8-7ec1-59d5-b5ae-396fd0e9847a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix ans pour changer une nation",
+   "competence": "se-reperer-temps",
+   "situation": "Camille prépare une affiche pour son cours d’histoire : elle veut montrer en un coup d’œil comment la France change de régime entre 1789 et 1799. Elle a tracé une frise et te demande de la relire avec elle.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Révolution, de 1789 à 1799",
+     "source": "Frise réalisée pour l’exercice.",
+     "debut": 1789,
+     "fin": 1799,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "mc",
+       "debut": 1791,
+       "fin": 1792,
+       "nom": "Monarchie constitutionnelle",
+       "teinte": "ambre"
+      },
+      {
+       "id": "ter",
+       "debut": 1793,
+       "fin": 1794,
+       "nom": "Terreur",
+       "teinte": "corail"
+      },
+      {
+       "id": "dir",
+       "debut": 1795,
+       "fin": 1799,
+       "nom": "Directoire",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "ddh",
+       "date": 1789,
+       "nom": "Droits de l’homme"
+      },
+      {
+       "id": "var",
+       "date": 1791,
+       "nom": "Fuite à Varennes"
+      },
+      {
+       "id": "rep",
+       "date": 1792,
+       "nom": "République"
+      },
+      {
+       "id": "roi",
+       "date": 1793,
+       "nom": "Louis XVI exécuté"
+      },
+      {
+       "id": "rob",
+       "date": 1794,
+       "nom": "Chute de Robespierre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui se produit en 1791.",
+     "reponse": [
+      "var"
+     ],
+     "aide": "Repère l’année 1791 sur la ligne graduée, puis cherche le repère placé à cet endroit.",
+     "explication": "C’est **la fuite à Varennes** (juin 1791) : le roi tente de quitter le pays et la confiance avec l’Assemblée est ruinée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la Déclaration des droits de l’homme de la chute de Robespierre ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Lis les deux années sur la frise, puis fais la soustraction.",
+     "explication": "Les droits de l’homme datent de 1789, la chute de Robespierre de 1794 : 1794 − 1789 = **5 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel régime la frise place-t-elle juste après la Terreur ?",
+     "options": [
+      "Le Directoire",
+      "La monarchie constitutionnelle",
+      "Le Consulat",
+      "L’Empire"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les périodes dessinées après 1794.",
+     "explication": "Après la Terreur (1793-1794) vient **le Directoire**, de 1795 à 1799."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f5f03d8-7ec1-59d5-b5ae-396fd0e9847a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a le droit de voter en 1791 ?",
+   "competence": "analyser-document",
+   "situation": "Dans le bourg imaginaire de Saint-Aubin, le maire affiche la liste des habitants avant les élections de 1791. Pour la Constitution, sont citoyens actifs (donc électeurs) les Français de sexe masculin, âgés de 25 ans au moins, qui paient un impôt d’au moins trois journées de travail. Paul compare cette règle aux grands principes de 1789.",
+   "documents": [
+    {
+     "id": "ddh",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Déclaration des droits de l’homme et du citoyen (26 août 1789)",
+     "source": "Extraits des articles 1 et 3.",
+     "blocs": [
+      "Article 1. Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l’utilité commune.",
+      "Article 3. Le principe de toute Souveraineté réside essentiellement dans la [[n|Nation]]. Nul corps, nul individu ne peut exercer d’autorité qui n’en émane expressément."
+     ]
+    },
+    {
+     "id": "bourg",
+     "type": "tableau",
+     "titre": "Cinq habitants de Saint-Aubin en 1791",
+     "source": "Habitants imaginés pour l’exercice.",
+     "colonnes": [
+      "Habitant",
+      "Sexe",
+      "Âge",
+      "Impôt (journées de travail)"
+     ],
+     "lignes": [
+      [
+       "Marie Garnier",
+       "Femme",
+       40,
+       4
+      ],
+      [
+       "Joseph Lenoir",
+       "Homme",
+       52,
+       5
+      ],
+      [
+       "Pierre Dubois",
+       "Homme",
+       30,
+       1
+      ],
+      [
+       "Louis Faure",
+       "Homme",
+       24,
+       6
+      ],
+      [
+       "Antoine Roux",
+       "Homme",
+       45,
+       3
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ddh",
+     "enonce": "Touche le mot qui désigne, dans l’article 3, celui qui détient la souveraineté.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Cherche le mot qui suit « réside essentiellement dans la ».",
+     "explication": "La souveraineté appartient à **la Nation** : ce n’est plus le roi qui la détient, c’est le corps des citoyens."
+    },
+    {
+     "type": "zone",
+     "document": "bourg",
+     "enonce": "Touche le nom des habitants qui sont citoyens actifs et peuvent voter en 1791.",
+     "reponse": [
+      "r1c0",
+      "r4c0"
+     ],
+     "multiple": true,
+     "aide": "Vérifie les trois conditions pour chaque personne : sexe, âge, impôt.",
+     "explication": "Seuls **Joseph Lenoir** et **Antoine Roux** réunissent les trois conditions. Marie est une femme, Pierre paie trop peu d’impôt (1 journée), Louis n’a que 24 ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de journées de travail d’impôt manque-t-il à Pierre Dubois pour devenir citoyen actif ?",
+     "reponse": 2,
+     "unite": "journées",
+     "aide": "Il lui faut au moins trois journées de travail d’impôt.",
+     "explication": "Pierre paie 1 journée, il en faut 3 : 3 − 1 = **2** journées de moins que ce qu’il faudrait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison entre l’article 1 de 1789 et la liste de Saint-Aubin ?",
+     "options": [
+      "L’égalité en droits est proclamée, mais le droit de vote reste réservé à une partie des hommes",
+      "Le roi garde seul la souveraineté, malgré ce que dit l’article 3 de la Déclaration",
+      "Tous les habitants du bourg votent à égalité, sans condition d’âge ni d’impôt payé",
+      "Les femmes obtiennent le droit de vote, mais tous les hommes du bourg le perdent"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase « libres et égaux en droits » puis regarde qui vote vraiment.",
+     "explication": "L’égalité **proclamée** n’est pas encore l’égalité **politique** : trois habitants sur cinq ne votent pas. C’est la tension qui traverse toute la décennie."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f5f03d8-7ec1-59d5-b5ae-396fd0e9847a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du roi en fuite à la chute de Robespierre",
+   "competence": "raisonner",
+   "situation": "Rouen, fin juin 1791. Une marchande écrit à sa sœur pour lui raconter la nouvelle qui bouleverse le pays. Toi, tu relies cette lettre à la frise de la décennie pour comprendre l’enchaînement qui mène du roi à la République, puis à la Terreur.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’une marchande de Rouen (juin 1791)",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Ma chère Jeanne, tout Rouen ne parle que de la fuite du roi. Il a quitté Paris de nuit avec sa famille ; on l’a reconnu et arrêté à [[v|Varennes]], tout près de la frontière.",
+      "Beaucoup se demandent s’il allait rejoindre les armées étrangères pour défaire ce que l’Assemblée a bâti. Comment lui faire encore confiance ?"
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les régimes de 1789 à 1799",
+     "source": "Frise réalisée pour l’exercice.",
+     "debut": 1789,
+     "fin": 1799,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "mc",
+       "debut": 1791,
+       "fin": 1792,
+       "nom": "Monarchie constitutionnelle",
+       "teinte": "ambre"
+      },
+      {
+       "id": "dir",
+       "debut": 1795,
+       "fin": 1799,
+       "nom": "Directoire",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "var",
+       "date": 1791,
+       "nom": "Fuite à Varennes"
+      },
+      {
+       "id": "rep",
+       "date": 1792,
+       "nom": "République"
+      },
+      {
+       "id": "roi",
+       "date": 1793,
+       "nom": "Louis XVI exécuté"
+      },
+      {
+       "id": "rob",
+       "date": 1794,
+       "nom": "Chute de Robespierre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le nom de la ville où le roi est arrêté.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Cherche un nom de lieu dans le premier paragraphe.",
+     "explication": "Le roi est arrêté à **Varennes**, près de la frontière : on le soupçonne de vouloir rejoindre les ennemis de la Révolution."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette fuite ruine-t-elle la confiance entre le roi et l’Assemblée ?",
+     "options": [
+      "Elle laisse croire que le roi veut s’appuyer sur les ennemis de la Révolution",
+      "Elle prouve que le roi a perdu toute autorité sur son armée",
+      "Elle montre que l’Assemblée voulait déjà supprimer la monarchie",
+      "Elle oblige l’Assemblée à fuir à son tour hors de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la lettre : que soupçonne-t-on ?",
+     "explication": "Un roi qui part de nuit vers la frontière semble rejoindre les armées étrangères : la **confiance est rompue**, et la monarchie constitutionnelle ne s’en remet pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes qui mènent de la fuite du roi à la République.",
+     "items": [
+      "Fuite et arrestation du roi à Varennes (juin 1791)",
+      "Déclaration de guerre (avril 1792)",
+      "Journée du 10 août 1792 : la royauté tombe",
+      "Proclamation de la République (22 septembre 1792)"
+     ],
+     "aide": "La guerre précède la chute de la royauté, et la République ne vient qu’ensuite.",
+     "explication": "Varennes (juin 1791), puis **la guerre** (avril 1792), puis **le 10 août 1792** qui emporte la royauté, enfin **la République** le 22 septembre 1792."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le Directoire (1795-1799) est censitaire et instable. Que montre-t-il en 1799 ?",
+     "options": [
+      "La question reste ouverte : comment fonder un régime stable sur la souveraineté du peuple ?",
+      "La question est réglée : le régime est stable et tous les citoyens votent",
+      "La Révolution a rétabli l’ancienne société d’ordres avec un roi absolu",
+      "La France n’a conservé aucun acquis de la Révolution de 1789"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que laissent la Terreur puis un régime instable : un régime durable est-il trouvé ?",
+     "explication": "Après dix ans, la France a gagné l’égalité civile mais pas de régime durable : **cette question ouverte** prépare l’arrivée de Bonaparte."
+    }
+   ]
+  },
+  {
+   "chapitre": "2750d3a8-82ce-5c4e-a878-7ec3e3c9b7dd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les masses de granit du Consulat",
+   "competence": "lire-tableau",
+   "situation": "Hugo a trouvé dans son manuel la liste des grandes institutions créées par Bonaparte quand il gouverne la France, après 1799. Il doit les dater et comprendre ce que chacune apporte.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "tableau",
+     "titre": "Les institutions de Bonaparte",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Institution",
+      "Année"
+     ],
+     "lignes": [
+      [
+       "Les préfets",
+       1800
+      ],
+      [
+       "La Banque de France",
+       1800
+      ],
+      [
+       "Le Concordat",
+       1801
+      ],
+      [
+       "Les lycées et la Légion d’honneur",
+       1802
+      ],
+      [
+       "Le franc germinal",
+       1803
+      ],
+      [
+       "Le Code civil",
+       1804
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche l’année de l’accord avec le pape qui rétablit la paix religieuse.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche l’accord conclu avec le pape.",
+     "explication": "C’est **le Concordat**, signé en **1801** : la paix religieuse est rétablie, mais sous contrôle de l’État."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création des préfets de celle du Code civil ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Lis les deux années dans le tableau, puis soustrais.",
+     "explication": "Les préfets datent de 1800, le Code civil de 1804 : 1804 − 1800 = **4 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution à ce qu’elle consacre.",
+     "paires": [
+      [
+       "Le Concordat",
+       "La paix religieuse sous contrôle de l’État"
+      ],
+      [
+       "Le Code civil",
+       "L’égalité devant la loi et la propriété"
+      ],
+      [
+       "Les préfets",
+       "La centralisation du pays"
+      ],
+      [
+       "La Banque de France",
+       "La stabilité de la monnaie"
+      ]
+     ],
+     "aide": "Chaque institution touche un domaine : religion, droit, administration, argent.",
+     "explication": "Le Concordat règle la **religion**, le Code civil le **droit**, les préfets l’**administration** et la Banque de France la **monnaie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2750d3a8-82ce-5c4e-a878-7ec3e3c9b7dd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sur les routes de la Grande Armée",
+   "competence": "lire-carte",
+   "situation": "Léa suit sur une carte d’Europe les pays que Napoléon traverse, de Madrid à Moscou. Elle veut comprendre ce que la Grande Armée apporte avec elle… et ce qu’elle provoque.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe de Napoléon",
+     "source": "Carte avec les frontières d’aujourd’hui.",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -12,
+      34,
+      42,
+      62
+     ],
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "madrid",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "moscou",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville que la Grande Armée atteint en septembre 1812, au cœur de la Russie.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "C’est la capitale historique de la Russie, très loin à l’est.",
+     "explication": "La Grande Armée entre à **Moscou** en septembre 1812 ; la retraite qui suit brise l’armée."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays où éclate dès 1808 un soulèvement national contre la domination française.",
+     "reponse": [
+      "ESP"
+     ],
+     "aide": "Ce pays est à l’ouest de la France, au-delà des Pyrénées.",
+     "explication": "C’est **l’Espagne** : Napoléon y place son frère sur le trône, et les Espagnols se soulèvent dès 1808 contre un roi imposé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : la Grande Armée l’exporte-t-elle, ou le provoque-t-elle ?",
+     "categories": [
+      "Ce qu’elle exporte",
+      "Ce qu’elle provoque"
+     ],
+     "items": [
+      [
+       "Le Code civil",
+       0
+      ],
+      [
+       "L’abolition de la féodalité",
+       0
+      ],
+      [
+       "Les réquisitions des armées",
+       1
+      ],
+      [
+       "Le Blocus continental",
+       1
+      ],
+      [
+       "Des sentiments nationaux contre la France",
+       1
+      ]
+     ],
+     "aide": "Distingue les idées de la Révolution, que la France apporte, des effets de l’occupation.",
+     "explication": "Le **Code civil** et l’**abolition de la féodalité** sont exportés. L’occupation provoque **réquisitions**, **Blocus continental** et **sentiments nationaux** hostiles."
+    }
+   ]
+  },
+  {
+   "chapitre": "2750d3a8-82ce-5c4e-a878-7ec3e3c9b7dd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Plébiscite : voter pour dire oui",
+   "competence": "analyser-document",
+   "situation": "Pour son exposé, Inès doit répondre à une question : Napoléon a-t-il sauvé la Révolution ou l’a-t-il confisquée ? Elle dispose des résultats de trois plébiscites et de deux lectures opposées.",
+   "documents": [
+    {
+     "id": "plebi",
+     "type": "tableau",
+     "titre": "Les trois grands plébiscites",
+     "source": "Résultats officiels, chiffres arrondis.",
+     "colonnes": [
+      "Année",
+      "Question posée",
+      "Oui (millions)",
+      "Non (milliers)"
+     ],
+     "lignes": [
+      [
+       1799,
+       "Constitution de l’an VIII",
+       "3,0",
+       "1,6"
+      ],
+      [
+       1802,
+       "Consulat à vie",
+       "3,6",
+       "8,4"
+      ],
+      [
+       1804,
+       "Empire héréditaire",
+       "3,6",
+       "2,6"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "lectures",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux lectures de Napoléon",
+     "source": "Textes écrits pour l’exercice.",
+     "blocs": [
+      "Lecture A. En gravant l’égalité civile, la propriété et l’état civil laïque dans le Code civil, Bonaparte a consolidé les acquis de 1789.",
+      "Lecture B. En supprimant les libertés politiques et en gouvernant par [[p|plébiscite]], il a inventé un pouvoir personnel appuyé sur la police et la censure."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plebi",
+     "enonce": "Touche l’année du plébiscite qui fait de Bonaparte consul à vie.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche la ligne qui parle du consulat à vie.",
+     "explication": "Le consulat à vie est approuvé en **1802** ; deux ans plus tard, l’Empire héréditaire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de « oui » de plus y a-t-il en 1802 qu’en 1799 ?",
+     "reponse": 0.6,
+     "unite": "millions",
+     "aide": "Compare les deux valeurs de la colonne « Oui ».",
+     "explication": "3,6 − 3,0 = **0,6** million de « oui » en plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tableau, sur le rôle de ces votes ?",
+     "options": [
+      "On vote pour approuver un régime déjà décidé, sans véritable choix ni débat",
+      "Les Français rejettent massivement chacun des trois régimes proposés",
+      "Le vote est supprimé et remplacé par la décision de l’armée",
+      "Seuls les plus riches ont le droit de voter lors de ces consultations"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’écart entre les « oui » et les « non » : un vrai choix donnerait-il de tels résultats ?",
+     "explication": "Des « oui » écrasants et quelques milliers de « non » : le **plébiscite approuve**, il ne départage pas. Le vote est mis en scène, le débat est confisqué."
+    },
+    {
+     "type": "zone",
+     "document": "lectures",
+     "enonce": "Touche, dans la lecture B, le mot qui désigne le vote par lequel Bonaparte fait approuver ses régimes.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le mot est précédé de « gouvernant par ».",
+     "explication": "Le mot est **plébiscite** : la souveraineté du peuple sert à approuver, non à décider."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : acquis de 1789 conservés, ou liberté politique suspendue ?",
+     "categories": [
+      "Acquis conservé",
+      "Liberté suspendue"
+     ],
+     "items": [
+      [
+       "L’égalité devant la loi",
+       0
+      ],
+      [
+       "La propriété garantie par le Code civil",
+       0
+      ],
+      [
+       "L’état civil laïque",
+       0
+      ],
+      [
+       "La liberté de la presse, soumise à la censure",
+       1
+      ],
+      [
+       "Des assemblées sans réel pouvoir",
+       1
+      ]
+     ],
+     "aide": "Le Code civil conserve les droits civils ; la police et la censure touchent les libertés politiques.",
+     "explication": "L’égalité civile, la propriété et l’état civil laïque sont **conservés**. La censure et des assemblées sans pouvoir **suspendent la liberté politique** : c’est toute l’ambiguïté de l’héritage."
+    }
+   ]
+  },
+  {
+   "chapitre": "72fafd1c-5984-58a9-857c-b4d344644691",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux régimes, une révolution",
+   "competence": "se-reperer-temps",
+   "situation": "Bastien a reporté sur une frise les grands moments de la France entre 1814 et 1848. Il veut y retrouver le moment où le pays change de régime… et celui où l’Europe entière s’embrase.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La France et l’Europe de 1814 à 1848",
+     "source": "Frise réalisée pour l’exercice.",
+     "debut": 1810,
+     "fin": 1850,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "resta",
+       "debut": 1814,
+       "fin": 1830,
+       "nom": "Restauration",
+       "teinte": "ambre"
+      },
+      {
+       "id": "juillet",
+       "debut": 1830,
+       "fin": 1848,
+       "nom": "Monarchie de Juillet",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "vienne",
+       "date": 1815,
+       "nom": "Congrès de Vienne"
+      },
+      {
+       "id": "glor",
+       "date": 1830,
+       "nom": "Trois Glorieuses"
+      },
+      {
+       "id": "print",
+       "date": 1848,
+       "nom": "Printemps des peuples"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin à la Restauration.",
+     "reponse": [
+      "glor"
+     ],
+     "aide": "Cherche ce qui se passe en 1830, à la limite entre les deux périodes.",
+     "explication": "Ce sont **les Trois Glorieuses** de juillet 1830 : elles renversent Charles X et ouvrent la monarchie de Juillet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la monarchie de Juillet ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Lis les deux dates qui encadrent la période.",
+     "explication": "De 1830 à 1848 : 1848 − 1830 = **18 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel régime français tombe au moment du printemps des peuples ?",
+     "options": [
+      "La monarchie de Juillet",
+      "La Restauration des Bourbons",
+      "Le Premier Empire de Napoléon",
+      "Le Directoire révolutionnaire"
+     ],
+     "reponse": 0,
+     "aide": "Regarde quelle période se termine en 1848.",
+     "explication": "En 1848, c’est **la monarchie de Juillet** qui tombe : Louis-Philippe est renversé en février."
+    }
+   ]
+  },
+  {
+   "chapitre": "72fafd1c-5984-58a9-857c-b4d344644691",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des peuples contre les souverains",
+   "competence": "lire-carte",
+   "situation": "Au congrès de Vienne, les souverains dessinent l’Europe sans demander l’avis des peuples. Maëlle repère sur une carte les pays que les révolutions de 1830 ont bousculés.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe après 1815",
+     "source": "Carte avec les frontières d’aujourd’hui.",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -12,
+      34,
+      40,
+      62
+     ],
+     "regionsCliquables": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays dont Metternich, l’architecte de l’ordre de Vienne, est le chancelier.",
+     "reponse": [
+      "AUT"
+     ],
+     "aide": "C’est un empire d’Europe centrale, au sud de l’Allemagne actuelle.",
+     "explication": "Metternich est chancelier de **l’Autriche** : c’est lui qui incarne le système de Vienne."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux pays qui obtiennent leur indépendance autour de 1830.",
+     "reponse": [
+      "BEL",
+      "GRC"
+     ],
+     "multiple": true,
+     "aide": "L’un est voisin de la France au nord, l’autre est en Méditerranée orientale.",
+     "explication": "La **Belgique** devient indépendante en 1830, et l’indépendance de la **Grèce** est reconnue la même année."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays dont la révolte de 1830 est écrasée.",
+     "reponse": [
+      "POL"
+     ],
+     "aide": "Ce pays est situé à l’est de l’Allemagne actuelle.",
+     "explication": "Le soulèvement de la **Pologne** est écrasé : l’indépendance y est refusée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque revendication : libéralisme ou nationalisme ?",
+     "categories": [
+      "Libéralisme",
+      "Nationalisme"
+     ],
+     "items": [
+      [
+       "Une constitution écrite",
+       0
+      ],
+      [
+       "Un parlement élu",
+       0
+      ],
+      [
+       "Un État pour les peuples de même langue",
+       1
+      ],
+      [
+       "Des libertés garanties aux citoyens",
+       0
+      ],
+      [
+       "Un État pour un peuple uni par l’histoire et la culture",
+       1
+      ]
+     ],
+     "aide": "Le libéralisme parle de libertés et d’institutions ; le nationalisme parle de peuple et d’État.",
+     "explication": "Constitution, parlement et libertés relèvent du **libéralisme**. Un État pour un peuple de même langue ou d’histoire commune relève du **nationalisme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "72fafd1c-5984-58a9-857c-b4d344644691",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le banquet de l’hiver 1847",
+   "competence": "analyser-document",
+   "situation": "Dans une ville de province, des citoyens organisent un banquet pour réclamer le droit de vote. Capucine veut comprendre pourquoi cette demande, si simple, finit par faire tomber un roi en 1848.",
+   "documents": [
+    {
+     "id": "invit",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Invitation à un banquet",
+     "source": "Invitation imaginée pour l’exercice.",
+     "blocs": [
+      "Citoyens, un banquet réformiste réunira ce samedi tous ceux qui jugent injuste que si peu d’hommes décident pour tous.",
+      "Nous demandons l’élargissement du [[v|suffrage]] : aujourd’hui, seuls les plus fortunés votent."
+     ]
+    },
+    {
+     "id": "canton",
+     "type": "tableau",
+     "titre": "Cinq hommes d’un canton imaginaire",
+     "source": "Habitants imaginés ; le seuil de 200 francs d’impôt direct est celui de la monarchie de Juillet.",
+     "colonnes": [
+      "Habitant",
+      "Métier",
+      "Impôt direct par an (francs)"
+     ],
+     "lignes": [
+      [
+       "M. Garnier",
+       "Notaire",
+       540
+      ],
+      [
+       "M. Bertrand",
+       "Boulanger",
+       150
+      ],
+      [
+       "M. Delmas",
+       "Propriétaire",
+       200
+      ],
+      [
+       "M. Fabre",
+       "Instituteur",
+       60
+      ],
+      [
+       "M. Lacroix",
+       "Manufacturier",
+       1250
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "invit",
+     "enonce": "Touche, dans l’invitation, le mot qui désigne ce que les organisateurs veulent élargir.",
+     "reponse": [
+      "v"
+     ],
+     "aide": "Ils veulent que plus d’hommes puissent… voter.",
+     "explication": "Ils réclament l’élargissement du **suffrage** : sous la monarchie de Juillet, le vote est réservé aux plus riches (suffrage censitaire)."
+    },
+    {
+     "type": "zone",
+     "document": "canton",
+     "enonce": "Pour voter, il faut payer au moins 200 francs d’impôt direct. Touche le nom des hommes qui peuvent voter.",
+     "reponse": [
+      "r0c0",
+      "r2c0",
+      "r4c0"
+     ],
+     "multiple": true,
+     "aide": "Compare chaque impôt au seuil de 200 francs : « au moins » inclut 200.",
+     "explication": "**M. Garnier** (540), **M. Delmas** (200, juste au seuil) et **M. Lacroix** (1 250) peuvent voter. Bertrand (150) et Fabre (60) sont exclus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de francs d’impôt de plus M. Bertrand devrait-il payer pour voter ?",
+     "reponse": 50,
+     "unite": "francs",
+     "aide": "Soustrais son impôt au seuil de 200 francs.",
+     "explication": "200 − 150 = **50** francs : il lui manque cette somme pour entrer dans le corps électoral."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la demande des banquets contribue-t-elle à la chute de Louis-Philippe en 1848 ?",
+     "options": [
+      "Le pouvoir refuse d’élargir le droit de vote, et la colère éclate en février 1848",
+      "Le roi accepte le suffrage universel mais l’armée refuse de lui obéir",
+      "Les banquets obtiennent un vote pour tous, ce qui renverse le roi",
+      "Les Autrichiens interviennent pour soutenir les organisateurs des banquets"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que réclament les organisateurs, puis demande-toi ce que répond le pouvoir.",
+     "explication": "Le **refus d’élargir le droit de vote** fait basculer la campagne des banquets en révolution : Louis-Philippe tombe en février 1848."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bdcca67-4d70-53e7-b27c-81781a14b6c1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Neuf millions d’électeurs",
+   "competence": "lire-graphique",
+   "situation": "Noé découvre que le suffrage universel masculin de 1848 a changé l’échelle de la politique. Il lit un graphique pour mesurer le bond, puis ce qu’il devient deux ans plus tard.",
+   "documents": [
+    {
+     "id": "elect",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le nombre d’électeurs en France",
+     "source": "Chiffres arrondis.",
+     "categories": [
+      "Avant mars 1848",
+      "Mars 1848",
+      "Après mai 1850"
+     ],
+     "series": [
+      {
+       "nom": "Électeurs",
+       "valeurs": [
+        0.24,
+        9,
+        6
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Électeurs",
+      "unite": "en millions",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Date"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "elect",
+     "enonce": "Touche la barre qui correspond à l’instauration du suffrage universel masculin.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute : le corps électoral a été multiplié.",
+     "explication": "C’est la barre de **mars 1848** : le suffrage universel masculin porte le corps électoral à environ **9 millions** d’hommes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’électeurs la loi de mai 1850 raye-t-elle des listes ?",
+     "reponse": 3,
+     "unite": "millions",
+     "aide": "Compare la barre de mars 1848 à celle de mai 1850.",
+     "explication": "9 − 6 = **3 millions** d’électeurs sont rayés des listes par la loi de mai 1850."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que traduit la dernière barre du graphique ?",
+     "options": [
+      "Une Assemblée conservatrice restreint le corps électoral",
+      "Un nouvel élargissement du droit de vote aux femmes",
+      "La fin du suffrage universel masculin, aboli en 1849",
+      "Une baisse naturelle du nombre d’hommes en âge de voter"
+     ],
+     "reponse": 0,
+     "aide": "La barre baisse alors que la République est déjà installée : qui décide ?",
+     "explication": "L’Assemblée conservatrice issue des élections de 1849 vote la **loi de mai 1850** et retire le droit de vote à environ 3 millions d’électeurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bdcca67-4d70-53e7-b27c-81781a14b6c1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi la campagne vote Bonaparte",
+   "competence": "analyser-document",
+   "situation": "En décembre 1848, la France élit son premier président au suffrage universel masculin. Les républicains de février espéraient un autre résultat. Julie lit le résultat et le témoignage imaginaire d’un cultivateur.",
+   "documents": [
+    {
+     "id": "vote",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Élection présidentielle de décembre 1848",
+     "source": "Résultats arrondis.",
+     "categories": [
+      "Louis-Napoléon Bonaparte",
+      "Autres candidats"
+     ],
+     "series": [
+      {
+       "nom": "Part des voix (%)",
+       "valeurs": [
+        74,
+        26
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un cultivateur (décembre 1848)",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Cher cousin, j’ai voté hier pour le neveu de l’Empereur. Après les journées de Juin, tout le village a peur des « partageux » qui voudraient nos terres.",
+      "Nous voulons du calme et de l’[[o|ordre]] ; ce nom que tout le monde connaît nous rassure."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vote",
+     "enonce": "Touche la part des voix obtenue par Louis-Napoléon Bonaparte.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la plus grande part du graphique.",
+     "explication": "Louis-Napoléon Bonaparte obtient environ **74 %** des voix, soit près des trois quarts des suffrages exprimés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 1 000 électeurs, combien environ ont voté pour un autre candidat ?",
+     "reponse": 260,
+     "unite": "électeurs",
+     "aide": "Calcule 26 % de 1 000.",
+     "explication": "26 % de 1 000 = **260** électeurs sur 1 000."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche, dans la lettre, le mot qui dit ce que le cultivateur attend du nouveau président.",
+     "reponse": [
+      "o"
+     ],
+     "aide": "Il veut du calme et de… le contraire du désordre.",
+     "explication": "Le cultivateur attend de **l’ordre** : après les journées de Juin, la peur du désordre fait voter pour un Bonaparte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce résultat surprend-il les fondateurs de la République ?",
+     "options": [
+      "Le suffrage universel n’a pas donné la majorité aux républicains, mais à un Bonaparte",
+      "Le suffrage universel a été refusé par la majorité des habitants des campagnes françaises",
+      "Les ouvriers des grandes villes ont voté en masse pour le prétendant monarchiste",
+      "La participation électorale a été presque nulle dans l’ensemble de la France"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce que les républicains attendaient du vote et ce que montre le graphique.",
+     "explication": "Le suffrage universel **ne donne pas la majorité aux républicains** : la peur du désordre et le prestige d’un nom portent un Bonaparte à 74 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bdcca67-4d70-53e7-b27c-81781a14b6c1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du suffrage universel au coup d’État",
+   "competence": "raisonner",
+   "situation": "Théo veut comprendre comment une République née en 1848 disparaît en 1852. Il relie une frise et un récit du matin du 2 décembre 1851.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Deuxième République",
+     "source": "Frise réalisée pour l’exercice.",
+     "debut": 1848,
+     "fin": 1852,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "rep",
+       "debut": 1848,
+       "fin": 1852,
+       "nom": "Deuxième République",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "elu",
+       "date": 1848,
+       "nom": "Bonaparte élu"
+      },
+      {
+       "id": "loi",
+       "date": 1850,
+       "nom": "Loi électorale"
+      },
+      {
+       "id": "coup",
+       "date": 1851,
+       "nom": "Coup d’État"
+      },
+      {
+       "id": "emp",
+       "date": 1852,
+       "nom": "Empire"
+      }
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le 2 décembre 1851",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "À Paris, une imprimeuse découvre sur les murs l’affiche du président : il dissout l’Assemblée. L’armée tient déjà les rues.",
+      "Dans le [[s|Sud-Est]], des paysans prennent les armes pour défendre la République. La résistance est réprimée."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets ces étapes de la Deuxième République dans l’ordre chronologique.",
+     "items": [
+      "Le suffrage universel masculin (mars 1848)",
+      "Les journées de Juin (1848)",
+      "L’élection de Louis-Napoléon Bonaparte (décembre 1848)",
+      "La loi électorale de mai 1850",
+      "Le coup d’État du 2 décembre 1851"
+     ],
+     "aide": "Le suffrage universel ouvre la République ; le coup d’État la ferme.",
+     "explication": "Mars 1848 (suffrage), juin 1848 (insurrection ouvrière), décembre 1848 (élection), mai 1850 (loi électorale), **2 décembre 1851** (coup d’État)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’élection de Bonaparte du coup d’État ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Lis les deux années sur la frise.",
+     "explication": "1851 − 1848 = **3 ans** : le président élu par le peuple le dissout."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, la région où la résistance au coup d’État est la plus vive.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche un point cardinal dans le second paragraphe.",
+     "explication": "La résistance est la plus forte dans le **Sud-Est** de la France, avant d’être réprimée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque mesure : avancée de 1848 ou recul de 1849-1850 ?",
+     "categories": [
+      "Avancée de 1848",
+      "Recul de 1849-1850"
+     ],
+     "items": [
+      [
+       "Le suffrage universel masculin",
+       0
+      ],
+      [
+       "L’abolition de l’esclavage (décret Schoelcher)",
+       0
+      ],
+      [
+       "La loi Falloux sur l’enseignement",
+       1
+      ],
+      [
+       "La loi qui raye 3 millions d’électeurs",
+       1
+      ]
+     ],
+     "aide": "Les avancées sont celles de la République de février ; les reculs sont votés par l’Assemblée conservatrice.",
+     "explication": "**Suffrage universel** et **abolition de l’esclavage** sont des avancées de 1848. **La loi Falloux** et **la loi électorale** sont des reculs de l’Assemblée conservatrice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Louis-Napoléon Bonaparte organise-t-il le coup d’État de décembre 1851 ?",
+     "options": [
+      "Il ne peut pas se représenter et veut garder le pouvoir",
+      "L’Assemblée vient de le destituer par un vote régulier",
+      "Une armée étrangère menace de renverser la République",
+      "Les électeurs viennent de le battre à la présidentielle"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la date de l’élection et réfléchis à la durée de son mandat.",
+     "explication": "Ne pouvant se représenter, le président **dissout l’Assemblée** et s’appuie sur l’armée : l’Empire sera proclamé un an plus tard."
+    }
+   ]
+  },
+  {
+   "chapitre": "472b575b-0a16-58c2-9401-bb141b9c2a71",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’empereur lâche du lest",
+   "competence": "lire-tableau",
+   "situation": "Après 1860, Napoléon III accorde peu à peu des libertés. Rose range les concessions dans un tableau, puis les compare à l’Empire autoritaire des débuts.",
+   "documents": [
+    {
+     "id": "conc",
+     "type": "tableau",
+     "titre": "Les concessions de l’Empire libéral",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Année",
+      "Concession de l’empereur"
+     ],
+     "lignes": [
+      [
+       1860,
+       "Le droit d’adresse"
+      ],
+      [
+       1864,
+       "Le droit de grève (loi Ollivier)"
+      ],
+      [
+       1868,
+       "La liberté de la presse et de réunion"
+      ],
+      [
+       1870,
+       "Un gouvernement responsable devant les Chambres"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conc",
+     "enonce": "Touche l’année où la grève cesse d’être un délit.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche la loi qui porte le nom d’Ollivier.",
+     "explication": "La loi Ollivier date de **1864** : elle reconnaît le droit de grève."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le droit d’adresse de la liberté de la presse ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Lis les deux années dans la première colonne.",
+     "explication": "1868 − 1860 = **8 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : Empire autoritaire ou Empire libéral ?",
+     "categories": [
+      "Empire autoritaire",
+      "Empire libéral"
+     ],
+     "items": [
+      [
+       "Les avertissements aux journaux",
+       0
+      ],
+      [
+       "Les candidatures officielles",
+       0
+      ],
+      [
+       "Le droit de grève",
+       1
+      ],
+      [
+       "La liberté de réunion",
+       1
+      ],
+      [
+       "Un gouvernement responsable devant les Chambres",
+       1
+      ]
+     ],
+     "aide": "Avant 1860, le pouvoir contrôle ; après, il concède des libertés.",
+     "explication": "**Avertissements** et **candidatures officielles** sont des outils de l’Empire autoritaire. **Grève, réunion et gouvernement responsable** marquent l’Empire libéral."
+    }
+   ]
+  },
+  {
+   "chapitre": "472b575b-0a16-58c2-9401-bb141b9c2a71",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Voter, oui ; choisir, moins",
+   "competence": "analyser-document",
+   "situation": "En 1857, dans un département imaginaire, Raphaël étudie une affiche électorale et le dossier d’un journal. Il veut comprendre ce que veut dire un régime « au vernis démocratique ».",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Élections au Corps législatif",
+     "sousTitre": "Affiche imaginée pour l’exercice",
+     "emoji": "🗳️",
+     "lignes": [
+      {
+       "texte": "Électeurs, votez pour"
+      },
+      {
+       "texte": "M. Louis Delorme",
+       "gras": true
+      },
+      {
+       "texte": "Candidat du gouvernement de l’Empereur",
+       "id": "gouv"
+      },
+      {
+       "texte": "Recommandé par M. le préfet du département",
+       "id": "pref"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Affiche sur papier blanc, réservée à l’administration"
+      }
+     ],
+     "pied": "Vive l’Empereur !"
+    },
+    {
+     "id": "presse",
+     "type": "tableau",
+     "titre": "Le dossier d’un journal imaginaire",
+     "source": "Journal et dates imaginés pour l’exercice.",
+     "colonnes": [
+      "Date",
+      "Mesure de l’administration"
+     ],
+     "lignes": [
+      [
+       "Mars 1855",
+       "Premier avertissement après un article critique"
+      ],
+      [
+       "Juin 1855",
+       "Deuxième avertissement"
+      ],
+      [
+       "Août 1855",
+       "Suspension du journal pendant deux mois"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui désigne l’agent de l’administration qui soutient ce candidat.",
+     "reponse": [
+      "pref"
+     ],
+     "aide": "Cherche la personne qui représente l’État dans le département.",
+     "explication": "C’est **le préfet** : c’est lui qui soutient le candidat du gouvernement, c’est la candidature officielle."
+    },
+    {
+     "type": "zone",
+     "document": "presse",
+     "enonce": "Touche la mesure qui empêche le journal de paraître.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Un journal qui ne peut plus être publié est… suspendu.",
+     "explication": "C’est **la suspension** d’août 1855 : après deux avertissements, le journal est arrêté pour deux mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mois s’écoulent entre le premier avertissement et la suspension ?",
+     "reponse": 5,
+     "unite": "mois",
+     "aide": "Compte de mars à août.",
+     "explication": "De mars à août : **5 mois** pour passer de l’avertissement à la suspension."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ces deux documents réunis ?",
+     "options": [
+      "Le vote existe, mais l’administration choisit les candidats et contrôle la presse",
+      "Le vote est supprimé et la presse est entièrement libre",
+      "Les électeurs choisissent librement entre plusieurs candidats égaux",
+      "Le préfet interdit toute élection dans le département"
+     ],
+     "reponse": 0,
+     "aide": "Pense au rôle du préfet sur l’affiche et au sort du journal critique.",
+     "explication": "On **vote beaucoup mais on choisit peu** : le suffrage universel est conservé, mais l’administration soutient son candidat et la presse est tenue par les avertissements."
+    }
+   ]
+  },
+  {
+   "chapitre": "472b575b-0a16-58c2-9401-bb141b9c2a71",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi l’empereur concède",
+   "competence": "raisonner",
+   "situation": "En 1868, un conseiller imaginaire écrit une note à l’empereur. Mathis la lit avec une frise pour comprendre pourquoi un régime autoritaire accorde des libertés… et pourquoi cela ne le sauve pas.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Second Empire",
+     "source": "Frise réalisée pour l’exercice.",
+     "debut": 1850,
+     "fin": 1872,
+     "pas": 2,
+     "periodes": [
+      {
+       "id": "aut",
+       "debut": 1852,
+       "fin": 1860,
+       "nom": "Empire autoritaire",
+       "teinte": "ambre"
+      },
+      {
+       "id": "lib",
+       "debut": 1860,
+       "fin": 1870,
+       "nom": "Empire libéral",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "emp",
+       "date": 1852,
+       "nom": "Empire rétabli"
+      },
+      {
+       "id": "cinq",
+       "date": 1857,
+       "nom": "Les « Cinq »"
+      },
+      {
+       "id": "olli",
+       "date": 1864,
+       "nom": "Loi Ollivier"
+      },
+      {
+       "id": "presse",
+       "date": 1868,
+       "nom": "Presse libre"
+      },
+      {
+       "id": "sedan",
+       "date": 1870,
+       "nom": "Sedan"
+      }
+     ]
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Note d’un conseiller (1868)",
+     "source": "Note imaginée pour l’exercice.",
+     "blocs": [
+      "Sire, aux élections de 1863, l’[[o|opposition]] a rassemblé près de deux millions de voix, et elle progresse dans les grandes villes.",
+      "Si nous ne lâchons pas un peu de liberté — presse, réunion —, nous risquons de tout perdre. Mieux vaut concéder que subir."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où l’empereur accorde peu à peu des libertés.",
+     "reponse": [
+      "lib"
+     ],
+     "aide": "Cherche la période qui commence en 1860.",
+     "explication": "C’est **l’Empire libéral** (1860-1870) : droit d’adresse, droit de grève, liberté de la presse…"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’élection des « Cinq » de la liberté de la presse ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Lis les deux repères sur la frise.",
+     "explication": "1868 − 1857 = **11 ans** entre l’élection des « Cinq » et la liberté de la presse."
+    },
+    {
+     "type": "zone",
+     "document": "note",
+     "enonce": "Touche, dans la note, le mot qui désigne les adversaires du régime dont les voix progressent.",
+     "reponse": [
+      "o"
+     ],
+     "aide": "Il s’agit de ceux qui s’opposent à l’empereur.",
+     "explication": "Le mot est **opposition** : c’est sa progression qui inquiète le conseiller."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’empereur choisit-il de concéder des libertés ?",
+     "options": [
+      "Il est affaibli par la montée de l’opposition et préfère céder que tout perdre",
+      "Il est devenu républicain et veut abolir lui-même le régime impérial",
+      "Une armée étrangère l’y oblige par la force dès l’année 1868",
+      "Le Corps législatif a voté sa destitution à une large majorité"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la note.",
+     "explication": "Affaibli par ses difficultés extérieures et par la montée de l’opposition, Napoléon III **concède pour garder le pouvoir**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il en 1870 ?",
+     "options": [
+      "Sedan emporte le régime, et la République est proclamée sans révolution",
+      "Un nouveau plébiscite supprime le suffrage universel masculin pour tous",
+      "L’empereur abdique volontairement pour céder la place à son fils",
+      "Le Corps législatif proclame l’Empire héréditaire dans toute la France"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le dernier repère de la frise.",
+     "explication": "La capitulation de **Sedan** (2 septembre 1870) emporte le régime ; la République est proclamée le 4 septembre, sans révolution."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ed653b6-ec49-5a1e-81b8-c16aa92185af",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un réseau en étoile",
+   "competence": "lire-carte",
+   "situation": "Ambre étudie le chemin de fer du Second Empire. Elle regarde d’abord la forme du réseau sur une carte, puis la longueur des voies sur un graphique.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les grandes lignes de chemin de fer (schéma)",
+     "source": "Schéma simplifié pour l’exercice.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "carre",
+       "nom": "Paris"
+      },
+      {
+       "id": "lille",
+       "lieu": "lille",
+       "symbole": "point",
+       "nom": "Lille"
+      },
+      {
+       "id": "stras",
+       "lieu": "strasbourg",
+       "symbole": "point",
+       "nom": "Strasbourg"
+      },
+      {
+       "id": "lyon",
+       "lieu": "lyon",
+       "symbole": "point",
+       "nom": "Lyon"
+      },
+      {
+       "id": "marseille",
+       "lieu": "marseille",
+       "symbole": "point",
+       "nom": "Marseille"
+      },
+      {
+       "id": "bordeaux",
+       "lieu": "bordeaux",
+       "symbole": "point",
+       "nom": "Bordeaux"
+      },
+      {
+       "id": "nantes",
+       "lieu": "nantes",
+       "symbole": "point",
+       "nom": "Nantes"
+      }
+     ],
+     "traits": [
+      {
+       "id": "nord",
+       "points": [
+        "paris",
+        "lille"
+       ],
+       "style": "ligne",
+       "teinte": "encre"
+      },
+      {
+       "id": "est",
+       "points": [
+        "paris",
+        "strasbourg"
+       ],
+       "style": "ligne",
+       "teinte": "encre"
+      },
+      {
+       "id": "sud",
+       "points": [
+        "paris",
+        "lyon",
+        "marseille"
+       ],
+       "style": "ligne",
+       "teinte": "encre"
+      },
+      {
+       "id": "sudouest",
+       "points": [
+        "paris",
+        "bordeaux"
+       ],
+       "style": "ligne",
+       "teinte": "encre"
+      },
+      {
+       "id": "ouest",
+       "points": [
+        "paris",
+        "nantes"
+       ],
+       "style": "ligne",
+       "teinte": "encre"
+      }
+     ]
+    },
+    {
+     "id": "km",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Longueur du réseau ferré français",
+     "source": "Chiffres arrondis.",
+     "categories": [
+      "1851",
+      "1870"
+     ],
+     "series": [
+      {
+       "nom": "Kilomètres",
+       "valeurs": [
+        3000,
+        17000
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Longueur",
+      "unite": "en km",
+      "min": 0,
+      "max": 18000,
+      "pas": 3000
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville vers laquelle convergent toutes les lignes.",
+     "reponse": [
+      "paris"
+     ],
+     "aide": "Toutes les lignes partent du même point, comme les branches d’une étoile.",
+     "explication": "Toutes les lignes convergent vers **Paris** : le réseau est organisé en étoile autour de la capitale."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ligne qui relie Paris à la Méditerranée.",
+     "reponse": [
+      "sud"
+     ],
+     "aide": "Cherche le trait qui descend jusqu’à Marseille.",
+     "explication": "La ligne **Paris – Lyon – Marseille** mène jusqu’à la Méditerranée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de kilomètres le réseau s’allonge-t-il entre 1851 et 1870 ?",
+     "reponse": 14000,
+     "unite": "km",
+     "aide": "Lis les deux barres et soustrais.",
+     "explication": "17 000 − 3 000 = **14 000 km** de voies en plus en dix-neuf ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien le réseau est-il environ multiplié entre 1851 et 1870 (arrondi à l’unité) ?",
+     "reponse": 6,
+     "aide": "Divise la longueur de 1870 par celle de 1851.",
+     "explication": "17 000 ÷ 3 000 ≈ 5,7, soit un réseau multiplié par environ **6**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ed653b6-ec49-5a1e-81b8-c16aa92185af",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une machine à vapeur à crédit",
+   "competence": "analyser-document",
+   "situation": "En 1866, un maître de forges imaginaire veut acheter une machine à vapeur. Camille découvre avec lui pourquoi l’industrie a besoin de banques nouvelles.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un maître de forges (1866)",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Il me faut 80 000 francs pour acheter une machine à vapeur. Ma banque habituelle n’a pas cette somme.",
+      "Mais des banques d’un genre nouveau, comme le Crédit lyonnais et la Société générale, rassemblent l’[[e|épargne]] de milliers de petits déposants et la prêtent à l’industrie."
+     ]
+    },
+    {
+     "id": "banques",
+     "type": "tableau",
+     "titre": "Quelques établissements du Second Empire",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Établissement",
+      "Année de fondation"
+     ],
+     "lignes": [
+      [
+       "Crédit mobilier (frères Pereire)",
+       1852
+      ],
+      [
+       "Crédit foncier",
+       1852
+      ],
+      [
+       "Crédit lyonnais",
+       1863
+      ],
+      [
+       "Société générale",
+       1864
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche, dans la lettre, le mot qui désigne l’argent que les petits déposants mettent de côté.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "C’est l’argent qu’on n’a pas dépensé et qu’on confie à une banque.",
+     "explication": "C’est **l’épargne** : les banques la rassemblent et la dirigent vers l’industrie."
+    },
+    {
+     "type": "zone",
+     "document": "banques",
+     "enonce": "Touche l’année de fondation de la Société générale.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche la ligne de la Société générale.",
+     "explication": "La Société générale est fondée en **1864**, un an après le Crédit lyonnais."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une banque reçoit des dépôts de 200 francs chacun. Combien de déposants faut-il pour réunir 80 000 francs ?",
+     "reponse": 400,
+     "unite": "déposants",
+     "aide": "Divise 80 000 par 200.",
+     "explication": "80 000 ÷ 200 = **400** déposants : c’est ainsi que l’épargne de beaucoup finance un seul projet industriel."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces événements économiques dans l’ordre chronologique.",
+     "items": [
+      "Création du Crédit mobilier (1852)",
+      "Traité de libre-échange avec le Royaume-Uni (1860)",
+      "Création du Crédit lyonnais (1863)",
+      "Création de la Société générale (1864)"
+     ],
+     "aide": "Utilise le tableau pour les banques ; le traité de libre-échange est entre 1852 et 1863.",
+     "explication": "Crédit mobilier (**1852**), traité de libre-échange (**1860**), Crédit lyonnais (**1863**), Société générale (**1864**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le traité de libre-échange de 1860 pousse-t-il l’industrie française à se moderniser ?",
+     "options": [
+      "Elle subit la concurrence britannique et doit produire mieux et moins cher",
+      "Elle est protégée de toute concurrence étrangère par des droits élevés",
+      "Elle reçoit gratuitement toutes les machines venues du Royaume-Uni",
+      "Elle cesse d’exporter pour ne plus dépendre des marchés étrangers"
+     ],
+     "reponse": 0,
+     "aide": "Libre-échange veut dire que les produits étrangers entrent plus facilement.",
+     "explication": "En ouvrant le marché aux produits britanniques, le traité **expose l’industrie à la concurrence** et la pousse à se moderniser."
+    }
+   ]
+  },
+  {
+   "chapitre": "4ed653b6-ec49-5a1e-81b8-c16aa92185af",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un maçon face aux travaux d’Haussmann",
+   "competence": "analyser-document",
+   "situation": "Paris, 1865. Le préfet Haussmann perce de grands boulevards. Un maçon imaginaire note ses comptes. Marius s’en sert pour mesurer ce que la ville gagne… et ce que les ouvriers perdent.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Journal d’un maçon (1865)",
+     "source": "Journal imaginé pour l’exercice.",
+     "blocs": [
+      "Le préfet Haussmann a fait raser notre rue pour percer un boulevard large et aéré. On dit qu’il apporte l’eau, les égouts et les gares ; c’est vrai que la ville est plus saine.",
+      "Mais le prix du sol a flambé : mon loyer a doublé, et mes voisins partent s’installer toujours plus loin, vers la périphérie."
+     ]
+    },
+    {
+     "id": "budget",
+     "type": "tableau",
+     "titre": "Les comptes du maçon",
+     "source": "Chiffres inventés pour l’exercice.",
+     "colonnes": [
+      "Poste",
+      "Montant"
+     ],
+     "lignes": [
+      [
+       "Salaire par jour travaillé",
+       "3 francs"
+      ],
+      [
+       "Loyer annuel avant les travaux",
+       "150 francs"
+      ],
+      [
+       "Loyer annuel après les travaux",
+       "300 francs"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "budget",
+     "enonce": "Touche la case qui chiffre le loyer après les travaux.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne qui parle de « après les travaux ».",
+     "explication": "Le loyer passe à **300 francs** par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien le loyer est-il multiplié après les travaux ?",
+     "reponse": 2,
+     "aide": "Divise le loyer d’après par le loyer d’avant.",
+     "explication": "300 ÷ 150 = **2** : le loyer double, comme le dit le journal."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de journées de travail faut-il au maçon pour payer son loyer annuel après les travaux ?",
+     "reponse": 100,
+     "unite": "journées",
+     "aide": "Divise le loyer annuel par le salaire d’une journée.",
+     "explication": "300 ÷ 3 = **100** journées de travail rien que pour le loyer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet social des travaux le journal du maçon révèle-t-il ?",
+     "options": [
+      "Le prix du sol chasse les ouvriers vers la périphérie",
+      "Les ouvriers deviennent propriétaires des nouveaux immeubles",
+      "Les ouvriers quittent Paris pour travailler dans les champs",
+      "Les loyers baissent grâce aux nouveaux boulevards"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du journal.",
+     "explication": "Les travaux embellissent Paris, mais **le prix du sol augmente** : les ouvriers sont repoussés vers la périphérie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : effet voulu par Haussmann, ou effet subi par les ouvriers ?",
+     "categories": [
+      "Effet voulu",
+      "Effet subi"
+     ],
+     "items": [
+      [
+       "Une ville plus aérée et plus salubre",
+       0
+      ],
+      [
+       "L’eau et les égouts installés",
+       0
+      ],
+      [
+       "Un loyer qui double",
+       1
+      ],
+      [
+       "Un départ vers la périphérie",
+       1
+      ]
+     ],
+     "aide": "Ce que le préfet cherchait n’est pas ce que subissent les habitants modestes.",
+     "explication": "Une ville **aérée et salubre** et l’**eau et les égouts** étaient voulus. Le **loyer qui double** et le **départ vers la périphérie** sont des effets subis."
+    }
+   ]
+  },
+  {
+   "chapitre": "79a99844-12b9-5663-bf86-96f358f9fd99",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois Français sur quatre au village",
+   "competence": "lire-graphique",
+   "situation": "Salomé prépare un exposé sur la France du milieu du XIXe siècle. Elle commence par un graphique qui montre où vivaient les Français.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Où vivent les Français vers 1850 ?",
+     "source": "Chiffres arrondis, milieu du XIXe siècle.",
+     "categories": [
+      "Campagne",
+      "Ville"
+     ],
+     "series": [
+      {
+       "nom": "Part de la population (%)",
+       "valeurs": [
+        75,
+        25
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la part de la population qui vit à la campagne.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la plus grande part du graphique.",
+     "explication": "La campagne rassemble environ **75 %** des Français, soit les trois quarts de la population."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 1 000 Français, combien vivent à la campagne ?",
+     "reponse": 750,
+     "unite": "Français",
+     "aide": "Calcule 75 % de 1 000.",
+     "explication": "75 % de 1 000 = **750** personnes sur 1 000."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclut-on de ce graphique sur la France vers 1850 ?",
+     "options": [
+      "Le monde rural est largement majoritaire, la ville reste minoritaire",
+      "La France est déjà un pays industriel et surtout urbain",
+      "La campagne et la ville ont à peu près la même population",
+      "Les campagnes sont presque désertes à cette date"
+     ],
+     "reponse": 0,
+     "aide": "Compare la part de la campagne à celle de la ville.",
+     "explication": "Les **trois quarts** des Français vivent à la campagne : le monde rural est largement majoritaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "79a99844-12b9-5663-bf86-96f358f9fd99",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le carnet d’un cultivateur",
+   "competence": "analyser-document",
+   "situation": "En 1860, un cultivateur imaginaire tient son carnet. Il raconte comment sa ferme a changé depuis l’arrivée du train à la gare voisine. Elias y repère les signes d’un monde rural qui bouge.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Carnet d’un cultivateur (1860)",
+     "source": "Carnet imaginé pour l’exercice.",
+     "blocs": [
+      "Avant, nous cultivions du blé et des légumes pour nous nourrir. Sur 30 quintaux de blé, la famille en gardait 24 ; on vendait le reste à la foire.",
+      "Depuis que le train passe à la gare voisine, je vends ma betterave à la sucrerie et mon lait à la ville. Je laisse moins mes champs en jachère : avec des [[e|engrais]], la terre se repose moins longtemps."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le mot qui désigne ce qui permet de moins laisser la terre en jachère.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche ce qu’on apporte au sol pour le rendre plus fertile.",
+     "explication": "Ce sont les **engrais** : avec la rotation des cultures, ils remplacent peu à peu la jachère."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avant le train, quelle part du blé (en %) la famille vendait-elle à la foire ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Calcule d’abord la quantité vendue : 30 − 24, puis divise par 30.",
+     "explication": "30 − 24 = 6 quintaux vendus ; 6 ÷ 30 = 0,2, soit **20 %** du blé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque production : polyculture vivrière ou production spécialisée pour la vente ?",
+     "categories": [
+      "Polyculture vivrière",
+      "Production spécialisée"
+     ],
+     "items": [
+      [
+       "Du blé gardé pour le pain de la famille",
+       0
+      ],
+      [
+       "La betterave vendue à la sucrerie",
+       1
+      ],
+      [
+       "Le lait vendu à la ville",
+       1
+      ],
+      [
+       "Des légumes du potager familial",
+       0
+      ]
+     ],
+     "aide": "Demande-toi si la récolte nourrit la famille ou part sur le marché.",
+     "explication": "Le blé de la famille et les légumes relèvent de la **polyculture vivrière**. La betterave et le lait, vendus au loin, sont des **productions spécialisées**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change le chemin de fer dans la vie du village ?",
+     "options": [
+      "On produit de plus en plus pour vendre, et plus seulement pour se nourrir",
+      "On cesse de cultiver la terre pour partir à la ville",
+      "Le village devient totalement autonome et se ferme au marché",
+      "Les paysans cessent d’utiliser des engrais"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux paragraphes : que fait le cultivateur de sa récolte, avant puis après le train ?",
+     "explication": "Le rail fait entrer **le marché dans le village** : on cesse de produire seulement pour se nourrir et on produit pour vendre."
+    }
+   ]
+  },
+  {
+   "chapitre": "79a99844-12b9-5663-bf86-96f358f9fd99",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un monde rural qui bouge et se vide",
+   "competence": "raisonner",
+   "situation": "Lina compare l’évolution de la population rurale et le récit d’un jeune saisonnier imaginaire pour comprendre comment le monde rural change sans s’effondrer.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Part de la population rurale",
+     "source": "Valeurs arrondies, ordre de grandeur.",
+     "categories": [
+      "1851",
+      "1861",
+      "1872"
+     ],
+     "series": [
+      {
+       "nom": "Population rurale (%)",
+       "valeurs": [
+        75,
+        71,
+        69
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part rurale",
+      "unite": "en %",
+      "min": 60,
+      "max": 80,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Léon, saisonnier",
+     "source": "Récit imaginé pour l’exercice.",
+     "blocs": [
+      "Léon a dix-sept ans. Chaque hiver, quand il n’y a plus de travail aux champs, il part à Lyon travailler sur les [[c|chantiers]].",
+      "Au printemps, il revient au village aider sa famille. À la ville, il a appris quelques mots de français et lit parfois le journal."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part de la population rurale baisse-t-elle entre 1851 et 1872 ?",
+     "reponse": 6,
+     "unite": "points",
+     "aide": "Lis la valeur de 1851 et celle de 1872, puis soustrais.",
+     "explication": "75 − 69 = **6 points** de baisse en vingt et un ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette courbe ?",
+     "options": [
+      "La part rurale baisse lentement mais reste très majoritaire",
+      "La population rurale disparaît presque en vingt ans",
+      "La ville dépasse déjà la campagne dès 1861",
+      "La part rurale augmente régulièrement chaque année"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la pente de la courbe et sa valeur finale.",
+     "explication": "La courbe descend **lentement** : à 69 %, les campagnes restent majoritaires. L’exode rural ne s’accélérera que plus tard."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, le mot qui désigne l’endroit où Léon trouve du travail l’hiver.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce que Léon fait à Lyon.",
+     "explication": "Léon travaille sur les **chantiers** de Lyon : c’est une migration saisonnière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type de départ le récit illustre-t-il ?",
+     "options": [
+      "Une migration saisonnière, lente et souvent temporaire",
+      "Un exode rural définitif et massif",
+      "Un départ à l’étranger pour y fonder une colonie",
+      "Un retour à la terre après une longue vie en ville"
+     ],
+     "reponse": 0,
+     "aide": "Léon revient-il au printemps ?",
+     "explication": "Léon part l’hiver et revient au printemps : c’est **le début de l’exode rural**, d’abord lent et temporaire."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque vecteur d’ouverture à ce qu’il diffuse dans les campagnes.",
+     "paires": [
+      [
+       "L’école",
+       "Le français"
+      ],
+      [
+       "Le service militaire",
+       "L’appartenance nationale"
+      ],
+      [
+       "La presse et le colportage",
+       "L’information nationale"
+      ]
+     ],
+     "aide": "Pense à ce que chacun apporte au village : la langue, l’armée, les nouvelles.",
+     "explication": "L’**école** diffuse le français, le **service militaire** l’appartenance nationale, la **presse** et le colportage l’information nationale."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3700091-5ff3-5796-82b7-2d5016e06734",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée à la filature",
+   "competence": "lire-tableau",
+   "situation": "Louise lit l’emploi du temps d’un ouvrier de filature imaginaire en 1840. Elle veut comprendre pourquoi cette condition est devenue une « question sociale », puis comment le droit a avancé.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "Une journée d’ouvrier (1840)",
+     "source": "Emploi du temps imaginé pour l’exercice.",
+     "colonnes": [
+      "Heures",
+      "Activité"
+     ],
+     "lignes": [
+      [
+       "4 h 30",
+       "Lever, puis trajet à pied jusqu’à l’usine"
+      ],
+      [
+       "6 h – 12 h",
+       "Travail à l’atelier"
+      ],
+      [
+       "12 h – 12 h 30",
+       "Pause pour le repas"
+      ],
+      [
+       "12 h 30 – 18 h 30",
+       "Travail à l’atelier"
+      ],
+      [
+       "19 h",
+       "Retour dans un logement d’une seule pièce"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’heures l’ouvrier travaille-t-il dans la journée ?",
+     "reponse": 12,
+     "unite": "heures",
+     "aide": "Additionne le travail du matin et celui de l’après-midi, sans la pause.",
+     "explication": "6 h le matin + 6 h l’après-midi = **12 heures** de travail, comme le dit le cours."
+    },
+    {
+     "type": "zone",
+     "document": "journee",
+     "enonce": "Touche l’heure de la pause du repas.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche la ligne qui parle du repas.",
+     "explication": "La pause a lieu de **12 h à 12 h 30** : une demi-heure seulement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à la mesure qui l’accompagne.",
+     "paires": [
+      [
+       "1791",
+       "Interdiction des coalitions ouvrières"
+      ],
+      [
+       "1841",
+       "Limitation du travail des enfants"
+      ],
+      [
+       "1864",
+       "Dépénalisation de la grève"
+      ],
+      [
+       "1884",
+       "Syndicats pleinement légalisés"
+      ]
+     ],
+     "aide": "Les lois avancent à petits pas : du plus ancien au plus récent.",
+     "explication": "**1791** : loi Le Chapelier ; **1841** : travail des enfants ; **1864** : loi Ollivier (grève) ; **1884** : syndicats pleinement légalisés."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3700091-5ff3-5796-82b7-2d5016e06734",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un droit qui avance à petits pas",
+   "competence": "se-reperer-temps",
+   "situation": "Les ouvriers ont dû attendre longtemps le droit de s’organiser. Quentin relit les dates clés sur une frise, puis passe en revue les remèdes proposés à la « question sociale ».",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le droit ouvrier, de 1860 à 1890",
+     "source": "Dates tirées du cours.",
+     "debut": 1860,
+     "fin": 1890,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "olli",
+       "date": 1864,
+       "nom": "Loi Ollivier"
+      },
+      {
+       "id": "tol",
+       "date": 1868,
+       "nom": "Chambres tolérées"
+      },
+      {
+       "id": "comm",
+       "date": 1871,
+       "nom": "Commune de Paris"
+      },
+      {
+       "id": "synd",
+       "date": 1884,
+       "nom": "Syndicats légalisés"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la loi qui dépénalise la grève.",
+     "reponse": [
+      "olli"
+     ],
+     "aide": "Le nom de cette loi est celui d’un homme politique, Ollivier.",
+     "explication": "C’est **la loi Ollivier** de 1864 : la grève cesse d’être un délit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la dépénalisation de la grève de la pleine légalisation des syndicats ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Lis les deux années sur la frise.",
+     "explication": "1884 − 1864 = **20 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces mesures dans l’ordre chronologique.",
+     "items": [
+      "La loi Le Chapelier interdit les coalitions (1791)",
+      "L’enquête du docteur Villermé (1840)",
+      "La loi sur le travail des enfants (1841)",
+      "La loi Ollivier dépénalise la grève (1864)",
+      "Les syndicats sont pleinement légalisés (1884)"
+     ],
+     "aide": "La frise commence en 1860 : les autres dates sont à retrouver grâce au cours.",
+     "explication": "**1791**, **1840**, **1841**, **1864**, **1884** : le droit ouvrier avance par étapes, avec des siècles de retard sur l’industrie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque courant à sa solution pour la « question sociale ».",
+     "paires": [
+      [
+       "Les catholiques sociaux",
+       "Le patronage et la charité"
+      ],
+      [
+       "Fourier et Cabet",
+       "Des communautés modèles"
+      ],
+      [
+       "Proudhon",
+       "Le mutualisme"
+      ],
+      [
+       "Marx",
+       "L’organisation de classe et la révolution"
+      ]
+     ],
+     "aide": "Chaque courant croit à un moyen précis : œuvres, communautés, mutuelles ou organisation de classe.",
+     "explication": "Les **catholiques sociaux** misent sur la charité, **Fourier et Cabet** sur des communautés, **Proudhon** sur le mutualisme et **Marx** sur l’organisation de classe."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3700091-5ff3-5796-82b7-2d5016e06734",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Paris, 1871 : la Commune",
+   "competence": "raisonner",
+   "situation": "En 1871, Paris se soulève. Anaïs suit l’enchaînement des événements dans une chaîne, puis étudie ce que réclame cette Commune dans une affiche imaginaire.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "De la défaite à la Semaine sanglante",
+     "noeuds": [
+      {
+       "id": "siege",
+       "texte": "Défaite et siège de Paris (1870-1871)"
+      },
+      {
+       "id": "ass",
+       "texte": "Une Assemblée conservatrice est élue"
+      },
+      {
+       "id": "mystere",
+       "texte": "?"
+      },
+      {
+       "id": "fin",
+       "texte": "Semaine sanglante (21-28 mai 1871)"
+      }
+     ],
+     "liens": [
+      {
+       "de": "siege",
+       "a": "ass"
+      },
+      {
+       "de": "ass",
+       "a": "mystere"
+      },
+      {
+       "de": "mystere",
+       "a": "fin"
+      }
+     ]
+    },
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Citoyens de Paris",
+     "sousTitre": "Affiche imaginée pour l’exercice",
+     "lignes": [
+      {
+       "texte": "Paris gouverné par ses propres élus",
+       "id": "mun"
+      },
+      {
+       "texte": "Moins de misère pour ceux qui travaillent",
+       "id": "soc"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du point d’interrogation ?",
+     "options": [
+      "Paris se soulève et proclame la Commune",
+      "Louis-Napoléon Bonaparte est élu président",
+      "Le suffrage universel masculin est instauré",
+      "La loi Ollivier dépénalise la grève"
+     ],
+     "reponse": 0,
+     "aide": "Entre l’élection de l’Assemblée et la Semaine sanglante, que fait Paris ?",
+     "explication": "Refusant un gouvernement conservateur, **Paris se soulève** : c’est la Commune de Paris, écrasée en mai."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’événement qui met fin à la Commune.",
+     "reponse": [
+      "fin"
+     ],
+     "aide": "Cherche la dernière étape de la chaîne.",
+     "explication": "C’est **la Semaine sanglante** (21-28 mai 1871) qui écrase la Commune."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours séparent le 21 mai du 28 mai ?",
+     "reponse": 7,
+     "unite": "jours",
+     "aide": "Soustrais 21 à 28.",
+     "explication": "28 − 21 = **7 jours** séparent le début et la fin de la Semaine sanglante."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la revendication qui est surtout municipale.",
+     "reponse": [
+      "mun"
+     ],
+     "aide": "Une revendication municipale concerne le gouvernement de la ville.",
+     "explication": "Réclamer que Paris soit gouverné par ses propres élus est une revendication **municipale**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque mesure : revendication sociale ou municipale ?",
+     "categories": [
+      "Sociale",
+      "Municipale"
+     ],
+     "items": [
+      [
+       "Obtenir un répit pour payer les loyers",
+       0
+      ],
+      [
+       "Interdire le travail de nuit des boulangers",
+       0
+      ],
+      [
+       "Élire le conseil de la ville de Paris",
+       1
+      ],
+      [
+       "Faire de Paris une commune qui s’administre elle-même",
+       1
+      ]
+     ],
+     "aide": "Une mesure sociale améliore la vie des travailleurs ; une mesure municipale organise le pouvoir dans la ville.",
+     "explication": "Les **loyers** et le **travail de nuit** sont des mesures sociales. **Élire son conseil** et **s’administrer soi-même** sont des revendications municipales."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conséquence la Commune a-t-elle sur la République naissante ?",
+     "options": [
+      "Elle nourrit la peur du désordre social, qui freine les réformes",
+      "Elle fait aboutir immédiatement toutes les réformes sociales demandées",
+      "Elle rétablit la monarchie dans toute la France",
+      "Elle n’a aucun effet sur la vie politique française"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’image qu’elle laisse chez les gouvernants.",
+     "explication": "La Commune laisse un souvenir qui **pèse sur la République** : la peur du désordre social freinera longtemps les réformes."
+    }
+   ]
+  },
+  {
+   "chapitre": "65eeec25-5820-5b9a-9cd8-6d10a979af66",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’Italie se fait… avec la France",
+   "competence": "lire-carte",
+   "situation": "Chiara suit sur une carte les villes clés de l’unité italienne, de Nice à Rome. Elle veut comprendre le rôle de la France de Napoléon III.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes de l’unité italienne",
+     "source": "Carte avec les frontières d’aujourd’hui.",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      3,
+      36,
+      20,
+      48
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "nice",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "turin",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "milan",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "d",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville qui devient capitale de l’Italie en 1870.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est la ville des empereurs romains, plus au sud.",
+     "explication": "C’est **Rome** : elle devient capitale quand la garnison française se retire en 1870."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville que la France reçoit en 1860, avec la Savoie, après des plébiscites.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle est sur la Côte d’Azur.",
+     "explication": "La France reçoit **Nice** et la Savoie en 1860."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la grande ville de Lombardie que l’Autriche perd en 1859, après Magenta et Solferino.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "La Lombardie est dans le nord de la péninsule.",
+     "explication": "La Lombardie, dont **Milan** est la grande ville, est perdue par l’Autriche en 1859."
+    }
+   ]
+  },
+  {
+   "chapitre": "65eeec25-5820-5b9a-9cd8-6d10a979af66",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Bismarck, le fer et le sang",
+   "competence": "lire-tableau",
+   "situation": "Jonas suit l’unification allemande dans un tableau, puis il remet les étapes dans l’ordre. Il veut comprendre comment Napoléon III a contribué à créer une puissance plus forte que la sienne.",
+   "documents": [
+    {
+     "id": "guerres",
+     "type": "tableau",
+     "titre": "Les guerres de la Prusse",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Année",
+      "Guerre",
+      "Adversaire de la Prusse"
+     ],
+     "lignes": [
+      [
+       1864,
+       "Guerre des Duchés",
+       "Le Danemark"
+      ],
+      [
+       1866,
+       "Sadowa",
+       "L’Autriche"
+      ],
+      [
+       1870,
+       "Guerre franco-prussienne",
+       "La France"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "guerres",
+     "enonce": "Touche l’adversaire de la Prusse à Sadowa.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne de 1866.",
+     "explication": "À Sadowa, la Prusse bat **l’Autriche** : elle domine désormais l’Allemagne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la guerre des Duchés de la proclamation de l’Empire allemand, en 1871 ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Lis l’année de la guerre des Duchés dans le tableau.",
+     "explication": "1871 − 1864 = **7 ans** pour unifier l’Allemagne autour de la Prusse."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces événements dans l’ordre chronologique.",
+     "items": [
+      "Guerre des Duchés (1864)",
+      "Sadowa (1866)",
+      "Dépêche d’Ems (juillet 1870)",
+      "Sedan (2 septembre 1870)",
+      "Empire allemand proclamé à Versailles (18 janvier 1871)"
+     ],
+     "aide": "Les guerres du tableau sont dans l’ordre ; la défaite de la France et l’Empire viennent à la fin.",
+     "explication": "**1864**, **1866**, **juillet 1870** (Ems), **Sedan** (2 septembre), puis l’**Empire allemand** à Versailles le 18 janvier 1871."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel paradoxe la politique de Napoléon III révèle-t-elle ?",
+     "options": [
+      "Soutenir les nationalités lui a fait créer une puissance plus forte que la sienne",
+      "S’opposer aux nationalités lui a permis d’empêcher toute unité en Europe",
+      "Soutenir la Prusse contre la France lui a fait gagner la guerre de 1870",
+      "Refuser toute guerre lui a permis de conserver l’Alsace et la Lorraine"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’il soutient en Italie et à ce que devient l’Allemagne.",
+     "explication": "Napoléon III soutenait **le principe des nationalités** : il a contribué à créer à ses frontières une puissance plus forte que la sienne."
+    }
+   ]
+  },
+  {
+   "chapitre": "65eeec25-5820-5b9a-9cd8-6d10a979af66",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que la France perd en 1871",
+   "competence": "raisonner",
+   "situation": "En 1871, le traité de Francfort redessine la frontière. Nathan croise une carte de l’Alsace-Moselle et un tableau des événements pour comprendre ce que la défaite coûte à la France.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le territoire perdu en 1871",
+     "source": "Carte avec contour approximatif du territoire annexé.",
+     "fond": "france",
+     "cadrage": [
+      3.6,
+      46.6,
+      9.4,
+      50.2
+     ],
+     "aires": [
+      {
+       "id": "annexe",
+       "contour": [
+        [
+         5.8,
+         49.5
+        ],
+        [
+         8.2,
+         49.05
+        ],
+        [
+         8.2,
+         48.9
+        ],
+        [
+         7.6,
+         47.55
+        ],
+        [
+         6.95,
+         47.5
+        ],
+        [
+         6.9,
+         47.9
+        ],
+        [
+         7.05,
+         48.4
+        ],
+        [
+         6.95,
+         48.5
+        ],
+        [
+         6.8,
+         48.65
+        ],
+        [
+         5.9,
+         48.98
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "hachures"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "strasbourg",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "metz",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "nancy",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "d",
+       "lieu": "mulhouse",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "De Sedan à Francfort",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "2 septembre 1870",
+       "Sedan : l’empereur est vaincu"
+      ],
+      [
+       "18 janvier 1871",
+       "L’Empire allemand est proclamé dans la galerie des Glaces de Versailles"
+      ],
+      [
+       "Mai 1871",
+       "Traité de Francfort : 5 milliards de francs-or et perte de l’Alsace-Moselle"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois villes qui passent à l’Allemagne en 1871.",
+     "reponse": [
+      "a",
+      "b",
+      "d"
+     ],
+     "multiple": true,
+     "aide": "Regarde lesquelles se trouvent dans la zone hachurée.",
+     "explication": "**Strasbourg**, **Metz** et **Mulhouse** passent à l’Allemagne avec l’Alsace-Moselle."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville lorraine qui reste française, juste à côté de la nouvelle frontière.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Elle est hors de la zone hachurée.",
+     "explication": "**Nancy** reste française : la nouvelle frontière passe tout près."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Imagine que la France paie les 5 milliards de francs-or en cinq versements égaux. Combien de milliards par versement ?",
+     "reponse": 1,
+     "unite": "milliard",
+     "aide": "Divise 5 milliards par 5.",
+     "explication": "5 ÷ 5 = **1 milliard** de francs-or par versement : une somme énorme pour l’État."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’Empire allemand est-il proclamé dans la galerie des Glaces de Versailles ?",
+     "options": [
+      "Pour humilier la France : l’unité allemande naît dans le palais du roi",
+      "Parce que Versailles est la capitale historique du royaume de Prusse",
+      "Parce que le château de Versailles appartient à Bismarck lui-même",
+      "Parce que la France a offert ce lieu pour la cérémonie officielle"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’effet de ce choix sur les Français vaincus.",
+     "explication": "Le lieu n’est **pas un hasard** : l’unité allemande se fait dans le palais du roi de France, et l’humiliation est calculée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la « revanche » pèse-t-elle sur la vie politique française jusqu’en 1914 ?",
+     "options": [
+      "La question des provinces perdues reste une plaie ouverte",
+      "La France a obtenu en échange de grands territoires coloniaux",
+      "L’Allemagne a rendu l’Alsace et la Lorraine dès 1872",
+      "La France ne s’intéresse plus aux affaires européennes"
+     ],
+     "reponse": 0,
+     "aide": "Que pensent les Français de la frontière de 1871 ?",
+     "explication": "La perte de l’Alsace-Moselle nourrit l’idée de **revanche** : c’est l’un des fils qui mènent à la Première Guerre mondiale."
+    }
+   ]
+  },
+  {
+   "chapitre": "161476f2-58c7-539b-b8e1-95837a2a2c9c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les trois pouvoirs de 1875",
+   "competence": "observer-schema",
+   "situation": "En 1875, la Troisième République se donne enfin des lois constitutionnelles. Élodie dessine le schéma des institutions : il lui manque une information, celle qui explique comment un des pouvoirs est désigné.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "schema",
+     "titre": "Les institutions de 1875",
+     "source": "Schéma réalisé pour l’exercice.",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 14,
+       "l": 200,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "pres",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 41,
+       "texte": "Président de la République",
+       "ancre": "milieu",
+       "gras": true,
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 76,
+       "texte": "élu par les deux Chambres",
+       "ancre": "milieu",
+       "italique": true,
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        85,
+        140
+       ],
+       "a": [
+        125,
+        86
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        140
+       ],
+       "a": [
+        195,
+        86
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 140,
+       "l": 150,
+       "h": 46,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "dep",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 168,
+       "texte": "Chambre des députés",
+       "ancre": "milieu",
+       "gras": true,
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 208,
+       "texte": "suffrage universel",
+       "ancre": "milieu",
+       "italique": true,
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 224,
+       "texte": "masculin",
+       "ancre": "milieu",
+       "italique": true,
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 140,
+       "l": 140,
+       "h": 46,
+       "arrondi": 8,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "sen",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 168,
+       "texte": "Sénat",
+       "ancre": "milieu",
+       "gras": true,
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 214,
+       "texte": "?",
+       "ancre": "milieu",
+       "gras": true,
+       "taille": "grand"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche l’institution élue directement par les électeurs, au suffrage universel masculin.",
+     "reponse": [
+      "dep"
+     ],
+     "aide": "Lis ce qui est écrit sous chaque institution.",
+     "explication": "C’est **la Chambre des députés** : elle est élue au suffrage universel masculin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le Sénat est-il désigné ? C’est ce que cache le point d’interrogation.",
+     "options": [
+      "Au suffrage indirect",
+      "Au suffrage universel direct",
+      "Par le président de la République",
+      "Par tirage au sort"
+     ],
+     "reponse": 0,
+     "aide": "Les sénateurs ne sont pas élus directement par tous les électeurs.",
+     "explication": "Les sénateurs sont désignés **au suffrage indirect** : les électeurs choisissent des grands électeurs, qui votent à leur tour."
+    },
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche les deux institutions qui élisent le président de la République.",
+     "reponse": [
+      "dep",
+      "sen"
+     ],
+     "multiple": true,
+     "aide": "Relis la phrase sous le président : de quoi se compose « les deux Chambres » ?",
+     "explication": "Le président est élu par **les deux Chambres** réunies : la Chambre des députés et le Sénat."
+    }
+   ]
+  },
+  {
+   "chapitre": "161476f2-58c7-539b-b8e1-95837a2a2c9c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une République née d’une voix de plus",
+   "competence": "se-reperer-temps",
+   "situation": "Maxence suit sur une frise comment la République s’installe, de 1870 à 1879. Il veut comprendre pourquoi la monarchie échoue et comment le régime change de nature.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la proclamation de la République à 1879",
+     "source": "Frise réalisée pour l’exercice.",
+     "debut": 1869,
+     "fin": 1880,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "rep",
+       "date": 1870,
+       "nom": "République"
+      },
+      {
+       "id": "comm",
+       "date": 1871,
+       "nom": "Commune écrasée"
+      },
+      {
+       "id": "resta",
+       "date": 1873,
+       "nom": "Restauration ratée"
+      },
+      {
+       "id": "wallon",
+       "date": 1875,
+       "nom": "Amendement Wallon"
+      },
+      {
+       "id": "mai",
+       "date": 1877,
+       "nom": "Crise du 16 mai"
+      },
+      {
+       "id": "demi",
+       "date": 1879,
+       "nom": "Mac-Mahon part"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la proclamation de la République de l’amendement Wallon ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Lis les deux années sur la frise.",
+     "explication": "1875 − 1870 = **5 ans** pour que le mot « République » entre dans les lois constitutionnelles."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui fait échouer le retour du roi.",
+     "reponse": [
+      "resta"
+     ],
+     "aide": "Cherche ce qui se passe en 1873, quand la monarchie semble sur le point de revenir.",
+     "explication": "En **1873**, la restauration monarchique échoue : le comte de Chambord refuse le drapeau tricolore."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Le comte de Chambord",
+       "Prétendant des légitimistes"
+      ],
+      [
+       "Le comte de Paris",
+       "Prétendant des orléanistes"
+      ],
+      [
+       "Thiers",
+       "Chef du pouvoir exécutif en 1871"
+      ],
+      [
+       "Mac-Mahon",
+       "Président pour sept ans à partir de 1873"
+      ]
+     ],
+     "aide": "Les prétendants se partagent entre deux camps royalistes ; les deux autres dirigent l’État.",
+     "explication": "Chambord est le prétendant des **légitimistes**, le comte de Paris celui des **orléanistes**, **Thiers** dirige l’exécutif en 1871 et **Mac-Mahon** devient président pour sept ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’amendement Wallon est adopté par 353 voix contre 352. De combien de voix l’emporte-t-il ?",
+     "reponse": 1,
+     "unite": "voix",
+     "aide": "Soustrais le nombre de voix « contre » au nombre de voix « pour ».",
+     "explication": "353 − 352 = **1 voix** : une seule voix d’écart fait entrer le mot « République » dans les lois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il à la suite de la crise du 16 mai 1877 ?",
+     "options": [
+      "Les électeurs renvoient une majorité républicaine, et le président se soumet",
+      "Le président obtient une majorité monarchiste et gouverne seul pendant sept ans",
+      "La Chambre est supprimée et le Sénat gouverne à sa place dans le pays",
+      "Le comte de Paris devient roi de France avec l’accord de l’Assemblée"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui arrive à Mac-Mahon en 1879.",
+     "explication": "Mac-Mahon dissout la Chambre, mais les électeurs renvoient **une majorité républicaine** : il se soumet, puis démissionne en 1879."
+    }
+   ]
+  },
+  {
+   "chapitre": "161476f2-58c7-539b-b8e1-95837a2a2c9c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le jour où l’on a cessé de dissoudre",
+   "competence": "raisonner",
+   "situation": "Juin 1877 : le maréchal-président lutte contre la majorité de la Chambre. Hugo lit un article imaginaire de l’époque et reconstitue la chaîne des conséquences, qui fixe la pratique de toute la République.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un journal de juin 1877",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "Le 16 mai, le maréchal-président a renvoyé le gouvernement républicain, soutenu par la majorité de la Chambre. Il vient de [[d|dissoudre]] la Chambre : les électeurs devront trancher.",
+      "On se demande qui, du président ou de la Chambre, aura le dernier mot."
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Les conséquences de la crise",
+     "noeuds": [
+      {
+       "id": "diss",
+       "texte": "Dissolution de la Chambre (1877)"
+      },
+      {
+       "id": "a",
+       "texte": "?"
+      },
+      {
+       "id": "sou",
+       "texte": "Le président se soumet, puis démissionne (1879)"
+      },
+      {
+       "id": "b",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "diss",
+       "a": "a"
+      },
+      {
+       "de": "a",
+       "a": "sou"
+      },
+      {
+       "de": "sou",
+       "a": "b"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche, dans l’article, le verbe qui désigne le geste du président contre la Chambre.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Le président renvoie les députés devant les électeurs.",
+     "explication": "Le président veut **dissoudre** la Chambre pour la faire élire à nouveau : c’est son arme contre les républicains."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la première case « ? » : que décident les électeurs ?",
+     "options": [
+      "Ils renvoient une majorité républicaine",
+      "Ils élisent une majorité monarchiste",
+      "Ils réclament la fin de la République",
+      "Ils s’abstiennent presque tous"
+     ],
+     "reponse": 0,
+     "aide": "Mac-Mahon se soumet ensuite : qui a gagné l’épreuve de force ?",
+     "explication": "Les électeurs renvoient **une majorité républicaine** : le président doit se soumettre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la dernière case « ? » : qu’advient-il du droit de dissolution ?",
+     "options": [
+      "Il n’est plus utilisé : les Chambres dominent le régime",
+      "Il est utilisé chaque année par le président",
+      "Il passe au Sénat, qui l’utilise souvent",
+      "Il est supprimé pour toujours par la Constitution"
+     ],
+     "reponse": 0,
+     "aide": "Le président perd cette arme : relis ce qui se passe après sa soumission.",
+     "explication": "Le droit de dissolution **n’est plus utilisé** : le régime devient un parlementarisme dominé par les Chambres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après 1877, la dissolution ne reparaît qu’en 1955. Combien d’années la séparent de la crise de 1877 ?",
+     "reponse": 78,
+     "unite": "ans",
+     "aide": "Soustrais 1877 à 1955.",
+     "explication": "1955 − 1877 = **78 ans** : la crise de 1877 fixe longtemps la pratique de la République."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette crise sur le pouvoir en République ?",
+     "options": [
+      "La légitimité passe aux Chambres élues, et plus au président",
+      "Le président est désormais le seul chef du régime",
+      "Les électeurs n’ont plus aucun rôle dans les choix du pays",
+      "Le roi reprend le pouvoir à la place du président"
+     ],
+     "reponse": 0,
+     "aide": "Qui, du président ou des députés, a eu le dernier mot en 1877 ?",
+     "explication": "Après 1877, **la légitimité passe aux Chambres** : le président « se soumet » et le pouvoir du Parlement l’emporte."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f5be71a-8d25-5dd8-bd8f-7dd102b7b6fc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les libertés de la République",
+   "competence": "lire-tableau",
+   "situation": "Après 1880, la Troisième République fait de la liberté une réalité concrète. Aurélien range les grandes lois dans un tableau, puis les date.",
+   "documents": [
+    {
+     "id": "libertes",
+     "type": "tableau",
+     "titre": "Les grandes lois de liberté",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Année",
+      "Liberté"
+     ],
+     "lignes": [
+      [
+       1881,
+       "La presse et la réunion"
+      ],
+      [
+       1884,
+       "La liberté syndicale"
+      ],
+      [
+       1901,
+       "La liberté d’association"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "libertes",
+     "enonce": "Touche l’année de la loi Waldeck-Rousseau.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cette loi légalise les syndicats : cherche la liberté syndicale.",
+     "explication": "La loi Waldeck-Rousseau date de **1884** : les syndicats professionnels sont légalisés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la liberté de la presse de la liberté d’association ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Lis les deux années dans la première colonne.",
+     "explication": "1901 − 1881 = **20 ans** de lois de liberté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La loi Waldeck-Rousseau de 1884 légalise les ___.",
+     "reponses": [
+      [
+       "syndicats",
+       "syndicats professionnels",
+       "les syndicats"
+      ]
+     ],
+     "banque": [
+      "syndicats",
+      "journaux",
+      "partis",
+      "associations"
+     ],
+     "aide": "Elle parle de la liberté syndicale.",
+     "explication": "La loi de 1884 légalise les **syndicats professionnels** : c’est la liberté syndicale."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f5be71a-8d25-5dd8-bd8f-7dd102b7b6fc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans la classe d’un hussard noir",
+   "competence": "analyser-document",
+   "situation": "En 1883, un instituteur imaginaire écrit à ses élèves et affiche son emploi du temps. Jade y retrouve ce que l’école de Jules Ferry apporte aux enfants et à la République.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un instituteur (1883)",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Dans ma classe de village, tous les enfants de 6 à 13 ans sont désormais là, car l’école est gratuite et obligatoire.",
+      "Beaucoup ne parlent que le patois chez eux : je leur apprends à lire et à écrire en [[f|français]]."
+     ]
+    },
+    {
+     "id": "edt",
+     "type": "fiche",
+     "modele": "horaires",
+     "entete": "Emploi du temps de la matinée",
+     "sousTitre": "Classe de village, 1883",
+     "emoji": "🏫",
+     "lignes": [
+      {
+       "texte": "Lecture et écriture du français",
+       "valeur": "8 h – 9 h",
+       "id": "fr"
+      },
+      {
+       "texte": "Histoire de France",
+       "valeur": "9 h – 10 h",
+       "id": "hist"
+      },
+      {
+       "texte": "Morale et instruction civique",
+       "valeur": "10 h – 11 h",
+       "id": "mor"
+      },
+      {
+       "texte": "Calcul",
+       "valeur": "11 h – 12 h"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche, dans la lettre, la langue que l’instituteur apprend aux enfants.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Les enfants parlent le patois chez eux ; il leur enseigne autre chose.",
+     "explication": "L’instituteur enseigne **le français** : l’école unifie linguistiquement le pays."
+    },
+    {
+     "type": "zone",
+     "document": "edt",
+     "enonce": "Touche la leçon qui donne à tous les enfants un récit commun sur le pays.",
+     "reponse": [
+      "hist"
+     ],
+     "aide": "Pense à la matière qui raconte le passé de la nation.",
+     "explication": "C’est **l’histoire de France** : l’histoire nationale construit un récit commun."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un enfant entre à l’école à 6 ans et la quitte à 13 ans. Combien d’années dure sa scolarité obligatoire ?",
+     "reponse": 7,
+     "unite": "ans",
+     "aide": "Soustrais l’âge d’entrée à l’âge de sortie.",
+     "explication": "13 − 6 = **7 ans** d’école obligatoire grâce aux lois de 1881-1882."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque enseignement à son effet.",
+     "paires": [
+      [
+       "Le français",
+       "L’unification linguistique du pays"
+      ],
+      [
+       "L’histoire nationale",
+       "Un récit commun"
+      ],
+      [
+       "La morale civique",
+       "Des citoyens"
+      ]
+     ],
+     "aide": "Chaque matière prépare un aspect de l’unité nationale.",
+     "explication": "Le **français** unifie la langue, l’**histoire nationale** donne un récit commun et la **morale civique** forme des citoyens."
+    }
+   ]
+  },
+  {
+   "chapitre": "0f5be71a-8d25-5dd8-bd8f-7dd102b7b6fc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une République qui s’enracine, crise après crise",
+   "competence": "raisonner",
+   "situation": "Entre 1881 et 1899, la République s’installe, mais elle est attaquée. Baptiste croise une frise et une scène imaginaire de janvier 1898 pour comprendre comment les crises la renforcent.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La République de 1880 à 1900",
+     "source": "Dates tirées du cours.",
+     "debut": 1880,
+     "fin": 1900,
+     "pas": 2,
+     "periodes": [
+      {
+       "id": "boul",
+       "debut": 1886,
+       "fin": 1889,
+       "nom": "Boulangisme",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "ferry",
+       "date": 1881,
+       "nom": "Lois Ferry"
+      },
+      {
+       "id": "hugo",
+       "date": 1885,
+       "nom": "Obsèques de Hugo"
+      },
+      {
+       "id": "pan",
+       "date": 1892,
+       "nom": "Panama"
+      },
+      {
+       "id": "drey",
+       "date": 1894,
+       "nom": "Affaire Dreyfus"
+      },
+      {
+       "id": "zola",
+       "date": 1898,
+       "nom": "« J’accuse »"
+      }
+     ]
+    },
+    {
+     "id": "diner",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un dîner de famille, janvier 1898",
+     "source": "Scène imaginée pour l’exercice.",
+     "blocs": [
+      {
+       "personnage": "Marthe",
+       "replique": "[[z|Zola]] vient de publier « J’accuse… ! » dans le journal. Il dit qu’un innocent est peut-être en prison."
+      },
+      {
+       "personnage": "Louis",
+       "replique": "Il insulte l’armée ! Ce procès est terminé."
+      },
+      {
+       "personnage": "Marthe",
+       "replique": "Si la justice a fait une erreur, la République doit la réparer."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "diner",
+     "enonce": "Touche le nom de l’écrivain dont l’article déclenche la dispute de la famille.",
+     "reponse": [
+      "z"
+     ],
+     "aide": "Cherche celui qui publie « J’accuse… ! ».",
+     "explication": "C’est **Émile Zola** : son article « J’accuse… ! » (1898) défend un innocent et divise la France."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où un mouvement autoritaire et nationaliste menace la République.",
+     "reponse": [
+      "boul"
+     ],
+     "aide": "Cherche un mouvement qui a duré de 1886 à 1889.",
+     "explication": "C’est **le boulangisme** (1886-1889) : un mouvement autoritaire et nationaliste qui menace la République."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les lois Ferry de l’article « J’accuse » ?",
+     "reponse": 17,
+     "unite": "ans",
+     "aide": "Lis les deux années sur la frise.",
+     "explication": "1898 − 1881 = **17 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : liberté et école, symbole, ou crise ?",
+     "categories": [
+      "Libertés et école",
+      "Symboles",
+      "Crises"
+     ],
+     "items": [
+      [
+       "Les lois Ferry sur l’école gratuite, laïque et obligatoire",
+       0
+      ],
+      [
+       "La loi sur la liberté syndicale",
+       0
+      ],
+      [
+       "Les funérailles de Victor Hugo au Panthéon",
+       1
+      ],
+      [
+       "La Marseillaise, hymne national",
+       1
+      ],
+      [
+       "Le boulangisme",
+       2
+      ],
+      [
+       "Le scandale de Panama",
+       2
+      ],
+      [
+       "L’affaire Dreyfus",
+       2
+      ]
+     ],
+     "aide": "Distingue ce qui construit la République de ce qui l’éprouve.",
+     "explication": "Les **lois Ferry** et la liberté syndicale installent la République ; **Hugo** et la **Marseillaise** la symbolisent ; boulangisme, Panama et Dreyfus sont des **crises**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la République sort-elle renforcée de l’affaire Dreyfus ?",
+     "options": [
+      "La justice et la liberté d’opinion l’emportent, avec la révision du procès",
+      "L’armée prend le pouvoir pour mettre fin à la crise politique",
+      "Le roi est rappelé pour apaiser le pays après la crise",
+      "La presse est de nouveau soumise à la censure du pouvoir"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la mobilisation d’intellectuels comme Zola.",
+     "explication": "La mobilisation des intellectuels et la **révision du procès** montrent que la justice et la liberté d’opinion l’emportent : la République en sort renforcée."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2100 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "3dbd70f2-419f-5ed9-98c6-53f835964465",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Poulou et sa famille",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur *Les Mots*. Commence par savoir qui est qui dans l’appartement plein de livres où grandit l’enfant.",
+   "documents": [
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Poulou",
+       "L’enfant Sartre, qui joue la comédie pour plaire"
+      ],
+      [
+       "?",
+       "Le grand-père, professeur d’allemand, qui adore son petit-fils"
+      ],
+      [
+       "Anne-Marie",
+       "La mère, veuve, traitée en grande sœur"
+      ],
+      [
+       "Louise",
+       "La grand-mère, ironique et méfiante"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Mots",
+     "sousTitre": "Jean-Paul Sartre",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Autobiographie"
+      },
+      {
+       "texte": "Parties",
+       "valeur": "Deux : « Lire » et « Écrire »"
+      },
+      {
+       "texte": "Enfance racontée",
+       "valeur": "Les dix premières années"
+      },
+      {
+       "texte": "Publication en volume",
+       "valeur": "1964, chez Gallimard"
+      }
+     ],
+     "pied": "Paru d’abord dans la revue Les Temps modernes",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Charles Schweitzer, dit « Karl »",
+      "Le père de Sartre, mort très tôt",
+      "Jean-Paul Sartre adulte",
+      "Un jeune éditeur de Gallimard"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’homme qui élève l’enfant et lui ouvre sa bibliothèque.",
+     "explication": "La case désigne **Charles Schweitzer**, dit « Karl » : le grand-père qui adore Poulou et chez qui l’enfant grandit."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui dit comment la mère de l’enfant est traitée dans le foyer.",
+     "aide": "Cherche la ligne d’Anne-Marie.",
+     "explication": "Anne-Marie, veuve, est traitée **en grande sœur** de son propre fils."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche d’identité du livre.",
+     "texte": "Le livre est une ___ en deux parties, « Lire » et « ___ » ; Sartre y raconte ses ___ premières années.",
+     "reponses": [
+      [
+       "autobiographie"
+      ],
+      [
+       "Écrire",
+       "ecrire"
+      ],
+      [
+       "dix",
+       "10"
+      ]
+     ],
+     "banque": [
+      "autobiographie",
+      "roman",
+      "Écrire",
+      "Vivre",
+      "dix",
+      "vingt"
+     ],
+     "aide": "Tout est dans la fiche d’identité.",
+     "explication": "C’est une **autobiographie** : « Lire » puis « **Écrire** », et elle couvre les **dix** premières années de Sartre."
+    }
+   ]
+  },
+  {
+   "chapitre": "3dbd70f2-419f-5ed9-98c6-53f835964465",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un enfant qui lit avant de comprendre",
+   "competence": "analyser-texte",
+   "situation": "Lis une courte scène écrite pour l’exercice, à la manière du livre, puis dis ce que Sartre adulte pense de cet enfant.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la bibliothèque",
+     "blocs": [
+      "Dans la bibliothèque de son grand-père, un petit garçon [[l|déchiffre]] des livres trop grands pour lui. Il ne comprend pas tout, mais il sent qu’on l’[[r|observe]] : les adultes sourient dès qu’il ouvre un volume.",
+      "Alors il joue le rôle de l’enfant prodige, et il finit par se croire [[d|destiné]] à écrire."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Mots* de Sartre"
+    },
+    {
+     "id": "regard",
+     "type": "tableau",
+     "titre": "Le regard rétrospectif",
+     "colonnes": [
+      "Ce que le livre n’est pas",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Une œuvre nostalgique",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le verbe qui dit ce que l’enfant fait des livres sans toujours les comprendre.",
+     "aide": "Il lit avant de comprendre : quel verbe le dit ?",
+     "explication": "L’enfant **déchiffre** des livres trop grands pour lui : il lit avant de comprendre."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui dit ce que l’enfant finit par se persuader.",
+     "aide": "Pense à la vocation, ce que le narrateur adulte appelle une illusion.",
+     "explication": "L’enfant se croit **destiné** à écrire : c’est cette illusion que Sartre démolit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Une démolition de la comédie jouée enfant",
+      "Un retour ému vers le paradis perdu",
+      "Un hommage tendre à la famille",
+      "Une plainte contre les professeurs"
+     ],
+     "reponse": 0,
+     "aide": "Le narrateur adulte se moque de l’enfant qu’il était.",
+     "explication": "Le livre n’est pas nostalgique : c’est **une démolition** de la comédie que jouait l’enfant."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le parcours que le livre raconte.",
+     "items": [
+      "L’enfant lit avant de comprendre",
+      "Il joue l’enfant prodige",
+      "Il se persuade qu’il est destiné à écrire",
+      "Adulte, il juge cette vocation illusoire"
+     ],
+     "aide": "On part de l’enfant et on termine par le regard de l’adulte.",
+     "explication": "L’enfant **lit**, **joue** le prodige, **se croit destiné** à écrire, puis l’adulte **démolit** cette vocation."
+    }
+   ]
+  },
+  {
+   "chapitre": "3dbd70f2-419f-5ed9-98c6-53f835964465",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Écrire sauve-t-il quelqu’un ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves préparent une dissertation sur la vocation d’écrivain d’après *Les Mots*. Lis leur échange, puis complète leur plan.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Pour Sartre, l’écriture l’a sauvé, non ?"
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Au contraire : il conclut que la littérature ne sauve [[s|personne]]."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors pourquoi continue-t-il ?"
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Parce qu’il ajoute : « J’écris toujours. Que faire d’autre ? »"
+      }
+     ]
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le livre est une autobiographie critique",
+       "Le narrateur adulte se moque de l’enfant qu’il était",
+       "?"
+      ],
+      [
+       "Il refuse l’émotion de Rousseau",
+       "Il préfère l’analyse lucide",
+       "Les *Confessions* servent de point de comparaison"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que, selon Sartre, la littérature ne sauve pas.",
+     "aide": "Lis la réplique de Sacha.",
+     "explication": "Sartre conclut que la littérature ne sauve **personne**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du livre faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La « névrose littéraire » de l’enfant prodige",
+      "Le refus du prix Nobel par Sartre en 1964",
+      "Les deux parties du livre, « Lire » et « Écrire »",
+      "Le métier du grand-père, professeur d’allemand"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple de la comédie que Sartre démolit.",
+     "explication": "La **« névrose littéraire »** est ce que le narrateur adulte démonte : elle illustre l’autobiographie critique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : Sartre le démolit, ou il le garde ?",
+     "categories": [
+      "Ce qu’il démolit",
+      "Ce qu’il garde"
+     ],
+     "items": [
+      [
+       "La comédie de l’enfant prodige",
+       0
+      ],
+      [
+       "L’idée que la littérature sauve",
+       0
+      ],
+      [
+       "La vocation prise pour un mandat sacré",
+       0
+      ],
+      [
+       "Le geste d’écrire",
+       1
+      ],
+      [
+       "Une prose brillante et ironique",
+       1
+      ]
+     ],
+     "aide": "Il se moque de l’illusion, mais il écrit toujours, et bien.",
+     "explication": "Il **démolit** la comédie, le salut par la littérature et la vocation sacrée ; il **garde** l’écriture et sa prose brillante."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle problématique ce livre permet-il le mieux de traiter ?",
+     "options": [
+      "La vocation d’écrivain est-elle un destin ou une illusion ?",
+      "Faut-il écrire ses mémoires pour rester modeste ?",
+      "L’enfance est-elle toujours un âge heureux ?",
+      "Un philosophe doit-il refuser les honneurs ?"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que l’adulte conclut sur l’enfant qui se croyait destiné.",
+     "explication": "Le livre pose la question de la **vocation d’écrivain : destin ou illusion ?**"
+    }
+   ]
+  },
+  {
+   "chapitre": "9ba9c264-5992-5056-8b74-51920d398b2b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Argos sous les mouches",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Les Mouches* à l’oral. Place la pièce dans la vie de Sartre, puis identifie ses personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Sartre et sa pièce",
+     "debut": 1900,
+     "fin": 1980,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1905,
+       "nom": "Naissance"
+      },
+      {
+       "id": "m",
+       "date": 1943,
+       "nom": "Les Mouches"
+      },
+      {
+       "id": "mo",
+       "date": 1964,
+       "nom": "Les Mots"
+      },
+      {
+       "id": "d",
+       "date": 1980,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Qui est qui ?",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Oreste",
+       "Il revient à Argos, étranger, libre et sans attaches"
+      ],
+      [
+       "Électre",
+       "Elle attend la vengeance"
+      ],
+      [
+       "?",
+       "Le maître des dieux, qui propose le pardon à Oreste"
+      ],
+      [
+       "Le Pédagogue",
+       "Le précepteur d’Oreste, sceptique et prudent"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche sur la frise l’année de création des *Mouches*.",
+     "aide": "La pièce est créée sous l’Occupation.",
+     "explication": "La pièce est créée en **1943**, à Paris, sous l’Occupation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Jupiter",
+      "Égisthe",
+      "Agamemnon",
+      "Eschyle"
+     ],
+     "reponse": 0,
+     "aide": "Il soutient l’ordre du remords.",
+     "explication": "C’est **Jupiter** : le complice du pouvoir, qui soutient le remords organisé et propose le pardon à Oreste."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur l’origine de la pièce.",
+     "texte": "Sartre reprend le mythe des ___ et prend un sujet ___ pour passer la ___.",
+     "reponses": [
+      [
+       "Atrides"
+      ],
+      [
+       "antique"
+      ],
+      [
+       "censure"
+      ]
+     ],
+     "banque": [
+      "Atrides",
+      "antique",
+      "censure",
+      "moderne",
+      "critique",
+      "Grecs"
+     ],
+     "aide": "Un sujet de l’Antiquité inquiète moins l’occupant.",
+     "explication": "Il reprend le mythe des **Atrides**, un sujet **antique** qui lui permet de passer la **censure**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9ba9c264-5992-5056-8b74-51920d398b2b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Oreste et Électre après le meurtre",
+   "competence": "analyser-texte",
+   "situation": "Suis les étapes de la pièce, puis compare l’attitude des deux enfants d’Agamemnon une fois le crime commis.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de l’action",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Oreste revient à Argos, couverte de mouches"
+      },
+      {
+       "id": "n2",
+       "texte": "Il tue Égisthe et Clytemnestre"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il quitte la ville, suivi des mouches"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il refuse le pardon de Jupiter",
+      "Il s’excuse auprès du peuple d’Argos",
+      "Il accepte la couronne d’Égisthe",
+      "Il part pour Athènes en secret"
+     ],
+     "reponse": 0,
+     "aide": "Jupiter lui propose de se repentir.",
+     "explication": "Oreste **refuse le pardon de Jupiter** : il assume son acte sans remords."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape que Oreste assume entièrement.",
+     "aide": "C’est l’acte qui venge Agamemnon.",
+     "explication": "Il tue Égisthe et Clytemnestre, et **assume entièrement** son acte."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure de la pièce à ce qu’elle représente.",
+     "paires": [
+      [
+       "Oreste",
+       "Il assume entièrement son acte"
+      ],
+      [
+       "Électre",
+       "Elle s’effondre dans le remords"
+      ],
+      [
+       "Les Érinyes",
+       "Les déesses de la vengeance qui poursuivent Oreste"
+      ],
+      [
+       "Les mouches",
+       "Le remords collectif entretenu par le pouvoir"
+      ]
+     ],
+     "aide": "Après le meurtre, l’un des deux enfants ne vacille pas.",
+     "explication": "**Oreste** assume, **Électre** s’effondre, les **Érinyes** poursuivent, les **mouches** symbolisent le remords collectif."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi l’image des mouches entraînées derrière Oreste fait-elle penser ?",
+     "options": [
+      "Au joueur de flûte de Hamelin",
+      "À une procession religieuse",
+      "Au berger qui mène son troupeau",
+      "À un général qui rentre en vainqueur"
+     ],
+     "reponse": 0,
+     "aide": "Un musicien emmène derrière lui les rats d’une ville.",
+     "explication": "Oreste quitte la ville en entraînant les mouches comme le **joueur de flûte de Hamelin**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9ba9c264-5992-5056-8b74-51920d398b2b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une cité qui pleure sans l’avoir voulu",
+   "competence": "argumenter",
+   "situation": "Lis une scène écrite pour l’exercice, à la manière de la pièce, puis dis ce qu’elle montre de la liberté et du pouvoir.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Sur la place",
+     "blocs": [
+      {
+       "didascalie": "Sur la place d’une ville couverte d’insectes, un étranger s’adresse à un vieux prêtre."
+      },
+      {
+       "personnage": "L’étranger",
+       "replique": "Vous pleurez une faute que vous n’avez pas [[c|commise]]."
+      },
+      {
+       "personnage": "Le prêtre",
+       "replique": "C’est la loi de la cité : chacun doit se [[r|repentir]]."
+      },
+      {
+       "personnage": "L’étranger",
+       "replique": "Une loi qui fabrique des coupables sert celui qui [[g|gouverne]]."
+      },
+      {
+       "personnage": "Le prêtre",
+       "replique": "Et si l’on refuse de pleurer ?"
+      },
+      {
+       "personnage": "L’étranger",
+       "replique": "Alors on est enfin libre."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Mouches* de Sartre"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Sartre réécrit un mythe pour parler de son temps",
+       "Il garde l’histoire mais change le sens",
+       "?"
+      ],
+      [
+       "La pièce défend la liberté contre toute autorité",
+       "Oreste refuse le pardon de Jupiter",
+       "Il quitte Argos en entraînant les mouches"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui montre que le peuple est innocent de ce qu’on lui fait pleurer.",
+     "aide": "Quelle faute le prêtre dit-il commise ?",
+     "explication": "Le peuple pleure une faute qu’il n’a pas **commise** : le remords est imposé."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le verbe qui désigne celui que sert, selon l’étranger, le remords imposé.",
+     "aide": "Qui profite d’un peuple coupable ?",
+     "explication": "Le remords sert celui qui **gouverne** : c’est un instrument de pouvoir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture ce passage permet-il de prouver ?",
+     "options": [
+      "Le remords imposé est un moyen de tenir un peuple",
+      "Le repentir est la plus haute des vertus",
+      "Les dieux punissent justement les hommes",
+      "Le prêtre cherche à protéger l’étranger"
+     ],
+     "reponse": 0,
+     "aide": "Qui profite de ce que le peuple pleure sans avoir fait de faute ?",
+     "explication": "Le texte montre que le remords imposé **tient un peuple** : c’est la lecture que Sartre met en scène."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les Mouches, créée sous l’Occupation, en 1943",
+      "Les Mots, autobiographie parue en 1964",
+      "L’Être et le Néant, publié par Sartre en 1943",
+      "Les Choéphores d’Eschyle, tragédie antique"
+     ],
+     "reponse": 0,
+     "aide": "Il faut une pièce de Sartre qui réécrit un mythe.",
+     "explication": "*Les Mouches*, créée sous l’**Occupation**, illustre la réécriture d’un mythe qui parle à 1943."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ce56b31-7fec-55ac-b0c3-6cf7ce008569",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un livre pour Nathanaël",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *Les Nourritures terrestres* pour l’oral. Replace le livre dans la vie de Gide, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Gide et son livre",
+     "debut": 1865,
+     "fin": 1955,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1869,
+       "nom": "Naissance"
+      },
+      {
+       "id": "v",
+       "date": 1893,
+       "nom": "Voyage"
+      },
+      {
+       "id": "p",
+       "date": 1897,
+       "nom": "Publication"
+      },
+      {
+       "id": "s",
+       "date": 1935,
+       "nom": "Nouvelles Nourritures"
+      },
+      {
+       "id": "m",
+       "date": 1951,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Nourritures terrestres",
+     "sousTitre": "André Gide",
+     "emoji": "🍊",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Inclassable : proses, fragments, rondes"
+      },
+      {
+       "texte": "Écrit pour",
+       "valeur": "?",
+       "id": "dest"
+      },
+      {
+       "texte": "Lieu de la renaissance",
+       "valeur": "L’Afrique du Nord"
+      }
+     ],
+     "pied": "Un hymne à la ferveur et au désir",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche sur la frise l’année de publication du livre.",
+     "aide": "Le livre paraît quatre ans après le voyage.",
+     "explication": "Le livre paraît en **1897**, quatre ans après le voyage en Afrique du Nord."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le livre de sa suite, *Les Nouvelles Nourritures* ?",
+     "reponse": 38,
+     "unite": "ans",
+     "aide": "Soustrais les deux années de la frise.",
+     "explication": "1935 − 1897 = **38 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il écrire dans la case « ? » de la fiche : à qui le livre s’adresse-t-il ?",
+     "options": [
+      "À Nathanaël, un disciple imaginaire",
+      "À Ménalque, un maître qui a tout quitté",
+      "À Juliette, une femme aimée de l’auteur",
+      "À la famille de l’auteur et à ses amis"
+     ],
+     "reponse": 0,
+     "aide": "C’est un disciple qui est en réalité le lecteur.",
+     "explication": "Le livre s’adresse à **Nathanaël**, un disciple imaginaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ce56b31-7fec-55ac-b0c3-6cf7ce008569",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Familles, je vous hais !",
+   "competence": "analyser-texte",
+   "situation": "Lis deux passages authentiques du livre, puis relie ses figures à leurs rôles.",
+   "documents": [
+    {
+     "id": "tx",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux appels",
+     "blocs": [
+      "Familles, je vous hais ! foyers [[c|clos]] ; portes [[c|refermées]] ; possessions [[c|jalouses]] du bonheur.",
+      "Nathanaël, à présent [[j|jette]] mon livre."
+     ],
+     "source": "André Gide, *Les Nourritures terrestres* (1897)"
+    },
+    {
+     "id": "fig",
+     "type": "tableau",
+     "titre": "Les figures du livre",
+     "colonnes": [
+      "Figure",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Nathanaël",
+       "Le disciple à qui l’on parle, c’est-à-dire le lecteur"
+      ],
+      [
+       "Ménalque",
+       "Le maître qui a tout quitté pour vivre intensément"
+      ],
+      [
+       "Le narrateur",
+       "Un ancien malade qui réapprend à sentir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tx",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les trois mots qui disent l’enfermement de la famille.",
+     "aide": "Cherche ce qui est fermé ou jaloux.",
+     "explication": "Les foyers **clos**, les portes **refermées** et les possessions **jalouses** disent l’enfermement."
+    },
+    {
+     "type": "zone",
+     "document": "tx",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le verbe de l’ordre final donné à Nathanaël.",
+     "aide": "Que doit faire Nathanaël du livre ?",
+     "explication": "Gide ordonne : « **jette** mon livre » : le maître refuse d’être suivi."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure du livre à son rôle.",
+     "paires": [
+      [
+       "Nathanaël",
+       "Le disciple à qui l’on parle"
+      ],
+      [
+       "Ménalque",
+       "Le maître qui a tout quitté"
+      ],
+      [
+       "Le narrateur",
+       "Un ancien malade qui réapprend à sentir"
+      ]
+     ],
+     "aide": "Regarde le tableau.",
+     "explication": "**Nathanaël** est le disciple, **Ménalque** le maître, le **narrateur** l’ancien malade."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que refuse Gide dans la formule « Familles, je vous hais ! » ?",
+     "options": [
+      "Les attaches : famille, habitudes, possessions",
+      "Les voyages et les villes d’Afrique du Nord",
+      "Les amis qui admirent et lisent ses livres",
+      "Les poèmes écrits en vers réguliers et rimés"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les mots qui suivent l’exclamation.",
+     "explication": "Il refuse les **attaches** : les familles, les habitudes et les possessions."
+    }
+   ]
+  },
+  {
+   "chapitre": "0ce56b31-7fec-55ac-b0c3-6cf7ce008569",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un maître qui refuse d’être suivi",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si Gide fonde une doctrine. Lis leur débat et la première page du livre, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Karim",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Karim",
+       "texte": "Le livre apprend la ferveur à Nathanaël : c’est un manuel de [[m|morale]]."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Mais la dernière page lui ordonne de jeter le livre."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Alors ce n’est pas une doctrine ?"
+      },
+      {
+       "qui": "Léa",
+       "texte": "C’est un maître qui refuse d’être suivi."
+      }
+     ]
+    },
+    {
+     "id": "p1",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La première page",
+     "blocs": [
+      "Que mon livre t’enseigne à t’intéresser plus à toi qu’à lui-même, — puis à tout le reste plus qu’à toi."
+     ],
+     "source": "André Gide, *Les Nourritures terrestres* (1897)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot que Karim emploie pour désigner le livre, et que Léa contredit.",
+     "aide": "Karim voit une leçon de conduite.",
+     "explication": "Karim voit un manuel de **morale** ; Léa montre que la dernière page lui donne tort."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la première page de la place du livre ?",
+     "options": [
+      "Soi plus que lui, puis tout le reste plus que soi",
+      "Le livre d’abord, puis soi, puis tout le reste",
+      "Le livre plus que le monde, et soi avant tout",
+      "Copier ses phrases pour les apprendre par cœur"
+     ],
+     "reponse": 0,
+     "aide": "Suis l’ordre des intérêts : le livre, soi, le reste.",
+     "explication": "La page place **le livre après soi** et **soi après le monde** : il refuse d’être le centre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque notion : le livre la refuse, ou il l’enseigne ?",
+     "categories": [
+      "Ce qu’il refuse",
+      "Ce qu’il enseigne"
+     ],
+     "items": [
+      [
+       "Les possessions",
+       0
+      ],
+      [
+       "Les habitudes",
+       0
+      ],
+      [
+       "Les doctrines",
+       0
+      ],
+      [
+       "Le désir",
+       1
+      ],
+      [
+       "La disponibilité",
+       1
+      ],
+      [
+       "La ferveur",
+       1
+      ]
+     ],
+     "aide": "Il refuse ce qui enferme, il enseigne ce qui ouvre au monde.",
+     "explication": "Il **refuse** possessions, habitudes et doctrines ; il **enseigne** désir, disponibilité et ferveur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du livre à son effet.",
+     "paires": [
+      [
+       "Les apostrophes à Nathanaël",
+       "Le lecteur se sent personnellement interpellé"
+      ],
+      [
+       "Une prose rythmée, presque un poème",
+       "Le texte se lit comme un chant"
+      ],
+      [
+       "Des genres mêlés sans récit suivi",
+       "Un livre inclassable"
+      ]
+     ],
+     "aide": "Pense à la place du lecteur, au rythme et au genre.",
+     "explication": "Les **apostrophes** interpellent, la **prose rythmée** chante, les **genres mêlés** rendent le livre **inclassable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c86e1d2f-cd45-5141-9bb5-980100cc95f4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un juge qui ne peut pas s’arrêter",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur la seule comédie de Racine. Situe-la dans sa carrière, puis repère ses personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Racine et sa comédie",
+     "debut": 1635,
+     "fin": 1700,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1639,
+       "nom": "Naissance"
+      },
+      {
+       "id": "a",
+       "date": 1667,
+       "nom": "Andromaque"
+      },
+      {
+       "id": "p",
+       "date": 1668,
+       "nom": "Les Plaideurs"
+      },
+      {
+       "id": "m",
+       "date": 1699,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui est-ce ?"
+     ],
+     "lignes": [
+      [
+       "Dandin",
+       "Un juge atteint de la manie de juger"
+      ],
+      [
+       "?",
+       "Le fils de Dandin, amoureux d’Isabelle"
+      ],
+      [
+       "Chicanneau",
+       "Un bourgeois processif, père d’Isabelle"
+      ],
+      [
+       "La comtesse de Pimbesche",
+       "Une plaideuse professionnelle"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche sur la frise l’année des *Plaideurs*.",
+     "aide": "La pièce suit de peu une grande tragédie.",
+     "explication": "*Les Plaideurs* sont joués en **1668**, un an après *Andromaque*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Racine vit-il encore après *Les Plaideurs* ?",
+     "reponse": 31,
+     "unite": "ans",
+     "aide": "Compare l’année de la pièce et celle de la mort.",
+     "explication": "1699 − 1668 = **31 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Léandre",
+      "Citron",
+      "Petit Jean",
+      "L’Intimé"
+     ],
+     "reponse": 0,
+     "aide": "C’est lui qui enferme son père pour le calmer.",
+     "explication": "C’est **Léandre**, fils de Dandin et amoureux d’Isabelle."
+    }
+   ]
+  },
+  {
+   "chapitre": "c86e1d2f-cd45-5141-9bb5-980100cc95f4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le procès de Citron",
+   "competence": "analyser-texte",
+   "situation": "Suis les étapes de l’intrigue, puis repère qui joue quel rôle dans le procès burlesque.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du juge enfermé au procès",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Léandre enferme son père Dandin pour le calmer"
+      },
+      {
+       "id": "n2",
+       "texte": "Dandin s’évade par les toits et la cave"
+      },
+      {
+       "id": "n3",
+       "texte": "Le procès du chien Citron"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "On produit les chiots du prévenu pour attendrir le tribunal",
+      "Citron prend lui-même la parole devant le juge",
+      "Dandin rend un jugement sérieux contre Chicanneau",
+      "Isabelle plaide à la place de l’accusé"
+     ],
+     "reponse": 0,
+     "aide": "On veut émouvoir le tribunal avec la famille de l’accusé.",
+     "explication": "On produit **les chiots du prévenu** pour attendrir le tribunal : c’est la pièce à conviction burlesque."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui est le faux procès.",
+     "aide": "L’accusé est un chien.",
+     "explication": "Le **procès de Citron** est la mise en scène qui doit calmer la manie de Dandin."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque acteur du procès à son rôle.",
+     "paires": [
+      [
+       "Citron",
+       "Le chien accusé d’avoir mangé un chapon"
+      ],
+      [
+       "Petit Jean",
+       "Il plaide"
+      ],
+      [
+       "L’Intimé",
+       "Il répond en style noble"
+      ],
+      [
+       "Les chiots",
+       "Ils sont produits pour attendrir le tribunal"
+      ]
+     ],
+     "aide": "Un chien est accusé, des hommes parlent, des chiots émeuvent.",
+     "explication": "**Citron** est l’accusé, **Petit Jean** plaide, **l’Intimé** répond en style noble, les **chiots** attendrissent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin de la pièce.",
+     "texte": "Dandin condamne le chien aux ___… puis le renvoie pour fêter le ___ de son fils.",
+     "reponses": [
+      [
+       "galères"
+      ],
+      [
+       "mariage"
+      ]
+     ],
+     "banque": [
+      "galères",
+      "mariage",
+      "prison",
+      "baptême",
+      "procès"
+     ],
+     "aide": "Pense à la peine la plus lourde de l’époque et à la ruse de Léandre.",
+     "explication": "Dandin condamne le chien aux **galères**, puis le renvoie pour fêter le **mariage** de son fils."
+    }
+   ]
+  },
+  {
+   "chapitre": "c86e1d2f-cd45-5141-9bb5-980100cc95f4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Avant la naissance du monde",
+   "competence": "argumenter",
+   "situation": "Lis une plaidoirie parodique écrite pour l’exercice, à la manière de la pièce, puis dis ce que Racine moque.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Au tribunal des chats",
+     "blocs": [
+      {
+       "didascalie": "Dans un faux tribunal, on juge un chat accusé d’avoir volé une saucisse."
+      },
+      {
+       "personnage": "L’avocat",
+       "replique": "Messieurs, pour comprendre cette affaire de saucisse, il faut remonter [[r|avant]] la naissance du [[r|monde]]."
+      },
+      {
+       "personnage": "Le juge",
+       "replique": "Abrégez ! Il se fait tard."
+      },
+      {
+       "personnage": "L’avocat",
+       "replique": "J’abrège. Voyez ses petits [[p|chatons]] qui pleurent : attendrissez-vous !"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Plaideurs* de Racine"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La pièce est une satire de la justice",
+       "La justice y devient un spectacle et une maladie",
+       "?"
+      ],
+      [
+       "Le pastiche des plaidoiries fait rire",
+       "Le langage des avocats est parodié",
+       "L’Intimé remonte « avant la naissance du monde »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui montrent que l’avocat s’éloigne du sujet.",
+     "aide": "Il veut remonter très loin dans le temps.",
+     "explication": "L’avocat remonte **avant** la naissance du **monde** : c’est la parodie de l’éloquence judiciaire."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui désigne ce qu’on produit pour attendrir le tribunal.",
+     "aide": "Comme dans la pièce de Racine, on présente la famille de l’accusé.",
+     "explication": "Les **chatons** jouent le rôle des chiots du prévenu : on cherche à attendrir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple de la pièce faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Dandin, qui ne peut s’empêcher de juger",
+      "Léandre, qui obtient la main d’Isabelle",
+      "Racine, auteur d’*Andromaque* en 1667",
+      "Aristophane, auteur grec des *Guêpes*"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple où la justice devient une maladie.",
+     "explication": "**Dandin**, qui ne peut s’empêcher de juger, illustre la justice devenue manie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple : comique de mots, ou comique de gestes et de caractère ?",
+     "categories": [
+      "Comique de mots",
+      "Gestes et caractère"
+     ],
+     "items": [
+      [
+       "Le pastiche des plaidoiries",
+       0
+      ],
+      [
+       "La parodie de l’éloquence judiciaire",
+       0
+      ],
+      [
+       "La fuite de Dandin par les toits",
+       1
+      ],
+      [
+       "Les chiots produits pour attendrir",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si l’effet vient de ce qu’on dit ou de ce qu’on fait.",
+     "explication": "Le **pastiche** et la **parodie** relèvent des mots ; la **fuite** de Dandin et les **chiots** relèvent des gestes et du caractère."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3cfc970-0fdd-5984-a45b-d765f3c4a7f2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre poètes dans l’ombre",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Poètes maudits*. Replace le livre dans la vie de Verlaine, puis dis qui était alors inconnu.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Verlaine et son livre",
+     "debut": 1840,
+     "fin": 1900,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "n",
+       "date": 1844,
+       "nom": "Naissance"
+      },
+      {
+       "id": "r",
+       "date": 1873,
+       "nom": "Coup de revolver"
+      },
+      {
+       "id": "p",
+       "date": 1884,
+       "nom": "Publication"
+      },
+      {
+       "id": "c",
+       "date": 1888,
+       "nom": "Édition complétée"
+      },
+      {
+       "id": "m",
+       "date": 1896,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "poetes",
+     "type": "tableau",
+     "titre": "Des poètes alors méconnus",
+     "colonnes": [
+      "Poète",
+      "Son état à l’époque"
+     ],
+     "lignes": [
+      [
+       "Tristan Corbière",
+       "Totalement invisible"
+      ],
+      [
+       "Arthur Rimbaud",
+       "Parti en Afrique : ses textes ne circulaient plus"
+      ],
+      [
+       "Stéphane Mallarmé",
+       "Réputé illisible"
+      ],
+      [
+       "« ? »",
+       "Anagramme de Paul Verlaine lui-même"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche sur la frise l’année de parution du livre.",
+     "aide": "Le livre sort chez Léon Vanier.",
+     "explication": "Le livre paraît en **1884**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la première édition et l’édition complétée ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Repère 1884 et 1888 sur la frise.",
+     "explication": "1888 − 1884 = **4 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel pseudonyme faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Pauvre Lelian",
+      "Louis de Montalte",
+      "Pauvre Corbière",
+      "Le Poète maudit"
+     ],
+     "reponse": 0,
+     "aide": "C’est une anagramme du nom de Verlaine.",
+     "explication": "Verlaine se cache derrière **« Pauvre Lelian »**, anagramme de son nom."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3cfc970-0fdd-5984-a45b-d765f3c4a7f2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que le public découvre",
+   "competence": "analyser-document",
+   "situation": "Lis la carte d’identité du livre, puis dis ce que Verlaine fait découvrir à ses lecteurs.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Poètes maudits",
+     "sousTitre": "Paul Verlaine",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "Forme",
+       "valeur": "Essais-portraits qui citent longuement les poèmes"
+      },
+      {
+       "texte": "Éditeur",
+       "valeur": "Léon Vanier"
+      },
+      {
+       "texte": "Première édition",
+       "valeur": "1884"
+      },
+      {
+       "texte": "Édition complétée",
+       "valeur": "1888"
+      }
+     ],
+     "pied": "Un cas rare de critique qui change la littérature",
+     "teinte": "violet"
+    },
+    {
+     "id": "decouv",
+     "type": "tableau",
+     "titre": "Ce que le livre fait découvrir",
+     "colonnes": [
+      "Poète",
+      "Ce que le public découvre"
+     ],
+     "lignes": [
+      [
+       "Rimbaud",
+       "« Voyelles » et « Le Bateau ivre »"
+      ],
+      [
+       "Corbière",
+       "Le ton ironique des *Amours jaunes*"
+      ],
+      [
+       "Mallarmé",
+       "Des poèmes de jeunesse et l’exigence d’une poésie difficile"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "Le livre paraît en ___ chez l’éditeur Léon ___ ; Verlaine le complète en ___.",
+     "reponses": [
+      [
+       "1884"
+      ],
+      [
+       "Vanier"
+      ],
+      [
+       "1888"
+      ]
+     ],
+     "banque": [
+      "1884",
+      "1888",
+      "Vanier",
+      "Gallimard",
+      "1873"
+     ],
+     "aide": "Tout est dans la fiche.",
+     "explication": "Le livre paraît en **1884** chez **Vanier** et est complété en **1888**."
+    },
+    {
+     "type": "zone",
+     "document": "decouv",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit ce que le public découvre de Corbière.",
+     "aide": "Cherche la ligne consacrée à l’auteur des *Amours jaunes*.",
+     "explication": "Grâce à Verlaine, le public découvre le ton **ironique** des *Amours jaunes*."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque nom à ce qu’il désigne dans le livre.",
+     "paires": [
+      [
+       "Tristan Corbière",
+       "Un poète totalement invisible"
+      ],
+      [
+       "Stéphane Mallarmé",
+       "Un poète réputé illisible"
+      ],
+      [
+       "Marceline Desbordes-Valmore",
+       "Une poète ajoutée en 1888"
+      ],
+      [
+       "« Pauvre Lelian »",
+       "Verlaine lui-même, par anagramme"
+      ]
+     ],
+     "aide": "Chaque nom correspond à un état ou à un détail du livre.",
+     "explication": "**Corbière** invisible, **Mallarmé** illisible, **Desbordes-Valmore** ajoutée en 1888, **Pauvre Lelian** est Verlaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Verlaine cite-t-il longuement les poèmes de ceux qu’il présente ?",
+     "options": [
+      "Pour faire connaître des œuvres alors inconnues ou méprisées",
+      "Pour se moquer de poètes qui ne lui ressemblent pas",
+      "Pour remplir un livre qui manquait de pages",
+      "Pour prouver que la poésie ne se lit plus"
+     ],
+     "reponse": 0,
+     "aide": "Ces poètes sont presque invisibles à l’époque.",
+     "explication": "En citant largement, il fait **connaître des œuvres** qui seraient restées invisibles."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3cfc970-0fdd-5984-a45b-d765f3c4a7f2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Maudit ne veut pas dire génial",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si être maudit prouve le génie. Lis leur débat et un vers cité par Verlaine, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Sans Verlaine, Corbière serait resté invisible : être maudit prouve donc le génie !"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Non : c’est Verlaine qui fait le travail de [[c|critique]]. Le mot « maudit » est devenu un cliché appliqué à tout poète pauvre ou mort jeune."
+      }
+     ]
+    },
+    {
+     "id": "voy",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un vers de Rimbaud",
+     "blocs": [
+      "A noir, E blanc, I rouge, U vert, O bleu : [[v|voyelles]],"
+     ],
+     "source": "Arthur Rimbaud, « Voyelles » (poème que Verlaine fait découvrir)"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Un plan à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le livre invente un mythe",
+       "Le poète génial est rejeté par la société",
+       "Le poète « maudit »"
+      ],
+      [
+       "Le livre montre le rôle de la critique",
+       "Un critique peut modifier le cours de la littérature",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui dit le rôle que Malik attribue à Verlaine.",
+     "aide": "Malik répond à Zoé en parlant du métier de Verlaine dans ce livre.",
+     "explication": "Verlaine joue un rôle de **critique** : il fait connaître et reconnaître des poètes."
+    },
+    {
+     "type": "zone",
+     "document": "voy",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui donne son titre au poème dont ce vers est le début.",
+     "aide": "Le premier vers le nomme.",
+     "explication": "Le poème s’intitule « **Voyelles** » ; c’est l’un de ceux que le livre fait découvrir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Sans Verlaine, Corbière serait resté invisible",
+      "Verlaine est condamné à la prison en 1873",
+      "Rimbaud voyage en Afrique",
+      "Baudelaire publie « Bénédiction »"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un cas où la critique change le destin d’un poète.",
+     "explication": "Sans Verlaine, **Corbière serait resté invisible** : le critique a modifié le cours de la littérature."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à sa définition.",
+     "paires": [
+      [
+       "Poète maudit",
+       "Poète incompris de son temps, reconnu après coup"
+      ],
+      [
+       "Essai-portrait",
+       "Texte qui présente un poète en citant ses vers"
+      ],
+      [
+       "Décadents et symbolistes",
+       "Jeunes poètes qui cherchent des modèles en 1884"
+      ]
+     ],
+     "aide": "Reprends ce que tu as vu sur le livre.",
+     "explication": "Le **poète maudit** est reconnu après coup, l’**essai-portrait** cite largement, les **décadents et symbolistes** cherchent des modèles."
+    }
+   ]
+  },
+  {
+   "chapitre": "798e2b8b-a76f-53b8-93f0-7fe8f08a36ff",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux provinciales et un miroir",
+   "competence": "analyser-document",
+   "situation": "Tu présentes *Les Précieuses ridicules*. Lis la carte d’identité de la pièce, puis repère ses personnages.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Précieuses ridicules",
+     "sousTitre": "Molière",
+     "emoji": "🪞",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Farce en un acte et en prose"
+      },
+      {
+       "texte": "Création",
+       "valeur": "Novembre 1659, au Petit-Bourbon"
+      },
+      {
+       "texte": "Rôle tenu par Molière",
+       "valeur": "Mascarille",
+       "id": "role"
+      }
+     ],
+     "pied": "La pièce qui lance Molière à Paris",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "?",
+       "Fille de Gorgibus, qui se fait appeler Polixène"
+      ],
+      [
+       "Cathos",
+       "Sa cousine, qui se fait appeler Aminte"
+      ],
+      [
+       "Gorgibus",
+       "Le bourgeois de bon sens, exaspéré"
+      ],
+      [
+       "Mascarille et Jodelet",
+       "Les valets déguisés en beaux esprits"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "role"
+     ],
+     "enonce": "Touche la ligne qui dit quel rôle Molière tient lui-même à la création.",
+     "aide": "Cherche le mot « rôle » dans la fiche.",
+     "explication": "Molière joue **Mascarille**, le valet déguisé en marquis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nom faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Magdelon",
+      "Marotte",
+      "Du Croisy",
+      "La Grange"
+     ],
+     "reponse": 0,
+     "aide": "Elle est la fille de Gorgibus.",
+     "explication": "C’est **Magdelon**, fille de Gorgibus, qui se fait appeler Polixène."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche.",
+     "texte": "La pièce est une ___ en un ___, écrite en ___.",
+     "reponses": [
+      [
+       "farce"
+      ],
+      [
+       "acte"
+      ],
+      [
+       "prose"
+      ]
+     ],
+     "banque": [
+      "farce",
+      "acte",
+      "prose",
+      "vers",
+      "tragédie",
+      "drame"
+     ],
+     "aide": "Regarde la ligne « Genre ».",
+     "explication": "C’est une **farce** en un **acte** et en **prose**."
+    }
+   ]
+  },
+  {
+   "chapitre": "798e2b8b-a76f-53b8-93f0-7fe8f08a36ff",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La vengeance des prétendants",
+   "competence": "analyser-texte",
+   "situation": "Suis l’intrigue, puis explique les périphrases précieuses de la pièce.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’histoire de la farce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Magdelon et Cathos éconduisent leurs prétendants"
+      },
+      {
+       "id": "n2",
+       "texte": "Les prétendants se vengent par un déguisement"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Les maîtres font bâtonner les faux marquis"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Les précieuses s’extasient devant les faux marquis",
+      "Gorgibus enferme ses deux filles dans leur chambre",
+      "Mascarille avoue sa ruse aux deux jeunes filles",
+      "Les prétendants se battent en duel pour Cathos"
+     ],
+     "reponse": 0,
+     "aide": "Les faux marquis sont pris au sérieux par les deux jeunes filles.",
+     "explication": "Les précieuses **s’extasient** devant les impromptus, les perruques et le jargon des faux marquis."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui est la ruse des prétendants.",
+     "aide": "Ils ne se vengent pas eux-mêmes.",
+     "explication": "Les prétendants se vengent par **un déguisement** : leurs valets se font passer pour de grands seigneurs."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression à ce qu’elle désigne.",
+     "paires": [
+      [
+       "« Le conseiller des grâces »",
+       "Le miroir"
+      ],
+      [
+       "« Les commodités de la conversation »",
+       "Les fauteuils"
+      ],
+      [
+       "Polixène",
+       "Le nom que se donne Magdelon"
+      ],
+      [
+       "Aminte",
+       "Le nom que se donne Cathos"
+      ]
+     ],
+     "aide": "Les précieuses parlent par périphrases et se rebaptisent.",
+     "explication": "Le **conseiller des grâces** est le miroir, les **commodités de la conversation** sont les fauteuils ; Polixène est Magdelon, Aminte est Cathos."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur les faux seigneurs.",
+     "texte": "Les valets se font appeler le « marquis de ___ » et le « vicomte de ___ ».",
+     "reponses": [
+      [
+       "Mascarille"
+      ],
+      [
+       "Jodelet"
+      ]
+     ],
+     "banque": [
+      "Mascarille",
+      "Jodelet",
+      "Gorgibus",
+      "Du Croisy",
+      "La Grange"
+     ],
+     "aide": "Ce sont aussi les noms des valets.",
+     "explication": "Le « marquis de **Mascarille** » et le « vicomte de **Jodelet** » sont des valets déguisés."
+    }
+   ]
+  },
+  {
+   "chapitre": "798e2b8b-a76f-53b8-93f0-7fe8f08a36ff",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Parler comme dans les romans",
+   "competence": "argumenter",
+   "situation": "Lis une scène écrite pour l’exercice, à la manière de la pièce, puis dis ce que Molière vise vraiment.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans un salon de province",
+     "blocs": [
+      {
+       "didascalie": "Deux provinciales parlent à leur servante, à la nuit tombante."
+      },
+      {
+       "personnage": "Aurélie",
+       "replique": "Marotte, apportez-nous l’[[p|ennemi]] de l’[[p|obscurité]] : la nuit tombe sur notre conversation."
+      },
+      {
+       "personnage": "Marotte",
+       "replique": "Vous voulez dire la [[c|chandelle]] ?"
+      },
+      {
+       "personnage": "Mélite",
+       "replique": "Quelle expression grossière ! Nous parlons d’un peu de lumière."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Précieuses ridicules* de Molière"
+    },
+    {
+     "id": "vise",
+     "type": "tableau",
+     "titre": "Ce que la satire vise",
+     "colonnes": [
+      "Ce qu’elle vise",
+      "Ce qu’elle ne vise pas"
+     ],
+     "lignes": [
+      [
+       "La caricature de province : le snobisme du langage",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots de la périphrase qui désigne la chandelle.",
+     "aide": "Aurélie ne dit pas « chandelle » : elle emploie une image.",
+     "explication": "La périphrase « l’**ennemi** de l’**obscurité** » remplace le mot simple : c’est le jargon des précieuses."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot simple que la servante emploie pour dire la même chose.",
+     "aide": "Marotte parle sans détour.",
+     "explication": "Marotte dit simplement **chandelle** : son bon sens fait ressortir le ridicule du jargon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La préciosité elle-même, un mouvement réel",
+      "Les valets déguisés en marquis de cour",
+      "Le rire provoqué par la farce en un acte",
+      "Le théâtre écrit en prose et non en vers"
+     ],
+     "reponse": 0,
+     "aide": "La pièce se moque de la copie provinciale, pas de l’original.",
+     "explication": "La pièce ne vise pas **la préciosité elle-même**, mouvement réel animé par des femmes cultivées."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la pièce à son effet.",
+     "paires": [
+      [
+       "La périphrase",
+       "Le langage s’éloigne du bon sens"
+      ],
+      [
+       "Les faux marquis en perruque",
+       "Les provinciales sont dupées par l’apparence"
+      ],
+      [
+       "Gorgibus, bourgeois de bon sens",
+       "Un contrepoint raisonnable aux excès"
+      ]
+     ],
+     "aide": "Chaque élément sert le comique de langage ou de situation.",
+     "explication": "La **périphrase** éloigne du bon sens, les **faux marquis** dupent, **Gorgibus** incarne le bon sens."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2074 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "083417d8-d760-5992-a24e-f57d904d9298",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La dernière comédie de Molière",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ton oral sur Molière. Place Le Malade imaginaire dans sa vie, puis relève la carte d’identité de la pièce.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Molière et ses pièces",
+     "debut": 1620,
+     "fin": 1675,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "mis",
+       "date": 1666,
+       "nom": "Le Misanthrope"
+      },
+      {
+       "id": "mal",
+       "date": 1673,
+       "nom": "Le Malade imaginaire"
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Malade imaginaire",
+     "sousTitre": "Molière",
+     "emoji": "💊",
+     "lignes": [
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Comédie-ballet en trois actes"
+      },
+      {
+       "id": "mus",
+       "texte": "Musique",
+       "valeur": "Marc-Antoine Charpentier"
+      },
+      {
+       "id": "lieu",
+       "texte": "Théâtre",
+       "valeur": "Le Palais-Royal"
+      },
+      {
+       "id": "role",
+       "texte": "Rôle de Molière",
+       "valeur": "Il joue Argan"
+      }
+     ],
+     "pied": "Créé en février 1673",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "mal"
+     ],
+     "enonce": "Touche l’année de la création du Malade imaginaire.",
+     "aide": "C’est la dernière date de la frise.",
+     "explication": "La pièce est créée en **1673**, l’année de la mort de Molière."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Le Misanthrope* du *Malade imaginaire* ?",
+     "reponse": 7,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1673 − 1666 = **7 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Le Malade imaginaire est une comédie-ballet en ___ actes, avec la musique de ___.",
+     "reponses": [
+      [
+       "trois",
+       "3"
+      ],
+      [
+       "Charpentier"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "cinq",
+      "Charpentier",
+      "Lully"
+     ],
+     "aide": "Lis les lignes « Genre » et « Musique ».",
+     "explication": "C’est une comédie-ballet en **trois** actes, sur une musique de **Charpentier**."
+    }
+   ]
+  },
+  {
+   "chapitre": "083417d8-d760-5992-a24e-f57d904d9298",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une maison qu’on guérit par le théâtre",
+   "competence": "analyser-texte",
+   "situation": "Argan veut un gendre médecin ; on le détrompe par des ruses. Suis le fil de l’intrigue, puis regarde la scène de la fausse mort.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Le fil de l’intrigue",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Argan fait ses comptes d’apothicaire"
+      },
+      {
+       "id": "p",
+       "texte": "Il veut marier Angélique à Thomas Diafoirus"
+      },
+      {
+       "id": "m",
+       "texte": "Cléante se déguise en maître de musique"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "f",
+       "texte": "Argan feint d’être mort"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "p"
+      },
+      {
+       "de": "p",
+       "a": "m"
+      },
+      {
+       "de": "m",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "f"
+      }
+     ]
+    },
+    {
+     "id": "s",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La fausse mort",
+     "blocs": [
+      {
+       "didascalie": "Argan, étendu sur sa chaise, retient son souffle."
+      },
+      {
+       "personnage": "Béline",
+       "replique": "Le voilà donc mort ! Quel [[b|bonheur]] : les clefs du coffre sont à moi."
+      },
+      {
+       "didascalie": "Angélique pleure en silence."
+      },
+      {
+       "personnage": "Angélique",
+       "replique": "Mon père ! Mon pauvre père !"
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Molière"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Toinette se déguise en médecin de passage",
+      "Béline se déguise en infirmière de passage",
+      "Béralde se déguise en notaire de passage",
+      "Purgon se déguise en apothicaire de passage"
+     ],
+     "reponse": 0,
+     "aide": "Après Cléante, c’est la servante qui entre en scène.",
+     "explication": "**Toinette** se déguise en médecin de passage et contredit Purgon."
+    },
+    {
+     "type": "zone",
+     "document": "s",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui trahit la joie de Béline.",
+     "aide": "Elle se réjouit alors qu’Argan la croit en deuil.",
+     "explication": "Béline parle de **bonheur** : elle se réjouit de la mort d’Argan, qui comprend qu’elle ne l’aime pas."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Argan",
+       "L’égoïste qui se croit malade"
+      ],
+      [
+       "Toinette",
+       "La servante insolente et lucide"
+      ],
+      [
+       "Béralde",
+       "Le frère raisonnable, porte-parole de la nature"
+      ],
+      [
+       "Béline",
+       "La seconde épouse hypocrite, qui guette l’héritage"
+      ]
+     ],
+     "aide": "Pense à qui se méfie de la médecine et à qui guette l’héritage.",
+     "explication": "**Argan** est l’égoïste, **Toinette** la servante lucide, **Béralde** le frère raisonnable, **Béline** l’épouse intéressée."
+    }
+   ]
+  },
+  {
+   "chapitre": "083417d8-d760-5992-a24e-f57d904d9298",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La médecine, un pouvoir qui parle latin",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent sur la cible de la pièce. Lis le débat et ces deux répliques authentiques de Molière, puis tranche.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "La cible de la pièce",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "La pièce se moque seulement d’Argan, un hypocondriaque."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Non : elle vise la médecine comme [[p|pouvoir]] : jargon, autorité, latin. Et on ne guérit Argan qu’en jouant."
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Deux moments de la pièce",
+     "blocs": [
+      {
+       "personnage": "Toinette, en médecin",
+       "replique": "Le poumon, le poumon, vous dis-je."
+      },
+      {
+       "didascalie": "Dans la cérémonie finale, on reçoit Argan médecin, en faux latin."
+      },
+      {
+       "personnage": "Le président",
+       "replique": "Dignus, dignus est entrare\nIn nostro docto corpore."
+      }
+     ],
+     "source": "Molière, Le Malade imaginaire (1673)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit ce que Paul voit dans la cible de la pièce.",
+     "aide": "Paul parle de jargon, d’autorité, de latin.",
+     "explication": "Pour Paul, la pièce vise la médecine comme **pouvoir** : le jargon et le latin donnent l’autorité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la réplique de Toinette, déguisée en médecin ?",
+     "options": [
+      "Un faux savant qui a réponse à tout, avec aplomb",
+      "Un vrai médecin qui hésite devant la maladie",
+      "Un médecin que le diagnostic inquiète vraiment",
+      "Un savant qui doute de ce qu’il affirme"
+     ],
+     "reponse": 0,
+     "aide": "Toinette ne connaît rien à la médecine : que fait-elle pourtant ?",
+     "explication": "Toinette répète avec **aplomb** une formule : le faux médecin n’hésite jamais."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le dialogue.",
+     "texte": "On ne guérit Argan qu’en ___.",
+     "reponses": [
+      [
+       "jouant"
+      ]
+     ],
+     "banque": [
+      "jouant",
+      "lisant",
+      "payant"
+     ],
+     "aide": "Relis la fin de la réplique de Paul.",
+     "explication": "Selon Paul, on ne guérit Argan qu’**en jouant** : jouer un rôle est le moyen d’accéder à la vérité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque moment de la pièce à ce qu’il met en scène.",
+     "paires": [
+      [
+       "La fausse mort d’Argan",
+       "Le théâtre fait apparaître la vérité"
+      ],
+      [
+       "Le faux médecin de Toinette",
+       "Un faux savoir qui parle avec aplomb"
+      ],
+      [
+       "La cérémonie en faux latin",
+       "Le jargon qui donne l’autorité"
+      ]
+     ],
+     "aide": "Pense à ce que chaque scène révèle.",
+     "explication": "La **fausse mort** révèle qui aime Argan, **Toinette** parodie l’aplomb du savoir, la **cérémonie** moque le jargon."
+    }
+   ]
+  },
+  {
+   "chapitre": "40fd03df-6f01-5704-9196-95d532b2cd27",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq ans avant 1789",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Beaumarchais. Place la pièce dans l’histoire, puis relie chaque personnage à ce qu’il incarne.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "La pièce et son temps",
+     "debut": 1780,
+     "fin": 1790,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "cre",
+       "date": 1784,
+       "nom": "Création"
+      },
+      {
+       "id": "moz",
+       "date": 1786,
+       "nom": "Mozart"
+      },
+      {
+       "id": "rev",
+       "date": 1789,
+       "nom": "Révolution"
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il incarne"
+     ],
+     "lignes": [
+      [
+       "Figaro",
+       "L’homme sans naissance, qui ne doit rien qu’à son esprit"
+      ],
+      [
+       "Suzanne",
+       "La fiancée fine et loyale"
+      ],
+      [
+       "La comtesse",
+       "?"
+      ],
+      [
+       "Le comte",
+       "Le grand seigneur jaloux et volage"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "cre"
+     ],
+     "enonce": "Touche l’année de la création de la pièce.",
+     "aide": "C’est la première date de la frise.",
+     "explication": "La pièce est créée en **1784** à la Comédie-Française."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la création de la pièce de la Révolution de 1789 ?",
+     "reponse": 5,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1789 − 1784 = **5 ans** : la pièce est jouée cinq ans avant la Révolution.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "La comtesse est l’ancienne ___ du *Barbier de Séville*.",
+     "reponses": [
+      [
+       "Rosine"
+      ]
+     ],
+     "banque": [
+      "Rosine",
+      "Suzanne",
+      "Marceline",
+      "Chérubin"
+     ],
+     "aide": "La comtesse a un passé dans la pièce précédente de Beaumarchais.",
+     "explication": "La comtesse est l’ancienne **Rosine** du *Barbier de Séville*, devenue mélancolique et délaissée."
+    }
+   ]
+  },
+  {
+   "chapitre": "40fd03df-6f01-5704-9196-95d532b2cd27",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un mariage, un procès, un piège",
+   "competence": "analyser-texte",
+   "situation": "Figaro doit épouser Suzanne, mais le comte veut s’en mêler. Suis les étapes, puis retrouve qui est qui.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Du mariage au pardon",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "m",
+       "texte": "Figaro doit épouser Suzanne"
+      },
+      {
+       "id": "d",
+       "texte": "Le comte veut faire valoir un droit aboli"
+      },
+      {
+       "id": "p",
+       "texte": "Procès : Marceline est la mère de Figaro"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "g",
+       "texte": "Le comte, démasqué, demande pardon"
+      }
+     ],
+     "liens": [
+      {
+       "de": "m",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "p"
+      },
+      {
+       "de": "p",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "g"
+      }
+     ]
+    },
+    {
+     "id": "r",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Chérubin en danger",
+     "blocs": [
+      "Chérubin, caché dans la chambre de la comtesse, entend le comte approcher. Il n’a qu’une issue : la [[f|fenêtre]]."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Dans le jardin, le comte courtise sa femme déguisée en Suzanne",
+      "Dans le jardin, Figaro épouse Marceline devant le juge",
+      "Dans le jardin, Chérubin dévoile le piège à toute la maison",
+      "Dans le jardin, Bartholo reconnaît Figaro pour son fils"
+     ],
+     "reponse": 0,
+     "aide": "Le piège final se joue le soir, dans l’obscurité.",
+     "explication": "Le comte courtise sa propre femme, déguisée en Suzanne : c’est le **piège du jardin**."
+    },
+    {
+     "type": "zone",
+     "document": "r",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui dit par où Chérubin s’échappe.",
+     "aide": "Il est dans une chambre : cherche l’ouverture.",
+     "explication": "Chérubin saute par la **fenêtre**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le définit.",
+     "paires": [
+      [
+       "Marceline",
+       "Elle découvre que Figaro est son fils"
+      ],
+      [
+       "Bartholo",
+       "Il est le père de Figaro"
+      ],
+      [
+       "Brid’oison",
+       "Le juge bègue, attaché à « la forme »"
+      ],
+      [
+       "Chérubin",
+       "Le page amoureux de toutes les femmes"
+      ]
+     ],
+     "aide": "Pense au procès et au page.",
+     "explication": "**Marceline** est la mère, **Bartholo** le père, **Brid’oison** le juge bègue, **Chérubin** le page amoureux."
+    }
+   ]
+  },
+  {
+   "chapitre": "40fd03df-6f01-5704-9196-95d532b2cd27",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« La peine de naître »",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent sur le grand monologue de l’acte V. Lis le débat et la célèbre réplique, puis tranche.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Figaro n’attaque que le comte : c’est une querelle entre deux hommes."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Non : il vise tout le [[p|privilège]] de naissance, qui met un grand seigneur au-dessus d’un homme d’esprit."
+      }
+     ]
+    },
+    {
+     "id": "m",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le monologue",
+     "blocs": [
+      {
+       "personnage": "Figaro",
+       "replique": "Parce que vous êtes un grand seigneur, vous vous croyez un grand génie !… Qu’avez-vous fait pour tant de biens ? vous vous êtes donné la peine de [[n|naître]], et rien de plus."
+      }
+     ],
+     "source": "Beaumarchais, Le Mariage de Figaro (1784), acte V, scène 3"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot par lequel Adam nomme ce que Figaro attaque.",
+     "aide": "Adam parle de ce que donne la naissance.",
+     "explication": "Adam dit que Figaro vise le **privilège** de naissance, pas seulement le comte."
+    },
+    {
+     "type": "zone",
+     "document": "m",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le verbe qui dit le seul mérite du grand seigneur.",
+     "aide": "Figaro dit ce que le comte a fait pour tant de biens.",
+     "explication": "Le comte s’est donné la peine de **naître**, et rien de plus : son rang ne vient pas de son mérite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dénonce ce monologue ?",
+     "options": [
+      "Le privilège de naissance, sans mérite",
+      "La cupidité des juges, qui vendent leurs arrêts",
+      "Les manœuvres d’un valet, qui mène le jeu",
+      "La faiblesse d’un comte, qui ne sait pas commander"
+     ],
+     "reponse": 0,
+     "aide": "Qu’a fait le comte pour mériter son rang, selon Figaro ?",
+     "explication": "Figaro dénonce le **privilège de naissance** : le comte n’a rien fait d’autre que naître."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque cible de la pièce au moyen utilisé.",
+     "paires": [
+      [
+       "Les privilèges",
+       "Le monologue de l’acte V"
+      ],
+      [
+       "La justice vénale",
+       "Le procès de l’acte III"
+      ],
+      [
+       "Le sort fait aux femmes",
+       "La tirade de Marceline"
+      ],
+      [
+       "La censure",
+       "Figaro l’a subie comme auteur"
+      ]
+     ],
+     "aide": "La pièce vise plusieurs abus, chacun par un moment différent.",
+     "explication": "Les **privilèges** par le monologue, la **justice vénale** par l’acte III, le **sort des femmes** par Marceline, la **censure** par l’expérience de Figaro."
+    }
+   ]
+  },
+  {
+   "chapitre": "48deccce-23b5-542a-beac-a0d5417fec3e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une farce de jeunesse",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Molière. Place Le Médecin volant dans sa vie, puis lis la carte d’identité de la farce.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Molière en province",
+     "debut": 1620,
+     "fin": 1675,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "tour",
+       "debut": 1645,
+       "fin": 1658,
+       "nom": "Tournée en province",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "mal",
+       "date": 1666,
+       "nom": "Médecin malgré lui"
+      },
+      {
+       "id": "mort",
+       "date": 1673,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Médecin volant",
+     "sousTitre": "Molière",
+     "emoji": "🤸",
+     "lignes": [
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Farce en un acte, en prose"
+      },
+      {
+       "id": "quand",
+       "texte": "Jouée",
+       "valeur": "Avant l’installation à Paris"
+      },
+      {
+       "id": "pub",
+       "texte": "Texte publié",
+       "valeur": "Au XIXe siècle"
+      }
+     ],
+     "pied": "Une farce d’avant la gloire",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "tour"
+     ],
+     "enonce": "Touche la période où Molière joue de petites farces en province.",
+     "aide": "C’est la période colorée de la frise.",
+     "explication": "Molière parcourt la province de **1645 à 1658** avec sa troupe et y joue de petites farces."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la tournée en province ?",
+     "reponse": 13,
+     "aide": "Soustrais les deux dates de la période.",
+     "explication": "1658 − 1645 = **13 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Le Médecin volant est une farce en ___ acte, jouée ___ l’installation à Paris.",
+     "reponses": [
+      [
+       "un",
+       "1"
+      ],
+      [
+       "avant"
+      ]
+     ],
+     "banque": [
+      "un",
+      "trois",
+      "avant",
+      "après"
+     ],
+     "aide": "Lis les lignes « Genre » et « Jouée ».",
+     "explication": "C’est une farce en **un** acte, jouée **avant** l’installation à Paris."
+    }
+   ]
+  },
+  {
+   "chapitre": "48deccce-23b5-542a-beac-a0d5417fec3e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un valet, deux rôles, une fenêtre",
+   "competence": "analyser-texte",
+   "situation": "Pour gagner du temps, une fausse maladie et un faux médecin. Suis la ruse, puis relève le jargon de la consultation.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "La ruse",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "g",
+       "texte": "Gorgibus veut marier Lucile à Villebrequin"
+      },
+      {
+       "id": "l",
+       "texte": "Lucile feint d’être malade"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "d",
+       "texte": "Il doit jouer deux rôles à la fois"
+      },
+      {
+       "id": "f",
+       "texte": "Démasqué, il est pardonné"
+      }
+     ],
+     "liens": [
+      {
+       "de": "g",
+       "a": "l"
+      },
+      {
+       "de": "l",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "f"
+      }
+     ]
+    },
+    {
+     "id": "s",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La consultation",
+     "blocs": [
+      {
+       "personnage": "Sganarelle",
+       "replique": "Mademoiselle, le [[j|jargon]] que vous entendez est celui de la plus haute science. Je vous le dis en [[j|latin]] de ma façon : vous êtes malade parce que vous ne vous portez pas bien."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière du Médecin volant"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Sganarelle se fait passer pour un médecin",
+      "Gros-René se fait passer pour un notaire",
+      "Valère se fait passer pour un apothicaire",
+      "Sabine se fait passer pour une servante"
+     ],
+     "reponse": 0,
+     "aide": "Lucile a besoin d’un faux médecin pour confirmer sa maladie.",
+     "explication": "Le valet **Sganarelle** se déguise en médecin pour couvrir la fausse maladie."
+    },
+    {
+     "type": "zone",
+     "document": "s",
+     "multiple": true,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche les deux mots qui dénoncent le faux savoir de Sganarelle.",
+     "aide": "Cherche le jargon et la langue savante.",
+     "explication": "Le **jargon** et le **latin** inventé font passer Sganarelle pour un savant."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans la farce.",
+     "paires": [
+      [
+       "Sganarelle",
+       "Le valet fourbe et bavard, meneur de jeu"
+      ],
+      [
+       "Gorgibus",
+       "Le père crédule, que tout le monde dupe"
+      ],
+      [
+       "Sabine",
+       "La cousine qui trouve l’idée du faux médecin"
+      ],
+      [
+       "Gros-René",
+       "Le valet qui découvre la supercherie"
+      ]
+     ],
+     "aide": "Pense à qui invente, qui joue, qui est dupé, qui découvre.",
+     "explication": "**Sganarelle** mène le jeu, **Gorgibus** est dupé, **Sabine** invente le faux médecin, **Gros-René** découvre la supercherie."
+    }
+   ]
+  },
+  {
+   "chapitre": "48deccce-23b5-542a-beac-a0d5417fec3e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tout Molière en germe",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent : une farce est-elle seulement un jeu de coups de bâton ? Lis le tableau, puis tranche.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lola",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lola",
+       "texte": "Une farce, c’est juste des gestes et des cabrioles : rien de sérieux là-dedans."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Les gestes viennent de la commedia dell’arte, mais le faux médecin est déjà une [[s|satire]] du faux savoir."
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Ce que la farce annonce",
+     "colonnes": [
+      "Dans la farce",
+      "Chez Molière ensuite"
+     ],
+     "lignes": [
+      [
+       "Le valet metteur en scène",
+       "Mascarille, Scapin, Toinette"
+      ],
+      [
+       "Le père obstiné",
+       "?"
+      ],
+      [
+       "Le médecin charlatan",
+       "Diafoirus, Purgon"
+      ],
+      [
+       "Le comique de gestes",
+       "Hérité de la commedia dell’arte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot par lequel Yanis dit que la farce critique déjà quelque chose.",
+     "aide": "Yanis parle de ce que vise le faux médecin.",
+     "explication": "Yanis dit que le faux médecin est déjà une **satire** du faux savoir."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "Le père obstiné de la farce annonce ___ ou Harpagon.",
+     "reponses": [
+      [
+       "Orgon"
+      ]
+     ],
+     "banque": [
+      "Orgon",
+      "Scapin",
+      "Purgon"
+     ],
+     "aide": "Cherche un père de comédie, pas un valet ni un médecin.",
+     "explication": "Le père obstiné annonce **Orgon** ou **Harpagon**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il relève du comique de gestes, ou du comique de mots ?",
+     "categories": [
+      "Comique de gestes",
+      "Comique de mots"
+     ],
+     "items": [
+      [
+       "Les sauts par la fenêtre",
+       0
+      ],
+      [
+       "La course d’une pièce à l’autre",
+       0
+      ],
+      [
+       "Le jargon savant inventé",
+       1
+      ],
+      [
+       "Une personne qui ne se porte pas bien quand elle est malade",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : on le voit sur la scène, ou on l’entend ?",
+     "explication": "Les **sauts** et la **course** sont du corps ; le **jargon** et la sentence solennelle sont des **mots**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que tout Molière est déjà là en germe ?",
+     "options": [
+      "La farce contient déjà des types que Molière reprendra",
+      "La farce est plus riche que ses pièces ultérieures",
+      "La farce est écrite en vers comme ses grandes pièces",
+      "La farce prouve que Molière ne changera plus de style"
+     ],
+     "reponse": 0,
+     "aide": "Relis la colonne « Chez Molière ensuite ».",
+     "explication": "Le valet metteur en scène, le père obstiné et le médecin charlatan sont des **types** que Molière reprendra."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cdc1051-44ea-598d-b6c1-280c663fefa6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un monde fabriqué en flacons",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares une fiche sur le roman d’Huxley. Place-le sur la frise, puis relève comment ce monde fonctionne.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Huxley et son roman",
+     "debut": 1890,
+     "fin": 1965,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1894,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pub",
+       "date": 1932,
+       "nom": "Publication"
+      },
+      {
+       "id": "ess",
+       "date": 1958,
+       "nom": "Essai de retour"
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Le dispositif",
+     "colonnes": [
+      "Ce qui existe",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Les castes",
+       "Cinq, des Alphas aux Epsilons"
+      ],
+      [
+       "La famille",
+       "Supprimée : « mère » et « père » sont obscènes"
+      ],
+      [
+       "Le soma",
+       "?"
+      ],
+      [
+       "L’hypnopédie",
+       "Des slogans répétés pendant le sommeil"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année de la publication du roman.",
+     "aide": "Le roman paraît bien avant l’essai de retour.",
+     "explication": "Le roman paraît en **1932**, au temps du fordisme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le roman de l’essai *Retour au meilleur des mondes* ?",
+     "reponse": 26,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1958 − 1932 = **26 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "Le soma est une ___ sans effets secondaires.",
+     "reponses": [
+      [
+       "drogue"
+      ]
+     ],
+     "banque": [
+      "drogue",
+      "religion",
+      "machine",
+      "prière"
+     ],
+     "aide": "C’est le moyen de rendre tout le monde heureux.",
+     "explication": "Le soma est une **drogue** du bonheur, sans effets secondaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cdc1051-44ea-598d-b6c1-280c663fefa6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "John le Sauvage chez les civilisés",
+   "competence": "analyser-texte",
+   "situation": "Un homme élevé hors du système bouscule un monde parfait. Suis son parcours, puis écoute la voix du dortoir.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Le parcours de John",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "v",
+       "texte": "Bernard et Lenina visitent une réserve"
+      },
+      {
+       "id": "j",
+       "texte": "Ils en ramènent John le Sauvage"
+      },
+      {
+       "id": "d",
+       "texte": "Le Directeur est révélé père de John"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "m",
+       "texte": "John, curiosité médiatique, se pend"
+      }
+     ],
+     "liens": [
+      {
+       "de": "v",
+       "a": "j"
+      },
+      {
+       "de": "j",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "m"
+      }
+     ]
+    },
+    {
+     "id": "h",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La voix du dortoir",
+     "blocs": [
+      "Dans le dortoir, une voix douce répète à des enfants endormis : « Chacun est fait pour sa place. Être [[h|heureux]], c’est ne rien demander. »"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière du roman"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "John réclame le droit d’être malheureux",
+      "John accepte de prendre du soma chaque jour",
+      "John devient le nouveau Directeur de l’Incubation",
+      "John épouse Lenina et s’installe à Londres"
+     ],
+     "reponse": 0,
+     "aide": "Face à l’administrateur, John refuse le bonheur fabriqué.",
+     "explication": "John, face à Mustapha Menier, réclame **le droit d’être malheureux**."
+    },
+    {
+     "type": "zone",
+     "document": "h",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot que cette voix associe à l’absence de demande.",
+     "aide": "Elle dit ce qu’« être » signifie ici.",
+     "explication": "La voix dit qu’être **heureux**, c’est ne rien demander : l’hypnopédie programme la docilité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui lui arrive.",
+     "paires": [
+      [
+       "John",
+       "Élevé hors du système, nourri de Shakespeare"
+      ],
+      [
+       "Linda",
+       "Femme perdue dans la réserve, mère de John"
+      ],
+      [
+       "Mustapha Menier",
+       "L’administrateur qui explique que le bonheur a un prix"
+      ],
+      [
+       "Bernard et Helmholtz",
+       "Exilés sur une île"
+      ]
+     ],
+     "aide": "Pense à qui explique, qui est exilé, qui est élevé hors du système.",
+     "explication": "**John** vient de la réserve, **Linda** est sa mère, **Mustapha Menier** explique, **Bernard et Helmholtz** sont exilés."
+    }
+   ]
+  },
+  {
+   "chapitre": "4cdc1051-44ea-598d-b6c1-280c663fefa6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le droit d’être malheureux",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves discutent de ce monde. Lis leur débat, un court dialogue écrit pour l’exercice et le tableau, puis tranche.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Ce monde est parfait : tout le monde y est heureux, personne ne se plaint."
+      },
+      {
+       "qui": "Léo",
+       "texte": "C’est une utopie retournée : la liberté a disparu sans que personne la [[r|regrette]]."
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un dialogue",
+     "blocs": [
+      {
+       "personnage": "L’administrateur",
+       "replique": "Le bonheur a un prix : on y renonce à la vérité, à la liberté, à l’inquiétude."
+      },
+      {
+       "personnage": "John",
+       "replique": "Alors je réclame le droit d’être [[m|malheureux]]."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice, à la manière du roman"
+    },
+    {
+     "id": "c",
+     "type": "tableau",
+     "titre": "Deux dictatures",
+     "colonnes": [
+      "Auteur",
+      "Par quel moyen ?"
+     ],
+     "lignes": [
+      [
+       "Orwell",
+       "Une dictature par la terreur"
+      ],
+      [
+       "Huxley",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui dit ce que les habitants ne font pas, selon Léo.",
+     "aide": "Léo parle de ce qui a disparu sans qu’on le pleure.",
+     "explication": "Personne ne **regrette** la liberté perdue : c’est ce qui fait l’utopie retournée."
+    },
+    {
+     "type": "zone",
+     "document": "t",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot par lequel John refuse le bonheur fabriqué.",
+     "aide": "C’est le contraire de « heureux ».",
+     "explication": "John réclame le droit d’être **malheureux** : il préfère la liberté au bonheur de l’administrateur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "Huxley imagine une dictature par le ___.",
+     "reponses": [
+      [
+       "plaisir"
+      ]
+     ],
+     "banque": [
+      "plaisir",
+      "terreur",
+      "silence"
+     ],
+     "aide": "C’est l’inverse de la terreur d’Orwell.",
+     "explication": "Chez Huxley, la dictature s’impose par le **plaisir** : drogue, divertissement, consommation."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à son rôle.",
+     "paires": [
+      [
+       "Shakespeare",
+       "Il donne à John les mots pour refuser"
+      ],
+      [
+       "*La Tempête*",
+       "Source ironique du titre"
+      ],
+      [
+       "Le soma",
+       "Un bonheur chimique sans effets secondaires"
+      ]
+     ],
+     "aide": "Pense à la littérature, au titre et à la drogue.",
+     "explication": "**Shakespeare** donne les mots, *La Tempête* donne un titre ironique, le **soma** fabrique le bonheur."
+    }
+   ]
+  },
+  {
+   "chapitre": "38b30d6c-fbc3-5e71-8a2a-6310400feaba",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une comédie entre deux tragédies",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Corneille. Replace Le Menteur dans sa vie, puis relis la carte d’identité de la pièce.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Corneille",
+     "debut": 1600,
+     "fin": 1690,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1606,
+       "nom": "Naissance"
+      },
+      {
+       "id": "men",
+       "date": 1644,
+       "nom": "Le Menteur"
+      },
+      {
+       "id": "mort",
+       "date": 1684,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Menteur",
+     "sousTitre": "Corneille",
+     "emoji": "🤥",
+     "lignes": [
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Comédie en cinq actes et en vers"
+      },
+      {
+       "id": "lieu",
+       "texte": "Création",
+       "valeur": "1644, théâtre du Marais"
+      },
+      {
+       "id": "src",
+       "texte": "Source",
+       "valeur": "La Verdad sospechosa, de l’Espagnol Alarcón"
+      },
+      {
+       "id": "aut",
+       "texte": "Auteur déjà de",
+       "valeur": "Le Cid, Horace, Cinna"
+      }
+     ],
+     "pied": "Une comédie adaptée",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "men"
+     ],
+     "enonce": "Touche l’année de la création du Menteur.",
+     "aide": "C’est la date du milieu sur la frise.",
+     "explication": "La pièce est jouée en **1644** au théâtre du Marais."
+    },
+    {
+     "type": "zone",
+     "document": "c",
+     "multiple": false,
+     "reponse": [
+      "src"
+     ],
+     "enonce": "Touche la ligne qui dit de quelle pièce Corneille s’inspire.",
+     "aide": "Cherche une pièce espagnole.",
+     "explication": "Corneille adapte *La Verdad sospechosa* de l’Espagnol **Alarcón**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Corneille vit-il encore après la création du Menteur ?",
+     "reponse": 40,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1684 − 1644 = **40 ans**.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "38b30d6c-fbc3-5e71-8a2a-6310400feaba",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un menteur qui ne se répète jamais",
+   "competence": "analyser-texte",
+   "situation": "Dorante invente sans cesse. Suis ses mensonges, puis retrouve l’erreur qui gouverne l’intrigue.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Les mensonges de Dorante",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Venu de Poitiers, il veut se faire remarquer"
+      },
+      {
+       "id": "t",
+       "texte": "Aux Tuileries : un passé de guerrier"
+      },
+      {
+       "id": "f",
+       "texte": "Une fête sur l’eau rend Alcippe jaloux"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "e",
+       "texte": "Démasqué, il épouse la vraie Lucrèce"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "t"
+      },
+      {
+       "de": "t",
+       "a": "f"
+      },
+      {
+       "de": "f",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "e"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Face à Géronte, il invente un mariage secret à Poitiers",
+      "Face à Géronte, il avoue tous ses mensonges d’un coup",
+      "Face à Cliton, il invente un duel secret à Poitiers",
+      "Face à Alcippe, il invente un voyage secret en Allemagne"
+     ],
+     "reponse": 0,
+     "aide": "Son père veut le marier : que répond Dorante ?",
+     "explication": "Face à Géronte, qui prépare un mariage, il invente un **mariage secret** à Poitiers."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète à propos du quiproquo.",
+     "texte": "Dorante croit que celle qu’il aime s’appelle ___, alors qu’elle s’appelle ___.",
+     "reponses": [
+      [
+       "Lucrèce"
+      ],
+      [
+       "Clarice"
+      ]
+     ],
+     "banque": [
+      "Lucrèce",
+      "Clarice",
+      "Cliton",
+      "Alcippe"
+     ],
+     "aide": "Dorante confond les noms des deux amies.",
+     "explication": "Il croit aimer **Lucrèce**, alors que c’est **Clarice** : la confusion des noms gouverne l’intrigue."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Cliton",
+       "Le valet admiratif et effaré"
+      ],
+      [
+       "Géronte",
+       "Le père crédule, puis humilié"
+      ],
+      [
+       "Alcippe",
+       "Le fiancé de Clarice, rendu jaloux"
+      ],
+      [
+       "Clarice et Lucrèce",
+       "Les deux amies que Dorante confond"
+      ]
+     ],
+     "aide": "Pense à qui commente, qui est dupé, qui est jaloux.",
+     "explication": "**Cliton** s’effare, **Géronte** est dupé puis humilié, **Alcippe** est jaloux, **Clarice et Lucrèce** sont confondues."
+    }
+   ]
+  },
+  {
+   "chapitre": "38b30d6c-fbc3-5e71-8a2a-6310400feaba",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’art de mentir",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, relis la maxime de Cliton et une tirade écrite pour l’exercice à la manière de Corneille, puis range les comiques de la pièce.",
+   "documents": [
+    {
+     "id": "cli",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le valet lucide",
+     "blocs": [
+      {
+       "personnage": "Cliton",
+       "replique": "Il faut bonne [[m|mémoire]], après qu’on a menti."
+      }
+     ],
+     "source": "Corneille, Le Menteur (1644)"
+    },
+    {
+     "id": "dor",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une tirade d’invention",
+     "blocs": [
+      {
+       "personnage": "Dorante",
+       "replique": "Un [[v|banquet]] sur l’eau, hier soir, trente [[v|violons]] et des lanternes sur chaque barque !"
+      }
+     ],
+     "source": "Tirade écrite pour l’exercice, à la manière du Menteur"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cli",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit ce dont un menteur a besoin.",
+     "aide": "Cliton parle de ce qu’il faut retenir.",
+     "explication": "Il faut bonne **mémoire**, car un menteur doit se souvenir de tout ce qu’il a inventé."
+    },
+    {
+     "type": "zone",
+     "document": "dor",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux mots qui décrivent la fête inventée.",
+     "aide": "Cherche le repas et la musique.",
+     "explication": "Le **banquet** et les **violons** font le décor de la fête inventée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il relève du comique de situation, de caractère ou de mots ?",
+     "categories": [
+      "Situation",
+      "Caractère",
+      "Mots"
+     ],
+     "items": [
+      [
+       "Le quiproquo sur les noms de Clarice et de Lucrèce",
+       0
+      ],
+      [
+       "Une méprise sur l’identité de la femme aimée",
+       0
+      ],
+      [
+       "Le menteur pris à son propre piège",
+       1
+      ],
+      [
+       "Les tirades d’invention de Dorante",
+       2
+      ],
+      [
+       "Une fête inventée racontée avec brio",
+       2
+      ]
+     ],
+     "aide": "Demande-toi : on rit d’une méprise, d’un défaut, ou d’une façon de parler ?",
+     "explication": "Les **méprises** sont des situations, le menteur piégé est un **caractère**, les **tirades** sont des mots."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le dénouement du sort du menteur ?",
+     "options": [
+      "Il n’est ni puni ni corrigé, ce qui rend la pièce moderne",
+      "Il est sévèrement puni pour ses nombreux mensonges",
+      "Il est corrigé et renonce à mentir pour toujours",
+      "Il est puni par son père, qui le déshérite enfin"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin : Dorante retombe-t-il sur ses pieds ?",
+     "explication": "Dorante **épouse la vraie Lucrèce** : il n’est ni puni ni corrigé, ce qui a longtemps gêné les commentateurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "16bdc2c2-7c60-5d82-96af-6bda6bdc0a1f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’atrabilaire amoureux",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Le Misanthrope. Place la pièce dans la vie de Molière, lis sa carte d’identité, puis relie les principaux personnages.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Molière",
+     "debut": 1620,
+     "fin": 1675,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1622,
+       "nom": "Naissance"
+      },
+      {
+       "id": "mis",
+       "date": 1666,
+       "nom": "Le Misanthrope"
+      },
+      {
+       "id": "mort",
+       "date": 1673,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Misanthrope",
+     "sousTitre": "Molière",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "id": "st",
+       "texte": "Sous-titre",
+       "valeur": "L’Atrabilaire amoureux"
+      },
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Comédie en cinq actes et en vers"
+      },
+      {
+       "id": "lieu",
+       "texte": "Création",
+       "valeur": "1666, Palais-Royal"
+      },
+      {
+       "id": "ctx",
+       "texte": "Contexte",
+       "valeur": "Après la bataille du Tartuffe"
+      }
+     ],
+     "pied": "La grande comédie classique",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "mis"
+     ],
+     "enonce": "Touche l’année de la création du Misanthrope.",
+     "aide": "C’est la date du milieu sur la frise.",
+     "explication": "La pièce est créée en **1666**."
+    },
+    {
+     "type": "zone",
+     "document": "c",
+     "multiple": false,
+     "reponse": [
+      "st"
+     ],
+     "enonce": "Touche la ligne qui donne le sous-titre de la pièce.",
+     "aide": "Cherche le mot « sous-titre ».",
+     "explication": "Le sous-titre est **l’Atrabilaire amoureux** : l’homme à l’humeur noire qui aime une coquette."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa position.",
+     "paires": [
+      [
+       "Alceste",
+       "Il refuse les compromis de la vie mondaine"
+      ],
+      [
+       "Philinte",
+       "Son ami, partisan de la mesure"
+      ],
+      [
+       "Célimène",
+       "Jeune veuve brillante et coquette"
+      ],
+      [
+       "Éliante",
+       "Sa cousine, sincère"
+      ]
+     ],
+     "aide": "Pense à l’homme sincère, à l’homme mesuré, à la coquette et à sa cousine.",
+     "explication": "**Alceste** refuse les compromis, **Philinte** prône la mesure, **Célimène** est brillante, **Éliante** est sincère."
+    }
+   ]
+  },
+  {
+   "chapitre": "16bdc2c2-7c60-5d82-96af-6bda6bdc0a1f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du sonnet au désert",
+   "competence": "analyser-texte",
+   "situation": "Alceste est partagé entre sa franchise et son amour. Suis les étapes, puis remets en ordre le dénouement.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Le fil de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "s",
+       "texte": "Alceste critique le sonnet d’Oronte"
+      },
+      {
+       "id": "t",
+       "texte": "Convoqué devant le tribunal des maréchaux"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "l",
+       "texte": "Les lettres de Célimène sont rendues publiques"
+      }
+     ],
+     "liens": [
+      {
+       "de": "s",
+       "a": "t"
+      },
+      {
+       "de": "t",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "l"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Il perd un procès en refusant de solliciter ses juges",
+      "Il gagne son procès en flattant tous ses juges",
+      "Il perd un procès en dénonçant ses propres amis",
+      "Il se réconcilie avec Oronte devant les maréchaux"
+     ],
+     "reponse": 0,
+     "aide": "À côté de l’affaire du sonnet, Alceste a un procès : comment se comporte-t-il ?",
+     "explication": "Alceste **perd un procès** contre un adversaire malhonnête, parce qu’il refuse de solliciter ses juges."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois derniers moments de la pièce.",
+     "items": [
+      "Alceste lui propose de le suivre au désert",
+      "Célimène refuse : elle a vingt ans",
+      "Alceste part seul"
+     ],
+     "aide": "Il propose, elle répond, puis il agit.",
+     "explication": "Après les lettres, Alceste propose le **désert**, Célimène **refuse** (elle a vingt ans), et Alceste **part seul**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa position.",
+     "paires": [
+      [
+       "Arsinoé",
+       "La prude jalouse, qui convoite Alceste"
+      ],
+      [
+       "Oronte",
+       "L’auteur du sonnet"
+      ],
+      [
+       "Acaste et Clitandre",
+       "Deux marquis vaniteux, soupirants de Célimène"
+      ],
+      [
+       "Éliante",
+       "La cousine sincère, qui finira avec Philinte"
+      ]
+     ],
+     "aide": "Pense au sonnet, aux marquis, à la prude et à la cousine.",
+     "explication": "**Arsinoé** est la prude, **Oronte** l’auteur du sonnet, **Acaste et Clitandre** les marquis, **Éliante** épousera Philinte."
+    }
+   ]
+  },
+  {
+   "chapitre": "16bdc2c2-7c60-5d82-96af-6bda6bdc0a1f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a raison, Alceste ou Philinte ?",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent : Molière donne-t-il raison à Alceste ? Lis les vers et le débat, puis range les arguments.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Deux visions",
+     "blocs": [
+      {
+       "personnage": "Alceste",
+       "replique": "Je veux qu’on soit [[s|sincère]], et qu’en homme d’honneur,\nOn ne lâche aucun mot qui ne parte du cœur."
+      },
+      {
+       "personnage": "Philinte",
+       "replique": "La parfaite raison fuit toute [[e|extrémité]]."
+      }
+     ],
+     "source": "Molière, Le Misanthrope (1666), acte I, scène 1"
+    },
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Molière donne raison à Alceste : il a le beau rôle."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Pas sûr : Alceste a raison sur le fond et tort dans la vie, et Philinte est sage mais ressemble à de la [[c|complaisance]]."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "t",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce qu’Alceste exige des autres.",
+     "aide": "Alceste veut que tout mot parte du cœur.",
+     "explication": "Alceste exige qu’on soit **sincère** : plus de flatteries, plus de mensonges polis."
+    },
+    {
+     "type": "zone",
+     "document": "t",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot par lequel Philinte refuse l’excès.",
+     "aide": "Philinte parle de ce que la raison fuit.",
+     "explication": "Pour Philinte, la raison fuit toute **extrémité** : il prône la mesure."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il montre qu’Alceste a raison sur le fond, ou tort dans la vie ?",
+     "categories": [
+      "Raison sur le fond",
+      "Tort dans la vie"
+     ],
+     "items": [
+      [
+       "Il dénonce les mensonges polis",
+       0
+      ],
+      [
+       "Il refuse la flatterie",
+       0
+      ],
+      [
+       "Il critique le sonnet sans ménagement",
+       1
+      ],
+      [
+       "Il propose à Célimène de le suivre au désert",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : l’idée est-elle juste, ou la manière de la vivre ?",
+     "explication": "Dénoncer les **mensonges** et refuser la **flatterie**, c’est juste ; **blesser Oronte** et vouloir le **désert**, c’est se tromper dans la vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure du débat ?",
+     "options": [
+      "Molière ne tranche pas entre Alceste et Philinte",
+      "Molière donne clairement raison à Alceste",
+      "Molière donne clairement raison à Philinte",
+      "Molière ridiculise les deux sans les comprendre"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse de Léo : donne-t-elle un vainqueur ?",
+     "explication": "**Molière ne tranche pas** : Alceste est juste et excessif, Philinte est sage et complaisant."
+    }
+   ]
+  }
+ ]
+}

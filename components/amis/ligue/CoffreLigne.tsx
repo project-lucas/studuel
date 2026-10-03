@@ -74,7 +74,7 @@ export default function CoffreLigne({
           aria-label={`Coffre d’équipe, niveau ${niveau} : voir ce qu’il contient`}
           className={styles.coffreBouton}
         >
-          <CoffreDessin className="size-[58px]" />
+          <CoffreDessin niveau={niveau} className="size-[58px]" />
           <span aria-hidden="true" className={styles.info}>
             i
           </span>

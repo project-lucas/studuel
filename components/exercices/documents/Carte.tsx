@@ -6,7 +6,7 @@ import { lieu as lieuDuRepertoire } from '@/lib/exercices/cartes/lieux'
 import { boiteDuCadrage, dimensions, projeter, type Fond } from '@/lib/exercices/cartes/projections'
 import type { DocCarte, LieuCarte, Teinte } from '@/lib/exercices/types'
 import { cn } from '@/lib/utils'
-import { couleur, couleurFoncee, etatCible, fondCible, MotifsSvg, propsCible, remplissage, traitCible, type ZonesDoc } from '../commun'
+import { coord, couleur, couleurFoncee, etatCible, fondCible, MotifsSvg, propsCible, remplissage, traitCible, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
 
 /**
@@ -68,7 +68,7 @@ function etoile(cx: number, cy: number, r: number): string {
   for (let i = 0; i < 10; i++) {
     const a = -Math.PI / 2 + (i * Math.PI) / 5
     const rr = i % 2 === 0 ? r : r * 0.45
-    d += `${i ? 'L' : 'M'}${cx + rr * Math.cos(a)} ${cy + rr * Math.sin(a)}`
+    d += `${i ? 'L' : 'M'}${coord(cx + rr * Math.cos(a))} ${coord(cy + rr * Math.sin(a))}`
   }
   return `${d}Z`
 }
@@ -85,7 +85,9 @@ export function Carte({ doc, zones }: { doc: DocCarte; zones?: ZonesDoc }) {
   const idp = `${doc.id}-c`
 
   if (!fond) {
-    return <div className="w-full animate-pulse rounded-xl bg-[var(--carte-mer)]" style={{ aspectRatio: `${vw} / ${vh}` }} aria-hidden="true" />
+    // Arrondi : le navigateur réécrit un rapport à six chiffres, et le HTML du serveur ne correspondait plus à l'hydratation.
+    const rapport = `${Math.round(vw * 10) / 10} / ${Math.round(vh * 10) / 10}`
+    return <div className="w-full animate-pulse rounded-xl bg-[var(--carte-mer)]" style={{ aspectRatio: rapport }} aria-hidden="true" />
   }
 
   const colories = new Map((doc.regions ?? []).map((r) => [r.code, r] as const))

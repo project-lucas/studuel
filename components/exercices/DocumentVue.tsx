@@ -87,7 +87,7 @@ export default function DocumentVue({
       <div className={cn(s.docCorps, plein && 'bg-[color-mix(in_oklch,var(--papier-trait),white_70%)] py-4')}>
         <CorpsDocument doc={doc} zones={zones} portee={portee} />
       </div>
-      {doc.source ? <p className={s.docSource}>{doc.source}</p> : null}
+      {doc.source ? <p className={s.docSource}><Inline texte={doc.source} /></p> : null}
     </section>
   )
 }

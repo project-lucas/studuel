@@ -1,0 +1,4048 @@
+{
+ "niveau": "1re",
+ "matiere": "biologie-physiopathologie",
+ "exercices": [
+  {
+   "chapitre": "cb8a3e6e-8e94-5b73-9ccb-751dfa851a76",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre examens pour un mal d’estomac",
+   "competence": "lire-tableau",
+   "situation": "Samir a des brûlures d’estomac. Son médecin lui prescrit plusieurs examens, chacun observe l’organisme à une échelle différente. Tu relèves ce que chacun montre.",
+   "documents": [
+    {
+     "id": "examens",
+     "type": "tableau",
+     "titre": "Les examens prescrits à Samir",
+     "colonnes": [
+      "Examen",
+      "Ce que l’on observe"
+     ],
+     "lignes": [
+      [
+       "Fibroscopie (caméra dans l’estomac)",
+       "L’estomac entier, vu de l’intérieur"
+      ],
+      [
+       "Biopsie lue au microscope optique",
+       "Les cellules de la muqueuse de l’estomac"
+      ],
+      [
+       "Microscopie électronique",
+       "Les mitochondries d’une de ces cellules"
+      ],
+      [
+       "Prise de sang",
+       "La quantité de glucose dans le sang"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Situation imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "examens",
+     "enonce": "Touche la case qui décrit l’observation d’une molécule.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Une molécule est un assemblage d’atomes, comme le glucose.",
+     "explication": "Le **glucose** du sang est une **molécule** : on la dose par une analyse biochimique (bilan sanguin)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ce que les examens observent, du plus grand au plus petit.",
+     "items": [
+      "L’estomac entier",
+      "Les cellules de la muqueuse",
+      "Les mitochondries d’une cellule",
+      "Le glucose du sang"
+     ],
+     "aide": "Un organe contient des cellules, qui contiennent des organites, faits de molécules.",
+     "explication": "On descend les niveaux : **organe**, puis **cellule**, puis **ultrastructure** (mitochondrie), puis **molécule**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque technique d’exploration au niveau qu’elle observe.",
+     "paires": [
+      [
+       "Imagerie médicale",
+       "Organe, appareil"
+      ],
+      [
+       "Microscopie optique",
+       "Tissu, cellule"
+      ],
+      [
+       "Microscopie électronique",
+       "Ultrastructure"
+      ],
+      [
+       "Analyse biochimique",
+       "Molécule"
+      ]
+     ],
+     "aide": "Plus on veut voir petit, plus l’instrument grossit : l’imagerie voit les organes, le microscope électronique les organites.",
+     "explication": "L’**imagerie** montre organes et appareils, la **microscopie optique** les tissus et cellules, la **microscopie électronique** les ultrastructures, l’**analyse biochimique** les molécules."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb8a3e6e-8e94-5b73-9ccb-751dfa851a76",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un scanner après l’accident de Mme Lopez",
+   "competence": "observer-schema",
+   "situation": "Après une chute d’escalade, Mme Lopez passe un scanner. Le compte rendu cite plusieurs cavités du tronc : tu les repères sur un schéma vu de profil.",
+   "documents": [
+    {
+     "id": "cr",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Compte rendu de scanner",
+     "sousTitre": "Patiente fictive",
+     "emoji": "🩻",
+     "lignes": [
+      {
+       "texte": "Patiente",
+       "valeur": "Mme Lopez"
+      },
+      {
+       "texte": "Examen",
+       "valeur": "Scanner du tronc"
+      },
+      {
+       "texte": "Coupes",
+       "valeur": "transversales"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Vertèbre",
+       "valeur": "fracturée"
+      },
+      {
+       "texte": "Moelle épinière",
+       "valeur": "comprimée"
+      },
+      {
+       "texte": "Autour du foie",
+       "valeur": "saignement"
+      }
+     ],
+     "pied": "Document écrit pour l’exercice"
+    },
+    {
+     "id": "cavites",
+     "type": "schema",
+     "titre": "Les cavités du tronc (coupe de profil, schéma simplifié)",
+     "largeur": 320,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 165,
+       "cy": 46,
+       "rx": 46,
+       "ry": 32,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "cranienne",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 84,
+       "l": 14,
+       "h": 198,
+       "arrondi": 6,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "rachidienne",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 122,
+       "y": 84,
+       "l": 108,
+       "h": 84,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "thoracique",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 122,
+       "y": 168,
+       "l": 108,
+       "h": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "diaphragme",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 122,
+       "y": 176,
+       "l": 108,
+       "h": 62,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "abdominale",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 122,
+       "y": 238,
+       "l": 108,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "pelvienne",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 176,
+       "y": 134,
+       "emoji": "❤️",
+       "taille": 26
+      },
+      {
+       "forme": "texte",
+       "x": 58,
+       "y": 190,
+       "texte": "Dos",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 276,
+       "y": 190,
+       "texte": "Ventre",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cavites",
+     "enonce": "Le compte rendu cite la moelle épinière. Touche la cavité qui la contient.",
+     "reponse": [
+      "rachidienne"
+     ],
+     "aide": "La moelle épinière est protégée par la colonne vertébrale, le long du dos.",
+     "explication": "La moelle épinière est dans la cavité **rachidienne** (le canal vertébral), qui longe le dos."
+    },
+    {
+     "type": "zone",
+     "document": "cavites",
+     "enonce": "Touche la cavité où se trouve le saignement autour du foie.",
+     "reponse": [
+      "abdominale"
+     ],
+     "aide": "Elle est située juste sous le muscle qui sépare le thorax du ventre.",
+     "explication": "Le foie est dans la cavité **abdominale**, sous le diaphragme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les coupes du scanner sont « transversales ». Comment le corps est-il découpé ?",
+     "options": [
+      "En tranches horizontales, du haut vers le bas du corps",
+      "En deux moitiés, la droite d’un côté et la gauche de l’autre",
+      "En deux faces, l’avant d’un côté et l’arrière de l’autre",
+      "Selon un plan oblique, de l’épaule gauche à la hanche droite"
+     ],
+     "reponse": 0,
+     "aide": "Pense à trancher un pain en rondelles : le plan est horizontal.",
+     "explication": "Une coupe **transversale** (axiale) est horizontale : elle sépare le haut (supérieur) du bas (inférieur). La coupe sagittale sépare la droite de la gauche, la frontale l’avant de l’arrière."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque organe à sa cavité.",
+     "paires": [
+      [
+       "Encéphale",
+       "Crânienne"
+      ],
+      [
+       "Cœur",
+       "Thoracique"
+      ],
+      [
+       "Estomac",
+       "Abdominale"
+      ],
+      [
+       "Vessie",
+       "Pelvienne"
+      ]
+     ],
+     "aide": "Du haut vers le bas du corps : tête, thorax, ventre, bassin.",
+     "explication": "L’encéphale est dans la cavité **crânienne**, le cœur dans la **thoracique**, l’estomac dans l’**abdominale**, la vessie dans la **pelvienne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb8a3e6e-8e94-5b73-9ccb-751dfa851a76",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Léo, une crise d’asthme et tous ses organes",
+   "competence": "raisonner",
+   "situation": "Léo, 17 ans, arrive aux urgences en pleine crise d’asthme. Les mesures de l’infirmière montrent que d’autres appareils que le sien respiratoire s’en ressentent.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Les constantes de Léo à son arrivée",
+     "colonnes": [
+      "Mesure",
+      "Léo",
+      "Valeurs habituelles"
+     ],
+     "lignes": [
+      [
+       "Fréquence respiratoire",
+       "28 par minute",
+       "12 à 20 par minute"
+      ],
+      [
+       "Saturation du sang en dioxygène",
+       "88 %",
+       "95 à 100 %"
+      ],
+      [
+       "Fréquence cardiaque",
+       "120 par minute",
+       "60 à 100 par minute"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs usuelles de l’adulte, patient fictif"
+    },
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "poumons",
+       "texte": "Poumons : le dioxygène entre dans le sang",
+       "emoji": "🫁"
+      },
+      {
+       "id": "inconnu",
+       "texte": "?"
+      },
+      {
+       "id": "cellules",
+       "texte": "Cellules du cœur, des muscles et du cerveau",
+       "emoji": "🧠"
+      }
+     ],
+     "liens": [
+      {
+       "de": "poumons",
+       "a": "inconnu",
+       "texte": "passe dans"
+      },
+      {
+       "de": "inconnu",
+       "a": "cellules",
+       "texte": "distribue à"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la valeur de Léo qui est inférieure à la normale.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare chaque valeur de Léo à la colonne de droite : une seule est trop basse.",
+     "explication": "La saturation de **88 %** est sous la limite de 95 % : le sang de Léo transporte trop peu de dioxygène. Les deux autres valeurs sont trop hautes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la saturation de Léo est-elle sous la limite basse habituelle ?",
+     "reponse": 7,
+     "unite": "points",
+     "aide": "La limite basse est le premier nombre de la colonne de droite.",
+     "explication": "95 − 88 = **7 points** sous la limite basse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel appareil prend la place du « ? » dans le trajet du dioxygène ?",
+     "options": [
+      "L’appareil cardio-vasculaire",
+      "L’appareil digestif et le foie",
+      "Le système hormonal et ses glandes",
+      "L’appareil locomoteur et ses muscles"
+     ],
+     "reponse": 0,
+     "aide": "Quel appareil transporte le sang jusqu’à toutes les cellules ?",
+     "explication": "L’**appareil cardio-vasculaire** (le cœur et les vaisseaux) distribue à toutes les cellules le dioxygène pris aux poumons."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une crise d’asthme peut-elle gêner aussi le cœur, les muscles et le cerveau de Léo ?",
+     "options": [
+      "Parce que les cellules de tous ces organes manquent de dioxygène",
+      "Parce que les poumons fabriquent aussi les cellules du cerveau",
+      "Parce que ces organes se trouvent dans la même cavité",
+      "Parce que le cœur ne sert qu’à faire respirer les poumons"
+     ],
+     "reponse": 0,
+     "aide": "Relis la chaîne : où va le dioxygène après les poumons ?",
+     "explication": "Les appareils sont **interdépendants** : si le sang manque de dioxygène, **toutes les cellules** en manquent, quel que soit l’organe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque appareil ou système à son rôle.",
+     "paires": [
+      [
+       "Appareil respiratoire",
+       "Apporte le dioxygène"
+      ],
+      [
+       "Appareil digestif",
+       "Fournit les nutriments"
+      ],
+      [
+       "Appareil cardio-vasculaire",
+       "Distribue aux cellules"
+      ],
+      [
+       "Système nerveux",
+       "Transmet l’information"
+      ]
+     ],
+     "aide": "Le dioxygène, les nutriments, la distribution, l’information : chaque appareil a une tâche.",
+     "explication": "Le **respiratoire** apporte le dioxygène, le **digestif** les nutriments, le **cardio-vasculaire** les distribue, le **système nerveux** (avec le système hormonal) transmet l’information."
+    }
+   ]
+  },
+  {
+   "chapitre": "f3a7552d-0035-54cd-9a16-62a8fee18ad4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans une cellule vue au microscope électronique",
+   "competence": "observer-schema",
+   "situation": "Inès observe une cellule au microscope électronique. Elle reconnaît quatre organites et se demande à quoi sert chacun.",
+   "documents": [
+    {
+     "id": "cellule",
+     "type": "schema",
+     "titre": "Une cellule et quatre organites (schéma)",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 115,
+       "rx": 140,
+       "ry": 95,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 105,
+       "r": 32,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "noyau",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 105,
+       "r": 9,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 215,
+       "cy": 85,
+       "rx": 30,
+       "ry": 14,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "mito",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        195,
+        85
+       ],
+       "a": [
+        200,
+        78
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        208,
+        92
+       ],
+       "a": [
+        214,
+        79
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        222,
+        92
+       ],
+       "a": [
+        228,
+        79
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 185,
+       "y": 135,
+       "l": 56,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "golgi",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        148
+       ],
+       "a": [
+        236,
+        148
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        161
+       ],
+       "a": [
+        236,
+        161
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 175,
+       "r": 11,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "lyso",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 40,
+       "y": 30,
+       "texte": "A",
+       "vers": [
+        88,
+        85
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 280,
+       "y": 40,
+       "texte": "B",
+       "vers": [
+        238,
+        82
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 285,
+       "y": 190,
+       "texte": "C",
+       "vers": [
+        243,
+        165
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 40,
+       "y": 205,
+       "texte": "D",
+       "vers": [
+        84,
+        178
+       ]
+      }
+     ],
+     "source": "Schéma simplifié, hors échelle"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Touche l’organite qui contient l’ADN, l’information génétique de la cellule.",
+     "reponse": [
+      "noyau"
+     ],
+     "aide": "C’est le plus gros organite, avec un petit nucléole en son centre.",
+     "explication": "Le **noyau** (A) contient l’ADN, associé à des protéines."
+    },
+    {
+     "type": "zone",
+     "document": "cellule",
+     "enonce": "Touche l’organite où se fait la respiration cellulaire, qui produit l’ATP.",
+     "reponse": [
+      "mito"
+     ],
+     "aide": "Cet organite est allongé et plissé à l’intérieur.",
+     "explication": "La **mitochondrie** (B) réalise la respiration cellulaire et produit l’**ATP**, l’énergie utilisable par la cellule."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ultrastructure à son rôle.",
+     "paires": [
+      [
+       "Ribosomes",
+       "Synthèse des protéines"
+      ],
+      [
+       "Réticulum lisse",
+       "Synthèse des lipides"
+      ],
+      [
+       "Lysosome",
+       "Digestion intracellulaire"
+      ],
+      [
+       "Membrane plasmique",
+       "Délimite la cellule et contrôle les échanges"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fabrique, digère ou délimite.",
+     "explication": "Les **ribosomes** fabriquent les protéines, le **réticulum lisse** les lipides, le **lysosome** digère à l’intérieur de la cellule, la **membrane plasmique** la délimite."
+    }
+   ]
+  },
+  {
+   "chapitre": "f3a7552d-0035-54cd-9a16-62a8fee18ad4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux épithéliums, l’un sur la peau, l’autre dans l’intestin",
+   "competence": "analyser-document",
+   "situation": "En stage au laboratoire d’histologie, Yanis observe une coupe de tissu au microscope. Il doit reconnaître l’épithélium et le nommer.",
+   "documents": [
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "Coupe d’un tissu au microscope (schéma)",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c1"
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c2"
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c3"
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c4"
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c5"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c6"
+      },
+      {
+       "forme": "rect",
+       "x": 256,
+       "y": 30,
+       "l": 36,
+       "h": 44,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "c7"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 78,
+       "l": 252,
+       "h": 8,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "lame",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 90,
+       "l": 252,
+       "h": 130,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 125,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 175,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 120,
+       "r": 5,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        150
+       ],
+       "a": [
+        140,
+        130
+       ],
+       "teinte": "brun",
+       "courbe": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        200
+       ],
+       "a": [
+        230,
+        160
+       ],
+       "teinte": "brun",
+       "courbe": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 195,
+       "cy": 130,
+       "r": 16,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "vaisseau",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 162,
+       "y": 238,
+       "texte": "Un seul fragment de la coupe",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "epith",
+     "type": "tableau",
+     "titre": "Deux épithéliums à connaître",
+     "colonnes": [
+      "Où ?",
+      "Couches de cellules",
+      "Forme des cellules",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Épiderme (peau)",
+       "plusieurs",
+       "plates",
+       "protéger"
+      ],
+      [
+       "Intestin",
+       "une seule",
+       "allongées",
+       "absorber"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche la lame basale, sur laquelle reposent les cellules de l’épithélium.",
+     "reponse": [
+      "lame"
+     ],
+     "aide": "Cherche le trait épais qui sépare les cellules serrées du tissu situé en dessous.",
+     "explication": "Le trait épais est la **lame basale** : l’épithélium (cellules jointives) repose dessus, le tissu conjonctif se trouve en dessous."
+    },
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche le vaisseau sanguin. Dans quel tissu se trouve-t-il ?",
+     "reponse": [
+      "vaisseau"
+     ],
+     "aide": "Le rond le plus gros, en dessous de la lame basale.",
+     "explication": "Le **vaisseau** est dans le tissu **conjonctif**, sous la lame basale : l’épithélium n’a pas de vaisseaux, il est nourri par diffusion."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment nomme-t-on l’épithélium de l’épiderme, d’après le tableau ?",
+     "options": [
+      "Pavimenteux stratifié",
+      "Prismatique simple",
+      "Pavimenteux simple",
+      "Prismatique stratifié"
+     ],
+     "reponse": 0,
+     "aide": "Un nom donne la forme des cellules et le nombre de couches : cherche ces deux informations dans la ligne « Épiderme ».",
+     "explication": "Plusieurs couches de cellules plates : l’épiderme est **pavimenteux stratifié**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque caractéristique : tissu épithélial ou tissu conjonctif ?",
+     "categories": [
+      "Épithélial",
+      "Conjonctif"
+     ],
+     "items": [
+      [
+       "Cellules serrées, jointives",
+       0
+      ],
+      [
+       "Matrice abondante avec fibres de collagène",
+       1
+      ],
+      [
+       "Aucun vaisseau sanguin",
+       0
+      ],
+      [
+       "Cellules dispersées dans la matrice",
+       1
+      ],
+      [
+       "Repose sur une lame basale",
+       0
+      ],
+      [
+       "Comprend le sang et le tissu adipeux",
+       1
+      ]
+     ],
+     "aide": "L’épithélium est dense et sans vaisseaux ; le conjonctif est riche en matrice.",
+     "explication": "Les cellules **jointives**, **sans vaisseaux** et posées sur une **lame basale** sont épithéliales ; la matrice abondante, les cellules dispersées, le sang et la graisse sont **conjonctifs**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f3a7552d-0035-54cd-9a16-62a8fee18ad4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois cellules mystère au laboratoire",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire a observé trois cellules étiquetées A, B et C au microscope électronique, sans noter leur nom. À toi de les identifier, puis de suivre la route d’une protéine sécrétée.",
+   "documents": [
+    {
+     "id": "obs",
+     "type": "tableau",
+     "titre": "Observations du laboratoire",
+     "colonnes": [
+      "",
+      "Cellule A",
+      "Cellule B",
+      "Cellule C"
+     ],
+     "lignes": [
+      [
+       "Forme",
+       "arrondie",
+       "très allongée",
+       "disque aplati"
+      ],
+      [
+       "Noyau",
+       "un seul, volumineux",
+       "plusieurs",
+       "aucun"
+      ],
+      [
+       "Mitochondries",
+       "peu nombreuses",
+       "très nombreuses",
+       "aucune"
+      ],
+      [
+       "Réticulum rugueux et Golgi",
+       "très développés",
+       "peu développés",
+       "aucun"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Observations imaginées pour l’exercice"
+    },
+    {
+     "id": "route",
+     "type": "chaine",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "rugueux",
+       "texte": "Ribosomes du réticulum rugueux : synthèse"
+      },
+      {
+       "id": "inconnu",
+       "texte": "?"
+      },
+      {
+       "id": "sortie",
+       "texte": "Sécrétion hors de la cellule"
+      }
+     ],
+     "liens": [
+      {
+       "de": "rugueux",
+       "a": "inconnu"
+      },
+      {
+       "de": "inconnu",
+       "a": "sortie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Retrouve le nom de chaque cellule.",
+     "paires": [
+      [
+       "Cellule A",
+       "Cellule du pancréas qui sécrète des protéines"
+      ],
+      [
+       "Cellule B",
+       "Fibre musculaire striée"
+      ],
+      [
+       "Cellule C",
+       "Hématie (globule rouge)"
+      ]
+     ],
+     "aide": "Une cellule sans noyau, c’est l’hématie ; une cellule à plusieurs noyaux et très allongée, le muscle.",
+     "explication": "A, riche en réticulum rugueux et en Golgi, **sécrète des protéines** ; B, très allongée à plusieurs noyaux, est une **fibre musculaire** ; C, sans noyau et en disque, est une **hématie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la cellule B contient-elle autant de mitochondries ?",
+     "options": [
+      "Pour produire l’ATP dont la contraction a besoin",
+      "Pour stocker l’information génétique en réserve",
+      "Pour digérer les déchets qui encombrent la fibre",
+      "Pour fabriquer les protéines sécrétées dans le sang"
+     ],
+     "reponse": 0,
+     "aide": "La mitochondrie assure la respiration cellulaire ; quelle cellule consomme beaucoup d’énergie ?",
+     "explication": "La contraction consomme beaucoup d’**ATP**, produit par les **mitochondries** : une cellule musculaire en est riche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel organite prend la place du « ? » sur la route d’une protéine sécrétée par la cellule A ?",
+     "options": [
+      "L’appareil de Golgi",
+      "Le lysosome digestif",
+      "La mitochondrie ovale",
+      "Le noyau cellulaire"
+     ],
+     "reponse": 0,
+     "aide": "Il assure la maturation et le tri des protéines avant leur sécrétion.",
+     "explication": "L’**appareil de Golgi** assure la **maturation, le tri et la sécrétion** des protéines fabriquées sur le réticulum rugueux."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque structure à la molécule qui la forme.",
+     "paires": [
+      [
+       "Membrane plasmique",
+       "Bicouche de phospholipides"
+      ],
+      [
+       "Noyau",
+       "ADN associé à des protéines"
+      ],
+      [
+       "Ribosome",
+       "ARN et protéines"
+      ]
+     ],
+     "aide": "La membrane est faite de lipides, le noyau contient l’information génétique.",
+     "explication": "La **membrane** est une bicouche de **phospholipides**, le **noyau** contient l’**ADN**, les **ribosomes** sont faits d’**ARN** et de protéines."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1fc758f-3cef-5d26-ae3a-350321cc640b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le squelette de Maëlys, de la tête aux pieds",
+   "competence": "observer-schema",
+   "situation": "Maëlys prépare une présentation sur le squelette humain. Elle dispose d’un schéma de face et d’un tableau sur la colonne vertébrale.",
+   "documents": [
+    {
+     "id": "sq",
+     "type": "schema",
+     "titre": "Le squelette de face (schéma simplifié)",
+     "largeur": 320,
+     "hauteur": 336,
+     "elements": [
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 32,
+       "r": 22,
+       "id": "crane",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 149,
+       "y": 48,
+       "l": 22,
+       "h": 12,
+       "arrondi": 6
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 156,
+       "y": 60,
+       "l": 8,
+       "h": 18,
+       "arrondi": 3
+      },
+      {
+       "teinte": "sable",
+       "motif": "clair",
+       "forme": "ellipse",
+       "cx": 139,
+       "cy": 120,
+       "rx": 21,
+       "ry": 34,
+       "id": "cotesg",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "clair",
+       "forme": "ellipse",
+       "cx": 181,
+       "cy": 120,
+       "rx": 21,
+       "ry": 34,
+       "id": "cotesd",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 154,
+       "y": 90,
+       "l": 12,
+       "h": 48,
+       "arrondi": 4,
+       "id": "sternum",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 106,
+       "y": 78,
+       "l": 50,
+       "h": 7,
+       "arrondi": 3,
+       "id": "clavicule",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 164,
+       "y": 78,
+       "l": 50,
+       "h": 7,
+       "arrondi": 3
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 156,
+       "y": 152,
+       "l": 8,
+       "h": 30,
+       "arrondi": 3
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 93,
+       "y": 84,
+       "l": 12,
+       "h": 64,
+       "arrondi": 5,
+       "id": "humerus",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 215,
+       "y": 84,
+       "l": 12,
+       "h": 64,
+       "arrondi": 5
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 91,
+       "y": 154,
+       "l": 9,
+       "h": 54,
+       "arrondi": 4
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 220,
+       "y": 154,
+       "l": 9,
+       "h": 54,
+       "arrondi": 4
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 99,
+       "cy": 82,
+       "r": 6
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 221,
+       "cy": 82,
+       "r": 6
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 97,
+       "cy": 151,
+       "r": 5
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 223,
+       "cy": 151,
+       "r": 5
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 194,
+       "rx": 42,
+       "ry": 16,
+       "id": "bassin",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 131,
+       "y": 206,
+       "l": 13,
+       "h": 62,
+       "arrondi": 5,
+       "id": "femur",
+       "zone": true
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 176,
+       "y": 206,
+       "l": 13,
+       "h": 62,
+       "arrondi": 5
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 133,
+       "y": 274,
+       "l": 10,
+       "h": 54,
+       "arrondi": 4
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "rect",
+       "x": 177,
+       "y": 274,
+       "l": 10,
+       "h": 54,
+       "arrondi": 4
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 138,
+       "cy": 271,
+       "r": 6
+      },
+      {
+       "teinte": "sable",
+       "motif": "plein",
+       "forme": "cercle",
+       "cx": 182,
+       "cy": 271,
+       "r": 6
+      }
+     ]
+    },
+    {
+     "id": "colonne",
+     "type": "tableau",
+     "titre": "La colonne vertébrale",
+     "colonnes": [
+      "Région",
+      "Nombre de vertèbres"
+     ],
+     "lignes": [
+      [
+       "Cervicale (cou)",
+       7
+      ],
+      [
+       "Thoracique (dos)",
+       12
+      ],
+      [
+       "Lombaire (bas du dos)",
+       5
+      ],
+      [
+       "Sacrum et coccyx",
+       "soudées entre elles"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sq",
+     "enonce": "Touche le sternum.",
+     "reponse": [
+      "sternum"
+     ],
+     "aide": "C’est l’os plat et vertical, au milieu de la cage thoracique.",
+     "explication": "Le **sternum** ferme la cage thoracique devant, au milieu : les côtes s’y attachent."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque os : squelette axial ou squelette appendiculaire ?",
+     "categories": [
+      "Axial",
+      "Appendiculaire"
+     ],
+     "items": [
+      [
+       "Crâne",
+       0
+      ],
+      [
+       "Sternum",
+       0
+      ],
+      [
+       "Côtes",
+       0
+      ],
+      [
+       "Fémur",
+       1
+      ],
+      [
+       "Clavicule",
+       1
+      ],
+      [
+       "Humérus",
+       1
+      ]
+     ],
+     "aide": "L’axe, c’est le crâne, la colonne et la cage thoracique ; le reste, ce sont les membres et leurs ceintures.",
+     "explication": "Crâne, sternum et côtes forment l’axe du corps (**axial**). Fémur, clavicule (ceinture scapulaire) et humérus appartiennent aux ceintures et aux membres (**appendiculaire**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de vertèbres mobiles, séparées les unes des autres, compte la colonne vertébrale ?",
+     "reponse": 24,
+     "aide": "Additionne les trois premières lignes du tableau : le sacrum et le coccyx sont soudés.",
+     "explication": "7 + 12 + 5 = **24 vertèbres** mobiles, auxquelles s’ajoutent le sacrum et le coccyx soudés."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1fc758f-3cef-5d26-ae3a-350321cc640b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le genou de Julie, l’articulation en coupe",
+   "competence": "observer-schema",
+   "situation": "Julie, handballeuse, souffre du genou. Son kinésithérapeute dessine l’articulation en coupe pour lui expliquer ce qui peut s’user, puis lui montre le vocabulaire du compte rendu.",
+   "documents": [
+    {
+     "id": "genou",
+     "type": "schema",
+     "titre": "Une articulation mobile, en coupe (schéma)",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 15,
+       "l": 100,
+       "h": 100,
+       "arrondi": 10,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 115,
+       "l": 100,
+       "h": 9,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "cartilage",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 124,
+       "l": 100,
+       "h": 20,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "liquide",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 144,
+       "l": 100,
+       "h": 9,
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 153,
+       "l": 100,
+       "h": 110,
+       "arrondi": 10,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 98,
+       "y": 108,
+       "l": 8,
+       "h": 52,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "capsule",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 214,
+       "y": 108,
+       "l": 8,
+       "h": 52,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 232,
+       "y": 80,
+       "l": 8,
+       "h": 110,
+       "arrondi": 3,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "ligament",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 60,
+       "texte": "Os 1",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 215,
+       "texte": "Os 2",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "racines",
+     "type": "tableau",
+     "titre": "Quelques racines médicales",
+     "colonnes": [
+      "Racine",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "arthr(o)",
+       "articulation"
+      ],
+      [
+       "gon(o)",
+       "genou"
+      ],
+      [
+       "cox(o)",
+       "hanche"
+      ],
+      [
+       "chondr(o)",
+       "cartilage"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "genou",
+     "enonce": "Touche l’espace rempli du liquide qui lubrifie l’articulation.",
+     "reponse": [
+      "liquide"
+     ],
+     "aide": "Il se trouve entre les deux extrémités osseuses recouvertes de cartilage.",
+     "explication": "Le **liquide synovial**, sécrété par la membrane synoviale, remplit la cavité : il lubrifie et nourrit le cartilage."
+    },
+    {
+     "type": "zone",
+     "document": "genou",
+     "enonce": "Touche l’élément qui relie les deux os entre eux et les stabilise.",
+     "reponse": [
+      "ligament"
+     ],
+     "aide": "Il passe à l’extérieur de la capsule et relie un os à l’autre.",
+     "explication": "Un **ligament** relie les os entre eux et stabilise l’articulation. C’est un **tendon** qui relie un muscle à un os."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de l’articulation à son rôle.",
+     "paires": [
+      [
+       "Cartilage articulaire",
+       "Amortit et fait glisser"
+      ],
+      [
+       "Capsule articulaire",
+       "Manchon fibreux qui enferme l’articulation"
+      ],
+      [
+       "Membrane synoviale",
+       "Sécrète le liquide synovial"
+      ],
+      [
+       "Ligaments",
+       "Relient les os entre eux"
+      ]
+     ],
+     "aide": "Pense à l’ordre de l’intérieur vers l’extérieur : cartilage, liquide, membrane, capsule.",
+     "explication": "Le **cartilage** amortit et fait glisser, la **capsule** enferme, la **membrane synoviale** sécrète le liquide, les **ligaments** relient les os."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le compte rendu de Julie mentionne une « gonarthrose ». Que signifie ce mot ?",
+     "options": [
+      "Une arthrose du genou",
+      "Une arthrose de la hanche",
+      "Une inflammation du tendon",
+      "Une fracture du cartilage"
+     ],
+     "reponse": 0,
+     "aide": "Décompose le mot : gon(o) + arthr(o) + le suffixe qui désigne l’usure.",
+     "explication": "**Gon(o)** = genou, **arthr(o)** = articulation : la gonarthrose est l’**arthrose du genou**, c’est-à-dire l’usure de son cartilage."
+    }
+   ]
+  },
+  {
+   "chapitre": "d1fc758f-3cef-5d26-ae3a-350321cc640b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel examen d’imagerie pour quel patient ?",
+   "competence": "raisonner",
+   "situation": "Un service d’imagerie reçoit quatre demandes d’examen le même matin. Le médecin doit choisir la technique la plus adaptée à chaque patient en tenant compte de ses limites et de ses contre-indications.",
+   "documents": [
+    {
+     "id": "demandes",
+     "type": "tableau",
+     "titre": "Les demandes du matin",
+     "colonnes": [
+      "Patient",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Karim, 22 ans",
+       "Chute à vélo, suspicion de fracture du poignet : examen simple et rapide"
+      ],
+      [
+       "Julie, 27 ans",
+       "Handballeuse, genou qui lâche : lésion d’un ligament soupçonnée"
+      ],
+      [
+       "Marc, 45 ans",
+       "Accident grave, fractures complexes du bassin : coupes sans superposition"
+      ],
+      [
+       "Mme Roux, enceinte",
+       "Douleur à la cheville : on cherche à éviter tout rayonnement ionisant"
+      ],
+      [
+       "M. Dupuis, 58 ans",
+       "Douleur au genou, éclats métalliques dans l’œil depuis un accident de travail"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Patients fictifs"
+    },
+    {
+     "id": "techniques",
+     "type": "tableau",
+     "titre": "Les trois techniques d’imagerie",
+     "colonnes": [
+      "Technique",
+      "Rayons X",
+      "Image obtenue",
+      "Précaution"
+     ],
+     "lignes": [
+      [
+       "Radiographie",
+       "oui, ionisants",
+       "plane : les structures se superposent",
+       "en principe contre-indiquée chez la femme enceinte"
+      ],
+      [
+       "Scanner",
+       "oui, dose plus élevée",
+       "coupes fines, sans superposition",
+       "dose de rayons X à surveiller"
+      ],
+      [
+       "IRM",
+       "non : champ magnétique",
+       "excellente pour les tissus mous",
+       "contre-indiquée avec certains objets métalliques"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Quelle technique conviendrait à chacun de ces patients ?",
+     "categories": [
+      "Radiographie",
+      "Scanner",
+      "IRM"
+     ],
+     "items": [
+      [
+       "Karim",
+       0
+      ],
+      [
+       "Julie",
+       2
+      ],
+      [
+       "Marc",
+       1
+      ],
+      [
+       "Mme Roux",
+       2
+      ]
+     ],
+     "aide": "Un os cassé : radiographie. Des coupes fines pour un traumatisme complexe : scanner. Les tissus mous (ligaments) : IRM.",
+     "explication": "Karim : **radiographie** (simple, rapide). Julie : **IRM** (ligament = tissu mou). Marc : **scanner** (fractures complexes, coupes sans superposition). Mme Roux : **IRM**, qui n’emploie aucun rayonnement ionisant."
+    },
+    {
+     "type": "zone",
+     "document": "techniques",
+     "enonce": "Touche la case qui explique pourquoi on évite la radiographie chez Mme Roux.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche dans la colonne « Précaution », ligne « Radiographie ».",
+     "explication": "La radiographie utilise des rayons X **ionisants** : elle est **en principe contre-indiquée chez la femme enceinte**."
+    },
+    {
+     "type": "choix",
+     "enonce": "M. Dupuis souffre du genou, mais il a des éclats métalliques dans l’œil. Quel examen faut-il écarter ?",
+     "options": [
+      "L’IRM",
+      "La radiographie",
+      "Le scanner",
+      "Aucun, tous sont possibles"
+     ],
+     "reponse": 0,
+     "aide": "Un champ magnétique intense attire certains métaux.",
+     "explication": "L’**IRM** est **contre-indiquée** avec des éclats métalliques : le champ magnétique pourrait les déplacer. On choisira la radiographie ou le scanner."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’IRM est-elle la meilleure technique pour le genou de Julie ?",
+     "options": [
+      "Elle montre bien les tissus mous, comme les ligaments",
+      "Elle montre seulement l’os, sans aucune autre structure",
+      "Elle ne coûte rien et elle est très rapide à passer",
+      "Elle utilise des rayons X plus puissants que le scanner"
+     ],
+     "reponse": 0,
+     "aide": "Un ligament n’est pas un os : quelle technique voit ce que les rayons X voient mal ?",
+     "explication": "L’**IRM** est excellente pour les **tissus mous** (ligaments, ménisques, moelle, encéphale) et n’utilise aucun rayonnement ionisant. Elle est longue et bruyante."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les bons termes médicaux.",
+     "texte": "L’arthrose de la hanche s’appelle la ___ et celle du genou la ___.",
+     "reponses": [
+      [
+       "coxarthrose"
+      ],
+      [
+       "gonarthrose"
+      ]
+     ],
+     "banque": [
+      "coxarthrose",
+      "gonarthrose",
+      "ostéoporose",
+      "tendinite"
+     ],
+     "aide": "Hanche = cox(o), genou = gon(o), puis arthrose.",
+     "explication": "**Cox(o)** = hanche donne la **coxarthrose** ; **gon(o)** = genou donne la **gonarthrose**. L’ostéoporose, elle, est une fragilisation de l’os."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ed30fa5-823c-5eb9-935a-dbfab4eacdc9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un neurone, du message reçu au message transmis",
+   "competence": "observer-schema",
+   "situation": "Dans son cahier de biologie, Ilyès dessine un neurone moteur. Il veut retrouver ses parties et le chemin suivi par l’influx nerveux.",
+   "documents": [
+    {
+     "id": "neurone",
+     "type": "schema",
+     "titre": "Un neurone (schéma simplifié)",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        92
+       ],
+       "a": [
+        22,
+        55
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        52,
+        105
+       ],
+       "a": [
+        14,
+        105
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        118
+       ],
+       "a": [
+        22,
+        158
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "cercle",
+       "cx": 82,
+       "cy": 105,
+       "r": 28,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "corps",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 82,
+       "cy": 105,
+       "r": 10,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 99,
+       "l": 160,
+       "h": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "axone",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        105
+       ],
+       "a": [
+        308,
+        70
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        105
+       ],
+       "a": [
+        316,
+        105
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        270,
+        105
+       ],
+       "a": [
+        308,
+        140
+       ],
+       "teinte": "violet"
+      },
+      {
+       "forme": "cercle",
+       "cx": 310,
+       "cy": 68,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 320,
+       "cy": 105,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 310,
+       "cy": 142,
+       "r": 5,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 190,
+       "texte": "Les dendrites sont à gauche, les terminaisons à droite",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche le corps cellulaire, la partie qui contient le noyau.",
+     "reponse": [
+      "corps"
+     ],
+     "aide": "C’est la zone arrondie, avec un petit rond plein en son centre.",
+     "explication": "Le **corps cellulaire** contient le noyau ; les dendrites partent de lui d’un côté, l’axone de l’autre."
+    },
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche le long prolongement unique qui conduit l’influx vers les terminaisons.",
+     "reponse": [
+      "axone"
+     ],
+     "aide": "Les dendrites sont courtes et nombreuses ; celui-ci est long et unique.",
+     "explication": "L’**axone** est le long prolongement unique qui conduit l’influx jusqu’à l’arborisation terminale."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces parties dans l’ordre où l’influx nerveux les traverse.",
+     "items": [
+      "Dendrites",
+      "Corps cellulaire",
+      "Axone",
+      "Arborisation terminale"
+     ],
+     "aide": "Les dendrites reçoivent le message, les terminaisons le transmettent à la cellule suivante.",
+     "explication": "L’influx va des **dendrites** vers le **corps cellulaire**, puis le long de l’**axone** jusqu’à l’**arborisation terminale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ed30fa5-823c-5eb9-935a-dbfab4eacdc9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un enregistrement de potentiel d’action",
+   "competence": "lire-graphique",
+   "situation": "Au laboratoire, une étudiante enregistre l’activité électrique d’une fibre nerveuse après l’avoir stimulée. Elle obtient une courbe et un tableau de mesures à interpréter.",
+   "documents": [
+    {
+     "id": "pa",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Potentiel de membrane d’une fibre nerveuse stimulée à t = 0,5 ms",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "Potentiel",
+       "valeurs": [
+        -70,
+        -70,
+        -50,
+        30,
+        -10,
+        -75,
+        -72,
+        -70,
+        -70
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Potentiel de membrane",
+      "unite": "mV",
+      "min": -80,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Enregistrement idéalisé"
+    },
+    {
+     "id": "stim",
+     "type": "tableau",
+     "titre": "La même fibre, quatre stimulations d’intensité croissante",
+     "colonnes": [
+      "Intensité (unités arbitraires)",
+      "Potentiel d’action ?",
+      "Amplitude du PA",
+      "PA par seconde"
+     ],
+     "lignes": [
+      [
+       "0,5",
+       "non",
+       "aucun",
+       "0"
+      ],
+      [
+       "1",
+       "oui",
+       "100 mV",
+       "10"
+      ],
+      [
+       "2",
+       "oui",
+       "100 mV",
+       "20"
+      ],
+      [
+       "4",
+       "oui",
+       "100 mV",
+       "40"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Lis la valeur du potentiel de repos de cette fibre, avant la stimulation.",
+     "reponse": -70,
+     "unite": "mV",
+     "tolerance": 2,
+     "aide": "Regarde la valeur à t = 0, avant que quoi que ce soit ne se passe.",
+     "explication": "Le potentiel de repos est d’environ **−70 mV** : l’intérieur de la fibre est négatif par rapport à l’extérieur."
+    },
+    {
+     "type": "zone",
+     "document": "pa",
+     "enonce": "Touche l’instant où la fibre est le plus dépolarisée (le sommet du potentiel d’action).",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Le sommet est atteint à **1,5 ms** : l’intérieur de la fibre est alors positif (+30 mV)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de millivolts le potentiel monte-t-il entre le repos et le sommet ?",
+     "reponse": 100,
+     "unite": "mV",
+     "aide": "Calcule 30 − (−70).",
+     "explication": "30 − (−70) = **100 mV** : c’est l’amplitude du potentiel d’action de cette fibre."
+    },
+    {
+     "type": "zone",
+     "document": "pa",
+     "enonce": "Touche l’instant de l’hyperpolarisation, où le potentiel passe sous le potentiel de repos.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le point le plus bas de la courbe.",
+     "explication": "À **2,5 ms**, le potentiel descend à −75 mV, sous le repos de −70 mV : c’est l’**hyperpolarisation**, avant le retour au repos."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tableau quand on augmente l’intensité de stimulation d’une même fibre ?",
+     "options": [
+      "Amplitude constante, fréquence croissante avec l’intensité",
+      "L’amplitude du PA grandit avec l’intensité de stimulation",
+      "Le PA disparaît si la stimulation devient trop forte",
+      "La fréquence des PA ne dépend pas de l’intensité"
+     ],
+     "reponse": 0,
+     "aide": "Compare la colonne « Amplitude » et la colonne « PA par seconde » ligne après ligne.",
+     "explication": "L’amplitude reste à 100 mV (loi du **tout ou rien**) : l’intensité est codée par la **fréquence** des potentiels d’action."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ed30fa5-823c-5eb9-935a-dbfab4eacdc9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi la réponse d’un nerf grandit avec la stimulation",
+   "competence": "raisonner",
+   "situation": "Un chercheur stimule un nerf de plus en plus fort et mesure la réponse globale. Le nerf ne contient que quatre fibres, de seuils différents ; chacune qui répond ajoute 1 mV à la réponse.",
+   "documents": [
+    {
+     "id": "seuils",
+     "type": "tableau",
+     "titre": "Les quatre fibres du nerf",
+     "colonnes": [
+      "Fibre",
+      "Seuil de stimulation (V)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "1"
+      ],
+      [
+       "B",
+       "2"
+      ],
+      [
+       "C",
+       "3,5"
+      ],
+      [
+       "D",
+       "5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "rep",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Réponse globale du nerf",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Réponse",
+       "valeurs": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        4,
+        4
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Réponse du nerf",
+      "unite": "mV",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Intensité de la stimulation (V)"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fibres répondent à une stimulation de 4 V ?",
+     "reponse": 3,
+     "unite": "fibres",
+     "aide": "Une fibre répond si l’intensité atteint son seuil.",
+     "explication": "À 4 V, les fibres **A (1 V), B (2 V) et C (3,5 V)** ont atteint leur seuil : **3 fibres** répondent ; D (5 V) reste silencieuse."
+    },
+    {
+     "type": "zone",
+     "document": "rep",
+     "enonce": "Touche la plus petite intensité qui donne la réponse maximale.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche la première fois où la courbe atteint son niveau le plus haut.",
+     "explication": "À **5 V**, la quatrième fibre (seuil 5 V) répond : la réponse atteint 4 mV, son maximum."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la courbe ne monte-t-elle plus au-delà de 5 V ?",
+     "options": [
+      "Toutes les fibres du nerf répondent déjà",
+      "Les fibres se fatiguent et cessent de répondre",
+      "La loi du tout ou rien ne s’applique plus au nerf",
+      "La gaine de myéline bloque les fortes stimulations"
+     ],
+     "reponse": 0,
+     "aide": "Compare 5 V au seuil de la dernière fibre du tableau.",
+     "explication": "Au-delà de 5 V, il n’y a plus de fibre à **recruter** : la réponse du nerf plafonne à son **maximum**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On stimule une seule de ces fibres, d’abord à 2 V puis à 6 V. Que change-t-on dans sa réponse ?",
+     "options": [
+      "Son amplitude reste la même, sa fréquence augmente",
+      "Son amplitude augmente, sa fréquence reste la même",
+      "Son amplitude et sa fréquence restent toutes deux constantes",
+      "Elle ne répond plus au-dessus de 5 V"
+     ],
+     "reponse": 0,
+     "aide": "Une fibre isolée obéit à la loi du tout ou rien : que code l’intensité ?",
+     "explication": "Pour une fibre isolée, l’amplitude du PA est constante (**tout ou rien**) : l’intensité est codée par la **fréquence**. Seul le nerf, qui contient plusieurs fibres, grandit par recrutement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à ce qu’elle produit.",
+     "paires": [
+      [
+       "Une stimulation sous le seuil",
+       "Aucun potentiel d’action"
+      ],
+      [
+       "Une fibre isolée bien stimulée",
+       "PA d’amplitude constante"
+      ],
+      [
+       "Le nerf entier de plus en plus stimulé",
+       "Recrutement de fibres"
+      ],
+      [
+       "Une fibre à gaine de myéline",
+       "Conduction plus rapide"
+      ]
+     ],
+     "aide": "Distingue la fibre seule, le nerf entier, et ce qui se passe sous le seuil.",
+     "explication": "Sous le seuil, **pas de PA** ; une fibre obéit au **tout ou rien** ; un nerf grandit par **recrutement** ; la **myéline** accélère la conduction (de nœud en nœud)."
+    }
+   ]
+  },
+  {
+   "chapitre": "08f314d7-2cd2-5b3b-863b-8732c7abec7c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le biceps de Naël, du muscle à la fibre",
+   "competence": "analyser-texte",
+   "situation": "Naël soulève son sac de sport. Son professeur de biologie lui fait lire une description du muscle qui travaille.",
+   "documents": [
+    {
+     "id": "biceps",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un biceps vu de près",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Quand Naël plie le bras, son biceps se raccourcit. Ce muscle est prolongé de chaque côté par des [[t|tendons]] qui l’accrochent solidement aux os.",
+      "Au microscope, le muscle se révèle fait de [[fa|faisceaux]], eux-mêmes composés de longues cellules appelées [[fi|fibres]].",
+      "Chaque fibre contient plusieurs noyaux, de nombreuses mitochondries et des centaines de [[my|myofibrilles]] rayées : c’est ce qui donne au muscle son aspect strié."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "biceps",
+     "enonce": "Touche le mot qui désigne ce qui relie le muscle à l’os.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "Il est dans la première phrase, après « prolongé de chaque côté par des ».",
+     "explication": "Les **tendons** relient les muscles aux os ; les ligaments, eux, relient les os entre eux."
+    },
+    {
+     "type": "zone",
+     "document": "biceps",
+     "enonce": "Touche le mot qui désigne la cellule du muscle.",
+     "reponse": [
+      "fi"
+     ],
+     "aide": "Cherche « longues cellules appelées… ».",
+     "explication": "La **fibre musculaire** est la cellule du muscle : une cellule géante, très longue, à plusieurs noyaux."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces niveaux d’organisation du plus grand au plus petit.",
+     "items": [
+      "Muscle",
+      "Faisceau",
+      "Fibre musculaire",
+      "Myofibrille",
+      "Sarcomère"
+     ],
+     "aide": "Chaque niveau est contenu dans le précédent ; le texte te donne les premiers.",
+     "explication": "Le **muscle** contient des **faisceaux**, faits de **fibres**, qui renferment des **myofibrilles**, elles-mêmes composées de **sarcomères**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les mitochondries de la fibre produisent l’___ dont la contraction a besoin.",
+     "reponses": [
+      [
+       "ATP"
+      ]
+     ],
+     "banque": [
+      "ATP",
+      "ADN",
+      "acétylcholine",
+      "collagène"
+     ],
+     "aide": "C’est la molécule énergétique produite par la respiration cellulaire.",
+     "explication": "La contraction consomme de l’**ATP**, produit par les mitochondries : la fibre musculaire en est très riche."
+    }
+   ]
+  },
+  {
+   "chapitre": "08f314d7-2cd2-5b3b-863b-8732c7abec7c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sarcomère avant et pendant la contraction",
+   "competence": "observer-schema",
+   "situation": "Camille étudie la contraction musculaire à l’échelle du sarcomère. Elle dispose d’un schéma du sarcomère au repos et des mesures prises quand il est contracté.",
+   "documents": [
+    {
+     "id": "sarco",
+     "type": "schema",
+     "titre": "Un sarcomère au repos (schéma)",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 14,
+       "l": 56,
+       "h": 14,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "bandeI1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 14,
+       "l": 148,
+       "h": 14,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "bandeA",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 14,
+       "l": 56,
+       "h": 14,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "bandeI2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 38,
+       "y": 40,
+       "l": 8,
+       "h": 80,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 294,
+       "y": 40,
+       "l": 8,
+       "h": 80,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        46,
+        50
+       ],
+       "a": [
+        150,
+        50
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        50
+       ],
+       "a": [
+        294,
+        50
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 60,
+       "l": 148,
+       "h": 7,
+       "arrondi": 3,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        46,
+        80
+       ],
+       "a": [
+        150,
+        80
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        80
+       ],
+       "a": [
+        294,
+        80
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 90,
+       "l": 148,
+       "h": 7,
+       "arrondi": 3,
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        46,
+        110
+       ],
+       "a": [
+        150,
+        110
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        110
+       ],
+       "a": [
+        294,
+        110
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 128,
+       "l": 40,
+       "h": 14,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "zoneH",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 168,
+       "texte": "Traits fins : actine · traits épais : myosine · barres noires : stries Z",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures sur un sarcomère",
+     "colonnes": [
+      "Mesure",
+      "Au repos (µm)",
+      "Contracté (µm)"
+     ],
+     "lignes": [
+      [
+       "Sarcomère",
+       "2,5",
+       "2,0"
+      ],
+      [
+       "Bande A",
+       "1,6",
+       "1,6"
+      ],
+      [
+       "Bande I",
+       "0,9",
+       "0,4"
+      ],
+      [
+       "Zone H",
+       "0,4",
+       "0 (a disparu)"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures idéalisées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche les deux valeurs qui ne changent pas entre le repos et la contraction.",
+     "reponse": [
+      "r1c1",
+      "r1c2"
+     ],
+     "multiple": true,
+     "aide": "Compare les deux colonnes ligne par ligne : une seule ligne est identique.",
+     "explication": "La **bande A** garde ses **1,6 µm** : les filaments de myosine ne raccourcissent pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien le sarcomère se raccourcit-il pendant la contraction ?",
+     "reponse": 0.5,
+     "unite": "µm",
+     "aide": "Soustrais la valeur contractée à la valeur au repos.",
+     "explication": "2,5 − 2,0 = **0,5 µm** : le sarcomère se raccourcit, mais pas la bande A."
+    },
+    {
+     "type": "zone",
+     "document": "sarco",
+     "enonce": "Touche la zone du sarcomère où il n’y a que des filaments de myosine.",
+     "reponse": [
+      "zoneH"
+     ],
+     "aide": "Elle se trouve au centre, là où les filaments d’actine ne se rejoignent pas.",
+     "explication": "La **zone H**, au centre de la bande A, ne contient que de la myosine. Elle diminue puis disparaît quand les filaments glissent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il pour les filaments d’actine et de myosine pendant la contraction ?",
+     "options": [
+      "Ils glissent les uns sur les autres sans changer de longueur",
+      "Ils raccourcissent tous les deux de la même longueur",
+      "Les filaments de myosine disparaissent peu à peu",
+      "Les filaments d’actine se replient sur eux-mêmes"
+     ],
+     "reponse": 0,
+     "aide": "La bande A, qui correspond à la myosine, garde la même longueur.",
+     "explication": "Les têtes de **myosine** tirent l’**actine** vers le centre : les filaments **glissent**, sans raccourcir, ce qui diminue la bande I et la zone H."
+    }
+   ]
+  },
+  {
+   "chapitre": "08f314d7-2cd2-5b3b-863b-8732c7abec7c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand la commande nerveuse arrive à la fibre",
+   "competence": "raisonner",
+   "situation": "Un laboratoire étudie la jonction entre un motoneurone et une fibre musculaire. Il teste deux toxines imaginées, A et B, pour comprendre le rôle de chaque étape.",
+   "documents": [
+    {
+     "id": "jonction",
+     "type": "schema",
+     "titre": "La jonction neuromusculaire (schéma)",
+     "largeur": 320,
+     "hauteur": 280,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 14,
+       "l": 200,
+       "h": 90,
+       "arrondi": 14,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 66,
+       "r": 12,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 76,
+       "r": 12,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 210,
+       "cy": 66,
+       "r": 12,
+       "teinte": "jaune",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 36,
+       "texte": "Terminaison du motoneurone",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 104,
+       "l": 200,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "fente",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 120,
+       "cy": 118,
+       "r": 3,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 122,
+       "r": 3,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 118,
+       "r": 3,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 134,
+       "l": 200,
+       "h": 120,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 134,
+       "l": 26,
+       "h": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "rec1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 147,
+       "y": 134,
+       "l": 26,
+       "h": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "rec2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 214,
+       "y": 134,
+       "l": 26,
+       "h": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "rec3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 205,
+       "texte": "Fibre musculaire",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "toxines",
+     "type": "tableau",
+     "titre": "Ce que bloque chaque toxine",
+     "colonnes": [
+      "Cas",
+      "ACh libérée",
+      "Récepteurs",
+      "Enzyme"
+     ],
+     "lignes": [
+      [
+       "Sans toxine",
+       "oui",
+       "libres",
+       "active"
+      ],
+      [
+       "Toxine A",
+       "oui",
+       "bloqués",
+       "active"
+      ],
+      [
+       "Toxine B",
+       "oui",
+       "libres",
+       "bloquée"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Toxines imaginées pour l’exercice. ACh : acétylcholine ; l’enzyme dégrade l’ACh."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jonction",
+     "enonce": "Touche l’espace dans lequel l’acétylcholine est libérée.",
+     "reponse": [
+      "fente"
+     ],
+     "aide": "C’est l’espace étroit qui sépare le neurone de la fibre.",
+     "explication": "Les vésicules libèrent l’acétylcholine dans la **fente synaptique**, qui sépare la terminaison du motoneurone de la fibre musculaire."
+    },
+    {
+     "type": "zone",
+     "document": "jonction",
+     "enonce": "Touche les récepteurs sur lesquels l’acétylcholine se fixe.",
+     "reponse": [
+      "rec1",
+      "rec2",
+      "rec3"
+     ],
+     "multiple": true,
+     "aide": "Ils sont sur la membrane de la fibre musculaire, au contact de la fente. Il y en a trois.",
+     "explication": "Les **récepteurs** sont sur la membrane de la fibre : la fixation de l’acétylcholine y déclenche un potentiel d’action musculaire."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la commande du muscle dans l’ordre.",
+     "items": [
+      "Un potentiel d’action arrive à la terminaison du motoneurone",
+      "Les vésicules libèrent l’acétylcholine dans la fente",
+      "L’acétylcholine se fixe sur les récepteurs de la fibre",
+      "Un potentiel d’action musculaire libère le calcium",
+      "Les myofilaments glissent : la fibre se contracte"
+     ],
+     "aide": "Le message est électrique, puis chimique dans la fente, puis de nouveau électrique.",
+     "explication": "Message **électrique** à la terminaison, **chimique** dans la fente (acétylcholine), puis **électrique** sur la fibre, qui libère le calcium et se contracte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec la toxine A, des motoneurones sont stimulés. Que devient la contraction de la fibre ?",
+     "options": [
+      "Elle est impossible : l’acétylcholine ne se fixe plus",
+      "Elle se prolonge : l’acétylcholine n’est plus dégradée",
+      "Elle se déclenche seule, sans commande nerveuse",
+      "Elle reste normale : l’acétylcholine agit quand même"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la colonne « Récepteurs » pour la toxine A.",
+     "explication": "Récepteurs bloqués : l’acétylcholine, bien libérée, **ne peut plus se fixer** ; aucun potentiel d’action musculaire n’apparaît, la fibre ne se contracte pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec la toxine B, quelle est la conséquence ?",
+     "options": [
+      "Elle est impossible : l’acétylcholine ne se fixe plus",
+      "Elle se prolonge : l’acétylcholine n’est plus dégradée",
+      "Elle se déclenche seule, sans commande nerveuse",
+      "Elle reste normale : l’acétylcholine agit quand même"
+     ],
+     "reponse": 1,
+     "aide": "Quel est le rôle de l’acétylcholinestérase ? Que se passe-t-il quand elle est bloquée ?",
+     "explication": "Sans **acétylcholinestérase**, l’acétylcholine n’est plus dégradée : elle reste dans la fente et la commande **ne s’arrête pas**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b313e368-2157-5371-9192-43b3284d19c4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un plongeon qui tourne mal",
+   "competence": "observer-schema",
+   "situation": "M. Benali plonge dans un lac peu profond. Il se retrouve incapable de bouger bras et jambes. Les pompiers préviennent l’hôpital : on soupçonne une lésion de la moelle épinière.",
+   "documents": [
+    {
+     "id": "rachis",
+     "type": "schema",
+     "titre": "La colonne vertébrale, vue de profil (schéma)",
+     "largeur": 320,
+     "hauteur": 310,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 14,
+       "l": 60,
+       "h": 50,
+       "arrondi": 6,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "cerv",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 68,
+       "l": 60,
+       "h": 110,
+       "arrondi": 6,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "thor",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 182,
+       "l": 60,
+       "h": 56,
+       "arrondi": 6,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "lomb",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 242,
+       "l": 60,
+       "h": 44,
+       "arrondi": 6,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "sacr",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 44,
+       "texte": "Cou",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 128,
+       "texte": "Thorax",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 214,
+       "texte": "Bas du dos",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 268,
+       "texte": "Bassin",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rachis",
+     "enonce": "Les quatre membres de M. Benali sont paralysés. Touche le niveau où la moelle a probablement été atteinte.",
+     "reponse": [
+      "cerv"
+     ],
+     "aide": "Une lésion interrompt les voies sous son niveau : pour toucher les bras et les jambes, il faut être haut.",
+     "explication": "Une lésion **cervicale** (cou) interrompt les voies vers les quatre membres : c’est une **tétraplégie**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme médical à sa signification.",
+     "paires": [
+      [
+       "Tétraplégie",
+       "Paralysie des quatre membres"
+      ],
+      [
+       "Paraplégie",
+       "Paralysie des deux membres inférieurs"
+      ],
+      [
+       "Paresthésie",
+       "Fourmillements, sensation anormale"
+      ],
+      [
+       "Aphasie",
+       "Trouble du langage"
+      ]
+     ],
+     "aide": "Tétra = quatre, para = les deux membres du bas.",
+     "explication": "**Tétraplégie** : quatre membres. **Paraplégie** : deux membres inférieurs. **Paresthésie** : fourmillements. **Aphasie** : trouble du langage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les pompiers évitent-ils de déplacer M. Benali tant qu’il n’est pas immobilisé ?",
+     "options": [
+      "Un mouvement pourrait aggraver la lésion de la moelle",
+      "Il risque de s’endormir et de ne plus se réveiller",
+      "Il faut d’abord attendre que la douleur disparaisse",
+      "Il vaut mieux le laisser sécher avant de le soulever"
+     ],
+     "reponse": 0,
+     "aide": "La moelle épinière est dans le canal vertébral, tout près des vertèbres blessées.",
+     "explication": "On **immobilise le rachis** dès le ramassage : déplacer la victime pourrait aggraver la lésion de la moelle épinière."
+    }
+   ]
+  },
+  {
+   "chapitre": "b313e368-2157-5371-9192-43b3284d19c4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mme Garnier, le bras qui ne répond plus",
+   "competence": "analyser-document",
+   "situation": "Mme Garnier, 68 ans, s’effondre dans sa cuisine : son bras et sa jambe droits ne bougent plus et ses mots sont confus. À l’hôpital, l’IRM montre l’atteinte d’une artère du cerveau.",
+   "documents": [
+    {
+     "id": "cerveau",
+     "type": "schema",
+     "titre": "Cerveau vu de face, comme sur une image médicale",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 110,
+       "cy": 100,
+       "rx": 72,
+       "ry": 68,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "hemiD",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 210,
+       "cy": 100,
+       "rx": 72,
+       "ry": 68,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "hemiG",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 200,
+       "texte": "Droite du patient",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 200,
+       "texte": "Gauche du patient",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Convention : la droite du patient est à gauche de l’image"
+    },
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Les deux types d’AVC",
+     "colonnes": [
+      "Type",
+      "Mécanisme",
+      "Fréquence"
+     ],
+     "lignes": [
+      [
+       "Ischémique",
+       "artère bouchée par un caillot",
+       "environ 80 %"
+      ],
+      [
+       "Hémorragique",
+       "artère rompue, le sang se répand",
+       "environ 20 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cerveau",
+     "enonce": "Mme Garnier est paralysée du côté droit. Touche l’hémisphère touché par l’AVC.",
+     "reponse": [
+      "hemiG"
+     ],
+     "aide": "Chaque hémisphère commande la moitié opposée du corps ; et lis bien la légende sous le schéma.",
+     "explication": "Le côté droit du corps est commandé par l’hémisphère **gauche**, qui apparaît **à droite** de l’image selon la convention médicale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle le trouble de la parole de Mme Garnier, dû à l’atteinte de l’hémisphère gauche ?",
+     "options": [
+      "Une aphasie",
+      "Une amnésie",
+      "Une paresthésie",
+      "Une paraplégie"
+     ],
+     "reponse": 0,
+     "aide": "Chez la plupart des droitiers, le langage dépend de l’hémisphère gauche.",
+     "explication": "L’**aphasie** est un trouble du langage. L’amnésie est une perte de mémoire, la paresthésie des fourmillements, la paraplégie une paralysie des jambes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur 200 AVC, combien sont ischémiques environ ?",
+     "reponse": 160,
+     "unite": "AVC",
+     "aide": "Calcule 80 % de 200.",
+     "explication": "200 × 0,80 = **160** AVC ischémiques ; les 40 autres sont hémorragiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’IRM montre une artère bouchée par un caillot. De quel type d’AVC s’agit-il, et que cherche-t-on à faire ?",
+     "options": [
+      "Ischémique : dissoudre ou retirer le caillot en urgence",
+      "Hémorragique : dissoudre ou retirer le caillot en urgence",
+      "Ischémique : attendre que le caillot disparaisse seul",
+      "Hémorragique : boucher l’artère qui saigne sans imagerie"
+     ],
+     "reponse": 0,
+     "aide": "Un caillot qui bouche une artère : lis la ligne « Mécanisme » du tableau.",
+     "explication": "Une artère **bouchée** est un AVC **ischémique** ; on traite par **thrombolyse** (dissoudre) ou **thrombectomie** (retirer), dans les toutes premières heures."
+    }
+   ]
+  },
+  {
+   "chapitre": "b313e368-2157-5371-9192-43b3284d19c4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois patients aux urgences, un diagnostic à poser",
+   "competence": "raisonner",
+   "situation": "Le même soir, trois patients arrivent aux urgences. L’interne doit distinguer une lésion de la moelle épinière d’un AVC, nommer chaque atteinte, puis repérer chez l’un d’eux les facteurs de risque.",
+   "documents": [
+    {
+     "id": "patients",
+     "type": "tableau",
+     "titre": "Ce que racontent les témoins",
+     "colonnes": [
+      "Patient",
+      "Ce qui s’est passé"
+     ],
+     "lignes": [
+      [
+       "Lucas, 19 ans",
+       "Chute de moto : il ne sent plus ses jambes, mais bouge les bras et respire normalement"
+      ],
+      [
+       "Mme Blanc",
+       "Brutalement, le côté gauche du visage et le bras gauche ne répondent plus, la parole est confuse"
+      ],
+      [
+       "M. Perrin, 55 ans",
+       "Plongeon en eau peu profonde : il ne bouge plus ni bras ni jambes et respire avec difficulté"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Patients fictifs"
+    },
+    {
+     "id": "dossier",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le dossier du médecin traitant de Mme Blanc",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Mme Blanc vit seule et adore le jardinage. Depuis des années, sa [[r|hypertension]] n’est pas soignée, et elle fume encore un paquet de [[r|tabac]] par jour.",
+      "Son taux de [[r|cholestérol]] est trop élevé et elle marche très peu : sa [[r|sédentarité]] est marquée. En revanche, elle mange du poisson deux fois par semaine et dort bien."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque patient : lésion de la moelle épinière ou AVC ?",
+     "categories": [
+      "Lésion de la moelle épinière",
+      "AVC"
+     ],
+     "items": [
+      [
+       "Lucas",
+       0
+      ],
+      [
+       "Mme Blanc",
+       1
+      ],
+      [
+       "M. Perrin",
+       0
+      ]
+     ],
+     "aide": "Un accident violent du dos ou du cou touche la moelle ; un trouble brutal sans choc, avec parole confuse, évoque l’AVC.",
+     "explication": "Lucas et M. Perrin ont subi un traumatisme du **rachis** : lésion de la **moelle épinière**. Les signes brutaux de Mme Blanc évoquent un **AVC**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque patient au terme qui décrit son atteinte.",
+     "paires": [
+      [
+       "Lucas",
+       "Paraplégie"
+      ],
+      [
+       "M. Perrin",
+       "Tétraplégie"
+      ],
+      [
+       "Mme Blanc",
+       "Hémiplégie gauche"
+      ]
+     ],
+     "aide": "Deux jambes, quatre membres, ou une moitié du corps.",
+     "explication": "Lucas : **paraplégie** (jambes). M. Perrin : **tétraplégie** (quatre membres). Mme Blanc : **hémiplégie gauche** (moitié gauche du corps)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mme Blanc est paralysée du côté gauche. Quelle partie de son encéphale est probablement touchée ?",
+     "options": [
+      "L’hémisphère cérébral droit",
+      "L’hémisphère cérébral gauche",
+      "La moelle épinière cervicale",
+      "Le nerf sciatique gauche"
+     ],
+     "reponse": 0,
+     "aide": "Chaque hémisphère commande la moitié opposée du corps.",
+     "explication": "L’hémisphère **droit** commande la moitié **gauche** du corps : une lésion de l’hémisphère droit provoque une hémiplégie gauche."
+    },
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche tous les facteurs de risque d’AVC cités dans le dossier de Mme Blanc.",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "aide": "Il y en a quatre : une tension, une habitude, une substance dans le sang, un mode de vie.",
+     "explication": "**Hypertension** (le premier facteur de risque), **tabac**, **cholestérol** excessif et **sédentarité** augmentent le risque d’AVC. Le poisson et le sommeil n’en sont pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi M. Perrin respire-t-il difficilement alors que Lucas respire normalement ?",
+     "options": [
+      "Sa lésion est très haute, au niveau cervical, et gêne la respiration",
+      "Sa lésion est basse, au niveau lombaire, et gêne la respiration",
+      "Il a eu un AVC hémorragique pendant son plongeon",
+      "Il avale de l’eau parce que ses jambes sont paralysées"
+     ],
+     "reponse": 0,
+     "aide": "Plus la lésion est haute, plus elle prive de commande des muscles importants, dont ceux de la respiration.",
+     "explication": "Une lésion **cervicale très haute** touche la respiration ; la lésion de Lucas, plus basse, épargne la respiration et les bras."
+    }
+   ]
+  },
+  {
+   "chapitre": "08d37f26-a2e2-5153-abf2-a5073a2c98dc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’étiquette du paquet de céréales",
+   "competence": "lire-tableau",
+   "situation": "Au petit-déjeuner, Sofia sort un paquet de céréales et lit l’étiquette nutritionnelle. Elle cherche ce qu’il apporte à son organisme.",
+   "documents": [
+    {
+     "id": "etiquette",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Céréales croustillantes",
+     "sousTitre": "Valeurs pour 100 g",
+     "emoji": "🥣",
+     "lignes": [
+      {
+       "texte": "Énergie",
+       "valeur": "372 kcal"
+      },
+      {
+       "texte": "Matières grasses",
+       "valeur": "3,5 g",
+       "id": "lip"
+      },
+      {
+       "texte": "Glucides",
+       "valeur": "76 g",
+       "id": "glu",
+       "gras": true
+      },
+      {
+       "texte": "dont sucres",
+       "valeur": "22 g"
+      },
+      {
+       "texte": "Protéines",
+       "valeur": "9 g",
+       "id": "pro"
+      },
+      {
+       "texte": "Vitamine B1",
+       "valeur": "0,4 mg",
+       "id": "vit"
+      },
+      {
+       "texte": "Fer",
+       "valeur": "4 mg",
+       "id": "fer"
+      }
+     ],
+     "pied": "Valeurs arrondies, étiquette imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etiquette",
+     "enonce": "Touche la ligne du macronutriment le plus abondant dans ces céréales.",
+     "reponse": [
+      "glu"
+     ],
+     "aide": "Les macronutriments sont les glucides, les lipides et les protéines : compare leurs quantités.",
+     "explication": "Les **glucides** dominent avec **76 g** pour 100 g, loin devant les protéines (9 g) et les lipides (3,5 g)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sofia mange un bol de 40 g de céréales. Combien de glucides cela représente-t-il ?",
+     "reponse": 30.4,
+     "unite": "g",
+     "tolerance": 0.1,
+     "aide": "40 g, c’est 0,4 fois 100 g.",
+     "explication": "76 × 0,4 = **30,4 g** de glucides dans un bol de 40 g."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nutriment de l’étiquette à son rôle principal.",
+     "paires": [
+      [
+       "Glucides",
+       "Rôle énergétique"
+      ],
+      [
+       "Protéines",
+       "Rôle structural (construction)"
+      ],
+      [
+       "Fer",
+       "Rôle fonctionnel (régulation)"
+      ]
+     ],
+     "aide": "Un carburant, une brique de construction, un « régulateur » en petite quantité.",
+     "explication": "Les **glucides** fournissent de l’énergie, les **protéines** servent à construire, le **fer** (oligo-élément) intervient dans le fonctionnement, par exemple dans l’hémoglobine."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces nutriments de l’étiquette : macronutriment ou micronutriment ?",
+     "categories": [
+      "Macronutriment",
+      "Micronutriment"
+     ],
+     "items": [
+      [
+       "Matières grasses",
+       0
+      ],
+      [
+       "Glucides",
+       0
+      ],
+      [
+       "Protéines",
+       0
+      ],
+      [
+       "Vitamine B1",
+       1
+      ],
+      [
+       "Fer",
+       1
+      ]
+     ],
+     "aide": "Regarde les unités de l’étiquette : des grammes pour les macronutriments, des milligrammes pour les autres.",
+     "explication": "Glucides, lipides et protéines sont des **macronutriments** (grammes par jour) ; vitamines et oligo-éléments comme le fer sont des **micronutriments** (milligrammes)."
+    }
+   ]
+  },
+  {
+   "chapitre": "08d37f26-a2e2-5153-abf2-a5073a2c98dc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’IMC de quatre adultes et d’une adolescente",
+   "competence": "calculer",
+   "situation": "Au centre de santé, une infirmière a noté la masse et la taille de cinq personnes. Elle t’aide à calculer et à interpréter leur indice de masse corporelle (IMC).",
+   "documents": [
+    {
+     "id": "personnes",
+     "type": "tableau",
+     "titre": "Les mesures du jour",
+     "colonnes": [
+      "Prénom",
+      "Masse (kg)",
+      "Taille (m)",
+      "IMC (kg/m²)"
+     ],
+     "lignes": [
+      [
+       "Thomas, adulte",
+       "72",
+       "1,80",
+       "?"
+      ],
+      [
+       "Samia, adulte",
+       "49",
+       "1,70",
+       "17,0"
+      ],
+      [
+       "Hugo, adulte",
+       "95",
+       "1,75",
+       "31,0"
+      ],
+      [
+       "Léa, adulte",
+       "78",
+       "1,70",
+       "27,0"
+      ],
+      [
+       "Inès, 14 ans",
+       "50",
+       "1,60",
+       "19,5"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées, IMC arrondis au dixième"
+    },
+    {
+     "id": "seuils",
+     "type": "tableau",
+     "titre": "Interpréter l’IMC d’un adulte",
+     "colonnes": [
+      "IMC",
+      "Interprétation"
+     ],
+     "lignes": [
+      [
+       "moins de 18,5",
+       "Maigreur"
+      ],
+      [
+       "de 18,5 à moins de 25",
+       "Corpulence normale"
+      ],
+      [
+       "de 25 à moins de 30",
+       "Surpoids"
+      ],
+      [
+       "30 et plus",
+       "Obésité"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’IMC de Thomas (masse ÷ taille²), arrondi au dixième.",
+     "reponse": 22.2,
+     "unite": "kg/m²",
+     "tolerance": 0.05,
+     "aide": "Calcule d’abord 1,80 × 1,80, puis divise 72 par ce résultat.",
+     "explication": "1,80 × 1,80 = 3,24 ; 72 ÷ 3,24 ≈ **22,2 kg/m²**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque adulte selon son IMC.",
+     "categories": [
+      "Maigreur",
+      "Normale",
+      "Surpoids",
+      "Obésité"
+     ],
+     "items": [
+      [
+       "Samia",
+       0
+      ],
+      [
+       "Thomas",
+       1
+      ],
+      [
+       "Léa",
+       2
+      ],
+      [
+       "Hugo",
+       3
+      ]
+     ],
+     "aide": "Compare chaque IMC aux seuils du second tableau : 18,5, 25 et 30.",
+     "explication": "Samia (17,0) est en **maigreur**, Thomas (22,2) a une corpulence **normale**, Léa (27,0) est en **surpoids**, Hugo (31,0) en **obésité**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse donnerait à Léa (1,70 m) un IMC de 25, limite du surpoids ?",
+     "reponse": 72.25,
+     "unite": "kg",
+     "tolerance": 0.1,
+     "aide": "IMC = masse ÷ taille², donc masse = IMC × taille².",
+     "explication": "1,70 × 1,70 = 2,89 ; 25 × 2,89 = **72,25 kg**. Au-dessus de cette masse, Léa reste en surpoids."
+    },
+    {
+     "type": "choix",
+     "enonce": "Inès a 14 ans et un IMC de 19,5. Pourquoi ne la classe-t-on pas avec les seuils du tableau ?",
+     "options": [
+      "Chez l’adolescent, l’IMC se lit sur des courbes selon l’âge et le sexe",
+      "Chez l’adolescent, l’IMC ne peut pas être calculé avec la taille",
+      "Chez l’adolescent, les seuils sont toujours plus élevés de 5",
+      "Chez l’adolescent, seule la masse compte, pas la taille"
+     ],
+     "reponse": 0,
+     "aide": "Un adolescent grandit : sa corpulence normale change avec l’âge.",
+     "explication": "Pendant la croissance, l’IMC s’interprète sur des **courbes de corpulence** selon l’**âge** et le **sexe**, non avec les seuils de l’adulte."
+    }
+   ]
+  },
+  {
+   "chapitre": "08d37f26-a2e2-5153-abf2-a5073a2c98dc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le bilan énergétique d’un joueur de rugby",
+   "competence": "raisonner",
+   "situation": "Maxime, 17 ans, joue au rugby. Son diététicien lui a fait noter ce qu’il mange et estimer ce qu’il dépense en une journée d’entraînement. Tu fais le bilan.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "Une journée de Maxime",
+     "colonnes": [
+      "Apports",
+      "kcal",
+      "Dépenses",
+      "kcal"
+     ],
+     "lignes": [
+      [
+       "Petit-déjeuner",
+       "650",
+       "Métabolisme de base",
+       "1 700"
+      ],
+      [
+       "Déjeuner",
+       "900",
+       "Activité physique (rugby compris)",
+       "1 200"
+      ],
+      [
+       "Goûter",
+       "400",
+       "Thermorégulation et autres",
+       "100"
+      ],
+      [
+       "Dîner",
+       "850",
+       "",
+       ""
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs imaginées pour l’exercice"
+    },
+    {
+     "id": "repart",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "D’où vient l’énergie de ses repas",
+     "categories": [
+      "Glucides",
+      "Lipides",
+      "Protéines"
+     ],
+     "series": [
+      {
+       "nom": "Part de l’énergie",
+       "valeurs": [
+        50,
+        35,
+        15
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "source": "Parts de l’énergie apportée, en %"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "repart",
+     "enonce": "Touche le macronutriment qui fournit la plus grande part de l’énergie de Maxime.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand secteur.",
+     "explication": "Les **glucides** fournissent **50 %** de l’énergie, la plus grande part (comme chez la plupart des adultes : 40 à 55 %)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des apports énergétiques de la journée de Maxime ?",
+     "reponse": 2800,
+     "unite": "kcal",
+     "aide": "Additionne les quatre repas de la colonne « Apports ».",
+     "explication": "650 + 900 + 400 + 850 = **2 800 kcal**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le bilan énergétique de la journée (apports − dépenses). Un résultat négatif s’écrit avec un signe moins.",
+     "reponse": -200,
+     "unite": "kcal",
+     "aide": "Additionne d’abord les trois dépenses, puis soustrais-les des apports.",
+     "explication": "Dépenses : 1 700 + 1 200 + 100 = 3 000 kcal. Bilan : 2 800 − 3 000 = **−200 kcal**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de kilocalories viennent des glucides dans les 2 800 kcal de la journée ?",
+     "reponse": 1400,
+     "unite": "kcal",
+     "aide": "Lis la part des glucides dans le graphique, puis calcule ce pourcentage de 2 800.",
+     "explication": "50 % de 2 800 = **1 400 kcal**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Si ce bilan se répétait chaque jour pendant des mois, que risquerait-il d’arriver à Maxime ?",
+     "options": [
+      "Un amaigrissement, car les dépenses dépassent les apports",
+      "Une prise de poids, car les apports dépassent les dépenses",
+      "Rien, car son bilan est positif à long terme",
+      "Une carence en eau, car l’eau ne figure pas au bilan"
+     ],
+     "reponse": 0,
+     "aide": "Le bilan est négatif : l’organisme dépense plus d’énergie qu’il n’en reçoit.",
+     "explication": "Un bilan **négatif et durable** entraîne un **amaigrissement** ; un bilan positif durable, une prise de poids."
+    }
+   ]
+  },
+  {
+   "chapitre": "959b38be-a7b5-572a-83d1-df70f9e37c35",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Camille, pâle et fatiguée, passe une prise de sang",
+   "competence": "lire-tableau",
+   "situation": "Camille, 16 ans, se sent très fatiguée et son entourage la trouve pâle. Elle s’essouffle vite à l’effort et ses règles sont abondantes. Son médecin demande une prise de sang.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Le bilan sanguin de Camille",
+     "colonnes": [
+      "Examen",
+      "Résultat de Camille",
+      "Valeurs usuelles (femme)"
+     ],
+     "lignes": [
+      [
+       "Hémoglobine",
+       "10,5 g/dL",
+       "12 à 16 g/dL"
+      ],
+      [
+       "Ferritine",
+       "8 µg/L",
+       "15 à 150 µg/L"
+      ],
+      [
+       "Glycémie à jeun",
+       "0,85 g/L",
+       "0,70 à 1,10 g/L"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Patiente fictive, valeurs usuelles arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche les deux résultats de Camille qui sont inférieurs aux valeurs usuelles.",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "aide": "Compare chaque résultat à la colonne de droite : la glycémie est normale.",
+     "explication": "L’**hémoglobine** (10,5 g/dL) et la **ferritine** (8 µg/L) sont trop basses ; la glycémie est dans la norme."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le fer est nécessaire à la fabrication de l’___, qui transporte le dioxygène dans les globules rouges.",
+     "reponses": [
+      [
+       "hémoglobine"
+      ]
+     ],
+     "banque": [
+      "hémoglobine",
+      "ferritine",
+      "insuline",
+      "collagène"
+     ],
+     "aide": "Un manque de fer fait baisser le taux de cette molécule dans le sang.",
+     "explication": "Le fer sert à fabriquer l’**hémoglobine**. Sans assez de fer, le sang transporte moins de dioxygène : c’est l’anémie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie une ferritine basse chez Camille ?",
+     "options": [
+      "Ses réserves de fer sont vides",
+      "Ses globules rouges sont trop nombreux",
+      "Son corps contient trop de fer",
+      "Son foie fabrique trop d’hémoglobine"
+     ],
+     "reponse": 0,
+     "aide": "La ferritine est la forme de stockage du fer dans l’organisme.",
+     "explication": "Une **ferritine basse** signale que les **réserves de fer sont vides** : c’est le signe d’une carence en fer."
+    }
+   ]
+  },
+  {
+   "chapitre": "959b38be-a7b5-572a-83d1-df70f9e37c35",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Kévin et six mois de rééquilibrage alimentaire",
+   "competence": "analyser-document",
+   "situation": "Kévin, 40 ans, consulte pour une prise de poids. Son médecin note ses habitudes et ses problèmes de santé, puis il le suit pendant six mois de rééquilibrage alimentaire.",
+   "documents": [
+    {
+     "id": "dossier",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le dossier de Kévin",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Kévin mesure 1,75 m et pèse 98 kg. Il travaille assis toute la journée, boit plusieurs boissons sucrées par jour et dort peu.",
+      "Son médecin note une [[c|hypertension]] artérielle, une [[c|apnée]] du sommeil et une [[c|arthrose]] du genou qui le fait souffrir."
+     ]
+    },
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "La masse de Kévin pendant le suivi",
+     "categories": [
+      "Départ",
+      "Mois 1",
+      "Mois 2",
+      "Mois 3",
+      "Mois 4",
+      "Mois 5",
+      "Mois 6"
+     ],
+     "series": [
+      {
+       "nom": "Masse",
+       "valeurs": [
+        98,
+        96,
+        95,
+        93,
+        92,
+        91,
+        90
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Masse",
+      "unite": "kg",
+      "min": 85,
+      "max": 100,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Suivi"
+     },
+     "valeurs": false,
+     "source": "Suivi imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’IMC de Kévin au départ, arrondi au dixième.",
+     "reponse": 32,
+     "unite": "kg/m²",
+     "tolerance": 0.05,
+     "aide": "IMC = masse ÷ taille². Calcule d’abord 1,75 × 1,75.",
+     "explication": "1,75 × 1,75 = 3,0625 ; 98 ÷ 3,0625 ≈ **32,0 kg/m²** : c’est supérieur à 30, donc une obésité."
+    },
+    {
+     "type": "zone",
+     "document": "dossier",
+     "enonce": "Touche les trois mots qui désignent des conséquences pathologiques de l’obésité.",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Ce sont des maladies que son médecin a notées : une pour la tension, une pour le sommeil, une pour l’articulation.",
+     "explication": "**Hypertension artérielle**, **apnée du sommeil** et **arthrose** (surtout du genou) sont des conséquences de l’obésité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’IMC de Kévin au mois 6, arrondi au dixième.",
+     "reponse": 29.4,
+     "unite": "kg/m²",
+     "tolerance": 0.05,
+     "aide": "Lis sa masse à « Mois 6 » sur la courbe, puis reprends le même calcul.",
+     "explication": "Masse de 90 kg : 90 ÷ 3,0625 ≈ **29,4 kg/m²**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec cet IMC de 29,4, dans quelle catégorie se trouve maintenant Kévin ?",
+     "options": [
+      "Surpoids",
+      "Obésité",
+      "Corpulence normale",
+      "Maigreur"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi les seuils : 25 et 30.",
+     "explication": "Un IMC de 25 à moins de 30 correspond au **surpoids** : Kévin n’est plus en obésité, même s’il lui reste du chemin."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque professionnel à sa place dans la prise en charge de Kévin.",
+     "paires": [
+      [
+       "Diététicien",
+       "Rééquilibrer l’alimentation"
+      ],
+      [
+       "Éducateur sportif",
+       "Augmenter l’activité physique"
+      ],
+      [
+       "Psychologue",
+       "Accompagnement psychologique"
+      ],
+      [
+       "Médecin",
+       "Coordonner le suivi et les traitements"
+      ]
+     ],
+     "aide": "La prise en charge de l’obésité est longue et pluridisciplinaire.",
+     "explication": "Le **diététicien** rééquilibre l’alimentation, l’**éducateur sportif** développe l’activité physique, le **psychologue** accompagne, le **médecin** coordonne."
+    }
+   ]
+  },
+  {
+   "chapitre": "959b38be-a7b5-572a-83d1-df70f9e37c35",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre patients, quatre carences à identifier",
+   "competence": "raisonner",
+   "situation": "Dans un service de nutrition, quatre patients sont suivis pour des signes différents. Chloé, la patiente C, est végétarienne et mange à la cantine du lycée. Tu cherches à chaque fois le déséquilibre en cause.",
+   "documents": [
+    {
+     "id": "patients",
+     "type": "tableau",
+     "titre": "Les signes observés",
+     "colonnes": [
+      "Patient",
+      "Signes observés"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Gencives qui saignent, grande fatigue"
+      ],
+      [
+       "B",
+       "Enfant : os mal minéralisés, jambes arquées"
+      ],
+      [
+       "C (Chloé, femme)",
+       "Fatigue, pâleur, hémoglobine à 9,8 g/dL (seuil : 12 g/dL)"
+      ],
+      [
+       "D",
+       "Amaigrissement extrême avec fonte des muscles"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Patients fictifs"
+    },
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Menu de la cantine",
+     "sousTitre": "Mardi",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Lentilles vertes et riz",
+       "id": "lentilles"
+      },
+      {
+       "texte": "Pain complet",
+       "id": "pain"
+      },
+      {
+       "texte": "Yaourt nature",
+       "id": "yaourt"
+      },
+      {
+       "texte": "Orange",
+       "id": "orange"
+      }
+     ],
+     "pied": "Menu imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque patient à son déséquilibre nutritionnel.",
+     "paires": [
+      [
+       "Patient A",
+       "Carence en vitamine C (scorbut)"
+      ],
+      [
+       "Patient B",
+       "Carence en vitamine D (rachitisme)"
+      ],
+      [
+       "Patient C",
+       "Carence en fer (anémie)"
+      ],
+      [
+       "Patient D",
+       "Apport global insuffisant (cachexie)"
+      ]
+     ],
+     "aide": "Gencives qui saignent : vitamine C ; os mous de l’enfant : vitamine D ; pâleur et hémoglobine basse : fer.",
+     "explication": "A : **scorbut** (vitamine C). B : **rachitisme** (vitamine D). C : **anémie par carence en fer**. D : **cachexie**, par un apport global insuffisant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien l’hémoglobine de Chloé est-elle inférieure au seuil de 12 g/dL ?",
+     "reponse": 2.2,
+     "unite": "g/dL",
+     "tolerance": 0.05,
+     "aide": "Soustrais 9,8 de 12.",
+     "explication": "12 − 9,8 = **2,2 g/dL** sous le seuil : cette valeur confirme l’anémie."
+    },
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche l’aliment du menu qui aide Chloé à absorber le fer des lentilles.",
+     "reponse": [
+      "orange"
+     ],
+     "aide": "Une vitamine favorise l’absorption du fer d’origine végétale : où la trouve-t-on dans ce menu ?",
+     "explication": "L’**orange** apporte de la **vitamine C**, qui favorise l’absorption du fer végétal : un agrume au repas aide."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque cas : carence quantitative ou carence qualitative ?",
+     "categories": [
+      "Quantitative",
+      "Qualitative"
+     ],
+     "items": [
+      [
+       "Famine",
+       0
+      ],
+      [
+       "Anorexie mentale",
+       0
+      ],
+      [
+       "Carence en fer",
+       1
+      ],
+      [
+       "Carence en vitamine C",
+       1
+      ],
+      [
+       "Carence en vitamine D",
+       1
+      ]
+     ],
+     "aide": "Quantitative : pas assez à manger en tout. Qualitative : assez d’énergie, mais il manque un nutriment précis.",
+     "explication": "Famine et anorexie mentale diminuent l’**apport global** (quantitatif). Fer et vitamines C et D sont des **carences ciblées** (qualitatives)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les bons termes.",
+     "texte": "L’amaigrissement extrême du patient D s’appelle la ___, alors que la ___ désigne un besoin excessif de manger.",
+     "reponses": [
+      [
+       "cachexie"
+      ],
+      [
+       "polyphagie"
+      ]
+     ],
+     "banque": [
+      "cachexie",
+      "polyphagie",
+      "anorexie",
+      "apnée"
+     ],
+     "aide": "Une racine pour la fonte musculaire, une autre qui signifie « manger beaucoup ».",
+     "explication": "La **cachexie** est un amaigrissement extrême avec fonte des muscles ; la **polyphagie** est un besoin excessif de manger. L’**anorexie** est une perte ou un refus de l’appétit."
+    }
+   ]
+  }
+ ]
+}

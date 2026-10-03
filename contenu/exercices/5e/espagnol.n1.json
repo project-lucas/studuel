@@ -1,0 +1,4024 @@
+{
+ "niveau": "5e",
+ "matiere": "espagnol",
+ "exercices": [
+  {
+   "chapitre": "4b107bff-cc5f-50d3-8c67-6a9e54606d90",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un message avant le cinéma",
+   "competence": "comprendre-langue",
+   "situation": "Lucía et Marcos organisent une sortie au cinéma. Ils s’écrivent des messages en espagnol.",
+   "documents": [
+    {
+     "id": "chat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Lucía et Marcos",
+     "participants": [
+      {
+       "nom": "Lucía",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Marcos",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucía",
+       "texte": "¡Hola, Marcos! ¿[[q|Cómo]] estás?"
+      },
+      {
+       "qui": "Marcos",
+       "texte": "Muy bien. ¿[[q|Dónde]] estás tú?"
+      },
+      {
+       "qui": "Lucía",
+       "texte": "En casa. ¿Vienes al cine esta tarde?"
+      },
+      {
+       "qui": "Marcos",
+       "texte": "¡Sí! ¿[[q|Cuándo]] empieza la película?"
+      },
+      {
+       "qui": "Lucía",
+       "texte": "A las seis."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chat",
+     "reponse": [
+      "q"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois mots interrogatifs** des questions de Lucía et de Marcos.",
+     "aide": "Ils portent tous un accent écrit.",
+     "explication": "**Cómo, dónde, cuándo** : les mots interrogatifs portent toujours un accent écrit, même dans un message rapide."
+    },
+    {
+     "type": "trous",
+     "enonce": "Lucía répond « A las seis ». Complète la question de Marcos.",
+     "texte": "¿___ empieza la película?",
+     "reponses": [
+      [
+       "Cuándo"
+      ]
+     ],
+     "banque": [
+      "Cuándo",
+      "Dónde",
+      "Quién",
+      "Cuántos"
+     ],
+     "aide": "On répond par une heure : quelle est la question ?",
+     "explication": "**¿Cuándo empieza la película?** : *cuándo* demande le moment, et « a las seis » est bien une heure."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Où est le cinéma ? » La phrase commence par ¿Dónde.",
+     "items": [
+      "¿Dónde",
+      "está",
+      "el",
+      "cine?"
+     ],
+     "aide": "Le verbe suit le mot interrogatif.",
+     "explication": "**¿Dónde está el cine?** : on ouvre par ¿, on met le mot interrogatif avec son accent, puis le verbe, et on ferme par ?."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b107bff-cc5f-50d3-8c67-6a9e54606d90",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au rayon des livres",
+   "competence": "manier-langue",
+   "situation": "Sara cherche un cadeau pour son frère dans une librairie de Valence. La libraire lui pose plusieurs questions.",
+   "documents": [
+    {
+     "id": "tienda",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Dans la librairie",
+     "participants": [
+      {
+       "nom": "Libraria",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sara",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Libraria",
+       "texte": "¿Qué quieres, Sara?"
+      },
+      {
+       "qui": "Sara",
+       "texte": "Busco un libro para mi hermano."
+      },
+      {
+       "qui": "Libraria",
+       "texte": "¿Qué libro buscas? Tenemos novelas y cómics."
+      },
+      {
+       "qui": "Sara",
+       "texte": "Una novela, por favor."
+      },
+      {
+       "qui": "Libraria",
+       "texte": "¿[[c|Cuál]] prefieres: la roja o la azul?"
+      },
+      {
+       "qui": "Sara",
+       "texte": "La azul. ¡Gracias!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tienda",
+     "reponse": [
+      "c"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot interrogatif qui demande de **choisir** entre deux livres.",
+     "aide": "Il y a deux livres proposés : on choisit dans un ensemble.",
+     "explication": "**Cuál** demande un choix dans un ensemble (ici la roja ou la azul)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la libraire dit-elle « ¿Qué libro buscas? » et non « ¿Cuál libro buscas? » ?",
+     "options": [
+      "Devant un nom, l’espagnol préfère qué",
+      "Parce que cuál ne s’emploie qu’au pluriel",
+      "Parce que libro est un mot féminin",
+      "Parce que Sara est une cliente régulière"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui suit le mot interrogatif : un nom.",
+     "explication": "**Qué libro** : devant un nom, on emploie *qué* (¿Qué día es hoy?), pas *cuál*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux questions avec **qué** ou **cuál**.",
+     "texte": "¿___ día es hoy? ¿___ de estos dos libros prefieres?",
+     "reponses": [
+      [
+       "Qué"
+      ],
+      [
+       "Cuál"
+      ]
+     ],
+     "banque": [
+      "Qué",
+      "Cuál",
+      "Quién",
+      "Cuánto"
+     ],
+     "aide": "Premier trou : un nom suit. Second trou : on choisit entre deux livres.",
+     "explication": "**¿Qué día es hoy?** (qué devant un nom) et **¿Cuál de estos dos libros prefieres?** (un choix dans un ensemble)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Quel film veux-tu voir ? » La phrase commence par ¿Qué.",
+     "items": [
+      "¿Qué",
+      "película",
+      "quieres",
+      "ver?"
+     ],
+     "aide": "Le nom suit directement qué.",
+     "explication": "**¿Qué película quieres ver?** : qué + nom, puis le verbe, sans inversion du sujet."
+    }
+   ]
+  },
+  {
+   "chapitre": "4b107bff-cc5f-50d3-8c67-6a9e54606d90",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi n’es-tu pas venue ?",
+   "competence": "analyser-document",
+   "situation": "Ana n’est pas venue à la fête de Pablo. Il lui écrit un courriel, et elle lui répond par message.",
+   "documents": [
+    {
+     "id": "correo",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Correo de Pablo",
+     "blocs": [
+      "Hola, Ana:",
+      "Ayer no viniste a mi fiesta y no entiendo el [[n|porqué]]. ¿Por qué no me llamaste?",
+      "Mi madre pregunta [[c|dónde]] vives ahora y yo no sé qué decirle.",
+      "Un abrazo, Pablo"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "resp",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Réponse d’Ana",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Pablo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Perdona, Pablo. No fui [[r|porque]] estaba enferma."
+      },
+      {
+       "qui": "Pablo",
+       "texte": "¡Ah! Entonces no pasa nada."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "correo",
+     "reponse": [
+      "n"
+     ],
+     "multiple": false,
+     "enonce": "Touche le **nom masculin** qui signifie « la raison » dans le courriel.",
+     "aide": "Il s’écrit en un seul mot, avec un accent, après el.",
+     "explication": "**el porqué** est un nom masculin (la raison) : un seul mot, avec accent."
+    },
+    {
+     "type": "zone",
+     "document": "resp",
+     "reponse": [
+      "r"
+     ],
+     "multiple": false,
+     "enonce": "Touche le mot qui **répond** à la question de Pablo (« Pourquoi n’es-tu pas venue ? »).",
+     "aide": "Il introduit la cause, sans accent.",
+     "explication": "**porque** (un mot, sans accent) introduit la réponse, la cause."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la question de Pablo et la réponse d’Ana.",
+     "texte": "¿___ no viniste a mi fiesta? — ___ estaba enferma.",
+     "reponses": [
+      [
+       "Por qué"
+      ],
+      [
+       "Porque"
+      ]
+     ],
+     "banque": [
+      "Por qué",
+      "Porque",
+      "Porqué",
+      "Por que"
+     ],
+     "aide": "La question s’écrit en deux mots avec accent ; la réponse en un mot sans accent.",
+     "explication": "**¿Por qué…? — Porque…** : *por qué* pose la question, *porque* donne la réponse."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : le mot qui introduit la suite est-il interrogatif ou relatif ?",
+     "categories": [
+      "Interrogatif (accent écrit)",
+      "Relatif (sans accent)"
+     ],
+     "items": [
+      [
+       "Mi madre pregunta dónde vives",
+       0
+      ],
+      [
+       "La casa donde vivo es vieja",
+       1
+      ],
+      [
+       "Dime cuándo llegas",
+       0
+      ],
+      [
+       "El libro que leo es nuevo",
+       1
+      ],
+      [
+       "Pregunta cuánto cuesta",
+       0
+      ]
+     ],
+     "aide": "Un relatif reprend un nom ; un interrogatif pose une question, même indirecte.",
+     "explication": "Les mots **interrogatifs** (même dans une question indirecte) portent l’accent ; les **relatifs** comme *donde* ou *que* n’en portent pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la phrase de la mère de Pablo (« …pregunta dónde vives… »), que devient l’écriture de *dónde* ?",
+     "options": [
+      "Il garde son accent, mais sans ¿ ni ?",
+      "Il perd son accent et les signes ¿ ?",
+      "Il garde son accent et reçoit ¿ ?",
+      "Il perd son accent mais reçoit ¿ ?"
+     ],
+     "reponse": 0,
+     "aide": "La question est indirecte : elle n’est pas posée directement.",
+     "explication": "**dónde** garde son accent : dans une interrogation indirecte, l’accent reste, mais les signes ¿ ? disparaissent."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3bb3f4d-72de-5088-83f3-56afc2095443",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un lundi sans envie",
+   "competence": "comprendre-langue",
+   "situation": "Elena invite Hugo à sortir, mais Hugo n’a envie de rien. Ils s’écrivent des messages.",
+   "documents": [
+    {
+     "id": "parque",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Elena et Hugo",
+     "participants": [
+      {
+       "nom": "Elena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elena",
+       "texte": "¡Hola, Hugo! ¿Vienes al parque?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "No, hoy no tengo ganas."
+      },
+      {
+       "qui": "Elena",
+       "texte": "¿Quieres comer algo?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "No quiero [[n|nada]], gracias."
+      },
+      {
+       "qui": "Elena",
+       "texte": "¿Ves a Pablo por la calle?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "No veo a [[n|nadie]] desde mi ventana."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parque",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots négatifs** qui suivent le verbe dans les réponses de Hugo.",
+     "aide": "L’un veut dire « rien », l’autre « personne ».",
+     "explication": "**nada** et **nadie** : après le verbe, le mot négatif s’ajoute à *no* (double négation)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je ne veux rien manger. » La phrase commence par No.",
+     "items": [
+      "No",
+      "quiero",
+      "comer",
+      "nada"
+     ],
+     "aide": "Le no se place juste devant le verbe.",
+     "explication": "**No quiero comer nada** : *no* devant le verbe, le mot négatif après."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Hugo écrit-il « No veo a nadie » et non « Veo a nadie » ?",
+     "options": [
+      "Un mot négatif après le verbe exige no devant le verbe",
+      "No ne se met que devant un nom propre ou un prénom",
+      "Nadie ne peut s’employer qu’au début de la phrase",
+      "Veo a nadie est correct mais un peu moins poli"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la double négation espagnole.",
+     "explication": "**No veo a nadie** : un mot négatif placé après le verbe exige *no* devant le verbe. Deux négations se renforcent."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3bb3f4d-72de-5088-83f3-56afc2095443",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Que font-ils à la récré ?",
+   "competence": "lire-tableau",
+   "situation": "Un professeur d’espagnol a noté ce que font trois élèves pendant la récréation. Il en tire des phrases négatives.",
+   "documents": [
+    {
+     "id": "recreo",
+     "type": "tableau",
+     "titre": "El recreo de tres amigos",
+     "colonnes": [
+      "Persona",
+      "Fútbol",
+      "Música",
+      "Ordenador"
+     ],
+     "lignes": [
+      [
+       "Lola",
+       "no",
+       "no",
+       "no"
+      ],
+      [
+       "Iván",
+       "no",
+       "sí",
+       "no"
+      ],
+      [
+       "Marta",
+       "sí",
+       "sí",
+       "no"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice (« sí » : l’élève le fait)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Selon le tableau, quelle phrase est correcte pour Lola ?",
+     "options": [
+      "Lola no hace nada en el recreo.",
+      "Lola hace nada en el recreo.",
+      "Lola no hace ninguno en el recreo.",
+      "Lola hace no nada en el recreo."
+     ],
+     "reponse": 0,
+     "aide": "Lola ne fait aucune des trois activités.",
+     "explication": "**Lola no hace nada** : le mot négatif *nada* placé après le verbe demande *no* devant le verbe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Dans la colonne « Ordenador », il n’y a que des « no ». Complète avec le bon mot.",
+     "texte": "___ de los tres usa el ordenador. No hay ___ chico que lo use.",
+     "reponses": [
+      [
+       "ninguno"
+      ],
+      [
+       "ningún"
+      ]
+     ],
+     "banque": [
+      "ninguno",
+      "ningún",
+      "nunca",
+      "nada"
+     ],
+     "aide": "Ninguno devient ningún devant un nom masculin singulier.",
+     "explication": "**Ninguno de los tres** (seul, il garde sa forme) et **ningún chico** (devant un nom masculin singulier, il s’apocope)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot négatif à sa traduction.",
+     "paires": [
+      [
+       "nada",
+       "rien"
+      ],
+      [
+       "nadie",
+       "personne"
+      ],
+      [
+       "nunca",
+       "jamais"
+      ],
+      [
+       "tampoco",
+       "non plus"
+      ]
+     ],
+     "aide": "Ces mots s’emploient tous avec no quand ils suivent le verbe.",
+     "explication": "**nada** rien, **nadie** personne, **nunca** jamais, **tampoco** non plus."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Lola ne joue pas au foot ; Iván répond « Moi non plus ». Remets en ordre sa phrase, qui commence par Yo.",
+     "items": [
+      "Yo",
+      "tampoco",
+      "juego",
+      "al fútbol"
+     ],
+     "aide": "Tampoco passe devant le verbe : le no disparaît.",
+     "explication": "**Yo tampoco juego al fútbol** : quand le mot négatif passe avant le verbe, on n’écrit pas *no*."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3bb3f4d-72de-5088-83f3-56afc2095443",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pero ou sino ?",
+   "competence": "manier-langue",
+   "situation": "Carmen se présente à sa correspondante, puis le lycée annonce un concert. Il faut choisir entre « pero » et « sino ».",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carmen se presenta",
+     "blocs": [
+      "Hola, soy Carmen. No soy de Madrid, [[s|sino]] de Sevilla.",
+      "Mi hermano Raúl no estudia en mi colegio, [[s|sino]] en otro.",
+      "Raúl es muy tímido, [[p|pero]] canta muy bien.",
+      "En clase no habla, [[s|sino]] que susurra."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "afiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Concierto del instituto",
+     "sousTitre": "Sábado, 18 h",
+     "emoji": "🎻",
+     "lignes": [
+      {
+       "texte": "No es un concierto de rock,"
+      },
+      {
+       "texte": "sino un concierto de música clásica."
+      }
+     ],
+     "pied": "Entrada gratuita",
+     "teinte": "violet",
+     "titre": "Affiche du lycée",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois mots** qui **rectifient** ce qui vient d’être nié.",
+     "aide": "Ils suivent une négation et introduisent la bonne information.",
+     "explication": "**sino** (trois fois) : après une négation, il rectifie. « No soy de Madrid, sino de Sevilla. »"
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Carmen écrit-elle « Raúl es muy tímido, pero canta muy bien » ?",
+     "options": [
+      "Pero oppose deux idées sans rectifier de négation",
+      "Pero ne s’emploie qu’avec le verbe cantar",
+      "Sino ne s’emploie jamais après un adjectif",
+      "Raúl est présenté comme un garçon qui n’est pas timide"
+     ],
+     "reponse": 0,
+     "aide": "Y a-t-il une négation à rectifier dans cette phrase ?",
+     "explication": "**Pero** oppose deux idées (timide / chante bien) ; il n’y a aucune négation à corriger, donc pas de *sino*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec **pero**, **sino** ou **sino que**.",
+     "texte": "Carmen no es alta, ___ baja. Es baja, ___ muy rápida. No cierra la puerta, ___ la abre.",
+     "reponses": [
+      [
+       "sino"
+      ],
+      [
+       "pero"
+      ],
+      [
+       "sino que"
+      ]
+     ],
+     "banque": [
+      "pero",
+      "sino",
+      "sino que",
+      "ni"
+     ],
+     "aide": "Rectifier : sino. Opposer : pero. Devant un verbe conjugué : sino que.",
+     "explication": "**sino** (alta ≠ baja), **pero** (opposition simple), **sino que** (devant le verbe conjugué *abre*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre le début de l’affiche : « Ce n’est pas un cours, mais un concert. » La phrase commence par No.",
+     "items": [
+      "No",
+      "es",
+      "un curso",
+      "sino",
+      "un concierto"
+     ],
+     "aide": "Sino rectifie ce qui vient d’être nié.",
+     "explication": "**No es un curso sino un concierto** : la négation, puis *sino* pour rectifier."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le mot qui manque.",
+     "categories": [
+      "pero (oppose)",
+      "sino (rectifie)"
+     ],
+     "items": [
+      [
+       "No es caro, ___ barato",
+       1
+      ],
+      [
+       "Es pequeño, ___ muy fuerte",
+       0
+      ],
+      [
+       "No bebo café, ___ té",
+       1
+      ],
+      [
+       "Estoy cansado, ___ voy al cine",
+       0
+      ]
+     ],
+     "aide": "Peut-on corriger ce qui vient d’être nié par un terme opposé ?",
+     "explication": "**sino** rectifie après une négation (caro → barato, café → té) ; **pero** oppose sans rectifier."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9d22475-f5ef-5d78-be30-e345a4633c19",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui nettoie le tableau ?",
+   "competence": "comprendre-langue",
+   "situation": "Dans la classe d’Álex, la professeure fait des annonces par message. Les virgules changent tout.",
+   "documents": [
+    {
+     "id": "clase",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Groupe de classe",
+     "participants": [
+      {
+       "nom": "Profesora",
+       "emoji": "👩‍🏫",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Álex",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Profesora",
+       "texte": "Los alumnos que llegan tarde limpian la pizarra."
+      },
+      {
+       "qui": "Álex",
+       "texte": "Yo llego tarde a veces. ¿Y mis compañeros?"
+      },
+      {
+       "qui": "Profesora",
+       "texte": "Tus compañeros, [[e|que]] llegan temprano, ganan un punto."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui doit nettoyer le tableau ?",
+     "options": [
+      "Seulement les élèves qui arrivent en retard",
+      "Tous les élèves de la classe",
+      "Personne",
+      "Seulement les élèves qui arrivent à l’heure"
+     ],
+     "reponse": 0,
+     "aide": "La première relative n’a pas de virgules.",
+     "explication": "Sans virgules, la relative est **déterminative** : elle restreint. Seuls ceux qui arrivent en retard nettoient."
+    },
+    {
+     "type": "zone",
+     "document": "clase",
+     "reponse": [
+      "e"
+     ],
+     "multiple": false,
+     "enonce": "Touche le « que » de la relative **explicative** (celle qui est entre virgules).",
+     "aide": "C’est dans le dernier message de la professeure.",
+     "explication": "**que** entre virgules : la relative ajoute une information (tous les camarades arrivent tôt)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « La maison dans laquelle je vis. » La phrase commence par La.",
+     "items": [
+      "La",
+      "casa",
+      "en la que",
+      "vivo"
+     ],
+     "aide": "La préposition précède toujours le relatif.",
+     "explication": "**La casa en la que vivo** : en espagnol, la préposition ne se rejette jamais à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9d22475-f5ef-5d78-be30-e345a4633c19",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une secrétaire pour l’entreprise",
+   "competence": "analyser-document",
+   "situation": "L’entreprise Solmar recrute. Une annonce décrit la personne cherchée, et deux collègues discutent d’une secrétaire déjà connue.",
+   "documents": [
+    {
+     "id": "anuncio",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Se busca secretaria",
+     "blocs": [
+      "La empresa Solmar busca una secretaria que [[s|hable]] inglés y que [[s|tenga]] coche.",
+      "De momento no hay ningún candidato que [[s|sepa]] ruso."
+     ],
+     "source": "Annonce écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages au bureau",
+     "participants": [
+      {
+       "nom": "Jefe",
+       "emoji": "👨",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Marta",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jefe",
+       "texte": "¿Conoces a la secretaria que habla inglés?"
+      },
+      {
+       "qui": "Marta",
+       "texte": "Sí, la conozco. Se llama Ana."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "anuncio",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes au subjonctif** de l’annonce.",
+     "aide": "Ils décrivent une personne qu’on ne connaît pas encore.",
+     "explication": "**hable, tenga, sepa** : l’antécédent est indéfini ou nié, donc la relative est au subjonctif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le message du chef, pourquoi *habla* est-il à l’indicatif ?",
+     "options": [
+      "Il parle d’une secrétaire précise, déjà connue",
+      "Parce que la phrase est écrite au présent",
+      "Parce que inglés est un nom masculin",
+      "Parce que Marta répond « oui » ensuite"
+     ],
+     "reponse": 0,
+     "aide": "Le chef connaît-il la secrétaire dont il parle ?",
+     "explication": "**habla** : l’antécédent est connu, réel (Ana), donc on emploie l’indicatif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon verbe.",
+     "texte": "Mi jefe busca a la secretaria que ___ por teléfono: es Ana. No conozco a nadie que ___ la respuesta.",
+     "reponses": [
+      [
+       "habla"
+      ],
+      [
+       "sepa"
+      ]
+     ],
+     "banque": [
+      "habla",
+      "hable",
+      "sabe",
+      "sepa"
+     ],
+     "aide": "La première secrétaire est connue ; la seconde personne est niée.",
+     "explication": "**que habla** (antécédent connu : indicatif) et **que sepa** (antécédent nié : subjonctif)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le mode de la relative.",
+     "categories": [
+      "Antécédent connu : indicatif",
+      "Antécédent indéfini ou nié : subjonctif"
+     ],
+     "items": [
+      [
+       "Conozco a un chico que habla chino",
+       0
+      ],
+      [
+       "Busco un chico que hable chino",
+       1
+      ],
+      [
+       "No hay nadie que hable chino",
+       1
+      ],
+      [
+       "Tengo un amigo que habla chino",
+       0
+      ]
+     ],
+     "aide": "Le chico existe-t-il déjà, ou reste-t-il à trouver ?",
+     "explication": "L’indicatif quand on connaît la personne ; le subjonctif quand on la cherche ou qu’on nie qu’elle existe."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9d22475-f5ef-5d78-be30-e345a4633c19",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La lettre de Diego",
+   "competence": "manier-langue",
+   "situation": "Diego écrit à sa cousine Julia depuis sa nouvelle maison. Dans sa lettre, il emploie plusieurs relatives.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Diego",
+     "blocs": [
+      "Querida Julia:",
+      "Mi vecino toca la trompeta de noche, [[l|lo]] [[l|que]] no nos deja dormir.",
+      "Mi hermana Rosa, quien vive en Lima, llega mañana. Los primos que viven en Cádiz llegan el domingo.",
+      "Un abrazo, Diego"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui reprennent **toute l’idée** de la première partie de la phrase du voisin.",
+     "aide": "C’est un pronom neutre en deux mots.",
+     "explication": "**lo que** reprend une idée entière (il joue de la trompette de nuit) ; on n’emploie jamais *el que* pour une phrase."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la lettre, que fait la relative « quien vive en Lima » ?",
+     "options": [
+      "Elle ajoute une information sur Rosa sans la distinguer",
+      "Elle distingue Rosa des autres sœurs de Diego",
+      "Elle remplace le sujet de la phrase principale",
+      "Elle exprime un doute à propos de Rosa et du voyage"
+     ],
+     "reponse": 0,
+     "aide": "Elle est entourée de virgules.",
+     "explication": "Entre virgules, la relative est **explicative** : elle ajoute une information. *Quien* est possible pour une personne."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le garçon dont je parle. » La phrase commence par El.",
+     "items": [
+      "El",
+      "chico",
+      "del que",
+      "hablo"
+     ],
+     "aide": "La préposition de se place avant le relatif.",
+     "explication": "**El chico del que hablo** : *de* + *el que* se contractent en *del que*, devant le verbe."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon relatif.",
+     "texte": "El libro del ___ te hablé es este. El escritor ___ novela leí es famoso. Llegó tarde, ___ me molestó.",
+     "reponses": [
+      [
+       "que"
+      ],
+      [
+       "cuya"
+      ],
+      [
+       "lo que"
+      ]
+     ],
+     "banque": [
+      "que",
+      "quien",
+      "cuya",
+      "cuyo",
+      "lo que"
+     ],
+     "aide": "Cuyo s’accorde avec ce qui est possédé : novela.",
+     "explication": "**del que**, **cuya novela** (accord avec novela, féminin) et **lo que** (il reprend la phrase entière)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : la relative est-elle déterminative (elle restreint) ou explicative (elle ajoute) ?",
+     "categories": [
+      "Déterminative (elle restreint)",
+      "Explicative (elle ajoute)"
+     ],
+     "items": [
+      [
+       "Los vecinos, que son simpáticos, nos ayudan",
+       1
+      ],
+      [
+       "Los perros que ladran mucho molestan",
+       0
+      ],
+      [
+       "Mi tía, que vive en Lima, llega mañana",
+       1
+      ],
+      [
+       "Las chicas que juegan al fútbol entrenan hoy",
+       0
+      ]
+     ],
+     "aide": "Regarde les virgules.",
+     "explication": "Avec virgules : explicative (elle s’applique à tous). Sans virgules : déterminative (elle restreint)."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb388e43-4965-528e-a0e2-9ffaaa6152d0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une invitation pour samedi",
+   "competence": "comprendre-langue",
+   "situation": "Laura organise une fête et invite son ami Pedro par message.",
+   "documents": [
+    {
+     "id": "fiesta",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Laura et Pedro",
+     "participants": [
+      {
+       "nom": "Laura",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Pedro",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Laura",
+       "texte": "¡Hola, Pedro! Quiero que [[s|vengas]] a mi fiesta el sábado."
+      },
+      {
+       "qui": "Pedro",
+       "texte": "¡Genial! Creo que puedo ir. Espero que [[s|haya]] pizza."
+      },
+      {
+       "qui": "Laura",
+       "texte": "Sí, y veo que tienes hambre. ¡Hasta el sábado!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiesta",
+     "reponse": [
+      "s"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes au subjonctif** des messages.",
+     "aide": "Ils suivent un verbe de volonté ou de souhait.",
+     "explication": "**vengas** et **haya** : après *quiero que* (volonté) et *espero que* (souhait), le verbe est au subjonctif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Laura écrit-elle « Quiero que vengas » et non « Quiero que vienes » ?",
+     "options": [
+      "Après un verbe de volonté, on emploie le subjonctif",
+      "Après quiero que, on emploie toujours l’infinitif",
+      "Vienes est une forme du subjonctif",
+      "Le subjonctif remplace le futur dans les invitations"
+     ],
+     "reponse": 0,
+     "aide": "Quiero exprime une volonté.",
+     "explication": "**Quiero que vengas** : une volonté appelle le subjonctif dans la complétive."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon verbe.",
+     "texte": "Creo que Pedro ___ ir a la fiesta.",
+     "reponses": [
+      [
+       "puede"
+      ]
+     ],
+     "banque": [
+      "puede",
+      "pueda",
+      "poder",
+      "pudiera"
+     ],
+     "aide": "Creer une opinion affirmée : quel mode ?",
+     "explication": "**Creo que puede** : une opinion affirmée se construit avec l’indicatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb388e43-4965-528e-a0e2-9ffaaa6152d0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le journal de Marina",
+   "competence": "manier-langue",
+   "situation": "Marina a un examen la semaine prochaine. Elle écrit ce qu’elle veut, ce qu’elle craint et ce qu’elle espère.",
+   "documents": [
+    {
+     "id": "diario",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "El diario de Marina",
+     "blocs": [
+      "Querido diario:",
+      "Hoy quiero [[a|ir]] al cine, pero mi madre quiere que [[b|estudie]] más.",
+      "Dudo que el examen [[b|sea]] difícil. Creo que [[c|sé]] casi todo.",
+      "¡Ojalá [[b|apruebe]]!"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Marina écrit-elle « quiero ir » sans *que* ?",
+     "options": [
+      "Le sujet ne change pas : on garde l’infinitif",
+      "Le subjonctif est interdit avec quiero",
+      "Parce que ir est un verbe irrégulier",
+      "Parce que la phrase est une question"
+     ],
+     "reponse": 0,
+     "aide": "Qui veut ? Qui va au cinéma ?",
+     "explication": "**Quiero ir** : même sujet (Marina), donc infinitif. Avec un autre sujet : *quiere que estudie*."
+    },
+    {
+     "type": "zone",
+     "document": "diario",
+     "reponse": [
+      "b"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes au subjonctif** du journal.",
+     "aide": "Ils suivent une volonté, un doute et un souhait.",
+     "explication": "**estudie, sea, apruebe** : volonté (*quiere que*), doute (*dudo que*) et souhait (*ojalá*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque début de phrase selon le mode qui suit.",
+     "categories": [
+      "Indicatif",
+      "Subjonctif"
+     ],
+     "items": [
+      [
+       "Veo que…",
+       0
+      ],
+      [
+       "Creo que…",
+       0
+      ],
+      [
+       "Dudo que…",
+       1
+      ],
+      [
+       "Es necesario que…",
+       1
+      ],
+      [
+       "Es verdad que…",
+       0
+      ],
+      [
+       "No creo que…",
+       1
+      ]
+     ],
+     "aide": "Déclaration, perception, certitude : indicatif. Volonté, doute, jugement, certitude niée : subjonctif.",
+     "explication": "L’**indicatif** pour une déclaration, une perception ou une certitude ; le **subjonctif** pour un doute, un jugement ou une certitude niée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ma mère veut que j’étudie beaucoup. » La phrase commence par Mi.",
+     "items": [
+      "Mi madre",
+      "quiere que",
+      "estudie",
+      "mucho"
+     ],
+     "aide": "Le verbe de volonté est suivi de que + subjonctif.",
+     "explication": "**Mi madre quiere que estudie mucho** : le *que* ne se supprime jamais en espagnol."
+    }
+   ]
+  },
+  {
+   "chapitre": "eb388e43-4965-528e-a0e2-9ffaaa6152d0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quería que vinieras",
+   "competence": "manier-langue",
+   "situation": "Marta raconte dans son journal une semaine d’examens. Un tableau l’aide à passer du présent au passé.",
+   "documents": [
+    {
+     "id": "diario",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Diario de Marta",
+     "blocs": [
+      "Ayer, mi profesora quería que [[p|estudiáramos]] más. Decía que era necesario que [[p|hiciéramos]] los deberes cada día. Yo creía que [[i|sabía]] mucho, pero dudaba que el examen [[p|fuera]] fácil."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "tabla",
+     "type": "tableau",
+     "titre": "Del presente al pasado",
+     "colonnes": [
+      "Presente",
+      "Pasado"
+     ],
+     "lignes": [
+      [
+       "Quiero que vengas",
+       "?"
+      ],
+      [
+       "Es necesario que estudies",
+       "?"
+      ],
+      [
+       "Espero que me llames",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "diario",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois verbes à l’imparfait du subjonctif** du journal.",
+     "aide": "Le verbe principal est au passé : le subjonctif aussi.",
+     "explication": "**estudiáramos, hiciéramos, fuera** : après un verbe principal au passé, le subjonctif présent devient imparfait du subjonctif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les trois phrases au passé, comme dans le tableau.",
+     "texte": "Quería que tú ___ a mi fiesta. Era necesario que tú ___ más. Esperaba que me ___ por teléfono.",
+     "reponses": [
+      [
+       "vinieras",
+       "vinieses"
+      ],
+      [
+       "estudiaras",
+       "estudiases"
+      ],
+      [
+       "llamaras",
+       "llamases"
+      ]
+     ],
+     "banque": [
+      "vinieras",
+      "estudiaras",
+      "llamaras",
+      "vengas",
+      "estudies",
+      "llames"
+     ],
+     "aide": "Le verbe principal est à l’imparfait : choisis l’imparfait du subjonctif.",
+     "explication": "**vinieras, estudiaras, llamaras** : imparfait du subjonctif (les formes en -se sont équivalentes)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « creía que sabía » est-il à l’indicatif alors que « dudaba que fuera » est au subjonctif ?",
+     "options": [
+      "Croire exprime une certitude, douter un doute",
+      "Sabía est au passé et fuera au présent",
+      "Dudar est toujours suivi de l’infinitif",
+      "Le journal est écrit à la première personne"
+     ],
+     "reponse": 0,
+     "aide": "Le mode dépend du sens du verbe principal.",
+     "explication": "**creía que + indicatif** (opinion affirmée) mais **dudaba que + subjonctif** (doute)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon la construction.",
+     "categories": [
+      "Même sujet : infinitif",
+      "Sujets différents : que + subjonctif"
+     ],
+     "items": [
+      [
+       "Quiero venir",
+       0
+      ],
+      [
+       "Quiero que vengas",
+       1
+      ],
+      [
+       "Espero llegar pronto",
+       0
+      ],
+      [
+       "Espero que llegues pronto",
+       1
+      ]
+     ],
+     "aide": "Qui veut ? Qui vient ?",
+     "explication": "Même sujet : on garde l’**infinitif**. Sujets différents : **que + subjonctif**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je ne crois pas qu’il vienne. » La phrase commence par No.",
+     "items": [
+      "No",
+      "creo",
+      "que",
+      "venga"
+     ],
+     "aide": "Nier la certitude fait changer de mode.",
+     "explication": "**No creo que venga** : après *no creo que*, la certitude est niée : subjonctif."
+    }
+   ]
+  },
+  {
+   "chapitre": "a04947dc-2ff3-566d-91ff-1148d578f15f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La liste de courses",
+   "competence": "lire-tableau",
+   "situation": "Inés fait les courses pour la famille. Sa liste est imprimée sur un ticket, et elle se méfie des genres : ils ne sont pas les mêmes qu’en français.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Supermercado Sol",
+     "sousTitre": "Lista de la compra",
+     "emoji": "🛒",
+     "lignes": [
+      {
+       "texte": "la leche",
+       "valeur": "1,20 €",
+       "id": "leche"
+      },
+      {
+       "texte": "el queso",
+       "valeur": "3,50 €",
+       "id": "queso"
+      },
+      {
+       "texte": "la sal",
+       "valeur": "0,80 €",
+       "id": "sal"
+      },
+      {
+       "texte": "el pan",
+       "valeur": "1,10 €",
+       "id": "pan"
+      },
+      {
+       "texte": "la miel",
+       "valeur": "4,00 €",
+       "id": "miel"
+      }
+     ],
+     "pied": "Gracias por su visita",
+     "teinte": "bleu",
+     "titre": "Ticket de caisse",
+     "source": "Ticket écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ticket",
+     "reponse": [
+      "leche",
+      "sal",
+      "miel"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois produits** féminins en espagnol alors que le mot français est **masculin**.",
+     "aide": "Le lait, le sel et le miel : en français, ce sont des mots masculins.",
+     "explication": "**la leche, la sal, la miel** : ces noms sont féminins en espagnol alors que « lait, sel, miel » sont masculins en français. On les apprend avec leur article."
+    },
+    {
+     "type": "trous",
+     "enonce": "Inés prend un crayon, puis deux autres : elle en a trois. Complète.",
+     "texte": "Hay un lápiz y dos más: tengo tres ___.",
+     "reponses": [
+      [
+       "lápices"
+      ]
+     ],
+     "banque": [
+      "lápices",
+      "lápizes",
+      "lápiz",
+      "lápizs"
+     ],
+     "aide": "Les noms en -z font leur pluriel en -ces.",
+     "explication": "**lápices** : le -z devient -c devant -es (lápiz → lápices)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nom selon son article.",
+     "categories": [
+      "la (féminin)",
+      "el (masculin)"
+     ],
+     "items": [
+      [
+       "canción",
+       0
+      ],
+      [
+       "viaje",
+       1
+      ],
+      [
+       "ciudad",
+       0
+      ],
+      [
+       "color",
+       1
+      ],
+      [
+       "libertad",
+       0
+      ],
+      [
+       "amor",
+       1
+      ]
+     ],
+     "aide": "Les terminaisons -ción et -dad sont féminines ; -aje et -or sont masculines.",
+     "explication": "**-ción, -dad, -tad** → féminin ; **-aje, -or** → masculin."
+    }
+   ]
+  },
+  {
+   "chapitre": "a04947dc-2ff3-566d-91ff-1148d578f15f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pluriel en un coup d’œil",
+   "competence": "manier-langue",
+   "situation": "La professeure d’espagnol affiche un tableau à compléter : le pluriel ne se forme pas toujours avec un simple -s.",
+   "documents": [
+    {
+     "id": "plural",
+     "type": "tableau",
+     "titre": "Singular y plural",
+     "colonnes": [
+      "Singular",
+      "Plural"
+     ],
+     "lignes": [
+      [
+       "el papel",
+       "?"
+      ],
+      [
+       "la canción",
+       "?"
+      ],
+      [
+       "el examen",
+       "?"
+      ],
+      [
+       "la vez",
+       "?"
+      ],
+      [
+       "el lunes",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète le tableau avec la bonne forme du pluriel.",
+     "texte": "el papel → los ___ ; la canción → las ___ ; el examen → los ___ ; la vez → las ___ ; el lunes → los ___",
+     "reponses": [
+      [
+       "papeles"
+      ],
+      [
+       "canciones"
+      ],
+      [
+       "exámenes"
+      ],
+      [
+       "veces"
+      ],
+      [
+       "lunes"
+      ]
+     ],
+     "banque": [
+      "papeles",
+      "canciones",
+      "exámenes",
+      "veces",
+      "lunes",
+      "papels",
+      "cancións",
+      "examenes",
+      "vezes"
+     ],
+     "aide": "Après une consonne : -es ; -z devient -ces ; un mot en -s non accentué sur la dernière syllabe ne change pas.",
+     "explication": "**papeles, canciones, exámenes, veces, lunes** : -es après consonne, -z → -ces, et *lunes* est invariable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces noms du tableau, lequel gagne un accent écrit au pluriel ?",
+     "options": [
+      "el examen",
+      "la canción",
+      "el papel",
+      "la vez"
+     ],
+     "reponse": 0,
+     "aide": "L’accent suit la prononciation : où tombe l’accent tonique ?",
+     "explication": "**examen → exámenes** : l’accent apparaît pour garder la même prononciation. *canción* perd son accent (canciones)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nom masculin à son féminin.",
+     "paires": [
+      [
+       "el niño",
+       "la niña"
+      ],
+      [
+       "el profesor",
+       "la profesora"
+      ],
+      [
+       "el francés",
+       "la francesa"
+      ],
+      [
+       "el estudiante",
+       "la estudiante"
+      ]
+     ],
+     "aide": "Certains noms ne changent pas : seul l’article varie.",
+     "explication": "On change -o en -a, on ajoute -a après -or ou -és, et *estudiante* est invariable."
+    }
+   ]
+  },
+  {
+   "chapitre": "a04947dc-2ff3-566d-91ff-1148d578f15f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une carte postale de Grenade",
+   "competence": "analyser-document",
+   "situation": "Sofía est en voyage à Grenade. Elle écrit à son amie Elena, et le professeur en tire un tableau de pluriels.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Sofía",
+     "blocs": [
+      "Querida Elena:",
+      "Granada es preciosa. El [[m|clima]] es seco y no hay ningún [[m|problema]] con el [[m|idioma]]: todos hablan despacio.",
+      "Ayer visité el museo y vi un cuadro con mucha sangre. Luego comí pan con miel.",
+      "Un abrazo, Sofía"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "plurales",
+     "type": "tableau",
+     "titre": "Pluriels à compléter",
+     "colonnes": [
+      "Singular",
+      "Plural"
+     ],
+     "lignes": [
+      [
+       "la crisis",
+       "?"
+      ],
+      [
+       "el rubí",
+       "?"
+      ],
+      [
+       "el jueves",
+       "?"
+      ],
+      [
+       "la luz",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois noms masculins** terminés en -a dans la lettre.",
+     "aide": "Ce sont des mots d’origine grecque : el … ma.",
+     "explication": "**clima, problema, idioma** : les noms en -ma d’origine grecque sont masculins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase de Sofía est correcte ?",
+     "options": [
+      "El color de la sangre es rojo.",
+      "La color de la sangre es rojo.",
+      "El color de el sangre es rojo.",
+      "La color del sangre es rojo."
+     ],
+     "reponse": 0,
+     "aide": "Color est masculin, sangre est féminin.",
+     "explication": "**El color de la sangre** : *el color* (masculin) et *la sangre* (féminin) ; *de el* ne s’écrit jamais."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les pluriels du tableau.",
+     "texte": "la crisis → las ___ ; el rubí → los ___ ; el jueves → los ___ ; la luz → las ___",
+     "reponses": [
+      [
+       "crisis"
+      ],
+      [
+       "rubíes"
+      ],
+      [
+       "jueves"
+      ],
+      [
+       "luces"
+      ]
+     ],
+     "banque": [
+      "crisis",
+      "rubíes",
+      "jueves",
+      "luces",
+      "rubís",
+      "luzes",
+      "crises"
+     ],
+     "aide": "Voyelle accentuée : -es. Mot en -s non accentué sur la dernière syllabe : invariable. -z : -ces.",
+     "explication": "**crisis** et **jueves** sont invariables ; **rubíes** (voyelle accentuée + -es) ; **luces** (-z → -ces)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nom selon la formation de son pluriel.",
+     "categories": [
+      "+ s",
+      "+ es",
+      "z → ces",
+      "Invariable"
+     ],
+     "items": [
+      [
+       "casa",
+       0
+      ],
+      [
+       "papel",
+       1
+      ],
+      [
+       "lápiz",
+       2
+      ],
+      [
+       "crisis",
+       3
+      ],
+      [
+       "vez",
+       2
+      ],
+      [
+       "ciudad",
+       1
+      ],
+      [
+       "libro",
+       0
+      ],
+      [
+       "lunes",
+       3
+      ]
+     ],
+     "aide": "Regarde la dernière lettre du mot.",
+     "explication": "Voyelle → **-s** ; consonne → **-es** ; **-z → -ces** ; -s non accentué sur la dernière syllabe → **invariable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9425be5-5b91-5b40-b1a5-300fb1aa9e8a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un après-midi au cinéma",
+   "competence": "comprendre-langue",
+   "situation": "Ana et Leo s’écrivent avant d’aller au cinéma. Leo a soif.",
+   "documents": [
+    {
+     "id": "cine",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ana et Leo",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Hola, Leo. Hoy voy [[c|al]] cine con unos amigos. ¿Vienes?"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Sí. Vuelvo [[c|del]] colegio a las seis. ¿Tienes agua fría?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Sí, [[e|el]] agua está en mi mochila."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cine",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux contractions** des messages.",
+     "aide": "Elles sont formées de a + el et de de + el.",
+     "explication": "**al** (a + el) et **del** (de + el) : les deux seules contractions de l’espagnol."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Ana écrit-elle « el agua » et non « la agua » ?",
+     "options": [
+      "Agua est féminin, mais a un a initial tonique",
+      "Agua est en réalité un nom masculin",
+      "Agua s’emploie toujours au pluriel",
+      "On met toujours el devant une boisson"
+     ],
+     "reponse": 0,
+     "aide": "Le nom reste féminin : regarde ce qui suit, « fría ».",
+     "explication": "**el agua fría** : devant un nom féminin singulier qui commence par un *a* tonique, on emploie *el* (le nom reste féminin)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la contraction.",
+     "texte": "La casa ___ profesor es grande.",
+     "reponses": [
+      [
+       "del"
+      ]
+     ],
+     "banque": [
+      "del",
+      "de el",
+      "al",
+      "a el"
+     ],
+     "aide": "de + el se contractent toujours.",
+     "explication": "**del profesor** : de + el = del."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9425be5-5b91-5b40-b1a5-300fb1aa9e8a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Moi, professeur",
+   "competence": "manier-langue",
+   "situation": "Carlos présente sa famille dans un courriel à son futur correspondant français.",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Presentación de Carlos",
+     "blocs": [
+      "Hola, me llamo Carlos y soy profesor de francés en Madrid.",
+      "Mi mujer es médica: es [[u|una]] médica excelente. Cada tarde vamos al parque, donde vive un águila blanca."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Carlos écrit-il « soy profesor » sans article ?",
+     "options": [
+      "Une profession en attribut se dit sans article",
+      "Parce que profesor est féminin",
+      "Parce qu’après soy on omet toujours l’article",
+      "Parce que la phrase est une question"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec « es una médica excelente ».",
+     "explication": "**Soy profesor** : une profession en attribut se dit sans article. L’article réapparaît quand on ajoute un adjectif."
+    },
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "u"
+     ],
+     "multiple": false,
+     "enonce": "Touche l’article qui **réapparaît** parce que la profession est qualifiée par un adjectif.",
+     "aide": "C’est dans la phrase sur sa femme.",
+     "explication": "**una** médica excelente : dès que la profession est qualifiée, l’article revient."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec l’article qui convient.",
+     "texte": "Hay ___ águila en el árbol.",
+     "reponses": [
+      [
+       "un"
+      ]
+     ],
+     "banque": [
+      "un",
+      "una",
+      "el",
+      "la"
+     ],
+     "aide": "Águila est féminin, mais commence par un a tonique.",
+     "explication": "**Hay un águila** : devant un a tonique, on emploie *un* et non *una*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Tu ne sais pas combien je suis fatigué. » La phrase commence par No.",
+     "items": [
+      "No",
+      "sabes",
+      "lo",
+      "cansado",
+      "que",
+      "estoy"
+     ],
+     "aide": "Lo + adjectif + que exprime l’intensité.",
+     "explication": "**No sabes lo cansado que estoy** : lo + adjectif + que."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9425be5-5b91-5b40-b1a5-300fb1aa9e8a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le meilleur du voyage",
+   "competence": "manier-langue",
+   "situation": "Une lycéenne raconte son stage de plongée. Elle emploie le neutre *lo* et plusieurs noms féminins un peu particuliers.",
+   "documents": [
+    {
+     "id": "viaje",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Lo mejor del viaje",
+     "blocs": [
+      "[[n|Lo]] mejor del viaje fue el agua del mar, aunque estaba muy fría.",
+      "[[n|Lo]] difícil fue levantarse temprano: no sabes [[n|lo]] cansada que estaba."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "palabras",
+     "type": "tableau",
+     "titre": "Las palabras del viaje",
+     "colonnes": [
+      "Nom",
+      "Article"
+     ],
+     "lignes": [
+      [
+       "agua",
+       "?"
+      ],
+      [
+       "avenida",
+       "?"
+      ],
+      [
+       "hambre",
+       "?"
+      ],
+      [
+       "harina",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "viaje",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois « lo »** neutres du texte.",
+     "aide": "Ils précèdent un adjectif.",
+     "explication": "**Lo mejor, lo difícil, lo cansada** : le neutre *lo* précède un adjectif et ne se met jamais devant un nom."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le tableau avec l’article défini singulier.",
+     "texte": "agua → ___ ; avenida → ___ ; hambre → ___ ; harina → ___",
+     "reponses": [
+      [
+       "el"
+      ],
+      [
+       "la"
+      ],
+      [
+       "el"
+      ],
+      [
+       "la"
+      ]
+     ],
+     "banque": [
+      "el",
+      "la",
+      "los",
+      "las"
+     ],
+     "aide": "Le test est l’accent tonique : tombe-t-il sur le a initial ?",
+     "explication": "**el agua, la avenida, el hambre, la harina** : *el* seulement quand l’accent tonique est sur le a initial (agua, hambre)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à son sens.",
+     "paires": [
+      [
+       "lo importante",
+       "ce qui est important"
+      ],
+      [
+       "lo mejor",
+       "le meilleur"
+      ],
+      [
+       "lo difícil",
+       "ce qui est difficile"
+      ],
+      [
+       "lo que dices",
+       "ce que tu dis"
+      ]
+     ],
+     "aide": "Le neutre lo exprime une idée abstraite.",
+     "explication": "*lo* + adjectif donne une qualité abstraite ; *lo que* signifie « ce que »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « la avenida » alors qu’on dit « el agua » ?",
+     "options": [
+      "Le a initial d’avenida n’est pas accentué",
+      "Avenida est en réalité un nom masculin",
+      "Avenida commence par une consonne",
+      "Avenida est toujours employé au pluriel"
+     ],
+     "reponse": 0,
+     "aide": "Prononce avenida : quelle syllabe est accentuée ?",
+     "explication": "**la avenida** : l’accent tonique est sur *-ni-*, donc la règle de *el* devant a tonique ne s’applique pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je ne comprends pas ce que tu dis. » La phrase commence par No.",
+     "items": [
+      "No",
+      "entiendo",
+      "lo que",
+      "dices"
+     ],
+     "aide": "Lo que signifie « ce que ».",
+     "explication": "**No entiendo lo que dices** : *lo que* est le neutre « ce que »."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4ca5d29-5667-5856-ba87-6906259b35d2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel melon choisir ?",
+   "competence": "comprendre-langue",
+   "situation": "Au marché de Valence, une cliente hésite entre plusieurs melons. Elle discute avec le marchand.",
+   "documents": [
+    {
+     "id": "mercado",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Au marché",
+     "participants": [
+      {
+       "nom": "Clienta",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Vendedor",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clienta",
+       "texte": "¿Cuánto cuesta [[a|este]] melón, aquí a mi lado?"
+      },
+      {
+       "qui": "Vendedor",
+       "texte": "[[b|Ese]], el que tienes en la mano, cuesta dos euros."
+      },
+      {
+       "qui": "Clienta",
+       "texte": "Y [[c|aquel]] melón del fondo, ¿es más grande?"
+      },
+      {
+       "qui": "Vendedor",
+       "texte": "Sí, pero cuesta tres euros."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mercado",
+     "reponse": [
+      "a"
+     ],
+     "multiple": false,
+     "enonce": "Touche le démonstratif qui désigne ce qui est **près de celui qui parle** (la cliente).",
+     "aide": "Elle dit « aquí a mi lado ».",
+     "explication": "**este** désigne ce qui est près de moi (la personne qui parle)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque démonstratif à sa distance.",
+     "paires": [
+      [
+       "este",
+       "près de moi"
+      ],
+      [
+       "ese",
+       "près de toi"
+      ],
+      [
+       "aquel",
+       "loin de nous deux"
+      ]
+     ],
+     "aide": "Trois séries pour trois distances.",
+     "explication": "**este** près de moi, **ese** près de toi, **aquel** loin de nous deux."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon démonstratif.",
+     "texte": "Mira el melón del fondo: ___ melón es el más grande.",
+     "reponses": [
+      [
+       "aquel"
+      ]
+     ],
+     "banque": [
+      "aquel",
+      "este",
+      "ese",
+      "esta"
+     ],
+     "aide": "Le melon est loin de nous deux.",
+     "explication": "**aquel melón** : le melon du fond est loin des deux personnes. Le masculin s’écrit *aquel*, sans -o."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4ca5d29-5667-5856-ba87-6906259b35d2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux livres et un arbre",
+   "competence": "observer-schema",
+   "situation": "Ana et Leo sont dans un parc. Chacun a un livre près de lui, et un grand arbre se dresse au fond.",
+   "documents": [
+    {
+     "id": "parque",
+     "type": "schema",
+     "titre": "Dans le parc",
+     "largeur": 340,
+     "hauteur": 190,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        160
+       ],
+       "a": [
+        330,
+        160
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "emoji",
+       "x": 40,
+       "y": 110,
+       "emoji": "👧",
+       "taille": 36
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 178,
+       "texte": "Ana",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 134,
+       "l": 36,
+       "h": 24,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "libroA",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 195,
+       "y": 110,
+       "emoji": "👦",
+       "taille": 36
+      },
+      {
+       "forme": "texte",
+       "x": 195,
+       "y": 178,
+       "texte": "Leo",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 225,
+       "y": 134,
+       "l": 36,
+       "h": 24,
+       "arrondi": 4,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "libroB",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 296,
+       "y": 100,
+       "l": 10,
+       "h": 60,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 301,
+       "cy": 80,
+       "r": 28,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "arbol",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "parque",
+     "reponse": [
+      "libroA"
+     ],
+     "multiple": false,
+     "enonce": "Ana dit : « Este libro es mío. » Touche le livre dont elle parle.",
+     "aide": "Este désigne ce qui est près de celui qui parle.",
+     "explication": "**Este libro** : le livre le plus proche d’Ana, qui parle."
+    },
+    {
+     "type": "zone",
+     "document": "parque",
+     "reponse": [
+      "libroB"
+     ],
+     "multiple": false,
+     "enonce": "Ana dit à Leo : « Ese libro es muy bonito. » Touche le livre dont elle parle.",
+     "aide": "Ese désigne ce qui est près de celui à qui l’on parle.",
+     "explication": "**Ese libro** : le livre près de Leo, la personne à qui Ana s’adresse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Leo dit : « Aquel árbol es muy alto. » Pourquoi emploie-t-il *aquel* ?",
+     "options": [
+      "L’arbre est loin de nous deux",
+      "L’arbre est tout près de Leo",
+      "L’arbre est tout près d’Ana",
+      "Árbol est un mot féminin"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la distance entre l’arbre et les deux enfants.",
+     "explication": "**aquel** désigne ce qui est loin de celui qui parle et de celui qui écoute."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les adverbes de lieu qui correspondent à este, ese et aquel.",
+     "texte": "Mi libro está ___. El libro de Leo está ___. El árbol está ___.",
+     "reponses": [
+      [
+       "aquí"
+      ],
+      [
+       "ahí"
+      ],
+      [
+       "allí"
+      ]
+     ],
+     "banque": [
+      "aquí",
+      "ahí",
+      "allí",
+      "entonces"
+     ],
+     "aide": "Trois lieux : ici, près de toi, là-bas.",
+     "explication": "**aquí** (este), **ahí** (ese), **allí** (aquel) : les adverbes de lieu suivent les trois distances."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4ca5d29-5667-5856-ba87-6906259b35d2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La lettre de la grand-mère",
+   "competence": "analyser-texte",
+   "situation": "Une grand-mère espagnole écrit à son petit-fils pour lui raconter son enfance. Elle emploie plusieurs démonstratifs.",
+   "documents": [
+    {
+     "id": "abuela",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de la abuela",
+     "blocs": [
+      "Querido nieto:",
+      "Este año cumplo setenta años. En aquel entonces, cuando tenía tu edad, vivíamos en una aldea pequeña.",
+      "Aquellos tiempos eran duros: no había coche ni televisión, y [[n|eso]] nos parecía normal.",
+      "Todo [[n|aquello]] me parece hoy un sueño. [[n|Esto]] que te escribo es un recuerdo."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abuela",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois démonstratifs neutres** de la lettre.",
+     "aide": "Ils ne sont jamais suivis d’un nom.",
+     "explication": "**eso, aquello, esto** : les neutres sont invariables, sans accent, et ne précèdent jamais un nom."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la grand-mère écrit-elle « aquellos tiempos » et non « estos tiempos » ?",
+     "options": [
+      "Elle évoque une époque lointaine",
+      "Elle parle du moment présent",
+      "Tiempos est un nom féminin",
+      "Aquellos est toujours un pronom"
+     ],
+     "reponse": 0,
+     "aide": "Les démonstratifs marquent aussi la distance dans le temps.",
+     "explication": "**aquellos tiempos** évoque une époque lointaine ; *este año* désigne l’année en cours."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète en reprenant l’idée de toute la phrase.",
+     "texte": "No vino a la fiesta, y ___ me molestó.",
+     "reponses": [
+      [
+       "eso"
+      ]
+     ],
+     "banque": [
+      "eso",
+      "ese",
+      "aquel",
+      "esta"
+     ],
+     "aide": "Une phrase entière se reprend par un neutre.",
+     "explication": "**eso** reprend toute l’idée de la phrase ; on ne reprend jamais une phrase par *ese*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tournure à son sens.",
+     "paires": [
+      [
+       "este año",
+       "cette année"
+      ],
+      [
+       "aquellos tiempos",
+       "ces temps lointains"
+      ],
+      [
+       "en aquel entonces",
+       "à cette époque-là"
+      ],
+      [
+       "ni esto ni aquello",
+       "ni l’un ni l’autre"
+      ]
+     ],
+     "aide": "Cherche les mots entonces, año et tiempos.",
+     "explication": "Ces quatre tournures se retrouvent dans la lettre ou dans le cours."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon que le démonstratif est adjectif ou pronom.",
+     "categories": [
+      "Adjectif (suivi d’un nom)",
+      "Pronom (employé seul)"
+     ],
+     "items": [
+      [
+       "Este libro es mío",
+       0
+      ],
+      [
+       "Este es mío",
+       1
+      ],
+      [
+       "Esa casa es grande",
+       0
+      ],
+      [
+       "Esa es grande",
+       1
+      ]
+     ],
+     "aide": "Y a-t-il un nom juste après le démonstratif ?",
+     "explication": "Adjectif et pronom ont la **même forme** ; depuis la réforme de 2010, le pronom ne prend plus d’accent."
+    }
+   ]
+  },
+  {
+   "chapitre": "02cb4be4-7bd7-5de1-a3a5-7172d683947a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ma famille et ma maison",
+   "competence": "comprendre-langue",
+   "situation": "Une élève de Séville décrit sa maison et sa famille à sa correspondante.",
+   "documents": [
+    {
+     "id": "familia",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Mi familia",
+     "blocs": [
+      "Mi casa es pequeña, pero tiene un jardín verde y una cocina muy luminosa.",
+      "Mi madre es [[f|española]] y [[f|trabajadora]]. Mi padre es francés.",
+      "Mi perro es un buen amigo."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "familia",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux adjectifs au féminin** qui décrivent la mère.",
+     "aide": "L’un indique la nationalité, l’autre un trait de caractère.",
+     "explication": "**española** et **trabajadora** : l’adjectif de nationalité et l’adjectif en -or forment un féminin."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « J’ai une voiture rouge. » La phrase commence par Tengo.",
+     "items": [
+      "Tengo",
+      "un coche",
+      "rojo"
+     ],
+     "aide": "Un adjectif de couleur se place après le nom.",
+     "explication": "**Tengo un coche rojo** : les adjectifs de couleur se placent toujours après le nom."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "Mi padre y mi madre son altos.",
+      "Mi padre y mi madre son altas.",
+      "Mi padre y mi madre es alto.",
+      "Mi padre y mi madre son alto."
+     ],
+     "reponse": 0,
+     "aide": "Avec un nom masculin et un nom féminin, quel accord ?",
+     "explication": "**Altos** : quand l’un des noms est masculin, l’accord se fait au masculin pluriel."
+    }
+   ]
+  },
+  {
+   "chapitre": "02cb4be4-7bd7-5de1-a3a5-7172d683947a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un pobre hombre, un hombre pobre",
+   "competence": "manier-langue",
+   "situation": "Marta écrit à son amie Lucía et lui parle de deux voisins. Ce n’est pas le même sens de *pobre* !",
+   "documents": [
+    {
+     "id": "carta",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Carta de Marta",
+     "blocs": [
+      "Querida Lucía:",
+      "Mi vecino Pedro es un [[a|pobre]] hombre: está enfermo y vive solo.",
+      "Su hermano, en cambio, es un hombre [[b|pobre]], sin dinero ni trabajo.",
+      "Un abrazo, Marta"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carta",
+     "reponse": [
+      "b"
+     ],
+     "multiple": false,
+     "enonce": "Touche le « pobre » qui veut dire **sans argent**.",
+     "aide": "Dans ce sens, l’adjectif se place après le nom.",
+     "explication": "**un hombre pobre** (après le nom) : sans argent. *Un pobre hombre* (avant) : un homme à plaindre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression à son sens.",
+     "paires": [
+      [
+       "un gran hombre",
+       "un grand homme"
+      ],
+      [
+       "un hombre grande",
+       "un homme de grande taille"
+      ],
+      [
+       "un pobre hombre",
+       "un homme à plaindre"
+      ],
+      [
+       "un hombre pobre",
+       "un homme sans argent"
+      ]
+     ],
+     "aide": "Devant le nom : appréciation ou sens figuré ; après le nom : sens propre.",
+     "explication": "Certains adjectifs **changent de sens** selon leur place (gran/grande, pobre)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la forme correcte.",
+     "texte": "Pedro era un ___ hombre: ayudó a todo el barrio.",
+     "reponses": [
+      [
+       "gran"
+      ]
+     ],
+     "banque": [
+      "gran",
+      "grande",
+      "grandes",
+      "granda"
+     ],
+     "aide": "Grande perd sa finale devant un nom singulier.",
+     "explication": "**un gran hombre** : *grande* devient *gran* devant un nom ; le sens est « grand homme »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « C’est un ami de longue date. » La phrase commence par Es.",
+     "items": [
+      "Es",
+      "un",
+      "viejo",
+      "amigo"
+     ],
+     "aide": "Devant le nom, viejo veut dire « de longue date ».",
+     "explication": "**Es un viejo amigo** : devant le nom, *viejo* signifie « de longue date » ; *un amigo viejo* signifierait « un ami âgé »."
+    }
+   ]
+  },
+  {
+   "chapitre": "02cb4be4-7bd7-5de1-a3a5-7172d683947a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Maison à louer à Séville",
+   "competence": "analyser-document",
+   "situation": "Une annonce immobilière et un message : il faut accorder les adjectifs et les raccourcir devant le nom quand c’est nécessaire.",
+   "documents": [
+    {
+     "id": "anuncio",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Se alquila",
+     "blocs": [
+      "Se alquila una [[a|gran]] casa en un [[a|buen]] barrio de Sevilla.",
+      "La casa tiene un jardín verde y una cocina moderna. En esta región no hace [[a|mal]] tiempo en invierno."
+     ],
+     "source": "Annonce écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Pedro et Marta",
+     "participants": [
+      {
+       "nom": "Pedro",
+       "emoji": "👨",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Marta",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Pedro",
+       "texte": "¿Cómo son la casa y el jardín?"
+      },
+      {
+       "qui": "Marta",
+       "texte": "La casa y el jardín son preciosos."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "anuncio",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois adjectifs raccourcis** devant le nom.",
+     "aide": "Ils ont perdu leur finale : bueno, malo, grande.",
+     "explication": "**gran, buen, mal** : ces adjectifs perdent leur finale devant un nom singulier (apocope)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Hace ___ tiempo en invierno. Es un ___ día para pasear. Sevilla es una ___ ciudad.",
+     "reponses": [
+      [
+       "mal"
+      ],
+      [
+       "buen"
+      ],
+      [
+       "gran"
+      ]
+     ],
+     "banque": [
+      "mal",
+      "malo",
+      "buen",
+      "bueno",
+      "gran",
+      "grande"
+     ],
+     "aide": "Devant un nom singulier, certains adjectifs s’apocopent.",
+     "explication": "**mal tiempo, buen día, gran ciudad** : apocope devant le nom."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le message de Marta, pourquoi *preciosos* est-il au masculin pluriel ?",
+     "options": [
+      "Un des noms est masculin : accord au pluriel",
+      "Parce que casa est un nom masculin singulier",
+      "Parce que preciosos est un adjectif invariable",
+      "Parce que Marta ne parle que d’un seul objet"
+     ],
+     "reponse": 0,
+     "aide": "Combien de noms ? De quel genre ?",
+     "explication": "Avec plusieurs noms dont l’un est masculin, l’adjectif s’accorde au **masculin pluriel**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque groupe nominal selon la place de l’adjectif.",
+     "categories": [
+      "Après le nom (il classe)",
+      "Avant le nom (appréciation)"
+     ],
+     "items": [
+      [
+       "un coche rojo",
+       0
+      ],
+      [
+       "mi querida madre",
+       1
+      ],
+      [
+       "la lengua española",
+       0
+      ],
+      [
+       "la blanca nieve",
+       1
+      ],
+      [
+       "un buen amigo",
+       1
+      ],
+      [
+       "un problema difícil",
+       0
+      ]
+     ],
+     "aide": "Couleur et nationalité : toujours après le nom.",
+     "explication": "Après le nom : l’adjectif **classe**. Avant : il exprime le **regard** de celui qui parle."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbc7b826-9376-5fb6-8458-9ea27e16f234",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Tu ou usted ?",
+   "competence": "comprendre-langue",
+   "situation": "Ana, une collégienne, rencontre le directeur d’un collège espagnol. Elle doit choisir la bonne façon de parler.",
+   "documents": [
+    {
+     "id": "director",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Conversation avec le directeur",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Director",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "Buenos días, señor. ¿[[u|Usted]] habla francés?"
+      },
+      {
+       "qui": "Director",
+       "texte": "Sí, un poco. ¿Y tú, de dónde eres?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Soy de Lyon, señor."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "director",
+     "reponse": [
+      "u"
+     ],
+     "multiple": false,
+     "enonce": "Touche le pronom de **politesse** qu’Ana emploie pour s’adresser au directeur.",
+     "aide": "C’est le mot qu’on traduit par « vous ».",
+     "explication": "**usted** est le pronom de politesse (le vouvoiement) au singulier."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle personne du verbe se conjugue « habla » dans « ¿Usted habla francés? » ?",
+     "options": [
+      "À la 3e personne du singulier",
+      "À la 2e personne du singulier",
+      "À la 2e personne du pluriel",
+      "À la 1re personne du singulier"
+     ],
+     "reponse": 0,
+     "aide": "Usted vient de « vuestra merced ».",
+     "explication": "**habla** est à la 3e personne du singulier : *usted* se conjugue comme *él*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Un serveur parle à plusieurs clients en Colombie. Complète.",
+     "texte": "Señores, ¿___ quieren un café?",
+     "reponses": [
+      [
+       "ustedes"
+      ]
+     ],
+     "banque": [
+      "ustedes",
+      "vosotros",
+      "tú",
+      "usted"
+     ],
+     "aide": "Le verbe quieren est à la 3e personne du pluriel.",
+     "explication": "**ustedes quieren** : pluriel de politesse, avec le verbe à la 3e personne du pluriel."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbc7b826-9376-5fb6-8458-9ea27e16f234",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Madrid ou Buenos Aires ?",
+   "competence": "comprendre-langue",
+   "situation": "Camila vit à Buenos Aires, Sofía à Madrid. Elles découvrent que leurs façons de dire « tu » et « vous » ne sont pas les mêmes.",
+   "documents": [
+    {
+     "id": "dos",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Camila et Sofía",
+     "participants": [
+      {
+       "nom": "Camila",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sofía",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camila",
+       "texte": "¡Hola, Sofía! ¿Cómo andás? ¿[[v|Vos]] tenés tiempo mañana?"
+      },
+      {
+       "qui": "Sofía",
+       "texte": "Sí, claro. En Madrid decimos [[o|vosotros]] cuando hablamos con varios amigos."
+      },
+      {
+       "qui": "Camila",
+       "texte": "Aquí decimos [[u|ustedes]]. Y yo digo «vos sos», no «tú eres»."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dos",
+     "reponse": [
+      "o"
+     ],
+     "multiple": false,
+     "enonce": "Touche le pronom du pluriel familier qui **n’existe pas** en Amérique latine.",
+     "aide": "C’est celui que Sofía emploie à Madrid.",
+     "explication": "**vosotros** n’existe qu’en Espagne ; en Amérique latine on emploie *ustedes*, même entre amis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Camila dit-elle « tu es » ?",
+     "options": [
+      "vos sos",
+      "tú eres",
+      "usted es",
+      "vosotros sois"
+     ],
+     "reponse": 0,
+     "aide": "C’est le voseo, courant à Buenos Aires.",
+     "explication": "**vos sos** : en Argentine, *vos* remplace *tú*, avec des formes propres."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ville aux pronoms familiers qu’on y emploie (singulier / pluriel).",
+     "paires": [
+      [
+       "Madrid",
+       "tú / vosotros"
+      ],
+      [
+       "Mexico",
+       "tú / ustedes"
+      ],
+      [
+       "Buenos Aires",
+       "vos / ustedes"
+      ]
+     ],
+     "aide": "Le voseo est typique de l’Argentine.",
+     "explication": "Ce sont des **normes régionales**, pas des fautes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Des amis colombiens parlent entre eux. Complète.",
+     "texte": "¿___ vienen al cine mañana?",
+     "reponses": [
+      [
+       "ustedes"
+      ]
+     ],
+     "banque": [
+      "ustedes",
+      "vosotros",
+      "vos",
+      "tú"
+     ],
+     "aide": "Le verbe vienen est à la 3e personne du pluriel.",
+     "explication": "**ustedes vienen** : en Amérique latine, le pluriel familier est *ustedes*."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbc7b826-9376-5fb6-8458-9ea27e16f234",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a cassé le verre ?",
+   "competence": "manier-langue",
+   "situation": "Un verre est cassé en classe : Pablo se défend. Plus tard, Elena invite Lucas au cinéma.",
+   "documents": [
+    {
+     "id": "vaso",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Marta et Pablo",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Pablo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "¿Quién rompió el vaso? Nadie lo sabe."
+      },
+      {
+       "qui": "Pablo",
+       "texte": "[[y|Yo]] no lo rompí. Fue Luis."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "cine",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Elena et Lucas",
+     "participants": [
+      {
+       "nom": "Elena",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elena",
+       "texte": "Esta tarde voy al cine. ¿Quieres venir conmigo?"
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Sí, voy contigo. Y entre tú y yo, Luis no está invitado."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vaso",
+     "reponse": [
+      "y"
+     ],
+     "multiple": false,
+     "enonce": "Touche le pronom sujet que Pablo emploie pour **insister**.",
+     "aide": "Il veut bien montrer que ce n’est pas lui.",
+     "explication": "**Yo** : on exprime le pronom sujet pour insister (« moi, je ne l’ai pas cassé »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Pablo écrit-il « Yo no lo rompí » avec le pronom *yo* ?",
+     "options": [
+      "Pour insister : « moi, je ne l’ai pas cassé »",
+      "Parce que le verbe rompí est au pluriel",
+      "Parce que le pronom est obligatoire en espagnol",
+      "Pour lever une ambiguïté sur le verbe"
+     ],
+     "reponse": 0,
+     "aide": "Le verbe rompí suffit déjà à identifier la personne.",
+     "explication": "On exprime le pronom pour **insister**, **opposer** ou **lever une ambiguïté** ; ici, c’est l’insistance."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les pronoms soudés à *con*. Elena dit « avec moi », Lucas répond « avec toi ».",
+     "texte": "Elena : ¿Quieres venir ___ al cine? Lucas : Sí, voy ___ esta tarde.",
+     "reponses": [
+      [
+       "conmigo"
+      ],
+      [
+       "contigo"
+      ]
+     ],
+     "banque": [
+      "conmigo",
+      "contigo",
+      "con yo",
+      "con ti"
+     ],
+     "aide": "Avec con, mí et ti se soudent.",
+     "explication": "**conmigo** (avec moi) et **contigo** (avec toi) : formes soudées irrégulières."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon pronom après la préposition.",
+     "texte": "Entre ___ y yo, no hay secretos (tu et moi). Para ___ es fácil (pour moi). Sin ___ no voy (sans toi).",
+     "reponses": [
+      [
+       "tú"
+      ],
+      [
+       "mí"
+      ],
+      [
+       "ti"
+      ]
+     ],
+     "banque": [
+      "tú",
+      "ti",
+      "mí",
+      "yo"
+     ],
+     "aide": "Entre et según gardent tú et yo ; les autres prépositions prennent mí et ti.",
+     "explication": "**entre tú y yo** (exception), **para mí**, **sin ti** (cas général)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8eae8dfc-47b9-5431-9228-57098d733022",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans la cour du collège",
+   "competence": "comprendre-langue",
+   "situation": "Ana demande à Luis s’il voit Marta dans la cour. Luis répond avec des pronoms.",
+   "documents": [
+    {
+     "id": "patio",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ana et Luis",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Luis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "¿Ves a Marta en el patio?"
+      },
+      {
+       "qui": "Luis",
+       "texte": "Sí, [[c|la]] veo. [[i|Le]] hablo después."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "patio",
+     "reponse": [
+      "c"
+     ],
+     "multiple": false,
+     "enonce": "Touche le pronom **COD** qui remplace Marta dans « je la vois ».",
+     "aide": "Il répond à la question « qui est-ce que je vois ? ».",
+     "explication": "**la** est le pronom COD féminin de la 3e personne (je la vois)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon pronom.",
+     "texte": "Compro las flores: ___ compro hoy.",
+     "reponses": [
+      [
+       "las"
+      ]
+     ],
+     "banque": [
+      "las",
+      "los",
+      "le",
+      "la"
+     ],
+     "aide": "Le pronom reprend un nom féminin pluriel.",
+     "explication": "**Las compro hoy** : le COD reprend le genre et le nombre de *las flores*."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pronom à son rôle.",
+     "paires": [
+      [
+       "lo",
+       "le (COD masculin)"
+      ],
+      [
+       "la",
+       "la (COD féminin)"
+      ],
+      [
+       "le",
+       "lui (COI)"
+      ],
+      [
+       "les",
+       "leur (COI)"
+      ]
+     ],
+     "aide": "Les COD et COI ne diffèrent qu’à la 3e personne.",
+     "explication": "**lo / la** sont COD ; **le / les** sont COI."
+    }
+   ]
+  },
+  {
+   "chapitre": "8eae8dfc-47b9-5431-9228-57098d733022",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Passe-moi ton stylo",
+   "competence": "manier-langue",
+   "situation": "Marta a oublié son stylo. Elle le demande à Leo, avec des pronoms placés comme il faut.",
+   "documents": [
+    {
+     "id": "boli",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Marta et Leo",
+     "participants": [
+      {
+       "nom": "Marta",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marta",
+       "texte": "Necesito tu bolígrafo. ¡[[e|Dámelo]], por favor!"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Aquí tienes. ¿Quieres también el cuaderno?"
+      },
+      {
+       "qui": "Marta",
+       "texte": "No, no me lo des. Ya lo tengo."
+      },
+      {
+       "qui": "Leo",
+       "texte": "Vale. Voy a decírtelo: mañana hay examen."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "boli",
+     "reponse": [
+      "e"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe à l’**impératif affirmatif** dont les pronoms sont soudés.",
+     "aide": "C’est dans la première demande de Marta.",
+     "explication": "**Dámelo** : à l’impératif affirmatif, les pronoms se soudent derrière le verbe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « dámelo » porte-t-il un accent écrit ?",
+     "options": [
+      "Pour garder la syllabe tonique de *da*",
+      "Parce que *lo* est une syllabe accentuée",
+      "Parce qu’il y a deux pronoms soudés",
+      "Parce que la phrase est une question"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la forme de départ : da.",
+     "explication": "**dámelo** : l’accent maintient la syllabe tonique de *da* malgré les syllabes ajoutées."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Ne me le donne pas. » La phrase commence par No.",
+     "items": [
+      "No",
+      "me",
+      "lo",
+      "des"
+     ],
+     "aide": "À l’impératif négatif, les pronoms restent devant le verbe.",
+     "explication": "**No me lo des** : devant le verbe, le COI (*me*) avant le COD (*lo*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est équivalente à « Te lo voy a decir » ?",
+     "options": [
+      "Voy a decírtelo",
+      "Voy a te lo decir",
+      "Te voy a lo decir",
+      "Voy decirtelo a"
+     ],
+     "reponse": 0,
+     "aide": "Avec un verbe conjugué + infinitif, les deux places sont admises.",
+     "explication": "**Voy a decírtelo** : le pronom peut se souder à l’infinitif, avec un accent écrit."
+    }
+   ]
+  },
+  {
+   "chapitre": "8eae8dfc-47b9-5431-9228-57098d733022",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Se lo doy",
+   "competence": "analyser-document",
+   "situation": "Dans la classe, on s’exerce à remplacer des compléments par des pronoms. Il faut surveiller le cas du « se ».",
+   "documents": [
+    {
+     "id": "profe",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Questions de la professeure",
+     "participants": [
+      {
+       "nom": "Profesora",
+       "emoji": "👩‍🏫",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alumno",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Profesora",
+       "texte": "¿Le das el libro a Juan?"
+      },
+      {
+       "qui": "Alumno",
+       "texte": "Sí, [[s|se]] lo doy hoy."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "familia",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de la famille",
+     "participants": [
+      {
+       "nom": "Madre",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hijo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Madre",
+       "texte": "¿Les diste el regalo a tus primos?"
+      },
+      {
+       "qui": "Hijo",
+       "texte": "Sí, se lo di ayer."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "profe",
+     "reponse": [
+      "s"
+     ],
+     "multiple": false,
+     "enonce": "Touche le pronom qui remplace *le* quand il rencontre *lo*.",
+     "aide": "Il s’écrit en deux lettres, s…",
+     "explication": "**se** : *le* ou *les* devient *se* devant *lo, la, los, las* (« le lo doy » est impossible)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon pronom.",
+     "texte": "Le doy el libro a Juan: ___ lo doy. Les digo la verdad a mis padres: ___ la digo.",
+     "reponses": [
+      [
+       "se"
+      ],
+      [
+       "se"
+      ]
+     ],
+     "banque": [
+      "se",
+      "le",
+      "les",
+      "lo"
+     ],
+     "aide": "Devant lo ou la, le COI change de forme.",
+     "explication": "**Se lo doy, se la digo** : le COI *le / les* devient *se* devant un COD en l-."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je vais le lui dire. » La phrase commence par Se.",
+     "items": [
+      "Se",
+      "lo",
+      "voy",
+      "a decir"
+     ],
+     "aide": "COI puis COD, avant le verbe conjugué.",
+     "explication": "**Se lo voy a decir** : *se* (COI) puis *lo* (COD), devant le verbe conjugué."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque forme selon la place du pronom.",
+     "categories": [
+      "Pronom devant le verbe",
+      "Pronom soudé derrière le verbe"
+     ],
+     "items": [
+      [
+       "Te lo digo",
+       0
+      ],
+      [
+       "Dámelo",
+       1
+      ],
+      [
+       "Diciéndotelo",
+       1
+      ],
+      [
+       "No me lo des",
+       0
+      ],
+      [
+       "Quiero dártelo",
+       1
+      ]
+     ],
+     "aide": "Infinitif, gérondif et impératif affirmatif : soudé.",
+     "explication": "Le pronom se place devant un verbe conjugué ou un impératif négatif, et se soude à l’infinitif, au gérondif et à l’impératif affirmatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le message du fils, à qui renvoie « se » dans « se lo di » ?",
+     "options": [
+      "À ses cousins (COI pluriel)",
+      "À sa mère (celle qui demande)",
+      "Au cadeau (le COD)",
+      "À lui-même (réfléchi)"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la question de la mère.",
+     "explication": "**se** remplace *les* (a tus primos) : le COI pluriel devient *se* devant *lo*."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b3bd17-1377-5711-b9d9-6aed3022ccd0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un sac oublié",
+   "competence": "comprendre-langue",
+   "situation": "Leo trouve un sac dans la classe et demande à Ana s’il est à elle.",
+   "documents": [
+    {
+     "id": "mochila",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Leo et Ana",
+     "participants": [
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leo",
+       "texte": "¿Es [[a|tu]] mochila, Ana?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "No, no es mía. [[a|Mi]] mochila es azul y [[a|mis]] libros están dentro."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mochila",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois possessifs** placés devant un nom.",
+     "aide": "Ils s’accordent avec ce qui est possédé.",
+     "explication": "**tu, mi, mis** : les possessifs atones se placent devant le nom et s’accordent avec lui."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon possessif.",
+     "texte": "Ese cuaderno es de Ana: es ___.",
+     "reponses": [
+      [
+       "suyo"
+      ]
+     ],
+     "banque": [
+      "suyo",
+      "su",
+      "suya",
+      "sus"
+     ],
+     "aide": "Après le verbe ser, on emploie la forme tonique.",
+     "explication": "**Es suyo** : forme tonique, accordée avec *cuaderno* (masculin singulier)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque possessif à sa traduction.",
+     "paires": [
+      [
+       "mi libro",
+       "mon livre"
+      ],
+      [
+       "mis libros",
+       "mes livres"
+      ],
+      [
+       "tu casa",
+       "ta maison"
+      ],
+      [
+       "nuestra casa",
+       "notre maison"
+      ]
+     ],
+     "aide": "Le possessif s’accorde avec la chose possédée.",
+     "explication": "*mi / mis* et *tu* ne varient pas en genre ; *nuestro* varie en genre et en nombre."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b3bd17-1377-5711-b9d9-6aed3022ccd0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand je rentre à la maison",
+   "competence": "manier-langue",
+   "situation": "Une élève raconte son retour à la maison. En espagnol, ce n’est pas le possessif qu’on emploie pour le corps et les vêtements.",
+   "documents": [
+    {
+     "id": "tarde",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mi tarde",
+     "blocs": [
+      "Cuando llego a casa, me quito [[a|el]] abrigo y me lavo [[a|las]] manos.",
+      "Después me siento y me duele [[a|la]] cabeza: ¡hoy hubo mucho ruido en clase!"
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pourquoi écrit-on « me lavo las manos » et non « me lavo mis manos » ?",
+     "options": [
+      "Me indique déjà à qui sont les mains",
+      "Manos est un nom masculin",
+      "Mis ne s’emploie jamais avec lavar",
+      "Manos est un nom au singulier"
+     ],
+     "reponse": 0,
+     "aide": "Qui se lave ? Le pronom me le dit.",
+     "explication": "**Me lavo las manos** : quand la possession est évidente, on emploie l’article défini ; *me* porte déjà l’information."
+    },
+    {
+     "type": "zone",
+     "document": "tarde",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois articles** qui remplacent « mon, mes, ma » en français.",
+     "aide": "Ils précèdent abrigo, manos et cabeza.",
+     "explication": "**el, las, la** : pour les vêtements et les parties du corps, l’espagnol emploie l’article défini."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "Je me lave les mains",
+       "Me lavo las manos"
+      ],
+      [
+       "Il a mal à la tête",
+       "Le duele la cabeza"
+      ],
+      [
+       "Il enleva son manteau",
+       "Se quitó el abrigo"
+      ]
+     ],
+     "aide": "Dans ces trois phrases, aucun possessif.",
+     "explication": "Corps et vêtements : **l’article défini**, pas le possessif."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Il a mal à la tête. » La phrase commence par Le.",
+     "items": [
+      "Le",
+      "duele",
+      "la",
+      "cabeza"
+     ],
+     "aide": "Le COI précède le verbe.",
+     "explication": "**Le duele la cabeza** : *le* (COI), le verbe, puis l’article défini et le nom."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b3bd17-1377-5711-b9d9-6aed3022ccd0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Objets trouvés",
+   "competence": "analyser-document",
+   "situation": "Marina a trouvé un manteau et un sac en classe. Elle demande à qui ils appartiennent, et Pablo répond avec des possessifs.",
+   "documents": [
+    {
+     "id": "perdidos",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Marina et Pablo",
+     "participants": [
+      {
+       "nom": "Marina",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Pablo",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marina",
+       "texte": "He encontrado un abrigo y una mochila en clase. ¿De quién son?"
+      },
+      {
+       "qui": "Pablo",
+       "texte": "El abrigo es [[t|mío]]. Pero esa mochila no es [[t|mía]]."
+      },
+      {
+       "qui": "Marina",
+       "texte": "Entonces es de Ana: es [[t|suya]]. Su casa está cerca, ¿verdad?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "perdidos",
+     "reponse": [
+      "t"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **trois possessifs toniques** employés après le verbe *ser*.",
+     "aide": "Ils ne sont pas devant un nom.",
+     "explication": "**mío, mía, suya** : formes toniques, employées comme attributs, accordées avec ce qui est possédé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le possessif.",
+     "texte": "Nuestra casa es pequeña, pero la de Ana es grande: la ___ es muy grande.",
+     "reponses": [
+      [
+       "suya"
+      ]
+     ],
+     "banque": [
+      "suya",
+      "suyo",
+      "sus",
+      "su"
+     ],
+     "aide": "Le pronom reprend « la casa » : féminin singulier.",
+     "explication": "**la suya** : article + forme tonique, accordée avec *casa* (féminin)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Su casa está cerca », comment préciser que c’est la maison d’Ana ?",
+     "options": [
+      "la casa de ella",
+      "la casa de él",
+      "la casa de ellos",
+      "la casa de usted"
+     ],
+     "reponse": 0,
+     "aide": "*Su* peut être « son, sa, leur, votre » : on précise avec *de*.",
+     "explication": "**la casa de ella** : *su* est ambigu, on le lève avec *de* + pronom."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Mon fils, viens ici ! » La phrase commence par ¡Hijo.",
+     "items": [
+      "¡Hijo",
+      "mío,",
+      "ven",
+      "aquí!"
+     ],
+     "aide": "Au vocatif, le possessif tonique suit le nom.",
+     "explication": "**¡Hijo mío, ven aquí!** : le possessif tonique suit le nom au vocatif."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque groupe selon la place du possessif.",
+     "categories": [
+      "Atone (devant le nom)",
+      "Tonique (après le nom)"
+     ],
+     "items": [
+      [
+       "mi libro",
+       0
+      ],
+      [
+       "un libro mío",
+       1
+      ],
+      [
+       "tus amigos",
+       0
+      ],
+      [
+       "un amigo tuyo",
+       1
+      ],
+      [
+       "nuestra casa",
+       0
+      ],
+      [
+       "una casa nuestra",
+       1
+      ]
+     ],
+     "aide": "Devant le nom : mi, tu, su. Après le nom : mío, tuyo, suyo.",
+     "explication": "**Atone** devant le nom (*mi, tu, su, nuestro…*) ; **tonique** après (*mío, tuyo, suyo…*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "9505ec53-1d69-5dca-9990-3e6be5b7609f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le livre que lit Rosa",
+   "competence": "comprendre-langue",
+   "situation": "Une élève décrit son amie Rosa. Elle emploie un relatif dans chaque phrase.",
+   "documents": [
+    {
+     "id": "rosa",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Mi amiga Rosa",
+     "blocs": [
+      "Mi amiga Rosa lee un libro [[q|que]] le gusta mucho. La chica [[q|que]] vino ayer es su prima.",
+      "Esta es la casa donde vivo."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rosa",
+     "reponse": [
+      "q"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux « que »** relatifs qui reprennent un nom.",
+     "aide": "Ils reprennent « libro » et « chica ».",
+     "explication": "**que** est invariable et reprend une personne ou une chose : le relatif le plus fréquent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon relatif.",
+     "texte": "La película ___ vimos ayer fue divertida.",
+     "reponses": [
+      [
+       "que"
+      ]
+     ],
+     "banque": [
+      "que",
+      "quien",
+      "cuyo",
+      "lo que"
+     ],
+     "aide": "C’est le relatif général, sans préposition.",
+     "explication": "**La película que vimos** : *que* sert de COD, sans préposition."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque relatif à ce qu’il reprend.",
+     "paires": [
+      [
+       "que",
+       "personnes et choses"
+      ],
+      [
+       "quien",
+       "personnes seulement"
+      ],
+      [
+       "cuyo",
+       "le « dont » de possession"
+      ],
+      [
+       "lo que",
+       "une idée entière"
+      ]
+     ],
+     "aide": "Un seul relatif couvre l’essentiel.",
+     "explication": "**que** est le cas général ; **quien** ne désigne que des personnes ; **cuyo** marque la possession ; **lo que** reprend une idée."
+    }
+   ]
+  },
+  {
+   "chapitre": "9505ec53-1d69-5dca-9990-3e6be5b7609f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La personne avec qui je parle",
+   "competence": "manier-langue",
+   "situation": "Ana et Pablo parlent de la tante d’Ana et d’un cousin. Il faut placer la préposition devant le relatif.",
+   "documents": [
+    {
+     "id": "persona",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages d’Ana et Pablo",
+     "participants": [
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Pablo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ana",
+       "texte": "La persona con [[q|quien]] hablo en el patio es mi tía."
+      },
+      {
+       "qui": "Pablo",
+       "texte": "Y el chico del que me hablaste, ¿quién es?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Es mi primo. Vive en la casa en la que vivimos todos."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persona",
+     "reponse": [
+      "q"
+     ],
+     "multiple": false,
+     "enonce": "Touche le relatif réservé aux **personnes**.",
+     "aide": "Il suit la préposition con.",
+     "explication": "**quien** ne s’emploie que pour des personnes (ici après la préposition *con*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le bon relatif.",
+     "texte": "La casa en la ___ vivo es grande. El chico de ___ te hablé vive en Cádiz.",
+     "reponses": [
+      [
+       "que"
+      ],
+      [
+       "quien"
+      ]
+     ],
+     "banque": [
+      "que",
+      "quien",
+      "cuya",
+      "lo que"
+     ],
+     "aide": "Une chose : que avec article. Une personne : quien.",
+     "explication": "**en la que** (une chose) et **de quien** (une personne) : la préposition précède toujours le relatif."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le garçon dont je parle vit ici. » La phrase commence par El.",
+     "items": [
+      "El",
+      "chico",
+      "del que",
+      "hablo",
+      "vive",
+      "aquí"
+     ],
+     "aide": "La préposition ne se rejette jamais à la fin.",
+     "explication": "**El chico del que hablo vive aquí** : *del que* devant le verbe de la relative."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : le mot en question est-il relatif ou interrogatif ?",
+     "categories": [
+      "Relatif (sans accent)",
+      "Interrogatif (accent écrit)"
+     ],
+     "items": [
+      [
+       "La ciudad donde nací",
+       0
+      ],
+      [
+       "¿Dónde nació Lola?",
+       1
+      ],
+      [
+       "El día cuando llegó",
+       0
+      ],
+      [
+       "¿Cuándo llegó?",
+       1
+      ],
+      [
+       "Lo hizo como quiso",
+       0
+      ],
+      [
+       "¿Cómo lo hizo?",
+       1
+      ]
+     ],
+     "aide": "Un relatif reprend un nom ou un lieu ; un interrogatif pose une question.",
+     "explication": "*donde, cuando, como* ne portent **jamais** d’accent comme relatifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "9505ec53-1d69-5dca-9990-3e6be5b7609f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cuyo, le « dont » possessif",
+   "competence": "manier-langue",
+   "situation": "Un article de journal scolaire présente une écrivaine du quartier. Ses phrases sont pleines de « dont ».",
+   "documents": [
+    {
+     "id": "escritora",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Una escritora famosa",
+     "blocs": [
+      "Rosalía es una escritora [[c|cuya]] novela leí el verano pasado.",
+      "Vive en una casa [[c|cuyos]] muros son blancos y recibe a muchos visitantes, [[l|lo]] [[l|que]] la cansa un poco."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Pablo et Ana",
+     "participants": [
+      {
+       "nom": "Pablo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Pablo",
+       "texte": "¿De quién es esta casa?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Es de Rosalía, la escritora."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "escritora",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux « dont » possessifs** du texte.",
+     "aide": "Ils s’accordent avec ce qui est possédé : novela et muros.",
+     "explication": "**cuya** (novela, féminin) et **cuyos** (muros, masculin pluriel) : *cuyo* s’accorde avec ce qui est possédé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme de *cuyo*.",
+     "texte": "El chico ___ madre es médica. Los niños ___ padres viven aquí. La casa ___ techo es rojo.",
+     "reponses": [
+      [
+       "cuya"
+      ],
+      [
+       "cuyos"
+      ],
+      [
+       "cuyo"
+      ]
+     ],
+     "banque": [
+      "cuyo",
+      "cuya",
+      "cuyos",
+      "cuyas"
+     ],
+     "aide": "Regarde le nom qui suit chaque blanc.",
+     "explication": "**cuya madre, cuyos padres, cuyo techo** : l’accord se fait avec le nom possédé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "El escritor cuya novela leí es famoso.",
+      "El escritor cuyo la novela leí es famoso.",
+      "El escritor cuya la novela leí es famoso.",
+      "El escritor cuyo novela leí es famoso."
+     ],
+     "reponse": 0,
+     "aide": "Cuyo n’est jamais suivi d’un article.",
+     "explication": "**cuya novela** : accord avec *novela* (féminin) et aucun article entre *cuyo* et le nom."
+    },
+    {
+     "type": "zone",
+     "document": "escritora",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui reprennent **toute l’idée** de la proposition précédente.",
+     "aide": "C’est un pronom neutre en deux mots.",
+     "explication": "**lo que** reprend toute l’idée (elle reçoit beaucoup de visiteurs). On n’emploie jamais *el que* pour une phrase entière."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la question de Pablo : « À qui est cette maison ? » La phrase commence par ¿De.",
+     "items": [
+      "¿De",
+      "quién",
+      "es",
+      "esta casa?"
+     ],
+     "aide": "On ne dit jamais « ¿Cuyo es? » en question.",
+     "explication": "**¿De quién es esta casa?** : pour demander à qui appartient quelque chose, on utilise *de quién*, jamais *cuyo*."
+    }
+   ]
+  }
+ ]
+}

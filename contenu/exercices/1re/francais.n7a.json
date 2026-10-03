@@ -1,0 +1,1906 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "4d8539df-30e5-5e96-b0fe-ebe65e6adc31",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du film au roman : Pagnol aux Bastides Blanches",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Jean de Florette*. Place le roman dans la vie de Pagnol, puis relève les repères de l’œuvre.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Pagnol, du film au roman",
+     "debut": 1890,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1895,
+       "nom": "Naissance"
+      },
+      {
+       "id": "film",
+       "date": 1952,
+       "nom": "Film de Pagnol"
+      },
+      {
+       "id": "mort",
+       "date": 1974,
+       "nom": "Mort"
+      },
+      {
+       "id": "berri",
+       "date": 1986,
+       "nom": "Film de Berri"
+      }
+     ]
+    },
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Jean de Florette",
+     "sousTitre": "Marcel Pagnol",
+     "emoji": "🌿",
+     "lignes": [
+      {
+       "texte": "Cycle",
+       "valeur": "L’Eau des collines (deux volumes)"
+      },
+      {
+       "texte": "Volumes",
+       "valeur": "Jean de Florette, puis Manon des sources"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Les Bastides Blanches, dans les collines de Provence"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "Les années 1920"
+      }
+     ],
+     "pied": "Roman tiré par Pagnol de son propre film",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "film"
+     ],
+     "enonce": "Sur la frise, touche l’événement dont Pagnol tire ensuite son roman.",
+     "aide": "Le roman est écrit d’après le propre film de l’auteur.",
+     "explication": "Pagnol écrit le roman **d’après son film** *Manon des sources* (**1952**), et non l’inverse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le film de Pagnol de l’adaptation de *Jean de Florette* par Claude Berri ?",
+     "reponse": 34,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1986 − 1952 = **34 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche de l’œuvre.",
+     "texte": "*Jean de Florette* est le premier volume de ___ ; l’action se passe dans les collines de ___.",
+     "reponses": [
+      [
+       "L’Eau des collines"
+      ],
+      [
+       "Provence"
+      ]
+     ],
+     "banque": [
+      "L’Eau des collines",
+      "Manon des sources",
+      "Provence",
+      "Bretagne"
+     ],
+     "aide": "Tout est écrit sur l’affiche.",
+     "explication": "C’est le premier volume de ***L’Eau des collines***, dont l’action se passe dans les collines de **Provence**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d8539df-30e5-5e96-b0fe-ebe65e6adc31",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les Romarins : une source, un secret, un bossu",
+   "competence": "se-reperer-temps",
+   "situation": "Le domaine des Romarins a un secret. Suis les étapes du drame, de la source bouchée à la source rouverte.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le drame des Romarins",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le Papet et Ugolin bouchent la source en secret"
+      },
+      {
+       "id": "n2",
+       "texte": "Jean s’installe aux Romarins"
+      },
+      {
+       "id": "n3",
+       "texte": "Il porte des seaux et s’endette"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Les Soubeyran rachètent et débouchent la source"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Jean meurt, tué par une charge de mine en creusant pour trouver l’eau",
+      "Jean abandonne le domaine et repart vers la ville avec sa fille",
+      "Jean découvre la source bouchée et accuse le Papet devant le village",
+      "Jean vend les Romarins au Papet et reprend son métier ailleurs"
+     ],
+     "reponse": 0,
+     "aide": "Les Soubeyran ne rachètent le domaine qu’après la mort de Jean.",
+     "explication": "Jean s’obstine à creuser pour trouver l’eau : une **charge de mine** le tue, et c’est ce qui permet le rachat du domaine."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche l’étape qui explique pourquoi Jean manque d’eau.",
+     "aide": "Qui prive le domaine de sa source, et dans quel but ?",
+     "explication": "Si Jean manque d’eau, c’est parce que le Papet et Ugolin ont **bouché la source en secret** : ils veulent racheter le domaine pour y cultiver des œillets."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage ou groupe à son rôle dans le drame.",
+     "paires": [
+      [
+       "Le Papet et Ugolin",
+       "Ils bouchent la source, puis la débouchent"
+      ],
+      [
+       "Jean de Florette",
+       "Il s’épuise à chercher l’eau et en meurt"
+      ],
+      [
+       "Manon",
+       "Elle voit, cachée, déboucher la source"
+      ],
+      [
+       "Le village",
+       "Il sait et se tait"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait ou sait du secret.",
+     "explication": "Les **Soubeyran** agissent, **Jean** s’épuise, **Manon** voit tout depuis sa cachette, et le **village** se tait : son silence est complice."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d8539df-30e5-5e96-b0fe-ebe65e6adc31",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un silence au bord du chemin",
+   "competence": "argumenter",
+   "situation": "Jean est-il l’artisan de son malheur ? Lis le débat de deux élèves, puis une courte scène écrite à la manière du roman : le texte tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Jean est le seul responsable : il aurait dû abandonner les Romarins avant de s’épuiser."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Il ne sait pas que la source est [[b|bouchée]] ; le village, lui, le sait et se tait."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Le village ne fait rien de mal : il ne dit rien, c’est tout."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Justement : c’est ce silence qui rend le drame possible."
+      }
+     ]
+    },
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur le chemin des Romarins",
+     "blocs": [
+      "Au village, tout le monde sait où court l’eau de la colline. Sur le chemin des Romarins, un paysan croise le bossu qui monte, ses deux seaux pleins à la main.",
+      "— Bonne santé, monsieur ! lui dit-il en [[t|souriant]].",
+      "Puis il continue sans rien [[t|dire]] de la source bouchée. À la fontaine, personne ne lui en parlera non plus."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marcel Pagnol"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui désigne le secret que Jean ignore.",
+     "aide": "Théo parle de ce qu’on a fait à la source.",
+     "explication": "Jean ignore que la source est **bouchée** : tout le drame vient de ce secret."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui montrent un villageois aimable en apparence mais complice par son silence.",
+     "aide": "Cherche un mot de gentillesse et un mot qui dit ce qu’il ne fait pas.",
+     "explication": "Il parle en **souriant** mais ne veut rien **dire** : l’amabilité cache un silence complice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la scène soutient-elle le mieux ?",
+     "options": [
+      "Le malheur de Jean est organisé par le silence complice des autres",
+      "Jean se perd seul, par entêtement et par orgueil de citadin",
+      "Les villageois ignorent tout de la source qu’on a bouchée",
+      "Le Papet agit par vengeance contre le caractère de Jean"
+     ],
+     "reponse": 0,
+     "aide": "Que sait le paysan, et que fait-il de ce qu’il sait ?",
+     "explication": "Le paysan **sait** et **se tait** : le drame naît du silence complice, pas du seul caractère de Jean."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque effet de construction à son sens.",
+     "paires": [
+      [
+       "Le lecteur sait la source bouchée, pas Jean",
+       "Une tension tragique : on voit venir le piège"
+      ],
+      [
+       "Les villageois restent aimables et muets",
+       "Le crime est un secret partagé"
+      ],
+      [
+       "Deux hommes qui se taisent suffisent",
+       "Le mal n’a rien de spectaculaire"
+      ],
+      [
+       "Un bossu qui se fie aux livres",
+       "L’étranger sans défense face au pays"
+      ]
+     ],
+     "aide": "Pense à ce que ressent le lecteur, puis à ce que fait le village.",
+     "explication": "Le roman est **tragique** parce que le lecteur sait ; le **silence** rend le crime collectif ; le mal est banal ; Jean, étranger, ne connaît que ses livres."
+    }
+   ]
+  },
+  {
+   "chapitre": "665c3acb-66a9-53f5-a9e7-04095e5938c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans l’atelier de Gide : six ans de notes",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes le *Journal des faux-monnayeurs* à l’oral. Place-le dans le chantier du roman, puis retrouve les personnages dont il parle.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Le chantier du roman",
+     "debut": 1915,
+     "fin": 1930,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "ecr",
+       "debut": 1919,
+       "fin": 1925,
+       "nom": "Écriture du roman",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "pub",
+       "date": 1926,
+       "nom": "Journal publié"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Quatre personnages vus depuis l’atelier",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Édouard",
+       "?"
+      ],
+      [
+       "Bernard Profitendieu",
+       "Quitte sa famille en découvrant qu’il est un bâtard"
+      ],
+      [
+       "Passavant",
+       "Écrivain mondain, rival d’Édouard"
+      ],
+      [
+       "Boris",
+       "L’enfant dont le suicide clôt le roman"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche la publication du *Journal des faux-monnayeurs*.",
+     "aide": "Il paraît un an après la fin du chantier du roman.",
+     "explication": "Le *Journal* paraît en **1926**, un an après le roman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années Gide travaille-t-il aux *Faux-Monnayeurs* ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Lis les deux bornes de la période sur la frise.",
+     "explication": "De 1919 à 1925 : 1925 − 1919 = **6 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Édouard, dans la case « ? » du tableau ?",
+     "options": [
+      "Le double de l’auteur, un romancier qui prépare un livre",
+      "Un notaire de province ruiné par la fausse monnaie",
+      "Un acteur célèbre, ami de Passavant, qui joue le premier rôle",
+      "Le père de Bernard, qui le recueille après sa fuite"
+     ],
+     "reponse": 0,
+     "aide": "Il tient lui aussi un journal, et prépare un roman du même titre.",
+     "explication": "**Édouard** est le double de l’auteur : un romancier qui tient un journal et prépare *Les Faux-Monnayeurs*."
+    }
+   ]
+  },
+  {
+   "chapitre": "665c3acb-66a9-53f5-a9e7-04095e5938c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une page de carnet : supprimer, ou montrer ?",
+   "competence": "analyser-texte",
+   "situation": "Voici une page de carnet imaginée, dans l’esprit du *Journal des faux-monnayeurs*. Lis-la, puis distingue ce qui relève de l’atelier et ce qui relève de la fiction.",
+   "documents": [
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page du carnet",
+     "blocs": [
+      "Mardi. J’ai [[s|supprimé]] deux pages de description : elles n’apportaient rien au roman.",
+      "Je fais écrire [[e|Édouard]], mon romancier, dans un carnet : le lecteur verra ainsi le livre se faire.",
+      "Reste un doute : un roman peut-il avouer qu’il se fabrique ?"
+     ],
+     "source": "Page imaginée pour l’exercice, dans l’esprit du *Journal des faux-monnayeurs*"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le verbe qui dit ce que l’auteur fait des descriptions inutiles.",
+     "aide": "Il retire ce qui n’appartient pas au roman.",
+     "explication": "Il a **supprimé** les descriptions : c’est son projet de « purger le roman » de tout ce qui n’est pas romanesque."
+    },
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le nom du personnage chargé de montrer l’auteur au travail.",
+     "aide": "C’est un romancier qui écrit dans un carnet.",
+     "explication": "**Édouard** tient un journal : à travers lui, le lecteur voit le livre se faire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le projet que cette page résume ?",
+     "options": [
+      "Retirer du roman le non-romanesque et en montrer la fabrication",
+      "Raconter fidèlement des faits divers sans y changer un détail",
+      "Décrire longuement les lieux pour que le lecteur s’y croie",
+      "Éviter tout doute pour que l’œuvre paraisse sûre d’elle"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux premières phrases, puis le doute final.",
+     "explication": "Gide veut **purger le roman** de ce qui n’est pas romanesque et faire voir l’auteur écrivant : d’où Édouard."
+    },
+    {
+     "type": "categories",
+     "enonce": "Où trouve-t-on chaque élément : dans le *Journal* (l’atelier) ou dans le roman (la fiction) ?",
+     "categories": [
+      "Dans le Journal (l’atelier)",
+      "Dans le roman (la fiction)"
+     ],
+     "items": [
+      [
+       "Les hésitations sur le choix des personnages",
+       0
+      ],
+      [
+       "Les doutes sur la valeur du projet",
+       0
+      ],
+      [
+       "Les coupures de presse sur un procès de fausse monnaie",
+       0
+      ],
+      [
+       "Bernard quitte sa famille en se découvrant bâtard",
+       1
+      ],
+      [
+       "Le suicide de Boris, qui clôt le livre",
+       1
+      ]
+     ],
+     "aide": "Le *Journal* note les décisions d’écriture ; le roman raconte les personnages.",
+     "explication": "Le **Journal** garde hésitations, doutes et coupures de presse ; le **roman** raconte Bernard et Boris."
+    }
+   ]
+  },
+  {
+   "chapitre": "665c3acb-66a9-53f5-a9e7-04095e5938c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un livre qui montre son atelier",
+   "competence": "argumenter",
+   "situation": "Léa et Samir se disputent : un auteur qui explique son roman le gâche-t-il ? Tranche avec leur échange et le tableau de ton cours.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Un auteur qui explique son roman en gâche le mystère."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Au contraire : dans ce carnet, la mise en abyme est [[a|préparée]], [[a|discutée]], [[a|justifiée]]."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Donc le Journal ne sert qu’à justifier le roman après coup ?"
+      },
+      {
+       "qui": "Samir",
+       "texte": "Non : il a été écrit pendant le chantier, il éclaire toutes les décisions techniques."
+      }
+     ]
+    },
+    {
+     "id": "ta",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La mise en abyme est une réflexion du roman sur lui-même",
+       "Un personnage romancier prépare un livre du même titre",
+       "?"
+      ],
+      [
+       "Gide veut un roman libre de tout ce qui n’est pas romanesque",
+       "Il veut « purger » le roman de ses éléments étrangers",
+       "Ni description gratuite, ni récit d’événements pour eux-mêmes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les trois mots de Samir qui disent ce que le *Journal* fait de la mise en abyme.",
+     "aide": "Ce sont trois participes passés qui se suivent.",
+     "explication": "Dans le carnet, la mise en abyme est **préparée**, **discutée**, **justifiée**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Édouard, romancier qui prépare *Les Faux-Monnayeurs*",
+      "Passavant, écrivain mondain, rival d’Édouard",
+      "Bernard, qui se découvre bâtard et quitte les siens",
+      "Boris, l’enfant dont le suicide clôt le livre"
+     ],
+     "reponse": 0,
+     "aide": "Quel personnage écrit un roman au titre identique ?",
+     "explication": "**Édouard** illustre la thèse : il prépare un roman intitulé *Les Faux-Monnayeurs*."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à sa définition.",
+     "paires": [
+      [
+       "La mise en abyme",
+       "Une œuvre qui contient une image réduite d’elle-même"
+      ],
+      [
+       "Le blason",
+       "Un écu qui contient, en son centre, un petit écu semblable"
+      ],
+      [
+       "Édouard",
+       "Un romancier qui tient un journal"
+      ],
+      [
+       "« Un carrefour »",
+       "Le roman comme rendez-vous de problèmes"
+      ]
+     ],
+     "aide": "Gide a emprunté son image à l’héraldique.",
+     "explication": "La **mise en abyme** est une œuvre contenant son reflet ; Gide l’emprunte au **blason** ; **Édouard** l’incarne ; le roman doit être « un carrefour — un rendez-vous de problèmes »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sujet : « Un roman doit-il montrer comment il se fait ? » Quel début de plan s’appuie le mieux sur ce *Journal* ?",
+     "options": [
+      "Oui : montrer l’atelier renouvelle le roman et éclaire ses choix techniques",
+      "Non : un auteur qui s’explique ruine toujours le plaisir de lire",
+      "Oui, mais seulement si le roman est écrit à la première personne",
+      "Non : le Journal contredit la mise en abyme présente dans le roman"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’un « atelier publié » qui éclaire le roman.",
+     "explication": "Le *Journal* est le premier grand exemple français d’un livre qui **montre l’atelier** d’un autre livre, et il éclaire ses décisions techniques."
+    }
+   ]
+  },
+  {
+   "chapitre": "9af1fc5b-6fc5-5bb4-a350-a9856850e0bf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Soixante ans de Journal",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur le *Journal* de Gide. Place ses grandes dates sur une frise, puis retiens ce qui le distingue.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Gide et son Journal",
+     "debut": 1860,
+     "fin": 1960,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "jou",
+       "debut": 1889,
+       "fin": 1949,
+       "nom": "Le Journal (1889-1949)",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1869,
+       "nom": "Naissance"
+      },
+      {
+       "id": "nrf",
+       "date": 1908,
+       "nom": "NRF"
+      },
+      {
+       "id": "ple",
+       "date": 1939,
+       "nom": "Pléiade"
+      },
+      {
+       "id": "nob",
+       "date": 1947,
+       "nom": "Nobel"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "nob"
+     ],
+     "enonce": "Touche l’année où Gide reçoit le prix Nobel de littérature.",
+     "aide": "C’est la dernière date marquée sur la frise.",
+     "explication": "Gide reçoit le prix Nobel de littérature en **1947**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années la période couverte par le *Journal* compte-t-elle ?",
+     "reponse": 60,
+     "unite": "ans",
+     "aide": "Lis les deux bornes de la période indiquée sur la frise.",
+     "explication": "De 1889 à 1949 : 1949 − 1889 = **60 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec ce que tu sais du *Journal*.",
+     "texte": "Gide entre dans la ___ en 1939, premier auteur ___ à y être publié.",
+     "reponses": [
+      [
+       "Pléiade"
+      ],
+      [
+       "vivant"
+      ]
+     ],
+     "banque": [
+      "Pléiade",
+      "vivant",
+      "Nobel",
+      "mort"
+     ],
+     "aide": "Cherche la date 1939 sur la frise.",
+     "explication": "En **1939**, Gide devient le premier auteur **vivant** publié dans la **Pléiade**, et c’est son *Journal* qui y entre."
+    }
+   ]
+  },
+  {
+   "chapitre": "9af1fc5b-6fc5-5bb4-a350-a9856850e0bf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Congo, l’URSS : un journal qui engage",
+   "competence": "lire-tableau",
+   "situation": "Le *Journal* de Gide ne parle pas que de littérature : il suit ses engagements. Lis le tableau, puis range les grandes dates.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Trois épisodes d’un journal",
+     "colonnes": [
+      "Texte",
+      "Année",
+      "Ce que Gide y engage"
+     ],
+     "lignes": [
+      [
+       "Voyage au Congo",
+       1927,
+       "?"
+      ],
+      [
+       "Retour de l’URSS",
+       1936,
+       "Rupture avec le communisme"
+      ],
+      [
+       "Corydon, Si le grain ne meurt",
+       "—",
+       "La liberté du désir, assumée publiquement"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Une enquête parlementaire, provoquée par ce récit de voyage",
+      "Son entrée dans la Pléiade, du vivant de l’auteur",
+      "Sa rupture avec le protestantisme de son enfance",
+      "La fondation de la Nouvelle Revue française avec Claudel"
+     ],
+     "reponse": 0,
+     "aide": "Le voyage de 1927 dénonce un système colonial.",
+     "explication": "Le *Voyage au Congo* (1927) dénonce le colonialisme et **provoque une enquête parlementaire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le *Voyage au Congo* du *Retour de l’URSS* ?",
+     "reponse": 9,
+     "unite": "ans",
+     "aide": "Lis la colonne des années.",
+     "explication": "1936 − 1927 = **9 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre faits dans l’ordre où ils se produisent.",
+     "items": [
+      "Le Voyage au Congo",
+      "Le Retour de l’URSS",
+      "L’entrée du Journal dans la Pléiade",
+      "Le prix Nobel"
+     ],
+     "aide": "Les deux premiers sont dans le tableau ; les deux autres viennent après.",
+     "explication": "Dans l’ordre : **Voyage au Congo** (1927), **Retour de l’URSS** (1936), **Pléiade** (1939), **prix Nobel** (1947)."
+    }
+   ]
+  },
+  {
+   "chapitre": "9af1fc5b-6fc5-5bb4-a350-a9856850e0bf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peut-on être sincère quand on écrit pour être lu ?",
+   "competence": "argumenter",
+   "situation": "Voici une page de journal imaginée et un échange entre deux élèves : sers-t’en pour répondre à la question que Gide se pose lui-même.",
+   "documents": [
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page de journal",
+     "blocs": [
+      "Lundi. Je relis ces pages et je m’y corrige déjà, comme si quelqu’un devait les [[p|lire]].",
+      "Je voudrais être sincère. Mais la sincérité qu’on [[p|publie]] est-elle encore la sincérité ?"
+     ],
+     "source": "Page imaginée pour l’exercice, dans l’esprit d’un journal d’écrivain"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Un journal publié par son auteur n’est plus un journal : c’est déjà une [[o|œuvre]]."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Pourtant Gide veut rester sincère avec lui-même, et ça se voit dans ses doutes."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux mots qui montrent que l’auteur pense à un public.",
+     "aide": "Un verbe de lecture, un verbe de publication.",
+     "explication": "Les mots **lire** et **publie** disent que l’auteur écrit en pensant à ses futurs lecteurs."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot de Nora qui range le *Journal* parmi les livres écrits pour un public.",
+     "aide": "Elle l’oppose à un simple texte intime.",
+     "explication": "Pour Nora, le *Journal* publié est déjà une **œuvre**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque caractéristique : journal intime ou autobiographie ?",
+     "categories": [
+      "Journal intime",
+      "Autobiographie"
+     ],
+     "items": [
+      [
+       "Écrit au jour le jour",
+       0
+      ],
+      [
+       "Écrit d’abord pour soi",
+       0
+      ],
+      [
+       "Récit rétrospectif",
+       1
+      ],
+      [
+       "Construit après coup",
+       1
+      ]
+     ],
+     "aide": "Demande-toi à quel moment on écrit : sur le moment, ou en regardant en arrière.",
+     "explication": "Le **journal** s’écrit au jour le jour, d’abord pour soi ; l’**autobiographie** est un récit rétrospectif et construit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du *Journal* de Gide ces documents permettent-ils de défendre ?",
+     "options": [
+      "La sincérité d’un journal publié reste une exigence, mais elle se sait lue",
+      "Un journal publié est forcément mensonger, car l’auteur écrit pour plaire",
+      "Un journal n’a de valeur que s’il n’est jamais publié du vivant de l’auteur",
+      "Gide écrit son journal sans penser un instant à ses futurs lecteurs"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit : « sincère avec soi-même, quand on sait qu’on écrit pour être lu ».",
+     "explication": "Le fil du *Journal* est l’**exigence d’être sincère** même en sachant qu’on écrit pour être lu : la sincérité se sait lue."
+    }
+   ]
+  },
+  {
+   "chapitre": "66f30e40-d710-510b-bd0c-abb5a5dfd9a3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Julie parmi les livres de Rousseau et de Laclos",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Julie ou la Nouvelle Héloïse* à ta classe. Place le roman parmi les dates de Rousseau, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Rousseau et son roman",
+     "debut": 1750,
+     "fin": 1785,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "dis",
+       "date": 1755,
+       "nom": "Discours"
+      },
+      {
+       "id": "jul",
+       "date": 1761,
+       "nom": "Julie"
+      },
+      {
+       "id": "mor",
+       "date": 1778,
+       "nom": "Mort"
+      },
+      {
+       "id": "lia",
+       "date": 1782,
+       "nom": "Liaisons"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages de *Julie*",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Julie d’Étange",
+       "L’héroïne, passionnée puis vertueuse"
+      ],
+      [
+       "Saint-Preux",
+       "?"
+      ],
+      [
+       "Claire d’Orbe",
+       "La cousine et confidente de Julie"
+      ],
+      [
+       "M. de Wolmar",
+       "L’époux sage et lucide"
+      ],
+      [
+       "Le baron d’Étange",
+       "Le père attaché au rang"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "jul"
+     ],
+     "enonce": "Touche la date de parution de *Julie*.",
+     "aide": "C’est la deuxième date de la frise.",
+     "explication": "*Julie* paraît en **1761**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Julie* des *Liaisons dangereuses* de Laclos ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1782 − 1761 = **21 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Saint-Preux (la case « ? ») ?",
+     "options": [
+      "Le précepteur roturier de Julie et son amant, sensible et malheureux",
+      "Un riche Anglais, ami généreux, qui protège les deux amants",
+      "Le père de Claire, ruiné par la mésalliance de sa nièce",
+      "Un vieux gentilhomme athée et serein, sage et lucide"
+     ],
+     "reponse": 0,
+     "aide": "Julie, noble, aime un homme que son père juge de rang inférieur.",
+     "explication": "**Saint-Preux** est le précepteur roturier de Julie, son amant : c’est ce qui fait la mésalliance."
+    }
+   ]
+  },
+  {
+   "chapitre": "66f30e40-d710-510b-bd0c-abb5a5dfd9a3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des lettres, un mariage, un lac",
+   "competence": "se-reperer-temps",
+   "situation": "Le roman est fait de lettres, en six parties. Suis la vie de Julie de la passion jusqu’à sa mort.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le destin de Julie",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Julie aime Saint-Preux, son précepteur roturier"
+      },
+      {
+       "id": "n2",
+       "texte": "Le baron d’Étange refuse la mésalliance"
+      },
+      {
+       "id": "n3",
+       "texte": "Les amants cèdent une fois, puis se séparent"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "À Clarens, Wolmar accueille Saint-Preux"
+      },
+      {
+       "id": "n6",
+       "texte": "Julie meurt en sauvant son fils de la noyade"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Julie épouse M. de Wolmar par obéissance à son père",
+      "Julie s’enfuit avec Saint-Preux au bord du lac Léman",
+      "Julie entre au couvent pour oublier son amant",
+      "Julie épouse Milord Édouard, l’ami de Saint-Preux"
+     ],
+     "reponse": 0,
+     "aide": "À Clarens, Julie vit avec Wolmar : comment est-elle devenue sa femme ?",
+     "explication": "Julie épouse **par obéissance** M. de Wolmar : c’est chez lui, à Clarens, que Saint-Preux sera accueilli."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui explique pourquoi les amants ne peuvent pas s’épouser.",
+     "aide": "Qui s’y oppose, et au nom de quoi ?",
+     "explication": "Le **baron d’Étange** refuse la mésalliance : Saint-Preux est roturier, Julie est noble."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque épisode : relève-t-il de la passion ou du devoir et de la vertu ?",
+     "categories": [
+      "La passion",
+      "Le devoir et la vertu"
+     ],
+     "items": [
+      [
+       "Les amants cèdent une fois",
+       0
+      ],
+      [
+       "La dernière lettre : Julie n’a jamais cessé d’aimer",
+       0
+      ],
+      [
+       "Le mariage avec Wolmar par obéissance",
+       1
+      ],
+      [
+       "La communauté de travail partagé à Clarens",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si l’épisode obéit au cœur, ou à un père et à une règle de vie.",
+     "explication": "La **passion** : la faute des amants et l’aveu final ; le **devoir et la vertu** : l’obéissance au père et Clarens."
+    }
+   ]
+  },
+  {
+   "chapitre": "66f30e40-d710-510b-bd0c-abb5a5dfd9a3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une lettre au bord du lac",
+   "competence": "analyser-texte",
+   "situation": "Lis une lettre imaginée à la manière du roman, puis compare la lettre de Rousseau à celle d’un autre roman épistolaire.",
+   "documents": [
+    {
+     "id": "l",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre de Julie",
+     "blocs": [
+      "Mon ami, je vous écris au bord du lac, et le vent des [[n|montagnes]] agite mon papier comme il agite mon cœur.",
+      "Je devrais [[d|obéir]] à mon père ; mon cœur, lui, veut [[d|aimer]].",
+      "Que n’ai-je pu vous dire de vive voix ce que ma main n’ose écrire !"
+     ],
+     "source": "Lettre imaginée pour l’exercice, à la manière du roman épistolaire de Rousseau"
+    },
+    {
+     "id": "cmp",
+     "type": "tableau",
+     "titre": "Deux romans épistolaires",
+     "colonnes": [
+      "",
+      "Julie (1761)",
+      "Les Liaisons dangereuses (1782)"
+     ],
+     "lignes": [
+      [
+       "Forme",
+       "Roman épistolaire",
+       "Roman épistolaire"
+      ],
+      [
+       "Usage de la lettre",
+       "?",
+       "Arme de séduction et de manipulation"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "l",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui montre la nature accompagnant l’état d’âme de Julie.",
+     "aide": "Quel élément de paysage « agite » le papier comme le cœur ?",
+     "explication": "Le vent des **montagnes** agite le papier « comme il agite mon cœur » : la nature accompagne les états d’âme, ce qui annonce le romantisme."
+    },
+    {
+     "type": "zone",
+     "document": "l",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les deux verbes qui opposent le devoir et le désir de Julie.",
+     "aide": "L’un est pour son père, l’autre pour son cœur.",
+     "explication": "Julie devrait **obéir** à son père, mais son cœur veut **aimer** : c’est le conflit du roman."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Elle livre l’intimité et la transparence des cœurs",
+      "Elle sert surtout à tromper et à manipuler autrui",
+      "Elle reste un simple moyen de donner des nouvelles",
+      "Elle disparaît au profit d’un narrateur unique"
+     ],
+     "reponse": 0,
+     "aide": "Le cours oppose « même forme, usage opposé » : à l’inverse de la manipulation.",
+     "explication": "Chez Rousseau, la lettre donne accès à l’**intimité des cœurs** et à leur transparence ; chez Laclos, elle manipule."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "Un roman fait de lettres",
+       "Plusieurs voix et un accès à l’intimité"
+      ],
+      [
+       "Le lac, les montagnes, les orages",
+       "La nature accompagne les états d’âme"
+      ],
+      [
+       "Clarens",
+       "Une utopie sociale et morale"
+      ],
+      [
+       "Le succès auprès des lecteurs",
+       "Une sensibilité nouvelle qui fait pleurer"
+      ]
+     ],
+     "aide": "Pense à ce que chaque choix de Rousseau fait ressentir au lecteur.",
+     "explication": "Les **lettres** multiplient les voix ; la **nature** annonce le romantisme ; **Clarens** est une utopie ; la **sensibilité** explique le succès."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7d91e8e-a828-51e1-8061-3bbab423a47c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce écrite à Berlin",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Juste la fin du monde*. Place la pièce dans la vie de Lagarce, puis retrouve la famille de Louis.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Lagarce et sa pièce",
+     "debut": 1955,
+     "fin": 2020,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1957,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ecr",
+       "date": 1990,
+       "nom": "Écriture"
+      },
+      {
+       "id": "mor",
+       "date": 1995,
+       "nom": "Mort"
+      },
+      {
+       "id": "cf",
+       "date": 2008,
+       "nom": "Comédie-Fr."
+      },
+      {
+       "id": "film",
+       "date": 2016,
+       "nom": "Film Dolan"
+      }
+     ]
+    },
+    {
+     "id": "fam",
+     "type": "tableau",
+     "titre": "La famille de Louis",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "La Mère",
+       "Organise le dimanche comme si de rien n’était"
+      ],
+      [
+       "Antoine, le frère",
+       "Blessé et colérique"
+      ],
+      [
+       "Suzanne, la sœur",
+       "Ne connaît son frère que par ses « petits mots »"
+      ],
+      [
+       "Catherine",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "ecr"
+     ],
+     "enonce": "Touche l’année où Lagarce écrit *Juste la fin du monde*.",
+     "aide": "Il l’écrit à Berlin, se sachant malade.",
+     "explication": "La pièce est écrite en **1990**, à Berlin."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture de la pièce de la mort de Lagarce ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1995 − 1990 = **5 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Catherine (la case « ? ») ?",
+     "options": [
+      "La belle-sœur, que Louis n’avait jamais rencontrée",
+      "La tante qui a élevé Louis après le départ de sa mère",
+      "Une amie d’enfance de Louis, venue pour le déjeuner",
+      "La fiancée que Louis a quittée avant de partir"
+     ],
+     "reponse": 0,
+     "aide": "Elle est entrée dans la famille pendant l’absence de Louis.",
+     "explication": "**Catherine** est la belle-sœur de Louis, qu’il ne connaît pas : elle est entrée dans la famille pendant son absence."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7d91e8e-a828-51e1-8061-3bbab423a47c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un dimanche en famille, de l’aveu au silence",
+   "competence": "se-reperer-temps",
+   "situation": "La pièce a une construction très nette. Retrouve ses grandes parties, puis les rôles de ceux qui entourent Louis.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La construction de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Prologue : Louis annonce sa mort au public"
+      },
+      {
+       "id": "n2",
+       "texte": "Première partie"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Deuxième partie"
+      },
+      {
+       "id": "n5",
+       "texte": "Épilogue : le cri jamais poussé"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle partie manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Un intermède",
+      "Un second prologue",
+      "Un entracte musical",
+      "Un procès"
+     ],
+     "reponse": 0,
+     "aide": "Il sépare les deux parties.",
+     "explication": "Les deux parties sont séparées par un **intermède** ; la pièce commence par un prologue et finit par un épilogue."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche l’étape où Louis dit au public pourquoi il revient.",
+     "aide": "Il le dit dès le début, avant même d’entrer chez les siens.",
+     "explication": "Dès le **prologue**, Louis annonce sa mort prochaine au public."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les moments du dimanche dans l’ordre.",
+     "items": [
+      "Louis annonce au public qu’il va mourir",
+      "Il retrouve sa famille un dimanche",
+      "On déjeune, on se dispute, on évoque le passé",
+      "Il repart sans avoir rien dit"
+     ],
+     "aide": "Le début et la fin sont dans la chaîne ; le milieu raconte le dimanche.",
+     "explication": "Louis **annonce** sa mort au public, **retrouve** les siens, ils **déjeunent et se disputent**, puis il **repart sans rien dire**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son attitude.",
+     "paires": [
+      [
+       "La Mère",
+       "Elle fait comme si de rien n’était"
+      ],
+      [
+       "Antoine",
+       "Blessé, il est colérique"
+      ],
+      [
+       "Suzanne",
+       "Elle ne connaît son frère que par ses petits mots"
+      ],
+      [
+       "Louis",
+       "Il parle au public mais se tait devant les siens"
+      ]
+     ],
+     "aide": "Chaque personnage réagit à ce retour à sa manière.",
+     "explication": "La **mère** fait semblant, **Antoine** s’emporte, **Suzanne** connaît à peine son frère, **Louis** n’ose pas dire ce qu’il est venu dire."
+    }
+   ]
+  },
+  {
+   "chapitre": "f7d91e8e-a828-51e1-8061-3bbab423a47c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Parler sans rien dire",
+   "competence": "analyser-texte",
+   "situation": "Lis un court échange écrit à la manière de Lagarce, puis relève comment la parole se reprend, se corrige et passe à côté de l’essentiel.",
+   "documents": [
+    {
+     "id": "sc",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un dimanche, à table",
+     "blocs": [
+      {
+       "didascalie": "Un dimanche, à table. Antoine parle à Louis, qui vient d’arriver."
+      },
+      {
+       "personnage": "Antoine",
+       "replique": "Tu restes pour le déjeuner, enfin pour la [[r|journée]]. Non, ce n’est pas ça : pour le [[r|dimanche]]."
+      },
+      {
+       "personnage": "Louis",
+       "replique": "Je suis venu pour… non, rien. Je suis [[j|juste]] fatigué, voilà."
+      },
+      {
+       "personnage": "La Mère",
+       "replique": "Tu as faim ? On ne parle pas de ça aujourd’hui."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Jean-Luc Lagarce"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qu’Antoine remplace l’un par l’autre en se reprenant.",
+     "aide": "Il dit d’abord un mot, puis le corrige.",
+     "explication": "Antoine se reprend : **journée**, puis **dimanche**. La parole se corrige en direct."
+    },
+    {
+     "type": "zone",
+     "document": "sc",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche l’adverbe par lequel Louis minimise ce qui lui arrive.",
+     "aide": "Un petit mot qui réduit l’importance, comme dans le titre de la pièce.",
+     "explication": "« **Juste** fatigué » : un adverbe minimise l’immense catastrophe intime, comme dans le titre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la pièce à son effet.",
+     "paires": [
+      [
+       "Phrases reprises, corrigées, réajustées",
+       "La parole cherche ce qu’elle n’arrive pas à dire"
+      ],
+      [
+       "La maladie jamais nommée",
+       "L’essentiel reste hors des mots"
+      ],
+      [
+       "Un prologue qui annonce la fin",
+       "Le public sait ce que la famille ignore"
+      ],
+      [
+       "Le retour d’un fils que personne ne fête",
+       "Un détournement de la parabole du fils prodigue"
+      ]
+     ],
+     "aide": "Pense à ce que ressent le public, puis à ce que la famille ne sait pas.",
+     "explication": "Les **reprises** font chercher les mots ; la maladie **non nommée** laisse l’essentiel hors dialogue ; le **prologue** informe le public seul ; le retour détourne le **fils prodigue**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la maladie de Louis n’est-elle jamais nommée ?",
+     "options": [
+      "Le non-dit fait de la parole un moyen d’éviter l’essentiel",
+      "Lagarce ne connaissait pas assez le vocabulaire médical",
+      "Le public est supposé ignorer que Louis est malade",
+      "La famille sait déjà tout et n’a pas besoin d’en parler"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique de la Mère : de quoi ne parle-t-on pas aujourd’hui ?",
+     "explication": "On y parle **sans arrêt pour ne pas dire l’essentiel** : le non-dit est le cœur de la pièce."
+    }
+   ]
+  },
+  {
+   "chapitre": "8aeee081-989a-53af-ae45-5a30cb41b398",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète de cour sous François Ier",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *L’Adolescence clémentine*. Place le recueil dans la vie de Marot, puis retrouve ses protecteurs.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "La vie de Marot",
+     "debut": 1490,
+     "fin": 1550,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1496,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pri",
+       "date": 1526,
+       "nom": "Prison"
+      },
+      {
+       "id": "rec",
+       "date": 1532,
+       "nom": "Recueil"
+      },
+      {
+       "id": "mor",
+       "date": 1544,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "fi",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Clément Marot",
+     "sousTitre": "1496-1544",
+     "emoji": "🪶",
+     "lignes": [
+      {
+       "texte": "Père",
+       "valeur": "Le poète Jean Marot"
+      },
+      {
+       "texte": "Valet de chambre de",
+       "valeur": "François Ier"
+      },
+      {
+       "texte": "Protectrice",
+       "valeur": "Marguerite de Navarre, sœur du roi"
+      },
+      {
+       "texte": "Recueil de 1532",
+       "valeur": "Ses poèmes de jeunesse"
+      }
+     ],
+     "pied": "Poète de la transition",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "rec"
+     ],
+     "enonce": "Touche la parution de *L’Adolescence clémentine*.",
+     "aide": "Elle suit la prison de 1526.",
+     "explication": "Le recueil paraît en **1532**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication du recueil de la mort de Marot ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1544 − 1532 = **12 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche de Marot.",
+     "texte": "Marot est valet de chambre de ___ et entre au service de ___, la sœur du roi.",
+     "reponses": [
+      [
+       "François Ier",
+       "François 1er"
+      ],
+      [
+       "Marguerite de Navarre"
+      ]
+     ],
+     "banque": [
+      "François Ier",
+      "Marguerite de Navarre",
+      "Henri II",
+      "Catherine de Médicis"
+     ],
+     "aide": "Cherche les deux lignes qui parlent de la cour.",
+     "explication": "Marot est valet de chambre de **François Ier** et protégé par **Marguerite de Navarre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8aeee081-989a-53af-ae45-5a30cb41b398",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Épîtres, rondeaux, traductions : le recueil en formes",
+   "competence": "lire-tableau",
+   "situation": "Le recueil mêle des formes très différentes. Range-les, puis suis les étapes d’une vie de poète.",
+   "documents": [
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Ce qu’on trouve chez Marot",
+     "colonnes": [
+      "Forme",
+      "Exemples"
+     ],
+     "lignes": [
+      [
+       "L’épître",
+       "Des épîtres en vers, dont « Au roi, pour avoir été dérobé »"
+      ],
+      [
+       "Les formes médiévales",
+       "?"
+      ],
+      [
+       "Les pièces de circonstance",
+       "Complaintes, épitaphes, chansons"
+      ],
+      [
+       "Les traductions",
+       "La première Bucolique de Virgile, des pages d’Ovide"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Ballades, rondeaux, chants royaux",
+      "Tragédies, comédies et farces",
+      "Psaumes mis en français et chantés",
+      "Satires, fables et contes en prose"
+     ],
+     "reponse": 0,
+     "aide": "Ces formes viennent du Moyen Âge, que la Pléiade rejettera bientôt.",
+     "explication": "Marot hérite des formes **médiévales** : ballades, rondeaux, chants royaux."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque œuvre ou forme à ce qu’elle est.",
+     "paires": [
+      [
+       "Une épître",
+       "Une lettre en vers adressée à quelqu’un"
+      ],
+      [
+       "Un rondeau",
+       "Une forme médiévale à refrain"
+      ],
+      [
+       "Une épitaphe",
+       "Une pièce de circonstance pour un défunt"
+      ],
+      [
+       "Les Psaumes",
+       "Des traductions chantées par les protestants"
+      ]
+     ],
+     "aide": "Pense au destinataire, au refrain, à l’occasion de chaque pièce.",
+     "explication": "L’**épître** s’adresse à quelqu’un ; le **rondeau** est une forme à refrain ; l’**épitaphe** est une pièce de circonstance ; les **Psaumes** seront chantés par les protestants."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces moments de la vie de Marot dans l’ordre.",
+     "items": [
+      "Il est emprisonné pour avoir mangé du lard en carême",
+      "Il publie L’Adolescence clémentine",
+      "Il s’exile après l’affaire des Placards",
+      "Il traduit des Psaumes"
+     ],
+     "aide": "Aide-toi des dates : 1526, 1532, 1534, 1541-1543.",
+     "explication": "Ordre : **prison** (1526), **recueil** (1532), **exil** après les Placards (1534), **Psaumes** (1541-1543)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8aeee081-989a-53af-ae45-5a30cb41b398",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Demander de l’argent au roi sans s’abaisser",
+   "competence": "argumenter",
+   "situation": "Marot se plaint-il vraiment dans son épître au roi ? Lis les deux premiers vers, puis le débat de deux élèves.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les deux premiers vers",
+     "blocs": [
+      "On dit bien vrai, la [[m|mauvaise]] [[m|fortune]]",
+      "Ne vient jamais qu’elle n’en apporte une."
+     ],
+     "source": "Clément Marot, « Au roi, pour avoir été dérobé » (1531), vers 1 et 2 — orthographe modernisée"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Alix",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Alix",
+       "texte": "Marot se lamente vraiment : l’épître est un cri de détresse sérieux."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Il se plaint avec [[h|humour]] pour obtenir de l’argent du roi sans s’abaisser."
+      },
+      {
+       "qui": "Alix",
+       "texte": "Alors ce n’est qu’un jeu ?"
+      },
+      {
+       "qui": "Malo",
+       "texte": "Non : la légèreté sert la requête, et la pointe finale fait sourire le roi."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui nomment le malheur dont se plaint Marot.",
+     "aide": "Il parle d’un sort contraire qui s’acharne.",
+     "explication": "La **mauvaise fortune**, dit Marot, ne vient jamais seule : l’image du malheur ouvre l’épître."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot de Malo qui dit comment Marot se plaint.",
+     "aide": "C’est ce qui rend la plainte légère.",
+     "explication": "Il se plaint avec **humour** : le ton léger sert la requête."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait du style marotique à son effet.",
+     "paires": [
+      [
+       "Le ton familier et l’humour",
+       "La proximité"
+      ],
+      [
+       "L’adresse directe au destinataire",
+       "Un « je » vivant"
+      ],
+      [
+       "La pointe finale",
+       "La chute qui fait sourire"
+      ],
+      [
+       "L’épître au roi",
+       "Demander de l’argent sans s’abaisser"
+      ]
+     ],
+     "aide": "Pense à ce que ressent le lecteur, ou le roi, à chaque trait.",
+     "explication": "Le **ton familier** crée la proximité ; l’**adresse directe** donne un « je » vivant ; la **pointe** fait la chute ; l’**épître** demande sans s’abaisser."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sujet : « La poésie peut-elle être légère et sérieuse à la fois ? » Quel argument Marot permet-il d’appuyer ?",
+     "options": [
+      "L’humour peut servir une demande réelle sans la rendre ridicule",
+      "La légèreté d’un poème prouve que son sujet est sans importance",
+      "Un poète sérieux doit renoncer à tout ton familier envers le roi",
+      "La poésie légère ne se pratique que dans les formes médiévales"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux dernières répliques de Malo.",
+     "explication": "L’épître joue de l’**humour** pour obtenir de l’argent : la légèreté sert un propos sérieux, ce qui prépare la poésie moderne."
+    }
+   ]
+  }
+ ]
+}

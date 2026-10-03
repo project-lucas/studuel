@@ -1,0 +1,2170 @@
+{
+ "niveau": "4e",
+ "matiere": "svt",
+ "exercices": [
+  {
+   "chapitre": "a381565d-fa9f-5622-9655-93c65e1dbfbc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quel moyen, pour quel usage ?",
+   "competence": "lire-tableau",
+   "situation": "Un centre de santé sexuelle remet à des élèves un tableau comparant quatre moyens de contraception.",
+   "documents": [
+    {
+     "id": "moyens",
+     "type": "tableau",
+     "titre": "Quatre moyens de contraception",
+     "colonnes": [
+      "Le moyen",
+      "Protège des IST",
+      "Réversible"
+     ],
+     "lignes": [
+      [
+       "Pilule",
+       "Non",
+       "Oui"
+      ],
+      [
+       "Préservatif",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Stérilet",
+       "Non",
+       "Oui"
+      ],
+      [
+       "Vasectomie",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "moyens",
+     "enonce": "Touche la case qui indique le seul moyen protégeant des IST.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche un « Oui » dans la colonne « Protège des IST ».",
+     "explication": "Seul le **préservatif** protège à la fois d’une grossesse et des infections sexuellement transmissibles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de moyens du tableau sont définitifs (non réversibles) ?",
+     "reponse": 1,
+     "unite": "moyen",
+     "aide": "Cherche « Non » dans la colonne « Réversible ».",
+     "explication": "Seule la **vasectomie** est définitive."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moyen à son principe.",
+     "paires": [
+      [
+       "Pilule",
+       "Elle bloque l’ovulation"
+      ],
+      [
+       "Préservatif",
+       "Une barrière"
+      ],
+      [
+       "Vasectomie",
+       "Une méthode définitive"
+      ]
+     ],
+     "aide": "La pilule agit sur les hormones.",
+     "explication": "La **pilule** bloque l’**ovulation**, le **préservatif** est une **barrière**, la **vasectomie** est **définitive**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a381565d-fa9f-5622-9655-93c65e1dbfbc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un rapport non protégé",
+   "competence": "analyser-document",
+   "situation": "Sarah, 16 ans, vient d’avoir un rapport non protégé. Elle écrit à son amie Inès. Un panneau du centre de santé sexuelle complète leurs échanges.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Conversation de Sarah et d’Inès",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "On n’a pas mis de préservatif hier soir. Je panique."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Il existe une contraception d’urgence, à prendre [[u|le plus tôt possible]]."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Il me faut une ordonnance ? Et ça se paie ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Pour une mineure, c’est gratuit et sans ordonnance. Mais ça ne remplace pas une contraception régulière."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice."
+    },
+    {
+     "id": "panneau",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Centre de santé sexuelle",
+     "sousTitre": "Gratuit et confidentiel pour les mineurs",
+     "emoji": "🏥",
+     "lignes": [
+      {
+       "texte": "Contraception",
+       "id": "contra"
+      },
+      {
+       "texte": "Dépistage des IST",
+       "id": "depistage"
+      },
+      {
+       "texte": "Contraception d’urgence",
+       "id": "urgence"
+      },
+      {
+       "texte": "Écoute et information",
+       "id": "ecoute"
+      }
+     ],
+     "teinte": "turquoise",
+     "source": "Panneau imaginé pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche l’expression qui donne la condition d’efficacité de la contraception d’urgence.",
+     "reponse": [
+      "u"
+     ],
+     "multiple": true,
+     "aide": "Elle dit quand la prendre, dans la réponse d’Inès.",
+     "explication": "La contraception d’urgence se prend **le plus tôt possible** après le rapport non protégé."
+    },
+    {
+     "type": "choix",
+     "enonce": "La contraception d’urgence peut-elle remplacer une contraception régulière ?",
+     "options": [
+      "Non, jamais",
+      "Oui, si on la prend chaque mois",
+      "Oui, si on est une mineure",
+      "Oui, avec un préservatif"
+     ],
+     "reponse": 0,
+     "aide": "Inès le dit à la fin de sa réponse.",
+     "explication": "Elle ne remplace **jamais** une contraception régulière."
+    },
+    {
+     "type": "zone",
+     "document": "panneau",
+     "enonce": "Touche le service qui permet de traiter tôt une infection sexuellement transmissible.",
+     "reponse": [
+      "depistage"
+     ],
+     "aide": "Le mot commence par « dé… ».",
+     "explication": "Le **dépistage** permet de traiter tôt et d’éviter la transmission."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où Sarah peut-elle en parler sans que ses parents soient prévenus ?",
+     "options": [
+      "Au centre de santé sexuelle, où la consultation est gratuite et confidentielle pour les mineurs",
+      "Nulle part : c’est interdit aux mineurs",
+      "Seulement chez un notaire",
+      "Uniquement à l’école, après les cours"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le sous-titre du panneau.",
+     "explication": "En **centre de santé sexuelle**, la consultation est **gratuite et confidentielle** pour les mineurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "a381565d-fa9f-5622-9655-93c65e1dbfbc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand l’enfant ne vient pas",
+   "competence": "argumenter",
+   "situation": "Léa et Karim essaient depuis deux ans d’avoir un enfant. Le médecin leur propose des techniques d’assistance médicale à la procréation. Le tableau présente ces techniques.",
+   "documents": [
+    {
+     "id": "amp",
+     "type": "tableau",
+     "titre": "Les techniques de l’AMP",
+     "colonnes": [
+      "La technique",
+      "Son principe"
+     ],
+     "lignes": [
+      [
+       "Insémination artificielle",
+       "Le sperme est déposé dans l’utérus"
+      ],
+      [
+       "FIV",
+       "La rencontre des gamètes se fait au laboratoire, puis un embryon est transféré"
+      ],
+      [
+       "ICSI",
+       "Un spermatozoïde unique est injecté dans l’ovule"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau de synthèse écrit pour l’exercice."
+    },
+    {
+     "id": "situation",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La situation du couple",
+     "blocs": [
+      "Léa et Karim font partie des couples qui consultent pour des difficultés à concevoir. Les examens montrent que les spermatozoïdes de Karim sont peu mobiles."
+     ],
+     "source": "Texte écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Environ un couple sur six consulte pour des difficultés à concevoir. Sur 60 couples, combien consultent environ ?",
+     "reponse": 10,
+     "unite": "couples",
+     "aide": "Divise 60 par 6.",
+     "explication": "60 ÷ 6 = **10 couples** environ."
+    },
+    {
+     "type": "zone",
+     "document": "amp",
+     "enonce": "Touche la technique qui consiste à injecter un spermatozoïde unique dans l’ovule.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Le nom de cette technique est un sigle de quatre lettres.",
+     "explication": "C’est l’**ICSI**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il, dans une FIV, entre l’ovule et le spermatozoïde ?",
+     "options": [
+      "Ils se rencontrent au laboratoire, puis un embryon est transféré dans l’utérus",
+      "Ils se rencontrent dans une trompe",
+      "Le sperme est simplement déposé dans l’utérus",
+      "L’ovule est remplacé par une cellule du corps"
+     ],
+     "reponse": 0,
+     "aide": "FIV signifie fécondation in vitro.",
+     "explication": "Dans une **FIV**, la rencontre des gamètes a lieu **au laboratoire** ; un embryon est ensuite **transféré**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui tranche les questions éthiques posées par ces techniques ?",
+     "options": [
+      "La loi de bioéthique, révisée par le débat démocratique",
+      "La science seule",
+      "Chaque médecin, au cas par cas",
+      "Les associations de patients"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas seulement une question de technique.",
+     "explication": "La **loi de bioéthique**, régulièrement révisée, tranche par le **débat démocratique** et non par la seule science."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Jusqu’à combien de semaines de grossesse l’IVG est-elle possible en France ?",
+     "reponse": 14,
+     "unite": "semaines",
+     "aide": "C’est un droit garanti par la loi Veil de 1975, modifiée depuis.",
+     "explication": "L’IVG est possible jusqu’à **14 semaines de grossesse** (16 semaines d’aménorrhée) ; c’est un droit pris en charge à 100 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed1f917c-faaa-56f6-ad5d-8d77f25fec87",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les organes de la plante",
+   "competence": "observer-schema",
+   "situation": "Une plante verte pousse sans que personne ne la nourrisse. Un schéma montre ses organes : des feuilles au sommet, une tige et des racines dans le sol.",
+   "documents": [
+    {
+     "id": "plante",
+     "type": "schema",
+     "titre": "Une plante verte",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 130,
+       "l": 280,
+       "h": 90,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        130
+       ],
+       "a": [
+        300,
+        130
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "rect",
+       "x": 154,
+       "y": 50,
+       "l": 12,
+       "h": 90,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "tige",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 110,
+       "cy": 60,
+       "rx": 42,
+       "ry": 18,
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "feuille",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 210,
+       "cy": 60,
+       "rx": 42,
+       "ry": 18,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 160,
+       "cy": 180,
+       "rx": 65,
+       "ry": 38,
+       "teinte": "ambre",
+       "motif": "hachures",
+       "id": "racines",
+       "zone": true
+      },
+      {
+       "forme": "etiquette",
+       "x": 280,
+       "y": 25,
+       "texte": "A",
+       "vers": [
+        245,
+        55
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 270,
+       "y": 100,
+       "texte": "B",
+       "vers": [
+        168,
+        100
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 270,
+       "y": 205,
+       "texte": "C",
+       "vers": [
+        220,
+        190
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plante",
+     "enonce": "Touche l’organe qui prélève l’eau et les sels minéraux dans le sol.",
+     "reponse": [
+      "racines"
+     ],
+     "aide": "Il est sous la terre.",
+     "explication": "Les **racines**, avec leurs poils absorbants, prélèvent l’eau et les sels minéraux."
+    },
+    {
+     "type": "zone",
+     "document": "plante",
+     "enonce": "Touche l’organe où se fait la photosynthèse.",
+     "reponse": [
+      "feuille"
+     ],
+     "aide": "Il est vert, au sommet de la plante.",
+     "explication": "La photosynthèse se fait dans les **feuilles**, dans les chloroplastes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’équation de la photosynthèse.",
+     "texte": "Dioxyde de carbone + eau + énergie ___ donne glucose + ___.",
+     "reponses": [
+      [
+       "lumineuse"
+      ],
+      [
+       "dioxygène"
+      ]
+     ],
+     "banque": [
+      "lumineuse",
+      "dioxygène",
+      "thermique",
+      "azote"
+     ],
+     "aide": "La plante capte la lumière et rejette un gaz.",
+     "explication": "Dioxyde de carbone + eau + énergie **lumineuse** donne glucose + **dioxygène**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une plante verte n’a-t-elle pas besoin de « manger » ?",
+     "options": [
+      "Elle fabrique sa matière organique à partir de matière minérale et de lumière",
+      "Elle se nourrit d’insectes",
+      "Elle n’a pas besoin d’énergie",
+      "Elle se nourrit de la terre seulement"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la photosynthèse.",
+     "explication": "La plante est **autotrophe** : elle fabrique sa propre matière organique."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed1f917c-faaa-56f6-ad5d-8d77f25fec87",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment l’eau monte jusqu’aux feuilles",
+   "competence": "analyser-document",
+   "situation": "Un élève place une plante sous un sac plastique et mesure l’eau perdue en 6 heures dans trois conditions (expérience imaginée).",
+   "documents": [
+    {
+     "id": "transp",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Eau perdue par la plante en 6 heures",
+     "categories": [
+      "À l’obscurité",
+      "À la lumière",
+      "À la lumière avec du vent"
+     ],
+     "series": [
+      {
+       "nom": "Eau perdue",
+       "valeurs": [
+        5,
+        40,
+        80
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Eau perdue",
+      "unite": "g",
+      "min": 0,
+      "max": 90,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois plus d’eau la plante perd-elle à la lumière avec du vent qu’à l’obscurité ?",
+     "reponse": 16,
+     "aide": "Divise 80 par 5.",
+     "explication": "80 ÷ 5 = **16 fois** : les stomates laissent sortir de la vapeur d’eau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel phénomène fait monter la sève brute des racines vers les feuilles ?",
+     "options": [
+      "La transpiration par les stomates",
+      "La photosynthèse",
+      "La respiration cellulaire",
+      "La pression du sol"
+     ],
+     "reponse": 0,
+     "aide": "Plus la plante perd d’eau, plus elle en aspire.",
+     "explication": "L’eau qui s’évapore par les **stomates** aspire la sève brute dans le **xylème**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque vaisseau à sa sève.",
+     "paires": [
+      [
+       "Xylème",
+       "Sève brute : eau et sels minéraux, vers les feuilles"
+      ],
+      [
+       "Phloème",
+       "Sève élaborée riche en sucres, des feuilles vers les organes"
+      ]
+     ],
+     "aide": "La sève brute n’est pas encore sucrée.",
+     "explication": "Le **xylème** porte la sève brute vers le haut ; le **phloème** distribue la sève élaborée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une plante qui transpire trop peut-elle se faner ?",
+     "options": [
+      "Elle perd plus d’eau qu’elle n’en absorbe par les racines",
+      "Elle manque de lumière",
+      "Elle fabrique trop de glucose",
+      "Ses feuilles gèlent"
+     ],
+     "reponse": 0,
+     "aide": "Les stomates règlent les pertes d’eau.",
+     "explication": "Quand les pertes par les stomates dépassent l’absorption des racines, la plante **se fane**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed1f917c-faaa-56f6-ad5d-8d77f25fec87",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une plante fixée, mais pas sans défense",
+   "competence": "raisonner",
+   "situation": "Camille observe son jardin : une plante ne peut pas fuir, mais elle a d’autres réponses. Elle note ses observations et dessine une chaîne alimentaire.",
+   "documents": [
+    {
+     "id": "jardin",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le carnet de Camille",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les rosiers ont des épines et le noyer produit des substances toxiques.",
+      "À l’automne, le tilleul perd ses feuilles.",
+      "Les graines de haricot passent l’hiver dans la terre.",
+      "Les haricots portent des nodosités, des renflements avec des bactéries.",
+      "Le tournesol tourne vers le Soleil."
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Une chaîne alimentaire du jardin",
+     "noeuds": [
+      {
+       "id": "herbe",
+       "texte": "Herbe",
+       "emoji": "🌿"
+      },
+      {
+       "id": "sauterelle",
+       "texte": "Sauterelle",
+       "emoji": "🦗"
+      },
+      {
+       "id": "grenouille",
+       "texte": "Grenouille",
+       "emoji": "🐸"
+      },
+      {
+       "id": "heron",
+       "texte": "Héron",
+       "emoji": "🦢"
+      }
+     ],
+     "liens": [
+      {
+       "de": "herbe",
+       "a": "sauterelle"
+      },
+      {
+       "de": "sauterelle",
+       "a": "grenouille"
+      },
+      {
+       "de": "grenouille",
+       "a": "heron"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque contrainte à la réponse de la plante.",
+     "paires": [
+      [
+       "Chercher la lumière",
+       "Croissance orientée"
+      ],
+      [
+       "Herbivores",
+       "Épines et substances toxiques"
+      ],
+      [
+       "Hiver",
+       "Feuilles caduques"
+      ],
+      [
+       "Mauvaises saisons",
+       "Graines et spores résistantes"
+      ]
+     ],
+     "aide": "Pense aux observations de Camille.",
+     "explication": "Une plante fixée **répond** autrement qu’en fuyant : croissance orientée, défenses, caducité, graines."
+    },
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche le producteur primaire de la chaîne.",
+     "reponse": [
+      "herbe"
+     ],
+     "aide": "C’est celui qui fabrique sa matière avec la lumière.",
+     "explication": "L’**herbe** est le producteur primaire : le premier maillon de la chaîne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permettent les nodosités des haricots ?",
+     "options": [
+      "Des bactéries y fixent l’azote pour la plante",
+      "La photosynthèse",
+      "La respiration",
+      "La pollinisation"
+     ],
+     "reponse": 0,
+     "aide": "C’est une relation entre la plante et des bactéries.",
+     "explication": "Les **nodosités** abritent des bactéries qui fixent l’azote : une relation qui aide la plante immobile."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment les insectes aident-ils une plante immobile à se reproduire ?",
+     "options": [
+      "Par la pollinisation",
+      "Par la photosynthèse",
+      "Par la transpiration",
+      "Par la mycorhize"
+     ],
+     "reponse": 0,
+     "aide": "Ils transportent le pollen de fleur en fleur.",
+     "explication": "Les insectes assurent la **pollinisation** : le pollen passe d’une fleur à l’autre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une forêt plantée freine-t-elle le réchauffement ?",
+     "options": [
+      "Elle stocke du carbone",
+      "Elle produit du CO₂",
+      "Elle réfléchit les infrarouges",
+      "Elle chauffe l’air"
+     ],
+     "reponse": 0,
+     "aide": "Les plantes absorbent le CO₂ en faisant la photosynthèse.",
+     "explication": "Les plantes **stockent du carbone** : elles absorbent du CO₂ pour fabriquer leur matière."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdc4a1b1-39e6-53b6-ba34-2ce6c93a88c8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La semaine de Yanis",
+   "competence": "lire-tableau",
+   "situation": "L’OMS recommande aux adolescents au moins 60 minutes d’activité physique par jour. Yanis a noté le temps qu’il a bougé chaque jour de la semaine.",
+   "documents": [
+    {
+     "id": "semaine",
+     "type": "tableau",
+     "titre": "Activité physique de Yanis",
+     "colonnes": [
+      "Jour",
+      "Activité physique (min)"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       70
+      ],
+      [
+       "Mardi",
+       30
+      ],
+      [
+       "Mercredi",
+       90
+      ],
+      [
+       "Jeudi",
+       45
+      ],
+      [
+       "Vendredi",
+       60
+      ],
+      [
+       "Samedi",
+       80
+      ],
+      [
+       "Dimanche",
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "semaine",
+     "enonce": "Touche les trois jours où Yanis n’atteint pas les 60 minutes recommandées.",
+     "reponse": [
+      "r1c1",
+      "r3c1",
+      "r6c1"
+     ],
+     "multiple": true,
+     "aide": "Cherche les valeurs inférieures à 60.",
+     "explication": "Mardi (**30**), jeudi (**45**) et dimanche (**20**) sont sous les 60 minutes."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le jour où Yanis a bougé le plus longtemps ? (un mot)",
+     "reponse": [
+      "mercredi",
+      "le mercredi"
+     ],
+     "aide": "Cherche le plus grand nombre de minutes.",
+     "explication": "Le **mercredi**, avec 90 minutes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes Yanis a-t-il bougé en tout dans la semaine ?",
+     "reponse": 395,
+     "unite": "minutes",
+     "aide": "Additionne les sept jours.",
+     "explication": "70 + 30 + 90 + 45 + 60 + 80 + 20 = **395 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La recommandation est de 60 minutes par jour, soit 420 minutes par semaine. Combien de minutes manque-t-il à Yanis ?",
+     "reponse": 25,
+     "unite": "minutes",
+     "aide": "Soustrais son total à 420.",
+     "explication": "420 − 395 = **25 minutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdc4a1b1-39e6-53b6-ba34-2ce6c93a88c8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Épuisé, blessé, mal endormi",
+   "competence": "analyser-document",
+   "situation": "Léo s’entraîne beaucoup et il en parle par messages à son amie Inès. Lis leur échange.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Salut Léo ! Tu n’étais pas à l’entraînement hier."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Non… je m’entraîne 6 jours sur 7 mais je suis [[s|épuisé]] depuis deux semaines."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Je me [[s|blesse]] tout le temps et je [[s|dors]] mal."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Et tu t’échauffes avant ?"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Pas vraiment, je commence direct, ça va plus vite !"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Ton corps ne récupère plus. Il faut lever le pied !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche les trois mots qui montrent que Léo a une surcharge d’entraînement.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche la fatigue, les blessures et le sommeil.",
+     "explication": "**Épuisé** (fatigue persistante), **blesse** (blessures à répétition) et **dors** mal (sommeil perturbé) : ce sont les signes de surcharge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conseiller à Léo ?",
+     "options": [
+      "Alléger l’entraînement et récupérer : repos, sommeil, hydratation",
+      "S’entraîner encore plus, en ajoutant des séances pour progresser vite",
+      "Arrêter tout sport définitivement, même une fois qu’il sera guéri",
+      "Prendre un produit dopant pour tenir jusqu’à la prochaine compétition"
+     ],
+     "reponse": 0,
+     "aide": "Son corps « ne récupère plus » : de quoi a-t-il besoin ?",
+     "explication": "Le surentraînement demande du **repos** et de la récupération, pas plus d’efforts et surtout pas de dopage."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque geste : bon réflexe ou à éviter ?",
+     "categories": [
+      "Bon réflexe",
+      "À éviter"
+     ],
+     "items": [
+      [
+       "S’échauffer progressivement",
+       0
+      ],
+      [
+       "Boire pendant et après l’effort",
+       0
+      ],
+      [
+       "Dormir assez",
+       0
+      ],
+      [
+       "Commencer sans échauffement",
+       1
+      ],
+      [
+       "Ignorer une douleur",
+       1
+      ],
+      [
+       "S’entraîner en étant malade",
+       1
+      ]
+     ],
+     "aide": "Pense à ce qui prépare le corps et à ce qui le met en danger.",
+     "explication": "Échauffement, **hydratation** et sommeil protègent ; commencer à froid, ignorer la douleur ou s’entraîner malade exposent aux blessures."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdc4a1b1-39e6-53b6-ba34-2ce6c93a88c8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un collège, des pistes cyclables",
+   "competence": "analyser-document",
+   "situation": "Deux quartiers d’une ville imaginée ont chacun 500 collégiens. L’un a des pistes cyclables sécurisées, l’autre non. Chiffres inventés pour l’exercice.",
+   "documents": [
+    {
+     "id": "quartiers",
+     "type": "tableau",
+     "titre": "Deux quartiers comparés",
+     "colonnes": [
+      "Mesure",
+      "Quartier A",
+      "Quartier B"
+     ],
+     "lignes": [
+      [
+       "Pistes cyclables (km)",
+       12,
+       0
+      ],
+      [
+       "Collégiens venant à vélo",
+       210,
+       45
+      ],
+      [
+       "Collégiens en tout",
+       500,
+       500
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des collégiens du quartier A vient à vélo, en % ?",
+     "reponse": 42,
+     "unite": "%",
+     "aide": "Divise 210 par 500, puis multiplie par 100.",
+     "explication": "210 ÷ 500 = 0,42, soit **42 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des collégiens du quartier B vient à vélo, en % ?",
+     "reponse": 9,
+     "unite": "%",
+     "aide": "Divise 45 par 500, puis multiplie par 100.",
+     "explication": "45 ÷ 500 = 0,09, soit **9 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette comparaison ?",
+     "options": [
+      "Des pistes sécurisées influencent fortement la pratique, pas seulement la volonté",
+      "Seule la volonté individuelle compte : les aménagements n’y changent rien du tout",
+      "Les élèves du quartier B n’aiment pas le vélo, contrairement à ceux du quartier A",
+      "Les pistes cyclables n’ont aucun effet sur le nombre d’élèves qui viennent à vélo"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux quartiers : qu’est-ce qui les différencie ?",
+     "explication": "Avec des pistes, **42 %** des élèves viennent à vélo contre **9 %** sans : la santé publique se joue aussi dans l’aménagement."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque action : choix individuel ou action collective ?",
+     "categories": [
+      "Choix individuel",
+      "Action collective"
+     ],
+     "items": [
+      [
+       "Prendre l’escalier plutôt que l’ascenseur",
+       0
+      ],
+      [
+       "Construire des pistes cyclables",
+       1
+      ],
+      [
+       "Sécuriser les trajets scolaires",
+       1
+      ],
+      [
+       "Se coucher tôt pour être en forme",
+       0
+      ],
+      [
+       "Ouvrir des équipements sportifs accessibles à tous",
+       1
+      ],
+      [
+       "Décider d’aller à pied au collège",
+       0
+      ]
+     ],
+     "aide": "Une action collective dépend de la ville, de l’école ou de l’État.",
+     "explication": "Les choix de chacun sont **individuels** ; pistes, trajets sûrs et équipements relèvent de l’**action collective**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8f7c7d3-4780-5abb-8f2e-753efb3d99c3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le neurone, de A à Z",
+   "competence": "observer-schema",
+   "situation": "Un neurone reçoit un message, le transmet, puis le passe à la cellule suivante. Ce schéma simplifié montre ses principales parties.",
+   "documents": [
+    {
+     "id": "neurone",
+     "type": "schema",
+     "titre": "Un neurone et la cellule suivante",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         74,
+         98
+        ],
+        [
+         44,
+         62
+        ],
+        [
+         52,
+         58
+        ],
+        [
+         82,
+         90
+        ],
+        [
+         82,
+         130
+        ],
+        [
+         52,
+         162
+        ],
+        [
+         44,
+         158
+        ],
+        [
+         74,
+         122
+        ],
+        [
+         50,
+         114
+        ],
+        [
+         22,
+         114
+        ],
+        [
+         22,
+         106
+        ],
+        [
+         50,
+         106
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "dendrites",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 100,
+       "cy": 110,
+       "rx": 30,
+       "ry": 26,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "corps",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 110,
+       "r": 9,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 128,
+       "y": 105,
+       "l": 130,
+       "h": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "axone",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 270,
+       "cy": 110,
+       "rx": 10,
+       "ry": 20,
+       "teinte": "corail",
+       "motif": "clair",
+       "id": "synapse",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 282,
+       "y": 90,
+       "l": 30,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 205,
+       "texte": "Cellule suivante à droite",
+       "taille": "petit",
+       "italique": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche la partie du neurone qui **reçoit** le message nerveux.",
+     "reponse": [
+      "dendrites"
+     ],
+     "aide": "Ce sont les prolongements ramifiés, à gauche.",
+     "explication": "Les **dendrites** reçoivent le message."
+    },
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche la partie qui **transmet** le message le long du neurone.",
+     "reponse": [
+      "axone"
+     ],
+     "aide": "Le long prolongement qui part du corps cellulaire.",
+     "explication": "L’**axone** transmet le message nerveux."
+    },
+    {
+     "type": "zone",
+     "document": "neurone",
+     "enonce": "Touche la zone de contact où le message passe d’un neurone à la cellule suivante.",
+     "reponse": [
+      "synapse"
+     ],
+     "aide": "C’est à cet endroit que la plupart des drogues agissent.",
+     "explication": "Le message franchit la **synapse** grâce à des neurotransmetteurs chimiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le message nerveux franchit-il la synapse ?",
+     "options": [
+      "Par des neurotransmetteurs chimiques",
+      "Par un fil électrique continu",
+      "Par le sang uniquement",
+      "Il ne la franchit jamais"
+     ],
+     "reponse": 0,
+     "aide": "Il s’agit de petites molécules libérées par le neurone.",
+     "explication": "À la synapse, le message passe par des **neurotransmetteurs** : c’est un signal chimique."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8f7c7d3-4780-5abb-8f2e-753efb3d99c3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Main sur la plaque chaude",
+   "competence": "observer-schema",
+   "situation": "Elsa touche par erreur une plaque de cuisson brûlante et retire sa main avant même d’avoir mal. Le trajet du message nerveux est schématisé.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "titre": "Le trajet du message nerveux",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "stim",
+       "texte": "Plaque brûlante (stimulus)",
+       "emoji": "🔥"
+      },
+      {
+       "id": "recep",
+       "texte": "Récepteurs de la peau",
+       "emoji": "🖐️"
+      },
+      {
+       "id": "n1",
+       "texte": "?"
+      },
+      {
+       "id": "centre",
+       "texte": "Moelle épinière",
+       "emoji": "🧠"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "effet",
+       "texte": "Muscle du bras (effecteur)",
+       "emoji": "💪"
+      }
+     ],
+     "liens": [
+      {
+       "de": "stim",
+       "a": "recep"
+      },
+      {
+       "de": "recep",
+       "a": "n1"
+      },
+      {
+       "de": "n1",
+       "a": "centre"
+      },
+      {
+       "de": "centre",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "effet"
+      }
+     ]
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Temps de réaction",
+     "colonnes": [
+      "Réaction",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "Réflexe de retrait de la main",
+       "0,05 seconde"
+      ],
+      [
+       "Réaction volontaire (retirer la main après réflexion)",
+       "0,25 seconde"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis, à titre d’illustration."
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel nerf transporte le message entre les récepteurs et la moelle épinière (premier « ? ») ?",
+     "options": [
+      "Un nerf sensitif",
+      "Un nerf moteur",
+      "Un nerf effecteur",
+      "Un nerf cérébral"
+     ],
+     "reponse": 0,
+     "aide": "Le message part d’un récepteur vers un centre nerveux.",
+     "explication": "Le message est **sensitif** : il part du récepteur par un **nerf sensitif**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel nerf transporte le message entre la moelle épinière et le muscle (second « ? ») ?",
+     "options": [
+      "Un nerf moteur",
+      "Un nerf sensitif",
+      "Un nerf récepteur",
+      "Aucun nerf : le muscle réagit seul"
+     ],
+     "reponse": 0,
+     "aide": "Le message part du centre nerveux vers l’organe effecteur.",
+     "explication": "Le message est **moteur** : il part du centre nerveux vers l’**effecteur** par un **nerf moteur**."
+    },
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche le centre nerveux qui traite le message dans ce réflexe.",
+     "reponse": [
+      "centre"
+     ],
+     "aide": "Dans un réflexe, ce n’est pas le cerveau qui traite.",
+     "explication": "Dans un réflexe, le traitement se fait dans la **moelle épinière** : c’est ce qui le rend si rapide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la réaction volontaire est-elle plus lente que le réflexe ?",
+     "reponse": 5,
+     "unite": "fois",
+     "aide": "Divise 0,25 par 0,05.",
+     "explication": "0,25 ÷ 0,05 = **5 fois** plus lente environ. Le réflexe protège avant même qu’on ait mal."
+    }
+   ]
+  },
+  {
+   "chapitre": "d8f7c7d3-4780-5abb-8f2e-753efb3d99c3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une soirée qui laisse des traces",
+   "competence": "analyser-document",
+   "situation": "Léo, 15 ans, raconte à l’infirmière scolaire ses dernières semaines. Elle lui explique ce que subit son système nerveux. Le témoignage a été écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le récit de Léo",
+     "blocs": [
+      "Je mets mes écouteurs à fond trois heures par jour. Depuis une soirée où j’ai bu, j’entends parfois un [[b|sifflement]] dans les oreilles le soir.",
+      "Je me couche très tard : j’ai du mal à retenir mes leçons et je suis souvent de mauvaise humeur."
+     ],
+     "source": "Témoignage écrit pour l’exercice."
+    },
+    {
+     "id": "facteurs",
+     "type": "tableau",
+     "titre": "Facteurs et effets",
+     "colonnes": [
+      "Le facteur",
+      "Son effet"
+     ],
+     "lignes": [
+      [
+       "Bruit intense, écouteurs forts",
+       "?"
+      ],
+      [
+       "Manque de sommeil",
+       "?"
+      ],
+      [
+       "Alcool à l’adolescence",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Document de synthèse écrit pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche le signe qui peut révéler des cellules de l’oreille interne abîmées.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Léo l’entend le soir, dans les oreilles.",
+     "explication": "Un **sifflement** peut signaler des cellules ciliées de l’oreille interne lésées par le bruit."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque facteur à son effet sur le système nerveux.",
+     "paires": [
+      [
+       "Bruit intense, écouteurs forts",
+       "Destruction irréversible des cellules ciliées"
+      ],
+      [
+       "Manque de sommeil",
+       "Mémoire et attention dégradées"
+      ],
+      [
+       "Alcool à l’adolescence",
+       "Toxique pour un cerveau en développement"
+      ]
+     ],
+     "aide": "Pense à ce que le sommeil consolide.",
+     "explication": "Le bruit détruit **définitivement** les cellules ciliées ; le sommeil **consolide les apprentissages** ; l’alcool est très risqué pour un cerveau **en développement**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le sifflement de Léo est-il inquiétant ?",
+     "options": [
+      "Les cellules ciliées détruites ne se régénèrent pas",
+      "Les cellules ciliées se renouvellent chaque semaine",
+      "Le sifflement est toujours sans conséquence",
+      "Il vient forcément de l’alcool"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « bruit » du cours.",
+     "explication": "Les cellules ciliées détruites par le bruit ne se **régénèrent pas** : la perte est **irréversible**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie ces gestes : à faire ou à éviter pour protéger son système nerveux.",
+     "categories": [
+      "À faire",
+      "À éviter"
+     ],
+     "items": [
+      [
+       "Baisser le volume des écouteurs",
+       0
+      ],
+      [
+       "Porter un casque à vélo",
+       0
+      ],
+      [
+       "Mettre une protection auditive en concert",
+       0
+      ],
+      [
+       "Consommer du cannabis",
+       1
+      ],
+      [
+       "Se coucher très tard en regardant des écrans",
+       1
+      ],
+      [
+       "Boire de l’alcool pour se détendre",
+       1
+      ]
+     ],
+     "aide": "Casque et protection auditive protègent ; substances et manque de sommeil abîment.",
+     "explication": "Casque, protection auditive et volume modéré **protègent**. Alcool, cannabis et manque de sommeil **perturbent** le système nerveux."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea2359c8-ed07-5400-b2a6-c29a9441d3e5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui commande la puberté ?",
+   "competence": "observer-schema",
+   "situation": "À l’adolescence, une chaîne de commandes se met en route dans le corps. Elle relie le cerveau aux testicules ou aux ovaires.",
+   "documents": [
+    {
+     "id": "commande",
+     "type": "chaine",
+     "titre": "La chaîne hormonale",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "cerveau",
+       "texte": "Cerveau",
+       "emoji": "🧠"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "gonades",
+       "texte": "Gonades"
+      }
+     ],
+     "liens": [
+      {
+       "de": "cerveau",
+       "a": "x",
+       "texte": "commande"
+      },
+      {
+       "de": "x",
+       "a": "gonades",
+       "texte": "hormones dans le sang"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle glande remplace le « ? » ?",
+     "options": [
+      "L’hypophyse",
+      "Le foie",
+      "Le pancréas",
+      "L’estomac"
+     ],
+     "reponse": 0,
+     "aide": "Elle est située dans le cerveau.",
+     "explication": "C’est l’**hypophyse** : elle libère des hormones dans le sang."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque gonade aux hormones qu’elle produit.",
+     "paires": [
+      [
+       "Testicules",
+       "La testostérone"
+      ],
+      [
+       "Ovaires",
+       "Les œstrogènes et la progestérone"
+      ]
+     ],
+     "aide": "Les gonades masculines et féminines n’ont pas les mêmes hormones.",
+     "explication": "Les **testicules** produisent la **testostérone**, les **ovaires** les **œstrogènes** et la **progestérone**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Trie chaque changement : caractère sexuel primaire ou secondaire ?",
+     "categories": [
+      "Primaire",
+      "Secondaire"
+     ],
+     "items": [
+      [
+       "Les organes génitaux deviennent fonctionnels",
+       0
+      ],
+      [
+       "Les testicules ou les ovaires se développent",
+       0
+      ],
+      [
+       "La mue de la voix",
+       1
+      ],
+      [
+       "La pilosité",
+       1
+      ],
+      [
+       "Le développement des seins",
+       1
+      ],
+      [
+       "La poussée de croissance",
+       1
+      ]
+     ],
+     "aide": "Les caractères primaires concernent directement la reproduction.",
+     "explication": "Les **primaires** concernent les organes génitaux. Les **secondaires** (pilosité, seins, mue, croissance) apparaissent à la puberté sans être indispensables à la reproduction."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea2359c8-ed07-5400-b2a6-c29a9441d3e5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le cycle de l’appareil féminin",
+   "competence": "analyser-document",
+   "situation": "Chaque mois, l’appareil féminin se prépare à une éventuelle grossesse. Un schéma montre l’appareil, un graphique l’épaisseur de la muqueuse de l’utérus au fil d’un cycle de 28 jours.",
+   "documents": [
+    {
+     "id": "appareil",
+     "type": "schema",
+     "titre": "L’appareil génital féminin (vue de face)",
+     "largeur": 320,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         80
+        ],
+        [
+         200,
+         80
+        ],
+        [
+         165,
+         170
+        ],
+        [
+         155,
+         170
+        ]
+       ],
+       "teinte": "rose",
+       "motif": "plein",
+       "id": "uterus",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 62,
+       "y": 78,
+       "l": 58,
+       "h": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "trg",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 78,
+       "l": 58,
+       "h": 8,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "trd",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 48,
+       "cy": 88,
+       "rx": 16,
+       "ry": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "ovg",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 272,
+       "cy": 88,
+       "rx": 16,
+       "ry": 12,
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "ovd",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "muqueuse",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Épaisseur de la muqueuse utérine",
+     "categories": [
+      "J1",
+      "J7",
+      "J14",
+      "J21",
+      "J28"
+     ],
+     "series": [
+      {
+       "nom": "Épaisseur",
+       "valeurs": [
+        1,
+        2,
+        4,
+        7,
+        7
+       ],
+       "teinte": "rose"
+      }
+     ],
+     "axeY": {
+      "titre": "Épaisseur",
+      "unite": "en mm",
+      "min": 0,
+      "max": 8,
+      "pas": 2
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice. J1 est le premier jour des règles."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appareil",
+     "enonce": "Touche les deux organes qui produisent les ovules.",
+     "reponse": [
+      "ovg",
+      "ovd"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les deux petits organes aux extrémités du schéma.",
+     "explication": "Les **ovaires** produisent les ovules, environ un tous les 28 jours."
+    },
+    {
+     "type": "zone",
+     "document": "appareil",
+     "enonce": "Touche les deux organes où peut avoir lieu la fécondation.",
+     "reponse": [
+      "trg",
+      "trd"
+     ],
+     "multiple": true,
+     "aide": "Ce sont les conduits qui relient les ovaires à l’utérus.",
+     "explication": "La fécondation a lieu dans une **trompe**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’épaisseur de la muqueuse utérine au 21e jour du cycle (en mm) ?",
+     "reponse": 7,
+     "unite": "mm",
+     "tolerance": 0.3,
+     "aide": "Lis le point J21 de la courbe.",
+     "explication": "Au 21e jour, la muqueuse mesure **7 mm** : elle s’est épaissie pour accueillir un embryon."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient cette muqueuse s’il n’y a pas de fécondation ?",
+     "options": [
+      "Elle est éliminée : ce sont les règles",
+      "Elle devient un embryon",
+      "Elle reste identique toute la vie",
+      "Elle se transforme en ovule"
+     ],
+     "reponse": 0,
+     "aide": "Le cycle recommence au jour 1.",
+     "explication": "Sans fécondation, la muqueuse est **éliminée** : ce sont les **règles**, premier jour du cycle."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea2359c8-ed07-5400-b2a6-c29a9441d3e5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Je n’ai pas encore mes règles »",
+   "competence": "argumenter",
+   "situation": "Inès, 14 ans, écrit à l’infirmière du collège pour poser une question. Un tableau résume la différence entre les deux appareils. Le message est écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le message d’Inès",
+     "blocs": [
+      "Bonjour, je n’ai pas encore eu mes premières règles. Donc, je ne peux pas tomber enceinte, c’est bien ça ?"
+     ],
+     "source": "Message écrit pour l’exercice."
+    },
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Les deux appareils",
+     "colonnes": [
+      "Le point",
+      "Appareil masculin",
+      "Appareil féminin"
+     ],
+     "lignes": [
+      [
+       "Production des gamètes",
+       "Continue, dès la puberté et toute la vie",
+       "Cyclique : un ovule environ tous les 28 jours"
+      ],
+      [
+       "Stock initial",
+       "Aucun : fabriqués en permanence",
+       "Constitué dès la naissance"
+      ],
+      [
+       "Arrêt",
+       "Aucun net",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appareils",
+     "enonce": "Touche la case qui indique que les spermatozoïdes sont produits en continu.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne « Production des gamètes », colonne masculine.",
+     "explication": "Les testicules fabriquent des spermatozoïdes de façon **continue**, dès la puberté."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que répond-on à Inès ?",
+     "options": [
+      "Faux : l’ovulation précède les premières règles, une grossesse est donc possible",
+      "Vrai : sans règles, aucun risque",
+      "Vrai : les cycles irréguliers du début protègent",
+      "Faux : mais seulement après 18 ans"
+     ],
+     "reponse": 0,
+     "aide": "La première ovulation a lieu avant les premières règles.",
+     "explication": "La **première ovulation précède** les premières règles : une grossesse est **possible**, et des cycles irréguliers ne protègent en rien."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment appelle-t-on l’arrêt du fonctionnement cyclique des ovaires (le « ? » du tableau) ?",
+     "reponse": [
+      "ménopause",
+      "la ménopause"
+     ],
+     "placeholder": "Un mot",
+     "aide": "Le mot commence par « méno… ».",
+     "explication": "C’est la **ménopause**. Chez l’homme, la production de spermatozoïdes ne s’arrête pas nettement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition d’une hormone.",
+     "texte": "Une hormone est un message ___ produit par une ___ et transporté par le ___.",
+     "reponses": [
+      [
+       "chimique"
+      ],
+      [
+       "glande"
+      ],
+      [
+       "sang"
+      ]
+     ],
+     "banque": [
+      "chimique",
+      "glande",
+      "sang",
+      "nerf",
+      "électrique",
+      "muscle"
+     ],
+     "aide": "Elle voyage dans le sang jusqu’aux cellules cibles.",
+     "explication": "Une hormone est un message **chimique**, produit par une **glande** et transporté par le **sang**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b02f6f96-c53a-5396-9a32-07e4277b00ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Combien de chromosomes ?",
+   "competence": "lire-tableau",
+   "situation": "Un généticien compte les chromosomes de plusieurs cellules humaines : cellule de peau, spermatozoïde, ovule et cellule œuf.",
+   "documents": [
+    {
+     "id": "chromo",
+     "type": "tableau",
+     "titre": "Chromosomes dans quatre cellules humaines",
+     "colonnes": [
+      "Cellule",
+      "Nombre de chromosomes"
+     ],
+     "lignes": [
+      [
+       "Cellule de peau",
+       46
+      ],
+      [
+       "Spermatozoïde",
+       23
+      ],
+      [
+       "Ovule",
+       23
+      ],
+      [
+       "Cellule œuf",
+       46
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes un gamète humain contient-il ?",
+     "reponse": 23,
+     "aide": "Lis la ligne du spermatozoïde ou de l’ovule.",
+     "explication": "Chaque gamète en contient **23**, soit la moitié de 46."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes la cellule œuf reçoit-elle en additionnant ceux du spermatozoïde et de l’ovule ?",
+     "reponse": 46,
+     "aide": "Additionne ce que l’ovule et le spermatozoïde apportent.",
+     "explication": "23 + 23 = **46** : la fécondation rétablit le nombre normal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un embryon a la 23e paire XX. De quel sexe est-il ?",
+     "options": [
+      "Une fille",
+      "Un garçon",
+      "On ne peut pas le savoir",
+      "Aucun"
+     ],
+     "reponse": 0,
+     "aide": "XX pour une femme, XY pour un homme.",
+     "explication": "La paire **XX** correspond à une **fille**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "La ___ produit deux cellules identiques à 46 chromosomes ; la ___ produit des gamètes à 23 chromosomes.",
+     "reponses": [
+      [
+       "mitose"
+      ],
+      [
+       "méiose"
+      ]
+     ],
+     "banque": [
+      "mitose",
+      "méiose",
+      "fécondation",
+      "réplication"
+     ],
+     "aide": "Un nom pour croissance et réparation, un autre pour les gamètes.",
+     "explication": "La **mitose** produit des cellules identiques ; la **méiose** réduit le nombre de chromosomes à 23."
+    }
+   ]
+  },
+  {
+   "chapitre": "b02f6f96-c53a-5396-9a32-07e4277b00ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Et si la méiose n’existait pas ?",
+   "competence": "raisonner",
+   "situation": "On imagine une espèce où les gamètes auraient 46 chromosomes comme les autres cellules. Un graphique suit le nombre de chromosomes de génération en génération.",
+   "documents": [
+    {
+     "id": "sans",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Nombre de chromosomes sans méiose",
+     "categories": [
+      "Génération 0",
+      "Génération 1",
+      "Génération 2",
+      "Génération 3"
+     ],
+     "series": [
+      {
+       "nom": "Chromosomes",
+       "valeurs": [
+        46,
+        92,
+        184,
+        368
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Chromosomes",
+      "unite": "",
+      "min": 0,
+      "max": 400,
+      "pas": 50
+     },
+     "valeurs": false,
+     "source": "Situation imaginée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes aurait la cellule œuf de la génération 4 ?",
+     "reponse": 736,
+     "aide": "À chaque génération, le nombre double.",
+     "explication": "368 × 2 = **736** chromosomes : impossible à vivre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la réduction du nombre de chromosomes est-elle indispensable ?",
+     "options": [
+      "Sans elle, le nombre doublerait à chaque génération",
+      "Pour fabriquer plus de cellules",
+      "Pour que le corps grandisse",
+      "Pour éviter la fécondation"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le graphique.",
+     "explication": "La **méiose divise**, la fécondation **rétablit** : le nombre reste constant."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque processus à son rôle.",
+     "paires": [
+      [
+       "Mitose",
+       "Croissance, renouvellement et réparation"
+      ],
+      [
+       "Méiose",
+       "Fabrication des gamètes à 23 chromosomes"
+      ],
+      [
+       "Fécondation",
+       "Rétablit les 46 chromosomes"
+      ]
+     ],
+     "aide": "Chacun joue un rôle dans la transmission.",
+     "explication": "Mitose : corps ; méiose : gamètes ; fécondation : retour à 46."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La répartition au hasard des chromosomes lors de la méiose donne environ 8 millions de combinaisons. Arrondi, combien de millions ? (2²³ ≈ 8 388 608)",
+     "reponse": 8,
+     "unite": "millions",
+     "tolerance": 0.5,
+     "aide": "Arrondis 8,39 millions à l’unité.",
+     "explication": "2²³ ≈ **8 millions** de gamètes différents possibles par individu."
+    }
+   ]
+  },
+  {
+   "chapitre": "b02f6f96-c53a-5396-9a32-07e4277b00ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du caryotype à l’hérédité",
+   "competence": "analyser-document",
+   "situation": "Un caryotype ordonne les chromosomes d’une cellule. Un tableau décrit celui d’un bébé. Un texte pose ensuite la question d’un caractère acquis.",
+   "documents": [
+    {
+     "id": "karyo",
+     "type": "tableau",
+     "titre": "Caryotype d’un bébé",
+     "colonnes": [
+      "Chromosomes",
+      "Nombre"
+     ],
+     "lignes": [
+      [
+       "Paires 1 à 20",
+       "2 chromosomes chacune"
+      ],
+      [
+       "Paire 21",
+       "3 chromosomes"
+      ],
+      [
+       "Paire 22",
+       "2 chromosomes"
+      ],
+      [
+       "Paire 23",
+       "X et X"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données imaginées"
+    },
+    {
+     "id": "sportif",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le sportif et son bébé",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Mathis s’entraîne tous les jours depuis dix ans : ses muscles sont très développés. Sa fille vient de naître. Il se demande si elle aura ses muscles."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de chromosomes comptent toutes les cellules du bébé (somme des lignes) ?",
+     "reponse": 47,
+     "aide": "20 paires de 2, puis 3, puis 2, puis 2.",
+     "explication": "40 + 3 + 2 + 2 = **47** : un chromosome en trop."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quelle anomalie s’agit-il ?",
+     "options": [
+      "De la trisomie 21",
+      "D’un excès de la paire 23",
+      "D’un cancer",
+      "D’un caractère acquis"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la paire qui a trois chromosomes.",
+     "explication": "Trois exemplaires du chromosome 21 : c’est la **trisomie 21**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment une telle erreur peut-elle apparaître ?",
+     "options": [
+      "Une mauvaise répartition des chromosomes lors de la méiose donne un gamète à 24 chromosomes",
+      "Une mutation due au soleil",
+      "Une maladie du foie",
+      "Un manque de vitamine"
+     ],
+     "reponse": 0,
+     "aide": "Un gamète normal en a 23.",
+     "explication": "Un gamète à **24** chromosomes + un gamète à 23 donnent une cellule œuf à **47**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La fille de Mathis héritera-t-elle de ses muscles développés ?",
+     "options": [
+      "Non : un caractère acquis ne modifie pas l’information génétique des gamètes",
+      "Oui, entièrement",
+      "Oui, à moitié",
+      "Seulement si elle s’entraîne aussi"
+     ],
+     "reponse": 0,
+     "aide": "La musculature s’est développée par l’entraînement.",
+     "explication": "Un **caractère acquis** ne se transmet pas : les gamètes ne sont pas modifiés."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque caractère.",
+     "categories": [
+      "Transmis aux enfants",
+      "Non transmis"
+     ],
+     "items": [
+      [
+       "Couleur des yeux",
+       0
+      ],
+      [
+       "Groupe sanguin",
+       0
+      ],
+      [
+       "Bronzage",
+       1
+      ],
+      [
+       "Cicatrice",
+       1
+      ],
+      [
+       "Langue apprise",
+       1
+      ]
+     ],
+     "aide": "Ce qui est inscrit dans les gamètes est transmis.",
+     "explication": "Les caractères **héréditaires** sont transmis ; les caractères **acquis** (bronzage, cicatrice, langue) ne le sont pas."
+    }
+   ]
+  }
+ ]
+}

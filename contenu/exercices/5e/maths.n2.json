@@ -1,0 +1,3320 @@
+{
+ "niveau": "5e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "22abdd2d-34e7-5ef4-ad20-2d15880496a8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sondage sportif de la 5eB",
+   "competence": "lire-graphique",
+   "situation": "Pour la fête du collège, Nadia a demandé à chacun des 24 élèves de sa classe quel sport il pratique le plus. Elle a rangé les réponses dans un diagramme en barres.",
+   "documents": [
+    {
+     "id": "sondage",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le sport pratiqué par les élèves de la 5eB",
+     "source": "Sondage imaginé pour l’exercice",
+     "categories": [
+      "Football",
+      "Natation",
+      "Danse",
+      "Judo",
+      "Aucun"
+     ],
+     "series": [
+      {
+       "nom": "Élèves",
+       "valeurs": [
+        8,
+        6,
+        5,
+        4,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Effectif",
+      "unite": "élèves",
+      "min": 0,
+      "max": 10,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Sport pratiqué"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "enonce": "Touche la barre du sport pratiqué par le plus grand nombre d’élèves.",
+     "document": "sondage",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre la plus haute est celle du **football** : 8 élèves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves ont répondu au sondage en tout ? (effectif total)",
+     "reponse": 24,
+     "unite": "élèves",
+     "aide": "Ajoute les hauteurs des cinq barres : 8 + 6 + 5 + 4 + 1.",
+     "explication": "L’effectif total est la somme de tous les effectifs : 8 + 6 + 5 + 4 + 1 = **24** élèves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence de la natation, en pourcentage ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Fréquence = effectif de la valeur ÷ effectif total. Lis la barre de la natation.",
+     "explication": "La natation compte 6 élèves sur 24 : 6 ÷ 24 = 0,25, soit **25 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "22abdd2d-34e7-5ef4-ad20-2d15880496a8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Frères et sœurs : le tableau d’effectifs de Jonas",
+   "competence": "lire-tableau",
+   "situation": "Jonas interroge les 36 élèves de son niveau sur leur nombre de frères et sœurs. Il range les réponses dans un tableau d’effectifs, mais il a oublié une case.",
+   "documents": [
+    {
+     "id": "effectifs",
+     "type": "tableau",
+     "titre": "Nombre de frères et sœurs des 36 élèves",
+     "source": "Données imaginées pour l’exercice",
+     "colonnes": [
+      "Frères et sœurs",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "Effectif",
+       6,
+       12,
+       9,
+       "?",
+       3
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves ont **3** frères et sœurs ? (la case « ? »)",
+     "reponse": 6,
+     "unite": "élèves",
+     "aide": "L’effectif total est 36. Retire les effectifs déjà connus.",
+     "explication": "On a 6 + 12 + 9 + 3 = 30 élèves dans les autres cases, donc 36 − 30 = **6** élèves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence des élèves qui ont **2** frères et sœurs, en pourcentage ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Divise l’effectif de la valeur 2 par l’effectif total, 36.",
+     "explication": "Fréquence = 9 ÷ 36 = 0,25 = **25 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans un diagramme circulaire, quel angle donnerait-on au secteur « 1 frère ou sœur » ?",
+     "reponse": 120,
+     "unite": "°",
+     "aide": "Angle = fréquence × 360°. Calcule d’abord 12 ÷ 36.",
+     "explication": "La fréquence est 12 ÷ 36 = {{1/3}}, donc l’angle vaut {{1/3}} × 360° = **120°**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’étendue de cette série ?",
+     "reponse": 4,
+     "aide": "Étendue = plus grande valeur − plus petite valeur (ce sont les valeurs du caractère, pas les effectifs).",
+     "explication": "La plus grande valeur est 4 et la plus petite est 0 : 4 − 0 = **4**. Attention : on ne regarde pas les effectifs."
+    }
+   ]
+  },
+  {
+   "chapitre": "22abdd2d-34e7-5ef4-ad20-2d15880496a8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le graphique qui fait grimper les abonnés",
+   "competence": "lire-graphique",
+   "situation": "Le club de photo du collège a 500 abonnés en janvier, 510 en février et 520 en mars. Deux élèves ont dessiné le même résultat, l’un pour une affiche, l’autre pour le journal du collège.",
+   "documents": [
+    {
+     "id": "ga",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Graphique A",
+     "source": "Chiffres inventés pour l’exercice",
+     "categories": [
+      "Janv.",
+      "Févr.",
+      "Mars"
+     ],
+     "series": [
+      {
+       "nom": "Abonnés",
+       "valeurs": [
+        500,
+        510,
+        520
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Abonnés",
+      "min": 490,
+      "max": 530,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Mois"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "gb",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Graphique B",
+     "source": "Chiffres inventés pour l’exercice",
+     "categories": [
+      "Janv.",
+      "Févr.",
+      "Mars"
+     ],
+     "series": [
+      {
+       "nom": "Abonnés",
+       "valeurs": [
+        500,
+        510,
+        520
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Abonnés",
+      "min": 0,
+      "max": 600,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Mois"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Sur le graphique A, mesure les barres depuis le bas de l’axe : la barre de mars paraît combien de fois plus haute que celle de janvier ?",
+     "reponse": 3,
+     "aide": "Le bas de l’axe du graphique A est à 490, pas à 0. Compte les graduations de chaque barre à partir de 490.",
+     "explication": "Au-dessus de 490, la barre de janvier compte 10 et celle de mars 30 : 30 ÷ 10 = **3** fois plus haute. C’est l’impression que donne ce graphique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En réalité, combien d’abonnés de plus le club a-t-il en mars qu’en janvier ?",
+     "reponse": 20,
+     "unite": "abonnés",
+     "aide": "Lis les valeurs sur l’axe du graphique A : mars et janvier.",
+     "explication": "520 − 500 = **20** abonnés de plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hausse réelle entre janvier et mars, en pourcentage de l’effectif de janvier ?",
+     "reponse": 4,
+     "unite": "%",
+     "aide": "Fréquence de la hausse : 20 ÷ 500.",
+     "explication": "20 ÷ 500 = 0,04, soit une hausse de **4 %** : très loin de « ×3 »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel graphique respecte la règle de lecture « l’axe vertical part de zéro » ?",
+     "options": [
+      "Le graphique B",
+      "Le graphique A",
+      "Les deux",
+      "Aucun des deux"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la première graduation, tout en bas de chaque axe.",
+     "explication": "L’axe du graphique B part de **0** : les trois barres ont presque la même hauteur, comme les chiffres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le graphique A donne-t-il une fausse impression ?",
+     "options": [
+      "Son axe est tronqué : il commence à 490, pas à zéro",
+      "Ses chiffres sont faux : l’élève a changé les valeurs",
+      "Il a trois barres alors qu’il en faudrait quatre",
+      "Il utilise des barres violettes plutôt que des bâtons"
+     ],
+     "reponse": 0,
+     "aide": "Compare les deux axes : où commence chacun ?",
+     "explication": "Les valeurs sont les mêmes dans les deux graphiques. Dans A, l’axe **tronqué** exagère l’écart : on déforme la perception sans falsifier un seul chiffre."
+    }
+   ]
+  },
+  {
+   "chapitre": "4f19059b-1a4a-5ca0-a330-575e1f934b20",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les cinq devoirs de Maëlys",
+   "competence": "calculer",
+   "situation": "Maëlys a eu cinq devoirs de maths ce trimestre. Elle range ses notes dans un tableau et veut savoir où elle en est.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Les notes de Maëlys",
+     "source": "Notes imaginées pour l’exercice",
+     "colonnes": [
+      "Devoir",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Note sur 20",
+       12,
+       15,
+       9,
+       14,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des cinq notes de Maëlys ?",
+     "reponse": 60,
+     "aide": "Ajoute les cinq notes du tableau.",
+     "explication": "12 + 15 + 9 + 14 + 10 = **60**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne de Maëlys ?",
+     "reponse": 12,
+     "unite": "/20",
+     "aide": "Moyenne = somme des valeurs ÷ nombre de valeurs. Il y a cinq notes.",
+     "explication": "La moyenne est 60 ÷ 5 = **12**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maëlys annonce à sa mère : « J’ai 16 de moyenne ! » Que penser de cette phrase ?",
+     "options": [
+      "C’est impossible : la moyenne est comprise entre 9 et 15",
+      "C’est possible : 16 est proche de sa meilleure note",
+      "C’est possible : il suffit d’ajouter toutes ses notes",
+      "C’est impossible : la moyenne est toujours égale à 10"
+     ],
+     "reponse": 0,
+     "aide": "Repère la plus petite et la plus grande note du tableau.",
+     "explication": "Une moyenne est toujours **comprise entre la plus petite et la plus grande valeur** de la série : ici entre 9 et 15. 16 est impossible."
+    }
+   ]
+  },
+  {
+   "chapitre": "4f19059b-1a4a-5ca0-a330-575e1f934b20",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bulletin de Thomas : pourquoi les coefficients comptent",
+   "competence": "calculer",
+   "situation": "Thomas reçoit son bulletin. Chaque matière a un coefficient, et sa mère se demande si la moyenne simple de ses quatre notes dit la même chose que la moyenne de son bulletin.",
+   "documents": [
+    {
+     "id": "bulletin",
+     "type": "tableau",
+     "titre": "Le bulletin du trimestre",
+     "source": "Bulletin imaginé pour l’exercice",
+     "colonnes": [
+      "Matière",
+      "Note",
+      "Coefficient"
+     ],
+     "lignes": [
+      [
+       "Mathématiques",
+       15,
+       4
+      ],
+      [
+       "Français",
+       12,
+       3
+      ],
+      [
+       "Anglais",
+       14,
+       2
+      ],
+      [
+       "Sport",
+       16,
+       1
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des coefficients ?",
+     "reponse": 10,
+     "aide": "Ajoute les quatre coefficients.",
+     "explication": "4 + 3 + 2 + 1 = **10**. C’est par ce nombre qu’on divisera."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme des produits « note × coefficient » ?",
+     "reponse": 140,
+     "aide": "Calcule 15 × 4, 12 × 3, 14 × 2 et 16 × 1, puis ajoute.",
+     "explication": "15 × 4 = 60 ; 12 × 3 = 36 ; 14 × 2 = 28 ; 16 × 1 = 16. Total : 60 + 36 + 28 + 16 = **140**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne pondérée de Thomas ?",
+     "reponse": 14,
+     "unite": "/20",
+     "aide": "Divise la somme des produits par la somme des coefficients, pas par 4.",
+     "explication": "Moyenne pondérée = 140 ÷ 10 = **14**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait la moyenne simple de ses quatre notes, sans coefficients ?",
+     "reponse": 14.25,
+     "unite": "/20",
+     "aide": "Ajoute les quatre notes, puis divise par 4.",
+     "explication": "(15 + 12 + 14 + 16) ÷ 4 = 57 ÷ 4 = **14,25**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la moyenne du bulletin (14) est-elle différente de la moyenne simple (14,25) ?",
+     "options": [
+      "Les matières à gros coefficient pèsent plus dans la moyenne",
+      "Le bulletin arrondit toujours les notes vers le bas",
+      "La moyenne simple oublie la dernière note du tableau",
+      "Les coefficients ne changent jamais le résultat final"
+     ],
+     "reponse": 0,
+     "aide": "Quelle note a le plus gros coefficient, et est-elle haute ou basse ?",
+     "explication": "Dans une moyenne pondérée, chaque note compte **autant de fois que son coefficient** : le français (12) pèse trois fois et tire la moyenne vers le bas."
+    }
+   ]
+  },
+  {
+   "chapitre": "4f19059b-1a4a-5ca0-a330-575e1f934b20",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux classes, une seule moyenne",
+   "competence": "raisonner",
+   "situation": "Les classes de 5eA et de 5eB ont passé le même contrôle de maths. Inès veut calculer la moyenne des 40 élèves, et Hugo n’est pas d’accord avec sa méthode.",
+   "documents": [
+    {
+     "id": "classes",
+     "type": "tableau",
+     "titre": "Les résultats du contrôle",
+     "source": "Résultats imaginés pour l’exercice",
+     "colonnes": [
+      "Classe",
+      "Effectif",
+      "Moyenne"
+     ],
+     "lignes": [
+      [
+       "5eA",
+       24,
+       11
+      ],
+      [
+       "5eB",
+       16,
+       14
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le débat d’Inès et d’Hugo",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Pour les deux classes, je fais (11 + 14) ÷ 2 = 12,5."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Je ne crois pas : la 5eA a plus d’élèves que la 5eB…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des points de toute la 5eA ? (effectif × moyenne)",
+     "reponse": 264,
+     "aide": "Une moyenne de 11 sur 24 élèves : la somme des notes vaut 24 × 11.",
+     "explication": "24 × 11 = **264** points."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des points de toute la 5eB ?",
+     "reponse": 224,
+     "aide": "Même raisonnement avec 16 élèves et une moyenne de 14.",
+     "explication": "16 × 14 = **224** points."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des 40 élèves ? (une valeur décimale)",
+     "reponse": 12.2,
+     "unite": "/20",
+     "aide": "Moyenne = total des points des deux classes ÷ nombre total d’élèves.",
+     "explication": "(264 + 224) ÷ 40 = 488 ÷ 40 = **12,2**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la méthode d’Inès donne-t-elle un mauvais résultat ?",
+     "options": [
+      "Elle ne tient pas compte du nombre d’élèves de chaque classe",
+      "Elle devrait diviser par 3 et non par 2",
+      "On ne peut pas additionner deux moyennes entre elles",
+      "Elle aurait dû prendre la moyenne la plus haute"
+     ],
+     "reponse": 0,
+     "aide": "Les deux classes ont-elles le même effectif ?",
+     "explication": "La moyenne des moyennes ne marche que si les groupes ont le **même effectif**. Ici la 5eA est plus nombreuse : il faut repasser par les totaux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle moyenne la 5eB devrait-elle avoir pour que la moyenne des 40 élèves atteigne 13 ? (la 5eA ne change pas)",
+     "reponse": 16,
+     "unite": "/20",
+     "aide": "Les 40 élèves doivent totaliser 13 × 40 points. Retire les 264 points de la 5eA, puis divise par 16.",
+     "explication": "13 × 40 = 520 points au total. 520 − 264 = 256 points pour la 5eB, et 256 ÷ 16 = **16**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc5ac461-1fee-5788-a97c-a794180325b5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La feuille de scores de la soirée jeux",
+   "competence": "lire-tableau",
+   "situation": "Lors de la soirée jeux, Zoé note les points des quatre joueurs dans une feuille de tableur. Elle a déjà tapé une formule dans la dernière ligne.",
+   "documents": [
+    {
+     "id": "feuille",
+     "type": "tableau",
+     "titre": "Feuille de calcul",
+     "source": "Feuille imaginée pour l’exercice",
+     "colonnes": [
+      "",
+      "A",
+      "B"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Joueur",
+       "Points"
+      ],
+      [
+       "2",
+       "Léo",
+       12
+      ],
+      [
+       "3",
+       "Mia",
+       8
+      ],
+      [
+       "4",
+       "Sam",
+       15
+      ],
+      [
+       "5",
+       "Zoé",
+       9
+      ],
+      [
+       "6",
+       "Total",
+       "=SOMME(B2:B5)"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Dans quelle cellule est écrit le score de Sam ? (une lettre puis un numéro)",
+     "reponse": [
+      "B4",
+      "b4"
+     ],
+     "placeholder": "Ex. : A1",
+     "aide": "Cherche la colonne (lettre) puis la ligne (numéro) du chiffre 15.",
+     "explication": "Sam est à la ligne 4 et son score est dans la colonne B : la cellule est **B4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur le tableur affiche-t-il dans B6, avec la formule =SOMME(B2:B5) ?",
+     "reponse": 44,
+     "aide": "La plage B2:B5 contient quatre scores. Additionne-les.",
+     "explication": "12 + 8 + 15 + 9 = **44**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule faut-il taper pour obtenir la moyenne des scores ?",
+     "options": [
+      "=MOYENNE(B2:B5)",
+      "=SOMME(B2:B5)",
+      "=NB(B2:B5)",
+      "=MAX(B2:B5)"
+     ],
+     "reponse": 0,
+     "aide": "Le mot de la formule doit dire « moyenne ».",
+     "explication": "**=MOYENNE(B2:B5)** calcule la moyenne de la plage. SOMME les ajoute, NB les compte et MAX cherche la plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle moyenne le tableur affichera-t-il ?",
+     "reponse": 11,
+     "aide": "Moyenne = somme ÷ nombre de valeurs. La somme est déjà dans B6.",
+     "explication": "44 ÷ 4 = **11**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc5ac461-1fee-5788-a97c-a794180325b5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La colonne des fréquences de Camille",
+   "competence": "raisonner",
+   "situation": "Camille prépare le sondage des sports du collège dans un tableur. Elle écrit la formule des fréquences dans C2, puis la recopie vers le bas avec la poignée de recopie.",
+   "documents": [
+    {
+     "id": "sports",
+     "type": "tableau",
+     "titre": "Feuille de calcul de Camille",
+     "source": "Feuille imaginée pour l’exercice",
+     "colonnes": [
+      "",
+      "A",
+      "B",
+      "C"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Sport",
+       "Effectif",
+       "Fréquence"
+      ],
+      [
+       "2",
+       "Football",
+       9,
+       "=B2/$B$6"
+      ],
+      [
+       "3",
+       "Basket",
+       6,
+       "…"
+      ],
+      [
+       "4",
+       "Tennis",
+       3,
+       "…"
+      ],
+      [
+       "5",
+       "Natation",
+       6,
+       "…"
+      ],
+      [
+       "6",
+       "Total",
+       "=SOMME(B2:B5)",
+       ""
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur le tableur affiche-t-il dans B6 ?",
+     "reponse": 24,
+     "aide": "B6 contient =SOMME(B2:B5) : additionne les effectifs.",
+     "explication": "9 + 6 + 3 + 6 = **24**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur la formule =B2/$B$6 affiche-t-elle dans C2 ? (écris-la en nombre décimal)",
+     "reponse": 0.375,
+     "aide": "Divise l’effectif du football par le total.",
+     "explication": "9 ÷ 24 = **0,375**, soit 37,5 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille recopie C2 vers C3. Quelle formule apparaît dans C3 ?",
+     "options": [
+      "=B3/$B$6",
+      "=B2/$B$6",
+      "=B3/$B$7",
+      "=B4/$B$6"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui se décale à la recopie : la référence relative B2 ou la référence figée $B$6 ?",
+     "explication": "La référence relative **B2** descend d’une ligne et devient **B3** ; la référence absolue **$B$6** reste figée. C3 contient **=B3/$B$6**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Camille avait oublié les dollars : elle avait tapé =B2/B6 en C2 avant de recopier. Dans C3, par quelle cellule le tableur divise-t-il alors ?",
+     "reponse": [
+      "B7",
+      "b7",
+      "la cellule B7"
+     ],
+     "placeholder": "Ex. : A1",
+     "aide": "Sans dollars, les deux références se décalent d’une ligne.",
+     "explication": "Sans dollars, B6 est relative : elle devient **B7**, une cellule vide. Le résultat serait faux (une erreur de division), et sur un autre tableau il pourrait avoir l’air plausible."
+    }
+   ]
+  },
+  {
+   "chapitre": "dc5ac461-1fee-5788-a97c-a794180325b5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les temps du 50 mètres : où est l’erreur ?",
+   "competence": "raisonner",
+   "situation": "Le professeur de sport chronomètre dix élèves sur 50 m. Yanis veut calculer la moyenne et l’étendue des temps avec un tableur, mais sa moyenne lui semble un peu basse.",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Feuille de calcul des temps",
+     "source": "Temps imaginés pour l’exercice",
+     "colonnes": [
+      "",
+      "A",
+      "B"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Élève",
+       "Temps (s)"
+      ],
+      [
+       "2",
+       "Aaron",
+       42
+      ],
+      [
+       "3",
+       "Bianca",
+       38
+      ],
+      [
+       "4",
+       "Cyril",
+       51
+      ],
+      [
+       "5",
+       "Dina",
+       45
+      ],
+      [
+       "6",
+       "Elias",
+       39
+      ],
+      [
+       "7",
+       "Fanny",
+       47
+      ],
+      [
+       "8",
+       "Gaël",
+       44
+      ],
+      [
+       "9",
+       "Hana",
+       40
+      ],
+      [
+       "10",
+       "Ilyes",
+       36
+      ],
+      [
+       "11",
+       "Jade",
+       48
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "yanis",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Yanis et Lina",
+     "participants": [
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Yanis",
+       "texte": "J’ai tapé =MOYENNE(B2:B10) et le tableur affiche 42,4."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Pourtant ils sont dix à avoir couru…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’étendue des temps ? (plus grand temps − plus petit temps)",
+     "reponse": 15,
+     "unite": "s",
+     "aide": "Repère le temps le plus long et le plus court dans la colonne B.",
+     "explication": "Le plus long est 51 s, le plus court 36 s : 51 − 36 = **15** s."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule calcule cette étendue dans le tableur ?",
+     "options": [
+      "=MAX(B2:B11)−MIN(B2:B11)",
+      "=MAX(B2:B11)−MOYENNE(B2:B11)",
+      "=MIN(B2:B11)−MAX(B2:B11)",
+      "=SOMME(B2:B11)−MIN(B2:B11)"
+     ],
+     "reponse": 0,
+     "aide": "L’étendue se calcule avec la plus grande et la plus petite valeur de la plage.",
+     "explication": "Étendue = MAX − MIN : **=MAX(B2:B11)−MIN(B2:B11)**. Dans l’autre sens, le résultat serait négatif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vraie moyenne des dix temps ?",
+     "reponse": 43,
+     "unite": "s",
+     "aide": "Additionne les dix temps de la colonne B, puis divise par 10.",
+     "explication": "42 + 38 + 51 + 45 + 39 + 47 + 44 + 40 + 36 + 48 = 430, et 430 ÷ 10 = **43** s."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de valeurs la plage B2:B10 de Yanis contient-elle ?",
+     "reponse": 9,
+     "aide": "Compte les cellules de B2 jusqu’à B10 incluse.",
+     "explication": "De B2 à B10, il y a **9** cellules : Jade, en B11, est oubliée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle correction faut-il faire à la formule de Yanis ?",
+     "options": [
+      "Étendre la plage jusqu’à B11 : =MOYENNE(B2:B11)",
+      "Remplacer MOYENNE par SOMME dans la formule",
+      "Ajouter des dollars : =MOYENNE($B$2:$B$10)",
+      "Taper le résultat 43 à la main dans la cellule"
+     ],
+     "reponse": 0,
+     "aide": "Quelle ligne manque dans la plage ?",
+     "explication": "La plage s’arrête une ligne trop tôt : la formule correcte est **=MOYENNE(B2:B11)**. Les dollars ne changent pas la plage, et taper 43 à la main ferait perdre l’intérêt du tableur."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa9a49f1-aad9-54c2-a078-5842d14fda23",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La roue de la kermesse",
+   "competence": "calculer",
+   "situation": "À la kermesse, Inès fait tourner la roue d’un stand. Elle a huit secteurs de même taille, et chaque secteur a la même chance de s’arrêter sous la flèche.",
+   "documents": [
+    {
+     "id": "roue",
+     "type": "schema",
+     "titre": "La roue du stand",
+     "largeur": 320,
+     "hauteur": 255,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 160 35 A 100 100 0 0 1 230.7 64.3 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s0",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 230.7 64.3 A 100 100 0 0 1 260 135 Z",
+       "ferme": true,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "s1",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 260 135 A 100 100 0 0 1 230.7 205.7 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s2",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 230.7 205.7 A 100 100 0 0 1 160 235 Z",
+       "ferme": true,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "s3",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 160 235 A 100 100 0 0 1 89.3 205.7 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s4",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 89.3 205.7 A 100 100 0 0 1 60 135 Z",
+       "ferme": true,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "s5",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 60 135 A 100 100 0 0 1 89.3 64.3 Z",
+       "ferme": true,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "s6",
+       "zone": true
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 135 L 89.3 64.3 A 100 100 0 0 1 160 35 Z",
+       "ferme": true,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "s7",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 185.3,
+       "y": 75,
+       "emoji": "😢",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 221,
+       "y": 110.7,
+       "emoji": "🍬",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 221,
+       "y": 161.3,
+       "emoji": "😢",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 185.3,
+       "y": 197,
+       "emoji": "🧸",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 134.7,
+       "y": 197,
+       "emoji": "😢",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 99,
+       "y": 161.3,
+       "emoji": "🍬",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 99,
+       "y": 110.7,
+       "emoji": "😢",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 134.7,
+       "y": 75,
+       "emoji": "🍬",
+       "taille": 26
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         150,
+         8
+        ],
+        [
+         170,
+         8
+        ],
+        [
+         160,
+         34
+        ]
+       ],
+       "teinte": "encre",
+       "motif": "plein"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Perdu"
+      },
+      {
+       "teinte": "rose",
+       "motif": "clair",
+       "texte": "Un bonbon"
+      },
+      {
+       "teinte": "jaune",
+       "motif": "clair",
+       "texte": "La peluche"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "enonce": "Touche le secteur qui fait gagner la peluche.",
+     "document": "roue",
+     "reponse": [
+      "s3"
+     ],
+     "aide": "Cherche le dessin de l’ours en peluche.",
+     "explication": "Un seul secteur offre la **peluche** : l’ours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’issues possibles y a-t-il quand on fait tourner la roue ?",
+     "reponse": 8,
+     "aide": "Compte tous les secteurs de la roue.",
+     "explication": "La roue a **8** secteurs, donc 8 issues, toutes également probables."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de perdre ? (une fraction, ou un nombre décimal)",
+     "reponse": 0.5,
+     "aide": "Probabilité = issues favorables ÷ issues possibles. Compte les secteurs « perdu ».",
+     "explication": "4 secteurs sur 8 font perdre : P(perdre) = 4 ÷ 8 = {{1/2}} = **0,5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de gagner un bonbon ? (une fraction, ou un nombre décimal)",
+     "reponse": 0.375,
+     "aide": "Compte les secteurs « bonbon », puis divise par le nombre total de secteurs.",
+     "explication": "3 secteurs sur 8 offrent un bonbon : P(bonbon) = {{3/8}} = **0,375**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa9a49f1-aad9-54c2-a078-5842d14fda23",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans l’urne de Samir",
+   "competence": "calculer",
+   "situation": "Samir tire une boule dans l’urne, regarde sa couleur, puis la remet avant de tirer de nouveau. Les boules sont toutes identiques au toucher.",
+   "documents": [
+    {
+     "id": "urne",
+     "type": "schema",
+     "titre": "L’urne de Samir",
+     "largeur": 320,
+     "hauteur": 245,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 26,
+       "texte": "Urne de Samir",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 56,
+       "l": 160,
+       "h": 140,
+       "arrondi": 20,
+       "teinte": "gris",
+       "motif": "aucun"
+      },
+      {
+       "forme": "cercle",
+       "cx": 96,
+       "cy": 112,
+       "r": 14,
+       "texte": "R",
+       "motif": "plein",
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 128,
+       "cy": 112,
+       "r": 14,
+       "texte": "B",
+       "motif": "plein",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 112,
+       "r": 14,
+       "texte": "R",
+       "motif": "plein",
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 192,
+       "cy": 112,
+       "r": 14,
+       "texte": "V",
+       "motif": "plein",
+       "teinte": "vert"
+      },
+      {
+       "forme": "cercle",
+       "cx": 224,
+       "cy": 112,
+       "r": 14,
+       "texte": "R",
+       "motif": "plein",
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 96,
+       "cy": 160,
+       "r": 14,
+       "texte": "B",
+       "motif": "plein",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 128,
+       "cy": 160,
+       "r": 14,
+       "texte": "R",
+       "motif": "plein",
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 160,
+       "cy": 160,
+       "r": 14,
+       "texte": "V",
+       "motif": "plein",
+       "teinte": "vert"
+      },
+      {
+       "forme": "cercle",
+       "cx": 192,
+       "cy": 160,
+       "r": 14,
+       "texte": "R",
+       "motif": "plein",
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 224,
+       "cy": 160,
+       "r": 14,
+       "texte": "B",
+       "motif": "plein",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 222,
+       "texte": "R : rouge · B : bleue · V : verte",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de boules contient l’urne ?",
+     "reponse": 10,
+     "aide": "Compte toutes les boules, quelle que soit leur couleur.",
+     "explication": "Il y a 5 rouges, 3 bleues et 2 vertes : **10** boules."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de tirer une boule verte ? (une fraction, ou un nombre décimal)",
+     "reponse": 0.2,
+     "aide": "Compte les boules vertes (V), puis divise par le nombre total de boules.",
+     "explication": "Il y a 2 vertes sur 10 : P(verte) = 2 ÷ 10 = {{1/5}} = **0,2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de **ne pas** tirer une boule bleue ? (une fraction, ou un nombre décimal)",
+     "reponse": 0.7,
+     "aide": "Passe par l’événement contraire : 1 − P(bleue). Compte d’abord les boules bleues.",
+     "explication": "P(bleue) = {{3/10}} = 0,3. L’événement contraire a pour probabilité 1 − 0,3 = **0,7**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Samir a tiré trois fois de suite une boule rouge. Quelle est la probabilité de rouge au tirage suivant ?",
+     "options": [
+      "Elle reste égale à {{1/2}}",
+      "Elle diminue, car le rouge est déjà sorti",
+      "Elle augmente, car le rouge est « en série »",
+      "Elle devient égale à 1 : c’est certain"
+     ],
+     "reponse": 0,
+     "aide": "Après chaque tirage, Samir remet la boule : l’urne est-elle changée ?",
+     "explication": "L’urne est la même à chaque tirage, et les boules n’ont **pas de mémoire** : P(rouge) = 5 ÷ 10 = **{{1/2}}**, quel que soit le passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa9a49f1-aad9-54c2-a078-5842d14fda23",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Soixante lancers, puis six mille",
+   "competence": "experimenter",
+   "situation": "Lola lance un dé équilibré à six faces 60 fois et note ses résultats. Pour comprendre la différence entre ce qu’on observe et ce qu’on calcule, elle compare avec une simulation de 6 000 lancers.",
+   "documents": [
+    {
+     "id": "lola",
+     "type": "tableau",
+     "titre": "Les 60 lancers de Lola",
+     "source": "Résultats imaginés pour l’exercice",
+     "colonnes": [
+      "Face",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Effectif",
+       9,
+       11,
+       8,
+       12,
+       10,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "simul",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Fréquence de chaque face après 6 000 lancers simulés",
+     "source": "Simulation imaginée pour l’exercice",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Fréquence",
+       "valeurs": [
+        16.4,
+        17,
+        16.7,
+        16.5,
+        16.9,
+        16.5
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Fréquence",
+      "unite": "%",
+      "min": 0,
+      "max": 20,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Face du dé"
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dans le tableau, quelle est la fréquence de la face 4 sur les 60 lancers, en pourcentage ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Divise l’effectif de la face 4 par 60.",
+     "explication": "12 ÷ 60 = 0,2, soit **20 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité théorique d’obtenir un 4 avec un dé équilibré ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.16666666666666666,
+     "tolerance": 0.005,
+     "aide": "Une face favorable sur six faces possibles.",
+     "explication": "Le dé a 6 faces équiprobables et une seule est un 4 : P(4) = **{{1/6}}** ≈ 0,17."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fréquence observée de 4 (20 %) est-elle différente de la probabilité (environ 16,7 %) ?",
+     "options": [
+      "Sur peu de lancers, la fréquence fluctue autour de la probabilité",
+      "Le dé de Lola est truqué et tombe plus souvent sur 4",
+      "La probabilité change à chaque nouveau lancer du dé",
+      "Lola a mal compté : les deux valeurs sont toujours égales"
+     ],
+     "reponse": 0,
+     "aide": "Combien de lancers Lola a-t-elle faits ?",
+     "explication": "La **fréquence** se constate après l’expérience et fluctue ; la **probabilité** se calcule avant. Avec seulement 60 lancers, un écart de quelques points est normal."
+    },
+    {
+     "type": "zone",
+     "enonce": "Dans le graphique, touche la barre dont la fréquence est la plus proche de {{1/6}} ≈ 16,7 %.",
+     "document": "simul",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare chaque valeur écrite au bout des barres avec 16,7.",
+     "explication": "La face **3** a une fréquence de 16,7 % : c’est la plus proche de {{1/6}} ≈ 16,67 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le graphique, comparé au tableau de Lola ?",
+     "options": [
+      "Avec beaucoup de lancers, les fréquences se rapprochent de {{1/6}}",
+      "Avec beaucoup de lancers, une face finit par sortir plus souvent",
+      "Les fréquences deviennent toutes égales à 0 ou à 1",
+      "Le nombre de lancers n’a aucun effet sur les fréquences"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si les six barres sont proches les unes des autres.",
+     "explication": "C’est la **loi des grands nombres** : plus on répète l’expérience, plus la fréquence observée se rapproche de la probabilité, ici {{1/6}} ≈ 16,7 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "e055c662-f098-5023-a349-5df321bc83be",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Des crêpes pour toute la classe",
+   "competence": "calculer",
+   "situation": "Pour la fête de fin d’année, Malo veut cuisiner des crêpes pour sa classe. Sa recette est écrite pour 4 personnes et il doit l’adapter, en gardant les mêmes proportions.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Pâte à crêpes",
+     "sousTitre": "Pour 4 personnes",
+     "emoji": "🥞",
+     "lignes": [
+      {
+       "texte": "Farine",
+       "valeur": "200 g"
+      },
+      {
+       "texte": "Lait",
+       "valeur": "40 cL"
+      },
+      {
+       "texte": "Œufs",
+       "valeur": "2"
+      }
+     ],
+     "pied": "Recette écrite pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Malo cuisine pour 12 personnes. Par quel nombre multiplie-t-il toutes les quantités ?",
+     "options": [
+      "3",
+      "8",
+      "4",
+      "12"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "Combien de fois 4 personnes tiennent-elles dans 12 personnes ?",
+     "explication": "12 ÷ 4 = **3** : on multiplie toutes les quantités par 3 (linéarité)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de farine faut-il pour 12 personnes ?",
+     "reponse": 600,
+     "unite": "g",
+     "aide": "Multiplie les 200 g de la recette par le coefficient trouvé.",
+     "explication": "200 × 3 = **600 g** de farine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de lait faut-il pour 2 personnes ?",
+     "reponse": 20,
+     "unite": "cL",
+     "aide": "2 personnes, c’est la moitié de 4 personnes.",
+     "explication": "40 ÷ 2 = **20 cL** de lait."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’œufs faut-il pour 10 personnes ?",
+     "reponse": 5,
+     "aide": "Calcule d’abord les œufs pour 1 personne (passage à l’unité), puis multiplie par 10.",
+     "explication": "Pour 1 personne : 2 ÷ 4 = 0,5 œuf ; pour 10 personnes : 0,5 × 10 = **5** œufs."
+    }
+   ]
+  },
+  {
+   "chapitre": "e055c662-f098-5023-a349-5df321bc83be",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les photocopies du CDI",
+   "competence": "calculer",
+   "situation": "Au CDI, le prix des photocopies est proportionnel à leur nombre. Chloé a noté quatre commandes dans un tableau, mais deux cases sont restées vides.",
+   "documents": [
+    {
+     "id": "copies",
+     "type": "tableau",
+     "titre": "Quatre commandes de photocopies",
+     "source": "Tarifs imaginés pour l’exercice",
+     "colonnes": [
+      "Commande",
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "lignes": [
+      [
+       "Nombre de copies",
+       10,
+       25,
+       40,
+       "?"
+      ],
+      [
+       "Prix (€)",
+       "1,50",
+       "3,75",
+       "?",
+       "7,50"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix d’une seule copie, en euros ? (commande A)",
+     "reponse": 0.15,
+     "unite": "€",
+     "aide": "Passage à l’unité : divise le prix de la commande A par son nombre de copies.",
+     "explication": "1,50 ÷ 10 = **0,15 €** la copie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix de la commande C (40 copies) ?",
+     "reponse": 6,
+     "unite": "€",
+     "aide": "Multiplie le prix d’une copie par 40.",
+     "explication": "40 × 0,15 = **6 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de copies contient la commande D, qui coûte 7,50 € ?",
+     "reponse": 50,
+     "aide": "Divise 7,50 € par le prix d’une copie.",
+     "explication": "7,50 ÷ 0,15 = **50** copies."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque méthode au calcul qui l’illustre dans ce tableau.",
+     "paires": [
+      [
+       "Passage à l’unité",
+       "1,50 ÷ 10 = 0,15 € la copie, puis × 40"
+      ],
+      [
+       "Linéarité",
+       "40 = 10 × 4, donc le prix est 1,50 × 4"
+      ],
+      [
+       "Additivité",
+       "50 = 25 + 25, donc le prix est 3,75 + 3,75"
+      ],
+      [
+       "Produit en croix",
+       "10 × x = 1,50 × 40"
+      ]
+     ],
+     "aide": "Une méthode multiplie, une autre additionne deux colonnes, une autre revient à 1 copie.",
+     "explication": "Le **passage à l’unité** cherche d’abord le prix de 1 copie ; la **linéarité** multiplie une colonne par un même nombre ; l’**additivité** additionne deux colonnes ; le **produit en croix** écrit l’égalité des produits."
+    }
+   ]
+  },
+  {
+   "chapitre": "e055c662-f098-5023-a349-5df321bc83be",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux tarifs de piscine, une seule proportionnalité",
+   "competence": "raisonner",
+   "situation": "La piscine propose deux tarifs : le tarif A à 5 € l’entrée, et le tarif B avec une carte annuelle de 12 € puis 3 € l’entrée. Karim veut savoir lequel est proportionnel et lequel est le plus avantageux.",
+   "documents": [
+    {
+     "id": "courbes",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Le prix payé selon le nombre d’entrées",
+     "source": "Tarifs imaginés pour l’exercice",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "Tarif A",
+       "valeurs": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Tarif B",
+       "valeurs": [
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36,
+        39,
+        42
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 50,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Nombre d’entrées"
+     }
+    },
+    {
+     "id": "tarifb",
+     "type": "tableau",
+     "titre": "Le tarif B",
+     "source": "Tarifs imaginés pour l’exercice",
+     "colonnes": [
+      "Entrées",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "lignes": [
+      [
+       "Prix (€)",
+       18,
+       24,
+       30,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel tarif est proportionnel au nombre d’entrées ?",
+     "options": [
+      "Le tarif A",
+      "Le tarif B",
+      "Les deux",
+      "Aucun des deux"
+     ],
+     "reponse": 0,
+     "aide": "Pour 0 entrée, que paie-t-on avec chaque tarif ?",
+     "explication": "Le tarif A passe par l’origine (0 entrée, 0 €) et son prix est multiplié par le même nombre que les entrées : il est **proportionnel**. Le tarif B comprend un prix fixe de 12 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec le tarif B, combien coûtent 8 entrées ?",
+     "reponse": 36,
+     "unite": "€",
+     "aide": "Entre 2, 4 et 6 entrées, le prix augmente de 6 € à chaque fois.",
+     "explication": "18, 24, 30 : on ajoute 6 € pour 2 entrées de plus, donc 30 + 6 = **36 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour combien d’entrées les deux tarifs coûtent-ils le même prix ?",
+     "reponse": 6,
+     "aide": "Repère le point où les deux courbes se croisent.",
+     "explication": "Les courbes se croisent à **6** entrées : 30 € dans les deux cas (5 × 6 = 30 et 12 + 3 × 6 = 30)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Karim applique un produit en croix au tarif B : 2 entrées coûtent 18 €, donc 10 entrées coûtent… ? (le résultat qu’il trouverait)",
+     "reponse": 90,
+     "unite": "€",
+     "aide": "Produit en croix : 10 entrées, c’est 5 fois 2 entrées.",
+     "explication": "18 × 5 = **90 €**. Mais c’est faux : le tarif B n’est pas proportionnel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le vrai prix de 10 entrées avec le tarif B ?",
+     "reponse": 42,
+     "unite": "€",
+     "aide": "Lis le graphique, ou ajoute 6 € à 36 € (8 entrées) pour 2 entrées de plus.",
+     "explication": "36 + 6 = **42 €**, et non 90 € : le produit en croix donnait un résultat absurde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le produit en croix donne-t-il un résultat faux pour le tarif B ?",
+     "options": [
+      "Il y a 12 € de frais fixes : la situation n’est pas proportionnelle",
+      "Le produit en croix est toujours faux avec des euros",
+      "Il faut utiliser le passage à l’unité, jamais la linéarité",
+      "Le tarif B a trop de valeurs dans son tableau"
+     ],
+     "reponse": 0,
+     "aide": "Le prix du tarif B est-il multiplié par 5 quand le nombre d’entrées est multiplié par 5 ?",
+     "explication": "Toutes les méthodes de la quatrième proportionnelle **supposent une situation proportionnelle**. Avec une carte de 12 €, le prix n’est pas multiplié par 5 quand les entrées le sont : rien dans le calcul ne le signale."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e4ec660-7823-5a59-b569-31199749a5cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment les 200 élèves de 5e viennent au collège",
+   "competence": "lire-graphique",
+   "situation": "Le collège compte 200 élèves de 5e. Le délégué a fait un sondage sur leur moyen de transport et a dessiné un diagramme circulaire, avec des pourcentages.",
+   "documents": [
+    {
+     "id": "transport",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Le moyen de transport des élèves de 5e",
+     "source": "Sondage imaginé pour l’exercice",
+     "categories": [
+      "Bus",
+      "À pied",
+      "Voiture",
+      "Vélo"
+     ],
+     "series": [
+      {
+       "nom": "Part des élèves (%)",
+       "valeurs": [
+        40,
+        25,
+        25,
+        10
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "enonce": "Touche le secteur du moyen de transport le plus utilisé.",
+     "document": "transport",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le plus grand pourcentage.",
+     "explication": "Le **bus** est utilisé par 40 % des élèves : c’est la plus grande part."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves de 5e viennent à pied ?",
+     "reponse": 50,
+     "unite": "élèves",
+     "aide": "Calcule 25 % de 200 : c’est le quart.",
+     "explication": "25 % de 200 = 200 × 0,25 = **50** élèves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves de 5e viennent à vélo ?",
+     "reponse": 20,
+     "unite": "élèves",
+     "aide": "Calcule 10 % de 200 : on divise par 10.",
+     "explication": "10 % de 200 = 200 ÷ 10 = **20** élèves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’élèves ne viennent **ni** en bus **ni** en voiture ?",
+     "reponse": 70,
+     "unite": "élèves",
+     "aide": "Ajoute d’abord les pourcentages « à pied » et « vélo », puis calcule ce pourcentage de 200.",
+     "explication": "25 % + 10 % = 35 %, et 35 % de 200 = 200 × 0,35 = **70** élèves (50 + 20)."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e4ec660-7823-5a59-b569-31199749a5cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les soldes de la boutique de sport",
+   "competence": "resoudre",
+   "situation": "Samia et sa sœur parcourent l’affiche des soldes d’un magasin de sport. Elles veulent calculer les prix soldés, et retrouver ceux qu’on ne leur donne pas.",
+   "documents": [
+    {
+     "id": "soldes",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "SOLDES",
+     "sousTitre": "Magasin de sport",
+     "emoji": "🏷️",
+     "lignes": [
+      {
+       "texte": "Baskets : 45 €, remise de 20 %"
+      },
+      {
+       "texte": "Blouson : remise de 30 %, prix soldé 63 €"
+      },
+      {
+       "texte": "Pull : 40 € avant, 34 € maintenant"
+      }
+     ],
+     "pied": "Affiche imaginée pour l’exercice",
+     "teinte": "corail"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Par quel coefficient multiplie-t-on un prix pour le baisser de 20 % ?",
+     "options": [
+      "0,8",
+      "0,2",
+      "1,2",
+      "0,98"
+     ],
+     "reponse": 0,
+     "ordreFixe": false,
+     "aide": "Diminuer de t % revient à multiplier par 1 − t/100.",
+     "explication": "Une baisse de 20 % se traduit par 1 − 0,20 = **0,8**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix soldé des baskets ?",
+     "reponse": 36,
+     "unite": "€",
+     "aide": "Multiplie le prix de départ par le coefficient de la baisse.",
+     "explication": "45 × 0,8 = **36 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel était le prix du blouson avant les soldes ?",
+     "reponse": 90,
+     "unite": "€",
+     "aide": "Le prix soldé vaut 70 % du prix de départ (100 % − 30 %). Divise 63 par 0,7.",
+     "explication": "63 ÷ 0,7 = **90 €**. Vérification : 90 × 0,7 = 63."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage le prix du pull a-t-il baissé ?",
+     "reponse": 15,
+     "unite": "%",
+     "aide": "Calcule la baisse en euros, puis divise-la par le prix de départ.",
+     "explication": "La baisse est 40 − 34 = 6 €, et 6 ÷ 40 = 0,15 : une baisse de **15 %**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e4ec660-7823-5a59-b569-31199749a5cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "+ 10 % puis − 10 % : retour au prix de départ ?",
+   "competence": "raisonner",
+   "situation": "Un jeu vidéo à 40 € augmente de 10 % en décembre, puis baisse de 10 % en janvier. Nina est sûre qu’il retrouve son prix de départ ; Ravi vérifie avec un tableau.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Nina et Ravi",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ravi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "+ 10 % puis − 10 %, ça s’annule : le prix revient à 40 € !"
+      },
+      {
+       "qui": "Ravi",
+       "texte": "Calculons étape par étape avant de conclure."
+      }
+     ]
+    },
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Le prix du jeu vidéo",
+     "source": "Prix imaginés pour l’exercice",
+     "colonnes": [
+      "Étape",
+      "Prix (€)"
+     ],
+     "lignes": [
+      [
+       "Au départ",
+       40
+      ],
+      [
+       "Après la hausse de 10 %",
+       "?"
+      ],
+      [
+       "Après la baisse de 10 %",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix après la hausse de 10 % ?",
+     "reponse": 44,
+     "unite": "€",
+     "aide": "Augmenter de 10 %, c’est multiplier par 1,1.",
+     "explication": "40 × 1,1 = **44 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix après la baisse de 10 % qui suit ?",
+     "reponse": 39.6,
+     "unite": "€",
+     "aide": "La baisse porte sur le nouveau prix, 44 €, pas sur 40 €. Multiplie par 0,9.",
+     "explication": "44 × 0,9 = **39,6 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel coefficient unique remplace-t-on les deux évolutions ? (un nombre décimal)",
+     "reponse": 0.99,
+     "aide": "Multiplie les deux coefficients entre eux : 1,1 × 0,9.",
+     "explication": "Les coefficients se multiplient : 1,1 × 0,9 = **0,99**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au total, de quel pourcentage le prix a-t-il baissé ?",
+     "reponse": 1,
+     "unite": "%",
+     "aide": "Un coefficient de 0,99 veut dire que le prix vaut 99 % du prix de départ.",
+     "explication": "Le prix final est à 99 % du prix de départ : il a baissé de 100 − 99 = **1 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Nina a-t-elle tort ?",
+     "options": [
+      "Les 10 % de la baisse portent sur un prix plus élevé que 40 €",
+      "Parce que 10 % est toujours plus petit que 40 €",
+      "Parce qu’une baisse est toujours plus forte qu’une hausse",
+      "Parce que le prix ne peut jamais redescendre"
+     ],
+     "reponse": 0,
+     "aide": "Sur quel prix chaque pourcentage est-il calculé ?",
+     "explication": "Un pourcentage dépend de **la quantité à laquelle il s’applique** : 10 % de 44 € (4,40 €) est plus que 10 % de 40 € (4 €). Deux pourcentages successifs ne s’additionnent ni ne s’annulent."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a3f78a6-751a-5a50-8aa1-d1864977da6e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plan de la cour du collège",
+   "competence": "geometrie",
+   "situation": "Pour le projet du foyer, Elsa dessine à l’échelle 1/1 000 le plan de la cour rectangulaire du collège. Elle veut retrouver les vraies dimensions.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Plan de la cour",
+     "source": "Plan imaginé pour l’exercice",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 7,
+      "ymin": -1,
+      "ymax": 6
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 6,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "6 cm"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "4 cm"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "textes": [
+      {
+       "x": 3,
+       "y": 2,
+       "texte": "Cour du collège"
+      },
+      {
+       "x": 3,
+       "y": 5.3,
+       "texte": "Échelle : 1/1 000"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Cette échelle de 1/1 000 est :",
+     "options": [
+      "Une réduction",
+      "Un agrandissement",
+      "Ni l’un ni l’autre",
+      "Un partage en ratio"
+     ],
+     "reponse": 0,
+     "aide": "L’échelle est inférieure à 1 : le plan est-il plus grand ou plus petit que la réalité ?",
+     "explication": "Une échelle **inférieure à 1** est une réduction : 1 cm sur le plan représente 1 000 cm dans la réalité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur réelle de la cour, en mètres ?",
+     "reponse": 60,
+     "unite": "m",
+     "aide": "Plan → réel : multiplie par 1 000 (c’est 1 cm pour 1 000 cm), puis convertis les centimètres en mètres.",
+     "explication": "6 cm × 1 000 = 6 000 cm = **60 m** (1 m = 100 cm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la largeur réelle de la cour, en mètres ?",
+     "reponse": 40,
+     "unite": "m",
+     "aide": "Même méthode avec 4 cm.",
+     "explication": "4 cm × 1 000 = 4 000 cm = **40 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le périmètre réel de la cour, en mètres ?",
+     "reponse": 200,
+     "unite": "m",
+     "aide": "Périmètre d’un rectangle : 2 × (longueur + largeur).",
+     "explication": "2 × (60 + 40) = 2 × 100 = **200 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a3f78a6-751a-5a50-8aa1-d1864977da6e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La randonnée du lac sur la carte au 1/25 000",
+   "competence": "modeliser",
+   "situation": "Tom et Lila préparent une randonnée en boucle autour d’un lac. Ils ont mesuré les étapes sur la carte au 1/25 000 et veulent trouver les distances réelles.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les quatre étapes de la boucle",
+     "source": "Randonnée imaginée pour l’exercice",
+     "colonnes": [
+      "Étape",
+      "Sur la carte (cm)",
+      "Dans la réalité (km)"
+     ],
+     "lignes": [
+      [
+       "A → B",
+       8,
+       "?"
+      ],
+      [
+       "B → C",
+       12,
+       3
+      ],
+      [
+       "C → D",
+       "?",
+       "1,5"
+      ],
+      [
+       "D → A",
+       14,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Tom et Lila",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lila",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "À 1/25 000, 1 cm sur la carte, c’est 25 cm dans la réalité !"
+      },
+      {
+       "qui": "Lila",
+       "texte": "Alors notre boucle ferait quelques mètres…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que représente réellement 1 cm sur cette carte ?",
+     "options": [
+      "250 m",
+      "25 m",
+      "2,5 km",
+      "25 000 m"
+     ],
+     "reponse": 0,
+     "aide": "1 cm sur la carte correspond à 25 000 cm dans la réalité. Convertis en mètres : 1 m = 100 cm.",
+     "explication": "25 000 cm ÷ 100 = **250 m**. Tom oublie la conversion : 25 000 cm, ce n’est pas 25 cm."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance réelle de l’étape A → B, en kilomètres ?",
+     "reponse": 2,
+     "unite": "km",
+     "aide": "Multiplie 8 cm par 25 000 pour avoir des centimètres, puis convertis : 1 km = 100 000 cm.",
+     "explication": "8 × 25 000 = 200 000 cm = **2 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de centimètres mesure l’étape C → D sur la carte ?",
+     "reponse": 6,
+     "unite": "cm",
+     "aide": "Réel → plan : convertis 1,5 km en cm (1 km = 100 000 cm), puis divise par 25 000.",
+     "explication": "1,5 km = 150 000 cm, et 150 000 ÷ 25 000 = **6** cm."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du calcul de la distance réelle de D → A (14 cm sur la carte).",
+     "items": [
+      "Mesurer 14 cm sur la carte",
+      "Multiplier par 25 000 : 350 000 cm",
+      "Convertir les centimètres en mètres : 3 500 m",
+      "Convertir en kilomètres : 3,5 km"
+     ],
+     "aide": "On passe du plan au réel, puis on change d’unité en allant des petites unités vers les grandes.",
+     "explication": "On mesure, on **multiplie par le dénominateur** de l’échelle, puis on convertit : 350 000 cm = 3 500 m = **3,5 km**. Le piège est la conversion, pas le calcul."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur réelle de toute la boucle, en kilomètres ?",
+     "reponse": 10,
+     "unite": "km",
+     "aide": "Ajoute les distances réelles des quatre étapes : 2 ; 3 ; 1,5 ; 3,5.",
+     "explication": "2 + 3 + 1,5 + 3,5 = **10 km**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a3f78a6-751a-5a50-8aa1-d1864977da6e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La cagnotte du goûter : qui reçoit quoi ?",
+   "competence": "resoudre",
+   "situation": "Alba, Basile et Chloé ont récolté 150 € pour le goûter de fin d’année. Ils partagent la cagnotte selon le ratio de leur investissement, mais Chloé est certaine d’avoir repéré une fraction.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "LA CAGNOTTE",
+     "sousTitre": "Goûter de fin d’année",
+     "emoji": "🍰",
+     "lignes": [
+      {
+       "texte": "Total récolté : 150 €"
+      },
+      {
+       "texte": "Partage Alba : Basile : Chloé"
+      },
+      {
+       "texte": "Ratio 2 : 3 : 5",
+       "gras": true
+      }
+     ],
+     "pied": "Affiche imaginée pour l’exercice",
+     "teinte": "rose"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Chloé et Alba",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alba",
+       "emoji": "🧒",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Basile reçoit 3 parts : c’est donc les {{3/5}} de la cagnotte, non ?"
+      },
+      {
+       "qui": "Alba",
+       "texte": "Je ne suis pas sûre… Calculons."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de parts y a-t-il en tout ?",
+     "reponse": 10,
+     "aide": "Additionne les trois nombres du ratio.",
+     "explication": "2 + 3 + 5 = **10** parts."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur d’une part, en euros ?",
+     "reponse": 15,
+     "unite": "€",
+     "aide": "Divise la cagnotte par le nombre total de parts.",
+     "explication": "150 ÷ 10 = **15 €** la part."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien Chloé reçoit-elle, en euros ?",
+     "reponse": 75,
+     "unite": "€",
+     "aide": "Chloé a 5 parts de 15 €.",
+     "explication": "5 × 15 = **75 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction de la cagnotte Basile reçoit-il ?",
+     "options": [
+      "{{3/10}}",
+      "{{3/5}}",
+      "{{3/7}}",
+      "{{1/3}}"
+     ],
+     "reponse": 0,
+     "aide": "Le dénominateur est le nombre total de parts, pas le nombre de parts des deux autres.",
+     "explication": "Basile a 3 parts sur 10 au total : il reçoit **{{3/10}}** de la cagnotte, soit 45 €. Chloé confond avec le total de deux des parts : le dénominateur est le **total des parts**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du partage de la cagnotte.",
+     "items": [
+      "Additionner les parts : 2 + 3 + 5 = 10",
+      "Diviser la cagnotte : 150 ÷ 10 = 15 € la part",
+      "Multiplier : 30 €, 45 € et 75 €",
+      "Vérifier : 30 + 45 + 75 = 150 €"
+     ],
+     "aide": "On compte les parts, on trouve la valeur d’une part, on partage, puis on contrôle.",
+     "explication": "Compter les **parts**, calculer la **valeur d’une part**, multiplier, puis **vérifier** que la somme redonne 150 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "919b0978-98e3-5e9a-b3d4-f47e56e59d01",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le terrain de basket du collège",
+   "competence": "geometrie",
+   "situation": "Le collège veut entourer d’un grillage le terrain de basket, puis repeindre tout son sol. Le plan indique ses dimensions.",
+   "documents": [
+    {
+     "id": "terrain",
+     "type": "figure",
+     "titre": "Plan du terrain de basket",
+     "source": "Plan imaginé pour l’exercice",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 31,
+      "ymin": -2,
+      "ymax": 17
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 28,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 28,
+       "y": 15,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 15,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "28 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "15 m"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ],
+     "textes": [
+      {
+       "x": 14,
+       "y": 7.5,
+       "texte": "Terrain de basket"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle longueur de grillage faut-il pour faire le tour du terrain ?",
+     "reponse": 86,
+     "unite": "m",
+     "aide": "Le tour d’un rectangle, c’est son périmètre : 2 × (L + l).",
+     "explication": "2 × (28 + 15) = 2 × 43 = **86 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du sol à repeindre, en m² ?",
+     "reponse": 420,
+     "unite": "m²",
+     "aide": "Aire d’un rectangle : longueur × largeur.",
+     "explication": "28 × 15 = **420 m²**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un pot de peinture couvre 30 m². Pour peindre le terrain, quelle grandeur le professeur doit-il comparer à 30 m² ?",
+     "options": [
+      "L’aire du terrain",
+      "Le périmètre du terrain",
+      "Le périmètre du terrain divisé par 4",
+      "La longueur du terrain"
+     ],
+     "reponse": 0,
+     "aide": "La peinture recouvre une surface, pas un contour.",
+     "explication": "La peinture se répartit sur une **surface** : c’est donc l’**aire** (420 m²) qu’on compare à 30 m²."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pots de peinture faut-il au minimum ?",
+     "reponse": 14,
+     "aide": "Divise l’aire à peindre par la surface couverte par un pot.",
+     "explication": "420 ÷ 30 = **14** pots, sans reste."
+    }
+   ]
+  },
+  {
+   "chapitre": "919b0978-98e3-5e9a-b3d4-f47e56e59d01",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le jardin en L de la famille Morel",
+   "competence": "geometrie",
+   "situation": "La famille Morel agrandit son jardin : la figure est un « L ». Il faut en calculer l’aire pour acheter du gazon et le périmètre pour poser la clôture. Les mesures sont en mètres.",
+   "documents": [
+    {
+     "id": "jardin",
+     "type": "figure",
+     "titre": "Plan du jardin",
+     "source": "Plan imaginé pour l’exercice",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 13,
+      "ymin": -2,
+      "ymax": 10
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 10,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 10,
+       "y": 4,
+       "position": "e"
+      },
+      {
+       "id": "D",
+       "x": 6,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "E",
+       "x": 6,
+       "y": 8,
+       "position": "ne"
+      },
+      {
+       "id": "F",
+       "x": 0,
+       "y": 8,
+       "position": "no"
+      },
+      {
+       "id": "G",
+       "x": 0,
+       "y": 4,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "10 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "4 m"
+      },
+      {
+       "de": "C",
+       "a": "D",
+       "longueur": "4 m"
+      },
+      {
+       "de": "D",
+       "a": "E",
+       "longueur": "4 m"
+      },
+      {
+       "de": "E",
+       "a": "F",
+       "longueur": "6 m"
+      },
+      {
+       "de": "F",
+       "a": "A",
+       "longueur": "8 m"
+      },
+      {
+       "de": "G",
+       "a": "D",
+       "style": "pointilles"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du rectangle du bas (10 m sur 4 m) ?",
+     "reponse": 40,
+     "unite": "m²",
+     "aide": "Aire d’un rectangle : longueur × largeur.",
+     "explication": "10 × 4 = **40 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du rectangle du haut ? Sa largeur est 6 m ; sa hauteur est ce qui reste de 8 m au-dessus de la ligne pointillée.",
+     "reponse": 24,
+     "unite": "m²",
+     "aide": "Hauteur du haut = 8 − 4.",
+     "explication": "La hauteur du haut vaut 8 − 4 = 4 m, donc l’aire est 6 × 4 = **24 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire totale du jardin, en m² ?",
+     "reponse": 64,
+     "unite": "m²",
+     "aide": "Additionne les deux aires : le L est fait de deux rectangles.",
+     "explication": "40 + 24 = **64 m²**. On décompose la figure, on calcule chaque aire, on additionne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le périmètre du jardin, en mètres ?",
+     "reponse": 36,
+     "unite": "m",
+     "aide": "Fais le tour : additionne les six côtés. Attention, les côtés de la ligne pointillée ne comptent pas.",
+     "explication": "10 + 4 + 4 + 4 + 6 + 8 = **36 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le gazon coûte 3 € le m². Quel est le prix du gazon pour tout le jardin ?",
+     "reponse": 192,
+     "unite": "€",
+     "aide": "Multiplie l’aire totale par le prix du m².",
+     "explication": "64 × 3 = **192 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "919b0978-98e3-5e9a-b3d4-f47e56e59d01",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La pelouse carrée et son bassin",
+   "competence": "resoudre",
+   "situation": "Dans une pelouse carrée, la mairie creuse un bassin circulaire. Il faut calculer la surface de gazon à poser, puis commander les sachets de gazon en rouleaux. On prend π ≈ 3,14.",
+   "documents": [
+    {
+     "id": "pelouse",
+     "type": "figure",
+     "titre": "Plan de la pelouse (en mètres)",
+     "source": "Plan imaginé pour l’exercice",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 12,
+      "ymin": -2,
+      "ymax": 12
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 10,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 10,
+       "y": 10,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 10,
+       "position": "no"
+      },
+      {
+       "id": "O",
+       "x": 5,
+       "y": 5,
+       "position": "s"
+      },
+      {
+       "id": "P",
+       "x": 7,
+       "y": 5,
+       "position": "e"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "10 m"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "de": "O",
+       "a": "P",
+       "longueur": "2 m"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 2,
+       "teinte": "bleu"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "sachet",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Gazon en rouleaux",
+     "sousTitre": "Sachet de pose",
+     "emoji": "🌱",
+     "lignes": [
+      {
+       "texte": "Surface couverte",
+       "valeur": "250 000 cm²"
+      },
+      {
+       "texte": "Prix du sachet",
+       "valeur": "6 €"
+      }
+     ],
+     "pied": "Étiquette imaginée pour l’exercice",
+     "teinte": "vert"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du bassin (un disque de rayon 2 m), en m² ?",
+     "reponse": 12.56,
+     "unite": "m²",
+     "aide": "Aire d’un disque : π × R × R, avec π ≈ 3,14 et R = 2.",
+     "explication": "3,14 × 2² = 3,14 × 4 = **12,56 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire de la pelouse à couvrir de gazon (le carré privé du bassin), en m² ?",
+     "reponse": 87.44,
+     "unite": "m²",
+     "aide": "Aire du carré de 10 m de côté, moins l’aire du bassin.",
+     "explication": "10 × 10 = 100 m², et 100 − 12,56 = **87,44 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un sachet couvre 250 000 cm². Combien cela fait-il en m² ?",
+     "reponse": 25,
+     "unite": "m²",
+     "aide": "1 m² = 10 000 cm² : les unités d’aire changent de 100 en 100.",
+     "explication": "250 000 ÷ 10 000 = **25 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de sachets faut-il acheter, sachant qu’on ne peut pas en acheter une partie ?",
+     "reponse": 4,
+     "aide": "Divise 87,44 par 25, puis arrondis au nombre entier de sachets suffisant.",
+     "explication": "87,44 ÷ 25 ≈ 3,5 : trois sachets ne suffisent pas, il en faut **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix total des sachets ?",
+     "reponse": 24,
+     "unite": "€",
+     "aide": "Multiplie le nombre de sachets par le prix d’un sachet.",
+     "explication": "4 × 6 = **24 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a036ccde-d2a4-5998-a620-ea1145e71a89",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le coffret de chocolats de Mathis",
+   "competence": "geometrie",
+   "situation": "Mathis offre un coffret de chocolats en forme de pavé droit. Il veut l’entourer d’un ruban qui suit toutes les arêtes, et il commence par observer le solide.",
+   "documents": [
+    {
+     "id": "coffret",
+     "type": "solide",
+     "titre": "Le coffret (dimensions en cm)",
+     "longueur": 4,
+     "largeur": 3,
+     "hauteur": 2,
+     "cubes": false,
+     "cotes": true,
+     "unite": "cm"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de faces le coffret a-t-il ?",
+     "reponse": 6,
+     "aide": "Une face est une surface plane qui limite le solide : devant, derrière, dessus, dessous, et les deux côtés.",
+     "explication": "Un pavé droit a **6** faces rectangulaires."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Parmi les arêtes du coffret, combien mesurent 3 cm ?",
+     "reponse": 4,
+     "aide": "Les arêtes parallèles ont la même longueur. Repère celle qui mesure 3 cm sur le dessin.",
+     "explication": "Un pavé droit a 12 arêtes : **4** de chaque dimension (4 cm, 3 cm et 2 cm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur totale de toutes les arêtes, en cm ?",
+     "reponse": 36,
+     "unite": "cm",
+     "aide": "Il y a 4 arêtes de 4 cm, 4 de 3 cm et 4 de 2 cm.",
+     "explication": "4 × (4 + 3 + 2) = 4 × 9 = **36 cm**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a036ccde-d2a4-5998-a620-ea1145e71a89",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel patron plie en un cube ?",
+   "competence": "geometrie",
+   "situation": "Lina veut fabriquer un dé en carton. Elle a dessiné trois patrons, mais un seul se plie en un vrai cube. Elle compare aussi plusieurs solides dans un tableau.",
+   "documents": [
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Faces, arêtes et sommets",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Solide",
+      "Faces",
+      "Arêtes",
+      "Sommets"
+     ],
+     "lignes": [
+      [
+       "Cube",
+       6,
+       12,
+       8
+      ],
+      [
+       "Prisme à base triangulaire",
+       5,
+       "?",
+       6
+      ],
+      [
+       "Pyramide à base hexagonale",
+       7,
+       12,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "patrons",
+     "type": "schema",
+     "titre": "Trois patrons de Lina",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 30,
+       "texte": "A",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 54,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 102,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 54,
+       "y": 50,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 50,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 30,
+       "texte": "B",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 204,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 228,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 252,
+       "y": 74,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 204,
+       "y": 50,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 204,
+       "y": 98,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 30,
+       "y": 160,
+       "texte": "C",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 180,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 54,
+       "y": 180,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 180,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 102,
+       "y": 180,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 126,
+       "y": 180,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 204,
+       "l": 24,
+       "h": 24,
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’arêtes le prisme à base triangulaire a-t-il ?",
+     "reponse": 9,
+     "aide": "Compte les arêtes de la base triangulaire (3), celles de l’autre base (3) et celles qui les relient (3).",
+     "explication": "3 arêtes en bas + 3 en haut + 3 qui les relient = **9** arêtes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de sommets la pyramide à base hexagonale a-t-elle ?",
+     "reponse": 7,
+     "aide": "Compte les sommets de l’hexagone, puis ajoute le sommet de la pyramide.",
+     "explication": "L’hexagone a 6 sommets, plus le sommet de la pyramide : **7** sommets."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel patron se plie en un cube sans recouvrement ni manque ?",
+     "options": [
+      "Le patron B",
+      "Le patron A",
+      "Le patron C",
+      "Aucun des trois"
+     ],
+     "reponse": 0,
+     "aide": "Imagine de plier chaque patron : les carrés se recouvrent-ils ?",
+     "explication": "Le patron **B** est la « croix » : quatre carrés forment le tour, un couvercle au-dessus et un fond en dessous. Il se plie sans recouvrement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le patron A ne se plie-t-il pas en un cube ?",
+     "options": [
+      "Quatre carrés se touchent en un point, un cube n’en a que trois",
+      "Il a sept carrés alors que le cube a seulement six faces",
+      "Ses carrés n’ont pas tous la même taille sur le dessin",
+      "Il manque une face : il ne compte que cinq carrés ici"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le sommet au centre du patron A : combien de carrés s’y touchent ?",
+     "explication": "Dans le patron A, un bloc de quatre carrés se rejoint en un point. Sur un cube, **trois** faces se rencontrent à chaque sommet : les carrés se superposeraient, et le patron est refusé."
+    }
+   ]
+  },
+  {
+   "chapitre": "a036ccde-d2a4-5998-a620-ea1145e71a89",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’étiquette de la boîte de maïs",
+   "competence": "modeliser",
+   "situation": "Une boîte de conserve est un cylindre. L’étiquette en papier fait exactement le tour de la boîte : une fois dépliée, c’est un rectangle. Léa dessine le patron et cherche les dimensions de son étiquette. On prend π ≈ 3,14.",
+   "documents": [
+    {
+     "id": "patron",
+     "type": "schema",
+     "titre": "Le patron du cylindre",
+     "largeur": 320,
+     "hauteur": 245,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 80,
+       "l": 201,
+       "h": 80,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 48,
+       "r": 32,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 192,
+       "r": 32,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        122
+       ],
+       "a": [
+        231,
+        122
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 130,
+       "y": 112,
+       "texte": "? cm",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        245,
+        80
+       ],
+       "a": [
+        245,
+        160
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 124,
+       "texte": "h = 10 cm",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        48
+       ],
+       "a": [
+        102,
+        48
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 190,
+       "y": 28,
+       "texte": "r = 4 cm",
+       "vers": [
+        86,
+        48
+       ]
+      }
+     ]
+    },
+    {
+     "id": "boite",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Boîte de maïs",
+     "sousTitre": "Cylindre",
+     "emoji": "🌽",
+     "lignes": [
+      {
+       "texte": "Rayon de la base",
+       "valeur": "4 cm"
+      },
+      {
+       "texte": "Hauteur",
+       "valeur": "10 cm"
+      }
+     ],
+     "pied": "Étiquette imaginée pour l’exercice",
+     "teinte": "jaune"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du rectangle (le « ? cm ») ? Elle est égale au périmètre d’un disque de base.",
+     "reponse": 25.12,
+     "unite": "cm",
+     "aide": "Périmètre d’un cercle : 2 × π × R, avec π ≈ 3,14 et R = 4 cm.",
+     "explication": "2 × 3,14 × 4 = **25,12 cm**. Le rectangle « s’enroule » exactement autour d’un disque."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire de l’étiquette en papier (le rectangle), en cm² ?",
+     "reponse": 251.2,
+     "unite": "cm²",
+     "aide": "Aire d’un rectangle : longueur × hauteur.",
+     "explication": "25,12 × 10 = **251,2 cm²**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque solide à son patron.",
+     "paires": [
+      [
+       "Cylindre",
+       "2 disques et 1 rectangle"
+      ],
+      [
+       "Cône",
+       "1 disque et 1 secteur circulaire"
+      ],
+      [
+       "Pyramide à base carrée",
+       "1 carré et 4 triangles"
+      ],
+      [
+       "Pavé droit",
+       "6 rectangles"
+      ]
+     ],
+     "aide": "Pense aux formes planes qu’on obtient en dépliant chaque solide.",
+     "explication": "Le **cylindre** : 2 disques et 1 rectangle ; le **cône** : 1 disque et 1 secteur circulaire ; la **pyramide** : sa base et autant de triangles que de côtés ; le **pavé** : 6 rectangles."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque solide : polyèdre ou solide de révolution ?",
+     "categories": [
+      "Polyèdre",
+      "Solide de révolution"
+     ],
+     "items": [
+      [
+       "Cube",
+       0
+      ],
+      [
+       "Prisme",
+       0
+      ],
+      [
+       "Pyramide",
+       0
+      ],
+      [
+       "Cylindre",
+       1
+      ],
+      [
+       "Cône",
+       1
+      ],
+      [
+       "Sphère",
+       1
+      ]
+     ],
+     "aide": "Un polyèdre a toutes ses faces planes ; un solide de révolution est obtenu en faisant tourner une figure autour d’un axe.",
+     "explication": "Cube, prisme et pyramide ont toutes leurs faces **planes** : ce sont des polyèdres. Cylindre, cône et sphère sont obtenus par **rotation** d’une figure autour d’un axe."
+    }
+   ]
+  }
+ ]
+}

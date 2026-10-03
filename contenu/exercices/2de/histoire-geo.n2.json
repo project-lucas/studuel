@@ -1,0 +1,3560 @@
+{
+ "niveau": "2de",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "4bcb8f4e-c59a-5809-91d2-776d9e6feedb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui sont les humanistes ?",
+   "competence": "lire-tableau",
+   "situation": "Zoé prépare une fiche pour son cours d’histoire : elle a dressé un tableau de cinq humanistes et de ce qu’ils ont apporté. Aide-la à le lire.",
+   "documents": [
+    {
+     "id": "humanistes",
+     "type": "tableau",
+     "titre": "Cinq humanistes",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "L’humaniste",
+      "Son œuvre ou son apport"
+     ],
+     "lignes": [
+      [
+       "Pétrarque",
+       "Il inaugure le mouvement en Italie"
+      ],
+      [
+       "Érasme",
+       "Un Nouveau Testament en grec"
+      ],
+      [
+       "Thomas More",
+       "L’Utopie"
+      ],
+      [
+       "Rabelais",
+       "Il écrit en français"
+      ],
+      [
+       "Montaigne",
+       "Il écrit en français"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "humanistes",
+     "enonce": "Touche le nom de l’humaniste qui inaugure le mouvement en Italie.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche la ligne qui parle de l’Italie.",
+     "explication": "**Pétrarque** inaugure le mouvement humaniste en Italie, avant Érasme, More, Rabelais et Montaigne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’humanistes de ce tableau écrivent en français ?",
+     "reponse": 2,
+     "unite": "humanistes",
+     "aide": "Relis la colonne de droite, ligne par ligne.",
+     "explication": "**Deux** : Rabelais et Montaigne écrivent en français ; les autres s’adressent surtout aux savants de toute l’Europe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que font les humanistes des textes grecs et latins de l’Antiquité ?",
+     "options": [
+      "Ils les relisent dans leur langue d’origine",
+      "Ils les remplacent par des textes neufs",
+      "Ils les gardent enfermés dans les monastères",
+      "Ils les traduisent tous en français"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau cite un Nouveau Testament en grec : dans quelle langue l’ont-ils lu ?",
+     "explication": "Les humanistes relisent les Anciens **dans leur langue d’origine** : c’est le retour aux textes, comme le Nouveau Testament en grec d’Érasme."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bcb8f4e-c59a-5809-91d2-776d9e6feedb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le livre qui coûte dix fois moins",
+   "competence": "lire-graphique",
+   "situation": "Mathieu, étudiant imaginaire à Strasbourg, veut acheter un livre. Un libraire lui explique ce que Gutenberg a changé depuis Mayence, vers 1450.",
+   "documents": [
+    {
+     "id": "libraire",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Chez le libraire",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "À Mayence, vers 1450, Johannes Gutenberg compose les pages avec des [[c|caractères]] [[c|mobiles]] en métal : il suffit de les assembler, de les encrer et de presser la feuille.",
+      "Le libraire de Mathieu lui montre deux exemplaires du même ouvrage : l’un a été copié à la main par un moine, l’autre est sorti d’un atelier d’imprimeur. « Voilà pourquoi tout le monde lit davantage », dit-il."
+     ]
+    },
+    {
+     "id": "prix",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le prix d’un même livre",
+     "source": "Chiffres imaginés pour l’exercice, qui reprennent le rapport indiqué dans le cours.",
+     "categories": [
+      "Copié à la main",
+      "Imprimé"
+     ],
+     "series": [
+      {
+       "nom": "Prix",
+       "valeurs": [
+        20,
+        2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "en florins",
+      "min": 0,
+      "max": 20,
+      "pas": 5
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "libraire",
+     "enonce": "Touche les mots qui désignent l’invention de Gutenberg.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Il s’agit de pièces de métal qu’on peut déplacer.",
+     "explication": "Les **caractères mobiles** en métal sont l’invention de Gutenberg : on les assemble pour composer chaque page."
+    },
+    {
+     "type": "nombre",
+     "document": "prix",
+     "enonce": "Combien de fois le livre imprimé est-il moins cher que le livre copié à la main ?",
+     "reponse": 10,
+     "unite": "fois",
+     "aide": "Divise le prix le plus élevé par le prix le plus bas.",
+     "explication": "20 ÷ 2 = **10** : le prix d’un livre est divisé par dix, comme le dit le cours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec 20 florins, combien de livres imprimés Mathieu peut-il acheter ?",
+     "reponse": 10,
+     "unite": "livres",
+     "aide": "Un livre imprimé coûte 2 florins.",
+     "explication": "20 ÷ 2 = **10 livres imprimés** pour le prix d’un seul livre copié à la main."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conséquence l’imprimerie a-t-elle sur la circulation des idées ?",
+     "options": [
+      "Une idée voyage en quelques semaines au lieu de plusieurs années",
+      "Une idée ne voyage plus, faute de copistes pour la recopier",
+      "Une idée met désormais plus longtemps à circuler qu’avant",
+      "Une idée reste réservée aux savants des monastères"
+     ],
+     "reponse": 0,
+     "aide": "Pense au prix et à la quantité de livres en circulation.",
+     "explication": "Avec des millions de volumes en cinquante ans, une idée circule en **quelques semaines, non en années** : c’est ce qui fait de l’imprimerie une révolution."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bcb8f4e-c59a-5809-91d2-776d9e6feedb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De Mayence à Chambord",
+   "competence": "se-reperer-temps",
+   "situation": "Léa prépare un exposé sur la Renaissance en Europe : elle veut montrer comment l’imprimerie, les guerres d’Italie et le roi de France ont fait voyager les idées. Elle a une carte et une frise.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois villes de la Renaissance",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -5,
+      40,
+      20,
+      55
+     ],
+     "source": "Carte d’après le cours ; frontières actuelles.",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 8.27,
+       "lat": 50,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "florence",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les débuts de la Renaissance en Europe",
+     "debut": 1440,
+     "fin": 1560,
+     "pas": 20,
+     "source": "Frise établie d’après le cours.",
+     "periodes": [
+      {
+       "id": "guerres",
+       "debut": 1494,
+       "fin": 1559,
+       "nom": "Guerres d’Italie",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "gut",
+       "date": 1450,
+       "nom": "Gutenberg"
+      },
+      {
+       "id": "col",
+       "date": 1530,
+       "nom": "Collège de France"
+      },
+      {
+       "id": "vil",
+       "date": 1539,
+       "nom": "Villers-Cotterêts"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Gutenberg met au point l’imprimerie vers 1450.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "C’est une ville d’Allemagne, au bord du Rhin.",
+     "explication": "Gutenberg travaille à **Mayence**, ville d’Allemagne : la lettre A. Florence (B) est le foyer de l’art italien, Paris (C) la capitale du roi."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui impose le français dans les actes officiels.",
+     "reponse": [
+      "vil"
+     ],
+     "aide": "Cherche une ordonnance, la plus tardive des trois événements.",
+     "explication": "L’ordonnance de **Villers-Cotterêts**, en 1539, impose le français dans les actes officiels. Le Collège de France, lui, date de 1530."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent la fondation du Collège de France de l’ordonnance de Villers-Cotterêts ?",
+     "reponse": 9,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1539 − 1530 = **9 ans**."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Pendant combien d’années durent les guerres d’Italie, de 1494 à 1559 ?",
+     "reponse": 65,
+     "unite": "ans",
+     "aide": "Soustrais la date de début à la date de fin de la période.",
+     "explication": "1559 − 1494 = **65 ans** : les guerres d’Italie durent plus d’un demi-siècle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les guerres d’Italie changent-elles le goût des Français ?",
+     "options": [
+      "Les Français y découvrent les palais et l’art italiens",
+      "Les Français y découvrent l’imprimerie de Gutenberg",
+      "Les Français y rencontrent Luther à Wittenberg",
+      "Les Français y apprennent à écrire en français"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où la période des guerres est située : B est une ville italienne.",
+     "explication": "En Italie, les Français découvrent **les palais et l’art italiens** : François Ier attire Léonard de Vinci et fait bâtir Chambord."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9917f09-c475-53ff-8a0a-430989127935",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois réformateurs, trois Églises",
+   "competence": "lire-tableau",
+   "situation": "Samir prépare une affiche pour le CDI : « Au XVIe siècle, l’unité chrétienne se brise ». Il a noté trois réformateurs, leur pays et leur date.",
+   "documents": [
+    {
+     "id": "refo",
+     "type": "tableau",
+     "titre": "Les trois protestantismes",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Réformateur",
+      "Lieu",
+      "Date",
+      "Courant né"
+     ],
+     "lignes": [
+      [
+       "Luther",
+       "Allemagne",
+       1517,
+       "Luthéranisme"
+      ],
+      [
+       "Calvin",
+       "Genève",
+       1536,
+       "Calvinisme"
+      ],
+      [
+       "Henri VIII",
+       "Angleterre",
+       1534,
+       "Anglicanisme"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "refo",
+     "enonce": "Touche la date de l’Acte de suprématie d’Henri VIII.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Repère la ligne d’Henri VIII, puis la colonne des dates.",
+     "explication": "Henri VIII rompt avec Rome en **1534** par l’Acte de suprématie, qui le met à la tête de l’Église d’Angleterre."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réformateur au courant né de son action.",
+     "paires": [
+      [
+       "Luther",
+       "Luthéranisme"
+      ],
+      [
+       "Calvin",
+       "Calvinisme"
+      ],
+      [
+       "Henri VIII",
+       "Anglicanisme"
+      ]
+     ],
+     "aide": "Le nom du courant ressemble au nom du réformateur, sauf pour le roi d’Angleterre.",
+     "explication": "**Luther** → luthéranisme, **Calvin** → calvinisme, **Henri VIII** → anglicanisme (l’Église d’Angleterre)."
+    },
+    {
+     "type": "nombre",
+     "document": "refo",
+     "enonce": "Combien d’années séparent le geste de Luther de la publication de Calvin ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais la plus petite date à la plus grande dans les lignes de Luther et de Calvin.",
+     "explication": "1536 − 1517 = **19 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9917f09-c475-53ff-8a0a-430989127935",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi l’Église est-elle critiquée ?",
+   "competence": "analyser-texte",
+   "situation": "Thomas, un marchand imaginaire d’Augsbourg, écrit à son frère en 1520. Il raconte ce que beaucoup de ses voisins reprochent à l’Église, puis tu classeras les idées de la Réforme et la réponse catholique.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Thomas à son frère, 1520",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Cher Jakob, on ne parle plus que de cela dans les auberges. Un moine vient de passer avec des [[i|indulgences]] : en payant, on obtient une remise de peine, et l’argent doit servir à bâtir une immense église à Rome.",
+      "Les évêques vivent dans le luxe et cumulent les bénéfices, pendant que nos curés, dont l’[[g|ignorance]] est bien connue, savent à peine expliquer la messe.",
+      "Mon voisin, qui lit les Écritures dans son livre imprimé, dit qu’il faut revenir aux textes eux-mêmes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne ce que le moine vend pour financer l’église de Rome.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "C’est une remise de peine qu’on obtient en payant.",
+     "explication": "Ce sont les **indulgences**, dont l’argent finance la reconstruction de Saint-Pierre de Rome : elles déclenchent la protestation de Luther."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme la faiblesse reprochée aux curés.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Pense à ce que les curés savent mal faire : expliquer, enseigner.",
+     "explication": "Thomas dénonce l’**ignorance** des curés, mal formés : c’est la faiblesse de formation que le concile de Trente corrigera avec les séminaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le voisin de Thomas, qui lit son livre imprimé, et quel mouvement annonce-t-il ?",
+     "options": [
+      "Il faut revenir aux textes : c’est l’humanisme qui arme la critique",
+      "Il faut brûler les livres : c’est l’Inquisition qui parle",
+      "Il faut acheter plus d’indulgences : c’est l’Église qui parle",
+      "Il faut quitter l’Empire : c’est la guerre qui commence"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la manière dont les humanistes relisent les textes.",
+     "explication": "L’**humanisme** exige le retour aux textes et fournit à la critique ses outils."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments : idée des protestants ou réponse des catholiques ?",
+     "categories": [
+      "Idée des protestants",
+      "Réponse des catholiques"
+     ],
+     "items": [
+      [
+       "Le salut par la foi",
+       0
+      ],
+      [
+       "Le refus du culte des saints",
+       0
+      ],
+      [
+       "La création des séminaires",
+       1
+      ],
+      [
+       "Les jésuites, fondés en 1540",
+       1
+      ],
+      [
+       "L’art baroque",
+       1
+      ]
+     ],
+     "aide": "Les séminaires et les jésuites viennent du concile de Trente et de la Réforme catholique.",
+     "explication": "Le **salut par la foi** et le refus du culte des saints sont des idées de Luther et de Calvin ; **séminaires**, **jésuites** et **art baroque** sont des réponses catholiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "e9917f09-c475-53ff-8a0a-430989127935",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’Europe se divise : carte et frise de la Réforme",
+   "competence": "se-reperer-espace",
+   "situation": "Inès prépare un dossier sur les guerres de Religion : elle veut comprendre où naissent les trois protestantismes, où se trouve le pape, et comment on tente de rétablir la paix.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes de la Réforme",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -6,
+      40,
+      20,
+      56
+     ],
+     "source": "Carte d’après le cours ; frontières actuelles.",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 12.65,
+       "lat": 51.87,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "geneve",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lieu": "londres",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      },
+      {
+       "id": "d",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Réforme, de 1517 à 1598",
+     "debut": 1510,
+     "fin": 1600,
+     "pas": 10,
+     "source": "Frise établie d’après le cours.",
+     "periodes": [
+      {
+       "id": "guerres",
+       "debut": 1562,
+       "fin": 1598,
+       "nom": "Guerres de Religion",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "lut",
+       "date": 1517,
+       "nom": "Luther"
+      },
+      {
+       "id": "ang",
+       "date": 1534,
+       "nom": "Acte de suprématie"
+      },
+      {
+       "id": "tre",
+       "date": 1545,
+       "nom": "Concile de Trente"
+      },
+      {
+       "id": "aug",
+       "date": 1555,
+       "nom": "Paix d’Augsbourg"
+      },
+      {
+       "id": "bar",
+       "date": 1572,
+       "nom": "Saint-Barthélemy"
+      },
+      {
+       "id": "nan",
+       "date": 1598,
+       "nom": "Édit de Nantes"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Calvin réforme l’Église.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "C’est une ville au bord d’un lac, au pied des Alpes.",
+     "explication": "Calvin réforme l’Église à **Genève** (B) et y publie l’*Institution de la religion chrétienne* en 1536."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville du pape, au cœur de l’Église catholique.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est la capitale de l’Italie actuelle.",
+     "explication": "**Rome** (D) est la ville du pape, dont les réformateurs récusent l’autorité."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement par lequel, dans l’Empire, le prince choisit la religion de ses sujets.",
+     "reponse": [
+      "aug"
+     ],
+     "aide": "Un traité de paix signé à Augsbourg, au milieu du siècle.",
+     "explication": "La **paix d’Augsbourg** (1555) laisse chaque prince choisir la religion de ses sujets."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années durent les guerres de Religion en France ?",
+     "reponse": 36,
+     "unite": "ans",
+     "aide": "Soustrais la date de début à la date de fin de la période.",
+     "explication": "1598 − 1562 = **36 ans**, jusqu’à l’édit de Nantes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle différence y a-t-il entre la paix d’Augsbourg (1555) et l’édit de Nantes (1598) ?",
+     "options": [
+      "Augsbourg laisse le prince choisir la religion ; Nantes accorde aux protestants la liberté de conscience et des places de sûreté",
+      "Augsbourg accorde aux protestants la liberté de conscience ; Nantes laisse chaque prince choisir la religion",
+      "Augsbourg interdit le luthéranisme ; Nantes interdit les jésuites",
+      "Augsbourg met fin au concile de Trente ; Nantes en ouvre un autre"
+     ],
+     "reponse": 0,
+     "aide": "Augsbourg concerne les princes de l’Empire, Nantes les protestants de France.",
+     "explication": "À **Augsbourg**, c’est le prince qui décide ; à **Nantes**, le roi de France reconnaît aux protestants la liberté de conscience et des places de sûreté."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ff97d37-ecc8-548e-bb9c-6b7e7129ac98",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Luther, de 1517 à 1521",
+   "competence": "se-reperer-temps",
+   "situation": "Camille prépare une frise murale sur Martin Luther. Elle y a placé trois événements des cinq premières années de son combat.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Luther, de 1517 à 1521",
+     "debut": 1515,
+     "fin": 1525,
+     "pas": 5,
+     "source": "Frise établie d’après le cours.",
+     "evenements": [
+      {
+       "id": "the",
+       "date": 1517,
+       "nom": "95 thèses"
+      },
+      {
+       "id": "bul",
+       "date": 1520,
+       "nom": "Brûle la bulle"
+      },
+      {
+       "id": "wor",
+       "date": 1521,
+       "nom": "Diète de Worms"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où Luther brûle le document qui l’excommunie.",
+     "reponse": [
+      "bul"
+     ],
+     "aide": "Il s’agit de la bulle, entre les 95 thèses et Worms.",
+     "explication": "En **1520**, excommunié par une bulle, Luther brûle le document."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années passent entre les 95 thèses et la diète de Worms ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1521 − 1517 = **4 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait Luther devant Charles Quint, à la diète de Worms ?",
+     "options": [
+      "Il refuse de se rétracter",
+      "Il accepte de se rétracter",
+      "Il quitte le Saint-Empire pour Rome",
+      "Il traduit la Bible sur place"
+     ],
+     "reponse": 0,
+     "aide": "Il sera ensuite mis au ban de l’Empire.",
+     "explication": "Luther **refuse de se rétracter** devant Charles Quint ; mis au ban de l’Empire, il est caché à la Wartburg."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ff97d37-ecc8-548e-bb9c-6b7e7129ac98",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que Luther garde et ce qu’il rejette",
+   "competence": "analyser-document",
+   "situation": "Élise, imprimeuse imaginaire à Wittenberg, raconte comment les idées de Luther voyagent. Un tableau résume ce que le réformateur conserve de l’Église catholique et ce qu’il rejette.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans l’atelier d’Élise, à Wittenberg",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Dans mon atelier, les [[t|thèses]] du docteur Luther contre les indulgences ont été [[p|imprimées]] en quelques jours, puis traduites. Des colporteurs les ont portées dans tout l’Empire.",
+      "Plus tard, pendant sa retraite à la Wartburg, Luther traduit le Nouveau Testament en allemand : désormais, chacun peut lire par lui-même."
+     ]
+    },
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Dans l’Église de Luther",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Ce qui subsiste",
+      "Ce qui est rejeté"
+     ],
+     "lignes": [
+      [
+       "Le baptême",
+       "Le culte des saints"
+      ],
+      [
+       "L’eucharistie",
+       "Le purgatoire"
+      ],
+      [
+       "—",
+       "Le célibat des prêtres"
+      ],
+      [
+       "—",
+       "L’autorité du pape"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui explique que les thèses circulent si vite.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Pense à l’invention de Gutenberg.",
+     "explication": "Les thèses sont **imprimées** : grâce à l’imprimerie, elles circulent en quelques semaines dans tout l’Empire."
+    },
+    {
+     "type": "nombre",
+     "document": "tableau",
+     "enonce": "Combien de sacrements Luther conserve-t-il ?",
+     "reponse": 2,
+     "unite": "sacrements",
+     "aide": "Compte les cases de la colonne « Ce qui subsiste ».",
+     "explication": "Luther garde **deux** sacrements : le baptême et l’eucharistie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque principe de Luther à son sens.",
+     "paires": [
+      [
+       "La foi seule",
+       "Le salut ne s’achète ni ne se mérite par les œuvres"
+      ],
+      [
+       "L’Écriture seule",
+       "La Bible fait autorité, non la tradition"
+      ],
+      [
+       "Le sacerdoce universel",
+       "Tout croyant est prêtre"
+      ]
+     ],
+     "aide": "Le nom du principe donne un indice : une seule chose compte à chaque fois.",
+     "explication": "**Foi seule** : le salut vient de la foi ; **Écriture seule** : la Bible l’emporte sur la tradition ; **sacerdoce universel** : tout croyant est prêtre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la traduction du Nouveau Testament en allemand est-elle si importante ?",
+     "options": [
+      "Chacun peut lire par lui-même, et donc juger par lui-même",
+      "Seuls les prêtres peuvent désormais lire la Bible",
+      "Le pape peut mieux contrôler la lecture",
+      "Le latin devient la seule langue de l’Église"
+     ],
+     "reponse": 0,
+     "aide": "Pense au principe de l’Écriture seule.",
+     "explication": "Traduire la Bible, c’est décider que **chacun peut lire et juger par lui-même**, conformément au sacerdoce universel."
+    }
+   ]
+  },
+  {
+   "chapitre": "2ff97d37-ecc8-548e-bb9c-6b7e7129ac98",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Nord luthérien, Sud catholique",
+   "competence": "se-reperer-espace",
+   "situation": "Hugo prépare un croquis de l’Allemagne au XVIe siècle. Il veut y placer le lieu où Luther enseigne, celui de son procès, puis comprendre pourquoi les princes se rallient à la Réforme.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Allemagne après la paix d’Augsbourg (1555)",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      3,
+      46,
+      18,
+      56
+     ],
+     "source": "Croquis simplifié d’après le cours ; frontières actuelles.",
+     "aires": [
+      {
+       "id": "nord",
+       "contour": [
+        [
+         6,
+         51.5
+        ],
+        [
+         14.5,
+         51.5
+        ],
+        [
+         14.5,
+         54.2
+        ],
+        [
+         6,
+         54.2
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair",
+       "etiquette": "Nord"
+      },
+      {
+       "id": "sud",
+       "contour": [
+        [
+         7.5,
+         47.6
+        ],
+        [
+         13.5,
+         47.6
+        ],
+        [
+         13.5,
+         49.5
+        ],
+        [
+         7.5,
+         49.5
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Sud"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": 12.65,
+       "lat": 51.87,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lon": 8.36,
+       "lat": 49.63,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le conseil d’un prince, vers 1525",
+     "source": "Scène écrite pour l’exercice.",
+     "blocs": [
+      "Le prince Frédéric hésite. Son chancelier lui dit : « Les idées de Luther sont justes, mais regardez aussi les terres des monastères : si vous passez à la Réforme, les [[b|biens]] de l’Église reviennent à votre trésor. »",
+      "Un autre conseiller proteste : « Prince, c’est d’abord une affaire de conscience. » Frédéric songe à ces deux raisons."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Luther est professeur quand il écrit ses 95 thèses.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il enseigne à l’université, dans une ville de l’est de l’Allemagne.",
+     "explication": "Luther est professeur à **Wittenberg** (A), dans le nord-est de l’Allemagne. Worms (B) est la ville de la diète de 1521."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la zone qui devient luthérienne après la paix d’Augsbourg.",
+     "reponse": [
+      "nord"
+     ],
+     "aide": "Le Nord et le Sud n’ont pas choisi la même religion.",
+     "explication": "Le **nord** de l’Allemagne devient luthérien, le sud reste catholique : la paix d’Augsbourg fige ce partage."
+    },
+    {
+     "type": "zone",
+     "document": "conseil",
+     "enonce": "Touche le mot qui montre qu’un prince peut rallier la Réforme par intérêt.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche ce que le prince gagnerait en prenant les terres des monastères.",
+     "explication": "Les **biens** de l’Église attirent le prince : il adopte la Réforme par conviction, mais aussi pour les saisir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fut l’attitude de Luther face à la guerre des paysans de 1524-1525 ?",
+     "options": [
+      "Il refuse la révolution sociale : la révolte est écrasée avec son appui",
+      "Il prend la tête des paysans révoltés contre les seigneurs",
+      "Il demande au pape de les protéger contre les princes",
+      "Il quitte l’Allemagne pour aller rejoindre les révoltés"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’appui que les princes lui accordent.",
+     "explication": "Luther **refuse la révolution sociale** : la guerre des paysans est écrasée avec son appui."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Les 95 thèses (1517)",
+      "La diète de Worms (1521)",
+      "La guerre des paysans (1524-1525)",
+      "La paix d’Augsbourg (1555)"
+     ],
+     "aide": "Commence par les 95 thèses, finis par la paix qui partage l’Empire.",
+     "explication": "**1517** les thèses, **1521** Worms, **1524-1525** la guerre des paysans, **1555** la paix d’Augsbourg."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec702236-f6bb-568c-8747-da3844617b3e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vie de Léonard sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Maya doit présenter Léonard de Vinci à sa classe. Elle a tracé une frise de sa vie, de sa naissance à sa mort, avec deux étapes importantes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Léonard de Vinci",
+     "debut": 1450,
+     "fin": 1520,
+     "pas": 10,
+     "source": "Frise établie d’après le cours.",
+     "periodes": [
+      {
+       "id": "cene",
+       "debut": 1495,
+       "fin": 1498,
+       "nom": "La Cène",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nai",
+       "date": 1452,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ver",
+       "date": 1467,
+       "nom": "Atelier de Verrocchio"
+      },
+      {
+       "id": "mor",
+       "date": 1519,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période pendant laquelle Léonard peint la Cène.",
+     "reponse": [
+      "cene"
+     ],
+     "aide": "Cherche la bande colorée, entre l’atelier et la mort.",
+     "explication": "Léonard peint la **Cène** de 1495 à 1498, à Milan."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Quel âge Léonard a-t-il à sa mort, en 1519 ? (Il est né en 1452.)",
+     "reponse": 67,
+     "unite": "ans",
+     "aide": "Soustrais l’année de naissance à l’année de la mort.",
+     "explication": "1519 − 1452 = **67 ans**."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "À peu près quel âge a-t-il quand il entre dans l’atelier de Verrocchio, à Florence ?",
+     "reponse": 15,
+     "unite": "ans",
+     "tolerance": 1,
+     "aide": "Soustrais l’année de naissance à celle de son entrée dans l’atelier.",
+     "explication": "1467 − 1452 = **15 ans** environ : un adolescent entre dans l’atelier du maître florentin."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec702236-f6bb-568c-8747-da3844617b3e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans les carnets de Léonard",
+   "competence": "analyser-document",
+   "situation": "Une visite scolaire au Clos Lucé, à Amboise : la guide présente les carnets de Léonard, ses milliers de pages de dessins et ce qu’on en a retenu. Tu retrouves ce qu’il observait et ce qu’il imaginait.",
+   "documents": [
+    {
+     "id": "guide",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les mots de la guide",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Léonard a rempli des milliers de pages de dessins et de notes. Il les écrit de droite à gauche : on ne peut les lire qu’avec un [[m|miroir]].",
+      "Rien n’y est décoratif : chaque dessin sert à comprendre ou à préparer une idée. Pourtant, presque aucune de ses machines n’a été construite."
+     ]
+    },
+    {
+     "id": "domaines",
+     "type": "tableau",
+     "titre": "Ce que Léonard étudie",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le domaine",
+      "Ce qu’il en tire"
+     ],
+     "lignes": [
+      [
+       "L’anatomie",
+       "Une trentaine de dissections ; le fœtus dans l’utérus"
+      ],
+      [
+       "Le vol des oiseaux",
+       "Des projets de machine volante"
+      ],
+      [
+       "L’eau et la lumière",
+       "Tourbillons, ombres, reflets"
+      ],
+      [
+       "La mécanique",
+       "Char d’assaut, pont mobile, scaphandre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "guide",
+     "enonce": "Touche le mot qui donne le moyen de lire les carnets de Léonard.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Il écrit de droite à gauche : quel objet renvoie l’image inversée ?",
+     "explication": "Léonard écrit **en miroir**, de droite à gauche : on lit mieux ses carnets avec un miroir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments : Léonard observe la nature, ou il imagine une machine ?",
+     "categories": [
+      "Il observe la nature",
+      "Il imagine une machine"
+     ],
+     "items": [
+      [
+       "Les dissections",
+       0
+      ],
+      [
+       "Les tourbillons de l’eau",
+       0
+      ],
+      [
+       "Le char d’assaut",
+       1
+      ],
+      [
+       "Le pont mobile",
+       1
+      ],
+      [
+       "Le scaphandre",
+       1
+      ]
+     ],
+     "aide": "Une dissection ou un tourbillon se regarde ; un char d’assaut se conçoit.",
+     "explication": "**Dissections** et **tourbillons** sont des observations ; **char d’assaut**, **pont mobile** et **scaphandre** sont des machines qu’il imagine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la guide du sort des machines dessinées par Léonard ?",
+     "options": [
+      "Presque aucune n’a été construite",
+      "La plupart ont été construites",
+      "Elles ont toutes été construites par ses élèves",
+      "Aucune n’est restée dans ses carnets"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du texte.",
+     "explication": "Ses carnets comptent des milliers de pages, mais **presque rien n’a été construit** : Léonard dessine pour comprendre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’étude de l’anatomie, du vol et de la mécanique fait-elle de Léonard un idéal humaniste ?",
+     "options": [
+      "Il unit l’art, la technique et la science dans une même curiosité",
+      "Il refuse de peindre pour se consacrer à la mécanique",
+      "Il copie uniquement les textes des Anciens",
+      "Il travaille pour un seul prince qui lui dicte ses sujets"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la variété des domaines étudiés dans le tableau.",
+     "explication": "Léonard unit **l’art, la technique et la science** dans une même curiosité : c’est l’idéal de l’homme humaniste."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec702236-f6bb-568c-8747-da3844617b3e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Léonard, de Florence au Clos Lucé",
+   "competence": "se-reperer-espace",
+   "situation": "Noé trace le parcours de Léonard de Vinci à travers l’Europe : de l’atelier florentin à Amboise, il a servi de grands protecteurs. Il dispose d’une carte et d’un tableau.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes dans la vie de Léonard",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -3,
+      40,
+      16,
+      51
+     ],
+     "source": "Carte d’après le cours ; frontières actuelles.",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "florence",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "milan",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lon": 1,
+       "lat": 47.41,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      },
+      {
+       "id": "d",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "protecteurs",
+     "type": "tableau",
+     "titre": "Les protecteurs de Léonard",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le protecteur",
+      "Le lieu"
+     ],
+     "lignes": [
+      [
+       "Ludovic Sforza",
+       "Milan"
+      ],
+      [
+       "La République de Florence",
+       "Florence"
+      ],
+      [
+       "François Ier",
+       "Le Clos Lucé, à Amboise"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Léonard peint la Cène, sous la protection de Ludovic Sforza.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le tableau indique le lieu de Ludovic Sforza.",
+     "explication": "La Cène est peinte à **Milan** (B), la ville de Ludovic Sforza."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Léonard meurt, en 1519, au service de François Ier.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Le roi de France l’installe au Clos Lucé.",
+     "explication": "Léonard meurt au Clos Lucé, à **Amboise** (C), en 1519."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque protecteur de Léonard à son lieu.",
+     "paires": [
+      [
+       "Ludovic Sforza",
+       "Milan"
+      ],
+      [
+       "La République de Florence",
+       "Florence"
+      ],
+      [
+       "François Ier",
+       "Amboise"
+      ]
+     ],
+     "aide": "Reprends le tableau ligne par ligne.",
+     "explication": "**Sforza** à Milan, la **République** à Florence, **François Ier** à Amboise : les princes se disputent le savant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la liste de ses protecteurs sur la place de l’artiste à la Renaissance ?",
+     "options": [
+      "L’artiste devient un personnage que les princes se disputent",
+      "L’artiste reste un artisan anonyme et mal payé",
+      "L’artiste ne travaille plus que pour l’Église",
+      "L’artiste est désormais interdit de séjour dans les cours"
+     ],
+     "reponse": 0,
+     "aide": "Compte les princes et les villes qui accueillent Léonard.",
+     "explication": "L’artiste devient **un personnage que les princes se disputent** : c’est nouveau, et c’est le mécénat qui le permet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la vie de Léonard de la plus ancienne à la plus récente.",
+     "items": [
+      "Il entre dans l’atelier de Verrocchio, à Florence (vers 1467)",
+      "Il peint la Cène, à Milan (1495-1498)",
+      "Il commence la Joconde (vers 1503)",
+      "Il meurt au Clos Lucé, à Amboise (1519)"
+     ],
+     "aide": "Pars de l’atelier florentin, termine par la mort au Clos Lucé.",
+     "explication": "Atelier vers **1467**, Cène **1495-1498**, Joconde vers **1503**, mort en **1519**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c755629-f226-50ce-b578-06890ec798e2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Absolu ne veut pas dire arbitraire",
+   "competence": "lire-tableau",
+   "situation": "Clara prépare un exposé sur Louis XIV : on lui a dit que le roi pouvait tout faire. Elle ouvre son cours et construit un tableau pour vérifier.",
+   "documents": [
+    {
+     "id": "pouvoir",
+     "type": "tableau",
+     "titre": "Le pouvoir du roi et ses limites",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le pouvoir du roi",
+      "Ce qui le borne"
+     ],
+     "lignes": [
+      [
+       "Il tient son pouvoir de Dieu : le droit divin",
+       "Les lois fondamentales du royaume"
+      ],
+      [
+       "Il fait la loi",
+       "Les coutumes des provinces"
+      ],
+      [
+       "Il rend la justice en dernier ressort",
+       "Les privilèges des corps et des villes"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pouvoir",
+     "enonce": "Touche la case qui dit d’où le roi tient son pouvoir.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche le mot « Dieu ».",
+     "explication": "Le roi tient son pouvoir de **Dieu** : c’est le droit divin."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces éléments : ils sont un pouvoir du roi ou une limite à son pouvoir ?",
+     "categories": [
+      "Un pouvoir du roi",
+      "Une limite à son pouvoir"
+     ],
+     "items": [
+      [
+       "Lever l’impôt",
+       0
+      ],
+      [
+       "Décider de la guerre",
+       0
+      ],
+      [
+       "Les lois fondamentales",
+       1
+      ],
+      [
+       "Les coutumes des provinces",
+       1
+      ],
+      [
+       "Les privilèges des villes",
+       1
+      ]
+     ],
+     "aide": "Les limites sont dans la colonne de droite du tableau ; lever l’impôt et décider de la guerre sont des pouvoirs du roi.",
+     "explication": "**Lever l’impôt** et **décider de la guerre** sont des pouvoirs du roi ; **lois fondamentales**, **coutumes** et **privilèges** le bornent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « absolu », à propos de la monarchie française ?",
+     "options": [
+      "Le roi n’est pas arbitraire : des règles le limitent",
+      "Le roi peut tout décider sans être lié par aucune règle",
+      "Le roi partage le pouvoir avec les états généraux réunis",
+      "Le roi doit obéir à la volonté du peuple de son royaume"
+     ],
+     "reponse": 0,
+     "aide": "Relis la colonne de droite du tableau.",
+     "explication": "Absolu ne veut pas dire arbitraire : le roi **reste borné** par les lois fondamentales, les coutumes et les privilèges."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c755629-f226-50ce-b578-06890ec798e2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Henri IV à Versailles",
+   "competence": "se-reperer-temps",
+   "situation": "Inès rédige une chronologie pour un devoir : elle veut comprendre comment l’État s’est construit entre la fin des guerres de Religion et l’installation de la cour à Versailles. Elle dispose d’une frise et d’un tableau.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La construction de l’État, de 1598 à 1682",
+     "debut": 1590,
+     "fin": 1690,
+     "pas": 10,
+     "source": "Frise établie d’après le cours.",
+     "periodes": [
+      {
+       "id": "fronde",
+       "debut": 1648,
+       "fin": 1653,
+       "nom": "Fronde",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nan",
+       "date": 1598,
+       "nom": "Édit de Nantes"
+      },
+      {
+       "id": "reg",
+       "date": 1661,
+       "nom": "Règne personnel"
+      },
+      {
+       "id": "ver",
+       "date": 1682,
+       "nom": "Cour à Versailles"
+      }
+     ]
+    },
+    {
+     "id": "artisans",
+     "type": "tableau",
+     "titre": "Les artisans de l’État",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le personnage",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Henri IV",
+       "Il rétablit la paix civile et, avec Sully, les finances"
+      ],
+      [
+       "Richelieu",
+       "Il abat les places fortes protestantes, crée les intendants"
+      ],
+      [
+       "Mazarin",
+       "Il poursuit malgré la Fronde"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le début du règne personnel de Louis XIV.",
+     "reponse": [
+      "reg"
+     ],
+     "aide": "Il commence à la mort de Mazarin.",
+     "explication": "Le règne personnel s’ouvre en **1661**, à la mort de Mazarin : Louis XIV gouverne seul."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années passent entre le début du règne personnel et l’installation de la cour à Versailles ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Soustrais 1661 à 1682.",
+     "explication": "1682 − 1661 = **21 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à ce qu’il fait.",
+     "paires": [
+      [
+       "Henri IV et Sully",
+       "Rétablir la paix civile et les finances"
+      ],
+      [
+       "Richelieu",
+       "Créer les intendants"
+      ],
+      [
+       "Mazarin",
+       "Poursuivre malgré la Fronde"
+      ]
+     ],
+     "aide": "Relis le tableau, ligne par ligne.",
+     "explication": "**Henri IV** (avec Sully) rétablit paix et finances, **Richelieu** crée les intendants, **Mazarin** tient face à la Fronde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’apprend Louis XIV de la Fronde, révolte des parlements et des princes ?",
+     "options": [
+      "Ne jamais laisser Paris décider ni gouverner par un ministre principal",
+      "Qu’il faut réunir chaque année les états généraux du royaume",
+      "Qu’il faut confier tout le gouvernement à un seul ministre",
+      "Qu’il faut quitter définitivement le royaume de France"
+     ],
+     "reponse": 0,
+     "aide": "La période de la Fronde se situe juste avant le règne personnel.",
+     "explication": "La Fronde lui apprend à **ne jamais laisser Paris décider** et à **ne pas gouverner par un ministre principal**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1c755629-f226-50ce-b578-06890ec798e2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Gouverner, c’est aussi être vu",
+   "competence": "observer-schema",
+   "situation": "Léo, courtisan imaginaire, écrit son journal à Versailles. Il décrit la vie de la cour. Un schéma montre comment le roi gouverne le royaume.",
+   "documents": [
+    {
+     "id": "pouvoir",
+     "type": "schema",
+     "titre": "Le gouvernement du royaume sous Louis XIV",
+     "source": "Schéma simplifié d’après le cours.",
+     "largeur": 340,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 15,
+       "l": 120,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "jaune",
+       "motif": "plein",
+       "texte": "Le roi",
+       "id": "roi",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 80,
+       "y": 40,
+       "emoji": "👑",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 262,
+       "y": 40,
+       "emoji": "☀️",
+       "taille": 26
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        51
+       ],
+       "a": [
+        170,
+        85
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 85,
+       "y": 85,
+       "l": 170,
+       "h": 34,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Conseils et ministres",
+       "id": "conseils",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        119
+       ],
+       "a": [
+        170,
+        153
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 153,
+       "l": 120,
+       "h": 34,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Intendants",
+       "id": "intendants",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        187
+       ],
+       "a": [
+        170,
+        221
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 221,
+       "l": 120,
+       "h": 34,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Provinces",
+       "id": "provinces",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 150,
+       "l": 80,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Parlements",
+       "id": "parlements",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        170
+       ],
+       "a": [
+        110,
+        170
+       ],
+       "style": "pointilles",
+       "teinte": "ambre"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 150,
+       "l": 94,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "hachures",
+       "texte": "États généraux",
+       "id": "etats",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        240,
+        170
+       ],
+       "a": [
+        230,
+        170
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 207,
+       "texte": "tenus en lisière",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 287,
+       "y": 207,
+       "texte": "plus réunis",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 285,
+       "texte": "Le roi gouverne seul depuis 1661",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le journal de Léo, vers 1685",
+     "source": "Journal écrit pour l’exercice.",
+     "blocs": [
+      "Le roi a choisi le [[s|soleil]] pour emblème : on le voit sur les portraits, sur les tapisseries et jusque sur les costumes des fêtes.",
+      "À Versailles, chacun connaît sa place : l’étiquette règle le moindre geste, du lever au coucher du roi. Les nobles vivent sous ses yeux, loin de leurs provinces."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pouvoir",
+     "enonce": "Touche l’institution que Louis XIV ne réunit plus.",
+     "reponse": [
+      "etats"
+     ],
+     "aide": "Le schéma la place sur le côté, en pointillés, avec la mention « plus réunis ».",
+     "explication": "Louis XIV ne réunit plus les **états généraux** ; il s’appuie sur des conseils et des ministres."
+    },
+    {
+     "type": "zone",
+     "document": "pouvoir",
+     "enonce": "Touche ceux qui relaient le pouvoir du roi dans les provinces (institués par Richelieu).",
+     "reponse": [
+      "intendants"
+     ],
+     "aide": "Ils sont entre les conseils et les provinces.",
+     "explication": "Les **intendants**, créés par Richelieu, administrent les provinces au nom du roi."
+    },
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le mot qui nomme le symbole choisi par Louis XIV.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "C’est un astre, qu’on retrouve sur les tapisseries et les portraits.",
+     "explication": "Louis XIV choisit le **soleil** : une image du pouvoir qui circule dans toute l’Europe."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi sert la vie de cour à Versailles dans la politique du roi ?",
+     "options": [
+      "Mettre la noblesse sous les yeux du roi et la contrôler",
+      "Éloigner la noblesse de la personne du roi et des affaires",
+      "Faire élire les nobles par le peuple de chaque province",
+      "Réunir les états généraux plus facilement qu’avant"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que Léo dit de la place de chacun et de l’étiquette.",
+     "explication": "À Versailles, la noblesse est **mise sous les yeux du roi** : étiquette, pensions et faveurs la tiennent."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la construction de la monarchie absolue de la plus ancienne à la plus récente.",
+     "items": [
+      "Henri IV rétablit la paix civile (1598)",
+      "La Fronde (1648-1653)",
+      "Louis XIV gouverne seul (1661)",
+      "La cour s’installe à Versailles (1682)"
+     ],
+     "aide": "Commence par l’édit de Nantes.",
+     "explication": "**1598**, **1648-1653**, **1661**, **1682** : l’État se construit, puis se met en scène."
+    }
+   ]
+  },
+  {
+   "chapitre": "472ea26f-1a12-5139-a8ee-7d869d746f28",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les arsenaux et le canal de Colbert",
+   "competence": "lire-carte",
+   "situation": "Sous Louis XIV, Colbert fait construire des arsenaux pour la flotte et un canal pour relier deux mers. Aziz les repère sur une carte de France avant de répondre à un quiz.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes du royaume de Colbert",
+     "fond": "france",
+     "cadrage": [
+      -2.5,
+      42,
+      7,
+      47
+     ],
+     "source": "Carte d’après le cours. Le trait entre C et D figure le canal du Midi.",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -0.96,
+       "lat": 45.94,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lieu": "toulon",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lieu": "toulouse",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      },
+      {
+       "id": "d",
+       "lieu": "sete",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "corail"
+      }
+     ],
+     "traits": [
+      {
+       "id": "canal",
+       "points": [
+        "toulouse",
+        "sete"
+       ],
+       "style": "fleche",
+       "teinte": "bleu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche l’arsenal de Colbert qui construit la flotte sur la façade atlantique : Rochefort.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Rochefort est sur la côte de l’océan Atlantique, à l’ouest.",
+     "explication": "**Rochefort** (A) est sur la côte atlantique. Toulon (B) est sur la Méditerranée."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche l’arsenal de Colbert situé sur la Méditerranée : Toulon.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Toulon est un port du sud-est de la France.",
+     "explication": "**Toulon** (B) est l’arsenal méditerranéen, avec Rochefort sur l’Atlantique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelles mers le canal du Midi, achevé par Riquet en 1681, relie-t-il ?",
+     "options": [
+      "L’Atlantique et la Méditerranée",
+      "La mer du Nord et la Manche",
+      "La Manche et la mer Baltique",
+      "La Méditerranée et la mer Noire"
+     ],
+     "reponse": 0,
+     "aide": "Il relie Toulouse (reliée à l’océan par la Garonne) à la côte méditerranéenne.",
+     "explication": "Le canal du Midi relie **l’Atlantique à la Méditerranée** : les marchandises circulent sans contourner l’Espagne."
+    }
+   ]
+  },
+  {
+   "chapitre": "472ea26f-1a12-5139-a8ee-7d869d746f28",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Protéger les manufactures du royaume",
+   "competence": "lire-graphique",
+   "situation": "Un drapier imaginaire de Villeneuvette, Anselme, constate que sa production augmente depuis que Colbert a relevé les droits de douane. Il note deux chiffres, en milliers de pièces de tissu.",
+   "documents": [
+    {
+     "id": "tissu",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les pièces de drap de la région d’Anselme",
+     "source": "Chiffres imaginés pour l’exercice ; les tarifs douaniers sont relevés en 1664 et 1667.",
+     "categories": [
+      "1663",
+      "1670"
+     ],
+     "series": [
+      {
+       "nom": "Drap importé",
+       "valeurs": [
+        40,
+        25
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Drap des manufactures",
+       "valeurs": [
+        10,
+        30
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Pièces de drap",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tissu",
+     "enonce": "Touche l’année où les manufactures produisent plus de drap que la région n’en importe.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Compare, dans chaque année, la barre importée et la barre des manufactures.",
+     "explication": "En **1670**, les manufactures produisent 30 milliers de pièces pour 25 importées : la production nationale dépasse les importations."
+    },
+    {
+     "type": "nombre",
+     "document": "tissu",
+     "enonce": "De combien de milliers de pièces le drap importé baisse-t-il entre 1663 et 1670 ?",
+     "reponse": 15,
+     "unite": "milliers",
+     "aide": "Soustrais 25 à 40.",
+     "explication": "40 − 25 = **15 milliers** de pièces en moins importées."
+    },
+    {
+     "type": "nombre",
+     "document": "tissu",
+     "enonce": "Combien de fois la production des manufactures a-t-elle été multipliée entre 1663 et 1670 ?",
+     "reponse": 3,
+     "unite": "fois",
+     "aide": "Divise la valeur de 1670 par celle de 1663.",
+     "explication": "30 ÷ 10 = **3 fois** plus : la production nationale triple."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Colbert relève-t-il les tarifs douaniers en 1664 et 1667 ?",
+     "options": [
+      "Pour protéger la production française de la concurrence étrangère",
+      "Pour faire venir plus de drap étranger",
+      "Pour faire baisser le prix du drap français",
+      "Pour aider les marchands étrangers à vendre en France"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que deviennent les importations après les tarifs.",
+     "explication": "Il veut **protéger les manufactures** françaises : moins d’importations, plus de production, plus d’exportations."
+    }
+   ]
+  },
+  {
+   "chapitre": "472ea26f-1a12-5139-a8ee-7d869d746f28",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un drapier protestant face à la révocation",
+   "competence": "analyser-document",
+   "situation": "Élie, drapier protestant imaginaire de Villeneuvette, écrit en 1686 à son cousin de Londres. Il raconte comment la politique de Colbert a fait vivre son atelier, puis pourquoi il décide de partir.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’Élie à son cousin, 1686",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Cher cousin, grâce aux privilèges de la manufacture royale, mes ouvriers tissent un drap réputé jusqu’au Levant, et ses règlements très stricts garantissent sa qualité.",
+      "Mais le roi a [[r|révoqué]] l’édit de Nantes l’an dernier. Comme beaucoup d’artisans et de négociants protestants, je dois partir vers l’[[a|Angleterre]] avec mes ouvriers."
+     ]
+    },
+    {
+     "id": "limites",
+     "type": "tableau",
+     "titre": "Les limites de la politique de Colbert",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "La limite",
+      "Son effet"
+     ],
+     "lignes": [
+      [
+       "Les guerres de Louis XIV",
+       "Elles engloutissent les recettes"
+      ],
+      [
+       "La fiscalité : la taille",
+       "Elle pèse sur les paysans et épargne nobles et clergé"
+      ],
+      [
+       "La révocation de l’édit de Nantes (1685)",
+       "Des dizaines de milliers de protestants partent"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme la mesure prise par le roi qui oblige Élie à partir.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "C’est une décision de 1685 qui annule l’édit de Nantes.",
+     "explication": "C’est la **révocation** de l’édit de Nantes, en 1685, qui prive le royaume d’artisans et de négociants."
+    },
+    {
+     "type": "choix",
+     "enonce": "En quoi le départ d’Élie et de ses ouvriers affaiblit-il la politique de Colbert ?",
+     "options": [
+      "Des artisans qui faisaient tourner le commerce partent chez les voisins",
+      "Ils quittent les manufactures pour s’engager dans l’armée du roi",
+      "Les protestants cessent de payer la taille aux collecteurs du roi",
+      "Les manufactures royales ferment toutes leurs portes en 1686"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que perdent les manufactures quand leurs ouvriers s’en vont.",
+     "explication": "Des artisans et négociants qui **faisaient tourner le commerce partent** vers l’Angleterre, la Hollande et la Prusse : les concurrents du royaume en profitent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque limite à son effet.",
+     "paires": [
+      [
+       "Les guerres de Louis XIV",
+       "Elles engloutissent les recettes"
+      ],
+      [
+       "La taille",
+       "Elle pèse sur les paysans"
+      ],
+      [
+       "La révocation de l’édit de Nantes",
+       "Le départ de nombreux artisans"
+      ]
+     ],
+     "aide": "Reprends le tableau.",
+     "explication": "Les **guerres** ruinent les efforts financiers, la **taille** pèse sur les paysans, la **révocation** fait partir des artisans."
+    },
+    {
+     "type": "categories",
+     "enonce": "Qui paie la taille, et qui en est épargné ?",
+     "categories": [
+      "Elle pèse sur eux",
+      "Ils en sont épargnés"
+     ],
+     "items": [
+      [
+       "Les paysans",
+       0
+      ],
+      [
+       "Les nobles",
+       1
+      ],
+      [
+       "Le clergé",
+       1
+      ]
+     ],
+     "aide": "Reprends la ligne de la fiscalité dans le tableau.",
+     "explication": "La taille pèse sur les **paysans** ; **nobles** et **clergé** y échappent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années Colbert est-il contrôleur général des finances, de 1665 à 1683 ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais 1665 à 1683.",
+     "explication": "1683 − 1665 = **18 ans** à la tête des finances de Louis XIV."
+    }
+   ]
+  },
+  {
+   "chapitre": "aeb8044a-72b1-5320-afb9-c47a697bfd6a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Noblesse d’épée, noblesse de robe",
+   "competence": "lire-tableau",
+   "situation": "Jade prépare une fiche sur la société d’Ancien Régime. Elle compare les deux grandes composantes de la noblesse dans un petit tableau.",
+   "documents": [
+    {
+     "id": "noblesses",
+     "type": "tableau",
+     "titre": "Les deux noblesses",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "La noblesse",
+      "Son origine",
+      "Son prestige"
+     ],
+     "lignes": [
+      [
+       "D’épée",
+       "Ancienne",
+       "Le service militaire"
+      ],
+      [
+       "De robe",
+       "Plus récente",
+       "Les offices de justice et de finance, souvent achetés"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "noblesses",
+     "enonce": "Touche la case qui donne le prestige de la noblesse d’épée.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Repère la ligne « D’épée », puis la colonne « Son prestige ».",
+     "explication": "La noblesse **d’épée** tire son prestige du **service militaire**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle des deux noblesses est la plus ancienne ?",
+     "options": [
+      "La noblesse d’épée",
+      "La noblesse de robe",
+      "Elles ont la même origine",
+      "Aucune n’existe avant Louis XIV"
+     ],
+     "reponse": 0,
+     "aide": "Lis la colonne « Son origine ».",
+     "explication": "La noblesse **d’épée** est la plus ancienne ; la noblesse de robe est plus récente."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque noblesse à ce qui fonde son prestige.",
+     "paires": [
+      [
+       "La noblesse d’épée",
+       "Le service militaire"
+      ],
+      [
+       "La noblesse de robe",
+       "Les offices de justice et de finance"
+      ]
+     ],
+     "aide": "Pense : l’épée est une arme, la robe est le vêtement du juge.",
+     "explication": "L’**épée** renvoie à la guerre, la **robe** aux offices de justice et de finance."
+    }
+   ]
+  },
+  {
+   "chapitre": "aeb8044a-72b1-5320-afb9-c47a697bfd6a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un marquis ruiné à Versailles",
+   "competence": "analyser-texte",
+   "situation": "Le marquis de Valcourt, personnage imaginaire, écrit à un ami resté en province. Il raconte comment la vie de cour a changé sa situation.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre du marquis de Valcourt, vers 1690",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Mon cher ami, je vis à Versailles depuis trois ans. Le roi m’a accordé une [[p|pension]] et une charge à la cour : j’ai l’honneur d’approcher Sa Majesté, et je ne songerais pas à le quitter.",
+      "Mon domaine me coûte cher : je l’ai laissé à mon intendant, et mon gouvernement de province n’est plus qu’un titre. Le véritable pouvoir y est exercé par l’[[i|intendant]] du roi, qui n’est pas noble d’épée.",
+      "Vous qui êtes resté chez vous, vous êtes peut-être plus puissant, mais ici, moi, je ne coûte plus rien au roi : je suis sous ses yeux."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le mot qui nomme l’avantage financier que le roi accorde au marquis.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "C’est une somme versée par le roi pour attacher la noblesse à la cour.",
+     "explication": "Le roi accorde une **pension** : avec les charges et l’honneur d’approcher le roi, c’est ce qui attache les Grands à la cour."
+    },
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le mot qui désigne celui qui exerce le vrai pouvoir dans la province du marquis.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "Il n’est pas noble d’épée ; le roi l’envoie administrer la province.",
+     "explication": "L’**intendant**, choisi hors de la noblesse d’épée, administre la province au nom du roi."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces moyens du roi : ils attachent la noblesse à la cour, ou ils lui retirent du pouvoir ?",
+     "categories": [
+      "Ils attachent la noblesse",
+      "Ils lui retirent du pouvoir"
+     ],
+     "items": [
+      [
+       "Les pensions",
+       0
+      ],
+      [
+       "L’honneur d’approcher le roi",
+       0
+      ],
+      [
+       "Les intendants",
+       1
+      ],
+      [
+       "La perte du pouvoir réel des gouverneurs",
+       1
+      ]
+     ],
+     "aide": "Pensions et honneurs sont des faveurs ; intendants et gouverneurs touchent à l’administration des provinces.",
+     "explication": "**Pensions** et **honneurs** attachent ; les **intendants** et la perte du pouvoir des **gouverneurs** retirent du pouvoir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi, selon le cours, un noble ruiné à Versailles est-il moins dangereux qu’un noble puissant dans sa province ?",
+     "options": [
+      "Il dépend du roi pour vivre et n’a plus de pouvoir local",
+      "Il ne sait plus manier l’épée pour lever des troupes",
+      "Il n’a plus aucun privilège fiscal ni aucun titre de noblesse",
+      "Il est devenu magistrat dans un parlement du royaume"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que le marquis dit de sa pension et de son gouvernement.",
+     "explication": "À Versailles, le noble **dépend du roi** (pension, charge, faveurs) et n’a plus de pouvoir réel dans sa province."
+    }
+   ]
+  },
+  {
+   "chapitre": "aeb8044a-72b1-5320-afb9-c47a697bfd6a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Remontrance contre lit de justice, et les échecs de la réforme",
+   "competence": "observer-schema",
+   "situation": "Un édit du roi déplaît au parlement : une bataille de procédure commence. Plus tard, quatre ministres tentent de réformer l’impôt. Tu relis le schéma et le tableau pour comprendre pourquoi la monarchie bute sur les privilèges.",
+   "documents": [
+    {
+     "id": "conflit",
+     "type": "schema",
+     "titre": "Un édit du roi face au parlement",
+     "source": "Schéma simplifié d’après le cours.",
+     "largeur": 340,
+     "hauteur": 330,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 10,
+       "l": 190,
+       "h": 38,
+       "arrondi": 8,
+       "teinte": "jaune",
+       "motif": "plein",
+       "texte": "Le roi publie un édit",
+       "id": "edit",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        115,
+        48
+       ],
+       "a": [
+        115,
+        82
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 82,
+       "l": 190,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Le parlement l’examine",
+       "id": "parlement",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        115,
+        122
+       ],
+       "a": [
+        115,
+        156
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 156,
+       "l": 190,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "Droit de remontrance",
+       "id": "remontrance",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 180,
+       "texte": "critique, retarde",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        115,
+        196
+       ],
+       "a": [
+        115,
+        230
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 230,
+       "l": 190,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Lit de justice",
+       "id": "lit",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 254,
+       "texte": "le roi impose",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        115,
+        270
+       ],
+       "a": [
+        115,
+        292
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 292,
+       "l": 190,
+       "h": 32,
+       "arrondi": 8,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Édit enregistré",
+       "id": "enreg",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "ministres",
+     "type": "tableau",
+     "titre": "Les tentatives de réforme fiscale",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le réformateur",
+      "Le sort de sa réforme"
+     ],
+     "lignes": [
+      [
+       "Machault d’Arnouville",
+       "Échec"
+      ],
+      [
+       "Turgot",
+       "Échec"
+      ],
+      [
+       "Necker",
+       "Échec"
+      ],
+      [
+       "Calonne",
+       "Échec"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "conflit",
+     "enonce": "Touche l’arme dont le parlement dispose pour critiquer et retarder un édit.",
+     "reponse": [
+      "remontrance"
+     ],
+     "aide": "C’est un droit de critiquer l’édit avant de l’enregistrer.",
+     "explication": "C’est le **droit de remontrance**, qui permet au parlement de retarder et de critiquer l’édit."
+    },
+    {
+     "type": "zone",
+     "document": "conflit",
+     "enonce": "Touche la riposte du roi pour imposer l’enregistrement.",
+     "reponse": [
+      "lit"
+     ],
+     "aide": "Le roi vient en personne au parlement, assis sur un siège particulier.",
+     "explication": "Le roi impose l’enregistrement par un **lit de justice**."
+    },
+    {
+     "type": "nombre",
+     "document": "ministres",
+     "enonce": "Combien de ministres du tableau ont échoué à réformer l’impôt ?",
+     "reponse": 4,
+     "unite": "ministres",
+     "aide": "Compte les lignes du tableau.",
+     "explication": "**Quatre** : Machault d’Arnouville, Turgot, Necker et Calonne ont échoué."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les réformes fiscales échouent-elles les unes après les autres ?",
+     "options": [
+      "La monarchie ne peut pas toucher aux privilèges fiscaux sans crise",
+      "Les ministres refusent systématiquement de lever l’impôt du roi",
+      "Le roi interdit tout changement par principe depuis Louis XIV",
+      "Les parlements ont été supprimés bien avant l’année 1789"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ceux que la réforme voudrait faire contribuer davantage.",
+     "explication": "La monarchie **ne peut pas toucher aux privilèges fiscaux** sans provoquer une crise : les privilégiés résistent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion du cours.",
+     "texte": "Faute de pouvoir réformer l’impôt, Louis XVI convoque les ___ en ___.",
+     "reponses": [
+      [
+       "états généraux"
+      ],
+      [
+       "1789"
+      ]
+     ],
+     "banque": [
+      "états généraux",
+      "parlements",
+      "1789",
+      "1715",
+      "1648"
+     ],
+     "aide": "C’est la date où la monarchie absolue s’effondre.",
+     "explication": "Louis XVI convoque les **états généraux** en **1789** : l’absolutisme y meurt."
+    }
+   ]
+  },
+  {
+   "chapitre": "57cb7130-74e3-5fb5-8ea6-f6c33b3a884d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roi jugé, puis la monarchie restaurée",
+   "competence": "se-reperer-temps",
+   "situation": "Nora prépare une frise pour son cours : elle veut montrer comment l’Angleterre a vécu deux révolutions au XVIIe siècle. Elle a placé trois événements.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’Angleterre au XVIIe siècle",
+     "debut": 1640,
+     "fin": 1700,
+     "pas": 10,
+     "source": "Frise établie d’après le cours.",
+     "evenements": [
+      {
+       "id": "exe",
+       "date": 1649,
+       "nom": "Charles Ier exécuté"
+      },
+      {
+       "id": "res",
+       "date": 1660,
+       "nom": "Monarchie restaurée"
+      },
+      {
+       "id": "glo",
+       "date": 1688,
+       "nom": "Glorieuse Révolution"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui voit la monarchie rétablie en Angleterre.",
+     "reponse": [
+      "res"
+     ],
+     "aide": "Il vient après l’exécution du roi et avant la Glorieuse Révolution.",
+     "explication": "En **1660**, la monarchie est restaurée, après la république de Cromwell."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent l’exécution de Charles Ier de la restauration de la monarchie ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Soustrais 1649 à 1660.",
+     "explication": "1660 − 1649 = **11 ans** de république puis de dictature de Cromwell."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui le Parlement appelle-t-il au trône lors de la Glorieuse Révolution de 1688 ?",
+     "options": [
+      "Guillaume d’Orange",
+      "Oliver Cromwell",
+      "Charles Ier",
+      "Jacques II"
+     ],
+     "reponse": 0,
+     "aide": "Le Parlement écarte Jacques II, catholique et autoritaire.",
+     "explication": "Le Parlement écarte Jacques II et appelle **Guillaume d’Orange**."
+    }
+   ]
+  },
+  {
+   "chapitre": "57cb7130-74e3-5fb5-8ea6-f6c33b3a884d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que le Bill of Rights interdit au roi",
+   "competence": "analyser-texte",
+   "situation": "Après la Glorieuse Révolution, le Parlement impose au nouveau roi un texte qui fixe les règles. Un élève de Londres, Ben, lit une version simplifiée en classe.",
+   "documents": [
+    {
+     "id": "bill",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les règles de 1689, résumées",
+     "source": "Texte adapté du Bill of Rights (1689), écrit pour l’exercice : ce n’est pas le texte original.",
+     "blocs": [
+      "Le roi ne peut pas lever d’[[i|impôt]] sans l’accord du Parlement.",
+      "Le roi ne peut pas entretenir d’[[a|armée]] permanente sans l’accord du Parlement.",
+      "Les élections au Parlement doivent être libres.",
+      "Les parlementaires sont libres de parler au Parlement.",
+      "Les sujets ont le droit d’adresser des pétitions au roi."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bill",
+     "enonce": "Touche le mot qui désigne ce que le roi ne peut plus lever sans le Parlement.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "C’est le consentement dont dépend l’argent de l’État.",
+     "explication": "Le roi ne peut plus lever d’**impôt** sans le Parlement : le consentement à l’impôt est son arme décisive."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces règles : elles interdisent quelque chose au roi, ou elles garantissent une liberté ?",
+     "categories": [
+      "Elles interdisent au roi sans le Parlement",
+      "Elles garantissent une liberté"
+     ],
+     "items": [
+      [
+       "Lever un impôt",
+       0
+      ],
+      [
+       "Entretenir une armée permanente",
+       0
+      ],
+      [
+       "Élections libres",
+       1
+      ],
+      [
+       "Parole libre des parlementaires",
+       1
+      ],
+      [
+       "Droit de pétition",
+       1
+      ]
+     ],
+     "aide": "Les deux premières règles contiennent « sans l’accord du Parlement ».",
+     "explication": "**Impôt** et **armée permanente** exigent l’accord du Parlement ; **élections**, **parole** et **pétition** sont des libertés garanties."
+    },
+    {
+     "type": "nombre",
+     "document": "bill",
+     "enonce": "Combien de règles du texte sont des libertés garanties (et non des interdits au roi) ?",
+     "reponse": 3,
+     "unite": "règles",
+     "aide": "Les interdits concernent l’impôt et l’armée ; compte les autres paragraphes.",
+     "explication": "**Trois** : élections libres, parole libre des parlementaires, droit de pétition."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle arme décisive permet au Parlement de limiter le roi ?",
+     "options": [
+      "Le consentement à l’impôt",
+      "Le droit de lever sa propre armée",
+      "Le choix du successeur du roi",
+      "Le contrôle de l’Église catholique"
+     ],
+     "reponse": 0,
+     "aide": "Reprends le premier paragraphe du texte.",
+     "explication": "Le **consentement à l’impôt** : sans l’accord du Parlement, le roi n’a pas d’argent."
+    }
+   ]
+  },
+  {
+   "chapitre": "57cb7130-74e3-5fb5-8ea6-f6c33b3a884d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Roi, ministres et Communes : comment fonctionne le régime ?",
+   "competence": "observer-schema",
+   "situation": "Un élève français compare le gouvernement de Louis XIV et celui de la Grande-Bretagne du XVIIIe siècle. Il dispose d’un schéma du régime britannique et d’un tableau comparatif.",
+   "documents": [
+    {
+     "id": "regime",
+     "type": "schema",
+     "titre": "Le régime britannique au XVIIIe siècle",
+     "source": "Schéma simplifié d’après le cours.",
+     "largeur": 340,
+     "hauteur": 300,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 140,
+       "h": 36,
+       "arrondi": 8,
+       "teinte": "jaune",
+       "motif": "plein",
+       "texte": "Le roi",
+       "id": "roi",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        46
+       ],
+       "a": [
+        80,
+        82
+       ],
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 92,
+       "y": 68,
+       "texte": "choisit les ministres",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 82,
+       "l": 140,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Cabinet",
+       "id": "cabinet",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 82,
+       "l": 140,
+       "h": 40,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Premier ministre",
+       "id": "pm",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        102
+       ],
+       "a": [
+        190,
+        102
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        176
+       ],
+       "a": [
+        80,
+        122
+       ],
+       "fleche": "fin",
+       "teinte": "ambre"
+      },
+      {
+       "forme": "texte",
+       "x": 92,
+       "y": 154,
+       "texte": "confiance nécessaire",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 176,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Chambre des Communes",
+       "id": "communes",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 176,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Chambre des Lords",
+       "id": "lords",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        198
+       ],
+       "a": [
+        190,
+        198
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 238,
+       "texte": "Parlement",
+       "taille": "petit",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        270
+       ],
+       "a": [
+        80,
+        220
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 270,
+       "l": 140,
+       "h": 26,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "hachures",
+       "texte": "Électeurs",
+       "id": "electeurs",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 286,
+       "texte": "suffrage restreint et inégal",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "compare",
+     "type": "tableau",
+     "titre": "France de Louis XIV et Angleterre après 1689",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "La question",
+      "France de Louis XIV",
+      "Angleterre après 1689"
+     ],
+     "lignes": [
+      [
+       "Qui consent l’impôt ?",
+       "Le roi décide",
+       "Le Parlement doit l’accepter"
+      ],
+      [
+       "Qui réunit-on ?",
+       "Plus d’états généraux",
+       "Un Parlement à deux chambres"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regime",
+     "enonce": "Touche l’institution dont les ministres doivent avoir la confiance.",
+     "reponse": [
+      "communes"
+     ],
+     "aide": "C’est la chambre élue, et non celle des Lords.",
+     "explication": "Les ministres sont choisis par le roi, mais ils doivent avoir la confiance des **Communes**."
+    },
+    {
+     "type": "zone",
+     "document": "regime",
+     "enonce": "Touche la fonction qui apparaît avec Walpole.",
+     "reponse": [
+      "pm"
+     ],
+     "aide": "Il dirige le cabinet.",
+     "explication": "Le cabinet et le **Premier ministre** apparaissent avec Walpole."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la première révolution anglaise de la plus ancienne à la plus récente.",
+     "items": [
+      "Charles Ier gouverne onze ans sans Parlement",
+      "La guerre civile : Cromwell l’emporte",
+      "Charles Ier est exécuté (1649)",
+      "La monarchie est restaurée (1660)"
+     ],
+     "aide": "Pars du roi sans Parlement, finis par la restauration.",
+     "explication": "Onze ans **sans Parlement**, **guerre civile**, **exécution (1649)**, **restauration (1660)**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le régime britannique du XVIIIe siècle est-il démocratique ?",
+     "options": [
+      "Non : le suffrage est très restreint et inégal",
+      "Oui : tous les hommes adultes votent",
+      "Oui : les Lords sont élus par le peuple",
+      "Non : le Parlement n’existe plus"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le trait du bas du schéma.",
+     "explication": "Le pouvoir est limité par la loi, mais le **suffrage est très restreint et inégal** : ce n’est pas une démocratie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tableau sur l’impôt en Angleterre après 1689 ?",
+     "options": [
+      "Le roi ne peut pas le lever sans l’accord du Parlement",
+      "Le roi le lève sans limite, exactement comme en France",
+      "Seuls les Lords votent l’impôt, sans les Communes",
+      "Le Parlement a supprimé tout impôt sur les sujets"
+     ],
+     "reponse": 0,
+     "aide": "Compare la ligne « Qui consent l’impôt ? » entre les deux colonnes.",
+     "explication": "En Angleterre, **le Parlement doit accepter l’impôt**, alors qu’en France le roi décide."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ac7a18a-e010-5345-af42-10d1f0472821",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois penseurs, trois livres",
+   "competence": "lire-tableau",
+   "situation": "Sacha prépare une fiche de révision sur les Lumières : il a noté trois penseurs, leur ouvrage, sa date et son idée principale.",
+   "documents": [
+    {
+     "id": "penseurs",
+     "type": "tableau",
+     "titre": "Trois penseurs inspirés par l’Angleterre",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le penseur",
+      "L’ouvrage",
+      "La date",
+      "L’idée"
+     ],
+     "lignes": [
+      [
+       "Voltaire",
+       "Lettres philosophiques",
+       1734,
+       "Tolérance religieuse"
+      ],
+      [
+       "Montesquieu",
+       "De l’esprit des lois",
+       1748,
+       "Séparation des pouvoirs"
+      ],
+      [
+       "Locke",
+       "Traité du gouvernement civil",
+       1690,
+       "Droits naturels"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "penseurs",
+     "enonce": "Touche la date de parution de De l’esprit des lois.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Repère la ligne de Montesquieu, puis la colonne « La date ».",
+     "explication": "*De l’esprit des lois* paraît en **1748**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces ouvrages du plus ancien au plus récent.",
+     "items": [
+      "Traité du gouvernement civil (Locke)",
+      "Lettres philosophiques (Voltaire)",
+      "De l’esprit des lois (Montesquieu)"
+     ],
+     "aide": "Lis la colonne des dates.",
+     "explication": "Locke **1690**, Voltaire **1734**, Montesquieu **1748**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel penseur du tableau défend surtout la séparation des pouvoirs ?",
+     "options": [
+      "Montesquieu",
+      "Voltaire",
+      "John Locke",
+      "Diderot"
+     ],
+     "reponse": 0,
+     "aide": "Lis la dernière colonne.",
+     "explication": "**Montesquieu** tire de l’exemple anglais l’idée de séparation des pouvoirs."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ac7a18a-e010-5345-af42-10d1f0472821",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Faire la loi, l’appliquer, juger",
+   "competence": "analyser-document",
+   "situation": "Dans le cours d’histoire, Elsa étudie Montesquieu. Elle lit une phrase célèbre, puis un tableau qui distingue les trois pouvoirs.",
+   "documents": [
+    {
+     "id": "citation",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Montesquieu, De l’esprit des lois (1748), livre XI, chapitre 4",
+     "source": "Montesquieu, *De l’esprit des lois*, XI, 4.",
+     "blocs": [
+      "Pour qu’on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le [[p|pouvoir]] arrête le [[p|pouvoir]]."
+     ]
+    },
+    {
+     "id": "pouvoirs",
+     "type": "tableau",
+     "titre": "Les trois pouvoirs",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Le pouvoir",
+      "Sa fonction"
+     ],
+     "lignes": [
+      [
+       "Législatif",
+       "Faire la loi"
+      ],
+      [
+       "Exécutif",
+       "L’appliquer"
+      ],
+      [
+       "Judiciaire",
+       "La dire dans les litiges"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "citation",
+     "enonce": "Touche les mots qui désignent ce qui doit arrêter ce qui l’égale.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Un même mot apparaît deux fois dans la phrase.",
+     "explication": "C’est le **pouvoir** qui arrête le **pouvoir** : pour qu’ils s’arrêtent, ils doivent être distincts."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pouvoir à sa fonction.",
+     "paires": [
+      [
+       "Législatif",
+       "Faire la loi"
+      ],
+      [
+       "Exécutif",
+       "L’appliquer"
+      ],
+      [
+       "Judiciaire",
+       "La dire dans les litiges"
+      ]
+     ],
+     "aide": "Relis le tableau, ligne par ligne.",
+     "explication": "Le **législatif** fait la loi, l’**exécutif** l’applique, le **judiciaire** la dit dans les litiges."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un maire imaginaire écrit la règle, l’applique lui-même, puis juge ceux qui la violent. Quel principe de Montesquieu est violé ?",
+     "options": [
+      "La séparation des pouvoirs",
+      "Le droit de remontrance",
+      "Le consentement à l’impôt",
+      "La liberté du commerce"
+     ],
+     "reponse": 0,
+     "aide": "Compte les pouvoirs réunis dans la même personne.",
+     "explication": "Le maire réunit **législatif, exécutif et judiciaire** : aucun pouvoir n’arrête l’autre. C’est le contraire de la **séparation des pouvoirs**."
+    },
+    {
+     "type": "nombre",
+     "document": "pouvoirs",
+     "enonce": "Combien de pouvoirs distincts Montesquieu sépare-t-il ?",
+     "reponse": 3,
+     "unite": "pouvoirs",
+     "aide": "Compte les lignes du tableau.",
+     "explication": "**Trois** pouvoirs : législatif, exécutif et judiciaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ac7a18a-e010-5345-af42-10d1f0472821",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi le livre de Voltaire est-il brûlé ?",
+   "competence": "argumenter",
+   "situation": "En 1734, Voltaire publie les Lettres philosophiques après son séjour en Angleterre. Un lecteur parisien imaginaire, Armand, écrit à un ami ce qu’il en pense. Un tableau résume ce que Voltaire admire.",
+   "documents": [
+    {
+     "id": "lecteur",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’Armand à un ami, 1734",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Mon cher Paul, as-tu lu le nouveau livre sur l’Angleterre ? L’auteur y admire la [[t|tolérance]] religieuse et la liberté du commerce, et il montre que là-bas, le roi ne peut pas « faire de mal ».",
+      "À Paris, on murmure qu’il ne parle pas de l’Angleterre, mais de nous. Les censeurs, eux, n’ont pas ri : on dit que le livre sera brûlé."
+     ]
+    },
+    {
+     "id": "admire",
+     "type": "tableau",
+     "titre": "Ce que Voltaire admire, ce qu’il vise en creux",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Ce qu’il admire",
+      "Ce qu’il vise en creux"
+     ],
+     "lignes": [
+      [
+       "La tolérance religieuse",
+       "L’intolérance française"
+      ],
+      [
+       "La liberté de commerce",
+       "Les entraves du royaume"
+      ],
+      [
+       "La considération pour savants et négociants",
+       "Le mépris nobiliaire"
+      ],
+      [
+       "Un roi qui ne peut « faire de mal »",
+       "L’absolutisme"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lecteur",
+     "enonce": "Touche le mot qui nomme ce que Voltaire admire en matière de religion.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "C’est le contraire de l’intolérance.",
+     "explication": "Voltaire admire la **tolérance** religieuse des Anglais."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque chose admirée en Angleterre à ce qu’elle vise en creux en France.",
+     "paires": [
+      [
+       "La tolérance religieuse",
+       "L’intolérance française"
+      ],
+      [
+       "La liberté de commerce",
+       "Les entraves du royaume"
+      ],
+      [
+       "Un roi qui ne peut « faire de mal »",
+       "L’absolutisme"
+      ]
+     ],
+     "aide": "Chaque éloge de l’Angleterre est une critique de la France.",
+     "explication": "Chaque éloge est une **critique indirecte** de la France : tolérance contre intolérance, liberté de commerce contre entraves, roi limité contre absolutisme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Voltaire est exilé en Angleterre de 1726 à 1728 et publie son livre en 1734. Combien d’années se passent entre son départ d’Angleterre et la publication ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais 1728 à 1734.",
+     "explication": "1734 − 1728 = **6 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les Lettres philosophiques sont-elles condamnées et brûlées en France ?",
+     "options": [
+      "La comparaison avec l’Angleterre est vécue comme une attaque",
+      "Le livre est écrit en anglais, langue que personne ne lit",
+      "Le livre défend l’absolutisme du roi de France contre Londres",
+      "Le livre est jugé beaucoup trop cher pour les lecteurs"
+     ],
+     "reponse": 0,
+     "aide": "Relis le tableau : qui visent les critiques « en creux » ?",
+     "explication": "Voltaire loue l’Angleterre pour critiquer la France : **la comparaison est vécue comme une attaque**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur Locke.",
+     "texte": "Pour Locke, l’État ne crée pas les ___ naturels, il les ___.",
+     "reponses": [
+      [
+       "droits"
+      ],
+      [
+       "protège"
+      ]
+     ],
+     "banque": [
+      "droits",
+      "protège",
+      "impôts",
+      "supprime",
+      "lois"
+     ],
+     "aide": "Le gouvernement naît d’un contrat et peut être renversé s’il viole ces droits.",
+     "explication": "Les hommes ont des **droits** naturels que l’État **protège** : s’il les viole, il peut être renversé."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c3588f5-9360-5fc9-9624-7d473e4e61aa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la taxe sur le timbre à l’indépendance",
+   "competence": "se-reperer-temps",
+   "situation": "Dylan, élève de seconde, prépare une frise sur la naissance des États-Unis : il y a placé quatre événements entre 1765 et 1781.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La naissance des États-Unis",
+     "debut": 1760,
+     "fin": 1790,
+     "pas": 5,
+     "source": "Frise établie d’après le cours.",
+     "evenements": [
+      {
+       "id": "sta",
+       "date": 1765,
+       "nom": "Stamp Act"
+      },
+      {
+       "id": "tea",
+       "date": 1773,
+       "nom": "Boston Tea Party"
+      },
+      {
+       "id": "ind",
+       "date": 1776,
+       "nom": "Indépendance"
+      },
+      {
+       "id": "yor",
+       "date": 1781,
+       "nom": "Yorktown"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où les colons jettent du thé à la mer pour protester contre une taxe.",
+     "reponse": [
+      "tea"
+     ],
+     "aide": "Il se situe entre le Stamp Act et la Déclaration d’indépendance.",
+     "explication": "La **Boston Tea Party**, en 1773, symbolise la révolte contre la taxe sur le thé."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent la Boston Tea Party de la Déclaration d’indépendance ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Soustrais 1773 à 1776.",
+     "explication": "1776 − 1773 = **3 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel slogan résume la revendication des colons américains ?",
+     "options": [
+      "Pas de taxation sans représentation",
+      "Pas de roi sans parlement des colonies",
+      "Pas de thé sans taxe pour les marchands",
+      "Pas d’impôt sans accord de la noblesse"
+     ],
+     "reponse": 0,
+     "aide": "Les colons n’ont aucun député à Westminster.",
+     "explication": "**Pas de taxation sans représentation** : les colons n’ont aucun député au Parlement de Londres."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c3588f5-9360-5fc9-9624-7d473e4e61aa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La lettre d’un colon de Boston",
+   "competence": "analyser-texte",
+   "situation": "Samuel, un marchand imaginaire de Boston, écrit en 1765 à un cousin resté à Londres. Un tableau rappelle les taxes imposées par Londres aux colonies.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Samuel à son cousin, 1765",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Cher cousin, nous sommes sujets du roi comme vous, et nous nous sentons [[a|anglais]] : nos assemblées sont élues et notre presse est libre.",
+      "Mais Londres veut désormais nous faire payer une [[t|taxe]] sur le timbre. Nous n’avons aucun député à Westminster pour en discuter : nous ne demandons pas l’indépendance, seulement d’être traités comme des sujets britanniques."
+     ]
+    },
+    {
+     "id": "taxes",
+     "type": "tableau",
+     "titre": "Les taxes britanniques",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "La taxe",
+      "Sa date"
+     ],
+     "lignes": [
+      [
+       "Sugar Act",
+       1764
+      ],
+      [
+       "Stamp Act",
+       1765
+      ],
+      [
+       "Townshend Acts",
+       1767
+      ],
+      [
+       "Taxe sur le thé",
+       1773
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme ce que Londres impose et que Samuel conteste.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "La lettre dit qu’elle porte sur le timbre.",
+     "explication": "Samuel conteste la **taxe** sur le timbre, le Stamp Act de 1765."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que demandent les colons en 1765 ?",
+     "options": [
+      "Être traités comme des sujets britanniques",
+      "L’indépendance immédiate de leurs treize colonies",
+      "Le retour du roi Jacques II sur le trône anglais",
+      "La fin de toutes les assemblées élues locales"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la lettre.",
+     "explication": "On ne demande pas l’indépendance en 1765 : on demande à être **traité comme un sujet britannique**. Le refus fabrique la nation américaine."
+    },
+    {
+     "type": "nombre",
+     "document": "taxes",
+     "enonce": "Combien d’années séparent la première de ces taxes de la taxe sur le thé ?",
+     "reponse": 9,
+     "unite": "ans",
+     "aide": "Soustrais 1764 à 1773.",
+     "explication": "1773 − 1764 = **9 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces taxes de la plus ancienne à la plus récente.",
+     "items": [
+      "Sugar Act",
+      "Stamp Act",
+      "Townshend Acts",
+      "Taxe sur le thé"
+     ],
+     "aide": "Lis la colonne des dates.",
+     "explication": "Sugar Act **1764**, Stamp Act **1765**, Townshend Acts **1767**, thé **1773**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c3588f5-9360-5fc9-9624-7d473e4e61aa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les treize colonies, de Boston à Yorktown",
+   "competence": "se-reperer-espace",
+   "situation": "Lola prépare un exposé sur la guerre d’Indépendance. Elle dispose d’une carte de l’Atlantique nord et d’un extrait de la Déclaration d’indépendance.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Londres et deux lieux de la guerre",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      33,
+      8,
+      58
+     ],
+     "source": "Carte d’après le cours.",
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -71.06,
+       "lat": 42.36,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "b",
+       "lon": -76.51,
+       "lat": 37.24,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "c",
+       "lieu": "londres",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "declaration",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La Déclaration d’indépendance, 4 juillet 1776",
+     "source": "D’après la Déclaration d’indépendance des États-Unis (1776) : texte adapté, écrit pour l’exercice.",
+     "blocs": [
+      "Nous, représentants des colonies, déclarons que tous les [[h|hommes]] sont créés égaux et dotés de [[d|droits]] que personne ne peut leur retirer.",
+      "Les gouvernements sont établis pour garantir ces droits ; si l’un d’eux les viole, le peuple peut en établir un autre."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville de la Boston Tea Party, en 1773.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le nom de la ville est dans celui de l’événement.",
+     "explication": "La Boston Tea Party a lieu à **Boston** (A), dans le nord-est des treize colonies."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu de la victoire de 1781 qui décide de la guerre.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle a lieu en Virginie, au sud de Boston, avec l’appui de la France.",
+     "explication": "**Yorktown** (B), en 1781 : la victoire américaine, avec l’appui de La Fayette, Rochambeau et de la flotte de Grasse."
+    },
+    {
+     "type": "zone",
+     "document": "declaration",
+     "enonce": "Touche le mot qui nomme ce que les gouvernements doivent garantir.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Ils sont dits « inaliénables » dans le cours.",
+     "explication": "Les gouvernements doivent garantir les **droits** que chacun tient de sa naissance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel paradoxe la Déclaration et la Constitution de 1787 laissent-elles subsister ?",
+     "options": [
+      "Elles proclament l’égalité mais n’abolissent pas l’esclavage",
+      "Elles abolissent l’esclavage mais interdisent tout suffrage",
+      "Elles rejettent les Lumières mais proclament l’égalité",
+      "Elles créent une monarchie héréditaire mais sans aucun roi"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’économie des plantations du Sud.",
+     "explication": "Les textes proclament l’égalité, mais **l’esclavage n’est pas aboli** : le Sud repose sur la plantation esclavagiste."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Le Stamp Act (1765)",
+      "La Déclaration d’indépendance (1776)",
+      "La victoire de Yorktown (1781)",
+      "La Constitution fédérale (1787)"
+     ],
+     "aide": "Commence par la taxe et finis par la Constitution.",
+     "explication": "**1765**, **1776**, **1781**, **1787** : de la taxe à la Constitution."
+    }
+   ]
+  }
+ ]
+}

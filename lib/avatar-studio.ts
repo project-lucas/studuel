@@ -66,16 +66,13 @@ export type ItemState = 'equipped' | 'owned' | 'buyable' | 'locked'
 // traits par lesquels un élève se reconnaît. Le catalogue payant reste ce qui
 // se collectionne (peau rare, coiffures, couleurs, hauts, objets, bannières).
 export const STUDIO_TABS = [
-  // Le PORTRAIT d'abord : le blason peint remplace tout le reste quand il est
-  // choisi (lib/portraits.ts). Les onglets suivants règlent l'avatar composé,
-  // qui reste visible si l'élève choisit « Avatar dessiné ».
+  // Le PORTRAIT d'abord, puis ce qui se pose AUTOUR de lui : l'objet porté
+  // (en bas à droite du blason) et la bannière. Les réglages de l'avatar
+  // composé (visage, coiffure, détails, tenue, couleur du fond) sont partis
+  // avec lui le 03/10/2026 : le blason ne les montre pas.
   { id: 'portrait', label: 'Portrait', categories: [], freeFields: ['portrait'] },
-  { id: 'visage', label: 'Visage', categories: ['body_skin'], freeFields: ['face'] },
-  { id: 'coiffure', label: 'Coiffure', categories: ['hair_style'], freeFields: [] },
-  { id: 'details', label: 'Détails', categories: [], freeFields: ['accessories', 'facialHair'] },
-  { id: 'tenue', label: 'Tenue', categories: ['outfit'], freeFields: [] },
   { id: 'objet', label: 'Objet', categories: ['equipment'], freeFields: [] },
-  { id: 'fond', label: 'Fond', categories: ['banner'], freeFields: ['backgroundColor'] },
+  { id: 'fond', label: 'Bannière', categories: ['banner'], freeFields: [] },
 ] as const satisfies readonly {
   id: string
   label: string
@@ -109,7 +106,6 @@ export const FREE_FIELD_LABELS: Record<FreeAvatarFieldKey, string> = {
 
 /** Ce que dit le bouton « aucun » de chaque champ libre qui l'accepte. */
 export const FREE_FIELD_NONE_LABELS: Partial<Record<FreeAvatarFieldKey, string>> = {
-  portrait: 'Avatar dessiné',
   accessories: 'Sans',
   facialHair: 'Imberbe',
   backgroundColor: 'Sans fond',

@@ -1,0 +1,2107 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "5b98293b-e3e3-52dd-8cf0-6eafe97f30c9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un dialogue resté dans un tiroir",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Neveu de Rameau*. Situe d’abord le texte dans la vie de Diderot, puis identifie ses deux voix.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Diderot et son dialogue",
+     "debut": 1700,
+     "fin": 1810,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "ecr",
+       "debut": 1761,
+       "fin": 1774,
+       "nom": "Écriture",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1713,
+       "nom": "Naissance"
+      },
+      {
+       "id": "mort",
+       "date": 1784,
+       "nom": "Mort"
+      },
+      {
+       "id": "goethe",
+       "date": 1805,
+       "nom": "Goethe"
+      }
+     ]
+    },
+    {
+     "id": "voix",
+     "type": "tableau",
+     "titre": "Les deux interlocuteurs",
+     "colonnes": [
+      "Interlocuteur",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "MOI",
+       "Un philosophe, proche de Diderot"
+      ],
+      [
+       "LUI",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "goethe"
+     ],
+     "enonce": "Touche le repère qui date la première publication du texte, en allemand.",
+     "aide": "Le texte est traduit en allemand par un très grand écrivain, longtemps après la mort de Diderot.",
+     "explication": "C’est **Goethe** qui traduit le texte en allemand, en **1805** : Diderot ne l’a jamais publié de son vivant."
+    },
+    {
+     "type": "nombre",
+     "reponse": 71,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent, d’après la frise, la naissance de Diderot de sa mort (en soustrayant les deux dates) ?",
+     "aide": "Repère les deux dates sur la frise et soustrais-les.",
+     "explication": "1784 − 1713 = **71 ans** d’écart entre les deux dates."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est « LUI », la case « ? » du tableau ?",
+     "options": [
+      "Jean-François Rameau, neveu réel du compositeur",
+      "Le compositeur Rameau lui-même, déjà âgé",
+      "Un riche financier qui protège les artistes",
+      "Un second philosophe, ami de Diderot"
+     ],
+     "reponse": 0,
+     "aide": "LUI est un musicien raté, parent d’un compositeur célèbre.",
+     "explication": "**LUI** est Jean-François Rameau, le **neveu** du compositeur : un parasite génial."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité de l’œuvre.",
+     "texte": "Le texte est un ___ entre MOI et LUI, qui se rencontrent au café de la ___.",
+     "reponses": [
+      [
+       "dialogue"
+      ],
+      [
+       "Régence",
+       "Regence"
+      ]
+     ],
+     "banque": [
+      "dialogue",
+      "monologue",
+      "Régence",
+      "Rotonde"
+     ],
+     "aide": "Deux voix se répondent dans un café parisien.",
+     "explication": "C’est un **dialogue**, né d’une rencontre au café de la **Régence**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b98293b-e3e3-52dd-8cf0-6eafe97f30c9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chassé de chez Bertin",
+   "competence": "analyser-texte",
+   "situation": "Lis ce résumé de la rencontre, écrit pour l’exercice, puis retrouve les ressorts du dialogue et l’histoire du texte.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La rencontre, résumée",
+     "blocs": [
+      "Au [[l|café]] de la Régence, MOI croise LUI, le neveu d’un compositeur célèbre. C’est un musicien raté, un [[p|pique-assiette]] qui doit sa table aux maisons riches.",
+      "Il vient d’être chassé de chez le financier Bertin pour avoir, une fois, dit une [[v|vérité]] à table. Il n’en tire aucune honte, et se vante même de sa bassesse."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui désigne le lieu de la rencontre.",
+     "aide": "C’est un lieu public où l’on boit et où l’on cause.",
+     "explication": "MOI et LUI se rencontrent au **café** de la Régence."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit pourquoi le neveu a été chassé de chez Bertin.",
+     "aide": "Dans une maison riche, il a commis une imprudence de parole.",
+     "explication": "Le neveu est chassé pour avoir dit une **vérité** à table : le bouffon dit ce que la morale officielle tait."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à ce qu’il désigne.",
+     "paires": [
+      [
+       "La « pantomime des gueux »",
+       "La posture qui convient au maître qu’on sert"
+      ],
+      [
+       "« Satire seconde »",
+       "Le sous-titre que Diderot donne à son texte"
+      ],
+      [
+       "Bertin",
+       "Le financier qui chasse le neveu"
+      ],
+      [
+       "Goethe",
+       "Le traducteur du texte en allemand, en 1805"
+      ]
+     ],
+     "aide": "Chaque terme est un mot-clé du cours : une thèse, un sous-titre, un protecteur, un traducteur.",
+     "explication": "La **pantomime des gueux** est la thèse du neveu ; **Satire seconde** est le sous-titre ; **Bertin** est le protecteur ; **Goethe** traduit le texte."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre l’histoire du texte.",
+     "items": [
+      "Diderot l’écrit et le remanie (1761-1774)",
+      "Il meurt sans l’avoir publié (1784)",
+      "Goethe le traduit en allemand (1805)",
+      "Le texte revient en français"
+     ],
+     "aide": "Le texte voyage : écrit en français, il devient allemand avant de revenir au français.",
+     "explication": "Écrit et remanié, jamais publié du vivant de Diderot, traduit par Goethe, puis **retraduit en français**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5b98293b-e3e3-52dd-8cf0-6eafe97f30c9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui a le dernier mot ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : le philosophe réfute-t-il le neveu ? Tranche avec le cours et avec une phrase de Diderot.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Le philosophe réfute le neveu et finit par le faire taire : c’est lui qui a raison."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Il le contredit et s’indigne, mais il rit et l’écoute jusqu’au [[b|bout]]. Aucune voix ne gagne."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Alors qui tranche ?"
+      },
+      {
+       "qui": "Samir",
+       "texte": "Le [[j|lecteur]]."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase du neveu",
+     "blocs": [
+      "« Il n’y a dans tout un royaume qu’un homme qui [[m|marche]], c’est le souverain : tout le reste prend des [[p|positions]]. »"
+     ],
+     "source": "Denis Diderot, *Le Neveu de Rameau* (écrit entre 1761 et 1774)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le mot qui dit, selon Samir, qui doit juger le dialogue.",
+     "aide": "Si aucun des deux interlocuteurs ne gagne, qui reste pour trancher ?",
+     "explication": "Le dialogue est ouvert : deux voix, aucune ne l’emporte, c’est le **lecteur** qui juge."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit ce que font tous les sujets devant le souverain.",
+     "aide": "Le verbe « marcher » est réservé au roi ; le mot cherché désigne ce que font les autres.",
+     "explication": "Tout le reste prend des **positions** : c’est la « pantomime des gueux », les postures qu’il faut prendre pour survivre auprès des puissants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le débat de Samir et Léa permet-il d’appuyer ?",
+     "options": [
+      "Le dialogue reste ouvert : le philosophe contredit mais écoute le neveu",
+      "Le philosophe démontre que le neveu a tort et clôt le débat",
+      "Le neveu se convertit à la morale de son interlocuteur",
+      "Le texte est un traité sans voix opposée, écrit pour convaincre"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que fait le philosophe : il contredit, mais il rit et il écoute.",
+     "explication": "MOI contredit LUI, **mais l’écoute jusqu’au bout** : le dialogue des Lumières laisse le lecteur juger."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque affirmation : le cours la soutient-il, ou la contredit-il ?",
+     "categories": [
+      "Soutenu par le cours",
+      "Contredit par le cours"
+     ],
+     "items": [
+      [
+       "Le neveu se vante de sa bassesse",
+       0
+      ],
+      [
+       "Le philosophe rit et écoute jusqu’au bout",
+       0
+      ],
+      [
+       "Le philosophe réfute le neveu et le réduit au silence",
+       1
+      ],
+      [
+       "Diderot publie le texte de son vivant",
+       1
+      ],
+      [
+       "Le neveu joue tous les rôles, jusqu’à un opéra entier",
+       0
+      ]
+     ],
+     "aide": "Retiens ce que le cours dit de chaque interlocuteur et de l’histoire du texte.",
+     "explication": "Le neveu est un **cynique lucide** et un acteur ; le philosophe **écoute**. Le texte n’a **jamais** été publié du vivant de Diderot."
+    }
+   ]
+  },
+  {
+   "chapitre": "c84dfc88-ba99-5fb6-9e4b-a3bb20b667e0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trente-deux objets dans un recueil",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Parti pris des choses*. Situe le recueil dans la vie de Ponge et relève sa forme.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Ponge et son recueil",
+     "debut": 1890,
+     "fin": 1990,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1899,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pub",
+       "date": 1942,
+       "nom": "Le recueil"
+      },
+      {
+       "id": "sartre",
+       "date": 1944,
+       "nom": "Essai de Sartre"
+      },
+      {
+       "id": "mort",
+       "date": 1988,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "tableau",
+     "titre": "Le recueil en bref",
+     "colonnes": [
+      "Repère",
+      "Réponse"
+     ],
+     "lignes": [
+      [
+       "Forme",
+       "Textes brefs en prose"
+      ],
+      [
+       "Éditeur",
+       "Gallimard"
+      ],
+      [
+       "Nombre de textes",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche le repère qui date la publication du recueil.",
+     "aide": "Le recueil paraît avant l’essai qui rend Ponge célèbre.",
+     "explication": "*Le Parti pris des choses* paraît chez Gallimard en **1942**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la publication du recueil de l’essai de Sartre ?",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1944 − 1942 = **2 ans** : l’essai de Sartre fait connaître Ponge peu après le recueil."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : le nombre de textes du recueil ?",
+     "options": [
+      "Trente-deux",
+      "Quarante-six",
+      "Vingt-quatre",
+      "Soixante-dix"
+     ],
+     "reponse": 0,
+     "aide": "Le recueil est un ensemble de textes brefs, un peu plus d’une trentaine.",
+     "explication": "Le recueil compte **trente-deux** textes brefs en prose."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la description de la forme du recueil.",
+     "texte": "Le recueil rassemble des textes ___, écrits en ___, sur des objets banals.",
+     "reponses": [
+      [
+       "brefs",
+       "courts"
+      ],
+      [
+       "prose"
+      ]
+     ],
+     "banque": [
+      "brefs",
+      "interminables",
+      "prose",
+      "vers"
+     ],
+     "aide": "Regarde la ligne « Forme » du tableau.",
+     "explication": "Ce sont des textes **brefs** en **prose** : la poésie tient au regard, pas au vers."
+    }
+   ]
+  },
+  {
+   "chapitre": "c84dfc88-ba99-5fb6-9e4b-a3bb20b667e0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le trombone, à la manière de Ponge",
+   "competence": "analyser-texte",
+   "situation": "Lis ce court texte écrit pour l’exercice, à la manière de Ponge, puis complète le programme du recueil.",
+   "documents": [
+    {
+     "id": "obj",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le trombone",
+     "blocs": [
+      "Un fil d’[[m|acier]] plié trois fois sur lui-même : voilà tout le trombone.",
+      "Il ne sait que [[f|retenir]]. Deux feuilles, dix feuilles, il serre sans bruit et ne demande rien. Qu’on le jette, il se redresse à demi, comme un souvenir de ligne droite."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Francis Ponge"
+    },
+    {
+     "id": "prog",
+     "type": "tableau",
+     "titre": "Le programme du recueil",
+     "colonnes": [
+      "Ce que le poème refuse",
+      "Ce qu’il vise"
+     ],
+     "lignes": [
+      [
+       "Le lyrisme",
+       "La description exacte"
+      ],
+      [
+       "Le symbole",
+       "?"
+      ],
+      [
+       "Le « je » sentimental",
+       "Une définition-description"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "obj",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit de quoi le trombone est fait.",
+     "aide": "La description exacte commence par la matière de l’objet.",
+     "explication": "Le trombone est un fil d’**acier** : l’exactitude de la matière est le premier geste de la description."
+    },
+    {
+     "type": "zone",
+     "document": "obj",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le verbe qui résume la fonction du trombone.",
+     "aide": "À quoi sert-il, quand il serre deux feuilles ?",
+     "explication": "Le trombone ne sait que **retenir** : la fonction de l’objet fait le texte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » : ce que le poème vise à la place du symbole ?",
+     "options": [
+      "L’objet pour lui-même",
+      "L’objet comme image de l’âme du poète",
+      "Le souvenir personnel du poète",
+      "Une morale tirée de l’objet"
+     ],
+     "reponse": 0,
+     "aide": "Refuser le symbole, c’est refuser que l’objet représente autre chose que lui.",
+     "explication": "Le poème vise **l’objet pour lui-même**, sans en faire le symbole d’autre chose."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du cours à son rôle.",
+     "paires": [
+      [
+       "Le Cageot",
+       "Part d’un mot placé entre cage et cachot"
+      ],
+      [
+       "Le Galet",
+       "Texte plus long, qui sert de manifeste"
+      ],
+      [
+       "Jean Paulhan",
+       "Il soutient la publication chez Gallimard"
+      ],
+      [
+       "Sartre",
+       "Il consacre au poète un essai, en 1944"
+      ]
+     ],
+     "aide": "Il y a un texte du recueil, un manifeste, un soutien et un critique.",
+     "explication": "« **Le Cageot** » part du mot lui-même ; « **Le Galet** » est le manifeste ; **Paulhan** soutient le livre ; **Sartre** le fait connaître."
+    }
+   ]
+  },
+  {
+   "chapitre": "c84dfc88-ba99-5fb6-9e4b-a3bb20b667e0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sécheresse ou exigence ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le refus du lyrisme chez Ponge. Départage-les avec le cours.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hakim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Ponge refuse le « je » sentimental : il n’a donc pas de cœur pour ses objets."
+      },
+      {
+       "qui": "Hakim",
+       "texte": "Il refuse l’effusion par [[e|exigence]], pas par sécheresse : il veut rendre justice à ce qui n’a pas de voix."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Mais alors, où est la poésie ?"
+      },
+      {
+       "qui": "Hakim",
+       "texte": "Dans le regard et dans le travail du mot."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le refus du lyrisme n’est pas de la sécheresse",
+       "Le poème rend justice à ce qui n’a pas de voix",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot par lequel Hakim explique le refus du lyrisme.",
+     "aide": "Hakim oppose ce mot à la « sécheresse » dont parle Inès.",
+     "explication": "Ponge est anti-lyrique par **exigence**, non par sécheresse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "« Le Cageot » finit par une tendresse pour cette chose méprisée",
+      "Le recueil paraît chez Gallimard en 1942, grâce à Paulhan",
+      "Sartre consacre un essai au poète en 1944, qui le fait connaître",
+      "Ponge a longtemps été employé chez Hachette, aux messageries"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un fait qui prouve que Ponge s’attache à l’objet sans effusion.",
+     "explication": "« Le Cageot » finit par une **tendresse** pour une chose méprisée : l’attention remplace l’effusion."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque procédé : sert-il la description exacte, ou relève-t-il du lyrisme que Ponge écarte ?",
+     "categories": [
+      "Description exacte",
+      "Lyrisme écarté"
+     ],
+     "items": [
+      [
+       "Le dictionnaire et l’étymologie",
+       0
+      ],
+      [
+       "Le jeu des sonorités et des doubles sens",
+       0
+      ],
+      [
+       "La confidence d’un « je » sentimental",
+       1
+      ],
+      [
+       "Le symbole qui fait de l’objet l’image d’une émotion",
+       1
+      ],
+      [
+       "Le texte bref en prose",
+       0
+      ]
+     ],
+     "aide": "Demande-toi si le procédé sert l’objet ou parle du poète.",
+     "explication": "Le **dictionnaire**, les **sonorités** et la **prose brève** servent l’objet ; le **« je » sentimental** et le **symbole** sont ce que Ponge refuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "f83de3be-ce0b-56a6-8e75-2dfa886ec3b0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un fils de fermier à Paris",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Paysan parvenu*. Retrouve la carte d’identité du roman et les femmes qui jalonnent la route de Jacob.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Paysan parvenu",
+     "sousTitre": "Marivaux",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Roman-mémoires inachevé"
+      },
+      {
+       "texte": "Parution",
+       "valeur": "1734-1735",
+       "id": "date"
+      },
+      {
+       "texte": "Découpage",
+       "valeur": "Cinq parties"
+      }
+     ],
+     "pied": "Pendant masculin de *La Vie de Marianne*",
+     "teinte": "violet"
+    },
+    {
+     "id": "femmes",
+     "type": "tableau",
+     "titre": "Les femmes de Jacob",
+     "colonnes": [
+      "Femme",
+      "Ce qu’elle lui apporte"
+     ],
+     "lignes": [
+      [
+       "Geneviève",
+       "Elle lui propose un arrangement"
+      ],
+      [
+       "Mademoiselle Habert",
+       "?"
+      ],
+      [
+       "Madame de Ferval",
+       "Elle le protège, séduite par sa jeunesse"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "date"
+     ],
+     "enonce": "Touche la ligne de la fiche qui date la parution du roman.",
+     "aide": "Cherche la ligne qui donne deux années.",
+     "explication": "Le roman paraît en **1734-1735**, en même temps que *La Vie de Marianne*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Mademoiselle Habert ?",
+     "options": [
+      "Il l’épouse : elle a de l’argent",
+      "Elle l’emploie comme domestique",
+      "Elle le dénonce à la police",
+      "Elle le présente à la Cour"
+     ],
+     "reponse": 0,
+     "aide": "Mademoiselle Habert est une dévote plus âgée, et riche.",
+     "explication": "Jacob **épouse** Mademoiselle Habert : elle est plus âgée, dévote, et **elle a de l’argent**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la narration.",
+     "texte": "Le récit est mené par un narrateur ___ qui juge avec ___ le jeune homme qu’il fut.",
+     "reponses": [
+      [
+       "âgé",
+       "age"
+      ],
+      [
+       "ironie"
+      ]
+     ],
+     "banque": [
+      "âgé",
+      "jeune",
+      "ironie",
+      "admiration"
+     ],
+     "aide": "Le narrateur raconte ses Mémoires, longtemps après les faits.",
+     "explication": "Un narrateur **âgé** juge, avec **ironie**, le jeune homme qu’il fut."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à ce qu’il désigne.",
+     "paires": [
+      [
+       "Jacob",
+       "Un fils de fermier venu vendre du vin à Paris"
+      ],
+      [
+       "Monsieur de La Vallée",
+       "Le nom de noblesse que Jacob finit par prendre"
+      ],
+      [
+       "La Vie de Marianne",
+       "Le roman du même auteur, pendant féminin"
+      ]
+     ],
+     "aide": "Un personnage, un nom pris en s’élevant, un autre roman.",
+     "explication": "**Jacob** monte à Paris ; il devient **Monsieur de La Vallée** ; *La Vie de Marianne* est le **pendant féminin**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f83de3be-ce0b-56a6-8e75-2dfa886ec3b0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du refus à la protection",
+   "competence": "se-reperer-temps",
+   "situation": "Suis les étapes de l’ascension de Jacob, de son refus à sa reconnaissance.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’ascension de Jacob",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Jacob refuse d’épouser Geneviève"
+      },
+      {
+       "id": "n2",
+       "texte": "Il secourt Mademoiselle Habert sur le Pont-Neuf"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il sauve un jeune seigneur attaqué dans la rue"
+      },
+      {
+       "id": "n5",
+       "texte": "Il devient Monsieur de La Vallée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "La sœur aînée et le directeur de conscience s’opposent au mariage",
+      "Jacob quitte Paris et retourne chez son père fermier",
+      "Mademoiselle Habert refuse Jacob et le chasse de chez elle",
+      "Madame de Ferval l’emprisonne pour ses dettes"
+     ],
+     "reponse": 0,
+     "aide": "Après la rencontre, quelque chose gêne le mariage de Jacob avec Mademoiselle Habert.",
+     "explication": "La **sœur aînée** et le **directeur de conscience** s’opposent au mariage : c’est l’obstacle."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche l’étape où Jacob montre son honneur en refusant un arrangement.",
+     "aide": "C’est la première étape, qui précède la rencontre avec la dévote.",
+     "explication": "Il refuse d’épouser **Geneviève**, dont il devine la situation : il a son honneur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque étape à ce qu’elle lui apporte.",
+     "paires": [
+      [
+       "Le refus",
+       "Il garde son honneur"
+      ],
+      [
+       "La rencontre",
+       "Il secourt une dévote plus âgée, qui a de l’argent"
+      ],
+      [
+       "L’obstacle",
+       "La sœur aînée et le directeur de conscience s’opposent au mariage"
+      ],
+      [
+       "Le courage",
+       "Il gagne la protection d’un jeune seigneur"
+      ]
+     ],
+     "aide": "Reprends le parcours de Jacob dans l’ordre.",
+     "explication": "Chaque étape le **rapproche du monde qu’il visait**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre les grandes étapes de la vie du héros, de sa venue à Paris à la fin du récit.",
+     "items": [
+      "Fils de fermier, il vient vendre du vin à Paris",
+      "Il séduit et gagne des protections féminines",
+      "Il obtient une charge et un nom de noblesse",
+      "Le récit s’interrompt, inachevé"
+     ],
+     "aide": "On part du paysan et on arrive à Monsieur de La Vallée, avant l’arrêt du récit.",
+     "explication": "Du **paysan** au **Monsieur de La Vallée**, puis le roman **s’interrompt**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f83de3be-ce0b-56a6-8e75-2dfa886ec3b0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vieux narrateur et le jeune Jacob",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le ton du narrateur. Départage-les avec le cours, une phrase de Marivaux et un pastiche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Élodie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élodie",
+       "texte": "Le narrateur raconte sa jeunesse sans la juger : il est fier de tout."
+      },
+      {
+       "qui": "Max",
+       "texte": "Au contraire : le vieux narrateur [[i|ironise]] sur le jeune homme qu’il fut."
+      },
+      {
+       "qui": "Élodie",
+       "texte": "Où est la preuve ?"
+      },
+      {
+       "qui": "Max",
+       "texte": "Dans le double regard : le jeune Jacob agit, le vieux narrateur analyse ses calculs."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le début du récit",
+     "blocs": [
+      "« Le titre que je donne à mes Mémoires annonce ma [[n|naissance]] »"
+     ],
+     "source": "Marivaux, *Le Paysan parvenu* (1734-1735), ouverture du récit (citation donnée par le cours)"
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un pastiche",
+     "blocs": [
+      "Quand j’y songe aujourd’hui, je souris de ma [[v|vanité]] : j’avais vingt ans, un habit neuf, et je croyais qu’on me regardait pour mon mérite, quand c’était pour mon visage."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marivaux"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le verbe qui dit ce que fait le vieux narrateur du jeune homme qu’il fut.",
+     "aide": "Le narrateur est âgé : il regarde son passé avec recul et humour.",
+     "explication": "Le vieux narrateur **ironise** : c’est la particularité du récit."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot du pastiche par lequel le narrateur juge sa jeunesse.",
+     "aide": "Il se moque de ce qu’il croyait mériter à vingt ans.",
+     "explication": "Le narrateur sourit de sa **vanité** : il analyse ses calculs de jeune homme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la première phrase du récit, citée dans le document ?",
+     "options": [
+      "Le narrateur avoue d’emblée son origine populaire, sans la cacher",
+      "Le narrateur cache sa naissance pour paraître noble",
+      "Le narrateur se plaint de la bassesse de ses parents",
+      "Le narrateur annonce qu’il va retrouver ses ancêtres nobles"
+     ],
+     "reponse": 0,
+     "aide": "Le titre de ses Mémoires dit d’où il vient.",
+     "explication": "Le titre « annonce ma naissance » : Jacob ne la cache pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : vient-il du jeune Jacob qui agit, ou du narrateur âgé qui juge ?",
+     "categories": [
+      "Le jeune Jacob qui agit",
+      "Le narrateur âgé qui juge"
+     ],
+     "items": [
+      [
+       "Il refuse d’épouser Geneviève",
+       0
+      ],
+      [
+       "Il secourt Mademoiselle Habert sur le Pont-Neuf",
+       0
+      ],
+      [
+       "Il analyse ses calculs et sa vanité",
+       1
+      ],
+      [
+       "Il sourit de sa propre ascension",
+       1
+      ],
+      [
+       "Il sauve un jeune seigneur attaqué dans la rue",
+       0
+      ]
+     ],
+     "aide": "L’un vit les événements, l’autre les commente longtemps après.",
+     "explication": "Les **actes** reviennent au jeune homme ; l’**analyse** et l’**ironie** au narrateur âgé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque piste de dissertation à son idée.",
+     "paires": [
+      [
+       "Le double regard",
+       "Le jeune Jacob agit, le vieux narrateur analyse"
+      ],
+      [
+       "La satire des dévots",
+       "Piété et intérêt se mêlent chez les sœurs Habert"
+      ],
+      [
+       "Le corps et l’ascension",
+       "La beauté est un capital, comme l’argent"
+      ]
+     ],
+     "aide": "Chaque piste est une idée du cours « Pour la dissertation et l’oral ».",
+     "explication": "Le **double regard**, la **satire des dévots** et le **corps comme capital** sont les trois pistes du cours."
+    }
+   ]
+  },
+  {
+   "chapitre": "7301b019-2c8d-5931-8929-99bd9d8368ab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "À la pension Vauquer, en 1819",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Père Goriot*. Place le roman dans la vie de Balzac, puis retrouve ses trois grands personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Balzac et son roman",
+     "debut": 1795,
+     "fin": 1855,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1799,
+       "nom": "Naissance"
+      },
+      {
+       "id": "act",
+       "date": 1819,
+       "nom": "L’action"
+      },
+      {
+       "id": "pub",
+       "date": 1835,
+       "nom": "Publication"
+      },
+      {
+       "id": "mort",
+       "date": 1850,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages de la pension",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Eugène de Rastignac",
+       "Étudiant en droit pauvre et ambitieux"
+      ],
+      [
+       "Le père Goriot",
+       "?"
+      ],
+      [
+       "Vautrin",
+       "Forçat évadé sous un faux nom"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "act"
+     ],
+     "enonce": "Touche le repère qui date l’action du roman (sous la Restauration).",
+     "aide": "L’action se passe quelques années avant la parution.",
+     "explication": "L’action se déroule en **1819**, sous la Restauration."
+    },
+    {
+     "type": "nombre",
+     "reponse": 16,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’époque de l’action de la publication du roman ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1835 − 1819 = **16 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour le père Goriot ?",
+     "options": [
+      "Ancien vermicellier, ruiné par ses deux filles",
+      "Banquier parisien, ruiné par la Révolution",
+      "Notaire de province, ruiné par le jeu",
+      "Officier de Napoléon, ruiné par la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Goriot a fait fortune dans un commerce de pâtes, puis il a tout donné à ses filles.",
+     "explication": "Goriot est un ancien **vermicellier**, **ruiné par ses deux filles**, qu’il aime jusqu’à l’aveuglement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le cadre du roman.",
+     "texte": "L’action se déroule à la pension ___, à Paris, sous la ___.",
+     "reponses": [
+      [
+       "Vauquer"
+      ],
+      [
+       "Restauration"
+      ]
+     ],
+     "banque": [
+      "Vauquer",
+      "Maison-Rouge",
+      "Restauration",
+      "Révolution"
+     ],
+     "aide": "C’est le nom d’une logeuse, et un régime politique de 1819.",
+     "explication": "La pension **Vauquer**, sous la **Restauration**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7301b019-2c8d-5931-8929-99bd9d8368ab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pacte de Vautrin",
+   "competence": "analyser-texte",
+   "situation": "Suis le fil du roman, du pacte proposé à Rastignac jusqu’à la mort de Goriot.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du pacte à la mort de Goriot",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Vautrin propose un pacte à Rastignac"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Vautrin est démasqué et arrêté"
+      },
+      {
+       "id": "n4",
+       "texte": "Goriot meurt seul, ruiné"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Le frère de Victorine est tué en duel ; Rastignac refuse d’en profiter",
+      "Rastignac accepte le pacte et épouse aussitôt Victorine",
+      "Goriot reprend son commerce et se remet à la tête de sa fortune",
+      "Madame de Beauséant est renvoyée de la pension par Vautrin"
+     ],
+     "reponse": 0,
+     "aide": "Le pacte consistait à épouser une héritière, dont le frère devait disparaître.",
+     "explication": "Le frère de Victorine est **tué en duel**, comme prévu, mais Rastignac **refuse d’en profiter**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Vautrin, de son vrai nom Jacques Collin, est vendu à la police.",
+     "aide": "Après le duel, Vautrin tombe : un mot de la chaîne dit qu’il est démasqué.",
+     "explication": "Vautrin, surnommé « **Trompe-la-Mort** », est **démasqué et arrêté**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est.",
+     "paires": [
+      [
+       "Madame de Beauséant",
+       "Cousine de Rastignac, qui lui ouvre le monde"
+      ],
+      [
+       "Victorine Taillefer",
+       "Jeune fille pauvre, déshéritée par son père millionnaire"
+      ],
+      [
+       "Vautrin",
+       "Forçat évadé, surnommé Trompe-la-Mort"
+      ],
+      [
+       "Eugène de Rastignac",
+       "Étudiant en droit pauvre et ambitieux"
+      ]
+     ],
+     "aide": "Chaque personnage a un rôle précis dans le roman.",
+     "explication": "**Beauséant** ouvre le monde, **Victorine** est déshéritée, **Vautrin** est un forçat évadé, **Rastignac** est ambitieux."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre la fin du roman.",
+     "items": [
+      "Goriot meurt seul, ruiné",
+      "Rastignac l’enterre presque seul",
+      "Du haut du Père-Lachaise, il regarde Paris et lance son défi"
+     ],
+     "aide": "La mort précède l’enterrement, et le défi vient du haut du cimetière.",
+     "explication": "Goriot meurt, Rastignac l’enterre presque seul, puis lance son **défi** à Paris."
+    }
+   ]
+  },
+  {
+   "chapitre": "7301b019-2c8d-5931-8929-99bd9d8368ab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les trois maîtres de Rastignac",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation sur le roman d’apprentissage, rassemble deux phrases du roman et ce qu’en dit le cours.",
+   "documents": [
+    {
+     "id": "vautrin",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une voie pour réussir",
+     "blocs": [
+      "On fait son chemin « par l’éclat du [[g|génie]] ou par l’adresse de la [[c|corruption]] »."
+     ],
+     "source": "Balzac, *Le Père Goriot* (1835), propos de Vautrin à Rastignac (formule donnée par le cours)"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Dans ce roman, l’argent est l’unique loi",
+       "Les filles de Goriot ne viennent que pour de l’argent",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vautrin",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui nomme la voie que Vautrin conseille au jeune ambitieux, à côté du génie.",
+     "aide": "Vautrin oppose deux voies : l’une honorable, l’autre non.",
+     "explication": "Vautrin conseille la **corruption** à côté du génie : la réussite passe par l’argent et l’intrigue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du roman faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Goriot meurt seul, ruiné, sans qu’aucune de ses filles vienne",
+      "Madame de Beauséant ouvre à Rastignac les portes du grand monde",
+      "Rastignac étudie le droit à Paris, dans une pension misérable",
+      "Victorine Taillefer est déshéritée par son père millionnaire"
+     ],
+     "reponse": 0,
+     "aide": "L’exemple doit montrer que les filles ne viennent plus quand il n’y a plus d’argent.",
+     "explication": "Goriot **meurt seul, ruiné** : plus d’argent, plus de filles."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque « maître » de Rastignac à ce qu’il lui apprend.",
+     "paires": [
+      [
+       "Madame de Beauséant",
+       "Comment entrer dans le grand monde"
+      ],
+      [
+       "Vautrin",
+       "Qu’on peut réussir par la corruption"
+      ],
+      [
+       "Goriot",
+       "Ce que coûte un amour paternel sans mesure"
+      ]
+     ],
+     "aide": "Rastignac a trois maîtres : une grande dame, un forçat, un père.",
+     "explication": "Le roman d’apprentissage repose sur **trois maîtres** : le monde, le crime lucide, la paternité dévorée."
+    },
+    {
+     "type": "choix",
+     "enonce": "La dernière phrase du roman est : « À nous deux maintenant ! ». Que montre-t-elle ?",
+     "options": [
+      "Rastignac défie Paris, qu’il va conquérir",
+      "Rastignac renonce à Paris et rentre en province",
+      "Rastignac pleure Goriot et se fait prêtre",
+      "Rastignac menace Vautrin devant la police"
+     ],
+     "reponse": 0,
+     "aide": "Il parle depuis le Père-Lachaise, en regardant la ville.",
+     "explication": "Du haut du **Père-Lachaise**, Rastignac lance son défi à **Paris** : c’est l’ambition qui s’initie."
+    }
+   ]
+  },
+  {
+   "chapitre": "b2913e9b-0418-5e86-a25c-c706ba742bdd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un médecin pour Toto",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Le Petit Malade*. Situe la saynète dans la vie de Courteline et retrouve ses trois personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Courteline et sa saynète",
+     "debut": 1850,
+     "fin": 1930,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1858,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pm",
+       "date": 1905,
+       "nom": "Le Petit Malade"
+      },
+      {
+       "id": "mort",
+       "date": 1929,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les trois personnages",
+     "colonnes": [
+      "Personnage",
+      "Son ressort comique"
+     ],
+     "lignes": [
+      [
+       "La mère",
+       "?"
+      ],
+      [
+       "Le médecin",
+       "Il pose un diagnostic grave sur des indices qui disent le contraire"
+      ],
+      [
+       "Toto",
+       "Il répond « Oui, monsieur » : il est le seul à ne pas s’inquiéter"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pm"
+     ],
+     "enonce": "Touche le repère qui date la parution de la saynète.",
+     "aide": "Elle paraît dans le recueil *Coco, Coco et Toto*, au début du XXe siècle.",
+     "explication": "*Le Petit Malade* paraît en **1905**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 24,
+     "unite": "ans",
+     "enonce": "Combien d’années s’écoulent entre la parution de la saynète et la mort de Courteline ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1929 − 1905 = **24 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour la mère ?",
+     "options": [
+      "Inquiète, bavarde, aveugle à l’évidence",
+      "Froide, silencieuse, parfaitement lucide",
+      "Gaie, insouciante, sûre de son fils",
+      "Colérique, injuste, toujours en retard"
+     ],
+     "reponse": 0,
+     "aide": "Elle fait venir un médecin pour un mal qui n’en est pas un.",
+     "explication": "La mère est **inquiète, bavarde et aveugle à l’évidence**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du texte.",
+     "texte": "*Le Petit Malade* est une ___ très brève, qui repose sur un ___ médical.",
+     "reponses": [
+      [
+       "saynète",
+       "saynete"
+      ],
+      [
+       "quiproquo"
+      ]
+     ],
+     "banque": [
+      "saynète",
+      "épopée",
+      "quiproquo",
+      "duel"
+     ],
+     "aide": "Une toute petite pièce de théâtre, et une confusion.",
+     "explication": "C’est une **saynète**, tout entière dans un **quiproquo** médical."
+    }
+   ]
+  },
+  {
+   "chapitre": "b2913e9b-0418-5e86-a25c-c706ba742bdd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pouf ! trois fois de suite",
+   "competence": "analyser-texte",
+   "situation": "Suis le déroulement de la saynète, de l’appel au médecin jusqu’à son éclat de rire.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la saynète",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Une mère affolée appelle un médecin"
+      },
+      {
+       "id": "n2",
+       "texte": "Devant lui, Toto tombe trois fois de suite"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Il découvre deux jambes dans la même jambe"
+      },
+      {
+       "id": "n5",
+       "texte": "Le médecin éclate : ce n’est qu’une maladresse"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Le médecin conclut : « C’est de la paralysie » des membres inférieurs",
+      "Le médecin renvoie la mère sans rien examiner du tout",
+      "Toto avoue qu’il s’est blessé en jouant dans la cour",
+      "Le médecin prescrit des mois de repos et s’en va aussitôt"
+     ],
+     "reponse": 0,
+     "aide": "L’enfant n’a mal nulle part et respire la santé, pourtant le médecin pose un diagnostic.",
+     "explication": "Le médecin, compétent, conclut : « **C’est de la paralysie** » — des membres inférieurs."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui révèle la vraie cause des chutes.",
+     "aide": "Il est question d’un vêtement mal enfilé.",
+     "explication": "La mère a mis **les deux jambes dans la même jambe du pantalon** : voilà pourquoi Toto tombe."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son ressort comique.",
+     "paires": [
+      [
+       "La mère",
+       "Inquiète, bavarde, aveugle à l’évidence"
+      ],
+      [
+       "Le médecin",
+       "Un diagnostic grave sur des indices contraires"
+      ],
+      [
+       "Toto",
+       "Seul à ne pas s’inquiéter : « Oui, monsieur »"
+      ]
+     ],
+     "aide": "Qui s’affole, qui diagnostique, qui reste calme ?",
+     "explication": "La **mère** s’affole, le **médecin** diagnostique à contresens, **Toto** reste calme."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le procédé comique.",
+     "texte": "Les chutes qui se suivent, identiques, relèvent du comique de ___.",
+     "reponses": [
+      [
+       "répétition",
+       "repetition"
+      ]
+     ],
+     "banque": [
+      "répétition",
+      "mots",
+      "caractère",
+      "geste"
+     ],
+     "aide": "Un même événement revient trois fois de suite.",
+     "explication": "Les chutes successives illustrent le comique de **répétition**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b2913e9b-0418-5e86-a25c-c706ba742bdd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sérieux et la petitesse",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le médecin de la saynète. Tranche avec le cours, puis applique la leçon à un petit texte écrit pour l’exercice.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Le médecin est un imbécile : on rit parce qu’il ne sait rien."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non, il est [[c|compétent]] : on rit de l’écart entre le sérieux de son ton et la petitesse de la chose."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans un bureau de ministère",
+     "blocs": [
+      {
+       "didascalie": "Le chef de bureau, très digne, tient une feuille entre deux doigts."
+      },
+      {
+       "personnage": "Le chef",
+       "replique": "Monsieur Pochet, la [[t|tache]] d’encre qui orne ce dossier appelle un [[g|rapport]] en trois exemplaires."
+      },
+      {
+       "personnage": "Pochet",
+       "replique": "Une tache, monsieur le chef ? Elle est toute petite."
+      },
+      {
+       "personnage": "Le chef",
+       "replique": "Il n’y a pas de petite tache dans l’administration, monsieur Pochet : il n’y a que des négligences. Je vous demande [[g|gravement]] de vous expliquer."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Courteline"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui corrige l’idée de Lina sur le médecin.",
+     "aide": "Le cours dit du médecin qu’il pose un diagnostic grave, mais qu’il est loin d’être un ignorant.",
+     "explication": "Le médecin est **compétent** : le comique naît de l’écart, non de sa bêtise."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit la petitesse de la chose dont on fait une affaire d’État.",
+     "aide": "C’est ce qui salit un dossier.",
+     "explication": "La **tache** d’encre est minuscule : c’est la petitesse de la chose."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche les deux mots qui disent le sérieux du ton du chef.",
+     "aide": "Cherche ce que le chef exige, et l’adverbe qui dit sa manière de parler.",
+     "explication": "Un **rapport** en trois exemplaires, demandé **gravement** : le sérieux du ton."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque piste de dissertation à son idée.",
+     "paires": [
+      [
+       "Le comique de répétition",
+       "Les chutes se suivent, identiques"
+      ],
+      [
+       "La satire du savoir médical",
+       "Le jargon remplace l’observation, dans la lignée de Molière"
+      ],
+      [
+       "La chute",
+       "La dernière réplique retourne tout"
+      ]
+     ],
+     "aide": "Les trois pistes viennent du cours « Pour la dissertation et l’oral ».",
+     "explication": "**Répétition**, **satire du savoir médical** et **chute** sont les trois pistes du cours."
+    }
+   ]
+  },
+  {
+   "chapitre": "789ed1dd-1d18-5757-981d-bfde186845c9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Arrêté un matin",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *Le Procès*. Situe le roman dans la vie de Kafka, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Kafka et son roman",
+     "debut": 1880,
+     "fin": 1930,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1883,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ecr",
+       "date": 1914,
+       "nom": "Écriture"
+      },
+      {
+       "id": "mort",
+       "date": 1924,
+       "nom": "Mort"
+      },
+      {
+       "id": "pub",
+       "date": 1925,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Joseph K.",
+       "Fondé de pouvoir dans une banque"
+      ],
+      [
+       "L’oncle",
+       "?"
+      ],
+      [
+       "Leni",
+       "La garde-malade de l’avocat, qui séduit les accusés"
+      ],
+      [
+       "Titorelli",
+       "Le peintre des juges"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche le repère qui date la publication du roman.",
+     "aide": "Elle a lieu après la mort de l’auteur.",
+     "explication": "Le roman est publié en **1925** par Max Brod, contre la volonté de Kafka."
+    },
+    {
+     "type": "nombre",
+     "reponse": 1,
+     "unite": "an",
+     "enonce": "Combien d’années séparent la mort de Kafka de la publication du roman ?",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1925 − 1924 = **1 an**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour l’oncle ?",
+     "options": [
+      "Il mène K. chez l’avocat Huld",
+      "Il dénonce K. au tribunal",
+      "Il juge K. lors de son procès",
+      "Il vend K. à la police"
+     ],
+     "reponse": 0,
+     "aide": "L’oncle cherche à aider son neveu en lui trouvant un défenseur.",
+     "explication": "L’oncle mène K. chez l’avocat **Huld**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur l’état du roman.",
+     "texte": "Le roman est ___ : Kafka ne l’a pas terminé, et il a été publié par ___.",
+     "reponses": [
+      [
+       "inachevé",
+       "inacheve"
+      ],
+      [
+       "Max Brod",
+       "Brod"
+      ]
+     ],
+     "banque": [
+      "inachevé",
+      "complet",
+      "Max Brod",
+      "Goethe"
+     ],
+     "aide": "Un ami de Kafka a refusé de brûler les manuscrits.",
+     "explication": "Le roman est **inachevé** et c’est **Max Brod** qui le publie."
+    }
+   ]
+  },
+  {
+   "chapitre": "789ed1dd-1d18-5757-981d-bfde186845c9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un procès sans accusation",
+   "competence": "analyser-texte",
+   "situation": "Suis le parcours de Joseph K. et ce que chaque rencontre lui apprend de la justice qui le poursuit.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de K.",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "K. est arrêté un matin, chez lui"
+      },
+      {
+       "id": "n2",
+       "texte": "Il reste libre, mais « en procès »"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "L’aumônier raconte « Devant la Loi »"
+      },
+      {
+       "id": "n5",
+       "texte": "Un an après, on l’emmène dans une carrière"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Un avocat impuissant, un peintre qui n’obtient que des ajournements",
+      "Il est condamné par un juge qui lui lit enfin son accusation",
+      "Il s’enfuit à l’étranger avec Leni et change de nom",
+      "Il obtient l’acquittement grâce à un peintre influent"
+     ],
+     "reponse": 0,
+     "aide": "K. cherche de l’aide auprès de gens qui connaissent le tribunal.",
+     "explication": "L’**avocat** est impuissant ; le **peintre** n’obtient que des **ajournements**, jamais l’acquittement."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui montre le paradoxe de l’arrestation de K.",
+     "aide": "K. est arrêté sans être emprisonné.",
+     "explication": "K. **reste libre** et continue sa vie, tout en étant « en procès » : c’est le paradoxe."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il fait.",
+     "paires": [
+      [
+       "L’avocat Huld",
+       "Il est impuissant"
+      ],
+      [
+       "Titorelli",
+       "Il ne promet que des ajournements"
+      ],
+      [
+       "L’aumônier",
+       "Il raconte la parabole « Devant la Loi »"
+      ],
+      [
+       "Leni",
+       "Elle séduit les accusés"
+      ]
+     ],
+     "aide": "Chaque personnage incarne un visage de la justice que K. découvre.",
+     "explication": "**Huld** est impuissant, **Titorelli** obtient des ajournements, l’**aumônier** raconte la parabole, **Leni** séduit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur l’accusation et le lieu de la justice.",
+     "texte": "K. ne saura jamais de quoi il est ___ ; la justice siège dans des ___ et des couloirs.",
+     "reponses": [
+      [
+       "accusé",
+       "accuse"
+      ],
+      [
+       "greniers"
+      ]
+     ],
+     "banque": [
+      "accusé",
+      "félicité",
+      "greniers",
+      "palais"
+     ],
+     "aide": "L’accusation n’est jamais nommée, et le tribunal s’installe dans des lieux qu’on n’attend pas.",
+     "explication": "K. ne sait jamais de quoi il est **accusé** ; la justice est installée dans des **greniers**, des couloirs, des arrière-cours."
+    }
+   ]
+  },
+  {
+   "chapitre": "789ed1dd-1d18-5757-981d-bfde186845c9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Devant le guichet",
+   "competence": "argumenter",
+   "situation": "Le roman contient une parabole qui le résume. Lis un pastiche écrit pour l’exercice, puis dégage le sens du roman.",
+   "documents": [
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Devant le guichet",
+     "blocs": [
+      "Un homme se présente à un guichet des Permis. L’employé lui dit : « Pas maintenant. » L’homme [[a|attend]].",
+      "Les années passent. Il connaît le nom de chaque employé, il leur offre tout ce qu’il possède. Sur le tard, l’employé se penche vers lui : ce guichet n’était [[o|ouvert]] que pour lui, et il va maintenant le fermer."
+     ],
+     "source": "Texte écrit pour l’exercice, pastiche de la parabole « Devant la Loi »"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman montre l’absurde avant la lettre",
+       "L’homme cherche un sens que le monde ne donne pas",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe qui résume ce que fait l’homme pendant toutes ces années.",
+     "aide": "L’employé lui a dit « Pas maintenant ».",
+     "explication": "L’homme **attend** : comme dans la parabole, il passe sa vie devant la porte."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui dit le retournement final : l’entrée était faite pour lui seul.",
+     "aide": "Le guichet était accessible, et l’homme ne l’a jamais su.",
+     "explication": "Le guichet n’était **ouvert** que pour lui : comme la porte de la parabole."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du roman faut-il écrire dans la case « ? » ?",
+     "options": [
+      "K. ne saura jamais de quoi il est accusé",
+      "K. est fondé de pouvoir dans une banque",
+      "Leni séduit les accusés de l’avocat Huld",
+      "Max Brod publie le roman en 1925"
+     ],
+     "reponse": 0,
+     "aide": "L’exemple doit montrer un sens que le monde refuse de donner.",
+     "explication": "K. ne saura **jamais de quoi il est accusé** : le monde ne lui donne aucun sens."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce qu’elle désigne.",
+     "paires": [
+      [
+       "La mise en abyme",
+       "La parabole résume tout le roman en une page"
+      ],
+      [
+       "Le mot « kafkaïen »",
+       "Une bureaucratie absurde, invisible, à laquelle on finit par consentir"
+      ],
+      [
+       "Une accusation jamais nommée",
+       "Le lecteur reste dans le même brouillard que K."
+      ]
+     ],
+     "aide": "Pense au rapport entre la parabole et le roman, puis à la postérité du mot.",
+     "explication": "La **mise en abyme**, le mot **kafkaïen** et l’**accusation jamais nommée** font la force du roman."
+    }
+   ]
+  }
+ ]
+}

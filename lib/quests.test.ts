@@ -1,5 +1,16 @@
+import { readFileSync } from 'node:fs'
 import { describe, it, expect } from 'vitest'
 import {
+  PILIERS,
+  contexteQuetes,
+  quizReussi,
+  type QuestKind,
+  type QuetesDuJour,
+  BONUS_STEP_ID,
+  aEncaisser,
+  coffreDuJourPret,
+  queteServie,
+  quetesAAnnoncer,
   QUEST_CATALOG,
   QUESTS_PER_DAY,
   ALL_DONE_XP,
@@ -27,18 +38,32 @@ describe('catalogue', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
-  it('a au moins une quête par palier', () => {
-    for (const tier of ['facile', 'moyenne', 'exigeante'] as const) {
-      expect(QUEST_CATALOG.filter((q) => q.tier === tier).length).toBeGreaterThan(0)
+  it('a au moins une quête par geste, sans le cahier', () => {
+    for (const pilier of PILIERS) {
+      expect(QUEST_CATALOG.filter((q) => q.pilier === pilier && !q.cahier).length).toBeGreaterThan(0)
     }
   })
 
-  it('récompense davantage les quêtes exigeantes', () => {
-    const facile = QUEST_CATALOG.filter((q) => q.tier === 'facile')
-    const exigeante = QUEST_CATALOG.filter((q) => q.tier === 'exigeante')
-    const max = Math.max(...facile.map((q) => q.xp))
-    const min = Math.min(...exigeante.map((q) => q.xp))
-    expect(min).toBeGreaterThan(max)
+  // Garde-fou du 03/10/2026 : quatre quêtes comptaient des choses que rien
+  // n'alimentait. Chaque type de quête a SON compteur, dans un fichier qui
+  // appelle advanceQuests avec le champ d'événement correspondant.
+  it("ne tire que des quêtes qu'un compteur fait avancer", () => {
+    const compteurs: Record<QuestKind, [fichier: string, champ: string]> = {
+      lecon: ['app/reviser/actions.ts', 'lecons:'],
+      quiz: ['app/test/actions.ts', 'quiz:'],
+      quiz_reussi: ['app/test/actions.ts', 'quizReussis:'],
+      correct: ['lib/duel/fin-course-server.ts', 'correct:'],
+      exercice: ['app/reviser/[subject]/[chapter]/exercice/cahier-actions.ts', 'exercicesReussis:'],
+      duel_play: ['lib/duel/fin-course-server.ts', 'duelsPlayed:'],
+      duel_win: ['lib/duel/fin-course-server.ts', 'duelsWon:'],
+      partie: ['app/defi/actions.ts', 'parties:'],
+    }
+    for (const q of QUEST_CATALOG) {
+      const [fichier, champ] = compteurs[q.kind]
+      const source = readFileSync(fichier, 'utf8')
+      expect(source, `${q.id} : ${fichier} ne fait pas avancer les quêtes`).toMatch(/advanceQuests|avancerQuetesApres/)
+      expect(source, `${q.id} : ${fichier} ne compte pas « ${champ} »`).toContain(champ)
+    }
   })
 
   it('a des objectifs atteignables en une session', () => {
@@ -64,12 +89,26 @@ describe('dailyQuests', () => {
     expect(b).not.toBe(a)
   })
 
-  it('donne un palier facile, un moyen et un exigeant', () => {
-    expect(dailyQuests(DAY, USER).map((q) => q.tier)).toEqual([
-      'facile',
-      'moyenne',
-      'exigeante',
-    ])
+  it('donne une quête par geste : apprendre, se tester, jouer', () => {
+    expect(dailyQuests(DAY, USER).map((q) => q.pilier)).toEqual(['apprendre', 'tester', 'jouer'])
+  })
+
+  it('ne tire le cahier que pour un abonné dont la classe en a un', () => {
+    const jours = Array.from({ length: 200 }, (_, i) =>
+      new Date(Date.UTC(2026, 0, 1) + i * 86_400_000).toISOString().slice(0, 10),
+    )
+    const sans = jours.flatMap((d) => dailyQuests(d, USER))
+    expect(sans.some((q) => q.cahier)).toBe(false)
+    const avec = jours.flatMap((d) => dailyQuests(d, USER, { cahier: true }))
+    expect(avec.some((q) => q.cahier)).toBe(true)
+  })
+
+  it('ouvre le cahier aux seuls abonnés de 3e, 1re et Terminale', () => {
+    expect(contexteQuetes(true, '3e').cahier).toBe(true)
+    expect(contexteQuetes(true, 'Tle').cahier).toBe(true)
+    expect(contexteQuetes(false, '3e').cahier).toBe(false)
+    expect(contexteQuetes(true, '5e').cahier).toBe(false)
+    expect(contexteQuetes(true, null).cahier).toBe(false)
   })
 
   it('reste dans le catalogue sur de nombreux jours', () => {
@@ -84,26 +123,26 @@ describe('dailyQuests', () => {
 })
 
 describe('questView', () => {
-  const def = QUEST_CATALOG.find((q) => q.id === 'duel3')!
+  const def = QUEST_CATALOG.find((q) => q.id === 'partie2')!
 
   it('rend une quête vierge', () => {
     const v = questView(def, {})
     expect(v.current).toBe(0)
     expect(v.done).toBe(false)
     expect(v.ratio).toBe(0)
-    expect(v.label).toBe('0/3')
+    expect(v.label).toBe('0/2')
   })
 
   it('borne l’affichage à l’objectif', () => {
-    const v = questView(def, { duel3: 12 })
-    expect(v.current).toBe(3)
+    const v = questView(def, { partie2: 12 })
+    expect(v.current).toBe(2)
     expect(v.ratio).toBe(1)
     expect(v.done).toBe(true)
-    expect(v.label).toBe('3/3')
+    expect(v.label).toBe('2/2')
   })
 
   it('ignore une progression illisible', () => {
-    expect(questView(def, { duel3: Number.NaN }).current).toBe(0)
+    expect(questView(def, { partie2: Number.NaN }).current).toBe(0)
   })
 })
 
@@ -142,59 +181,58 @@ describe('questsHeadline', () => {
 
 describe('deltaFor', () => {
   it('traduit un duel gagné', () => {
-    const d = deltaFor({ duelsPlayed: 1, duelsWon: 1, correct: 9, bestCombo: 4 })
-    expect(d.add.duel_play).toBe(1)
-    expect(d.add.duel_win).toBe(1)
-    expect(d.add.correct).toBe(9)
-    expect(d.max.combo).toBe(4)
+    const d = deltaFor({ duelsPlayed: 1, duelsWon: 1, correct: 9 })
+    expect(d.duel_play).toBe(1)
+    expect(d.duel_win).toBe(1)
+    expect(d.correct).toBe(9)
   })
 
-  it('dédoublonne les chapitres travaillés', () => {
-    expect(deltaFor({ chapterIds: ['a', 'b', 'a'] }).add.chapter).toBe(2)
+  it('traduit un cours, un quiz réussi, un exercice et une partie', () => {
+    const d = deltaFor({ lecons: 1, quiz: 1, quizReussis: 1, exercicesReussis: 1, parties: 1 })
+    expect(d.lecon).toBe(1)
+    expect(d.quiz).toBe(1)
+    expect(d.quiz_reussi).toBe(1)
+    expect(d.exercice).toBe(1)
+    expect(d.partie).toBe(1)
   })
 
   it('ignore les valeurs absurdes', () => {
     const d = deltaFor({ correct: -5, duelsWon: Number.NaN })
-    expect(d.add.correct).toBe(0)
-    expect(d.add.duel_win).toBe(0)
+    expect(d.correct).toBe(0)
+    expect(d.duel_win).toBe(0)
+  })
+})
+
+describe('quizReussi', () => {
+  it('réussit à partir de 80 %', () => {
+    expect(quizReussi(8, 10)).toBe(true)
+    expect(quizReussi(4, 5)).toBe(true)
+    expect(quizReussi(7, 10)).toBe(false)
+    expect(quizReussi(0, 0)).toBe(false)
   })
 })
 
 describe('applyEvent', () => {
   it('ne modifie pas la progression reçue', () => {
     const before = Object.freeze({})
-    const after = applyEvent(DAY, USER, before, { duelsPlayed: 1 })
+    const after = applyEvent(DAY, USER, before, { duelsPlayed: 1, lecons: 1, parties: 1 })
     expect(after).not.toBe(before)
     expect(before).toEqual({})
   })
 
   it('cumule les quêtes de comptage', () => {
-    let p = applyEvent(DAY, USER, {}, { correct: 10 })
-    p = applyEvent(DAY, USER, p, { correct: 10 })
-    const views = questViews(DAY, USER, p)
-    const correctView = views.find((v) => v.def.kind === 'correct')
-    if (correctView) expect(p[correctView.def.id]).toBe(20)
-  })
-
-  it('garde le RECORD pour les quêtes de série, jamais la somme', () => {
-    // Un jour dont on sait qu'il tire une quête de série.
-    const day = Array.from({ length: 60 }, (_, i) =>
+    const jour = Array.from({ length: 60 }, (_, i) =>
       new Date(Date.UTC(2026, 0, 1) + i * 86_400_000).toISOString().slice(0, 10),
-    ).find((d) => dailyQuests(d, USER).some((q) => q.kind === 'combo'))
-    expect(day).toBeDefined()
-    const quest = dailyQuests(day!, USER).find((q) => q.kind === 'combo')!
-
-    let p = applyEvent(day!, USER, {}, { bestCombo: 5 })
-    expect(p[quest.id]).toBe(5)
-    p = applyEvent(day!, USER, p, { bestCombo: 3 })
-    expect(p[quest.id]).toBe(5) // une série ne s'additionne pas
-    p = applyEvent(day!, USER, p, { bestCombo: 9 })
-    expect(p[quest.id]).toBe(9)
+    ).find((d) => dailyQuests(d, USER).some((q) => q.kind === 'correct'))!
+    const quete = dailyQuests(jour, USER).find((q) => q.kind === 'correct')!
+    let p = applyEvent(jour, USER, {}, { correct: 10 })
+    p = applyEvent(jour, USER, p, { correct: 10 })
+    expect(p[quete.id]).toBe(20)
   })
 
   it('n’avance que les quêtes réellement tirées ce jour-là', () => {
     const tirees = new Set(dailyQuests(DAY, USER).map((q) => q.id))
-    const p = applyEvent(DAY, USER, {}, { duelsPlayed: 5, correct: 40, revisions: 30 })
+    const p = applyEvent(DAY, USER, {}, { duelsPlayed: 5, correct: 40, lecons: 3, quiz: 2, parties: 4 })
     for (const id of Object.keys(p)) expect(tirees.has(id)).toBe(true)
   })
 
@@ -231,9 +269,9 @@ describe('questsReward', () => {
 
 describe('normalizeProgress', () => {
   it('lit un objet valide', () => {
-    expect(normalizeProgress({ duel3: 2, correct10: 7 })).toEqual({
-      duel3: 2,
-      correct10: 7,
+    expect(normalizeProgress({ lecon2: 2, correct20: 7 })).toEqual({
+      lecon2: 2,
+      correct20: 7,
     })
   })
 
@@ -260,5 +298,39 @@ describe('le renouvellement des quêtes', () => {
     expect(libelleRenouvellement(8)).toBe('Nouvelles quêtes dans 8 min')
     expect(libelleRenouvellement(312)).toBe('Nouvelles quêtes dans 5 h 12')
     expect(libelleRenouvellement(120)).toBe('Nouvelles quêtes dans 2 h')
+  })
+})
+
+describe('ce que le navigateur reçoit', () => {
+  const vues = (avancement: Record<string, number>) =>
+    ['lecon1', 'quiz80', 'partie2'].map((id) => queteServie(questView(QUEST_CATALOG.find((q) => q.id === id)!, avancement)))
+  const etat = (avancement: Record<string, number>, encaissees: string[] = []): QuetesDuJour => ({
+    jour: DAY,
+    quetes: vues(avancement),
+    encaissees,
+  })
+
+  it('aplatit une quête sans perdre son geste ni sa destination', () => {
+    const [cours] = vues({ lecon1: 1 })
+    expect(cours).toMatchObject({ id: 'lecon1', pilier: 'apprendre', href: '/reviser', done: true, current: 1, goal: 1 })
+  })
+
+  it('ne propose d’encaisser que ce qui est fini et pas encore payé', () => {
+    expect(aEncaisser(etat({ lecon1: 1, partie2: 1 })).map((q) => q.id)).toEqual(['lecon1'])
+    expect(aEncaisser(etat({ lecon1: 1 }, ['lecon1']))).toEqual([])
+  })
+
+  it('ouvre le coffre du jour quand les trois sont finies, une seule fois', () => {
+    const toutes = { lecon1: 1, quiz80: 1, partie2: 2 }
+    expect(coffreDuJourPret(etat({ lecon1: 1 }))).toBe(false)
+    expect(coffreDuJourPret(etat(toutes))).toBe(true)
+    expect(coffreDuJourPret(etat(toutes, [BONUS_STEP_ID]))).toBe(false)
+  })
+
+  it('n’annonce une quête finie qu’une fois, et jamais une quête encaissée', () => {
+    const e = etat({ lecon1: 1, quiz80: 1 })
+    expect(quetesAAnnoncer(e, []).map((q) => q.id)).toEqual(['lecon1', 'quiz80'])
+    expect(quetesAAnnoncer(e, ['lecon1']).map((q) => q.id)).toEqual(['quiz80'])
+    expect(quetesAAnnoncer(etat({ lecon1: 1 }, ['lecon1']), [])).toEqual([])
   })
 })

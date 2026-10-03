@@ -158,12 +158,12 @@ describe('rendu DiceBear', () => {
 
 // --- Le portrait (blason peint, lib/portraits) — 16/09/2026 -------------------
 describe('portrait', () => {
-  it('est un champ libre, optionnel, dont les options sont les clés de lib/portraits', () => {
+  it('est un champ libre, OBLIGATOIRE (plus d’avatar dessiné), dont les options sont les clés de lib/portraits', () => {
     const field = freeAvatarField('portrait')
     expect(field).not.toBeNull()
-    expect(field?.allowNone).toBe(true)
+    expect(field?.allowNone).toBe(false)
     expect(field?.options).toEqual(PORTRAIT_KEYS)
-    expect(DEFAULT_AVATAR.portrait).toBe('')
+    expect(DEFAULT_AVATAR.portrait).toBe(PORTRAIT_KEYS[0])
   })
 
   it('normalise une config qui ne porte que le portrait (le JSON du metadata d’inscription)', () => {
@@ -174,21 +174,22 @@ describe('portrait', () => {
     expect(cfg.banner).toBe(DEFAULT_AVATAR.banner)
   })
 
-  it('rejette un portrait hors liste, et une vieille config sans portrait reste sans portrait', () => {
-    expect(normalizeAvatarConfig({ portrait: '99' }).portrait).toBe('')
-    expect(normalizeAvatarConfig({ portrait: 7 }).portrait).toBe('')
-    expect(normalizeAvatarConfig({ head: 'afro' }).portrait).toBe('')
+  it('rejette un portrait hors liste, et une vieille config sans portrait reçoit le premier blason', () => {
+    expect(normalizeAvatarConfig({ portrait: '99' }).portrait).toBe(PORTRAIT_KEYS[0])
+    expect(normalizeAvatarConfig({ portrait: 7 }).portrait).toBe(PORTRAIT_KEYS[0])
+    expect(normalizeAvatarConfig({ portrait: '' }).portrait).toBe(PORTRAIT_KEYS[0])
+    expect(normalizeAvatarConfig({ head: 'afro' }).portrait).toBe(PORTRAIT_KEYS[0])
   })
 
-  it('avatarPortraitSrc rend l’URL du blason, ou null pour l’avatar composé', () => {
+  it('avatarPortraitSrc rend l’URL du blason, ou null pour une config brute sans blason', () => {
     expect(avatarPortraitSrc({ ...DEFAULT_AVATAR, portrait: '2' })).toBe('/images/profil/2.webp')
-    expect(avatarPortraitSrc(DEFAULT_AVATAR)).toBeNull()
+    expect(avatarPortraitSrc({ ...DEFAULT_AVATAR, portrait: '' })).toBeNull()
   })
 
-  it('se choisit et se retire librement, sans passer par la caisse', () => {
+  it('se choisit librement, sans passer par la caisse, mais ne se retire pas', () => {
     const avec = applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', '14')
     expect(avec.portrait).toBe('14')
-    expect(applyFreeAvatarField(avec, 'portrait', '').portrait).toBe('')
+    expect(applyFreeAvatarField(avec, 'portrait', '')).toBe(avec)
     // Hors liste : config inchangée (même référence), rien à écrire.
     expect(applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', 'nawak')).toBe(DEFAULT_AVATAR)
   })

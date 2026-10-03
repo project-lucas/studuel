@@ -1,0 +1,3231 @@
+{
+ "niveau": "6e",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "6189bb4a-dbc2-592e-86e6-046830208547",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans la chambre de Zoe",
+   "competence": "observer-schema",
+   "situation": "Zoe, 11 ans, te fait visiter sa chambre à Brighton. Elle montre des objets proches d’elle et d’autres plus loin. Regarde bien où chaque objet se trouve.",
+   "documents": [
+    {
+     "id": "chambre",
+     "type": "schema",
+     "titre": "Zoe’s bedroom",
+     "source": "Schéma dessiné pour l’exercice",
+     "largeur": 320,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        20
+       ],
+       "a": [
+        170,
+        190
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 22,
+       "texte": "near Zoe",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 245,
+       "y": 22,
+       "texte": "far from Zoe",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 32,
+       "y": 112,
+       "emoji": "🧒",
+       "taille": 44,
+       "id": "zoe"
+      },
+      {
+       "forme": "texte",
+       "x": 32,
+       "y": 140,
+       "texte": "Zoe",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 105,
+       "y": 80,
+       "emoji": "📖",
+       "taille": 34,
+       "id": "book",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 110,
+       "texte": "a book",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 105,
+       "y": 150,
+       "emoji": "✏️✏️",
+       "taille": 32,
+       "id": "pencils",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 180,
+       "texte": "two pencils",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 250,
+       "y": 70,
+       "emoji": "⏰",
+       "taille": 34,
+       "id": "clock",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 100,
+       "texte": "a clock",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 250,
+       "y": 150,
+       "emoji": "🐦🐦",
+       "taille": 32,
+       "id": "birds",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 180,
+       "texte": "two birds",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chambre",
+     "enonce": "Zoe montre ses oiseaux de loin et dit : “**Those** are my pets!” Touche l’objet dont elle parle.",
+     "reponse": [
+      "birds"
+     ],
+     "aide": "Those = éloigné + pluriel. Cherche, de l’autre côté du trait, des objets au pluriel.",
+     "explication": "**Les deux oiseaux** : *those* s’emploie pour des objets **éloignés** et au **pluriel**. Les crayons sont au pluriel mais près de Zoe : on dirait *these*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit Zoe.",
+     "texte": "___ is my book. ___ is my clock.",
+     "reponses": [
+      [
+       "this"
+      ],
+      [
+       "that"
+      ]
+     ],
+     "banque": [
+      "this",
+      "that",
+      "these",
+      "those"
+     ],
+     "aide": "Le livre est près de Zoe, l’horloge est loin. Les deux objets sont au singulier.",
+     "explication": "**This** is my book (proche, singulier) et **that** is my clock (éloigné, singulier). *These* et *those* sont pour le pluriel."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque objet au bon démonstratif.",
+     "paires": [
+      [
+       "the book",
+       "this"
+      ],
+      [
+       "the pencils",
+       "these"
+      ],
+      [
+       "the clock",
+       "that"
+      ],
+      [
+       "the birds",
+       "those"
+      ]
+     ],
+     "aide": "Pose-toi deux questions : proche ou éloigné ? singulier ou pluriel ?",
+     "explication": "**this** book (proche, 1) · **these** pencils (proches, 2) · **that** clock (éloignée, 1) · **those** birds (éloignés, 2)."
+    }
+   ]
+  },
+  {
+   "chapitre": "6189bb4a-dbc2-592e-86e6-046830208547",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une fête chez Ben",
+   "competence": "comprendre-langue",
+   "situation": "Ben invite Emma à sa fête d’anniversaire. Il lui présente son frère et ses amis, et ils parlent de ce qu’ils voient autour d’eux.",
+   "documents": [
+    {
+     "id": "fete",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "At the party",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "droite"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "🧑",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "Emma, this is my brother, Sam."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Hi, Sam! Is [[f|that]] your football over there?"
+      },
+      {
+       "qui": "Sam",
+       "texte": "Yes, it is. And [[f|those]] boys are in my team."
+      },
+      {
+       "qui": "Emma",
+       "texte": "Nice! What are these on the table?"
+      },
+      {
+       "qui": "Ben",
+       "texte": "These are our new trainers."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fete",
+     "enonce": "Touche les **deux** démonstratifs qui parlent de quelque chose d’**éloigné**.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Emma et Sam parlent de choses “over there”, là-bas. Quels mots les montrent de loin ?",
+     "explication": "**that** (le ballon, loin, singulier) et **those** (les garçons, loin, pluriel). *This* et *these* parlent de ce qui est près."
+    },
+    {
+     "type": "choix",
+     "enonce": "Emma demande : “What are **these** on the table?” Pourquoi dit-elle *these* ?",
+     "options": [
+      "Les objets sont proches et au pluriel.",
+      "Les objets sont proches et au singulier.",
+      "Les objets sont éloignés et au pluriel.",
+      "Les objets sont éloignés et au singulier."
+     ],
+     "reponse": 0,
+     "aide": "These = le pluriel de this. Et this sert pour ce qui est près.",
+     "explication": "*These* = **proche + pluriel**. La réponse de Ben (“These are our new trainers”) montre bien plusieurs chaussures, tout près d’eux."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Emma montre des chaussures de foot sur une étagère, loin d’elle. Remets sa phrase dans l’ordre.",
+     "items": [
+      "Those",
+      "boots",
+      "are",
+      "new"
+     ],
+     "aide": "Les chaussures sont loin et il y en a plusieurs : quel démonstratif ouvre la phrase ?",
+     "explication": "**Those boots are new.** : démonstratif, nom, verbe *be*, adjectif. On choisit *those* : éloigné + pluriel."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à la bonne phrase.",
+     "paires": [
+      [
+       "Présenter ton frère",
+       "This is my brother."
+      ],
+      [
+       "Te présenter au téléphone",
+       "Hello, this is Ben."
+      ],
+      [
+       "Demander ce qu’il y a là-bas",
+       "What’s that?"
+      ],
+      [
+       "Parler de choses près de toi",
+       "These are my trainers."
+      ]
+     ],
+     "aide": "Au téléphone et pour présenter quelqu’un, l’anglais emploie this. Pour ce qui est loin, that.",
+     "explication": "On dit **this** pour présenter quelqu’un ou se présenter au téléphone, **that** pour ce qui est loin, **these** pour plusieurs choses proches."
+    }
+   ]
+  },
+  {
+   "chapitre": "6189bb4a-dbc2-592e-86e6-046830208547",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une carte postale de Londres",
+   "competence": "comprendre-langue",
+   "situation": "Jack passe une semaine à Londres avec sa classe. Il écrit une carte postale à son amie Lucie, puis il rédige le début d’une deuxième carte. Les petits mots comptent : près ou loin, un seul ou plusieurs ?",
+   "documents": [
+    {
+     "id": "carte1",
+     "type": "fiche",
+     "modele": "carte-postale",
+     "titre": "Postcard 1",
+     "source": "Carte écrite pour l’exercice",
+     "entete": "Hello from London!",
+     "sousTitre": "To: Lucie",
+     "emoji": "💂",
+     "teinte": "corail",
+     "lignes": [
+      {
+       "texte": "This morning we are at the Tower of London.",
+       "id": "matin"
+      },
+      {
+       "texte": "These birds near me are ravens.",
+       "id": "ravens"
+      },
+      {
+       "texte": "That bridge over there is Tower Bridge.",
+       "id": "pont"
+      },
+      {
+       "texte": "Those buses over there are red.",
+       "id": "bus"
+      },
+      {
+       "texte": "These days it is cold here.",
+       "id": "jours"
+      },
+      {
+       "texte": "This is my new friend, Ollie.",
+       "id": "ollie"
+      }
+     ],
+     "pied": "See you soon! — Jack"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte1",
+     "enonce": "Deux lignes parlent d’un **moment** (et non d’un objet ou d’une personne). Touche-les.",
+     "reponse": [
+      "matin",
+      "jours"
+     ],
+     "aide": "Cherche des expressions qui disent quand : le matin, ces jours-ci.",
+     "explication": "**This morning** (ce matin) et **these days** (ces jours-ci) sont des expressions de temps. Dans les autres lignes, les démonstratifs montrent des oiseaux, un pont, des bus, un ami."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces phrases de la carte selon ce que le démonstratif montre.",
+     "categories": [
+      "Près de Jack",
+      "Loin de Jack"
+     ],
+     "items": [
+      [
+       "These birds near me are ravens.",
+       0
+      ],
+      [
+       "This is my new friend, Ollie.",
+       0
+      ],
+      [
+       "That bridge over there is Tower Bridge.",
+       1
+      ],
+      [
+       "Those buses over there are red.",
+       1
+      ]
+     ],
+     "aide": "Cherche les petits mots “near me” ou “over there”, puis vérifie que le démonstratif est d’accord.",
+     "explication": "**Près** : these (birds) et this (Ollie). **Loin** : that (bridge) et those (buses). Le choix dépend de la distance ET du nombre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Jack écrit une deuxième carte. Complète-la avec le bon démonstratif.",
+     "texte": "___ days the weather is cold. ___ picture here is beautiful. ___ statue over there is old. ___ dinosaurs over there are big.",
+     "reponses": [
+      [
+       "these"
+      ],
+      [
+       "this"
+      ],
+      [
+       "that"
+      ],
+      [
+       "those"
+      ]
+     ],
+     "banque": [
+      "this",
+      "that",
+      "these",
+      "those"
+     ],
+     "aide": "Pour chaque trou : regarde le nom (singulier ou pluriel) et le petit mot “here” ou “over there”.",
+     "explication": "**These** days (expression du présent, pluriel) · **This** picture here (proche, singulier) · **That** statue over there (loin, singulier) · **Those** dinosaurs over there (loin, pluriel)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "Those books are old.",
+      "Those book are old.",
+      "That books are old.",
+      "This books are old."
+     ],
+     "reponse": 0,
+     "aide": "Le nom “books” est au pluriel : le démonstratif doit l’être aussi.",
+     "explication": "**Those books are old.** : *books* est pluriel, donc *these* ou *those*. *That* et *this* sont des singuliers, et *Those book* ne s’accorde pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fefaa83-c23d-51ce-ae85-da9c9c22a34b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La boîte des objets trouvés",
+   "competence": "lire-tableau",
+   "situation": "À la fin de la journée, Mme Cole range la boîte des objets trouvés de l’école. Chaque objet a un propriétaire.",
+   "documents": [
+    {
+     "id": "objets",
+     "type": "tableau",
+     "titre": "Lost property",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Object",
+      "Owner"
+     ],
+     "lignes": [
+      [
+       "the football",
+       "Tom"
+      ],
+      [
+       "the red bag",
+       "Maya"
+      ],
+      [
+       "the keys",
+       "Mr Dean"
+      ],
+      [
+       "the notebook",
+       "Ana"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "objets",
+     "enonce": "Touche le nom du propriétaire du sac rouge.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Trouve d’abord la ligne “the red bag”, puis lis la colonne Owner.",
+     "explication": "Le sac rouge est à **Maya**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les phrases de Mme Cole.",
+     "texte": "This is ___ red bag. These are ___ keys.",
+     "reponses": [
+      [
+       "Maya’s"
+      ],
+      [
+       "Mr Dean’s"
+      ]
+     ],
+     "banque": [
+      "Maya’s",
+      "Mayas",
+      "Maya",
+      "Mr Dean’s",
+      "Mr Deans",
+      "Mr Dean"
+     ],
+     "aide": "Pour dire “le sac de Maya”, on met le possesseur d’abord, puis ’s, puis l’objet.",
+     "explication": "**Maya’s** red bag et **Mr Dean’s** keys : possesseur + ’s + objet. On n’emploie pas *of* pour une personne."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Mme Cole montre le cahier. Remets sa phrase dans l’ordre.",
+     "items": [
+      "It",
+      "is",
+      "Ana’s",
+      "notebook"
+     ],
+     "aide": "Le possesseur avec ’s se place juste devant l’objet.",
+     "explication": "**It is Ana’s notebook.** : le possesseur (*Ana’s*) vient avant l’objet, à l’inverse du français « le cahier d’Ana »."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fefaa83-c23d-51ce-ae85-da9c9c22a34b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’album photo de la famille",
+   "competence": "manier-langue",
+   "situation": "Léa prépare son album photo et écrit une légende sous chaque photo. À toi de choisir le bon adjectif possessif : il s’accorde avec la personne qui possède, pas avec l’objet.",
+   "documents": [
+    {
+     "id": "album",
+     "type": "tableau",
+     "titre": "Photo album",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Owner",
+      "Who is it?",
+      "Thing"
+     ],
+     "lignes": [
+      [
+       "Ben",
+       "a boy",
+       "a bike"
+      ],
+      [
+       "Lisa",
+       "a girl",
+       "a guitar"
+      ],
+      [
+       "the house",
+       "a building",
+       "a garden"
+      ],
+      [
+       "Ben and Lisa",
+       "two children",
+       "a tent"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "album",
+     "enonce": "Dans quelle case lis-tu le possesseur qui demande **its** ?",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Its se dit quand le possesseur n’est ni une personne ni un groupe de personnes.",
+     "explication": "**The house** : une maison n’est ni un garçon ni une fille, on dit donc *its garden*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les légendes avec le bon adjectif possessif.",
+     "texte": "This is ___ bike. This is ___ guitar. This is ___ garden. This is ___ tent.",
+     "reponses": [
+      [
+       "his"
+      ],
+      [
+       "her"
+      ],
+      [
+       "its"
+      ],
+      [
+       "their"
+      ]
+     ],
+     "banque": [
+      "his",
+      "her",
+      "its",
+      "their",
+      "my",
+      "our"
+     ],
+     "aide": "Regarde qui possède chaque objet : un garçon, une fille, une maison, deux enfants.",
+     "explication": "**his** bike (Ben, un garçon) · **her** guitar (Lisa, une fille) · **its** garden (la maison) · **their** tent (Ben et Lisa)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque adjectif possessif à son pronom possessif.",
+     "paires": [
+      [
+       "my",
+       "mine"
+      ],
+      [
+       "your",
+       "yours"
+      ],
+      [
+       "her",
+       "hers"
+      ],
+      [
+       "our",
+       "ours"
+      ],
+      [
+       "their",
+       "theirs"
+      ]
+     ],
+     "aide": "Le pronom remplace tout le groupe : “my book” devient “mine”.",
+     "explication": "my → **mine** · your → **yours** · her → **hers** · our → **ours** · their → **theirs**. Le pronom s’emploie sans nom derrière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "The dog likes its ball.",
+      "The dog likes it’s ball.",
+      "The dog likes the ball its.",
+      "The dog likes ball its."
+     ],
+     "reponse": 0,
+     "aide": "It’s veut toujours dire “it is”. Et l’adjectif se place devant le nom.",
+     "explication": "**its ball** : *its* (sans apostrophe) est le possessif. *It’s* = *it is*."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fefaa83-c23d-51ce-ae85-da9c9c22a34b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chiot de Mia",
+   "competence": "manier-langue",
+   "situation": "Mia a un nouveau chiot et en parle à son ami Jake par message. Dans la même journée, la classe prépare une exposition : à toi de dire à qui appartiennent les objets.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mia et Jake",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jake",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Look at my new puppy! Its name is Coco."
+      },
+      {
+       "qui": "Jake",
+       "texte": "Cute! Is it your parents’ dog?"
+      },
+      {
+       "qui": "Mia",
+       "texte": "No, it is mine. Coco loves [[e|it’s]] new bed, too."
+      }
+     ]
+    },
+    {
+     "id": "expo",
+     "type": "tableau",
+     "titre": "The exhibition",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Thing",
+      "Owner"
+     ],
+     "lignes": [
+      [
+       "a bike",
+       "Paul"
+      ],
+      [
+       "a car",
+       "my parents"
+      ],
+      [
+       "a room",
+       "the children"
+      ],
+      [
+       "some bags",
+       "the girls"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Dans le dernier message de Mia, un mot est faux. Touche-le.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Le mot veut dire “son” (le lit du chiot). Est-ce que “it is new bed” a un sens ?",
+     "explication": "Il faut **its** (le possessif), pas *it’s*, qui signifie *it is*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les légendes de l’exposition.",
+     "texte": "This is ___ bike. This is ___ car. This is ___ room. These are ___ bags.",
+     "reponses": [
+      [
+       "Paul’s"
+      ],
+      [
+       "my parents’"
+      ],
+      [
+       "the children’s"
+      ],
+      [
+       "the girls’"
+      ]
+     ],
+     "banque": [
+      "Paul’s",
+      "Pauls",
+      "my parents’",
+      "my parents’s",
+      "the children’s",
+      "the childrens’",
+      "the girls’",
+      "the girl’s"
+     ],
+     "aide": "Pluriel en -s : on ajoute seulement l’apostrophe. Pluriel irrégulier (children) : on garde ’s.",
+     "explication": "**Paul’s** bike · **my parents’** car (pluriel en -s) · **the children’s** room (pluriel irrégulier) · **the girls’** bags (pluriel en -s)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces mots selon leur emploi.",
+     "categories": [
+      "Adjectif possessif (devant un nom)",
+      "Pronom possessif (seul)"
+     ],
+     "items": [
+      [
+       "my",
+       0
+      ],
+      [
+       "mine",
+       1
+      ],
+      [
+       "their",
+       0
+      ],
+      [
+       "theirs",
+       1
+      ],
+      [
+       "her",
+       0
+      ],
+      [
+       "hers",
+       1
+      ]
+     ],
+     "aide": "Un pronom ne peut pas être suivi d’un nom : “mine” se dit seul.",
+     "explication": "On écrit **my / their / her** + nom, mais **mine / theirs / hers** tout seuls : “It is mine.”"
+    },
+    {
+     "type": "choix",
+     "enonce": "Mia répond : “No, it is **mine**.” Que remplace *mine* ?",
+     "options": [
+      "my puppy",
+      "your puppy",
+      "her puppy",
+      "their puppy"
+     ],
+     "reponse": 0,
+     "aide": "Mia parle d’elle : quel adjectif possessif correspond à “I” ?",
+     "explication": "**Mine** = *my puppy* (I → my → mine). Le chiot est à Mia."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad4cd5f4-49f1-5bb3-abc1-ab77aa0431c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans le frigo des Smith",
+   "competence": "comprendre-langue",
+   "situation": "Ella ouvre le frigo avec sa maman, à Manchester. Elles regardent ce qu’il reste avant de faire les courses.",
+   "documents": [
+    {
+     "id": "frigo",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "In the kitchen",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Mum",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ella",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mum",
+       "texte": "Is there [[a|any]] milk in the fridge?"
+      },
+      {
+       "qui": "Ella",
+       "texte": "Yes, there is some milk and there are some eggs."
+      },
+      {
+       "qui": "Mum",
+       "texte": "And there aren’t [[a|any]] apples. We need to go shopping!"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frigo",
+     "enonce": "Touche les **deux** mots *any* de la conversation.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Ils sont dans une question et dans une phrase négative.",
+     "explication": "**any** s’emploie dans les questions (*Is there any milk?*) et les négations (*There aren’t any apples*). Dans une phrase affirmative, on dit *some*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit Ella.",
+     "texte": "There ___ some milk. There ___ some eggs. Is there ___ cheese?",
+     "reponses": [
+      [
+       "is"
+      ],
+      [
+       "are"
+      ],
+      [
+       "any"
+      ]
+     ],
+     "banque": [
+      "is",
+      "are",
+      "any",
+      "some"
+     ],
+     "aide": "Le lait ne se compte pas ; les œufs, si. Et la dernière phrase est une question.",
+     "explication": "There **is** (singulier ou indénombrable) some milk · there **are** (pluriel) some eggs · is there **any** cheese ? (question)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ella demande poliment du jus de fruit : “Can I have ___ juice, please?”",
+     "options": [
+      "some",
+      "any",
+      "many",
+      "much"
+     ],
+     "reponse": 0,
+     "aide": "Quand on demande ou qu’on propose quelque chose, il y a une exception à la règle de la question.",
+     "explication": "**some** : dans une question où l’on demande ou propose quelque chose, on garde *some*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad4cd5f4-49f1-5bb3-abc1-ab77aa0431c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fête de Jess",
+   "competence": "lire-tableau",
+   "situation": "Jess organise une fête dans son jardin. Elle a noté ce qu’elle a déjà acheté.",
+   "documents": [
+    {
+     "id": "courses",
+     "type": "tableau",
+     "titre": "Jess’s party list",
+     "source": "Liste écrite pour l’exercice",
+     "colonnes": [
+      "Thing",
+      "Quantity"
+     ],
+     "lignes": [
+      [
+       "apples",
+       "12"
+      ],
+      [
+       "pizzas",
+       "8"
+      ],
+      [
+       "lemonade",
+       "10 litres"
+      ],
+      [
+       "juice",
+       "1 litre"
+      ],
+      [
+       "chairs",
+       "2"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range les articles de la liste.",
+     "categories": [
+      "How many…?",
+      "How much…?"
+     ],
+     "items": [
+      [
+       "apples",
+       0
+      ],
+      [
+       "pizzas",
+       0
+      ],
+      [
+       "chairs",
+       0
+      ],
+      [
+       "lemonade",
+       1
+      ],
+      [
+       "juice",
+       1
+      ]
+     ],
+     "aide": "Peut-on compter les choses une par une ? On dit “three apples” mais pas “three lemonades”.",
+     "explication": "**How many** pour ce qu’on compte (apples, pizzas, chairs) · **how much** pour ce qu’on ne compte pas (lemonade, juice)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les phrases de Jess.",
+     "texte": "There are ___ apples. There are only ___ chairs. There is only ___ juice.",
+     "reponses": [
+      [
+       "a lot of"
+      ],
+      [
+       "a few"
+      ],
+      [
+       "a little"
+      ]
+     ],
+     "aide": "Regarde les quantités : beaucoup, très peu (on compte), très peu (on ne compte pas).",
+     "explication": "**a lot of** apples (12) · only **a few** chairs (2, dénombrable) · only **a little** juice (1 litre, indénombrable).",
+     "banque": [
+      "a lot of",
+      "a few",
+      "a little",
+      "much",
+      "any"
+     ]
+    },
+    {
+     "type": "choix",
+     "enonce": "Jess demande à sa mère : “How ___ lemonade is there ?”",
+     "options": [
+      "much",
+      "many",
+      "few",
+      "a few"
+     ],
+     "reponse": 0,
+     "aide": "La limonade se compte-t-elle en unités ?",
+     "explication": "**much** : *lemonade* est indénombrable, donc *How much lemonade…?*. On réserve *many* aux noms qu’on compte."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Jess veut savoir combien de jus il reste. Remets sa question dans l’ordre.",
+     "items": [
+      "How",
+      "much",
+      "juice",
+      "is",
+      "there"
+     ],
+     "aide": "La question commence par how much, puis le nom, puis is there.",
+     "explication": "**How much juice is there ?** : *How much* + nom indénombrable + *is there*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad4cd5f4-49f1-5bb3-abc1-ab77aa0431c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les crêpes d’Ana",
+   "competence": "manier-langue",
+   "situation": "Ana veut préparer des crêpes. Elle regarde sa recette puis part acheter ce qui manque chez le commerçant du coin.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "titre": "Ana’s pancakes",
+     "source": "Recette écrite pour l’exercice",
+     "entete": "Pancakes",
+     "sousTitre": "For four people",
+     "emoji": "🥞",
+     "teinte": "ambre",
+     "lignes": [
+      {
+       "texte": "**You need:**"
+      },
+      {
+       "texte": "two eggs",
+       "id": "eggs"
+      },
+      {
+       "texte": "some flour",
+       "id": "flour"
+      },
+      {
+       "texte": "some milk",
+       "id": "milk"
+      },
+      {
+       "texte": "a little sugar",
+       "id": "sugar"
+      },
+      {
+       "texte": "a few strawberries",
+       "id": "straw"
+      }
+     ],
+     "pied": "Enjoy!"
+    },
+    {
+     "id": "boutique",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "At the shop",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Shopkeeper",
+       "emoji": "🧑‍🍳",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ana",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Shopkeeper",
+       "texte": "Good morning! Can I help you?"
+      },
+      {
+       "qui": "Ana",
+       "texte": "Yes, please. Do you have any eggs?"
+      },
+      {
+       "qui": "Shopkeeper",
+       "texte": "Yes, we have some eggs, but we don’t have many strawberries."
+      },
+      {
+       "qui": "Ana",
+       "texte": "No problem. Can I have [[s|some]] milk, please?"
+      },
+      {
+       "qui": "Shopkeeper",
+       "texte": "Of course! Would you like [[s|some]] butter too?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range les ingrédients de la recette.",
+     "categories": [
+      "On les compte",
+      "On ne les compte pas"
+     ],
+     "items": [
+      [
+       "eggs",
+       0
+      ],
+      [
+       "strawberries",
+       0
+      ],
+      [
+       "flour",
+       1
+      ],
+      [
+       "milk",
+       1
+      ],
+      [
+       "sugar",
+       1
+      ]
+     ],
+     "aide": "On dit “two eggs” mais pas “two flours”.",
+     "explication": "**Dénombrables** : eggs, strawberries · **indénombrables** : flour, milk, sugar. C’est ce qui décide entre *many/few* et *much/little*."
+    },
+    {
+     "type": "zone",
+     "document": "boutique",
+     "enonce": "Dans la conversation, **deux** *some* sont dans une **question**. Touche-les.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Ana demande quelque chose, puis le commerçant propose quelque chose.",
+     "explication": "On garde **some** dans une question quand on **demande** (*Can I have some milk?*) ou qu’on **propose** (*Would you like some butter?*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Ana vérifie sa recette. Complète ses questions.",
+     "texte": "How ___ eggs do we need? How ___ milk do we need?",
+     "reponses": [
+      [
+       "many"
+      ],
+      [
+       "much"
+      ]
+     ],
+     "banque": [
+      "many",
+      "much",
+      "few",
+      "little"
+     ],
+     "aide": "Les œufs se comptent ; le lait non.",
+     "explication": "How **many** eggs (dénombrable) · how **much** milk (indénombrable)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le commerçant dit : “We don’t have **many** strawberries.” Que veut-il dire ?",
+     "options": [
+      "Il y a peu de fraises, ce n’est pas assez.",
+      "Il y a beaucoup de fraises.",
+      "Il n’y a pas de lait.",
+      "Il y a quelques fraises, c’est largement assez."
+     ],
+     "reponse": 0,
+     "aide": "Dans une négation, many dit “pas beaucoup”.",
+     "explication": "**Pas beaucoup de fraises** : *don’t have many* annonce un manque. Pour dire « quelques » de façon positive, on dirait *a few*."
+    }
+   ]
+  },
+  {
+   "chapitre": "c625d09a-d589-5f5b-b4be-f8c4a7b72dd4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La chambre de Zoe, en mots",
+   "competence": "comprendre-langue",
+   "situation": "Zoe décrit sa chambre dans un petit texte pour son correspondant. Les adjectifs, ces mots qui disent comment sont les choses, sont partout.",
+   "documents": [
+    {
+     "id": "chambre",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "My bedroom",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Zoe has a [[a|small]] bedroom. There is a [[a|blue]] bed, a [[a|big]] window and two [[a|green]] chairs. On the wall, there is a [[a|yellow]] clock."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chambre",
+     "enonce": "Touche **tous** les adjectifs du texte (ils disent comment sont les choses).",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il y a cinq adjectifs : trois couleurs, et deux mots qui disent la taille.",
+     "explication": "**small, blue, big, green, yellow** : ce sont les adjectifs. Ils se placent devant le nom et ne changent jamais (*two green chairs*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Zoe décrit son sac. Remets la phrase dans l’ordre.",
+     "items": [
+      "She",
+      "has",
+      "a",
+      "big",
+      "blue",
+      "bag"
+     ],
+     "aide": "La taille se dit avant la couleur, et les deux avant le nom.",
+     "explication": "**She has a big blue bag.** : ordre taille → couleur, puis le nom."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque expression française à sa traduction.",
+     "paires": [
+      [
+       "une chaise verte",
+       "a green chair"
+      ],
+      [
+       "deux chaises vertes",
+       "two green chairs"
+      ],
+      [
+       "un grand lit",
+       "a big bed"
+      ],
+      [
+       "une petite fenêtre",
+       "a small window"
+      ]
+     ],
+     "aide": "L’adjectif anglais va devant le nom et ne prend jamais de -s.",
+     "explication": "L’adjectif est **devant** le nom et **invariable** : *a green chair* / *two green chairs* (jamais *greens*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c625d09a-d589-5f5b-b4be-f8c4a7b72dd4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La sortie de classe",
+   "competence": "manier-langue",
+   "situation": "Leo et Mia discutent par messages le jour d’une sortie scolaire. L’un s’ennuie, l’autre est ravie, et le bus est un peu chaud.",
+   "documents": [
+    {
+     "id": "sortie",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "School trip",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Leo",
+       "texte": "I am very [[f|bored]]. This lesson is boring."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Really? I am [[f|excited]]. The school trip is exciting!"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Yes, but the bus is too hot and I am [[f|tired]]."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sortie",
+     "enonce": "Touche les **trois** adjectifs qui disent ce que **ressent** une personne (terminaison **-ed**).",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Cherche des mots en -ed après “I am”.",
+     "explication": "**bored, excited, tired** décrivent ce que Leo et Mia ressentent. Les mots en *-ing* (*boring*, *exciting*) décrivent ce qui provoque le sentiment."
+    },
+    {
+     "type": "trous",
+     "enonce": "Leo parle du film de la sortie. Complète.",
+     "texte": "The film is ___. I am ___.",
+     "reponses": [
+      [
+       "boring"
+      ],
+      [
+       "bored"
+      ]
+     ],
+     "banque": [
+      "boring",
+      "bored",
+      "tired",
+      "exciting"
+     ],
+     "aide": "Le film provoque l’ennui ; Leo ressent l’ennui.",
+     "explication": "The film is **boring** (il provoque l’ennui) · I am **bored** (je m’ennuie). Dire *I am boring*, ce serait « je suis ennuyeux »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Leo dit : “The bus is **too** hot.” Quelle phrase a le même sens ?",
+     "options": [
+      "The bus is hot and that is a problem.",
+      "The bus is hot and that is nice.",
+      "The bus is not hot.",
+      "The bus is a little hot, and it is perfect."
+     ],
+     "reponse": 0,
+     "aide": "Too exprime un excès : plus que ce qu’on veut.",
+     "explication": "**Too** = trop : c’est un problème. *Very hot* serait un simple constat."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Mia décrit son chat. Remets sa phrase dans l’ordre.",
+     "items": [
+      "She",
+      "has",
+      "a",
+      "small",
+      "old",
+      "black",
+      "cat"
+     ],
+     "aide": "Ordre des adjectifs : taille, âge, couleur.",
+     "explication": "**She has a small old black cat.** : taille → âge → couleur."
+    }
+   ]
+  },
+  {
+   "chapitre": "c625d09a-d589-5f5b-b4be-f8c4a7b72dd4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un sac perdu et des correspondants",
+   "competence": "manier-langue",
+   "situation": "À Londres, Luca a perdu son sac. Il écrit une affiche pour le retrouver. Plus tard, il présente ses correspondants à la classe.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Lost bag",
+     "source": "Affiche écrite pour l’exercice",
+     "entete": "LOST!",
+     "sousTitre": "A nice big old brown bag",
+     "emoji": "🎒",
+     "teinte": "brun",
+     "lignes": [
+      {
+       "texte": "nice",
+       "id": "a1"
+      },
+      {
+       "texte": "big",
+       "id": "a2"
+      },
+      {
+       "texte": "old",
+       "id": "a3"
+      },
+      {
+       "texte": "brown",
+       "id": "a4"
+      }
+     ],
+     "pied": "Please call Luca at school."
+    },
+    {
+     "id": "amis",
+     "type": "tableau",
+     "titre": "Pen friends",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Name",
+      "Country"
+     ],
+     "lignes": [
+      [
+       "Marta",
+       "Spain"
+      ],
+      [
+       "Luca",
+       "Italy"
+      ],
+      [
+       "Pierre",
+       "France"
+      ],
+      [
+       "Emma",
+       "England"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range ces adjectifs selon ce qu’ils décrivent.",
+     "categories": [
+      "Opinion",
+      "Taille",
+      "Âge",
+      "Couleur"
+     ],
+     "items": [
+      [
+       "nice",
+       0
+      ],
+      [
+       "lovely",
+       0
+      ],
+      [
+       "big",
+       1
+      ],
+      [
+       "small",
+       1
+      ],
+      [
+       "old",
+       2
+      ],
+      [
+       "brown",
+       3
+      ]
+     ],
+     "aide": "L’ordre de l’affiche est : opinion, taille, âge, couleur.",
+     "explication": "**nice, lovely** = opinion · **big, small** = taille · **old** = âge · **brown** = couleur. L’ordre est : opinion → taille → âge → couleur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Luca présente ses correspondants. Complète avec la nationalité.",
+     "texte": "Marta is from Spain. She is ___. Luca is from Italy. He is ___.",
+     "reponses": [
+      [
+       "Spanish"
+      ],
+      [
+       "Italian"
+      ]
+     ],
+     "aide": "La nationalité se déduit du pays, et se dit sans article : “She is …”.",
+     "explication": "Marta est **Spanish**, Luca est **Italian**. Les nationalités prennent une majuscule et s’emploient sans article."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Luca décrit sa voiture. Remets la phrase dans l’ordre.",
+     "items": [
+      "Luca",
+      "has",
+      "a",
+      "nice",
+      "old",
+      "Italian",
+      "car"
+     ],
+     "aide": "Opinion, âge, origine, puis le nom.",
+     "explication": "**Luca has a nice old Italian car.** : opinion → âge → origine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "Pierre is French.",
+      "Pierre is Frenchs.",
+      "Pierre is a French.",
+      "Pierre is the French."
+     ],
+     "reponse": 0,
+     "aide": "Après be, une nationalité se dit sans article et sans -s.",
+     "explication": "**Pierre is French.** : l’adjectif de nationalité prend une majuscule, reste invariable (pas de -s) et se dit sans article."
+    }
+   ]
+  },
+  {
+   "chapitre": "dee815b8-34fa-5c98-a28e-31f31cfaa69f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche de Sam",
+   "competence": "comprendre-langue",
+   "situation": "Sam, un correspondant anglais, se présente sur une petite fiche. À toi de la lire et de parler de lui.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "Pen friend card",
+     "source": "Fiche écrite pour l’exercice",
+     "entete": "My card",
+     "sousTitre": "Pen friend",
+     "emoji": "🧒",
+     "teinte": "bleu",
+     "lignes": [
+      {
+       "texte": "Name: Sam",
+       "id": "nom"
+      },
+      {
+       "texte": "Age: 12",
+       "id": "age"
+      },
+      {
+       "texte": "Country: England",
+       "id": "pays"
+      },
+      {
+       "texte": "Cat: Mo",
+       "id": "chat"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "En français, on dit « Sam **a** 12 ans ». Touche la ligne qui donne cette information.",
+     "reponse": [
+      "age"
+     ],
+     "aide": "Cherche le mot Age.",
+     "explication": "La ligne **Age: 12** : en anglais, on dit *Sam is 12* (avec *be*, pas avec *have*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la présentation de Sam.",
+     "texte": "I ___ Sam. I ___ 12. My cat ___ Mo.",
+     "reponses": [
+      [
+       "am"
+      ],
+      [
+       "am"
+      ],
+      [
+       "is"
+      ]
+     ],
+     "banque": [
+      "am",
+      "is",
+      "are",
+      "have"
+     ],
+     "aide": "Avec I on emploie am ; avec un nom au singulier (my cat), on emploie is.",
+     "explication": "I **am** Sam · I **am** 12 (pas *I have 12*) · My cat **is** Mo."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Pose une question à Sam. Remets les mots dans l’ordre.",
+     "items": [
+      "Is",
+      "Sam",
+      "from",
+      "England"
+     ],
+     "aide": "Avec be, on inverse le verbe et le sujet : le verbe passe en premier.",
+     "explication": "**Is Sam from England ?** : *be* passe devant le sujet, sans *do*."
+    }
+   ]
+  },
+  {
+   "chapitre": "dee815b8-34fa-5c98-a28e-31f31cfaa69f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Il fait froid, j’ai faim",
+   "competence": "manier-langue",
+   "situation": "Leo rentre du foot avec sa maman. Il a faim, soif… et chaque fois, l’anglais utilise be là où le français dit « avoir ».",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "After football",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Mum",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mum",
+       "texte": "Are you hungry, Leo?"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Yes, I am. And I’m also thirsty!"
+      },
+      {
+       "qui": "Mum",
+       "texte": "Your sister [[n|isn’t]] hungry. She’s cold."
+      },
+      {
+       "qui": "Leo",
+       "texte": "Mum, you’re right. It’s cold today."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "enonce": "Touche la forme **négative** du verbe *be* dans la conversation.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Cherche un mot qui finit par n’t.",
+     "explication": "**isn’t** = *is not*. Avec *be*, la négation se fait avec *not* juste après le verbe."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase française à son équivalent anglais.",
+     "paires": [
+      [
+       "J’ai faim",
+       "I am hungry"
+      ],
+      [
+       "J’ai soif",
+       "I am thirsty"
+      ],
+      [
+       "J’ai froid",
+       "I am cold"
+      ],
+      [
+       "Tu as raison",
+       "You are right"
+      ],
+      [
+       "J’ai 12 ans",
+       "I am 12"
+      ]
+     ],
+     "aide": "Là où le français dit « avoir », l’anglais dit être.",
+     "explication": "On emploie **be** : *I am hungry / thirsty / cold*, *you are right*, *I am 12*. C’est le piège du chapitre."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Mum parle de la sœur de Leo. Remets la phrase dans l’ordre.",
+     "items": [
+      "My",
+      "sister",
+      "isn’t",
+      "hungry"
+     ],
+     "aide": "La négation se place juste après be.",
+     "explication": "**My sister isn’t hungry.** : sujet + *isn’t* + adjectif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme de *be*.",
+     "texte": "Yesterday we ___ at school but now we ___ at home.",
+     "reponses": [
+      [
+       "were"
+      ],
+      [
+       "are"
+      ]
+     ],
+     "banque": [
+      "was",
+      "were",
+      "am",
+      "are"
+     ],
+     "aide": "Hier = passé ; maintenant = présent. Le sujet est we dans les deux cas.",
+     "explication": "Yesterday we **were** at school (prétérit de *be*, pour we) · now we **are** at home (présent)."
+    }
+   ]
+  },
+  {
+   "chapitre": "dee815b8-34fa-5c98-a28e-31f31cfaa69f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Samedi à la plage",
+   "competence": "lire-tableau",
+   "situation": "Trois élèves racontent leur samedi. Un tableau dit où ils étaient, et une carte postale montre la plage.",
+   "documents": [
+    {
+     "id": "samedi",
+     "type": "tableau",
+     "titre": "On Saturday",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Name",
+      "Morning",
+      "Afternoon"
+     ],
+     "lignes": [
+      [
+       "Tom",
+       "park",
+       "cinema"
+      ],
+      [
+       "Lily",
+       "library",
+       "swimming pool"
+      ],
+      [
+       "Ben and Zoe",
+       "beach",
+       "beach"
+      ]
+     ]
+    },
+    {
+     "id": "plage",
+     "type": "fiche",
+     "modele": "carte-postale",
+     "titre": "Beach photo",
+     "source": "Carte écrite pour l’exercice",
+     "entete": "The beach",
+     "sousTitre": "Saturday",
+     "emoji": "🏖️",
+     "teinte": "bleu",
+     "lignes": [
+      {
+       "texte": "There are two dogs on the sand.",
+       "id": "chiens"
+      },
+      {
+       "texte": "There is a red boat near the sea.",
+       "id": "bateau"
+      },
+      {
+       "texte": "There are three children in the water.",
+       "id": "enfants"
+      }
+     ],
+     "pied": "Great day!"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "samedi",
+     "enonce": "Où Lily **était**-elle samedi après-midi ? Touche la case.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Trouve la ligne Lily, puis la colonne Afternoon.",
+     "explication": "Lily **was** at the swimming pool in the afternoon."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le prétérit de *be*.",
+     "texte": "Tom ___ at the park in the morning. Ben and Zoe ___ at the beach. Tom ___ at the swimming pool.",
+     "reponses": [
+      [
+       "was"
+      ],
+      [
+       "were"
+      ],
+      [
+       "wasn’t",
+       "was not"
+      ]
+     ],
+     "aide": "I, he, she, it → was ; you, we, they → were. Le dernier trou est négatif : Tom n’y était pas.",
+     "explication": "Tom **was** at the park · Ben and Zoe **were** at the beach · Tom **wasn’t** at the swimming pool (il était au parc puis au cinéma)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets cette question dans l’ordre.",
+     "items": [
+      "Where",
+      "were",
+      "Ben",
+      "and",
+      "Zoe"
+     ],
+     "aide": "Where au début, puis be passe avant le sujet.",
+     "explication": "**Where were Ben and Zoe ?** : mot interrogatif, *were*, puis le sujet."
+    },
+    {
+     "type": "zone",
+     "document": "plage",
+     "enonce": "Touche la ligne qui emploie **there is** (un seul objet).",
+     "reponse": [
+      "bateau"
+     ],
+     "aide": "There is + singulier. Cherche un seul objet.",
+     "explication": "**There is a red boat…** : *there is* pour un seul objet, *there are* pour plusieurs (two dogs, three children)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans quel cas l’anglais emploie-t-il *be* là où le français dit « avoir » ?",
+     "categories": [
+      "be = être",
+      "be = avoir (en français)"
+     ],
+     "items": [
+      [
+       "I am tired",
+       0
+      ],
+      [
+       "They are teachers",
+       0
+      ],
+      [
+       "I am 12",
+       1
+      ],
+      [
+       "She is thirsty",
+       1
+      ],
+      [
+       "You are right",
+       1
+      ]
+     ],
+     "aide": "Traduis chaque phrase en français : « j’ai … » ou « je suis … » ?",
+     "explication": "**Être** : I am tired, they are teachers. **Avoir** en français : I am 12, she is thirsty, you are right."
+    }
+   ]
+  },
+  {
+   "chapitre": "304b7ac9-f45f-5390-be6a-50a0ffbafe37",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui a quoi dans la classe ?",
+   "competence": "lire-tableau",
+   "situation": "Dans la classe de 6e de Leeds, trois élèves ont répondu à un petit sondage : qui a un vélo, qui a un chien ?",
+   "documents": [
+    {
+     "id": "sondage",
+     "type": "tableau",
+     "titre": "Class survey",
+     "source": "Sondage écrit pour l’exercice",
+     "colonnes": [
+      "Pupil",
+      "Bike",
+      "Dog"
+     ],
+     "lignes": [
+      [
+       "Ali",
+       "yes",
+       "no"
+      ],
+      [
+       "Mia",
+       "no",
+       "yes"
+      ],
+      [
+       "Sam",
+       "yes",
+       "yes"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sondage",
+     "enonce": "Mia **n’a pas** de vélo. Touche la case qui le dit.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Trouve la ligne Mia et la colonne Bike.",
+     "explication": "Mia **hasn’t got** a bike : la case “no” de la ligne Mia, colonne Bike."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec *have got* à la bonne forme.",
+     "texte": "Ali ___ got a bike, but Mia ___ got a bike.",
+     "reponses": [
+      [
+       "has"
+      ],
+      [
+       "hasn’t",
+       "has not"
+      ]
+     ],
+     "aide": "Ali et Mia sont chacun “he” ou “she” : on emploie has. Mia n’a pas de vélo : la négation s’écrit après has.",
+     "explication": "Ali **has** got a bike · Mia **hasn’t** got a bike. Pas besoin de *do* avec *have got*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Pose la question à Sam. Remets les mots dans l’ordre.",
+     "items": [
+      "Have",
+      "you",
+      "got",
+      "a",
+      "dog"
+     ],
+     "aide": "Dans la question, have passe avant le sujet.",
+     "explication": "**Have you got a dog ?** : *have* + sujet + *got* + le reste."
+    }
+   ]
+  },
+  {
+   "chapitre": "304b7ac9-f45f-5390-be6a-50a0ffbafe37",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les correspondants de Jo",
+   "competence": "comprendre-langue",
+   "situation": "Jo parle à Ella de sa famille. Il décrit son frère, son vélo et ses cadeaux.",
+   "documents": [
+    {
+     "id": "jo",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Jo and Ella",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Ella",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ella",
+       "texte": "Have you got any brothers or sisters?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "Yes, I’ve got a brother. [[h|He’s]] got blue eyes and brown hair. He’s tall."
+      },
+      {
+       "qui": "Ella",
+       "texte": "Has he got a bike?"
+      },
+      {
+       "qui": "Jo",
+       "texte": "Yes, he has. But I haven’t got a bike."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "jo",
+     "enonce": "Dans ce message, un seul *He’s* veut dire **he has**. Touche-le.",
+     "reponse": [
+      "h"
+     ],
+     "aide": "Si ’s est suivi de “got”, c’est has. Sinon, c’est is.",
+     "explication": "**He’s got** blue eyes = *he has got*. Dans « He’s tall », *’s* est *is*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la question et la réponse sur le frère de Jo.",
+     "texte": "___ Jo’s brother got a bike? Yes, he ___. But Jo ___ got a bike.",
+     "reponses": [
+      [
+       "has"
+      ],
+      [
+       "has"
+      ],
+      [
+       "hasn’t",
+       "has not"
+      ]
+     ],
+     "aide": "Brother = he, donc has. Jo dit lui-même qu’il n’a pas de vélo : la négation.",
+     "explication": "**Has** Jo’s brother got a bike ? Yes, he **has**. But Jo **hasn’t** got a bike."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase anglaise à sa traduction.",
+     "paires": [
+      [
+       "I’ve got a headache",
+       "J’ai mal à la tête"
+      ],
+      [
+       "She’s got two brothers",
+       "Elle a deux frères"
+      ],
+      [
+       "He’s got blue eyes",
+       "Il a les yeux bleus"
+      ],
+      [
+       "They’ve got a cat",
+       "Ils ont un chat"
+      ]
+     ],
+     "aide": "Have got dit la possession, la famille, la description et la maladie.",
+     "explication": "Les quatre emplois : maladie (*headache*), famille (*two brothers*), description (*blue eyes*), possession (*a cat*)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans chaque phrase, que veut dire ’s ?",
+     "categories": [
+      "’s = is",
+      "’s = has"
+     ],
+     "items": [
+      [
+       "He’s tired",
+       0
+      ],
+      [
+       "She’s happy",
+       0
+      ],
+      [
+       "He’s got a car",
+       1
+      ],
+      [
+       "She’s got two brothers",
+       1
+      ]
+     ],
+     "aide": "Si “got” suit ’s, c’est has.",
+     "explication": "**is** : He’s tired, She’s happy · **has** : He’s got a car, She’s got two brothers."
+    }
+   ]
+  },
+  {
+   "chapitre": "304b7ac9-f45f-5390-be6a-50a0ffbafe37",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Max le chien est perdu",
+   "competence": "analyser-document",
+   "situation": "Mr Hill a perdu son chien. Il colle une affiche à l’école. Au refuge, on a retrouvé trois chiens : lequel est Max ?",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Lost dog",
+     "source": "Affiche écrite pour l’exercice",
+     "entete": "LOST DOG",
+     "sousTitre": "His name is Max",
+     "emoji": "🐕",
+     "teinte": "corail",
+     "lignes": [
+      {
+       "texte": "He’s got brown ears."
+      },
+      {
+       "texte": "He’s got a long tail."
+      },
+      {
+       "texte": "He’s got a red collar."
+      }
+     ],
+     "pied": "Please tell Mr Hill."
+    },
+    {
+     "id": "refuge",
+     "type": "tableau",
+     "titre": "The dogs at the shelter",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Dog",
+      "Ears",
+      "Tail",
+      "Collar"
+     ],
+     "lignes": [
+      [
+       "Rex",
+       "brown",
+       "long",
+       "no collar"
+      ],
+      [
+       "Bella",
+       "black",
+       "short",
+       "red"
+      ],
+      [
+       "Max",
+       "brown",
+       "long",
+       "red"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "refuge",
+     "enonce": "Compare l’affiche et le tableau. Touche le nom du chien qui a **tout** ce que décrit l’affiche.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Vérifie les oreilles, la queue et le collier, ligne par ligne.",
+     "explication": "**Max** : oreilles brown, queue long, collier red. Rex n’a pas de collier, Bella a les oreilles noires."
+    },
+    {
+     "type": "trous",
+     "enonce": "Décris Bella avec *have got*.",
+     "texte": "Bella ___ got brown ears. She ___ got a red collar.",
+     "reponses": [
+      [
+       "hasn’t",
+       "has not"
+      ],
+      [
+       "has"
+      ]
+     ],
+     "aide": "Bella a les oreilles noires, pas brunes. Elle a bien un collier rouge.",
+     "explication": "Bella **hasn’t** got brown ears (elles sont noires) · she **has** got a red collar."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Pose une question sur Rex. Remets les mots dans l’ordre.",
+     "items": [
+      "Has",
+      "Rex",
+      "got",
+      "a",
+      "red",
+      "collar"
+     ],
+     "aide": "Has passe avant le sujet, puis got, puis le reste.",
+     "explication": "**Has Rex got a red collar ?** (réponse : No, he hasn’t)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "Have you got a dog?",
+      "Do you have got a dog?",
+      "Got you a dog?",
+      "Have you a got dog?"
+     ],
+     "reponse": 0,
+     "aide": "Have got se construit sans do, et l’ordre est have + sujet + got.",
+     "explication": "**Have you got a dog ?** *Do you have got* mélange les deux formes (have avec do, ou have got sans do)."
+    }
+   ]
+  },
+  {
+   "chapitre": "34cc8b05-a7a8-5678-bf0b-538ba6111f77",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le club de sport",
+   "competence": "lire-tableau",
+   "situation": "Le club de sport du collège a noté qui joue au football et qui joue au tennis.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "tableau",
+     "titre": "Sports club",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Pupil",
+      "Football",
+      "Tennis"
+     ],
+     "lignes": [
+      [
+       "Leo",
+       "yes",
+       "no"
+      ],
+      [
+       "Mia",
+       "no",
+       "yes"
+      ],
+      [
+       "Sam",
+       "yes",
+       "yes"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "club",
+     "enonce": "Mia **ne joue pas** au football. Touche la case qui le dit.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Ligne Mia, colonne Football.",
+     "explication": "Mia **doesn’t play** football : la case “no” de la ligne Mia, colonne Football."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les phrases sur Leo.",
+     "texte": "Leo ___ football. Leo ___ play tennis.",
+     "reponses": [
+      [
+       "plays"
+      ],
+      [
+       "doesn’t",
+       "does not"
+      ]
+     ],
+     "aide": "À la 3e personne, la phrase affirmative a un -s ; la négative utilise doesn’t.",
+     "explication": "Leo **plays** football (3e personne : -s) · Leo **doesn’t** play tennis (après *doesn’t*, le verbe reste à la base)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Pose une question sur Mia. Remets les mots dans l’ordre.",
+     "items": [
+      "Does",
+      "Mia",
+      "play",
+      "football"
+     ],
+     "aide": "Does + sujet + verbe à la base.",
+     "explication": "**Does Mia play football ?** : *does* porte le -s, le verbe *play* n’en a plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "34cc8b05-a7a8-5678-bf0b-538ba6111f77",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une interview à la cantine",
+   "competence": "comprendre-langue",
+   "situation": "Ben interroge Lena, une nouvelle élève, sur ses loisirs pour le journal du collège.",
+   "documents": [
+    {
+     "id": "interview",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "The interview",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lena",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ben",
+       "texte": "[[a|Do]] you like sport?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "Yes, I do. I play tennis on Saturday."
+      },
+      {
+       "qui": "Ben",
+       "texte": "[[a|Does]] your sister play tennis too?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "No, she doesn’t. She plays the piano."
+      },
+      {
+       "qui": "Ben",
+       "texte": "[[a|Did]] you play yesterday?"
+      },
+      {
+       "qui": "Lena",
+       "texte": "No, I didn’t. I did my homework."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "interview",
+     "enonce": "Touche les **trois** auxiliaires *do / does / did* qui ouvrent une **question** de Ben.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Ben pose trois questions : chacune commence par une forme de do.",
+     "explication": "**Do, Does, Did** : l’auxiliaire DO ouvre la question (présent pour I / you, présent 3e personne, passé). Dans la réponse de Lena, *I did my homework* emploie *did* comme verbe plein (faire)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que Lena dit de sa sœur.",
+     "texte": "Lena’s sister doesn’t ___ tennis. She ___ the piano.",
+     "reponses": [
+      [
+       "play"
+      ],
+      [
+       "plays"
+      ]
+     ],
+     "banque": [
+      "play",
+      "plays",
+      "played",
+      "playing"
+     ],
+     "aide": "Après doesn’t, le verbe reste à la base. Dans la phrase affirmative, la 3e personne prend un -s.",
+     "explication": "Lena’s sister doesn’t **play** tennis (base verbale) · she **plays** the piano (-s de la 3e personne)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Ben veut connaître le frère de Lena. Remets sa question dans l’ordre.",
+     "items": [
+      "Does",
+      "your",
+      "brother",
+      "like",
+      "pizza"
+     ],
+     "aide": "Does + sujet + base verbale.",
+     "explication": "**Does your brother like pizza ?** : *like* reste à la base car *does* porte déjà le -s."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans chaque phrase, *do* est-il un auxiliaire ou le verbe « faire » ?",
+     "categories": [
+      "Auxiliaire DO",
+      "Verbe DO (faire)"
+     ],
+     "items": [
+      [
+       "Do you like tea?",
+       0
+      ],
+      [
+       "I do my homework every day.",
+       1
+      ],
+      [
+       "Does he play football?",
+       0
+      ],
+      [
+       "She does the dishes.",
+       1
+      ]
+     ],
+     "aide": "Si on peut remplacer do par « faire », c’est le verbe.",
+     "explication": "**Auxiliaire** : *Do you like tea ?*, *Does he play football ?* · **verbe « faire »** : *I do my homework*, *She does the dishes*."
+    }
+   ]
+  },
+  {
+   "chapitre": "34cc8b05-a7a8-5678-bf0b-538ba6111f77",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les devoirs de Tom",
+   "competence": "lire-tableau",
+   "situation": "Le professeur compare les habitudes de deux élèves et demande à Tom s’il fait ses devoirs. Lis les deux documents avec attention.",
+   "documents": [
+    {
+     "id": "habitudes",
+     "type": "tableau",
+     "titre": "After school",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Pupil",
+      "Football",
+      "Piano",
+      "Homework yesterday"
+     ],
+     "lignes": [
+      [
+       "Zoe",
+       "yes",
+       "no",
+       "yes"
+      ],
+      [
+       "Tom",
+       "no",
+       "yes",
+       "no"
+      ]
+     ]
+    },
+    {
+     "id": "prof",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "In class",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Teacher",
+       "emoji": "🧑‍🏫",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Teacher",
+       "texte": "Do you [[x|do]] your homework every day?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "No, I don’t. But I [[x|do]] my maths homework on Monday."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "habitudes",
+     "enonce": "Qui **n’a pas fait** ses devoirs hier ? Touche la case “no” de la colonne Homework.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "La dernière colonne parle d’hier.",
+     "explication": "**Tom** didn’t do his homework yesterday : la case “no” de la colonne Homework yesterday."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les phrases à partir du tableau.",
+     "texte": "Zoe ___ football. Tom ___ play football. Yesterday Zoe ___ her homework, but Tom ___ do his homework.",
+     "reponses": [
+      [
+       "plays"
+      ],
+      [
+       "doesn’t",
+       "does not"
+      ],
+      [
+       "did"
+      ],
+      [
+       "didn’t",
+       "did not"
+      ]
+     ],
+     "aide": "Présent : -s pour Zoe, doesn’t pour Tom. Hier : did / didn’t, une seule forme pour tout le monde.",
+     "explication": "Zoe **plays** football · Tom **doesn’t** play football · Zoe **did** her homework · Tom **didn’t** do his homework."
+    },
+    {
+     "type": "zone",
+     "document": "prof",
+     "enonce": "Dans la conversation, deux *do* sont le **verbe** « faire ». Touche-les.",
+     "reponse": [
+      "x"
+     ],
+     "aide": "Dans « Do you ... your homework », le premier est l’auxiliaire. Cherche celui qui veut dire “faire”.",
+     "explication": "*Do you **do** your homework ?* et *I **do** my maths homework* : ces deux *do* sont le verbe « faire ». Le premier *Do* et *don’t* sont des auxiliaires."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "Does Tom play the piano?",
+      "Does Tom plays the piano?",
+      "Do Tom play the piano?",
+      "Does Tom to play the piano?"
+     ],
+     "reponse": 0,
+     "aide": "Le -s est déjà sur does. Et il n’y a pas de to après does.",
+     "explication": "**Does Tom play the piano ?** : la 3e personne s’écrit sur *does*, le verbe reste à la base."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Le professeur parle à Tom. Remets sa question dans l’ordre.",
+     "items": [
+      "Did",
+      "you",
+      "do",
+      "your",
+      "homework"
+     ],
+     "aide": "Did + sujet + base verbale (ici le verbe do).",
+     "explication": "**Did you do your homework ?** : *did* est l’auxiliaire, *do* le verbe « faire »."
+    }
+   ]
+  },
+  {
+   "chapitre": "3171cbbc-b384-527f-84cd-0c41a199fa13",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le club des talents",
+   "competence": "lire-tableau",
+   "situation": "Le club des talents du collège a noté ce que chaque élève sait faire.",
+   "documents": [
+    {
+     "id": "talents",
+     "type": "tableau",
+     "titre": "Talent club",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Pupil",
+      "Swim",
+      "Ride a bike",
+      "Play the piano"
+     ],
+     "lignes": [
+      [
+       "Ali",
+       "can",
+       "can",
+       "can’t"
+      ],
+      [
+       "Bea",
+       "can’t",
+       "can",
+       "can"
+      ],
+      [
+       "Cal",
+       "can",
+       "can’t",
+       "can"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "talents",
+     "enonce": "Bea **ne sait pas** nager. Touche la case qui le dit.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Ligne Bea, colonne Swim.",
+     "explication": "Bea **can’t** swim : la case “can’t” de la ligne Bea, colonne Swim."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec *can* ou sa négation.",
+     "texte": "Ali ___ swim. Bea ___ swim.",
+     "reponses": [
+      [
+       "can"
+      ],
+      [
+       "can’t",
+       "cannot",
+       "can not"
+      ]
+     ],
+     "aide": "Regarde les cases Swim d’Ali et de Bea.",
+     "explication": "Ali **can** swim · Bea **can’t** swim (*cannot* en un mot, contracté en *can’t*). Pas de -s : « Bea cans » n’existe pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Pose une question à Cal. Remets les mots dans l’ordre.",
+     "items": [
+      "Can",
+      "you",
+      "ride",
+      "a",
+      "bike"
+     ],
+     "aide": "Avec can, on inverse can et le sujet : pas de do.",
+     "explication": "**Can you ride a bike ?** : inversion, puis le verbe à la base, sans *to*."
+    }
+   ]
+  },
+  {
+   "chapitre": "3171cbbc-b384-527f-84cd-0c41a199fa13",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Excusez-moi, Mr Cole",
+   "competence": "comprendre-langue",
+   "situation": "Nina demande une permission à son professeur, puis lui propose son aide. Ils parlent de ce qu’elle sait ou ne sait pas porter.",
+   "documents": [
+    {
+     "id": "cole",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "In the classroom",
+     "source": "Dialogue écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mr Cole",
+       "emoji": "🧑‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Excuse me, Mr Cole. Can I go to the toilet?"
+      },
+      {
+       "qui": "Mr Cole",
+       "texte": "Yes, you can. But first, [[p|could]] you help me, please?"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Of course! I can carry the books. I can’t carry the big box."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cole",
+     "enonce": "Touche la forme **plus polie** de *can* dans la conversation.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Mr Cole demande de l’aide poliment.",
+     "explication": "**could** : *Could you help me, please ?* est plus poli que *Can you…*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range les phrases selon l’emploi de *can*.",
+     "categories": [
+      "Capacité",
+      "Permission",
+      "Demande polie"
+     ],
+     "items": [
+      [
+       "I can carry the books.",
+       0
+      ],
+      [
+       "Can I go to the toilet?",
+       1
+      ],
+      [
+       "Could you help me, please?",
+       2
+      ],
+      [
+       "I can’t carry the big box.",
+       0
+      ]
+     ],
+     "aide": "Je sais faire ? Je demande l’autorisation ? Je demande un service ?",
+     "explication": "**Capacité** : *I can carry*, *I can’t carry* · **permission** : *Can I go…?* · **demande polie** : *Could you help me…?*"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète à propos de Nina.",
+     "texte": "Nina was a baby: she ___ swim. Now she ___ swim 50 metres.",
+     "reponses": [
+      [
+       "couldn’t",
+       "could not"
+      ],
+      [
+       "can"
+      ]
+     ],
+     "aide": "Un bébé ne sait pas nager (passé) ; maintenant, elle sait (présent).",
+     "explication": "Nina **couldn’t** swim (passé de *can*) · now she **can** swim 50 metres (présent)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Nina emprunte un stylo. Remets sa question dans l’ordre.",
+     "items": [
+      "Can",
+      "I",
+      "borrow",
+      "your",
+      "pen"
+     ],
+     "aide": "Permission : Can + sujet + verbe à la base.",
+     "explication": "**Can I borrow your pen ?** : permission avec *can*, verbe à la base, sans *to*."
+    }
+   ]
+  },
+  {
+   "chapitre": "3171cbbc-b384-527f-84cd-0c41a199fa13",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le camp d’été",
+   "competence": "lire-tableau",
+   "situation": "Le camp d’été propose trois activités, chacune avec un âge minimum. Lou, Max et Eve veulent s’inscrire. Qui peut faire quoi ?",
+   "documents": [
+    {
+     "id": "camp",
+     "type": "tableau",
+     "titre": "Summer camp",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Activity",
+      "Minimum age"
+     ],
+     "lignes": [
+      [
+       "Swimming",
+       "8"
+      ],
+      [
+       "Climbing",
+       "10"
+      ],
+      [
+       "Archery",
+       "12"
+      ]
+     ]
+    },
+    {
+     "id": "eleves",
+     "type": "tableau",
+     "titre": "The pupils",
+     "source": "Tableau écrit pour l’exercice",
+     "colonnes": [
+      "Pupil",
+      "Age"
+     ],
+     "lignes": [
+      [
+       "Lou",
+       "9"
+      ],
+      [
+       "Max",
+       "11"
+      ],
+      [
+       "Eve",
+       "13"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "camp",
+     "enonce": "Lou a 9 ans. Touche **la seule activité** qu’il peut faire.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Compare l’âge de Lou à l’âge minimum de chaque activité.",
+     "explication": "**Swimming** : l’âge minimum est 8 et Lou a 9 ans. Pour *climbing* (10) et *archery* (12), il est trop jeune."
+    },
+    {
+     "type": "trous",
+     "enonce": "Max a 11 ans. Complète.",
+     "texte": "Max ___ do swimming and climbing, but he ___ do archery.",
+     "reponses": [
+      [
+       "can"
+      ],
+      [
+       "can’t",
+       "cannot",
+       "can not"
+      ]
+     ],
+     "aide": "Compare 11 ans aux âges minimums 8, 10 et 12.",
+     "explication": "Max **can** do swimming (8) and climbing (10), but he **can’t** do archery (12)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est **incorrecte** ?",
+     "options": [
+      "Eve cans do archery.",
+      "Eve can do archery.",
+      "Can Eve do archery?",
+      "Eve can’t do archery at ten."
+     ],
+     "reponse": 0,
+     "aide": "Les modaux n’ont jamais de -s à la 3e personne.",
+     "explication": "*Eve **cans***  est faux : **can** ne prend jamais de -s (*Eve can*). Les autres phrases respectent les règles des modaux."
+    },
+    {
+     "type": "trous",
+     "enonce": "Lou ne peut pas encore faire d’escalade. Complète.",
+     "texte": "Lou can’t climb now. Next year he will ___ ___ ___ climb.",
+     "reponses": [
+      [
+       "be"
+      ],
+      [
+       "able"
+      ],
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "be",
+      "able",
+      "to",
+      "can"
+     ],
+     "aide": "Can n’a pas de futur : on utilise une expression de remplacement.",
+     "explication": "Next year, Lou **will be able to** climb : *can* n’a pas de futur, on emploie *be able to*. Il aura 10 ans, l’âge minimum."
+    }
+   ]
+  },
+  {
+   "chapitre": "a535df67-d7d9-52cb-b4d0-8a1cdb8856af",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le règlement de la classe",
+   "competence": "analyser-document",
+   "situation": "Au début de l’année, la classe de 6e lit son règlement affiché au mur.",
+   "documents": [
+    {
+     "id": "regles",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Class rules",
+     "source": "Règlement écrit pour l’exercice",
+     "entete": "Class rules",
+     "sousTitre": "Room 12",
+     "emoji": "🏫",
+     "teinte": "violet",
+     "lignes": [
+      {
+       "texte": "You must listen to the teacher.",
+       "id": "r1"
+      },
+      {
+       "texte": "You mustn’t run in the corridor.",
+       "id": "r2"
+      },
+      {
+       "texte": "You mustn’t eat in the classroom.",
+       "id": "r3"
+      },
+      {
+       "texte": "You must raise your hand to speak.",
+       "id": "r4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regles",
+     "enonce": "Touche les **deux** règles qui disent que quelque chose est **interdit**.",
+     "reponse": [
+      "r2",
+      "r3"
+     ],
+     "aide": "Cherche mustn’t.",
+     "explication": "**You mustn’t run…** et **You mustn’t eat…** : *mustn’t* = c’est interdit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète deux règles.",
+     "texte": "You ___ raise your hand to speak. You ___ run in the corridor.",
+     "reponses": [
+      [
+       "must"
+      ],
+      [
+       "mustn’t",
+       "must not"
+      ]
+     ],
+     "aide": "La première est une obligation. La seconde est une interdiction.",
+     "explication": "You **must** raise your hand (obligation) · you **mustn’t** run (interdit)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque règle à son sens.",
+     "paires": [
+      [
+       "You must listen.",
+       "Tu dois écouter."
+      ],
+      [
+       "You mustn’t run.",
+       "Il est interdit de courir."
+      ],
+      [
+       "You must raise your hand.",
+       "Tu dois lever la main."
+      ]
+     ],
+     "aide": "Must = devoir. Mustn’t = interdit.",
+     "explication": "*must* dit l’obligation, *mustn’t* l’interdiction."
+    }
+   ]
+  },
+  {
+   "chapitre": "a535df67-d7d9-52cb-b4d0-8a1cdb8856af",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La sortie au zoo",
+   "competence": "analyser-document",
+   "situation": "La classe part au zoo. Le professeur distribue une feuille avec les consignes. Attention : *mustn’t* et *don’t have to* ne veulent pas dire la même chose !",
+   "documents": [
+    {
+     "id": "zoo",
+     "type": "fiche",
+     "modele": "invitation",
+     "titre": "School trip to the zoo",
+     "source": "Feuille écrite pour l’exercice",
+     "entete": "School trip",
+     "sousTitre": "The zoo",
+     "emoji": "🦒",
+     "teinte": "vert",
+     "lignes": [
+      {
+       "texte": "You must bring a packed lunch.",
+       "id": "l1"
+      },
+      {
+       "texte": "You mustn’t feed the animals.",
+       "id": "l2"
+      },
+      {
+       "texte": "You don’t have to bring money: tickets are free.",
+       "id": "l3"
+      },
+      {
+       "texte": "You have to wear your school uniform.",
+       "id": "l4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zoo",
+     "enonce": "Touche la ligne qui dit qu’il n’est **pas nécessaire** de faire quelque chose (ce n’est pas obligatoire).",
+     "reponse": [
+      "l3"
+     ],
+     "aide": "Ce n’est pas interdit : tu es simplement libre de le faire ou non.",
+     "explication": "**You don’t have to bring money** : pas d’obligation (les billets sont gratuits). Ce n’est pas la même chose que *mustn’t*, qui interdit."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme à son sens.",
+     "paires": [
+      [
+       "You must",
+       "C’est obligatoire"
+      ],
+      [
+       "You mustn’t",
+       "C’est interdit"
+      ],
+      [
+       "You don’t have to",
+       "Ce n’est pas obligatoire"
+      ]
+     ],
+     "aide": "Mustn’t et don’t have to disent le contraire l’un de l’autre.",
+     "explication": "**must** = obligation · **mustn’t** = interdiction · **don’t have to** = pas obligatoire (liberté)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Le professeur raconte la semaine dernière. Complète.",
+     "texte": "Last week we ___ ___ wear our uniform.",
+     "reponses": [
+      [
+       "had"
+      ],
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "had",
+      "to",
+      "must",
+      "have"
+     ],
+     "aide": "Must n’a pas de passé : on le remplace par une autre expression.",
+     "explication": "Last week we **had to** wear our uniform : *must* n’a pas de passé, on emploie *had to*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets cette phrase dans l’ordre.",
+     "items": [
+      "We",
+      "don’t",
+      "have",
+      "to",
+      "bring",
+      "money"
+     ],
+     "aide": "Don’t have to + verbe à la base.",
+     "explication": "**We don’t have to bring money.** : on n’est pas obligé d’apporter de l’argent."
+    }
+   ]
+  },
+  {
+   "chapitre": "a535df67-d7d9-52cb-b4d0-8a1cdb8856af",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Direction la piscine",
+   "competence": "analyser-document",
+   "situation": "Lia et Marc vont à la piscine municipale. Marc a les cheveux courts, Lia les cheveux longs. Lis le règlement de la piscine, puis leur conversation.",
+   "documents": [
+    {
+     "id": "piscine",
+     "type": "fiche",
+     "modele": "panneau",
+     "titre": "Pool rules",
+     "source": "Règlement écrit pour l’exercice",
+     "entete": "Pool rules",
+     "sousTitre": "Swimming pool",
+     "emoji": "🏊",
+     "teinte": "bleu",
+     "lignes": [
+      {
+       "texte": "You must shower first.",
+       "id": "p1"
+      },
+      {
+       "texte": "You mustn’t run.",
+       "id": "p2"
+      },
+      {
+       "texte": "You mustn’t push people.",
+       "id": "p3"
+      },
+      {
+       "texte": "You have to wear a cap if you have long hair.",
+       "id": "p4"
+      },
+      {
+       "texte": "You don’t have to bring a towel: the pool has towels.",
+       "id": "p5"
+      }
+     ]
+    },
+    {
+     "id": "lm",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Lia and Marc",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Marc",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lia",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Marc",
+       "texte": "Do I have to wear a cap? I’ve got short hair."
+      },
+      {
+       "qui": "Lia",
+       "texte": "No, you don’t have to. But I have to wear one. I’ve got long hair."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "piscine",
+     "enonce": "Marc a les cheveux courts. Touche la règle qu’il **n’est pas obligé** de suivre.",
+     "reponse": [
+      "p4"
+     ],
+     "aide": "Cherche la règle qui parle des cheveux.",
+     "explication": "**You have to wear a cap if you have long hair** : Marc a les cheveux courts, il n’est donc pas obligé de porter un bonnet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lia dit : “I **have to** wear one.” D’où vient l’obligation ?",
+     "options": [
+      "D’une règle de la piscine.",
+      "De Lia, selon son envie.",
+      "De Marc, qui le lui demande.",
+      "D’aucune règle précise."
+     ],
+     "reponse": 0,
+     "aide": "Regarde la règle de la piscine sur les bonnets.",
+     "explication": "*Have to* exprime une obligation venue de **l’extérieur** : ici le règlement de la piscine. *Must* vient plutôt de celui qui parle."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range les règles de la piscine.",
+     "categories": [
+      "Interdit",
+      "Pas nécessaire",
+      "Obligatoire"
+     ],
+     "items": [
+      [
+       "You mustn’t run.",
+       0
+      ],
+      [
+       "You mustn’t push people.",
+       0
+      ],
+      [
+       "You don’t have to bring a towel.",
+       1
+      ],
+      [
+       "You must shower first.",
+       2
+      ]
+     ],
+     "aide": "Mustn’t = interdit, don’t have to = pas nécessaire, must = obligatoire.",
+     "explication": "**Interdit** : mustn’t run, mustn’t push · **pas nécessaire** : don’t have to bring a towel · **obligatoire** : must shower."
+    },
+    {
+     "type": "trous",
+     "enonce": "Lia pense à demain. Complète.",
+     "texte": "Tomorrow Lia will ___ ___ wear a cap again.",
+     "reponses": [
+      [
+       "have"
+      ],
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "have",
+      "to",
+      "must",
+      "had"
+     ],
+     "aide": "Must n’a pas de futur : on emploie une autre forme avec will.",
+     "explication": "Tomorrow Lia **will have to** wear a cap : *must* n’a ni passé ni futur, on emploie *have to* avec *will*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Marc donne un conseil à Lia. Remets sa phrase dans l’ordre.",
+     "items": [
+      "You",
+      "should",
+      "drink",
+      "more",
+      "water"
+     ],
+     "aide": "Should + verbe à la base, sans to.",
+     "explication": "**You should drink more water.** : *should* donne un conseil, moins fort que *must*."
+    }
+   ]
+  }
+ ]
+}

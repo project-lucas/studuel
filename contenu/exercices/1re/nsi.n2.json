@@ -1,0 +1,2802 @@
+{
+ "niveau": "1re",
+ "matiere": "nsi",
+ "exercices": [
+  {
+   "chapitre": "965c559d-8bd5-5f73-a3cb-59a0455f32cb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fiche d’inscription de Maëlys",
+   "competence": "programmer",
+   "situation": "Maëlys écrit ses premières lignes de Python pour l’inscription au club de robotique du lycée. Elle stocke son âge, son prénom, sa taille et un indicateur de majorité.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le script de Maëlys",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "age = 15",
+      "prenom = \"Maëlys\"",
+      "taille = 1.62",
+      "[[b|majeure]] = age >= 18"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le nom de la variable qui contient un booléen (vrai ou faux).",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche la ligne où une comparaison donne vrai ou faux.",
+     "explication": "La variable **majeure** reçoit le résultat de la comparaison age >= 18 : c’est un booléen."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque variable au type Python de sa valeur.",
+     "paires": [
+      [
+       "age",
+       "int"
+      ],
+      [
+       "prenom",
+       "str"
+      ],
+      [
+       "taille",
+       "float"
+      ],
+      [
+       "majeure",
+       "bool"
+      ]
+     ],
+     "aide": "Un entier n’a pas de virgule, un flottant en a une, un texte est entre guillemets.",
+     "explication": "**age** est un int (entier), **prenom** un str (chaîne), **taille** un float (nombre à virgule) et **majeure** un bool."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle valeur contient la variable majeure après l’exécution du script ?",
+     "options": [
+      "False",
+      "True",
+      "15",
+      "18"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare 15 et 18 avec l’opérateur de la dernière ligne.",
+     "explication": "age vaut 15 : la comparaison 15 >= 18 est fausse, donc majeure vaut **False**."
+    }
+   ]
+  },
+  {
+   "chapitre": "965c559d-8bd5-5f73-a3cb-59a0455f32cb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux noms pour une même liste",
+   "competence": "raisonner",
+   "situation": "Karim tient les notes de son équipe de robotique dans une liste. Pour faire un essai sans abîmer l’original, il crée deux nouvelles variables… et se demande pourquoi sa liste change quand même.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le script de Karim",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "notes = [12, 15, 9]",
+      "alias = notes",
+      "alias.append(18)",
+      "vraie = [[cp|list]](notes)",
+      "vraie.append(7)",
+      "print(sum(notes))"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que s’affiche-t-il à l’écran quand on exécute le script ?",
+     "reponse": 54,
+     "aide": "La ligne 3 ajoute 18 à la liste désignée par alias. Qui désigne cette liste aussi ?",
+     "explication": "alias désigne la **même** liste que notes : après append(18), notes vaut [12, 15, 9, 18], dont la somme est 12 + 15 + 9 + 18 = **54**. Le 7 n’y est pas : il est ajouté à une copie."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’éléments contient la liste vraie à la fin du script ?",
+     "reponse": 5,
+     "aide": "Elle a été copiée après l’ajout de 18, puis un élément s’y est ajouté.",
+     "explication": "vraie est copiée quand notes contient déjà 4 valeurs, puis on y ajoute 7 : elle contient **5** éléments."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le mot qui fabrique une copie indépendante de la liste.",
+     "reponse": [
+      "cp"
+     ],
+     "aide": "Une simple affectation ne copie rien ; cherche une fonction qui construit une nouvelle liste.",
+     "explication": "La fonction **list** construit une nouvelle liste à partir de notes : modifier vraie ne change plus notes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi notes contient-elle la valeur 18 alors que Karim n’a jamais écrit notes.append ?",
+     "options": [
+      "alias et notes désignent le même objet liste",
+      "Python copie la liste à chaque affectation",
+      "La fonction sum ajoute la dernière valeur",
+      "La variable alias est de type float"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne alias = notes : copie-t-elle vraiment la liste ?",
+     "explication": "Une affectation ne copie pas : les deux noms désignent le **même objet**. Modifier l’un modifie donc l’autre."
+    }
+   ]
+  },
+  {
+   "chapitre": "965c559d-8bd5-5f73-a3cb-59a0455f32cb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel langage pour quel projet ?",
+   "competence": "analyser-document",
+   "situation": "Le lycée lance trois projets informatiques. Jade, l’enseignante de NSI, doit choisir pour chacun le langage le mieux adapté, et vérifie aussi deux comportements de Python qui surprennent souvent.",
+   "documents": [
+    {
+     "id": "langages",
+     "type": "tableau",
+     "titre": "Trois langages",
+     "colonnes": [
+      "Langage",
+      "Sa force"
+     ],
+     "lignes": [
+      [
+       "Python",
+       "Lisible, très fourni en bibliothèques scientifiques"
+      ],
+      [
+       "C",
+       "Rapide, proche de la machine"
+      ],
+      [
+       "JavaScript",
+       "S’exécute dans tout navigateur"
+      ]
+     ],
+     "source": "D’après le cours de NSI"
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Deux essais dans la console",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "a = 0.1 + 0.2",
+      "print(a == 0.3)",
+      "print(3 + \"4\")"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "langages",
+     "enonce": "Touche le langage qui s’exécute directement dans n’importe quel navigateur.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Regarde la colonne « Sa force ».",
+     "explication": "**JavaScript** s’exécute dans tout navigateur, sans rien installer."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque projet au langage le plus adapté.",
+     "paires": [
+      [
+       "Une page web interactive pour le CDI",
+       "JavaScript"
+      ],
+      [
+       "Le traitement scientifique des mesures de température",
+       "Python"
+      ],
+      [
+       "Le logiciel d’une station météo à la mémoire minuscule",
+       "C"
+      ]
+     ],
+     "aide": "Pense à où le programme s’exécute et à ce dont il a besoin.",
+     "explication": "Page web : **JavaScript**. Analyse de mesures avec de nombreuses bibliothèques scientifiques : **Python**. Machine peu puissante où la performance compte : **C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que s’affiche-t-il pour print(a == 0.3) ?",
+     "options": [
+      "False",
+      "True",
+      "Une erreur de type",
+      "0.3"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Les flottants sont des valeurs approchées en machine.",
+     "explication": "0.1 + 0.2 n’est pas exactement 0.3 en flottants : la comparaison rend **False**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que provoque la dernière ligne, print(3 + \"4\") ?",
+     "options": [
+      "Une erreur de type",
+      "Le nombre 7, en additionnant",
+      "Le texte 34, par concaténation",
+      "Le nombre 34, après conversion"
+     ],
+     "reponse": 0,
+     "aide": "Le typage de Python est fort : il ne convertit pas en silence.",
+     "explication": "Python est fortement typé : additionner un entier et une chaîne provoque une **erreur de type**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e6aa87d-1ac7-564a-8ef8-ec1d8972ed26",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La fonction qui élève au carré",
+   "competence": "programmer",
+   "situation": "Sacha dessine des carrés dans un logiciel de géométrie. Pour calculer l’aire de chacun, il écrit une petite fonction réutilisable.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction de Sacha",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def carre([[p|x]]):",
+      "    return pow(x, 2)",
+      "y = carre([[a|5]])",
+      "print(y)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le paramètre de la fonction carre.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le paramètre est le nom écrit dans la définition, entre les parenthèses.",
+     "explication": "Le paramètre est **x** : c’est le nom qui figure dans la définition de la fonction."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche l’argument passé à l’appel de la fonction.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "L’argument est la valeur donnée lors de l’appel, dans la ligne y = carre(…).",
+     "explication": "L’argument est **5** : c’est la valeur passée à l’appel carre(5)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que s’affiche-t-il à l’écran ?",
+     "reponse": 25,
+     "aide": "x prend la valeur de l’argument, et la fonction rend son carré.",
+     "explication": "carre(5) rend 5 × 5 = **25**, rangé dans y puis affiché."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e6aa87d-1ac7-564a-8ef8-ec1d8972ed26",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Afficher n’est pas retourner",
+   "competence": "raisonner",
+   "situation": "Lila a écrit deux fonctions qui doublent un nombre : l’une l’affiche, l’autre le rend. Elle veut ensuite ajouter 1 au résultat, et l’une des deux lignes plante.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux fonctions de Lila",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def doubler_affiche(n):",
+      "    print(n + n)",
+      "def doubler_rend(n):",
+      "    [[r|return]] n + n",
+      "a = doubler_rend(3) + 1",
+      "b = doubler_affiche(3) + 1"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le mot qui fait que la fonction doubler_rend renvoie une valeur à l’appelant.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "C’est un mot réservé de Python, dans le corps de la fonction.",
+     "explication": "Le mot **return** renvoie la valeur à l’endroit de l’appel ; print, lui, ne fait que l’écrire à l’écran."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur contient la variable a après la cinquième ligne ?",
+     "reponse": 7,
+     "aide": "doubler_rend(3) rend 6 ; ajoute ensuite 1.",
+     "explication": "doubler_rend(3) rend 6, donc a vaut 6 + 1 = **7**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle valeur Python une fonction sans return rend-elle ? Écris-la.",
+     "reponse": [
+      "None"
+     ],
+     "aide": "C’est une valeur spéciale qui signifie « rien ».",
+     "explication": "Sans instruction return, la fonction rend **None**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la dernière ligne provoque-t-elle une erreur ?",
+     "options": [
+      "doubler_affiche rend None, auquel on ne peut pas ajouter 1",
+      "doubler_affiche rend le texte 6, qu’on ne peut pas additionner",
+      "La variable b a déjà été définie plus haut",
+      "Le nombre 3 est un argument interdit"
+     ],
+     "reponse": 0,
+     "aide": "Que vaut l’appel doubler_affiche(3) une fois la valeur envoyée à l’écran ?",
+     "explication": "La valeur 6 est partie à l’écran : l’appel rend **None**, et None + 1 est une erreur de type. Il fallait retourner la valeur."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e6aa87d-1ac7-564a-8ef8-ec1d8972ed26",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La moyenne qui refuse la liste vide",
+   "competence": "analyser-document",
+   "situation": "Inès écrit la fonction qui calcule la moyenne des notes de son club. Elle la documente avec une docstring, ajoute une assertion pour se protéger, puis la teste sur trois appels.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction documentée",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def moyenne(notes):",
+      "    \"\"\"Rend la moyenne des notes.",
+      "    Précondition : la liste n’est pas vide.\"\"\"",
+      "    [[as|assert]] len(notes) > 0",
+      "    return sum(notes) / len(notes)"
+     ]
+    },
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Trois appels de test",
+     "colonnes": [
+      "Appel",
+      "Résultat"
+     ],
+     "lignes": [
+      [
+       "moyenne([12, 8])",
+       "?"
+      ],
+      [
+       "moyenne([15])",
+       15
+      ],
+      [
+       "moyenne([])",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le résultat de moyenne([12, 8]) ?",
+     "reponse": 10,
+     "aide": "Additionne les notes, puis divise par leur nombre.",
+     "explication": "sum vaut 20, len vaut 2 : 20 / 2 = **10**."
+    },
+    {
+     "type": "zone",
+     "document": "tests",
+     "enonce": "Touche l’appel qui va déclencher l’assertion.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "L’assertion vérifie que la liste n’est pas vide.",
+     "explication": "Avec moyenne([]), len(notes) vaut 0 : la condition **len(notes) > 0** est fausse et le programme s’arrête là."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le mot qui arrête le programme quand la précondition n’est pas respectée.",
+     "reponse": [
+      "as"
+     ],
+     "aide": "Il est au début de la ligne qui suit la docstring.",
+     "explication": "Le mot **assert** vérifie la précondition et arrête le programme au bon endroit si elle est fausse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel serait le résultat de moyenne([14, 9, 7, 6]) ?",
+     "reponse": 9,
+     "aide": "La somme est 36.",
+     "explication": "14 + 9 + 7 + 6 = 36, divisé par 4 : **9**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot à ce qu’il désigne.",
+     "paires": [
+      [
+       "Précondition",
+       "Ce que la fonction exige de ses entrées"
+      ],
+      [
+       "Postcondition",
+       "Ce qui est garanti en sortie"
+      ],
+      [
+       "Docstring",
+       "La chaîne placée juste sous la ligne de définition"
+      ],
+      [
+       "Assertion",
+       "Une vérification qui arrête le programme si elle est fausse"
+      ]
+     ],
+     "aide": "Précondition : avant ; postcondition : après.",
+     "explication": "La **précondition** porte sur les entrées, la **postcondition** sur ce qui est garanti en sortie, la **docstring** contient la spécification et l’**assertion** la vérifie à l’exécution."
+    }
+   ]
+  },
+  {
+   "chapitre": "d620b0be-1101-520a-a905-833c6cc1550c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le jeu de tests de Yanis",
+   "competence": "lire-tableau",
+   "situation": "Yanis a écrit une fonction maximum(t) qui rend le plus grand élément d’une liste. Il prépare quatre tests pour la vérifier.",
+   "documents": [
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Les quatre tests",
+     "colonnes": [
+      "Test",
+      "Liste",
+      "Résultat attendu"
+     ],
+     "lignes": [
+      [
+       "A",
+       "[4, 9, 2]",
+       9
+      ],
+      [
+       "B",
+       "[]",
+       "erreur prévue"
+      ],
+      [
+       "C",
+       "[7]",
+       7
+      ],
+      [
+       "D",
+       "[10, 3, 8]",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tests",
+     "multiple": true,
+     "enonce": "Touche les deux listes qui sont des cas limites.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "aide": "Pense à la liste sans élément et à la liste d’un seul élément.",
+     "explication": "La liste vide **[]** et la liste à un seul élément **[7]** sont des cas limites : ce sont eux qui trouvent le plus de bugs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel résultat attendu faut-il écrire pour le test D ?",
+     "reponse": 10,
+     "aide": "Cherche le plus grand nombre de la liste [10, 3, 8].",
+     "explication": "Le plus grand élément de [10, 3, 8] est **10**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les quatre tests réussissent. Que peut-on en conclure ?",
+     "options": [
+      "Rien sur l’absence de bugs, seulement sur ces cas",
+      "La fonction est correcte pour toutes les listes possibles",
+      "Il n’y a aucune régression dans le reste du programme",
+      "Les cas limites sont inutiles puisque les tests passent"
+     ],
+     "reponse": 0,
+     "aide": "Un test montre la présence d’un bug, jamais son absence.",
+     "explication": "Les tests montrent la **présence** de bugs, jamais leur absence : une fonction qui passe quatre tests peut échouer au cinquième."
+    }
+   ]
+  },
+  {
+   "chapitre": "d620b0be-1101-520a-a905-833c6cc1550c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le maximum qui rend zéro",
+   "competence": "raisonner",
+   "situation": "Un camarade de Yanis a écrit sa propre version de maximum. Elle réussit les tests habituels, mais Yanis soupçonne un bug avec les températures négatives de la station du lycée.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction à déboguer",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def maximum(t):",
+      "    m = [[b|0]]",
+      "    for x in t:",
+      "        if x > m:",
+      "            m = x",
+      "    return m"
+     ]
+    },
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Les trois tests",
+     "colonnes": [
+      "Liste",
+      "Attendu",
+      "Obtenu"
+     ],
+     "lignes": [
+      [
+       "[3, 8, 5]",
+       8,
+       8
+      ],
+      [
+       "[6]",
+       6,
+       6
+      ],
+      [
+       "[-4, -2, -9]",
+       -2,
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que rend la fonction pour la liste [-4, -2, -9] ?",
+     "reponse": 0,
+     "aide": "Suis la variable m : aucun x n’est supérieur à sa valeur de départ.",
+     "explication": "m démarre à 0 et aucun nombre négatif n’est plus grand : la fonction rend **0**, alors que 0 n’est même pas dans la liste."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche la valeur qui est à l’origine du bug.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Regarde l’initialisation du candidat.",
+     "explication": "Le candidat est initialisé à **0** : sur une liste de nombres négatifs, il n’est jamais remplacé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle correction supprime le bug ?",
+     "options": [
+      "Initialiser m avec le premier élément de la liste",
+      "Initialiser m avec le nombre 1 au lieu de 0",
+      "Remplacer x > m par x >= m dans le test",
+      "Ajouter un print dans la boucle pour voir m"
+     ],
+     "reponse": 0,
+     "aide": "Le candidat de départ doit être un élément de la liste.",
+     "explication": "Initialiser m avec **t[0]** garantit que le candidat vient de la liste (qui doit alors être non vide)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range dans l’ordre les étapes du débogage.",
+     "items": [
+      "Reproduire l’erreur sur la plus petite entrée possible",
+      "Localiser le bug avec des valeurs intermédiaires",
+      "Comprendre la cause du bug",
+      "Corriger le code",
+      "Ajouter un test qui échouait avant la correction"
+     ],
+     "aide": "On ne corrige qu’après avoir compris.",
+     "explication": "On **reproduit**, on **localise**, on **comprend**, on **corrige**, puis on **ajoute un test** qui échouait avant la correction."
+    }
+   ]
+  },
+  {
+   "chapitre": "d620b0be-1101-520a-a905-833c6cc1550c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La somme des chiffres, preuve à l’appui",
+   "competence": "raisonner",
+   "situation": "Mehdi veut prouver que sa fonction somme_chiffres se termine, et pas seulement la tester. Il suit à la main son exécution pour n = 482.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La fonction de Mehdi",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def somme_chiffres(n):",
+      "    s = 0",
+      "    while n > 0:",
+      "        s = s + n % 10",
+      "        n = n // 10",
+      "    return s"
+     ]
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "Trace pour n = 482",
+     "colonnes": [
+      "Tour",
+      "n au début du tour",
+      "s à la fin du tour"
+     ],
+     "lignes": [
+      [
+       1,
+       482,
+       2
+      ],
+      [
+       2,
+       "?",
+       10
+      ],
+      [
+       3,
+       "?",
+       14
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trace",
+     "enonce": "Touche la case qui donne la valeur de n au début du dernier tour.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La trace compte trois tours.",
+     "explication": "Au tour 3, n vaut 4 : c’est la case de la ligne 3, colonne « n au début du tour »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que rend somme_chiffres(9071) ?",
+     "reponse": 17,
+     "aide": "Additionne les chiffres un par un en partant de la droite.",
+     "explication": "La fonction additionne les chiffres : 1 + 7 + 0 + 9 = **17**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition d’un variant de boucle.",
+     "texte": "Un variant est une quantité ___, ___ qui ___ strictement à chaque tour.",
+     "reponses": [
+      [
+       "entière"
+      ],
+      [
+       "positive"
+      ],
+      [
+       "décroît"
+      ]
+     ],
+     "banque": [
+      "entière",
+      "positive",
+      "décroît",
+      "réelle",
+      "négative",
+      "croît"
+     ],
+     "aide": "Une suite de tels nombres ne peut pas être infinie.",
+     "explication": "Un variant est une quantité **entière**, **positive** qui **décroît** strictement : la boucle s’arrête forcément."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mehdi remplace n // 10 par n // 1. Que devient la boucle ?",
+     "options": [
+      "Elle ne s’arrête plus quand n est positif",
+      "Elle s’arrête plus vite qu’avant",
+      "Elle calcule la même somme qu’avant",
+      "Elle s’arrête après un seul tour de boucle"
+     ],
+     "reponse": 0,
+     "aide": "Que vaut n // 1 pour un entier n ?",
+     "explication": "n // 1 vaut n : le variant **ne décroît plus**, donc la boucle tourne indéfiniment dès que n est strictement positif."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0a2f8ab-6328-54f5-97e2-25eadf056950",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que coûte un programme quand les données grossissent",
+   "competence": "lire-tableau",
+   "situation": "Léa compte les opérations de trois petits programmes pour des listes de 10 puis de 100 éléments. Elle veut voir comment le coût grandit avec la taille n.",
+   "documents": [
+    {
+     "id": "couts",
+     "type": "tableau",
+     "titre": "Le coût de trois programmes",
+     "colonnes": [
+      "Programme",
+      "Complexité",
+      "n = 10",
+      "n = 100"
+     ],
+     "lignes": [
+      [
+       "Lire la case i d’un tableau",
+       "constante",
+       1,
+       1
+      ],
+      [
+       "Parcourir une liste",
+       "linéaire",
+       10,
+       100
+      ],
+      [
+       "Deux boucles imbriquées",
+       "quadratique",
+       100,
+       "?"
+      ]
+     ],
+     "source": "Chiffres écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couts",
+     "enonce": "Touche le programme dont le coût ne dépend pas de la taille n.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Regarde la ligne où les deux nombres sont identiques.",
+     "explication": "Lire la case i d’un tableau coûte **1** opération quelle que soit la taille : sa complexité est constante."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’opérations font les deux boucles imbriquées pour n = 100 ?",
+     "reponse": 10000,
+     "aide": "Pour n = 10, on trouve 100 : pense à n × n.",
+     "explication": "Une complexité quadratique donne n × n opérations : 100 × 100 = **10 000**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation à sa classe de complexité.",
+     "paires": [
+      [
+       "Lire la case i d’un tableau",
+       "Constante"
+      ],
+      [
+       "Rechercher dans un tableau trié par dichotomie",
+       "Logarithmique"
+      ],
+      [
+       "Chercher dans une liste non triée",
+       "Linéaire"
+      ],
+      [
+       "Trier par sélection",
+       "Quadratique"
+      ]
+     ],
+     "aide": "La dichotomie élimine la moitié des cas à chaque tour.",
+     "explication": "Accès à une case : **constante** ; dichotomie : **logarithmique** ; recherche sans tri : **linéaire** ; tri par sélection (deux boucles imbriquées) : **quadratique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0a2f8ab-6328-54f5-97e2-25eadf056950",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les paires de la salle informatique",
+   "competence": "modeliser",
+   "situation": "Noé écrit un programme qui compte, dans une liste de notes, les paires dont la première est plus petite que la seconde. Avant de le lancer sur toutes les notes du lycée, il veut estimer le temps que cela prendra.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Noé",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def compte(t):",
+      "    c = 0",
+      "    for x in t:",
+      "        [[f|for]] y in t:",
+      "            if x < y:",
+      "                c = c + 1",
+      "    return c"
+     ]
+    },
+    {
+     "id": "duree",
+     "type": "tableau",
+     "titre": "Estimation du temps de calcul",
+     "colonnes": [
+      "Taille n",
+      "Comparaisons x < y",
+      "Durée à 10⁹ opérations par seconde"
+     ],
+     "lignes": [
+      [
+       1000,
+       "1 000 000",
+       "1 ms"
+      ],
+      [
+       10000,
+       "100 000 000",
+       "0,1 s"
+      ],
+      [
+       100000,
+       "?",
+       "?"
+      ]
+     ],
+     "source": "Durées arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le mot qui ouvre la boucle imbriquée.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Cherche le second for, celui qui est dans le premier.",
+     "explication": "Le second **for** est imbriqué dans le premier : pour chaque x, on parcourt tous les y."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de comparaisons x < y le programme fait-il pour une liste de 8 éléments ?",
+     "reponse": 64,
+     "aide": "Chaque élément x est comparé à tous les éléments y.",
+     "explication": "On compare chaque élément à chacun des 8 : 8 × 8 = **64** comparaisons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de secondes durerait le calcul pour n = 100 000 ?",
+     "unite": "s",
+     "reponse": 10,
+     "aide": "Pour n = 100 000, on fait n × n comparaisons ; divise par 10⁹.",
+     "explication": "100 000 × 100 000 = 10 000 000 000 comparaisons, soit 10 000 000 000 / 10⁹ = **10 secondes**. Quand n est multiplié par 10, la durée est multipliée par 100."
+    },
+    {
+     "type": "choix",
+     "enonce": "Noé a mille fois plus de notes à traiter. Que lui conseilles-tu en priorité ?",
+     "options": [
+      "Chercher un algorithme de meilleure complexité",
+      "Acheter un ordinateur légèrement plus rapide",
+      "Réécrire le programme dans un autre langage",
+      "Supprimer la variable c du programme"
+     ],
+     "reponse": 0,
+     "aide": "Que devient le temps quand n est multiplié par 1 000 avec un coût quadratique ?",
+     "explication": "Améliorer l’algorithme bat toujours l’achat d’une machine plus rapide : mille fois plus de données, c’est un million de fois plus de travail avec une complexité quadratique."
+    }
+   ]
+  },
+  {
+   "chapitre": "d0a2f8ab-6328-54f5-97e2-25eadf056950",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Chercher la fiche d’un adhérent dans le pire des cas",
+   "competence": "raisonner",
+   "situation": "Le club informatique cherche un numéro d’adhérent dans une liste non triée. Hana prouve que sa recherche se termine, puis compte les comparaisons selon les cas.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La recherche séquentielle",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def cherche(t, v):",
+      "    i = 0",
+      "    while i < len(t) and t[i] != v:",
+      "        i = i + 1",
+      "    return i < len(t)"
+     ]
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Recherches dans t = [5, 8, 2, 9]",
+     "colonnes": [
+      "Valeur cherchée v",
+      "Comparaisons t[i] != v"
+     ],
+     "lignes": [
+      [
+       5,
+       1
+      ],
+      [
+       2,
+       "?"
+      ],
+      [
+       7,
+       "?"
+      ]
+     ],
+     "source": "On compte chaque évaluation de t[i] != v"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de comparaisons t[i] != v faut-il pour chercher v = 2 ?",
+     "reponse": 3,
+     "aide": "Le 2 est en case d’indice 2 : on a testé les cases 0, 1 et 2.",
+     "explication": "On teste les cases d’indice 0, 1 puis 2 : **3** comparaisons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de comparaisons faut-il pour chercher v = 7, absent de la liste ?",
+     "reponse": 4,
+     "aide": "Quand i vaut 4, la condition i < len(t) est fausse et la boucle s’arrête avant de comparer.",
+     "explication": "Il faut tester les quatre cases : **4** comparaisons, soit n comparaisons. C’est le pire cas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle quantité est un variant de cette boucle ?",
+     "options": [
+      "La différence entre la longueur de t et i",
+      "La somme de la longueur de t et de i",
+      "La valeur cherchée v, qui reste constante",
+      "La valeur de i, qui augmente à chaque tour"
+     ],
+     "reponse": 0,
+     "aide": "Un variant est entier, positif et décroît strictement.",
+     "explication": "len(t) − i est un entier positif ou nul qui diminue de 1 à chaque tour : c’est un **variant**, la boucle se termine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle propriété est un invariant de cette boucle, vrai au début de chaque tour ?",
+     "options": [
+      "v ne se trouve dans aucune des cases d’indice inférieur à i",
+      "v se trouve dans la case d’indice i dès le début du tour",
+      "La liste t est triée dans l’ordre croissant à chaque tour",
+      "La variable i est égale à la longueur de t au début"
+     ],
+     "reponse": 0,
+     "aide": "Les cases déjà examinées ne contiennent pas v, sinon la boucle se serait arrêtée.",
+     "explication": "À chaque tour, les cases **déjà examinées** ne contiennent pas v : c’est ce qui prouve que la réponse finale est juste."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le pire cas.",
+     "texte": "Pour une liste de n éléments, le pire cas demande ___ comparaisons : le coût est ___.",
+     "reponses": [
+      [
+       "n"
+      ],
+      [
+       "linéaire"
+      ]
+     ],
+     "banque": [
+      "n",
+      "linéaire",
+      "1",
+      "quadratique",
+      "logarithmique"
+     ],
+     "aide": "L’élément cherché est absent.",
+     "explication": "Dans le pire cas, on examine les **n** cases : le coût est **linéaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "13f5235a-023e-5e5c-bae2-375e0aad9ae8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les notes de Camille dans une liste",
+   "competence": "observer-schema",
+   "situation": "Camille range ses cinq notes de NSI dans une liste Python appelée t. Elle veut retrouver chaque note grâce à son indice.",
+   "documents": [
+    {
+     "id": "liste",
+     "type": "schema",
+     "titre": "La liste t et ses indices",
+     "largeur": 324,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 36,
+       "texte": "Liste t",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 60,
+       "l": 52,
+       "h": 40,
+       "texte": "12",
+       "id": "c0",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 46,
+       "y": 122,
+       "texte": "0",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 60,
+       "l": 52,
+       "h": 40,
+       "texte": "15",
+       "id": "c1",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 104,
+       "y": 122,
+       "texte": "1",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 136,
+       "y": 60,
+       "l": 52,
+       "h": 40,
+       "texte": "9",
+       "id": "c2",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 162,
+       "y": 122,
+       "texte": "2",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 194,
+       "y": 60,
+       "l": 52,
+       "h": 40,
+       "texte": "17",
+       "id": "c3",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 122,
+       "texte": "3",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 252,
+       "y": 60,
+       "l": 52,
+       "h": 40,
+       "texte": "11",
+       "id": "c4",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 278,
+       "y": 122,
+       "texte": "4",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 150,
+       "texte": "Les nombres sous les cases sont les indices.",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liste",
+     "enonce": "Touche la case d’indice 3.",
+     "reponse": [
+      "c3"
+     ],
+     "aide": "Les indices commencent à 0.",
+     "explication": "L’indice 3 est la **quatrième** case, celle qui contient 17."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’indice de la dernière case de la liste ?",
+     "reponse": 4,
+     "aide": "Pour n éléments, le dernier indice est n − 1.",
+     "explication": "La liste a 5 éléments : le dernier indice est 5 − 1 = **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que vaut t[1] + t[4] ?",
+     "reponse": 26,
+     "aide": "Lis la valeur des cases d’indices 1 et 4.",
+     "explication": "t[1] vaut 15 et t[4] vaut 11 : 15 + 11 = **26**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que provoque l’instruction t[5] ?",
+     "options": [
+      "Une erreur d’indice hors bornes",
+      "La valeur 11, la dernière case",
+      "La valeur 0, valeur par défaut",
+      "La valeur None, car la case est vide"
+     ],
+     "reponse": 0,
+     "aide": "Compte combien de cases existent et quel est le dernier indice valide.",
+     "explication": "Les indices valides vont de 0 à 4 : t[5] sort des bornes et provoque une **erreur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "13f5235a-023e-5e5c-bae2-375e0aad9ae8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La grille du jeu de Salomé",
+   "competence": "lire-tableau",
+   "situation": "Salomé programme un jeu de bataille navale sur une grille de 3 lignes et 4 colonnes. Elle la stocke dans une matrice g, où 1 marque un bateau, et compte les bateaux avec deux boucles.",
+   "documents": [
+    {
+     "id": "grille",
+     "type": "tableau",
+     "titre": "La matrice g",
+     "colonnes": [
+      "",
+      "col. 0",
+      "col. 1",
+      "col. 2",
+      "col. 3"
+     ],
+     "lignes": [
+      [
+       "ligne 0",
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       "ligne 1",
+       1,
+       1,
+       0,
+       0
+      ],
+      [
+       "ligne 2",
+       0,
+       0,
+       1,
+       1
+      ]
+     ],
+     "source": "Les lignes se lisent de haut en bas, g[ligne][colonne]",
+     "enteteLignes": true
+    },
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le comptage des bateaux",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "n = 0",
+      "for i in range(3):",
+      "    for j in range(4):",
+      "        if g[i][j] == 1:",
+      "            n = n + 1"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "grille",
+     "enonce": "Touche la case g[1][3].",
+     "reponse": [
+      "r1c4"
+     ],
+     "aide": "Ligne d’abord, colonne ensuite, en partant de 0.",
+     "explication": "g[1][3] est dans la **ligne 1**, colonne 3 : elle contient 0."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien vaut n à la fin du programme ?",
+     "reponse": 6,
+     "aide": "Compte les cases qui contiennent 1.",
+     "explication": "Il y a deux bateaux dans chacune des trois lignes : n vaut **6**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le test g[i][j] == 1 est-il exécuté ?",
+     "reponse": 12,
+     "aide": "Le test est exécuté pour chaque case de la grille.",
+     "explication": "La boucle extérieure fait 3 tours, l’intérieure 4 : 3 × 4 = **12** tests."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que provoque l’instruction g[3][0] ?",
+     "options": [
+      "Une erreur : la ligne 3 n’existe pas",
+      "La valeur 0",
+      "La valeur 1",
+      "Une erreur : la colonne 0 n’existe pas"
+     ],
+     "reponse": 0,
+     "aide": "Combien y a-t-il de lignes ? Quel est leur dernier indice ?",
+     "explication": "Les lignes sont numérotées de 0 à 2 : g[3] est hors bornes et provoque une **erreur d’indice**."
+    }
+   ]
+  },
+  {
+   "chapitre": "13f5235a-023e-5e5c-bae2-375e0aad9ae8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La grille dont toutes les lignes bougent",
+   "competence": "raisonner",
+   "situation": "Rayane crée deux grilles de 3 lignes et 3 colonnes, m et p, puis met 1 dans la case de la première ligne et de la première colonne de chacune. Dans m, tout un bloc de cases change.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux constructions",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "m = [ [0] * 3 ] * 3",
+      "m[0][0] = 1",
+      "p = [ [0] * 3 [[f|for]] i in range(3) ]",
+      "p[0][0] = 1"
+     ]
+    },
+    {
+     "id": "refs",
+     "type": "schema",
+     "titre": "Les lignes de m et de p, juste après leur création",
+     "largeur": 345,
+     "hauteur": 205,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 24,
+       "texte": "m",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 24,
+       "texte": "p",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 50,
+       "l": 50,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "m[0]",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 100,
+       "l": 50,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "m[1]",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 150,
+       "l": 50,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "m[2]",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 100,
+       "l": 56,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "0 0 0",
+       "id": "lm",
+       "zone": true,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        64
+       ],
+       "a": [
+        115,
+        108
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        114
+       ],
+       "a": [
+        115,
+        114
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        65,
+        164
+       ],
+       "a": [
+        115,
+        120
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 185,
+       "y": 50,
+       "l": 50,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "p[0]",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 185,
+       "y": 100,
+       "l": 50,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "p[1]",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 185,
+       "y": 150,
+       "l": 50,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "p[2]",
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 275,
+       "y": 50,
+       "l": 56,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "0 0 0",
+       "id": "lp0",
+       "zone": true,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 275,
+       "y": 100,
+       "l": 56,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "0 0 0",
+       "id": "lp1",
+       "zone": true,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 275,
+       "y": 150,
+       "l": 56,
+       "h": 28,
+       "arrondi": 6,
+       "texte": "0 0 0",
+       "id": "lp2",
+       "zone": true,
+       "teinte": "jaune",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        64
+       ],
+       "a": [
+        275,
+        64
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        114
+       ],
+       "a": [
+        275,
+        114
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        164
+       ],
+       "a": [
+        275,
+        164
+       ],
+       "fleche": "fin"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "refs",
+     "enonce": "Touche la liste que partagent les trois lignes de m.",
+     "reponse": [
+      "lm"
+     ],
+     "aide": "Cherche la liste vers laquelle pointent les trois flèches.",
+     "explication": "Les trois lignes de m désignent **la même liste** : multiplier une liste par un entier copie des références, pas la ligne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases contiennent 1 dans m après m[0][0] = 1 ?",
+     "reponse": 3,
+     "aide": "Modifier la liste partagée, c’est modifier les trois lignes.",
+     "explication": "La liste est partagée : la première case de **chacune des 3 lignes** vaut 1, donc 3 cases."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases contiennent 1 dans p après p[0][0] = 1 ?",
+     "reponse": 1,
+     "aide": "Chaque ligne de p est une liste distincte.",
+     "explication": "Les trois lignes de p sont **indépendantes** : une seule case change."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le mot qui construit chaque ligne de p séparément.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "C’est le mot de la compréhension.",
+     "explication": "La compréhension avec **for** construit une nouvelle liste de trois zéros à chaque tour : elle fabrique trois listes différentes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases un parcours complet d’une matrice carrée de côté 100 visite-t-il ?",
+     "reponse": 10000,
+     "aide": "Deux boucles imbriquées de 100 tours chacune.",
+     "explication": "100 × 100 = **10 000** cases : le coût est quadratique."
+    }
+   ]
+  },
+  {
+   "chapitre": "c24b6cea-34cf-5a07-b917-7a8bd9ece192",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le record du tournoi de Maé",
+   "competence": "programmer",
+   "situation": "Maé cherche le plus grand score d’un tournoi de jeu vidéo avec une fonction. Elle suit sa variable m tour par tour sur la liste [6, 3, 11, 8].",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La recherche du maximum",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def maximum(t):",
+      "    [[c|m]] = t[0]",
+      "    for i in range(1, len(t)):",
+      "        if t[i] > m:",
+      "            m = t[i]",
+      "    return m"
+     ]
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "Trace pour t = [6, 3, 11, 8]",
+     "colonnes": [
+      "i",
+      "t[i]",
+      "m à la fin du tour"
+     ],
+     "lignes": [
+      [
+       1,
+       3,
+       6
+      ],
+      [
+       2,
+       11,
+       "?"
+      ],
+      [
+       3,
+       8,
+       11
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur la variable m prend-elle à la fin du tour i = 2 ?",
+     "reponse": 11,
+     "aide": "Compare t[2] au candidat précédent, 6.",
+     "explication": "11 > 6 : le candidat est remplacé, m vaut **11**."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche la variable qui mémorise le candidat au maximum.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est elle qui est initialisée avec le premier élément.",
+     "explication": "La variable **m** garde le meilleur candidat rencontré jusque-là."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de comparaisons t[i] > m le programme fait-il pour cette liste de 4 éléments ?",
+     "reponse": 3,
+     "aide": "La boucle commence à i = 1.",
+     "explication": "i prend les valeurs 1, 2 et 3 : **3** comparaisons, soit n − 1 pour n éléments."
+    }
+   ]
+  },
+  {
+   "chapitre": "c24b6cea-34cf-5a07-b917-7a8bd9ece192",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Retrouver un numéro de dossard",
+   "competence": "lire-tableau",
+   "situation": "Les dossards d’une course sont rangés dans l’ordre croissant. Tom cherche le 23 par dichotomie et note, à chaque tour, les bornes g et d de la zone de recherche.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La dichotomie",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "t = [3, 8, 12, 15, 19, 23, 27, 31, 40]",
+      "def dicho(t, v):",
+      "    g = 0",
+      "    d = len(t) - 1",
+      "    while g <= d:",
+      "        m = (g + d) // 2",
+      "        if t[m] == v:",
+      "            return m",
+      "        elif t[m] < v:",
+      "            g = m + 1",
+      "        else:",
+      "            d = m - 1",
+      "    return -1"
+     ]
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "Recherche de 23",
+     "colonnes": [
+      "Tour",
+      "g",
+      "d",
+      "m",
+      "t[m]"
+     ],
+     "lignes": [
+      [
+       1,
+       0,
+       8,
+       4,
+       19
+      ],
+      [
+       2,
+       5,
+       8,
+       "?",
+       27
+      ],
+      [
+       3,
+       5,
+       5,
+       5,
+       23
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de m au tour 2 ?",
+     "reponse": 6,
+     "aide": "Calcule (g + d) // 2 avec g = 5 et d = 8.",
+     "explication": "(5 + 8) // 2 = 13 // 2 = **6**, et t[6] vaut 27."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de cases compte la zone de recherche, de g à d inclus, au tour 2 ?",
+     "reponse": 4,
+     "aide": "Les cases d’indices 5, 6, 7 et 8.",
+     "explication": "De l’indice 5 à l’indice 8 inclus : 8 − 5 + 1 = **4** cases. Elle est passée de 9 à 4 puis à 1 : c’est le variant."
+    },
+    {
+     "type": "zone",
+     "document": "trace",
+     "enonce": "Touche la case qui contient la valeur cherchée.",
+     "reponse": [
+      "r2c4"
+     ],
+     "aide": "Regarde la colonne t[m] au dernier tour.",
+     "explication": "Au tour 3, t[5] vaut **23** : c’est la valeur cherchée, la recherche s’arrête."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que risque-t-on si la liste des dossards n’est pas triée ?",
+     "options": [
+      "La dichotomie peut rendre un résultat faux sans le signaler",
+      "La dichotomie plante systématiquement",
+      "La dichotomie devient une recherche séquentielle",
+      "La dichotomie fait toujours exactement 3 tours"
+     ],
+     "reponse": 0,
+     "aide": "Elle élimine une moitié du tableau sans la regarder.",
+     "explication": "La dichotomie suppose un tableau **trié** : sinon elle peut éliminer la moitié où se trouve la valeur, sans le signaler."
+    }
+   ]
+  },
+  {
+   "chapitre": "c24b6cea-34cf-5a07-b917-7a8bd9ece192",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux façons de ranger cinq cartes",
+   "competence": "analyser-document",
+   "situation": "Anaïs trie à la main le jeu [7, 3, 9, 1, 5], d’abord par sélection, puis par insertion. Elle note chaque étape pour comparer les deux méthodes.",
+   "documents": [
+    {
+     "id": "selection",
+     "type": "tableau",
+     "titre": "Tri par sélection",
+     "colonnes": [
+      "Tour i",
+      "Tableau à la fin du tour",
+      "Échange ?"
+     ],
+     "lignes": [
+      [
+       0,
+       "1 3 9 7 5",
+       "oui"
+      ],
+      [
+       1,
+       "1 3 9 7 5",
+       "non"
+      ],
+      [
+       2,
+       "?",
+       "oui"
+      ],
+      [
+       3,
+       "1 3 5 7 9",
+       "non"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "insertion",
+     "type": "tableau",
+     "titre": "Tri par insertion",
+     "colonnes": [
+      "Élément inséré",
+      "Tableau trié ensuite",
+      "Décalages"
+     ],
+     "lignes": [
+      [
+       3,
+       "3 7 9 1 5",
+       1
+      ],
+      [
+       9,
+       "3 7 9 1 5",
+       0
+      ],
+      [
+       1,
+       "1 3 7 9 5",
+       3
+      ],
+      [
+       5,
+       "1 3 5 7 9",
+       "?"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Écris le tableau à la fin du tour 2 du tri par sélection.",
+     "texte": "___ ___ ___ ___ ___",
+     "reponses": [
+      [
+       "1"
+      ],
+      [
+       "3"
+      ],
+      [
+       "5"
+      ],
+      [
+       "7"
+      ],
+      [
+       "9"
+      ]
+     ],
+     "aide": "Au tour 2, le plus petit du reste, 5, prend la place du 9.",
+     "explication": "On place le plus petit du reste, **5**, en case 2 en l’échangeant avec le 9 : 1 3 5 7 9."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’échanges effectifs le tri par sélection a-t-il faits dans le tableau ?",
+     "reponse": 2,
+     "aide": "Compte les lignes « oui ».",
+     "explication": "Deux tours ont fait un échange (les tours 0 et 2) : **2** échanges, c’est son point fort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de décalages faut-il pour insérer le 5 dans le tri par insertion ?",
+     "reponse": 2,
+     "aide": "Dans la partie triée 1 3 7 9, le 5 passe devant des éléments plus grands.",
+     "explication": "Le 5 passe devant le 9 et le 7 : **2** décalages."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tri à sa caractéristique.",
+     "paires": [
+      [
+       "Tri par sélection",
+       "Un nombre d’échanges minimal"
+      ],
+      [
+       "Tri par insertion",
+       "Quasi linéaire sur un tableau presque trié"
+      ],
+      [
+       "Tris des bibliothèques",
+       "Complexité en n log n"
+      ]
+     ],
+     "aide": "Pense à ce que chaque méthode fait de mieux.",
+     "explication": "La **sélection** limite les échanges, l’**insertion** est très rapide sur un tableau presque trié, et les tris des bibliothèques sont en **n log n**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b320b8-9a93-5dda-9b27-600a8ec20d34",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fichier de notes du club",
+   "competence": "analyser-document",
+   "situation": "Ambre reçoit un petit fichier CSV avec les notes de trois élèves du club de NSI. Elle doit le lire avant de le charger dans un programme.",
+   "documents": [
+    {
+     "id": "csv",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le fichier notes.csv",
+     "auteur": "Fichier écrit pour l’exercice",
+     "blocs": [
+      "[[d|nom]],[[d|classe]],[[d|note]]",
+      "Lina,1re A,14",
+      "Hugo,1re B,11",
+      "Zoé,1re A,17"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "csv",
+     "enonce": "Touche les trois mots qui sont les noms des descripteurs.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Ils sont sur la première ligne du fichier.",
+     "explication": "La première ligne d’un fichier CSV porte d’ordinaire les noms des descripteurs : **nom, classe, note**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément du fichier à son vocabulaire.",
+     "paires": [
+      [
+       "Une ligne de données",
+       "Un enregistrement"
+      ],
+      [
+       "Une colonne",
+       "Un descripteur"
+      ],
+      [
+       "La première ligne",
+       "Les noms des descripteurs"
+      ]
+     ],
+     "aide": "Une ligne décrit un élève ; une colonne décrit une propriété de tous les élèves.",
+     "explication": "Une ligne est un **enregistrement**, une colonne un **descripteur** (attribut), et la première ligne en donne les noms."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des notes des élèves de la classe 1re A ?",
+     "reponse": 15.5,
+     "aide": "Sélectionne d’abord les deux lignes de la classe 1re A.",
+     "explication": "Lina (14) et Zoé (17) : (14 + 17) / 2 = **15,5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b320b8-9a93-5dda-9b27-600a8ec20d34",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Interroger la table de la 1re B",
+   "competence": "programmer",
+   "situation": "Ambre charge le fichier en mémoire, une fois sous forme de liste de dictionnaires, une fois sous forme de liste de listes, et calcule le total des notes de la classe 1re B.",
+   "documents": [
+    {
+     "id": "dico",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Liste de dictionnaires",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "eleves = [",
+      "    {\"nom\": \"Lina\", \"classe\": \"1re A\", \"note\": 14},",
+      "    {\"nom\": \"Hugo\", \"classe\": \"1re B\", \"note\": 11},",
+      "    {\"nom\": \"Zoé\", \"classe\": \"1re A\", \"note\": 17},",
+      "    {\"nom\": \"Tom\", \"classe\": \"1re B\", \"note\": 9}",
+      "]",
+      "total = 0",
+      "for e in eleves:",
+      "    if e[\"[[c|classe]]\"] == \"1re B\":",
+      "        total = total + e[\"note\"]",
+      "print(total)"
+     ]
+    },
+    {
+     "id": "liste",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Liste de listes",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "eleves2 = [ [\"Lina\", \"1re A\", 14], [\"Hugo\", \"1re B\", 11] ]",
+      "print(eleves2[0][2])"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Que s’affiche-t-il à l’exécution du premier programme ?",
+     "reponse": 20,
+     "aide": "Seuls Hugo et Tom sont en 1re B.",
+     "explication": "Les élèves de la 1re B sont Hugo (11) et Tom (9) : 11 + 9 = **20**."
+    },
+    {
+     "type": "zone",
+     "document": "dico",
+     "enonce": "Touche le descripteur sur lequel porte la sélection.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Regarde la condition du if.",
+     "explication": "La condition porte sur le descripteur **classe** : on ne garde que les enregistrements de la 1re B."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Que s’affiche-t-il pour print(eleves2[0][2]) ?",
+     "reponse": 14,
+     "aide": "Ligne 0, puis colonne 2.",
+     "explication": "eleves2[0] est la liste de Lina, et la colonne d’indice 2 contient sa note : **14**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On insère une colonne « prénom » en première position de chaque ligne de la liste de listes. Que désigne alors eleves2[0][2] ?",
+     "options": [
+      "La classe au lieu de la note",
+      "Toujours la note de Lina",
+      "Une erreur de syntaxe",
+      "Le prénom de Lina"
+     ],
+     "reponse": 0,
+     "aide": "Tous les indices de colonnes sont décalés d’un cran.",
+     "explication": "Tout se décale : l’indice 2 désigne maintenant la **classe**. Avec des dictionnaires, e[\"note\"] aurait continué à marcher."
+    }
+   ]
+  },
+  {
+   "chapitre": "d4b320b8-9a93-5dda-9b27-600a8ec20d34",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fusionner les élèves et leurs devoirs",
+   "competence": "raisonner",
+   "situation": "Le lycée garde les élèves dans une table et les notes de devoirs dans une autre. Pour calculer des moyennes, Karima doit fusionner les deux tables.",
+   "documents": [
+    {
+     "id": "eleves",
+     "type": "tableau",
+     "titre": "Table des élèves",
+     "colonnes": [
+      "id",
+      "nom",
+      "classe"
+     ],
+     "lignes": [
+      [
+       1,
+       "Lina",
+       "1re A"
+      ],
+      [
+       2,
+       "Hugo",
+       "1re B"
+      ],
+      [
+       3,
+       "Zoé",
+       "1re A"
+      ]
+     ],
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "devoirs",
+     "type": "tableau",
+     "titre": "Table des devoirs",
+     "colonnes": [
+      "id",
+      "devoir",
+      "note"
+     ],
+     "lignes": [
+      [
+       1,
+       "D1",
+       14
+      ],
+      [
+       2,
+       "D1",
+       11
+      ],
+      [
+       3,
+       "D1",
+       17
+      ],
+      [
+       2,
+       "D2",
+       15
+      ],
+      [
+       3,
+       "D2",
+       13
+      ]
+     ],
+     "source": "Données écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quel descripteur commun aux deux tables sert de clé de fusion ? Écris son nom.",
+     "reponse": [
+      "id",
+      "l’id",
+      "identifiant"
+     ],
+     "aide": "Il identifie chaque élève, dans les deux tables.",
+     "explication": "Le descripteur **id** relie un devoir à l’élève qui l’a rendu."
+    },
+    {
+     "type": "zone",
+     "document": "devoirs",
+     "multiple": true,
+     "enonce": "Touche les deux cases qui désignent les devoirs de Hugo.",
+     "reponse": [
+      "r1c0",
+      "r3c0"
+     ],
+     "aide": "Cherche l’id de Hugo dans la table des élèves.",
+     "explication": "Hugo a l’id 2 : ses devoirs sont les deux lignes où la clé vaut **2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne de Hugo sur ses deux devoirs ?",
+     "reponse": 13,
+     "aide": "Additionne ses deux notes, puis divise par 2.",
+     "explication": "(11 + 15) / 2 = **13**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la somme de toutes les notes des élèves de la 1re A ?",
+     "reponse": 44,
+     "aide": "Lina et Zoé sont en 1re A : additionne tous leurs devoirs.",
+     "explication": "Lina : 14. Zoé : 17 + 13 = 30. Total : 14 + 30 = **44**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par erreur, Hugo reçoit l’id 3 dans la table des élèves, comme Zoé. Que produit la fusion ?",
+     "options": [
+      "Des lignes en double, sans aucun message d’erreur",
+      "Une erreur qui arrête immédiatement la fusion",
+      "La disparition pure et simple des devoirs de Zoé",
+      "Un tri automatique des élèves par identifiant"
+     ],
+     "reponse": 0,
+     "aide": "Une clé doit identifier un enregistrement de façon unique.",
+     "explication": "Si deux lignes portent la même clé, la fusion produit des **doublons silencieux** : les notes de Zoé seraient associées aussi à Hugo."
+    }
+   ]
+  },
+  {
+   "chapitre": "3861f096-5925-5e89-9ea8-133faba570d9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Rendre la monnaie à la buvette",
+   "competence": "calculer",
+   "situation": "À la buvette du lycée, Alix doit rendre 13 € avec des pièces de 1, 2, 5 et 10 €. Il prend toujours la plus grosse pièce possible et note chaque étape.",
+   "documents": [
+    {
+     "id": "rendu",
+     "type": "tableau",
+     "titre": "Les étapes du rendu",
+     "colonnes": [
+      "Reste à rendre (€)",
+      "Pièce utilisée (€)",
+      "Nouveau reste (€)"
+     ],
+     "lignes": [
+      [
+       13,
+       10,
+       3
+      ],
+      [
+       3,
+       "?",
+       1
+      ],
+      [
+       1,
+       1,
+       0
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle pièce, en euros, Alix utilise-t-il à la deuxième étape ?",
+     "reponse": 2,
+     "aide": "La plus grosse pièce qui n’excède pas 3 €.",
+     "explication": "Parmi 1, 2, 5 et 10, la plus grosse qui n’excède pas 3 est **2 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pièces Alix rend-il au total ?",
+     "reponse": 3,
+     "aide": "Compte les lignes du tableau.",
+     "explication": "Il rend 10 + 2 + 1 : **3** pièces."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui fait d’Alix un algorithme glouton ?",
+     "options": [
+      "Il fait à chaque étape le meilleur choix immédiat, sans retour en arrière",
+      "Il essaie toutes les combinaisons de pièces possibles puis garde la meilleure",
+      "Il revient sur un choix quand le résultat ne lui plaît pas ensuite",
+      "Il trie d’abord tous les clients avant de commencer à rendre la monnaie"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qu’il décide à chaque ligne du tableau.",
+     "explication": "Un glouton prend à chaque étape le **meilleur choix immédiat** et ne revient jamais sur un choix déjà fait."
+    }
+   ]
+  },
+  {
+   "chapitre": "3861f096-5925-5e89-9ea8-133faba570d9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La borne de rendu aux pièces de 1, 3 et 4",
+   "competence": "raisonner",
+   "situation": "La kermesse du lycée a sa propre monnaie : des jetons de 1, 3 et 4 points. Zoé programme le rendu glouton et le compare au meilleur rendu possible, trouvé à la main.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le rendu glouton",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "def rendu(montant, pieces):",
+      "    pieces = sorted(pieces, reverse=True)",
+      "    n = 0",
+      "    for p in pieces:",
+      "        [[w|while]] montant >= p:",
+      "            montant = montant - p",
+      "            n = n + 1",
+      "    return n"
+     ]
+    },
+    {
+     "id": "compare",
+     "type": "tableau",
+     "titre": "Glouton et meilleur rendu",
+     "colonnes": [
+      "Montant",
+      "Glouton (jetons)",
+      "Meilleur rendu (jetons)"
+     ],
+     "lignes": [
+      [
+       6,
+       "?",
+       2
+      ],
+      [
+       7,
+       2,
+       2
+      ],
+      [
+       10,
+       "?",
+       3
+      ]
+     ],
+     "source": "Appels : rendu(montant, [1, 3, 4])"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de jetons le programme rend-il pour rendu(6, [1, 3, 4]) ?",
+     "reponse": 3,
+     "aide": "Il prend d’abord 4, puis ce qui reste.",
+     "explication": "Il prend 4, puis 1, puis 1 : **3** jetons, alors que 3 + 3 n’en demande que 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jetons le programme rend-il pour rendu(10, [1, 3, 4]) ?",
+     "reponse": 4,
+     "aide": "Il prend le 4 tant qu’il peut.",
+     "explication": "Il prend 4, 4, puis 1 et 1 : **4** jetons, alors que 4 + 3 + 3 n’en demande que 3."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche le mot qui fait reprendre la même pièce tant qu’elle convient.",
+     "reponse": [
+      "w"
+     ],
+     "aide": "C’est un mot de boucle non bornée.",
+     "explication": "La boucle **while** répète la pièce courante tant que le montant restant l’accepte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du tableau ?",
+     "options": [
+      "Le glouton n’est pas toujours optimal : cela dépend des pièces",
+      "Le glouton est optimal quel que soit le système de pièces utilisé",
+      "Le programme contient une erreur de syntaxe dans la boucle while",
+      "Il faudrait trier les pièces par ordre croissant avant de rendre"
+     ],
+     "reponse": 0,
+     "aide": "Compare, ligne à ligne, les deux dernières colonnes.",
+     "explication": "Pour 6 et 10, le glouton donne plus de jetons que le meilleur rendu. Qu’il marche pour les euros est une propriété du **système de pièces**, pas de l’algorithme."
+    }
+   ]
+  },
+  {
+   "chapitre": "3861f096-5925-5e89-9ea8-133faba570d9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Remplir la salle de la MJC",
+   "competence": "analyser-document",
+   "situation": "Une seule salle, six demandes d’activités dans la journée. Marcus veut en caser le plus possible sans qu’elles se chevauchent ; une activité peut commencer à l’heure où la précédente finit.",
+   "documents": [
+    {
+     "id": "acts",
+     "type": "tableau",
+     "titre": "Les demandes de la journée",
+     "colonnes": [
+      "Activité",
+      "Début (h)",
+      "Fin (h)"
+     ],
+     "lignes": [
+      [
+       "A",
+       8,
+       16
+      ],
+      [
+       "B",
+       9,
+       10
+      ],
+      [
+       "C",
+       10,
+       12
+      ],
+      [
+       "D",
+       11,
+       13
+      ],
+      [
+       "E",
+       12,
+       14
+      ],
+      [
+       "F",
+       14,
+       15
+      ]
+     ],
+     "source": "Horaires écrits pour l’exercice"
+    },
+    {
+     "id": "schema",
+     "type": "chaine",
+     "titre": "La méthode gloutonne",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Trier les activités par heure de fin"
+      },
+      {
+       "id": "n2",
+       "texte": "Prendre la première activité compatible"
+      },
+      {
+       "id": "n3",
+       "texte": "L’ajouter définitivement"
+      },
+      {
+       "id": "n4",
+       "texte": "Recommencer jusqu’à épuisement"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ],
+     "source": "D’après le cours de NSI"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range les activités par heure de fin croissante.",
+     "items": [
+      "B : de 9 h à 10 h",
+      "C : de 10 h à 12 h",
+      "D : de 11 h à 13 h",
+      "E : de 12 h à 14 h",
+      "F : de 14 h à 15 h",
+      "A : de 8 h à 16 h"
+     ],
+     "aide": "Compare uniquement la colonne « Fin ».",
+     "explication": "Les fins sont 10, 12, 13, 14, 15 puis 16 : **B, C, D, E, F, A**."
+    },
+    {
+     "type": "zone",
+     "document": "acts",
+     "multiple": true,
+     "enonce": "Touche les activités retenues par la méthode gloutonne.",
+     "reponse": [
+      "r1c0",
+      "r2c0",
+      "r4c0",
+      "r5c0"
+     ],
+     "aide": "On garde B, puis la première activité qui commence à 10 h ou après, et ainsi de suite.",
+     "explication": "On retient **B** (fin 10 h), **C** (10 h – 12 h), puis **E** (12 h – 14 h) et **F** (14 h – 15 h) ; D chevauche C, A chevauche tout."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’activités la méthode gloutonne retient-elle ?",
+     "reponse": 4,
+     "aide": "Compte les activités touchées à la question précédente.",
+     "explication": "B, C, E et F : **4** activités."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Marcus préfère prendre d’abord l’activité qui commence le plus tôt. Combien d’activités retient-il alors ?",
+     "reponse": 1,
+     "aide": "Celle qui commence à 8 h finit à 16 h.",
+     "explication": "L’activité A occupe toute la journée : elle empêche toutes les autres, soit **1** activité. Ce critère est mauvais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « finir le plus tôt » est-il le bon critère ?",
+     "options": [
+      "Il laisse le plus de temps libre pour les activités suivantes",
+      "Il retient toujours les activités les plus courtes",
+      "Il évite de trier les demandes",
+      "Il garantit que chaque activité sera retenue"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui reste de la journée après chaque choix.",
+     "explication": "Choisir l’activité qui finit le plus tôt libère le plus de temps pour la suite : ce critère est **prouvé optimal** pour le choix d’activités."
+    }
+   ]
+  },
+  {
+   "chapitre": "ace13ca2-a686-5405-b180-aa595b2f44b8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois projets pour une IA",
+   "competence": "analyser-document",
+   "situation": "Un club de NSI imagine trois projets d’apprentissage automatique. Pour chacun, il liste les données dont il dispose.",
+   "documents": [
+    {
+     "id": "projets",
+     "type": "tableau",
+     "titre": "Trois projets",
+     "colonnes": [
+      "Projet",
+      "Données disponibles"
+     ],
+     "lignes": [
+      [
+       "Classer des courriels",
+       "5 000 courriels déjà marqués « indésirable » ou « normal »"
+      ],
+      [
+       "Prévoir le prix d’un logement",
+       "3 000 ventes passées avec leur prix"
+      ],
+      [
+       "Regrouper des clients",
+       "Des historiques d’achats, sans aucune catégorie"
+      ]
+     ],
+     "source": "Projets écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "projets",
+     "enonce": "Touche le projet dont les données n’ont pas d’étiquette.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Une étiquette est la réponse attendue, déjà connue pour chaque exemple.",
+     "explication": "Les historiques d’achats n’ont aucune catégorie : c’est un apprentissage **non supervisé**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque projet à sa tâche.",
+     "paires": [
+      [
+       "Classer des courriels",
+       "Classification"
+      ],
+      [
+       "Prévoir le prix d’un logement",
+       "Régression"
+      ],
+      [
+       "Regrouper des clients",
+       "Partitionnement"
+      ]
+     ],
+     "aide": "Un prix est un nombre ; une catégorie est un choix parmi quelques-unes.",
+     "explication": "Courriels : **classification**. Prix : **régression** (une valeur numérique). Clients : **partitionnement**, dans un cadre non supervisé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui caractérise l’apprentissage supervisé ?",
+     "options": [
+      "Il part d’exemples étiquetés",
+      "Il n’utilise aucune donnée",
+      "Il ne sert qu’à regrouper des données",
+      "Il applique des règles écrites à la main"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux courriels déjà marqués.",
+     "explication": "L’apprentissage **supervisé** part d’exemples dont on connaît l’étiquette, pour prédire celle de données nouvelles."
+    }
+   ]
+  },
+  {
+   "chapitre": "ace13ca2-a686-5405-b180-aa595b2f44b8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pomme ou citron : les k voisins de Nolan",
+   "competence": "raisonner",
+   "situation": "Nolan mesure le sucre et l’acidité de fruits connus. Il veut deviner la nature d’un fruit inconnu N (sucre 5, acidité 4) avec les k plus proches voisins. Il a déjà calculé les carrés des distances à N, sauf un.",
+   "documents": [
+    {
+     "id": "fruits",
+     "type": "tableau",
+     "titre": "Sept fruits connus",
+     "colonnes": [
+      "Point",
+      "Sucre",
+      "Acidité",
+      "Fruit",
+      "Distance² à N"
+     ],
+     "lignes": [
+      [
+       "P1",
+       2,
+       3,
+       "pomme",
+       10
+      ],
+      [
+       "P2",
+       3,
+       2,
+       "pomme",
+       "?"
+      ],
+      [
+       "P3",
+       2,
+       1,
+       "pomme",
+       18
+      ],
+      [
+       "P4",
+       7,
+       8,
+       "citron",
+       20
+      ],
+      [
+       "P5",
+       8,
+       6,
+       "citron",
+       13
+      ],
+      [
+       "P6",
+       6,
+       9,
+       "citron",
+       26
+      ],
+      [
+       "P7",
+       7,
+       9,
+       "citron",
+       29
+      ]
+     ],
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le carré de la distance entre P2 et N ?",
+     "reponse": 8,
+     "aide": "Additionne les carrés des écarts de sucre et d’acidité.",
+     "explication": "Écart de sucre : 5 − 3 = 2 ; écart d’acidité : 4 − 2 = 2. 2² + 2² = **8**."
+    },
+    {
+     "type": "zone",
+     "document": "fruits",
+     "multiple": true,
+     "enonce": "Pour k = 3, touche les trois voisins les plus proches de N.",
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r4c0"
+     ],
+     "aide": "Cherche les trois plus petites valeurs de la dernière colonne.",
+     "explication": "Les plus petites distances² sont 8 (**P2**), 10 (**P1**) et 13 (**P5**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la classe prédite pour N avec k = 3 ?",
+     "options": [
+      "pomme",
+      "citron"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compte les classes parmi les trois voisins.",
+     "explication": "Parmi P2, P1 et P5, il y a deux pommes et un citron : la classe majoritaire est **pomme**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec k = 7 (tous les fruits), N est classé « citron ». Pourquoi est-ce un mauvais réglage ?",
+     "options": [
+      "Les frontières sont lissées : la classe majoritaire du jeu l’emporte",
+      "Le nombre de voisins doit toujours être pair pour voter",
+      "La distance ne peut plus être calculée avec autant de points",
+      "L’algorithme se met à suivre le bruit des données d’apprentissage"
+     ],
+     "reponse": 0,
+     "aide": "Compte combien de pommes et de citrons contient le jeu entier.",
+     "explication": "Le jeu compte 4 citrons et 3 pommes : avec k = 7, la classe majoritaire de tout le jeu l’emporte, **quel que soit** le point à classer."
+    }
+   ]
+  },
+  {
+   "chapitre": "ace13ca2-a686-5405-b180-aa595b2f44b8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un modèle de recrutement à surveiller",
+   "competence": "analyser-document",
+   "situation": "Une entreprise teste un modèle qui trie les candidatures. Un enseignant de NSI analyse ses scores d’évaluation et le texte qui présente ses données.",
+   "documents": [
+    {
+     "id": "scores",
+     "type": "tableau",
+     "titre": "Évaluation du modèle",
+     "colonnes": [
+      "Jeu de données",
+      "Taille",
+      "Bonnes prédictions"
+     ],
+     "lignes": [
+      [
+       "Apprentissage",
+       1000,
+       "100 %"
+      ],
+      [
+       "Test",
+       250,
+       "72 %"
+      ]
+     ],
+     "source": "Chiffres écrits pour l’exercice"
+    },
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Les données du modèle",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le modèle a été entraîné sur [[b|dix ans de recrutements passés]], où 85 % des personnes embauchées étaient des hommes. Une fois en service, il classe systématiquement plus bas les candidatures féminines, bien qu’il ne reçoive jamais le genre des candidats.",
+      "Ses concepteurs affirment : « Le modèle est neutre, puisqu’il ne fait que calculer. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de prédictions sont justes sur le jeu de test ?",
+     "reponse": 180,
+     "aide": "Calcule 72 % de 250.",
+     "explication": "72 % de 250 = 0,72 × 250 = **180** prédictions justes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’écart entre 100 % et 72 % ?",
+     "options": [
+      "Un surapprentissage : le modèle a retenu ses exemples",
+      "Un sous-apprentissage dû à un nombre k trop grand",
+      "Une erreur dans la construction du jeu de test",
+      "Une corrélation entre les deux jeux, sans cause"
+     ],
+     "reponse": 0,
+     "aide": "Le modèle est parfait sur ce qu’il a déjà vu, moins sur des données jamais vues.",
+     "explication": "Parfait sur les données d’apprentissage, médiocre sur des données jamais vues : c’est du **surapprentissage**. D’où l’exigence d’évaluer sur un jeu de test."
+    },
+    {
+     "type": "zone",
+     "document": "texte",
+     "enonce": "Touche le passage qui explique l’origine du biais.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le modèle a appris sur des décisions humaines d’autrefois.",
+     "explication": "Entraîné sur **dix ans de recrutements passés** inégalitaires, le modèle les perpétue en leur donnant l’apparence de l’objectivité."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque limite à sa signification.",
+     "paires": [
+      [
+       "Biais",
+       "Le modèle perpétue des décisions passées inégalitaires"
+      ],
+      [
+       "Corrélation",
+       "Il relie des phénomènes sans en expliquer la cause"
+      ],
+      [
+       "Couverture",
+       "Il ne sait rien des situations absentes de ses données"
+      ]
+     ],
+     "aide": "Reprends les trois limites du cours.",
+     "explication": "Le **biais** vient des données, la **corrélation** n’est pas une cause, et la **couverture** limite ce que le modèle sait dire."
+    }
+   ]
+  }
+ ]
+}

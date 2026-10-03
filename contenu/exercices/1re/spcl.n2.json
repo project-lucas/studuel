@@ -1,0 +1,2516 @@
+{
+ "niveau": "1re",
+ "matiere": "spcl",
+ "exercices": [
+  {
+   "chapitre": "84553740-9424-5e81-b623-8e151f93b6e9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la chambre noire au téléphone : une frise de l’image",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Camille place sur une frise cinq dates qui ont marqué l’histoire de l’image. Elle veut aussi comprendre ce qu’elle a le droit de publier.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quelques repères de l’histoire de l’image",
+     "debut": 1800,
+     "fin": 2000,
+     "pas": 25,
+     "evenements": [
+      {
+       "id": "niepce",
+       "date": 1826,
+       "nom": "Image de Niépce"
+      },
+      {
+       "id": "daguerre",
+       "date": 1839,
+       "nom": "Daguerréotype"
+      },
+      {
+       "id": "autochrome",
+       "date": 1907,
+       "nom": "Autochrome"
+      },
+      {
+       "id": "ccd",
+       "date": 1969,
+       "nom": "Capteur CCD"
+      },
+      {
+       "id": "tel",
+       "date": 2000,
+       "nom": "Photo au téléphone"
+      }
+     ],
+     "source": "Repères du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "autochrome"
+     ],
+     "enonce": "Touche l’événement qui correspond au premier procédé de photographie en couleurs.",
+     "aide": "Les frères Lumière l’ont commercialisé au début du XXᵉ siècle.",
+     "explication": "L’**autochrome** des frères Lumière, commercialisé en **1907**, est le premier procédé couleur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la première image durable de Niépce (1826) et l’autochrome ?",
+     "reponse": 81,
+     "unite": "ans",
+     "tolerance": 0.1,
+     "aide": "Soustrais la date la plus ancienne à la plus récente.",
+     "explication": "1907 − 1826 = **81 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille publie sur un réseau social une photo de son camarade Hugo, reconnaissable, sans lui avoir demandé son accord. De quoi s’agit-il ?",
+     "options": [
+      "D’une atteinte au droit à l’image d’Hugo",
+      "D’une atteinte à son propre droit d’auteur",
+      "D’un usage libre, car c’est elle qui a pris la photo",
+      "D’un usage libre, car la photo est publiée en ligne"
+     ],
+     "reponse": 0,
+     "aide": "Le droit à l’image protège la personne photographiée, pas le photographe.",
+     "explication": "Le **droit à l’image** protège la personne photographiée : diffuser sa photo reconnaissable sans son accord y porte atteinte, même si c’est le photographe qui publie."
+    }
+   ]
+  },
+  {
+   "chapitre": "84553740-9424-5e81-b623-8e151f93b6e9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi Léo voit flou de loin ?",
+   "competence": "observer-schema",
+   "situation": "Léo voit flou les objets éloignés. Son opticien schématise son œil avec le modèle du cours : un diaphragme, une lentille convergente et un écran. Il y fait arriver des rayons parallèles venant d’un objet très lointain.",
+   "documents": [
+    {
+     "id": "oeil",
+     "type": "schema",
+     "titre": "L’œil de Léo, en coupe",
+     "largeur": 330,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 110,
+       "rx": 135,
+       "ry": 80,
+       "teinte": "rose",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        82
+       ],
+       "a": [
+        80,
+        82
+       ],
+       "epaisseur": 2,
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        110
+       ],
+       "a": [
+        296,
+        110
+       ],
+       "epaisseur": 2,
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        138
+       ],
+       "a": [
+        80,
+        138
+       ],
+       "epaisseur": 2,
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        82
+       ],
+       "a": [
+        296,
+        123.7
+       ],
+       "epaisseur": 2,
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        138
+       ],
+       "a": [
+        296,
+        96.3
+       ],
+       "epaisseur": 2,
+       "teinte": "gris"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 80,
+       "cy": 110,
+       "rx": 7,
+       "ry": 34,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "cristallin",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 294,
+       "y": 62,
+       "l": 10,
+       "h": 96,
+       "arrondi": 4,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "retine",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 225,
+       "cy": 110,
+       "r": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "foyer",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 45,
+       "y": 68,
+       "texte": "rayons parallèles",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 207,
+       "texte": "schéma non à l’échelle",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oeil",
+     "reponse": [
+      "foyer"
+     ],
+     "enonce": "Touche le point où les rayons convergent dans l’œil de Léo.",
+     "aide": "Repère l’endroit où les trois rayons se croisent.",
+     "explication": "Les rayons se croisent en un point situé **avant** l’écran : c’est là que l’image se forme."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque partie de l’œil à son rôle dans le modèle.",
+     "paires": [
+      [
+       "Pupille et iris",
+       "Diaphragme"
+      ],
+      [
+       "Cristallin",
+       "Lentille convergente"
+      ],
+      [
+       "Rétine",
+       "Écran"
+      ]
+     ],
+     "aide": "Le modèle compte trois éléments : une ouverture, une lentille et un écran.",
+     "explication": "L’**iris** et la **pupille** règlent la lumière (diaphragme), le **cristallin** converge les rayons (lentille), la **rétine** reçoit l’image (écran)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que présente l’œil de Léo ?",
+     "options": [
+      "Une myopie : l’image se forme avant la rétine",
+      "Une myopie : l’image se forme après la rétine",
+      "Une hypermétropie : l’image se forme avant la rétine",
+      "Aucun défaut : l’image se forme sur la rétine"
+     ],
+     "reponse": 0,
+     "aide": "Pour voir net, l’image doit se former sur la rétine : où se forme-t-elle ici ?",
+     "explication": "L’image se forme **avant** la rétine : l’œil est trop convergent, c’est une **myopie**.",
+     "ordreFixe": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lentille corrige ce défaut ?",
+     "options": [
+      "Une lentille divergente",
+      "Une lentille convergente",
+      "Un filtre jaune",
+      "Un diaphragme plus petit"
+     ],
+     "reponse": 0,
+     "aide": "Il faut retarder la convergence des rayons, donc diminuer la convergence de l’œil.",
+     "explication": "L’œil myope est trop convergent : on le corrige par une lentille **divergente**, qui retarde la formation de l’image sur la rétine.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "84553740-9424-5e81-b623-8e151f93b6e9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sous les projecteurs de la scène",
+   "competence": "raisonner",
+   "situation": "Un technicien de théâtre règle des projecteurs de lumière rouge, verte et bleue. Il se demande aussi comment les objets du décor vont paraître selon l’éclairage. Rappel : un projecteur magenta, c’est un mélange de lumière rouge et de lumière bleue.",
+   "documents": [
+    {
+     "id": "zones",
+     "type": "tableau",
+     "titre": "Les quatre zones du plateau",
+     "colonnes": [
+      "Zone",
+      "Projecteurs allumés"
+     ],
+     "lignes": [
+      [
+       "Zone 1",
+       "rouge + vert"
+      ],
+      [
+       "Zone 2",
+       "rouge + bleu"
+      ],
+      [
+       "Zone 3",
+       "vert + bleu"
+      ],
+      [
+       "Zone 4",
+       "rouge + vert + bleu"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Éclairage écrit pour l’exercice"
+    },
+    {
+     "id": "objets",
+     "type": "tableau",
+     "titre": "Les objets du décor",
+     "colonnes": [
+      "Objet",
+      "Lumières diffusées en lumière blanche"
+     ],
+     "lignes": [
+      [
+       "Tomate",
+       "rouge"
+      ],
+      [
+       "Feuille de laitue",
+       "vert"
+      ],
+      [
+       "Banane",
+       "rouge + vert"
+      ],
+      [
+       "Mur blanc",
+       "rouge + vert + bleu"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque zone à la couleur de la lumière qu’elle reçoit (synthèse additive).",
+     "paires": [
+      [
+       "Zone 1",
+       "Jaune"
+      ],
+      [
+       "Zone 2",
+       "Magenta"
+      ],
+      [
+       "Zone 3",
+       "Cyan"
+      ],
+      [
+       "Zone 4",
+       "Blanc"
+      ]
+     ],
+     "aide": "En synthèse additive, on ajoute des lumières : relis la liste de chaque zone.",
+     "explication": "Rouge + vert donne du **jaune**, rouge + bleu du **magenta**, vert + bleu du **cyan**, et les trois ensemble du **blanc**."
+    },
+    {
+     "type": "zone",
+     "document": "objets",
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r2c0"
+     ],
+     "enonce": "Les objets sont éclairés par une lumière bleue pure. Touche ceux qui paraissent noirs.",
+     "aide": "Un objet ne diffuse que les lumières qu’il reçoit : lesquels ne contiennent aucune composante bleue ?",
+     "explication": "La tomate, la laitue et la banane ne diffusent **aucune lumière bleue** : n’en recevant plus que de cette couleur, elles paraissent **noires**. Le mur blanc diffuse la lumière bleue.",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "La banane est éclairée par une lumière rouge pure. Elle paraît…",
+     "options": [
+      "rouge",
+      "jaune",
+      "noire",
+      "verte"
+     ],
+     "reponse": 0,
+     "aide": "Elle diffuse la lumière rouge et la lumière verte : laquelle reçoit-elle ici ?",
+     "explication": "La banane diffuse rouge et vert ; elle ne reçoit que du rouge : elle paraît **rouge**.",
+     "ordreFixe": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Un filtre magenta (il laisse passer les composantes rouge et bleue, il absorbe la composante verte) est placé devant une source blanche. Cette lumière éclaire la feuille de laitue. Elle paraît…",
+     "options": [
+      "noire",
+      "verte",
+      "magenta",
+      "blanche"
+     ],
+     "reponse": 0,
+     "aide": "Quelles composantes la lumière filtrée contient-elle, et laquelle la laitue diffuse-t-elle ?",
+     "explication": "La lumière filtrée ne contient **pas de composante verte** ; la laitue ne diffuse que cette composante : elle paraît **noire**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "a546fa4b-ed58-5240-92e7-6b98b002abb8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La loupe du photographe : lire une construction",
+   "competence": "geometrie",
+   "situation": "Sur une feuille quadrillée (un carreau représente 1 cm), Inès a construit l’image A′B′ de l’objet AB donnée par une lentille convergente. Elle veut retrouver les caractéristiques de sa lentille.",
+   "documents": [
+    {
+     "id": "cons",
+     "type": "figure",
+     "titre": "Objet AB et image A′B′ (1 carreau = 1 cm)",
+     "cadre": {
+      "xmin": -10,
+      "xmax": 10,
+      "ymin": -4,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "xl",
+       "x": -10,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "xr",
+       "x": 10,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "L1",
+       "x": 0,
+       "y": -3.5,
+       "cache": true
+      },
+      {
+       "id": "L2",
+       "x": 0,
+       "y": 3.5,
+       "cache": true
+      },
+      {
+       "id": "P",
+       "x": 0,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "nom": "O",
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": -8,
+       "y": 0,
+       "nom": "A",
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": -8,
+       "y": 2,
+       "nom": "B",
+       "position": "no"
+      },
+      {
+       "id": "F",
+       "x": -4,
+       "y": 0,
+       "nom": "F",
+       "position": "so"
+      },
+      {
+       "id": "Fp",
+       "x": 4,
+       "y": 0,
+       "nom": "F′",
+       "position": "se"
+      },
+      {
+       "id": "Ap",
+       "x": 8,
+       "y": 0,
+       "nom": "A′",
+       "position": "ne"
+      },
+      {
+       "id": "Bp",
+       "x": 8,
+       "y": -2,
+       "nom": "B′",
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "xl",
+       "a": "xr"
+      },
+      {
+       "de": "L1",
+       "a": "L2",
+       "teinte": "violet"
+      },
+      {
+       "de": "A",
+       "a": "B",
+       "id": "obj",
+       "teinte": "corail"
+      },
+      {
+       "de": "Ap",
+       "a": "Bp",
+       "id": "img",
+       "teinte": "corail"
+      },
+      {
+       "de": "B",
+       "a": "P",
+       "style": "pointilles"
+      },
+      {
+       "de": "P",
+       "a": "Bp",
+       "style": "pointilles"
+      },
+      {
+       "de": "B",
+       "a": "Bp",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Construction écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cons",
+     "reponse": [
+      "Fp"
+     ],
+     "enonce": "Touche le foyer image F′ de la lentille.",
+     "aide": "Le rayon parallèle à l’axe ressort de la lentille en passant par ce point.",
+     "explication": "Le rayon parallèle à l’axe ressort en passant par le **foyer image F′**, à 4 carreaux à droite du centre optique O."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la distance focale f′ = OF′ sur la figure, en centimètres.",
+     "reponse": 4,
+     "unite": "cm",
+     "tolerance": 0.1,
+     "aide": "Compte les carreaux entre O et F′ ; 1 carreau = 1 cm.",
+     "explication": "F′ est à 4 carreaux de O : f′ = **4 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vergence V = 1 / f′ de la lentille, en dioptries (δ).",
+     "reponse": 25,
+     "unite": "δ",
+     "tolerance": 0.1,
+     "aide": "La vergence se calcule avec f′ en mètres.",
+     "explication": "f′ = 4 cm = 0,04 m, donc V = 1 / 0,04 = **25 δ**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a546fa4b-ed58-5240-92e7-6b98b002abb8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Mesurer la distance focale sur le banc d’optique",
+   "competence": "experimenter",
+   "situation": "Samir mesure la distance focale d’une lentille convergente sur un banc d’optique. Il forme l’image nette d’un objet lumineux sur un écran, pour trois positions de l’objet.",
+   "documents": [
+    {
+     "id": "banc",
+     "type": "schema",
+     "titre": "Le banc d’optique",
+     "largeur": 320,
+     "hauteur": 140,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 108,
+       "l": 290,
+       "h": 8,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 50,
+       "l": 16,
+       "h": 58,
+       "arrondi": 3,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "objet",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 150,
+       "cy": 78,
+       "rx": 7,
+       "ry": 32,
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "lentille",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 262,
+       "y": 44,
+       "l": 8,
+       "h": 64,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "ecran",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        56,
+        70
+       ],
+       "a": [
+        143,
+        60
+       ],
+       "teinte": "gris",
+       "style": "pointilles"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        157,
+        60
+       ],
+       "a": [
+        262,
+        96
+       ],
+       "teinte": "gris",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 134,
+       "texte": "banc gradué",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Trois positions de l’objet",
+     "colonnes": [
+      "Essai",
+      "OA (cm)",
+      "OA′ (cm)"
+     ],
+     "lignes": [
+      [
+       "1",
+       "−30,0",
+       "15,2"
+      ],
+      [
+       "2",
+       "−25,0",
+       "16,5"
+      ],
+      [
+       "3",
+       "−20,0",
+       "20,3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "banc",
+     "reponse": [
+      "ecran"
+     ],
+     "enonce": "Touche l’élément sur lequel Samir observe l’image réelle de l’objet.",
+     "aide": "Une image réelle se recueille sur un support placé après la lentille.",
+     "explication": "L’image réelle se forme et se recueille sur l’**écran**, placé après la lentille."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule f′ pour l’essai 1 avec la relation 1/OA′ − 1/OA = 1/f′. Réponds en cm, arrondi au dixième.",
+     "reponse": 10.1,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Calcule 1/15,2 − 1/(−30,0), puis prends l’inverse.",
+     "explication": "1/f′ = 1/15,2 + 1/30,0 ≈ 0,0991 cm⁻¹, donc f′ ≈ **10,1 cm**."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche l’essai pour lequel l’image est à peu près de la même taille que l’objet (|γ| proche de 1).",
+     "aide": "Le grandissement vaut γ = OA′ / OA : cherche un OA′ voisin de |OA|.",
+     "explication": "À l’essai **3**, OA′ = 20,3 cm et OA = −20,0 cm : γ ≈ −1,02, image renversée de même taille que l’objet."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la moyenne des trois valeurs de f′ obtenues avec les trois essais, en cm, arrondie au dixième.",
+     "reponse": 10,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Calcule f′ pour chaque essai (10,1 ; 9,9 ; 10,1 environ) puis fais la moyenne.",
+     "explication": "Les trois essais donnent f′ ≈ 10,09 ; 9,94 et 10,07 cm : moyenne ≈ **10,0 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour contrôler ce résultat, Samir place l’objet très loin de la lentille. Où l’image se forme-t-elle ?",
+     "options": [
+      "Dans le plan focal image, à environ 10 cm de la lentille",
+      "Sur l’objet lui-même, du même côté de la lentille",
+      "À l’infini, après la lentille",
+      "Dans le plan focal objet, avant la lentille"
+     ],
+     "reponse": 0,
+     "aide": "L’image d’un objet très éloigné se forme au foyer image.",
+     "explication": "L’image d’un objet à l’infini se forme dans le **plan focal image** : l’écran, placé à cet endroit, indique directement f′."
+    }
+   ]
+  },
+  {
+   "chapitre": "a546fa4b-ed58-5240-92e7-6b98b002abb8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Loupe ou projecteur ? Trois positions d’un objet",
+   "competence": "raisonner",
+   "situation": "Une lentille convergente de distance focale f′ = 5,0 cm sert tantôt de projecteur, tantôt de loupe. Ambre place un objet à trois distances différentes et veut prévoir à chaque fois où l’image se forme et comment elle est.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Les trois positions de l’objet",
+     "colonnes": [
+      "Situation",
+      "OA (cm)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "−3,0"
+      ],
+      [
+       "B",
+       "−20,0"
+      ],
+      [
+       "C",
+       "−10,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Données écrites pour l’exercice"
+    },
+    {
+     "id": "cons",
+     "type": "figure",
+     "titre": "Situation C : f′ = 5 cm, OA = −10 cm (1 carreau = 1 cm)",
+     "cadre": {
+      "xmin": -12,
+      "xmax": 12,
+      "ymin": -4,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "xl",
+       "x": -12,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "xr",
+       "x": 12,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "L1",
+       "x": 0,
+       "y": -3.5,
+       "cache": true
+      },
+      {
+       "id": "L2",
+       "x": 0,
+       "y": 3.5,
+       "cache": true
+      },
+      {
+       "id": "P",
+       "x": 0,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "nom": "O",
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": -10,
+       "y": 0,
+       "nom": "A",
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": -10,
+       "y": 2,
+       "nom": "B",
+       "position": "no"
+      },
+      {
+       "id": "F",
+       "x": -5,
+       "y": 0,
+       "nom": "F",
+       "position": "so"
+      },
+      {
+       "id": "Fp",
+       "x": 5,
+       "y": 0,
+       "nom": "F′",
+       "position": "so"
+      },
+      {
+       "id": "Ap",
+       "x": 10,
+       "y": 0,
+       "nom": "A′",
+       "position": "ne"
+      },
+      {
+       "id": "Bp",
+       "x": 10,
+       "y": -2,
+       "nom": "B′",
+       "position": "se"
+      }
+     ],
+     "segments": [
+      {
+       "de": "xl",
+       "a": "xr"
+      },
+      {
+       "de": "L1",
+       "a": "L2",
+       "teinte": "violet"
+      },
+      {
+       "de": "A",
+       "a": "B",
+       "id": "obj",
+       "teinte": "corail"
+      },
+      {
+       "de": "Ap",
+       "a": "Bp",
+       "id": "img",
+       "teinte": "corail"
+      },
+      {
+       "de": "B",
+       "a": "P",
+       "style": "pointilles"
+      },
+      {
+       "de": "P",
+       "a": "Bp",
+       "style": "pointilles"
+      },
+      {
+       "de": "B",
+       "a": "Bp",
+       "style": "pointilles"
+      }
+     ],
+     "source": "Construction écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cons",
+     "reponse": [
+      "img"
+     ],
+     "enonce": "Sur la construction de la situation C, touche l’image A′B′.",
+     "aide": "L’image est du côté opposé à l’objet, par rapport à la lentille, et renversée.",
+     "explication": "L’image **A′B′** est le segment à droite de la lentille, renversé : A′ est à 10 cm de O."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche la situation où la lentille sert de loupe (objet placé entre F et O).",
+     "aide": "Le foyer objet F est à 5 cm avant la lentille : quel OA est plus proche de O que F ?",
+     "explication": "Dans la situation **A**, OA = −3,0 cm : l’objet est entre F (à −5,0 cm) et O. La lentille agit comme une **loupe**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Situation B : calcule OA′ avec 1/OA′ = 1/f′ + 1/OA. Réponds en cm, arrondi au dixième.",
+     "reponse": 6.7,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Calcule 1/5,0 − 1/20,0 = 3/20, puis prends l’inverse.",
+     "explication": "1/OA′ = 1/5 − 1/20 = 3/20, donc OA′ = 20/3 ≈ **6,7 cm** (image réelle, après la lentille)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Situation A : calcule le grandissement γ = OA′ / OA (OA′ = −7,5 cm).",
+     "reponse": 2.5,
+     "tolerance": 0.01,
+     "aide": "Divise OA′ par OA en gardant les signes.",
+     "explication": "γ = −7,5 / (−3,0) = **2,5** : image droite, 2,5 fois plus grande."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la situation A, peut-on recueillir l’image sur un écran ?",
+     "options": [
+      "Non : c’est une image virtuelle, que seul l’œil observe",
+      "Oui : toute image se recueille sur un écran",
+      "Oui, à condition de placer l’écran à 7,5 cm après la lentille",
+      "Non : il n’y a aucune image, la lentille est inutile"
+     ],
+     "reponse": 0,
+     "aide": "Les rayons ressortent divergents : se croisent-ils vraiment quelque part ?",
+     "explication": "Pour un objet entre F et O, les rayons ressortent **divergents** : l’image est **virtuelle**, droite et agrandie ; elle ne se recueille pas sur un écran."
+    }
+   ]
+  },
+  {
+   "chapitre": "93495817-b48c-5f4c-943c-49e859698714",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les réglages du boîtier de Zoé",
+   "competence": "lire-tableau",
+   "situation": "Zoé photographie un cycliste en pleine course. Son appareil affiche les réglages ci-dessous. Elle veut comprendre ce que chaque ligne change.",
+   "documents": [
+    {
+     "id": "ecran",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Écran de contrôle",
+     "sousTitre": "Réglages de la prise de vue",
+     "emoji": "📷",
+     "lignes": [
+      {
+       "texte": "Focale",
+       "valeur": "50 mm",
+       "id": "focale"
+      },
+      {
+       "texte": "Ouverture",
+       "valeur": "f/4",
+       "id": "ouv"
+      },
+      {
+       "texte": "Temps de pose",
+       "valeur": "1/250 s",
+       "id": "pose"
+      },
+      {
+       "texte": "Sensibilité",
+       "valeur": "ISO 100",
+       "id": "iso"
+      }
+     ],
+     "pied": "Écran écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ecran",
+     "reponse": [
+      "pose"
+     ],
+     "enonce": "Touche la ligne qui indique la durée pendant laquelle l’obturateur reste ouvert.",
+     "aide": "Cette durée se compte en fractions de seconde.",
+     "explication": "Le **temps de pose** est la durée d’ouverture de l’obturateur : ici 1/250 s."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le diamètre D de l’ouverture, en mm, avec N = f′ / D (f′ est la focale).",
+     "reponse": 12.5,
+     "unite": "mm",
+     "tolerance": 0.05,
+     "aide": "D = f′ / N, avec f′ = 50 mm et N = 4.",
+     "explication": "D = f′ / N = 50 / 4 = **12,5 mm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour figer le cycliste sans flou de bougé, Zoé doit choisir un temps de pose…",
+     "options": [
+      "court, par exemple 1/1000 s",
+      "long, par exemple 1 s",
+      "égal à la focale en millimètres",
+      "indifférent : seule l’ouverture compte"
+     ],
+     "reponse": 0,
+     "aide": "Un mouvement se fige quand l’obturateur ne reste ouvert qu’un instant très bref.",
+     "explication": "Un temps de pose **court** fige le mouvement ; un temps long donne un flou de bougé.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "93495817-b48c-5f4c-943c-49e859698714",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un portrait et un paysage : deux ouvertures",
+   "competence": "calculer",
+   "situation": "Léa prend deux photos : un portrait avec un arrière-plan flou, puis un paysage net du premier plan à l’horizon. Elle note les réglages de chaque photo.",
+   "documents": [
+    {
+     "id": "reglages",
+     "type": "tableau",
+     "titre": "Les réglages des deux photos",
+     "colonnes": [
+      "Réglage",
+      "Photo A (portrait)",
+      "Photo B (paysage)"
+     ],
+     "lignes": [
+      [
+       "Focale (mm)",
+       "85",
+       "24"
+      ],
+      [
+       "Diamètre de l’ouverture (mm)",
+       "42,5",
+       "3,0"
+      ],
+      [
+       "Temps de pose",
+       "1/1000 s",
+       "1/60 s"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Réglages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reglages",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case du plus grand diamètre d’ouverture.",
+     "aide": "Compare les deux diamètres de la ligne « Diamètre de l’ouverture ».",
+     "explication": "Le diamètre de **42,5 mm** (photo A) est le plus grand : le diaphragme y est très ouvert."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre d’ouverture N de la photo A (N = f′ / D).",
+     "reponse": 2,
+     "tolerance": 0.01,
+     "aide": "Divise la focale 85 mm par le diamètre 42,5 mm.",
+     "explication": "N = 85 / 42,5 = **2** : la photo A est prise à f/2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le nombre d’ouverture N de la photo B.",
+     "reponse": 8,
+     "tolerance": 0.01,
+     "aide": "Divise la focale 24 mm par le diamètre 3,0 mm.",
+     "explication": "N = 24 / 3,0 = **8** : la photo B est prise à f/8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle photo a la plus grande profondeur de champ, et pourquoi ?",
+     "options": [
+      "La photo B : le diaphragme est plus fermé (N plus grand)",
+      "La photo A : le diaphragme est plus ouvert (N plus petit)",
+      "La photo A : le temps de pose est plus court",
+      "La photo B : la focale est plus grande"
+     ],
+     "reponse": 0,
+     "aide": "La profondeur de champ augmente quand on ferme le diaphragme.",
+     "explication": "La profondeur de champ **augmente avec N** : f/8 (photo B) donne un paysage net sur tout le champ, f/2 (photo A) un arrière-plan flou."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léa prend la photo A à f/2 en 1/1000 s. Elle ferme le diaphragme de deux crans (f/2 → f/2,8 → f/4) pour la même exposition. Quel temps de pose, noté 1/___ s, doit-elle choisir ?",
+     "reponse": 250,
+     "tolerance": 0.5,
+     "aide": "Chaque cran divise la lumière par 2 : de combien faut-il allonger le temps de pose au total ?",
+     "explication": "Chaque cran divise la lumière par 2 : deux crans la divisent par **4**. Il faut un temps 4 fois plus long : 1/1000 s devient **1/250 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "93495817-b48c-5f4c-943c-49e859698714",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Photographier un match de handball en salle",
+   "competence": "raisonner",
+   "situation": "Nina, photographe du club, doit prendre des joueurs situés à 30 m sur le terrain, dans une salle peu éclairée. Elle compare quatre objectifs et le cahier des charges de la séance.",
+   "documents": [
+    {
+     "id": "objectifs",
+     "type": "tableau",
+     "titre": "Les quatre objectifs",
+     "colonnes": [
+      "Objectif",
+      "Focale (mm)",
+      "Ouverture maximale"
+     ],
+     "lignes": [
+      [
+       "A",
+       "24",
+       "f/2,8"
+      ],
+      [
+       "B",
+       "50",
+       "f/1,8"
+      ],
+      [
+       "C",
+       "200",
+       "f/2,8"
+      ],
+      [
+       "D",
+       "400",
+       "f/5,6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Objectifs imaginés pour l’exercice"
+    },
+    {
+     "id": "cahier",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cahier des charges",
+     "sousTitre": "Match de handball en salle",
+     "emoji": "🤾",
+     "lignes": [
+      {
+       "texte": "Sujet",
+       "valeur": "joueurs à 30 m, cadrés serrés"
+      },
+      {
+       "texte": "Lumière",
+       "valeur": "faible : grande ouverture nécessaire"
+      },
+      {
+       "texte": "Mouvement",
+       "valeur": "rapide : pose de 1/500 s au plus"
+      }
+     ],
+     "pied": "Cahier des charges écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "objectifs",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche l’objectif qui convient à la fois pour cadrer serré à 30 m et pour travailler avec peu de lumière.",
+     "aide": "Il faut une grande focale (angle de champ étroit) ET une grande ouverture (petit nombre N).",
+     "explication": "L’objectif **C** (200 mm, f/2,8) combine une grande focale et une grande ouverture. Le D a la focale mais f/5,6 laisse passer 4 fois moins de lumière ; le B et le A sont trop courts pour cadrer à 30 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le diamètre maximal d’ouverture de l’objectif C, en mm, arrondi au dixième (N = f′ / D).",
+     "reponse": 71.4,
+     "unite": "mm",
+     "tolerance": 0.05,
+     "aide": "D = f′ / N avec f′ = 200 mm et N = 2,8.",
+     "explication": "D = 200 / 2,8 ≈ **71,4 mm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À f/2,8, Nina obtient la bonne exposition en 1/1000 s. Elle ferme à f/5,6 (deux crans) pour gagner en profondeur de champ. Quel temps de pose, noté 1/___ s, garde la même exposition ?",
+     "reponse": 250,
+     "tolerance": 0.5,
+     "aide": "Deux crans : la lumière est divisée par 4.",
+     "explication": "f/2,8 → f/4 → f/5,6 : la lumière est divisée par **4**, le temps de pose est multiplié par 4 : 1/1000 s devient **1/250 s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce temps de pose de 1/250 s respecte-t-il le cahier des charges ? Que faire ?",
+     "options": [
+      "Non : trop long (limite 1/500 s) ; elle reste à f/2,8",
+      "Oui : 1/250 s est plus rapide que la limite de 1/500 s, donc il convient",
+      "Oui : le cahier des charges ne dit rien sur la vitesse des joueurs",
+      "Non : elle doit fermer encore le diaphragme pour raccourcir la pose"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1/250 s à 1/500 s : lequel est le plus court ?",
+     "explication": "1/250 s est **plus long** que 1/500 s : les joueurs rapides seraient flous. Nina garde **f/2,8** et accepte une profondeur de champ réduite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour gagner de la lumière sans changer l’ouverture ni le temps de pose, Nina augmente la sensibilité ISO. Quel est l’inconvénient ?",
+     "options": [
+      "Le bruit (le grain) devient plus visible",
+      "L’angle de champ devient plus étroit",
+      "La profondeur de champ diminue",
+      "Le temps de pose doit être allongé"
+     ],
+     "reponse": 0,
+     "aide": "Une sensibilité élevée amplifie le signal, mais aussi autre chose.",
+     "explication": "Monter les ISO amplifie le signal **et le bruit** : l’image est plus lumineuse, mais le grain devient plus visible."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e2dfded-f4e7-5e6f-b057-58b12eee8ba2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq pixels, cinq couleurs",
+   "competence": "lire-tableau",
+   "situation": "Un logiciel de retouche affiche, pour cinq pixels d’une image, les trois nombres qui décrivent leur couleur : l’intensité de rouge (R), de vert (V) et de bleu (B), chacune codée sur 8 bits.",
+   "documents": [
+    {
+     "id": "pixels",
+     "type": "tableau",
+     "titre": "Codes RVB de cinq pixels",
+     "colonnes": [
+      "Pixel",
+      "R",
+      "V",
+      "B"
+     ],
+     "lignes": [
+      [
+       "P1",
+       "255",
+       "0",
+       "0"
+      ],
+      [
+       "P2",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "P3",
+       "255",
+       "255",
+       "0"
+      ],
+      [
+       "P4",
+       "255",
+       "255",
+       "255"
+      ],
+      [
+       "P5",
+       "128",
+       "128",
+       "128"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pixels",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le pixel blanc.",
+     "aide": "En synthèse additive, la lumière blanche est le mélange des trois lumières à intensité maximale.",
+     "explication": "Le blanc s’obtient avec les trois composantes à leur maximum : (255, 255, 255), c’est le pixel **P4**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pixel à sa couleur.",
+     "paires": [
+      [
+       "Pixel P1",
+       "Rouge pur"
+      ],
+      [
+       "Pixel P2",
+       "Noir"
+      ],
+      [
+       "Pixel P3",
+       "Jaune"
+      ],
+      [
+       "Pixel P5",
+       "Gris moyen"
+      ]
+     ],
+     "aide": "Un gris a trois composantes égales ; un pixel jaune mélange rouge et vert sans bleu.",
+     "explication": "P1 (255, 0, 0) est **rouge pur** ; P2 (0, 0, 0) **noir** ; P3 (255, 255, 0) **jaune** (rouge + vert) ; P5 (128, 128, 128) un **gris moyen**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’octets faut-il pour coder un seul pixel en RVB à 8 bits par composante ?",
+     "reponse": 3,
+     "unite": "octets",
+     "tolerance": 0.1,
+     "aide": "Trois composantes, 8 bits chacune, et 1 octet = 8 bits.",
+     "explication": "3 × 8 = 24 bits, soit **3 octets** par pixel."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e2dfded-f4e7-5e6f-b057-58b12eee8ba2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien de photos tiennent sur la carte mémoire ?",
+   "competence": "calculer",
+   "situation": "Maya hésite entre deux appareils photo. Elle veut savoir combien de photos non compressées elle pourra stocker sur une carte mémoire de 32 Go (1 Go = 10⁹ octets). Les images sont codées en RVB, 3 octets par pixel.",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Les deux appareils",
+     "colonnes": [
+      "Appareil",
+      "Définition (pixels)"
+     ],
+     "lignes": [
+      [
+       "Appareil A",
+       "4 000 × 3 000"
+      ],
+      [
+       "Appareil B",
+       "6 000 × 4 000"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Appareils imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "appareils",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la plus grande définition.",
+     "aide": "Compare le nombre total de pixels, pas seulement la largeur.",
+     "explication": "L’appareil **B** (6 000 × 4 000 = 24 millions de pixels) a la plus grande définition."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de pixels compte l’image de l’appareil A ?",
+     "reponse": 12,
+     "unite": "millions",
+     "tolerance": 0.1,
+     "aide": "Multiplie la largeur par la hauteur, puis exprime en millions.",
+     "explication": "4 000 × 3 000 = 12 000 000, soit **12 millions** de pixels."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille non compressée d’une image de l’appareil B, en Mo (1 Mo = 10⁶ octets) ?",
+     "reponse": 72,
+     "unite": "Mo",
+     "tolerance": 0.5,
+     "aide": "Taille = nombre de pixels × 3 octets.",
+     "explication": "24 × 10⁶ pixels × 3 octets = 72 × 10⁶ octets = **72 Mo**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’images non compressées de l’appareil A (36 Mo chacune) tiennent entièrement sur la carte de 32 Go ?",
+     "reponse": 888,
+     "tolerance": 0.5,
+     "aide": "Convertis 32 Go en Mo (32 000 Mo), puis divise par 36 Mo et garde le nombre entier d’images.",
+     "explication": "32 000 / 36 ≈ 888,9 : **888** images entières."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec des fichiers JPEG compressés, la même carte contient…",
+     "options": [
+      "plus de photos, car chaque fichier est plus léger",
+      "autant de photos, car le nombre de pixels ne change pas",
+      "moins de photos, car la compression ajoute des données",
+      "plus de photos, mais seulement si on diminue la définition"
+     ],
+     "reponse": 0,
+     "aide": "Que fait la compression JPEG à la taille d’un fichier ?",
+     "explication": "La compression JPEG **réduit la taille** des fichiers : la carte contient donc **plus de photos**, parfois au prix d’une perte de qualité."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e2dfded-f4e7-5e6f-b057-58b12eee8ba2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Envoyer la photo du but depuis le stade",
+   "competence": "raisonner",
+   "situation": "Rayan photographie un match et veut envoyer sa photo à la rédaction du club. Il compare la taille du fichier et la durée d’envoi selon le réseau disponible.",
+   "documents": [
+    {
+     "id": "photo",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "La photo à envoyer",
+     "sousTitre": "Caractéristiques du fichier",
+     "emoji": "⚽",
+     "lignes": [
+      {
+       "texte": "Définition",
+       "valeur": "3 000 × 2 000 pixels"
+      },
+      {
+       "texte": "Codage",
+       "valeur": "RVB, 8 bits par composante"
+      },
+      {
+       "texte": "Fichier JPEG envoyé",
+       "valeur": "2,4 Mo",
+       "id": "jpeg"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice"
+    },
+    {
+     "id": "reseaux",
+     "type": "tableau",
+     "titre": "Les réseaux disponibles",
+     "colonnes": [
+      "Réseau",
+      "Débit (Mbit/s)"
+     ],
+     "lignes": [
+      [
+       "Wi-Fi du stade",
+       "50"
+      ],
+      [
+       "4G",
+       "20"
+      ],
+      [
+       "ADSL du club",
+       "8"
+      ],
+      [
+       "Fibre de la rédaction",
+       "500"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Débits écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait la taille de cette image non compressée, en Mo ?",
+     "reponse": 18,
+     "unite": "Mo",
+     "tolerance": 0.1,
+     "aide": "Nombre de pixels × 3 octets par pixel.",
+     "explication": "3 000 × 2 000 = 6 × 10⁶ pixels ; × 3 octets = 18 × 10⁶ octets = **18 Mo**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure l’envoi du fichier JPEG de 2,4 Mo en 4G ? Réponds en secondes, arrondi au centième.",
+     "reponse": 0.96,
+     "unite": "s",
+     "tolerance": 0.005,
+     "aide": "Convertis d’abord 2,4 Mo en bits (× 8), puis divise par le débit en bit/s.",
+     "explication": "2,4 × 10⁶ octets × 8 = 1,92 × 10⁷ bits ; durée = 1,92 × 10⁷ / (20 × 10⁶) = **0,96 s**."
+    },
+    {
+     "type": "zone",
+     "document": "reseaux",
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r3c0"
+     ],
+     "enonce": "Touche tous les réseaux qui permettent d’envoyer le fichier JPEG en moins d’une seconde.",
+     "aide": "Le fichier fait 19,2 Mbit : quel débit faut-il pour l’envoyer en 1 s ?",
+     "explication": "Le fichier pèse 19,2 Mbit : il faut un débit **supérieur à 19,2 Mbit/s**. Le Wi-Fi (50), la 4G (20) et la fibre (500) conviennent ; l’ADSL (8) met 2,4 s.",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Un camarade trouve 0,12 s pour l’envoi en 4G. Quelle erreur a-t-il probablement commise ?",
+     "options": [
+      "Il a oublié de convertir les octets en bits (facteur 8)",
+      "Il a confondu Mo et Go dans la conversion",
+      "Il a divisé le débit par la taille au lieu de l’inverse",
+      "Il a utilisé la taille non compressée de 18 Mo"
+     ],
+     "reponse": 0,
+     "aide": "Refais le calcul sans le facteur 8 : 2,4 / 20 donne quelle valeur ?",
+     "explication": "2,4 / 20 = 0,12 : il a divisé des **octets** par un débit en **bits** par seconde. Il faut multiplier la taille par **8** avant de diviser."
+    }
+   ]
+  },
+  {
+   "chapitre": "79f5875d-aa17-57cc-9c27-55c73466125f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans un thermomètre numérique",
+   "competence": "analyser-document",
+   "situation": "Le thermomètre numérique du laboratoire affiche la température d’un bain. Le technicien ouvre l’appareil et schématise ce qu’il y trouve, de la grandeur mesurée jusqu’à l’écran.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "De la température à l’affichage",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "grandeur",
+       "texte": "Température du bain",
+       "emoji": "🌡️"
+      },
+      {
+       "id": "thermistance",
+       "texte": "Thermistance",
+       "emoji": "🔌"
+      },
+      {
+       "id": "pont",
+       "texte": "Pont diviseur de tension",
+       "emoji": "⚡"
+      },
+      {
+       "id": "carte",
+       "texte": "Carte d’acquisition (10 bits)",
+       "emoji": "🧮"
+      },
+      {
+       "id": "affichage",
+       "texte": "Affichage de la valeur",
+       "emoji": "🖥️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "grandeur",
+       "a": "thermistance"
+      },
+      {
+       "de": "thermistance",
+       "a": "pont"
+      },
+      {
+       "de": "pont",
+       "a": "carte"
+      },
+      {
+       "de": "carte",
+       "a": "affichage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "reponse": [
+      "thermistance"
+     ],
+     "enonce": "Touche l’élément qui joue le rôle de capteur.",
+     "aide": "Le capteur est le premier maillon : celui dont une propriété électrique varie avec la température.",
+     "explication": "La **thermistance** convertit la température en grandeur électrique : sa résistance varie avec T. C’est le capteur."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque élément de la chaîne à son rôle.",
+     "paires": [
+      [
+       "Thermistance",
+       "Convertit T en grandeur électrique"
+      ],
+      [
+       "Pont diviseur de tension",
+       "Fournit une tension exploitable"
+      ],
+      [
+       "Carte d’acquisition",
+       "Convertit la tension en nombre binaire"
+      ]
+     ],
+     "aide": "Capteur, conditionneur, convertisseur : un rôle chacun, dans cet ordre.",
+     "explication": "Le **capteur** (thermistance) convertit la grandeur, le **conditionneur** (pont diviseur) donne une tension, le **CAN** (carte d’acquisition) la numérise."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La carte d’acquisition est un CAN de 10 bits. Combien de niveaux de tension distingue-t-elle ?",
+     "reponse": 1024,
+     "unite": "niveaux",
+     "tolerance": 0.5,
+     "aide": "Un CAN de n bits découpe sa plage en 2ⁿ niveaux.",
+     "explication": "Un CAN de 10 bits distingue 2¹⁰ = **1 024** niveaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "79f5875d-aa17-57cc-9c27-55c73466125f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Étalonner une thermistance dans l’eau",
+   "competence": "experimenter",
+   "situation": "Mehdi relie sa thermistance à un conditionneur : la tension de sortie varie avec la température. Pour établir la relation, il plonge le capteur dans de l’eau à plusieurs températures mesurées par un thermomètre de référence.",
+   "documents": [
+    {
+     "id": "etal",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension de sortie en fonction de la température",
+     "categories": [
+      "10",
+      "20",
+      "30",
+      "40",
+      "50"
+     ],
+     "series": [
+      {
+       "nom": "U",
+       "valeurs": [
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension U",
+      "unite": "V",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Température (°C)"
+     },
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etal",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche le point mesuré à 40 °C.",
+     "aide": "Les points sont régulièrement espacés : repère l’abscisse 40.",
+     "explication": "Le point d’abscisse **40 °C** donne une tension de 0,70 V."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la sensibilité du capteur, en mV par °C (variation de la tension / variation de la température).",
+     "reponse": 10,
+     "unite": "mV/°C",
+     "tolerance": 0.1,
+     "aide": "Entre 10 °C et 50 °C, la tension passe de 0,40 V à 0,80 V : divise l’écart de tension par l’écart de température, puis convertis en mV.",
+     "explication": "(0,80 − 0,40) / (50 − 10) = 0,010 V/°C, soit **10 mV/°C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le thermomètre est plongé dans un bain : la tension lue vaut 0,665 V. Quelle est la température, en °C ? (La droite d’étalonnage est U = 0,010 × θ + 0,30, avec U en V.)",
+     "reponse": 36.5,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "Isole θ : θ = (U − 0,30) / 0,010.",
+     "explication": "θ = (0,665 − 0,30) / 0,010 = **36,5 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le CAN de 10 bits sur 0 – 5 V a un quantum de 4,88 mV. Quelle plus petite variation de température la chaîne peut-elle distinguer, en °C, arrondie au centième ?",
+     "reponse": 0.49,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Divise le quantum par la sensibilité (10 mV/°C).",
+     "explication": "4,88 mV / (10 mV/°C) ≈ **0,49 °C** : c’est la résolution en température de la chaîne."
+    }
+   ]
+  },
+  {
+   "chapitre": "79f5875d-aa17-57cc-9c27-55c73466125f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Choisir la chaîne de mesure d’une serre",
+   "competence": "raisonner",
+   "situation": "Un lycée veut équiper sa serre d’un thermomètre à thermistance. Quatre chaînes de mesure sont proposées. Il faut choisir la moins chère qui respecte le cahier des charges.",
+   "documents": [
+    {
+     "id": "cdc",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cahier des charges",
+     "sousTitre": "Thermomètre de serre",
+     "emoji": "🌱",
+     "lignes": [
+      {
+       "texte": "Étendue de mesure",
+       "valeur": "0 à 50 °C"
+      },
+      {
+       "texte": "Résolution attendue",
+       "valeur": "0,2 °C au plus",
+       "id": "resol"
+      },
+      {
+       "texte": "Tension du capteur",
+       "valeur": "U = S × θ + 0,30 V"
+      },
+      {
+       "texte": "Choix",
+       "valeur": "la chaîne la moins chère qui convient"
+      }
+     ],
+     "pied": "Cahier des charges écrit pour l’exercice"
+    },
+    {
+     "id": "chaines",
+     "type": "tableau",
+     "titre": "Les quatre chaînes proposées",
+     "colonnes": [
+      "Chaîne",
+      "S (mV/°C)",
+      "CAN (bits)",
+      "Plage (V)",
+      "Prix (€)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "10",
+       "10",
+       "5",
+       "8"
+      ],
+      [
+       "B",
+       "10",
+       "12",
+       "5",
+       "14"
+      ],
+      [
+       "C",
+       "20",
+       "10",
+       "5",
+       "11"
+      ],
+      [
+       "D",
+       "10",
+       "10",
+       "1",
+       "10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "S : sensibilité du capteur. Valeurs écrites pour l’exercice."
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Chaîne A : calcule le quantum du CAN (plage / 2ⁿ) puis la résolution en température (quantum / S). Réponds en °C, arrondie au centième.",
+     "reponse": 0.49,
+     "unite": "°C",
+     "tolerance": 0.005,
+     "aide": "Quantum = 5 V / 1 024 ≈ 4,88 mV ; résolution = quantum / sensibilité.",
+     "explication": "q = 5 / 1 024 ≈ 4,88 mV ; résolution = 4,88 / 10 ≈ **0,49 °C** : supérieure à 0,2 °C, la chaîne A ne convient pas."
+    },
+    {
+     "type": "zone",
+     "document": "chaines",
+     "reponse": [
+      "r1c0",
+      "r3c0"
+     ],
+     "enonce": "Touche les chaînes dont la résolution est de 0,2 °C au plus.",
+     "aide": "Calcule pour chaque chaîne : plage / 2ⁿ / S. Les chaînes B et D sont meilleures que A sur un point précis.",
+     "explication": "B : 5 000 / 4 096 / 10 ≈ **0,12 °C**. D : 1 000 / 1 024 / 10 ≈ **0,10 °C**. A (0,49 °C) et C (0,24 °C) dépassent 0,2 °C.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "La chaîne D a un CAN dont la plage est 0 – 1 V. Calcule la tension de sortie du capteur à 50 °C (U = S × θ + 0,30), en volts, pour vérifier que la mesure reste dans la plage.",
+     "reponse": 0.8,
+     "unite": "V",
+     "tolerance": 0.005,
+     "aide": "S = 10 mV/°C = 0,010 V/°C.",
+     "explication": "U = 0,010 × 50 + 0,30 = **0,80 V**, inférieure à 1 V : la chaîne D mesure bien jusqu’à 50 °C."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle chaîne faut-il choisir ?",
+     "options": [
+      "Chaîne A",
+      "Chaîne B",
+      "Chaîne C",
+      "Chaîne D"
+     ],
+     "reponse": 3,
+     "aide": "Parmi les chaînes qui respectent la résolution (et l’étendue), prends la moins chère.",
+     "explication": "B (14 €) et D (10 €) respectent la résolution ; D mesure aussi jusqu’à 50 °C. La moins chère est la chaîne **D**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "30588c6b-33e2-5fbc-8e20-0c35a0e2f713",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’alarme du congélateur",
+   "competence": "programmer",
+   "situation": "Le congélateur du laboratoire doit déclencher une alarme dès que la température dépasse un seuil. Un microcontrôleur exécute en boucle le programme ci-dessous.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de l’alarme",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "tant que Vrai :",
+      "    t = lire_temperature()",
+      "    si t > [[seuil|-12]] :",
+      "        alarme = Vrai",
+      "    sinon :",
+      "        alarme = Faux",
+      "    attendre(10)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prog",
+     "reponse": [
+      "seuil"
+     ],
+     "enonce": "Touche la valeur du seuil de déclenchement.",
+     "aide": "Le seuil est le nombre auquel la température t est comparée.",
+     "explication": "La température est comparée à **−12** : c’est le seuil de déclenchement de l’alarme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le capteur mesure t = −9 °C. Que fait le programme ?",
+     "options": [
+      "alarme = Vrai : −9 °C est au-dessus du seuil de −12 °C",
+      "alarme = Faux : −9 °C est au-dessous du seuil de −12 °C",
+      "alarme = Faux : −9 °C est égal au seuil de −12 °C",
+      "Rien : la condition ne se vérifie qu’à t = −12 °C"
+     ],
+     "reponse": 0,
+     "aide": "Place −9 et −12 sur une droite : lequel est le plus grand ?",
+     "explication": "−9 est **supérieur** à −12 : la condition t > −12 est vraie et l’alarme se déclenche."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Il faut maintenant déclencher l’alarme dès que la température dépasse −15 °C. Par quelle valeur remplace-t-on le seuil ?",
+     "reponse": -15,
+     "unite": "°C",
+     "tolerance": 0.01,
+     "aide": "Seule la valeur numérique du seuil change dans le code.",
+     "explication": "On remplace −12 par **−15** : `si t > -15 :` déclenche l’alarme dès que t dépasse −15 °C."
+    }
+   ]
+  },
+  {
+   "chapitre": "30588c6b-33e2-5fbc-8e20-0c35a0e2f713",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe d’un incubateur",
+   "competence": "lire-graphique",
+   "situation": "Un incubateur de laboratoire est réglé à 37 °C. Son chauffage s’allume quand la température passe sous 36,5 °C et s’éteint quand elle dépasse 37,5 °C. Un enregistreur a tracé la température pendant 24 minutes.",
+   "documents": [
+    {
+     "id": "reg",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température de l’incubateur",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20",
+      "22",
+      "24"
+     ],
+     "series": [
+      {
+       "nom": "Température",
+       "valeurs": [
+        30,
+        32.6,
+        35,
+        36.8,
+        37.6,
+        37.7,
+        37.3,
+        36.9,
+        36.4,
+        36.8,
+        37.4,
+        37.7,
+        37.3
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Seuil d’allumage",
+       "valeurs": [
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5,
+        36.5
+       ],
+       "teinte": "gris"
+      },
+      {
+       "nom": "Seuil d’extinction",
+       "valeurs": [
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5,
+        37.5
+       ],
+       "teinte": "gris"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": 30,
+      "max": 38,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "source": "Enregistrement écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reg",
+     "reponse": [
+      "k4"
+     ],
+     "enonce": "Touche le premier point où la température dépasse le seuil d’extinction de 37,5 °C.",
+     "aide": "Suis la courbe depuis le départ et cherche le premier point au-dessus de la ligne du seuil haut.",
+     "explication": "À **t = 8 min**, la température vaut 37,6 °C : c’est le premier point au-dessus de 37,5 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis sur le graphique la période des oscillations : la durée entre deux maximums successifs, en minutes.",
+     "reponse": 12,
+     "unite": "min",
+     "tolerance": 0.1,
+     "aide": "Les deux maximums de 37,7 °C sont à t = 10 min et t = 22 min : soustrais ces deux instants.",
+     "explication": "22 − 10 = **12 min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’amplitude des oscillations, c’est-à-dire l’écart entre la température maximale et la température minimale relevées après la montée. Réponds en °C.",
+     "reponse": 1.3,
+     "unite": "°C",
+     "tolerance": 0.05,
+     "aide": "Maximum : 37,7 °C. Minimum : le creux le plus bas de la courbe.",
+     "explication": "Maximum 37,7 °C, minimum 36,4 °C : amplitude **1,3 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la température dépasse-t-elle un peu le seuil de 37,5 °C ?",
+     "options": [
+      "Le système a de l’inertie : la résistance restitue de la chaleur après sa coupure",
+      "Le capteur est mal étalonné et affiche toujours une valeur trop forte",
+      "Le programme ne compare jamais la température au seuil",
+      "Le chauffage ne s’éteint jamais dans une régulation tout ou rien"
+     ],
+     "reponse": 0,
+     "aide": "Que se passe-t-il quand on coupe une résistance chauffante encore très chaude ?",
+     "explication": "La résistance chauffante est encore chaude quand elle est coupée : elle restitue de la chaleur. C’est l’**inertie** du système, qui fait osciller la température autour de la consigne."
+    },
+    {
+     "type": "choix",
+     "enonce": "On élargit les seuils à 36,0 et 38,0 °C. Comment évoluent les oscillations et les commutations du chauffage ?",
+     "options": [
+      "Oscillations plus larges, commutations plus rares",
+      "Oscillations plus étroites, commutations plus rares",
+      "Oscillations plus larges, commutations plus fréquentes",
+      "Oscillations plus étroites, commutations plus fréquentes"
+     ],
+     "reponse": 0,
+     "aide": "Une hystérésis plus grande laisse la température évoluer plus longtemps entre deux commutations.",
+     "explication": "Une hystérésis **plus grande** laisse la température dériver davantage : **oscillations plus larges**, mais **commutations plus rares**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "30588c6b-33e2-5fbc-8e20-0c35a0e2f713",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Régler les seuils d’un bain thermostaté",
+   "competence": "raisonner",
+   "situation": "Un bain thermostaté doit rester proche de 37 °C. Le relais du chauffage supporte au plus 10 commutations par heure, et l’amplitude des oscillations ne doit pas dépasser 2 °C. L’équipe a testé trois réglages de seuils.",
+   "documents": [
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "La régulation",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "si t < seuil_bas :",
+      "    chauffage = 1",
+      "si t > seuil_haut :",
+      "    chauffage = 0"
+     ]
+    },
+    {
+     "id": "tests",
+     "type": "tableau",
+     "titre": "Les trois réglages testés",
+     "colonnes": [
+      "Réglage",
+      "Seuils (°C)",
+      "Amplitude (°C)",
+      "Commut. par heure"
+     ],
+     "lignes": [
+      [
+       "R1",
+       "36,9 et 37,1",
+       "0,6",
+       "24"
+      ],
+      [
+       "R2",
+       "36,5 et 37,5",
+       "1,5",
+       "6"
+      ],
+      [
+       "R3",
+       "36,0 et 38,0",
+       "2,6",
+       "3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Essais écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’hystérésis du réglage R2, c’est-à-dire l’écart entre le seuil d’extinction et le seuil d’allumage, en °C.",
+     "reponse": 1,
+     "unite": "°C",
+     "tolerance": 0.01,
+     "aide": "Soustrais le seuil bas au seuil haut.",
+     "explication": "37,5 − 36,5 = **1,0 °C**."
+    },
+    {
+     "type": "zone",
+     "document": "tests",
+     "reponse": [
+      "r0c3"
+     ],
+     "enonce": "Touche la valeur qui montre quel réglage risque d’user le relais.",
+     "aide": "Le relais supporte 10 commutations par heure au plus : cherche une valeur plus grande.",
+     "explication": "R1 commute **24 fois par heure**, bien au-delà des 10 admises : son hystérésis trop faible use le relais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel réglage respecte les deux contraintes (amplitude ≤ 2 °C et au plus 10 commutations par heure) ?",
+     "options": [
+      "R1",
+      "R2",
+      "R3",
+      "Aucun des trois"
+     ],
+     "reponse": 1,
+     "aide": "Teste chaque réglage sur les deux contraintes : un réglage doit les respecter toutes les deux.",
+     "explication": "R1 : 24 commutations par heure, trop. R3 : amplitude de 2,6 °C, trop. **R2** (1,5 °C et 6 commutations par heure) respecte les deux.",
+     "ordreFixe": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec R2, le chauffage commute 6 fois par heure. Quelle durée moyenne sépare deux commutations, en minutes ?",
+     "reponse": 10,
+     "unite": "min",
+     "tolerance": 0.1,
+     "aide": "Une heure compte 60 minutes.",
+     "explication": "60 min / 6 commutations = **10 min** entre deux commutations en moyenne."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le programme pour le réglage retenu.",
+     "texte": "seuil_bas = ___ ; seuil_haut = ___",
+     "reponses": [
+      [
+       "36,5"
+      ],
+      [
+       "37,5"
+      ]
+     ],
+     "banque": [
+      "36,0",
+      "36,5",
+      "37,0",
+      "37,5",
+      "38,0"
+     ],
+     "aide": "Reprends les seuils du réglage que tu viens de choisir.",
+     "explication": "Le réglage R2 allume le chauffage sous **36,5 °C** et l’éteint au-dessus de **37,5 °C**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6912a692-5037-5348-9dcd-38bb57202202",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle idée de projet choisir ?",
+   "competence": "analyser-document",
+   "situation": "Quatre élèves ont noté une idée pour le mini-projet de SPCL. Leur professeur leur demande de ne garder que celles qui sont de vraies problématiques : précises et mesurables.",
+   "documents": [
+    {
+     "id": "idees",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Idées de projets",
+     "sousTitre": "Tableau des propositions",
+     "emoji": "💡",
+     "lignes": [
+      {
+       "texte": "L’eau",
+       "id": "i1"
+      },
+      {
+       "texte": "Le pH d’un jus de citron varie-t-il de plus de 0,3 unité en 24 h au réfrigérateur ?",
+       "id": "i2"
+      },
+      {
+       "texte": "La chimie du jardin",
+       "id": "i3"
+      },
+      {
+       "texte": "Quelle masse de calcaire un détartrant retire-t-il d’une bouilloire en 10 minutes ?",
+       "id": "i4"
+      }
+     ],
+     "pied": "Propositions écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "idees",
+     "reponse": [
+      "i2",
+      "i4"
+     ],
+     "enonce": "Touche les deux propositions qui sont de vraies problématiques.",
+     "aide": "Une problématique est une question précise, dont la réponse se mesure.",
+     "explication": "Les propositions 2 et 4 posent une **question précise et mesurable** (un pH sur 24 h, une masse sur 10 minutes). « L’eau » et « La chimie du jardin » ne sont que des **thèmes**.",
+     "multiple": true
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « L’eau » n’est-elle pas une problématique ?",
+     "options": [
+      "Parce que c’est un thème trop large, sans mesure possible",
+      "Parce que l’eau est une espèce chimique trop dangereuse",
+      "Parce que l’eau est déjà étudiée dans le programme",
+      "Parce que la formule de l’eau est trop simple à écrire"
+     ],
+     "reponse": 0,
+     "aide": "Peut-on répondre par une expérience à « L’eau » ?",
+     "explication": "Une problématique doit être **précise et mesurable** ; « L’eau » est un **thème** qu’on ne peut pas tester par une expérience."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les cinq phases d’un projet dans l’ordre.",
+     "items": [
+      "S’approprier le sujet",
+      "Analyser et planifier",
+      "Réaliser",
+      "Valider",
+      "Communiquer"
+     ],
+     "aide": "On commence par comprendre le sujet et on termine par rendre compte.",
+     "explication": "Un projet se déroule en cinq phases : **s’approprier**, **analyser** (hypothèses, protocole, planification), **réaliser**, **valider** (résultats, incertitudes) et **communiquer** (note, oral)."
+    }
+   ]
+  },
+  {
+   "chapitre": "6912a692-5037-5348-9dcd-38bb57202202",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une page de cahier de laboratoire à relire",
+   "competence": "analyser-document",
+   "situation": "Alix prépare des étalons pour un dosage par spectrophotométrie. Sa solution mère a une concentration de 2,0 × 10⁻³ mol/L. Son enseignante relit la page de son cahier de laboratoire.",
+   "documents": [
+    {
+     "id": "cahier",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Cahier de laboratoire",
+     "sousTitre": "Page du 12 novembre",
+     "emoji": "📓",
+     "lignes": [
+      {
+       "texte": "14 h 05 — Étalon n° 3 : 10,0 mL de solution mère dans une fiole jaugée de 50,0 mL, complétée à l’eau distillée.",
+       "id": "l1"
+      },
+      {
+       "texte": "14 h 20 — A(étalon 3) = 0,412 à λ = 630 nm.",
+       "id": "l2"
+      },
+      {
+       "texte": "14 h 25 — Cuve rayée : mesure refaite avec une cuve neuve, A = 0,408.",
+       "id": "l3"
+      },
+      {
+       "texte": "Le soir — Recopié au propre : A = 0,41. Valeurs brutes effacées pour que la page soit plus jolie.",
+       "id": "l4"
+      }
+     ],
+     "pied": "Page écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cahier",
+     "reponse": [
+      "l4"
+     ],
+     "enonce": "Touche la ligne qui n’a pas sa place dans un cahier de laboratoire.",
+     "aide": "On note les mesures brutes au moment où on les fait : que fait cette ligne des valeurs brutes ?",
+     "explication": "Les mesures brutes ne se recopient **jamais** au propre après coup, et on ne les efface pas : le cahier est la preuve de ce qui a été fait."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le facteur de dilution entre la solution mère et l’étalon n° 3 (volume final / volume prélevé).",
+     "reponse": 5,
+     "tolerance": 0.01,
+     "aide": "On a prélevé 10,0 mL pour obtenir 50,0 mL.",
+     "explication": "F = 50,0 / 10,0 = **5**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la concentration de l’étalon n° 3, en 10⁻⁴ mol/L.",
+     "reponse": 4,
+     "unite": "× 10⁻⁴ mol/L",
+     "tolerance": 0.01,
+     "aide": "La concentration est divisée par le facteur de dilution : 2,0 × 10⁻³ / 5.",
+     "explication": "C = 2,0 × 10⁻³ / 5 = 4,0 × 10⁻⁴ mol/L, soit **4,0** en unités de 10⁻⁴ mol/L."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment noter correctement l’incident de la cuve rayée ?",
+     "options": [
+      "Garder les deux mesures datées, avec la raison du changement de cuve",
+      "Effacer la première mesure et ne garder que la meilleure",
+      "Ne noter que la mesure refaite, sans parler de la cuve",
+      "Recopier la moyenne des deux mesures à la place des deux valeurs"
+     ],
+     "reponse": 0,
+     "aide": "Le cahier est la mémoire du projet : que doit-on pouvoir retrouver plus tard ?",
+     "explication": "On note **tout**, daté : la première mesure, l’incident et la mesure refaite. On n’efface rien : c’est ce qui permet de justifier le choix de la valeur gardée."
+    }
+   ]
+  },
+  {
+   "chapitre": "6912a692-5037-5348-9dcd-38bb57202202",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mini-projet : un capteur bon marché peut-il remplacer le thermomètre ?",
+   "competence": "raisonner",
+   "situation": "Le club sciences veut remplacer le thermomètre du bain thermostaté par un capteur bon marché relié à un microcontrôleur. Dalia a étalonné le capteur contre un thermomètre de référence, puis relit le cahier des charges avant de conclure.",
+   "documents": [
+    {
+     "id": "cdc",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Cahier des charges",
+     "sousTitre": "Capteur de température du bain",
+     "emoji": "🧪",
+     "lignes": [
+      {
+       "texte": "Étendue",
+       "valeur": "20 à 50 °C"
+      },
+      {
+       "texte": "Écart toléré",
+       "valeur": "0,5 °C au plus, pour chaque mesure",
+       "id": "tolere"
+      },
+      {
+       "texte": "Budget",
+       "valeur": "15 € au plus"
+      }
+     ],
+     "pied": "Cahier des charges écrit pour l’exercice"
+    },
+    {
+     "id": "etalonnage",
+     "type": "tableau",
+     "titre": "Étalonnage du capteur",
+     "colonnes": [
+      "Essai",
+      "T de référence (°C)",
+      "T du capteur (°C)"
+     ],
+     "lignes": [
+      [
+       "1",
+       "20,0",
+       "20,3"
+      ],
+      [
+       "2",
+       "30,0",
+       "30,6"
+      ],
+      [
+       "3",
+       "40,0",
+       "40,2"
+      ],
+      [
+       "4",
+       "50,0",
+       "50,9"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etalonnage",
+     "reponse": [
+      "r3c2"
+     ],
+     "enonce": "Touche la mesure du capteur qui s’écarte le plus de la référence.",
+     "aide": "Calcule, pour chaque essai, l’écart entre la valeur du capteur et la référence.",
+     "explication": "Les écarts valent 0,3 ; 0,6 ; 0,2 et **0,9 °C** : le plus grand est à l’essai 4, où le capteur indique 50,9 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’écart maximal observé entre le capteur et la référence, en °C ?",
+     "reponse": 0.9,
+     "unite": "°C",
+     "tolerance": 0.01,
+     "aide": "Écart = valeur du capteur − valeur de référence, sur chaque ligne.",
+     "explication": "Écarts : 0,3 ; 0,6 ; 0,2 ; 0,9. Le maximum est **0,9 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le capteur respecte-t-il le cahier des charges ?",
+     "options": [
+      "Non : l’écart de 0,9 °C dépasse les 0,5 °C tolérés",
+      "Oui : l’écart moyen est de 0,5 °C, donc il convient",
+      "Oui : trois écarts sur quatre sont inférieurs à 1 °C",
+      "Non : l’étendue de 20 à 50 °C n’est pas couverte"
+     ],
+     "reponse": 0,
+     "aide": "L’écart toléré s’applique à chaque mesure, pas seulement à la moyenne.",
+     "explication": "Le cahier impose **0,5 °C au plus pour chaque mesure** : l’écart de 0,9 °C (et 0,6 °C) le dépasse. Le capteur, **tel quel**, ne convient pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Tous les écarts sont positifs. De quel type d’erreur s’agit-il probablement, et que faire ?",
+     "options": [
+      "Une erreur systématique : corriger par une droite d’étalonnage",
+      "Une erreur aléatoire : répéter la mesure et prendre la moyenne",
+      "Une erreur de lecture : changer d’opérateur",
+      "Aucune erreur : le capteur est juste, c’est la référence qui l’est moins"
+     ],
+     "reponse": 0,
+     "aide": "Un écart toujours dans le même sens ne se compense pas en répétant les mesures.",
+     "explication": "Des écarts **toujours dans le même sens** trahissent une **erreur systématique** : répéter la mesure ne la corrige pas, mais l’**étalonnage** (droite de correction) permet de la compenser."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de ce mini-projet dans l’ordre de la démarche.",
+     "items": [
+      "Poser la problématique et le cahier des charges",
+      "Étalonner le capteur contre le thermomètre de référence",
+      "Estimer l’incertitude",
+      "Comparer au cahier des charges",
+      "Conclure de façon argumentée"
+     ],
+     "aide": "On pose la question, on mesure, on estime l’incertitude, on compare, on conclut.",
+     "explication": "Problématique et cahier des charges, **étalonnage**, **incertitude**, **comparaison** aux objectifs, enfin **conclusion** argumentée : c’est l’exemple de mini-projet du cours."
+    }
+   ]
+  }
+ ]
+}

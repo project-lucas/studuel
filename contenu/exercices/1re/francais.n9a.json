@@ -1,0 +1,1932 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "d31e3158-38a9-5c99-9128-2e28c40573a4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète condamné à la corde",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur la « Ballade des pendus ». Place Villon dans le temps, puis relève la forme de son poème.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Villon, de la naissance à la condamnation",
+     "debut": 1430,
+     "fin": 1470,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1431,
+       "nom": "Naissance"
+      },
+      {
+       "id": "nav",
+       "date": 1456,
+       "nom": "Vol du collège"
+      },
+      {
+       "id": "cond",
+       "date": 1462,
+       "nom": "Condamné"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ballade des pendus",
+     "sousTitre": "François Villon",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Autre titre",
+       "valeur": "« L’Épitaphe Villon »"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Ballade"
+      },
+      {
+       "texte": "Strophes",
+       "valeur": "Trois dizains, plus un envoi"
+      },
+      {
+       "texte": "Vers",
+       "valeur": "Décasyllabes"
+      }
+     ],
+     "pied": "Poème médiéval, XVe siècle",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cond"
+     ],
+     "enonce": "Sur la frise, touche l’année où Villon est condamné à être pendu.",
+     "aide": "Cherche l’événement le plus tardif de la frise.",
+     "explication": "Villon est condamné à la pendaison en **1462** ; sa peine sera ensuite commuée en bannissement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Villon de sa condamnation à la pendaison ?",
+     "reponse": 31,
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1462 − 1431 = **31 ans** : Villon a une trentaine d’années quand il échappe de justesse à la corde.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la fiche du poème.",
+     "texte": "Le poème est une ___ de trois ___ de décasyllabes, suivis d’un ___.",
+     "reponses": [
+      [
+       "ballade"
+      ],
+      [
+       "dizains"
+      ],
+      [
+       "envoi"
+      ]
+     ],
+     "banque": [
+      "ballade",
+      "sonnet",
+      "dizains",
+      "quatrains",
+      "envoi",
+      "refrain"
+     ],
+     "aide": "Tout est dans les lignes « Genre » et « Strophes » de la fiche.",
+     "explication": "Une **ballade** : trois **dizains** de décasyllabes, puis un court **envoi** adressé à un destinataire."
+    }
+   ]
+  },
+  {
+   "chapitre": "d31e3158-38a9-5c99-9128-2e28c40573a4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les corps rongés",
+   "competence": "analyser-document",
+   "situation": "Les pendus parlent à ceux qui passent sous le gibet. Lis ce qu’ils décrivent d’eux-mêmes et ce qu’ils demandent.",
+   "documents": [
+    {
+     "id": "pendus",
+     "type": "tableau",
+     "titre": "Ce que disent les pendus",
+     "colonnes": [
+      "Ils parlent de…",
+      "Ce qu’ils disent"
+     ],
+     "lignes": [
+      [
+       "Leurs corps",
+       "Rongés par la pluie, noircis par le soleil"
+      ],
+      [
+       "Leur chair",
+       "« plus becquetés d’oiseaux que dés à coudre »"
+      ],
+      [
+       "Leur demande",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "François Villon, *Ballade des pendus* (L’Épitaphe Villon), orthographe modernisée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pendus",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case où les pendus se comparent à un objet de couture.",
+     "aide": "Cherche l’objet qu’on enfile au doigt pour coudre.",
+     "explication": "La formule « plus becquetés d’oiseaux que **dés à coudre** » dit que les corps sont criblés de coups de bec, comme un dé est criblé de petits creux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet cette comparaison avec le dé à coudre produit-elle ?",
+     "options": [
+      "Une image concrète et crue des corps abîmés par les oiseaux",
+      "Une image tendre qui adoucit la mort des suppliciés",
+      "Une plaisanterie qui invite le lecteur à se moquer",
+      "Une description savante du métier de couturier"
+     ],
+     "reponse": 0,
+     "aide": "Les pendus demandent justement qu’on ne se moque pas d’eux.",
+     "explication": "L’image est **concrète et crue** : elle fait voir les corps picorés. Le macabre n’est pas là pour faire rire, mais pour toucher."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » : ce que demandent les pendus aux vivants.",
+     "texte": "Ils demandent la ___ et l’absence de ___.",
+     "reponses": [
+      [
+       "prière"
+      ],
+      [
+       "moquerie"
+      ]
+     ],
+     "banque": [
+      "prière",
+      "admiration",
+      "moquerie",
+      "vengeance",
+      "justice"
+     ],
+     "aide": "Les pendus ne veulent pas qu’on rie d’eux, mais qu’on pense à leur salut.",
+     "explication": "Les pendus demandent la **prière** et l’absence de **moquerie** : ils ne réclament pas d’être admirés."
+    }
+   ]
+  },
+  {
+   "chapitre": "d31e3158-38a9-5c99-9128-2e28c40573a4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Coupables, mais frères",
+   "competence": "argumenter",
+   "situation": "Hugo et Nora ne lisent pas le poème de la même façon. Appuie-toi sur le dialogue et sur deux vers pour savoir qui a raison.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Les pendus se plaignent : ils disent qu’on les a condamnés à tort."
+      },
+      {
+       "qui": "Nora",
+       "texte": "Pas du tout. Ils ne nient jamais leur faute : ils demandent la [[p|pitié]] des vivants."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Alors pourquoi les appeler « frères » ?"
+      },
+      {
+       "qui": "Nora",
+       "texte": "Parce que tous les hommes sont pécheurs : les vivants ressemblent aux pendus."
+      }
+     ]
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Deux vers de la ballade",
+     "blocs": [
+      "Ne soyez donc de notre confrérie ;",
+      "Mais priez Dieu que tous nous veuille [[a|absoudre]] !"
+     ],
+     "source": "François Villon, *Ballade des pendus* (L’Épitaphe Villon), orthographe modernisée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit ce que Nora pense que les pendus demandent aux vivants.",
+     "aide": "Nora le dit juste après « Pas du tout ».",
+     "explication": "Pour Nora, les pendus demandent la **pitié** : ils s’adressent aux vivants comme à des frères, sans se déclarer innocents."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe qui dit ce que les pendus espèrent de Dieu.",
+     "aide": "Ils veulent que Dieu leur pardonne.",
+     "explication": "**Absoudre**, c’est pardonner une faute : on n’espère pas l’absolution quand on se croit innocent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le poème permet-il de défendre ?",
+     "options": [
+      "Des condamnés qui reconnaissent leur faute et demandent le salut",
+      "Des innocents qui accusent la justice des hommes d’injustice",
+      "Un jeu d’esprit sans aucun rapport avec la mort réelle",
+      "Un éloge de la gloire des brigands de Paris"
+     ],
+     "reponse": 0,
+     "aide": "Que signifie le mot « absoudre » dans le second vers ?",
+     "explication": "Le verbe **absoudre** montre des pécheurs qui se savent coupables : la lecture de Nora est la bonne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du poème à son effet.",
+     "paires": [
+      [
+       "Le refrain qui clôt chaque strophe",
+       "La prière devient obsédante"
+      ],
+      [
+       "L’adresse « Frères humains »",
+       "Les vivants sont rappelés à leur fraternité avec les morts"
+      ],
+      [
+       "L’envoi au « Prince Jésus »",
+       "Le poème s’achève sur une supplication religieuse"
+      ]
+     ],
+     "aide": "Pense à ce que chaque élément répète, adresse ou conclut.",
+     "explication": "Le **refrain** rend la prière obsédante, **« frères humains »** rappelle la fraternité, l’**envoi** adresse la supplication au Prince Jésus."
+    }
+   ]
+  },
+  {
+   "chapitre": "d903acde-3203-5efd-88ae-790d630258b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman qui roule sur les rails",
+   "competence": "se-reperer-temps",
+   "situation": "Tu ouvres *La Bête humaine* pour la première fois. Situe le roman dans l’œuvre de Zola et dans l’histoire.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Bête humaine",
+     "sousTitre": "Émile Zola",
+     "emoji": "🚂",
+     "lignes": [
+      {
+       "texte": "Série",
+       "valeur": "Les Rougon-Macquart, dix-septième volume"
+      },
+      {
+       "texte": "Ligne de chemin de fer",
+       "valeur": "Paris – Le Havre"
+      },
+      {
+       "texte": "Temps de l’action",
+       "valeur": "1869-1870"
+      }
+     ],
+     "pied": "Roman naturaliste",
+     "teinte": "violet"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Autour du roman",
+     "debut": 1860,
+     "fin": 1940,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "guerre",
+       "date": 1870,
+       "nom": "Guerre de 1870"
+      },
+      {
+       "id": "pub",
+       "date": 1890,
+       "nom": "Le roman paraît"
+      },
+      {
+       "id": "mort",
+       "date": 1902,
+       "nom": "Mort de Zola"
+      },
+      {
+       "id": "film",
+       "date": 1938,
+       "nom": "Film de Renoir"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication du roman.",
+     "aide": "Le roman paraît après la guerre de 1870, mais avant la mort de Zola.",
+     "explication": "*La Bête humaine* paraît en **1890**, vingt ans après l’époque où se passe l’action."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’action se passe peu avant la guerre de 1870 et le roman paraît en 1890. Combien d’années séparent ces deux dates ?",
+     "reponse": 20,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1890 − 1870 = **20 ans** : Zola raconte une époque qu’il a connue, vingt ans plus tard.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche d’identité du roman.",
+     "texte": "Le roman est le ___ volume des Rougon-Macquart ; l’action se déroule sur la ligne Paris – ___.",
+     "reponses": [
+      [
+       "dix-septième",
+       "17e",
+       "17"
+      ],
+      [
+       "Le Havre",
+       "Havre"
+      ]
+     ],
+     "banque": [
+      "dix-septième",
+      "douzième",
+      "deuxième",
+      "Le Havre",
+      "Lyon",
+      "Marseille"
+     ],
+     "aide": "Relis les deux premières lignes de la fiche.",
+     "explication": "Le roman est le **dix-septième** volume des Rougon-Macquart ; la ligne est **Paris – Le Havre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d903acde-3203-5efd-88ae-790d630258b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du crime dans le train à la machine folle",
+   "competence": "analyser-document",
+   "situation": "Suis l’engrenage du roman, du premier meurtre jusqu’au dernier voyage de la Lison.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’engrenage du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Roubaud tue Grandmorin dans un train"
+      },
+      {
+       "id": "n2",
+       "texte": "Jacques Lantier aperçoit le crime en une seconde"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Jacques finit par tuer Séverine"
+      },
+      {
+       "id": "n5",
+       "texte": "Cabuche, innocent, est condamné"
+      },
+      {
+       "id": "n6",
+       "texte": "Jacques et Pecqueux tombent de la machine lancée"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Jacques devient l’amant de Séverine",
+      "Jacques dénonce Roubaud à la justice",
+      "Jacques quitte la Compagnie des chemins de fer",
+      "Séverine s’enfuit avec Cabuche"
+     ],
+     "reponse": 0,
+     "aide": "Entre le témoin du crime et le meurtre de Séverine, Jacques se rapproche d’elle.",
+     "explication": "Jacques, qui a vu le crime, devient l’**amant de Séverine** ; mais sa pulsion le pousse à la tuer, elle aussi."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où un innocent paie pour les autres.",
+     "aide": "Qui est condamné sans avoir rien fait ?",
+     "explication": "Le carrier **Cabuche**, innocent, est condamné à la place des vrais coupables : la justice est aveugle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière image du roman.",
+     "texte": "Le train continue ___ conducteur, plein de ___ ivres qui partent pour la guerre de 1870.",
+     "reponses": [
+      [
+       "sans"
+      ],
+      [
+       "soldats"
+      ]
+     ],
+     "banque": [
+      "sans",
+      "avec",
+      "soldats",
+      "voyageurs",
+      "mineurs"
+     ],
+     "aide": "Qui monte dans ce train au moment où la guerre commence ?",
+     "explication": "Le train fou roule **sans** conducteur, chargé de **soldats** ivres partant pour la guerre de 1870."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Pecqueux",
+       "Le chauffeur de Jacques"
+      ],
+      [
+       "Misard",
+       "Le garde-barrière qui empoisonne sa femme"
+      ],
+      [
+       "Camy-Lamotte",
+       "Le haut fonctionnaire qui étouffe l’affaire"
+      ],
+      [
+       "Flore",
+       "La fille de la garde-barrière, qui provoque un déraillement"
+      ]
+     ],
+     "aide": "Chacun gravite autour de la voie ferrée ou de la justice.",
+     "explication": "**Pecqueux** est le chauffeur, **Misard** le garde-barrière, **Camy-Lamotte** protège le pouvoir, **Flore** provoque un déraillement."
+    }
+   ]
+  },
+  {
+   "chapitre": "d903acde-3203-5efd-88ae-790d630258b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La dernière image",
+   "competence": "analyser-texte",
+   "situation": "Lis la fin du roman, puis demande-toi ce que Zola veut faire sentir à son lecteur.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La dernière page",
+     "blocs": [
+      "« Sans conducteur, au milieu des ténèbres, en [[b|bête]] [[a|aveugle]] et [[a|sourde]] qu’on aurait lâchée parmi la mort, elle roulait, elle roulait, chargée de cette [[c|chair]] à [[c|canon]]. »"
+     ],
+     "source": "Émile Zola, *La Bête humaine* (1890), dernière page"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La fin du roman a une portée politique",
+       "Le train emporte des soldats ivres vers la guerre de 1870",
+       "?"
+      ],
+      [
+       "La machine est un personnage",
+       "La Lison a un corps et une agonie",
+       "La locomotive de Jacques Lantier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux adjectifs qui disent que le train ne voit ni n’entend rien.",
+     "aide": "Ils qualifient la « bête » : l’un se rapporte à la vue, l’autre à l’ouïe.",
+     "explication": "La machine est **aveugle** et **sourde** : rien ne la guide, rien ne l’arrête."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui réduisent les soldats à une matière que l’on sacrifie.",
+     "aide": "Cherche l’expression qui désigne les soldats comme de la viande pour la guerre.",
+     "explication": "Les soldats ne sont plus que de la **chair** à **canon** : des corps que le pouvoir envoie mourir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le train sans conducteur lancé dans la nuit",
+      "Le procès de Cabuche au tribunal",
+      "La mort de Flore après le déraillement",
+      "Le journal intime de Séverine"
+     ],
+     "reponse": 0,
+     "aide": "La thèse parle de « la fin du roman » et l’argument de soldats ivres.",
+     "explication": "C’est le **train sans conducteur lancé dans la nuit** qui porte les soldats vers la guerre : l’image finale a une charge politique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la dernière page à son effet.",
+     "paires": [
+      [
+       "« en bête aveugle et sourde »",
+       "La machine devient un animal sans maîtrise"
+      ],
+      [
+       "La répétition « elle roulait, elle roulait »",
+       "Une course continue qu’on ne peut plus arrêter"
+      ],
+      [
+       "L’expression « chair à canon »",
+       "Les soldats réduits à une matière sacrifiable"
+      ]
+     ],
+     "aide": "Demande-toi ce que chaque procédé fait sentir au lecteur.",
+     "explication": "La **comparaison** fait de la machine une bête, la **répétition** donne l’élan irrésistible, **chair à canon** déshumanise les soldats."
+    }
+   ]
+  },
+  {
+   "chapitre": "91533451-f5d8-5e5f-abde-1ece917087e2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un jeune Italien sur un champ de bataille",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches *La Chartreuse de Parme*. Place le roman dans la vie de Stendhal et dans l’histoire, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Stendhal, Waterloo et le roman",
+     "debut": 1780,
+     "fin": 1845,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1783,
+       "nom": "Naissance"
+      },
+      {
+       "id": "wat",
+       "date": 1815,
+       "nom": "Waterloo"
+      },
+      {
+       "id": "rn",
+       "date": 1830,
+       "nom": "Le Rouge et le Noir"
+      },
+      {
+       "id": "pub",
+       "date": 1839,
+       "nom": "La Chartreuse"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Fabrice del Dongo",
+       "Le héros spontané et chanceux"
+      ],
+      [
+       "Gina Sanseverina",
+       "La duchesse passionnée, capable de tout pour Fabrice"
+      ],
+      [
+       "Le comte Mosca",
+       "?"
+      ],
+      [
+       "Clélia Conti",
+       "La jeune fille pieuse et fidèle"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "wat"
+     ],
+     "enonce": "Touche l’année de la bataille que Fabrice traverse sans la comprendre.",
+     "aide": "C’est la défaite finale de Napoléon.",
+     "explication": "**Waterloo**, en 1815 : Fabrice y arrive plein d’enthousiasme pour Napoléon et n’y comprend rien."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Waterloo de la publication de *La Chartreuse de Parme* ?",
+     "reponse": 24,
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1839 − 1815 = **24 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour le comte Mosca ?",
+     "options": [
+      "Le ministre habile et ironique",
+      "Le prince tyran et soupçonneux",
+      "Le poète républicain exalté",
+      "Le vieux curé astrologue"
+     ],
+     "reponse": 0,
+     "aide": "Mosca est le premier ministre de Parme : un homme de cour qui sait se tirer des intrigues.",
+     "explication": "Mosca est le **ministre habile et ironique** de Parme ; il aime la duchesse Sanseverina."
+    }
+   ]
+  },
+  {
+   "chapitre": "91533451-f5d8-5e5f-abde-1ece917087e2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Waterloo à la chartreuse",
+   "competence": "lire-tableau",
+   "situation": "Fabrice traverse l’Europe napoléonienne, la cour de Parme, puis la prison. Suis les grandes étapes de son parcours.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Le parcours de Fabrice",
+     "colonnes": [
+      "Étape",
+      "Lieu",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Waterloo",
+       "Il traverse la bataille sans rien y comprendre"
+      ],
+      [
+       "2",
+       "La cour de Parme",
+       "Intrigues, meurtre d’un rival, emprisonnement"
+      ],
+      [
+       "3",
+       "La tour Farnèse",
+       "Il découvre Clélia et connaît le bonheur le plus intense de sa vie"
+      ],
+      [
+       "4",
+       "Après l’évasion",
+       "?"
+      ],
+      [
+       "5",
+       "La chartreuse de Parme",
+       "Il se retire et meurt un an après Clélia"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case qui annonce la prison de Fabrice.",
+     "aide": "Cherche le mot qui désigne la privation de liberté.",
+     "explication": "À la cour de Parme, après le **meurtre d’un rival**, Fabrice est **emprisonné** à la tour Farnèse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » : Clélia a fait vœu de ne plus jamais voir Fabrice.",
+     "texte": "Ils s’aiment alors dans l’___.",
+     "reponses": [
+      [
+       "obscurité",
+       "obscurite"
+      ]
+     ],
+     "banque": [
+      "obscurité",
+      "lumière",
+      "absence",
+      "prison"
+     ],
+     "aide": "Le vœu de Clélia les empêche de se voir.",
+     "explication": "Puisque Clélia ne veut plus voir Fabrice, ils s’aiment **dans l’obscurité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel paradoxe la troisième étape révèle-t-elle ?",
+     "options": [
+      "Le lieu du bonheur le plus intense est une cellule de prison",
+      "Le bonheur vient de la fortune de la duchesse Sanseverina",
+      "Le bonheur naît de la victoire de Napoléon à Waterloo",
+      "Le bonheur n’arrive qu’après la mort de Clélia"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « La tour Farnèse » : que vit Fabrice dans ce lieu ?",
+     "explication": "Fabrice connaît son plus grand bonheur **en prison**, grâce à Clélia : c’est le grand paradoxe du roman."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est dans le roman.",
+     "paires": [
+      [
+       "La duchesse Sanseverina",
+       "La tante qui aime Fabrice"
+      ],
+      [
+       "Le comte Mosca",
+       "Le premier ministre de Parme, amoureux de la duchesse"
+      ],
+      [
+       "Clélia Conti",
+       "La fille du gouverneur de la prison"
+      ],
+      [
+       "Ferrante Palla",
+       "Un poète républicain qui empoisonne le prince"
+      ]
+     ],
+     "aide": "Chaque personnage est défini par son lien avec Fabrice ou avec le pouvoir.",
+     "explication": "La **duchesse** est la tante, **Mosca** le ministre, **Clélia** la fille du gouverneur, **Ferrante Palla** le poète républicain."
+    }
+   ]
+  },
+  {
+   "chapitre": "91533451-f5d8-5e5f-abde-1ece917087e2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Waterloo vu d’en bas",
+   "competence": "argumenter",
+   "situation": "Nina et Théo se disputent sur la bataille de Waterloo. Appuie-toi sur le dialogue et sur un passage écrit à la manière de Stendhal.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Chez Stendhal, Waterloo est un grand tableau héroïque, vu de haut."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Au contraire : Fabrice est un jeune soldat parmi d’autres, et il ne [[c|comprend]] [[c|rien]]."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Stendhal",
+     "blocs": [
+      "Fabrice chevauchait dans la fumée. Le canon tonnait, mais il ne voyait [[v|aucun]] [[v|ennemi]].",
+      "Il demanda à un hussard : « Est-ce là une bataille ? » L’homme éclata de rire et s’éloigna sans répondre."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stendhal"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que Fabrice comprend de la bataille, d’après Théo.",
+     "aide": "Théo répond à Nina par une négation.",
+     "explication": "Pour Théo, Fabrice ne **comprend rien** : c’est la guerre vue d’en bas."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que Fabrice ne voit pas.",
+     "aide": "Il entend le canon, mais il ne distingue pas ceux qui tirent.",
+     "explication": "Fabrice ne voit **aucun ennemi** : on lui impose un fracas sans visage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet le point de vue de Fabrice produit-il sur la guerre ?",
+     "options": [
+      "La guerre est démythifiée : on la vit d’en bas",
+      "La guerre devient une épopée vue d’en haut",
+      "La guerre est expliquée par un général",
+      "La guerre est un simple décor sans importance"
+     ],
+     "reponse": 0,
+     "aide": "Un jeune soldat voit-il la bataille comme un chef ?",
+     "explication": "Le **point de vue interne** démythifie la guerre : on n’y comprend rien, et c’est exact."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque caractéristique du roman à ce qu’elle produit.",
+     "paires": [
+      [
+       "Une prison heureuse",
+       "Le lieu du bonheur est la cellule"
+      ],
+      [
+       "Une politique de cour féroce",
+       "Elle entoure ce bonheur d’intrigues"
+      ],
+      [
+       "Une écriture rapide et sèche",
+       "Un roman dicté en cinquante-deux jours"
+      ]
+     ],
+     "aide": "Cherche ce que chaque élément a de paradoxal ou de rapide.",
+     "explication": "La **prison heureuse** est le paradoxe central, la **cour féroce** l’entoure d’intrigues, le style **rapide et sec** colle à un roman écrit en cinquante-deux jours."
+    }
+   ]
+  },
+  {
+   "chapitre": "22a64a07-c021-58fe-824c-c0ff0ea85d34",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un monde où les personnages reviennent",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur Balzac. Situe l’auteur et repère quelques personnages qui reparaissent d’un roman à l’autre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Balzac",
+     "debut": 1790,
+     "fin": 1850,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1799,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pg",
+       "date": 1835,
+       "nom": "Le Père Goriot"
+      },
+      {
+       "id": "mort",
+       "date": 1850,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Des personnages qui reparaissent",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il incarne"
+     ],
+     "lignes": [
+      [
+       "Rastignac",
+       "Le jeune ambitieux qui conquiert Paris"
+      ],
+      [
+       "Vautrin",
+       "Le forçat évadé qui finit chef de la police"
+      ],
+      [
+       "Nucingen",
+       "?"
+      ],
+      [
+       "Gobseck",
+       "L’usurier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pg"
+     ],
+     "enonce": "Touche l’année du roman qui inaugure le retour systématique des personnages.",
+     "aide": "Le roman porte le nom d’un vieux père ruiné par ses filles.",
+     "explication": "*Le Père Goriot* paraît en **1835** : Balzac y généralise le retour des personnages."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Balzac de sa mort ?",
+     "reponse": 51,
+     "aide": "Soustrais la date de naissance de la date de la mort.",
+     "explication": "1850 − 1799 = **51 ans** : Balzac meurt à cinquante et un ans, épuisé par le travail.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Nucingen ?",
+     "options": [
+      "Le banquier, maître de la spéculation",
+      "Le poète de province perdu par Paris",
+      "Le forçat qui se cache sous un faux nom",
+      "Le vieil usurier qui prête à intérêt"
+     ],
+     "reponse": 0,
+     "aide": "Son nom évoque l’argent et la finance.",
+     "explication": "Nucingen est le **banquier**, maître de la spéculation : un des personnages de l’argent dans l’œuvre."
+    }
+   ]
+  },
+  {
+   "chapitre": "22a64a07-c021-58fe-824c-c0ff0ea85d34",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan de l’édifice",
+   "competence": "lire-tableau",
+   "situation": "Balzac a rangé ses romans dans une grande architecture. Repère-toi dans ce plan.",
+   "documents": [
+    {
+     "id": "etudes",
+     "type": "tableau",
+     "titre": "Les trois grandes divisions",
+     "colonnes": [
+      "Division",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "Études de mœurs",
+       "Le gros de l’œuvre : scènes de la vie privée, de province, parisienne…"
+      ],
+      [
+       "Études philosophiques",
+       "?"
+      ],
+      [
+       "Études analytiques",
+       "Presque inachevées"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etudes",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case de la division que Balzac a presque laissée inachevée.",
+     "aide": "Le mot « inachevées » est dans le tableau.",
+     "explication": "Les **Études analytiques** sont presque inachevées : c’est la plus petite partie de l’édifice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que cherche Balzac dans les Études philosophiques (la case « ? ») ?",
+     "options": [
+      "Les causes de ce que montrent les Études de mœurs",
+      "Des conseils pour réussir dans les affaires",
+      "Le portrait des rois de France à Versailles",
+      "Les règles de la bonne société à Paris"
+     ],
+     "reponse": 0,
+     "aide": "Après avoir décrit les mœurs, Balzac cherche à expliquer.",
+     "explication": "Dans les Études philosophiques, Balzac cherche les **causes** de ce que les Études de mœurs décrivent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les chiffres de l’édifice.",
+     "texte": "Balzac a achevé environ ___ romans et nouvelles, sur ___ prévus.",
+     "reponses": [
+      [
+       "quatre-vingt-dix",
+       "90"
+      ],
+      [
+       "cent trente-sept",
+       "137"
+      ]
+     ],
+     "banque": [
+      "quatre-vingt-dix",
+      "cinquante",
+      "cent trente-sept",
+      "deux mille",
+      "cent"
+     ],
+     "aide": "L’œuvre est immense, mais le projet l’était plus encore.",
+     "explication": "Environ **quatre-vingt-dix** textes achevés, sur **cent trente-sept** prévus : l’édifice est resté inachevé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque œuvre à sa division.",
+     "paires": [
+      [
+       "Eugénie Grandet",
+       "Études de mœurs"
+      ],
+      [
+       "Louis Lambert",
+       "Études philosophiques"
+      ],
+      [
+       "Physiologie du mariage",
+       "Études analytiques"
+      ]
+     ],
+     "aide": "Une œuvre de mœurs décrit la société ; une œuvre analytique l’étudie en savant.",
+     "explication": "*Eugénie Grandet* relève des **Études de mœurs**, *Louis Lambert* des **Études philosophiques**, *Physiologie du mariage* des **Études analytiques**."
+    }
+   ]
+  },
+  {
+   "chapitre": "22a64a07-c021-58fe-824c-c0ff0ea85d34",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le secrétaire de la société",
+   "competence": "argumenter",
+   "situation": "Balzac explique ce qu’il veut faire de sa Comédie humaine. Lis sa phrase, puis construis un argument.",
+   "documents": [
+    {
+     "id": "avant",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le projet de Balzac",
+     "blocs": [
+      "« La Société française allait être l’[[h|historien]], je ne devais être que le [[s|secrétaire]]. »"
+     ],
+     "source": "Honoré de Balzac, *Avant-propos de La Comédie humaine* (1842)"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le retour des personnages donne l’impression d’un monde réel",
+       "Le monde décrit existe en dehors de chaque livre",
+       "?"
+      ],
+      [
+       "Balzac veut décrire la société comme un naturaliste",
+       "Il classe les « espèces sociales » comme Buffon les espèces animales",
+       "Le plan en Études de mœurs"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "avant",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot par lequel Balzac désigne le rôle qu’il se donne.",
+     "aide": "Balzac réserve le rôle d’historien à la société.",
+     "explication": "Balzac se dit **secrétaire** : il enregistre ce que la société « raconte » d’elle-même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire Balzac en se disant « secrétaire » ?",
+     "options": [
+      "Qu’il enregistre la société telle qu’elle est",
+      "Qu’il travaille pour un homme politique",
+      "Qu’il invente un monde sans rapport avec la réalité",
+      "Qu’il laisse à d’autres le soin d’écrire ses livres"
+     ],
+     "reponse": 0,
+     "aide": "Un secrétaire écrit ce qu’on lui dicte : qui dicte ici ?",
+     "explication": "En se disant **secrétaire**, Balzac affirme que c’est la société qui fait l’histoire, et lui qui l’enregistre, en naturaliste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Rastignac et Vautrin reparaissent d’un roman à l’autre",
+      "Le Père Goriot est le premier roman de Balzac",
+      "Balzac meurt quelques mois après son mariage",
+      "Le titre répond à la Divine Comédie de Dante"
+     ],
+     "reponse": 0,
+     "aide": "La thèse porte sur le retour des personnages.",
+     "explication": "**Rastignac et Vautrin** reparaissent d’un roman à l’autre : le monde de Balzac semble exister en dehors de chaque livre."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de l’œuvre à ce qu’il révèle du projet de Balzac.",
+     "paires": [
+      [
+       "Le titre « La Comédie humaine »",
+       "Il répond à la Divine Comédie de Dante"
+      ],
+      [
+       "La comparaison avec Buffon",
+       "Classer les « espèces sociales »"
+      ],
+      [
+       "L’Avant-propos de 1842",
+       "Il expose le projet de l’ensemble"
+      ]
+     ],
+     "aide": "Pense à l’auteur auquel Balzac se réfère, au savant qu’il imite, au texte où il s’explique.",
+     "explication": "Le **titre** répond à Dante, **Buffon** sert de modèle pour classer les espèces sociales, l’**Avant-propos** expose le projet."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5b846eb-1a5b-5574-b2ee-8fd0dccfbef9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une nouvelle publiée après la mort de l’autrice",
+   "competence": "se-reperer-temps",
+   "situation": "Tu étudies une nouvelle de Madame de La Fayette. Situe l’autrice, le cadre du récit et ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Madame de La Fayette et sa nouvelle",
+     "debut": 1550,
+     "fin": 1730,
+     "pas": 20,
+     "periodes": [
+      {
+       "id": "vie",
+       "debut": 1634,
+       "fin": 1693,
+       "nom": "Vie de l’autrice",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "cadre",
+       "date": 1560,
+       "nom": "Cadre du récit"
+      },
+      {
+       "id": "cleves",
+       "date": 1678,
+       "nom": "La Princesse de Clèves"
+      },
+      {
+       "id": "pub",
+       "date": 1724,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "La comtesse de Tende",
+       "Née Strozzi, mariée très jeune"
+      ],
+      [
+       "Le comte de Tende",
+       "Grand seigneur, mari d’abord indifférent"
+      ],
+      [
+       "Le chevalier de Navarre",
+       "Noble de grande naissance, mais sans fortune"
+      ],
+      [
+       "La princesse de Neufchâtel",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année où la nouvelle est enfin publiée.",
+     "aide": "C’est l’événement le plus tardif de la frise.",
+     "explication": "La nouvelle paraît en **1724**, bien après la mort de l’autrice (1693)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Madame de La Fayette meurt en 1693. Combien d’années après sa mort la nouvelle paraît-elle ?",
+     "reponse": 31,
+     "aide": "La période « Vie de l’autrice » se termine à sa mort.",
+     "explication": "1724 − 1693 = **31 ans** : l’autrice ne l’a jamais vue imprimée.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour la princesse de Neufchâtel ?",
+     "options": [
+      "Une jeune veuve, parti brillant et amie de la comtesse",
+      "Une jeune fille pieuse, fille du gouverneur",
+      "Une reine mère qui dirige la cour des Valois",
+      "Une servante dévouée qui trahit sa maîtresse"
+     ],
+     "reponse": 0,
+     "aide": "Elle épouse le chevalier de Navarre ; la comtesse lui est liée.",
+     "explication": "La princesse de Neufchâtel est une **jeune veuve**, parti brillant et **amie de la comtesse** : c’est elle que le chevalier épouse par ambition."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5b846eb-1a5b-5574-b2ee-8fd0dccfbef9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du mariage à la mort",
+   "competence": "analyser-document",
+   "situation": "Suis, étape par étape, la chute d’une femme de la cour des Valois.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’histoire de la comtesse",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Elle aime d’abord son mari, qui la délaisse"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle s’éprend du chevalier de Navarre"
+      },
+      {
+       "id": "n3",
+       "texte": "Le chevalier épouse la princesse par ambition"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle avoue tout par écrit à son mari"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Les amants cèdent ; elle se découvre enceinte",
+      "Elle s’enfuit avec le chevalier à l’étranger",
+      "Son mari la fait enfermer dans un couvent",
+      "Elle se fait religieuse pour oublier sa faute"
+     ],
+     "reponse": 0,
+     "aide": "Entre le mariage du chevalier et l’aveu, il se passe ce qui oblige la comtesse à écrire.",
+     "explication": "Les amants **cèdent** ; la comtesse se découvre **enceinte**, et c’est ce qui la pousse à avouer."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où la comtesse choisit de tout dire à son mari.",
+     "aide": "L’aveu se fait par écrit.",
+     "explication": "La comtesse **avoue tout par écrit** : l’aveu est le tournant du récit."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la fin de la nouvelle, après l’aveu.",
+     "items": [
+      "Le comte étouffe le scandale",
+      "Elle accouche d’un enfant qui ne peut vivre",
+      "Elle meurt peu de jours après"
+     ],
+     "aide": "Le comte réagit d’abord ; la comtesse accouche ensuite ; la mort vient après.",
+     "explication": "Le comte **étouffe le scandale**, puis la comtesse **accouche** d’un enfant qui ne peut vivre, et **meurt** peu de jours après."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la vengeance du comte.",
+     "texte": "Au lieu de la tuer, le comte préfère ___ le scandale : l’enfant passera pour le ___.",
+     "reponses": [
+      [
+       "étouffer",
+       "etouffer"
+      ],
+      [
+       "sien"
+      ]
+     ],
+     "banque": [
+      "étouffer",
+      "révéler",
+      "sien",
+      "fils",
+      "sienne"
+     ],
+     "aide": "Le comte veut sauver les apparences.",
+     "explication": "Le comte choisit une vengeance plus froide : **étouffer** le scandale, l’enfant passera pour le **sien**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5b846eb-1a5b-5574-b2ee-8fd0dccfbef9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un aveu qui ne sauve rien",
+   "competence": "argumenter",
+   "situation": "Compare le dénouement de *La Comtesse de Tende* à celui de *La Princesse de Clèves*, puis lis la lettre d’aveu écrite à la manière de l’autrice.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Deux traitements du même dilemme",
+     "colonnes": [
+      "Dans La Princesse de Clèves",
+      "Dans La Comtesse de Tende"
+     ],
+     "lignes": [
+      [
+       "L’aveu précède la faute",
+       "La passion est consommée"
+      ],
+      [
+       "L’héroïne renonce",
+       "?"
+      ]
+     ],
+     "enteteLignes": false
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La lettre d’aveu",
+     "blocs": [
+      "Monsieur, je vous dois un [[a|aveu]] que je n’ose vous faire de vive voix. Je suis [[c|coupable]], et je n’attends de vous aucune [[c|grâce]]. Faites de moi ce que votre honneur vous commande."
+     ],
+     "source": "Lettre écrite pour l’exercice, à la manière de Madame de La Fayette"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui nomme ce que la comtesse écrit à son mari.",
+     "aide": "C’est un mot du même champ que « confession ».",
+     "explication": "La comtesse écrit un **aveu** : elle dit tout, mais sans espoir."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui montrent qu’elle se reconnaît fautive et n’espère rien.",
+     "aide": "Un adjectif dit la faute ; un nom dit ce qu’elle renonce à demander.",
+     "explication": "Elle se dit **coupable** et n’attend aucune **grâce** : l’aveu ne la sauvera pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel contraste faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "L’enfant naît, et la mort suit",
+      "L’héroïne trouve un nouveau mari",
+      "La princesse se retire au couvent",
+      "La cour pardonne tout aux amants"
+     ],
+     "reponse": 0,
+     "aide": "Chez Madame de La Fayette, ici, l’aveu ne libère pas.",
+     "explication": "Dans la nouvelle, **l’enfant naît, et la mort suit** : c’est la version sans espoir du dilemme de *La Princesse de Clèves*."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque caractéristique de la nouvelle à son effet.",
+     "paires": [
+      [
+       "Un récit bref et sec",
+       "Il renforce la noirceur de l’histoire"
+      ],
+      [
+       "Un aveu qui ne sauve rien",
+       "L’aveu ne libère jamais l’héroïne"
+      ],
+      [
+       "Une passion consommée",
+       "Une différence avec La Princesse de Clèves, où l’héroïne renonce"
+      ]
+     ],
+     "aide": "Pense à ce que chaque choix d’écriture ou d’intrigue rend plus sombre.",
+     "explication": "La **brièveté** et la sécheresse renforcent la noirceur ; l’**aveu** ne sauve rien ; la **passion consommée** distingue la nouvelle de *La Princesse de Clèves*."
+    }
+   ]
+  },
+  {
+   "chapitre": "7df8e43c-6458-5586-9794-957dfdcae5f2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Shanghai, mars 1927",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *La Condition humaine*. Situe le roman et ses personnages principaux.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "André Malraux",
+     "debut": 1900,
+     "fin": 1980,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "min",
+       "debut": 1959,
+       "fin": 1969,
+       "nom": "Ministre de la Culture",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1901,
+       "nom": "Naissance"
+      },
+      {
+       "id": "gon",
+       "date": 1933,
+       "nom": "Prix Goncourt"
+      },
+      {
+       "id": "mort",
+       "date": 1976,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il cherche"
+     ],
+     "lignes": [
+      [
+       "Kyo Gisors",
+       "Donner un sens à sa vie par l’action collective"
+      ],
+      [
+       "Tchen",
+       "?"
+      ],
+      [
+       "Le vieux Gisors",
+       "L’oubli, par l’opium"
+      ],
+      [
+       "Le baron Clappique",
+       "Le jeu et le mensonge"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "gon"
+     ],
+     "enonce": "Touche l’année où le roman reçoit le prix Goncourt.",
+     "aide": "Le roman paraît la même année.",
+     "explication": "*La Condition humaine* reçoit le prix Goncourt en **1933**, l’année de sa publication."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le prix Goncourt de la mort de Malraux ?",
+     "reponse": 43,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1976 − 1933 = **43 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Tchen ?",
+     "options": [
+      "Le terrorisme : le meurtre l’a transformé",
+      "La peinture : il cherche à créer des œuvres",
+      "La politique : il veut se faire élire député",
+      "La fuite : il quitte Shanghai pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Tchen se fait sauter sous une voiture.",
+     "explication": "Tchen cherche le **terrorisme** : le meurtre l’a transformé, et il finit par se faire sauter sous une voiture."
+    }
+   ]
+  },
+  {
+   "chapitre": "7df8e43c-6458-5586-9794-957dfdcae5f2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Plusieurs réponses à une même question",
+   "competence": "analyser-document",
+   "situation": "Lis le résumé de la révolution de Shanghai, puis compare ce que chaque personnage oppose à la condition humaine.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le contexte du roman",
+     "blocs": [
+      "À Shanghai, en mars 1927, les communistes chinois, alliés du Kuomintang, s’emparent de la ville. Tchang Kaï-chek les fait ensuite [[m|massacrer]].",
+      "Le baron Clappique, mythomane et joueur, est retenu au [[c|casino]] : son oubli coûtera la vie à Kyo."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après le résumé du roman"
+    },
+    {
+     "id": "rep",
+     "type": "tableau",
+     "titre": "Face à la condition humaine",
+     "colonnes": [
+      "Personnage",
+      "Sa réponse"
+     ],
+     "lignes": [
+      [
+       "Kyo",
+       "La révolution"
+      ],
+      [
+       "Le vieux Gisors",
+       "?"
+      ],
+      [
+       "Ferral",
+       "L’érotisme, vécu comme une domination"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit ce que Tchang Kaï-chek fait des communistes après la prise de la ville.",
+     "aide": "Le verbe est à l’infinitif, juste après « fait ensuite ».",
+     "explication": "Tchang Kaï-chek fait **massacrer** ses anciens alliés : c’est le retournement qui détruit la révolution."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le lieu qui retient Clappique au moment décisif.",
+     "aide": "C’est un lieu où l’on joue de l’argent.",
+     "explication": "Clappique, joueur, reste au **casino** : cet oubli coûtera la vie à Kyo."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour le vieux Gisors ?",
+     "options": [
+      "L’opium, qui fait oublier le monde",
+      "L’action armée dans la ville",
+      "La banque et la finance",
+      "La peinture et l’art"
+     ],
+     "reponse": 0,
+     "aide": "Le cours le présente comme un sinologue fumeur d’opium.",
+     "explication": "Le vieux Gisors répond à la condition humaine par la **drogue** : il fume de l’opium."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans le roman.",
+     "paires": [
+      [
+       "May",
+       "L’épouse de Kyo, médecin"
+      ],
+      [
+       "Ferral",
+       "L’homme d’affaires français qui finance Tchang Kaï-chek"
+      ],
+      [
+       "Hemmelrich",
+       "Le Belge pauvre, dont la famille est massacrée"
+      ],
+      [
+       "König",
+       "Le chef de la police qui interroge Kyo"
+      ]
+     ],
+     "aide": "Chaque personnage est défini par son rôle auprès de Kyo ou de la révolution.",
+     "explication": "**May** est l’épouse de Kyo, **Ferral** finance Tchang Kaï-chek, **Hemmelrich** est le Belge pauvre, **König** dirige la police."
+    }
+   ]
+  },
+  {
+   "chapitre": "7df8e43c-6458-5586-9794-957dfdcae5f2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La fraternité, une réponse parmi d’autres",
+   "competence": "argumenter",
+   "situation": "Zoé et Adam ne s’accordent pas sur ce que le roman répond à la condition humaine. Lis leur débat, puis une scène écrite à la manière de Malraux.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Pour Malraux, la seule réponse à la condition humaine, c’est la [[r|révolution]]."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Non : chaque personnage a la sienne, et la mort choisie compte aussi."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une scène à la manière de Malraux",
+     "blocs": [
+      "La nuit tombe sur la cour. Un vieux révolutionnaire russe sort de sa poche deux petites capsules, les [[t|tend]] à deux jeunes prisonniers qui tremblent et dit seulement : « Prenez. » Il sait qu’il n’en gardera pas pour lui-même."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Malraux"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui nomme la seule réponse que Zoé attribue au roman.",
+     "aide": "Zoé la nomme au début de sa réplique.",
+     "explication": "Zoé réduit le roman à la **révolution** ; Adam lui répond que le roman en propose plusieurs."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le verbe du geste de fraternité.",
+     "aide": "Le vieux révolutionnaire donne quelque chose aux jeunes prisonniers.",
+     "explication": "Il **tend** les capsules : le don est un geste de fraternité, au prix de sa propre sortie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque réponse à la condition humaine : tournée vers les autres, ou qui isole ?",
+     "categories": [
+      "Tournée vers les autres",
+      "Qui isole"
+     ],
+     "items": [
+      [
+       "La révolution (Kyo)",
+       0
+      ],
+      [
+       "Le don du cyanure (Katow)",
+       0
+      ],
+      [
+       "L’opium (le vieux Gisors)",
+       1
+      ],
+      [
+       "L’érotisme comme domination (Ferral)",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si le personnage agit avec d’autres ou se retire en lui-même.",
+     "explication": "La **révolution** et le **don du cyanure** unissent les hommes ; l’**opium** et l’**érotisme-domination** isolent chacun dans sa solitude."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture du roman est la mieux défendable ?",
+     "options": [
+      "Plusieurs personnages répondent chacun à leur manière à la condition humaine",
+      "Le roman ne propose qu’une seule réponse à la condition humaine : la révolution",
+      "Le roman refuse de poser la question de la condition humaine aux lecteurs",
+      "Le roman montre que la fraternité est impossible entre les révolutionnaires"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique d’Adam et les exemples du cours.",
+     "explication": "Le roman multiplie les réponses : **révolution**, **drogue**, **érotisme**, **art**, fraternité. Adam a raison contre Zoé."
+    }
+   ]
+  }
+ ]
+}

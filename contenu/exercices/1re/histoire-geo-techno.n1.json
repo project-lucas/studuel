@@ -1,0 +1,3782 @@
+{
+ "niveau": "1re",
+ "matiere": "histoire-geo-techno",
+ "exercices": [
+  {
+   "chapitre": "0fa8840b-ea9b-536d-8ea9-d80ae5a10f47",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre régimes en vingt-six ans",
+   "competence": "se-reperer-temps",
+   "situation": "Samia prépare une affiche pour son cours d’histoire. Elle veut montrer à ses camarades comment la France change de régime entre 1789 et 1815, et elle place les grands repères sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La France de 1789 à 1815",
+     "source": "Repères du cours.",
+     "debut": 1785,
+     "fin": 1815,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "mono",
+       "debut": 1791,
+       "fin": 1792,
+       "nom": "Monarchie const.",
+       "teinte": "ambre"
+      },
+      {
+       "id": "rep",
+       "debut": 1792,
+       "fin": 1804,
+       "nom": "République",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "emp",
+       "debut": 1804,
+       "fin": 1815,
+       "nom": "Empire",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "decl",
+       "date": 1789,
+       "nom": "Droits de l’homme"
+      },
+      {
+       "id": "louis",
+       "date": 1793,
+       "nom": "Mort de Louis XVI"
+      },
+      {
+       "id": "sacre",
+       "date": 1804,
+       "nom": "Sacre de Napoléon"
+      },
+      {
+       "id": "wat",
+       "date": 1815,
+       "nom": "Waterloo"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui proclame l’égalité des citoyens devant la loi.",
+     "reponse": [
+      "decl"
+     ],
+     "aide": "Cet événement date de 1789 : c’est un texte.",
+     "explication": "La **Déclaration des droits de l’homme et du citoyen** (26 août 1789) proclame l’égalité devant la loi."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Louis XVI est guillotiné en janvier 1793. Touche la période pendant laquelle cette exécution a lieu.",
+     "reponse": [
+      "rep"
+     ],
+     "aide": "Cherche le segment qui couvre l’année 1793.",
+     "explication": "En 1793, la France est une **République** : elle a été proclamée en septembre 1792 et dure jusqu’en 1804."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la Déclaration des droits de l’homme du sacre de Napoléon ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise, puis soustrais.",
+     "explication": "1804 − 1789 = **15 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de régimes différents la frise montre-t-elle entre 1791 et 1815 ?",
+     "reponse": 3,
+     "aide": "Compte les segments colorés.",
+     "explication": "La frise montre **trois régimes** : la monarchie constitutionnelle, la République et l’Empire."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fa8840b-ea9b-536d-8ea9-d80ae5a10f47",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les premiers articles de 1789",
+   "competence": "analyser-texte",
+   "situation": "En classe, Malik lit deux articles de la Déclaration des droits de l’homme et du citoyen, votée en août 1789. Il doit y repérer ce qui change par rapport à la société d’ordres de l’Ancien Régime.",
+   "documents": [
+    {
+     "id": "ddhc",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux articles de 1789",
+     "auteur": "Déclaration des droits de l’homme et du citoyen, 26 août 1789, articles 1 et 3",
+     "source": "Extraits recopiés du texte officiel.",
+     "blocs": [
+      "Art. 1er. Les hommes naissent et demeurent libres et [[e|égaux]] en droits. Les distinctions sociales ne peuvent être fondées que sur l’utilité commune.",
+      "Art. 3. Le principe de toute Souveraineté réside essentiellement dans la [[n|Nation]]. Nul corps, nul individu ne peut exercer d’autorité qui n’en émane expressément."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ddhc",
+     "enonce": "Touche le mot qui dit comment naissent les hommes, selon l’article 1 : libres et…",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche l’adjectif qui accompagne « libres ».",
+     "explication": "Les hommes naissent et demeurent « libres et **égaux** en droits » : c’est le principe de l’égalité devant la loi."
+    },
+    {
+     "type": "zone",
+     "document": "ddhc",
+     "enonce": "Touche le mot qui désigne, d’après l’article 3, celui qui détient la souveraineté.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "La souveraineté « réside » chez elle.",
+     "explication": "Le principe de toute souveraineté « réside essentiellement dans la **Nation** » : ce n’est plus le roi qui la détient. On parle de souveraineté nationale."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée : la Révolution la supprime ou l’affirme ?",
+     "categories": [
+      "Elle supprime",
+      "Elle affirme"
+     ],
+     "items": [
+      [
+       "Les privilèges",
+       0
+      ],
+      [
+       "La société d’ordres",
+       0
+      ],
+      [
+       "L’égalité devant la loi",
+       1
+      ],
+      [
+       "La souveraineté de la Nation",
+       1
+      ]
+     ],
+     "aide": "La nuit du 4 août abolit des droits ; la Déclaration en proclame d’autres.",
+     "explication": "La nuit du 4 août **supprime** les privilèges et donc la société d’ordres ; la Déclaration **affirme** l’égalité devant la loi et la souveraineté de la Nation."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date de 1789 à ce qui se passe.",
+     "paires": [
+      [
+       "17 juin",
+       "Les députés du tiers état se proclament Assemblée nationale"
+      ],
+      [
+       "14 juillet",
+       "Prise de la Bastille"
+      ],
+      [
+       "4 août",
+       "Abolition des privilèges"
+      ],
+      [
+       "26 août",
+       "Déclaration des droits de l’homme et du citoyen"
+      ]
+     ],
+     "aide": "Suis l’ordre du calendrier : l’Assemblée d’abord, la Déclaration à la fin.",
+     "explication": "Le **17 juin** naît l’Assemblée nationale, le **14 juillet** la Bastille est prise, le **4 août** les privilèges sont abolis et le **26 août** la Déclaration est votée."
+    }
+   ]
+  },
+  {
+   "chapitre": "0fa8840b-ea9b-536d-8ea9-d80ae5a10f47",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Napoléon garde-t-il la Révolution ?",
+   "competence": "analyser-document",
+   "situation": "Le professeur demande à Inès un bilan : que reste-t-il de 1789 sous Napoléon, et que devient l’Europe après ses conquêtes ? Elle dispose d’une carte et d’un tableau de synthèse.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quelques lieux de l’Europe napoléonienne",
+     "source": "Frontières actuelles ; lieux repérés pour l’exercice.",
+     "fond": "europe",
+     "cadrage": [
+      -6,
+      40,
+      28,
+      56
+     ],
+     "lieux": [
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "vienne",
+       "lieu": "vienne-autriche",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "londres",
+       "lieu": "londres",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "madrid",
+       "lieu": "madrid",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Napoléon et l’héritage de 1789",
+     "source": "Synthèse du cours.",
+     "colonnes": [
+      "Principe",
+      "Sous Napoléon"
+     ],
+     "lignes": [
+      [
+       "Égalité devant la loi",
+       "Conservée (Code civil, 1804)"
+      ],
+      [
+       "Fin des privilèges",
+       "Conservée"
+      ],
+      [
+       "Liberté politique",
+       "Supprimée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Le congrès de 1814-1815 qui redessine l’Europe se réunit dans la capitale de l’Autriche. Touche-la.",
+     "reponse": [
+      "vienne"
+     ],
+     "aide": "L’Autriche est à l’est de la France ; sa capitale porte le même nom que la ville du congrès.",
+     "explication": "Le congrès de **Vienne** (B) réunit les vainqueurs de Napoléon pour restaurer l’ordre monarchique."
+    },
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la case qui dit ce que Napoléon supprime de l’héritage de 1789.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Une seule ligne du tableau parle d’une suppression.",
+     "explication": "Napoléon **supprime la liberté politique**, tout en gardant l’égalité devant la loi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les conquêtes napoléoniennes réveillent-elles le sentiment national des peuples d’Europe ?",
+     "options": [
+      "Parce que les principes diffusés s’accompagnent d’une domination imposée par la France",
+      "Parce que les peuples refusent de connaître l’égalité devant la loi des Français",
+      "Parce que Napoléon rétablit partout l’ancienne société d’ordres du siècle passé",
+      "Parce que le Code civil est interdit dans tous les territoires conquis ou annexés"
+     ],
+     "reponse": 0,
+     "aide": "Les idées de 1789 plaisent, mais pas la façon dont elles arrivent.",
+     "explication": "Le Code civil et la fin du servage se diffusent, mais **sous la domination française** : les peuples conquis réagissent en défendant leur propre nation."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements dans l’ordre chronologique.",
+     "items": [
+      "Prise de la Bastille",
+      "Proclamation de la République",
+      "Coup d’État du 18 brumaire",
+      "Sacre de Napoléon",
+      "Bataille de Waterloo"
+     ],
+     "aide": "Pense aux années : 1789, 1792, 1799, 1804, 1815.",
+     "explication": "Bastille (**1789**), République (**1792**), 18 brumaire (**1799**), sacre (**1804**), Waterloo (**1815**)."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3e42820-407a-5f92-b0a0-d43cdde86736",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une journée aux Tuileries",
+   "competence": "analyser-document",
+   "situation": "Le 10 août 1792, Paris se soulève. Lucas, élève de première, reconstitue le déroulement de cette journée à partir du tableau de son cours.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "La journée du 10 août 1792",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Moment",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Nuit du 9 au 10 août",
+       "Les sections parisiennes forment une Commune insurrectionnelle"
+      ],
+      [
+       "Matin",
+       "Les sans-culottes et les fédérés marchent sur les Tuileries"
+      ],
+      [
+       "Vers 8 h",
+       "Le roi et sa famille se réfugient à l’Assemblée législative"
+      ],
+      [
+       "Fin de matinée",
+       "Combat contre les gardes suisses"
+      ],
+      [
+       "Soir",
+       "L’Assemblée suspend le roi et convoque une Convention"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journee",
+     "enonce": "Touche le moment où Louis XVI se réfugie à l’Assemblée législative.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche l’heure précise dans la première colonne.",
+     "explication": "Le roi et sa famille quittent les Tuileries **vers 8 h** pour se réfugier à l’Assemblée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui marche sur les Tuileries le matin du 10 août ?",
+     "options": [
+      "Les sans-culottes et les fédérés",
+      "Les gardes suisses et les nobles",
+      "Les armées de l’Autriche",
+      "Les prêtres réfractaires"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne du matin.",
+     "explication": "Ce sont les **sans-culottes** parisiens et les **fédérés** venus des départements ; les gardes suisses défendent le palais."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que décide l’Assemblée le soir.",
+     "texte": "Le soir, l’Assemblée ___ le roi et convoque une ___.",
+     "reponses": [
+      [
+       "suspend"
+      ],
+      [
+       "Convention"
+      ]
+     ],
+     "banque": [
+      "suspend",
+      "Convention",
+      "condamne",
+      "Constituante"
+     ],
+     "aide": "La dernière ligne du tableau donne les deux mots.",
+     "explication": "L’Assemblée **suspend** le roi et convoque une **Convention**, élue au suffrage universel masculin."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3e42820-407a-5f92-b0a0-d43cdde86736",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lettre d’un fédéré marseillais",
+   "competence": "analyser-texte",
+   "situation": "Août 1792. Un jeune Marseillais imaginaire, Pierre, écrit à sa mère depuis Paris. Sa lettre et la chaîne des causes aident à comprendre pourquoi la monarchie tombe.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Pierre à sa mère, août 1792",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Chère mère, nous sommes arrivés à Paris après des semaines de marche, nous les [[f|fédérés]] de Marseille, en chantant. Ici, les [[s|sans-culottes]] nous ont accueillis comme des frères.",
+      "On dit que le chef des armées prussiennes a menacé Paris si l’on touche au roi. Cela n’a fait qu’enflammer le peuple : demain, nous marcherons sur le palais des Tuileries, où vivent le roi et sa famille."
+     ]
+    },
+    {
+     "id": "causes",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Vers le 10 août 1792",
+     "noeuds": [
+      {
+       "id": "varennes",
+       "texte": "Fuite à Varennes (juin 1791)"
+      },
+      {
+       "id": "guerre",
+       "texte": "?"
+      },
+      {
+       "id": "brunswick",
+       "texte": "Manifeste de Brunswick (juillet 1792)"
+      },
+      {
+       "id": "tuileries",
+       "texte": "Prise des Tuileries (10 août 1792)"
+      }
+     ],
+     "liens": [
+      {
+       "de": "varennes",
+       "a": "guerre"
+      },
+      {
+       "de": "guerre",
+       "a": "brunswick"
+      },
+      {
+       "de": "brunswick",
+       "a": "tuileries"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne les gardes nationaux venus des départements, comme les Marseillais.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Pierre dit qu’il en fait partie.",
+     "explication": "Les **fédérés** sont des gardes nationaux venus des départements. Les Marseillais popularisent le chant qui deviendra *La Marseillaise*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel événement d’avril 1792 manque dans la chaîne des causes ?",
+     "options": [
+      "La déclaration de guerre à l’Autriche",
+      "La victoire de Valmy",
+      "L’exécution de Louis XVI",
+      "La proclamation de la République"
+     ],
+     "reponse": 0,
+     "aide": "C’est la guerre extérieure qui commence en 1792.",
+     "explication": "Le 20 avril 1792, la France déclare la **guerre à l’Autriche** : les premières défaites font craindre une trahison de la cour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet le manifeste de Brunswick produit-il à Paris, d’après la lettre ?",
+     "options": [
+      "Il enflamme le peuple au lieu de l’effrayer",
+      "Il rassure les sans-culottes parisiens",
+      "Il convainc le roi de fuir à l’étranger",
+      "Il pousse les fédérés à rentrer chez eux"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui commence par « Cela n’a fait… ».",
+     "explication": "La menace d’une « exécution militaire » **enflamme le peuple** : Paris se soulève, car le roi paraît lié aux ennemis de la nation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acteur : il attaque ou il défend les Tuileries ?",
+     "categories": [
+      "Il attaque le palais",
+      "Il défend le palais"
+     ],
+     "items": [
+      [
+       "Les sans-culottes",
+       0
+      ],
+      [
+       "Les fédérés marseillais",
+       0
+      ],
+      [
+       "La Commune insurrectionnelle",
+       0
+      ],
+      [
+       "Les gardes suisses",
+       1
+      ]
+     ],
+     "aide": "Une seule force est du côté du roi.",
+     "explication": "Sans-culottes, fédérés et Commune insurrectionnelle **attaquent** ; les **gardes suisses** défendent le palais."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3e42820-407a-5f92-b0a0-d43cdde86736",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De la chute du roi à la République en guerre",
+   "competence": "se-reperer-espace",
+   "situation": "Après le 10 août 1792, tout va très vite. Camille doit situer sur une carte les lieux de cette période et relier les dates du tableau, pour expliquer pourquoi la République naît dans la guerre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Lieux de la France révolutionnaire",
+     "source": "Carte réalisée pour l’exercice.",
+     "fond": "france",
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lon": 4.77,
+       "lat": 49.08,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Septembre 1792 – janvier 1793",
+     "source": "Repères du cours.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "20 septembre 1792",
+       "Victoire de Valmy, dans la Marne : les Prussiens sont arrêtés"
+      ],
+      [
+       "22 septembre 1792",
+       "Début de la République"
+      ],
+      [
+       "21 janvier 1793",
+       "Exécution de Louis XVI"
+      ],
+      [
+       "1793",
+       "Guerre de Vendée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Les fédérés qui participent à l’insurrection viennent notamment du grand port du Sud-Est. Touche-le.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "C’est un port sur la Méditerranée.",
+     "explication": "La lettre **B** est Marseille : les fédérés marseillais popularisent le chant qui deviendra *La Marseillaise*."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Valmy est un village de la Marne, à l’est de Paris. Touche sa lettre.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "La Marne est en Champagne, entre Paris et la frontière du Nord-Est.",
+     "explication": "**C** est Valmy, où la victoire du 20 septembre 1792 arrête l’avancée prussienne."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "La guerre intérieure éclate en 1793 en Vendée. Touche la région actuelle qui contient la Vendée.",
+     "reponse": [
+      "PDL"
+     ],
+     "aide": "La Vendée est sur la côte atlantique, au sud de la Bretagne.",
+     "explication": "La Vendée est aujourd’hui dans la région des **Pays de la Loire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours séparent la victoire de Valmy du début de la République ?",
+     "reponse": 2,
+     "unite": "jours",
+     "aide": "Soustrais les deux jours de septembre.",
+     "explication": "22 − 20 = **2 jours** : Valmy a arrêté les Prussiens juste avant la proclamation de la République."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’exécution de Louis XVI pousse-t-elle les monarchies européennes à s’unir contre la France ?",
+     "options": [
+      "Elles craignent que la Révolution ne se répande chez elles",
+      "Elles veulent rétablir l’Empire de Napoléon",
+      "Elles sont déjà alliées à la République française",
+      "Elles viennent de signer la paix avec la Convention"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que représente une République pour les rois.",
+     "explication": "L’exécution du roi inquiète les monarchies : elles forment une **coalition** contre une République qui menace leur ordre. La Terreur naît de cette guerre extérieure et de la guerre de Vendée."
+    }
+   ]
+  },
+  {
+   "chapitre": "90b2f174-784e-5fb2-9e9f-c5ed814e042c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois armées face à face",
+   "competence": "lire-tableau",
+   "situation": "En 1815, Waterloo oppose trois armées. Louise veut savoir qui commande qui, et ce que chaque camp rassemble.",
+   "documents": [
+    {
+     "id": "forces",
+     "type": "tableau",
+     "titre": "Les forces en présence",
+     "source": "Chiffres approximatifs du cours.",
+     "colonnes": [
+      "Armée",
+      "Chef",
+      "Hommes"
+     ],
+     "lignes": [
+      [
+       "Armée du Nord (France)",
+       "Napoléon",
+       "environ 70 000"
+      ],
+      [
+       "Armée anglo-alliée",
+       "Wellington",
+       "plusieurs nationalités"
+      ],
+      [
+       "Armée prussienne",
+       "Blücher",
+       "environ 50 000 engagés"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "forces",
+     "enonce": "Touche le nom du chef de l’armée anglo-alliée.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Lis la deuxième ligne du tableau.",
+     "explication": "L’armée anglo-alliée est commandée par le duc de **Wellington**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Napoléon dispose d’environ 70 000 hommes et les Prussiens de Blücher engagent environ 50 000 hommes. Quelle est la différence ?",
+     "reponse": 20000,
+     "unite": "hommes",
+     "aide": "Soustrais 50 000 de 70 000.",
+     "explication": "70 000 − 50 000 = **20 000 hommes**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel maréchal commande l’armée prussienne ?",
+     "reponse": [
+      "Blücher",
+      "le maréchal Blücher"
+     ],
+     "aide": "Son nom est dans la dernière ligne du tableau.",
+     "explication": "Le maréchal **Blücher** arrive sur le flanc droit français l’après-midi du 18 juin."
+    }
+   ]
+  },
+  {
+   "chapitre": "90b2f174-784e-5fb2-9e9f-c5ed814e042c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le champ de bataille de Waterloo",
+   "competence": "lire-carte",
+   "situation": "Léa consulte une carte de la Belgique pour comprendre les mouvements des armées en juin 1815, et elle lit un récit imaginaire écrit par un soldat britannique.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Au sud de Bruxelles, juin 1815",
+     "source": "Carte réalisée pour l’exercice.",
+     "fond": "europe",
+     "cadrage": [
+      3.7,
+      50.3,
+      5,
+      51
+     ],
+     "etiquettes": [
+      {
+       "texte": "BELGIQUE",
+       "lon": 4.2,
+       "lat": 50.4,
+       "style": "pays"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "bruxelles",
+       "lieu": "bruxelles",
+       "symbole": "point",
+       "nom": "Bruxelles"
+      },
+      {
+       "id": "a",
+       "lon": 4.4,
+       "lat": 50.68,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lon": 4.55,
+       "lat": 50.51,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Journal d’un soldat, 18 juin 1815",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Il a plu toute la nuit et la boue colle à nos bottes. Les charges de la cavalerie française se brisent sur nos carrés, sur le plateau de Mont-Saint-Jean.",
+      "Vers la fin de l’après-midi, on entend des cris sur la droite : l’armée de [[p|Blücher]] arrive enfin. Le soir, la Garde impériale monte à l’assaut, puis recule : l’armée française se débande."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Waterloo est un village situé au sud de Bruxelles. Touche sa lettre.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Il est tout proche de la capitale belge, juste au sud.",
+     "explication": "Waterloo est la lettre **A**, à une quinzaine de kilomètres au sud de Bruxelles."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Le 16 juin, Napoléon bat les Prussiens à Ligny, plus au sud-est. Touche la lettre de Ligny.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Ligny est plus loin de Bruxelles que Waterloo.",
+     "explication": "Ligny est la lettre **B** : Napoléon y bat les Prussiens, mais ne les détruit pas."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le nom du maréchal dont l’armée arrive sur le flanc français dans l’après-midi.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le mot est écrit avec une majuscule.",
+     "explication": "**Blücher** et ses Prussiens arrivent sur le flanc droit français et font basculer la bataille."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces faits dans l’ordre où ils se déroulent.",
+     "items": [
+      "Napoléon bat les Prussiens à Ligny",
+      "La cavalerie française charge les carrés britanniques",
+      "Les Prussiens arrivent sur le flanc",
+      "La Garde impériale est repoussée",
+      "Napoléon abdique une seconde fois"
+     ],
+     "aide": "Ligny a lieu avant le 18 juin ; l’abdication, après.",
+     "explication": "Ligny (**16 juin**), charges de cavalerie, arrivée des Prussiens, repli de la Garde impériale (**18 juin**), seconde abdication (**22 juin**)."
+    }
+   ]
+  },
+  {
+   "chapitre": "90b2f174-784e-5fb2-9e9f-c5ed814e042c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De l’Elbe à Sainte-Hélène",
+   "competence": "analyser-document",
+   "situation": "Napoléon est exilé deux fois. Ismaël veut comparer ces deux exils : où se trouvent-ils, combien de temps durent-ils, et pourquoi le second est-il si lointain ?",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les deux chutes de Napoléon",
+     "source": "Repères du cours.",
+     "debut": 1814,
+     "fin": 1821,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "elbe",
+       "debut": 1814,
+       "fin": 1815,
+       "nom": "Elbe",
+       "teinte": "ambre"
+      },
+      {
+       "id": "helene",
+       "debut": 1815,
+       "fin": 1821,
+       "nom": "Sainte-Hélène",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "wat",
+       "date": 1815,
+       "nom": "Waterloo"
+      },
+      {
+       "id": "mort",
+       "date": 1821,
+       "nom": "Mort de Napoléon"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux îles d’exil",
+     "source": "Carte réalisée pour l’exercice.",
+     "fond": "monde",
+     "cadrage": [
+      -35,
+      -30,
+      30,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "point",
+       "nom": "Paris"
+      },
+      {
+       "id": "elbe",
+       "lon": 10.3,
+       "lat": 42.8,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "helene",
+       "lon": -5.7,
+       "lat": -16,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Napoléon est exilé après Waterloo sur une île de l’Atlantique Sud. Touche sa lettre.",
+     "reponse": [
+      "helene"
+     ],
+     "aide": "Cherche l’île qui est la plus éloignée de l’Europe.",
+     "explication": "Sainte-Hélène est la lettre **B**, en plein Atlantique Sud, à des milliers de kilomètres de l’Europe."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Où Napoléon est-il exilé après son abdication de 1814, en Méditerranée ? Touche la lettre.",
+     "reponse": [
+      "elbe"
+     ],
+     "aide": "C’est une île proche de l’Italie.",
+     "explication": "L’île d’**Elbe** (lettre **A**) est toute proche des côtes italiennes : il en revient en mars 1815 pour les Cent-Jours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre Waterloo et la mort de Napoléon ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1821 − 1815 = **6 ans**, passés à Sainte-Hélène."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi choisit-on un exil si lointain après Waterloo ?",
+     "options": [
+      "Pour l’empêcher de revenir une troisième fois",
+      "Pour lui laisser retrouver ses armées",
+      "Pour le rapprocher de sa famille impériale",
+      "Parce que l’île d’Elbe est devenue anglaise"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de ce qui s’est passé en mars 1815.",
+     "explication": "Napoléon s’est évadé de l’Elbe : les vainqueurs l’envoient donc **au bout de l’Atlantique**, pour qu’il ne puisse plus revenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd5d3945-5a86-5161-a6bb-d720b0ef7ba9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le jour où 9 millions d’hommes votent",
+   "competence": "lire-graphique",
+   "situation": "En mars 1848, le gouvernement provisoire de la Deuxième République instaure le suffrage universel masculin. Yanis compare le nombre d’électeurs avant et après cette mesure.",
+   "documents": [
+    {
+     "id": "electeurs",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le nombre d’électeurs en France",
+     "source": "Chiffres arrondis du cours.",
+     "categories": [
+      "Avant 1848",
+      "Après mars 1848"
+     ],
+     "series": [
+      {
+       "nom": "Électeurs",
+       "valeurs": [
+        0.25,
+        9
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Électeurs",
+      "unite": "en millions",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Période"
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "electeurs",
+     "enonce": "Touche la barre qui correspond au suffrage universel masculin.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "C’est la barre la plus haute.",
+     "explication": "Après mars 1848, tous les hommes de 21 ans et plus votent : **9 millions d’électeurs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois y a-t-il plus d’électeurs après mars 1848 qu’avant ? (9 millions divisés par 250 000)",
+     "reponse": 36,
+     "unite": "fois",
+     "aide": "Convertis 9 millions en 9 000 000 avant de diviser.",
+     "explication": "9 000 000 ÷ 250 000 = **36** : il y a 36 fois plus d’électeurs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la conséquence principale de cette mesure ?",
+     "options": [
+      "Tous les hommes de 21 ans et plus peuvent voter",
+      "Les femmes obtiennent le droit de vote",
+      "Seuls les plus riches gardent le droit de vote",
+      "Le roi choisit lui-même tous les députés"
+     ],
+     "reponse": 0,
+     "aide": "Relis le titre : « suffrage universel masculin ».",
+     "explication": "Le suffrage universel **masculin** donne le vote à tous les hommes de 21 ans et plus ; les femmes en restent exclues."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd5d3945-5a86-5161-a6bb-d720b0ef7ba9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Rails et libertés sous Napoléon III",
+   "competence": "analyser-document",
+   "situation": "Sous le Second Empire, le pouvoir est autoritaire mais l’économie change vite. Nadia met en regard les repères politiques et la croissance du chemin de fer.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1848 à 1870",
+     "source": "Repères du cours.",
+     "debut": 1845,
+     "fin": 1875,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "rep2",
+       "debut": 1848,
+       "fin": 1852,
+       "nom": "IIe République",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "emp2",
+       "debut": 1852,
+       "fin": 1870,
+       "nom": "Second Empire",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "esclavage",
+       "date": 1848,
+       "nom": "Esclavage aboli"
+      },
+      {
+       "id": "coup",
+       "date": 1851,
+       "nom": "Coup d’État"
+      },
+      {
+       "id": "greve",
+       "date": 1864,
+       "nom": "Droit de grève"
+      },
+      {
+       "id": "sedan",
+       "date": 1870,
+       "nom": "Sedan"
+      }
+     ]
+    },
+    {
+     "id": "rails",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le réseau de chemin de fer français",
+     "source": "Ordres de grandeur du cours.",
+     "categories": [
+      "1851",
+      "1870"
+     ],
+     "series": [
+      {
+       "nom": "Longueur du réseau",
+       "valeurs": [
+        3000,
+        17000
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Longueur",
+      "unite": "en km",
+      "min": 0,
+      "max": 18000,
+      "pas": 3000
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin à la Deuxième République.",
+     "reponse": [
+      "coup"
+     ],
+     "aide": "Il a lieu le 2 décembre 1851.",
+     "explication": "Le **coup d’État** du 2 décembre 1851 met fin à la République ; Louis-Napoléon devient Napoléon III un an plus tard."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui reconnaît le droit de grève aux ouvriers.",
+     "reponse": [
+      "greve"
+     ],
+     "aide": "Il date de 1864, sous le Second Empire.",
+     "explication": "La loi Ollivier de **1864** reconnaît le droit de grève : le régime se libéralise dans les années 1860."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le réseau ferré est environ combien de fois plus long en 1870 qu’en 1851 ? Arrondis au dixième.",
+     "reponse": 5.7,
+     "unite": "fois",
+     "aide": "Divise 17 000 par 3 000.",
+     "explication": "17 000 ÷ 3 000 ≈ **5,7** : le réseau a été multiplié par près de six en dix-neuf ans.",
+     "tolerance": 0.05
+    },
+    {
+     "type": "choix",
+     "enonce": "Pendant quel régime le réseau ferré progresse-t-il presque entièrement, de 3 000 à 17 000 km ?",
+     "options": [
+      "Le Second Empire",
+      "La Deuxième République",
+      "La monarchie de Juillet",
+      "La Troisième République"
+     ],
+     "reponse": 0,
+     "aide": "Compare les années 1851 et 1870 avec les périodes de la frise.",
+     "explication": "De 1851 à 1870, la France est presque entièrement sous le **Second Empire** (1852-1870) : c’est le régime de l’industrialisation."
+    }
+   ]
+  },
+  {
+   "chapitre": "fd5d3945-5a86-5161-a6bb-d720b0ef7ba9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Juin 1848 : la lettre d’Élise",
+   "competence": "analyser-texte",
+   "situation": "En juin 1848, Élise, ouvrière parisienne imaginaire, écrit à sa cousine restée en province. Elle raconte la fermeture des ateliers nationaux. Un tableau du cours rappelle les mesures prises par la République au printemps.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’Élise, Paris, juin 1848",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Chère cousine, mon frère Jules travaillait aux [[a|ateliers]] [[a|nationaux]] depuis le printemps. L’Assemblée vient de les fermer. On lui avait promis du travail et on lui reprend son pain.",
+      "Dans le faubourg, on a élevé des barricades. La troupe du général Cavaignac tire sur la foule. Pourtant, en mars, nous étions fiers : tous les hommes avaient reçu le droit de vote."
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Les mesures de 1848",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Mesure",
+      "Date",
+      "Portée"
+     ],
+     "lignes": [
+      [
+       "Ateliers nationaux",
+       "février 1848",
+       "Travail pour les chômeurs parisiens"
+      ],
+      [
+       "Suffrage universel masculin",
+       "mars 1848",
+       "9 millions d’électeurs"
+      ],
+      [
+       "Abolition de l’esclavage",
+       "27 avril 1848",
+       "Décret porté par Victor Schœlcher"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche les deux mots qui nomment l’institution dont la fermeture déclenche la colère de Jules.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Ils sont dans la première phrase.",
+     "explication": "Ce sont les **ateliers nationaux**, créés pour donner du travail aux chômeurs parisiens ; leur fermeture provoque les journées de juin 1848.",
+     "multiple": true
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche la case qui dit qui porte le décret d’abolition de l’esclavage.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la troisième ligne du tableau.",
+     "explication": "Le décret du 27 avril 1848 est porté par **Victor Schœlcher**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements de 1848 dans l’ordre chronologique.",
+     "items": [
+      "Création des ateliers nationaux",
+      "Suffrage universel masculin",
+      "Abolition de l’esclavage",
+      "Journées de juin",
+      "Élection de Louis-Napoléon Bonaparte"
+     ],
+     "aide": "Le tableau donne les trois premières dates ; la lettre parle de juin.",
+     "explication": "Février (ateliers), mars (suffrage), avril (abolition), **juin** (journées de juin), **décembre** (élection de Louis-Napoléon Bonaparte)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre juin 1848 de la Deuxième République ?",
+     "options": [
+      "La démocratie politique ne règle pas la question sociale",
+      "Le monde ouvrier soutient entièrement l’Assemblée",
+      "Les ateliers nationaux sont désormais élargis",
+      "Le suffrage universel est aussitôt supprimé"
+     ],
+     "reponse": 0,
+     "aide": "Pense au contraste entre la fierté de mars et la colère de juin.",
+     "explication": "Le vote est universel, mais les ouvriers perdent leur travail : la République se coupe du monde ouvrier. La démocratie **ne règle pas la question sociale**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f1d3ac1-d1f2-5605-87fa-b068bf945b39",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix-neuf ans loin de France",
+   "competence": "se-reperer-temps",
+   "situation": "Victor Hugo a vécu en exil sous le Second Empire. Sofia place les grandes dates de sa vie sur une frise pour savoir combien de temps il est resté loin de France.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Victor Hugo, de 1851 à 1885",
+     "source": "Repères du cours.",
+     "debut": 1845,
+     "fin": 1890,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "exil",
+       "debut": 1851,
+       "fin": 1870,
+       "nom": "Exil",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "coup",
+       "date": 1851,
+       "nom": "Coup d’État"
+      },
+      {
+       "id": "miserables",
+       "date": 1862,
+       "nom": "Les Misérables"
+      },
+      {
+       "id": "retour",
+       "date": 1870,
+       "nom": "Retour à Paris"
+      },
+      {
+       "id": "mort",
+       "date": 1885,
+       "nom": "Funérailles nationales"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période où Victor Hugo vit en exil.",
+     "reponse": [
+      "exil"
+     ],
+     "aide": "Elle commence après le coup d’État de 1851.",
+     "explication": "Hugo s’exile après le coup d’État de décembre 1851 et ne rentre qu’en **1870**."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’année où paraît son roman sur la misère sociale.",
+     "reponse": [
+      "miserables"
+     ],
+     "aide": "Le titre de ce roman parle de ceux qui souffrent.",
+     "explication": "*Les Misérables* paraissent en **1862**, pendant l’exil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le coup d’État de 1851 du retour à Paris en 1870 ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1870 − 1851 = **19 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelles circonstances Hugo rentre-t-il à Paris, le 5 septembre 1870 ?",
+     "options": [
+      "Au lendemain de la proclamation de la République",
+      "Après avoir accepté l’amnistie de Napoléon III",
+      "Juste avant le coup d’État de Louis-Napoléon",
+      "Après avoir été élu sénateur de l’Empire"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de ce qui se passe à Paris le 4 septembre 1870.",
+     "explication": "Le 4 septembre 1870, la **République est proclamée** ; Hugo rentre le lendemain, acclamé par la foule."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f1d3ac1-d1f2-5605-87fa-b068bf945b39",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les discours d’un député qui change de camp",
+   "competence": "analyser-document",
+   "situation": "Député en 1848, Hugo siège d’abord avec les conservateurs. Mais en deux ans, ses discours le rapprochent de la République démocratique et sociale. Rayan lit le tableau de ses grandes prises de parole.",
+   "documents": [
+    {
+     "id": "discours",
+     "type": "tableau",
+     "titre": "Les grands discours de Victor Hugo",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Discours",
+      "Date",
+      "Idée défendue"
+     ],
+     "lignes": [
+      [
+       "Sur la misère",
+       "juillet 1849",
+       "Détruire la misère est un devoir du législateur"
+      ],
+      [
+       "Contre la loi Falloux",
+       "janvier 1850",
+       "L’école laïque contre l’influence de l’Église"
+      ],
+      [
+       "Contre la restriction du suffrage universel",
+       "mai 1850",
+       "La loi du 31 mai retire le vote à environ 3 millions d’hommes"
+      ],
+      [
+       "Contre la révision de la Constitution",
+       "juillet 1851",
+       "Dénonce l’ambition de « Napoléon le Petit »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "discours",
+     "enonce": "Touche la date du discours où Hugo défend l’école laïque.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la loi Falloux dans la colonne « Discours ».",
+     "explication": "Hugo parle contre la loi Falloux en **janvier 1850**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent son discours sur la misère de son discours contre la révision de la Constitution ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Compare juillet 1849 et juillet 1851.",
+     "explication": "De juillet 1849 à juillet 1851 : **2 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque attitude : elle date de 1848 ou des années 1849-1851 ?",
+     "categories": [
+      "1848 : le camp de l’ordre",
+      "1849-1851 : le camp de la République"
+     ],
+     "items": [
+      [
+       "Il est élu avec les voix du parti de l’Ordre",
+       0
+      ],
+      [
+       "Il soutient la candidature de Louis-Napoléon Bonaparte",
+       0
+      ],
+      [
+       "Il défend le suffrage universel",
+       1
+      ],
+      [
+       "Il dénonce « Napoléon le Petit »",
+       1
+      ]
+     ],
+     "aide": "Le tableau donne les attitudes de 1849-1851 ; le reste date de 1848.",
+     "explication": "En **1848**, Hugo est élu avec le parti de l’Ordre et soutient Louis-Napoléon ; de **1849 à 1851**, il défend le suffrage universel et dénonce « Napoléon le Petit »."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f1d3ac1-d1f2-5605-87fa-b068bf945b39",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sur les îles de l’exil",
+   "competence": "se-reperer-espace",
+   "situation": "Après le coup d’État, Hugo fuit Paris. Maël retrace ses refuges successifs sur une carte de la Manche et dans un tableau, pour comprendre pourquoi il reste « exilé volontaire » en 1859.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les îles Anglo-Normandes",
+     "source": "Carte réalisée pour l’exercice.",
+     "fond": "france",
+     "cadrage": [
+      -4,
+      48,
+      1,
+      51
+     ],
+     "lieux": [
+      {
+       "id": "cherbourg",
+       "lieu": "cherbourg",
+       "symbole": "point",
+       "nom": "Cherbourg"
+      },
+      {
+       "id": "saint-malo",
+       "lieu": "saint-malo",
+       "symbole": "point",
+       "nom": "Saint-Malo"
+      },
+      {
+       "id": "jersey",
+       "lon": -2.13,
+       "lat": 49.21,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "guernesey",
+       "lon": -2.58,
+       "lat": 49.46,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "exil",
+     "type": "tableau",
+     "titre": "Les étapes de l’exil",
+     "source": "Repères du cours.",
+     "colonnes": [
+      "Date",
+      "Lieu",
+      "Fait"
+     ],
+     "lignes": [
+      [
+       "décembre 1851",
+       "Bruxelles",
+       "Hugo fuit après le coup d’État"
+      ],
+      [
+       "1852",
+       "Jersey",
+       "Il s’y installe et écrit contre Napoléon III"
+      ],
+      [
+       "1855",
+       "Guernesey",
+       "Il s’établit à Hauteville House"
+      ],
+      [
+       "1859",
+       "France",
+       "Il refuse l’amnistie de Napoléon III"
+      ],
+      [
+       "5 septembre 1870",
+       "Paris",
+       "Il rentre, acclamé par la foule"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Hugo vit le plus longtemps sur Guernesey, île la plus au nord-ouest des deux. Touche sa lettre.",
+     "reponse": [
+      "guernesey"
+     ],
+     "aide": "Compare la position des deux îles par rapport au Cotentin (Cherbourg).",
+     "explication": "Guernesey est la lettre **B** : Hugo y vit à Hauteville House à partir de 1855."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Il s’installe d’abord en 1852 sur l’autre île, plus proche des côtes françaises. Touche sa lettre.",
+     "reponse": [
+      "jersey"
+     ],
+     "aide": "C’est l’île qui est la plus proche de la Bretagne et de la Normandie.",
+     "explication": "Jersey est la lettre **A** : Hugo y reste de 1852 à 1855."
+    },
+    {
+     "type": "zone",
+     "document": "exil",
+     "enonce": "Touche l’année où Hugo refuse l’amnistie.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Lis la colonne « Fait » : cherche le mot « amnistie ».",
+     "explication": "Il refuse l’amnistie en **1859** : « exilé volontaire », il attend le retour de la liberté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Hugo reste-t-il hors de France, entre sa fuite de 1851 et son retour de 1870 ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais l’année de la fuite de l’année du retour.",
+     "explication": "1870 − 1851 = **19 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Hugo refuse-t-il l’amnistie de 1859 ?",
+     "options": [
+      "Il ne veut pas rentrer tant que la liberté n’est pas revenue",
+      "Il se plaît beaucoup à Jersey et à Guernesey",
+      "Il soutient désormais le régime de Napoléon III",
+      "Il craint que ses livres ne soient interdits partout"
+     ],
+     "reponse": 0,
+     "aide": "Pense à son combat contre le Second Empire.",
+     "explication": "Hugo reste fidèle à son combat : il ne rentrera que quand la **liberté** sera revenue en France. Il devient un exilé volontaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7b26f5d-53a0-5a04-a7a7-d8a6a2786247",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que fabrique le Creusot",
+   "competence": "lire-tableau",
+   "situation": "Fabien visite le musée du Creusot, en Saône-et-Loire. Un panneau résume ce que les forges Schneider produisent au milieu du XIXe siècle. Il le lit pour comprendre pourquoi cette usine est si importante.",
+   "documents": [
+    {
+     "id": "prod",
+     "type": "tableau",
+     "titre": "Les productions du Creusot",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Production",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Sidérurgie",
+       "Fonte, fer puis acier ; hauts fourneaux, grande forge"
+      ],
+      [
+       "Transports",
+       "Locomotives, rails, ponts métalliques"
+      ],
+      [
+       "Navires",
+       "Coques et machines pour bateaux à vapeur"
+      ],
+      [
+       "Armement",
+       "Canons, surtout après 1870"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "fiche",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un site près des mines",
+     "source": "Texte rédigé pour l’exercice, d’après le cours.",
+     "blocs": [
+      "En 1836, les frères Adolphe et Eugène Schneider rachètent les forges et fonderies du Creusot. Le site se trouve près de gisements de charbon et de minerai de fer, deux matières premières de l’industrie."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "prod",
+     "enonce": "Touche la case qui nomme les productions utiles au chemin de fer.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Pense à ce qui roule sur les rails.",
+     "explication": "Les **locomotives, rails et ponts métalliques** servent au chemin de fer."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle année les frères Schneider rachètent-ils les forges du Creusot ?",
+     "reponse": 1836,
+     "aide": "Cherche l’année dans le texte.",
+     "explication": "Les frères Schneider rachètent le Creusot en **1836**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi installer des forges près de gisements de charbon et de minerai de fer ?",
+     "options": [
+      "Parce que ce sont les matières premières de la sidérurgie",
+      "Parce que le charbon sert à cultiver les terres voisines",
+      "Parce que les mines remplacent les écoles de la ville",
+      "Parce que le minerai se transforme en habitations neuves"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la fonte, au fer et à l’acier.",
+     "explication": "Le charbon et le minerai de fer sont les **matières premières** de la sidérurgie : les forges s’installent au plus près."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7b26f5d-53a0-5a04-a7a7-d8a6a2786247",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une ville qui appartient à l’usine",
+   "competence": "observer-schema",
+   "situation": "Au Creusot, le patron construit la ville autour de l’usine. Nolwenn étudie une carte de la Bourgogne, puis un schéma simplifié de cette « ville-usine » pour comprendre le paternalisme.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le Creusot et ses voisines",
+     "source": "Carte réalisée pour l’exercice.",
+     "fond": "france",
+     "cadrage": [
+      2.3,
+      45.4,
+      6.4,
+      48.1
+     ],
+     "lieux": [
+      {
+       "id": "dijon",
+       "lieu": "dijon",
+       "symbole": "point",
+       "nom": "Dijon"
+      },
+      {
+       "id": "lyon",
+       "lieu": "lyon",
+       "symbole": "point",
+       "nom": "Lyon"
+      },
+      {
+       "id": "creusot",
+       "lon": 4.42,
+       "lat": 46.8,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "chalon",
+       "lon": 4.85,
+       "lat": 46.78,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "La ville-usine du Creusot (schéma simplifié)",
+     "source": "Schéma réalisé pour l’exercice.",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 15,
+       "l": 85,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Écoles",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "ecoles",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 118,
+       "y": 15,
+       "l": 85,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Hôpital",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "hopital",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 216,
+       "y": 15,
+       "l": 85,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Église",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "eglise",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 95,
+       "l": 180,
+       "h": 50,
+       "arrondi": 6,
+       "texte": "Usine et forges",
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "usine",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 180,
+       "l": 130,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Cités ouvrières",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "cites",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 170,
+       "y": 180,
+       "l": 130,
+       "h": 40,
+       "arrondi": 6,
+       "texte": "Gare et canal",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "gare",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        95
+       ],
+       "a": [
+        160,
+        55
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        95
+       ],
+       "a": [
+        62,
+        55
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        95
+       ],
+       "a": [
+        258,
+        55
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        145
+       ],
+       "a": [
+        85,
+        180
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        145
+       ],
+       "a": [
+        235,
+        180
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 235,
+       "texte": "Le patron contrôle l’usine et la ville",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Les Schneider construisent des navires sur la Saône. Touche la lettre de Chalon-sur-Saône, à l’est du Creusot.",
+     "reponse": [
+      "chalon"
+     ],
+     "aide": "Chalon est plus proche de la Saône que du Creusot.",
+     "explication": "Chalon-sur-Saône est la lettre **B** : les chantiers navals y sont reliés au Creusot par le canal du Centre et le chemin de fer."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche le lieu où l’on forme les futurs ouvriers et contremaîtres.",
+     "reponse": [
+      "ecoles"
+     ],
+     "aide": "Pense au mot « instruire ».",
+     "explication": "Ce sont les **écoles** que le patron fait construire pour former ses futurs ouvriers et contremaîtres."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche l’endroit où les ouvriers et leurs familles sont logés.",
+     "reponse": [
+      "cites"
+     ],
+     "aide": "Le mot « ouvrières » se trouve dans son nom.",
+     "explication": "Les **cités ouvrières** sont les logements construits par le patron près de l’usine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment appelle-t-on ce système où le patron encadre la vie des ouvriers (logement, école, santé) ?",
+     "options": [
+      "Le paternalisme",
+      "Le syndicalisme",
+      "Le libre-échange",
+      "Le plébiscite"
+     ],
+     "reponse": 0,
+     "aide": "Le mot rappelle l’autorité d’un père.",
+     "explication": "C’est le **paternalisme** : les avantages attachent les ouvriers à l’entreprise, mais les placent sous la surveillance du patron."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7b26f5d-53a0-5a04-a7a7-d8a6a2786247",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au Creusot, les grèves de 1870",
+   "competence": "analyser-document",
+   "situation": "En mars 1870, des grèves éclatent au Creusot. Marius, ouvrier imaginaire, tient un journal. Un graphique du cours et son récit montrent ce que l’usine donne… et ce qu’elle demande.",
+   "documents": [
+    {
+     "id": "effectifs",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les ouvriers du Creusot",
+     "source": "Ordres de grandeur du cours : environ 3 000 vers 1850, plus de 10 000 vers 1870.",
+     "categories": [
+      "Vers 1850",
+      "Vers 1870"
+     ],
+     "series": [
+      {
+       "nom": "Ouvriers",
+       "valeurs": [
+        3000,
+        10000
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Ouvriers",
+      "unite": "nombre",
+      "min": 0,
+      "max": 12000,
+      "pas": 2000
+     },
+     "axeX": {
+      "titre": "Période"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Journal de Marius, mars 1870",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Je suis arrivé du village voisin il y a dix ans. Le patron nous a logés dans la cité, nos enfants vont à son école et nous avons l’hôpital.",
+      "Mais il surveille tout, même notre vie privée, et les journées sont longues. Depuis la loi de 1864, nous pouvons faire [[g|grève]]. Nous la faisons au sujet de la caisse de secours, que le patron gère seul."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le mot qui désigne l’arrêt collectif du travail que la loi de 1864 autorise.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Il est dans la dernière phrase.",
+     "explication": "La **grève** est autorisée depuis la loi de 1864 ; les grandes grèves du Creusot montrent la montée d’une conscience ouvrière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de fois plus d’ouvriers y a-t-il environ vers 1870 que vers 1850 ?",
+     "options": [
+      "Environ 3 fois plus",
+      "Environ 2 fois plus",
+      "Environ 6 fois plus",
+      "Environ 10 fois plus"
+     ],
+     "reponse": 0,
+     "aide": "Compare la hauteur des deux barres.",
+     "explication": "On passe d’environ 3 000 à plus de 10 000 ouvriers : le nombre est **à peu près triplé**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années le droit de grève existe-t-il au moment de la grève de 1870 ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais 1864 de 1870.",
+     "explication": "1870 − 1864 = **6 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait de la vie au Creusot : avantage ou contrainte ?",
+     "categories": [
+      "Un avantage offert",
+      "Une contrainte subie"
+     ],
+     "items": [
+      [
+       "Le logement dans la cité",
+       0
+      ],
+      [
+       "L’école pour les enfants",
+       0
+      ],
+      [
+       "La surveillance de la vie privée",
+       1
+      ],
+      [
+       "Une caisse de secours gérée par le patron seul",
+       1
+      ]
+     ],
+     "aide": "Le journal oppose ce qu’on reçoit et ce qu’on supporte.",
+     "explication": "Logement, école et hôpital sont des **avantages** ; la surveillance du patron et sa mainmise sur la caisse de secours sont des **contraintes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c96db71c-2e30-5b4c-94d1-bab4011ba25c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une République qui s’installe",
+   "competence": "se-reperer-temps",
+   "situation": "Yasmine prépare un exposé sur la Troisième République. Elle place cinq repères sur une frise pour montrer comment le régime s’installe, de 1870 à la veille de la Première Guerre mondiale.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Troisième République avant 1914",
+     "source": "Repères du cours.",
+     "debut": 1870,
+     "fin": 1910,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "iii",
+       "debut": 1870,
+       "fin": 1910,
+       "nom": "Troisième République",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "rep",
+       "date": 1870,
+       "nom": "La République"
+      },
+      {
+       "id": "lois",
+       "date": 1875,
+       "nom": "Lois de 1875"
+      },
+      {
+       "id": "ferry",
+       "date": 1881,
+       "nom": "Lois Ferry"
+      },
+      {
+       "id": "dreyfus",
+       "date": 1894,
+       "nom": "Affaire Dreyfus"
+      },
+      {
+       "id": "sep",
+       "date": 1905,
+       "nom": "Séparation"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui rend l’école primaire gratuite, laïque et obligatoire.",
+     "reponse": [
+      "ferry"
+     ],
+     "aide": "Cherche le nom d’un ministre de l’Instruction publique.",
+     "explication": "Les **lois Jules Ferry** (1881-1882) rendent l’école primaire gratuite, laïque et obligatoire."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui sépare les Églises et l’État.",
+     "reponse": [
+      "sep"
+     ],
+     "aide": "Il date de 1905.",
+     "explication": "La loi du 9 décembre **1905** sépare les Églises et l’État : c’est la loi de laïcité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la proclamation de la République des lois Jules Ferry sur l’école ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise : 1870 et 1881.",
+     "explication": "1881 − 1870 = **11 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que garantit la loi de 1905 aux citoyens ?",
+     "options": [
+      "La liberté de conscience et le libre exercice des cultes",
+      "L’interdiction de toutes les religions en France",
+      "Le financement de toutes les religions par l’État",
+      "La reconnaissance d’une seule religion officielle"
+     ],
+     "reponse": 0,
+     "aide": "La République ne reconnaît ni ne finance aucun culte.",
+     "explication": "La loi de 1905 garantit la **liberté de conscience** et le libre exercice des cultes ; l’État n’en reconnaît ni n’en finance aucun."
+    }
+   ]
+  },
+  {
+   "chapitre": "c96db71c-2e30-5b4c-94d1-bab4011ba25c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les grandes lois de la République",
+   "competence": "lire-tableau",
+   "situation": "Hugo, élève de première technologique, relit le tableau du projet républicain pour comprendre comment la République veut unir les Français autour des valeurs de 1789.",
+   "documents": [
+    {
+     "id": "projet",
+     "type": "tableau",
+     "titre": "Le projet républicain",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Domaine",
+      "Mesure",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Symboles",
+       "La Marseillaise hymne national, le 14 juillet fête nationale",
+       "1879-1880"
+      ],
+      [
+       "Libertés",
+       "Réunion et presse (1881), syndicats (1884), associations (1901)",
+       "1881-1901"
+      ],
+      [
+       "École",
+       "Lois Jules Ferry : école primaire gratuite, laïque et obligatoire (6-13 ans)",
+       "1881-1882"
+      ],
+      [
+       "Commune",
+       "Élection des maires par le conseil municipal",
+       "1882-1884"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "projet",
+     "enonce": "Touche la case qui indique la tranche d’âge de l’école obligatoire.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne « École ».",
+     "explication": "L’école est obligatoire de **6 à 13 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : les lois Jules Ferry rendent l’école primaire ___, laïque et ___.",
+     "texte": "Les lois Jules Ferry rendent l’école primaire ___, laïque et ___.",
+     "reponses": [
+      [
+       "gratuite"
+      ],
+      [
+       "obligatoire"
+      ]
+     ],
+     "banque": [
+      "gratuite",
+      "obligatoire",
+      "payante",
+      "facultative"
+     ],
+     "aide": "La troisième ligne du tableau donne les deux mots.",
+     "explication": "L’école primaire devient **gratuite**, laïque et **obligatoire**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mesure dans son domaine.",
+     "categories": [
+      "Symboles",
+      "Libertés",
+      "École"
+     ],
+     "items": [
+      [
+       "La Marseillaise",
+       0
+      ],
+      [
+       "Le 14 juillet",
+       0
+      ],
+      [
+       "La liberté de la presse",
+       1
+      ],
+      [
+       "La liberté syndicale",
+       1
+      ],
+      [
+       "L’école gratuite",
+       2
+      ],
+      [
+       "L’école obligatoire",
+       2
+      ]
+     ],
+     "aide": "Relis la colonne « Domaine » pour trouver chaque groupe.",
+     "explication": "*La Marseillaise* et le **14 juillet** sont des **symboles** ; presse et syndicats sont des **libertés** ; gratuité et obligation relèvent de l’**école**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c96db71c-2e30-5b4c-94d1-bab4011ba25c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi conquérir un empire ?",
+   "competence": "analyser-document",
+   "situation": "Dans les années 1880, la France s’étend en Afrique et en Asie. Lina étudie une carte de l’empire colonial français vers 1914 et un discours imaginaire d’un député qui défend la colonisation.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’empire colonial français vers 1914",
+     "source": "Carte réalisée pour l’exercice, frontières actuelles.",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      -30,
+      115,
+      40
+     ],
+     "regionsCliquables": true,
+     "regions": [
+      {
+       "code": "DZA",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "TUN",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "MAR",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "MRT",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "SEN",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "MLI",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "GIN",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "CIV",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "BFA",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "NER",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "BEN",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "TCD",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "GAB",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "COG",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "CAF",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "DJI",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "MDG",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "VNM",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "LAO",
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "code": "KHM",
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Territoire français vers 1914"
+      }
+     ]
+    },
+    {
+     "id": "discours",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un député défend la colonisation",
+     "source": "Discours imaginaire d’un député fictif, écrit pour l’exercice.",
+     "blocs": [
+      "Messieurs, nos usines produisent plus qu’elles ne vendent : les colonies leur offriront des débouchés.",
+      "Nos navires ont besoin de ports et de bases dans le monde, si nous voulons peser face aux autres puissances.",
+      "Enfin, certains ajoutent que la France aurait une prétendue « mission civilisatrice » à remplir."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche l’Algérie, conquise par la France à partir de 1830.",
+     "reponse": [
+      "DZA"
+     ],
+     "aide": "Elle est située au sud de la Méditerranée, entre la Tunisie et le Maroc.",
+     "explication": "L’**Algérie**, conquise depuis 1830, est découpée en départements français."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche l’île de l’océan Indien conquise en 1896.",
+     "reponse": [
+      "MDG"
+     ],
+     "aide": "Cherche la grande île à l’est de l’Afrique australe.",
+     "explication": "**Madagascar** devient colonie française en 1896."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois pays qui forment l’Indochine française.",
+     "reponse": [
+      "VNM",
+      "LAO",
+      "KHM"
+     ],
+     "aide": "Ils sont en Asie du Sud-Est, à l’est de la Thaïlande.",
+     "explication": "L’Indochine réunit le **Vietnam**, le **Laos** et le **Cambodge**.",
+     "multiple": true
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque argument du discours.",
+     "categories": [
+      "Argument économique",
+      "Argument politique",
+      "Prétendue mission civilisatrice"
+     ],
+     "items": [
+      [
+       "Trouver des débouchés pour les usines",
+       0
+      ],
+      [
+       "Disposer de ports et de bases dans le monde",
+       1
+      ],
+      [
+       "Apporter la civilisation aux peuples conquis",
+       2
+      ]
+     ],
+     "aide": "Chaque paragraphe du discours donne un argument.",
+     "explication": "Le premier paragraphe est **économique**, le deuxième **politique** (puissance), le troisième évoque la prétendue **mission civilisatrice**, que défendait Jules Ferry."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conférence de 1884-1885 organise le partage de l’Afrique entre puissances européennes ?",
+     "options": [
+      "La conférence de Berlin",
+      "Le congrès de Vienne",
+      "La conférence de Chantilly",
+      "Le traité de Versailles"
+     ],
+     "reponse": 0,
+     "aide": "Elle se tient dans la capitale de l’Allemagne.",
+     "explication": "La conférence de **Berlin** (1884-1885) règle les règles du partage de l’Afrique entre Européens."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8e7da51-8647-5454-b117-9dda8785f94a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les lois qui ouvrent l’école aux filles",
+   "competence": "lire-tableau",
+   "situation": "À la fin du XIXe siècle, la République veut instruire les filles. Camille, élève de première, lit un tableau des grandes lois qui construisent l’enseignement féminin.",
+   "documents": [
+    {
+     "id": "lois",
+     "type": "tableau",
+     "titre": "Les lois sur l’instruction des filles",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Loi",
+      "Date",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "Loi Camille Sée",
+       "21 décembre 1880",
+       "Crée l’enseignement secondaire public de jeunes filles"
+      ],
+      [
+       "École normale supérieure de Sèvres",
+       "1881",
+       "Forme les professeures des lycées de filles"
+      ],
+      [
+       "Lois Jules Ferry",
+       "1881-1882",
+       "École primaire gratuite, laïque et obligatoire de 6 à 13 ans"
+      ],
+      [
+       "Loi Goblet",
+       "1886",
+       "Laïcise le personnel des écoles publiques"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lois",
+     "enonce": "Touche la loi qui crée l’enseignement secondaire public de jeunes filles.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche le mot « secondaire » dans la colonne « Contenu ».",
+     "explication": "C’est la **loi Camille Sée** de 1880 : collèges et lycées publics de jeunes filles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Jusqu’à quel âge l’école primaire est-elle obligatoire, pour les filles comme pour les garçons ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Cherche les âges dans la ligne des lois Jules Ferry.",
+     "explication": "L’école primaire est obligatoire **de 6 à 13 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change la loi Goblet de 1886 dans les écoles publiques ?",
+     "options": [
+      "Elle laïcise le personnel enseignant",
+      "Elle crée un lycée par département",
+      "Elle rend l’école primaire gratuite",
+      "Elle supprime la formation des institutrices"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière ligne du tableau.",
+     "explication": "La loi Goblet **laïcise le personnel** des écoles publiques : les congrégations religieuses quittent l’enseignement public."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8e7da51-8647-5454-b117-9dda8785f94a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le journal de Jeanne, lycéenne en 1890",
+   "competence": "analyser-texte",
+   "situation": "Jeanne, lycéenne imaginaire, tient son journal en 1890. Son frère et elle ne suivent pas les mêmes études : il prépare le baccalauréat, elle prépare un diplôme de fin d’études.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Journal de Jeanne, 1890",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Cette année, au lycée de jeunes filles créé par la loi Camille Sée, nous avons des cours de couture et d’économie domestique, mais pas de latin ni de grec.",
+      "Mon frère prépare le [[b|baccalauréat]], qui ouvre l’université. À la fin de mes cinq années, j’aurai un diplôme de fin d’études, qui n’y mène pas."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le mot qui nomme l’examen que prépare le frère de Jeanne.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Il ouvre les portes de l’université.",
+     "explication": "Le **baccalauréat** ouvre l’université ; il faudra attendre 1924 pour que les programmes deviennent identiques pour les filles et les garçons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure le secondaire des jeunes filles, d’après le journal ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Relis la dernière phrase.",
+     "explication": "Le secondaire féminin dure **cinq ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il concerne Jeanne ou son frère ?",
+     "categories": [
+      "Le secondaire des filles",
+      "Le secondaire des garçons"
+     ],
+     "items": [
+      [
+       "Cours de couture et d’économie domestique",
+       0
+      ],
+      [
+       "Diplôme de fin d’études",
+       0
+      ],
+      [
+       "Latin et grec",
+       1
+      ],
+      [
+       "Baccalauréat",
+       1
+      ]
+     ],
+     "aide": "Le journal dit ce que les filles n’étudient pas.",
+     "explication": "Les filles étudient **couture et économie domestique** et reçoivent un **diplôme de fin d’études** ; les garçons étudient **latin et grec** et passent le **baccalauréat**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les républicains veulent-ils instruire les filles ?",
+     "options": [
+      "Pour les éloigner de l’influence de l’Église et former des mères républicaines",
+      "Pour qu’elles obtiennent aussitôt le droit de vote et la citoyenneté complète",
+      "Pour que les filles suivent les mêmes programmes que les garçons",
+      "Pour que toutes les écoles redeviennent confiées aux congrégations"
+     ],
+     "reponse": 0,
+     "aide": "Les républicains pensent aux futures mères de famille.",
+     "explication": "Pour les républicains, l’enjeu est politique : instruire les filles, c’est les arracher à l’**influence de l’Église** et former des **mères républicaines**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f8e7da51-8647-5454-b117-9dda8785f94a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Institutrice, un métier pour la République",
+   "competence": "analyser-document",
+   "situation": "Une jeune institutrice, imaginaire, écrit à une amie en 1900. Pour comprendre son quotidien, Élise place les grandes dates de l’instruction des filles sur une frise.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Instruire les filles, de 1861 à 1924",
+     "source": "Repères du cours.",
+     "debut": 1860,
+     "fin": 1930,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "daubie",
+       "date": 1861,
+       "nom": "Première bachelière"
+      },
+      {
+       "id": "see",
+       "date": 1880,
+       "nom": "Loi Camille Sée"
+      },
+      {
+       "id": "goblet",
+       "date": 1886,
+       "nom": "Loi Goblet"
+      },
+      {
+       "id": "programmes",
+       "date": 1924,
+       "nom": "Programmes identiques"
+      }
+     ]
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’une institutrice, 1900",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Chère amie, me voici dans mon village. Je suis la première à y enseigner la morale laïque, et le [[c|curé]] ne me salue plus.",
+      "Le maire et l’inspecteur surveillent ma classe. On m’a dit que mon salaire resterait inférieur à celui de mon collègue instituteur."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui date de 1861 : Julie-Victoire Daubié est la première à décrocher ce diplôme.",
+     "reponse": [
+      "daubie"
+     ],
+     "aide": "Cherche le mot « bachelière ».",
+     "explication": "Julie-Victoire Daubié est la **première bachelière** française, en 1861."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne l’homme face à qui l’institutrice incarne la République.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Il représente l’Église dans le village.",
+     "explication": "L’institutrice incarne la République face au **curé**, c’est-à-dire face à l’Église."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi Camille Sée de l’année où les programmes deviennent identiques ?",
+     "reponse": 44,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1924 − 1880 = **44 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces lois dans l’ordre chronologique.",
+     "items": [
+      "Loi Paul Bert : une école normale d’institutrices par département",
+      "Loi Camille Sée : secondaire public pour les filles",
+      "Lois Jules Ferry : école primaire obligatoire",
+      "Loi Goblet : personnel laïque"
+     ],
+     "aide": "Les années vont de 1879 à 1886.",
+     "explication": "Paul Bert (**1879**), Camille Sée (**1880**), Jules Ferry (**1881-1882**), Goblet (**1886**)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que l’école forme des mères républicaines et non des citoyennes ?",
+     "options": [
+      "Parce que les femmes n’ont pas le droit de vote",
+      "Parce que les filles quittent l’école avant six ans",
+      "Parce que le secondaire féminin est supprimé en 1924",
+      "Parce que les institutrices ne sont pas payées"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux droits politiques des femmes à cette époque.",
+     "explication": "Les filles sont instruites, mais **les femmes n’ont pas le droit de vote** : elles restent des épouses et mères républicaines, pas encore des citoyennes."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b9d6028-669e-5cae-bdc2-29d28c1de3da",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui sont les habitants d’Alger ?",
+   "competence": "lire-tableau",
+   "situation": "Vers 1906, Alger compte environ 150 000 habitants. Sami lit un tableau pour comprendre comment ils se répartissent et quels droits chacun possède.",
+   "documents": [
+    {
+     "id": "groupes",
+     "type": "tableau",
+     "titre": "Les habitants d’Alger vers 1906",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Groupe",
+      "Statut"
+     ],
+     "lignes": [
+      [
+       "Français d’origine",
+       "Citoyens français"
+      ],
+      [
+       "Européens naturalisés (loi de 1889)",
+       "Citoyens français"
+      ],
+      [
+       "Juifs d’Algérie (décret Crémieux, 1870)",
+       "Citoyens français"
+      ],
+      [
+       "« Indigènes » musulmans",
+       "Sujets français, code de l’indigénat, pas de droits politiques"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "groupes",
+     "enonce": "Touche le groupe qui est soumis au code de l’indigénat.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche le groupe qui n’a pas de droits politiques.",
+     "explication": "Les **« indigènes » musulmans** sont sujets français, sans droits politiques."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de groupes du tableau ont le statut de citoyens français ?",
+     "reponse": 3,
+     "aide": "Compte les lignes de la colonne « Statut » qui disent « citoyens ».",
+     "explication": "Trois groupes sont citoyens : **les Français d’origine, les Européens naturalisés et les Juifs d’Algérie**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel décret de 1870 donne la citoyenneté française aux Juifs d’Algérie ?",
+     "reponse": [
+      "Crémieux",
+      "décret Crémieux",
+      "le décret Crémieux"
+     ],
+     "aide": "Son nom est dans la troisième ligne du tableau.",
+     "explication": "Le décret **Crémieux** de 1870 donne la citoyenneté française aux Juifs d’Algérie."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b9d6028-669e-5cae-bdc2-29d28c1de3da",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan d’une ville coloniale",
+   "competence": "observer-schema",
+   "situation": "Sur la baie d’Alger, la ville s’étage sur une colline. Inès veut comprendre pourquoi l’on dit que la ville est « coupée en deux », et ce que révèlent les noms de ses rues.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Alger au début du XXe siècle (schéma simplifié)",
+     "source": "Schéma réalisé pour l’exercice.",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 190,
+       "l": 300,
+       "h": 55,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 225,
+       "texte": "Mer Méditerranée",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         95,
+         15
+        ],
+        [
+         225,
+         15
+        ],
+        [
+         270,
+         96
+        ],
+        [
+         50,
+         96
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "clair",
+       "id": "casbah",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 45,
+       "texte": "Casbah",
+       "taille": "normal",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 78,
+       "emoji": "🕌",
+       "taille": 24
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 108,
+       "l": 270,
+       "h": 52,
+       "arrondi": 6,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "ville",
+       "zone": true,
+       "texte": "Ville européenne"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        25,
+        166
+       ],
+       "a": [
+        295,
+        166
+       ],
+       "style": "pointilles",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 25,
+       "y": 182,
+       "texte": "Front de mer",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 170,
+       "l": 80,
+       "h": 16,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "port",
+       "zone": true,
+       "texte": "Port"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        188
+       ],
+       "a": [
+        160,
+        215
+       ],
+       "fleche": "fin",
+       "style": "pointilles",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 25,
+       "y": 236,
+       "texte": "Lignes régulières vers Marseille",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche la Casbah, la vieille ville ottomane.",
+     "reponse": [
+      "casbah"
+     ],
+     "aide": "Elle est située sur la hauteur, au-dessus de la ville basse.",
+     "explication": "La **Casbah** domine la ville : ruelles étroites, maisons blanches à terrasses, mosquées. Elle est surtout habitée par des Algériens musulmans."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche la ville européenne, avec ses boulevards à arcades, au bord de la mer.",
+     "reponse": [
+      "ville"
+     ],
+     "aide": "Elle est en contrebas, face à la mer.",
+     "explication": "La **ville européenne** s’étend en contrebas, le long de la mer, avec ses places et ses boulevards."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche l’endroit d’où partent les bateaux pour Marseille.",
+     "reponse": [
+      "port"
+     ],
+     "aide": "Regarde la flèche pointillée.",
+     "explication": "Le **port** est relié à Marseille par des lignes régulières ; il structure la ville basse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent les noms de rues et de places comme la rue d’Isly ou la place Bugeaud ?",
+     "options": [
+      "La domination française, avec des noms de victoires et de généraux",
+      "Le respect de l’histoire ottomane et des traditions locales",
+      "Le choix des habitants musulmans de la Casbah",
+      "La fin de la colonisation dans les villes d’Algérie"
+     ],
+     "reponse": 0,
+     "aide": "Isly est une bataille de 1844 ; Bugeaud, un général français.",
+     "explication": "La **toponymie** rappelle les victoires et les généraux français : elle marque l’espace urbain de la domination coloniale."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b9d6028-669e-5cae-bdc2-29d28c1de3da",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les Jeunes Algériens réclament l’égalité",
+   "competence": "analyser-document",
+   "situation": "En 1912, un jeune Algérois imaginaire, formé à l’école française, écrit à un ami installé à Marseille. Sa lettre et une carte de la Méditerranée montrent les liens de la colonie avec la métropole.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Alger et la Méditerranée occidentale",
+     "source": "Carte réalisée pour l’exercice.",
+     "fond": "mediterranee",
+     "cadrage": [
+      -8,
+      33,
+      12,
+      45
+     ],
+     "frontieres": true,
+     "lieux": [
+      {
+       "id": "alger",
+       "lieu": "alger",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "marseille",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "tunis",
+       "lieu": "tunis",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "rabat",
+       "lieu": "rabat",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un Jeune Algérien, 1912",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Cher ami, je suis né à Alger et j’ai fait mes études dans une école française. Pourtant je suis [[s|sujet]] et non citoyen, soumis au code de l’indigénat et privé de droits politiques.",
+      "Avec d’autres jeunes instruits comme moi, nous réclamons l’[[e|égalité]] des droits entre tous les habitants."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville de métropole reliée à Alger par des lignes maritimes régulières.",
+     "reponse": [
+      "marseille"
+     ],
+     "aide": "C’est un grand port du sud de la France.",
+     "explication": "**Marseille** est reliée à Alger par des lignes régulières : c’est le grand port de la métropole vers l’Algérie."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale de la Tunisie, entrée dans l’empire français en 1881.",
+     "reponse": [
+      "tunis"
+     ],
+     "aide": "Elle est à l’est de l’Algérie.",
+     "explication": "**Tunis** est la capitale de la Tunisie, sous domination française depuis 1881."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme le statut du jeune homme, qu’il refuse de conserver.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Il le compare à celui de « citoyen ».",
+     "explication": "Il est **sujet** français : il n’a pas de droits politiques et reste soumis au code de l’indigénat."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque groupe d’habitants d’Alger : citoyen ou sujet ?",
+     "categories": [
+      "Citoyen français",
+      "Sujet français"
+     ],
+     "items": [
+      [
+       "Les Français d’origine",
+       0
+      ],
+      [
+       "Les Européens naturalisés par la loi de 1889",
+       0
+      ],
+      [
+       "Les Juifs d’Algérie, depuis le décret Crémieux",
+       0
+      ],
+      [
+       "Les « indigènes » musulmans",
+       1
+      ]
+     ],
+     "aide": "Un seul groupe n’a pas de droits politiques.",
+     "explication": "Les **Européens, naturalisés ou non, et les Juifs d’Algérie** sont citoyens ; les **« indigènes » musulmans** sont sujets."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment appelle-t-on, avant 1914, cette petite élite algérienne instruite en français qui réclame l’égalité des droits ?",
+     "reponse": [
+      "Jeunes Algériens",
+      "les Jeunes Algériens"
+     ],
+     "aide": "Le titre de la lettre donne la réponse.",
+     "explication": "Ce sont les **Jeunes Algériens** : ils demandent l’égalité des droits."
+    }
+   ]
+  },
+  {
+   "chapitre": "745991fb-adf6-5ec4-bda5-c4091b8ba3af",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre ans de guerre sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Pour l’anniversaire de l’armistice, la classe de Karim prépare une frise murale. Il doit y placer les repères essentiels de la Première Guerre mondiale, de l’attentat de Sarajevo au traité de Versailles.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1914 à 1919",
+     "source": "Repères du cours.",
+     "debut": 1914,
+     "fin": 1920,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "guerre",
+       "debut": 1914,
+       "fin": 1918,
+       "nom": "La guerre",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "sarajevo",
+       "date": 1914,
+       "nom": "Sarajevo"
+      },
+      {
+       "id": "verdun",
+       "date": 1916,
+       "nom": "Verdun"
+      },
+      {
+       "id": "armistice",
+       "date": 1918,
+       "nom": "Armistice"
+      },
+      {
+       "id": "versailles",
+       "date": 1919,
+       "nom": "Versailles"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin aux combats.",
+     "reponse": [
+      "armistice"
+     ],
+     "aide": "Il est signé le 11 novembre 1918.",
+     "explication": "L’**armistice** du 11 novembre 1918 met fin aux combats."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui déclenche la crise de l’été 1914 : l’assassinat de l’archiduc François-Ferdinand.",
+     "reponse": [
+      "sarajevo"
+     ],
+     "aide": "Cherche le nom de la ville bosniaque.",
+     "explication": "L’attentat de **Sarajevo** (28 juin 1914) déclenche l’engrenage des alliances."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’attentat de Sarajevo de l’armistice ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1918 − 1914 = **4 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel traité de 1919 est imposé à l’Allemagne vaincue ?",
+     "options": [
+      "Le traité de Versailles",
+      "Le traité de Sèvres",
+      "Le traité de Trianon",
+      "Le traité de Brest-Litovsk"
+     ],
+     "reponse": 0,
+     "aide": "Le nom de ce traité figure sur la frise.",
+     "explication": "Le traité de **Versailles** est signé le 28 juin 1919 ; les Allemands le vivent comme un « diktat »."
+    }
+   ]
+  },
+  {
+   "chapitre": "745991fb-adf6-5ec4-bda5-c4091b8ba3af",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans les tranchées, l’hiver 1915",
+   "competence": "analyser-texte",
+   "situation": "Hiver 1915. Un soldat français imaginaire écrit à sa famille depuis le front de l’Ouest. Son récit et le tableau des alliances montrent ce qu’est la guerre de position.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un soldat, décembre 1915",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Chers parents, nous vivons dans les [[t|tranchées]] depuis des mois, dans la boue, face à l’ennemi. Le front ne bouge presque plus : on creuse, on attend, on se bat pour quelques mètres.",
+      "Les journaux disent que l’Italie nous a rejoints cet été. J’espère que cela hâtera la fin de la guerre."
+     ]
+    },
+    {
+     "id": "camps",
+     "type": "tableau",
+     "titre": "Les deux camps en 1914-1918",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Camp",
+      "Pays principaux"
+     ],
+     "lignes": [
+      [
+       "Triple-Entente (Alliés)",
+       "France, Royaume-Uni, Russie, puis Italie (1915), États-Unis (1917)"
+      ],
+      [
+       "Puissances centrales",
+       "Allemagne, Autriche-Hongrie, Empire ottoman (1914), Bulgarie (1915)"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme les ouvrages creusés par les soldats pour se protéger.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "Le soldat dit qu’il y vit « dans la boue ».",
+     "explication": "Les **tranchées** se creusent de la mer du Nord à la Suisse : c’est la guerre de position (1915-1917)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En quelle année l’Italie rejoint-elle l’Entente ?",
+     "reponse": 1915,
+     "aide": "La ligne « Triple-Entente » du tableau donne l’année.",
+     "explication": "L’Italie entre en guerre aux côtés des Alliés en **1915**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces pays dans leur camp.",
+     "categories": [
+      "Triple-Entente",
+      "Puissances centrales"
+     ],
+     "items": [
+      [
+       "France",
+       0
+      ],
+      [
+       "Russie",
+       0
+      ],
+      [
+       "Allemagne",
+       1
+      ],
+      [
+       "Empire ottoman",
+       1
+      ]
+     ],
+     "aide": "Relis chaque ligne du tableau.",
+     "explication": "**France** et **Russie** appartiennent à l’Entente ; **Allemagne** et **Empire ottoman** aux puissances centrales."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces moments de la guerre dans l’ordre chronologique.",
+     "items": [
+      "Attentat de Sarajevo",
+      "Bataille de la Marne",
+      "Batailles de Verdun et de la Somme",
+      "Entrée en guerre des États-Unis",
+      "Armistice"
+     ],
+     "aide": "Pense à 1914, 1916, 1917, 1918.",
+     "explication": "Sarajevo (**juin 1914**), Marne (**septembre 1914**), Verdun et Somme (**1916**), États-Unis (**avril 1917**), armistice (**11 novembre 1918**)."
+    }
+   ]
+  },
+  {
+   "chapitre": "745991fb-adf6-5ec4-bda5-c4091b8ba3af",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une paix difficile",
+   "competence": "analyser-document",
+   "situation": "En 1919-1920, la conférence de la paix fixe le sort des vaincus. Alice étudie le tableau des traités et un texte sur l’une des plus grandes tragédies de la guerre : le génocide des Arméniens.",
+   "documents": [
+    {
+     "id": "traites",
+     "type": "tableau",
+     "titre": "Les traités de paix",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Traité",
+      "Date",
+      "Pays vaincu"
+     ],
+     "lignes": [
+      [
+       "Versailles",
+       "28 juin 1919",
+       "Allemagne"
+      ],
+      [
+       "Saint-Germain-en-Laye",
+       "10 septembre 1919",
+       "Autriche"
+      ],
+      [
+       "Trianon",
+       "4 juin 1920",
+       "Hongrie"
+      ],
+      [
+       "Sèvres",
+       "10 août 1920",
+       "Empire ottoman"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "genocide",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le génocide des Arméniens",
+     "source": "Texte rédigé pour l’exercice, d’après le cours.",
+     "blocs": [
+      "Un génocide est l’extermination organisée d’un peuple parce qu’il est ce peuple.",
+      "En 1915-1916, le gouvernement jeune-turc de l’Empire ottoman organise des massacres et des déportations : environ 1,2 million d’Arméniens meurent, soit les deux tiers des Arméniens de l’empire."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "traites",
+     "enonce": "Touche le traité qui est imposé à l’Allemagne.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche l’Allemagne dans la colonne « Pays vaincu ».",
+     "explication": "Le traité de **Versailles** (28 juin 1919) est imposé à l’Allemagne."
+    },
+    {
+     "type": "zone",
+     "document": "traites",
+     "enonce": "Touche le pays vaincu qui voit disparaître son empire multinational, signataire de Sèvres.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Sèvres est la dernière ligne.",
+     "explication": "L’**Empire ottoman** signe le traité de Sèvres ; il fait partie des quatre empires qui disparaissent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "1,2 million de morts représentent les deux tiers des Arméniens de l’empire. Combien d’Arméniens vivaient dans l’empire, en millions ?",
+     "reponse": 1.8,
+     "unite": "millions",
+     "aide": "Si deux tiers valent 1,2 million, un tiers vaut 0,6 million.",
+     "explication": "Un tiers = 1,2 ÷ 2 = 0,6 million ; le tout vaut 3 × 0,6 = **1,8 million**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi parle-t-on de génocide pour les Arméniens ?",
+     "options": [
+      "Parce qu’un peuple est exterminé en raison de ce qu’il est",
+      "Parce que c’est la plus grande bataille de la guerre",
+      "Parce que des soldats arméniens désertent le front",
+      "Parce que l’armée ottomane perd la guerre en 1918"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase du texte.",
+     "explication": "Un génocide est l’**extermination organisée d’un peuple** parce qu’il est ce peuple : c’est le premier génocide du XXe siècle."
+    }
+   ]
+  },
+  {
+   "chapitre": "dadd27d5-a739-58f6-9736-488e661a42be",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une armée venue du monde entier",
+   "competence": "lire-tableau",
+   "situation": "À l’été 1916, des soldats de nombreux pays se retrouvent en Picardie. Paul lit un tableau pour comprendre qui combat sur la Somme et qui travaille derrière les lignes.",
+   "documents": [
+    {
+     "id": "armees",
+     "type": "tableau",
+     "titre": "Qui participe à la bataille de la Somme ?",
+     "source": "Tableau du cours.",
+     "colonnes": [
+      "Participants",
+      "Origine"
+     ],
+     "lignes": [
+      [
+       "Armée britannique (général Haig)",
+       "Royaume-Uni, Canadiens, Terre-Neuviens, Australiens, Néo-Zélandais, Sud-Africains, soldats de l’Inde"
+      ],
+      [
+       "Armée française (général Foch)",
+       "Métropolitains, tirailleurs sénégalais, soldats d’Afrique du Nord"
+      ],
+      [
+       "Main-d’œuvre de l’arrière",
+       "Travailleurs chinois et travailleurs coloniaux"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "armees",
+     "enonce": "Touche le général qui commande l’armée française.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Cherche la ligne « Armée française ».",
+     "explication": "L’armée française est commandée par le général **Foch**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels travailleurs sont recrutés pour la main-d’œuvre de l’arrière ?",
+     "options": [
+      "Des travailleurs chinois et des travailleurs coloniaux",
+      "Des soldats australiens venus par bateau",
+      "Des prisonniers allemands libérés pour l’occasion",
+      "Des ouvriers suisses envoyés par leur gouvernement"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière ligne du tableau.",
+     "explication": "Les Alliés recrutent des **travailleurs chinois** et des travailleurs coloniaux pour l’arrière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la variété des origines de ces soldats ?",
+     "options": [
+      "La guerre est mondiale : elle mobilise des empires entiers",
+      "La guerre reste une affaire entre la France et l’Allemagne",
+      "Les soldats coloniaux restent loin des champs de bataille",
+      "Les armées britannique et française sont identiques"
+     ],
+     "reponse": 0,
+     "aide": "Compte les continents d’où viennent les soldats.",
+     "explication": "Soldats du Canada, d’Australie, d’Inde, du Sénégal… : c’est une **guerre mondiale**, qui mobilise les empires coloniaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "dadd27d5-a739-58f6-9736-488e661a42be",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sur le front de la Somme",
+   "competence": "lire-carte",
+   "situation": "La bataille de la Somme s’est déroulée en Picardie. Sarah situe sur une carte les lieux de mémoire à visiter, puis calcule combien de temps la bataille a duré.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La Picardie en 1916",
+     "source": "Carte réalisée pour l’exercice, ligne du front simplifiée.",
+     "fond": "france",
+     "cadrage": [
+      1.8,
+      49.5,
+      3.6,
+      50.4
+     ],
+     "lieux": [
+      {
+       "id": "albert",
+       "lon": 2.65,
+       "lat": 50,
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "peronne",
+       "lon": 2.93,
+       "lat": 49.93,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "amiens",
+       "lieu": "amiens",
+       "symbole": "point",
+       "nom": "Amiens"
+      }
+     ],
+     "traits": [
+      {
+       "id": "front",
+       "points": [
+        [
+         2.62,
+         50.12
+        ],
+        [
+         2.82,
+         49.96
+        ]
+       ],
+       "style": "pointilles",
+       "teinte": "corail",
+       "epaisseur": 2
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "corail",
+       "texte": "Le front, vers juillet 1916"
+      }
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Dates de l’année 1916",
+     "source": "Repères du cours.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "21 février 1916",
+       "Début de la bataille de Verdun"
+      ],
+      [
+       "1er juillet 1916",
+       "Début de la bataille de la Somme"
+      ],
+      [
+       "18 novembre 1916",
+       "Fin de la bataille de la Somme"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville de Péronne, où se trouve l’Historial de la Grande Guerre, à l’est de la ligne du front.",
+     "reponse": [
+      "peronne"
+     ],
+     "aide": "Le front sépare les deux lettres : Péronne est du côté opposé à Amiens.",
+     "explication": "**B** est Péronne, à l’est du front ; l’Historial de la Grande Guerre s’y trouve."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche Albert, ville proche du cratère de Lochnagar, à l’ouest du front.",
+     "reponse": [
+      "albert"
+     ],
+     "aide": "Albert est du côté d’Amiens, à l’ouest de la ligne.",
+     "explication": "**A** est Albert, du côté allié du front."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ligne du front, qui coupe la vallée de la Somme entre Albert et Péronne.",
+     "reponse": [
+      "front"
+     ],
+     "aide": "Elle passe entre les deux lettres.",
+     "explication": "Le **front** passe entre Albert et Péronne : les armées britannique et française s’y rejoignent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Du 1er juillet au 18 novembre 1916, il s’écoule 140 jours. Combien de semaines complètes dure la bataille ?",
+     "reponse": 20,
+     "unite": "semaines",
+     "aide": "Divise 140 par 7.",
+     "explication": "140 ÷ 7 = **20 semaines**, soit plus de quatre mois et demi de combats."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les Britanniques fournissent-ils l’essentiel de l’effort sur la Somme ?",
+     "options": [
+      "Parce que la France engage ses forces à Verdun",
+      "Parce que la France a quitté la guerre en 1916",
+      "Parce que Foch refuse de commander l’offensive",
+      "Parce que l’Allemagne ne défend pas ce secteur"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui commence le 21 février 1916.",
+     "explication": "Depuis février 1916, l’armée française engage une grande partie de ses forces à **Verdun** : les Britanniques portent l’essentiel de la Somme, qui doit aussi soulager Verdun."
+    }
+   ]
+  },
+  {
+   "chapitre": "dadd27d5-a739-58f6-9736-488e661a42be",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Traces et mémoire de la Somme",
+   "competence": "analyser-document",
+   "situation": "Aujourd’hui, la Somme garde les traces des combats. Zoé prépare un voyage scolaire : elle croise une chronologie de 1915-1916 et une brochure sur les lieux de mémoire.",
+   "documents": [
+    {
+     "id": "chrono",
+     "type": "tableau",
+     "titre": "Chronologie de 1915-1916",
+     "source": "Repères du cours.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "décembre 1915",
+       "Conférence de Chantilly : les Alliés décident d’attaquer ensemble"
+      ],
+      [
+       "21 février 1916",
+       "Début de la bataille de Verdun"
+      ],
+      [
+       "1er juillet 1916",
+       "Début de la bataille de la Somme : près de 20 000 Britanniques tués en un jour"
+      ],
+      [
+       "15 septembre 1916",
+       "Premiers chars d’assaut britanniques"
+      ],
+      [
+       "18 novembre 1916",
+       "Fin de la bataille"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "brochure",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Lieux de mémoire de la Somme",
+     "source": "Brochure écrite pour l’exercice, d’après le cours.",
+     "blocs": [
+      "Le mémorial de Thiepval porte les noms de plus de 72 000 soldats britanniques et sud-africains disparus.",
+      "Le parc de Beaumont-Hamel honore les Terre-Neuviens, le mémorial de Longueval les Sud-Africains et celui de Pozières les Australiens."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chrono",
+     "enonce": "Touche la date où apparaissent pour la première fois les chars d’assaut.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche l’événement « chars » dans la colonne de droite.",
+     "explication": "Les premiers **chars d’assaut** britanniques entrent en action le 15 septembre 1916."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu de mémoire à ceux qu’il honore.",
+     "paires": [
+      [
+       "Mémorial de Thiepval",
+       "Plus de 72 000 soldats britanniques et sud-africains disparus"
+      ],
+      [
+       "Parc de Beaumont-Hamel",
+       "Les Terre-Neuviens"
+      ],
+      [
+       "Mémorial de Longueval",
+       "Les Sud-Africains"
+      ],
+      [
+       "Mémorial de Pozières",
+       "Les Australiens"
+      ]
+     ],
+     "aide": "Relis la brochure, phrase par phrase.",
+     "explication": "**Thiepval** porte les noms des disparus, **Beaumont-Hamel** honore Terre-Neuve, **Longueval** l’Afrique du Sud, **Pozières** l’Australie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de temps sépare le début de la bataille de Verdun de celui de la Somme ?",
+     "options": [
+      "Environ quatre mois",
+      "Environ deux semaines",
+      "Environ un an et demi",
+      "Environ vingt jours"
+     ],
+     "reponse": 0,
+     "aide": "Compare février et juillet 1916.",
+     "explication": "Du 21 février au 1er juillet 1916, il s’écoule **environ quatre mois** : la France est déjà très engagée à Verdun quand la Somme commence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que le 1er juillet 1916 est le jour le plus meurtrier de l’armée britannique ?",
+     "options": [
+      "Près de 20 000 soldats britanniques y meurent en une journée",
+      "Plus d’un million de soldats britanniques y meurent",
+      "Les chars d’assaut y font leurs premières victimes",
+      "La bataille se termine ce jour-là par un armistice"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne du 1er juillet dans la chronologie.",
+     "explication": "Près de **20 000 soldats britanniques** meurent le 1er juillet 1916. Le bilan total de la bataille dépasse **un million** de tués, blessés et disparus pour les trois armées."
+    }
+   ]
+  }
+ ]
+}

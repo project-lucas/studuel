@@ -1,0 +1,2120 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "6ba23211-f8fd-5192-929f-d946239dd569",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ulysse, dix ans après Troie",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche de lecture sur l’*Odyssée*. Commence par la carte d’identité du poème, puis regarde qui attend Ulysse à Ithaque.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Odyssée",
+     "sousTitre": "Récit du retour d’Ulysse",
+     "emoji": "⛵",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Homère (attribué)",
+       "id": "auteur"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "VIIIe siècle av. J.-C.",
+       "id": "epoque"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Vingt-quatre chants",
+       "id": "forme"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "Ulysse, roi d’Ithaque",
+       "id": "heros"
+      }
+     ],
+     "pied": "Suite de l’*Iliade*",
+     "teinte": "violet"
+    },
+    {
+     "id": "ithaque",
+     "type": "tableau",
+     "titre": "À Ithaque, pendant l’absence d’Ulysse",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Télémaque",
+       "Il grandit sans son père"
+      ],
+      [
+       "Pénélope",
+       "?"
+      ],
+      [
+       "Athéna",
+       "Elle obtient des dieux le retour d’Ulysse"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "epoque"
+     ],
+     "enonce": "Sur la carte d’identité, touche la ligne qui dit à quelle époque le poème a été composé.",
+     "aide": "Cherche une indication de siècle.",
+     "explication": "Le poème est composé au **VIIIe siècle av. J.-C.**, à partir d’une tradition orale."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité du poème.",
+     "texte": "Le poème, attribué à ___, est composé de ___ chants et raconte le ___ d’Ulysse chez lui.",
+     "reponses": [
+      [
+       "Homère"
+      ],
+      [
+       "vingt-quatre",
+       "24"
+      ],
+      [
+       "retour"
+      ]
+     ],
+     "banque": [
+      "Homère",
+      "vingt-quatre",
+      "douze",
+      "retour",
+      "départ",
+      "Virgile"
+     ],
+     "aide": "Tout est sur la carte ; le dernier mot est le thème du poème.",
+     "explication": "Le poème d’**Homère** compte **vingt-quatre** chants : c’est le récit du **retour** (*nostos*) d’Ulysse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau, pour Pénélope ?",
+     "options": [
+      "Elle est assiégée par des prétendants qui pillent le palais",
+      "Elle part chercher des nouvelles de son mari au loin",
+      "Elle accompagne Ulysse dans tous ses voyages en mer",
+      "Elle règne seule, honorée de tous les Grecs d’Ithaque"
+     ],
+     "reponse": 0,
+     "aide": "Pénélope est restée au palais : qui s’y est installé ?",
+     "explication": "Pénélope est **assiégée par des prétendants** qui pillent le palais : elle résiste en attendant Ulysse."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ba23211-f8fd-5192-929f-d946239dd569",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le long chemin du retour",
+   "competence": "analyser-texte",
+   "situation": "Un camarade t’a écrit un résumé de l’*Odyssée* pour t’aider. Lis-le, puis suis le dernier fil du poème : le retour au palais.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le résumé de ton camarade",
+     "blocs": [
+      "Dix ans après la chute de Troie, Ulysse n’est toujours pas rentré. À Ithaque, son fils [[t|Télémaque]] part chercher des nouvelles : c’est la Télémachie.",
+      "Chez les Phéaciens, le héros raconte lui-même ses aventures : le Cyclope, Circé, les Sirènes. Puis il rentre, déguisé en [[m|mendiant]]."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    },
+    {
+     "id": "retour",
+     "type": "chaine",
+     "titre": "Le retour au palais",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Ulysse arrive déguisé en mendiant"
+      },
+      {
+       "id": "n2",
+       "texte": "Son chien Argos et sa nourrice le reconnaissent"
+      },
+      {
+       "id": "n3",
+       "texte": "Il est le seul à pouvoir bander l’arc"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Pénélope l’éprouve par le secret du lit"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le personnage qui part chercher des nouvelles de son père.",
+     "aide": "C’est le fils d’Ulysse.",
+     "explication": "Le fils d’Ulysse, **Télémaque**, part à la recherche de son père : c’est le premier fil du poème."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui désigne le déguisement d’Ulysse à son retour.",
+     "aide": "Un homme qui demande l’aumône.",
+     "explication": "Ulysse rentre déguisé en **mendiant** : personne ne le reconnaît tout de suite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne du retour (la case « ? ») ?",
+     "options": [
+      "Le massacre des prétendants et la reprise du palais",
+      "Ulysse repart aussitôt vers de nouvelles îles lointaines",
+      "Télémaque quitte Ithaque pour un nouveau voyage",
+      "Les dieux détruisent le palais d’Ithaque et ses murs"
+     ],
+     "reponse": 0,
+     "aide": "Entre l’épreuve de l’arc et l’ultime épreuve, Ulysse doit se débarrasser de ceux qui pillent le palais.",
+     "explication": "Après l’arc vient le **massacre des prétendants** : Ulysse reprend son palais, puis Pénélope l’éprouve."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque fil du poème à ce qu’il raconte.",
+     "paires": [
+      [
+       "La Télémachie",
+       "Le fils part chercher des nouvelles de son père"
+      ],
+      [
+       "Les récits chez les Phéaciens",
+       "Ulysse raconte lui-même ses aventures"
+      ],
+      [
+       "Le retour",
+       "Déguisé en mendiant, Ulysse reprend son palais"
+      ]
+     ],
+     "aide": "Relis le résumé et la chaîne : qui parle, et où ?",
+     "explication": "La **Télémachie** suit le fils ; les **récits** sont dits par Ulysse chez les Phéaciens ; le **retour** est celui du mendiant qui reprend son palais."
+    }
+   ]
+  },
+  {
+   "chapitre": "6ba23211-f8fd-5192-929f-d946239dd569",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Personne contre le géant",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Ulysse triomphe-t-il du Cyclope par la force ou par autre chose ? Lis une scène écrite pour l’exercice, à la manière d’Homère, et tranche.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Chez le Cyclope",
+     "blocs": [
+      "Le géant a déjà dévoré deux compagnons. L’homme aux mille tours lui tend alors une [[o|outre]] de vin pur.",
+      "« Quel est ton nom, étranger ? demande le monstre. Je veux te faire un présent. — Mon nom est [[n|Personne]] », répond le héros.",
+      "Quand le Cyclope ivre s’endort, les Grecs enfoncent un pieu rougi au feu dans son unique œil. Ses cris attirent les voisins, qui demandent qui lui fait du mal. Il hurle que nul ne l’attaque par la force, et les voisins s’éloignent."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Homère"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sami",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Ulysse gagne parce qu’il est le plus fort des Grecs."
+      },
+      {
+       "qui": "Sami",
+       "texte": "Non : un géant ne se bat pas à armes égales. Il lui faut un plan."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Quel plan, avec un simple nom ?"
+      },
+      {
+       "qui": "Sami",
+       "texte": "Justement : il le trompe avec un faux nom et le rend ivre d’abord."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche l’objet qu’Ulysse offre au géant pour l’endormir.",
+     "aide": "C’est un contenant en peau, rempli de vin.",
+     "explication": "Ulysse offre une **outre** de vin pur : l’ivresse du géant prépare sa défaite."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le faux nom sous lequel Ulysse se présente.",
+     "aide": "Un nom qui signifie l’absence de quelqu’un.",
+     "explication": "Ulysse se fait appeler « **Personne** » : quand le géant crie, ses voisins croient que nul ne lui fait de mal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la scène prouve-t-elle ?",
+     "options": [
+      "Ulysse est un héros de l’intelligence : la ruse l’emporte sur la force",
+      "Ulysse est un héros brutal que seule sa force sauve du danger",
+      "Ulysse est secouru par les dieux, qui tuent le géant pour lui",
+      "Ulysse est un lâche qui abandonne ses compagnons dès le début"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce qu’Ulysse offre, puis le nom qu’il donne : sont-ce des armes ?",
+     "explication": "La scène repose sur une **ruse** (le vin, le faux nom) : Ulysse est « aux mille tours », un héros de l’**intelligence**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du poème à son effet.",
+     "paires": [
+      [
+       "Le récit enchâssé",
+       "Ulysse raconte lui-même ses aventures"
+      ],
+      [
+       "Le nostos",
+       "Tout le poème tend vers le retour chez soi"
+      ],
+      [
+       "Le faux nom « Personne »",
+       "La ruse retourne les mots contre le géant"
+      ]
+     ],
+     "aide": "Pense à qui parle, à ce que veut le héros, et à ce que fait le mot « Personne ».",
+     "explication": "Le **récit enchâssé** donne la parole à Ulysse ; le **nostos** est le retour ; le nom « **Personne** » est une arme de ruse."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd89d041-1e35-5f9b-9e85-11cf60e662ba",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roi de Thèbes sur la scène d’Athènes",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ton oral, tu situes *Œdipe roi* dans la vie de Sophocle, puis tu rappelles qui est qui dans la pièce.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Sophocle et sa pièce",
+     "debut": -500,
+     "fin": -400,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": -496,
+       "nom": "Naissance"
+      },
+      {
+       "id": "piece",
+       "date": -425,
+       "nom": "Œdipe roi (vers)"
+      },
+      {
+       "id": "mort",
+       "date": -406,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Œdipe",
+       "Roi de Thèbes, qui mène l’enquête"
+      ],
+      [
+       "Jocaste",
+       "Veuve de Laïos, devenue l’épouse d’Œdipe"
+      ],
+      [
+       "Tirésias",
+       "?"
+      ],
+      [
+       "Créon",
+       "Beau-frère d’Œdipe, accusé de complot"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "piece"
+     ],
+     "enonce": "Touche, sur la frise, le repère qui correspond à la pièce.",
+     "aide": "Cherche le titre de l’œuvre.",
+     "explication": "La pièce est jouée **vers 430-420 av. J.-C.**, du vivant de Sophocle."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec ce que tu sais du cadre de la pièce.",
+     "texte": "La pièce est jouée à ___, lors des concours du théâtre de ___.",
+     "reponses": [
+      [
+       "Athènes"
+      ],
+      [
+       "Dionysos"
+      ]
+     ],
+     "banque": [
+      "Athènes",
+      "Dionysos",
+      "Thèbes",
+      "Apollon",
+      "Corinthe"
+     ],
+     "aide": "Le roi est de Thèbes, mais la pièce est jouée dans une autre cité.",
+     "explication": "La pièce est jouée à **Athènes**, lors des concours du théâtre de **Dionysos**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rôle faut-il écrire dans la case « ? » du tableau, pour Tirésias ?",
+     "options": [
+      "Le devin qui, contraint de parler, accuse Œdipe",
+      "Le berger qui a recueilli l’enfant sur la montagne",
+      "Le messager venu de Corinthe annoncer une mort",
+      "Le chef du chœur des vieillards thébains"
+     ],
+     "reponse": 0,
+     "aide": "C’est lui qui accuse Œdipe le premier.",
+     "explication": "Le devin **Tirésias**, contraint de parler, **accuse** Œdipe d’être le meurtrier de Laïos."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd89d041-1e35-5f9b-9e85-11cf60e662ba",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand le juge devient le coupable",
+   "competence": "analyser-document",
+   "situation": "La pièce est une enquête menée par un roi. Suis les étapes de cette enquête, depuis la peste jusqu’à la vérité.",
+   "documents": [
+    {
+     "id": "enquete",
+     "type": "chaine",
+     "titre": "L’enquête d’Œdipe",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "La peste frappe Thèbes"
+      },
+      {
+       "id": "n2",
+       "texte": "L’oracle exige de chasser le meurtrier de Laïos"
+      },
+      {
+       "id": "n3",
+       "texte": "Tirésias accuse Œdipe"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Un messager et un vieux berger parlent"
+      },
+      {
+       "id": "n6",
+       "texte": "Œdipe découvre qu’il est le fils de Laïos"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que répond Œdipe à Tirésias (la case « ? ») ?",
+     "options": [
+      "Il crie au complot de Créon",
+      "Il remercie le devin de sa franchise",
+      "Il quitte Thèbes aussitôt après",
+      "Il demande pardon à Jocaste"
+     ],
+     "reponse": 0,
+     "aide": "Œdipe refuse de croire le devin et cherche un instigateur.",
+     "explication": "Œdipe **crie au complot de Créon** : il refuse l’accusation et la retourne contre son beau-frère."
+    },
+    {
+     "type": "zone",
+     "document": "enquete",
+     "multiple": false,
+     "reponse": [
+      "n6"
+     ],
+     "enonce": "Touche l’étape où éclate la vérité sur sa naissance.",
+     "aide": "Après les témoignages, il comprend qui sont ses parents.",
+     "explication": "La révélation est l’étape où Œdipe découvre qu’il est le **fils** de Laïos et de Jocaste."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les événements de la fin de la pièce.",
+     "items": [
+      "Jocaste se pend",
+      "Œdipe se crève les yeux",
+      "Œdipe réclame l’exil"
+     ],
+     "aide": "Jocaste agit la première ; Œdipe réagit à la vérité.",
+     "explication": "D’abord **Jocaste se pend**, puis **Œdipe se crève les yeux** avec les agrafes de sa robe, et **réclame l’exil**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qui le définit.",
+     "paires": [
+      [
+       "Tirésias",
+       "Aveugle, il voit la vérité"
+      ],
+      [
+       "Créon",
+       "Accusé à tort de complot"
+      ],
+      [
+       "Jocaste",
+       "Reine, elle se pend à la fin"
+      ],
+      [
+       "Le chœur",
+       "Vieillards thébains qui commentent l’action"
+      ]
+     ],
+     "aide": "Chaque personnage a un geste ou un rôle précis dans l’enquête.",
+     "explication": "**Tirésias** voit la vérité malgré sa cécité ; **Créon** est accusé à tort ; **Jocaste** se pend ; le **chœur** commente."
+    }
+   ]
+  },
+  {
+   "chapitre": "cd89d041-1e35-5f9b-9e85-11cf60e662ba",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le spectateur sait, le roi ignore",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si une pièce dont on connaît la fin peut encore tenir en haleine. Lis une scène écrite pour l’exercice, à la manière de Sophocle, puis tranche.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un roi promet justice",
+     "blocs": [
+      {
+       "didascalie": "Une cité frappée par un fléau. Le spectateur connaît déjà la vérité sur le roi."
+      },
+      {
+       "personnage": "Le roi",
+       "replique": "Je [[m|maudis]] le coupable : qu’il soit [[m|chassé]] de la ville, fût-il l’un des miens."
+      },
+      {
+       "personnage": "Le chœur",
+       "replique": "Roi, nous t’écoutons avec crainte."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Sophocle"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "On connaît la fin : la pièce ne peut pas nous surprendre."
+      },
+      {
+       "qui": "Malik",
+       "texte": "L’intérêt est ailleurs : on connaît le [[y|mythe]], et on voit le roi courir à sa perte."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux verbes par lesquels le roi condamne le coupable.",
+     "aide": "Un verbe de malédiction, un verbe d’exil.",
+     "explication": "Le roi **maudit** et veut **chasser** le coupable : sa menace se retournera contre lui, c’est l’**ironie tragique**."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "y"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi le spectateur n’est pas surpris.",
+     "aide": "Ce mot désigne une histoire que tout le monde connaît.",
+     "explication": "Les spectateurs connaissent le **mythe** : l’intérêt vient de la manière dont la vérité éclate."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’appelle-t-on ironie tragique dans la pièce ?",
+     "options": [
+      "Le spectateur sait ce que le roi ignore",
+      "Le roi plaisante sur son malheur et sur le sort de son peuple",
+      "Le chœur se moque du roi et de ses courtisans dans chaque scène",
+      "Un personnage comique vient détendre l’atmosphère de la pièce"
+     ],
+     "reponse": 0,
+     "aide": "Relis la didascalie : qui sait quoi ?",
+     "explication": "Il y a **ironie tragique** quand le **spectateur sait** et que le **héros ignore** : chaque menace se retourne contre lui."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chacun selon qu’il voit la vérité ou qu’il en est aveugle.",
+     "categories": [
+      "Voit la vérité",
+      "Est aveugle à la vérité"
+     ],
+     "items": [
+      [
+       "Tirésias, qui est aveugle",
+       0
+      ],
+      [
+       "Œdipe, qui a de bons yeux",
+       1
+      ],
+      [
+       "Le spectateur, qui connaît le mythe",
+       0
+      ],
+      [
+       "Œdipe avant l’enquête",
+       1
+      ]
+     ],
+     "aide": "Pense au paradoxe de la pièce : la vue et la vérité ne vont pas ensemble.",
+     "explication": "**Tirésias** et le **spectateur** voient la vérité ; **Œdipe**, qui voit, est **aveugle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a782013-315c-5d55-b100-bef54de97ec8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce faite pour la lecture",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *On ne badine pas avec l’amour*. Note les dates clés, puis qui est qui dans la pièce.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "On ne badine pas avec l’amour",
+     "sousTitre": "Alfred de Musset",
+     "emoji": "🌹",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Proverbe en trois actes",
+       "id": "genre"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "1834",
+       "id": "pub"
+      },
+      {
+       "texte": "Créée sur scène",
+       "valeur": "1861",
+       "id": "creation"
+      },
+      {
+       "texte": "Où ?",
+       "valeur": "Revue des Deux Mondes",
+       "id": "revue"
+      }
+     ],
+     "pied": "Musset est mort en 1857",
+     "teinte": "rose"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il incarne"
+     ],
+     "lignes": [
+      [
+       "Perdican",
+       "La jeunesse fière, l’amour de la vie"
+      ],
+      [
+       "Camille",
+       "?"
+      ],
+      [
+       "Rosette",
+       "L’innocence sacrifiée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "creation"
+     ],
+     "enonce": "Touche la ligne qui dit quand la pièce a été jouée pour la première fois.",
+     "aide": "Elle n’est créée qu’après la mort de Musset.",
+     "explication": "La pièce est créée sur scène en **1861**, quatre ans après la mort de Musset."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication de la création sur scène ?",
+     "reponse": 27,
+     "aide": "Soustrais les deux années de la fiche.",
+     "explication": "1861 − 1834 = **27 ans** : Musset écrit pour être lu, la scène viendra bien plus tard.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Camille ?",
+     "options": [
+      "La méfiance, l’orgueil, la peur d’être trahie",
+      "La naïveté joyeuse d’une jeune paysanne",
+      "Le comique des fantoches de la maison",
+      "La sagesse d’un chœur de villageois"
+     ],
+     "reponse": 0,
+     "aide": "Les religieuses lui ont fait peur de l’infidélité des hommes.",
+     "explication": "Camille incarne la **méfiance**, l’**orgueil** et la peur d’être trahie, apprises au couvent."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a782013-315c-5d55-b100-bef54de97ec8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "D’un projet de mariage à un cri",
+   "competence": "analyser-document",
+   "situation": "Perdican et Camille devaient se marier. Suis les étapes qui les mènent à la catastrophe.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le baron veut marier Perdican et Camille"
+      },
+      {
+       "id": "n2",
+       "texte": "Camille refuse, effrayée par les religieuses"
+      },
+      {
+       "id": "n3",
+       "texte": "Perdican courtise Rosette"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Un cri : Rosette est morte"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Camille cache Rosette pour lui faire entendre les aveux de Perdican",
+      "Perdican renonce à Camille et quitte la maison pour de bon",
+      "Le baron renvoie Rosette et ses parents du domaine",
+      "Maître Blazius surprend les deux cousins ensemble au jardin"
+     ],
+     "reponse": 0,
+     "aide": "Camille tend un piège à Perdican.",
+     "explication": "Camille **cache Rosette** pour qu’elle entende les aveux de Perdican : le piège précipite le drame."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où Camille repousse le projet de mariage.",
+     "aide": "Le mot clé est « refuse ».",
+     "explication": "Camille **refuse** d’épouser Perdican, effrayée par les confidences des religieuses sur l’infidélité des hommes."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : qui est Rosette ?",
+     "texte": "Rosette est une ___, la sœur de ___ de Camille.",
+     "reponses": [
+      [
+       "paysanne"
+      ],
+      [
+       "lait"
+      ]
+     ],
+     "banque": [
+      "paysanne",
+      "lait",
+      "cousine",
+      "sang",
+      "servante"
+     ],
+     "aide": "Elle n’est pas de la famille de Camille, mais elle a été nourrie par la même femme.",
+     "explication": "Rosette est une **paysanne**, **sœur de lait** de Camille."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets ces quatre moments dans l’ordre de la pièce.",
+     "items": [
+      "Perdican revient docteur",
+      "Camille refuse Perdican",
+      "Perdican courtise Rosette",
+      "Rosette meurt"
+     ],
+     "aide": "On part du retour de Perdican pour finir par le drame.",
+     "explication": "Ordre : le **retour** de Perdican, le **refus** de Camille, la **cour** faite à Rosette, la **mort** de Rosette."
+    }
+   ]
+  },
+  {
+   "chapitre": "2a782013-315c-5d55-b100-bef54de97ec8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "On aime malgré tout",
+   "competence": "argumenter",
+   "situation": "Deux élèves discutent de la célèbre tirade de Perdican : dit-elle qu’il faut fuir l’amour ? Lis la phrase de Musset et tranche.",
+   "documents": [
+    {
+     "id": "tirade",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Perdican parle à Camille",
+     "blocs": [
+      {
+       "personnage": "Perdican",
+       "replique": "On est souvent trompé en amour, souvent blessé et souvent malheureux ; [[v|mais]] [[v|on]] [[v|aime]]."
+      }
+     ],
+     "source": "Alfred de Musset, *On ne badine pas avec l’amour* (1834), acte II"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Basile",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Perdican énumère les malheurs de l’amour : il conseille de s’en détourner."
+      },
+      {
+       "qui": "Basile",
+       "texte": "Il finit pourtant par une affirmation : l’amour vaut d’être vécu."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les trois mots par lesquels la phrase se retourne en affirmation.",
+     "aide": "Après le point-virgule, la phrase change de direction.",
+     "explication": "Le point-virgule ouvre un renversement : « **mais on aime** » dit que l’amour vaut d’être vécu malgré les blessures."
+    },
+    {
+     "type": "choix",
+     "enonce": "À laquelle des deux élèves la phrase donne-t-elle raison ?",
+     "options": [
+      "À Basile : malgré les blessures, l’amour vaut d’être vécu",
+      "À Zoé : il faut renoncer à l’amour pour ne plus souffrir",
+      "À aucune : la phrase ne parle pas de l’amour du tout",
+      "Aux deux : Perdican se contredit sans même s’en rendre compte"
+     ],
+     "reponse": 0,
+     "aide": "Regarde comment la phrase se termine.",
+     "explication": "La phrase se clôt sur « **mais on aime** » : c’est **Basile** qui lit juste."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément de la pièce selon le registre dominant.",
+     "categories": [
+      "Comique",
+      "Lyrique",
+      "Tragique"
+     ],
+     "items": [
+      [
+       "Maître Blazius, maître Bridaine et dame Pluche",
+       0
+      ],
+      [
+       "La tirade de Perdican sur l’amour",
+       1
+      ],
+      [
+       "La mort de Rosette",
+       2
+      ],
+      [
+       "Les fantoches de la maison du baron",
+       0
+      ]
+     ],
+     "aide": "Les fantoches font rire, la tirade fait chanter l’amour, la fin fait pleurer.",
+     "explication": "Les **fantoches** relèvent du comique, la **tirade** du lyrisme, la **mort de Rosette** du tragique : le **mélange des registres** est la marque du drame romantique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la pièce est écrite pour la lecture ?",
+     "options": [
+      "Après l’échec de 1830, Musset écrit un théâtre « dans un fauteuil »",
+      "Parce qu’elle est interdite au théâtre par la censure royale",
+      "Parce qu’elle est trop courte pour être jouée en entier",
+      "Parce que Musset ne l’a jamais voulu publier de son vivant"
+     ],
+     "reponse": 0,
+     "aide": "Pense au titre du recueil *Un spectacle dans un fauteuil*.",
+     "explication": "Déçu par l’échec de 1830, Musset écrit un **théâtre à lire** : « un spectacle dans un fauteuil »."
+    }
+   ]
+  },
+  {
+   "chapitre": "5dc30bfd-d16f-5707-bb5a-6f49902b0ef6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un salon, une matinée, une purge",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *On purge bébé*. Situe la pièce, puis dis ce que veut chacun des trois adultes.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "On purge bébé",
+     "sousTitre": "Georges Feydeau",
+     "emoji": "🚽",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Farce en un acte",
+       "id": "genre"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1910",
+       "id": "creation"
+      },
+      {
+       "texte": "Décor",
+       "valeur": "Un salon, une matinée",
+       "id": "decor"
+      },
+      {
+       "texte": "Série",
+       "valeur": "Du mariage au divorce",
+       "id": "serie"
+      }
+     ],
+     "pied": "Feydeau, maître du vaudeville (1862-1921)",
+     "teinte": "ambre"
+    },
+    {
+     "id": "vouloirs",
+     "type": "tableau",
+     "titre": "Ce que veut chaque personnage",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il veut"
+     ],
+     "lignes": [
+      [
+       "Follavoine, industriel",
+       "?"
+      ],
+      [
+       "Chouilloux, fonctionnaire",
+       "Il décide du marché, mais se laisse déborder"
+      ],
+      [
+       "Julie, sa femme",
+       "Que son fils Toto prenne sa purge"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "creation"
+     ],
+     "enonce": "Touche la ligne qui dit en quelle année la pièce est créée.",
+     "aide": "Cherche un nombre à quatre chiffres.",
+     "explication": "La pièce est créée en **1910**, à la fin de la carrière de Feydeau."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec ce que tu sais de Feydeau.",
+     "texte": "Feydeau est le maître du ___ de la ___.",
+     "reponses": [
+      [
+       "vaudeville"
+      ],
+      [
+       "Belle Époque"
+      ]
+     ],
+     "banque": [
+      "vaudeville",
+      "Belle Époque",
+      "mélodrame",
+      "Renaissance"
+     ],
+     "aide": "Le genre est celui des intrigues légères et rapides ; l’époque suit la fin du XIXe siècle.",
+     "explication": "Feydeau est le maître du **vaudeville** de la **Belle Époque** ; la pièce tient en un seul acte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut Follavoine (la case « ? ») ?",
+     "options": [
+      "Décrocher un énorme marché de pots de chambre incassables pour l’armée",
+      "Obtenir le divorce après une longue dispute conjugale",
+      "Faire acheter sa porcelaine par le théâtre de la ville",
+      "Vendre sa fabrique pour quitter la ville avec sa famille"
+     ],
+     "reponse": 0,
+     "aide": "Il fabrique de la porcelaine et il est venu voir le fonctionnaire.",
+     "explication": "Follavoine, industriel en porcelaine, veut **décrocher un énorme marché** : des **pots de chambre incassables** pour l’armée."
+    }
+   ]
+  },
+  {
+   "chapitre": "5dc30bfd-d16f-5707-bb5a-6f49902b0ef6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand la purge ruine le contrat",
+   "competence": "analyser-texte",
+   "situation": "Le comique de Feydeau vient d’un engrenage. Lis un extrait écrit pour l’exercice à la manière de la pièce, puis suis l’engrenage et classe les comiques.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un contrat interrompu",
+     "blocs": [
+      {
+       "didascalie": "Un salon. Un industriel reçoit un acheteur du ministère ; sa femme entre en peignoir."
+      },
+      {
+       "personnage": "L’industriel",
+       "replique": "Monsieur, l’armée ne trouvera jamais de pot plus [[r|solide]]…"
+      },
+      {
+       "personnage": "La femme",
+       "replique": "Dis donc, toi, as-tu fait avaler sa [[r|purge]] à l’enfant ?"
+      },
+      {
+       "didascalie": "L’acheteur, gêné, regarde ses pantoufles."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Feydeau"
+    },
+    {
+     "id": "engrenage",
+     "type": "chaine",
+     "titre": "L’engrenage de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "La négociation est sans cesse interrompue"
+      },
+      {
+       "id": "n2",
+       "texte": "Julie insulte Chouilloux"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Le marché est perdu"
+      },
+      {
+       "id": "n5",
+       "texte": "Follavoine, furieux, vide le second verre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui montrent le décalage entre les affaires et la vie de famille.",
+     "aide": "Un mot parle du matériel à vendre, l’autre de la potion de l’enfant.",
+     "explication": "Le **solide** pot de chambre et la **purge** cohabitent dans le même salon : c’est le décalage qui fait rire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de l’engrenage ?",
+     "options": [
+      "Julie force Chouilloux à goûter la purge",
+      "Chouilloux signe le marché pour calmer Julie",
+      "Toto avoue qu’il n’a jamais été malade",
+      "Follavoine renvoie sa femme dans sa chambre"
+     ],
+     "reponse": 0,
+     "aide": "Julie veut absolument que quelqu’un boive la purge.",
+     "explication": "Julie **force le fonctionnaire lui-même à goûter la purge**, qu’il finit par avaler d’un trait : le marché est compromis."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple selon le comique qu’il illustre.",
+     "categories": [
+      "Comique de mots",
+      "Comique de gestes",
+      "Comique de situation",
+      "Comique de caractère"
+     ],
+     "items": [
+      [
+       "Julie insulte Chouilloux",
+       0
+      ],
+      [
+       "Le pot qui se brise",
+       1
+      ],
+      [
+       "La purge avalée par le mauvais",
+       2
+      ],
+      [
+       "Follavoine lâche et Julie têtue",
+       3
+      ]
+     ],
+     "aide": "Mots, gestes, situation, caractère : demande-toi ce qui fait rire dans chaque cas.",
+     "explication": "Les **insultes** sont comique de mots, le **pot qui se brise** de gestes, la **purge avalée par le mauvais** de situation, **Follavoine et Julie** de caractère."
+    }
+   ]
+  },
+  {
+   "chapitre": "5dc30bfd-d16f-5707-bb5a-6f49902b0ef6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le vaudeville change de visage",
+   "competence": "argumenter",
+   "situation": "Deux élèves comparent *On purge bébé* aux vaudevilles à portes qui claquent. Lis leur débat, puis complète l’argument sur le comique de la pièce.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Axel",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Axel",
+       "texte": "Un vaudeville, c’est des portes qui claquent et des amants cachés dans les placards."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Pas ici : un seul [[s|salon]], une matinée, et un couple qui se dispute."
+      },
+      {
+       "qui": "Axel",
+       "texte": "Alors le comique vient d’ailleurs ?"
+      },
+      {
+       "qui": "Nina",
+       "texte": "Du contraste entre un contrat sérieux et une histoire de pot de chambre."
+      }
+     ]
+    },
+    {
+     "id": "argument",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le comique naît d’un décalage",
+       "Le sérieux des affaires est écrasé par la trivialité domestique",
+       "?"
+      ],
+      [
+       "Un enfant capricieux mène les adultes",
+       "L’autorité est renversée",
+       "Toto tient les adultes en échec"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit où se passe toute l’action.",
+     "aide": "Un seul lieu, dans la maison.",
+     "explication": "L’action tient dans un seul **salon** : Feydeau passe de l’hôtel aux querelles de couple en huis clos."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un marché militaire ruiné par une histoire de purge",
+      "Un amant caché dans une armoire",
+      "Une porte qui claque toutes les dix répliques",
+      "Un quiproquo d’hôtel entre deux étrangers"
+     ],
+     "reponse": 0,
+     "aide": "La thèse parle d’un décalage entre affaires et vie domestique.",
+     "explication": "Le **marché militaire ruiné par une purge** illustre le décalage entre le sérieux des affaires et la trivialité domestique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque période de Feydeau à ce qui la caractérise.",
+     "paires": [
+      [
+       "Ses vaudevilles d’avant",
+       "Des quiproquos d’hôtels et d’amants"
+      ],
+      [
+       "Ses dernières pièces, dont *On purge bébé*",
+       "Des querelles de couple, observées avec cruauté"
+      ],
+      [
+       "Le regard de Ionesco",
+       "Il admirera la brutalité conjugale de ces dialogues"
+      ]
+     ],
+     "aide": "La pièce marque un tournant : des portes et des hôtels vers le huis clos du couple.",
+     "explication": "Feydeau **abandonne les quiproquos d’hôtels** pour la **scène de ménage** ; **Ionesco** admirera la brutalité de ces dialogues."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation la pièce permet-elle le mieux d’appuyer ?",
+     "options": [
+      "Le comique peut naître du décalage entre le noble et le trivial",
+      "Le comique repose uniquement sur les coups de théâtre",
+      "Le comique disparaît dès que le décor est unique",
+      "Le comique est incompatible avec la satire des notables"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que la purge fait au contrat militaire.",
+     "explication": "Le comique naît du **décalage** entre le noble (les affaires) et le trivial (la purge) : la pièce devient presque une **comédie de mœurs**."
+    }
+   ]
+  },
+  {
+   "chapitre": "598040c2-2163-51a0-b22f-a40b822eefa1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un géant avant son père",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ton oral sur Rabelais. Place *Pantagruel* parmi les repères, puis retrouve ses compagnons.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rabelais et ses géants",
+     "debut": 1530,
+     "fin": 1555,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "pant",
+       "date": 1532,
+       "nom": "Pantagruel"
+      },
+      {
+       "id": "garg",
+       "date": 1534,
+       "nom": "Gargantua"
+      },
+      {
+       "id": "mort",
+       "date": 1553,
+       "nom": "Mort de Rabelais"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Pantagruel",
+       "Le géant bon, savant et généreux"
+      ],
+      [
+       "Panurge",
+       "?"
+      ],
+      [
+       "Épistémon",
+       "Le compagnon sage, revenu des Enfers"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pant"
+     ],
+     "enonce": "Touche le livre qui est publié en premier, bien qu’il raconte la vie du fils.",
+     "aide": "Le fils est publié avant le père.",
+     "explication": "*Pantagruel* paraît en **1532**, deux ans avant *Gargantua* (1534), son père dans la fiction."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Pantagruel* de *Gargantua* ?",
+     "reponse": 2,
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1534 − 1532 = **2 ans** : le fils précède le père dans l’ordre de publication.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire pour Panurge (la case « ? ») ?",
+     "options": [
+      "Le compagnon rusé, menteur et lâche",
+      "Le sage fidèle qui conseille sans jamais mentir",
+      "Le roi ennemi qui attaque le pays de Pantagruel",
+      "Le moine érudit qui garde la bibliothèque"
+     ],
+     "reponse": 0,
+     "aide": "Panurge est un personnage de trickster.",
+     "explication": "Panurge est le compagnon **rusé, menteur et lâche** de Pantagruel."
+    }
+   ]
+  },
+  {
+   "chapitre": "598040c2-2163-51a0-b22f-a40b822eefa1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la naissance à la guerre",
+   "competence": "analyser-document",
+   "situation": "Rabelais enchaîne les épisodes comme un conteur. Suis la chaîne des aventures de Pantagruel.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les épisodes du livre",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Naissance de Pantagruel pendant une sécheresse"
+      },
+      {
+       "id": "n2",
+       "texte": "Études et rencontre de l’écolier limousin"
+      },
+      {
+       "id": "n3",
+       "texte": "Lettre de Gargantua à son fils"
+      },
+      {
+       "id": "n4",
+       "texte": "Rencontre de Panurge"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      },
+      {
+       "id": "n6",
+       "texte": "Guerre contre les Dipsodes"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel épisode occupe la case « ? » ?",
+     "options": [
+      "Le procès de Baisecul et Humevesne",
+      "Le voyage en mer vers un oracle",
+      "La visite de l’abbaye de Thélème",
+      "La mort de Gargantua et son enterrement"
+     ],
+     "reponse": 0,
+     "aide": "Des plaidoiries y sont totalement incompréhensibles.",
+     "explication": "Le procès de **Baisecul et Humevesne** est jugé sur des plaidoiries incompréhensibles."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui ridiculise un français latinisé et prétentieux.",
+     "aide": "Cherche le personnage qui parle de façon ridicule.",
+     "explication": "L’**écolier limousin** parle un français latinisé et prétentieux : Rabelais se moque du pédantisme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque épisode à ce qu’il apporte.",
+     "paires": [
+      [
+       "La lettre de Gargantua",
+       "Le manifeste de l’éducation humaniste"
+      ],
+      [
+       "Le procès de Baisecul et Humevesne",
+       "Des plaidoiries incompréhensibles"
+      ],
+      [
+       "La guerre contre les Dipsodes",
+       "La victoire sur le géant Loup-Garou"
+      ]
+     ],
+     "aide": "Chaque épisode a une fonction : instruire, faire rire, combattre.",
+     "explication": "La **lettre** expose le programme humaniste ; le **procès** fait rire par son jargon ; la **guerre** s’achève par la victoire sur **Loup-Garou**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : que parodie le livre ?",
+     "texte": "Le livre parodie les ___ de chevalerie et les ___ populaires.",
+     "reponses": [
+      [
+       "romans"
+      ],
+      [
+       "almanachs"
+      ]
+     ],
+     "banque": [
+      "romans",
+      "almanachs",
+      "poèmes",
+      "sermons",
+      "chansons"
+     ],
+     "aide": "Deux genres bien connus des lecteurs du XVIe siècle.",
+     "explication": "Le livre parodie les **romans** de chevalerie et les **almanachs** populaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "598040c2-2163-51a0-b22f-a40b822eefa1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Science et conscience",
+   "competence": "argumenter",
+   "situation": "Rabelais fait rire, mais il défend aussi une idée. Lis une phrase célèbre de Pantagruel (orthographe modernisée), puis construis l’argument.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La lettre de Gargantua",
+     "blocs": [
+      "Science sans conscience n’est que [[r|ruine]] de l’âme."
+     ],
+     "source": "François Rabelais, *Pantagruel* (1532), lettre de Gargantua — orthographe modernisée"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’éducation perfectionne l’homme",
+       "La lettre réclame langues anciennes, histoire, sciences, médecine",
+       "?"
+      ],
+      [
+       "Le rire est une arme",
+       "Il ridiculise les vieux savoirs de la scolastique",
+       "L’écolier limousin et son français latinisé"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui dit ce que devient l’âme quand la science n’a pas de conscience.",
+     "aide": "Cherche le mot qui évoque un effondrement.",
+     "explication": "Sans conscience, la science n’est que **ruine** de l’âme : le savoir doit s’accompagner d’une exigence morale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La phrase sur la science et la conscience",
+      "Le procès de Baisecul et Humevesne",
+      "La guerre contre le géant Loup-Garou",
+      "La naissance de Pantagruel pendant la sécheresse"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple qui parle d’éducation et de savoir.",
+     "explication": "La phrase de la lettre de Gargantua résume le **programme humaniste** : un savoir au service de l’homme."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : Rabelais le propose, ou il s’en moque ?",
+     "categories": [
+      "Il le propose",
+      "Il s’en moque"
+     ],
+     "items": [
+      [
+       "Apprendre les langues anciennes",
+       0
+      ],
+      [
+       "Étudier la médecine et les sciences",
+       0
+      ],
+      [
+       "Le français latinisé de l’écolier limousin",
+       1
+      ],
+      [
+       "Les plaidoiries incompréhensibles du procès",
+       1
+      ]
+     ],
+     "aide": "Distingue le programme de la lettre et les cibles de la satire.",
+     "explication": "Rabelais **propose** les langues anciennes et les sciences ; il **se moque** du français latinisé et des plaidoiries incompréhensibles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation sur l’humanisme cette phrase appuie-t-elle ?",
+     "options": [
+      "L’homme se perfectionne par l’éducation et la conscience",
+      "L’homme n’a plus rien à apprendre depuis l’Antiquité",
+      "L’éducation est inutile à qui possède déjà la foi",
+      "Le savoir est dangereux et doit rester caché"
+     ],
+     "reponse": 0,
+     "aide": "Pense au programme de la lettre : apprendre, mais aussi se conduire bien.",
+     "explication": "L’**éducation** perfectionne l’homme, à condition d’y joindre la **conscience** : c’est la leçon humaniste."
+    }
+   ]
+  },
+  {
+   "chapitre": "af6e9125-0bfc-5b69-be53-f185ad755def",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une famille du Havre",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Pierre et Jean*. Situe le roman, puis dis qui est qui dans la famille Roland.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Pierre et Jean",
+     "sousTitre": "Guy de Maupassant",
+     "emoji": "⚓",
+     "lignes": [
+      {
+       "texte": "Publication",
+       "valeur": "1888",
+       "id": "pub"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Le Havre",
+       "id": "lieu"
+      },
+      {
+       "texte": "Maître",
+       "valeur": "Flaubert",
+       "id": "maitre"
+      },
+      {
+       "texte": "Préface",
+       "valeur": "« Le Roman »",
+       "id": "preface"
+      }
+     ],
+     "pied": "Roman court, construction parfaite",
+     "teinte": "bleu"
+    },
+    {
+     "id": "roland",
+     "type": "tableau",
+     "titre": "La famille Roland",
+     "colonnes": [
+      "Personnage",
+      "Ce qui le définit"
+     ],
+     "lignes": [
+      [
+       "Pierre",
+       "L’aîné, médecin, jaloux et lucide"
+      ],
+      [
+       "Jean",
+       "Le cadet, avocat, l’héritier"
+      ],
+      [
+       "Madame Roland",
+       "?"
+      ],
+      [
+       "Le père Roland",
+       "Ancien bijoutier, passionné de pêche"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche la ligne qui dit en quelle année le roman paraît.",
+     "aide": "Cherche une année.",
+     "explication": "Le roman paraît en **1888**, précédé de l’essai « Le Roman »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le décor du roman.",
+     "texte": "L’action se passe au ___, un port de ___.",
+     "reponses": [
+      [
+       "Havre"
+      ],
+      [
+       "Normandie"
+      ]
+     ],
+     "banque": [
+      "Havre",
+      "Normandie",
+      "Bretagne",
+      "Rouen",
+      "Marseille"
+     ],
+     "aide": "Le décor est celui que Maupassant connaît depuis l’enfance.",
+     "explication": "L’action se passe au **Havre**, port de **Normandie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire pour Madame Roland (la case « ? ») ?",
+     "options": [
+      "La mère, qui porte un secret ancien",
+      "La sœur de Pierre, jalouse de l’héritage",
+      "La jeune veuve que Jean va épouser",
+      "La servante qui découvre le testament"
+     ],
+     "reponse": 0,
+     "aide": "Tout le roman tourne autour d’un secret que seule une personne connaît depuis longtemps.",
+     "explication": "Madame Roland est la **mère**, qui porte un **secret ancien** : c’est ce secret que Pierre devine."
+    }
+   ]
+  },
+  {
+   "chapitre": "af6e9125-0bfc-5b69-be53-f185ad755def",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pierre mène l’enquête",
+   "competence": "analyser-document",
+   "situation": "Un legs tombe sur Jean, rien sur Pierre : pourquoi ? Suis l’enquête intérieure de Pierre.",
+   "documents": [
+    {
+     "id": "enquete",
+     "type": "chaine",
+     "titre": "L’enquête de Pierre",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Maréchal lègue toute sa fortune à Jean seul"
+      },
+      {
+       "id": "n2",
+       "texte": "Pierre se demande pourquoi ce legs à un seul"
+      },
+      {
+       "id": "n3",
+       "texte": "Il relève des indices (portrait disparu, dates)"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il s’embarque comme médecin de bord"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que découvre Pierre (la case « ? ») ?",
+     "options": [
+      "Jean est le fils de Maréchal : leur mère a trompé son père",
+      "Maréchal est un escroc qui a ruiné la famille",
+      "Le père Roland a menti sur ses dettes",
+      "Jean est un fils adoptif, abandonné à sa naissance"
+     ],
+     "reponse": 0,
+     "aide": "Le legs n’est pas un hasard : un lien secret unit Maréchal et Jean.",
+     "explication": "Par déduction, Pierre comprend que **Jean est le fils de Maréchal** : leur mère a trompé son père."
+    },
+    {
+     "type": "zone",
+     "document": "enquete",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Pierre rassemble les indices.",
+     "aide": "Cherche le mot « indices ».",
+     "explication": "Pierre relève des **indices** : un portrait disparu, des dates, une phrase de serveuse."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son attitude.",
+     "paires": [
+      [
+       "Pierre",
+       "Il mène l’enquête, jaloux et lucide"
+      ],
+      [
+       "Jean",
+       "Il est l’héritier et l’avocat, calme"
+      ],
+      [
+       "Le père Roland",
+       "Il ne s’étonne de rien"
+      ],
+      [
+       "Madame Roland",
+       "Elle finit par avouer à Jean"
+      ]
+     ],
+     "aide": "Chacun réagit différemment au secret.",
+     "explication": "**Pierre** enquête, **Jean** hérite, le **père** ne voit rien, la **mère** avoue."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quel point de vue le roman est-il surtout raconté ?",
+     "options": [
+      "Celui de Pierre, qui mène l’enquête",
+      "Celui du père Roland, naïf et heureux",
+      "Celui de Maréchal, après sa mort",
+      "Celui de Madame Rosémilly, spectatrice"
+     ],
+     "reponse": 0,
+     "aide": "C’est le personnage qui soupçonne et cherche.",
+     "explication": "Le lecteur suit le **point de vue de Pierre** : il mène l’enquête avec lui."
+    }
+   ]
+  },
+  {
+   "chapitre": "af6e9125-0bfc-5b69-be53-f185ad755def",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faire vrai, ce n’est pas tout dire",
+   "competence": "argumenter",
+   "situation": "Dans la préface de *Pierre et Jean*, Maupassant s’explique sur le réalisme. Deux élèves en tirent deux lectures : à toi de trancher.",
+   "documents": [
+    {
+     "id": "preface",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Extrait de la préface « Le Roman »",
+     "blocs": [
+      "Le réaliste, s’il est un artiste, cherchera, non pas à nous montrer la [[p|photographie]] banale de la vie, mais à nous en donner la vision plus complète, plus saisissante, plus probante que la réalité même.",
+      "Faire vrai consiste donc à donner l’[[i|illusion]] complète du vrai."
+     ],
+     "source": "Guy de Maupassant, préface de *Pierre et Jean*, « Le Roman » (1888)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "Le réaliste enregistre tout, comme un appareil photo."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Maupassant dit l’inverse : il choisit et compose pour donner l’illusion du vrai."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "preface",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot que Maupassant refuse comme modèle du roman.",
+     "aide": "Un procédé d’enregistrement du réel.",
+     "explication": "Maupassant refuse la **photographie** banale de la vie : le roman ne copie pas le réel, il le compose."
+    },
+    {
+     "type": "zone",
+     "document": "preface",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui dit ce que doit produire le romancier.",
+     "aide": "Faire vrai, ce n’est pas être vrai.",
+     "explication": "Il faut donner l’**illusion** complète du vrai : un effet, non une copie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle des deux lectures le texte confirme-t-il ?",
+     "options": [
+      "Celle de Maya : le romancier choisit et compose",
+      "Celle de Léo : le romancier enregistre tout",
+      "Aucune : Maupassant refuse le réalisme",
+      "Les deux : tout est vrai dans un roman"
+     ],
+     "reponse": 0,
+     "aide": "Relis les mots de la préface : « non pas… mais… ».",
+     "explication": "Maupassant refuse la photographie : le romancier **choisit** et compose pour donner l’illusion du vrai."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : le réaliste de Maupassant le fait, ou le refuse ?",
+     "categories": [
+      "Il le fait",
+      "Il le refuse"
+     ],
+     "items": [
+      [
+       "Choisir et composer",
+       0
+      ],
+      [
+       "Donner l’illusion du vrai",
+       0
+      ],
+      [
+       "Enregistrer tout comme un appareil",
+       1
+      ],
+      [
+       "Montrer la photographie banale de la vie",
+       1
+      ]
+     ],
+     "aide": "Distingue la composition de l’enregistrement.",
+     "explication": "Il **choisit** et donne l’**illusion** du vrai ; il **refuse** de tout enregistrer et de photographier la vie."
+    }
+   ]
+  }
+ ]
+}

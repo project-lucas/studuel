@@ -5,6 +5,7 @@ import {
   isHudHidden,
   isHudLevelHidden,
   isHudOverDarkScene,
+  isHudQuetesMasquee,
   isHudSerieMasquee,
 } from './top-hud-routes'
 
@@ -119,5 +120,18 @@ describe('isHudSerieMasquee', () => {
     expect(isHudSerieMasquee('/reviser/maths')).toBe(false)
     expect(isHudSerieMasquee('/amis')).toBe(false)
     expect(isHudSerieMasquee('/tresor')).toBe(false)
+  })
+})
+
+describe('isHudQuetesMasquee', () => {
+  it('laisse la place à la puce de classe sur l’accueil Réviser, et à la tuile sur l’arène', () => {
+    expect(isHudQuetesMasquee('/reviser')).toBe(true)
+    expect(isHudQuetesMasquee('/defi')).toBe(true)
+  })
+
+  it('montre les quêtes partout ailleurs', () => {
+    expect(isHudQuetesMasquee('/reviser/maths')).toBe(false)
+    expect(isHudQuetesMasquee('/amis')).toBe(false)
+    expect(isHudQuetesMasquee('/moi')).toBe(false)
   })
 })

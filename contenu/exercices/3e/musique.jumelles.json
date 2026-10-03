@@ -1,0 +1,1286 @@
+{
+ "niveau": "3e",
+ "matiere": "musique",
+ "exercices": [
+  {
+   "chapitre": "156d9533-7e67-52df-a7be-f157c8dab31b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plan de la chanson de Lila",
+   "competence": "observer-schema",
+   "situation": "Lila a découpé sa chanson préférée en parties et leur a donné une lettre : une même lettre pour une même musique. Elle les a posées dans l’ordre, de gauche à droite.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Le plan de la chanson",
+     "largeur": 320,
+     "hauteur": 160,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 50,
+       "l": 50,
+       "h": 50,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a1",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 75,
+       "y": 50,
+       "l": 50,
+       "h": 50,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "b",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 50,
+       "l": 50,
+       "h": 50,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a2",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "rect",
+       "x": 185,
+       "y": 50,
+       "l": 50,
+       "h": 50,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "c",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 50,
+       "l": 50,
+       "h": 50,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "a3",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        125
+       ],
+       "a": [
+        290,
+        125
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 155,
+       "y": 148,
+       "texte": "Le temps",
+       "ancre": "milieu",
+       "italique": true,
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le thème **A** est-il joué dans cette chanson ?",
+     "reponse": 3,
+     "aide": "Compte les parties qui portent la lettre A.",
+     "explication": "Le thème A est joué **3 fois** : au début, au milieu et à la fin."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche **le dernier épisode contrasté**, celui qui arrive juste avant le dernier retour du thème.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Les épisodes contrastés sont ceux qui ne portent pas la lettre A.",
+     "explication": "L’épisode **C** est le dernier épisode contrasté : le thème A revient ensuite pour finir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment s’appelle une forme où un thème principal revient entre des épisodes contrastés (A-B-A-C-A) ?",
+     "options": [
+      "Un rondo",
+      "Un canon",
+      "Une fugue",
+      "Une forme strophique"
+     ],
+     "reponse": 0,
+     "aide": "Cette forme est fondée sur le retour du thème A.",
+     "explication": "C’est un **rondo** : A-B-A-C-A. La forme repose sur le **retour** du thème principal."
+    }
+   ]
+  },
+  {
+   "chapitre": "156d9533-7e67-52df-a7be-f157c8dab31b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chansons et canon",
+   "competence": "analyser-document",
+   "situation": "Trois amis comparent les chansons qu’ils chantent en classe. Puis le professeur leur montre comment un canon se construit voix par voix.",
+   "documents": [
+    {
+     "id": "chansons",
+     "type": "tableau",
+     "titre": "Trois chansons",
+     "colonnes": [
+      "Chanson",
+      "Ce qu’on entend"
+     ],
+     "lignes": [
+      [
+       "Chanson de Mia",
+       "Le thème, le thème encore, un pont différent, puis le thème de nouveau"
+      ],
+      [
+       "Chanson d’Ali",
+       "Un refrain identique qui revient entre des couplets"
+      ],
+      [
+       "Chanson de Sam",
+       "Un même air chanté sur des paroles différentes à chaque strophe"
+      ]
+     ],
+     "source": "Chansons imaginées pour l’exercice"
+    },
+    {
+     "id": "canon",
+     "type": "schema",
+     "titre": "Un canon à deux voix",
+     "largeur": 320,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 62,
+       "texte": "Voix 1",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 40,
+       "l": 37,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "v1m1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 40,
+       "l": 37,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "v1m2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 40,
+       "l": 37,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "v1m3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 40,
+       "l": 37,
+       "h": 30,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "v1m4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 112,
+       "texte": "Voix 2",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 90,
+       "l": 37,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "v2m1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 90,
+       "l": 37,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "v2m2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 90,
+       "l": 37,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "v2m3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 260,
+       "y": 90,
+       "l": 37,
+       "h": 30,
+       "teinte": "turquoise",
+       "motif": "plein",
+       "id": "v2m4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 150,
+       "texte": "Mesures 1 à 6",
+       "ancre": "milieu",
+       "italique": true,
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque chanson à sa forme.",
+     "paires": [
+      [
+       "Chanson de Mia",
+       "AABA"
+      ],
+      [
+       "Chanson d’Ali",
+       "Couplet-refrain"
+      ],
+      [
+       "Chanson de Sam",
+       "Forme strophique"
+      ]
+     ],
+     "aide": "Cherche ce qui revient identique, et ce qui change.",
+     "explication": "Mia : **AABA** (deux fois le thème, un pont, le thème). Ali : **couplet-refrain**. Sam : **strophique** (même air, paroles différentes)."
+    },
+    {
+     "type": "zone",
+     "document": "canon",
+     "enonce": "Touche **l’entrée de la deuxième voix**.",
+     "reponse": [
+      "v2m1"
+     ],
+     "aide": "Cherche le premier bloc de la voix 2.",
+     "explication": "La voix 2 entre à la **mesure 3** : elle imite la voix 1 à distance."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle mesure la deuxième voix commence-t-elle ?",
+     "reponse": 3,
+     "aide": "Compte les mesures depuis le début de la ligne de la voix 1.",
+     "explication": "La voix 2 commence à la **mesure 3** : elle est décalée de 2 mesures."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait la deuxième voix d’un canon ?",
+     "options": [
+      "Elle imite exactement la première, à distance",
+      "Elle chante une mélodie sans rapport",
+      "Elle chante la même chose en même temps",
+      "Elle change de thème à chaque mesure"
+     ],
+     "reponse": 0,
+     "aide": "*Frère Jacques* est un exemple classique de canon.",
+     "explication": "Dans un canon, une voix **imite exactement** une autre, à distance."
+    }
+   ]
+  },
+  {
+   "chapitre": "156d9533-7e67-52df-a7be-f157c8dab31b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Variations et fugue au concert",
+   "competence": "analyser-document",
+   "situation": "Au concert de fin de trimestre, un pianiste joue un thème avec ses variations, puis l’orchestre enchaîne une fugue. Clara note tout ce qu’elle entend.",
+   "documents": [
+    {
+     "id": "variations",
+     "type": "tableau",
+     "titre": "Le thème et ses variations",
+     "colonnes": [
+      "Passage",
+      "Ce qu’on entend"
+     ],
+     "lignes": [
+      [
+       "Thème",
+       "Une mélodie simple, au piano"
+      ],
+      [
+       "Variation 1",
+       "La même mélodie, deux fois plus vite"
+      ],
+      [
+       "Variation 2",
+       "La même mélodie, mais en mode mineur"
+      ],
+      [
+       "Variation 3",
+       "La même mélodie, confiée aux cuivres"
+      ],
+      [
+       "Variation 4",
+       "Une tout autre mélodie, sans rapport avec le thème"
+      ]
+     ],
+     "source": "Programme imaginé pour l’exercice"
+    },
+    {
+     "id": "fugue",
+     "type": "schema",
+     "titre": "Le début de la fugue",
+     "largeur": 320,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 52,
+       "texte": "Voix 1",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 32,
+       "l": 57,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "s1",
+       "zone": true,
+       "texte": "S"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 32,
+       "l": 57,
+       "h": 28,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "e11",
+       "zone": true,
+       "texte": "É"
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 32,
+       "l": 57,
+       "h": 28,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "e12",
+       "zone": true,
+       "texte": "É"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 92,
+       "texte": "Voix 2",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 72,
+       "l": 57,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "r2",
+       "zone": true,
+       "texte": "R"
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 72,
+       "l": 57,
+       "h": 28,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "e21",
+       "zone": true,
+       "texte": "É"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 132,
+       "texte": "Voix 3",
+       "ancre": "debut",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 112,
+       "l": 57,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "s3",
+       "zone": true,
+       "texte": "S"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 175,
+       "texte": "S : sujet · R : réponse · É : épisode",
+       "ancre": "milieu",
+       "italique": true,
+       "taille": "petit"
+      }
+     ],
+     "source": "Schéma dessiné pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque variation à ce qui a changé par rapport au thème.",
+     "paires": [
+      [
+       "Variation 1",
+       "Le rythme"
+      ],
+      [
+       "Variation 2",
+       "Le mode"
+      ],
+      [
+       "Variation 3",
+       "L’instrumentation"
+      ]
+     ],
+     "aide": "Une variation change un seul aspect : rythme, harmonie, mode ou instrumentation.",
+     "explication": "Variation 1 : le **rythme** (deux fois plus vite). Variation 2 : le **mode** (mineur). Variation 3 : l’**instrumentation** (les cuivres)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel passage du tableau n’est **pas** une vraie variation ?",
+     "options": [
+      "Variation 4",
+      "Variation 1",
+      "Variation 2",
+      "Variation 3"
+     ],
+     "reponse": 0,
+     "aide": "Dans un thème et variations, le thème reste reconnaissable sous ses déguisements.",
+     "explication": "La **variation 4** n’en est pas une : on n’y reconnaît plus le thème, alors qu’une variation doit le garder reconnaissable."
+    },
+    {
+     "type": "zone",
+     "document": "fugue",
+     "enonce": "Touche **la réponse**, c’est-à-dire l’entrée de la deuxième voix qui reprend le sujet.",
+     "reponse": [
+      "r2"
+     ],
+     "aide": "Cherche la lettre R dans la légende, puis dans le schéma.",
+     "explication": "La **réponse** (R) est l’entrée de la voix 2 : elle reprend le sujet exposé par la voix 1."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la structure d’une fugue.",
+     "texte": "Dans une fugue, on entend un ___, une ___ et des ___ qui s’enchaînent.",
+     "reponses": [
+      [
+       "sujet"
+      ],
+      [
+       "réponse",
+       "reponse"
+      ],
+      [
+       "épisodes",
+       "episodes"
+      ]
+     ],
+     "banque": [
+      "sujet",
+      "réponse",
+      "épisodes",
+      "refrain",
+      "couplets"
+     ],
+     "aide": "Regarde la légende du schéma : trois éléments y sont nommés.",
+     "explication": "Une fugue enchaîne un **sujet**, une **réponse** et des **épisodes** : c’est l’imitation développée de façon savante."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea41dd41-f83d-562b-8b82-440cfa1f0424",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une frise pour situer Bach, Mozart et Berlioz",
+   "competence": "se-reperer-temps",
+   "situation": "Inès prépare un exposé sur la musique de 1600 à 1900. Elle dessine une frise sur laquelle elle place trois périodes et trois dates importantes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La musique de 1600 à 1900",
+     "debut": 1600,
+     "fin": 1900,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "baroque",
+       "debut": 1600,
+       "fin": 1750,
+       "nom": "Baroque",
+       "teinte": "ambre"
+      },
+      {
+       "id": "classique",
+       "debut": 1750,
+       "fin": 1820,
+       "nom": "Classique",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "romantique",
+       "debut": 1820,
+       "fin": 1900,
+       "nom": "Romantique",
+       "teinte": "rose"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "bach",
+       "date": 1685,
+       "nom": "Naissance de Bach"
+      },
+      {
+       "id": "mozart",
+       "date": 1791,
+       "nom": "Mort de Mozart"
+      },
+      {
+       "id": "berlioz",
+       "date": 1830,
+       "nom": "Symphonie fantastique"
+      }
+     ],
+     "source": "Dates exactes ; périodes d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période qui cherche avant tout **l’expression du sentiment**.",
+     "reponse": [
+      "romantique"
+     ],
+     "aide": "Pense à Chopin, Berlioz et Wagner : l’ampleur et l’émotion dominent.",
+     "explication": "C’est la période **romantique** (1820-1900) : elle cherche avant tout à exprimer le sentiment."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque période à un compositeur qui la représente.",
+     "paires": [
+      [
+       "Baroque",
+       "Vivaldi"
+      ],
+      [
+       "Classique",
+       "Mozart"
+      ],
+      [
+       "Romantique",
+       "Chopin"
+      ]
+     ],
+     "aide": "Vivaldi est l’auteur des *Quatre Saisons*, Mozart est mort en 1791, Chopin a écrit pour le piano au XIXe siècle.",
+     "explication": "Vivaldi est **baroque**, Mozart est **classique**, Chopin est **romantique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la période baroque sur la frise ?",
+     "unite": "ans",
+     "reponse": 150,
+     "aide": "Soustrais la date de début de la date de fin de la période.",
+     "explication": "La période baroque va de 1600 à 1750 : 1750 − 1600 = **150 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea41dd41-f83d-562b-8b82-440cfa1f0424",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre extraits mystère",
+   "competence": "analyser-document",
+   "situation": "Le professeur de musique fait écouter quatre extraits mystère. Il a noté ce qu’on y entend et demande aux élèves de retrouver la période de chacun.",
+   "documents": [
+    {
+     "id": "extraits",
+     "type": "tableau",
+     "titre": "Ce qu’on entend dans chaque extrait",
+     "colonnes": [
+      "Les extraits"
+     ],
+     "lignes": [
+      [
+       "Extrait A : un seul chant, en latin, sans accompagnement"
+      ],
+      [
+       "Extrait B : quatre voix indépendantes qui se superposent, sans instruments"
+      ],
+      [
+       "Extrait C : un violon soliste qui dialogue avec l’orchestre"
+      ],
+      [
+       "Extrait D : un orchestre aux phrases claires et équilibrées"
+      ]
+     ],
+     "source": "Extraits décrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque extrait à sa période.",
+     "paires": [
+      [
+       "Extrait A",
+       "Moyen Âge"
+      ],
+      [
+       "Extrait B",
+       "Renaissance"
+      ],
+      [
+       "Extrait C",
+       "Baroque"
+      ],
+      [
+       "Extrait D",
+       "Classique"
+      ]
+     ],
+     "aide": "Chant grégorien, polyphonie, concerto, équilibre : chaque indice appartient à une période.",
+     "explication": "A est un **chant grégorien** (Moyen Âge, monodique). B est de la **polyphonie** (Renaissance). C est un **concerto** (baroque). D cherche l’**équilibre** et la clarté (classique)."
+    },
+    {
+     "type": "zone",
+     "document": "extraits",
+     "enonce": "Touche l’extrait qui illustre **le concerto**, forme baroque qui oppose un soliste à l’orchestre.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche un soliste face à l’orchestre.",
+     "explication": "L’extrait C met en scène un **violon soliste** face à l’**orchestre** : c’est un concerto, forme baroque."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces périodes **dans l’ordre chronologique**.",
+     "items": [
+      "Moyen Âge",
+      "Renaissance",
+      "Baroque",
+      "Classique",
+      "Romantique"
+     ],
+     "aide": "Moyen Âge, puis XVe-XVIe siècles, puis 1600-1750, puis 1750-1820, puis 1820-1900.",
+     "explication": "Dans l’ordre : **Moyen Âge**, **Renaissance**, **baroque** (1600-1750), **classique** (1750-1820), **romantique** (1820-1900)."
+    }
+   ]
+  },
+  {
+   "chapitre": "ea41dd41-f83d-562b-8b82-440cfa1f0424",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De Vivaldi à Stravinsky",
+   "competence": "se-reperer-temps",
+   "situation": "Une exposition retrace quatre siècles de musique. Mehdi compare la frise et le tableau des œuvres pour comprendre comment le style change d’une période à l’autre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De 1600 à 2000",
+     "debut": 1600,
+     "fin": 2000,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "baroque",
+       "debut": 1600,
+       "fin": 1750,
+       "nom": "Baroque",
+       "teinte": "ambre"
+      },
+      {
+       "id": "classique",
+       "debut": 1750,
+       "fin": 1820,
+       "nom": "Classique",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "romantique",
+       "debut": 1820,
+       "fin": 1900,
+       "nom": "Romantique",
+       "teinte": "rose"
+      },
+      {
+       "id": "xx",
+       "debut": 1900,
+       "fin": 2000,
+       "nom": "XXe siècle",
+       "teinte": "bleu"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "bach",
+       "date": 1685,
+       "nom": "Naissance de Bach"
+      },
+      {
+       "id": "mozart",
+       "date": 1791,
+       "nom": "Mort de Mozart"
+      },
+      {
+       "id": "sacre",
+       "date": 1913,
+       "nom": "Le Sacre du printemps"
+      }
+     ]
+    },
+    {
+     "id": "oeuvres",
+     "type": "tableau",
+     "titre": "Quatre œuvres célèbres",
+     "colonnes": [
+      "Œuvre",
+      "Compositeur",
+      "Année"
+     ],
+     "lignes": [
+      [
+       "Les Quatre Saisons",
+       "Vivaldi",
+       1725
+      ],
+      [
+       "Symphonie n° 40",
+       "Mozart",
+       1788
+      ],
+      [
+       "Symphonie fantastique",
+       "Berlioz",
+       1830
+      ],
+      [
+       "Le Sacre du printemps",
+       "Stravinsky",
+       1913
+      ]
+     ],
+     "source": "Dates exactes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui a lieu **au XXe siècle**.",
+     "reponse": [
+      "sacre"
+     ],
+     "aide": "Cherche une date après 1900.",
+     "explication": "*Le Sacre du printemps* date de **1913** : c’est un événement du XXe siècle."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces œuvres **de la plus ancienne à la plus récente**.",
+     "items": [
+      "Les Quatre Saisons",
+      "Symphonie n° 40",
+      "Symphonie fantastique",
+      "Le Sacre du printemps"
+     ],
+     "aide": "Utilise la colonne « Année » du tableau.",
+     "explication": "D’après le tableau : *Les Quatre Saisons* (1725), la *Symphonie n° 40* (1788), la *Symphonie fantastique* (1830), puis *Le Sacre du printemps* (1913)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Les Quatre Saisons* de la *Symphonie fantastique* ?",
+     "unite": "ans",
+     "reponse": 105,
+     "aide": "Soustrais l’année de la première œuvre de celle de la seconde.",
+     "explication": "1830 − 1725 = **105 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque compositeur dans sa période.",
+     "categories": [
+      "Baroque",
+      "Classique",
+      "Romantique",
+      "XXe siècle"
+     ],
+     "items": [
+      [
+       "Haendel",
+       0
+      ],
+      [
+       "Haydn",
+       1
+      ],
+      [
+       "Chopin",
+       2
+      ],
+      [
+       "Stravinsky",
+       3
+      ],
+      [
+       "Bach",
+       0
+      ],
+      [
+       "Mozart",
+       1
+      ],
+      [
+       "Berlioz",
+       2
+      ],
+      [
+       "Debussy",
+       3
+      ]
+     ],
+     "aide": "Les périodes à placer sont celles de la frise ; Debussy et Stravinsky ont rompu avec la tonalité.",
+     "explication": "Baroque : Bach, Haendel. Classique : Haydn, Mozart. Romantique : Chopin, Berlioz. XXe siècle : Debussy, Stravinsky."
+    }
+   ]
+  },
+  {
+   "chapitre": "92c5d2b7-43ec-54ef-9361-688791db8deb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La playlist de Nora",
+   "competence": "analyser-document",
+   "situation": "Nora a construit une playlist avec des musiques qui racontent quelque chose de la société. Avant de la partager à la classe, elle décrit chaque piste.",
+   "documents": [
+    {
+     "id": "playlist",
+     "type": "fiche",
+     "modele": "horaires",
+     "titre": "La playlist de Nora",
+     "entete": "Playlist de Nora",
+     "sousTitre": "Quatre musiques, quatre voix",
+     "emoji": "🎧",
+     "lignes": [
+      {
+       "texte": "Un chant lent, voix grave et guitare, venu du Sud des États-Unis",
+       "valeur": "Piste 1",
+       "id": "blues"
+      },
+      {
+       "texte": "Un chanteur dénonce la guerre dans une chanson à texte",
+       "valeur": "Piste 2",
+       "id": "engagee"
+      },
+      {
+       "texte": "Un rappeur raconte la vie de son quartier",
+       "valeur": "Piste 3",
+       "id": "rap"
+      },
+      {
+       "texte": "Un chant repris en chœur à chaque manifestation",
+       "valeur": "Piste 4",
+       "id": "hymne"
+      }
+     ],
+     "pied": "Playlist imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque piste au genre musical qui lui correspond.",
+     "paires": [
+      [
+       "Chant lent venu du Sud des États-Unis",
+       "Blues"
+      ],
+      [
+       "Chanteur qui dénonce la guerre",
+       "Chanson engagée"
+      ],
+      [
+       "Rappeur et son quartier",
+       "Rap"
+      ],
+      [
+       "Chant repris en manifestation",
+       "Hymne de lutte"
+      ]
+     ],
+     "aide": "Chaque genre a une origine ou une fonction sociale précise.",
+     "explication": "Piste 1 : **blues**. Piste 2 : **chanson engagée**. Piste 3 : **rap**, parole des quartiers. Piste 4 : **hymne** de mouvement social."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que Nora dit du blues.",
+     "texte": "Le blues est né de l’expérience de l’___ et de la ___.",
+     "reponses": [
+      [
+       "esclavage"
+      ],
+      [
+       "ségrégation",
+       "segregation"
+      ]
+     ],
+     "banque": [
+      "esclavage",
+      "ségrégation",
+      "colonisation",
+      "guerre"
+     ],
+     "aide": "Le blues vient de la communauté noire du Sud des États-Unis.",
+     "explication": "Le blues est né de l’**esclavage** et de la **ségrégation**."
+    },
+    {
+     "type": "zone",
+     "document": "playlist",
+     "enonce": "Touche la piste qui **soude ceux qui luttent** ensemble en leur donnant une voix collective.",
+     "reponse": [
+      "hymne"
+     ],
+     "aide": "Cherche le chant que toute une foule peut reprendre.",
+     "explication": "L’**hymne de mouvement social** donne une voix collective et assure la cohésion d’une lutte."
+    }
+   ]
+  },
+  {
+   "chapitre": "92c5d2b7-43ec-54ef-9361-688791db8deb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La radio de Karvia et le film d’Emma",
+   "competence": "analyser-texte",
+   "situation": "Émilie lit un article sur un pays imaginaire, puis une conversation entre deux amis qui sortent d’un film. Dans les deux cas, la musique joue un rôle bien précis.",
+   "documents": [
+    {
+     "id": "karvia",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Karvia : la radio d’État",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Depuis le coup d’État, la radio n’a le droit de diffuser que des marches qui célèbrent le Général.",
+      "Le chanteur Mirek, dont les chansons se moquaient du régime, ne peut plus se produire : ses disques ont été retirés des magasins.",
+      "Chaque matin, les élèves chantent l’hymne du pays, pour se sentir membres d’un même peuple.",
+      "Avant d’être diffusée, chaque chanson doit être lue par un comité qui supprime les couplets jugés dangereux."
+     ]
+    },
+    {
+     "id": "film",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "🧑",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Emma",
+       "texte": "La musique devient grave et lente juste avant l’apparition du monstre."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Et j’ai adoré la valse légère pendant la bagarre !"
+      },
+      {
+       "qui": "Emma",
+       "texte": "Quand le héros pleure, l’orchestre monte avec lui. Et la flûte de Luna revient à chaque fois qu’elle entre."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque fait de l’article au procédé de pouvoir qu’il illustre.",
+     "paires": [
+      [
+       "Des marches qui célèbrent le Général",
+       "Musique officielle"
+      ],
+      [
+       "Les disques de Mirek retirés",
+       "Artiste interdit"
+      ],
+      [
+       "L’hymne chanté chaque matin",
+       "Fabriquer l’unité"
+      ],
+      [
+       "Un comité qui coupe des couplets",
+       "Censure"
+      ]
+     ],
+     "aide": "Relis chaque paragraphe : que fait le régime de la musique ?",
+     "explication": "Marches : **musique officielle**. Disques retirés : **artiste interdit**. Hymne quotidien : fabriquer l’**unité**. Comité : **censure**, qui fait taire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque passage du film selon le rôle de la musique.",
+     "categories": [
+      "Elle anticipe",
+      "Elle contredit",
+      "Elle soutient"
+     ],
+     "items": [
+      [
+       "La musique grave avant le monstre",
+       0
+      ],
+      [
+       "La valse légère pendant la bagarre",
+       1
+      ],
+      [
+       "L’orchestre qui monte quand le héros pleure",
+       2
+      ]
+     ],
+     "aide": "Une musique peut prévenir d’un danger, aller à l’inverse de l’image ou amplifier l’émotion.",
+     "explication": "Grave avant le monstre : elle **anticipe**. Valse pendant la bagarre : elle **contredit**. Orchestre qui monte avec le héros : elle **soutient**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment s’appelle un thème musical associé à un personnage, comme la flûte de Luna ? (un mot)",
+     "reponse": [
+      "leitmotiv",
+      "un leitmotiv",
+      "le leitmotiv"
+     ],
+     "aide": "Ce mot vient de l’allemand et désigne un thème qui revient.",
+     "explication": "C’est un **leitmotiv** : un thème musical associé à un personnage ou à une idée."
+    }
+   ]
+  },
+  {
+   "chapitre": "92c5d2b7-43ec-54ef-9361-688791db8deb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du disque au streaming",
+   "competence": "lire-graphique",
+   "situation": "Un magazine a mesuré, en pourcentage, comment les gens écoutent leur musique depuis 2005. Rayan lit le graphique et un extrait sur le fonctionnement d’une plateforme pour comprendre ce qui a changé.",
+   "documents": [
+    {
+     "id": "supports",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Comment on écoute la musique",
+     "categories": [
+      "2005",
+      "2010",
+      "2015",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "CD et disques",
+       "valeurs": [
+        85,
+        65,
+        35,
+        10
+       ],
+       "teinte": "gris"
+      },
+      {
+       "nom": "Téléchargement",
+       "valeurs": [
+        15,
+        30,
+        25,
+        10
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Streaming",
+       "valeurs": [
+        0,
+        5,
+        40,
+        80
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des écoutes",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Chiffres imaginés pour l’exercice"
+    },
+    {
+     "id": "melodia",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Sur la plateforme Mélodia",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chaque matin, chaque abonné de Mélodia voit une liste « pour vous ».",
+      "Elle est composée par un algorithme, qui retient les titres écoutés jusqu’au bout et propose des titres proches.",
+      "Un artiste peu recommandé a donc peu de chances d’être découvert."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part du **streaming** a-t-elle augmenté entre 2015 et 2020 ?",
+     "unite": "points",
+     "reponse": 40,
+     "aide": "Repère la série « Streaming » dans la légende, puis lis sa barre pour chacune des deux années.",
+     "explication": "Le streaming passe de 40 % en 2015 à 80 % en 2020 : 80 − 40 = **40 points**."
+    },
+    {
+     "type": "zone",
+     "document": "supports",
+     "enonce": "Touche **la première année** où le streaming dépasse les CD.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare, année après année, la barre du streaming et celle des CD.",
+     "explication": "En **2015**, le streaming (40 %) dépasse les CD (35 %) pour la première fois ; en 2010, il n’était qu’à 5 %."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque étape de l’industrie musicale à sa transformation.",
+     "paires": [
+      [
+       "Enregistrement",
+       "Il fige et diffuse la musique"
+      ],
+      [
+       "Streaming",
+       "Il rend tout disponible"
+      ],
+      [
+       "Algorithmes",
+       "Ils décident de ce qu’on écoute"
+      ],
+      [
+       "Droit d’auteur",
+       "Il rémunère la création"
+      ]
+     ],
+     "aide": "Chaque étape change la façon dont on produit, découvre ou rémunère la musique.",
+     "explication": "L’**enregistrement** fige et diffuse, le **streaming** rend tout disponible, les **algorithmes** décident en partie de ce qu’on écoute, le **droit d’auteur** rémunère la création."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après l’extrait, que fait l’algorithme de Mélodia ?",
+     "options": [
+      "Il décide en partie de ce que chacun écoute",
+      "Il choisit les titres au hasard",
+      "Il paye les artistes moins connus",
+      "Il remplace l’enregistrement des artistes"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase qui parle de la liste « pour vous ».",
+     "explication": "L’algorithme compose la liste « pour vous » : il **décide en partie de ce qu’on écoute**, donc de ce qu’on découvre."
+    }
+   ]
+  }
+ ]
+}

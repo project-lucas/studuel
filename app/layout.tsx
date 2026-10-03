@@ -28,6 +28,7 @@ import OngletsVivants from "@/components/OngletsVivants";
 // Écran de chargement au lancement, façon jeu mobile (illustration + barre).
 import SplashScreen from "@/components/SplashScreen";
 import LigueVeille from "@/components/LigueVeille";
+import QuetesGlobales from "@/components/quetes/QuetesGlobales";
 import NavAmisBadge from "@/components/amis/ligue/NavAmisBadge";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
 import AppReadyBeacon from "@/components/AppReadyBeacon";
@@ -171,6 +172,9 @@ export default async function RootLayout({
               fait entrer l'élève dans son groupe et lui verse ses gains, même
               s'il n'ouvre pas l'onglet Amis (migration 376). Ne rend rien. */}
           {user ? <LigueVeille /> : null}
+          {/* Les quêtes du jour, partout : relecture, annonce « Quête
+              accomplie » et LA feuille des quêtes (bandeau, arène, Réviser). */}
+          {user ? <QuetesGlobales /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
               repli est une barre vide de même hauteur (aucun saut de mise en
               page). */}

@@ -1,0 +1,2100 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "ad51a34f-08f4-5b41-b96a-a39c0e47b87b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète mort à vingt-sept ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Laforgue pour l’oral. Place son recueil dans sa courte vie, puis relève sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Laforgue de 1880 à 1888",
+     "debut": 1880,
+     "fin": 1888,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "berlin",
+       "debut": 1881,
+       "fin": 1886,
+       "nom": "Lecteur à Berlin",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "pub",
+       "date": 1885,
+       "nom": "Complaintes"
+      },
+      {
+       "id": "mort",
+       "date": 1887,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Complaintes",
+     "sousTitre": "Jules Laforgue",
+     "emoji": "🌙",
+     "lignes": [
+      {
+       "texte": "Né à",
+       "valeur": "Montevideo (Uruguay)"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Cinquante « complaintes »"
+      },
+      {
+       "texte": "Modèle",
+       "valeur": "La complainte de rue : couplets et refrains"
+      },
+      {
+       "texte": "Parution",
+       "valeur": "À compte d’auteur, en 1885"
+      }
+     ],
+     "pied": "Un recueil de chansons de rue pour dire l’ennui",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraissent *Les Complaintes*.",
+     "aide": "Le recueil paraît à compte d’auteur, deux ans avant la mort du poète.",
+     "explication": "Le recueil paraît en **1885**, deux ans avant la mort de Laforgue (1887)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Laforgue passe-t-il à Berlin, comme lecteur de l’impératrice ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Lis les deux bornes de la période colorée sur la frise.",
+     "explication": "De 1881 à 1886 : 1886 − 1881 = **5 ans** de vie de cour, de solitude et d’ennui."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la carte d’identité du recueil.",
+     "texte": "Laforgue naît à ___ ; son recueil reprend la ___ de rue, avec couplets et ___.",
+     "reponses": [
+      [
+       "montevideo"
+      ],
+      [
+       "complainte"
+      ],
+      [
+       "refrains",
+       "refrain"
+      ]
+     ],
+     "banque": [
+      "Montevideo",
+      "Tarbes",
+      "complainte",
+      "ballade",
+      "refrains",
+      "strophes"
+     ],
+     "aide": "Tout est dans la carte d’identité.",
+     "explication": "Laforgue naît à **Montevideo** et reprend la **complainte** de rue, avec couplets et **refrains**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad51a34f-08f4-5b41-b96a-a39c0e47b87b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dimanche en province, à la manière de Laforgue",
+   "competence": "analyser-texte",
+   "situation": "Un pastiche de complainte te met sous les yeux les trouvailles du recueil : un double du poète, une Lune, un mot inventé. Repère-les, puis relie chaque procédé à son effet.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Complainte du dimanche (pastiche)",
+     "blocs": [
+      "Ô dimanche de sous-préfecture, ô ciel de faïence !",
+      "Le piano du notaire pleure sa romance ;",
+      "La [[l|Lune]] se mouche dans les clochers, vieille dame stérile,",
+      "Et [[p|Pierrot]] soupire : « Quel [[m|ennuiversel]] ! »",
+      "Allons, mon cœur, tiens-toi bien : on nous regarde."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Complaintes* de Laforgue"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le personnage qui, dans le recueil, sert de double au poète : le clown mélancolique.",
+     "aide": "Il porte un costume blanc et se plaint à la Lune.",
+     "explication": "**Pierrot**, clown mélancolique, est le double du poète."
+    },
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot-valise inventé, dans l’esprit d’« éternullité ».",
+     "aide": "Cherche un mot qui n’existe pas dans le dictionnaire.",
+     "explication": "**Ennuiversel** est un mot inventé, comme « éternullité » ou « violupté » : Laforgue fabrique des mots-valises."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Laforgue à son effet.",
+     "paires": [
+      [
+       "Le mélange des registres",
+       "Un vocabulaire savant côtoie l’argot"
+      ],
+      [
+       "Les mots inventés",
+       "Des mots-valises comme « éternullité »"
+      ],
+      [
+       "Les clichés déformés",
+       "Le vers est cassé de l’intérieur"
+      ],
+      [
+       "L’ironie",
+       "Elle empêche l’épanchement de devenir ridicule"
+      ]
+     ],
+     "aide": "Chaque procédé a un exemple ou un effet précis dans le cours.",
+     "explication": "Le **mélange des registres**, les **mots inventés**, les **clichés déformés** et l’**ironie** font la modernité du recueil."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel ton domine dans ce pastiche, comme dans le recueil ?",
+     "options": [
+      "Un chagrin pleuré sans aucun recul sur soi",
+      "Une joie franche devant la vie de province",
+      "Une tristesse qui se moque d’elle-même",
+      "Une colère politique contre la sous-préfecture"
+     ],
+     "reponse": 2,
+     "aide": "Relis le dernier vers : le cœur doit « se tenir bien ».",
+     "explication": "La tristesse **se moque d’elle-même** : le dernier vers fait sourire d’une douleur qu’on prend soin de ne pas étaler."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad51a34f-08f4-5b41-b96a-a39c0e47b87b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi rire de sa propre peine ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur Laforgue : celui qui rit de sa souffrance a-t-il souffert ? Tranche avec leur échange, puis construis l’argument et range les influences.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Nils",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Laforgue se moque de ses propres peines : il n’a donc pas vraiment souffert."
+      },
+      {
+       "qui": "Nils",
+       "texte": "Au contraire : l’ironie est une [[p|politesse]]. Elle empêche l’épanchement de devenir ridicule."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Donc rire, c’est une façon de pleurer sans le dire ?"
+      },
+      {
+       "qui": "Nils",
+       "texte": "Oui : c’est dire la souffrance sans la sentimentalité romantique."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "L’humour peut dire une souffrance",
+       "L’ironie empêche l’épanchement de devenir ridicule",
+       "?"
+      ],
+      [
+       "Laforgue annonce la poésie moderne",
+       "Il invente des formes et des mots",
+       "Le vers libre et les mots-valises"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot par lequel Nils définit l’ironie de Laforgue.",
+     "aide": "Nils répond à Maya dans sa deuxième réplique.",
+     "explication": "Nils parle d’une **politesse** : l’ironie évite que la souffrance ne devienne ridicule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du recueil faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La Lune, symbole de stérilité et de rêve froid",
+      "Le pauvre jeune homme, amoureux ridicule qui se sait ridicule",
+      "Le séjour de Laforgue à Berlin, auprès de l’impératrice",
+      "La parution à compte d’auteur, en 1885"
+     ],
+     "reponse": 1,
+     "aide": "Cherche la figure qui rit d’elle-même en souffrant.",
+     "explication": "Le **pauvre jeune homme** est l’amoureux ridicule qui se sait ridicule : l’ironie sert de pudeur."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : ce dont Laforgue hérite, ou ce qui vient après lui.",
+     "categories": [
+      "Ce dont il hérite",
+      "Ce qui vient après lui"
+     ],
+     "items": [
+      [
+       "Il lit Schopenhauer",
+       0
+      ],
+      [
+       "Il reprend la complainte de rue",
+       0
+      ],
+      [
+       "Il se rapproche de Corbière",
+       0
+      ],
+      [
+       "T. S. Eliot le revendique",
+       1
+      ],
+      [
+       "Les surréalistes s’en réclament",
+       1
+      ],
+      [
+       "Il annonce Apollinaire",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si l’élément précède Laforgue ou le prolonge.",
+     "explication": "Il **hérite** de Schopenhauer, de la complainte et de Corbière ; il **transmet** à Eliot, aux surréalistes et à Apollinaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse ce dossier permet-il le mieux de défendre en dissertation ?",
+     "options": [
+      "La poésie doit renoncer aux refrains et à la musique",
+      "La poésie moderne se garde de parler de souffrance",
+      "L’humour peut dire la souffrance sans sentimentalité",
+      "L’ironie rend un poème incapable de toucher son lecteur"
+     ],
+     "reponse": 2,
+     "aide": "Reprends le dernier mot de Nils.",
+     "explication": "L’**humour** dit une souffrance **sans la sentimentalité** romantique : c’est la leçon de modernité de Laforgue."
+    }
+   ]
+  },
+  {
+   "chapitre": "aea2a92b-de8b-5701-9278-46ba825ee585",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un livre publié après la mort de son auteur",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes *Les Confessions* pour ton oral : quand sont-elles écrites, quand paraissent-elles, et de quel genre s’agit-il ?",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Rousseau, de 1760 à 1790",
+     "debut": 1760,
+     "fin": 1790,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "ecr",
+       "debut": 1765,
+       "fin": 1770,
+       "nom": "Écriture",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "mort",
+       "date": 1778,
+       "nom": "Mort"
+      },
+      {
+       "id": "pub",
+       "date": 1782,
+       "nom": "Parution"
+      },
+      {
+       "id": "suite",
+       "date": 1789,
+       "nom": "Suite"
+      }
+     ]
+    },
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Confessions",
+     "sousTitre": "Jean-Jacques Rousseau",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Livres",
+       "valeur": "Douze"
+      },
+      {
+       "texte": "Écriture",
+       "valeur": "1765 à 1770"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "Après la mort de l’auteur"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "?"
+      }
+     ],
+     "pied": "« Je veux montrer un homme dans toute la vérité de la nature »",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche la date de la première publication.",
+     "aide": "Elle a lieu après la mort de Rousseau.",
+     "explication": "Les six premiers livres paraissent en **1782**, les suivants en 1789."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort de Rousseau de la première publication ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1782 − 1778 = **4 ans** : Rousseau ne verra jamais son livre imprimé."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche et le cours.",
+     "texte": "Le livre compte ___ livres ; il fonde l’___ moderne.",
+     "reponses": [
+      [
+       "douze",
+       "12"
+      ],
+      [
+       "autobiographie"
+      ]
+     ],
+     "banque": [
+      "douze",
+      "six",
+      "autobiographie",
+      "biographie"
+     ],
+     "aide": "Le genre, c’est l’écriture de sa propre vie.",
+     "explication": "Douze livres, et c’est l’**autobiographie** moderne qui naît."
+    }
+   ]
+  },
+  {
+   "chapitre": "aea2a92b-de8b-5701-9278-46ba825ee585",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du Genève de l’enfance aux persécutions",
+   "competence": "analyser-document",
+   "situation": "Tu dois rendre compte à ta classe du contenu du livre : suis ses grandes périodes, puis relie les épisodes célèbres à ce qu’ils avouent.",
+   "documents": [
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Le contenu des *Confessions*",
+     "colonnes": [
+      "Période",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "L’enfance à Genève",
+       "La lecture des romans, la fugue"
+      ],
+      [
+       "La jeunesse",
+       "Madame de Warens (« Maman »), les métiers, la musique"
+      ],
+      [
+       "La montée à Paris",
+       "?"
+      ],
+      [
+       "Les ruptures",
+       "Diderot, Grimm, Mme d’Épinay"
+      ],
+      [
+       "La fin",
+       "La persécution, réelle et fantasmée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "per",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la période où Rousseau se brouille avec ses amis.",
+     "aide": "Cherche les noms de Diderot et de Grimm.",
+     "explication": "Les **ruptures** avec Diderot, Grimm et Mme d’Épinay forment le quatrième temps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel contenu faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La fessée de Mlle Lambercier, à Bossey, qui marque l’enfant",
+      "La protection de Mme de Warens, aux Charmettes, et la musique",
+      "L’Encyclopédie et le succès du *Discours sur les sciences et les arts*",
+      "Les enfants abandonnés, confiés aux Enfants-Trouvés après leur naissance"
+     ],
+     "reponse": 2,
+     "aide": "Quelle période vient entre la jeunesse et les ruptures ?",
+     "explication": "À Paris : **l’Encyclopédie** et le succès du *Discours sur les sciences et les arts*."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque épisode à ce qu’il avoue.",
+     "paires": [
+      [
+       "Le ruban volé",
+       "Rousseau en accuse la servante Marion"
+      ],
+      [
+       "Le vol des pommes",
+       "Il a eu lieu chez son maître graveur"
+      ],
+      [
+       "La fessée de Mlle Lambercier",
+       "Elle marque l’enfant, à Bossey"
+      ],
+      [
+       "Les Enfants-Trouvés",
+       "Ses enfants y ont été abandonnés"
+      ]
+     ],
+     "aide": "Pense au lieu ou à la personne que chaque épisode met en scène.",
+     "explication": "Le **ruban** (Marion), les **pommes** (le maître graveur), la **fessée** (Bossey) et les **Enfants-Trouvés** sont des aveux célèbres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Rousseau entreprend-il d’écrire sa vie ?",
+     "options": [
+      "Pour se justifier face aux calomnies qu’il croit subir",
+      "Pour gagner de l’argent grâce à des éditeurs belges",
+      "Pour répondre à une commande de l’Encyclopédie",
+      "Pour imiter point par point les *Essais* de Montaigne"
+     ],
+     "reponse": 0,
+     "aide": "Condamné en 1762, il se sent persécuté.",
+     "explication": "Condamné en 1762, il écrit **pour se justifier** devant la postérité."
+    }
+   ]
+  },
+  {
+   "chapitre": "aea2a92b-de8b-5701-9278-46ba825ee585",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peut-on tout dire de soi ?",
+   "competence": "argumenter",
+   "situation": "Pour ta dissertation, tu travailles le début des *Confessions* et un débat entre deux lecteurs : Rousseau avoue-t-il tout, ou plaide-t-il ?",
+   "documents": [
+    {
+     "id": "pr",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le début du livre",
+     "blocs": [
+      "Je forme une entreprise qui n’eut jamais d’exemple et dont l’exécution n’aura point d’imitateur.",
+      "Je veux montrer à mes semblables un homme dans toute la [[v|vérité]] de la nature ; et cet homme, ce sera [[m|moi]]."
+     ],
+     "source": "Jean-Jacques Rousseau, *Les Confessions* (1782), début du livre I"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Rousseau avoue ses fautes, donc il dit tout et rien que la vérité."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Il avoue, mais il [[p|plaide]] aussi : il écrit pour se justifier devant les calomnies."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors le livre est une défense autant qu’un aveu ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Oui, et c’est tout l’intérêt de la question : peut-on tout dire de soi ?"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pr",
+     "multiple": true,
+     "reponse": [
+      "v",
+      "m"
+     ],
+     "enonce": "Touche les deux mots qui disent la valeur promise au lecteur et le seul sujet du livre.",
+     "aide": "Un nom de qualité, puis un pronom de la première personne.",
+     "explication": "Rousseau promet la **vérité** ; et le seul sujet sera **moi**."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe par lequel Théo montre que Rousseau ne fait pas que s’accuser.",
+     "aide": "Théo l’emploie dès sa première réplique.",
+     "explication": "Rousseau **plaide** : son aveu est aussi une défense."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : le narrateur adulte qui juge, ou l’enfant qui vit.",
+     "categories": [
+      "Le narrateur adulte qui juge",
+      "L’enfant qui vit"
+     ],
+     "items": [
+      [
+       "Il se présente devant « le souverain juge »",
+       0
+      ],
+      [
+       "Il plaide pour sa défense",
+       0
+      ],
+      [
+       "Il analyse après coup l’épisode du ruban",
+       0
+      ],
+      [
+       "Il reçoit la fessée de Mlle Lambercier",
+       1
+      ],
+      [
+       "Il lit des romans à Genève",
+       1
+      ],
+      [
+       "Il fugue de sa ville natale",
+       1
+      ]
+     ],
+     "aide": "L’adulte commente ; l’enfant éprouve.",
+     "explication": "L’**adulte** juge, plaide et analyse ; l’**enfant** reçoit la fessée, lit des romans, fugue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réponse le livre apporte-t-il le mieux à la question « peut-on tout dire de soi ? »",
+     "options": [
+      "Rousseau cache ses fautes pour séduire son lecteur",
+      "Rousseau s’interdit tout jugement sur ses propres actes",
+      "Rousseau avoue ses fautes, mais il plaide aussi pour sa défense",
+      "Rousseau renonce à parler de son enfance et de ses amis"
+     ],
+     "reponse": 2,
+     "aide": "Pense au mot « plaide » de Théo.",
+     "explication": "Rousseau **avoue**, mais il **plaide** : la sincérité revendiquée est aussi une stratégie."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a43ae64-3b9a-5a71-9ed8-e453a68490da",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux moitiés séparées par un deuil",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Contemplations*. Place la mort de Léopoldine sur la frise, puis relève l’architecture du recueil.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Hugo, de 1830 à 1860",
+     "debut": 1830,
+     "fin": 1860,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "ecr",
+       "debut": 1830,
+       "fin": 1855,
+       "nom": "Poèmes écrits",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "leo",
+       "date": 1843,
+       "nom": "Léopoldine"
+      },
+      {
+       "id": "pub",
+       "date": 1856,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "arc",
+     "type": "tableau",
+     "titre": "Les deux ensembles",
+     "colonnes": [
+      "Ensemble",
+      "Ses livres"
+     ],
+     "lignes": [
+      [
+       "Autrefois",
+       "Aurore · L’Âme en fleur · Les Luttes et les Rêves"
+      ],
+      [
+       "Aujourd’hui",
+       "Pauca meae · En marche · Au bord de l’infini"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Contemplations",
+     "sousTitre": "Victor Hugo",
+     "emoji": "🌊",
+     "lignes": [
+      {
+       "texte": "Exil",
+       "valeur": "Guernesey"
+      },
+      {
+       "texte": "Livre IV",
+       "valeur": "Pauca meae"
+      },
+      {
+       "texte": "Préface",
+       "valeur": "« Le livre d’un mort »"
+      }
+     ],
+     "pied": "Un recueil lyrique en deux moitiés",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "leo"
+     ],
+     "enonce": "Touche l’événement qui sépare *Autrefois* d’*Aujourd’hui*.",
+     "aide": "C’est un deuil familial, en 1843.",
+     "explication": "La mort de **Léopoldine**, noyée à Villequier en 1843, coupe le recueil en deux."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort de Léopoldine de la publication du recueil ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1856 − 1843 = **13 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "arc",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche l’ensemble qui vient après la mort de Léopoldine.",
+     "aide": "Le deuil ouvre le second temps du recueil.",
+     "explication": "**Aujourd’hui** commence avec *Pauca meae*, après la mort de Léopoldine."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Hugo écrit en exil à ___ ; le livre IV, ___ meae, est consacré à Léopoldine.",
+     "reponses": [
+      [
+       "guernesey"
+      ],
+      [
+       "pauca"
+      ]
+     ],
+     "banque": [
+      "Guernesey",
+      "Jersey",
+      "Pauca",
+      "Aurore"
+     ],
+     "aide": "Tout est dans la fiche.",
+     "explication": "Hugo écrit à **Guernesey** ; le livre IV, **Pauca** meae, est consacré à Léopoldine."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a43ae64-3b9a-5a71-9ed8-e453a68490da",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un chemin vers une tombe",
+   "competence": "analyser-texte",
+   "situation": "Tu prépares l’explication d’un poème de deuil. Lis quatre vers, relève ce qu’ils disent du marcheur, puis relie quelques poèmes du recueil à ce qu’ils portent.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Demain, dès l’aube…",
+     "blocs": [
+      "Je marcherai les yeux fixés sur mes pensées,",
+      "Sans rien voir au dehors, sans entendre aucun bruit,",
+      "Seul, inconnu, le dos [[c|courbé]], les mains [[c|croisées]],",
+      "Triste, et le jour pour moi sera comme la [[n|nuit]]."
+     ],
+     "source": "Victor Hugo, « Demain, dès l’aube… », *Les Contemplations* (1856), livre IV, vers 3 à 6"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui décrivent le corps du marcheur.",
+     "aide": "Regarde le troisième vers.",
+     "explication": "Le marcheur est **courbé**, les mains **croisées** : son corps dit le deuil."
+    },
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui dit que le monde a perdu sa lumière pour lui.",
+     "aide": "Le dernier vers compare le jour à autre chose.",
+     "explication": "Pour le père en deuil, le jour est « comme la **nuit** »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le vers « Sans rien voir au dehors, sans entendre aucun bruit » ?",
+     "options": [
+      "Le poète marche replié sur sa douleur, coupé du monde",
+      "Le poète observe avec soin la campagne qu’il traverse",
+      "Le poète craint d’être suivi par des inconnus en route",
+      "Le poète cherche un peu de bruit pour se distraire"
+     ],
+     "reponse": 0,
+     "aide": "Le poète ne regarde pas dehors : il regarde autre chose.",
+     "explication": "Le poète est **replié sur sa douleur** : ses pensées ferment le monde extérieur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque poème du recueil à ce qu’il porte.",
+     "paires": [
+      [
+       "« Réponse à un acte d’accusation »",
+       "Le « bonnet rouge » mis au vieux dictionnaire"
+      ],
+      [
+       "« Melancholia »",
+       "Les enfants qui travaillent à l’usine"
+      ],
+      [
+       "« Demain, dès l’aube… »",
+       "Le deuil : une marche vers la tombe de la fille"
+      ],
+      [
+       "« Paroles sur la dune »",
+       "La méditation métaphysique"
+      ]
+     ],
+     "aide": "Un poème social, un poème de révolte littéraire, un deuil, une méditation.",
+     "explication": "**Réponse** : la révolte littéraire ; **Melancholia** : la misère ; **Demain, dès l’aube…** : le deuil ; **Paroles sur la dune** : la méditation."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a43ae64-3b9a-5a71-9ed8-e453a68490da",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "« Quand je vous parle de moi, je vous parle de vous »",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : *Les Contemplations*, est-ce l’autobiographie de Hugo ? Tranche avec leur échange, complète l’argument et distribue les rôles du poète.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Salomé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Salomé",
+       "texte": "Les Contemplations, c’est la vie de Hugo racontée dans l’ordre : une autobiographie."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Pas de faits : c’est le récit d’une vie [[i|intérieure]]. La préface dit : « Quand je vous parle de moi, je vous parle de vous »."
+      },
+      {
+       "qui": "Salomé",
+       "texte": "Alors le « moi » du poète parle aussi pour les autres ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Oui : le recueil pose la question du lyrisme universel."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le « moi » de Hugo parle pour tous",
+       "Enfance, amour, deuil et révolte sociale se mêlent",
+       "?"
+      ],
+      [
+       "Hugo joue tous les rôles du poète",
+       "Il est amant, père, combattant et mage",
+       "Un seul recueil, quatre voix"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui dit ce que raconte vraiment le recueil, selon Yanis.",
+     "aide": "Yanis oppose les faits à une autre sorte de vie.",
+     "explication": "Le recueil est le récit d’une vie **intérieure**, non d’une autobiographie de faits."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "La préface : « Quand je vous parle de moi, je vous parle de vous »",
+      "L’achat de Hauteville House grâce au succès du recueil",
+      "Les poèmes datés de 1830 à 1855, en Autrefois",
+      "L’expulsion de Hugo hors de l’île de Jersey"
+     ],
+     "reponse": 0,
+     "aide": "Quel exemple dit que le moi vaut pour tous ?",
+     "explication": "La **préface** donne la clé : en parlant de lui, Hugo parle de nous tous."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque rôle du poète à ce qui l’illustre dans le recueil.",
+     "paires": [
+      [
+       "L’amant",
+       "Les poèmes d’amour, avec Juliette Drouet"
+      ],
+      [
+       "Le père",
+       "Le deuil de Léopoldine"
+      ],
+      [
+       "Le combattant",
+       "La révolte contre la misère des enfants"
+      ],
+      [
+       "Le mage",
+       "L’écoute de l’infini et le dialogue avec les morts"
+      ]
+     ],
+     "aide": "Quatre rôles, quatre figures du cours.",
+     "explication": "**Amant** (Juliette Drouet), **père** (Léopoldine), **combattant** (les enfants misérables), **mage** (l’infini)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formulation de dissertation ce dossier permet-il le mieux de défendre ?",
+     "options": [
+      "Le lyrisme personnel ne concerne que le poète lui-même",
+      "Le recueil refuse tout registre autre que lyrique",
+      "Le lyrisme de Hugo peut parler pour tous les hommes",
+      "Le recueil est un journal intime sans portée générale"
+     ],
+     "reponse": 2,
+     "aide": "Reprends la phrase de la préface.",
+     "explication": "Le lyrisme de Hugo est **universel** : le « moi » parle pour tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "31dab407-cebb-50a6-99ff-5be78abdd9d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un officier devenu poète du destin",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Vigny. Place la publication de son recueil par rapport à sa mort, puis passe en revue quelques poèmes et leurs idées.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Vigny, de 1795 à 1865",
+     "debut": 1795,
+     "fin": 1865,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1797,
+       "nom": "Naissance"
+      },
+      {
+       "id": "mort",
+       "date": 1863,
+       "nom": "Mort"
+      },
+      {
+       "id": "pub",
+       "date": 1864,
+       "nom": "Recueil"
+      }
+     ]
+    },
+    {
+     "id": "poe",
+     "type": "tableau",
+     "titre": "Quelques poèmes des *Destinées*",
+     "colonnes": [
+      "Poème",
+      "Son idée"
+     ],
+     "lignes": [
+      [
+       "Les Destinées",
+       "Le poids du destin et la grâce"
+      ],
+      [
+       "La Maison du berger",
+       "La nature indifférente, la poésie comme refuge"
+      ],
+      [
+       "La Mort du loup",
+       "?"
+      ],
+      [
+       "Le Mont des Oliviers",
+       "Le silence de Dieu"
+      ],
+      [
+       "La Bouteille à la mer",
+       "L’œuvre confiée à l’avenir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche la date de publication du recueil.",
+     "aide": "Le recueil paraît après la mort de Vigny.",
+     "explication": "Les *Destinées* paraissent en **1864**, un an après la mort de Vigny."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vigny naît en 1797 et meurt en 1863 : quel âge a-t-il à sa mort ?",
+     "reponse": 66,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1863 − 1797 = **66 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "poe",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le poème où Dieu se tait.",
+     "aide": "Cherche l’idée du « silence de Dieu ».",
+     "explication": "« Le Mont des Oliviers » dit le **silence de Dieu**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée faut-il écrire dans la case « ? » pour « La Mort du loup » ?",
+     "options": [
+      "La trahison amoureuse",
+      "Le stoïcisme : souffrir et mourir sans se plaindre",
+      "La noblesse de l’esprit contre celle du sang",
+      "Le silence de Dieu devant la souffrance"
+     ],
+     "reponse": 1,
+     "aide": "Le loup meurt sans une plainte.",
+     "explication": "« La Mort du loup » enseigne le **stoïcisme** : souffrir et mourir sans se plaindre."
+    }
+   ]
+  },
+  {
+   "chapitre": "31dab407-cebb-50a6-99ff-5be78abdd9d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La leçon du loup",
+   "competence": "analyser-texte",
+   "situation": "Tu prépares l’explication de la fin de « La Mort du loup ». Lis la leçon que donne le poème, puis relie quelques figures du recueil à ce qu’elles représentent.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "La fin du poème",
+     "blocs": [
+      "[[v|Gémir]], [[v|pleurer]], [[v|prier]] est également lâche.",
+      "Fais énergiquement ta longue et lourde [[t|tâche]]",
+      "Dans la voie où le Sort a voulu t’appeler,",
+      "Puis, après, comme moi, [[s|souffre]] et [[s|meurs]] sans parler."
+     ],
+     "source": "Alfred de Vigny, « La Mort du loup », *Les Destinées* (publié en 1864), dernier mouvement"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les trois verbes que le poème juge lâches.",
+     "aide": "Ils ouvrent le premier vers.",
+     "explication": "**Gémir, pleurer, prier** : trois façons de se plaindre que le loup refuse."
+    },
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux verbes de l’ordre final.",
+     "aide": "Cherche les verbes à l’impératif dans le dernier vers.",
+     "explication": "**Souffre** et **meurs** sans parler : le loup donne l’exemple de la dignité."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle attitude philosophique la leçon du poème correspond-elle ?",
+     "options": [
+      "Le stoïcisme : accepter la souffrance avec dignité",
+      "Le romantisme sentimental : chanter ses larmes",
+      "L’épicurisme : chercher les plaisirs du moment",
+      "Le scepticisme : douter de toute leçon morale"
+     ],
+     "reponse": 0,
+     "aide": "Ni plainte, ni prière : un devoir à accomplir.",
+     "explication": "C’est le **stoïcisme** : « souffre et meurs sans parler »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure du recueil à ce qu’elle représente.",
+     "paires": [
+      [
+       "Le loup",
+       "L’homme digne face à la mort"
+      ],
+      [
+       "Samson",
+       "L’homme trahi par l’amour"
+      ],
+      [
+       "Le Christ du « Mont des Oliviers »",
+       "L’homme qui interroge Dieu sans réponse"
+      ],
+      [
+       "Le capitaine de « La Bouteille à la mer »",
+       "Le savant qui transmet avant de mourir"
+      ]
+     ],
+     "aide": "Chaque figure incarne une idée du recueil.",
+     "explication": "**Loup** : la dignité ; **Samson** : la trahison ; **Christ** : le silence de Dieu ; **capitaine** : la transmission."
+    }
+   ]
+  },
+  {
+   "chapitre": "31dab407-cebb-50a6-99ff-5be78abdd9d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une poésie qui démontre",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent : Vigny est-il un romantique sentimental comme Lamartine ? Tranche avec leur échange, complète l’argument et oppose les deux poètes.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Vigny est un romantique comme Lamartine : il pleure sa peine en vers."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Non : chez lui, chaque poème démontre une [[i|idée]] par une image, puis se conclut par une morale."
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Donc c’est une poésie de la pensée plus que du sentiment ?"
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Oui, et elle est plus austère que celle de Lamartine."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le poème peut argumenter",
+       "Un récit symbolique se conclut par une morale",
+       "?"
+      ],
+      [
+       "Le pessimisme débouche sur une éthique",
+       "Reste la dignité : ne pas se plaindre, transmettre",
+       "« La Bouteille à la mer »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot que Sacha oppose au sentiment dans la poésie de Vigny.",
+     "aide": "Sacha dit ce que le poème démontre.",
+     "explication": "Chaque poème démontre une **idée** par une image : c’est une poésie de la pensée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "« La Mort du loup » : un récit qui se conclut par une leçon stoïque",
+      "« La Colère de Samson », écrite sur une période de trente ans",
+      "« Les Destinées », publiées après la mort de leur auteur",
+      "« L’Esprit pur », dédié à un poète de la même génération"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le poème où un récit est suivi d’une leçon.",
+     "explication": "**« La Mort du loup »** raconte, puis tire la leçon : souffre et meurs sans parler."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : plutôt Vigny, ou plutôt Lamartine tel que le cours l’oppose à lui.",
+     "categories": [
+      "Vigny",
+      "Lamartine"
+     ],
+     "items": [
+      [
+       "Une idée démontrée par une image",
+       0
+      ],
+      [
+       "Une morale qui conclut le récit",
+       0
+      ],
+      [
+       "Une nature indifférente et un Dieu qui se tait",
+       0
+      ],
+      [
+       "Un lyrisme sentimental",
+       1
+      ],
+      [
+       "Une poésie moins austère",
+       1
+      ]
+     ],
+     "aide": "Le cours oppose l’austérité de l’un au sentiment de l’autre.",
+     "explication": "**Vigny** : idée, morale, nature indifférente ; **Lamartine** : lyrisme sentimental, poésie moins austère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse ce dossier permet-il le mieux de défendre ?",
+     "options": [
+      "Le pessimisme de Vigny débouche sur une éthique de la dignité",
+      "Le pessimisme de Vigny conduit au silence et au renoncement",
+      "Le pessimisme de Vigny ne s’exprime jamais en poésie",
+      "Le pessimisme de Vigny relève d’un lyrisme sentimental"
+     ],
+     "reponse": 0,
+     "aide": "Reste-t-il quelque chose quand Dieu se tait ?",
+     "explication": "Son pessimisme **n’est pas désespéré** : il mène à la dignité et à la transmission."
+    }
+   ]
+  },
+  {
+   "chapitre": "97c7ee61-8cbc-5118-8c3d-0d2cb531598a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui chez Araminte ?",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Les Fausses Confidences* : carte d’identité de la pièce, puis personnages.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Fausses Confidences",
+     "sousTitre": "Marivaux",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Comédie en trois actes et en prose"
+      },
+      {
+       "texte": "Création",
+       "valeur": "1737"
+      },
+      {
+       "texte": "Troupe",
+       "valeur": "Les Comédiens-Italiens"
+      },
+      {
+       "texte": "Art du sentiment",
+       "valeur": "Le marivaudage"
+      }
+     ],
+     "pied": "Un valet décide qu’un homme sans argent épousera une riche veuve",
+     "teinte": "violet"
+    },
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Sa position"
+     ],
+     "lignes": [
+      [
+       "Dorante",
+       "Ruiné, il aime en secret Araminte, riche veuve"
+      ],
+      [
+       "Dubois",
+       "Ancien valet de Dorante, il mène toute l’opération"
+      ],
+      [
+       "Monsieur Remy",
+       "?"
+      ],
+      [
+       "Madame Argante",
+       "Mère d’Araminte, autoritaire et intéressée"
+      ],
+      [
+       "Marton",
+       "Elle est jalouse"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "per",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le personnage qui mène toute l’opération.",
+     "aide": "C’est l’ancien valet de Dorante.",
+     "explication": "**Dubois** mène toute l’opération."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle position faut-il écrire pour Monsieur Remy dans la case « ? »",
+     "options": [
+      "Le comte que Madame Argante veut faire épouser à sa fille",
+      "Le valet comique, placé au service de Dorante",
+      "L’oncle de Dorante, qui veut le marier à Marton",
+      "L’amant de Marton, qui la délaisse"
+     ],
+     "reponse": 2,
+     "aide": "Remy présente Dorante comme intendant.",
+     "explication": "**Monsieur Remy** est l’oncle de Dorante, procureur : il veut le marier à Marton."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "C’est une comédie en ___ actes et en ___, créée en ___ pour les Comédiens-Italiens.",
+     "reponses": [
+      [
+       "trois",
+       "3"
+      ],
+      [
+       "prose"
+      ],
+      [
+       "1737"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "cinq",
+      "prose",
+      "vers",
+      "1737",
+      "1637"
+     ],
+     "aide": "La fiche donne le genre et la date.",
+     "explication": "Comédie en **trois** actes, en **prose**, créée en **1737**."
+    }
+   ]
+  },
+  {
+   "chapitre": "97c7ee61-8cbc-5118-8c3d-0d2cb531598a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piège se referme",
+   "competence": "analyser-texte",
+   "situation": "Dorante entre chez Araminte comme intendant, et Dubois tisse son stratagème. Suis les coups du piège, puis relis une scène résumée.",
+   "documents": [
+    {
+     "id": "ch",
+     "type": "chaine",
+     "titre": "Le stratagème",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Dorante devient l’intendant d’Araminte"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Le portrait d’Araminte est trouvé chez Dorante"
+      },
+      {
+       "id": "n4",
+       "texte": "Araminte dicte une lettre sur son mariage"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une scène résumée",
+     "blocs": [
+      "Araminte demande à Dorante de [[l|écrire]] sous sa dictée. La lettre annonce un [[m|mariage]]. Dorante tremble, et le trouble de la veuve ne passe pas inaperçu."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Dubois révèle à Araminte que Dorante l’aime depuis longtemps",
+      "Araminte avoue son amour et épouse un homme sans fortune",
+      "Madame Argante enferme Dorante dans sa chambre toute la nuit",
+      "Marton obtient la main de Dorante grâce à Monsieur Remy"
+     ],
+     "reponse": 0,
+     "aide": "C’est la « fausse confidence » qui lance l’intrigue.",
+     "explication": "Dubois lance la **fausse confidence** : Dorante serait fou d’amour depuis l’Opéra."
+    },
+    {
+     "type": "zone",
+     "document": "ch",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape que le cours qualifie de scène cruelle.",
+     "aide": "Araminte met Dorante à l’épreuve.",
+     "explication": "L’**épreuve de la lettre dictée** est la scène cruelle."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque coup du stratagème à ce qu’il fait.",
+     "paires": [
+      [
+       "La confidence initiale",
+       "Dorante serait fou d’amour depuis l’Opéra"
+      ],
+      [
+       "Le portrait",
+       "Il est trouvé chez Dorante"
+      ],
+      [
+       "L’épreuve",
+       "Araminte dicte une lettre annonçant son mariage"
+      ],
+      [
+       "Le dénouement",
+       "Araminte avoue : elle épousera un homme sans fortune"
+      ]
+     ],
+     "aide": "Quatre temps du piège, de la confidence à l’aveu.",
+     "explication": "Confidence, **portrait**, **épreuve** puis **aveu** : le piège se referme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le cours, que dit la pièce de l’argent ?",
+     "options": [
+      "La difficulté n’est pas d’aimer, mais de pouvoir le dire",
+      "Les valets s’enrichissent plus que leurs maîtres",
+      "L’argent n’a aucune place dans les sentiments",
+      "Araminte épouse un riche selon la volonté de sa mère"
+     ],
+     "reponse": 0,
+     "aide": "L’argent est partout dans la pièce.",
+     "explication": "L’**argent** est partout : « la difficulté n’est pas d’aimer, c’est de pouvoir le dire »."
+    }
+   ]
+  },
+  {
+   "chapitre": "97c7ee61-8cbc-5118-8c3d-0d2cb531598a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Metteur en scène ou manipulateur ?",
+   "competence": "argumenter",
+   "situation": "Dubois est-il un metteur en scène au service de l’amour ou un manipulateur ? Deux élèves en débattent ; tu sors du dossier un sujet de dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Sans Dubois, Araminte n’aimerait jamais Dorante : il fabrique l’amour."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Le stratagème lève les [[o|obstacles]], il ne fabrique pas le sentiment : Dubois ne ment presque jamais."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Mais c’est lui qui choisit quand la vérité est dite."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Justement : la pièce laisse la lecture inverse ouverte."
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Au dénouement",
+     "blocs": [
+      {
+       "didascalie": "Araminte vient d’avouer son amour à Dorante. Dubois reprend son souffle."
+      },
+      {
+       "personnage": "Dubois",
+       "replique": "Ouf ! ma [[g|gloire]] m’accable."
+      }
+     ],
+     "source": "Marivaux, *Les Fausses Confidences* (1737), Dubois au dénouement"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui dit ce que le stratagème fait disparaître, selon Malik.",
+     "aide": "Le stratagème ne crée pas le sentiment : il écarte autre chose.",
+     "explication": "Le stratagème lève les **obstacles** : l’argent, le rang, les projets de mariage."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot par lequel Dubois montre qu’il est fier de sa mise en scène.",
+     "aide": "Dubois se félicite d’un mot solennel.",
+     "explication": "« Ma **gloire** m’accable » : Dubois se sait l’artisan du dénouement."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : ce que Dubois fait, ou ce qu’il ne fait pas.",
+     "categories": [
+      "Ce que Dubois fait",
+      "Ce qu’il ne fait pas"
+     ],
+     "items": [
+      [
+       "Il choisit quand la vérité est dite",
+       0
+      ],
+      [
+       "Il mène toute l’opération",
+       0
+      ],
+      [
+       "Il fait présenter Dorante comme intendant",
+       0
+      ],
+      [
+       "Il ment presque toujours",
+       1
+      ],
+      [
+       "Il fabrique le sentiment d’Araminte",
+       1
+      ]
+     ],
+     "aide": "Le cours oppose ses gestes à ce qu’il évite.",
+     "explication": "Il **choisit le moment**, **mène** l’opération et fait présenter Dorante ; il **ne ment presque jamais** et **ne fabrique pas** le sentiment."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel sujet de dissertation ce dossier permet-il le mieux de traiter ?",
+     "options": [
+      "Le stratagème crée-t-il l’amour d’Araminte ou ne fait-il que le révéler ?",
+      "Pourquoi Marivaux a-t-il renoncé à écrire pour le théâtre ?",
+      "Le valet est-il toujours puni à la fin d’une comédie ?",
+      "Dubois est-il le véritable père d’Araminte ?"
+     ],
+     "reponse": 0,
+     "aide": "Quelle lecture la pièce laisse-t-elle ouverte ?",
+     "explication": "La pièce laisse ouverte la question : le stratagème **crée-t-il ou révèle-t-il** le sentiment ?"
+    }
+   ]
+  },
+  {
+   "chapitre": "1e034dde-43dc-567f-a187-7a68c4a5c1d5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman de 1925 qui rompt avec le XIXe siècle",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Gide : carte d’identité, puis personnages.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Faux-Monnayeurs",
+     "sousTitre": "André Gide",
+     "emoji": "🪙",
+     "lignes": [
+      {
+       "texte": "Date",
+       "valeur": "1925"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Roman"
+      },
+      {
+       "texte": "Ambition",
+       "valeur": "Un « carrefour de problèmes »"
+      },
+      {
+       "texte": "Modèle refusé",
+       "valeur": "Le roman réaliste du XIXe siècle"
+      }
+     ],
+     "pied": "Un roman qui raconte l’écriture d’un roman",
+     "teinte": "violet"
+    },
+    {
+     "id": "per",
+     "type": "tableau",
+     "titre": "Quatre personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qui le porte"
+     ],
+     "lignes": [
+      [
+       "Bernard Profitendieu",
+       "Enfant illégitime, il quitte sa famille"
+      ],
+      [
+       "Édouard",
+       "Écrivain : il tient un journal et prépare un roman"
+      ],
+      [
+       "Olivier",
+       "Ami de Bernard, attiré par le comte de Passavant"
+      ],
+      [
+       "Boris",
+       "Poussé au suicide par un pacte d’enfants"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "per",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche le personnage qui tient un journal et prépare un roman.",
+     "aide": "C’est l’écrivain du roman.",
+     "explication": "**Édouard** tient un journal : c’est le romancier du roman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Gide meurt en 1951 : combien d’années séparent le roman de sa mort ?",
+     "reponse": 26,
+     "unite": "ans",
+     "aide": "Soustrais 1925 de 1951.",
+     "explication": "1951 − 1925 = **26 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son lien avec les autres.",
+     "paires": [
+      [
+       "Édouard",
+       "Oncle d’Olivier"
+      ],
+      [
+       "La Pérouse",
+       "Grand-père de Boris"
+      ],
+      [
+       "Vincent",
+       "Frère d’Olivier, qui délaisse Laura"
+      ],
+      [
+       "Strouvilhou",
+       "Organisateur du trafic de fausse monnaie"
+      ]
+     ],
+     "aide": "Chaque personnage a un lien de famille ou un rôle précis.",
+     "explication": "**Édouard** est l’oncle d’Olivier, **La Pérouse** le grand-père de Boris, **Vincent** le frère d’Olivier, **Strouvilhou** l’organisateur du trafic."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e034dde-43dc-567f-a187-7a68c4a5c1d5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un romancier qui doute",
+   "competence": "analyser-texte",
+   "situation": "Tu veux comprendre la construction du roman. Lis un journal de romancier écrit dans l’esprit de Gide, puis relie les procédés à leurs effets.",
+   "documents": [
+    {
+     "id": "j",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le journal d’un romancier (pastiche)",
+     "blocs": [
+      "Voilà trois pages que je [[d|doute]] de ce que je vais écrire.",
+      "Dans mon [[r|roman]], Bernard quitte sa famille, comme dans celui que le lecteur tient entre ses mains.",
+      "Je ne sais pas encore ce que pense Olivier : j’aurais aimé qu’il me le dise."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière du *Journal* d’Édouard dans *Les Faux-Monnayeurs* de Gide"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "j",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le verbe par lequel le romancier avoue son hésitation.",
+     "aide": "Il l’emploie dès la première phrase.",
+     "explication": "Le romancier **doute** : le narrateur n’est pas tout-puissant."
+    },
+    {
+     "type": "zone",
+     "document": "j",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui montre que le personnage écrit le même livre que celui qu’on lit.",
+     "aide": "Le journal parle de ce que le romancier est en train d’écrire.",
+     "explication": "Le **roman** dont parle le journal est celui qu’on lit : c’est une mise en abyme."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "La mise en abyme",
+       "Un romancier y écrit le même roman"
+      ],
+      [
+       "Les intrigues entrelacées",
+       "Pas d’intrigue unique"
+      ],
+      [
+       "Le narrateur qui intervient",
+       "Il doute et commente ses personnages"
+      ],
+      [
+       "Aucun point de vue dominant",
+       "Le lecteur reconstruit lui-même"
+      ]
+     ],
+     "aide": "Quatre choix de construction, quatre effets.",
+     "explication": "**Mise en abyme**, **intrigues entrelacées**, **narrateur qui doute**, **point de vue absent** : le roman éclate le modèle réaliste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que désigne la « fausse monnaie » du titre ?",
+     "options": [
+      "Seulement les pièces fausses du trafic mené par Strouvilhou",
+      "Les pièces fausses, mais aussi les sentiments et les vertus feints",
+      "Uniquement les mensonges de la famille du pasteur Vedel",
+      "Un roman copié sur celui d’un autre auteur de l’époque"
+     ],
+     "reponse": 1,
+     "aide": "Le titre est une métaphore.",
+     "explication": "La fausse monnaie, ce sont les **pièces fausses**, mais aussi les **sentiments et vertus feints**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e034dde-43dc-567f-a187-7a68c4a5c1d5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un roman qui se pense lui-même",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si un roman sans intrigue unique est encore un roman. Appuie-toi sur Gide pour construire ton argument et répondre.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Gide sur son roman",
+     "blocs": [
+      "Ce que je voudrais que soit ce roman ? un [[c|carrefour]] — un rendez-vous de problèmes."
+     ],
+     "source": "André Gide, *Journal des faux-monnayeurs*"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Un roman sans intrigue unique n’est pas un vrai roman."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Justement : Gide ne veut pas une histoire, il veut un carrefour de [[p|problèmes]]."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Gide rompt avec le roman réaliste",
+       "Pas d’intrigue unique, pas de narrateur tout-puissant",
+       "?"
+      ],
+      [
+       "Le titre est une métaphore",
+       "La fausse monnaie, ce sont aussi les sentiments faux",
+       "La façade religieuse du pasteur Vedel"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot par lequel Gide désigne ce que doit être son roman.",
+     "aide": "Un lieu où plusieurs routes se croisent.",
+     "explication": "Gide veut un **carrefour** : plusieurs routes, plusieurs problèmes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un romancier qui écrit, dans le roman, le même roman",
+      "Un narrateur qui reste neutre et invisible",
+      "Une intrigue unique menée de bout en bout",
+      "Un récit présenté par un témoin unique"
+     ],
+     "reponse": 0,
+     "aide": "Quel procédé fait entrer le roman dans le roman ?",
+     "explication": "La **mise en abyme** : un romancier écrit le roman que l’on lit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : plutôt le roman réaliste du XIXe, ou plutôt Gide.",
+     "categories": [
+      "Roman réaliste du XIXe",
+      "Gide"
+     ],
+     "items": [
+      [
+       "Une intrigue unique",
+       0
+      ],
+      [
+       "Un narrateur tout-puissant",
+       0
+      ],
+      [
+       "Plusieurs intrigues entrelacées",
+       1
+      ],
+      [
+       "Un romancier qui commente son livre",
+       1
+      ],
+      [
+       "Un narrateur qui doute",
+       1
+      ]
+     ],
+     "aide": "Le cours dit ce que Gide refuse.",
+     "explication": "Le **réalisme** : intrigue unique et narrateur tout-puissant ; **Gide** : intrigues entrelacées, narrateur qui doute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle thèse ce dossier permet-il le mieux de défendre ?",
+     "options": [
+      "Le roman peut devenir réflexif et interroger sa propre écriture",
+      "Le roman doit se limiter à raconter une histoire unique",
+      "Le roman ne peut pas parler d’authenticité ni de faux-semblants",
+      "Le roman réaliste reste le seul modèle possible au XXe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Reprends « carrefour » et « mise en abyme ».",
+     "explication": "Le roman peut être **réflexif** : il se pense lui-même et ouvre la voie au Nouveau Roman."
+    }
+   ]
+  }
+ ]
+}

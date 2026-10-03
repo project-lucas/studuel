@@ -1,0 +1,3486 @@
+{
+ "niveau": "6e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "f6af420e-b05d-5f7f-9d41-10c5c568fbeb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une maison sur pilotis dans le Grand Nord",
+   "competence": "observer-schema",
+   "situation": "Dans un village du Grand Nord canadien, le sol est gelé presque toute l’année. Pourtant, des familles y construisent leur maison. Regarde comment.",
+   "documents": [
+    {
+     "id": "maison",
+     "type": "schema",
+     "titre": "Une maison du Grand Nord, vue en coupe",
+     "largeur": 340,
+     "hauteur": 245,
+     "source": "Schéma simplifié écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 130,
+       "l": 300,
+       "h": 30,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "active",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 160,
+       "l": 300,
+       "h": 70,
+       "teinte": "bleu",
+       "motif": "hachures",
+       "id": "permafrost",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 150,
+       "texte": "Dégèle l’été",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 193,
+       "texte": "Sol gelé",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 207,
+       "texte": "toute l’année",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "chemin",
+       "d": "M145 112 h8 v88 h-8 z M190 112 h8 v88 h-8 z M235 112 h8 v88 h-8 z M280 112 h8 v88 h-8 z",
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "pieux",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 60,
+       "l": 180,
+       "h": 52,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "corps",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         60
+        ],
+        [
+         220,
+         25
+        ],
+        [
+         320,
+         60
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein",
+       "id": "toit",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 212,
+       "y": 82,
+       "l": 24,
+       "h": 30,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 75,
+       "l": 28,
+       "h": 22,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 270,
+       "y": 75,
+       "l": 28,
+       "h": 22,
+       "teinte": "ciel",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 262,
+       "y": 22,
+       "l": 14,
+       "h": 32,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 90,
+       "emoji": "❄️",
+       "taille": 30
+      },
+      {
+       "forme": "etiquette",
+       "x": 70,
+       "y": 125,
+       "texte": "Vide d’air",
+       "vers": [
+        135,
+        121
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maison",
+     "enonce": "Touche la couche qui reste **gelée toute l’année** : le permafrost.",
+     "reponse": [
+      "permafrost"
+     ],
+     "aide": "C’est le sol le plus profond, avec des hachures.",
+     "explication": "Le **permafrost** est un sol gelé en permanence ; seule la couche du dessus dégèle l’été."
+    },
+    {
+     "type": "zone",
+     "document": "maison",
+     "enonce": "Touche ce qui **soulève** la maison au-dessus du sol : les pieux.",
+     "reponse": [
+      "pieux"
+     ],
+     "aide": "Ce sont quatre piliers enfoncés dans le sol.",
+     "explication": "Les **pieux** (ou pilotis) tiennent la maison au-dessus du sol."
+    },
+    {
+     "type": "zone",
+     "document": "maison",
+     "enonce": "Touche la couche du sol qui **dégèle l’été**.",
+     "reponse": [
+      "active"
+     ],
+     "aide": "Elle se trouve juste sous la maison, au-dessus du sol gelé.",
+     "explication": "La **couche du dessus** dégèle l’été et gèle l’hiver."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi laisser un vide d’air sous la maison ?",
+     "options": [
+      "Pour que sa chaleur ne fasse pas dégeler le sol",
+      "Pour la rendre plus haute que les autres",
+      "Pour y garer des voitures",
+      "Pour faire entrer l’eau"
+     ],
+     "reponse": 0,
+     "aide": "Une maison chauffée dégage de la chaleur.",
+     "explication": "Une maison posée à même le sol le ferait **dégeler** ; elle s’enfoncerait. Le vide d’air protège le permafrost."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6af420e-b05d-5f7f-9d41-10c5c568fbeb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une vallée des Alpes, étage par étage",
+   "competence": "analyser-document",
+   "situation": "Dans une vallée des Alpes, les habitants vivent à plusieurs altitudes. Chaque étage a ses activités, car la montagne impose le froid, la pente et l’isolement.",
+   "documents": [
+    {
+     "id": "alpes",
+     "type": "schema",
+     "titre": "Une vallée des Alpes, vue en coupe",
+     "largeur": 340,
+     "hauteur": 260,
+     "source": "Schéma simplifié ; altitudes arrondies.",
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         10,
+         230
+        ],
+        [
+         60,
+         160
+        ],
+        [
+         100,
+         110
+        ],
+        [
+         145,
+         40
+        ],
+        [
+         185,
+         100
+        ],
+        [
+         215,
+         170
+        ],
+        [
+         240,
+         230
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "massif"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         125,
+         63
+        ],
+        [
+         145,
+         40
+        ],
+        [
+         168,
+         72
+        ],
+        [
+         155,
+         80
+        ],
+        [
+         145,
+         70
+        ],
+        [
+         135,
+         82
+        ]
+       ],
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "glacier",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         98,
+         114
+        ],
+        [
+         118,
+         98
+        ],
+        [
+         135,
+         82
+        ],
+        [
+         145,
+         72
+        ],
+        [
+         155,
+         80
+        ],
+        [
+         168,
+         74
+        ],
+        [
+         182,
+         96
+        ],
+        [
+         165,
+         108
+        ],
+        [
+         145,
+         100
+        ],
+        [
+         118,
+         118
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "alpage",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         62,
+         160
+        ],
+        [
+         98,
+         116
+        ],
+        [
+         118,
+         120
+        ],
+        [
+         145,
+         104
+        ],
+        [
+         165,
+         110
+        ],
+        [
+         182,
+         98
+        ],
+        [
+         200,
+         140
+        ],
+        [
+         170,
+         150
+        ],
+        [
+         145,
+         138
+        ],
+        [
+         110,
+         160
+        ],
+        [
+         90,
+         172
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "plein",
+       "id": "foret",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         18,
+         224
+        ],
+        [
+         18,
+         214
+        ],
+        [
+         32,
+         214
+        ],
+        [
+         32,
+         204
+        ],
+        [
+         46,
+         204
+        ],
+        [
+         46,
+         194
+        ],
+        [
+         60,
+         194
+        ],
+        [
+         60,
+         224
+        ]
+       ],
+       "teinte": "jaune",
+       "motif": "plein",
+       "id": "terrasses",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 208,
+       "l": 70,
+       "h": 20,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "village",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 178,
+       "y": 218,
+       "emoji": "🏠",
+       "taille": 20
+      },
+      {
+       "forme": "emoji",
+       "x": 212,
+       "y": 218,
+       "emoji": "🏠",
+       "taille": 20
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        240
+       ],
+       "a": [
+        240,
+        240
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        172,
+        55
+       ],
+       "a": [
+        232,
+        55
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        186,
+        98
+       ],
+       "a": [
+        232,
+        98
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        142
+       ],
+       "a": [
+        232,
+        142
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        232,
+        218
+       ],
+       "a": [
+        240,
+        218
+       ],
+       "style": "pointilles",
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 238,
+       "y": 58,
+       "texte": "Glacier : 3 000 m",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 238,
+       "y": 101,
+       "texte": "Alpage : 1 800 m",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 238,
+       "y": 145,
+       "texte": "Forêt",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 246,
+       "y": 221,
+       "texte": "Village : 1 000 m",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 20,
+       "y": 256,
+       "texte": "Rivière au fond de la vallée",
+       "taille": "petit",
+       "ancre": "debut",
+       "italique": true
+      }
+     ]
+    },
+    {
+     "id": "climat",
+     "type": "graphique",
+     "forme": "climat",
+     "titre": "Le climat d’une station des Alpes, vers 1 300 m",
+     "source": "Valeurs arrondies, ordres de grandeur.",
+     "categories": [
+      "J",
+      "F",
+      "M",
+      "A",
+      "M",
+      "J",
+      "J",
+      "A",
+      "S",
+      "O",
+      "N",
+      "D"
+     ],
+     "series": [
+      {
+       "nom": "Température (°C)",
+       "valeurs": [
+        -3,
+        -2,
+        1,
+        4.5,
+        9,
+        12.5,
+        15,
+        14.5,
+        11.5,
+        7,
+        1.5,
+        -2
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Précipitations (mm)",
+       "valeurs": [
+        50,
+        45,
+        45,
+        50,
+        70,
+        65,
+        55,
+        60,
+        55,
+        70,
+        70,
+        55
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Température",
+      "unite": "°C",
+      "min": -5,
+      "max": 20,
+      "pas": 5
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alpes",
+     "enonce": "Les troupeaux montent **l’été** pour brouter l’herbe en altitude. Touche l’étage où ils paissent.",
+     "reponse": [
+      "alpage"
+     ],
+     "aide": "C’est le pâturage au-dessus de la forêt.",
+     "explication": "L’**alpage** est le pâturage d’été d’altitude, au-dessus de la forêt."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de mètres l’alpage est-il plus haut que le village ?",
+     "reponse": 800,
+     "unite": "m",
+     "aide": "Lis les altitudes écrites à droite du schéma.",
+     "explication": "1 800 − 1 000 = **800 m** de dénivelé : les bergers montent en été."
+    },
+    {
+     "type": "zone",
+     "document": "alpes",
+     "enonce": "Touche les **cultures en terrasses**, qui retiennent la terre et l’eau sur les pentes.",
+     "reponse": [
+      "terrasses"
+     ],
+     "aide": "Elles dessinent des marches de géant sur la pente.",
+     "explication": "Les **terrasses** forment des marches : elles retiennent la terre et l’eau sur les pentes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans le climat de la station (Doc 2), combien de mois ont une température moyenne **négative** ?",
+     "reponse": 3,
+     "unite": "mois",
+     "aide": "Cherche les mois où la courbe passe sous le zéro.",
+     "explication": "Janvier, février et décembre sont sous 0 °C : **3 mois**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on en conclure sur la vie des habitants ?",
+     "options": [
+      "L’hiver est long et froid : on s’adapte aux saisons",
+      "On peut cultiver toute l’année sans souci",
+      "Il ne neige jamais",
+      "Les troupeaux vivent à l’alpage en hiver"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux mois à température négative.",
+     "explication": "Le froid de l’hiver limite les cultures : il faut s’adapter, d’où l’alpage l’été et les terrasses."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6af420e-b05d-5f7f-9d41-10c5c568fbeb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Oasis et nomades : vivre là où l’eau manque",
+   "competence": "raisonner",
+   "situation": "Au Sahara comme en Mongolie, l’eau et les herbes sont rares. Comment vivent les habitants ? Croise une coupe d’oasis et des chiffres sur la densité de population.",
+   "documents": [
+    {
+     "id": "oasis",
+     "type": "schema",
+     "titre": "Coupe d’une oasis du Sahara",
+     "largeur": 340,
+     "hauteur": 260,
+     "source": "Schéma simplifié écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 150,
+       "l": 300,
+       "h": 90,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "sol"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         20,
+         150
+        ],
+        [
+         60,
+         115
+        ],
+        [
+         100,
+         150
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "hachures"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         250,
+         150
+        ],
+        [
+         295,
+         112
+        ],
+        [
+         320,
+         150
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "hachures"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 135,
+       "l": 160,
+       "h": 18,
+       "arrondi": 6,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 200,
+       "l": 300,
+       "h": 34,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "nappe",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 222,
+       "texte": "Eau sous le sol",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 152,
+       "l": 10,
+       "h": 50,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "puits",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 154,
+       "y": 148,
+       "l": 22,
+       "h": 6,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "emoji",
+       "x": 105,
+       "y": 112,
+       "emoji": "🌴",
+       "taille": 38,
+       "id": "pal1",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 215,
+       "y": 112,
+       "emoji": "🌴",
+       "taille": 38,
+       "id": "pal2",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 255,
+       "y": 118,
+       "emoji": "🌴",
+       "taille": 34,
+       "id": "pal3",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 125,
+       "y": 142,
+       "emoji": "🍊",
+       "taille": 20
+      },
+      {
+       "forme": "emoji",
+       "x": 195,
+       "y": 144,
+       "emoji": "🥕",
+       "taille": 18
+      },
+      {
+       "forme": "emoji",
+       "x": 215,
+       "y": 144,
+       "emoji": "🥬",
+       "taille": 18
+      },
+      {
+       "forme": "etiquette",
+       "x": 70,
+       "y": 50,
+       "texte": "Palmiers dattiers",
+       "vers": [
+        105,
+        100
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 175,
+       "texte": "Sable",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "dens",
+     "type": "tableau",
+     "titre": "Habitants et surface de deux pays",
+     "source": "ONU, chiffres arrondis.",
+     "colonnes": [
+      "Pays",
+      "Habitants (en millions)",
+      "Surface (en millions de km²)"
+     ],
+     "lignes": [
+      [
+       "Mongolie",
+       "3,4",
+       "1,56"
+      ],
+      [
+       "France métropolitaine",
+       "66",
+       "0,55"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "oasis",
+     "enonce": "Touche **la réserve d’eau** qui rend la vie possible dans l’oasis.",
+     "reponse": [
+      "nappe"
+     ],
+     "aide": "Elle est sous le sol, tout en bas.",
+     "explication": "La **nappe d’eau souterraine** alimente le puits : sans elle, pas d’oasis."
+    },
+    {
+     "type": "zone",
+     "document": "oasis",
+     "multiple": true,
+     "enonce": "Touche les **trois palmiers** qui donnent de l’ombre aux autres cultures.",
+     "reponse": [
+      "pal1",
+      "pal2",
+      "pal3"
+     ],
+     "aide": "Ce sont les plus hauts arbres du dessin.",
+     "explication": "Les **palmiers dattiers** donnent de l’ombre : dessous poussent des arbres fruitiers puis des légumes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la densité de la **Mongolie** : 3,4 millions d’habitants pour 1,56 million de km². Arrondis à l’unité.",
+     "reponse": 2,
+     "unite": "hab./km²",
+     "tolerance": 0.5,
+     "aide": "Divise 3,4 par 1,56. Les « millions » s’annulent.",
+     "explication": "3,4 ÷ 1,56 ≈ **2 hab./km²** : c’est un espace de très faible densité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la densité de la **France métropolitaine** : 66 ÷ 0,55. Donne un nombre entier.",
+     "reponse": 120,
+     "unite": "hab./km²",
+     "tolerance": 2,
+     "aide": "66 ÷ 0,55 = 6 600 ÷ 55.",
+     "explication": "66 ÷ 0,55 = **120 hab./km²** : plus de cinquante fois plus qu’en Mongolie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque contrainte à la réponse des habitants.",
+     "paires": [
+      [
+       "Le désert",
+       "Une oasis"
+      ],
+      [
+       "La montagne",
+       "Des cultures en terrasses"
+      ],
+      [
+       "Les herbes rares et mobiles",
+       "Le nomadisme pastoral"
+      ],
+      [
+       "Le gel du sol",
+       "Des maisons sur pilotis"
+      ]
+     ],
+     "aide": "Un milieu, une solution.",
+     "explication": "Désert → **oasis** ; montagne → **terrasses** ; ressources rares et mobiles → **nomadisme** ; gel du sol → **pilotis**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c1adbe71-f57b-5c1e-81f8-5b785feaaf39",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "À la découverte des hauts lieux du vivant",
+   "competence": "lire-carte",
+   "situation": "Des scientifiques dressent la liste des lieux de la planète où le vivant est le plus riche. Retrouve-les sur la carte avec leur tableau.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre hauts lieux de la biodiversité",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      -40,
+      160,
+      15
+     ],
+     "lieux": [
+      {
+       "id": "amazonie",
+       "lieu": "manaus",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "congo",
+       "lon": 22,
+       "lat": -1,
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "madagascar",
+       "lon": 46.9,
+       "lat": -19.4,
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "barriere",
+       "lon": 147,
+       "lat": -18.3,
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "Ce que chaque lieu abrite",
+     "source": "Chiffres arrondis.",
+     "colonnes": [
+      "Repère",
+      "Lieu",
+      "Ce qu’il abrite"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Amazonie",
+       "Environ 10 % des espèces connues sur Terre"
+      ],
+      [
+       "B",
+       "Bassin du Congo",
+       "Une immense forêt dense"
+      ],
+      [
+       "C",
+       "Madagascar",
+       "80 % d’espèces qui ne vivent nulle part ailleurs"
+      ],
+      [
+       "D",
+       "Grande Barrière de corail (Australie)",
+       "1 500 espèces de poissons"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **Madagascar**, une grande île de l’océan Indien.",
+     "reponse": [
+      "madagascar"
+     ],
+     "aide": "Cherche le repère situé à l’est de l’Afrique, dans l’océan.",
+     "explication": "**Madagascar** est le repère C, à l’est de l’Afrique."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la **Grande Barrière de corail**, au large de l’Australie.",
+     "reponse": [
+      "barriere"
+     ],
+     "aide": "Elle se trouve tout à droite de la carte.",
+     "explication": "La Grande Barrière de corail est le repère **D**, au nord-est de l’Australie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qu’une espèce « endémique », comme celles de Madagascar ?",
+     "options": [
+      "Elle ne vit nulle part ailleurs",
+      "Elle vit dans tous les pays",
+      "Elle vient d’être découverte",
+      "Elle ne vit que dans l’eau"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le chiffre de 80 % dans le tableau.",
+     "explication": "Une espèce **endémique** ne vit **nulle part ailleurs** : Madagascar en abrite beaucoup."
+    }
+   ]
+  },
+  {
+   "chapitre": "c1adbe71-f57b-5c1e-81f8-5b785feaaf39",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dans la forêt tropicale : l’homme est-il un danger ?",
+   "competence": "observer-schema",
+   "situation": "Lila a ouvert un carnet de voyage sur une forêt tropicale. Elle voit d’abord des arbres et des animaux, puis des gens qui y vivent. Certaines de leurs pratiques protègent la forêt, d’autres non.",
+   "documents": [
+    {
+     "id": "foret",
+     "type": "schema",
+     "titre": "Une forêt tropicale, vue en coupe",
+     "largeur": 340,
+     "hauteur": 260,
+     "source": "Schéma simplifié écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 20,
+       "l": 230,
+       "h": 70,
+       "teinte": "ciel",
+       "motif": "clair",
+       "id": "cimes",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 90,
+       "l": 230,
+       "h": 100,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "sousbois",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 190,
+       "l": 230,
+       "h": 50,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "sol",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 60,
+       "l": 10,
+       "h": 130,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 60,
+       "l": 10,
+       "h": 130,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 60,
+       "l": 10,
+       "h": 130,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 60,
+       "l": 10,
+       "h": 130,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 55,
+       "r": 28,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 52,
+       "r": 28,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 155,
+       "cy": 55,
+       "r": 28,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 205,
+       "cy": 52,
+       "r": 28,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "emoji",
+       "x": 130,
+       "y": 36,
+       "emoji": "🦜",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 130,
+       "y": 125,
+       "emoji": "🐒",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 80,
+       "y": 215,
+       "emoji": "🐜",
+       "taille": 22
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 40,
+       "texte": "Cimes :",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 54,
+       "texte": "plein soleil",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 135,
+       "texte": "Sous-bois :",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 149,
+       "texte": "peu de lumière",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 205,
+       "texte": "Sol : feuilles",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 256,
+       "y": 219,
+       "texte": "mortes, fourmis",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "prat",
+     "type": "tableau",
+     "titre": "Habitants et forêt : pratiques et effets",
+     "source": "Tableau de synthèse écrit pour l’exercice.",
+     "colonnes": [
+      "Pratique",
+      "Effet sur la forêt"
+     ],
+     "lignes": [
+      [
+       "Brûlis sur un petit champ, puis la forêt repousse",
+       "La forêt se reconstitue"
+      ],
+      [
+       "Chasse réglée collectivement",
+       "Les animaux restent nombreux"
+      ],
+      [
+       "Culture industrielle de soja sur une grande surface",
+       "La forêt disparaît"
+      ],
+      [
+       "Extraction d’or avec du mercure",
+       "Les fleuves sont pollués"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "foret",
+     "enonce": "Touche l’étage de la forêt qui reçoit **le plus de soleil**.",
+     "reponse": [
+      "cimes"
+     ],
+     "aide": "Lis les petites notes à droite du schéma.",
+     "explication": "Les **cimes** reçoivent le plein soleil ; plus on descend, plus il fait sombre."
+    },
+    {
+     "type": "zone",
+     "document": "foret",
+     "enonce": "Touche le niveau où l’on trouve des **feuilles mortes** et des fourmis.",
+     "reponse": [
+      "sol"
+     ],
+     "aide": "C’est tout en bas du schéma.",
+     "explication": "Le **sol** : les feuilles mortes y pourrissent, des insectes y vivent."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans le tableau (Doc 2), range ces pratiques.",
+     "categories": [
+      "Compatible avec le maintien du milieu",
+      "Menace pour le milieu"
+     ],
+     "items": [
+      [
+       "Brûlis sur un petit champ",
+       0
+      ],
+      [
+       "Chasse réglée collectivement",
+       0
+      ],
+      [
+       "Soja sur une grande surface",
+       1
+      ],
+      [
+       "Extraction d’or au mercure",
+       1
+      ]
+     ],
+     "aide": "Regarde la colonne « Effet sur la forêt ».",
+     "explication": "Le **brûlis** à petite échelle et la **chasse réglée** sont compatibles. Le **soja** industriel et l’**orpaillage** menacent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ne peut-on pas « replanter » une forêt tropicale détruite ?",
+     "options": [
+      "Un écosystème met des millénaires à s’installer",
+      "Les arbres tropicaux ne poussent plus ensuite",
+      "Les enfants refusent d’y vivre après coup",
+      "Le soleil y est trop faible pour les arbres"
+     ],
+     "reponse": 0,
+     "aide": "Pense à tous les êtres vivants du schéma.",
+     "explication": "On remet des arbres, mais pas l’**écosystème** (animaux, insectes, sols) qui s’est installé pendant des **millénaires**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c1adbe71-f57b-5c1e-81f8-5b785feaaf39",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Protéger la forêt avec ceux qui y vivent",
+   "competence": "argumenter",
+   "situation": "Dans un village d’Amazonie, trois propositions sont sur la table : couper, ouvrir au tourisme ou interdire. Un graphique imaginé aide à comprendre quelle solution protège le mieux.",
+   "documents": [
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Réunion du village",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Un village du bassin amazonien. Le chef du village réunit les habitants. Trois propositions ont été reçues.",
+      "Une entreprise propose de couper la forêt contre de l’argent. Une association propose d’ouvrir des visites guidées pour les touristes, avec des revenus pour le village. L’État propose d’interdire à tous l’entrée de la forêt.",
+      "Une habitante dit : « Notre famille vit ici depuis toujours. On sait quels arbres couper et lesquels laisser. Si on nous reconnaît ce territoire, nous le garderons. »"
+     ]
+    },
+    {
+     "id": "defor",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part de forêt détruite en dix ans selon le statut du territoire",
+     "source": "Chiffres imaginés pour illustrer l’idée, pas des mesures réelles.",
+     "categories": [
+      "Territoire autochtone",
+      "Parc national",
+      "Zone non protégée"
+     ],
+     "series": [
+      {
+       "nom": "Forêt détruite",
+       "valeurs": [
+        3,
+        8,
+        20
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Forêt détruite",
+      "unite": "en %",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "defor",
+     "enonce": "Touche le territoire où la forêt est **la moins détruite**.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la barre la plus basse.",
+     "explication": "Le **territoire autochtone** perd le moins de forêt dans cet exemple."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la zone non protégée perd-elle plus de forêt que le territoire autochtone ?",
+     "reponse": 17,
+     "unite": "points",
+     "aide": "20 − 3.",
+     "explication": "20 − 3 = **17 points** d’écart."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée le graphique et la dernière phrase du texte illustrent-ils ?",
+     "options": [
+      "Les droits des habitants protègent la forêt",
+      "Il faut faire partir tous les habitants",
+      "Le tourisme suffit à régler tout le reste",
+      "Les entreprises protègent mieux la nature"
+     ],
+     "reponse": 0,
+     "aide": "Compare les barres et lis la phrase de l’habitante.",
+     "explication": "Les territoires dont les habitants ont les **droits** sont souvent **mieux préservés** que la moyenne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque moyen de protection à ce qu’il fait.",
+     "paires": [
+      [
+       "Un parc national",
+       "Il interdit ou encadre"
+      ],
+      [
+       "Le classement à l’UNESCO",
+       "Il attire l’attention sur un site"
+      ],
+      [
+       "L’écotourisme",
+       "Il finance la protection"
+      ],
+      [
+       "Les droits des autochtones",
+       "Les territoires qu’ils gèrent sont mieux préservés"
+      ]
+     ],
+     "aide": "Reprends les moyens énumérés dans le texte.",
+     "explication": "Chaque moyen a son rôle : **encadrer**, **classer**, **financer**, **reconnaître**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Concilier la protection du milieu et la vie des habitants s’appelle le ___ durable.",
+     "reponses": [
+      [
+       "développement"
+      ]
+     ],
+     "banque": [
+      "développement",
+      "commerce",
+      "tourisme",
+      "paysage"
+     ],
+     "aide": "C’est un mot de la fin du cours.",
+     "explication": "C’est le **développement durable** : vivre correctement sans détruire ce dont on dépend."
+    }
+   ]
+  },
+  {
+   "chapitre": "a4d37634-b247-53a0-9661-049ad775c8f6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où sont passés les agriculteurs ?",
+   "competence": "lire-graphique",
+   "situation": "Maëlys visite la ferme de son grand-père. Il lui raconte qu’en 1950, dans son village, presque tout le monde était agriculteur. Elle retrouve ce changement dans un graphique.",
+   "documents": [
+    {
+     "id": "agri",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les agriculteurs parmi les personnes qui travaillent, en France",
+     "source": "Ordres de grandeur, chiffres arrondis.",
+     "categories": [
+      "1950",
+      "1970",
+      "1990",
+      "2010",
+      "Aujourd’hui"
+     ],
+     "series": [
+      {
+       "nom": "Part des actifs",
+       "valeurs": [
+        31,
+        14,
+        6,
+        3,
+        1.5
+       ],
+       "teinte": "vert"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des personnes qui travaillent",
+      "unite": "en %",
+      "min": 0,
+      "max": 35,
+      "pas": 5
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "agri",
+     "enonce": "Touche l’année où les agriculteurs étaient **les plus nombreux** parmi les personnes qui travaillent.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la barre la plus haute.",
+     "explication": "En **1950**, environ 31 % des personnes qui travaillent étaient agriculteurs."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des actifs les agriculteurs représentent-ils en **1970** ? Lis le graphique.",
+     "reponse": 14,
+     "unite": "%",
+     "tolerance": 1,
+     "aide": "La barre 1970 est entre 10 et 15.",
+     "explication": "En 1970, environ **14 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Environ combien de fois moins d’agriculteurs y avait-il en 1990 qu’en 1950 ? Divise 31 par 6 et arrondis à l’unité.",
+     "reponse": 5,
+     "tolerance": 0.5,
+     "aide": "31 ÷ 6 est un peu plus de 5.",
+     "explication": "31 ÷ 6 ≈ **5** : cinq fois moins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Il y a moins d’agriculteurs, mais la production agricole a augmenté. Pourquoi ?",
+     "options": [
+      "Les machines et les grandes exploitations",
+      "Les agriculteurs travaillent la nuit",
+      "On cultive moins de céréales",
+      "Les agriculteurs sont devenus plus nombreux"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux gros tracteurs.",
+     "explication": "La **mécanisation** et l’**agrandissement** des exploitations expliquent la hausse de la production malgré moins d’agriculteurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "a4d37634-b247-53a0-9661-049ad775c8f6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois communes, trois destins",
+   "competence": "analyser-document",
+   "situation": "Les campagnes françaises n’évoluent pas toutes de la même façon : certaines gagnent des habitants, d’autres en perdent. Rapproche des chiffres et des témoignages.",
+   "documents": [
+    {
+     "id": "communes",
+     "type": "tableau",
+     "titre": "Trois communes rurales, trois évolutions",
+     "source": "Communes imaginées pour l’exercice.",
+     "colonnes": [
+      "Commune",
+      "Habitants en 2010",
+      "Habitants en 2020",
+      "Actifs qui travaillent hors de la commune"
+     ],
+     "lignes": [
+      [
+       "Aubépine",
+       "1 200",
+       "1 500",
+       "80 %"
+      ],
+      [
+       "Grandchamp",
+       "900",
+       "880",
+       "20 %"
+      ],
+      [
+       "Fontcreuse",
+       "700",
+       "560",
+       "30 %"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "temoins",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois témoignages",
+     "auteur": "Textes écrits pour l’exercice",
+     "blocs": [
+      "Camille (Aubépine) : « Je travaille à la ville, à 40 minutes. Je prends la voiture chaque jour : sans elle, je ne peux pas aller travailler. »",
+      "Paul (Grandchamp) : « Ici, trois exploitations cultivent 1 500 hectares de blé avec de gros tracteurs. On est peu nombreux, mais on produit beaucoup. »",
+      "Rose (Fontcreuse) : « L’école a fermé, le boulanger est parti. Pour voir un médecin, il faut faire 35 minutes de route. Dans le village, il n’y a plus de médecin : c’est un [[m|désert]] médical. »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants **Aubépine** a-t-elle gagnés entre 2010 et 2020 ?",
+     "reponse": 300,
+     "unite": "habitants",
+     "aide": "1 500 − 1 200.",
+     "explication": "1 500 − 1 200 = **300 habitants** de plus."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne au type de campagne où elle vit.",
+     "paires": [
+      [
+       "Camille (Aubépine)",
+       "Campagne périurbaine"
+      ],
+      [
+       "Paul (Grandchamp)",
+       "Campagne agricole productive"
+      ],
+      [
+       "Rose (Fontcreuse)",
+       "Campagne en déclin"
+      ]
+     ],
+     "aide": "Cherche qui travaille en ville, qui cultive, et qui voit l’école fermer.",
+     "explication": "Camille habite à la campagne et travaille en ville : **périurbain**. Paul : **agricole productive**. Rose : village qui perd ses services, **en déclin**."
+    },
+    {
+     "type": "zone",
+     "document": "temoins",
+     "portee": [
+      2
+     ],
+     "enonce": "Touche le mot qui désigne un endroit où l’accès aux **soins** est très difficile.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Rose dit qu’il n’y a plus de médecin dans le village.",
+     "explication": "Un **désert** médical : le médecin est loin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel indice du tableau montre que Aubépine est périurbaine ?",
+     "options": [
+      "80 % de ses actifs travaillent ailleurs",
+      "Elle a perdu une partie de ses habitants",
+      "Elle ne compte que 20 actifs en tout",
+      "Elle n’a aucune route pour en sortir"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la dernière colonne.",
+     "explication": "Une commune périurbaine **gagne** des habitants, qui **travaillent ailleurs** (ici en ville)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a4d37634-b247-53a0-9661-049ad775c8f6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ferme qui produit aussi de l’énergie",
+   "competence": "analyser-document",
+   "situation": "Aujourd’hui, une campagne ne sert plus seulement à cultiver : on y habite, on s’y repose, on y produit de l’énergie. Étudie une ferme imaginée et un échange de SMS.",
+   "documents": [
+    {
+     "id": "ferme",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "La ferme de la Plaine",
+     "sousTitre": "Exploitation imaginée pour l’exercice",
+     "emoji": "🚜",
+     "lignes": [
+      {
+       "texte": "120 hectares de blé",
+       "valeur": "production",
+       "id": "ble"
+      },
+      {
+       "texte": "8 éoliennes posées dans les champs",
+       "id": "eolien"
+      },
+      {
+       "texte": "Panneaux solaires sur le hangar",
+       "id": "solaire"
+      },
+      {
+       "texte": "Un méthaniseur qui transforme le fumier en gaz",
+       "id": "methane"
+      },
+      {
+       "texte": "Un gîte pour accueillir des vacanciers",
+       "id": "gite"
+      }
+     ]
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léna",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Papa",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léna",
+       "texte": "Papa, je télétravaille depuis la ferme de mamie. Mais ici je n’ai pas de réseau internet : c’est une zone blanche !"
+      },
+      {
+       "qui": "Papa",
+       "texte": "Ah oui. Dans les campagnes isolées, la connexion est parfois mauvaise. Mais le télétravail peut faire revenir des habitants."
+      },
+      {
+       "qui": "Léna",
+       "texte": "Alors il faut la fibre. Sinon je repars en ville."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range les activités de la ferme selon leur fonction.",
+     "categories": [
+      "Productive",
+      "Énergétique",
+      "Touristique"
+     ],
+     "items": [
+      [
+       "120 hectares de blé",
+       0
+      ],
+      [
+       "Les éoliennes",
+       1
+      ],
+      [
+       "Les panneaux solaires",
+       1
+      ],
+      [
+       "Le méthaniseur",
+       1
+      ],
+      [
+       "Le gîte",
+       2
+      ]
+     ],
+     "aide": "Blé = nourriture ; éoliennes, solaire et gaz = énergie ; gîte = vacanciers.",
+     "explication": "Le **blé** nourrit ; **éoliennes, panneaux et méthaniseur** produisent de l’énergie ; le **gîte** accueille des touristes."
+    },
+    {
+     "type": "zone",
+     "document": "ferme",
+     "enonce": "Touche la ligne qui montre la fonction **touristique** de la ferme.",
+     "reponse": [
+      "gite"
+     ],
+     "aide": "Cherche le mot « vacanciers ».",
+     "explication": "Le **gîte** accueille des vacanciers : c’est la fonction touristique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que désigne l’expression « zone blanche » dans les SMS ?",
+     "options": [
+      "Un lieu mal couvert par internet",
+      "Un lieu recouvert par la neige",
+      "Un lieu où personne n’habite",
+      "Un lieu entièrement protégé par la loi"
+     ],
+     "reponse": 0,
+     "aide": "Léna dit qu’elle n’a pas de réseau.",
+     "explication": "Une **zone blanche** est une zone sans bonne connexion internet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les fonctions successives des campagnes, de la plus ancienne à la plus récente.",
+     "items": [
+      "Productive",
+      "Résidentielle",
+      "Touristique",
+      "Récréative",
+      "Énergétique"
+     ],
+     "aide": "Elle commence par la plus vieille : cultiver pour manger.",
+     "explication": "Les campagnes ont d’abord **produit** de la nourriture, puis **logé**, accueilli des touristes, des loisirs et enfin produit de l’**énergie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le père, que peut faire le télétravail pour certaines campagnes ?",
+     "options": [
+      "Les rendre plus attractives",
+      "Les vider de leurs habitants",
+      "Les relier à la mer",
+      "Supprimer leurs écoles"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse de Papa.",
+     "explication": "Le **télétravail** peut faire revenir des habitants, à condition d’avoir internet."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cf3b2bf-2e25-5d98-b8be-0697e54e7ef7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Huit milliards d’habitants, mais où ?",
+   "competence": "lire-graphique",
+   "situation": "La Terre compte environ 8 milliards d’habitants. Mais ils ne sont pas répartis de façon régulière. Ce graphique montre où vivent beaucoup de monde.",
+   "documents": [
+    {
+     "id": "regions",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Population de quelques grandes régions du monde",
+     "source": "ONU, ordres de grandeur arrondis.",
+     "categories": [
+      "Asie du Sud",
+      "Asie de l’Est",
+      "Afrique",
+      "Europe",
+      "Amérique du Nord"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        2,
+        1.7,
+        1.5,
+        0.75,
+        0.4
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en milliards",
+      "min": 0,
+      "max": 2.5,
+      "pas": 0.5
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regions",
+     "enonce": "Touche la région du monde **la plus peuplée**.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la barre la plus longue.",
+     "explication": "L’**Asie du Sud** est la plus peuplée : environ 2 milliards d’habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Additionne la population de l’**Asie du Sud**, de l’**Asie de l’Est** et de l’**Europe**. Donne le résultat en milliards.",
+     "reponse": 4.45,
+     "unite": "milliards",
+     "tolerance": 0.1,
+     "aide": "2 + 1,7 + 0,75.",
+     "explication": "2 + 1,7 + 0,75 = **4,45 milliards**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ces trois grands foyers rassemblent-ils plus ou moins de la moitié des 8 milliards d’humains ?",
+     "options": [
+      "Plus de la moitié",
+      "Moins de la moitié",
+      "Exactement la moitié",
+      "À peine un dixième"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La moitié de 8 milliards, c’est 4 milliards.",
+     "explication": "4,45 milliards, c’est **plus de la moitié** de 8 : trois foyers rassemblent plus de la moitié de l’humanité."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cf3b2bf-2e25-5d98-b8be-0697e54e7ef7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lire une carte de la population mondiale",
+   "competence": "lire-carte",
+   "situation": "Sur cette carte, les couleurs montrent où vivent les humains. Lis-la avec soin : sans sa légende, une carte de densité ne se lit pas.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Où vivent les humains ?",
+     "fond": "monde",
+     "cadrage": [
+      -105,
+      -20,
+      150,
+      75
+     ],
+     "source": "Contours très simplifiés.",
+     "aires": [
+      {
+       "id": "est",
+       "contour": [
+        [
+         102,
+         22
+        ],
+        [
+         106,
+         40
+        ],
+        [
+         122,
+         42
+        ],
+        [
+         127,
+         36
+        ],
+        [
+         142,
+         36
+        ],
+        [
+         142,
+         32
+        ],
+        [
+         125,
+         24
+        ],
+        [
+         118,
+         21
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "id": "sud",
+       "contour": [
+        [
+         68,
+         22
+        ],
+        [
+         70,
+         32
+        ],
+        [
+         80,
+         35
+        ],
+        [
+         90,
+         28
+        ],
+        [
+         92,
+         22
+        ],
+        [
+         88,
+         12
+        ],
+        [
+         80,
+         8
+        ],
+        [
+         73,
+         15
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "id": "europe",
+       "contour": [
+        [
+         -8,
+         38
+        ],
+        [
+         -5,
+         48
+        ],
+        [
+         5,
+         55
+        ],
+        [
+         20,
+         56
+        ],
+        [
+         30,
+         52
+        ],
+        [
+         28,
+         42
+        ],
+        [
+         15,
+         38
+        ]
+       ],
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "id": "sahara",
+       "contour": [
+        [
+         -14,
+         17
+        ],
+        [
+         34,
+         17
+        ],
+        [
+         34,
+         30
+        ],
+        [
+         -10,
+         30
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "hachures"
+      },
+      {
+       "id": "siberie",
+       "contour": [
+        [
+         60,
+         58
+        ],
+        [
+         140,
+         58
+        ],
+        [
+         140,
+         70
+        ],
+        [
+         60,
+         70
+        ]
+       ],
+       "teinte": "sable",
+       "motif": "points"
+      },
+      {
+       "id": "amazonie",
+       "contour": [
+        [
+         -72,
+         -12
+        ],
+        [
+         -52,
+         -12
+        ],
+        [
+         -52,
+         2
+        ],
+        [
+         -72,
+         2
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "corail",
+       "motif": "plein",
+       "texte": "Très peuplé"
+      },
+      {
+       "teinte": "sable",
+       "motif": "hachures",
+       "texte": "Presque vide"
+      },
+      {
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Forêt dense, peu peuplée"
+      }
+     ]
+    },
+    {
+     "id": "legendes",
+     "type": "tableau",
+     "titre": "Deux cartes de densité, deux légendes",
+     "source": "Exemple imaginé pour l’exercice.",
+     "colonnes": [
+      "Carte",
+      "La couleur la plus foncée veut dire"
+     ],
+     "lignes": [
+      [
+       "Carte 1",
+       "Plus de 100 hab./km²"
+      ],
+      [
+       "Carte 2",
+       "Plus de 1 000 hab./km²"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les **trois grands foyers de peuplement** : l’Asie de l’Est, l’Asie du Sud et l’Europe.",
+     "reponse": [
+      "est",
+      "sud",
+      "europe"
+     ],
+     "aide": "Ce sont les trois zones les plus denses de la légende : « Très peuplé ».",
+     "explication": "Les trois foyers (Asie de l’Est, Asie du Sud, Europe) rassemblent plus de la moitié de l’humanité."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le **désert humain froid**, où presque personne ne vit.",
+     "reponse": [
+      "siberie"
+     ],
+     "aide": "Il est tout au nord, sous le cercle polaire.",
+     "explication": "La **Sibérie** est un désert humain froid."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque espace à son type de « vide ».",
+     "paires": [
+      [
+       "Le Sahara",
+       "Désert chaud"
+      ],
+      [
+       "La Sibérie",
+       "Désert froid"
+      ],
+      [
+       "L’Amazonie",
+       "Forêt dense"
+      ]
+     ],
+     "aide": "Un espace chaud et sec, un espace glacé, un espace couvert d’arbres.",
+     "explication": "Sahara : **désert chaud** ; Sibérie : **désert froid** ; Amazonie : **forêt dense**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un département est de la couleur la plus foncée sur les deux cartes du Doc 2. Que peux-tu dire de sa densité ?",
+     "options": [
+      "Plus de 1 000 hab./km²",
+      "Plus de 100 hab./km² seulement",
+      "Moins de 100 hab./km²",
+      "On ne peut rien dire"
+     ],
+     "reponse": 0,
+     "aide": "Il doit respecter les deux légendes à la fois.",
+     "explication": "Pour être foncé sur la carte 2, il faut dépasser **1 000 hab./km²**, ce qui est aussi plus de 100 pour la carte 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cf3b2bf-2e25-5d98-b8be-0697e54e7ef7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le Nil : un fleuve et cinq mille ans d’histoire",
+   "competence": "analyser-document",
+   "situation": "L’Égypte est un pays presque entièrement désertique, et pourtant des dizaines de millions de gens y vivent. Presque tous habitent le long du Nil. Pourquoi ?",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Égypte et le Nil",
+     "fond": "mediterranee",
+     "cadrage": [
+      24,
+      22,
+      38,
+      34
+     ],
+     "fleuves": [
+      "nil"
+     ],
+     "lieux": [
+      {
+       "id": "alex",
+       "lieu": "alexandrie",
+       "symbole": "point",
+       "nom": "Alexandrie",
+       "teinte": "violet"
+      },
+      {
+       "id": "caire",
+       "lieu": "le-caire",
+       "symbole": "point",
+       "nom": "Le Caire",
+       "teinte": "violet"
+      },
+      {
+       "id": "thebes",
+       "lieu": "thebes-egypte",
+       "symbole": "point",
+       "nom": "Thèbes",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "L’Égypte et son fleuve",
+     "sousTitre": "Ordres de grandeur",
+     "emoji": "🏺",
+     "lignes": [
+      {
+       "texte": "La très grande majorité des habitants vivent près du Nil, son delta et ses rives",
+       "id": "nil"
+      },
+      {
+       "texte": "Le reste du pays est surtout un désert",
+       "id": "desert"
+      },
+      {
+       "texte": "La vallée est peuplée depuis environ 5 000 ans",
+       "id": "histoire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville située **le plus au sud** des trois, loin du delta.",
+     "reponse": [
+      "thebes"
+     ],
+     "aide": "Plus on descend sur la carte, plus on va vers le sud.",
+     "explication": "**Thèbes** est la plus au sud, sur le Nil."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": true,
+     "enonce": "Touche les **deux villes proches de la mer Méditerranée**, dans le delta.",
+     "reponse": [
+      "alex",
+      "caire"
+     ],
+     "aide": "Le delta, c’est la zone où le fleuve se partage en bras avant la mer.",
+     "explication": "**Alexandrie** et **Le Caire** sont dans le nord, au delta du Nil."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La vallée est peuplée depuis environ 5 000 ans. Combien de **siècles** cela fait-il ?",
+     "reponse": 50,
+     "unite": "siècles",
+     "aide": "Un siècle, c’est 100 ans.",
+     "explication": "5 000 ÷ 100 = **50 siècles**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range ces explications de la forte population près du Nil.",
+     "categories": [
+      "Facteur naturel",
+      "Facteur historique"
+     ],
+     "items": [
+      [
+       "L’eau du fleuve",
+       0
+      ],
+      [
+       "Les sols fertiles",
+       0
+      ],
+      [
+       "Un peuplement très ancien",
+       1
+      ],
+      [
+       "Les foyers anciens sont restés peuplés",
+       1
+      ]
+     ],
+     "aide": "Naturel = climat, eau, sols. Historique = ce qui s’est passé avant.",
+     "explication": "L’**eau** et les **sols** sont naturels. L’**ancienneté** du peuplement est historique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’exemple du Nil ?",
+     "options": [
+      "L’histoire compte autant que la géographie",
+      "Les fleuves n’attirent jamais les habitants",
+      "Un désert est toujours très peuplé",
+      "Seule l’histoire explique le peuplement"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de la citation du cours.",
+     "explication": "La vallée est peuplée depuis 5 000 ans : cette **histoire**, autant que le fleuve, explique sa densité d’aujourd’hui."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5de074a-b0ba-58c1-825e-eeade04e8a46",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Huit milliards : une croissance en trois marches",
+   "competence": "lire-graphique",
+   "situation": "Vers 1800, un seul milliard d’humains vivait sur Terre. Aujourd’hui nous sommes huit milliards. Regarde les trois étapes de cette croissance.",
+   "documents": [
+    {
+     "id": "marches",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Combien d’humains sur Terre ?",
+     "source": "ONU, ordres de grandeur arrondis.",
+     "categories": [
+      "Vers 1800",
+      "1950",
+      "Aujourd’hui"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        1,
+        2.5,
+        8
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en milliards",
+      "min": 0,
+      "max": 9,
+      "pas": 1
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "marches",
+     "enonce": "Touche la barre qui correspond à **1 milliard** d’habitants.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "C’est la plus petite.",
+     "explication": "Vers **1800**, la Terre compte environ 1 milliard d’habitants."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants la Terre compte-t-elle en **1950** ? Lis le graphique.",
+     "reponse": 2.5,
+     "unite": "milliards",
+     "aide": "La barre du milieu est entre 2 et 3.",
+     "explication": "En 1950 : **2,5 milliards**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de milliards la population a-t-elle augmenté entre 1950 et aujourd’hui ?",
+     "reponse": 5.5,
+     "unite": "milliards",
+     "aide": "8 − 2,5.",
+     "explication": "8 − 2,5 = **5,5 milliards** de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui explique surtout cette hausse spectaculaire depuis 1800 ?",
+     "options": [
+      "La mortalité a fortement reculé",
+      "On a soudain fait beaucoup plus d’enfants",
+      "Les gens arrivent d’une autre planète",
+      "La Terre est devenue plus grande"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de la phrase d’ouverture du cours.",
+     "explication": "Ce n’est pas un excès de naissances mais un **recul de la mort** : médecine, hygiène, nourriture."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5de074a-b0ba-58c1-825e-eeade04e8a46",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Niger, le Japon : deux pays, deux tendances",
+   "competence": "raisonner",
+   "situation": "Pour savoir si la population d’un pays augmente ou diminue, on compare les naissances et les décès, toujours pour 1 000 habitants. Calcule l’accroissement naturel de deux pays très différents.",
+   "documents": [
+    {
+     "id": "taux",
+     "type": "tableau",
+     "titre": "Naissances et décès pour 1 000 habitants",
+     "source": "ONU, vers 2022, chiffres arrondis.",
+     "colonnes": [
+      "Pays",
+      "Naissances (pour 1 000)",
+      "Décès (pour 1 000)"
+     ],
+     "lignes": [
+      [
+       "Niger",
+       "46",
+       "10"
+      ],
+      [
+       "Japon",
+       "6",
+       "13"
+      ],
+      [
+       "France",
+       "11",
+       "10"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "transition",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Les quatre temps de la transition démographique",
+     "source": "Schéma illustratif, valeurs imaginées pour montrer l’idée.",
+     "categories": [
+      "Ancien régime",
+      "Début de transition",
+      "Fin de transition",
+      "Régime moderne"
+     ],
+     "series": [
+      {
+       "nom": "Naissances",
+       "valeurs": [
+        40,
+        40,
+        30,
+        12
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Décès",
+       "valeurs": [
+        38,
+        20,
+        12,
+        10
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Pour 1 000 habitants",
+      "min": 0,
+      "max": 45,
+      "pas": 5
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’**accroissement naturel** du Niger : naissances − décès. Combien pour 1 000 habitants ?",
+     "reponse": 36,
+     "unite": "‰",
+     "aide": "46 − 10.",
+     "explication": "46 − 10 = **36** pour 1 000 : la population du Niger augmente très vite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au Japon, il y a plus de décès que de naissances. De combien la population baisse-t-elle pour 1 000 habitants ? Donne un nombre positif.",
+     "reponse": 7,
+     "unite": "‰",
+     "aide": "13 − 6.",
+     "explication": "13 − 6 = **7** pour 1 000 : le Japon perd naturellement des habitants."
+    },
+    {
+     "type": "zone",
+     "document": "transition",
+     "enonce": "Touche le moment où l’écart entre naissances et décès est **le plus grand** : la population explose.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche où les deux courbes sont les plus éloignées.",
+     "explication": "Au **début de la transition**, la mortalité chute alors que la natalité reste forte : l’écart est maximal."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le Niger et le Japon n’ont-ils pas la même évolution ?",
+     "options": [
+      "Ils sont à des stades différents de la transition",
+      "Le Japon a beaucoup plus de forêts que lui",
+      "Le Niger n’a pas du tout de naissances",
+      "Les chiffres sont toujours identiques partout"
+     ],
+     "reponse": 0,
+     "aide": "Relis le Doc 2 : quatre étapes.",
+     "explication": "Tous les pays ne sont pas au même stade : le Niger est en pleine croissance, le Japon dans un régime moderne qui vieillit."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5de074a-b0ba-58c1-825e-eeade04e8a46",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le pays de Zora : naissances, décès et arrivées",
+   "competence": "modeliser",
+   "situation": "Pour savoir combien d’habitants gagne ou perd un pays, il faut compter les naissances, les décès et aussi les migrations. Teste la méthode sur un pays imaginaire, puis corrige une idée reçue.",
+   "documents": [
+    {
+     "id": "zora",
+     "type": "tableau",
+     "titre": "Une année dans le pays imaginaire de Zora",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Ce qui se passe en un an",
+      "Nombre de personnes"
+     ],
+     "lignes": [
+      [
+       "Naissances",
+       "1 000"
+      ],
+      [
+       "Décès",
+       "800"
+      ],
+      [
+       "Personnes arrivées dans le pays",
+       "500"
+      ],
+      [
+       "Personnes parties du pays",
+       "200"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux trajets de migrants",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      0,
+      20,
+      52
+     ],
+     "source": "Exemples de trajets, pas des chiffres.",
+     "lieux": [
+      {
+       "id": "bamako",
+       "lieu": "bamako",
+       "symbole": "point",
+       "nom": "Bamako",
+       "teinte": "violet"
+      },
+      {
+       "id": "abidjan",
+       "lieu": "abidjan",
+       "symbole": "point",
+       "nom": "Abidjan",
+       "teinte": "violet"
+      },
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "point",
+       "nom": "Paris",
+       "teinte": "violet"
+      }
+     ],
+     "traits": [
+      {
+       "id": "voisins",
+       "points": [
+        "bamako",
+        "abidjan"
+       ],
+       "style": "fleche",
+       "teinte": "ambre",
+       "etiquette": "A"
+      },
+      {
+       "id": "loin",
+       "points": [
+        "bamako",
+        "paris"
+       ],
+       "style": "fleche",
+       "teinte": "ambre",
+       "etiquette": "B"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’**accroissement naturel** de Zora (naissances − décès).",
+     "reponse": 200,
+     "unite": "personnes",
+     "aide": "1 000 − 800.",
+     "explication": "1 000 − 800 = **200** personnes de plus par le jeu des naissances et des décès."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le **solde migratoire** (arrivées − départs).",
+     "reponse": 300,
+     "unite": "personnes",
+     "aide": "500 − 200.",
+     "explication": "500 − 200 = **300**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **variation totale** de la population de Zora cette année ?",
+     "reponse": 500,
+     "unite": "personnes",
+     "aide": "Additionne l’accroissement naturel et le solde migratoire.",
+     "explication": "200 + 300 = **500** habitants de plus."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Dans le Doc 2, touche le trajet qui se fait entre **deux pays voisins**.",
+     "reponse": [
+      "voisins"
+     ],
+     "aide": "Bamako (Mali) et Abidjan (Côte d’Ivoire) ont une frontière commune.",
+     "explication": "Bamako → Abidjan : le Mali et la Côte d’Ivoire sont voisins. La **majorité des migrations** se font entre pays voisins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit-on sur l’idée « la plupart des migrants vont des pays pauvres vers les pays riches » ?",
+     "options": [
+      "Idée reçue : on migre surtout entre voisins",
+      "C’est une idée parfaitement exacte",
+      "Il n’existe presque aucune migration",
+      "Les migrants représentent la moitié du monde"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi du point d’exclamation du cours.",
+     "explication": "Environ 280 millions de personnes vivent hors de leur pays de naissance, soit 3,5 % de l’humanité, et la **majorité** reste entre **voisins**."
+    }
+   ]
+  },
+  {
+   "chapitre": "62d1c622-02dd-5720-995f-b00bee66f852",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois villages, trois formes d’habitat",
+   "competence": "observer-schema",
+   "situation": "Un géographe observe trois villages depuis un avion. Les maisons ne sont pas disposées de la même façon. Regarde ses croquis.",
+   "documents": [
+    {
+     "id": "villages",
+     "type": "schema",
+     "titre": "Trois villages vus du ciel",
+     "largeur": 340,
+     "hauteur": 300,
+     "source": "Plans simplifiés écrits pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 10,
+       "l": 300,
+       "h": 90,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "A",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 26,
+       "texte": "A",
+       "gras": true
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 55,
+       "emoji": "⛪",
+       "taille": 26
+      },
+      {
+       "forme": "rect",
+       "x": 118,
+       "y": 27,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 19,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 19,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 208,
+       "y": 27,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 118,
+       "y": 63,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 138,
+       "y": 73,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 73,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 208,
+       "y": 63,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 105,
+       "l": 300,
+       "h": 90,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "B",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 121,
+       "texte": "B",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 53,
+       "y": 124,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 123,
+       "y": 162,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 119,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 248,
+       "y": 164,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 283,
+       "y": 124,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 200,
+       "l": 300,
+       "h": 90,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "C",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 28,
+       "y": 216,
+       "texte": "C",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        244
+       ],
+       "a": [
+        320,
+        244
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 75,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 285,
+       "y": 216,
+       "l": 14,
+       "h": 12,
+       "teinte": "brun",
+       "motif": "plein"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "villages",
+     "enonce": "Touche le village où les maisons sont **serrées autour de l’église** : l’habitat groupé.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Cherche le dessin avec une église au milieu.",
+     "explication": "Le croquis **A** montre un habitat **groupé** : les maisons se serrent autour de l’église."
+    },
+    {
+     "type": "zone",
+     "document": "villages",
+     "enonce": "Touche le village où les maisons sont alignées **le long d’une rivière** : l’habitat linéaire.",
+     "reponse": [
+      "C"
+     ],
+     "aide": "Cherche la ligne bleue.",
+     "explication": "Le croquis **C** montre un habitat **linéaire** : les maisons s’alignent le long du cours d’eau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le bocage de l’Ouest de la France, les fermes sont isolées les unes des autres. Quelle forme est-ce ?",
+     "options": [
+      "Un habitat dispersé",
+      "Un habitat groupé",
+      "Un habitat linéaire",
+      "Un habitat urbain"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le croquis B.",
+     "explication": "C’est un habitat **dispersé** : le croquis **B**, avec ses fermes isolées."
+    }
+   ]
+  },
+  {
+   "chapitre": "62d1c622-02dd-5720-995f-b00bee66f852",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la ville aux champs : le trajet de Chloé",
+   "competence": "analyser-document",
+   "situation": "Chloé habite dans un lotissement à la campagne mais travaille en ville. Entre la ville et les espaces peu habités, il y a toute une gradation d’espaces.",
+   "documents": [
+    {
+     "id": "coupe",
+     "type": "schema",
+     "titre": "De la ville aux espaces peu habités",
+     "largeur": 340,
+     "hauteur": 250,
+     "source": "Schéma simplifié écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 60,
+       "l": 80,
+       "h": 160,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "ville",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 60,
+       "l": 80,
+       "h": 160,
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "peri",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 60,
+       "l": 80,
+       "h": 160,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "rural",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 260,
+       "y": 60,
+       "l": 60,
+       "h": 160,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "foret",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 95,
+       "l": 20,
+       "h": 75,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 52,
+       "y": 75,
+       "l": 22,
+       "h": 95,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 78,
+       "y": 105,
+       "l": 18,
+       "h": 65,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 150,
+       "l": 16,
+       "h": 14,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 150,
+       "l": 16,
+       "h": 14,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 180,
+       "l": 16,
+       "h": 14,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 140,
+       "y": 180,
+       "l": 16,
+       "h": 14,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 170,
+       "l": 30,
+       "h": 30,
+       "teinte": "vert",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 224,
+       "y": 160,
+       "l": 30,
+       "h": 30,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 206,
+       "y": 100,
+       "l": 16,
+       "h": 14,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "emoji",
+       "x": 290,
+       "y": 110,
+       "emoji": "🌲",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 295,
+       "y": 150,
+       "emoji": "🌲",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 285,
+       "y": 190,
+       "emoji": "🌲",
+       "taille": 28
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 238,
+       "texte": "Ville",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 238,
+       "texte": "Périurbain",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 238,
+       "texte": "Rural",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 238,
+       "texte": "Forêt",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        30,
+        38
+       ],
+       "a": [
+        310,
+        38
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 26,
+       "texte": "De moins en moins d’habitants au km²",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "chloe",
+     "type": "tableau",
+     "titre": "Le trajet quotidien de Chloé",
+     "source": "Exemple imaginé pour l’exercice.",
+     "colonnes": [
+      "Question",
+      "Réponse"
+     ],
+     "lignes": [
+      [
+       "Où habite-t-elle ?",
+       "Dans un lotissement, à 25 km de la ville"
+      ],
+      [
+       "Où travaille-t-elle ?",
+       "Au centre-ville"
+      ],
+      [
+       "Combien de jours travaille-t-elle par semaine ?",
+       "5"
+      ],
+      [
+       "Moyen de transport",
+       "La voiture"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coupe",
+     "enonce": "Touche l’espace **périurbain**, entre la ville et les champs, avec ses maisons individuelles.",
+     "reponse": [
+      "peri"
+     ],
+     "aide": "Il est juste à côté de la ville, avec des petites maisons.",
+     "explication": "Le **périurbain** est un espace de maisons individuelles dont les habitants travaillent souvent en ville."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chloé fait 25 km pour aller travailler, et 25 km pour rentrer, pendant 5 jours. Combien de km parcourt-elle en une semaine ?",
+     "reponse": 250,
+     "unite": "km",
+     "aide": "25 × 2 × 5.",
+     "explication": "25 × 2 = 50 km par jour ; 50 × 5 = **250 km** par semaine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque espace à ses caractères.",
+     "paires": [
+      [
+       "Urbain",
+       "Forte densité et bâti continu"
+      ],
+      [
+       "Périurbain",
+       "Maisons individuelles, emploi en ville"
+      ],
+      [
+       "Rural",
+       "Faible densité et agriculture"
+      ],
+      [
+       "Très faible densité",
+       "Forêts, déserts, hautes montagnes"
+      ]
+     ],
+     "aide": "Regarde le schéma de gauche à droite.",
+     "explication": "Urbain = **dense** ; périurbain = **maisons** et emploi en ville ; rural = **champs** ; très faible densité = forêts, déserts, montagnes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit la ville aux campagnes ?",
+     "options": [
+      "Sa nourriture",
+      "Ses immeubles",
+      "Son métro",
+      "Ses musées"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Pense à ce qu’on mange tous les jours.",
+     "explication": "La ville dépend des campagnes pour se **nourrir**, et les campagnes dépendent de la ville pour les services."
+    }
+   ]
+  },
+  {
+   "chapitre": "62d1c622-02dd-5720-995f-b00bee66f852",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Samir et les mots de la géographie",
+   "competence": "analyser-document",
+   "situation": "Pour un géographe, « habiter », ce n’est pas seulement loger. Samir va t’aider à comprendre ce que le verbe recouvre, puis à nommer les transformations de l’espace.",
+   "documents": [
+    {
+     "id": "samir",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Samir, 15 ans, habite en périphérie",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Samir vit dans un lotissement, à 25 km de la grande ville. Il [[o|dort]] dans sa chambre, prend le bus pour aller au collège et joue au foot au stade du village.",
+      "Sa mère a planté un jardin devant la maison. Le soir, Samir [[s|dessine]] la ville de ses rêves : plus de vélos, moins de voitures."
+     ]
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Quatre mots, quatre exemples",
+     "source": "Exemples imaginés pour l’exercice.",
+     "colonnes": [
+      "Mot",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Urbanisation",
+       "Un nouveau quartier s’ajoute à la ville"
+      ],
+      [
+       "Périurbanisation",
+       "Un lotissement est construit sur un ancien champ, près de la ville"
+      ],
+      [
+       "Déprise",
+       "Autour d’un village qui se vide, les friches gagnent"
+      ],
+      [
+       "Métropolisation",
+       "Les sièges d’entreprises et les universités se concentrent dans quelques très grandes villes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "samir",
+     "portee": [
+      1
+     ],
+     "enonce": "Touche le **mot** qui montre que Samir se **représente** la ville qu’il voudrait.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "C’est un verbe qu’on fait avec un crayon.",
+     "explication": "« **Dessine** » : il imagine la ville de ses rêves. Se représenter un lieu fait partie d’habiter."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque façon d’habiter à un exemple tiré du texte.",
+     "paires": [
+      [
+       "Occuper",
+       "Samir dort dans sa chambre"
+      ],
+      [
+       "Pratiquer",
+       "Il prend le bus et joue au foot"
+      ],
+      [
+       "Aménager",
+       "Sa mère plante un jardin"
+      ],
+      [
+       "Se représenter",
+       "Il dessine la ville de ses rêves"
+      ]
+     ],
+     "aide": "Un exemple par ligne du texte.",
+     "explication": "**Occuper**, **pratiquer**, **aménager**, **se représenter** : voilà les quatre sens du verbe « habiter » en géographie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le lotissement de Samir a été bâti sur un ancien champ. Quel mot du Doc 2 le décrit ?",
+     "options": [
+      "La périurbanisation",
+      "La déprise",
+      "La métropolisation",
+      "L’urbanisation d’un centre-ville"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’exemple avec « lotissement ».",
+     "explication": "C’est la **périurbanisation** : la ville s’étale sur les campagnes proches."
+    },
+    {
+     "type": "zone",
+     "document": "mots",
+     "enonce": "Touche la case de l’exemple qui illustre la **déprise**.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche l’exemple où le village se vide.",
+     "explication": "Quand un village se vide et que les friches gagnent, c’est la **déprise**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la conclusion du cours.",
+     "texte": "Il n’existe pas d’espace ___ : la géographie est d’abord une affaire de ___.",
+     "reponses": [
+      [
+       "autosuffisant"
+      ],
+      [
+       "relations"
+      ]
+     ],
+     "banque": [
+      "autosuffisant",
+      "relations",
+      "isolé",
+      "cartes"
+     ],
+     "aide": "La ville et la campagne dépendent l’une de l’autre.",
+     "explication": "Aucun espace n’est **autosuffisant** : tout est relié par des **relations** (routes, réseaux)."
+    }
+   ]
+  }
+ ]
+}

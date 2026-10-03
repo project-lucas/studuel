@@ -1,0 +1,3202 @@
+{
+ "niveau": "2de",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "26155276-3b14-553d-97de-85e5d4e5a28a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où ranger ces dates sur la frise ?",
+   "competence": "se-reperer-temps",
+   "situation": "Camille prépare une frise pour son cahier d’histoire. Elle doit y retrouver les grandes périodes depuis la fin de l’Empire romain d’Occident et y ranger quelques événements.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les périodes depuis l’an 400",
+     "source": "Frise établie d’après le cours.",
+     "debut": 400,
+     "fin": 2000,
+     "pas": 200,
+     "periodes": [
+      {
+       "id": "ma",
+       "debut": 476,
+       "fin": 1492,
+       "nom": "Moyen Âge",
+       "teinte": "turquoise"
+      },
+      {
+       "id": "mod",
+       "debut": 1492,
+       "fin": 1789,
+       "nom": "Époque moderne",
+       "teinte": "ambre"
+      },
+      {
+       "id": "cont",
+       "debut": 1789,
+       "fin": 2000,
+       "nom": "Époque contemporaine",
+       "teinte": "rose"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période qui s’ouvre avec l’arrivée de Colomb en Amérique.",
+     "reponse": [
+      "mod"
+     ],
+     "aide": "Colomb arrive en 1492 : cherche la période qui commence à cette date.",
+     "explication": "L’**époque moderne** commence en 1492, avec l’arrivée de Colomb en Amérique, et s’achève en 1789."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le Moyen Âge va de 476 à 1492. Combien d’années dure-t-il ?",
+     "reponse": 1016,
+     "unite": "ans",
+     "aide": "Soustrais la date de début à la date de fin.",
+     "explication": "1492 − 476 = **1 016 ans** : le Moyen Âge est la plus longue des périodes de la frise."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque événement dans la période où il se passe.",
+     "categories": [
+      "Moyen Âge",
+      "Époque moderne",
+      "Époque contemporaine"
+     ],
+     "items": [
+      [
+       "Première croisade (1095)",
+       0
+      ],
+      [
+       "Règne de Louis XIV (1643-1715)",
+       1
+      ],
+      [
+       "Bataille de Waterloo (1815)",
+       2
+      ],
+      [
+       "Sacre de Charlemagne (800)",
+       0
+      ]
+     ],
+     "aide": "Compare chaque date aux bornes de la frise : 1492 et 1789.",
+     "explication": "1095 et 800 sont avant 1492 : **Moyen Âge**. 1643-1715 se place entre 1492 et 1789 : **époque moderne**. 1815 est après 1789 : **époque contemporaine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "26155276-3b14-553d-97de-85e5d4e5a28a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Siècles et périodes : qui est où ?",
+   "competence": "se-reperer-temps",
+   "situation": "Yanis a noté quatre dates dans son carnet, mais il ne sait plus à quel siècle ni à quelle période les rattacher. Aide-le à les ranger.",
+   "documents": [
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Quatre dates du carnet de Yanis",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Événement",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Première croisade",
+       1095
+      ],
+      [
+       "Fondation de Constantinople",
+       330
+      ],
+      [
+       "Traité de Tordesillas",
+       1494
+      ],
+      [
+       "Bataille de Waterloo",
+       1815
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dates",
+     "enonce": "Touche la date qui se situe au XIe siècle (de 1001 à 1100).",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le XIe siècle va de 1001 à 1100 : cherche une date dans cet intervalle.",
+     "explication": "La première croisade date de **1095**, donc du XIe siècle : 1001 ≤ 1095 ≤ 1100."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel siècle appartient le traité de Tordesillas (1494) ?",
+     "options": [
+      "Au XIVe siècle",
+      "Au XVe siècle",
+      "Au XVIe siècle",
+      "Au XVIIe siècle"
+     ],
+     "reponse": 1,
+     "aide": "Le XVe siècle va de 1401 à 1500 : le numéro du siècle dépasse d’un les deux premiers chiffres.",
+     "explication": "1494 est entre 1401 et 1500 : c’est le **XVe siècle**. On retient que le siècle porte le numéro des « centaines » plus un."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la première croisade (1095) du traité de Tordesillas (1494) ?",
+     "reponse": 399,
+     "unite": "ans",
+     "aide": "Soustrais la plus ancienne date à la plus récente.",
+     "explication": "1494 − 1095 = **399 ans**, soit près de quatre siècles."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque événement à la période où il se place.",
+     "paires": [
+      [
+       "Fondation de Constantinople (330)",
+       "Antiquité"
+      ],
+      [
+       "Première croisade (1095)",
+       "Moyen Âge"
+      ],
+      [
+       "Traité de Tordesillas (1494)",
+       "Époque moderne"
+      ],
+      [
+       "Bataille de Waterloo (1815)",
+       "Époque contemporaine"
+      ]
+     ],
+     "aide": "Les bornes à retenir : 476, 1492 et 1789.",
+     "explication": "330 est avant 476 : **Antiquité**. 1095 est entre 476 et 1492 : **Moyen Âge**. 1494 est entre 1492 et 1789 : **époque moderne**. 1815 est après 1789 : **époque contemporaine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "26155276-3b14-553d-97de-85e5d4e5a28a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un ancien combattant raconte : peut-on tout croire ?",
+   "competence": "analyser-document",
+   "situation": "Un historien enregistre le souvenir d’un ancien combattant, puis le compare à d’autres traces du même village. Il doit d’abord savoir de quelle sorte de source il s’agit, puis ce qu’il peut en tirer.",
+   "documents": [
+    {
+     "id": "temoin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Témoignage enregistré en 1990",
+     "source": "Témoignage imaginé pour l’exercice : le village, le témoin et sa compagnie n’ont jamais existé.",
+     "blocs": [
+      "Marcel avait dix-neuf ans en 1944. Il raconte au micro de l’historien : « Je n’ai pas parlé de cette journée pendant [[t|quarante]] ans. Notre capitaine était le [[a|meilleur]] chef que j’aie connu. Les autres compagnies, elles, n’ont pas tenu. »"
+     ]
+    },
+    {
+     "id": "traces",
+     "type": "tableau",
+     "titre": "Autres traces du même événement",
+     "source": "Traces imaginées pour l’exercice.",
+     "colonnes": [
+      "Trace",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Rapport écrit par le capitaine",
+       "juin 1944"
+      ],
+      [
+       "Photographie du village en ruines",
+       "juin 1944"
+      ],
+      [
+       "Plaque posée sur la place du village",
+       "1954"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "De quel type de source relève le témoignage de Marcel ?",
+     "options": [
+      "Une source orale",
+      "Une source écrite",
+      "Une source matérielle",
+      "Une source iconographique"
+     ],
+     "reponse": 0,
+     "aide": "Il parle devant un micro : le souvenir est transmis par la voix.",
+     "explication": "Un souvenir recueilli de vive voix est une **source orale**."
+    },
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche le mot qui montre que Marcel donne son avis et non un fait.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche un mot qui juge quelqu’un.",
+     "explication": "Dire que le capitaine était le « **meilleur** » chef est un jugement personnel, pas un fait vérifiable."
+    },
+    {
+     "type": "zone",
+     "document": "temoin",
+     "enonce": "Touche le mot qui montre que ce témoignage est donné très longtemps après les faits.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "Cherche une durée en années.",
+     "explication": "Marcel a gardé le silence pendant « **quarante** ans » : il raconte en 1990 des faits de 1944, et la mémoire a pu changer."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque trace à son type de source.",
+     "paires": [
+      [
+       "Rapport écrit par le capitaine",
+       "Écrite"
+      ],
+      [
+       "Photographie du village en ruines",
+       "Iconographique"
+      ],
+      [
+       "Plaque posée sur la place",
+       "Matérielle"
+      ],
+      [
+       "Témoignage enregistré en 1990",
+       "Orale"
+      ]
+     ],
+     "aide": "Écrite : des mots sur papier ; iconographique : une image ; matérielle : un objet ou un monument ; orale : la parole.",
+     "explication": "Le rapport est une source **écrite**, la photographie une source **iconographique**, la plaque une source **matérielle**, le témoignage une source **orale**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que doit faire l’historien du témoignage de Marcel ?",
+     "options": [
+      "Le croiser avec les autres traces avant de s’y fier",
+      "Le croire entièrement, car Marcel était présent",
+      "L’écarter, car un témoin oral ne dit jamais rien d’utile",
+      "Ne garder que les passages où Marcel donne son avis"
+     ],
+     "reponse": 0,
+     "aide": "L’historien se demande qui parle, quand, pour qui et pourquoi.",
+     "explication": "Il **croise** le témoignage avec le rapport, la photographie et la plaque : aucune source ne se croit seule, toutes se critiquent."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd311e14-3447-5384-996b-66de05d4315b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre réformateurs, un siècle de lois nouvelles",
+   "competence": "se-reperer-temps",
+   "situation": "Dans le cahier d’Éléni, une frise résume les réformes qui ont ouvert la voie à la démocratie athénienne. Elle doit retrouver qui a fait quoi et à quelle date.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les réformes à Athènes, VIIe-Ve siècles av. J.-C.",
+     "source": "Frise établie d’après le cours.",
+     "debut": -650,
+     "fin": -450,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "dracon",
+       "date": -621,
+       "nom": "Dracon"
+      },
+      {
+       "id": "solon",
+       "date": -594,
+       "nom": "Solon"
+      },
+      {
+       "id": "pisistrate",
+       "date": -561,
+       "nom": "Pisistrate"
+      },
+      {
+       "id": "clisthene",
+       "date": -508,
+       "nom": "Clisthène"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le réformateur qui agit en 594 av. J.-C.",
+     "reponse": [
+      "solon"
+     ],
+     "aide": "Repère la graduation 594 : les dates négatives se lisent à l’envers, vers la gauche.",
+     "explication": "En 594 av. J.-C., c’est **Solon** qui agit : il abolit l’esclavage pour dettes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Dracon (621 av. J.-C.) de Clisthène (508 av. J.-C.) ?",
+     "reponse": 113,
+     "unite": "ans",
+     "aide": "Avant J.-C., on compte à rebours : retranche la date la plus proche de J.-C. à l’autre.",
+     "explication": "621 − 508 = **113 ans** : la démocratie athénienne est le fruit de plus d’un siècle de réformes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque réformateur à sa mesure.",
+     "paires": [
+      [
+       "Dracon",
+       "Il fait mettre les lois par écrit"
+      ],
+      [
+       "Solon",
+       "Il abolit l’esclavage pour dettes"
+      ],
+      [
+       "Pisistrate",
+       "Il affaiblit l’aristocratie foncière"
+      ],
+      [
+       "Clisthène",
+       "Il redécoupe la cité en dix tribus"
+      ]
+     ],
+     "aide": "Dracon est le plus ancien des quatre ; Clisthène, le plus récent.",
+     "explication": "**Dracon** écrit les lois, **Solon** sauve les paysans endettés, **Pisistrate** affaiblit les grands propriétaires, **Clisthène** brise les fidélités locales avec les tribus."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd311e14-3447-5384-996b-66de05d4315b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui compte parmi les habitants d’Athènes ?",
+   "competence": "lire-graphique",
+   "situation": "Pour comprendre la démocratie athénienne, Maël dessine le diagramme d’une cité grecque de 1 000 habitants. Il veut savoir combien d’entre eux votent vraiment.",
+   "documents": [
+    {
+     "id": "cite",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Les habitants d’une cité imaginée de 1 000 personnes",
+     "source": "Chiffres imaginés pour l’exercice, pour une cité de 1 000 habitants.",
+     "categories": [
+      "Citoyens",
+      "Femmes de citoyens",
+      "Enfants",
+      "Métèques",
+      "Esclaves"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        150,
+        330,
+        200,
+        70,
+        250
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre d’habitants",
+      "min": 0,
+      "max": 350,
+      "pas": 50
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cite",
+     "enonce": "Touche le groupe le plus nombreux de cette cité.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Les **femmes de citoyens** sont 330 : c’est la barre la plus longue, et pourtant elles n’ont aucun droit politique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’habitants de cette cité ne sont pas citoyens ?",
+     "reponse": 850,
+     "unite": "habitants",
+     "aide": "Retire les citoyens du total de 1 000.",
+     "explication": "1 000 − 150 = **850 habitants** : les exclus forment l’énorme majorité."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personne : citoyenne de plein droit ou exclue de la citoyenneté ?",
+     "categories": [
+      "Citoyen",
+      "Exclu"
+     ],
+     "items": [
+      [
+       "Un homme adulte né de parents athéniens",
+       0
+      ],
+      [
+       "Un étranger libre installé au Pirée",
+       1
+      ],
+      [
+       "Une Athénienne mariée",
+       1
+      ],
+      [
+       "Un esclave",
+       1
+      ]
+     ],
+     "aide": "Pour être citoyen, il faut être un homme, adulte, né de parents athéniens.",
+     "explication": "Seul l’**homme adulte né de parents athéniens** est citoyen. L’étranger libre est un métèque, l’Athénienne est exclue, l’esclave n’a aucun droit."
+    },
+    {
+     "type": "choix",
+     "enonce": "En 430 av. J.-C., un jeune homme a un père athénien et une mère étrangère libre. Selon la loi de Périclès de 451, est-il citoyen ?",
+     "options": [
+      "Non, il faut deux parents athéniens",
+      "Oui, son père suffit à le faire citoyen",
+      "Oui, s’il habite Athènes depuis dix ans",
+      "Non, car il est métèque comme sa mère"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que fixe la loi de Périclès : de qui faut-il être né ?",
+     "explication": "La loi de 451 exige d’être né de **deux parents athéniens** : un père athénien seul ne suffit plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "bd311e14-3447-5384-996b-66de05d4315b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le jour où Théodoros vote avec des inconnus",
+   "competence": "analyser-document",
+   "situation": "Après les réformes de Clisthène, Théodoros découvre une cité où l’on siège avec des hommes qu’on n’a jamais vus. Deux documents l’aident à comprendre qui participe et pourquoi.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le récit de Théodoros",
+     "source": "Récit écrit pour l’exercice : le personnage est imaginé.",
+     "blocs": [
+      "Avant 508 av. J.-C., Théodoros votait avec les gens de sa côte, ses voisins et ses cousins. Après la réforme, il est rattaché à une tribu dont les dèmes sont aussi en ville et dans l’intérieur des terres.",
+      "Un an plus tard, il siège à la Boulè. Les cinq cents membres sont tirés au [[s|sort]] : ils ne doivent rien aux grandes familles."
+     ]
+    },
+    {
+     "id": "trois",
+     "type": "tableau",
+     "titre": "Trois habitants d’Athènes en 450 av. J.-C.",
+     "source": "Personnages imaginés pour l’exercice.",
+     "colonnes": [
+      "Prénom",
+      "Père",
+      "Mère",
+      "Sexe et âge"
+     ],
+     "lignes": [
+      [
+       "Eumélos",
+       "Athénien",
+       "Athénienne",
+       "Homme, 25 ans"
+      ],
+      [
+       "Hermaios",
+       "Étranger libre",
+       "Athénienne",
+       "Homme, 28 ans"
+      ],
+      [
+       "Théano",
+       "Athénien",
+       "Athénienne",
+       "Femme, 22 ans"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trois",
+     "enonce": "Touche le prénom du seul habitant qui est citoyen à Athènes en 450 av. J.-C.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Il faut remplir trois conditions : être un homme, adulte, né de parents athéniens.",
+     "explication": "**Eumélos** réunit les trois conditions. Hermaios n’a pas deux parents athéniens ; Théano est une femme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Théano a deux parents athéniens. Pourquoi n’est-elle pas citoyenne ?",
+     "options": [
+      "Parce que les femmes sont exclues de la citoyenneté",
+      "Parce qu’elle n’a pas encore vingt-cinq ans",
+      "Parce que sa mère est née en dehors de la cité",
+      "Parce qu’elle ne possède aucune terre en Attique"
+     ],
+     "reponse": 0,
+     "aide": "Relis la colonne « Sexe et âge ».",
+     "explication": "Les **femmes** sont exclues, quelle que soit leur naissance : la citoyenneté est réservée aux hommes."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui dit comment sont désignés les membres de la Boulè.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Ce n’est ni l’élection ni la naissance.",
+     "explication": "Les membres sont tirés au **sort** : n’importe quel citoyen peut être choisi, sans dépendre des grandes familles."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure de Clisthène à son effet.",
+     "paires": [
+      [
+       "Dix tribus mêlant côte, ville et intérieur",
+       "Les fidélités locales et familiales sont brisées"
+      ],
+      [
+       "Boulè des 500 tirée au sort",
+       "Le conseil échappe aux grandes familles"
+      ],
+      [
+       "Ostracisme",
+       "Un citoyen jugé menaçant est exilé dix ans"
+      ]
+     ],
+     "aide": "Relis le texte de Théodoros : chaque mesure y apparaît.",
+     "explication": "Les **tribus mêlées** brisent les clans, la **Boulè tirée au sort** retire le conseil aux grandes familles, l’**ostracisme** protège la cité d’un citoyen dangereux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce croisement des deux documents ?",
+     "options": [
+      "La cité se veut égalitaire, mais ne donne le pouvoir qu’à une minorité",
+      "Tous les habitants d’Athènes votent à l’Ecclésia sur un pied d’égalité",
+      "Le tirage au sort a été supprimé dès la réforme de Clisthène",
+      "Seuls les riches propriétaires fonciers siègent à la Boulè"
+     ],
+     "reponse": 0,
+     "aide": "Le récit décrit des règles égalitaires ; le tableau dit qui peut en profiter.",
+     "explication": "La démocratie athénienne **égalise les citoyens entre eux**, mais les femmes, les métèques et les esclaves en restent exclus."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac5c939a-baae-5da3-b2d1-8866a527c42a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui décide à Athènes au Ve siècle ?",
+   "competence": "lire-tableau",
+   "situation": "Léandre visite Athènes en 450 av. J.-C. Un ami lui résume les institutions dans un tableau pour qu’il comprenne qui décide de quoi.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "tableau",
+     "titre": "Les institutions d’Athènes",
+     "source": "Tableau établi d’après le cours.",
+     "colonnes": [
+      "Institution",
+      "Qui y participe ?",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Ecclésia",
+       "Tous les citoyens, sur la Pnyx, une quarantaine de fois par an",
+       "Voter les lois, la guerre, la paix"
+      ],
+      [
+       "Boulè",
+       "500 citoyens tirés au sort",
+       "Préparer les séances"
+      ],
+      [
+       "Héliée",
+       "Des jurés tirés au sort",
+       "Juger"
+      ],
+      [
+       "Stratèges",
+       "Dix magistrats élus",
+       "Commander"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche l’institution qui est chargée de juger.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche le verbe « juger » dans la dernière colonne.",
+     "explication": "C’est l’**Héliée**, composée de jurés tirés au sort."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois par an environ l’Ecclésia se réunit-elle ?",
+     "reponse": 40,
+     "unite": "fois",
+     "aide": "Une quarantaine, c’est environ quarante.",
+     "explication": "L’Ecclésia se réunit une **quarantaine** de fois par an, sur la colline de la Pnyx."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quels magistrats sont élus et non tirés au sort ?",
+     "options": [
+      "Les stratèges",
+      "Les membres de la Boulè",
+      "Les jurés de l’Héliée",
+      "Aucune de ces charges"
+     ],
+     "reponse": 0,
+     "aide": "Pour commander une armée, on choisit les plus compétents.",
+     "explication": "Les **stratèges** sont élus : commander demande des talents que le sort ne garantit pas. Périclès l’est quinze fois de suite."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac5c939a-baae-5da3-b2d1-8866a527c42a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Phidon, le rameur de Salamine, vote à l’Ecclésia",
+   "competence": "analyser-document",
+   "situation": "Phidon est un thète : trop pauvre pour s’acheter une armure, il rame sur un navire de guerre. Son histoire montre comment une victoire change le poids des plus pauvres dans la cité.",
+   "documents": [
+    {
+     "id": "phidon",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le récit de Phidon",
+     "source": "Récit écrit pour l’exercice : le personnage est imaginé.",
+     "blocs": [
+      "Phidon est un thète : il ne possède pas assez de terre pour s’équiper en soldat. En 480 av. J.-C., il [[r|rame]] sur un navire de la flotte athénienne et participe à la victoire de Salamine.",
+      "Quelques années plus tard, il monte sur la Pnyx. On a désormais besoin de lui et des autres rameurs : il lève la main pour voter la guerre ou la paix."
+     ]
+    },
+    {
+     "id": "batailles",
+     "type": "tableau",
+     "titre": "Les guerres médiques",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Bataille",
+      "Date av. J.-C."
+     ],
+     "lignes": [
+      [
+       "Marathon",
+       490
+      ],
+      [
+       "Salamine",
+       480
+      ],
+      [
+       "Platées",
+       479
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phidon",
+     "enonce": "Touche le mot qui montre ce que fait Phidon sur le navire.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "C’est un verbe d’action : ce que font les rameurs.",
+     "explication": "Phidon **rame** : c’est ce travail qui rend les thètes indispensables à la flotte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Marathon de Platées ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Retranche 479 à 490 : les années avant J.-C. se comptent à rebours.",
+     "explication": "490 − 479 = **11 ans** : les guerres médiques s’étalent sur plus de dix ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la victoire de Salamine renforce-t-elle le poids des thètes ?",
+     "options": [
+      "Parce que les rameurs de la flotte sont des citoyens pauvres",
+      "Parce que les thètes sont les chefs de l’armée de terre",
+      "Parce que les thètes ont payé les navires de leur argent",
+      "Parce que les thètes sont élus stratèges après la victoire"
+     ],
+     "reponse": 0,
+     "aide": "Qui fait avancer une flotte de guerre ?",
+     "explication": "Salamine est une bataille **navale** : les rameurs, citoyens pauvres, sont indispensables, donc écoutés à l’assemblée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque bataille à ce qu’elle décide.",
+     "paires": [
+      [
+       "Marathon",
+       "Première victoire terrestre sur les Perses"
+      ],
+      [
+       "Salamine",
+       "Victoire navale décisive"
+      ],
+      [
+       "Platées",
+       "Fin de l’invasion"
+      ]
+     ],
+     "aide": "Salamine est une bataille de mer ; Platées clôt la série en 479.",
+     "explication": "**Marathon** est la première victoire sur terre, **Salamine** la victoire navale décisive, **Platées** met fin à l’invasion."
+    }
+   ]
+  },
+  {
+   "chapitre": "ac5c939a-baae-5da3-b2d1-8866a527c42a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lettre d’une cité alliée : démocratie chez soi, empire ailleurs",
+   "competence": "analyser-document",
+   "situation": "Un magistrat d’une petite cité de la ligue de Délos écrit à un ami. Sa lettre, mise en regard d’une frise, permet de comprendre comment Athènes, démocratie à l’intérieur, domine ses alliés.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un magistrat allié",
+     "source": "Lettre écrite pour l’exercice : la cité et le magistrat sont imaginés.",
+     "blocs": [
+      "Nous avons juré de défendre les Grecs contre les Perses. Mais le trésor n’est plus à Délos : il est à Athènes. Chaque année, nous versons le [[p|phoros]], et nous voyons qu’on bâtit le Parthénon avec notre argent. Les cités qui se sont révoltées ont été écrasées."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La ligue de Délos, Ve siècle av. J.-C.",
+     "source": "Frise établie d’après le cours.",
+     "debut": -480,
+     "fin": -400,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "fondation",
+       "date": -478,
+       "nom": "Ligue de Délos"
+      },
+      {
+       "id": "tresor",
+       "date": -454,
+       "nom": "Trésor à Athènes"
+      },
+      {
+       "id": "guerre",
+       "date": -431,
+       "nom": "Péloponnèse"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne le tribut versé par les alliés.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le mot est grec, il apparaît après « nous versons le ».",
+     "explication": "Le tribut s’appelle le **phoros** : il finance en partie le Parthénon."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement après lequel la ligue devient un instrument de domination.",
+     "reponse": [
+      "tresor"
+     ],
+     "aide": "Le magistrat dit que le trésor « n’est plus à Délos ».",
+     "explication": "Le transfert du **trésor à Athènes** en 454 av. J.-C. fait de la ligue un instrument de domination."
+    },
+    {
+     "type": "choix",
+     "enonce": "La lettre est écrite en 440 av. J.-C. Entre quels événements de la frise se place-t-elle ?",
+     "options": [
+      "Entre le transfert du trésor et la guerre",
+      "Entre la fondation de la ligue et le transfert",
+      "Avant la fondation de la ligue de Délos",
+      "Après le début de la guerre du Péloponnèse"
+     ],
+     "reponse": 0,
+     "aide": "Compare 440 aux dates 454 et 431 de la frise.",
+     "explication": "454 est avant 440, et 431 est après : la lettre se place **entre le transfert du trésor et la guerre du Péloponnèse**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la fondation de la ligue de Délos (478) du début de la guerre du Péloponnèse (431) ?",
+     "reponse": 47,
+     "unite": "ans",
+     "aide": "Soustrais 431 à 478.",
+     "explication": "478 − 431 = **47 ans** : la ligue défensive est devenue en moins d’un demi-siècle un empire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule qui résume Athènes au Ve siècle.",
+     "texte": "Athènes est une ___ à l’intérieur et un ___ à l’extérieur.",
+     "reponses": [
+      [
+       "démocratie"
+      ],
+      [
+       "empire"
+      ]
+     ],
+     "banque": [
+      "démocratie",
+      "empire",
+      "tyrannie",
+      "oligarchie"
+     ],
+     "aide": "Pense à ce que décident les citoyens, puis à ce que subissent les alliés.",
+     "explication": "Athènes est une **démocratie** pour ses citoyens et un **empire** pour ses alliés, qui paient le phoros et ne peuvent pas quitter la ligue."
+    }
+   ]
+  },
+  {
+   "chapitre": "5bd4b4bd-27c8-5212-a4bc-8026b11f95d1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mare Nostrum : trois villes de l’Empire romain",
+   "competence": "lire-carte",
+   "situation": "Dans son cahier, Nora dessine la Méditerranée du temps des Romains et y place trois grandes villes de l’Empire. Elle doit retrouver chacune d’elles sur la carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois villes de l’Empire romain",
+     "source": "Carte d’après le cours.",
+     "fond": "mediterranee",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "carthage",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "lugdunum",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Rome mène trois guerres contre cette cité d’Afrique du Nord : Carthage. Touche-la.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Carthage se trouve près de l’actuelle Tunis, sur la côte sud de la Méditerranée.",
+     "explication": "**B** est Carthage, sur la côte d’Afrique du Nord : c’est la grande rivale de Rome pendant les guerres puniques."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux villes situées dans l’Europe d’aujourd’hui : Rome et Lugdunum, l’actuelle Lyon.",
+     "reponse": [
+      "a",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "Elles sont au nord de la Méditerranée, l’une en Italie, l’autre en Gaule.",
+     "explication": "**A** est Rome, au centre de l’Italie, et **C** est Lugdunum, capitale des Gaules sur le Rhône : Carthage, au sud, est en Afrique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La République romaine commence en 509 av. J.-C. et s’achève en 27 av. J.-C. Combien d’années dure-t-elle ?",
+     "reponse": 482,
+     "unite": "ans",
+     "aide": "Pour les dates avant J.-C., retranche la plus proche de J.-C. à la plus lointaine.",
+     "explication": "509 − 27 = **482 ans**. En 27 av. J.-C., Octave reçoit le nom d’Auguste et le Principat commence."
+    }
+   ]
+  },
+  {
+   "chapitre": "5bd4b4bd-27c8-5212-a4bc-8026b11f95d1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Lucius découvre sa ville romaine",
+   "competence": "se-reperer-temps",
+   "situation": "Lucius, jeune Gaulois de Lugdunum, raconte en 150 comment sa ville est devenue romaine. Sa lettre et une frise permettent de comprendre ce que Rome change et quand.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Lucius, en l’an 150",
+     "source": "Lettre écrite pour l’exercice : le personnage est imaginé.",
+     "blocs": [
+      "Dans ma ville, rien ne ressemble à ce que racontait mon grand-père. Au centre, il y a un [[v|forum]] ; plus loin, des [[v|thermes]] et un [[v|amphithéâtre]]. Tout le monde parle latin et les routes empierrées nous relient au reste de l’Empire. Mon père, notable de la ville, siège au conseil."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rome, de la République à l’Empire",
+     "source": "Frise établie d’après le cours.",
+     "debut": -550,
+     "fin": 250,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "rep",
+       "debut": -509,
+       "fin": -27,
+       "nom": "République",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "auguste",
+       "date": -27,
+       "nom": "Auguste"
+      },
+      {
+       "id": "trajan",
+       "date": 117,
+       "nom": "Trajan"
+      },
+      {
+       "id": "caracalla",
+       "date": 212,
+       "nom": "Caracalla"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche les trois éléments de la ville romaine que cite Lucius.",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "aide": "Cherche trois bâtiments : la place publique, les bains et le lieu des spectacles.",
+     "explication": "Lucius cite le **forum**, les **thermes** et l’**amphithéâtre** : ces monuments font d’une ville gauloise une ville romaine."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui accorde la citoyenneté romaine à presque tous les hommes libres de l’Empire.",
+     "reponse": [
+      "caracalla"
+     ],
+     "aide": "C’est l’événement le plus récent de la frise.",
+     "explication": "L’édit de **Caracalla**, en 212, accorde la citoyenneté à presque tous les hommes libres de l’Empire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’extension maximale de l’Empire sous Trajan (117) de l’édit de Caracalla (212) ?",
+     "reponse": 95,
+     "unite": "ans",
+     "aide": "Les deux dates sont après J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "212 − 117 = **95 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lucius vit en 150. Comment peut-il devenir citoyen romain à cette date ?",
+     "options": [
+      "Par une extension progressive, souvent accordée aux élites locales",
+      "Automatiquement, parce qu’il est né à l’intérieur de l’Empire",
+      "En acceptant de quitter sa ville pour s’installer à Rome",
+      "En payant chaque année un tribut au gouverneur romain"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où se place 150 sur la frise par rapport à l’édit de Caracalla.",
+     "explication": "En 150, l’édit de 212 n’existe pas encore : la citoyenneté s’étend **progressivement aux provinciaux**, d’abord aux notables, qui diffusent ensuite le modèle romain."
+    }
+   ]
+  },
+  {
+   "chapitre": "5bd4b4bd-27c8-5212-a4bc-8026b11f95d1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quatre hommes en 212 : qui devient citoyen ?",
+   "competence": "analyser-document",
+   "situation": "En 212, l’empereur Caracalla accorde la citoyenneté à presque tous les hommes libres de l’Empire. Un fonctionnaire romain, quelques années plus tard, décrit les fragilités de cet empire.",
+   "documents": [
+    {
+     "id": "hommes",
+     "type": "tableau",
+     "titre": "Quatre hommes en 211",
+     "source": "Personnages imaginés pour l’exercice.",
+     "colonnes": [
+      "Prénom",
+      "Statut",
+      "Où vit-il ?"
+     ],
+     "lignes": [
+      [
+       "Marcus",
+       "Homme libre, non citoyen",
+       "Londinium, en Bretagne romaine"
+      ],
+      [
+       "Quintus",
+       "Homme libre, non citoyen",
+       "Carthage, en Afrique"
+      ],
+      [
+       "Zoticos",
+       "Esclave",
+       "Antioche, en Syrie"
+      ],
+      [
+       "Bodo",
+       "Homme libre, hors de l’Empire",
+       "Au-delà du limes, en Germanie"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Note d’un fonctionnaire, vers 235",
+     "source": "Texte écrit pour l’exercice : le fonctionnaire est imaginé.",
+     "blocs": [
+      "Notre empire repose sur l’[[p|esclavage]], sur l’armée qui garde le [[p|limes]] et sur des [[p|impôts]] lourds. Mais les invasions, les usurpations et la monnaie qui perd sa valeur ébranlent aujourd’hui tout l’édifice."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Après l’édit de Caracalla (212), qui devient citoyen romain ?",
+     "categories": [
+      "Devient citoyen",
+      "Reste non citoyen"
+     ],
+     "items": [
+      [
+       "Marcus",
+       0
+      ],
+      [
+       "Quintus",
+       0
+      ],
+      [
+       "Zoticos",
+       1
+      ],
+      [
+       "Bodo",
+       1
+      ]
+     ],
+     "aide": "L’édit vise les hommes libres qui vivent dans l’Empire.",
+     "explication": "**Marcus** et **Quintus** sont libres et vivent dans l’Empire : ils deviennent citoyens. **Zoticos** est esclave et **Bodo** vit hors de l’Empire : ils restent non citoyens."
+    },
+    {
+     "type": "zone",
+     "document": "note",
+     "enonce": "Touche les trois piliers sur lesquels, selon le fonctionnaire, repose l’Empire.",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "aide": "Cherche une institution sociale, une frontière et une charge financière.",
+     "explication": "L’Empire repose sur l’**esclavage**, sur l’armée du **limes** et sur des **impôts** lourds."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Guerres puniques contre Carthage",
+      "Assassinat de Jules César (44 av. J.-C.)",
+      "Octave devient Auguste (27 av. J.-C.)",
+      "Extension maximale sous Trajan",
+      "Édit de Caracalla (212)"
+     ],
+     "aide": "Les guerres puniques précèdent la dictature de César.",
+     "explication": "Guerres puniques, puis **César** (44 av. J.-C.), **Auguste** (27 av. J.-C.), **Trajan** (98-117), enfin **Caracalla** (212)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’édit de 212 sur la manière dont Rome traite les peuples conquis ?",
+     "options": [
+      "Rome intègre les vaincus au lieu de les détruire",
+      "Rome renvoie les vaincus dans leurs terres d’origine",
+      "Rome réserve la citoyenneté aux soldats de l’armée",
+      "Rome supprime toutes les différences de condition"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la phrase du cours sur les peuples conquis : Rome en fait des Romains.",
+     "explication": "L’édit prolonge la politique romaine : les vaincus deviennent peu à peu des **Romains**, à leur rythme et selon les conditions de Rome. Les esclaves restent pourtant exclus."
+    }
+   ]
+  },
+  {
+   "chapitre": "5ed749ae-702f-5f8a-9c53-08b3913d13d6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un siècle pour refonder l’Empire",
+   "competence": "se-reperer-temps",
+   "situation": "Samia résume sur une frise comment l’Empire romain se reconstruit au IVe siècle, après la crise du siècle précédent.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’Empire romain au IVe siècle",
+     "source": "Frise établie d’après le cours.",
+     "debut": 280,
+     "fin": 400,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "diocletien",
+       "date": 284,
+       "nom": "Dioclétien"
+      },
+      {
+       "id": "milvius",
+       "date": 312,
+       "nom": "Pont Milvius"
+      },
+      {
+       "id": "constantinople",
+       "date": 330,
+       "nom": "Constantinople"
+      },
+      {
+       "id": "partage",
+       "date": 395,
+       "nom": "Partage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui voit naître une nouvelle capitale à l’Est.",
+     "reponse": [
+      "constantinople"
+     ],
+     "aide": "Constantinople est fondée sur le site de Byzance.",
+     "explication": "La fondation de **Constantinople**, en 330, donne à l’Empire une capitale tournée vers l’Orient."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la bataille du pont Milvius (312) de la fondation de Constantinople (330) ?",
+     "reponse": 18,
+     "unite": "ans",
+     "aide": "Soustrais la plus petite date à la plus grande.",
+     "explication": "330 − 312 = **18 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met en place Dioclétien à partir de 284 ?",
+     "options": [
+      "La tétrarchie, le gouvernement par quatre empereurs",
+      "Le Principat, le pouvoir d’un empereur unique",
+      "La République, le gouvernement par le Sénat",
+      "La religion chrétienne officielle de l’Empire"
+     ],
+     "reponse": 0,
+     "aide": "Le mot grec commence par « tétra » : quatre.",
+     "explication": "Dioclétien instaure la **tétrarchie** : quatre empereurs et une administration renforcée pour sortir de la crise du IIIe siècle."
+    }
+   ]
+  },
+  {
+   "chapitre": "5ed749ae-702f-5f8a-9c53-08b3913d13d6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’édit de Milan : une liberté, pas une religion d’État",
+   "competence": "analyser-texte",
+   "situation": "Hugo lit un texte adapté de l’édit de Milan, puis le replace dans un tableau de dates. Il veut comprendre ce que l’édit accorde réellement aux chrétiens.",
+   "documents": [
+    {
+     "id": "edit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’édit de Milan, 313",
+     "source": "D’après l’édit de Milan (313), texte adapté et raccourci.",
+     "blocs": [
+      "Nous avons décidé d’accorder aux chrétiens, comme à tous les autres, la [[l|liberté]] de suivre la religion qu’ils choisissent, afin que la divinité soit favorable à nous et à tous nos sujets."
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "Les étapes du christianisme dans l’Empire",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Date",
+      "Événement"
+     ],
+     "lignes": [
+      [
+       "313",
+       "Édit de Milan"
+      ],
+      [
+       "325",
+       "Concile de Nicée"
+      ],
+      [
+       "330",
+       "Fondation de Constantinople"
+      ],
+      [
+       "vers 380-392",
+       "Règne de Théodose"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "edit",
+     "enonce": "Touche le mot qui dit ce que l’édit accorde aux chrétiens et aux autres.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Le mot s’oppose à la persécution.",
+     "explication": "L’édit accorde la **liberté** de suivre sa religion, aux chrétiens comme aux autres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce texte fait-il du christianisme la religion officielle de l’Empire ?",
+     "options": [
+      "Non, il accorde la liberté de culte à tous",
+      "Oui, il interdit désormais tous les autres cultes",
+      "Oui, il crée une Église placée sous l’empereur",
+      "Non, il continue à poursuivre les chrétiens"
+     ],
+     "reponse": 0,
+     "aide": "Relis : l’édit parle aux chrétiens « comme à tous les autres ».",
+     "explication": "L’édit de Milan donne la **liberté de culte à tous**, chrétiens compris. Il ne fait pas du christianisme la religion officielle."
+    },
+    {
+     "type": "zone",
+     "document": "dates",
+     "enonce": "Touche l’empereur qui fait du christianisme la religion officielle de l’Empire.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "C’est le règne le plus tardif du tableau.",
+     "explication": "C’est **Théodose**, vers 380-392 : le christianisme passe de religion protégée à religion officielle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à ce qu’elle apporte.",
+     "paires": [
+      [
+       "313",
+       "La liberté de culte pour tous"
+      ],
+      [
+       "325",
+       "La querelle arienne est tranchée"
+      ],
+      [
+       "330",
+       "Une nouvelle capitale à l’Est"
+      ],
+      [
+       "vers 380-392",
+       "Une religion officielle"
+      ]
+     ],
+     "aide": "Nicée est un concile : une assemblée d’évêques.",
+     "explication": "313 : **liberté de culte** ; 325 : le concile de Nicée tranche la querelle sur la nature du Christ ; 330 : **Constantinople** ; 380-392 : le christianisme devient **religion officielle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5ed749ae-702f-5f8a-9c53-08b3913d13d6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi Constantin choisit-il Byzance ?",
+   "competence": "analyser-document",
+   "situation": "Vers 324, un conseiller de l’empereur explique pourquoi la nouvelle capitale ne doit pas être Rome. La carte et son texte permettent de comprendre un choix stratégique.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Empire romain et ses frontières au IVe siècle",
+     "source": "Carte d’après le cours.",
+     "fond": "mediterranee",
+     "fleuves": [
+      "danube",
+      "euphrate"
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "byzance",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "antioche",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "alexandrie",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "conseil",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Le conseil d’un proche de l’empereur",
+     "source": "Texte écrit pour l’exercice : le conseiller est imaginé.",
+     "blocs": [
+      "Rome est loin du Danube et de l’Euphrate, là où les ennemis menacent. Byzance, elle, est placée entre l’Europe et l’Asie : elle tient les [[d|détroits]], elle est proche des frontières et des riches provinces d’Orient."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Constantin fonde en 330 une capitale sur le site de Byzance. Touche-la.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche la ville entre l’Europe et l’Asie, sur les détroits qui mènent à la mer Noire.",
+     "explication": "**B** est Byzance, future Constantinople : elle domine les détroits entre Europe et Asie."
+    },
+    {
+     "type": "zone",
+     "document": "conseil",
+     "enonce": "Touche le mot qui explique l’avantage commercial et militaire du site.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Le mot désigne des passages étroits entre deux mers.",
+     "explication": "Byzance **tient les détroits** : elle contrôle le passage entre la mer Noire et la Méditerranée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Rome est-elle moins bien placée que Byzance pour gouverner l’Empire au IVe siècle ?",
+     "options": [
+      "Elle est trop loin des frontières menacées et des provinces riches",
+      "Elle ne possède plus aucun bâtiment pour accueillir l’empereur",
+      "Elle est trop proche du Danube et de ses invasions",
+      "Elle a été détruite par les troupes de Constantin en 312"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les deux fleuves sur la carte, puis la position de Rome.",
+     "explication": "Rome est **éloignée** du Danube et de l’Euphrate : réagir vite aux menaces est plus facile depuis Byzance, qui est aussi près des riches provinces d’Orient."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la refondation de l’Empire de la plus ancienne à la plus récente.",
+     "items": [
+      "Dioclétien instaure la tétrarchie (284)",
+      "Constantin l’emporte au pont Milvius (312)",
+      "Constantin règne seul (324)",
+      "Fondation de Constantinople (330)",
+      "Partage définitif de l’Empire (395)"
+     ],
+     "aide": "Constantin règne seul avant de fonder sa capitale.",
+     "explication": "**284**, **312**, **324**, **330**, puis **395** : en un siècle, l’Empire se refonde autour d’un pouvoir fort, d’une capitale à l’Est et d’une religion soutenue."
+    }
+   ]
+  },
+  {
+   "chapitre": "e95ff08a-39a9-5560-951e-f5c0b7c79177",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois mondes autour de la Méditerranée",
+   "competence": "lire-carte",
+   "situation": "Au XIIe siècle, trois mondes se partagent la Méditerranée. Léa repère sur une carte leurs principales villes pour retrouver quel monde elles représentent.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Six villes de la Méditerranée médiévale",
+     "source": "Carte d’après le cours.",
+     "fond": "mediterranee",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "constantinople",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "bagdad",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "le-caire",
+       "symbole": "lettre",
+       "lettre": "D"
+      },
+      {
+       "id": "e",
+       "lon": -4.78,
+       "lat": 37.89,
+       "symbole": "lettre",
+       "lettre": "E"
+      },
+      {
+       "id": "f",
+       "lieu": "jerusalem",
+       "symbole": "lettre",
+       "lettre": "F"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale de l’Empire byzantin, Constantinople.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle se trouve à l’entrée de la mer Noire, entre l’Europe et l’Asie.",
+     "explication": "**A** est Constantinople, centre d’un empire chrétien d’Orient, héritier de Rome."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois grands centres du monde musulman médiéval : Bagdad, Le Caire et Cordoue.",
+     "reponse": [
+      "c",
+      "d",
+      "e"
+     ],
+     "multiple": true,
+     "aide": "Bagdad est à l’est, Le Caire en Égypte, Cordoue au sud de l’Espagne.",
+     "explication": "**C** (Bagdad), **D** (Le Caire) et **E** (Cordoue) sont les grands centres d’un monde musulman riche, urbain et savant."
+    },
+    {
+     "type": "choix",
+     "enonce": "En 1099, la première croisade prend la ville marquée F. De quelle ville s’agit-il ?",
+     "options": [
+      "Jérusalem",
+      "Bagdad",
+      "Rome",
+      "Le Caire"
+     ],
+     "reponse": 0,
+     "aide": "L’appel de 1095 à Clermont demandait de la délivrer.",
+     "explication": "La ville F est **Jérusalem**, prise par les croisés en 1099, qui fondent les États latins d’Orient."
+    }
+   ]
+  },
+  {
+   "chapitre": "e95ff08a-39a9-5560-951e-f5c0b7c79177",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un marchand génois suit les croisés",
+   "competence": "analyser-document",
+   "situation": "Un marchand génois fournit des navires aux croisés. Sa lettre et une frise montrent que les croisades ne sont pas qu’une guerre sainte.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un marchand génois",
+     "source": "Lettre écrite pour l’exercice : le marchand est imaginé.",
+     "blocs": [
+      "Je fournis des navires aux croisés qui partent pour la Terre sainte. En échange, notre ville m’a promis un [[c|comptoir]] dans les ports de Syrie : un quartier où nous pourrons commercer librement. Je ne vais pas à Jérusalem pour prier, mais pour que Gênes s’enrichisse."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les croisades, 1099-1291",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1080,
+     "fin": 1300,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "jerusalem",
+       "date": 1099,
+       "nom": "Jérusalem prise"
+      },
+      {
+       "id": "saladin",
+       "date": 1187,
+       "nom": "Saladin"
+      },
+      {
+       "id": "constantinople",
+       "date": 1204,
+       "nom": "Constantinople"
+      },
+      {
+       "id": "acre",
+       "date": 1291,
+       "nom": "Acre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin à la présence latine en Orient.",
+     "reponse": [
+      "acre"
+     ],
+     "aide": "C’est le dernier événement de la frise.",
+     "explication": "La chute d’**Acre**, en 1291, met fin à la présence des Latins en Orient."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années les croisés ont-ils tenu Jérusalem, de leur prise de la ville (1099) à sa reprise par Saladin (1187) ?",
+     "reponse": 88,
+     "unite": "ans",
+     "aide": "Soustrais la date de la prise à celle de la reprise.",
+     "explication": "1187 − 1099 = **88 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui montre ce que le marchand espère obtenir en échange de son aide.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "C’est un lieu de commerce, pas une terre ni un titre.",
+     "explication": "Il espère un **comptoir** : les villes italiennes gagnent des quartiers marchands en Orient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Lequel de ces événements oppose des chrétiens à d’autres chrétiens ?",
+     "options": [
+      "Le pillage de Constantinople (1204)",
+      "La prise de Jérusalem (1099)",
+      "La reprise par Saladin (1187)",
+      "La chute d’Acre (1291)"
+     ],
+     "reponse": 0,
+     "aide": "Constantinople est la capitale de l’Empire byzantin chrétien.",
+     "explication": "En **1204**, la quatrième croisade pille Constantinople, cité chrétienne : la croisade n’est pas toujours dirigée contre l’Islam."
+    }
+   ]
+  },
+  {
+   "chapitre": "e95ff08a-39a9-5560-951e-f5c0b7c79177",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Reconquista et Sicile : conflits et cohabitations",
+   "competence": "analyser-document",
+   "situation": "En Espagne et en Sicile, les trois mondes se combattent mais vivent aussi côte à côte. Une carte et le récit d’un voyageur permettent de le comprendre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux lieux de la Méditerranée médiévale",
+     "source": "Carte d’après le cours.",
+     "fond": "mediterranee",
+     "cadrage": [
+      -12,
+      28,
+      40,
+      48
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lon": -4.02,
+       "lat": 39.86,
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": 13.36,
+       "lat": 38.12,
+       "symbole": "lettre",
+       "lettre": "B"
+      }
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un voyageur à Palerme",
+     "source": "Récit écrit pour l’exercice : le voyageur est imaginé.",
+     "blocs": [
+      "À Palerme, au XIIe siècle, un voyageur note : « Dans la même rue, il y a une église, une mosquée et une synagogue. Au marché, on parle [[l|grec]], [[l|arabe]] et [[l|latin]]. » La Sicile est désormais gouvernée par les Normands, mais elle fut longtemps arabe."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Les chrétiens reprennent cette ville d’Espagne en 1085 : Tolède. Touche-la.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Tolède est située au centre de l’Espagne, loin des côtes.",
+     "explication": "**A** est Tolède, reprise par les chrétiens en 1085 : elle devient ensuite un grand atelier de traduction."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Le voyageur du récit est à Palerme, en Sicile. Touche cette ville.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "La Sicile est la grande île au sud de l’Italie.",
+     "explication": "**B** est Palerme, sur la côte nord de la Sicile, île longtemps arabe passée aux Normands."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la Reconquista de la plus ancienne à la plus récente.",
+     "items": [
+      "Prise de Tolède (1085)",
+      "Victoire de Las Navas de Tolosa (1212)",
+      "Prise de Grenade (1492)"
+     ],
+     "aide": "La Reconquista s’achève avec la dernière ville musulmane d’Espagne.",
+     "explication": "**1085**, **1212**, puis **1492** : Grenade, dernier royaume musulman d’Espagne, tombe la même année que Colomb arrive en Amérique."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche les trois langues parlées au marché de Palerme.",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "aide": "Elles correspondent aux chrétiens d’Orient, aux musulmans et aux chrétiens latins.",
+     "explication": "On y parle **grec**, **arabe** et **latin** : les trois civilisations se croisent dans la Sicile normande."
+    },
+    {
+     "type": "choix",
+     "enonce": "En terre d’Islam, juifs et chrétiens relèvent de la dhimma. Que leur apporte ce statut ?",
+     "options": [
+      "La protection, contre un impôt et un statut inférieur",
+      "L’égalité totale de droits avec les musulmans",
+      "L’obligation de se convertir dans l’année",
+      "L’expulsion hors des villes musulmanes"
+     ],
+     "reponse": 0,
+     "aide": "Le statut protège, mais pas gratuitement.",
+     "explication": "La **dhimma** protège les non-musulmans, moyennant un impôt et un statut inférieur : une cohabitation inégale."
+    }
+   ]
+  },
+  {
+   "chapitre": "044ba34c-8578-540a-9297-c74e8013df33",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans la cale d’un navire génois, à Alexandrie",
+   "competence": "lire-tableau",
+   "situation": "Un navire de Gênes vient d’accoster à Alexandrie. Son registre de cargaison indique ce qu’il a chargé à l’aller et ce qu’il rapportera : il permet de comprendre ce que les marchands italiens vendent et achètent en Orient.",
+   "documents": [
+    {
+     "id": "registre",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Registre du navire génois",
+     "sousTitre": "Alexandrie, XIIIe siècle",
+     "emoji": "⚓",
+     "source": "Registre imaginé pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Draps de laine",
+       "valeur": "50 balles",
+       "id": "draps"
+      },
+      {
+       "texte": "Épices",
+       "valeur": "30 sacs",
+       "id": "epices"
+      },
+      {
+       "texte": "Barres de fer et d’étain",
+       "valeur": "20 barres",
+       "id": "metaux"
+      },
+      {
+       "texte": "Soie",
+       "valeur": "12 balles",
+       "id": "soie"
+      },
+      {
+       "texte": "Poutres de bois",
+       "valeur": "40 poutres",
+       "id": "bois"
+      },
+      {
+       "texte": "Sucre",
+       "valeur": "25 caisses",
+       "id": "sucre"
+      }
+     ],
+     "pied": "Écrit pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "registre",
+     "enonce": "Touche les trois marchandises que les marchands italiens vendent en Orient : draps, métaux et bois.",
+     "reponse": [
+      "draps",
+      "metaux",
+      "bois"
+     ],
+     "multiple": true,
+     "aide": "Ce sont des produits de l’Occident ; les épices, la soie et le sucre viennent d’Orient.",
+     "explication": "Les marchands italiens vendent des **draps**, des **métaux** et du **bois** (et des armes) ; ils achètent épices, soie, sucre et alun."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de sacs, de balles et de caisses de marchandises achetées en Orient (épices, soie et sucre) le navire rapportera-t-il au total ?",
+     "reponse": 67,
+     "unite": "colis",
+     "aide": "Additionne les trois quantités, sans tenir compte de l’unité.",
+     "explication": "30 + 12 + 25 = **67 colis** achetés en Orient."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi servent les fondouks que Gênes, Venise et Pise installent dans les ports d’Orient ?",
+     "options": [
+      "À stocker les marchandises et à loger les marchands",
+      "À fortifier le port contre les attaques des pirates",
+      "À frapper la monnaie utilisée par les marchands",
+      "À former les marins aux techniques de navigation"
+     ],
+     "reponse": 0,
+     "aide": "Le fondouk est un comptoir marchand.",
+     "explication": "Un **fondouk** est un comptoir avec entrepôt et logement : il permet de commercer durablement dans un port étranger."
+    }
+   ]
+  },
+  {
+   "chapitre": "044ba34c-8578-540a-9297-c74e8013df33",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les outils d’un marchand pisan",
+   "competence": "analyser-document",
+   "situation": "Un marchand de Pise décrit à son frère comment il voyage sans transporter d’or et sans tout risquer. Un tableau de mots du port permet de repérer ce que la langue française doit à l’arabe.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un marchand pisan",
+     "source": "Lettre écrite pour l’exercice : le marchand est imaginé.",
+     "blocs": [
+      "Nous avons signé une [[c|commende]] : Bartolomeo me confie son argent, et je pars commercer en son nom. J’ai aussi pris une [[a|assurance]] pour la cargaison, au cas où le navire coulerait. Pour ne pas porter d’or sur moi, le banquier me remet une lettre de change à présenter au Caire."
+     ]
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Six mots du vocabulaire du port",
+     "source": "Mots tirés du cours et d’exemples courants.",
+     "colonnes": [
+      "Mot",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "Amiral",
+       "Chef d’une flotte"
+      ],
+      [
+       "Pain",
+       "Aliment fait de farine"
+      ],
+      [
+       "Arsenal",
+       "Chantier naval et dépôt d’armes"
+      ],
+      [
+       "Navire",
+       "Grand bateau"
+      ],
+      [
+       "Douane",
+       "Administration qui perçoit les taxes"
+      ],
+      [
+       "Cheval",
+       "Animal de trait et de monture"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne l’outil permettant de répartir le risque du naufrage.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Le marchand l’a pris « au cas où le navire coulerait ».",
+     "explication": "L’**assurance** maritime répartit le risque du naufrage."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque outil du marchand à ce qu’il permet.",
+     "paires": [
+      [
+       "Lettre de change",
+       "Payer sans transporter d’or"
+      ],
+      [
+       "Commende",
+       "Associer un bailleur de fonds et un voyageur"
+      ],
+      [
+       "Assurance maritime",
+       "Répartir le risque du naufrage"
+      ],
+      [
+       "Chiffres dits arabes",
+       "Simplifier les calculs"
+      ]
+     ],
+     "aide": "Relis la lettre : chaque outil y est présenté avec son usage.",
+     "explication": "La **lettre de change** évite le transport d’or, la **commende** associe un bailleur et un voyageur, l’**assurance** répartit le risque, les **chiffres dits arabes**, venus de l’Inde, simplifient le calcul."
+    },
+    {
+     "type": "zone",
+     "document": "mots",
+     "enonce": "Touche les trois mots du tableau qui viennent de l’arabe.",
+     "reponse": [
+      "r0c0",
+      "r2c0",
+      "r4c0"
+     ],
+     "multiple": true,
+     "aide": "Les trois autres viennent du latin : navire, pain et cheval.",
+     "explication": "**Amiral**, **arsenal** et **douane** viennent de l’arabe ; pain, navire et cheval sont des mots d’origine latine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le marchand préfère-t-il une lettre de change à un coffre d’or ?",
+     "options": [
+      "Il évite de transporter de l’argent exposé aux vols",
+      "Il obtient un impôt moins lourd dans les ports",
+      "Il peut payer sans connaître la langue du port",
+      "Il n’a plus besoin de s’assurer contre le naufrage"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux dangers d’un voyage avec beaucoup d’or sur soi.",
+     "explication": "La **lettre de change** permet de payer sans transporter d’or : le marchand évite les vols et les pertes sur la route."
+    }
+   ]
+  },
+  {
+   "chapitre": "044ba34c-8578-540a-9297-c74e8013df33",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "D’Aristote à l’étudiant latin : le voyage d’un livre",
+   "competence": "analyser-document",
+   "situation": "Un livre d’Aristote écrit en grec arrive en Occident par un chemin étonnant. Une carte et un schéma de transmission permettent de reconstituer ce voyage et de repérer d’autres échanges.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux d’échanges",
+     "source": "Carte d’après le cours.",
+     "fond": "mediterranee",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "venise",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lon": -4.02,
+       "lat": 39.86,
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "bagdad",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Le voyage d’un livre d’Aristote",
+     "source": "Schéma établi d’après le cours.",
+     "noeuds": [
+      {
+       "id": "grec",
+       "texte": "Livre d’Aristote en grec",
+       "emoji": "📜"
+      },
+      {
+       "id": "arabe",
+       "texte": "Savants du monde arabe",
+       "emoji": "🧑‍🏫"
+      },
+      {
+       "id": "atelier",
+       "texte": "?"
+      },
+      {
+       "id": "latin",
+       "texte": "Lecteurs d’Occident",
+       "emoji": "📖"
+      }
+     ],
+     "liens": [
+      {
+       "de": "grec",
+       "a": "arabe",
+       "texte": "est traduit puis commenté"
+      },
+      {
+       "de": "arabe",
+       "a": "atelier"
+      },
+      {
+       "de": "atelier",
+       "a": "latin",
+       "texte": "est lu en latin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’étape manquante : le lieu où l’on traduit l’arabe en latin.",
+     "reponse": [
+      "atelier"
+     ],
+     "aide": "Elle se place entre les savants du monde arabe et les lecteurs d’Occident.",
+     "explication": "L’étape manquante est un **atelier de traduction**, où l’on passe de l’arabe au latin."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville espagnole qui devient un grand atelier de traduction : Tolède.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Tolède est dans l’intérieur de l’Espagne, à l’ouest de la carte.",
+     "explication": "**B** est Tolède, où l’on traduit des textes grecs et arabes en latin."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque savant à son domaine.",
+     "paires": [
+      [
+       "Avicenne",
+       "La médecine"
+      ],
+      [
+       "Averroès",
+       "Le commentaire d’Aristote"
+      ],
+      [
+       "Al-Khwarizmi",
+       "L’algèbre"
+      ]
+     ],
+     "aide": "Averroès est connu pour ses commentaires d’un philosophe grec.",
+     "explication": "**Avicenne** écrit un Canon de la médecine, **Averroès** commente Aristote, **Al-Khwarizmi** marque l’algèbre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : technique, culture ou mot qui voyage ?",
+     "categories": [
+      "Une technique",
+      "Une culture agricole",
+      "Un mot"
+     ],
+     "items": [
+      [
+       "La boussole",
+       0
+      ],
+      [
+       "Le papier",
+       0
+      ],
+      [
+       "Le sucre de canne",
+       1
+      ],
+      [
+       "Les agrumes",
+       1
+      ],
+      [
+       "Arsenal",
+       2
+      ],
+      [
+       "Amiral",
+       2
+      ]
+     ],
+     "aide": "Le papier et la boussole sont des inventions ; la canne à sucre et les agrumes se plantent ; arsenal et amiral sont des mots.",
+     "explication": "**Boussole** et **papier** sont des techniques, **sucre de canne** et **agrumes** des cultures, **arsenal** et **amiral** des mots venus de l’arabe."
+    }
+   ]
+  },
+  {
+   "chapitre": "6dfdfe12-5572-5ecb-88c8-91ff017ba523",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un siècle d’explorations, de 1453 à 1522",
+   "competence": "se-reperer-temps",
+   "situation": "Zoé prépare un exposé sur les voyages de la fin du XVe siècle. Elle a placé quatre événements sur une frise et veut vérifier qui a fait quoi.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les explorations européennes, 1450-1525",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1450,
+     "fin": 1525,
+     "pas": 25,
+     "evenements": [
+      {
+       "id": "constantinople",
+       "date": 1453,
+       "nom": "Constantinople"
+      },
+      {
+       "id": "dias",
+       "date": 1488,
+       "nom": "Dias"
+      },
+      {
+       "id": "gama",
+       "date": 1498,
+       "nom": "Vasco de Gama"
+      },
+      {
+       "id": "tour",
+       "date": 1522,
+       "nom": "Tour du monde"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui rend la route terrestre vers l’Asie plus difficile pour les Européens.",
+     "reponse": [
+      "constantinople"
+     ],
+     "aide": "Il s’agit de la prise d’une ville par les Ottomans.",
+     "explication": "La prise de **Constantinople** par les Ottomans, en 1453, rend la route terrestre vers l’Asie plus difficile : on cherche une route maritime."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le passage du cap de Bonne-Espérance par Dias (1488) de l’arrivée de Vasco de Gama en Inde (1498) ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Soustrais la plus petite date à la plus grande.",
+     "explication": "1498 − 1488 = **10 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque navigateur à son exploit.",
+     "paires": [
+      [
+       "Bartolomeu Dias",
+       "Il passe le cap de Bonne-Espérance"
+      ],
+      [
+       "Christophe Colomb",
+       "Il touche les Antilles en 1492"
+      ],
+      [
+       "Vasco de Gama",
+       "Il atteint l’Inde par la mer"
+      ],
+      [
+       "Magellan puis Elcano",
+       "Ils réalisent le premier tour du monde"
+      ]
+     ],
+     "aide": "Colomb navigue pour la Castille et va vers l’ouest.",
+     "explication": "**Dias** passe le cap, **Colomb** touche les Antilles, **Gama** atteint l’Inde, **Magellan** puis **Elcano** font le premier tour du monde."
+    }
+   ]
+  },
+  {
+   "chapitre": "6dfdfe12-5572-5ecb-88c8-91ff017ba523",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux routes et un cap",
+   "competence": "lire-carte",
+   "situation": "Sur une carte du monde, Aurélien a tracé deux voyages partis d’Europe, ainsi que le cap que Dias a franchi en 1488. Il doit retrouver qui a fait quoi et dans quel ordre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux voyages de la fin du XVe siècle",
+     "source": "Carte schématique d’après le cours : les routes sont simplifiées.",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -45,
+      100,
+      55
+     ],
+     "lieux": [
+      {
+       "id": "cap",
+       "lon": 18.47,
+       "lat": -34.36,
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ],
+     "traits": [
+      {
+       "id": "b",
+       "points": [
+        [
+         -9.14,
+         38.72
+        ],
+        [
+         -20,
+         15
+        ],
+        [
+         -15,
+         0
+        ],
+        [
+         2,
+         -20
+        ],
+        [
+         10,
+         -30
+        ],
+        [
+         18.47,
+         -34.36
+        ],
+        [
+         36,
+         -28
+        ],
+        [
+         41.5,
+         -15
+        ],
+        [
+         47,
+         -4
+        ],
+        [
+         60,
+         4
+        ],
+        [
+         75.78,
+         11.26
+        ]
+       ],
+       "style": "fleche",
+       "etiquette": "A",
+       "teinte": "bleu"
+      },
+      {
+       "id": "c",
+       "points": [
+        [
+         -6.9,
+         37.2
+        ],
+        [
+         -20,
+         28
+        ],
+        [
+         -45,
+         26
+        ],
+        [
+         -74.5,
+         24.1
+        ]
+       ],
+       "style": "fleche",
+       "etiquette": "B",
+       "teinte": "vert"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la route de Christophe Colomb, qui navigue vers l’ouest en 1492.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Elle traverse l’Atlantique, loin des côtes africaines.",
+     "explication": "La route **B** part d’Espagne vers l’ouest et mène aux Antilles : c’est le voyage de Colomb, pour la Castille."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la route qui mène à l’Inde en contournant l’Afrique.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle passe le cap de Bonne-Espérance, puis traverse l’océan Indien.",
+     "explication": "La route **A** contourne l’Afrique et atteint l’Inde : c’est celle de Vasco de Gama, en 1498."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le cap franchi par Bartolomeu Dias en 1488.",
+     "reponse": [
+      "cap"
+     ],
+     "aide": "C’est l’extrémité sud de l’Afrique.",
+     "explication": "Le cap de **Bonne-Espérance**, à la pointe sud de l’Afrique, est franchi par Dias en 1488 : la route de l’Inde par la mer est ouverte."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois voyages du plus ancien au plus récent.",
+     "items": [
+      "Dias passe le cap de Bonne-Espérance",
+      "Colomb touche les Antilles",
+      "Gama atteint l’Inde"
+     ],
+     "aide": "Retiens les dates : 1488, 1492 et 1498.",
+     "explication": "**Dias** en 1488, **Colomb** en 1492, **Gama** en 1498 : Gama suit la route ouverte par Dias."
+    }
+   ]
+  },
+  {
+   "chapitre": "6dfdfe12-5572-5ecb-88c8-91ff017ba523",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ligne dans l’Atlantique : le traité de Tordesillas",
+   "competence": "analyser-document",
+   "situation": "En 1494, le Portugal et la Castille se partagent des terres qu’ils n’ont pas vues. Une carte et une version adaptée du traité permettent de comprendre pourquoi le Brésil est portugais.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La ligne du traité de Tordesillas",
+     "source": "Carte d’après le cours : la ligne est tracée à environ 46° ouest, position approximative.",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -45,
+      40,
+      55
+     ],
+     "regionsCliquables": true,
+     "traits": [
+      {
+       "id": "ligne",
+       "points": [
+        [
+         -46,
+         55
+        ],
+        [
+         -46,
+         -36
+        ]
+       ],
+       "style": "pointilles",
+       "etiquette": "Ligne de partage",
+       "teinte": "corail"
+      }
+     ]
+    },
+    {
+     "id": "traite",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le traité de Tordesillas, 1494",
+     "source": "Texte écrit pour l’exercice, d’après les termes du traité de Tordesillas.",
+     "blocs": [
+      "Une ligne est tracée dans l’Atlantique. Les terres découvertes à l’[[o|ouest]] de la ligne reviennent à la Castille ; celles qui se trouvent à l’[[e|est]] reviennent au Portugal."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays d’Amérique du Sud dont la façade atlantique est à l’est de la ligne.",
+     "reponse": [
+      "BRA"
+     ],
+     "aide": "C’est le plus grand pays d’Amérique du Sud, de langue portugaise.",
+     "explication": "Le **Brésil** déborde à l’est de la ligne par sa façade atlantique : il revient donc au Portugal."
+    },
+    {
+     "type": "zone",
+     "document": "traite",
+     "enonce": "Touche le mot qui indique de quel côté de la ligne les terres reviennent au Portugal.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Le Portugal est du côté de l’Afrique et de l’Europe, vers le point cardinal où le soleil se lève.",
+     "explication": "Les terres situées à l’**est** de la ligne reviennent au Portugal ; celles de l’ouest, à la Castille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le Brésil devient-il portugais ?",
+     "options": [
+      "Une partie de ses côtes est à l’est de la ligne fixée",
+      "Colomb l’a découvert pour le compte du Portugal",
+      "Les Amérindiens l’ont donné aux marins portugais",
+      "Il se trouve plus près de l’Afrique que des Antilles"
+     ],
+     "reponse": 0,
+     "aide": "Compare la position du Brésil à celle de la ligne.",
+     "explication": "Le Brésil est portugais parce que sa façade atlantique se trouve **à l’est de la ligne** de Tordesillas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : motif ou moyen des grandes explorations ?",
+     "categories": [
+      "Un motif",
+      "Un moyen"
+     ],
+     "items": [
+      [
+       "L’or et les épices",
+       0
+      ],
+      [
+       "La caravelle",
+       1
+      ],
+      [
+       "L’évangélisation",
+       0
+      ],
+      [
+       "L’astrolabe",
+       1
+      ]
+     ],
+     "aide": "Un motif répond à « pourquoi partir ? », un moyen à « avec quoi ? ».",
+     "explication": "**L’or et les épices** et **l’évangélisation** sont des motifs ; **la caravelle** et **l’astrolabe** sont des moyens techniques."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase du cours qui résume les découvertes.",
+     "texte": "On ne découvre pas un monde par accident : un ___ paie, une ___ existe et un ___ est espéré.",
+     "reponses": [
+      [
+       "État"
+      ],
+      [
+       "technique"
+      ],
+      [
+       "profit"
+      ]
+     ],
+     "banque": [
+      "État",
+      "technique",
+      "profit",
+      "hasard"
+     ],
+     "aide": "Pense au rôle des royaumes, de la caravelle et de l’or.",
+     "explication": "Un **État** paie, une **technique** existe et un **profit** est espéré : les voyages sont voulus, financés et calculés."
+    }
+   ]
+  },
+  {
+   "chapitre": "29e7fa7d-d219-5286-8a54-ea6b252b1b4c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un navire, trois côtés : le commerce triangulaire",
+   "competence": "lire-graphique",
+   "situation": "Dans son manuel, Inès découvre le circuit des navires négriers au XVIIIe siècle. Un schéma montre les trois étapes du voyage, un graphique donne l’ampleur de la traite.",
+   "documents": [
+    {
+     "id": "circuit",
+     "type": "chaine",
+     "disposition": "cycle",
+     "titre": "Le circuit triangulaire",
+     "source": "Schéma établi d’après le cours.",
+     "noeuds": [
+      {
+       "id": "europe",
+       "texte": "Port européen (Nantes)",
+       "emoji": "⚓"
+      },
+      {
+       "id": "afrique",
+       "texte": "Côtes d’Afrique",
+       "emoji": "🌍"
+      },
+      {
+       "id": "antilles",
+       "texte": "Antilles",
+       "emoji": "🏝️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "europe",
+       "a": "afrique"
+      },
+      {
+       "de": "afrique",
+       "a": "antilles"
+      },
+      {
+       "de": "antilles",
+       "a": "europe"
+      }
+     ]
+    },
+    {
+     "id": "chiffres",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La traite atlantique, XVIe-XIXe siècles",
+     "source": "Chiffres arrondis, d’après le cours.",
+     "categories": [
+      "Embarqués",
+      "Débarqués vivants"
+     ],
+     "series": [
+      {
+       "nom": "Africains",
+       "valeurs": [
+        12.5,
+        10.7
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre d’Africains",
+      "unite": "en millions",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circuit",
+     "enonce": "Touche l’étape où les navires embarquent les captifs.",
+     "reponse": [
+      "afrique"
+     ],
+     "aide": "Les captifs sont emmenés vers les Amériques : où commencent-ils leur traversée ?",
+     "explication": "Les captifs sont embarqués sur les **côtes d’Afrique**, puis traversent l’Atlantique : c’est le passage du milieu."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque trajet à sa cargaison.",
+     "paires": [
+      [
+       "De l’Europe vers l’Afrique",
+       "De la pacotille : tissus, armes, alcool"
+      ],
+      [
+       "De l’Afrique vers les Amériques",
+       "Des captifs"
+      ],
+      [
+       "Des Amériques vers l’Europe",
+       "Sucre, café, coton, indigo, tabac"
+      ]
+     ],
+     "aide": "Chaque côté du triangle a sa cargaison : l’aller, la traversée et le retour.",
+     "explication": "Le navire part avec de la **pacotille**, traverse l’Atlantique avec des **captifs**, revient avec du **sucre, du café, du coton**… Trois côtés, trois profits."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions d’Africains embarqués n’ont pas été débarqués vivants ?",
+     "reponse": 1.8,
+     "unite": "millions",
+     "tolerance": 0.05,
+     "aide": "Soustrais les débarqués vivants aux embarqués.",
+     "explication": "12,5 − 10,7 = **1,8 million** : environ 1,8 million de personnes sont mortes avant d’arriver."
+    }
+   ]
+  },
+  {
+   "chapitre": "29e7fa7d-d219-5286-8a54-ea6b252b1b4c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un « bien meuble » : lire le Code noir",
+   "competence": "analyser-texte",
+   "situation": "Samuel lit un résumé d’un article du Code noir de 1685, puis place dans un tableau les grandes dates de l’esclavage dans les colonies françaises. Il doit comprendre ce que dit le texte et le situer.",
+   "documents": [
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le Code noir, 1685",
+     "source": "D’après le Code noir (1685), article 44, texte adapté et résumé.",
+     "blocs": [
+      "Les esclaves sont déclarés [[m|meubles]] : ils entrent dans les biens de leur maître, comme n’importe quel objet que l’on possède."
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "tableau",
+     "titre": "L’esclavage dans les colonies françaises",
+     "source": "Dates tirées du cours.",
+     "colonnes": [
+      "Événement",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "Code noir",
+       1685
+      ],
+      [
+       "Première abolition française",
+       1794
+      ],
+      [
+       "Rétablissement de l’esclavage par Bonaparte",
+       "?"
+      ],
+      [
+       "Abolition définitive",
+       1848
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "code",
+     "enonce": "Touche le mot qui dit quel statut le texte donne aux esclaves.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Le mot désigne les biens que l’on peut déplacer, comme des objets.",
+     "explication": "Le Code noir déclare les esclaves **meubles** : ce sont des biens, et non des personnes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèle ce statut de « bien meuble » ?",
+     "options": [
+      "L’esclave est traité comme un bien, non comme une personne",
+      "L’esclave est protégé comme un citoyen par la loi",
+      "L’esclave est payé pour son travail comme un salarié",
+      "L’esclave est libre de quitter la plantation à son gré"
+     ],
+     "reponse": 0,
+     "aide": "Un meuble s’achète, se vend et se transmet.",
+     "explication": "Classé parmi les **biens**, l’esclave peut être vendu ou transmis : la loi nie son humanité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le Code noir (1685) de la première abolition française (1794) ?",
+     "reponse": 109,
+     "unite": "ans",
+     "aide": "Soustrais 1685 à 1794.",
+     "explication": "1794 − 1685 = **109 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme de résistance à ce qu’elle désigne.",
+     "paires": [
+      [
+       "Le marronnage",
+       "La fuite et les communautés d’évadés"
+      ],
+      [
+       "Les révoltes",
+       "Des soulèvements armés, réprimés"
+      ],
+      [
+       "Le sabotage",
+       "Un refus quotidien et discret"
+      ]
+     ],
+     "aide": "Le marronnage est la fuite hors de la plantation.",
+     "explication": "Le **marronnage** est la fuite, les **révoltes** sont armées et réprimées, le **sabotage** est un refus de tous les jours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Complète le tableau : en quelle année Bonaparte rétablit-il l’esclavage dans les colonies françaises ?",
+     "reponse": 1802,
+     "aide": "C’est après la première abolition (1794) et avant l’abolition définitive (1848).",
+     "explication": "Bonaparte rétablit l’esclavage en **1802** : l’abolition de 1794 n’avait donc pas été définitive."
+    }
+   ]
+  },
+  {
+   "chapitre": "29e7fa7d-d219-5286-8a54-ea6b252b1b4c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La lettre d’un armateur nantais",
+   "competence": "analyser-document",
+   "situation": "Un armateur de Nantes décrit son affaire en 1770. Sa lettre, croisée avec une frise des abolitions, montre ce qu’un document dit, mais aussi ce qu’il tait.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un armateur nantais, 1770",
+     "source": "Lettre écrite pour l’exercice : l’armateur est imaginé.",
+     "blocs": [
+      "Mon navire quitte Nantes chargé de [[p|pacotille]] : tissus, armes et alcool. Sur les côtes d’Afrique, nous l’échangeons contre des captifs que nous menons aux Antilles. Là, nous chargeons du sucre et du café que nous vendrons à Nantes. Trois côtés, trois profits."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Résistances et abolitions",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1790,
+     "fin": 1850,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "abolition1",
+       "date": 1794,
+       "nom": "1re abolition"
+      },
+      {
+       "id": "haiti",
+       "date": 1804,
+       "nom": "Haïti"
+      },
+      {
+       "id": "abolition2",
+       "date": 1848,
+       "nom": "Abolition finale"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne les marchandises que le navire emporte au départ de Nantes.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le mot est suivi de deux points et de la liste « tissus, armes et alcool ».",
+     "explication": "La **pacotille** désigne les tissus, armes, alcool et verroterie échangés contre des captifs."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes du voyage du navire dans l’ordre où l’armateur les décrit.",
+     "items": [
+      "Le navire quitte Nantes avec de la pacotille",
+      "Il échange sa cargaison contre des captifs en Afrique",
+      "Il mène les captifs aux Antilles : le passage du milieu",
+      "Il revient à Nantes chargé de sucre et de café"
+     ],
+     "aide": "Suis le triangle : Europe, Afrique, Amériques, Europe.",
+     "explication": "Le circuit est **Nantes → Afrique → Antilles → Nantes** : à chaque côté, l’armateur gagne de l’argent."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui voit Saint-Domingue devenir un État indépendant.",
+     "reponse": [
+      "haiti"
+     ],
+     "aide": "La colonie prend un nouveau nom en 1804.",
+     "explication": "La révolution de Saint-Domingue (1791-1804) donne naissance à **Haïti**, première victoire d’une révolte d’esclaves."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la première abolition française (1794) de l’abolition définitive (1848) ?",
+     "reponse": 54,
+     "unite": "ans",
+     "aide": "Soustrais 1794 à 1848.",
+     "explication": "1848 − 1794 = **54 ans**, avec entre les deux le rétablissement de l’esclavage par Bonaparte en 1802."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que la lettre de l’armateur ne dit jamais ?",
+     "options": [
+      "Ce que vivent les captifs durant la traversée",
+      "Les marchandises embarquées au départ de Nantes",
+      "Les produits rapportés en Europe au retour",
+      "Le lieu où les captifs sont débarqués"
+     ],
+     "reponse": 0,
+     "aide": "Relis chaque phrase : l’armateur ne parle que de marchandises et de profits.",
+     "explication": "La lettre ne parle que de **profits** : elle passe sous silence les captifs et ce qu’ils endurent. Un historien doit toujours se demander ce qu’un document tait."
+    }
+   ]
+  },
+  {
+   "chapitre": "97889f80-f987-5ac7-ac6b-8e7c3819f4c3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans l’assiette d’un paysan européen vers 1850",
+   "competence": "analyser-document",
+   "situation": "Léna regarde le menu d’un paysan européen vers 1850. Elle se demande ce qui, dans son assiette, vient d’Amérique, et ce qui fait le voyage dans l’autre sens.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Repas d’un paysan européen",
+     "sousTitre": "Vers 1850",
+     "emoji": "🍲",
+     "source": "Menu imaginé pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Soupe de pommes de terre",
+       "id": "pdt"
+      },
+      {
+       "texte": "Haricots",
+       "id": "har"
+      },
+      {
+       "texte": "Pain de blé",
+       "id": "pain"
+      },
+      {
+       "texte": "Gigot de mouton",
+       "id": "mouton"
+      },
+      {
+       "texte": "Tomates",
+       "id": "tom"
+      }
+     ],
+     "pied": "Écrit pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche les trois plats dont l’ingrédient principal vient d’Amérique.",
+     "reponse": [
+      "pdt",
+      "har",
+      "tom"
+     ],
+     "multiple": true,
+     "aide": "Pomme de terre, haricot et tomate ont voyagé d’Amérique vers l’Europe.",
+     "explication": "La **pomme de terre**, le **haricot** et la **tomate** sont venus d’Amérique : c’est l’échange colombien."
+    },
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche le plat issu d’un animal que les Européens ont emmené en Amérique.",
+     "reponse": [
+      "mouton"
+     ],
+     "aide": "Parmi les animaux emportés : bœufs, chevaux et moutons.",
+     "explication": "Le **mouton** a été apporté en Amérique par les Européens, avec les bœufs et les chevaux."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque produit selon le sens de son voyage.",
+     "categories": [
+      "D’Europe vers l’Amérique",
+      "D’Amérique vers l’Europe"
+     ],
+     "items": [
+      [
+       "Le blé",
+       0
+      ],
+      [
+       "La canne à sucre",
+       0
+      ],
+      [
+       "Le cheval",
+       0
+      ],
+      [
+       "Le maïs",
+       1
+      ],
+      [
+       "Le cacao",
+       1
+      ],
+      [
+       "Le tabac",
+       1
+      ]
+     ],
+     "aide": "Le blé, la canne à sucre et le cheval ne sont pas des produits américains.",
+     "explication": "**Blé**, **canne à sucre** et **cheval** vont d’Europe en Amérique ; **maïs**, **cacao** et **tabac** font le trajet inverse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce menu à propos de l’échange colombien ?",
+     "options": [
+      "Des produits américains sont entrés dans l’alimentation quotidienne des Européens",
+      "Les Européens ont abandonné le blé au profit des plantes américaines",
+      "Seuls les riches ont pu profiter des produits venus d’Amérique",
+      "Tous les produits européens ont été remplacés par des produits américains"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui est américain et ce qui ne l’est pas dans le menu.",
+     "explication": "Le menu mélange plats **américains** et plats européens : l’échange colombien a changé l’alimentation de tous, sans que personne l’ait voulu."
+    }
+   ]
+  },
+  {
+   "chapitre": "97889f80-f987-5ac7-ac6b-8e7c3819f4c3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi les Amérindiens ont-ils disparu si vite ?",
+   "competence": "lire-graphique",
+   "situation": "Un historien estime l’évolution de la population d’une région conquise par les Espagnols au XVIe siècle. Son graphique montre une chute vertigineuse. Mais d’où vient-elle ?",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Évolution d’une population amérindienne après la conquête",
+     "source": "Chiffres imaginés pour l’exercice, d’après l’ordre de grandeur du cours (baisse de 80 à 90 % en un siècle).",
+     "categories": [
+      "1520",
+      "1550",
+      "1580",
+      "1610"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        100,
+        45,
+        22,
+        12
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Population (indice, 1520 = 100)",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la première date où la population est tombée à moins de la moitié de celle de 1520.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la première valeur inférieure à 50.",
+     "explication": "En **1550**, l’indice vaut 45 : la population a déjà perdu plus de la moitié de ses membres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage la population a-t-elle baissé entre 1520 et 1610 ?",
+     "reponse": 88,
+     "unite": "%",
+     "aide": "La valeur de départ est 100 : la baisse est 100 moins la valeur finale.",
+     "explication": "100 − 12 = **88 %** : cela correspond aux estimations de 80 à 90 % du cours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la principale cause de cet effondrement démographique ?",
+     "options": [
+      "Les maladies importées, contre lesquelles les populations n’avaient aucune immunité",
+      "Les armes à feu des conquistadors, qui tuent dans chaque bataille des milliers de guerriers",
+      "Les chevaux, qui piétinent les cultures des paysans amérindiens et provoquent des famines",
+      "L’exil volontaire d’une grande partie des Amérindiens vers l’Europe et l’Afrique"
+     ],
+     "reponse": 0,
+     "aide": "Le cours cite la variole, la rougeole et le typhus.",
+     "explication": "Les **microbes** — variole, rougeole, typhus — sont le facteur le plus meurtrier : les populations n’avaient aucune immunité."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque facteur de la conquête selon son poids.",
+     "categories": [
+      "Réel mais limité",
+      "Décisif militairement",
+      "Le plus meurtrier"
+     ],
+     "items": [
+      [
+       "Les armes à feu",
+       0
+      ],
+      [
+       "Les chevaux",
+       0
+      ],
+      [
+       "Les alliances avec des peuples soumis",
+       1
+      ],
+      [
+       "La variole",
+       2
+      ],
+      [
+       "Le typhus",
+       2
+      ]
+     ],
+     "aide": "Les alliances ont décidé des batailles ; les maladies ont tué le plus de monde.",
+     "explication": "Armes à feu et chevaux ont un poids **réel mais limité** ; les **alliances** sont décisives militairement ; les **maladies** tuent le plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "97889f80-f987-5ac7-ac6b-8e7c3819f4c3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’argent de Potosí et le débat de Valladolid",
+   "competence": "analyser-document",
+   "situation": "L’argent américain enrichit l’Europe et fait monter les prix, pendant qu’un débat moral s’ouvre sur le sort des Amérindiens. Deux documents permettent de relier ces deux faces de la conquête.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La controverse de Valladolid, 1550-1551",
+     "source": "Résumé écrit pour l’exercice, d’après le cours ; aucune citation.",
+     "blocs": [
+      "En 1550-1551, à Valladolid, deux hommes s’affrontent devant des théologiens. Las Casas [[l|défend]] les Amérindiens. Sepúlveda, lui, [[s|justifie]] la conquête."
+     ]
+    },
+    {
+     "id": "prix",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Les prix au XVIe siècle",
+     "source": "Chiffres imaginés pour l’exercice, d’après l’ordre de grandeur du cours.",
+     "categories": [
+      "1500",
+      "1525",
+      "1550",
+      "1575",
+      "1600"
+     ],
+     "series": [
+      {
+       "nom": "Prix",
+       "valeurs": [
+        100,
+        130,
+        190,
+        280,
+        400
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Indice des prix (1500 = 100)",
+      "min": 0,
+      "max": 400,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Année"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "enonce": "Touche le mot qui indique la position de Sepúlveda.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Sepúlveda ne défend pas les Amérindiens.",
+     "explication": "Sepúlveda **justifie** la conquête, alors que Las Casas défend les Amérindiens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que change ce débat selon le cours ?",
+     "options": [
+      "Il pose la question de l’humanité des Amérindiens",
+      "Il met immédiatement fin à la conquête des Amériques",
+      "Il interdit l’esclavage dans toutes les colonies",
+      "Il montre que tous les religieux approuvaient la conquête"
+     ],
+     "reponse": 0,
+     "aide": "Le débat ne met pas fin à l’exploitation, mais il pose une question neuve.",
+     "explication": "Le débat ne met pas fin à l’exploitation, mais il pose une question neuve : l’**humanité de l’autre**."
+    },
+    {
+     "type": "zone",
+     "document": "prix",
+     "enonce": "Touche la première date où les prix valent plus du double de ceux de 1500.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la première valeur supérieure à 200.",
+     "explication": "En **1575**, l’indice vaut 280 : les prix ont plus que doublé depuis 1500 (en 1550, il n’est encore que de 190)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un rentier touche 200 livres chaque année, toujours la même somme. En prix de 1500, combien ces 200 livres valent-elles en 1600 ?",
+     "reponse": 50,
+     "unite": "livres",
+     "aide": "Les prix de 1600 sont quatre fois ceux de 1500 : divise la somme par 4.",
+     "explication": "L’indice des prix est de 400 en 1600, soit 4 fois celui de 1500 : 200 ÷ 4 = **50 livres**. La révolution des prix appauvrit les rentiers."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque fait à sa conséquence.",
+     "paires": [
+      [
+       "Les mines de Potosí",
+       "Elles inondent l’Europe de métal précieux"
+      ],
+      [
+       "La révolution des prix",
+       "Elle appauvrit les rentiers"
+      ],
+      [
+       "La dette espagnole",
+       "L’Espagne s’endette malgré son or"
+      ],
+      [
+       "La pomme de terre",
+       "Elle nourrit l’Europe du XIXe siècle"
+      ]
+     ],
+     "aide": "Chaque fait du cours a une conséquence : l’argent, les prix, la dette, l’alimentation.",
+     "explication": "**Potosí** déverse de l’argent, la **révolution des prix** appauvrit les rentiers, l’**Espagne** s’endette malgré son or, la **pomme de terre** nourrit l’Europe du XIXe siècle."
+    }
+   ]
+  }
+ ]
+}

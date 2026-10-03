@@ -511,7 +511,7 @@ Dessin de presse, chanson, sketch, caricature en ligne prolongent la tradition.
 | L'**allitération** | Des **consonnes** |
 | L'**assonance** | Des **voyelles** |
 
-> « Pour qui sont ces serpents qui sifflent sur nos têtes ? » : le sifflement est dans le vers avant d'être dans l'image.
+> « Pour qui sont ces serpents qui sifflent sur vos têtes ? » : le sifflement est dans le vers avant d'être dans l'image.
 
 > Le poème **fait entendre** ce qu'il décrit ; c'est ce qui le sépare d'une description ordinaire.
 

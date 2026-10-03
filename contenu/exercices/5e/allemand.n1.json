@@ -1,0 +1,1091 @@
+{
+ "niveau": "5e",
+ "matiere": "allemand",
+ "exercices": [
+  {
+   "chapitre": "f9ccd6ca-42ef-5703-8abd-90b26c93cf77",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Premier jour à Hambourg",
+   "competence": "comprendre-langue",
+   "situation": "Anna, une jeune Française, arrive dans une classe d’échange en Allemagne. Elle discute avec Ben, son voisin de table. Lis leur conversation et retrouve ce qu’ils se disent.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Anna et Ben se présentent",
+     "participants": [
+      {
+       "nom": "Anna",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anna",
+       "texte": "Hallo! Ich heiße Anna. Wie heißt du?"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Hallo Anna! Ich bin Ben. Ich komme aus Berlin. Und du?"
+      },
+      {
+       "qui": "Anna",
+       "texte": "Ich komme aus Frankreich. Ich wohne in [[l|Lyon]]. Ich bin [[a|13]] Jahre alt."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche la ville où habite Anna.",
+     "aide": "Cherche la phrase « Ich wohne in … ».",
+     "explication": "**Lyon** : *Ich wohne in Lyon* = « j’habite à Lyon »."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le nombre qui donne l’âge d’Anna.",
+     "aide": "Cherche « Jahre alt ».",
+     "explication": "**13** : *Ich bin 13 Jahre alt* = « j’ai 13 ans »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que demande Anna à Ben avec « Wie heißt du ? »",
+     "options": [
+      "Comment tu t’appelles ?",
+      "De quelle ville viens-tu ?",
+      "Quel âge as-tu aujourd’hui ?",
+      "Où est-ce que tu habites ?"
+     ],
+     "reponse": 0,
+     "aide": "Anna vient de dire son nom, juste avant.",
+     "explication": "**Wie heißt du ?** = « Comment tu t’appelles ? »"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase de Ben.",
+     "texte": "Ich komme ___ Berlin.",
+     "reponses": [
+      [
+       "aus"
+      ]
+     ],
+     "banque": [
+      "aus",
+      "in",
+      "bin",
+      "du"
+     ],
+     "aide": "Ben dit d’où il vient.",
+     "explication": "**Ich komme aus Berlin** = « je viens de Berlin ». *aus* veut dire « de, en venant de »."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9ccd6ca-42ef-5703-8abd-90b26c93cf77",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au revoir, Herr Braun !",
+   "competence": "manier-langue",
+   "situation": "Tim croise un voisin adulte, Herr Braun. Il ne doit pas se tromper de registre : tu ne dis pas « tu » à un adulte que tu ne connais pas. Lis l’échange et classe les formules.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Tim et Herr Braun",
+     "participants": [
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Herr Braun",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tim",
+       "texte": "Guten Tag. Wie heißen [[s|Sie]]?"
+      },
+      {
+       "qui": "Herr Braun",
+       "texte": "Ich heiße Braun. Und wie heißt du?"
+      },
+      {
+       "qui": "Tim",
+       "texte": "Ich bin Tim. Auf Wiedersehen, Herr Braun!"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot par lequel Tim vouvoie Herr Braun.",
+     "aide": "C’est le « vous » de politesse, écrit avec une majuscule.",
+     "explication": "**Sie** est le « vous » de politesse : Tim vouvoie un adulte inconnu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « Sie » prend-il une majuscule au milieu de la phrase ?",
+     "options": [
+      "C’est le « vous » de politesse, toujours en majuscule",
+      "C’est le début d’une nouvelle phrase du dialogue",
+      "C’est un nom propre, comme le prénom d’une personne",
+      "C’est un nom commun, comme tous les noms allemands"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec « du », qui s’écrit en minuscule.",
+     "explication": "*Sie* (vous de politesse) s’écrit **toujours avec une majuscule**, même au milieu d’une phrase. *du* (tu) reste en minuscule."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces formules selon le registre.",
+     "categories": [
+      "Familier",
+      "Poli"
+     ],
+     "items": [
+      [
+       "Hallo",
+       0
+      ],
+      [
+       "Tschüss",
+       0
+      ],
+      [
+       "Wie heißt du ?",
+       0
+      ],
+      [
+       "Auf Wiedersehen",
+       1
+      ],
+      [
+       "Wie heißen Sie ?",
+       1
+      ]
+     ],
+     "aide": "Dis-toi : « tu » = familier, « Sie » = poli.",
+     "explication": "*Hallo*, *Tschüss* et *Wie heißt du ?* sont **familiers**. *Auf Wiedersehen* et *Wie heißen Sie ?* sont **polis**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Tim dit au revoir poliment à un adulte. Complète.",
+     "texte": "___ , Herr Braun !",
+     "reponses": [
+      [
+       "Auf Wiedersehen"
+      ]
+     ],
+     "banque": [
+      "Auf Wiedersehen",
+      "Tschüss",
+      "Hallo",
+      "Guten Abend"
+     ],
+     "aide": "Cherche la formule polie pour partir, dans le dialogue.",
+     "explication": "**Auf Wiedersehen** est la formule polie pour prendre congé d’un adulte ; *Tschüss* est familier."
+    }
+   ]
+  },
+  {
+   "chapitre": "f9ccd6ca-42ef-5703-8abd-90b26c93cf77",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les nombres à l’envers",
+   "competence": "lire-tableau",
+   "situation": "L’école de Mia organise un tournoi de tennis. La liste des inscrits donne l’âge de chacun… en lettres. Pour la lire, il faut se rappeler que l’allemand dit les nombres « à l’envers » : l’unité d’abord, puis la dizaine.",
+   "documents": [
+    {
+     "id": "club",
+     "type": "tableau",
+     "titre": "Der Tennisclub",
+     "colonnes": [
+      "Name",
+      "Alter"
+     ],
+     "lignes": [
+      [
+       "Lena",
+       "einundzwanzig"
+      ],
+      [
+       "Herr Koch",
+       "vierundsechzig"
+      ],
+      [
+       "Anja",
+       "fünfundzwanzig"
+      ],
+      [
+       "Paul",
+       "siebenundzwanzig"
+      ],
+      [
+       "Frau Hahn",
+       "achtundsechzig"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Liste écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Mia et Jonas",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jonas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Ich bin 13 Jahre alt. Und du?"
+      },
+      {
+       "qui": "Jonas",
+       "texte": "Ich [[f|habe]] 13 Jahre."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel âge a Herr Koch ?",
+     "reponse": 64,
+     "unite": "ans",
+     "aide": "Vierundsechzig = quatre-et-soixante.",
+     "explication": "*vier-und-sechzig* : quatre et soixante, donc **64**."
+    },
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche l’âge de la personne la plus âgée du club.",
+     "aide": "Compare 64 et 68 : il faut déchiffrer chaque nombre.",
+     "explication": "**achtundsechzig** = huit et soixante = 68, c’est plus que 64 (Herr Koch) : Frau Hahn est la plus âgée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nombre allemand à son écriture en chiffres.",
+     "paires": [
+      [
+       "einundzwanzig",
+       "21"
+      ],
+      [
+       "fünfundzwanzig",
+       "25"
+      ],
+      [
+       "siebenundzwanzig",
+       "27"
+      ],
+      [
+       "achtundsechzig",
+       "68"
+      ]
+     ],
+     "aide": "Unité + und + dizaine : fünf-und-zwanzig = cinq-et-vingt.",
+     "explication": "On lit à l’envers : **21**, **25**, **27**, **68**."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui est une faute de débutant dans la réponse de Jonas.",
+     "aide": "En allemand, on ne « possède » pas son âge.",
+     "explication": "**habe** est faux : en allemand on **est** âgé de treize ans (*Ich bin 13 Jahre alt*), on n’en a pas."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase d’Anja.",
+     "texte": "Ich ___ fünfundzwanzig Jahre alt.",
+     "reponses": [
+      [
+       "bin"
+      ]
+     ],
+     "banque": [
+      "bin",
+      "habe",
+      "bist",
+      "hat"
+     ],
+     "aide": "Reprends la phrase de Mia.",
+     "explication": "**Ich bin fünfundzwanzig Jahre alt** : on utilise *sein* (« être »), jamais *haben*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec3f56f3-71ee-50ec-afa9-c7c87ace6ca7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans ma chambre : der, die, das",
+   "competence": "observer-schema",
+   "situation": "Lukas dessine trois objets de sa chambre et écrit leur nom avec leur article. Les trois noms n’ont pas le même genre.",
+   "documents": [
+    {
+     "id": "chambre",
+     "type": "schema",
+     "titre": "Lukas’ Zimmer",
+     "largeur": 320,
+     "hauteur": 160,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 15,
+       "l": 90,
+       "h": 120,
+       "arrondi": 10,
+       "id": "lampe",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 60,
+       "emoji": "💡",
+       "taille": 36
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 118,
+       "texte": "die Lampe",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 15,
+       "l": 90,
+       "h": 120,
+       "arrondi": 10,
+       "id": "hund",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 60,
+       "emoji": "🐕",
+       "taille": 36
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 118,
+       "texte": "der Hund",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 215,
+       "y": 15,
+       "l": 90,
+       "h": 120,
+       "arrondi": 10,
+       "id": "buch",
+       "zone": true,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 260,
+       "y": 60,
+       "emoji": "📖",
+       "taille": 36
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 118,
+       "texte": "das Buch",
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Dessin écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chambre",
+     "reponse": [
+      "lampe"
+     ],
+     "enonce": "Touche l’objet dont l’article est « die ».",
+     "aide": "Lis l’article écrit sous chaque dessin.",
+     "explication": "**die Lampe** : « die » est l’article défini féminin."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces noms selon leur genre.",
+     "categories": [
+      "Masculin",
+      "Féminin",
+      "Neutre"
+     ],
+     "items": [
+      [
+       "der Tisch",
+       0
+      ],
+      [
+       "die Schule",
+       1
+      ],
+      [
+       "das Haus",
+       2
+      ],
+      [
+       "der Freund",
+       0
+      ],
+      [
+       "das Mädchen",
+       2
+      ]
+     ],
+     "aide": "Masculin = der, féminin = die, neutre = das.",
+     "explication": "*der Tisch* et *der Freund* sont masculins, *die Schule* est féminin, *das Haus* et *das Mädchen* sont neutres (**das Mädchen**, la jeune fille, est neutre !)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « C’est une lampe. »",
+     "texte": "Das ist ___ Lampe.",
+     "reponses": [
+      [
+       "eine"
+      ]
+     ],
+     "banque": [
+      "eine",
+      "ein",
+      "einen",
+      "der"
+     ],
+     "aide": "Lampe est féminin : quel article indéfini va avec le féminin ?",
+     "explication": "**Das ist eine Lampe.** L’article indéfini féminin est *eine*."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec3f56f3-71ee-50ec-afa9-c7c87ace6ca7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Je vois… : le masculin change",
+   "competence": "manier-langue",
+   "situation": "Léa et Tom jouent à « Je vois… » devant une image. À chaque tour, l’un nomme ce qu’il voit. Regarde bien la forme de l’article : elle change pour un seul genre.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Le jeu « Ich sehe… »",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Ich sehe [[a|einen]] Hund."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich sehe eine Lampe."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Ich sehe ein Haus."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Ich sehe [[a|einen]] Tisch."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux articles qui prennent la forme spéciale de l’accusatif masculin.",
+     "aide": "Der Hund et der Tisch sont masculins.",
+     "explication": "**einen** (deux fois) : devant un nom masculin COD, *ein* devient *einen*. Féminin et neutre ne changent pas."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Le chien voit l’homme. » La phrase commence par Der Hund.",
+     "items": [
+      "Der Hund",
+      "sieht",
+      "den Mann"
+     ],
+     "aide": "Sujet, verbe, complément.",
+     "explication": "**Der Hund sieht den Mann.** *Der Hund* est le sujet (nominatif), *den Mann* le COD (accusatif)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Den Hund sieht der Mann » ?",
+     "options": [
+      "L’homme voit le chien",
+      "Le chien voit l’homme",
+      "L’homme cherche le chien",
+      "Le chien et l’homme voient la maison"
+     ],
+     "reponse": 0,
+     "aide": "Regarde qui est à l’accusatif : den ou der ?",
+     "explication": "*Den Hund* est à l’accusatif (COD) : c’est le chien qui est vu. **L’homme voit le chien.** L’ordre des mots a changé, pas le sens."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Je vois l’homme. »",
+     "texte": "Ich sehe ___ Mann.",
+     "reponses": [
+      [
+       "den"
+      ]
+     ],
+     "banque": [
+      "den",
+      "der",
+      "die",
+      "das"
+     ],
+     "aide": "Mann est masculin et COD.",
+     "explication": "**Ich sehe den Mann.** Au masculin, *der* devient *den* à l’accusatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec3f56f3-71ee-50ec-afa9-c7c87ace6ca7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui voit quoi ? Lire les articles",
+   "competence": "analyser-texte",
+   "situation": "Une légende sous un dessin décrit trois scènes. Pour savoir qui voit quoi, il faut repérer les articles : seul le masculin change à l’accusatif.",
+   "documents": [
+    {
+     "id": "legende",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Sous le dessin",
+     "blocs": [
+      "Der Mann sieht [[a|den]] Hund.",
+      "Das Mädchen sieht die Lampe.",
+      "Der Freund sieht das Haus."
+     ],
+     "source": "Légende écrite pour l’exercice"
+    },
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Nominatif et accusatif",
+     "colonnes": [
+      "Genre",
+      "Nominatif",
+      "Accusatif"
+     ],
+     "lignes": [
+      [
+       "Masculin",
+       "der / ein",
+       "?"
+      ],
+      [
+       "Féminin",
+       "die / eine",
+       "die / eine"
+      ],
+      [
+       "Neutre",
+       "das / ein",
+       "das / ein"
+      ],
+      [
+       "Pluriel",
+       "die",
+       "die"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "legende",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le seul article de ces trois phrases qui a changé de forme à l’accusatif.",
+     "aide": "Cherche l’article masculin qui n’est pas « der ».",
+     "explication": "**den** est l’accusatif de *der*. Dans *die Lampe* et *das Haus*, l’article ne change pas."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces groupes du texte : sujet ou COD ?",
+     "categories": [
+      "Sujet (nominatif)",
+      "COD (accusatif)"
+     ],
+     "items": [
+      [
+       "Der Mann",
+       0
+      ],
+      [
+       "den Hund",
+       1
+      ],
+      [
+       "Das Mädchen",
+       0
+      ],
+      [
+       "die Lampe",
+       1
+      ],
+      [
+       "der Freund",
+       0
+      ],
+      [
+       "das Haus",
+       1
+      ]
+     ],
+     "aide": "Le sujet fait l’action ; le COD la subit. Le groupe placé avant le verbe est le sujet.",
+     "explication": "Dans chaque phrase, le groupe avant le verbe est le sujet, celui après est le COD."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel article faut-il écrire dans la case « ? » du tableau, au masculin à l’accusatif (article défini) ?",
+     "reponse": [
+      "den"
+     ],
+     "placeholder": "l’article",
+     "aide": "Regarde la phrase « Der Mann sieht … Hund ».",
+     "explication": "Le masculin est le seul genre qui change : **der → den**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie « Das Haus sieht der Freund » ?",
+     "options": [
+      "L’ami voit la maison",
+      "La maison voit l’ami",
+      "L’ami habite la maison",
+      "La maison de l’ami est belle"
+     ],
+     "reponse": 0,
+     "aide": "Das Haus est neutre : sa forme ne change pas. Mais « der Freund » est au nominatif, pas à l’accusatif.",
+     "explication": "**L’ami voit la maison.** *Der Freund* est au nominatif (sinon on aurait *den Freund*) : c’est lui le sujet, même placé en fin de phrase."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque phrase française à sa traduction allemande.",
+     "paires": [
+      [
+       "Le chien voit l’homme",
+       "Der Hund sieht den Mann"
+      ],
+      [
+       "L’homme voit le chien",
+       "Der Mann sieht den Hund"
+      ],
+      [
+       "La jeune fille voit la lampe",
+       "Das Mädchen sieht die Lampe"
+      ]
+     ],
+     "aide": "Cherche d’abord le groupe au nominatif : le sujet.",
+     "explication": "Le sujet reste *der* au masculin ; le COD masculin devient *den*."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e448107-365b-5ddb-acd8-5abfa8712cf3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Jouer au football : le verbe change",
+   "competence": "manier-langue",
+   "situation": "Pour le tournoi de football, Mila remplit la fiche de conjugaison de *spielen* (jouer). Deux cases sont restées vides. Aide-la.",
+   "documents": [
+    {
+     "id": "conj",
+     "type": "tableau",
+     "titre": "spielen (jouer)",
+     "colonnes": [
+      "Personne",
+      "spielen"
+     ],
+     "lignes": [
+      [
+       "ich",
+       "spiele"
+      ],
+      [
+       "du",
+       "?"
+      ],
+      [
+       "er / sie / es",
+       "spielt"
+      ],
+      [
+       "wir",
+       "spielen"
+      ],
+      [
+       "ihr",
+       "?"
+      ],
+      [
+       "sie / Sie",
+       "spielen"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quelle forme faut-il écrire à la place du « ? » de la ligne « du » ?",
+     "reponse": [
+      "spielst"
+     ],
+     "placeholder": "du …",
+     "aide": "Avec « du », la terminaison est -st.",
+     "explication": "**du spielst** : on retire -en de l’infinitif et on ajoute **-st**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle forme faut-il écrire à la place du « ? » de la ligne « ihr » ?",
+     "reponse": [
+      "spielt"
+     ],
+     "placeholder": "ihr …",
+     "aide": "Avec « ihr », la terminaison est la même que pour « er ».",
+     "explication": "**ihr spielt** : la terminaison **-t** sert pour *er / sie / es* et pour *ihr*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Wir ___ Fußball und Lena ___ Tennis.",
+     "reponses": [
+      [
+       "spielen"
+      ],
+      [
+       "spielt"
+      ]
+     ],
+     "banque": [
+      "spielen",
+      "spielt",
+      "spiele",
+      "spielst"
+     ],
+     "aide": "Regarde les lignes « wir » et « sie » (Lena) du tableau.",
+     "explication": "**Wir spielen** (-en) et **Lena spielt** (-t)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pronom à la terminaison du verbe régulier.",
+     "paires": [
+      [
+       "ich",
+       "-e"
+      ],
+      [
+       "du",
+       "-st"
+      ],
+      [
+       "er / sie / es",
+       "-t"
+      ],
+      [
+       "wir",
+       "-en"
+      ]
+     ],
+     "aide": "Repère la fin de chaque forme du tableau.",
+     "explication": "**ich -e**, **du -st**, **er -t**, **wir -en**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e448107-365b-5ddb-acd8-5abfa8712cf3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le verbe reste en deuxième position",
+   "competence": "manier-langue",
+   "situation": "Lena, Tom et Jonas parlent de leurs sorties. Leurs phrases n’ont pas la même forme, mais le verbe garde toujours la même place.",
+   "documents": [
+    {
+     "id": "saetze",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Drei Sätze",
+     "blocs": [
+      "Ich [[v|gehe]] heute ins Kino.",
+      "Heute [[v|geht]] [[s|Lena]] ins Kino.",
+      "Ins Kino [[v|geht]] Tom heute."
+     ],
+     "source": "Phrases écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "saetze",
+     "reponse": [
+      "v"
+     ],
+     "multiple": true,
+     "enonce": "Touche le verbe conjugué dans chacune des trois phrases.",
+     "aide": "Il y en a trois : un dans chaque phrase, toujours en deuxième position.",
+     "explication": "**gehe**, **geht**, **geht** : dans chaque phrase, le verbe est le deuxième élément."
+    },
+    {
+     "type": "zone",
+     "document": "saetze",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans la deuxième phrase, touche le sujet du verbe.",
+     "aide": "Qui va au cinéma ? Attention : le sujet est après le verbe.",
+     "explication": "**Lena** est le sujet : après « Heute », le sujet passe derrière le verbe (inversion)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Aujourd’hui, Tom joue au football. » La phrase commence par Heute.",
+     "items": [
+      "Heute",
+      "spielt",
+      "Tom",
+      "Fußball"
+     ],
+     "aide": "Le verbe doit rester en deuxième position.",
+     "explication": "**Heute spielt Tom Fußball.** « Heute » est en première position, le verbe en deuxième, puis le sujet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : « Anna va au cinéma aujourd’hui. »",
+     "texte": "Ins Kino ___ Anna heute.",
+     "reponses": [
+      [
+       "geht"
+      ]
+     ],
+     "banque": [
+      "geht",
+      "gehe",
+      "gehen",
+      "gehst"
+     ],
+     "aide": "Anna correspond à « sie » (elle).",
+     "explication": "**Ins Kino geht Anna heute.** *Anna* = sie : terminaison -t, et le verbe reste en deuxième position."
+    }
+   ]
+  },
+  {
+   "chapitre": "7e448107-365b-5ddb-acd8-5abfa8712cf3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un message pour Mia",
+   "competence": "analyser-texte",
+   "situation": "Jonas écrit à Mia pour l’inviter à jouer. Son message contient une question fermée, une question ouverte et une phrase où le sujet passe derrière le verbe. Un tableau t’aide pour *sein* et *haben*.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Ein Brief an Mia",
+     "blocs": [
+      "Hallo Mia!",
+      "Ich bin Jonas und ich wohne in Berlin. Heute spiele ich Fußball. [[q|Spielst]] du Tennis? [[w|Wann]] kommst du?",
+      "Tschüss, Jonas"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "verbes",
+     "type": "tableau",
+     "titre": "sein et haben",
+     "colonnes": [
+      "Personne",
+      "sein (être)",
+      "haben (avoir)"
+     ],
+     "lignes": [
+      [
+       "ich",
+       "bin",
+       "habe"
+      ],
+      [
+       "du",
+       "bist",
+       "hast"
+      ],
+      [
+       "er / sie / es",
+       "ist",
+       "hat"
+      ],
+      [
+       "wir",
+       "sind",
+       "haben"
+      ],
+      [
+       "ihr",
+       "?",
+       "habt"
+      ],
+      [
+       "sie / Sie",
+       "sind",
+       "haben"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Touche le verbe qui ouvre la question fermée (oui / non).",
+     "aide": "Dans une question fermée, le verbe est en première position.",
+     "explication": "**Spielst** ouvre la question « Tu joues au tennis ? » : réponse oui ou non."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche le mot interrogatif qui veut dire « quand ».",
+     "aide": "C’est le premier mot d’une question ouverte.",
+     "explication": "**Wann** = « quand ». Le verbe vient juste après le mot interrogatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Heute spiele ich Fußball », pourquoi « ich » se place-t-il après le verbe ?",
+     "options": [
+      "Le verbe reste en deuxième position après « Heute »",
+      "Un pronom se place toujours après le verbe",
+      "C’est une question et non une phrase déclarative",
+      "Le verbe doit toujours suivre le complément de temps"
+     ],
+     "reponse": 0,
+     "aide": "Compte les éléments : Heute est le premier.",
+     "explication": "Le verbe conjugué est **toujours en deuxième position**. Si « Heute » est en première, le sujet passe derrière le verbe."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle forme de *sein* faut-il écrire dans la case « ? » de la ligne « ihr » ?",
+     "reponse": [
+      "seid"
+     ],
+     "placeholder": "ihr …",
+     "aide": "Ce n’est ni « sind » ni « bist ».",
+     "explication": "**ihr seid** : « vous êtes » (à plusieurs amis)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec *sein* et *haben*.",
+     "texte": "Mia ___ 12 Jahre alt und sie ___ einen Hund.",
+     "reponses": [
+      [
+       "ist"
+      ],
+      [
+       "hat"
+      ]
+     ],
+     "banque": [
+      "ist",
+      "hat",
+      "bin",
+      "habe"
+     ],
+     "aide": "Mia = sie (elle) : troisième personne du singulier.",
+     "explication": "**Mia ist 12 Jahre alt** (sein) et **sie hat einen Hund** (haben), à la troisième personne."
+    }
+   ]
+  }
+ ]
+}

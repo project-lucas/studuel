@@ -1,0 +1,318 @@
+/* LE TABLEAU DE BORD DE MOI (02/10/2026, maquette « D » choisie par Lucas) :
+   tout d'un coup d'œil, en tuiles sur deux colonnes ; une tuile ouvre son
+   détail dans une feuille. Chaque tuile est une `.carte` (la recette commune,
+   en tokens) ; ce module ne porte que la grille et les dessins propres à
+   l'écran : l'anneau du record, les barres des jours, les barres des amis. */
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.625rem;
+}
+
+.tuile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0.875rem 0.75rem;
+  text-align: left;
+}
+.large {
+  grid-column: span 2;
+}
+/* Une tuile qui ouvre quelque chose répond au doigt. */
+button.tuile {
+  cursor: pointer;
+  transition: transform 0.15s var(--ease, ease-out);
+}
+button.tuile:active {
+  transform: scale(0.98);
+}
+
+.grand {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.875rem;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- le record */
+
+.record {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.875rem;
+}
+/* Le record est tombé : la tuile se cercle d'or (l'or du gain). */
+.record[data-etat='battu'] {
+  box-shadow:
+    0 0 0 2.5px var(--highlight),
+    var(--carte-ombre);
+}
+
+.anneau {
+  position: relative;
+  flex: none;
+  width: 7.75rem;
+  height: 7.75rem;
+}
+.anneau svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.anneauPiste {
+  stroke: var(--muted);
+}
+.anneauFait {
+  stroke: var(--primary);
+}
+.anneauSurplus {
+  stroke: var(--highlight);
+}
+/* Le fanion du record, en haut de l'anneau : le tour complet. */
+.anneauFanion {
+  fill: var(--carte-sombre-fond);
+}
+.anneauFanionTrait {
+  fill: var(--ink-on-dark);
+  stroke: var(--ink-on-dark);
+}
+.anneauCoeur {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.anneauValeur {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.6875rem;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+.record[data-etat='battu'] .anneauValeur {
+  color: color-mix(in oklch, var(--highlight), black 22%);
+}
+
+.cible {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.625rem;
+  line-height: 1.05;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.pastille {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  min-height: 1.625rem;
+  margin-top: 0.375rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.pastille[data-ton='vue'] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+.pastille[data-ton='battu'] {
+  background: var(--highlight);
+  color: var(--accent-foreground);
+}
+.pastille[data-ton='neutre'] {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+/* Les sept jours, du lundi au dimanche. */
+.jours {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+  margin-top: 0.625rem;
+}
+.jour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1875rem;
+  font-size: 0.6875rem;
+  font-weight: 900;
+  color: var(--muted-foreground);
+}
+.jourFut {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 1.875rem;
+}
+.jourBarre {
+  display: block;
+  width: 100%;
+  min-height: 0.25rem;
+  border-radius: 5px 5px 2px 2px;
+  background: color-mix(in oklch, var(--primary) 32%, var(--card));
+}
+.jour[data-aujourdhui] {
+  color: var(--primary);
+}
+.jour[data-aujourdhui] .jourBarre {
+  background: var(--primary);
+}
+/* Un jour à venir : rien à juger, une case en pointillé. */
+.jour[data-a-venir] .jourBarre {
+  min-height: 0.375rem;
+  background: none;
+  border: 1.5px dashed var(--muted);
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------- toi et tes amis */
+
+.barres {
+  display: grid;
+  gap: 0.4375rem;
+  margin-top: 0.75rem;
+}
+.ligne {
+  display: grid;
+  grid-template-columns: 1.125rem 2rem minmax(0, 1fr) 3.25rem;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0.75rem;
+}
+.rang {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  color: var(--muted-foreground);
+}
+.couronne {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--highlight);
+  fill: var(--highlight);
+}
+.portrait {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+}
+.ligne[data-moi] .portrait {
+  box-shadow: 0 0 0 2.5px var(--primary);
+}
+/* Les épées du challenger : la meilleure semaine du cercle. */
+.challenger {
+  position: absolute;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  display: grid;
+  place-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 0 0 1.5px var(--card);
+}
+.challengerLegende {
+  position: static;
+  box-shadow: none;
+}
+.fut {
+  position: relative;
+  height: 1.625rem;
+  overflow: hidden;
+  border-radius: 0.5625rem;
+  background: color-mix(in oklch, var(--muted) 38%, var(--card));
+}
+.barre {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 0.5625rem;
+  background: color-mix(in oklch, var(--primary) 32%, var(--card));
+  transform-origin: left center;
+  animation: pousse 0.6s var(--ease, ease-out) both;
+}
+.ligne[data-moi] .barre {
+  background: var(--primary);
+}
+.ligne[data-choisie] .fut {
+  box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--primary) 55%, transparent);
+}
+.nom {
+  position: absolute;
+  left: 0.5625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.78125rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+/* Mon nom s'écrit en blanc tant que ma barre passe dessous. */
+.ligne[data-moi] .nom {
+  color: var(--primary);
+}
+.ligne[data-moi] .nom[data-sur-barre] {
+  color: var(--primary-foreground);
+}
+.valeur {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes pousse {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barre {
+    animation: none;
+  }
+  button.tuile {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------- le détail, dans la feuille */
+
+/* Les blocs de détail (classement, couronnes, palmarès) sont des `.carte` :
+   posés dans une feuille déjà blanche, ils perdent leur ombre et leur marge. */
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.detail :global(.carte) {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  box-shadow: none;
+}

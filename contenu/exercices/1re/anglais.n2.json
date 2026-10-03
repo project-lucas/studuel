@@ -1,0 +1,1995 @@
+{
+ "niveau": "1re",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "d76ec20f-5f2d-5124-851d-1418372353d7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les vœux de Zoe la veille d’un contrôle",
+   "competence": "manier-langue",
+   "situation": "Zoe et Max s’échangent des messages la veille d’un contrôle de maths. Chacun regrette quelque chose.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoe",
+       "texte": "I wish I [[a|knew]] the answer to question 5!"
+      },
+      {
+       "qui": "Max",
+       "texte": "I wish I [[b|had revised]] last night instead of playing games."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le verbe qui exprime un regret sur le PASSÉ.",
+     "aide": "Pour un regret sur le passé, *wish* est suivi d’un temps composé.",
+     "explication": "**had revised** : *wish* + past perfect exprime un regret sur le passé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Après *I wish*, quel temps exprime un regret sur le PRÉSENT ?",
+     "options": [
+      "Le prétérit : I wish I knew",
+      "Le présent simple : I wish I know",
+      "Le futur : I wish I will know",
+      "Le past perfect : I wish I had known"
+     ],
+     "reponse": 0,
+     "aide": "Zoe ne connaît pas la réponse maintenant.",
+     "explication": "**Le prétérit** : *I wish I knew* dit « j’aimerais savoir (mais je ne sais pas) »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire que tu ne parles pas espagnol.",
+     "texte": "I wish I ___ Spanish.",
+     "reponses": [
+      [
+       "spoke"
+      ]
+     ],
+     "banque": [
+      "spoke",
+      "speak",
+      "had spoken",
+      "will speak"
+     ],
+     "aide": "C’est un regret sur le présent.",
+     "explication": "**spoke** : prétérit « modal » après *wish*, pour un regret présent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "J’aimerais savoir la réponse.",
+       "I wish I knew the answer."
+      ],
+      [
+       "Je regrette de ne pas avoir travaillé.",
+       "I wish I had studied."
+      ],
+      [
+       "Si seulement je l’avais écoutée !",
+       "If only I had listened to her!"
+      ],
+      [
+       "J’aurais dû écouter.",
+       "I should have listened."
+      ]
+     ],
+     "aide": "Repère d’abord les deux phrases qui parlent du passé.",
+     "explication": "*Wish* + prétérit : présent ; *wish* / *if only* + past perfect : passé ; *should have* + participe : reproche à soi-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "d76ec20f-5f2d-5124-851d-1418372353d7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un courriel de regrets",
+   "competence": "comprendre-langue",
+   "situation": "Ben écrit à sa cousine Chloé un courriel plein de regrets. Aide-le à ranger ses phrases et à les réécrire.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Dear Chloé",
+     "blocs": [
+      "I wish I [[w|were]] closer to you: the distance is hard.",
+      "I wish I had come to your party last month. If only I had known!",
+      "And I wish you would answer my calls: you never pick up!"
+     ],
+     "source": "Courriel écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "w"
+     ],
+     "enonce": "Touche la forme de *be* employée à la première personne dans l’anglais soutenu.",
+     "aide": "Cherche un mot qui n’est pas *was*.",
+     "explication": "**were** : dans l’anglais soutenu, on emploie *were* à toutes les personnes après *wish*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase.",
+     "categories": [
+      "Regret présent",
+      "Regret passé",
+      "Agacement"
+     ],
+     "items": [
+      [
+       "I wish I lived closer to you.",
+       0
+      ],
+      [
+       "I wish I had come to your party.",
+       1
+      ],
+      [
+       "I wish you would answer my calls.",
+       2
+      ],
+      [
+       "If only I had known!",
+       1
+      ]
+     ],
+     "aide": "*Would* après *wish* vise le comportement d’un autre.",
+     "explication": "**Prétérit** : présent ; **past perfect** : passé ; ***wish* + sujet + *would*** : agacement."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "I’d rather you ___ tell anyone.",
+     "reponses": [
+      [
+       "didn’t"
+      ]
+     ],
+     "banque": [
+      "didn’t",
+      "don’t",
+      "not",
+      "doesn’t"
+     ],
+     "aide": "Après *I’d rather* + sujet, on emploie le prétérit.",
+     "explication": "**didn’t** : *I’d rather you didn’t tell anyone* (je préférerais que tu n’en parles à personne)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces phrases sur l’examen de demain est correcte ?",
+     "options": [
+      "I hope you pass your exam tomorrow.",
+      "I wish you will pass your exam tomorrow.",
+      "I hope you had passed your exam tomorrow.",
+      "I wish you pass your exam tomorrow."
+     ],
+     "reponse": 0,
+     "aide": "*Hope* parle du possible, *wish* de l’irréel.",
+     "explication": "**I hope you pass your exam tomorrow.** : *hope* + présent, car l’examen est possible."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris le regret de Ben : « Si seulement j’avais su ! ». Le premier mot est « If ».",
+     "items": [
+      "If",
+      "only",
+      "I",
+      "had",
+      "known"
+     ],
+     "aide": "*Wish* + sujet + past perfect.",
+     "explication": "**If only I had known** : *if only* + past perfect pour un regret passé."
+    }
+   ]
+  },
+  {
+   "chapitre": "d76ec20f-5f2d-5124-851d-1418372353d7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Corriger le brouillon d’Ava",
+   "competence": "manier-langue",
+   "situation": "Ava prépare un message pour son frère Leo et son journal. Son brouillon contient trois erreurs sur *wish* et *it’s high time*.",
+   "documents": [
+    {
+     "id": "brouillon",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Ava’s draft",
+     "blocs": [
+      "I wish I [[e|would]] have more time for sport.",
+      "It’s high time we [[e|leave]] for the station.",
+      "I’d rather you [[e|don’t]] tell anyone about the surprise.",
+      "I wish I had told her the truth."
+     ],
+     "source": "Brouillon écrit pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Ava",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Leo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ava",
+       "texte": "I wish you would stop playing music at midnight!"
+      },
+      {
+       "qui": "Leo",
+       "texte": "Sorry! If only I had known you were studying."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche le mot fautif dans chacune des trois premières phrases.",
+     "aide": "Après *wish*, *it’s high time* et *I’d rather* + sujet, le verbe est au prétérit.",
+     "explication": "**would**, **leave** et **don’t** sont fautifs : il faut *had*, *left* et *didn’t*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la première phrase.",
+     "texte": "I wish I ___ more time for sport.",
+     "reponses": [
+      [
+       "had"
+      ]
+     ],
+     "banque": [
+      "had",
+      "would have",
+      "have",
+      "having"
+     ],
+     "aide": "C’est un regret sur le présent : prétérit.",
+     "explication": "**had** : *wish* + prétérit pour un regret présent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que exprime la phrase d’Ava : « I wish you would stop playing music at midnight! » ?",
+     "options": [
+      "De l’agacement face au comportement de Leo",
+      "Un regret sur le passé d’Ava",
+      "Un souhait possible à réaliser demain",
+      "Une règle de politesse"
+     ],
+     "reponse": 0,
+     "aide": "*Wish* + sujet + *would* vise le comportement de quelqu’un d’autre.",
+     "explication": "**De l’agacement** : *wish* + *would* critique une habitude de l’autre."
+    },
+    {
+     "type": "choix",
+     "enonce": "La réplique de Leo (« If only I had known… ») exprime…",
+     "options": [
+      "Un regret sur le passé",
+      "Un regret sur le présent",
+      "Un ordre",
+      "Un souhait pour demain"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le temps du verbe : *had known*.",
+     "explication": "**Un regret sur le passé** : *if only* + past perfect."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Réécris la deuxième phrase du brouillon. Le premier mot est « It’s ».",
+     "items": [
+      "It’s",
+      "high",
+      "time",
+      "we",
+      "left"
+     ],
+     "aide": "*It’s high time* + sujet + prétérit.",
+     "explication": "**It’s high time we left** : il est grand temps de partir."
+    }
+   ]
+  },
+  {
+   "chapitre": "899fc82c-176a-51e2-92ea-e5f2c8b9eb4f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le règlement du club des jeunes",
+   "competence": "comprendre-langue",
+   "situation": "Dans le club de Naya, une affiche donne les règles. Lis-la attentivement : chaque phrase n’exprime pas la même chose.",
+   "documents": [
+    {
+     "id": "regles",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Youth Club Rules",
+     "emoji": "📋",
+     "lignes": [
+      {
+       "texte": "You have to sign in at the door.",
+       "id": "obl"
+      },
+      {
+       "texte": "You are allowed to bring a snack.",
+       "id": "perm"
+      },
+      {
+       "texte": "You mustn’t use your phone during activities.",
+       "id": "interdit"
+      },
+      {
+       "texte": "You don’t have to pay on Fridays.",
+       "id": "libre"
+      }
+     ],
+     "pied": "Thank you for respecting the rules.",
+     "teinte": "bleu",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regles",
+     "reponse": [
+      "interdit"
+     ],
+     "enonce": "Touche la règle qui exprime une INTERDICTION.",
+     "aide": "*Mustn’t* exprime ce qu’il est interdit de faire.",
+     "explication": "**You mustn’t use your phone** : *mustn’t* = interdiction."
+    },
+    {
+     "type": "zone",
+     "document": "regles",
+     "reponse": [
+      "libre"
+     ],
+     "enonce": "Touche la règle qui dit qu’il n’y a PAS d’obligation.",
+     "aide": "Les vendredis, on n’a pas besoin de payer.",
+     "explication": "**You don’t have to pay** : *don’t have to* = absence d’obligation (ce n’est pas la peine)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel équivalent de *can* utilise-t-on pour exprimer une permission ?",
+     "options": [
+      "be allowed to",
+      "be able to",
+      "be going to",
+      "be used to"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la règle sur le goûter.",
+     "explication": "**be allowed to** : *can* / *may* à la permission."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "Tu n’as pas besoin de venir.",
+       "You don’t have to come."
+      ],
+      [
+       "Il est interdit de venir.",
+       "You mustn’t come."
+      ],
+      [
+       "Elle pourra conduire.",
+       "She will be able to drive."
+      ],
+      [
+       "J’ai dû partir tôt.",
+       "I had to leave early."
+      ]
+     ],
+     "aide": "Deux phrases ressemblent : l’une nie l’obligation, l’autre interdit.",
+     "explication": "*Don’t have to* : pas d’obligation ; *mustn’t* : interdiction ; *will be able to* : futur de *can* ; *had to* : passé de *must*."
+    }
+   ]
+  },
+  {
+   "chapitre": "899fc82c-176a-51e2-92ea-e5f2c8b9eb4f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La traversée de Lena",
+   "competence": "comprendre-langue",
+   "situation": "Lena raconte une journée à la plage : ce qu’elle savait faire, ce qu’elle n’a pas pu faire, et ce qu’elle a réussi.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "A day at the beach",
+     "blocs": [
+      "As a child, Lena could swim very well.",
+      "Last Saturday, the sea was rough, but she [[m|managed to]] swim to the shore.",
+      "She wasn’t allowed to swim alone, so her uncle had to follow her in a boat."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche l’expression qui exprime une réussite ponctuelle, ce samedi-là.",
+     "aide": "On n’emploie pas *could* pour une réussite précise.",
+     "explication": "**managed to** : une réussite ponctuelle (elle a réussi à nager jusqu’au rivage)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "The sea was rough, but she ___ to swim to the shore.",
+     "reponses": [
+      [
+       "managed"
+      ]
+     ],
+     "banque": [
+      "managed",
+      "could",
+      "can",
+      "must"
+     ],
+     "aide": "Il s’agit d’une réussite à un moment précis du passé.",
+     "explication": "**managed** : *managed to* (ou *was able to*) pour une réussite ponctuelle."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase.",
+     "categories": [
+      "Obligation",
+      "Interdiction",
+      "Absence d’obligation"
+     ],
+     "items": [
+      [
+       "You have to wear a helmet.",
+       0
+      ],
+      [
+       "You mustn’t enter.",
+       1
+      ],
+      [
+       "You don’t have to wear a helmet.",
+       2
+      ],
+      [
+       "You must show your ticket.",
+       0
+      ]
+     ],
+     "aide": "Observe la négation de *have to* et celle de *must*.",
+     "explication": "*Have to* / *must* : obligation ; *mustn’t* : interdiction ; *don’t have to* : absence d’obligation."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dit-on « Elle a dû suivre sa nièce » avec *have to* au passé ?",
+     "options": [
+      "She had to follow her niece.",
+      "She musted follow her niece.",
+      "She has to followed her niece.",
+      "She must followed her niece."
+     ],
+     "reponse": 0,
+     "aide": "*Must* n’a pas de passé : on passe par *have to*.",
+     "explication": "**She had to follow her niece.** : *had to* est le passé de *must*."
+    }
+   ]
+  },
+  {
+   "chapitre": "899fc82c-176a-51e2-92ea-e5f2c8b9eb4f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le règlement du lycée d’échange",
+   "competence": "argumenter",
+   "situation": "Isla est en échange scolaire. Elle compare les règles de son ancien lycée à celles de son nouveau lycée avec son professeur.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Chat with Mr Hale",
+     "participants": [
+      {
+       "nom": "Isla",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mr Hale",
+       "emoji": "👨",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Isla",
+       "texte": "At my old school, we [[p|weren’t allowed to]] use our phones."
+      },
+      {
+       "qui": "Mr Hale",
+       "texte": "Here, you may, but you [[o|have to]] switch them off in class. Next term, you will be able to join the club."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    },
+    {
+     "id": "tableau",
+     "type": "tableau",
+     "titre": "Two ways to oblige",
+     "colonnes": [
+      "Phrase",
+      "Who decides?"
+     ],
+     "lignes": [
+      [
+       "I must call my mum.",
+       "The speaker"
+      ],
+      [
+       "I have to wear a uniform.",
+       "An outside rule"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche l’expression qui exprime l’absence de permission dans le passé.",
+     "aide": "Elle contient *allowed*.",
+     "explication": "**weren’t allowed to** : on n’avait pas le droit."
+    },
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "reponse": [
+      "o"
+     ],
+     "multiple": true,
+     "enonce": "Touche l’expression qui exprime une obligation extérieure.",
+     "aide": "Elle est suivie de *switch them off*.",
+     "explication": "**have to** : l’obligation vient d’une règle extérieure."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète (capacité future : « il pourra »).",
+     "texte": "After the course, Jo will ___ ___ to swim 50 metres.",
+     "reponses": [
+      [
+       "be"
+      ],
+      [
+       "able"
+      ]
+     ],
+     "banque": [
+      "be",
+      "able",
+      "can",
+      "allowed"
+     ],
+     "aide": "*Will can* est impossible : on emploie l’équivalent de *can* pour la capacité.",
+     "explication": "**be able** : *will be able to* est le futur de *can* (capacité)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase.",
+     "categories": [
+      "Obligation venue de moi (must)",
+      "Règle extérieure (have to)"
+     ],
+     "items": [
+      [
+       "I must remember to thank her.",
+       0
+      ],
+      [
+       "I have to wear a uniform.",
+       1
+      ],
+      [
+       "You have to switch phones off in class.",
+       1
+      ],
+      [
+       "I must call my mum.",
+       0
+      ]
+     ],
+     "aide": "Relis le tableau.",
+     "explication": "*Must* : l’obligation vient de celui qui parle ; *have to* : elle vient d’une règle."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris la phrase d’Isla. Le premier mot est « We ».",
+     "items": [
+      "We",
+      "weren’t",
+      "allowed",
+      "to",
+      "use",
+      "our",
+      "phones"
+     ],
+     "aide": "Sujet, *weren’t allowed to*, base verbale, puis le complément.",
+     "explication": "**We weren’t allowed to use our phones** : on n’avait pas le droit d’utiliser nos téléphones."
+    }
+   ]
+  },
+  {
+   "chapitre": "21ec2fe9-9589-5820-ba90-7fd856cf3817",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ce que veulent les parents de Noah",
+   "competence": "manier-langue",
+   "situation": "Noah écrit à une amie : ses parents ont des projets pour lui. Observe comment il dit « je veux que tu… » en anglais.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Noah",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ella",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noah",
+       "texte": "My parents want [[p|me]] to study law."
+      },
+      {
+       "qui": "Ella",
+       "texte": "I’d like [[p|you]] to come to the cinema instead!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche, dans chaque phrase, le pronom complément placé entre le verbe et *to*.",
+     "aide": "Le pronom est à la forme complément : *me* et *you*.",
+     "explication": "**me** et **you** : la structure est verbe + complément + *to* + base verbale."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Je veux que tu viennes ». Le premier mot est « I ».",
+     "items": [
+      "I",
+      "want",
+      "you",
+      "to",
+      "come"
+     ],
+     "aide": "Pas de *that* ni de subjonctif en anglais.",
+     "explication": "**I want you to come** : verbe + complément + *to* + base verbale."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "J’aimerais qu’elle reste.",
+       "I’d like her to stay."
+      ],
+      [
+       "Il m’a demandé de l’aider.",
+       "He asked me to help him."
+      ],
+      [
+       "Elle m’a dit d’attendre.",
+       "She told me to wait."
+      ],
+      [
+       "Ils attendent de nous que nous gagnions.",
+       "They expect us to win."
+      ]
+     ],
+     "aide": "Cherche la structure verbe + pronom + *to*.",
+     "explication": "Dans les quatre cas : verbe + complément + *to* + base verbale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle est correcte ?",
+     "options": [
+      "I want him to leave.",
+      "I want that he leaves.",
+      "I want he leaves.",
+      "I want he to leave."
+     ],
+     "reponse": 0,
+     "aide": "Le pronom est complément, et il n’y a pas de *that*.",
+     "explication": "**I want him to leave.** : *him* (complément) + *to* + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "21ec2fe9-9589-5820-ba90-7fd856cf3817",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’atelier théâtre de Ms Reed",
+   "competence": "comprendre-langue",
+   "situation": "Dans le journal du lycée, une élève décrit les consignes de sa professeure de théâtre.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Drama club",
+     "blocs": [
+      "Ms Reed expects us to arrive at eight. She asked us [[n|not]] to be late.",
+      "She advised us to learn our lines and encouraged Tom to apply for the lead. On Fridays, she lets us leave early."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui exprime la négation de la demande « ne soyez pas en retard ».",
+     "aide": "La négation se place devant *to*.",
+     "explication": "**not** : *asked us not to be late* ; la négation porte sur l’action demandée."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "She lets us ___ early.",
+     "reponses": [
+      [
+       "leave"
+      ]
+     ],
+     "banque": [
+      "leave",
+      "to leave",
+      "leaving",
+      "left"
+     ],
+     "aide": "Après *let*, on n’emploie pas *to*.",
+     "explication": "**leave** : *let* + complément + base verbale sans *to*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon sa construction.",
+     "categories": [
+      "Avec to",
+      "Sans to"
+     ],
+     "items": [
+      [
+       "She expects us to arrive.",
+       0
+      ],
+      [
+       "She advised us to learn.",
+       0
+      ],
+      [
+       "She made us laugh.",
+       1
+      ],
+      [
+       "She lets us go.",
+       1
+      ]
+     ],
+     "aide": "*Make* et *let* ont une construction particulière.",
+     "explication": "*Expect* et *advise* + *to* ; *make* et *let* **sans** *to*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle est correcte pour dire « J’ai proposé qu’on parte » ?",
+     "options": [
+      "I suggested that we go.",
+      "I suggested us to go.",
+      "I suggested to us go.",
+      "I suggested we to go."
+     ],
+     "reponse": 0,
+     "aide": "*Suggest* ne se construit pas avec complément + *to*.",
+     "explication": "**I suggested that we go.** (ou *I suggested going*)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Elle nous a demandé de ne pas être en retard ». Le premier mot est « She ».",
+     "items": [
+      "She",
+      "asked",
+      "us",
+      "not",
+      "to",
+      "be",
+      "late"
+     ],
+     "aide": "*Not* se place devant *to*.",
+     "explication": "**She asked us not to be late.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "21ec2fe9-9589-5820-ba90-7fd856cf3817",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le courriel de Chloé à sa famille d’accueil",
+   "competence": "manier-langue",
+   "situation": "Chloé écrit à la famille Palmer avant son séjour linguistique. Trois constructions de son brouillon sont fautives.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Dear Mr and Mrs Palmer",
+     "blocs": [
+      "I would like [[e|that]] you help me with my homework.",
+      "My teacher suggested [[e|me]] to keep a diary.",
+      "At home, my mum made me [[e|to]] laugh when I was sad.",
+      "She encouraged me to speak as much as possible."
+     ],
+     "source": "Brouillon écrit pour l’exercice"
+    },
+    {
+     "id": "verbes",
+     "type": "tableau",
+     "titre": "Verbs followed by a person + to",
+     "colonnes": [
+      "Family",
+      "Verbs"
+     ],
+     "lignes": [
+      [
+       "Wish",
+       "want, would like"
+      ],
+      [
+       "Expectation",
+       "expect"
+      ],
+      [
+       "Request",
+       "ask, tell, order"
+      ],
+      [
+       "Advice",
+       "advise, encourage, urge"
+      ],
+      [
+       "Permission",
+       "allow, help"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche le mot fautif dans chacune des trois premières phrases.",
+     "aide": "*Would like* : pas de *that*. *Suggest* : pas de complément + *to*. *Make* : pas de *to*.",
+     "explication": "**that**, **me** et **to** sont fautifs : *I would like you to help*, *suggested that I keep*, *made me laugh*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la première phrase.",
+     "texte": "I would like you ___ help me with my homework.",
+     "reponses": [
+      [
+       "to"
+      ]
+     ],
+     "banque": [
+      "to",
+      "that",
+      "for",
+      "helping"
+     ],
+     "aide": "Verbe + complément + ___ + base verbale.",
+     "explication": "**to** : *would like you to help*."
+    },
+    {
+     "type": "zone",
+     "document": "verbes",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche la famille de sens du verbe *encourage*.",
+     "aide": "Encourager, c’est aussi conseiller.",
+     "explication": "**Advice** : *advise, encourage, urge*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle est correcte ?",
+     "options": [
+      "She helped me carry the box.",
+      "She suggested me to carry the box.",
+      "She wanted that I carry the box.",
+      "She made me to carry the box."
+     ],
+     "reponse": 0,
+     "aide": "*Help* admet *to* facultatif ; les autres sont des erreurs.",
+     "explication": "**She helped me carry the box.** : avec *help*, le *to* est facultatif."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Il est important qu’Ana vote ». Le premier mot est « It ».",
+     "items": [
+      "It",
+      "is",
+      "important",
+      "for",
+      "Ana",
+      "to",
+      "vote"
+     ],
+     "aide": "*For* + sujet + *to* + base verbale.",
+     "explication": "**It is important for Ana to vote.** : *for* + sujet + *to* + base verbale."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e0cbfd5-f75c-5834-a830-cc5a054860c6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux bus pour la bibliothèque",
+   "competence": "manier-langue",
+   "situation": "Lina explique à son ami comment aller à la bibliothèque : deux lignes de bus s’y arrêtent.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Omar",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "[[b|Both]] buses stop at the library. You can take [[e|either]] one."
+      },
+      {
+       "qui": "Omar",
+       "texte": "Great! I don’t like walking, so I’ll take the bus."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui signifie « les deux, ensemble ».",
+     "aide": "Il est suivi d’un pluriel : *buses*.",
+     "explication": "**Both** : les deux bus, ensemble."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui signifie « l’un ou l’autre, peu importe ».",
+     "aide": "Omar peut prendre n’importe lequel des deux bus.",
+     "explication": "**either** : l’un ou l’autre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "___ answers are correct.",
+     "reponses": [
+      [
+       "Both"
+      ]
+     ],
+     "banque": [
+      "Both",
+      "Either",
+      "Neither",
+      "Each"
+     ],
+     "aide": "Les deux réponses sont justes, ensemble.",
+     "explication": "**Both** : suivi d’un pluriel, pour « les deux »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque mot à son sens.",
+     "paires": [
+      [
+       "both",
+       "les deux, ensemble"
+      ],
+      [
+       "either",
+       "l’un ou l’autre"
+      ],
+      [
+       "neither",
+       "aucun des deux"
+      ],
+      [
+       "every",
+       "tous, sans exception"
+      ]
+     ],
+     "aide": "Trois mots portent sur deux éléments, un sur le groupe entier.",
+     "explication": "*Both*, *either* et *neither* parlent de deux ; *every* parle d’un groupe entier (trois ou plus)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e0cbfd5-f75c-5834-a830-cc5a054860c6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sondage sur le sport",
+   "competence": "lire-tableau",
+   "situation": "Anna, Ben et Tom ont répondu à un sondage sur leurs sports. Utilise le tableau pour construire des phrases justes.",
+   "documents": [
+    {
+     "id": "sondage",
+     "type": "tableau",
+     "titre": "Sports survey",
+     "colonnes": [
+      "Student",
+      "Football",
+      "Tennis",
+      "Swimming"
+     ],
+     "lignes": [
+      [
+       "Tom",
+       "yes",
+       "yes",
+       "no"
+      ],
+      [
+       "Anna",
+       "yes",
+       "no",
+       "yes"
+      ],
+      [
+       "Ben",
+       "no",
+       "no",
+       "yes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sondage",
+     "reponse": [
+      "r2c3"
+     ],
+     "enonce": "Touche la case qui montre que Ben nage.",
+     "aide": "Repère la ligne de Ben et la colonne « Swimming ».",
+     "explication": "Ben a répondu **yes** à *Swimming*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète d’après le tableau.",
+     "texte": "___ Anna nor Ben plays tennis.",
+     "reponses": [
+      [
+       "Neither"
+      ]
+     ],
+     "banque": [
+      "Neither",
+      "Either",
+      "Both",
+      "Each"
+     ],
+     "aide": "Aucune des deux personnes ne joue au tennis.",
+     "explication": "**Neither** : *neither… nor…* signifie « ni l’un ni l’autre »."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Tom et Anna jouent tous les deux au football ». Le premier mot est « Both ».",
+     "items": [
+      "Both",
+      "Tom and Anna",
+      "play",
+      "football"
+     ],
+     "aide": "*Both… and…* relie deux sujets.",
+     "explication": "**Both Tom and Anna play football.**"
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle est correcte pour dire qu’Anna et Ben ne jouent pas au tennis ?",
+     "options": [
+      "Neither of them plays tennis.",
+      "Neither of them doesn’t play tennis.",
+      "Both of them play tennis.",
+      "Either of them plays tennis."
+     ],
+     "reponse": 0,
+     "aide": "*Neither* contient déjà la négation.",
+     "explication": "**Neither of them plays tennis.** : jamais de seconde négation."
+    }
+   ]
+  },
+  {
+   "chapitre": "2e0cbfd5-f75c-5834-a830-cc5a054860c6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’élection du délégué",
+   "competence": "argumenter",
+   "situation": "Maya et Joel se présentent à la présidence du conseil des élèves. Un article raconte la campagne, un tableau donne les résultats.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "School election",
+     "blocs": [
+      "Two candidates, Maya and Joel, stood for president of the student council. [[b|Both]] gave a speech.",
+      "[[n|Neither]] mentioned the canteen. Each voter received a ballot paper, and every vote was counted."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Results",
+     "colonnes": [
+      "Candidate",
+      "Votes"
+     ],
+     "lignes": [
+      [
+       "Maya",
+       118
+      ],
+      [
+       "Joel",
+       94
+      ]
+     ],
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de votes ont été comptés en tout ?",
+     "reponse": 212,
+     "unite": "votes",
+     "aide": "Additionne les deux scores.",
+     "explication": "118 + 94 = **212 votes**."
+    },
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui signifie « aucun des deux ».",
+     "aide": "Il est suivi d’un verbe sans négation.",
+     "explication": "**Neither** : aucun des deux (n’a mentionné la cantine)."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression selon le nombre d’éléments qu’elle concerne.",
+     "categories": [
+      "Deux seulement",
+      "Trois ou plus (tous)"
+     ],
+     "items": [
+      [
+       "both speeches",
+       0
+      ],
+      [
+       "either candidate",
+       0
+      ],
+      [
+       "neither answer",
+       0
+      ],
+      [
+       "every voter",
+       1
+      ],
+      [
+       "every vote",
+       1
+      ]
+     ],
+     "aide": "*Every* parle du groupe entier.",
+     "explication": "*Both*, *either* et *neither* : **deux** ; *every* : **trois ou plus**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Every vote ___ counted.",
+     "reponses": [
+      [
+       "was"
+      ]
+     ],
+     "banque": [
+      "was",
+      "were",
+      "been",
+      "being"
+     ],
+     "aide": "*Every* est suivi d’un verbe au singulier.",
+     "explication": "**was** : *every vote was counted* (singulier, passé)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Aucun d’eux n’a mentionné la cantine ». Le premier mot est « Neither ».",
+     "items": [
+      "Neither",
+      "of",
+      "them",
+      "mentioned",
+      "the",
+      "canteen"
+     ],
+     "aide": "*Neither of them* + verbe sans négation.",
+     "explication": "**Neither of them mentioned the canteen.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "adf10a8e-53f8-540e-9f30-d2fec7a89948",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mouvements dans le parc",
+   "competence": "manier-langue",
+   "situation": "Jake raconte sa journée au parc. En anglais, c’est le verbe qui dit comment on bouge, et un petit mot qui dit où l’on va.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Jake at the park",
+     "blocs": [
+      "Jake ran [[o|out]] of the house and rushed [[i|into]] the park.",
+      "He swam [[a|across]] the pond and climbed up the hill."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui dit que Jake va « d’un côté à l’autre » de l’étang.",
+     "aide": "C’est la particule qui suit *swam*.",
+     "explication": "**across** : d’un côté à l’autre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque mot.",
+     "categories": [
+      "Dit la manière (verbe)",
+      "Dit la direction (particule)"
+     ],
+     "items": [
+      [
+       "swam",
+       0
+      ],
+      [
+       "ran",
+       0
+      ],
+      [
+       "across",
+       1
+      ],
+      [
+       "out",
+       1
+      ],
+      [
+       "into",
+       1
+      ],
+      [
+       "crawled",
+       0
+      ]
+     ],
+     "aide": "En anglais : manière dans le verbe, direction dans la particule.",
+     "explication": "*Swam*, *ran*, *crawled* disent **comment** on bouge ; *across*, *out*, *into* disent **où** on va."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire « L’oiseau s’est envolé ».",
+     "texte": "The bird flew ___.",
+     "reponses": [
+      [
+       "away"
+      ]
+     ],
+     "banque": [
+      "away",
+      "with",
+      "since",
+      "because"
+     ],
+     "aide": "La particule dit « au loin ».",
+     "explication": "**away** : *flew away* (s’est envolé)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase française à sa traduction.",
+     "paires": [
+      [
+       "Il a traversé la rivière à la nage.",
+       "He swam across the river."
+      ],
+      [
+       "Elle est sortie en courant.",
+       "She ran out."
+      ],
+      [
+       "Ils sont rentrés à pied.",
+       "They walked back home."
+      ],
+      [
+       "Il est sorti de la tente en rampant.",
+       "He crawled out of the tent."
+      ]
+     ],
+     "aide": "Le français met le déplacement dans le verbe : cherche la manière dans le complément.",
+     "explication": "Chassé-croisé : la **manière** passe dans le verbe anglais, la **direction** dans la particule."
+    }
+   ]
+  },
+  {
+   "chapitre": "adf10a8e-53f8-540e-9f30-d2fec7a89948",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La porte qui claque",
+   "competence": "comprendre-langue",
+   "situation": "Dans un récit d’aventure, le vent s’en mêle. Repère les verbes de manière et les structures résultatives.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "The storm",
+     "blocs": [
+      "Mia [[m|dashed]] out of the kitchen. The wind banged the door [[s|shut]] behind her.",
+      "She [[m|ran]] across the garden and [[m|crawled]] out under the fence."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "m"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois verbes qui disent la MANIÈRE de se déplacer.",
+     "aide": "Ce sont des verbes de mouvement : se précipiter, courir, ramper.",
+     "explication": "**dashed**, **ran** et **crawled** disent la manière ; la direction est portée par *out of*, *across*, *out*."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit le RÉSULTAT de l’action du vent sur la porte.",
+     "aide": "Il se place après le complément *the door*.",
+     "explication": "**shut** : la porte se ferme ; c’est une structure résultative."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "He ___ across the river.",
+     "reponses": [
+      [
+       "swam"
+      ]
+     ],
+     "banque": [
+      "swam",
+      "swim",
+      "swum",
+      "swims"
+     ],
+     "aide": "Le récit est au passé.",
+     "explication": "**swam** : prétérit de *to swim*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase.",
+     "categories": [
+      "Déplacement",
+      "Résultat"
+     ],
+     "items": [
+      [
+       "He crawled out of the tent.",
+       0
+      ],
+      [
+       "The thief ran away.",
+       0
+      ],
+      [
+       "She slammed the door shut.",
+       1
+      ],
+      [
+       "He painted the wall red.",
+       1
+      ]
+     ],
+     "aide": "Un résultat est dit par un adjectif après le complément.",
+     "explication": "*Out of the tent* et *away* : déplacement ; *shut* et *red* : résultat."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Elle est sortie de la pièce en courant ». Le premier mot est « She ».",
+     "items": [
+      "She",
+      "ran",
+      "out",
+      "of",
+      "the",
+      "room"
+     ],
+     "aide": "Manière dans le verbe, direction dans *out of*.",
+     "explication": "**She ran out of the room.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "adf10a8e-53f8-540e-9f30-d2fec7a89948",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Traduire sans calquer",
+   "competence": "manier-langue",
+   "situation": "Tom raconte une escapade nocturne. Sa sœur a tenté de traduire quatre phrases françaises, mais deux brouillons sont trop lourds.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Tom at midnight",
+     "blocs": [
+      "At midnight, Tom tiptoed into the kitchen. He grabbed a cake and dashed out of the house.",
+      "The wind banged the door shut behind him. He ran across the garden, climbed up the hill and walked back home at dawn."
+     ],
+     "source": "Récit écrit pour l’exercice"
+    },
+    {
+     "id": "brouillons",
+     "type": "tableau",
+     "titre": "Translation drafts",
+     "colonnes": [
+      "French",
+      "Draft"
+     ],
+     "lignes": [
+      [
+       "Elle est sortie en courant.",
+       "She exited running."
+      ],
+      [
+       "Ils sont rentrés à pied.",
+       "They walked back home."
+      ],
+      [
+       "L’oiseau s’est envolé.",
+       "The bird left flying."
+      ],
+      [
+       "Il a descendu l’escalier en titubant.",
+       "He staggered down the stairs."
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillons",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux brouillons qui calquent le français au lieu de dire la manière dans le verbe.",
+     "aide": "Un brouillon naturel utilise un verbe de manière et une particule.",
+     "explication": "**She exited running** et **The bird left flying** calquent le français ; on dit *She ran out* et *The bird flew away*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle traduction est la plus naturelle pour « Elle est sortie en courant » ?",
+     "options": [
+      "She ran out.",
+      "She went out by running.",
+      "She exited running.",
+      "She left in a run."
+     ],
+     "reponse": 0,
+     "aide": "Manière dans le verbe, direction dans la particule.",
+     "explication": "**She ran out.** : *ran* dit la manière, *out* la direction."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour dire « Le vent a ouvert la porte d’un coup ».",
+     "texte": "The wind blew the door ___.",
+     "reponses": [
+      [
+       "open"
+      ]
+     ],
+     "banque": [
+      "open",
+      "opened",
+      "opening",
+      "opens"
+     ],
+     "aide": "Le résultat est un adjectif après le complément.",
+     "explication": "**open** : *blew the door open*, structure résultative."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque verbe à son sens.",
+     "paires": [
+      [
+       "to tiptoe",
+       "marcher sur la pointe des pieds"
+      ],
+      [
+       "to dash",
+       "se précipiter"
+      ],
+      [
+       "to crawl",
+       "ramper"
+      ],
+      [
+       "to stagger",
+       "tituber"
+      ]
+     ],
+     "aide": "Chaque verbe dit comment on se déplace.",
+     "explication": "*Tiptoe*, *dash*, *crawl* et *stagger* sont des verbes de **manière** de se déplacer."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Il est rentré à pied à l’aube ». Le premier mot est « He ».",
+     "items": [
+      "He",
+      "walked",
+      "back",
+      "home",
+      "at",
+      "dawn"
+     ],
+     "aide": "Manière : *walked*. Direction : *back home*.",
+     "explication": "**He walked back home at dawn.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "ad349bdb-e7c9-5b20-afbc-3cdf75b6e9a5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le portrait de Lily",
+   "competence": "manier-langue",
+   "situation": "Un camarade présente Lily dans le journal du collège. Observe les prépositions qui suivent ses adjectifs.",
+   "documents": [
+    {
+     "id": "portrait",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Meet Lily",
+     "blocs": [
+      "Lily is brilliant [[a|at]] drawing and very interested [[i|in]] art.",
+      "She is proud of her work, but she is also worried about her exams."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "portrait",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la préposition qui suit *brilliant*.",
+     "aide": "On l’emploie pour une compétence.",
+     "explication": "**at** : *brilliant at* + une compétence."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Lily is interested ___ art.",
+     "reponses": [
+      [
+       "in"
+      ]
+     ],
+     "banque": [
+      "in",
+      "by",
+      "of",
+      "at"
+     ],
+     "aide": "On l’emploie pour un domaine.",
+     "explication": "**in** : *interested in* (jamais *interested by*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque adjectif à sa préposition.",
+     "paires": [
+      [
+       "famous",
+       "for"
+      ],
+      [
+       "interested",
+       "in"
+      ],
+      [
+       "worried",
+       "about"
+      ],
+      [
+       "similar",
+       "to"
+      ]
+     ],
+     "aide": "Pense à : célèbre pour, intéressé par, inquiet à propos de, semblable à.",
+     "explication": "*Famous for*, *interested in*, *worried about*, *similar to*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle est correcte ?",
+     "options": [
+      "He’s married to a doctor.",
+      "He’s married with a doctor.",
+      "He’s married of a doctor.",
+      "He’s married by a doctor."
+     ],
+     "reponse": 0,
+     "aide": "En anglais, on est marié « à » quelqu’un.",
+     "explication": "**He’s married to a doctor.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "ad349bdb-e7c9-5b20-afbc-3cdf75b6e9a5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La rubrique du journal du lycée",
+   "competence": "comprendre-langue",
+   "situation": "Le journal du lycée publie un article sur les prix et le bruit en ville. Cherche les prépositions qui suivent les noms.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "City life",
+     "blocs": [
+      "There has been an increase [[i|in]] prices, and the reason [[f|for]] it is simple: a need [[f|for]] housing.",
+      "The solution [[t|to]] the problem is not easy, and the impact on young people is strong."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "article",
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche la préposition qui suit le nom *increase*.",
+     "aide": "On dit une hausse « dans » les prix.",
+     "explication": "**in** : *an increase in prices*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque nom selon sa préposition.",
+     "categories": [
+      "for",
+      "to",
+      "in"
+     ],
+     "items": [
+      [
+       "reason",
+       0
+      ],
+      [
+       "need",
+       0
+      ],
+      [
+       "solution",
+       1
+      ],
+      [
+       "reaction",
+       1
+      ],
+      [
+       "increase",
+       2
+      ],
+      [
+       "decrease",
+       2
+      ]
+     ],
+     "aide": "Pense à *the reason for*, *the solution to*, *an increase in*.",
+     "explication": "*Reason* et *need* + **for** ; *solution* et *reaction* + **to** ; *increase* et *decrease* + **in**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "The impact ___ young people is strong.",
+     "reponses": [
+      [
+       "on"
+      ]
+     ],
+     "banque": [
+      "on",
+      "of",
+      "at",
+      "by"
+     ],
+     "aide": "On dit « l’impact sur ».",
+     "explication": "**on** : *the impact on*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle est correcte ?",
+     "options": [
+      "It depends on the weather.",
+      "It depends of the weather.",
+      "It depends from the weather.",
+      "It depends about the weather."
+     ],
+     "reponse": 0,
+     "aide": "Le calque de « dépendre de » est une faute.",
+     "explication": "**It depends on the weather.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "ad349bdb-e7c9-5b20-afbc-3cdf75b6e9a5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Liverpool, la ville des Beatles",
+   "competence": "manier-langue",
+   "situation": "Samir rédige un article sur Liverpool pour son blog. Trois prépositions de son brouillon sont fautives.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "About Liverpool",
+     "blocs": [
+      "Liverpool is famous for the Beatles. The city is proud of its music, and young people are good at singing.",
+      "Visitors are often tired of waiting for the ferry, but they are never bored with the music."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "brouillon",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Samir’s draft",
+     "blocs": [
+      "It depends [[f|of]] the weather.",
+      "I am interested [[f|by]] history.",
+      "Who is responsible [[f|of]] the mess?"
+     ],
+     "source": "Brouillon écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche la préposition fautive dans chacune des trois phrases.",
+     "aide": "Les calques du français sont : *depend of*, *interested by*, *responsible of*.",
+     "explication": "**of**, **by** et **of** sont fautifs : *depends on*, *interested in*, *responsible for*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige la troisième phrase.",
+     "texte": "Who is responsible ___ the mess?",
+     "reponses": [
+      [
+       "for"
+      ]
+     ],
+     "banque": [
+      "for",
+      "of",
+      "to",
+      "at"
+     ],
+     "aide": "Après *responsible*, on emploie la préposition de la cause.",
+     "explication": "**for** : *responsible for*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète (après une préposition, le verbe prend -ING).",
+     "texte": "Young people in Liverpool are good at ___.",
+     "reponses": [
+      [
+       "singing"
+      ]
+     ],
+     "banque": [
+      "singing",
+      "sing",
+      "to sing",
+      "sang"
+     ],
+     "aide": "Après *at*, le verbe prend -ING.",
+     "explication": "**singing** : après une préposition, on emploie la forme en -ING."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression française à sa traduction.",
+     "paires": [
+      [
+       "la raison de son départ",
+       "the reason for his departure"
+      ],
+      [
+       "une hausse des prix",
+       "an increase in prices"
+      ],
+      [
+       "la solution au problème",
+       "the solution to the problem"
+      ],
+      [
+       "l’impact sur les jeunes",
+       "the impact on young people"
+      ]
+     ],
+     "aide": "Chaque nom a sa préposition.",
+     "explication": "*Reason for*, *increase in*, *solution to*, *impact on*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Écris : « Liverpool est célèbre pour les Beatles ». Le premier mot est « Liverpool ».",
+     "items": [
+      "Liverpool",
+      "is",
+      "famous",
+      "for",
+      "the",
+      "Beatles"
+     ],
+     "aide": "*Famous* + préposition de la cause.",
+     "explication": "**Liverpool is famous for the Beatles.**"
+    }
+   ]
+  }
+ ]
+}

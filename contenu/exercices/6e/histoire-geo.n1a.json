@@ -1,0 +1,2780 @@
+{
+ "niveau": "6e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "2b58a6c6-e44d-5f29-b556-1b1d91239d83",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un village où l’on ne repart plus",
+   "competence": "analyser-texte",
+   "situation": "Nour vit dans un village du Croissant fertile, à l’époque de la révolution néolithique. Lis un récit de sa famille : tu vas relever ce qu’elle cultive, ce qu’elle élève et ce qui a changé dans sa vie.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une année chez Nour",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Dans ce village du Croissant fertile, la famille de Nour ne se déplace plus. Au printemps, elle sème du [[p|blé]], de l’[[p|orge]] et des [[p|lentilles]].",
+      "Dans l’enclos, des [[a|moutons]] et des [[a|chèvres]] ont été domestiqués par ses grands-parents. Après la récolte, le grain est rangé dans le grenier, au sec.",
+      "Les hommes et les femmes du village restent près des champs et des troupeaux : il faut les surveiller toute l’année."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, **les trois plantes** que la famille de Nour cultive.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce que la famille sème au printemps.",
+     "explication": "Les premiers champs du Néolithique donnent du **blé**, de l’**orge** et des **lentilles**."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche **les deux animaux** que la famille élève dans l’enclos.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Ce sont des animaux domestiqués par les grands-parents de Nour.",
+     "explication": "Les **moutons** et les **chèvres** sont parmi les premiers animaux domestiqués."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le bon mot.",
+     "texte": "Rester au même endroit pour surveiller champs et troupeaux, c’est la ___.",
+     "reponses": [
+      [
+       "sédentarisation"
+      ]
+     ],
+     "banque": [
+      "sédentarisation",
+      "domestication",
+      "migration",
+      "chasse"
+     ],
+     "aide": "Regarde le dernier paragraphe : la famille ne se déplace plus.",
+     "explication": "Produire sa nourriture oblige à rester sur place : c’est la **sédentarisation**. Elle donne les premiers villages permanents."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b58a6c6-e44d-5f29-b556-1b1d91239d83",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du Proche-Orient à l’Europe",
+   "competence": "se-reperer-temps",
+   "situation": "Léo prépare un exposé sur le Néolithique. Il a une frise pour dater le phénomène et un tableau pour comprendre ce que l’agriculture a changé.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Néolithique se répand",
+     "debut": -10000,
+     "fin": -2000,
+     "pas": 1000,
+     "source": "Dates approximatives.",
+     "periodes": [
+      {
+       "id": "euro",
+       "debut": -7000,
+       "fin": -3000,
+       "nom": "Néolithique en Europe",
+       "teinte": "vert"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "orient",
+       "date": -10000,
+       "nom": "Proche-Orient"
+      },
+      {
+       "id": "arrivee",
+       "date": -7000,
+       "nom": "Arrivée en Europe"
+      }
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "tableau",
+     "titre": "Les conséquences de l’agriculture",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "La conséquence",
+      "Ce qu’elle entraîne"
+     ],
+     "lignes": [
+      [
+       "Des surplus",
+       "On stocke des réserves"
+      ],
+      [
+       "Une population en hausse",
+       "?"
+      ],
+      [
+       "Une spécialisation",
+       "Potiers, tisserands, forgerons"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise la période pendant laquelle le Néolithique gagne **l’Europe**.",
+     "reponse": [
+      "euro"
+     ],
+     "aide": "Cherche la bande de couleur qui porte le nom de l’Europe.",
+     "explication": "Le Néolithique gagne l’Europe de **7000 à 3000 av. J.-C.** environ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le début au Proche-Orient (vers −10 000) de l’arrivée en Europe (vers −7000) ?",
+     "reponse": 3000,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "10 000 − 7 000 = **3 000 ans**. Le Néolithique a mis très longtemps à voyager."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "Quand il y a plus de nourriture, il y a plus d’___.",
+     "reponses": [
+      [
+       "humains"
+      ]
+     ],
+     "banque": [
+      "humains",
+      "animaux",
+      "villages",
+      "outils"
+     ],
+     "aide": "Relis la ligne « Une population en hausse » : plus de nourriture donne plus de…",
+     "explication": "Plus de nourriture, c’est plus d’**humains** : la population augmente."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque spécialiste à ce qu’il fabrique.",
+     "paires": [
+      [
+       "Le potier",
+       "Des vases en argile"
+      ],
+      [
+       "Le tisserand",
+       "Des tissus"
+      ],
+      [
+       "Le forgeron",
+       "Des objets en métal"
+      ]
+     ],
+     "aide": "Pense au nom du métier : le potier fait des pots…",
+     "explication": "La spécialisation donne des **potiers** (poterie), des **tisserands** (tissage) et des **forgerons** (métaux)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2b58a6c6-e44d-5f29-b556-1b1d91239d83",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les greniers du village de Kéda",
+   "competence": "analyser-document",
+   "situation": "Des archéologues fouillent un village de la fin du Néolithique. Ils dessinent le plan du village et notent ce que contiennent les greniers.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan du village de Kéda",
+     "largeur": 340,
+     "hauteur": 240,
+     "source": "Plan imaginé pour l’exercice. Les ronds sont les greniers à grain.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 8,
+       "l": 324,
+       "h": 224,
+       "arrondi": 12,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 22,
+       "y": 24,
+       "l": 125,
+       "h": 74,
+       "teinte": "vert",
+       "motif": "hachures",
+       "id": "champs",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 48,
+       "y": 62,
+       "emoji": "🌾",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 85,
+       "y": 62,
+       "emoji": "🌾",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 122,
+       "y": 62,
+       "emoji": "🌾",
+       "taille": 24
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 114,
+       "texte": "Champs",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 265,
+       "cy": 62,
+       "rx": 52,
+       "ry": 34,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "enclos",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 248,
+       "y": 62,
+       "emoji": "🐑",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 284,
+       "y": 68,
+       "emoji": "🐐",
+       "taille": 24
+      },
+      {
+       "forme": "texte",
+       "x": 265,
+       "y": 114,
+       "texte": "Enclos",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 148,
+       "l": 32,
+       "h": 28,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "m1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 67,
+       "cy": 162,
+       "r": 7,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "g1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 75,
+       "y": 148,
+       "l": 32,
+       "h": 28,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "m2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 117,
+       "cy": 162,
+       "r": 7,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "g2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 148,
+       "l": 32,
+       "h": 28,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "m3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 167,
+       "cy": 162,
+       "r": 7,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "g3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 192,
+       "l": 32,
+       "h": 28,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "m4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 67,
+       "cy": 206,
+       "r": 7,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "g4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 75,
+       "y": 192,
+       "l": 32,
+       "h": 28,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "m5",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 117,
+       "cy": 206,
+       "r": 7,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "g5",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 146,
+       "l": 72,
+       "h": 54,
+       "arrondi": 4,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "grande",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 298,
+       "cy": 172,
+       "r": 19,
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "gGrand",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 236,
+       "y": 218,
+       "texte": "Grande maison",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "compte",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Compte rendu de fouille",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les archéologues comptent six maisons. Cinq sont petites : chacune a un petit grenier qui pouvait contenir environ 1 m³ de grain.",
+      "La sixième maison est la plus grande. Son grenier pouvait contenir environ 4 m³ de grain. On y a aussi retrouvé beaucoup plus de jarres que dans les autres maisons."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Sur le plan, touche **le plus grand grenier** du village.",
+     "reponse": [
+      "gGrand"
+     ],
+     "aide": "Les greniers sont les ronds : compare leur taille.",
+     "explication": "Le plus grand rond est le grenier de la **grande maison**, à droite du plan."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois le grand grenier peut-il contenir plus de grain qu’un petit grenier ?",
+     "reponse": 4,
+     "unite": "fois",
+     "aide": "Divise le volume du grand grenier par celui d’un petit.",
+     "explication": "4 m³ ÷ 1 m³ = **4 fois** plus. Une seule maison a beaucoup plus de réserves que les autres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette différence entre les greniers ?",
+     "options": [
+      "Une famille a pu accumuler plus de réserves que les autres",
+      "Tous les habitants possédaient exactement la même chose",
+      "Les habitants du village étaient encore des chasseurs nomades",
+      "Le village n’avait aucun grenier pour conserver le grain"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la phrase du cours : « ce qui se stocke peut s’accumuler ».",
+     "explication": "Le stockage permet de **s’enrichir plus que les voisins** : le grenier est la naissance de l’inégalité."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes dans l’ordre où elles se sont produites.",
+     "items": [
+      "On sème et on récolte du grain",
+      "On reste près des champs : le village devient permanent",
+      "On stocke des réserves dans des greniers",
+      "Une maison accumule plus de réserves que les autres"
+     ],
+     "aide": "Commence par la production de nourriture, finis par l’inégalité.",
+     "explication": "On **produit**, on **s’installe**, on **stocke**, puis certains **accumulent** : c’est la chaîne des conséquences du Néolithique."
+    }
+   ]
+  },
+  {
+   "chapitre": "9555367a-73aa-5b4e-a021-80e3d9a728c4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux pays au bord de leurs fleuves",
+   "competence": "lire-carte",
+   "situation": "Les premiers États sont nés dans deux régions du monde, chacune au bord de grands fleuves. Observe la carte : le Nil, le Tigre et l’Euphrate y sont dessinés.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux des premiers États",
+     "fond": "mediterranee",
+     "cadrage": [
+      29,
+      25,
+      51,
+      36
+     ],
+     "fleuves": [
+      "nil",
+      "tigre",
+      "euphrate"
+     ],
+     "source": "Carte simplifiée.",
+     "lieux": [
+      {
+       "id": "ur",
+       "lieu": "ur",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "bleu"
+      },
+      {
+       "id": "babylone",
+       "lieu": "babylone",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "bleu"
+      },
+      {
+       "id": "gizeh",
+       "lieu": "gizeh",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "bleu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le repère situé en **Égypte**, au bord du Nil, où se dressent des pyramides.",
+     "reponse": [
+      "gizeh"
+     ],
+     "aide": "Suis le Nil : il traverse l’Égypte, à l’ouest de la carte.",
+     "explication": "Les pyramides de **Gizeh** (repère C) sont des tombeaux de pharaons, en Égypte."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **les deux cités** de Mésopotamie.",
+     "reponse": [
+      "ur",
+      "babylone"
+     ],
+     "aide": "La Mésopotamie est la région entre deux fleuves, à l’est de la carte.",
+     "explication": "**Ur** et **Babylone** sont des cités de Mésopotamie, entre le Tigre et l’Euphrate.",
+     "multiple": true
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La Mésopotamie est la région située entre le ___ et l’___.",
+     "reponses": [
+      [
+       "Tigre"
+      ],
+      [
+       "Euphrate"
+      ]
+     ],
+     "banque": [
+      "Tigre",
+      "Euphrate",
+      "Nil",
+      "Jourdain"
+     ],
+     "aide": "Regarde les deux fleuves qui coulent dans la même direction, à l’est.",
+     "explication": "Le nom Mésopotamie signifie « entre les fleuves » : le **Tigre** et l’**Euphrate**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9555367a-73aa-5b4e-a021-80e3d9a728c4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une cité de Mésopotamie",
+   "competence": "observer-schema",
+   "situation": "Dans une cité mésopotamienne, le roi, le dieu et les paysans dépendent tous du fleuve. Observe le dessin d’une cité, puis comprends pourquoi un pouvoir central est nécessaire.",
+   "documents": [
+    {
+     "id": "cite",
+     "type": "schema",
+     "titre": "Une cité au bord du fleuve",
+     "largeur": 340,
+     "hauteur": 240,
+     "source": "Dessin simplifié, écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 150,
+       "l": 324,
+       "h": 50,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 200,
+       "l": 324,
+       "h": 32,
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "fleuve",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 252,
+       "y": 150,
+       "l": 14,
+       "h": 50,
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "canal",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 270,
+       "y": 150,
+       "l": 58,
+       "h": 50,
+       "teinte": "vert",
+       "motif": "hachures",
+       "id": "champs",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 288,
+       "y": 176,
+       "emoji": "🌾",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 312,
+       "y": 176,
+       "emoji": "🌾",
+       "taille": 24
+      },
+      {
+       "forme": "rect",
+       "x": 18,
+       "y": 108,
+       "l": 232,
+       "h": 42,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 100,
+       "l": 28,
+       "h": 22,
+       "arrondi": 3,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 66,
+       "y": 96,
+       "l": 28,
+       "h": 26,
+       "arrondi": 3,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 102,
+       "l": 28,
+       "h": 20,
+       "arrondi": 3,
+       "teinte": "sable",
+       "motif": "plein"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         150,
+         108
+        ],
+        [
+         150,
+         86
+        ],
+        [
+         165,
+         86
+        ],
+        [
+         165,
+         66
+        ],
+        [
+         180,
+         66
+        ],
+        [
+         180,
+         46
+        ],
+        [
+         200,
+         46
+        ],
+        [
+         200,
+         66
+        ],
+        [
+         215,
+         66
+        ],
+        [
+         215,
+         86
+        ],
+        [
+         230,
+         86
+        ],
+        [
+         230,
+         108
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "plein",
+       "id": "ziggurat",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 32,
+       "l": 12,
+       "h": 14,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        108
+       ],
+       "a": [
+        190,
+        46
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "emoji",
+       "x": 300,
+       "y": 40,
+       "emoji": "☀️",
+       "taille": 28
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 40,
+       "texte": "La cité",
+       "taille": "normal",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Pourquoi un pouvoir central ?",
+     "noeuds": [
+      {
+       "id": "canaux",
+       "texte": "Il faut creuser des canaux"
+      },
+      {
+       "id": "orga",
+       "texte": "?"
+      },
+      {
+       "id": "pouvoir",
+       "texte": "Un pouvoir central devient nécessaire"
+      }
+     ],
+     "liens": [
+      {
+       "de": "canaux",
+       "a": "orga"
+      },
+      {
+       "de": "orga",
+       "a": "pouvoir"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cite",
+     "enonce": "Touche **la ziggurat**, le temple à degrés qui domine la cité.",
+     "reponse": [
+      "ziggurat"
+     ],
+     "aide": "Cherche le grand bâtiment en escalier.",
+     "explication": "La **ziggurat** est le temple à degrés qui domine chaque cité mésopotamienne : elle abrite le dieu de la cité."
+    },
+    {
+     "type": "zone",
+     "document": "cite",
+     "enonce": "Touche ce qui **amène l’eau du fleuve jusqu’aux champs**.",
+     "reponse": [
+      "canal"
+     ],
+     "aide": "Cherche la bande étroite qui relie le fleuve aux champs.",
+     "explication": "Le **canal** d’irrigation conduit l’eau du fleuve vers les champs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase complète la case « ? » de la chaîne ?",
+     "options": [
+      "Il faut organiser le travail de milliers de personnes",
+      "Il faut que chacun creuse son propre canal en secret",
+      "Il faut que les paysans partent loin du fleuve",
+      "Il faut arrêter de cultiver pendant la crue"
+     ],
+     "reponse": 0,
+     "aide": "Un canal long demande beaucoup de bras qui travaillent ensemble.",
+     "explication": "Creuser des canaux demande d’**organiser le travail de milliers de personnes** : c’est pourquoi un pouvoir central devient nécessaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "9555367a-73aa-5b4e-a021-80e3d9a728c4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une pyramide, une société",
+   "competence": "analyser-document",
+   "situation": "Au temps des pharaons, un chantier de pyramide rassemble des milliers de personnes. Lis la répartition d’une société égyptienne et le registre d’un chantier imaginé.",
+   "documents": [
+    {
+     "id": "groupes",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Pour 100 habitants, qui vit dans le royaume ?",
+     "source": "Proportions imaginées pour l’exercice.",
+     "categories": [
+      "Esclaves",
+      "Roi et sa famille",
+      "Paysans et artisans",
+      "Prêtres, scribes, guerriers"
+     ],
+     "series": [
+      {
+       "nom": "Habitants",
+       "valeurs": [
+        5,
+        1,
+        90,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "sur 100",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     }
+    },
+    {
+     "id": "registre",
+     "type": "tableau",
+     "titre": "Registre d’un chantier de pyramide (tenu par un scribe)",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Groupe",
+      "Nombre de personnes"
+     ],
+     "lignes": [
+      [
+       "Paysans",
+       8000
+      ],
+      [
+       "Artisans",
+       1500
+      ],
+      [
+       "Gardes",
+       300
+      ],
+      [
+       "Scribes",
+       40
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "groupes",
+     "enonce": "Touche, sur le graphique, **le groupe le plus nombreux**.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Les **paysans et artisans** forment l’immense majorité de la population."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de personnes travaillent en tout sur ce chantier ?",
+     "reponse": 9840,
+     "unite": "personnes",
+     "aide": "Additionne les quatre lignes du registre.",
+     "explication": "8 000 + 1 500 + 300 + 40 = **9 840** personnes."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces groupes du plus puissant au moins puissant.",
+     "items": [
+      "Roi et sa famille",
+      "Prêtres, scribes, guerriers",
+      "Paysans et artisans",
+      "Esclaves"
+     ],
+     "aide": "Le roi est tout en haut ; les esclaves tout en bas.",
+     "explication": "Le **roi** domine, puis les **prêtres, scribes et guerriers**, puis les **paysans et artisans**, enfin les **esclaves**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre un chantier de près de dix mille personnes ?",
+     "options": [
+      "Un pouvoir capable d’organiser des milliers de gens",
+      "Un petit village où chacun travaille seul chez lui",
+      "Une société sans chef ni administration du travail",
+      "Un peuple de chasseurs nomades sans aucun métier"
+     ],
+     "reponse": 0,
+     "aide": "Qui compte, nourrit et commande autant de monde ?",
+     "explication": "Seul un **État** peut organiser des milliers de personnes : c’est ce que dit une pyramide du pouvoir du pharaon."
+    }
+   ]
+  },
+  {
+   "chapitre": "1976076f-7fc1-5f7a-aba7-5626baff0252",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cité-État, royaume ou empire ?",
+   "competence": "lire-carte",
+   "situation": "Dans le Croissant fertile, les peuples n’ont pas tous été gouvernés de la même façon. Repère cette région sur la carte, puis classe les formes de pouvoir.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le Croissant fertile",
+     "fond": "mediterranee",
+     "cadrage": [
+      29,
+      26,
+      51,
+      40
+     ],
+     "source": "Tracé simplifié, écrit pour l’exercice.",
+     "aires": [
+      {
+       "id": "croissant",
+       "contour": [
+        [
+         48,
+         30.2
+        ],
+        [
+         47.2,
+         33.2
+        ],
+        [
+         44.8,
+         35.8
+        ],
+        [
+         40.5,
+         36.9
+        ],
+        [
+         37,
+         36.6
+        ],
+        [
+         35.9,
+         34
+        ],
+        [
+         35,
+         31.8
+        ],
+        [
+         32.8,
+         31.2
+        ],
+        [
+         31.2,
+         30.6
+        ],
+        [
+         31.4,
+         29.8
+        ],
+        [
+         34.4,
+         30.6
+        ],
+        [
+         35.4,
+         31.6
+        ],
+        [
+         36.4,
+         34
+        ],
+        [
+         38.5,
+         35.4
+        ],
+        [
+         42,
+         35.2
+        ],
+        [
+         44,
+         34
+        ],
+        [
+         45.8,
+         31.8
+        ],
+        [
+         46.8,
+         30
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "ur",
+       "lieu": "ur",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "babylone",
+       "lieu": "babylone",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "formes",
+     "type": "tableau",
+     "titre": "Trois façons de gouverner",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "La forme",
+      "Ses exemples"
+     ],
+     "lignes": [
+      [
+       "Cité-État",
+       "Ur, Uruk, Mari"
+      ],
+      [
+       "Royaume",
+       "?"
+      ],
+      [
+       "Empire",
+       "Akkad, Babylone, l’Assyrie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **la bande de terres fertiles** appelée Croissant fertile.",
+     "reponse": [
+      "croissant"
+     ],
+     "aide": "Elle a la forme d’un arc, du golfe Persique jusqu’à l’Égypte.",
+     "explication": "Le **Croissant fertile** est une bande de terres arquée, du golfe Persique à l’Égypte, avec de l’eau et de bons sols."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "D’après le tableau, **Babylone** est le centre d’un empire. Touche-la sur la carte.",
+     "reponse": [
+      "babylone"
+     ],
+     "aide": "Dans le tableau, cherche Babylone : elle est dans la ligne « Empire ». Sur la carte, c’est une des deux cités.",
+     "explication": "**Babylone** est le repère B. C’est le centre d’un empire, après Akkad."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, **Ur** est…",
+     "options": [
+      "une cité-État",
+      "un grand empire",
+      "un simple royaume",
+      "un désert vide"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le mot Ur dans la colonne des exemples.",
+     "explication": "**Ur** est une cité-État, comme Uruk et Mari : une ville et son territoire, sous un roi.",
+     "ordreFixe": true
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme de pouvoir à sa définition.",
+     "paires": [
+      [
+       "Une cité-État",
+       "Une ville et son territoire, sous un roi"
+      ],
+      [
+       "Un royaume",
+       "Un ensemble plus large sous un même roi"
+      ],
+      [
+       "Un empire",
+       "La domination d’un peuple sur beaucoup d’autres"
+      ]
+     ],
+     "aide": "Une cité-État est la plus petite : une seule ville.",
+     "explication": "La cité-État est la plus petite forme, le **royaume** est plus large, l’**empire** domine de nombreux peuples."
+    }
+   ]
+  },
+  {
+   "chapitre": "1976076f-7fc1-5f7a-aba7-5626baff0252",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La loi gravée dans la pierre",
+   "competence": "analyser-document",
+   "situation": "Vers 1750 av. J.-C., Hammurabi, roi de Babylone, fait graver ses lois. Découvre ce qui est nouveau, et ce qui reste inégal, avec trois articles imaginés à la manière de son code.",
+   "documents": [
+    {
+     "id": "cartel",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Musée : la stèle du code",
+     "sousTitre": "Cartel de l’objet",
+     "emoji": "🪨",
+     "lignes": [
+      {
+       "texte": "Date",
+       "valeur": "vers 1750 av. J.-C.",
+       "id": "date"
+      },
+      {
+       "texte": "Gravé à",
+       "valeur": "Babylone",
+       "id": "lieu"
+      },
+      {
+       "texte": "Support",
+       "valeur": "une stèle de pierre",
+       "id": "support"
+      },
+      {
+       "texte": "Nombre d’articles",
+       "valeur": "près de 300",
+       "id": "nombre"
+      },
+      {
+       "texte": "Où elle se trouvait",
+       "valeur": "exposée à la vue de tous",
+       "id": "public"
+      }
+     ]
+    },
+    {
+     "id": "articles",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois articles imaginés",
+     "auteur": "Écrit pour l’exercice, à la manière des lois de Babylone",
+     "blocs": [
+      "Si un homme libre brise l’outil d’un autre homme libre, il paie dix pièces d’argent.",
+      "Si un homme libre brise l’outil d’un esclave, il paie deux pièces d’argent.",
+      "Si un esclave brise l’outil d’un homme libre, il travaille dix jours pour le réparer."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cartel",
+     "enonce": "Touche la ligne qui explique **comment tout le monde pouvait connaître la loi**.",
+     "reponse": [
+      "public"
+     ],
+     "aide": "Cherche où se trouvait la stèle.",
+     "explication": "La stèle était **exposée à la vue de tous** : la loi est publique, donc connaissable."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans les articles 1 et 2, de combien de pièces la somme à payer est-elle plus petite quand l’outil appartient à un esclave ?",
+     "reponse": 8,
+     "unite": "pièces",
+     "aide": "Compare les deux sommes : dix pièces et deux pièces.",
+     "explication": "10 − 2 = **8 pièces** de moins : la peine dépend du rang de la victime."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ces trois articles punissent-ils tout le monde de la même façon ?",
+     "options": [
+      "Non : la peine change selon le rang social",
+      "Oui : la peine est la même pour tous",
+      "Oui : seuls les esclaves sont punis",
+      "Non : mais seulement selon l’âge"
+     ],
+     "reponse": 0,
+     "aide": "Lis qui est l’auteur du dommage et qui en est la victime.",
+     "explication": "**Non** : écrire la loi ne la rend pas égalitaire. Les peines diffèrent selon le **rang social** du coupable et de la victime."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Une loi gravée sur une stèle est ___ et ___ : tout le monde peut la connaître.",
+     "reponses": [
+      [
+       "écrite"
+      ],
+      [
+       "publique"
+      ]
+     ],
+     "banque": [
+      "écrite",
+      "publique",
+      "secrète",
+      "changeante"
+     ],
+     "aide": "Regarde le cartel : la loi est gravée et exposée.",
+     "explication": "La loi est **écrite** (gravée) et **publique** (exposée) : c’est ce qu’apporte le code de Hammurabi."
+    }
+   ]
+  },
+  {
+   "chapitre": "1976076f-7fc1-5f7a-aba7-5626baff0252",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les routes du commerce de Babylone",
+   "competence": "se-reperer-espace",
+   "situation": "Babylone ne fabrique ni bois précieux ni métaux. Elle les achète très loin. Suis les routes du commerce sur la carte et situe les empires dans le temps.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux marchandises vers Babylone",
+     "fond": "mediterranee",
+     "cadrage": [
+      29,
+      28,
+      51,
+      42
+     ],
+     "source": "Routes simplifiées, écrites pour l’exercice.",
+     "lieux": [
+      {
+       "id": "liban",
+       "lon": 35.7,
+       "lat": 34,
+       "nom": "Liban",
+       "symbole": "point",
+       "teinte": "vert"
+      },
+      {
+       "id": "anatolie",
+       "lon": 34.5,
+       "lat": 38.8,
+       "nom": "Anatolie",
+       "symbole": "point",
+       "teinte": "gris"
+      },
+      {
+       "id": "babylone",
+       "lieu": "babylone",
+       "nom": "Babylone",
+       "symbole": "etoile",
+       "teinte": "violet"
+      }
+     ],
+     "traits": [
+      {
+       "id": "route-liban",
+       "points": [
+        [
+         35.7,
+         34
+        ],
+        "babylone"
+       ],
+       "style": "fleche",
+       "teinte": "vert"
+      },
+      {
+       "id": "route-anatolie",
+       "points": [
+        [
+         34.5,
+         38.8
+        ],
+        "babylone"
+       ],
+       "style": "fleche",
+       "teinte": "gris"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux dates",
+     "debut": -2500,
+     "fin": -1500,
+     "pas": 250,
+     "evenements": [
+      {
+       "id": "sargon",
+       "date": -2300,
+       "nom": "Sargon, Akkad"
+      },
+      {
+       "id": "hammu",
+       "date": -1750,
+       "nom": "Hammurabi"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "On va chercher **des métaux** en Anatolie. Touche la route qui part de l’Anatolie.",
+     "reponse": [
+      "route-anatolie"
+     ],
+     "aide": "Trouve le nom Anatolie sur la carte : la flèche part de là.",
+     "explication": "La flèche qui part d’**Anatolie** apporte des métaux jusqu’à Babylone. Celle du Liban apporte du bois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Sargon, fondateur de l’empire d’Akkad (vers −2300), de Hammurabi (vers −1750) ?",
+     "reponse": 550,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "2 300 − 1 750 = **550 ans** séparent les deux rois."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque nom : cité-État ou empire ?",
+     "categories": [
+      "Cité-État",
+      "Empire"
+     ],
+     "items": [
+      [
+       "Ur",
+       0
+      ],
+      [
+       "Mari",
+       0
+      ],
+      [
+       "Uruk",
+       0
+      ],
+      [
+       "Akkad",
+       1
+      ],
+      [
+       "Babylone",
+       1
+      ],
+      [
+       "L’Assyrie",
+       1
+      ]
+     ],
+     "aide": "Les empires dominent beaucoup de peuples ; une cité-État, c’est une ville et son territoire.",
+     "explication": "Ur, Uruk et Mari sont des **cités-États**. Akkad, Babylone et l’Assyrie sont des **empires**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que diffusent aussi ces échanges commerciaux, en plus des marchandises ?",
+     "options": [
+      "Les techniques, les écritures et les croyances",
+      "Les armées, les impôts et les prisons",
+      "Les saisons, les crues et les pluies",
+      "Les langues, mais jamais les techniques"
+     ],
+     "reponse": 0,
+     "aide": "Le commerce met en contact des peuples qui ne se connaissent pas.",
+     "explication": "Avec les marchandises voyagent les **techniques**, les **écritures** et les **croyances**."
+    }
+   ]
+  },
+  {
+   "chapitre": "37f2fa20-b39b-54b2-8e0f-f66709d451a9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tablette du magasin d’Uruk",
+   "competence": "analyser-document",
+   "situation": "Dans la vitrine d’un musée, une petite tablette d’argile attend les visiteurs. Lis son cartel : tu vas découvrir à quoi servaient les toutes premières écritures.",
+   "documents": [
+    {
+     "id": "cartel",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Tablette d’argile",
+     "sousTitre": "Cartel du musée",
+     "emoji": "🏺",
+     "source": "Fiche imaginée pour l’exercice.",
+     "lignes": [
+      {
+       "texte": "Lieu",
+       "valeur": "Uruk, en Mésopotamie",
+       "id": "lieu"
+      },
+      {
+       "texte": "Date",
+       "valeur": "vers 3300 av. J.-C.",
+       "id": "date"
+      },
+      {
+       "texte": "Écrite avec",
+       "valeur": "un calame",
+       "id": "outil"
+      },
+      {
+       "texte": "On y lit",
+       "valeur": "12 sacs de grain · 8 moutons",
+       "id": "contenu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cartel",
+     "enonce": "Touche la ligne qui indique **l’outil** utilisé pour écrire sur l’argile fraîche.",
+     "reponse": [
+      "outil"
+     ],
+     "aide": "Cherche la ligne qui commence par « Écrite avec ».",
+     "explication": "On écrit sur l’argile fraîche avec un **calame**, un roseau taillé qui imprime des signes en forme de coins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’animaux sont comptés sur cette tablette ?",
+     "reponse": 8,
+     "unite": "moutons",
+     "aide": "Regarde la ligne « On y lit » : repère les animaux, pas le grain.",
+     "explication": "La tablette note 12 sacs de grain et **8 moutons**. On compte les animaux, pas les sacs."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quoi servait cette tablette ?",
+     "options": [
+      "À tenir des comptes et administrer",
+      "À raconter une belle histoire",
+      "À écrire une lettre à un ami",
+      "À décorer le mur d’un temple"
+     ],
+     "reponse": 0,
+     "aide": "Que lit-on dessus : un poème ou des quantités ?",
+     "explication": "Les premières tablettes sont des **comptes** : sacs de grain, bêtes, dettes. L’écriture naît d’un besoin d’administration, pas de littérature."
+    }
+   ]
+  },
+  {
+   "chapitre": "37f2fa20-b39b-54b2-8e0f-f66709d451a9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois écritures, trois peuples",
+   "competence": "se-reperer-temps",
+   "situation": "Sacha prépare une affiche sur l’histoire de l’écriture. Elle compare trois systèmes dans un tableau et les place sur une frise.",
+   "documents": [
+    {
+     "id": "systemes",
+     "type": "tableau",
+     "titre": "Les trois systèmes d’écriture",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le système",
+      "Où",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "Cunéiforme",
+       "?",
+       "Un calame imprime plusieurs centaines de signes en forme de coins"
+      ],
+      [
+       "Hiéroglyphes",
+       "Égypte",
+       "Des signes de sons et des signes de choses"
+      ],
+      [
+       "Alphabet",
+       "Phénicie",
+       "Une vingtaine de signes pour les consonnes"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux dates de l’histoire de l’écriture",
+     "debut": -3500,
+     "fin": -500,
+     "pas": 500,
+     "source": "Dates approximatives.",
+     "evenements": [
+      {
+       "id": "sumer",
+       "date": -3300,
+       "nom": "Première écriture"
+      },
+      {
+       "id": "alpha",
+       "date": -1100,
+       "nom": "Alphabet phénicien"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » et la dernière ligne du tableau.",
+     "texte": "Le cunéiforme est né en ___, et l’alphabet en ___.",
+     "reponses": [
+      [
+       "Mésopotamie"
+      ],
+      [
+       "Phénicie"
+      ]
+     ],
+     "banque": [
+      "Mésopotamie",
+      "Phénicie",
+      "Égypte",
+      "Grèce"
+     ],
+     "aide": "Lis la colonne « Où » et souviens-toi : le cunéiforme s’écrit sur de l’argile.",
+     "explication": "Le cunéiforme est né en **Mésopotamie** et l’alphabet en **Phénicie**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, quel système demande d’apprendre **le moins de signes** ?",
+     "options": [
+      "L’alphabet",
+      "Le cunéiforme",
+      "Les hiéroglyphes",
+      "Aucun : ils sont égaux"
+     ],
+     "reponse": 0,
+     "aide": "Compare « plusieurs centaines » et « une vingtaine ».",
+     "explication": "L’**alphabet** n’a qu’une vingtaine de signes : il est bien plus facile à apprendre que le cunéiforme.",
+     "ordreFixe": true
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise **l’événement qui marque la fin de la Préhistoire** et le début de l’Histoire.",
+     "reponse": [
+      "sumer"
+     ],
+     "aide": "C’est la date la plus ancienne de la frise.",
+     "explication": "L’invention de l’écriture, vers **−3300**, marque la fin de la Préhistoire et le début de l’Histoire."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la première écriture (vers −3300) de l’alphabet phénicien (vers −1100) ?",
+     "reponse": 2200,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "3 300 − 1 100 = **2 200 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces trois événements du plus ancien au plus récent.",
+     "items": [
+      "La première écriture en Mésopotamie",
+      "L’alphabet des Phéniciens",
+      "Champollion déchiffre les hiéroglyphes"
+     ],
+     "aide": "Champollion vit bien plus près de nous que les Phéniciens.",
+     "explication": "Vers −3300 la première écriture, vers −1200 à −1000 l’alphabet, en 1822 le déchiffrement des hiéroglyphes."
+    }
+   ]
+  },
+  {
+   "chapitre": "37f2fa20-b39b-54b2-8e0f-f66709d451a9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dumuzi découvre le métier de scribe",
+   "competence": "analyser-texte",
+   "situation": "À Uruk, un garçon de douze ans rend visite à son oncle au temple. Lis leur conversation et vérifie les comptes de la tablette qu’il lui montre.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une matinée au temple",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "À Uruk, Dumuzi a douze ans. Son oncle est [[s|scribe]] au temple. Un matin, il lui montre une tablette d’argile encore fraîche.",
+      "« Regarde, dit l’oncle. Avec ce [[o|calame]], j’imprime des signes en forme de coins. Ce matin, j’ai noté les sacs d’orge arrivés au temple. »",
+      "Dumuzi est étonné : dans son quartier, presque personne ne sait écrire. « C’est pour cela qu’on m’écoute, dit l’oncle. Celui qui sait compter et écrire aide le roi à gouverner. »"
+     ]
+    },
+    {
+     "id": "comptes",
+     "type": "tableau",
+     "titre": "La tablette de l’oncle",
+     "source": "Chiffres écrits pour l’exercice.",
+     "colonnes": [
+      "Moment",
+      "Sacs d’orge reçus"
+     ],
+     "lignes": [
+      [
+       "Matin",
+       45
+      ],
+      [
+       "Midi",
+       30
+      ],
+      [
+       "Soir",
+       25
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, **le mot qui nomme le métier** de l’oncle.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cherche le premier paragraphe : quel est son travail au temple ?",
+     "explication": "L’oncle est **scribe** : il écrit, tient les comptes et rédige les lois et les contrats."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche **l’outil** avec lequel on écrit sur l’argile fraîche.",
+     "reponse": [
+      "o"
+     ],
+     "aide": "L’oncle le tient dans sa main pour imprimer les signes.",
+     "explication": "Le **calame** imprime sur l’argile des signes en forme de coins : c’est l’écriture cunéiforme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de sacs d’orge sont notés **en tout** sur la tablette ?",
+     "reponse": 100,
+     "unite": "sacs",
+     "aide": "Additionne les trois lignes du tableau.",
+     "explication": "45 + 30 + 25 = **100 sacs** d’orge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’oncle de Dumuzi est-il écouté dans la cité ?",
+     "options": [
+      "Savoir écrire et compter donne du pouvoir",
+      "Il est le plus grand paysan du quartier",
+      "Il possède tous les champs de la cité",
+      "Il est le chef de l’armée du roi"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit l’oncle à la fin du récit.",
+     "explication": "Dans ces sociétés, **savoir écrire, c’est détenir un pouvoir** : le scribe aide le roi à gouverner."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6649dcc-ab84-5313-aa72-9c6129ad3fed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre lieux de la Grèce antique",
+   "competence": "lire-carte",
+   "situation": "Nikos veut visiter la Grèce antique. Sur la carte de son voyage, il a noté quatre lieux : deux grandes cités et deux sanctuaires célèbres.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le voyage de Nikos",
+     "fond": "mediterranee",
+     "cadrage": [
+      20,
+      35.5,
+      25.5,
+      39.5
+     ],
+     "source": "Carte simplifiée.",
+     "lieux": [
+      {
+       "id": "athenes",
+       "lieu": "athenes",
+       "nom": "Athènes",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "sparte",
+       "lieu": "sparte",
+       "nom": "Sparte",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "delphes",
+       "lieu": "delphes",
+       "nom": "Delphes",
+       "symbole": "etoile",
+       "teinte": "ambre"
+      },
+      {
+       "id": "olympie",
+       "lieu": "olympie",
+       "nom": "Olympie",
+       "symbole": "etoile",
+       "teinte": "ambre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le **sanctuaire commun à toutes les cités grecques**, où l’on consulte l’oracle d’Apollon.",
+     "reponse": [
+      "delphes"
+     ],
+     "aide": "Les deux sanctuaires sont marqués d’une étoile : l’un est celui des Jeux, l’autre de l’oracle.",
+     "explication": "**Delphes** est le sanctuaire commun à tous les Grecs : la Pythie y rend les réponses d’Apollon."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu où la tradition place les **premiers Jeux olympiques**, en 776 av. J.-C.",
+     "reponse": [
+      "olympie"
+     ],
+     "aide": "Le nom du lieu ressemble au nom des Jeux.",
+     "explication": "Les Jeux ont lieu à **Olympie**, en l’honneur de Zeus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Athènes et Sparte sont deux cités grecques. Que sont-elles l’une par rapport à l’autre ?",
+     "options": [
+      "Deux cités indépendantes, avec chacune ses lois",
+      "Deux quartiers d’une seule grande ville",
+      "Deux provinces d’un même royaume grec",
+      "Une cité mère et sa colonie"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi : la Grèce antique n’est pas un pays unifié.",
+     "explication": "Chaque cité — *polis* — a ses lois, sa monnaie, son armée et ses dieux : Athènes et Sparte sont **indépendantes**, même si elles se savent grecques."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6649dcc-ab84-5313-aa72-9c6129ad3fed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Visite d’une cité grecque",
+   "competence": "observer-schema",
+   "situation": "Un architecte dessine le plan d’une cité grecque. Chaque partie a son rôle : certaines honorent les dieux, d’autres servent à débattre ou à nourrir les habitants.",
+   "documents": [
+    {
+     "id": "cite",
+     "type": "schema",
+     "titre": "Plan d’une cité grecque",
+     "largeur": 340,
+     "hauteur": 250,
+     "source": "Plan simplifié, écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 8,
+       "l": 324,
+       "h": 190,
+       "arrondi": 12,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 198,
+       "l": 324,
+       "h": 44,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         30,
+         112
+        ],
+        [
+         52,
+         62
+        ],
+        [
+         138,
+         62
+        ],
+        [
+         160,
+         112
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "acropole",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         62,
+         46
+        ],
+        [
+         95,
+         28
+        ],
+        [
+         128,
+         46
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 62,
+       "y": 46,
+       "l": 66,
+       "h": 16,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        46
+       ],
+       "a": [
+        70,
+        62
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        82,
+        46
+       ],
+       "a": [
+        82,
+        62
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        95,
+        46
+       ],
+       "a": [
+        95,
+        62
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        108,
+        46
+       ],
+       "a": [
+        108,
+        62
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        120,
+        46
+       ],
+       "a": [
+        120,
+        62
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 40,
+       "l": 120,
+       "h": 70,
+       "arrondi": 4,
+       "teinte": "jaune",
+       "motif": "clair",
+       "id": "agora",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 230,
+       "y": 78,
+       "emoji": "🧑‍🌾",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 266,
+       "y": 78,
+       "emoji": "🧑",
+       "taille": 26
+      },
+      {
+       "forme": "rect",
+       "x": 24,
+       "y": 124,
+       "l": 28,
+       "h": 18,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 60,
+       "y": 124,
+       "l": 28,
+       "h": 18,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 96,
+       "y": 124,
+       "l": 28,
+       "h": 18,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 124,
+       "l": 28,
+       "h": 18,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 152,
+       "l": 180,
+       "h": 38,
+       "teinte": "vert",
+       "motif": "hachures",
+       "id": "campagne",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 176,
+       "emoji": "🌾",
+       "taille": 22
+      },
+      {
+       "forme": "emoji",
+       "x": 110,
+       "y": 176,
+       "emoji": "🫒",
+       "taille": 22
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 176,
+       "emoji": "🌾",
+       "taille": 22
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        118
+       ],
+       "a": [
+        275,
+        168
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "rect",
+       "x": 232,
+       "y": 168,
+       "l": 80,
+       "h": 22,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "emoji",
+       "x": 250,
+       "y": 222,
+       "emoji": "⛵",
+       "taille": 26
+      },
+      {
+       "forme": "emoji",
+       "x": 296,
+       "y": 222,
+       "emoji": "⛵",
+       "taille": 26
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cite",
+     "enonce": "Touche **l’acropole**, la « ville haute » où l’on trouve les temples.",
+     "reponse": [
+      "acropole"
+     ],
+     "aide": "Cherche la colline, avec un temple au sommet.",
+     "explication": "L’**acropole** est la ville haute : on y construit les temples, comme le Parthénon à Athènes."
+    },
+    {
+     "type": "zone",
+     "document": "cite",
+     "enonce": "Touche **l’agora**, la place publique où l’on fait son marché et où l’on débat.",
+     "reponse": [
+      "agora"
+     ],
+     "aide": "Cherche la grande place où se rassemblent des habitants.",
+     "explication": "L’**agora** est la place publique : marché et lieu de débat."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque partie de la cité à son rôle.",
+     "paires": [
+      [
+       "L’acropole",
+       "Les temples"
+      ],
+      [
+       "L’agora",
+       "Marché et débats"
+      ],
+      [
+       "Le territoire rural",
+       "Il nourrit la ville"
+      ],
+      [
+       "Les citoyens",
+       "Ils forment la cité"
+      ]
+     ],
+     "aide": "Pense à ce que l’on trouve sur chaque partie du plan.",
+     "explication": "L’acropole porte les **temples**, l’agora sert au **marché et aux débats**, la campagne **nourrit** la ville, et la communauté de **citoyens** fait la cité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Athènes, Sparte ou Corinthe ont chacune leur plan de ce genre. Que disent-elles de la Grèce antique ?",
+     "options": [
+      "C’est un ensemble de cités indépendantes",
+      "C’est un seul grand État dirigé par un roi",
+      "C’est un empire gouverné depuis Athènes",
+      "C’est un pays sans aucune ville"
+     ],
+     "reponse": 0,
+     "aide": "Chaque cité a ses lois, sa monnaie et son armée.",
+     "explication": "La Grèce antique est une **poussière de cités indépendantes**, qui se font la guerre tout en se sachant grecques."
+    }
+   ]
+  },
+  {
+   "chapitre": "a6649dcc-ab84-5313-aa72-9c6129ad3fed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une colonie à l’autre bout de la mer",
+   "competence": "analyser-document",
+   "situation": "Vers 600 av. J.-C., des Grecs fondent une nouvelle cité très loin de chez eux, sur la côte de la Gaule. L’un d’eux écrit une lettre à sa famille.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un colon",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chers parents, nous manquions de terres chez nous, alors nous avons traversé la mer. Notre nouvelle cité, Massalia, est belle.",
+      "Chaque année, nous envoyons une [[l|offrande]] aux dieux de notre cité mère, et nos [[l|bateaux]] chargés d’huile et de vin reviennent vers vous.",
+      "Les gens du pays ne parlent pas grec : pour nous, ce sont des « Barbares », c’est-à-dire des gens qui ne parlent pas notre langue."
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "De la Grèce à la Gaule",
+     "fond": "mediterranee",
+     "cadrage": [
+      -6,
+      34,
+      30,
+      46
+     ],
+     "source": "Carte simplifiée.",
+     "lieux": [
+      {
+       "id": "athenes",
+       "lieu": "athenes",
+       "nom": "Athènes",
+       "symbole": "point",
+       "teinte": "violet"
+      },
+      {
+       "id": "massalia",
+       "lieu": "massalia",
+       "nom": "Massalia",
+       "symbole": "etoile",
+       "teinte": "ambre"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux dates",
+     "debut": -800,
+     "fin": -500,
+     "pas": 100,
+     "source": "Dates traditionnelles.",
+     "evenements": [
+      {
+       "id": "jo",
+       "date": -776,
+       "nom": "Premiers Jeux"
+      },
+      {
+       "id": "mass",
+       "date": -600,
+       "nom": "Massalia"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche **Massalia**, la colonie dont parle la lettre (aujourd’hui Marseille).",
+     "reponse": [
+      "massalia"
+     ],
+     "aide": "Elle est très à l’ouest de la Grèce, sur la côte de la Gaule.",
+     "explication": "**Massalia** est l’actuelle Marseille, fondée vers 600 av. J.-C. : une colonie grecque en Gaule."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche, dans la lettre, **les deux mots** qui montrent que la colonie garde des liens avec sa cité mère.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Un lien religieux et un lien commercial : cherche ce qu’on envoie aux dieux et ce qui revient en bateau.",
+     "explication": "L’**offrande** aux dieux est un lien religieux ; les **bateaux** qui reviennent chargés sont un lien commercial."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les premiers Jeux olympiques (−776) de la fondation de Massalia (−600) ?",
+     "reponse": 176,
+     "unite": "ans",
+     "aide": "Les deux dates sont avant J.-C. : soustrais la plus petite à la plus grande.",
+     "explication": "776 − 600 = **176 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce colon et sa famille ont-ils quitté leur cité ?",
+     "options": [
+      "Ils manquaient de terres chez eux",
+      "Ils fuyaient une invasion perse",
+      "Ils voulaient fonder un grand empire",
+      "Ils étaient chassés par leurs dieux"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase de la lettre.",
+     "explication": "Les cités grecques fondent des colonies **par manque de terres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "beace87c-920d-5f74-a684-77bac0549bd0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Jour de fête à l’acropole",
+   "competence": "analyser-texte",
+   "situation": "C’est le jour des Panathénées, à Athènes. Phila et son père montent à l’acropole avec toute la cité. Lis le récit de cette fête pour comprendre comment les Grecs honoraient leurs dieux.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les Panathénées",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "C’est jour de fête à Athènes. Phila et son père montent à l’acropole avec la procession. Ils apportent une offrande pour Athéna, la déesse protectrice de leur cité.",
+      "Devant le Parthénon, un prêtre sacrifie un animal sur l’[[a|autel]]. La viande sera partagée entre tous. Les fidèles restent dehors, car le temple est la maison de la déesse.",
+      "À l’intérieur du temple, il y a la grande [[s|statue]] d’Athéna."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, **le lieu où l’on sacrifie** l’animal.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche où le prêtre dépose l’animal, devant le temple.",
+     "explication": "Le sacrifice a lieu sur l’**autel**, dehors, devant le temple. La viande est ensuite partagée."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche ce que **le temple abrite** : le « corps » de la déesse.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Lis la dernière phrase : qu’y a-t-il à l’intérieur ?",
+     "explication": "Le temple abrite la **statue** de la déesse : c’est sa maison."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où se déroulent les cérémonies d’après le récit ?",
+     "options": [
+      "Dehors, devant le temple",
+      "Dans la grande salle du temple",
+      "Dans la maison de chaque fidèle",
+      "Sur le mont Olympe"
+     ],
+     "reponse": 0,
+     "aide": "Relis le deuxième paragraphe : où restent les fidèles ?",
+     "explication": "Le temple n’est **pas** un lieu de rassemblement : les cérémonies se déroulent **dehors**, devant l’autel."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Athéna est la déesse qui protège la cité d’___.",
+     "reponses": [
+      [
+       "Athènes"
+      ]
+     ],
+     "banque": [
+      "Athènes",
+      "Sparte",
+      "Corinthe",
+      "Delphes"
+     ],
+     "aide": "La fête se passe dans la cité d’Athéna.",
+     "explication": "Athéna protège **Athènes**. Les Panathénées sont sa fête."
+    }
+   ]
+  },
+  {
+   "chapitre": "beace87c-920d-5f74-a684-77bac0549bd0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À chacun son dieu",
+   "competence": "analyser-document",
+   "situation": "Quatre Grecs prient aujourd’hui. Chacun s’adresse au dieu qui s’occupe de sa vie. Lis le récit puis aide-toi du tableau pour retrouver leurs dieux.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Quatre prières",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Eudoxe, [[m|marin]], part en mer au lever du jour. Il verse du vin sur le sol pour demander une traversée tranquille au dieu de la mer.",
+      "Lyra, [[m|paysanne]], dépose du blé sur un petit autel : elle demande une bonne récolte à la déesse de l’agriculture.",
+      "Kléon, [[m|forgeron]], fait une offrande avant d’allumer son feu : il honore le dieu de la forge.",
+      "Mélitta, [[m|actrice]], joue une pièce de théâtre pendant la fête du dieu de la vigne."
+     ]
+    },
+    {
+     "id": "dieux",
+     "type": "tableau",
+     "titre": "Quelques dieux de l’Olympe",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le dieu",
+      "Son domaine"
+     ],
+     "lignes": [
+      [
+       "Dionysos",
+       "La vigne, le théâtre"
+      ],
+      [
+       "Héphaïstos",
+       "La forge"
+      ],
+      [
+       "Zeus",
+       "Roi des dieux, le ciel"
+      ],
+      [
+       "Poséidon",
+       "La mer"
+      ],
+      [
+       "Déméter",
+       "L’agriculture"
+      ],
+      [
+       "Artémis",
+       "La chasse"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche **les quatre métiers** des personnages.",
+     "reponse": [
+      "m"
+     ],
+     "aide": "Chaque prénom est suivi de son métier.",
+     "explication": "Le **marin**, la **paysanne**, le **forgeron** et l’**actrice** prient chacun un dieu différent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage au dieu qu’il prie.",
+     "paires": [
+      [
+       "Eudoxe, le marin",
+       "Poséidon"
+      ],
+      [
+       "Lyra, la paysanne",
+       "Déméter"
+      ],
+      [
+       "Kléon, le forgeron",
+       "Héphaïstos"
+      ],
+      [
+       "Mélitta, l’actrice",
+       "Dionysos"
+      ]
+     ],
+     "aide": "Cherche dans le tableau le domaine qui correspond à chaque prière.",
+     "explication": "**Poséidon** règne sur la mer, **Déméter** sur l’agriculture, **Héphaïstos** sur la forge, **Dionysos** sur la vigne et le théâtre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le fait que chacun prie un dieu différent ?",
+     "options": [
+      "Les Grecs ont plusieurs dieux : c’est le polythéisme",
+      "Les Grecs ne croient pas du tout à leurs propres dieux",
+      "Les Grecs prient en réalité un seul dieu sous quatre noms",
+      "Seuls les gens riches ont le droit d’adresser des prières"
+     ],
+     "reponse": 0,
+     "aide": "Combien de dieux différents le tableau et le récit nomment-ils ?",
+     "explication": "Une religion qui a **plusieurs dieux** est **polythéiste**. Chaque dieu a son domaine."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les douze principaux dieux grecs siègent sur le mont ___.",
+     "reponses": [
+      [
+       "Olympe"
+      ]
+     ],
+     "banque": [
+      "Olympe",
+      "Parnasse",
+      "Sinaï",
+      "Palatin"
+     ],
+     "aide": "Le tableau s’intitule « dieux de l’… ».",
+     "explication": "Les douze principaux dieux siègent sur le mont **Olympe**."
+    }
+   ]
+  },
+  {
+   "chapitre": "beace87c-920d-5f74-a684-77bac0549bd0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un dieu en colère, une maison pour le dieu",
+   "competence": "analyser-document",
+   "situation": "Un récit d’Homère montre un dieu bien humain. Un plan de sanctuaire montre où les Grecs l’honorent. Croise les deux documents.",
+   "documents": [
+    {
+     "id": "iliade",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Apollon et la maladie",
+     "auteur": "D’après l’Iliade d’Homère (début du chant I), texte très abrégé et adapté",
+     "blocs": [
+      "Le prêtre d’Apollon demande au roi Agamemnon de lui rendre sa fille, prisonnière des Grecs. Le roi refuse et chasse le prêtre.",
+      "Le prêtre prie son dieu. Apollon, [[s|furieux]], descend de l’Olympe et envoie une maladie sur l’armée grecque.",
+      "Ce ne sont pas seulement le roi et ses chefs qui souffrent : des soldats meurent."
+     ]
+    },
+    {
+     "id": "sanctuaire",
+     "type": "schema",
+     "titre": "Plan d’un sanctuaire",
+     "largeur": 340,
+     "hauteur": 250,
+     "source": "Plan simplifié, écrit pour l’exercice.",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 8,
+       "l": 324,
+       "h": 234,
+       "arrondi": 12,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         80,
+         34
+        ],
+        [
+         170,
+         12
+        ],
+        [
+         260,
+         34
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 34,
+       "l": 160,
+       "h": 66,
+       "teinte": "blanc",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 124,
+       "y": 44,
+       "l": 92,
+       "h": 46,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "cella",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 55,
+       "r": 6,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 162,
+       "y": 61,
+       "l": 16,
+       "h": 26,
+       "arrondi": 3,
+       "teinte": "ambre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 96,
+       "cy": 104,
+       "r": 5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 118,
+       "cy": 104,
+       "r": 5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 104,
+       "r": 5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 104,
+       "r": 5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 222,
+       "cy": 104,
+       "r": 5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 244,
+       "cy": 104,
+       "r": 5,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 150,
+       "l": 40,
+       "h": 26,
+       "arrondi": 3,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "autel",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 144,
+       "emoji": "🔥",
+       "taille": 22
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 206,
+       "emoji": "🧑",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 120,
+       "y": 214,
+       "emoji": "🧑‍🦱",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 220,
+       "y": 214,
+       "emoji": "👩",
+       "taille": 24
+      },
+      {
+       "forme": "emoji",
+       "x": 280,
+       "y": 206,
+       "emoji": "🧔",
+       "taille": 24
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        190
+       ],
+       "a": [
+        170,
+        180
+       ],
+       "teinte": "brun",
+       "fleche": "fin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "iliade",
+     "enonce": "Touche, dans le récit, **le mot qui montre un sentiment humain** chez Apollon.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Un dieu grec peut avoir les mêmes sentiments que nous : colère, jalousie, vengeance…",
+     "explication": "Apollon est **furieux** : les dieux grecs ont des sentiments humains."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui distingue Apollon d’un simple mortel, d’après ce que tu sais des dieux grecs ?",
+     "options": [
+      "Son immortalité et sa puissance, pas sa vertu",
+      "Sa sagesse : il ne se met jamais en colère",
+      "Sa bonté : il protège toujours les innocents",
+      "Sa pauvreté : il vit comme les mortels"
+     ],
+     "reponse": 0,
+     "aide": "Dans le récit, Apollon fait mourir des soldats qui n’ont rien fait.",
+     "explication": "Les dieux grecs diffèrent des mortels par l’**immortalité** et la **puissance**, pas par la vertu : un dieu peut être injuste."
+    },
+    {
+     "type": "zone",
+     "document": "sanctuaire",
+     "enonce": "Touche **l’autel**, devant le temple, où l’on sacrifie un animal.",
+     "reponse": [
+      "autel"
+     ],
+     "aide": "Les fidèles sont dehors : l’autel est à l’extérieur du bâtiment.",
+     "explication": "L’**autel** est dehors, devant le temple. Les fidèles y assistent aux cérémonies."
+    },
+    {
+     "type": "zone",
+     "document": "sanctuaire",
+     "enonce": "Touche **la salle intérieure** du temple, où se trouve la statue du dieu.",
+     "reponse": [
+      "cella"
+     ],
+     "aide": "Cherche la petite pièce au centre du bâtiment, où se dresse une silhouette.",
+     "explication": "Le temple est la **maison du dieu** : sa salle intérieure abrite la statue. Les fidèles restent dehors."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dieu ou héros ? Classe chaque nom.",
+     "categories": [
+      "Dieu",
+      "Héros"
+     ],
+     "items": [
+      [
+       "Zeus",
+       0
+      ],
+      [
+       "Athéna",
+       0
+      ],
+      [
+       "Poséidon",
+       0
+      ],
+      [
+       "Héraclès",
+       1
+      ],
+      [
+       "Achille",
+       1
+      ],
+      [
+       "Ulysse",
+       1
+      ]
+     ],
+     "aide": "Les héros sont entre les dieux et les hommes : ils accomplissent des exploits.",
+     "explication": "Zeus, Athéna et Poséidon sont des **dieux** ; Héraclès, Achille et Ulysse sont des **héros**, souvent nés d’un dieu et d’une mortelle."
+    }
+   ]
+  }
+ ]
+}

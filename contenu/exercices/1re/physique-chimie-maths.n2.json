@@ -1,0 +1,2521 @@
+{
+ "niveau": "1re",
+ "matiere": "physique-chimie-maths",
+ "exercices": [
+  {
+   "chapitre": "ad8f5af9-afaa-5f6b-bf46-9fc7fd93334f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le clou de fer dans le sulfate de cuivre",
+   "competence": "experimenter",
+   "situation": "En TP, Rayan plonge un clou de fer dans une solution de sulfate de cuivre. Au bout de quelques minutes, le clou se couvre d’un dépôt de cuivre métallique. Il consulte les demi-équations de trois couples.",
+   "documents": [
+    {
+     "id": "couples",
+     "type": "tableau",
+     "titre": "Trois couples oxydant/réducteur",
+     "colonnes": [
+      "Couple",
+      "Demi-équation"
+     ],
+     "lignes": [
+      [
+       "Fe²⁺/Fe",
+       "Fe²⁺ + 2 e⁻ = Fe"
+      ],
+      [
+       "Cu²⁺/Cu",
+       "Cu²⁺ + 2 e⁻ = Cu"
+      ],
+      [
+       "Zn²⁺/Zn",
+       "Zn²⁺ + 2 e⁻ = Zn"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Demi-équations du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couples",
+     "enonce": "Du cuivre métallique se dépose : touche le couple dont l’oxydant a été consommé.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Le métal qui se dépose est la forme réduite du couple.",
+     "explication": "Le dépôt est du cuivre Cu : les ions Cu²⁺ (l’oxydant) ont été consommés. Le couple est **Cu²⁺/Cu**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons échange chaque ion Cu²⁺ en devenant Cu ?",
+     "reponse": 2,
+     "aide": "Lis la demi-équation du couple Cu²⁺/Cu.",
+     "explication": "Cu²⁺ + **2** e⁻ = Cu : chaque ion capte 2 électrons."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le rôle du fer.",
+     "texte": "Le fer ___ deux électrons : il subit une ___.",
+     "reponses": [
+      [
+       "cède"
+      ],
+      [
+       "oxydation"
+      ]
+     ],
+     "aide": "Le fer devient Fe²⁺ : gagne-t-il ou perd-il des électrons ?",
+     "explication": "Le fer **cède** deux électrons (Fe → Fe²⁺ + 2 e⁻) : c’est une **oxydation**, il joue le rôle de réducteur.",
+     "banque": [
+      "cède",
+      "capte",
+      "oxydation",
+      "réduction"
+     ]
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’équation de la réaction ?",
+     "options": [
+      "Fe + Cu²⁺ → Fe²⁺ + Cu : le fer cède 2 électrons",
+      "Fe²⁺ + Cu → Fe + Cu²⁺ : le cuivre cède 2 électrons",
+      "Fe + Cu → Fe²⁺ + Cu²⁺ : aucun électron échangé",
+      "Fe²⁺ + Cu²⁺ → Fe + Cu : les deux captent 2 électrons"
+     ],
+     "reponse": 0,
+     "aide": "On additionne l’oxydation du fer et la réduction des ions cuivre, pour que les électrons s’éliminent.",
+     "explication": "Oxydation : Fe → Fe²⁺ + 2 e⁻. Réduction : Cu²⁺ + 2 e⁻ → Cu. Bilan : **Fe + Cu²⁺ → Fe²⁺ + Cu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ad8f5af9-afaa-5f6b-bf46-9fc7fd93334f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bloc de zinc sur la coque",
+   "competence": "analyser-document",
+   "situation": "Un chantier naval teste trois montages en eau de mer pendant un mois. Pour chaque montage, on pèse la perte de masse du fer. Masse molaire du zinc : M(Zn) = 65 g/mol.",
+   "documents": [
+    {
+     "id": "pertes",
+     "type": "tableau",
+     "titre": "Pertes de masse après un mois en eau de mer",
+     "colonnes": [
+      "Montage",
+      "Perte du fer (g)",
+      "Perte du 2ᵉ métal (g)"
+     ],
+     "lignes": [
+      [
+       "Fer seul",
+       "4,8",
+       "—"
+      ],
+      [
+       "Fer relié à du zinc",
+       "0,1",
+       "3,9"
+      ],
+      [
+       "Fer relié à du cuivre",
+       "7,2",
+       "0,0"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pertes",
+     "enonce": "Touche le montage où le fer perd le plus de masse.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Compare les valeurs de la colonne « Perte du fer ».",
+     "explication": "Le fer relié au cuivre perd **7,2 g** : le cuivre, moins réducteur, ne le protège pas, et le fer s’oxyde même plus vite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le bloc de zinc protège-t-il le fer ?",
+     "options": [
+      "Le zinc est plus réducteur : il s’oxyde à la place du fer",
+      "Le zinc isole le fer de l’eau comme une peinture",
+      "Le zinc est moins réducteur que le fer",
+      "Le zinc empêche le dioxygène de se dissoudre"
+     ],
+     "reponse": 0,
+     "aide": "Regarde qui perd de la masse quand le zinc est relié au fer.",
+     "explication": "Le zinc cède ses électrons plus facilement que le fer : il se corrode **à la place du fer**. C’est le principe de l’anode sacrificielle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’électrons cède chaque atome de zinc (Zn → Zn²⁺ + …) ?",
+     "reponse": 2,
+     "aide": "Regarde la charge de l’ion Zn²⁺.",
+     "explication": "Zn → Zn²⁺ + **2** e⁻ : chaque atome de zinc cède 2 électrons."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de zinc a été consommée (n = m / M), en mol ? Arrondis au centième.",
+     "reponse": 0.06,
+     "aide": "Utilise la perte de masse de 3,9 g.",
+     "explication": "n = 3,9 / 65 = **0,060 mol**.",
+     "unite": "mol",
+     "tolerance": 0.002
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’électrons ont ainsi été fournies au fer, en mol ?",
+     "reponse": 0.12,
+     "aide": "Chaque atome de zinc fournit 2 électrons.",
+     "explication": "n(e⁻) = 2 × 0,060 = **0,12 mol**.",
+     "unite": "mol",
+     "tolerance": 0.004
+    }
+   ]
+  },
+  {
+   "chapitre": "ad8f5af9-afaa-5f6b-bf46-9fc7fd93334f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La pile zinc-cuivre du capteur",
+   "competence": "observer-schema",
+   "situation": "Pour alimenter un petit capteur de laboratoire, Anaïs monte une pile Daniell : une plaque de zinc dans une solution d’ions Zn²⁺, une plaque de cuivre dans une solution d’ions Cu²⁺, reliées par un pont salin. Elle mesure la tension et la perte de masse du zinc.",
+   "documents": [
+    {
+     "id": "pile",
+     "type": "schema",
+     "titre": "La pile Daniell",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 30,
+       "y": 90,
+       "l": 110,
+       "h": 110,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 90,
+       "l": 110,
+       "h": 110,
+       "arrondi": 6,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 34,
+       "y": 116,
+       "l": 102,
+       "h": 80,
+       "teinte": "ciel",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 204,
+       "y": 116,
+       "l": 102,
+       "h": 80,
+       "teinte": "turquoise",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 72,
+       "y": 66,
+       "l": 20,
+       "h": 118,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "zn",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 248,
+       "y": 66,
+       "l": 20,
+       "h": 118,
+       "teinte": "gris",
+       "motif": "plein",
+       "id": "cu",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 136,
+       "y": 130,
+       "l": 68,
+       "h": 14,
+       "arrondi": 4,
+       "teinte": "sable",
+       "motif": "plein",
+       "id": "pont",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        82,
+        66
+       ],
+       "a": [
+        82,
+        24
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        82,
+        24
+       ],
+       "a": [
+        156,
+        24
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258,
+        66
+       ],
+       "a": [
+        258,
+        24
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        258,
+        24
+       ],
+       "a": [
+        184,
+        24
+       ],
+       "teinte": "encre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 24,
+       "r": 14,
+       "texte": "V"
+      },
+      {
+       "forme": "etiquette",
+       "x": 30,
+       "y": 52,
+       "texte": "Zinc",
+       "vers": [
+        74,
+        82
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 308,
+       "y": 52,
+       "texte": "Cuivre",
+       "vers": [
+        266,
+        82
+       ]
+      },
+      {
+       "forme": "etiquette",
+       "x": 170,
+       "y": 176,
+       "texte": "Pont salin",
+       "vers": [
+        170,
+        146
+       ]
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 218,
+       "texte": "Solution de Zn²⁺",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 218,
+       "texte": "Solution de Cu²⁺",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures d’Anaïs",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Tension de la pile",
+       "1,1 V"
+      ],
+      [
+       "Perte de masse de la plaque de zinc",
+       "0,65 g"
+      ],
+      [
+       "M(Zn)",
+       "65 g/mol"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pile",
+     "enonce": "Touche l’électrode où a lieu l’oxydation (l’anode).",
+     "reponse": [
+      "zn"
+     ],
+     "aide": "L’oxydation est une perte d’électrons : quel métal en perd ?",
+     "explication": "À l’**anode**, le zinc s’oxyde : Zn → Zn²⁺ + 2 e⁻. La plaque de zinc perd de la masse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le fil extérieur, dans quel sens circulent les électrons ?",
+     "options": [
+      "De la plaque de zinc vers la plaque de cuivre",
+      "De la plaque de cuivre vers la plaque de zinc",
+      "Ils ne circulent pas dans le fil",
+      "Ils traversent le pont salin"
+     ],
+     "reponse": 0,
+     "aide": "Les électrons sont libérés à l’anode et consommés à la cathode.",
+     "explication": "Le zinc libère les électrons, que le cuivre consomme : ils vont **du zinc vers le cuivre** par le fil (le courant conventionnel va en sens inverse)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan de la pile.",
+     "texte": "Zn + Cu²⁺ → Zn²⁺ + ___",
+     "reponses": [
+      [
+       "Cu"
+      ]
+     ],
+     "aide": "Les ions Cu²⁺ captent des électrons à la cathode.",
+     "explication": "Les ions Cu²⁺ sont réduits en cuivre métallique : **Zn + Cu²⁺ → Zn²⁺ + Cu**.",
+     "banque": [
+      "Cu",
+      "Zn",
+      "Cu²⁺",
+      "e⁻"
+     ]
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de zinc a été consommée (n = m / M), en mol ?",
+     "reponse": 0.01,
+     "aide": "Utilise la perte de masse et la masse molaire du tableau.",
+     "explication": "n = 0,65 / 65 = **0,010 mol**.",
+     "unite": "mol",
+     "tolerance": 0.0005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité d’électrons la pile a-t-elle fait circuler dans le fil, en mol ?",
+     "reponse": 0.02,
+     "aide": "Chaque atome de zinc cède 2 électrons.",
+     "explication": "n(e⁻) = 2 × 0,010 = **0,020 mol**.",
+     "unite": "mol",
+     "tolerance": 0.001
+    }
+   ]
+  },
+  {
+   "chapitre": "8706c112-fd6c-547a-8790-76a04940f404",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du spectre à l’échographie : quelle onde pour quel usage ?",
+   "competence": "analyser-document",
+   "situation": "Dans un service d’imagerie médicale, une infirmière range les types d’ondes. Elle utilise le spectre électromagnétique, classé des longueurs d’onde les plus courtes aux plus longues.",
+   "documents": [
+    {
+     "id": "spectre",
+     "type": "chaine",
+     "titre": "Le spectre électromagnétique",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "gamma",
+       "texte": "Rayons gamma"
+      },
+      {
+       "id": "x",
+       "texte": "Rayons X"
+      },
+      {
+       "id": "uv",
+       "texte": "Ultraviolet"
+      },
+      {
+       "id": "vis",
+       "texte": "Visible"
+      },
+      {
+       "id": "ir",
+       "texte": "Infrarouge"
+      },
+      {
+       "id": "micro",
+       "texte": "Micro-ondes"
+      },
+      {
+       "id": "radio",
+       "texte": "Ondes radio"
+      }
+     ],
+     "liens": [
+      {
+       "de": "gamma",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "uv"
+      },
+      {
+       "de": "uv",
+       "a": "vis"
+      },
+      {
+       "de": "vis",
+       "a": "ir"
+      },
+      {
+       "de": "ir",
+       "a": "micro"
+      },
+      {
+       "de": "micro",
+       "a": "radio"
+      }
+     ],
+     "source": "Du plus court au plus long : classement du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche le domaine utilisé pour la radiographie médicale.",
+     "reponse": [
+      "x"
+     ],
+     "aide": "Ces rayons traversent les tissus mous mais pas les os.",
+     "explication": "La radiographie utilise les **rayons X**."
+    },
+    {
+     "type": "zone",
+     "document": "spectre",
+     "enonce": "Touche le domaine utilisé par une télécommande de téléviseur.",
+     "reponse": [
+      "ir"
+     ],
+     "aide": "Ces ondes ne se voient pas : elles sont juste après le visible, côté grandes longueurs d’onde.",
+     "explication": "La télécommande émet des **infrarouges**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque onde : mécanique (a besoin d’un milieu) ou électromagnétique.",
+     "categories": [
+      "Mécanique",
+      "Électromagnétique"
+     ],
+     "items": [
+      [
+       "Son",
+       0
+      ],
+      [
+       "Ultrasons",
+       0
+      ],
+      [
+       "Vague",
+       0
+      ],
+      [
+       "Lumière visible",
+       1
+      ],
+      [
+       "Ondes radio",
+       1
+      ],
+      [
+       "Rayons X",
+       1
+      ]
+     ],
+     "aide": "Quelles ondes se propagent aussi dans le vide ?",
+     "explication": "Son, ultrasons et vagues sont **mécaniques** (elles ont besoin d’un milieu) ; lumière, ondes radio et rayons X sont **électromagnétiques** (elles se propagent dans le vide)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces ondes ne peut pas se propager dans le vide ?",
+     "options": [
+      "Le son",
+      "La lumière",
+      "Les ondes radio",
+      "Les rayons X"
+     ],
+     "reponse": 0,
+     "aide": "Dans l’espace, on n’entend aucun bruit.",
+     "explication": "Le **son** est une onde mécanique : sans matière, il ne se propage pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "8706c112-fd6c-547a-8790-76a04940f404",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sonar du bateau de pêche",
+   "competence": "calculer",
+   "situation": "Un bateau de pêche suit un profil du fond marin avec un sonar. À quatre positions, l’appareil mesure la durée d’aller-retour d’une impulsion d’ultrasons. Il faut en déduire les profondeurs.",
+   "documents": [
+    {
+     "id": "echos",
+     "type": "tableau",
+     "titre": "Durées d’aller-retour de l’impulsion",
+     "colonnes": [
+      "Position",
+      "Durée (ms)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "20"
+      ],
+      [
+       "B",
+       "56"
+      ],
+      [
+       "C",
+       "120"
+      ],
+      [
+       "D",
+       "200"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "sonar",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Sonar de pêche",
+     "sousTitre": "Données",
+     "emoji": "📡",
+     "lignes": [
+      {
+       "texte": "Vitesse du son dans l’eau de mer",
+       "valeur": "1 500 m/s"
+      },
+      {
+       "texte": "Fréquence des ultrasons",
+       "valeur": "50 kHz"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echos",
+     "enonce": "Touche la position où le fond est le plus profond.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Plus l’écho met de temps à revenir, plus le fond est loin.",
+     "explication": "En **D**, l’écho met 200 ms : c’est là que le fond est le plus profond."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi divise-t-on par 2 la distance parcourue par l’onde ?",
+     "options": [
+      "L’onde fait un aller-retour",
+      "L’onde ralentit en route",
+      "Le sonar est à mi-hauteur",
+      "Le son est deux fois plus rapide dans l’eau"
+     ],
+     "reponse": 0,
+     "aide": "L’onde va jusqu’au fond puis revient.",
+     "explication": "La durée mesurée correspond à un **aller-retour** : la profondeur vaut la moitié du trajet total."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la profondeur en A (d = v × Δt / 2), en mètres.",
+     "reponse": 15,
+     "aide": "Convertis 20 ms en secondes : 0,020 s.",
+     "explication": "d = 1 500 × 0,020 / 2 = **15 m**.",
+     "unite": "m",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la profondeur en B, en mètres.",
+     "reponse": 42,
+     "aide": "Même méthode avec 56 ms = 0,056 s.",
+     "explication": "d = 1 500 × 0,056 / 2 = **42 m**.",
+     "unite": "m",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde des ultrasons (λ = v / f), en centimètres.",
+     "reponse": 3,
+     "aide": "Convertis 50 kHz en 50 000 Hz.",
+     "explication": "λ = 1 500 / 50 000 = 0,030 m = **3,0 cm**.",
+     "unite": "cm",
+     "tolerance": 0.05
+    }
+   ]
+  },
+  {
+   "chapitre": "8706c112-fd6c-547a-8790-76a04940f404",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Wi-Fi, GPS, radio : quelle antenne pour quel service ?",
+   "competence": "modeliser",
+   "situation": "Un technicien de télécommunications compare les fréquences de cinq services radio pour choisir des antennes. Il utilise c = 3,00 × 10⁸ m/s.",
+   "documents": [
+    {
+     "id": "services",
+     "type": "tableau",
+     "titre": "Fréquences des services",
+     "colonnes": [
+      "Service",
+      "Fréquence"
+     ],
+     "lignes": [
+      [
+       "Radio FM",
+       "100 MHz"
+      ],
+      [
+       "Téléphonie 4G",
+       "800 MHz"
+      ],
+      [
+       "GPS",
+       "1 575 MHz"
+      ],
+      [
+       "Wi-Fi 2,4 GHz",
+       "2 400 MHz"
+      ],
+      [
+       "Wi-Fi 5 GHz",
+       "5 000 MHz"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "formules",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Formules utiles",
+     "blocs": [
+      "Longueur d’onde : λ = c / f.",
+      "Période : T = 1 / f.",
+      "Une antenne simple mesure λ / 4."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces services par longueur d’onde croissante (du plus petit λ au plus grand).",
+     "items": [
+      "Wi-Fi 5 GHz",
+      "Wi-Fi 2,4 GHz",
+      "GPS",
+      "Téléphonie 4G",
+      "Radio FM"
+     ],
+     "aide": "Plus la fréquence est élevée, plus la longueur d’onde est petite.",
+     "explication": "λ = c / f : Wi-Fi 5 GHz 6 cm ; Wi-Fi 2,4 GHz 12,5 cm ; GPS 19 cm ; 4G 37,5 cm ; FM 3 m. La **fréquence la plus haute** donne la plus petite longueur d’onde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde de la radio FM (100 MHz), en mètres.",
+     "reponse": 3,
+     "aide": "Convertis 100 MHz en 100 × 10⁶ Hz.",
+     "explication": "λ = 3,00 × 10⁸ / 1,00 × 10⁸ = **3,00 m**.",
+     "unite": "m",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde du Wi-Fi à 5 GHz, en centimètres.",
+     "reponse": 6,
+     "aide": "Convertis 5 GHz en 5 × 10⁹ Hz.",
+     "explication": "λ = 3,00 × 10⁸ / 5,00 × 10⁹ = 0,060 m = **6,0 cm**.",
+     "unite": "cm",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur de l’antenne λ / 4 pour le Wi-Fi à 2,4 GHz, en centimètres (arrondie au dixième).",
+     "reponse": 3.1,
+     "aide": "Commence par λ à 2,4 GHz : environ 12,5 cm.",
+     "explication": "λ = 3,00 × 10⁸ / 2,4 × 10⁹ = 0,125 m ; λ / 4 ≈ 3,1 cm, soit **3,1 cm**.",
+     "unite": "cm",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la période du Wi-Fi à 2,4 GHz, en nanosecondes (1 ns = 10⁻⁹ s), arrondie au centième.",
+     "reponse": 0.42,
+     "aide": "T = 1 / f avec f = 2,4 × 10⁹ Hz.",
+     "explication": "T = 1 / 2,4 × 10⁹ ≈ 4,17 × 10⁻¹⁰ s, soit **0,42 ns**.",
+     "unite": "ns",
+     "tolerance": 0.005
+    }
+   ]
+  },
+  {
+   "chapitre": "962c7b0d-10fb-5318-a617-46795476479c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bouton de volume de l’amplificateur",
+   "competence": "geometrie",
+   "situation": "Sur un amplificateur, le bouton de volume tourne autour de son axe. Son indicateur part du point I et tourne dans le sens direct de 60° jusqu’au point M, sur un cercle de rayon 1 représentant le bouton.",
+   "documents": [
+    {
+     "id": "cercle",
+     "type": "figure",
+     "titre": "Le cercle trigonométrique",
+     "cadre": {
+      "xmin": -1.5,
+      "xmax": 1.5,
+      "ymin": -1.5,
+      "ymax": 1.5
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "I",
+       "x": 1,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "J",
+       "x": 0,
+       "y": 1,
+       "position": "ne"
+      },
+      {
+       "id": "K",
+       "x": -1,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "L",
+       "x": 0,
+       "y": -1,
+       "position": "se"
+      },
+      {
+       "id": "M",
+       "x": 0.5,
+       "y": 0.866,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "M"
+      },
+      {
+       "de": "O",
+       "a": "I"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 1
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "O",
+       "de": "I",
+       "a": "M"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cercle",
+     "enonce": "Touche le point qui correspond à un quart de tour dans le sens direct (angle π/2).",
+     "reponse": [
+      "J"
+     ],
+     "aide": "Un quart de tour vaut 90°, à partir de I vers le haut.",
+     "explication": "Un quart de tour direct à partir de I mène en **J**, au sommet du cercle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis 60° en radians (angle en rad = angle en degrés × π / 180), arrondi au centième.",
+     "reponse": 1.05,
+     "aide": "Multiplie 60 par π puis divise par 180 : c’est π/3.",
+     "explication": "60° = π/3 rad ≈ **1,05 rad**.",
+     "unite": "rad",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le point M a pour coordonnées (cos 60° ; sin 60°). Que vaut son abscisse ?",
+     "reponse": 0.5,
+     "aide": "Lis la valeur remarquable de cos(π/3).",
+     "explication": "cos 60° = cos(π/3) = **1/2 = 0,5**.",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est son ordonnée sin 60°, arrondie au centième ?",
+     "reponse": 0.87,
+     "aide": "Utilise cos² x + sin² x = 1 ou la valeur remarquable √3/2.",
+     "explication": "sin 60° = √3/2 ≈ **0,87**.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "962c7b0d-10fb-5318-a617-46795476479c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La tension d’un alternateur de banc d’essai",
+   "competence": "lire-graphique",
+   "situation": "Un alternateur de banc d’essai délivre une tension sinusoïdale. On relève sa valeur toutes les 2,5 ms pendant une période. On cherche à retrouver l’expression de u(t).",
+   "documents": [
+    {
+     "id": "alt",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Tension de l’alternateur",
+     "categories": [
+      "0",
+      "2,5",
+      "5",
+      "7,5",
+      "10",
+      "12,5",
+      "15",
+      "17,5",
+      "20"
+     ],
+     "series": [
+      {
+       "nom": "u (V)",
+       "valeurs": [
+        6,
+        4.24,
+        0,
+        -4.24,
+        -6,
+        -4.24,
+        0,
+        4.24,
+        6
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "u",
+      "unite": "V",
+      "min": -8,
+      "max": 8,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "alt",
+     "enonce": "Touche les deux instants où la tension s’annule.",
+     "reponse": [
+      "k2",
+      "k6"
+     ],
+     "aide": "Cherche les points sur l’axe horizontal.",
+     "explication": "La tension vaut 0 V à **5 ms** et à **15 ms**.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis la période T de la tension, en ms.",
+     "reponse": 20,
+     "aide": "Combien de temps pour revenir à la valeur de départ ?",
+     "explication": "La courbe revient à son point de départ à 20 ms : **T = 20 ms**.",
+     "unite": "ms",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la pulsation ω = 2π / T, en rad/s, arrondie à l’unité.",
+     "reponse": 314,
+     "aide": "Convertis T en secondes : 0,020 s.",
+     "explication": "ω = 2π / 0,020 = 100π ≈ **314 rad/s**.",
+     "unite": "rad/s",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle expression convient pour cette tension ?",
+     "options": [
+      "u(t) = 6 cos(100π t)",
+      "u(t) = 6 cos(50π t)",
+      "u(t) = 6 sin(100π t)",
+      "u(t) = 12 cos(100π t)"
+     ],
+     "reponse": 0,
+     "aide": "Amplitude lue sur la courbe ; la valeur à t = 0 est 6 V, donc cosinus.",
+     "explication": "L’amplitude est 6 V, u(0) = 6 V (un cosinus) et ω = 100π rad/s : **u(t) = 6 cos(100π t)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule u à t = 1 ms avec cette expression, arrondi au centième.",
+     "reponse": 5.71,
+     "aide": "Le calcul se fait en radians : 100π × 0,001 = π/10.",
+     "explication": "u(0,001) = 6 cos(π/10) ≈ 6 × 0,951 ≈ **5,71 V**.",
+     "unite": "V",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "962c7b0d-10fb-5318-a617-46795476479c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le voyant du secteur qui clignote",
+   "competence": "modeliser",
+   "situation": "Un voyant s’allume quand la tension du secteur u(t) = 325 cos(100π t) (en volts, t en secondes) dépasse 162,5 V, soit la moitié de la valeur maximale. Pendant une période, combien de temps reste-t-il allumé ?",
+   "documents": [
+    {
+     "id": "cercle",
+     "type": "figure",
+     "titre": "Le cercle trigonométrique",
+     "cadre": {
+      "xmin": -1.5,
+      "xmax": 1.5,
+      "ymin": -1.5,
+      "ymax": 1.5
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 1,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "M",
+       "x": 0.5,
+       "y": 0.866,
+       "position": "ne"
+      },
+      {
+       "id": "N",
+       "x": 0.5,
+       "y": -0.866,
+       "position": "se"
+      },
+      {
+       "id": "P",
+       "x": -0.5,
+       "y": 0.866,
+       "position": "no"
+      },
+      {
+       "id": "Q",
+       "x": 0.866,
+       "y": 0.5,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "M",
+       "a": "N"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 1
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    },
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Données",
+     "blocs": [
+      "Tension : u(t) = 325 cos(100π t).",
+      "Le voyant s’allume quand u(t) ≥ 162,5 V, c’est-à-dire quand cos(100π t) ≥ 1/2.",
+      "On étudie une période : 0 ≤ t ≤ 20 ms."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cercle",
+     "enonce": "Touche les deux points du cercle, entre −π et π, dont l’abscisse vaut 1/2 (cos x = 1/2).",
+     "reponse": [
+      "M",
+      "N"
+     ],
+     "aide": "Cherche les points alignés verticalement à l’abscisse 0,5.",
+     "explication": "Les points d’abscisse 1/2 sont **M** (x = π/3) et **N** (x = −π/3).",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 100π t = π/3 : à quel instant t (en ms, arrondi au centième) la tension passe-t-elle à 162,5 V pour la première fois ?",
+     "reponse": 3.33,
+     "aide": "Divise π/3 par 100π : π se simplifie.",
+     "explication": "t = (π/3) / (100π) = 1/300 s ≈ **3,33 ms**.",
+     "unite": "ms",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur une période, le voyant est allumé pour t entre 0 et 1/300 s, puis entre 1/60 s et 1/50 s. Quelle durée totale, en ms (arrondie au centième) ?",
+     "reponse": 6.67,
+     "aide": "Par symétrie du cosinus, les deux morceaux ont la même durée : 1/300 s chacun.",
+     "explication": "Durée totale : 2 × 1/300 = 1/150 s ≈ **6,67 ms**.",
+     "unite": "ms",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction de la période le voyant reste-t-il allumé ?",
+     "options": [
+      "Un tiers",
+      "La moitié",
+      "Un quart",
+      "Les deux tiers"
+     ],
+     "reponse": 0,
+     "aide": "Compare 6,67 ms à la période de 20 ms.",
+     "explication": "6,67 / 20 = 1/3 : le voyant est allumé **un tiers** de chaque période.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "605dd006-a37b-57dd-a667-e45e575da9cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le chariot tiré sur 15 mètres",
+   "competence": "analyser-document",
+   "situation": "Un ouvrier tire un chariot sur une rampe horizontale, sur une distance AB = 15 m. Le tableau donne les forces qui s’exercent sur le chariot et l’angle de chacune avec le déplacement.",
+   "documents": [
+    {
+     "id": "forces",
+     "type": "tableau",
+     "titre": "Forces sur le chariot",
+     "colonnes": [
+      "Force",
+      "Valeur (N)",
+      "Angle avec le déplacement"
+     ],
+     "lignes": [
+      [
+       "Poids",
+       "300",
+       "90°"
+      ],
+      [
+       "Réaction du sol",
+       "300",
+       "90°"
+      ],
+      [
+       "Traction",
+       "80",
+       "60°"
+      ],
+      [
+       "Frottements",
+       "20",
+       "180°"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "forces",
+     "enonce": "Touche les deux forces dont le travail est nul.",
+     "reponse": [
+      "r0c0",
+      "r1c0"
+     ],
+     "aide": "Le travail est nul quand la force est perpendiculaire au déplacement.",
+     "explication": "Le poids et la réaction du sol forment un angle de **90°** avec le déplacement : cos 90° = 0, leur travail est nul.",
+     "multiple": true
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le travail de la traction (W = F × AB × cos α), en joules.",
+     "reponse": 600,
+     "aide": "cos 60° = 0,5.",
+     "explication": "W = 80 × 15 × cos 60° = 80 × 15 × 0,5 = **600 J**.",
+     "unite": "J",
+     "tolerance": 0.5
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le travail des frottements, en joules (nombre négatif).",
+     "reponse": -300,
+     "aide": "cos 180° = −1.",
+     "explication": "W = 20 × 15 × cos 180° = 20 × 15 × (−1) = **−300 J**.",
+     "unite": "J",
+     "tolerance": 0.5
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dire du signe du travail des frottements ?",
+     "options": [
+      "Négatif : le travail est résistant",
+      "Positif : le travail est moteur",
+      "Nul car la force est faible",
+      "Il dépend de la vitesse du chariot"
+     ],
+     "reponse": 0,
+     "aide": "Les frottements s’opposent au mouvement.",
+     "explication": "La force est opposée au déplacement : l’angle est 180°, le travail est **négatif**, donc résistant."
+    }
+   ]
+  },
+  {
+   "chapitre": "605dd006-a37b-57dd-a667-e45e575da9cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un triangle de piquets dans le jardin",
+   "competence": "geometrie",
+   "situation": "Léo plante trois piquets A, B et C dans un jardin quadrillé (un carreau = 1 m) et tend une ficelle entre eux. Il veut connaître l’angle en A pour couper une planche à la bonne coupe.",
+   "documents": [
+    {
+     "id": "tri",
+     "type": "figure",
+     "titre": "Le triangle ABC",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 3,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B"
+      },
+      {
+       "de": "A",
+       "a": "C"
+      },
+      {
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tri",
+     "enonce": "Touche le sommet de l’angle BAC.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "C’est le point commun aux deux vecteurs AB et AC.",
+     "explication": "L’angle BAC a pour sommet le point **A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Lis les coordonnées : AB (5 ; 1) et AC (2 ; 4). Calcule le produit scalaire AB · AC.",
+     "reponse": 14,
+     "aide": "u · v = x x’ + y y’.",
+     "explication": "AB · AC = 5 × 2 + 1 × 4 = **14**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur AB en mètres, arrondie au centième.",
+     "reponse": 5.1,
+     "aide": "AB = √(5² + 1²).",
+     "explication": "AB = √26 ≈ **5,10 m**.",
+     "unite": "m",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sachant AC = √20 ≈ 4,47 m, calcule l’angle BAC en degrés, arrondi au dixième (cos θ = AB · AC / (AB × AC)).",
+     "reponse": 52.1,
+     "aide": "cos θ = 14 / (√26 × √20) ≈ 0,614. Utilise la touche cos⁻¹.",
+     "explication": "cos θ = 14 / (5,10 × 4,47) ≈ 0,614, donc θ ≈ **52,1°**.",
+     "unite": "°",
+     "tolerance": 0.15
+    },
+    {
+     "type": "choix",
+     "enonce": "Le produit scalaire AB · AC est positif. Que peut-on en conclure sur l’angle BAC ?",
+     "options": [
+      "Il est aigu",
+      "Il est droit",
+      "Il est obtus",
+      "On ne peut rien dire"
+     ],
+     "reponse": 0,
+     "aide": "Le signe de u · v = ‖u‖‖v‖cos θ est celui de cos θ.",
+     "explication": "Un produit scalaire **positif** correspond à un cosinus positif : l’angle est **aigu** (ici 52°)."
+    }
+   ]
+  },
+  {
+   "chapitre": "605dd006-a37b-57dd-a667-e45e575da9cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le câble de l’antenne et le treuil",
+   "competence": "modeliser",
+   "situation": "Pour installer une antenne, un technicien tend un câble entre trois points A, B et C d’un toit. Il utilise aussi un treuil pour hisser des pièces. Il faut calculer une longueur de câble, puis des travaux de forces.",
+   "documents": [
+    {
+     "id": "cable",
+     "type": "figure",
+     "titre": "Le triangle des points d’ancrage",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 11,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": false,
+     "points": [
+      {
+       "id": "A",
+       "x": 3,
+       "y": 1,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9.4,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 1,
+       "y": 4.464,
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "8 m"
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "longueur": "5 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "id": "bc"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "A",
+       "de": "B",
+       "a": "C"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice, sans souci d’échelle"
+    },
+    {
+     "id": "travaux",
+     "type": "tableau",
+     "titre": "Forces et déplacements",
+     "colonnes": [
+      "Situation",
+      "Force (N)",
+      "Angle avec le déplacement",
+      "Déplacement (m)"
+     ],
+     "lignes": [
+      [
+       "Treuil seul",
+       "250",
+       "35°",
+       "12"
+      ],
+      [
+       "Câble 1 (deux câbles)",
+       "200",
+       "20°",
+       "10"
+      ],
+      [
+       "Câble 2 (deux câbles)",
+       "150",
+       "70°",
+       "10"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cable",
+     "enonce": "Touche le côté opposé à l’angle en A, dont la longueur a se calcule avec le théorème d’Al-Kashi.",
+     "reponse": [
+      "bc"
+     ],
+     "aide": "Le côté opposé à un sommet ne touche pas ce sommet.",
+     "explication": "Le côté **BC** est opposé au sommet A : a = BC."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’angle en A mesure 120°. Calcule BC = a avec a² = b² + c² − 2bc cos Â (b = 5, c = 8), arrondi au centième.",
+     "reponse": 11.36,
+     "aide": "cos 120° = −1/2 : le terme −2bc cos Â devient positif.",
+     "explication": "a² = 25 + 64 − 2 × 5 × 8 × (−0,5) = 89 + 40 = 129, donc a = √129 ≈ **11,36 m**.",
+     "unite": "m",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le travail de la force du treuil seul (W = F × d × cos α), arrondi au joule.",
+     "reponse": 2457,
+     "aide": "Lis les trois valeurs sur la première ligne du tableau.",
+     "explication": "W = 250 × 12 × cos 35° ≈ 250 × 12 × 0,819 ≈ **2 457 J**.",
+     "unite": "J",
+     "tolerance": 1
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec les deux câbles, calcule le travail total des deux forces sur 10 m (somme des deux travaux), arrondi au joule.",
+     "reponse": 2392,
+     "aide": "W₁ = 200 × 10 × cos 20° et W₂ = 150 × 10 × cos 70°.",
+     "explication": "W₁ ≈ 1 879 J et W₂ ≈ 513 J : le total vaut **2 392 J**.",
+     "unite": "J",
+     "tolerance": 1
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi peut-on additionner les travaux des deux forces pour obtenir le travail de leur résultante ?",
+     "options": [
+      "Le produit scalaire est bilinéaire",
+      "Les deux forces sont perpendiculaires",
+      "Le cosinus vaut toujours 1",
+      "La somme des angles vaut 90°"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la propriété u · (v + w) = u · v + u · w.",
+     "explication": "F · d est le produit scalaire : sa **bilinéarité** (u · (v + w) = u · v + u · w) donne que le travail de la résultante est la somme des travaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c9278e2-a746-5052-b86b-ae521690f191",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plan complexe de l’électricien",
+   "competence": "geometrie",
+   "situation": "En électricité, on représente des grandeurs par des points d’un plan : l’abscisse est la partie réelle et l’ordonnée la partie imaginaire. Chaque point porte l’affixe d’un nombre complexe.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Quatre points du plan complexe",
+     "cadre": {
+      "xmin": -5,
+      "xmax": 5,
+      "ymin": -4,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "A",
+       "x": 2,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "B",
+       "x": 2,
+       "y": -3,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": -3,
+       "y": 1,
+       "position": "no"
+      },
+      {
+       "id": "D",
+       "x": 4,
+       "y": 0,
+       "position": "ne"
+      }
+     ],
+     "droites": [
+      {
+       "par": [
+        "O",
+        "D"
+       ],
+       "style": "axe"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point d’affixe z = 2 + 3i.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Abscisse 2 (partie réelle), ordonnée 3 (partie imaginaire).",
+     "explication": "Le point d’affixe 2 + 3i a pour coordonnées (2 ; 3) : c’est **A**."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point d’affixe z̄, conjugué de z = 2 + 3i.",
+     "reponse": [
+      "B"
+     ],
+     "aide": "Le conjugué change le signe de la partie imaginaire.",
+     "explication": "z̄ = 2 − 3i, symétrique de A par rapport à l’axe réel : c’est **B**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de l’affixe du point C ?",
+     "reponse": 1,
+     "aide": "Lis l’ordonnée de C.",
+     "explication": "C a pour coordonnées (−3 ; 1) : son affixe est −3 + i, de partie imaginaire **1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le module de z = 2 + 3i, arrondi au centième.",
+     "reponse": 3.61,
+     "aide": "|z| = √(a² + b²).",
+     "explication": "|z| = √(4 + 9) = √13 ≈ **3,61**, longueur OA.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "3c9278e2-a746-5052-b86b-ae521690f191",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’impédance d’une bobine en série avec une résistance",
+   "competence": "calculer",
+   "situation": "Dans un circuit en régime sinusoïdal, une résistance et une bobine sont montées en série. On associe à chaque dipôle une impédance complexe ; celle du circuit est la somme. Une tension d’amplitude complexe U = 100 V est appliquée.",
+   "documents": [
+    {
+     "id": "imped",
+     "type": "tableau",
+     "titre": "Impédances des deux dipôles",
+     "colonnes": [
+      "Élément",
+      "Nature",
+      "Impédance (Ω)"
+     ],
+     "lignes": [
+      [
+       "Résistance",
+       "réelle",
+       "30"
+      ],
+      [
+       "Bobine",
+       "imaginaire pure",
+       "40i"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "imped",
+     "enonce": "Touche la valeur qui est la partie imaginaire de l’impédance totale Z = 30 + 40i.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "La partie imaginaire est le coefficient de i.",
+     "explication": "La bobine apporte **40i** : la partie imaginaire de Z est 40."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le module |Z| de Z = 30 + 40i, en ohms.",
+     "reponse": 50,
+     "aide": "|Z| = √(a² + b²).",
+     "explication": "|Z| = √(30² + 40²) = √2 500 = **50 Ω**.",
+     "unite": "Ω",
+     "tolerance": 0.05
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule Z × Z̄ où Z̄ = 30 − 40i.",
+     "reponse": 2500,
+     "aide": "Z × Z̄ = a² + b².",
+     "explication": "Z × Z̄ = 30² + 40² = **2 500**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le courant se calcule I = U / Z = 100 × Z̄ / (Z × Z̄). Quelle est la partie réelle de I, en A ?",
+     "reponse": 1.2,
+     "aide": "Multiplie 100 par (30 − 40i) puis divise par 2 500.",
+     "explication": "I = 100 (30 − 40i) / 2 500 = 1,2 − 1,6i : la partie réelle est **1,2 A**.",
+     "unite": "A",
+     "tolerance": 0.005
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le module de I = 1,2 − 1,6i, en A.",
+     "reponse": 2,
+     "aide": "|I| = √(1,2² + 1,6²).",
+     "explication": "|I| = √(1,44 + 2,56) = √4 = **2 A**. On le retrouve aussi par 100 / 50 = 2.",
+     "unite": "A",
+     "tolerance": 0.005
+    }
+   ]
+  },
+  {
+   "chapitre": "3c9278e2-a746-5052-b86b-ae521690f191",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux tensions déphasées s’additionnent",
+   "competence": "raisonner",
+   "situation": "Deux tensions sinusoïdales de même fréquence, u₁ et u₂, alimentent le même circuit. Chacune est associée à un nombre complexe de module 2 V ; on veut leur somme, ce qui revient à additionner deux complexes.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Les deux tensions et leur somme",
+     "cadre": {
+      "xmin": -0.5,
+      "xmax": 4,
+      "ymin": -0.5,
+      "ymax": 4
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "O",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "M1",
+       "x": 1.732,
+       "y": 1,
+       "position": "se"
+      },
+      {
+       "id": "M2",
+       "x": 1,
+       "y": 1.732,
+       "position": "no"
+      },
+      {
+       "id": "S",
+       "x": 2.732,
+       "y": 2.732,
+       "position": "ne"
+      }
+     ],
+     "segments": [
+      {
+       "de": "O",
+       "a": "M1"
+      },
+      {
+       "de": "O",
+       "a": "M2"
+      },
+      {
+       "de": "O",
+       "a": "S"
+      }
+     ],
+     "source": "Figure écrite pour l’exercice"
+    },
+    {
+     "id": "tens",
+     "type": "tableau",
+     "titre": "Les deux tensions",
+     "colonnes": [
+      "Tension",
+      "Module (V)",
+      "Argument"
+     ],
+     "lignes": [
+      [
+       "u₁",
+       "2",
+       "π/6"
+      ],
+      [
+       "u₂",
+       "2",
+       "π/3"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Écris z₁ = 2 (cos π/6 + i sin π/6) sous forme algébrique. Quelle est sa partie réelle, arrondie au centième ?",
+     "reponse": 1.73,
+     "aide": "cos(π/6) = √3/2.",
+     "explication": "Re(z₁) = 2 cos(π/6) = 2 × √3/2 = √3 ≈ **1,73**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la partie imaginaire de z₂ = 2 (cos π/3 + i sin π/3), arrondie au centième ?",
+     "reponse": 1.73,
+     "aide": "sin(π/3) = √3/2.",
+     "explication": "Im(z₂) = 2 sin(π/3) = **√3 ≈ 1,73**.",
+     "tolerance": 0.01
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le point qui représente la somme z₁ + z₂ (quatrième sommet du parallélogramme construit sur OM₁ et OM₂).",
+     "reponse": [
+      "S"
+     ],
+     "aide": "La somme de deux vecteurs est la diagonale du parallélogramme.",
+     "explication": "La somme z₁ + z₂ est représentée par le point **S**, quatrième sommet du parallélogramme."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le module de la somme z₁ + z₂ = (1 + √3) + (1 + √3)i vaut (1 + √3) × √2. Calcule-le, arrondi au centième.",
+     "reponse": 3.86,
+     "aide": "Utilise √3 ≈ 1,732 et √2 ≈ 1,414.",
+     "explication": "(1 + 1,732) × 1,414 ≈ **3,86 V**.",
+     "unite": "V",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne un argument de la somme, en degrés (les parties réelle et imaginaire sont égales).",
+     "reponse": 45,
+     "aide": "Quand a = b > 0, le point est sur la bissectrice du premier quadrant.",
+     "explication": "Les parties réelle et imaginaire sont égales : le point est sur la bissectrice, d’argument **π/4 = 45°**.",
+     "unite": "°",
+     "tolerance": 0.5
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi |z₁ + z₂| ≈ 3,86 est-il inférieur à |z₁| + |z₂| = 4 ?",
+     "options": [
+      "Les deux tensions ne sont pas en phase",
+      "Les deux tensions ont des fréquences différentes",
+      "On a fait une erreur d’arrondi",
+      "Le module d’une somme est toujours la moyenne"
+     ],
+     "reponse": 0,
+     "aide": "Les vecteurs OM₁ et OM₂ ne pointent pas dans la même direction.",
+     "explication": "Les deux tensions sont **déphasées** (30° d’écart) : leurs effets ne s’ajoutent pas entièrement, la somme est plus petite que 4."
+    }
+   ]
+  },
+  {
+   "chapitre": "6cec6fb2-f95b-55a1-a7f8-a907f12056ed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le chariot sur son rail",
+   "competence": "lire-graphique",
+   "situation": "Un chariot de laboratoire se déplace sur un rail. Un capteur relève sa position x chaque seconde. La position suit la loi x(t) = t² + 2t, avec x en mètres et t en secondes.",
+   "documents": [
+    {
+     "id": "rail",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Position du chariot",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "x (m)",
+       "valeurs": [
+        0,
+        3,
+        8,
+        15,
+        24
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "x",
+      "unite": "m",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rail",
+     "enonce": "Touche la position du chariot à t = 3 s.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point dont l’abscisse est 3.",
+     "explication": "À t = 3 s, le chariot est à x = 15 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse moyenne entre t = 0 et t = 2 s, en m/s.",
+     "reponse": 4,
+     "aide": "Divise la variation de position par la durée.",
+     "explication": "(x(2) − x(0)) / 2 = (8 − 0) / 2 = **4 m/s**.",
+     "unite": "m/s",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la dérivée de x(t) = t² + 2t, c’est-à-dire la vitesse v(t) ?",
+     "options": [
+      "v(t) = 2t + 2, en dérivant chaque terme",
+      "v(t) = t + 2, en oubliant le facteur 2 de t²",
+      "v(t) = 2t, en oubliant la dérivée de 2t",
+      "v(t) = t² + 2, en ne dérivant que 2t"
+     ],
+     "reponse": 0,
+     "aide": "La dérivée de t² est 2t, celle de 2t est 2.",
+     "explication": "On dérive terme à terme : (t²)’ = 2t et (2t)’ = 2, donc **v(t) = 2t + 2**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse instantanée à t = 3 s, en m/s.",
+     "reponse": 8,
+     "aide": "Remplace t par 3 dans v(t) = 2t + 2.",
+     "explication": "v(3) = 2 × 3 + 2 = **8 m/s**.",
+     "unite": "m/s",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "6cec6fb2-f95b-55a1-a7f8-a907f12056ed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La montée en température de l’étuve",
+   "competence": "modeliser",
+   "situation": "Dans une étuve, la température évolue selon θ(t) = −t² + 8t + 20 (en °C), avec t en minutes entre 0 et 8. Le technicien veut savoir à quel moment elle cesse de monter et à quelle vitesse elle varie.",
+   "documents": [
+    {
+     "id": "etuve",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Température de l’étuve",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "θ (°C)",
+       "valeurs": [
+        20,
+        27,
+        32,
+        35,
+        36,
+        35,
+        32,
+        27,
+        20
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "θ",
+      "unite": "°C",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etuve",
+     "enonce": "Touche l’instant où la température est maximale.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "La température est maximale à **4 min**, avec 36 °C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule θ’(1), la vitesse de variation à t = 1 min, en °C/min (θ’(t) = −2t + 8).",
+     "reponse": 6,
+     "aide": "Remplace t par 1 dans la dérivée.",
+     "explication": "θ’(1) = −2 × 1 + 8 = **6 °C/min** : la température monte encore vite.",
+     "unite": "°C/min",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule θ’(6) en °C/min.",
+     "reponse": -4,
+     "aide": "Remplace t par 6 dans −2t + 8.",
+     "explication": "θ’(6) = −2 × 6 + 8 = **−4 °C/min** : la température redescend.",
+     "unite": "°C/min",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi θ’(t) change-t-il de signe en t = 4 ?",
+     "options": [
+      "La température passe d’une montée à une descente",
+      "L’étuve s’éteint à cet instant précis de la montée",
+      "La température devient négative après cet instant",
+      "La dérivée de θ est toujours positive sur [0 ; 8]"
+     ],
+     "reponse": 0,
+     "aide": "Étudie le signe de −2t + 8 avant et après t = 4.",
+     "explication": "θ’(t) = −2t + 8 est positive avant 4 et négative après : **θ monte puis redescend**, avec un maximum en t = 4."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec l’approximation affine en t = 2 (θ(2) = 32 et θ’(2) = 4), estime θ(2,1), arrondi au dixième.",
+     "reponse": 32.4,
+     "aide": "θ(2 + h) ≈ θ(2) + θ’(2) × h avec h = 0,1.",
+     "explication": "θ(2,1) ≈ 32 + 4 × 0,1 = **32,4 °C** (valeur exacte : 32,39).",
+     "unite": "°C",
+     "tolerance": 0.05
+    }
+   ]
+  },
+  {
+   "chapitre": "6cec6fb2-f95b-55a1-a7f8-a907f12056ed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La puissance maximale d’un générateur",
+   "competence": "modeliser",
+   "situation": "Un générateur de force électromotrice E et de résistance interne r alimente un circuit. La puissance qu’il fournit dépend de l’intensité I : P(I) = E × I − r × I². On cherche pour quelle intensité cette puissance est maximale.",
+   "documents": [
+    {
+     "id": "gen",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Générateur de laboratoire",
+     "sousTitre": "Caractéristiques",
+     "emoji": "🔋",
+     "lignes": [
+      {
+       "texte": "Force électromotrice E",
+       "valeur": "12,0 V"
+      },
+      {
+       "texte": "Résistance interne r",
+       "valeur": "0,50 Ω"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "puiss",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Puissance fournie en fonction de l’intensité",
+     "categories": [
+      "0",
+      "4",
+      "8",
+      "12",
+      "16",
+      "20",
+      "24"
+     ],
+     "series": [
+      {
+       "nom": "P (W)",
+       "valeurs": [
+        0,
+        40,
+        64,
+        72,
+        64,
+        40,
+        0
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "P",
+      "unite": "W",
+      "min": 0,
+      "max": 80,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Intensité I (A)"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "puiss",
+     "enonce": "Touche l’intensité pour laquelle la puissance semble maximale.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "Le sommet est atteint pour **I = 12 A**, avec 72 W."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec les valeurs de la fiche, P(I) = 12 I − 0,5 I². Calcule la dérivée en I = 4 A (en W/A).",
+     "reponse": 8,
+     "aide": "P’(I) = 12 − I.",
+     "explication": "P’(I) = 12 − 0,5 × 2 I = 12 − I. En I = 4 : **8 W/A**.",
+     "unite": "W/A",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle intensité P’(I) s’annule-t-elle, en A ?",
+     "reponse": 12,
+     "aide": "Résous 12 − I = 0.",
+     "explication": "P’(I) = 12 − I s’annule pour **I = 12 A** ; P’ change de signe : c’est un maximum.",
+     "unite": "A",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la puissance maximale, en W ?",
+     "reponse": 72,
+     "aide": "Remplace I par 12 dans P(I) = 12 I − 0,5 I².",
+     "explication": "P(12) = 144 − 0,5 × 144 = 144 − 72 = **72 W**.",
+     "unite": "W",
+     "tolerance": 0.1
+    },
+    {
+     "type": "nombre",
+     "enonce": "À cette intensité, la tension utile est U = E − r × I. Calcule le rendement η = U / E (valeur entre 0 et 1).",
+     "reponse": 0.5,
+     "aide": "U = 12,0 − 0,50 × 12.",
+     "explication": "U = 12 − 6 = 6 V, donc η = 6 / 12 = **0,50** : à puissance maximale, la moitié de l’énergie est perdue dans le générateur.",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "fcec7f4e-ea61-5d51-937d-706983c8e219",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du capteur de vitesse à la position",
+   "competence": "calculer",
+   "situation": "Un robot avance sur un rail. Son capteur relève sa vitesse v(t) = 2t + 1 (en m/s) chaque seconde. À t = 0, le robot est à 2 m de l’origine.",
+   "documents": [
+    {
+     "id": "capteur",
+     "type": "tableau",
+     "titre": "Vitesses relevées",
+     "colonnes": [
+      "t (s)",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "v (m/s)",
+       "1",
+       "3",
+       "5",
+       "7",
+       "9"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "capteur",
+     "enonce": "Touche la vitesse du robot à t = 3 s.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Repère la colonne dont le temps vaut 3.",
+     "explication": "À t = 3 s, la vitesse est de **7 m/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la primitive de v(t) = 2t + 1 qui donne la position x(t), à une constante C près ?",
+     "options": [
+      "x(t) = t² + t + C",
+      "x(t) = 2t² + t + C",
+      "x(t) = t² + C",
+      "x(t) = 2 + C"
+     ],
+     "reponse": 0,
+     "aide": "Une primitive de 2t est t² ; une primitive de 1 est t.",
+     "explication": "Une primitive de 2t est t², et de 1 est t : **x(t) = t² + t + C**. Dérive pour vérifier : 2t + 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec x(0) = 2 m, quelle est la valeur de C ?",
+     "reponse": 2,
+     "aide": "x(0) = 0 + 0 + C.",
+     "explication": "x(0) = C = 2 : on a donc **x(t) = t² + t + 2**.",
+     "unite": "m",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la position du robot à t = 3 s, en mètres.",
+     "reponse": 14,
+     "aide": "Remplace t par 3 dans x(t) = t² + t + 2.",
+     "explication": "x(3) = 9 + 3 + 2 = **14 m**.",
+     "unite": "m",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "fcec7f4e-ea61-5d51-937d-706983c8e219",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le piston de la pompe",
+   "competence": "modeliser",
+   "situation": "Un piston de pompe se déplace avec la vitesse v(t) = 4 sin(2t) (en cm/s, t en secondes). À t = 0, sa position est x = 1 cm. On veut retrouver sa position à tout instant.",
+   "documents": [
+    {
+     "id": "vit",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse du piston",
+     "categories": [
+      "0",
+      "0,25",
+      "0,5",
+      "0,75",
+      "1",
+      "1,25",
+      "1,5"
+     ],
+     "series": [
+      {
+       "nom": "v (cm/s)",
+       "valeurs": [
+        0,
+        1.92,
+        3.37,
+        3.99,
+        3.64,
+        2.39,
+        0.56
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "v",
+      "unite": "cm/s",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vit",
+     "enonce": "Touche l’instant, parmi ceux relevés, où la vitesse est la plus grande.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "La vitesse est la plus grande à **0,75 s**, avec environ 3,99 cm/s."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est une primitive de v(t) = 4 sin(2t) ?",
+     "options": [
+      "x(t) = −2 cos(2t) + C, signe moins et division par 2",
+      "x(t) = 2 cos(2t) + C, en oubliant le signe moins",
+      "x(t) = −8 cos(2t) + C, en multipliant par 2",
+      "x(t) = 4 cos(2t) + C, en changeant sin en cos seulement"
+     ],
+     "reponse": 0,
+     "aide": "Une primitive de sin(ω t) est −(1/ω) cos(ω t).",
+     "explication": "Avec ω = 2 : 4 × (−1/2) cos(2t) = **−2 cos(2t)**. En dérivant : 4 sin(2t) ✓."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec x(0) = 1 cm, détermine C dans x(t) = −2 cos(2t) + C.",
+     "reponse": 3,
+     "aide": "x(0) = −2 cos 0 + C = −2 + C.",
+     "explication": "x(0) = −2 + C = 1, donc **C = 3**.",
+     "unite": "cm",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la position x(π/2) en cm.",
+     "reponse": 5,
+     "aide": "2 × π/2 = π et cos π = −1.",
+     "explication": "x(π/2) = −2 cos π + 3 = 2 + 3 = **5 cm**.",
+     "unite": "cm",
+     "tolerance": 0.01
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la position x(π/4) en cm.",
+     "reponse": 3,
+     "aide": "2 × π/4 = π/2 et cos(π/2) = 0.",
+     "explication": "x(π/4) = −2 cos(π/2) + 3 = 0 + 3 = **3 cm**.",
+     "unite": "cm",
+     "tolerance": 0.01
+    }
+   ]
+  },
+  {
+   "chapitre": "fcec7f4e-ea61-5d51-937d-706983c8e219",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La méthode d’Euler sur le chariot",
+   "competence": "resoudre",
+   "situation": "Un chariot a pour vitesse v(t) = t² (en m/s). On cherche sa position x(t) avec x(0) = 0, d’abord par la méthode d’Euler avec un pas h = 0,5 s (x(n+1) = x(n) + h × v(t(n))), puis par une primitive.",
+   "documents": [
+    {
+     "id": "euler",
+     "type": "tableau",
+     "titre": "Tableau d’Euler (pas de 0,5 s)",
+     "colonnes": [
+      "n",
+      "t (s)",
+      "x (m)",
+      "v = t² (m/s)"
+     ],
+     "lignes": [
+      [
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "1",
+       "0,5",
+       "0",
+       "0,25"
+      ],
+      [
+       "2",
+       "1",
+       "?",
+       "1"
+      ],
+      [
+       "3",
+       "1,5",
+       "?",
+       "2,25"
+      ],
+      [
+       "4",
+       "2",
+       "?",
+       "4"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "vit",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse du chariot",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "v (m/s)",
+       "valeurs": [
+        0,
+        0.25,
+        1,
+        2.25,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "v",
+      "unite": "m/s",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vit",
+     "enonce": "Touche l’instant où la vitesse du chariot vaut 2,25 m/s.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le point de la courbe à 2,25.",
+     "explication": "La vitesse vaut 2,25 m/s à **t = 1,5 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule x en n = 2 : x(2) = x(1) + 0,5 × v(0,5), en mètres.",
+     "reponse": 0.125,
+     "aide": "x(1) = 0 et v(0,5) = 0,25.",
+     "explication": "x(2) = 0 + 0,5 × 0,25 = **0,125 m**.",
+     "unite": "m",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule x en n = 3 : x(3) = x(2) + 0,5 × v(1), en mètres.",
+     "reponse": 0.625,
+     "aide": "Utilise x(2) = 0,125 et v(1) = 1.",
+     "explication": "x(3) = 0,125 + 0,5 × 1 = **0,625 m**.",
+     "unite": "m",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule x en n = 4 (t = 2 s), en mètres.",
+     "reponse": 1.75,
+     "aide": "Utilise x(3) = 0,625 et v(1,5) = 2,25.",
+     "explication": "x(4) = 0,625 + 0,5 × 2,25 = **1,75 m**.",
+     "unite": "m",
+     "tolerance": 0.001
+    },
+    {
+     "type": "nombre",
+     "enonce": "La primitive de t² est t³/3. Avec x(0) = 0, calcule la valeur exacte x(2) en mètres, arrondie au centième.",
+     "reponse": 2.67,
+     "aide": "x(2) = 2³ / 3.",
+     "explication": "x(2) = 8/3 ≈ **2,67 m** : la méthode d’Euler (1,75 m) sous-estime la position.",
+     "unite": "m",
+     "tolerance": 0.01
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la méthode d’Euler donne-t-elle ici une valeur trop faible ?",
+     "options": [
+      "On prend la vitesse du début de chaque pas, alors qu’elle augmente",
+      "On a oublié la condition initiale x(0) = 0 dans le tableau",
+      "Le pas de 0,5 s est trop petit pour une méthode numérique",
+      "La primitive t³/3 est fausse car on ne l’a pas vérifiée"
+     ],
+     "reponse": 0,
+     "aide": "Sur chaque pas, la vitesse réelle est plus grande qu’au début du pas.",
+     "explication": "La vitesse **augmente** : en prenant sa valeur au début de chaque pas, on la sous-estime à chaque étape. Un pas plus petit réduirait l’écart."
+    }
+   ]
+  }
+ ]
+}

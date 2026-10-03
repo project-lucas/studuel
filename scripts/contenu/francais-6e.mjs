@@ -188,7 +188,7 @@ C’est le récit d’**Hésiode**, dans *La Théogonie*. Zeus s’installe alor
 | **Pandore** | Elle ouvre la jarre d’où s’échappent les maux, ne laissant que l’espérance |
 | Le **déluge** | Il existe aussi chez les Grecs (Deucalion) et chez les Mésopotamiens |
 
-!> *L’Épopée de Gilgamesh*, qui contient un déluge, est **bien plus ancienne que la Bible**. Le même motif traverse des cultures qui ne se connaissaient pas.
+!> *L’Épopée de Gilgamesh*, qui contient un déluge, est **bien plus ancienne que la Bible**. Le même motif passe d’une culture à l’autre : les récits voyagent et se transforment.
 
 > C’est ce qui rend ces récits passionnants à **comparer** plutôt qu’à classer.
 
@@ -295,7 +295,7 @@ Dans *Histoires comme ça* (**1902**), **Rudyard Kipling** raconte un chameau pa
 
 ## Les jeux de sons
 | Le procédé | Ce qui se répète | Exemple |
-| L’**allitération** | Des **consonnes** | *Pour qui sont ces serpents qui sifflent sur nos têtes ?* |
+| L’**allitération** | Des **consonnes** | *Pour qui sont ces serpents qui sifflent sur vos têtes ?* |
 | L’**assonance** | Des **voyelles** | |
 
 > Ces répétitions créent une musique qui **imite** parfois ce que le texte décrit.

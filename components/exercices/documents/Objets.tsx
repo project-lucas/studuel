@@ -1,4 +1,5 @@
 import type { DocHorloge, DocSolide } from '@/lib/exercices/types'
+import { coord } from '../commun'
 import s from '../manuel.module.css'
 
 /** L'HORLOGE — un cadran à aiguilles, et l'heure en chiffres si on la demande. */
@@ -9,7 +10,7 @@ export function Horloge({ doc }: { doc: DocHorloge }) {
   const angleH = ((h + m / 60) / 12) * 360
   const aiguille = (angle: number, long: number) => {
     const a = ((angle - 90) * Math.PI) / 180
-    return [100 + long * Math.cos(a), 100 + long * Math.sin(a)]
+    return [coord(100 + long * Math.cos(a)), coord(100 + long * Math.sin(a))]
   }
   const [hx, hy] = aiguille(angleH, 46)
   const [mx, my] = aiguille(angleM, 70)
@@ -23,10 +24,10 @@ export function Horloge({ doc }: { doc: DocHorloge }) {
           return (
             <line
               key={i}
-              x1={100 + (grand ? 76 : 82) * Math.cos(a)}
-              y1={100 + (grand ? 76 : 82) * Math.sin(a)}
-              x2={100 + 87 * Math.cos(a)}
-              y2={100 + 87 * Math.sin(a)}
+              x1={coord(100 + (grand ? 76 : 82) * Math.cos(a))}
+              y1={coord(100 + (grand ? 76 : 82) * Math.sin(a))}
+              x2={coord(100 + 87 * Math.cos(a))}
+              y2={coord(100 + 87 * Math.sin(a))}
               style={{ stroke: 'var(--foreground)' }}
               strokeWidth={grand ? 3 : 1.2}
             />
@@ -36,7 +37,7 @@ export function Horloge({ doc }: { doc: DocHorloge }) {
           const n = i + 1
           const a = (n * 30 - 90) * (Math.PI / 180)
           return (
-            <text key={n} x={100 + 62 * Math.cos(a)} y={100 + 62 * Math.sin(a) + 6} fontSize={17} fontWeight={800} textAnchor="middle" style={{ fill: 'var(--foreground)' }}>
+            <text key={n} x={coord(100 + 62 * Math.cos(a))} y={coord(100 + 62 * Math.sin(a) + 6)} fontSize={17} fontWeight={800} textAnchor="middle" style={{ fill: 'var(--foreground)' }}>
               {n}
             </text>
           )

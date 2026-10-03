@@ -1,41 +1,25 @@
 import { notFound } from 'next/navigation'
-import DailyQuests from '@/components/defi/DailyQuests'
-import { QUEST_CATALOG, questView } from '@/lib/quests'
+import ApercuQuetes from './ApercuQuetes'
 
 export const dynamic = 'force-dynamic'
 
 // L'APERÇU DES QUÊTES DU JOUR — en développement seulement.
 //
-// La feuille des quêtes ne s'ouvre que depuis l'arène, connecté, avec les
-// quêtes tirées pour soi : cette page rend le bloc dans le même panneau sombre
-// avec trois quêtes de démonstration (une bouclée, une entamée, une à zéro),
-// sans base ni compte.
+// La pastille du bandeau, la carte de Réviser et la feuille des quêtes
+// (components/quetes) sur trois quêtes d'exemple, sans base ni compte. Les
+// boutons « Encaisser » appellent la vraie action : sans session, elle refuse
+// et la feuille relit l'état.
 //
-//   /dev/quetes              une bouclée, une entamée, une à zéro
-//   /dev/quetes?e=toutes     les trois bouclées, le coffre à prendre
-//   /dev/quetes?e=payees     tout encaissé
+//   /dev/quetes                   une finie, une entamée, une à zéro
+//   /dev/quetes?e=toutes          les trois finies, le coffre à ouvrir
+//   /dev/quetes?e=payees          tout encaissé, le coffre ouvert
+//   /dev/quetes?feuille=1         la feuille déjà ouverte
 export default async function ApercuQuetesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ e?: string }>
+  searchParams: Promise<{ e?: string; feuille?: string }>
 }) {
   if (process.env.NODE_ENV === 'production') notFound()
-  const { e = 'mixte' } = await searchParams
-  const defs = ['duel1', 'revision15', 'chapter2'].map(
-    (id) => QUEST_CATALOG.find((d) => d.id === id)!,
-  )
-  const progression =
-    e === 'toutes' || e === 'payees'
-      ? { duel1: 1, revision15: 15, chapter2: 2 }
-      : { duel1: 1, revision15: 6, chapter2: 0 }
-  const views = defs.map((d) => questView(d, progression))
-  const claimedIds = e === 'payees' ? ['duel1', 'revision15', 'chapter2', '__jour__'] : []
-
-  return (
-    <div className="defi-arena-bg min-h-dvh p-4">
-      <div className="defi3-sheet mx-auto max-w-md rounded-3xl p-4">
-        <DailyQuests views={views} claimedIds={claimedIds} />
-      </div>
-    </div>
-  )
+  const { e = 'mixte', feuille } = await searchParams
+  return <ApercuQuetes e={e} feuille={feuille === '1'} />
 }

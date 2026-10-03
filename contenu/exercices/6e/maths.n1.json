@@ -1,0 +1,3370 @@
+{
+ "niveau": "6e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "a9b856bb-a32e-5b4d-b85e-4a84600b7a4d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le partage des cartes de Noé",
+   "competence": "calculer",
+   "situation": "Noé, Lina et Hugo ont chacun reçu un paquet de cartes à collectionner. Ils les partagent en parts égales entre leurs amis, et ils ont noté ce qu’il leur reste.",
+   "documents": [
+    {
+     "id": "cartes",
+     "type": "tableau",
+     "titre": "Les trois partages",
+     "colonnes": [
+      "Qui partage",
+      "Cartes",
+      "Amis",
+      "Cartes par ami",
+      "Cartes qui restent"
+     ],
+     "lignes": [
+      [
+       "Noé",
+       47,
+       5,
+       9,
+       2
+      ],
+      [
+       "Lina",
+       38,
+       6,
+       6,
+       2
+      ],
+      [
+       "Hugo",
+       60,
+       4,
+       15,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cartes",
+     "reponse": [
+      "r0c4"
+     ],
+     "enonce": "Touche le **reste** du partage de Noé.",
+     "aide": "Le reste, c’est ce qui ne peut pas être partagé : cherche la colonne qui le dit.",
+     "explication": "Noé distribue 5 × 9 = 45 cartes sur 47 : il lui en reste **2**. On écrit 47 = 5 × 9 + 2."
+    },
+    {
+     "type": "zone",
+     "document": "cartes",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Dans quel partage la division est-elle **exacte** (aucune carte ne reste) ? Touche le prénom.",
+     "aide": "Une division exacte a un reste égal à 0.",
+     "explication": "**Hugo** : 60 = 4 × 15 + 0. Le reste vaut 0, la division est exacte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire du partage de Hugo ?",
+     "options": [
+      "60 est un multiple de 4",
+      "4 est un multiple de 60",
+      "15 est le reste de la division",
+      "60 ne se partage pas entre 4 amis"
+     ],
+     "reponse": 0,
+     "aide": "Reste nul : le diviseur divise le dividende, et le dividende est un multiple du diviseur.",
+     "explication": "Le reste est nul : 4 divise 60, donc **60 est un multiple de 4** (15 est le quotient, pas le reste)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Noé trouve 5 cartes de plus : il en a maintenant 52 à partager entre ses 5 amis. Combien en reste-t-il ?",
+     "reponse": 2,
+     "unite": "cartes",
+     "aide": "Cherche le plus grand multiple de 5 qui ne dépasse pas 52.",
+     "explication": "52 = 5 × 10 + **2** : chaque ami reçoit 10 cartes et il en reste 2."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9b856bb-a32e-5b4d-b85e-4a84600b7a4d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La tombola du collège",
+   "competence": "raisonner",
+   "situation": "Pour la fête du collège, les délégués vendent des billets de tombola. Un billet est gagnant selon des règles de divisibilité : ils les vérifient sans calculatrice.",
+   "documents": [
+    {
+     "id": "billets",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "L’affiche de la tombola",
+     "entete": "Tombola du collège",
+     "sousTitre": "Les billets en vente",
+     "emoji": "🎟️",
+     "teinte": "violet",
+     "lignes": [
+      {
+       "texte": "Billet",
+       "valeur": "5 274",
+       "id": "ba"
+      },
+      {
+       "texte": "Billet",
+       "valeur": "2 025",
+       "id": "bb"
+      },
+      {
+       "texte": "Billet",
+       "valeur": "4 080",
+       "id": "bc"
+      },
+      {
+       "texte": "Billet",
+       "valeur": "1 236",
+       "id": "bd"
+      },
+      {
+       "texte": "Billet",
+       "valeur": "3 716",
+       "id": "be"
+      },
+      {
+       "texte": "Billet",
+       "valeur": "145",
+       "id": "bf"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Billet taché",
+       "valeur": "3 7 ▢ 6"
+      }
+     ],
+     "pied": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque billet selon sa divisibilité par 3 et par 9.",
+     "categories": [
+      "Divisible par 3 et par 9",
+      "Divisible par 3 mais pas par 9",
+      "Non divisible par 3"
+     ],
+     "items": [
+      [
+       "5 274",
+       0
+      ],
+      [
+       "2 025",
+       0
+      ],
+      [
+       "4 080",
+       1
+      ],
+      [
+       "1 236",
+       1
+      ],
+      [
+       "3 716",
+       2
+      ],
+      [
+       "145",
+       2
+      ]
+     ],
+     "aide": "Additionne les chiffres : si la somme est dans la table de 9, le nombre est divisible par 9 ; si elle est dans la table de 3, il l’est par 3.",
+     "explication": "5+2+7+4 = 18 et 2+0+2+5 = 9 : divisibles par 9, donc par 3. 4+0+8+0 = 12 et 1+2+3+6 = 12 : par 3 seulement. 3+7+1+6 = 17 et 1+4+5 = 10 : pas par 3."
+    },
+    {
+     "type": "zone",
+     "document": "billets",
+     "reponse": [
+      "bc",
+      "bd",
+      "be"
+     ],
+     "multiple": true,
+     "enonce": "Une catégorie de lots est réservée aux billets **divisibles par 4**. Touche-les tous.",
+     "aide": "Regarde seulement les deux derniers chiffres de chaque billet.",
+     "explication": "**4 080** (80 = 4 × 20), **1 236** (36 = 4 × 9) et **3 716** (16 = 4 × 4). Mais 74, 25 et 45 ne sont pas dans la table de 4."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le billet taché s’écrit 3 7 ▢ 6. Il est **divisible par 9**. Quel chiffre est caché sous la tache ?",
+     "reponse": 2,
+     "aide": "Pour être divisible par 9, la somme des chiffres doit être dans la table de 9. 3 + 7 + 6 = 16 : que faut-il ajouter ?",
+     "explication": "3 + 7 + 6 = 16. Pour atteindre 18 (table de 9), il manque **2** : le billet est 3 726."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le billet gagnant est divisible **à la fois par 2, par 3 et par 5**. Lequel est-ce ?",
+     "options": [
+      "5 274",
+      "2 025",
+      "4 080",
+      "1 236"
+     ],
+     "reponse": 2,
+     "ordreFixe": true,
+     "aide": "Par 5 : l’unité est 0 ou 5. Par 2 : l’unité est paire. Ces deux critères réunis imposent un chiffre précis.",
+     "explication": "Pair et multiple de 5 : il finit par 0. Seul **4 080** convient, et 4+0+8+0 = 12 est dans la table de 3."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9b856bb-a32e-5b4d-b85e-4a84600b7a4d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ranger les chaises en rectangle",
+   "competence": "raisonner",
+   "situation": "Pour la remise des prix, le concierge veut ranger des chaises en rangées complètes, toutes de la même longueur. Il a testé plusieurs nombres de rangées et noté le reste à chaque fois.",
+   "documents": [
+    {
+     "id": "restes",
+     "type": "tableau",
+     "titre": "Le reste de la division des chaises par le nombre de rangées",
+     "colonnes": [
+      "Chaises",
+      "2 rangées",
+      "3 rangées",
+      "4 rangées",
+      "5 rangées",
+      "6 rangées"
+     ],
+     "lignes": [
+      [
+       "24",
+       0,
+       0,
+       0,
+       4,
+       0
+      ],
+      [
+       "29",
+       1,
+       2,
+       1,
+       4,
+       5
+      ],
+      [
+       "30",
+       0,
+       0,
+       2,
+       0,
+       0
+      ],
+      [
+       "31",
+       1,
+       1,
+       3,
+       1,
+       1
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs faits pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La remarque de Sacha",
+     "participants": [
+      {
+       "nom": "Sacha",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Le concierge",
+       "emoji": "🧑‍🔧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sacha",
+       "texte": "Il y a 51 chaises. 51 est un nombre premier, donc on ne peut pas les ranger en rangées complètes."
+      },
+      {
+       "qui": "Le concierge",
+       "texte": "Tu es sûr ? Vérifie avec un critère de divisibilité."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "restes",
+     "reponse": [
+      "r1c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "enonce": "Touche les nombres de chaises qui ne tombent **juste dans aucune** des colonnes essayées (jamais de reste nul).",
+     "aide": "Une ligne sans aucun 0 dans ses restes.",
+     "explication": "**29** (restes 1, 2, 1, 4, 5) et **31** (1, 1, 3, 1, 1) n’ont aucun reste nul. 24 et 30 tombent juste plusieurs fois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le concierge essaie aussi 7 rangées pour **31 chaises**. Quel est le reste de la division de 31 par 7 ?",
+     "reponse": 3,
+     "aide": "Cherche le plus grand multiple de 7 qui ne dépasse pas 31.",
+     "explication": "31 = 7 × 4 + **3**. Le reste n’est pas nul : 7 ne divise pas 31."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi 24, 29, 30 et 31, lesquels sont des **nombres premiers** ?",
+     "options": [
+      "24",
+      "29",
+      "30",
+      "31"
+     ],
+     "reponse": [
+      1,
+      3
+     ],
+     "ordreFixe": true,
+     "aide": "Un nombre premier n’a que deux diviseurs : 1 et lui-même. 24 et 30 sont pairs…",
+     "explication": "**29 et 31** : aucun reste nul dans le tableau, ni avec 7. 24 et 30 sont pairs, donc divisibles par 2 : ils ne sont pas premiers."
+    },
+    {
+     "type": "choix",
+     "enonce": "Sacha se trompe. Pourquoi 51 n’est-il pas un nombre premier ?",
+     "options": [
+      "5 + 1 = 6 est divisible par 3, donc 51 est divisible par 3",
+      "51 est un nombre impair, donc il a plus de deux diviseurs",
+      "51 finit par 1, donc il est divisible par 1 seulement",
+      "51 est plus grand que 31, donc il n’est pas premier"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Applique le critère de divisibilité par 3 : additionne les chiffres de 51.",
+     "explication": "5 + 1 = 6, qui est dans la table de 3 : **51 est divisible par 3**, il a donc un autre diviseur que 1 et lui-même."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chaises y aura-t-il dans chaque rangée si on range les 51 chaises en 3 rangées complètes ?",
+     "reponse": 17,
+     "unite": "chaises",
+     "aide": "Partage 51 en 3 parts égales.",
+     "explication": "51 ÷ 3 = **17** chaises par rangée, et 3 × 17 = 51 : la division est exacte."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6028cff-7a20-551b-bc79-8fe779d49f6e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’addition de la pizzeria",
+   "competence": "calculer",
+   "situation": "Quatre amis déjeunent à la pizzeria et se partagent l’addition à parts égales. Sur le ticket, chaque ligne peut se partager.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Le ticket de caisse",
+     "entete": "Pizzeria Chez Tony",
+     "sousTitre": "Samedi — 12 h 40",
+     "emoji": "🍕",
+     "lignes": [
+      {
+       "texte": "Pizza familiale",
+       "valeur": "21,00 €",
+       "id": "pizza"
+      },
+      {
+       "texte": "Boissons",
+       "valeur": "9,00 €",
+       "id": "boissons"
+      },
+      {
+       "texte": "Dessert",
+       "valeur": "7,50 €",
+       "id": "dessert"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "37,50 €",
+       "gras": true,
+       "id": "total"
+      }
+     ],
+     "pied": "Ticket écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Les 4 amis partagent la **pizza familiale** à parts égales. Combien chacun paie-t-il pour la pizza ?",
+     "reponse": 5.25,
+     "unite": "€",
+     "aide": "21 ÷ 4 ne tombe pas juste : après 5, il reste 1. Continue après la virgule en abaissant un zéro.",
+     "explication": "21 ÷ 4 : 5, reste 1 ; 10 ÷ 4 = 2, reste 2 ; 20 ÷ 4 = 5. Donc **5,25 €**. Vérification : 5,25 × 4 = 21."
+    },
+    {
+     "type": "zone",
+     "document": "ticket",
+     "reponse": [
+      "dessert"
+     ],
+     "enonce": "Deux amis seulement se partagent une ligne du ticket et chacun paie **3,75 €**. Touche cette ligne.",
+     "aide": "Divise chaque prix par 2, ou cherche quelle ligne vaut le double de 3,75.",
+     "explication": "7,50 ÷ 2 = **3,75**. La pizza donnerait 10,50 € chacun et les boissons 4,50 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Cinq amis se partagent le **total** du ticket à parts égales. Combien paie chacun ?",
+     "reponse": 7.5,
+     "unite": "€",
+     "aide": "37,5 ÷ 5 : après 37, il reste 2 unités à partager en dixièmes.",
+     "explication": "37,50 ÷ 5 = **7,50 €**. Vérification : 7,5 × 5 = 37,5."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6028cff-7a20-551b-bc79-8fe779d49f6e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le prix au kilo au marché",
+   "competence": "calculer",
+   "situation": "Sur le marché, Wassim compare les fruits. Chaque étal affiche la masse du sachet et le prix payé : il veut connaître le prix d’**un seul kilo** pour choisir le plus avantageux.",
+   "documents": [
+    {
+     "id": "etals",
+     "type": "tableau",
+     "titre": "Les sachets de Wassim",
+     "colonnes": [
+      "Fruit",
+      "Masse (kg)",
+      "Prix payé (€)",
+      "Prix au kilo (€)"
+     ],
+     "lignes": [
+      [
+       "Cerises",
+       2.5,
+       12.5,
+       "?"
+      ],
+      [
+       "Abricots",
+       0.75,
+       3,
+       "?"
+      ],
+      [
+       "Fraises",
+       0.4,
+       2.8,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Prix inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix au kilo des **cerises** (12,5 ÷ 2,5) ?",
+     "reponse": 5,
+     "unite": "€/kg",
+     "aide": "On ne divise pas par un décimal : multiplie 12,5 et 2,5 par 10.",
+     "explication": "12,5 ÷ 2,5 = 125 ÷ 25 = **5 €** le kilo. Vérification : 5 × 2,5 = 12,5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix au kilo des **abricots** (3 ÷ 0,75) ?",
+     "reponse": 4,
+     "unite": "€/kg",
+     "aide": "Multiplie le dividende ET le diviseur par 100.",
+     "explication": "3 ÷ 0,75 = 300 ÷ 75 = **4 €** le kilo. Vérification : 4 × 0,75 = 3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour calculer le prix au kilo des **fraises** (2,8 ÷ 0,4) sans virgule, on peut écrire :",
+     "options": [
+      "28 ÷ 4",
+      "2,8 ÷ 4",
+      "280 ÷ 4",
+      "28 ÷ 0,4"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "On multiplie les deux nombres par le même nombre, pour que le diviseur devienne entier.",
+     "explication": "On multiplie **les deux nombres par 10** : 28 ÷ 4 = 7. Multiplier un seul des deux changerait le résultat."
+    },
+    {
+     "type": "zone",
+     "document": "etals",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Quel fruit est le plus cher **au kilo** ? Touche son nom.",
+     "aide": "Compare 5 €, 4 € et le prix au kilo des fraises que tu viens de calculer.",
+     "explication": "Les fraises coûtent 2,8 ÷ 0,4 = 7 € le kilo, contre 5 € et 4 € : **les fraises** sont les plus chères."
+    }
+   ]
+  },
+  {
+   "chapitre": "c6028cff-7a20-551b-bc79-8fe779d49f6e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand la calculatrice n’arrête pas",
+   "competence": "raisonner",
+   "situation": "Tom partage de l’argent avec ses amis et lit le résultat sur sa calculatrice. Certaines divisions ne s’arrêtent jamais : il faut apprendre à écrire une valeur approchée.",
+   "documents": [
+    {
+     "id": "calc",
+     "type": "tableau",
+     "titre": "Ce qu’affiche la calculatrice",
+     "colonnes": [
+      "Partage",
+      "Résultat affiché"
+     ],
+     "lignes": [
+      [
+       "10 € entre 3 amis",
+       "3,3333333"
+      ],
+      [
+       "8 € entre 3 amis",
+       "2,6666667"
+      ],
+      [
+       "1 € entre 6 amis",
+       "0,1666667"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculatrice 8 chiffres"
+    },
+    {
+     "id": "tom",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La copie de Tom",
+     "participants": [
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lila",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tom",
+       "texte": "J’ai écrit : 10 ÷ 3 = 3,33."
+      },
+      {
+       "qui": "Lila",
+       "texte": "Mais 3,33 × 3 = 9,99, pas 10 !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Lila a raison de protester. Comment Tom doit-il corriger son écriture ?",
+     "options": [
+      "10 ÷ 3 ≈ 3,33",
+      "10 ÷ 3 = 3,3",
+      "10 ÷ 3 = 3,333",
+      "10 ÷ 3 ≈ 3,5"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le signe = annonce une égalité exacte. Quel signe dit « à peu près » ?",
+     "explication": "La division ne s’arrête jamais : 3,33 n’est qu’une valeur approchée. On écrit **10 ÷ 3 ≈ 3,33**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur approchée **par défaut** de 8 ÷ 3 au centième (on tronque) ?",
+     "reponse": 2.66,
+     "aide": "On garde deux chiffres après la virgule et on coupe le reste : 2,6666667…",
+     "explication": "On tronque 2,6666667 après le centième : **2,66**. C’est juste en dessous de la valeur exacte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur approchée **par excès** de 1 ÷ 6 au centième (la valeur juste au-dessus) ?",
+     "reponse": 0.17,
+     "aide": "0,1666667 : 0,16 est trop petit. Quel centième vient juste après ?",
+     "explication": "Par défaut on aurait 0,16 ; par excès, la valeur juste au-dessus est **0,17**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur **arrondie** de 8 ÷ 3 au centième (la plus proche) ?",
+     "reponse": 2.67,
+     "aide": "Regarde le chiffre après le centième : 2,6666667…",
+     "explication": "Le chiffre suivant est 6, donc on monte : **2,67**. Ici l’arrondi est égal à la valeur par excès, pas à la valeur par défaut."
+    },
+    {
+     "type": "zone",
+     "document": "calc",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Pour quel partage la valeur **arrondie** au centième est-elle la **même** que la valeur par défaut ? Touche-le.",
+     "aide": "Calcule pour chaque ligne la valeur par défaut et la valeur arrondie au centième, puis compare-les.",
+     "explication": "10 ÷ 3 : par défaut 3,33 et arrondi 3,33 (le chiffre suivant est 3). Pour 8 ÷ 3 : 2,66 et 2,67. Pour 1 ÷ 6 : 0,16 et 0,17. Seul le **premier** partage convient."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d954c16-5948-5fc7-93f3-bc385021c076",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La pizza de Maya",
+   "competence": "observer-schema",
+   "situation": "Maya a commandé une pizza ronde, coupée en parts égales. Elle en a déjà mangé quelques-unes.",
+   "documents": [
+    {
+     "id": "pizza",
+     "type": "schema",
+     "titre": "La pizza de Maya",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 160 25 A 90 90 0 0 1 223.6 51.4 Z",
+       "ferme": true,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p0"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 223.6 51.4 A 90 90 0 0 1 250 115 Z",
+       "ferme": true,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p1"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 250 115 A 90 90 0 0 1 223.6 178.6 Z",
+       "ferme": true,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p2"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 223.6 178.6 A 90 90 0 0 1 160 205 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "p3"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 160 205 A 90 90 0 0 1 96.4 178.6 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "p4"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 96.4 178.6 A 90 90 0 0 1 70 115 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "p5"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 70 115 A 90 90 0 0 1 96.4 51.4 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "p6"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 160 115 L 96.4 51.4 A 90 90 0 0 1 160 25 Z",
+       "ferme": true,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "p7"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "violet",
+       "motif": "plein",
+       "texte": "Parts mangées par Maya"
+      },
+      {
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Parts restantes"
+      }
+     ],
+     "source": "Schéma fait pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En combien de parts égales la pizza est-elle coupée ?",
+     "reponse": 8,
+     "aide": "Compte toutes les parts, mangées ou non. Ce nombre est le dénominateur.",
+     "explication": "La pizza est coupée en **8** parts égales : le dénominateur de la fraction est 8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction de la pizza Maya a-t-elle mangée ?",
+     "options": [
+      "{{3/8}}",
+      "{{5/8}}",
+      "{{3/5}}",
+      "{{8/3}}"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le numérateur dit combien de parts on prend, le dénominateur en combien on coupe.",
+     "explication": "Elle a mangé 3 parts sur 8 : **{{3/8}}** de la pizza."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de parts reste-t-il dans la boîte ?",
+     "reponse": 5,
+     "unite": "parts",
+     "aide": "Il y a 8 parts en tout.",
+     "explication": "8 − 3 = **5** parts : il reste {{5/8}} de la pizza."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d954c16-5948-5fc7-93f3-bc385021c076",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les billes de Théo",
+   "competence": "calculer",
+   "situation": "Théo a 24 billes. Il en donne les **{{3/4}}** à sa sœur. Ses amis Sarah et Eliott font aussi des dons : on les compare dans le tableau.",
+   "documents": [
+    {
+     "id": "bande",
+     "type": "schema",
+     "titre": "La collection de Théo, partagée en 4 parts égales",
+     "largeur": 320,
+     "hauteur": 140,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        40
+       ],
+       "a": [
+        280,
+        40
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 28,
+       "texte": "24 billes",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 60,
+       "l": 60,
+       "h": 50,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "part0"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 60,
+       "l": 60,
+       "h": 50,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "part1"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 60,
+       "l": 60,
+       "h": 50,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "part2"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 60,
+       "l": 60,
+       "h": 50,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "part3"
+      }
+     ]
+    },
+    {
+     "id": "dons",
+     "type": "tableau",
+     "titre": "Les dons de billes",
+     "colonnes": [
+      "Ami",
+      "Billes",
+      "Part donnée"
+     ],
+     "lignes": [
+      [
+       "Théo",
+       24,
+       "{{3/4}}"
+      ],
+      [
+       "Sarah",
+       40,
+       "{{2/5}}"
+      ],
+      [
+       "Eliott",
+       30,
+       "{{1/3}}"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de billes y a-t-il dans **une** part de la bande ?",
+     "reponse": 6,
+     "unite": "billes",
+     "aide": "La bande de 24 billes est partagée en 4 parts égales.",
+     "explication": "24 ÷ 4 = **6** billes par part."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de billes Théo donne-t-il à sa sœur (les {{3/4}} de 24) ?",
+     "reponse": 18,
+     "unite": "billes",
+     "aide": "Les {{3/4}}, c’est 3 parts de la bande.",
+     "explication": "24 ÷ 4 × 3 = 6 × 3 = **18** billes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction de ses billes Théo garde-t-il ?",
+     "options": [
+      "{{1/4}}",
+      "{{3/4}}",
+      "{{1/3}}",
+      "{{4/3}}"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La bande a 4 parts, il en donne 3.",
+     "explication": "Il donne 3 parts sur 4 : il en garde **{{1/4}}**, soit 6 billes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sarah a 40 billes et en donne les {{2/5}}. Combien en donne-t-elle ?",
+     "reponse": 16,
+     "unite": "billes",
+     "aide": "Divise 40 par 5, puis multiplie par 2.",
+     "explication": "40 ÷ 5 × 2 = 8 × 2 = **16** billes."
+    },
+    {
+     "type": "zone",
+     "document": "dons",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Qui donne le **plus** de billes ? Touche son prénom.",
+     "aide": "Calcule aussi ce que donne Eliott : les {{1/3}} de 30.",
+     "explication": "Théo donne 18 billes, Sarah 16 et Eliott 30 ÷ 3 = 10 : **Théo** donne le plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d954c16-5948-5fc7-93f3-bc385021c076",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les lecteurs du club",
+   "competence": "raisonner",
+   "situation": "Les classes de 6e ont lancé un défi lecture. Pour comparer, la documentaliste écrit chaque résultat sous la forme d’une fraction **irréductible**. Elle commence par des bandes de même longueur pour comprendre les fractions égales.",
+   "documents": [
+    {
+     "id": "bandes",
+     "type": "schema",
+     "titre": "Quatre bandes de même longueur",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 16,
+       "y": 40,
+       "texte": "A",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 16,
+       "y": 100,
+       "texte": "B",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 16,
+       "y": 160,
+       "texte": "C",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 16,
+       "y": 220,
+       "texte": "D",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 22,
+       "l": 120,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 22,
+       "l": 120,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 82,
+       "l": 60,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 82,
+       "l": 60,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 82,
+       "l": 60,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 82,
+       "l": 60,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 142,
+       "l": 40,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 142,
+       "l": 40,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 142,
+       "l": 40,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 142,
+       "l": 40,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 200,
+       "y": 142,
+       "l": 40,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 142,
+       "l": 40,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 202,
+       "l": 30,
+       "h": 28,
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ]
+    },
+    {
+     "id": "club",
+     "type": "tableau",
+     "titre": "Les élèves qui ont fini le livre",
+     "colonnes": [
+      "Classe",
+      "Élèves",
+      "Ont fini"
+     ],
+     "lignes": [
+      [
+       "6e A",
+       24,
+       18
+      ],
+      [
+       "6e B",
+       30,
+       20
+      ],
+      [
+       "6e C",
+       25,
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "La bande A représente {{1/2}}. Quelles autres bandes représentent **la même quantité** ?",
+     "options": [
+      "B",
+      "C",
+      "D"
+     ],
+     "reponse": [
+      0,
+      2
+     ],
+     "ordreFixe": true,
+     "aide": "Compare le nombre de parts colorées au nombre de parts total, comme {{2/4}} et {{1/2}}.",
+     "explication": "La bande B vaut {{2/4}} = {{1/2}} et la bande D vaut {{4/8}} = {{1/2}}. La bande C vaut {{4/6}} : **B et D**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque classe à la fraction **irréductible** de ses lecteurs.",
+     "paires": [
+      [
+       "6e A : {{18/24}}",
+       "{{3/4}}"
+      ],
+      [
+       "6e B : {{20/30}}",
+       "{{2/3}}"
+      ],
+      [
+       "6e C : {{20/25}}",
+       "{{4/5}}"
+      ]
+     ],
+     "aide": "Divise le haut et le bas par le même nombre, jusqu’à ne plus pouvoir : par 6, par 10, par 5.",
+     "explication": "18 et 24 se divisent par 6 : {{3/4}}. 20 et 30 par 10 : {{2/3}}. 20 et 25 par 5 : {{4/5}}."
+    },
+    {
+     "type": "zone",
+     "document": "club",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Dans quelle classe reste-t-il **le plus** d’élèves qui n’ont pas fini ? Touche-la.",
+     "aide": "Soustrais « ont fini » à « élèves » pour chaque classe.",
+     "explication": "6e A : 24 − 18 = 6. 6e B : 30 − 20 = 10. 6e C : 25 − 20 = 5. C’est la **6e B**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans une autre classe de 28 élèves, les {{3/4}} ont fini le livre. Combien d’élèves ont fini ?",
+     "reponse": 21,
+     "unite": "élèves",
+     "aide": "Divise 28 par 4, puis multiplie par 3.",
+     "explication": "28 ÷ 4 × 3 = 7 × 3 = **21** élèves."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction décimale (de dénominateur 100) est égale à {{3/4}} ?",
+     "options": [
+      "{{75/100}}",
+      "{{34/100}}",
+      "{{30/100}}",
+      "{{4/100}}"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Multiplie le haut et le bas de {{3/4}} par 25.",
+     "explication": "{{3/4}} = {{75/100}} : on multiplie les deux termes par 25. C’est bien 0,75."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d74948a-dfff-5ae9-ac74-67bcf1714896",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les barres de chocolat d’Alice",
+   "competence": "se-reperer-espace",
+   "situation": "Alice a coupé deux barres de chocolat en 4 carrés chacune et les a posées l’une derrière l’autre le long d’une règle graduée : 1 barre mesure 1 unité.",
+   "documents": [
+    {
+     "id": "regle",
+     "type": "droite",
+     "titre": "La règle d’Alice",
+     "min": 0,
+     "max": 2,
+     "pas": 1,
+     "division": 4,
+     "points": [
+      {
+       "id": "a",
+       "valeur": 1.25,
+       "nom": "A"
+      }
+     ],
+     "graduationsCliquables": true,
+     "source": "Droite graduée en quarts"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regle",
+     "reponse": [
+      "v0.75"
+     ],
+     "enonce": "Place la fraction {{3/4}} sur la droite : touche la bonne graduation.",
+     "aide": "Chaque unité est partagée en 4 parts : compte 3 parts à partir de 0.",
+     "explication": "{{3/4}} se trouve à **3 quarts** de l’origine : la graduation juste avant 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le point A est à une certaine fraction de la forme {{?/4}}. Quel est le **numérateur** de cette fraction ?",
+     "reponse": 5,
+     "aide": "Compte les quarts depuis 0 jusqu’à A : 4 quarts pour arriver à 1, puis encore quelques-uns.",
+     "explication": "A est à 4 quarts + 1 quart de l’origine : A = **{{5/4}}**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le point A, d’abscisse {{5/4}}, est :",
+     "options": [
+      "Plus grand que 1",
+      "Plus petit que 1",
+      "Égal à 1",
+      "Plus petit que {{3/4}}"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde de quel côté de la graduation 1 se trouve A.",
+     "explication": "Le numérateur (5) est plus grand que le dénominateur (4) : {{5/4}} est **plus grand que 1**, et A est à droite de 1."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d74948a-dfff-5ae9-ac74-67bcf1714896",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le goûter des quatre amis",
+   "competence": "raisonner",
+   "situation": "Quatre amis ont mangé une part d’une même tarte aux pommes, découpée de façons différentes. Anna et Tom comparent aussi leurs parts de gâteaux identiques.",
+   "documents": [
+    {
+     "id": "tarte",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Le tableau du goûter",
+     "entete": "Goûter de l’atelier",
+     "sousTitre": "La part de tarte mangée par chacun",
+     "emoji": "🥧",
+     "teinte": "ambre",
+     "lignes": [
+      {
+       "texte": "Léa",
+       "valeur": "{{3/5}}",
+       "id": "lea"
+      },
+      {
+       "texte": "Max",
+       "valeur": "{{3/8}}",
+       "id": "max"
+      },
+      {
+       "texte": "Eve",
+       "valeur": "{{3/4}}",
+       "id": "eve"
+      },
+      {
+       "texte": "Zoé",
+       "valeur": "{{3/10}}",
+       "id": "zoe"
+      }
+     ],
+     "pied": "Quatre tartes identiques, une part chacun"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La dispute du dessert",
+     "participants": [
+      {
+       "nom": "Anna",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anna",
+       "texte": "J’ai mangé les {{2/3}} de mon gâteau."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Moi, les {{3/4}} du mien. Les deux gâteaux sont identiques !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range les parts de tarte mangées **de la plus petite à la plus grande**.",
+     "items": [
+      "{{3/10}}",
+      "{{3/8}}",
+      "{{3/5}}",
+      "{{3/4}}"
+     ],
+     "aide": "Les quatre fractions ont le même numérateur : plus on coupe en parts nombreuses, plus chaque part est petite.",
+     "explication": "Avec le même numérateur, c’est le dénominateur qui décide, **à l’envers** : {{3/10}} < {{3/8}} < {{3/5}} < {{3/4}}."
+    },
+    {
+     "type": "zone",
+     "document": "tarte",
+     "reponse": [
+      "eve"
+     ],
+     "enonce": "Touche la personne qui a mangé **la plus grosse** part.",
+     "aide": "Cherche le plus petit dénominateur parmi des fractions de même numérateur.",
+     "explication": "**Eve** a mangé {{3/4}} de sa tarte : en 4 parts, chaque part est la plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour comparer {{2/3}} et {{3/4}}, on les écrit avec le même dénominateur, 12. Par quel numérateur remplace-t-on le 2 de {{2/3}} ?",
+     "reponse": 8,
+     "aide": "On a multiplié le dénominateur 3 par 4 : fais pareil avec le numérateur 2.",
+     "explication": "{{2/3}} = {{8/12}} (on multiplie en haut et en bas par 4), et {{3/4}} = {{9/12}} (par 3)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a mangé la plus grande part de son gâteau ?",
+     "options": [
+      "Tom, avec {{3/4}}",
+      "Anna, avec {{2/3}}",
+      "Ils ont mangé autant",
+      "On ne peut pas savoir"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare {{8/12}} et {{9/12}}.",
+     "explication": "{{8/12}} < {{9/12}}, donc {{2/3}} < {{3/4}} : **Tom** a mangé plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "5d74948a-dfff-5ae9-ac74-67bcf1714896",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le jardinier et ses tuyaux",
+   "competence": "raisonner",
+   "situation": "Un jardinier mesure ses tuyaux d’arrosage en mètres et note les longueurs sous forme de fractions. Il repère sur des règles graduées les tuyaux qu’il lui faut.",
+   "documents": [
+    {
+     "id": "regle8",
+     "type": "droite",
+     "titre": "La grande règle",
+     "min": 0,
+     "max": 8,
+     "pas": 1,
+     "division": 4,
+     "points": [
+      {
+       "id": "p",
+       "valeur": 7.25,
+       "nom": "P"
+      }
+     ],
+     "source": "Graduée en quarts de mètre"
+    },
+    {
+     "id": "regle3",
+     "type": "droite",
+     "titre": "La règle en cinquièmes",
+     "min": 3,
+     "max": 4,
+     "pas": 1,
+     "division": 5,
+     "graduationsCliquables": true,
+     "source": "Graduée en cinquièmes de mètre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Le point P est à une longueur de la forme {{?/4}} mètres. Quel est le numérateur ?",
+     "reponse": 29,
+     "aide": "Chaque mètre compte 4 quarts. P est après la graduation 7 : combien de quarts y a-t-il jusqu’à 7, et combien ensuite ?",
+     "explication": "7 mètres = 7 × 4 = 28 quarts, plus 1 quart : P = **{{29/4}}**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre quels deux nombres entiers se situe {{29/4}} ?",
+     "options": [
+      "Entre 7 et 8",
+      "Entre 6 et 7",
+      "Entre 8 et 9",
+      "Entre 29 et 30"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Divise 29 par 4 : la partie entière du quotient donne le premier entier.",
+     "explication": "29 ÷ 4 = 7,25 : on a **7 < {{29/4}} < 8**, comme le montre la position de P."
+    },
+    {
+     "type": "zone",
+     "document": "regle3",
+     "reponse": [
+      "v3.4"
+     ],
+     "enonce": "Place {{17/5}} sur la règle en cinquièmes : touche la bonne graduation.",
+     "aide": "17 ÷ 5 = 3,4 : combien de cinquièmes après la graduation 3 ?",
+     "explication": "{{17/5}} = 3 + {{2/5}} : on compte **2 cinquièmes** après 3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment se comparent {{7/9}} et {{9/7}} ?",
+     "options": [
+      "{{7/9}} est plus petite que 1 et {{9/7}} est plus grande que 1",
+      "{{7/9}} est plus grande que {{9/7}}, car 7 est plus petit que 9",
+      "{{7/9}} et {{9/7}} sont égales, car elles ont les mêmes chiffres",
+      "{{7/9}} est plus grande que 1 et {{9/7}} est plus petite que 1"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare chaque fraction à 1 en regardant le numérateur et le dénominateur.",
+     "explication": "Dans {{7/9}}, 7 < 9 : plus petite que 1. Dans {{9/7}}, 9 > 7 : plus grande que 1. Donc **{{7/9}} < {{9/7}}**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces longueurs de tuyaux de la plus **courte** à la plus **longue**.",
+     "items": [
+      "{{1/4}}",
+      "{{7/9}}",
+      "{{9/7}}",
+      "{{3/2}}"
+     ],
+     "aide": "Compare d’abord chacune à 1, puis {{9/7}} et {{3/2}} entre elles (écris-les en décimaux si besoin).",
+     "explication": "{{1/4}} = 0,25 et {{7/9}} sont plus petits que 1. {{9/7}} ≈ 1,29 et {{3/2}} = 1,5 sont plus grands que 1 : **{{1/4}} < {{7/9}} < {{9/7}} < {{3/2}}**."
+    }
+   ]
+  },
+  {
+   "chapitre": "77846829-9fa4-554e-8179-737d7b9d1502",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La barre de chocolat de Jade et Karim",
+   "competence": "calculer",
+   "situation": "Jade et Karim ont trouvé une barre de chocolat de 8 carrés égaux. Jade en a mangé {{2/8}}, Karim {{3/8}}.",
+   "documents": [
+    {
+     "id": "choco",
+     "type": "schema",
+     "titre": "La barre de chocolat",
+     "largeur": 320,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 50,
+       "l": 55,
+       "h": 55,
+       "texte": "J",
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 50,
+       "l": 55,
+       "h": 55,
+       "texte": "J",
+       "teinte": "corail",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 50,
+       "l": 55,
+       "h": 55,
+       "texte": "K",
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 50,
+       "l": 55,
+       "h": 55,
+       "texte": "K",
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 105,
+       "l": 55,
+       "h": 55,
+       "texte": "K",
+       "teinte": "bleu",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 95,
+       "y": 105,
+       "l": 55,
+       "h": 55,
+       "texte": "",
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 105,
+       "l": 55,
+       "h": 55,
+       "texte": "",
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 205,
+       "y": 105,
+       "l": 55,
+       "h": 55,
+       "texte": "",
+       "teinte": "brun",
+       "motif": "clair"
+      }
+     ],
+     "legende": [
+      {
+       "teinte": "corail",
+       "motif": "plein",
+       "texte": "J : les carrés de Jade"
+      },
+      {
+       "teinte": "bleu",
+       "motif": "plein",
+       "texte": "K : les carrés de Karim"
+      },
+      {
+       "teinte": "brun",
+       "motif": "clair",
+       "texte": "Carrés restants"
+      }
+     ],
+     "source": "Schéma fait pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À eux deux, quelle fraction de la barre ont-ils mangée ? (une fraction, comme {{1/2}})",
+     "reponse": 0.625,
+     "aide": "Ce sont des parts de même taille : on additionne les numérateurs et on garde le dénominateur.",
+     "explication": "{{2/8}} + {{3/8}} = {{5/8}} : **5 carrés** sur 8."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle fraction de la barre reste-t-il ? (une fraction)",
+     "reponse": 0.375,
+     "aide": "La barre entière vaut {{8/8}}. Retire ce qui a été mangé.",
+     "explication": "{{8/8}} − {{5/8}} = {{3/8}} : il reste **3 carrés** sur 8."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève écrit {{2/8}} + {{3/8}} = {{5/16}}. Quelle est son erreur ?",
+     "options": [
+      "Il a aussi additionné les dénominateurs, qui ne doivent pas changer",
+      "Il aurait dû multiplier les deux numérateurs entre eux, 2 × 3",
+      "Il aurait dû soustraire les dénominateurs entre eux, 8 − 8",
+      "Il n’y a aucune erreur : le dénominateur double toujours"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Sur le schéma, la barre est toujours coupée en 8 : le nombre de parts total a-t-il changé ?",
+     "explication": "On ajoute des parts **de même taille** : le dénominateur reste 8. Le bon résultat est {{5/8}}, pas {{5/16}}."
+    }
+   ]
+  },
+  {
+   "chapitre": "77846829-9fa4-554e-8179-737d7b9d1502",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le gâteau de la kermesse",
+   "competence": "calculer",
+   "situation": "Inès prépare un gâteau pour la kermesse. Sa recette, écrite avec des fractions, est prévue pour une seule part de gâteau : elle veut en faire plusieurs.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "titre": "La recette d’Inès",
+     "entete": "Gâteau de la kermesse",
+     "sousTitre": "Pour un gâteau",
+     "emoji": "🎂",
+     "teinte": "rose",
+     "lignes": [
+      {
+       "texte": "Lait",
+       "valeur": "{{1/2}} L",
+       "id": "lait"
+      },
+      {
+       "texte": "Crème",
+       "valeur": "{{1/3}} L",
+       "id": "creme"
+      },
+      {
+       "texte": "Farine",
+       "valeur": "{{5/8}} kg",
+       "id": "farine"
+      },
+      {
+       "texte": "Sucre",
+       "valeur": "{{1/4}} kg",
+       "id": "sucre"
+      }
+     ],
+     "pied": "Recette écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recette",
+     "reponse": [
+      "sucre"
+     ],
+     "enonce": "Parmi les deux ingrédients mesurés en **kilogrammes**, touche celui dont la quantité est la plus petite.",
+     "aide": "Écris {{1/4}} avec le dénominateur 8 pour comparer avec {{5/8}}.",
+     "explication": "{{1/4}} = {{2/8}}, et {{2/8}} < {{5/8}} : le **sucre** est la plus petite quantité."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle quantité de liquide faut-il en tout (lait + crème) ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.8333333333333334,
+     "tolerance": 0.005,
+     "unite": "L",
+     "aide": "Les dénominateurs 2 et 3 sont différents : écris les deux fractions avec le dénominateur 6.",
+     "explication": "{{1/2}} + {{1/3}} = {{3/6}} + {{2/6}} = **{{5/6}} L**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Inès veut faire **3 gâteaux**. Quelle masse de farine lui faut-il ? (une fraction ou un décimal)",
+     "reponse": 1.875,
+     "unite": "kg",
+     "aide": "Multiplier un entier par une fraction : on multiplie le numérateur seul.",
+     "explication": "3 × {{5/8}} = {{15/8}} = **1,875 kg** de farine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour un petit gâteau, Inès n’utilise que les {{4/5}} de la farine ({{5/8}} kg). Quelle masse de farine met-elle ?",
+     "options": [
+      "{{1/2}} kg",
+      "{{9/13}} kg",
+      "{{20/13}} kg",
+      "{{4/5}} kg"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Le mot « de » se traduit par une multiplication : {{4/5}} × {{5/8}}. Simplifie avant de multiplier.",
+     "explication": "{{4/5}} × {{5/8}} = {{20/40}} = **{{1/2}}** kg. On peut aussi simplifier le 5 avant : il reste {{4/8}}, donc {{1/2}}."
+    }
+   ]
+  },
+  {
+   "chapitre": "77846829-9fa4-554e-8179-737d7b9d1502",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le relais de la ville",
+   "competence": "raisonner",
+   "situation": "Quatre coureurs se relaient sur un parcours de 24 km. Chacun court une fraction du parcours ; le dernier, Dan, court ce qui reste.",
+   "documents": [
+    {
+     "id": "relais",
+     "type": "tableau",
+     "titre": "Les parts du parcours",
+     "colonnes": [
+      "Coureur",
+      "Part du parcours"
+     ],
+     "lignes": [
+      [
+       "Amel",
+       "{{1/4}}"
+      ],
+      [
+       "Bilal",
+       "{{3/8}}"
+      ],
+      [
+       "Cléa",
+       "{{1/8}}"
+      ],
+      [
+       "Dan",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Parcours total : 24 km"
+    },
+    {
+     "id": "maxime",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Le calcul de Maxime",
+     "participants": [
+      {
+       "nom": "Maxime",
+       "emoji": "🧑",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maxime",
+       "texte": "Amel et Bilal ont couru {{1/4}} + {{3/8}} = {{4/12}} du parcours à eux deux."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle fraction du parcours Amel et Bilal ont-ils couru **à eux deux** ? (une fraction)",
+     "reponse": 0.625,
+     "aide": "Écris {{1/4}} avec le dénominateur 8 avant d’additionner.",
+     "explication": "{{1/4}} = {{2/8}}, donc {{2/8}} + {{3/8}} = **{{5/8}}** du parcours."
+    },
+    {
+     "type": "zone",
+     "document": "relais",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Parmi Amel, Bilal et Cléa, touche celui qui court **la plus grande** part.",
+     "aide": "Écris les trois fractions avec le même dénominateur, 8.",
+     "explication": "{{1/4}} = {{2/8}}, {{3/8}}, {{1/8}} : **Bilal** court la plus grande part."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle fraction du parcours reste-t-il à Dan ? (une fraction)",
+     "reponse": 0.25,
+     "aide": "Le parcours entier vaut {{8/8}}. Additionne d’abord les trois parts déjà courues.",
+     "explication": "{{2/8}} + {{3/8}} + {{1/8}} = {{6/8}}, et {{8/8}} − {{6/8}} = {{2/8}} = **{{1/4}}**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le résultat de Maxime est faux. Que lui a-t-il fait de mal ?",
+     "options": [
+      "Il a additionné les dénominateurs : 4 + 8 = 12",
+      "Il a oublié de simplifier la fraction obtenue",
+      "Il a multiplié les numérateurs entre eux",
+      "Il a additionné correctement, le résultat est juste"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "{{1/4}} + {{3/8}} : ni le dénominateur 4 ni le 8 ne se retrouvent dans {{4/12}}…",
+     "explication": "Pour additionner, il faut le **même dénominateur**, et on le garde. {{4/12}} est faux : la bonne réponse est {{5/8}}."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Bilal court les {{3/8}} du parcours de 24 km. Combien de kilomètres court-il ?",
+     "reponse": 9,
+     "unite": "km",
+     "aide": "Divise 24 par 8, puis multiplie par 3.",
+     "explication": "24 ÷ 8 × 3 = 3 × 3 = **9 km**."
+    }
+   ]
+  },
+  {
+   "chapitre": "37ab8b16-89e6-5898-973b-14ce23b49525",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La collection d’autocollants de Samir",
+   "competence": "resoudre",
+   "situation": "Samir collectionne les autocollants. Il en avait 12 ; pour son anniversaire, on lui en offre quelques-uns, et il en possède maintenant 35. Combien lui en a-t-on offert ?",
+   "documents": [
+    {
+     "id": "barres",
+     "type": "schema",
+     "titre": "Le schéma en barres",
+     "largeur": 320,
+     "hauteur": 170,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 22,
+       "texte": "35 autocollants en tout",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 36,
+       "l": 240,
+       "h": 36,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 100,
+       "l": 82,
+       "h": 36,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "12"
+      },
+      {
+       "forme": "rect",
+       "x": 122,
+       "y": 100,
+       "l": 158,
+       "h": 36,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "?",
+       "id": "inconnue",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 81,
+       "y": 156,
+       "texte": "avant",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 201,
+       "y": 156,
+       "texte": "offerts",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "barres",
+     "reponse": [
+      "inconnue"
+     ],
+     "enonce": "Touche la partie du schéma qui représente le **nombre inconnu**.",
+     "aide": "C’est la partie qu’on ne connaît pas encore : elle porte un point d’interrogation.",
+     "explication": "Le nombre inconnu est la part marquée « ? » : les autocollants **offerts à l’anniversaire**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’autocollants Samir a-t-il reçus ?",
+     "reponse": 23,
+     "unite": "autocollants",
+     "aide": "L’opération inverse de l’addition 12 + ? = 35 est une soustraction.",
+     "explication": "12 + ? = 35 se résout par 35 − 12 = **23**. Vérification : 12 + 23 = 35."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase répond **correctement** au problème ?",
+     "options": [
+      "Samir a reçu 23 autocollants.",
+      "23",
+      "Samir a reçu 12 autocollants.",
+      "Samir a 35 autocollants."
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Une réponse est une phrase qui dit ce que désigne le nombre trouvé.",
+     "explication": "Un nombre seul n’est pas une réponse : il faut dire ce qu’il désigne. **Samir a reçu 23 autocollants.**"
+    }
+   ]
+  },
+  {
+   "chapitre": "37ab8b16-89e6-5898-973b-14ce23b49525",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une sortie au cinéma",
+   "competence": "resoudre",
+   "situation": "Quatre amis vont au cinéma. À la caisse, ils paient une fois pour tout le monde, puis Léo règle avec un billet de 50 €.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "titre": "Le ticket de caisse",
+     "entete": "Cinéma Le Majestic",
+     "sousTitre": "Samedi — 15 h 05",
+     "emoji": "🎬",
+     "lignes": [
+      {
+       "texte": "4 places de cinéma",
+       "valeur": "28,00 €",
+       "id": "places"
+      },
+      {
+       "texte": "1 grand pop-corn",
+       "valeur": "6,00 €",
+       "id": "pop"
+      },
+      {
+       "texte": "2 boissons",
+       "valeur": "5,00 €",
+       "id": "boissons"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "39,00 €",
+       "gras": true,
+       "id": "total"
+      }
+     ],
+     "pied": "Ticket écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Les 4 places coûtent 28 €. Quel est le prix d’**une** place ?",
+     "reponse": 7,
+     "unite": "€",
+     "aide": "4 × ? = 28 : utilise l’opération inverse de la multiplication.",
+     "explication": "4 × ? = 28 se résout par 28 ÷ 4 = **7 €** la place. Vérification : 4 × 7 = 28."
+    },
+    {
+     "type": "zone",
+     "document": "ticket",
+     "reponse": [
+      "boissons"
+     ],
+     "enonce": "Touche la ligne qu’il faut **diviser par 2** pour trouver le prix d’un seul article.",
+     "aide": "Cherche la ligne qui compte deux articles identiques.",
+     "explication": "La ligne « **2 boissons** » : 5 € pour deux boissons, donc le prix d’une boisson est 5 ÷ 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien coûte **une** boisson ?",
+     "reponse": 2.5,
+     "unite": "€",
+     "aide": "5 ÷ 2 ne tombe pas juste : continue après la virgule.",
+     "explication": "5 ÷ 2 = **2,50 €**. Vérification : 2 × 2,5 = 5."
+    },
+    {
+     "type": "choix",
+     "enonce": "Léo paie avec un billet de 50 €. Quelle opération donne la monnaie qu’on lui rend ?",
+     "options": [
+      "On calcule 50 moins 39",
+      "On calcule 50 plus 39",
+      "On calcule 50 divisé par 39",
+      "On calcule 39 moins 28"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "On cherche ce qui manque à 39 € pour arriver à 50 €.",
+     "explication": "39 + ? = 50 se résout par **50 − 39 = 11 €** de monnaie rendue."
+    }
+   ]
+  },
+  {
+   "chapitre": "37ab8b16-89e6-5898-973b-14ce23b49525",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les timbres de Hugo et Maëlle",
+   "competence": "resoudre",
+   "situation": "Maëlle et son cousin Hugo collectionnent les timbres. Hugo a tenté de calculer sa collection, mais son résultat paraît étrange : il faut démêler le problème.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Le raisonnement de Hugo",
+     "participants": [
+      {
+       "nom": "Maëlle",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maëlle",
+       "texte": "J’ai 45 timbres, et toi tu en as 3 fois moins que moi."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Donc 45 × 3 = 135 : j’ai 135 timbres !"
+      }
+     ]
+    },
+    {
+     "id": "barres",
+     "type": "schema",
+     "titre": "Le schéma en barres",
+     "largeur": 320,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 80,
+       "texte": "Maëlle",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 8,
+       "y": 150,
+       "texte": "Hugo",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        40
+       ],
+       "a": [
+        290,
+        40
+       ],
+       "fleche": "deux",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 185,
+       "y": 30,
+       "texte": "45 timbres",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 56,
+       "l": 70,
+       "h": 40,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 56,
+       "l": 70,
+       "h": 40,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 56,
+       "l": 70,
+       "h": 40,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 126,
+       "l": 70,
+       "h": 40,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "?",
+       "id": "hugo",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Le résultat de Hugo est trop grand. Quelle est son erreur ?",
+     "options": [
+      "« 3 fois moins » veut dire diviser par 3, pas multiplier",
+      "« 3 fois moins » veut dire soustraire 3",
+      "Il a oublié de vérifier que 45 est un multiple de 3",
+      "Il n’y a pas d’erreur, mais il aurait dû écrire une phrase"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Hugo a moins de timbres que Maëlle : son nombre peut-il dépasser 45 ?",
+     "explication": "Hugo en a **moins**. Le mot « fois » ne décide pas : c’est la situation. 3 fois moins, c’est 45 ÷ 3, et 135 est un résultat aberrant."
+    },
+    {
+     "type": "zone",
+     "document": "barres",
+     "reponse": [
+      "hugo"
+     ],
+     "enonce": "Dans le schéma en barres, touche la barre qui représente le nombre de timbres de **Hugo**.",
+     "aide": "La barre de Hugo est une part de la barre de Maëlle, coupée en 3 parts égales.",
+     "explication": "La barre « ? » de Hugo est **un tiers** de la barre de Maëlle : c’est la part de Hugo."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de timbres Hugo possède-t-il ?",
+     "reponse": 15,
+     "unite": "timbres",
+     "aide": "La barre de Maëlle compte 3 parts égales de 45 timbres en tout.",
+     "explication": "45 ÷ 3 = **15** timbres. Vérification : 3 × 15 = 45."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de timbres ont-ils **à eux deux** ?",
+     "reponse": 60,
+     "unite": "timbres",
+     "aide": "Ajoute la collection de Hugo à celle de Maëlle.",
+     "explication": "45 + 15 = **60** timbres à eux deux."
+    }
+   ]
+  },
+  {
+   "chapitre": "dbac06b5-8662-525d-9cc3-1421e0db2d85",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La clôture du potager",
+   "competence": "geometrie",
+   "situation": "Karim veut entourer son potager rectangulaire d’un grillage. Il a fait un plan à l’échelle : un carreau représente 1 mètre.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan du potager",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "nom": "A",
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 1,
+       "nom": "B",
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 6,
+       "nom": "C",
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 6,
+       "nom": "D",
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "id": "ab",
+       "de": "A",
+       "a": "B",
+       "longueur": "8 m"
+      },
+      {
+       "id": "bc",
+       "de": "B",
+       "a": "C",
+       "longueur": "5 m"
+      },
+      {
+       "id": "cd",
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "id": "da",
+       "de": "D",
+       "a": "A"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "source": "Plan fait pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "cd"
+     ],
+     "enonce": "Touche le côté qui a **la même longueur** que le côté [AB].",
+     "aide": "Dans un rectangle, les côtés opposés sont égaux.",
+     "explication": "Le côté [CD] est opposé à [AB] : il mesure aussi **8 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle longueur de grillage faut-il pour faire tout le tour du potager ?",
+     "reponse": 26,
+     "unite": "m",
+     "aide": "Le périmètre d’un rectangle est P = 2 × (L + l).",
+     "explication": "P = 2 × (8 + 5) = 2 × 13 = **26 m**. On peut aussi additionner les quatre côtés : 8 + 5 + 8 + 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le grillage se vend en rouleaux de 10 m. Combien de rouleaux Karim doit-il acheter, au minimum ?",
+     "reponse": 3,
+     "unite": "rouleaux",
+     "aide": "Combien de fois 10 m faut-il pour avoir au moins 26 m ?",
+     "explication": "2 rouleaux font 20 m : trop court. **3 rouleaux** font 30 m, ce qui suffit pour les 26 m."
+    }
+   ]
+  },
+  {
+   "chapitre": "dbac06b5-8662-525d-9cc3-1421e0db2d85",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les plinthes de la chambre de Zélie",
+   "competence": "geometrie",
+   "situation": "Zélie veut poser des plinthes tout autour de sa chambre, en forme de L. Le plan est à l’échelle : un carreau représente 1 mètre. Les traits pointillés ne sont pas des murs.",
+   "documents": [
+    {
+     "id": "chambre",
+     "type": "figure",
+     "titre": "Le plan de la chambre",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 5
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 0.5,
+       "cache": true
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 0.5,
+       "cache": true
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 2.5,
+       "cache": true
+      },
+      {
+       "id": "D",
+       "x": 4,
+       "y": 2.5,
+       "cache": true
+      },
+      {
+       "id": "E",
+       "x": 4,
+       "y": 4.5,
+       "cache": true
+      },
+      {
+       "id": "F",
+       "x": 1,
+       "y": 4.5,
+       "cache": true
+      },
+      {
+       "id": "G",
+       "x": 4,
+       "y": 0.5,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "6 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "2 m"
+      },
+      {
+       "de": "C",
+       "a": "D",
+       "longueur": "? m"
+      },
+      {
+       "de": "D",
+       "a": "E",
+       "longueur": "? m"
+      },
+      {
+       "de": "E",
+       "a": "F",
+       "longueur": "3 m"
+      },
+      {
+       "de": "F",
+       "a": "A",
+       "longueur": "4 m"
+      },
+      {
+       "id": "decoupe",
+       "de": "G",
+       "a": "D",
+       "style": "pointilles"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      }
+     ],
+     "source": "Plan fait pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chambre",
+     "reponse": [
+      "decoupe"
+     ],
+     "enonce": "Touche le trait qui **ne fait pas partie du contour** de la chambre (il sert seulement à découper la figure).",
+     "aide": "Le contour est la ligne continue qui entoure la figure.",
+     "explication": "Le trait **en pointillés** est une ligne de découpe : à l’intérieur de la pièce, il n’y a pas de mur, donc pas de plinthe. Il ne compte pas dans le périmètre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du côté **horizontal** marqué « ? m » ?",
+     "reponse": 3,
+     "unite": "m",
+     "aide": "En bas, la chambre fait 6 m de large ; en haut, la partie large fait 3 m.",
+     "explication": "Le côté du bas mesure 6 m et celui du haut à gauche 3 m : 6 − 3 = **3 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur du côté **vertical** marqué « ? m » ?",
+     "reponse": 2,
+     "unite": "m",
+     "aide": "Le côté de gauche mesure 4 m ; à droite, un côté mesure 2 m.",
+     "explication": "À gauche 4 m, à droite 2 m : le segment manquant mesure 4 − 2 = **2 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle longueur de plinthes faut-il pour faire tout le contour de la chambre ?",
+     "reponse": 20,
+     "unite": "m",
+     "aide": "Additionne les six côtés du contour, sans le trait en pointillés.",
+     "explication": "6 + 2 + 3 + 2 + 3 + 4 = **20 m** de plinthes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Zélie remarque que le contour de sa chambre a la même longueur que celui d’un rectangle de 6 m sur 4 m. A-t-elle raison ?",
+     "options": [
+      "Oui : 2 × (6 + 4) = 20 m, comme son contour",
+      "Non : le rectangle est plus long, 24 m",
+      "Non : le rectangle est plus court, 16 m",
+      "Oui, mais seulement parce que les aires sont égales"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Calcule le périmètre du rectangle de 6 m sur 4 m avec la formule 2 × (L + l).",
+     "explication": "2 × (6 + 4) = **20 m** : le même périmètre. Les deux figures n’ont pourtant pas la même aire."
+    }
+   ]
+  },
+  {
+   "chapitre": "dbac06b5-8662-525d-9cc3-1421e0db2d85",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois pistes pour la fête foraine",
+   "competence": "raisonner",
+   "situation": "Pour la fête foraine, trois pistes de course à pied sont dessinées. On prendra π ≈ 3,14.",
+   "documents": [
+    {
+     "id": "piste",
+     "type": "figure",
+     "titre": "La piste C, vue de dessus",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 10,
+      "ymin": 0,
+      "ymax": 10
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "P",
+       "x": 1,
+       "y": 5,
+       "nom": "P",
+       "position": "o"
+      },
+      {
+       "id": "Q",
+       "x": 9,
+       "y": 5,
+       "nom": "Q",
+       "position": "e"
+      },
+      {
+       "id": "O",
+       "x": 5,
+       "y": 5,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "P",
+       "a": "Q",
+       "longueur": "8 m"
+      }
+     ],
+     "cercles": [
+      {
+       "centre": "O",
+       "rayon": 4
+      }
+     ],
+     "source": "Plan fait pour l’exercice"
+    },
+    {
+     "id": "pistes",
+     "type": "tableau",
+     "titre": "Les trois pistes",
+     "colonnes": [
+      "Piste",
+      "Forme",
+      "Mesures"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Rectangle",
+       "12 m sur 8 m"
+      ],
+      [
+       "B",
+       "Carré",
+       "Côté 10 m"
+      ],
+      [
+       "C",
+       "Cercle",
+       "Voir le plan"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Sur le plan, le segment [PQ] passe par le centre O du cercle de la piste C. Quel est le **rayon** de ce cercle ?",
+     "reponse": 4,
+     "unite": "m",
+     "aide": "Le segment [PQ] est un diamètre : le rayon en est la moitié.",
+     "explication": "Le diamètre vaut 8 m et d = 2 × r : r = 8 ÷ 2 = **4 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le périmètre de la piste C ? (π ≈ 3,14)",
+     "reponse": 25.12,
+     "unite": "m",
+     "aide": "Le périmètre d’un cercle est P = 2 × π × r.",
+     "explication": "P = 2 × 3,14 × 4 = **25,12 m**."
+    },
+    {
+     "type": "zone",
+     "document": "pistes",
+     "reponse": [
+      "r0c0",
+      "r1c0"
+     ],
+     "multiple": true,
+     "enonce": "Quelles pistes ont **exactement le même périmètre** ? Touche-les.",
+     "aide": "Calcule le périmètre du rectangle A et du carré B, puis compare-les à celui de la piste C.",
+     "explication": "A : 2 × (12 + 8) = 40 m. B : 4 × 10 = 40 m. C : 25,12 m. **A et B** ont le même périmètre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un enfant fait **3 tours** de la piste C. Quelle distance parcourt-il ?",
+     "reponse": 75.36,
+     "unite": "m",
+     "aide": "Multiplie le périmètre de la piste C par 3.",
+     "explication": "3 × 25,12 = **75,36 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les pistes A et B ont le même périmètre. Occupent-elles la même place sur le terrain ?",
+     "options": [
+      "Non : A fait 12 × 8 = 96 m² et B fait 10 × 10 = 100 m²",
+      "Oui : le même périmètre donne toujours la même aire",
+      "Non : A fait 40 m² et B fait 40 m²",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare les aires : L × l pour le rectangle, c × c pour le carré.",
+     "explication": "Même périmètre ne veut pas dire même aire : le rectangle couvre **96 m²**, le carré **100 m²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0399dc65-9d41-56cc-a0c0-e68818658988",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La moquette de la chambre",
+   "competence": "geometrie",
+   "situation": "Chloé veut poser de la moquette dans sa chambre rectangulaire. Sur le plan, un carreau représente 1 mètre.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan de la chambre",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 7,
+      "ymin": 0,
+      "ymax": 6
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "nom": "A",
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 6,
+       "y": 1,
+       "nom": "B",
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 6,
+       "y": 5,
+       "nom": "C",
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 5,
+       "nom": "D",
+       "position": "no"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "5 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "4 m"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "violet",
+       "motif": "clair"
+      }
+     ],
+     "source": "Plan fait pour l’exercice"
+    },
+    {
+     "id": "prix",
+     "type": "fiche",
+     "modele": "etiquette",
+     "titre": "L’étiquette du magasin",
+     "entete": "Moquette Douceur",
+     "sousTitre": "Rouleau de 4 m de large",
+     "emoji": "🧶",
+     "lignes": [
+      {
+       "texte": "Prix",
+       "valeur": "12 € le m²",
+       "id": "prix"
+      }
+     ],
+     "pied": "Prix inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire** de la chambre ?",
+     "reponse": 20,
+     "unite": "m²",
+     "aide": "L’aire d’un rectangle est A = L × l.",
+     "explication": "A = 5 × 4 = **20 m²**. On peut aussi compter les 20 carreaux du plan."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle unité s’exprime une aire ?",
+     "options": [
+      "En mètres carrés (m²)",
+      "En mètres (m)",
+      "En mètres cubes (m³)",
+      "En degrés (°)"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "On compte des carrés : l’unité de longueur est élevée au carré.",
+     "explication": "Une aire se compte en carrés : on l’exprime en **m²**, cm², etc."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La moquette coûte 12 € le m². Combien Chloé doit-elle payer pour toute sa chambre ?",
+     "reponse": 240,
+     "unite": "€",
+     "aide": "Multiplie le prix d’un m² par le nombre de m² de la chambre.",
+     "explication": "20 × 12 = **240 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0399dc65-9d41-56cc-a0c0-e68818658988",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les surfaces du camping",
+   "competence": "calculer",
+   "situation": "Le camping des Pins affiche la surface de ses zones, mais pas toujours avec la même unité. Il faut tout convertir en m² pour les comparer.",
+   "documents": [
+    {
+     "id": "surfaces",
+     "type": "tableau",
+     "titre": "Les zones du camping",
+     "colonnes": [
+      "Zone",
+      "Surface",
+      "Unité"
+     ],
+     "lignes": [
+      [
+       "Pelouse",
+       "0,7",
+       "ha"
+      ],
+      [
+       "Parking",
+       "3 500",
+       "m²"
+      ],
+      [
+       "Terrain de boules",
+       "9",
+       "a"
+      ],
+      [
+       "Table de pique-nique",
+       "24 000",
+       "cm²"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Surfaces inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la surface de la **pelouse** en m² ? (1 ha = 10 000 m²)",
+     "reponse": 7000,
+     "unite": "m²",
+     "aide": "0,7 hectare : multiplie 0,7 par 10 000.",
+     "explication": "0,7 × 10 000 = **7 000 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la surface du **terrain de boules** en m² ? (1 a = 100 m²)",
+     "reponse": 900,
+     "unite": "m²",
+     "aide": "1 are = 100 m² : multiplie 9 par 100.",
+     "explication": "9 × 100 = **900 m²**."
+    },
+    {
+     "type": "zone",
+     "document": "surfaces",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Quelle zone a la **plus grande** surface ? Touche-la.",
+     "aide": "Tout est converti en m² : 7 000 m², 3 500 m², 900 m²… et la table ?",
+     "explication": "Pelouse 7 000 m², parking 3 500 m², terrain de boules 900 m², table moins de 3 m² : c’est **la pelouse**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour passer de cm² à m², on divise par :",
+     "options": [
+      "10 000",
+      "100",
+      "1 000",
+      "10"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Un carré de 1 m de côté mesure 100 cm × 100 cm.",
+     "explication": "1 m² = 100 cm × 100 cm = **10 000 cm²** : on multiplie deux fois par 100, donc on divise par 10 000."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la surface de la table de pique-nique en m² ?",
+     "reponse": 2.4,
+     "unite": "m²",
+     "aide": "Divise 24 000 par 10 000.",
+     "explication": "24 000 ÷ 10 000 = **2,4 m²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0399dc65-9d41-56cc-a0c0-e68818658988",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Repeindre le pignon de la maison",
+   "competence": "resoudre",
+   "situation": "Louis repeint le mur de façade d’une petite maison : un rectangle surmonté d’un triangle (le pignon). Sur le plan, un carreau représente 1 mètre.",
+   "documents": [
+    {
+     "id": "facade",
+     "type": "figure",
+     "titre": "La façade",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 8,
+      "ymin": 0,
+      "ymax": 7
+     },
+     "quadrillage": true,
+     "points": [
+      {
+       "id": "A",
+       "x": 1,
+       "y": 1,
+       "nom": "A",
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 1,
+       "nom": "B",
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 4,
+       "nom": "C",
+       "position": "e"
+      },
+      {
+       "id": "D",
+       "x": 1,
+       "y": 4,
+       "nom": "D",
+       "position": "o"
+      },
+      {
+       "id": "E",
+       "x": 4,
+       "y": 6,
+       "nom": "E",
+       "position": "n"
+      },
+      {
+       "id": "M",
+       "x": 4,
+       "y": 4,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "6 m"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "3 m"
+      },
+      {
+       "de": "C",
+       "a": "D"
+      },
+      {
+       "de": "D",
+       "a": "A"
+      },
+      {
+       "de": "D",
+       "a": "E"
+      },
+      {
+       "de": "C",
+       "a": "E"
+      },
+      {
+       "id": "haut",
+       "de": "E",
+       "a": "M",
+       "style": "pointilles",
+       "longueur": "2 m"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "D",
+        "C",
+        "E"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ],
+     "source": "Plan fait pour l’exercice"
+    },
+    {
+     "id": "peinture",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Ce qui n’est pas peint",
+     "entete": "Peinture de façade",
+     "sousTitre": "À ne pas peindre",
+     "emoji": "🎨",
+     "lignes": [
+      {
+       "texte": "Fenêtre",
+       "valeur": "1,5 m sur 1 m"
+      },
+      {
+       "texte": "Porte",
+       "valeur": "2 m sur 1 m"
+      }
+     ],
+     "pied": "Un pot de peinture couvre 5 m² et coûte 14 €"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "facade",
+     "reponse": [
+      "haut"
+     ],
+     "enonce": "Touche la **hauteur** du triangle DCE (celle qui part du sommet E).",
+     "aide": "La hauteur est perpendiculaire à la base [DC], menée depuis le sommet opposé.",
+     "explication": "La hauteur est le segment en pointillés, qui part de E et rejoint la base [DC] à angle droit : elle mesure **2 m**. Ce n’est pas un côté du triangle."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire du triangle DCE (base [DC] = 6 m) ?",
+     "reponse": 6,
+     "unite": "m²",
+     "aide": "A = (base × hauteur) ÷ 2, avec la hauteur du pointillé.",
+     "explication": "(6 × 2) ÷ 2 = **6 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’aire totale de la façade (rectangle ABCD + triangle) ?",
+     "reponse": 24,
+     "unite": "m²",
+     "aide": "Aire du rectangle : 6 × 3. Ajoute l’aire du triangle.",
+     "explication": "6 × 3 = 18 m² pour le rectangle, plus 6 m² pour le triangle : **24 m²**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La fenêtre mesure 1,5 m sur 1 m et la porte 2 m sur 1 m. Quelle aire reste-t-il à peindre ?",
+     "options": [
+      "20,5 m²",
+      "24 m²",
+      "27,5 m²",
+      "22 m²"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Calcule l’aire de chaque ouverture, additionne-les, puis retire-les de 24 m².",
+     "explication": "Fenêtre : 1,5 × 1 = 1,5 m². Porte : 2 × 1 = 2 m². Ensemble 3,5 m², donc 24 − 3,5 = **20,5 m²**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un pot couvre 5 m² et coûte 14 €. Louis n’achète que des pots entiers. Combien dépense-t-il ?",
+     "reponse": 70,
+     "unite": "€",
+     "aide": "Combien de pots faut-il pour couvrir au moins 20,5 m² ? 20,5 ÷ 5 donne un nombre avec une virgule.",
+     "explication": "20,5 ÷ 5 = 4,1 : 4 pots ne suffisent pas, il en faut **5**. 5 × 14 = **70 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d26d6b1-b65f-5c4a-86c8-4621f7358b26",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Au cinéma, le samedi après-midi",
+   "competence": "se-reperer-temps",
+   "situation": "Camille choisit sa séance au cinéma du quartier. Le programme donne l’heure de début et la durée de chaque film.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "fiche",
+     "modele": "horaires",
+     "titre": "Le programme du samedi",
+     "entete": "Cinéma Le Rex",
+     "sousTitre": "Séances — durée du film à droite",
+     "emoji": "🎞️",
+     "lignes": [
+      {
+       "texte": "14 h 15 · Les Mouettes",
+       "valeur": "1 h 40",
+       "id": "s1"
+      },
+      {
+       "texte": "16 h 30 · Rêves de sable",
+       "valeur": "2 h 05",
+       "id": "s2"
+      },
+      {
+       "texte": "20 h 00 · Panique au zoo",
+       "valeur": "1 h 50",
+       "id": "s3"
+      }
+     ],
+     "pied": "Programme écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes dure le film **Les Mouettes** (1 h 40) ?",
+     "reponse": 100,
+     "unite": "min",
+     "aide": "1 h = 60 min : ajoute les 40 minutes.",
+     "explication": "1 h 40 = 60 + 40 = **100 min**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle heure se termine la séance des **Mouettes** (début 14 h 15) ?",
+     "options": [
+      "15 h 55",
+      "15 h 95",
+      "16 h 05",
+      "15 h 45"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Ajoute 1 h à 14 h 15, puis 40 minutes.",
+     "explication": "14 h 15 + 1 h = 15 h 15, puis + 40 min = **15 h 55**. (15 h 95 n’existe pas : une heure n’a que 60 minutes.)"
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "reponse": [
+      "s2"
+     ],
+     "enonce": "Touche la séance dont le film est le **plus long**.",
+     "aide": "Convertis chaque durée en minutes : 100 min, 125 min, 110 min.",
+     "explication": "2 h 05 = 125 min, contre 100 min et 110 min : c’est **Rêves de sable**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après Les Mouettes (fin à 15 h 55), Camille reste pour la séance de 16 h 30. Combien de minutes attend-elle ?",
+     "reponse": 35,
+     "unite": "min",
+     "aide": "De 15 h 55 à 16 h, il y a 5 min. Puis 30 min de plus.",
+     "explication": "15 h 55 → 16 h : 5 min, puis 16 h → 16 h 30 : 30 min. Au total **35 min**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d26d6b1-b65f-5c4a-86c8-4621f7358b26",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le bus du collège",
+   "competence": "lire-tableau",
+   "situation": "Lola doit prendre le bus pour aller du collège à la gare puis au marché. Elle arrive à l’arrêt du collège à l’heure indiquée par l’horloge. Chaque colonne du tableau est un trajet de bus.",
+   "documents": [
+    {
+     "id": "bus",
+     "type": "tableau",
+     "titre": "Les horaires du bus",
+     "colonnes": [
+      "Arrêt",
+      "Bus 1",
+      "Bus 2",
+      "Bus 3"
+     ],
+     "lignes": [
+      [
+       "Collège",
+       "7 h 45",
+       "8 h 15",
+       "8 h 50"
+      ],
+      [
+       "Gare",
+       "8 h 05",
+       "8 h 35",
+       "9 h 10"
+      ],
+      [
+       "Marché",
+       "8 h 22",
+       "8 h 52",
+       "9 h 27"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Horaires inventés pour l’exercice"
+    },
+    {
+     "id": "horloge",
+     "type": "horloge",
+     "titre": "L’heure d’arrivée de Lola au collège",
+     "heures": 8,
+     "minutes": 10,
+     "numerique": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes le **Bus 2** met-il pour aller du Collège à la Gare ?",
+     "reponse": 20,
+     "unite": "min",
+     "aide": "De 8 h 15 à 8 h 35 : compte les minutes.",
+     "explication": "De 8 h 15 à 8 h 35, il s’écoule **20 min**."
+    },
+    {
+     "type": "zone",
+     "document": "bus",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Lola arrive au collège à l’heure indiquée par l’horloge. Touche **l’horaire du premier bus** qu’elle pourra prendre.",
+     "aide": "Lis d’abord l’heure sur l’horloge, puis cherche le premier départ qui suit.",
+     "explication": "L’horloge indique **8 h 10**. Le Bus 1 est parti à 7 h 45 : le premier bus possible est celui de **8 h 15**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes Lola attend-elle ce bus ?",
+     "reponse": 5,
+     "unite": "min",
+     "aide": "De 8 h 10 à 8 h 15.",
+     "explication": "De 8 h 10 à 8 h 15 : **5 min** d’attente."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle heure Lola arrive-t-elle au **Marché** avec ce bus ?",
+     "options": [
+      "8 h 52",
+      "8 h 35",
+      "9 h 27",
+      "8 h 22"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Reste sur la colonne du Bus 2 et descends jusqu’à la ligne « Marché ».",
+     "explication": "Dans la colonne du Bus 2, la ligne Marché indique **8 h 52**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d26d6b1-b65f-5c4a-86c8-4621f7358b26",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le trajet vers la plage",
+   "competence": "resoudre",
+   "situation": "La famille Roche part à la plage en voiture. Hugo lit le carnet de voyage et veut tout calculer : la durée du voyage, la vitesse de la voiture et l’heure du retour.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "fiche",
+     "modele": "horaires",
+     "titre": "Le carnet de voyage",
+     "entete": "Voyage à la plage",
+     "sousTitre": "Samedi matin",
+     "emoji": "🚗",
+     "lignes": [
+      {
+       "texte": "Départ de la maison",
+       "valeur": "8 h 50"
+      },
+      {
+       "texte": "Pause café",
+       "valeur": "30 min"
+      },
+      {
+       "texte": "Arrivée à la plage",
+       "valeur": "11 h 20"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Distance parcourue",
+       "valeur": "180 km",
+       "gras": true
+      }
+     ],
+     "pied": "Carnet écrit pour l’exercice"
+    },
+    {
+     "id": "hugo",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La remarque de Hugo",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maman",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Le voyage a duré 2,5 h. Donc 2 h 5 minutes, non ?"
+      },
+      {
+       "qui": "Maman",
+       "texte": "Regarde bien l’heure de départ et celle d’arrivée."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes durent le voyage **en tout** (de 8 h 50 à 11 h 20, pause comprise) ?",
+     "reponse": 150,
+     "unite": "min",
+     "aide": "De 8 h 50 à 9 h : 10 min. Puis de 9 h à 11 h : 2 h. Enfin 20 min.",
+     "explication": "10 min + 2 h (120 min) + 20 min = **150 min**, soit 2 h 30."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La famille s’arrête 30 min pour un café. Combien de minutes la voiture roule-t-elle ?",
+     "reponse": 120,
+     "unite": "min",
+     "aide": "Retire la pause du temps total.",
+     "explication": "150 − 30 = **120 min** de route, soit 2 h."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hugo dit que 2,5 h = 2 h 5 min. Quelle est la bonne conversion ?",
+     "options": [
+      "2,5 h = 2 h 30 min",
+      "2,5 h = 2 h 50 min",
+      "2,5 h = 2 h 5 min",
+      "2,5 h = 2 h 25 min"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La partie décimale 0,5 h se convertit en minutes : 0,5 × 60.",
+     "explication": "0,5 h = 0,5 × 60 = 30 min, donc **2,5 h = 2 h 30 min**. Le temps se compte en base 60, pas en base 10."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La voiture a parcouru 180 km en 2 h de route. Quelle est sa vitesse moyenne ? (v = d ÷ t)",
+     "reponse": 90,
+     "unite": "km/h",
+     "aide": "Divise la distance par la durée de route, en heures.",
+     "explication": "v = 180 ÷ 2 = **90 km/h**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Au retour, la famille part à 16 h 45 et le trajet dure aussi 2 h 30. À quelle heure arrive-t-elle ?",
+     "options": [
+      "19 h 15",
+      "18 h 15",
+      "19 h 75",
+      "19 h 45"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "16 h 45 + 2 h = 18 h 45. Ajoute ensuite 30 minutes.",
+     "explication": "16 h 45 + 2 h = 18 h 45, puis + 30 min = 18 h 75, c’est-à-dire **19 h 15**."
+    }
+   ]
+  }
+ ]
+}

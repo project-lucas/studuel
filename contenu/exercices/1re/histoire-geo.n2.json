@@ -1,0 +1,3414 @@
+{
+ "niveau": "1re",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "6bd164f4-48ef-5e52-b0f8-7df8e5557634",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre dates sur la frise de Zoé",
+   "competence": "se-reperer-temps",
+   "situation": "Zoé prépare une fiche sur la République des radicaux. Elle place sur une frise quatre lois qui ont changé la vie des Français avant 1914.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La République des radicaux, 1895-1915",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1895,
+     "fin": 1915,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "acc",
+       "date": 1898,
+       "nom": "Accidents du travail"
+      },
+      {
+       "id": "sep",
+       "date": 1905,
+       "nom": "Loi de séparation"
+      },
+      {
+       "id": "ret",
+       "date": 1910,
+       "nom": "Retraites ouvrières"
+      },
+      {
+       "id": "tro",
+       "date": 1913,
+       "nom": "Loi de trois ans"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la loi qui met fin au financement des cultes par l’État.",
+     "reponse": [
+      "sep"
+     ],
+     "aide": "Pense à la loi du 9 décembre : elle sépare les Églises et l’État.",
+     "explication": "C’est la **loi de séparation de 1905** : la République ne reconnaît ni ne salarie aucun culte."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la loi sur les accidents du travail de celle sur les retraites ouvrières ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates lues sur la frise.",
+     "explication": "1910 − 1898 = **12 ans** : la protection des salariés se construit loi après loi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle loi de la frise répond à la menace d’une guerre contre l’Allemagne ?",
+     "options": [
+      "La loi de trois ans, qui allonge le service militaire",
+      "Les retraites ouvrières, qui protègent les vieux travailleurs",
+      "La loi de séparation, qui change le statut des Églises",
+      "La loi sur les accidents du travail, qui indemnise les blessés"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la loi qui touche l’armée.",
+     "explication": "La **loi de trois ans (1913)** allonge le service militaire face à l’Allemagne ; les trois autres sont des lois sociales ou laïques."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bd164f4-48ef-5e52-b0f8-7df8e5557634",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que la République garantit, ce qu’elle ne paie plus",
+   "competence": "analyser-texte",
+   "situation": "En 1905, Émile prépare un exposé pour sa section locale. Il relit les deux premiers articles de la loi de séparation et cherche ce qu’ils changent pour un curé de campagne, un pasteur ou un rabbin.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La loi du 9 décembre 1905",
+     "source": "Loi du 9 décembre 1905, articles 1 et 2 (extraits).",
+     "blocs": [
+      "La République assure la liberté de conscience. Elle garantit le libre exercice des cultes sous les seules restrictions édictées ci-après dans l’intérêt de l’ordre public.",
+      "La République ne [[n|reconnaît]], ne [[n|salarie]] ni ne [[n|subventionne]] aucun culte."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "enonce": "Touche les trois verbes qui disent ce que la République ne fait plus pour aucun culte.",
+     "reponse": [
+      "n"
+     ],
+     "multiple": true,
+     "aide": "Ils sont tous dans le deuxième article, après « ne ».",
+     "explication": "La République ne **reconnaît**, ne **salarie** ni ne **subventionne** : l’État ne finance plus aucun culte."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : la loi le garantit ou le supprime ?",
+     "categories": [
+      "Elle le garantit",
+      "Elle le supprime"
+     ],
+     "items": [
+      [
+       "La liberté de conscience",
+       0
+      ],
+      [
+       "Le libre exercice des cultes",
+       0
+      ],
+      [
+       "Le salaire des prêtres versé par l’État",
+       1
+      ],
+      [
+       "Le Concordat de 1801",
+       1
+      ]
+     ],
+     "aide": "Le Concordat est le régime que la loi remplace.",
+     "explication": "La loi **garantit** la liberté de conscience et le libre exercice des cultes ; elle **supprime** leur financement et le Concordat de 1801."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle limite l’article 1 fixe-t-il au libre exercice des cultes ?",
+     "options": [
+      "Les restrictions nécessaires à l’ordre public",
+      "L’autorisation préalable du préfet du département",
+      "Le nombre de fidèles réunis dans un même lieu",
+      "Le contrôle des sermons par le ministre de l’Intérieur"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la première phrase de l’article 1.",
+     "explication": "Seules les **restrictions édictées dans l’intérêt de l’ordre public** limitent le culte : c’est la neutralité de l’État, pas une guerre aux religions."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit ce texte de l’attitude de l’État envers les religions ?",
+     "options": [
+      "Il combat toutes les religions pour imposer la sienne",
+      "Il reste neutre : il garantit les cultes sans en financer aucun",
+      "Il en choisit une seule et lui verse un salaire",
+      "Il ignore les croyants et leur interdit les réunions"
+     ],
+     "reponse": 1,
+     "aide": "Associe les deux articles : liberté d’un côté, pas d’argent public de l’autre.",
+     "explication": "La laïcité, c’est la **neutralité de l’État** : il garantit la liberté de croire et ne finance aucun culte."
+    }
+   ]
+  },
+  {
+   "chapitre": "6bd164f4-48ef-5e52-b0f8-7df8e5557634",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tocsin d’août 1914",
+   "competence": "analyser-document",
+   "situation": "Dans un village du Jura, un instituteur socialiste imaginaire, Paul, tient un carnet. Le 2 août 1914, il note ce qu’il voit. Pour comprendre, il confronte ce récit à un tableau des camps politiques.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le carnet de Paul, 2 août 1914",
+     "source": "Carnet imaginé pour l’exercice.",
+     "blocs": [
+      "Jaurès est mort depuis deux jours, tué à Paris dans un café. Il voulait sauver la paix.",
+      "La mobilisation est affichée à la mairie. Le syndicaliste de la forge et le curé, qui ne se parlaient plus depuis les inventaires de 1906, sonnent le tocsin ensemble."
+     ]
+    },
+    {
+     "id": "camps",
+     "type": "tableau",
+     "titre": "Les camps politiques avant et en août 1914",
+     "source": "Tableau de synthèse d’après le cours.",
+     "colonnes": [
+      "Camp",
+      "Avant 1914",
+      "En août 1914"
+     ],
+     "lignes": [
+      [
+       "Socialistes (SFIO)",
+       "Jaurès défend la paix et combat la loi de trois ans",
+       "Ils se rallient à l’effort de guerre"
+      ],
+      [
+       "Catholiques",
+       "Ils vivent la séparation et les inventaires comme une blessure",
+       "Ils se rallient à l’effort de guerre"
+      ],
+      [
+       "Action française",
+       "Elle conteste le régime républicain",
+       "Elle soutient la guerre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Jaurès est assassiné le 31 juillet 1914. Depuis combien de jours est-il mort quand Paul écrit ?",
+     "reponse": 2,
+     "unite": "jours",
+     "aide": "Compte du 31 juillet au 2 août.",
+     "explication": "Du 31 juillet au 2 août : **2 jours**. Le principal opposant à la guerre disparaît quelques jours avant la mobilisation."
+    },
+    {
+     "type": "zone",
+     "document": "camps",
+     "enonce": "Touche la case qui dit ce que Jaurès défendait avant 1914.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Cherche la ligne des socialistes, colonne « Avant 1914 ».",
+     "explication": "Jaurès, figure de la SFIO, **défend la paix** et combat la loi de trois ans."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tocsin sonné par le syndicaliste et le curé ?",
+     "options": [
+      "La victoire des socialistes sur les catholiques du village",
+      "L’Union sacrée : des camps rivaux la veille se rassemblent",
+      "La fin de la séparation des Églises et de l’État",
+      "Le refus de la mobilisation par les ouvriers et les prêtres"
+     ],
+     "reponse": 1,
+     "aide": "Relie le carnet à la dernière colonne du tableau.",
+     "explication": "C’est l’**Union sacrée** d’août 1914 : des camps qui se combattaient la veille s’unissent pour faire la guerre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : il relève des tensions d’avant 1914 ou de l’union d’août 1914 ?",
+     "categories": [
+      "Tension d’avant 1914",
+      "Union d’août 1914"
+     ],
+     "items": [
+      [
+       "Les inventaires de 1906",
+       0
+      ],
+      [
+       "Les grèves réprimées par Clemenceau",
+       0
+      ],
+      [
+       "Le tocsin sonné ensemble",
+       1
+      ],
+      [
+       "Le ralliement de la SFIO à l’effort de guerre",
+       1
+      ]
+     ],
+     "aide": "Cherche ce qui sépare les Français, puis ce qui les rassemble.",
+     "explication": "Les **inventaires** et les **grèves** divisent avant 1914 ; le **tocsin commun** et le **ralliement de la SFIO** appartiennent à l’Union sacrée."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f00d200-d0e4-5b8b-940c-9752dbdb4aa7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui travaille encore la terre en 1911 ?",
+   "competence": "lire-graphique",
+   "situation": "Chloé compare ce que font les Français vers 1911. Elle veut savoir si la France est déjà une société d’usines ou si elle reste une société de champs.",
+   "documents": [
+    {
+     "id": "actifs",
+     "type": "graphique",
+     "forme": "secteurs",
+     "titre": "Les actifs français par secteur, vers 1911",
+     "source": "Ordres de grandeur arrondis, d’après le cours.",
+     "categories": [
+      "Agriculture",
+      "Industrie",
+      "Services"
+     ],
+     "series": [
+      {
+       "nom": "Part des actifs",
+       "valeurs": [
+        44,
+        30,
+        26
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "actifs",
+     "enonce": "Touche le secteur qui emploie le plus d’actifs.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la plus grande part du cercle.",
+     "explication": "L’**agriculture** emploie environ 44 % des actifs, plus que l’industrie ou les services."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part des actifs travaille hors de l’agriculture ?",
+     "reponse": 56,
+     "unite": "%",
+     "aide": "Il reste 100 % moins la part de l’agriculture.",
+     "explication": "100 − 44 = **56 %** : plus de la moitié des actifs travaille hors des champs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase décrit le mieux la France de 1911 ?",
+     "options": [
+      "Une société industrielle qui garde quelques paysans",
+      "Une société paysanne qui s’industrialise",
+      "Une société de services sans agriculteurs",
+      "Une société entièrement rurale, sans usines"
+     ],
+     "reponse": 1,
+     "aide": "Le secteur le plus important reste le même qu’en 1870.",
+     "explication": "L’agriculture emploie encore le plus d’actifs alors que l’industrie progresse : c’est une **société paysanne qui s’industrialise**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f00d200-d0e4-5b8b-940c-9752dbdb4aa7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La carte des usines et des campagnes",
+   "competence": "lire-carte",
+   "situation": "Adèle prépare un croquis de la France de 1911 avec cinq villes. Elle doit y retrouver la capitale, les bassins industriels et savoir d’où viennent les ouvriers étrangers.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Cinq villes de la France de 1911",
+     "source": "Croquis d’après le cours.",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "nancy",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "saint-etienne",
+       "symbole": "lettre",
+       "lettre": "D"
+      },
+      {
+       "id": "e",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "E"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville qui compte plus de 2,8 millions d’habitants en 1911.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "C’est la capitale.",
+     "explication": "**B** est Paris : plus de 2,8 millions d’habitants en 1911."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois villes situées dans un grand bassin industriel : le Nord, la Lorraine et la région stéphanoise.",
+     "reponse": [
+      "a",
+      "c",
+      "d"
+     ],
+     "multiple": true,
+     "aide": "Lille pour le Nord, Nancy pour la Lorraine, Saint-Étienne pour son bassin.",
+     "explication": "**A** (Lille, le Nord), **C** (Nancy, la Lorraine) et **D** (Saint-Étienne) sont dans les trois grands bassins industriels. Bordeaux n’en est pas un."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’où viennent principalement les immigrés qui travaillent en France avant 1914 ?",
+     "options": [
+      "De Chine, du Japon et de Corée",
+      "De Belgique, d’Italie et de Pologne",
+      "Du Brésil, d’Argentine et du Chili",
+      "De Turquie, d’Iran et d’Irak"
+     ],
+     "reponse": 1,
+     "aide": "Pense aux pays voisins et à l’Europe.",
+     "explication": "La main-d’œuvre immigrée vient surtout de **Belgique, d’Italie et de Pologne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f00d200-d0e4-5b8b-940c-9752dbdb4aa7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Julien, fils de paysan, devenu employé",
+   "competence": "analyser-document",
+   "situation": "Julien, personnage imaginaire, quitte la ferme familiale pour devenir employé dans un grand magasin parisien. Il écrit à sa sœur Marthe et lui joint des chiffres sur la population de la France et de l’Allemagne.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Julien à sa sœur, 1910",
+     "source": "Lettre écrite pour l’exercice.",
+     "blocs": [
+      "Chère Marthe, je suis maintenant [[e|employé]] au rayon des gants. J’ai quitté la ferme, mais papa la garde : il vend son lait et ses œufs, et les droits de douane le protègent de la concurrence étrangère.",
+      "Ici, le tramway est électrique et l’usine du faubourg a remplacé ses machines à vapeur. Mais chez nous, dans la plaine, presque tout le monde vit encore de la terre."
+     ]
+    },
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La population de la France et de l’Allemagne",
+     "source": "Chiffres arrondis, en millions d’habitants.",
+     "categories": [
+      "France",
+      "Allemagne"
+     ],
+     "series": [
+      {
+       "nom": "Vers 1870",
+       "valeurs": [
+        36,
+        41
+       ],
+       "teinte": "bleu"
+      },
+      {
+       "nom": "Vers 1910",
+       "valeurs": [
+        40,
+        65
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Habitants",
+      "unite": "en millions",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui nomme le nouveau groupe social auquel appartient Julien.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Il travaille dans un grand magasin, pas à l’usine.",
+     "explication": "Julien est **employé** : les grands magasins et les bureaux créent un groupe social nouveau."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément du récit : il change ou il dure ?",
+     "categories": [
+      "Ce qui change",
+      "Ce qui dure"
+     ],
+     "items": [
+      [
+       "L’électricité dans l’usine du faubourg",
+       0
+      ],
+      [
+       "Le travail d’employé de grand magasin",
+       0
+      ],
+      [
+       "L’exploitation familiale protégée par les tarifs douaniers",
+       1
+      ],
+      [
+       "Une plaine où presque tous vivent de la terre",
+       1
+      ]
+     ],
+     "aide": "Cherche ce qui est nouveau en 1910, puis ce qui vient d’avant.",
+     "explication": "**L’électricité** et **l’emploi de bureau** sont des mutations ; **l’exploitation familiale** (tarifs Méline) et la **vie paysanne** sont des permanences."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de millions d’habitants la population allemande augmente-t-elle entre 1870 et 1910 ?",
+     "reponse": 24,
+     "unite": "millions",
+     "aide": "Soustrais les deux barres de l’Allemagne.",
+     "explication": "65 − 41 = **24 millions** d’habitants en plus en Allemagne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois la hausse allemande est-elle plus grande que la hausse française ?",
+     "reponse": 6,
+     "unite": "fois",
+     "aide": "Calcule d’abord la hausse française : 40 − 36.",
+     "explication": "La France gagne 4 millions, l’Allemagne 24 : 24 ÷ 4 = **6 fois**. La démographie française est quasi stagnante."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3a640cb-f1b8-54d8-b101-b336fd74b8c4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Filles à l’école, femmes sans bulletin",
+   "competence": "se-reperer-temps",
+   "situation": "Camille prépare un exposé sur les Françaises avant 1944. Elle place quatre dates sur une frise et se demande ce qu’elles disent ensemble.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Quatre dates de la société française",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1870,
+     "fin": 1950,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "see",
+       "date": 1880,
+       "nom": "Lois Camille Sée"
+      },
+      {
+       "id": "acc",
+       "date": 1898,
+       "nom": "Accidents du travail"
+      },
+      {
+       "id": "ret",
+       "date": 1910,
+       "nom": "Retraites ouvrières"
+      },
+      {
+       "id": "vote",
+       "date": 1944,
+       "nom": "Vote des femmes"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la date à laquelle les Françaises obtiennent le droit de vote.",
+     "reponse": [
+      "vote"
+     ],
+     "aide": "Cherche l’événement le plus tardif.",
+     "explication": "Les Françaises votent à partir de **1944**, bien après les hommes et plusieurs pays voisins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les lois Camille Sée du droit de vote des femmes ?",
+     "reponse": 64,
+     "unite": "ans",
+     "aide": "Soustrais 1880 de 1944.",
+     "explication": "1944 − 1880 = **64 ans** entre l’école secondaire des filles et leur bulletin de vote."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cet écart entre l’école et le vote ?",
+     "options": [
+      "Le droit de vote suit toujours l’ouverture des lycées",
+      "Une société peut scolariser ses filles et leur refuser le vote",
+      "Les filles votent avant d’aller au lycée en France",
+      "Les lois Camille Sée interdisent le vote des femmes"
+     ],
+     "reponse": 1,
+     "aide": "Compare la date de l’école secondaire à celle du vote.",
+     "explication": "Les mutations n’avancent pas au même rythme : on **scolarise les filles** (1880) mais on **leur refuse le vote** jusqu’en 1944."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3a640cb-f1b8-54d8-b101-b336fd74b8c4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Obéissance au mari, école pour les filles",
+   "competence": "analyser-document",
+   "situation": "En 1905, Louise est institutrice et mariée. Elle voudrait comprendre pourquoi sa vie professionnelle a progressé alors que le Code civil continue de la placer sous l’autorité de son mari.",
+   "documents": [
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le Code civil",
+     "source": "Code civil de 1804, article 213 (en vigueur sous la Troisième République).",
+     "blocs": [
+      "Le mari doit protection à sa femme, la femme [[o|obéissance]] à son mari."
+     ]
+    },
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Les droits d’une Française vers 1900",
+     "source": "Tableau de synthèse d’après le cours.",
+     "colonnes": [
+      "Droit",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Travailler (textile, domesticité, ferme, bureau)",
+       "Oui, très largement"
+      ],
+      [
+       "Faire des études secondaires (lois Camille Sée, 1880)",
+       "Oui, dans l’enseignement féminin"
+      ],
+      [
+       "Voter",
+       "Non"
+      ],
+      [
+       "Décider seule dans le mariage",
+       "Non, sous l’autorité du mari"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "code",
+     "enonce": "Touche le mot qui exprime la soumission de la femme mariée.",
+     "reponse": [
+      "o"
+     ],
+     "aide": "Lis ce que la femme doit à son mari.",
+     "explication": "Le mot est **obéissance** : le Code civil place la femme mariée sous l’autorité de son mari."
+    },
+    {
+     "type": "zone",
+     "document": "droits",
+     "enonce": "Touche les deux droits que les femmes n’ont pas.",
+     "reponse": [
+      "r2c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "aide": "Cherche les deux réponses « Non ».",
+     "explication": "Les femmes ne peuvent **pas voter** et ne décident **pas seules dans le mariage**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : avancée ou blocage ?",
+     "categories": [
+      "Une avancée",
+      "Un blocage"
+     ],
+     "items": [
+      [
+       "Des lycées de filles depuis 1880",
+       0
+      ],
+      [
+       "Un travail salarié dans l’usine ou le bureau",
+       0
+      ],
+      [
+       "L’autorité du mari dans le Code civil",
+       1
+      ],
+      [
+       "L’absence du droit de vote",
+       1
+      ]
+     ],
+     "aide": "Une avancée ouvre un droit ; un blocage le refuse.",
+     "explication": "Les **lycées** et le **travail** sont des avancées ; l’**autorité du mari** et l’**absence de vote** sont des blocages."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion tirer des deux documents ?",
+     "options": [
+      "Les femmes ont conquis l’égalité totale dès 1880 grâce à l’école et au travail",
+      "Les femmes étudient et travaillent, mais restent privées d’égalité politique et civile",
+      "Les femmes ne travaillent pas, donc elles ne demandent ni droits ni école",
+      "Les femmes votent depuis 1880 mais ne peuvent pas étudier au lycée"
+     ],
+     "reponse": 1,
+     "aide": "Relis les deux colonnes : ce qui avance et ce qui bloque.",
+     "explication": "Le bilan est **contrasté** : les femmes étudient et travaillent, mais le Code civil et le refus du vote maintiennent l’inégalité."
+    }
+   ]
+  },
+  {
+   "chapitre": "e3a640cb-f1b8-54d8-b101-b336fd74b8c4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui résiste au changement ?",
+   "competence": "analyser-document",
+   "situation": "Un conseiller municipal imaginaire, M. Durand, plaide en 1910 contre le vote des femmes. Léna, élève de 1re, confronte son discours à un graphique de dates et aux résistances de la société.",
+   "documents": [
+    {
+     "id": "discours",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le discours de M. Durand",
+     "source": "Discours imaginé pour l’exercice, d’un personnage fictif.",
+     "blocs": [
+      "Les femmes ont leur place au foyer : l’école et le bureau suffisent à leur ambition. Donner le bulletin de vote serait l’occasion d’une dangereuse [[d|dissolution]] des mœurs.",
+      "Je dis aussi que les lois sociales ruinent nos ateliers : il faut y résister."
+     ]
+    },
+    {
+     "id": "dates",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Année du droit de vote des femmes",
+     "source": "Dates arrondies d’après le cours (Royaume-Uni : 1918 pour une partie des femmes).",
+     "categories": [
+      "Finlande",
+      "Allemagne",
+      "Royaume-Uni",
+      "France"
+     ],
+     "series": [
+      {
+       "nom": "Année",
+       "valeurs": [
+        1906,
+        1918,
+        1918,
+        1944
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Année",
+      "min": 1900,
+      "max": 1950,
+      "pas": 10
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dates",
+     "enonce": "Touche le pays qui accorde le vote aux femmes le plus tardivement.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la plus longue barre.",
+     "explication": "La **France** n’accorde le vote aux femmes qu’en 1944, après la Finlande, l’Allemagne et le Royaume-Uni."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années la France attend-elle de plus que la Finlande ?",
+     "reponse": 38,
+     "unite": "ans",
+     "aide": "Soustrais la date de la Finlande à celle de la France.",
+     "explication": "1944 − 1906 = **38 ans** de retard sur la Finlande."
+    },
+    {
+     "type": "zone",
+     "document": "discours",
+     "enonce": "Touche le mot qui montre la crainte des élites devant le changement des mœurs.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Cherche le mot qui annonce une disparition des règles anciennes.",
+     "explication": "Le mot est **dissolution** : les élites redoutent la « dissolution » des mœurs."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque groupe à ce à quoi il résiste.",
+     "paires": [
+      [
+       "Les élites",
+       "La dissolution des mœurs"
+      ],
+      [
+       "L’Église",
+       "La laïcisation"
+      ],
+      [
+       "Les campagnes",
+       "Les nouveautés urbaines"
+      ],
+      [
+       "Le patronat",
+       "Les lois sociales"
+      ]
+     ],
+     "aide": "Le discours cite deux de ces résistances : repère-les puis déduis les autres.",
+     "explication": "Les **élites** craignent la « dissolution » des mœurs, l’**Église** résiste à la laïcisation, les **campagnes** aux nouveautés urbaines, le **patronat** aux lois sociales."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a295ebf-0975-52d0-92e1-27712005a7d3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois pays d’Afrique du Nord sous contrôle français",
+   "competence": "lire-carte",
+   "situation": "Yanis reconstitue l’avancée de la France en Afrique du Nord. Sur une carte de la Méditerranée, il doit repérer trois pays et ranger quatre dates de conquête.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La Méditerranée occidentale",
+     "source": "Fond de carte actuel : les frontières sont celles d’aujourd’hui.",
+     "fond": "mediterranee",
+     "frontieres": true,
+     "cadrage": [
+      -12,
+      28,
+      16,
+      46
+     ],
+     "regionsCliquables": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays devenu protectorat français en 1881.",
+     "reponse": [
+      "TUN"
+     ],
+     "aide": "C’est le plus à l’est des trois pays d’Afrique du Nord.",
+     "explication": "C’est la **Tunisie**, placée sous protectorat français en 1881."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays conquis dès 1830 et organisé en départements français.",
+     "reponse": [
+      "DZA"
+     ],
+     "aide": "Il se trouve entre la Tunisie et le Maroc.",
+     "explication": "C’est l’**Algérie**, colonie de peuplement rattachée administrativement à la France."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la conquête de la plus ancienne à la plus récente.",
+     "items": [
+      "Début de la conquête de l’Algérie (1830)",
+      "Protectorat sur la Tunisie (1881)",
+      "Madagascar devient une colonie (1895)",
+      "Protectorat sur le Maroc (1912)"
+     ],
+     "aide": "Commence par l’Algérie, finis par le Maroc.",
+     "explication": "Algérie **1830**, Tunisie **1881**, Madagascar **1895**, Maroc **1912** : la conquête s’étale sur plus de quatre-vingts ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a295ebf-0975-52d0-92e1-27712005a7d3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Partager l’Afrique : règles et rivalités",
+   "competence": "analyser-document",
+   "situation": "Lucie prépare une fiche sur la course aux colonies. Elle lit un résumé des règles posées à Berlin puis un tableau des crises entre puissances européennes.",
+   "documents": [
+    {
+     "id": "berlin",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La conférence de Berlin, 1884-1885",
+     "source": "D’après l’Acte général de la conférence de Berlin (1885), texte adapté.",
+     "blocs": [
+      "Une puissance qui s’installe sur une côte africaine doit en avertir les autres. Elle doit aussi y maintenir une autorité [[r|réelle]], capable de faire respecter les droits acquis : une simple déclaration ne suffit plus."
+     ]
+    },
+    {
+     "id": "crises",
+     "type": "tableau",
+     "titre": "Les crises entre puissances",
+     "source": "Tableau de synthèse d’après le cours.",
+     "colonnes": [
+      "Crise",
+      "Date",
+      "Puissances opposées",
+      "Issue"
+     ],
+     "lignes": [
+      [
+       "Fachoda",
+       "1898",
+       "France et Royaume-Uni, au Soudan",
+       "Recul de la France"
+      ],
+      [
+       "Première crise marocaine",
+       "1905",
+       "France et Allemagne",
+       "Tension durable"
+      ],
+      [
+       "Seconde crise marocaine",
+       "1911",
+       "France et Allemagne",
+       "Tension durable"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "berlin",
+     "enonce": "Touche le mot qui montre qu’il faut occuper le territoire pour de bon et non le revendiquer sur le papier.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche l’adjectif qui qualifie l’autorité à maintenir.",
+     "explication": "Le mot est **réelle** : c’est le principe d’**occupation effective**."
+    },
+    {
+     "type": "zone",
+     "document": "crises",
+     "enonce": "Touche la case qui indique le résultat de l’incident de Fachoda pour la France.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Lis la dernière colonne de la première ligne.",
+     "explication": "À Fachoda, la France **recule** devant le Royaume-Uni."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Fachoda de la seconde crise marocaine ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Soustrais les dates de la colonne « Date ».",
+     "explication": "1911 − 1898 = **13 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent ces crises à la veille de 1914 ?",
+     "options": [
+      "Les empires coloniaux rapprochent l’Europe de sa propre guerre",
+      "Le partage de l’Afrique supprime toutes les rivalités européennes",
+      "Le Royaume-Uni et l’Allemagne s’allient contre la France",
+      "Les colonies n’ont aucun lien avec les tensions en Europe"
+     ],
+     "reponse": 0,
+     "aide": "Relis les puissances opposées : ce sont les mêmes que sur le continent européen.",
+     "explication": "Les rivalités coloniales opposent déjà les grandes puissances d’Europe : elles **rapprochent l’Europe de sa propre guerre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a295ebf-0975-52d0-92e1-27712005a7d3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un empire de dix millions de kilomètres carrés",
+   "competence": "analyser-document",
+   "situation": "Hugo veut mesurer la place de l’empire colonial dans la France de 1914. Il croise une carte de quelques lieux de la conquête avec les chiffres de l’empire et ceux de la métropole.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre lieux de l’empire colonial",
+     "source": "Carte schématique d’après le cours.",
+     "fond": "monde",
+     "cadrage": [
+      -25,
+      -30,
+      60,
+      40
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "alger",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "dakar",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lon": 32.12,
+       "lat": 9.89,
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lon": 47.52,
+       "lat": -18.91,
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "L’empire et la métropole vers 1914",
+     "source": "Chiffres arrondis d’après le cours.",
+     "colonnes": [
+      "",
+      "Empire colonial",
+      "France métropolitaine"
+     ],
+     "lignes": [
+      [
+       "Habitants (millions)",
+       "50",
+       "40"
+      ],
+      [
+       "Superficie (millions de km²)",
+       "10",
+       "0,55"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le lieu de l’incident de 1898 entre la France et le Royaume-Uni au Soudan.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche un point à l’intérieur du continent, au sud de l’Égypte.",
+     "explication": "**C** est Fachoda, où la France recule devant le Royaume-Uni en 1898."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le territoire de l’océan Indien devenu colonie française en 1895.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est une grande île.",
+     "explication": "**D** est Madagascar (Antananarivo), colonie française en 1895."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque résistance à son territoire.",
+     "paires": [
+      [
+       "Abd el-Kader",
+       "Algérie"
+      ],
+      [
+       "Samory Touré",
+       "Afrique de l’Ouest"
+      ],
+      [
+       "Les insurrections malgaches",
+       "Madagascar"
+      ]
+     ],
+     "aide": "Chaque nom est lié à une conquête étudiée dans le cours.",
+     "explication": "**Abd el-Kader** résiste en Algérie, **Samory Touré** en Afrique de l’Ouest, les **insurrections malgaches** sur la Grande Île : la conquête est longue et contestée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En moyenne, combien d’habitants de l’empire y a-t-il pour un habitant de la métropole ?",
+     "reponse": 1.25,
+     "unite": "habitant",
+     "aide": "Divise 50 par 40.",
+     "explication": "50 ÷ 40 = **1,25** : l’empire compte plus d’habitants que la métropole."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel rang l’empire colonial français occupe-t-il dans le monde en 1914 ?",
+     "options": [
+      "Le premier, devant le Royaume-Uni",
+      "Le deuxième, après le Royaume-Uni",
+      "Le troisième, après l’Allemagne",
+      "Le quatrième, après les États-Unis"
+     ],
+     "reponse": 1,
+     "aide": "Un seul empire est plus étendu.",
+     "explication": "Avec 10 millions de km², la France a le **deuxième empire colonial**, après le Royaume-Uni."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2c2a507-4180-590d-aba3-70a0fe883d8a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le devoir de civiliser, tel qu’on le disait",
+   "competence": "analyser-texte",
+   "situation": "Nina lit l’un des discours les plus célèbres de la colonisation. Elle doit comprendre l’argument sans le juger rétrospectivement : c’est ainsi qu’il était formulé en 1885.",
+   "documents": [
+    {
+     "id": "ferry",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Jules Ferry à la Chambre des députés",
+     "source": "Jules Ferry, discours du 28 juillet 1885 (extrait).",
+     "blocs": [
+      "Je répète qu’il y a pour les races supérieures un droit, parce qu’il y a un devoir pour elles. Elles ont le devoir de civiliser les races inférieures."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À quelle famille de motivations l’argument de Ferry se rattache-t-il ?",
+     "options": [
+      "Économique : trouver des débouchés",
+      "Stratégique : contrôler des routes maritimes",
+      "Idéologique : la « mission civilisatrice »",
+      "Fiscale : réduire l’impôt en métropole"
+     ],
+     "reponse": 2,
+     "aide": "Ferry parle d’un devoir de civiliser, pas de commerce ni de bases navales.",
+     "explication": "C’est la **mission civilisatrice** : un argument idéologique qui repose sur une hiérarchie des races alors très répandue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec un mot de l’extrait.",
+     "texte": "Pour Ferry, les « races supérieures » ont le ___ de civiliser.",
+     "reponses": [
+      [
+       "devoir"
+      ]
+     ],
+     "banque": [
+      "devoir",
+      "hasard",
+      "profit"
+     ],
+     "aide": "Relis la deuxième phrase de l’extrait.",
+     "explication": "Le mot est **devoir** : Ferry présente la colonisation comme une obligation morale."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque motivation à un exemple.",
+     "paires": [
+      [
+       "Économique",
+       "Des matières premières et des débouchés"
+      ],
+      [
+       "Stratégique",
+       "Des bases navales et le prestige après 1871"
+      ],
+      [
+       "Idéologique",
+       "La mission civilisatrice"
+      ]
+     ],
+     "aide": "Trois familles : l’argent, la puissance, les idées.",
+     "explication": "Les colonies offrent des **matières premières** et des **débouchés** (économique), des **bases navales** et du **prestige** (stratégique), un projet de **progrès** affiché (idéologique)."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2c2a507-4180-590d-aba3-70a0fe883d8a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Colonies : le débat de 1885",
+   "competence": "analyser-document",
+   "situation": "En 1885, la Chambre débat de la conquête. Samuel prépare une fiche : qui défend quoi, et pourquoi l’expansion continue malgré les opposants ?",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "tableau",
+     "titre": "Les voix du débat de 1885",
+     "source": "Positions résumées d’après le cours.",
+     "colonnes": [
+      "Qui",
+      "Ce qu’il défend"
+     ],
+     "lignes": [
+      [
+       "Jules Ferry",
+       "Le devoir des races supérieures de civiliser"
+      ],
+      [
+       "Georges Clemenceau",
+       "Une violence coûteuse, qui détourne la France de la revanche"
+      ],
+      [
+       "Une partie des socialistes, dont Jaurès",
+       "La dénonciation de l’exploitation des colonisés"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "motifs",
+     "type": "tableau",
+     "titre": "Ce que cherche la colonisation",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Motif",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Débouchés",
+       "Vendre les produits d’une industrie protégée"
+      ],
+      [
+       "Matières premières",
+       "Arachide, caoutchouc, coton, minerais"
+      ],
+      [
+       "Prestige",
+       "Redonner du poids à la France après 1871"
+      ],
+      [
+       "Bases",
+       "Ports et routes maritimes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "enonce": "Touche la case qui dit pourquoi Clemenceau s’oppose à la conquête.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne de Clemenceau, colonne « Ce qu’il défend ».",
+     "explication": "Pour Clemenceau, la conquête est une **violence coûteuse** qui détourne la France de la revanche contre l’Allemagne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque voix à sa position.",
+     "paires": [
+      [
+       "Ferry",
+       "Un devoir de civiliser"
+      ],
+      [
+       "Clemenceau",
+       "Une conquête qui détourne de la revanche"
+      ],
+      [
+       "Jaurès",
+       "L’exploitation à dénoncer"
+      ]
+     ],
+     "aide": "Relis les lignes du premier tableau.",
+     "explication": "**Ferry** défend le devoir de civiliser, **Clemenceau** craint un détournement de la revanche, **Jaurès** dénonce l’exploitation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque motif : économique ou stratégique ?",
+     "categories": [
+      "Économique",
+      "Stratégique"
+     ],
+     "items": [
+      [
+       "Vendre les produits d’une industrie protégée",
+       0
+      ],
+      [
+       "Obtenir de l’arachide et du caoutchouc",
+       0
+      ],
+      [
+       "Redonner du prestige après 1871",
+       1
+      ],
+      [
+       "Installer des bases navales",
+       1
+      ]
+     ],
+     "aide": "L’argent d’un côté, la puissance de l’autre.",
+     "explication": "**Débouchés** et **matières premières** sont économiques ; **prestige** et **bases navales** sont stratégiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ces oppositions arrêtent-elles l’expansion ?",
+     "options": [
+      "Oui : la France renonce à toute conquête après 1885",
+      "Non : l’expansion se poursuit malgré les oppositions",
+      "Oui : Clemenceau obtient une loi contre les colonies",
+      "Non : tous les députés soutiennent Ferry"
+     ],
+     "reponse": 1,
+     "aide": "Le débat existe, mais regarde ce qui se passe ensuite.",
+     "explication": "L’expansion **se poursuit** malgré les oppositions : Madagascar, l’Afrique de l’Ouest, le Maroc."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2c2a507-4180-590d-aba3-70a0fe883d8a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une affiche qui fait rêver, un coût qu’elle tait",
+   "competence": "analyser-document",
+   "situation": "Une affiche imaginaire annonce une exposition coloniale. Éloïse la lit comme une propagande, puis la confronte au bilan réel de la colonisation.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Affiche d’exposition",
+     "source": "Affiche écrite pour l’exercice.",
+     "entete": "Exposition de l’Empire",
+     "sousTitre": "Venez voir ce que l’aventure rapporte",
+     "emoji": "🗺️",
+     "lignes": [
+      {
+       "texte": "Des terres lointaines, des richesses à portée de main",
+       "id": "reves"
+      },
+      {
+       "texte": "La mission de la France : apporter le progrès",
+       "id": "progres"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Entrée : 1 franc",
+       "valeur": "Enfants gratuit",
+       "id": "prix"
+      }
+     ],
+     "pied": "Ouvert tous les jours",
+     "teinte": "ambre"
+    },
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Le coût réel de l’empire",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Pour les colonisés",
+      "Pour la métropole"
+     ],
+     "lignes": [
+      [
+       "Guerres de conquête, épidémies",
+       "Un coût budgétaire élevé"
+      ],
+      [
+       "Travail forcé, impôt de capitation, réquisitions",
+       "Un empire qui rapporte moins qu’on ne l’a dit"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne qui reprend l’argument de la « mission civilisatrice ».",
+     "reponse": [
+      "progres"
+     ],
+     "aide": "Cherche la ligne qui parle de progrès.",
+     "explication": "La ligne sur **le progrès** est la mission civilisatrice : un bienfait mis en avant par la propagande."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : l’affiche le montre ou elle le tait ?",
+     "categories": [
+      "L’affiche le montre",
+      "L’affiche le tait"
+     ],
+     "items": [
+      [
+       "Une aventure et des richesses",
+       0
+      ],
+      [
+       "Un progrès apporté aux peuples",
+       0
+      ],
+      [
+       "Le travail forcé et l’impôt de capitation",
+       1
+      ],
+      [
+       "Les épidémies des guerres de conquête",
+       1
+      ]
+     ],
+     "aide": "La propagande présente l’aventure et le bienfait, jamais le prix payé.",
+     "explication": "L’affiche montre l’**aventure** et le **bienfait** ; elle **tait** le **travail forcé**, l’**impôt de capitation** et les **épidémies**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le tableau du bilan économique de l’empire avant 1914 ?",
+     "options": [
+      "L’empire rapporte beaucoup plus qu’il ne coûte",
+      "L’empire rapporte moins qu’on ne l’a dit et pèse sur le budget",
+      "L’empire ne coûte rien à la métropole",
+      "L’empire finance entièrement les retraites ouvrières"
+     ],
+     "reponse": 1,
+     "aide": "Regarde la colonne « Pour la métropole ».",
+     "explication": "L’empire **rapporte moins qu’on ne l’a dit** et coûte cher au budget : la propagande est plus brillante que le bilan."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces énoncés, lesquels sont vrais ENSEMBLE à propos de la colonisation ?",
+     "options": [
+      "Elle est justifiée par le progrès",
+      "Elle est menée par la force",
+      "Elle est payée par les colonisés",
+      "Elle est décidée par les colonisés eux-mêmes"
+     ],
+     "reponse": [
+      0,
+      1,
+      2
+     ],
+     "aide": "Trois énoncés se complètent : justification, méthode, coût.",
+     "explication": "La colonisation est **justifiée par le progrès**, **menée par la force** et **payée par les colonisés** : les trois sont vrais ensemble. Les colonisés ne la décident pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1a3788f-0dae-5050-bc9a-e2f5982b0091",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Citoyen en métropole, sujet aux colonies",
+   "competence": "lire-tableau",
+   "situation": "Rose compare la vie d’un citoyen de métropole et celle d’un habitant des colonies à la veille de 1914. Elle remplit un tableau avec trois droits.",
+   "documents": [
+    {
+     "id": "statuts",
+     "type": "tableau",
+     "titre": "Deux statuts, deux droits",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "",
+      "En métropole",
+      "Dans les colonies"
+     ],
+     "lignes": [
+      [
+       "Le statut",
+       "Citoyen",
+       "Sujet"
+      ],
+      [
+       "Le vote",
+       "Oui",
+       "Non"
+      ],
+      [
+       "La circulation",
+       "Libre",
+       "Contrôlée"
+      ],
+      [
+       "Le droit applicable",
+       "Le droit commun",
+       "Le Code de l’indigénat"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "statuts",
+     "enonce": "Touche la case qui dit si un colonisé peut voter.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la ligne « Le vote », colonne des colonies.",
+     "explication": "Dans les colonies, la réponse est **Non** : les sujets n’ont pas de droits politiques."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La plupart des colonisés sont des ___ français, et non des citoyens.",
+     "reponses": [
+      [
+       "sujets"
+      ]
+     ],
+     "banque": [
+      "sujets",
+      "électeurs",
+      "ministres"
+     ],
+     "aide": "Relis la ligne « Le statut ».",
+     "explication": "La plupart des colonisés sont des **sujets** français, sans droits politiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que permet le Code de l’indigénat à l’administration ?",
+     "options": [
+      "Punir les colonisés sans passer par un juge",
+      "Organiser des élections libres dans les colonies",
+      "Donner la citoyenneté à tous les colonisés",
+      "Interdire aux colons de posséder des terres"
+     ],
+     "reponse": 0,
+     "aide": "C’est un droit d’exception.",
+     "explication": "Le Code de l’indigénat permet de **punir sans juge** : une même République, deux droits."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1a3788f-0dae-5050-bc9a-e2f5982b0091",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un administrateur, trois statuts",
+   "competence": "analyser-document",
+   "situation": "Un administrateur colonial imaginaire explique son travail à un jeune stagiaire. Maëlle croise ce récit avec un tableau des statuts et réfléchit à la façon dont les colonisés ont pu résister.",
+   "documents": [
+    {
+     "id": "adm",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Notes d’un administrateur",
+     "source": "Texte écrit pour l’exercice, d’un personnage fictif.",
+     "blocs": [
+      "Ici, je peux faire punir un homme sans passer devant un [[j|juge]] : c’est le Code de l’indigénat. Il doit aussi demander une autorisation pour quitter son district.",
+      "Quelques-uns apprennent le français à l’école de la mission. Ils lisent nos livres, et certains nous opposent déjà nos propres principes."
+     ]
+    },
+    {
+     "id": "statuts",
+     "type": "tableau",
+     "titre": "Colonie, protectorat, Algérie",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Statut",
+      "Ce qu’il implique"
+     ],
+     "lignes": [
+      [
+       "Colonie",
+       "Administration directe"
+      ],
+      [
+       "Protectorat",
+       "Le souverain local est maintenu, sous tutelle"
+      ],
+      [
+       "Algérie",
+       "Des départements français"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "adm",
+     "enonce": "Touche le mot qui montre que l’indigénat écarte la justice ordinaire.",
+     "reponse": [
+      "j"
+     ],
+     "aide": "Cherche la personne que l’on ne rencontre pas avant d’être puni.",
+     "explication": "Le mot est **juge** : l’administration punit sans juge."
+    },
+    {
+     "type": "zone",
+     "document": "statuts",
+     "enonce": "Touche la case du statut où le souverain local reste en place.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Ce statut garde un souverain, mais sous tutelle.",
+     "explication": "C’est le **protectorat** : le souverain local est maintenu, sous contrôle français."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : résistance directe ou appropriation des outils du colonisateur ?",
+     "categories": [
+      "Résistance directe",
+      "Appropriation des outils"
+     ],
+     "items": [
+      [
+       "Une révolte armée",
+       0
+      ],
+      [
+       "Le refus de l’impôt",
+       0
+      ],
+      [
+       "Une désertion",
+       0
+      ],
+      [
+       "Réclamer l’égalité au nom des principes français",
+       1
+      ]
+     ],
+     "aide": "Trois gestes s’opposent frontalement ; un s’appuie sur ce qu’on a appris à l’école.",
+     "explication": "Révoltes, refus de l’impôt et désertions sont des **résistances directes** ; réclamer l’égalité avec les principes enseignés est une **appropriation des outils**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet inattendu l’école coloniale produit-elle ?",
+     "options": [
+      "Elle forme quelques élites qui réclameront l’égalité",
+      "Elle scolarise la grande majorité des enfants colonisés",
+      "Elle empêche tout mouvement nationaliste durable",
+      "Elle remplace entièrement les langues locales"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du texte.",
+     "explication": "Le colonisateur forme, sans le vouloir, des **élites** qui lui opposeront ses propres principes."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1a3788f-0dae-5050-bc9a-e2f5982b0091",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une lettre au gouverneur",
+   "competence": "analyser-document",
+   "situation": "En 1912, un jeune lettré colonisé imaginaire, formé à l’école française, écrit au gouverneur. Anaïs confronte sa lettre au schéma de la société coloniale.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un lettré au gouverneur, 1912",
+     "source": "Lettre écrite pour l’exercice, d’un personnage fictif.",
+     "blocs": [
+      "Monsieur le gouverneur, votre école m’a appris la liberté et l’[[e|égalité]] proclamées en 1789.",
+      "Je sers l’administration comme interprète, mais je reste un sujet, sans droit de vote. Appliquez-nous ces principes."
+     ]
+    },
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "La société coloniale",
+     "source": "Schéma d’après le cours.",
+     "largeur": 320,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 70,
+       "y": 20,
+       "l": 180,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Minorité européenne",
+       "id": "eu",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        64
+       ],
+       "a": [
+        160,
+        86
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 88,
+       "l": 240,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Intermédiaires locaux",
+       "id": "inter",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        132
+       ],
+       "a": [
+        160,
+        154
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 156,
+       "l": 280,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Majorité colonisée",
+       "id": "maj",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 218,
+       "texte": "Postes et revenus en haut, école rare en bas",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche le groupe composé de chefs, d’interprètes et de tirailleurs qui servent l’administration.",
+     "reponse": [
+      "inter"
+     ],
+     "aide": "Ce groupe est au milieu du schéma.",
+     "explication": "Ce sont les **intermédiaires locaux** : chefs, interprètes, tirailleurs."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le principe de 1789 que l’auteur de la lettre réclame pour lui-même.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Il l’associe à la liberté dans la première phrase.",
+     "explication": "Il réclame l’**égalité** : le colonisateur a formé ceux qui lui opposent ses propres principes."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quel groupe du schéma appartient l’auteur de la lettre ?",
+     "options": [
+      "À la minorité européenne",
+      "Aux intermédiaires locaux",
+      "À la majorité colonisée sans école",
+      "À l’administration métropolitaine"
+     ],
+     "reponse": 1,
+     "aide": "Il dit qu’il sert l’administration comme interprète.",
+     "explication": "Interprète au service de l’administration, il est un **intermédiaire local**, mais reste un sujet sans vote."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes pour expliquer comment l’école coloniale nourrit les revendications.",
+     "items": [
+      "Le colonisateur ouvre une école pour former des auxiliaires",
+      "Un petit nombre d’enfants apprennent le français",
+      "Ils découvrent les principes de 1789",
+      "Ils réclament l’égalité",
+      "Les mouvements nationalistes du XXe siècle reprennent ces revendications"
+     ],
+     "aide": "Pars de l’école, finis par les mouvements du XXe siècle.",
+     "explication": "De l’**école** aux **revendications d’égalité**, puis aux **mouvements nationalistes** : le colonisateur a formé, sans le vouloir, ceux qui lui opposeront ses principes."
+    }
+   ]
+  },
+  {
+   "chapitre": "1abbb402-5ef3-50d3-abca-fbde6f29961a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre années, quatre repères",
+   "competence": "se-reperer-temps",
+   "situation": "Basile prépare une frise de la Grande Guerre pour son cahier d’histoire. Il y place quatre événements, du déclenchement à la fin des combats.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Première Guerre mondiale, 1913-1919",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1913,
+     "fin": 1919,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "sar",
+       "date": 1914,
+       "nom": "Sarajevo"
+      },
+      {
+       "id": "ver",
+       "date": 1916,
+       "nom": "Verdun et la Somme"
+      },
+      {
+       "id": "usa",
+       "date": 1917,
+       "nom": "Les États-Unis entrent"
+      },
+      {
+       "id": "arm",
+       "date": 1918,
+       "nom": "Armistice"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin aux combats.",
+     "reponse": [
+      "arm"
+     ],
+     "aide": "C’est le dernier événement de la frise.",
+     "explication": "L’**armistice** est signé le 11 novembre 1918 à Rethondes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’attentat de Sarajevo de l’armistice ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Soustrais 1914 de 1918.",
+     "explication": "1918 − 1914 = **4 ans** de guerre, de l’attentat de Sarajevo à l’armistice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phase de la guerre correspond à Verdun et à la Somme, en 1916 ?",
+     "options": [
+      "La guerre de mouvement",
+      "La guerre de position",
+      "Le retour du mouvement",
+      "La fin des combats"
+     ],
+     "reponse": 1,
+     "aide": "Pense aux tranchées et à l’artillerie massive.",
+     "explication": "Verdun et la Somme appartiennent à la **guerre de position** (1915-1917) : tranchées, artillerie, gaz."
+    }
+   ]
+  },
+  {
+   "chapitre": "1abbb402-5ef3-50d3-abca-fbde6f29961a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq semaines pour embraser l’Europe",
+   "competence": "analyser-document",
+   "situation": "Zoé a noté dans le désordre cinq dates de l’été 1914 et dessiné les deux blocs d’alliances. Elle veut comprendre pourquoi une crise dans les Balkans devient une guerre européenne.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Les deux systèmes d’alliances en 1914",
+     "source": "Schéma d’après le cours.",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 22,
+       "texte": "Triple-Alliance",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 235,
+       "y": 22,
+       "texte": "Triple-Entente",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 36,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "Allemagne",
+       "id": "de",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 94,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "Autriche-Hongrie",
+       "id": "ah",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 15,
+       "y": 152,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "Italie *",
+       "id": "it",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 165,
+       "y": 36,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "France",
+       "id": "fr",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 165,
+       "y": 94,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Royaume-Uni",
+       "id": "uk",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 165,
+       "y": 152,
+       "l": 140,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Russie",
+       "id": "ru",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 222,
+       "texte": "* neutre en août 1914",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Le cahier de Zoé (dates dans le désordre)",
+     "source": "Notes d’après le cours.",
+     "colonnes": [
+      "Date",
+      "Fait"
+     ],
+     "lignes": [
+      [
+       "4 août",
+       "Le Royaume-Uni déclare la guerre à l’Allemagne, après l’invasion de la Belgique"
+      ],
+      [
+       "28 juin",
+       "Assassinat de l’archiduc François-Ferdinand à Sarajevo"
+      ],
+      [
+       "3 août",
+       "L’Allemagne déclare la guerre à la France"
+      ],
+      [
+       "23 juillet",
+       "Ultimatum de l’Autriche-Hongrie à la Serbie"
+      ],
+      [
+       "1er août",
+       "L’Allemagne déclare la guerre à la Russie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche les trois membres de la Triple-Entente.",
+     "reponse": [
+      "fr",
+      "uk",
+      "ru"
+     ],
+     "multiple": true,
+     "aide": "Ils sont tous dans la colonne de droite.",
+     "explication": "La Triple-Entente réunit la **France**, le **Royaume-Uni** et la **Russie**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces faits de juin à août 1914, du premier au dernier.",
+     "items": [
+      "Assassinat de l’archiduc François-Ferdinand à Sarajevo",
+      "Ultimatum de l’Autriche-Hongrie à la Serbie",
+      "L’Allemagne déclare la guerre à la Russie",
+      "L’Allemagne déclare la guerre à la France",
+      "Le Royaume-Uni déclare la guerre à l’Allemagne"
+     ],
+     "aide": "Lis les dates dans la première colonne du tableau, du 28 juin au 4 août.",
+     "explication": "Dans l’ordre : **28 juin**, **23 juillet**, **1er août**, **3 août**, **4 août** : les mobilisations s’enchaînent en cinq semaines."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de jours séparent l’ultimatum à la Serbie de la déclaration de guerre de l’Allemagne à la France ?",
+     "reponse": 11,
+     "unite": "jours",
+     "aide": "Du 23 juillet au 31 juillet, puis jusqu’au 3 août.",
+     "explication": "Du 23 juillet au 3 août : 8 jours jusqu’au 31 juillet, puis 3 de plus : **11 jours**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une crise entre l’Autriche-Hongrie et la Serbie devient-elle européenne ?",
+     "options": [
+      "Les alliances étendent automatiquement le conflit aux autres puissances",
+      "La Serbie appartient à la Triple-Alliance et à la Triple-Entente",
+      "Le Royaume-Uni attaque l’Autriche-Hongrie dès le 28 juin",
+      "L’Italie envahit la Belgique avant l’ultimatum"
+     ],
+     "reponse": 0,
+     "aide": "Observe les deux blocs du schéma.",
+     "explication": "Les **deux systèmes d’alliances** étendent le conflit de façon quasi automatique : chaque déclaration entraîne les alliés."
+    }
+   ]
+  },
+  {
+   "chapitre": "1abbb402-5ef3-50d3-abca-fbde6f29961a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lettre d’un soldat en 1917",
+   "competence": "analyser-document",
+   "situation": "Un soldat imaginaire, Étienne, écrit à sa mère depuis un secteur calme du front en 1917. Camille croise sa lettre avec un tableau sur « l’année de la crise » et sur les trois phases de la guerre.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’Étienne à sa mère, 1917",
+     "source": "Lettre écrite pour l’exercice, d’un personnage fictif.",
+     "blocs": [
+      "Chère maman, nous creusons et refaisons la même [[t|tranchée]] depuis des mois. Le front ne bouge presque plus, mais les obus continuent d’emporter nos camarades.",
+      "On dit que les Américains arrivent et que, en Russie, tout bascule. Dans certains régiments, des hommes refusent de remonter à l’attaque."
+     ]
+    },
+    {
+     "id": "crise",
+     "type": "tableau",
+     "titre": "1917, l’année de la crise",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Événement",
+      "Sa portée"
+     ],
+     "lignes": [
+      [
+       "Les mutineries françaises",
+       "Le consentement s’use"
+      ],
+      [
+       "Les révolutions russes",
+       "Un allié va sortir de la guerre"
+      ],
+      [
+       "L’entrée en guerre des États-Unis (avril)",
+       "La balance bascule à terme"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui montre que la guerre est devenue une guerre de position.",
+     "reponse": [
+      "t"
+     ],
+     "aide": "Cherche l’ouvrage que les soldats refont sans cesse.",
+     "explication": "Le mot est **tranchée** : le front est figé, c’est la guerre de position."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : guerre de mouvement ou guerre de position ?",
+     "categories": [
+      "Guerre de mouvement",
+      "Guerre de position"
+     ],
+     "items": [
+      [
+       "La bataille de la Marne (1914)",
+       0
+      ],
+      [
+       "Les offensives allemandes du printemps 1918",
+       0
+      ],
+      [
+       "Verdun (1916)",
+       1
+      ],
+      [
+       "Les tranchées et l’artillerie massive",
+       1
+      ]
+     ],
+     "aide": "Le mouvement, c’est 1914 et 1918 ; la position, c’est entre les deux.",
+     "explication": "La **Marne** et les offensives de **1918** sont des guerres de mouvement ; **Verdun** et les **tranchées** relèvent de la guerre de position."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque événement de 1917 à sa portée.",
+     "paires": [
+      [
+       "Les mutineries françaises",
+       "Le consentement s’use"
+      ],
+      [
+       "Les révolutions russes",
+       "Un allié va sortir de la guerre"
+      ],
+      [
+       "L’entrée des États-Unis",
+       "La balance bascule à terme"
+      ]
+     ],
+     "aide": "Relis le tableau, colonne par colonne.",
+     "explication": "Les **mutineries** montrent l’usure du consentement, les **révolutions russes** annoncent la sortie d’un allié, l’**entrée des États-Unis** fera basculer la balance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la lettre d’Étienne du « front qui ne bouge plus » ?",
+     "options": [
+      "La guerre continue de consommer des hommes à la place des kilomètres",
+      "La guerre est finie dans son secteur depuis plusieurs mois",
+      "La guerre se gagne uniquement par de grandes avances",
+      "La guerre ne tue plus car les armées restent immobiles"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase de la lettre.",
+     "explication": "Un front immobile n’est pas une guerre qui s’arrête : il **consomme des hommes à la place des kilomètres**."
+    }
+   ]
+  },
+  {
+   "chapitre": "094a71eb-cc33-5fbe-a4f4-50a6c550ca16",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le bilan humain de la France",
+   "competence": "lire-graphique",
+   "situation": "Maya lit le bilan de la Grande Guerre pour la France. Elle veut mesurer l’ampleur du deuil qui marque la société après 1918.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Pertes françaises de la Première Guerre mondiale",
+     "source": "Chiffres arrondis, en millions d’hommes.",
+     "categories": [
+      "Morts",
+      "Blessés"
+     ],
+     "series": [
+      {
+       "nom": "Soldats français",
+       "valeurs": [
+        1.4,
+        4
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Soldats",
+      "unite": "en millions",
+      "min": 0,
+      "max": 5,
+      "pas": 1
+     },
+     "valeurs": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "bilan",
+     "enonce": "Touche la barre des soldats blessés.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "C’est la plus haute des deux barres.",
+     "explication": "Environ **4 millions** de soldats français sont blessés."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de soldats sont morts ou blessés au total ?",
+     "reponse": 5.4,
+     "unite": "millions",
+     "aide": "Additionne les deux barres.",
+     "explication": "1,4 + 4 = **5,4 millions** de soldats touchés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que traduisent les monuments aux morts présents dans presque chaque commune ?",
+     "options": [
+      "Un deuil de masse inscrit dans le paysage",
+      "La victoire facile des armées françaises",
+      "La fin des commémorations du 11 Novembre",
+      "Le départ des soldats pour les colonies"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que chaque commune a perdu.",
+     "explication": "Les monuments aux morts inscrivent dans chaque commune un **deuil de masse**, avec les commémorations du 11 Novembre."
+    }
+   ]
+  },
+  {
+   "chapitre": "094a71eb-cc33-5fbe-a4f4-50a6c550ca16",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Tout pour le front, même l’épargne",
+   "competence": "analyser-document",
+   "situation": "Une affiche imaginaire de 1916 appelle les Français à prêter leur argent à l’État. Noa la lit comme une source sur la guerre totale.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "titre": "Affiche de 1916",
+     "source": "Affiche écrite pour l’exercice.",
+     "entete": "Pour la victoire, prêtez !",
+     "sousTitre": "La guerre se gagne aussi à l’arrière",
+     "emoji": "📢",
+     "lignes": [
+      {
+       "texte": "L’État emprunte : chaque épargne compte",
+       "id": "emprunt"
+      },
+      {
+       "texte": "Les ouvriers fabriquent des obus, les femmes les remplacent",
+       "id": "femmes"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Il faut tenir, la victoire est proche",
+       "id": "moral"
+      }
+     ],
+     "pied": "Souscrivez dès aujourd’hui",
+     "teinte": "bleu"
+    },
+    {
+     "id": "arriere",
+     "type": "tableau",
+     "titre": "L’arrière mobilisé",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Ressource",
+      "Comment elle est mobilisée"
+     ],
+     "lignes": [
+      [
+       "L’industrie",
+       "Les usines se convertissent à l’armement"
+      ],
+      [
+       "Les femmes",
+       "Aux champs, aux guichets et dans les usines : les « munitionnettes »"
+      ],
+      [
+       "Les colonies",
+       "Elles fournissent des soldats et des travailleurs"
+      ],
+      [
+       "L’État",
+       "Il dirige l’économie, rationne et emprunte massivement"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche la ligne de l’affiche qui évoque le financement de la guerre.",
+     "reponse": [
+      "emprunt"
+     ],
+     "aide": "Cherche le verbe lié à l’argent prêté à l’État.",
+     "explication": "La ligne sur **l’emprunt** : l’État finance la guerre par la dette et l’inflation."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque ressource à son rôle dans la guerre totale.",
+     "paires": [
+      [
+       "L’industrie",
+       "Conversion à l’armement"
+      ],
+      [
+       "Les femmes",
+       "Les munitionnettes"
+      ],
+      [
+       "Les colonies",
+       "Soldats et travailleurs"
+      ],
+      [
+       "L’État",
+       "Rationnement et emprunts"
+      ]
+     ],
+     "aide": "Relis le tableau, ligne par ligne.",
+     "explication": "L’**industrie** produit des armes, les **femmes** deviennent « munitionnettes », les **colonies** fournissent hommes et travailleurs, l’**État** rationne et emprunte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les États financent la guerre par l’___ et par l’___.",
+     "reponses": [
+      [
+       "emprunt",
+       "la dette",
+       "dette"
+      ],
+      [
+       "inflation"
+      ]
+     ],
+     "banque": [
+      "emprunt",
+      "inflation",
+      "tourisme",
+      "exportation"
+     ],
+     "aide": "Pense à ce que l’affiche demande aux Français et à ce qui fait monter les prix.",
+     "explication": "La guerre se paie par l’**emprunt** (la dette) et l’**inflation**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi cette affiche illustre-t-elle une « guerre totale » ?",
+     "options": [
+      "Elle mobilise l’argent, le travail et les esprits de toute la population",
+      "Elle s’adresse seulement aux soldats présents sur le front",
+      "Elle annonce la fin des combats et le retour de la paix",
+      "Elle interdit aux civils de s’occuper de la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Regarde à qui elle s’adresse et ce qu’elle demande.",
+     "explication": "La guerre totale **mobilise l’économie, les esprits et les populations entières**, pas seulement l’armée."
+    }
+   ]
+  },
+  {
+   "chapitre": "094a71eb-cc33-5fbe-a4f4-50a6c550ca16",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Vivre sous l’occupation, subir le génocide",
+   "competence": "analyser-document",
+   "situation": "Une habitante imaginaire d’un village du nord de la France occupé raconte sa vie en 1916. Inès confronte son récit à un tableau sur les violences contre les civils.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Journal d’Alice, village du Nord occupé, 1916",
+     "source": "Journal écrit pour l’exercice, d’un personnage fictif.",
+     "blocs": [
+      "Les soldats allemands logent chez nous. Ils prennent le blé, les chevaux et le charbon : ce sont des [[r|réquisitions]] permanentes, et nous manquons de pain.",
+      "Nous n’avons aucune nouvelle de mon mari, qui est resté de l’autre côté du front."
+     ]
+    },
+    {
+     "id": "violences",
+     "type": "tableau",
+     "titre": "Les civils victimes de la guerre",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Violence",
+      "Où"
+     ],
+     "lignes": [
+      [
+       "Occupation et réquisitions",
+       "Le nord de la France, la Belgique"
+      ],
+      [
+       "Bombardements, famines",
+       "Partout"
+      ],
+      [
+       "Déplacements de populations",
+       "Fronts de l’Est et des Balkans"
+      ],
+      [
+       "Génocide des Arméniens (1915-1916)",
+       "Empire ottoman"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le mot qui désigne les prélèvements imposés à la population par l’armée d’occupation.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Ils portent sur le blé, les chevaux et le charbon.",
+     "explication": "Le mot est **réquisitions** : l’occupant prend les ressources des civils."
+    },
+    {
+     "type": "zone",
+     "document": "violences",
+     "enonce": "Touche la ligne du tableau qui correspond au récit d’Alice.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche l’occupation et les réquisitions.",
+     "explication": "Alice vit l’**occupation** et les **réquisitions**, comme les habitants du nord de la France et de la Belgique."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque violence à sa zone.",
+     "paires": [
+      [
+       "Occupation et réquisitions",
+       "Nord de la France et Belgique"
+      ],
+      [
+       "Déplacements de populations",
+       "Fronts de l’Est et des Balkans"
+      ],
+      [
+       "Génocide des Arméniens",
+       "Empire ottoman"
+      ]
+     ],
+     "aide": "Utilise la colonne « Où » du tableau.",
+     "explication": "L’**occupation** touche le Nord et la Belgique, les **déplacements** les fronts de l’Est et des Balkans, le **génocide des Arméniens** l’Empire ottoman."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le génocide des Arméniens est-il présenté comme la violence extrême de cette guerre contre des civils ?",
+     "options": [
+      "Un pouvoir l’organise contre des civils : environ 1,2 million de morts",
+      "Il oppose deux armées régulières sur un front fixe, comme à Verdun",
+      "Il touche surtout les soldats français pendant l’année 1917 au front",
+      "Il se limite à des réquisitions de blé dans quelques villages du Nord"
+     ],
+     "reponse": 0,
+     "aide": "Relis qui l’organise et contre qui.",
+     "explication": "Le pouvoir **jeune-turc** s’en prend à des **civils** : environ **1,2 million** de morts en 1915-1916."
+    }
+   ]
+  },
+  {
+   "chapitre": "0185ddf4-f6b4-5b63-85ed-7900eee0c96a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois dates de la paix",
+   "competence": "se-reperer-temps",
+   "situation": "Théo prépare un schéma de la sortie de guerre. Il place trois dates sur une frise : la fin des combats, le grand traité, l’organisation chargée de garantir la paix.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De l’armistice à la Société des Nations",
+     "source": "Frise établie d’après le cours.",
+     "debut": 1917,
+     "fin": 1921,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "arm",
+       "date": 1918,
+       "nom": "Armistice"
+      },
+      {
+       "id": "ver",
+       "date": 1919,
+       "nom": "Traité de Versailles"
+      },
+      {
+       "id": "sdn",
+       "date": 1920,
+       "nom": "Création de la SDN"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui crée l’organisation chargée de garantir la paix par la sécurité collective.",
+     "reponse": [
+      "sdn"
+     ],
+     "aide": "Ce sont les trois lettres de la Société des Nations.",
+     "explication": "La **Société des Nations (SDN)** est créée en 1920 pour garantir la paix."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’armistice de la création de la SDN ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais 1918 de 1920.",
+     "explication": "1920 − 1918 = **2 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prévoit l’article 231 du traité dont la frise donne l’année ?",
+     "options": [
+      "La responsabilité de l’Allemagne dans la guerre",
+      "La création de la Société des Nations",
+      "Le partage de l’Afrique entre puissances",
+      "La fin du Concordat de 1801"
+     ],
+     "reponse": 0,
+     "aide": "C’est le traité de 1919 signé à Versailles.",
+     "explication": "L’**article 231** du traité de Versailles reconnaît la **responsabilité de l’Allemagne** dans la guerre."
+    }
+   ]
+  },
+  {
+   "chapitre": "0185ddf4-f6b4-5b63-85ed-7900eee0c96a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le droit des peuples et la carte de 1919",
+   "competence": "analyser-document",
+   "situation": "Hélène étudie les principes de Wilson et la nouvelle carte de l’Europe centrale. Elle se demande si la paix de 1919 est vraiment une paix de principes.",
+   "documents": [
+    {
+     "id": "wilson",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les Quatorze Points de Wilson",
+     "source": "D’après les Quatorze Points du président Wilson (8 janvier 1918), texte adapté.",
+     "blocs": [
+      "Les [[p|peuples]] doivent pouvoir décider de leur avenir. Une association générale des nations sera formée pour garantir l’indépendance de tous les États, grands et petits."
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe centrale aujourd’hui",
+     "source": "Fond de carte actuel : les frontières sont celles d’aujourd’hui.",
+     "fond": "europe",
+     "cadrage": [
+      5,
+      42,
+      35,
+      58
+     ],
+     "regionsCliquables": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "wilson",
+     "enonce": "Touche le mot qui désigne ceux à qui Wilson reconnaît le droit de décider de leur avenir.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Le droit des ___ à disposer d’eux-mêmes.",
+     "explication": "Le mot est **peuples** : c’est le droit des peuples à disposer d’eux-mêmes."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le pays qui renaît en 1918 à l’est de l’Allemagne.",
+     "reponse": [
+      "POL"
+     ],
+     "aide": "Il a Varsovie pour capitale.",
+     "explication": "C’est la **Pologne**, État qui renaît en 1918 en Europe centrale."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les deux pays actuels qui formaient la Tchécoslovaquie.",
+     "reponse": [
+      "CZE",
+      "SVK"
+     ],
+     "multiple": true,
+     "aide": "Ils ont Prague et Bratislava pour capitales.",
+     "explication": "La Tchécoslovaquie, née en 1918, correspond à la **Tchéquie** et à la **Slovaquie**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : principe de Wilson ou réalité de 1919 ?",
+     "categories": [
+      "Principe de Wilson",
+      "Réalité de 1919"
+     ],
+     "items": [
+      [
+       "Le droit des peuples à disposer d’eux-mêmes",
+       0
+      ],
+      [
+       "Une association des nations pour la paix",
+       0
+      ],
+      [
+       "Des minorités qui restent dans les nouvelles frontières",
+       1
+      ],
+      [
+       "L’article 231 qui désigne l’Allemagne responsable",
+       1
+      ]
+     ],
+     "aide": "Les principes sont dans le texte ; la réalité, ce sont les traités et les frontières.",
+     "explication": "Wilson annonce le **droit des peuples** et une **association des nations** ; la réalité de 1919 laisse des **minorités** et impose l’**article 231** : c’est une paix de vainqueurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "0185ddf4-f6b4-5b63-85ed-7900eee0c96a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une organisation sans armée",
+   "competence": "analyser-document",
+   "situation": "Un diplomate imaginaire note ses impressions à Genève en 1921. Mathis croise ses notes avec un tableau des faiblesses de la Société des Nations.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Notes d’un diplomate, Genève, 1921",
+     "source": "Notes écrites pour l’exercice, d’un personnage fictif.",
+     "blocs": [
+      "Nous votons des résolutions, mais si un État les ignore, nous n’avons ni soldats ni sanctions crédibles à lui opposer.",
+      "Le président américain avait inspiré notre Société, mais son [[s|Sénat]] a refusé de ratifier le traité : les États-Unis n’entreront pas chez nous."
+     ]
+    },
+    {
+     "id": "faiblesses",
+     "type": "tableau",
+     "titre": "Les faiblesses de la Société des Nations",
+     "source": "Tableau d’après le cours.",
+     "colonnes": [
+      "Faiblesse",
+      "Conséquence"
+     ],
+     "lignes": [
+      [
+       "Les États-Unis n’y entrent pas (refus du Sénat)",
+       "L’inspirateur est absent"
+      ],
+      [
+       "L’Allemagne et la Russie soviétique en sont d’abord exclues",
+       "Elle n’est pas universelle"
+      ],
+      [
+       "Elle n’a pas de force armée",
+       "Aucune sanction crédible"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "faiblesses",
+     "enonce": "Touche la faiblesse qui explique que la SDN n’ait aucune sanction crédible.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Que manque-t-il à la SDN pour imposer ses décisions ?",
+     "explication": "Elle n’a **pas de force armée** : sans moyen de contrainte, aucune sanction n’est crédible."
+    },
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche le mot qui désigne l’institution américaine ayant refusé de ratifier le traité.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "C’est l’une des deux chambres du Congrès américain.",
+     "explication": "C’est le **Sénat** américain : son refus laisse l’inspirateur de la SDN hors de l’organisation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : empire disparu ou État né après 1918 ?",
+     "categories": [
+      "Empire disparu",
+      "État né après 1918"
+     ],
+     "items": [
+      [
+       "L’Empire russe",
+       0
+      ],
+      [
+       "L’Empire ottoman",
+       0
+      ],
+      [
+       "La Pologne",
+       1
+      ],
+      [
+       "La Tchécoslovaquie",
+       1
+      ],
+      [
+       "La Yougoslavie",
+       1
+      ]
+     ],
+     "aide": "Quatre empires disparaissent ; des États neufs naissent en Europe centrale.",
+     "explication": "Les **empires russe** et **ottoman** disparaissent ; la **Pologne**, la **Tchécoslovaquie** et la **Yougoslavie** naissent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la sortie de guerre prépare déjà les crises des années 1930 ?",
+     "options": [
+      "Elle laisse des vaincus humiliés et des minorités, avec une SDN sans moyens",
+      "Elle supprime toute frontière en Europe centrale et unifie les peuples",
+      "Elle rend la SDN plus puissante que les États et que leurs armées",
+      "Elle rend à l’Allemagne toutes ses colonies et sa puissance militaire"
+     ],
+     "reponse": 0,
+     "aide": "Relie les trois documents : traité, frontières, SDN.",
+     "explication": "Une paix qui **humilie les vaincus**, laisse des **minorités mécontentes** et une **SDN sans force** est fragile dès le départ."
+    }
+   ]
+  },
+  {
+   "chapitre": "0003a1f4-f95b-52e1-b530-88bcb3934cd6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quand la ville devient majoritaire",
+   "competence": "lire-graphique",
+   "situation": "Sacha prépare un exposé sur l’urbanisation du monde. Il a trouvé un graphique qui suit la part de la population mondiale vivant en ville, de 1950 à une prévision pour 2050.",
+   "documents": [
+    {
+     "id": "taux",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Taux d’urbanisation du monde",
+     "source": "Chiffres arrondis ; 2050 est une prévision.",
+     "categories": [
+      "1950",
+      "2007",
+      "Aujourd’hui",
+      "2050 (prévu)"
+     ],
+     "series": [
+      {
+       "nom": "Population urbaine",
+       "valeurs": [
+        30,
+        50,
+        56,
+        68
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part de la population",
+      "unite": "en %",
+      "min": 0,
+      "max": 80,
+      "pas": 10
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "taux",
+     "enonce": "Touche la barre qui n’est qu’une prévision.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Regarde la mention entre parenthèses.",
+     "explication": "La barre **2050 (prévu)** est une prévision : plus de 65 % de citadins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points le taux d’urbanisation a-t-il augmenté entre 1950 et aujourd’hui ?",
+     "reponse": 26,
+     "unite": "points",
+     "aide": "Soustrais la valeur de 1950 à celle d’aujourd’hui.",
+     "explication": "56 − 30 = **26 points** : la part des citadins a presque doublé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que mesure le taux d’urbanisation ?",
+     "options": [
+      "Le nombre de villes d’un pays",
+      "La part de la population qui vit en ville",
+      "La surface occupée par les villes",
+      "Le nombre de villes de plus de 10 millions d’habitants"
+     ],
+     "reponse": 1,
+     "aide": "Le graphique l’exprime en pourcentage.",
+     "explication": "Le **taux d’urbanisation** est la **part de la population qui vit en ville**, exprimée en %."
+    }
+   ]
+  },
+  {
+   "chapitre": "0003a1f4-f95b-52e1-b530-88bcb3934cd6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Nord est urbanisé, le Sud urbanise",
+   "competence": "analyser-document",
+   "situation": "Yasmine compare des mégapoles et des taux d’urbanisation. Elle doit éviter un piège : confondre un taux élevé et une croissance rapide.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre mégapoles",
+     "source": "Carte schématique d’après le cours.",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      -5,
+      160,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "tokyo",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "delhi",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "shanghai",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "le-caire",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    },
+    {
+     "id": "regions",
+     "type": "tableau",
+     "titre": "Taux d’urbanisation par région",
+     "source": "Chiffres arrondis, vers 2020.",
+     "colonnes": [
+      "Région",
+      "Taux d’urbanisation (%)"
+     ],
+     "lignes": [
+      [
+       "Amérique du Nord",
+       83
+      ],
+      [
+       "Europe",
+       75
+      ],
+      [
+       "Asie",
+       51
+      ],
+      [
+       "Afrique",
+       44
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la mégapole d’Afrique.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "C’est la ville au bord du Nil.",
+     "explication": "**D** est Le Caire, mégapole d’Afrique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel écart de taux d’urbanisation sépare l’Amérique du Nord de l’Afrique ?",
+     "reponse": 39,
+     "unite": "points",
+     "aide": "Soustrais les deux taux du tableau.",
+     "explication": "83 − 44 = **39 points** : l’Afrique est la moins urbanisée des quatre régions."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où se concentre aujourd’hui l’essentiel de la croissance urbaine ?",
+     "options": [
+      "Dans les pays du Nord, déjà très urbanisés",
+      "Dans les pays du Sud, malgré un taux plus bas",
+      "Dans les régions polaires",
+      "Dans les campagnes des pays développés"
+     ],
+     "reponse": 1,
+     "aide": "Un taux élevé n’est pas une croissance forte.",
+     "explication": "Les pays du **Sud** s’urbanisent vite : leur taux est plus bas, mais le nombre de citadins augmente le plus."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme urbaine à sa définition.",
+     "paires": [
+      [
+       "Mégapole",
+       "Plus de 10 millions d’habitants"
+      ],
+      [
+       "Conurbation",
+       "Des villes soudées entre elles"
+      ],
+      [
+       "Mégalopole",
+       "Un chapelet urbain continu"
+      ]
+     ],
+     "aide": "Mégapole parle de taille ; les deux autres parlent d’assemblage de villes.",
+     "explication": "Une **mégapole** dépasse 10 millions d’habitants, une **conurbation** soude des villes (la Ruhr), une **mégalopole** est un chapelet urbain continu."
+    }
+   ]
+  },
+  {
+   "chapitre": "0003a1f4-f95b-52e1-b530-88bcb3934cd6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Kabura, ville imaginaire en pleine croissance",
+   "competence": "analyser-document",
+   "situation": "Kabura est une ville imaginaire du Sud. Jade analyse ses chiffres de croissance et un reportage sur les difficultés de la ville.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "tableau",
+     "titre": "Kabura en 1990",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "Indicateur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Population en 1990",
+       "2 millions"
+      ],
+      [
+       "Migrants arrivés des campagnes chaque année",
+       "120 000"
+      ],
+      [
+       "Naissances moins décès chaque année",
+       "80 000"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "reportage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Reportage à Kabura",
+     "source": "Reportage imaginé pour l’exercice.",
+     "blocs": [
+      "Les quartiers neufs s’étalent chaque année plus loin, et les trajets entre ces quartiers et le centre durent deux heures.",
+      "Des [[b|bidonvilles]] s’installent dans le lit de la rivière, inondé à chaque saison des pluies. L’eau potable manque et les ordures ne sont pas collectées."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "De combien d’habitants la population de Kabura augmente-t-elle chaque année ?",
+     "reponse": 200000,
+     "unite": "habitants",
+     "aide": "Additionne l’exode rural et l’accroissement naturel.",
+     "explication": "120 000 + 80 000 = **200 000 habitants** par an : les deux moteurs jouent ensemble."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de cette croissance vient de l’exode rural ?",
+     "reponse": 60,
+     "unite": "%",
+     "aide": "Divise 120 000 par la croissance totale.",
+     "explication": "120 000 ÷ 200 000 = 0,6 soit **60 %** : l’exode rural est le premier moteur."
+    },
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche le mot qui désigne l’habitat précaire installé dans le lit de la rivière.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche le mot lié à l’habitat précaire.",
+     "explication": "Le mot est **bidonvilles** : un des visages de l’urbanisation rapide."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque difficulté de Kabura selon le défi qu’elle illustre.",
+     "categories": [
+      "Logement et transports",
+      "Eau et déchets",
+      "Risques"
+     ],
+     "items": [
+      [
+       "Deux heures de trajet entre les quartiers neufs et le centre",
+       0
+      ],
+      [
+       "Le manque d’eau potable",
+       1
+      ],
+      [
+       "Des ordures non collectées",
+       1
+      ],
+      [
+       "Des habitations dans un lit de rivière inondable",
+       2
+      ]
+     ],
+     "aide": "Trois défis : se loger et se déplacer, l’eau et les déchets, les risques naturels.",
+     "explication": "Le **trajet** relève du transport, le **manque d’eau** et les **ordures** de la soutenabilité, l’**inondation** des risques."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdee7168-06c2-5c4b-ac7c-155d86b44901",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux villes, deux mesures",
+   "competence": "lire-tableau",
+   "situation": "Karim doit classer deux villes imaginaires, Aldor et Berval. L’une est immense, l’autre non : laquelle commande vraiment ?",
+   "documents": [
+    {
+     "id": "fiches",
+     "type": "tableau",
+     "titre": "Fiches d’identité de deux villes",
+     "source": "Villes et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Aldor",
+      "Berval"
+     ],
+     "lignes": [
+      [
+       "Habitants",
+       "12 millions",
+       "1,5 million"
+      ],
+      [
+       "Sièges de grandes entreprises mondiales",
+       "0",
+       "40"
+      ],
+      [
+       "Bourse, universités et laboratoires de rang mondial",
+       "Aucun",
+       "Plusieurs"
+      ],
+      [
+       "Aéroport de rang mondial",
+       "Non",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiches",
+     "enonce": "Touche la case qui montre qu’Aldor n’exerce aucune fonction de commandement dans les entreprises.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne des sièges de grandes entreprises.",
+     "explication": "Aldor compte **0 siège** de grande entreprise mondiale : elle ne commande rien malgré sa taille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment classer les deux villes ?",
+     "options": [
+      "Aldor est une métropole, Berval une mégapole",
+      "Aldor est une mégapole, Berval une métropole",
+      "Les deux sont des mégapoles et des métropoles",
+      "Aucune des deux ne mérite l’un de ces mots"
+     ],
+     "reponse": 1,
+     "aide": "La mégapole se mesure par la taille, la métropole par les fonctions.",
+     "explication": "Aldor est une **mégapole** (plus de 10 millions d’habitants) ; Berval est une **métropole** (fonctions de commandement), comme Zurich."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à son critère.",
+     "paires": [
+      [
+       "Métropole",
+       "Ses fonctions de commandement"
+      ],
+      [
+       "Mégapole",
+       "Plus de 10 millions d’habitants"
+      ]
+     ],
+     "aide": "L’une parle de taille, l’autre de fonctions.",
+     "explication": "Une **métropole** se définit par ses **fonctions**, une **mégapole** par sa **taille**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdee7168-06c2-5c4b-ac7c-155d86b44901",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’archipel des villes mondiales",
+   "competence": "lire-carte",
+   "situation": "Lina repère sur une planisphère quatre grandes villes. Elle doit distinguer celles qui commandent l’économie mondiale de celle qui est seulement très peuplée.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre grandes villes du monde",
+     "source": "Carte schématique d’après le cours.",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -5,
+      150,
+      60
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "new-york",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "londres",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "tokyo",
+       "symbole": "lettre",
+       "lettre": "C"
+      },
+      {
+       "id": "d",
+       "lieu": "lagos",
+       "symbole": "lettre",
+       "lettre": "D"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche les trois villes globales du cours.",
+     "reponse": [
+      "a",
+      "b",
+      "c"
+     ],
+     "multiple": true,
+     "aide": "New York, Londres et Tokyo.",
+     "explication": "**A** (New York), **B** (Londres) et **C** (Tokyo) sont des villes globales, au sommet de la hiérarchie urbaine."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la mégapole qui n’est pas une ville globale.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Elle est en Afrique.",
+     "explication": "**D** est Lagos : une mégapole par sa taille, mais pas une ville globale par ses fonctions de commandement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque acteur de la métropolisation à son levier.",
+     "paires": [
+      [
+       "Les firmes transnationales",
+       "Le choix de localisation"
+      ],
+      [
+       "Les États et collectivités",
+       "Infrastructures, fiscalité et marketing territorial"
+      ],
+      [
+       "Les événements internationaux",
+       "Jeux olympiques et expositions"
+      ]
+     ],
+     "aide": "Chaque acteur dispose d’un moyen différent.",
+     "explication": "Les **firmes** choisissent où s’installer, les **États et collectivités** équipent et promeuvent, les **événements** attirent l’attention mondiale."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’appelle-t-on l’archipel métropolitain mondial ?",
+     "options": [
+      "Un groupe d’îles très peuplées, situé dans les océans du globe",
+      "Le réseau de métropoles plus reliées entre elles qu’à leur arrière-pays",
+      "Un ensemble de villes soudées entre elles par l’étalement urbain",
+      "La liste des villes de plus de 10 millions d’habitants du monde"
+     ],
+     "reponse": 1,
+     "aide": "Pense aux flux de capitaux, d’informations et de personnes.",
+     "explication": "Les métropoles forment un **archipel** : elles sont souvent **plus reliées entre elles qu’à leur propre arrière-pays**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdee7168-06c2-5c4b-ac7c-155d86b44901",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Brevanne regarde partir les sièges",
+   "competence": "analyser-document",
+   "situation": "Brevanne est une ville moyenne imaginaire. Son maire se demande pourquoi sa banque régionale part vers la capitale régionale Valdor. Rémi croise un article et un tableau.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Brevanne perd son siège",
+     "source": "Article imaginé pour l’exercice.",
+     "blocs": [
+      "À Brevanne, 90 000 habitants, la banque régionale transfère son siège à Valdor, mieux desservie. Les jeunes diplômés suivent.",
+      "Le maire rêve d’accueillir une exposition internationale pour redonner de l’éclat à la ville."
+     ]
+    },
+    {
+     "id": "comparaison",
+     "type": "tableau",
+     "titre": "Valdor et Brevanne",
+     "source": "Villes et chiffres imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Valdor",
+      "Brevanne"
+     ],
+     "lignes": [
+      [
+       "Sièges de grandes entreprises",
+       "25",
+       "0"
+      ],
+      [
+       "Emplois de cadres",
+       "45 000",
+       "3 000"
+      ],
+      [
+       "Gare TGV",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Aéroport international",
+       "Oui",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois Valdor compte-t-elle plus d’emplois de cadres que Brevanne ?",
+     "reponse": 15,
+     "unite": "fois",
+     "aide": "Divise 45 000 par 3 000.",
+     "explication": "45 000 ÷ 3 000 = **15 fois** plus : les emplois qualifiés se concentrent dans la métropole."
+    },
+    {
+     "type": "zone",
+     "document": "comparaison",
+     "enonce": "Touche la case qui montre que Brevanne est mal reliée aux grandes villes par le rail.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la ligne de la gare TGV.",
+     "explication": "Brevanne n’a **pas de gare TGV** : un grand équipement manque, alors que Valdor en a une."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de ce mécanisme de métropolisation.",
+     "items": [
+      "Une grande firme place son siège dans la ville la mieux desservie",
+      "Cadres, banques et cabinets de conseil s’y installent à sa suite",
+      "La métropole attire équipements et événements",
+      "La ville moyenne perd emplois qualifiés et jeunes diplômés"
+     ],
+     "aide": "Commence par le choix de localisation de la firme.",
+     "explication": "La firme choisit la **métropole**, les **services supérieurs** suivent, les **équipements** s’y ajoutent et la **ville moyenne** perd ses emplois qualifiés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion illustre le cas de Brevanne ?",
+     "options": [
+      "La métropolisation produit de la richesse et des fractures territoriales",
+      "La métropolisation profite autant aux villes moyennes qu’aux métropoles",
+      "La métropolisation supprime l’intérêt des gares et des aéroports",
+      "La métropolisation s’arrête à la taille d’une mégapole"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que gagnent Valdor et à ce que perd Brevanne.",
+     "explication": "La métropolisation renforce les métropoles **au détriment des villes moyennes** : richesse d’un côté, **fractures territoriales** de l’autre."
+    }
+   ]
+  }
+ ]
+}

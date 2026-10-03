@@ -5,6 +5,7 @@ import {
   QUESTS_PER_DAY,
   ALL_DONE_XP,
   ALL_DONE_GEMS,
+  QUETES_RETIREES,
 } from '@/lib/quests'
 import {
   CLAN_POINTS,
@@ -60,7 +61,7 @@ function caseEntries(sql: string, anchor: string): Record<string, number> {
   return out
 }
 
-describe('quêtes du jour : lib/quests.ts ↔ quest_catalog (205)', () => {
+describe('quêtes du jour : lib/quests.ts ↔ quest_catalog (205, 555)', () => {
   const { file, sql } = effectiveSql('quest_catalog')
 
   it('liste EXACTEMENT les mêmes quêtes (id, objectif, XP, gemmes)', () => {
@@ -68,9 +69,17 @@ describe('quêtes du jour : lib/quests.ts ↔ quest_catalog (205)', () => {
     expect(block, `catalogue illisible dans ${file}`).not.toBeNull()
     const rows = [...block![1].matchAll(/\('(\w+)',\s*(\d+),\s*(\d+),\s*(\d+)\)/g)]
       .map((m) => ({ id: m[1], goal: +m[2], xp: +m[3], gems: +m[4] }))
-    expect(rows).toEqual(
+    // Les quêtes en service, au même barème, dans le même ordre…
+    const enService = new Set(QUEST_CATALOG.map((q) => q.id))
+    expect(rows.filter((r) => enService.has(r.id))).toEqual(
       QUEST_CATALOG.map(({ id, goal, xp, gems }) => ({ id, goal, xp, gems })),
     )
+    // …et, en plus, seulement des quêtes retirées (gardées pour payer une
+    // journée commencée avant leur retrait — 555).
+    const retirees = new Set(QUETES_RETIREES)
+    for (const r of rows.filter((r) => !enService.has(r.id))) {
+      expect(retirees.has(r.id), `${r.id} : ni en service ni retirée`).toBe(true)
+    }
   })
 
   it('paie le bonus « journée complète » au montant promis', () => {

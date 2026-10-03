@@ -1,0 +1,2928 @@
+{
+ "niveau": "1re",
+ "matiere": "hggsp",
+ "exercices": [
+  {
+   "chapitre": "a59ef4f3-f0c7-5230-8106-8bf6135b041a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois pays, une même question : démocratie ou pas ?",
+   "competence": "lire-tableau",
+   "situation": "Samia prépare un exposé. Elle a relevé quatre critères dans trois pays imaginés et doit dire lesquels sont de vraies démocraties.",
+   "documents": [
+    {
+     "id": "pays",
+     "type": "tableau",
+     "titre": "Trois pays, quatre critères",
+     "source": "Pays imaginés pour l’exercice.",
+     "colonnes": [
+      "Critère",
+      "Pays A",
+      "Pays B",
+      "Pays C"
+     ],
+     "lignes": [
+      [
+       "Des élections sont organisées",
+       "Oui",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Presse libre",
+       "Oui",
+       "Non",
+       "Non"
+      ],
+      [
+       "Justice indépendante",
+       "Oui",
+       "Non",
+       "Non"
+      ],
+      [
+       "Opposition pouvant gagner",
+       "Oui",
+       "Non",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "pays",
+     "enonce": "Combien de critères le pays B remplit-il sur les quatre ?",
+     "reponse": 1,
+     "aide": "Compte les « Oui » dans la colonne du pays B.",
+     "explication": "Le pays B ne remplit que le critère des élections : **1 critère** sur 4."
+    },
+    {
+     "type": "zone",
+     "document": "pays",
+     "enonce": "Touche la case qui montre que le pays B organise quand même des élections.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche la ligne des élections, puis la colonne du pays B.",
+     "explication": "La case **« Oui »** de la première ligne, colonne du pays B : il y a des élections, mais rien d’autre ne les accompagne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays à la nature de son régime.",
+     "paires": [
+      [
+       "Pays A",
+       "Une démocratie"
+      ],
+      [
+       "Pays B",
+       "Un régime illibéral"
+      ],
+      [
+       "Pays C",
+       "Un régime autoritaire"
+      ]
+     ],
+     "aide": "Le pays B garde les élections mais affaiblit presse, justice et opposition.",
+     "explication": "Le pays A remplit tous les critères : **démocratie**. Le pays B conserve les élections tout en affaiblissant les contre-pouvoirs : **régime illibéral**. Le pays C n’a presque rien : **régime autoritaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59ef4f3-f0c7-5230-8106-8bf6135b041a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quand le gouvernement tombe… ou pas",
+   "competence": "analyser-document",
+   "situation": "Malik compare trois pays imaginés. Dans chacun, il note qui choisit le chef de l’État et ce que le parlement peut faire du gouvernement.",
+   "documents": [
+    {
+     "id": "regimes",
+     "type": "tableau",
+     "titre": "Trois façons d’organiser les pouvoirs",
+     "source": "Pays imaginés pour l’exercice.",
+     "colonnes": [
+      "",
+      "Pays X",
+      "Pays Y",
+      "Pays Z"
+     ],
+     "lignes": [
+      [
+       "Qui choisit le chef de l’État ?",
+       "Le parlement",
+       "Les citoyens",
+       "Les citoyens"
+      ],
+      [
+       "Le parlement peut-il renverser le gouvernement ?",
+       "Oui",
+       "Non",
+       "Oui"
+      ],
+      [
+       "Le chef de l’État peut-il dissoudre le parlement ?",
+       "Oui",
+       "Non",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "regimes",
+     "enonce": "Touche la case qui montre que, dans le pays Y, le parlement ne peut pas renverser le gouvernement.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Prends la ligne sur le renversement du gouvernement, puis la colonne du pays Y.",
+     "explication": "La case **« Non »** de la deuxième ligne, colonne du pays Y : le gouvernement n’est pas responsable devant le parlement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays au régime qu’il illustre.",
+     "paires": [
+      [
+       "Pays X",
+       "Régime parlementaire"
+      ],
+      [
+       "Pays Y",
+       "Régime présidentiel"
+      ],
+      [
+       "Pays Z",
+       "Régime semi-présidentiel"
+      ]
+     ],
+     "aide": "Le pays Z cumule un chef de l’État élu par les citoyens et un gouvernement renversable.",
+     "explication": "Pays X : le parlement choisit le chef de l’État et renverse le gouvernement, c’est un régime **parlementaire**. Pays Y : séparation stricte, **présidentiel**. Pays Z : président élu par les citoyens et gouvernement renversable, **semi-présidentiel**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces États réels, lequel ressemble au pays Z depuis 1962 ?",
+     "options": [
+      "La France",
+      "Les États-Unis",
+      "Le Royaume-Uni",
+      "L’Allemagne"
+     ],
+     "reponse": 0,
+     "aide": "Le pays Z a un président élu par les citoyens ET un gouvernement que l’Assemblée peut renverser.",
+     "explication": "**La France** de la Ve République est semi-présidentielle depuis 1962. Les États-Unis sont présidentiels, le Royaume-Uni et l’Allemagne parlementaires."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la règle.",
+     "texte": "Dans un régime ___, le parlement peut renverser le gouvernement ; dans un régime ___, il ne le peut pas.",
+     "reponses": [
+      [
+       "parlementaire"
+      ],
+      [
+       "présidentiel"
+      ]
+     ],
+     "banque": [
+      "parlementaire",
+      "présidentiel",
+      "fédéral",
+      "censitaire"
+     ],
+     "aide": "Relis les colonnes des pays X et Y.",
+     "explication": "Dans un régime **parlementaire**, le gouvernement est responsable devant le parlement ; dans un régime **présidentiel**, il ne l’est pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59ef4f3-f0c7-5230-8106-8bf6135b041a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Mirabel vote toujours, mais est-ce démocratique ?",
+   "competence": "analyser-document",
+   "situation": "Une journaliste enquête sur Mirabel, un pays imaginé où l’on vote régulièrement. Elle réunit un extrait de reportage et les résultats du parti au pouvoir.",
+   "documents": [
+    {
+     "id": "reportage",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Reportage à Mirabel",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "À Mirabel, une élection présidentielle a lieu tous les quatre ans, avec plusieurs candidats sur les bulletins.",
+      "Mais depuis 2012, le même parti a gagné toutes les élections, parfois avec plus de 80 % des voix.",
+      "Deux chaînes de télévision critiques ont été [[p|fermées]] et le chef de l’opposition est en prison depuis 2019.",
+      "Les juges de la Cour constitutionnelle sont désormais [[j|nommés]] par le président."
+     ]
+    },
+    {
+     "id": "scores",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des voix du parti au pouvoir",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2012",
+      "2016",
+      "2020",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Voix",
+       "valeurs": [
+        52,
+        61,
+        74,
+        83
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des voix",
+      "unite": "%",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche le mot qui montre une atteinte à la presse libre.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce qui est arrivé aux chaînes de télévision critiques.",
+     "explication": "Les chaînes ont été **fermées** : sans presse libre, l’opposition ne peut plus se faire entendre."
+    },
+    {
+     "type": "zone",
+     "document": "reportage",
+     "enonce": "Touche le mot qui montre que la justice dépend du pouvoir.",
+     "reponse": [
+      "j"
+     ],
+     "aide": "Regarde qui décide de la composition de la Cour constitutionnelle.",
+     "explication": "Les juges sont **nommés** par le président : la justice n’est plus indépendante, elle ne peut plus contrôler le pouvoir."
+    },
+    {
+     "type": "nombre",
+     "document": "scores",
+     "enonce": "De combien de points la part des voix du parti au pouvoir a-t-elle augmenté entre 2012 et 2024 ?",
+     "reponse": 31,
+     "unite": "points",
+     "aide": "Lis la première et la dernière barre, puis soustrais.",
+     "explication": "83 − 52 = **31 points** de plus : le parti gagne toujours, et de plus en plus largement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment qualifier le régime de Mirabel ?",
+     "options": [
+      "Une démocratie libérale",
+      "Un régime illibéral",
+      "Une dictature sans aucune élection",
+      "Une démocratie directe"
+     ],
+     "reponse": 1,
+     "aide": "Il garde les élections, mais affaiblit la presse, la justice et l’opposition.",
+     "explication": "Mirabel est un **régime illibéral** : les élections existent, mais les contre-pouvoirs sont affaiblis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la tenue d’élections ne suffit-elle pas à prouver que Mirabel est une démocratie ?",
+     "options": [
+      "L’opposition n’a plus de chance réelle de gagner et de prendre le pouvoir",
+      "Le nombre de candidats inscrits sur les bulletins est trop faible",
+      "Le scrutin n’a lieu que tous les quatre ans, ce qui est trop long",
+      "Le parti au pouvoir a reçu plus de la moitié des voix"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi du critère décisif : pouvoir perdre le pouvoir.",
+     "explication": "Le critère décisif est la possibilité réelle de **perdre le pouvoir** et de le céder. À Mirabel, l’alternance n’est plus possible."
+    }
+   ]
+  },
+  {
+   "chapitre": "aebabe0c-6a7d-5b05-93fa-a0661d8e1ab8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une matinée à l’assemblée sur la Pnyx",
+   "competence": "lire-tableau",
+   "situation": "Théo, un jeune Athénien du Ve siècle avant notre ère, découvre les institutions de sa cité. Il les a notées dans un tableau.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "tableau",
+     "titre": "Les institutions d’Athènes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Institution",
+      "Qui y siège",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Ecclésia",
+       "Tous les citoyens",
+       "Voter les lois, la guerre, les traités"
+      ],
+      [
+       "Boulê",
+       "500 membres tirés au sort",
+       "Préparer les débats de l’Ecclésia"
+      ],
+      [
+       "Héliée",
+       "Des jurés tirés au sort",
+       "Rendre la justice"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche la case qui dit qui peut siéger à l’Ecclésia.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Prends la ligne de l’Ecclésia, colonne « Qui y siège ».",
+     "explication": "À l’Ecclésia siègent **tous les citoyens** : c’est une démocratie directe."
+    },
+    {
+     "type": "nombre",
+     "document": "inst",
+     "enonce": "Combien de membres compte la Boulê ?",
+     "reponse": 500,
+     "aide": "Lis la ligne de la Boulê.",
+     "explication": "La Boulê compte **500 membres**, tirés au sort."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution à son rôle.",
+     "paires": [
+      [
+       "Ecclésia",
+       "Voter les lois"
+      ],
+      [
+       "Boulê",
+       "Préparer les débats"
+      ],
+      [
+       "Héliée",
+       "Rendre la justice"
+      ]
+     ],
+     "aide": "Relis la dernière colonne du tableau.",
+     "explication": "L’**Ecclésia** vote les lois, la **Boulê** prépare les débats, l’**Héliée** est le tribunal populaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "aebabe0c-6a7d-5b05-93fa-a0661d8e1ab8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien d’Athéniens votent vraiment ?",
+   "competence": "lire-graphique",
+   "situation": "Zoé lit le graphique de la population de l’Attique au Ve siècle avant notre ère. Elle veut mesurer la part des habitants qui décident vraiment.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Habitants et citoyens en Attique",
+     "source": "Chiffres arrondis, d’après le cours.",
+     "categories": [
+      "Habitants de l’Attique",
+      "Citoyens athéniens"
+     ],
+     "series": [
+      {
+       "nom": "Personnes",
+       "valeurs": [
+        300000,
+        40000
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de personnes",
+      "unite": "",
+      "min": 0,
+      "max": 300000,
+      "pas": 100000
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la barre qui représente les citoyens.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Les citoyens sont bien moins nombreux que l’ensemble des habitants.",
+     "explication": "La barre **« Citoyens athéniens »** : environ 40 000 personnes."
+    },
+    {
+     "type": "nombre",
+     "document": "pop",
+     "enonce": "Combien d’habitants de l’Attique ne sont pas citoyens ?",
+     "reponse": 260000,
+     "unite": "personnes",
+     "aide": "Soustrais le nombre de citoyens au nombre d’habitants.",
+     "explication": "300 000 − 40 000 = **260 000 personnes** : femmes, métèques, esclaves et enfants."
+    },
+    {
+     "type": "nombre",
+     "document": "pop",
+     "enonce": "Quelle part des habitants les citoyens représentent-ils, arrondie à l’unité ?",
+     "reponse": 13,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Divise 40 000 par 300 000, puis multiplie par 100.",
+     "explication": "40 000 ÷ 300 000 ≈ 0,133 : environ **13 %** des habitants."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personne : citoyen ou exclu de la citoyenneté ?",
+     "categories": [
+      "Citoyen",
+      "Exclu de la citoyenneté"
+     ],
+     "items": [
+      [
+       "Un homme adulte, né d’un père et d’une mère athéniens",
+       0
+      ],
+      [
+       "Une femme née de parents athéniens",
+       1
+      ],
+      [
+       "Un métèque installé à Athènes depuis trois générations",
+       1
+      ],
+      [
+       "Un esclave travaillant dans un atelier",
+       1
+      ],
+      [
+       "Un homme, fils d’un Athénien et d’une étrangère, sous la loi de 451",
+       1
+      ]
+     ],
+     "aide": "Rappelle-toi la loi de Périclès de 451 : père ET mère athéniens.",
+     "explication": "Seul l’homme adulte né de père et de mère athéniens est **citoyen**. Les femmes, les métèques, les esclaves et, depuis 451, les fils d’une mère étrangère sont **exclus**."
+    }
+   ]
+  },
+  {
+   "chapitre": "aebabe0c-6a7d-5b05-93fa-a0661d8e1ab8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le cordonnier, le métèque et le stratège",
+   "competence": "analyser-document",
+   "situation": "Un matin de session, un récit imaginé met côte à côte trois Athéniens très différents. Un tableau résume ce que chacun peut ou non faire.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Matin sur la Pnyx",
+     "source": "Récit écrit pour l’exercice.",
+     "blocs": [
+      "Nikias, cordonnier, a été tiré au sort pour siéger à la Boulê. Il est [[p|payé]] pour cela, et peut donc laisser son échoppe quelques jours.",
+      "Près de lui, Xénon, un [[e|étranger]] libre installé à Athènes depuis trois générations, paie l’impôt et partira à la guerre comme les autres. Pourtant, il ne peut pas lever la main pour voter.",
+      "Un stratège, élu pour sa compétence militaire, prend la parole le premier. Mais tout citoyen, même le plus modeste, a le droit de lui répondre."
+     ]
+    },
+    {
+     "id": "droits",
+     "type": "tableau",
+     "titre": "Qui peut quoi à Athènes ?",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Droit",
+      "Citoyen",
+      "Métèque"
+     ],
+     "lignes": [
+      [
+       "Voter à l’Ecclésia",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Siéger à la Boulê",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Servir dans l’armée",
+       "Oui",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "enonce": "Touche le mot qui montre que la participation est indemnisée.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce qui permet à un artisan de laisser son échoppe.",
+     "explication": "Nikias est **payé** : c’est la misthophorie, qui permet aux plus pauvres de siéger."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "enonce": "Touche le mot qui désigne le groupe de Xénon, exclu du vote.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "On parle d’un habitant libre mais non athénien.",
+     "explication": "Xénon est un **étranger** libre, c’est-à-dire un métèque : il paie l’impôt et sert à l’armée sans voter."
+    },
+    {
+     "type": "nombre",
+     "document": "droits",
+     "enonce": "Combien de ces trois activités un métèque peut-il exercer ?",
+     "reponse": 1,
+     "aide": "Compte les « Oui » dans la colonne « Métèque ».",
+     "explication": "Le métèque ne peut ni voter ni siéger à la Boulê : il peut seulement **servir dans l’armée**, soit **1** activité sur 3."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Xénon, qui sert à l’armée, ne vote-t-il pas ?",
+     "options": [
+      "La citoyenneté suppose d’être né de père et de mère athéniens",
+      "Il est trop pauvre pour être indemnisé de son temps",
+      "Les stratèges sont élus et non tirés au sort",
+      "Il a refusé de participer au tirage au sort de la Boulê"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la loi de Périclès de 451.",
+     "explication": "La citoyenneté est réservée à ceux qui sont **nés de père et de mère athéniens** : un métèque, même installé depuis des générations, en est exclu."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan.",
+     "texte": "Athènes est une démocratie ___, mais ___ : une minorité d’habitants seulement y est citoyenne.",
+     "reponses": [
+      [
+       "directe"
+      ],
+      [
+       "limitée"
+      ]
+     ],
+     "banque": [
+      "directe",
+      "limitée",
+      "universelle",
+      "représentative"
+     ],
+     "aide": "Les citoyens décident eux-mêmes, mais tous les habitants ne le sont pas.",
+     "explication": "Athènes est une démocratie **directe** mais **limitée** : participation intense, exclusion massive."
+    }
+   ]
+  },
+  {
+   "chapitre": "1ff1cc71-c548-5cba-bfb5-b82dfdea55f5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre dates pour un modèle",
+   "competence": "se-reperer-temps",
+   "situation": "Karim colle sur son mur une frise des révolutions qui ont installé le gouvernement représentatif. Il veut en retenir quatre dates clés.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les révolutions et leurs textes",
+     "source": "D’après le cours.",
+     "debut": 1680,
+     "fin": 1810,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "bill",
+       "date": 1689,
+       "nom": "Bill of Rights"
+      },
+      {
+       "id": "indep",
+       "date": 1776,
+       "nom": "Indépendance US"
+      },
+      {
+       "id": "const",
+       "date": 1787,
+       "nom": "Constitution US"
+      },
+      {
+       "id": "ddhc",
+       "date": 1789,
+       "nom": "Droits de l’homme"
+      },
+      {
+       "id": "rep",
+       "date": 1792,
+       "nom": "République"
+      },
+      {
+       "id": "esc",
+       "date": 1802,
+       "nom": "Esclavage rétabli"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le texte qui fonde la monarchie parlementaire en Angleterre.",
+     "reponse": [
+      "bill"
+     ],
+     "aide": "C’est le plus ancien événement de la frise.",
+     "explication": "Le **Bill of Rights de 1689** interdit au roi de lever l’impôt ou de suspendre les lois sans le Parlement."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent le Bill of Rights anglais de la Déclaration d’indépendance américaine ?",
+     "reponse": 87,
+     "unite": "ans",
+     "aide": "Soustrais 1689 à 1776.",
+     "explication": "1776 − 1689 = **87 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Bill of Rights anglais",
+      "Déclaration d’indépendance américaine",
+      "Constitution américaine",
+      "Proclamation de la République en France"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1689 → 1776 → 1787 → 1792** : l’Angleterre ouvre la voie, puis les États-Unis, puis la France."
+    }
+   ]
+  },
+  {
+   "chapitre": "1ff1cc71-c548-5cba-bfb5-b82dfdea55f5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un député de 1789 écrit à ses électeurs",
+   "competence": "analyser-texte",
+   "situation": "Un député imaginé explique à ses électeurs ce qu’il va faire à Paris. Ses phrases résument l’esprit du gouvernement représentatif.",
+   "documents": [
+    {
+     "id": "depute",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un député à ses électeurs",
+     "source": "Lettre imaginée pour l’exercice, dans l’esprit des débats de 1789.",
+     "blocs": [
+      "Chers électeurs, vous m’avez envoyé siéger à Paris. Je n’y représente pas seulement notre ville : je parle au nom de la [[n|Nation]] tout entière.",
+      "Je voterai selon ma conscience, et vous ne pourrez pas me [[r|révoquer]] avant la fin de mon mandat.",
+      "Le peuple ne fait pas lui-même la loi : il choisit ceux qui la feront."
+     ]
+    },
+    {
+     "id": "textes",
+     "type": "tableau",
+     "titre": "Trois textes fondateurs",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Pays",
+      "Texte fondateur",
+      "Année"
+     ],
+     "lignes": [
+      [
+       "Angleterre",
+       "Bill of Rights",
+       "1689"
+      ],
+      [
+       "États-Unis",
+       "Constitution",
+       "1787"
+      ],
+      [
+       "France",
+       "Déclaration des droits de l’homme et du citoyen",
+       "1789"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depute",
+     "enonce": "Touche le mot qui dit au nom de qui le député parle.",
+     "reponse": [
+      "n"
+     ],
+     "aide": "Il ne représente pas seulement sa ville.",
+     "explication": "Le député parle au nom de la **Nation** : c’est le mandat représentatif."
+    },
+    {
+     "type": "zone",
+     "document": "depute",
+     "enonce": "Touche le mot qui montre que ses électeurs ne peuvent pas l’écarter en cours de mandat.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Cherche ce que les électeurs ne pourront pas faire.",
+     "explication": "Le député n’est pas **révocable** : c’est l’autre trait du mandat représentatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel régime ce député décrit-il ?",
+     "options": [
+      "Un gouvernement représentatif : le peuple choisit ceux qui feront la loi",
+      "Une démocratie directe : le peuple vote lui-même chaque loi",
+      "Une monarchie absolue : le roi décide seul de toutes les lois",
+      "Un régime présidentiel fédéral : chaque État fait sa propre loi"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la lettre.",
+     "explication": "Comme Sieyès, il distingue la démocratie, où le peuple fait la loi, du **gouvernement représentatif**, où il choisit ceux qui la feront."
+    },
+    {
+     "type": "nombre",
+     "document": "textes",
+     "enonce": "Combien d’années séparent le Bill of Rights anglais de la Constitution américaine ?",
+     "reponse": 98,
+     "unite": "ans",
+     "aide": "Soustrais 1689 à 1787.",
+     "explication": "1787 − 1689 = **98 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pays au régime que sa révolution institue.",
+     "paires": [
+      [
+       "Angleterre",
+       "Monarchie parlementaire"
+      ],
+      [
+       "États-Unis",
+       "Régime présidentiel et fédéral"
+      ],
+      [
+       "France en 1792",
+       "République"
+      ]
+     ],
+     "aide": "Le roi anglais ne peut plus lever l’impôt sans le Parlement.",
+     "explication": "L’Angleterre devient une **monarchie parlementaire**, les États-Unis un régime **présidentiel et fédéral**, la France une **République** en 1792."
+    }
+   ]
+  },
+  {
+   "chapitre": "1ff1cc71-c548-5cba-bfb5-b82dfdea55f5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui vote vraiment vers 1790 ?",
+   "competence": "argumenter",
+   "situation": "Une lettre imaginée et une frise permettent de mesurer l’écart entre les principes proclamés et la réalité des droits vers 1790.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’une habitante des États-Unis",
+     "source": "Lettre imaginée pour l’exercice.",
+     "blocs": [
+      "Chère sœur, la grande fête de l’élection a eu lieu hier. Mon mari a pu voter, car il paie assez d’[[c|impôt]] ; notre voisin Samuel, qui travaille sans rien posséder, n’en a pas eu le droit.",
+      "Moi, comme toutes les femmes, je suis restée à la maison. Et chez nos cousins de Virginie, des hommes et des femmes travaillent la terre sans être libres du tout."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Droits proclamés et reculs en France",
+     "source": "D’après le cours.",
+     "debut": 1785,
+     "fin": 1805,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "ddhc",
+       "date": 1789,
+       "nom": "Droits de l’homme"
+      },
+      {
+       "id": "conv",
+       "date": 1792,
+       "nom": "Convention élue"
+      },
+      {
+       "id": "esc",
+       "date": 1802,
+       "nom": "Esclavage rétabli"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui indique le critère qui permet de voter.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Le mari vote parce qu’il paie assez de…",
+     "explication": "Le droit de vote dépend de l’**impôt** payé : c’est le suffrage censitaire."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui est un recul par rapport aux principes de 1789.",
+     "reponse": [
+      "esc"
+     ],
+     "aide": "Pense au statut de ceux qui ne sont pas libres.",
+     "explication": "Le **rétablissement de l’esclavage en 1802** contredit les droits proclamés en 1789."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent la Déclaration des droits de l’homme du rétablissement de l’esclavage ?",
+     "reponse": 13,
+     "unite": "ans",
+     "aide": "Soustrais 1789 à 1802.",
+     "explication": "1802 − 1789 = **13 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : principe consacré ou limite du moment ?",
+     "categories": [
+      "Un principe consacré",
+      "Une limite du moment"
+     ],
+     "items": [
+      [
+       "La souveraineté nationale",
+       0
+      ],
+      [
+       "La constitution écrite",
+       0
+      ],
+      [
+       "L’exclusion des femmes",
+       1
+      ],
+      [
+       "La séparation des pouvoirs",
+       0
+      ],
+      [
+       "Le suffrage censitaire",
+       1
+      ],
+      [
+       "L’esclavage maintenu",
+       1
+      ]
+     ],
+     "aide": "Les limites sont ce qui restreint le droit de vote ou la liberté.",
+     "explication": "**Principes** : souveraineté nationale, constitution écrite, séparation des pouvoirs. **Limites** : exclusion des femmes, suffrage censitaire, esclavage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’ensemble de ces documents ?",
+     "options": [
+      "Le peuple souverain est proclamé, mais la citoyenneté reste limitée",
+      "Le suffrage universel est réalisé dès 1789 dans tous les pays",
+      "Toutes les révolutions abolissent l’esclavage dans leur pays",
+      "Le modèle représentatif est abandonné au profit du vote direct"
+     ],
+     "reponse": 0,
+     "aide": "Compare les principes affichés et ce que dit la lettre.",
+     "explication": "Les révolutions **proclament** la souveraineté du peuple, mais l’universalité du droit de vote met **un siècle et demi** à se réaliser."
+    }
+   ]
+  },
+  {
+   "chapitre": "308e0606-d47f-55d7-8fc0-ac9ac7701666",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le voyageur français sur les routes d’Amérique",
+   "competence": "analyser-texte",
+   "situation": "En 1831, un jeune Français parcourt les États-Unis pour comprendre l’avenir des sociétés égalitaires. Un récit écrit pour l’exercice résume ce qu’il observe.",
+   "documents": [
+    {
+     "id": "voyage",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Ce que le voyageur observe, 1831",
+     "source": "Texte écrit pour l’exercice, d’après les observations de Tocqueville dans De la démocratie en Amérique.",
+     "blocs": [
+      "En 1831, un jeune Français, Alexis de Tocqueville, parcourt les États-Unis. Il veut comprendre l’avenir des sociétés où les conditions deviennent égales, un mouvement qu’il juge [[i|irrésistible]].",
+      "Partout, il voit des habitants qui s’unissent en [[a|associations]] pour ouvrir une école, bâtir une route ou défendre une cause.",
+      "Il remarque aussi que chaque commune gère elle-même ses affaires, que la justice est indépendante et que la religion est séparée de l’État."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voyage",
+     "enonce": "Touche le mot qui désigne les groupes où les Américains apprennent à agir ensemble.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Ils s’unissent pour ouvrir une école ou bâtir une route.",
+     "explication": "Ce sont les **associations** : elles forment à l’action collective et font contrepoids à l’État."
+    },
+    {
+     "type": "zone",
+     "document": "voyage",
+     "enonce": "Touche le mot par lequel Tocqueville juge l’égalisation des conditions.",
+     "reponse": [
+      "i"
+     ],
+     "aide": "Il pense qu’on ne peut pas l’arrêter.",
+     "explication": "Pour lui, l’égalisation des conditions est **irrésistible** : il n’y cherche pas un modèle mais un avenir."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution américaine à ce qu’elle apporte, selon Tocqueville.",
+     "paires": [
+      [
+       "Les associations",
+       "Elles forment à l’action collective"
+      ],
+      [
+       "L’administration locale",
+       "Elle est une école pratique de la liberté"
+      ],
+      [
+       "La religion séparée de l’État",
+       "Elle soutient les mœurs sans les contraindre"
+      ]
+     ],
+     "aide": "Relis le deuxième et le troisième paragraphe.",
+     "explication": "Les **associations** apprennent à agir ensemble, la **commune** est une école de la liberté, la **religion**, séparée de l’État, soutient les mœurs au lieu de les contraindre."
+    }
+   ]
+  },
+  {
+   "chapitre": "308e0606-d47f-55d7-8fc0-ac9ac7701666",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois villes, trois dangers",
+   "competence": "analyser-texte",
+   "situation": "Trois petites villes imaginées illustrent les trois périls que Tocqueville voit dans les démocraties. À toi de les reconnaître.",
+   "documents": [
+    {
+     "id": "villes",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois scènes d’une société d’égaux",
+     "source": "Texte écrit pour l’exercice, d’après les trois périls décrits par Tocqueville.",
+     "blocs": [
+      "Dans la petite ville de Dunmore, quand l’opinion du plus grand nombre est fixée, personne n’ose plus la contredire : l’élève qui pense autrement préfère se [[m|taire]].",
+      "À Brookvale, chacun rentre chez soi le soir, s’occupe de sa famille et de ses amis, et ne se soucie plus des affaires de la cité.",
+      "À Orlington, un pouvoir immense prend en charge le logement, les loisirs et l’avenir de chacun. Les habitants lui sont [[r|reconnaissants]] et ne décident plus rien par eux-mêmes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque paragraphe au péril qu’il illustre.",
+     "paires": [
+      [
+       "Paragraphe 1",
+       "Tyrannie de la majorité"
+      ],
+      [
+       "Paragraphe 2",
+       "Individualisme"
+      ],
+      [
+       "Paragraphe 3",
+       "Despotisme doux"
+      ]
+     ],
+     "aide": "Pour chaque scène, demande-toi qui exerce la pression : l’opinion, le repli sur soi ou un pouvoir.",
+     "explication": "Dunmore : la pression morale de l’opinion, **tyrannie de la majorité**. Brookvale : le retrait du public, **individualisme**. Orlington : un pouvoir tutélaire qui infantilise, **despotisme doux**."
+    },
+    {
+     "type": "zone",
+     "document": "villes",
+     "enonce": "Touche le mot qui montre que les habitants d’Orlington consentent à ce pouvoir.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Que ressentent-ils envers ce pouvoir ?",
+     "explication": "Ils lui sont **reconnaissants** : le despotisme doux n’est pas imposé, il est accepté parce qu’il soulage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le pouvoir d’Orlington traite-t-il les citoyens ?",
+     "options": [
+      "Il infantilise les citoyens, qui y consentent parce qu’il les soulage",
+      "Il impose sa volonté par la terreur et les arrestations arbitraires",
+      "Il est renversé par les habitants qui refusent de lui obéir",
+      "Il laisse les citoyens décider seuls de toutes leurs affaires"
+     ],
+     "reponse": 0,
+     "aide": "Ce pouvoir ne tyrannise pas : il prend tout en charge.",
+     "explication": "C’est un pouvoir **tutélaire** : il prend tout en charge et ôte aux citoyens l’usage d’eux-mêmes, sans violence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Parmi ces institutions, laquelle Tocqueville présente-t-il comme un remède à l’individualisme ?",
+     "options": [
+      "Les associations",
+      "Un État qui s’occupe de tout",
+      "La censure de la presse",
+      "La centralisation de l’administration"
+     ],
+     "reponse": 0,
+     "aide": "Elle apprend aux citoyens à agir ensemble.",
+     "explication": "Les **associations** font sortir du cercle privé et forment à l’action collective : c’est l’un des remèdes de Tocqueville, avec la presse libre et la décentralisation."
+    }
+   ]
+  },
+  {
+   "chapitre": "308e0606-d47f-55d7-8fc0-ac9ac7701666",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Valmont, la ville où l’application décide de tout",
+   "competence": "argumenter",
+   "situation": "À Valmont, ville imaginée, une application municipale s’occupe de presque tout. Que dirait Tocqueville d’un tel pouvoir et de la participation des habitants ?",
+   "documents": [
+    {
+     "id": "valmont",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une ville connectée",
+     "source": "Texte écrit pour l’exercice. Ville imaginée.",
+     "blocs": [
+      "À Valmont, l’application Cité+ réserve les places de cantine, attribue les places de crèche, trie les propositions des habitants et rédige elle-même les réponses de la mairie.",
+      "Les habitants en sont satisfaits : « Tout est réglé, on n’a plus à s’en occuper », disent-ils. Au dernier conseil de quartier, douze personnes étaient présentes."
+     ]
+    },
+    {
+     "id": "participation",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Participation aux municipales de Valmont",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "2008",
+      "2014",
+      "2020"
+     ],
+     "series": [
+      {
+       "nom": "Participation",
+       "valeurs": [
+        58,
+        49,
+        38
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Participation",
+      "unite": "% des inscrits",
+      "min": 0,
+      "max": 80,
+      "pas": 20
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "participation",
+     "enonce": "De combien de points la participation a-t-elle baissé entre 2008 et 2020 ?",
+     "reponse": 20,
+     "unite": "points",
+     "aide": "Lis la première et la dernière barre, puis soustrais.",
+     "explication": "58 − 38 = **20 points** de moins en douze ans."
+    },
+    {
+     "type": "zone",
+     "document": "participation",
+     "enonce": "Touche l’élection où la participation est la plus faible.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "L’élection de **2020** : 38 % seulement des inscrits ont voté."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’application qui prend tout en charge à Valmont se rapproche de quel péril ?",
+     "options": [
+      "Le despotisme doux : un pouvoir qui prend tout en charge et qu’on accepte",
+      "La tyrannie de la majorité : l’opinion dominante écrase la minorité",
+      "La démocratie directe : les habitants votent chaque décision",
+      "L’individualisme : chacun ne s’occupe que de sa propre vie privée"
+     ],
+     "reponse": 0,
+     "aide": "Les habitants sont satisfaits et ne décident plus rien.",
+     "explication": "Cité+ est un pouvoir **tutélaire** qui soulage les habitants et les dispense de décider : c’est le **despotisme doux**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : remède de Tocqueville ou péril ?",
+     "categories": [
+      "Un remède",
+      "Un péril"
+     ],
+     "items": [
+      [
+       "Une association d’habitants qui gère la fête du quartier",
+       0
+      ],
+      [
+       "Une application qui décide à la place des habitants",
+       1
+      ],
+      [
+       "Un conseil de quartier qui vote lui-même son budget",
+       0
+      ],
+      [
+       "Une presse locale libre qui enquête sur la mairie",
+       0
+      ],
+      [
+       "Des habitants qui ne votent plus parce que tout est réglé",
+       1
+      ]
+     ],
+     "aide": "Les remèdes redonnent du pouvoir aux citoyens, les périls leur en ôtent.",
+     "explication": "**Remèdes** : associations, décentralisation (conseil de quartier), presse libre. **Périls** : le pouvoir qui décide à la place des habitants et le retrait du public."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que pourrait proposer Tocqueville pour redonner aux habitants le goût des affaires communes ?",
+     "options": [
+      "Rendre des décisions aux habitants, par leurs associations et leur commune",
+      "Supprimer l’élection du conseil municipal pour gagner du temps",
+      "Laisser l’application décider de toutes les questions importantes",
+      "Interdire les associations pour éviter les désaccords locaux"
+     ],
+     "reponse": 0,
+     "aide": "Pour lui, la liberté demande des institutions et des mœurs.",
+     "explication": "La liberté ne se conserve pas d’elle-même : elle demande des **institutions** (communes, associations, presse libre) qui font participer les citoyens."
+    }
+   ]
+  },
+  {
+   "chapitre": "4fe99f3e-8635-5257-9720-6903aff3b7a8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Du palais de la Moneda au référendum de 1988",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé sur le Chili, Léo trace une frise de 1970 à 1990, de l’arrivée au pouvoir d’Allende à la fin de la dictature.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le Chili de 1970 à 1990",
+     "source": "D’après le cours.",
+     "debut": 1970,
+     "fin": 1990,
+     "pas": 2,
+     "periodes": [
+      {
+       "id": "up",
+       "debut": 1970,
+       "fin": 1973,
+       "nom": "Gouvernement Allende",
+       "teinte": "ambre"
+      },
+      {
+       "id": "dic",
+       "debut": 1973,
+       "fin": 1990,
+       "nom": "Dictature de Pinochet",
+       "teinte": "gris"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "elec",
+       "date": 1970,
+       "nom": "Élection d’Allende"
+      },
+      {
+       "id": "coup",
+       "date": 1973,
+       "nom": "Coup d’État"
+      },
+      {
+       "id": "ref",
+       "date": 1988,
+       "nom": "Référendum"
+      },
+      {
+       "id": "libres",
+       "date": 1989,
+       "nom": "Élections libres"
+      },
+      {
+       "id": "fin",
+       "date": 1990,
+       "nom": "Fin de la dictature"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin au gouvernement d’Allende.",
+     "reponse": [
+      "coup"
+     ],
+     "aide": "Il a lieu le 11 septembre.",
+     "explication": "Le **coup d’État du 11 septembre 1973** renverse Allende et installe Pinochet."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années la dictature a-t-elle duré, du coup d’État à sa fin ?",
+     "reponse": 17,
+     "unite": "ans",
+     "aide": "Soustrais 1973 à 1990.",
+     "explication": "1990 − 1973 = **17 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes du plus ancien au plus récent.",
+     "items": [
+      "Coup d’État de Pinochet",
+      "Référendum où le « non » l’emporte",
+      "Premières élections libres",
+      "Fin de la dictature"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1973 → 1988 → 1989 → 1990** : le référendum ouvre le retour à la démocratie."
+    }
+   ]
+  },
+  {
+   "chapitre": "4fe99f3e-8635-5257-9720-6903aff3b7a8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un pays long de 4 300 kilomètres",
+   "competence": "lire-carte",
+   "situation": "Au Chili, la grève des camionneurs de 1972-1973 a paralysé le pays. Une carte et un tableau aident à comprendre pourquoi, et ce que le gouvernement avait décidé avant.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Amérique du Sud, carte muette",
+     "source": "Carte schématique.",
+     "fond": "monde",
+     "cadrage": [
+      -85,
+      -58,
+      -32,
+      14
+     ],
+     "muette": true,
+     "regionsCliquables": true,
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "santiago",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "buenos-aires",
+       "symbole": "lettre",
+       "lettre": "B"
+      },
+      {
+       "id": "c",
+       "lieu": "lima",
+       "symbole": "lettre",
+       "lettre": "C"
+      }
+     ]
+    },
+    {
+     "id": "programme",
+     "type": "tableau",
+     "titre": "Le programme de l’Unité populaire",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Mesure"
+     ],
+     "lignes": [
+      [
+       "Nationalisation du cuivre, sans indemnisation des compagnies américaines"
+      ],
+      [
+       "Nationalisation des banques"
+      ],
+      [
+       "Accélération de la réforme agraire"
+      ],
+      [
+       "Hausse des salaires"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le Chili, pays très long et étroit entre les Andes et l’océan Pacifique.",
+     "reponse": [
+      "CHL"
+     ],
+     "aide": "Cherche le pays étiré du nord au sud, le long de la côte pacifique.",
+     "explication": "Le **Chili** s’étire sur environ 4 300 kilomètres : c’est ce qui rendait le pays si dépendant de ses routes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un camion roule en moyenne à 50 km/h. Combien d’heures lui faut-il pour parcourir les 4 300 km du pays dans sa longueur ?",
+     "reponse": 86,
+     "unite": "heures",
+     "aide": "Divise la distance par la vitesse.",
+     "explication": "4 300 ÷ 50 = **86 heures** : arrêter les camions, c’est paralyser tout le pays."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale du Chili.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle se trouve au centre du pays, au pied des Andes.",
+     "explication": "**Santiago** (A) est la capitale du Chili, au centre du pays. B est Buenos Aires, C est Lima."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure de l’Unité populaire à l’effet qui a suivi.",
+     "paires": [
+      [
+       "Nationalisation du cuivre",
+       "Rupture avec les États-Unis"
+      ],
+      [
+       "Hausse des salaires",
+       "Inflation, pénuries et marché noir"
+      ],
+      [
+       "Accélération de la réforme agraire",
+       "Tensions dans les campagnes"
+      ]
+     ],
+     "aide": "Les compagnies américaines n’ont pas été indemnisées.",
+     "explication": "Le **cuivre** nationalisé fâche les États-Unis, la **hausse des salaires** nourrit l’inflation et les pénuries, la **réforme agraire** crée des tensions dans les campagnes."
+    }
+   ]
+  },
+  {
+   "chapitre": "4fe99f3e-8635-5257-9720-6903aff3b7a8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Santiago, le matin du 11 septembre 1973",
+   "competence": "analyser-document",
+   "situation": "Une chronique imaginée raconte le jour du coup d’État. Un tableau liste ce que la dictature fait ensuite, et tu dois relier ces mesures aux critères de la démocratie.",
+   "documents": [
+    {
+     "id": "chronique",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Chronique de Santiago",
+     "source": "Chronique écrite pour l’exercice, d’après les faits connus.",
+     "blocs": [
+      "Mardi 11 septembre 1973, Santiago. Au petit matin, la radio annonce que l’armée a pris le pouvoir.",
+      "Dans la matinée, des avions [[b|bombardent]] le palais de la Moneda, où le président Allende est enfermé. Il y meurt.",
+      "Le soir, le Congrès est fermé et des milliers de personnes sont conduites au stade national."
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Ce que fait la dictature",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Mesure prise après le coup d’État"
+     ],
+     "lignes": [
+      [
+       "Interdiction des partis politiques"
+      ],
+      [
+       "Censure de la presse"
+      ],
+      [
+       "Dissolution du Congrès"
+      ],
+      [
+       "Arrestations, torture et disparitions"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chronique",
+     "enonce": "Touche le verbe qui dit comment l’armée attaque le palais présidentiel.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Ce sont des avions qui agissent.",
+     "explication": "Les avions **bombardent** le palais de la Moneda : le pouvoir légal est renversé par la force."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de l’effondrement de la démocratie chilienne.",
+     "items": [
+      "Élection d’Allende",
+      "Nationalisation du cuivre",
+      "Grève des camionneurs",
+      "Le Congrès juge le gouvernement hors la légalité",
+      "Coup d’État du 11 septembre"
+     ],
+     "aide": "L’élection est de 1970, le Congrès se prononce en août 1973.",
+     "explication": "**1970 → nationalisation du cuivre → grève de 1972-1973 → Congrès en août 1973 → coup d’État** : les pressions s’accumulent avant l’intervention de l’armée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mesure de la dictature à ce qu’elle supprime.",
+     "paires": [
+      [
+       "Interdiction des partis",
+       "Le pluralisme"
+      ],
+      [
+       "Censure de la presse",
+       "Les libertés fondamentales"
+      ],
+      [
+       "Dissolution du Congrès",
+       "La séparation des pouvoirs"
+      ]
+     ],
+     "aide": "Relis les critères d’un régime démocratique.",
+     "explication": "Interdire les partis supprime le **pluralisme**, censurer la presse les **libertés fondamentales**, dissoudre le Congrès la **séparation des pouvoirs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le coup d’État du référendum de 1988 ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Soustrais 1973 à 1988.",
+     "explication": "1988 − 1973 = **15 ans** avant que le « non » à Pinochet l’emporte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le cas chilien ?",
+     "options": [
+      "Une démocratie solide peut s’effondrer en quelques années de crise",
+      "Une démocratie ne peut être renversée que par une invasion étrangère",
+      "Une démocratie ne tombe jamais quand elle a plus de cinquante ans",
+      "Une démocratie est protégée de tout risque par sa Constitution"
+     ],
+     "reponse": 0,
+     "aide": "Le Chili était l’une des démocraties les plus stables d’Amérique latine.",
+     "explication": "Polarisation, crise économique, délégitimation des institutions, pressions extérieures, puis recours à l’armée : le Chili bascule en **trois ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "aef00199-1d6e-522f-940d-71ad3a04d772",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Œillets, Cortès et Constitutions : la chronologie",
+   "competence": "se-reperer-temps",
+   "situation": "Inès relie deux histoires parallèles, celle du Portugal et celle de l’Espagne, sur une même frise de 1970 à 1990.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Portugal et Espagne, 1970-1990",
+     "source": "D’après le cours.",
+     "debut": 1970,
+     "fin": 1990,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "oeillets",
+       "date": 1974,
+       "nom": "Révolution Œillets"
+      },
+      {
+       "id": "franco",
+       "date": 1975,
+       "nom": "Mort de Franco"
+      },
+      {
+       "id": "libres",
+       "date": 1977,
+       "nom": "Élections libres"
+      },
+      {
+       "id": "ces",
+       "date": 1978,
+       "nom": "Constit. Espagne"
+      },
+      {
+       "id": "coup",
+       "date": 1981,
+       "nom": "Coup d’État raté"
+      },
+      {
+       "id": "cee",
+       "date": 1986,
+       "nom": "Entrée dans la CEE"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui renverse la dictature portugaise le 25 avril.",
+     "reponse": [
+      "oeillets"
+     ],
+     "aide": "Des œillets sont glissés dans les canons.",
+     "explication": "La **révolution des Œillets**, le 25 avril 1974, renverse l’Estado Novo presque sans effusion de sang."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent la mort de Franco de la Constitution espagnole ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Soustrais 1975 à 1978.",
+     "explication": "1978 − 1975 = **3 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements espagnols du plus ancien au plus récent.",
+     "items": [
+      "Mort de Franco",
+      "Premières élections libres",
+      "Constitution espagnole",
+      "Tentative de coup d’État militaire"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1975 → 1977 → 1978 → 1981** : la démocratie se construit, puis résiste au coup d’État."
+    }
+   ]
+  },
+  {
+   "chapitre": "aef00199-1d6e-522f-940d-71ad3a04d772",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux dictatures, deux sorties",
+   "competence": "analyser-document",
+   "situation": "Hugo compare la fin des deux dictatures de la péninsule ibérique. Un tableau lui donne les repères, puis il doit classer les faits.",
+   "documents": [
+    {
+     "id": "compare",
+     "type": "tableau",
+     "titre": "Portugal et Espagne",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "",
+      "Portugal",
+      "Espagne"
+     ],
+     "lignes": [
+      [
+       "Nom du régime",
+       "Estado Novo",
+       "Franquisme"
+      ],
+      [
+       "Début",
+       "1933",
+       "1939"
+      ],
+      [
+       "Fin",
+       "1974",
+       "1975"
+      ],
+      [
+       "Événement qui ouvre la sortie",
+       "Un mouvement d’officiers, le 25 avril",
+       "La mort de Franco, le 20 novembre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "compare",
+     "enonce": "De combien d’années la dictature portugaise a-t-elle duré plus longtemps que la dictature espagnole ?",
+     "reponse": 5,
+     "unite": "ans",
+     "aide": "Calcule la durée de chaque régime, puis fais la différence.",
+     "explication": "Portugal : 1974 − 1933 = 41 ans. Espagne : 1975 − 1939 = 36 ans. 41 − 36 = **5 ans** de plus."
+    },
+    {
+     "type": "zone",
+     "document": "compare",
+     "enonce": "Touche la case qui dit ce qui ouvre la sortie de la dictature en Espagne.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Prends la dernière ligne, colonne de l’Espagne.",
+     "explication": "**La mort de Franco**, le 20 novembre 1975, ouvre la voie à la transition."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : rupture portugaise ou transition négociée espagnole ?",
+     "categories": [
+      "Rupture (Portugal)",
+      "Transition négociée (Espagne)"
+     ],
+     "items": [
+      [
+       "Un mouvement d’officiers renverse le régime",
+       0
+      ],
+      [
+       "Les Cortès franquistes votent leur propre disparition",
+       1
+      ],
+      [
+       "Le roi désigné par Franco ouvre le régime",
+       1
+      ],
+      [
+       "Des œillets sont glissés dans les canons",
+       0
+      ],
+      [
+       "Les pactes de la Moncloa",
+       1
+      ],
+      [
+       "Décolonisation rapide et nationalisations",
+       0
+      ]
+     ],
+     "aide": "La rupture est révolutionnaire, la transition se négocie entre anciens et nouveaux acteurs.",
+     "explication": "Au **Portugal**, la rupture : officiers, œillets, décolonisation, nationalisations. En **Espagne**, la transition négociée : Cortès, roi, pactes de la Moncloa."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la loi d’amnistie espagnole de 1977 est-elle encore discutée ?",
+     "options": [
+      "Elle a laissé sans réponse la question des crimes du franquisme",
+      "Elle a interdit le parti communiste pendant plusieurs années encore",
+      "Elle a rétabli les pouvoirs absolus du roi dans tout le pays",
+      "Elle a empêché l’adoption de la Constitution de 1978 par référendum"
+     ],
+     "reponse": 0,
+     "aide": "Une amnistie efface les poursuites contre les responsables d’actes passés.",
+     "explication": "La sortie de dictature se paie de **compromis** : l’amnistie a laissé sans réponse la question des crimes du franquisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "aef00199-1d6e-522f-940d-71ad3a04d772",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lisbonne 1974, Madrid 1981",
+   "competence": "analyser-document",
+   "situation": "Deux matins marquent la naissance des démocraties ibériques. Une carte situe les capitales et une chronique imaginée raconte les deux journées.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La péninsule ibérique",
+     "source": "Carte schématique.",
+     "fond": "mediterranee",
+     "cadrage": [
+      -11,
+      35,
+      5,
+      45
+     ],
+     "frontieres": true,
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "lisbonne",
+       "symbole": "lettre",
+       "lettre": "A"
+      },
+      {
+       "id": "b",
+       "lieu": "madrid",
+       "symbole": "lettre",
+       "lettre": "B"
+      }
+     ]
+    },
+    {
+     "id": "chronique",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Deux matins dans la péninsule ibérique",
+     "source": "Chronique écrite pour l’exercice.",
+     "blocs": [
+      "25 avril 1974. À Lisbonne, des officiers prennent la radio et marchent sur la capitale. La foule envahit les rues et glisse des [[o|œillets]] dans les canons des fusils. Le régime tombe presque sans effusion de sang.",
+      "23 février 1981. À Madrid, des militaires armés font irruption dans le Parlement. Dans la nuit, le roi Juan Carlos s’adresse à la télévision et refuse le coup d’État : il échoue."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale où des officiers ont renversé la dictature en 1974.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Elle est sur la côte atlantique, à l’ouest de la péninsule.",
+     "explication": "**Lisbonne** (A), capitale du Portugal, sur la côte atlantique. B est Madrid."
+    },
+    {
+     "type": "zone",
+     "document": "chronique",
+     "enonce": "Touche le mot qui désigne les fleurs glissées dans les canons.",
+     "reponse": [
+      "o"
+     ],
+     "aide": "Elles ont donné son nom à la révolution.",
+     "explication": "Les **œillets** donnent son nom à la révolution du 25 avril 1974."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale où des militaires ont investi le Parlement en 1981.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Elle est au centre de la péninsule.",
+     "explication": "**Madrid** (B), capitale de l’Espagne, au centre de la péninsule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre l’attitude du roi Juan Carlos en 1981 ?",
+     "options": [
+      "Que le roi choisit de défendre la démocratie qu’il a contribué à ouvrir",
+      "Que le roi, désigné par Franco, soutient les militaires putschistes",
+      "Que l’armée espagnole est unanimement favorable au putsch",
+      "Que le Parlement espagnol avait perdu tout pouvoir de décision"
+     ],
+     "reponse": 0,
+     "aide": "Il avait été désigné par Franco, mais il a ouvert le régime.",
+     "explication": "En refusant publiquement le putsch, le roi fait **échouer** la tentative : il défend la démocratie qu’il a lui-même ouverte."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le bilan.",
+     "texte": "Au Portugal, la sortie de la dictature s’est faite par la ___ ; en Espagne, par une ___ négociée.",
+     "reponses": [
+      [
+       "rupture"
+      ],
+      [
+       "transition"
+      ]
+     ],
+     "banque": [
+      "rupture",
+      "transition",
+      "guerre",
+      "réforme"
+     ],
+     "aide": "Un mouvement d’officiers d’un côté, des compromis de l’autre.",
+     "explication": "Il n’y a pas une seule voie vers la démocratie : **rupture** au Portugal, **transition** négociée en Espagne."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbd77eac-7f69-57a6-b9e4-534fcd11ef58",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui élit les institutions de l’Union ?",
+   "competence": "lire-tableau",
+   "situation": "Chloé prépare un exposé sur l’Union européenne. Elle a noté qui compose chaque institution et si les citoyens l’élisent directement.",
+   "documents": [
+    {
+     "id": "inst",
+     "type": "tableau",
+     "titre": "Quatre institutions de l’Union",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Institution",
+      "Qui la compose ?",
+      "Élue directement par les citoyens ?"
+     ],
+     "lignes": [
+      [
+       "Parlement européen",
+       "Des députés européens",
+       "Oui, depuis 1979"
+      ],
+      [
+       "Commission européenne",
+       "Des membres nommés",
+       "Non"
+      ],
+      [
+       "Conseil de l’Union",
+       "Les ministres des États",
+       "Non"
+      ],
+      [
+       "Conseil européen",
+       "Les chefs d’État et de gouvernement",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inst",
+     "enonce": "Touche la case qui dit quelle institution est élue directement par les citoyens.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Cherche l’unique « Oui » de la dernière colonne.",
+     "explication": "Le **Parlement européen** est élu au suffrage universel direct depuis 1979."
+    },
+    {
+     "type": "nombre",
+     "document": "inst",
+     "enonce": "Combien de ces quatre institutions ne sont pas élues directement par les citoyens ?",
+     "reponse": 3,
+     "aide": "Compte les « Non » de la dernière colonne.",
+     "explication": "Commission, Conseil de l’Union et Conseil européen : **3** institutions sur 4."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution à son rôle.",
+     "paires": [
+      [
+       "Commission",
+       "Propose les textes"
+      ],
+      [
+       "Parlement européen",
+       "Vote le budget et peut censurer la Commission"
+      ],
+      [
+       "Conseil européen",
+       "Fixe les orientations"
+      ],
+      [
+       "Cour de justice",
+       "Veille à l’application uniforme du droit"
+      ]
+     ],
+     "aide": "La Commission a le monopole de l’initiative des textes.",
+     "explication": "La **Commission** propose, le **Parlement** colégifère et contrôle, le **Conseil européen** fixe les orientations, la **Cour de justice** assure l’application uniforme du droit."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbd77eac-7f69-57a6-b9e4-534fcd11ef58",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les crises de l’Europe sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Mathis a tracé une frise des moments où la légitimité démocratique de l’Union a été discutée, de la première élection du Parlement au Brexit.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Légitimité de l’Union, de 1979 à 2020",
+     "source": "D’après le cours.",
+     "debut": 1975,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "pe",
+       "date": 1979,
+       "nom": "Parlement élu"
+      },
+      {
+       "id": "non",
+       "date": 2005,
+       "nom": "Rejet du traité"
+      },
+      {
+       "id": "lisbonne",
+       "date": 2009,
+       "nom": "Traité de Lisbonne"
+      },
+      {
+       "id": "euro",
+       "date": 2010,
+       "nom": "Crise de l’euro"
+      },
+      {
+       "id": "vote",
+       "date": 2016,
+       "nom": "Vote du Brexit"
+      },
+      {
+       "id": "sortie",
+       "date": 2020,
+       "nom": "Sortie du R.-U."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche le début de la crise de la zone euro, qui a fait apparaître le poids des créanciers.",
+     "reponse": [
+      "euro"
+     ],
+     "aide": "Elle commence à partir de 2010.",
+     "explication": "La **crise de la zone euro** débute en 2010 et fait apparaître le poids des créanciers dans des décisions nationales."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent la première élection du Parlement européen du traité de Lisbonne ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Soustrais 1979 à 2009.",
+     "explication": "2009 − 1979 = **30 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à ce qu’elle montre ou change.",
+     "paires": [
+      [
+       "2005",
+       "Les électeurs français et néerlandais rejettent le traité constitutionnel"
+      ],
+      [
+       "2009",
+       "La Charte des droits fondamentaux devient contraignante"
+      ],
+      [
+       "2010",
+       "La crise de la zone euro fait apparaître le poids des créanciers"
+      ],
+      [
+       "2016-2020",
+       "Le Brexit montre qu’une sortie est possible"
+      ]
+     ],
+     "aide": "Appuie-toi sur la frise puis sur le cours.",
+     "explication": "**2005** : le non des référendums. **2009** : Charte contraignante. **2010** : crise de l’euro. **2016-2020** : le Brexit."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : critique du « déficit démocratique » ou réponse apportée ?",
+     "categories": [
+      "Une critique",
+      "Une réponse"
+     ],
+     "items": [
+      [
+       "L’initiative des textes appartient à une institution non élue",
+       0
+      ],
+      [
+       "L’initiative citoyenne européenne",
+       1
+      ],
+      [
+       "La Charte des droits fondamentaux contraignante",
+       1
+      ],
+      [
+       "Une abstention élevée aux européennes",
+       0
+      ],
+      [
+       "Il n’existe pas de partis véritablement européens",
+       0
+      ],
+      [
+       "Le principe de subsidiarité",
+       1
+      ]
+     ],
+     "aide": "Une critique constate un manque, une réponse tente de le corriger.",
+     "explication": "**Critiques** : initiative non élue, abstention, absence de partis européens. **Réponses** : initiative citoyenne, Charte contraignante, subsidiarité."
+    }
+   ]
+  },
+  {
+   "chapitre": "cbd77eac-7f69-57a6-b9e4-534fcd11ef58",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Inès et Malo débattent de l’Europe",
+   "competence": "argumenter",
+   "situation": "Deux lycéens se disputent par messages : l’Union européenne est-elle démocratique ? Un graphique sur la participation aux européennes vient nourrir leur débat.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "L’Union n’est pas démocratique : la [[c|Commission]] n’est pas élue et c’est elle qui propose les lois."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Mais le Parlement est élu depuis 1979, il vote le budget et il peut la censurer. Et les ministres de nos gouvernements siègent au Conseil."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Peut-être, mais la moitié de mes amis ne vote pas aux européennes, et personne ne sait vraiment qui décide quoi."
+      }
+     ]
+    },
+    {
+     "id": "participation",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Participation aux élections européennes",
+     "source": "Chiffres arrondis, moyenne dans l’ensemble de l’Union.",
+     "categories": [
+      "1979",
+      "1999",
+      "2014",
+      "2019"
+     ],
+     "series": [
+      {
+       "nom": "Participation",
+       "valeurs": [
+        62,
+        50,
+        43,
+        51
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Participation",
+      "unite": "%",
+      "min": 0,
+      "max": 80,
+      "pas": 20
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche le mot qui désigne l’institution non élue qui propose les lois.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Inès la cite dans son premier message.",
+     "explication": "La **Commission** a le monopole de l’initiative des textes, d’où le reproche de technocratie."
+    },
+    {
+     "type": "zone",
+     "document": "participation",
+     "enonce": "Touche l’année où la participation a été la plus faible.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "En **2014**, la participation est la plus basse du graphique : 43 %."
+    },
+    {
+     "type": "nombre",
+     "document": "participation",
+     "enonce": "De combien de points la participation a-t-elle baissé entre 1979 et 2014 ?",
+     "reponse": 19,
+     "unite": "points",
+     "aide": "Lis la première barre et la barre de 2014, puis soustrais.",
+     "explication": "62 − 43 = **19 points** de moins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les chiffres du graphique donnent-ils raison à Inès sur l’abstention ?",
+     "options": [
+      "Oui, en partie : plus basse en 2014 qu’en 1979, elle remonte en 2019",
+      "Non : la participation a augmenté à chaque élection depuis 1979",
+      "Oui : la participation est tombée sous les 20 % en 2014",
+      "Non : la participation a toujours dépassé les 60 % des inscrits"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1979, 2014 et 2019.",
+     "explication": "La participation recule de 62 % à 43 % entre 1979 et 2014, puis **remonte** à 51 % en 2019 : Inès a raison pour la tendance, pas pour toute la période."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le cœur du débat.",
+     "texte": "Certains pensent qu’il manque à l’Union un ___, un peuple qui se reconnaisse comme tel ; d’autres y voient un processus ___, comme le furent les nations.",
+     "reponses": [
+      [
+       "demos",
+       "dêmos",
+       "peuple"
+      ],
+      [
+       "en cours"
+      ]
+     ],
+     "banque": [
+      "demos",
+      "en cours",
+      "achevé",
+      "impossible"
+     ],
+     "aide": "Les nations aussi se sont construites peu à peu.",
+     "explication": "La question est celle d’une démocratie sans **demos**. Pour certains, c’est un obstacle ; pour d’autres, un processus **en cours**, comme les nations."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7ba6e59-de87-5b23-acc7-c03187b60974",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Hard power ou soft power ? Le dossier de Léo",
+   "competence": "analyser-document",
+   "situation": "Léo prépare un exposé sur la puissance d’un grand État. Il a listé cinq atouts, qu’il doit maintenant classer selon la grille de Joseph Nye.",
+   "documents": [
+    {
+     "id": "atouts",
+     "type": "tableau",
+     "titre": "Cinq atouts d’un grand État",
+     "source": "Atouts d’un grand État, d’après le cours.",
+     "colonnes": [
+      "Atout d’un État",
+      "Sa nature"
+     ],
+     "lignes": [
+      [
+       "Porte-avions déployés sur trois océans",
+       "Militaire"
+      ],
+      [
+       "Hollywood, séries et musique",
+       "Culturelle"
+      ],
+      [
+       "Sanctions financières contre un État",
+       "Économique"
+      ],
+      [
+       "Universités qui attirent les étudiants du monde",
+       "Culturelle"
+      ],
+      [
+       "Siège permanent au Conseil de sécurité",
+       "Diplomatique"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "atouts",
+     "enonce": "Touche l’atout qui donne un droit de veto sur les résolutions de l’ONU.",
+     "reponse": [
+      "r4c0"
+     ],
+     "aide": "Il concerne le Conseil de sécurité.",
+     "explication": "Le **siège permanent au Conseil de sécurité** confère un droit de veto."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque atout : hard power ou soft power ?",
+     "categories": [
+      "Hard power",
+      "Soft power"
+     ],
+     "items": [
+      [
+       "Les porte-avions",
+       0
+      ],
+      [
+       "Hollywood et les séries",
+       1
+      ],
+      [
+       "Les sanctions financières",
+       0
+      ],
+      [
+       "Les universités qui attirent les étudiants",
+       1
+      ]
+     ],
+     "aide": "Le hard power contraint, le soft power attire.",
+     "explication": "**Hard power** : porte-avions, sanctions (contrainte). **Soft power** : culture, universités (attraction)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme de Joseph Nye à son moyen d’action.",
+     "paires": [
+      [
+       "Hard power",
+       "La contrainte"
+      ],
+      [
+       "Soft power",
+       "L’attraction"
+      ],
+      [
+       "Smart power",
+       "La combinaison des deux"
+      ]
+     ],
+     "aide": "Smart signifie « intelligent » : il suppose du jugement.",
+     "explication": "Le **hard power** contraint, le **soft power** attire, le **smart power** combine les deux à propos."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7ba6e59-de87-5b23-acc7-c03187b60974",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une firme plus riche que certains pays",
+   "competence": "lire-graphique",
+   "situation": "Nora compare le chiffre d’affaires d’une grande firme imaginée avec la richesse annuelle de trois pays imaginés. Elle veut savoir qui peut peser dans les affaires du monde.",
+   "documents": [
+    {
+     "id": "firmes",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Une firme face à trois pays",
+     "source": "Chiffres imaginés pour l’exercice.",
+     "categories": [
+      "Firme Z (chiffre d’affaires)",
+      "Pays A (PIB)",
+      "Pays B (PIB)",
+      "Pays C (PIB)"
+     ],
+     "series": [
+      {
+       "nom": "Montant",
+       "valeurs": [
+        350,
+        300,
+        450,
+        200
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Montant",
+      "unite": "milliards de dollars",
+      "min": 0,
+      "max": 500,
+      "pas": 100
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "firmes",
+     "enonce": "De combien la firme Z dépasse-t-elle le PIB du pays A ?",
+     "reponse": 50,
+     "unite": "Md$",
+     "aide": "Lis les deux barres, puis soustrais.",
+     "explication": "350 − 300 = **50 milliards de dollars** (Md$) de plus pour la firme."
+    },
+    {
+     "type": "zone",
+     "document": "firmes",
+     "enonce": "Touche les deux pays dont le PIB est inférieur au chiffre d’affaires de la firme Z.",
+     "reponse": [
+      "k1",
+      "k3"
+     ],
+     "multiple": true,
+     "aide": "Cherche les barres plus courtes que celle de la firme.",
+     "explication": "Les **pays A (300) et C (200)** sont moins riches que la firme Z (350). Le pays B (450) la dépasse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce graphique sur la puissance ?",
+     "options": [
+      "Un acteur non étatique peut disposer de ressources supérieures à celles d’États",
+      "Seuls les États disposent de moyens économiques importants dans le monde",
+      "Une firme ne peut avoir aucune influence sur la politique d’un pays",
+      "La puissance se mesure uniquement à la taille de l’armée d’un pays"
+     ],
+     "reponse": 0,
+     "aide": "Compare la barre de la firme à celles des pays.",
+     "explication": "Les **firmes multinationales** sont des acteurs non étatiques dont le chiffre d’affaires dépasse le PIB de nombreux pays."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acteur : étatique ou non étatique ?",
+     "categories": [
+      "Acteur étatique",
+      "Acteur non étatique"
+     ],
+     "items": [
+      [
+       "Le Brésil",
+       0
+      ],
+      [
+       "Une ONG de défense de l’environnement",
+       1
+      ],
+      [
+       "Une plateforme numérique",
+       1
+      ],
+      [
+       "La Chine",
+       0
+      ],
+      [
+       "Un réseau criminel international",
+       1
+      ]
+     ],
+     "aide": "Un acteur étatique est un État.",
+     "explication": "**Étatiques** : Brésil, Chine. **Non étatiques** : ONG, plateforme numérique, réseau criminel."
+    }
+   ]
+  },
+  {
+   "chapitre": "a7ba6e59-de87-5b23-acc7-c03187b60974",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Karvia, Nordalie et Mirande face à la crise",
+   "competence": "argumenter",
+   "situation": "Trois États imaginés réagissent à une crise régionale. Un tableau compare deux d’entre eux et un texte raconte leurs choix. À toi de reconnaître hard, soft et smart power.",
+   "documents": [
+    {
+     "id": "etats",
+     "type": "tableau",
+     "titre": "Karvia et Nordalie",
+     "source": "États imaginés pour l’exercice.",
+     "colonnes": [
+      "Atout",
+      "Karvia",
+      "Nordalie"
+     ],
+     "lignes": [
+      [
+       "Budget militaire (% du PIB)",
+       "4,5 %",
+       "1 %"
+      ],
+      [
+       "Arme nucléaire",
+       "Oui",
+       "Non"
+      ],
+      [
+       "Étudiants étrangers accueillis",
+       "20 000",
+       "400 000"
+      ],
+      [
+       "Siège permanent au Conseil de sécurité",
+       "Oui",
+       "Non"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "crise",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Trois réactions à la crise",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Karvia menace de déployer sa [[f|flotte]] et ferme ses ports aux navires du voisin.",
+      "Nordalie propose des bourses d’études, ouvre des instituts de langue et diffuse ses films : sa médiation est écoutée sans qu’elle ait à brandir une menace.",
+      "Mirande commence par des sanctions économiques, puis offre des bourses et un cadre de négociation : elle combine contrainte et attraction."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etats",
+     "enonce": "Touche la case qui montre que Karvia détient un siège permanent au Conseil de sécurité.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Prends la dernière ligne, colonne de Karvia.",
+     "explication": "La case **« Oui »** de la dernière ligne, colonne Karvia : un atout diplomatique et un droit de veto."
+    },
+    {
+     "type": "nombre",
+     "document": "etats",
+     "enonce": "Combien de fois Nordalie accueille-t-elle plus d’étudiants étrangers que Karvia ?",
+     "reponse": 20,
+     "unite": "fois",
+     "aide": "Divise 400 000 par 20 000.",
+     "explication": "400 000 ÷ 20 000 = **20 fois** plus : un atout de soft power."
+    },
+    {
+     "type": "zone",
+     "document": "crise",
+     "enonce": "Touche le mot qui montre un moyen de contrainte militaire.",
+     "reponse": [
+      "f"
+     ],
+     "aide": "Karvia menace d’en déployer une.",
+     "explication": "La **flotte** est un instrument de hard power : la menace de la force."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel État pratique le smart power ?",
+     "options": [
+      "Karvia",
+      "Nordalie",
+      "Mirande",
+      "Aucun des trois"
+     ],
+     "reponse": 2,
+     "aide": "Le smart power combine contrainte et attraction.",
+     "explication": "**Mirande** combine sanctions (hard power) et bourses ou médiation (soft power) : c’est le smart power."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition.",
+     "texte": "Le hard power agit par la ___, le soft power par l’___ et le smart power par la ___ des deux.",
+     "reponses": [
+      [
+       "contrainte"
+      ],
+      [
+       "attraction"
+      ],
+      [
+       "combinaison"
+      ]
+     ],
+     "banque": [
+      "contrainte",
+      "attraction",
+      "combinaison",
+      "séparation"
+     ],
+     "aide": "Reprends les trois États du texte.",
+     "explication": "Hard power : **contrainte**. Soft power : **attraction**. Smart power : **combinaison** des deux, qui suppose du jugement."
+    }
+   ]
+  },
+  {
+   "chapitre": "a0d16460-b834-519d-b973-89869ef77f63",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq dates pour suivre l’Empire ottoman",
+   "competence": "se-reperer-temps",
+   "situation": "Pour comprendre le déclin de l’Empire ottoman, Selim a placé cinq dates sur une frise, de l’apogée de Soliman à la République turque.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De Soliman à la République turque",
+     "source": "D’après le cours.",
+     "debut": 1500,
+     "fin": 1950,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "soliman",
+       "debut": 1520,
+       "fin": 1566,
+       "nom": "Soliman",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "vienne",
+       "date": 1683,
+       "nom": "Siège de Vienne"
+      },
+      {
+       "id": "grece",
+       "date": 1830,
+       "nom": "Grèce indépendante"
+      },
+      {
+       "id": "dette",
+       "date": 1881,
+       "nom": "Dette publique"
+      },
+      {
+       "id": "jt",
+       "date": 1908,
+       "nom": "Jeunes-Turcs"
+      },
+      {
+       "id": "rep",
+       "date": 1923,
+       "nom": "République turque"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement par lequel le premier pays balkanique devient indépendant.",
+     "reponse": [
+      "grece"
+     ],
+     "aide": "C’est un pays du sud-est de l’Europe, en 1830.",
+     "explication": "La **Grèce** obtient son indépendance en 1830 : c’est le premier des nationalismes balkaniques à réussir."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent la révolution des Jeunes-Turcs de la République turque ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Soustrais 1908 à 1923.",
+     "explication": "1923 − 1908 = **15 ans**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Échec devant Vienne",
+      "Indépendance de la Grèce",
+      "Contrôle de la Dette publique ottomane",
+      "République turque"
+     ],
+     "aide": "Lis la frise de gauche à droite.",
+     "explication": "**1683 → 1830 → 1881 → 1923** : l’empire recule, s’endette, puis laisse place à la République."
+    }
+   ]
+  },
+  {
+   "chapitre": "a0d16460-b834-519d-b973-89869ef77f63",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La Russie après la disparition de l’URSS",
+   "competence": "analyser-document",
+   "situation": "En décembre 1991, l’URSS disparaît. Sabine mesure ce que la Russie perd, puis place sur une frise les moments où Moscou affirme de nouveau sa puissance.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Avant et après 1991",
+     "source": "Chiffres arrondis.",
+     "colonnes": [
+      "",
+      "URSS (1991)",
+      "Russie (1992)"
+     ],
+     "lignes": [
+      [
+       "Population (millions d’habitants)",
+       "290",
+       "148"
+      ],
+      [
+       "Superficie (millions de km²)",
+       "22,4",
+       "17,1"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Russie depuis 1991",
+     "source": "D’après le cours.",
+     "debut": 1990,
+     "fin": 2025,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "nineties",
+       "debut": 1991,
+       "fin": 1999,
+       "nom": "Années 1990",
+       "teinte": "gris"
+      },
+      {
+       "id": "reprise",
+       "debut": 2000,
+       "fin": 2025,
+       "nom": "Reprise en main",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "urss",
+       "date": 1991,
+       "nom": "Fin de l’URSS"
+      },
+      {
+       "id": "georgie",
+       "date": 2008,
+       "nom": "Géorgie"
+      },
+      {
+       "id": "crimee",
+       "date": 2014,
+       "nom": "Crimée et Donbass"
+      },
+      {
+       "id": "ukraine",
+       "date": 2022,
+       "nom": "Invasion Ukraine"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "bilan",
+     "enonce": "Combien d’habitants la Russie a-t-elle de moins que l’URSS en 1991 ?",
+     "reponse": 142,
+     "unite": "millions",
+     "aide": "Soustrais 148 à 290.",
+     "explication": "290 − 148 = **142 millions** d’habitants, soit près de la moitié."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui date de 2014 : l’annexion d’un territoire ukrainien et l’intervention dans le Donbass.",
+     "reponse": [
+      "crimee"
+     ],
+     "aide": "Il se situe entre 2008 et 2022.",
+     "explication": "En **2014**, la Russie annexe la Crimée et intervient dans le Donbass."
+    },
+    {
+     "type": "nombre",
+     "document": "bilan",
+     "enonce": "Quelle part de la superficie de l’URSS la Russie a-t-elle perdue ? Arrondis à l’unité.",
+     "reponse": 24,
+     "unite": "%",
+     "tolerance": 0.5,
+     "aide": "Calcule la superficie perdue, puis divise-la par 22,4.",
+     "explication": "22,4 − 17,1 = 5,3 millions de km² ; 5,3 ÷ 22,4 ≈ 0,237, soit environ **24 %**, près d’un quart."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : années 1990 ou à partir de 2000 ?",
+     "categories": [
+      "Années 1990",
+      "À partir de 2000"
+     ],
+     "items": [
+      [
+       "Effondrement économique et hyperinflation",
+       0
+      ],
+      [
+       "Privatisations massives",
+       0
+      ],
+      [
+       "Reprise en main des médias",
+       1
+      ],
+      [
+       "Gaz et pétrole utilisés comme instrument diplomatique",
+       1
+      ],
+      [
+       "Modernisation de l’armée",
+       1
+      ]
+     ],
+     "aide": "Les années 1990 sont celles du choc, les années 2000 celles de la reprise en main.",
+     "explication": "**Années 1990** : effondrement, hyperinflation, privatisations. **À partir de 2000** : médias, rente énergétique, armée."
+    }
+   ]
+  },
+  {
+   "chapitre": "a0d16460-b834-519d-b973-89869ef77f63",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux empires en déclin, deux réponses",
+   "competence": "argumenter",
+   "situation": "Une frise place côte à côte l’Empire ottoman et la Russie post-soviétique. Une note de lecture imaginée invite à penser le déclin comme un processus.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux trajectoires, 1880-2025",
+     "source": "D’après le cours.",
+     "debut": 1880,
+     "fin": 2025,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "dette",
+       "date": 1881,
+       "nom": "Dette ottomane"
+      },
+      {
+       "id": "jt",
+       "date": 1908,
+       "nom": "Jeunes-Turcs"
+      },
+      {
+       "id": "rep",
+       "date": 1923,
+       "nom": "République turque"
+      },
+      {
+       "id": "urss",
+       "date": 1991,
+       "nom": "Fin de l’URSS"
+      },
+      {
+       "id": "georgie",
+       "date": 2008,
+       "nom": "Géorgie"
+      },
+      {
+       "id": "crimee",
+       "date": 2014,
+       "nom": "Crimée"
+      },
+      {
+       "id": "ukraine",
+       "date": 2022,
+       "nom": "Invasion Ukraine"
+      }
+     ]
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Note de lecture",
+     "source": "Texte écrit pour l’exercice.",
+     "blocs": [
+      "Un déclin n’est presque jamais un effondrement soudain. Il se prépare par des [[r|retards]] accumulés, des dépendances financières, des contestations internes et des recompositions du commerce mondial.",
+      "Et la réponse qu’une puissance y apporte compte autant que les causes."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement par lequel des réformateurs tentent de relever l’Empire ottoman en 1908.",
+     "reponse": [
+      "jt"
+     ],
+     "aide": "C’est une révolution, en 1908.",
+     "explication": "La **révolution des Jeunes-Turcs** (1908) tente de réformer l’empire, mais elle ne renverse pas le mouvement de déclin."
+    },
+    {
+     "type": "nombre",
+     "document": "frise",
+     "enonce": "Combien d’années séparent l’Administration de la Dette publique ottomane de la République turque ?",
+     "reponse": 42,
+     "unite": "ans",
+     "aide": "Soustrais 1881 à 1923.",
+     "explication": "1923 − 1881 = **42 ans**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : trajectoire ottomane ou russe post-URSS ?",
+     "categories": [
+      "Empire ottoman",
+      "Russie post-URSS"
+     ],
+     "items": [
+      [
+       "Les Tanzimat",
+       0
+      ],
+      [
+       "L’Administration de la Dette publique",
+       0
+      ],
+      [
+       "Les capitulations",
+       0
+      ],
+      [
+       "La rente énergétique comme instrument diplomatique",
+       1
+      ],
+      [
+       "L’annexion de la Crimée",
+       1
+      ],
+      [
+       "La guerre en Géorgie en 2008",
+       1
+      ]
+     ],
+     "aide": "L’un s’est réformé en s’européanisant, l’autre s’est réaffirmé par la force.",
+     "explication": "**Ottoman** : Tanzimat, Dette publique, capitulations. **Russie** : énergie, Crimée, Géorgie."
+    },
+    {
+     "type": "zone",
+     "document": "note",
+     "enonce": "Touche le mot qui dit ce qui s’accumule avant un déclin.",
+     "reponse": [
+      "r"
+     ],
+     "aide": "Ce sont des choses en avance ou en retard sur les autres.",
+     "explication": "Ce sont des **retards** accumulés, notamment techniques et industriels, qui préparent le déclin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon la note de lecture, comment arrive un déclin ?",
+     "options": [
+      "Il se prépare lentement : retards, dépendances financières et contestations",
+      "Il survient toujours après une seule défaite militaire brutale et soudaine",
+      "Il vient toujours d’une crise économique soudaine et imprévisible",
+      "Il ne dépend jamais des choix faits par la puissance elle-même"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase de la note.",
+     "explication": "Le déclin est un **processus long**, fait de retards, de dépendances et de contestations. La réponse de la puissance pèse autant que les causes."
+    }
+   ]
+  }
+ ]
+}

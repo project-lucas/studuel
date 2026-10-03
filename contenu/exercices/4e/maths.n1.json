@@ -1,0 +1,4288 @@
+{
+ "niveau": "4e",
+ "matiere": "maths",
+ "exercices": [
+  {
+   "chapitre": "bbc8df26-d175-58d1-affb-8efd8a429819",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La nuit glaciale de la station",
+   "competence": "calculer",
+   "situation": "À la station de Morzine, la température a baissé de 3 °C chaque heure pendant toute la nuit. Le gardien de la station note sa variation depuis minuit dans un tableau.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Variation de la température depuis minuit",
+     "source": "Relevé inventé pour l’exercice",
+     "colonnes": [
+      "Heures écoulées",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "lignes": [
+      [
+       "Variation (°C)",
+       -3,
+       -6,
+       -9,
+       "?",
+       -15
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la variation de température au bout de **4 heures** ? (la case « ? » du tableau)",
+     "reponse": -12,
+     "unite": "°C",
+     "aide": "Chaque heure apporte −3 °C. Pour 4 heures, on multiplie −3 par 4 : un négatif fois un positif.",
+     "explication": "Une baisse de 3 °C chaque heure, pendant 4 heures : (−3) × 4. Signes contraires, donc le résultat est négatif : 3 × 4 = 12, soit **−12 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La nuit dure 8 heures de plus. Quelle serait la variation totale au bout de **8 heures** ?",
+     "reponse": -24,
+     "unite": "°C",
+     "aide": "Reprends le coefficient du tableau : −3 °C par heure.",
+     "explication": "(−3) × 8 : signes contraires donc négatif, et 3 × 8 = 24. La variation est de **−24 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien d’heures la variation atteint-elle **−27 °C** ?",
+     "reponse": 9,
+     "unite": "heures",
+     "aide": "On cherche le nombre d’heures h tel que (−3) × h = −27 : c’est une division.",
+     "explication": "(−27) ÷ (−3) : deux signes identiques donnent un quotient positif, et 27 ÷ 3 = 9. Il faut **9 heures**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbc8df26-d175-58d1-affb-8efd8a429819",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le score de Léo, piège après piège",
+   "competence": "calculer",
+   "situation": "Dans son jeu vidéo, Léo perd des points quand il touche un piège et en gagne quand il ramasse une étoile. Il a joué une partie complète et note son bilan.",
+   "documents": [
+    {
+     "id": "bilan",
+     "type": "tableau",
+     "titre": "Le bilan de la partie",
+     "source": "Barème inventé pour l’exercice",
+     "colonnes": [
+      "Événement",
+      "Points par fois",
+      "Nombre de fois",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Piège touché",
+       -6,
+       4,
+       "?"
+      ],
+      [
+       "Étoile ramassée",
+       5,
+       7,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des points des **pièges** touchés ?",
+     "reponse": -24,
+     "aide": "Chaque piège vaut −6 points ; il y en a 4. Un nombre négatif multiplié par un positif donne…",
+     "explication": "4 pièges à −6 points : (−6) × 4 = **−24** (signes contraires, résultat négatif)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total des points des **étoiles** ?",
+     "reponse": 35,
+     "aide": "Ici, les deux nombres sont positifs.",
+     "explication": "5 × 7 = **35** points : deux facteurs positifs, un produit positif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léo commençait à 0 point. Quel est son **score final** ?",
+     "reponse": 11,
+     "aide": "Additionne les deux totaux, le négatif et le positif.",
+     "explication": "−24 + 35 = **11** points : les gains l’emportent sur les pertes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léo ramasse 35 points d’étoiles. Combien de **pièges** peut-il toucher au maximum sans que son score devienne négatif ?",
+     "reponse": 5,
+     "aide": "Compare 6 × (nombre de pièges) à 35 : il ne faut pas dépasser 35.",
+     "explication": "Chaque piège coûte 6 points. 5 pièges : 5 × 6 = 30 ≤ 35, le score reste positif. 6 pièges : 36 > 35, le score serait −1. Le maximum est **5 pièges**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bbc8df26-d175-58d1-affb-8efd8a429819",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Inès et Malo ne sont pas d’accord",
+   "competence": "raisonner",
+   "situation": "Inès et Malo corrigent des calculs sur les puissances et les produits de relatifs. Ils ne trouvent pas les mêmes résultats : il faut les départager, puis vérifier le cahier de Malo.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La dispute",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "(−2)³, c’est (−2) × 3, donc −6."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Non, c’est (−2) × (−2) × (−2). Je trouve −8."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Et −2², le carré rend toujours positif : ça fait 4."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Là, le carré ne porte que sur le 2 : je trouve −4."
+      }
+     ]
+    },
+    {
+     "id": "cahier",
+     "type": "tableau",
+     "titre": "Le cahier de Malo",
+     "source": "Calculs écrits pour l’exercice",
+     "colonnes": [
+      "Calcul",
+      "Résultat de Malo"
+     ],
+     "lignes": [
+      [
+       "(−7) × 3",
+       "−21"
+      ],
+      [
+       "(−4) × (−5) × (−1)",
+       "20"
+      ],
+      [
+       "(−36) ÷ (−4)",
+       "−9"
+      ],
+      [
+       "−5²",
+       "−25"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Pour **(−2)³**, qui a raison ?",
+     "options": [
+      "Inès : elle multiplie −2 par 3",
+      "Malo : il écrit trois facteurs égaux à −2",
+      "Les deux, car −6 et −8 sont égaux",
+      "Aucun des deux : la réponse est positive"
+     ],
+     "reponse": 1,
+     "aide": "Une puissance d’exposant 3 répète trois fois le même facteur.",
+     "explication": "a³ = a × a × a. Donc (−2)³ = (−2) × (−2) × (−2) : (−2) × (−2) = 4 puis 4 × (−2) = −8. **Malo a raison.**"
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour **−2²**, qui a raison ?",
+     "options": [
+      "Inès, car un carré est toujours positif",
+      "Malo, car le carré ne porte que sur le 2",
+      "Les deux, car 4 et −4 sont opposés",
+      "Aucun des deux : le résultat est 0"
+     ],
+     "reponse": 1,
+     "aide": "Regarde où se trouvent les parenthèses : dans −2², le signe moins est-il élevé au carré ?",
+     "explication": "Sans parenthèses, le carré ne porte que sur 2 : −2² = −(2 × 2) = **−4**. Avec parenthèses, (−2)² = 4. **Malo a raison.**"
+    },
+    {
+     "type": "zone",
+     "document": "cahier",
+     "enonce": "Touche les **deux résultats faux** dans le cahier de Malo.",
+     "reponse": [
+      "r1c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Refais chaque calcul : combien de facteurs négatifs, et donc quel signe ?",
+     "explication": "(−4) × (−5) × (−1) a **3 facteurs négatifs** (nombre impair) : le résultat est négatif, −20 et non 20. (−36) ÷ (−4) : deux signes identiques, résultat **+9** et non −9."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **vrai résultat** de (−4) × (−5) × (−1) ?",
+     "reponse": -20,
+     "aide": "Compte les facteurs négatifs : pair, produit positif ; impair, produit négatif.",
+     "explication": "Trois facteurs négatifs : le produit est négatif. 4 × 5 × 1 = 20, donc **−20**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur de **(−2)⁴** ?",
+     "reponse": 16,
+     "aide": "Quatre facteurs égaux à −2 : (−2) × (−2) × (−2) × (−2). Combien de facteurs négatifs ?",
+     "explication": "Quatre facteurs négatifs : nombre pair, donc produit positif. 2 × 2 × 2 × 2 = 16, soit **16**. Plus généralement, une puissance paire d’un négatif est positive."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e75256d-577d-5004-ac78-1c34f23fc75f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre villes, un thermomètre",
+   "competence": "lire-tableau",
+   "situation": "Un matin d’hiver, la météo relève la température dans quatre villes de France. Les résultats sont placés sur une droite graduée.",
+   "documents": [
+    {
+     "id": "droite",
+     "type": "droite",
+     "titre": "Températures du matin (°C)",
+     "source": "Relevés inventés pour l’exercice",
+     "min": -5,
+     "max": 8,
+     "pas": 1,
+     "division": 1,
+     "points": [
+      {
+       "id": "ch",
+       "valeur": -4,
+       "nom": "Chamonix"
+      },
+      {
+       "id": "li",
+       "valeur": -1,
+       "nom": "Lille"
+      },
+      {
+       "id": "br",
+       "valeur": 3,
+       "nom": "Brest"
+      },
+      {
+       "id": "ni",
+       "valeur": 7,
+       "nom": "Nice"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle ville est la **plus froide** ?",
+     "options": [
+      "Chamonix (Alpes)",
+      "Lille (Nord)",
+      "Brest (Bretagne)",
+      "Nice (Côte d’Azur)"
+     ],
+     "reponse": 0,
+     "aide": "Sur une droite graduée, le plus petit nombre est le plus à gauche.",
+     "explication": "Chamonix est la plus à gauche, à **−4 °C** : c’est la plus froide."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les villes **de la plus froide à la plus chaude**.",
+     "items": [
+      "Chamonix",
+      "Lille",
+      "Brest",
+      "Nice"
+     ],
+     "aide": "Lis la droite de gauche à droite.",
+     "explication": "−4 < −1 < 3 < 7 : Chamonix, Lille, Brest, Nice."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces comparaisons est **juste** ?",
+     "options": [
+      "−4 < −1",
+      "−1 < −4",
+      "−4 > 3",
+      "3 < −1"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Entre deux négatifs, le plus grand est celui qui est le plus près de 0.",
+     "explication": "Chamonix (−4) est plus à gauche que Lille (−1) : **−4 < −1**. Entre deux négatifs, le plus grand est celui qui a la plus petite distance à zéro."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e75256d-577d-5004-ac78-1c34f23fc75f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La recette des sablés",
+   "competence": "calculer",
+   "situation": "Maya prépare des sablés pour la fête de l’école. Sa recette donne les quantités en fractions de kilogramme, mais elle veut savoir quel ingrédient pèse le plus.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Sablés de Maya",
+     "sousTitre": "Pour toute la plaque",
+     "emoji": "🍪",
+     "lignes": [
+      {
+       "texte": "Farine",
+       "valeur": "{{3/4}} kg"
+      },
+      {
+       "texte": "Sucre",
+       "valeur": "{{5/8}} kg"
+      },
+      {
+       "texte": "Beurre",
+       "valeur": "{{7/12}} kg"
+      }
+     ],
+     "pied": "Recette inventée pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Pour comparer les trois fractions, Maya les écrit avec le dénominateur **24**. Quel est le numérateur de {{3/4}} ?",
+     "reponse": 18,
+     "aide": "Par quel nombre faut-il multiplier 4 pour obtenir 24 ? Fais la même chose en haut.",
+     "explication": "4 × 6 = 24, donc on multiplie aussi le numérateur par 6 : {{3/4}} = {{18/24}}. Le numérateur est **18**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les ingrédients **du plus léger au plus lourd**.",
+     "items": [
+      "Beurre",
+      "Sucre",
+      "Farine"
+     ],
+     "aide": "Passe {{5/8}} et {{7/12}} aussi en vingt-quatrièmes : 8 × 3 = 24 et 12 × 2 = 24.",
+     "explication": "{{3/4}} = {{18/24}} ; {{5/8}} = {{15/24}} ; {{7/12}} = {{14/24}}. Avec le même dénominateur, on compare les numérateurs : 14 < 15 < 18, donc beurre, sucre, farine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maya affirme que le sucre pèse plus que le beurre. A-t-elle raison ?",
+     "options": [
+      "Oui, {{5/8}} est supérieur à {{7/12}}",
+      "Non, {{7/12}} est supérieur à {{5/8}}",
+      "Non, car 12 est plus grand que 8",
+      "Oui, car 5 est plus petit que 7"
+     ],
+     "reponse": 0,
+     "aide": "Utilise les vingt-quatrièmes trouvés plus haut.",
+     "explication": "{{5/8}} = {{15/24}} et {{7/12}} = {{14/24}} : 15 > 14, donc le sucre pèse **plus** que le beurre. Comparer les dénominateurs seuls ne suffit pas."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de **grammes de plus** y a-t-il de farine que de sucre ? (1 kg = 1 000 g)",
+     "reponse": 125,
+     "unite": "g",
+     "aide": "Passe les deux fractions en grammes : {{3/4}} de 1 000 g et {{5/8}} de 1 000 g.",
+     "explication": "{{3/4}} kg = 750 g et {{5/8}} kg = 625 g. La différence est 750 − 625 = **125 g**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e75256d-577d-5004-ac78-1c34f23fc75f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le côté du carré de 7 dm²",
+   "competence": "modeliser",
+   "situation": "Léa veut découper un carré de tissu d’aire exactement 7 dm². Elle essaie plusieurs longueurs de côté avec sa calculatrice, puis cherche à encadrer la longueur exacte c.",
+   "documents": [
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les essais de Léa",
+     "source": "Calculs exacts : côté × côté",
+     "colonnes": [
+      "Côté essayé (dm)",
+      "2,6",
+      "2,7",
+      "2,64",
+      "2,65"
+     ],
+     "lignes": [
+      [
+       "Aire du carré (dm²)",
+       "6,76",
+       "7,29",
+       "6,9696",
+       "7,0225"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dr",
+     "type": "droite",
+     "titre": "Zoom entre 2,6 et 2,7",
+     "min": 2.6,
+     "max": 2.7,
+     "pas": 0.1,
+     "division": 10,
+     "graduationsCliquables": true,
+     "points": [
+      {
+       "id": "c",
+       "valeur": 2.6458,
+       "nom": "c"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Entre quelles valeurs, **au dixième**, se trouve le côté c ?",
+     "options": [
+      "2,6 et 2,7",
+      "2,5 et 2,6",
+      "2,7 et 2,8",
+      "2,64 et 2,65"
+     ],
+     "reponse": 0,
+     "aide": "On cherche deux essais consécutifs dont l’un donne une aire inférieure à 7 et l’autre supérieure.",
+     "explication": "6,76 < 7 < 7,29, donc 2,6 < c < 2,7 : **2,6 et 2,7**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**amplitude** de l’encadrement 2,6 < c < 2,7 ?",
+     "reponse": 0.1,
+     "aide": "L’amplitude est l’écart entre les deux bornes.",
+     "explication": "2,7 − 2,6 = **0,1**."
+    },
+    {
+     "type": "zone",
+     "document": "dr",
+     "enonce": "Sur la droite zoomée, touche la graduation qui est la **borne inférieure** de l’encadrement de c **au centième**.",
+     "reponse": [
+      "v2.64"
+     ],
+     "aide": "Regarde les deux dernières colonnes du tableau : 6,9696 est-il plus petit ou plus grand que 7 ?",
+     "explication": "2,64² = 6,9696 < 7 et 2,65² = 7,0225 > 7 : 2,64 < c < 2,65. La borne inférieure est **2,64**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **valeur approchée par excès au centième** de c ?",
+     "reponse": 2.65,
+     "aide": "Une valeur approchée par excès est la borne supérieure de l’encadrement.",
+     "explication": "L’encadrement au centième est 2,64 < c < 2,65 : la valeur approchée par excès est la borne supérieure, **2,65**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : plus l’amplitude d’un encadrement est ___, plus l’encadrement est précis.",
+     "texte": "Plus l’amplitude d’un encadrement est ___, plus il est précis.",
+     "reponses": [
+      [
+       "petite"
+      ]
+     ],
+     "banque": [
+      "petite",
+      "grande",
+      "négative"
+     ],
+     "aide": "Compare l’amplitude 0,1 (dixième) à l’amplitude 0,01 (centième) : lequel est le plus précis ?",
+     "explication": "Un encadrement serré, d’amplitude **petite**, situe le nombre avec plus de précision."
+    }
+   ]
+  },
+  {
+   "chapitre": "6d35af41-354f-52e9-b68a-ffc87011d036",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La tablette de chocolat",
+   "competence": "calculer",
+   "situation": "Théo et ses amis ont entamé une tablette de chocolat partagée en carrés égaux. Les carrés mangés sont en violet.",
+   "documents": [
+    {
+     "id": "tablette",
+     "type": "schema",
+     "titre": "La tablette",
+     "largeur": 320,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 30,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 30,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 30,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 30,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 75,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 75,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 75,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 75,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 120,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 120,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 120,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 120,
+       "l": 56,
+       "h": 41,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 190,
+       "texte": "Violet : déjà mangé",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien la tablette compte-t-elle de carrés **en tout** ?",
+     "reponse": 12,
+     "aide": "Compte les colonnes et les rangées.",
+     "explication": "4 colonnes de 3 carrés : 4 × 3 = **12 carrés**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de carrés ont déjà été **mangés** ?",
+     "reponse": 9,
+     "aide": "Les carrés mangés sont les carrés pleins, foncés : 3 colonnes entières.",
+     "explication": "3 colonnes de 3 carrés : **9 carrés** mangés, soit la fraction {{9/12}} de la tablette."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle fraction est **égale** à {{9/12}} ?",
+     "options": [
+      "{{3/4}}",
+      "{{9/10}}",
+      "{{12/9}}",
+      "{{1/4}}"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un nombre qui divise à la fois 9 et 12.",
+     "explication": "On divise le numérateur et le dénominateur par 3 : {{9/12}} = {{3/4}}. C’est aussi la part des 3 colonnes sur 4."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel nombre divise-t-on 9 et 12 pour obtenir {{3/4}} ?",
+     "reponse": 3,
+     "aide": "9 ÷ ? = 3.",
+     "explication": "On a divisé en haut et en bas par **3** : 9 ÷ 3 = 3 et 12 ÷ 3 = 4. La valeur de la fraction ne change pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "6d35af41-354f-52e9-b68a-ffc87011d036",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les gobelets de la colonie",
+   "competence": "calculer",
+   "situation": "À la colonie, cinq gobelets sont remplis de jus de fruit. Chaque moniteur a noté la fraction de gobelet remplie, avec des écritures différentes.",
+   "documents": [
+    {
+     "id": "gobelets",
+     "type": "tableau",
+     "titre": "Contenu des gobelets",
+     "source": "Relevé inventé pour l’exercice",
+     "colonnes": [
+      "Gobelet",
+      "Fraction remplie"
+     ],
+     "lignes": [
+      [
+       "A",
+       "{{6/8}}"
+      ],
+      [
+       "B",
+       "{{9/12}}"
+      ],
+      [
+       "C",
+       "{{4/6}}"
+      ],
+      [
+       "D",
+       "{{10/15}}"
+      ],
+      [
+       "E",
+       "{{15/20}}"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque gobelet selon la **quantité de jus** qu’il contient.",
+     "categories": [
+      "Autant que {{3/4}}",
+      "Autant que {{2/3}}"
+     ],
+     "items": [
+      [
+       "Gobelet A",
+       0
+      ],
+      [
+       "Gobelet B",
+       0
+      ],
+      [
+       "Gobelet C",
+       1
+      ],
+      [
+       "Gobelet D",
+       1
+      ],
+      [
+       "Gobelet E",
+       0
+      ]
+     ],
+     "aide": "Simplifie chaque fraction du tableau jusqu’à ne plus pouvoir.",
+     "explication": "{{6/8}}, {{9/12}} et {{15/20}} se simplifient en {{3/4}} ; {{4/6}} et {{10/15}} en {{2/3}}. Les gobelets A, B, E sont pleins aux trois quarts, C et D aux deux tiers."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’égalité du gobelet A : 6/8 = 3/___ = 12/___.",
+     "texte": "6/8 = 3/___ = 12/___",
+     "reponses": [
+      [
+       "4"
+      ],
+      [
+       "16"
+      ]
+     ],
+     "aide": "De 6 à 3, on divise par 2. Pour 12, on multiplie 6 par 2.",
+     "explication": "6/8 = 3/**4** (on divise par 2) et 6/8 = 12/**16** (on multiplie par 2). La valeur reste la même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le gobelet **B** contient-il plus de jus que le gobelet **D** ?",
+     "options": [
+      "Oui, car {{3/4}} > {{2/3}}",
+      "Non, car ils sont égaux",
+      "Non, car D en contient plus",
+      "On ne peut pas savoir"
+     ],
+     "reponse": 0,
+     "aide": "Réduis {{3/4}} et {{2/3}} au même dénominateur 12.",
+     "explication": "{{3/4}} = {{9/12}} et {{2/3}} = {{8/12}} : 9 > 8. **B contient plus** de jus que D."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un gobelet de 240 mL est rempli aux {{3/4}}. Combien de mL de jus contient-il ?",
+     "reponse": 180,
+     "unite": "mL",
+     "aide": "Divise 240 par 4 pour obtenir un quart.",
+     "explication": "Un quart de 240 mL = 60 mL ; trois quarts = 3 × 60 = **180 mL**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6d35af41-354f-52e9-b68a-ffc87011d036",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Agrandir sans déformer",
+   "competence": "raisonner",
+   "situation": "Nour imprime des photos au même format que l’original pour son exposition. Elle compare les formats proposés par l’imprimeur, et Tim et Emma se disputent sur une méthode.",
+   "documents": [
+    {
+     "id": "formats",
+     "type": "tableau",
+     "titre": "Les formats de l’imprimeur (en cm)",
+     "source": "Formats inventés pour l’exercice",
+     "colonnes": [
+      "Format",
+      "Largeur",
+      "Hauteur"
+     ],
+     "lignes": [
+      [
+       "A",
+       10,
+       15
+      ],
+      [
+       "B",
+       12,
+       18
+      ],
+      [
+       "C",
+       8,
+       10
+      ],
+      [
+       "D",
+       14,
+       21
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La méthode de Tim",
+     "participants": [
+      {
+       "nom": "Tim",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Tim",
+       "texte": "Le format C fait 8 sur 10. J’ajoute 4 en haut et en bas : 12 sur 14, c’est la même forme !"
+      },
+      {
+       "qui": "Emma",
+       "texte": "Je ne crois pas. On ne peut pas ajouter pareil aux deux."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formats",
+     "enonce": "Touche les formats qui ont **la même forme** que le format A (même rapport largeur ÷ hauteur).",
+     "reponse": [
+      "r1c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Compare les fractions {{10/15}}, {{12/18}}, {{8/10}} et {{14/21}} : simplifie-les.",
+     "explication": "{{10/15}} = {{2/3}} ; {{12/18}} = {{2/3}} ; {{14/21}} = {{2/3}} ; mais {{8/10}} = {{4/5}}. Les formats **B et D** ont la même forme que A."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On agrandit le format A pour qu’il ait une largeur de **24 cm**. Quelle est sa hauteur ?",
+     "reponse": 36,
+     "unite": "cm",
+     "aide": "Cherche h tel que {{10/15}} = {{24/h}} : par quoi multiplie-t-on 10 pour obtenir 24 ?",
+     "explication": "Produit en croix : 10 × h = 15 × 24 = 360, donc h = 36. La hauteur est de **36 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On agrandit le format C pour qu’il ait une hauteur de **25 cm**. Quelle est sa largeur ?",
+     "reponse": 20,
+     "unite": "cm",
+     "aide": "{{8/10}} = {{x/25}} : par quoi multiplie-t-on 10 pour obtenir 25 ?",
+     "explication": "10 × x = 8 × 25 = 200, donc x = 20. La largeur est de **20 cm** (et {{8/10}} = {{20/25}})."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, Tim ou Emma ?",
+     "options": [
+      "Emma : on n’ajoute pas, on multiplie ou divise",
+      "Tim : ajouter 4 en haut et en bas suffit",
+      "Les deux, car {{8/10}} et {{12/14}} sont proches",
+      "Aucun des deux : il faut soustraire 4"
+     ],
+     "reponse": 0,
+     "aide": "Qu’a-t-on le droit de faire avec le numérateur et le dénominateur pour garder la même fraction ?",
+     "explication": "Seules la **multiplication** et la **division** par un même nombre conservent la valeur. En ajoutant 4, on passe de {{8/10}} à {{12/14}}, qui n’est pas égale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vérifie avec le produit en croix : calcule 12 × 10 − 8 × 14. Si les fractions étaient égales, on trouverait 0.",
+     "reponse": 8,
+     "aide": "Calcule chaque produit séparément : 12 × 10 et 8 × 14.",
+     "explication": "12 × 10 = 120 et 8 × 14 = 112. L’écart vaut **8**, différent de 0 : {{8/10}} et {{12/14}} ne sont pas égales, Emma a raison."
+    }
+   ]
+  },
+  {
+   "chapitre": "105df279-2f8a-5b37-a20c-e5cd54cd33ab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le gâteau au chocolat de Sacha",
+   "competence": "calculer",
+   "situation": "Sacha prépare un gâteau au chocolat. Sa recette indique les quantités en fractions de kilogramme et il veut connaître le poids de la pâte avant cuisson.",
+   "documents": [
+    {
+     "id": "recette",
+     "type": "fiche",
+     "modele": "recette",
+     "entete": "Gâteau de Sacha",
+     "sousTitre": "Pour un moule",
+     "emoji": "🍫",
+     "lignes": [
+      {
+       "texte": "Farine",
+       "valeur": "{{1/2}} kg"
+      },
+      {
+       "texte": "Sucre",
+       "valeur": "{{1/4}} kg"
+      },
+      {
+       "texte": "Chocolat",
+       "valeur": "{{1/8}} kg"
+      }
+     ],
+     "pied": "Recette inventée pour l’exercice",
+     "teinte": "brun"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids de la farine **et** du sucre ensemble, en kg ? (écris le résultat en nombre décimal)",
+     "reponse": 0.75,
+     "unite": "kg",
+     "aide": "Pour additionner, mets {{1/2}} au dénominateur 4.",
+     "explication": "{{1/2}} = {{2/4}}, donc {{2/4}} + {{1/4}} = {{3/4}} kg, soit **0,75 kg**. On additionne les numérateurs, le dénominateur commun reste."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids **total** des trois ingrédients, en kg ?",
+     "reponse": 0.875,
+     "unite": "kg",
+     "aide": "Mets les trois fractions au dénominateur 8.",
+     "explication": "{{1/2}} = {{4/8}}, {{1/4}} = {{2/8}}, donc {{4/8}} + {{2/8}} + {{1/8}} = {{7/8}} kg, soit **0,875 kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sacha ne veut faire que **la moitié** du gâteau. Quel poids de chocolat doit-il prendre, en kg ? (en décimal)",
+     "reponse": 0.0625,
+     "unite": "kg",
+     "aide": "Prendre la moitié de {{1/8}}, c’est multiplier {{1/2}} par {{1/8}}.",
+     "explication": "{{1/2}} × {{1/8}} = {{1/16}} kg, soit **0,0625 kg**. Pour multiplier, on n’a pas besoin de dénominateur commun."
+    }
+   ]
+  },
+  {
+   "chapitre": "105df279-2f8a-5b37-a20c-e5cd54cd33ab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le relais du collège",
+   "competence": "calculer",
+   "situation": "Pour le cross du collège, quatre élèves se relaient sur un parcours de 12 km. Chacun court une part du parcours, notée en fraction du parcours entier.",
+   "documents": [
+    {
+     "id": "parts",
+     "type": "tableau",
+     "titre": "La part de chaque coureur",
+     "source": "Parts inventées pour l’exercice",
+     "colonnes": [
+      "Coureur",
+      "Part du parcours"
+     ],
+     "lignes": [
+      [
+       "Anna",
+       "{{1/3}}"
+      ],
+      [
+       "Bilal",
+       "{{1/4}}"
+      ],
+      [
+       "Chloé",
+       "{{1/6}}"
+      ],
+      [
+       "Dan",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui court la **plus petite** part du parcours parmi Anna, Bilal et Chloé ?",
+     "options": [
+      "Anna",
+      "Bilal",
+      "Chloé",
+      "Ils courent tous pareil"
+     ],
+     "reponse": 2,
+     "aide": "Plus le dénominateur est grand (numérateur identique), plus la fraction est petite.",
+     "explication": "{{1/3}} > {{1/4}} > {{1/6}} : en mettant au dénominateur 12, on a {{4/12}}, {{3/12}} et {{2/12}}. **Chloé** court le moins."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle fraction du parcours Anna, Bilal et Chloé courent-ils **à eux trois** ? (en décimal)",
+     "reponse": 0.75,
+     "aide": "Mets les trois fractions au dénominateur 12.",
+     "explication": "{{4/12}} + {{3/12}} + {{2/12}} = {{9/12}} = {{3/4}}, soit **0,75** du parcours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dan court tout le reste du parcours. Quelle part du parcours cela représente-t-il ? (en décimal)",
+     "reponse": 0.25,
+     "aide": "Le parcours entier vaut 1, c’est-à-dire {{12/12}}.",
+     "explication": "Le parcours entier vaut 1 : 1 − {{3/4}} = {{1/4}}, soit **0,25**. Dan court un quart du parcours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de **kilomètres** Chloé court-elle ? (parcours de 12 km)",
+     "reponse": 2,
+     "unite": "km",
+     "aide": "Chloé court {{1/6}} de 12 km : c’est une multiplication {{1/6}} × 12.",
+     "explication": "{{1/6}} × 12 = {{12/6}} = **2 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Bilal court quelle fraction de la distance d’Anna ? Calcule {{1/4}} ÷ {{1/3}} (en décimal).",
+     "reponse": 0.75,
+     "aide": "Diviser par {{1/3}}, c’est multiplier par son inverse {{3/1}}.",
+     "explication": "{{1/4}} ÷ {{1/3}} = {{1/4}} × 3 = {{3/4}}, soit **0,75** : Bilal court les trois quarts de ce que court Anna."
+    }
+   ]
+  },
+  {
+   "chapitre": "105df279-2f8a-5b37-a20c-e5cd54cd33ab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les erreurs du cahier de Noé",
+   "competence": "raisonner",
+   "situation": "Noé a fait des calculs avec des fractions et a eu quelques bonnes surprises. Emma, qui relit son cahier, pense que plusieurs résultats sont faux.",
+   "documents": [
+    {
+     "id": "cahier",
+     "type": "tableau",
+     "titre": "Le cahier de Noé",
+     "source": "Calculs écrits pour l’exercice",
+     "colonnes": [
+      "Calcul",
+      "Résultat de Noé"
+     ],
+     "lignes": [
+      [
+       "{{2/3}} + {{1/4}}",
+       "{{3/7}}"
+      ],
+      [
+       "{{4/9}} × {{3/8}}",
+       "{{1/6}}"
+      ],
+      [
+       "{{3/4}} ÷ {{9/8}}",
+       "{{27/32}}"
+      ],
+      [
+       "{{5/6}} − {{1/4}}",
+       "{{7/12}}"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "Noé explique sa méthode",
+     "participants": [
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Emma",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noé",
+       "texte": "Pour additionner, j’additionne en haut et en bas : (2 + 1) sur (3 + 4)."
+      },
+      {
+       "qui": "Emma",
+       "texte": "3/7 est plus petit que 2/3, alors que tu as AJOUTÉ un nombre. Bizarre, non ?"
+      },
+      {
+       "qui": "Noé",
+       "texte": "Pour diviser, je fais comme pour multiplier : 3 × 9 sur 4 × 8."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cahier",
+     "enonce": "Touche les **deux résultats faux** dans le cahier de Noé.",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "aide": "Vérifie chaque calcul. Pour une addition, le résultat ne peut pas être plus petit que les deux termes.",
+     "explication": "{{2/3}} + {{1/4}} = {{8/12}} + {{3/12}} = {{11/12}}, pas {{3/7}}. {{3/4}} ÷ {{9/8}} = {{3/4}} × {{8/9}} = {{2/3}}, pas {{27/32}}. Les deux autres calculs sont justes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **bon résultat** de {{2/3}} + {{1/4}} ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.9166666666666666,
+     "tolerance": 0.005,
+     "aide": "Réduis au même dénominateur 12, puis additionne les numérateurs.",
+     "explication": "{{2/3}} = {{8/12}} et {{1/4}} = {{3/12}} : {{8/12}} + {{3/12}} = {{11/12}}. On ne touche pas au dénominateur commun."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **bon résultat** de {{3/4}} ÷ {{9/8}} ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.6666666666666666,
+     "tolerance": 0.005,
+     "aide": "Diviser par {{9/8}}, c’est multiplier par son inverse.",
+     "explication": "{{3/4}} ÷ {{9/8}} = {{3/4}} × {{8/9}} = {{24/36}} = {{2/3}}. Noé a multiplié par {{9/8}} au lieu de son inverse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’erreur de Noé dans la **division** ?",
+     "options": [
+      "Il multiplie par la fraction au lieu de son inverse",
+      "Il oublie de réduire au même dénominateur",
+      "Il divise seulement les numérateurs",
+      "Il inverse les deux fractions"
+     ],
+     "reponse": 0,
+     "aide": "Compare son calcul 3 × 9 sur 4 × 8 avec une multiplication ordinaire.",
+     "explication": "Noé calcule {{3/4}} × {{9/8}} = {{27/32}} : c’est une **multiplication**. Pour diviser, il faut multiplier par l’**inverse** {{8/9}}."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule {{2/3}} − {{1/2}} × {{1/3}} (priorités opératoires). Donne le résultat en décimal.",
+     "reponse": 0.5,
+     "aide": "La multiplication passe avant la soustraction.",
+     "explication": "On calcule d’abord {{1/2}} × {{1/3}} = {{1/6}}, puis {{2/3}} − {{1/6}} = {{4/6}} − {{1/6}} = {{3/6}} = {{1/2}}, soit **0,5**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b3560004-1ea7-5651-ba9d-dbb240eeb02f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La mémoire de la clé USB",
+   "competence": "lire-tableau",
+   "situation": "Zoé range ses photos et ses vidéos sur plusieurs appareils. Leur capacité est écrite avec des puissances de 10, que ce tableau permet de décoder.",
+   "documents": [
+    {
+     "id": "appareils",
+     "type": "tableau",
+     "titre": "Les appareils de Zoé",
+     "source": "Capacités inventées pour l’exercice",
+     "colonnes": [
+      "Appareil",
+      "Capacité"
+     ],
+     "lignes": [
+      [
+       "Clé USB",
+       "8 × 10⁹ octets"
+      ],
+      [
+       "Carte mémoire",
+       "32 × 10⁹ octets"
+      ],
+      [
+       "Disque dur",
+       "2 × 10¹² octets"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "prefixes",
+     "type": "tableau",
+     "titre": "Les préfixes",
+     "colonnes": [
+      "Préfixe",
+      "Symbole",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "kilo",
+       "ko",
+       "10³ octets"
+      ],
+      [
+       "méga",
+       "Mo",
+       "10⁶ octets"
+      ],
+      [
+       "giga",
+       "Go",
+       "10⁹ octets"
+      ],
+      [
+       "téra",
+       "To",
+       "10¹² octets"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’**octets** la clé USB peut-elle contenir ? (écris le nombre en entier)",
+     "reponse": 8000000000,
+     "unite": "octets",
+     "aide": "Multiplier par 10⁹, c’est écrire 9 zéros à la suite.",
+     "explication": "10⁹ = 1 000 000 000, donc 8 × 10⁹ = **8 000 000 000** octets."
+    },
+    {
+     "type": "trous",
+     "enonce": "Utilise le tableau des préfixes : la clé USB contient 8 ___ et le disque dur 2 ___.",
+     "texte": "Clé USB : 8 ___ ; disque dur : 2 ___.",
+     "reponses": [
+      [
+       "Go"
+      ],
+      [
+       "To"
+      ]
+     ],
+     "banque": [
+      "Go",
+      "Mo",
+      "To",
+      "ko"
+     ],
+     "aide": "Cherche l’exposant 9 puis l’exposant 12 dans la colonne « Valeur ».",
+     "explication": "10⁹ octets, c’est un **giga**-octet : 8 × 10⁹ octets = 8 Go. 10¹² octets, c’est un **téra**-octet : 2 × 10¹² octets = 2 To."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel appareil a la **plus grande capacité** ?",
+     "options": [
+      "La clé USB",
+      "La carte mémoire",
+      "Le disque dur",
+      "Les trois ont la même"
+     ],
+     "reponse": 2,
+     "aide": "Compare d’abord les exposants : 10¹² est bien plus grand que 10⁹.",
+     "explication": "2 × 10¹² est un nombre à 13 chiffres, alors que 32 × 10⁹ n’en a que 11. Le **disque dur** a la plus grande capacité."
+    }
+   ]
+  },
+  {
+   "chapitre": "b3560004-1ea7-5651-ba9d-dbb240eeb02f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du Soleil aux planètes",
+   "competence": "lire-tableau",
+   "situation": "Un astronome amateur prépare une exposition sur le système solaire. Il a noté les distances moyennes de quelques planètes au Soleil, en kilomètres, avec des puissances de 10.",
+   "documents": [
+    {
+     "id": "planetes",
+     "type": "tableau",
+     "titre": "Distance moyenne au Soleil (km)",
+     "source": "Valeurs arrondies",
+     "colonnes": [
+      "Planète",
+      "Distance (km)"
+     ],
+     "lignes": [
+      [
+       "Jupiter",
+       "7,78 × 10⁸"
+      ],
+      [
+       "Mercure",
+       "5,79 × 10⁷"
+      ],
+      [
+       "Neptune",
+       "4,5 × 10⁹"
+      ],
+      [
+       "Terre",
+       "1,5 × 10⁸"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "lumiere",
+     "type": "tableau",
+     "titre": "Vitesse de la lumière",
+     "source": "Valeur arrondie",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Vitesse de la lumière dans le vide",
+       "3 × 10⁵ km par seconde"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range les planètes **de la plus proche à la plus éloignée** du Soleil.",
+     "items": [
+      "Mercure",
+      "Terre",
+      "Jupiter",
+      "Neptune"
+     ],
+     "aide": "Compare d’abord les exposants de 10, puis les facteurs devant.",
+     "explication": "10⁷ < 10⁸ < 10⁹ : Mercure (5,79 × 10⁷) est la plus proche. Entre 1,5 × 10⁸ et 7,78 × 10⁸, on compare 1,5 et 7,78 : Terre puis Jupiter. Neptune (10⁹) est la plus lointaine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Écris la distance **Terre – Soleil** en kilomètres, sans puissance de 10.",
+     "reponse": 150000000,
+     "unite": "km",
+     "aide": "Multiplier par 10⁸, c’est décaler la virgule de 8 rangs vers la droite.",
+     "explication": "1,5 × 10⁸ = 1,5 × 100 000 000 = **150 000 000 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de **secondes** la lumière met-elle pour aller du Soleil à la Terre ?",
+     "reponse": 500,
+     "unite": "s",
+     "aide": "Divise la distance par la vitesse : (1,5 × 10⁸) ÷ (3 × 10⁵).",
+     "explication": "(1,5 × 10⁸) ÷ (3 × 10⁵) = 0,5 × 10³ = **500 s**, soit un peu plus de 8 minutes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Neptune est environ **combien de fois** plus loin du Soleil que la Terre ?",
+     "reponse": 30,
+     "aide": "Divise (4,5 × 10⁹) par (1,5 × 10⁸) : les facteurs, puis les puissances de 10.",
+     "explication": "(4,5 ÷ 1,5) × (10⁹ ÷ 10⁸) = 3 × 10 = **30**. Neptune est 30 fois plus loin du Soleil que la Terre."
+    }
+   ]
+  },
+  {
+   "chapitre": "b3560004-1ea7-5651-ba9d-dbb240eeb02f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du virus au cheveu",
+   "competence": "modeliser",
+   "situation": "En classe de SVT, Hugo compare la taille de plusieurs objets minuscules : il les a tous notés en mètres avec des puissances de 10 négatives.",
+   "documents": [
+    {
+     "id": "tailles",
+     "type": "tableau",
+     "titre": "Tailles mesurées (en mètres)",
+     "source": "Ordres de grandeur arrondis",
+     "colonnes": [
+      "Objet",
+      "Taille (m)"
+     ],
+     "lignes": [
+      [
+       "Cheveu (épaisseur)",
+       "7 × 10⁻⁵"
+      ],
+      [
+       "Virus de la grippe",
+       "1 × 10⁻⁷"
+      ],
+      [
+       "Globule rouge",
+       "7 × 10⁻⁶"
+      ],
+      [
+       "Bactérie E. coli",
+       "2 × 10⁻⁶"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La note de Hugo",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Un globule rouge mesure 0,000007 m, donc 7 × 10⁶ m."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Tu as raison de garder le 7, mais regarde l’exposant…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Range ces objets **du plus petit au plus grand**.",
+     "items": [
+      "Virus de la grippe",
+      "Bactérie E. coli",
+      "Globule rouge",
+      "Cheveu (épaisseur)"
+     ],
+     "aide": "Avec des exposants négatifs, −7 est plus petit que −6 : l’objet est plus petit.",
+     "explication": "10⁻⁷ < 10⁻⁶ < 10⁻⁵ : le virus est le plus petit. Entre les deux objets en 10⁻⁶, on compare 2 et 7 : la bactérie (2) est plus petite que le globule (7). Le cheveu (10⁻⁵) est le plus gros."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bactéries E. coli, placées bout à bout, mesurent **1 cm** (10⁻² m) ?",
+     "reponse": 5000,
+     "aide": "Divise 10⁻² par 2 × 10⁻⁶ : exposants d’abord (−2 − (−6)), puis le facteur.",
+     "explication": "10⁻² ÷ (2 × 10⁻⁶) = (1 ÷ 2) × 10⁴ = 0,5 × 10⁴ = **5 000 bactéries**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’épaisseur d’un cheveu est **combien de fois** la taille du virus de la grippe ?",
+     "reponse": 700,
+     "aide": "Divise (7 × 10⁻⁵) par (1 × 10⁻⁷).",
+     "explication": "7 × (10⁻⁵ ÷ 10⁻⁷) = 7 × 10² = **700 fois**. (On soustrait les exposants : −5 − (−7) = 2.)"
+    },
+    {
+     "type": "nombre",
+     "enonce": "On aligne 3 × 10⁴ bactéries E. coli bout à bout. Quelle longueur obtient-on, en mètres ? (écris le résultat en décimal)",
+     "reponse": 0.06,
+     "unite": "m",
+     "aide": "Multiplie les facteurs (3 × 2), puis additionne les exposants (4 + (−6)).",
+     "explication": "(3 × 10⁴) × (2 × 10⁻⁶) = 6 × 10⁻² = **0,06 m**, soit 6 cm."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est l’**erreur de Hugo** ?",
+     "options": [
+      "Il a oublié le signe moins devant l’exposant",
+      "Il aurait dû écrire 0,7 × 10⁻⁵",
+      "Il devait écrire 70 × 10⁻⁷ pour respecter l’écriture scientifique",
+      "Il n’y a aucune erreur"
+     ],
+     "reponse": 0,
+     "aide": "Un nombre plus petit que 1 s’écrit avec une puissance de 10 négative.",
+     "explication": "0,000007 m = 7 × 10⁻⁶ m : on décale la virgule de **6 rangs vers la gauche**, donc l’exposant est négatif. 7 × 10⁶ serait 7 millions de mètres !"
+    }
+   ]
+  },
+  {
+   "chapitre": "e1a17713-b4c0-5c80-bb0d-afaabdf4aef4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le potager carré de Grand-Mère",
+   "competence": "geometrie",
+   "situation": "Grand-Mère veut clôturer son potager, qui est un carré d’aire 49 m². Elle cherche la longueur d’un côté pour acheter la bonne longueur de grillage.",
+   "documents": [
+    {
+     "id": "potager",
+     "type": "figure",
+     "titre": "Le potager",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 9,
+      "ymin": -1,
+      "ymax": 9
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 7,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 7,
+       "y": 7,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 7,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "textes": [
+      {
+       "x": 3.5,
+       "y": 3.5,
+       "texte": "Aire : 49 m²"
+      }
+     ]
+    },
+    {
+     "id": "carres",
+     "type": "tableau",
+     "titre": "Quelques carrés",
+     "colonnes": [
+      "n",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "lignes": [
+      [
+       "n²",
+       16,
+       25,
+       36,
+       49
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur d’un côté du potager, en mètres ?",
+     "reponse": 7,
+     "unite": "m",
+     "aide": "Cherche le nombre positif dont le carré vaut 49 : regarde le tableau des carrés.",
+     "explication": "Le côté c vérifie c² = 49. Comme 7² = 49, c = √49 = **7 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle longueur de **grillage** faut-il pour faire le tour du potager ?",
+     "reponse": 28,
+     "unite": "m",
+     "aide": "Le périmètre d’un carré, c’est 4 fois son côté.",
+     "explication": "4 × 7 = **28 m** de grillage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un second potager a une aire de 30 m². Entre quels deux nombres entiers se situe son côté ?",
+     "options": [
+      "5 m et 6 m",
+      "4 m et 5 m",
+      "6 m et 7 m",
+      "3 m et 4 m"
+     ],
+     "reponse": 0,
+     "aide": "Cherche dans le tableau deux carrés consécutifs qui encadrent 30.",
+     "explication": "5² = 25 < 30 < 36 = 6², donc 5 < √30 < 6. Le côté est compris **entre 5 m et 6 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e1a17713-b4c0-5c80-bb0d-afaabdf4aef4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les carrés de Camille",
+   "competence": "calculer",
+   "situation": "Camille découpe des carrés de papier de différentes aires et veut connaître la longueur de leur côté, écrite sous la forme la plus simple.",
+   "documents": [
+    {
+     "id": "aires",
+     "type": "tableau",
+     "titre": "Les carrés de Camille",
+     "source": "Aires inventées pour l’exercice",
+     "colonnes": [
+      "Carré",
+      "Aire (cm²)"
+     ],
+     "lignes": [
+      [
+       "A",
+       18
+      ],
+      [
+       "B",
+       45
+      ],
+      [
+       "C",
+       8
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque carré à la **longueur de son côté** (forme simplifiée).",
+     "paires": [
+      [
+       "Carré A (18 cm²)",
+       "3√2 cm"
+      ],
+      [
+       "Carré B (45 cm²)",
+       "3√5 cm"
+      ],
+      [
+       "Carré C (8 cm²)",
+       "2√2 cm"
+      ]
+     ],
+     "aide": "Cherche le plus grand carré parfait qui divise l’aire : 18 = 9 × 2, 45 = 9 × 5, 8 = 4 × 2.",
+     "explication": "√18 = √(9 × 2) = 3√2 ; √45 = √(9 × 5) = 3√5 ; √8 = √(4 × 2) = 2√2. On sort de la racine le carré parfait."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne une valeur approchée **au dixième** du côté du carré A. (√2 ≈ 1,414)",
+     "reponse": 4.2,
+     "tolerance": 0.05,
+     "unite": "cm",
+     "aide": "Le côté vaut 3√2 : multiplie 3 par 1,414.",
+     "explication": "3 × 1,414 = 4,242, soit environ **4,2 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces égalités est **fausse** ?",
+     "options": [
+      "√9 + √16 = √25",
+      "√9 × √16 = √144",
+      "√25 − √9 = 2",
+      "(√7)² = 7"
+     ],
+     "reponse": 0,
+     "aide": "Calcule chaque côté de l’égalité : la racine d’une somme n’est pas la somme des racines.",
+     "explication": "√9 + √16 = 3 + 4 = 7, alors que √25 = 5. L’égalité est **fausse** : √(a + b) ≠ √a + √b. Les autres sont justes (3 × 4 = 12 = √144 ; 5 − 3 = 2 ; (√7)² = 7)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **périmètre** du carré A, arrondi à l’unité ? (côté 3√2 cm)",
+     "reponse": 17,
+     "unite": "cm",
+     "aide": "Le périmètre est 4 × 3√2 = 12√2. Utilise √2 ≈ 1,414.",
+     "explication": "12 × 1,414 = 16,97, soit **17 cm** à l’unité près."
+    }
+   ]
+  },
+  {
+   "chapitre": "e1a17713-b4c0-5c80-bb0d-afaabdf4aef4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La diagonale des écrans",
+   "competence": "geometrie",
+   "situation": "Une borne d’arcade a un écran rectangulaire. Pour commander une vitre de protection, l’installateur doit connaître la diagonale de l’écran, puis il compare avec d’autres formats.",
+   "documents": [
+    {
+     "id": "ecran",
+     "type": "figure",
+     "titre": "L’écran de la borne (en dm)",
+     "cadre": {
+      "xmin": -2,
+      "xmax": 14,
+      "ymin": -1,
+      "ymax": 7
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 12,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 12,
+       "y": 5,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 5,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "bleu",
+       "motif": "clair"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "12 dm"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "5 dm"
+      },
+      {
+       "de": "A",
+       "a": "C",
+       "style": "pointilles"
+      }
+     ],
+     "angles": [
+      {
+       "sommet": "B",
+       "de": "A",
+       "a": "C",
+       "droit": true
+      }
+     ]
+    },
+    {
+     "id": "formats",
+     "type": "tableau",
+     "titre": "Trois autres écrans (en cm)",
+     "source": "Dimensions inventées pour l’exercice",
+     "colonnes": [
+      "Écran",
+      "Largeur",
+      "Hauteur"
+     ],
+     "lignes": [
+      [
+       "X",
+       24,
+       18
+      ],
+      [
+       "Y",
+       20,
+       15
+      ],
+      [
+       "Z",
+       8,
+       4
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dans le triangle ABC rectangle en B, que vaut **AC²** ? (théorème de Pythagore)",
+     "reponse": 169,
+     "aide": "AC² = AB² + BC².",
+     "explication": "AC² = 12² + 5² = 144 + 25 = **169**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur de la **diagonale AC** de l’écran, en dm ?",
+     "reponse": 13,
+     "unite": "dm",
+     "aide": "AC est le nombre positif dont le carré vaut 169.",
+     "explication": "AC = √169 = **13 dm**, car 13² = 169."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la diagonale de l’**écran X**, en cm ?",
+     "reponse": 30,
+     "unite": "cm",
+     "aide": "Calcule 24² + 18², puis cherche la racine carrée.",
+     "explication": "D² = 24² + 18² = 576 + 324 = 900, donc D = √900 = **30 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un seul de ces écrans a une diagonale qui **n’est pas un nombre entier**. Lequel ?",
+     "options": [
+      "X",
+      "Y",
+      "Z",
+      "Aucun"
+     ],
+     "reponse": 2,
+     "aide": "Calcule la somme des carrés pour chaque écran et vois si c’est un carré parfait.",
+     "explication": "X : 900 = 30² ; Y : 20² + 15² = 625 = 25² ; Z : 8² + 4² = 80, qui n’est pas un carré parfait. La diagonale de **Z** est √80, un nombre non entier."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Donne la diagonale de l’écran Z **arrondie au dixième**, en cm. (√80 ≈ 8,944)",
+     "reponse": 8.9,
+     "tolerance": 0.05,
+     "unite": "cm",
+     "aide": "Z : D = √(8² + 4²) = √80.",
+     "explication": "√80 ≈ 8,944 : au dixième près, **8,9 cm**. (On peut aussi écrire √80 = 4√5.)"
+    }
+   ]
+  },
+  {
+   "chapitre": "bb7d2fb5-5930-51ad-a2a2-5e4c0cec344d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La grille des nombres",
+   "competence": "raisonner",
+   "situation": "Pour la fête des mathématiques, la classe affiche une grille de nombres. Chaque rangée commence par un multiple de 6 et chaque colonne ajoute son titre. Il faut y repérer les nombres premiers.",
+   "documents": [
+    {
+     "id": "grille",
+     "type": "tableau",
+     "titre": "La grille (de 6 à 29)",
+     "colonnes": [
+      "+ 0",
+      "+ 1",
+      "+ 2",
+      "+ 3",
+      "+ 4",
+      "+ 5"
+     ],
+     "lignes": [
+      [
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      [
+       12,
+       13,
+       14,
+       15,
+       16,
+       17
+      ],
+      [
+       18,
+       19,
+       20,
+       21,
+       22,
+       23
+      ],
+      [
+       24,
+       25,
+       26,
+       27,
+       28,
+       29
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "grille",
+     "enonce": "Touche **tous les nombres premiers** de la grille, hors rangée de titres.",
+     "reponse": [
+      "r0c1",
+      "r0c5",
+      "r1c1",
+      "r1c5",
+      "r2c1",
+      "r2c5",
+      "r3c5"
+     ],
+     "multiple": true,
+     "aide": "Un nombre premier n’a que deux diviseurs : 1 et lui-même. Teste 2, 3, 5.",
+     "explication": "Les nombres premiers de la grille sont **7, 11, 13, 17, 19, 23 et 29** : aucun n’est divisible par 2, 3 ou 5, ni par un autre nombre premier plus petit que lui."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le nombre 21 est dans la grille. Pourquoi n’est-il **pas premier** ?",
+     "options": [
+      "Il a quatre diviseurs : 1, 3, 7 et 21",
+      "Parce que c’est un nombre impair",
+      "Parce qu’il est plus grand que 20",
+      "Parce qu’il n’est divisible que par 3"
+     ],
+     "reponse": 0,
+     "aide": "Cherche s’il est dans la table de 3 ou de 7.",
+     "explication": "21 = 3 × 7 : il a quatre diviseurs, 1, 3, 7 et 21. Être impair ne suffit pas à être premier."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **plus grand** nombre premier de la grille ?",
+     "reponse": 29,
+     "aide": "Teste les derniers nombres de la grille en partant de 29.",
+     "explication": "On teste 2, 3 et 5 (7² = 49 dépasse 29, on s’arrête) : aucun ne divise 29. C’est un nombre premier, le plus grand de la grille : **29**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb7d2fb5-5930-51ad-a2a2-5e4c0cec344d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les 180 carreaux de la terrasse",
+   "competence": "raisonner",
+   "situation": "Pour une terrasse, Karim commande 180 carreaux. Il veut les ranger en rectangles de tailles variées : il décompose 180 en facteurs premiers avec un arbre, puis compare avec 150, le nombre de carreaux de la terrasse voisine.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "L’arbre de 180",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        30
+       ],
+       "a": [
+        110,
+        80
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        80
+       ],
+       "a": [
+        170,
+        130
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        130
+       ],
+       "a": [
+        230,
+        180
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        30
+       ],
+       "a": [
+        140,
+        30
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        80
+       ],
+       "a": [
+        200,
+        80
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        130
+       ],
+       "a": [
+        260,
+        130
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        180
+       ],
+       "a": [
+        300,
+        180
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        180
+       ],
+       "a": [
+        230,
+        230
+       ]
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 30,
+       "r": 17,
+       "texte": "180",
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 80,
+       "r": 17,
+       "texte": "90",
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 130,
+       "r": 17,
+       "texte": "45",
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 180,
+       "r": 17,
+       "texte": "15",
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 30,
+       "r": 17,
+       "texte": "2",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 80,
+       "r": 17,
+       "texte": "2",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 260,
+       "cy": 130,
+       "r": 17,
+       "texte": "3",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "p3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 300,
+       "cy": 180,
+       "r": 17,
+       "texte": "3",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "p4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 230,
+       "r": 17,
+       "texte": "5",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "p5",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "decomp",
+     "type": "tableau",
+     "titre": "Deux décompositions",
+     "colonnes": [
+      "Nombre",
+      "Décomposition en facteurs premiers"
+     ],
+     "lignes": [
+      [
+       "180",
+       "2² × 3² × 5"
+      ],
+      [
+       "150",
+       "2 × 3 × 5²"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche **tous les nombres premiers** qui terminent l’arbre (les facteurs premiers de 180).",
+     "reponse": [
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5"
+     ],
+     "multiple": true,
+     "aide": "Un nombre premier ne se décompose plus : il termine une branche.",
+     "explication": "Les extrémités de l’arbre sont **2, 2, 3, 3 et 5** : on ne peut plus les décomposer. Ils donnent 180 = 2 × 2 × 3 × 3 × 5."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la décomposition lue sur l’arbre : 180 = 2 × 2 × 3 × ___ × 5.",
+     "texte": "180 = 2 × 2 × 3 × ___ × 5",
+     "reponses": [
+      [
+       "3"
+      ]
+     ],
+     "aide": "Compte les facteurs terminant l’arbre : combien de 3 ?",
+     "explication": "L’arbre se termine par deux « 3 » : 180 = 2 × 2 × 3 × **3** × 5, soit 2² × 3² × 5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **plus grand diviseur commun** de 180 et de 150 ? (multiplie les facteurs communs, avec le plus petit exposant)",
+     "reponse": 30,
+     "aide": "Compare les deux décompositions : quels facteurs premiers apparaissent dans les deux ?",
+     "explication": "Facteurs communs : 2 (exposant 1), 3 (exposant 1), 5 (exposant 1 au plus petit). 2 × 3 × 5 = **30**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la **forme irréductible** de {{180/150}} ?",
+     "options": [
+      "{{6/5}}",
+      "{{18/15}}",
+      "{{12/10}}",
+      "{{36/30}}"
+     ],
+     "reponse": 0,
+     "aide": "Divise le numérateur et le dénominateur par leur plus grand diviseur commun.",
+     "explication": "On divise 180 et 150 par 30 : 180 ÷ 30 = 6 et 150 ÷ 30 = 5. La fraction irréductible est **{{6/5}}** (les autres sont égales mais pas irréductibles)."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb7d2fb5-5930-51ad-a2a2-5e4c0cec344d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des paires qui se marient",
+   "competence": "raisonner",
+   "situation": "Tom étudie les engrenages d’une machine : pour qu’ils s’usent régulièrement, le nombre de dents de deux roues doit être premier avec l’autre. Il note ses paires et la décomposition de deux nombres.",
+   "documents": [
+    {
+     "id": "paires",
+     "type": "tableau",
+     "titre": "Les cinq paires de roues",
+     "source": "Nombres de dents inventés pour l’exercice",
+     "colonnes": [
+      "Paire",
+      "Dents (roue 1)",
+      "Dents (roue 2)"
+     ],
+     "lignes": [
+      [
+       "P1",
+       14,
+       15
+      ],
+      [
+       "P2",
+       21,
+       35
+      ],
+      [
+       "P3",
+       24,
+       49
+      ],
+      [
+       "P4",
+       18,
+       25
+      ],
+      [
+       "P5",
+       30,
+       42
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "decomp",
+     "type": "tableau",
+     "titre": "Décompositions de Tom",
+     "colonnes": [
+      "Nombre",
+      "Décomposition"
+     ],
+     "lignes": [
+      [
+       "168",
+       "2³ × 3 × 7"
+      ],
+      [
+       "105",
+       "3 × 5 × 7"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe les paires selon que leurs deux nombres sont **premiers entre eux** ou non.",
+     "categories": [
+      "Premiers entre eux",
+      "Pas premiers entre eux"
+     ],
+     "items": [
+      [
+       "P1 (14 et 15)",
+       0
+      ],
+      [
+       "P2 (21 et 35)",
+       1
+      ],
+      [
+       "P3 (24 et 49)",
+       0
+      ],
+      [
+       "P4 (18 et 25)",
+       0
+      ],
+      [
+       "P5 (30 et 42)",
+       1
+      ]
+     ],
+     "aide": "Décompose chaque nombre : ont-ils un facteur premier en commun ?",
+     "explication": "14 = 2 × 7 et 15 = 3 × 5 : aucun facteur commun. 21 = 3 × 7 et 35 = 5 × 7 : le 7 est commun. 24 = 2³ × 3 et 49 = 7² : rien en commun. 18 = 2 × 3² et 25 = 5² : rien en commun. 30 et 42 ont 2, 3 en commun."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **plus grand diviseur commun** de 168 et 105 ? (facteurs communs de la table de Tom)",
+     "reponse": 21,
+     "aide": "Repère les facteurs premiers présents dans les deux décompositions.",
+     "explication": "Les facteurs communs sont 3 et 7 : 3 × 7 = **21**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Simplifie {{168/105}} en une fraction irréductible. Quel est son **numérateur** ?",
+     "reponse": 8,
+     "aide": "Divise 168 et 105 par leur plus grand diviseur commun.",
+     "explication": "168 ÷ 21 = 8 et 105 ÷ 21 = 5. La fraction irréductible est {{8/5}} : le numérateur est **8**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Tom hésite sur 91 : il n’est divisible ni par 2, ni par 3, ni par 5. Est-il premier ?",
+     "options": [
+      "Non : 91 = 7 × 13",
+      "Oui : aucun de ces trois nombres ne le divise",
+      "Oui : il est impair",
+      "Non : il se termine par 1"
+     ],
+     "reponse": 0,
+     "aide": "Continue les essais avec 7.",
+     "explication": "Il faut tester 7 aussi : 7 × 13 = 91. Donc 91 **n’est pas premier**. On teste les nombres premiers jusqu’à ce que leur carré dépasse 91 (ici jusqu’à 7)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d76d260-0009-5038-9ee1-223f12d3a274",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le potager qui s’agrandit",
+   "competence": "geometrie",
+   "situation": "Pierre a un potager rectangulaire de 4 m de large et de longueur x. Il l’agrandit en ajoutant une bande de 3 m de long (en jaune sur le plan). Il veut écrire l’aire totale de deux façons.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan du potager",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 9,
+      "ymin": -1,
+      "ymax": 5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 5,
+       "y": 0,
+       "position": "s"
+      },
+      {
+       "id": "C",
+       "x": 8,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "D",
+       "x": 8,
+       "y": 4,
+       "position": "ne"
+      },
+      {
+       "id": "E",
+       "x": 5,
+       "y": 4,
+       "position": "n"
+      },
+      {
+       "id": "F",
+       "x": 0,
+       "y": 4,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "E",
+        "F"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "sommets": [
+        "B",
+        "C",
+        "D",
+        "E"
+       ],
+       "teinte": "jaune",
+       "motif": "clair"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "x"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "3"
+      },
+      {
+       "de": "A",
+       "a": "F",
+       "longueur": "4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire de la bande ajoutée**, en m² ?",
+     "reponse": 12,
+     "unite": "m²",
+     "aide": "La bande est un rectangle de 4 m sur 3 m.",
+     "explication": "Aire de la bande : 4 × 3 = **12 m²**, quelle que soit la valeur de x."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour **x = 5**, quelle est l’aire totale du potager agrandi, en m² ?",
+     "reponse": 32,
+     "unite": "m²",
+     "aide": "La longueur totale est x + 3 et la largeur 4.",
+     "explication": "Longueur totale : 5 + 3 = 8 m. Aire : 4 × 8 = **32 m²**, ce qui est aussi 4 × 5 + 4 × 3 = 20 + 12."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle expression **développée** représente l’aire totale 4(x + 3) ?",
+     "options": [
+      "4x + 12",
+      "4x + 3",
+      "x + 12",
+      "7x"
+     ],
+     "reponse": 0,
+     "aide": "La distributivité : k(a + b) = ka + kb. Multiplie 4 par chaque terme de la parenthèse.",
+     "explication": "4(x + 3) = 4 × x + 4 × 3 = **4x + 12** : l’aire du potager d’origine (4x) plus l’aire de la bande (12)."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d76d260-0009-5038-9ee1-223f12d3a274",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le calcul mental de la boulangère",
+   "competence": "calculer",
+   "situation": "Une boulangère calcule vite dans sa tête les prix de ses commandes en utilisant la distributivité : 0,98 = 1 − 0,02 et 1,02 = 1 + 0,02. Voici le ticket d’un client.",
+   "documents": [
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Boulangerie du coin",
+     "sousTitre": "Commande de la classe",
+     "emoji": "🥖",
+     "lignes": [
+      {
+       "texte": "12 croissants à 0,98 €",
+       "valeur": "?"
+      },
+      {
+       "texte": "25 baguettes à 1,02 €",
+       "valeur": "?"
+      },
+      {
+       "texte": "7 brioches à 3,01 €",
+       "valeur": "?"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "TOTAL",
+       "valeur": "?",
+       "gras": true
+      }
+     ],
+     "pied": "Ticket inventé pour l’exercice",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix des **12 croissants** ? (12 × 0,98 = 12 × (1 − 0,02))",
+     "reponse": 11.76,
+     "unite": "€",
+     "aide": "12 × 1 − 12 × 0,02 : calcule les deux produits, puis soustrais.",
+     "explication": "12 × 0,98 = 12 × 1 − 12 × 0,02 = 12 − 0,24 = **11,76 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle écriture permet de calculer **25 × 1,02** mentalement ?",
+     "options": [
+      "25 × 1 + 25 × 0,02",
+      "25 × 1 × 0,02",
+      "25 + 1,02",
+      "25 × 2 + 25 × 0,1"
+     ],
+     "reponse": 0,
+     "aide": "1,02 = 1 + 0,02. Distribue le 25 sur chaque terme de la somme.",
+     "explication": "25 × 1,02 = 25 × (1 + 0,02) = 25 × 1 + 25 × 0,02 = 25 + 0,5 = **25,5**. C’est la distributivité : k(a + b) = ka + kb."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix des **7 brioches** ? (3,01 = 3 + 0,01)",
+     "reponse": 21.07,
+     "unite": "€",
+     "aide": "7 × 3 + 7 × 0,01.",
+     "explication": "7 × 3,01 = 7 × 3 + 7 × 0,01 = 21 + 0,07 = **21,07 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **total** du ticket ?",
+     "reponse": 58.33,
+     "unite": "€",
+     "aide": "Additionne les trois prix calculés.",
+     "explication": "11,76 + 25,50 + 21,07 = **58,33 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d76d260-0009-5038-9ee1-223f12d3a274",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Clara a-t-elle raison ?",
+   "competence": "raisonner",
+   "situation": "Clara affirme que (x + 3)² = x² + 9. Inès propose de vérifier avec quelques valeurs de x avant de la croire, puis les deux amies factorisent une expression plus longue.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La conjecture de Clara",
+     "participants": [
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👩",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clara",
+       "texte": "Je l’ai vu au tableau : (x + 3)² = x² + 9."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Teste avec des valeurs de x avant d’y croire."
+      }
+     ]
+    },
+    {
+     "id": "test",
+     "type": "tableau",
+     "titre": "Les essais d’Inès",
+     "colonnes": [
+      "x",
+      "0",
+      "1",
+      "2",
+      "−1"
+     ],
+     "lignes": [
+      [
+       "(x + 3)²",
+       9,
+       16,
+       25,
+       4
+      ],
+      [
+       "x² + 9",
+       9,
+       10,
+       13,
+       10
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "test",
+     "enonce": "Pour quelle valeur de x les deux expressions donnent-elles le **même résultat** ? Touche les deux cases de cette colonne.",
+     "reponse": [
+      "r0c1",
+      "r1c1"
+     ],
+     "multiple": true,
+     "aide": "Compare les deux lignes colonne par colonne.",
+     "explication": "Seule la colonne **x = 0** donne 9 des deux côtés. Pour x = 1, 2 et −1, les résultats diffèrent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouvent ces essais ?",
+     "options": [
+      "Elle est fausse : un seul contre-exemple, x = 1, suffit",
+      "Elle est vraie, car elle marche pour x = 0",
+      "On ne peut rien dire sans tester tous les nombres",
+      "Elle est vraie pour les nombres positifs seulement"
+     ],
+     "reponse": 0,
+     "aide": "Pour montrer qu’une égalité est fausse, combien de contre-exemples faut-il ?",
+     "explication": "Pour x = 1, (x + 3)² = 16 et x² + 9 = 10 : un **contre-exemple** suffit à prouver que l’égalité est fausse. Qu’elle marche une fois (x = 0) ne la rend pas vraie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le **bon développement** de (x + 3)(x + 3) ?",
+     "options": [
+      "x² + 6x + 9",
+      "x² + 9",
+      "x² + 3x + 9",
+      "2x + 6"
+     ],
+     "reponse": 0,
+     "aide": "Double distributivité : x × x, x × 3, 3 × x, 3 × 3.",
+     "explication": "(x + 3)(x + 3) = x² + 3x + 3x + 9 = **x² + 6x + 9**. Il y a un terme en x que Clara a oublié."
+    },
+    {
+     "type": "trous",
+     "enonce": "Factorise : 7x + 21 = 7(x + ___).",
+     "texte": "7x + 21 = 7(x + ___)",
+     "reponses": [
+      [
+       "3"
+      ]
+     ],
+     "aide": "21 = 7 × ?",
+     "explication": "21 = 7 × 3, donc 7x + 21 = 7 × x + 7 × 3 = 7(x + **3**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule A = (2x + 1)(x + 4) − (2x + 1)(x − 3) pour **x = 2**. (Astuce : factorise par 2x + 1)",
+     "reponse": 35,
+     "aide": "Le facteur commun est la parenthèse (2x + 1) : (x + 4) − (x − 3) = ?",
+     "explication": "A = (2x + 1)[(x + 4) − (x − 3)] = (2x + 1) × 7. Pour x = 2 : 5 × 7 = **35**. En calculant sans factoriser : 5 × 6 − 5 × (−1) = 30 + 5 = 35."
+    }
+   ]
+  },
+  {
+   "chapitre": "33562b41-7711-5225-8fc3-9d1e10b7713a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La balance en équilibre",
+   "competence": "resoudre",
+   "situation": "Sur le plateau de gauche d’une balance, il y a une boîte de masse inconnue x (en kg) et trois masses de 1 kg. Sur celui de droite, sept masses de 1 kg. La balance est en équilibre.",
+   "documents": [
+    {
+     "id": "balance",
+     "type": "schema",
+     "titre": "La balance",
+     "largeur": 340,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        100
+       ],
+       "a": [
+        295,
+        100
+       ],
+       "epaisseur": 3
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         170,
+         104
+        ],
+        [
+         148,
+         160
+        ],
+        [
+         192,
+         160
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 55,
+       "y": 62,
+       "l": 40,
+       "h": 36,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "x"
+      },
+      {
+       "forme": "cercle",
+       "cx": 113,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 135,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 157,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 212,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 234,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 256,
+       "cy": 88,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 201,
+       "cy": 66,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 223,
+       "cy": 66,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "cercle",
+       "cx": 245,
+       "cy": 66,
+       "r": 10,
+       "teinte": "ambre",
+       "motif": "plein",
+       "texte": "1"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 190,
+       "texte": "Chaque rond pèse 1 kg",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle équation traduit la balance ?",
+     "options": [
+      "x + 3 = 7",
+      "x + 7 = 3",
+      "3x = 7",
+      "7x = 3"
+     ],
+     "reponse": 0,
+     "aide": "À gauche : x et trois masses de 1 kg. À droite : sept masses de 1 kg.",
+     "explication": "La masse du plateau de gauche est x + 3, celle de droite est 7 : l’équilibre s’écrit **x + 3 = 7**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Pour garder l’équilibre, on retire 3 kg de chaque plateau. Alors x = 7 − ___.",
+     "texte": "On retire 3 de chaque côté : x = 7 − ___",
+     "reponses": [
+      [
+       "3"
+      ]
+     ],
+     "aide": "Ce qu’on fait d’un côté, on le fait de l’autre.",
+     "explication": "On soustrait **3** aux deux membres : x + 3 − 3 = 7 − 3, soit x = 7 − 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la masse x de la boîte, en kg ?",
+     "reponse": 4,
+     "unite": "kg",
+     "aide": "Termine le calcul de la question précédente.",
+     "explication": "x = 7 − 3 = **4 kg**. Vérification : 4 + 3 = 7, les deux plateaux pèsent bien 7 kg."
+    }
+   ]
+  },
+  {
+   "chapitre": "33562b41-7711-5225-8fc3-9d1e10b7713a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel abonnement à la salle de sport ?",
+   "competence": "modeliser",
+   "situation": "Deux tarifs sont proposés à Yanis. Tarif A : 8 € d’abonnement plus 2 € par séance. Tarif B : 14 € d’abonnement plus 1,5 € par séance. Il se demande à partir de combien de séances les deux tarifs coûtent pareil.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les prix selon le nombre de séances (€)",
+     "source": "Tarifs inventés pour l’exercice",
+     "colonnes": [
+      "Séances",
+      "0",
+      "4",
+      "8",
+      "12",
+      "16"
+     ],
+     "lignes": [
+      [
+       "Tarif A",
+       8,
+       16,
+       24,
+       32,
+       40
+      ],
+      [
+       "Tarif B",
+       14,
+       20,
+       "?",
+       32,
+       38
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Les deux tarifs",
+     "categories": [
+      "0",
+      "4",
+      "8",
+      "12",
+      "16"
+     ],
+     "series": [
+      {
+       "nom": "Tarif A",
+       "valeurs": [
+        8,
+        16,
+        24,
+        32,
+        40
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Tarif B",
+       "valeurs": [
+        14,
+        20,
+        26,
+        32,
+        38
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Prix",
+      "unite": "€",
+      "min": 0,
+      "max": 45,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Nombre de séances"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien Yanis paierait-il au **tarif B** pour 8 séances ?",
+     "reponse": 26,
+     "unite": "€",
+     "aide": "Tarif B : 14 € plus 1,5 € pour chacune des 8 séances.",
+     "explication": "14 + 1,5 × 8 = 14 + 12 = **26 €** (la case « ? » du tableau)."
+    },
+    {
+     "type": "zone",
+     "document": "graph",
+     "enonce": "Sur le graphique, touche le **nombre de séances** pour lequel les deux tarifs coûtent pareil.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche l’endroit où les deux courbes se croisent.",
+     "explication": "Les courbes se croisent pour **12 séances**, à 32 € pour les deux tarifs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle équation traduit « les deux tarifs coûtent pareil » avec x le nombre de séances ?",
+     "options": [
+      "8 + 2x = 14 + 1,5x",
+      "8x + 2 = 14x + 1,5",
+      "2x = 1,5x",
+      "2x − 8 = 1,5x − 14"
+     ],
+     "reponse": 0,
+     "aide": "Écris le prix de A, puis le prix de B, séparés par le signe égal.",
+     "explication": "Le prix du tarif A est 8 + 2x et celui du tarif B est 14 + 1,5x. Ils sont égaux quand **8 + 2x = 14 + 1,5x**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous l’équation 8 + 2x = 14 + 1,5x. Combien vaut x ?",
+     "reponse": 12,
+     "aide": "Regroupe les termes en x d’un côté et les nombres de l’autre : 2x − 1,5x = 14 − 8.",
+     "explication": "2x − 1,5x = 14 − 8, donc 0,5x = 6 et x = 6 ÷ 0,5 = **12**. Vérification : 8 + 24 = 32 et 14 + 18 = 32."
+    },
+    {
+     "type": "choix",
+     "enonce": "Yanis compte venir **20 fois**. Quelle phrase de conclusion est correcte ?",
+     "options": [
+      "Le tarif B : 44 € contre 48 € au tarif A",
+      "Le tarif A : 48 € contre 44 € au tarif B",
+      "Le tarif B : 40 € contre 48 € au tarif A",
+      "Aucune différence : 12 séances suffisent"
+     ],
+     "reponse": 0,
+     "aide": "Calcule le prix de chaque tarif pour x = 20.",
+     "explication": "Tarif A : 8 + 2 × 20 = 48 €. Tarif B : 14 + 1,5 × 20 = 44 €. Au-delà de 12 séances, **B** est moins cher."
+    }
+   ]
+  },
+  {
+   "chapitre": "33562b41-7711-5225-8fc3-9d1e10b7713a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le produit nul de Théo",
+   "competence": "raisonner",
+   "situation": "En résolvant (x − 3)(x + 4) = 0, Théo n’a trouvé qu’une solution. Maya pense qu’il en manque. Pour trancher, ils testent quelques valeurs de x.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "La discussion",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "x − 3 = 0, donc x = 3. L’équation n’a qu’une solution."
+      },
+      {
+       "qui": "Maya",
+       "texte": "Un produit est nul quand l’un des facteurs l’est. Et l’autre facteur ?"
+      }
+     ]
+    },
+    {
+     "id": "essais",
+     "type": "tableau",
+     "titre": "Les essais",
+     "colonnes": [
+      "x",
+      "−4",
+      "0",
+      "3",
+      "4"
+     ],
+     "lignes": [
+      [
+       "(x − 3)(x + 4)",
+       0,
+       -12,
+       0,
+       8
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "essais",
+     "enonce": "Touche les valeurs de x pour lesquelles le produit **vaut 0**.",
+     "reponse": [
+      "r0c1",
+      "r0c3"
+     ],
+     "multiple": true,
+     "aide": "Cherche les cases égales à 0 dans la dernière ligne.",
+     "explication": "Le produit vaut 0 pour **x = −4** et pour **x = 3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison ?",
+     "options": [
+      "Maya : il y a deux solutions, 3 et −4",
+      "Théo : 3 est la seule solution",
+      "Les deux : 3 est une solution",
+      "Aucun : l’équation n’a pas de solution"
+     ],
+     "reponse": 0,
+     "aide": "Une équation produit nul : A × B = 0 donne A = 0 ou B = 0.",
+     "explication": "x − 3 = 0 donne x = 3 et x + 4 = 0 donne x = −4. Il y a **deux** solutions : Maya a raison."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 5x − 7 = 3x + 9. Combien vaut x ?",
+     "reponse": 8,
+     "aide": "Regroupe les x à gauche et les nombres à droite : 5x − 3x = 9 + 7.",
+     "explication": "5x − 3x = 9 + 7, donc 2x = 16 et x = **8**. Vérification : 5 × 8 − 7 = 33 et 3 × 8 + 9 = 33."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 3(x − 4) = x + 6. Combien vaut x ?",
+     "reponse": 9,
+     "aide": "Développe d’abord : 3(x − 4) = 3x − 12.",
+     "explication": "3x − 12 = x + 6, donc 2x = 18 et x = **9**. Vérification : 3 × (9 − 4) = 15 et 9 + 6 = 15."
+    },
+    {
+     "type": "choix",
+     "enonce": "Combien de solutions a l’équation 4x + 5 = 4(x + 2) ?",
+     "options": [
+      "Aucune",
+      "Une seule : x = 0",
+      "Une infinité",
+      "Exactement deux"
+     ],
+     "reponse": 0,
+     "aide": "Développe le membre de droite, puis soustrais 4x des deux côtés.",
+     "explication": "4(x + 2) = 4x + 8. L’équation devient 4x + 5 = 4x + 8, soit 5 = 8 : c’est **impossible**, donc aucune solution."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd99958-83d9-5671-9d06-d227670481cb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le programme de calcul de Chloé",
+   "competence": "calculer",
+   "situation": "Chloé invente un programme de calcul pour épater ses amis. Elle le présente sous forme de chaîne d’opérations. Elle essaie plusieurs nombres de départ pour voir ce qui se passe.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le programme de Chloé",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Je choisis x"
+      },
+      {
+       "id": "b",
+       "texte": "J’ajoute 4"
+      },
+      {
+       "id": "c",
+       "texte": "Je multiplie par 2"
+      },
+      {
+       "id": "d",
+       "texte": "Je retire 8"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le résultat si Chloé choisit **5** ?",
+     "reponse": 10,
+     "aide": "Suis les étapes dans l’ordre : +4, puis ×2, puis −8.",
+     "explication": "5 + 4 = 9 ; 9 × 2 = 18 ; 18 − 8 = **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le résultat si Chloé choisit **12** ?",
+     "reponse": 24,
+     "aide": "Même démarche avec 12.",
+     "explication": "12 + 4 = 16 ; 16 × 2 = 32 ; 32 − 8 = **24**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que fait ce programme ?",
+     "options": [
+      "Il double le nombre de départ",
+      "Il ajoute 4 au nombre de départ",
+      "Il triple le nombre de départ",
+      "Il donne toujours 8"
+     ],
+     "reponse": 0,
+     "aide": "Compare le départ et le résultat dans tes deux essais : 5 donne 10, 12 donne 24.",
+     "explication": "L’expression est 2(x + 4) − 8 = 2x + 8 − 8 = **2x** : le programme double le nombre de départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec quel nombre de départ obtient-on **30** ?",
+     "reponse": 15,
+     "aide": "Le programme double le nombre choisi : qu’est-ce que 30 est le double de ?",
+     "explication": "Le résultat vaut 2x. 2x = 30 donne x = 30 ÷ 2 = **15**."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd99958-83d9-5671-9d06-d227670481cb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le grillage du potager rectangulaire",
+   "competence": "modeliser",
+   "situation": "Léa clôture un potager rectangulaire dont la longueur est le triple de la largeur. Elle dispose de 64 m de grillage et veut utiliser tout le grillage pour faire le tour du potager.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "figure",
+     "titre": "Le plan du potager",
+     "cadre": {
+      "xmin": -1,
+      "xmax": 11,
+      "ymin": -1,
+      "ymax": 4.5
+     },
+     "points": [
+      {
+       "id": "A",
+       "x": 0,
+       "y": 0,
+       "position": "so"
+      },
+      {
+       "id": "B",
+       "x": 9,
+       "y": 0,
+       "position": "se"
+      },
+      {
+       "id": "C",
+       "x": 9,
+       "y": 3,
+       "position": "ne"
+      },
+      {
+       "id": "D",
+       "x": 0,
+       "y": 3,
+       "position": "no"
+      }
+     ],
+     "polygones": [
+      {
+       "sommets": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "segments": [
+      {
+       "de": "A",
+       "a": "B",
+       "longueur": "3x"
+      },
+      {
+       "de": "B",
+       "a": "C",
+       "longueur": "x"
+      }
+     ],
+     "textes": [
+      {
+       "x": 4.5,
+       "y": 1.5,
+       "texte": "Tour : 64 m"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Soit x la largeur en mètres. Quelle expression donne le **périmètre** du potager ?",
+     "options": [
+      "8x",
+      "4x",
+      "3x²",
+      "6x"
+     ],
+     "reponse": 0,
+     "aide": "Le périmètre est 2 × (longueur + largeur), avec longueur = 3x.",
+     "explication": "Périmètre = 2 × (3x + x) = 2 × 4x = **8x**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous 8x = 64 : quelle est la **largeur** du potager, en mètres ?",
+     "reponse": 8,
+     "unite": "m",
+     "aide": "Divise les deux membres par 8.",
+     "explication": "8x = 64 donc x = 64 ÷ 8 = **8 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **longueur** du potager, en mètres ?",
+     "reponse": 24,
+     "unite": "m",
+     "aide": "La longueur est le triple de la largeur.",
+     "explication": "Longueur = 3x = 3 × 8 = **24 m**. Vérification : 2 × (24 + 8) = 64 m de grillage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**aire** du potager, en m² ?",
+     "reponse": 192,
+     "unite": "m²",
+     "aide": "Aire d’un rectangle : longueur × largeur.",
+     "explication": "Aire = 24 × 8 = **192 m²**."
+    }
+   ]
+  },
+  {
+   "chapitre": "efd99958-83d9-5671-9d06-d227670481cb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Soldes en cascade",
+   "competence": "modeliser",
+   "situation": "Un magasin annonce : « −20 % sur tout, puis −10 % supplémentaires en caisse ». Aya se demande si cela fait −30 % au total. Elle regarde l’affiche et le tableau des prix.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "SOLDES",
+     "sousTitre": "Tout le magasin",
+     "emoji": "🏷️",
+     "lignes": [
+      {
+       "texte": "−20 % sur tout"
+      },
+      {
+       "texte": "puis −10 % en caisse",
+       "gras": true
+      }
+     ],
+     "pied": "Affiche inventée pour l’exercice",
+     "teinte": "corail"
+    },
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Les prix",
+     "source": "Prix inventés pour l’exercice",
+     "colonnes": [
+      "Article",
+      "Prix initial (€)",
+      "Prix à payer (€)"
+     ],
+     "lignes": [
+      [
+       "Blouson",
+       80,
+       "?"
+      ],
+      [
+       "Casquette",
+       20,
+       "14,4"
+      ],
+      [
+       "Jean",
+       60,
+       "43,2"
+      ],
+      [
+       "Pull",
+       "?",
+       36
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le **prix à payer** pour le blouson ? (−20 % puis −10 % sur le prix déjà réduit)",
+     "reponse": 57.6,
+     "unite": "€",
+     "aide": "Baisse de 20 % : multiplie par 0,8. Puis baisse de 10 % : multiplie par 0,9.",
+     "explication": "80 × 0,8 = 64 ; 64 × 0,9 = **57,6 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par quel **coefficient unique** remplace-t-on les deux baisses ?",
+     "options": [
+      "0,72",
+      "0,70",
+      "0,30",
+      "0,98"
+     ],
+     "reponse": 0,
+     "aide": "Multiplie les deux coefficients : 0,8 × 0,9.",
+     "explication": "Les deux baisses successives se traduisent par 0,8 × 0,9 = **0,72**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel **pourcentage** le prix baisse-t-il au total ?",
+     "reponse": 28,
+     "unite": "%",
+     "aide": "Un coefficient de 0,72 signifie que le prix devient 72 % du prix de départ.",
+     "explication": "Le prix passe à 72 % du prix initial : la baisse est de 100 − 72 = **28 %**, et non 30 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la baisse totale n’est-elle pas de 30 % ?",
+     "options": [
+      "Les 10 % portent sur le prix déjà réduit",
+      "Parce que 10 est plus petit que 20",
+      "Parce qu’il y a deux remises à cumuler",
+      "Parce que la loi limite les soldes à 25 %"
+     ],
+     "reponse": 0,
+     "aide": "Sur quel prix la deuxième baisse de 10 % est-elle calculée ?",
+     "explication": "Les 10 % sont calculés sur le prix **déjà baissé de 20 %**, donc ils représentent moins de 10 % du prix initial. On ne peut pas additionner les pourcentages."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le pull est payé **36 €** après les deux remises. Quel était son prix initial ?",
+     "reponse": 50,
+     "unite": "€",
+     "aide": "Le prix initial multiplié par 0,72 donne 36 : résous 0,72 × p = 36.",
+     "explication": "0,72 × p = 36 donc p = 36 ÷ 0,72 = **50 €**. Vérification : 50 × 0,72 = 36."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6b44486-50b1-5c22-a554-1db8059cc8b7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sondage de la classe",
+   "competence": "lire-graphique",
+   "situation": "Le délégué de classe a demandé à chacun des 24 élèves quel sport il pratique le plus. Il a tracé le diagramme des résultats.",
+   "documents": [
+    {
+     "id": "sports",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Le sport préféré des élèves",
+     "source": "Sondage inventé pour l’exercice",
+     "categories": [
+      "Foot",
+      "Basket",
+      "Natation",
+      "Danse",
+      "Judo"
+     ],
+     "series": [
+      {
+       "nom": "Élèves",
+       "valeurs": [
+        8,
+        6,
+        4,
+        4,
+        2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre d’élèves",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Sport"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sports",
+     "enonce": "Touche le sport **le plus pratiqué**.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre du foot est la plus haute : **8 élèves** le pratiquent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est l’**effectif total** de la classe, d’après le graphique ?",
+     "reponse": 24,
+     "aide": "Additionne les hauteurs de toutes les barres.",
+     "explication": "8 + 6 + 4 + 4 + 2 = **24 élèves**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **fréquence** du basket, en pourcentage ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Fréquence = effectif ÷ effectif total, puis × 100.",
+     "explication": "6 ÷ 24 = 0,25, soit **25 %** : un élève sur quatre pratique le basket."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le caractère « sport pratiqué » est-il…",
+     "options": [
+      "qualitatif",
+      "quantitatif"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Peut-on le mesurer avec un nombre, comme une taille ou une note ?",
+     "explication": "Un sport ne se mesure pas : le caractère est **qualitatif**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6b44486-50b1-5c22-a554-1db8059cc8b7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les huit devoirs de Lina",
+   "competence": "calculer",
+   "situation": "Lina a eu huit devoirs de sciences au cours du trimestre. Elle veut savoir si sa moyenne reflète bien ses résultats et compare avec la médiane.",
+   "documents": [
+    {
+     "id": "notes",
+     "type": "tableau",
+     "titre": "Les notes de Lina (sur 20)",
+     "source": "Notes inventées pour l’exercice",
+     "colonnes": [
+      "Série",
+      "Devoir A",
+      "Devoir B",
+      "Devoir C",
+      "Devoir D"
+     ],
+     "lignes": [
+      [
+       "Devoirs 1 à 4",
+       15,
+       8,
+       20,
+       11
+      ],
+      [
+       "Devoirs 5 à 8",
+       4,
+       17,
+       5,
+       16
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "notes",
+     "enonce": "Touche la **meilleure** et la **moins bonne** note de Lina.",
+     "reponse": [
+      "r0c3",
+      "r1c1"
+     ],
+     "multiple": true,
+     "aide": "Cherche le plus grand et le plus petit nombre du tableau.",
+     "explication": "La meilleure note est **20** et la moins bonne **4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**étendue** de la série de notes ?",
+     "reponse": 16,
+     "aide": "Étendue = plus grande valeur − plus petite valeur.",
+     "explication": "20 − 4 = **16**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **moyenne** des huit notes ?",
+     "reponse": 12,
+     "aide": "Additionne les 8 notes, puis divise par 8.",
+     "explication": "Somme : 15 + 8 + 20 + 11 + 4 + 17 + 5 + 16 = 96. Moyenne : 96 ÷ 8 = **12**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **médiane** de la série ? (range d’abord les notes dans l’ordre)",
+     "reponse": 13,
+     "aide": "Ordonnée, la série compte 8 valeurs : la médiane est entre la 4e et la 5e.",
+     "explication": "Notes rangées : 4 ; 5 ; 8 ; 11 ; 15 ; 16 ; 17 ; 20. La médiane est la moyenne des 4e et 5e valeurs : (11 + 15) ÷ 2 = **13**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie une médiane de **13** ici ?",
+     "options": [
+      "La moitié des notes sont au plus 13, l’autre moitié au moins 13",
+      "Toutes les notes de Lina sont exactement égales à 13",
+      "La note qui revient le plus souvent dans la série est 13",
+      "La somme de toutes les notes de Lina est égale à 13"
+     ],
+     "reponse": 0,
+     "aide": "La médiane partage la série ordonnée en deux groupes de même effectif.",
+     "explication": "Quatre notes sont inférieures ou égales à 13 (4, 5, 8, 11) et quatre sont supérieures (15, 16, 17, 20). La médiane **partage la série en deux groupes égaux**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f6b44486-50b1-5c22-a554-1db8059cc8b7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Retards au collège : un relevé, deux graphiques",
+   "competence": "analyser-document",
+   "situation": "Le journal du collège titre « Les retards explosent ! » et publie un graphique. La direction publie le même relevé avec un autre graphique. Les chiffres sont les mêmes, mais l’impression est très différente.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "graphique",
+     "titre": "Le graphique du journal",
+     "source": "Relevé inventé pour l’exercice",
+     "forme": "barres",
+     "categories": [
+      "Sem. 1",
+      "Sem. 2",
+      "Sem. 3",
+      "Sem. 4"
+     ],
+     "series": [
+      {
+       "nom": "Retards",
+       "valeurs": [
+        82,
+        84,
+        85,
+        88
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Retards",
+      "min": 80,
+      "max": 90,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Semaine"
+     }
+    },
+    {
+     "id": "direction",
+     "type": "graphique",
+     "titre": "Le graphique de la direction",
+     "source": "Mêmes données",
+     "forme": "barres",
+     "categories": [
+      "Sem. 1",
+      "Sem. 2",
+      "Sem. 3",
+      "Sem. 4"
+     ],
+     "series": [
+      {
+       "nom": "Retards",
+       "valeurs": [
+        82,
+        84,
+        85,
+        88
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Retards",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Semaine"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Dans quel graphique la hausse paraît-elle **la plus spectaculaire** ?",
+     "options": [
+      "Dans celui du journal, axe de 80 à 90",
+      "Dans celui de la direction, axe de 0 à 100",
+      "Elle paraît pareille dans les deux",
+      "Dans aucun des deux"
+     ],
+     "reponse": 0,
+     "aide": "Compare la taille de la barre de la semaine 4 avec celle de la semaine 1 dans chaque graphique.",
+     "explication": "Dans le graphique du journal, l’axe démarre à 80 : la barre de la semaine 4 paraît **bien plus haute** que celle de la semaine 1, alors que l’écart réel est faible."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **hausse réelle** des retards entre la semaine 1 et la semaine 4, en pourcentage ? (arrondi à l’unité)",
+     "reponse": 7,
+     "tolerance": 0.5,
+     "unite": "%",
+     "aide": "Hausse = (88 − 82) ÷ 82, puis × 100.",
+     "explication": "(88 − 82) ÷ 82 = 6 ÷ 82 ≈ 0,073, soit environ **7 %** : une hausse modérée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le **défaut** du graphique du journal ?",
+     "options": [
+      "L’axe vertical ne part pas de zéro, ce qui exagère la hausse",
+      "Les barres sont dessinées en rouge sur fond blanc",
+      "Il manque le chiffre de la semaine 3 sur l’axe",
+      "Il y a trop de barres pour bien lire le graphique"
+     ],
+     "reponse": 0,
+     "aide": "Lis d’abord les axes et l’échelle, avant de regarder les barres.",
+     "explication": "L’axe démarre à 80 : cela **déforme la perception** sans falsifier aucun chiffre. Il faut toujours lire l’axe avant de regarder les barres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la **moyenne** des retards par semaine sur les 4 semaines ?",
+     "reponse": 84.75,
+     "aide": "Additionne les quatre valeurs, divise par 4.",
+     "explication": "(82 + 84 + 85 + 88) ÷ 4 = 339 ÷ 4 = **84,75** retards par semaine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’**étendue** de la série des retards ?",
+     "reponse": 6,
+     "aide": "Plus grande valeur − plus petite valeur.",
+     "explication": "88 − 82 = **6** : les retards varient peu d’une semaine à l’autre."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c7c4288-96dd-5768-b875-58bce65ca9aa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le sac de billes de Samia",
+   "competence": "calculer",
+   "situation": "Samia tire au hasard une bille dans un sac opaque. Elle a noté le contenu du sac dans un tableau.",
+   "documents": [
+    {
+     "id": "sac",
+     "type": "tableau",
+     "titre": "Le contenu du sac",
+     "source": "Contenu inventé pour l’exercice",
+     "colonnes": [
+      "Couleur",
+      "Rouge",
+      "Bleue",
+      "Verte"
+     ],
+     "lignes": [
+      [
+       "Nombre de billes",
+       3,
+       5,
+       2
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de billes y a-t-il **en tout** dans le sac ?",
+     "reponse": 10,
+     "aide": "Additionne les trois effectifs.",
+     "explication": "3 + 5 + 2 = **10 billes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de tirer une bille **rouge** ? (en décimal)",
+     "reponse": 0.3,
+     "aide": "Probabilité = issues favorables ÷ issues possibles.",
+     "explication": "Il y a 3 billes rouges sur 10 : P = {{3/10}} = **0,3**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle couleur a la **plus grande** probabilité d’être tirée ?",
+     "options": [
+      "La bleue",
+      "La rouge",
+      "La verte",
+      "Elles ont la même probabilité"
+     ],
+     "reponse": 0,
+     "aide": "La probabilité est la plus grande pour la couleur la plus fréquente.",
+     "explication": "Il y a 5 billes bleues, plus que de rouges (3) ou de vertes (2) : P(bleue) = {{5/10}} = 0,5, la **plus grande**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de **ne pas** tirer une bille verte ? (en décimal)",
+     "reponse": 0.8,
+     "aide": "L’événement contraire : 1 − P(verte).",
+     "explication": "P(verte) = {{2/10}} = 0,2, donc P(non verte) = 1 − 0,2 = **0,8**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c7c4288-96dd-5768-b875-58bce65ca9aa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le jeu des deux dés",
+   "competence": "raisonner",
+   "situation": "Dans un jeu de plateau, on lance deux dés équilibrés à six faces et on additionne les résultats. Ce tableau donne toutes les sommes possibles : chaque case est également probable.",
+   "documents": [
+    {
+     "id": "sommes",
+     "type": "tableau",
+     "titre": "Toutes les sommes possibles",
+     "colonnes": [
+      "Dé 1 ↓ · Dé 2 →",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "lignes": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ],
+      [
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      [
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      [
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sommes",
+     "enonce": "Touche toutes les cases où la somme vaut **7**.",
+     "reponse": [
+      "r0c6",
+      "r1c5",
+      "r2c4",
+      "r3c3",
+      "r4c2",
+      "r5c1"
+     ],
+     "multiple": true,
+     "aide": "La somme 7 apparaît sur une diagonale du tableau.",
+     "explication": "La somme 7 apparaît **6 fois** : 1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité d’obtenir une somme égale à **7** ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.16666666666666666,
+     "tolerance": 0.005,
+     "aide": "Il y a 36 cases au total, toutes équiprobables.",
+     "explication": "6 cases favorables sur 36 : P = {{6/36}} = **{{1/6}}**. En décimal : environ 0,17."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité d’obtenir une somme égale à **9** ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.1111111111111111,
+     "tolerance": 0.005,
+     "aide": "Compte les cases où tu lis 9 dans le tableau.",
+     "explication": "La somme 9 apparaît 4 fois (3 + 6, 4 + 5, 5 + 4, 6 + 3) : P = {{4/36}} = **{{1/9}}**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle somme est la **plus probable** ?",
+     "options": [
+      "7",
+      "6",
+      "8",
+      "12"
+     ],
+     "reponse": 0,
+     "aide": "Compte combien de fois chaque somme apparaît dans le tableau.",
+     "explication": "La somme 7 apparaît 6 fois, plus que toute autre (6 et 8 apparaissent 5 fois chacune, 12 une seule fois). C’est la **plus probable**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité que la somme soit **différente de 7** ? (une fraction, ou un décimal arrondi au centième)",
+     "reponse": 0.8333333333333334,
+     "tolerance": 0.005,
+     "aide": "C’est l’événement contraire de « la somme vaut 7 ».",
+     "explication": "P(non 7) = 1 − {{1/6}} = **{{5/6}}**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7c7c4288-96dd-5768-b875-58bce65ca9aa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux tirages dans le sac de Samia",
+   "competence": "modeliser",
+   "situation": "Le sac contient maintenant 2 billes rouges et 3 billes vertes. Samia tire une bille, la remet, puis en tire une seconde. Elle dessine l’arbre des issues, puis fait 200 essais avec ses amis pour comparer.",
+   "documents": [
+    {
+     "id": "arbre",
+     "type": "schema",
+     "titre": "L’arbre de Samia (tirages avec remise)",
+     "largeur": 340,
+     "hauteur": 260,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 38,
+       "cy": 130,
+       "r": 11,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        49,
+        126
+       ],
+       "a": [
+        126,
+        78
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        49,
+        134
+       ],
+       "a": [
+        126,
+        182
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 90,
+       "texte": "2/5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 178,
+       "texte": "3/5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 70,
+       "r": 15,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "R"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 190,
+       "r": 15,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        154,
+        66
+       ],
+       "a": [
+        244,
+        38
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        154,
+        74
+       ],
+       "a": [
+        244,
+        100
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        154,
+        186
+       ],
+       "a": [
+        244,
+        160
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        154,
+        194
+       ],
+       "a": [
+        244,
+        222
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 212,
+       "y": 40,
+       "texte": "2/5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 214,
+       "y": 100,
+       "texte": "3/5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 212,
+       "y": 160,
+       "texte": "2/5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 214,
+       "y": 220,
+       "texte": "3/5",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 24,
+       "l": 80,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "R puis R",
+       "id": "rr",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 84,
+       "l": 80,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "R puis V",
+       "id": "rv",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 144,
+       "l": 80,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "V puis R",
+       "id": "vr",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 204,
+       "l": 80,
+       "h": 28,
+       "arrondi": 6,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "V puis V",
+       "id": "vv",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "simu",
+     "type": "tableau",
+     "titre": "Les 200 essais",
+     "source": "Résultats inventés pour l’exercice",
+     "colonnes": [
+      "Issue",
+      "R puis R",
+      "R puis V",
+      "V puis R",
+      "V puis V",
+      "Total"
+     ],
+     "lignes": [
+      [
+       "Effectif",
+       35,
+       46,
+       49,
+       70,
+       200
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arbre",
+     "enonce": "Touche les deux issues où l’on obtient **exactement une bille rouge**.",
+     "reponse": [
+      "rv",
+      "vr"
+     ],
+     "multiple": true,
+     "aide": "Les deux billes sont de couleurs différentes : il y a deux ordres possibles.",
+     "explication": "Les issues « R puis V » et « V puis R » donnent exactement une bille rouge."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité de l’issue « R puis V » ? (fraction ou décimal)",
+     "reponse": 0.24,
+     "tolerance": 0.0001,
+     "aide": "Le long d’une branche, on multiplie : P(R) × P(V).",
+     "explication": "P = {{2/5}} × {{3/5}} = {{6/25}} = **0,24**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la probabilité d’obtenir **au moins une bille rouge** ? (en décimal)",
+     "reponse": 0.64,
+     "aide": "Passe par l’événement contraire : aucune bille rouge, c’est « V puis V ».",
+     "explication": "P(V puis V) = {{9/25}} = 0,36, donc P(au moins une rouge) = 1 − 0,36 = **0,64**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans la simulation, quelle est la **fréquence** observée de « V puis V » ? (en décimal)",
+     "reponse": 0.35,
+     "aide": "Fréquence = effectif ÷ nombre total d’essais.",
+     "explication": "70 ÷ 200 = **0,35**, proche de la probabilité théorique 0,36."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la fréquence 0,35 n’est-elle pas exactement égale à 0,36 ?",
+     "options": [
+      "La fréquence varie, et se rapproche de 0,36 avec plus d’essais",
+      "L’arbre contient sûrement une erreur de calcul quelque part",
+      "Le sac se souvient des tirages qui ont eu lieu avant",
+      "La probabilité change un peu à chaque nouveau tirage"
+     ],
+     "reponse": 0,
+     "aide": "Que dit la loi des grands nombres sur les fréquences ?",
+     "explication": "Une fréquence observée **fluctue** d’un échantillon à l’autre. Plus on répète l’expérience, plus elle se rapproche de la probabilité (loi des grands nombres). Le sac n’a pas de mémoire."
+    }
+   ]
+  }
+ ]
+}

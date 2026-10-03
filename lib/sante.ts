@@ -3371,6 +3371,905 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Le bloc ne montre que la colonne de l’élève (ses propres trophées et son temps de la semaine) et annonce que le classement de ses amis arrive. Rien ne casse. À exécuter APRÈS la 464.',
     sonde: { type: 'rpc', fn: 'classement_amis', args: {} },
   },
+  {
+    id: '466',
+    fichier: '466_corrections_cahier.sql',
+    feature:
+      'ERREURS DE COURS RELEVÉES PAR LE CAHIER D’EXERCICES — 22 fragments corrigés dans les cours, les quiz et les contrôles, chacun vérifié à une source : 96 % (et non 99 %) de la masse du corps en O, C, H, N ; acide α-linolénique ; Dias passe le cap en 1488 ; Bagdad fondée en 762 ; citations de Zola, Racine (« sur vos têtes ») et La Fayette rétablies ; Zadig → Candide onze ans ; Vrilles → Sido vingt-deux ans.',
+    siAbsente: 'Ces cours, quiz et contrôles gardent l’erreur. Rien ne casse.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '467',
+    fichier: '467_exercices_6e_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 6e (1/5) — anglais, arts-plastiques, emc : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '468',
+    fichier: '468_exercices_6e_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 6e (2/5) — francais, histoire-geo : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '469',
+    fichier: '469_exercices_6e_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 6e (3/5) — histoire-geo, maths, musique : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '470',
+    fichier: '470_exercices_6e_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 6e (4/5) — physique-chimie, sport, svt : 78 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '471',
+    fichier: '471_exercices_6e_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 6e (5/5) — technologie : 30 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '472',
+    fichier: '472_exercices_5e_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (1/10) — allemand, anglais : 75 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '473',
+    fichier: '473_exercices_5e_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (2/10) — anglais, arts-plastiques, emc : 96 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '474',
+    fichier: '474_exercices_5e_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (3/10) — espagnol : 102 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '475',
+    fichier: '475_exercices_5e_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (4/10) — francais, histoire-geo : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '476',
+    fichier: '476_exercices_5e_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (5/10) — histoire-geo, latin, maths : 93 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '477',
+    fichier: '477_exercices_5e_6.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (6/10) — maths, musique, physique-chimie : 66 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '478',
+    fichier: '478_exercices_5e_7.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (7/10) — physique-chimie, sport : 84 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '479',
+    fichier: '479_exercices_5e_8.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (8/10) — svt : 66 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '480',
+    fichier: '480_exercices_5e_9.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (9/10) — svt, technologie : 63 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '481',
+    fichier: '481_exercices_5e_10.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 5e (10/10) — technologie : 33 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '482',
+    fichier: '482_exercices_4e_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (1/12) — allemand, anglais : 45 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '483',
+    fichier: '483_exercices_4e_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (2/12) — anglais, arts-plastiques : 96 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '484',
+    fichier: '484_exercices_4e_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (3/12) — emc, espagnol : 48 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '485',
+    fichier: '485_exercices_4e_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (4/12) — espagnol : 84 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '486',
+    fichier: '486_exercices_4e_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (5/12) — francais, histoire-geo : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '487',
+    fichier: '487_exercices_4e_6.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (6/12) — histoire-geo, latin, maths : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '488',
+    fichier: '488_exercices_4e_7.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (7/12) — maths, musique : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '489',
+    fichier: '489_exercices_4e_8.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (8/12) — physique-chimie : 24 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '490',
+    fichier: '490_exercices_4e_9.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (9/12) — physique-chimie : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '491',
+    fichier: '491_exercices_4e_10.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (10/12) — sport, svt : 42 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '492',
+    fichier: '492_exercices_4e_11.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (11/12) — svt : 75 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '493',
+    fichier: '493_exercices_4e_12.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 4e (12/12) — technologie : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '494',
+    fichier: '494_exercices_3e_8.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (1/5) — allemand : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '495',
+    fichier: '495_exercices_3e_9.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (2/5) — allemand, anglais : 99 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '496',
+    fichier: '496_exercices_3e_10.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (3/5) — anglais, arts-plastiques : 96 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '497',
+    fichier: '497_exercices_3e_11.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (4/5) — espagnol : 102 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '498',
+    fichier: '498_exercices_3e_12.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 3e (5/5) — grec, latin, musique, sport : 51 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '499',
+    fichier: '499_exercices_2de_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (1/14) — allemand : 21 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '500',
+    fichier: '500_exercices_2de_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (2/14) — allemand : 87 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '501',
+    fichier: '501_exercices_2de_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (3/14) — allemand, anglais : 96 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '502',
+    fichier: '502_exercices_2de_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (4/14) — anglais, arts-plastiques, emc : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '503',
+    fichier: '503_exercices_2de_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (5/14) — espagnol : 102 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '504',
+    fichier: '504_exercices_2de_6.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (6/14) — espagnol, francais : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '505',
+    fichier: '505_exercices_2de_7.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (7/14) — francais, grec, histoire-geo : 75 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '506',
+    fichier: '506_exercices_2de_8.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (8/14) — histoire-geo : 60 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '507',
+    fichier: '507_exercices_2de_9.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (9/14) — histoire-geo, latin, maths : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '508',
+    fichier: '508_exercices_2de_10.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (10/14) — maths, musique, physique-chimie : 75 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '509',
+    fichier: '509_exercices_2de_11.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (11/14) — physique-chimie, ses : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '510',
+    fichier: '510_exercices_2de_12.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (12/14) — ses, snt : 63 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '511',
+    fichier: '511_exercices_2de_13.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (13/14) — snt, sport : 63 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '512',
+    fichier: '512_exercices_2de_14.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 2de (14/14) — svt : 57 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '513',
+    fichier: '513_exercices_1re_1.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (1/36) — allemand : 21 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '514',
+    fichier: '514_exercices_1re_2.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (2/36) — allemand : 87 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '515',
+    fichier: '515_exercices_1re_3.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (3/36) — allemand : 36 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '516',
+    fichier: '516_exercices_1re_4.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (4/36) — anglais : 93 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '517',
+    fichier: '517_exercices_1re_5.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (5/36) — anglais, arts-plastiques, biochimie-biologie : 78 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '518',
+    fichier: '518_exercices_1re_6.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (6/36) — biologie-physiopathologie, biotechnologies : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '519',
+    fichier: '519_exercices_1re_7.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (7/36) — biotechnologies, droit-economie : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '520',
+    fichier: '520_exercices_1re_8.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (8/36) — emc, enseignement-scientifique : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '521',
+    fichier: '521_exercices_1re_9.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (9/36) — enseignement-scientifique, espagnol : 60 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '522',
+    fichier: '522_exercices_1re_10.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (10/36) — espagnol : 84 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '523',
+    fichier: '523_exercices_1re_11.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (11/36) — espagnol, francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '524',
+    fichier: '524_exercices_1re_12.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (12/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '525',
+    fichier: '525_exercices_1re_13.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (13/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '526',
+    fichier: '526_exercices_1re_14.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (14/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '527',
+    fichier: '527_exercices_1re_15.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (15/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '528',
+    fichier: '528_exercices_1re_16.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (16/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '529',
+    fichier: '529_exercices_1re_17.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (17/36) — francais : 87 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '530',
+    fichier: '530_exercices_1re_18.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (18/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '531',
+    fichier: '531_exercices_1re_19.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (19/36) — francais : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '532',
+    fichier: '532_exercices_1re_20.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (20/36) — francais : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '533',
+    fichier: '533_exercices_1re_21.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (21/36) — francais, hggsp : 90 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '534',
+    fichier: '534_exercices_1re_22.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (22/36) — hggsp, histoire-geo-techno : 87 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '535',
+    fichier: '535_exercices_1re_23.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (23/36) — histoire-geo : 66 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '536',
+    fichier: '536_exercices_1re_24.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (24/36) — histoire-geo : 63 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '537',
+    fichier: '537_exercices_1re_25.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (25/36) — hlp, ingenierie-dd : 87 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '538',
+    fichier: '538_exercices_1re_26.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (26/36) — ingenierie-dd, innovation-technologique, latin, llcer-anglais : 72 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '539',
+    fichier: '539_exercices_1re_27.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (27/36) — management, maths-techno : 84 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '540',
+    fichier: '540_exercices_1re_28.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (28/36) — maths, musique : 84 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '541',
+    fichier: '541_exercices_1re_29.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (29/36) — nsi, physique-chimie-maths : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '542',
+    fichier: '542_exercices_1re_30.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (30/36) — physique-chimie-maths, physique-chimie-sante : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '543',
+    fichier: '543_exercices_1re_31.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (31/36) — physique-chimie : 66 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '544',
+    fichier: '544_exercices_1re_32.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (32/36) — sciences-gestion-numerique, sciences-sanitaires-sociales : 84 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '545',
+    fichier: '545_exercices_1re_33.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (33/36) — ses : 69 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '546',
+    fichier: '546_exercices_1re_34.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (34/36) — si : 54 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '547',
+    fichier: '547_exercices_1re_35.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (35/36) — si, spcl, sport : 78 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '548',
+    fichier: '548_exercices_1re_36.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE 1re (36/36) — svt : 63 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '549',
+    fichier: '549_exercices_tle_21.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (1/6) — allemand : 21 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '550',
+    fichier: '550_exercices_tle_22.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (2/6) — allemand : 87 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '551',
+    fichier: '551_exercices_tle_23.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (3/6) — anglais, arts-plastiques : 81 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '552',
+    fichier: '552_exercices_tle_24.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (4/6) — espagnol : 27 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '553',
+    fichier: '553_exercices_tle_25.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (5/6) — espagnol, grec, latin : 102 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '554',
+    fichier: '554_exercices_tle_26.sql',
+    feature:
+      'LE CAHIER D’EXERCICES DE Tle (6/6) — musique, sport : 18 exercices faits comme une page de manuel (★, ★★, ★★★).',
+    siAbsente:
+      'La tuile « Exercice » de ces chapitres reste sur le contrôle blanc (copie notée sur 20), et le manuel numérique saute leurs pages. Rien ne casse. À exécuter APRÈS la 372.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '555',
+    fichier: '555_quetes_trois_gestes.sql',
+    feature:
+      'LES QUÊTES DU JOUR AUTOUR DES TROIS GESTES — le catalogue SQL (`quest_catalog`) connaît les nouvelles quêtes : terminer 1 ou 2 cours, terminer un quiz, en réussir un à 80 %, trouver 20 bonnes réponses, réussir un exercice du cahier, jouer ou gagner un duel, jouer 2 parties. Les anciennes restent dedans pour payer une journée commencée avant le déploiement.',
+    siAbsente:
+      'Les nouvelles quêtes s’affichent mais n’avancent pas (la progression refuse un id inconnu) et ne se paient pas ; seuls « Jouer 1 duel » et « Gagner 1 duel » avancent. Rien ne casse. À exécuter APRÈS la 209.',
+    // La fonction existe déjà (205) : la clé anon ne distingue pas sa version.
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

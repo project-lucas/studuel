@@ -1,0 +1,3474 @@
+{
+ "niveau": "2de",
+ "matiere": "emc",
+ "exercices": [
+  {
+   "chapitre": "c3ba5e5b-b29c-50b5-b5cb-9e66d44134ba",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’arrêté du maire et la loi",
+   "competence": "observer-schema",
+   "situation": "Le maire de la commune de Karim a pris un arrêté qui interdit les vélos sur la place du marché. Karim se demande si ce texte pèse autant qu’une loi : il observe la pyramide des normes de son cours.",
+   "documents": [
+    {
+     "id": "pyramide",
+     "type": "schema",
+     "titre": "La hiérarchie des normes",
+     "source": "Schéma simplifié pour l’exercice",
+     "largeur": 390,
+     "hauteur": 266,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         156,
+         14
+        ],
+        [
+         224,
+         14
+        ],
+        [
+         250,
+         56
+        ],
+        [
+         130,
+         56
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "constitution",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 40,
+       "texte": "Constitution",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 40,
+       "texte": "1",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         127,
+         60
+        ],
+        [
+         253,
+         60
+        ],
+        [
+         279,
+         102
+        ],
+        [
+         101,
+         102
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "traites",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 86,
+       "texte": "Traités et droit de l’UE",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 86,
+       "texte": "2",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         99,
+         106
+        ],
+        [
+         281,
+         106
+        ],
+        [
+         307,
+         148
+        ],
+        [
+         73,
+         148
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "loi",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 132,
+       "texte": "Loi",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 132,
+       "texte": "3",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         70,
+         152
+        ],
+        [
+         310,
+         152
+        ],
+        [
+         336,
+         194
+        ],
+        [
+         44,
+         194
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "reglements",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 178,
+       "texte": "Décrets, arrêtés",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 178,
+       "texte": "4",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         42,
+         198
+        ],
+        [
+         338,
+         198
+        ],
+        [
+         364,
+         240
+        ],
+        [
+         16,
+         240
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "contrats",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 190,
+       "y": 224,
+       "texte": "Contrats",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 224,
+       "texte": "5",
+       "taille": "grand",
+       "gras": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        370,
+        236
+       ],
+       "a": [
+        370,
+        20
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "texte",
+       "x": 370,
+       "y": 252,
+       "texte": "Rang le plus élevé en haut",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "fin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pyramide",
+     "reponse": [
+      "reglements"
+     ],
+     "enonce": "Touche le niveau de la pyramide où se range un arrêté du maire.",
+     "aide": "Un arrêté fait partie des règlements, avec les décrets.",
+     "explication": "Un arrêté est un **règlement** : il se range au rang 4, avec les décrets, sous la loi."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "enonce": "Combien de niveaux de la pyramide se trouvent au-dessus des décrets et arrêtés ?",
+     "aide": "Compte les étages situés plus haut que celui des règlements.",
+     "explication": "Au-dessus des règlements se trouvent la **loi**, les **traités** et la **Constitution** : **3 niveaux**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Si l’arrêté du maire contredit une loi, que peut faire le juge ?",
+     "options": [
+      "L’annuler, car la loi est au-dessus de lui",
+      "Le laisser s’appliquer, car il est plus récent",
+      "Le réécrire lui-même pour le rendre conforme",
+      "Le transmettre au Parlement pour qu’il devienne une loi"
+     ],
+     "aide": "Regarde quelle norme est au-dessus de l’autre.",
+     "explication": "Une norme inférieure qui contredit une norme supérieure peut être **annulée** : le juge annule l’arrêté contraire à la loi."
+    }
+   ]
+  },
+  {
+   "chapitre": "c3ba5e5b-b29c-50b5-b5cb-9e66d44134ba",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une semaine de pouvoirs autour des trottinettes",
+   "competence": "analyser-document",
+   "situation": "Pour son exposé d’EMC, Inès suit cinq décisions prises en une semaine à propos des trottinettes électriques. Elle veut savoir quel pouvoir agit chaque jour, et pourquoi il faut les séparer.",
+   "documents": [
+    {
+     "id": "semaine",
+     "type": "tableau",
+     "titre": "Cinq décisions de la semaine",
+     "source": "Situations écrites pour l’exercice",
+     "colonnes": [
+      "Jour",
+      "Décision"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       "L’Assemblée nationale adopte une loi sur la sécurité des trottinettes."
+      ],
+      [
+       "Mardi",
+       "Le gouvernement publie le décret qui précise les règles de circulation."
+      ],
+      [
+       "Mercredi",
+       "Un tribunal condamne un automobiliste qui a renversé un cycliste."
+      ],
+      [
+       "Jeudi",
+       "Le Sénat vote à son tour le texte de loi."
+      ],
+      [
+       "Vendredi",
+       "Un préfet fait appliquer le décret en contrôlant les loueurs."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "montesquieu",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Montesquieu, De l’esprit des lois (1748)",
+     "source": "Livre XI, chapitre 4",
+     "blocs": [
+      "Pour qu’on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le pouvoir [[v|arrête]] le pouvoir."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "semaine",
+     "reponse": [
+      "r0c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux décisions prises par le pouvoir législatif.",
+     "aide": "Qui fait la loi ? Cherche les deux assemblées du Parlement.",
+     "explication": "Le pouvoir **législatif** fait la loi : l’**Assemblée nationale** (lundi) et le **Sénat** (jeudi) appartiennent au Parlement."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque jour au pouvoir qui agit.",
+     "paires": [
+      [
+       "Lundi : l’adoption de la loi",
+       "Pouvoir législatif"
+      ],
+      [
+       "Mardi : la publication du décret",
+       "Pouvoir exécutif"
+      ],
+      [
+       "Mercredi : la condamnation",
+       "Pouvoir judiciaire"
+      ]
+     ],
+     "aide": "Le législatif fait la loi, l’exécutif l’applique, le judiciaire la fait respecter.",
+     "explication": "Le **législatif** fait la loi, l’**exécutif** l’applique (décret, préfet), le **judiciaire** la fait respecter (tribunal)."
+    },
+    {
+     "type": "zone",
+     "document": "montesquieu",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le verbe par lequel Montesquieu dit ce que le pouvoir doit faire au pouvoir.",
+     "aide": "Le verbe est celui de la célèbre formule « … le pouvoir ».",
+     "explication": "Pour Montesquieu, « il faut que le pouvoir **arrête** le pouvoir » : chacun limite les autres."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que risquerait-on si un seul organe faisait la loi, l’appliquait et jugeait ceux qui l’enfreignent ?",
+     "options": [
+      "L’arbitraire : plus personne ne limiterait ce pouvoir",
+      "Un ralentissement du vote des lois, faute de débat suffisant",
+      "Une multiplication des tribunaux dans chaque département",
+      "Une baisse du nombre d’élections organisées chaque année"
+     ],
+     "aide": "Pense à la phrase de Montesquieu : qui arrêterait ce pouvoir ?",
+     "explication": "Sans séparation des pouvoirs, aucun organe ne limite les autres : c’est l’**arbitraire**, le contraire de l’État de droit."
+    }
+   ]
+  },
+  {
+   "chapitre": "c3ba5e5b-b29c-50b5-b5cb-9e66d44134ba",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un refus de salle devant le juge",
+   "competence": "argumenter",
+   "situation": "Le club de théâtre du lycée de Maya s’est vu refuser une salle municipale par le maire. Le tribunal administratif a été saisi. Maya lit la décision résumée, puis cherche à qui s’adresser dans d’autres situations.",
+   "documents": [
+    {
+     "id": "decision",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Décision du tribunal administratif (résumé)",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "La commune de Valdor a refusé de prêter sa salle polyvalente au club de théâtre du lycée, au motif que le maire « n’aime pas ce genre de pièces ».",
+      "Le règlement municipal prévoit le prêt gratuit de la salle à toute association déclarée, sans condition d’opinion. Le tribunal juge que ce refus ne repose sur [[m|aucun]] [[m|motif]] prévu par ce règlement et [[a|annule]] la décision du maire."
+     ]
+    },
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Quatre situations",
+     "source": "Situations écrites pour l’exercice",
+     "colonnes": [
+      "Cas",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Un habitant conteste un refus de permis de construire."
+      ],
+      [
+       "B",
+       "Une personne estime qu’une loi déjà en vigueur viole la Constitution."
+      ],
+      [
+       "C",
+       "Des juges rendent des décisions contradictoires sur le même texte de loi."
+      ],
+      [
+       "D",
+       "Un citoyen estime que la France a violé ses droits fondamentaux."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "decision",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui dit ce que fait le tribunal de la décision du maire.",
+     "aide": "Le tribunal ne la modifie pas : il la fait disparaître.",
+     "explication": "Le tribunal **annule** la décision : une décision de l’administration contraire aux règles peut être annulée par le juge."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le raisonnement du juge.",
+     "items": [
+      "Le règlement prévoit le prêt de la salle à toute association déclarée",
+      "Le club de théâtre du lycée est une association déclarée",
+      "Le refus repose sur un goût du maire, qu’aucun texte ne prévoit",
+      "La décision du maire est annulée"
+     ],
+     "aide": "Du texte applicable à la conclusion : règle, cas, constat, décision.",
+     "explication": "Le juge part de la **règle** (le règlement), constate que le club y **entre**, que le refus ne s’appuie sur **aucun motif** prévu, puis **annule**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "En quoi cette décision illustre-t-elle l’État de droit ?",
+     "options": [
+      "Le maire est lui aussi soumis aux règles, et un juge peut le contrôler",
+      "Le maire garde le dernier mot sur l’usage de toutes les salles communales",
+      "Le tribunal a remplacé le maire dans l’exercice de ses fonctions",
+      "La loi permet à chaque maire de choisir librement les spectacles accueillis"
+     ],
+     "aide": "Qui est tenu de respecter le règlement : les citoyens seulement, ou aussi le maire ?",
+     "explication": "Gouvernants et gouvernés sont soumis au droit : le **maire** doit respecter le règlement et un **juge indépendant** peut annuler sa décision."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque situation du tableau à l’institution à qui s’adresser.",
+     "paires": [
+      [
+       "Cas A",
+       "Le Conseil d’État, juge de l’administration"
+      ],
+      [
+       "Cas B",
+       "Le Conseil constitutionnel, par la QPC"
+      ],
+      [
+       "Cas C",
+       "La Cour de cassation, qui veille à l’interprétation du droit"
+      ],
+      [
+       "Cas D",
+       "La Cour européenne des droits de l’homme, à Strasbourg"
+      ]
+     ],
+     "aide": "Relis la fonction de chaque gardien dans ton cours.",
+     "explication": "Conseil d’État : l’**administration** ; Conseil constitutionnel : la **QPC** ; Cour de cassation : l’**interprétation** du droit ; CEDH : la **violation** des droits fondamentaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "c30bf9d1-1f5f-542c-a395-2dc384c3a50d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La frise du CVL",
+   "competence": "se-reperer-temps",
+   "situation": "Léa prépare pour le CVL une affiche sur les étapes de l’État de droit. Elle place sept dates sur une frise : à toi de t’y repérer.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Sept étapes de l’État de droit",
+     "source": "Dates tirées du cours",
+     "debut": 1200,
+     "fin": 2050,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "magna",
+       "date": 1215,
+       "nom": "Magna Carta"
+      },
+      {
+       "id": "habeas",
+       "date": 1679,
+       "nom": "Habeas corpus"
+      },
+      {
+       "id": "ddhc",
+       "date": 1789,
+       "nom": "Déclaration"
+      },
+      {
+       "id": "assoc",
+       "date": 1901,
+       "nom": "Associations"
+      },
+      {
+       "id": "dudh",
+       "date": 1948,
+       "nom": "DUDH"
+      },
+      {
+       "id": "mort",
+       "date": 1981,
+       "nom": "Peine de mort"
+      },
+      {
+       "id": "qpc",
+       "date": 2010,
+       "nom": "QPC"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "magna"
+     ],
+     "enonce": "Touche le texte le plus ancien de la frise.",
+     "aide": "Cherche l’événement placé le plus à gauche.",
+     "explication": "La **Magna Carta**, en **1215**, est le texte le plus ancien : elle limite pour la première fois le pouvoir du roi d’Angleterre."
+    },
+    {
+     "type": "nombre",
+     "reponse": 464,
+     "enonce": "Combien d’années séparent la Magna Carta de l’habeas corpus ?",
+     "aide": "Soustrais la date la plus ancienne à la plus récente.",
+     "explication": "1679 − 1215 = **464 ans** entre la Magna Carta et l’habeas corpus."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "qpc"
+     ],
+     "enonce": "Touche l’étape qui permet à un citoyen de contester une loi déjà en vigueur.",
+     "aide": "Ce sont trois lettres, créées par une réforme de la Constitution.",
+     "explication": "La **question prioritaire de constitutionnalité** (QPC), créée en **2010**, permet de contester une loi déjà en vigueur."
+    }
+   ]
+  },
+  {
+   "chapitre": "c30bf9d1-1f5f-542c-a395-2dc384c3a50d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chasse à l’erreur dans un exposé",
+   "competence": "analyser-document",
+   "situation": "Hugo envoie à Élise la fiche de son exposé sur la construction de l’État de droit. Élise sait qu’une de ses dates est fausse. Elle sort son cours pour la retrouver, puis range les textes par époque.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Élise",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "Voici ma fiche : l’habeas corpus date de [[e|1215]], la liberté d’association de 1901 et l’abolition de la peine de mort de 1981."
+      },
+      {
+       "qui": "Élise",
+       "texte": "Relis ton cours : une de tes dates est fausse."
+      }
+     ]
+    },
+    {
+     "id": "cours",
+     "type": "tableau",
+     "titre": "Le cours d’Élise",
+     "source": "Dates tirées du cours",
+     "colonnes": [
+      "Date",
+      "Texte ou liberté"
+     ],
+     "lignes": [
+      [
+       "1215",
+       "Magna Carta"
+      ],
+      [
+       "1679",
+       "Habeas corpus"
+      ],
+      [
+       "1881",
+       "Liberté de la presse"
+      ],
+      [
+       "1884",
+       "Liberté syndicale"
+      ],
+      [
+       "1901",
+       "Liberté d’association"
+      ],
+      [
+       "1905",
+       "Séparation des Églises et de l’État"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche la date fausse dans le message d’Hugo.",
+     "aide": "L’une des trois dates correspond à un autre texte que celui qu’il cite.",
+     "explication": "**1215** est la date de la **Magna Carta** ; l’**habeas corpus** date de **1679**."
+    },
+    {
+     "type": "zone",
+     "document": "cours",
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Dans le tableau, touche la case qui donne la bonne date de l’habeas corpus.",
+     "aide": "Cherche d’abord la ligne qui nomme l’habeas corpus.",
+     "explication": "La ligne « Habeas corpus » porte la date **1679**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 17,
+     "enonce": "Combien d’années séparent la liberté syndicale de la liberté d’association ?",
+     "aide": "Lis les deux dates dans le tableau, puis soustrais.",
+     "explication": "1901 − 1884 = **17 ans**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Avant 1789",
+      "XIXe siècle",
+      "XXe siècle"
+     ],
+     "enonce": "Range chaque texte dans la bonne époque.",
+     "items": [
+      [
+       "Magna Carta",
+       0
+      ],
+      [
+       "Habeas corpus",
+       0
+      ],
+      [
+       "Liberté de la presse",
+       1
+      ],
+      [
+       "Liberté syndicale",
+       1
+      ],
+      [
+       "Liberté d’association",
+       2
+      ],
+      [
+       "Séparation des Églises et de l’État",
+       2
+      ]
+     ],
+     "aide": "Le XXe siècle commence en 1901.",
+     "explication": "Avant 1789 : Magna Carta et habeas corpus. XIXe siècle : 1881 et 1884. XXe siècle : **1901** (le XXe siècle commence en 1901) et **1905**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c30bf9d1-1f5f-542c-a395-2dc384c3a50d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des États légaux mais criminels",
+   "competence": "analyser-texte",
+   "situation": "Après 1945, on s’aperçoit que des États légaux ont commis des crimes. Pour son dossier, Sacha lit l’article 16 de la Déclaration de 1789 et suit la frise des garanties créées ensuite.",
+   "documents": [
+    {
+     "id": "art16",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Déclaration des droits de l’homme et du citoyen, 1789",
+     "source": "Article 16",
+     "blocs": [
+      "Toute Société dans laquelle la [[g|garantie]] des [[g|Droits]] n’est pas assurée, ni la [[s|séparation]] des [[s|Pouvoirs]] déterminée, n’a point de Constitution."
+     ]
+    },
+    {
+     "id": "frise2",
+     "type": "frise",
+     "titre": "Après 1945",
+     "source": "Dates tirées du cours",
+     "debut": 1940,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "dudh",
+       "date": 1948,
+       "nom": "DUDH"
+      },
+      {
+       "id": "c58",
+       "date": 1958,
+       "nom": "Conseil constitutionnel"
+      },
+      {
+       "id": "c71",
+       "date": 1971,
+       "nom": "Décision du Conseil"
+      },
+      {
+       "id": "qpc",
+       "date": 2010,
+       "nom": "QPC"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "art16",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les deux mots qui désignent la seconde condition posée par l’article 16.",
+     "aide": "L’article en pose deux : la garantie des droits, puis une autre.",
+     "explication": "La seconde condition est la **séparation des pouvoirs** ; la première est la **garantie des droits**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi la garantie des droits devient-elle internationale après 1945 ?",
+     "options": [
+      "Des États légaux avaient commis des crimes : respecter ses lois ne suffisait plus",
+      "Les Constitutions nationales venaient d’être supprimées dans tous les pays d’Europe",
+      "Les juges nationaux avaient cessé d’exister dans les pays qui avaient été en guerre",
+      "Les traités internationaux remplaçaient désormais toutes les lois nationales"
+     ],
+     "aide": "Le cours parle d’États « légaux mais criminels ».",
+     "explication": "Les crimes de régimes **légaux** ont montré qu’un État peut suivre ses propres lois et violer les droits : la garantie devient **internationale** (1948, 1950)."
+    },
+    {
+     "type": "zone",
+     "document": "frise2",
+     "reponse": [
+      "c71"
+     ],
+     "enonce": "Touche la date où le Conseil constitutionnel donne valeur constitutionnelle au Préambule, donc à la Déclaration de 1789.",
+     "aide": "Le Conseil est créé en 1958 ; cherche l’étape où il s’émancipe.",
+     "explication": "En **1971**, le Conseil constitutionnel donne valeur constitutionnelle au Préambule, donc à la **Déclaration de 1789**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 13,
+     "enonce": "Combien d’années séparent la création du Conseil constitutionnel de sa décision qui donne valeur constitutionnelle au Préambule ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1971 − 1958 = **13 ans**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que permet cette décision de 1971 au Conseil constitutionnel ?",
+     "options": [
+      "Censurer une loi contraire à la Déclaration de 1789",
+      "Voter lui-même les lois à la place du Parlement",
+      "Juger les litiges des citoyens avec l’administration",
+      "Condamner la France devant la Cour de Strasbourg"
+     ],
+     "aide": "La Déclaration de 1789 devient une norme de rang constitutionnel.",
+     "explication": "Le Conseil peut **censurer** une loi qui viole la Déclaration de 1789 : elle fait partie du bloc de constitutionnalité."
+    }
+   ]
+  },
+  {
+   "chapitre": "00ce64fb-084e-5285-93f2-e8883a782347",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre phrases entendues au foyer",
+   "competence": "analyser-texte",
+   "situation": "Au foyer du lycée, Yanis entend plusieurs phrases sur la laïcité. Il voudrait savoir lesquelles sont justes avant de les répéter dans son exposé.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "tableau",
+     "titre": "Quatre phrases entendues",
+     "source": "Phrases écrites pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Phrase"
+     ],
+     "lignes": [
+      [
+       "1",
+       "La laïcité interdit de croire en une religion."
+      ],
+      [
+       "2",
+       "La laïcité garantit la liberté de conscience."
+      ],
+      [
+       "3",
+       "La laïcité vise une religion en particulier."
+      ],
+      [
+       "4",
+       "L’État ne reconnaît, ne salarie ni ne subventionne aucun culte."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "r0c1",
+      "r2c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux phrases fausses.",
+     "aide": "La laïcité garantit la liberté de croire et vaut pour toutes les religions.",
+     "explication": "La laïcité **garantit** la liberté de conscience et vaut pour **toutes** les religions de la même façon : les phrases 1 et 3 sont fausses."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quel principe la loi de 1905 pose-t-elle en premier, dans son article 1er ?",
+     "options": [
+      "La liberté de conscience et le libre exercice des cultes",
+      "La séparation des Églises et de l’État",
+      "La neutralité des agents publics",
+      "L’interdiction des signes religieux à l’école"
+     ],
+     "aide": "L’ordre des articles compte : d’abord la liberté, ensuite la séparation.",
+     "explication": "L’article 1er garantit la **liberté de conscience** et le libre exercice des cultes ; l’article 2 pose ensuite la **séparation**."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "organisation",
+      "conscience",
+      "cultes",
+      "opinion",
+      "dépense"
+     ],
+     "enonce": "Complète la définition.",
+     "texte": "La laïcité est une règle d’___ de l’État : elle garantit la liberté de ___ et sépare l’État des ___.",
+     "reponses": [
+      [
+       "organisation"
+      ],
+      [
+       "conscience"
+      ],
+      [
+       "cultes"
+      ]
+     ],
+     "aide": "Ce n’est pas une opinion sur la religion, mais une règle.",
+     "explication": "La laïcité est une règle d’**organisation** de l’État : liberté de **conscience** et séparation de l’État et des **cultes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "00ce64fb-084e-5285-93f2-e8883a782347",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui doit rester neutre ?",
+   "competence": "analyser-document",
+   "situation": "Le CVL affiche dans le hall six situations de la vie quotidienne. Quentin doit dire, pour chacune, quelle règle de laïcité s’applique, en s’aidant du rappel des textes affiché à côté.",
+   "documents": [
+    {
+     "id": "situations",
+     "type": "tableau",
+     "titre": "Six situations",
+     "source": "Situations écrites pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Une agente d’accueil de la préfecture reçoit le public."
+      ],
+      [
+       "2",
+       "Un élève de seconde entre dans son lycée public."
+      ],
+      [
+       "3",
+       "Un étudiant de 20 ans suit un cours à l’université."
+      ],
+      [
+       "4",
+       "Une cliente fait ses courses dans une boulangerie."
+      ],
+      [
+       "5",
+       "Un professeur de lycée public fait cours."
+      ],
+      [
+       "6",
+       "Une collégienne arrive dans son collège public."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "rappel",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Ce que disent les textes",
+     "sousTitre": "Rappel simplifié",
+     "emoji": "⚖️",
+     "lignes": [
+      {
+       "texte": "Loi du 15 mars 2004 : élèves des écoles, collèges et lycées publics",
+       "id": "l2004"
+      },
+      {
+       "texte": "Stricte neutralité des agents publics en service",
+       "id": "agents"
+      },
+      {
+       "texte": "À l’université : des étudiants majeurs et libres",
+       "id": "univ"
+      },
+      {
+       "texte": "Charte de la laïcité à l’école (2013)",
+       "id": "charte"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Stricte neutralité",
+      "Signes ostensibles interdits",
+      "Liberté"
+     ],
+     "enonce": "Range chaque personne dans la bonne règle.",
+     "items": [
+      [
+       "L’agente d’accueil de la préfecture",
+       0
+      ],
+      [
+       "Le professeur du lycée public",
+       0
+      ],
+      [
+       "L’élève de seconde du lycée public",
+       1
+      ],
+      [
+       "La collégienne du collège public",
+       1
+      ],
+      [
+       "L’étudiant de 20 ans à l’université",
+       2
+      ],
+      [
+       "La cliente de la boulangerie",
+       2
+      ]
+     ],
+     "aide": "Distingue les agents publics, les élèves du public et les autres usagers.",
+     "explication": "Les **agents publics** sont tenus à la stricte neutralité ; les **élèves** du public à la loi de **2004** ; l’étudiant majeur et la cliente restent **libres**."
+    },
+    {
+     "type": "zone",
+     "document": "rappel",
+     "reponse": [
+      "univ"
+     ],
+     "enonce": "Touche la ligne du rappel qui s’applique à la situation 3.",
+     "aide": "La situation 3 se passe après le lycée.",
+     "explication": "À l’**université**, la règle est différente de celle du lycée : les étudiants sont **majeurs et libres**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Une cliente peut-elle porter un signe religieux dans la boulangerie (situation 4) ?",
+     "options": [
+      "Oui : la neutralité s’impose à l’État et à ses agents, pas aux clients",
+      "Non : la loi de 2004 s’applique dans tous les lieux ouverts au public",
+      "Non : la laïcité interdit tout signe religieux dans l’espace public",
+      "Oui, mais seulement si le boulanger l’a autorisé par écrit"
+     ],
+     "aide": "La loi de 2004 vise un lieu précis.",
+     "explication": "Un commerce n’est pas soumis à la neutralité : elle vaut pour l’**État** et les **agents publics**. La cliente est **libre**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "enonce": "Parmi les six situations, combien soumettent la personne à une règle de neutralité ou d’interdiction ?",
+     "aide": "Compte les agents publics et les élèves du public.",
+     "explication": "Situations **1, 2, 5 et 6** : deux agents publics (neutralité) et deux élèves du public (loi de 2004), soit **4**."
+    }
+   ]
+  },
+  {
+   "chapitre": "00ce64fb-084e-5285-93f2-e8883a782347",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Alsace-Moselle : pourquoi un régime à part ?",
+   "competence": "analyser-document",
+   "situation": "Julie vit à Strasbourg et Malik à Lyon. En préparant leur exposé commun, ils découvrent que le régime des cultes n’est pas le même chez eux, puis comparent la France à ses voisins.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Julie",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Malik",
+       "texte": "La loi de 1905 vaut pour toute la France, non ?"
+      },
+      {
+       "qui": "Julie",
+       "texte": "Chez nous, en Alsace-Moselle, le régime concordataire existe encore : en 1905, la région était [[r|allemande]]."
+      }
+     ]
+    },
+    {
+     "id": "europe",
+     "type": "tableau",
+     "titre": "Les cultes et l’État",
+     "source": "Informations simplifiées pour l’exercice",
+     "colonnes": [
+      "Pays",
+      "Rapport entre l’État et les cultes"
+     ],
+     "lignes": [
+      [
+       "France (métropole)",
+       "Séparation depuis 1905 : l’État ne reconnaît, ne salarie ni ne subventionne aucun culte"
+      ],
+      [
+       "Alsace-Moselle",
+       "Régime concordataire maintenu"
+      ],
+      [
+       "Danemark",
+       "Une Église luthérienne a le statut d’Église d’État"
+      ],
+      [
+       "Allemagne",
+       "L’État collecte pour les Églises qui le demandent un impôt cultuel"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi l’Alsace-Moselle n’a pas suivi la loi de 1905.",
+     "aide": "Quelle était la situation de la région à cette date ?",
+     "explication": "En 1905, l’Alsace-Moselle était **allemande** : la loi française de 1905 ne s’y est pas appliquée, et le régime concordataire a subsisté."
+    },
+    {
+     "type": "zone",
+     "document": "europe",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la ligne d’un pays où l’État collecte un impôt pour les Églises qui le demandent.",
+     "aide": "Cherche le mot « impôt ».",
+     "explication": "En **Allemagne**, l’État collecte un impôt cultuel pour les Églises qui le demandent."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que montre ce tableau de la laïcité française ?",
+     "options": [
+      "Un cas particulier : d’autres démocraties financent des cultes",
+      "Qu’elle est la règle commune de tous les pays européens",
+      "Qu’elle n’a jamais connu d’exception sur son territoire",
+      "Qu’elle interdit toute liberté religieuse aux citoyens"
+     ],
+     "aide": "Compare la première ligne aux autres.",
+     "explication": "La laïcité française est un **cas particulier** : d’autres démocraties **financent** des cultes ou ont une Église d’État, tout en garantissant la liberté religieuse."
+    },
+    {
+     "type": "choix",
+     "reponse": [
+      0,
+      2
+     ],
+     "enonce": "Quelles affirmations sont exactes ? (plusieurs réponses)",
+     "options": [
+      "Un pays qui reconnaît une Église d’État peut garantir la liberté religieuse",
+      "La loi de 1905 a été appliquée à l’Alsace-Moselle dès son adoption",
+      "En France, l’Alsace-Moselle et la Guyane ont chacune un régime propre pour les cultes",
+      "Dans tous les pays démocratiques, l’État ne finance aucun culte"
+     ],
+     "aide": "Relis le tableau et la discussion de Julie et Malik.",
+     "explication": "Une Église d’État n’empêche pas la **liberté religieuse** ; l’**Alsace-Moselle** et la **Guyane** ont un régime propre. La loi de 1905 n’a pas été appliquée en Alsace-Moselle, allemande alors."
+    }
+   ]
+  },
+  {
+   "chapitre": "11f62154-d6e1-5fee-b539-bac2fad85fc5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une marche pour le climat",
+   "competence": "analyser-document",
+   "situation": "Des lycéens de la ville d’Ambreuil organisent une marche pour le climat un samedi. Avant de lancer les invitations, ils vérifient avec leur professeur les formalités à accomplir.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Marche pour le climat",
+     "sousTitre": "Affiche écrite pour l’exercice",
+     "emoji": "🌍",
+     "lignes": [
+      {
+       "texte": "Samedi, 14 h",
+       "id": "date"
+      },
+      {
+       "texte": "Départ place de la Mairie, arrivée au parc",
+       "id": "parcours"
+      },
+      {
+       "texte": "Déclaration déposée à la préfecture avant la marche",
+       "id": "decl"
+      },
+      {
+       "texte": "Aucune autorisation demandée",
+       "id": "aut"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "decl"
+     ],
+     "enonce": "Touche la ligne qui montre la formalité que la loi exige pour manifester.",
+     "aide": "Pour manifester, on déclare : cherche la ligne qui parle de la préfecture.",
+     "explication": "La **déclaration préalable** est obligatoire pour manifester sur la voie publique."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Les organisateurs n’ont demandé aucune autorisation. Est-ce un problème ?",
+     "options": [
+      "Non : une manifestation se déclare, elle n’est pas soumise à autorisation",
+      "Oui : toute manifestation exige l’accord écrit du préfet du département",
+      "Oui : le maire doit signer l’affiche avant sa diffusion publique",
+      "Non : aucune formalité n’est jamais exigée, quel que soit le cortège"
+     ],
+     "aide": "Distingue « déclarer » et « demander l’autorisation ».",
+     "explication": "Le régime est celui de la **déclaration préalable** : l’**autorisation** n’est **pas** exigée."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "sécurité",
+      "tranquillité",
+      "salubrité",
+      "popularité",
+      "rentabilité"
+     ],
+     "enonce": "Complète la liste des composantes de l’ordre public.",
+     "texte": "L’ordre public comprend la ___, la ___ et la ___ publiques.",
+     "reponses": [
+      [
+       "sécurité"
+      ],
+      [
+       "tranquillité"
+      ],
+      [
+       "salubrité"
+      ]
+     ],
+     "aide": "Elle protège les personnes, le calme et la santé.",
+     "explication": "Les trois composantes classiques de l’ordre public sont la **sécurité**, la **tranquillité** et la **salubrité** publiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "11f62154-d6e1-5fee-b539-bac2fad85fc5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois arrêtés à passer au test",
+   "competence": "raisonner",
+   "situation": "Dans la ville de Roncel, le maire a signé trois arrêtés. Le CVL du lycée les examine un à un avec le test de proportionnalité, pour dire lesquels un juge risque d’annuler.",
+   "documents": [
+    {
+     "id": "arretes",
+     "type": "tableau",
+     "titre": "Trois arrêtés du maire",
+     "source": "Arrêtés écrits pour l’exercice",
+     "colonnes": [
+      "Arrêté",
+      "Contenu",
+      "Motif invoqué"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Interdit toute manifestation, partout dans la commune, sans limite de durée",
+       "Éviter tout trouble"
+      ],
+      [
+       "B",
+       "Interdit à tout cortège une rue précise samedi soir, jour d’un match où des bagarres sont annoncées",
+       "Prévenir des bagarres"
+      ],
+      [
+       "C",
+       "Interdit la baignade dans un lac pendant deux jours après une pollution constatée",
+       "Protéger la santé"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "arretes",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la mesure générale et absolue, que le juge annulera presque toujours.",
+     "aide": "Cherche l’arrêté sans limite de lieu ni de durée.",
+     "explication": "Une interdiction **générale et absolue** est presque toujours annulée : ici, l’arrêté **A** interdit tout, partout, sans limite."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque critère du test à sa question.",
+     "paires": [
+      [
+       "Adaptée",
+       "La mesure sert-elle bien le but invoqué ?"
+      ],
+      [
+       "Nécessaire",
+       "Une mesure moins sévère suffirait-elle ?"
+      ],
+      [
+       "Proportionnée",
+       "L’atteinte est-elle excessive par rapport au bénéfice ?"
+      ]
+     ],
+     "aide": "Un critère parle du but, un du « moins sévère », un de l’excès.",
+     "explication": "**Adaptée** : sert-elle le but ? **Nécessaire** : une mesure moins sévère suffirait-elle ? **Proportionnée** : l’atteinte n’est-elle pas excessive ?"
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Qu’est-ce qui justifie l’arrêté B ?",
+     "options": [
+      "Un risque précis de trouble, limité à une rue et à une soirée",
+      "Le seul fait que le cortège gêne les automobilistes",
+      "Le désaccord du maire avec le sujet de la manifestation",
+      "Le souhait de tout interdire par précaution"
+     ],
+     "aide": "Relis le contenu et le motif de l’arrêté B.",
+     "explication": "L’interdiction est justifiée par un **risque précis de trouble**, limité dans l’**espace** et dans le **temps** : elle est plus facilement proportionnée."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Les organisateurs de la manifestation visée par l’arrêté A saisissent le juge du référé-liberté lundi à 9 h. Au plus tard, quand doit-il statuer ?",
+     "options": [
+      "Mercredi à 9 h",
+      "Mardi à 9 h",
+      "Jeudi à 9 h",
+      "Vendredi à 9 h"
+     ],
+     "aide": "Le délai du référé-liberté est de 48 heures.",
+     "explication": "Le juge administratif doit statuer en **48 heures** : saisi lundi à 9 h, il se prononce au plus tard **mercredi à 9 h**."
+    }
+   ]
+  },
+  {
+   "chapitre": "11f62154-d6e1-5fee-b539-bac2fad85fc5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un cortège, un préfet, un juge",
+   "competence": "argumenter",
+   "situation": "À Valbonne, des étudiants déclarent un défilé. Le préfet l’interdit ; les organisateurs saisissent le juge. Léna lit les deux textes et se demande où s’arrête le pouvoir de la police en temps normal et en temps d’exception.",
+   "documents": [
+    {
+     "id": "textes",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’arrêté, puis l’ordonnance du juge (résumés)",
+     "source": "Textes écrits pour l’exercice",
+     "blocs": [
+      "Arrêté du préfet : le défilé des étudiants est interdit samedi, au motif que le cortège risque de [[m|gêner]] la circulation du centre-ville.",
+      "Ordonnance du juge des référés : l’interdiction vise le défilé en entier, le préfet n’a pas examiné un autre parcours et ne cite aucun risque précis de trouble à l’ordre public. L’arrêté est suspendu."
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’état d’urgence en France",
+     "source": "Dates tirées du cours",
+     "debut": 1950,
+     "fin": 2020,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "urgence",
+       "debut": 2015,
+       "fin": 2017,
+       "nom": "Appliqué",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "loi",
+       "date": 1955,
+       "nom": "Loi de 1955"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "textes",
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui montre que le préfet invoque une simple gêne, et non un risque précis.",
+     "aide": "Le cours distingue le risque précis de trouble et la gêne.",
+     "explication": "Une **gêne** ne suffit pas : une interdiction doit être justifiée par un **risque précis** de trouble à l’ordre public."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quel critère du test de proportionnalité l’arrêté ne remplit-il pas, selon le juge ?",
+     "options": [
+      "Nécessaire : un autre parcours, moins sévère, aurait pu suffire",
+      "Adaptée : l’interdiction ne sert à aucun but d’intérêt général",
+      "Adaptée : la circulation n’a aucune importance pour la ville",
+      "Aucun : l’arrêté a été suspendu sans aucune raison juridique"
+     ],
+     "aide": "Le juge relève que le préfet n’a pas étudié d’autre parcours.",
+     "explication": "Une mesure moins sévère (un **autre parcours**) suffisait peut-être : le critère **nécessaire** n’est pas rempli."
+    },
+    {
+     "type": "nombre",
+     "reponse": 60,
+     "enonce": "Combien d’années séparent la loi de 1955 du début de l’état d’urgence appliqué de 2015 à 2017 ?",
+     "aide": "Lis les dates sur la frise.",
+     "explication": "2015 − 1955 = **60 ans**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quel risque principal les régimes d’exception font-ils courir ?",
+     "options": [
+      "Que des mesures exceptionnelles passent peu à peu dans le droit commun",
+      "Que le juge administratif perde tous ses pouvoirs de contrôle",
+      "Que la Constitution soit supprimée au profit d’une loi unique",
+      "Que les manifestations deviennent obligatoires dans la ville"
+     ],
+     "aide": "Pense à ce qui reste après la fin de l’exception.",
+     "explication": "Le risque est que des mesures d’exception **passent dans le droit commun** : l’état d’urgence reste sous le contrôle du juge et du Parlement."
+    }
+   ]
+  },
+  {
+   "chapitre": "52823780-bb9b-56dd-b2e7-c6006a612e39",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Faut-il demander la permission pour publier ?",
+   "competence": "analyser-texte",
+   "situation": "Camille lance le journal de son lycée. Elle se demande si elle doit obtenir une autorisation avant chaque numéro et lit le texte de 1881 avec le tableau des deux types de contrôle.",
+   "documents": [
+    {
+     "id": "loi",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Loi du 29 juillet 1881 sur la liberté de la presse",
+     "source": "Article 1er",
+     "blocs": [
+      "L’imprimerie et la librairie sont [[l|libres]]."
+     ]
+    },
+    {
+     "id": "controle",
+     "type": "tableau",
+     "titre": "Deux manières de contrôler la presse",
+     "source": "Tableau tiré du cours",
+     "colonnes": [
+      "Contrôle",
+      "Principe"
+     ],
+     "lignes": [
+      [
+       "A priori",
+       "Autorisation préalable, censure administrative : supprimé"
+      ],
+      [
+       "A posteriori",
+       "On répond devant un tribunal de ce qu’on a publié : régime actuel"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loi",
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot par lequel la loi de 1881 pose le principe.",
+     "aide": "Le texte tient en une phrase : cherche l’adjectif.",
+     "explication": "Le mot **libres** pose le principe : l’imprimerie et la librairie sont libres."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Camille doit-elle demander une autorisation avant de publier ?",
+     "options": [
+      "Non : on ne juge pas un journal avant sa parution, seulement après",
+      "Oui : un fonctionnaire doit relire chaque article avant parution",
+      "Oui : le préfet doit autoriser chaque numéro avant son impression",
+      "Non : un journal ne répond jamais de ce qu’il a écrit ni publié"
+     ],
+     "aide": "Regarde la ligne « a priori » du tableau.",
+     "explication": "Le contrôle **a priori** est **supprimé** : on répond de ce qu’on a publié **après**, devant un tribunal."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "A priori (supprimé)",
+      "A posteriori (actuel)"
+     ],
+     "enonce": "Classe chaque situation dans le bon type de contrôle.",
+     "items": [
+      [
+       "Un fonctionnaire approuve chaque article avant la parution",
+       0
+      ],
+      [
+       "Un tribunal juge un article diffamatoire déjà publié",
+       1
+      ],
+      [
+       "Un journal ne peut paraître sans autorisation préalable",
+       0
+      ],
+      [
+       "Un journaliste répond devant le juge de ce qu’il a écrit",
+       1
+      ]
+     ],
+     "aide": "Le contrôle a priori a lieu avant la publication.",
+     "explication": "**A priori** : avant la parution (autorisation, censure) ; **a posteriori** : après la parution, devant un tribunal."
+    }
+   ]
+  },
+  {
+   "chapitre": "52823780-bb9b-56dd-b2e7-c6006a612e39",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre messages à qualifier",
+   "competence": "analyser-document",
+   "situation": "Le juge doit qualifier quatre messages publiés par un site d’information imaginaire. Pour chacun, il se demande de quel abus de la liberté de la presse il s’agit.",
+   "documents": [
+    {
+     "id": "messages",
+     "type": "tableau",
+     "titre": "Quatre messages publiés",
+     "source": "Messages écrits pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Message"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Le maire de Valmont a détourné 50 000 € dans la caisse de la commune en 2023."
+      ],
+      [
+       "2",
+       "Ce chef d’entreprise est un imbécile."
+      ],
+      [
+       "3",
+       "Appel publié : « Chassez de la ville tous les habitants d’une certaine origine ! »"
+      ],
+      [
+       "4",
+       "Un site annonce une explosion au centre-ville, alors qu’il n’y en a pas eu, et provoque une panique."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque message à son qualificatif juridique.",
+     "paires": [
+      [
+       "Message 1",
+       "Diffamation"
+      ],
+      [
+       "Message 2",
+       "Injure"
+      ],
+      [
+       "Message 3",
+       "Provocation à la haine"
+      ],
+      [
+       "Message 4",
+       "Fausse nouvelle troublant l’ordre public"
+      ]
+     ],
+     "aide": "Un fait précis, une insulte, un appel à la haine, une information fausse.",
+     "explication": "**Diffamation** : fait précis atteignant l’honneur ; **injure** : expression outrageante sans fait ; **provocation** à la haine ; **fausse nouvelle** qui trouble l’ordre public."
+    },
+    {
+     "type": "zone",
+     "document": "messages",
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche le message qui impute un fait précis à une personne.",
+     "aide": "Cherche une accusation avec un lieu, un montant et une date.",
+     "explication": "Seul le message 1 impute un **fait précis** (un détournement de 50 000 € en 2023) : c’est la **diffamation**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle différence y a-t-il entre la diffamation et l’injure ?",
+     "options": [
+      "La diffamation impute un fait précis ; l’injure n’en impute aucun",
+      "La diffamation vise un groupe ; l’injure vise une seule personne",
+      "La diffamation est permise ; l’injure est un délit puni",
+      "L’injure est toujours plus grave que la diffamation, en toutes circonstances"
+     ],
+     "aide": "Regarde ce que contiennent les messages 1 et 2.",
+     "explication": "La **diffamation** impute un **fait précis** portant atteinte à l’honneur ; l’**injure** est une expression **outrageante** sans imputation de fait."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Où ces messages seraient-ils jugés ?",
+     "options": [
+      "Devant un tribunal, après leur publication",
+      "Devant l’administration, avant leur publication",
+      "Devant un comité de censure",
+      "Nulle part : la presse est libre de tout contrôle"
+     ],
+     "aide": "Le régime actuel est le contrôle a posteriori.",
+     "explication": "Le régime français est le contrôle **a posteriori** : on répond de ce qu’on a publié **devant un tribunal**."
+    }
+   ]
+  },
+  {
+   "chapitre": "52823780-bb9b-56dd-b2e7-c6006a612e39",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un petit média sous pression",
+   "competence": "argumenter",
+   "situation": "Le Courrier de Valbonne, journal local imaginaire, publie une enquête sur un marché public. Un juge demande au journaliste le nom de sa source ; en même temps, les plaintes s’accumulent. Dilan étudie le texte, puis le graphique.",
+   "documents": [
+    {
+     "id": "affaire",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une enquête et une demande du juge",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Le Courrier de Valbonne publie une enquête sur un marché public attribué sans concurrence. Un juge demande au journaliste de révéler l’identité de sa source.",
+      "Le journaliste refuse en invoquant la [[p|protection]] de ses sources, inscrite dans la loi depuis 2010. Elle ne cède que devant un impératif prépondérant d’intérêt public."
+     ]
+    },
+    {
+     "id": "plaintes",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Plaintes contre le journal",
+     "source": "Données imaginées pour l’exercice",
+     "categories": [
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Plaintes déposées",
+       "valeurs": [
+        1,
+        2,
+        6,
+        11
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Condamnations obtenues",
+       "valeurs": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "teinte": "gris"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre",
+      "unite": "par an",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affaire",
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui nomme la garantie que le journaliste invoque.",
+     "aide": "C’est ce qui protège l’identité de qui lui a parlé.",
+     "explication": "La **protection des sources**, inscrite dans la loi de 2010, garantit le secret de ceux qui informent un journaliste."
+    },
+    {
+     "type": "zone",
+     "document": "plaintes",
+     "reponse": [
+      "k3"
+     ],
+     "enonce": "Touche l’année où le journal subit le plus de plaintes.",
+     "aide": "Cherche la plus grande barre de la série des plaintes.",
+     "explication": "En **2024**, le journal subit **11 plaintes** : c’est le maximum du graphique."
+    },
+    {
+     "type": "nombre",
+     "reponse": 20,
+     "enonce": "Combien de plaintes ont été déposées contre le journal sur les quatre années ?",
+     "aide": "Additionne les barres de la série « Plaintes déposées ».",
+     "explication": "1 + 2 + 6 + 11 = **20 plaintes**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que suggère le profil de ce graphique ?",
+     "options": [
+      "Une procédure-bâillon possible : beaucoup de plaintes, peu de condamnations",
+      "Que le journal publie de plus en plus de fausses nouvelles chaque année",
+      "Que la loi de 1881 a été supprimée en 2022 par le Parlement français",
+      "Que toutes les plaintes déposées contre le journal étaient fondées"
+     ],
+     "aide": "Compare les plaintes aux condamnations obtenues.",
+     "explication": "De nombreuses plaintes pour une seule condamnation évoquent une **procédure-bâillon** : épuiser financièrement un média, même sans gagner."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quand la protection des sources peut-elle céder ?",
+     "options": [
+      "Seulement devant un impératif prépondérant d’intérêt public",
+      "Dès qu’un juge le souhaite, pour toute enquête en cours",
+      "Dès qu’un lecteur se plaint auprès de la rédaction du journal",
+      "Jamais, quelles que soient les circonstances de l’enquête"
+     ],
+     "aide": "Relis la dernière phrase du texte.",
+     "explication": "La protection ne cède que devant un **impératif prépondérant d’intérêt public**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9683105d-f114-5d2c-ade7-fa4371b506c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un article pour le journal du lycée",
+   "competence": "analyser-texte",
+   "situation": "Malo veut écrire un article dans le journal du lycée. Avant de commencer, il relit le texte de 1789 qui protège sa liberté, et ses limites.",
+   "documents": [
+    {
+     "id": "art11",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Déclaration des droits de l’homme et du citoyen, 1789",
+     "source": "Article 11",
+     "blocs": [
+      "La libre communication des pensées et des opinions est un des droits les plus précieux de l’Homme : tout Citoyen peut donc parler, écrire, imprimer librement, sauf à répondre de l’[[a|abus]] de cette liberté dans les cas déterminés par la Loi."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "art11",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui désigne ce dont on peut avoir à répondre.",
+     "aide": "Le texte parle de ce qui dépasse l’usage normal de la liberté.",
+     "explication": "On répond de l’**abus** de cette liberté, dans les cas déterminés par la **loi**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que signifie « répondre de l’abus de cette liberté » ?",
+     "options": [
+      "Pouvoir être poursuivi pour ce que la loi interdit",
+      "Devoir demander l’accord du proviseur avant d’écrire",
+      "Ne jamais critiquer personne",
+      "Renoncer à publier sous son nom"
+     ],
+     "aide": "Le texte renvoie à la loi.",
+     "explication": "La liberté est large, mais chacun **répond** de ses abus **dans les cas déterminés par la loi** : injure, diffamation, etc."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "10",
+      "11",
+      "4",
+      "16",
+      "8"
+     ],
+     "enonce": "Complète la phrase.",
+     "texte": "La liberté d’expression est reconnue par l’article ___ de la Déclaration de 1789 et par l’article ___ de la Convention européenne des droits de l’homme.",
+     "reponses": [
+      [
+       "11",
+       "onze"
+      ],
+      [
+       "10",
+       "dix"
+      ]
+     ],
+     "aide": "Le premier est celui que tu viens de lire.",
+     "explication": "C’est l’article **11** de la Déclaration de 1789 et l’article **10** de la Convention européenne des droits de l’homme."
+    }
+   ]
+  },
+  {
+   "chapitre": "9683105d-f114-5d2c-ade7-fa4371b506c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Débat ou délit ?",
+   "competence": "argumenter",
+   "situation": "Au CVL, six messages publiés en ligne ont été signalés. Zoé doit distinguer ce qui relève du débat de ce qui relève du délit, en s’appuyant sur la ligne de partage du cours.",
+   "documents": [
+    {
+     "id": "messages",
+     "type": "tableau",
+     "titre": "Six messages signalés",
+     "source": "Messages écrits pour l’exercice",
+     "colonnes": [
+      "Message",
+      "Contenu"
+     ],
+     "lignes": [
+      [
+       "A",
+       "Cette doctrine politique est absurde, et voici pourquoi."
+      ],
+      [
+       "B",
+       "Ces gens sont des parasites à cause de leur religion."
+      ],
+      [
+       "C",
+       "Un dessin se moque de la politique d’un ministre."
+      ],
+      [
+       "D",
+       "Cette religion défend des idées que je trouve dépassées."
+      ],
+      [
+       "E",
+       "Une camarade reçoit des menaces répétées, chaque soir."
+      ],
+      [
+       "F",
+       "« Léa a volé le téléphone de Tom », écrit sans aucune preuve."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "messages",
+     "reponse": [
+      "r1c1",
+      "r4c1",
+      "r5c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois messages qui relèvent d’un délit.",
+     "aide": "Cherche ceux qui visent des personnes, pas une idée ni une institution.",
+     "explication": "B vise des personnes **à cause de leur religion**, E est du **harcèlement** et des **menaces**, F impute un fait précis sans preuve : **diffamation**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque message à sa qualification.",
+     "paires": [
+      [
+       "Message B",
+       "Provocation à la haine"
+      ],
+      [
+       "Message E",
+       "Harcèlement et menaces"
+      ],
+      [
+       "Message F",
+       "Diffamation"
+      ]
+     ],
+     "aide": "Un groupe visé, des actes répétés, un fait précis sans preuve.",
+     "explication": "B : **provocation à la haine** (contre des personnes en raison de leur religion) ; E : **harcèlement et menaces** ; F : **diffamation**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi les messages A, C et D relèvent-ils du débat ?",
+     "options": [
+      "Ils visent des idées ou une institution, non des personnes",
+      "Ils sont tous publiés sans nom d’auteur sur le réseau",
+      "Ils ne sont lus par aucun autre élève de la classe",
+      "Ils sont toujours agréables à lire pour leurs lecteurs"
+     ],
+     "aide": "Regarde l’objet visé : idée, religion, institution ou personnes.",
+     "explication": "Critiquer une **idée**, une doctrine, une religion ou une politique relève du **débat** ; attaquer des **personnes** pour ce qu’elles sont relève du **délit**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que protège la caricature du message C, selon la Cour européenne ?",
+     "options": [
+      "Les idées qui heurtent, choquent ou inquiètent",
+      "Uniquement les idées qui plaisent à la majorité",
+      "Seulement les opinions de l’État",
+      "Aucune idée, dans aucun cas"
+     ],
+     "aide": "La Cour a une formule constante en trois verbes.",
+     "explication": "La liberté d’expression protège aussi les idées qui **heurtent, choquent ou inquiètent**, dont la **satire** et la **caricature**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9683105d-f114-5d2c-ade7-fa4371b506c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Sous pseudo, on ne risque rien ?",
+   "competence": "argumenter",
+   "situation": "Noé a publié un message public sous pseudonyme contre un camarade et croit ne rien risquer. Léo, du CVL, lui répond, puis rédige la charte du journal lycéen. Tu les aides à relire.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Noé",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Noé",
+       "texte": "J’ai posté sous pseudo : comme je suis [[a|anonyme]], je ne risque rien."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Ton message est public : c’est une publication. Et un pseudo n’empêche pas l’identification."
+      }
+     ]
+    },
+    {
+     "id": "charte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Charte du journal lycéen",
+     "sousTitre": "Projet écrit pour l’exercice",
+     "emoji": "📰",
+     "lignes": [
+      {
+       "texte": "Les articles respectent le pluralisme et la neutralité du lycée",
+       "id": "pluralisme"
+      },
+      {
+       "texte": "Aucune injure ni diffamation",
+       "id": "injure"
+      },
+      {
+       "texte": "Chaque article est signé de son auteur",
+       "id": "signe"
+      },
+      {
+       "texte": "On peut critiquer une idée, jamais une personne pour ce qu’elle est",
+       "id": "partage"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot sur lequel repose l’erreur de Noé.",
+     "aide": "Il croit que cacher son nom l’abrite de toute poursuite.",
+     "explication": "L’**anonymat** d’un pseudonyme ne protège pas d’une **identification judiciaire**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi le message de Noé peut-il fonder des poursuites ?",
+     "options": [
+      "C’est une publication publique : on répond de ce qu’on publie",
+      "Parce qu’il a utilisé un pseudonyme plutôt que son vrai nom",
+      "Parce que le lycée l’a interdit par un règlement intérieur",
+      "Parce que seul un message privé peut fonder des poursuites"
+     ],
+     "aide": "Relis la réponse de Léo.",
+     "explication": "Un message **public** sur un réseau est une **publication** : il peut fonder des poursuites, même sous pseudonyme."
+    },
+    {
+     "type": "zone",
+     "document": "charte",
+     "reponse": [
+      "partage"
+     ],
+     "enonce": "Touche la ligne de la charte qui reprend la ligne de partage entre débat et délit.",
+     "aide": "Cherche la phrase qui oppose « idée » et « personne ».",
+     "explication": "On peut **critiquer une idée** (débat), jamais **attaquer une personne** pour ce qu’elle est (délit) : c’est la ligne de partage."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "délégués",
+      "CVL",
+      "journaux",
+      "préfets",
+      "jurés"
+     ],
+     "enonce": "Complète la phrase sur les lycéens.",
+     "texte": "Au lycée, la liberté d’expression s’exerce notamment par les ___, le ___ et les ___ lycéens.",
+     "reponses": [
+      [
+       "délégués"
+      ],
+      [
+       "CVL"
+      ],
+      [
+       "journaux"
+      ]
+     ],
+     "aide": "Ce sont des représentants, une instance et une presse.",
+     "explication": "Elle s’exerce par les **délégués**, le **CVL** et les **journaux** lycéens, dans le respect du pluralisme et de la neutralité."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f45b58-fa55-5bca-80a1-99f073ef6717",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Pourquoi le fil de Nina ne change plus",
+   "competence": "observer-schema",
+   "situation": "Après trois vidéos sur le même sujet, le fil de Nina ne lui propose plus que cela. Elle schématise ce qui se passe entre elle et la plateforme.",
+   "documents": [
+    {
+     "id": "cycle",
+     "type": "chaine",
+     "disposition": "cycle",
+     "titre": "Un fil qui se referme",
+     "source": "Schéma simplifié pour l’exercice",
+     "noeuds": [
+      {
+       "id": "regarde",
+       "texte": "Nina regarde une vidéo",
+       "emoji": "🎬"
+      },
+      {
+       "id": "algo",
+       "texte": "L’algorithme retient ce qu’elle regarde",
+       "emoji": "⚙️"
+      },
+      {
+       "id": "propose",
+       "texte": "Il lui propose des contenus semblables",
+       "emoji": "📲"
+      },
+      {
+       "id": "bulle",
+       "texte": "Elle ne voit plus d’avis différents",
+       "emoji": "🫧"
+      }
+     ],
+     "liens": [
+      {
+       "de": "regarde",
+       "a": "algo"
+      },
+      {
+       "de": "algo",
+       "a": "propose"
+      },
+      {
+       "de": "propose",
+       "a": "bulle"
+      },
+      {
+       "de": "bulle",
+       "a": "regarde"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cycle",
+     "reponse": [
+      "algo"
+     ],
+     "enonce": "Touche l’étape où la plateforme décide de ce qui sera mis en avant.",
+     "aide": "Cherche la case qui parle de l’algorithme.",
+     "explication": "C’est l’**algorithme de recommandation** qui choisit ce qui est **mis en avant** : le problème n’est pas seulement ce qui est publié."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Comment s’appelle le phénomène qui isole Nina des avis différents ?",
+     "options": [
+      "La bulle de filtres",
+      "Le fact-checking",
+      "La procédure-bâillon",
+      "Le référé-liberté"
+     ],
+     "aide": "Elle ne voit plus que ce qui lui ressemble.",
+     "explication": "La **bulle de filtres** : on ne voit plus que ce qui nous ressemble."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Sur quoi les algorithmes de recommandation sont-ils surtout optimisés ?",
+     "options": [
+      "L’attention et l’engagement",
+      "La vérité des informations",
+      "L’équilibre des opinions",
+      "La rapidité de la modération"
+     ],
+     "aide": "Ils ne choisissent pas ce qui est vrai.",
+     "explication": "Ils retiennent ce qui retient l’**attention** et suscite l’**engagement**, donc souvent ce qui indigne."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f45b58-fa55-5bca-80a1-99f073ef6717",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les textes et les numéros utiles",
+   "competence": "analyser-document",
+   "situation": "À la suite d’un cyberharcèlement dans sa classe, Ismaël fait le point avec son professeur sur les textes qui encadrent les plateformes et sur les numéros à connaître.",
+   "documents": [
+    {
+     "id": "textes",
+     "type": "tableau",
+     "titre": "Trois textes",
+     "source": "Dates tirées du cours",
+     "colonnes": [
+      "Texte",
+      "Date"
+     ],
+     "lignes": [
+      [
+       "LCEN",
+       "2004"
+      ],
+      [
+       "RGPD",
+       "2018"
+      ],
+      [
+       "Digital Services Act",
+       "Applicable depuis 2023-2024"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "numeros",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Signaler en ligne",
+     "sousTitre": "Affiche écrite pour l’exercice",
+     "emoji": "📱",
+     "lignes": [
+      {
+       "texte": "Pharos : signaler un contenu illicite",
+       "id": "pharos"
+      },
+      {
+       "texte": "3018 : signaler un cyberharcèlement",
+       "id": "n3018"
+      },
+      {
+       "texte": "CNIL : l’usage des données personnelles",
+       "id": "cnil"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 14,
+     "enonce": "Combien d’années séparent la LCEN du RGPD ?",
+     "aide": "Lis les deux dates dans le tableau.",
+     "explication": "2018 − 2004 = **14 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque texte à ce qu’il impose ou protège.",
+     "paires": [
+      [
+       "LCEN (2004)",
+       "Retirer promptement un contenu manifestement illicite signalé"
+      ],
+      [
+       "RGPD (2018)",
+       "L’usage des données personnelles, contrôlé par la CNIL"
+      ],
+      [
+       "Digital Services Act",
+       "Transparence des algorithmes et audit indépendant"
+      ]
+     ],
+     "aide": "Un texte parle des hébergeurs, un des données, un des très grandes plateformes.",
+     "explication": "La **LCEN** : retrait prompt d’un contenu manifestement illicite signalé ; le **RGPD** : données personnelles ; le **DSA** : transparence des algorithmes et audit."
+    },
+    {
+     "type": "zone",
+     "document": "numeros",
+     "reponse": [
+      "n3018"
+     ],
+     "enonce": "Une élève reçoit des messages d’insultes répétés. Touche la ligne qui indique le numéro à appeler.",
+     "aide": "Cherche le mot qui désigne ce que subit l’élève.",
+     "explication": "Le **3018** sert à signaler un **cyberharcèlement** ; Pharos signale les contenus illicites."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Selon la LCEN, quand un hébergeur doit-il retirer un contenu ?",
+     "options": [
+      "Si le contenu est manifestement illicite et signalé : retrait prompt",
+      "Dès sa publication, même sans aucun signalement d’un utilisateur",
+      "Jamais : il n’a aucune obligation envers les contenus hébergés",
+      "Seulement quand le gouvernement le décide par un arrêté spécial"
+     ],
+     "aide": "L’hébergeur n’est pas responsable a priori.",
+     "explication": "L’hébergeur n’est pas responsable a priori, mais doit **retirer promptement** un contenu **manifestement illicite signalé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e0f45b58-fa55-5bca-80a1-99f073ef6717",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Retirer dans le doute",
+   "competence": "argumenter",
+   "situation": "Une plateforme imaginaire reçoit mille signalements. Menacée d’une amende, elle retire presque tout. Camille, du CVL, étudie les chiffres puis les deux points de vue pour répondre à la question centrale du chapitre.",
+   "documents": [
+    {
+     "id": "chiffres",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Un jour de modération",
+     "source": "Données imaginées pour l’exercice",
+     "categories": [
+      "Signalés",
+      "Retirés",
+      "Retirés et illicites"
+     ],
+     "series": [
+      {
+       "nom": "Contenus",
+       "valeurs": [
+        1000,
+        900,
+        400
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de contenus",
+      "unite": "contenus",
+      "min": 0,
+      "max": 1000,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Étape"
+     },
+     "valeurs": false
+    },
+    {
+     "id": "voix",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux voix",
+     "source": "Textes écrits pour l’exercice",
+     "blocs": [
+      "Voix de la plateforme : « Si une [[a|amende]] nous menace, nous retirons dans le doute. »",
+      "Voix d’un utilisateur : « Quand un contenu légal disparaît, comment le faire revenir ? »"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "reponse": 500,
+     "unite": "contenus",
+     "enonce": "Combien de contenus retirés n’étaient pas illicites ?",
+     "aide": "Retire les contenus retirés et illicites de tous les contenus retirés.",
+     "explication": "900 − 400 = **500 contenus** légaux ont été retirés."
+    },
+    {
+     "type": "zone",
+     "document": "voix",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi la plateforme retire par précaution.",
+     "aide": "Qu’est-ce qui la menace ?",
+     "explication": "La menace d’une **amende** pousse la plateforme à retirer dans le doute."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Comment s’appelle ce risque de retirer des contenus légaux par précaution ?",
+     "options": [
+      "La surcensure",
+      "Le fact-checking",
+      "La chambre d’écho",
+      "La concentration des médias"
+     ],
+     "aide": "Il apparaît quand on régule trop.",
+     "explication": "Trop réguler peut conduire à la **surcensure** : retirer des contenus légaux par précaution."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Trop de régulation",
+      "Trop peu de régulation"
+     ],
+     "enonce": "Classe chaque situation selon qu’elle illustre trop de régulation ou trop peu.",
+     "items": [
+      [
+       "Des contenus légaux retirés par précaution",
+       0
+      ],
+      [
+       "Une plateforme menacée d’amende supprime dans le doute",
+       0
+      ],
+      [
+       "La haine prospère sur le réseau",
+       1
+      ],
+      [
+       "La désinformation circule sans frein",
+       1
+      ]
+     ],
+     "aide": "Trop réguler fait disparaître du légal ; trop peu laisse prospérer le nuisible.",
+     "explication": "Trop réguler : **surcensure**. Trop peu : **haine** et **désinformation** prospèrent."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle est la question centrale de la régulation des réseaux sociaux ?",
+     "options": [
+      "Qui décide, selon quelles règles, et avec quel recours pour l’utilisateur ?",
+      "Combien de personnes utilisent chaque jour un réseau social donné ?",
+      "Quelle plateforme possède le plus d’images publiées par jour ?",
+      "Quel pays a inventé les tout premiers réseaux sociaux en ligne ?"
+     ],
+     "aide": "Pense aux règles privées, non votées, et à la voix de l’utilisateur.",
+     "explication": "La question centrale : **qui décide**, **selon quelles règles**, et avec quel **recours** pour l’utilisateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe688608-fb41-590d-80ef-5dbea17dfe23",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La Charte à l’épreuve des éco-délégués",
+   "competence": "analyser-texte",
+   "situation": "Les éco-délégués du lycée préparent un exposé sur la Charte de l’environnement. Ils lisent deux de ses articles et cherchent ce qu’ils disent, droits comme devoirs.",
+   "documents": [
+    {
+     "id": "charte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Charte de l’environnement",
+     "source": "Articles 1er et 2",
+     "blocs": [
+      "Article 1er. Chacun a le [[d|droit]] de vivre dans un environnement équilibré et respectueux de la santé.",
+      "Article 2. Toute personne a le [[v|devoir]] de prendre part à la préservation et à l’amélioration de l’environnement."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "charte",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui exprime une obligation pour chacun.",
+     "aide": "Cherche le mot opposé à « droit ».",
+     "explication": "L’article 2 fixe un **devoir** : la Charte ne crée pas que des droits."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "La Charte de l’environnement ne crée-t-elle que des droits ?",
+     "options": [
+      "Non : elle crée aussi des devoirs",
+      "Oui : elle ne crée que des droits",
+      "Oui : elle ne crée que des devoirs",
+      "Non : elle ne crée ni droits ni devoirs"
+     ],
+     "aide": "Compare les deux articles.",
+     "explication": "Elle proclame un **droit** (article 1er) et un **devoir** (article 2)."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Depuis 2005, quelle valeur la Charte de l’environnement a-t-elle ?",
+     "options": [
+      "Celle de la Déclaration de 1789 : une valeur constitutionnelle",
+      "Celle d’un simple règlement pris par le gouvernement",
+      "Celle d’un contrat passé entre plusieurs associations",
+      "Celle d’un conseil consultatif sans portée juridique"
+     ],
+     "aide": "Elle est adossée à la Constitution.",
+     "explication": "Elle a la **même valeur** que la Déclaration de 1789 : une valeur **constitutionnelle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe688608-fb41-590d-80ef-5dbea17dfe23",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre cas, quatre principes",
+   "competence": "raisonner",
+   "situation": "Le conseil municipal de Boisvert examine quatre dossiers d’environnement. Mina, éco-déléguée, doit dire à chaque fois quel principe de la Charte est à l’œuvre.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "tableau",
+     "titre": "Quatre dossiers",
+     "source": "Cas écrits pour l’exercice",
+     "colonnes": [
+      "Cas",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Une usine rejette un produit dont la toxicité est établie : on lui impose des filtres avant tout dommage."
+      ],
+      [
+       "2",
+       "Des scientifiques doutent qu’un pesticide nuise gravement et irréversiblement aux abeilles : on le suspend en attendant des études."
+      ],
+      [
+       "3",
+       "Une entreprise responsable d’une marée noire paie le nettoyage des plages."
+      ],
+      [
+       "4",
+       "Les habitants sont informés d’un projet de carrière et donnent leur avis avant la décision."
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque cas au principe qui s’applique.",
+     "paires": [
+      [
+       "Cas 1",
+       "Prévention"
+      ],
+      [
+       "Cas 2",
+       "Précaution"
+      ],
+      [
+       "Cas 3",
+       "Pollueur-payeur"
+      ],
+      [
+       "Cas 4",
+       "Participation"
+      ]
+     ],
+     "aide": "Connu ou incertain ? Qui paie ? Qui est consulté ?",
+     "explication": "**Prévention** : risque connu ; **précaution** : risque incertain ; **pollueur-payeur** : le pollueur répare ; **participation** : information et avis du public."
+    },
+    {
+     "type": "zone",
+     "document": "cas",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche le cas où l’on agit sans attendre la certitude scientifique.",
+     "aide": "Cherche un doute des scientifiques sur un risque grave.",
+     "explication": "Dans le cas 2, le risque est **incertain** mais grave et irréversible : on applique le principe de **précaution**."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle différence y a-t-il entre prévention et précaution ?",
+     "options": [
+      "La prévention vise un risque connu, la précaution un risque encore incertain",
+      "La prévention vise un risque incertain, la précaution un risque connu",
+      "Les deux désignent exactement la même chose",
+      "La prévention concerne les entreprises, la précaution les particuliers"
+     ],
+     "aide": "Compare les cas 1 et 2.",
+     "explication": "La **prévention** agit en amont sur un risque **connu** ; la **précaution** s’applique à un risque **incertain** mais grave et irréversible."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Dans le cas 4, qu’apporte le principe de participation ?",
+     "options": [
+      "L’accès à l’information et la possibilité d’influencer les décisions",
+      "Le droit de décider seul à la place du préfet du département",
+      "La réparation financière du dommage par le responsable",
+      "La suspension automatique du projet jusqu’à un nouveau vote"
+     ],
+     "aide": "Relis la situation du cas 4.",
+     "explication": "La **participation** : chacun accède à l’**information** et participe aux **décisions**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fe688608-fb41-590d-80ef-5dbea17dfe23",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du sommet de Rio au juge administratif",
+   "competence": "analyser-document",
+   "situation": "Pour son dossier, Louis relie les grandes dates du droit de l’environnement et lit le résumé d’un jugement qui a fait date. Il veut comprendre pourquoi on parle de contentieux climatique.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le droit de l’environnement",
+     "source": "Dates tirées du cours",
+     "debut": 1990,
+     "fin": 2025,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "rio",
+       "date": 1992,
+       "nom": "Sommet de Rio"
+      },
+      {
+       "id": "aarhus",
+       "date": 1998,
+       "nom": "Aarhus"
+      },
+      {
+       "id": "charte",
+       "date": 2005,
+       "nom": "Charte"
+      },
+      {
+       "id": "paris",
+       "date": 2015,
+       "nom": "Accord de Paris"
+      },
+      {
+       "id": "climat",
+       "date": 2021,
+       "nom": "Climat et résilience"
+      }
+     ]
+    },
+    {
+     "id": "jugement",
+     "type": "texte",
+     "genre": "source",
+     "titre": "L’Affaire du siècle (résumé)",
+     "source": "Résumé écrit pour l’exercice",
+     "blocs": [
+      "Des associations reprochent à l’État de ne pas tenir ses engagements de réduction des émissions. En 2021, le tribunal administratif reconnaît la [[c|carence]] fautive de l’État dans la lutte contre le changement climatique."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "charte"
+     ],
+     "enonce": "Touche l’étape qui donne une valeur constitutionnelle à la Charte de l’environnement.",
+     "aide": "Cherche la date où la Charte est adossée à la Constitution.",
+     "explication": "La **Charte de l’environnement** reçoit sa valeur constitutionnelle en **2005**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 23,
+     "enonce": "Combien d’années séparent le sommet de Rio de l’accord de Paris ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "2015 − 1992 = **23 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "jugement",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui qualifie la faute reconnue à l’État.",
+     "aide": "Il décrit un manque d’action.",
+     "explication": "Le juge reconnaît une **carence fautive** de l’État."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à son apport.",
+     "paires": [
+      [
+       "Sommet de Rio (1992)",
+       "Le développement durable"
+      ],
+      [
+       "Aarhus (1998)",
+       "Information, participation, accès à la justice"
+      ],
+      [
+       "Accord de Paris (2015)",
+       "Contenir le réchauffement bien en dessous de 2 °C"
+      ],
+      [
+       "Climat et résilience (2021)",
+       "Le délit d’écocide"
+      ]
+     ],
+     "aide": "Relis la frise : chaque étape a son apport.",
+     "explication": "**Rio** : développement durable ; **Aarhus** : trois piliers ; **Paris** : bien en dessous de 2 °C ; **Climat et résilience** : écocide."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi dit-on que le contentieux climatique est devenu un levier réel ?",
+     "options": [
+      "Parce que la justice peut reconnaître la responsabilité de l’État",
+      "Parce que les juges votent eux-mêmes les lois sur le climat",
+      "Parce que les citoyens n’ont plus besoin de voter aux élections",
+      "Parce que les traités internationaux ne s’appliquent plus en France"
+     ],
+     "aide": "Pense à la décision de 2021.",
+     "explication": "La justice administrative peut reconnaître la **responsabilité de l’État** : le contentieux climatique est un **levier réel**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c245a26-2036-5157-80f5-622fb7cf9929",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un projet de carrière à Corlay",
+   "competence": "observer-schema",
+   "situation": "La commune de Corlay apprend qu’une carrière pourrait s’ouvrir près de ses maisons. Le professeur de Zélie dessine au tableau les trois piliers de la démocratie environnementale pour l’aider à comprendre ses droits.",
+   "documents": [
+    {
+     "id": "temple",
+     "type": "schema",
+     "titre": "Les trois piliers",
+     "source": "Schéma simplifié pour l’exercice",
+     "largeur": 340,
+     "hauteur": 228,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         10,
+         68
+        ],
+        [
+         330,
+         68
+        ],
+        [
+         170,
+         8
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 62,
+       "texte": "Convention d’Aarhus, 1998",
+       "ancre": "milieu",
+       "gras": true,
+       "teinte": "blanc"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 70,
+       "l": 90,
+       "h": 118,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "info",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 70,
+       "y": 112,
+       "emoji": "📰",
+       "taille": 30
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 156,
+       "texte": "Information",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 70,
+       "l": 90,
+       "h": 118,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "particip",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 112,
+       "emoji": "🗳️",
+       "taille": 30
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 156,
+       "texte": "Participation",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 225,
+       "y": 70,
+       "l": 90,
+       "h": 118,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "justice",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 270,
+       "y": 112,
+       "emoji": "⚖️",
+       "taille": 30
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 156,
+       "texte": "Justice",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 14,
+       "y": 190,
+       "l": 312,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 4,
+       "y": 204,
+       "l": 332,
+       "h": 14,
+       "teinte": "violet",
+       "motif": "plein"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "temple",
+     "reponse": [
+      "justice"
+     ],
+     "enonce": "Touche le pilier qui permet de contester une décision devant un juge.",
+     "aide": "Cherche celui qui évoque la balance de la justice.",
+     "explication": "Le pilier de l’**accès à la justice** permet de contester une décision."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque geste au pilier qu’il illustre.",
+     "paires": [
+      [
+       "Un habitant consulte l’étude d’impact du projet",
+       "Information"
+      ],
+      [
+       "Les habitants donnent leur avis lors d’une enquête publique",
+       "Participation"
+      ],
+      [
+       "Une association agréée attaque la décision devant le juge",
+       "Accès à la justice"
+      ]
+     ],
+     "aide": "Lire, donner son avis, saisir le juge.",
+     "explication": "**Information** : consulter l’étude d’impact ; **participation** : donner son avis ; **accès à la justice** : contester devant le juge."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que fait la consultation des habitants dans la décision ?",
+     "options": [
+      "Elle éclaire la décision sans la remplacer",
+      "Elle décide à la place de l’État",
+      "Elle remplace l’enquête publique",
+      "Elle oblige à suivre l’avis de la majorité"
+     ],
+     "aide": "Participer n’est pas décider.",
+     "explication": "La consultation **éclaire** la décision, elle ne la **remplace** pas : c’est là que naissent la plupart des conflits."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c245a26-2036-5157-80f5-622fb7cf9929",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les 150 citoyens du climat",
+   "competence": "analyser-document",
+   "situation": "Pour un débat au CVL, Amel et Hugo comparent ce qu’ils savent de la Convention citoyenne pour le climat. Ils ont sous les yeux une fiche d’identité et leur échange de messages.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Convention citoyenne pour le climat",
+     "sousTitre": "Fiche d’après le cours",
+     "emoji": "🗳️",
+     "lignes": [
+      {
+       "texte": "Période : 2019-2020",
+       "id": "periode"
+      },
+      {
+       "texte": "150 citoyens tirés au sort",
+       "id": "composition"
+      },
+      {
+       "texte": "Mission : proposer des mesures pour réduire les émissions, dans un esprit de justice sociale",
+       "id": "mission"
+      },
+      {
+       "texte": "Résultat : 149 propositions",
+       "id": "resultat"
+      },
+      {
+       "texte": "Une partie a nourri la loi Climat et résilience (2021)",
+       "id": "loi"
+      }
+     ]
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Amel",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Amel",
+       "texte": "Les 150 citoyens ont [[d|décidé]] la loi Climat et résilience."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Non, ils ont proposé : une partie de leurs propositions a nourri la loi."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot faux dans le message d’Amel.",
+     "aide": "Participer n’est pas décider.",
+     "explication": "La Convention a **proposé** : elle a éclairé la décision, elle ne l’a pas **prise**."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "reponse": [
+      "composition"
+     ],
+     "enonce": "Touche la ligne qui dit comment les participants ont été choisis.",
+     "aide": "Cherche l’expression « tirés au sort ».",
+     "explication": "**150 citoyens tirés au sort** : c’est la composition de la Convention."
+    },
+    {
+     "type": "trous",
+     "banque": [
+      "150",
+      "149",
+      "tirés",
+      "élus",
+      "payés"
+     ],
+     "enonce": "Complète la phrase.",
+     "texte": "La Convention citoyenne pour le climat a rassemblé ___ citoyens ___ au sort.",
+     "reponses": [
+      [
+       "150"
+      ],
+      [
+       "tirés"
+      ]
+     ],
+     "aide": "Un nombre rond, puis un mode de désignation.",
+     "explication": "La Convention a rassemblé **150** citoyens **tirés** au sort, et formulé **149** propositions."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Pourquoi le bilan de la Convention est-il débattu ?",
+     "options": [
+      "Expérience inédite pour les uns, promesses non tenues pour les autres",
+      "Parce qu’elle n’a jamais formulé la moindre proposition",
+      "Parce qu’elle a voté elle-même la loi à la place du Parlement",
+      "Parce que ses membres avaient tous été élus par les citoyens"
+     ],
+     "aide": "Il y a deux lectures opposées.",
+     "explication": "Le bilan est **débattu** : expérience démocratique **inédite** pour les uns, **promesses non tenues** pour les autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c245a26-2036-5157-80f5-622fb7cf9929",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Défendre un bois : jusqu’où ?",
+   "competence": "argumenter",
+   "situation": "À Valmer, un bois doit laisser place à une carrière. Des habitants se mobilisent de plusieurs façons. Sacha examine les actions, puis les intérêts qui s’opposent, pour dire où passe la limite.",
+   "documents": [
+    {
+     "id": "actions",
+     "type": "tableau",
+     "titre": "Cinq actions",
+     "source": "Actions écrites pour l’exercice",
+     "colonnes": [
+      "N°",
+      "Action"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Une pétition en ligne demande l’abandon du projet."
+      ],
+      [
+       "2",
+       "Une manifestation est déclarée à la préfecture."
+      ],
+      [
+       "3",
+       "Des militants dégradent une machine de chantier."
+      ],
+      [
+       "4",
+       "Une association agréée attaque le permis devant le juge."
+      ],
+      [
+       "5",
+       "Des militants occupent un bâtiment privé sans l’accord du propriétaire."
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "acteurs",
+     "type": "tableau",
+     "titre": "Les parties en présence",
+     "source": "Situation écrite pour l’exercice",
+     "colonnes": [
+      "Qui",
+      "Ce qu’il défend"
+     ],
+     "lignes": [
+      [
+       "Les ouvriers de la carrière",
+       "Leur emploi"
+      ],
+      [
+       "Les riverains",
+       "La protection du bois"
+      ],
+      [
+       "Le propriétaire du terrain",
+       "Son droit de disposer de son bien"
+      ],
+      [
+       "La commune",
+       "Un équipement d’intérêt général"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Dans le cadre de la loi",
+      "Au-delà de la loi"
+     ],
+     "enonce": "Range chaque action selon qu’elle reste dans le cadre de la loi ou non.",
+     "items": [
+      [
+       "Une pétition en ligne",
+       0
+      ],
+      [
+       "Une manifestation déclarée",
+       0
+      ],
+      [
+       "Une action en justice d’une association agréée",
+       0
+      ],
+      [
+       "La dégradation d’une machine de chantier",
+       1
+      ],
+      [
+       "L’occupation d’un bâtiment privé sans accord",
+       1
+      ]
+     ],
+     "aide": "La pétition, la manifestation et le recours en justice sont prévus par le droit.",
+     "explication": "Pétition, manifestation **déclarée** et recours en justice sont légaux ; **dégrader** ou **occuper sans accord** dépasse la loi."
+    },
+    {
+     "type": "zone",
+     "document": "actions",
+     "reponse": [
+      "r2c1",
+      "r4c1"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux actions qui posent la question des limites de la désobéissance civile.",
+     "aide": "Cherche celles qui dépassent le cadre de la loi.",
+     "explication": "La **dégradation** (3) et l’**occupation sans accord** (5) dépassent le cadre de la loi et posent la question de la **désobéissance civile**."
+    },
+    {
+     "type": "zone",
+     "document": "acteurs",
+     "reponse": [
+      "r2c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux parties dont l’opposition illustre « propriété contre intérêt général ».",
+     "aide": "Un droit individuel face à l’utilité collective.",
+     "explication": "Le **propriétaire** défend son droit de propriété, la **commune** un équipement d’**intérêt général** : deux droits qui s’opposent."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Une cause juste suffit-elle à justifier une action illégale ?",
+     "options": [
+      "Non : agir pour une cause n’exonère pas du respect de la loi",
+      "Oui : la cause défendue justifie tous les moyens employés",
+      "Oui : seulement si l’action est menée collectivement",
+      "Non : on ne peut rien faire pour défendre une cause"
+     ],
+     "aide": "Relis la question de la désobéissance civile.",
+     "explication": "Agir pour une cause **n’exonère pas** du respect de la loi : c’est la limite de la **désobéissance civile**."
+    }
+   ]
+  },
+  {
+   "chapitre": "88781286-2838-5796-be60-916c0bb0de6d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La place de l’animal dans le Code civil",
+   "competence": "se-reperer-temps",
+   "situation": "En classe, Rayan prépare une frise sur la place de l’animal dans le droit français. Il y ajoute l’article du Code civil adopté en 2015.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’animal dans le droit français",
+     "source": "Dates tirées du cours",
+     "debut": 1840,
+     "fin": 2030,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "grammont",
+       "date": 1850,
+       "nom": "Loi Grammont"
+      },
+      {
+       "id": "sens",
+       "date": 1976,
+       "nom": "Être sensible"
+      },
+      {
+       "id": "civil",
+       "date": 2015,
+       "nom": "Code civil"
+      },
+      {
+       "id": "l2021",
+       "date": 2021,
+       "nom": "Loi de 2021"
+      }
+     ]
+    },
+    {
+     "id": "code",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Code civil, article 515-14",
+     "source": "Depuis 2015",
+     "blocs": [
+      "Les animaux sont des êtres vivants doués de sensibilité. Sous réserve des lois qui les protègent, les animaux sont soumis au régime des [[b|biens]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "grammont"
+     ],
+     "enonce": "Touche la loi qui punit les mauvais traitements infligés publiquement aux animaux domestiques.",
+     "aide": "C’est la plus ancienne loi de la frise.",
+     "explication": "La loi **Grammont** (**1850**) punit les mauvais traitements infligés **publiquement** aux animaux domestiques."
+    },
+    {
+     "type": "nombre",
+     "reponse": 39,
+     "enonce": "Combien d’années séparent la reconnaissance de l’animal comme être sensible, en 1976, de l’article du Code civil de 2015 ?",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "2015 − 1976 = **39 ans**."
+    },
+    {
+     "type": "zone",
+     "document": "code",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui montre que l’animal n’est pas devenu une personne.",
+     "aide": "Le texte parle de régime juridique.",
+     "explication": "Les animaux restent soumis au régime des **biens** : ils ne sont ni des meubles ni des personnes, mais une catégorie intermédiaire."
+    }
+   ]
+  },
+  {
+   "chapitre": "88781286-2838-5796-be60-916c0bb0de6d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quatre lycéens, quatre positions",
+   "competence": "argumenter",
+   "situation": "Le débat sur le statut des animaux est vif au CVL. Quatre élèves donnent leur avis. Garance doit les situer dans le débat philosophique, sans prendre parti.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Messages écrits pour l’exercice",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "🧒",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Je veux qu’on réduise la souffrance des animaux d’élevage, sans arrêter pour autant d’en élever."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Pour moi, certains animaux devraient avoir des droits fondamentaux."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Je conteste qu’il y ait une [[h|hiérarchie]] entre les espèces."
+      },
+      {
+       "qui": "Théo",
+       "texte": "L’élevage et la chasse existent depuis toujours et font vivre des familles : je les défends."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque élève à la position qu’il défend.",
+     "paires": [
+      [
+       "Zoé",
+       "Welfarisme"
+      ],
+      [
+       "Karim",
+       "Droits des animaux"
+      ],
+      [
+       "Lina",
+       "Antispécisme"
+      ],
+      [
+       "Théo",
+       "Continuité des usages"
+      ]
+     ],
+     "aide": "Réduire la souffrance, donner des droits, contester la hiérarchie, défendre les usages.",
+     "explication": "Zoé : **welfarisme** ; Karim : **droits des animaux** ; Lina : **antispécisme** ; Théo : **continuité des usages**."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui résume ce que conteste l’antispécisme.",
+     "aide": "Elle porte sur la place de l’humain par rapport aux autres espèces.",
+     "explication": "L’**antispécisme** conteste la légitimité d’une **hiérarchie** entre les espèces."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Que demande le welfarisme ?",
+     "options": [
+      "Réduire la souffrance animale sans remettre en cause les usages",
+      "Abolir tous les usages des animaux, sans aucune exception",
+      "Donner aux animaux exactement les droits des personnes",
+      "Interdire toute protection légale des animaux domestiques"
+     ],
+     "aide": "Relis le message de Zoé.",
+     "explication": "Le **welfarisme** vise à **réduire la souffrance** animale, sans abolir les usages."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Depuis 2015, quel est le statut juridique des animaux en droit français ?",
+     "options": [
+      "Des êtres vivants doués de sensibilité, soumis au régime des biens",
+      "Des personnes juridiques à part entière, comme les humains",
+      "De simples meubles, sans aucune protection particulière",
+      "Des êtres sans la moindre protection prévue par la loi"
+     ],
+     "aide": "Il combine sensibilité et régime des biens.",
+     "explication": "Depuis 2015, ils sont des **êtres vivants doués de sensibilité**, tout en restant soumis au régime des **biens**."
+    }
+   ]
+  },
+  {
+   "chapitre": "88781286-2838-5796-be60-916c0bb0de6d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un rat contre un oiseau : que protéger ?",
+   "competence": "analyser-document",
+   "situation": "Sur une île imaginaire, des rats introduits menacent les oiseaux marins d’une espèce protégée. Deux associations s’opposent. Inès regarde les outils de protection, puis le cas, pour dégager la tension du chapitre.",
+   "documents": [
+    {
+     "id": "outils",
+     "type": "tableau",
+     "titre": "Des instruments de protection",
+     "source": "Tableau tiré du cours",
+     "colonnes": [
+      "Instrument",
+      "Objet"
+     ],
+     "lignes": [
+      [
+       "CITES (1973)",
+       "Le commerce international des espèces menacées"
+      ],
+      [
+       "Directives Oiseaux et Habitats",
+       "Les espèces et les milieux"
+      ],
+      [
+       "Natura 2000",
+       "Des sites protégés"
+      ],
+      [
+       "Listes rouges de l’UICN",
+       "L’état de conservation des espèces"
+      ],
+      [
+       "Office français de la biodiversité",
+       "La police et l’expertise"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "ile",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Le cas de l’île",
+     "source": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Les rats noirs, venus par bateau, dévorent les œufs d’une espèce d’oiseaux marins protégée. Une première association demande de [[r|réguler]] les rats pour sauver les oiseaux. Une seconde s’y oppose : elle refuse que des animaux soient tués."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "outils",
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche l’instrument qui mesure l’état de conservation des espèces.",
+     "aide": "Cherche l’expression « état de conservation ».",
+     "explication": "Les **listes rouges de l’UICN** mesurent l’**état de conservation** des espèces."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Un animal individuel",
+      "Une espèce ou un milieu"
+     ],
+     "enonce": "Range chaque règle selon qu’elle protège un animal individuel ou une espèce ou un milieu.",
+     "items": [
+      [
+       "La loi punit les sévices graves envers un chat",
+       0
+      ],
+      [
+       "La loi punit l’abandon d’un chien",
+       0
+      ],
+      [
+       "La convention CITES encadre le commerce des espèces menacées",
+       1
+      ],
+      [
+       "Natura 2000 protège des sites naturels",
+       1
+      ],
+      [
+       "Les listes rouges évaluent des espèces",
+       1
+      ]
+     ],
+     "aide": "Un animal précis ou un ensemble ?",
+     "explication": "Sévices et abandon protègent un **animal individuel** ; CITES, Natura 2000 et les listes rouges protègent des **espèces** et des **milieux**."
+    },
+    {
+     "type": "zone",
+     "document": "ile",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui désigne l’action que la seconde association refuse.",
+     "aide": "Il désigne le fait de maîtriser le nombre de rats.",
+     "explication": "La seconde association refuse de **réguler** les rats : elle défend l’animal individuel."
+    },
+    {
+     "type": "choix",
+     "reponse": 0,
+     "enonce": "Quelle tension du chapitre ce cas illustre-t-il ?",
+     "options": [
+      "Protéger une espèce peut passer par la régulation d’individus d’une autre",
+      "Les animaux n’ont jamais aucun droit",
+      "Protéger un animal et protéger une espèce reviennent au même",
+      "La loi interdit toute protection de la nature"
+     ],
+     "aide": "Relis les positions des deux associations.",
+     "explication": "Protéger un **animal individuel** et protéger une **espèce** ne demandent pas les mêmes règles et peuvent **s’opposer**, par exemple lors de la régulation d’une espèce invasive."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1093 @@
+{
+ "niveau": "4e",
+ "matiere": "latin",
+ "exercices": [
+  {
+   "chapitre": "a66ae76b-4466-413f-8dde-c05c0a645e9d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Il aimait ou il aima ?",
+   "competence": "manier-langue",
+   "situation": "Inès découvre que le latin a deux temps pour raconter le passé. Elle regarde quatre verbes et leur traduction pour comprendre en quoi ils diffèrent.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Quatre verbes au passé",
+     "colonnes": [
+      "Forme latine",
+      "Traduction"
+     ],
+     "lignes": [
+      [
+       "amabat",
+       "il aimait"
+      ],
+      [
+       "portabant",
+       "ils portaient"
+      ],
+      [
+       "amavit",
+       "il aima"
+      ],
+      [
+       "venit",
+       "il vint"
+      ]
+     ],
+     "source": "Exemples du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c0",
+      "r1c0"
+     ],
+     "multiple": true,
+     "enonce": "Touche les deux formes qui décrivent une action qui dure (imparfait).",
+     "aide": "Elles se traduisent par un verbe à l’imparfait : « il aimait », « ils portaient ».",
+     "explication": "**Amabat** et **portabant** sont à l’imparfait : on les reconnaît à la marque -ba-, et ils décrivent ce qui dure."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle marque reconnaît-on dans « amabat » et « portabant » ?",
+     "options": [
+      "-ba-",
+      "-v-",
+      "-nt-",
+      "-ur-"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde ce qu’il y a entre le radical et la terminaison.",
+     "explication": "La marque **-ba-** signale l’imparfait : ama-**ba**-t, porta-**ba**-nt."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque temps à sa valeur dans un récit.",
+     "paires": [
+      [
+       "imparfait",
+       "action qui dure, décor, habitude"
+      ],
+      [
+       "parfait",
+       "action achevée qui fait avancer le récit"
+      ]
+     ],
+     "aide": "Le parfait se traduit par un passé simple ou un passé composé.",
+     "explication": "L’**imparfait** pose le décor ou ce qui dure ; le **parfait** rapporte une action achevée qui fait avancer l’histoire."
+    }
+   ]
+  },
+  {
+   "chapitre": "a66ae76b-4466-413f-8dde-c05c0a645e9d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chien aboie dans le jardin",
+   "competence": "comprendre-langue",
+   "situation": "Inès lit un petit récit en latin : une jeune fille se promène, puis il se passe quelque chose. Elle doit repérer les temps pour comprendre le décor et l’action.",
+   "documents": [
+    {
+     "id": "texte",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un petit récit",
+     "auteur": "Phrases écrites pour l’exercice",
+     "blocs": [
+      "Puella in horto [[a|ambulabat]].",
+      "Subito canis latravit.",
+      "Dum puer legebat, pater intravit."
+     ]
+    },
+    {
+     "id": "voc",
+     "type": "tableau",
+     "titre": "Vocabulaire",
+     "colonnes": [
+      "Latin",
+      "Français"
+     ],
+     "lignes": [
+      [
+       "puella",
+       "la jeune fille"
+      ],
+      [
+       "hortus",
+       "le jardin"
+      ],
+      [
+       "ambulare",
+       "marcher"
+      ],
+      [
+       "subito",
+       "soudain"
+      ],
+      [
+       "canis",
+       "le chien"
+      ],
+      [
+       "latrare",
+       "aboyer"
+      ],
+      [
+       "puer",
+       "le garçon"
+      ],
+      [
+       "legere",
+       "lire"
+      ],
+      [
+       "pater",
+       "le père"
+      ],
+      [
+       "intrare",
+       "entrer"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "texte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le verbe qui plante le décor dans la phrase 1.",
+     "aide": "Cherche la marque -ba-.",
+     "explication": "**Ambulabat** est à l’imparfait (marque -ba-) : il décrit ce que faisait la jeune fille, c’est le décor."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces quatre verbes du récit selon leur temps.",
+     "categories": [
+      "Imparfait",
+      "Parfait"
+     ],
+     "items": [
+      [
+       "ambulabat",
+       0
+      ],
+      [
+       "legebat",
+       0
+      ],
+      [
+       "latravit",
+       1
+      ],
+      [
+       "intravit",
+       1
+      ]
+     ],
+     "aide": "Cherche la marque -ba- ; pour le parfait, regarde la finale -vit.",
+     "explication": "**Ambulabat** et **legebat** portent -ba- (imparfait) ; **latravit** et **intravit** se terminent par -vit (parfait)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction des phrases 1 et 2 ?",
+     "options": [
+      "La jeune fille marchait dans le jardin. Soudain, le chien aboya.",
+      "La jeune fille marcha dans le jardin. Soudain, le chien aboya.",
+      "Le chien marchait dans le jardin. Soudain, la jeune fille aboya.",
+      "La jeune fille marchera dans le jardin. Soudain, le chien aboiera."
+     ],
+     "reponse": 0,
+     "aide": "Un verbe à l’imparfait se traduit par un imparfait, un verbe au parfait par un passé simple.",
+     "explication": "**La jeune fille marchait… Soudain, le chien aboya.** L’imparfait décrit, le parfait fait basculer l’action."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la traduction de la phrase 3.",
+     "texte": "Pendant que le garçon ___, son père ___.",
+     "reponses": [
+      [
+       "lisait"
+      ],
+      [
+       "entra"
+      ]
+     ],
+     "banque": [
+      "lisait",
+      "lut",
+      "entra",
+      "entrait"
+     ],
+     "aide": "Le verbe à l’imparfait décrit, le verbe au parfait annonce l’action.",
+     "explication": "Le garçon **lisait** (imparfait : action qui dure) quand son père **entra** (parfait : action brève)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a66ae76b-4466-413f-8dde-c05c0a645e9d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Au secours, un cri dans la rue !",
+   "competence": "analyser-texte",
+   "situation": "Inès traduit un récit en quatre phrases. Pour comprendre l’histoire, elle doit distinguer ce qui dure de ce qui arrive d’un coup, et connaître le parfait de quelques verbes.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la rue",
+     "auteur": "Récit écrit pour l’exercice",
+     "blocs": [
+      "Marcus in via [[i|ambulabat]] et [[i|cantabat]].",
+      "Subito puella clamavit.",
+      "Lupus in silva stabat.",
+      "Marcus ad puellam cucurrit."
+     ],
+     "source": "Vocabulaire : via = route ; cantare = chanter ; clamare = crier ; lupus = loup ; silva = forêt ; stare = se tenir ; ad = vers ; currere = courir."
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Présent et parfait de quatre verbes",
+     "colonnes": [
+      "Verbe",
+      "Présent",
+      "Parfait"
+     ],
+     "lignes": [
+      [
+       "marcher",
+       "ambulo",
+       "ambulavi"
+      ],
+      [
+       "crier",
+       "clamo",
+       "clamavi"
+      ],
+      [
+       "courir",
+       "curro",
+       "cucurri"
+      ],
+      [
+       "chanter",
+       "canto",
+       "cantavi"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Dans la phrase 1, touche les deux verbes à l’imparfait.",
+     "aide": "Cherche la marque -ba- dans les deux verbes.",
+     "explication": "**Ambulabat** et **cantabat** : tous deux portent -ba-, ils décrivent ce que fait Marcus pendant un moment."
+    },
+    {
+     "type": "zone",
+     "document": "temps",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Dans le tableau, touche le parfait dont le radical est redoublé.",
+     "aide": "Un redoublement répète le début du radical.",
+     "explication": "**Cucurri** est le parfait de curro : le radical est redoublé (cu-cur-). Les autres parfaits prennent -v-."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les actions de Marcus.",
+     "items": [
+      "Marcus chante sur la route",
+      "Une jeune fille crie",
+      "Marcus court vers elle"
+     ],
+     "aide": "Suis l’ordre des phrases du récit.",
+     "explication": "Marcus **chante** d’abord, la jeune fille **crie**, puis Marcus **court** vers elle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi « stabat » est-il à l’imparfait ?",
+     "options": [
+      "Il décrit le décor : le loup se tient là",
+      "Il rapporte une action brève et achevée",
+      "Il annonce ce qui va arriver plus tard",
+      "Il exprime un ordre donné à quelqu’un"
+     ],
+     "reponse": 0,
+     "aide": "Se tenir quelque part dure : ce n’est pas un événement.",
+     "explication": "**Stabat** décrit le décor : le loup se tenait là, il n’y a pas d’action qui fait avancer le récit."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe latin à sa traduction.",
+     "paires": [
+      [
+       "ambulabat",
+       "il marchait"
+      ],
+      [
+       "clamavit",
+       "il cria"
+      ],
+      [
+       "cucurrit",
+       "il courut"
+      ],
+      [
+       "stabat",
+       "il se tenait"
+      ]
+     ],
+     "aide": "Imparfait : « il … ait » ; parfait : passé simple.",
+     "explication": "**Ambulabat** (imparfait) = il marchait ; **clamavit** et **cucurrit** (parfait) = il cria, il courut ; **stabat** (imparfait) = il se tenait."
+    }
+   ]
+  },
+  {
+   "chapitre": "130356ab-7263-49f1-9a37-0410fe637b30",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui à Rome ?",
+   "competence": "lire-tableau",
+   "situation": "Maxime prépare une fiche sur les habitants de Rome. Il range les mots latins que le professeur a écrits au tableau.",
+   "documents": [
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Les groupes de la société romaine",
+     "colonnes": [
+      "Mot latin",
+      "Qui est-ce ?"
+     ],
+     "lignes": [
+      [
+       "patricii",
+       "les grandes familles nobles"
+      ],
+      [
+       "plebs",
+       "le reste du peuple libre"
+      ],
+      [
+       "servi",
+       "les esclaves, propriété de leur maître"
+      ],
+      [
+       "liberti",
+       "les anciens esclaves libérés par leur maître"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mots",
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le mot latin qui désigne les esclaves.",
+     "aide": "Cherche celui dont la définition parle de « propriété ».",
+     "explication": "Les esclaves se disent **servi** (au singulier *servus*) : ils appartiennent à leur maître."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mot latin à son sens.",
+     "paires": [
+      [
+       "patricii",
+       "les nobles"
+      ],
+      [
+       "plebs",
+       "le peuple libre"
+      ],
+      [
+       "servus",
+       "un esclave"
+      ],
+      [
+       "libertus",
+       "un affranchi"
+      ]
+     ],
+     "aide": "Libertus vient de liber, « libre ».",
+     "explication": "Les **patricii** sont les nobles, la **plebs** le peuple libre, le **servus** un esclave et le **libertus** un esclave libéré."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un esclave est libéré par son maître. Que devient-il ?",
+     "options": [
+      "un affranchi",
+      "un patricien",
+      "un tribun",
+      "un consul"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Son nom latin est libertus.",
+     "explication": "Il devient un **affranchi** (*libertus*), libre mais lié à son ancien maître, devenu son patron."
+    }
+   ]
+  },
+  {
+   "chapitre": "130356ab-7263-49f1-9a37-0410fe637b30",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Marcus veut devenir consul",
+   "competence": "se-reperer-temps",
+   "situation": "Marcus est un jeune patricien qui rêve du consulat. Il lui faudra gravir chaque marche du cursus honorum, du poste le plus modeste au plus prestigieux.",
+   "documents": [
+    {
+     "id": "roles",
+     "type": "tableau",
+     "titre": "Le cursus honorum",
+     "colonnes": [
+      "Magistrature",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Questeur",
+       "finances"
+      ],
+      [
+       "Édile",
+       "fêtes, marchés, voirie"
+      ],
+      [
+       "Préteur",
+       "justice"
+      ],
+      [
+       "Consul",
+       "le plus haut pouvoir (2 par an)"
+      ]
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La carrière de Marcus",
+     "auteur": "Récit écrit pour l’exercice",
+     "blocs": [
+      "Marcus veut devenir consul. Il commence par gérer l’argent de la cité. Quelques années plus tard, il organise les fêtes et surveille le marché. Puis il rend la justice. Enfin, il est élu [[c|consul]] avec un collègue."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui désigne le poste le plus élevé de la carrière de Marcus.",
+     "aide": "C’est celui que Marcus visait depuis le début.",
+     "explication": "Le **consul** est le magistrat le plus haut du cursus honorum."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les magistratures dans l’ordre où Marcus les occupe.",
+     "items": [
+      "questeur",
+      "édile",
+      "préteur",
+      "consul"
+     ],
+     "aide": "Cherche d’abord ce qui concerne l’argent.",
+     "explication": "Le cursus honorum suit l’ordre : **questeur**, **édile**, **préteur**, **consul**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tâche à la magistrature qui l’assure.",
+     "paires": [
+      [
+       "gérer l’argent de la cité",
+       "le questeur"
+      ],
+      [
+       "organiser les fêtes et surveiller le marché",
+       "l’édile"
+      ],
+      [
+       "rendre la justice",
+       "le préteur"
+      ],
+      [
+       "diriger la République avec un collègue",
+       "le consul"
+      ]
+     ],
+     "aide": "Relis la colonne « Rôle » du tableau.",
+     "explication": "Le **questeur** gère les finances, l’**édile** les fêtes et les marchés, le **préteur** la justice, le **consul** dirige avec un collègue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Rome élit deux consuls par an. Combien de consuls faut-il élire en 5 ans ?",
+     "reponse": 10,
+     "unite": "consuls",
+     "aide": "Multiplie le nombre de consuls par année par le nombre d’années.",
+     "explication": "2 × 5 = **10** consuls en 5 ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "130356ab-7263-49f1-9a37-0410fe637b30",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Civis Romanus sum !",
+   "competence": "analyser-document",
+   "situation": "Un marchand romain est arrêté loin de Rome, dans une province, par un gouverneur injuste. Que lui apporte son statut de citoyen ? Tu compares sa situation à celle des autres habitants.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans une prison de province",
+     "auteur": "Récit imaginé pour l’exercice",
+     "blocs": [
+      "Quintus, marchand romain, voyage dans une province lointaine. Un gouverneur injuste le jette en prison sans jugement. Quintus ne se laisse pas faire : il crie « [[f|Civis]] [[f|Romanus]] [[f|sum]] ! » Le geôlier hésite : on ne maltraite pas un citoyen romain."
+     ]
+    },
+    {
+     "id": "statuts",
+     "type": "tableau",
+     "titre": "Quatre habitants de l’Empire",
+     "colonnes": [
+      "Personne",
+      "Statut",
+      "De qui dépend son sort ?"
+     ],
+     "lignes": [
+      [
+       "Quintus",
+       "citoyen romain",
+       "De lui-même : la loi le protège"
+      ],
+      [
+       "Sôsias",
+       "esclave (servus)",
+       "De son maître : il est sa propriété"
+      ],
+      [
+       "Félix",
+       "affranchi (libertus)",
+       "De lui-même, mais il reste lié à son ancien maître"
+      ],
+      [
+       "Livia",
+       "femme romaine",
+       "Du chef de famille, le pater familias"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "reponse": [
+      "f"
+     ],
+     "multiple": true,
+     "enonce": "Touche les trois mots que crie Quintus pour se protéger.",
+     "aide": "C’est la formule qui signifie « je suis citoyen romain ».",
+     "explication": "**Civis Romanus sum** : cette formule rappelle que le citoyen est protégé par la loi."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le geôlier hésite-t-il ?",
+     "options": [
+      "Un citoyen romain est protégé par la loi",
+      "Quintus est le chef de la prison",
+      "Le geôlier est l’esclave de Quintus",
+      "Les marchands ne peuvent jamais être jugés"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du récit.",
+     "explication": "Le geôlier hésite parce que le **citoyen romain** est protégé par la loi : on ne le maltraite pas."
+    },
+    {
+     "type": "zone",
+     "document": "statuts",
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche le statut de la personne qui est la propriété de son maître.",
+     "aide": "Regarde la dernière colonne : de qui dépend son sort ?",
+     "explication": "Le **servus** (esclave) est la propriété de son maître ; il ne décide pas de son sort."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque situation : droit d’un citoyen ou sort d’un esclave.",
+     "categories": [
+      "Droit d’un citoyen",
+      "Sort d’un esclave"
+     ],
+     "items": [
+      [
+       "voter",
+       0
+      ],
+      [
+       "être protégé par la loi",
+       0
+      ],
+      [
+       "faire du commerce",
+       0
+      ],
+      [
+       "être la propriété d’un maître",
+       1
+      ],
+      [
+       "dépendre entièrement de son maître",
+       1
+      ]
+     ],
+     "aide": "Le citoyen est libre ; l’esclave est une propriété.",
+     "explication": "Voter, être protégé par la loi et faire du commerce sont des **droits du citoyen** ; être la propriété d’un maître est le **sort de l’esclave**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à son mot latin.",
+     "paires": [
+      [
+       "un citoyen",
+       "civis"
+      ],
+      [
+       "un esclave",
+       "servus"
+      ],
+      [
+       "un esclave libéré",
+       "libertus"
+      ],
+      [
+       "le chef de famille",
+       "pater familias"
+      ]
+     ],
+     "aide": "Un affranchi a été libéré : liber veut dire libre.",
+     "explication": "**Civis** (citoyen), **servus** (esclave), **libertus** (affranchi) et **pater familias** (chef de famille)."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a3b55cb-a48c-4cfb-8ded-27ce52002b84",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les dieux romains et leurs cousins grecs",
+   "competence": "lire-tableau",
+   "situation": "Camille prépare son exposé sur la mythologie. Elle dresse le tableau des principaux dieux de Rome, avec le dieu grec qui leur correspond.",
+   "documents": [
+    {
+     "id": "dieux",
+     "type": "tableau",
+     "titre": "Les grands dieux romains",
+     "colonnes": [
+      "Dieu romain",
+      "Domaine",
+      "Équivalent grec"
+     ],
+     "lignes": [
+      [
+       "Jupiter",
+       "roi des dieux, ciel",
+       "Zeus"
+      ],
+      [
+       "Junon",
+       "mariage, reine",
+       "Héra"
+      ],
+      [
+       "Minerve",
+       "sagesse, guerre",
+       "Athéna"
+      ],
+      [
+       "Mars",
+       "la guerre",
+       "Arès"
+      ],
+      [
+       "Vénus",
+       "amour, beauté",
+       "Aphrodite"
+      ],
+      [
+       "Neptune",
+       "la mer",
+       "Poséidon"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dieux",
+     "reponse": [
+      "r5c2"
+     ],
+     "enonce": "Touche l’équivalent grec de Neptune.",
+     "aide": "Neptune règne sur la mer.",
+     "explication": "Neptune correspond au dieu grec **Poséidon**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque dieu romain à son domaine.",
+     "paires": [
+      [
+       "Jupiter",
+       "roi des dieux"
+      ],
+      [
+       "Neptune",
+       "la mer"
+      ],
+      [
+       "Vénus",
+       "l’amour"
+      ],
+      [
+       "Mars",
+       "la guerre"
+      ]
+     ],
+     "aide": "Relis la deuxième colonne du tableau.",
+     "explication": "**Jupiter** règne sur les dieux, **Neptune** sur la mer, **Vénus** sur l’amour et **Mars** sur la guerre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle déesse romaine correspond à la grecque Athéna ?",
+     "options": [
+      "Minerve",
+      "Junon",
+      "Vénus",
+      "Proserpine"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Athéna est la déesse de la sagesse.",
+     "explication": "Athéna correspond à **Minerve**, déesse de la sagesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a3b55cb-a48c-4cfb-8ded-27ce52002b84",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Énée fuit Troie en flammes",
+   "competence": "observer-schema",
+   "situation": "Troie brûle. Énée, prince troyen, s’enfuit avec sa famille. Camille observe une image de la scène, puis suit la route du héros sur une carte.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "schema",
+     "titre": "La fuite de Troie",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 120,
+       "emoji": "🔥",
+       "taille": 48
+      },
+      {
+       "forme": "emoji",
+       "x": 175,
+       "y": 140,
+       "emoji": "🧔",
+       "taille": 52,
+       "id": "enee",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 175,
+       "y": 85,
+       "emoji": "👴",
+       "taille": 40,
+       "id": "anchise",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 260,
+       "y": 160,
+       "emoji": "👦",
+       "taille": 36,
+       "id": "ascagne",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 175,
+       "texte": "Troie",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 175,
+       "y": 185,
+       "texte": "Énée",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes de la Méditerranée",
+     "fond": "mediterranee",
+     "cadrage": [
+      -2,
+      31,
+      32,
+      46
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "troie",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "athenes",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "d",
+       "lieu": "carthage",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "reponse": [
+      "anchise"
+     ],
+     "enonce": "En fuyant, Énée porte son vieux père sur son dos. Touche-le.",
+     "aide": "C’est le personnage le plus âgé de l’image.",
+     "explication": "Énée porte son père **Anchise** sur son dos : c’est l’image du héros pieux."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche la lettre qui marque Troie, la ville que fuit Énée.",
+     "aide": "Troie se trouvait en Asie Mineure, à l’est de la mer Égée.",
+     "explication": "**Troie (A)** est en Asie Mineure, au nord-ouest de l’actuelle Turquie ; B marque Rome, où ses descendants fonderont la ville."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Énée est-il appelé « pius Aeneas » ?",
+     "options": [
+      "Il est pieux, respectueux des dieux et de sa famille",
+      "Il est le plus fort guerrier de Troie",
+      "Il a bâti des temples pour tous les dieux",
+      "Il a refusé de quitter la ville en flammes"
+     ],
+     "reponse": 0,
+     "aide": "Il sauve son père et son fils.",
+     "explication": "**Pius** signifie « pieux » : Énée respecte les dieux et sa famille, il sauve son père et son fils."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque nom à son rôle.",
+     "paires": [
+      [
+       "Énée",
+       "prince troyen, fils de Vénus"
+      ],
+      [
+       "Anchise",
+       "le père d’Énée"
+      ],
+      [
+       "Ascagne",
+       "le fils d’Énée"
+      ],
+      [
+       "Virgile",
+       "le poète de l’Énéide"
+      ]
+     ],
+     "aide": "Virgile a écrit l’Énéide.",
+     "explication": "**Énée** est fils de Vénus, **Anchise** son père, **Ascagne** son fils ; **Virgile** raconte leurs aventures dans l’Énéide."
+    }
+   ]
+  },
+  {
+   "chapitre": "5a3b55cb-a48c-4cfb-8ded-27ce52002b84",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une louve, deux jumeaux et une ville",
+   "competence": "comprendre-langue",
+   "situation": "Camille raconte à sa petite sœur la légende de la fondation de Rome. Elle commence par relire le récit, puis range les événements qui vont de Troie à Rome.",
+   "documents": [
+    {
+     "id": "legende",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La légende de Rome",
+     "auteur": "Récit adapté de la légende, écrit pour l’exercice",
+     "blocs": [
+      "Romulus et Remus, descendants d’Énée, sont abandonnés tout petits au bord du Tibre. Une [[l|louve]] les allaite. Devenus grands, ils décident de fonder une ville. Les deux frères se querellent : Romulus tue Remus, puis donne son nom à la ville, [[r|Rome]]. La tradition date cet événement de 753 avant J.-C."
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "D’une déesse aux fondateurs",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "venus",
+       "texte": "Vénus",
+       "emoji": "💖"
+      },
+      {
+       "id": "enee",
+       "texte": "?",
+       "emoji": "🛡️"
+      },
+      {
+       "id": "jumeaux",
+       "texte": "Romulus et Remus",
+       "emoji": "🐺"
+      }
+     ],
+     "liens": [
+      {
+       "de": "venus",
+       "a": "enee",
+       "texte": "est la mère de"
+      },
+      {
+       "de": "enee",
+       "a": "jumeaux",
+       "texte": "est l’ancêtre de"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "legende",
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche l’animal qui sauve les jumeaux en les allaitant.",
+     "aide": "C’est un animal sauvage qui a donné son emblème à Rome.",
+     "explication": "Une **louve** allaite les jumeaux : c’est l’emblème de Rome."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui se cache derrière le « ? » de la chaîne ?",
+     "options": [
+      "Énée",
+      "Jupiter",
+      "Anchise",
+      "Virgile"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Il est le fils de Vénus et le prince troyen du cours.",
+     "explication": "**Énée**, fils de Vénus, est l’ancêtre légendaire de Rome : Romulus et Remus descendent de lui."
+    },
+    {
+     "type": "zone",
+     "document": "legende",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le nom que Romulus donne à la ville qu’il fonde.",
+     "aide": "C’est le nom de la ville dont on parle depuis le début.",
+     "explication": "Romulus donne son nom à **Rome**, fondée selon la tradition en 753 av. J.-C."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements dans l’ordre de la légende.",
+     "items": [
+      "Troie tombe et Énée s’enfuit",
+      "Énée arrive en Italie",
+      "Les jumeaux sont allaités par une louve",
+      "Romulus fonde Rome"
+     ],
+     "aide": "Énée vient avant les jumeaux ; la fondation de Rome vient en dernier.",
+     "explication": "La légende suit : chute de **Troie**, arrivée d’Énée en **Italie**, les jumeaux et la **louve**, puis la fondation de **Rome**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque récit à ce qu’il explique.",
+     "paires": [
+      [
+       "Énée fuit Troie",
+       "l’origine troyenne des Romains"
+      ],
+      [
+       "Romulus et la louve",
+       "la fondation de Rome"
+      ],
+      [
+       "la pietas des héros",
+       "une valeur que Rome admire"
+      ]
+     ],
+     "aide": "Ces récits donnent un passé glorieux à Rome.",
+     "explication": "Le récit d’**Énée** explique l’origine troyenne, celui de **Romulus** la fondation, et la **pietas** montre les valeurs que Rome admire."
+    }
+   ]
+  }
+ ]
+}

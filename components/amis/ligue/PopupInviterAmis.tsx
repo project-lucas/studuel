@@ -111,7 +111,7 @@ export default function PopupInviterAmis({
             <PortraitJoueur id={monId} portrait={monPortrait} avatar={monAvatar} className="size-20 ring-4 ring-primary/25" />
             <figcaption className="text-xs font-extrabold text-foreground">Toi</figcaption>
           </figure>
-          <CoffreDessin className="mb-6 size-14" />
+          <CoffreDessin niveau={5} className="mb-6 size-14" />
           <figure className="flex flex-col items-center gap-1">
             <span className="font-heading grid size-20 place-items-center rounded-full border-[3px] border-dashed border-primary/40 bg-primary/5 text-3xl font-extrabold text-primary/60">
               ?

@@ -1,0 +1,457 @@
+{
+ "niveau": "4e",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "5e04b9d4-2be2-5d23-bb9d-6c9f911c05ab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La balle sur le rail du gymnase",
+   "competence": "experimenter",
+   "situation": "Au gymnase, Noa lance une balle sur un rail horizontal. Une chronophotographie prend une image toutes les 0,5 s : entre deux images voisines, la balle parcourt la distance indiquée.",
+   "documents": [
+    {
+     "id": "chrono",
+     "type": "schema",
+     "titre": "La chronophotographie de la balle",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        145
+       ],
+       "a": [
+        325,
+        145
+       ],
+       "fleche": "fin",
+       "teinte": "gris"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 115,
+       "r": 15,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p0",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 115,
+       "r": 15,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 115,
+       "r": 15,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 115,
+       "r": 15,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 290,
+       "cy": 115,
+       "r": 15,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 50,
+       "y": 172,
+       "texte": "0 s",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 172,
+       "texte": "0,5 s",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 172,
+       "texte": "1 s",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 230,
+       "y": 172,
+       "texte": "1,5 s",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 172,
+       "texte": "2 s",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        78
+       ],
+       "a": [
+        110,
+        78
+       ],
+       "fleche": "deux",
+       "teinte": "corail"
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 62,
+       "texte": "20 cm",
+       "taille": "normal",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chrono",
+     "enonce": "Touche la position de la balle à l’instant 1 s.",
+     "reponse": [
+      "p2"
+     ],
+     "aide": "Lis les durées écrites sous chaque position de la balle.",
+     "explication": "À l’instant 1 s, la balle est en **troisième position** : l’image est prise toutes les 0,5 s."
+    },
+    {
+     "type": "choix",
+     "document": "chrono",
+     "enonce": "Quel est le régime de ce mouvement ?",
+     "options": [
+      "Uniforme",
+      "Accéléré",
+      "Ralenti",
+      "Immobile"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’écart entre deux positions voisines : change-t-il ?",
+     "explication": "Les positions sont **régulièrement espacées** : la vitesse ne change pas, le mouvement est uniforme."
+    },
+    {
+     "type": "nombre",
+     "document": "chrono",
+     "enonce": "Quelle distance la balle parcourt-elle entre 0 s et 2 s, en centimètres ?",
+     "reponse": 80,
+     "unite": "cm",
+     "aide": "Compte le nombre d’intervalles entre la première et la dernière position, et multiplie par 20 cm.",
+     "explication": "Il y a 4 intervalles de 20 cm : 4 × 20 = **80 cm**."
+    },
+    {
+     "type": "nombre",
+     "document": "chrono",
+     "enonce": "Quelle est la vitesse de la balle, en cm/s ?",
+     "reponse": 40,
+     "unite": "cm/s",
+     "aide": "Vitesse = distance ÷ durée : 80 cm en 2 s.",
+     "explication": "v = d ÷ t = 80 ÷ 2 = **40 cm/s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e04b9d4-2be2-5d23-bb9d-6c9f911c05ab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La sortie à vélo d’Inès",
+   "competence": "lire-graphique",
+   "situation": "Inès fait une sortie à vélo d’une heure. Son appli de GPS a tracé la distance parcourue au fil du temps. Elle veut comprendre sa sortie : quand s’est-elle arrêtée, et à quelle vitesse roulait-elle ?",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Distance parcourue par Inès",
+     "categories": [
+      "0",
+      "10",
+      "20",
+      "30",
+      "40",
+      "50",
+      "60"
+     ],
+     "series": [
+      {
+       "nom": "Distance",
+       "valeurs": [
+        0,
+        4,
+        8,
+        12,
+        12,
+        15,
+        18
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Distance parcourue",
+      "unite": "km",
+      "min": 0,
+      "max": 20,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Durée (min)"
+     },
+     "valeurs": false,
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche la durée à laquelle Inès a parcouru 12 km pour la première fois.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche le premier point de la courbe situé à la hauteur 12 km.",
+     "explication": "Elle atteint 12 km à **30 minutes**."
+    },
+    {
+     "type": "nombre",
+     "document": "trajet",
+     "enonce": "Pendant combien de temps Inès s’est-elle arrêtée ?",
+     "reponse": 10,
+     "unite": "min",
+     "aide": "Quand elle est arrêtée, la distance ne change plus : la courbe est horizontale.",
+     "explication": "La courbe est horizontale entre 30 et 40 minutes : elle s’est arrêtée **10 minutes**."
+    },
+    {
+     "type": "nombre",
+     "document": "trajet",
+     "enonce": "Quelle est sa vitesse moyenne pendant la première demi-heure, en km/h ?",
+     "reponse": 24,
+     "unite": "km/h",
+     "aide": "12 km en 30 min : convertis 30 min en heures avant de diviser.",
+     "explication": "30 min = 0,5 h et 12 ÷ 0,5 = **24 km/h**."
+    },
+    {
+     "type": "choix",
+     "document": "trajet",
+     "enonce": "Quelle est la vitesse instantanée d’Inès pendant son arrêt ?",
+     "options": [
+      "0 km/h : elle est immobile",
+      "12 km/h : la dernière distance lue",
+      "18 km/h : sa vitesse moyenne totale",
+      "On ne peut pas le savoir à l’arrêt"
+     ],
+     "reponse": 0,
+     "aide": "La vitesse instantanée est celle du compteur à un instant précis.",
+     "explication": "Pendant l’arrêt, la distance ne change pas : la vitesse instantanée vaut **0 km/h**, alors que la vitesse moyenne sur toute la sortie reste de 18 km/h."
+    },
+    {
+     "type": "nombre",
+     "document": "trajet",
+     "enonce": "Quelle est la vitesse moyenne d’Inès sur toute l’heure, en m/s ?",
+     "reponse": 5,
+     "unite": "m/s",
+     "aide": "Calcule d’abord la vitesse en km/h (18 km en 1 h), puis divise par 3,6.",
+     "explication": "v = 18 km ÷ 1 h = 18 km/h, et 18 ÷ 3,6 = **5 m/s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e04b9d4-2be2-5d23-bb9d-6c9f911c05ab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Valise immobile, valise lancée",
+   "competence": "raisonner",
+   "situation": "Lila voyage en TGV à 252 km/h, sa valise posée sur le siège voisin. Hugo, resté sur le quai, la voit passer. Ils ne sont pas d’accord sur ce que fait la valise. Ils comparent aussi le mouvement d’un point d’une roue vu depuis le train et depuis le quai.",
+   "documents": [
+    {
+     "id": "dial",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Lila (dans le train) et Hugo (sur le quai)",
+     "participants": [
+      {
+       "nom": "Lila",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lila",
+       "texte": "Ma valise est posée sur le siège : elle est immobile."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Pas du tout, elle file à 252 km/h devant moi !"
+      }
+     ]
+    },
+    {
+     "id": "roue",
+     "type": "schema",
+     "titre": "Un point de la roue du TGV, vu de deux endroits",
+     "largeur": 360,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 90,
+       "r": 50,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "train",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 85,
+       "cy": 40,
+       "r": 5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "chemin",
+       "d": "M 180 150 C 185 40, 245 40, 250 150 C 255 40, 315 40, 320 150",
+       "ferme": false,
+       "teinte": "corail",
+       "id": "route",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 170,
+       "texte": "Vue depuis le train",
+       "taille": "normal",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 178,
+       "texte": "Vue depuis le quai",
+       "taille": "normal",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "document": "dial",
+     "enonce": "Qui a raison à propos de la valise ?",
+     "options": [
+      "Les deux : chacun décrit le mouvement dans son référentiel",
+      "Seulement Lila, car la valise est posée sur son siège",
+      "Seulement Hugo, car le quai est fixe sur la Terre",
+      "Aucun : une valise ne peut pas être immobile"
+     ],
+     "reponse": 0,
+     "aide": "Pour décrire un mouvement, on dit toujours par rapport à quoi.",
+     "explication": "Dans le référentiel du **train**, la valise est immobile ; dans celui du **quai**, elle est en mouvement. Les deux descriptions sont vraies : un mouvement ne se décrit jamais dans l’absolu."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans le référentiel du TGV, range chaque objet.",
+     "categories": [
+      "Immobile",
+      "En mouvement"
+     ],
+     "items": [
+      [
+       "La valise posée sur le siège",
+       0
+      ],
+      [
+       "Le passager assis",
+       0
+      ],
+      [
+       "Le poteau du quai",
+       1
+      ],
+      [
+       "Le contrôleur qui marche dans le couloir",
+       1
+      ]
+     ],
+     "aide": "Dans le référentiel du TGV, un objet est immobile s’il garde la même place par rapport au train.",
+     "explication": "La valise et le passager assis ne bougent pas **par rapport au train**. Le poteau défile, et le contrôleur change de place dans le couloir."
+    },
+    {
+     "type": "zone",
+     "document": "roue",
+     "enonce": "Touche la trajectoire du point de la roue vue depuis le quai.",
+     "reponse": [
+      "route"
+     ],
+     "aide": "Vu du quai, la roue avance en même temps qu’elle tourne : la trajectoire n’est pas un cercle.",
+     "explication": "Vue du quai, la trajectoire est une **suite d’arches** : la roue tourne et avance. Vue du train, le point décrit un cercle autour de l’axe : la trajectoire dépend du référentiel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse du TGV, 252 km/h, en m/s.",
+     "reponse": 70,
+     "unite": "m/s",
+     "aide": "Pour passer des km/h aux m/s, on divise par 3,6.",
+     "explication": "252 ÷ 3,6 = **70 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance le TGV parcourt-il en 3 minutes à 252 km/h, en kilomètres ?",
+     "reponse": 12.6,
+     "unite": "km",
+     "aide": "3 min = 3 ÷ 60 h. Distance = vitesse × durée.",
+     "explication": "d = v × t = 252 × (3 ÷ 60) = 252 × 0,05 = **12,6 km**."
+    }
+   ]
+  }
+ ]
+}

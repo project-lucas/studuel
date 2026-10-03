@@ -1,0 +1,2009 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "65b36a1f-47d8-5b23-a9c3-b645011d27a3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un seul roman, une rencontre à Paris",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche pour l’oral : Alain-Fournier n’a écrit qu’un roman. Place-le dans sa vie, puis relève sa carte d’identité.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Alain-Fournier et son roman",
+     "debut": 1885,
+     "fin": 1915,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1886,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ren",
+       "date": 1905,
+       "nom": "Rencontre d’Yvonne"
+      },
+      {
+       "id": "pub",
+       "date": 1913,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Grand Meaulnes",
+     "sousTitre": "Alain-Fournier",
+     "emoji": "🏫",
+     "lignes": [
+      {
+       "id": "narr",
+       "texte": "Narrateur",
+       "valeur": "François Seurel, fils d’instituteur"
+      },
+      {
+       "id": "heros",
+       "texte": "Héros",
+       "valeur": "Augustin Meaulnes"
+      },
+      {
+       "id": "cadre",
+       "texte": "Cadre",
+       "valeur": "La Sologne"
+      },
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Roman"
+      }
+     ],
+     "pied": "Publié en 1913",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "ren"
+     ],
+     "enonce": "Sur la frise, touche l’année de la rencontre à Paris qui nourrit le roman.",
+     "aide": "C’est avant la publication, et bien après la naissance : l’auteur a dix-neuf ans.",
+     "explication": "C’est en **1905** qu’Alain-Fournier croise **Yvonne de Quiévrecourt** : cette rencontre nourrit tout le roman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la rencontre de 1905 et la publication du roman ?",
+     "reponse": 8,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1913 − 1905 = **8 ans** : le roman mûrit longtemps avant de paraître.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la carte d’identité du roman.",
+     "texte": "Le roman est raconté par ___ Seurel, fils d’___, dans la région de la ___.",
+     "reponses": [
+      [
+       "François"
+      ],
+      [
+       "instituteur"
+      ],
+      [
+       "Sologne"
+      ]
+     ],
+     "banque": [
+      "François",
+      "Augustin",
+      "instituteur",
+      "médecin",
+      "Sologne",
+      "Bretagne"
+     ],
+     "aide": "Tout se lit sur la fiche « Le Grand Meaulnes ».",
+     "explication": "Le narrateur est **François** Seurel, fils d’**instituteur** ; l’action se passe en **Sologne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "65b36a1f-47d8-5b23-a9c3-b645011d27a3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du domaine perdu à la fille d’Yvonne",
+   "competence": "analyser-texte",
+   "situation": "Meaulnes disparaît, revient transformé, cherche un domaine qu’il ne retrouve pas. Complète le début de l’histoire, puis remets en ordre sa fin dans le résumé.",
+   "documents": [
+    {
+     "id": "debut",
+     "type": "chaine",
+     "titre": "Le début de l’histoire",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "d",
+       "texte": "Meaulnes disparaît trois jours"
+      },
+      {
+       "id": "f",
+       "texte": "Il découvre un domaine et une fête étrange"
+      },
+      {
+       "id": "o",
+       "texte": "?"
+      },
+      {
+       "id": "r",
+       "texte": "Des années de recherche et une promesse"
+      }
+     ],
+     "liens": [
+      {
+       "de": "d",
+       "a": "f"
+      },
+      {
+       "de": "f",
+       "a": "o"
+      },
+      {
+       "de": "o",
+       "a": "r"
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La suite, résumée",
+     "blocs": [
+      "Frantz revient à l’école déguisé en [[b|bohémien]]. Meaulnes retrouve enfin Yvonne et l’épouse ; aussitôt après le mariage, il repart pour tenir sa promesse. Yvonne meurt en donnant naissance à une fille. Meaulnes revient alors, et repart avec l’enfant."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Il ne parvient pas à retrouver le chemin du domaine",
+      "Il oublie tout de la fête dès son retour à l’école",
+      "Il épouse aussitôt Yvonne de Galais au domaine",
+      "Il choisit de ne plus jamais quitter l’école"
+     ],
+     "reponse": 0,
+     "aide": "Entre la fête et les années de recherche, qu’est-ce qui rend la recherche nécessaire ?",
+     "explication": "Meaulnes a trouvé le domaine en se perdant : il ne peut plus **retrouver le chemin**, d’où les années de recherche."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui dit sous quel déguisement Frantz reparaît à l’école.",
+     "aide": "C’est le mot qui suit « déguisé en ».",
+     "explication": "Frantz reparaît en **bohémien**, à l’école même."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre événements de la fin du roman.",
+     "items": [
+      "Frantz reparaît en bohémien",
+      "Meaulnes épouse Yvonne",
+      "Meaulnes repart aussitôt",
+      "Yvonne meurt en donnant naissance à une fille"
+     ],
+     "aide": "Suis les phrases du résumé l’une après l’autre.",
+     "explication": "Ordre : le **retour de Frantz**, le **mariage**, le **départ immédiat**, puis la **mort d’Yvonne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "65b36a1f-47d8-5b23-a9c3-b645011d27a3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rêve ou réel ?",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux camarades se disputent sur la fête du domaine : est-elle un rêve, ou le roman la tient-il pour réelle ? Départage-les avec le tableau.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "La fête, c’est un rêve : Meaulnes ne retrouve jamais le chemin, donc le domaine n’a jamais existé."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Rien ne le prouve. Le roman garde un [[r|ancrage]] réaliste : l’école, la Sologne, les saisons. Il ne tranche jamais tout à fait."
+      }
+     ]
+    },
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Ce que le roman installe",
+     "colonnes": [
+      "Ce qu’on lit",
+      "Ce que ça installe"
+     ],
+     "lignes": [
+      [
+       "L’école, la Sologne, les saisons",
+       "Le réalisme rural"
+      ],
+      [
+       "Le domaine, la fête, la disparition",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot par lequel Théo s’oppose à l’idée d’un pur rêve.",
+     "aide": "Théo parle de ce qui rattache le roman au monde réel.",
+     "explication": "Théo répond que le roman a un **ancrage** réaliste : il ne se réduit pas à un rêve."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "Le domaine, la fête et la disparition installent une atmosphère de ___.",
+     "reponses": [
+      [
+       "conte"
+      ]
+     ],
+     "banque": [
+      "conte",
+      "reportage",
+      "catalogue"
+     ],
+     "aide": "Pense à ce qui est merveilleux et un peu irréel.",
+     "explication": "Ces éléments donnent une atmosphère de **conte**, qui s’ajoute au réalisme rural."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il relève du réalisme rural, ou de l’atmosphère de conte ?",
+     "categories": [
+      "Réalisme rural",
+      "Atmosphère de conte"
+     ],
+     "items": [
+      [
+       "La Sologne et ses saisons",
+       0
+      ],
+      [
+       "L’école où enseigne le père de François",
+       0
+      ],
+      [
+       "Le domaine mystérieux",
+       1
+      ],
+      [
+       "La fête étrange",
+       1
+      ],
+      [
+       "La disparition de trois jours",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : cela pourrait-il se voir dans un village ordinaire ?",
+     "explication": "L’**école**, la **Sologne** et les saisons sont du réel ; le **domaine**, la **fête** et la **disparition** sont du conte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure du dialogue et du tableau ?",
+     "options": [
+      "Il tient ensemble réalisme rural et atmosphère de conte",
+      "Il se lit comme un pur conte, sans aucun ancrage réaliste",
+      "Il se lit comme un récit réaliste, sans aucun mystère",
+      "Il prouve que la fête n’a été qu’un rêve de Meaulnes"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la réponse qui garde les deux colonnes du tableau.",
+     "explication": "Le roman **tient ensemble** réalisme et conte, et **ne tranche jamais tout à fait** : c’est ce qui fait sa richesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "234dde68-31c6-5ece-81f3-8f5194db34f0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La Sicile de 1860 en quatre repères",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur le roman de Lampedusa. Place les dates, puis relie chaque personnage à sa place dans la Sicile qui change.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Le Guépard : les dates",
+     "debut": 1850,
+     "fin": 1960,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "gar",
+       "date": 1860,
+       "nom": "Garibaldi débarque"
+      },
+      {
+       "id": "mort",
+       "date": 1883,
+       "nom": "Mort du prince"
+      },
+      {
+       "id": "epi",
+       "date": 1910,
+       "nom": "Épilogue"
+      },
+      {
+       "id": "pub",
+       "date": 1958,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Qui est qui ?",
+     "colonnes": [
+      "Personnage",
+      "Place dans le roman"
+     ],
+     "lignes": [
+      [
+       "Don Fabrizio Salina",
+       "Le prince, lucide et fatigué"
+      ],
+      [
+       "Tancredi",
+       "Son neveu, qui rejoint les garibaldiens"
+      ],
+      [
+       "Angelica",
+       "La fille du maire parvenu"
+      ],
+      [
+       "Concetta",
+       "La fille du prince, amoureuse de Tancredi"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "gar"
+     ],
+     "enonce": "Touche la date où commence l’action du roman.",
+     "aide": "L’unité italienne se met en marche avec le débarquement de Garibaldi.",
+     "explication": "Le roman commence en **1860**, avec le débarquement de Garibaldi en Sicile."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la mort du prince de l’épilogue ?",
+     "reponse": 27,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1910 − 1883 = **27 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa place dans le roman.",
+     "paires": [
+      [
+       "Don Fabrizio",
+       "Le prince lucide, qui voit finir son monde"
+      ],
+      [
+       "Tancredi",
+       "Le neveu qui rejoint les garibaldiens"
+      ],
+      [
+       "Angelica",
+       "La fille du maire parvenu"
+      ],
+      [
+       "Concetta",
+       "La fille du prince, amoureuse de Tancredi"
+      ]
+     ],
+     "aide": "Tout est dans le tableau « Qui est qui ? ».",
+     "explication": "Chaque personnage a sa **place** : le prince observe, Tancredi s’engage, Angelica est la fortune neuve, Concetta est écartée."
+    }
+   ]
+  },
+  {
+   "chapitre": "234dde68-31c6-5ece-81f3-8f5194db34f0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Donnafugata à la poubelle",
+   "competence": "analyser-document",
+   "situation": "Le roman avance par grandes scènes. Lis le tableau, puis remets-les dans l’ordre et retrouve la dernière image du livre.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les grandes scènes (en désordre)",
+     "colonnes": [
+      "Moment",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le bal",
+       "Une fête somptueuse à Palerme"
+      ],
+      [
+       "L’épilogue",
+       "Un chien empaillé jeté à la poubelle, des reliques fausses"
+      ],
+      [
+       "Le plébiscite",
+       "Les votes sont truqués à Donnafugata"
+      ],
+      [
+       "Le refus",
+       "Le prince décline un siège de sénateur"
+      ],
+      [
+       "La mort",
+       "Le prince s’éteint en 1883"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les scènes dans l’ordre où on les lit.",
+     "items": [
+      "Le plébiscite",
+      "Le refus",
+      "Le bal",
+      "La mort",
+      "L’épilogue"
+     ],
+     "aide": "Le roman court de 1860 à 1910 : la mort du prince précède l’épilogue.",
+     "explication": "Ordre : **plébiscite**, **refus** du siège, **bal**, **mort** du prince en 1883, **épilogue** de 1910."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui montre ce que devient la mémoire du prince.",
+     "aide": "Cherche l’animal fidèle du prince et son sort.",
+     "explication": "L’épilogue montre le chien **empaillé et jeté à la poubelle** : même la mémoire finit aux ordures."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète à partir du tableau.",
+     "texte": "Le roman s’achève en ___, quand le chien ___ du prince est jeté.",
+     "reponses": [
+      [
+       "1910"
+      ],
+      [
+       "empaillé"
+      ]
+     ],
+     "banque": [
+      "1910",
+      "1883",
+      "empaillé",
+      "vivant"
+     ],
+     "aide": "Regarde la ligne « L’épilogue ».",
+     "explication": "L’épilogue date de **1910** ; le chien de Don Fabrizio, Bendicò, est alors **empaillé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "234dde68-31c6-5ece-81f3-8f5194db34f0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les guépards cèdent la place",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, relis ce passage écrit pour l’exercice, à la manière du roman, puis départage deux élèves sur la célèbre formule du livre.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la terrasse",
+     "blocs": [
+      "Sur la terrasse de Donnafugata, un vieux prince regarde passer les voitures neuves. Le maire, fraîchement enrichi, a [[a|acheté]] les terres des voisins ruinés ; demain, il achètera leurs blasons. Le prince ne s’indigne pas : il sourit, un peu las. Les drapeaux changent, pense-t-il ; les maîtres changent de visage ; et les paysans, eux, continueront de [[p|payer]]."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière du Guépard"
+    },
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "La formule du roman",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mehdi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "« Il faut que tout change pour que rien ne change » : le prince est contre toute révolution."
+      },
+      {
+       "qui": "Mehdi",
+       "texte": "Non : la formule dit que le pouvoir passe à d’autres sans que la société change."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui montre que l’argent remplace la naissance.",
+     "aide": "Qui possède les terres, au début du passage ?",
+     "explication": "Le maire a **acheté** les terres : la fortune neuve prend la place de la noblesse ruinée."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le passage, qui a raison ?",
+     "options": [
+      "Mehdi : le pouvoir change de mains, la société reste la même",
+      "Lina : le prince veut empêcher toute révolution",
+      "Lina : le prince lutte contre le maire enrichi",
+      "Mehdi : les paysans profitent du changement de maîtres"
+     ],
+     "reponse": 0,
+     "aide": "Que feront les paysans, une fois les drapeaux et les maîtres changés ?",
+     "explication": "Dans le passage, les maîtres changent mais les paysans **continuent de payer** : c’est la lecture de **Mehdi**."
+    },
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce qui ne change pas pour les paysans.",
+     "aide": "C’est le dernier mot de la phrase.",
+     "explication": "Les paysans continueront de **payer** : leur sort ne change pas."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque détail du passage à son effet.",
+     "paires": [
+      [
+       "Un prince qui sourit au lieu de s’indigner",
+       "Une ironie mélancolique"
+      ],
+      [
+       "Des terres achetées, des blasons à venir",
+       "La relève des élites par la bourgeoisie"
+      ],
+      [
+       "Les drapeaux changent, les paysans paient",
+       "Un changement seulement apparent"
+      ]
+     ],
+     "aide": "Demande-toi ce que le détail révèle du ton, de la société, du changement.",
+     "explication": "Le sourire donne l’**ironie mélancolique**, l’achat des terres la **relève des élites**, et les paysans qui paient un **changement apparent**."
+    }
+   ]
+  },
+  {
+   "chapitre": "22650ae4-4485-59e5-b002-a5acdb9efda8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un journal près de Rouen",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Maupassant : replace Le Horla dans sa carrière, puis relève la forme et le cadre du récit.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Maupassant et ses textes",
+     "debut": 1850,
+     "fin": 1895,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1850,
+       "nom": "Naissance"
+      },
+      {
+       "id": "bs",
+       "date": 1880,
+       "nom": "Boule de suif"
+      },
+      {
+       "id": "hor",
+       "date": 1887,
+       "nom": "Version définitive"
+      },
+      {
+       "id": "mort",
+       "date": 1893,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Horla",
+     "sousTitre": "Guy de Maupassant",
+     "emoji": "🌫️",
+     "lignes": [
+      {
+       "id": "forme",
+       "texte": "Forme",
+       "valeur": "Un journal intime"
+      },
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Fantastique"
+      },
+      {
+       "id": "cadre",
+       "texte": "Cadre",
+       "valeur": "Une maison au bord de la Seine, près de Rouen"
+      },
+      {
+       "id": "v1",
+       "texte": "Première version",
+       "valeur": "1886"
+      }
+     ],
+     "pied": "Version définitive : 1887",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "hor"
+     ],
+     "enonce": "Touche l’année de la version définitive du Horla.",
+     "aide": "La première version date de 1886 ; celle qu’on lit vient juste après.",
+     "explication": "La version définitive, en journal intime, paraît en **1887**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Boule de suif* de la version définitive du Horla ?",
+     "reponse": 7,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1887 − 1880 = **7 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "forme"
+     ],
+     "enonce": "Touche la ligne qui dit sous quelle forme le récit est écrit.",
+     "aide": "C’est ce qui donne au texte des dates et un « je ».",
+     "explication": "Le récit prend la forme d’un **journal intime**, qui suit le narrateur jour après jour."
+    }
+   ]
+  },
+  {
+   "chapitre": "22650ae4-4485-59e5-b002-a5acdb9efda8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des signes qui s’accumulent",
+   "competence": "analyser-texte",
+   "situation": "Le narrateur note chaque jour ce qui lui arrive. Suis le fil de son journal, repère les faits inexplicables, puis les lieux qui nourrissent sa crainte.",
+   "documents": [
+    {
+     "id": "suite",
+     "type": "chaine",
+     "titre": "Le fil du journal",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "m",
+       "texte": "Il salue un trois-mâts brésilien"
+      },
+      {
+       "id": "a",
+       "texte": "Une angoisse inexplicable, la nuit"
+      },
+      {
+       "id": "i",
+       "texte": "Carafe vidée, rose coupée, page tournée"
+      },
+      {
+       "id": "n",
+       "texte": "?"
+      },
+      {
+       "id": "mi",
+       "texte": "Il ne voit plus son reflet dans le miroir"
+      },
+      {
+       "id": "f",
+       "texte": "Il met le feu à sa maison"
+      }
+     ],
+     "liens": [
+      {
+       "de": "m",
+       "a": "a"
+      },
+      {
+       "de": "a",
+       "a": "i"
+      },
+      {
+       "de": "i",
+       "a": "n"
+      },
+      {
+       "de": "n",
+       "a": "mi"
+      },
+      {
+       "de": "mi",
+       "a": "f"
+      }
+     ]
+    },
+    {
+     "id": "j",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page de journal",
+     "blocs": [
+      "3 septembre. — Je me suis réveillé en sursaut : la [[s|porte]] était ouverte. Je jurerais l’avoir fermée à clef. Ce matin, la [[s|carafe]] était à demi vide et, sur la table, une [[s|rose]] gisait, coupée net. Je n’ai rien entendu, et je ne vois personne."
+     ],
+     "source": "Page écrite pour l’exercice, à la manière du Horla"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » de la chaîne ?",
+     "options": [
+      "Il donne un nom à l’être invisible : le Horla",
+      "Il rencontre un médecin qui le déclare guéri",
+      "Il quitte sa maison pour ne plus y revenir",
+      "Il apprend que sa maison est hantée"
+     ],
+     "reponse": 0,
+     "aide": "Après les indices, le narrateur met un mot sur ce qu’il ressent.",
+     "explication": "Après les indices, il **nomme** l’être invisible : le **Horla**."
+    },
+    {
+     "type": "zone",
+     "document": "j",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les trois objets qui prouvent la présence de quelqu’un d’invisible.",
+     "aide": "Cherche la porte, la boisson et la fleur.",
+     "explication": "La **porte** ouverte, la **carafe** à demi vide et la **rose** coupée sont les signes d’une présence invisible."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu de la nouvelle à ce qu’il apporte.",
+     "paires": [
+      [
+       "La maison au bord de la Seine",
+       "Le cadre paisible que l’angoisse envahit"
+      ],
+      [
+       "Le Mont-Saint-Michel",
+       "Un moine parle des forces invisibles, comme le vent"
+      ],
+      [
+       "Paris",
+       "L’hypnotisme du docteur Parent : la volonté peut être possédée"
+      ]
+     ],
+     "aide": "Pense à ce que le narrateur y apprend ou y ressent.",
+     "explication": "La **maison** est le cadre paisible, le **Mont-Saint-Michel** ouvre sur les forces invisibles, **Paris** sur l’hypnotisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "22650ae4-4485-59e5-b002-a5acdb9efda8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Fou ou hanté ?",
+   "competence": "argumenter",
+   "situation": "Le lecteur du Horla doit-il croire au surnaturel ? Lis cette page de journal écrite pour l’exercice, puis range les explications possibles.",
+   "documents": [
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une nuit de plus",
+     "blocs": [
+      "3 septembre. — Je me suis réveillé en sursaut : la porte était ouverte. Je jurerais l’avoir fermée à clef. Peut-être l’ai-je [[r|rêvé]] ? Mon médecin dirait que je suis [[r|fatigué]]. Pourtant la carafe a encore [[s|baissé]], et mon ombre, ce soir, m’a semblé plus lente que moi."
+     ],
+     "source": "Page écrite pour l’exercice, à la manière du Horla"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui offrent une explication rationnelle.",
+     "aide": "Cherche ce que le narrateur avance pour se rassurer.",
+     "explication": "Le narrateur évoque le **rêve** et la **fatigue** : deux explications naturelles."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il appuie l’explication rationnelle, ou le surnaturel ?",
+     "categories": [
+      "Explication rationnelle",
+      "Surnaturel"
+     ],
+     "items": [
+      [
+       "Il a rêvé ou oublié de fermer la porte",
+       0
+      ],
+      [
+       "La fatigue lui joue des tours",
+       0
+      ],
+      [
+       "Quelqu’un d’invisible boit l’eau de la carafe",
+       1
+      ],
+      [
+       "Son ombre se détache de lui",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : un médecin y verrait-il une cause naturelle ?",
+     "explication": "Rêve et fatigue sont des causes **naturelles** ; l’eau qui baisse et l’ombre plus lente poussent vers le **surnaturel**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce texte relève-t-il du fantastique ?",
+     "options": [
+      "Il laisse le lecteur hésiter entre la folie et le surnaturel",
+      "Il prouve que le narrateur est devenu fou",
+      "Il prouve qu’un être invisible vit dans la maison",
+      "Il explique tout par la fatigue et par le rêve"
+     ],
+     "reponse": 0,
+     "aide": "Relis les deux explications du passage : l’une l’emporte-t-elle ?",
+     "explication": "Aucune explication ne l’emporte : c’est **l’hésitation** entre folie et surnaturel qui définit le fantastique."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "La forme du journal",
+       "Une contamination progressive de l’esprit"
+      ],
+      [
+       "Les doutes qui se suivent (« Peut-être l’ai-je rêvé ? »)",
+       "Une angoisse qui monte"
+      ],
+      [
+       "Aucune explication qui tranche",
+       "Une hésitation durable chez le lecteur"
+      ]
+     ],
+     "aide": "Pense à ce que le lecteur ressent en suivant ces notes quotidiennes.",
+     "explication": "Le **journal** montre la progression du mal, les **doutes** qui se suivent l’angoisse, l’absence de réponse l’**hésitation**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a57e89e6-6fee-5996-943e-68da90cd2c99",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un colonel piémontais en Provence",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur le roman de Giono. Place l’action et la publication sur la frise, puis relève ce qui fait d’Angelo un héros en fuite.",
+   "documents": [
+    {
+     "id": "f",
+     "type": "frise",
+     "titre": "Une action, une publication",
+     "debut": 1830,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "act",
+       "date": 1832,
+       "nom": "Le choléra"
+      },
+      {
+       "id": "nai",
+       "date": 1895,
+       "nom": "Naissance de Giono"
+      },
+      {
+       "id": "pub",
+       "date": 1951,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "a",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Angelo Pardi",
+     "sousTitre": "Le héros du roman",
+     "emoji": "🐎",
+     "lignes": [
+      {
+       "id": "grade",
+       "texte": "Grade",
+       "valeur": "Colonel de hussards"
+      },
+      {
+       "id": "orig",
+       "texte": "Origine",
+       "valeur": "Le Piémont"
+      },
+      {
+       "id": "eng",
+       "texte": "Engagement",
+       "valeur": "Carbonaro, donc recherché"
+      },
+      {
+       "id": "cadre",
+       "texte": "Cadre",
+       "valeur": "La Provence ravagée par le choléra"
+      }
+     ],
+     "pied": "Un jeune homme généreux",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "f",
+     "multiple": false,
+     "reponse": [
+      "act"
+     ],
+     "enonce": "Touche l’année où se passe l’action du roman.",
+     "aide": "Le roman raconte une épidémie, bien avant la naissance de l’auteur.",
+     "explication": "L’action se passe en **1832**, pendant l’épidémie de choléra."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’action de 1832 et la publication du roman ?",
+     "reponse": 119,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1951 − 1832 = **119 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "zone",
+     "document": "a",
+     "multiple": false,
+     "reponse": [
+      "eng"
+     ],
+     "enonce": "Touche la ligne qui explique pourquoi Angelo doit fuir.",
+     "aide": "Cherche ce qui le rend recherché par les autorités.",
+     "explication": "Angelo est **carbonaro** : cet engagement politique le rend recherché, donc en fuite."
+    }
+   ]
+  },
+  {
+   "chapitre": "a57e89e6-6fee-5996-943e-68da90cd2c99",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des toits de Manosque à la route du retour",
+   "competence": "analyser-texte",
+   "situation": "Angelo traverse la Provence en 1832. Lis le tableau de ce qu’il découvre, ordonne ses premières épreuves, puis complète la fin avec Pauline.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "tableau",
+     "titre": "Ce que voit Angelo",
+     "colonnes": [
+      "Où ?",
+      "Ce qu’Angelo y voit"
+     ],
+     "lignes": [
+      [
+       "Les villages",
+       "Des cadavres et des corbeaux"
+      ],
+      [
+       "Les quarantaines",
+       "La panique des habitants"
+      ],
+      [
+       "Les vivants",
+       "Une barbarie plus grande que celle de la maladie"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "p",
+     "type": "chaine",
+     "titre": "Avec Pauline",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "r",
+       "texte": "Il rencontre Pauline de Théus"
+      },
+      {
+       "id": "v",
+       "texte": "Ils voyagent ensemble, sans se toucher"
+      },
+      {
+       "id": "m",
+       "texte": "?"
+      },
+      {
+       "id": "c",
+       "texte": "Il la ramène chez elle"
+      },
+      {
+       "id": "i",
+       "texte": "Il repart pour l’Italie"
+      }
+     ],
+     "liens": [
+      {
+       "de": "r",
+       "a": "v"
+      },
+      {
+       "de": "v",
+       "a": "m"
+      },
+      {
+       "de": "m",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "i"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les premières épreuves d’Angelo.",
+     "items": [
+      "Un jeune médecin lui apprend à frictionner les malades",
+      "La foule l’accuse d’empoisonner les fontaines",
+      "Il se réfugie sur les toits de Manosque",
+      "Il aide une nonne à laver les morts"
+     ],
+     "aide": "Le médecin intervient avant l’accusation ; le refuge sur les toits suit l’accusation.",
+     "explication": "Ordre : le **médecin** lui apprend à frictionner, la **foule** l’accuse, il se réfugie sur les **toits**, il aide la **nonne**."
+    },
+    {
+     "type": "zone",
+     "document": "d",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui dit ce qu’Angelo trouve pire que la maladie elle-même.",
+     "aide": "Cherche la case qui compare à la maladie.",
+     "explication": "Angelo découvre la **barbarie des vivants**, plus grande que celle de la maladie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » de la chaîne.",
+     "texte": "Pauline attrape le ___ ; Angelo la sauve en la ___ toute une nuit.",
+     "reponses": [
+      [
+       "choléra"
+      ],
+      [
+       "frictionnant"
+      ]
+     ],
+     "banque": [
+      "choléra",
+      "rhume",
+      "frictionnant",
+      "veillant"
+     ],
+     "aide": "Rappelle-toi ce qu’un jeune médecin lui a appris.",
+     "explication": "Pauline contracte le **choléra** ; Angelo la sauve en la **frictionnant** toute une nuit."
+    }
+   ]
+  },
+  {
+   "chapitre": "a57e89e6-6fee-5996-943e-68da90cd2c99",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une pudeur qui dit tout",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent sur Angelo et Pauline. Lis leur débat et un court passage écrit pour l’exercice, à la manière de Giono, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Angelo et Pauline finissent amants : après tout ce qu’ils vivent, c’est forcément une histoire d’amour."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Non : ils s’aident, ils se protègent, mais sans se [[t|toucher]]. La pudeur donne au livre sa plus grande intensité."
+      }
+     ]
+    },
+    {
+     "id": "p",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Au bord de la route",
+     "blocs": [
+      "Dans la rue déserte, un homme porte à bout de bras une vieille femme brûlante de fièvre. Quand la foule [[r|recule]], il [[a|avance]]. Personne ne lui demande son nom, et lui ne demande rien : il frictionne, il veille, puis il repart, sans un mot de plus."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Giono"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui prouve que Léa se trompe sur la liaison.",
+     "aide": "Hugo dit ce qu’ils ne font pas.",
+     "explication": "Angelo et Pauline s’aident et se protègent **sans se toucher** : la liaison amoureuse n’existe pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon Hugo, que produit cette retenue ?",
+     "options": [
+      "Une intensité plus forte que celle d’une passion déclarée",
+      "Un ennui qui ralentit tout le récit, chapitre après chapitre",
+      "Une froideur qui sépare peu à peu les deux héros",
+      "Une rivalité grandissante entre Angelo et Pauline"
+     ],
+     "reponse": 0,
+     "aide": "Relis la deuxième phrase de Hugo.",
+     "explication": "Pour Hugo, la **pudeur** crée une **intensité** que la passion déclarée n’aurait pas."
+    },
+    {
+     "type": "zone",
+     "document": "p",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le verbe qui montre que la foule fuit le danger.",
+     "aide": "C’est le contraire d’« avance ».",
+     "explication": "La foule **recule** devant la maladie, quand l’homme avance : c’est ce qui le distingue."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à ce qu’il révèle.",
+     "paires": [
+      [
+       "L’épidémie",
+       "La peur fait tomber les masques sociaux"
+      ],
+      [
+       "Les toits de Manosque",
+       "Un point de vue d’où Angelo observe la ville"
+      ],
+      [
+       "Angelo",
+       "Un héros qui agit toujours bien, sans calcul"
+      ]
+     ],
+     "aide": "Pense à ce que chaque élément permet de voir.",
+     "explication": "L’**épidémie** révèle les hommes, les **toits** offrent un point de vue, **Angelo** montre une générosité sans calcul."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f513a88-2658-59ce-ad26-e43ddc6b55cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre déguisements dans une maison",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ton oral sur la comédie de Marivaux. Lis la carte d’identité, puis relie chaque personnage à son déguisement.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Jeu de l’amour et du hasard",
+     "sousTitre": "Marivaux",
+     "emoji": "🎭",
+     "lignes": [
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Comédie en trois actes et en prose"
+      },
+      {
+       "id": "date",
+       "texte": "Création",
+       "valeur": "1730"
+      },
+      {
+       "id": "troupe",
+       "texte": "Troupe",
+       "valeur": "Les Comédiens-Italiens"
+      }
+     ],
+     "pied": "Une pièce où chacun se cache",
+     "teinte": "violet"
+    },
+    {
+     "id": "t",
+     "type": "tableau",
+     "titre": "Les déguisements",
+     "colonnes": [
+      "Personnage",
+      "Déguisement"
+     ],
+     "lignes": [
+      [
+       "Silvia",
+       "Elle prend le rôle de sa suivante Lisette"
+      ],
+      [
+       "Dorante",
+       "Il arrive en valet, sous le nom de Bourguignon"
+      ],
+      [
+       "Arlequin",
+       "Il se fait passer pour son maître Dorante"
+      ],
+      [
+       "Orgon et Mario",
+       "Ils connaissent les deux stratagèmes"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "c",
+     "multiple": false,
+     "reponse": [
+      "genre"
+     ],
+     "enonce": "Touche la ligne qui dit le genre de la pièce.",
+     "aide": "Cherche le nombre d’actes et le mode d’écriture.",
+     "explication": "La pièce est une **comédie en trois actes et en prose**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète à partir de la fiche.",
+     "texte": "La pièce est créée en ___ par les ___.",
+     "reponses": [
+      [
+       "1730"
+      ],
+      [
+       "Comédiens-Italiens"
+      ]
+     ],
+     "banque": [
+      "1730",
+      "1688",
+      "Comédiens-Italiens",
+      "Comédiens-Français"
+     ],
+     "aide": "Lis les lignes « Création » et « Troupe ».",
+     "explication": "Elle est créée en **1730** par les **Comédiens-Italiens**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son déguisement.",
+     "paires": [
+      [
+       "Silvia",
+       "Elle prend le rôle de sa suivante"
+      ],
+      [
+       "Dorante",
+       "Il se présente comme un valet nommé Bourguignon"
+      ],
+      [
+       "Arlequin",
+       "Il se fait passer pour Dorante"
+      ],
+      [
+       "Orgon et Mario",
+       "Ils savent tout et laissent faire"
+      ]
+     ],
+     "aide": "Chaque ligne du tableau donne l’association.",
+     "explication": "**Silvia** devient suivante, **Dorante** valet, **Arlequin** son maître ; **Orgon et Mario** savent tout et laissent faire."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f513a88-2658-59ce-ad26-e43ddc6b55cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Jusqu’à l’aveu",
+   "competence": "analyser-texte",
+   "situation": "Les deux jeunes gens s’aiment sous des habits de domestiques. Suis la pièce de l’intrigue jusqu’au dénouement.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Du déguisement à la vérité",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "d",
+       "texte": "Silvia et Dorante se déguisent"
+      },
+      {
+       "id": "s",
+       "texte": "Ils s’aiment sous leurs habits de domestiques"
+      },
+      {
+       "id": "a",
+       "texte": "Dorante avoue le premier"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      },
+      {
+       "id": "m",
+       "texte": "Silvia se démasque"
+      }
+     ],
+     "liens": [
+      {
+       "de": "d",
+       "a": "s"
+      },
+      {
+       "de": "s",
+       "a": "a"
+      },
+      {
+       "de": "a",
+       "a": "x"
+      },
+      {
+       "de": "x",
+       "a": "m"
+      }
+     ]
+    },
+    {
+     "id": "r",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le coup de Mario",
+     "blocs": [
+      "Pour hâter les choses, Mario feint d’aimer la fausse Lisette. Dorante, devenu [[j|jaloux]], comprend mieux ce qu’il ressent. Silvia, elle, prolonge le jeu avant de dévoiler son identité."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Dorante la demande en mariage en la croyant servante",
+      "Orgon révèle le stratagème à tous les personnages",
+      "Mario provoque Dorante en duel pour son honneur",
+      "Arlequin reprend ses habits et quitte la maison"
+     ],
+     "reponse": 0,
+     "aide": "Avant de se démasquer, Silvia obtient une preuve.",
+     "explication": "Silvia prolonge le jeu jusqu’à ce que Dorante la **demande en mariage** en la croyant servante, puis elle se démasque."
+    },
+    {
+     "type": "zone",
+     "document": "r",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le mot qui dit l’effet du manège de Mario sur Dorante.",
+     "aide": "C’est un sentiment que provoque la fausse Lisette.",
+     "explication": "Mario rend Dorante **jaloux** : il fait comprendre à Dorante ce qu’il ressent."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans le déguisement.",
+     "paires": [
+      [
+       "Orgon et Mario",
+       "Ils connaissent les deux stratagèmes"
+      ],
+      [
+       "Arlequin",
+       "Il joue le maître"
+      ],
+      [
+       "Lisette",
+       "Elle joue la maîtresse"
+      ],
+      [
+       "Bourguignon",
+       "C’est Dorante en valet"
+      ]
+     ],
+     "aide": "Qui sait, qui ne sait pas, qui joue qui ?",
+     "explication": "Orgon et Mario savent tout ; **Arlequin** et **Lisette** jouent les maîtres ; **Bourguignon** est Dorante déguisé."
+    }
+   ]
+  },
+  {
+   "chapitre": "7f513a88-2658-59ce-ad26-e43ddc6b55cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Peut-on aimer par-delà les conditions ?",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent : le déguisement bouleverse-t-il l’ordre social ? Lis cette scène écrite pour l’exercice, à la manière de Marivaux, puis range les arguments.",
+   "documents": [
+    {
+     "id": "s",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une demande",
+     "blocs": [
+      {
+       "didascalie": "Dorante, en valet, s’adresse à Silvia, qui joue la suivante."
+      },
+      {
+       "personnage": "Dorante",
+       "replique": "Je ne suis qu’un valet, et pourtant je vous [[a|aime]] : dites-moi seulement si cela vous déplaît."
+      },
+      {
+       "personnage": "Silvia",
+       "replique": "Vous ne dites pas ce que vous êtes : un valet [[p|parle]] rarement ainsi."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Marivaux"
+    },
+    {
+     "id": "b",
+     "type": "tableau",
+     "titre": "Ce que la pièce montre",
+     "colonnes": [
+      "Argument",
+      "Ce qui le prouve"
+     ],
+     "lignes": [
+      [
+       "Le déguisement est une épreuve",
+       "?"
+      ],
+      [
+       "L’ordre social n’est pas renversé",
+       "Arlequin et Lisette se reconnaissent aussi comme domestiques"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "s",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot par lequel Dorante déclare son sentiment.",
+     "aide": "Cherche le verbe de l’aveu.",
+     "explication": "Dorante déclare qu’il **aime** Silvia, sans connaître encore sa condition."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la case « ? » du tableau.",
+     "texte": "Le déguisement est une épreuve : on découvre si l’___ résiste aux ___ sociales.",
+     "reponses": [
+      [
+       "amour"
+      ],
+      [
+       "conditions"
+      ]
+     ],
+     "banque": [
+      "amour",
+      "conditions",
+      "habits",
+      "mariage"
+     ],
+     "aide": "Pense à la question posée par la pièce : peut-on aimer par-delà la condition ?",
+     "explication": "Le déguisement sert à éprouver si l’**amour** résiste aux **conditions** sociales."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il montre que le déguisement bouleverse l’ordre social, ou qu’il le laisse en place ?",
+     "categories": [
+      "Il bouleverse l’ordre",
+      "Il laisse l’ordre en place"
+     ],
+     "items": [
+      [
+       "Le maître aime une fausse servante",
+       0
+      ],
+      [
+       "La maîtresse aime un faux valet",
+       0
+      ],
+      [
+       "Arlequin et Lisette se reconnaissent comme domestiques",
+       1
+      ],
+      [
+       "Chacun retrouve sa condition à la fin",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : chacun finit-il dans sa condition d’origine ?",
+     "explication": "Les deux maîtres s’aiment **sous leurs habits de domestiques**, mais Arlequin et Lisette retrouvent leur condition : l’ordre n’est **pas renversé**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion le tableau et la scène autorisent-ils ?",
+     "options": [
+      "La pièce teste l’amour mais maintient l’ordre social",
+      "La pièce condamne les mariages entre maîtres et valets",
+      "La pièce prouve que tous les hommes sont égaux",
+      "La pièce montre que le hasard décide de tout"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « L’ordre social n’est pas renversé ».",
+     "explication": "La pièce **teste** l’amour par le déguisement, mais l’**ordre social** reste en place."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e09d42a-05a0-5aed-a8b4-c55fa1ddc212",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un amour entre trois figures",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur Balzac. Complète la chaîne des amours de Félix, puis relis la carte d’identité du roman.",
+   "documents": [
+    {
+     "id": "l",
+     "type": "chaine",
+     "titre": "Autour de Félix",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "m",
+       "texte": "M. de Mortsauf"
+      },
+      {
+       "id": "h",
+       "texte": "Henriette de Mortsauf"
+      },
+      {
+       "id": "f",
+       "texte": "Félix de Vandenesse"
+      },
+      {
+       "id": "d",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "m",
+       "a": "h"
+      },
+      {
+       "de": "h",
+       "a": "f"
+      },
+      {
+       "de": "f",
+       "a": "d"
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Lys dans la vallée",
+     "sousTitre": "Balzac",
+     "emoji": "🌿",
+     "lignes": [
+      {
+       "id": "date",
+       "texte": "Publication",
+       "valeur": "1836"
+      },
+      {
+       "id": "serie",
+       "texte": "Ensemble",
+       "valeur": "Scènes de la vie de province"
+      },
+      {
+       "id": "cadre",
+       "texte": "Cadre",
+       "valeur": "La Touraine, à Clochegourde"
+      }
+     ],
+     "pied": "Un roman en forme de lettre",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui faut-il placer dans la case « ? » de la chaîne ?",
+     "options": [
+      "Lady Dudley, dont Félix devient l’amant à Paris",
+      "Natalie de Manerville, qui rompt avec lui",
+      "Madame de Berny, qui inspire Balzac",
+      "La mère de Félix, qui l’aime mal"
+     ],
+     "reponse": 0,
+     "aide": "Félix aime Henriette, puis une Anglaise sensuelle à Paris.",
+     "explication": "Félix devient l’amant de **lady Dudley**, Anglaise sensuelle, à Paris."
+    },
+    {
+     "type": "zone",
+     "document": "c",
+     "multiple": false,
+     "reponse": [
+      "cadre"
+     ],
+     "enonce": "Touche la ligne qui dit où se passe l’essentiel du roman.",
+     "aide": "Cherche la province de Balzac.",
+     "explication": "L’essentiel se passe en **Touraine**, à Clochegourde."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il représente.",
+     "paires": [
+      [
+       "Henriette",
+       "L’amour spirituel, la mère et l’ange"
+      ],
+      [
+       "Lady Dudley",
+       "L’amour charnel, sans scrupule"
+      ],
+      [
+       "M. de Mortsauf",
+       "Un ancien émigré brisé qui fait souffrir les siens"
+      ],
+      [
+       "Félix",
+       "Un jeune homme sensible, puis ambitieux"
+      ]
+     ],
+     "aide": "Pense à l’ange, à la femme sensuelle, au mari, au héros.",
+     "explication": "**Henriette** est l’amour spirituel, **lady Dudley** l’amour charnel, **M. de Mortsauf** un homme brisé, **Félix** un jeune homme sensible puis ambitieux."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e09d42a-05a0-5aed-a8b4-c55fa1ddc212",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une longue lettre à Natalie",
+   "competence": "analyser-document",
+   "situation": "Tout le roman est une longue lettre. Suis les étapes que Félix raconte, puis retrouve ce que disent les bouquets.",
+   "documents": [
+    {
+     "id": "c",
+     "type": "chaine",
+     "titre": "Ce que raconte Félix",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "b",
+       "texte": "Il embrasse les épaules d’Henriette, à un bal"
+      },
+      {
+       "id": "t",
+       "texte": "Il la retrouve en Touraine, à Clochegourde"
+      },
+      {
+       "id": "a",
+       "texte": "Un amour jamais consommé"
+      },
+      {
+       "id": "p",
+       "texte": "Il devient l’amant de lady Dudley"
+      },
+      {
+       "id": "x",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "b",
+       "a": "t"
+      },
+      {
+       "de": "t",
+       "a": "a"
+      },
+      {
+       "de": "a",
+       "a": "p"
+      },
+      {
+       "de": "p",
+       "a": "x"
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un langage de fleurs",
+     "blocs": [
+      "Chaque semaine, Félix compose pour Henriette un [[b|bouquet]] de fleurs des champs. Il ne peut pas lui dire son amour ; les fleurs le disent à sa place, et elle les lit en silence."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la case « ? » de la chaîne ?",
+     "options": [
+      "Henriette l’apprend, se laisse mourir et lui laisse une lettre",
+      "Natalie de Manerville apprend tout et rompt aussitôt",
+      "Félix épouse enfin Henriette devenue veuve",
+      "Félix quitte la France pour oublier lady Dudley"
+     ],
+     "reponse": 0,
+     "aide": "Henriette apprend la liaison de Félix.",
+     "explication": "Henriette l’apprend, **se laisse mourir de faim et de chagrin** et lui laisse une lettre bouleversante."
+    },
+    {
+     "type": "zone",
+     "document": "b",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui désigne ce que Félix compose pour parler à Henriette.",
+     "aide": "Il ne peut pas dire son amour avec des mots.",
+     "explication": "Félix compose des **bouquets** qui disent ce qu’il ne peut pas dire."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois temps du roman comme lettre.",
+     "items": [
+      "Félix raconte son passé à Natalie",
+      "Henriette meurt et lui laisse une lettre",
+      "Natalie répond par un billet sec et ironique"
+     ],
+     "aide": "Le roman est un récit adressé à Natalie, qui répond à la fin.",
+     "explication": "Félix **raconte** son passé à Natalie ; le récit s’achève sur la mort d’Henriette ; Natalie répond ensuite par un **billet sec et ironique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5e09d42a-05a0-5aed-a8b4-c55fa1ddc212",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une vertu qui fait souffrir",
+   "competence": "argumenter",
+   "situation": "Pour ton oral, deux élèves se disputent : Henriette est-elle heureuse de renoncer ? Lis leur débat, puis un passage écrit pour l’exercice, à la manière de Balzac.",
+   "documents": [
+    {
+     "id": "d",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Henriette est vertueuse et sereine : le roman fait l’éloge du renoncement."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Au contraire : il montre la vertu comme une [[s|souffrance]]."
+      }
+     ]
+    },
+    {
+     "id": "l",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "La lettre d’Henriette",
+     "blocs": [
+      "« Vous m’avez cru froide ; j’étais [[b|brûlante]]. Chaque jour, j’ai [[r|refusé]] de vous le dire, et ce refus fut ma façon de vous aimer. »"
+     ],
+     "source": "Lettre écrite pour l’exercice, à la manière de Balzac"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "d",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot par lequel Théo conteste l’idée d’une vertu sereine.",
+     "aide": "Cherche ce que la vertu fait à Henriette selon Théo.",
+     "explication": "Théo répond que la vertu est une **souffrance** : le roman ne l’admire pas, il la montre douloureuse."
+    },
+    {
+     "type": "zone",
+     "document": "l",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui montre que l’amour d’Henriette était vif.",
+     "aide": "Il s’oppose à « froide ».",
+     "explication": "Henriette se dit **brûlante** : elle aime avec force, mais elle se tait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve cette lettre à la manière de Balzac ?",
+     "options": [
+      "Henriette a aimé de toute la force qu’elle refusait de montrer",
+      "Henriette n’a jamais aimé Félix et le lui avoue enfin",
+      "Henriette regrette de ne pas avoir cédé à Félix plus tôt",
+      "Henriette reproche à Félix son ambition et sa légèreté"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’opposition entre « froide » et « brûlante ».",
+     "explication": "La lettre dit que sous la **froideur** apparente, l’amour était **brûlant** : elle refusait seulement de le montrer."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il appuie la lecture « la vertu est une souffrance », ou la lecture « la vertu est sereine » ?",
+     "categories": [
+      "La vertu est une souffrance",
+      "La vertu est sereine"
+     ],
+     "items": [
+      [
+       "Henriette vit de la passion qu’elle réprime",
+       0
+      ],
+      [
+       "Elle se laisse mourir de faim et de chagrin",
+       0
+      ],
+      [
+       "Elle impose le renoncement à Félix et à elle-même",
+       0
+      ],
+      [
+       "Elle goûte un bonheur calme loin du monde",
+       1
+      ]
+     ],
+     "aide": "Le roman montre-t-il Henriette apaisée ou déchirée ?",
+     "explication": "Le roman montre le **déchirement** d’Henriette ; seule une lecture **contraire** au texte imaginerait un bonheur calme."
+    }
+   ]
+  }
+ ]
+}

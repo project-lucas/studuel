@@ -1,5 +1,5 @@
 import type { DocFigure, Position } from '@/lib/exercices/types'
-import { couleur, couleurClaire, etatCible, fondCible, propsCible, traitCible, type ZonesDoc } from '../commun'
+import { coord, couleur, couleurClaire, etatCible, fondCible, propsCible, traitCible, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
 
 /**
@@ -207,20 +207,20 @@ export function Figure({ doc, zones }: { doc: DocFigure; zones?: ZonesDoc }) {
             const u1 = [Math.cos(a0), Math.sin(a0)]
             const u2 = [Math.cos(a1), Math.sin(a1)]
             const c = 11
-            const d = `M${sx + u1[0] * c} ${sy + u1[1] * c}L${sx + (u1[0] + u2[0]) * c} ${sy + (u1[1] + u2[1]) * c}L${sx + u2[0] * c} ${sy + u2[1] * c}`
+            const d = `M${coord(sx + u1[0] * c)} ${coord(sy + u1[1] * c)}L${coord(sx + (u1[0] + u2[0]) * c)} ${coord(sy + (u1[1] + u2[1]) * c)}L${coord(sx + u2[0] * c)} ${coord(sy + u2[1] * c)}`
             return <path key={i} d={d} fill="none" style={{ stroke: t, ...traitCible(etat) }} strokeWidth={1.6} className={zones?.actif && a.id ? s.cible : undefined} {...propsCible(a.id, zones, `Angle ${a.de}${a.sommet}${a.a}`)} />
           }
           const fin = a0 + delta
-          const x0 = sx + r * Math.cos(a0)
-          const y0 = sy + r * Math.sin(a0)
-          const x1 = sx + r * Math.cos(fin)
-          const y1 = sy + r * Math.sin(fin)
+          const x0 = coord(sx + r * Math.cos(a0))
+          const y0 = coord(sy + r * Math.sin(a0))
+          const x1 = coord(sx + r * Math.cos(fin))
+          const y1 = coord(sy + r * Math.sin(fin))
           const milieu = a0 + delta / 2
           return (
             <g key={i} className={zones?.actif && a.id ? s.cible : undefined} {...propsCible(a.id, zones, `Angle ${a.de}${a.sommet}${a.a}`)}>
               <path d={`M${sx} ${sy}L${x0} ${y0}A${r} ${r} 0 0 ${delta > 0 ? 1 : 0} ${x1} ${y1}Z`} style={{ fill: fondCible(etat) ?? couleurClaire(a.teinte, 'violet', 75), stroke: t, ...traitCible(etat) }} strokeWidth={1.4} />
               {a.mesure ? (
-                <text x={sx + (r + 14) * Math.cos(milieu)} y={sy + (r + 14) * Math.sin(milieu) + 4} fontSize={police - 1} fontWeight={800} textAnchor="middle" style={{ fill: t, paintOrder: 'stroke', stroke: '#fffdf8', strokeWidth: 3 }}>
+                <text x={coord(sx + (r + 14) * Math.cos(milieu))} y={coord(sy + (r + 14) * Math.sin(milieu) + 4)} fontSize={police - 1} fontWeight={800} textAnchor="middle" style={{ fill: t, paintOrder: 'stroke', stroke: '#fffdf8', strokeWidth: 3 }}>
                   {a.mesure}
                 </text>
               ) : null}

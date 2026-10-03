@@ -2095,42 +2095,6 @@ a:hover > .wiggle-on-hover {
     inset 0 1px 0 oklch(1 0 0 / 0.18),
     0 18px 34px -22px oklch(0.4 0.18 310 / 0.75);
 }
-/* --- Onglet Moi v9 : LA CARTE DE JOUEUR --------------------------------------
-   Le panneau d'identité (v8) était une surface violette qui portait un avatar
-   et trois chiffres. La carte porte en plus une BANNIÈRE illustrée choisie par
-   l'élève : le fond violet ne peut donc plus être le sujet, il devient le
-   socle sur lequel la bannière est posée. Même dégradé que `.moi-panneau`,
-   simplement plus sombre en bas — c'est sous cette partie-là que vivent le
-   pseudo, les couronnes et le panneau d'édition, tous en blanc. */
-/* UN SEUL VIOLET, DU BORD HAUT JUSQU'À LA PLAQUE (v10).
-   La carte affichait DEUX violets superposés, et la couture entre eux était
-   visible en travers de l'écran :
-
-     • la bannière peignait son dégradé de repli `#4c1d95 → #7c3aed`
-       (lib/profile-banners) — un violet BLEUTÉ, teinte ≈ 293 ;
-     • la carte peignait le sien, teinte 314 — un violet MAGENTA.
-
-   Deux familles de couleur, séparées par un voile noir. Aucun dégradé, aussi
-   soigné soit-il, ne rattrape ça : ce n'était pas un problème de dosage mais
-   d'empilement. Le repli de la bannière est donc supprimé côté carte
-   (`withGradient={false}`) et c'est CE dégradé-ci, et lui seul, qui court du
-   bord haut de l'écran jusqu'à la plaque blanche.
-
-   Il est calé sur la teinte de la marque (`--primary` #7a3fe0 ≈ 295) au lieu du
-   314 magenta, et il est MONOTONE — clair en haut, profond en bas, une seule
-   source de lumière en haut à gauche. C'est ce qui le rend insensible à la
-   hauteur de la carte : quelle que soit la tranche qu'on en voie (elle change
-   avec le nombre de matières et l'ouverture du panneau d'édition), elle a
-   toujours un dessus plus clair que son dessous. Un dégradé qui remonte au
-   milieu, lui, finit toujours par montrer une bande. */
-/* Chantier d'homogénéité (24/09/2026, Lucas) : la carte de joueur est une
-   CARTE BLANCHE, comme la carte de série en tête de Réviser — le grand aplat
-   violet profond faisait de Moi un autre monde que les onglets voisins. Le
-   violet reste aux actions et aux pastilles (bg-secondary / text-primary). */
-.moi-carte {
-  background: var(--card);
-  box-shadow: var(--carte-ombre);
-}
 
 /* Écriture à la craie : blanc cassé + halo poudreux léger. */
 
@@ -4324,34 +4288,6 @@ body {
 
 /* Les blocs de l'onglet Moi sont des `.carte` depuis le 23/09/2026
    (`.moi-bloc` n'a plus d'utilisateur). */
-/* LE REFLET HOLOGRAPHIQUE de la carte de joueur : une bande claire en biais
-   qui traverse la carte une fois. `mix-blend-mode: screen` la fait réagir au
-   violet dessous au lieu de le blanchir. Il ne joue qu'au montage et au
-   toucher (composant), jamais en boucle. */
-.moi-foil {
-  position: absolute;
-  inset: -40%;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background: linear-gradient(
-    115deg,
-    transparent 40%,
-    oklch(1 0 0 / 0) 44%,
-    oklch(1 0 0 / 0.38) 50%,
-    oklch(1 0 0 / 0) 56%,
-    transparent 60%
-  );
-  animation: moi-foil 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) 1 both;
-}
-@keyframes moi-foil {
-  from {
-    transform: translateX(-70%);
-  }
-  to {
-    transform: translateX(70%);
-  }
-}
-
 /* LA FOULE du classement : cinquante silhouettes qui se lèvent, puis passent
    au violet quand le marqueur les dépasse. */
 .moi-silhouette {
@@ -4405,22 +4341,6 @@ body {
   margin-left: -1px;
   background: var(--highlight);
 }
-/* LA FOULE DANS LA CARTE DE JOUEUR : le classement y est rendu en verre sur
-   le violet. Les silhouettes passent au blanc translucide, celles qu'on
-   devance à l'or, et le marqueur emprunte le violet profond de la carte pour
-   son cerne (sur le blanc de `--card`, il aurait l'air découpé). */
-.moi-carte .moi-silhouette {
-  background: oklch(1 0 0 / 0.18);
-}
-.moi-carte .moi-silhouette[data-etat='derriere'] {
-  background: oklch(1 0 0 / 0.3);
-}
-.moi-carte .moi-silhouette[data-etat='devant'] {
-  background: var(--highlight);
-}
-.moi-carte .moi-marqueur {
-  border-color: oklch(0.32 0.15 294);
-}
 
 /* LES MÉDAILLES de la vitrine : un métal peint (couche illustrative), un
    creux d'ombre en bas, un éclat en haut à gauche. */
@@ -4455,10 +4375,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .moi-foil {
-    animation: none;
-    opacity: 0;
-  }
   .moi-silhouette,
   .moi-marqueur {
     transition: none;
@@ -6151,23 +6067,6 @@ body {
 .carnet-dossier:active {
   transform: scale(0.98);
   box-shadow: 0 1px 0 oklch(0.3 0.05 278 / 0.04);
-}
-
-/* --- onglets de Moi, soudés sous la carte --- */
-/* La teinte exacte où s'arrête le dégradé de .moi-carte : la barre
-   prolonge la carte au lieu de se poser à côté. */
-.moi-onglets {
-  background: var(--card);
-}
-/* Le premier bloc d'un panneau remonte sous la barre des onglets : pas
-   d'écart entre la carte et sa section. Son haut gagne la hauteur cachée. */
-.moi-section-soudee {
-  margin-top: -1.5rem;
-}
-.moi-section-soudee > :first-child {
-  padding-top: 2.5rem;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 /* ==========================================================================

@@ -167,7 +167,7 @@ Un **élément chimique** est défini par son **numéro atomique Z** — son nom
 | Inventaire | Les éléments dominants |
 | Dans l’**Univers** | **92 %** des atomes sont de l’**hydrogène**, près de 8 % d’hélium — tout le reste pèse **moins de 1 %** |
 | Dans la **croûte terrestre** | **Oxygène** (environ 47 % en masse) et **silicium** (environ 28 %) |
-| Dans le **corps humain** | **O, C, H, N** font plus de **99 %** de la masse |
+| Dans le **corps humain** | **O, C, H, N** font environ **96 %** de la masse |
 
 > Trois inventaires, **trois classements différents** : la matière s’est **triée** en se rassemblant.
 
@@ -191,7 +191,7 @@ La **demi-vie** T est la durée au bout de laquelle **la moitié** des noyaux s�
             ['Quels sont les deux éléments les plus abondants en masse dans la croûte terrestre ?', ['L’oxygène et le silicium', 'L’hydrogène et l’hélium', 'Le fer et le nickel', 'Le carbone et l’azote'], 0, 'Environ 47 % d’oxygène et 28 % de silicium : la croûte est faite de silicates.'],
             ['Que reste-t-il d’un échantillon radioactif au bout de deux demi-vies ?', ['Un quart des noyaux initiaux', 'La moitié', 'Un huitième', 'Plus rien'], 0, 'Une demi-vie divise par deux, deux demi-vies par quatre : la décroissance est multiplicative, jamais linéaire.'],
             ['On peut accélérer la désintégration d’un noyau radioactif en le chauffant fortement.', ['Vrai', 'Faux'], 1, 'La demi-vie ne dépend ni de la température, ni de la pression, ni des liaisons chimiques : c’est ce qui en fait une horloge fiable.'],
-            ['Quels quatre éléments forment plus de 99 % de la masse du corps humain ?', ['Oxygène, carbone, hydrogène, azote', 'Fer, calcium, sodium, potassium', 'Silicium, oxygène, aluminium, fer', 'Hydrogène, hélium, carbone, azote'], 0, 'Ce sont les éléments de l’eau et des molécules organiques.'],
+            ['Quels quatre éléments forment environ 96 % de la masse du corps humain ?', ['Oxygène, carbone, hydrogène, azote', 'Fer, calcium, sodium, potassium', 'Silicium, oxygène, aluminium, fer', 'Hydrogène, hélium, carbone, azote'], 0, 'Ce sont les éléments de l’eau et des molécules organiques.', 'Quels quatre éléments forment plus de 99 % de la masse du corps humain ?'],
           ],
         },
         {

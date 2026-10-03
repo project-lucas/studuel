@@ -1,0 +1,4506 @@
+{
+ "niveau": "5e",
+ "matiere": "histoire-geo",
+ "exercices": [
+  {
+   "chapitre": "a84a4b01-c102-5366-ad58-5feb28ac9c50",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De La Mecque à Médine, de Médine à Bagdad",
+   "competence": "lire-carte",
+   "situation": "En 622, Muhammad quitte La Mecque pour une autre ville d’Arabie. Plus tard, les califes gouvernent depuis Damas, puis depuis Bagdad. Suis ces villes sur la carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre villes du monde arabo-musulman",
+     "fond": "monde",
+     "cadrage": [
+      25,
+      12,
+      58,
+      42
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "mecque",
+       "lieu": "la-mecque",
+       "symbole": "point",
+       "nom": "La Mecque"
+      },
+      {
+       "id": "medine",
+       "lon": 39.61,
+       "lat": 24.47,
+       "symbole": "point",
+       "nom": "Médine"
+      },
+      {
+       "id": "damas",
+       "lieu": "damas",
+       "symbole": "point",
+       "nom": "Damas"
+      },
+      {
+       "id": "bagdad",
+       "lieu": "bagdad",
+       "symbole": "point",
+       "nom": "Bagdad"
+      }
+     ],
+     "traits": [
+      {
+       "id": "hegire",
+       "points": [
+        "la-mecque",
+        [
+         39.61,
+         24.47
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "corail",
+       "etiquette": "Hégire, 622"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où Muhammad arrive en 622, au terme de l’Hégire (suis la flèche).",
+     "reponse": [
+      "medine"
+     ],
+     "aide": "La flèche part de La Mecque : touche la ville où elle s’arrête.",
+     "explication": "L’Hégire est le départ de Muhammad de La Mecque vers **Médine**. C’est l’an 1 du calendrier musulman."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche Bagdad, la capitale des califes abbassides.",
+     "reponse": [
+      "bagdad"
+     ],
+     "aide": "Bagdad est au bord du Tigre, bien plus à l’est que Damas.",
+     "explication": "**Bagdad** devient la grande capitale des Abbassides : une ville peut-être d’un million d’habitants au IXe siècle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle direction Muhammad se déplace-t-il quand il va de La Mecque à Médine ?",
+     "options": [
+      "Vers le nord",
+      "Vers le sud",
+      "Vers l’est",
+      "Vers l’ouest"
+     ],
+     "reponse": 0,
+     "aide": "Compare la hauteur de La Mecque et celle de Médine sur la carte.",
+     "explication": "Médine est plus haut sur la carte que La Mecque : Muhammad va **vers le nord**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a84a4b01-c102-5366-ad58-5feb28ac9c50",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les dates et les piliers de l’islam",
+   "competence": "se-reperer-temps",
+   "situation": "Inès prépare un exposé sur les débuts de l’islam. Elle dispose d’une frise de 600 à 640 et d’un tableau sur les cinq piliers, les gestes de tout croyant.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Muhammad",
+     "debut": 600,
+     "fin": 640,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "preche",
+       "date": 610,
+       "nom": "Prêche"
+      },
+      {
+       "id": "hegire",
+       "date": 622,
+       "nom": "Hégire"
+      },
+      {
+       "id": "mort",
+       "date": 632,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "piliers",
+     "type": "tableau",
+     "titre": "Les cinq piliers de l’islam",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "N°",
+      "Le pilier",
+      "Ce que fait le croyant"
+     ],
+     "lignes": [
+      [
+       1,
+       "La profession de foi",
+       "Dire qu’il y a un seul Dieu, Allah"
+      ],
+      [
+       2,
+       "Les cinq prières",
+       "Prier cinq fois par jour"
+      ],
+      [
+       3,
+       "?",
+       "Donner une part de ses biens aux pauvres"
+      ],
+      [
+       4,
+       "Le jeûne du ramadan",
+       "Ne pas manger du lever au coucher du soleil pendant un mois"
+      ],
+      [
+       5,
+       "?",
+       "Se rendre à La Mecque"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche sur la frise l’événement qui marque l’an 1 du calendrier musulman.",
+     "reponse": [
+      "hegire"
+     ],
+     "aide": "Cet événement est le départ de Muhammad de La Mecque vers Médine.",
+     "explication": "L’**Hégire**, en 622, est l’an 1 du calendrier musulman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années Muhammad a-t-il prêché avant l’Hégire ?",
+     "reponse": 12,
+     "unite": "ans",
+     "aide": "Soustrais la date du premier prêche à celle de l’Hégire.",
+     "explication": "Il prêche depuis 610 et part en 622 : 622 − 610 = **12 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre l’Hégire et la mort de Muhammad ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Soustrais la date de l’Hégire à celle de sa mort.",
+     "explication": "632 − 622 = **10 ans** : en dix ans, il rassemble une communauté qui va bâtir un empire."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux cases « ? » du tableau.",
+     "texte": "Le pilier n° 3 est l’___ et le pilier n° 5 est le ___ à La Mecque.",
+     "reponses": [
+      [
+       "aumône"
+      ],
+      [
+       "pèlerinage"
+      ]
+     ],
+     "banque": [
+      "aumône",
+      "pèlerinage",
+      "prière",
+      "ramadan"
+     ],
+     "aide": "Lis la colonne de droite : qu’est-ce que le croyant fait aux lignes 3 et 5 ?",
+     "explication": "Donner aux pauvres, c’est l’**aumône** ; se rendre à La Mecque, c’est le **pèlerinage**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a84a4b01-c102-5366-ad58-5feb28ac9c50",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une copiste dans la Maison de la Sagesse",
+   "competence": "analyser-document",
+   "situation": "Yasmin est copiste à Bagdad au IXe siècle. Un schéma montre le chemin du papier ; un récit décrit sa journée.",
+   "documents": [
+    {
+     "id": "chemin",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le chemin du papier",
+     "noeuds": [
+      {
+       "id": "chine",
+       "texte": "Chine"
+      },
+      {
+       "id": "passeur",
+       "texte": "?"
+      },
+      {
+       "id": "europe",
+       "texte": "Europe médiévale"
+      }
+     ],
+     "liens": [
+      {
+       "de": "chine",
+       "a": "passeur"
+      },
+      {
+       "de": "passeur",
+       "a": "europe"
+      }
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une journée à Bagdad",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Bagdad, IXe siècle. Yasmin, jeune copiste, travaille à la Maison de la Sagesse. Elle recopie sur du [[p|papier]], un produit venu de Chine, la traduction d’un livre grec de médecine.",
+      "Son maître lui montre d’autres manuscrits : des textes perses, des textes indiens, un traité d’algèbre d’al-Khwarizmi. « Ici, dit-il, on traduit les savoirs des autres et on les prolonge. »",
+      "Le soir, elle croise Jacob, un juif, et Marie, une chrétienne. Ils gardent leur religion, mais paient un impôt spécial que les musulmans ne paient pas. On les appelle les [[d|dhimmis]]."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel monde joue le rôle de « passeur » à la place du point d’interrogation ?",
+     "options": [
+      "L’empire arabo-musulman",
+      "L’Empire byzantin",
+      "L’empire de Charlemagne",
+      "Le royaume des Vikings"
+     ],
+     "reponse": 0,
+     "aide": "Le récit se passe à Bagdad, et le papier y arrive de Chine.",
+     "explication": "Le papier passe par l’**empire arabo-musulman**, qui transmet à l’Europe des savoirs et des produits venus de loin."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche, dans le récit, le produit venu de Chine sur lequel Yasmin écrit.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce qu’elle utilise pour copier le livre.",
+     "explication": "Yasmin écrit sur du **papier**, venu de Chine, comme les chiffres sont venus d’Inde."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque savoir à son origine ou à son auteur.",
+     "paires": [
+      [
+       "Les chiffres",
+       "Venus d’Inde"
+      ],
+      [
+       "Le papier",
+       "Venu de Chine"
+      ],
+      [
+       "L’algèbre",
+       "Fondée par al-Khwarizmi"
+      ],
+      [
+       "Un canon de médecine",
+       "Écrit par Avicenne"
+      ]
+     ],
+     "aide": "Quatre savoirs, quatre origines : relis le récit, puis souviens-toi de ton cours.",
+     "explication": "Chiffres : **Inde** ; papier : **Chine** ; algèbre : **al-Khwarizmi** ; canon de médecine : **Avicenne**. L’empire les transmet à l’Europe."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le nom donné aux chrétiens et aux juifs qui vivent dans l’empire.",
+     "reponse": [
+      "d"
+     ],
+     "aide": "Le mot est à la fin du récit, après « On les appelle ».",
+     "explication": "Ce sont les **dhimmis** : ils gardent leur religion contre un impôt spécial."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase décrit le mieux le statut des dhimmis ?",
+     "options": [
+      "Inférieur, mais protégé",
+      "Égal à celui des musulmans",
+      "Persécutés et chassés",
+      "Esclaves de l’empire"
+     ],
+     "reponse": 0,
+     "aide": "Le récit dit qu’ils gardent leur religion, mais qu’ils paient un impôt en plus.",
+     "explication": "Leur statut est **inférieur mais protégé** : ce n’est ni l’égalité, ni la persécution."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb4b906e-b154-5ff3-860a-44f2acb13084",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mille ans de Rome en Orient",
+   "competence": "se-reperer-temps",
+   "situation": "Léo prépare une affiche sur l’Empire byzantin. Il place ses dates sur une frise de l’an 300 à l’an 1500.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "L’Empire byzantin en quatre dates",
+     "debut": 300,
+     "fin": 1500,
+     "pas": 100,
+     "evenements": [
+      {
+       "id": "partage",
+       "date": 395,
+       "nom": "Partage de l’Empire"
+      },
+      {
+       "id": "schisme",
+       "date": 1054,
+       "nom": "Schisme"
+      },
+      {
+       "id": "pillage",
+       "date": 1204,
+       "nom": "Pillage"
+      },
+      {
+       "id": "chute",
+       "date": 1453,
+       "nom": "Chute"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met fin à l’Empire byzantin : la prise de Constantinople par les Ottomans.",
+     "reponse": [
+      "chute"
+     ],
+     "aide": "C’est la date la plus récente de la frise.",
+     "explication": "En **1453**, les Ottomans prennent Constantinople : c’est la fin de l’Empire byzantin."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui sépare l’Église orthodoxe de l’Église catholique.",
+     "reponse": [
+      "schisme"
+     ],
+     "aide": "Cet événement est daté du XIe siècle.",
+     "explication": "Le **schisme** de **1054** sépare l’Église orthodoxe de l’Église catholique."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces événements du plus ancien au plus récent.",
+     "items": [
+      "Le partage de l’Empire romain",
+      "Le schisme entre les deux Églises",
+      "Le pillage de Constantinople par les croisés",
+      "La chute de Constantinople"
+     ],
+     "aide": "Lis les dates sous les points de la frise.",
+     "explication": "**395**, **1054**, **1204**, **1453** : du partage de l’Empire romain à la chute de sa dernière capitale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le schisme de 1054 de la chute de Constantinople ?",
+     "reponse": 399,
+     "unite": "ans",
+     "aide": "Soustrais 1054 à 1453.",
+     "explication": "1453 − 1054 = **399 ans**, soit presque quatre siècles."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb4b906e-b154-5ff3-860a-44f2acb13084",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Anna arrive à Constantinople",
+   "competence": "analyser-document",
+   "situation": "Anna, marchande de Venise, arrive en bateau à Constantinople. Elle note ce qu’elle voit. Un tableau compare ensuite les deux Églises chrétiennes.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Les notes d’Anna",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Anna, marchande de Venise, arrive à Constantinople par la mer. Son navire entre dans le détroit du [[b|Bosphore]], entre l’Europe et l’Asie. Devant elle se dressent de hautes murailles, triples, que les armées n’ont pas pu forcer.",
+      "Sur les quais, des marchands vénitiens, arabes, slaves et scandinaves crient dans leurs langues. L’Église, elle, prie en grec, et les habitants se disent « Romains ».",
+      "Au palais, le [[e|basileus]] est à la fois chef de l’armée, chef du gouvernement et chef de l’Église : c’est lui qui nomme le patriarche. On dit que son pouvoir vient de Dieu."
+     ]
+    },
+    {
+     "id": "eglises",
+     "type": "tableau",
+     "titre": "Deux Églises chrétiennes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Sujet",
+      "Église de Byzance",
+      "Église de Rome"
+     ],
+     "lignes": [
+      [
+       "Langue",
+       "Le grec",
+       "?"
+      ],
+      [
+       "Prêtres",
+       "Mariage autorisé",
+       "Célibat"
+      ],
+      [
+       "Pape",
+       "Son autorité est refusée",
+       "Son ? est reconnue"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le nom du détroit sur lequel se trouve Constantinople.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Le détroit sépare l’Europe de l’Asie.",
+     "explication": "Constantinople est bâtie sur le **Bosphore**, entre l’Europe et l’Asie : une position idéale pour le commerce."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche le titre que porte l’empereur byzantin.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche qui est à la fois chef de l’armée, du gouvernement et de l’Église.",
+     "explication": "L’empereur est le **basileus** : il nomme même le patriarche, chef de l’Église."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le tableau pour l’Église de Rome.",
+     "texte": "À Rome, on prie en ___ et on reconnaît l’___ du pape.",
+     "reponses": [
+      [
+       "latin"
+      ],
+      [
+       "autorité"
+      ]
+     ],
+     "banque": [
+      "latin",
+      "grec",
+      "autorité",
+      "refus"
+     ],
+     "aide": "À Byzance, c’est le contraire : la langue est le grec et l’autorité du pape est refusée.",
+     "explication": "Rome emploie le **latin** et reconnaît l’**autorité** du pape ; Byzance emploie le grec et la refuse. C’est ce qui sépare les deux Églises."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les habitants de l’empire se disent-ils « Romains » ?",
+     "options": [
+      "Leur empire est l’héritier de l’Empire romain",
+      "Ils parlent latin comme à Rome",
+      "Le pape de Rome est leur chef",
+      "Ils viennent tous de la ville de Rome"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi ce qui reste de l’Empire romain après 476.",
+     "explication": "L’Empire d’Orient est la suite de l’**Empire romain** : eux se disent Romains, et c’est plus tard que des historiens occidentaux les appelleront « byzantins »."
+    }
+   ]
+  },
+  {
+   "chapitre": "cb4b906e-b154-5ff3-860a-44f2acb13084",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une lettre de Constantinople, avril 1204",
+   "competence": "analyser-document",
+   "situation": "Un habitant de Constantinople écrit à son cousin pour lui raconter un événement qu’on n’aurait jamais cru possible. Une frise remet la scène dans les mille ans de l’empire.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les dates de l’Empire byzantin",
+     "debut": 300,
+     "fin": 1500,
+     "pas": 100,
+     "periodes": [
+      {
+       "id": "empire",
+       "debut": 395,
+       "fin": 1453,
+       "nom": "Empire byzantin (395-1453)",
+       "teinte": "violet"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "occident",
+       "date": 476,
+       "nom": "Chute de l’Occident"
+      },
+      {
+       "id": "schisme",
+       "date": 1054,
+       "nom": "Schisme"
+      },
+      {
+       "id": "pillage",
+       "date": 1204,
+       "nom": "Pillage"
+      }
+     ]
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un habitant de Constantinople",
+     "auteur": "Lettre imaginaire, écrite pour l’exercice",
+     "blocs": [
+      "Constantinople, avril 1204. Cher cousin, tu ne le croiras pas : la ville est tombée. Depuis des siècles, nos triples murailles arrêtaient tous les assaillants.",
+      "Cette fois, ce sont des [[c|croisés]] venus d’Occident qui sont entrés. Ils sont chrétiens comme nous, mais ils parlent latin et obéissent au pape. Ils pillent les églises et emportent nos icônes.",
+      "Je prie pour que notre empire se relève de cette épreuve."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années l’Empire d’Orient survit-il à la chute de l’Empire d’Occident ?",
+     "reponse": 977,
+     "unite": "ans",
+     "aide": "Relève la date de la chute de l’Occident et la date de la fin de l’empire byzantin dans le titre de la période.",
+     "explication": "L’Occident tombe en 476, l’Orient en 1453 : 1453 − 476 = **977 ans**, presque mille ans de plus."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement de la frise dont parle la lettre.",
+     "reponse": [
+      "pillage"
+     ],
+     "aide": "La lettre est datée d’avril 1204.",
+     "explication": "La lettre raconte le **pillage** de 1204, pendant la quatrième croisade."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le mot qui désigne ceux qui ont pris la ville.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche qui est « venu d’Occident » dans la deuxième phrase du deuxième paragraphe.",
+     "explication": "Ce sont des **croisés**, des chrétiens d’Occident."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce pillage est-il si choquant pour l’auteur de la lettre ?",
+     "options": [
+      "Des chrétiens attaquent une grande ville chrétienne",
+      "Des armées arabes entrent dans la ville",
+      "Les murailles sont détruites par un incendie",
+      "L’empereur quitte la ville pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que l’auteur dit des croisés : « chrétiens comme nous ».",
+     "explication": "Les croisés sont **chrétiens**, comme les habitants : la quatrième croisade pille une ville chrétienne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque date à l’événement qu’elle date.",
+     "paires": [
+      [
+       "476",
+       "Chute de l’Empire d’Occident"
+      ],
+      [
+       "1054",
+       "Séparation des Églises orthodoxe et catholique"
+      ],
+      [
+       "1204",
+       "Pillage de Constantinople par les croisés"
+      ],
+      [
+       "1453",
+       "Prise de Constantinople par les Ottomans"
+      ]
+     ],
+     "aide": "Les trois premières dates sont sur la frise ; la dernière termine la période.",
+     "explication": "**476** : l’Occident tombe ; **1054** : le schisme ; **1204** : le pillage ; **1453** : les Ottomans prennent la ville."
+    }
+   ]
+  },
+  {
+   "chapitre": "3280f054-7ef7-5642-b8da-6b2cfef55564",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Charlemagne en trois dates",
+   "competence": "se-reperer-temps",
+   "situation": "Maëlys prépare une fiche sur Charlemagne, qui règne de 768 à 814. Elle a tracé une frise de 725 à 875.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De Pépin le Bref au partage de l’empire",
+     "debut": 725,
+     "fin": 875,
+     "pas": 25,
+     "periodes": [
+      {
+       "id": "charles",
+       "debut": 768,
+       "fin": 814,
+       "nom": "Charlemagne",
+       "teinte": "violet"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "pepin",
+       "date": 751,
+       "nom": "Pépin le Bref roi"
+      },
+      {
+       "id": "empereur",
+       "date": 800,
+       "nom": "Couronnement"
+      },
+      {
+       "id": "verdun",
+       "date": 843,
+       "nom": "Verdun"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où Charlemagne est couronné empereur à Rome.",
+     "reponse": [
+      "empereur"
+     ],
+     "aide": "Le couronnement a lieu le jour de Noël, en l’an 800.",
+     "explication": "Le **25 décembre 800**, le pape Léon III couronne Charlemagne empereur à Rome."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période pendant laquelle Charlemagne règne.",
+     "reponse": [
+      "charles"
+     ],
+     "aide": "Cherche la barre qui porte son nom.",
+     "explication": "Charlemagne règne de **768 à 814**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure le règne de Charlemagne ?",
+     "reponse": 46,
+     "unite": "ans",
+     "aide": "Soustrais la date du début à celle de la fin du règne.",
+     "explication": "814 − 768 = **46 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre le couronnement de Charlemagne et le traité de Verdun ?",
+     "reponse": 43,
+     "unite": "ans",
+     "aide": "Soustrais 800 à 843.",
+     "explication": "843 − 800 = **43 ans** : l’empire ne survit pas longtemps à son fondateur."
+    }
+   ]
+  },
+  {
+   "chapitre": "3280f054-7ef7-5642-b8da-6b2cfef55564",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Verdun, 843 : trois parts pour trois frères",
+   "competence": "lire-carte",
+   "situation": "Après la mort de Louis le Pieux, ses trois fils se partagent l’empire de Charlemagne au traité de Verdun. Observe le partage sur la carte de l’Europe.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le partage de Verdun (843)",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -6,
+      41,
+      17,
+      54.5
+     ],
+     "source": "Carte simplifiée : les limites des trois parts sont approximatives.",
+     "aires": [
+      {
+       "id": "ouest",
+       "contour": [
+        [
+         -4.6,
+         48.4
+        ],
+        [
+         -1.7,
+         49.7
+        ],
+        [
+         1.5,
+         50.8
+        ],
+        [
+         3.5,
+         51.3
+        ],
+        [
+         4.8,
+         50.3
+        ],
+        [
+         5.2,
+         49
+        ],
+        [
+         5,
+         47.5
+        ],
+        [
+         4.8,
+         46
+        ],
+        [
+         4.8,
+         43.3
+        ],
+        [
+         3,
+         42.6
+        ],
+        [
+         -1.7,
+         43.4
+        ],
+        [
+         -1.2,
+         46
+        ],
+        [
+         -4.4,
+         47.8
+        ]
+       ],
+       "teinte": "bleu",
+       "motif": "clair",
+       "etiquette": "Francie occidentale"
+      },
+      {
+       "id": "centre",
+       "contour": [
+        [
+         5.5,
+         53.3
+        ],
+        [
+         7,
+         53
+        ],
+        [
+         7,
+         51.5
+        ],
+        [
+         7.8,
+         50
+        ],
+        [
+         8.2,
+         48.9
+        ],
+        [
+         7.6,
+         47.6
+        ],
+        [
+         8.7,
+         46.4
+        ],
+        [
+         10.5,
+         46.6
+        ],
+        [
+         12.2,
+         46.6
+        ],
+        [
+         13.5,
+         45.8
+        ],
+        [
+         13,
+         44
+        ],
+        [
+         14.5,
+         42.5
+        ],
+        [
+         16,
+         41.5
+        ],
+        [
+         12.5,
+         41
+        ],
+        [
+         10,
+         42.5
+        ],
+        [
+         8.5,
+         44
+        ],
+        [
+         7.5,
+         43.7
+        ],
+        [
+         4.8,
+         43.3
+        ],
+        [
+         4.8,
+         46
+        ],
+        [
+         5,
+         47.5
+        ],
+        [
+         5.2,
+         49
+        ],
+        [
+         4.8,
+         50.3
+        ],
+        [
+         3.5,
+         51.3
+        ],
+        [
+         4.5,
+         52.5
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair",
+       "etiquette": "Lotharingie"
+      },
+      {
+       "id": "est",
+       "contour": [
+        [
+         7,
+         53
+        ],
+        [
+         9,
+         54.4
+        ],
+        [
+         11.5,
+         54
+        ],
+        [
+         12,
+         51.5
+        ],
+        [
+         13.5,
+         49
+        ],
+        [
+         14.2,
+         48.2
+        ],
+        [
+         13.5,
+         46.5
+        ],
+        [
+         12.2,
+         46.6
+        ],
+        [
+         10.5,
+         46.6
+        ],
+        [
+         8.7,
+         46.4
+        ],
+        [
+         7.6,
+         47.6
+        ],
+        [
+         8.2,
+         48.9
+        ],
+        [
+         7.8,
+         50
+        ],
+        [
+         7,
+         51.5
+        ]
+       ],
+       "teinte": "vert",
+       "motif": "clair",
+       "etiquette": "Francie orientale"
+      }
+     ],
+     "etiquettes": [
+      {
+       "texte": "Verdun",
+       "lon": 2.9,
+       "lat": 49.45,
+       "style": "ville"
+      }
+     ],
+     "lieux": [
+      {
+       "id": "verdun",
+       "lon": 5.38,
+       "lat": 49.16,
+       "symbole": "etoile",
+       "teinte": "corail"
+      },
+      {
+       "id": "aix",
+       "lon": 6.08,
+       "lat": 50.78,
+       "symbole": "point",
+       "nom": "Aix-la-Chapelle"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville qui donne son nom au traité de 843.",
+     "reponse": [
+      "verdun"
+     ],
+     "aide": "Elle est marquée d’une étoile.",
+     "explication": "Le traité est signé à **Verdun**, en 843."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la part qui deviendra l’Allemagne.",
+     "reponse": [
+      "est"
+     ],
+     "aide": "L’Allemagne est à l’est de la France.",
+     "explication": "La **Francie orientale** deviendra l’Allemagne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque part de l’empire à ce qu’elle deviendra.",
+     "paires": [
+      [
+       "Francie occidentale",
+       "La France"
+      ],
+      [
+       "Francie orientale",
+       "L’Allemagne"
+      ],
+      [
+       "Lotharingie",
+       "Une longue bande entre les deux"
+      ]
+     ],
+     "aide": "Pense à la position de chaque part sur la carte : ouest, est, milieu.",
+     "explication": "Francie occidentale : la **France** ; Francie orientale : l’**Allemagne** ; Lotharingie : une **bande entre les deux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle part se trouve Aix-la-Chapelle, l’ancienne capitale de Charlemagne ?",
+     "options": [
+      "Francie occidentale",
+      "Lotharingie",
+      "Francie orientale",
+      "Aucune des trois"
+     ],
+     "reponse": 1,
+     "aide": "Regarde de quelle couleur est la zone qui entoure le point.",
+     "explication": "Aix-la-Chapelle se trouve dans la **Lotharingie**, la part du milieu : celle de l’empereur Lothaire, le fils aîné."
+    }
+   ]
+  },
+  {
+   "chapitre": "3280f054-7ef7-5642-b8da-6b2cfef55564",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux envoyés partent en tournée",
+   "competence": "analyser-texte",
+   "situation": "L’empereur envoie deux hommes de confiance dans les comtés. Un texte, écrit pour l’exercice dans l’esprit d’un capitulaire, leur donne leurs instructions ; un schéma montre ce que deviennent les livres copiés dans les monastères.",
+   "documents": [
+    {
+     "id": "ordre",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Instructions à deux envoyés du maître",
+     "auteur": "Texte écrit pour l’exercice, dans l’esprit d’un capitulaire",
+     "blocs": [
+      "L’empereur à ses envoyés, un évêque et un comte du palais : allez deux par deux dans les comtés que je vous confie.",
+      "Vous écouterez les plaintes des habitants et vous contrôlerez que les [[c|comtes]] rendent la justice avec équité.",
+      "Vous veillerez aussi à ce que chaque monastère ouvre une école. Ensuite vous me ferez un rapport : je le ferai écrire dans un [[l|capitulaire]] et il vaudra loi dans tout l’empire."
+     ]
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le chemin d’un livre antique",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Livre latin antique"
+      },
+      {
+       "id": "b",
+       "texte": "?"
+      },
+      {
+       "id": "c",
+       "texte": "Copie en minuscule caroline"
+      },
+      {
+       "id": "d",
+       "texte": "Livre lu aujourd’hui"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b",
+       "texte": "est apporté à"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ordre",
+     "enonce": "Touche ceux que les deux envoyés doivent contrôler.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "L’envoyé doit vérifier que la justice est bien rendue : par qui ?",
+     "explication": "Les envoyés contrôlent les **comtes**, qui gouvernent les comtés au nom de l’empereur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente le duo « un évêque et un comte du palais » ?",
+     "options": [
+      "Un religieux et un laïc, comme les missi dominici",
+      "Deux soldats chargés de lever l’armée pour l’empereur",
+      "Deux savants venus de la cour d’Alcuin à Aix",
+      "Deux comtes qui viennent juger un procès au palais"
+     ],
+     "reponse": 0,
+     "aide": "Un évêque appartient à l’Église ; un comte n’en fait pas partie.",
+     "explication": "Les **missi dominici**, « envoyés du maître », vont par deux : un religieux et un laïc."
+    },
+    {
+     "type": "zone",
+     "document": "ordre",
+     "enonce": "Touche le mot qui désigne les lois écrites de l’empereur.",
+     "reponse": [
+      "l"
+     ],
+     "aide": "Le mot est dans la dernière phrase du texte.",
+     "explication": "Les lois de Charlemagne s’appellent des **capitulaires**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment s’appelle l’atelier d’un monastère où des moines recopient les livres ? (un mot, le « ? » du schéma)",
+     "reponse": [
+      "scriptorium",
+      "un scriptorium",
+      "le scriptorium",
+      "scriptoria"
+     ],
+     "placeholder": "un mot latin",
+     "aide": "Ce mot latin vient de « scribere », écrire.",
+     "explication": "Les moines recopient les livres dans le **scriptorium**, avec l’écriture nouvelle : la minuscule caroline."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi beaucoup de textes latins de l’Antiquité nous sont-ils parvenus ?",
+     "options": [
+      "Des moines carolingiens les ont recopiés",
+      "Ils ont été imprimés au Moyen Âge",
+      "Ils étaient gravés dans la pierre",
+      "Charlemagne les a tous appris par cœur"
+     ],
+     "reponse": 0,
+     "aide": "Regarde le maillon du schéma qui précède « Livre lu aujourd’hui ».",
+     "explication": "Grâce aux **copies carolingiennes** : beaucoup de textes latins ne nous sont parvenus que par elles."
+    }
+   ]
+  },
+  {
+   "chapitre": "d08c84fe-8112-5b6b-bb75-0870d4b1c883",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois mondes autour d’une mer",
+   "competence": "lire-carte",
+   "situation": "Au Moyen Âge, trois civilisations se partagent le tour de la Méditerranée. Léna repère leurs grandes villes sur une carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre grandes villes de la Méditerranée",
+     "fond": "mediterranee",
+     "cadrage": [
+      -10,
+      27,
+      40,
+      47
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "rome",
+       "lieu": "rome",
+       "symbole": "point",
+       "nom": "Rome"
+      },
+      {
+       "id": "constantinople",
+       "lieu": "constantinople",
+       "symbole": "point",
+       "nom": "Constantinople"
+      },
+      {
+       "id": "cordoue",
+       "lon": -4.78,
+       "lat": 37.88,
+       "symbole": "point",
+       "nom": "Cordoue"
+      },
+      {
+       "id": "caire",
+       "lieu": "le-caire",
+       "symbole": "point",
+       "nom": "Le Caire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le centre de la chrétienté orthodoxe.",
+     "reponse": [
+      "constantinople"
+     ],
+     "aide": "La chrétienté orthodoxe est celle de l’Empire byzantin.",
+     "explication": "Le centre de la chrétienté orthodoxe est **Constantinople**, la capitale de Byzance."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le centre de la chrétienté latine, celle du pape.",
+     "reponse": [
+      "rome"
+     ],
+     "aide": "Le pape vit dans cette ville, en Italie.",
+     "explication": "Le centre de la chrétienté latine est **Rome**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque ville dans la civilisation dont elle est un centre.",
+     "categories": [
+      "Chrétienté latine",
+      "Chrétienté orthodoxe",
+      "Monde musulman"
+     ],
+     "items": [
+      [
+       "Rome",
+       0
+      ],
+      [
+       "Constantinople",
+       1
+      ],
+      [
+       "Cordoue",
+       2
+      ],
+      [
+       "Le Caire",
+       2
+      ]
+     ],
+     "aide": "Rome est la ville du pape ; Constantinople est byzantine ; les deux autres sont des villes de l’islam.",
+     "explication": "**Rome** : chrétienté latine ; **Constantinople** : chrétienté orthodoxe ; **Cordoue** et **Le Caire** : monde musulman."
+    }
+   ]
+  },
+  {
+   "chapitre": "d08c84fe-8112-5b6b-bb75-0870d4b1c883",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des armées et des marchands",
+   "competence": "se-reperer-temps",
+   "situation": "Les croisades opposent des armées, mais pendant ce temps les marchands continuent de commercer. Une frise donne les dates ; un tableau, les marchandises.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les croisades",
+     "debut": 1080,
+     "fin": 1300,
+     "pas": 20,
+     "periodes": [
+      {
+       "id": "croisades",
+       "debut": 1095,
+       "fin": 1270,
+       "nom": "Huit croisades (1095-1270)",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "appel",
+       "date": 1095,
+       "nom": "Appel d’Urbain II"
+      },
+      {
+       "id": "saladin",
+       "date": 1187,
+       "nom": "Saladin"
+      },
+      {
+       "id": "byzance",
+       "date": 1204,
+       "nom": "Pillage"
+      },
+      {
+       "id": "acre",
+       "date": 1291,
+       "nom": "Saint-Jean-d’Acre"
+      }
+     ]
+    },
+    {
+     "id": "marchandises",
+     "type": "tableau",
+     "titre": "Les marchandises du commerce méditerranéen",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Venues d’Orient",
+      "Venues d’Occident"
+     ],
+     "lignes": [
+      [
+       "Soie, épices, sucre, parfums",
+       "Draps de laine"
+      ],
+      [
+       "Papier, porcelaine",
+       "Bois, métaux"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui marque la fin des États latins d’Orient : la chute de leur dernier bastion.",
+     "reponse": [
+      "acre"
+     ],
+     "aide": "C’est la date la plus récente de la frise.",
+     "explication": "En **1291**, Saint-Jean-d’Acre tombe : c’est le dernier bastion latin d’Orient."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où des croisés chrétiens pillent une ville chrétienne.",
+     "reponse": [
+      "byzance"
+     ],
+     "aide": "Cette croisade a détourné son chemin vers Constantinople.",
+     "explication": "En **1204**, la quatrième croisade pille Constantinople : des chrétiens contre des chrétiens."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’appel du pape Urbain II de la chute de Saint-Jean-d’Acre ?",
+     "reponse": 196,
+     "unite": "ans",
+     "aide": "Soustrais 1095 à 1291.",
+     "explication": "1291 − 1095 = **196 ans** : presque deux siècles de croisades et de contacts."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur les marchands italiens.",
+     "texte": "Venise, Gênes et Pise installent des ___ dans tout le bassin méditerranéen, car le ___ ne s’arrête jamais.",
+     "reponses": [
+      [
+       "comptoirs"
+      ],
+      [
+       "commerce"
+      ]
+     ],
+     "banque": [
+      "comptoirs",
+      "commerce",
+      "châteaux",
+      "combat"
+     ],
+     "aide": "Un lieu où les marchands s’installent pour acheter et vendre s’appelle un comptoir.",
+     "explication": "Les marchands installent des **comptoirs** : malgré les guerres, le **commerce** continue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tableau, alors que les croisades opposent des armées ?",
+     "options": [
+      "Des marchandises continuent d’aller et venir",
+      "Le commerce est totalement interrompu",
+      "Seuls les chrétiens ont le droit de commercer",
+      "L’Orient n’a rien à vendre à l’Occident"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui vient d’Orient et ce qui vient d’Occident.",
+     "explication": "Les échanges ne s’arrêtent **jamais** : l’Orient envoie soie, épices et papier ; l’Occident, draps, bois et métaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "d08c84fe-8112-5b6b-bb75-0870d4b1c883",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le carnet d’un traducteur de Tolède",
+   "competence": "analyser-document",
+   "situation": "Vers 1150, à Tolède, trois hommes traduisent un livre d’Aristote. Une carte situe la ville ; le carnet raconte comment le savoir voyage d’une langue à l’autre.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "La Méditerranée au Moyen Âge",
+     "fond": "mediterranee",
+     "cadrage": [
+      -10,
+      30,
+      40,
+      47
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "tolede",
+       "lon": -4.02,
+       "lat": 39.86,
+       "symbole": "point",
+       "nom": "Tolède"
+      },
+      {
+       "id": "venise",
+       "lieu": "venise",
+       "symbole": "point",
+       "nom": "Venise"
+      },
+      {
+       "id": "jerusalem",
+       "lieu": "jerusalem",
+       "symbole": "point",
+       "nom": "Jérusalem"
+      },
+      {
+       "id": "constantinople",
+       "lieu": "constantinople",
+       "symbole": "point",
+       "nom": "Constantinople"
+      }
+     ]
+    },
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le carnet d’un traducteur",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Tolède, vers 1150. Hugo, un clerc chrétien, travaille avec Samuel, un savant juif, et Yusuf, un savant musulman. Devant eux, un livre d’Aristote écrit en grec, déjà traduit en arabe.",
+      "Yusuf lit la version arabe à voix haute, Samuel la traduit en langue parlée, et Hugo l’écrit en latin pour les écoles d’Occident.",
+      "Dans la pile de livres, un traité de calcul arabe parle de « al-jabr » : l’[[a|algèbre]]. Il présente aussi les chiffres venus d’Inde et le zéro, que les marchands italiens apprennent à utiliser."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville espagnole où chrétiens, juifs et musulmans traduisent ensemble.",
+     "reponse": [
+      "tolede"
+     ],
+     "aide": "Cette ville est au centre de l’Espagne.",
+     "explication": "**Tolède** est un grand centre de traduction : on y traduit Aristote, Euclide, Ptolémée."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville que le pape Urbain II veut faire reprendre en 1095.",
+     "reponse": [
+      "jerusalem"
+     ],
+     "aide": "C’est une ville sainte, à l’est de la Méditerranée.",
+     "explication": "Le pape appelle à reprendre **Jérusalem**, ville sainte du christianisme, de l’islam et du judaïsme."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes du voyage du livre d’Aristote.",
+     "items": [
+      "Écrit en grec",
+      "Traduit en arabe",
+      "Retraduit en latin à Tolède",
+      "Redécouvert par l’Occident"
+     ],
+     "aide": "Suis le livre dans le carnet : de quelle langue à quelle langue passe-t-il ?",
+     "explication": "Grec, puis **arabe**, puis **latin** à Tolède : l’Occident redécouvre ainsi des textes qu’il avait perdus."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche le mot français qui vient de l’arabe « al-jabr ».",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cette science calcule avec des lettres et des inconnues.",
+     "explication": "Le mot **algèbre** vient de l’arabe « al-jabr »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que la Méditerranée est à la fois une frontière et un pont ?",
+     "options": [
+      "Elle sépare des civilisations, mais porte aussi leurs échanges",
+      "Elle sépare les civilisations et ne porte que des armées",
+      "Elle réunit trois civilisations qui ne se battent jamais",
+      "Elle n’est traversée que par des marchands italiens"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux croisades d’un côté, aux traductions de l’autre.",
+     "explication": "Les mêmes routes portent les **armées** et les **livres** : c’est à la fois une frontière et un pont."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cd8c20a-8763-5263-97cc-390c27715457",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Ceux qui prient, ceux qui combattent, ceux qui travaillent",
+   "competence": "observer-schema",
+   "situation": "Au Moyen Âge, on dit que la société se partage en trois ordres. Un schéma les présente ; un tableau dit quelle part de la population chacun représente.",
+   "documents": [
+    {
+     "id": "ordres",
+     "type": "schema",
+     "titre": "La société en trois ordres",
+     "largeur": 320,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 15,
+       "l": 280,
+       "h": 62,
+       "arrondi": 12,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "clerge",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 55,
+       "y": 46,
+       "emoji": "⛪",
+       "taille": 34
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 52,
+       "texte": "Le clergé",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 89,
+       "l": 280,
+       "h": 62,
+       "arrondi": 12,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "seigneurs",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 55,
+       "y": 120,
+       "emoji": "⚔️",
+       "taille": 34
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 126,
+       "texte": "Les seigneurs",
+       "gras": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 163,
+       "l": 280,
+       "h": 62,
+       "arrondi": 12,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "paysans",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 55,
+       "y": 194,
+       "emoji": "🌾",
+       "taille": 34
+      },
+      {
+       "forme": "texte",
+       "x": 105,
+       "y": 200,
+       "texte": "Les paysans",
+       "gras": true,
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "parts",
+     "type": "tableau",
+     "titre": "Quelle part de la population ?",
+     "source": "D’après le cours (ordre de grandeur).",
+     "colonnes": [
+      "Les ordres",
+      "Part de la population"
+     ],
+     "lignes": [
+      [
+       "Le clergé et les seigneurs réunis",
+       "Environ 10 %"
+      ],
+      [
+       "Les paysans",
+       "Environ 90 %"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ordres",
+     "enonce": "Touche l’ordre de ceux qui prient.",
+     "reponse": [
+      "clerge"
+     ],
+     "aide": "Ceux qui prient sont les hommes d’Église.",
+     "explication": "Ceux qui **prient** forment le **clergé**."
+    },
+    {
+     "type": "zone",
+     "document": "ordres",
+     "enonce": "Touche l’ordre de ceux qui combattent.",
+     "reponse": [
+      "seigneurs"
+     ],
+     "aide": "Ils défendent la société les armes à la main.",
+     "explication": "Ceux qui **combattent** sont les **seigneurs**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dans un village de 200 habitants, environ combien sont des paysans ?",
+     "reponse": 180,
+     "unite": "habitants",
+     "aide": "Calcule 90 % de 200, c’est-à-dire 9 dixièmes.",
+     "explication": "90 % de 200 = **180** : neuf Européens sur dix sont des paysans."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cd8c20a-8763-5263-97cc-390c27715457",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La vie d’Aubin, paysan d’une seigneurie",
+   "competence": "analyser-document",
+   "situation": "Aubin vit dans une seigneurie. Le récit raconte ce qu’il doit au seigneur ; le plan montre où tout se trouve.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Plan d’une seigneurie",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 320,
+       "h": 230,
+       "arrondi": 14,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 25,
+       "l": 150,
+       "h": 95,
+       "teinte": "ambre",
+       "motif": "hachures",
+       "id": "reserve",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 232,
+       "y": 62,
+       "emoji": "🏰",
+       "taille": 40,
+       "id": "chateau",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 232,
+       "y": 94,
+       "texte": "Château",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 305,
+       "y": 52,
+       "emoji": "⛪",
+       "taille": 28,
+       "id": "eglise",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 305,
+       "y": 78,
+       "texte": "Église",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 150,
+       "l": 62,
+       "h": 50,
+       "teinte": "jaune",
+       "motif": "points",
+       "id": "tenure1",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 97,
+       "y": 150,
+       "l": 62,
+       "h": 50,
+       "teinte": "jaune",
+       "motif": "points",
+       "id": "tenure2",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 169,
+       "y": 150,
+       "l": 62,
+       "h": 50,
+       "teinte": "jaune",
+       "motif": "points",
+       "id": "tenure3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 252,
+       "y": 150,
+       "l": 66,
+       "h": 50,
+       "arrondi": 6,
+       "teinte": "brun",
+       "motif": "clair",
+       "texte": "Moulin",
+       "id": "moulin",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 224,
+       "texte": "Les champs des paysans, découpés en parcelles",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La vie d’Aubin",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Aubin est un vilain : il est libre, mais pour vivre il cultive une petite parcelle du seigneur, sa tenure, et il verse des redevances.",
+      "À la Saint-Rémi, il paie le [[c|cens]] en argent. Après la moisson, il donne au seigneur une part de sa récolte : c’est le champart. Il doit aussi trois jours de corvée sur la réserve, le grand champ que le seigneur exploite pour lui, au pied du château.",
+      "Pour moudre son grain, il doit utiliser le moulin du seigneur et payer en échange : c’est une banalité. Enfin, il verse environ un dixième de sa récolte à l’Église : la dîme."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Où Aubin fait-il ses journées de corvée ? Touche l’endroit sur le plan.",
+     "reponse": [
+      "reserve"
+     ],
+     "aide": "Relis le deuxième paragraphe : la réserve est « au pied du château ».",
+     "explication": "La corvée se fait sur la **réserve**, le grand champ que le seigneur exploite directement."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "enonce": "Touche le bâtiment que les paysans sont obligés d’utiliser en payant.",
+     "reponse": [
+      "moulin"
+     ],
+     "aide": "Lis le dernier paragraphe : de quoi Aubin a-t-il besoin pour moudre son grain ?",
+     "explication": "Le **moulin** est une banalité : son usage est obligatoire et payant (comme le four et le pressoir)."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "enonce": "Touche la redevance qu’Aubin paie en argent.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce que le paysan paie à la Saint-Rémi.",
+     "explication": "Le **cens** est une redevance en argent."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque redevance à ce qu’elle représente.",
+     "paires": [
+      [
+       "Le cens",
+       "Une somme d’argent"
+      ],
+      [
+       "Le champart",
+       "Une part de la récolte"
+      ],
+      [
+       "La corvée",
+       "Des journées de travail gratuit"
+      ],
+      [
+       "La banalité",
+       "Une taxe pour le moulin ou le four"
+      ],
+      [
+       "La dîme",
+       "Un dixième de la récolte pour l’Église"
+      ]
+     ],
+     "aide": "Relis le récit paragraphe par paragraphe : chaque redevance y est expliquée.",
+     "explication": "**Cens** : argent ; **champart** : part de récolte ; **corvée** : travail gratuit ; **banalité** : taxe d’un équipement du seigneur ; **dîme** : dixième pour l’Église."
+    },
+    {
+     "type": "choix",
+     "enonce": "Aubin est un vilain, pas un serf. Qu’est-ce que cela change pour lui ?",
+     "options": [
+      "Il est libre de partir, contrairement au serf",
+      "Il n’a aucune redevance à payer au seigneur",
+      "Il est attaché à la terre toute sa vie",
+      "Il est propriétaire de la réserve"
+     ],
+     "reponse": 0,
+     "aide": "Le récit commence par dire qu’Aubin est libre.",
+     "explication": "Le vilain est **libre** : il peut partir, se marier et transmettre son bien ; le serf est attaché à la terre."
+    }
+   ]
+  },
+  {
+   "chapitre": "7cd8c20a-8763-5263-97cc-390c27715457",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Avant et après la peste : une seigneurie ébranlée",
+   "competence": "lire-graphique",
+   "situation": "Entre l’an 1000 et le milieu du XIVe siècle, la population d’une région d’Europe change beaucoup. Un graphique et la chronique d’un curé en racontent l’histoire.",
+   "documents": [
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La population d’une région (indice)",
+     "source": "Indices écrits pour l’exercice, d’après le cours : elle double de 1000 à 1300, puis un tiers disparaît.",
+     "categories": [
+      "An 1000",
+      "Vers 1300",
+      "Après la crise"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        150,
+        300,
+        200
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Population",
+      "unite": "indice",
+      "min": 0,
+      "max": 350,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Époque"
+     }
+    },
+    {
+     "id": "chronique",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La chronique d’un curé",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Année 1349. La [[p|peste]] est passée chez nous. Dans notre village, un habitant sur trois est mort ; des maisons restent vides.",
+      "Les champs de plusieurs paysans ne sont plus cultivés : il n’y a plus assez de bras. Le seigneur du château se plaint que ses redevances rentrent mal.",
+      "Depuis dix ans, la guerre et les mauvaises récoltes ajoutent à nos malheurs."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Par combien la population est-elle multipliée entre l’an 1000 et 1300 ?",
+     "reponse": 2,
+     "aide": "Divise la hauteur de la barre « Vers 1300 » par celle de la barre « An 1000 ».",
+     "explication": "300 ÷ 150 = **2** : la population double grâce aux progrès agricoles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle part de la population de 1300 disparaît pendant la crise ?",
+     "options": [
+      "Un tiers",
+      "Un dixième",
+      "La moitié",
+      "Les trois quarts"
+     ],
+     "reponse": 0,
+     "aide": "Calcule la perte entre 300 et 200, puis compare-la à 300.",
+     "explication": "300 − 200 = 100, et 100 est le **tiers** de 300 : famines, peste et guerre emportent un tiers de la population."
+    },
+    {
+     "type": "zone",
+     "document": "chronique",
+     "enonce": "Touche le fléau qui frappe le village en 1349.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "C’est une maladie qui a ravagé l’Europe entre 1347 et 1352.",
+     "explication": "La **peste noire** (1347-1352) emporte un grand nombre d’Européens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la chronique sur la seigneurie après la peste ?",
+     "options": [
+      "Elle est ébranlée : moins de paysans, donc moins de redevances",
+      "Elle est plus riche : les paysans sont moins nombreux",
+      "Elle n’est pas touchée : seuls les villages meurent",
+      "Elle disparaît : tous les seigneurs partent en guerre"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit le curé des champs et des redevances du seigneur.",
+     "explication": "Moins de paysans, ce sont moins de **redevances** et des champs sans bras : tout le système seigneurial est ébranlé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces étapes de la plus ancienne à la plus récente.",
+     "items": [
+      "Les paysans adoptent de nouveaux outils et défrichent",
+      "Les récoltes augmentent",
+      "La population double entre 1000 et 1300",
+      "La peste noire frappe l’Europe"
+     ],
+     "aide": "Pars des progrès agricoles, puis suis leurs conséquences jusqu’à la crise.",
+     "explication": "Progrès techniques, **récoltes**, **population doublée**, puis la crise : peste noire en 1347-1352."
+    }
+   ]
+  },
+  {
+   "chapitre": "f25a8430-454c-5d1f-928a-4dbd248c7a27",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux clergés, deux façons de vivre",
+   "competence": "lire-tableau",
+   "situation": "Le curé du village et le moine de l’abbaye voisine font tous deux partie de l’Église, mais ils ne vivent pas de la même façon.",
+   "documents": [
+    {
+     "id": "clerges",
+     "type": "tableau",
+     "titre": "Les deux clergés",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le clergé",
+      "Où il vit",
+      "Qui le compose"
+     ],
+     "lignes": [
+      [
+       "Séculier",
+       "Dans le siècle, au contact des fidèles",
+       "Le curé, l’évêque, le pape"
+      ],
+      [
+       "Régulier",
+       "Selon une règle, à l’écart du monde",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À quel clergé appartient le curé d’une paroisse ?",
+     "options": [
+      "Au clergé séculier",
+      "Au clergé régulier"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne où le curé est cité.",
+     "explication": "Le curé est dans le clergé **séculier** : il vit « dans le siècle », au contact des fidèles.",
+     "ordreFixe": true
+    },
+    {
+     "type": "texte",
+     "enonce": "Comment appelle-t-on les hommes du clergé régulier, qui vivent dans des monastères ? (un mot)",
+     "reponse": [
+      "moines",
+      "les moines",
+      "moine",
+      "un moine"
+     ],
+     "placeholder": "un mot",
+     "aide": "Cluny et Cîteaux sont leurs monastères.",
+     "explication": "Le clergé régulier est composé des **moines**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la devise des moines, « ora et labora ».",
+     "texte": "Ora et labora signifie : « ___ et ___ ».",
+     "reponses": [
+      [
+       "prier"
+      ],
+      [
+       "travailler"
+      ]
+     ],
+     "banque": [
+      "prier",
+      "travailler",
+      "combattre",
+      "jeûner"
+     ],
+     "aide": "« Ora » est le même mot que dans « oratores », ceux qui prient.",
+     "explication": "La devise des moines est **prier** et **travailler**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f25a8430-454c-5d1f-928a-4dbd248c7a27",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Roman ou gothique ? Lire une église",
+   "competence": "observer-schema",
+   "situation": "Deux églises dessinées en coupe : l’une de style roman, l’autre de style gothique. Observe-les pour retrouver leurs traits.",
+   "documents": [
+    {
+     "id": "eglises",
+     "type": "schema",
+     "titre": "Deux styles d’église",
+     "largeur": 340,
+     "hauteur": 240,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 22,
+       "texte": "Roman",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 85,
+       "y": 38,
+       "texte": "XIe-XIIe siècles",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 22,
+       "texte": "Gothique",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 38,
+       "texte": "à partir du XIIe siècle",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 25,
+       "y": 105,
+       "l": 120,
+       "h": 110,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         18,
+         105
+        ],
+        [
+         85,
+         58
+        ],
+        [
+         152,
+         105
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 38,
+       "y": 128,
+       "l": 14,
+       "h": 22,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 118,
+       "y": 128,
+       "l": 14,
+       "h": 22,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "chemin",
+       "d": "M62 215 V185 A23 23 0 0 1 108 185 V215 Z",
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "plein-cintre",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 213,
+       "y": 100,
+       "l": 84,
+       "h": 115,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         206,
+         100
+        ],
+        [
+         255,
+         42
+        ],
+        [
+         304,
+         100
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "chemin",
+       "d": "M232 205 V135 Q232 110 255 90 Q278 110 278 135 V205 Z",
+       "teinte": "bleu",
+       "motif": "plein",
+       "id": "vitrail",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 308,
+       "y": 138,
+       "l": 18,
+       "h": 77,
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         297,
+         100
+        ],
+        [
+         326,
+         138
+        ],
+        [
+         326,
+         152
+        ],
+        [
+         297,
+         126
+        ]
+       ],
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "arc-boutant",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "eglises",
+     "enonce": "Touche l’ouverture en demi-cercle de l’église romane : le plein cintre.",
+     "reponse": [
+      "plein-cintre"
+     ],
+     "aide": "Cherche la porte dont le haut est arrondi, comme un demi-cercle.",
+     "explication": "L’art roman utilise des arcs en **plein cintre**, en demi-cercle, dans des murs épais."
+    },
+    {
+     "type": "zone",
+     "document": "eglises",
+     "enonce": "Touche la grande ouverture de l’église gothique qui laisse entrer la lumière.",
+     "reponse": [
+      "vitrail"
+     ],
+     "aide": "Dans l’église gothique, les murs sont allégés pour laisser place à de grandes ouvertures.",
+     "explication": "Le **vitrail** est une grande fenêtre de verre coloré : l’art gothique en fait des murs de lumière."
+    },
+    {
+     "type": "zone",
+     "document": "eglises",
+     "enonce": "Touche l’arc-boutant, qui soutient le mur de l’extérieur.",
+     "reponse": [
+      "arc-boutant"
+     ],
+     "aide": "C’est la pièce oblique qui s’appuie contre le haut du mur.",
+     "explication": "L’**arc-boutant** soutient le mur de l’extérieur : c’est ce qui permet d’alléger les murs et d’ouvrir de grands vitraux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle église est la plus claire à l’intérieur, et pourquoi ?",
+     "options": [
+      "La gothique, avec ses murs allégés et ses vitraux",
+      "La romane, avec ses fenêtres larges et nombreuses",
+      "La romane, car ses murs sont très minces",
+      "Elles sont aussi sombres l’une que l’autre"
+     ],
+     "reponse": 0,
+     "aide": "Compare la taille des ouvertures dans les deux dessins.",
+     "explication": "Le roman a des **murs épais** et de **petites ouvertures** : il est sombre ; le gothique est lumineux grâce à ses vitraux."
+    }
+   ]
+  },
+  {
+   "chapitre": "f25a8430-454c-5d1f-928a-4dbd248c7a27",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un dimanche à la paroisse, vers 1250",
+   "competence": "analyser-document",
+   "situation": "Au XIIIe siècle, l’Église est présente à chaque moment de la vie d’un village. Un récit raconte un dimanche ; un tableau liste les sacrements.",
+   "documents": [
+    {
+     "id": "dimanche",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un dimanche à la paroisse",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Dimanche, les cloches sonnent la messe. Tout le village est à l’église : au Moyen Âge, être chrétien n’est pas un choix. Le curé baptise le dernier-né du meunier : c’est l’un des sept [[s|sacrements]] qui jalonnent une vie.",
+      "À la sortie, les paysans déposent à la porte de l’église la [[d|dîme]] : environ un dixième de leur récolte. Elle fait vivre le curé et aide les pauvres.",
+      "Un frère mendiant prêche sur la place. À l’hôpital voisin, des religieuses soignent des malades. L’Église est aussi propriétaire de champs et de moulins."
+     ]
+    },
+    {
+     "id": "sacrements",
+     "type": "tableau",
+     "titre": "Les sept sacrements",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "N°",
+      "Le sacrement"
+     ],
+     "lignes": [
+      [
+       1,
+       "Baptême"
+      ],
+      [
+       2,
+       "Confirmation"
+      ],
+      [
+       3,
+       "?"
+      ],
+      [
+       4,
+       "Pénitence"
+      ],
+      [
+       5,
+       "Mariage"
+      ],
+      [
+       6,
+       "?"
+      ],
+      [
+       7,
+       "Extrême-onction"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dimanche",
+     "enonce": "Touche le mot qui désigne les sept grands moments de la vie religieuse, comme le baptême.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Le baptême en est un : cherche le mot qui les regroupe.",
+     "explication": "Les sept **sacrements** jalonnent l’existence : baptême, confirmation, eucharistie, pénitence, mariage, ordre, extrême-onction."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un paysan récolte 50 sacs de grain. Combien en donne-t-il à l’Église pour la dîme (environ un dixième) ?",
+     "reponse": 5,
+     "unite": "sacs",
+     "aide": "Divise 50 par 10.",
+     "explication": "Un dixième de 50 sacs, c’est **5 sacs**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux cases « ? » du tableau.",
+     "texte": "Les sacrements manquants sont l’___ (n° 3) et l’___ (n° 6).",
+     "reponses": [
+      [
+       "eucharistie"
+      ],
+      [
+       "ordre"
+      ]
+     ],
+     "banque": [
+      "eucharistie",
+      "ordre",
+      "carême",
+      "aumône"
+     ],
+     "aide": "Il manque l’un des sacrements de l’Église, le troisième de la liste officielle.",
+     "explication": "La liste complète : baptême, confirmation, **eucharistie**, pénitence, mariage, **ordre**, extrême-onction."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : l’Église le reçoit-elle, ou le donne-t-elle ?",
+     "categories": [
+      "Ce que l’Église reçoit",
+      "Ce que l’Église assure"
+     ],
+     "items": [
+      [
+       "La dîme",
+       0
+      ],
+      [
+       "Les revenus de ses domaines",
+       0
+      ],
+      [
+       "L’hôpital",
+       1
+      ],
+      [
+       "L’école",
+       1
+      ],
+      [
+       "L’aumône aux pauvres",
+       1
+      ],
+      [
+       "L’accueil des pèlerins",
+       1
+      ]
+     ],
+     "aide": "La dîme et les domaines sont des ressources ; le reste est un service rendu.",
+     "explication": "L’Église reçoit la **dîme** et les revenus de ses domaines ; elle assure l’**hôpital**, l’**école**, l’**aumône** et l’accueil des pèlerins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce dimanche sur la place de l’Église ?",
+     "options": [
+      "Elle encadre toute la vie, des sacrements aux soins",
+      "Elle ne s’occupe que de la prière du dimanche",
+      "Elle est la seule à ne rien posséder",
+      "Elle laisse chacun libre de ne pas être chrétien"
+     ],
+     "reponse": 0,
+     "aide": "Relis tout ce que l’Église fait dans le récit : messe, dîme, hôpital…",
+     "explication": "L’Église **encadre la vie entière** : sacrements, calendrier, mais aussi hôpital, école et aumône."
+    }
+   ]
+  },
+  {
+   "chapitre": "00b22604-2e14-50cd-827d-fe2754d38f5e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dans une ville entourée de remparts",
+   "competence": "observer-schema",
+   "situation": "Au XIIIe siècle, Noé arrive dans une ville médiévale. Le plan ci-dessous montre ce qu’il y découvre.",
+   "documents": [
+    {
+     "id": "ville",
+     "type": "schema",
+     "titre": "Plan d’une ville médiévale",
+     "largeur": 340,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 125,
+       "rx": 150,
+       "ry": 108,
+       "teinte": "brun",
+       "motif": "plein",
+       "id": "rempart",
+       "zone": true
+      },
+      {
+       "forme": "ellipse",
+       "cx": 170,
+       "cy": 125,
+       "rx": 138,
+       "ry": 96,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 58,
+       "y": 95,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 58,
+       "y": 135,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 84,
+       "y": 175,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 270,
+       "y": 100,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 282,
+       "y": 140,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 172,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 125,
+       "y": 198,
+       "l": 22,
+       "h": 18,
+       "teinte": "corail",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 112,
+       "y": 112,
+       "emoji": "⛪",
+       "taille": 44,
+       "id": "cathedrale",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 112,
+       "y": 140,
+       "texte": "Cathédrale",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 150,
+       "y": 150,
+       "l": 84,
+       "h": 38,
+       "arrondi": 6,
+       "teinte": "blanc",
+       "motif": "plein",
+       "texte": "Place du marché",
+       "id": "marche",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 232,
+       "y": 72,
+       "l": 18,
+       "h": 50,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "beffroi",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         228,
+         72
+        ],
+        [
+         241,
+         52
+        ],
+        [
+         254,
+         72
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 241,
+       "y": 136,
+       "texte": "Beffroi",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ville",
+     "enonce": "Touche les remparts, qui protègent la ville.",
+     "reponse": [
+      "rempart"
+     ],
+     "aide": "Ce sont les murs qui entourent toute la ville.",
+     "explication": "Les **remparts** entourent la ville et la protègent des attaques."
+    },
+    {
+     "type": "zone",
+     "document": "ville",
+     "enonce": "Touche l’endroit où marchands et acheteurs se rencontrent.",
+     "reponse": [
+      "marche"
+     ],
+     "aide": "Le nom de cet endroit contient le mot « marché ».",
+     "explication": "La **place du marché** est le cœur du commerce de la ville."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les rues sont étroites et les maisons serrées. Quels dangers menacent surtout la ville ?",
+     "options": [
+      "Les incendies et les épidémies",
+      "Les inondations et les séismes",
+      "Les avalanches et les éruptions",
+      "Les invasions de sauterelles"
+     ],
+     "reponse": 0,
+     "aide": "Regarde combien de maisons sont collées les unes aux autres.",
+     "explication": "La ville est dense et sale : elle est exposée aux **incendies** et aux **épidémies**, et pourtant elle attire sans cesse."
+    }
+   ]
+  },
+  {
+   "chapitre": "00b22604-2e14-50cd-827d-fe2754d38f5e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Foires, draps et chartes : la ville s’affirme",
+   "competence": "lire-carte",
+   "situation": "Entre le XIe et le XIIIe siècle, des villes se couvrent de marchands. Une carte situe quatre lieux du commerce ; une charte, écrite pour l’exercice, montre comment une ville gagne sa liberté.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Quatre lieux du commerce médiéval",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -6,
+      41,
+      16,
+      56
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "troyes",
+       "lieu": "troyes",
+       "symbole": "point",
+       "nom": "Troyes"
+      },
+      {
+       "id": "bruges",
+       "lon": 3.22,
+       "lat": 51.21,
+       "symbole": "point",
+       "nom": "Bruges"
+      },
+      {
+       "id": "venise",
+       "lieu": "venise",
+       "symbole": "point",
+       "nom": "Venise"
+      },
+      {
+       "id": "lubeck",
+       "lon": 10.69,
+       "lat": 53.87,
+       "symbole": "point",
+       "nom": "Lübeck"
+      }
+     ]
+    },
+    {
+     "id": "charte",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Charte de franchises d’une ville imaginaire",
+     "auteur": "Texte écrit pour l’exercice, dans l’esprit des chartes du XIIe siècle",
+     "blocs": [
+      "Nous, seigneur de cette terre, accordons aux habitants du bourg le droit de s’administrer eux-mêmes.",
+      "Chaque année, ils éliront des [[e|échevins]] qui rendront la justice et lèveront les impôts de la ville.",
+      "Tout serf qui aura vécu dans la ville un an et un jour sans que son maître le réclame sera libre."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville des foires de Champagne, où se retrouvent marchands du Nord et du Sud.",
+     "reponse": [
+      "troyes"
+     ],
+     "aide": "Les foires de Champagne se tiennent à Troyes et à Provins, à l’est de Paris.",
+     "explication": "**Troyes** et Provins accueillent les foires de Champagne, carrefour entre le Nord et le Sud."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu à sa spécialité.",
+     "paires": [
+      [
+       "Bruges",
+       "Le drap"
+      ],
+      [
+       "Venise",
+       "Le commerce méditerranéen et la banque"
+      ],
+      [
+       "Lübeck",
+       "La Hanse : la mer du Nord et la Baltique"
+      ],
+      [
+       "Troyes",
+       "Les foires, entre Nord et Sud"
+      ]
+     ],
+     "aide": "Bruges est une ville flamande ; Lübeck est au bord de la mer Baltique.",
+     "explication": "**Bruges** vit du drap ; **Venise** du commerce et de la banque ; **Lübeck** de la Hanse ; **Troyes** de ses foires."
+    },
+    {
+     "type": "zone",
+     "document": "charte",
+     "enonce": "Touche le mot qui désigne ceux qui administrent la ville.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche ceux qui rendent la justice et lèvent les impôts.",
+     "explication": "Les **échevins** (ou consuls) administrent la ville : c’est la liberté que donne la charte de franchises."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « l’air de la ville rend libre » ?",
+     "options": [
+      "Un serf qui y vit un an et un jour devient libre",
+      "Un serf peut quitter la ville sans payer",
+      "Les villes ne payent aucun impôt au seigneur",
+      "Tous les habitants deviennent seigneurs"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase de la charte.",
+     "explication": "Un serf qui a vécu **un an et un jour** en ville sans être réclamé devient libre : la ville est un statut."
+    }
+   ]
+  },
+  {
+   "chapitre": "00b22604-2e14-50cd-827d-fe2754d38f5e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Théo, apprenti tisserand",
+   "competence": "analyser-document",
+   "situation": "Théo veut devenir tisserand de drap dans une grande ville. Les statuts de la corporation et un tableau lui disent comment s’y prendre.",
+   "documents": [
+    {
+     "id": "statuts",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Statuts d’une corporation de tisserands",
+     "auteur": "Texte écrit pour l’exercice, dans l’esprit des statuts du Moyen Âge",
+     "blocs": [
+      "Art. 1. Nul ne peut tisser dans la ville s’il n’est reçu dans la corporation.",
+      "Art. 2. La [[q|qualité]] de chaque drap sera vérifiée, et un tissu mal fait sera refusé.",
+      "Art. 3. Le prix du drap est fixé par les maîtres : nul ne vend moins cher qu’un autre.",
+      "Art. 4. Un garçon entre comme apprenti chez un maître. Quand il a fini, il devient compagnon, puis il peut présenter un chef-d’œuvre pour devenir maître."
+     ]
+    },
+    {
+     "id": "carriere",
+     "type": "tableau",
+     "titre": "Les étapes d’un métier",
+     "source": "Durées imaginées, écrites pour l’exercice.",
+     "colonnes": [
+      "Étape",
+      "Durée",
+      "Statut"
+     ],
+     "lignes": [
+      [
+       "Apprenti",
+       "4 ans",
+       "Logé et nourri chez le maître"
+      ],
+      [
+       "Compagnon",
+       "3 ans",
+       "Payé à la journée"
+      ],
+      [
+       "Maître",
+       "Sans limite",
+       "Patron de son atelier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "statuts",
+     "enonce": "Touche le mot qui montre que la corporation contrôle la valeur des tissus.",
+     "reponse": [
+      "q"
+     ],
+     "aide": "Cherche ce que la corporation vérifie sur chaque drap.",
+     "explication": "La corporation vérifie la **qualité** de chaque drap : c’est l’une de ses missions, avec les prix et l’apprentissage."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes de la carrière d’un artisan.",
+     "items": [
+      "Apprenti",
+      "Compagnon",
+      "Maître"
+     ],
+     "aide": "Relis l’article 4 des statuts.",
+     "explication": "On est d’abord **apprenti**, puis **compagnon**, puis **maître**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Théo entre en apprentissage à 13 ans. S’il suit les durées du tableau, à quel âge finit-il sa période de compagnon ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Additionne l’âge de départ, la durée d’apprentissage et celle de compagnon.",
+     "explication": "13 + 4 + 3 = **20 ans** : il peut alors présenter son chef-d’œuvre pour devenir maître."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’effet principal des règles de cette corporation ?",
+     "options": [
+      "Elles garantissent la qualité mais limitent la concurrence",
+      "Elles permettent à chacun de vendre au prix qu’il veut",
+      "Elles ouvrent le métier à tous sans formation",
+      "Elles interdisent aux maîtres de fixer les prix"
+     ],
+     "reponse": 0,
+     "aide": "Relis les articles 1 à 3 : qui peut tisser ? Qui fixe le prix ?",
+     "explication": "Seuls les membres tissent, la qualité est contrôlée et les prix sont fixés : c’est un **gage de qualité**, mais aussi une **limite à la concurrence**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1d4380b-2584-56a7-a9d1-4656989540e2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De Hugues Capet à Jeanne d’Arc",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé sur les rois de France, Camille trace une frise de l’an 950 à l’an 1500. La guerre de Cent Ans commence en 1337 et s’achève en 1453.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les Capétiens et les Valois",
+     "debut": 950,
+     "fin": 1500,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "guerre",
+       "debut": 1337,
+       "fin": 1453,
+       "nom": "Cent Ans",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "capet",
+       "date": 987,
+       "nom": "Hugues Capet élu"
+      },
+      {
+       "id": "bouvines",
+       "date": 1214,
+       "nom": "Bouvines"
+      },
+      {
+       "id": "sacre",
+       "date": 1429,
+       "nom": "Sacre de Charles VII"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la victoire de Philippe Auguste en 1214.",
+     "reponse": [
+      "bouvines"
+     ],
+     "aide": "Cherche la date 1214 sous les événements.",
+     "explication": "En **1214**, Philippe Auguste l’emporte à Bouvines."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période de la guerre de Cent Ans.",
+     "reponse": [
+      "guerre"
+     ],
+     "aide": "Cherche la barre qui porte le nom de la guerre.",
+     "explication": "La guerre de Cent Ans dure de **1337 à 1453**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure en réalité la guerre de Cent Ans ?",
+     "reponse": 116,
+     "unite": "ans",
+     "aide": "Soustrais 1337 à 1453.",
+     "explication": "1453 − 1337 = **116 ans** : le nom est rond, la durée ne l’est pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le sacre de Charles VII, grâce à Jeanne d’Arc, a-t-il lieu pendant la guerre de Cent Ans ?",
+     "options": [
+      "Oui, en 1429",
+      "Non, avant la guerre",
+      "Non, après la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1429 aux dates de début et de fin de la barre.",
+     "explication": "Oui : 1429 est entre 1337 et 1453, c’est un sursaut du roi en pleine guerre.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "b1d4380b-2584-56a7-a9d1-4656989540e2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Reims, Bouvines, Azincourt : le roi et son royaume",
+   "competence": "lire-carte",
+   "situation": "Pour affirmer leur pouvoir, les rois de France se servent de lieux, de victoires et d’institutions. Une carte du nord du royaume et un tableau résument leurs moyens.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le nord du royaume",
+     "fond": "france",
+     "cadrage": [
+      -2,
+      47.5,
+      7,
+      51.5
+     ],
+     "regionsCliquables": true,
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "point",
+       "nom": "Paris"
+      },
+      {
+       "id": "reims",
+       "lieu": "reims",
+       "symbole": "point",
+       "nom": "Reims"
+      },
+      {
+       "id": "bouvines",
+       "lon": 3.22,
+       "lat": 50.58,
+       "symbole": "carre"
+      },
+      {
+       "id": "azincourt",
+       "lon": 2.13,
+       "lat": 50.46,
+       "symbole": "triangle"
+      }
+     ],
+     "etiquettes": [
+      {
+       "texte": "Bouvines",
+       "lon": 3.2,
+       "lat": 51.05,
+       "style": "ville"
+      },
+      {
+       "texte": "Azincourt",
+       "lon": 1.2,
+       "lat": 50.15,
+       "style": "ville"
+      }
+     ]
+    },
+    {
+     "id": "moyens",
+     "type": "tableau",
+     "titre": "Les quatre moyens de l’affirmation",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le moyen",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "L’hérédité",
+       "Les rois font élire leur fils de leur vivant"
+      ],
+      [
+       "Le sacre à Reims",
+       "Le roi est oint d’une huile sainte"
+      ],
+      [
+       "?",
+       "Mariage, héritage, confiscation, guerre"
+      ],
+      [
+       "La construction d’un État",
+       "Baillis au nord, sénéchaux au sud, Parlement, impôt, armée"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville où les rois de France sont sacrés.",
+     "reponse": [
+      "reims"
+     ],
+     "aide": "Le roi y reçoit une huile sainte.",
+     "explication": "Les rois sont sacrés à **Reims** : le sacre fait d’eux des rois « par la grâce de Dieu »."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la région que Philippe Auguste reprend au roi d’Angleterre en 1204 (le duché de Normandie).",
+     "reponse": [
+      "NOR"
+     ],
+     "aide": "Cette région est à l’ouest de Paris, au bord de la Manche.",
+     "explication": "Philippe Auguste reprend la **Normandie** : le domaine royal triple sous son règne."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque lieu à ce qui s’y rattache.",
+     "paires": [
+      [
+       "Reims",
+       "Le sacre des rois de France"
+      ],
+      [
+       "Bouvines",
+       "Victoire de Philippe Auguste en 1214"
+      ],
+      [
+       "Azincourt",
+       "Défaite française de la guerre de Cent Ans"
+      ]
+     ],
+     "aide": "Bouvines et Azincourt sont deux batailles : une victoire et une défaite.",
+     "explication": "**Reims** : sacre ; **Bouvines** : victoire (1214) ; **Azincourt** : défaite pendant la guerre de Cent Ans."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel mot complète la case « ? » du tableau : l’agrandissement du… ? (un mot)",
+     "reponse": [
+      "domaine",
+      "le domaine",
+      "domaine royal",
+      "le domaine royal"
+     ],
+     "placeholder": "un mot",
+     "aide": "Mariage, héritage, confiscation et guerre servent à agrandir les terres du roi.",
+     "explication": "Le roi agrandit son **domaine**, c’est-à-dire les terres qu’il gouverne directement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quelle partie du royaume travaille un sénéchal ?",
+     "options": [
+      "Au sud",
+      "Au nord",
+      "À Paris seulement",
+      "Dans les villes flamandes"
+     ],
+     "reponse": 0,
+     "aide": "Dans la dernière ligne du tableau, les baillis sont au nord.",
+     "explication": "Les baillis travaillent au nord, les **sénéchaux** au **sud**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b1d4380b-2584-56a7-a9d1-4656989540e2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Lettre d’un bailli à son successeur",
+   "competence": "analyser-document",
+   "situation": "Un bailli, agent du roi, écrit à celui qui lui succède. Un schéma rappelle comment la guerre de Cent Ans commence.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un bailli du nord du royaume",
+     "auteur": "Lettre imaginaire, écrite pour l’exercice",
+     "blocs": [
+      "Cher successeur, au nord du royaume, c’est le [[b|bailli]] qui représente le roi : il rend la justice, lève l’impôt et fait exécuter les ordres venus de Paris.",
+      "Mes collègues du Midi, qu’on appelle sénéchaux, font la même chose. Chaque année, les comptes sont examinés à Paris par la Chambre des comptes, et le Parlement juge les appels.",
+      "Le roi s’entoure aussi de juristes, ses légistes, qui défendent son autorité."
+     ]
+    },
+    {
+     "id": "guerre",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Comment commence la guerre de Cent Ans",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Les Capétiens directs s’éteignent"
+      },
+      {
+       "id": "b",
+       "texte": "Une nouvelle dynastie monte sur le trône : ?"
+      },
+      {
+       "id": "c",
+       "texte": "Le roi d’Angleterre revendique la couronne"
+      },
+      {
+       "id": "d",
+       "texte": "La guerre dure de 1337 à 1453"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "enonce": "Touche le titre de l’agent du roi qui écrit cette lettre.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Cherche qui rend la justice et lève l’impôt au nord du royaume.",
+     "explication": "L’auteur est un **bailli** : les baillis représentent le roi au nord, les sénéchaux au sud."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où l’auteur de la lettre exerce-t-il son métier ?",
+     "options": [
+      "Dans le nord du royaume",
+      "Dans le Midi, comme un sénéchal",
+      "À la cour du roi d’Angleterre",
+      "Dans un monastère"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première phrase de la lettre.",
+     "explication": "Il écrit « au nord du royaume » : c’est un **bailli**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel est le nom de la dynastie qui remplace les Capétiens directs ? (un nom)",
+     "reponse": [
+      "Valois",
+      "les Valois",
+      "Les Valois"
+     ],
+     "placeholder": "un nom",
+     "aide": "Elle donne son nom aux rois comme Charles VII.",
+     "explication": "Les **Valois** montent sur le trône : c’est leur couronne que le roi d’Angleterre revendique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années dure la guerre indiquée dans le dernier cadre du schéma ?",
+     "reponse": 116,
+     "unite": "ans",
+     "aide": "Soustrais 1337 à 1453.",
+     "explication": "1453 − 1337 = **116 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que l’État moderne est en place à la fin de la guerre ?",
+     "options": [
+      "Le roi a une armée et un impôt permanents",
+      "Les seigneurs ont retrouvé leur pouvoir complet",
+      "Le roi d’Angleterre est devenu roi de France",
+      "Il n’y a plus ni Parlement ni baillis"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que le roi garde après la guerre pour gouverner.",
+     "explication": "Le royaume sort de la guerre avec une **armée permanente**, un **impôt permanent** et un sentiment national naissant."
+    }
+   ]
+  },
+  {
+   "chapitre": "b87941ad-849e-5b72-92c4-bb5492270bcc",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux routes vers de nouvelles terres",
+   "competence": "lire-carte",
+   "situation": "À la fin du XVe siècle, des navigateurs partent d’Espagne et du Portugal. Deux routes sont tracées sur la carte.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux voyages (1492 et 1498)",
+     "fond": "monde",
+     "cadrage": [
+      -100,
+      -42,
+      95,
+      58
+     ],
+     "source": "Tracés simplifiés, écrits pour l’exercice.",
+     "lieux": [
+      {
+       "id": "iberie",
+       "lieu": "lisbonne",
+       "symbole": "point",
+       "nom": "Péninsule ibérique"
+      },
+      {
+       "id": "antilles",
+       "lon": -74.5,
+       "lat": 24.1,
+       "symbole": "point"
+      },
+      {
+       "id": "cap",
+       "lon": 18.47,
+       "lat": -34.36,
+       "symbole": "point",
+       "nom": "Cap de Bonne-Espérance"
+      },
+      {
+       "id": "calicut",
+       "lon": 75.78,
+       "lat": 11.25,
+       "symbole": "point",
+       "nom": "Calicut"
+      }
+     ],
+     "traits": [
+      {
+       "id": "route1492",
+       "points": [
+        "lisbonne",
+        [
+         -74.5,
+         24.1
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "corail",
+       "etiquette": "1492"
+      },
+      {
+       "id": "route1498",
+       "points": [
+        "lisbonne",
+        [
+         -18,
+         20
+        ],
+        [
+         -15,
+         0
+        ],
+        [
+         5,
+         -25
+        ],
+        [
+         18.47,
+         -34.36
+        ],
+        [
+         35,
+         -30
+        ],
+        [
+         55,
+         -5
+        ],
+        [
+         75.78,
+         11.25
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "etiquette": "1498"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la route de Christophe Colomb, qui atteint l’Amérique en 1492.",
+     "reponse": [
+      "route1492"
+     ],
+     "aide": "Cette route traverse l’océan vers l’ouest.",
+     "explication": "Colomb navigue vers l’ouest et atteint l’Amérique en **1492**, en croyant arriver aux Indes."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le port indien que Vasco de Gama atteint par la mer en 1498.",
+     "reponse": [
+      "calicut"
+     ],
+     "aide": "Gama a contourné toute l’Afrique pour y arriver.",
+     "explication": "Vasco de Gama atteint l’Inde, à **Calicut**, après avoir contourné l’Afrique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le voyage de Colomb de celui de Vasco de Gama ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais 1492 à 1498.",
+     "explication": "1498 − 1492 = **6 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel océan Colomb traverse-t-il pour aller de la péninsule ibérique aux Bahamas ?",
+     "options": [
+      "L’océan Atlantique",
+      "L’océan Pacifique",
+      "L’océan Indien",
+      "L’océan Arctique"
+     ],
+     "reponse": 0,
+     "aide": "Regarde entre quelles terres passe la flèche de 1492.",
+     "explication": "Colomb traverse l’**océan Atlantique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b87941ad-849e-5b72-92c4-bb5492270bcc",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cortés, Pizarro et l’effondrement des peuples amérindiens",
+   "competence": "analyser-document",
+   "situation": "Au XVIe siècle, des conquistadors détruisent deux grands empires d’Amérique. Un tableau les présente ; un graphique montre le prix humain de cette conquête.",
+   "documents": [
+    {
+     "id": "conquetes",
+     "type": "tableau",
+     "titre": "Deux conquêtes",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "Le conquistador",
+      "L’empire détruit",
+      "La date"
+     ],
+     "lignes": [
+      [
+       "Cortés",
+       "Les Aztèques, au Mexique",
+       "?"
+      ],
+      [
+       "Pizarro",
+       "?",
+       "1533"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "pop",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "La population amérindienne",
+     "source": "Ordre de grandeur d’après le cours : une perte de 80 à 90 % en un siècle (ici 85 %).",
+     "categories": [
+      "Avant l’arrivée des Européens",
+      "Un siècle plus tard"
+     ],
+     "series": [
+      {
+       "nom": "Population",
+       "valeurs": [
+        100,
+        15
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Population",
+      "unite": "indice (100 au départ)",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     }
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète les deux cases « ? » du tableau.",
+     "texte": "Cortés détruit l’empire aztèque en ___ ; Pizarro détruit l’empire des ___.",
+     "reponses": [
+      [
+       "1521"
+      ],
+      [
+       "Incas"
+      ]
+     ],
+     "banque": [
+      "1521",
+      "1533",
+      "Incas",
+      "Aztèques"
+     ],
+     "aide": "Pizarro détruit l’empire du Pérou ; Cortés, celui du Mexique, douze ans plus tôt.",
+     "explication": "Cortés : **1521**, les Aztèques ; Pizarro : **1533**, les **Incas**."
+    },
+    {
+     "type": "zone",
+     "document": "pop",
+     "enonce": "Touche la barre qui montre la population après un siècle de conquête.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "C’est la barre de droite, la plus basse.",
+     "explication": "Un siècle plus tard, la population amérindienne est devenue très petite : c’est l’**effondrement démographique**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la population a disparu en un siècle, d’après le graphique ?",
+     "reponse": 85,
+     "unite": "%",
+     "aide": "Calcule la différence entre 100 et la hauteur de la seconde barre.",
+     "explication": "100 − 15 = **85 %** de la population disparue : c’est dans la fourchette de 80 à 90 % donnée par le cours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la principale cause de cet effondrement ?",
+     "options": [
+      "Les maladies européennes, sans immunité chez ces peuples",
+      "Les armes à feu utilisées pendant toute la conquête",
+      "Les famines dues au départ des conquistadors",
+      "Les révoltes des peuples amérindiens entre eux"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux maladies comme la variole et la rougeole.",
+     "explication": "Les **maladies** (variole, rougeole) tuent le plus : ces populations n’avaient aucune immunité."
+    }
+   ]
+  },
+  {
+   "chapitre": "b87941ad-849e-5b72-92c4-bb5492270bcc",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le tour du monde de la caravelle",
+   "competence": "analyser-document",
+   "situation": "En 1519, cinq navires quittent l’Espagne pour chercher une route vers l’ouest. Une carte trace leur voyage ; le journal d’un marin imaginaire en donne le bilan.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le premier tour du monde (1519-1522)",
+     "fond": "monde",
+     "cadrage": [
+      -130,
+      -60,
+      150,
+      60
+     ],
+     "source": "Tracé très simplifié, écrit pour l’exercice. La traversée du Pacifique, entre les deux tracés, n’est pas dessinée.",
+     "lieux": [
+      {
+       "id": "espagne",
+       "lon": -6.35,
+       "lat": 36.78,
+       "symbole": "point",
+       "nom": "Espagne"
+      },
+      {
+       "id": "detroit",
+       "lon": -68.5,
+       "lat": -52.6,
+       "symbole": "point",
+       "nom": "Détroit de Magellan"
+      },
+      {
+       "id": "philippines",
+       "lon": 124,
+       "lat": 10,
+       "symbole": "point",
+       "nom": "Philippines"
+      }
+     ],
+     "traits": [
+      {
+       "id": "aller",
+       "points": [
+        [
+         -6.35,
+         36.78
+        ],
+        [
+         -34,
+         -8
+        ],
+        [
+         -57,
+         -35
+        ],
+        [
+         -68.5,
+         -52.6
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet",
+       "etiquette": "1519"
+      },
+      {
+       "id": "retour",
+       "points": [
+        [
+         124,
+         10
+        ],
+        [
+         100,
+         -8
+        ],
+        [
+         55,
+         -30
+        ],
+        [
+         18.47,
+         -36
+        ],
+        [
+         -2,
+         -15
+        ],
+        [
+         -20,
+         10
+        ],
+        [
+         -6.35,
+         36.78
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "ambre",
+       "etiquette": "1522"
+      }
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Journal de bord d’un marin imaginaire",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Septembre 1519. Nous quittons l’Espagne avec cinq navires et deux cent trente-sept hommes.",
+      "Nous cherchons une route vers l’ouest pour atteindre les terres aux épices : les mers du côté de l’est sont tenues par les Portugais.",
+      "Septembre 1522. Un seul navire revient, avec dix-huit hommes. Nous avons fait le tour de la Terre."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’hommes de moins au retour qu’au départ, d’après le journal ?",
+     "reponse": 219,
+     "unite": "hommes",
+     "aide": "Soustrais le nombre d’hommes au retour au nombre d’hommes au départ.",
+     "explication": "237 − 18 = **219 hommes** de moins : le voyage est une aventure terrible."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle part des cinq navires revient en Espagne ?",
+     "options": [
+      "Un cinquième",
+      "Un tiers",
+      "La moitié",
+      "Les deux tiers"
+     ],
+     "reponse": 0,
+     "aide": "Un seul navire revient sur les cinq partis.",
+     "explication": "Un navire sur cinq : **un cinquième**. Les quatre autres sont perdus en route."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche le passage qui permet à l’expédition d’entrer dans l’océan Pacifique.",
+     "reponse": [
+      "detroit"
+     ],
+     "aide": "Il est à l’extrémité sud de l’Amérique du Sud.",
+     "explication": "Le **détroit de Magellan**, tout au sud de l’Amérique, ouvre la route vers le Pacifique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque produit selon son voyage dans l’échange colombien.",
+     "categories": [
+      "Vient d’Amérique vers l’Europe",
+      "Vient d’Europe vers l’Amérique"
+     ],
+     "items": [
+      [
+       "Maïs",
+       0
+      ],
+      [
+       "Pomme de terre",
+       0
+      ],
+      [
+       "Tomate",
+       0
+      ],
+      [
+       "Tabac",
+       0
+      ],
+      [
+       "Cacao",
+       0
+      ],
+      [
+       "Blé",
+       1
+      ],
+      [
+       "Canne à sucre",
+       1
+      ],
+      [
+       "Chevaux",
+       1
+      ],
+      [
+       "Bovins",
+       1
+      ]
+     ],
+     "aide": "Pense à ce que les Européens ne connaissaient pas avant 1492 : tomates, maïs…",
+     "explication": "Vers l’Europe : **maïs, pomme de terre, tomate, tabac** (et cacao). Vers l’Amérique : **blé, canne à sucre, chevaux, bovins**. On parle d’**échange colombien**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le mot « découverte » est-il un mot européen ?",
+     "options": [
+      "Ces terres étaient habitées et organisées depuis des millénaires",
+      "Les Européens ne les ont jamais vraiment visitées",
+      "Les peuples d’Amérique ignoraient l’existence de la mer",
+      "Seuls les Portugais avaient le droit de les nommer"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux peuples qui vivaient déjà là avant 1492.",
+     "explication": "Ces terres étaient **habitées** depuis des millénaires : « découverte » est le point de vue des Européens."
+    }
+   ]
+  },
+  {
+   "chapitre": "36e2f416-291a-5fc1-a50d-9c3639acc046",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre villes, deux empires",
+   "competence": "lire-carte",
+   "situation": "Au XVIe siècle, Charles Quint règne sur l’Espagne et sur l’Empire ; Soliman le Magnifique règne à Istanbul. Quatre villes de la carte racontent leur rivalité.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "L’Europe de Charles Quint et de Soliman",
+     "fond": "europe",
+     "frontieres": true,
+     "cadrage": [
+      -12,
+      35,
+      42,
+      56
+     ],
+     "source": "Carte simplifiée, écrite pour l’exercice.",
+     "lieux": [
+      {
+       "id": "madrid",
+       "lieu": "madrid",
+       "symbole": "point",
+       "nom": "Madrid"
+      },
+      {
+       "id": "paris",
+       "lieu": "paris",
+       "symbole": "point",
+       "nom": "Paris"
+      },
+      {
+       "id": "vienne",
+       "lieu": "vienne-autriche",
+       "symbole": "point",
+       "nom": "Vienne"
+      },
+      {
+       "id": "istanbul",
+       "lieu": "istanbul",
+       "symbole": "point",
+       "nom": "Istanbul"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la ville que Soliman assiège en 1529 sans réussir à la prendre.",
+     "reponse": [
+      "vienne"
+     ],
+     "aide": "Cette ville est la capitale actuelle de l’Autriche, terre des Habsbourg.",
+     "explication": "Soliman assiège **Vienne** en 1529, mais ne la prend pas."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Touche la capitale de l’Empire ottoman, où l’architecte Sinan bâtit de grandes mosquées.",
+     "reponse": [
+      "istanbul"
+     ],
+     "aide": "Elle est à l’est de la carte, entre l’Europe et l’Asie.",
+     "explication": "**Istanbul** devient une capitale magnifique sous Soliman."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Charles Quint est élu empereur en 1519 et abdique en 1556. Combien d’années dure son règne d’empereur ?",
+     "reponse": 37,
+     "unite": "ans",
+     "aide": "Soustrais 1519 à 1556.",
+     "explication": "1556 − 1519 = **37 ans** : un règne long et épuisant."
+    }
+   ]
+  },
+  {
+   "chapitre": "36e2f416-291a-5fc1-a50d-9c3639acc046",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le conseiller du roi propose une alliance",
+   "competence": "se-reperer-temps",
+   "situation": "Vers 1536, un conseiller de François Ier propose une idée qui va surprendre toute l’Europe. Une frise place les deux grands souverains de l’époque.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Soliman et Charles Quint",
+     "debut": 1500,
+     "fin": 1580,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "soliman",
+       "debut": 1520,
+       "fin": 1566,
+       "nom": "Soliman sultan (1520-1566)",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "vienne",
+       "date": 1529,
+       "nom": "Siège de Vienne"
+      },
+      {
+       "id": "abdication",
+       "date": 1556,
+       "nom": "Abdication de Charles Quint"
+      },
+      {
+       "id": "lepante",
+       "date": 1571,
+       "nom": "Lépante"
+      }
+     ]
+    },
+    {
+     "id": "note",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Note d’un conseiller du roi",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Sire, Charles Quint règne sur l’Espagne, les Pays-Bas, l’Autriche et l’Empire : il nous entoure de tous côtés.",
+      "Le sultan Soliman, lui, menace l’empereur à l’est. Si nous nous [[a|allions]] avec lui, l’empereur devra se défendre sur deux fronts.",
+      "Certes, une alliance entre un roi très chrétien et un sultan musulman fera du bruit en Europe. Mais notre intérêt est de desserrer l’étau."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la période du règne de Soliman le Magnifique.",
+     "reponse": [
+      "soliman"
+     ],
+     "aide": "Cherche la barre qui porte son nom.",
+     "explication": "Soliman est sultan de **1520 à 1566**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Soliman règne-t-il encore après l’abdication de Charles Quint ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Soustrais la date de l’abdication à la date de la fin du règne de Soliman.",
+     "explication": "1566 − 1556 = **10 ans** : Soliman survit dix ans à son grand rival."
+    },
+    {
+     "type": "zone",
+     "document": "note",
+     "enonce": "Touche le mot qui annonce ce que le conseiller propose au roi.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche le verbe qui dit ce que le roi ferait avec le sultan.",
+     "explication": "Le conseiller propose de s’**allier** avec Soliman contre Charles Quint."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette alliance entre un roi chrétien et un sultan musulman ?",
+     "options": [
+      "La politique l’emporte sur la religion",
+      "La religion l’emporte sur la politique",
+      "Les deux souverains sont devenus amis",
+      "Charles Quint a gagné la guerre"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase du conseiller : de quel intérêt parle-t-il ?",
+     "explication": "François Ier cherche à **desserrer l’étau** de Charles Quint : c’est la **politique** qui décide, avant la religion."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche la bataille navale de 1571 qui arrête l’expansion ottomane en Méditerranée occidentale.",
+     "reponse": [
+      "lepante"
+     ],
+     "aide": "C’est l’événement le plus récent de la frise.",
+     "explication": "La bataille de **Lépante**, en 1571, arrête l’expansion ottomane."
+    }
+   ]
+  },
+  {
+   "chapitre": "36e2f416-291a-5fc1-a50d-9c3639acc046",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Charles Quint, un empire trop vaste",
+   "competence": "analyser-document",
+   "situation": "Charles Quint règne sur des terres immenses, mais il a trop d’adversaires. Un tableau les nomme ; un schéma montre comment il partage son empire en 1556.",
+   "documents": [
+    {
+     "id": "adversaires",
+     "type": "tableau",
+     "titre": "Les difficultés de Charles Quint",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "L’adversaire",
+      "Le problème"
+     ],
+     "lignes": [
+      [
+       "La France de François Ier",
+       "Elle l’encercle et le combat (Marignan, Pavie)"
+      ],
+      [
+       "La Réforme protestante",
+       "Elle ? l’Allemagne"
+      ],
+      [
+       "Les Ottomans",
+       "Ils le menacent à l’est"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "partage",
+     "type": "schema",
+     "titre": "Le partage de 1556",
+     "largeur": 340,
+     "hauteur": 215,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 105,
+       "y": 12,
+       "l": 130,
+       "h": 52,
+       "arrondi": 10,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 34,
+       "texte": "Charles Quint",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 52,
+       "texte": "abdique en 1556",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        140,
+        66
+       ],
+       "a": [
+        90,
+        120
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        200,
+        66
+       ],
+       "a": [
+        250,
+        120
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 122,
+       "l": 140,
+       "h": 66,
+       "arrondi": 10,
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "philippe",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 148,
+       "texte": "Son fils",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 90,
+       "y": 170,
+       "texte": "Philippe II",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 122,
+       "l": 140,
+       "h": 66,
+       "arrondi": 10,
+       "teinte": "vert",
+       "motif": "clair",
+       "id": "ferdinand",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 148,
+       "texte": "Son frère",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 170,
+       "texte": "Ferdinand",
+       "gras": true,
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "trous",
+     "enonce": "Complète le tableau pour la Réforme et les Ottomans.",
+     "texte": "La Réforme protestante ___ l’Allemagne, et les Ottomans menacent Charles Quint à l’___.",
+     "reponses": [
+      [
+       "déchire"
+      ],
+      [
+       "est"
+      ]
+     ],
+     "banque": [
+      "déchire",
+      "unit",
+      "est",
+      "ouest"
+     ],
+     "aide": "La Réforme divise les chrétiens d’Allemagne ; les Ottomans viennent du côté de l’Orient.",
+     "explication": "La Réforme **déchire** l’Allemagne ; les Ottomans le menacent à l’**est**."
+    },
+    {
+     "type": "zone",
+     "document": "partage",
+     "enonce": "Touche l’héritier qui reçoit les terres autrichiennes des Habsbourg.",
+     "reponse": [
+      "ferdinand"
+     ],
+     "aide": "Charles Quint donne l’Espagne à son fils et l’Autriche à son frère.",
+     "explication": "**Ferdinand**, frère de Charles Quint, reçoit l’Autriche ; Philippe II reçoit l’Espagne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Charles Quint est né en 1500. Quel âge a-t-il quand il abdique ?",
+     "reponse": 56,
+     "unite": "ans",
+     "aide": "Soustrais l’année de naissance à l’année de l’abdication.",
+     "explication": "1556 − 1500 = **56 ans** : il est épuisé par ses guerres."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Charles Quint partage-t-il son empire entre deux héritiers ?",
+     "options": [
+      "Épuisé par ses guerres, il laisse deux parts plus faciles à tenir",
+      "Les Ottomans l’obligent à céder l’Espagne par un traité",
+      "Le pape lui interdit de garder l’Espagne et l’Autriche",
+      "Il veut offrir une terre de son empire à chaque roi voisin"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui menace Charles Quint dans le tableau, et dans quel état il abdique.",
+     "explication": "Charles Quint, **épuisé** par ses guerres, abdique : son fils reçoit l’Espagne, son frère l’Autriche."
+    }
+   ]
+  },
+  {
+   "chapitre": "af955002-5f19-5321-a3ad-46abccf42a43",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Gutenberg et Copernic sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Mia prépare une affiche sur la Renaissance. Elle place deux dates importantes sur une frise des années 1400 à 1600.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Deux grandes dates",
+     "debut": 1400,
+     "fin": 1600,
+     "pas": 50,
+     "periodes": [
+      {
+       "id": "xvi",
+       "debut": 1501,
+       "fin": 1600,
+       "nom": "XVIe siècle",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "gutenberg",
+       "date": 1450,
+       "nom": "Gutenberg"
+      },
+      {
+       "id": "copernic",
+       "date": 1543,
+       "nom": "Copernic"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui met au point l’imprimerie à caractères mobiles vers 1450.",
+     "reponse": [
+      "gutenberg"
+     ],
+     "aide": "Cherche la date 1450 sur la frise.",
+     "explication": "**Gutenberg** met au point l’impression à caractères mobiles vers **1450**, à Mayence."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’imprimerie de Gutenberg de l’annonce de Copernic ?",
+     "reponse": 93,
+     "unite": "ans",
+     "aide": "Soustrais 1450 à 1543.",
+     "explication": "1543 − 1450 = **93 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Copernic affirme que la Terre tourne autour du Soleil. Dans quel siècle le fait-il ?",
+     "options": [
+      "Au XVIe siècle",
+      "Au XVe siècle",
+      "Au XVIIe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si 1543 est dans la barre « XVIe siècle ».",
+     "explication": "1543 est dans la barre du **XVIe siècle**.",
+     "ordreFixe": true
+    }
+   ]
+  },
+  {
+   "chapitre": "af955002-5f19-5321-a3ad-46abccf42a43",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi lire en grec ? Une leçon d’humanisme",
+   "competence": "analyser-texte",
+   "situation": "Jeanne, élève dans une école de la Renaissance, interroge son maître sur sa façon de lire les textes anciens. Un tableau présente quelques grandes figures.",
+   "documents": [
+    {
+     "id": "dialogue",
+     "type": "dialogue",
+     "modele": "bulles",
+     "titre": "À l’école d’un humaniste",
+     "participants": [
+      {
+       "nom": "Jeanne",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Le maître",
+       "emoji": "🧑‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jeanne",
+       "texte": "Maître, pourquoi lisez-vous Aristote en [[g|grec]] plutôt qu’en latin ?"
+      },
+      {
+       "qui": "Le maître",
+       "texte": "Parce que les copies successives ont glissé des erreurs. Je veux revenir au texte dans sa langue d’origine."
+      },
+      {
+       "qui": "Jeanne",
+       "texte": "Et si le texte se trompe ?"
+      },
+      {
+       "qui": "Le maître",
+       "texte": "Alors je le [[c|critique]] : un humaniste ne répète pas l’autorité, il vérifie ses sources."
+      }
+     ]
+    },
+    {
+     "id": "figures",
+     "type": "tableau",
+     "titre": "Quelques grandes figures",
+     "source": "D’après le cours.",
+     "colonnes": [
+      "La figure",
+      "Son œuvre ou son titre"
+     ],
+     "lignes": [
+      [
+       "Érasme",
+       "Le Nouveau Testament en grec, *L’Éloge de la ?*"
+      ],
+      [
+       "Thomas More",
+       "*Utopie*"
+      ],
+      [
+       "Léonard de Vinci",
+       "Peintre, ingénieur, anatomiste : l’« homme ? »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "enonce": "Touche la langue dans laquelle le maître veut lire Aristote.",
+     "reponse": [
+      "g"
+     ],
+     "aide": "Le maître refuse de le lire en latin.",
+     "explication": "Il lit Aristote en **grec** : les humanistes reviennent aux textes antiques dans leur langue d’origine."
+    },
+    {
+     "type": "zone",
+     "document": "dialogue",
+     "enonce": "Touche le verbe qui dit ce que l’humaniste fait aux sources au lieu de les répéter.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche ce que le maître fait si le texte se trompe.",
+     "explication": "Il **critique** ses sources : il les vérifie au lieu de répéter l’autorité."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les deux cases « ? » du tableau.",
+     "texte": "Érasme a écrit *L’Éloge de la* ___, et Léonard de Vinci est appelé l’« homme ___ ».",
+     "reponses": [
+      [
+       "folie"
+      ],
+      [
+       "universel"
+      ]
+     ],
+     "banque": [
+      "folie",
+      "sagesse",
+      "universel",
+      "savant"
+     ],
+     "aide": "Léonard est à la fois peintre, ingénieur et anatomiste : un homme qui s’intéresse à tout.",
+     "explication": "*L’Éloge de la* **folie** d’Érasme ; Léonard de Vinci, l’« homme **universel** »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les humanistes rejetaient-ils la religion chrétienne ?",
+     "options": [
+      "Non : ils placent l’homme au centre sans rompre avec la foi",
+      "Oui : ils cherchaient à supprimer la religion chrétienne",
+      "Oui : ils n’admiraient que les dieux de l’Antiquité",
+      "Non : ils ne s’occupaient jamais des questions religieuses"
+     ],
+     "reponse": 0,
+     "aide": "Érasme a justement édité le Nouveau Testament en grec.",
+     "explication": "L’humanisme place l’être humain et sa raison au centre, **sans rompre avec la foi**."
+    }
+   ]
+  },
+  {
+   "chapitre": "af955002-5f19-5321-a3ad-46abccf42a43",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un libraire de Lyon à l’heure de l’imprimerie",
+   "competence": "analyser-document",
+   "situation": "Vers 1520, un libraire de Lyon vend des livres imprimés. Un schéma montre ce que l’imprimerie change ; son récit montre ce que cela donne dans sa boutique.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Ce que change l’imprimerie",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Gutenberg imprime à Mayence"
+      },
+      {
+       "id": "b",
+       "texte": "On produit des centaines d’exemplaires"
+      },
+      {
+       "id": "c",
+       "texte": "?"
+      },
+      {
+       "id": "d",
+       "texte": "Les idées circulent vite et loin"
+      },
+      {
+       "id": "e",
+       "texte": "L’Église ne contrôle plus ce qu’on lit"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      },
+      {
+       "de": "d",
+       "a": "e"
+      }
+     ]
+    },
+    {
+     "id": "libraire",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La boutique d’un libraire",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Vers 1520. Depuis que les livres sont imprimés, tout a changé dans ma boutique. Un livre qui coûtait autrefois une fortune se vend à un prix que même un artisan peut payer : le [[p|prix]] s’est effondré.",
+      "Je vends maintenant le Nouveau Testament en grec édité par Érasme, des textes antiques, des traités de médecine. Les étudiants viennent de toute la ville.",
+      "Le curé de la paroisse voisine s’inquiète : il ne peut plus savoir tout ce que les gens lisent."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on à la place du point d’interrogation dans le schéma ?",
+     "options": [
+      "Le prix du livre baisse",
+      "Le prix du livre augmente",
+      "Les livres deviennent rares",
+      "Les copistes en font plus"
+     ],
+     "reponse": 0,
+     "aide": "Lis le récit du libraire : qu’est-ce qui change pour le client ?",
+     "explication": "Quand on imprime des centaines d’exemplaires, le **prix du livre s’effondre** : les livres circulent."
+    },
+    {
+     "type": "zone",
+     "document": "libraire",
+     "enonce": "Touche le mot qui montre que les livres sont devenus accessibles.",
+     "reponse": [
+      "p"
+     ],
+     "aide": "Cherche ce qui « s’est effondré » dans la boutique.",
+     "explication": "Le **prix** du livre s’effondre : même un artisan peut en acheter."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le curé s’inquiète-t-il ?",
+     "options": [
+      "L’Église perd le contrôle de ce que les gens lisent",
+      "Les livres sont tous interdits à Lyon par le roi",
+      "Les étudiants quittent la ville pour Paris",
+      "Les copistes manquent de papier pour écrire"
+     ],
+     "reponse": 0,
+     "aide": "Relis le dernier paragraphe et le dernier maillon du schéma.",
+     "explication": "Aucun pouvoir ne peut plus surveiller ce que lisent les gens : l’**Église perd le contrôle** de la diffusion des textes."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque personnage selon son domaine.",
+     "categories": [
+      "Humaniste",
+      "Artiste",
+      "Savant"
+     ],
+     "items": [
+      [
+       "Érasme",
+       0
+      ],
+      [
+       "Thomas More",
+       0
+      ],
+      [
+       "Michel-Ange",
+       1
+      ],
+      [
+       "Raphaël",
+       1
+      ],
+      [
+       "Copernic",
+       2
+      ],
+      [
+       "Vésale",
+       2
+      ]
+     ],
+     "aide": "Érasme et More écrivent ; Copernic observe le ciel ; Vésale étudie le corps.",
+     "explication": "**Érasme** et **More** : humanistes ; **Michel-Ange** et **Raphaël** : artistes ; **Copernic** et **Vésale** : savants."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Gutenberg met au point l’impression à caractères mobiles vers 1450, à ___.",
+     "reponses": [
+      [
+       "Mayence"
+      ]
+     ],
+     "banque": [
+      "Mayence",
+      "Florence",
+      "Rome",
+      "Paris"
+     ],
+     "aide": "Regarde le premier maillon du schéma.",
+     "explication": "Gutenberg travaille à **Mayence**."
+    }
+   ]
+  }
+ ]
+}

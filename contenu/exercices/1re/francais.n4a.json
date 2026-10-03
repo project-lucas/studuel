@@ -1,0 +1,2357 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "d573d7f6-9707-51ee-946c-2ec4353a0da1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une autrice qui réclame la tribune",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur Olympe de Gouges. Place sa Déclaration dans le temps, puis relève sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Olympe de Gouges et les Françaises",
+     "debut": 1740,
+     "fin": 1950,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1748,
+       "nom": "Naissance"
+      },
+      {
+       "id": "dec",
+       "date": 1791,
+       "nom": "Sa Déclaration"
+      },
+      {
+       "id": "vote",
+       "date": 1944,
+       "nom": "Vote des Françaises"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Déclaration des droits de la femme et de la citoyenne",
+     "sousTitre": "Olympe de Gouges, 1791",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Autrice",
+       "valeur": "Marie Gouze, née à Montauban"
+      },
+      {
+       "texte": "Dédiée à",
+       "valeur": "La reine Marie-Antoinette"
+      },
+      {
+       "texte": "Nombre d’articles",
+       "valeur": "Dix-sept"
+      },
+      {
+       "texte": "Modèle",
+       "valeur": "La Déclaration de 1789"
+      },
+      {
+       "texte": "Objet d’étude",
+       "valeur": "?"
+      }
+     ],
+     "pied": "Publiée en septembre 1791",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "dec"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication de la Déclaration d’Olympe de Gouges.",
+     "aide": "Cherche l’événement qui porte le nom de son texte.",
+     "explication": "Le texte paraît en **1791**, en pleine Révolution, deux ans après la Déclaration de 1789 qu’il imite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la publication de la Déclaration du droit de vote des Françaises ?",
+     "reponse": 153,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1944 − 1791 = **153 ans** : les Françaises voteront bien après l’appel d’Olympe de Gouges."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la carte d’identité du texte.",
+     "texte": "La Déclaration de 1791 est dédiée à la ___ et reprend le texte de ___.",
+     "reponses": [
+      [
+       "reine"
+      ],
+      [
+       "1789"
+      ]
+     ],
+     "banque": [
+      "reine",
+      "1789",
+      "1793",
+      "Constituante"
+     ],
+     "aide": "Relis les lignes « Dédiée à » et « Modèle » de la carte.",
+     "explication": "Elle est dédiée à la **reine** Marie-Antoinette et calque la Déclaration de **1789**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel objet d’étude du programme range-t-on ce texte (la ligne « ? ») ?",
+     "options": [
+      "La littérature d’idées",
+      "Le roman et le récit",
+      "La poésie",
+      "Le théâtre"
+     ],
+     "reponse": 0,
+     "aide": "C’est un texte qui défend une thèse et réclame des droits.",
+     "explication": "Texte argumentatif et engagé, la Déclaration relève de **la littérature d’idées**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d573d7f6-9707-51ee-946c-2ec4353a0da1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq pièces pour un seul texte",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu dois décrire la construction de la Déclaration, puis comparer son premier article à celui de 1789.",
+   "documents": [
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Les parties du texte",
+     "colonnes": [
+      "Partie",
+      "Son contenu"
+     ],
+     "lignes": [
+      [
+       "Dédicace",
+       "Adressée à la reine"
+      ],
+      [
+       "?",
+       "Au nom des « mères, filles, sœurs, représentantes de la nation »"
+      ],
+      [
+       "Dix-sept articles",
+       "Dans l’ordre exact du texte de 1789"
+      ],
+      [
+       "Postambule",
+       "Un appel enflammé : « Femme, réveille-toi »"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "art1",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Deux articles premiers",
+     "blocs": [
+      "1789 : « Les [[c|hommes]] naissent et demeurent libres et égaux en droits. »",
+      "1791 : « La [[c|femme]] naît libre et demeure égale à l’homme en droits. »"
+     ],
+     "source": "Déclaration des droits de l’homme et du citoyen (1789), art. 1 ; Olympe de Gouges, Déclaration des droits de la femme et de la citoyenne (1791), art. 1"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle partie du texte se cache derrière la case « ? » ?",
+     "options": [
+      "Le préambule",
+      "L’avant-propos",
+      "Le contrat social",
+      "Le sommaire"
+     ],
+     "reponse": 0,
+     "aide": "Elle ouvre le texte et parle au nom des femmes, avant les articles.",
+     "explication": "C’est **le préambule** : il parle au nom des « mères, filles, sœurs, représentantes de la nation »."
+    },
+    {
+     "type": "zone",
+     "document": "parties",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui montre que les articles suivent le texte de 1789.",
+     "aide": "Cherche l’idée d’un ordre identique.",
+     "explication": "Les articles reprennent **dans l’ordre exact** ceux de 1789 : c’est le principe du pastiche."
+    },
+    {
+     "type": "zone",
+     "document": "art1",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le sujet de chacune des deux phrases, c’est-à-dire ceux qui naissent libres.",
+     "aide": "Cherche qui « naît » dans chaque phrase.",
+     "explication": "Le seul mot qui change de sujet est **hommes** → **femme** : le texte de 1789 est repris pour y inscrire les femmes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque partie du texte à ce à quoi ou à qui elle s’adresse.",
+     "paires": [
+      [
+       "La dédicace",
+       "La reine Marie-Antoinette"
+      ],
+      [
+       "Le préambule",
+       "Les mères, filles et sœurs"
+      ],
+      [
+       "Le postambule",
+       "Les femmes elles-mêmes"
+      ],
+      [
+       "Les articles",
+       "Le modèle de 1789, recopié pour inscrire les femmes"
+      ]
+     ],
+     "aide": "Le registre change au postambule : il parle aux femmes.",
+     "explication": "La **dédicace** vise la reine, le **préambule** les mères, filles, sœurs, le **postambule** les femmes, les **articles** copient 1789."
+    }
+   ]
+  },
+  {
+   "chapitre": "d573d7f6-9707-51ee-946c-2ec4353a0da1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Retourner 1789 contre ses oublis",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si recopier un texte, c’est le trahir ou l’utiliser. Lis leur échange, les phrases d’Olympe de Gouges, puis construis l’argument.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "La copie est-elle une arme ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sami",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Olympe de Gouges n’a rien inventé : elle recopie la Déclaration de 1789 en changeant deux ou trois mots."
+      },
+      {
+       "qui": "Sami",
+       "texte": "Justement. En reprenant le texte fondateur mot pour mot, elle rend l’[[e|exclusion]] des femmes criante, sans avoir à la démontrer."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Donc la copie est une arme ?"
+      },
+      {
+       "qui": "Sami",
+       "texte": "Oui : c’est un pastiche qui retourne les principes de 1789 contre leurs propres oublis."
+      }
+     ]
+    },
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Article X et postambule",
+     "blocs": [
+      "Article X : « La femme a le droit de monter sur l’[[l|échafaud]] ; elle doit avoir également celui de monter à la [[l|tribune]]… »",
+      "Postambule : « Femme, réveille-toi ; le tocsin de la raison se fait entendre dans tout l’univers. »"
+     ],
+     "source": "Olympe de Gouges, Déclaration des droits de la femme et de la citoyenne (1791), article X (début) et postambule"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Les femmes sont des citoyennes à part entière",
+       "La loi les punit comme telles : elle doit aussi les représenter",
+       "?"
+      ],
+      [
+       "Copier 1789 prouve l’oubli des femmes",
+       "Le texte est quasi identique : seules les personnes visées changent",
+       "L’article premier : « La femme naît libre… »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui désigne ce que le pastiche rend criant.",
+     "aide": "Sami parle de ce que 1789 oubliait.",
+     "explication": "Le pastiche rend **l’exclusion** des femmes criante : il suffit de comparer, sans autre démonstration."
+    },
+    {
+     "type": "zone",
+     "document": "art",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Dans l’article X, touche les deux lieux que la citoyenne doit pouvoir atteindre.",
+     "aide": "Un lieu où l’on est puni, un lieu où l’on parle.",
+     "explication": "L’article oppose l’**échafaud** (où la loi punit les femmes) à la **tribune** (où elles devraient parler)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est l’argument de l’article X ?",
+     "options": [
+      "La loi punit les femmes : elle doit aussi les représenter",
+      "Les femmes doivent être jugées plus sévèrement que les hommes",
+      "La tribune doit rester réservée aux hommes de loi",
+      "Les femmes doivent renoncer à l’échafaud pour obtenir le vote"
+     ],
+     "reponse": 0,
+     "aide": "Si la loi s’applique aux femmes, que doit-elle leur reconnaître aussi ?",
+     "explication": "Puisque la loi **punit** les femmes comme des citoyennes, elle doit les **représenter** comme telles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » de la première ligne du tableau ?",
+     "options": [
+      "L’article X : l’échafaud et la tribune",
+      "La dédicace à la reine Marie-Antoinette",
+      "Le contrat social entre l’homme et la femme",
+      "L’affiche Les Trois Urnes de 1793"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le passage qui montre la loi punissant les femmes.",
+     "explication": "C’est **l’article X** : il oppose l’échafaud et la tribune."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque droit réclamé : il vise les femmes, ou d’autres exclus ?",
+     "categories": [
+      "Pour les femmes",
+      "Pour d’autres exclus"
+     ],
+     "items": [
+      [
+       "Monter à la tribune",
+       0
+      ],
+      [
+       "Voter et être élue",
+       0
+      ],
+      [
+       "Publier, s’exprimer librement",
+       0
+      ],
+      [
+       "Abolir l’esclavage",
+       1
+      ],
+      [
+       "Protéger les enfants nés hors mariage",
+       1
+      ]
+     ],
+     "aide": "Olympe de Gouges mène aussi d’autres combats de justice sociale.",
+     "explication": "Pour les **femmes** : tribune, vote, expression. Pour **d’autres exclus** : les esclaves et les enfants nés hors mariage."
+    }
+   ]
+  },
+  {
+   "chapitre": "32c2bd2c-065d-5c4a-951e-8c31f735073d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un manifeste pour la langue française",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches la Défense et illustration pour la classe : place-la entre l’ordonnance de Villers-Cotterêts et Les Regrets, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du Bellay et sa langue",
+     "debut": 1520,
+     "fin": 1560,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1522,
+       "nom": "Naissance"
+      },
+      {
+       "id": "vil",
+       "date": 1539,
+       "nom": "Villers-Cotterêts"
+      },
+      {
+       "id": "def",
+       "date": 1549,
+       "nom": "La Défense"
+      },
+      {
+       "id": "reg",
+       "date": 1558,
+       "nom": "Les Regrets"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Défense et illustration de la langue française",
+     "sousTitre": "Joachim du Bellay, 1549",
+     "emoji": "🖋️",
+     "lignes": [
+      {
+       "texte": "Forme",
+       "valeur": "Un manifeste en deux livres"
+      },
+      {
+       "texte": "Parle au nom de",
+       "valeur": "?"
+      },
+      {
+       "texte": "Accompagne le recueil",
+       "valeur": "L’Olive"
+      },
+      {
+       "texte": "Veut prouver que",
+       "valeur": "Le français vaut le latin et le grec"
+      }
+     ],
+     "pied": "Un manifeste de jeunes poètes",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "def"
+     ],
+     "enonce": "Touche l’année de parution du manifeste.",
+     "aide": "Le manifeste porte le nom de son titre court.",
+     "explication": "Le manifeste paraît en **1549**, avec le recueil *L’Olive*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’ordonnance de Villers-Cotterêts du manifeste ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1549 − 1539 = **10 ans** : le français est déjà la langue des actes officiels, il reste à en faire une langue littéraire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Au nom de quel groupe Du Bellay parle-t-il (la ligne « ? ») ?",
+     "options": [
+      "La Pléiade",
+      "Le Parnasse",
+      "Les Philosophes",
+      "Les Surréalistes"
+     ],
+     "reponse": 0,
+     "aide": "Ce groupe de jeunes poètes comprend Ronsard.",
+     "explication": "Il parle au nom de **la Pléiade** : Ronsard, Du Bellay, Baïf, Jodelle."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "reg"
+     ],
+     "enonce": "Touche le recueil de sonnets que Du Bellay écrit à Rome.",
+     "aide": "Ce n’est pas un manifeste : c’est un recueil de poèmes, écrit plus tard.",
+     "explication": "Les **Regrets** (1558) sont écrits à Rome, où Du Bellay suit son cousin le cardinal."
+    }
+   ]
+  },
+  {
+   "chapitre": "32c2bd2c-065d-5c4a-951e-8c31f735073d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les quatre thèses du manifeste",
+   "competence": "analyser-texte",
+   "situation": "Tu dois résumer le manifeste en quatre idées et dire ce qu’il demande aux poètes. Lis le tableau puis le résumé.",
+   "documents": [
+    {
+     "id": "theses",
+     "type": "tableau",
+     "titre": "Les quatre thèses",
+     "colonnes": [
+      "Thèse",
+      "Ce qu’elle affirme"
+     ],
+     "lignes": [
+      [
+       "?",
+       "Le français n’est pas pauvre par nature : il l’est par manque de culture"
+      ],
+      [
+       "Illustrer",
+       "Imiter les Anciens et les Italiens en créant, sans les traduire"
+      ],
+      [
+       "Enrichir",
+       "Emprunter au grec, au latin, aux dialectes, aux métiers ; inventer des mots"
+      ],
+      [
+       "Abandonner",
+       "Les formes médiévales jugées basses"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le programme en quelques lignes",
+     "blocs": [
+      "Le poète doit laisser de côté les [[a|rondeaux]], les [[a|ballades]] et les [[a|virelais]], formes médiévales jugées trop basses. À leur place, il s’essaiera au sonnet, à l’ode, à l’élégie et à la tragédie à l’antique.",
+      "Mais l’inspiration ne suffit pas : il faut polir longuement son œuvre et la soumettre à la « lime » d’un lecteur savant."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après la Défense et illustration de la langue française (1549)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel verbe se cache derrière la case « ? » ?",
+     "options": [
+      "Défendre",
+      "Illustrer",
+      "Enrichir",
+      "Abandonner"
+     ],
+     "reponse": 0,
+     "aide": "Trois verbes sont déjà dans le tableau : il en manque un, celui du titre.",
+     "explication": "Le premier verbe du titre est **Défendre** : le français n’est pas pauvre par nature."
+    },
+    {
+     "type": "zone",
+     "document": "theses",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui explique comment enrichir le vocabulaire.",
+     "aide": "Cherche les emprunts et les mots inventés.",
+     "explication": "On enrichit la langue par **emprunts** (grec, latin, dialectes, métiers) et par **néologismes**."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les trois formes médiévales que le manifeste demande d’abandonner.",
+     "aide": "Elles sont citées avant le sonnet et l’ode.",
+     "explication": "Le manifeste condamne **rondeaux, ballades et virelais**, jugés trop bas."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la dernière phrase du résumé.",
+     "texte": "Le poète doit polir son œuvre et la soumettre à la « ___ » d’un lecteur savant.",
+     "reponses": [
+      [
+       "lime"
+      ]
+     ],
+     "banque": [
+      "lime",
+      "plume",
+      "règle",
+      "loupe"
+     ],
+     "aide": "Relis le second paragraphe du résumé.",
+     "explication": "L’inspiration ne suffit pas : l’œuvre passe sous **la lime** d’un lecteur savant, c’est-à-dire qu’on la polit."
+    }
+   ]
+  },
+  {
+   "chapitre": "32c2bd2c-065d-5c4a-951e-8c31f735073d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Imiter, ce n’est pas traduire",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur le mot « imitation » chez Du Bellay. Un passage célèbre sur les Romains les départage.",
+   "documents": [
+    {
+     "id": "rom",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les Romains et les Grecs",
+     "blocs": [
+      "« … se transformant en eux, les [[d|dévorant]], et après les avoir bien [[d|digérés]], les convertissant en sang et nourriture… »"
+     ],
+     "source": "Joachim du Bellay, Défense et illustration de la langue française (1549), à propos de l’imitation des Grecs par les Romains ; orthographe modernisée"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Imiter ou traduire ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Imiter les Anciens, pour Du Bellay, c’est les [[t|traduire]] le plus fidèlement possible."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Non : il refuse de traduire. Il faut faire en français ce qu’ils ont fait dans leur langue."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors imiter, c’est s’en nourrir pour créer autre chose ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Oui, comme le dit l’image des Romains qui digèrent les Grecs."
+      }
+     ]
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Imiter, ce n’est pas traduire",
+       "Il faut faire en français ce que les Anciens ont fait dans leur langue",
+       "?"
+      ],
+      [
+       "Le poète doit travailler",
+       "L’inspiration ne suffit pas",
+       "La « lime » d’un lecteur savant"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le verbe qu’Inès emploie à tort pour définir l’imitation.",
+     "aide": "Théo la corrige en disant ce que Du Bellay refuse.",
+     "explication": "Du Bellay refuse de **traduire** : il veut créer en français, pas transposer."
+    },
+    {
+     "type": "zone",
+     "document": "rom",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les deux participes qui montrent l’imitation comme une nourriture.",
+     "aide": "Cherche ce qu’on fait d’un aliment.",
+     "explication": "Les Romains **dévorent** puis **digèrent** les Grecs : imiter, c’est assimiler pour en faire sa propre substance."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple, tiré de l’œuvre de Du Bellay lui-même, applique ce programme (la case « ? ») ?",
+     "options": [
+      "« Heureux qui, comme Ulysse », sonnet des Regrets",
+      "« Le Dormeur du val », sonnet de Rimbaud",
+      "« Correspondances », sonnet de Baudelaire",
+      "« Les Chats », sonnet de Baudelaire"
+     ],
+     "reponse": 0,
+     "aide": "Les trois autres sonnets sont de Rimbaud et de Baudelaire.",
+     "explication": "Dans *Les Regrets*, le sonnet **« Heureux qui, comme Ulysse »** applique le programme : une forme et un thème antiques refaits en français."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du passage à son effet.",
+     "paires": [
+      [
+       "Le verbe « dévorer »",
+       "L’imitation est une appropriation, pas une copie"
+      ],
+      [
+       "L’exemple des Romains",
+       "Une autorité historique qui appuie la thèse"
+      ],
+      [
+       "La suite de participes",
+       "Un rythme qui suit les étapes de la transformation"
+      ]
+     ],
+     "aide": "Pense à ce que fait l’image, à ce que prouve l’exemple, et à ce que dit le rythme.",
+     "explication": "Le **verbe** dit l’appropriation, l’**exemple** donne une autorité, la **suite de participes** déroule la transformation étape par étape."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule de dissertation ce passage appuie-t-il le mieux ?",
+     "options": [
+      "Imiter, c’est s’approprier un modèle pour créer à son tour",
+      "Imiter, c’est copier fidèlement pour préserver la tradition",
+      "Créer, c’est rejeter tout ce que les Anciens ont écrit",
+      "Traduire est la seule façon d’enrichir une langue"
+     ],
+     "reponse": 0,
+     "aide": "Les Romains ne se contentent pas de copier : ils transforment ce qu’ils prennent.",
+     "explication": "L’image de la digestion montre que **l’imitation est une appropriation créatrice**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a5df7ee-b174-594d-ae6d-392e1c39c5a5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux amis dans un ranch",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Des souris et des hommes. Repère les personnages du ranch et place le roman dans la vie de Steinbeck.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Qui est qui ?",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "George Milton",
+       "Petit et vif : il pense pour deux"
+      ],
+      [
+       "Lennie Small",
+       "?"
+      ],
+      [
+       "Candy",
+       "Le vieux manchot"
+      ],
+      [
+       "Crooks",
+       "Le palefrenier noir, tenu à l’écart"
+      ],
+      [
+       "Curley",
+       "Le fils du patron, agressif"
+      ],
+      [
+       "Leur rêve",
+       "Acheter une petite ferme et y soigner des lapins"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Steinbeck et son roman",
+     "debut": 1900,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1902,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rom",
+       "date": 1937,
+       "nom": "Le roman"
+      },
+      {
+       "id": "nob",
+       "date": 1962,
+       "nom": "Prix Nobel"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le personnage que les autres ouvriers tiennent à l’écart.",
+     "aide": "Il est palefrenier, et noir.",
+     "explication": "**Crooks**, le palefrenier noir, vit isolé : le roman montre la brutalité faite aux plus faibles."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Lennie, dans la case « ? » ?",
+     "options": [
+      "Un colosse doux et déficient mental",
+      "Un vieux conteur qui a perdu ses dents",
+      "Un jeune berger muet et solitaire",
+      "Un contremaître rusé et sans pitié"
+     ],
+     "reponse": 0,
+     "aide": "Il aime caresser ce qui est doux sans mesurer sa force.",
+     "explication": "Lennie est **un colosse doux et déficient mental** : il caresse sans mesurer sa force."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du roman du prix Nobel de Steinbeck ?",
+     "reponse": 25,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise.",
+     "explication": "1962 − 1937 = **25 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le rêve des deux hommes.",
+     "texte": "Leur rêve : acheter une petite ___ et y soigner des ___.",
+     "reponses": [
+      [
+       "ferme"
+      ],
+      [
+       "lapins"
+      ]
+     ],
+     "banque": [
+      "ferme",
+      "lapins",
+      "chevaux",
+      "boutique"
+     ],
+     "aide": "Regarde la dernière ligne du tableau.",
+     "explication": "Ils rêvent d’une petite **ferme** avec des **lapins** que Lennie soignerait."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a5df7ee-b174-594d-ae6d-392e1c39c5a5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du chiot au Luger",
+   "competence": "analyser-texte",
+   "situation": "Tu dois raconter l’intrigue puis montrer comment deux morts se répondent. Lis la chaîne des étapes et le résumé.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Arrivée de George et Lennie dans un ranch"
+      },
+      {
+       "id": "n2",
+       "texte": "Lennie tue un chiot sans le vouloir"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Lennie s’enfuit, traqué par les hommes"
+      },
+      {
+       "id": "n5",
+       "texte": "George lui redit le rêve de la ferme"
+      },
+      {
+       "id": "n6",
+       "texte": "George le tue pour lui épargner le lynchage"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    },
+    {
+     "id": "morts",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux morts qui se répondent",
+     "blocs": [
+      "Au ranch, Carlson abat le vieux chien de Candy d’une balle dans la [[n|nuque]], « pour son bien ». Candy regrette de ne pas l’avoir fait lui-même.",
+      "À la fin, George abat Lennie de la même manière, avec le [[l|Luger]] de Carlson."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le roman de Steinbeck (1937)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il à l’étape « ? » de la chaîne ?",
+     "options": [
+      "Lennie tue accidentellement la femme de Curley",
+      "Lennie sauve le chiot qu’il vient de blesser",
+      "Lennie part seul chercher du travail ailleurs",
+      "Lennie tue Carlson avec son Luger"
+     ],
+     "reponse": 0,
+     "aide": "Après le chiot, Lennie caresse quelque chose de doux dans la grange.",
+     "explication": "Dans la grange, Lennie tue **accidentellement la femme de Curley** : c’est ce qui déclenche la traque."
+    },
+    {
+     "type": "zone",
+     "document": "morts",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche l’arme avec laquelle George tue Lennie.",
+     "aide": "Elle appartenait à Carlson.",
+     "explication": "C’est **le Luger** de Carlson, déjà utilisé pour le chien de Candy."
+    },
+    {
+     "type": "zone",
+     "document": "morts",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche l’endroit où la balle est tirée, la même pour le chien et pour Lennie.",
+     "aide": "Le texte précise la partie du corps visée.",
+     "explication": "Dans les deux cas, la balle frappe **la nuque** : George fait lui-même ce que Candy n’a pas fait."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque épisode à ce qu’il annonce ou à ce qu’il porte.",
+     "paires": [
+      [
+       "Le chiot et les souris tués",
+       "Les gestes mortels d’un Lennie qui ne mesure pas sa force"
+      ],
+      [
+       "Le chien de Candy abattu",
+       "La mort de Lennie"
+      ],
+      [
+       "Le rêve de la ferme",
+       "Ce qui tient George et Lennie ensemble"
+      ]
+     ],
+     "aide": "Cherche les signes qui annoncent la chute.",
+     "explication": "Les **souris et le chiot** annoncent le drame, le **chien** annonce la mort de Lennie, le **rêve** soude les deux hommes."
+    }
+   ]
+  },
+  {
+   "chapitre": "4a5df7ee-b174-594d-ae6d-392e1c39c5a5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ceux qui n’ont personne",
+   "competence": "argumenter",
+   "situation": "Le refrain de George revient comme une prière. Lis une scène écrite à la manière du roman, puis démonte ses thèmes.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Au bord de la rivière",
+     "blocs": [
+      {
+       "didascalie": "Le soir, près d’une rivière. Un petit feu. Lennie regarde les flammes."
+      },
+      {
+       "personnage": "George",
+       "replique": "Dis-moi, Lennie : les autres types, ils ont quoi ?"
+      },
+      {
+       "personnage": "Lennie",
+       "replique": "Ils n’ont [[s|personne]]."
+      },
+      {
+       "personnage": "George",
+       "replique": "Et nous ?"
+      },
+      {
+       "personnage": "Lennie",
+       "replique": "Nous, on a [[l|chacun]] l’autre. Et un jour on aura la ferme, avec les lapins."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Steinbeck, Des souris et des hommes"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Deux lectures à prouver",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le rêve de la ferme est inaccessible",
+       "Il est répété comme une prière, mais tout bascule",
+       "?"
+      ],
+      [
+       "La solitude touche presque tous les personnages",
+       "Chacun dit sa solitude",
+       "Crooks, le palefrenier noir, tenu à l’écart"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit la solitude des autres ouvriers.",
+     "aide": "Lennie complète la phrase de George.",
+     "explication": "Les autres n’ont **personne** : c’est la solitude que le refrain oppose à l’amitié des deux héros."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui dit ce qui lie George et Lennie.",
+     "aide": "Chacun a quelqu’un sur qui veiller.",
+     "explication": "Ils ont **chacun** l’autre : l’amitié est ce qui les distingue de tous."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème du roman à ce qu’il porte.",
+     "paires": [
+      [
+       "La solitude",
+       "Chaque personnage la dit"
+      ],
+      [
+       "L’amitié",
+       "Ce qui distingue George et Lennie des autres"
+      ],
+      [
+       "Le rêve américain",
+       "Il reste inaccessible"
+      ],
+      [
+       "La brutalité",
+       "Elle frappe Candy, Crooks, Lennie"
+      ]
+     ],
+     "aide": "Pense aux personnages les plus faibles.",
+     "explication": "La **solitude**, l’**amitié**, le **rêve** inaccessible et la **brutalité** sont les quatre thèmes de la fiche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Le récit du rêve, puis la mort de Lennie",
+      "La promotion de George par Slim",
+      "L’achat de la ferme grâce à Candy",
+      "Le mariage de Curley et de sa femme"
+     ],
+     "reponse": 0,
+     "aide": "Le rêve est raconté une dernière fois… juste avant la fin.",
+     "explication": "George raconte une dernière fois le rêve, puis tire : **le rêve reste inaccessible**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il dit la solitude, ou l’amitié ?",
+     "categories": [
+      "Solitude",
+      "Amitié"
+     ],
+     "items": [
+      [
+       "Crooks, tenu à l’écart",
+       0
+      ],
+      [
+       "La femme de Curley, qui s’ennuie",
+       0
+      ],
+      [
+       "George et Lennie qui se veillent l’un l’autre",
+       1
+      ],
+      [
+       "Le rêve de la ferme à deux",
+       1
+      ],
+      [
+       "Les autres ouvriers, qui n’ont personne",
+       0
+      ]
+     ],
+     "aide": "Demande-toi : la personne est-elle seule, ou liée à quelqu’un ?",
+     "explication": "Crooks, la femme de Curley et les ouvriers sont seuls ; George et Lennie, et leur **rêve à deux**, sont liés."
+    }
+   ]
+  },
+  {
+   "chapitre": "f115fdbf-fffc-5357-a0e6-cf648b843705",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux récits, un désert",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un oral sur Désert. Repère qui est qui dans les deux récits, puis lis la fiche du roman.",
+   "documents": [
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Ma el Aïnine",
+       "Le cheikh qui guide les hommes bleus vers le nord"
+      ],
+      [
+       "Nour",
+       "Un enfant des hommes bleus"
+      ],
+      [
+       "Lalla",
+       "Une jeune descendante des nomades"
+      ],
+      [
+       "Le Hartani",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Désert",
+     "sousTitre": "J.-M. G. Le Clézio, 1980",
+     "emoji": "🏜️",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Né à Nice, en 1940"
+      },
+      {
+       "texte": "Prix du roman",
+       "valeur": "Grand prix Paul-Morand (1980)"
+      },
+      {
+       "texte": "Année du prix Nobel",
+       "valeur": "?"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Un roman à deux récits alternés"
+      }
+     ],
+     "pied": "Un roman du désert et de l’exil",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le Hartani (la case « ? ») ?",
+     "options": [
+      "Le jeune berger muet que Lalla aime",
+      "Le vieux pêcheur qui raconte des histoires",
+      "Le cheikh qui conduit les hommes bleus",
+      "Le jeune mendiant de Marseille"
+     ],
+     "reponse": 0,
+     "aide": "C’est le père de l’enfant de Lalla.",
+     "explication": "Le Hartani est **le jeune berger muet** que Lalla aime."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage dans le récit auquel il appartient.",
+     "categories": [
+      "Récit de 1909-1912",
+      "Récit contemporain"
+     ],
+     "items": [
+      [
+       "Ma el Aïnine",
+       0
+      ],
+      [
+       "Nour",
+       0
+      ],
+      [
+       "Lalla",
+       1
+      ],
+      [
+       "Le Hartani",
+       1
+      ]
+     ],
+     "aide": "Un récit parle des hommes bleus, l’autre de leur descendante.",
+     "explication": "Ma el Aïnine et Nour vivent en **1909-1912** ; Lalla et le Hartani appartiennent au récit **contemporain**."
+    },
+    {
+     "type": "choix",
+     "enonce": "En quelle année Le Clézio reçoit-il le prix Nobel de littérature (la ligne « ? ») ?",
+     "options": [
+      "2008",
+      "1980",
+      "1963",
+      "1940"
+     ],
+     "reponse": 0,
+     "aide": "Le roman date de 1980 ; le Nobel vient bien plus tard.",
+     "explication": "Le Clézio reçoit le prix Nobel en **2008**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le grand prix Paul-Morand du prix Nobel ?",
+     "reponse": 28,
+     "unite": "ans",
+     "aide": "Prends l’année du roman sur la fiche et celle du Nobel.",
+     "explication": "2008 − 1980 = **28 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f115fdbf-fffc-5357-a0e6-cf648b843705",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Lalla à la dune",
+   "competence": "analyser-texte",
+   "situation": "Tu dois suivre le parcours de Lalla puis montrer comment l’écriture fait éprouver le désert.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Lalla",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Lalla grandit dans un bidonville marocain"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle refuse un mariage arrangé"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Elle connaît un bref succès de modèle photo"
+      },
+      {
+       "id": "n5",
+       "texte": "Retour au désert : elle accouche sous un arbre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "dune",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur la dune",
+     "blocs": [
+      "Sur la plaine, le [[s|sable]] est [[s|chaud]]. Le [[s|vent]] ne s’arrête pas. Les hommes marchent vers le nord, derrière le cheikh. La [[s|lumière]] est blanche."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Désert de Le Clézio"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que fait Lalla à l’étape « ? » ?",
+     "options": [
+      "Elle quitte le Maroc pour Marseille",
+      "Elle épouse le Hartani à Marseille",
+      "Elle retourne chez sa tante Aamma",
+      "Elle devient bergère dans le désert"
+     ],
+     "reponse": 0,
+     "aide": "Après le bidonville et avant le succès de modèle, elle change de ville et de pays.",
+     "explication": "Lalla part pour **Marseille** : la misère, puis un bref succès, avant le retour au désert."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où Lalla refuse de se laisser marier.",
+     "aide": "Cherche le mot « refuse ».",
+     "explication": "Lalla **refuse un mariage arrangé** : c’est un premier geste de liberté."
+    },
+    {
+     "type": "zone",
+     "document": "dune",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Le cours cite quatre éléments sensoriels : lumière, sable, vent, chaleur. Retrouve-les dans le passage.",
+     "aide": "La chaleur s’écrit ici avec un adjectif.",
+     "explication": "Le passage fait éprouver le désert par quatre mots : **sable**, **chaud**, **vent**, **lumière**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque caractéristique du roman à son effet.",
+     "paires": [
+      [
+       "Une écriture sensorielle",
+       "On éprouve le désert"
+      ],
+      [
+       "Une écriture lente",
+       "La contemplation l’emporte sur l’action"
+      ],
+      [
+       "Deux récits alternés",
+       "Une histoire collective et un destin individuel se répondent"
+      ]
+     ],
+     "aide": "Pense à ce qu’on ressent en lisant, au rythme, et à la construction.",
+     "explication": "L’écriture **sensorielle** fait éprouver, la lenteur **contemple**, l’alternance **relie** les deux époques."
+    }
+   ]
+  },
+  {
+   "chapitre": "f115fdbf-fffc-5357-a0e6-cf648b843705",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une ville plus hostile que le désert",
+   "competence": "argumenter",
+   "situation": "Lalla arrive à Marseille. Deux élèves ne lisent pas la ville de la même façon : à toi de trancher avec le texte.",
+   "documents": [
+    {
+     "id": "ville",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Marseille",
+     "blocs": [
+      "À Marseille, les rues sont [[h|sombres]] et l’air sent le [[h|gasoil]]. Lalla avance dans la foule et [[h|personne]] ne la regarde. Aux fenêtres, les volets restent [[h|fermés]].",
+      "Elle pense au désert, à la lumière claire et au silence."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Désert de Le Clézio"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Refuge ou exil ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Pour Lalla, la ville est un [[r|refuge]] : on l’y accueille enfin."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Le passage montre le contraire : à Marseille, elle est dépossédée une seconde fois."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Alors le désert, c’est le vrai chez-soi ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Oui : la liberté, la pureté, la mémoire des ancêtres."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ville",
+     "multiple": true,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche les quatre mots qui disent l’hostilité de la ville.",
+     "aide": "Cherche ce qui est sombre, sale, indifférent, clos.",
+     "explication": "La ville est **sombre**, sent le **gasoil**, ignore Lalla (**personne**) et reste **fermée**."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot de Nina que le passage contredit.",
+     "aide": "Le texte montre une ville qui rejette Lalla.",
+     "explication": "La ville n’est pas un **refuge** : elle est vécue comme une seconde dépossession."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le passage prouve-t-il ?",
+     "options": [
+      "La ville est plus hostile que le désert : un nouvel exil",
+      "La ville offre à Lalla la liberté qu’elle cherchait",
+      "Lalla se sent chez elle parmi les foules marseillaises",
+      "Le désert est un lieu aussi bruyant que la ville"
+     ],
+     "reponse": 0,
+     "aide": "Compte les mots hostiles, puis regarde ce que Lalla évoque.",
+     "explication": "Les mots de la ville sont hostiles, ceux du désert doux : l’exil urbain est **plus hostile que le désert**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème de Désert à ce qu’il dénonce ou célèbre.",
+     "paires": [
+      [
+       "La destruction des peuples nomades",
+       "Un effet de la colonisation"
+      ],
+      [
+       "L’exil urbain",
+       "Une seconde dépossession"
+      ],
+      [
+       "Le retour au désert",
+       "La liberté, la pureté et la mémoire des ancêtres"
+      ]
+     ],
+     "aide": "Deux thèmes dénoncent, un thème célèbre.",
+     "explication": "La **colonisation** détruit les nomades, l’**exil** dépossède une seconde fois, le **désert** reste le lieu de la liberté."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il appartient au désert, ou à la ville ?",
+     "categories": [
+      "Le désert",
+      "La ville"
+     ],
+     "items": [
+      [
+       "Liberté et pureté",
+       0
+      ],
+      [
+       "Mémoire des ancêtres",
+       0
+      ],
+      [
+       "Le silence et la lumière",
+       0
+      ],
+      [
+       "La misère des immigrés",
+       1
+      ],
+      [
+       "Un bref succès de modèle photographique",
+       1
+      ]
+     ],
+     "aide": "Les deux lieux s’opposent dans tout le roman.",
+     "explication": "Liberté, mémoire et lumière sont du côté du **désert** ; misère et succès éphémère sont ceux de la **ville**."
+    }
+   ]
+  },
+  {
+   "chapitre": "46b8470d-33e8-5de1-9f17-28283aa4eb65",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un livre portatif qu’on brûle",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches le Dictionnaire philosophique : place-le entre l’affaire Calas et le bûcher du chevalier de La Barre, puis regarde sa page de titre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Voltaire et ses combats",
+     "debut": 1760,
+     "fin": 1770,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "cal",
+       "date": 1762,
+       "nom": "Calas"
+      },
+      {
+       "id": "dic",
+       "date": 1764,
+       "nom": "Dictionnaire"
+      },
+      {
+       "id": "bar",
+       "date": 1766,
+       "nom": "La Barre"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Dictionnaire philosophique portatif",
+     "sousTitre": "1764 — sans nom d’auteur",
+     "emoji": "📕",
+     "lignes": [
+      {
+       "texte": "Format",
+       "valeur": "Petit et bon marché"
+      },
+      {
+       "texte": "Classement",
+       "valeur": "Articles courts, par ordre alphabétique"
+      },
+      {
+       "texte": "Auteur",
+       "valeur": "Anonyme (Voltaire, à Ferney)"
+      },
+      {
+       "texte": "Article célèbre",
+       "valeur": "« Fanatisme »"
+      }
+     ],
+     "pied": "Condamné et brûlé",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "dic"
+     ],
+     "enonce": "Touche l’année de parution du Dictionnaire philosophique.",
+     "aide": "Cherche le titre de l’ouvrage.",
+     "explication": "Il paraît en **1764**, anonymement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la parution du livre de l’exécution du chevalier de La Barre ?",
+     "reponse": 2,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1766 − 1764 = **2 ans** : un exemplaire du livre est jeté sur son bûcher."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cal"
+     ],
+     "enonce": "Touche l’exécution du protestant de Toulouse que Voltaire défendra ensuite.",
+     "aide": "Son nom commence par C.",
+     "explication": "Jean **Calas**, protestant de Toulouse, est exécuté à tort en 1762."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la description du livre.",
+     "texte": "Il est classé par ordre ___ en articles ___, et paraît sans nom d’___.",
+     "reponses": [
+      [
+       "alphabétique"
+      ],
+      [
+       "courts"
+      ],
+      [
+       "auteur"
+      ]
+     ],
+     "banque": [
+      "alphabétique",
+      "courts",
+      "auteur",
+      "chronologique",
+      "longs",
+      "éditeur"
+     ],
+     "aide": "Relis les lignes « Classement » et « Auteur » de la page de titre.",
+     "explication": "Le livre est classé **par ordre alphabétique**, en articles **courts**, et paraît **sans nom d’auteur**."
+    }
+   ]
+  },
+  {
+   "chapitre": "46b8470d-33e8-5de1-9f17-28283aa4eb65",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois articles, trois armes",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu compares trois articles du Dictionnaire, puis tu lis une phrase du plus célèbre plaidoyer pour la tolérance.",
+   "documents": [
+    {
+     "id": "arts",
+     "type": "tableau",
+     "titre": "Trois articles",
+     "colonnes": [
+      "Article",
+      "Son procédé",
+      "Ce que Voltaire défend"
+     ],
+     "lignes": [
+      [
+       "« Guerre »",
+       "Il énumère avec un calme apparent des massacres aux causes dérisoires",
+       "?"
+      ],
+      [
+       "« Fanatisme »",
+       "Il compare le fanatique à un malade contagieux",
+       "La raison, contre les dogmes"
+      ],
+      [
+       "« Tolérance »",
+       "Il part de la faiblesse commune des hommes",
+       "Le pardon réciproque"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "tol",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Un appel au pardon",
+     "blocs": [
+      "« Nous sommes tous pétris de [[f|faiblesses]] et d’[[f|erreurs]] ; pardonnons-nous réciproquement nos sottises, c’est la première loi de la nature. »"
+     ],
+     "source": "Voltaire, Dictionnaire philosophique, article « Tolérance » (1764)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que défend Voltaire dans « Guerre » (la case « ? ») ?",
+     "options": [
+      "La paix",
+      "La justice",
+      "La raison",
+      "La tolérance"
+     ],
+     "reponse": 0,
+     "aide": "Il dénonce la guerre, folie des princes.",
+     "explication": "Contre les massacres aux causes dérisoires, Voltaire défend **la paix**."
+    },
+    {
+     "type": "zone",
+     "document": "arts",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui contient la comparaison médicale.",
+     "aide": "Un malade contagieux.",
+     "explication": "Dans « Fanatisme », le fanatique est comparé à **un malade contagieux**."
+    },
+    {
+     "type": "zone",
+     "document": "tol",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que les hommes ont en commun.",
+     "aide": "Ce sont les deux défauts de l’humanité.",
+     "explication": "Nous sommes tous pétris de **faiblesses** et d’**erreurs** : c’est la raison du pardon."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque article au procédé qu’il emploie.",
+     "paires": [
+      [
+       "Guerre",
+       "Un calme apparent devant des massacres"
+      ],
+      [
+       "Fanatisme",
+       "Une comparaison avec une maladie"
+      ],
+      [
+       "Tolérance",
+       "Un appel à pardonner nos erreurs"
+      ]
+     ],
+     "aide": "Relis la colonne « Son procédé ».",
+     "explication": "**Guerre** : calme apparent ; **Fanatisme** : comparaison médicale ; **Tolérance** : appel au pardon."
+    }
+   ]
+  },
+  {
+   "chapitre": "46b8470d-33e8-5de1-9f17-28283aa4eb65",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cent piqûres plutôt qu’un traité",
+   "competence": "argumenter",
+   "situation": "Peut-on combattre un préjugé par un traité ? Lis un article écrit à la manière de Voltaire, puis un échange entre deux élèves.",
+   "documents": [
+    {
+     "id": "zele",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Article « Zèle »",
+     "blocs": [
+      "Un homme fort [[i|zélé]] jugea qu’on ne pouvait honorer Dieu qu’en brûlant son voisin. Il en brûla un, puis deux, puis dix, et s’en alla dormir fort content de sa [[i|bonté]]."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Voltaire"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Voltaire approuve-t-il ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Clara",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Clara",
+       "texte": "Voltaire approuve donc celui qui brûle son voisin ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non : il [[f|feint]] d’approuver pour mieux dénoncer. C’est de l’ironie."
+      },
+      {
+       "qui": "Clara",
+       "texte": "Et pourquoi un article si court ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Parce qu’on ne combat pas un préjugé par un traité, mais par cent piqûres."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "zele",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les deux mots qui, pris ironiquement, louent le fanatique.",
+     "aide": "Cherche les mots qui sonnent comme des qualités.",
+     "explication": "Voltaire loue le **zélé** et sa **bonté** : l’éloge est feint, pour mieux dénoncer le crime."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le verbe qui explique le procédé de Voltaire.",
+     "aide": "Yanis dit qu’il fait semblant.",
+     "explication": "Voltaire **feint** d’approuver : c’est l’ironie, fausse naïveté qui dénonce."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque caractéristique du livre à son rôle.",
+     "paires": [
+      [
+       "L’ironie",
+       "Elle dénonce en feignant d’approuver"
+      ],
+      [
+       "Le récit bref",
+       "Il rend l’argument vivant"
+      ],
+      [
+       "Le format portatif",
+       "Il circule facilement et se cache"
+      ]
+     ],
+     "aide": "Pense à l’effet sur le lecteur, et à la censure.",
+     "explication": "L’**ironie** dénonce, le **récit bref** rend l’argument vivant, le **format portatif** déjoue la censure."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il rend le livre difficile à censurer, ou l’argument vivant ?",
+     "categories": [
+      "Difficile à censurer",
+      "Argument vivant"
+     ],
+     "items": [
+      [
+       "Petit et bon marché",
+       0
+      ],
+      [
+       "Publié sans nom d’auteur",
+       0
+      ],
+      [
+       "Facile à cacher",
+       0
+      ],
+      [
+       "Un récit bref",
+       1
+      ],
+      [
+       "Un dialogue",
+       1
+      ],
+      [
+       "L’ironie",
+       1
+      ]
+     ],
+     "aide": "Un groupe concerne l’objet-livre, l’autre la manière d’écrire.",
+     "explication": "Le **format** et l’**anonymat** protègent le livre ; **récit**, **dialogue** et **ironie** animent l’argument."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée de dissertation cet article appuie-t-il le mieux ?",
+     "options": [
+      "Une forme brève et ironique peut mieux combattre un préjugé qu’un traité",
+      "Seul un long traité savant peut vraiment combattre un préjugé",
+      "Il vaut mieux ignorer le fanatisme que de le critiquer",
+      "L’ironie affaiblit toujours l’argumentation d’un texte"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit : cent piqûres plutôt qu’un traité.",
+     "explication": "La forme **brève et ironique** est la meilleure alliée des Lumières contre le préjugé."
+    }
+   ]
+  },
+  {
+   "chapitre": "27d2537f-c2b2-5473-a09c-48a82fa961be",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un texte écrit par un très jeune homme",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches le Discours de la servitude volontaire : place-le dans la vie de La Boétie, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Boétie et son Discours",
+     "debut": 1530,
+     "fin": 1580,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1530,
+       "nom": "Naissance"
+      },
+      {
+       "id": "disc",
+       "date": 1548,
+       "nom": "Le Discours"
+      },
+      {
+       "id": "mort",
+       "date": 1563,
+       "nom": "Mort"
+      },
+      {
+       "id": "bar",
+       "date": 1572,
+       "nom": "Saint-Barthélemy"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Discours de la servitude volontaire",
+     "sousTitre": "Étienne de La Boétie — aussi appelé Contr’un",
+     "emoji": "⛓️",
+     "lignes": [
+      {
+       "texte": "Écrit",
+       "valeur": "Vers 1548, par un très jeune homme"
+      },
+      {
+       "texte": "Fonction de l’auteur",
+       "valeur": "Conseiller au parlement de Bordeaux"
+      },
+      {
+       "texte": "Ami de l’auteur",
+       "valeur": "?"
+      },
+      {
+       "texte": "Diffusion",
+       "valeur": "D’abord en manuscrit, puis imprimé après sa mort"
+      }
+     ],
+     "pied": "Publié après la mort de l’auteur",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mort"
+     ],
+     "enonce": "Touche l’année de la mort de La Boétie.",
+     "aide": "Cherche le dernier repère de sa vie.",
+     "explication": "La Boétie meurt en **1563**, à trente-deux ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture du Discours de la mort de son auteur ?",
+     "reponse": 15,
+     "unite": "ans",
+     "aide": "Prends les deux dates de la frise.",
+     "explication": "1563 − 1548 = **15 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est l’ami de La Boétie (la ligne « ? ») ?",
+     "options": [
+      "Montaigne",
+      "Ronsard",
+      "Rabelais",
+      "Du Bellay"
+     ],
+     "reponse": 0,
+     "aide": "Il consacre à son ami le chapitre « De l’amitié ».",
+     "explication": "**Montaigne** était l’ami intime de La Boétie."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "bar"
+     ],
+     "enonce": "Touche l’événement après lequel les protestants impriment le texte.",
+     "aide": "Il a lieu en 1572.",
+     "explication": "Les protestants impriment le Discours après la **Saint-Barthélemy** (1572), pour en faire une arme contre la monarchie."
+    }
+   ]
+  },
+  {
+   "chapitre": "27d2537f-c2b2-5473-a09c-48a82fa961be",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi le peuple obéit-il ?",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu suis le raisonnement de La Boétie, puis les ressorts de l’obéissance qu’il décrit.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du raisonnement",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Un homme seul ne peut rien contre des millions"
+      },
+      {
+       "id": "n2",
+       "texte": "Sa force est celle que les dominés lui prêtent"
+      },
+      {
+       "id": "n3",
+       "texte": "La servitude est donc volontaire"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    },
+    {
+     "id": "ressorts",
+     "type": "tableau",
+     "titre": "Les trois ressorts de l’obéissance",
+     "colonnes": [
+      "Ressort",
+      "Comment il agit"
+     ],
+     "lignes": [
+      [
+       "La coutume",
+       "On naît sous le joug et on le croit naturel"
+      ],
+      [
+       "?",
+       "Jeux, théâtres, distributions : le pouvoir amuse ceux qu’il dépouille"
+      ],
+      [
+       "La chaîne des complices",
+       "Cinq ou six profitent du tyran, puis six cents, puis six mille"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion complète le raisonnement (la case « ? ») ?",
+     "options": [
+      "Le peuple n’a qu’à retirer son consentement, sans violence",
+      "Le peuple doit prendre les armes contre le tyran",
+      "Le peuple doit choisir un meilleur tyran",
+      "Le peuple doit attendre la mort du tyran"
+     ],
+     "reponse": 0,
+     "aide": "Si le tyran n’est fort que par nous, que suffit-il de faire ?",
+     "explication": "La solution est immédiate : **retirer son consentement**, sans arme ni bataille."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui explique d’où vient la force du tyran.",
+     "aide": "Cherche le verbe « prêter ».",
+     "explication": "Le tyran n’est fort que de la force que **les dominés lui prêtent**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel ressort se cache derrière la case « ? » du tableau ?",
+     "options": [
+      "Le divertissement",
+      "L’éducation scolaire",
+      "La religion d’État",
+      "La peur du bourreau"
+     ],
+     "reponse": 0,
+     "aide": "Jeux, théâtres, distributions : le pouvoir amuse.",
+     "explication": "C’est **le divertissement** : le pouvoir amuse ceux qu’il dépouille."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque exemple du Discours au ressort qu’il illustre.",
+     "paires": [
+      [
+       "Cyrus ouvre aux Lydiens tavernes et jeux",
+       "Le divertissement"
+      ],
+      [
+       "Cinq ou six profitent du tyran, puis six cents",
+       "La chaîne des complices"
+      ],
+      [
+       "Deux chiens de Lycurgue élevés différemment",
+       "La coutume"
+      ]
+     ],
+     "aide": "Les chiens montrent que l’éducation fait tout.",
+     "explication": "**Cyrus** endort les Lydiens, la **pyramide** des intérêts tient le pouvoir, les **chiens** montrent la force de l’éducation, donc de la coutume."
+    }
+   ]
+  },
+  {
+   "chapitre": "27d2537f-c2b2-5473-a09c-48a82fa961be",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ne plus servir, et vous voilà libres",
+   "competence": "argumenter",
+   "situation": "La Boétie appelle-t-il à l’émeute ? Lis la phrase la plus célèbre du Discours, puis le débat de deux élèves.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Prendre les armes ?",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Max",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "La Boétie appelle le peuple à prendre les armes contre le tyran."
+      },
+      {
+       "qui": "Max",
+       "texte": "Non : il demande de [[r|retirer]] son [[r|consentement]], pas de se battre. Le tyran n’est fort que par notre obéissance."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Alors la solution est presque trop simple ?"
+      },
+      {
+       "qui": "Max",
+       "texte": "C’est le choc du texte : elle est immédiate."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La phrase célèbre",
+     "blocs": [
+      "« Soyez résolus de ne [[s|servir]] plus, et vous voilà libres. »"
+     ],
+     "source": "Étienne de La Boétie, Discours de la servitude volontaire (vers 1548) ; orthographe modernisée"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le pouvoir tient par une chaîne de complices",
+       "Ceux qui profitent du tyran en entraînent d’autres derrière eux",
+       "?"
+      ],
+      [
+       "La coutume rend la servitude naturelle",
+       "On naît sous le joug et on le croit naturel",
+       "Les deux chiens de Lycurgue"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que La Boétie demande réellement au peuple.",
+     "aide": "Max reprend les termes du texte.",
+     "explication": "Il demande de **retirer** son **consentement** : un geste de refus, sans violence."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le verbe que le peuple doit cesser d’employer pour lui-même.",
+     "aide": "Un seul verbe de la phrase dit la servitude.",
+     "explication": "Le peuple doit cesser de **servir** : la liberté est à ce prix."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » ?",
+     "options": [
+      "La pyramide : cinq ou six, puis six cents, puis six mille",
+      "Cyrus, qui ouvre aux Lydiens tavernes et jeux publics",
+      "Les Vénitiens, peuple libre qui refuse un maître",
+      "Les Romains, achetés par le pain et les spectacles"
+     ],
+     "reponse": 0,
+     "aide": "Cherche l’image d’une chaîne où chacun profite de celui qui est au-dessus.",
+     "explication": "C’est **la pyramide d’intérêts** : cinq ou six profitent du tyran, puis six cents, puis six mille."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il explique la servitude, ou il en est le remède ?",
+     "categories": [
+      "Cause de la servitude",
+      "Remède"
+     ],
+     "items": [
+      [
+       "Naître sous le joug",
+       0
+      ],
+      [
+       "Les jeux et les spectacles",
+       0
+      ],
+      [
+       "La pyramide de complices",
+       0
+      ],
+      [
+       "Retirer son consentement",
+       1
+      ],
+      [
+       "Cesser de servir, sans violence",
+       1
+      ]
+     ],
+     "aide": "Trois éléments expliquent l’obéissance, deux la brisent.",
+     "explication": "Coutume, divertissement et complices **expliquent** ; le **retrait du consentement** y met fin."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle idée ce texte permet-il d’appuyer dans une dissertation sur le pouvoir ?",
+     "options": [
+      "Le pouvoir d’un seul repose sur le consentement des autres",
+      "Le pouvoir d’un seul repose d’abord sur la force des armes",
+      "Le pouvoir d’un seul est toujours choisi par la nature",
+      "Le pouvoir d’un seul disparaît quand le peuple se divertit"
+     ],
+     "reponse": 0,
+     "aide": "Relis le début du raisonnement : d’où vient la force du tyran ?",
+     "explication": "La thèse est que **le pouvoir repose sur le consentement** : le retirer suffit à le faire tomber."
+    }
+   ]
+  }
+ ]
+}

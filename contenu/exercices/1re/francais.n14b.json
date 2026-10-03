@@ -1,0 +1,2053 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "c0f64c4c-2721-576c-b8d4-25c798d04a74",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les débuts d’un jeune écrivain",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur la jeunesse de Gide. Lis cette frise de ses premières années d’écrivain, puis repère ce que dit le cours des *Cahiers d’André Walter*.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Gide, les premières années",
+     "debut": 1890,
+     "fin": 1898,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "walter",
+       "date": 1891,
+       "nom": "Cahiers de Walter"
+      },
+      {
+       "id": "urien",
+       "date": 1893,
+       "nom": "Urien"
+      },
+      {
+       "id": "mariage",
+       "date": 1895,
+       "nom": "Mariage"
+      },
+      {
+       "id": "nourr",
+       "date": 1897,
+       "nom": "Nourritures"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "walter"
+     ],
+     "enonce": "Touche l’année de publication des *Cahiers d’André Walter*.",
+     "aide": "C’est le premier livre de la frise.",
+     "explication": "Les *Cahiers d’André Walter* paraissent en **1891**, premier livre de Gide."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les *Cahiers* du mariage de Gide avec sa cousine Madeleine ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Repère « Cahiers de Walter » et « Mariage », puis soustrais.",
+     "explication": "1895 − 1891 = **4 ans** : Gide épouse Madeleine Rondeaux, la cousine qui inspire Emmanuèle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le livre paraît-il en 1891 ?",
+     "options": [
+      "Anonymement, sans nom d’auteur",
+      "Sous le nom de Gide, avec un grand succès",
+      "Dans une revue symboliste, en feuilleton",
+      "Sous le nom de Madeleine Rondeaux"
+     ],
+     "reponse": 0,
+     "aide": "Le cours le dit dès l’« œuvre » : le livre n’est pas signé.",
+     "explication": "Le livre est publié **anonymement** : il se présente comme les cahiers posthumes d’André Walter."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la présentation du livre.",
+     "texte": "Le livre se présente comme les cahiers ___ d’un jeune homme, André ___, mort ___.",
+     "reponses": [
+      [
+       "posthumes"
+      ],
+      [
+       "Walter"
+      ],
+      [
+       "fou"
+      ]
+     ],
+     "banque": [
+      "posthumes",
+      "anonymes",
+      "Walter",
+      "Allain",
+      "fou",
+      "aveugle"
+     ],
+     "aide": "Deux cahiers : le Cahier blanc et le Cahier noir. Le jeune homme n’a pas survécu à sa folie.",
+     "explication": "Ce sont les cahiers **posthumes** d’André **Walter**, mort **fou**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0f64c4c-2721-576c-b8d4-25c798d04a74",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un amour que la mère interdit",
+   "competence": "analyser-document",
+   "situation": "André Walter aime sa cousine, mais une promesse l’en sépare. Suis son parcours sur la chaîne, complète l’étape manquante, puis relie les personnages à leur rôle.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Walter",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Walter aime sa cousine Emmanuèle"
+      },
+      {
+       "id": "n2",
+       "texte": "Sa mère mourante lui interdit le mariage"
+      },
+      {
+       "id": "n3",
+       "texte": "Il choisit l’amour pur : il refuse le corps"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il sombre peu à peu dans le délire"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » ?",
+     "options": [
+      "Il s’enferme dans l’écriture et la Bible",
+      "Il épouse Emmanuèle malgré sa promesse",
+      "Il part faire fortune loin de sa famille",
+      "Il renonce à écrire pour faire du sport"
+     ],
+     "reponse": 0,
+     "aide": "Il refuse le corps : où se réfugie-t-il ?",
+     "explication": "Walter s’**enferme dans l’écriture, la lecture de la Bible et la mystique**, avant de sombrer."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape qui explique pourquoi Walter renonce au mariage.",
+     "aide": "Qui lui a fait promettre de ne pas épouser sa cousine ?",
+     "explication": "Sa **mère mourante** lui a fait promettre de ne pas épouser Emmanuèle."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "André Walter",
+       "Le double du jeune Gide, qui écrit son journal"
+      ],
+      [
+       "Emmanuèle",
+       "La cousine aimée, idéalisée"
+      ],
+      [
+       "La mère",
+       "La loi morale, même après sa mort"
+      ],
+      [
+       "Allain",
+       "Le héros du roman que Walter écrit"
+      ]
+     ],
+     "aide": "Un personnage de la chaîne, un reflet, une loi, un personnage inventé par Walter.",
+     "explication": "**Walter** est le double de Gide, **Emmanuèle** la cousine idéalisée, la **mère** la loi morale, **Allain** le héros du roman dans le roman."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le jeune Gide écrit-il ce livre ?",
+     "options": [
+      "Pour convaincre sa cousine de l’épouser",
+      "Pour se venger de sa mère protestante",
+      "Pour gagner de l’argent avec un roman",
+      "Pour raconter un voyage en Orient"
+     ],
+     "reponse": 0,
+     "aide": "Madeleine a refusé sa première demande.",
+     "explication": "Gide écrit **pour convaincre sa cousine Madeleine de l’épouser** : elle refusera d’abord sa demande."
+    }
+   ]
+  },
+  {
+   "chapitre": "c0f64c4c-2721-576c-b8d4-25c798d04a74",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le journal d’un double",
+   "competence": "argumenter",
+   "situation": "Anaïs et Léo débattent : ce livre est-il l’autobiographie de Gide ? Lis la page de journal écrite pour l’exercice et leur échange, puis fais le tri.",
+   "documents": [
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une page de journal",
+     "blocs": [
+      "Cahier blanc. — Je n’ai pas touché sa main. J’ai écrit toute la nuit : l’[[e|écriture]] remplace ce que je refuse à mon corps.",
+      "Mère, j’ai tenu ma promesse. Je lis la Bible et je ne dors plus."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Cahiers d’André Walter* de Gide"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Anaïs",
+       "texte": "Gide raconte sa propre vie : c’est une autobiographie."
+      },
+      {
+       "qui": "Léo",
+       "texte": "C’est un journal fictif : Walter est un double de Gide, pas Gide lui-même."
+      },
+      {
+       "qui": "Anaïs",
+       "texte": "Pourtant Madeleine est bien la vraie Emmanuèle."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Oui, mais Walter meurt fou, alors que Gide écrit pour convaincre sa cousine de l’épouser."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui dit ce qui remplace la vie dans cette page.",
+     "aide": "Walter ne touche pas la main de sa cousine : que fait-il de ses nuits ?",
+     "explication": "L’**écriture** remplace la vie : c’est la sublimation qui structure le livre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon la tension du livre.",
+     "categories": [
+      "Du côté du corps",
+      "Du côté de l’esprit"
+     ],
+     "items": [
+      [
+       "La main de la cousine",
+       0
+      ],
+      [
+       "Le désir",
+       0
+      ],
+      [
+       "La lecture de la Bible",
+       1
+      ],
+      [
+       "L’écriture du journal",
+       1
+      ],
+      [
+       "La mystique",
+       1
+      ]
+     ],
+     "aide": "Walter choisit l’amour pur : il refuse l’un pour vivre dans l’autre.",
+     "explication": "La **main** et le **désir** relèvent du corps ; la **Bible**, l’**écriture** et la **mystique** de l’esprit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le débat soutient-il ?",
+     "options": [
+      "Un journal fictif où Walter est le double de Gide",
+      "Une autobiographie fidèle de Gide, jour après jour",
+      "Un roman historique sur la Réforme protestante",
+      "Un essai philosophique sans personnage"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réponse de Léo.",
+     "explication": "Le livre est un **journal fictif** : Walter est le **double** de Gide, pas Gide lui-même."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du livre à son effet.",
+     "paires": [
+      [
+       "Le journal fictif",
+       "Roman à la première personne, avec un double de l’auteur"
+      ],
+      [
+       "Le roman dans le roman (Allain)",
+       "Le héros reflète Walter, son créateur"
+      ],
+      [
+       "Le style symboliste",
+       "Marque d’une période que Gide jugera sévèrement"
+      ],
+      [
+       "La promesse à la mère",
+       "La loi morale qui pèse même après sa mort"
+      ]
+     ],
+     "aide": "Chaque procédé a une fonction dans la construction du récit.",
+     "explication": "Le **journal** crée le double, **Allain** le reflète, le **style** date le livre, la **promesse** est la loi de la mère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que devient la tension entre le corps et l’esprit dans la suite de l’œuvre ?",
+     "options": [
+      "Elle revient dans *L’Immoraliste* et *La Porte étroite*",
+      "Elle disparaît définitivement après ce premier livre",
+      "Elle ne reparaît que dans les *Faux-Monnayeurs*",
+      "Elle ne concerne que les soties, comme les *Caves*"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit que ce livre est la matrice de toute l’œuvre.",
+     "explication": "La tension se retrouve dans *L’Immoraliste* et *La Porte étroite* : le livre est la **matrice** de l’œuvre."
+    }
+   ]
+  },
+  {
+   "chapitre": "9eccfa12-d7bb-5f10-a330-02d68f6b4707",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un adolescent à Douai",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ta fiche sur *Les Cahiers de Douai*, situe le recueil dans la vie de Rimbaud, puis relève ce qu’il faut savoir sur sa composition.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rimbaud et le recueil",
+     "debut": 1850,
+     "fin": 1895,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1854,
+       "nom": "Naissance"
+      },
+      {
+       "id": "douai",
+       "date": 1870,
+       "nom": "Douai"
+      },
+      {
+       "id": "mort",
+       "date": 1891,
+       "nom": "Mort"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "douai"
+     ],
+     "enonce": "Touche l’année où Rimbaud recopie ses poèmes à Douai.",
+     "aide": "C’est l’automne de la guerre franco-prussienne.",
+     "explication": "Rimbaud recopie ses poèmes à Douai à l’automne **1870**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le séjour à Douai de la mort de Rimbaud ?",
+     "reponse": 21,
+     "unite": "ans",
+     "aide": "Repère « Douai » et « Mort » sur la frise, puis soustrais.",
+     "explication": "1891 − 1870 = **21 ans** : Rimbaud a écrit ces poèmes adolescent, et il est mort jeune."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui Rimbaud confie-t-il les poèmes recopiés ?",
+     "options": [
+      "À Paul Demeny",
+      "À Georges Izambard",
+      "À Paul Verlaine",
+      "À Stéphane Mallarmé"
+     ],
+     "reponse": 0,
+     "aide": "Un jeune poète rencontré à Douai, à qui il espère être publié.",
+     "explication": "Les poèmes sont confiés à **Paul Demeny**, jeune poète de Douai."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du recueil.",
+     "texte": "Vingt-deux poèmes recopiés à ___ à l’automne ___ ; le titre est ___.",
+     "reponses": [
+      [
+       "Douai"
+      ],
+      [
+       "1870"
+      ],
+      [
+       "posthume"
+      ]
+     ],
+     "banque": [
+      "Douai",
+      "Charleville",
+      "1870",
+      "1871",
+      "posthume",
+      "choisi par Rimbaud"
+     ],
+     "aide": "Le titre n’a pas été donné par le poète lui-même.",
+     "explication": "Poèmes recopiés à **Douai** en **1870** ; le titre est **posthume**, il n’est pas de Rimbaud."
+    }
+   ]
+  },
+  {
+   "chapitre": "9eccfa12-d7bb-5f10-a330-02d68f6b4707",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois veines pour un adolescent",
+   "competence": "lire-tableau",
+   "situation": "Le recueil réunit des poèmes de nature très différente. Lis le tableau des trois veines, complète-le, puis range les poèmes.",
+   "documents": [
+    {
+     "id": "veines",
+     "type": "tableau",
+     "titre": "Les trois veines",
+     "colonnes": [
+      "Veine",
+      "Ce qu’elle fait"
+     ],
+     "lignes": [
+      [
+       "La fugue et la sensation",
+       "Le corps marche, mange, regarde ; la nature remplace la maison"
+      ],
+      [
+       "La satire politique",
+       "Écrite pendant la guerre franco-prussienne et la chute du Second Empire"
+      ],
+      [
+       "La provocation",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » de la provocation ?",
+     "options": [
+      "Le sonnet noble dit le trivial et le laid",
+      "La nature remplace la maison de l’adolescent",
+      "La guerre et la chute du Second Empire",
+      "Les poèmes de mer et de voyage"
+     ],
+     "reponse": 0,
+     "aide": "Un moule noble, un sujet qui choque.",
+     "explication": "La provocation fait servir le **sonnet**, forme noble, à dire **le trivial et le laid**."
+    },
+    {
+     "type": "zone",
+     "document": "veines",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche la veine écrite pendant la guerre franco-prussienne.",
+     "aide": "Cherche les mots « Second Empire ».",
+     "explication": "La **satire politique** naît de la guerre franco-prussienne et de la chute du Second Empire."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque poème dans sa veine.",
+     "categories": [
+      "Fugue et sensation",
+      "Satire politique",
+      "Provocation"
+     ],
+     "items": [
+      [
+       "« Ma Bohème »",
+       0
+      ],
+      [
+       "« Sensation »",
+       0
+      ],
+      [
+       "« Le Forgeron »",
+       1
+      ],
+      [
+       "« Rages de Césars »",
+       1
+      ],
+      [
+       "« Vénus Anadyomène »",
+       2
+      ],
+      [
+       "« Les Reparties de Nina »",
+       2
+      ]
+     ],
+     "aide": "Le corps qui marche, la politique, ou le défi à la forme noble : à toi de trancher.",
+     "explication": "« Ma Bohème » et « Sensation » disent la **fugue** ; « Le Forgeron » et « Rages de Césars » la **satire** ; « Vénus Anadyomène » et « Nina » la **provocation**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur « Le Dormeur du val ».",
+     "texte": "« Le Dormeur du val » relève de la veine ___ : le soldat est ___.",
+     "reponses": [
+      [
+       "satire politique",
+       "satirique",
+       "politique"
+      ],
+      [
+       "mort"
+      ]
+     ],
+     "banque": [
+      "satire politique",
+      "provocation",
+      "mort",
+      "endormi"
+     ],
+     "aide": "Pense à la chute du poème et au contexte de 1870.",
+     "explication": "« Le Dormeur du val » relève de la **satire politique** : le soldat est **mort**, victime de la guerre."
+    }
+   ]
+  },
+  {
+   "chapitre": "9eccfa12-d7bb-5f10-a330-02d68f6b4707",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux trous rouges au côté droit",
+   "competence": "argumenter",
+   "situation": "Chloé et Sami discutent du « Dormeur du val ». Lis les vers choisis, puis leur débat, et tranche.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le premier vers et la chute",
+     "blocs": [
+      "C’est un trou de verdure où chante une rivière,",
+      "",
+      "Il dort dans le soleil, la main sur sa poitrine,",
+      "Tranquille. Il a deux [[t|trous]] [[t|rouges]] au côté droit."
+     ],
+     "source": "Arthur Rimbaud, « Le Dormeur du val » (1870), vers 1, 13 et 14"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sami",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Ce poème décrit un jeune soldat qui fait la sieste dans un joli paysage."
+      },
+      {
+       "qui": "Sami",
+       "texte": "Regarde la fin : il est mort, et le calme du décor le cachait jusque-là."
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Alors la guerre n’apparaît presque pas ?"
+      },
+      {
+       "qui": "Sami",
+       "texte": "Elle surgit d’un coup dans la chute, par les deux trous rouges."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui révèlent que le soldat est mort.",
+     "aide": "Cherche la blessure, à la dernière ligne.",
+     "explication": "Les **trous rouges** sont les blessures : le soldat dort du sommeil de la mort."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet la chute produit-elle sur le lecteur ?",
+     "options": [
+      "Elle renverse le calme du décor par la violence de la guerre",
+      "Elle confirme que le soldat se repose tranquillement",
+      "Elle introduit un moment de comédie légère",
+      "Elle décrit un souvenir d’enfance du poète"
+     ],
+     "reponse": 0,
+     "aide": "Relis le premier vers, puis la dernière ligne.",
+     "explication": "La chute **renverse** le calme apparent : la guerre surgit d’un coup."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du poème à son effet.",
+     "paires": [
+      [
+       "La forme du sonnet",
+       "Un moule noble pour un sujet violent"
+      ],
+      [
+       "Le décor de la nature",
+       "Un calme qui cache la mort"
+      ],
+      [
+       "La chute « deux trous rouges »",
+       "La révélation brutale de la guerre"
+      ]
+     ],
+     "aide": "Pense à la forme, au décor, puis à la fin.",
+     "explication": "Le **sonnet** donne un moule noble, la **nature** masque la mort, la **chute** révèle brutalement la guerre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume le rapport de Rimbaud aux formes héritées ?",
+     "options": [
+      "Il maîtrise le vers classique et le maltraite",
+      "Il rejette totalement la forme du sonnet",
+      "Il imite fidèlement ses maîtres parnassiens",
+      "Il n’écrit que des vers libres, sans rime"
+     ],
+     "reponse": 0,
+     "aide": "Dans le cours : « il maîtrise ET il maltraite ».",
+     "explication": "Rimbaud **maîtrise le vers classique ET le maltraite** : héritage et révolte à la fois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel texte de 1871 ces poèmes préparent-ils ?",
+     "options": [
+      "La lettre du Voyant",
+      "Une saison en enfer",
+      "Les Illuminations",
+      "Les Poètes maudits, de Verlaine"
+     ],
+     "reponse": 0,
+     "aide": "Le poète veut se faire « voyant ».",
+     "explication": "Ces poèmes préparent la **lettre du Voyant** (1871) : se faire voyant par un dérèglement des sens."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb563c92-369f-5a0f-9767-3a1883aad36c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mille remarques en livres",
+   "competence": "lire-tableau",
+   "situation": "Pour ta fiche sur *Les Caractères*, lis ce tableau de quelques livres, complète-le, puis retiens ce qu’il faut savoir de l’ouvrage.",
+   "documents": [
+    {
+     "id": "livres",
+     "type": "tableau",
+     "titre": "Quelques livres des *Caractères*",
+     "colonnes": [
+      "Livre",
+      "Ce qu’il vise"
+     ],
+     "lignes": [
+      [
+       "« Des biens de fortune »",
+       "Les portraits de Giton le riche et de Phédon le pauvre"
+      ],
+      [
+       "« De la ville »",
+       "?"
+      ],
+      [
+       "« De la cour »",
+       "Le sommet du livre"
+      ],
+      [
+       "« Des grands », « Du souverain »",
+       "Le pouvoir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "livres",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le livre considéré comme le sommet de l’œuvre.",
+     "aide": "Cherche les mots « Le sommet du livre ».",
+     "explication": "« **De la cour** » est le sommet de l’œuvre : La Bruyère y observe les courtisans de près."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » de « De la ville » ?",
+     "options": [
+      "La bourgeoisie qui singe la cour",
+      "Les paysans des campagnes françaises",
+      "Les ecclésiastiques et leurs sermons",
+      "Les soldats des armées du roi"
+     ],
+     "reponse": 0,
+     "aide": "La ville est le lieu des bourgeois qui voudraient ressembler aux courtisans.",
+     "explication": "« De la ville » vise la **bourgeoisie qui singe la cour**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du livre.",
+     "texte": "L’ouvrage paraît en ___ ; il se présente d’abord comme une ___ de Théophraste.",
+     "reponses": [
+      [
+       "1688"
+      ],
+      [
+       "traduction"
+      ]
+     ],
+     "banque": [
+      "1688",
+      "1693",
+      "traduction",
+      "imitation",
+      "préface"
+     ],
+     "aide": "Le cours donne la date de parution et la façade de départ de l’œuvre.",
+     "explication": "Paru en **1688**, le livre se présente d’abord comme une **traduction** de Théophraste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel camp La Bruyère entre-t-il à l’Académie française en 1693 ?",
+     "options": [
+      "Dans le camp des Anciens",
+      "Dans le camp des Modernes",
+      "Dans le camp des Précieux",
+      "Dans le camp des Libertins"
+     ],
+     "reponse": 0,
+     "aide": "Il se présente comme traducteur d’un auteur de l’Antiquité.",
+     "explication": "Il entre à l’Académie en **1693**, dans le camp des **Anciens**."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb563c92-369f-5a0f-9767-3a1883aad36c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le riche, le pauvre et le distrait",
+   "competence": "analyser-texte",
+   "situation": "La Bruyère montre au lieu de démontrer. Lis ce portrait écrit pour l’exercice à sa manière, puis relie les portraits du livre à leur caractère.",
+   "documents": [
+    {
+     "id": "portrait",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux hommes à la même table",
+     "blocs": [
+      "Arsène occupe tout l’espace : il parle [[r|haut]], il fait répéter son voisin et ne goûte qu’à demi ce qu’on lui dit. On l’écoute, parce qu’il est riche.",
+      "Lycas se fait petit : il n’ose [[p|rien]] demander, il baisse les yeux et s’excuse d’être là. On ne l’écoute pas, parce qu’il est pauvre."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des portraits de La Bruyère"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "portrait",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui montre comment parle le riche.",
+     "aide": "Le riche prend de la place par sa voix.",
+     "explication": "Arsène parle **haut** : sa voix occupe l’espace, comme Giton dans le livre."
+    },
+    {
+     "type": "zone",
+     "document": "portrait",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui montre que le pauvre n’ose pas.",
+     "aide": "Il n’ose pas demander quoi que ce soit.",
+     "explication": "Lycas n’ose **rien** : il se fait petit, comme Phédon."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque portrait de La Bruyère à son caractère.",
+     "paires": [
+      [
+       "Giton",
+       "Le riche, qui parle haut et occupe l’espace"
+      ],
+      [
+       "Phédon",
+       "Le pauvre, qui se fait petit et n’ose rien"
+      ],
+      [
+       "Ménalque",
+       "Le distrait, qui oublie jusqu’à son mariage"
+      ],
+      [
+       "Les paysans",
+       "Des « animaux farouches » qui se révèlent des hommes"
+      ]
+     ],
+     "aide": "Les deux premiers se retrouvent dans le texte ; les deux autres sont dans le cours.",
+     "explication": "**Giton** est le riche, **Phédon** le pauvre, **Ménalque** le distrait, les **paysans** des hommes sous l’apparence de bêtes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les personnages des *Caractères* portent-ils des noms grecs ?",
+     "options": [
+      "Pour protéger l’auteur et laisser reconnaître les modèles",
+      "Parce que le livre se passe dans la Grèce antique",
+      "Parce que La Bruyère a traduit tout le livre du grec",
+      "Pour rendre hommage aux dieux de la mythologie"
+     ],
+     "reponse": 0,
+     "aide": "La cour s’y reconnaissait, des « clés » circulaient.",
+     "explication": "Les noms grecs **protègent l’auteur** tout en laissant **reconnaître les modèles** : des clés circulaient."
+    }
+   ]
+  },
+  {
+   "chapitre": "bb563c92-369f-5a0f-9767-3a1883aad36c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tout est dit, et l’on vient trop tard",
+   "competence": "argumenter",
+   "situation": "Pour un sujet sur la littérature d’idées, tu t’appuies sur la célèbre phrase d’ouverture des *Caractères*. Lis-la, puis construis ton argument avec le tableau.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La phrase d’ouverture",
+     "blocs": [
+      "« Tout est dit, et l’on vient trop [[t|tard]]. »"
+     ],
+     "source": "La Bruyère, *Les Caractères* (1688), phrase qui ouvre le livre"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La Bruyère montre au lieu de démontrer",
+       "Un geste, un habit, une façon de parler suffisent à faire un caractère",
+       "?"
+      ],
+      [
+       "Il observe une société où l’argent concurrence la naissance",
+       "Les riches se font écouter, les pauvres se taisent",
+       "Giton et Phédon, dans « Des biens de fortune »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit que l’auteur arrive après les autres.",
+     "aide": "Le mot s’oppose à l’idée d’être le premier.",
+     "explication": "Le mot **tard** avoue que les moralistes de l’Antiquité ont déjà tout dit : La Bruyère se range du côté des Anciens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit cette phrase de la position de La Bruyère ?",
+     "options": [
+      "Il se range du côté des Anciens, qui ont déjà tout dit",
+      "Il se range du côté des Modernes, qui inventent tout",
+      "Il refuse de lire les auteurs de l’Antiquité",
+      "Il prétend avoir inventé un genre entièrement neuf"
+     ],
+     "reponse": 0,
+     "aide": "Il entre à l’Académie en 1693 dans un camp précis.",
+     "explication": "La phrase est **cohérente avec le camp des Anciens**, que La Bruyère rejoint à l’Académie en 1693."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le portrait de Ménalque, qui oublie jusqu’à son mariage",
+      "Une démonstration en trois points sur la cour",
+      "Un dialogue suivi entre deux philosophes",
+      "Un traité complet sur les devoirs du roi"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un portrait où des gestes suffisent à faire un caractère.",
+     "explication": "Le portrait de **Ménalque** montre un caractère par ses gestes, sans démonstration."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : forme brève du livre ou ce qu’il n’est pas.",
+     "categories": [
+      "Forme brève du livre",
+      "Ce que le livre n’est pas"
+     ],
+     "items": [
+      [
+       "Une maxime",
+       0
+      ],
+      [
+       "Un portrait",
+       0
+      ],
+      [
+       "Une démonstration suivie en trois parties",
+       1
+      ],
+      [
+       "Un long traité philosophique",
+       1
+      ]
+     ],
+     "aide": "Le livre compte plus de mille remarques courtes.",
+     "explication": "Maximes et portraits sont des **formes brèves** ; démonstration suivie et long traité ne sont **pas** la méthode de La Bruyère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi *Les Caractères* sert-il pour la littérature d’idées ?",
+     "options": [
+      "Il critique la société sans jamais argumenter longuement",
+      "Il expose un système philosophique complet",
+      "Il raconte une histoire suivie sur plusieurs actes",
+      "Il met en vers les règles de la grammaire"
+     ],
+     "reponse": 0,
+     "aide": "La Bruyère procède par remarques brèves et par portraits.",
+     "explication": "Il **critique la société sans jamais argumenter longuement** : il passe par la forme brève et le portrait."
+    }
+   ]
+  },
+  {
+   "chapitre": "36e13ae1-db4e-51ae-ad55-b6f2cf104218",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une famille mêlée à une farce",
+   "competence": "analyser-document",
+   "situation": "Dans *Les Caves du Vatican*, plusieurs personnages sont liés par la famille sans se connaître. Lis la chaîne des liens, complète-la, puis retrouve qui est qui.",
+   "documents": [
+    {
+     "id": "liens",
+     "type": "chaine",
+     "titre": "Les liens de famille",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Lafcadio"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Fleurissoire"
+      },
+      {
+       "id": "n4",
+       "texte": "Anthime"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "demi-frère de"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "beau-frère de"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "beau-frère de"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui occupe la case « ? » : le demi-frère de Lafcadio, qui est romancier ?",
+     "options": [
+      "Julius de Baraglioul",
+      "Protos, le chef de la bande",
+      "Le comte Juste-Agénor de Baraglioul",
+      "Amédée Fleurissoire"
+     ],
+     "reponse": 0,
+     "aide": "Il est le fils légitime du comte dont Lafcadio est le fils naturel.",
+     "explication": "C’est **Julius de Baraglioul**, romancier, demi-frère de Lafcadio et beau-frère de Fleurissoire."
+    },
+    {
+     "type": "zone",
+     "document": "liens",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche la victime idéale : un bourgeois de Pau, pieux et naïf.",
+     "aide": "Son nom commence par Fleur.",
+     "explication": "**Fleurissoire** est la victime idéale : il part héroïquement délivrer le pape."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est.",
+     "paires": [
+      [
+       "Protos",
+       "Le chef des escrocs, maître des déguisements"
+      ],
+      [
+       "Anthime",
+       "Un savant athée, converti après un miracle"
+      ],
+      [
+       "Lafcadio",
+       "Un jeune bâtard élégant et libre"
+      ],
+      [
+       "Fleurissoire",
+       "Un bourgeois de Pau, pieux et naïf"
+      ]
+     ],
+     "aide": "Un chef de bande, un savant, un jeune libre, un naïf : chacun a sa phrase dans le cours.",
+     "explication": "**Protos** dirige la bande, **Anthime** est un athée converti, **Lafcadio** un bâtard libre, **Fleurissoire** un bourgeois naïf."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Gide appelle-t-il ce livre ?",
+     "options": [
+      "Une sotie, farce satirique",
+      "Un récit grave, comme *La Porte étroite*",
+      "Un journal intime fictif",
+      "Un poème en prose symboliste"
+     ],
+     "reponse": 0,
+     "aide": "Gide classe ses livres en récits, soties et un seul roman.",
+     "explication": "Gide appelle le livre une **sotie**, une **farce satirique**."
+    }
+   ]
+  },
+  {
+   "chapitre": "36e13ae1-db4e-51ae-ad55-b6f2cf104218",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le pape séquestré",
+   "competence": "analyser-texte",
+   "situation": "Une rumeur fait lever des fonds, un naïf part pour Rome, un geste sans raison met fin à l’aventure. Lis le résumé écrit pour l’exercice, puis démêle le vrai et le faux.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’escroquerie",
+     "blocs": [
+      "Une bande menée par [[p|Protos]] répand une [[r|rumeur]] : le pape serait séquestré dans les caves du Vatican, et un faux pape régnerait à sa place.",
+      "Pour le délivrer, il faut réunir des fonds. Amédée Fleurissoire, bourgeois de Pau, pieux et naïf, part à Rome. Dans un train, Lafcadio le pousse par la portière, sans mobile."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le chef de la bande d’escrocs.",
+     "aide": "Son nom vient en premier dans le texte.",
+     "explication": "**Protos** mène la bande : c’est le maître des déguisements."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque énoncé : ce que prétend la rumeur, ou ce qui arrive vraiment.",
+     "categories": [
+      "Ce que la rumeur prétend",
+      "Ce qui arrive vraiment"
+     ],
+     "items": [
+      [
+       "Le pape est séquestré dans les caves du Vatican",
+       0
+      ],
+      [
+       "Un faux pape règne à sa place",
+       0
+      ],
+      [
+       "Fleurissoire part à Rome",
+       1
+      ],
+      [
+       "Lafcadio pousse Fleurissoire dans un train",
+       1
+      ]
+     ],
+     "aide": "La rumeur invente un fait ; la suite du résumé raconte ce qui arrive dans le livre.",
+     "explication": "Le pape séquestré et le faux pape sont **inventés** par la rumeur ; le voyage de Fleurissoire et le **crime dans le train** arrivent vraiment dans le récit."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui désigne ce que la bande répand pour lever des fonds.",
+     "aide": "Elle circule de bouche en bouche, sans preuve.",
+     "explication": "La **rumeur** du pape séquestré sert à lever des fonds."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les événements dans l’ordre.",
+     "items": [
+      "Protos répand la rumeur d’un pape séquestré",
+      "On cherche à réunir des fonds pour le délivrer",
+      "Fleurissoire part à Rome pour libérer le pape",
+      "Lafcadio le pousse par la portière du train"
+     ],
+     "aide": "La rumeur vient avant l’argent, l’argent avant le voyage.",
+     "explication": "La **rumeur**, puis la collecte de **fonds**, puis le **voyage** de Fleurissoire, enfin le **crime** dans le train."
+    }
+   ]
+  },
+  {
+   "chapitre": "36e13ae1-db4e-51ae-ad55-b6f2cf104218",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’acte gratuit en question",
+   "competence": "argumenter",
+   "situation": "Jade et Malik se disputent sur Lafcadio : son acte prouve-t-il vraiment sa liberté ? Lis la phrase du livre donnée par le cours et leur échange, puis tranche.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Une phrase du livre",
+     "blocs": [
+      "« Un crime [[i|immotivé]], quel embarras pour la police. »"
+     ],
+     "source": "André Gide, *Les Caves du Vatican* (1914) — phrase donnée par le cours"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Jade",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Jade",
+       "texte": "L’acte gratuit prouve que Lafcadio est libre : il agit sans aucun motif."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Pas vraiment : Gide le relativise, Lafcadio est rattrapé par la logique et par le remords."
+      },
+      {
+       "qui": "Jade",
+       "texte": "Pourtant les surréalistes ont adoré cette idée."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Oui, mais Gide ne la prend pas au pied de la lettre."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui dit que le crime n’a aucun motif.",
+     "aide": "Cherche l’adjectif qui qualifie le crime.",
+     "explication": "Un crime **immotivé** n’a pas de motif : c’est la définition de l’acte gratuit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce que l’acte gratuit ?",
+     "options": [
+      "Un acte sans motif, censé prouver la liberté",
+      "Un acte accompli pour obtenir de l’argent",
+      "Un acte imposé par un précepte religieux",
+      "Un acte commis par pure vengeance familiale"
+     ],
+     "reponse": 0,
+     "aide": "Relis la première réplique de Jade.",
+     "explication": "L’**acte gratuit** est un acte **sans motif**, censé prouver la **liberté**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle nuance Malik apporte-t-il ?",
+     "options": [
+      "Lafcadio n’échappe ni à la logique ni au remords",
+      "Lafcadio est puni par la police dès le lendemain",
+      "Lafcadio ne regrette absolument rien de son geste",
+      "Lafcadio n’a jamais poussé personne dans un train"
+     ],
+     "reponse": 0,
+     "aide": "Il parle de la logique et du remords.",
+     "explication": "Gide relativise : Lafcadio est **rattrapé par la logique et par le remords**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du livre à son effet.",
+     "paires": [
+      [
+       "Les surréalistes",
+       "Ils ont adoré l’idée d’acte gratuit"
+      ],
+      [
+       "Julius, romancier",
+       "Il annonce la mise en abyme des *Faux-Monnayeurs*"
+      ],
+      [
+       "Le ton de sotie",
+       "Il moque la religion, la crédulité et le romanesque"
+      ],
+      [
+       "Le remords de Lafcadio",
+       "Il relativise l’idée d’un acte sans conséquence"
+      ]
+     ],
+     "aide": "Chaque élément joue un rôle dans la réception ou la construction du livre.",
+     "explication": "Les **surréalistes** admirent l’acte gratuit, **Julius** annonce la mise en abyme, la **sotie** moque, le **remords** relativise."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quel sujet de dissertation l’acte gratuit est-il utile ?",
+     "options": [
+      "La liberté et la responsabilité d’un acte",
+      "Lyrisme amoureux et fuite du temps",
+      "Poésie engagée contre un régime",
+      "Théâtre de l’absurde et parole impuissante"
+     ],
+     "reponse": 0,
+     "aide": "Le cours évoque une question précise sur la liberté.",
+     "explication": "Le thème sert à réfléchir à la **liberté** et à la **responsabilité** : un acte peut-il être vraiment sans cause ?"
+    }
+   ]
+  },
+  {
+   "chapitre": "007064d8-dde7-57e0-9278-b5463341104d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux vieillards dans une maison entourée d’eau",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ton oral sur *Les Chaises*. Une affiche de théâtre, imaginée pour l’exercice, résume la pièce : lis-la, puis retrouve ce qu’il faut savoir.",
+   "documents": [
+    {
+     "id": "aff",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Les Chaises",
+     "sousTitre": "Eugène Ionesco — créée en 1952",
+     "emoji": "🪑",
+     "lignes": [
+      {
+       "texte": "Sous-titre",
+       "valeur": "« Farce tragique »",
+       "id": "sous"
+      },
+      {
+       "texte": "Le Vieux",
+       "valeur": "95 ans",
+       "id": "vieux"
+      },
+      {
+       "texte": "La Vieille",
+       "valeur": "94 ans",
+       "id": "vieille"
+      },
+      {
+       "texte": "Le cadre",
+       "valeur": "Une maison entourée d’eau",
+       "id": "cadre"
+      },
+      {
+       "texte": "Le courant",
+       "valeur": "?",
+       "id": "courant"
+      }
+     ],
+     "pied": "Une pièce sur une salle vide",
+     "teinte": "violet",
+     "source": "Affiche imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la différence d’âge entre le Vieux et la Vieille ?",
+     "reponse": 1,
+     "unite": "an",
+     "aide": "Lis les deux âges sur l’affiche et soustrais.",
+     "explication": "95 − 94 = **1 an** : ils sont presque du même âge, vieillis ensemble."
+    },
+    {
+     "type": "zone",
+     "document": "aff",
+     "multiple": false,
+     "reponse": [
+      "cadre"
+     ],
+     "enonce": "Touche la ligne qui dit où vit le couple.",
+     "aide": "Cherche le mot « maison ».",
+     "explication": "Le couple vit dans une **maison entourée d’eau**, coupée du monde."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » : à quel courant la pièce appartient-elle ?",
+     "options": [
+      "Le théâtre de l’absurde",
+      "Le théâtre classique",
+      "Le drame romantique",
+      "Le théâtre naturaliste"
+     ],
+     "reponse": 0,
+     "aide": "Ionesco a révolutionné la scène avec *La Cantatrice chauve*.",
+     "explication": "*Les Chaises* est l’une des œuvres majeures du **théâtre de l’absurde**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité de la pièce.",
+     "texte": "Ionesco la sous-titre « farce ___ » ; elle est créée en ___, devant un public ___.",
+     "reponses": [
+      [
+       "tragique"
+      ],
+      [
+       "1952"
+      ],
+      [
+       "clairsemé"
+      ]
+     ],
+     "banque": [
+      "tragique",
+      "comique",
+      "1952",
+      "1950",
+      "clairsemé",
+      "nombreux"
+     ],
+     "aide": "Le cours évoque une ironie : la salle était presque vide.",
+     "explication": "Une farce **tragique**, créée en **1952** devant un public **clairsemé** : comme la scène, la salle était presque vide."
+    }
+   ]
+  },
+  {
+   "chapitre": "007064d8-dde7-57e0-9278-b5463341104d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Des chaises pour personne",
+   "competence": "analyser-document",
+   "situation": "Les invités du Vieux et de la Vieille n’existent pas, et pourtant les chaises s’accumulent. Suis la pièce sur la chaîne, complète-la, puis ordonne la fin.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "La soirée",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Le Vieux convoque une assemblée"
+      },
+      {
+       "id": "n2",
+       "texte": "Les invités invisibles arrivent"
+      },
+      {
+       "id": "n3",
+       "texte": "Les chaises arrivent de plus en plus vite"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Les deux vieux se jettent par la fenêtre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » ?",
+     "options": [
+      "L’Empereur est annoncé, puis l’Orateur arrive",
+      "Les invités quittent la salle un à un",
+      "La Vieille chasse les invités de la maison",
+      "Le Vieux révèle son message à voix haute"
+     ],
+     "reponse": 0,
+     "aide": "Avant le saut, la soirée atteint son sommet puis l’Orateur doit parler.",
+     "explication": "L’**Empereur** est annoncé, puis l’**Orateur** arrive : les deux vieux, rassurés, se jettent par la fenêtre."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où la scène s’encombre.",
+     "aide": "Les objets s’empilent de plus en plus vite.",
+     "explication": "Les **chaises** arrivent de plus en plus vite et la scène est entièrement encombrée."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets la fin de la pièce dans l’ordre.",
+     "items": [
+      "L’Orateur arrive pour transmettre le message",
+      "Les deux vieux se jettent par la fenêtre",
+      "L’Orateur reste seul devant la foule vide",
+      "L’Orateur se révèle sourd-muet"
+     ],
+     "aide": "Le message est confié avant le saut des vieillards ; la révélation clôt la pièce.",
+     "explication": "L’**Orateur** arrive, les vieux **sautent**, il reste **seul** devant la foule vide, et l’on découvre qu’il est **sourd-muet**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de la pièce à ce qu’il figure.",
+     "paires": [
+      [
+       "Les chaises",
+       "Les mots qui envahissent le vide"
+      ],
+      [
+       "L’Orateur sourd-muet",
+       "Le langage devenu impuissant"
+      ],
+      [
+       "Les invités invisibles",
+       "Le vide qu’on fait parler"
+      ],
+      [
+       "Le sous-titre « farce tragique »",
+       "Le rire mêlé à la solitude"
+      ]
+     ],
+     "aide": "Chaque élément du décor ou des personnages dit quelque chose de la parole.",
+     "explication": "Les **chaises** figurent les mots qui envahissent le vide, l’**Orateur** l’impuissance du langage, les **invités** le vide, la **farce tragique** le rire mêlé à la solitude."
+    }
+   ]
+  },
+  {
+   "chapitre": "007064d8-dde7-57e0-9278-b5463341104d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Parler à une salle vide",
+   "competence": "argumenter",
+   "situation": "Zoé et Noah débattent : tragédie ou farce ? Lis la scène écrite pour l’exercice à la manière de Ionesco, puis leur échange, et fais ton choix.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans la salle aux chaises",
+     "blocs": [
+      {
+       "didascalie": "Une salle encombrée de chaises vides. Une vieille femme sourit à ceux qu’elle ne voit pas."
+      },
+      {
+       "personnage": "La Vieille",
+       "replique": "Vous êtes si nombreux ! Pardon, laissez-moi passer, j’apporte encore une chaise."
+      },
+      {
+       "personnage": "Le Vieux",
+       "replique": "Parle plus fort : ils n’[[c|entendent]] rien, au fond."
+      },
+      {
+       "personnage": "La Vieille",
+       "replique": "Mais personne ne [[c|répond]], mon ami."
+      },
+      {
+       "personnage": "Le Vieux",
+       "replique": "C’est qu’ils écoutent."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des *Chaises* de Ionesco"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Noah",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "C’est une tragédie : deux vieillards se suicident, il n’y a rien de drôle."
+      },
+      {
+       "qui": "Noah",
+       "texte": "Ionesco écrit « farce tragique » : on rit de leur vanité et on pleure leur solitude."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Et les chaises vides ?"
+      },
+      {
+       "qui": "Noah",
+       "texte": "Elles figurent le vide que les mots ne remplissent pas."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux verbes qui disent que la parole ne passe pas.",
+     "aide": "Le Vieux dit que les invités n’en perçoivent rien ; la Vieille remarque qu’ils ne font pas quoi ?",
+     "explication": "Les invités n’**entendent** rien et ne **répondent** pas : la parole ne passe pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la dernière réplique du Vieux, « C’est qu’ils écoutent » ?",
+     "options": [
+      "Il refuse de voir que personne n’est là",
+      "Il comprend enfin que les invités sont absents",
+      "Il se moque volontairement de sa femme",
+      "Il annonce l’arrivée de l’Empereur"
+     ],
+     "reponse": 0,
+     "aide": "La Vieille vient de constater que personne ne répond.",
+     "explication": "Le Vieux **refuse d’admettre le vide** : la réplique est à la fois drôle et pathétique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie le sous-titre « farce tragique » ?",
+     "options": [
+      "Le comique et le tragique sont mêlés : on rit et on pleure",
+      "La pièce est une pure comédie sans aucune gravité",
+      "La pièce est une tragédie classique en cinq actes",
+      "La pièce est un drame historique sur la vieillesse"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que dit Noah.",
+     "explication": "La **farce tragique** mêle le **comique** et le **tragique** : on rit de la vanité des vieux, on pleure leur solitude."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la pièce à son effet.",
+     "paires": [
+      [
+       "La prolifération des chaises",
+       "Elle remplit la scène comme l’angoisse remplit la vie"
+      ],
+      [
+       "Les invités invisibles",
+       "Ils montrent le vide qu’on fait parler"
+      ],
+      [
+       "L’Orateur sourd-muet",
+       "Il rend la parole définitivement impuissante"
+      ],
+      [
+       "La salle presque vide à la création",
+       "Elle répète au théâtre le vide de la scène"
+      ]
+     ],
+     "aide": "Chaque procédé agit sur la scène ou sur la salle.",
+     "explication": "Les **chaises** envahissent, les **invités** sont un vide parlant, l’**Orateur** ruine la parole, la **salle vide** prolonge la pièce."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour quel sujet de dissertation la pièce est-elle un bon exemple ?",
+     "options": [
+      "La parole au théâtre, qui ne communique plus",
+      "Le lyrisme amoureux et la fuite du temps",
+      "La poésie engagée contre un empereur",
+      "Le roman d’apprentissage du XVIIIe siècle"
+     ],
+     "reponse": 0,
+     "aide": "Le cours évoque la parole qui ne communique plus.",
+     "explication": "La pièce illustre **la parole au théâtre** : une parole qui **ne communique plus**."
+    }
+   ]
+  },
+  {
+   "chapitre": "84ac7922-d929-5c1d-ba41-4a3c493dd64a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix-neuf ans d’exil",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ta fiche sur *Les Châtiments*, place le recueil dans le temps de l’exil de Victor Hugo. Lis la frise, puis relève ce qu’il faut savoir.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Hugo en exil",
+     "debut": 1850,
+     "fin": 1872,
+     "pas": 2,
+     "evenements": [
+      {
+       "id": "coup",
+       "date": 1851,
+       "nom": "Coup d’État"
+      },
+      {
+       "id": "chat",
+       "date": 1853,
+       "nom": "Châtiments"
+      },
+      {
+       "id": "amn",
+       "date": 1859,
+       "nom": "Amnistie refusée"
+      },
+      {
+       "id": "ret",
+       "date": 1870,
+       "nom": "Retour"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "chat"
+     ],
+     "enonce": "Touche l’année où paraît le recueil.",
+     "aide": "Il est publié à Bruxelles, deux ans après le coup d’État.",
+     "explication": "*Les Châtiments* paraissent en **1853**, à Bruxelles."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années Hugo reste-t-il en exil, du coup d’État au retour ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais les deux années extrêmes de la frise.",
+     "explication": "1870 − 1851 = **19 ans** : Hugo a refusé l’amnistie de 1859 et n’est rentré qu’en 1870."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où le recueil est-il publié ?",
+     "options": [
+      "À Bruxelles, et il est interdit en France",
+      "À Paris, avec l’accord du régime",
+      "À Jersey, par un imprimeur breton",
+      "À Londres, dans une traduction anglaise"
+     ],
+     "reponse": 0,
+     "aide": "Hugo est proscrit : il ne peut pas publier en France.",
+     "explication": "Le recueil paraît à **Bruxelles** et est **interdit en France**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du recueil.",
+     "texte": "Écrit à ___, publié à ___ en 1853, le recueil est ___ en France.",
+     "reponses": [
+      [
+       "Jersey"
+      ],
+      [
+       "Bruxelles"
+      ],
+      [
+       "interdit"
+      ]
+     ],
+     "banque": [
+      "Jersey",
+      "Guernesey",
+      "Bruxelles",
+      "Genève",
+      "interdit",
+      "autorisé"
+     ],
+     "aide": "Le cours donne l’île de l’écriture et la ville de publication.",
+     "explication": "Écrit à **Jersey**, publié à **Bruxelles**, le recueil est **interdit** en France."
+    }
+   ]
+  },
+  {
+   "chapitre": "84ac7922-d929-5c1d-ba41-4a3c493dd64a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un enfant, une grand-mère et un coup d’État",
+   "competence": "analyser-texte",
+   "situation": "Entre les sept livres aux titres ironiques, quelques poèmes sont devenus célèbres. Lis le tableau, puis les deux premiers vers de « Souvenir de la nuit du 4 », et analyse-les.",
+   "documents": [
+    {
+     "id": "poemes",
+     "type": "tableau",
+     "titre": "Les poèmes célèbres",
+     "colonnes": [
+      "Poème",
+      "Ce qu’il montre"
+     ],
+     "lignes": [
+      [
+       "« Souvenir de la nuit du 4 »",
+       "Un enfant tué par les balles, sa grand-mère qui le déshabille"
+      ],
+      [
+       "« L’expiation »",
+       "Waterloo, la Bérézina, Sainte-Hélène : l’ombre du grand Napoléon écrasant le petit"
+      ],
+      [
+       "« Ô soldats de l’an deux ! »",
+       "?"
+      ],
+      [
+       "« Lux »",
+       "Le dernier poème : un avenir lumineux"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les deux premiers vers",
+     "blocs": [
+      "L’enfant avait reçu deux [[b|balles]] dans la tête,",
+      "Le logis était [[a|propre]], [[a|humble]], [[a|paisible]], [[a|honnête]] ;"
+     ],
+     "source": "Victor Hugo, « Souvenir de la nuit du 4 », *Les Châtiments* (1853), vers 1 et 2"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui révèle la violence subie par l’enfant.",
+     "aide": "Cherche ce qui a frappé l’enfant, au premier vers.",
+     "explication": "Les **balles** disent la violence du coup d’État : l’enfant a été tué."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les quatre adjectifs qui décrivent le logis.",
+     "aide": "Ils sont énumérés à la fin du second vers.",
+     "explication": "Le logis est **propre, humble, paisible, honnête** : une famille sans histoire, d’où l’horreur du crime."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit le contraste entre les deux vers ?",
+     "options": [
+      "La douceur du logis rend le crime plus scandaleux",
+      "La douceur du logis atténue la violence du crime",
+      "Le logis est décrit pour amuser le lecteur",
+      "Le poème célèbre la simplicité des pauvres"
+     ],
+     "reponse": 0,
+     "aide": "Un enfant tué dans un logement tranquille : que ressent le lecteur ?",
+     "explication": "Le **contraste** entre la douceur du logis et les balles rend le crime **plus scandaleux**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » du poème « Ô soldats de l’an deux ! » ?",
+     "options": [
+      "L’épopée révolutionnaire",
+      "Une chanson populaire sur le Second Empire",
+      "La mort d’un enfant lors du coup d’État",
+      "La bataille de Waterloo"
+     ],
+     "reponse": 0,
+     "aide": "Les soldats de l’an II sont ceux de la Révolution.",
+     "explication": "Le poème célèbre l’**épopée révolutionnaire**, loin de la petitesse du régime."
+    }
+   ]
+  },
+  {
+   "chapitre": "84ac7922-d929-5c1d-ba41-4a3c493dd64a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "S’il n’en reste qu’un",
+   "competence": "argumenter",
+   "situation": "La poésie peut-elle être une arme ? Lis deux vers célèbres de Hugo, complète le tableau, puis range les registres du recueil.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Deux vers d’« Ultima verba »",
+     "blocs": [
+      "S’il en demeure [[n|dix]], je serai le dixième ;",
+      "Et s’il n’en reste qu’[[n|un]], je serai celui-là !"
+     ],
+     "source": "Victor Hugo, « Ultima verba », *Les Châtiments* (1853)"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La poésie peut être une arme",
+       "Elle fixe, dénonce et mobilise",
+       "?"
+      ],
+      [
+       "Hugo joue de tous les registres",
+       "Satire, épopée, lyrisme et pathétique touchent tous les lecteurs",
+       "« Napoléon le Petit », « L’expiation », « Souvenir de la nuit du 4 »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les deux nombres qui diminuent dans ces vers.",
+     "aide": "Les effectifs se réduisent : combien restent-ils au début, puis à la fin ?",
+     "explication": "Les nombres **dix** et **un** diminuent : le poète dit qu’il restera, même seul."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle attitude ces vers expriment-ils ?",
+     "options": [
+      "Une résistance obstinée, même si le poète reste seul",
+      "Une tristesse résignée devant le régime",
+      "Une joie de voir revenir la liberté",
+      "Une demande d’amnistie adressée à l’empereur"
+     ],
+     "reponse": 0,
+     "aide": "Dix, puis un seul : le poète promet de rester jusqu’au bout.",
+     "explication": "Hugo promet de rester **jusqu’au bout, même seul** : c’est une résistance obstinée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un recueil écrit en exil et interdit en France",
+      "Un recueil publié à Paris avec l’aval de l’empereur",
+      "Un roman sans aucune portée politique",
+      "Un poème d’amour sans lien avec le régime"
+     ],
+     "reponse": 0,
+     "aide": "Il faut un exemple de poésie qui agit contre un pouvoir.",
+     "explication": "*Les Châtiments*, écrits **en exil**, publiés à **Bruxelles** et **interdits en France**, illustrent une poésie d’action."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque registre du recueil à un exemple.",
+     "paires": [
+      [
+       "Registre satirique",
+       "Le surnom « Napoléon le Petit »"
+      ],
+      [
+       "Registre épique",
+       "« L’expiation » : Waterloo et Sainte-Hélène"
+      ],
+      [
+       "Registre pathétique",
+       "« Souvenir de la nuit du 4 » : un enfant tué"
+      ],
+      [
+       "Registre populaire",
+       "« Chanson » : des refrains faits pour circuler"
+      ]
+     ],
+     "aide": "Une moquerie, une épopée, une émotion, un refrain.",
+     "explication": "La **satire** donne « le Petit », l’**épopée** « L’expiation », le **pathétique** la nuit du 4, le **populaire** la « Chanson »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Hugo refuse-t-il l’amnistie de 1859 ?",
+     "options": [
+      "Il ne rentrera que « quand la liberté rentrera »",
+      "Il préfère rester vivre à Bruxelles, en sécurité",
+      "Il craint de perdre son titre de poète national",
+      "Il n’a pas été informé de la mesure à temps"
+     ],
+     "reponse": 0,
+     "aide": "Le cours cite sa phrase sur le retour de la liberté.",
+     "explication": "Il refuse l’amnistie : « **quand la liberté rentrera, je rentrerai** ». Il reste dix-neuf ans en exil."
+    }
+   ]
+  }
+ ]
+}

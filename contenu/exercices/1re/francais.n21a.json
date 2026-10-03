@@ -1,0 +1,2092 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "67de0133-7bea-58a6-b523-443cd9b4592a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète de cinquante-quatre ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur les « Sonnets pour Hélène ». Place le recueil dans la vie de Ronsard, puis note ce qu’il faut savoir de sa destinataire.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Ronsard et son recueil",
+     "debut": 1520,
+     "fin": 1590,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1524,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rec",
+       "date": 1578,
+       "nom": "Sonnets pour Hélène"
+      },
+      {
+       "id": "mort",
+       "date": 1585,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Sonnets pour Hélène",
+     "sousTitre": "Pierre de Ronsard",
+     "emoji": "📜",
+     "lignes": [
+      {
+       "texte": "Forme",
+       "valeur": "Deux livres de sonnets"
+      },
+      {
+       "texte": "Destinataire",
+       "valeur": "Hélène de Surgères"
+      },
+      {
+       "texte": "Son rang",
+       "valeur": "Dame d’honneur de Catherine de Médicis"
+      },
+      {
+       "texte": "Groupe du poète",
+       "valeur": "La Pléiade"
+      }
+     ],
+     "pied": "Un recueil d’amour d’un poète vieillissant",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "rec"
+     ],
+     "enonce": "Touche sur la frise l’année de publication des « Sonnets pour Hélène ».",
+     "aide": "Cherche l’événement qui porte le titre du recueil.",
+     "explication": "Le recueil paraît en **1578**, sept ans avant la mort du poète."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Ronsard a-t-il à la publication du recueil ?",
+     "reponse": 54,
+     "aide": "Soustrais l’année de naissance à l’année de publication.",
+     "explication": "1578 − 1524 = **54 ans** : c’est le décalage d’âge avec Hélène, jeune, qui donne au recueil sa tonalité.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité du recueil.",
+     "texte": "Hélène de Surgères est dame d’honneur de ___ de Médicis, et Ronsard est le chef de la ___.",
+     "reponses": [
+      [
+       "Catherine"
+      ],
+      [
+       "Pléiade"
+      ]
+     ],
+     "banque": [
+      "Catherine",
+      "Marie",
+      "Pléiade",
+      "Plume"
+     ],
+     "aide": "Tout est écrit sur la carte du recueil.",
+     "explication": "Hélène sert **Catherine** de Médicis ; Ronsard dirige la **Pléiade**, le groupe qui veut élever le français au niveau des langues antiques."
+    }
+   ]
+  },
+  {
+   "chapitre": "67de0133-7bea-58a6-b523-443cd9b4592a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sonnet du soir, à la chandelle",
+   "competence": "analyser-texte",
+   "situation": "Lina doit commenter le plus célèbre sonnet du recueil. Elle lit les premiers vers, puis reconstitue la scène que le poète imagine.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les quatre premiers vers",
+     "blocs": [
+      "Quand vous serez bien [[v|vieille]], au soir, à la chandelle,",
+      "Assise auprès du feu, [[f|dévidant]] et [[f|filant]],",
+      "Direz, chantant mes vers, en vous émerveillant :",
+      "Ronsard me célébrait du temps que j’étais belle."
+     ],
+     "source": "Pierre de Ronsard, *Sonnets pour Hélène*, livre II (1578), vers 1 à 4 — orthographe modernisée"
+    },
+    {
+     "id": "scene",
+     "type": "chaine",
+     "titre": "La scène imaginée par le poète",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Hélène, devenue vieille, file près du feu"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle s’émerveille qu’un poète l’ait chantée"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Le poète lui conseille de vivre sans attendre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit l’âge qu’Hélène aura dans la scène.",
+     "aide": "C’est un adjectif, dans le premier vers.",
+     "explication": "Le poète imagine Hélène **vieille** : tout le poème joue sur le temps qui passe."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux participes qui disent ce qu’elle fait près du feu.",
+     "aide": "Ce sont deux gestes de travail du fil, au deuxième vers.",
+     "explication": "Hélène est **dévidant** et **filant** : un geste humble, loin de la cour qu’elle fréquente aujourd’hui."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » de la chaîne ?",
+     "options": [
+      "Elle regrette de l’avoir dédaigné",
+      "Elle brûle les vers du poète par colère",
+      "Elle quitte la cour de la reine pour le suivre",
+      "Elle oublie jusqu’au nom du poète qui l’a chantée"
+     ],
+     "reponse": 0,
+     "aide": "Hélène vieille pense au poète qui l’aimait.",
+     "explication": "Dans la scène imaginée, Hélène **regrette de l’avoir dédaigné** : c’est la leçon que le poète lui adresse par avance."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la chute du sonnet.",
+     "texte": "La chute est un ___ : « Cueillez dès aujourd’hui les ___ de la vie. »",
+     "reponses": [
+      [
+       "carpe diem"
+      ],
+      [
+       "roses"
+      ]
+     ],
+     "banque": [
+      "carpe diem",
+      "roses",
+      "épines",
+      "memento mori"
+     ],
+     "aide": "La chute invite à profiter du temps présent.",
+     "explication": "Le conseil final est un **carpe diem** : « cueillez dès aujourd’hui les **roses** de la vie »."
+    }
+   ]
+  },
+  {
+   "chapitre": "67de0133-7bea-58a6-b523-443cd9b4592a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La poésie contre le temps",
+   "competence": "argumenter",
+   "situation": "Lina et Malik débattent du sens du sonnet. Les vers de Ronsard permettent de trancher.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "C’est une simple déclaration d’amour : le poète supplie Hélène de l’aimer."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Pas seulement. Il imagine Hélène chantant ses [[v|vers]] : c’est le poème qui gardera sa beauté."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Mais elle sera vieille, alors la beauté aura disparu !"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Justement : le poème la conserve, pas le visage."
+      }
+     ]
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les quatre premiers vers",
+     "blocs": [
+      "Quand vous serez bien vieille, au soir, à la chandelle,",
+      "Assise auprès du feu, dévidant et filant,",
+      "Direz, chantant mes [[v|vers]], en vous émerveillant :",
+      "Ronsard me [[c|célébrait]] du temps que j’étais belle."
+     ],
+     "source": "Pierre de Ronsard, *Sonnets pour Hélène*, livre II (1578), vers 1 à 4 — orthographe modernisée"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche dans le poème le mot que Malik reprend dans sa réplique.",
+     "aide": "Malik dit ce qu’Hélène chantera.",
+     "explication": "Hélène chantera les **vers** du poète : le poème survit à la beauté qu’il a célébrée."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le verbe qui montre que, pour Hélène vieille, le temps de la beauté est passé.",
+     "aide": "Le verbe est à l’imparfait.",
+     "explication": "**Célébrait** est à l’imparfait : la beauté appartient déjà au passé, mais le poème en garde la trace."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet dans ces quatre vers.",
+     "paires": [
+      [
+       "Le futur « Quand vous serez »",
+       "Hélène est projetée dans sa propre vieillesse"
+      ],
+      [
+       "L’imparfait « célébrait »",
+       "La beauté est déjà un souvenir"
+      ],
+      [
+       "Les guillemets du dernier vers",
+       "On entend Hélène rendre hommage au poète"
+      ]
+     ],
+     "aide": "Observe le temps de chaque verbe.",
+     "explication": "Le futur projette Hélène dans sa **vieillesse**, l’imparfait fait de la beauté un **souvenir**, et le dernier vers donne la parole à Hélène : elle **rend hommage** au poète."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique les vers confirment-ils ?",
+     "options": [
+      "Malik : le poème conserve la beauté que le temps détruit",
+      "Lina : le poème ne parle que de l’amour du poète",
+      "Lina : Hélène vieille oubliera le nom du poète",
+      "Malik : le poète renonce à toute gloire"
+     ],
+     "reponse": 0,
+     "aide": "Que chante Hélène, une fois vieille ?",
+     "explication": "Hélène vieille chante les vers qui disent « Ronsard me célébrait » : c’est bien **le pouvoir de conserver la beauté** que revendique le poème."
+    }
+   ]
+  },
+  {
+   "chapitre": "c9e4fc2e-2132-5d36-98e7-086e9bf2dc9b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un dialogue écrit après un voyage",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches le « Supplément au voyage de Bougainville ». Repère sa date d’écriture, puis sa forme.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du voyage au Supplément",
+     "debut": 1760,
+     "fin": 1800,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "esc",
+       "date": 1768,
+       "nom": "Escale"
+      },
+      {
+       "id": "ecr",
+       "date": 1772,
+       "nom": "Écriture"
+      },
+      {
+       "id": "mort",
+       "date": 1784,
+       "nom": "Mort"
+      },
+      {
+       "id": "pub",
+       "date": 1796,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Supplément au voyage de Bougainville",
+     "sousTitre": "Denis Diderot",
+     "emoji": "⛵",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Dialogue philosophique"
+      },
+      {
+       "texte": "Parties",
+       "valeur": "Cinq"
+      },
+      {
+       "texte": "Interlocuteurs",
+       "valeur": "A et B"
+      },
+      {
+       "texte": "Siècle",
+       "valeur": "Lumières"
+      }
+     ],
+     "pied": "Escale de Bougainville à Tahiti : 1768",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche sur la frise l’année où le texte est publié.",
+     "aide": "Il est publié après la mort de Diderot.",
+     "explication": "Le texte n’est publié qu’en **1796**, douze ans après la mort de Diderot."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture du texte de sa publication ?",
+     "reponse": 24,
+     "aide": "Repère les deux événements sur la frise.",
+     "explication": "1796 − 1772 = **24 ans** : Diderot n’a pas vu son texte publié.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte du texte.",
+     "texte": "Le Supplément est un ___ philosophique en cinq parties, entre deux interlocuteurs, A et ___.",
+     "reponses": [
+      [
+       "dialogue"
+      ],
+      [
+       "B"
+      ]
+     ],
+     "banque": [
+      "dialogue",
+      "roman",
+      "B",
+      "C"
+     ],
+     "aide": "Relis les lignes « Genre » et « Interlocuteurs ».",
+     "explication": "Le texte est un **dialogue** philosophique entre **A** et **B**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c9e4fc2e-2132-5d36-98e7-086e9bf2dc9b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux morceaux qui ont fait scandale",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral : le Supplément est connu par deux morceaux célèbres. Distingue-les, puis relève ce que chacun dit.",
+   "documents": [
+    {
+     "id": "morceaux",
+     "type": "tableau",
+     "titre": "Les deux morceaux célèbres",
+     "colonnes": [
+      "Morceau",
+      "Qui parle",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Les Adieux du vieillard",
+       "Un vieillard tahitien",
+       "Il maudit les Européens venus corrompre son peuple"
+      ],
+      [
+       "L’Entretien de l’aumônier et d’Orou",
+       "?",
+       "Orou démonte, argument par argument, la morale sexuelle chrétienne"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le résumé de la fin",
+     "blocs": [
+      "Au moment du départ des navires, un [[v|vieillard]] s’adresse aux Européens. Il leur reproche de venir [[p|prendre]] une terre qui n’est pas à eux : « Ce pays est à toi ! Et pourquoi ? Parce que tu y as mis le pied ? »"
+     ],
+     "source": "Résumé écrit pour l’exercice ; la formule du vieillard est celle du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce que les Européens font de la terre tahitienne.",
+     "aide": "Cherche ce que fait celui qui s’empare d’un bien qui n’est pas à lui.",
+     "explication": "Les Européens viennent **prendre** la terre : le vieillard dénonce une prédation, non un échange."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui parle dans l’Entretien, à la place de la case « ? » ?",
+     "options": [
+      "Un Tahitien et un religieux européen",
+      "Bougainville et le roi de France",
+      "Les deux interlocuteurs A et B",
+      "Un marin et sa femme restée en France"
+     ],
+     "reponse": 0,
+     "aide": "L’aumônier est un religieux.",
+     "explication": "L’entretien oppose **Orou, un Tahitien, et l’aumônier**, religieux européen tiraillé entre ses vœux et l’hospitalité tahitienne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans le texte.",
+     "paires": [
+      [
+       "A et B",
+       "Les deux interlocuteurs qui commentent le voyage"
+      ],
+      [
+       "Le vieillard",
+       "La voix accusatrice de Tahiti"
+      ],
+      [
+       "Orou",
+       "Le Tahitien qui raisonne mieux que l’Européen"
+      ],
+      [
+       "L’aumônier",
+       "Le religieux tiraillé entre ses vœux et l’hospitalité"
+      ]
+     ],
+     "aide": "Pense à ce que chacun fait dans les deux morceaux.",
+     "explication": "**A et B** commentent, le **vieillard** accuse, **Orou** raisonne, l’**aumônier** hésite entre ses vœux et l’hospitalité."
+    },
+    {
+     "type": "zone",
+     "document": "morceaux",
+     "multiple": false,
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui dit ce que fait le vieillard.",
+     "aide": "Regarde la ligne « Les Adieux du vieillard ».",
+     "explication": "Le vieillard **maudit les Européens venus corrompre son peuple**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c9e4fc2e-2132-5d36-98e7-086e9bf2dc9b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tahiti est-il Tahiti ?",
+   "competence": "argumenter",
+   "situation": "Inès et Yanis ne lisent pas le texte de la même façon. Une phrase du vieillard leur permet de trancher.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Diderot décrit Tahiti tel qu’il est : c’est une enquête sur place."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Il n’y est jamais allé. Tahiti lui sert d’[[o|outil]] pour critiquer l’Europe."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors Tahiti serait un décor ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Un miroir : les Tahitiens y semblent innocents et heureux."
+      }
+     ]
+    },
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Les Adieux du vieillard",
+     "blocs": [
+      "« Nous sommes [[i|innocents]], nous sommes [[i|heureux]] ; et tu ne peux que nuire à notre bonheur. »"
+     ],
+     "source": "Denis Diderot, *Supplément au voyage de Bougainville*, Adieux du vieillard — phrase donnée par le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot de Yanis qui dit à quoi sert Tahiti dans le texte.",
+     "aide": "Yanis répond à Inès : Tahiti n’est pas décrit pour lui-même.",
+     "explication": "Tahiti est un **outil** critique, pas une description ethnographique."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les deux mots du vieillard qui idéalisent les Tahitiens.",
+     "aide": "Ce sont deux adjectifs qui disent l’absence de faute et le bonheur.",
+     "explication": "Les Tahitiens sont dits **innocents** et **heureux** : l’image est idéalisée, ce qui confirme que Tahiti sert la critique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la citation du vieillard soutient-elle ?",
+     "options": [
+      "Yanis : Tahiti est un outil critique, largement idéalisé",
+      "Inès : le texte est une enquête fidèle sur Tahiti",
+      "Inès : le vieillard décrit sa vie quotidienne",
+      "Yanis : le texte défend le retour à l’état de nature"
+     ],
+     "reponse": 0,
+     "aide": "Un peuple entièrement « innocent » et « heureux » est-il une description réaliste ?",
+     "explication": "Un peuple sans faute ni malheur est une **image idéalisée** : Tahiti sert d’outil critique, non d’ethnographie."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée sous la thèse du Supplément qu’elle illustre.",
+     "categories": [
+      "La colonisation est une prédation",
+      "Nos mœurs sont conventionnelles",
+      "Pas de retour à l’état de nature"
+     ],
+     "items": [
+      [
+       "« Ce pays est à toi ! Et pourquoi ? »",
+       0
+      ],
+      [
+       "Le mariage indissoluble est une institution",
+       1
+      ],
+      [
+       "La pudeur n’est pas une vérité naturelle",
+       1
+      ],
+      [
+       "Il faut suivre les lois de son pays",
+       2
+      ],
+      [
+       "Même si l’on sait qu’elles sont arbitraires",
+       2
+      ],
+      [
+       "Les Européens viennent corrompre le peuple tahitien",
+       0
+      ]
+     ],
+     "aide": "Trois thèses : ce que fait l’Europe, ce que sont nos mœurs, ce qu’il faut faire.",
+     "explication": "Le vieillard dénonce la **prédation** ; Orou montre que mariage et pudeur sont des **institutions** ; la conclusion invite à **suivre les lois de son pays** tout en les sachant arbitraires."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7794612-272b-56ce-a14b-133150a6d4ad",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un pilote de l’Aéropostale",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches « Terre des hommes ». Place le livre dans la vie de Saint-Exupéry et retiens ce qu’il est.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Saint-Exupéry",
+     "debut": 1900,
+     "fin": 1950,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1900,
+       "nom": "Naissance"
+      },
+      {
+       "id": "aero",
+       "date": 1926,
+       "nom": "Aéropostale"
+      },
+      {
+       "id": "livre",
+       "date": 1939,
+       "nom": "Terre des hommes"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Terre des hommes",
+     "sousTitre": "Antoine de Saint-Exupéry",
+     "emoji": "🛩️",
+     "lignes": [
+      {
+       "texte": "Genre",
+       "valeur": "Récit de souvenirs et de méditations"
+      },
+      {
+       "texte": "Ce que ce n’est pas",
+       "valeur": "Un roman"
+      },
+      {
+       "texte": "Prix",
+       "valeur": "Grand Prix du roman de l’Académie française"
+      },
+      {
+       "texte": "Compagnie",
+       "valeur": "Aéropostale"
+      }
+     ],
+     "pied": "Paru à la veille de la guerre",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "livre"
+     ],
+     "enonce": "Touche l’année de parution de « Terre des hommes ».",
+     "aide": "Cherche l’événement qui porte le titre du livre.",
+     "explication": "Le livre paraît en **1939**, à la veille de la guerre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’entrée de Saint-Exupéry à l’Aéropostale de la parution du livre ?",
+     "reponse": 13,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1939 − 1926 = **13 ans** : le livre est nourri de ses années de pilote.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment la carte du livre définit-elle son genre ?",
+     "options": [
+      "Un récit de souvenirs et de méditations",
+      "Un roman d’aventures entièrement inventé",
+      "Un recueil de lettres à un ami",
+      "Un journal de guerre écrit au jour le jour"
+     ],
+     "reponse": 0,
+     "aide": "La carte dit aussi ce que le livre n’est pas.",
+     "explication": "C’est **un récit de souvenirs et de méditations**, pas un roman : Saint-Exupéry y raconte ce qu’il a vécu."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7794612-272b-56ce-a14b-133150a6d4ad",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui a marché, qui a disparu, qui a sauvé ?",
+   "competence": "analyser-document",
+   "situation": "Dans « Terre des hommes », chaque compagnon de Saint-Exupéry a son épisode. Retrouve-les, puis suis l’accident de Libye.",
+   "documents": [
+    {
+     "id": "epis",
+     "type": "tableau",
+     "titre": "Les épisodes du livre",
+     "colonnes": [
+      "Personnage",
+      "Épisode"
+     ],
+     "lignes": [
+      [
+       "Mermoz",
+       "Disparu en mer"
+      ],
+      [
+       "Guillaumet",
+       "?"
+      ],
+      [
+       "Prévot",
+       "Compagnon de l’accident de Libye, 1935"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "libye",
+     "type": "chaine",
+     "titre": "L’accident de Libye",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Crash dans le désert de Libye, en 1935"
+      },
+      {
+       "id": "n2",
+       "texte": "Saint-Exupéry et Prévot errent, assoiffés"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Retour à la vie"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "epis",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui dit ce qui est arrivé à Mermoz.",
+     "aide": "Regarde la ligne de Mermoz.",
+     "explication": "Mermoz est **disparu en mer**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que raconte la case « ? » sur Guillaumet ?",
+     "options": [
+      "Il marche cinq jours dans les Andes",
+      "Il traverse l’Atlantique en hydravion",
+      "Il est chef d’escale au cap Juby",
+      "Il guide les caravanes du Sahara"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui se passe dans les montagnes, après un crash.",
+     "explication": "Guillaumet, perdu **cinq jours dans les Andes** après un crash, continue de marcher pour que sa famille touche l’assurance."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’épisode de Libye (la case « ? » de la chaîne).",
+     "texte": "Un ___ anonyme sauve les deux hommes perdus dans le ___.",
+     "reponses": [
+      [
+       "Bédouin"
+      ],
+      [
+       "désert"
+      ]
+     ],
+     "banque": [
+      "Bédouin",
+      "marchand",
+      "désert",
+      "port"
+     ],
+     "aide": "Le sauveur est un homme du désert.",
+     "explication": "Un **Bédouin** anonyme sauve Saint-Exupéry et Prévot perdus dans le **désert** de Libye."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque figure du livre à ce qu’elle incarne.",
+     "paires": [
+      [
+       "Guillaumet",
+       "Le courage obstiné, l’ami"
+      ],
+      [
+       "Mermoz",
+       "Le pionnier des lignes"
+      ],
+      [
+       "Prévot",
+       "Le mécanicien, compagnon du crash"
+      ],
+      [
+       "Le Bédouin",
+       "Le sauveur anonyme"
+      ]
+     ],
+     "aide": "Chaque épisode du tableau et de la chaîne t’aide.",
+     "explication": "**Guillaumet** incarne le courage obstiné, **Mermoz** le pionnier, **Prévot** le mécanicien du crash, le **Bédouin** le sauveur anonyme."
+    }
+   ]
+  },
+  {
+   "chapitre": "b7794612-272b-56ce-a14b-133150a6d4ad",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Responsable de sa vis",
+   "competence": "argumenter",
+   "situation": "Samir et Chloé discutent de ce qu’est l’avion pour Saint-Exupéry. Un court passage, écrit pour l’exercice à la manière de l’auteur, éclaire leur débat.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samir",
+       "texte": "Pour Saint-Exupéry, l’avion est une machine à voler, c’est tout."
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Non : c’est un outil qui révèle la terre et les hommes."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Alors le métier compterait plus que la machine ?"
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Il donne un sens. Et il apprend la [[r|responsabilité]]."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Saint-Exupéry",
+     "blocs": [
+      "Au poste de nuit, le mécanicien resserre une dernière vis. Personne ne dira que cette vis a sauvé le courrier. Pourtant, sans elle, le moteur se serait tu au-dessus de la montagne. Celui qui répond de sa vis répond du courrier ; celui qui répond du courrier répond des hommes qui l’attendent. Ainsi le métier fait des [[r|responsables]] avant de faire des héros."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Saint-Exupéry"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot du passage que Chloé met elle aussi en avant.",
+     "aide": "C’est le mot qui termine la dernière réplique de Chloé, sous une autre forme.",
+     "explication": "Le passage se clôt sur les **responsables** : la responsabilité est ce que le métier apprend."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage et le cours soutiennent-ils ?",
+     "options": [
+      "Chloé : l’avion est un outil qui révèle la terre et les hommes",
+      "Samir : l’avion est seulement une machine à voler",
+      "Samir : le métier compte moins que la machine",
+      "Chloé : le pilote n’est responsable que de lui-même"
+     ],
+     "reponse": 0,
+     "aide": "Dans le passage, d’où vient la valeur de la vis resserrée ?",
+     "explication": "La vis compte parce qu’elle engage le courrier et les hommes : la machine est un **outil qui révèle la terre et les hommes**, comme le dit Chloé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque idée du livre à ce qu’elle dit.",
+     "paires": [
+      [
+       "Le métier",
+       "Il donne un sens"
+      ],
+      [
+       "La responsabilité",
+       "Elle définit l’adulte"
+      ],
+      [
+       "Le lien entre camarades",
+       "Il vaut mieux que tout discours"
+      ]
+     ],
+     "aide": "Ce sont les trois idées du propos de « Terre des hommes ».",
+     "explication": "Le **métier** donne un sens, la **responsabilité** définit l’adulte, le **lien entre camarades** vaut mieux que tout discours : « Être homme, c’est précisément être responsable. »"
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel genre peut-on ranger « Terre des hommes » à l’oral ?",
+     "options": [
+      "Entre l’essai, le récit et l’autobiographie",
+      "Un roman policier en plusieurs tomes",
+      "Une pièce de théâtre en trois actes",
+      "Un recueil de poèmes en prose"
+     ],
+     "reponse": 0,
+     "aide": "Le livre n’est ni un roman ni de la fiction pure.",
+     "explication": "Le livre se tient **à la frontière de l’essai, du récit et de l’autobiographie** : c’est ce qui fait son intérêt pour une dissertation sur l’humanisme."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5999bd1-605b-59ec-a11e-e339c534a5d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un non-lieu, puis la route des pins",
+   "competence": "se-reperer-espace",
+   "situation": "Tu prépares la fiche de « Thérèse Desqueyroux ». Repère le cadre du roman et les trois personnages qui forment le noyau de l’histoire.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Thérèse Desqueyroux",
+     "sousTitre": "François Mauriac",
+     "emoji": "🌲",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1927"
+      },
+      {
+       "texte": "Début du roman",
+       "valeur": "À la sortie du palais de justice",
+       "id": "debut"
+      },
+      {
+       "texte": "Cadre principal",
+       "valeur": "Argelouse, dans les landes de pins",
+       "id": "lieu"
+      },
+      {
+       "texte": "Milieu peint",
+       "valeur": "La bourgeoisie provinciale"
+      }
+     ],
+     "pied": "Inspiré d’un procès réel de 1906",
+     "teinte": "violet"
+    },
+    {
+     "id": "liens",
+     "type": "chaine",
+     "titre": "Trois personnages",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "t",
+       "texte": "Thérèse"
+      },
+      {
+       "id": "b",
+       "texte": "Bernard, son mari"
+      },
+      {
+       "id": "a",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "t",
+       "a": "b",
+       "texte": "est mariée à"
+      },
+      {
+       "de": "b",
+       "a": "a",
+       "texte": "est le demi-frère de"
+      },
+      {
+       "de": "a",
+       "a": "t",
+       "texte": "est l’amie d’enfance de"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne qui dit où se déroule l’essentiel du roman.",
+     "aide": "Cherche un nom de village au milieu des pins.",
+     "explication": "L’essentiel du roman se passe à **Argelouse**, dans les landes de pins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Anne de la Trave",
+      "Jean Azévédo",
+      "Madame Raquin",
+      "Marie Desqueyroux"
+     ],
+     "reponse": 0,
+     "aide": "C’est la demi-sœur de Bernard et l’amie d’enfance de Thérèse.",
+     "explication": "La case « ? » est **Anne de la Trave**, demi-sœur de Bernard et amie d’enfance de Thérèse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le début du roman.",
+     "texte": "Le roman s’ouvre à la sortie du palais de ___, après un ___ en faveur de Thérèse.",
+     "reponses": [
+      [
+       "justice"
+      ],
+      [
+       "non-lieu"
+      ]
+     ],
+     "banque": [
+      "justice",
+      "non-lieu",
+      "acquittement",
+      "mariage"
+     ],
+     "aide": "La première ligne de la carte donne le lieu ; le reste est le verdict.",
+     "explication": "Le roman commence à la sortie du palais de **justice**, après un **non-lieu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5999bd1-605b-59ec-a11e-e339c534a5d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la sortie du tribunal à la liberté de Paris",
+   "competence": "analyser-document",
+   "situation": "Voici le fil du roman, avec une étape manquante. Retrouve-la, puis range les lieux et les moments.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Non-lieu : Thérèse sort du palais de justice"
+      },
+      {
+       "id": "n2",
+       "texte": "Retour vers Argelouse, au milieu des pins"
+      },
+      {
+       "id": "n3",
+       "texte": "Le récit remonte : mariage arrangé, ennui, Anne"
+      },
+      {
+       "id": "n4",
+       "texte": "Le geste : doses d’arsenic, ordonnance falsifiée"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      },
+      {
+       "id": "n6",
+       "texte": "Bernard l’abandonne à Paris : sa liberté"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      },
+      {
+       "de": "n5",
+       "a": "n6"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où le récit remonte dans le passé.",
+     "aide": "Cherche le moment où l’on revient sur le mariage.",
+     "explication": "C’est à l’étape **n°3** que le récit remonte : mariage arrangé, ennui, amitié avec Anne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Séquestrée dans sa chambre, elle se laisse dépérir",
+      "Elle s’enfuit à Paris avec Jean Azévédo",
+      "Elle avoue tout et accepte la prison",
+      "Bernard lui pardonne et l’emmène en voyage"
+     ],
+     "reponse": 0,
+     "aide": "Après le geste, la famille la punit.",
+     "explication": "Après le geste, Thérèse est **séquestrée dans sa chambre** et se laisse dépérir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à ce qui s’y passe.",
+     "paires": [
+      [
+       "Le palais de justice",
+       "Le non-lieu"
+      ],
+      [
+       "Argelouse",
+       "La séquestration"
+      ],
+      [
+       "Paris",
+       "L’abandon, qui est une libération"
+      ]
+     ],
+     "aide": "Reprends les étapes de la chaîne.",
+     "explication": "Le **palais de justice** voit le non-lieu, **Argelouse** la séquestration, **Paris** l’abandon de Thérèse, qui est pour elle la liberté."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que dit le roman du geste de Thérèse.",
+     "texte": "Thérèse a tenté d’empoisonner son mari à l’___, et sa famille a ___ pour éviter le scandale.",
+     "reponses": [
+      [
+       "arsenic"
+      ],
+      [
+       "menti"
+      ]
+     ],
+     "banque": [
+      "arsenic",
+      "menti",
+      "avoué",
+      "cyanure"
+     ],
+     "aide": "C’est le poison, puis ce que fait la famille devant les juges.",
+     "explication": "Thérèse est accusée d’avoir utilisé l’**arsenic** ; la famille a **menti** pour éviter le scandale, d’où le non-lieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "d5999bd1-605b-59ec-a11e-e339c534a5d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ni monstre ni héroïne",
+   "competence": "argumenter",
+   "situation": "Lucie et Adrien débattent du personnage de Thérèse. Un passage écrit pour l’exercice, à la manière de Mauriac, nourrit leur discussion.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lucie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adrien",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lucie",
+       "texte": "Thérèse est un monstre : elle a voulu empoisonner son mari."
+      },
+      {
+       "qui": "Adrien",
+       "texte": "Mauriac ne lui donne ni explication ni rédemption. Elle reste ambiguë."
+      },
+      {
+       "qui": "Lucie",
+       "texte": "Mais le roman la condamne."
+      },
+      {
+       "qui": "Adrien",
+       "texte": "Il laisse le lecteur troublé, c’est tout."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Mauriac",
+     "blocs": [
+      "La voiture roulait dans la nuit des pins. Thérèse répétait en elle les mots qu’elle dirait à Bernard : elle les trouvait justes, puis faux, puis inutiles. Comment expliquer ce qu’elle [[i|ignorait]] elle-même ? Il y avait les pins, sans fin ; il y avait ce nom qu’elle portait comme un poids."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de François Mauriac"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui montre que Thérèse ne comprend pas son propre geste.",
+     "aide": "C’est un verbe à l’imparfait, dans la question du narrateur.",
+     "explication": "Thérèse **ignorait** ce qu’elle voulait : Mauriac ne lui donne pas d’explication claire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage soutient-il ?",
+     "options": [
+      "Adrien : Thérèse est ambiguë, sans explication ni rédemption",
+      "Lucie : le roman explique clairement le geste de Thérèse",
+      "Lucie : Thérèse agit par cupidité, le texte le dit",
+      "Adrien : Thérèse est une victime innocente"
+     ],
+     "reponse": 0,
+     "aide": "Thérèse peut-elle expliquer son geste, dans le passage ?",
+     "explication": "Thérèse n’a pas de mots pour dire pourquoi elle a agi : elle reste **ambiguë**, comme l’affirme Adrien, ni héroïne ni monstre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : accuse-t-il Thérèse, ou la rend-il ambiguë ?",
+     "categories": [
+      "Un fait qui l’accuse",
+      "Un fait qui la rend ambiguë"
+     ],
+     "items": [
+      [
+       "Elle a falsifié une ordonnance",
+       0
+      ],
+      [
+       "Elle a laissé Bernard augmenter ses doses d’arsenic",
+       0
+      ],
+      [
+       "Elle ne sait pas elle-même pourquoi elle a agi",
+       1
+      ],
+      [
+       "Elle étouffe dans un mariage arrangé, elle qui pense",
+       1
+      ]
+     ],
+     "aide": "Les faits accusent ; l’étouffement et l’ignorance de ses mobiles troublent.",
+     "explication": "Les **faits** (ordonnance falsifiée, doses d’arsenic) accusent Thérèse ; son **ignorance de ses mobiles** et son **étouffement** la rendent ambiguë."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème du roman à ce qui le montre.",
+     "paires": [
+      [
+       "L’enfermement",
+       "La séquestration dans la chambre"
+      ],
+      [
+       "Les apparences",
+       "Le mensonge de la famille pour éviter le scandale"
+      ],
+      [
+       "La liberté",
+       "L’abandon à Paris, vécu comme une délivrance"
+      ]
+     ],
+     "aide": "Chaque thème correspond à un moment du roman.",
+     "explication": "L’**enfermement** passe par la séquestration, les **apparences** par le mensonge familial, la **liberté** par l’abandon à Paris."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b02f792-ebe1-5848-8616-d425199ca5bf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman écrit à vingt-sept ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches « Thérèse Raquin ». Place le roman dans la vie de Zola, puis note son cadre.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Zola et son roman",
+     "debut": 1840,
+     "fin": 1910,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1840,
+       "nom": "Naissance"
+      },
+      {
+       "id": "rom",
+       "date": 1867,
+       "nom": "Thérèse Raquin"
+      },
+      {
+       "id": "mort",
+       "date": 1902,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Thérèse Raquin",
+     "sousTitre": "Émile Zola",
+     "emoji": "🕯️",
+     "lignes": [
+      {
+       "texte": "Lieu",
+       "valeur": "Une mercerie sombre du passage du Pont-Neuf"
+      },
+      {
+       "texte": "Le crime",
+       "valeur": "Camille noyé lors d’une promenade en barque"
+      },
+      {
+       "texte": "Accueil",
+       "valeur": "Un scandale : « littérature putride »"
+      },
+      {
+       "texte": "Avant",
+       "valeur": "Les Rougon-Macquart"
+      }
+     ],
+     "pied": "Roman de jeunesse",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Touche sur la frise l’année de parution de « Thérèse Raquin ».",
+     "aide": "Cherche l’événement qui porte le titre du roman.",
+     "explication": "Le roman paraît en **1867**, avant les *Rougon-Macquart*."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Zola a-t-il à la parution du roman ?",
+     "reponse": 27,
+     "aide": "Soustrais l’année de naissance à l’année de parution.",
+     "explication": "1867 − 1840 = **27 ans** : c’est un roman de jeunesse.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte du roman.",
+     "texte": "Thérèse vit dans une ___ sombre du passage du ___, où le mari de Thérèse, Camille, sera noyé en barque.",
+     "reponses": [
+      [
+       "mercerie"
+      ],
+      [
+       "Pont-Neuf"
+      ]
+     ],
+     "banque": [
+      "mercerie",
+      "Pont-Neuf",
+      "boucherie",
+      "Louvre"
+     ],
+     "aide": "La première ligne de la carte donne le lieu.",
+     "explication": "Thérèse vit dans une **mercerie** sombre du passage du **Pont-Neuf**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b02f792-ebe1-5848-8616-d425199ca5bf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du crime à la mort sous le regard de Madame Raquin",
+   "competence": "analyser-document",
+   "situation": "Voici les étapes du roman, mélangées. Remets-les dans l’ordre et retrouve celle qui manque.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes du roman (en désordre)",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "La fin",
+       "Les amants s’empoisonnent ensemble sous le regard de Madame Raquin"
+      ],
+      [
+       "Le crime",
+       "Les amants noient Camille lors d’une promenade en barque"
+      ],
+      [
+       "La descente",
+       "Insomnies, hallucinations, haine, coups"
+      ],
+      [
+       "L’arrivée de Laurent",
+       "Elle déclenche une passion violente"
+      ],
+      [
+       "Le mariage",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes du roman dans l’ordre où elles se produisent.",
+     "items": [
+      "L’arrivée de Laurent",
+      "Le crime",
+      "Le mariage",
+      "La descente",
+      "La fin"
+     ],
+     "aide": "Le crime précède l’attente et le mariage ; la fin est la mort des amants.",
+     "explication": "Ordre du roman : **arrivée de Laurent**, **crime**, **mariage**, **descente**, **fin**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il après le mariage (la case « ? ») ?",
+     "options": [
+      "Ils ne peuvent plus se toucher",
+      "Ils quittent Paris pour une vie heureuse",
+      "Ils ouvrent une nouvelle boutique prospère",
+      "Ils avouent tout à Madame Raquin"
+     ],
+     "reponse": 0,
+     "aide": "Le noyé revient hanter les amants.",
+     "explication": "Après le mariage, les amants découvrent qu’**ils ne peuvent plus se toucher** : le noyé est entre eux."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la case qui dit comment le roman se termine.",
+     "aide": "C’est la première ligne du tableau.",
+     "explication": "Le roman se termine par l’**empoisonnement des amants**, sous le regard de Madame Raquin."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le crime.",
+     "texte": "Les amants noient Camille lors d’une promenade en ___ ; Madame Raquin, ___, comprend tout.",
+     "reponses": [
+      [
+       "barque"
+      ],
+      [
+       "paralysée"
+      ]
+     ],
+     "banque": [
+      "barque",
+      "voiture",
+      "paralysée",
+      "absente"
+     ],
+     "aide": "Une promenade sur l’eau ; Madame Raquin ne peut plus ni parler ni bouger.",
+     "explication": "Camille est noyé lors d’une promenade en **barque** ; Madame Raquin, **paralysée**, comprend tout et assiste, muette, à leur destruction."
+    }
+   ]
+  },
+  {
+   "chapitre": "0b02f792-ebe1-5848-8616-d425199ca5bf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des tempéraments étudiés comme des corps",
+   "competence": "argumenter",
+   "situation": "Eva et Tom ne lisent pas le remords des amants de la même façon. La préface de Zola les départage.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eva",
+       "texte": "Après le crime, leur remords est moral : ils comprennent qu’ils ont mal agi."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Non. Ce qui les ronge, c’est le corps : leurs nerfs et leur sang."
+      },
+      {
+       "qui": "Eva",
+       "texte": "Alors ce ne sont plus des personnages libres ?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Zola le dit : ce sont des tempéraments, pas des caractères."
+      }
+     ]
+    },
+    {
+     "id": "pre",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Extrait de la préface",
+     "blocs": [
+      "« J’ai choisi des personnages souverainement dominés par leurs [[n|nerfs]] et leur [[n|sang]]… j’ai simplement fait sur deux corps vivants le travail analytique que les chirurgiens font sur des [[c|cadavres]]. »"
+     ],
+     "source": "Émile Zola, préface de la seconde édition de *Thérèse Raquin* (extrait donné par le cours)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pre",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les deux mots de la préface qui dominent les personnages.",
+     "aide": "Ce sont les deux éléments du corps qui commandent leurs actes.",
+     "explication": "Les personnages sont dominés par leurs **nerfs** et leur **sang** : leur remords est physique."
+    },
+    {
+     "type": "zone",
+     "document": "pre",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui compare l’écriture de Zola au travail des chirurgiens.",
+     "aide": "Les chirurgiens étudient un corps sans vie.",
+     "explication": "Zola étudie ses personnages comme les chirurgiens étudient des **cadavres** : une démarche scientifique, d’où l’acte de naissance du naturalisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique la préface confirme-t-elle ?",
+     "options": [
+      "Tom : le remords des personnages est physique, non moral",
+      "Eva : le remords des personnages est moral",
+      "Eva : les personnages sont libres de leurs actes",
+      "Tom : Zola refuse toute démarche scientifique"
+     ],
+     "reponse": 0,
+     "aide": "Que dominent les nerfs et le sang ?",
+     "explication": "Les personnages sont dominés par leurs **nerfs** et leur **sang** : leur remords est **physique**, comme l’affirme Tom."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son tempérament.",
+     "paires": [
+      [
+       "Thérèse",
+       "Nerveuse, passionnée, longtemps contenue"
+      ],
+      [
+       "Laurent",
+       "Sanguin, paresseux, peintre raté"
+      ],
+      [
+       "Camille",
+       "Maladif, égoïste"
+      ],
+      [
+       "Madame Raquin",
+       "Mère aimante, puis témoin impuissant"
+      ]
+     ],
+     "aide": "Le cours donne le tempérament de chaque personnage.",
+     "explication": "**Thérèse** est nerveuse, **Laurent** sanguin, **Camille** maladif, **Madame Raquin** une mère aimante puis une témoin impuissante."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peint Laurent après le crime ?",
+     "options": [
+      "Des visages qui ressemblent tous au noyé",
+      "Des paysages ensoleillés de bord de Seine",
+      "Un grand portrait officiel de Camille",
+      "Des natures mortes, comme avant le crime"
+     ],
+     "reponse": 0,
+     "aide": "Ses tableaux ne lui échappent plus.",
+     "explication": "Après le crime, Laurent ne peint plus que des visages qui ressemblent **tous au noyé** : le corps garde la trace de la faute."
+    }
+   ]
+  },
+  {
+   "chapitre": "16af8daf-eb92-5a55-bd94-59bdef95e287",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une réécriture de la Bible",
+   "competence": "se-reperer-temps",
+   "situation": "Tu fiches « Tobie des Marais ». Place le roman dans le parcours de Sylvie Germain, puis retiens son cadre.",
+   "documents": [
+    {
+     "id": "vie",
+     "type": "frise",
+     "titre": "Sylvie Germain",
+     "debut": 1950,
+     "fin": 2000,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1954,
+       "nom": "Naissance"
+      },
+      {
+       "id": "fem",
+       "date": 1989,
+       "nom": "Prix Femina"
+      },
+      {
+       "id": "rom",
+       "date": 1998,
+       "nom": "Tobie des Marais"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Tobie des Marais",
+     "sousTitre": "Sylvie Germain",
+     "emoji": "🌾",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1998"
+      },
+      {
+       "texte": "Texte réécrit",
+       "valeur": "Le Livre de Tobie"
+      },
+      {
+       "texte": "Cadre",
+       "valeur": "Le Marais poitevin contemporain"
+      },
+      {
+       "texte": "Compagnon du voyage",
+       "valeur": "Raphaël"
+      }
+     ],
+     "pied": "Réécriture d’un texte de l’Ancien Testament",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vie",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Touche l’année de parution de « Tobie des Marais ».",
+     "aide": "Cherche l’événement qui porte le titre du roman.",
+     "explication": "Le roman paraît en **1998**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le prix Femina (pour « Jours de colère ») de la parution de « Tobie des Marais » ?",
+     "reponse": 9,
+     "aide": "Repère les deux événements sur la frise.",
+     "explication": "1998 − 1989 = **9 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte du roman.",
+     "texte": "Le roman réécrit le ___ de Tobie, un texte de l’___ Testament.",
+     "reponses": [
+      [
+       "Livre"
+      ],
+      [
+       "Ancien"
+      ]
+     ],
+     "banque": [
+      "Livre",
+      "Ancien",
+      "Nouveau",
+      "Chant"
+     ],
+     "aide": "Lis la ligne « Texte réécrit » et le pied de la carte.",
+     "explication": "Le roman réécrit le **Livre** de Tobie, un texte de l’**Ancien** Testament."
+    }
+   ]
+  },
+  {
+   "chapitre": "16af8daf-eb92-5a55-bd94-59bdef95e287",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la Bible au Marais poitevin",
+   "competence": "analyser-document",
+   "situation": "Compare le Livre de Tobie et le roman de Sylvie Germain, puis retrouve l’ordre du voyage.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Ce que le roman garde et déplace",
+     "colonnes": [
+      "Élément",
+      "Le Livre de Tobie",
+      "Le roman"
+     ],
+     "lignes": [
+      [
+       "Le père",
+       "Tobit, aveugle",
+       "?"
+      ],
+      [
+       "Le voyage",
+       "Récupérer une somme d’argent",
+       "Récupérer une dette lointaine"
+      ],
+      [
+       "La jeune femme",
+       "Sara, dont un démon a tué les sept maris",
+       "Sarra, dont tous les amoureux sont morts depuis ses treize ans"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place de la case « ? » ?",
+     "options": [
+      "Théodore, veuf, frappé d’une attaque cérébrale",
+      "Un vieux paysan du Marais devenu sourd",
+      "Un notaire aveuglé par sa fortune",
+      "Un enfant du Marais perdu dans les brumes"
+     ],
+     "reponse": 0,
+     "aide": "Le roman transpose la cécité de Tobit en un mal de l’esprit.",
+     "explication": "Dans le roman, le père est **Théodore**, veuf inconsolable, frappé d’une attaque cérébrale : une cécité de l’esprit, écho de Tobit."
+    },
+    {
+     "type": "zone",
+     "document": "comp",
+     "multiple": false,
+     "reponse": [
+      "r1c2"
+     ],
+     "enonce": "Touche la case du roman qui transpose la somme d’argent à récupérer.",
+     "aide": "Regarde la ligne « Le voyage », colonne du roman.",
+     "explication": "La somme d’argent devient une **dette lointaine** à récupérer."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage du roman à sa situation.",
+     "paires": [
+      [
+       "Théodore",
+       "Veuf inconsolable de sa femme Anna"
+      ],
+      [
+       "Anna",
+       "Morte décapitée lors d’une sortie à cheval"
+      ],
+      [
+       "Sarra",
+       "Tous ses amoureux meurent depuis ses treize ans"
+      ],
+      [
+       "Raphaël",
+       "Le compagnon mystérieux du voyage"
+      ]
+     ],
+     "aide": "Pense à la place de chacun dans l’histoire.",
+     "explication": "**Théodore** pleure sa femme, **Anna** est morte décapitée, **Sarra** porte une malédiction, **Raphaël** accompagne Tobie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois temps du voyage de Tobie dans l’ordre.",
+     "items": [
+      "Tobie part récupérer une dette lointaine",
+      "Il voyage avec Raphaël et un chien",
+      "Il rend à son père le goût de vivre"
+     ],
+     "aide": "Le départ, le voyage, puis le retour.",
+     "explication": "Tobie **part**, **voyage avec Raphaël et un chien**, puis **rend à son père le goût de vivre** : Théodore sort de son deuil."
+    }
+   ]
+  },
+  {
+   "chapitre": "16af8daf-eb92-5a55-bd94-59bdef95e287",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un ange comme un autre",
+   "competence": "argumenter",
+   "situation": "Nora et Léo ne lisent pas Raphaël de la même façon. Un passage écrit pour l’exercice, à la manière de Sylvie Germain, les départage.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Raphaël est un ange, le roman le dit : c’est du fantastique."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Le roman n’explique jamais rien : Raphaël reste un compagnon comme un autre."
+      },
+      {
+       "qui": "Nora",
+       "texte": "Alors où est le sacré ?"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Dedans le monde ordinaire, à peine visible."
+      }
+     ]
+    },
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un passage à la manière de Sylvie Germain",
+     "blocs": [
+      "Le marais sentait la vase et la pluie. Dans la brume, le chien marchait devant, et Raphaël derrière, si ordinaire qu’on l’aurait cru [[o|berger]] ou [[o|facteur]]. Personne ne s’étonnait. Quand il passait, pourtant, l’eau [[s|se taisait]] un instant, comme on se tait devant quelqu’un d’important."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Sylvie Germain"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux métiers qui rendent Raphaël ordinaire.",
+     "aide": "Ce sont deux métiers qu’on rencontre dans la campagne.",
+     "explication": "On croirait Raphaël **berger** ou **facteur** : un compagnon comme un autre."
+    },
+    {
+     "type": "zone",
+     "document": "pas",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche l’expression qui laisse deviner le sacré.",
+     "aide": "C’est une réaction du paysage, quand il passe.",
+     "explication": "**L’eau se taisait** : le sacré est une présence discrète, jamais expliquée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque détail : rend-il Raphaël ordinaire, ou laisse-t-il deviner le sacré ?",
+     "categories": [
+      "Il est ordinaire",
+      "Il laisse deviner le sacré"
+     ],
+     "items": [
+      [
+       "On le prendrait pour un berger ou un facteur",
+       0
+      ],
+      [
+       "Personne ne s’étonne de lui",
+       0
+      ],
+      [
+       "L’eau se tait quand il passe",
+       1
+      ],
+      [
+       "On se tait devant lui comme devant quelqu’un d’important",
+       1
+      ]
+     ],
+     "aide": "Les deux premiers détails sont banals, les deux autres sont inhabituels.",
+     "explication": "Les détails **ordinaires** : berger ou facteur, personne ne s’étonne ; les détails du **sacré** : l’eau se tait, on se tait devant lui."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique le passage soutient-il ?",
+     "options": [
+      "Léo : le sacré est une présence obscure dans le monde ordinaire",
+      "Nora : le texte prouve que Raphaël est un ange",
+      "Nora : le sacré est au-dessus du monde, loin des hommes",
+      "Léo : Raphaël est un simple marchand sans mystère"
+     ],
+     "reponse": 0,
+     "aide": "Le passage montre un homme ordinaire et un silence inhabituel.",
+     "explication": "Raphaël est ordinaire, mais l’eau se tait : le sacré est une **présence obscure dans le monde ordinaire**, comme le dit Léo."
+    }
+   ]
+  }
+ ]
+}

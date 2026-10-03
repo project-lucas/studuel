@@ -1,0 +1,2225 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "068c82ea-2068-55ba-86e7-aaebcdb3b6f8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois pièces en trois ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu replaces Bérénice parmi les tragédies de Racine, puis tu retrouves qui accompagne chacun des trois héros.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Racine à l’Hôtel de Bourgogne",
+     "debut": 1668,
+     "fin": 1673,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "brit",
+       "date": 1669,
+       "nom": "Britannicus"
+      },
+      {
+       "id": "ber",
+       "date": 1670,
+       "nom": "Bérénice"
+      },
+      {
+       "id": "baj",
+       "date": 1672,
+       "nom": "Bajazet"
+      }
+     ]
+    },
+    {
+     "id": "conf",
+     "type": "tableau",
+     "titre": "Les confidents",
+     "colonnes": [
+      "Personnage",
+      "Confident ou confidente"
+     ],
+     "lignes": [
+      [
+       "Titus",
+       "?"
+      ],
+      [
+       "Antiochus",
+       "Arsace"
+      ],
+      [
+       "Bérénice",
+       "Phénice"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ber"
+     ],
+     "enonce": "Touche la pièce créée en 1670.",
+     "aide": "Entre Britannicus et Bajazet.",
+     "explication": "*Bérénice* est jouée le **21 novembre 1670** à l’Hôtel de Bourgogne."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent Britannicus de Bajazet ?",
+     "reponse": 3,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1672 − 1669 = **3 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est le confident de Titus (case « ? ») ?",
+     "options": [
+      "Paulin",
+      "Arsace",
+      "Acomat",
+      "Burrhus"
+     ],
+     "reponse": 0,
+     "aide": "Il rappelle à l’empereur ce que Rome exige.",
+     "explication": "**Paulin** est le confident de Titus : il lui rappelle ce que Rome exige."
+    }
+   ]
+  },
+  {
+   "chapitre": "068c82ea-2068-55ba-86e7-aaebcdb3b6f8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cinq lignes de Suétone",
+   "competence": "analyser-texte",
+   "situation": "Racine dit tirer toute sa pièce de quelques lignes d’un historien latin. Suis l’action, puis ce qui fait de Bérénice une tragédie sans mort.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du devoir à la séparation",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Titus, empereur, devait épouser Bérénice"
+      },
+      {
+       "id": "n2",
+       "texte": "Rome n’accepte pas de reine étrangère"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Bérénice refuse de se tuer et part"
+      },
+      {
+       "id": "n5",
+       "texte": "Antiochus clôt la pièce : « Hélas ! »"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "pref",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La règle de Racine",
+     "blocs": [
+      "Selon la préface : toute l’[[i|invention]] consiste à faire quelque chose de rien."
+     ],
+     "source": "Résumé de la préface de Racine à *Bérénice* (1671)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Titus choisit son devoir et renvoie Bérénice",
+      "Titus épouse Bérénice malgré Rome",
+      "Titus abdique pour la suivre en Orient",
+      "Antiochus enlève Bérénice avec ses troupes"
+     ],
+     "reponse": 0,
+     "aide": "Titus aime Bérénice, mais Rome est plus forte.",
+     "explication": "Après avoir hésité et souffert, Titus **choisit son devoir** et **renvoie Bérénice**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : la pièce n’en a pas, ou elle en a ?",
+     "categories": [
+      "Ce que la pièce n’a pas",
+      "Ce qu’elle a"
+     ],
+     "items": [
+      [
+       "Un mort",
+       0
+      ],
+      [
+       "Une violence",
+       0
+      ],
+      [
+       "Une tragédie intérieure",
+       1
+      ],
+      [
+       "Un seul lieu",
+       1
+      ],
+      [
+       "Une action minimale",
+       1
+      ]
+     ],
+     "aide": "Le cours parle d’épure du théâtre classique.",
+     "explication": "Aucun **mort**, aucune **violence** ; mais une tragédie **intérieure**, un **seul lieu**, une **action minimale**."
+    },
+    {
+     "type": "zone",
+     "document": "pref",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot que Racine emploie pour parler de ce qu’il crée à partir de presque rien.",
+     "aide": "C’est le nom que le dramaturge donne à son travail d’auteur.",
+     "explication": "Racine parle d’**invention** : faire une tragédie entière avec cinq lignes de Suétone."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui prouve qu’il n’y a aucun suicide dans la pièce.",
+     "aide": "Bérénice comprend et ne se tue pas.",
+     "explication": "Bérénice **refuse de se tuer** : les trois personnages restent vivants et séparés."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la formule de Suétone.",
+     "texte": "« Invitus invitam dimisit » : il la renvoya ___ lui, ___ elle.",
+     "reponses": [
+      [
+       "malgre",
+       "malgré"
+      ],
+      [
+       "malgre",
+       "malgré"
+      ]
+     ],
+     "banque": [
+      "malgré",
+      "avec",
+      "pour",
+      "sans"
+     ],
+     "aide": "La phrase dit que les deux souffrent de la séparation.",
+     "explication": "Titus la renvoie **malgré lui, malgré elle** : le devoir sépare deux êtres qui s’aiment."
+    }
+   ]
+  },
+  {
+   "chapitre": "068c82ea-2068-55ba-86e7-aaebcdb3b6f8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dans un mois, dans un an",
+   "competence": "argumenter",
+   "situation": "Une tragédie peut-elle faire pleurer sans aucun mort ? Lis deux vers de Bérénice et écoute deux élèves.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les adieux",
+     "blocs": [
+      "Dans un [[t|mois]], dans un [[t|an]], comment souffrirons-nous,",
+      "Seigneur, que tant de [[d|mers]] me séparent de vous ?"
+     ],
+     "source": "Jean Racine, *Bérénice* (1670), acte IV, scène 5"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Sans mort ni violence, Bérénice n’est pas une vraie tragédie."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Si : le tragique tient à l’[[i|impossibilité]] de concilier deux devoirs, l’amour et l’Empire."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche les deux mots qui mesurent le temps de la séparation.",
+     "aide": "Cherche deux unités de temps dans le premier vers.",
+     "explication": "Un **mois**, un **an** : la séparation est pensée comme une durée qui s’allonge sans fin."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui dit la distance entre les amants.",
+     "aide": "Ce mot est dans le second vers, au pluriel.",
+     "explication": "Les **mers** disent l’éloignement : le temps et l’espace séparent les amants."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture le dialogue et les vers soutiennent-ils ?",
+     "options": [
+      "La séparation suffit au tragique : le devoir l’emporte",
+      "Une tragédie sans mort est forcément une comédie",
+      "Titus renvoie Bérénice par simple indifférence",
+      "Les amants vont se retrouver en Orient dans un mois"
+     ],
+     "reponse": 0,
+     "aide": "Sacha parle de deux devoirs impossibles à concilier.",
+     "explication": "Le tragique tient à **l’impossibilité** de concilier amour et Empire : « tristesse majestueuse »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème de la pièce à ce que Racine en fait.",
+     "paires": [
+      [
+       "Le devoir contre l’amour",
+       "Titus choisit l’Empire sans cesser d’aimer"
+      ],
+      [
+       "Le temps",
+       "La séparation est une durée infinie"
+      ],
+      [
+       "La parole",
+       "Titus repousse sans cesse l’aveu"
+      ]
+     ],
+     "aide": "Chaque thème est dans le cours.",
+     "explication": "Le **devoir** l’emporte, le **temps** rend la séparation interminable, la **parole** est repoussée jusqu’au dernier moment."
+    }
+   ]
+  },
+  {
+   "chapitre": "f0adc71b-fb69-5f27-b8a6-b039835893c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une jeune fille de dix-huit ans",
+   "competence": "analyser-document",
+   "situation": "Tu présentes Bonjour tristesse : l’autrice, le roman, puis ses personnages.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Bonjour tristesse",
+     "sousTitre": "Françoise Sagan",
+     "emoji": "🌊",
+     "lignes": [
+      {
+       "id": "age",
+       "texte": "Âge de l’autrice",
+       "valeur": "Dix-huit ans"
+      },
+      {
+       "id": "an",
+       "texte": "Publication",
+       "valeur": "1954, chez Julliard"
+      },
+      {
+       "id": "prix",
+       "texte": "Prix",
+       "valeur": "Prix des Critiques"
+      },
+      {
+       "id": "pseudo",
+       "texte": "Pseudonyme emprunté à",
+       "valeur": "La princesse de Sagan, personnage de Proust"
+      }
+     ],
+     "pied": "Un succès mondial, un scandale immédiat",
+     "teinte": "ciel"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Cécile",
+       "La narratrice, dix-sept ans"
+      ],
+      [
+       "Raymond",
+       "Son père, veuf léger et charmant"
+      ],
+      [
+       "Elsa",
+       "La jeune maîtresse du père"
+      ],
+      [
+       "Anne Larsen",
+       "Amie de la mère morte"
+      ],
+      [
+       "Cyril",
+       "L’étudiant du premier amour"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "pseudo"
+     ],
+     "enonce": "Touche la ligne qui dit d’où vient le nom de Sagan.",
+     "aide": "Il vient d’un autre écrivain.",
+     "explication": "Le pseudonyme vient d’un personnage de **Proust**, la princesse de Sagan."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le titre du roman.",
+     "texte": "Le titre vient d’un poème de Paul ___ : « Adieu tristesse / Bonjour ___ ».",
+     "reponses": [
+      [
+       "eluard",
+       "éluard"
+      ],
+      [
+       "tristesse"
+      ]
+     ],
+     "banque": [
+      "Éluard",
+      "Verlaine",
+      "tristesse",
+      "bonheur"
+     ],
+     "aide": "Le poète est cité dans le cours du chapitre.",
+     "explication": "Le titre vient d’un vers de **Paul Éluard** : « Adieu tristesse / Bonjour **tristesse** »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Cécile",
+       "La narratrice, oisive et lucide"
+      ],
+      [
+       "Raymond",
+       "Le père séducteur et insouciant"
+      ],
+      [
+       "Elsa",
+       "La maîtresse, jolie et un peu sotte"
+      ],
+      [
+       "Anne Larsen",
+       "L’ordre, l’intelligence, l’exigence"
+      ]
+     ],
+     "aide": "Un père, une narratrice, deux femmes opposées.",
+     "explication": "**Cécile** raconte, **Raymond** séduit, **Elsa** est la jeune maîtresse, **Anne** représente l’ordre."
+    }
+   ]
+  },
+  {
+   "chapitre": "f0adc71b-fb69-5f27-b8a6-b039835893c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’été de la machination",
+   "competence": "se-reperer-temps",
+   "situation": "Cécile passe l’été sur la Côte d’Azur avec son père. Suis la machination qu’elle organise, puis la forme du récit.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du plaisir au drame",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Cécile, Raymond, Elsa : l’été d’Azur"
+      },
+      {
+       "id": "n2",
+       "texte": "Anne Larsen arrive : Raymond décide de l’épouser"
+      },
+      {
+       "id": "n3",
+       "texte": "Anne éloigne Cécile de Cyril"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Anne surprend Raymond et Elsa, part et se tue"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle machination faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Cécile fait croire à son père qu’Elsa et Cyril sont amants",
+      "Cécile révèle à Anne la liaison de son père avec Elsa",
+      "Cécile s’enfuit avec Cyril pour échapper à Anne",
+      "Cécile demande à Anne de quitter définitivement la villa"
+     ],
+     "reponse": 0,
+     "aide": "Elle cherche à réveiller la jalousie de son père.",
+     "explication": "Cécile fait croire à son père qu’**Elsa et Cyril sont amants**, pour réveiller sa jalousie."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où le plan réussit trop bien.",
+     "aide": "Anne surprend quelqu’un.",
+     "explication": "Le plan réussit **trop bien** : Anne surprend Raymond et Elsa, part et se tue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit le roman de la mort d’Anne ?",
+     "options": [
+      "Il ne tranche pas entre accident et suicide",
+      "Il affirme qu’il s’agit d’un suicide",
+      "Il affirme qu’il s’agit d’un accident",
+      "Il laisse entendre que Raymond est coupable"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière étape de la chaîne.",
+     "explication": "Le roman **ne tranche pas** : accident ou suicide."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la forme du récit.",
+     "texte": "Le roman est un récit ___ à la ___ personne.",
+     "reponses": [
+      [
+       "retrospectif",
+       "rétrospectif"
+      ],
+      [
+       "premiere",
+       "première"
+      ]
+     ],
+     "banque": [
+      "rétrospectif",
+      "première",
+      "troisième",
+      "chronologique"
+     ],
+     "aide": "Cécile raconte après coup.",
+     "explication": "C’est un récit **rétrospectif** à la **première** personne : Cécile raconte après les faits."
+    }
+   ]
+  },
+  {
+   "chapitre": "f0adc71b-fb69-5f27-b8a6-b039835893c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une tristesse qui vient après",
+   "competence": "argumenter",
+   "situation": "Cécile raconte un été, mais elle le raconte des années plus tard. Lis un passage écrit à la manière de Sagan, puis tranche entre deux lectures.",
+   "documents": [
+    {
+     "id": "pas",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’été et le souvenir",
+     "blocs": [
+      "Cet été-là, le bruit des cigales couvrait tout, et ma voix, trop claire, mentait gentiment.",
+      "Aujourd’hui, devant la mer vide, je sais le prix de ces jours de soleil."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Bonjour tristesse"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Paul",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Cécile n’éprouve aucun remords : le roman l’approuve."
+      },
+      {
+       "qui": "Paul",
+       "texte": "Elle raconte [[a|après]] coup : la culpabilité naît trop tard, et c’est de là que vient la tristesse."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque expression : elle appartient à l’été vécu, ou au présent du récit ?",
+     "categories": [
+      "L’été vécu",
+      "Le présent de la narration"
+     ],
+     "items": [
+      [
+       "Le bruit des cigales",
+       0
+      ],
+      [
+       "Ma voix, trop claire",
+       0
+      ],
+      [
+       "Devant la mer vide",
+       1
+      ],
+      [
+       "Je sais le prix de ces jours",
+       1
+      ]
+     ],
+     "aide": "Cherche ce qui est raconté au passé et ce qui est dit depuis le présent.",
+     "explication": "Les **cigales** et la **voix claire** sont dans l’été vécu ; la **mer vide** et « je sais » viennent du présent de la narration."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot de Paul qui dit quand Cécile raconte.",
+     "aide": "Paul parle de la place du narrateur par rapport aux faits.",
+     "explication": "Elle raconte **après** coup : c’est le propre du récit rétrospectif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, Nina ou Paul ?",
+     "options": [
+      "Paul : le regard rétrospectif fait naître la tristesse",
+      "Nina : l’absence de remords prouve que le roman approuve Cécile",
+      "Nina : la narratrice ne s’intéresse qu’au plaisir",
+      "Aucun des deux : le roman est un livre de morale"
+     ],
+     "reponse": 0,
+     "aide": "Relis le passage : « aujourd’hui, je sais ».",
+     "explication": "Cécile raconte après coup : le **regard rétrospectif** fait naître la tristesse."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème du roman à ce qu’il montre.",
+     "paires": [
+      [
+       "L’adolescence",
+       "La découverte de sa propre cruauté"
+      ],
+      [
+       "La liberté",
+       "Le plaisir comme valeur"
+      ],
+      [
+       "La culpabilité",
+       "Un sentiment qui naît trop tard"
+      ]
+     ],
+     "aide": "Les trois thèmes sont dans le cours.",
+     "explication": "L’**adolescence** découvre sa cruauté, la **liberté** cherche le plaisir, la **culpabilité** arrive trop tard."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1e2780a-ea1f-5447-8534-ea6a77c94481",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un brave homme et son bahut",
+   "competence": "analyser-document",
+   "situation": "Boubouroche, c’est d’abord une nouvelle, puis une pièce. Situe-la, puis retrouve ses personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la nouvelle à la scène",
+     "debut": 1890,
+     "fin": 1895,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "nouv",
+       "date": 1892,
+       "nom": "La nouvelle"
+      },
+      {
+       "id": "piece",
+       "date": 1893,
+       "nom": "La pièce"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Rôle"
+     ],
+     "lignes": [
+      [
+       "Boubouroche",
+       "Gros, bon, naïf"
+      ],
+      [
+       "Adèle",
+       "Sa maîtresse, qu’il entretient depuis huit ans"
+      ],
+      [
+       "André",
+       "L’amant caché dans le bahut"
+      ],
+      [
+       "Le vieux monsieur",
+       "Le voisin de palier qui a tout entendu"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "piece"
+     ],
+     "enonce": "Touche l’année de création de la pièce.",
+     "aide": "La pièce vient après la nouvelle.",
+     "explication": "La pièce est créée le **27 avril 1893** au Théâtre-Libre d’André Antoine."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Depuis combien d’années Boubouroche entretient-il Adèle ?",
+     "reponse": 8,
+     "aide": "Lis la ligne d’Adèle dans le tableau.",
+     "explication": "Il l’entretient depuis **huit ans** et reste aveugle à ses mensonges.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Boubouroche",
+       "Le brave homme trompé"
+      ],
+      [
+       "Adèle",
+       "La maîtresse qui retourne la situation"
+      ],
+      [
+       "André",
+       "L’amant surpris dans le bahut"
+      ],
+      [
+       "Le vieux monsieur",
+       "Celui qui disait vrai"
+      ]
+     ],
+     "aide": "Le tableau et le cours disent qui trompe et qui avertit.",
+     "explication": "**Boubouroche** est trompé, **Adèle** retourne la situation, **André** est dans le bahut, le **vieux monsieur** dit vrai."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1e2780a-ea1f-5447-8534-ea6a77c94481",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Il préfère le mensonge",
+   "competence": "se-reperer-temps",
+   "situation": "Boubouroche découvre l’amant d’Adèle, et pourtant tout s’arrange. Suis les étapes de la scène, puis trie les faits des mensonges.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Un vieux voisin prévient Boubouroche"
+      },
+      {
+       "id": "n2",
+       "texte": "Boubouroche découvre André dans le bahut"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Boubouroche demande pardon"
+      },
+      {
+       "id": "n5",
+       "texte": "Il empoigne le vieux monsieur par la cravate"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Adèle se dit outragée par tant de soupçons",
+      "Adèle avoue tout et demande pardon",
+      "Adèle part avec André sans un mot",
+      "Adèle appelle la police pour chasser André"
+     ],
+     "reponse": 0,
+     "aide": "Adèle ne s’excuse pas.",
+     "explication": "Adèle ne s’excuse pas : elle se dit **outragée** et retourne la situation."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : un fait, ou ce qu’Adèle lui fait croire ?",
+     "categories": [
+      "Les faits",
+      "Ce qu’Adèle fait croire"
+     ],
+     "items": [
+      [
+       "Un homme est caché dans le bahut",
+       0
+      ],
+      [
+       "Le voisin a tout entendu à travers la cloison",
+       0
+      ],
+      [
+       "Elle est outragée par ses soupçons",
+       1
+      ],
+      [
+       "Elle garde un secret qui n’est pas le sien",
+       1
+      ]
+     ],
+     "aide": "Les faits sont vus ou entendus ; le reste est une explication.",
+     "explication": "Le **bahut** et la **cloison** sont des faits ; l’**outrage** et le **secret** sont des mensonges commodes."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Touche l’étape où la colère de Boubouroche se retourne contre celui qui disait vrai.",
+     "aide": "Il s’en prend à un voisin.",
+     "explication": "Toute sa colère se retourne contre le **vieux monsieur**, qui disait vrai."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète une phrase du commentaire.",
+     "texte": "Boubouroche ne se laisse pas tromper : il ___ de l’être, parce que la vérité coûterait trop ___.",
+     "reponses": [
+      [
+       "choisit"
+      ],
+      [
+       "cher"
+      ]
+     ],
+     "banque": [
+      "choisit",
+      "refuse",
+      "cher",
+      "longtemps"
+     ],
+     "aide": "Le comique naît de l’aveuglement volontaire.",
+     "explication": "Il **choisit** d’être trompé : la vérité coûterait trop **cher**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1e2780a-ea1f-5447-8534-ea6a77c94481",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un galant homme dans un bahut",
+   "competence": "analyser-texte",
+   "situation": "Le comique de Courteline tient à un contraste. Lis une réplique d’André et un échange d’élèves sur Boubouroche.",
+   "documents": [
+    {
+     "id": "rep",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La réplique d’André",
+     "blocs": [
+      {
+       "personnage": "André",
+       "replique": "Un [[g|galant]] homme est toujours un galant homme, même le jour où certaines circonstances de la vie l’ont mis dans la nécessité de se cacher dans un [[b|bahut]]."
+      }
+     ],
+     "source": "Georges Courteline, *Boubouroche* (1893)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Marc",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Boubouroche est simplement idiot."
+      },
+      {
+       "qui": "Marc",
+       "texte": "Non : il [[c|choisit]] de ne pas voir, parce que la vérité coûterait trop cher."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rep",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui nomme le lieu ridicule où se cache André.",
+     "aide": "Un grand meuble-placard.",
+     "explication": "André parle solennellement de se cacher dans un **bahut**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet comique produit cette phrase ?",
+     "options": [
+      "Le contraste entre un ton noble et une situation ridicule",
+      "L’accumulation de gros mots dans la bouche d’un amant",
+      "La surprise d’un aveu sincère de l’amant",
+      "La répétition du mot « bahut » à chaque ligne"
+     ],
+     "reponse": 0,
+     "aide": "Observe le ton de la phrase et la situation qu’elle décrit.",
+     "explication": "Le ton **noble** (« galant homme ») contraste avec la situation **ridicule**."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot de Marc qui prouve que Boubouroche n’est pas simplement idiot.",
+     "aide": "Marc parle d’un choix.",
+     "explication": "Il **choisit** de ne pas voir : c’est l’aveuglement volontaire."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait de la pièce à son effet.",
+     "paires": [
+      [
+       "Un dialogue vif, une langue parlée",
+       "Le rythme de la scène"
+      ],
+      [
+       "La petite bourgeoisie parisienne",
+       "Le monde de Courteline"
+      ],
+      [
+       "L’aveuglement volontaire",
+       "Le comique de la pièce"
+      ]
+     ],
+     "aide": "Chaque trait nourrit la comédie de mœurs.",
+     "explication": "Le **dialogue** donne le rythme, la **petite bourgeoisie** le décor, l’**aveuglement** le comique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comédie de mœurs ?",
+     "options": [
+      "On préfère souvent le mensonge qui rassure à la vérité",
+      "On préfère toujours la vérité, même quand elle blesse",
+      "On ne peut jamais pardonner une trahison",
+      "On finit toujours par chasser le menteur"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la fin de la pièce.",
+     "explication": "La pièce fait rire d’une vérité amère : on préfère souvent le **mensonge qui rassure**."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a59d522-531c-5c3b-a81c-89d93a7f9827",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dix voyageurs dans une diligence",
+   "competence": "analyser-document",
+   "situation": "En 1870, une diligence quitte Rouen occupée pour Le Havre. Observe le voyage, puis ce que représente chaque voyageur.",
+   "documents": [
+    {
+     "id": "voyage",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Boule de suif",
+     "sousTitre": "Guy de Maupassant, 1880",
+     "emoji": "🚌",
+     "lignes": [
+      {
+       "id": "dep",
+       "texte": "Départ",
+       "valeur": "Rouen occupée"
+      },
+      {
+       "id": "arr",
+       "texte": "Destination",
+       "valeur": "Le Havre"
+      },
+      {
+       "id": "nb",
+       "texte": "Voyageurs",
+       "valeur": "Dix, dont Boule de suif"
+      },
+      {
+       "id": "etape",
+       "texte": "Étape bloquée",
+       "valeur": "Tôtes"
+      }
+     ],
+     "pied": "Publiée dans Les Soirées de Médan",
+     "teinte": "brun"
+    },
+    {
+     "id": "voy",
+     "type": "tableau",
+     "titre": "Les voyageurs",
+     "colonnes": [
+      "Voyageur",
+      "Ce qu’il représente"
+     ],
+     "lignes": [
+      [
+       "M. et Mme Loiseau",
+       "Des marchands de vin, rusés et vulgaires"
+      ],
+      [
+       "M. et Mme Carré-Lamadon",
+       "La grande bourgeoisie industrielle"
+      ],
+      [
+       "Le comte et la comtesse de Bréville",
+       "La vieille noblesse"
+      ],
+      [
+       "Cornudet",
+       "?"
+      ],
+      [
+       "Les deux religieuses",
+       "L’Église"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voyage",
+     "multiple": false,
+     "reponse": [
+      "etape"
+     ],
+     "enonce": "Touche la ligne qui dit où la diligence est retenue.",
+     "aide": "Un officier prussien y retient la voiture.",
+     "explication": "L’officier retient la diligence à **Tôtes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sans compter Boule de suif, combien d’autres voyageurs sont dans la diligence ?",
+     "reponse": 9,
+     "aide": "Soustrais Boule de suif du total.",
+     "explication": "10 − 1 = **9 autres voyageurs**.",
+     "unite": "voyageurs"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que représente Cornudet (case « ? » du tableau) ?",
+     "options": [
+      "Le démocrate",
+      "Le banquier",
+      "Le curé",
+      "L’officier"
+     ],
+     "reponse": 0,
+     "aide": "C’est lui qui siffle La Marseillaise à la fin.",
+     "explication": "**Cornudet** est le **démocrate**, qui siffle *La Marseillaise* à la fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a59d522-531c-5c3b-a81c-89d93a7f9827",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux repas, deux visages",
+   "competence": "se-reperer-temps",
+   "situation": "Le panier de Boule de suif sauve les voyageurs au début, et on l’oublie à la fin. Suis les étapes, puis compare les deux repas.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la nouvelle",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Affamés, les voyageurs acceptent son panier"
+      },
+      {
+       "id": "n2",
+       "texte": "À Tôtes, l’officier prussien exige une nuit"
+      },
+      {
+       "id": "n3",
+       "texte": "Boule de suif refuse par patriotisme"
+      },
+      {
+       "id": "n4",
+       "texte": "Les voyageurs la pressent d’accepter"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "rep",
+     "type": "tableau",
+     "titre": "Les deux repas",
+     "colonnes": [
+      "Moment",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le premier repas",
+       "Les bourgeois acceptent son panier avec reconnaissance"
+      ],
+      [
+       "Le repas du lendemain",
+       "Tous mangent devant elle sans rien lui offrir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Elle cède, puis tous l’ignorent",
+      "Elle s’enfuit à pied vers Le Havre",
+      "L’officier prussien la libère sans condition",
+      "Les religieuses la défendent contre tous"
+     ],
+     "reponse": 0,
+     "aide": "Elle cède à la pression, puis on la méprise.",
+     "explication": "Boule de suif **cède**, puis tous l’**ignorent** : ils mangent devant elle sans rien offrir."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui prouve que Boule de suif est la seule vraiment patriote.",
+     "aide": "Cherche le mot « patriotisme ».",
+     "explication": "Elle **refuse par patriotisme** : c’est elle, la prostituée, qui se montre la plus digne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque moment au sentiment des voyageurs.",
+     "paires": [
+      [
+       "Le premier repas",
+       "Ils reçoivent avec reconnaissance"
+      ],
+      [
+       "Le repas du retour",
+       "Ils refusent de partager"
+      ],
+      [
+       "La pression",
+       "Ils l’endorment de bons arguments"
+      ]
+     ],
+     "aide": "La nouvelle est construite sur l’opposition de deux repas.",
+     "explication": "La **symétrie des deux repas** porte toute la critique : le partage devient refus de partage."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète une phrase du commentaire.",
+     "texte": "La satire vise l’___ bourgeoise : on ___ une femme méprisée, puis on la punit d’avoir cédé.",
+     "reponses": [
+      [
+       "hypocrisie"
+      ],
+      [
+       "sacrifie"
+      ]
+     ],
+     "banque": [
+      "hypocrisie",
+      "bonté",
+      "sacrifie",
+      "protège"
+     ],
+     "aide": "Le cours emploie ces deux mots.",
+     "explication": "La satire vise l’**hypocrisie** bourgeoise : on **sacrifie** une femme méprisée, puis on la punit d’avoir cédé."
+    }
+   ]
+  },
+  {
+   "chapitre": "6a59d522-531c-5c3b-a81c-89d93a7f9827",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Personne ne la regardait",
+   "competence": "argumenter",
+   "situation": "Après la nuit à Tôtes, la voiture repart. Lis une phrase de Maupassant et trouve ce qu’elle prouve pour ton commentaire.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans la diligence",
+     "blocs": [
+      "[[n|Personne]] ne la regardait, ne songeait à elle."
+     ],
+     "source": "Guy de Maupassant, *Boule de suif* (1880), après le départ de Tôtes"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La nouvelle dénonce l’hypocrisie bourgeoise",
+       "Les voyageurs sacrifient Boule de suif puis la méprisent",
+       "?"
+      ],
+      [
+       "La diligence est une société en miniature",
+       "Chaque classe y a son représentant",
+       "Loiseau, Carré-Lamadon, Bréville"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui dit l’indifférence de tous les voyageurs.",
+     "aide": "Un seul mot, au début, désigne tout le monde.",
+     "explication": "Le mot **Personne** dit le mépris et l’oubli général."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la phrase prouve-t-elle le mieux ?",
+     "options": [
+      "L’isolement de Boule de suif après son sacrifice",
+      "La peur des voyageurs devant l’officier prussien",
+      "La tendresse des voyageurs pour la jeune femme",
+      "La fatigue du voyage qui endort tout le monde"
+     ],
+     "reponse": 0,
+     "aide": "Que fait-on d’une personne dont on n’a plus besoin ?",
+     "explication": "Après avoir cédé, Boule de suif est ignorée de tous : c’est son **isolement**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les religieuses justifient le sacrifice par la religion",
+      "Cornudet siffle La Marseillaise pendant tout le voyage",
+      "Les Loiseau vendent leur vin aux Prussiens à bas prix",
+      "Le comte de Bréville offre sa place à Boule de suif"
+     ],
+     "reponse": 0,
+     "aide": "Cherche un exemple de bon argument pour la pousser à céder.",
+     "explication": "Les **deux religieuses** justifient le sacrifice : même la religion sert l’hypocrisie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il représente.",
+     "paires": [
+      [
+       "Les Carré-Lamadon",
+       "La grande bourgeoisie industrielle"
+      ],
+      [
+       "Les Bréville",
+       "La vieille noblesse"
+      ],
+      [
+       "Cornudet",
+       "Le démocrate"
+      ],
+      [
+       "Les religieuses",
+       "L’Église"
+      ]
+     ],
+     "aide": "Une société en miniature : une classe par personnage.",
+     "explication": "Chaque voyageur représente une **classe** ou une institution : la diligence est une société en miniature."
+    }
+   ]
+  },
+  {
+   "chapitre": "2df817fe-fe3b-5517-b1e4-1d7774ba4b07",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un empereur de dix-sept ans",
+   "competence": "analyser-document",
+   "situation": "Tu présentes Britannicus : la pièce, sa source, puis ses personnages.",
+   "documents": [
+    {
+     "id": "id",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Britannicus",
+     "sousTitre": "Tragédie de Jean Racine",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "id": "date",
+       "texte": "Création",
+       "valeur": "13 décembre 1669, Hôtel de Bourgogne"
+      },
+      {
+       "id": "source",
+       "texte": "Source",
+       "valeur": "Tacite, les Annales"
+      },
+      {
+       "id": "regne",
+       "texte": "Règne de Néron",
+       "valeur": "Depuis trois ans, sans crime"
+      },
+      {
+       "id": "rival",
+       "texte": "Rival sur ce terrain",
+       "valeur": "Corneille, la tragédie politique"
+      }
+     ],
+     "pied": "Racine appelle Néron un « monstre naissant »",
+     "teinte": "corail"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Néron",
+       "Empereur depuis trois ans"
+      ],
+      [
+       "Agrippine",
+       "Sa mère, qui veut gouverner à travers lui"
+      ],
+      [
+       "Britannicus",
+       "Fils de Claude, héritier légitime écarté"
+      ],
+      [
+       "Junie",
+       "Aimée de Britannicus, enlevée par Néron"
+      ],
+      [
+       "Burrhus",
+       "L’honnête homme"
+      ],
+      [
+       "Narcisse",
+       "Le traître"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "id",
+     "multiple": false,
+     "reponse": [
+      "source"
+     ],
+     "enonce": "Touche la ligne qui dit de quel historien Racine tire son sujet.",
+     "aide": "Un historien latin.",
+     "explication": "Racine s’appuie sur **Tacite** et ses *Annales*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que Racine dit de Néron.",
+     "texte": "Racine appelle Néron un « ___ naissant » : il règne depuis ___ ans sans avoir commis de crime.",
+     "reponses": [
+      [
+       "monstre"
+      ],
+      [
+       "trois",
+       "3"
+      ]
+     ],
+     "banque": [
+      "monstre",
+      "tyran",
+      "trois",
+      "dix"
+     ],
+     "aide": "La fiche et le cours donnent les deux mots.",
+     "explication": "Néron est un « **monstre** naissant » : il règne depuis **trois** ans sans crime."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa situation.",
+     "paires": [
+      [
+       "Agrippine",
+       "Veut gouverner à travers son fils"
+      ],
+      [
+       "Britannicus",
+       "Héritier légitime écarté du trône"
+      ],
+      [
+       "Burrhus",
+       "L’honnête conseiller de Néron"
+      ],
+      [
+       "Narcisse",
+       "Le traître, conseiller pervers"
+      ]
+     ],
+     "aide": "Deux conseillers s’opposent, une mère et un héritier aussi.",
+     "explication": "**Agrippine** veut régner par Néron, **Britannicus** est l’héritier écarté, **Burrhus** et **Narcisse** sont les conseillers opposés."
+    }
+   ]
+  },
+  {
+   "chapitre": "2df817fe-fe3b-5517-b1e4-1d7774ba4b07",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Comment un pouvoir se libère",
+   "competence": "analyser-texte",
+   "situation": "Néron se libère peu à peu de tous ceux qui l’ont guidé. Suis les étapes, puis relie quatre moments de la pièce à ce qui s’y joue.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du lever du jour au poison",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Agrippine attend à l’aube devant sa porte"
+      },
+      {
+       "id": "n2",
+       "texte": "Néron fait enlever Junie"
+      },
+      {
+       "id": "n3",
+       "texte": "Junie doit repousser Britannicus devant Néron"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Junie se réfugie chez les Vestales"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "moments",
+     "type": "tableau",
+     "titre": "Quatre moments à connaître",
+     "colonnes": [
+      "Moment",
+      "Ce qui s’y joue"
+     ],
+     "lignes": [
+      [
+       "L’ouverture",
+       "Agrippine attend à l’aube, Néron ne la reçoit plus"
+      ],
+      [
+       "L’aveu de Néron",
+       "Il a vu Junie enlevée, en larmes"
+      ],
+      [
+       "La fin de Narcisse",
+       "Il est massacré par le peuple"
+      ],
+      [
+       "La dernière scène",
+       "Burrhus redoute ce que Néron va devenir"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Néron empoisonne Britannicus lors d’un banquet de réconciliation",
+      "Néron fait enfermer Agrippine dans le palais impérial",
+      "Britannicus renverse Néron avec l’aide de Burrhus",
+      "Junie épouse Néron pour sauver Britannicus"
+     ],
+     "reponse": 0,
+     "aide": "Un banquet de réconciliation cache une trahison.",
+     "explication": "Néron **empoisonne Britannicus** pendant un banquet de réconciliation : il choisit le crime."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui est un théâtre dans le théâtre : un spectateur caché regarde.",
+     "aide": "Néron est caché pour observer Junie.",
+     "explication": "Néron, **caché**, observe Junie : le spectateur sait ce que Britannicus ignore."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque moment de la pièce à ce qu’il montre.",
+     "paires": [
+      [
+       "L’ouverture",
+       "Agrippine, écartée du pouvoir"
+      ],
+      [
+       "L’aveu de Néron",
+       "L’amour réduit à la possession"
+      ],
+      [
+       "La fin de Narcisse",
+       "Le traître puni par le peuple"
+      ],
+      [
+       "La dernière scène",
+       "Le futur tyran qui s’annonce"
+      ]
+     ],
+     "aide": "Chaque moment éclaire un aspect du pouvoir.",
+     "explication": "**Agrippine** est écartée, Néron aime ce qu’il possède, **Narcisse** est puni, **Burrhus** pressent le tyran."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle formule résume la pièce ?",
+     "options": [
+      "Une tragédie politique : le pouvoir se libère de ses tuteurs et devient tyrannie",
+      "Une comédie de cour sur les amours d’un jeune empereur et de ses amis",
+      "Un drame de la vengeance où Britannicus renverse enfin son rival Néron",
+      "Un récit héroïque où Agrippine sauve Rome de la guerre civile"
+     ],
+     "reponse": 0,
+     "aide": "Le personnage central n’est pas la victime.",
+     "explication": "C’est une **tragédie politique** : le **bourreau en formation** est au centre."
+    }
+   ]
+  },
+  {
+   "chapitre": "2df817fe-fe3b-5517-b1e4-1d7774ba4b07",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "J’embrasse mon rival",
+   "competence": "argumenter",
+   "situation": "Néron aime-t-il Junie, ou aime-t-il la posséder ? Lis deux vers célèbres et écoute le débat.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Deux répliques de Néron",
+     "blocs": [
+      "J’aimais jusqu’à ses [[p|pleurs]] que je faisais couler.",
+      "",
+      "J’[[e|embrasse]] mon rival, mais c’est pour l’[[e|étouffer]]."
+     ],
+     "source": "Jean Racine, *Britannicus* (1669), acte II, scène 2 puis acte IV, scène 3"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Alix",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Alix",
+       "texte": "Néron est amoureux de Junie, voilà tout."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Le vers dit l’inverse : il aime les [[f|pleurs]] qu’il fait couler. C’est un amour réduit à la possession."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui prouve que Néron aime voir souffrir Junie.",
+     "aide": "Cherche ce qui coule.",
+     "explication": "Il aime ses **pleurs** : le plaisir de Néron vient de la souffrance qu’il cause."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux verbes qui s’opposent dans le second vers.",
+     "aide": "Un geste de tendresse, un geste de violence.",
+     "explication": "**Embrasse** et **étouffer** s’opposent : la douceur apparente cache la violence réelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, Alix ou Tom ?",
+     "options": [
+      "Tom : l’amour de Néron est réduit à la possession",
+      "Alix : Néron aime sincèrement Junie",
+      "Alix : Néron veut avant tout protéger Britannicus",
+      "Tom : Néron déteste sa mère plus que tout"
+     ],
+     "reponse": 0,
+     "aide": "Relis le premier vers : qu’est-ce que Néron aime ?",
+     "explication": "Néron aime les **pleurs** qu’il fait couler : un amour de **possession**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "L’antithèse « embrasse / étouffer »",
+       "Une douceur apparente, une violence réelle"
+      ],
+      [
+       "Le regard caché de Néron",
+       "Un théâtre dans le théâtre"
+      ],
+      [
+       "Agrippine, la mère dévorante",
+       "Un pouvoir qui veut passer par son fils"
+      ],
+      [
+       "Burrhus et Narcisse",
+       "Deux conseillers opposés"
+      ]
+     ],
+     "aide": "Chaque procédé sert la tragédie politique.",
+     "explication": "L’**antithèse** montre le piège, le **regard caché** double la scène, **Agrippine** veut régner, **Burrhus et Narcisse** s’opposent."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2fae6ad-3648-542c-8afb-ccc971733c56",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un jeune empereur et ses proches",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes Caligula dans la vie de Camus, puis tu retrouves qui est qui autour de l’empereur.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Camus et sa pièce",
+     "debut": 1935,
+     "fin": 1960,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "ecr",
+       "date": 1938,
+       "nom": "Écriture"
+      },
+      {
+       "id": "cre",
+       "date": 1945,
+       "nom": "Création"
+      },
+      {
+       "id": "nob",
+       "date": 1957,
+       "nom": "Prix Nobel"
+      },
+      {
+       "id": "mort",
+       "date": 1960,
+       "nom": "Mort de Camus"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "Caligula",
+       "Empereur de Rome"
+      ],
+      [
+       "Drusilla",
+       "Sa sœur et maîtresse, qui meurt"
+      ],
+      [
+       "Cherea",
+       "Celui qui organise le complot"
+      ],
+      [
+       "Scipion",
+       "Le jeune poète"
+      ],
+      [
+       "Cæsonia",
+       "Sa maîtresse"
+      ],
+      [
+       "Hélicon",
+       "Ancien esclave affranchi"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "cre"
+     ],
+     "enonce": "Touche l’année de la création de la pièce.",
+     "aide": "La pièce est jouée au théâtre Hébertot, avec Gérard Philipe.",
+     "explication": "La pièce est créée en **septembre 1945**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’écriture de la création ?",
+     "reponse": 7,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1945 − 1938 = **7 ans**.",
+     "unite": "ans"
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Cherea",
+       "Organise le complot"
+      ],
+      [
+       "Scipion",
+       "Comprend Caligula sans le suivre"
+      ],
+      [
+       "Cæsonia",
+       "Maîtresse de Caligula"
+      ],
+      [
+       "Hélicon",
+       "Seul fidèle jusqu’au bout"
+      ]
+     ],
+     "aide": "Deux conjurés, deux fidèles.",
+     "explication": "**Cherea** conspire, **Scipion** comprend sans suivre, **Cæsonia** est la maîtresse, **Hélicon** reste fidèle."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2fae6ad-3648-542c-8afb-ccc971733c56",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une liberté sans limite",
+   "competence": "analyser-texte",
+   "situation": "Après la mort de Drusilla, Caligula tire une conclusion extrême. Suis la logique de la pièce, puis range les actes des deux camps.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du chagrin à la révolte",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Drusilla meurt : Caligula disparaît trois jours"
+      },
+      {
+       "id": "n2",
+       "texte": "Il revient transformé : l’absurde est découvert"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Cherea organise le complot"
+      },
+      {
+       "id": "n5",
+       "texte": "Il est tué : « Je suis encore vivant ! »"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la chaîne ?",
+     "options": [
+      "Il exerce une liberté totale, jusqu’au crime",
+      "Il abdique et s’exile en Grèce",
+      "Il se réconcilie avec les patriciens",
+      "Il écrit des poèmes avec Scipion"
+     ],
+     "reponse": 0,
+     "aide": "Si rien n’a de sens, qu’est-ce qui est permis ?",
+     "explication": "Il tire de l’absurde une conséquence : une **liberté totale**, qui va jusqu’au **crime**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n2"
+     ],
+     "enonce": "Touche l’étape où Caligula découvre l’absurde.",
+     "aide": "Il revient transformé.",
+     "explication": "Il revient transformé : il a compris que « **les hommes meurent et ne sont pas heureux** »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le début de l’intrigue.",
+     "texte": "À la mort de Drusilla, Caligula disparaît ___ jours et revient ___.",
+     "reponses": [
+      [
+       "trois",
+       "3"
+      ],
+      [
+       "transforme",
+       "transformé"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "dix",
+      "transformé",
+      "guéri"
+     ],
+     "aide": "Il s’éloigne puis revient autre.",
+     "explication": "Il disparaît **trois** jours et revient **transformé**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque acte : il est de Caligula, ou de Cherea ?",
+     "categories": [
+      "Caligula",
+      "Cherea"
+     ],
+     "items": [
+      [
+       "Réclamer la lune",
+       0
+      ],
+      [
+       "Exécuter au hasard",
+       0
+      ],
+      [
+       "S’ériger en dieu",
+       0
+      ],
+      [
+       "Organiser le complot",
+       1
+      ],
+      [
+       "Défendre un monde vivable",
+       1
+      ]
+     ],
+     "aide": "L’un applique sa logique aux autres, l’autre défend une vie simple.",
+     "explication": "Caligula **réclame**, **exécute** et se fait **dieu** ; **Cherea** conspire au nom d’un monde **vivable**."
+    }
+   ]
+  },
+  {
+   "chapitre": "f2fae6ad-3648-542c-8afb-ccc971733c56",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Tout est permis ?",
+   "competence": "argumenter",
+   "situation": "Peut-on tout se permettre si rien n’a de sens ? Lis un échange écrit à la manière de Camus, puis écoute deux élèves.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Le prince et le poète",
+     "blocs": [
+      {
+       "didascalie": "Dans une salle de palais, deux hommes parlent à voix basse."
+      },
+      {
+       "personnage": "Le prince",
+       "replique": "[[t|Tout]] est permis, puisque rien n’a de sens."
+      },
+      {
+       "personnage": "Le poète",
+       "replique": "Si tout est permis, personne n’est à l’[[a|abri]] de toi."
+      },
+      {
+       "personnage": "Le prince",
+       "replique": "Voilà ce que je voulais que tu comprennes."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Caligula"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Maya",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Elias",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maya",
+       "texte": "Caligula est simplement fou."
+      },
+      {
+       "qui": "Elias",
+       "texte": "Non : il est [[l|logique]]. Et c’est cela qui terrifie."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui dit l’étendue de la liberté du prince.",
+     "aide": "Cherche le mot qui ne met aucune limite.",
+     "explication": "**Tout** est permis : la liberté du prince n’a aucune limite."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui dit le danger que cette liberté fait courir aux autres.",
+     "aide": "Le poète parle de ce qui protège.",
+     "explication": "Personne n’est à l’**abri** : la liberté totale devient une menace."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, Maya ou Elias ?",
+     "options": [
+      "Elias : Caligula est logique, et c’est ce qui terrifie",
+      "Maya : Caligula agit sans aucune raison",
+      "Maya : Caligula est dominé par la peur",
+      "Elias : Caligula est un héros qui sauve Rome"
+     ],
+     "reponse": 0,
+     "aide": "Le prince tire une conséquence de sa prémisse.",
+     "explication": "Caligula n’est pas fou : il est **logique**, et c’est cela qui terrifie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque thème de la pièce à ce qu’il devient.",
+     "paires": [
+      [
+       "L’absurde",
+       "Le monde ne répond pas au besoin de sens"
+      ],
+      [
+       "La liberté",
+       "Totale, elle devient tyrannie"
+      ],
+      [
+       "Le pouvoir",
+       "Il permet d’appliquer sa logique aux autres"
+      ],
+      [
+       "La révolte",
+       "Celle de Cherea, qui défend une vie vivable"
+      ]
+     ],
+     "aide": "Chaque thème est dans le cours.",
+     "explication": "L’**absurde** est le point de départ, la **liberté** devient tyrannie, le **pouvoir** donne les moyens, la **révolte** de Cherea répond."
+    }
+   ]
+  }
+ ]
+}

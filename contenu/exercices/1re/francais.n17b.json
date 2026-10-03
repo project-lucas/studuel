@@ -1,0 +1,2168 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "518de91f-e5fb-5db6-8a07-14a13815417e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce faite pour être lue",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares un exposé sur *Lorenzaccio*. Place l’action, la publication et la première représentation sur la frise, puis fais connaissance avec les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Florence, Musset, le théâtre",
+     "debut": 1500,
+     "fin": 1900,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "act",
+       "date": 1537,
+       "nom": "Action"
+      },
+      {
+       "id": "pub",
+       "date": 1834,
+       "nom": "Publication"
+      },
+      {
+       "id": "cre",
+       "date": 1896,
+       "nom": "Création"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Sa position"
+     ],
+     "lignes": [
+      [
+       "Alexandre de Médicis",
+       "Duc débauché, soutenu par l’empereur et le pape"
+      ],
+      [
+       "Lorenzo",
+       "?"
+      ],
+      [
+       "Philippe Strozzi",
+       "Vieux républicain, qui parle mais n’agit pas"
+      ],
+      [
+       "Marie Soderini",
+       "La mère de Lorenzo, qui pleure son fils perdu"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "cre"
+     ],
+     "enonce": "Touche l’année où la pièce est jouée pour la première fois sur scène.",
+     "aide": "Musset l’écrit pour être lue : il faut attendre plus d’un demi-siècle.",
+     "explication": "La pièce n’est créée qu’en **1896**, avec Sarah Bernhardt dans le rôle de Lorenzo."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la publication de la pièce et sa première représentation ?",
+     "reponse": 62,
+     "unite": "ans",
+     "aide": "Soustrais la date de publication à celle de la création.",
+     "explication": "1896 − 1834 = **62 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Lorenzo ?",
+     "options": [
+      "Le cousin du duc, qui s’est fait son compagnon de débauche",
+      "Le chef des républicains, qui prépare un soulèvement",
+      "Un marchand de Venise qui finance la conjuration",
+      "Un frère du duc, jaloux de son pouvoir"
+     ],
+     "reponse": 0,
+     "aide": "Lorenzo joue un rôle pour approcher le duc et le tuer.",
+     "explication": "Lorenzo est **le cousin du duc** : il s’est fait son **compagnon de débauche** pour l’approcher et le tuer."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le personnage qui incarne le vieux républicain qui parle sans agir.",
+     "aide": "Cherche dans la colonne de droite celui qui « parle mais n’agit pas ».",
+     "explication": "**Philippe Strozzi** parle de liberté mais n’agit pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "518de91f-e5fb-5db6-8a07-14a13815417e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le matin d’après",
+   "competence": "analyser-texte",
+   "situation": "Lorenzo a tué le duc. Que se passe-t-il ensuite ? Lis une scène écrite pour l’exercice, puis suis les étapes de son destin.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "À l’aube, après le meurtre",
+     "blocs": [
+      {
+       "didascalie": "Florence, à l’aube. Le duc vient d’être assassiné."
+      },
+      {
+       "personnage": "Philippe",
+       "replique": "Florence est libre, Lorenzo ! Les républicains vont se lever !"
+      },
+      {
+       "personnage": "Lorenzo",
+       "replique": "Allez voir dans la rue : on installe déjà un nouveau [[d|duc]]."
+      },
+      {
+       "personnage": "Philippe",
+       "replique": "Mais le peuple… les grandes familles…"
+      },
+      {
+       "personnage": "Lorenzo",
+       "replique": "Ils [[p|parleront]], ils discuteront, et personne ne bougera."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Musset"
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le destin de Lorenzo",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Il devient le compagnon de débauche du duc"
+      },
+      {
+       "id": "n2",
+       "texte": "À force de jouer, il devient ce qu’il feignait"
+      },
+      {
+       "id": "n3",
+       "texte": "Il tue Alexandre"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il est assassiné à Venise"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Rien ne change : Côme est aussitôt installé",
+      "Les républicains se soulèvent et chassent les Médicis",
+      "Florence élit une assemblée de citoyens libres",
+      "Lorenzo est proclamé duc à la place du tyran"
+     ],
+     "reponse": 0,
+     "aide": "Relis la scène : que répond Lorenzo à Philippe ?",
+     "explication": "Après le meurtre, **rien ne change** : les républicains ne se soulèvent pas et un nouveau duc, Côme, est **aussitôt installé**."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le mot qui montre que la mort du tyran n’a rien changé.",
+     "aide": "Lorenzo dit qu’on installe déjà quelqu’un.",
+     "explication": "On installe déjà un nouveau **duc** : le pouvoir continue, la mort d’Alexandre n’a servi à rien."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce que feront les républicains, selon Lorenzo.",
+     "aide": "Ils ne feront pas grand-chose d’autre que d’en discuter.",
+     "explication": "Les républicains **parleront**, mais ne bougeront pas : c’est la désillusion d’après 1830."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage ou groupe à son sort après le meurtre.",
+     "paires": [
+      [
+       "L’assassinat du duc",
+       "Un nouveau duc, Côme, est aussitôt installé"
+      ],
+      [
+       "Les républicains",
+       "Ils ne se soulèvent pas"
+      ],
+      [
+       "Lorenzo",
+       "Il est assassiné à Venise pour la prime mise sur sa tête"
+      ],
+      [
+       "Le cardinal Cibo",
+       "Il installe Côme au nom du pape et de l’empereur"
+      ]
+     ],
+     "aide": "Chaque ligne dit ce qui suit le geste de Lorenzo.",
+     "explication": "Le **duc** est remplacé ; les **républicains** ne bougent pas ; **Lorenzo** est tué à Venise ; le **cardinal Cibo** installe **Côme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "518de91f-e5fb-5db6-8a07-14a13815417e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un héros qui se perd",
+   "competence": "argumenter",
+   "situation": "Inès croit que Lorenzo a réussi. Yanis pense le contraire. Lis la célèbre phrase de Lorenzo et leur débat, puis classe ce que la pièce nous dit.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une phrase de Lorenzo",
+     "blocs": [
+      {
+       "personnage": "Lorenzo",
+       "replique": "« Le vice a été pour moi un [[v|vêtement]], maintenant il est collé à ma [[p|peau]]. »"
+      }
+     ],
+     "source": "Alfred de Musset, *Lorenzaccio* (1834)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Lorenzo a réussi : le tyran est mort, mission accomplie."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Il a réussi son crime, pas son projet : rien n’a changé à Florence."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors il a tué pour rien ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Il a surtout perdu ce qu’il était : il joue un rôle jusqu’à s’y perdre."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui dit que le vice était d’abord un rôle qu’on enfile.",
+     "aide": "Un habit qu’on peut ôter, au début.",
+     "explication": "Le vice est d’abord un **vêtement** : un rôle joué pour approcher le duc."
+    },
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit que le rôle est devenu inséparable de Lorenzo.",
+     "aide": "Ce qui est collé à… quoi ?",
+     "explication": "Le vice est maintenant collé à sa **peau** : le rôle est devenu sa nature."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit cette phrase de Lorenzo sur lui-même ?",
+     "options": [
+      "Son rôle de débauché est devenu sa vraie nature",
+      "Il a changé de costume pour la fête du duc",
+      "Il regrette d’avoir quitté la vie de Venise",
+      "Il se vante d’avoir trompé tout Florence"
+     ],
+     "reponse": 0,
+     "aide": "Un vêtement qui ne s’enlève plus n’est plus un déguisement.",
+     "explication": "Lorenzo dit que son rôle est **devenu sa vraie nature** : « il est collé à ma peau »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque fait : drame politique ou drame de l’identité ?",
+     "categories": [
+      "Drame politique",
+      "Drame de l’identité"
+     ],
+     "items": [
+      [
+       "Les républicains ne se soulèvent pas",
+       0
+      ],
+      [
+       "Un nouveau duc est installé aussitôt",
+       0
+      ],
+      [
+       "Le vice est collé à sa peau",
+       1
+      ],
+      [
+       "Il joue un rôle jusqu’à s’y perdre",
+       1
+      ]
+     ],
+     "aide": "Demande-toi si le fait concerne Florence ou ce que devient Lorenzo.",
+     "explication": "L’échec du soulèvement et le **nouveau duc** relèvent du **politique** ; le vice « collé à la peau » et le rôle qui l’engloutit, de l’**identité**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation sur l’action politique la pièce permet-elle d’appuyer ?",
+     "options": [
+      "Un acte individuel ne suffit pas à changer l’Histoire",
+      "Un seul acte courageux suffit à renverser un régime",
+      "L’action politique n’a de sens que dans la débauche",
+      "Les républicains sont les vrais héros de la pièce"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique de Yanis : rien n’a changé à Florence.",
+     "explication": "La pièce montre qu’**un acte individuel ne change pas l’Histoire** : Lorenzo tue le duc, et rien ne bouge."
+    }
+   ]
+  },
+  {
+   "chapitre": "32bf00b0-1af4-5b21-99f3-59a6eadf6c13",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman resté dans un tiroir",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Lucien Leuwen* à l’oral. Place l’écriture et la publication parmi les repères, puis identifie les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Stendhal et son roman",
+     "debut": 1780,
+     "fin": 1900,
+     "pas": 20,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1783,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ecr",
+       "date": 1834,
+       "nom": "Écriture"
+      },
+      {
+       "id": "pub",
+       "date": 1894,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Lucien Leuwen",
+       "Fils d’un riche banquier, chassé de Polytechnique"
+      ],
+      [
+       "Madame de Chasteller",
+       "?"
+      ],
+      [
+       "Le docteur Du Poirier",
+       "L’intrigant qui organise la fausse naissance"
+      ],
+      [
+       "Monsieur Leuwen",
+       "Le père banquier, cynique, drôle et généreux"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Touche l’année où le roman est enfin publié.",
+     "aide": "Stendhal est mort depuis plus de cinquante ans.",
+     "explication": "Le roman n’est publié qu’en **1894**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années passent entre le début de l’écriture et la publication ?",
+     "reponse": 60,
+     "unite": "ans",
+     "aide": "Soustrais l’année de l’écriture à celle de la publication.",
+     "explication": "1894 − 1834 = **60 ans** : Stendhal ne pouvait guère publier la satire du régime qu’il servait."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Madame de Chasteller ?",
+     "options": [
+      "Une jeune veuve légitimiste dont Lucien tombe amoureux",
+      "Une riche banquière que Lucien courtise par calcul",
+      "La femme du ministre de l’Intérieur, à Paris",
+      "Une républicaine exclue de Polytechnique avec Lucien"
+     ],
+     "reponse": 0,
+     "aide": "C’est à Nancy que Lucien tombe amoureux.",
+     "explication": "**Madame de Chasteller** est une jeune **veuve légitimiste** dont Lucien tombe amoureux à Nancy."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche le personnage qui organise la fausse naissance.",
+     "aide": "C’est un intrigant dont le nom commence par « Du ».",
+     "explication": "Le **docteur Du Poirier** organise la fausse naissance qui fait fuir Lucien."
+    }
+   ]
+  },
+  {
+   "chapitre": "32bf00b0-1af4-5b21-99f3-59a6eadf6c13",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Nancy au ministère",
+   "competence": "se-reperer-temps",
+   "situation": "Suis Lucien dans ses déplacements : Paris, Nancy, puis de nouveau Paris. Replace chaque lieu et chaque étape.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Les déplacements de Lucien",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "pa",
+       "lieu": "paris",
+       "nom": "Paris",
+       "symbole": "point"
+      },
+      {
+       "id": "na",
+       "lieu": "nancy",
+       "nom": "Nancy",
+       "symbole": "point"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        "paris",
+        "nancy"
+       ],
+       "style": "fleche",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "et",
+     "type": "tableau",
+     "titre": "Trois étapes (en désordre)",
+     "colonnes": [
+      "Lieu",
+      "Ce qui s’y passe"
+     ],
+     "lignes": [
+      [
+       "Paris, ministère de l’Intérieur",
+       "Il découvre l’achat de voix, les préfets aux ordres, les candidatures officielles"
+      ],
+      [
+       "Nancy",
+       "?"
+      ],
+      [
+       "Paris, Polytechnique",
+       "Il est chassé pour ses opinions républicaines"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "na"
+     ],
+     "enonce": "Touche la ville où Lucien est envoyé comme sous-lieutenant.",
+     "aide": "Le trait part de Paris pour une ville de l’Est.",
+     "explication": "Son père lui achète un poste de sous-lieutenant à **Nancy**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Nancy ?",
+     "options": [
+      "Il aime une jeune veuve légitimiste, puis une machination le chasse",
+      "Il prend la tête d’une émeute républicaine contre la garnison",
+      "Il se lie d’amitié avec un préfet et obtient un poste au ministère",
+      "Il retrouve son père, qui le renvoie de l’armée"
+     ],
+     "reponse": 0,
+     "aide": "À Nancy, Lucien tombe amoureux, puis il fuit.",
+     "explication": "À Nancy, Lucien **aime Madame de Chasteller**, puis une **machination** lui fait croire qu’elle a accouché : il part, désespéré."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes de Lucien dans l’ordre du roman.",
+     "items": [
+      "Lucien est chassé de Polytechnique",
+      "Son père lui achète un poste de sous-lieutenant à Nancy",
+      "Une machination lui fait croire que Madame de Chasteller a accouché",
+      "Il devient maître des requêtes au ministère de l’Intérieur"
+     ],
+     "aide": "Il passe de l’exclusion à Nancy, puis il fuit vers Paris.",
+     "explication": "**Exclusion**, puis **Nancy**, puis la **machination** et la fuite, enfin le **ministère** à Paris."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Au ministère, Lucien découvre la ___ électorale de la monarchie de ___.",
+     "reponses": [
+      [
+       "corruption"
+      ],
+      [
+       "Juillet"
+      ]
+     ],
+     "banque": [
+      "corruption",
+      "honnêteté",
+      "Juillet",
+      "Louis XIV",
+      "justice"
+     ],
+     "aide": "Relis la ligne « ministère de l’Intérieur » du tableau : achat de voix, préfets aux ordres.",
+     "explication": "Lucien découvre la **corruption** électorale de la monarchie de **Juillet**."
+    }
+   ]
+  },
+  {
+   "chapitre": "32bf00b0-1af4-5b21-99f3-59a6eadf6c13",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rester honnête au ministère",
+   "competence": "analyser-texte",
+   "situation": "Lucien veut rester honnête, mais le monde du ministère est cynique. Lis un passage écrit pour l’exercice, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Dans le bureau du ministre",
+     "blocs": [
+      "Le ministre lui expliqua que les élections se gagnaient avec des [[a|promesses]]. Lucien écoutait.",
+      "Cet homme ne manquait pas d’esprit ; mais comment ferait-il, lui, pour rester honnête dans ce bureau ?",
+      "Son père, le banquier, lui avait dit en riant que l’honnêteté était un [[l|luxe]], et que pour le garder il fallait avoir de quoi le payer."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Stendhal"
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le roman est d’abord politique",
+       "Lucien découvre au ministère comment on fabrique les élections",
+       "?"
+      ],
+      [
+       "Lucien veut rester honnête",
+       "Il est l’idéaliste face à un monde cynique",
+       "Son père Leuwen : cynique, drôle, généreux"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui dit que, selon M. Leuwen, l’honnêteté a un prix.",
+     "aide": "Un bien qu’on garde quand on peut se le payer.",
+     "explication": "L’honnêteté est un **luxe** : le père, banquier, en parle avec ironie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase du passage est au discours indirect libre, c’est-à-dire fait entendre la pensée de Lucien sans le dire ?",
+     "options": [
+      "Mais comment ferait-il, lui, pour rester honnête dans ce bureau ?",
+      "Le ministre lui expliqua que les élections se gagnaient avec des promesses.",
+      "Son père, le banquier, lui avait dit en riant que l’honnêteté était un luxe.",
+      "Lucien écoutait."
+     ],
+     "reponse": 0,
+     "aide": "Cherche la phrase qui pose la question à la place de Lucien, sans « il se dit que ».",
+     "explication": "La question « comment ferait-il… ? » est la **pensée de Lucien** passée dans le récit : c’est le **discours indirect libre**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque marque de Stendhal à son effet.",
+     "paires": [
+      [
+       "L’ironie constante",
+       "Le narrateur commente et prend ses distances"
+      ],
+      [
+       "Le discours indirect libre",
+       "La pensée du personnage passe dans le récit"
+      ],
+      [
+       "Les salons de province",
+       "Nancy y est aussi féroce que Verrières"
+      ]
+     ],
+     "aide": "Chaque marque correspond à un geste d’écriture précis.",
+     "explication": "L’**ironie** commente ; le **discours indirect libre** fait entendre la pensée ; les **salons** de province sont féroces comme Verrières."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "L’achat de voix et les préfets aux ordres",
+      "Les salons de Nancy, aussi féroces que Verrières",
+      "Le manuscrit laissé inachevé après la ruine du père",
+      "Les lettres de Lucien à Madame de Chasteller après son départ"
+     ],
+     "reponse": 0,
+     "aide": "Cherche ce que Lucien découvre au ministère pour fabriquer les élections.",
+     "explication": "Au ministère, Lucien découvre **l’achat de voix** et les **préfets aux ordres** : le roman est un document sur la monarchie de Juillet."
+    }
+   ]
+  },
+  {
+   "chapitre": "b9dff0bb-14b0-5257-9097-342941555cd0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq ans pour un roman",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Madame Bovary*. Place l’écriture, le procès et la vie de Flaubert sur la frise, puis fais connaissance avec les personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Flaubert et son roman",
+     "debut": 1820,
+     "fin": 1880,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1821,
+       "nom": "Naissance"
+      },
+      {
+       "id": "deb",
+       "date": 1851,
+       "nom": "Début"
+      },
+      {
+       "id": "proc",
+       "date": 1857,
+       "nom": "Procès"
+      },
+      {
+       "id": "mort",
+       "date": 1880,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Charles Bovary",
+       "Officier de santé médiocre"
+      ],
+      [
+       "Emma",
+       "?"
+      ],
+      [
+       "Homais",
+       "Le pharmacien, symbole de la bêtise progressiste"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "proc"
+     ],
+     "enonce": "Touche l’année du procès pour outrage aux bonnes mœurs.",
+     "aide": "Le roman paraît en 1856 ; le procès a lieu l’année suivante.",
+     "explication": "Le procès a lieu en **1857** : Flaubert est acquitté."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le début de l’écriture du procès ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais l’année du début de l’écriture à celle du procès.",
+     "explication": "1857 − 1851 = **6 ans** : cinq ans d’écriture, relue à voix haute, puis le procès."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Emma ?",
+     "options": [
+      "Fille de fermier, élevée au couvent et nourrie de romans",
+      "Fille d’un chirurgien de Rouen, élevée à Croisset",
+      "Femme d’un notaire, passionnée de médecine",
+      "Servante du pharmacien, fascinée par les journaux"
+     ],
+     "reponse": 0,
+     "aide": "Ce sont les romans lus au couvent qui nourrissent ses rêves.",
+     "explication": "Emma Rouault est **fille de fermier**, **élevée au couvent**, **nourrie de romans sentimentaux**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Léon",
+       "Le clerc dont elle s’éprend, retrouvé à Rouen"
+      ],
+      [
+       "Rodolphe",
+       "Le hobereau qui l’abandonne par une lettre lâche"
+      ],
+      [
+       "Lheureux",
+       "Le marchand qui la pousse à s’endetter"
+      ],
+      [
+       "Charles",
+       "Son mari, officier de santé médiocre"
+      ]
+     ],
+     "aide": "Deux personnages sont ses amants, un autre vit de ses dettes.",
+     "explication": "**Léon** et **Rodolphe** sont ses deux amants ; **Lheureux** l’endette ; **Charles** est son mari."
+    }
+   ]
+  },
+  {
+   "chapitre": "b9dff0bb-14b0-5257-9097-342941555cd0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un dimanche à Yonville",
+   "competence": "analyser-texte",
+   "situation": "Lis une courte scène écrite pour l’exercice, puis suis l’engrenage qui conduit Emma à sa perte.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La place d’Yonville",
+     "blocs": [
+      "Le dimanche, à Yonville, rien ne bougeait. Emma, derrière sa fenêtre, voyait passer le percepteur Binet, qui tournait ses [[b|ronds]] de serviette en sifflant.",
+      "Elle pensait aux bals des romans qu’elle avait lus au couvent, et la place lui paraissait plus [[v|vide]] encore."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Flaubert"
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’engrenage",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Emma rêve de la vie des romans"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle emprunte à Lheureux et s’endette"
+      },
+      {
+       "id": "n3",
+       "texte": "Menacée de saisie, elle est abandonnée"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Charles découvre les lettres et meurt"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui désigne l’occupation absurde de Binet.",
+     "aide": "Ce qu’il tourne, en sifflant, pour passer le temps.",
+     "explication": "Binet tourne ses **ronds** de serviette : l’ennui incarné, sans commentaire."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche l’adjectif qui dit l’effet des romans sur sa vision de la place.",
+     "aide": "Comparée aux bals des romans, la place paraît… ?",
+     "explication": "Après les bals des romans, la place paraît **vide** : l’écart entre le rêve et la vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle avale de l’arsenic et meurt",
+      "Elle s’enfuit avec Rodolphe à l’étranger",
+      "Elle rembourse Lheureux grâce à Léon",
+      "Elle est sauvée par Homais, qui la soigne"
+     ],
+     "reponse": 0,
+     "aide": "Elle obtient du poison par Justin, l’apprenti du pharmacien.",
+     "explication": "Menacée et abandonnée, Emma **avale de l’arsenic** et meurt dans d’atroces souffrances."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage secondaire à son rôle.",
+     "paires": [
+      [
+       "Binet",
+       "Le percepteur aux ronds de serviette"
+      ],
+      [
+       "Bournisien",
+       "Le curé incapable de comprendre Emma"
+      ],
+      [
+       "Justin",
+       "L’apprenti du pharmacien, par qui Emma obtient l’arsenic"
+      ],
+      [
+       "Berthe",
+       "Sa fille, négligée puis placée en filature"
+      ]
+     ],
+     "aide": "Chacun apparaît à un moment de l’engrenage ou de la fin.",
+     "explication": "**Binet** : l’ennui ; **Bournisien** : l’Église sourde ; **Justin** : l’arsenic ; **Berthe** : la fille négligée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Flaubert donne-t-il à Binet ce geste répété, sans commentaire ?",
+     "options": [
+      "Pour incarner l’ennui, sans que le narrateur juge",
+      "Pour condamner clairement les petits fonctionnaires",
+      "Pour annoncer la mort prochaine de Binet",
+      "Pour distraire le lecteur de l’histoire d’Emma"
+     ],
+     "reponse": 0,
+     "aide": "L’ironie de Flaubert ne commente pas : elle montre.",
+     "explication": "Le geste de Binet **incarne l’ennui** : Flaubert l’observe sans le commenter, c’est son **ironie sans commentaire**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b9dff0bb-14b0-5257-9097-342941555cd0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Flaubert juge-t-il Emma ?",
+   "competence": "argumenter",
+   "situation": "Élise pense que Flaubert méprise son héroïne. Malo n’est pas d’accord. Lis leur échange, complète le tableau, puis tire ta conclusion de dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Élise",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élise",
+       "texte": "Flaubert méprise Emma : il se moque d’elle à chaque page."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Il ne la [[j|juge]] pas : l’ironie reste sans commentaire. Il montre, il ne condamne ni n’excuse."
+      },
+      {
+       "qui": "Élise",
+       "texte": "Alors comment sait-on ce qu’Emma pense ?"
+      },
+      {
+       "qui": "Malo",
+       "texte": "Sa voix passe dans le récit sans guillemets : c’est le discours indirect libre."
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La lecture forme et déforme Emma",
+       "Elle attend de la vie ce que les romans lui promettent",
+       "?"
+      ],
+      [
+       "Le romancier reste impersonnel",
+       "Il ne condamne ni n’excuse son héroïne",
+       "Le discours indirect libre fait entendre la voix d’Emma"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche le verbe que Malo refuse d’employer pour décrire ce que fait Flaubert d’Emma.",
+     "aide": "Élise dit qu’il « méprise » ; Malo dit qu’il ne fait pas quoi, exactement ?",
+     "explication": "Flaubert ne **juge** pas Emma : son ironie ne commente jamais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le bovarysme : l’écart entre le rêve et la vie",
+      "Le gueuloir : relire chaque phrase à voix haute",
+      "Le procès de 1857 : un acquittement",
+      "Le fait divers normand qui a inspiré le roman"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le mot qui désigne l’insatisfaction née de l’écart entre rêve et vie.",
+     "explication": "Le **bovarysme** est l’exemple : l’insatisfaction née de **l’écart entre le rêve et la vie**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Flaubert à son effet.",
+     "paires": [
+      [
+       "Le discours indirect libre",
+       "On entend la voix d’Emma dans le récit"
+      ],
+      [
+       "Le gueuloir",
+       "Éprouver le rythme et le son de la phrase"
+      ],
+      [
+       "L’ironie sans commentaire",
+       "L’auteur ne condamne ni n’excuse"
+      ],
+      [
+       "Un sujet banal",
+       "Une femme de province devient héroïne de roman"
+      ]
+     ],
+     "aide": "Un procédé touche la voix d’Emma, un autre la phrase, un autre le sujet.",
+     "explication": "Le **discours indirect libre** fait entendre Emma ; le **gueuloir** travaille la phrase ; l’**ironie** reste neutre ; le **sujet banal** est une femme de province."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation le dialogue permet-il d’appuyer ?",
+     "options": [
+      "Le romancier peut montrer sans juger : c’est l’impersonnalité",
+      "Le romancier doit toujours condamner ses personnages",
+      "Le romancier doit se confondre avec son héroïne",
+      "Le réalisme interdit de montrer des sentiments"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique de Malo : l’ironie reste sans commentaire.",
+     "explication": "Flaubert pratique l’**impersonnalité** : il **montre sans juger**, et laisse le lecteur comprendre."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9c0c8dd-ca06-56f0-8447-c6b530d1ef2e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est Théodore de Sérannes ?",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes *Mademoiselle de Maupin* à ta classe. Suis le début de l’intrigue et retrouve qui est qui dans ce roman en partie épistolaire.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du roman",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "D’Albert cherche une beauté idéale"
+      },
+      {
+       "id": "n2",
+       "texte": "Il rencontre le cavalier Théodore de Sérannes"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Madeleine disparaît à la fin"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle révélation faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Théodore est en vérité Madeleine, déguisée en homme",
+      "Théodore est un duelliste qui défie d’Albert",
+      "Théodore est le frère de Rosette, revenu d’exil",
+      "Théodore est un acteur qui joue Shakespeare"
+     ],
+     "reponse": 0,
+     "aide": "La fin de la chaîne cite Madeleine : c’est le vrai nom de Théodore.",
+     "explication": "Théodore de Sérannes est **Madeleine de Maupin**, déguisée en homme."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche l’étape qui présente le personnage en quête d’une beauté idéale.",
+     "aide": "C’est le point de départ du roman.",
+     "explication": "**D’Albert** cherche une beauté idéale qu’aucune femme réelle ne satisfait."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "D’Albert",
+       "Jeune homme en quête d’une beauté idéale"
+      ],
+      [
+       "Rosette",
+       "La maîtresse de d’Albert, amoureuse de Théodore"
+      ],
+      [
+       "Graciosa",
+       "L’amie à qui Madeleine confie son projet par lettres"
+      ],
+      [
+       "Madeleine de Maupin",
+       "La jeune femme déguisée en Théodore"
+      ]
+     ],
+     "aide": "Une seule de ces personnes se déguise.",
+     "explication": "**D’Albert** rêve d’idéal ; **Rosette** aime Théodore ; **Graciosa** reçoit les lettres ; **Madeleine** se déguise."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Madeleine se déguise en ___ pour observer les hommes tels qu’ils sont ___ eux.",
+     "reponses": [
+      [
+       "homme"
+      ],
+      [
+       "entre"
+      ]
+     ],
+     "banque": [
+      "homme",
+      "soldat",
+      "entre",
+      "devant",
+      "sans"
+     ],
+     "aide": "Elle veut voir ce que les hommes montrent seulement quand ils sont entre hommes.",
+     "explication": "Elle se déguise en **homme** pour observer les hommes tels qu’ils sont **entre** eux, avant de choisir un amant."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9c0c8dd-ca06-56f0-8447-c6b530d1ef2e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une lettre à Graciosa",
+   "competence": "analyser-texte",
+   "situation": "Lis une lettre de Madeleine écrite pour l’exercice, puis remets dans l’ordre les grands moments du roman.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Une lettre de Madeleine",
+     "blocs": [
+      "Chère Graciosa,",
+      "Tu ne devineras jamais ce que j’ai fait : je suis devenue [[h|homme]] pour quelque temps. Sous le nom de Théodore, je vais dans le monde, j’[[o|observe]] les hommes quand ils se croient entre eux, avant de choisir un amant. Si tu me vois dans un salon, ne me reconnais pas !"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Gautier"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui dit en quoi Madeleine se déguise.",
+     "aide": "Elle prend un nom masculin : Théodore.",
+     "explication": "Madeleine se déguise en **homme**, sous le nom de Théodore."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le verbe qui dit ce qu’elle fait des hommes.",
+     "aide": "Elle les regarde sans être reconnue.",
+     "explication": "Elle **observe** les hommes quand ils se croient entre eux."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Madeleine se déguise-t-elle ?",
+     "options": [
+      "Pour observer les hommes entre eux avant de choisir un amant",
+      "Pour fuir un mariage arrangé que sa famille lui impose",
+      "Pour prendre part à des duels réservés aux hommes",
+      "Pour devenir comédienne dans une troupe de Shakespeare"
+     ],
+     "reponse": 0,
+     "aide": "Relis la fin de la phrase : avant de… quoi ?",
+     "explication": "Elle veut **observer les hommes entre eux** pour pouvoir **choisir un amant** en connaissance de cause."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les grands moments du roman.",
+     "items": [
+      "Madeleine se déguise en Théodore de Sérannes",
+      "Une représentation de *Comme il vous plaira* met chacun face à ses désirs",
+      "Madeleine se donne à d’Albert",
+      "Elle se donne ensuite à Rosette, la maîtresse de d’Albert",
+      "Elle disparaît"
+     ],
+     "aide": "Le déguisement vient d’abord, la disparition en dernier.",
+     "explication": "**Déguisement**, puis la pièce de **Shakespeare** qui met chacun face à ses désirs, puis **d’Albert**, puis **Rosette**, enfin la **disparition**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a9c0c8dd-ca06-56f0-8447-c6b530d1ef2e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "À quoi sert la beauté ?",
+   "competence": "argumenter",
+   "situation": "Valentin pense qu’un livre doit servir à quelque chose. Mina connaît la préface de Gautier. Lis la phrase célèbre, leur débat, puis classe les idées de la préface.",
+   "documents": [
+    {
+     "id": "cit",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase de la préface",
+     "blocs": [
+      "« Il n’y a de vraiment beau que ce qui ne peut [[s|servir]] à rien. »"
+     ],
+     "source": "Théophile Gautier, préface de *Mademoiselle de Maupin* (1835)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Valentin",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Valentin",
+       "texte": "Un livre doit servir à quelque chose : instruire, rendre meilleur."
+      },
+      {
+       "qui": "Mina",
+       "texte": "Gautier dit l’inverse : pour lui, ce qui est beau n’a pas besoin d’être [[u|utile]]."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cit",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le verbe qui exprime ce que le beau ne fait pas, selon Gautier.",
+     "aide": "Gautier refuse de juger une œuvre à son utilité.",
+     "explication": "Le beau, selon Gautier, ne peut **servir** à rien : il vaut par lui-même."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison, d’après la phrase de Gautier ?",
+     "options": [
+      "Mina : pour Gautier, la beauté n’a pas besoin d’être utile",
+      "Valentin : pour Gautier, un livre doit d’abord instruire",
+      "Valentin : pour Gautier, un livre doit rendre meilleur",
+      "Mina : pour Gautier, seule l’utilité fait la valeur d’une œuvre"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase : le « vraiment beau » est ce qui ne peut servir à…",
+     "explication": "**Mina** a raison : Gautier défend l’« **art pour l’art** », que la beauté n’a pas besoin de servir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée : ce que la préface attaque, ou ce qu’elle proclame ?",
+     "categories": [
+      "Ce qu’elle attaque",
+      "Ce qu’elle proclame"
+     ],
+     "items": [
+      [
+       "La critique moralisante",
+       0
+      ],
+      [
+       "L’utilitarisme",
+       0
+      ],
+      [
+       "L’art pour l’art",
+       1
+      ],
+      [
+       "L’autonomie de l’art",
+       1
+      ]
+     ],
+     "aide": "Gautier déteste le moralisme bourgeois et les journaux qui jugent par l’utilité.",
+     "explication": "La préface attaque la **critique moralisante** et l’**utilitarisme** ; elle proclame l’**art pour l’art** et l’**autonomie de l’art**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La préface proclame l’« ___ pour l’art » et ouvre la voie au ___.",
+     "reponses": [
+      [
+       "art"
+      ],
+      [
+       "Parnasse"
+      ]
+     ],
+     "banque": [
+      "art",
+      "beau",
+      "vers",
+      "Parnasse",
+      "Réalisme",
+      "Symbolisme"
+     ],
+     "aide": "C’est la doctrine de la préface, qui annonce un mouvement poétique.",
+     "explication": "La préface proclame l’« **art** pour l’art » et annonce le **Parnasse**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8579f291-a80b-519f-9353-2b6ac8c2c70a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les cinq Valeureux",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Mangeclous*. Place le roman dans la vie d’Albert Cohen, puis présente les cinq cousins.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Albert Cohen et son cycle",
+     "debut": 1890,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1895,
+       "nom": "Naissance"
+      },
+      {
+       "id": "man",
+       "date": 1938,
+       "nom": "Mangeclous"
+      },
+      {
+       "id": "bel",
+       "date": 1968,
+       "nom": "Belle du Seigneur"
+      }
+     ]
+    },
+    {
+     "id": "val",
+     "type": "tableau",
+     "titre": "Les Valeureux",
+     "colonnes": [
+      "Valeureux",
+      "Son trait"
+     ],
+     "lignes": [
+      [
+       "Mangeclous",
+       "?"
+      ],
+      [
+       "Saltiel",
+       "Le doux"
+      ],
+      [
+       "Salomon",
+       "Le naïf"
+      ],
+      [
+       "Michaël",
+       "Le beau"
+      ],
+      [
+       "Mattathias",
+       "L’avare"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "man"
+     ],
+     "enonce": "Touche l’année de parution de *Mangeclous*.",
+     "aide": "Le livre paraît à la veille de la guerre, quand l’antisémitisme menace l’Europe.",
+     "explication": "*Mangeclous* paraît en **1938**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent *Mangeclous* de *Belle du Seigneur* ?",
+     "reponse": 30,
+     "unite": "ans",
+     "aide": "Soustrais la date de *Mangeclous* à celle de *Belle du Seigneur*.",
+     "explication": "1968 − 1938 = **30 ans** : les deux romans font partie du même cycle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Mangeclous ?",
+     "options": [
+      "Avocat, faux médecin et menteur de génie",
+      "Le plus jeune, timide et silencieux",
+      "Un diplomate respecté à Genève",
+      "Un médecin sérieux et pauvre"
+     ],
+     "reponse": 0,
+     "aide": "Le héros qui donne son titre au roman est un grand comique.",
+     "explication": "**Mangeclous** est avocat, faux médecin, faux prophète : un **menteur de génie**."
+    },
+    {
+     "type": "zone",
+     "document": "val",
+     "multiple": false,
+     "reponse": [
+      "r4c0"
+     ],
+     "enonce": "Touche le cousin qui incarne l’avarice.",
+     "aide": "Lis la colonne de droite : cherche « l’avare ».",
+     "explication": "**Mattathias** est l’avare des cinq Valeureux."
+    }
+   ]
+  },
+  {
+   "chapitre": "8579f291-a80b-519f-9353-2b6ac8c2c70a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Céphalonie à Genève",
+   "competence": "analyser-texte",
+   "situation": "Les Valeureux, cousins juifs de Céphalonie, apprennent que leur cousin Solal est devenu haut fonctionnaire à Genève : ils partent le rejoindre. Suis leur voyage, puis écoute Mangeclous plaider.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Le voyage des Valeureux",
+     "fond": "europe",
+     "cadrage": [
+      -2,
+      34,
+      30,
+      50
+     ],
+     "lieux": [
+      {
+       "id": "ce",
+       "lon": 20.49,
+       "lat": 38.18,
+       "nom": "Céphalonie",
+       "symbole": "point",
+       "teinte": "corail"
+      },
+      {
+       "id": "ge",
+       "lieu": "geneve",
+       "nom": "Genève",
+       "symbole": "point",
+       "teinte": "corail"
+      }
+     ],
+     "traits": [
+      {
+       "points": [
+        [
+         20.49,
+         38.18
+        ],
+        [
+         6.14,
+         46.2
+        ]
+       ],
+       "style": "fleche",
+       "teinte": "violet"
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Mangeclous plaide",
+     "blocs": [
+      "Mangeclous, une main sur le ventre et l’autre sur l’univers, dit à ses cousins :",
+      "« Cousins, je suis [[m|malade]], [[m|mourant]], et je n’ai pas mangé depuis trois heures, ce qui est pour moi une agonie. Que l’un de vous, par amour du Bey des Menteurs, me prête une pièce et un fromage ! »"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Albert Cohen"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "ge"
+     ],
+     "enonce": "Touche la ville où vit Solal, que les Valeureux veulent rejoindre.",
+     "aide": "Solal est haut fonctionnaire dans une ville de Suisse, où siège la Société des Nations.",
+     "explication": "Solal travaille à **Genève** : les Valeureux entreprennent le voyage pour le rejoindre."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les deux mots par lesquels Mangeclous joue la comédie du malade.",
+     "aide": "Il se dit à la fois malade et sur le point de mourir.",
+     "explication": "Il se dit **malade** et **mourant** pour attendrir ses cousins."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mangeclous joue-t-il cette comédie ?",
+     "options": [
+      "Attendrir ses cousins pour obtenir argent et nourriture",
+      "Préparer sa défense devant un tribunal de Genève",
+      "Annoncer à ses cousins qu’il quitte le groupe",
+      "Faire croire qu’il va rejoindre Solal en avion"
+     ],
+     "reponse": 0,
+     "aide": "Sa demande finale est précise : une pièce et un fromage.",
+     "explication": "Il se dit mourant **pour attendrir et soutirer** : une pièce, un fromage."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait comique à son exemple dans le texte.",
+     "paires": [
+      [
+       "Une exagération",
+       "Je n’ai pas mangé depuis trois heures, ce qui est pour moi une agonie"
+      ],
+      [
+       "Un titre grandiloquent",
+       "Le Bey des Menteurs"
+      ],
+      [
+       "Une comédie de malade",
+       "Je suis malade, mourant"
+      ]
+     ],
+     "aide": "Pour chaque trait, cherche la formule précise du texte.",
+     "explication": "L’**exagération** : trois heures sans manger = une agonie ; le **titre** : Bey des Menteurs ; la **comédie** : malade, mourant."
+    }
+   ]
+  },
+  {
+   "chapitre": "8579f291-a80b-519f-9353-2b6ac8c2c70a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rire pour ne pas pleurer",
+   "competence": "argumenter",
+   "situation": "Nadia croit que *Mangeclous* n’est qu’une farce. Théo y lit autre chose. Lis leur échange, complète l’argument, puis classe ce qui fait rire et ce qui attriste.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nadia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nadia",
+       "texte": "Mangeclous, c’est une farce : on rit, et c’est tout."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Sous le rire, il y a une élégie : un monde juif méditerranéen est [[m|menacé]]."
+      },
+      {
+       "qui": "Nadia",
+       "texte": "Menacé par quoi, dans un livre drôle ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Le livre paraît en 1938, quand l’antisémitisme menace toute l’Europe."
+      }
+     ]
+    },
+    {
+     "id": "th",
+     "type": "tableau",
+     "titre": "Deux arguments",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le comique dit aussi la fragilité d’un monde",
+       "Le livre paraît en 1938, quand l’antisémitisme menace l’Europe",
+       "?"
+      ],
+      [
+       "Le héros est un grand personnage comique",
+       "Sa parole est intarissable, il se dit « Bey des Menteurs »",
+       "La comédie du malade mourant qui soutire de l’argent"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui dit ce qui pèse sur le monde des Valeureux, sous le rire.",
+     "aide": "Le monde juif méditerranéen est… ?",
+     "explication": "Un monde juif méditerranéen est **menacé** : l’humour cache une élégie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un monde juif méditerranéen menacé, sous le rire",
+      "Un voyage joyeux sans aucun danger à l’horizon",
+      "Une comédie purement légère, écrite pour les enfants",
+      "Un récit de guerre où le rire n’a pas sa place"
+     ],
+     "reponse": 0,
+     "aide": "Reprends la réplique de Théo : que cache le rire ?",
+     "explication": "L’exemple est **le monde juif méditerranéen menacé**, que le rire laisse entrevoir."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : il fait rire, ou il attriste sous le rire ?",
+     "categories": [
+      "Ce qui fait rire",
+      "Ce qui attriste en dessous"
+     ],
+     "items": [
+      [
+       "Les discours interminables et les listes",
+       0
+      ],
+      [
+       "Le mélange de sublime et de bouffon",
+       0
+      ],
+      [
+       "Le monde juif méditerranéen menacé",
+       1
+      ],
+      [
+       "La mécanique tragique qui annonce *Belle du Seigneur*",
+       1
+      ]
+     ],
+     "aide": "Pense à la différence entre ce que lit l’élève au premier degré et ce qu’il comprend après.",
+     "explication": "Les **discours** et le **mélange du sublime et du bouffon** font rire ; le **monde menacé** et la **mécanique tragique** attristent."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce livre, pour une dissertation sur le comique ?",
+     "options": [
+      "Le rire peut dire la fragilité d’un peuple",
+      "Le comique empêche toute gravité dans un livre",
+      "Le rire sert uniquement à fuir la réalité",
+      "L’exagération nuit toujours à la sincérité"
+     ],
+     "reponse": 0,
+     "aide": "Relis la réplique de Théo et la première ligne du tableau.",
+     "explication": "Le livre montre que **le rire peut dire la fragilité d’un peuple** : la gaieté devient élégie."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e9588ec-821a-5c55-8f8c-3e66a2fb68ac",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un mouvement lancé en 1924",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur le *Manifeste du surréalisme*. Place le texte dans la vie de Breton, puis identifie les membres du groupe.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "André Breton",
+     "debut": 1890,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1896,
+       "nom": "Naissance"
+      },
+      {
+       "id": "man",
+       "date": 1924,
+       "nom": "Manifeste"
+      },
+      {
+       "id": "mort",
+       "date": 1966,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "grp",
+     "type": "tableau",
+     "titre": "Les membres du groupe",
+     "colonnes": [
+      "Membre",
+      "Son apport"
+     ],
+     "lignes": [
+      [
+       "Philippe Soupault",
+       "Coauteur des *Champs magnétiques*"
+      ],
+      [
+       "Paul Éluard",
+       "?"
+      ],
+      [
+       "Louis Aragon",
+       "La prose somptueuse"
+      ],
+      [
+       "Robert Desnos",
+       "Les sommeils : il parle en état d’hypnose"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "man"
+     ],
+     "enonce": "Touche l’année du premier manifeste.",
+     "aide": "Le texte paraît en octobre, entre les deux guerres.",
+     "explication": "Le *Manifeste du surréalisme* paraît en **1924**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la naissance de Breton du Manifeste ?",
+     "reponse": 28,
+     "unite": "ans",
+     "aide": "Soustrais l’année de naissance à celle du Manifeste.",
+     "explication": "1924 − 1896 = **28 ans** : Breton est un jeune homme quand il fonde le mouvement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Paul Éluard ?",
+     "options": [
+      "La poésie amoureuse",
+      "Le théâtre de l’absurde",
+      "La critique d’art",
+      "Les romans réalistes"
+     ],
+     "reponse": 0,
+     "aide": "Comparé à Aragon (la prose), Éluard est le poète de l’amour.",
+     "explication": "**Éluard** apporte la **poésie amoureuse** au groupe surréaliste."
+    },
+    {
+     "type": "zone",
+     "document": "grp",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche le membre du groupe qui parle en état d’hypnose.",
+     "aide": "Cherche « les sommeils » dans la colonne de droite.",
+     "explication": "**Robert Desnos** pratique les **sommeils** : il parle en état d’hypnose."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e9588ec-821a-5c55-8f8c-3e66a2fb68ac",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Écrire sans réfléchir",
+   "competence": "analyser-texte",
+   "situation": "Lis un court texte écrit pour l’exercice, à la manière des textes automatiques, puis relève le programme du surréalisme.",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un texte « automatique »",
+     "blocs": [
+      "Le piano mange la pluie,",
+      "L’enfance sonne à la porte des armoires,",
+      "Un cheval de verre boit le dimanche."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des textes automatiques"
+    },
+    {
+     "id": "prog",
+     "type": "tableau",
+     "titre": "Le programme du Manifeste",
+     "colonnes": [
+      "Élément",
+      "Ce qu’il apporte"
+     ],
+     "lignes": [
+      [
+       "L’écriture automatique",
+       "Écrire vite, sans sujet préconçu, pour laisser parler l’inconscient"
+      ],
+      [
+       "Le rêve, le merveilleux, la folie, l’enfance",
+       "?"
+      ],
+      [
+       "L’image surréaliste",
+       "Le rapprochement de deux réalités éloignées"
+      ],
+      [
+       "Le refus du roman réaliste",
+       "Moqué pour ses descriptions et sa psychologie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui rend ces vers surréalistes ?",
+     "options": [
+      "Ils rapprochent des réalités éloignées, sans contrôle de la raison",
+      "Ils décrivent fidèlement une journée de pluie à Paris",
+      "Ils respectent un plan rigoureux et des rimes régulières",
+      "Ils racontent l’histoire d’un pianiste de Nantes"
+     ],
+     "reponse": 0,
+     "aide": "Un piano peut-il manger la pluie ? Voilà ce que fait l’image.",
+     "explication": "Ils **rapprochent des réalités éloignées** (piano et pluie, cheval et verre), sans le contrôle de la raison."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Tout ce que la raison écarte",
+      "La règle de l’alexandrin et de la rime",
+      "Le plan en trois parties du roman réaliste",
+      "Une méthode pour décrire fidèlement le réel"
+     ],
+     "reponse": 0,
+     "aide": "Le rêve et la folie sont ce que la raison laisse de côté.",
+     "explication": "Le rêve, le merveilleux, la folie et l’enfance sont **tout ce que la raison écarte**."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "multiple": false,
+     "reponse": [
+      "r3c0"
+     ],
+     "enonce": "Touche l’élément du programme que Breton moque pour ses descriptions et sa psychologie.",
+     "aide": "Le Manifeste se moque d’un genre de roman.",
+     "explication": "Breton se moque du **roman réaliste**, de ses descriptions et de sa psychologie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "On pratique l’écriture automatique en écrivant ___, sans sujet ___.",
+     "reponses": [
+      [
+       "vite"
+      ],
+      [
+       "préconçu"
+      ]
+     ],
+     "banque": [
+      "vite",
+      "lentement",
+      "préconçu",
+      "ridicule"
+     ],
+     "aide": "Relis la première ligne du tableau.",
+     "explication": "On écrit **vite**, **sans sujet préconçu**, pour laisser parler l’inconscient."
+    }
+   ]
+  },
+  {
+   "chapitre": "4e9588ec-821a-5c55-8f8c-3e66a2fb68ac",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Artisan ou médium ?",
+   "competence": "argumenter",
+   "situation": "Lina pense que le poète est un artisan. Adam rappelle ce que veut Breton. Lis leur échange, complète la comparaison avec les Parnassiens, puis classe les idées.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lina",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lina",
+       "texte": "Un poète est un artisan : chaque mot est travaillé avec soin."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Pas pour Breton : le poète est plutôt un [[m|médium]] qui laisse parler l’inconscient."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Mais alors, à quoi sert la raison ?"
+      },
+      {
+       "qui": "Adam",
+       "texte": "À rien : la définition parle d’un « automatisme psychique pur », hors du contrôle de la raison."
+      }
+     ]
+    },
+    {
+     "id": "cmp",
+     "type": "tableau",
+     "titre": "Parnassiens et surréalistes",
+     "colonnes": [
+      "Critère",
+      "Parnassiens",
+      "Surréalistes"
+     ],
+     "lignes": [
+      [
+       "La forme",
+       "Travaillée avec soin",
+       "Compte moins que le jaillissement"
+      ],
+      [
+       "Le poète",
+       "Un artisan",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot qui désigne le poète selon Breton.",
+     "aide": "Il transmet ce qui parle à travers lui.",
+     "explication": "Pour Breton, le poète est un **médium** : il laisse parler l’inconscient."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Un médium qui laisse parler l’inconscient",
+      "Un artisan qui polit chaque vers avec soin",
+      "Un savant qui observe patiemment la nature",
+      "Un juge qui corrige les excès de la raison"
+     ],
+     "reponse": 0,
+     "aide": "Reprends la réplique d’Adam.",
+     "explication": "Chez les surréalistes, le poète est **un médium qui laisse parler l’inconscient**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée : ce que le Manifeste met en avant, ou ce qu’il écarte ?",
+     "categories": [
+      "Ce qu’il met en avant",
+      "Ce qu’il écarte"
+     ],
+     "items": [
+      [
+       "L’écriture automatique",
+       0
+      ],
+      [
+       "Le rêve et le merveilleux",
+       0
+      ],
+      [
+       "Le contrôle de la raison",
+       1
+      ],
+      [
+       "Le roman réaliste et ses descriptions",
+       1
+      ],
+      [
+       "La préoccupation esthétique ou morale",
+       1
+      ]
+     ],
+     "aide": "La définition du surréalisme est faite de refus : sans contrôle de la raison, en dehors de toute préoccupation esthétique ou morale.",
+     "explication": "Le Manifeste met en avant l’**écriture automatique** et le **rêve** ; il écarte le **contrôle de la raison**, le **roman réaliste** et la **préoccupation esthétique ou morale**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le dialogue, quelle place Breton laisse-t-il à la raison dans l’écriture ?",
+     "options": [
+      "Aucune : l’écriture se fait hors de son contrôle",
+      "Elle corrige chaque vers après son jaillissement",
+      "Elle choisit le sujet avant que le poète écrive",
+      "Elle impose la rime et la mesure à chaque vers"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique d’Adam.",
+     "explication": "La définition parle d’un automatisme **hors du contrôle de la raison** : elle n’a pas de place dans l’écriture."
+    }
+   ]
+  }
+ ]
+}

@@ -128,27 +128,10 @@
   background: color-mix(in oklch, var(--primary), white 92%);
   box-shadow: 0 3px 0 color-mix(in oklch, var(--primary), white 45%);
 }
-.niveauJalon {
-  display: grid;
-  flex-shrink: 0;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border: 2px solid var(--contour);
-  border-radius: 999px;
-  background: color-mix(in oklch, var(--primary), white 80%);
-  color: var(--foreground);
-  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-}
-.niveauLigne[data-atteint] .niveauJalon {
-  background: radial-gradient(
-    circle at 50% 30%,
-    var(--or-clair) 0%,
-    var(--highlight) 60%,
-    var(--or-fonce) 100%
-  );
+/* Chaque niveau montre SON coffre (components/amis/CoffreDessin) : un niveau
+   pas encore atteint est estompé. */
+.niveauLigne:not([data-atteint]) > img {
+  opacity: 0.55;
 }
 
 /* L'ouverture : le coffre bondit une fois, puis la lueur respire. */

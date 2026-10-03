@@ -1,0 +1,2295 @@
+{
+ "niveau": "2de",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "c7692654-4488-5d4b-aec4-c66465709bbf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq livres, cinq pays",
+   "competence": "lire-tableau",
+   "situation": "Pour son exposé, Naomi a dressé la liste de cinq livres du Commonwealth dans un tableau en anglais. Lis-le avec elle.",
+   "documents": [
+    {
+     "id": "books",
+     "type": "tableau",
+     "titre": "Naomi’s reading list",
+     "colonnes": [
+      "Title",
+      "Author",
+      "Country",
+      "Year"
+     ],
+     "lignes": [
+      [
+       "Things Fall Apart",
+       "Chinua Achebe",
+       "Nigeria",
+       1958
+      ],
+      [
+       "Midnight’s Children",
+       "Salman Rushdie",
+       "India",
+       1981
+      ],
+      [
+       "Long Walk to Freedom",
+       "Nelson Mandela",
+       "South Africa",
+       1994
+      ],
+      [
+       "The God of Small Things",
+       "Arundhati Roy",
+       "India",
+       1997
+      ],
+      [
+       "Half of a Yellow Sun",
+       "Chimamanda Ngozi Adichie",
+       "Nigeria",
+       2006
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "books",
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui donne l’auteur du livre publié en 1994.",
+     "aide": "Repère la ligne de 1994, puis la colonne « Author ».",
+     "explication": "En 1994 est paru **Long Walk to Freedom** : son auteur est **Nelson Mandela**."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "enonce": "Combien de livres du tableau viennent d’Inde (*India*) ?",
+     "aide": "Compte les lignes où la colonne « Country » dit India.",
+     "explication": "Il y en a **2** : *Midnight’s Children* (Rushdie) et *The God of Small Things* (Roy)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque livre à ce qu’il raconte.",
+     "paires": [
+      [
+       "Things Fall Apart",
+       "Une société igbo bouleversée par l’arrivée des colons"
+      ],
+      [
+       "Midnight’s Children",
+       "Les enfants nés à minuit le jour de l’indépendance"
+      ],
+      [
+       "Long Walk to Freedom",
+       "L’autobiographie d’un prisonnier devenu président"
+      ],
+      [
+       "Half of a Yellow Sun",
+       "La guerre du Biafra"
+      ]
+     ],
+     "aide": "Pense au pays de chaque auteur et à l’événement historique qui l’a marqué.",
+     "explication": "**Achebe** raconte l’arrivée des colons chez les Igbo, **Rushdie** l’indépendance de l’Inde, **Mandela** sa vie de prisonnier devenu président et **Adichie** la guerre du Biafra."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7692654-4488-5d4b-aec4-c66465709bbf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que l’Empire a laissé derrière lui",
+   "competence": "analyser-document",
+   "situation": "Ravi, élève de 2de à Leeds, a écrit un court article pour le Commonwealth Day. Lis-le, puis repère les héritages dans le texte et sur la carte.",
+   "documents": [
+    {
+     "id": "art",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Commonwealth Day",
+     "blocs": [
+      "Every year, on the second Monday in March, we celebrate Commonwealth Day at school. Today 56 countries belong to the Commonwealth, from huge India to tiny Nauru.",
+      "Many of them share a British heritage: [[h|English]] is a common language, their [[h|Parliament]] works like Westminster, their judges follow common [[h|law]], and their teams play [[h|cricket]].",
+      "Last year our class read Half of a Yellow Sun, a novel about the Biafran war. The members have no common religion, regime or continent, but the Commonwealth Charter says they share the same values."
+     ],
+     "source": "Article écrit pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Some Commonwealth countries",
+     "fond": "monde",
+     "cadrage": [
+      -20,
+      -38,
+      100,
+      40
+     ],
+     "regions": [
+      {
+       "code": "NGA",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "IND",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "ZAF",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "KEN",
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "code": "GHA",
+       "teinte": "vert",
+       "motif": "clair"
+      }
+     ],
+     "regionsCliquables": true,
+     "legende": [
+      {
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "Member of the Commonwealth"
+      }
+     ],
+     "source": "Carte simplifiée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "art",
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche les quatre mots de l’article qui désignent un héritage britannique : la langue, le Parlement, le droit et le sport.",
+     "aide": "Relis le deuxième paragraphe, après « British heritage ».",
+     "explication": "Les héritages sont **English** (la langue), **Parliament** (le système de Westminster), **law** (la common law) et **cricket** (le sport)."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "NGA"
+     ],
+     "enonce": "L’article cite un roman sur la guerre du Biafra. Touche, sur la carte, le pays de son auteure, Chimamanda Ngozi Adichie.",
+     "aide": "Le Biafra était une région de l’Afrique de l’Ouest, sur le golfe de Guinée.",
+     "explication": "La guerre du Biafra a eu lieu au **Nigeria**, pays d’Adichie, comme celui d’Achebe."
+    },
+    {
+     "type": "nombre",
+     "reponse": 54,
+     "enonce": "L’article cite deux membres extrêmes : l’Inde et Nauru. Combien le Commonwealth compte-t-il d’autres pays membres ?",
+     "aide": "Cherche le nombre total de membres dans le premier paragraphe, puis retire les deux pays cités.",
+     "explication": "56 membres − 2 pays cités = **54** autres pays."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon l’article, qu’est-ce qui rassemble ces pays malgré leurs différences ?",
+     "options": [
+      "Les valeurs de leur Charte commune",
+      "Une religion partagée par tous",
+      "Un continent qu’ils partagent tous",
+      "Un régime politique unique"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase : l’article dit ce que ces pays n’ont PAS en commun.",
+     "explication": "Ni religion, ni régime, ni continent : ce sont les **valeurs de la Commonwealth Charter** (2013) qui les rassemblent."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7692654-4488-5d4b-aec4-c66465709bbf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du roman d’Achebe à la Charte de 2013",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Léa a placé sur une frise cinq livres du Commonwealth et la Commonwealth Charter. Elle a aussi écrit en anglais le début de sa conclusion.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Books and a charter",
+     "debut": 1950,
+     "fin": 2020,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "things",
+       "date": 1958,
+       "nom": "Things Fall Apart"
+      },
+      {
+       "id": "midnight",
+       "date": 1981,
+       "nom": "Midnight’s Children"
+      },
+      {
+       "id": "long",
+       "date": 1994,
+       "nom": "Long Walk to Freedom"
+      },
+      {
+       "id": "god",
+       "date": 1997,
+       "nom": "God of Small Things"
+      },
+      {
+       "id": "sun",
+       "date": 2006,
+       "nom": "Yellow Sun"
+      },
+      {
+       "id": "charter",
+       "date": 2013,
+       "nom": "Commonwealth Charter"
+      }
+     ],
+     "source": "Frise écrite pour l’exercice"
+    },
+    {
+     "id": "concl",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Léa’s conclusion",
+     "blocs": [
+      "Through this novel, Achebe gives a voice to the colonised. He writes in English, the language of the Empire, but he tells the story of an Igbo society. In this way, the Empire writes back."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "god"
+     ],
+     "enonce": "Touche sur la frise le roman qui raconte les castes et une famille du Kerala, en Inde.",
+     "aide": "Deux livres de la frise viennent d’Inde : l’un parle des enfants de l’indépendance, l’autre des castes.",
+     "explication": "**The God of Small Things** (Arundhati Roy, 1997) parle des castes et de la famille ; *Midnight’s Children* raconte l’indépendance."
+    },
+    {
+     "type": "nombre",
+     "reponse": 48,
+     "enonce": "Combien d’années séparent la parution de *Things Fall Apart* de celle de *Half of a Yellow Sun* ?",
+     "aide": "Relève les deux dates sur la frise, puis soustrais.",
+     "explication": "2006 − 1958 = **48 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la conclusion de Léa, pourquoi le choix de l’anglais est-il un geste fort pour Achebe ?",
+     "options": [
+      "Il retourne la langue de l’Empire pour raconter l’histoire des colonisés",
+      "Il imite le style des écrivains britanniques de son époque pour leur plaire",
+      "Il veut que son roman soit lu surtout par les habitants du Royaume-Uni",
+      "Il refuse de montrer la société igbo pour ne pas choquer ses lecteurs"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière phrase : « the Empire writes back ».",
+     "explication": "Achebe utilise **la langue de l’Empire** pour raconter l’histoire des colonisés : c’est le sens de *the Empire writes back*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les mots dans l’ordre pour écrire une phrase de la conclusion. Le premier mot est « These ».",
+     "items": [
+      "These",
+      "countries",
+      "share",
+      "a",
+      "common",
+      "heritage"
+     ],
+     "aide": "Sujet, verbe, puis complément : *these countries* … *share* … *a common heritage*.",
+     "explication": "**These countries share a common heritage** : sujet, verbe, complément."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "charter"
+     ],
+     "enonce": "Touche l’événement de la frise qui énonce les valeurs communes des membres : démocratie, droits humains, État de droit.",
+     "aide": "Ce n’est pas un roman : c’est un texte officiel.",
+     "explication": "La **Commonwealth Charter** (2013) énonce ces valeurs communes."
+    }
+   ]
+  },
+  {
+   "chapitre": "90a049c5-9e96-5aec-9d98-dc55c26b72fb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les SMS de Zoe et Ben",
+   "competence": "comprendre-langue",
+   "situation": "Zoe et Ben échangent des messages après les vacances. Repère les pronoms réfléchis.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Zoe",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoe",
+       "texte": "I taught [[r|myself]] to play the guitar this summer!"
+      },
+      {
+       "qui": "Ben",
+       "texte": "Great! Did you hurt [[r|yourself]] at first?"
+      },
+      {
+       "qui": "Zoe",
+       "texte": "A little. My cat scared [[r|itself]] with the noise and hid under the bed."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Poor cat! Let’s enjoy [[r|ourselves]] on Saturday."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les quatre pronoms réfléchis des messages.",
+     "aide": "Un pronom réfléchi se termine par -self ou -selves.",
+     "explication": "Les quatre pronoms sont **myself, yourself, itself, ourselves**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque sujet à son pronom réfléchi.",
+     "paires": [
+      [
+       "I",
+       "myself"
+      ],
+      [
+       "you (une personne)",
+       "yourself"
+      ],
+      [
+       "it",
+       "itself"
+      ],
+      [
+       "we",
+       "ourselves"
+      ]
+     ],
+     "aide": "Au singulier on termine par -self, au pluriel par -selves.",
+     "explication": "**I → myself, you → yourself, it → itself, we → ourselves**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Let’s enjoy ourselves on Saturday », qui va s’amuser ?",
+     "options": [
+      "Zoe et Ben, tous les deux",
+      "Seulement Ben, pas Zoe",
+      "Zoe toute seule, sans Ben",
+      "Le chat de Zoe uniquement"
+     ],
+     "reponse": 0,
+     "aide": "« Let’s » veut dire « let us » : qui est inclus dans « us » ?",
+     "explication": "**Ourselves** reprend « us » : Ben et Zoe, ensemble."
+    }
+   ]
+  },
+  {
+   "chapitre": "90a049c5-9e96-5aec-9d98-dc55c26b72fb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les jumeaux se regardent",
+   "competence": "manier-langue",
+   "situation": "Anna et Leo sont jumeaux. Dans leur histoire, certains « se » sont des réfléchis et d’autres des réciproques : l’anglais ne les confond pas.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "The twins’ day",
+     "blocs": [
+      "Anna and Leo are twins. They woke up at seven and got dressed quickly. Then they looked at [[r|each other]] and laughed, because they were wearing the same T-shirt.",
+      "Anna looked at [[s|herself]] in the mirror and said, “I will change!” Leo made [[s|himself]] a sandwich. In the evening, they helped [[r|each other]] with their homework."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les pronoms réciproques : ceux où l’action va de l’un à l’autre.",
+     "aide": "Cherche l’expression en deux mots qui veut dire « l’un l’autre ».",
+     "explication": "**each other** (deux fois) : les jumeaux se regardent et s’aident l’un l’autre."
+    },
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche les pronoms réfléchis : ceux où l’action revient sur le sujet.",
+     "aide": "Anna se regarde elle-même ; Leo se prépare quelque chose à lui-même.",
+     "explication": "**herself** et **himself** : l’action revient sur Anna et sur Leo."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase : réfléchi (sur soi-même) ou réciproque (l’un l’autre).",
+     "categories": [
+      "Réfléchi",
+      "Réciproque"
+     ],
+     "items": [
+      [
+       "She looked at herself in the mirror.",
+       0
+      ],
+      [
+       "They looked at each other.",
+       1
+      ],
+      [
+       "I taught myself to swim.",
+       0
+      ],
+      [
+       "We helped each other.",
+       1
+      ],
+      [
+       "He cut himself.",
+       0
+      ],
+      [
+       "They wrote to each other every week.",
+       1
+      ]
+     ],
+     "aide": "Un seul sujet qui agit sur lui-même : réfléchi. Deux personnes ou plus qui agissent l’une sur l’autre : réciproque.",
+     "explication": "**-self / -selves** : l’action revient sur le sujet. **each other** : elle va de l’un à l’autre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "At night, Anna and Leo phone ___ to say goodnight.",
+     "reponses": [
+      [
+       "each other"
+      ]
+     ],
+     "banque": [
+      "each other",
+      "themselves",
+      "herself",
+      "ourselves"
+     ],
+     "aide": "Anna appelle Leo et Leo appelle Anna : l’action va de l’un à l’autre.",
+     "explication": "**each other** : chacun appelle l’autre ; *themselves* voudrait dire que chacun s’appelle lui-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "90a049c5-9e96-5aec-9d98-dc55c26b72fb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le courrier de Jack à sa famille d’accueil",
+   "competence": "analyser-document",
+   "situation": "Jack, un élève français, écrit à son correspondant anglais. Son brouillon contient des « self » en trop : il traduit mot à mot des verbes pronominaux français.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Jack’s draft",
+     "blocs": [
+      "Hi Max, thanks for your message! I arrived in Leeds on Monday and I introduced myself to your parents.",
+      "On Tuesday I was late, so I hurried [[e|myself]] to the bus stop. At school I enjoyed myself a lot, and I felt [[e|myself]] very welcome. I remembered [[e|myself]] your sister’s name only on Wednesday!",
+      "Your mum made the cake herself, and I made myself a cup of tea to say thank you. See you soon! Jack"
+     ],
+     "source": "Brouillon écrit pour l’exercice, avec des erreurs"
+    },
+    {
+     "id": "memo",
+     "type": "tableau",
+     "titre": "Aide-mémoire",
+     "colonnes": [
+      "Français",
+      "Anglais"
+     ],
+     "lignes": [
+      [
+       "se lever",
+       "to get up"
+      ],
+      [
+       "se réveiller",
+       "to wake up"
+      ],
+      [
+       "se souvenir",
+       "to remember"
+      ],
+      [
+       "se dépêcher",
+       "to hurry"
+      ],
+      [
+       "se sentir bien",
+       "to feel good"
+      ],
+      [
+       "s’habiller",
+       "to get dressed"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mail",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les trois « myself » de trop : ceux où l’anglais n’a pas de pronom réfléchi.",
+     "aide": "Pour chaque verbe (*hurry*, *feel*, *remember*), demande-toi si l’anglais en veut un. *Introduce* et *enjoy*, eux, en veulent un.",
+     "explication": "On dit **I hurried**, **I felt very welcome**, **I remembered** : pas de pronom. *Introduced myself*, *enjoyed myself* et *made myself a cup of tea* sont corrects."
+    },
+    {
+     "type": "texte",
+     "document": "memo",
+     "reponse": [
+      "hurry",
+      "to hurry"
+     ],
+     "enonce": "Dans l’aide-mémoire, quel verbe anglais correspond à « se dépêcher » ?",
+     "placeholder": "Un mot",
+     "aide": "Cherche « se dépêcher » dans la colonne de gauche.",
+     "explication": "**to hurry** : « se dépêcher » se dit sans pronom en anglais (*I hurried to the bus stop*)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "The two cousins hugged ___ and then all the guests enjoyed ___.",
+     "reponses": [
+      [
+       "each other"
+      ],
+      [
+       "themselves"
+      ]
+     ],
+     "banque": [
+      "each other",
+      "themselves",
+      "ourselves",
+      "myself"
+     ],
+     "aide": "Les cousins se serrent l’un l’autre ; chaque invité s’amuse lui-même.",
+     "explication": "**each other** (l’un l’autre) puis **themselves** (les invités s’amusent : *enjoy yourselves / themselves*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Your mum made the cake herself », que ajoute « herself » ?",
+     "options": [
+      "Elle l’a fait elle-même, sans aide",
+      "Elle s’est fait mal en le préparant",
+      "Elle l’a fait pour elle seule",
+      "Elle l’a fait pour se faire plaisir"
+     ],
+     "reponse": 0,
+     "aide": "Ici le pronom ne remplace pas un complément : il insiste.",
+     "explication": "Le réfléchi peut **insister** : *made it herself* = elle l’a fait elle-même."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ddb3dce-98f7-588b-9831-f891db437837",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’affiche de la kermesse d’Oakfield",
+   "competence": "comprendre-langue",
+   "situation": "Le lycée d’Oakfield organise une fête d’été. Lis l’affiche et repère comment l’anglais assemble les mots.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Oakfield Summer Fair",
+     "sousTitre": "Saturday, 10 a.m. to 4 p.m.",
+     "emoji": "🎪",
+     "lignes": [
+      {
+       "texte": "Cake stall",
+       "valeur": "10 a.m.",
+       "id": "cake"
+      },
+      {
+       "texte": "Ten-minute magic show",
+       "valeur": "11 a.m.",
+       "id": "magic"
+      },
+      {
+       "texte": "Book sale",
+       "valeur": "1 p.m.",
+       "id": "book"
+      },
+      {
+       "texte": "Tea tent",
+       "valeur": "3 p.m.",
+       "id": "tea"
+      }
+     ],
+     "pied": "Everyone is welcome!",
+     "source": "Affiche imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "magic"
+     ],
+     "enonce": "Touche la ligne qui contient un adjectif composé (des mots reliés par des traits d’union).",
+     "aide": "Cherche les traits d’union.",
+     "explication": "**Ten-minute magic show** contient l’adjectif composé *ten-minute*, placé devant le nom, sans -s."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « Cake stall », quel mot dit de quoi on parle ?",
+     "options": [
+      "stall",
+      "cake",
+      "Saturday",
+      "10 a.m."
+     ],
+     "reponse": 0,
+     "aide": "En anglais, on lit un nom composé de droite à gauche.",
+     "explication": "Le mot de **droite** est le nom principal : *stall* est un stand. *Cake* le précise : un stand de gâteaux."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque nom composé à son sens.",
+     "paires": [
+      [
+       "a teacup",
+       "une tasse à thé"
+      ],
+      [
+       "a cup of tea",
+       "une tasse de thé"
+      ],
+      [
+       "a car park",
+       "un parking"
+      ],
+      [
+       "a sports car",
+       "une voiture de sport"
+      ]
+     ],
+     "aide": "Le nom de droite dit toujours de quoi on parle.",
+     "explication": "*A teacup* est une tasse ; *a cup of tea* est le thé qu’elle contient ; *a car park* est un parking et *a sports car* une voiture."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ddb3dce-98f7-588b-9831-f891db437837",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un portefeuille retrouvé à Leeds",
+   "competence": "manier-langue",
+   "situation": "Un journal local raconte comment un garçon a rendu un portefeuille perdu. L’article est plein de mots composés.",
+   "documents": [
+    {
+     "id": "news",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Lost and found",
+     "blocs": [
+      "A [[a|twelve-year-old]] boy from Leeds has found a lost wallet at a bus stop. The owner is a [[a|well-known]] actor, who called it a [[a|heart-warming]] story. The boy waited ten minutes and gave the wallet to a police officer."
+     ],
+     "source": "Article imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "news",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les trois adjectifs composés de l’article.",
+     "aide": "Ils s’écrivent avec un trait d’union et se placent devant un nom.",
+     "explication": "**twelve-year-old, well-known, heart-warming** : adjectifs composés, avec traits d’union."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans « a police officer », quel mot est le nom principal ?",
+     "options": [
+      "officer",
+      "police",
+      "a",
+      "wallet"
+     ],
+     "reponse": 0,
+     "aide": "Le nom principal est le dernier.",
+     "explication": "C’est **officer** : *police* le précise. Un *police officer* est un officier de police."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment dire « un voyage de trois heures » avec un adjectif composé ?",
+     "options": [
+      "a three-hour journey",
+      "a three-hours journey",
+      "a three hour’s journey",
+      "a journey three-hour"
+     ],
+     "reponse": 0,
+     "aide": "Le premier élément reste au singulier, comme dans *twelve-year-old*.",
+     "explication": "**a three-hour journey** : le nom au singulier, relié par un trait d’union, avant le nom principal."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression française à son équivalent anglais.",
+     "paires": [
+      [
+       "un conducteur de bus",
+       "a bus driver"
+      ],
+      [
+       "un chien de garde",
+       "a guard dog"
+      ],
+      [
+       "une journée de travail",
+       "a day’s work"
+      ],
+      [
+       "une paire de gants",
+       "a pair of gloves"
+      ]
+     ],
+     "aide": "Une quantité ou un contenu : *of*. Une catégorie de durée : *’s*. Sinon : nom + nom.",
+     "explication": "Nom + nom (*bus driver, guard dog*), nom’s + nom (*a day’s work*), nom *of* nom (*a pair of gloves*)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ddb3dce-98f7-588b-9831-f891db437837",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le ticket de caisse et l’avis de Clara",
+   "competence": "analyser-document",
+   "situation": "Clara a écrit un avis sur sa sortie shopping avec sa nièce et gardé son ticket. Son texte contient des fautes sur les mots composés.",
+   "documents": [
+    {
+     "id": "avis",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Clara’s review",
+     "blocs": [
+      "Last Saturday I took my [[e|ten-years-old]] niece to a [[e|toys]] shop. We went on a [[e|two-hours]] trip by bus and bought a pair of gloves, a teacup, a children’s book and a sports bag. I paid with two £20 notes."
+     ],
+     "source": "Avis écrit pour l’exercice, avec des erreurs"
+    },
+    {
+     "id": "ticket",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Oakfield Shop",
+     "sousTitre": "Receipt",
+     "emoji": "🧾",
+     "lignes": [
+      {
+       "texte": "a pair of gloves",
+       "valeur": "£8",
+       "id": "gloves"
+      },
+      {
+       "texte": "a teacup",
+       "valeur": "£5",
+       "id": "cup"
+      },
+      {
+       "texte": "a children’s book",
+       "valeur": "£6",
+       "id": "book"
+      },
+      {
+       "texte": "a sports bag",
+       "valeur": "£15",
+       "id": "bag"
+      }
+     ],
+     "pied": "Thank you!",
+     "source": "Ticket imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "avis",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les trois erreurs sur les mots composés dans l’avis de Clara.",
+     "aide": "Le premier nom ou l’élément de durée ne prend jamais de -s devant un autre nom.",
+     "explication": "On écrit **ten-year-old**, **toy shop** et **two-hour trip** : l’élément qui précise reste au singulier."
+    },
+    {
+     "type": "zone",
+     "document": "ticket",
+     "reponse": [
+      "book"
+     ],
+     "enonce": "Touche sur le ticket l’article destiné aux enfants.",
+     "aide": "Cherche le nom composé avec « ’s » qui veut dire « pour… ».",
+     "explication": "**a children’s book** est un livre pour enfants : *children’s* joue le rôle d’un adjectif."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige les erreurs de l’avis de Clara.",
+     "texte": "My niece is a ___ girl and we took a ___ trip.",
+     "reponses": [
+      [
+       "ten-year-old"
+      ],
+      [
+       "two-hour"
+      ]
+     ],
+     "banque": [
+      "ten-year-old",
+      "ten-years-old",
+      "two-hour",
+      "two-hours"
+     ],
+     "aide": "Un adjectif composé reste au singulier : pas de -s.",
+     "explication": "**a ten-year-old girl**, **a two-hour trip** : pas de -s dans l’adjectif composé, mais *a trip of two hours* au pluriel."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "£",
+     "enonce": "Clara a payé avec deux billets de 20 £. Combien la caissière lui rend-elle d’après le ticket ?",
+     "aide": "Additionne les quatre prix, puis retire le total de 40.",
+     "explication": "8 + 5 + 6 + 15 = 34 £ ; 40 − 34 = **6 £** rendus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on « a pair of gloves » avec *of* ?",
+     "options": [
+      "Parce qu’on compte une quantité d’objets",
+      "Parce que gloves est un adjectif composé",
+      "Parce que pair est toujours un verbe",
+      "Parce que le premier nom prend toujours of"
+     ],
+     "reponse": 0,
+     "aide": "Pense à *a piece of advice* et à *a cup of tea*.",
+     "explication": "**Nom of nom** exprime une quantité ou un contenu : *a pair of gloves, a piece of advice*."
+    }
+   ]
+  },
+  {
+   "chapitre": "dd99cc2c-56ad-5449-b28f-86b0725d794d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment les élèves viennent-ils au lycée ?",
+   "competence": "lire-graphique",
+   "situation": "Dans une classe de 24 élèves, Nina a fait un sondage sur le moyen de transport pour aller au lycée. Lis son graphique.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "How do students come to school?",
+     "categories": [
+      "By bus",
+      "On foot",
+      "By bike"
+     ],
+     "series": [
+      {
+       "nom": "Students",
+       "valeurs": [
+        14,
+        6,
+        4
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Students",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "trajet",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche la barre du moyen de transport que *most of the students* utilisent.",
+     "aide": "« Most » veut dire « la plupart » : cherche la barre qui dépasse la moitié de 24.",
+     "explication": "**By bus** : 14 élèves sur 24, c’est plus de la moitié, donc *most of the students*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Most ___ the students come by bus.",
+     "reponses": [
+      [
+       "of"
+      ]
+     ],
+     "banque": [
+      "of",
+      "the",
+      "all",
+      "in"
+     ],
+     "aide": "Devant un groupe précis (*the students*), il faut un petit mot de liaison.",
+     "explication": "**Most of the students** : devant *the* + nom, on met *of*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est vraie d’après le graphique ?",
+     "options": [
+      "Most of the students come by bus.",
+      "Half of the students come on foot.",
+      "None of the students cycle.",
+      "All of them come by bus."
+     ],
+     "reponse": 0,
+     "aide": "Compare chaque phrase avec les nombres : 14, 6 et 4 sur 24.",
+     "explication": "**Most of the students come by bus** (14/24). 6/24 n’est pas la moitié, 4 élèves viennent à vélo, et tous ne prennent pas le bus."
+    }
+   ]
+  },
+  {
+   "chapitre": "dd99cc2c-56ad-5449-b28f-86b0725d794d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le week-end de la 2de B",
+   "competence": "lire-graphique",
+   "situation": "Le professeur d’anglais demande à sa classe de 30 élèves quelle est leur activité préférée du week-end. Il écrit les résultats au tableau.",
+   "documents": [
+    {
+     "id": "weekend",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Favourite weekend activity (30 students)",
+     "categories": [
+      "Sport",
+      "Video games",
+      "Reading",
+      "Cinema"
+     ],
+     "series": [
+      {
+       "nom": "Students",
+       "valeurs": [
+        15,
+        9,
+        4,
+        2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Students",
+      "min": 0,
+      "max": 16,
+      "pas": 2
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "weekend",
+     "reponse": [
+      "k0"
+     ],
+     "enonce": "Touche l’activité dont on peut dire : « *Half of the students* prefer it ».",
+     "aide": "La moitié de 30, c’est 15.",
+     "explication": "**Sport** : 15 élèves sur 30, la moitié exactement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase sur les jeux vidéo est vraie ?",
+     "options": [
+      "Some of the students prefer video games.",
+      "Most of the students prefer video games.",
+      "All of the students prefer video games.",
+      "None of the students prefer video games."
+     ],
+     "reponse": 0,
+     "aide": "9 élèves sur 30 : ni la plupart, ni tous, ni aucun.",
+     "explication": "9 sur 30 : **some of the students** (certains). *Most* demanderait plus de la moitié."
+    },
+    {
+     "type": "trous",
+     "enonce": "Le professeur dit : « Half of ___ prefer sport. » Complète.",
+     "texte": "Half of ___ prefer sport.",
+     "reponses": [
+      [
+       "us"
+      ]
+     ],
+     "banque": [
+      "us",
+      "we",
+      "our",
+      "ourselves"
+     ],
+     "aide": "Après *of*, un pronom est toujours un complément.",
+     "explication": "**Half of us** : après *of*, le pronom est complément (*us, them*), jamais *we*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Choisis le bon verbe.",
+     "texte": "Most of the homework ___ done.",
+     "reponses": [
+      [
+       "was"
+      ]
+     ],
+     "banque": [
+      "was",
+      "were",
+      "are",
+      "have"
+     ],
+     "aide": "*Homework* est indénombrable : il n’a pas de pluriel.",
+     "explication": "**was** : le verbe s’accorde avec le nom (*homework*, indénombrable), pas avec *most*."
+    }
+   ]
+  },
+  {
+   "chapitre": "dd99cc2c-56ad-5449-b28f-86b0725d794d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sondage sur les boissons",
+   "competence": "analyser-document",
+   "situation": "La classe a interrogé 20 élèves sur leur boisson préférée. Mais le brouillon du compte rendu contient des fautes de partitifs.",
+   "documents": [
+    {
+     "id": "sondage",
+     "type": "tableau",
+     "titre": "Favourite drink",
+     "colonnes": [
+      "Drink",
+      "Students (out of 20)"
+     ],
+     "lignes": [
+      [
+       "Water",
+       12
+      ],
+      [
+       "Juice",
+       5
+      ],
+      [
+       "Tea",
+       3
+      ],
+      [
+       "Coffee",
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    },
+    {
+     "id": "brouillon",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Draft report",
+     "blocs": [
+      "Here are the results of our drinks survey.",
+      "Most [[e|of]] students in our class prefer water. None of them [[e|don’t]] like coffee.",
+      "Some of [[e|we]] prefer juice or tea."
+     ],
+     "source": "Brouillon écrit pour l’exercice, avec des erreurs"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les trois erreurs du brouillon : un *of* en trop, une double négation et un mauvais pronom.",
+     "aide": "Sans déterminant on parle en général ; *none* contient déjà la négation ; après *of*, le pronom est complément.",
+     "explication": "**Most students** (pas de *of* en général), **None of them like** (négation déjà dans *none*), **Some of us** (jamais *of we*)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase correspond au tableau ?",
+     "options": [
+      "Most of the students prefer water.",
+      "Half of the students prefer juice.",
+      "None of the students drink tea.",
+      "All of the students drink coffee."
+     ],
+     "reponse": 0,
+     "aide": "12 sur 20 : plus de la moitié.",
+     "explication": "**Most of the students prefer water** (12/20). Le jus ne fait pas la moitié, 3 élèves boivent du thé et personne ne préfère le café."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "___ of the students prefer coffee: the number in the table is zero.",
+     "reponses": [
+      [
+       "none"
+      ]
+     ],
+     "banque": [
+      "None",
+      "Most",
+      "Half",
+      "Both"
+     ],
+     "aide": "Le tableau indique 0.",
+     "explication": "**None of the students** : *none* = aucun, la négation est déjà dans le mot."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque expression à sa traduction.",
+     "paires": [
+      [
+       "Most of us",
+       "La plupart d’entre nous"
+      ],
+      [
+       "None of them",
+       "Aucun d’eux"
+      ],
+      [
+       "Both of us",
+       "Nous deux"
+      ],
+      [
+       "Half of the class",
+       "La moitié de la classe"
+      ]
+     ],
+     "aide": "Après *of*, un pronom désigne un groupe précis.",
+     "explication": "**Most of us** = la plupart d’entre nous, **none of them** = aucun d’eux, **both of us** = nous deux, **half of the class** = la moitié de la classe."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e158099-eb14-5afa-811b-414fd78f899e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les réponses de Tom",
+   "competence": "comprendre-langue",
+   "situation": "Mia pose des questions à Tom sur le sport. Regarde comment il répond : en anglais, c’est l’auxiliaire qui fait le travail.",
+   "documents": [
+    {
+     "id": "tennis",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "Do you play tennis?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Yes, I [[a|do]]."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Can your brother play too?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "No, he [[a|can’t]]."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Are your parents at home?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Yes, they [[a|are]]."
+      },
+      {
+       "qui": "Mia",
+       "texte": "Did you see the match yesterday?"
+      },
+      {
+       "qui": "Tom",
+       "texte": "No, I [[a|didn’t]]."
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tennis",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les quatre auxiliaires que Tom utilise pour répondre.",
+     "aide": "Chaque réponse de Tom reprend l’auxiliaire de la question de Mia.",
+     "explication": "Tom répond avec **do, can’t, are, didn’t** : l’auxiliaire de chaque question."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mia demande : « Are you in the tennis club? » Tom répond oui. Quelle réponse est correcte ?",
+     "options": [
+      "Yes, I am.",
+      "Yes, I’m.",
+      "Yes, I do.",
+      "Yes, am I."
+     ],
+     "reponse": 0,
+     "aide": "Dans une réponse affirmative courte, on ne contracte jamais.",
+     "explication": "**Yes, I am.** : on reprend l’auxiliaire *be* de la question, sans contraction."
+    },
+    {
+     "type": "trous",
+     "enonce": "Mia demande : « Does your sister play tennis? » Tom répond oui. Complète sa réponse.",
+     "texte": "Yes, she ___.",
+     "reponses": [
+      [
+       "does"
+      ]
+     ],
+     "banque": [
+      "does",
+      "do",
+      "is",
+      "can"
+     ],
+     "aide": "Reprends l’auxiliaire de la question de Mia.",
+     "explication": "**Yes, she does.** : la question commençait par *Does*, la réponse reprend *does*."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e158099-eb14-5afa-811b-414fd78f899e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À la cantine avec Ruby et Sam",
+   "competence": "manier-langue",
+   "situation": "Ruby et Sam déjeunent à la cantine. Ils ne cessent de se répondre par « moi aussi » ou « moi non plus ».",
+   "documents": [
+    {
+     "id": "cantine",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "At the canteen",
+     "participants": [
+      {
+       "nom": "Ruby",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Ruby",
+       "texte": "I’m hungry!"
+      },
+      {
+       "qui": "Sam",
+       "texte": "[[a|So]] [[a|am]] [[a|I]]!"
+      },
+      {
+       "qui": "Ruby",
+       "texte": "I don’t like fish."
+      },
+      {
+       "qui": "Sam",
+       "texte": "[[b|Neither]] [[b|do]] [[b|I]]."
+      },
+      {
+       "qui": "Ruby",
+       "texte": "I’ve forgotten my wallet."
+      },
+      {
+       "qui": "Sam",
+       "texte": "[[c|Have]] [[c|you]]? I can’t lend you any money!"
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cantine",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche la réplique de Sam qui veut dire « moi non plus ».",
+     "aide": "Elle suit une phrase négative et commence par *Neither* ou *Nor*.",
+     "explication": "**Neither do I** : accord avec une phrase négative (*I don’t like fish*)."
+    },
+    {
+     "type": "zone",
+     "document": "cantine",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la réplique de Sam qui exprime seulement la surprise ou l’intérêt (« Ah bon ? »).",
+     "aide": "Cette réplique est une petite question qui reprend l’auxiliaire de la phrase de Ruby.",
+     "explication": "**Have you?** reprend l’auxiliaire de *I’ve forgotten* : c’est une réaction, pas un accord."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phrase à la bonne réponse « moi aussi » ou « moi non plus ».",
+     "paires": [
+      [
+       "I’m tired.",
+       "So am I."
+      ],
+      [
+       "I don’t like coffee.",
+       "Neither do I."
+      ],
+      [
+       "I’ve lost my keys.",
+       "So have I."
+      ],
+      [
+       "We didn’t win.",
+       "Neither did we."
+      ]
+     ],
+     "aide": "L’auxiliaire se choisit sur la phrase de départ : *be*, *do*, *have*…",
+     "explication": "Phrase positive : **so + auxiliaire + sujet**. Phrase négative : **neither + auxiliaire + sujet**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Ruby dit : « I was late. » Sam répond « moi aussi ». Complète.",
+     "texte": "So ___ I.",
+     "reponses": [
+      [
+       "was"
+      ]
+     ],
+     "banque": [
+      "was",
+      "did",
+      "am",
+      "were"
+     ],
+     "aide": "Reprends l’auxiliaire de « I was late ».",
+     "explication": "**So was I.** : la phrase de départ contient *was*, donc la réponse aussi."
+    }
+   ]
+  },
+  {
+   "chapitre": "0e158099-eb14-5afa-811b-414fd78f899e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’invitation de Max",
+   "competence": "argumenter",
+   "situation": "Nora et Ben parlent de la fête de Max. Un tableau montre les réponses reçues. Pour répondre juste, il faut reprendre le bon auxiliaire.",
+   "documents": [
+    {
+     "id": "fete",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "About Max’s party",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ben",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "I don’t like big parties."
+      },
+      {
+       "qui": "Ben",
+       "texte": "[[d|I]] [[d|do]]. They’re fun!"
+      },
+      {
+       "qui": "Nora",
+       "texte": "Neither does my brother, but Max is his friend, so he’ll come."
+      },
+      {
+       "qui": "Ben",
+       "texte": "Is Max’s sister coming too?"
+      },
+      {
+       "qui": "Nora",
+       "texte": "I think so."
+      },
+      {
+       "qui": "Ben",
+       "texte": "And will Lily come?"
+      },
+      {
+       "qui": "Nora",
+       "texte": "I hope not. She was rude to me last week."
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    },
+    {
+     "id": "reponses",
+     "type": "tableau",
+     "titre": "Max’s party: who is coming?",
+     "colonnes": [
+      "Guest",
+      "Answer"
+     ],
+     "lignes": [
+      [
+       "Max’s sister",
+       "Yes"
+      ],
+      [
+       "Lily",
+       "No"
+      ],
+      [
+       "Ben",
+       "Yes"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fete",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche la réplique de Ben qui exprime un désaccord (« Moi, si »).",
+     "aide": "Ben garde le sujet devant l’auxiliaire et inverse la polarité de la phrase de Nora.",
+     "explication": "**I do** : Nora dit *I don’t like…*, Ben la contredit en gardant le sujet devant l’auxiliaire."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « Neither does my brother » ?",
+     "options": [
+      "Mon frère n’aime pas ça non plus",
+      "Mon frère adore ces grandes fêtes",
+      "Mon frère n’est jamais invité chez eux",
+      "Mon frère ne connaît personne là-bas"
+     ],
+     "reponse": 0,
+     "aide": "*Neither* répond à une phrase négative : c’est « moi non plus ».",
+     "explication": "**Neither does my brother** = lui non plus (il n’aime pas les grandes fêtes non plus)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Nora ne veut pas que Lily vienne. Complète sa réponse.",
+     "texte": "I hope ___.",
+     "reponses": [
+      [
+       "not"
+      ]
+     ],
+     "banque": [
+      "not",
+      "so",
+      "no",
+      "never"
+     ],
+     "aide": "Pour dire « j’espère que non », on remplace la proposition par un seul petit mot négatif.",
+     "explication": "**I hope not.** = j’espère que non ; *I hope so* = j’espère que oui."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ben demande si la sœur de Max vient. Nora veut dire « hélas oui ». Que répond-elle ?",
+     "options": [
+      "I’m afraid so.",
+      "I’m afraid not.",
+      "I hope so.",
+      "I don’t think so."
+     ],
+     "reponse": 0,
+     "aide": "Il y a un mot pour « hélas » et un mot pour « oui ».",
+     "explication": "**I’m afraid so.** = hélas oui ; *I’m afraid not* = hélas non."
+    },
+    {
+     "type": "trous",
+     "enonce": "Réponds aux deux questions d’après le tableau.",
+     "texte": "Is Lily coming? No, she ___. Is Max’s sister coming? Yes, she ___.",
+     "reponses": [
+      [
+       "isn’t",
+       "isn't"
+      ],
+      [
+       "is"
+      ]
+     ],
+     "banque": [
+      "isn’t",
+      "is",
+      "doesn’t",
+      "does"
+     ],
+     "aide": "La question commence par *is* : on garde *is*, en négatif ou en positif.",
+     "explication": "**No, she isn’t.** (Lily : No) et **Yes, she is.** (la sœur de Max : Yes), sans contraction à l’affirmatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e702b92-f09f-59c2-8b97-33fe9de085e6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’avis sur la cantine",
+   "competence": "analyser-texte",
+   "situation": "Un élève donne son opinion sur la cantine. Les connecteurs lui servent de panneaux pour guider le lecteur.",
+   "documents": [
+    {
+     "id": "cantine",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Our canteen",
+     "blocs": [
+      "First of all, our canteen is cheap. [[a|Moreover]], the food is healthy. [[b|However]], the queues are long, so many students bring a lunch box. To sum up, the canteen is good but too crowded."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cantine",
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le connecteur qui AJOUTE une idée à la précédente.",
+     "aide": "Il vient après « cheap » et il apporte un second point positif.",
+     "explication": "**Moreover** = de plus : il ajoute un argument dans le même sens."
+    },
+    {
+     "type": "zone",
+     "document": "cantine",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le connecteur qui OPPOSE une idée aux précédentes.",
+     "aide": "Après deux points positifs, la phrase suivante apporte un défaut.",
+     "explication": "**However** = cependant : il introduit une opposition."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque connecteur à son rôle.",
+     "paires": [
+      [
+       "moreover",
+       "ajouter une idée"
+      ],
+      [
+       "however",
+       "opposer deux idées"
+      ],
+      [
+       "so",
+       "annoncer une conséquence"
+      ],
+      [
+       "to sum up",
+       "conclure"
+      ]
+     ],
+     "aide": "Demande-toi : j’ajoute, j’oppose, je conclus ou j’annonce une conséquence ?",
+     "explication": "**moreover** ajoute, **however** oppose, **so** annonce une conséquence, **to sum up** conclut."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e702b92-f09f-59c2-8b97-33fe9de085e6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Faut-il porter l’uniforme ?",
+   "competence": "argumenter",
+   "situation": "Dans le journal du lycée, Hana donne les arguments pour et contre l’uniforme. Observe comment ses connecteurs enchaînent ses idées.",
+   "documents": [
+    {
+     "id": "uniforme",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Should students wear a uniform?",
+     "blocs": [
+      "First of all, a uniform saves time in the morning. Moreover, it is cheaper than fashionable clothes. However, many students say it is boring, so some schools let them choose a colour. Sports clothes, [[d|for]] [[d|instance]], are often chosen by the students. [[e|To]] [[e|sum]] [[e|up]], there are good arguments on both sides."
+     ],
+     "source": "Article écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "uniforme",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le connecteur qui annonce la conclusion de l’article.",
+     "aide": "C’est la dernière phrase du texte.",
+     "explication": "**To sum up** = pour conclure : il résume l’ensemble de l’article."
+    },
+    {
+     "type": "zone",
+     "document": "uniforme",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche le connecteur qui introduit un exemple.",
+     "aide": "Il est entre virgules, juste après « Sports clothes ».",
+     "explication": "**for instance** = par exemple : il illustre l’idée avec un cas précis."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque phrase selon le rôle de son connecteur.",
+     "categories": [
+      "Ajouter",
+      "Opposer",
+      "Conséquence"
+     ],
+     "items": [
+      [
+       "Moreover, it is cheap.",
+       0
+      ],
+      [
+       "However, it is slow.",
+       1
+      ],
+      [
+       "It was late, so we went home.",
+       2
+      ],
+      [
+       "Besides, it is fun.",
+       0
+      ],
+      [
+       "Yet, he failed.",
+       1
+      ],
+      [
+       "Consequently, the shop closed.",
+       2
+      ]
+     ],
+     "aide": "Demande-toi si la phrase ajoute un argument, s’oppose à la précédente ou en tire une conséquence.",
+     "explication": "*Moreover* et *besides* ajoutent ; *however* et *yet* opposent ; *so* et *consequently* annoncent une conséquence."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le connecteur qui convient.",
+     "texte": "The film was long, ___ it was very good.",
+     "reponses": [
+      [
+       "yet"
+      ]
+     ],
+     "banque": [
+      "yet",
+      "so",
+      "such as",
+      "finally"
+     ],
+     "aide": "Le deuxième morceau s’oppose au premier : un film long, mais bon.",
+     "explication": "**yet** = pourtant : il oppose « long » et « very good »."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e702b92-f09f-59c2-8b97-33fe9de085e6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le brouillon sur les téléphones en classe",
+   "competence": "analyser-document",
+   "situation": "Une élève a écrit un brouillon sur l’usage du téléphone au lycée, avec un sondage à l’appui. Ses connecteurs ne sont pas tous bien choisis.",
+   "documents": [
+    {
+     "id": "brouillon",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Phones in class: first draft",
+     "blocs": [
+      "[[e|In]] [[e|a]] [[e|first]] [[e|time]], phones help students find information quickly.",
+      "[[e|Moreover]], they can be a distraction in class, so many teachers ban them.",
+      "[[e|At]] [[e|last]], schools need clear rules."
+     ],
+     "source": "Brouillon écrit pour l’exercice, avec des erreurs"
+    },
+    {
+     "id": "sondage",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Are phones useful in class? (100 students)",
+     "categories": [
+      "Yes",
+      "No"
+     ],
+     "series": [
+      {
+       "nom": "Students",
+       "valeurs": [
+        62,
+        38
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Students",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "brouillon",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les trois connecteurs mal choisis : un calque du français, un connecteur qui AJOUTE alors qu’il faut OPPOSER, et un faux ami pour conclure.",
+     "aide": "Une idée négative après deux idées positives demande un connecteur d’opposition.",
+     "explication": "**In a first time** (calque : *first of all*), **Moreover** (à remplacer par *However*) et **At last** (soulagement, pas « en dernier lieu » : *finally*)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque connecteur fautif à sa correction.",
+     "paires": [
+      [
+       "In a first time",
+       "First of all"
+      ],
+      [
+       "Moreover (pour opposer)",
+       "However"
+      ],
+      [
+       "At last (pour finir)",
+       "Finally"
+      ],
+      [
+       "Actually (= actuellement)",
+       "Currently"
+      ]
+     ],
+     "aide": "*Actually* ne veut jamais dire « actuellement ».",
+     "explication": "*First of all* = d’abord, *however* oppose, *finally* clôt une liste, et *currently* ou *nowadays* = actuellement."
+    },
+    {
+     "type": "trous",
+     "enonce": "D’après le graphique, complète avec le bon connecteur.",
+     "texte": "62 students say yes. ___, 38 say no.",
+     "reponses": [
+      [
+       "however"
+      ]
+     ],
+     "banque": [
+      "However",
+      "Moreover",
+      "Finally",
+      "For example"
+     ],
+     "aide": "Les deux nombres vont en sens contraire.",
+     "explication": "**However** : il oppose les 62 « oui » aux 38 « non »."
+    },
+    {
+     "type": "nombre",
+     "reponse": 24,
+     "enonce": "Combien d’élèves de plus disent « Yes » que « No » ?",
+     "aide": "Lis les deux barres, puis soustrais.",
+     "explication": "62 − 38 = **24** élèves de plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion correspond au graphique ?",
+     "options": [
+      "To sum up, most students find phones useful, but schools need rules.",
+      "To sum up, no student finds phones useful at all.",
+      "To sum up, half of the students want to ban phones.",
+      "To sum up, phones are useful because they are expensive."
+     ],
+     "reponse": 0,
+     "aide": "62 % d’élèves disent « oui » : c’est la majorité.",
+     "explication": "62 sur 100 : **most students** trouvent les téléphones utiles ; « To sum up » conclut bien."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa8b32a2-289b-507d-98f7-01a8496951e8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une carte postale de Londres",
+   "competence": "comprendre-langue",
+   "situation": "Léa passe quelques jours à Londres et écrit une carte postale à son ami Sam. Observe les petits mots de lieu.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Postcard",
+     "blocs": [
+      "Hi Sam! I’m [[c|in]] London with my aunt. Our hotel is [[s|on]] Baker Street, and this afternoon we are going to the Science Museum."
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche la préposition qui accompagne le nom d’une ville.",
+     "aide": "Une ville est vue comme un grand espace dans lequel on se trouve.",
+     "explication": "**in** : on dit *in London*, *in Paris*, *in France*."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche la préposition qui accompagne le nom d’une rue.",
+     "aide": "Elle évoque une ligne, une surface.",
+     "explication": "**on** : *on Baker Street* (*in* aussi en anglais britannique, mais *on* est le choix courant et américain)."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque préposition à la manière de voir le lieu.",
+     "paires": [
+      [
+       "in",
+       "un volume ou une grande zone"
+      ],
+      [
+       "on",
+       "une surface ou une ligne"
+      ],
+      [
+       "at",
+       "un point ou un lieu d’activité"
+      ]
+     ],
+     "aide": "Pense à *in the kitchen*, *on the table*, *at the station*.",
+     "explication": "**in** = volume, **on** = surface, **at** = point : trois façons de se représenter un lieu."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Tomorrow I will wait for you ___ the station.",
+     "reponses": [
+      [
+       "at"
+      ]
+     ],
+     "banque": [
+      "at",
+      "in",
+      "on",
+      "into"
+     ],
+     "aide": "La gare est vue comme un point de rendez-vous.",
+     "explication": "**at the station** : un lieu d’activité ou un point précis se dit avec *at*."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa8b32a2-289b-507d-98f7-01a8496951e8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan d’Oak Street",
+   "competence": "se-reperer-espace",
+   "situation": "Sam explique à un touriste comment trouver les commerces d’Oak Street. Regarde le plan pour situer chaque bâtiment.",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "schema",
+     "titre": "Oak Street",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 88,
+       "l": 320,
+       "h": 28,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 107,
+       "texte": "Oak Street",
+       "ancre": "milieu",
+       "italique": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 25,
+       "l": 80,
+       "h": 50,
+       "texte": "Bank",
+       "id": "bank",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 25,
+       "l": 80,
+       "h": 50,
+       "texte": "Café",
+       "id": "cafe",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 25,
+       "l": 80,
+       "h": 50,
+       "texte": "Church",
+       "id": "church",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 130,
+       "l": 80,
+       "h": 50,
+       "texte": "Library",
+       "id": "library",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 130,
+       "l": 80,
+       "h": 50,
+       "texte": "Park",
+       "id": "park",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 130,
+       "l": 80,
+       "h": 50,
+       "texte": "Post office",
+       "id": "post",
+       "zone": true
+      }
+     ],
+     "source": "Plan imaginé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "library"
+     ],
+     "enonce": "Touche le bâtiment qui est *opposite the bank* (en face de la banque, de l’autre côté de la rue).",
+     "aide": "La banque est au nord de la rue : cherche le bâtiment de l’autre côté, à la même hauteur.",
+     "explication": "La **Library** est de l’autre côté d’Oak Street, juste en face de la banque."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où est le café ?",
+     "options": [
+      "Between the bank and the church",
+      "Opposite the bank and the church",
+      "Behind the bank and the church",
+      "On the bank and the church"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qu’il y a à gauche et à droite du café, du même côté de la rue.",
+     "explication": "Le café est **between the bank and the church** : une banque à sa gauche, une église à sa droite."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "The bank is ___ the café.",
+     "reponses": [
+      [
+       "next to"
+      ]
+     ],
+     "banque": [
+      "next to",
+      "opposite",
+      "between",
+      "behind"
+     ],
+     "aide": "Les deux bâtiments sont côte à côte du même côté de la rue.",
+     "explication": "**next to** = à côté de : la banque et le café sont voisins."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le parc.",
+     "texte": "The park is ___ the library and the post office, and it is ___ the café.",
+     "reponses": [
+      [
+       "between"
+      ],
+      [
+       "opposite"
+      ]
+     ],
+     "banque": [
+      "between",
+      "opposite",
+      "behind",
+      "at"
+     ],
+     "aide": "Le parc a un bâtiment de chaque côté, et un autre de l’autre côté de la rue.",
+     "explication": "Le parc est **between** la bibliothèque et la poste, et **opposite** le café, de l’autre côté de la rue."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa8b32a2-289b-507d-98f7-01a8496951e8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Décrire la photo du parc",
+   "competence": "se-reperer-espace",
+   "situation": "Pour l’oral de l’épreuve, Yanis doit décrire une photo. Son plan simplifié est ci-dessous, avec le brouillon de sa description.",
+   "documents": [
+    {
+     "id": "photo",
+     "type": "schema",
+     "titre": "The photo",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 10,
+       "l": 320,
+       "h": 200,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 22,
+       "y": 22,
+       "l": 90,
+       "h": 38,
+       "texte": "windmill",
+       "id": "windmill",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 228,
+       "y": 22,
+       "l": 90,
+       "h": 38,
+       "texte": "church",
+       "id": "church",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 115,
+       "y": 88,
+       "l": 110,
+       "h": 40,
+       "teinte": "bleu",
+       "texte": "lake",
+       "id": "lake",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 22,
+       "y": 160,
+       "l": 90,
+       "h": 38,
+       "texte": "bench",
+       "id": "bench",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 228,
+       "y": 160,
+       "l": 90,
+       "h": 38,
+       "texte": "bike",
+       "id": "bike",
+       "zone": true
+      }
+     ],
+     "source": "Plan imaginé pour l’exercice"
+    },
+    {
+     "id": "desc",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Yanis’s draft",
+     "blocs": [
+      "In the foreground, a bench is [[e|at]] the left and a bike is on the right. The lake is [[e|on]] the centre of the picture. A church stands in the top right-hand corner. The bench and the bike are [[e|in]] the bottom of the photo."
+     ],
+     "source": "Brouillon écrit pour l’exercice, avec des erreurs"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "desc",
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les trois prépositions fautives dans le brouillon de Yanis.",
+     "aide": "À gauche et à droite : *on*. Au centre : *in*. En haut ou en bas : *at*.",
+     "explication": "Il faut **on the left** (pas *at*), **in the centre** (pas *on*) et **at the bottom** (pas *in*)."
+    },
+    {
+     "type": "zone",
+     "document": "photo",
+     "reponse": [
+      "lake"
+     ],
+     "enonce": "Sur le plan, touche ce qui se trouve *in the middle* de la photo.",
+     "aide": "Cherche l’élément au centre du cadre.",
+     "explication": "Le **lake** occupe le centre de la photo."
+    },
+    {
+     "type": "trous",
+     "enonce": "Corrige deux erreurs du brouillon.",
+     "texte": "The lake is ___ the centre and the bench is ___ the left.",
+     "reponses": [
+      [
+       "in"
+      ],
+      [
+       "on"
+      ]
+     ],
+     "banque": [
+      "in",
+      "on",
+      "at",
+      "into"
+     ],
+     "aide": "Un centre est vu comme un espace ; une gauche, comme une ligne.",
+     "explication": "**in the centre**, **on the left** : les lieux de description de photo suivent des formules fixes."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase est correcte ?",
+     "options": [
+      "They arrived at the station and went home.",
+      "They arrived to the station and went to home.",
+      "They arrived in the station and went at home.",
+      "They arrived at the station and went to home."
+     ],
+     "reponse": 0,
+     "aide": "On dit *arrive at / in* (jamais *to*), et *go home* (sans *to*).",
+     "explication": "**arrived at the station** (jamais *arrive to*) et **went home** (sans *to*)."
+    }
+   ]
+  }
+ ]
+}

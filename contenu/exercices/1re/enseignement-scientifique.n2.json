@@ -1,0 +1,4088 @@
+{
+ "niveau": "1re",
+ "matiere": "enseignement-scientifique",
+ "exercices": [
+  {
+   "chapitre": "ab932ad3-ab0c-5db8-b1d3-0ba55bd95c18",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les mesures de Léo sur son monocorde",
+   "competence": "lire-tableau",
+   "situation": "En cours de sciences, Léo fait vibrer une corde tendue de 60 cm : elle émet un la à 220 Hz. Il glisse ensuite un chevalet sous la corde pour raccourcir la partie qui vibre, et il note ses mesures.",
+   "documents": [
+    {
+     "id": "mono",
+     "type": "tableau",
+     "titre": "Les mesures de Léo",
+     "colonnes": [
+      "Position du chevalet",
+      "Longueur qui vibre (cm)",
+      "Fréquence (Hz)"
+     ],
+     "lignes": [
+      [
+       "Corde entière",
+       60,
+       220
+      ],
+      [
+       "Chevalet au milieu",
+       30,
+       "?"
+      ],
+      [
+       "Chevalet aux deux tiers",
+       40,
+       330
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mono",
+     "enonce": "Touche la plus petite longueur de corde qui vibre.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Compare les trois longueurs de la colonne centrale.",
+     "explication": "La plus petite longueur est **30 cm**, quand le chevalet est placé au milieu de la corde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La longueur est divisée par 2 : quelle est la fréquence du son, en Hz ?",
+     "reponse": 440,
+     "unite": "Hz",
+     "aide": "La fréquence est inversement proportionnelle à la longueur qui vibre.",
+     "explication": "Diviser la longueur par 2 **double** la fréquence : 2 × 220 = **440 Hz**. C’est la note une octave plus haut."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rapport de fréquences entre le son à 330 Hz et le son à 220 Hz ?",
+     "reponse": 1.5,
+     "aide": "Divise la fréquence la plus haute par la plus basse.",
+     "explication": "330 ÷ 220 = **1,5**, c’est-à-dire 3/2."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel intervalle musical correspond à ce rapport de 3/2 ?",
+     "options": [
+      "Une quinte",
+      "Une octave",
+      "Une quarte",
+      "Un demi-ton"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi le tableau des intervalles consonants du cours.",
+     "explication": "Le rapport 3/2 est celui de la **quinte**, l’octave valant 2/1 et la quarte 4/3."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab932ad3-ab0c-5db8-b1d3-0ba55bd95c18",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Zélie empile des quintes",
+   "competence": "calculer",
+   "situation": "Zélie veut reconstruire la gamme de Pythagore à partir d’un do dont le rapport de fréquences est 1. Elle empile des quintes (× 3/2) et, quand le résultat dépasse 2, elle le ramène dans l’octave en divisant par 2 autant de fois qu’il le faut.",
+   "documents": [
+    {
+     "id": "quintes",
+     "type": "tableau",
+     "titre": "Le carnet de Zélie",
+     "colonnes": [
+      "Quinte empilée",
+      "Note",
+      "Rapport obtenu",
+      "Rapport ramené dans l’octave"
+     ],
+     "lignes": [
+      [
+       "1re quinte",
+       "sol",
+       "1,5",
+       "1,5"
+      ],
+      [
+       "2e quinte",
+       "ré",
+       "2,25",
+       "?"
+      ],
+      [
+       "3e quinte",
+       "la",
+       "3,375",
+       "?"
+      ],
+      [
+       "4e quinte",
+       "mi",
+       "5,0625",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs de Zélie, valeurs exactes"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "quintes",
+     "enonce": "Touche le premier rapport obtenu qui dépasse 2 : il faudra le ramener dans l’octave.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Regarde la colonne « Rapport obtenu » de haut en bas.",
+     "explication": "Le premier rapport supérieur à 2 est **2,25** (la note ré) : au-delà de 2, on a changé d’octave."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rapport du ré une fois ramené dans l’octave ?",
+     "reponse": 1.125,
+     "aide": "Divise 2,25 par 2.",
+     "explication": "2,25 ÷ 2 = **1,125**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rapport du la une fois ramené dans l’octave ?",
+     "reponse": 1.6875,
+     "aide": "3,375 est compris entre 2 et 4 : une seule division par 2 suffit.",
+     "explication": "3,375 ÷ 2 = **1,6875**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rapport du mi une fois ramené dans l’octave ?",
+     "reponse": 1.2656,
+     "tolerance": 0.001,
+     "aide": "5,0625 est compris entre 4 et 8 : il faut diviser par 2 deux fois, donc par 4.",
+     "explication": "5,0625 ÷ 4 = 1,265625, soit environ **1,266**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces quatre notes de la plus grave à la plus aiguë, d’après leurs rapports ramenés dans l’octave.",
+     "items": [
+      "ré",
+      "mi",
+      "sol",
+      "la"
+     ],
+     "aide": "Plus le rapport de fréquences est grand, plus la note est aiguë.",
+     "explication": "Les rapports valent 1,125 (ré) < 1,266 (mi) < 1,5 (sol) < 1,6875 (la) : **ré, mi, sol, la**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ab932ad3-ab0c-5db8-b1d3-0ba55bd95c18",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi le piano ne suit plus Pythagore",
+   "competence": "raisonner",
+   "situation": "Mathilde accorde un piano. Si elle accorde par quintes pures (rapport 3/2) douze fois de suite, elle devrait retomber sur sa note de départ sept octaves plus haut. Elle compare cette gamme à la gamme tempérée, où l’octave est coupée en douze demi-tons égaux.",
+   "documents": [
+    {
+     "id": "pyth",
+     "type": "tableau",
+     "titre": "Deux empilements pour la même note",
+     "colonnes": [
+      "Empilement",
+      "Calcul",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Sept octaves",
+       "2⁷",
+       "128"
+      ],
+      [
+       "Douze quintes",
+       "(3/2)¹²",
+       "129,746"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au millième"
+    },
+    {
+     "id": "temp",
+     "type": "tableau",
+     "titre": "Rapports de la gamme tempérée",
+     "colonnes": [
+      "Nombre de demi-tons",
+      "Rapport de fréquences"
+     ],
+     "lignes": [
+      [
+       5,
+       "1,335"
+      ],
+      [
+       6,
+       "1,414"
+      ],
+      [
+       7,
+       "1,498"
+      ],
+      [
+       8,
+       "1,587"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs de 2^(n/12), arrondies au millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule le rapport (3/2)¹² ÷ 2⁷ entre les deux valeurs du premier document, arrondi au millième.",
+     "reponse": 1.014,
+     "tolerance": 0.0006,
+     "aide": "Divise 129,746 par 128.",
+     "explication": "129,746 ÷ 128 ≈ **1,014** : douze quintes dépassent sept octaves d’environ 1,4 %. C’est le comma pythagoricien."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un piano accordé uniquement par quintes pures sonne-t-il faux dans certaines tonalités ?",
+     "options": [
+      "La gamme ne se referme pas : douze quintes dépassent sept octaves",
+      "Les quintes pures ne sont pas des intervalles consonants pour l’oreille humaine",
+      "Les cordes se détendent un peu plus à chaque nouvelle quinte accordée",
+      "Les fréquences de la gamme sont toutes des nombres décimaux non entiers"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’écart entre 129,746 et 128.",
+     "explication": "Aucune puissance de 3/2 n’est égale à une puissance de 2 : la gamme de Pythagore **ne se referme pas**, d’où le comma."
+    },
+    {
+     "type": "zone",
+     "document": "temp",
+     "enonce": "Touche le rapport tempéré qui s’approche le plus de la quinte pure, de rapport 3/2.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la valeur la plus proche de 1,5.",
+     "explication": "Le rapport **1,498** (7 demi-tons) est le plus proche de 1,5 : c’est la quinte tempérée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La quinte tempérée (1,498) est plus basse que la quinte pure (1,5). De quel pourcentage, arrondi au dixième ?",
+     "reponse": 0.1,
+     "tolerance": 0.05,
+     "unite": "%",
+     "aide": "Calcule (1,5 − 1,498) ÷ 1,5, puis multiplie par 100.",
+     "explication": "(1,5 − 1,498) ÷ 1,5 ≈ 0,0013, soit environ **0,1 %** : l’écart est minuscule, on ne l’entend presque pas."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion à ce qui la décrit.",
+     "paires": [
+      [
+       "Gamme de Pythagore",
+       "Quintes pures, mais une gamme qui ne se referme pas"
+      ],
+      [
+       "Comma pythagoricien",
+       "Écart d’environ 1,4 % entre douze quintes et sept octaves"
+      ],
+      [
+       "Gamme tempérée",
+       "Douze demi-tons égaux, aucun intervalle parfaitement juste"
+      ]
+     ],
+     "aide": "Chaque gamme a un avantage et un défaut : retrouve-les dans les deux tableaux.",
+     "explication": "La gamme de Pythagore est pure mais ne se ferme pas (comma ≈ 1,4 %) ; la gamme tempérée sacrifie la pureté pour jouer **dans toutes les tonalités**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b2242cc-36d2-5b1d-badb-346e62bdbbe1",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un signal échantillonné toutes les 0,5 ms",
+   "competence": "lire-graphique",
+   "situation": "Sacha numérise un son très simple. Un appareil mesure la tension du signal à intervalles réguliers : chaque point du graphique est un échantillon, déjà arrondi à une valeur entière.",
+   "documents": [
+    {
+     "id": "sig",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Les échantillons de Sacha",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "Tension",
+       "valeurs": [
+        0,
+        3,
+        5,
+        3,
+        0,
+        -3,
+        -5,
+        -3,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Tension",
+      "unite": "en V",
+      "min": -6,
+      "max": 6,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Signal écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sig",
+     "enonce": "Touche l’instant où la tension est la plus élevée.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "La tension maximale, **5 V**, est mesurée à l’instant **1 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Deux échantillons successifs sont séparés de 0,5 ms. Quelle est la fréquence d’échantillonnage, en Hz ?",
+     "reponse": 2000,
+     "unite": "Hz",
+     "aide": "La fréquence est l’inverse de la durée : 0,5 ms = 0,0005 s.",
+     "explication": "fe = 1 ÷ 0,0005 s = **2 000 Hz** : 2 000 mesures par seconde."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le signal revient à la même valeur, dans le même sens, au bout de 4 ms. Quelle est sa fréquence, en Hz ?",
+     "reponse": 250,
+     "unite": "Hz",
+     "aide": "La période vaut 4 ms = 0,004 s ; la fréquence est son inverse.",
+     "explication": "f = 1 ÷ 0,004 s = **250 Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cet échantillonnage respecte-t-il le critère de Shannon-Nyquist pour ce signal ?",
+     "options": [
+      "Oui : 2 000 Hz dépasse largement 2 × 250 Hz = 500 Hz",
+      "Non : il faudrait au moins 44 100 Hz pour tout son",
+      "Non : fe devrait être exactement égale à 250 Hz",
+      "Oui, mais seulement parce que la tension devient négative"
+     ],
+     "reponse": 0,
+     "aide": "Le critère impose fe ≥ 2 × fmax.",
+     "explication": "Il faut fe ≥ 2 × 250 = 500 Hz ; comme fe = 2 000 Hz, le critère est **largement respecté**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b2242cc-36d2-5b1d-badb-346e62bdbbe1",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois façons de numériser un son",
+   "competence": "calculer",
+   "situation": "Inès compare trois formats de numérisation du son : la téléphonie, le CD audio et l’enregistrement en studio. Elle veut comprendre ce que chacun capte, et ce qu’il coûte en données.",
+   "documents": [
+    {
+     "id": "formats",
+     "type": "tableau",
+     "titre": "Trois formats numériques",
+     "colonnes": [
+      "Format",
+      "Échantillonnage (Hz)",
+      "Résolution (bits)",
+      "Voies"
+     ],
+     "lignes": [
+      [
+       "Téléphone",
+       "8 000",
+       8,
+       1
+      ],
+      [
+       "CD audio",
+       "44 100",
+       16,
+       2
+      ],
+      [
+       "Studio",
+       "96 000",
+       24,
+       2
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Caractéristiques usuelles, arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formats",
+     "enonce": "Touche la résolution qui permet de distinguer le plus de niveaux d’amplitude.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Avec n bits, on dispose de 2ⁿ niveaux : plus n est grand, plus il y a de niveaux.",
+     "explication": "Avec **24 bits**, le format studio dispose de 2²⁴ niveaux : c’est la résolution la plus fine du tableau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle fréquence maximale un son peut-il avoir pour être numérisé correctement en téléphonie, en Hz ?",
+     "reponse": 4000,
+     "unite": "Hz",
+     "aide": "Shannon-Nyquist : fe ≥ 2 × fmax, donc fmax ≤ fe ÷ 2.",
+     "explication": "fmax = 8 000 ÷ 2 = **4 000 Hz** : au-delà, le signal serait mal restitué."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le débit du CD audio, en kbit/s (arrondi à l’unité) ?",
+     "reponse": 1411,
+     "tolerance": 1,
+     "unite": "kbit/s",
+     "aide": "Débit = fe × nombre de bits × nombre de voies, en bits par seconde.",
+     "explication": "44 100 × 16 × 2 = 1 411 200 bit/s, soit environ **1 411 kbit/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille d’un morceau de 3 minutes au format CD, en Mo (arrondie à l’unité ; 1 Mo = 1 000 000 octets) ?",
+     "reponse": 32,
+     "tolerance": 0.5,
+     "unite": "Mo",
+     "aide": "Multiplie le débit par 180 s, puis divise par 8 pour passer des bits aux octets.",
+     "explication": "1 411 200 × 180 ÷ 8 = 31 752 000 octets, soit environ **32 Mo**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b2242cc-36d2-5b1d-badb-346e62bdbbe1",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Huit gigaoctets pour la playlist de Nour",
+   "competence": "raisonner",
+   "situation": "Nour veut remplir son téléphone de musique avant un long voyage. Elle hésite entre garder les fichiers du CD et les compresser en MP3.",
+   "documents": [
+    {
+     "id": "debits",
+     "type": "tableau",
+     "titre": "Les formats comparés",
+     "colonnes": [
+      "Format",
+      "Compression",
+      "Débit (kbit/s)"
+     ],
+     "lignes": [
+      [
+       "WAV (comme le CD)",
+       "aucune",
+       1411
+      ],
+      [
+       "FLAC",
+       "sans perte",
+       "environ 700"
+      ],
+      [
+       "MP3 haute qualité",
+       "avec perte",
+       320
+      ],
+      [
+       "MP3 standard",
+       "avec perte",
+       128
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Ordres de grandeur arrondis ; le débit d’un FLAC varie selon le morceau"
+    },
+    {
+     "id": "tel",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le téléphone de Nour",
+     "blocs": [
+      "Mémoire libre : 8 Go, soit 8 000 Mo.",
+      "Tous ses morceaux durent 3 minutes (180 s).",
+      "On prend 1 Mo = 1 000 000 octets, et 1 octet = 8 bits."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debits",
+     "enonce": "Touche le format qui produit les fichiers les plus légers.",
+     "reponse": [
+      "r3c2"
+     ],
+     "aide": "Un débit plus faible donne un fichier plus petit.",
+     "explication": "Le **MP3 standard** (128 kbit/s) a le débit le plus faible : ses fichiers sont les plus légers."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la taille d’un morceau de 3 minutes en MP3 standard, en Mo (arrondie au dixième) ?",
+     "reponse": 2.9,
+     "tolerance": 0.06,
+     "unite": "Mo",
+     "aide": "128 000 bit/s × 180 s ÷ 8 donne des octets.",
+     "explication": "128 000 × 180 ÷ 8 = 2 880 000 octets, soit environ **2,9 Mo**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par quel facteur le MP3 standard réduit-il le débit du format WAV (arrondi à l’unité) ?",
+     "reponse": 11,
+     "aide": "Divise 1 411 par 128.",
+     "explication": "1 411 ÷ 128 ≈ **11** : c’est l’ordre de grandeur « divisé par dix » du cours."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de morceaux entiers de 2,88 Mo tiennent dans 8 000 Mo ?",
+     "reponse": 2777,
+     "aide": "Divise 8 000 par 2,88 et garde la partie entière.",
+     "explication": "8 000 ÷ 2,88 ≈ 2 777,8 : **2 777** morceaux entiers au maximum."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces éléments selon le type de compression auquel ils se rapportent.",
+     "categories": [
+      "Compression sans perte",
+      "Compression avec perte"
+     ],
+     "items": [
+      [
+       "FLAC",
+       0
+      ],
+      [
+       "MP3",
+       1
+      ],
+      [
+       "ZIP",
+       0
+      ],
+      [
+       "AAC",
+       1
+      ],
+      [
+       "Supprime les sons masqués",
+       1
+      ],
+      [
+       "Restitue le fichier d’origine à l’identique",
+       0
+      ]
+     ],
+     "aide": "Une compression avec perte supprime ce que l’oreille perçoit mal ; l’information n’est alors plus récupérable.",
+     "explication": "FLAC et ZIP sont **sans perte** ; MP3 et AAC sont **avec perte** : ils suppriment sons masqués et fréquences extrêmes."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a7ccdc0-57a3-5a37-93fa-29dd7d0d93f7",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le trajet d’un son dans l’oreille",
+   "competence": "observer-schema",
+   "situation": "Adel suit en classe le trajet d’un son : de l’air extérieur jusqu’au cerveau, il traverse plusieurs organes. Sa fiche contient un trou : un organe manque.",
+   "documents": [
+    {
+     "id": "trajet",
+     "type": "chaine",
+     "titre": "Du pavillon au cortex",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "pav",
+       "texte": "Pavillon",
+       "emoji": "👂"
+      },
+      {
+       "id": "cond",
+       "texte": "?"
+      },
+      {
+       "id": "tymp",
+       "texte": "Tympan"
+      },
+      {
+       "id": "oss",
+       "texte": "Osselets"
+      },
+      {
+       "id": "coch",
+       "texte": "Cochlée"
+      },
+      {
+       "id": "nerf",
+       "texte": "Nerf auditif"
+      },
+      {
+       "id": "cortex",
+       "texte": "Aires auditives du cortex"
+      }
+     ],
+     "liens": [
+      {
+       "de": "pav",
+       "a": "cond"
+      },
+      {
+       "de": "cond",
+       "a": "tymp"
+      },
+      {
+       "de": "tymp",
+       "a": "oss"
+      },
+      {
+       "de": "oss",
+       "a": "coch"
+      },
+      {
+       "de": "coch",
+       "a": "nerf"
+      },
+      {
+       "de": "nerf",
+       "a": "cortex"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel organe manque à la place du « ? » entre le pavillon et le tympan ?",
+     "options": [
+      "Le conduit auditif",
+      "La trompe d’Eustache",
+      "Le nerf optique",
+      "La membrane basilaire"
+     ],
+     "reponse": 0,
+     "aide": "Le pavillon capte le son et le canalise vers le tympan.",
+     "explication": "Le son passe par le **conduit auditif**, qui le canalise jusqu’au tympan."
+    },
+    {
+     "type": "zone",
+     "document": "trajet",
+     "enonce": "Touche l’élément qui vibre sous l’effet des variations de pression de l’air.",
+     "reponse": [
+      "tymp"
+     ],
+     "aide": "C’est la membrane qui ferme le conduit auditif.",
+     "explication": "Le **tympan** vibre quand la pression de l’air varie ; il transmet cette vibration aux osselets."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à l’étage de l’oreille où il se trouve.",
+     "paires": [
+      [
+       "Pavillon",
+       "Oreille externe"
+      ],
+      [
+       "Osselets",
+       "Oreille moyenne"
+      ],
+      [
+       "Cochlée",
+       "Oreille interne"
+      ]
+     ],
+     "aide": "Les étages vont de l’extérieur vers l’intérieur : externe, moyenne, interne.",
+     "explication": "Le pavillon appartient à l’oreille **externe**, les osselets à l’oreille **moyenne**, la cochlée à l’oreille **interne**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a7ccdc0-57a3-5a37-93fa-29dd7d0d93f7",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Où la cochlée entend-elle les aigus ?",
+   "competence": "observer-schema",
+   "situation": "Lina sort d’un concert avec des sifflements dans les oreilles. Son médecin lui montre une cochlée « déroulée » : sur ce schéma, la membrane basilaire s’étire de l’entrée de la cochlée jusqu’à son fond.",
+   "documents": [
+    {
+     "id": "coch",
+     "type": "schema",
+     "titre": "La cochlée « déroulée »",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 185,
+       "y": 22,
+       "texte": "Cochlée déroulée",
+       "taille": "normal",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         55,
+         50
+        ],
+        [
+         315,
+         85
+        ],
+        [
+         315,
+         125
+        ],
+        [
+         55,
+         160
+        ]
+       ],
+       "teinte": "ambre",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         60,
+         105
+        ],
+        [
+         310,
+         95
+        ],
+        [
+         310,
+         115
+        ],
+        [
+         60,
+         108
+        ]
+       ],
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 32,
+       "cy": 105,
+       "r": 12,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "fenetre",
+       "zone": true,
+       "texte": "D"
+      },
+      {
+       "forme": "cercle",
+       "cx": 100,
+       "cy": 105,
+       "r": 13,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "zA",
+       "zone": true,
+       "texte": "A"
+      },
+      {
+       "forme": "cercle",
+       "cx": 185,
+       "cy": 105,
+       "r": 13,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "zB",
+       "zone": true,
+       "texte": "B"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 105,
+       "r": 13,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "zC",
+       "zone": true,
+       "texte": "C"
+      },
+      {
+       "forme": "texte",
+       "x": 32,
+       "y": 138,
+       "texte": "Étrier",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        32,
+        126
+       ],
+       "a": [
+        32,
+        119
+       ],
+       "fleche": "fin",
+       "teinte": "encre"
+      },
+      {
+       "forme": "etiquette",
+       "x": 185,
+       "y": 186,
+       "texte": "Membrane basilaire",
+       "vers": [
+        185,
+        111
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "coch",
+     "enonce": "Touche la région de la membrane basilaire qui entre en résonance pour les sons aigus.",
+     "reponse": [
+      "zA"
+     ],
+     "aide": "Les aigus sont détectés près de l’entrée de la cochlée.",
+     "explication": "Les sons **aigus** font résonner la membrane **à la base**, près de l’entrée : c’est la région A."
+    },
+    {
+     "type": "zone",
+     "document": "coch",
+     "enonce": "Touche l’endroit par lequel l’étrier transmet la vibration à la cochlée.",
+     "reponse": [
+      "fenetre"
+     ],
+     "aide": "Regarde où le schéma place l’étrier.",
+     "explication": "L’étrier pousse sur la **fenêtre ovale**, à l’entrée de la cochlée : c’est là que la vibration pénètre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la membrane basilaire résonne-t-elle à un endroit différent selon la fréquence ?",
+     "options": [
+      "Elle est rigide et étroite à la base, souple et large au sommet",
+      "Elle est plus épaisse au sommet qu’à la base, ce qui amplifie les graves",
+      "Elle contient autant de cellules ciliées à la base qu’au sommet",
+      "Elle est tendue de la même façon sur toute sa longueur"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la forme de la membrane sur le schéma : étroite d’un côté, large de l’autre.",
+     "explication": "Sa **rigidité** et sa **largeur** changent le long de la cochlée : chaque fréquence trouve son endroit de résonance. C’est la tonotopie."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément de l’oreille à son rôle.",
+     "paires": [
+      [
+       "Tympan",
+       "Vibre sous l’effet des variations de pression de l’air"
+      ],
+      [
+       "Osselets",
+       "Amplifient et transmettent la vibration"
+      ],
+      [
+       "Cellules ciliées",
+       "Transforment la vibration en message nerveux"
+      ],
+      [
+       "Nerf auditif",
+       "Conduit le message nerveux vers le cerveau"
+      ]
+     ],
+     "aide": "Suis le trajet du son : chaque élément passe le relais au suivant.",
+     "explication": "Le tympan vibre, les osselets amplifient, les cellules ciliées **codent** le message nerveux, et le nerf auditif le conduit au cortex."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a7ccdc0-57a3-5a37-93fa-29dd7d0d93f7",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le concert de Maël, 2 heures à 100 dB",
+   "competence": "analyser-document",
+   "situation": "Maël a passé 2 heures au premier rang d’un concert, à environ 100 dB. Le lendemain, il entend un sifflement et passe un audiogramme : il mesure le plus petit niveau sonore que Maël perçoit à chaque fréquence. Plus ce seuil est élevé, plus l’audition est dégradée.",
+   "documents": [
+    {
+     "id": "duree",
+     "type": "tableau",
+     "titre": "Durée d’exposition tolérable",
+     "colonnes": [
+      "Niveau sonore (dB)",
+      "Durée tolérable"
+     ],
+     "lignes": [
+      [
+       85,
+       "8 h"
+      ],
+      [
+       88,
+       "4 h"
+      ],
+      [
+       91,
+       "2 h"
+      ],
+      [
+       94,
+       "?"
+      ],
+      [
+       97,
+       "30 min"
+      ],
+      [
+       100,
+       "15 min"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Repères de santé auditive, arrondis"
+    },
+    {
+     "id": "audio",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Audiogramme de Maël",
+     "categories": [
+      "250",
+      "500",
+      "1 000",
+      "2 000",
+      "4 000",
+      "8 000"
+     ],
+     "series": [
+      {
+       "nom": "Seuil d’audition",
+       "valeurs": [
+        10,
+        10,
+        15,
+        25,
+        55,
+        40
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Seuil d’audition",
+      "unite": "en dB",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Fréquence (Hz)"
+     },
+     "valeurs": false,
+     "source": "Mesures écrites pour l’exercice ; chaque graduation est une octave"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée tolérable à 94 dB, en minutes ?",
+     "reponse": 60,
+     "unite": "min",
+     "aide": "Chaque tranche de +3 dB divise la durée par deux : regarde de ligne en ligne.",
+     "explication": "91 dB → 2 h, donc 94 dB → 1 h, soit **60 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle serait la durée tolérable à 103 dB, en minutes ?",
+     "reponse": 7.5,
+     "unite": "min",
+     "aide": "Pars de 15 min à 100 dB, puis ajoute encore 3 dB.",
+     "explication": "+3 dB divise la durée par deux : 15 min ÷ 2 = **7,5 minutes**."
+    },
+    {
+     "type": "zone",
+     "document": "audio",
+     "enonce": "Touche la fréquence pour laquelle l’audition de Maël est la plus dégradée.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "La plus dégradée est celle dont le seuil d’audition est le plus élevé.",
+     "explication": "Le seuil culmine à 55 dB pour **4 000 Hz** : c’est la fréquence la plus touchée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Maël est resté 2 heures à 100 dB. Combien de fois la durée tolérable a-t-elle été dépassée ?",
+     "reponse": 8,
+     "aide": "Convertis 2 heures en minutes, puis divise par la durée tolérable à 100 dB.",
+     "explication": "2 h = 120 min ; 120 ÷ 15 = **8 fois** la durée tolérable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Maël espère retrouver son audition en quelques semaines. Pourquoi est-ce peu probable ?",
+     "options": [
+      "Les cellules ciliées détruites ne se régénèrent pas",
+      "Le tympan ne cicatrise jamais après un bruit fort",
+      "Les osselets s’usent à chaque concert écouté",
+      "Le nerf auditif se coupe dès 85 dB"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que détruit un traumatisme sonore dans l’oreille interne.",
+     "explication": "Un traumatisme sonore détruit des **cellules ciliées**, et elles ne se régénèrent pas : la perte est définitive."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f05bc3b-6398-5c01-82ef-436b6e82bc94",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les soldes de la boutique des Cimes",
+   "competence": "calculer",
+   "situation": "Camille profite des soldes dans une boutique de sport. L’affiche indique le prix avant et après réduction de trois articles.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "SOLDES",
+     "sousTitre": "Boutique Les Cimes — toute la semaine",
+     "emoji": "🏷️",
+     "lignes": [
+      {
+       "texte": "Baskets",
+       "valeur": "80 € → 64 €",
+       "id": "baskets"
+      },
+      {
+       "texte": "Sac à dos",
+       "valeur": "45 € → 36 €",
+       "id": "sac"
+      },
+      {
+       "texte": "Casquette",
+       "valeur": "20 € → 17 €",
+       "id": "casquette"
+      }
+     ],
+     "pied": "Prix avant et après réduction",
+     "teinte": "corail",
+     "source": "Affiche imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "enonce": "Touche l’article dont le prix baisse du plus grand nombre d’euros.",
+     "reponse": [
+      "baskets"
+     ],
+     "aide": "Calcule l’économie réalisée en euros sur chaque article.",
+     "explication": "Les baskets baissent de 16 €, le sac de 9 € et la casquette de 3 € : la plus forte baisse en euros concerne les **baskets**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage le prix des baskets baisse-t-il ?",
+     "reponse": 20,
+     "unite": "%",
+     "aide": "Divise la baisse (en €) par le prix de départ.",
+     "explication": "16 ÷ 80 = 0,20 : une baisse de **20 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient multiplicateur qui fait passer la casquette de 20 € à 17 € ?",
+     "reponse": 0.85,
+     "aide": "Divise le nouveau prix par l’ancien.",
+     "explication": "17 ÷ 20 = **0,85** : une baisse de 15 %."
+    },
+    {
+     "type": "choix",
+     "enonce": "Deux articles subissent exactement la même baisse en pourcentage. Lesquels ?",
+     "options": [
+      "Les baskets et le sac à dos",
+      "Les baskets et la casquette",
+      "Le sac à dos et la casquette",
+      "Aucun : les trois baisses sont différentes"
+     ],
+     "reponse": 0,
+     "aide": "Calcule le coefficient multiplicateur de chaque article : 36 ÷ 45 par exemple.",
+     "explication": "Les baskets (64 ÷ 80 = 0,8) et le sac (36 ÷ 45 = 0,8) baissent de **20 %** ; la casquette baisse de 15 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f05bc3b-6398-5c01-82ef-436b6e82bc94",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chômage à Valmont : points ou pourcentages ?",
+   "competence": "lire-graphique",
+   "situation": "Dans la ville imaginaire de Valmont, le journal local écrit « le chômage augmente de 2 % en 2020 ». Une lectrice proteste : la phrase est ambiguë. Le graphique donne les taux de chômage de trois années.",
+   "documents": [
+    {
+     "id": "chomage",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Taux de chômage à Valmont",
+     "categories": [
+      "2019",
+      "2020",
+      "2021"
+     ],
+     "series": [
+      {
+       "nom": "Taux de chômage",
+       "valeurs": [
+        8,
+        10,
+        9
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Taux de chômage",
+      "unite": "en %",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": true,
+     "source": "Chiffres imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chomage",
+     "enonce": "Touche l’année où le taux de chômage est le plus élevé.",
+     "reponse": [
+      "k1"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "Le taux est maximal en **2020**, à 10 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points de pourcentage le taux augmente-t-il entre 2019 et 2020 ?",
+     "reponse": 2,
+     "unite": "points",
+     "aide": "Une variation en points est une simple différence entre les deux taux.",
+     "explication": "10 − 8 = **2 points de pourcentage**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux d’évolution du chômage entre 2019 et 2020, en % ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Taux d’évolution = (valeur finale − valeur initiale) ÷ valeur initiale.",
+     "explication": "(10 − 8) ÷ 8 = 0,25 : une hausse relative de **25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Entre 2020 et 2021, le taux passe de 10 % à 9 %. Quelle phrase est exacte ?",
+     "options": [
+      "Il baisse de 1 point de pourcentage, soit de 10 % en valeur relative",
+      "Il baisse de 1 %, ce qui revient à 1 point de pourcentage",
+      "Il baisse de 10 points de pourcentage, soit de 1 % en valeur relative",
+      "Il baisse de 11 %, car 9 est inférieur de 11 à 20"
+     ],
+     "reponse": 0,
+     "aide": "Distingue la différence absolue (en points) et le taux d’évolution (relatif).",
+     "explication": "La différence est de 1 point ; en relatif, 1 ÷ 10 = **10 %**. Les deux formulations sont justes et disent des choses différentes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En prenant 2019 comme année de référence (indice 100), quel est l’indice du taux de 2021 ?",
+     "reponse": 112.5,
+     "aide": "Indice = 100 × valeur ÷ valeur de référence.",
+     "explication": "100 × 9 ÷ 8 = **112,5** : le taux est supérieur de 12,5 % à celui de 2019."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f05bc3b-6398-5c01-82ef-436b6e82bc94",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Hausse puis baisse de 20 % : le même prix ?",
+   "competence": "argumenter",
+   "situation": "Un abonnement de streaming augmente de 20 % en 2023, puis baisse de 20 % en 2024. Hugo affirme que le prix est revenu à son niveau de départ. Inès n’en est pas convaincue : à vous de trancher.",
+   "documents": [
+    {
+     "id": "prix",
+     "type": "tableau",
+     "titre": "Le prix mensuel de l’abonnement",
+     "colonnes": [
+      "Année",
+      "Prix (€)",
+      "Évolution"
+     ],
+     "lignes": [
+      [
+       "2022",
+       10,
+       "—"
+      ],
+      [
+       "2023",
+       12,
+       "+ 20 %"
+      ],
+      [
+       "2024",
+       "?",
+       "− 20 %"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tarifs imaginés pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Hugo",
+       "texte": "+ 20 % puis − 20 %, ça se compense : on est revenus à 10 € !"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Je n’en suis pas sûre… on calcule ?"
+      }
+     ],
+     "source": "Dialogue écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le prix de l’abonnement en 2024, en euros ?",
+     "reponse": 9.6,
+     "unite": "€",
+     "aide": "Une baisse de 20 % correspond au coefficient 0,80, appliqué au prix de 2023.",
+     "explication": "12 × 0,80 = **9,60 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient multiplicateur global de 2022 à 2024 ?",
+     "reponse": 0.96,
+     "aide": "Les coefficients successifs se multiplient : 1,20 × 0,80.",
+     "explication": "1,20 × 0,80 = **0,96**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De quel pourcentage le prix a-t-il baissé entre 2022 et 2024 ?",
+     "reponse": 4,
+     "unite": "%",
+     "aide": "Un coefficient de 0,96 correspond à 1 − 0,04.",
+     "explication": "1 − 0,96 = 0,04 : une baisse de **4 %** — pas un retour à 10 €."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où Hugo se trompe-t-il ?",
+     "options": [
+      "Les deux 20 % ne portent pas sur la même valeur de départ",
+      "Une hausse de 20 % ne peut jamais être annulée par une baisse",
+      "Il aurait dû additionner 20 % et 20 % pour obtenir 40 % au total",
+      "Le prix de 2022 était déjà trop élevé pour pouvoir encore baisser"
+     ],
+     "reponse": 0,
+     "aide": "Sur quel prix chaque pourcentage est-il calculé ?",
+     "explication": "Les évolutions successives se **multiplient** et ne s’additionnent pas : la baisse porte sur un prix plus grand que la hausse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après la hausse de 20 %, de quel pourcentage faut-il baisser le prix pour retrouver exactement 10 € (arrondi au dixième) ?",
+     "reponse": 16.7,
+     "tolerance": 0.06,
+     "unite": "%",
+     "aide": "Il faut multiplier par l’inverse de 1,20.",
+     "explication": "1 ÷ 1,20 ≈ 0,833, soit une baisse d’environ **16,7 %**, et non de 20 %."
+    }
+   ]
+  },
+  {
+   "chapitre": "962c9d8e-f34f-5461-92f1-fe18cf6ce2a0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Soixante lancers de dé pour Zoé",
+   "competence": "lire-graphique",
+   "situation": "Zoé lance 60 fois un dé équilibré à six faces et reporte ses résultats dans un diagramme. Elle veut savoir si le dé est truqué.",
+   "documents": [
+    {
+     "id": "des",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Résultats de 60 lancers",
+     "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "series": [
+      {
+       "nom": "Effectif",
+       "valeurs": [
+        8,
+        11,
+        9,
+        12,
+        10,
+        10
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de fois",
+      "unite": "en lancers",
+      "min": 0,
+      "max": 14,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Face obtenue"
+     },
+     "valeurs": true,
+     "source": "Lancers imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "des",
+     "enonce": "Touche la face qui est sortie le plus souvent.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La face **4** est sortie 12 fois : c’est la plus fréquente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de fois un nombre pair (2, 4 ou 6) est-il sorti ?",
+     "reponse": 33,
+     "aide": "Additionne les effectifs des faces 2, 4 et 6.",
+     "explication": "11 + 12 + 10 = **33** lancers."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence observée des nombres pairs ?",
+     "reponse": 0.55,
+     "aide": "Fréquence = nombre de réalisations ÷ nombre d’essais.",
+     "explication": "33 ÷ 60 = **0,55**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Avec un dé équilibré, la probabilité d’obtenir un nombre pair est 0,5. Que penser de la fréquence 0,55 ?",
+     "options": [
+      "Rien d’anormal : sur 60 lancers, la fréquence fluctue autour de la probabilité",
+      "Le dé est truqué, car la fréquence devrait être exactement 0,5",
+      "La probabilité d’obtenir un nombre pair vaut désormais 0,55",
+      "Il faut relancer jusqu’à ce que la fréquence vaille exactement 0,5"
+     ],
+     "reponse": 0,
+     "aide": "Une fréquence observée n’est pas une probabilité : elle varie d’un échantillon à l’autre.",
+     "explication": "La probabilité est un **modèle** (0,5) ; la fréquence varie d’un échantillon à l’autre. Un petit écart est tout à fait normal."
+    }
+   ]
+  },
+  {
+   "chapitre": "962c9d8e-f34f-5461-92f1-fe18cf6ce2a0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pile ou face, de plus en plus de lancers",
+   "competence": "experimenter",
+   "situation": "Au tableur, Karim simule des lancers d’une pièce équilibrée. Après chaque tranche de 100 lancers, il note la fréquence de « pile » depuis le début de l’expérience.",
+   "documents": [
+    {
+     "id": "simu",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Fréquence de « pile » selon le nombre de lancers",
+     "categories": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600"
+     ],
+     "series": [
+      {
+       "nom": "Fréquence de « pile »",
+       "valeurs": [
+        0.57,
+        0.53,
+        0.52,
+        0.515,
+        0.508,
+        0.505
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Fréquence",
+      "min": 0.5,
+      "max": 0.58,
+      "pas": 0.02
+     },
+     "axeX": {
+      "titre": "Nombre de lancers"
+     },
+     "valeurs": true,
+     "source": "Simulation écrite pour l’exercice, valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "simu",
+     "enonce": "Touche le nombre de lancers pour lequel la fréquence est la plus éloignée de 0,5.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche le point le plus haut de la courbe.",
+     "explication": "Après **100 lancers**, la fréquence vaut 0,57 : c’est l’écart le plus grand avec 0,5."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de « pile » Karim a-t-il obtenus au bout de 300 lancers ?",
+     "reponse": 156,
+     "aide": "Multiplie la fréquence lue par le nombre de lancers.",
+     "explication": "0,52 × 300 = **156** « pile »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour 400 lancers et p = 0,5, quelle est la borne supérieure de l’intervalle de fluctuation [p − 1/√n ; p + 1/√n] ?",
+     "reponse": 0.55,
+     "aide": "Calcule d’abord 1/√400 : √400 = 20.",
+     "explication": "1/√400 = 0,05 ; la borne supérieure vaut 0,5 + 0,05 = **0,55**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour 100 lancers, l’intervalle de fluctuation est [0,4 ; 0,6]. Que dire de la fréquence 0,57 obtenue ?",
+     "options": [
+      "Elle est dans l’intervalle : l’écart est normal pour une pièce équilibrée",
+      "Elle est hors de l’intervalle, donc on peut affirmer que la pièce est truquée",
+      "Elle prouve que la probabilité d’obtenir pile vaut en réalité 0,57",
+      "Elle devrait être égale à 0,5 si la pièce est vraiment équilibrée"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,57 aux bornes 0,4 et 0,6.",
+     "explication": "0,4 < 0,57 < 0,6 : la fréquence **est dans l’intervalle**. Rien ne permet de soupçonner la pièce."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la courbe quand le nombre de lancers augmente ?",
+     "options": [
+      "La fréquence se rapproche de 0,5 et fluctue de moins en moins",
+      "La fréquence finit par valoir exactement 0,5 à chaque tranche",
+      "La fréquence s’éloigne de 0,5 de plus en plus",
+      "La fréquence ne dépend plus du nombre de lancers"
+     ],
+     "reponse": 0,
+     "aide": "Observe l’écart entre la courbe et 0,5 de gauche à droite.",
+     "explication": "C’est la **loi des grands nombres** : plus l’échantillon grandit, plus la fréquence se stabilise près de la probabilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "962c9d8e-f34f-5461-92f1-fe18cf6ce2a0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un sondage sur le menu du jeudi",
+   "competence": "argumenter",
+   "situation": "Le directeur d’un lycée affirme que la moitié des élèves souhaitent un menu végétarien le jeudi. Un délégué vérifie avec un sondage. À vous de dire si l’affirmation tient.",
+   "documents": [
+    {
+     "id": "article",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le sondage du délégué",
+     "blocs": [
+      "Le directeur d’un lycée de 1 500 élèves affirme que « la moitié des élèves souhaitent un menu végétarien chaque jeudi ».",
+      "Un délégué interroge 400 élèves tirés au sort : 188 répondent qu’ils souhaitent ce menu."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "racine",
+     "type": "tableau",
+     "titre": "Taille de l’échantillon et fluctuation",
+     "colonnes": [
+      "Taille n de l’échantillon",
+      "1/√n"
+     ],
+     "lignes": [
+      [
+       100,
+       "0,1"
+      ],
+      [
+       900,
+       "0,033"
+      ],
+      [
+       2500,
+       "0,02"
+      ],
+      [
+       10000,
+       "0,01"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies au millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la fréquence observée d’élèves favorables dans l’échantillon ?",
+     "reponse": 0.47,
+     "aide": "Divise le nombre de réponses favorables par la taille de l’échantillon.",
+     "explication": "188 ÷ 400 = **0,47**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si p = 0,5 et n = 400, quelle est la borne inférieure de l’intervalle de fluctuation à 95 % ?",
+     "reponse": 0.45,
+     "aide": "Calcule 1/√400, puis soustrais-le à 0,5.",
+     "explication": "1/√400 = 0,05 ; la borne inférieure vaut 0,5 − 0,05 = **0,45**. L’intervalle est [0,45 ; 0,55]."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que conclure du sondage ?",
+     "options": [
+      "La fréquence 0,47 est dans l’intervalle [0,45 ; 0,55] : le sondage est compatible avec l’affirmation",
+      "La fréquence 0,47 est inférieure à 0,5 : le directeur a nécessairement tort",
+      "La fréquence 0,47 est dans l’intervalle : le directeur a donc démontré que la moitié des élèves est favorable",
+      "Le sondage est inutilisable, car 400 élèves représentent moins que les 1 500 du lycée"
+     ],
+     "reponse": 0,
+     "aide": "Compare 0,47 aux bornes de l’intervalle de fluctuation.",
+     "explication": "La fréquence tombe dans l’intervalle : on **ne peut pas rejeter** l’affirmation. Cela ne la prouve pas pour autant."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle taille d’échantillon donne 1/√n = 0,025 ?",
+     "reponse": 1600,
+     "aide": "Si 1/√n = 0,025, alors √n = 1 ÷ 0,025 = 40.",
+     "explication": "√n = 40, donc n = 40² = **1 600**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Par combien faut-il multiplier n pour diviser par 3 la largeur de l’intervalle de fluctuation ?",
+     "options": [
+      "Par 9",
+      "Par 3",
+      "Par 6",
+      "Par 27"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Regarde le tableau : de n = 100 à n = 900, 1/√n passe de 0,1 à 0,033.",
+     "explication": "La fluctuation évolue en 1/√n : diviser par 3 impose de multiplier n par 3² = **9**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4274295c-8f51-523d-848f-79d9514e4ff9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’abonnement aux vélos en libre-service",
+   "competence": "lire-tableau",
+   "situation": "Lucie s’abonne aux vélos en libre-service de sa ville : des frais d’inscription, puis un prix fixe chaque mois. Elle note ce qu’elle a payé au total après chaque mois.",
+   "documents": [
+    {
+     "id": "velo",
+     "type": "tableau",
+     "titre": "Total payé par Lucie",
+     "colonnes": [
+      "Mois n",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "Total payé u(n) (€)",
+       25,
+       33,
+       41,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Tarifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "velo",
+     "enonce": "Touche le premier terme de la suite, u(0).",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "C’est le total payé au mois 0, avant le premier mois d’abonnement.",
+     "explication": "u(0) = **25 €** : ce sont les frais d’inscription."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison r de cette suite arithmétique ?",
+     "reponse": 8,
+     "unite": "€",
+     "aide": "Soustrais deux termes consécutifs.",
+     "explication": "33 − 25 = 41 − 33 = **8** : Lucie paie 8 € de plus chaque mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le total payé au mois 3, c’est-à-dire la valeur du « ? » ?",
+     "reponse": 49,
+     "unite": "€",
+     "aide": "Ajoute la raison au terme précédent.",
+     "explication": "u(3) = 41 + 8 = **49 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien Lucie aura-t-elle payé au total au bout de 12 mois ?",
+     "reponse": 121,
+     "unite": "€",
+     "aide": "Utilise u(n) = u(0) + n × r.",
+     "explication": "u(12) = 25 + 12 × 8 = **121 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4274295c-8f51-523d-848f-79d9514e4ff9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une pile de bûches de rang en rang",
+   "competence": "modeliser",
+   "situation": "Au fond du jardin, Gaspard empile des bûches en triangle : une bûche sur le premier rang en haut, deux sur le deuxième, trois sur le troisième, et ainsi de suite. Il veut savoir combien de bûches il lui faudra.",
+   "documents": [
+    {
+     "id": "pile",
+     "type": "schema",
+     "titre": "Les six premiers rangs de la pile",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 54,
+       "texte": "1",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 50,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b1-1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 80,
+       "texte": "2",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 155,
+       "cy": 76,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b2-1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 185,
+       "cy": 76,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b2-2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 106,
+       "texte": "3",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 102,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b3-1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 102,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b3-2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 102,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b3-3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 132,
+       "texte": "4",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 128,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b4-1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 155,
+       "cy": 128,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b4-2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 185,
+       "cy": 128,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b4-3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 128,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b4-4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 158,
+       "texte": "5",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 110,
+       "cy": 154,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b5-1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 154,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b5-2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 154,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b5-3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 200,
+       "cy": 154,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b5-4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 230,
+       "cy": 154,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b5-5",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 14,
+       "y": 184,
+       "texte": "6",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 95,
+       "cy": 180,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b6-1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 125,
+       "cy": 180,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b6-2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 155,
+       "cy": 180,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b6-3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 185,
+       "cy": 180,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b6-4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 215,
+       "cy": 180,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b6-5",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 245,
+       "cy": 180,
+       "r": 13,
+       "teinte": "brun",
+       "motif": "clair",
+       "id": "b6-6",
+       "zone": true
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pile",
+     "enonce": "Touche toutes les bûches du 4e rang en partant du haut.",
+     "reponse": [
+      "b4-1",
+      "b4-2",
+      "b4-3",
+      "b4-4"
+     ],
+     "multiple": true,
+     "aide": "Les numéros des rangs sont écrits à gauche du schéma.",
+     "explication": "Le 4e rang compte **4 bûches** : le nombre de bûches d’un rang est égal à son numéro."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bûches y aurait-il sur le 20e rang ?",
+     "reponse": 20,
+     "aide": "Chaque rang compte une bûche de plus que le précédent : c’est une suite arithmétique de raison 1.",
+     "explication": "u(n) = n, donc le 20e rang compte **20 bûches**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de bûches y a-t-il en tout dans une pile de 20 rangs ?",
+     "reponse": 210,
+     "aide": "Additionne 1 + 2 + … + 20 : associe le premier et le dernier terme, le deuxième et l’avant-dernier…",
+     "explication": "Gauss : 10 paires qui valent chacune 21, soit 10 × 21 = **210**. La formule n(n + 1)/2 donne 20 × 21 ÷ 2 = 210."
+    },
+    {
+     "type": "choix",
+     "enonce": "Gaspard dispose de 78 bûches. Combien de rangs complets peut-il empiler ?",
+     "options": [
+      "11 rangs",
+      "12 rangs",
+      "13 rangs",
+      "14 rangs"
+     ],
+     "reponse": 1,
+     "ordreFixe": true,
+     "aide": "Cherche n tel que n(n + 1)/2 = 78 : essaie n = 12.",
+     "explication": "12 × 13 ÷ 2 = **78** : il peut empiler exactement 12 rangs, sans bûche en trop."
+    }
+   ]
+  },
+  {
+   "chapitre": "4274295c-8f51-523d-848f-79d9514e4ff9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux formules d’abonnement à comparer",
+   "competence": "resoudre",
+   "situation": "Samir hésite entre deux formules d’abonnement à une salle de sport. Il veut savoir à partir de quand la formule avec inscription devient la moins chère.",
+   "documents": [
+    {
+     "id": "tarifs",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Deux formules",
+     "sousTitre": "Salle de sport du quartier",
+     "emoji": "🏋️",
+     "lignes": [
+      {
+       "texte": "Formule A — inscription",
+       "valeur": "30 €"
+      },
+      {
+       "texte": "Formule A — par mois",
+       "valeur": "12 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Formule B — inscription",
+       "valeur": "0 €"
+      },
+      {
+       "texte": "Formule B — par mois",
+       "valeur": "17 €"
+      }
+     ],
+     "teinte": "bleu",
+     "source": "Tarifs imaginés pour l’exercice"
+    },
+    {
+     "id": "cumul",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Total payé selon le nombre de mois",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "Formule A",
+       "valeurs": [
+        30,
+        42,
+        54,
+        66,
+        78,
+        90,
+        102,
+        114,
+        126,
+        138,
+        150
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Formule B",
+       "valeurs": [
+        0,
+        17,
+        34,
+        51,
+        68,
+        85,
+        102,
+        119,
+        136,
+        153,
+        170
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Total payé",
+      "unite": "en €",
+      "min": 0,
+      "max": 180,
+      "pas": 30
+     },
+     "axeX": {
+      "titre": "Mois"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cumul",
+     "enonce": "Touche le nombre de mois pour lequel les deux formules coûtent exactement la même somme.",
+     "reponse": [
+      "k6"
+     ],
+     "aide": "Cherche le point où les deux courbes se croisent.",
+     "explication": "Les courbes se croisent au mois **6** : 30 + 12 × 6 = 17 × 6 = 102 €."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien coûte la formule A au bout de 24 mois ?",
+     "reponse": 318,
+     "unite": "€",
+     "aide": "Utilise u(n) = u(0) + n × r avec u(0) = 30 et r = 12.",
+     "explication": "u(24) = 30 + 24 × 12 = **318 €**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À partir de quel mois entier la formule A est-elle strictement la moins chère ?",
+     "reponse": 7,
+     "aide": "Elles coûtent autant au mois 6 : regarde le mois suivant.",
+     "explication": "Au mois 7, A coûte 114 € et B coûte 119 € : à partir du mois **7**, A est moins chère."
+    },
+    {
+     "type": "choix",
+     "enonce": "Samir veut s’abonner pendant 9 mois. Quelle formule choisir ?",
+     "options": [
+      "La formule A : 138 € contre 153 € pour la formule B",
+      "La formule B : 153 € contre 138 € pour la formule A",
+      "Les deux coûtent la même somme au bout de 9 mois",
+      "La formule A : 30 € seulement, car l’inscription est comptée une fois"
+     ],
+     "reponse": 0,
+     "aide": "Calcule le total de chaque formule au mois 9.",
+     "explication": "A : 30 + 12 × 9 = 138 € ; B : 17 × 9 = 153 €. La formule **A** est plus économique de 15 €."
+    }
+   ]
+  },
+  {
+   "chapitre": "25b16180-c147-5e05-b9ce-8c9d9a7af5d0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La facture téléphonique de Bastien",
+   "competence": "lire-graphique",
+   "situation": "Le forfait de Bastien comprend un abonnement fixe, puis un prix par minute d’appel. Le graphique donne sa facture selon le nombre de minutes passées au téléphone.",
+   "documents": [
+    {
+     "id": "facture",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Facture mensuelle de Bastien",
+     "categories": [
+      "0",
+      "100",
+      "200",
+      "300",
+      "400",
+      "500"
+     ],
+     "series": [
+      {
+       "nom": "Facture",
+       "valeurs": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Facture",
+      "unite": "en €",
+      "min": 0,
+      "max": 30,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Minutes d’appel"
+     },
+     "valeurs": true,
+     "source": "Tarifs imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "facture",
+     "enonce": "Touche le nombre de minutes pour lequel la facture atteint 20 €.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la valeur 20 sur la courbe, puis regarde la graduation en dessous.",
+     "explication": "La facture vaut 20 € pour **300 minutes** d’appel."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la facture quand Bastien n’appelle pas du tout, c’est-à-dire l’ordonnée à l’origine, en € ?",
+     "reponse": 8,
+     "unite": "€",
+     "aide": "Lis la valeur pour 0 minute.",
+     "explication": "f(0) = **8 €** : c’est l’abonnement fixe."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien chaque minute supplémentaire coûte-t-elle, en € ? C’est le coefficient directeur.",
+     "reponse": 0.04,
+     "unite": "€",
+     "aide": "Entre 0 et 100 minutes, la facture augmente de 4 € : divise par le nombre de minutes ajoutées.",
+     "explication": "(12 − 8) ÷ 100 = **0,04 €** par minute."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec la formule f(x) = 0,04 x + 8, quelle serait la facture pour 250 minutes ?",
+     "reponse": 18,
+     "unite": "€",
+     "aide": "Remplace x par 250 : 0,04 × 250 + 8.",
+     "explication": "0,04 × 250 + 8 = 10 + 8 = **18 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "25b16180-c147-5e05-b9ce-8c9d9a7af5d0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La croissance d’un plant de tournesol",
+   "competence": "modeliser",
+   "situation": "Awa mesure un plant de tournesol pendant sa première période de croissance. On suppose que sa hauteur est une fonction affine du nombre de jours x : f(x) = a x + b.",
+   "documents": [
+    {
+     "id": "plant",
+     "type": "tableau",
+     "titre": "Deux mesures d’Awa",
+     "colonnes": [
+      "Jour x",
+      "2",
+      "6"
+     ],
+     "lignes": [
+      [
+       "Hauteur f(x) (cm)",
+       13,
+       25
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plant",
+     "enonce": "Touche la hauteur mesurée au 6e jour.",
+     "reponse": [
+      "r0c2"
+     ],
+     "aide": "Repère la colonne du jour 6.",
+     "explication": "Au jour 6, le plant mesure **25 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le coefficient directeur a, en cm par jour.",
+     "reponse": 3,
+     "unite": "cm/jour",
+     "aide": "a = (f(6) − f(2)) ÷ (6 − 2).",
+     "explication": "a = (25 − 13) ÷ 4 = **3 cm par jour**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’ordonnée à l’origine b, en cm.",
+     "reponse": 7,
+     "unite": "cm",
+     "aide": "Utilise f(2) = 13 : 3 × 2 + b = 13.",
+     "explication": "13 = 3 × 2 + b, donc b = 13 − 6 = **7 cm** : la hauteur au jour 0."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Au bout de combien de jours le plant atteint-il 55 cm selon ce modèle ?",
+     "reponse": 16,
+     "unite": "jours",
+     "aide": "Résous 3x + 7 = 55.",
+     "explication": "3x = 55 − 7 = 48, donc x = **16 jours**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Awa prévoit la hauteur au bout de 365 jours avec ce modèle. Que penser de sa prévision ?",
+     "options": [
+      "Le modèle n’est valable que sur la période observée : un plant ne grandit pas indéfiniment",
+      "Elle est fiable, car une fonction affine est toujours vraie",
+      "Elle est fiable, car la pente reste identique sur toute une année",
+      "Elle est impossible, car une fonction affine ne s’applique qu’aux jours pairs"
+     ],
+     "reponse": 0,
+     "aide": "Un modèle affine a un domaine de validité.",
+     "explication": "Extrapoler loin hors des mesures est une **faute classique** : le modèle donnerait plus de 10 m !"
+    }
+   ]
+  },
+  {
+   "chapitre": "25b16180-c147-5e05-b9ce-8c9d9a7af5d0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quelle imprimerie pour les flyers du club ?",
+   "competence": "resoudre",
+   "situation": "Le club de théâtre veut imprimer des flyers. Deux imprimeries proposent des tarifs différents ; Léo cherche à partir de quel nombre de flyers l’une devient plus avantageuse que l’autre.",
+   "documents": [
+    {
+     "id": "imprimeries",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Deux imprimeries",
+     "sousTitre": "Tarifs des flyers",
+     "emoji": "🖨️",
+     "lignes": [
+      {
+       "texte": "Imprimerie A — mise en page",
+       "valeur": "20 €"
+      },
+      {
+       "texte": "Imprimerie A — par flyer",
+       "valeur": "0,10 €"
+      },
+      {
+       "separateur": true
+      },
+      {
+       "texte": "Imprimerie B — mise en page",
+       "valeur": "0 €"
+      },
+      {
+       "texte": "Imprimerie B — par flyer",
+       "valeur": "0,15 €"
+      }
+     ],
+     "teinte": "turquoise",
+     "source": "Tarifs imaginés pour l’exercice"
+    },
+    {
+     "id": "cout",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Coût selon le nombre de flyers",
+     "categories": [
+      "0",
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600"
+     ],
+     "series": [
+      {
+       "nom": "Imprimerie A",
+       "valeurs": [
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Imprimerie B",
+       "valeurs": [
+        0,
+        15,
+        30,
+        45,
+        60,
+        75,
+        90
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Coût",
+      "unite": "en €",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Nombre de flyers"
+     },
+     "valeurs": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien coûtent 250 flyers à l’imprimerie A, en € ?",
+     "reponse": 45,
+     "unite": "€",
+     "aide": "La fonction est f(x) = 0,10 x + 20.",
+     "explication": "0,10 × 250 + 20 = 25 + 20 = **45 €**."
+    },
+    {
+     "type": "zone",
+     "document": "cout",
+     "enonce": "Touche le nombre de flyers pour lequel les deux imprimeries demandent le même prix.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le point de croisement des deux droites.",
+     "explication": "Les droites se coupent pour **400 flyers**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est alors le prix commun, en € ?",
+     "reponse": 60,
+     "unite": "€",
+     "aide": "Calcule le prix de A pour 400 flyers : 0,10 × 400 + 20.",
+     "explication": "0,10 × 400 + 20 = 0,15 × 400 = **60 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pour 300 flyers, quelle imprimerie est la moins chère ?",
+     "options": [
+      "L’imprimerie B : 45 € contre 50 € pour A",
+      "L’imprimerie A : 50 € contre 45 € pour B",
+      "Les deux : leur prix est identique pour 300 flyers",
+      "L’imprimerie B : 15 € de moins, car elle n’a pas de mise en page"
+     ],
+     "reponse": 0,
+     "aide": "Calcule les deux prix pour x = 300.",
+     "explication": "A : 0,10 × 300 + 20 = 50 € ; B : 0,15 × 300 = 45 €. En dessous de 400 flyers, **B** est plus avantageuse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Léo imprime finalement 1 000 flyers. Quelle économie réalise-t-il en choisissant la moins chère, en € ?",
+     "reponse": 30,
+     "unite": "€",
+     "aide": "Calcule le prix dans chaque imprimerie pour 1 000 flyers.",
+     "explication": "A : 0,10 × 1 000 + 20 = 120 € ; B : 0,15 × 1 000 = 150 €. Léo économise **30 €** avec l’imprimerie A."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8e4cf9f-b8a5-542f-8b63-c620b090aed5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La vidéo de Yanis fait le tour du collège",
+   "competence": "lire-tableau",
+   "situation": "Yanis met en ligne une vidéo. Chaque heure, le nombre de personnes qui l’ont vue est multiplié par le même nombre. Il note les premiers relevés.",
+   "documents": [
+    {
+     "id": "video",
+     "type": "tableau",
+     "titre": "Personnes ayant vu la vidéo",
+     "colonnes": [
+      "Heure n",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "lignes": [
+      [
+       "Nombre de vues u(n)",
+       6,
+       12,
+       24,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "video",
+     "enonce": "Touche le premier terme de la suite, u(0).",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "C’est le nombre de vues à l’heure 0.",
+     "explication": "u(0) = **6** personnes au départ."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien le nombre de vues est-il multiplié chaque heure ? C’est la raison q.",
+     "reponse": 2,
+     "aide": "Divise un terme par le précédent : 12 ÷ 6.",
+     "explication": "12 ÷ 6 = 24 ÷ 12 = **2** : la raison vaut 2."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de personnes auront vu la vidéo à l’heure 3 ?",
+     "reponse": 48,
+     "aide": "Multiplie le terme précédent par la raison.",
+     "explication": "u(3) = 24 × 2 = **48**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Cette suite est-elle arithmétique ou géométrique ?",
+     "options": [
+      "Géométrique : on multiplie par 2 à chaque étape",
+      "Arithmétique : on ajoute 6 à chaque étape",
+      "Arithmétique : les différences sont constantes",
+      "Ni l’une ni l’autre"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si ce sont les différences ou les quotients qui sont constants.",
+     "explication": "Les différences (6, 12…) changent, mais les **quotients** sont constants : la suite est géométrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8e4cf9f-b8a5-542f-8b63-c620b090aed5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un placement qui rapporte, des papillons qui disparaissent",
+   "competence": "calculer",
+   "situation": "Deux évolutions à pourcentage constant : le capital d’un livret placé à 3 % par an, et la population de papillons d’une réserve naturelle qui diminue chaque année.",
+   "documents": [
+    {
+     "id": "capital",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Capital du livret",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Capital",
+       "valeurs": [
+        2000,
+        2060,
+        2122,
+        2185,
+        2251,
+        2319
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Capital",
+      "unite": "en €",
+      "min": 2000,
+      "max": 2400,
+      "pas": 100
+     },
+     "axeX": {
+      "titre": "Années"
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies à l’euro"
+    },
+    {
+     "id": "papillons",
+     "type": "tableau",
+     "titre": "Papillons de la réserve",
+     "colonnes": [
+      "Année",
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+     ],
+     "lignes": [
+      [
+       "Nombre de papillons",
+       1200,
+       1020,
+       867,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Comptages imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de la suite du capital ?",
+     "reponse": 1.03,
+     "aide": "Divise le capital de l’année 1 par celui de l’année 0.",
+     "explication": "2 060 ÷ 2 000 = **1,03** : une hausse de 3 % par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel sera le capital après 10 ans, en € (arrondi à l’euro) ?",
+     "reponse": 2688,
+     "tolerance": 0.6,
+     "unite": "€",
+     "aide": "Utilise u(n) = 2 000 × 1,03ⁿ avec n = 10.",
+     "explication": "2 000 × 1,03¹⁰ ≈ 2 687,83, soit environ **2 688 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le capital après 10 ans n’est-il pas simplement 2 000 + 10 × 60 = 2 600 € ?",
+     "options": [
+      "Les intérêts produisent eux-mêmes des intérêts : ce n’est pas linéaire",
+      "Le taux de 3 % baisse de façon régulière au fil des années écoulées",
+      "La banque retient 3 % du capital au début de chaque nouvelle année",
+      "Il manque la première année dans le calcul des intérêts de Lucie"
+     ],
+     "reponse": 0,
+     "aide": "Regarde si l’augmentation annuelle est la même chaque année.",
+     "explication": "Chaque année, les 3 % portent sur un capital plus grand : on multiplie, on n’additionne pas. Le calcul linéaire **sous-estime** le capital."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison q de la suite du nombre de papillons ?",
+     "reponse": 0.85,
+     "aide": "Divise l’effectif de 2021 par celui de 2020.",
+     "explication": "1 020 ÷ 1 200 = **0,85** : une baisse de 15 % par an."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de papillons la réserve comptera-t-elle en 2023 (arrondi à l’unité) ?",
+     "reponse": 737,
+     "tolerance": 0.6,
+     "aide": "Multiplie le nombre de 2022 par la raison.",
+     "explication": "867 × 0,85 = 736,95, soit environ **737 papillons**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8e4cf9f-b8a5-542f-8b63-c620b090aed5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux tirelires, une qui finit par tout dépasser",
+   "competence": "raisonner",
+   "situation": "Camille part de 100 € et ajoute 20 € chaque mois. Noé part de 10 € et voit son montant multiplié par le même nombre chaque mois : après un mois, il possède 16 €. Le graphique compare les deux tirelires.",
+   "documents": [
+    {
+     "id": "tirelires",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Montant des deux tirelires",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "series": [
+      {
+       "nom": "Camille",
+       "valeurs": [
+        100,
+        120,
+        140,
+        160,
+        180,
+        200,
+        220,
+        240,
+        260
+       ],
+       "teinte": "violet"
+      },
+      {
+       "nom": "Noé",
+       "valeurs": [
+        10,
+        16,
+        25.6,
+        41,
+        65.5,
+        104.9,
+        167.8,
+        268.4,
+        429.5
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Montant",
+      "unite": "en €",
+      "min": 0,
+      "max": 450,
+      "pas": 50
+     },
+     "axeX": {
+      "titre": "Mois"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies au dixième"
+    },
+    {
+     "id": "suites",
+     "type": "tableau",
+     "titre": "Quatre suites à reconnaître",
+     "colonnes": [
+      "Suite",
+      "Premiers termes"
+     ],
+     "lignes": [
+      [
+       "S1",
+       "2 ; 5 ; 8 ; 11"
+      ],
+      [
+       "S2",
+       "3 ; 9 ; 27 ; 81"
+      ],
+      [
+       "S3",
+       "100 ; 90 ; 81 ; 72,9"
+      ],
+      [
+       "S4",
+       "50 ; 45 ; 40 ; 35"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque suite du tableau selon sa nature.",
+     "categories": [
+      "Arithmétique (différences constantes)",
+      "Géométrique (quotients constants)"
+     ],
+     "items": [
+      [
+       "S1",
+       0
+      ],
+      [
+       "S2",
+       1
+      ],
+      [
+       "S3",
+       1
+      ],
+      [
+       "S4",
+       0
+      ]
+     ],
+     "aide": "Calcule les différences, puis les quotients, entre termes consécutifs.",
+     "explication": "S1 (+3) et S4 (−5) sont **arithmétiques** ; S2 (× 3) et S3 (× 0,9) sont **géométriques**."
+    },
+    {
+     "type": "zone",
+     "document": "tirelires",
+     "enonce": "Touche le premier mois où la tirelire de Noé dépasse celle de Camille.",
+     "reponse": [
+      "k7"
+     ],
+     "aide": "Cherche le premier mois où la courbe de Noé passe au-dessus de celle de Camille.",
+     "explication": "Au mois **7**, Noé a 268,4 € contre 240 € pour Camille : sa courbe passe devant et ne la rejoindra plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la raison de la suite de Noé ?",
+     "reponse": 1.6,
+     "aide": "Divise son montant du mois 1 par celui du mois 0.",
+     "explication": "16 ÷ 10 = **1,6** : sa tirelire augmente de 60 % chaque mois."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel montant Noé aura-t-il au mois 8, en € (arrondi à l’unité) ?",
+     "reponse": 429,
+     "tolerance": 0.6,
+     "unite": "€",
+     "aide": "Utilise u(n) = 10 × 1,6ⁿ avec n = 8.",
+     "explication": "10 × 1,6⁸ ≈ 429,5, soit environ **429 €**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille ajoute 40 € par mois au lieu de 20 €. Noé finira-t-il tout de même par la dépasser ?",
+     "options": [
+      "Oui : l’exponentielle finit toujours par dépasser une croissance linéaire",
+      "Non : une croissance linéaire plus forte reste toujours devant l’autre",
+      "Non : le montant de Noé s’arrêtera de croître au bout d’un moment",
+      "Oui, mais seulement si Noé ajoute aussi une somme fixe chaque mois"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi ce que le graphique montre sur la longue durée.",
+     "explication": "Une suite géométrique de raison supérieure à 1 **finit toujours** par dépasser n’importe quelle suite arithmétique : il faut seulement attendre un peu plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "9da8b2ba-ba5f-543c-a7ec-a95839229c63",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La levure de la boulangère",
+   "competence": "lire-graphique",
+   "situation": "Dans la pâte d’une boulangère, des levures se multiplient. Elle compte la population de levures toutes les heures et reporte les résultats sur un graphique.",
+   "documents": [
+    {
+     "id": "levure",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Nombre de levures dans la pâte",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Levures",
+       "valeurs": [
+        100,
+        200,
+        400,
+        800,
+        1600,
+        3200
+       ],
+       "teinte": "ambre"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de levures",
+      "unite": "en levures",
+      "min": 0,
+      "max": 3200,
+      "pas": 800
+     },
+     "axeX": {
+      "titre": "Temps (h)"
+     },
+     "valeurs": false,
+     "source": "Comptages imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "levure",
+     "enonce": "Touche l’heure à laquelle on compte 800 levures.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Repère la barre qui atteint la graduation 800.",
+     "explication": "On compte 800 levures à l’heure **3**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps faut-il pour que le nombre de levures double, en heures ?",
+     "reponse": 1,
+     "unite": "h",
+     "aide": "Compare deux barres consécutives : de 100 à 200, de 200 à 400…",
+     "explication": "La population double **chaque heure** : le temps de doublement est de 1 h."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Par combien le nombre de levures est-il multiplié en 3 heures ?",
+     "reponse": 8,
+     "aide": "Il double trois fois de suite : 2 × 2 × 2.",
+     "explication": "2³ = **8** : en 3 heures, la population est multipliée par 8."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si la tendance continue, combien y aura-t-il de levures à l’heure 6 ?",
+     "reponse": 6400,
+     "aide": "À l’heure 5, il y en a 3 200 : que se passe-t-il l’heure suivante ?",
+     "explication": "Le nombre double encore : 3 200 × 2 = **6 400**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9da8b2ba-ba5f-543c-a7ec-a95839229c63",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dater un morceau de bois au carbone 14",
+   "competence": "modeliser",
+   "situation": "Un archéologue découvre un morceau de bois ancien. Le carbone 14 qu’il contient se désintègre avec une demi-vie d’environ 5 730 ans : sa quantité est divisée par deux tous les 5 730 ans, selon N(t) = N₀ × 0,5^(t/T).",
+   "documents": [
+    {
+     "id": "c14",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Carbone 14 restant dans un échantillon",
+     "categories": [
+      "0",
+      "5 730",
+      "11 460",
+      "17 190",
+      "22 920"
+     ],
+     "series": [
+      {
+       "nom": "Quantité restante",
+       "valeurs": [
+        100,
+        50,
+        25,
+        12.5,
+        6.25
+       ],
+       "teinte": "brun"
+      }
+     ],
+     "axeY": {
+      "titre": "Quantité restante",
+      "unite": "en % de la quantité initiale",
+      "min": 0,
+      "max": 100,
+      "pas": 25
+     },
+     "axeX": {
+      "titre": "Âge de l’échantillon (ans)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "c14",
+     "enonce": "Touche l’âge pour lequel il reste le quart du carbone 14 initial.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Un quart correspond à 25 % sur l’axe vertical.",
+     "explication": "Il reste 25 % du carbone 14 à l’âge de **11 460 ans**, soit deux demi-vies."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle fraction du carbone 14, en %, reste-t-il après 34 380 ans (6 demi-vies), arrondie au centième ?",
+     "reponse": 1.56,
+     "tolerance": 0.01,
+     "unite": "%",
+     "aide": "Calcule 100 × 0,5⁶.",
+     "explication": "100 × 0,5⁶ = 1,5625, soit environ **1,56 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour un morceau de bois âgé de 2 000 ans, quel pourcentage de carbone 14 reste-t-il, arrondi au dixième ?",
+     "reponse": 78.5,
+     "tolerance": 0.06,
+     "unite": "%",
+     "aide": "Calcule 100 × 0,5^(2 000 ÷ 5 730) à la calculatrice.",
+     "explication": "0,5^(2 000/5 730) ≈ 0,785 : il reste environ **78,5 %** du carbone 14."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un charbon de bois contient 3,125 % de son carbone 14 initial. Quel est son âge ?",
+     "options": [
+      "28 650 ans",
+      "17 190 ans",
+      "34 380 ans",
+      "5 730 ans"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Combien de fois faut-il diviser par 2 pour arriver à 3,125 % ?",
+     "explication": "100 → 50 → 25 → 12,5 → 6,25 → 3,125 : **5 demi-vies**, soit 5 × 5 730 = 28 650 ans."
+    }
+   ]
+  },
+  {
+   "chapitre": "9da8b2ba-ba5f-543c-a7ec-a95839229c63",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une épidémie en échelle ordinaire et en échelle logarithmique",
+   "competence": "analyser-document",
+   "situation": "Une épidémie imaginaire double tous les deux jours. Un journal publie le même relevé deux fois : une fois en échelle ordinaire, une fois avec un axe vertical en échelle logarithmique, où l’on place le logarithme décimal du nombre de cas.",
+   "documents": [
+    {
+     "id": "cas",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Cas confirmés (échelle ordinaire)",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "Cas",
+       "valeurs": [
+        100,
+        200,
+        400,
+        800,
+        1600,
+        3200,
+        6400
+       ],
+       "teinte": "corail"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de cas",
+      "unite": "en cas",
+      "min": 0,
+      "max": 6400,
+      "pas": 1600
+     },
+     "axeX": {
+      "titre": "Jours"
+     },
+     "valeurs": false,
+     "source": "Données imaginées pour l’exercice"
+    },
+    {
+     "id": "logcas",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Mêmes cas (échelle logarithmique)",
+     "categories": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12"
+     ],
+     "series": [
+      {
+       "nom": "log₁₀ du nombre de cas",
+       "valeurs": [
+        2,
+        2.301,
+        2.602,
+        2.903,
+        3.204,
+        3.505,
+        3.806
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "log₁₀ du nombre de cas",
+      "min": 2,
+      "max": 4,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Jours"
+     },
+     "valeurs": true,
+     "source": "Valeurs arrondies au millième"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cas",
+     "enonce": "Touche le jour où le nombre de cas atteint 3 200.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Repère le point à 3 200 sur l’axe vertical.",
+     "explication": "Le relevé atteint 3 200 cas au jour **10**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le temps de doublement du nombre de cas, en jours ?",
+     "reponse": 2,
+     "unite": "jours",
+     "aide": "Compare deux relevés consécutifs : 100, puis 200 deux jours plus tard.",
+     "explication": "Le nombre de cas **double tous les 2 jours** : 100, 200, 400…"
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si la tendance se poursuit, combien de cas y aura-t-il au jour 14 ?",
+     "reponse": 12800,
+     "aide": "Entre le jour 10 et le jour 14, le nombre double deux fois.",
+     "explication": "3 200 × 2 × 2 = **12 800** cas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la courbe de l’échelle logarithmique est-elle une droite ?",
+     "options": [
+      "Chaque doublement ajoute la même quantité sur l’axe : les points s’alignent",
+      "L’épidémie cesse de croître et le nombre de cas devient constant ensuite",
+      "Le nombre de cas augmente toujours de 301 cas tous les 2 jours exactement",
+      "L’échelle logarithmique efface la croissance exponentielle du phénomène"
+     ],
+     "reponse": 0,
+     "aide": "Observe de combien monte le deuxième graphique à chaque pas de 2 jours.",
+     "explication": "Une croissance exponentielle devient une **droite** en échelle logarithmique : « la droite se lit, la courbe se subit »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien monte la valeur de log₁₀ à chaque doublement du nombre de cas (arrondi au dixième) ?",
+     "reponse": 0.3,
+     "tolerance": 0.02,
+     "aide": "Soustrais deux valeurs consécutives du second graphique.",
+     "explication": "2,301 − 2 = 0,301 : la valeur monte de **0,3** à chaque doublement, ce qui donne une droite."
+    }
+   ]
+  },
+  {
+   "chapitre": "b656d0aa-6041-5561-96bc-c3653770cec4",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le trajet à vélo d’Inès",
+   "competence": "lire-graphique",
+   "situation": "Inès roule à vélo en accélérant peu à peu. Elle relève la distance parcourue depuis son départ, minute après minute.",
+   "documents": [
+    {
+     "id": "velo",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Distance parcourue par Inès",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "series": [
+      {
+       "nom": "Distance",
+       "valeurs": [
+        0,
+        0.3,
+        0.8,
+        1.5,
+        2.4,
+        3.5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Distance parcourue",
+      "unite": "en km",
+      "min": 0,
+      "max": 4,
+      "pas": 0.5
+     },
+     "axeX": {
+      "titre": "Temps (min)"
+     },
+     "valeurs": true,
+     "source": "Relevés imaginés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "velo",
+     "enonce": "Touche l’instant où Inès a parcouru 2,4 km depuis son départ.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Repère le point dont la valeur est 2,4.",
+     "explication": "Inès a parcouru 2,4 km au bout de **4 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est sa vitesse moyenne entre la 2e et la 4e minute, en km par minute ?",
+     "reponse": 0.8,
+     "unite": "km/min",
+     "aide": "Taux de variation moyen = (d(4) − d(2)) ÷ (4 − 2).",
+     "explication": "(2,4 − 0,8) ÷ 2 = **0,8 km/min**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette vitesse moyenne en km/h.",
+     "reponse": 48,
+     "unite": "km/h",
+     "aide": "Une heure compte 60 minutes.",
+     "explication": "0,8 × 60 = **48 km/h**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le compteur de vitesse du vélo indique la vitesse à l’instant précis où Inès regarde. De quelle vitesse s’agit-il ?",
+     "options": [
+      "La vitesse instantanée, liée au nombre dérivé",
+      "La vitesse moyenne sur tout le trajet",
+      "La distance totale parcourue depuis le départ",
+      "La vitesse moyenne entre deux relevés"
+     ],
+     "reponse": 0,
+     "aide": "Le compteur ne calcule pas de moyenne : il indique ce qui se passe maintenant.",
+     "explication": "Le compteur affiche la **vitesse instantanée**, c’est-à-dire le nombre dérivé de la distance à cet instant."
+    }
+   ]
+  },
+  {
+   "chapitre": "b656d0aa-6041-5561-96bc-c3653770cec4",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De la sécante à la tangente",
+   "competence": "geometrie",
+   "situation": "Sacha étudie la fonction f(x) = x²/2 au voisinage de a = 2. Il trace la sécante (AB) et cherche ce qui se passe quand le point B se rapproche de A : pour un point d’abscisse 2 + h, il calcule le taux de variation entre 2 et 2 + h.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "figure",
+     "titre": "Une courbe, une sécante et une autre droite",
+     "cadre": {
+      "xmin": 0,
+      "xmax": 5,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "quadrillage": true,
+     "axes": true,
+     "points": [
+      {
+       "id": "c0",
+       "x": 0,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "c1",
+       "x": 0.25,
+       "y": 0.03125,
+       "cache": true
+      },
+      {
+       "id": "c2",
+       "x": 0.5,
+       "y": 0.125,
+       "cache": true
+      },
+      {
+       "id": "c3",
+       "x": 0.75,
+       "y": 0.28125,
+       "cache": true
+      },
+      {
+       "id": "c4",
+       "x": 1,
+       "y": 0.5,
+       "cache": true
+      },
+      {
+       "id": "c5",
+       "x": 1.25,
+       "y": 0.78125,
+       "cache": true
+      },
+      {
+       "id": "c6",
+       "x": 1.5,
+       "y": 1.125,
+       "cache": true
+      },
+      {
+       "id": "c7",
+       "x": 1.75,
+       "y": 1.53125,
+       "cache": true
+      },
+      {
+       "id": "c8",
+       "x": 2,
+       "y": 2,
+       "cache": true
+      },
+      {
+       "id": "c9",
+       "x": 2.25,
+       "y": 2.53125,
+       "cache": true
+      },
+      {
+       "id": "c10",
+       "x": 2.5,
+       "y": 3.125,
+       "cache": true
+      },
+      {
+       "id": "c11",
+       "x": 2.75,
+       "y": 3.78125,
+       "cache": true
+      },
+      {
+       "id": "c12",
+       "x": 3,
+       "y": 4.5,
+       "cache": true
+      },
+      {
+       "id": "c13",
+       "x": 3.25,
+       "y": 5.28125,
+       "cache": true
+      },
+      {
+       "id": "c14",
+       "x": 3.5,
+       "y": 6.125,
+       "cache": true
+      },
+      {
+       "id": "c15",
+       "x": 3.75,
+       "y": 7.03125,
+       "cache": true
+      },
+      {
+       "id": "c16",
+       "x": 4,
+       "y": 8,
+       "cache": true
+      },
+      {
+       "id": "A",
+       "x": 2,
+       "y": 2,
+       "position": "se"
+      },
+      {
+       "id": "B",
+       "x": 3,
+       "y": 4.5,
+       "position": "o"
+      },
+      {
+       "id": "T1",
+       "x": 1,
+       "y": 0,
+       "cache": true
+      },
+      {
+       "id": "T2",
+       "x": 3,
+       "y": 4,
+       "cache": true
+      }
+     ],
+     "segments": [
+      {
+       "de": "c0",
+       "a": "c1",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c1",
+       "a": "c2",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c2",
+       "a": "c3",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c3",
+       "a": "c4",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c4",
+       "a": "c5",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c5",
+       "a": "c6",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c6",
+       "a": "c7",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c7",
+       "a": "c8",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c8",
+       "a": "c9",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c9",
+       "a": "c10",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c10",
+       "a": "c11",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c11",
+       "a": "c12",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c12",
+       "a": "c13",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c13",
+       "a": "c14",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c14",
+       "a": "c15",
+       "teinte": "bleu"
+      },
+      {
+       "de": "c15",
+       "a": "c16",
+       "teinte": "bleu"
+      }
+     ],
+     "droites": [
+      {
+       "id": "secante",
+       "par": [
+        "A",
+        "B"
+       ],
+       "teinte": "corail"
+      },
+      {
+       "id": "tangente",
+       "par": [
+        "T1",
+        "T2"
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "source": "Courbe de f(x) = x²/2"
+    },
+    {
+     "id": "taux",
+     "type": "tableau",
+     "titre": "Taux de variation entre 2 et 2 + h",
+     "colonnes": [
+      "h",
+      "1",
+      "0,5",
+      "0,1",
+      "0,01"
+     ],
+     "lignes": [
+      [
+       "Taux de variation",
+       2.5,
+       2.25,
+       "?",
+       2.005
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculs exacts"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quel est le coefficient directeur de la sécante (AB), avec A(2 ; 2) et B(3 ; 4,5) ?",
+     "reponse": 2.5,
+     "aide": "Divise la montée (4,5 − 2) par l’avancée (3 − 2).",
+     "explication": "(4,5 − 2) ÷ (3 − 2) = **2,5** : c’est le taux de variation pour h = 1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le taux de variation pour h = 0,1, c’est-à-dire la valeur du « ? » ?",
+     "reponse": 2.05,
+     "aide": "Le taux vaut (f(2,1) − f(2)) ÷ 0,1, avec f(2,1) = 2,1² ÷ 2 = 2,205.",
+     "explication": "(2,205 − 2) ÷ 0,1 = **2,05**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Vers quel nombre le taux de variation semble-t-il tendre quand h se rapproche de 0 ? C’est f′(2).",
+     "reponse": 2,
+     "aide": "Regarde la tendance de la ligne : 2,5 ; 2,25 ; 2,05 ; 2,005…",
+     "explication": "Le taux de variation se rapproche de **2** : f′(2) = 2. On a aussi f(2 + h) − f(2) = 2h + h²/2, donc le taux vaut 2 + h/2."
+    },
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche la droite qui est tangente à la courbe au point A.",
+     "reponse": [
+      "tangente"
+     ],
+     "aide": "Une tangente ne touche la courbe qu’en un seul point ; l’autre droite la coupe en deux.",
+     "explication": "La tangente en A touche la courbe **en A seulement** ; son coefficient directeur vaut f′(2) = 2. L’autre droite est la sécante (AB)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La tangente en A a pour équation y = 2(x − 2) + 2. Quelle est son ordonnée pour x = 3 ?",
+     "reponse": 4,
+     "aide": "Remplace x par 3 : 2 × 1 + 2.",
+     "explication": "y = 2 × (3 − 2) + 2 = **4** : la tangente passe sous le point B(3 ; 4,5) de la courbe."
+    }
+   ]
+  },
+  {
+   "chapitre": "b656d0aa-6041-5561-96bc-c3653770cec4",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une voiture qui freine jusqu’à l’arrêt",
+   "competence": "modeliser",
+   "situation": "Une voiture freine progressivement et s’arrête en 10 secondes. Un capteur relève sa position x(t) depuis le début du freinage ; on en déduit sa vitesse moyenne seconde après seconde.",
+   "documents": [
+    {
+     "id": "pos",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Position de la voiture",
+     "categories": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "series": [
+      {
+       "nom": "Position",
+       "valeurs": [
+        0,
+        19,
+        36,
+        51,
+        64,
+        75,
+        84,
+        91,
+        96,
+        99,
+        100
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Position",
+      "unite": "en m",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": true,
+     "source": "Relevés imaginés pour l’exercice"
+    },
+    {
+     "id": "vit",
+     "type": "tableau",
+     "titre": "Vitesse moyenne sur chaque seconde",
+     "colonnes": [
+      "Intervalle",
+      "[0 ; 1]",
+      "[1 ; 2]",
+      "[2 ; 3]",
+      "[3 ; 4]",
+      "[4 ; 5]"
+     ],
+     "lignes": [
+      [
+       "Vitesse moyenne (m/s)",
+       19,
+       17,
+       15,
+       "?",
+       11
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Calculée à partir des positions"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pos",
+     "enonce": "Touche l’instant où la voiture s’arrête : sa position ne change plus.",
+     "reponse": [
+      "k10"
+     ],
+     "aide": "La vitesse est nulle quand la courbe devient horizontale.",
+     "explication": "La voiture est arrêtée à **10 s**, à 100 m de son point de départ : la courbe devient horizontale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse moyenne entre 2 s et 6 s, en m/s ?",
+     "reponse": 12,
+     "unite": "m/s",
+     "aide": "Taux de variation = (x(6) − x(2)) ÷ (6 − 2).",
+     "explication": "(84 − 36) ÷ 4 = **12 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la vitesse moyenne entre 3 s et 4 s, c’est-à-dire la valeur du « ? » ?",
+     "reponse": 13,
+     "unite": "m/s",
+     "aide": "Lis x(3) et x(4) dans le premier document.",
+     "explication": "(64 − 51) ÷ 1 = **13 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Estime la vitesse instantanée à t = 5 s à l’aide du taux de variation entre 4 s et 6 s, en m/s.",
+     "reponse": 10,
+     "unite": "m/s",
+     "aide": "Encadre l’instant 5 s par 4 s et 6 s, symétriquement.",
+     "explication": "(84 − 64) ÷ 2 = **10 m/s** : c’est une très bonne estimation de x′(5)."
+    },
+    {
+     "type": "choix",
+     "enonce": "La vitesse moyenne diminue de 2 m/s à chaque seconde. Que vaut l’accélération de la voiture ?",
+     "options": [
+      "Négative : −2 m/s²",
+      "Positive : +2 m/s²",
+      "Négative : −20 m/s²",
+      "Nulle : la vitesse est constante"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "L’accélération est la variation de la vitesse par seconde.",
+     "explication": "La vitesse perd 2 m/s chaque seconde : l’accélération vaut **−2 m/s²** (elle est négative car la voiture freine)."
+    }
+   ]
+  },
+  {
+   "chapitre": "77fa974a-972d-5820-ae68-638d68cf0da8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La balle lancée par Théo",
+   "competence": "calculer",
+   "situation": "Théo lance une balle verticalement. Sa hauteur au-dessus du sol, en mètres, est h(t) = −5t² + 20t, où t est le temps en secondes. Le graphique montre la hauteur de la balle pendant son vol.",
+   "documents": [
+    {
+     "id": "balle",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Hauteur de la balle",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4"
+     ],
+     "series": [
+      {
+       "nom": "Hauteur",
+       "valeurs": [
+        0,
+        8.75,
+        15,
+        18.75,
+        20,
+        18.75,
+        15,
+        8.75,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Hauteur",
+      "unite": "en m",
+      "min": 0,
+      "max": 25,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Temps (s)"
+     },
+     "valeurs": true,
+     "source": "Valeurs de h(t) = −5t² + 20t"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "balle",
+     "enonce": "Touche l’instant où la balle est au plus haut.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "La balle est au plus haut à **t = 2 s**, à 20 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dérive h pour obtenir sa vitesse h′(t), puis calcule h′(1), en m/s.",
+     "reponse": 10,
+     "unite": "m/s",
+     "aide": "La dérivée de t² est 2t, celle de t est 1.",
+     "explication": "h′(t) = −10t + 20, donc h′(1) = −10 + 20 = **10 m/s** : la balle monte encore."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule h′(3), en m/s.",
+     "reponse": -10,
+     "unite": "m/s",
+     "aide": "Remplace t par 3 dans −10t + 20.",
+     "explication": "h′(3) = −30 + 20 = **−10 m/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie h′(3) = −10 pour la balle ?",
+     "options": [
+      "Elle redescend : sa hauteur diminue à cet instant",
+      "Elle continue de monter à 10 m/s à cet instant",
+      "Elle se trouve à 10 mètres sous le niveau du sol",
+      "Elle est immobile dans les airs à cet instant"
+     ],
+     "reponse": 0,
+     "aide": "Quand la dérivée est négative, la fonction décroît.",
+     "explication": "Une dérivée **négative** signifie que la fonction décroît : la balle redescend."
+    }
+   ]
+  },
+  {
+   "chapitre": "77fa974a-972d-5820-ae68-638d68cf0da8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Là où la courbe de Fanny fait demi-tour",
+   "competence": "raisonner",
+   "situation": "Fanny a tracé la courbe de f(x) = x³ − 3x sur l’intervalle [−2 ; 2]. Elle cherche les points où la courbe change de sens, à l’aide de la dérivée.",
+   "documents": [
+    {
+     "id": "cubique",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Courbe de f(x) = x³ − 3x",
+     "categories": [
+      "−2",
+      "−1,5",
+      "−1",
+      "−0,5",
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2"
+     ],
+     "series": [
+      {
+       "nom": "f(x)",
+       "valeurs": [
+        -2,
+        1.125,
+        2,
+        1.375,
+        0,
+        -1.375,
+        -2,
+        -1.125,
+        2
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "f(x)",
+      "min": -3,
+      "max": 3,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "x"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées de f(x) = x³ − 3x"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Dérive f puis calcule f′(2).",
+     "reponse": 9,
+     "aide": "La dérivée de x³ est 3x² et celle de 3x est 3.",
+     "explication": "f′(x) = 3x² − 3, donc f′(2) = 12 − 3 = **9**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Résous f′(x) = 0 : donne la solution positive.",
+     "reponse": 1,
+     "aide": "3x² − 3 = 0 équivaut à x² = 1.",
+     "explication": "3x² = 3 donne x² = 1, donc x = **1** (ou x = −1)."
+    },
+    {
+     "type": "zone",
+     "document": "cubique",
+     "enonce": "Touche les deux valeurs de x pour lesquelles la tangente à la courbe est horizontale.",
+     "reponse": [
+      "k2",
+      "k6"
+     ],
+     "multiple": true,
+     "aide": "La tangente est horizontale au sommet et au creux de la courbe.",
+     "explication": "Elle est horizontale en **x = −1** (sommet local) et en **x = 1** (creux local), là où f′ s’annule."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de f sur l’intervalle [−1 ; 1], sachant que f′(0) = −3 ?",
+     "options": [
+      "f est décroissante : sa dérivée y est négative",
+      "f est croissante : sa dérivée y est négative",
+      "f est constante : sa dérivée vaut −3",
+      "On ne peut rien dire sans calculer f(0)"
+     ],
+     "reponse": 0,
+     "aide": "Le signe de la dérivée donne le sens de variation.",
+     "explication": "f′(x) = 3(x − 1)(x + 1) est négative entre −1 et 1 : **f décroît** sur [−1 ; 1]."
+    }
+   ]
+  },
+  {
+   "chapitre": "77fa974a-972d-5820-ae68-638d68cf0da8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plus grand enclos avec 40 m de grillage",
+   "competence": "resoudre",
+   "situation": "Camille dispose de 40 m de grillage pour clôturer, contre le mur de son jardin, un enclos rectangulaire pour ses poules : seuls trois côtés sont à grillager. Elle note x la longueur des deux côtés perpendiculaires au mur. L’aire de l’enclos est A(x) = x(40 − 2x) = −2x² + 40x.",
+   "documents": [
+    {
+     "id": "enclos",
+     "type": "schema",
+     "titre": "L’enclos adossé au mur",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 18,
+       "l": 260,
+       "h": 20,
+       "teinte": "gris",
+       "motif": "hachures"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 32,
+       "texte": "Mur du jardin",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 38,
+       "l": 160,
+       "h": 112,
+       "teinte": "vert",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        38
+       ],
+       "a": [
+        90,
+        150
+       ],
+       "teinte": "brun",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        90,
+        150
+       ],
+       "a": [
+        250,
+        150
+       ],
+       "teinte": "brun",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        150
+       ],
+       "a": [
+        250,
+        38
+       ],
+       "teinte": "brun",
+       "epaisseur": 3
+      },
+      {
+       "forme": "texte",
+       "x": 70,
+       "y": 98,
+       "texte": "x",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 98,
+       "texte": "x",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 175,
+       "texte": "40 − 2x",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 170,
+       "y": 100,
+       "emoji": "🐔",
+       "taille": 28
+      }
+     ]
+    },
+    {
+     "id": "aires",
+     "type": "tableau",
+     "titre": "Quelques valeurs de l’aire",
+     "colonnes": [
+      "x (m)",
+      "0",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     "lignes": [
+      [
+       "Aire A(x) (m²)",
+       0,
+       150,
+       200,
+       150,
+       0
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs de A(x) = −2x² + 40x"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "aires",
+     "enonce": "Touche la plus grande aire du tableau.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère la valeur la plus grande de la ligne.",
+     "explication": "La plus grande aire du tableau est **200 m²**, obtenue pour x = 10."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour x = 8 m, quelle est la longueur du côté parallèle au mur, en m ?",
+     "reponse": 24,
+     "unite": "m",
+     "aide": "Le grillage total mesure 40 m : retire les deux côtés de longueur x.",
+     "explication": "40 − 2 × 8 = **24 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dérive A puis calcule A′(3).",
+     "reponse": 28,
+     "aide": "La dérivée de −2x² est −4x et celle de 40x est 40.",
+     "explication": "A′(x) = −4x + 40, donc A′(3) = −12 + 40 = **28** : l’aire augmente encore."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pour quelle valeur de x la dérivée s’annule-t-elle, en m ?",
+     "reponse": 10,
+     "unite": "m",
+     "aide": "Résous −4x + 40 = 0.",
+     "explication": "−4x + 40 = 0 donne x = **10 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi x = 10 donne-t-il l’aire maximale ?",
+     "options": [
+      "A′ est positive avant 10 et négative après : l’aire croît puis décroît",
+      "A′ s’annule en 10, ce qui suffit toujours à prouver un maximum",
+      "A′ est négative avant 10 et positive après : l’aire passe par un minimum",
+      "A′ est positive sur tout l’intervalle [0 ; 20]"
+     ],
+     "reponse": 0,
+     "aide": "Étudie le signe de −4x + 40 avant et après 10.",
+     "explication": "−4x + 40 est positive pour x < 10 et négative pour x > 10 : la dérivée passe de **+ à −**, donc A atteint son maximum, **200 m²**, en x = 10."
+    }
+   ]
+  }
+ ]
+}

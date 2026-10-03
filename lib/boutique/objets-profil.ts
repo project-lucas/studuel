@@ -41,10 +41,11 @@ export type ObjetProfil = {
 }
 
 /** Catégorie du vestiaire (`avatar_items.category`) → rayon de la boutique.
- *  Les autres catégories (peau, coiffure) ne se vendent pas en gemmes. */
+ *  Les autres catégories (peau, coiffure) ne se vendent pas en gemmes, et les
+ *  TENUES non plus depuis le 03/10/2026 : elles habillaient l'avatar dessiné,
+ *  retiré — le blason ne les montre pas. */
 const RAYONS: ReadonlyMap<string, CategorieObjet> = new Map([
   ['banner', 'banniere'],
-  ['outfit', 'tenue'],
   ['equipment', 'accessoire'],
 ])
 

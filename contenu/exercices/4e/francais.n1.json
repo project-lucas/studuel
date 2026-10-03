@@ -1,0 +1,2951 @@
+{
+ "niveau": "4e",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "a5ca98d8-8b8f-5cfa-b1e9-d855937fa78f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poème dans la nuit",
+   "competence": "analyser-texte",
+   "situation": "Le club poésie du collège a reçu un poème anonyme déposé dans la boîte aux lettres. Avant de le lire à voix haute, Samir veut repérer ce qui en fait un poème lyrique.",
+   "documents": [
+    {
+     "id": "nocturne",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Nocturne",
+     "blocs": [
+      "[[ap|Ô Lune]], silencieuse amie, reste auprès de [[je|moi]] !",
+      "[[je|Je]] cache [[je|mes]] [[tr|larmes]] derrière un sourire.",
+      "La [[tr|peine]] est si lourde, et personne ne voit",
+      "Comme [[je|mon]] cœur [[tr|souffre]] quand la nuit respire."
+     ],
+     "source": "Poème écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nocturne",
+     "multiple": true,
+     "reponse": [
+      "je"
+     ],
+     "enonce": "Touche les **quatre mots** qui renvoient au poète lui-même (la première personne).",
+     "aide": "Cherche un pronom (je, moi) et des déterminants (mon, mes).",
+     "explication": "Les marques de la première personne sont **moi, Je, mes, mon** : c’est le poète qui parle de lui, ce qui est la base du lyrisme."
+    },
+    {
+     "type": "zone",
+     "document": "nocturne",
+     "multiple": true,
+     "reponse": [
+      "ap"
+     ],
+     "enonce": "Touche l’**apostrophe** : les mots par lesquels le poète s’adresse directement à la lune.",
+     "aide": "Une apostrophe commence souvent par « Ô » et interpelle quelqu’un ou quelque chose.",
+     "explication": "**Ô Lune** est une apostrophe : le poète parle à la lune comme à une amie."
+    },
+    {
+     "type": "zone",
+     "document": "nocturne",
+     "multiple": true,
+     "reponse": [
+      "tr"
+     ],
+     "enonce": "Touche les **trois mots** du champ lexical de la tristesse : un nom de ce qui coule des yeux, un nom de douleur et un verbe.",
+     "aide": "Cherche ce qui coule des yeux, ce qui pèse sur le cœur, ce que fait le cœur.",
+     "explication": "**larmes**, **peine** et **souffre** appartiennent au champ lexical du chagrin, très présent dans la poésie lyrique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce poème est-il un poème lyrique ?",
+     "options": [
+      "Il exprime les sentiments personnels de celui qui parle",
+      "Il raconte une longue aventure avec de nombreux personnages",
+      "Il décrit un paysage de façon neutre, sans aucune émotion",
+      "Il défend une opinion politique en s’adressant au peuple"
+     ],
+     "reponse": 0,
+     "aide": "Le mot « lyrique » vient de la lyre : que chantait-on avec elle ?",
+     "explication": "La poésie lyrique exprime **les sentiments personnels du poète** : ici sa tristesse, dite à la première personne."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5ca98d8-8b8f-5cfa-b1e9-d855937fa78f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une rose et une jeune fille",
+   "competence": "analyser-texte",
+   "situation": "Pour la soirée poésie du collège, Inès doit choisir un poème d’amour à lire. Elle hésite entre un poème de la Renaissance et trois poèmes du siècle dernier : voici l’affiche et le début du texte de Ronsard.",
+   "documents": [
+    {
+     "id": "ronsard",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Mignonne, allons voir si la rose…",
+     "blocs": [
+      "[[ap|Mignonne]], allons voir si la rose",
+      "Qui ce matin avait déclose",
+      "Sa robe de [[c|pourpre]] au soleil,",
+      "A point perdu cette vesprée",
+      "Les plis de sa robe [[c|pourprée]],",
+      "Et son teint au vôtre pareil."
+     ],
+     "auteur": "Pierre de Ronsard",
+     "source": "Ronsard, Odes (1550), première strophe"
+    },
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Soirée poésie d’amour",
+     "sousTitre": "Salle polyvalente — jeudi, 18 h",
+     "emoji": "🌹",
+     "teinte": "violet",
+     "lignes": [
+      {
+       "texte": "Ronsard",
+       "valeur": "« Mignonne, allons voir si la rose… »",
+       "id": "p-ronsard"
+      },
+      {
+       "texte": "Apollinaire",
+       "valeur": "« Le Pont Mirabeau »",
+       "id": "p-apollinaire"
+      },
+      {
+       "texte": "Éluard",
+       "valeur": "« Liberté »",
+       "id": "p-eluard"
+      },
+      {
+       "texte": "Aragon",
+       "valeur": "« Les Yeux d’Elsa »",
+       "id": "p-aragon"
+      }
+     ],
+     "pied": "Entrée libre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ronsard",
+     "multiple": true,
+     "reponse": [
+      "ap"
+     ],
+     "enonce": "Touche le mot par lequel Ronsard s’adresse directement à celle qu’il invite à sortir.",
+     "aide": "C’est une apostrophe : un nom ou un surnom affectueux, en tête du poème.",
+     "explication": "**Mignonne** est une apostrophe : Ronsard s’adresse directement à la jeune fille, ce qui est une marque du lyrisme."
+    },
+    {
+     "type": "choix",
+     "enonce": "À qui Ronsard compare-t-il la fleur dont le teint a changé ?",
+     "options": [
+      "À la jeune fille à qui il parle : son teint est pareil au sien",
+      "À un soldat qui a perdu son uniforme pendant le combat",
+      "À un soleil du matin qui brûle toutes les fleurs du jardin",
+      "À une robe que la jeune fille aurait déchirée la veille"
+     ],
+     "reponse": 0,
+     "aide": "Relis le dernier vers : « son teint au vôtre pareil ». Qui est « vous » ?",
+     "explication": "Le dernier vers compare le teint de la fleur à celui de **la jeune fille** : la fleur qui se fane annonce que sa beauté passera aussi."
+    },
+    {
+     "type": "zone",
+     "document": "ronsard",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les **deux mots** de la même famille qui disent la couleur de la fleur.",
+     "aide": "Cherche une couleur, d’abord sous la forme d’un nom, puis d’un adjectif.",
+     "explication": "**pourpre** et **pourprée** sont de la même famille : la fleur est d’un rouge profond, symbole d’une beauté qui ne dure pas."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "multiple": true,
+     "reponse": [
+      "p-apollinaire",
+      "p-eluard",
+      "p-aragon"
+     ],
+     "enonce": "Sur l’affiche, touche les **trois poètes** qui écrivent au XXe siècle.",
+     "aide": "Ronsard fait partie de la Pléiade. Les trois autres ont renouvelé la forme du poème au XXe siècle.",
+     "explication": "Apollinaire, Éluard et Aragon sont des poètes du **XXe siècle** ; Ronsard, lui, écrit au XVIe siècle."
+    },
+    {
+     "type": "nombre",
+     "reponse": 4,
+     "unite": "siècles",
+     "enonce": "Ronsard écrit au XVIe siècle, Aragon au XXe. Combien de siècles les séparent ?",
+     "aide": "Compte de siècle en siècle : XVIe, XVIIe…",
+     "explication": "Du XVIe au XXe siècle, il y a **4 siècles** (20 − 16 = 4)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5ca98d8-8b8f-5cfa-b1e9-d855937fa78f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "De Sappho aux poètes d’aujourd’hui",
+   "competence": "se-reperer-temps",
+   "situation": "Léa prépare un exposé sur la poésie lyrique. Elle a dessiné une frise des grandes étapes du genre et recopié une plainte écrite par sa grande sœur, qu’elle voudrait classer dans la bonne forme.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La poésie lyrique à travers les siècles",
+     "debut": -600,
+     "fin": 2000,
+     "pas": 200,
+     "periodes": [
+      {
+       "id": "sap",
+       "debut": -600,
+       "fin": -500,
+       "nom": "Sappho",
+       "teinte": "rose"
+      },
+      {
+       "id": "moy",
+       "debut": 500,
+       "fin": 1500,
+       "nom": "Moyen Âge",
+       "teinte": "ambre"
+      },
+      {
+       "id": "plei",
+       "debut": 1500,
+       "fin": 1600,
+       "nom": "La Pléiade",
+       "teinte": "vert"
+      },
+      {
+       "id": "rom",
+       "debut": 1800,
+       "fin": 1900,
+       "nom": "Romantisme",
+       "teinte": "bleu"
+      },
+      {
+       "id": "xx",
+       "debut": 1900,
+       "fin": 2000,
+       "nom": "XXe siècle",
+       "teinte": "turquoise"
+      }
+     ],
+     "evenements": []
+    },
+    {
+     "id": "plainte",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Plainte d’hiver",
+     "blocs": [
+      "Hélas ! tu es partie, et mon cœur s’est éteint.",
+      "Je t’appelle en pleurant dans le jardin désert.",
+      "[[ap|Ô toi]] qui ne viens plus, entends mon long chagrin !",
+      "Je me plains au silence, aux arbres, à l’hiver."
+     ],
+     "source": "Poème écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "moy"
+     ],
+     "enonce": "Les troubadours inventent l’amour courtois : sur la frise, touche leur période.",
+     "aide": "Les troubadours chantent bien après l’Antiquité, mais avant la Pléiade.",
+     "explication": "Les troubadours vivent au **Moyen Âge** : ils inventent l’amour courtois, où le poète sert une dame inaccessible."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Sappho",
+      "Ronsard",
+      "Hugo",
+      "Aragon"
+     ],
+     "enonce": "Range ces poètes du plus ancien au plus récent, en t’aidant de la frise.",
+     "aide": "Sappho, la Pléiade, le romantisme, le XXe siècle : retrouve la période de chacun.",
+     "explication": "Dans l’ordre : **Sappho** (VIe siècle av. J.-C.), **Ronsard** (La Pléiade, XVIe), **Hugo** (romantisme, XIXe), **Aragon** (XXe)."
+    },
+    {
+     "type": "zone",
+     "document": "plainte",
+     "multiple": true,
+     "reponse": [
+      "ap"
+     ],
+     "enonce": "Dans la plainte de la sœur de Léa, touche l’apostrophe.",
+     "aide": "Cherche les deux mots, au début d’un vers, par lesquels le poète interpelle la personne absente.",
+     "explication": "**Ô toi** est l’apostrophe : le poète s’adresse à celle qui est partie, comme dans beaucoup de poèmes lyriques."
+    },
+    {
+     "type": "trous",
+     "texte": "Ce poème exprime la plainte : c’est une ___. Il compte 4 vers et non 14 : ce n’est donc pas un ___.",
+     "reponses": [
+      [
+       "élégie",
+       "elegie",
+       "une élégie"
+      ],
+      [
+       "sonnet",
+       "un sonnet"
+      ]
+     ],
+     "banque": [
+      "élégie",
+      "sonnet",
+      "ode",
+      "ballade"
+     ],
+     "enonce": "Complète le classement de ce poème.",
+     "aide": "La plainte a un nom de forme ; le poème de 14 vers aussi.",
+     "explication": "Le poème de la plainte est l’**élégie** ; le **sonnet** compte 14 vers (deux quatrains, deux tercets)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e44539ef-c1f1-509f-bb81-3f1246281327",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un voyageur part à l’aube",
+   "competence": "analyser-texte",
+   "situation": "Nina découvre un poème de Victor Hugo en cours de français. Avant de comprendre qui est « tu », elle commence par repérer le temps des verbes et les dates qui entourent le poème.",
+   "documents": [
+    {
+     "id": "strophe1",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Première strophe",
+     "blocs": [
+      "Demain, dès l’aube, à l’heure où blanchit la campagne,",
+      "Je [[f|partirai]]. Vois-tu, je sais que tu m’attends.",
+      "J’[[f|irai]] par la forêt, j’[[f|irai]] par la montagne.",
+      "Je ne puis demeurer loin de toi plus longtemps."
+     ],
+     "auteur": "Victor Hugo",
+     "source": "Victor Hugo, « Demain, dès l’aube… », Les Contemplations (1856)"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Autour du poème",
+     "debut": 1840,
+     "fin": 1860,
+     "pas": 5,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "mort",
+       "date": 1843,
+       "nom": "Mort de Léopoldine"
+      },
+      {
+       "id": "contem",
+       "date": 1856,
+       "nom": "Les Contemplations"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "strophe1",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les **trois verbes conjugués au futur** dans cette strophe.",
+     "aide": "Le futur de « partir » et d’« aller » se termine par -rai. Il y en a trois dans la strophe.",
+     "explication": "**partirai, irai, irai** sont au futur : le poète annonce un voyage qu’il tient pour certain."
+    },
+    {
+     "type": "nombre",
+     "reponse": 13,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la mort de Léopoldine de la publication des Contemplations ?",
+     "aide": "Soustrais la date de la mort de celle de la publication.",
+     "explication": "1856 − 1843 = **13 ans** : Hugo a écrit ce poème sur son deuil, puis l’a publié treize ans après la mort de sa fille."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après la frise, à qui le poète dit-il « tu » ?",
+     "options": [
+      "À Léopoldine, sa fille, morte noyée en 1843",
+      "À sa femme, restée à la maison pendant le voyage",
+      "À un ami d’enfance qui habite près d’Harfleur",
+      "À la Seine, qu’il veut remonter jusqu’à sa source"
+     ],
+     "reponse": 0,
+     "aide": "Qui meurt en 1843, selon la frise ? Le poème est publié en 1856 dans un recueil de souvenirs et de deuil.",
+     "explication": "Le « tu » est **Léopoldine**, la fille de Hugo, noyée en septembre 1843 : le poème ne la nomme jamais."
+    }
+   ]
+  },
+  {
+   "chapitre": "e44539ef-c1f1-509f-bb81-3f1246281327",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Marcher sans rien voir",
+   "competence": "analyser-texte",
+   "situation": "Sacha et Lina relisent les deux dernières strophes de « Demain, dès l’aube… ». Ils veulent comprendre pourquoi le voyageur ne regarde rien autour de lui.",
+   "documents": [
+    {
+     "id": "strophes",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Strophes 2 et 3",
+     "blocs": [
+      "Je marcherai les yeux fixés sur mes pensées,",
+      "Sans rien voir au dehors, sans entendre aucun bruit,",
+      "Seul, inconnu, le dos [[a|courbé]], les mains [[a|croisées]],",
+      "Triste, et le jour pour moi sera comme la nuit.",
+      "",
+      "Je ne regarderai [[n|ni]] l’or du soir qui tombe,",
+      "[[n|Ni]] les voiles au loin descendant vers Harfleur,",
+      "Et, quand j’arriverai, je mettrai sur ta tombe",
+      "Un bouquet de houx vert et de bruyère en fleur."
+     ],
+     "auteur": "Victor Hugo",
+     "source": "Victor Hugo, « Demain, dès l’aube… », Les Contemplations (1856)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "strophes",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les **deux mots** qui répètent le refus de regarder (« … ni l’or du soir… ni les voiles… »).",
+     "aide": "Une même petite conjonction de négation ouvre les deux vers.",
+     "explication": "Les deux **ni** forment une négation répétée : le poète refuse de regarder le monde extérieur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le marcheur ne regarde-t-il ni l’or du soir ni les voiles ?",
+     "options": [
+      "Rien du monde ne l’intéresse : il est tout entier tourné vers son but",
+      "Il est pressé de rentrer chez lui avant que la nuit tombe sur la forêt",
+      "Il a perdu la vue pendant son long voyage à travers la montagne",
+      "Il craint que les bateaux ne le voient passer et ne le suivent"
+     ],
+     "reponse": 0,
+     "aide": "Relis le vers 1 de la strophe 2 : où sont fixés ses yeux ?",
+     "explication": "Il marche « les yeux fixés sur [ses] pensées » : son esprit est entièrement occupé par **son but**, qui ne se révélera qu’à la fin."
+    },
+    {
+     "type": "zone",
+     "document": "strophes",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les **deux mots** qui disent comment il tient son dos et ses mains.",
+     "aide": "Cherche deux participes passés dans le troisième vers de la strophe 2.",
+     "explication": "**courbé** et **croisées** montrent un homme voûté, accablé : ces indices ne se comprennent vraiment qu’à la relecture."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Il l’ignore",
+      "Il s’y consacre"
+     ],
+     "items": [
+      [
+       "L’or du soir",
+       0
+      ],
+      [
+       "Les voiles vers Harfleur",
+       0
+      ],
+      [
+       "Ses pensées",
+       1
+      ],
+      [
+       "Un bouquet de houx et de bruyère",
+       1
+      ]
+     ],
+     "enonce": "Range chaque élément : le marcheur l’ignore, ou s’y consacre ?",
+     "aide": "Ce qu’il refuse de voir est introduit par « ni » ; ce qu’il fixe ou apporte est introduit autrement.",
+     "explication": "Il **ignore** le paysage (l’or du soir, les voiles) et **s’y consacre** à ses pensées, puis au bouquet qu’il déposera."
+    }
+   ]
+  },
+  {
+   "chapitre": "e44539ef-c1f1-509f-bb81-3f1246281327",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le mot qui change tout",
+   "competence": "analyser-texte",
+   "situation": "Léo a lu le poème en entier avec un camarade qui y voit une simple promenade d’amoureux. Lis le poème, puis leur échange de messages : qui a raison, et comment le prouver ?",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Demain, dès l’aube…",
+     "blocs": [
+      "Demain, dès l’aube, à l’heure où blanchit la campagne,",
+      "Je partirai. Vois-tu, je sais que tu m’attends.",
+      "J’irai par la forêt, j’irai par la montagne.",
+      "Je ne puis demeurer loin de toi plus longtemps.",
+      "",
+      "Je marcherai les yeux fixés sur mes pensées,",
+      "Sans rien voir au dehors, sans entendre aucun bruit,",
+      "Seul, inconnu, le dos courbé, les mains croisées,",
+      "Triste, et le jour pour moi sera comme la nuit.",
+      "",
+      "Je ne regarderai ni l’or du soir qui tombe,",
+      "Ni les voiles au loin descendant vers Harfleur,",
+      "Et, quand j’arriverai, je mettrai sur ta [[m|tombe]]",
+      "Un bouquet de houx vert et de bruyère en fleur."
+     ],
+     "auteur": "Victor Hugo",
+     "source": "Victor Hugo, « Demain, dès l’aube… », Les Contemplations (1856)"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Théo et d’Inès",
+     "participants": [
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Théo",
+       "texte": "J’ai lu « Demain, dès l’aube… ». C’est un amoureux qui va retrouver sa fiancée, non ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Relis le deuxième quatrain : « le dos courbé », « triste ». Il a l’air heureux, toi ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "Il est un peu fatigué, c’est tout. Il fait un long voyage."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Et regarde bien où il dépose le bouquet…"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Dans l’avant-dernier vers, un mot révèle enfin le but du voyage. Touche-le.",
+     "aide": "Quel mot désigne l’endroit où l’on dépose un bouquet pour un mort ?",
+     "explication": "Le mot **tombe** renverse le sens du poème : on croyait lire un poème d’amour, c’est un poème de deuil."
+    },
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "unite": "syllabes",
+     "enonce": "Compte les syllabes du vers : « Je ne puis demeurer loin de toi plus longtemps. »",
+     "aide": "Découpe ainsi : Je-ne-puis-de-meu-rer… Le « e » de « ne » et de « de » se prononce ici.",
+     "explication": "Je-ne-puis-de-meu-rer-loin-de-toi-plus-long-temps : **12 syllabes**, c’est un alexandrin, comme tous les vers du poème."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel élément du poème contredit l’idée de Théo (un amoureux qui va retrouver sa fiancée) ?",
+     "options": [
+      "Le mot « tombe » et le refus de regarder le monde, qui disent le deuil",
+      "Le fait que le poète parte tôt le matin, dès l’aube, pour un long voyage",
+      "Le choix de la forêt et de la montagne, qui sont des lieux difficiles",
+      "La présence du mot « bouquet », qui est un cadeau pour une fiancée"
+     ],
+     "reponse": 0,
+     "aide": "Cherche ce qui change le sens du bouquet, et les indices de tristesse déjà posés dans la strophe 2.",
+     "explication": "Les yeux baissés, le dos courbé et surtout la **tombe** prouvent qu’il s’agit d’un deuil : Inès a raison."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Le futur",
+       "« Je partirai », « J’irai »"
+      ],
+      [
+       "La négation répétée",
+       "« ni l’or du soir… Ni les voiles… »"
+      ],
+      [
+       "L’anaphore du « je »",
+       "« Je » repris en tête de phrase"
+      ],
+      [
+       "L’antithèse finale",
+       "Le houx vert et la bruyère en fleur"
+      ]
+     ],
+     "enonce": "Relie chaque procédé au passage qui l’illustre.",
+     "aide": "Un procédé = un effet : le futur de la certitude, le refus répété, la reprise du « je », deux plantes opposées.",
+     "explication": "Le **futur** rend le voyage certain, la **négation** exprime le refus du monde, l’**anaphore** concentre le poème sur un geste, l’**antithèse** réunit fidélité (houx) et fragilité (bruyère)."
+    }
+   ]
+  },
+  {
+   "chapitre": "77d56b69-676a-5c71-93dc-e13260eee0ca",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quelle pièce respecte les règles ?",
+   "competence": "lire-tableau",
+   "situation": "La mairie reçoit quatre propositions de pièces pour le festival de théâtre de la ville. L’organisatrice cherche celle qui suit les règles de la tragédie classique ; voici son tableau de synthèse (titres inventés pour l’exercice).",
+   "documents": [
+    {
+     "id": "programme",
+     "type": "tableau",
+     "titre": "Les quatre propositions",
+     "colonnes": [
+      "Pièce",
+      "Lieux de l’action",
+      "Durée de l’action",
+      "Sang versé sur scène"
+     ],
+     "lignes": [
+      [
+       "Le Roi d’Argos",
+       "Une salle du palais",
+       "Une journée",
+       "Non"
+      ],
+      [
+       "Le Prince errant",
+       "Cinq pays différents",
+       "Trois ans",
+       "Oui"
+      ],
+      [
+       "La Reine de Tyr",
+       "Le palais et le port",
+       "Vingt-quatre heures",
+       "Non"
+      ],
+      [
+       "Le Duel de minuit",
+       "Une ville, puis une forêt",
+       "Deux jours",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Pièces imaginées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "programme",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r2c2"
+     ],
+     "enonce": "Touche les **deux cases** qui respectent l’unité de temps (toute l’action tient en une journée).",
+     "aide": "La règle d’unité de temps limite l’action à vingt-quatre heures.",
+     "explication": "**Une journée** et **Vingt-quatre heures** respectent l’unité de temps ; « Deux jours » et « Trois ans » la rompent."
+    },
+    {
+     "type": "zone",
+     "document": "programme",
+     "reponse": [
+      "r0c0"
+     ],
+     "enonce": "Touche le titre de la **seule pièce** qui respecte à la fois l’unité de lieu, l’unité de temps et la bienséance.",
+     "aide": "Cherche un seul lieu, une journée, et pas de sang sur scène.",
+     "explication": "**Le Roi d’Argos** respecte les trois règles : un seul lieu, une journée, pas de sang. « La Reine de Tyr » change de lieu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle règle de la tragédie classique « Le Duel de minuit » rompt-il avec la mention « Oui » dans la dernière colonne ?",
+     "options": [
+      "La bienséance : on ne montre ni sang ni violence sur scène",
+      "L’unité d’action : une seule intrigue du début à la fin",
+      "La règle des rangs : seuls des rois peuvent être les héros",
+      "L’alexandrin : chaque vers doit compter douze syllabes"
+     ],
+     "reponse": 0,
+     "aide": "Que fait-on, dans la tragédie classique, des morts et de la violence ?",
+     "explication": "Montrer du sang rompt la **bienséance** : on les **raconte** (par un messager) mais on ne les montre pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "77d56b69-676a-5c71-93dc-e13260eee0ca",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Raconter la mort, ne pas la montrer",
+   "competence": "analyser-document",
+   "situation": "Une troupe répète une tragédie dans le goût du XVIIe siècle. Le metteur en scène hésite entre deux versions de la même scène (écrites pour l’exercice) : l’une respecte les règles classiques, l’autre non.",
+   "documents": [
+    {
+     "id": "versionA",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Version A",
+     "blocs": [
+      {
+       "didascalie": "Une salle du palais. La reine attend, inquiète. Un messager entre."
+      },
+      {
+       "personnage": "La Reine",
+       "replique": "Parle. Qu’est-il advenu du roi, mon époux ?"
+      },
+      {
+       "personnage": "Le Messager",
+       "replique": "[[r|Madame, au fort du combat, le roi a reçu le coup fatal et il est tombé sans un mot.]]"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "versionB",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Version B",
+     "blocs": [
+      {
+       "didascalie": "Une salle du palais. Le roi et son rival se battent devant le public."
+      },
+      {
+       "didascalie": "[[m|Le rival plante son épée dans la poitrine du roi, qui s’effondre en sang sur la scène.]]"
+      },
+      {
+       "personnage": "La Reine",
+       "replique": "Ah ! mon époux !"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Laquelle de ces deux versions respecte la bienséance de la tragédie classique ?",
+     "options": [
+      "La version A, où la mort est racontée par un messager",
+      "La version B, où la mort est jouée devant le public",
+      "Les deux versions, car la mort y est une action grande",
+      "Aucune des deux, car la reine devrait mourir aussi"
+     ],
+     "reponse": 0,
+     "aide": "Dans la tragédie classique, on ne montre ni sang ni violence.",
+     "explication": "La version A respecte la **bienséance** : un messager **raconte** la mort au lieu de la montrer."
+    },
+    {
+     "type": "zone",
+     "document": "versionA",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Dans la version A, touche la réplique qui raconte la mort du roi.",
+     "aide": "C’est la réplique du messager.",
+     "explication": "Le **récit du messager** apprend la mort au public sans la lui montrer : c’est le procédé du théâtre classique."
+    },
+    {
+     "type": "zone",
+     "document": "versionB",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Dans la version B, touche la didascalie qui montre ce que la bienséance interdit.",
+     "aide": "Cherche la phrase qui décrit un geste violent et du sang, sur la scène même.",
+     "explication": "La didascalie qui décrit le coup d’épée et le sang montre ce que la **bienséance** interdit."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Respecte la tragédie classique",
+      "Rompt avec la tragédie classique"
+     ],
+     "items": [
+      [
+       "Un récit raconte le duel",
+       0
+      ],
+      [
+       "Un duel se déroule sous les yeux du public",
+       1
+      ],
+      [
+       "L’action se passe dans un seul palais",
+       0
+      ],
+      [
+       "L’action voyage de ville en ville",
+       1
+      ],
+      [
+       "Le héros est un roi ou un prince",
+       0
+      ],
+      [
+       "Le héros est un valet qui plaisante",
+       1
+      ]
+     ],
+     "enonce": "Range chaque choix de mise en scène.",
+     "aide": "Relis les règles : un seul lieu, personnages élevés, violence racontée.",
+     "explication": "La tragédie classique **raconte** la violence, tient en **un seul lieu**, et met en scène des **personnages élevés** ; le reste appartient à d’autres genres."
+    }
+   ]
+  },
+  {
+   "chapitre": "77d56b69-676a-5c71-93dc-e13260eee0ca",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Titus, Bérénice et Antiochus",
+   "competence": "analyser-document",
+   "situation": "En classe, vous étudiez Bérénice (1670). Le professeur vous donne un schéma des personnages, un extrait de Racine et sa préface : comment cette pièce peut-elle être une tragédie sans aucun mort ?",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Les personnages et la loi de Rome",
+     "largeur": 320,
+     "hauteur": 290,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 12,
+       "l": 220,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Les lois de Rome",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "rome",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 110,
+       "l": 120,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "Titus",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "titus",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 190,
+       "y": 110,
+       "l": 120,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "Bérénice",
+       "teinte": "rose",
+       "motif": "clair",
+       "id": "berenice",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 224,
+       "l": 120,
+       "h": 44,
+       "arrondi": 8,
+       "texte": "Antiochus",
+       "teinte": "bleu",
+       "motif": "clair",
+       "id": "antiochus",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        52
+       ],
+       "a": [
+        70,
+        108
+       ],
+       "fleche": "fin",
+       "teinte": "ambre"
+      },
+      {
+       "forme": "texte",
+       "x": 82,
+       "y": 86,
+       "texte": "interdisent",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        132,
+        132
+       ],
+       "a": [
+        188,
+        132
+       ],
+       "fleche": "deux",
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 122,
+       "texte": "s’aiment",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        224
+       ],
+       "a": [
+        250,
+        156
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 252,
+       "y": 196,
+       "texte": "l’aime en silence",
+       "taille": "petit",
+       "ancre": "debut"
+      }
+     ]
+    },
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Bérénice, acte IV, scène 5",
+     "blocs": [
+      "Pour jamais ! Ah ! seigneur, songez-vous en vous-même",
+      "Combien ce mot [[a|cruel]] est [[a|affreux]] quand on aime ?"
+     ],
+     "auteur": "Jean Racine",
+     "source": "Racine, Bérénice (1670), acte IV, scène 5 (Bérénice)"
+    },
+    {
+     "id": "preface",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Extraits de la préface",
+     "blocs": [
+      "« Ce n’est point une nécessité qu’il y ait du sang et des morts dans une tragédie » … « il suffit que l’action en soit grande »"
+     ],
+     "auteur": "Jean Racine",
+     "source": "Racine, préface de Bérénice (extraits)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "reponse": [
+      "antiochus"
+     ],
+     "enonce": "Sur le schéma, touche le personnage qui aime Bérénice sans le lui dire.",
+     "aide": "Cherche la flèche en pointillés.",
+     "explication": "**Antiochus**, roi de Comagène et ami de Titus, aime Bérénice en silence."
+    },
+    {
+     "type": "choix",
+     "enonce": "À la lumière de la préface, pourquoi Bérénice est-elle une tragédie bien que personne n’y meure ?",
+     "options": [
+      "Parce que l’action est grande : l’amour s’y heurte à la loi de Rome",
+      "Parce que la reine finit par se tuer en coulisses, hors de la scène",
+      "Parce que la pièce est écrite en prose et dure plus d’une journée",
+      "Parce qu’Antiochus meurt de chagrin dans la dernière scène"
+     ],
+     "reponse": 0,
+     "aide": "La préface dit qu’il suffit d’une « action grande ». Quelle est la grandeur de l’action ici ?",
+     "explication": "La pièce est tragique par la **grandeur de son action** et son issue sans issue heureuse : un triple renoncement, sans aucune mort."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "reponse": [
+      "rome"
+     ],
+     "enonce": "Touche ce qui empêche Titus d’épouser Bérénice.",
+     "aide": "Bérénice est une reine étrangère : qui l’interdit à l’empereur ?",
+     "explication": "**Les lois de Rome** interdisent à l’empereur d’épouser une reine étrangère : l’amour s’oppose au devoir."
+    },
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Dans l’extrait, touche les **deux adjectifs** par lesquels Bérénice qualifie le mot « jamais ».",
+     "aide": "Cherche deux adjectifs qui s’accordent avec « mot », dans le second vers.",
+     "explication": "**cruel** et **affreux** disent la violence de la séparation : l’émotion naît des mots, pas du sang."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Titus, devenu empereur, aime toujours Bérénice",
+      "Rome lui interdit d’épouser une reine étrangère",
+      "Titus renonce à Bérénice",
+      "Bérénice part",
+      "Antiochus reste seul"
+     ],
+     "enonce": "Remets l’intrigue de la pièce dans l’ordre.",
+     "aide": "Pars de ce qui est vrai au début, puis de l’obstacle, puis des trois renoncements.",
+     "explication": "Titus aime Bérénice, Rome l’interdit, **Titus renonce**, **Bérénice part**, **Antiochus reste seul** : c’est le triple renoncement."
+    }
+   ]
+  },
+  {
+   "chapitre": "35a5afc0-a4ac-5dd2-b136-d64c98aaaf75",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Quatre scènes, quatre façons de rire",
+   "competence": "analyser-document",
+   "situation": "Le club théâtre du collège prépare une comédie. Avant de répéter, la metteuse en scène affiche sur la porte le résumé de quatre scènes : chacune fait rire d’une manière différente.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Fausse Lettre",
+     "sousTitre": "Comédie en un acte — résumé des scènes",
+     "emoji": "🎭",
+     "teinte": "ambre",
+     "lignes": [
+      {
+       "texte": "Scène 1",
+       "valeur": "Le valet trébuche et renverse tout le plateau",
+       "id": "s1"
+      },
+      {
+       "texte": "Scène 2",
+       "valeur": "Le maître prend son valet pour le notaire",
+       "id": "s2"
+      },
+      {
+       "texte": "Scène 3",
+       "valeur": "Le vieux Géronte compte son or, même en rêve",
+       "id": "s3"
+      },
+      {
+       "texte": "Scène 4",
+       "valeur": "Un jeu de mots sur « vers » et « verre »",
+       "id": "s4"
+      }
+     ],
+     "pied": "Comédie imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "s2"
+     ],
+     "enonce": "Touche la scène qui repose sur un **quiproquo** (on prend quelqu’un pour un autre).",
+     "aide": "Cherche une scène où un personnage est pris pour quelqu’un qu’il n’est pas.",
+     "explication": "Dans la scène 2, le maître **prend son valet pour le notaire** : c’est un quiproquo, un malentendu qui fait avancer l’intrigue."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "s3"
+     ],
+     "enonce": "Touche la scène de **comique de caractère** (un défaut poussé jusqu’au ridicule).",
+     "aide": "Quel personnage est ridicule à cause d’un défaut qui l’obsède ?",
+     "explication": "Le vieux Géronte est **avare** jusqu’au ridicule : c’est le comique de caractère, hérité de Molière."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Le valet trébuche",
+       "Comique de gestes"
+      ],
+      [
+       "Le jeu de mots sur « vers » et « verre »",
+       "Comique de mots"
+      ],
+      [
+       "Le notaire pris pour le valet",
+       "Comique de situation"
+      ],
+      [
+       "Géronte compte son or en rêve",
+       "Comique de caractère"
+      ]
+     ],
+     "enonce": "Relie chaque scène à son type de comique.",
+     "aide": "Gestes, mots, situation, caractère : demande-toi ce qui fait rire dans chaque scène.",
+     "explication": "Une chute fait rire par les **gestes**, un jeu de mots par les **mots**, un malentendu par la **situation**, un défaut excessif par le **caractère**."
+    }
+   ]
+  },
+  {
+   "chapitre": "35a5afc0-a4ac-5dd2-b136-d64c98aaaf75",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Figaro répond à son maître",
+   "competence": "analyser-texte",
+   "situation": "Au XVIIIe siècle, un valet de théâtre ose parler à son maître comme à un égal. Voici la célèbre tirade de Figaro et une petite frise pour la situer dans le temps.",
+   "documents": [
+    {
+     "id": "tirade",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Figaro à son maître",
+     "blocs": [
+      {
+       "personnage": "Figaro",
+       "replique": "[[p|Noblesse]], [[p|fortune]], un [[p|rang]], des [[p|places]], tout cela rend si fier ! Qu’avez-vous fait pour tant de biens ? Vous vous êtes donné la [[n|peine]] de [[n|naître]], et rien de plus."
+      }
+     ],
+     "auteur": "Beaumarchais",
+     "source": "Beaumarchais, Le Mariage de Figaro (1784), acte V, scène 3 (extrait)"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Marivaux et Beaumarchais",
+     "debut": 1680,
+     "fin": 1790,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "mariv",
+       "debut": 1688,
+       "fin": 1763,
+       "nom": "Vie de Marivaux",
+       "teinte": "violet"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "barbier",
+       "date": 1775,
+       "nom": "Le Barbier de Séville"
+      },
+      {
+       "id": "mariage",
+       "date": 1784,
+       "nom": "Le Mariage de Figaro"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les **quatre mots** qui énumèrent ce que le maître possède grâce à sa naissance.",
+     "aide": "Figaro énumère au début : un titre, de l’argent, une position, des charges.",
+     "explication": "**Noblesse, fortune, rang, places** : l’énumération montre tout ce que le maître doit à sa naissance et non à son mérite."
+    },
+    {
+     "type": "zone",
+     "document": "tirade",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche les **deux mots** qui disent le seul effort du maître pour mériter tous ces biens.",
+     "aide": "Cherche, à la fin de la tirade, ce que le maître s’est « donné ».",
+     "explication": "**peine** et **naître** : le maître s’est seulement « donné la peine de naître ». L’ironie de Figaro est cruelle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle critique de la société cette tirade exprime-t-elle ?",
+     "options": [
+      "Les privilèges de la naissance valent moins que le mérite",
+      "Les valets sont plus nombreux que les nobles et doivent gouverner",
+      "Les maîtres devraient augmenter les gages de leurs domestiques",
+      "Le mariage devrait toujours être arrangé par les parents"
+     ],
+     "reponse": 0,
+     "aide": "Que reproche Figaro à celui qui a tout reçu sans rien faire ?",
+     "explication": "Figaro dénonce l’**inégalité des conditions** : la naissance donne tout au maître, alors que le valet doit se faire valoir par son esprit."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "mariage"
+     ],
+     "enonce": "Sur la frise, touche la pièce dont est tirée la tirade.",
+     "aide": "Le titre de la pièce est écrit juste au-dessus de la tirade.",
+     "explication": "La tirade est tirée du **Mariage de Figaro** (1784)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 9,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent Le Barbier de Séville du Mariage de Figaro ?",
+     "aide": "Soustrais la date de la première pièce de celle de la seconde.",
+     "explication": "1784 − 1775 = **9 ans** entre Le Barbier de Séville (1775) et Le Mariage de Figaro (1784)."
+    }
+   ]
+  },
+  {
+   "chapitre": "35a5afc0-a4ac-5dd2-b136-d64c98aaaf75",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un jardin, deux amoureux qui se cachent",
+   "competence": "analyser-texte",
+   "situation": "Voici une scène écrite dans l’esprit de Marivaux : deux jeunes gens qui s’aiment font tout pour ne pas se l’avouer. Le professeur y joint un dossier qui compare trois comédies du XVIIIe siècle.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Dans le jardin",
+     "blocs": [
+      {
+       "didascalie": "Un jardin. Lucile lit sur un banc. Damis entre, l’air de passer par hasard."
+      },
+      {
+       "personnage": "Damis",
+       "replique": "Je passais, madame ; je ne vous cherchais pas."
+      },
+      {
+       "personnage": "Lucile",
+       "replique": "Je l’espère, monsieur : je ne vous attendais pas non plus."
+      },
+      {
+       "personnage": "Damis",
+       "replique": "Nous voilà donc d’accord sur tout, puisque nous n’avons rien à nous dire."
+      },
+      {
+       "personnage": "Lucile",
+       "replique": "[[r|Rien du tout. Restez pourtant : ce banc est le mieux placé du jardin, et il est vide.]]"
+      },
+      {
+       "personnage": "Damis",
+       "replique": "Il serait cruel de laisser un banc vide. Je reste… pour lui."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Marivaux"
+    },
+    {
+     "id": "dossier",
+     "type": "tableau",
+     "titre": "Trois comédies du XVIIIe siècle",
+     "colonnes": [
+      "Pièce",
+      "Auteur",
+      "Création",
+      "Obstacle à l’amour"
+     ],
+     "lignes": [
+      [
+       "Le Jeu de l’amour et du hasard",
+       "Marivaux",
+       "1730",
+       "L’amour-propre des personnages"
+      ],
+      [
+       "Le Mariage de Figaro",
+       "Beaumarchais",
+       "1784",
+       "Le pouvoir du maître"
+      ],
+      [
+       "Le Barbier de Séville",
+       "Beaumarchais",
+       "1775",
+       "Le pouvoir du tuteur"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche la réplique de Lucile qui trahit qu’elle veut retenir Damis.",
+     "aide": "Cherche la réplique où Lucile dit « Rien du tout » mais l’invite à rester.",
+     "explication": "Lucile dit « rien du tout » puis demande à Damis de **rester** : elle parle pour ne pas avouer ce qu’elle ressent. C’est le marivaudage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lucile et Damis ne se disent-ils pas franchement qu’ils s’aiment ?",
+     "options": [
+      "Leur amour-propre les empêche de reconnaître leur sentiment",
+      "Leurs pères leur ont interdit de se parler dans le jardin",
+      "Ils sont de deux conditions trop différentes pour s’aimer",
+      "Un rival les surveille derrière le banc et les menace"
+     ],
+     "reponse": 0,
+     "aide": "Chez Marivaux, l’obstacle n’est ni le père ni la société : il est dans les personnages eux-mêmes.",
+     "explication": "Chez Marivaux, c’est l’**amour-propre** qui fait obstacle : chacun refuse d’avouer le premier et avance masqué."
+    },
+    {
+     "type": "zone",
+     "document": "dossier",
+     "reponse": [
+      "r0c3"
+     ],
+     "enonce": "Dans le dossier, touche la case qui donne le même obstacle à l’amour que dans la scène.",
+     "aide": "Compare avec ta réponse précédente : l’obstacle est dans le cœur des personnages.",
+     "explication": "La case **« L’amour-propre des personnages »** correspond à la scène : c’est la marque du Jeu de l’amour et du hasard."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Marivaux",
+      "Beaumarchais"
+     ],
+     "items": [
+      [
+       "L’obstacle est l’amour-propre",
+       0
+      ],
+      [
+       "Le valet attaque les privilèges de son maître",
+       1
+      ],
+      [
+       "Dialogue léger où chacun avance masqué",
+       0
+      ],
+      [
+       "Pièce d’abord interdite par Louis XVI",
+       1
+      ],
+      [
+       "On parle pour ne pas s’avouer ce que l’on ressent",
+       0
+      ],
+      [
+       "Critique du pouvoir des pères et des maîtres",
+       1
+      ]
+     ],
+     "enonce": "Range chaque trait : s’agit-il de Marivaux ou de Beaumarchais ?",
+     "aide": "Marivaux fait de l’amour un jeu de langage ; Beaumarchais critique la société.",
+     "explication": "Marivaux met en scène un **jeu de langage** et l’amour-propre ; Beaumarchais pousse la **critique sociale** si loin que Louis XVI interdit d’abord sa pièce."
+    },
+    {
+     "type": "trous",
+     "texte": "Chez Marivaux, les personnages parlent pour ne pas ___ ce qu’ils ressentent, et le spectateur ___ avant eux.",
+     "reponses": [
+      [
+       "s’avouer",
+       "savouer"
+      ],
+      [
+       "comprend"
+      ]
+     ],
+     "banque": [
+      "s’avouer",
+      "comprend",
+      "oublier",
+      "ignore"
+     ],
+     "enonce": "Complète la définition du marivaudage.",
+     "aide": "Le spectateur a un coup d’avance sur les personnages.",
+     "explication": "Les personnages parlent pour ne pas **s’avouer** leurs sentiments, et le spectateur **comprend** avant eux."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcbb94fb-6cd1-5461-b9ca-a4fb206add7d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est déguisé en qui ?",
+   "competence": "lire-tableau",
+   "situation": "Au CDI, Camille prépare l’affichage d’une pièce de Marivaux, créée en 1730. Elle dresse le tableau des quatre personnages principaux pour que ses camarades ne s’y perdent pas.",
+   "documents": [
+    {
+     "id": "perso",
+     "type": "tableau",
+     "titre": "Le Jeu de l’amour et du hasard : les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est vraiment",
+      "Habit porté dans la pièce"
+     ],
+     "lignes": [
+      [
+       "Silvia",
+       "La fille de Monsieur Orgon",
+       "Celui d’une servante"
+      ],
+      [
+       "Lisette",
+       "La servante de Silvia",
+       "Celui d’une maîtresse"
+      ],
+      [
+       "Dorante",
+       "Le futur époux de Silvia",
+       "Celui d’un valet"
+      ],
+      [
+       "Arlequin",
+       "Le valet de Dorante",
+       "Celui d’un maître"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "perso",
+     "multiple": true,
+     "reponse": [
+      "r0c2",
+      "r2c2"
+     ],
+     "enonce": "Touche les **deux cases** qui montrent un personnage de condition élevée habillé en domestique.",
+     "aide": "Silvia et Dorante sont de bonne famille. Cherche leur habit.",
+     "explication": "Silvia porte l’habit d’une **servante** et Dorante celui d’un **valet**, alors qu’ils sont de condition élevée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le spectateur connaît dès le début tous les déguisements. Pourquoi cela rend-il la pièce drôle ?",
+     "options": [
+      "Il voit les personnages se tromper sans qu’ils le sachent",
+      "Il peut deviner la fin avant la première scène de la pièce",
+      "Il s’ennuie moins parce que l’intrigue est très compliquée",
+      "Il rit des domestiques qui se croient plus malins que lui"
+     ],
+     "reponse": 0,
+     "aide": "Qui en sait le plus : le public ou les personnages ?",
+     "explication": "Le public **sait ce que les personnages ignorent** : c’est le double registre, ressort comique de la pièce."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Silvia échange son habit avec sa servante Lisette",
+      "Dorante a eu la même idée et se présente en valet",
+      "Silvia et Dorante tombent amoureux sans le savoir",
+      "Dorante révèle son identité par amour",
+      "Silvia prolonge l’épreuve"
+     ],
+     "enonce": "Remets les grandes étapes de l’intrigue dans l’ordre.",
+     "aide": "Commence par le déguisement de Silvia, finis par ce qui suit la révélation de Dorante.",
+     "explication": "Les déguisements croisés mènent à un amour **sans le savoir**, puis à la révélation de **Dorante**, et à l’épreuve prolongée par **Silvia**."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcbb94fb-6cd1-5461-b9ca-a4fb206add7d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Deux apartés dans une salle",
+   "competence": "analyser-texte",
+   "situation": "Silvia, déguisée en servante, rencontre Dorante, déguisé en valet. Voici une scène écrite pour l’exercice, à la manière de Marivaux, et un tableau qui dit qui sait quoi à ce moment de la pièce.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "La rencontre",
+     "blocs": [
+      {
+       "didascalie": "Une salle de la maison de Monsieur Orgon. Silvia, habillée en servante, rencontre Dorante, habillé en valet."
+      },
+      {
+       "personnage": "Silvia",
+       "replique": "Bonjour, mon garçon. Vous cherchez Monsieur Orgon ?"
+      },
+      {
+       "personnage": "Dorante",
+       "replique": "Oui, ma belle enfant. Je suis le valet de Monsieur Dorante."
+      },
+      {
+       "personnage": "Dorante, à part",
+       "replique": "[[ap|Voilà une servante qui parle avec bien de la grâce.]]"
+      },
+      {
+       "personnage": "Silvia",
+       "replique": "Monsieur Orgon va venir. Asseyez-vous donc."
+      },
+      {
+       "personnage": "Silvia, à part",
+       "replique": "[[ap|Ce valet a des manières bien nobles ; je le croirais d’une autre condition.]]"
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Marivaux"
+    },
+    {
+     "id": "savoir",
+     "type": "tableau",
+     "titre": "Qui sait quoi ?",
+     "colonnes": [
+      "",
+      "Silvia",
+      "Dorante",
+      "Monsieur Orgon",
+      "Le spectateur"
+     ],
+     "lignes": [
+      [
+       "Sait que Silvia est déguisée",
+       "Oui",
+       "Non",
+       "Oui",
+       "Oui"
+      ],
+      [
+       "Sait que Dorante est déguisé",
+       "Non",
+       "Oui",
+       "Oui",
+       "Oui"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "ap"
+     ],
+     "enonce": "Touche les **deux apartés** : les répliques que l’autre personnage n’est pas censé entendre.",
+     "aide": "La mention « à part » précède le nom de celui qui parle.",
+     "explication": "Les deux répliques « **à part** » sont des apartés : elles sont dites au public, et l’autre personnage ne les entend pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le public rit-il de ces deux apartés ?",
+     "options": [
+      "Chacun juge noble l’autre sans savoir qu’il l’est vraiment",
+      "Les deux personnages se moquent l’un de l’autre à voix haute",
+      "Silvia révèle à Dorante qui elle est sans le vouloir",
+      "Dorante croit que Silvia est la maîtresse du valet"
+     ],
+     "reponse": 0,
+     "aide": "Le public connaît le rang réel des deux personnages.",
+     "explication": "Chacun devine la noblesse de l’autre sans pouvoir le dire : c’est l’**ironie dramatique**, le public en sait plus que les personnages."
+    },
+    {
+     "type": "nombre",
+     "reponse": 2,
+     "unite": "colonnes",
+     "enonce": "Dans le tableau, combien de colonnes montrent « Oui » dans les deux lignes (ceux qui savent tout) ?",
+     "aide": "Cherche une colonne dont les deux cases disent « Oui ».",
+     "explication": "**Monsieur Orgon** et **le spectateur** savent tout : les deux amoureux ne savent chacun que leur propre déguisement."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "L’aparté",
+       "« Voilà une servante qui parle avec bien de la grâce. »"
+      ],
+      [
+       "Le quiproquo",
+       "Chacun prend l’autre pour un domestique"
+      ],
+      [
+       "L’ironie dramatique",
+       "Le public sait que les deux sont nobles"
+      ]
+     ],
+     "enonce": "Relie chaque procédé à son exemple dans la scène.",
+     "aide": "Un procédé = une façon de faire rire : la réplique dite au public, le malentendu, le savoir du spectateur.",
+     "explication": "L’**aparté** est dit au public, le **quiproquo** repose sur une erreur d’identité, l’**ironie dramatique** vient du savoir du public."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcbb94fb-6cd1-5461-b9ca-a4fb206add7d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Dorante cède, Silvia prolonge",
+   "competence": "analyser-document",
+   "situation": "Voici la scène la plus importante de l’intrigue, réécrite pour l’exercice : Dorante dit la vérité, mais Silvia ne la dit pas encore. Un schéma résume l’enchaînement des événements.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "L’aveu",
+     "blocs": [
+      {
+       "didascalie": "Dorante a quitté son habit de valet."
+      },
+      {
+       "personnage": "Dorante",
+       "replique": "Je ne suis pas un valet : je suis Dorante. Je vous aimais sous cet habit, et je vous aimerais encore sans lui."
+      },
+      {
+       "personnage": "Silvia, à part",
+       "replique": "[[s|Il parle le premier. Mais je ne dirai pas qui je suis : je veux être aimée pour moi-même.]]"
+      },
+      {
+       "personnage": "Silvia",
+       "replique": "Monsieur, je suis flattée, mais je ne suis qu’une servante."
+      },
+      {
+       "personnage": "Dorante",
+       "replique": "Que m’importe ? Je vous épouserai quand même."
+      }
+     ],
+     "source": "Scène écrite pour l’exercice, à la manière de Marivaux"
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "L’enchaînement de la pièce",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Silvia et Dorante s’aiment sous leur déguisement"
+      },
+      {
+       "id": "n2",
+       "texte": "Dorante révèle son identité, par amour"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Silvia ôte à son tour le masque"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans le schéma ?",
+     "options": [
+      "Silvia prolonge l’épreuve pour être aimée pour elle-même",
+      "Monsieur Orgon interdit le mariage de sa fille à Dorante",
+      "Dorante découvre que Silvia est en réalité une servante",
+      "Arlequin et Lisette se disputent devant leurs maîtres"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’aparté de Silvia : que veut-elle encore vérifier ?",
+     "explication": "Silvia **prolonge l’épreuve** : elle veut être sûre que Dorante l’aime pour elle-même, pas pour son rang."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche la réplique qui explique pourquoi Silvia ne se dévoile pas encore.",
+     "aide": "C’est un aparté de Silvia.",
+     "explication": "Dans son **aparté**, Silvia explique sa décision : elle veut « être aimée pour [elle]-même »."
+    },
+    {
+     "type": "trous",
+     "texte": "À la fin, l’ordre social n’est pas ___ : maîtres et valets se marient chacun dans leur ___.",
+     "reponses": [
+      [
+       "renversé",
+       "renverse"
+      ],
+      [
+       "condition"
+      ]
+     ],
+     "banque": [
+      "renversé",
+      "condition",
+      "oublié",
+      "pays"
+     ],
+     "enonce": "Complète la conclusion sur la fin de la pièce.",
+     "aide": "La pièce célèbre le sentiment, mais ne bouleverse pas la société.",
+     "explication": "L’ordre social n’est **pas renversé** : Silvia épouse Dorante, Lisette épouse Arlequin, **chacun dans sa condition**."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "Dorante",
+       "Il cède le premier et révèle son identité par amour"
+      ],
+      [
+       "Silvia",
+       "Elle prolonge l’épreuve pour être aimée pour elle-même"
+      ],
+      [
+       "Monsieur Orgon et Mario",
+       "Ils sont dans la confidence et laissent faire"
+      ],
+      [
+       "Lisette et Arlequin",
+       "Ils se plaisent aussi, sous leur déguisement"
+      ]
+     ],
+     "enonce": "Relie chaque personnage à son rôle dans le dénouement.",
+     "aide": "Pense au double registre : qui est dans la confidence ?",
+     "explication": "Dorante **cède**, Silvia **prolonge**, le père et le frère **laissent faire**, les valets se plaisent à leur tour : toute la pièce repose sur ce jeu de masques."
+    }
+   ]
+  },
+  {
+   "chapitre": "46988e38-b7a3-509b-a4b7-9df5e4264aa3",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une pièce qui a attendu soixante ans",
+   "competence": "se-reperer-temps",
+   "situation": "Lola prépare une affiche pour la bibliothèque : elle veut montrer qu’une pièce de Musset, écrite en 1834, n’a pas été jouée tout de suite. Elle a tracé la frise des dates importantes.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Du manifeste à la scène",
+     "debut": 1820,
+     "fin": 1900,
+     "pas": 10,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "cromwell",
+       "date": 1827,
+       "nom": "Préface de Cromwell"
+      },
+      {
+       "id": "ecriture",
+       "date": 1834,
+       "nom": "Lorenzaccio écrite"
+      },
+      {
+       "id": "creation",
+       "date": 1896,
+       "nom": "Première création"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "cromwell"
+     ],
+     "enonce": "Touche l’événement par lequel Victor Hugo théorise le drame romantique.",
+     "aide": "C’est la date la plus ancienne de la frise.",
+     "explication": "La **Préface de Cromwell** (1827) est le manifeste du drame romantique, écrit par Victor Hugo."
+    },
+    {
+     "type": "nombre",
+     "reponse": 62,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent l’écriture de Lorenzaccio de sa première création sur scène ?",
+     "aide": "Soustrais 1834 de 1896.",
+     "explication": "1896 − 1834 = **62 ans** : la pièce est restée plus de soixante ans sans être jouée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la pièce a-t-elle été jugée injouable pendant si longtemps ?",
+     "options": [
+      "Elle ignore les contraintes de la scène de son temps",
+      "Elle respecte trop strictement la règle des trois unités",
+      "Elle a été interdite par Victor Hugo en personne",
+      "Elle n’avait pas de personnage principal assez célèbre"
+     ],
+     "reponse": 0,
+     "aide": "La pièce compte 5 actes, 39 scènes et une trentaine de personnages.",
+     "explication": "La pièce est **trop vaste** pour la scène de son temps : cinq actes, 39 scènes, une trentaine de personnages et des décors multiples."
+    }
+   ]
+  },
+  {
+   "chapitre": "46988e38-b7a3-509b-a4b7-9df5e4264aa3",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le plan d’un drame romantique",
+   "competence": "lire-tableau",
+   "situation": "Eliot veut montrer à sa classe ce qui sépare un drame romantique d’une tragédie classique. Il a imaginé le plan de trois scènes d’une pièce fictive, et se demande lesquelles sont « romantiques ».",
+   "documents": [
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Plan d’une pièce imaginée",
+     "colonnes": [
+      "Scène",
+      "Lieu",
+      "Personnages",
+      "Langage"
+     ],
+     "lignes": [
+      [
+       "I",
+       "Un marché de Florence",
+       "Un roi et un porteur d’eau",
+       "Vers et prose mêlés"
+      ],
+      [
+       "II",
+       "Une chambre du palais",
+       "Un duc et son bouffon",
+       "Le tragique et le comique côte à côte"
+      ],
+      [
+       "III",
+       "Une salle de la cour",
+       "Des nobles",
+       "Un seul style noble"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Pièce imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche la case qui montre que le drame mêle des personnages de conditions très différentes.",
+     "aide": "Cherche la case où un puissant côtoie un homme du peuple.",
+     "explication": "**Un roi et un porteur d’eau** : le drame mêle rois et gens du peuple, contrairement à la tragédie classique."
+    },
+    {
+     "type": "zone",
+     "document": "plan",
+     "reponse": [
+      "r1c3"
+     ],
+     "enonce": "Touche la case où le tragique et le comique se côtoient.",
+     "aide": "Cherche la colonne « Langage » de la scène du duc et de son bouffon.",
+     "explication": "Le **mélange du tragique et du comique** est un principe du drame romantique, qui rejette la séparation des genres."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Tragédie classique",
+      "Drame romantique"
+     ],
+     "items": [
+      [
+       "Une seule journée",
+       0
+      ],
+      [
+       "L’action s’étale sur des années",
+       1
+      ],
+      [
+       "Un seul lieu",
+       0
+      ],
+      [
+       "Des décors précis et historiques (couleur locale)",
+       1
+      ],
+      [
+       "Des personnages ni tout bons ni tout mauvais",
+       1
+      ],
+      [
+       "Séparation stricte du comique et du tragique",
+       0
+      ]
+     ],
+     "enonce": "Range chaque caractéristique : tragédie classique ou drame romantique ?",
+     "aide": "Le drame romantique rejette les règles classiques : unités, séparation des genres, décor conventionnel.",
+     "explication": "Le drame romantique **abolit les trois unités**, mêle les genres et réclame la **couleur locale**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle scène du plan ressemble le plus à une tragédie classique ?",
+     "options": [
+      "La scène III : des nobles qui parlent un seul style noble",
+      "La scène I : un roi et un porteur d’eau sur un marché",
+      "La scène II : un duc, un bouffon et un mélange de tons",
+      "Aucune, car toutes ces scènes se passent à Florence"
+     ],
+     "reponse": 0,
+     "aide": "La tragédie classique ne mélange ni les rangs, ni les tons, ni les langages.",
+     "explication": "La scène III garde des **personnages élevés** et **un seul style** : c’est la seule fidèle à l’esprit classique."
+    }
+   ]
+  },
+  {
+   "chapitre": "46988e38-b7a3-509b-a4b7-9df5e4264aa3",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un vice collé à la peau",
+   "competence": "analyser-texte",
+   "situation": "Léna étudie Lorenzaccio (Musset, 1834). Elle a relevé une réplique célèbre de Lorenzo et dessiné l’enchaînement de l’intrigue : il reste une case vide à remplir.",
+   "documents": [
+    {
+     "id": "citation",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Lorenzo parle de lui-même",
+     "blocs": [
+      {
+       "personnage": "Lorenzo",
+       "replique": "Le vice a été pour moi un [[v|vêtement]] ; maintenant il est [[v|collé]] à ma peau."
+      }
+     ],
+     "auteur": "Alfred de Musset",
+     "source": "Musset, Lorenzaccio (1834), acte III (extrait)"
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "L’intrigue",
+     "noeuds": [
+      {
+       "id": "a",
+       "texte": "Alexandre de Médicis, tyran de Florence"
+      },
+      {
+       "id": "b",
+       "texte": "Lorenzo se fait son complice"
+      },
+      {
+       "id": "c",
+       "texte": "?"
+      },
+      {
+       "id": "d",
+       "texte": "Il tue le tyran… et rien ne change"
+      }
+     ],
+     "liens": [
+      {
+       "de": "a",
+       "a": "b"
+      },
+      {
+       "de": "b",
+       "a": "c"
+      },
+      {
+       "de": "c",
+       "a": "d"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "citation",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les **deux mots** qui comparent le vice à un habit qu’on ne peut plus ôter.",
+     "aide": "Cherche un nom qui désigne un habit, puis un participe qui dit qu’il ne se retire pas.",
+     "explication": "**vêtement** et **collé** font du vice un habit devenu une seconde peau : le masque ne s’enlève plus."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la place du « ? » dans l’enchaînement ?",
+     "options": [
+      "Il joue le débauché : c’est un masque pour approcher le tyran",
+      "Il oublie qui est le tyran et devient son meilleur ami",
+      "Il quitte Florence pour échapper au pouvoir des Médicis",
+      "Il se fait élire duc à la place du tyran par les Florentins"
+     ],
+     "reponse": 0,
+     "aide": "Lorenzo se fait complice d’Alexandre dans un but précis.",
+     "explication": "Lorenzo **joue le débauché** : c’est un masque qui lui permet d’approcher Alexandre pour le tuer."
+    },
+    {
+     "type": "trous",
+     "texte": "À force de jouer le ___ pour approcher le tyran, Lorenzo l’est ___ : le masque est devenu son ___.",
+     "reponses": [
+      [
+       "débauché",
+       "debauche"
+      ],
+      [
+       "devenu"
+      ],
+      [
+       "visage",
+       "vrai visage"
+      ]
+     ],
+     "banque": [
+      "débauché",
+      "devenu",
+      "visage",
+      "roi",
+      "resté"
+     ],
+     "enonce": "Complète ce que montre la réplique de Lorenzo.",
+     "aide": "Le mot « vêtement » dit que le vice était un masque ; « collé » dit qu’il ne se retire plus.",
+     "explication": "Lorenzo a joué le **débauché** jusqu’à l’**être devenu** : son masque est devenu son **visage**."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Lorenzo se fait le complice d’Alexandre",
+      "Il assassine Alexandre de Médicis",
+      "Les Florentins laissent élire Côme",
+      "Lorenzo est assassiné à son tour"
+     ],
+     "enonce": "Remets les événements de l’intrigue dans l’ordre.",
+     "aide": "Le meurtre d’Alexandre précède l’élection de Côme.",
+     "explication": "Après le meurtre, **rien ne change** : les Florentins laissent élire Côme, et Lorenzo est assassiné à son tour."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Lorenzo agit-il sans plus croire à l’utilité de son acte ?",
+     "options": [
+      "Il tue pour rester fidèle à celui qu’il a été",
+      "Il y est forcé par les ordres du roi de France",
+      "Il espère devenir à son tour le maître de Florence",
+      "Il veut venger la mort de son père, assassiné autrefois"
+     ],
+     "reponse": 0,
+     "aide": "Pense au « mal du siècle » : un acte qui paraît vain, mais qui garde un sens pour lui.",
+     "explication": "Il tue **pour rester fidèle à celui qu’il a été** : la pièce interroge l’engagement et son inutilité."
+    }
+   ]
+  },
+  {
+   "chapitre": "92914028-1f3d-5b10-9383-a7c16ea1d813",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux pères, deux enfants, un affront",
+   "competence": "analyser-document",
+   "situation": "Pour présenter Le Cid au club théâtre, Maëlle a réalisé une petite affiche avec les quatre personnages de départ. Elle doit retrouver le rôle de chacun avant de raconter l’intrigue.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Cid",
+     "sousTitre": "Tragi-comédie de Corneille — 1637",
+     "emoji": "⚔️",
+     "teinte": "ambre",
+     "lignes": [
+      {
+       "texte": "Rodrigue",
+       "valeur": "Aime Chimène ; fils de Don Diègue",
+       "id": "rodrigue"
+      },
+      {
+       "texte": "Chimène",
+       "valeur": "Aime Rodrigue ; fille de Don Gomès",
+       "id": "chimene"
+      },
+      {
+       "texte": "Don Gomès",
+       "valeur": "Père de Chimène",
+       "id": "gomes"
+      },
+      {
+       "texte": "Don Diègue",
+       "valeur": "Père de Rodrigue, trop vieux pour se venger",
+       "id": "diegue"
+      }
+     ],
+     "pied": "Affiche réalisée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "gomes"
+     ],
+     "enonce": "Touche le personnage qui insulte et gifle Don Diègue : c’est l’affront qui lance l’intrigue.",
+     "aide": "Don Diègue est le père de Rodrigue. Qui est l’autre père de la liste ?",
+     "explication": "**Don Gomès**, père de Chimène, gifle Don Diègue. Don Diègue, trop vieux pour se venger, demande à son fils Rodrigue de le faire."
+    },
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "chimene"
+     ],
+     "enonce": "Touche le personnage qui doit réclamer au roi la mort de Rodrigue.",
+     "aide": "Rodrigue a tué son père en duel.",
+     "explication": "**Chimène** doit réclamer au roi la mort de Rodrigue, qui a tué son père Don Gomès : elle aime pourtant Rodrigue."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Don Gomès gifle Don Diègue, trop vieux pour se venger",
+      "Rodrigue doit choisir entre l’honneur et son amour",
+      "Rodrigue tue Don Gomès en duel",
+      "Chimène doit réclamer au roi la mort de Rodrigue",
+      "Rodrigue vainc les Maures et devient « le Cid »",
+      "Le roi accorde aux amants un délai d’un an"
+     ],
+     "enonce": "Remets l’intrigue du Cid dans l’ordre.",
+     "aide": "L’affront vient d’abord ; la victoire contre les Maures arrive avant la décision du roi.",
+     "explication": "L’**affront** lance le choix de Rodrigue, puis le duel, la demande de Chimène, la victoire sur les Maures et enfin le **délai d’un an** accordé par le roi."
+    }
+   ]
+  },
+  {
+   "chapitre": "92914028-1f3d-5b10-9383-a7c16ea1d813",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Venger un père, perdre une maîtresse",
+   "competence": "analyser-texte",
+   "situation": "Rodrigue vient d’apprendre que son père a été giflé. Seul sur scène, il dit son déchirement. Voici quatre vers de ses stances et un tableau qui résume ses deux chemins.",
+   "documents": [
+    {
+     "id": "stances",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les stances de Rodrigue",
+     "blocs": [
+      "Que je sens de rudes combats !",
+      "Contre mon propre honneur mon amour s’intéresse :",
+      "Il faut [[v|venger]] un père, et [[v|perdre]] une maîtresse.",
+      "L’un m’anime le cœur, l’autre retient mon bras."
+     ],
+     "auteur": "Pierre Corneille",
+     "source": "Corneille, Le Cid (1637), acte I, scène 6 (extrait)"
+    },
+    {
+     "id": "voies",
+     "type": "tableau",
+     "titre": "Les deux chemins de Rodrigue",
+     "colonnes": [
+      "Rodrigue choisit de…",
+      "Il garde",
+      "Il perd"
+     ],
+     "lignes": [
+      [
+       "Venger son père",
+       "Son honneur",
+       "?"
+      ],
+      [
+       "Renoncer à venger son père",
+       "?",
+       "Sa valeur et son nom"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stances",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les **deux verbes** qui disent entre quoi Rodrigue est déchiré.",
+     "aide": "Cherche le vers qui commence par « Il faut ».",
+     "explication": "**venger** (son père) et **perdre** (sa maîtresse) : voilà les deux termes du dilemme."
+    },
+    {
+     "type": "nombre",
+     "reponse": 12,
+     "unite": "syllabes",
+     "enonce": "Compte les syllabes du dernier vers : « L’un m’anime le cœur, l’autre retient mon bras. »",
+     "aide": "Le « e » muet compte devant une consonne : ani-me le, au-tre re-tient.",
+     "explication": "L’un-m’a-ni-me-le-cœur-l’au-tre-re-tient-mon-bras : **12 syllabes**, un alexandrin."
+    },
+    {
+     "type": "choix",
+     "enonce": "D’après le tableau, que perd Rodrigue s’il venge son père ?",
+     "options": [
+      "Chimène, la femme qu’il aime",
+      "Son père, qui meurt de chagrin",
+      "Sa liberté, car le roi l’emprisonne",
+      "Son courage, perdu dans le duel"
+     ],
+     "reponse": 0,
+     "aide": "Qui est le père de la personne qu’il aime, et que devient-il dans le duel ?",
+     "explication": "En vengeant son père, Rodrigue tue Don Gomès et **perd Chimène**. Quel que soit son choix, il perd quelque chose d’essentiel : c’est un dilemme."
+    },
+    {
+     "type": "association",
+     "paires": [
+      [
+       "La tragi-comédie",
+       "La gravité d’une tragédie, mais une fin heureuse"
+      ],
+      [
+       "Les stances",
+       "Le monologue où Rodrigue se déchire"
+      ],
+      [
+       "Le dilemme cornélien",
+       "Un choix entre deux valeurs également hautes"
+      ]
+     ],
+     "enonce": "Relie chaque mot du cours à sa définition.",
+     "aide": "Les stances sont un monologue ; la tragi-comédie finit bien.",
+     "explication": "Le Cid est une **tragi-comédie** ; les **stances** sont le monologue de Rodrigue ; le **dilemme cornélien** oppose deux valeurs également hautes."
+    }
+   ]
+  },
+  {
+   "chapitre": "92914028-1f3d-5b10-9383-a7c16ea1d813",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Percé jusques au fond du cœur",
+   "competence": "analyser-texte",
+   "situation": "En classe, vous comparez la manière dont Corneille et Racine peignent leurs héros. Voici le début des stances de Rodrigue, et une frise sur l’histoire de la pièce.",
+   "documents": [
+    {
+     "id": "stances",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Début des stances",
+     "blocs": [
+      "[[b|Percé]] jusques au fond du cœur",
+      "D’une [[b|atteinte]] imprévue aussi bien que [[b|mortelle]],",
+      "Misérable vengeur d’une [[j|juste]] querelle,",
+      "Et malheureux objet d’une [[j|injuste]] rigueur,",
+      "Je demeure immobile, et mon âme abattue",
+      "Cède au coup qui me tue."
+     ],
+     "auteur": "Pierre Corneille",
+     "source": "Corneille, Le Cid (1637), acte I, scène 6 (début des stances)"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La pièce et son titre",
+     "debut": 1630,
+     "fin": 1650,
+     "pas": 5,
+     "periodes": [],
+     "evenements": [
+      {
+       "id": "creation",
+       "date": 1637,
+       "nom": "Création du Cid"
+      },
+      {
+       "id": "tragedie",
+       "date": 1648,
+       "nom": "Rebaptisé tragédie"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "stances",
+     "multiple": true,
+     "reponse": [
+      "b"
+     ],
+     "portee": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "enonce": "Dans les quatre premiers vers, touche les **trois mots** qui disent que Rodrigue est frappé.",
+     "aide": "Cherche un participe, un nom et un adjectif qui évoquent un coup mortel.",
+     "explication": "**Percé, atteinte, mortelle** : Rodrigue se dit blessé au cœur par l’affront fait à son père."
+    },
+    {
+     "type": "zone",
+     "document": "stances",
+     "multiple": true,
+     "reponse": [
+      "j"
+     ],
+     "enonce": "Touche les **deux adjectifs** qui s’opposent entre la querelle et la rigueur.",
+     "aide": "Cherche deux adjectifs dont l’un est le contraire de l’autre, aux vers 3 et 4.",
+     "explication": "**juste** et **injuste** forment une antithèse : la querelle est juste, mais le sort qui l’accompagne est injuste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montrent les mots « Je demeure immobile » ?",
+     "options": [
+      "Rodrigue est paralysé par son dilemme",
+      "Rodrigue s’est déjà décidé à venger son père",
+      "Rodrigue attend qu’on vienne lui donner un conseil",
+      "Rodrigue est tombé de fatigue après le duel"
+     ],
+     "reponse": 0,
+     "aide": "Qu’est-ce qui empêche Rodrigue d’agir, au moment où il parle ?",
+     "explication": "Le dilemme paralyse Rodrigue : quel que soit son choix, il **perd** quelque chose d’essentiel."
+    },
+    {
+     "type": "nombre",
+     "reponse": 11,
+     "unite": "ans",
+     "enonce": "Combien d’années séparent la création du Cid du moment où Corneille le rebaptise « tragédie » ?",
+     "aide": "Soustrais 1637 de 1648.",
+     "explication": "1648 − 1637 = **11 ans** : la tragi-comédie devient « tragédie » après la querelle du Cid."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Le héros de Corneille",
+      "Le héros de Racine"
+     ],
+     "items": [
+      [
+       "Il choisit, quoi qu’il en coûte",
+       0
+      ],
+      [
+       "Il est écrasé par une passion qu’il subit",
+       1
+      ],
+      [
+       "Il grandit par son choix",
+       0
+      ],
+      [
+       "Il se définit par sa volonté",
+       0
+      ]
+     ],
+     "enonce": "Range chaque trait : héros de Corneille ou héros de Racine ?",
+     "aide": "Rodrigue choisit ; Titus (dans Bérénice) est dominé par une passion et par la loi de Rome.",
+     "explication": "Le héros cornélien se définit par sa **volonté** et grandit par son choix ; le héros racinien est **écrasé** par une passion qu’il subit."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5c44eab-38c6-5217-9e7b-4a722e681f01",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les nouvelles du club lecture",
+   "competence": "lire-tableau",
+   "situation": "Le club lecture du collège a recopié sur une fiche cinq récits courts que ses membres ont aimés. La documentaliste veut les ranger par registre et par auteur.",
+   "documents": [
+    {
+     "id": "etagere",
+     "type": "tableau",
+     "titre": "L’étagère du club lecture",
+     "colonnes": [
+      "Titre",
+      "Auteur",
+      "Registre"
+     ],
+     "lignes": [
+      [
+       "La Parure",
+       "Maupassant",
+       "Réaliste"
+      ],
+      [
+       "Le Horla",
+       "Maupassant",
+       "Fantastique"
+      ],
+      [
+       "La Vénus d’Ille",
+       "Mérimée",
+       "Fantastique"
+      ],
+      [
+       "Micromégas",
+       "Voltaire",
+       "Conte philosophique"
+      ],
+      [
+       "Boule de Suif",
+       "Maupassant",
+       "Réaliste"
+      ]
+     ],
+     "enteteLignes": false
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etagere",
+     "multiple": true,
+     "reponse": [
+      "r1c2",
+      "r2c2"
+     ],
+     "enonce": "Touche les **deux cases** qui désignent des nouvelles fantastiques.",
+     "aide": "Le fantastique, c’est l’irruption de l’inexplicable dans un cadre réaliste. Regarde la colonne « Registre ».",
+     "explication": "**Le Horla** et **La Vénus d’Ille** sont des nouvelles fantastiques ; les autres sont réalistes ou philosophiques."
+    },
+    {
+     "type": "zone",
+     "document": "etagere",
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche l’auteur du XVIIIe siècle, qui a fait du récit bref un outil philosophique.",
+     "aide": "Cherche un nom qui ne soit ni Maupassant ni Mérimée, auteurs du XIXe siècle.",
+     "explication": "**Voltaire** écrit au XVIIIe siècle : ses contes philosophiques (Candide, Micromégas) font du récit bref un outil de réflexion."
+    },
+    {
+     "type": "nombre",
+     "reponse": 3,
+     "unite": "titres",
+     "enonce": "Combien de titres de Maupassant figurent sur l’étagère ?",
+     "aide": "Lis la colonne « Auteur » de haut en bas.",
+     "explication": "Maupassant a écrit **La Parure, Le Horla et Boule de Suif** : 3 titres, du réalisme au fantastique."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5c44eab-38c6-5217-9e7b-4a722e681f01",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La fleur sur le pas de la porte",
+   "competence": "analyser-texte",
+   "situation": "Voici une très courte nouvelle écrite pour l’exercice. Sa chute est préparée : relis-la en cherchant les indices que le narrateur a semés.",
+   "documents": [
+    {
+     "id": "fleur",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La fleur du matin",
+     "blocs": [
+      "Chaque matin d’avril, Léo trouvait sur le pas de sa porte une marguerite fraîchement cueillie.",
+      "Il soupçonna la voisine du dessus, puis le facteur, puis la boulangère. Aucun ne savait rien. Les tiges étaient coupées de travers, comme avec des ciseaux d’[[i|écolier]].",
+      "Un matin, il se leva avant l’aube et guetta derrière le rideau. Dans la terre humide du jardin, il remarqua des traces de pas [[i|minuscules]].",
+      "À six heures, la porte du fond s’entrouvrit. Une petite fille en chemise de nuit déposa la fleur sur le seuil et s’enfuit en riant : c’était sa petite sœur [[c|Lili]], âgée de cinq ans."
+     ],
+     "source": "Nouvelle écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fleur",
+     "multiple": true,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche les **deux mots** qui, à la relecture, annonçaient déjà la chute.",
+     "aide": "Cherche deux mots qui évoquent un enfant, dans les paragraphes 2 et 3.",
+     "explication": "**écolier** et **minuscules** étaient des indices : à la relecture, on comprend que le visiteur est un enfant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel type de chute cette nouvelle propose-t-elle ?",
+     "options": [
+      "Elle révèle une information cachée : l’identité de celle qui apporte les fleurs",
+      "Elle retourne la morale attendue : le méchant devient le héros du récit",
+      "Elle laisse l’histoire en suspens, sans jamais répondre à la question",
+      "Elle n’a pas de chute, car le texte se termine sur une description"
+     ],
+     "reponse": 0,
+     "aide": "Qui apporte les fleurs ? Quand le lecteur l’apprend-il ?",
+     "explication": "La chute **révèle une information cachée** : la visiteuse est la petite sœur de Léo, comme dans La Parure la vérité sur le collier est révélée à la fin."
+    },
+    {
+     "type": "zone",
+     "document": "fleur",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le prénom de celle qui dépose les fleurs.",
+     "aide": "C’est dans le dernier paragraphe, juste après « sa petite sœur ».",
+     "explication": "C’est **Lili**, la petite sœur de cinq ans de Léo, qui apportait les fleurs."
+    },
+    {
+     "type": "trous",
+     "texte": "Une bonne chute est ___ : à la relecture, les ___ étaient là.",
+     "reponses": [
+      [
+       "préparée",
+       "preparee"
+      ],
+      [
+       "indices"
+      ]
+     ],
+     "banque": [
+      "préparée",
+      "indices",
+      "inventée",
+      "hasards"
+     ],
+     "enonce": "Complète ce que dit le cours sur une bonne chute.",
+     "aide": "Une chute qui sort de nulle part n’est pas une chute, c’est une invraisemblance.",
+     "explication": "Une bonne chute est **préparée** : à la relecture, les **indices** étaient là."
+    }
+   ]
+  },
+  {
+   "chapitre": "a5c44eab-38c6-5217-9e7b-4a722e681f01",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le chêne qui parle, la soupe qui fume",
+   "competence": "analyser-document",
+   "situation": "Deux élèves ont écrit chacun l’ouverture d’un récit : l’un fantastique, l’autre merveilleux. Leur professeur leur demande de justifier le registre choisi et de juger la chute d’un troisième texte.",
+   "documents": [
+    {
+     "id": "a",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Extrait A",
+     "blocs": [
+      "Madame Lefort habitait un appartement banal au troisième étage, près de la gare. Ce soir-là, en rentrant, elle trouva la table mise pour deux, alors qu’elle vivait seule.",
+      "La soupe [[f|fumait]] encore. Elle appela ; personne ne répondit. Dans le miroir de l’entrée, elle crut voir une silhouette s’asseoir."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    },
+    {
+     "id": "b",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Extrait B",
+     "blocs": [
+      "Il était une fois, dans un royaume où les chênes parlaient, une princesse qui se promenait chaque matin sous leurs branches.",
+      "Quand le plus vieux chêne lui dit bonjour, elle répondit poliment, comme tout le monde, et lui demanda des nouvelles de ses glands."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "categories": [
+      "Fantastique",
+      "Merveilleux",
+      "Réaliste"
+     ],
+     "items": [
+      [
+       "La soupe fume alors que personne n’a cuisiné",
+       0
+      ],
+      [
+       "Un chêne salue la princesse et personne ne s’en étonne",
+       1
+      ],
+      [
+       "Un appartement banal au troisième étage près de la gare",
+       2
+      ],
+      [
+       "Dans le miroir, une silhouette que personne d’autre ne voit",
+       0
+      ],
+      [
+       "La princesse répond poliment au chêne, comme tout le monde",
+       1
+      ],
+      [
+       "Madame Lefort rentre le soir chez elle",
+       2
+      ]
+     ],
+     "enonce": "Range chaque détail des deux extraits dans son registre.",
+     "aide": "Réaliste : le cadre ordinaire. Fantastique : l’inexplicable qui inquiète. Merveilleux : le surnaturel admis sans étonnement.",
+     "explication": "Le **réaliste** pose le cadre, le **fantastique** fait surgir l’inexplicable, le **merveilleux** admet le surnaturel sans étonnement."
+    },
+    {
+     "type": "zone",
+     "document": "a",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui prouve que quelqu’un vient de préparer le repas : c’est ce qui rend la scène inexplicable.",
+     "aide": "Que fait une soupe tout juste servie ?",
+     "explication": "La soupe **fumait** : elle vient d’être servie, alors que personne n’est là. L’inexplicable fait irruption dans un cadre réaliste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’extrait A est-il fantastique et non merveilleux ?",
+     "options": [
+      "Un fait inexplicable surgit dans un cadre réaliste et inquiète l’héroïne",
+      "Le surnaturel y est accepté sans étonnement par tous les personnages",
+      "L’histoire se passe dans un royaume où les arbres savent parler",
+      "Le texte est écrit au passé simple, comme tous les contes de fées"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec l’extrait B : qui s’étonne, et qui ne s’étonne pas ?",
+     "explication": "Dans le **fantastique**, l’inexplicable fait irruption dans le quotidien et provoque le trouble ; dans le **merveilleux**, le surnaturel est admis."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un élève termine sa nouvelle par « Elle s’éveilla : ce n’était qu’un rêve. » Pourquoi est-ce une mauvaise chute ?",
+     "options": [
+      "Elle ne s’appuie sur aucun indice préparé : elle sort de nulle part",
+      "Elle est trop courte pour qu’un lecteur puisse la comprendre",
+      "Elle révèle une information qui avait déjà été donnée au début",
+      "Elle laisse le lecteur sans aucune réponse à ses questions"
+     ],
+     "reponse": 0,
+     "aide": "Une bonne chute est préparée par des indices.",
+     "explication": "Une bonne chute est **préparée** ; « ce n’était qu’un rêve » sort de nulle part, c’est une invraisemblance et non une vraie chute."
+    }
+   ]
+  },
+  {
+   "chapitre": "47687896-757b-5f82-9a14-52626788c308",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Gervaise, blanchisseuse à Paris",
+   "competence": "analyser-document",
+   "situation": "Pour son exposé, Axel présente L’Assommoir de Zola. Il a préparé une affiche avec les personnages principaux, une frise du cycle des Rougon-Macquart et une liste de l’intrigue à remettre en ordre.",
+   "documents": [
+    {
+     "id": "affiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "L’Assommoir",
+     "sousTitre": "Roman d’Émile Zola — 1877",
+     "emoji": "📖",
+     "teinte": "brun",
+     "lignes": [
+      {
+       "texte": "Gervaise Macquart",
+       "valeur": "Blanchisseuse, boiteuse",
+       "id": "gervaise"
+      },
+      {
+       "texte": "Coupeau",
+       "valeur": "Ouvrier, son mari",
+       "id": "coupeau"
+      },
+      {
+       "texte": "Nana",
+       "valeur": "Leur fille",
+       "id": "nana"
+      }
+     ],
+     "pied": "Septième roman des Rougon-Macquart"
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le cycle des Rougon-Macquart",
+     "debut": 1870,
+     "fin": 1895,
+     "pas": 5,
+     "periodes": [
+      {
+       "id": "cycle",
+       "debut": 1871,
+       "fin": 1893,
+       "nom": "Les Rougon-Macquart",
+       "teinte": "brun"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "assommoir",
+       "date": 1877,
+       "nom": "L’Assommoir"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "affiche",
+     "reponse": [
+      "gervaise"
+     ],
+     "enonce": "Touche l’héroïne de L’Assommoir.",
+     "aide": "C’est la blanchisseuse dont le roman raconte la vie et la déchéance.",
+     "explication": "**Gervaise Macquart**, blanchisseuse et boiteuse, est l’héroïne : Zola montre comment le milieu défait une femme courageuse."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "assommoir"
+     ],
+     "enonce": "Sur la frise, touche la date de publication de L’Assommoir.",
+     "aide": "Cherche l’événement placé à l’intérieur du cycle des Rougon-Macquart.",
+     "explication": "L’Assommoir paraît en **1877**, au milieu du cycle des Rougon-Macquart (1871 à 1893)."
+    },
+    {
+     "type": "nombre",
+     "reponse": 6,
+     "unite": "ans",
+     "enonce": "Combien d’années après le début du cycle paraît L’Assommoir ?",
+     "aide": "Le cycle commence en 1871 : soustrais.",
+     "explication": "1877 − 1871 = **6 ans** : L’Assommoir est le septième roman d’un cycle de vingt romans."
+    },
+    {
+     "type": "ordre",
+     "items": [
+      "Gervaise arrive à Paris",
+      "Elle épouse Coupeau",
+      "Ils ouvrent une blanchisserie",
+      "Coupeau tombe d’un toit",
+      "Coupeau se met à boire",
+      "Gervaise sombre dans la misère"
+     ],
+     "enonce": "Remets l’intrigue de L’Assommoir dans l’ordre.",
+     "aide": "La chute de Coupeau est le point de bascule : avant, le couple réussit ; après, tout se défait.",
+     "explication": "Après l’**accident de Coupeau**, l’alcool, les dettes et la faim entraînent la déchéance de Gervaise."
+    }
+   ]
+  },
+  {
+   "chapitre": "47687896-757b-5f82-9a14-52626788c308",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Chez le père Colombe",
+   "competence": "analyser-texte",
+   "situation": "Voici une description écrite pour l’exercice, à la manière de Zola, d’un débit d’alcool de quartier populaire : on y entre en riant. Le texte est complété par une phrase qui résume la méthode de Zola.",
+   "documents": [
+    {
+     "id": "debit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le débit de boissons",
+     "blocs": [
+      "Au coin de la rue, la boutique du père Colombe luisait de tous ses cuivres. Dans la salle, un grand [[a|alambic]] ronflait sans repos et laissait couler goutte à goutte une [[a|eau-de-vie]] claire.",
+      "Les ouvriers entraient en riant, le verre à la main ; ils en sortaient en [[v|titubant]], l’œil vitreux, la voix pâteuse."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Zola"
+    },
+    {
+     "id": "methode",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La méthode du romancier",
+     "blocs": [
+      "Selon Zola, le romancier doit être à la fois [[o|observateur]] et [[o|expérimentateur]]."
+     ],
+     "source": "D’après Zola, Le Roman expérimental (paraphrase, sans citation)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debit",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les **deux mots** qui désignent la machine et l’alcool qui en coule.",
+     "aide": "Cherche un grand appareil de cuivre, puis ce qu’il fabrique.",
+     "explication": "**alambic** et **eau-de-vie** : c’est le champ lexical de l’alcool, qui donne son nom au roman."
+    },
+    {
+     "type": "zone",
+     "document": "debit",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le mot qui décrit la démarche des ouvriers à la sortie.",
+     "aide": "Cherche un participe présent qui dit qu’ils marchent mal.",
+     "explication": "**titubant** montre l’effet de l’alcool sur le corps des ouvriers : le milieu les atteint dans leur chair."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel effet produit le contraste entre l’entrée (« en riant ») et la sortie (« en titubant ») ?",
+     "options": [
+      "Il montre que l’alcool détruit ceux qui le boivent",
+      "Il montre que les ouvriers sont heureux de leur journée",
+      "Il montre que le père Colombe est un cabaretier généreux",
+      "Il montre que les ouvriers changent de métier le soir"
+     ],
+     "reponse": 0,
+     "aide": "Compare l’état des ouvriers avant et après le passage chez le père Colombe.",
+     "explication": "Le contraste montre le **pouvoir destructeur de l’alcool** : le mot « assommoir » dit ce qui assomme."
+    },
+    {
+     "type": "zone",
+     "document": "methode",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les **deux mots** qui disent la méthode scientifique que Zola attend du romancier.",
+     "aide": "Cherche deux noms qui se terminent par -teur, dans la phrase.",
+     "explication": "Le romancier naturaliste est **observateur** (il regarde et se documente) et **expérimentateur** (il étudie l’effet du milieu et de l’hérédité)."
+    }
+   ]
+  },
+  {
+   "chapitre": "47687896-757b-5f82-9a14-52626788c308",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Gervaise défaite, Zola accusé",
+   "competence": "analyser-document",
+   "situation": "En 1877, L’Assommoir fait scandale. Voici un passage écrit pour l’exercice à la manière de Zola, puis une lettre imaginaire d’un lecteur indigné. À toi de voir ce que Zola montre vraiment.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La boutique de Gervaise",
+     "blocs": [
+      "Le lundi, Gervaise ne repassait plus. La boutique, jadis si claire, sentait le [[d|renfermé]] et le vin.",
+      "Coupeau, assis sur une caisse, un verre à la main, ne parlait plus de retourner sur les toits. Les [[d|créanciers]] frappaient à la porte, et Gervaise, qui avait tant ri autrefois, comptait ses sous en silence."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Zola"
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre d’un lecteur indigné",
+     "blocs": [
+      "Monsieur,",
+      "J’ai lu L’Assommoir avec stupeur. M. Zola met dans la bouche de ses ouvriers l’argot du faubourg ; passe encore. Mais il l’emploie jusque dans la [[n|narration]], comme si lui-même parlait ainsi.",
+      "Il se complaît dans la misère."
+     ],
+     "source": "Lettre imaginée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les **deux mots** qui disent l’abandon de la boutique et la pression de l’argent.",
+     "aide": "Cherche une odeur de lieu mal tenu, puis ceux qui viennent réclamer de l’argent.",
+     "explication": "**renfermé** et **créanciers** montrent la déchéance : la boutique se dégrade et les dettes s’accumulent."
+    },
+    {
+     "type": "zone",
+     "document": "lettre",
+     "multiple": true,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Dans la lettre, touche le mot qui désigne l’endroit du livre où l’argot a le plus choqué.",
+     "aide": "Le lecteur accepte l’argot dans les dialogues, mais pas ailleurs.",
+     "explication": "C’est la **narration** : Zola fait entrer la langue du peuple jusque dans le récit, et pas seulement dans les dialogues."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le passage de Zola, pourquoi Gervaise tombe-t-elle ?",
+     "options": [
+      "Le milieu (l’accident, l’alcool, les dettes) défait une femme courageuse",
+      "Elle est paresseuse et mérite le malheur qui la frappe peu à peu",
+      "Elle abandonne sa boutique pour suivre un autre homme qu’elle aime",
+      "Elle perd tout son argent en jouant aux cartes avec ses voisins"
+     ],
+     "reponse": 0,
+     "aide": "Zola ne condamne pas Gervaise : il étudie l’effet du milieu.",
+     "explication": "Zola ne condamne pas Gervaise : il montre **comment le milieu défait une femme courageuse**."
+    },
+    {
+     "type": "categories",
+     "categories": [
+      "Réalisme",
+      "Naturalisme"
+     ],
+     "items": [
+      [
+       "Peindre le réel tel qu’il est, sans idéaliser",
+       0
+      ],
+      [
+       "Appliquer au roman la méthode scientifique",
+       1
+      ],
+      [
+       "Étudier l’effet de l’hérédité et du milieu",
+       1
+      ],
+      [
+       "Balzac, Flaubert, Maupassant",
+       0
+      ],
+      [
+       "Zola et les Rougon-Macquart",
+       1
+      ]
+     ],
+     "enonce": "Range chaque trait : réalisme ou naturalisme ?",
+     "aide": "Le naturalisme applique la méthode scientifique ; le réalisme peint simplement le réel.",
+     "explication": "Le **réalisme** peint le réel tel qu’il est ; le **naturalisme** de Zola y ajoute la **méthode scientifique** et l’étude de l’hérédité et du milieu."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1167 @@
+{
+ "niveau": "1re",
+ "matiere": "sport",
+ "exercices": [
+  {
+   "chapitre": "0c717a05-a7e7-58a0-8224-5a96565ad8fd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les Jeux olympiques sur une frise",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé, Lina a placé sur une frise les grands moments où les Jeux olympiques sont devenus une scène politique.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les Jeux et l’histoire",
+     "debut": 1880,
+     "fin": 2040,
+     "pas": 20,
+     "periodes": [
+      {
+       "id": "boy",
+       "debut": 1980,
+       "fin": 1984,
+       "nom": "Boycotts",
+       "teinte": "corail"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "cou",
+       "date": 1894,
+       "nom": "Rénovation"
+      },
+      {
+       "id": "ber",
+       "date": 1936,
+       "nom": "Berlin"
+      },
+      {
+       "id": "mex",
+       "date": 1968,
+       "nom": "Mexico"
+      },
+      {
+       "id": "par",
+       "date": 2024,
+       "nom": "Paris"
+      }
+     ],
+     "source": "Dates arrondies à l’année"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche les Jeux qui ont servi de vitrine au régime nazi.",
+     "reponse": [
+      "ber"
+     ],
+     "aide": "Ils se sont tenus en 1936.",
+     "explication": "Les Jeux de **Berlin** (1936) ont été une vitrine offerte au régime nazi."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque date à ce qu’elle révèle.",
+     "paires": [
+      [
+       "1894",
+       "Un idéal de paix par le sport"
+      ],
+      [
+       "1968",
+       "Le podium comme tribune politique"
+      ],
+      [
+       "1980 et 1984",
+       "La guerre froide jusque dans le stade"
+      ],
+      [
+       "2024",
+       "Parité atteinte parmi les athlètes"
+      ]
+     ],
+     "aide": "Pense à ce qui s’est passé à chaque date.",
+     "explication": "1894 : Coubertin rénove les Jeux. 1968 : le **poing levé** de Mexico. 1980 et 1984 : **boycotts croisés**. 2024 : parité à Paris."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la rénovation des Jeux par Coubertin des Jeux de Paris en 2024 ?",
+     "reponse": 130,
+     "unite": "ans",
+     "aide": "Soustrais 1894 à 2024.",
+     "explication": "2024 − 1894 = **130 ans**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c717a05-a7e7-58a0-8224-5a96565ad8fd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La parité sur le podium, pas encore partout",
+   "competence": "analyser-document",
+   "situation": "Les athlètes féminines sont aujourd’hui aussi nombreuses que les hommes aux Jeux. Un lycée étudie si cette égalité de place est aussi une égalité de moyens.",
+   "documents": [
+    {
+     "id": "femmes",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Part des femmes parmi les athlètes des Jeux d’été",
+     "categories": [
+      "1900",
+      "1960",
+      "1996",
+      "2012",
+      "2024"
+     ],
+     "series": [
+      {
+       "nom": "Part de femmes",
+       "valeurs": [
+        2,
+        11,
+        34,
+        44,
+        50
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Part des athlètes",
+      "unite": "%",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Année"
+     },
+     "valeurs": false,
+     "source": "Chiffres arrondis"
+    },
+    {
+     "id": "federation",
+     "type": "tableau",
+     "titre": "Une fédération régionale (exemple imaginé)",
+     "colonnes": [
+      "Indicateur",
+      "Femmes",
+      "Hommes"
+     ],
+     "lignes": [
+      [
+       "Présidences de ligues (sur 12)",
+       3,
+       9
+      ],
+      [
+       "Heures de retransmission télé par an",
+       40,
+       160
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "femmes",
+     "enonce": "Touche l’année où la parité des athlètes est atteinte.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la barre à 50 %.",
+     "explication": "En **2024**, à Paris, la part des femmes atteint 50 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la part des femmes a-t-elle augmenté entre 1960 et 2024 ?",
+     "reponse": 39,
+     "unite": "points",
+     "aide": "Soustrais les deux barres.",
+     "explication": "50 − 11 = **39 points** gagnés en 64 ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des présidences de ligues les femmes occupent-elles dans cette fédération ?",
+     "reponse": 25,
+     "unite": "%",
+     "aide": "Divise 3 par 12.",
+     "explication": "3 / 12 = 0,25, soit **25 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la comparaison des deux documents ?",
+     "options": [
+      "L’égalité des places n’est pas celle des moyens et des responsabilités",
+      "Que l’égalité est totale dans le sport",
+      "Que les femmes ne sont pas intéressées par les responsabilités",
+      "Que la médiatisation est égale"
+     ],
+     "reponse": 0,
+     "aide": "Compare la parité sur le podium aux présidences et à la télévision.",
+     "explication": "La parité des athlètes ne règle pas **médiatisation, salaires et accès aux responsabilités**, qui restent inégaux."
+    }
+   ]
+  },
+  {
+   "chapitre": "0c717a05-a7e7-58a0-8224-5a96565ad8fd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Contrôle, santé et semaine d’un lycéen",
+   "competence": "argumenter",
+   "situation": "Un lycéen prépare un dossier sur le sport comme fait social. Il croise un récit imaginé de contrôle antidopage et le relevé de sa propre semaine d’activité physique.",
+   "documents": [
+    {
+     "id": "controle",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Un contrôle à l’aube",
+     "auteur": "Article imaginé pour l’exercice",
+     "blocs": [
+      "Il est 6 h 30, un matin sans compétition. Deux préleveurs sonnent au domicile d’une cycliste de haut niveau pour un contrôle antidopage inopiné.",
+      "L’athlète doit fournir un échantillon : la liste des produits et méthodes interdits est fixée au niveau mondial."
+     ]
+    },
+    {
+     "id": "semaine",
+     "type": "tableau",
+     "titre": "La semaine de Malo (activité physique)",
+     "colonnes": [
+      "Jour",
+      "Minutes d’activité"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       70
+      ],
+      [
+       "Mardi",
+       40
+      ],
+      [
+       "Mercredi",
+       65
+      ],
+      [
+       "Jeudi",
+       30
+      ],
+      [
+       "Vendredi",
+       60
+      ],
+      [
+       "Samedi",
+       90
+      ],
+      [
+       "Dimanche",
+       20
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevé inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Ce contrôle a lieu un matin sans compétition, chez l’athlète. Que montre-t-il ?",
+     "options": [
+      "Les contrôles peuvent avoir lieu hors compétition",
+      "Les contrôles n’ont lieu que pendant les compétitions",
+      "Les contrôles sont interdits au domicile",
+      "Seuls les sportifs professionnels sont contrôlés"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’heure et le lieu du contrôle.",
+     "explication": "Les contrôles peuvent avoir lieu **hors compétition**, à l’entraînement comme au domicile."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque acteur à son rôle.",
+     "paires": [
+      [
+       "AMA",
+       "Fixe la liste mondiale des produits interdits"
+      ],
+      [
+       "OMS",
+       "Recommande 60 minutes d’activité par jour"
+      ],
+      [
+       "Coubertin",
+       "A rénové les Jeux modernes"
+      ],
+      [
+       "Un médecin",
+       "Peut prescrire une activité physique adaptée"
+      ]
+     ],
+     "aide": "AMA signifie Agence mondiale antidopage.",
+     "explication": "L’**AMA** fixe la liste, l’**OMS** recommande 60 minutes, **Coubertin** rénove les Jeux, et depuis 2016 un **médecin** peut prescrire l’activité physique adaptée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien de jours de la semaine Malo atteint-il la recommandation de 60 minutes ?",
+     "reponse": 4,
+     "unite": "jours",
+     "aide": "Compte les jours à 60 minutes ou plus.",
+     "explication": "Lundi, mercredi, vendredi et samedi : **4 jours**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les jours en dessous de 60 minutes, combien de minutes manquent à Malo au total ?",
+     "reponse": 90,
+     "unite": "min",
+     "aide": "Calcule ce qui manque pour mardi, jeudi et dimanche.",
+     "explication": "Mardi 20, jeudi 30, dimanche 40 : **90 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi un médecin peut-il aujourd’hui prescrire du sport ?",
+     "options": [
+      "La sédentarité est un facteur de risque majeur",
+      "Le sport remplace tous les médicaments prescrits",
+      "Le sport est devenu obligatoire pour tous",
+      "La sédentarité est sans danger pour la santé"
+     ],
+     "reponse": 0,
+     "aide": "Pense au tabac et à l’alimentation, cités dans le cours.",
+     "explication": "La sédentarité est un **facteur de risque majeur** : depuis 2016, l’activité physique adaptée peut être prescrite comme un soin."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a8fd32a-db18-51b5-8151-7ce2f8f54a1a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le repas d’avant-match d’Élise",
+   "competence": "analyser-document",
+   "situation": "Élise joue un match de handball cet après-midi. Elle a préparé son repas de midi : elle veut savoir ce que chaque aliment lui apporte.",
+   "documents": [
+    {
+     "id": "menu",
+     "type": "fiche",
+     "modele": "menu",
+     "entete": "Repas d’avant-match",
+     "emoji": "🍽️",
+     "lignes": [
+      {
+       "texte": "Pâtes complètes",
+       "id": "pates"
+      },
+      {
+       "texte": "Blanc de poulet",
+       "id": "poulet"
+      },
+      {
+       "texte": "Huile d’olive",
+       "id": "huile"
+      },
+      {
+       "texte": "Pomme",
+       "id": "pomme"
+      }
+     ],
+     "pied": "Menu écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "menu",
+     "enonce": "Touche l’aliment qui apporte surtout le carburant principal de l’effort.",
+     "reponse": [
+      "pates"
+     ],
+     "aide": "Pâtes, riz, pain et fruits sont riches en glucides.",
+     "explication": "Les **pâtes** sont riches en glucides, le carburant principal de l’effort."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque aliment à son nutriment principal.",
+     "paires": [
+      [
+       "Pâtes complètes",
+       "Glucides"
+      ],
+      [
+       "Blanc de poulet",
+       "Protéines"
+      ],
+      [
+       "Huile d’olive",
+       "Lipides"
+      ]
+     ],
+     "aide": "Les lipides sont une énergie de longue durée.",
+     "explication": "Pâtes : **glucides**. Poulet : **protéines**. Huile : **lipides**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les protéines servent à ___ et à ___ le muscle.",
+     "reponses": [
+      [
+       "réparer"
+      ],
+      [
+       "construire"
+      ]
+     ],
+     "banque": [
+      "réparer",
+      "construire",
+      "brûler",
+      "fatiguer"
+     ],
+     "aide": "Elles agissent sur le muscle après l’effort.",
+     "explication": "Les protéines **réparent** et **construisent** le muscle."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a8fd32a-db18-51b5-8151-7ce2f8f54a1a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Perdre 2 % d’eau",
+   "competence": "calculer",
+   "situation": "Rayan joue un match à 15 h. Il se pèse avant et après un entraînement d’une heure, sans avoir bu. Son coach veut savoir si la déshydratation a déjà touché sa performance.",
+   "documents": [
+    {
+     "id": "pesee",
+     "type": "tableau",
+     "titre": "Pesées de Rayan",
+     "colonnes": [
+      "Moment",
+      "Poids (kg)"
+     ],
+     "lignes": [
+      [
+       "Avant l’entraînement",
+       60
+      ],
+      [
+       "Après l’entraînement",
+       58.6
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Mesures inventées pour l’exercice"
+    },
+    {
+     "id": "match",
+     "type": "horloge",
+     "titre": "Heure du match",
+     "heures": 15,
+     "minutes": 0,
+     "numerique": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de kilogrammes Rayan a-t-il perdus pendant l’entraînement ?",
+     "reponse": 1.4,
+     "unite": "kg",
+     "aide": "Soustrais les deux pesées.",
+     "explication": "60,0 − 58,6 = **1,4 kg**, essentiellement de l’eau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle masse représente 2 % du poids de départ de Rayan ?",
+     "reponse": 1.2,
+     "unite": "kg",
+     "aide": "Calcule 60 × 0,02.",
+     "explication": "60 × 0,02 = **1,2 kg**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on conclure ?",
+     "options": [
+      "La perte dépasse 2 % : performance déjà altérée",
+      "La perte est trop faible pour avoir un effet",
+      "Rayan a pris du poids pendant la séance",
+      "La soif l’aurait alerté à temps de toute façon"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1,4 kg à 1,2 kg.",
+     "explication": "1,4 kg dépasse 1,2 kg : au-delà de **2 %**, la performance est déjà altérée. On boit avant d’avoir soif."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le match est à 15 h. À quelle heure entière Rayan doit-il avoir fini son repas complet, environ 3 h avant ?",
+     "reponse": 12,
+     "unite": "h",
+     "aide": "Retire 3 h à l’heure du match.",
+     "explication": "15 h − 3 h = **12 h** : les réserves sont pleines et la digestion est finie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces gestes dans l’ordre chronologique autour de l’effort.",
+     "items": [
+      "Repas complet environ 3 h avant",
+      "Boire régulièrement pendant l’effort",
+      "Glucides et protéines dans les 2 h après"
+     ],
+     "aide": "Avant, pendant, après.",
+     "explication": "**3 h avant** le repas, **pendant** de petites gorgées, **dans les 2 h après** glucides et protéines pour réparer le muscle."
+    }
+   ]
+  },
+  {
+   "chapitre": "8a8fd32a-db18-51b5-8151-7ce2f8f54a1a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une semaine de nuits trop courtes",
+   "competence": "raisonner",
+   "situation": "Anaïs, 16 ans, prépare les championnats scolaires. Elle a noté ses nuits sur une semaine et se plaint d’être moins performante à l’entraînement du vendredi. Elle discute avec son entraîneur.",
+   "documents": [
+    {
+     "id": "nuits",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Les nuits d’Anaïs",
+     "categories": [
+      "Lun.",
+      "Mar.",
+      "Mer.",
+      "Jeu.",
+      "Ven.",
+      "Sam.",
+      "Dim."
+     ],
+     "series": [
+      {
+       "nom": "Sommeil",
+       "valeurs": [
+        8.5,
+        8,
+        7,
+        6.5,
+        6,
+        9.5,
+        9
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Durée du sommeil",
+      "unite": "h",
+      "min": 0,
+      "max": 10,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Nuit"
+     },
+     "valeurs": false,
+     "source": "Relevés inventés pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Coach",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Anaïs",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Coach",
+       "texte": "Tu étais loin de ton niveau vendredi. Que s’est-il passé ?"
+      },
+      {
+       "qui": "Anaïs",
+       "texte": "Mercredi et jeudi, j’ai regardé des vidéos sur mon téléphone jusqu’à minuit. Et je pense prendre une boisson énergisante avant la course."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "nuits",
+     "enonce": "Touche la nuit la plus courte de la semaine.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche la barre la plus basse.",
+     "explication": "La nuit du **vendredi** ne dure que 6 heures."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur les nuits inférieures à 8 heures, combien d’heures de sommeil manquent à Anaïs au total par rapport à 8 heures ?",
+     "reponse": 4.5,
+     "unite": "h",
+     "aide": "Trois nuits sont concernées : calcule le manque de chacune.",
+     "explication": "Mercredi 1 h, jeudi 1,5 h, vendredi 2 h : en tout **4,5 heures** de dette de sommeil."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les vidéos tardives retardent-elles l’endormissement d’Anaïs ?",
+     "options": [
+      "Les écrans freinent la sécrétion de mélatonine",
+      "Elles fatiguent les muscles",
+      "Elles augmentent la réparation des tissus",
+      "Elles accélèrent le sommeil profond"
+     ],
+     "reponse": 0,
+     "aide": "C’est l’hormone qui prépare le sommeil.",
+     "explication": "Les écrans le soir **freinent la mélatonine** et retardent l’endormissement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi une nuit trop courte pèse-t-elle sur l’entraînement ?",
+     "options": [
+      "Le sommeil profond répare les tissus et libère l’hormone de croissance",
+      "Le sommeil profond vide les réserves de glucides des muscles",
+      "Le sommeil n’a aucun effet sur la récupération du muscle",
+      "L’entraînement devient du progrès pendant la séance seule"
+     ],
+     "reponse": 0,
+     "aide": "L’entraînement ne devient du progrès que la nuit.",
+     "explication": "Pendant le sommeil profond, le corps **répare les tissus** et sécrète l’hormone de croissance : l’entraînement ne devient du progrès que la nuit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser de la boisson énergisante avant la course ?",
+     "options": [
+      "Elle n’améliore pas durablement la performance",
+      "Elle remplace efficacement une nuit de sommeil complet",
+      "Elle améliore durablement la performance de l’athlète",
+      "Elle est conseillée à tous les adolescents sportifs"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec la liste des fausses solutions du cours.",
+     "explication": "Les boissons énergisantes **n’améliorent pas durablement** la performance ; la régularité, l’assiette et le sommeil comptent plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59242bd-b077-591e-b2c5-3fe816eff8cd",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le carnet de course de Yanis",
+   "competence": "lire-tableau",
+   "situation": "Yanis prépare un semi-marathon. Son entraîneur lui impose de ne changer qu’un seul réglage de sa charge d’une semaine à l’autre. Voici son carnet sur cinq semaines.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "tableau",
+     "titre": "Carnet d’entraînement de Yanis",
+     "colonnes": [
+      "Semaine",
+      "Séances",
+      "Distance totale (km)",
+      "Intensité (% VMA)",
+      "Récup. entre séries (s)"
+     ],
+     "lignes": [
+      [
+       "S1",
+       3,
+       20,
+       70,
+       90
+      ],
+      [
+       "S2",
+       3,
+       21,
+       70,
+       90
+      ],
+      [
+       "S3",
+       3,
+       21,
+       75,
+       90
+      ],
+      [
+       "S4",
+       3,
+       21,
+       75,
+       60
+      ],
+      [
+       "S5",
+       4,
+       21,
+       75,
+       60
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Carnet écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "enonce": "Touche la case où l’intensité augmente pour la première fois.",
+     "reponse": [
+      "r2c3"
+     ],
+     "aide": "L’intensité se lit en pourcentage de VMA : cherche le premier changement.",
+     "explication": "En **S3**, l’intensité passe de 70 à 75 % de VMA, alors que tout le reste est inchangé."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque semaine au paramètre de charge modifié.",
+     "paires": [
+      [
+       "S2",
+       "Le volume (la distance)"
+      ],
+      [
+       "S3",
+       "L’intensité"
+      ],
+      [
+       "S4",
+       "La densité (la récupération)"
+      ],
+      [
+       "S5",
+       "La fréquence (les séances)"
+      ]
+     ],
+     "aide": "Compare chaque ligne à la précédente, colonne par colonne.",
+     "explication": "S2 : distance 20 → 21 km (**volume**). S3 : 70 → 75 % (**intensité**). S4 : récupération 90 → 60 s (**densité**). S5 : 3 → 4 séances (**fréquence**)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de pour cent le volume hebdomadaire augmente-t-il entre S1 et S2 ?",
+     "reponse": 5,
+     "unite": "%",
+     "aide": "Calcule 1 km de plus rapporté aux 20 km de départ.",
+     "explication": "21 − 20 = 1 km, et 1 / 20 = 0,05, soit **5 %** : sous la limite de 5 à 10 % par semaine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’entraîneur de Yanis ne modifie-t-il qu’un paramètre à la fois ?",
+     "options": [
+      "Pour savoir lequel a produit le progrès ou la blessure",
+      "Pour que chaque séance dure moins longtemps",
+      "Pour limiter le nombre total de séances",
+      "Parce que l’intensité n’a aucun effet sur le corps"
+     ],
+     "reponse": 0,
+     "aide": "Deux changements simultanés rendent l’effet illisible.",
+     "explication": "Avec **un seul changement**, on sait lequel a produit le progrès — ou la blessure."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59242bd-b077-591e-b2c5-3fe816eff8cd",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La courbe de forme de Jade",
+   "competence": "observer-schema",
+   "situation": "Jade s’entraîne le lundi. Son préparateur lui montre comment son niveau de forme évolue après la séance, puis elle compare avec ses propres mesures.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Niveau de forme après une séance",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 25,
+       "l": 80,
+       "h": 160,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 25,
+       "l": 60,
+       "h": 160,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 180,
+       "y": 25,
+       "l": 140,
+       "h": 160,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "c",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        190
+       ],
+       "a": [
+        325,
+        190
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        190
+       ],
+       "a": [
+        40,
+        15
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        320,
+        110
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "chemin",
+       "d": "M40 110 C70 110 85 160 115 160 C145 160 160 115 190 100 C215 88 235 75 260 75 C285 75 300 88 320 100",
+       "teinte": "violet"
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 42,
+       "texte": "A",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 150,
+       "y": 42,
+       "texte": "B",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 42,
+       "texte": "C",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 318,
+       "y": 126,
+       "texte": "Niveau de départ",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 10,
+       "texte": "Forme",
+       "taille": "petit",
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 212,
+       "texte": "Temps",
+       "taille": "petit",
+       "ancre": "fin"
+      }
+     ]
+    },
+    {
+     "id": "mesures",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Forme mesurée de Jade (base 100)",
+     "categories": [
+      "Lun.",
+      "Mar.",
+      "Mer.",
+      "Jeu.",
+      "Ven.",
+      "Sam."
+     ],
+     "series": [
+      {
+       "nom": "Forme",
+       "valeurs": [
+        100,
+        85,
+        92,
+        100,
+        106,
+        104
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Niveau de forme",
+      "min": 80,
+      "max": 110,
+      "pas": 5
+     },
+     "axeX": {
+      "titre": "Jour"
+     },
+     "source": "Mesures inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche la zone où l’organisme reconstruit un peu au-dessus du niveau de départ.",
+     "reponse": [
+      "c"
+     ],
+     "aide": "Cherche où la courbe passe au-dessus de la ligne pointillée.",
+     "explication": "Dans la zone **C**, la courbe dépasse le niveau de départ : c’est la surcompensation."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque phase à ce qu’elle produit.",
+     "paires": [
+      [
+       "L’effort",
+       "Le niveau descend sous le niveau de départ"
+      ],
+      [
+       "La récupération",
+       "Le niveau remonte"
+      ],
+      [
+       "La surcompensation",
+       "Le niveau dépasse le départ"
+      ]
+     ],
+     "aide": "Suis la courbe de gauche à droite.",
+     "explication": "L’**effort** fatigue, la **récupération** répare, la **surcompensation** dépasse."
+    },
+    {
+     "type": "zone",
+     "document": "mesures",
+     "enonce": "Touche le premier jour où la forme de Jade dépasse son niveau de départ de 100.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Elle vaut 100 jeudi : cherche le premier jour au-dessus.",
+     "explication": "Le **vendredi**, la forme atteint 106 : la surcompensation est là."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de points la forme de Jade a-t-elle baissé juste après la séance du lundi ?",
+     "reponse": 15,
+     "unite": "points",
+     "aide": "Compare le lundi et le mardi.",
+     "explication": "100 − 85 = **15 points** : l’effort fatigue, le niveau passe sous celui de départ."
+    },
+    {
+     "type": "choix",
+     "enonce": "Jade s’entraîne de nouveau le mardi, au plus bas de sa forme. Quelle conséquence ?",
+     "options": [
+      "Elle s’épuise sans construire",
+      "Elle progresse deux fois plus vite",
+      "Elle profite de la surcompensation",
+      "Rien, l’effort seul fait progresser"
+     ],
+     "reponse": 0,
+     "aide": "Reprendre pendant la fatigue, c’est reprendre trop tôt.",
+     "explication": "Reprendre pendant la phase de fatigue **épuise sans construire** : c’est la récupération qui fait progresser."
+    }
+   ]
+  },
+  {
+   "chapitre": "a59242bd-b077-591e-b2c5-3fe816eff8cd",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un programme de quatre semaines à corriger",
+   "competence": "raisonner",
+   "situation": "Mathis prépare une course de 10 km. Il a écrit sa charge d’entraînement pour quatre semaines, puis il relève chaque matin son pouls de repos. Tu l’aides à corriger son programme.",
+   "documents": [
+    {
+     "id": "charge",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Charge prévue par Mathis",
+     "categories": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "series": [
+      {
+       "nom": "Charge",
+       "valeurs": [
+        100,
+        108,
+        130,
+        125
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Charge hebdomadaire",
+      "unite": "min",
+      "min": 80,
+      "max": 140,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Semaine"
+     },
+     "source": "Programme écrit pour l’exercice"
+    },
+    {
+     "id": "suivi",
+     "type": "tableau",
+     "titre": "Suivi de la dernière semaine",
+     "colonnes": [
+      "Jour",
+      "Pouls de repos (batt./min)",
+      "Sommeil",
+      "Performance"
+     ],
+     "lignes": [
+      [
+       "Lundi",
+       52,
+       "Bon",
+       "Stable"
+      ],
+      [
+       "Mardi",
+       53,
+       "Bon",
+       "Stable"
+      ],
+      [
+       "Mercredi",
+       56,
+       "Réveils nocturnes",
+       "Stagne"
+      ],
+      [
+       "Jeudi",
+       58,
+       "Endormissement long",
+       "Baisse"
+      ],
+      [
+       "Vendredi",
+       62,
+       "Endormissement long",
+       "Baisse"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "charge",
+     "enonce": "Touche la semaine dont la hausse de charge dépasse nettement 10 %.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Compare chaque semaine à la précédente : 108 + 10 % donne environ 119.",
+     "explication": "De S2 à **S3**, la charge passe de 108 à 130 minutes : c’est environ +20 %, bien au-delà de la limite de 5 à 10 %."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle charge maximale respecterait la règle des +10 % en S3 ? Arrondis à l’unité.",
+     "reponse": 119,
+     "unite": "min",
+     "tolerance": 1,
+     "aide": "Calcule 108 × 1,10.",
+     "explication": "108 × 1,10 = 118,8, soit environ **119 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de battements par minute le pouls de repos de Mathis a-t-il augmenté du lundi au vendredi ?",
+     "reponse": 10,
+     "unite": "battements/min",
+     "aide": "Soustrais le pouls du lundi à celui du vendredi.",
+     "explication": "62 − 52 = **10 battements** de plus au repos."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que révèlent le pouls, le sommeil et la performance de Mathis, et que faire ?",
+     "options": [
+      "Un surentraînement : il doit récupérer davantage",
+      "Une forme éclatante : il doit s’entraîner plus",
+      "Un manque de volume : il doit courir plus longtemps",
+      "Un simple coup de froid sans lien avec l’entraînement"
+     ],
+     "reponse": 0,
+     "aide": "Les signes du surentraînement se lisent au repos.",
+     "explication": "Pouls de repos élevé, sommeil dégradé et performance en baisse sont des signes de **surentraînement** : la réponse est de récupérer davantage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mathis veut aussi augmenter l’intensité et la fréquence en S3. Que lui conseiller ?",
+     "options": [
+      "Ne modifier qu’un paramètre à la fois",
+      "Tout changer en même temps pour gagner du temps",
+      "Ne changer que le volume, jamais l’intensité",
+      "Ne rien changer pendant un an"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’on peut conclure d’un seul changement.",
+     "explication": "Avec un seul changement, on sait quel paramètre a produit **le progrès — ou la blessure**."
+    }
+   ]
+  }
+ ]
+}

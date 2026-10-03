@@ -1,0 +1,5406 @@
+{
+ "niveau": "2de",
+ "matiere": "snt",
+ "exercices": [
+  {
+   "chapitre": "8ea815b3-95dd-5167-bf75-e5984fe9a394",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le lien du menu de la cantine",
+   "competence": "lire-tableau",
+   "situation": "Lina ouvre le site du lycée depuis son téléphone. Son navigateur garde la trace de chaque page demandée au serveur, avec le code de réponse reçu.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Les quatre pages demandées par Lina",
+     "colonnes": [
+      "Page demandée",
+      "Code de réponse"
+     ],
+     "lignes": [
+      [
+       "/accueil.html",
+       "200"
+      ],
+      [
+       "/ancienne-page.html",
+       "301"
+      ],
+      [
+       "/menu-cantine.html",
+       "404"
+      ],
+      [
+       "/inscription.html",
+       "500"
+      ]
+     ],
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Lina clique sur le lien du menu de la cantine. Touche le code qui montre que cette page est introuvable.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche la ligne dont l’adresse est /menu-cantine.html, puis lis son code.",
+     "explication": "La page /menu-cantine.html reçoit le code **404** : le serveur répond qu’il ne trouve pas la ressource demandée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque code de réponse HTTP à sa signification.",
+     "paires": [
+      [
+       "200",
+       "Succès"
+      ],
+      [
+       "301",
+       "Redirection"
+      ],
+      [
+       "404",
+       "Introuvable"
+      ],
+      [
+       "500",
+       "Erreur du serveur"
+      ]
+     ],
+     "aide": "Le 4 de 404 signale une demande qui ne mène à rien ; le 5 de 500 signale une panne chez le serveur.",
+     "explication": "**200** : succès ; **301** : redirection vers une autre adresse ; **404** : ressource introuvable ; **500** : erreur du serveur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Sur ces quatre requêtes, combien ont reçu un code d’erreur (404 ou 500) ?",
+     "reponse": 2,
+     "aide": "Relis la colonne des codes et ne garde que ceux de la liste de l’énoncé.",
+     "explication": "Le code 404 (page introuvable) et le code 500 (erreur du serveur) sont des erreurs : il y en a **2**. Le 301 est une redirection, pas une erreur."
+    }
+   ]
+  },
+  {
+   "chapitre": "8ea815b3-95dd-5167-bf75-e5984fe9a394",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La page de la boulangerie Pastel",
+   "competence": "analyser-document",
+   "situation": "Mathis crée le site de la boulangerie de ses parents. Il écrit le contenu de sa page d’accueil en HTML, puis son aspect dans un fichier CSS à part.",
+   "documents": [
+    {
+     "id": "html",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le fichier accueil.html",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "<h1>Boulangerie Pastel</h1>",
+      "<p>Pains et viennoiseries du jour.</p>",
+      "<a [[adr|href]]=\"menu.html\">Voir le menu</a>",
+      "<img src=\"four.jpg\">",
+      "<ul>",
+      "  <li>Baguette</li>",
+      "  <li>Croissant</li>",
+      "</ul>"
+     ]
+    },
+    {
+     "id": "css",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le fichier style.css",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "h1 { text-align: center; }",
+      "p { color: navy; font-size: 18px; }",
+      "li { color: gray; }"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "html",
+     "enonce": "Touche le mot qui donne l’adresse de la page vers laquelle mène le lien.",
+     "reponse": [
+      "adr"
+     ],
+     "aide": "Dans la balise du lien, cherche ce qui précède le signe égal avant « menu.html ».",
+     "explication": "L’attribut **href** de la balise a indique la page visée : ici menu.html."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque balise du fichier HTML à ce qu’elle décrit.",
+     "paires": [
+      [
+       "h1",
+       "Le titre principal"
+      ],
+      [
+       "p",
+       "Un paragraphe"
+      ],
+      [
+       "img",
+       "Une image"
+      ],
+      [
+       "li",
+       "Un élément de liste"
+      ]
+     ],
+     "aide": "La lettre p est l’initiale d’un mot de la langue française ; img est l’abréviation de « image ».",
+     "explication": "**h1** : titre principal ; **p** : paragraphe ; **img** : image ; **li** : un élément d’une liste."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En lisant les deux fichiers, combien d’éléments de la page voient leur couleur de texte définie par le CSS ?",
+     "reponse": 3,
+     "aide": "Compte les éléments HTML visés par une règle qui contient « color ». Une règle sur li vise chaque élément li.",
+     "explication": "La règle sur p vise 1 paragraphe, celle sur li vise 2 éléments de liste : **3** éléments. La règle sur h1 ne change pas la couleur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Mathis veut changer la couleur des paragraphes sur ses 200 pages. Que fait-il le plus simplement ?",
+     "options": [
+      "Il modifie la règle du paragraphe dans la feuille de style commune",
+      "Il modifie à la main chaque paragraphe de chacune des 200 pages",
+      "Il remplace le protocole HTTP par le protocole HTTPS",
+      "Il recopie le code HTML de la page d’accueil 200 fois"
+     ],
+     "reponse": 0,
+     "aide": "Une seule feuille de style peut habiller des milliers de pages.",
+     "explication": "Une **seule feuille de style** s’applique à toutes les pages qui l’utilisent : on change la règle une fois, et les 200 pages suivent. HTML décrit ce que sont les choses, CSS leur aspect."
+    }
+   ]
+  },
+  {
+   "chapitre": "8ea815b3-95dd-5167-bf75-e5984fe9a394",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une page météo qui se met à jour seule",
+   "competence": "analyser-document",
+   "situation": "Nolan ouvre la page météo du lycée et regarde dans les outils du navigateur ce qui est téléchargé. La température s’affiche à la fin, sans que la page soit rechargée.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "tableau",
+     "titre": "Ressources reçues par le navigateur de Nolan",
+     "colonnes": [
+      "Ressource",
+      "Type",
+      "Taille (ko)",
+      "Terminé à (ms)"
+     ],
+     "lignes": [
+      [
+       "logo.png",
+       "image",
+       45,
+       190
+      ],
+      [
+       "index.html",
+       "HTML",
+       12,
+       80
+      ],
+      [
+       "/api/meteo",
+       "données",
+       2,
+       480
+      ],
+      [
+       "style.css",
+       "CSS",
+       8,
+       140
+      ],
+      [
+       "app.js",
+       "script",
+       30,
+       210
+      ]
+     ],
+     "source": "Relevé inventé pour l’exercice"
+    },
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Les étapes de l’affichage",
+     "noeuds": [
+      {
+       "id": "html",
+       "texte": "HTML"
+      },
+      {
+       "id": "repr",
+       "texte": "Représentation"
+      },
+      {
+       "id": "res",
+       "texte": "Ressources"
+      },
+      {
+       "id": "inc",
+       "texte": "?"
+      },
+      {
+       "id": "js",
+       "texte": "JavaScript"
+      }
+     ],
+     "liens": [
+      {
+       "de": "html",
+       "a": "repr"
+      },
+      {
+       "de": "repr",
+       "a": "res"
+      },
+      {
+       "de": "res",
+       "a": "inc"
+      },
+      {
+       "de": "inc",
+       "a": "js"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "reseau",
+     "enonce": "Quelle quantité de données le navigateur a-t-il reçue au total, en ko ?",
+     "reponse": 97,
+     "unite": "ko",
+     "aide": "Additionne toute la colonne « Taille ».",
+     "explication": "45 + 12 + 2 + 8 + 30 = **97 ko** reçus pour afficher la page."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche la ressource qui contient les données de météo demandées par le script après l’affichage.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Cherche l’adresse qui n’est ni une page, ni une image, ni une feuille de style : c’est un service qui renvoie des données.",
+     "explication": "**/api/meteo** renvoie les données ; c’est le script (JavaScript) qui les demande puis met la page à jour sans la recharger."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces ressources dans l’ordre où elles ont fini d’arriver.",
+     "items": [
+      "index.html",
+      "style.css",
+      "logo.png",
+      "app.js",
+      "/api/meteo"
+     ],
+     "aide": "Regarde la dernière colonne et range du plus petit temps au plus grand.",
+     "explication": "Dans l’ordre des temps : **index.html** (80 ms), **style.css** (140), **logo.png** (190), **app.js** (210), **/api/meteo** (480)."
+    },
+    {
+     "type": "nombre",
+     "document": "reseau",
+     "enonce": "Combien de millisecondes séparent l’arrivée du logo de celle des données de météo ?",
+     "reponse": 290,
+     "unite": "ms",
+     "aide": "Soustrais les deux temps de la dernière colonne, le plus petit du plus grand.",
+     "explication": "480 − 190 = **290 ms** : c’est le temps qu’a pris le script pour demander puis recevoir la météo."
+    },
+    {
+     "type": "choix",
+     "document": "etapes",
+     "enonce": "Quelle étape remplace le point d’interrogation sur la chaîne ?",
+     "options": [
+      "Le navigateur dessine le résultat",
+      "Le serveur envoie un code 404",
+      "Le certificat est renouvelé",
+      "Les images sont compressées sans perte"
+     ],
+     "reponse": 0,
+     "aide": "Une fois tout téléchargé, le navigateur doit rendre la page visible avant que JavaScript la modifie.",
+     "explication": "Le navigateur télécharge le HTML, construit une représentation de la page, télécharge le reste, puis **dessine** le résultat. JavaScript peut ensuite la modifier."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcb3c715-962c-5aca-bb37-37235e8ad924",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le panier qui se souvient de Margot",
+   "competence": "lire-tableau",
+   "situation": "Margot choisit des baskets sur un site de sport. Une semaine plus tard, des publicités pour ces baskets la suivent sur d’autres sites. Son navigateur a gardé des cookies.",
+   "documents": [
+    {
+     "id": "cookies",
+     "type": "tableau",
+     "titre": "Cookies présents dans le navigateur de Margot",
+     "colonnes": [
+      "Cookie",
+      "Déposé par",
+      "Rôle annoncé"
+     ],
+     "lignes": [
+      [
+       "panier",
+       "boutique-sport.example",
+       "Garde le contenu du panier"
+      ],
+      [
+       "langue",
+       "boutique-sport.example",
+       "Mémorise la langue du site"
+      ],
+      [
+       "pub_id",
+       "regie-pub.example",
+       "Suit la navigation sur les sites partenaires"
+      ]
+     ],
+     "source": "Relevé inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "cookies",
+     "enonce": "Touche le nom du cookie qui est un cookie tiers.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Un cookie tiers n’est pas déposé par le site que l’on visite.",
+     "explication": "**pub_id** est déposé par une régie publicitaire, pas par la boutique : c’est un cookie tiers, qui suit Margot d’un site à l’autre."
+    },
+    {
+     "type": "nombre",
+     "document": "cookies",
+     "enonce": "Combien de cookies sont déposés par le site visité lui-même ?",
+     "reponse": 2,
+     "aide": "Compte les lignes dont la colonne « Déposé par » indique boutique-sport.example.",
+     "explication": "Les cookies **panier** et **langue** viennent de la boutique : **2** cookies propres au site."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque notion à sa description.",
+     "paires": [
+      [
+       "Cookie propre au site",
+       "Se souvenir de toi : panier, connexion, préférences"
+      ],
+      [
+       "Cookie tiers",
+       "Suivre ta navigation d’un site à l’autre"
+      ],
+      [
+       "RGPD, depuis 2018",
+       "Consentement libre et éclairé pour les cookies non nécessaires"
+      ]
+     ],
+     "aide": "Le mot « tiers » veut dire « une autre partie que le site et toi ».",
+     "explication": "Le cookie **propre** sert au site visité ; le cookie **tiers** suit la navigation d’un site à l’autre ; le **RGPD**, depuis 2018, exige un consentement libre et éclairé pour les cookies non nécessaires."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcb3c715-962c-5aca-bb37-37235e8ad924",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le courriel de la fausse banque",
+   "competence": "analyser-document",
+   "situation": "Aïcha reçoit un courriel qui dit venir de sa banque. Avant de cliquer, elle compare le message avec l’adresse officielle du site de sa banque.",
+   "documents": [
+    {
+     "id": "mail",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Courriel reçu par Aïcha",
+     "auteur": "Courriel écrit pour l’exercice",
+     "blocs": [
+      "Objet : Votre compte sera bloqué",
+      "Cher client, une activité suspecte a été détectée. Confirmez vos identifiants [[u|immédiatement]] pour éviter le blocage.",
+      "Lien : http://[[lien|mabanque-verification.example]]/connexion"
+     ]
+    },
+    {
+     "id": "officiel",
+     "type": "tableau",
+     "titre": "Ce que dit la carte bancaire d’Aïcha",
+     "colonnes": [
+      "Information",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Site officiel de la banque",
+       "https://www.mabanque.example"
+      ],
+      [
+       "Moyen d’authentification",
+       "Double authentification activée"
+      ]
+     ],
+     "source": "Données inventées pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "document": "mail",
+     "enonce": "De quelle menace ce courriel est-il un exemple ?",
+     "options": [
+      "Le hameçonnage",
+      "Le rançongiciel",
+      "Le wifi public non chiffré",
+      "Le cookie tiers"
+     ],
+     "reponse": 0,
+     "aide": "Le message imite un site de confiance pour obtenir quelque chose de l’élève.",
+     "explication": "Imiter la banque pour voler des identifiants, c’est du **hameçonnage**. Un rançongiciel, lui, chiffre des fichiers pour exiger de l’argent."
+    },
+    {
+     "type": "zone",
+     "document": "mail",
+     "enonce": "Touche le mot qui cherche à te mettre la pression pour te faire agir sans réfléchir.",
+     "reponse": [
+      "u"
+     ],
+     "aide": "Cherche un adverbe qui veut dire « tout de suite ».",
+     "explication": "**immédiatement** crée une urgence : c’est le levier classique du hameçonnage."
+    },
+    {
+     "type": "zone",
+     "document": "mail",
+     "enonce": "En comparant avec l’adresse officielle de la banque, touche l’adresse du lien qui ne vient pas d’elle.",
+     "reponse": [
+      "lien"
+     ],
+     "aide": "Compare le nom de domaine du lien avec « www.mabanque.example » dans le second document.",
+     "explication": "Le lien mène vers **mabanque-verification.example**, un autre domaine que www.mabanque.example, et il utilise http sans chiffrement : c’est un faux site."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : bon réflexe, ou geste à éviter ?",
+     "categories": [
+      "Bon réflexe",
+      "À éviter"
+     ],
+     "items": [
+      [
+       "Taper soi-même l’adresse officielle de la banque",
+       0
+      ],
+      [
+       "Saisir ses identifiants après avoir cliqué sur le lien du courriel",
+       1
+      ],
+      [
+       "Vérifier l’adresse exacte et le cadenas HTTPS avant de saisir un mot de passe",
+       0
+      ],
+      [
+       "Utiliser le même mot de passe pour la banque et pour un jeu",
+       1
+      ],
+      [
+       "Activer la double authentification",
+       0
+      ]
+     ],
+     "aide": "Un bon réflexe vérifie avant d’agir et limite les dégâts d’une fuite.",
+     "explication": "Sont de **bons réflexes** : taper l’adresse officielle, vérifier adresse et cadenas, activer la double authentification. Sont **à éviter** : saisir ses identifiants après un lien reçu, et réutiliser un mot de passe."
+    }
+   ]
+  },
+  {
+   "chapitre": "dcb3c715-962c-5aca-bb37-37235e8ad924",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Après la fuite du site de jeux",
+   "competence": "raisonner",
+   "situation": "Le site de jeux « LigueJeux » a subi une fuite : le mot de passe de Tom, chat2008, est connu d’un pirate. Tom utilise ce mot de passe sur plusieurs de ses comptes. Il pense que sa navigation privée l’a protégé.",
+   "documents": [
+    {
+     "id": "comptes",
+     "type": "tableau",
+     "titre": "Les comptes de Tom",
+     "colonnes": [
+      "Compte",
+      "Mot de passe",
+      "Double authentification"
+     ],
+     "lignes": [
+      [
+       "LigueJeux",
+       "chat2008",
+       "non"
+      ],
+      [
+       "Messagerie",
+       "chat2008",
+       "non"
+      ],
+      [
+       "Réseau social",
+       "Tr!7vK#qL92dm",
+       "oui"
+      ],
+      [
+       "Banque",
+       "chat2008",
+       "oui"
+      ],
+      [
+       "Boutique",
+       "Fl0ur-Ma1son-93",
+       "non"
+      ]
+     ],
+     "source": "Situation inventée pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Tu as vu ? LigueJeux s’est fait pirater !"
+      },
+      {
+       "qui": "Tom",
+       "texte": "Pas grave, j’utilise toujours la navigation privée, je suis protégé."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "comptes",
+     "enonce": "Le pirate essaie chat2008 sur les autres comptes de Tom. Touche le compte qu’il peut ouvrir immédiatement.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Deux comptes autres que LigueJeux utilisent chat2008, mais un seul n’a aucune protection supplémentaire.",
+     "explication": "Le pirate ouvre la **messagerie** : même mot de passe et pas de seconde preuve. Le compte de la banque utilise aussi chat2008, mais la double authentification l’arrête."
+    },
+    {
+     "type": "nombre",
+     "document": "comptes",
+     "enonce": "Si Tom avait utilisé un mot de passe différent sur chaque compte, combien de comptes auraient été compromis par cette fuite ?",
+     "reponse": 1,
+     "aide": "Une fuite ne touche que le site piraté quand chaque mot de passe est unique.",
+     "explication": "Avec des mots de passe différents, la fuite ne compromet que **1** compte : LigueJeux lui-même."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La ___ ajoute une seconde preuve d’identité : même avec le mot de passe, le pirate ne peut pas ___ le compte de la banque.",
+     "reponses": [
+      [
+       "double authentification"
+      ],
+      [
+       "ouvrir"
+      ]
+     ],
+     "banque": [
+      "double authentification",
+      "navigation privée",
+      "ouvrir",
+      "supprimer",
+      "extension"
+     ],
+     "aide": "C’est la protection que Tom a activée sur la banque et le réseau social.",
+     "explication": "La **double authentification** exige une seconde preuve, donc le pirate ne peut pas **ouvrir** le compte avec le seul mot de passe."
+    },
+    {
+     "type": "choix",
+     "document": "sms",
+     "enonce": "Pourquoi Tom a-t-il tort de croire que la navigation privée le protège ?",
+     "options": [
+      "Elle n’efface la trace que sur son appareil, pas chez le site",
+      "Elle chiffre les mots de passe sur les serveurs du site visité",
+      "Elle empêche un site de se faire pirater par des tiers",
+      "Elle remplace la double authentification de la banque"
+     ],
+     "reponse": 0,
+     "aide": "Pense à l’endroit où est stocké le mot de passe de Tom : sur son téléphone ou chez le site ?",
+     "explication": "La navigation privée n’efface les traces **que sur la machine** : ni chez le fournisseur d’accès, ni chez le site visité, où la fuite a eu lieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b9370c8-9f01-59c6-ac29-a129b766e6cf",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "L’index des pages de crêpes",
+   "competence": "lire-tableau",
+   "situation": "Un petit moteur de recherche a déjà exploré neuf pages de cuisine. Il les a rangées dans un index inversé : à chaque mot, la liste des pages où il figure.",
+   "documents": [
+    {
+     "id": "index",
+     "type": "tableau",
+     "titre": "L’index inversé",
+     "colonnes": [
+      "Mot",
+      "Pages qui le contiennent"
+     ],
+     "lignes": [
+      [
+       "crêpe",
+       "p1, p4, p7"
+      ],
+      [
+       "sarrasin",
+       "p4, p9"
+      ],
+      [
+       "farine",
+       "p1, p4, p5"
+      ],
+      [
+       "pomme",
+       "p2, p7, p8"
+      ]
+     ],
+     "source": "Index inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "index",
+     "enonce": "Combien de pages contiennent le mot « crêpe » ?",
+     "reponse": 3,
+     "aide": "Compte les pages écrites sur la ligne du mot « crêpe ».",
+     "explication": "Le mot figure sur p1, p4 et p7 : **3** pages."
+    },
+    {
+     "type": "zone",
+     "document": "index",
+     "enonce": "Touche le mot qui apparaît sur le moins de pages.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compare le nombre de pages de chaque ligne ; une seule ligne n’en compte que deux.",
+     "explication": "**sarrasin** n’apparaît que sur 2 pages (p4 et p9), les autres mots sur 3."
+    },
+    {
+     "type": "nombre",
+     "document": "index",
+     "enonce": "Un élève tape « crêpe farine ». Combien de pages contiennent les deux mots ?",
+     "reponse": 2,
+     "aide": "Cherche les pages qui figurent à la fois sur la ligne de « crêpe » et sur celle de « farine ».",
+     "explication": "« crêpe » : p1, p4, p7 ; « farine » : p1, p4, p5. Les pages communes sont **p1 et p4** : 2 pages."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les trois étapes du fonctionnement d’un moteur de recherche.",
+     "items": [
+      "Exploration par les crawlers",
+      "Indexation des pages",
+      "Interrogation de l’index"
+     ],
+     "aide": "Il faut d’abord lire les pages, puis les ranger, et seulement ensuite répondre.",
+     "explication": "Le moteur **explore** le Web (crawlers), **indexe** les pages dans un index inversé, puis **interroge** cet index quand on tape une requête."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b9370c8-9f01-59c6-ac29-a129b766e6cf",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui apparaîtra en premier ?",
+   "competence": "observer-schema",
+   "situation": "Cinq sites parlent de randonnée. Les flèches montrent qui met un lien vers qui. Un moteur de recherche s’en sert pour classer les sites : c’est le principe du PageRank.",
+   "documents": [
+    {
+     "id": "web",
+     "type": "schema",
+     "titre": "Les liens entre cinq sites (une flèche part du site qui cite)",
+     "largeur": 380,
+     "hauteur": 230,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        100,
+        68
+       ],
+       "a": [
+        158,
+        92
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        68
+       ],
+       "a": [
+        222,
+        92
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        281,
+        158
+       ],
+       "a": [
+        220,
+        123
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        142
+       ],
+       "a": [
+        70,
+        90
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        310,
+        142
+       ],
+       "a": [
+        310,
+        90
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        161,
+        122
+       ],
+       "a": [
+        100,
+        157
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 55,
+       "r": 31,
+       "texte": "Blog",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "blog",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 105,
+       "r": 31,
+       "texte": "Encyclo",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "enc",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 310,
+       "cy": 55,
+       "r": 31,
+       "texte": "Forum",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "forum",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 310,
+       "cy": 175,
+       "r": 31,
+       "texte": "Boutique",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "bout",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 175,
+       "r": 31,
+       "texte": "Perso",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "perso",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "web",
+     "enonce": "Combien de liens pointent vers le site « Encyclo » ?",
+     "reponse": 3,
+     "aide": "Compte les flèches dont la pointe touche le cercle « Encyclo ».",
+     "explication": "Blog, Forum et Boutique pointent vers Encyclo : **3** liens entrants."
+    },
+    {
+     "type": "zone",
+     "document": "web",
+     "enonce": "Touche le site vers lequel aucun lien ne pointe.",
+     "reponse": [
+      "bout"
+     ],
+     "aide": "Cherche le cercle sur lequel aucune pointe de flèche n’arrive.",
+     "explication": "Personne ne cite **Boutique** : ce site n’a aucun lien entrant, donc aucune popularité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le principe du PageRank, quel est le site le mieux placé dans le classement par popularité ?",
+     "document": "web",
+     "options": [
+      "Encyclo, qui reçoit le plus de liens entrants",
+      "Boutique, qui envoie le plus de liens",
+      "Perso, parce qu’il est en bas du schéma",
+      "Blog, parce qu’il est en haut du schéma"
+     ],
+     "reponse": 0,
+     "aide": "La popularité dépend du nombre et de la qualité des liens qui pointent VERS une page.",
+     "explication": "Une page est importante si des pages importantes pointent vers elle : **Encyclo** reçoit 3 liens, plus que tout autre site."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le classement des résultats.",
+     "texte": "La ___ mesure la présence des mots de la requête dans la page ; la ___ mesure le nombre et la qualité des liens entrants.",
+     "reponses": [
+      [
+       "pertinence"
+      ],
+      [
+       "popularité"
+      ]
+     ],
+     "banque": [
+      "pertinence",
+      "popularité",
+      "personnalisation",
+      "indexation"
+     ],
+     "aide": "L’un des deux critères regarde le contenu de la page, l’autre regarde les liens qui y mènent.",
+     "explication": "La **pertinence** regarde les mots de la requête ; la **popularité** regarde les liens entrants (c’est le PageRank)."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b9370c8-9f01-59c6-ac29-a129b766e6cf",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux élèves, une même requête",
+   "competence": "analyser-document",
+   "situation": "Inès (à Lyon) et Hugo (à Lille) tapent la même requête : « meilleur lycée hôtelier ». Ils comparent leurs résultats et s’étonnent : ce ne sont pas tout à fait les mêmes.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "tableau",
+     "titre": "Les cinq premiers résultats de chacun",
+     "colonnes": [
+      "Rang",
+      "Résultats d’Inès (Lyon)",
+      "Résultats d’Hugo (Lille)"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Annonce : École Cuisine Pro (sponsorisé)",
+       "Annonce : École Cuisine Pro (sponsorisé)"
+      ],
+      [
+       "2",
+       "Lycée hôtelier de Lyon",
+       "Lycée hôtelier de Lille"
+      ],
+      [
+       "3",
+       "Classement national des lycées hôteliers",
+       "Classement national des lycées hôteliers"
+      ],
+      [
+       "4",
+       "Forum des élèves lyonnais",
+       "Forum des élèves lillois"
+      ],
+      [
+       "5",
+       "Fiche de présentation d’un bac pro cuisine",
+       "Fiche de présentation d’un bac pro cuisine"
+      ]
+     ],
+     "source": "Résultats inventés pour l’exercice"
+    },
+    {
+     "id": "req",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Quatre requêtes d’Hugo pour affiner",
+     "auteur": "Requêtes écrites pour l’exercice",
+     "blocs": [
+      "« lycée hôtelier »",
+      "lycée hôtelier site:education.example",
+      "lycée hôtelier — Outils : dernière année",
+      "lycée hôtelier cuisine pâtisserie Lille"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "res",
+     "enonce": "Sur ces cinq rangs, à combien de rangs les deux élèves obtiennent-ils exactement le même résultat ?",
+     "reponse": 3,
+     "aide": "Compare, rang par rang, les deux colonnes de résultats.",
+     "explication": "Les rangs 1, 3 et 5 sont identiques ; les rangs 2 et 4 diffèrent. Il y en a **3**."
+    },
+    {
+     "type": "zone",
+     "document": "res",
+     "enonce": "Touche les résultats qui sont des liens sponsorisés.",
+     "reponse": [
+      "r0c1",
+      "r0c2"
+     ],
+     "multiple": true,
+     "aide": "Un lien sponsorisé est signalé comme une publicité.",
+     "explication": "Les deux cases du rang 1 portent la mention **« Annonce » et « sponsorisé »** : ce sont des publicités, pas des résultats de classement naturel."
+    },
+    {
+     "type": "choix",
+     "document": "res",
+     "enonce": "Qu’est-ce qui explique les différences aux rangs 2 et 4 ?",
+     "options": [
+      "La personnalisation, selon la localisation et l’historique",
+      "Le fait que chaque moteur parcourt le Web au moment de la requête",
+      "Le hasard, car l’index est reconstruit à chaque touche",
+      "Un défaut de connexion d’Hugo"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce qui change d’une colonne à l’autre : le nom de la ville.",
+     "explication": "Deux personnes tapant la même requête n’obtiennent pas nécessairement les mêmes résultats : le moteur tient compte de la **localisation** et de l’**historique**. Il ne parcourt pas le Web à la volée : il interroge son index."
+    },
+    {
+     "type": "association",
+     "document": "req",
+     "enonce": "Associe chaque requête d’Hugo à ce qu’elle apporte.",
+     "paires": [
+      [
+       "« lycée hôtelier » entre guillemets",
+       "Une expression exacte"
+      ],
+      [
+       "lycée hôtelier site:education.example",
+       "Un périmètre limité à un site"
+      ],
+      [
+       "Outils : dernière année",
+       "De l’information récente"
+      ],
+      [
+       "lycée hôtelier cuisine pâtisserie Lille",
+       "Des mots précis, moins de bruit"
+      ]
+     ],
+     "aide": "Le filtre sur le temps ne change pas les mots tapés : il restreint les dates.",
+     "explication": "**Guillemets** : expression exacte ; **site:** : un site précis ; **filtre de date** : information récente ; **mots précis** : moins de résultats parasites."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le premier résultat est une annonce sponsorisée. Faut-il le croire en priorité ?",
+     "options": [
+      "Non : c’est une publicité, classée par un algorithme privé",
+      "Oui : le premier résultat est toujours la réponse la plus fiable",
+      "Oui, car les annonces sont vérifiées par une autorité publique",
+      "Non, car un moteur de recherche n’affiche jamais de publicité"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce que vaut une place de choix dans un classement dont on ne connaît pas les règles.",
+     "explication": "Le premier résultat n’est pas la vérité : c’est la réponse la mieux classée par un algorithme privé, et ici une publicité. Il faut **recouper** : auteur, date, source, autre origine."
+    }
+   ]
+  },
+  {
+   "chapitre": "51bdc90b-47ca-5ffd-a3b9-f2a538abada5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le samedi d’Eliott sur le Web",
+   "competence": "lire-tableau",
+   "situation": "Eliott passe son samedi sur Internet. Certaines de ses activités consistent à publier, d’autres seulement à lire. Il se demande ce qui distingue le Web d’aujourd’hui de celui de ses parents.",
+   "documents": [
+    {
+     "id": "samedi",
+     "type": "tableau",
+     "titre": "Les quatre activités d’Eliott",
+     "colonnes": [
+      "Ce que fait Eliott",
+      "Service utilisé"
+     ],
+     "lignes": [
+      [
+       "Il écrit le récit de son voyage, sans écrire une ligne de code",
+       "Blog"
+      ],
+      [
+       "Il corrige une page avec trois amis, en même temps",
+       "Wiki"
+      ],
+      [
+       "Il poste une vidéo de 30 secondes",
+       "Plateforme vidéo"
+      ],
+      [
+       "Il lit les horaires d’ouverture de la mairie, sans rien publier",
+       "Site en lecture seule"
+      ]
+     ],
+     "source": "Journée inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "samedi",
+     "enonce": "Touche l’activité où Eliott ne publie rien.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche l’activité où il se contente de lire.",
+     "explication": "Quand il lit les horaires de la mairie, Eliott ne publie rien : c’est l’usage du **premier Web**, qui se lisait."
+    },
+    {
+     "type": "nombre",
+     "document": "samedi",
+     "enonce": "Sur ses quatre activités, combien sont des publications ?",
+     "reponse": 3,
+     "aide": "Retire celle où il lit seulement.",
+     "explication": "Le récit, la page corrigée et la vidéo sont des contributions : **3** publications."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque service à ce qu’il permet.",
+     "paires": [
+      [
+       "Blog",
+       "Publier un texte sans savoir coder"
+      ],
+      [
+       "Wiki",
+       "Écrire à plusieurs sur la même page"
+      ],
+      [
+       "Plateforme vidéo",
+       "Diffuser à un large public"
+      ]
+     ],
+     "aide": "Le mot « wiki » désigne un outil d’écriture collective.",
+     "explication": "Un **blog** publie un texte sans coder, un **wiki** s’écrit à plusieurs sur la même page, une **plateforme vidéo** diffuse à un large public."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui a vraiment changé avec le web 2.0, à partir des années 2000 ?",
+     "options": [
+      "L’interface permet de publier sans savoir programmer",
+      "Les techniques de publication n’existaient pas avant",
+      "Les pages ne sont plus écrites en HTML",
+      "Seuls des professionnels peuvent publier"
+     ],
+     "reponse": 0,
+     "aide": "Les techniques existaient déjà : cherche ce qui est devenu plus simple pour l’utilisateur.",
+     "explication": "Les techniques existaient déjà : ce qui change, c’est l’**interface**, qui permet à chacun de publier sans programmer."
+    }
+   ]
+  },
+  {
+   "chapitre": "51bdc90b-47ca-5ffd-a3b9-f2a538abada5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pourquoi tout le monde reste sur la même messagerie",
+   "competence": "modeliser",
+   "situation": "Dans la classe d’Anaïs, tous les élèves veulent discuter par messages. Plus il y a d’élèves inscrits sur une même messagerie, plus chacun peut parler à de monde : c’est un effet de réseau.",
+   "documents": [
+    {
+     "id": "regle",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Le nombre de conversations possibles",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Chaque utilisateur peut écrire à chacun des autres, et une conversation relie deux personnes.",
+      "Pour n utilisateurs, le nombre de conversations à deux possibles est n × (n − 1) ÷ 2."
+     ]
+    },
+    {
+     "id": "graph",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Conversations possibles selon le nombre d’utilisateurs",
+     "categories": [
+      "2",
+      "4",
+      "8",
+      "16"
+     ],
+     "series": [
+      {
+       "nom": "Conversations",
+       "valeurs": [
+        1,
+        6,
+        28,
+        120
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Conversations à deux",
+      "min": 0,
+      "max": 120,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Nombre d’utilisateurs"
+     },
+     "valeurs": true,
+     "source": "Calculé avec la formule du texte"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "regle",
+     "enonce": "Combien de conversations à deux sont possibles entre 10 utilisateurs ?",
+     "reponse": 45,
+     "aide": "Calcule 10 × 9, puis divise par 2.",
+     "explication": "10 × 9 ÷ 2 = **45** conversations possibles."
+    },
+    {
+     "type": "nombre",
+     "document": "graph",
+     "enonce": "Quand on passe de 8 à 16 utilisateurs, par combien le nombre de conversations est-il à peu près multiplié ? (arrondi à l’unité)",
+     "reponse": 4,
+     "aide": "Divise la valeur de la barre 16 par celle de la barre 8, puis arrondis.",
+     "explication": "120 ÷ 28 ≈ 4,3, soit environ **4** : le nombre d’utilisateurs double, mais la valeur du service est multipliée par plus de 4."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conséquence économique cet effet de réseau favorise-t-il ?",
+     "options": [
+      "La concentration en quelques très grands acteurs",
+      "La disparition des grandes plateformes",
+      "Une multiplication de petits services équivalents",
+      "La gratuité de tous les services"
+     ],
+     "reponse": 0,
+     "aide": "Si la valeur d’un service croît avec le nombre d’utilisateurs, partir coûte de plus en plus cher.",
+     "explication": "Plus un service a d’utilisateurs, plus il est coûteux de le quitter : cela favorise la **concentration** en quelques très grands acteurs."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Plus il y a d’utilisateurs, plus la valeur du service ___ ; il devient alors coûteux de ___.",
+     "reponses": [
+      [
+       "augmente"
+      ],
+      [
+       "partir"
+      ]
+     ],
+     "banque": [
+      "augmente",
+      "diminue",
+      "partir",
+      "rester"
+     ],
+     "aide": "Pense à ce qui retient Anaïs sur la messagerie de ses amis.",
+     "explication": "La valeur **augmente** avec le nombre d’utilisateurs, et c’est ce qui rend coûteux de **partir** : le coût de sortie."
+    }
+   ]
+  },
+  {
+   "chapitre": "51bdc90b-47ca-5ffd-a3b9-f2a538abada5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une encyclopédie que n’importe qui peut modifier",
+   "competence": "analyser-document",
+   "situation": "Inès lit l’historique des modifications d’un article d’une encyclopédie collaborative. Elle se demande comment un texte que tout le monde peut modifier peut rester fiable.",
+   "documents": [
+    {
+     "id": "histo",
+     "type": "tableau",
+     "titre": "Historique de l’article « Le village de Vaux »",
+     "colonnes": [
+      "Heure",
+      "Contributeur",
+      "Modification",
+      "Sort"
+     ],
+     "lignes": [
+      [
+       "14 h 02",
+       "Compte ancien (850 modifications)",
+       "Ajoute une date, avec sa source",
+       "Conservée"
+      ],
+      [
+       "14 h 10",
+       "Anonyme",
+       "Remplace l’article par des insultes",
+       "Annulée en 3 minutes"
+      ],
+      [
+       "14 h 25",
+       "Compte récent (2 modifications)",
+       "Ajoute une affirmation sans source",
+       "À vérifier"
+      ],
+      [
+       "15 h 00",
+       "Compte ancien (850 modifications)",
+       "Corrige une faute d’orthographe",
+       "Conservée"
+      ]
+     ],
+     "source": "Historique inventé pour l’exercice"
+    },
+    {
+     "id": "exemples",
+     "type": "tableau",
+     "titre": "Trois projets collaboratifs",
+     "colonnes": [
+      "Projet",
+      "Ce qu’il produit"
+     ],
+     "lignes": [
+      [
+       "Wikipédia",
+       "Une encyclopédie"
+      ],
+      [
+       "OpenStreetMap",
+       "Une carte du monde"
+      ],
+      [
+       "Logiciels libres",
+       "Des programmes dont le code est partagé"
+      ]
+     ],
+     "source": "Exemples du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "histo",
+     "enonce": "Touche le sort de la modification qui relève du vandalisme.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Cherche la modification qui détruit l’article au lieu de l’améliorer.",
+     "explication": "Remplacer l’article par des insultes est du **vandalisme** : la communauté l’a annulé en 3 minutes."
+    },
+    {
+     "type": "nombre",
+     "document": "histo",
+     "enonce": "Combien de modifications ont été conservées sans discussion ?",
+     "reponse": 2,
+     "aide": "Compte les lignes dont le sort est « Conservée ».",
+     "explication": "Les modifications de 14 h 02 et de 15 h 00 sont conservées : **2**. Celle de 14 h 25 reste à vérifier faute de source."
+    },
+    {
+     "type": "choix",
+     "document": "histo",
+     "enonce": "Quelle condition de réussite l’historique illustre-t-il ?",
+     "options": [
+      "Des règles, une vérification et des contributeurs réguliers",
+      "Le fait que seuls des spécialistes payés puissent écrire",
+      "L’interdiction de toute modification anonyme",
+      "L’absence totale de règles pour attirer plus d’auteurs"
+     ],
+     "reponse": 0,
+     "aide": "Qui a annulé l’insulte ? Qui demande une source ? Qui ajoute des dates fiables ?",
+     "explication": "Sans **règles, vérification et contributeurs réguliers**, la contribution ouverte produit vandalisme et désinformation. L’historique montre ces trois éléments à l’œuvre."
+    },
+    {
+     "type": "association",
+     "document": "exemples",
+     "enonce": "Associe chaque exemple de projet collaboratif à sa condition de réussite.",
+     "paires": [
+      [
+       "Wikipédia",
+       "Des règles, une vérification, des contributeurs réguliers"
+      ],
+      [
+       "OpenStreetMap",
+       "Une communauté qui corrige"
+      ],
+      [
+       "Logiciels libres",
+       "Une gouvernance du projet"
+      ]
+     ],
+     "aide": "Pour une carte, ce sont les contributeurs eux-mêmes qui rectifient les erreurs.",
+     "explication": "**Wikipédia** : règles et vérification ; **OpenStreetMap** : une communauté qui corrige ; **logiciels libres** : une gouvernance du projet."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le contributeur n’est jamais seulement un ___ : il est aussi une source de ___ monétisées.",
+     "reponses": [
+      [
+       "lecteur"
+      ],
+      [
+       "données"
+      ]
+     ],
+     "banque": [
+      "lecteur",
+      "données",
+      "éditeur",
+      "images"
+     ],
+     "aide": "Sur une plateforme gratuite, ce que l’on publie a une valeur économique.",
+     "explication": "Le contributeur n’est jamais seulement un **lecteur** : ses publications laissent des traces, et ses **données** sont monétisées."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef530192-87f4-5e81-acea-34beaf26774d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les horaires de bus de la mairie",
+   "competence": "lire-tableau",
+   "situation": "La mairie de Léo publie ses données en ligne. Léo veut fabriquer une application d’horaires de bus : il regarde d’abord quels fichiers il peut réutiliser sans tout retaper.",
+   "documents": [
+    {
+     "id": "fichiers",
+     "type": "tableau",
+     "titre": "Quatre fichiers publiés par la mairie",
+     "colonnes": [
+      "Fichier",
+      "Ce qu’il contient"
+     ],
+     "lignes": [
+      [
+       "horaires-bus.csv",
+       "Un tableau de texte, lisible par un programme"
+      ],
+      [
+       "budget-ville.pdf",
+       "Le scan d’un document papier"
+      ],
+      [
+       "resultats.json",
+       "Des données structurées, lisibles par un programme"
+      ],
+      [
+       "plan.png",
+       "Une photo d’un plan"
+      ]
+     ],
+     "source": "Liste inventée pour l’exercice"
+    },
+    {
+     "id": "csv",
+     "type": "tableau",
+     "titre": "Extrait de horaires-bus.csv",
+     "colonnes": [
+      "ligne",
+      "arret",
+      "heure"
+     ],
+     "lignes": [
+      [
+       "12",
+       "Mairie",
+       "07:10"
+      ],
+      [
+       "12",
+       "Gare",
+       "07:18"
+      ],
+      [
+       "12",
+       "Mairie",
+       "07:40"
+      ],
+      [
+       "12",
+       "Gare",
+       "07:48"
+      ],
+      [
+       "12",
+       "Mairie",
+       "08:10"
+      ]
+     ],
+     "source": "Extrait inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fichiers",
+     "enonce": "Touche les deux fichiers dont le format est ouvert et lisible par machine.",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "multiple": true,
+     "aide": "Un scan et une photo sont des images : un programme n’y lit pas de données.",
+     "explication": "Les fichiers **horaires-bus.csv** et **resultats.json** sont exploitables sans ressaisie. Un PDF scanné ou une photo ne le sont pas."
+    },
+    {
+     "type": "nombre",
+     "document": "csv",
+     "enonce": "Combien de passages de bus à l’arrêt « Mairie » l’extrait contient-il ?",
+     "reponse": 3,
+     "aide": "Compte les lignes dont la colonne « arret » indique Mairie.",
+     "explication": "Les passages de 07:10, 07:40 et 08:10 : **3** passages à la Mairie."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque critère de l’open data à ce qu’il exige.",
+     "paires": [
+      [
+       "Accessible",
+       "En ligne, sans démarche"
+      ],
+      [
+       "Format ouvert",
+       "CSV, JSON, XML plutôt qu’un PDF scanné"
+      ],
+      [
+       "Métadonnées",
+       "On sait ce que contient le fichier"
+      ],
+      [
+       "Licence",
+       "La réutilisation est autorisée"
+      ]
+     ],
+     "aide": "Les métadonnées décrivent un jeu de données.",
+     "explication": "Une donnée ouverte est **accessible**, dans un **format ouvert**, **documentée** par des métadonnées et sous **licence** explicite."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef530192-87f4-5e81-acea-34beaf26774d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’application qui surveille l’air de la ville",
+   "competence": "lire-tableau",
+   "situation": "Salomé veut créer une application payante qui prévient quand l’air est pollué. Elle utilise un jeu de données publié sur le portail de données publiques : des mesures de particules fines (PM10).",
+   "documents": [
+    {
+     "id": "mesures",
+     "type": "tableau",
+     "titre": "Mesures de PM10 sur deux jours",
+     "colonnes": [
+      "Station",
+      "Jour",
+      "PM10 (µg/m³)"
+     ],
+     "lignes": [
+      [
+       "Gare",
+       "lundi",
+       31
+      ],
+      [
+       "Gare",
+       "mardi",
+       45
+      ],
+      [
+       "Parc",
+       "lundi",
+       18
+      ],
+      [
+       "Parc",
+       "mardi",
+       22
+      ],
+      [
+       "Centre",
+       "lundi",
+       40
+      ],
+      [
+       "Centre",
+       "mardi",
+       52
+      ]
+     ],
+     "source": "Mesures inventées pour l’exercice"
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Fiche du jeu de données",
+     "sousTitre": "Notice décrivant les mesures",
+     "lignes": [
+      {
+       "texte": "Titre",
+       "valeur": "Mesures de PM10"
+      },
+      {
+       "texte": "Producteur",
+       "valeur": "Association de surveillance de l’air"
+      },
+      {
+       "texte": "Format",
+       "valeur": "CSV"
+      },
+      {
+       "texte": "Licence",
+       "valeur": "Réutilisation libre, y compris commerciale, en citant la source",
+       "id": "licence"
+      },
+      {
+       "texte": "Dernière mise à jour",
+       "valeur": "1er septembre 2026",
+       "id": "maj"
+      }
+     ],
+     "source": "Fiche inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "mesures",
+     "enonce": "Quelle est la moyenne des deux mesures de la station « Gare », en µg/m³ ?",
+     "reponse": 38,
+     "unite": "µg/m³",
+     "aide": "Additionne les deux valeurs de la station, puis divise par 2.",
+     "explication": "(31 + 45) ÷ 2 = **38** µg/m³."
+    },
+    {
+     "type": "nombre",
+     "document": "mesures",
+     "enonce": "L’application signale les mesures strictement supérieures à 40 µg/m³. Combien en signale-t-elle ?",
+     "reponse": 2,
+     "aide": "Une mesure égale à 40 n’est pas supérieure à 40.",
+     "explication": "Seules les valeurs 45 et 52 dépassent 40 : **2** mesures. La valeur 40 est égale au seuil, pas supérieure."
+    },
+    {
+     "type": "zone",
+     "document": "notice",
+     "enonce": "Touche la ligne de la notice qui dit si Salomé a le droit de vendre son application.",
+     "reponse": [
+      "licence"
+     ],
+     "aide": "Cherche ce qui précise l’usage permis des données, commercial ou non.",
+     "explication": "La **licence** autorise la réutilisation libre, y compris commerciale, à condition de citer la source."
+    },
+    {
+     "type": "choix",
+     "document": "notice",
+     "enonce": "Salomé peut-elle utiliser ces données dans son application payante ?",
+     "options": [
+      "Oui, à condition de citer la source",
+      "Non, une donnée ouverte est toujours gratuite à réutiliser",
+      "Non, car les données publiques sont interdites aux entreprises",
+      "Oui, sans rien mentionner du tout"
+     ],
+     "reponse": 0,
+     "aide": "Relis la licence : elle autorise le commercial, avec une condition.",
+     "explication": "Une donnée ouverte peut être réutilisée à des fins commerciales ; ici, la licence demande de **citer la source**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ef530192-87f4-5e81-acea-34beaf26774d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Anonymes dans le fichier, reconnus par croisement",
+   "competence": "raisonner",
+   "situation": "Une ville met en ligne un fichier de consultations médicales de ses jeunes habitants, « anonymisé » : les noms sont retirés. Nina compare ce fichier avec la liste publique d’un club de foot et s’inquiète.",
+   "documents": [
+    {
+     "id": "sante",
+     "type": "tableau",
+     "titre": "Fichier de consultations, sans les noms",
+     "colonnes": [
+      "N°",
+      "Naissance",
+      "Code postal",
+      "Sexe",
+      "Motif"
+     ],
+     "lignes": [
+      [
+       "1",
+       "2008",
+       "38000",
+       "F",
+       "Allergie"
+      ],
+      [
+       "2",
+       "2008",
+       "38000",
+       "M",
+       "Fracture"
+      ],
+      [
+       "3",
+       "2007",
+       "38000",
+       "F",
+       "Asthme"
+      ],
+      [
+       "4",
+       "2008",
+       "69003",
+       "F",
+       "Angine"
+      ]
+     ],
+     "source": "Fichier inventé pour l’exercice"
+    },
+    {
+     "id": "club",
+     "type": "tableau",
+     "titre": "Liste publique du club de foot",
+     "colonnes": [
+      "Nom",
+      "Naissance",
+      "Code postal",
+      "Sexe"
+     ],
+     "lignes": [
+      [
+       "Léa Martin",
+       "2008",
+       "38000",
+       "F"
+      ],
+      [
+       "Samir Haddad",
+       "2008",
+       "38000",
+       "M"
+      ],
+      [
+       "Chloé Petit",
+       "2007",
+       "38000",
+       "F"
+      ],
+      [
+       "Jade Roux",
+       "2008",
+       "69003",
+       "F"
+      ]
+     ],
+     "source": "Liste inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "sante",
+     "enonce": "Combien de lignes du fichier de consultations correspondent à une personne née en 2008 ET habitant le code postal 38000 ?",
+     "reponse": 2,
+     "aide": "Garde les lignes qui remplissent les deux conditions en même temps.",
+     "explication": "Les lignes 1 et 2 sont nées en 2008 et habitent 38000 : **2** lignes. Avec ces deux informations seules, on hésite encore."
+    },
+    {
+     "type": "zone",
+     "document": "sante",
+     "enonce": "Léa Martin figure dans la liste du club. Touche le motif de consultation qui est le sien dans le fichier.",
+     "reponse": [
+      "r0c4"
+     ],
+     "aide": "Croise trois informations : naissance, code postal et sexe de Léa.",
+     "explication": "Léa est née en 2008, habite 38000 et est une fille : une seule ligne correspond, celle du motif **Allergie**. Elle est réidentifiée par croisement."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel risque cet exemple illustre-t-il ?",
+     "options": [
+      "La réidentification par croisement de fichiers",
+      "Le piratage du serveur informatique de la mairie",
+      "La perte des données à cause d’une panne de disque",
+      "L’obsolescence du format CSV dans quelques années"
+     ],
+     "reponse": 0,
+     "aide": "Aucun des deux fichiers ne contient à la fois le nom et le motif, mais ils partagent trois colonnes.",
+     "explication": "Retirer les noms ne suffit pas : en **croisant** deux fichiers, on retrouve la personne. C’est le risque de réidentification, réel pour les données personnelles."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque jeu de données : peut-il être publié tel quel, ou pas ?",
+     "categories": [
+      "Publiable tel quel",
+      "Pas tel quel"
+     ],
+     "items": [
+      [
+       "Les horaires des bus",
+       0
+      ],
+      [
+       "Les prix des carburants",
+       0
+      ],
+      [
+       "Le fichier nominatif des patients d’un hôpital",
+       1
+      ],
+      [
+       "Les résultats d’une élection, commune par commune",
+       0
+      ],
+      [
+       "Des statistiques couvertes par le secret statistique",
+       1
+      ]
+     ],
+     "aide": "Les données personnelles et celles couvertes par un secret ne s’ouvrent pas sans protection.",
+     "explication": "Horaires, prix et résultats d’élection sont d’**intérêt public**. Les fichiers nominatifs et les données couvertes par le **secret statistique** ne peuvent pas être publiés tels quels."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca47ce74-3bde-5940-af86-fdf4f214bd51",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Où va la photo de Mia ?",
+   "competence": "observer-schema",
+   "situation": "Mia sauvegarde une photo « dans le nuage » depuis son téléphone. Elle imagine qu’elle flotte quelque part. Suivons le chemin réel de sa photo.",
+   "documents": [
+    {
+     "id": "chemin",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le chemin de la photo",
+     "noeuds": [
+      {
+       "id": "tel",
+       "texte": "Téléphone",
+       "emoji": "📱"
+      },
+      {
+       "id": "res",
+       "texte": "Réseau",
+       "emoji": "📡"
+      },
+      {
+       "id": "dc",
+       "texte": "Datacenter",
+       "emoji": "🏢"
+      },
+      {
+       "id": "disque",
+       "texte": "Disques",
+       "emoji": "💽"
+      }
+     ],
+     "liens": [
+      {
+       "de": "tel",
+       "a": "res"
+      },
+      {
+       "de": "res",
+       "a": "dc"
+      },
+      {
+       "de": "dc",
+       "a": "disque"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chemin",
+     "enonce": "Touche le bâtiment qui rassemble des milliers de serveurs.",
+     "reponse": [
+      "dc"
+     ],
+     "aide": "Cherche l’étape qui est un bâtiment.",
+     "explication": "Le **datacenter** est un bâtiment qui rassemble des milliers de serveurs en baies."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque niveau de service du cloud à ce qu’il fournit.",
+     "paires": [
+      [
+       "Infrastructure",
+       "Des machines et du stockage"
+      ],
+      [
+       "Plateforme",
+       "Un environnement d’exécution"
+      ],
+      [
+       "Logiciel",
+       "Une application prête à l’emploi"
+      ]
+     ],
+     "aide": "Le niveau « logiciel » est celui que l’utilisateur final touche directement.",
+     "explication": "L’**infrastructure** fournit machines et stockage, la **plateforme** un environnement d’exécution, le **logiciel** une application prête à l’emploi."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Quand un fichier part dans le nuage, il atterrit sur un ___, dans un ___ qui appartient à une entreprise.",
+     "reponses": [
+      [
+       "disque"
+      ],
+      [
+       "datacenter"
+      ]
+     ],
+     "banque": [
+      "disque",
+      "datacenter",
+      "nuage",
+      "câble"
+     ],
+     "aide": "Relis la dernière étape de la chaîne et le bâtiment qui la contient.",
+     "explication": "La photo atterrit sur un **disque**, dans un **datacenter** : le nuage n’a rien d’aérien."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca47ce74-3bde-5940-af86-fdf4f214bd51",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La coupure de courant au datacenter",
+   "competence": "observer-schema",
+   "situation": "Un orage coupe le courant près d’un datacenter qui héberge les fichiers de milliers d’élèves. Le service doit continuer, et un incendie dans un autre site ne doit rien faire perdre.",
+   "documents": [
+    {
+     "id": "dc",
+     "type": "schema",
+     "titre": "Un datacenter vu de l’extérieur",
+     "largeur": 400,
+     "hauteur": 240,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 40,
+       "l": 200,
+       "h": 185,
+       "arrondi": 4,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 32,
+       "texte": "Datacenter",
+       "ancre": "milieu",
+       "gras": true
+      },
+      {
+       "forme": "rect",
+       "x": 90,
+       "y": 52,
+       "l": 180,
+       "h": 24,
+       "arrondi": 4,
+       "teinte": "ciel",
+       "motif": "plein",
+       "texte": "Climatisation",
+       "id": "clim",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        111,
+        78
+       ],
+       "a": [
+        111,
+        98
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        153,
+        78
+       ],
+       "a": [
+        153,
+        98
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        195,
+        78
+       ],
+       "a": [
+        195,
+        98
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        237,
+        78
+       ],
+       "a": [
+        237,
+        98
+       ],
+       "fleche": "fin",
+       "teinte": "bleu",
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 102,
+       "l": 38,
+       "h": 100,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "baie0"
+      },
+      {
+       "forme": "rect",
+       "x": 97,
+       "y": 108,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 97,
+       "y": 126,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 97,
+       "y": 144,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 97,
+       "y": 162,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 97,
+       "y": 180,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 134,
+       "y": 102,
+       "l": 38,
+       "h": 100,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "baie1"
+      },
+      {
+       "forme": "rect",
+       "x": 139,
+       "y": 108,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 139,
+       "y": 126,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 139,
+       "y": 144,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 139,
+       "y": 162,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 139,
+       "y": 180,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 176,
+       "y": 102,
+       "l": 38,
+       "h": 100,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "baie2"
+      },
+      {
+       "forme": "rect",
+       "x": 181,
+       "y": 108,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 181,
+       "y": 126,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 181,
+       "y": 144,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 181,
+       "y": 162,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 181,
+       "y": 180,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 218,
+       "y": 102,
+       "l": 38,
+       "h": 100,
+       "arrondi": 4,
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "baie3"
+      },
+      {
+       "forme": "rect",
+       "x": 223,
+       "y": 108,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 223,
+       "y": 126,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 223,
+       "y": 144,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 223,
+       "y": 162,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 223,
+       "y": 180,
+       "l": 28,
+       "h": 10,
+       "arrondi": 2,
+       "teinte": "encre",
+       "motif": "clair"
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 218,
+       "texte": "Serveurs en baies",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 4,
+       "y": 118,
+       "l": 56,
+       "h": 44,
+       "arrondi": 4,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Réseau",
+       "id": "res",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        130
+       ],
+       "a": [
+        80,
+        130
+       ],
+       "teinte": "bleu",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        150
+       ],
+       "a": [
+        80,
+        150
+       ],
+       "teinte": "bleu",
+       "epaisseur": 3
+      },
+      {
+       "forme": "rect",
+       "x": 306,
+       "y": 60,
+       "l": 86,
+       "h": 44,
+       "arrondi": 4,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Groupe",
+       "id": "grp",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 349,
+       "y": 118,
+       "texte": "électrogène",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 306,
+       "y": 150,
+       "l": 86,
+       "h": 44,
+       "arrondi": 4,
+       "teinte": "jaune",
+       "motif": "clair",
+       "texte": "Alim.",
+       "id": "alim",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 349,
+       "y": 208,
+       "texte": "redondante",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        82
+       ],
+       "a": [
+        306,
+        82
+       ],
+       "teinte": "gris",
+       "epaisseur": 3
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        280,
+        172
+       ],
+       "a": [
+        306,
+        172
+       ],
+       "teinte": "gris",
+       "epaisseur": 3
+      }
+     ]
+    },
+    {
+     "id": "copies",
+     "type": "tableau",
+     "titre": "Copies d’un même fichier d’élève",
+     "colonnes": [
+      "Site",
+      "Nombre de copies"
+     ],
+     "lignes": [
+      [
+       "Site de Lyon",
+       3
+      ],
+      [
+       "Site de Lille",
+       2
+      ]
+     ],
+     "source": "Exemple inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "dc",
+     "enonce": "Touche l’élément qui évacue la chaleur produite par les serveurs.",
+     "reponse": [
+      "clim"
+     ],
+     "aide": "Les flèches dessinées envoient de l’air frais vers les baies.",
+     "explication": "La **climatisation** évacue la chaleur. Sans elle, les serveurs en baies surchaufferaient."
+    },
+    {
+     "type": "zone",
+     "document": "dc",
+     "enonce": "Touche les deux éléments qui permettent de continuer à fonctionner pendant une coupure de courant.",
+     "reponse": [
+      "grp",
+      "alim"
+     ],
+     "multiple": true,
+     "aide": "Un élément produit de l’électricité sur place ; l’autre double les arrivées de courant.",
+     "explication": "Le **groupe électrogène** produit du courant sur place et l’**alimentation redondante** double les arrivées : le datacenter survit à une coupure."
+    },
+    {
+     "type": "nombre",
+     "document": "copies",
+     "enonce": "Un incendie détruit tout le site de Lyon. Combien de copies du fichier restent-elles ?",
+     "reponse": 2,
+     "aide": "Retire du total les copies qui se trouvaient dans le site détruit.",
+     "explication": "Les 3 copies de Lyon sont perdues, mais le site de Lille garde ses **2** copies : le fichier survit grâce à la réplication."
+    },
+    {
+     "type": "choix",
+     "document": "copies",
+     "enonce": "Pourquoi répliquer les données sur plusieurs machines et plusieurs sites ?",
+     "options": [
+      "Pour survivre à une panne matérielle ou à un sinistre",
+      "Pour réduire le nombre de serveurs nécessaires",
+      "Pour que la facture d’électricité baisse",
+      "Pour supprimer toute dépendance à la connexion"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qui arrive aux données si un seul disque ou un seul bâtiment est touché.",
+     "explication": "La **réplication** garantit la survie des données à une panne ou à un incendie. Elle consomme du stockage, mais protège."
+    }
+   ]
+  },
+  {
+   "chapitre": "ca47ce74-3bde-5940-af86-fdf4f214bd51",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel datacenter est le plus efficace ?",
+   "competence": "raisonner",
+   "situation": "Le lycée de Yanis hésite entre trois hébergeurs. Le proviseur compare leur consommation d’énergie, puis réfléchit à l’endroit où seront stockées les copies numérisées des élèves.",
+   "documents": [
+    {
+     "id": "pue",
+     "type": "tableau",
+     "titre": "Consommation annuelle de trois datacenters",
+     "colonnes": [
+      "Datacenter",
+      "Énergie totale (MWh)",
+      "Énergie utile aux calculs (MWh)"
+     ],
+     "lignes": [
+      [
+       "A",
+       1500,
+       1000
+      ],
+      [
+       "B",
+       1200,
+       1000
+      ],
+      [
+       "C",
+       2000,
+       1000
+      ]
+     ],
+     "source": "Chiffres inventés pour l’exercice"
+    },
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Extrait du courrier du proviseur",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Nous hébergerons les copies numérisées des élèves chez une entreprise dont le siège est aux États-Unis, dans un datacenter situé en Allemagne. L’accès depuis n’importe où est un avantage, mais nous dépendrons de la connexion de l’établissement."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "pue",
+     "enonce": "Le PUE est l’énergie totale divisée par l’énergie utile aux calculs. Quel est le PUE du datacenter A ?",
+     "reponse": 1.5,
+     "aide": "Divise 1 500 par 1 000.",
+     "explication": "1 500 ÷ 1 000 = **1,5** : pour 1 MWh de calculs, le datacenter consomme 1,5 MWh au total."
+    },
+    {
+     "type": "zone",
+     "document": "pue",
+     "enonce": "Touche le datacenter le plus efficace, celui dont le PUE est le plus proche de 1.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Calcule le PUE de chacun : le meilleur est le plus petit.",
+     "explication": "Les PUE valent 1,5 pour A, **1,2 pour B** et 2,0 pour C : B gaspille le moins d’énergie."
+    },
+    {
+     "type": "nombre",
+     "document": "pue",
+     "enonce": "Combien de MWh le datacenter B consomme-t-il en plus de ce qui sert aux calculs (refroidissement, pertes…) ?",
+     "reponse": 200,
+     "unite": "MWh",
+     "aide": "Soustrais l’énergie utile de l’énergie totale.",
+     "explication": "1 200 − 1 000 = **200 MWh** servent à autre chose que les calculs."
+    },
+    {
+     "type": "choix",
+     "document": "lettre",
+     "enonce": "Quel problème de souveraineté le courrier pose-t-il ?",
+     "options": [
+      "La loi applicable dépend du pays de stockage et de la nationalité de l’hébergeur",
+      "La loi allemande s’applique seule, puisque les serveurs sont en Allemagne",
+      "Aucune loi ne s’applique, car le cloud est immatériel",
+      "Seule la loi du lycée s’applique, puisque les copies lui appartiennent"
+     ],
+     "reponse": 0,
+     "aide": "Regarde séparément le pays où sont les serveurs et le pays du siège de l’entreprise.",
+     "explication": "La souveraineté dépend à la fois du **pays de stockage** (Allemagne) et de la **nationalité de l’hébergeur** (États-Unis) : plusieurs droits peuvent s’appliquer."
+    },
+    {
+     "type": "association",
+     "document": "lettre",
+     "enonce": "Associe chaque avantage du cloud à sa contrepartie.",
+     "paires": [
+      [
+       "Accès depuis n’importe où",
+       "Dépendance à la connexion"
+      ],
+      [
+       "Sauvegarde automatique",
+       "Dépendance au fournisseur"
+      ],
+      [
+       "Capacité élastique sans investissement",
+       "Coût qui grimpe avec le volume"
+      ]
+     ],
+     "aide": "Chaque avantage a un prix : ce que l’on perd en échange de ce que l’on gagne.",
+     "explication": "L’accès partout dépend de la **connexion** ; la sauvegarde automatique dépend du **fournisseur** ; la capacité élastique fait **grimper le coût** avec le volume."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed70a8c4-8a56-5978-a4aa-665810b5c881",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le groupe d’amis de la classe de Léa",
+   "competence": "observer-schema",
+   "situation": "Léa a dessiné qui est ami avec qui dans son groupe. Chaque personne est un sommet ; chaque trait entre deux personnes est une arête.",
+   "documents": [
+    {
+     "id": "amis",
+     "type": "schema",
+     "titre": "Les amitiés du groupe",
+     "largeur": 380,
+     "hauteur": 200,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        100
+       ],
+       "a": [
+        70,
+        45
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        100
+       ],
+       "a": [
+        70,
+        155
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        45
+       ],
+       "a": [
+        70,
+        155
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        100
+       ],
+       "a": [
+        235,
+        100
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        100
+       ],
+       "a": [
+        305,
+        45
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        305,
+        45
+       ],
+       "a": [
+        305,
+        155
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 100,
+       "r": 24,
+       "texte": "Léa",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "lea",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 45,
+       "r": 24,
+       "texte": "Tom",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "tom",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 155,
+       "r": 24,
+       "texte": "Inès",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "ines",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 100,
+       "r": 24,
+       "texte": "Sam",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "sam",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 305,
+       "cy": 45,
+       "r": 24,
+       "texte": "Zoé",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "zoe",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 305,
+       "cy": 155,
+       "r": 24,
+       "texte": "Karim",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "karim",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "amis",
+     "enonce": "Touche la personne qui a le plus d’amis dans ce groupe.",
+     "reponse": [
+      "lea"
+     ],
+     "aide": "Compte les traits qui partent de chaque cercle : une seule personne en a trois.",
+     "explication": "**Léa** est reliée à Tom, Inès et Sam : 3 voisins, c’est le degré le plus élevé."
+    },
+    {
+     "type": "nombre",
+     "document": "amis",
+     "enonce": "Combien de voisins Sam a-t-il ? (c’est son degré)",
+     "reponse": 2,
+     "aide": "Compte les traits qui touchent le cercle de Sam.",
+     "explication": "Sam est relié à Léa et à Zoé : son degré est **2**."
+    },
+    {
+     "type": "nombre",
+     "document": "amis",
+     "enonce": "Combien d’arêtes (relations) le graphe contient-il ?",
+     "reponse": 6,
+     "aide": "Compte chaque trait une seule fois.",
+     "explication": "Léa–Tom, Léa–Inès, Tom–Inès, Léa–Sam, Sam–Zoé, Zoé–Karim : **6** arêtes."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme de vocabulaire des graphes à sa définition.",
+     "paires": [
+      [
+       "Degré d’un sommet",
+       "Le nombre de ses voisins"
+      ],
+      [
+       "Chaîne",
+       "Une suite d’arêtes reliant deux sommets"
+      ],
+      [
+       "Distance entre deux sommets",
+       "La longueur de la plus courte chaîne"
+      ],
+      [
+       "Diamètre",
+       "La plus grande de ces distances"
+      ]
+     ],
+     "aide": "La distance ne retient que la plus courte des chaînes possibles.",
+     "explication": "Le **degré** compte les voisins ; la **chaîne** est une suite d’arêtes ; la **distance** est la plus courte chaîne ; le **diamètre** est la plus grande des distances."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed70a8c4-8a56-5978-a4aa-665810b5c881",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui est loin de qui sur le réseau d’Ana ?",
+   "competence": "modeliser",
+   "situation": "Le réseau social d’Ana relie sept personnes. Elle veut savoir en combien de relations un message peut aller d’un compte à l’autre. Elle regarde aussi un second réseau, où l’on peut suivre quelqu’un sans être suivi.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "schema",
+     "titre": "Le réseau d’Ana : relations d’amitié",
+     "largeur": 400,
+     "hauteur": 215,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        105
+       ],
+       "a": [
+        112,
+        105
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        105
+       ],
+       "a": [
+        190,
+        45
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        45
+       ],
+       "a": [
+        285,
+        105
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        112,
+        105
+       ],
+       "a": [
+        150,
+        170
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        170
+       ],
+       "a": [
+        235,
+        170
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        170
+       ],
+       "a": [
+        285,
+        105
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        285,
+        105
+       ],
+       "a": [
+        350,
+        105
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 105,
+       "r": 22,
+       "texte": "Ana",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "ana",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 112,
+       "cy": 105,
+       "r": 22,
+       "texte": "Bilal",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "bil",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 190,
+       "cy": 45,
+       "r": 22,
+       "texte": "Chloé",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "clo",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 285,
+       "cy": 105,
+       "r": 22,
+       "texte": "David",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "dav",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 170,
+       "r": 22,
+       "texte": "Farid",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "far",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 170,
+       "r": 22,
+       "texte": "Gaël",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "gae",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 350,
+       "cy": 105,
+       "r": 22,
+       "texte": "Eva",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "eva",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "suivis",
+     "type": "schema",
+     "titre": "Un autre réseau : qui suit qui",
+     "largeur": 360,
+     "hauteur": 120,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        94,
+        60
+       ],
+       "a": [
+        146,
+        60
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        214,
+        60
+       ],
+       "a": [
+        266,
+        60
+       ],
+       "fleche": "deux",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 60,
+       "r": 30,
+       "texte": "Noé",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "noe",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 60,
+       "r": 30,
+       "texte": "Camille",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "cam",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 300,
+       "cy": 60,
+       "r": 30,
+       "texte": "Yan",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "yan",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "reseau",
+     "enonce": "Quelle est la distance entre Ana et Gaël ? (la longueur de la plus courte chaîne)",
+     "reponse": 3,
+     "aide": "Cherche la plus courte suite d’arêtes de Ana à Gaël, en passant par Bilal.",
+     "explication": "La plus courte chaîne est Ana – Bilal – Farid – Gaël : **3** arêtes. L’autre chemin, par Chloé et David, est plus long."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "Touche tous les voisins de Bilal.",
+     "reponse": [
+      "ana",
+      "clo",
+      "far"
+     ],
+     "multiple": true,
+     "aide": "Un voisin est relié à Bilal par une arête, sans intermédiaire.",
+     "explication": "Bilal est directement relié à **Ana, Chloé et Farid** : son degré est 3."
+    },
+    {
+     "type": "nombre",
+     "document": "reseau",
+     "enonce": "Quel est le diamètre de ce graphe, c’est-à-dire la plus grande des distances entre deux sommets ?",
+     "reponse": 4,
+     "aide": "Cherche les deux personnes les plus éloignées : l’une est à une extrémité du graphe, l’autre à l’autre bout.",
+     "explication": "Ana et Eva sont les plus éloignées : Ana – Bilal – Chloé – David – Eva, soit **4** arêtes. Aucune autre paire n’est plus éloignée."
+    },
+    {
+     "type": "zone",
+     "document": "suivis",
+     "enonce": "Touche le compte que personne ne suit.",
+     "reponse": [
+      "noe"
+     ],
+     "aide": "Dans un graphe orienté, cherche le sommet où aucune flèche n’arrive.",
+     "explication": "Aucune flèche n’arrive sur **Noé** : il suit Camille, mais personne ne le suit."
+    },
+    {
+     "type": "choix",
+     "document": "suivis",
+     "enonce": "Pourquoi un graphe orienté est-il nécessaire pour ce second réseau ?",
+     "options": [
+      "Parce que je peux te suivre sans que tu me suives",
+      "Parce que tous les comptes ont le même nombre de voisins",
+      "Parce qu’il ne contient aucune chaîne",
+      "Parce que la distance y est toujours égale à 1"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les flèches entre Noé et Camille : y en a-t-il dans les deux sens ?",
+     "explication": "Une arête simple dit « amis ». Une flèche dit « **je te suis sans que tu me suives** » : c’est ce qu’exprime un graphe orienté."
+    }
+   ]
+  },
+  {
+   "chapitre": "ed70a8c4-8a56-5978-a4aa-665810b5c881",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Six degrés de séparation, vraiment ?",
+   "competence": "analyser-document",
+   "situation": "Chloé refait en classe une expérience inspirée de celle de Stanley Milgram, en 1967 : faire parvenir une lettre à un inconnu en ne passant que par des connaissances. Elle compte les intermédiaires et dessine deux groupes d’amis.",
+   "documents": [
+    {
+     "id": "resultats",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Lettres arrivées selon le nombre d’intermédiaires",
+     "categories": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "series": [
+      {
+       "nom": "Lettres arrivées",
+       "valeurs": [
+        1,
+        3,
+        6,
+        8,
+        7,
+        4,
+        1
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de lettres",
+      "min": 0,
+      "max": 8,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Nombre d’intermédiaires"
+     },
+     "valeurs": true,
+     "source": "Expérience imaginée, inspirée de celle de Milgram (1967)"
+    },
+    {
+     "id": "groupes",
+     "type": "schema",
+     "titre": "Deux groupes d’amis reliés par un seul lien",
+     "largeur": 380,
+     "hauteur": 215,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ellipse",
+       "cx": 90,
+       "cy": 105,
+       "rx": 85,
+       "ry": 78,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ellipse",
+       "cx": 290,
+       "cy": 105,
+       "rx": 85,
+       "ry": 78,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        60
+       ],
+       "a": [
+        130,
+        60
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        60
+       ],
+       "a": [
+        50,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        60
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        60
+       ],
+       "a": [
+        50,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        60
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        150
+       ],
+       "a": [
+        130,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        60
+       ],
+       "a": [
+        330,
+        60
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        60
+       ],
+       "a": [
+        250,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        60
+       ],
+       "a": [
+        330,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        330,
+        60
+       ],
+       "a": [
+        250,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        330,
+        60
+       ],
+       "a": [
+        330,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        250,
+        150
+       ],
+       "a": [
+        330,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        60
+       ],
+       "a": [
+        250,
+        60
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 60,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n0",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 60,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 150,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 150,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 60,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 330,
+       "cy": 60,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n5",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 250,
+       "cy": 150,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n6",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 330,
+       "cy": 150,
+       "r": 13,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "n7",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "resultats",
+     "enonce": "Combien de lettres sont arrivées à destination au total ?",
+     "reponse": 30,
+     "aide": "Additionne la hauteur de toutes les barres.",
+     "explication": "1 + 3 + 6 + 8 + 7 + 4 + 1 = **30** lettres."
+    },
+    {
+     "type": "zone",
+     "document": "resultats",
+     "enonce": "Touche le nombre d’intermédiaires le plus fréquent.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La barre la plus haute, 8 lettres, correspond à **6 intermédiaires**, comme dans l’expérience de Milgram."
+    },
+    {
+     "type": "nombre",
+     "document": "resultats",
+     "enonce": "Calcule le nombre moyen d’intermédiaires et donne-le arrondi à l’unité.",
+     "reponse": 6,
+     "aide": "Multiplie chaque nombre d’intermédiaires par le nombre de lettres, additionne, puis divise par 30.",
+     "explication": "(3×1 + 4×3 + 5×6 + 6×8 + 7×7 + 8×4 + 9×1) ÷ 30 = 183 ÷ 30 = 6,1, soit environ **6** : les fameux six degrés de séparation."
+    },
+    {
+     "type": "zone",
+     "document": "groupes",
+     "enonce": "Touche les deux personnes reliées par le lien faible, celui qui raccourcit le plus les chemins entre les deux groupes.",
+     "reponse": [
+      "n1",
+      "n4"
+     ],
+     "multiple": true,
+     "aide": "Dans chaque groupe, tout le monde se connaît ; cherche le seul trait qui sort d’un groupe pour aller dans l’autre.",
+     "explication": "Le trait unique entre les deux groupes relie ces **deux sommets** : un lien faible, vers une connaissance lointaine, qui relie deux mondes séparés."
+    },
+    {
+     "type": "choix",
+     "document": "groupes",
+     "enonce": "Dans chaque groupe, tout le monde est relié à tout le monde. Que révèle cette forte densité de triangles ?",
+     "options": [
+      "Mes amis sont souvent amis entre eux",
+      "Les liens faibles sont les plus nombreux",
+      "La distance moyenne est très grande",
+      "Aucun lien ne raccourcit les chemins"
+     ],
+     "reponse": 0,
+     "aide": "Un triangle, ce sont trois personnes qui se connaissent deux à deux.",
+     "explication": "Une forte densité de triangles signifie que **mes amis sont souvent amis entre eux** : c’est un trait des réseaux sociaux, avec une distance moyenne faible."
+    }
+   ]
+  },
+  {
+   "chapitre": "ba5278ba-f4bf-5c15-83bb-5d7853cc5ed9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fil d’actualité de Nour",
+   "competence": "lire-tableau",
+   "situation": "Nour ouvre son application. Les publications s’affichent dans un certain ordre, qu’elle n’a pas choisi. Elle compare l’ordre du fil avec l’heure de publication.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "tableau",
+     "titre": "Les cinq premières publications du fil de Nour",
+     "colonnes": [
+      "Position",
+      "Publication",
+      "Publiée"
+     ],
+     "lignes": [
+      [
+       "1",
+       "Match de foot du week-end",
+       "il y a 9 h"
+      ],
+      [
+       "2",
+       "Vidéo de chat",
+       "il y a 2 jours"
+      ],
+      [
+       "3",
+       "Annonce du club de musique",
+       "il y a 20 min"
+      ],
+      [
+       "4",
+       "Recette de crêpes",
+       "il y a 3 h"
+      ],
+      [
+       "5",
+       "Clip d’un chanteur",
+       "il y a 1 h"
+      ]
+     ],
+     "source": "Fil inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fil",
+     "enonce": "Touche l’heure de la publication la plus récente.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "La plus récente est celle publiée il y a le moins de temps.",
+     "explication": "L’annonce du club a été publiée **il y a 20 minutes** : c’est la plus récente, et pourtant elle est en position 3."
+    },
+    {
+     "type": "nombre",
+     "document": "fil",
+     "enonce": "Combien de publications datent de plus de 3 heures ?",
+     "reponse": 2,
+     "aide": "Une publication d’il y a exactement 3 heures n’est pas « de plus de 3 heures ».",
+     "explication": "Le match (9 h) et la vidéo de chat (2 jours) : **2** publications. La recette est à 3 h pile, pas au-delà."
+    },
+    {
+     "type": "choix",
+     "document": "fil",
+     "enonce": "Pourquoi le fil de Nour n’est-il pas classé par ordre chronologique ?",
+     "options": [
+      "Un algorithme le classe selon ce qui retiendra Nour",
+      "Les publications sont classées au hasard par l’application",
+      "Les serveurs mélangent les heures de publication des posts",
+      "Le fil montre toujours d’abord les publications les plus anciennes"
+     ],
+     "reponse": 0,
+     "aide": "L’application cherche à faire durer le temps passé et les interactions de Nour.",
+     "explication": "Le fil est **classé par un algorithme** qui prédit la réaction de Nour (clics, temps passé, interactions), pas par l’heure."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque mécanisme de recommandation à ce qu’il utilise.",
+     "paires": [
+      [
+       "Classement du fil",
+       "Il n’est pas chronologique"
+      ],
+      [
+       "Prédiction de réaction",
+       "Tes clics, le temps passé, tes interactions"
+      ],
+      [
+       "Filtrage collaboratif",
+       "Les comportements d’utilisateurs semblables"
+      ]
+     ],
+     "aide": "Le filtrage collaboratif s’appuie sur d’autres utilisateurs, pas seulement sur Nour.",
+     "explication": "Le **classement** n’est pas chronologique ; la **prédiction** s’appuie sur clics, temps passé et interactions ; le **filtrage collaboratif** sur des utilisateurs jugés semblables."
+    }
+   ]
+  },
+  {
+   "chapitre": "ba5278ba-f4bf-5c15-83bb-5d7853cc5ed9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel film proposer à Zack ?",
+   "competence": "raisonner",
+   "situation": "Une plateforme de films veut recommander un titre à Zack. Elle compare ses goûts à ceux de trois autres élèves, puis propose ce qu’ont aimé ceux qui lui ressemblent : c’est le filtrage collaboratif.",
+   "documents": [
+    {
+     "id": "gouts",
+     "type": "tableau",
+     "titre": "Les films aimés (oui) ou non",
+     "colonnes": [
+      "Élève",
+      "Les Ailes",
+      "Tempête",
+      "Bambou",
+      "Zénith"
+     ],
+     "lignes": [
+      [
+       "Inès",
+       "oui",
+       "oui",
+       "oui",
+       "non"
+      ],
+      [
+       "Hugo",
+       "oui",
+       "non",
+       "non",
+       "oui"
+      ],
+      [
+       "Mia",
+       "non",
+       "oui",
+       "oui",
+       "non"
+      ],
+      [
+       "Zack",
+       "oui",
+       "oui",
+       "non",
+       "non"
+      ]
+     ],
+     "source": "Goûts inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gouts",
+     "enonce": "Touche l’élève dont les goûts ressemblent le plus à ceux de Zack.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Compte, pour chaque élève, les films qu’il aime comme Zack.",
+     "explication": "Inès aime comme Zack **deux films** (Les Ailes et Tempête) ; Hugo et Mia n’en ont qu’un en commun avec lui."
+    },
+    {
+     "type": "nombre",
+     "document": "gouts",
+     "enonce": "Combien de films Zack et Inès aiment-ils tous les deux ?",
+     "reponse": 2,
+     "aide": "Cherche les colonnes où les deux lignes affichent « oui ».",
+     "explication": "Les Ailes et Tempête : **2** films aimés par les deux."
+    },
+    {
+     "type": "choix",
+     "document": "gouts",
+     "enonce": "Quel film la plateforme recommandera-t-elle à Zack, qui ne l’a pas aimé ?",
+     "options": [
+      "Bambou",
+      "Zénith",
+      "Les Ailes",
+      "Tempête"
+     ],
+     "reponse": 0,
+     "aide": "Propose un film que des élèves proches de Zack aiment et que Zack n’a pas encore aimé.",
+     "explication": "**Bambou** est aimé par Inès et Mia, deux élèves proches de Zack. Zénith n’est aimé que par Hugo, le moins proche."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Un algorithme de recommandation cherche à maximiser l’___, c’est-à-dire le temps et l’___ que l’utilisateur donne.",
+     "reponses": [
+      [
+       "engagement"
+      ],
+      [
+       "attention"
+      ]
+     ],
+     "banque": [
+      "engagement",
+      "attention",
+      "information",
+      "vérité"
+     ],
+     "aide": "Ce n’est ni la vérité ni l’équilibre qui sont visés.",
+     "explication": "L’objectif optimisé est l’**engagement** : le temps et l’**attention**. Un algorithme qui maximise l’engagement optimise la réaction."
+    }
+   ]
+  },
+  {
+   "chapitre": "ba5278ba-f4bf-5c15-83bb-5d7853cc5ed9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La photo de la digue qui a déjà sept ans",
+   "competence": "analyser-document",
+   "situation": "Rayan reçoit une publication qui montre une digue effondrée et lui demande de la partager. Avant de le faire, il fait une recherche d’image inversée pour savoir d’où vient la photo.",
+   "documents": [
+    {
+     "id": "post",
+     "type": "texte",
+     "genre": "article",
+     "titre": "La publication reçue",
+     "auteur": "Texte écrit pour l’exercice",
+     "blocs": [
+      "Publié par le compte « InfosVite »",
+      "[[e|CHOC]] : la digue du port s’est effondrée hier ! Des dizaines de blessés ! Partagez avant qu’on supprime la photo !"
+     ]
+    },
+    {
+     "id": "inverse",
+     "type": "tableau",
+     "titre": "Résultats de la recherche d’image inversée",
+     "colonnes": [
+      "Où la photo apparaît",
+      "Date",
+      "Contexte"
+     ],
+     "lignes": [
+      [
+       "Compte « InfosVite »",
+       "hier",
+       "Digue « effondrée », sans source"
+      ],
+      [
+       "Blog météo",
+       "il y a 3 jours",
+       "Reprend la même photo"
+      ],
+      [
+       "Banque d’images Rivage",
+       "12 mars 2019",
+       "Tempête dans un autre pays, jetée détruite"
+      ],
+      [
+       "Forum local",
+       "il y a 2 jours",
+       "Reprend la même photo"
+      ]
+     ],
+     "source": "Résultats inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "inverse",
+     "enonce": "Touche la date de la première publication de la photo.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "La plus ancienne date est celle de la source d’origine.",
+     "explication": "La photo apparaît dès le **12 mars 2019**, bien avant la publication reçue : c’est elle, l’origine."
+    },
+    {
+     "type": "choix",
+     "document": "inverse",
+     "enonce": "Que peut conclure Rayan ?",
+     "options": [
+      "La photo est ancienne et a été détournée pour illustrer une autre histoire",
+      "La photo montre bien l’événement d’hier",
+      "La photo est authentique puisque plusieurs sites la reprennent",
+      "La photo est trop floue pour être vérifiée"
+     ],
+     "reponse": 0,
+     "aide": "Compare la date de la photo avec celle de l’événement annoncé.",
+     "explication": "Une photo de 2019, prise dans un autre pays, ne peut pas montrer un événement d’hier : elle est **détournée**. Que plusieurs sites la reprennent ne la rend pas vraie."
+    },
+    {
+     "type": "zone",
+     "document": "post",
+     "enonce": "Touche le mot qui cherche à provoquer une émotion forte pour faire partager la publication.",
+     "reponse": [
+      "e"
+     ],
+     "aide": "Cherche le mot écrit pour surprendre dès la première ligne.",
+     "explication": "**CHOC** joue sur la surprise : l’indignation est le levier utilisé pour faire circuler une infox plus vite qu’une information vérifiée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque facteur de désinformation à son effet.",
+     "paires": [
+      [
+       "Biais de confirmation",
+       "On retient ce qui nous donne raison"
+      ],
+      [
+       "Effet de répétition",
+       "Ce qu’on lit souvent paraît vrai"
+      ],
+      [
+       "Illusion de familiarité",
+       "Ce qui est connu paraît fiable"
+      ],
+      [
+       "Surprise et indignation",
+       "L’infox circule plus vite que le vrai"
+      ]
+     ],
+     "aide": "Le facteur de répétition tient dans le nombre de fois où l’on voit une information.",
+     "explication": "Le **biais de confirmation** fait retenir ce qui nous donne raison ; la **répétition** rend vrai ; la **familiarité** rend fiable ; la **surprise** fait circuler l’infox."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : est-ce un réflexe de vérification ?",
+     "categories": [
+      "Réflexe de vérification",
+      "Pas une vérification"
+     ],
+     "items": [
+      [
+       "Chercher la source et sa date",
+       0
+      ],
+      [
+       "Partager vite pour prévenir ses amis",
+       1
+      ],
+      [
+       "Faire une recherche d’image inversée",
+       0
+      ],
+      [
+       "Croire l’information parce qu’on l’a vue cent fois",
+       1
+      ],
+      [
+       "Chercher la même information ailleurs",
+       0
+      ]
+     ],
+     "aide": "Un réflexe de vérification cherche d’où vient l’information avant de la relayer.",
+     "explication": "Source et date, image inversée et recoupement sont des **vérifications**. Partager vite ou croire parce que c’est répété n’en sont pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "7176b272-9c72-569f-a00b-29ae5f6b1749",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les traces de Yanis pendant une journée",
+   "competence": "lire-tableau",
+   "situation": "Yanis ne pense pas laisser de traces : « Je ne poste presque rien ! » Pourtant, au fil de la journée, son identité numérique s’enrichit de choses qu’il n’a pas toutes choisies.",
+   "documents": [
+    {
+     "id": "journee",
+     "type": "tableau",
+     "titre": "La journée de Yanis",
+     "colonnes": [
+      "Heure",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "8 h",
+       "Yanis publie une photo de son petit-déjeuner"
+      ],
+      [
+       "12 h",
+       "Il regarde une vidéo ; la plateforme note la durée de lecture"
+      ],
+      [
+       "15 h",
+       "Sa cousine publie une photo où elle le cite et l’identifie"
+      ],
+      [
+       "18 h",
+       "Il écrit un avis sur un jeu vidéo"
+      ],
+      [
+       "21 h",
+       "Son téléphone envoie sa position à une application météo"
+      ]
+     ],
+     "source": "Journée inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "journee",
+     "enonce": "Touche l’événement qui est une trace héritée, laissée par quelqu’un d’autre à propos de Yanis.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Cherche l’événement où ce n’est pas Yanis qui publie.",
+     "explication": "La photo publiée par sa cousine, qui l’identifie, est une **trace héritée** : Yanis n’en est pas l’auteur."
+    },
+    {
+     "type": "nombre",
+     "document": "journee",
+     "enonce": "Combien de traces volontaires, publiées par Yanis lui-même, la journée contient-elle ?",
+     "reponse": 2,
+     "aide": "Compte les événements où Yanis écrit ou publie quelque chose de son plein gré.",
+     "explication": "La photo de 8 h et l’avis de 18 h sont des traces **volontaires** : **2**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque exemple selon le type de trace.",
+     "categories": [
+      "Volontaire",
+      "Involontaire",
+      "Héritée"
+     ],
+     "items": [
+      [
+       "Un message que tu envoies à un ami",
+       0
+      ],
+      [
+       "L’adresse IP de ton téléphone",
+       1
+      ],
+      [
+       "Un commentaire d’un camarade qui te cite",
+       2
+      ],
+      [
+       "Un avis que tu écris sur un site",
+       0
+      ],
+      [
+       "L’identifiant de ton appareil",
+       1
+      ],
+      [
+       "Une photo où un ami t’a identifié",
+       2
+      ]
+     ],
+     "aide": "Volontaire : tu publies. Involontaire : la machine enregistre. Héritée : d’autres écrivent sur toi.",
+     "explication": "**Volontaire** : message, avis. **Involontaire** : adresse IP, identifiant d’appareil. **Héritée** : commentaire qui te cite, photo où l’on t’identifie."
+    }
+   ]
+  },
+  {
+   "chapitre": "7176b272-9c72-569f-a00b-29ae5f6b1749",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Clara veut reprendre la main sur ses données",
+   "competence": "analyser-document",
+   "situation": "Clara, 17 ans, se rend compte qu’une application garde beaucoup d’informations sur elle. Elle écrit à la plateforme cinq demandes différentes. Chacune correspond à un droit donné par le RGPD, en vigueur depuis 2018.",
+   "documents": [
+    {
+     "id": "demandes",
+     "type": "tableau",
+     "titre": "Les cinq demandes de Clara",
+     "colonnes": [
+      "Demande",
+      "Ce que Clara écrit"
+     ],
+     "lignes": [
+      [
+       "a",
+       "Je veux savoir quelles données vous avez sur moi."
+      ],
+      [
+       "b",
+       "Mon nom est mal orthographié dans mon profil, corrigez-le."
+      ],
+      [
+       "c",
+       "Supprimez mon compte et mes données."
+      ],
+      [
+       "d",
+       "Je veux récupérer mes photos pour les transférer vers une autre application."
+      ],
+      [
+       "e",
+       "Je refuse que mes données servent à de la publicité ciblée."
+      ]
+     ],
+     "source": "Messages inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "demandes",
+     "enonce": "Touche la demande qui exerce le droit à la portabilité.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Ce droit permet de récupérer ses données pour les transférer ailleurs.",
+     "explication": "La demande **d** veut récupérer ses photos et les transférer : c’est la **portabilité**."
+    },
+    {
+     "type": "association",
+     "document": "demandes",
+     "enonce": "Associe chaque droit à la demande de Clara qui l’exerce.",
+     "paires": [
+      [
+       "Droit d’accès",
+       "Je veux savoir quelles données vous avez sur moi"
+      ],
+      [
+       "Droit de rectification",
+       "Mon nom est mal orthographié, corrigez-le"
+      ],
+      [
+       "Droit à l’effacement",
+       "Supprimez mon compte et mes données"
+      ],
+      [
+       "Droit d’opposition",
+       "Je refuse la publicité ciblée"
+      ]
+     ],
+     "aide": "Accéder, rectifier, effacer et s’opposer : repère le verbe de chaque demande.",
+     "explication": "**Accès** : savoir ce qui est collecté ; **rectification** : corriger une erreur ; **effacement** (droit à l’oubli) : supprimer ; **opposition** : refuser un traitement."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quelle autorité française contrôle le respect des données personnelles et sanctionne ? Écris son sigle.",
+     "reponse": [
+      "CNIL",
+      "la CNIL"
+     ],
+     "aide": "Son sigle a quatre lettres et commence par « Commission nationale ».",
+     "explication": "C’est la **CNIL** (Commission nationale de l’informatique et des libertés) : elle contrôle et sanctionne."
+    },
+    {
+     "type": "choix",
+     "enonce": "Clara obtient la suppression de son compte. Qu’advient-il d’une photo d’elle qu’un ami avait recopiée sur son propre site ?",
+     "options": [
+      "Elle subsiste sur le site de l’ami, qui l’a copiée",
+      "Elle disparaît automatiquement de tous les sites du Web",
+      "Elle devient privée sur le site de son ami",
+      "Elle est remplacée par une photo très floue"
+     ],
+     "reponse": 0,
+     "aide": "Le compte est celui de Clara ; la copie appartient au site de l’ami.",
+     "explication": "Un compte supprimé ne fait pas disparaître ce qui a déjà été copié ou archivé : la photo **subsiste** ailleurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "7176b272-9c72-569f-a00b-29ae5f6b1749",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ce que le recruteur trouve sur Samir",
+   "competence": "raisonner",
+   "situation": "Samir, 17 ans, cherche un stage. Le recruteur tape son nom dans un moteur de recherche. Samir est surpris : il ne se souvenait pas de certains résultats, et certains ne viennent pas de lui.",
+   "documents": [
+    {
+     "id": "resultats",
+     "type": "tableau",
+     "titre": "Résultats trouvés en cherchant « Samir Haddad »",
+     "colonnes": [
+      "Résultat",
+      "Publié par",
+      "Année"
+     ],
+     "lignes": [
+      [
+       "Photo de soirée où Samir est identifié",
+       "Léo, un ami",
+       2021
+      ],
+      [
+       "Avis sur un jeu vidéo",
+       "Samir",
+       2022
+      ],
+      [
+       "Fiche du club de basket avec sa photo",
+       "Le club",
+       2023
+      ],
+      [
+       "Commentaire moqueur sous une vidéo, signé Samir",
+       "Samir",
+       2020
+      ]
+     ],
+     "source": "Résultats inventés pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Samir",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Samir",
+       "texte": "Ta photo de 2021 est ressortie dans une recherche !"
+      },
+      {
+       "qui": "Léo",
+       "texte": "Mais c’est vieux, personne ne la verra jamais."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "resultats",
+     "enonce": "Combien de résultats ont été publiés par une autre personne ou un autre organisme que Samir ?",
+     "reponse": 2,
+     "aide": "Regarde la colonne « Publié par » : garde ce qui n’est pas Samir.",
+     "explication": "La photo de Léo et la fiche du club : **2** traces héritées, que Samir n’a pas publiées."
+    },
+    {
+     "type": "zone",
+     "document": "resultats",
+     "enonce": "Touche la publication la plus ancienne, qui illustre le mieux le risque de résurgence.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "La résurgence concerne une vieille publication qui ressort hors de son contexte ; cherche l’année la plus petite.",
+     "explication": "Le commentaire de **2020** est le plus ancien : écrit des années plus tôt, il ressort aujourd’hui, hors de son contexte, au moment d’un recrutement."
+    },
+    {
+     "type": "choix",
+     "document": "sms",
+     "enonce": "Pourquoi Léo a-t-il tort de dire que personne ne verra jamais la photo ?",
+     "options": [
+      "Elle peut ressurgir des années plus tard, hors contexte",
+      "Une photo disparaît toujours au bout d’un an environ",
+      "Seul l’auteur de la photo peut encore la retrouver",
+      "Les moteurs de recherche ignorent les photos de soirée"
+     ],
+     "reponse": 0,
+     "aide": "Publier, c’est écrire à ceux que l’on vise, à ceux qu’on n’a pas prévus et à ceux qui liront dans dix ans.",
+     "explication": "C’est la **résurgence** : une publication recopiée ou archivée peut ressortir des années plus tard, lors d’un recrutement par exemple."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque risque à sa description.",
+     "paires": [
+      [
+       "Résurgence",
+       "Une publication ancienne ressort hors de son contexte"
+      ],
+      [
+       "Cyberharcèlement",
+       "Des messages répétés pour nuire à une personne"
+      ],
+      [
+       "Usurpation d’identité",
+       "Se faire passer pour quelqu’un d’autre"
+      ],
+      [
+       "Image diffusée sans consentement",
+       "Montrer la photo de quelqu’un sans son accord"
+      ]
+     ],
+     "aide": "Chaque risque a un mot qui le résume : « ressurgir », « harceler », « usurper », « consentir ».",
+     "explication": "La **résurgence** fait ressortir le passé ; le **cyberharcèlement**, l’**usurpation d’identité** et la diffusion d’images sans consentement sont des délits."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : bonne pratique, ou pratique risquée ?",
+     "categories": [
+      "Bonne pratique",
+      "Pratique risquée"
+     ],
+     "items": [
+      [
+       "Régler les paramètres de confidentialité",
+       0
+      ],
+      [
+       "Poster la photo d’un camarade sans lui demander",
+       1
+      ],
+      [
+       "Séparer ses usages personnel, scolaire et professionnel",
+       0
+      ],
+      [
+       "Utiliser le même profil pour tout",
+       1
+      ],
+      [
+       "Signaler un contenu illicite à la plateforme",
+       0
+      ]
+     ],
+     "aide": "Une bonne pratique limite ce qui est vu et respecte l’image des autres.",
+     "explication": "Sont de **bonnes pratiques** : régler la confidentialité, séparer les usages, signaler les contenus illicites. Poster l’image d’autrui sans accord ou tout mélanger est risqué."
+    }
+   ]
+  },
+  {
+   "chapitre": "099e65eb-373f-5b5b-b745-3d1651a8782a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le T en pixel art de Nina",
+   "competence": "observer-schema",
+   "situation": "Nina dessine la lettre T en pixel art sur une grille de 5 lignes et 5 colonnes. Chaque case est un pixel : l’ordinateur le code par des nombres.",
+   "documents": [
+    {
+     "id": "grille",
+     "type": "schema",
+     "titre": "Le T de Nina (chaque carré est un pixel)",
+     "largeur": 260,
+     "hauteur": 210,
+     "source": "Dessin écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 20,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p00",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 20,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p01",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 20,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p02",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 20,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p03",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 20,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p04",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 56,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p10",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 56,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p11",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 56,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p12",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 56,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p13",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 56,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p14",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 92,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p20",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 92,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p21",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 92,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p22",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 92,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p23",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 92,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p24",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 128,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p30",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 128,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p31",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 128,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p32",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 128,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p33",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 128,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p34",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 164,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p40",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 164,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p41",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 112,
+       "y": 164,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "violet",
+       "motif": "plein",
+       "id": "p42",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 164,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p43",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 184,
+       "y": 164,
+       "l": 34,
+       "h": 34,
+       "arrondi": 2,
+       "teinte": "gris",
+       "motif": "clair",
+       "id": "p44",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "grille",
+     "enonce": "Combien de pixels colorés contient la lettre T ?",
+     "reponse": 9,
+     "aide": "Compte les 5 pixels de la ligne du haut, puis ceux de la barre verticale en dessous.",
+     "explication": "5 pixels en haut et 4 pixels dans la barre : 5 + 4 = **9** pixels colorés."
+    },
+    {
+     "type": "zone",
+     "document": "grille",
+     "enonce": "Touche le pixel coloré tout en bas de la barre du T.",
+     "reponse": [
+      "p42"
+     ],
+     "aide": "Descends jusqu’à la dernière ligne, au milieu.",
+     "explication": "C’est le pixel de la **5e ligne et de la 3e colonne** : le pied du T."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque couleur à ses composantes (rouge, vert, bleu) sur 8 bits.",
+     "paires": [
+      [
+       "Noir",
+       "(0, 0, 0)"
+      ],
+      [
+       "Blanc",
+       "(255, 255, 255)"
+      ],
+      [
+       "Rouge vif",
+       "(255, 0, 0)"
+      ]
+     ],
+     "aide": "Le noir est l’absence de lumière ; le blanc est le maximum de toutes les composantes.",
+     "explication": "**Noir** : toutes les composantes à 0 ; **blanc** : toutes à 255 ; **rouge vif** : rouge au maximum, vert et bleu à 0."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le codage d’un pixel couleur.",
+     "texte": "Chaque composante est codée sur ___ bits, soit ___ niveaux ; un pixel couleur pèse donc ___ bits.",
+     "reponses": [
+      [
+       "8"
+      ],
+      [
+       "256"
+      ],
+      [
+       "24"
+      ]
+     ],
+     "banque": [
+      "8",
+      "256",
+      "24",
+      "16",
+      "3"
+     ],
+     "aide": "Le pixel a trois composantes de même taille.",
+     "explication": "**8** bits donnent **256** niveaux ; trois composantes pèsent 3 × 8 = **24** bits, soit environ 16,7 millions de couleurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "099e65eb-373f-5b5b-b745-3d1651a8782a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La photo prise avec le téléphone",
+   "competence": "analyser-document",
+   "situation": "Léna prend une photo avec son téléphone et la publie. Elle ne sait pas que le fichier garde des informations cachées. Elle s’étonne aussi de son poids : l’image a pourtant beaucoup de pixels.",
+   "documents": [
+    {
+     "id": "exif",
+     "type": "tableau",
+     "titre": "Les propriétés du fichier de la photo",
+     "colonnes": [
+      "Propriété",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Appareil",
+       "Phone Z2"
+      ],
+      [
+       "Date",
+       "12/09/2026, 16 h 41"
+      ],
+      [
+       "Définition",
+       "4 000 × 3 000 pixels"
+      ],
+      [
+       "Codage",
+       "24 bits par pixel (RVB)"
+      ],
+      [
+       "Format",
+       "JPEG"
+      ],
+      [
+       "Poids du fichier",
+       "5,2 Mo"
+      ],
+      [
+       "Position GPS",
+       "48,86 N ; 2,35 E"
+      ]
+     ],
+     "source": "Fichier inventé pour l’exercice"
+    },
+    {
+     "id": "positions",
+     "type": "tableau",
+     "titre": "Coordonnées de trois lieux repérés sur la carte",
+     "colonnes": [
+      "Lieu",
+      "Latitude (N)",
+      "Longitude"
+     ],
+     "lignes": [
+      [
+       "A",
+       "48,86",
+       "2,35 E"
+      ],
+      [
+       "B",
+       "45,76",
+       "4,84 E"
+      ],
+      [
+       "C",
+       "44,84",
+       "0,58 O"
+      ]
+     ],
+     "source": "Coordonnées arrondies"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Trois lieux de France",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "A",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "corail"
+      },
+      {
+       "id": "B",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "corail"
+      },
+      {
+       "id": "C",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "corail"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "exif",
+     "enonce": "Combien de pixels contient cette photo ?",
+     "reponse": 12000000,
+     "unite": "pixels",
+     "aide": "Multiplie le nombre de colonnes par le nombre de lignes de pixels.",
+     "explication": "4 000 × 3 000 = **12 000 000** pixels, soit 12 millions."
+    },
+    {
+     "type": "nombre",
+     "document": "exif",
+     "enonce": "Quel serait le poids brut de l’image, sans compression, en Mo ? (1 Mo = 1 000 000 octets, un pixel de 24 bits pèse 3 octets)",
+     "reponse": 36,
+     "unite": "Mo",
+     "aide": "Multiplie le nombre de pixels par 3 octets, puis passe en millions d’octets.",
+     "explication": "12 000 000 × 3 = 36 000 000 octets, soit **36 Mo**."
+    },
+    {
+     "type": "choix",
+     "document": "exif",
+     "enonce": "Pourquoi le fichier ne pèse-t-il que 5,2 Mo alors que le poids brut est de 36 Mo ?",
+     "options": [
+      "Le format JPEG compresse avec perte d’information",
+      "Le format JPEG supprime la moitié des pixels",
+      "La photo est en niveaux de gris",
+      "Le poids brut ne tient pas compte des pixels"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Format » du tableau.",
+     "explication": "Le **JPEG** utilise une compression avec perte : il réduit fortement le poids, au prix d’une perte d’information (des artefacts si l’on compresse trop)."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "La photo porte une position GPS cachée. Touche sur la carte le lieu où elle a été prise.",
+     "reponse": [
+      "A"
+     ],
+     "aide": "Compare la position GPS du fichier avec les coordonnées des trois lieux du second tableau, puis repère la lettre.",
+     "explication": "La position GPS 48,86 N ; 2,35 E correspond au lieu **A**, le plus au nord des trois. Les métadonnées EXIF révèlent donc où Léna se trouvait."
+    }
+   ]
+  },
+  {
+   "chapitre": "099e65eb-373f-5b5b-b745-3d1651a8782a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quel format pour le site du club ?",
+   "competence": "modeliser",
+   "situation": "Zoé prépare le site du club de photo du lycée. Elle doit choisir pour chaque image un format adapté, et estimer le poids brut des fichiers avant compression.",
+   "documents": [
+    {
+     "id": "images",
+     "type": "tableau",
+     "titre": "Les images à publier",
+     "colonnes": [
+      "Image",
+      "Description"
+     ],
+     "lignes": [
+      [
+       "Photo de l’équipe",
+       "3 000 × 2 000 pixels, couleur sur 24 bits"
+      ],
+      [
+       "Photo ancienne",
+       "1 000 × 1 000 pixels, niveaux de gris, un octet par pixel"
+      ],
+      [
+       "Logo du club",
+       "Formes simples, à imprimer en grand sur une affiche"
+      ],
+      [
+       "Petite animation",
+       "Quelques images, 256 couleurs"
+      ]
+     ],
+     "source": "Liste inventée pour l’exercice"
+    },
+    {
+     "id": "zoom",
+     "type": "schema",
+     "titre": "Un même disque agrandi plusieurs fois",
+     "largeur": 340,
+     "hauteur": 205,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 25,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 25,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 25,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 37,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 37,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 37,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 37,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 37,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 49,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 116,
+       "y": 61,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 116,
+       "y": 73,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 116,
+       "y": 85,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 32,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 104,
+       "y": 97,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 44,
+       "y": 109,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 109,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 109,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 109,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 92,
+       "y": 109,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 56,
+       "y": 121,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 68,
+       "y": 121,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 80,
+       "y": 121,
+       "l": 12,
+       "h": 12,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 79,
+       "r": 54,
+       "teinte": "violet",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 74,
+       "cy": 175,
+       "r": 14,
+       "texte": "A",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "a",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 175,
+       "r": 14,
+       "texte": "B",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "b",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "document": "images",
+     "enonce": "Quel est le poids brut de la photo de l’équipe, en Mo ? (1 Mo = 1 000 000 octets, 24 bits = 3 octets par pixel)",
+     "reponse": 18,
+     "unite": "Mo",
+     "aide": "Poids brut = nombre de pixels × nombre d’octets par pixel.",
+     "explication": "3 000 × 2 000 = 6 000 000 pixels ; × 3 octets = 18 000 000 octets, soit **18 Mo**."
+    },
+    {
+     "type": "nombre",
+     "document": "images",
+     "enonce": "Quel est le poids brut de la photo ancienne, en octets ?",
+     "reponse": 1000000,
+     "unite": "octets",
+     "aide": "Un octet par pixel : le poids est le nombre de pixels.",
+     "explication": "1 000 × 1 000 = 1 000 000 pixels, un octet chacun : **1 000 000 octets**."
+    },
+    {
+     "type": "nombre",
+     "document": "images",
+     "enonce": "Si la photo ancienne était en couleur sur 24 bits, quel serait son poids brut, en Mo ?",
+     "reponse": 3,
+     "unite": "Mo",
+     "aide": "Chaque pixel pèserait 3 octets au lieu d’un.",
+     "explication": "1 000 000 pixels × 3 octets = 3 000 000 octets, soit **3 Mo**."
+    },
+    {
+     "type": "zone",
+     "document": "zoom",
+     "enonce": "Zoé agrandit deux versions d’un même disque. Touche la lettre de celle qui est une image matricielle, qui pixellise à l’agrandissement.",
+     "reponse": [
+      "a"
+     ],
+     "aide": "Cherche les marches d’escalier au bord du disque : ce sont des pixels visibles.",
+     "explication": "Le disque **A** montre ses pixels : c’est une image matricielle. Le disque B, lisse, correspond à une image vectorielle décrite par des équations, sans perte à l’agrandissement."
+    },
+    {
+     "type": "association",
+     "document": "images",
+     "enonce": "Associe chaque format à son usage le mieux adapté.",
+     "paires": [
+      [
+       "PNG",
+       "Logos et captures, sans perte"
+      ],
+      [
+       "JPEG",
+       "Photographies, avec perte"
+      ],
+      [
+       "GIF",
+       "Petites animations en 256 couleurs"
+      ],
+      [
+       "SVG",
+       "Logo agrandi sans perte de qualité"
+      ]
+     ],
+     "aide": "Un seul de ces formats décrit des formes par des équations.",
+     "explication": "**PNG** : sans perte ; **JPEG** : photographies, avec perte ; **GIF** : animations en 256 couleurs ; **SVG** : vectoriel, idéal pour un logo qu’on agrandit."
+    }
+   ]
+  }
+ ]
+}

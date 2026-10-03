@@ -1,0 +1,3504 @@
+{
+ "niveau": "2de",
+ "matiere": "snt",
+ "exercices": [
+  {
+   "chapitre": "a1e01900-f3b8-5864-854f-a929df5e7796",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le portrait de grand-mère passe au gris",
+   "competence": "lire-tableau",
+   "situation": "Samia numérise une vieille photo de sa grand-mère. Pour la passer en niveaux de gris, son logiciel a relevé trois pixels : chacun est noté par ses trois composantes rouge, verte et bleue (R, V, B), de 0 à 255.",
+   "documents": [
+    {
+     "id": "pixels",
+     "type": "tableau",
+     "titre": "Trois pixels de la photo",
+     "colonnes": [
+      "Pixel",
+      "R",
+      "V",
+      "B"
+     ],
+     "lignes": [
+      [
+       "P1",
+       240,
+       240,
+       210
+      ],
+      [
+       "P2",
+       200,
+       100,
+       60
+      ],
+      [
+       "P3",
+       30,
+       45,
+       60
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Avec la méthode de la moyenne, quel niveau de gris obtient le pixel P2 ?",
+     "reponse": 120,
+     "aide": "Additionne les trois composantes de la ligne P2, puis divise par 3.",
+     "explication": "Moyenne de P2 : (200 + 100 + 60) / 3 = 360 / 3 = **120**."
+    },
+    {
+     "type": "zone",
+     "document": "pixels",
+     "enonce": "Touche la ligne du pixel qui sera le plus sombre une fois passé en gris par la méthode de la moyenne.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Plus les trois composantes sont petites, plus la moyenne est basse.",
+     "explication": "P3 vaut (30 + 45 + 60) / 3 = **45** : c’est le gris le plus sombre. P1 donne 230 et P2 120."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le négatif du pixel P3 : on remplace chaque composante par 255 moins sa valeur.",
+     "texte": "Le négatif de P3 est (___, ___, ___).",
+     "reponses": [
+      [
+       "225"
+      ],
+      [
+       "210"
+      ],
+      [
+       "195"
+      ]
+     ],
+     "aide": "Calcule 255 − 30, puis 255 − 45, puis 255 − 60.",
+     "explication": "Le négatif de (30, 45, 60) est (255 − 30, 255 − 45, 255 − 60) = (**225, 210, 195**)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1e01900-f3b8-5864-854f-a929df5e7796",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le petit filtre de Lucas, ligne par ligne",
+   "competence": "programmer",
+   "situation": "Lucas apprend Python en classe de SNT. Il écrit un programme qui calcule, pour un pixel de sa photo de vacances, un niveau de gris, un négatif et un résultat en noir et blanc.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme de Lucas",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "pixel = (200, 100, 60)",
+      "moyenne = (pixel[0] + pixel[1] + pixel[2]) // 3",
+      "negatif = (255 - pixel[0], 255 - pixel[1], 255 - pixel[2])",
+      "seuil = [[s|128]]",
+      "noir_ou_blanc = 255 if moyenne > seuil else 0",
+      "print(moyenne, negatif[0], noir_ou_blanc)"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur la variable moyenne contient-elle à la fin du programme ?",
+     "reponse": 120,
+     "aide": "L’opérateur // est la division entière : 360 // 3.",
+     "explication": "moyenne = (200 + 100 + 60) // 3 = 360 // 3 = **120**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Parmi les trois valeurs affichées par la dernière ligne, quelle est la deuxième, celle de negatif[0] ?",
+     "reponse": 55,
+     "aide": "negatif[0] est la première composante du négatif : 255 moins la composante rouge du pixel.",
+     "explication": "negatif[0] = 255 − pixel[0] = 255 − 200 = **55**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que vaut noir_ou_blanc quand le programme s’arrête ?",
+     "options": [
+      "0, le pixel devient noir",
+      "255, le pixel devient blanc",
+      "128, le pixel reste gris",
+      "120, la valeur de la moyenne"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare la moyenne au seuil : la condition moyenne > seuil est-elle vraie ?",
+     "explication": "La moyenne vaut 120, et 120 n’est pas supérieur au seuil 128 : la condition est fausse, le pixel devient **noir (0)**."
+    },
+    {
+     "type": "zone",
+     "document": "prog",
+     "enonce": "Touche la valeur qui fixe la limite entre noir et blanc.",
+     "reponse": [
+      "s"
+     ],
+     "aide": "Cette limite porte un nom précis dans le cours : le seuil.",
+     "explication": "Le **seuil** vaut 128 : au-dessus, le pixel devient blanc ; en dessous, noir."
+    }
+   ]
+  },
+  {
+   "chapitre": "a1e01900-f3b8-5864-854f-a929df5e7796",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’affiche en noir et blanc du club photo",
+   "competence": "analyser-document",
+   "situation": "Le club photo prépare une affiche. Il passe d’abord une petite zone de 20 pixels en noir et blanc avec un seuil de 128, teste trois filtres sur un pixel, puis colorise une carte postale ancienne par un modèle automatique.",
+   "documents": [
+    {
+     "id": "grille",
+     "type": "schema",
+     "titre": "Niveaux de gris de 20 pixels (de 0 à 255)",
+     "largeur": 320,
+     "hauteur": 210,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 16,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "30",
+       "id": "p00",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 16,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "40",
+       "id": "p01",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 16,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "200",
+       "id": "p02",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 16,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "210",
+       "id": "p03",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 16,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "35",
+       "id": "p04",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 60,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "25",
+       "id": "p10",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 60,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "190",
+       "id": "p11",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 60,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "220",
+       "id": "p12",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 60,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "180",
+       "id": "p13",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 60,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "20",
+       "id": "p14",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 104,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "45",
+       "id": "p20",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 104,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "60",
+       "id": "p21",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 104,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "230",
+       "id": "p22",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 104,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "70",
+       "id": "p23",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 104,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "50",
+       "id": "p24",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 148,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "20",
+       "id": "p30",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 76,
+       "y": 148,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "35",
+       "id": "p31",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 132,
+       "y": 148,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "240",
+       "id": "p32",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 188,
+       "y": 148,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "30",
+       "id": "p33",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 244,
+       "y": 148,
+       "l": 56,
+       "h": 44,
+       "teinte": "gris",
+       "motif": "clair",
+       "texte": "55",
+       "id": "p34",
+       "zone": true
+      }
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "filtres",
+     "type": "tableau",
+     "titre": "Trois filtres sur le pixel (100, 150, 200)",
+     "colonnes": [
+      "Filtre",
+      "Ce qu’il fait"
+     ],
+     "lignes": [
+      [
+       "Permuter",
+       "Échange le rouge et le bleu"
+      ],
+      [
+       "Négatif",
+       "Remplace chaque composante par 255 moins sa valeur"
+      ],
+      [
+       "Renforcer la composante rouge",
+       "Multiplie la composante rouge par 1,2"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Carte postale : le port de pêche",
+     "sousTitre": "Photographie de 1900",
+     "emoji": "⚓",
+     "lignes": [
+      {
+       "texte": "Photographie d’origine",
+       "valeur": "noir et blanc"
+      },
+      {
+       "texte": "Couleurs actuelles",
+       "valeur": "ajoutées par un modèle",
+       "id": "colo"
+      }
+     ],
+     "pied": "Carte écrite pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "grille",
+     "multiple": true,
+     "enonce": "Touche tous les pixels qui deviennent blancs avec un seuil de 128.",
+     "reponse": [
+      "p02",
+      "p03",
+      "p11",
+      "p12",
+      "p13",
+      "p22",
+      "p32"
+     ],
+     "aide": "Un pixel devient blanc quand sa valeur est au-dessus du seuil.",
+     "explication": "Les valeurs **supérieures à 128** (190, 200, 210, 180, 220, 230, 240) passent au blanc ; toutes les autres passent au noir."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de ces 20 pixels deviennent noirs ?",
+     "reponse": 13,
+     "aide": "Il y a 20 pixels en tout. Retranche ceux qui deviennent blancs.",
+     "explication": "7 pixels deviennent blancs, donc 20 − 7 = **13** deviennent noirs."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque filtre au pixel qu’il donne en partant de (100, 150, 200).",
+     "paires": [
+      [
+       "Permuter",
+       "(200, 150, 100)"
+      ],
+      [
+       "Négatif",
+       "(155, 105, 55)"
+      ],
+      [
+       "Renforcer la composante rouge",
+       "(120, 150, 200)"
+      ]
+     ],
+     "aide": "Pour le négatif, calcule 255 − 100, 255 − 150 et 255 − 200.",
+     "explication": "Permuter échange rouge et bleu : **(200, 150, 100)**. Le négatif donne **(155, 105, 55)**. Renforcer la composante rouge multiplie 100 par 1,2 : **(120, 150, 200)**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "On applique deux fois de suite le négatif au pixel (100, 150, 200). Quelle est alors la composante rouge ?",
+     "reponse": 100,
+     "aide": "Après le premier négatif, la composante rouge vaut 155 ; applique de nouveau 255 moins sa valeur.",
+     "explication": "255 − 100 = 155, puis 255 − 155 = **100** : le négatif est réversible, on retrouve le pixel d’origine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Peut-on affirmer que le bateau de la carte postale était vraiment bleu, parce que le modèle l’a colorié d’une teinte bleue ?",
+     "options": [
+      "Non : le résultat est vraisemblable, pas véridique",
+      "Oui : le modèle retrouve la couleur d’origine",
+      "Oui : la couleur est cachée dans le gris de chaque pixel",
+      "Non : un modèle ne peut ajouter que du noir et blanc"
+     ],
+     "reponse": 0,
+     "aide": "Relis la ligne « Couleurs actuelles » de la carte : d’où viennent-elles ?",
+     "explication": "Une photo de 1900 ne contient aucune information de couleur. Le modèle **invente des couleurs plausibles**, il ne les retrouve pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fecef23-e135-55ab-bb60-6267155cef4e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La photo de plage prise en soirée",
+   "competence": "lire-graphique",
+   "situation": "Noé a photographié la plage au coucher du soleil, et l’image paraît très sombre. Son logiciel affiche l’histogramme de la photo : le nombre de pixels pour chaque tranche de valeurs, de 0 (noir) à 255 (blanc).",
+   "documents": [
+    {
+     "id": "hist",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Histogramme de la photo de Noé",
+     "categories": [
+      "0 à 63",
+      "64 à 127",
+      "128 à 191",
+      "192 à 255"
+     ],
+     "series": [
+      {
+       "nom": "Pixels",
+       "valeurs": [
+        60,
+        25,
+        10,
+        5
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de pixels",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 70,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Valeur du pixel"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "hist",
+     "enonce": "Touche la tranche de valeurs qui contient le plus de pixels.",
+     "reponse": [
+      "k0"
+     ],
+     "aide": "Cherche la barre la plus haute.",
+     "explication": "La tranche **0 à 63**, celle des tons les plus sombres, compte 60 000 pixels : c’est la barre la plus haute."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit cet histogramme tassé à gauche de la photo de Noé ?",
+     "options": [
+      "Elle est sous-exposée",
+      "Elle est surexposée",
+      "Elle est bien exposée",
+      "Elle manque de couleurs"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "À gauche de l’axe, ce sont les valeurs proches de 0 : sombres ou claires ?",
+     "explication": "Presque tous les pixels sont dans les tons sombres : l’image est **sous-exposée**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pixels, en milliers, ont une valeur de 128 ou plus ?",
+     "reponse": 15,
+     "unite": "milliers",
+     "aide": "Additionne les deux tranches de droite. Le graphique compte en milliers.",
+     "explication": "Tranche 128 à 191 : 10 ; tranche 192 à 255 : 5. Total : 10 + 5 = **15 milliers**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fecef23-e135-55ab-bb60-6267155cef4e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La photo de brouillard à étirer",
+   "competence": "raisonner",
+   "situation": "Maëlle a pris une photo dans le brouillard : tout est gris et plat. Elle veut étirer son histogramme pour que les valeurs, qui vont de 100 à 200, occupent toute la plage de 0 à 255.",
+   "documents": [
+    {
+     "id": "hist",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Histogramme de la photo de brouillard",
+     "categories": [
+      "0 à 31",
+      "32 à 63",
+      "64 à 95",
+      "96 à 127",
+      "128 à 159",
+      "160 à 191",
+      "192 à 223",
+      "224 à 255"
+     ],
+     "series": [
+      {
+       "nom": "Pixels",
+       "valeurs": [
+        0,
+        0,
+        0,
+        20,
+        35,
+        30,
+        15,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de pixels",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 40,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Valeur du pixel"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "regle",
+     "type": "tableau",
+     "titre": "L’étirement : nouvelle valeur = (valeur − 100) × 2,55",
+     "colonnes": [
+      "Valeur d’origine",
+      "Valeur après étirement"
+     ],
+     "lignes": [
+      [
+       100,
+       0
+      ],
+      [
+       120,
+       "?"
+      ],
+      [
+       180,
+       "?"
+      ],
+      [
+       200,
+       255
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs arrondies à l’unité"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que dit la forme de cet histogramme, resserré au centre ?",
+     "options": [
+      "L’image manque de contraste",
+      "L’image est sous-exposée",
+      "L’image est surexposée",
+      "L’image contient trop de bruit"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Il n’y a ni tons très sombres ni tons très clairs : que cela donne-t-il à l’œil ?",
+     "explication": "Les valeurs sont tassées au milieu de la plage : l’image est grise, **peu contrastée**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de pixels, en milliers, se trouvent dans les deux tranches 96 à 127 et 128 à 159 ?",
+     "reponse": 55,
+     "unite": "milliers",
+     "aide": "Repère ces deux tranches sur l’axe horizontal et lis leurs hauteurs.",
+     "explication": "20 + 35 = **55 milliers** de pixels."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur prend un pixel de valeur 120 après l’étirement ?",
+     "reponse": 51,
+     "aide": "Calcule (120 − 100) × 2,55.",
+     "explication": "(120 − 100) × 2,55 = 20 × 2,55 = **51**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur prend un pixel de valeur 180 après l’étirement ?",
+     "reponse": 204,
+     "aide": "Calcule (180 − 100) × 2,55.",
+     "explication": "(180 − 100) × 2,55 = 80 × 2,55 = **204**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8fecef23-e135-55ab-bb60-6267155cef4e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux photos, deux diagnostics",
+   "competence": "analyser-document",
+   "situation": "Un photographe compare deux photos prises le même jour : la photo A dans une cave, la photo B sur la neige en plein midi. Il lit leurs histogrammes et le relevé de son logiciel avant de décider quel traitement appliquer.",
+   "documents": [
+    {
+     "id": "ha",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Histogramme de la photo A",
+     "categories": [
+      "0 à 63",
+      "64 à 127",
+      "128 à 191",
+      "192 à 255"
+     ],
+     "series": [
+      {
+       "nom": "Pixels",
+       "valeurs": [
+        55,
+        25,
+        12,
+        8
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de pixels",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 60,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Valeur du pixel"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "hb",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Histogramme de la photo B",
+     "categories": [
+      "0 à 63",
+      "64 à 127",
+      "128 à 191",
+      "192 à 255"
+     ],
+     "series": [
+      {
+       "nom": "Pixels",
+       "valeurs": [
+        3,
+        7,
+        20,
+        70
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Nombre de pixels",
+      "unite": "en milliers",
+      "min": 0,
+      "max": 80,
+      "pas": 10
+     },
+     "axeX": {
+      "titre": "Valeur du pixel"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Relevé du logiciel",
+     "colonnes": [
+      "Photo",
+      "Pixels au total",
+      "Pixels exactement à 255"
+     ],
+     "lignes": [
+      [
+       "A",
+       100000,
+       0
+      ],
+      [
+       "B",
+       100000,
+       12000
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque photo à son diagnostic.",
+     "paires": [
+      [
+       "Photo A",
+       "Sous-exposée"
+      ],
+      [
+       "Photo B",
+       "Surexposée"
+      ]
+     ],
+     "aide": "Regarde de quel côté de l’axe les pixels sont tassés.",
+     "explication": "L’histogramme de A est tassé à gauche : **sous-exposée**. Celui de B est tassé à droite : **surexposée**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des pixels de la photo B se trouve dans la tranche 192 à 255 ?",
+     "reponse": 70,
+     "unite": "%",
+     "aide": "Les deux histogrammes comptent 100 milliers de pixels en tout.",
+     "explication": "La tranche 192 à 255 compte 70 milliers de pixels sur 100 milliers : **70 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage des pixels de la photo B est exactement à 255 ?",
+     "reponse": 12,
+     "unite": "%",
+     "aide": "Divise 12 000 par 100 000, puis écris en pourcentage.",
+     "explication": "12 000 / 100 000 = 0,12, soit **12 %** de pixels « brûlés »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un étirement ou une égalisation peut-il redonner du détail aux pixels de B qui sont exactement à 255 ?",
+     "options": [
+      "Non : une zone entièrement à 255 est irrécupérable",
+      "Oui : l’étirement recrée le détail manquant",
+      "Oui : l’égalisation retrouve les valeurs d’origine",
+      "Oui, à condition de choisir un seuil plus haut"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Ces traitements réorganisent les valeurs qui existent : peuvent-ils en créer ?",
+     "explication": "Les traitements **ne créent pas d’information** : quand tous les pixels d’une zone valent 255, rien ne les distingue plus."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque description dans le traitement qui lui correspond.",
+     "categories": [
+      "Étirement",
+      "Égalisation"
+     ],
+     "items": [
+      [
+       "Étale les valeurs occupées sur toute la plage",
+       0
+      ],
+      [
+       "Cherche à rendre l’histogramme aussi plat que possible",
+       1
+      ],
+      [
+       "Accentue le bruit de l’image",
+       1
+      ],
+      [
+       "Garde la forme de l’histogramme en l’élargissant",
+       0
+      ],
+      [
+       "Donne parfois une image peu naturelle",
+       1
+      ]
+     ],
+     "aide": "L’un élargit simplement la plage ; l’autre redistribue les valeurs.",
+     "explication": "L’**étirement** étale la plage sans changer la forme. L’**égalisation** redistribue les valeurs : plus de contraste local, mais plus de bruit et un rendu parfois peu naturel."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdeb2169-c94c-55a8-ba32-a7a3a19ca385",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les propriétés de la photo de vacances",
+   "competence": "lire-tableau",
+   "situation": "Inès veut envoyer sa photo de vacances par messagerie. Elle ouvre les propriétés du fichier et se demande combien de pixels contient l’image et combien elle pèse avant compression.",
+   "documents": [
+    {
+     "id": "fichier",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Propriétés du fichier",
+     "sousTitre": "Photographie numérique",
+     "emoji": "🖼️",
+     "lignes": [
+      {
+       "texte": "Nom",
+       "valeur": "vacances_plage.jpg"
+      },
+      {
+       "texte": "Définition",
+       "valeur": "4000 × 3000 pixels",
+       "id": "def"
+      },
+      {
+       "texte": "Résolution",
+       "valeur": "300 points par pouce",
+       "id": "res"
+      },
+      {
+       "texte": "Codage de la couleur",
+       "valeur": "3 octets par pixel",
+       "id": "octets"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fichier",
+     "enonce": "Touche la ligne qui donne le nombre de pixels en largeur et en hauteur.",
+     "reponse": [
+      "def"
+     ],
+     "aide": "Le nombre de pixels de l’image s’appelle la définition.",
+     "explication": "C’est la **définition** : 4000 pixels en largeur et 3000 en hauteur. La résolution, elle, dit à quelle densité ils sont restitués."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de millions de pixels contient cette image ?",
+     "reponse": 12,
+     "unite": "millions",
+     "aide": "Multiplie la largeur par la hauteur : 4000 × 3000.",
+     "explication": "4000 × 3000 = 12 000 000 pixels, soit **12 millions**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids brut de l’image, en millions d’octets ?",
+     "reponse": 36,
+     "unite": "M d’octets",
+     "aide": "Le poids est le nombre de pixels multiplié par le nombre d’octets par pixel.",
+     "explication": "12 millions de pixels × 3 octets = **36 millions d’octets** avant compression."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdeb2169-c94c-55a8-ba32-a7a3a19ca385",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Trois impressions pour une même image",
+   "competence": "calculer",
+   "situation": "L’imprimerie de la ville propose à Karim trois formats pour sa photo de 3000 × 2000 pixels. Il veut savoir combien de pixels l’imprimante dispose par pouce de largeur, c’est-à-dire la résolution de l’impression.",
+   "documents": [
+    {
+     "id": "formats",
+     "type": "tableau",
+     "titre": "Les formats proposés",
+     "colonnes": [
+      "Format",
+      "Largeur imprimée (pouces)",
+      "Résolution (points par pouce)"
+     ],
+     "lignes": [
+      [
+       "Carte postale",
+       6,
+       500
+      ],
+      [
+       "Affiche",
+       15,
+       "?"
+      ],
+      [
+       "Bâche",
+       30,
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Résolution = pixels en largeur divisés par la largeur en pouces"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la résolution de l’impression en affiche, en points par pouce ?",
+     "reponse": 200,
+     "unite": "ppp",
+     "aide": "Divise les 3000 pixels de largeur par la largeur imprimée en pouces.",
+     "explication": "3000 pixels / 15 pouces = **200 points par pouce**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la résolution de l’impression sur la bâche, en points par pouce ?",
+     "reponse": 100,
+     "unite": "ppp",
+     "aide": "Même calcul : 3000 divisé par la largeur de la bâche.",
+     "explication": "3000 pixels / 30 pouces = **100 points par pouce**."
+    },
+    {
+     "type": "zone",
+     "document": "formats",
+     "enonce": "Touche le format où l’image paraîtra la moins nette.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Plus la résolution est basse, plus les pixels s’étalent.",
+     "explication": "Sur la **bâche**, les mêmes pixels sont étalés sur 30 pouces : la résolution tombe à 100 ppp et l’image paraît floue."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À 3 octets par pixel, quel est le poids brut de cette image, en millions d’octets ?",
+     "reponse": 18,
+     "unite": "M d’octets",
+     "aide": "Commence par le nombre de pixels : 3000 × 2000.",
+     "explication": "3000 × 2000 = 6 000 000 pixels, et 6 000 000 × 3 = 18 000 000 octets, soit **18 millions** : le format d’impression ne change pas le poids."
+    }
+   ]
+  },
+  {
+   "chapitre": "fdeb2169-c94c-55a8-ba32-a7a3a19ca385",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Flou et contours : deux filtres sur une image",
+   "competence": "raisonner",
+   "situation": "Amina teste deux filtres sur une image en niveaux de gris. Le premier remplace un pixel par la moyenne de ses neuf voisins (lui compris) pour atténuer le bruit ; le second repère les variations brutales de valeur pour trouver un contour.",
+   "documents": [
+    {
+     "id": "voisins",
+     "type": "tableau",
+     "titre": "Un pixel et ses voisins",
+     "colonnes": [
+      "Colonne 1",
+      "Colonne 2",
+      "Colonne 3"
+     ],
+     "lignes": [
+      [
+       10,
+       10,
+       10
+      ],
+      [
+       10,
+       100,
+       10
+      ],
+      [
+       10,
+       10,
+       10
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "profil",
+     "type": "tableau",
+     "titre": "Une ligne de pixels de l’image",
+     "colonnes": [
+      "px 1",
+      "px 2",
+      "px 3",
+      "px 4",
+      "px 5",
+      "px 6"
+     ],
+     "lignes": [
+      [
+       12,
+       12,
+       12,
+       200,
+       200,
+       200
+      ]
+     ],
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "voisins",
+     "enonce": "Touche le pixel dont la valeur s’écarte brutalement de celle de ses voisins.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la valeur qui ne ressemble à aucune autre.",
+     "explication": "Le pixel central vaut **100** alors que ses voisins valent tous 10 : c’est typiquement du bruit."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur prend le pixel central après le filtre de moyenne sur ses neuf valeurs ?",
+     "reponse": 20,
+     "aide": "Additionne les neuf valeurs du tableau, puis divise par 9.",
+     "explication": "8 × 10 + 100 = 180, et 180 / 9 = **20** : le pixel brillant est atténué, c’est un flou."
+    },
+    {
+     "type": "zone",
+     "document": "profil",
+     "enonce": "Touche le premier pixel clair, juste après le contour.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Cherche l’endroit où la valeur saute d’un coup.",
+     "explication": "On passe de 12 à 200 entre les pixels 3 et 4 : le **pixel 4** est le premier du côté clair du contour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la variation entre le pixel 3 et le pixel 4, c’est-à-dire l’écart que repère un filtre de contours ?",
+     "reponse": 188,
+     "aide": "Soustrais la valeur du pixel 3 à celle du pixel 4.",
+     "explication": "200 − 12 = **188** : une variation brutale, donc un contour."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque noyau de convolution à son effet.",
+     "paires": [
+      [
+       "Moyenne des voisins",
+       "Un flou"
+      ],
+      [
+       "Accentuation des écarts",
+       "Une netteté renforcée"
+      ],
+      [
+       "Détection des variations brutales",
+       "Les contours"
+      ]
+     ],
+     "aide": "Relis ce que chaque noyau calcule avec les voisins du pixel.",
+     "explication": "Une **moyenne** lisse (flou) ; une **accentuation** des écarts renforce la netteté ; une **détection** des variations brutales fait apparaître les contours."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b26be24-a961-5b58-b713-f3ec83094cef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "De la lumière au nombre dans un appareil photo",
+   "competence": "observer-schema",
+   "situation": "Camille se demande comment son téléphone transforme la lumière d’une scène en fichier. Voici les étapes principales, de la lumière jusqu’au nombre entier enregistré pour chaque composante d’un pixel.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Du capteur au fichier",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "lumiere",
+       "texte": "Lumière de la scène",
+       "emoji": "☀️"
+      },
+      {
+       "id": "filtre",
+       "texte": "Filtre coloré",
+       "emoji": "🎨"
+      },
+      {
+       "id": "photosite",
+       "texte": "Photosite",
+       "emoji": "🔬"
+      },
+      {
+       "id": "cna",
+       "texte": "?"
+      },
+      {
+       "id": "nombre",
+       "texte": "Nombre entier",
+       "emoji": "🔢"
+      }
+     ],
+     "liens": [
+      {
+       "de": "lumiere",
+       "a": "filtre",
+       "texte": "traverse"
+      },
+      {
+       "de": "filtre",
+       "a": "photosite",
+       "texte": "arrive sur"
+      },
+      {
+       "de": "photosite",
+       "a": "cna",
+       "texte": "charge électrique"
+      },
+      {
+       "de": "cna",
+       "a": "nombre",
+       "texte": "donne"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "chaine",
+     "enonce": "Touche l’élément qui accumule une charge proportionnelle à la lumière reçue.",
+     "reponse": [
+      "photosite"
+     ],
+     "aide": "C’est la petite cellule du capteur, placée derrière le filtre coloré.",
+     "explication": "Le **photosite** accumule des charges électriques proportionnelles à la lumière reçue pendant la pose."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel composant faut-il placer à la place du point d’interrogation, pour transformer la charge en nombre entier ?",
+     "options": [
+      "Un convertisseur analogique-numérique",
+      "Un deuxième filtre coloré devant le capteur",
+      "Un objectif supplémentaire à grande ouverture",
+      "Un écran de contrôle pour voir l’image"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Il passe d’une grandeur électrique continue à un nombre.",
+     "explication": "Le **convertisseur analogique-numérique** transforme chaque charge en nombre entier."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de niveaux différents une composante peut-elle prendre quand elle est codée sur 12 bits ?",
+     "reponse": 4096,
+     "unite": "niveaux",
+     "aide": "Avec n bits, on a 2 puissance n niveaux : sur 8 bits, c’est 256.",
+     "explication": "2 puissance 12 = **4096** niveaux, bien plus que les 256 niveaux du codage sur 8 bits."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b26be24-a961-5b58-b713-f3ec83094cef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le motif de couleurs du capteur",
+   "competence": "observer-schema",
+   "situation": "Un photosite ne perçoit pas la couleur : on place devant chacun un filtre rouge (R), vert (V) ou bleu (B). Voici un petit morceau de capteur de 4 × 4 photosites, avec le filtre de chacun.",
+   "documents": [
+    {
+     "id": "capteur",
+     "type": "schema",
+     "titre": "Un morceau de capteur : 16 photosites",
+     "largeur": 320,
+     "hauteur": 270,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 14,
+       "l": 60,
+       "h": 60,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "R",
+       "id": "ph00",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 14,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph01",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 14,
+       "l": 60,
+       "h": 60,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "R",
+       "id": "ph02",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 14,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph03",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 74,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph10",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 74,
+       "l": 60,
+       "h": 60,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "B",
+       "id": "ph11",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 74,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph12",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 74,
+       "l": 60,
+       "h": 60,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "B",
+       "id": "ph13",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 134,
+       "l": 60,
+       "h": 60,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "R",
+       "id": "ph20",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 134,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph21",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 134,
+       "l": 60,
+       "h": 60,
+       "teinte": "corail",
+       "motif": "clair",
+       "texte": "R",
+       "id": "ph22",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 134,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph23",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 194,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph30",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 100,
+       "y": 194,
+       "l": 60,
+       "h": 60,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "B",
+       "id": "ph31",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 160,
+       "y": 194,
+       "l": 60,
+       "h": 60,
+       "teinte": "vert",
+       "motif": "clair",
+       "texte": "V",
+       "id": "ph32",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 220,
+       "y": 194,
+       "l": 60,
+       "h": 60,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "B",
+       "id": "ph33",
+       "zone": true
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de photosites de cette grille sont derrière un filtre vert ?",
+     "reponse": 8,
+     "unite": "photosites",
+     "aide": "Compte ligne par ligne les cases marquées V.",
+     "explication": "Chaque ligne compte 2 filtres verts, soit 4 lignes × 2 = **8** photosites verts sur 16."
+    },
+    {
+     "type": "zone",
+     "document": "capteur",
+     "multiple": true,
+     "enonce": "Touche tous les photosites qui ne mesurent que de la lumière rouge.",
+     "reponse": [
+      "ph00",
+      "ph02",
+      "ph20",
+      "ph22"
+     ],
+     "aide": "Ils sont un peu moins nombreux que les verts.",
+     "explication": "Les quatre photosites **R** des coins de chaque bloc de quatre ne mesurent que la lumière rouge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce motif comporte-t-il deux filtres verts pour un rouge et un bleu ?",
+     "options": [
+      "L’œil est plus sensible au vert",
+      "Le vert est la couleur la plus rare",
+      "Le vert fait gagner de la place",
+      "Le capteur chauffe moins en vert"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Pense à ce qu’on a dit de notre vision et du vert.",
+     "explication": "La **sensibilité de l’œil au vert** justifie que la matrice de Bayer en compte deux fois plus."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un pixel est construit autour d’un photosite rouge. Combien de composantes l’algorithme de dématriçage doit-il reconstituer à partir des voisins ?",
+     "reponse": 2,
+     "unite": "composantes",
+     "aide": "Un pixel a trois composantes. Une seule a été mesurée.",
+     "explication": "Le photosite a mesuré la composante rouge : le dématriçage reconstitue les **2** autres composantes, verte et bleue, à partir des photosites voisins."
+    }
+   ]
+  },
+  {
+   "chapitre": "7b26be24-a961-5b58-b713-f3ec83094cef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Téléphone ou appareil hybride : qui capte le mieux ?",
+   "competence": "analyser-document",
+   "situation": "Yanis hésite entre filmer ses concerts avec son téléphone ou avec un appareil hybride. Il compare les capteurs. Pour comparer, il utilise cette équivalence : une surface de 1 mm² répartie sur 1 million de photosites donne 1 µm² par photosite.",
+   "documents": [
+    {
+     "id": "capteurs",
+     "type": "tableau",
+     "titre": "Deux capteurs",
+     "colonnes": [
+      "Appareil",
+      "Mégapixels",
+      "Dimensions du capteur (mm)",
+      "Surface du capteur (mm²)"
+     ],
+     "lignes": [
+      [
+       "Téléphone",
+       12,
+       "6,4 × 4,8",
+       "30,72"
+      ],
+      [
+       "Appareil hybride",
+       24,
+       "36 × 24",
+       864
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Chiffres écrits pour l’exercice"
+    },
+    {
+     "id": "notice",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Fiche technique du téléphone",
+     "sousTitre": "Texte écrit pour l’exercice",
+     "emoji": "📱",
+     "lignes": [
+      {
+       "texte": "Capteur",
+       "valeur": "12 mégapixels"
+      },
+      {
+       "texte": "Format brut (RAW)",
+       "valeur": "14 bits par composante",
+       "id": "raw"
+      },
+      {
+       "texte": "Mode nuit",
+       "valeur": "plusieurs images assemblées"
+      }
+     ],
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la surface d’un photosite de l’appareil hybride, en µm² ?",
+     "reponse": 36,
+     "unite": "µm²",
+     "aide": "Divise 864 mm² par 24 millions de photosites.",
+     "explication": "864 / 24 = **36 µm²** par photosite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la surface d’un photosite du téléphone, en µm² ?",
+     "reponse": 2.56,
+     "tolerance": 0.01,
+     "unite": "µm²",
+     "aide": "Divise 30,72 mm² par 12 millions de photosites.",
+     "explication": "30,72 / 12 = **2,56 µm²** par photosite."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Arrondi à l’unité, combien de fois la surface d’un photosite de l’appareil hybride dépasse-t-elle celle du téléphone ?",
+     "reponse": 14,
+     "tolerance": 0.4,
+     "aide": "Divise 36 par 2,56.",
+     "explication": "36 / 2,56 ≈ 14,06, soit environ **14 fois** plus grande : un photosite recueille plus de lumière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les deux photos sont prises à haute sensibilité. Laquelle contiendra le moins de bruit, toutes choses égales par ailleurs ?",
+     "options": [
+      "Celle de l’appareil hybride, aux photosites plus grands",
+      "Celle du téléphone, qui a moins de mégapixels",
+      "Celle du téléphone, qui a un plus petit capteur",
+      "Aucune : la sensibilité n’a pas d’effet sur le bruit"
+     ],
+     "reponse": 0,
+     "aide": "Des photosites plus grands recueillent plus de lumière avant de la convertir.",
+     "explication": "La **taille des photosites** compte plus que les mégapixels : montée en sensibilité = bruit, d’autant plus marqué que les photosites sont petits."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de niveaux le format RAW du téléphone peut-il distinguer pour une composante ?",
+     "reponse": 16384,
+     "unite": "niveaux",
+     "aide": "Lis le nombre de bits dans la fiche technique : il y a 2 puissance n niveaux.",
+     "explication": "2 puissance 14 = **16 384** niveaux par composante, contre 256 sur 8 bits."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d812c22-0c4f-5705-aec8-bde78a19c657",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment le téléphone de Léa sait où elle est",
+   "competence": "observer-schema",
+   "situation": "Léa marche vers le lycée et son téléphone affiche sa position sur la carte. Le schéma montre les signaux reçus à cet instant : les flèches indiquent le sens de circulation des signaux.",
+   "documents": [
+    {
+     "id": "sat",
+     "type": "schema",
+     "titre": "Des satellites et un téléphone",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        62
+       ],
+       "a": [
+        150,
+        168
+       ],
+       "style": "pointilles",
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        54
+       ],
+       "a": [
+        160,
+        164
+       ],
+       "style": "pointilles",
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        260,
+        66
+       ],
+       "a": [
+        172,
+        168
+       ],
+       "style": "pointilles",
+       "fleche": "fin",
+       "teinte": "violet"
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 44,
+       "emoji": "🛰️",
+       "taille": 36,
+       "id": "s1",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 38,
+       "emoji": "🛰️",
+       "taille": 36,
+       "id": "s2",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 260,
+       "y": 48,
+       "emoji": "🛰️",
+       "taille": 36,
+       "id": "s3",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 188,
+       "emoji": "📱",
+       "taille": 36,
+       "id": "tel",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        214
+       ],
+       "a": [
+        300,
+        214
+       ],
+       "teinte": "brun"
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 236,
+       "texte": "Le sol",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma simplifié écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sat",
+     "enonce": "Touche l’objet qui reçoit des signaux sans en envoyer aux satellites.",
+     "reponse": [
+      "tel"
+     ],
+     "aide": "Suis les flèches : où arrivent-elles toutes ?",
+     "explication": "Le **téléphone** se contente d’écouter les satellites : il ne leur envoie rien, il calcule."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le schéma montre 3 satellites. Combien en faut-il au minimum pour obtenir la position et l’altitude ?",
+     "reponse": 4,
+     "unite": "satellites",
+     "aide": "Trois satellites donnent deux points ; il en faut un de plus pour corriger l’horloge du récepteur.",
+     "explication": "Il en faut **4** : trois pour la position, et un quatrième pour corriger l’horloge du récepteur."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque système de positionnement à son origine.",
+     "paires": [
+      [
+       "GPS",
+       "États-Unis"
+      ],
+      [
+       "Galileo",
+       "Union européenne"
+      ],
+      [
+       "GLONASS",
+       "Russie"
+      ],
+      [
+       "Beidou",
+       "Chine"
+      ]
+     ],
+     "aide": "Galileo est le système européen.",
+     "explication": "GPS : **États-Unis** ; Galileo : **Union européenne** ; GLONASS : **Russie** ; Beidou : **Chine**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d812c22-0c4f-5705-aec8-bde78a19c657",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le temps de vol des signaux",
+   "competence": "calculer",
+   "situation": "Le récepteur de Mehdi mesure le temps mis par le signal de chaque satellite pour lui parvenir. Le signal voyage à la vitesse de la lumière : 300 000 km par seconde.",
+   "documents": [
+    {
+     "id": "vol",
+     "type": "tableau",
+     "titre": "Délais mesurés",
+     "colonnes": [
+      "Satellite",
+      "Délai du signal (s)",
+      "Distance (km)"
+     ],
+     "lignes": [
+      [
+       "A",
+       "0,070",
+       "?"
+      ],
+      [
+       "B",
+       "0,075",
+       22500
+      ],
+      [
+       "C",
+       "0,068",
+       "?"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice, vitesse arrondie à 300 000 km/s"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance du récepteur se trouve le satellite A, en kilomètres ?",
+     "reponse": 21000,
+     "unite": "km",
+     "aide": "Distance = vitesse × durée : 300 000 × 0,070.",
+     "explication": "300 000 × 0,070 = **21 000 km**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance du récepteur se trouve le satellite C, en kilomètres ?",
+     "reponse": 20400,
+     "unite": "km",
+     "aide": "Même calcul avec le délai de la ligne C.",
+     "explication": "300 000 × 0,068 = **20 400 km**."
+    },
+    {
+     "type": "zone",
+     "document": "vol",
+     "enonce": "Touche le satellite le plus proche du récepteur.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Le signal le plus court à parvenir vient du satellite le plus proche.",
+     "explication": "Le satellite **C** a le délai le plus court (0,068 s) : c’est le plus proche, à 20 400 km."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’horloge du récepteur se trompe d’une microseconde (0,000001 s). De combien de mètres la distance calculée est-elle fausse ?",
+     "reponse": 300,
+     "unite": "m",
+     "aide": "Multiplie 300 000 km/s, soit 300 000 000 m/s, par 0,000001 s.",
+     "explication": "300 000 000 × 0,000001 = **300 m** : une erreur infime de temps produit une grande erreur de distance, d’où les horloges atomiques des satellites."
+    }
+   ]
+  },
+  {
+   "chapitre": "4d812c22-0c4f-5705-aec8-bde78a19c657",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La randonnée de Zoé et son application météo",
+   "competence": "analyser-document",
+   "situation": "Zoé part en randonnée avec l’application « Rando Météo ». Son téléphone passe d’une plaine dégagée à une rue étroite, puis à un tunnel. Avant de partir, elle lit aussi l’autorisation que l’application lui demande.",
+   "documents": [
+    {
+     "id": "lieux",
+     "type": "tableau",
+     "titre": "Ce que reçoit le téléphone de Zoé",
+     "colonnes": [
+      "Lieu",
+      "Satellites reçus",
+      "Précision de la position"
+     ],
+     "lignes": [
+      [
+       "Plaine dégagée",
+       9,
+       "3 m"
+      ],
+      [
+       "Rue étroite en ville",
+       5,
+       "25 m"
+      ],
+      [
+       "Tunnel",
+       0,
+       "Aucune position"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "permission",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Rando Météo",
+     "sousTitre": "Autorisation demandée",
+     "emoji": "🥾",
+     "lignes": [
+      {
+       "texte": "Position",
+       "valeur": "précise, en permanence",
+       "id": "perm"
+      },
+      {
+       "texte": "Utilité",
+       "valeur": "afficher la météo du lieu"
+      },
+      {
+       "texte": "Envoyée à",
+       "valeur": "un serveur de l’éditeur"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "vert"
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe le nombre de satellites reçus à ce qu’il détermine.",
+     "paires": [
+      [
+       "1 satellite",
+       "Une sphère de positions"
+      ],
+      [
+       "2 satellites",
+       "Un cercle de positions"
+      ],
+      [
+       "3 satellites",
+       "Deux points possibles"
+      ],
+      [
+       "4 satellites",
+       "La position et l’altitude"
+      ]
+     ],
+     "aide": "Chaque satellite ajoute une contrainte : une sphère, puis son intersection avec une autre sphère…",
+     "explication": "1 satellite donne une **sphère** ; 2 un **cercle** ; 3 **deux points** dont un seul est plausible ; 4 la **position et l’altitude**, en corrigeant l’horloge."
+    },
+    {
+     "type": "zone",
+     "document": "lieux",
+     "enonce": "Touche l’endroit où le téléphone ne peut pas calculer de position avec les seuls satellites.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "Il faut au moins quatre satellites pour une position complète.",
+     "explication": "Dans le **tunnel**, aucun satellite n’est reçu : le GPS ne peut rien calculer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la rue étroite, le téléphone reçoit 5 satellites mais la précision tombe à 25 m. Pourquoi ?",
+     "options": [
+      "Les signaux se réfléchissent sur les façades",
+      "Les satellites s’éteignent en ville",
+      "Le téléphone émet vers les satellites",
+      "L’horloge des satellites se dérègle"
+     ],
+     "reponse": 0,
+     "aide": "Pense au chemin que parcourt un signal qui rebondit sur un mur.",
+     "explication": "Le signal qui rebondit sur une façade parcourt un trajet plus long : le calcul de distance est faussé, la précision se **dégrade**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans le tunnel, quel appoint permet de garder une position entre deux points connus ?",
+     "options": [
+      "Les capteurs internes : accéléromètre, gyroscope",
+      "Un cinquième satellite caché dans le tunnel",
+      "L’horloge atomique du téléphone",
+      "La résolution de l’écran"
+     ],
+     "reponse": 0,
+     "aide": "Quels capteurs du téléphone mesurent le mouvement ?",
+     "explication": "L’**accéléromètre, le gyroscope et la boussole** assurent la continuité entre deux positions connues."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut faire Zoé de l’autorisation demandée par l’application ?",
+     "options": [
+      "Limiter la position à l’usage réel, pendant l’utilisation",
+      "L’accepter sans lire, puisque la météo l’exige vraiment",
+      "Donner aussi son identifiant en plus de sa position précise",
+      "L’accepter en permanence, car c’est plus pratique pour elle"
+     ],
+     "reponse": 0,
+     "aide": "La position révèle domicile, habitudes et déplacements.",
+     "explication": "La position est une donnée **sensible** : mieux vaut limiter l’autorisation à l’usage réel, par exemple « seulement pendant l’utilisation »."
+    }
+   ]
+  },
+  {
+   "chapitre": "c470312a-57d1-583f-a0d5-fdddf942241e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le plus rapide pour aller à l’école",
+   "competence": "observer-schema",
+   "situation": "Hugo veut aller de chez lui (A) à l’école (D). Le plan du quartier est un graphe : les cercles sont des intersections, les traits des tronçons de rue, et chaque nombre est la durée du tronçon à vélo, en minutes.",
+   "documents": [
+    {
+     "id": "ville",
+     "type": "schema",
+     "titre": "Le quartier d’Hugo",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        110
+       ],
+       "a": [
+        150,
+        40
+       ],
+       "teinte": "gris",
+       "id": "ab",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        50,
+        110
+       ],
+       "a": [
+        150,
+        180
+       ],
+       "teinte": "gris",
+       "id": "ac",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        40
+       ],
+       "a": [
+        270,
+        110
+       ],
+       "teinte": "gris",
+       "id": "bd",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        180
+       ],
+       "a": [
+        270,
+        110
+       ],
+       "teinte": "gris",
+       "id": "cd",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        40
+       ],
+       "a": [
+        150,
+        180
+       ],
+       "teinte": "gris",
+       "id": "bc",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 88,
+       "y": 66,
+       "texte": "4",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 88,
+       "y": 160,
+       "texte": "2",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 66,
+       "texte": "5",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 220,
+       "y": 160,
+       "texte": "8",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 114,
+       "texte": "3",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 50,
+       "cy": 110,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "A"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 40,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "B"
+      },
+      {
+       "forme": "cercle",
+       "cx": 150,
+       "cy": 180,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "C"
+      },
+      {
+       "forme": "cercle",
+       "cx": 270,
+       "cy": 110,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "D"
+      }
+     ],
+     "source": "Plan écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ville",
+     "enonce": "Touche le tronçon qui prend le plus de temps.",
+     "reponse": [
+      "cd"
+     ],
+     "aide": "Cherche le plus grand nombre sur un trait.",
+     "explication": "Le tronçon C–D dure **8 minutes**, c’est le plus long du plan."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de minutes dure le trajet A → B → D ?",
+     "reponse": 9,
+     "unite": "min",
+     "aide": "Additionne les durées des tronçons A–B et B–D.",
+     "explication": "4 + 5 = **9 minutes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel trajet entre A et D est le plus rapide ?",
+     "options": [
+      "A → B → D",
+      "A → C → D",
+      "A → B → C → D",
+      "A → C → B → D"
+     ],
+     "reponse": 0,
+     "aide": "Calcule la durée de chaque trajet : une seule est inférieure à 10.",
+     "explication": "A→B→D : 9 min ; A→C→D : 10 min ; A→B→C→D : 15 min ; A→C→B→D : 10 min. Le plus rapide est **A → B → D**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le trajet A → C → D dure combien de minutes de plus que le plus rapide ?",
+     "reponse": 1,
+     "unite": "min",
+     "aide": "Calcule 2 + 8, puis compare avec 9.",
+     "explication": "2 + 8 = 10 minutes, soit 10 − 9 = **1 minute** de plus."
+    }
+   ]
+  },
+  {
+   "chapitre": "c470312a-57d1-583f-a0d5-fdddf942241e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Pas à pas avec l’algorithme de Dijkstra",
+   "competence": "raisonner",
+   "situation": "Maïa explique à son frère comment l’appli de navigation trouve le trajet de la maison (M) au cinéma (E). Elle suit l’algorithme de Dijkstra : à chaque étape, il fixe le sommet dont la durée depuis M est la plus petite parmi ceux qu’il n’a pas encore fixés.",
+   "documents": [
+    {
+     "id": "troncons",
+     "type": "tableau",
+     "titre": "Les tronçons (durée à pied, en minutes)",
+     "colonnes": [
+      "Tronçon",
+      "Durée (min)"
+     ],
+     "lignes": [
+      [
+       "M – A",
+       4
+      ],
+      [
+       "M – B",
+       2
+      ],
+      [
+       "B – A",
+       1
+      ],
+      [
+       "A – C",
+       5
+      ],
+      [
+       "B – C",
+       8
+      ],
+      [
+       "C – E",
+       3
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Durées écrites pour l’exercice"
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "La trace de l’algorithme",
+     "colonnes": [
+      "Étape",
+      "Sommet fixé",
+      "Durée minimale depuis M (min)"
+     ],
+     "lignes": [
+      [
+       1,
+       "M",
+       0
+      ],
+      [
+       2,
+       "B",
+       2
+      ],
+      [
+       3,
+       "A",
+       "?"
+      ],
+      [
+       4,
+       "C",
+       "?"
+      ],
+      [
+       5,
+       "E",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "À l’étape 2, pourquoi l’algorithme fixe-t-il B avant A ?",
+     "options": [
+      "B est plus proche de M : 2 min contre 4 min",
+      "B porte une lettre placée avant A",
+      "B est relié à plus de tronçons que A",
+      "B est plus proche du cinéma que A"
+     ],
+     "reponse": 0,
+     "aide": "Compare les durées directes depuis M.",
+     "explication": "L’algorithme fixe toujours le sommet le plus proche de l’origine : **B (2 min)** passe avant A (4 min en direct)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée minimale de M à A, en minutes ?",
+     "reponse": 3,
+     "unite": "min",
+     "aide": "Compare le tronçon direct M–A avec le détour par B.",
+     "explication": "Par B : 2 + 1 = **3 minutes**, moins que les 4 minutes du tronçon direct."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée minimale de M à C, en minutes ?",
+     "reponse": 8,
+     "unite": "min",
+     "aide": "Pars de la durée minimale pour A, puis ajoute A–C. Compare avec le passage par B.",
+     "explication": "Par A : 3 + 5 = 8 ; par B : 2 + 8 = 10. Le minimum est **8 minutes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée minimale de M au cinéma E, en minutes ?",
+     "reponse": 11,
+     "unite": "min",
+     "aide": "E n’est relié qu’à C : ajoute C–E à la durée minimale pour C.",
+     "explication": "8 + 3 = **11 minutes**."
+    },
+    {
+     "type": "zone",
+     "document": "troncons",
+     "multiple": true,
+     "enonce": "Touche les deux tronçons que le plus court chemin de M à E n’utilise pas.",
+     "reponse": [
+      "r0c0",
+      "r4c0"
+     ],
+     "aide": "Le meilleur chemin est M → B → A → C → E.",
+     "explication": "Le chemin M → B → A → C → E n’emprunte ni **M – A** ni **B – C**."
+    }
+   ]
+  },
+  {
+   "chapitre": "c470312a-57d1-583f-a0d5-fdddf942241e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le plus court n’est pas le plus rapide",
+   "competence": "analyser-document",
+   "situation": "Chloé va de chez elle (S) au gymnase (T). Son application a modélisé le réseau routier par un graphe : le schéma donne la durée de chaque tronçon en minutes, et le tableau sa longueur en kilomètres. Selon le poids qu’on minimise, l’itinéraire change.",
+   "documents": [
+    {
+     "id": "duree",
+     "type": "schema",
+     "titre": "Poids des arêtes : durée en minutes",
+     "largeur": 320,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        130,
+        35
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        130,
+        185
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        35
+       ],
+       "a": [
+        210,
+        110
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        185
+       ],
+       "a": [
+        210,
+        110
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        185
+       ],
+       "a": [
+        210,
+        185
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        110
+       ],
+       "a": [
+        290,
+        110
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        210,
+        185
+       ],
+       "a": [
+        290,
+        110
+       ],
+       "teinte": "gris"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 64,
+       "texte": "10",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 72,
+       "y": 158,
+       "texte": "6",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 184,
+       "y": 64,
+       "texte": "5",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 156,
+       "y": 138,
+       "texte": "10",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 203,
+       "texte": "13",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 250,
+       "y": 100,
+       "texte": "7",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 262,
+       "y": 154,
+       "texte": "4",
+       "gras": true,
+       "ancre": "milieu"
+      },
+      {
+       "forme": "cercle",
+       "cx": 40,
+       "cy": 110,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "S"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 35,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "A"
+      },
+      {
+       "forme": "cercle",
+       "cx": 130,
+       "cy": 185,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "B"
+      },
+      {
+       "forme": "cercle",
+       "cx": 210,
+       "cy": 110,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "C"
+      },
+      {
+       "forme": "cercle",
+       "cx": 210,
+       "cy": 185,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "D"
+      },
+      {
+       "forme": "cercle",
+       "cx": 290,
+       "cy": 110,
+       "r": 18,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "T"
+      }
+     ],
+     "source": "Réseau écrit pour l’exercice"
+    },
+    {
+     "id": "km",
+     "type": "tableau",
+     "titre": "Longueur des tronçons",
+     "colonnes": [
+      "Tronçon",
+      "Longueur (km)"
+     ],
+     "lignes": [
+      [
+       "S – A",
+       10
+      ],
+      [
+       "S – B",
+       7
+      ],
+      [
+       "A – C",
+       6
+      ],
+      [
+       "B – C",
+       6
+      ],
+      [
+       "B – D",
+       10
+      ],
+      [
+       "C – T",
+       5
+      ],
+      [
+       "D – T",
+       3
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Dijkstra part de S avec les durées du schéma. Range les sommets dans l’ordre où il les fixe.",
+     "items": [
+      "Sommet S",
+      "Sommet B",
+      "Sommet A",
+      "Sommet C",
+      "Sommet D",
+      "Sommet T"
+     ],
+     "aide": "À chaque étape, on fixe le sommet non fixé dont la durée depuis S est la plus faible. Calcule la durée minimale de chaque sommet depuis S, puis range-les par ordre croissant.",
+     "explication": "Durées minimales depuis S : S 0, **B 6**, **A 10**, **C 15** (via A), **D 19** (via B), **T 22** (via C). L’ordre croissant donne l’ordre de fixation."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la durée du trajet le plus rapide de S à T, en minutes ?",
+     "reponse": 22,
+     "unite": "min",
+     "aide": "Compare S → A → C → T et S → B → D → T, sans oublier S → B → C → T.",
+     "explication": "S → A → C → T : 10 + 5 + 7 = **22 minutes**, contre 23 pour S → B → C → T et 23 pour S → B → D → T."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la longueur, en kilomètres, du trajet le plus court en distance de S à T ?",
+     "reponse": 18,
+     "unite": "km",
+     "aide": "Reprends les trois chemins, cette fois avec les longueurs du tableau.",
+     "explication": "S → B → C → T : 7 + 6 + 5 = **18 km**, contre 21 km pour le trajet le plus rapide et 20 km par D."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le trajet le plus rapide n’est-il pas le plus court en distance ?",
+     "options": [
+      "Le poids minimisé n’est pas le même : durée ou distance",
+      "L’algorithme se trompe quand il y a trois chemins",
+      "Les durées ne sont pas des poids positifs",
+      "Le trajet le plus rapide évite toujours les carrefours"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce qui change entre le schéma et le tableau.",
+     "explication": "Changer le poids change l’itinéraire : on peut rouler plus longtemps sur une route plus rapide. Le calcul **minimise la quantité demandée**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un accident porte la durée du tronçon S – A à 25 minutes. Quelle est alors la durée minimale de S à T, en minutes ?",
+     "reponse": 23,
+     "unite": "min",
+     "aide": "Le chemin par A coûte désormais 25 + 5 + 7 = 37 minutes. Quels chemins restent ?",
+     "explication": "Par B : S → B → C → T = 6 + 10 + 7 = **23 minutes** (S → B → D → T donne 6 + 13 + 4 = 23 aussi)."
+    }
+   ]
+  },
+  {
+   "chapitre": "a90a6e27-fd3f-5109-b05b-7c7b6ece37f2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le volet roulant qui se ferme tout seul",
+   "competence": "observer-schema",
+   "situation": "Le volet de la chambre d’Élodie se ferme à la tombée de la nuit et s’ouvre au lever du jour, sans que personne n’y touche. Son fonctionnement se représente par trois blocs : le schéma montre le trajet de l’information.",
+   "documents": [
+    {
+     "id": "volet",
+     "type": "schema",
+     "titre": "Un système automatisé",
+     "largeur": 320,
+     "hauteur": 236,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 14,
+       "l": 220,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ciel",
+       "motif": "clair",
+       "texte": "Cellule de lumière",
+       "id": "capt",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 96,
+       "l": 220,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Microcontrôleur",
+       "id": "cmd",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 178,
+       "l": 220,
+       "h": 44,
+       "arrondi": 8,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Moteur du volet",
+       "id": "act",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        58
+       ],
+       "a": [
+        160,
+        96
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        160,
+        140
+       ],
+       "a": [
+        160,
+        178
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 172,
+       "y": 82,
+       "texte": "signal",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "texte",
+       "x": 172,
+       "y": 164,
+       "texte": "ordre",
+       "taille": "petit",
+       "italique": true,
+       "ancre": "debut"
+      },
+      {
+       "forme": "emoji",
+       "x": 28,
+       "y": 38,
+       "emoji": "🌤️",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 28,
+       "y": 120,
+       "emoji": "🧠",
+       "taille": 28
+      },
+      {
+       "forme": "emoji",
+       "x": 28,
+       "y": 202,
+       "emoji": "🪟",
+       "taille": 28
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "volet",
+     "enonce": "Touche le bloc qui agit sur le monde physique.",
+     "reponse": [
+      "act"
+     ],
+     "aide": "Cherche l’organe qui déplace quelque chose.",
+     "explication": "Le **moteur** est l’actionneur : il agit sur le monde physique en montant ou en descendant le volet."
+    },
+    {
+     "type": "choix",
+     "enonce": "La cellule de lumière tombe en panne et signale toujours « nuit ». Que va faire le volet ?",
+     "options": [
+      "Il se fermera en plein jour",
+      "Il s’ouvrira tout seul à midi",
+      "Il restera ouvert toute la nuit",
+      "Il préviendra qu’il est en panne"
+     ],
+     "reponse": 0,
+     "aide": "Le microcontrôleur décide à partir de ce que lui dit le capteur.",
+     "explication": "Le système décide à partir d’une **information fausse** : un capteur défaillant fait prendre une mauvaise décision."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète les rôles des trois organes du schéma.",
+     "texte": "Le ___ transforme une grandeur physique en signal, la partie ___ applique un programme et l’___ agit sur le monde.",
+     "reponses": [
+      [
+       "capteur"
+      ],
+      [
+       "commande"
+      ],
+      [
+       "actionneur"
+      ]
+     ],
+     "banque": [
+      "capteur",
+      "commande",
+      "actionneur",
+      "moteur",
+      "alimentation"
+     ],
+     "aide": "Reprends les trois blocs, de haut en bas.",
+     "explication": "Le **capteur** mesure, la partie **commande** décide, l’**actionneur** agit : c’est le triplet de tout système automatisé."
+    }
+   ]
+  },
+  {
+   "chapitre": "a90a6e27-fd3f-5109-b05b-7c7b6ece37f2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le chauffage de la classe et sa consigne",
+   "competence": "lire-tableau",
+   "situation": "La classe de Nolwenn est chauffée par un thermostat réglé sur une consigne de 20 °C : le chauffage est allumé quand la température mesurée est inférieure à la consigne, et coupé sinon. Un capteur a relevé la température à six moments de la journée.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Relevés du capteur de température",
+     "colonnes": [
+      "Heure",
+      "Température (°C)"
+     ],
+     "lignes": [
+      [
+       "8 h",
+       "16,0"
+      ],
+      [
+       "9 h",
+       "18,0"
+      ],
+      [
+       "10 h",
+       "19,5"
+      ],
+      [
+       "11 h",
+       "20,5"
+      ],
+      [
+       "12 h",
+       "21,0"
+      ],
+      [
+       "13 h",
+       "19,6"
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Pour combien de ces six relevés le chauffage est-il allumé ?",
+     "reponse": 4,
+     "unite": "relevés",
+     "aide": "Compte les relevés dont la température est inférieure à la consigne de 20 °C.",
+     "explication": "Sont inférieures à 20 °C : 16,0 ; 18,0 ; 19,5 et 19,6. Le chauffage est allumé pour **4** relevés."
+    },
+    {
+     "type": "zone",
+     "document": "releves",
+     "multiple": true,
+     "enonce": "Touche les relevés pour lesquels le thermostat coupe le chauffage.",
+     "reponse": [
+      "r3c1",
+      "r4c1"
+     ],
+     "aide": "Cherche les températures qui dépassent la consigne.",
+     "explication": "À 11 h (20,5 °C) et 12 h (21,0 °C), la mesure est **au-dessus** de la consigne : le chauffage est coupé."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque système selon qu’il fonctionne en boucle ouverte ou en boucle fermée.",
+     "categories": [
+      "Boucle ouverte",
+      "Boucle fermée"
+     ],
+     "items": [
+      [
+       "Un grille-pain à minuterie",
+       0
+      ],
+      [
+       "Le thermostat de la classe",
+       1
+      ],
+      [
+       "Un four qui s’éteint après 30 minutes",
+       0
+      ],
+      [
+       "Un régulateur de vitesse de voiture",
+       1
+      ]
+     ],
+     "aide": "En boucle fermée, le système mesure l’effet de son action et corrige.",
+     "explication": "Le grille-pain et le four **exécutent** une durée sans vérifier le résultat. Le thermostat et le régulateur **mesurent et corrigent**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi le thermostat de la classe fonctionne-t-il en boucle fermée ?",
+     "options": [
+      "Il compare la température mesurée à la consigne",
+      "Il s’éteint toujours au bout d’une heure",
+      "Il n’utilise aucun capteur",
+      "Il fonctionne uniquement quand on appuie dessus"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que le thermostat fait des relevés du tableau.",
+     "explication": "Sa décision dépend de la **mesure** comparée à la **consigne** : c’est la rétroaction qui définit la boucle fermée."
+    }
+   ]
+  },
+  {
+   "chapitre": "a90a6e27-fd3f-5109-b05b-7c7b6ece37f2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le thermostat connecté de la maison de Sacha",
+   "competence": "programmer",
+   "situation": "La maison de Sacha est chauffée par un thermostat connecté. Son programme simule l’évolution de la température sur cinq tours : le chauffage apporte 1,5 °C quand il est allumé, et la pièce perd 0,5 °C à chaque tour. Sacha lit aussi la fiche du produit.",
+   "documents": [
+    {
+     "id": "prog",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le programme du thermostat",
+     "auteur": "Programme écrit pour l’exercice",
+     "blocs": [
+      "consigne = 20",
+      "temperature = 17",
+      "for tour in range(5):",
+      "    if temperature [[k|<]] consigne:",
+      "        temperature = temperature + 1.5",
+      "    temperature = temperature - 0.5",
+      "print(temperature)"
+     ]
+    },
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "La trace du programme",
+     "colonnes": [
+      "Tour",
+      "Température en fin de tour (°C)"
+     ],
+     "lignes": [
+      [
+       1,
+       "18,0"
+      ],
+      [
+       2,
+       "?"
+      ],
+      [
+       3,
+       "?"
+      ],
+      [
+       4,
+       "?"
+      ],
+      [
+       5,
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Thermostat connecté",
+     "sousTitre": "Fiche du produit",
+     "emoji": "🌡️",
+     "lignes": [
+      {
+       "texte": "Connexion",
+       "valeur": "wifi"
+      },
+      {
+       "texte": "Mot de passe",
+       "valeur": "admin, par défaut",
+       "id": "mdp"
+      },
+      {
+       "texte": "Mises à jour",
+       "valeur": "aucune depuis 3 ans",
+       "id": "maj"
+      },
+      {
+       "texte": "Échanges avec le serveur",
+       "valeur": "non chiffrés",
+       "id": "chiff"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "corail"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la température à la fin du tour 3, en °C ?",
+     "reponse": 20,
+     "unite": "°C",
+     "aide": "Pars de 18,0 °C à la fin du tour 1. À chaque tour : chauffe si la température est inférieure à 20, puis retire 0,5.",
+     "explication": "Tour 2 : 18,0 + 1,5 − 0,5 = 19,0. Tour 3 : 19,0 + 1,5 − 0,5 = **20,0 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la température à la fin du tour 4, en °C ?",
+     "reponse": 19.5,
+     "unite": "°C",
+     "aide": "Au début du tour 4, la température vaut 20,0 : la condition temperature < consigne est-elle vraie ?",
+     "explication": "20,0 n’est pas inférieur à 20 : pas de chauffage, la pièce perd 0,5 °C et passe à **19,5 °C**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle valeur le programme affiche-t-il à la fin, en °C ?",
+     "reponse": 20.5,
+     "unite": "°C",
+     "aide": "Au tour 5, la température de départ est 19,5 °C : le chauffage s’allume-t-il ?",
+     "explication": "Tour 5 : 19,5 < 20, donc 19,5 + 1,5 = 21,0, puis 21,0 − 0,5 = **20,5 °C**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre la façon dont la température oscille autour de la consigne ?",
+     "options": [
+      "Le système mesure puis corrige : il est en boucle fermée",
+      "Le système exécute une durée fixe : il est en boucle ouverte",
+      "Le capteur est en panne : la température ne devrait pas bouger",
+      "La consigne est modifiée à chaque tour par le programme"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que fait le test à chaque tour avec la mesure.",
+     "explication": "À chaque tour, le programme **compare la mesure à la consigne** et agit en conséquence : c’est une boucle fermée."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": true,
+     "enonce": "Touche les trois faiblesses de sécurité de ce thermostat connecté.",
+     "reponse": [
+      "mdp",
+      "maj",
+      "chiff"
+     ],
+     "aide": "Pense à un mot de passe, aux failles non corrigées et aux échanges visibles de tous.",
+     "explication": "Un **mot de passe par défaut**, l’**absence de mise à jour** et des échanges **non chiffrés** exposent l’objet : dès qu’un système est connecté, la cybersécurité devient un enjeu."
+    }
+   ]
+  },
+  {
+   "chapitre": "b4d04c80-bd68-5fcf-bfed-8dbc829fba0a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les objets connectés de la maison de Maëlys",
+   "competence": "observer-schema",
+   "situation": "Dans la maison de Maëlys, cinq objets mesurent, communiquent et parfois agissent, par le wifi ou le réseau mobile. Chacun envoie une mesure par heure à un serveur.",
+   "documents": [
+    {
+     "id": "maison",
+     "type": "schema",
+     "titre": "Une maison connectée",
+     "largeur": 320,
+     "hauteur": 250,
+     "elements": [
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         30,
+         92
+        ],
+        [
+         160,
+         28
+        ],
+        [
+         290,
+         92
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 40,
+       "y": 92,
+       "l": 240,
+       "h": 136,
+       "teinte": "sable",
+       "motif": "clair"
+      },
+      {
+       "forme": "emoji",
+       "x": 80,
+       "y": 130,
+       "emoji": "🌡️",
+       "taille": 32,
+       "id": "therm",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 80,
+       "y": 152,
+       "texte": "Thermostat",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 160,
+       "y": 130,
+       "emoji": "💡",
+       "taille": 32,
+       "id": "lamp",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 152,
+       "texte": "Ampoule",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 240,
+       "y": 130,
+       "emoji": "📷",
+       "taille": 32,
+       "id": "cam",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 152,
+       "texte": "Caméra",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 110,
+       "y": 192,
+       "emoji": "🔒",
+       "taille": 32,
+       "id": "lock",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 110,
+       "y": 214,
+       "texte": "Serrure",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "emoji",
+       "x": 210,
+       "y": 192,
+       "emoji": "⚡",
+       "taille": 32,
+       "id": "compt",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 210,
+       "y": 214,
+       "texte": "Compteur",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "maison",
+     "enonce": "Touche l’objet qui mesure la température de la maison.",
+     "reponse": [
+      "therm"
+     ],
+     "aide": "Cherche l’objet dont le pictogramme est un thermomètre.",
+     "explication": "Le **thermostat** mesure la température et peut régler le chauffage."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les cinq objets envoient chacun une mesure par heure. Combien de mesures le serveur reçoit-il par jour ?",
+     "reponse": 120,
+     "unite": "mesures",
+     "aide": "Compte les objets du schéma, puis multiplie par le nombre d’heures dans une journée.",
+     "explication": "5 objets × 24 heures = **120 mesures** par jour : un petit capteur, multiplié par des milliards, change l’échelle."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque objet connecté à son domaine d’application.",
+     "paires": [
+      [
+       "Thermostat connecté",
+       "Habitat"
+      ],
+      [
+       "Compteur communicant",
+       "Énergie"
+      ],
+      [
+       "Bracelet de suivi du sommeil",
+       "Santé"
+      ]
+     ],
+     "aide": "Le compteur communicant suit la consommation d’électricité.",
+     "explication": "Thermostat : **habitat** ; compteur communicant : **énergie** ; bracelet de suivi : **santé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "b4d04c80-bd68-5fcf-bfed-8dbc829fba0a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une caméra connectée mal protégée",
+   "competence": "analyser-document",
+   "situation": "Rayan a acheté une caméra connectée bon marché pour surveiller son jardin. Avant de l’installer, il lit la fiche de l’appareil et se demande ce qui peut mal tourner.",
+   "documents": [
+    {
+     "id": "camera",
+     "type": "fiche",
+     "modele": "ticket",
+     "entete": "Caméra de jardin",
+     "sousTitre": "Fiche du produit",
+     "emoji": "📷",
+     "lignes": [
+      {
+       "texte": "Image",
+       "valeur": "haute définition"
+      },
+      {
+       "texte": "Mot de passe",
+       "valeur": "admin, par défaut",
+       "id": "mdp"
+      },
+      {
+       "texte": "Mises à jour",
+       "valeur": "aucune prévue",
+       "id": "maj"
+      },
+      {
+       "texte": "Échanges avec le serveur",
+       "valeur": "non chiffrés",
+       "id": "chiff"
+      },
+      {
+       "texte": "Fonctionnement",
+       "valeur": "via les serveurs du fabricant",
+       "id": "serv"
+      }
+     ],
+     "pied": "Fiche écrite pour l’exercice",
+     "teinte": "bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "camera",
+     "multiple": true,
+     "enonce": "Touche les trois lignes qui sont des faiblesses de sécurité.",
+     "reponse": [
+      "mdp",
+      "maj",
+      "chiff"
+     ],
+     "aide": "Pense à ce qui rend l’objet accessible, ce qui laisse les failles ouvertes et ce qui expose les données.",
+     "explication": "Le **mot de passe par défaut**, l’**absence de mise à jour** et les échanges **non chiffrés** sont les trois faiblesses classiques."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque faiblesse à sa conséquence.",
+     "paires": [
+      [
+       "Mot de passe par défaut",
+       "L’objet est accessible à tous"
+      ],
+      [
+       "Absence de chiffrement",
+       "Les données circulent en clair"
+      ],
+      [
+       "Absence de mise à jour",
+       "Les failles restent ouvertes"
+      ]
+     ],
+     "aide": "Chaque faiblesse a une conséquence directe, vue en cours.",
+     "explication": "Mot de passe par défaut : accès à tous ; pas de chiffrement : données en clair ; pas de mise à jour : failles ouvertes."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Des pirates prennent le contrôle de 20 000 caméras. Chacune envoie 50 requêtes par seconde à un site. Combien de requêtes par seconde le site reçoit-il ?",
+     "reponse": 1000000,
+     "unite": "requêtes/s",
+     "aide": "Multiplie le nombre de caméras par le nombre de requêtes de chacune. Chiffres imaginés pour l’exercice.",
+     "explication": "20 000 × 50 = **1 000 000** de requêtes par seconde : c’est le principe d’un réseau de machines compromises, comme le botnet Mirai en 2016."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-il arriver à la caméra si son fabricant ferme ses serveurs ?",
+     "options": [
+      "Elle peut cesser de fonctionner",
+      "Elle devient plus sûre",
+      "Elle se met à jour toute seule",
+      "Elle fonctionne mieux sans serveur"
+     ],
+     "reponse": 0,
+     "aide": "Regarde la ligne « Fonctionnement » de la fiche.",
+     "explication": "Elle fonctionne **via les serveurs du fabricant** : s’ils ferment, l’objet peut devenir inutilisable. C’est un enjeu de souveraineté."
+    }
+   ]
+  },
+  {
+   "chapitre": "b4d04c80-bd68-5fcf-bfed-8dbc829fba0a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les sondes qui arrosent le champ de maïs",
+   "competence": "modeliser",
+   "situation": "Une exploitation agricole utilise une sonde d’humidité du sol. Quand l’humidité passe sous 30 %, une vanne s’ouvre pour arroser. La mesure circule par un réseau sans fil jusqu’à un service en ligne, puis l’ordre revient à la vanne.",
+   "documents": [
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "Du champ au cloud",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "sonde",
+       "texte": "Sonde",
+       "emoji": "🌱"
+      },
+      {
+       "id": "reseau",
+       "texte": "Réseau sans fil",
+       "emoji": "📡"
+      },
+      {
+       "id": "cloud",
+       "texte": "?"
+      },
+      {
+       "id": "vanne",
+       "texte": "Vanne",
+       "emoji": "🚿"
+      }
+     ],
+     "liens": [
+      {
+       "de": "sonde",
+       "a": "reseau",
+       "texte": "mesure"
+      },
+      {
+       "de": "reseau",
+       "a": "cloud"
+      },
+      {
+       "de": "cloud",
+       "a": "vanne",
+       "texte": "ordre"
+      }
+     ]
+    },
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Humidité du sol relevée chaque heure",
+     "colonnes": [
+      "Heure",
+      "Humidité (%)"
+     ],
+     "lignes": [
+      [
+       "6 h",
+       38
+      ],
+      [
+       "7 h",
+       34
+      ],
+      [
+       "8 h",
+       31
+      ],
+      [
+       "9 h",
+       28
+      ],
+      [
+       "10 h",
+       44
+      ],
+      [
+       "11 h",
+       42
+      ]
+     ],
+     "enteteLignes": true,
+     "source": "Relevés écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quel est le rôle du maillon marqué d’un point d’interrogation ?",
+     "options": [
+      "Il stocke et traite les flux de mesures",
+      "Il mesure l’humidité à la place de la sonde",
+      "Il arrose directement le champ",
+      "Il fabrique la sonde"
+     ],
+     "reponse": 0,
+     "aide": "C’est là que vont les données collectées avant que l’ordre ne revienne.",
+     "explication": "Le **cloud** stocke et traite les flux de données collectés par les objets."
+    },
+    {
+     "type": "zone",
+     "document": "releves",
+     "enonce": "Touche le premier relevé qui déclenche l’arrosage.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche la première valeur strictement sous 30 %.",
+     "explication": "À 9 h l’humidité tombe à **28 %**, sous le seuil de 30 % : la vanne s’ouvre."
+    },
+    {
+     "type": "choix",
+     "enonce": "À 10 h, l’humidité est remontée à 44 %. Que montre ce relevé du fonctionnement du système ?",
+     "options": [
+      "Il corrige en mesurant l’effet de son action",
+      "Il agit sans jamais mesurer le résultat",
+      "Il attend qu’un humain ouvre la vanne",
+      "Il arrose à heure fixe"
+     ],
+     "reponse": 0,
+     "aide": "La sonde continue à mesurer après l’arrosage.",
+     "explication": "La sonde **mesure l’effet de l’arrosage** et le système s’arrête dès que l’objectif est atteint : c’est une boucle fermée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "L’exploitation installe 1 000 sondes, chacune envoyant une mesure par heure. Combien de mesures par jour ?",
+     "reponse": 24000,
+     "unite": "mesures",
+     "aide": "Multiplie le nombre de sondes par 24 heures.",
+     "explication": "1 000 × 24 = **24 000 mesures** par jour."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de mesures une seule sonde envoie-t-elle en une année de 365 jours ?",
+     "reponse": 8760,
+     "unite": "mesures",
+     "aide": "Une mesure par heure : 24 mesures par jour.",
+     "explication": "24 × 365 = **8 760 mesures** par an : un capteur à quelques euros, multiplié par des milliards, change d’échelle."
+    }
+   ]
+  }
+ ]
+}

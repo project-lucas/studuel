@@ -2,6 +2,7 @@
 
 import { refresh, revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { avancerQuetesApres } from '@/lib/quests-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { normaliserPrioritaires } from '@/lib/matieres-prioritaires'
@@ -50,6 +51,8 @@ export async function completeLesson(
   // du gardien de sa matière — le boss sort en révisant, jamais autrement.
   let gains: Gain[] = []
   if (!error) {
+    // La quête « Terminer N cours » (lib/quests) : après la réponse.
+    avancerQuetesApres(supabase, user.id, { lecons: 1 })
     const [, award, [, couronnes]] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       // LES DEUX SEULES SOURCES D'XP DE CE GESTE. La leçon elle-même vaut 5,
@@ -222,6 +225,8 @@ export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
   })
   let apparition: TraqueApparition | null = null
   if (!error) {
+    // Chaque bonne réponse revue compte pour « Trouver N bonnes réponses ».
+    avancerQuetesApres(supabase, user.id, { correct: score })
     // La Traque (212) : chaque carte révisée remplit la jauge du gardien de
     // SA matière — une carte de Maths ne fait pas sortir le boss de Français.
     // Son résultat est attendu : c'est lui qui dit si un gardien vient de

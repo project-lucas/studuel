@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { avancerQuetesApres } from '@/lib/quests-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import type { Cle, Reponse } from '@/lib/exercices/types'
 
@@ -142,6 +143,8 @@ export async function terminerExercice(passageId: string): Promise<ResultatTermi
   }
   const r = data as Record<string, unknown> | null
   if (!r?.ok) return { ok: false, raison: raisonDe(r?.raison) }
+  // La quête « Réussir 1 exercice du cahier » : seulement s'il est réussi.
+  if (r.reussi === true) avancerQuetesApres(supabase, user.id, { exercicesReussis: 1 })
   // Le cahier, l'écran de chapitre et le bandeau (gemmes) ont bougé.
   revalidatePath('/reviser', 'layout')
   return {

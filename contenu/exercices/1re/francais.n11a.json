@@ -1,0 +1,1929 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "67a50787-9828-507d-9f6b-dc919507a8ed",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Qui est qui à l’hôtel du Minet-Galant ?",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche de lecture sur *La Puce à l’oreille* (1907), de Georges Feydeau. Une paire de bretelles renvoyée d’un hôtel met la puce à l’oreille de Raymonde : repère d’abord les personnages.",
+   "documents": [
+    {
+     "id": "qui",
+     "type": "tableau",
+     "titre": "Les personnages de la pièce",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Chandebise",
+       "Directeur d’une compagnie d’assurances, mari innocent"
+      ],
+      [
+       "Raymonde",
+       "Son épouse, qui le soupçonne"
+      ],
+      [
+       "Tournel",
+       "?"
+      ],
+      [
+       "Camille",
+       "Le neveu, qui parle sans consonnes"
+      ],
+      [
+       "Poche",
+       "Garçon d’hôtel ivrogne, sosie de Chandebise"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Tournel ?",
+     "options": [
+      "L’ami de Chandebise, qui courtise Raymonde en secret",
+      "Le médecin qui pose un palais d’argent à Camille",
+      "Le mari espagnol, jaloux de sa femme Lucienne",
+      "Le patron de Chandebise, habitué de l’hôtel"
+     ],
+     "reponse": 0,
+     "aide": "Tournel est un ami de la maison. Que cache-t-il à Chandebise ?",
+     "explication": "Tournel est l’**ami qui courtise Raymonde en secret** : c’est lui que Chandebise enverra au rendez-vous."
+    },
+    {
+     "type": "zone",
+     "document": "qui",
+     "multiple": false,
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la case qui décrit celui qu’on confond avec Chandebise.",
+     "aide": "Cherche le mot qui dit que deux hommes se ressemblent trait pour trait.",
+     "explication": "Poche, le garçon d’hôtel, est le **sosie** de Chandebise : toute la confusion de la pièce repose sur cette ressemblance."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec le vocabulaire du cours.",
+     "texte": "Feydeau écrit des ___ ; ici, le garçon d’hôtel est le ___ de Chandebise.",
+     "reponses": [
+      [
+       "vaudevilles",
+       "vaudeville"
+      ],
+      [
+       "sosie"
+      ]
+     ],
+     "banque": [
+      "vaudevilles",
+      "tragédies",
+      "sosie",
+      "frère",
+      "neveu"
+     ],
+     "aide": "Le genre de Feydeau est celui du rire mécanique de la Belle Époque ; Poche ressemble à Chandebise.",
+     "explication": "Feydeau est le maître du **vaudeville** ; Poche est le **sosie** de Chandebise."
+    }
+   ]
+  },
+  {
+   "chapitre": "67a50787-9828-507d-9f6b-dc919507a8ed",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La lettre qui lance la machine",
+   "competence": "analyser-document",
+   "situation": "Tout part d’un détail minuscule. Suis la chaîne des événements, puis observe comment chaque objet de la pièce a son utilité.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Du soupçon à l’hôtel",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Des bretelles renvoyées alertent Raymonde"
+      },
+      {
+       "id": "n2",
+       "texte": "Lucienne écrit la lettre anonyme de rendez-vous"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Homenidès reconnaît l’écriture, court à l’hôtel"
+      },
+      {
+       "id": "n5",
+       "texte": "À l’hôtel, chacun se prend pour un autre"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Chandebise envoie son ami Tournel au rendez-vous à sa place",
+      "Chandebise se rend lui-même à l’hôtel pour confondre sa femme",
+      "Raymonde renonce à son piège et pardonne à son mari",
+      "Camille avoue que c’est lui qui a écrit la lettre"
+     ],
+     "reponse": 0,
+     "aide": "Chandebise croit à une erreur : qui envoie-t-il à sa place ?",
+     "explication": "Croyant à une erreur, Chandebise **envoie Tournel à sa place** : c’est ce détour qui enclenche la méprise."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n1"
+     ],
+     "enonce": "Touche l’étape qui montre qu’un tout petit objet suffit à lancer la machine.",
+     "aide": "Cherche l’objet minuscule qui fait naître le soupçon.",
+     "explication": "Les **bretelles** renvoyées d’un hôtel suffisent : un seul soupçon lance toute l’intrigue."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque objet de la pièce à sa fonction dans l’intrigue.",
+     "paires": [
+      [
+       "Les bretelles",
+       "Elles éveillent le soupçon de Raymonde"
+      ],
+      [
+       "La lettre anonyme",
+       "Elle attire tout le monde à l’hôtel"
+      ],
+      [
+       "Le lit tournant",
+       "Il fait disparaître les amants"
+      ],
+      [
+       "Le palais d’argent",
+       "Il corrige le défaut de langage de Camille"
+      ]
+     ],
+     "aide": "Pense à ce que chaque objet permet ou provoque dans la pièce.",
+     "explication": "Chez Feydeau, **chaque objet a une fonction** : les bretelles lancent le soupçon, la lettre attire à l’hôtel, le lit fait disparaître les amants, le palais d’argent règle le cas de Camille."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi dit-on que Feydeau construit ses pièces comme une horlogerie ?",
+     "options": [
+      "Chaque objet, chaque porte, chaque détail sert à faire avancer l’intrigue",
+      "Les personnages passent leur temps à regarder l’heure sur scène",
+      "L’action de chaque acte dure exactement une heure de temps réel",
+      "Le décor représente toujours l’atelier d’un horloger parisien"
+     ],
+     "reponse": 0,
+     "aide": "Une horloge fonctionne parce que chaque rouage est utile.",
+     "explication": "Comme dans une horloge, **chaque pièce a une fonction** : rien n’est décoratif."
+    }
+   ]
+  },
+  {
+   "chapitre": "67a50787-9828-507d-9f6b-dc919507a8ed",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une seule fausse piste, tout un théâtre",
+   "competence": "argumenter",
+   "situation": "Deux élèves préparent l’oral sur le comique de situation dans *La Puce à l’oreille*. Complète leur plan avec ce que la pièce prouve.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lucas",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Chez Feydeau, le rire vient des personnages : ils sont tous bêtes."
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Non : il vient de la machine. Un seul [[s|soupçon]] suffit à emballer les portes, les objets et les identités."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Alors les didascalies ne servent à rien ?"
+      },
+      {
+       "qui": "Lucas",
+       "texte": "Au contraire : Feydeau les écrit avec minutie, le rythme est écrit."
+      }
+     ]
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Le plan de l’oral",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le comique de situation est une mécanique",
+       "Un seul soupçon lance toute l’intrigue",
+       "Les bretelles de Raymonde"
+      ],
+      [
+       "Le sosie fait vaciller l’identité",
+       "Chacun se prend pour un autre, jusqu’au vertige",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui, selon Lucas, suffit à lancer la pièce.",
+     "aide": "C’est ce que ressent Raymonde devant les bretelles.",
+     "explication": "Un seul **soupçon** suffit à lancer la machine : c’est le comique de situation selon Feydeau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Poche, le sosie de Chandebise, que tout le monde prend pour lui",
+      "Le docteur Finache, qui pose un palais d’argent à Camille",
+      "Homenidès, mari jaloux qui reconnaît l’écriture de sa femme",
+      "Lucienne, qui écrit la lettre anonyme à la place de Raymonde"
+     ],
+     "reponse": 0,
+     "aide": "Quel personnage est confondu avec un autre ?",
+     "explication": "Le sosie **Poche** illustre le quiproquo d’identité : on le prend pour Chandebise et chacun perd ses repères."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : relève-t-il de la mécanique des objets, ou du vertige des identités ?",
+     "categories": [
+      "La machine des objets",
+      "Le vertige des identités"
+     ],
+     "items": [
+      [
+       "Le lit tournant de l’hôtel",
+       0
+      ],
+      [
+       "Les portes qui claquent",
+       0
+      ],
+      [
+       "Poche, sosie de Chandebise",
+       1
+      ],
+      [
+       "Tout le monde se prend pour un autre",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : s’agit-il d’un dispositif de l’hôtel, ou de ce qui arrive à l’identité des gens ?",
+     "explication": "Le **lit tournant** et les **portes** sont des mécanismes ; le **sosie** et la **méprise générale** font perdre leur identité aux personnages."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle problématique cet échange permet-il le mieux de défendre ?",
+     "options": [
+      "Le rire de Feydeau naît d’une mécanique rigoureuse plus que de la psychologie",
+      "Le théâtre de Feydeau est un drame psychologique sans aucun comique",
+      "Feydeau renonce à toute construction pour laisser jouer l’improvisation",
+      "Les décors comptent plus que les paroles dans une pièce de Feydeau"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la réplique de Lucas : où le rire prend-il sa source ?",
+     "explication": "Le comique de situation est **mécanique** : chaque objet, chaque porte, chaque détail sert à emballer l’intrigue."
+    }
+   ]
+  },
+  {
+   "chapitre": "505f783e-89c2-50f6-bfd0-b4ec0baf68de",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète en guerre, un livre en 1952",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares l’oral sur *La Rage de l’expression*. Place le livre dans la vie de Francis Ponge, puis lis sa carte d’identité.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Ponge et ses livres",
+     "debut": 1895,
+     "fin": 1990,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1899,
+       "nom": "Naissance"
+      },
+      {
+       "id": "pp",
+       "date": 1942,
+       "nom": "Le Parti pris"
+      },
+      {
+       "id": "rage",
+       "date": 1952,
+       "nom": "La Rage"
+      },
+      {
+       "id": "mort",
+       "date": 1988,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Rage de l’expression",
+     "sousTitre": "Francis Ponge",
+     "emoji": "✍️",
+     "lignes": [
+      {
+       "texte": "Textes écrits",
+       "valeur": "Entre 1938 et 1944"
+      },
+      {
+       "texte": "Livre publié",
+       "valeur": "En 1952"
+      },
+      {
+       "texte": "Nature des textes",
+       "valeur": "Journaux d’écriture : datés, raturés, contradictoires"
+      }
+     ],
+     "pied": "Pas de vers, pas de rime",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "rage"
+     ],
+     "enonce": "Sur la frise, touche la date de publication de *La Rage de l’expression*.",
+     "aide": "Le livre paraît des années après l’écriture des textes.",
+     "explication": "Le livre paraît en **1952**, bien après les textes écrits de 1938 à 1944."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la fin de l’écriture des textes de la publication du livre ?",
+     "reponse": 8,
+     "unite": "ans",
+     "aide": "Prends la dernière année d’écriture et la date de publication de la fiche.",
+     "explication": "1952 − 1944 = **8 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité.",
+     "texte": "Les textes sont des ___ d’écriture : datés, raturés, ___.",
+     "reponses": [
+      [
+       "journaux"
+      ],
+      [
+       "contradictoires"
+      ]
+     ],
+     "banque": [
+      "journaux",
+      "recueils",
+      "contradictoires",
+      "définitifs"
+     ],
+     "aide": "Relis la ligne « Nature des textes ».",
+     "explication": "Ce ne sont pas des poèmes finis mais des **journaux** d’écriture, **contradictoires** et raturés."
+    }
+   ]
+  },
+  {
+   "chapitre": "505f783e-89c2-50f6-bfd0-b4ec0baf68de",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une page de carnet, un dictionnaire ouvert",
+   "competence": "analyser-texte",
+   "situation": "Ponge n’achève pas ses textes : il montre son travail. Lis une page de carnet écrite pour l’exercice, à la manière de ses journaux d’écriture, puis regarde ce que contiennent trois de ses textes.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page de carnet",
+     "blocs": [
+      "Lundi. Première définition de la pomme de terre : tubercule. Non, je rature. J’ouvre le [[d|dictionnaire]] : l’étymologie me donne un mot, pas la chose.",
+      "Mardi. Deuxième définition. Rature encore. Aucune ne tient, je recommence.",
+      "Mercredi. Le mot manque : j’invente un mot. Une note brute, « sale, chaude, ronde », puis une phrase travaillée."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des journaux d’écriture de Ponge"
+    },
+    {
+     "id": "textes",
+     "type": "tableau",
+     "titre": "Trois textes du recueil",
+     "colonnes": [
+      "Texte",
+      "Ce qu’on y voit"
+     ],
+     "lignes": [
+      [
+       "Le Carnet du bois de pins",
+       "Des pages de reprises sur un bois de pins, et des lettres sur ce travail même"
+      ],
+      [
+       "La Mounine",
+       "?"
+      ],
+      [
+       "Le Mimosa",
+       "Un objet aimé depuis l’enfance : l’affection gêne la description"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "multiple": false,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche l’outil que l’écrivain ouvre pour chercher l’origine des mots.",
+     "aide": "C’est un gros livre où l’on trouve les mots et leur histoire.",
+     "explication": "Le **dictionnaire** (chez Ponge, le Littré) est ouvert en permanence : l’étymologie devient une matière."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour « La Mounine » ?",
+     "options": [
+      "Un ciel de Provence vu en voyage, que le poète n’arrive pas à dire",
+      "Une guêpe observée sans pitié, décrite d’un seul jet",
+      "Des lettres envoyées à un éditeur qui refuse le texte",
+      "Un bois de pins décrit en vers réguliers et rimés"
+     ],
+     "reponse": 0,
+     "aide": "Le titre « La Mounine » ne dit rien ; pense à l’échec du langage.",
+     "explication": "Dans « La Mounine », Ponge **n’arrive pas à dire** un ciel de Provence vu en voyage."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque outil d’écriture à son usage.",
+     "paires": [
+      [
+       "Le dictionnaire",
+       "L’étymologie comme matière"
+      ],
+      [
+       "Les définitions successives",
+       "Aucune n’est la bonne"
+      ],
+      [
+       "Les néologismes",
+       "Ils servent quand la langue manque"
+      ],
+      [
+       "La note brute et la phrase travaillée",
+       "Elles alternent dans le même texte"
+      ]
+     ],
+     "aide": "La page de carnet montre déjà trois de ces gestes.",
+     "explication": "Chaque outil a son rôle : le **dictionnaire** donne l’étymologie, les **définitions** se succèdent sans qu’aucune soit la bonne, les **néologismes** comblent un manque, **notes brutes et phrases travaillées** alternent."
+    }
+   ]
+  },
+  {
+   "chapitre": "505f783e-89c2-50f6-bfd0-b4ec0baf68de",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le galet n’est pas un miroir",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur la façon dont Ponge décrit les choses. Lis leur échange, puis un court passage écrit à sa manière, et tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sami",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Quand Ponge décrit une guêpe, il parle de ses états d’âme : la guêpe, c’est lui."
+      },
+      {
+       "qui": "Sami",
+       "texte": "Non : il refuse d’[[h|humaniser]] les choses. La chose n’est pas le miroir de ses sentiments."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Mais alors, que reste-t-il pour faire de la poésie ?"
+      },
+      {
+       "qui": "Sami",
+       "texte": "L’exigence de justesse : nommer exactement."
+      }
+     ]
+    },
+    {
+     "id": "galet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "À la manière de Ponge",
+     "blocs": [
+      "Le galet. Je rature : « patient », je rature : « [[t|triste]] ». Je ne dois pas le prêter à moi-même. Il est poli par la mer, voilà tout, et il me faut le mot qui le dit."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Ponge"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le verbe qui dit ce que Ponge refuse de faire avec les choses.",
+     "aide": "Sami explique que la chose n’est pas un miroir des sentiments.",
+     "explication": "Ponge refuse d’**humaniser** les choses : il ne leur prête ni sentiments ni symboles."
+    },
+    {
+     "type": "zone",
+     "document": "galet",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Dans le passage, touche le mot que l’auteur rature parce qu’il prête un sentiment au galet.",
+     "aide": "Cherche un mot qui désigne un état d’âme humain.",
+     "explication": "L’auteur rature **« triste »** : le galet ne ressent rien, et décrire est plus difficile que s’épancher."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé à son effet.",
+     "paires": [
+      [
+       "Les reprises et les ratures",
+       "Le poème devient un processus, non un résultat"
+      ],
+      [
+       "Ni vers ni rime",
+       "La poésie tient à l’exigence de justesse"
+      ],
+      [
+       "Le « je » d’un ouvrier au travail",
+       "Le lecteur est placé dans l’atelier"
+      ],
+      [
+       "Le refus de l’humanisation",
+       "La chose est un défi posé au langage"
+      ]
+     ],
+     "aide": "Pense à ce que chaque choix d’écriture change pour le lecteur.",
+     "explication": "Les **reprises** font du poème un processus ; sans vers ni rime, la **justesse** fait la poésie ; le « je » d’**ouvrier** nous place dans l’atelier ; refuser d’humaniser fait de la chose un **défi au langage**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ce travail permet-il le mieux d’appuyer ?",
+     "options": [
+      "Le poème peut être le compte rendu de sa propre fabrication",
+      "Le poème doit exprimer d’abord les émotions personnelles du poète",
+      "Le poème perd tout intérêt dès qu’il est écrit en prose",
+      "Le poème est une description scientifique des objets du monde"
+     ],
+     "reponse": 0,
+     "aide": "Un poème fait de brouillons et de ratures montre quoi ?",
+     "explication": "Chez Ponge, le poème **rend compte de sa propre fabrication** : le brouillon devient une forme."
+    }
+   ]
+  },
+  {
+   "chapitre": "38309011-0b28-59be-9ba4-c96673792edb",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un roman de 1845 sur un massacre de 1572",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *La Reine Margot* d’Alexandre Dumas. Place le roman dans le temps, puis repère ses personnages.",
+   "documents": [
+    {
+     "id": "fr",
+     "type": "frise",
+     "titre": "Du massacre au roman",
+     "debut": 1550,
+     "fin": 2000,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "mas",
+       "date": 1572,
+       "nom": "Massacre"
+      },
+      {
+       "id": "rom",
+       "date": 1845,
+       "nom": "Le roman"
+      },
+      {
+       "id": "film",
+       "date": 1994,
+       "nom": "Le film"
+      }
+     ]
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Quelques personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Margot",
+       "Reine libre et courageuse, alliée politique de son mari"
+      ],
+      [
+       "Henri de Navarre",
+       "Le futur Henri IV, rusé, qui survit en feignant"
+      ],
+      [
+       "La Mole",
+       "Gentilhomme protestant, sauvé et aimé par Margot"
+      ],
+      [
+       "René",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fr",
+     "multiple": false,
+     "reponse": [
+      "rom"
+     ],
+     "enonce": "Touche la date de parution du roman.",
+     "aide": "Dumas publie le livre en feuilleton, bien après les faits.",
+     "explication": "Le roman paraît en **1845** : Dumas raconte un événement de **1572**, près de trois siècles plus tôt."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le massacre de la Saint-Barthélemy de la parution du roman ?",
+     "reponse": 273,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "1845 − 1572 = **273 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour René ?",
+     "options": [
+      "Le parfumeur florentin de Catherine, fabricant de poisons",
+      "Le frère cadet du roi, jaloux et traître",
+      "L’ami de La Mole, aimé de la duchesse de Nevers",
+      "Le roi tourmenté, hanté par le massacre"
+     ],
+     "reponse": 0,
+     "aide": "René travaille pour la reine mère, avec des produits dangereux.",
+     "explication": "René est le **parfumeur florentin** de Catherine de Médicis, qui fabrique des **poisons**."
+    }
+   ]
+  },
+  {
+   "chapitre": "38309011-0b28-59be-9ba4-c96673792edb",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un résumé à annoter",
+   "competence": "analyser-texte",
+   "situation": "Un camarade a écrit un résumé de *La Reine Margot* pour ta fiche. Lis-le, puis vérifie ce que tu sais sur les personnages.",
+   "documents": [
+    {
+     "id": "res",
+     "type": "texte",
+     "genre": "article",
+     "titre": "Résumé du roman",
+     "blocs": [
+      "En août 1572, Marguerite de Valois, [[c|catholique]], épouse Henri de Navarre, [[c|protestant]].",
+      "Six jours plus tard éclate le massacre de la Saint-Barthélemy, ordonné par Catherine de Médicis et par Charles IX. Cette nuit-là, Margot sauve La Mole, un jeune gentilhomme blessé, dont elle devient la maîtresse.",
+      "Plus tard, Henri sauve Charles IX d’un sanglier : le roi lui garde de l’amitié. Mais un livre empoisonné destiné à Henri vient frapper un autre lecteur."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "res",
+     "multiple": true,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche les deux mots qui opposent les mariés.",
+     "aide": "Cherche ce qui distingue leurs religions.",
+     "explication": "Margot est **catholique**, Henri de Navarre est **protestant** : le mariage de 1572 réunit deux camps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Charles IX garde-t-il de l’amitié à Henri de Navarre ?",
+     "options": [
+      "Henri l’a sauvé d’un sanglier lors d’une chasse",
+      "Henri l’a défendu contre les poisons de René",
+      "Henri a sauvé sa sœur Margot de la prison",
+      "Henri a renoncé à sa foi protestante pour lui plaire"
+     ],
+     "reponse": 0,
+     "aide": "Le résumé raconte un épisode de chasse.",
+     "explication": "Henri **sauve Charles IX d’un sanglier** : le roi lui garde de l’amitié."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il incarne.",
+     "paires": [
+      [
+       "Catherine de Médicis",
+       "La reine mère calculatrice, qui consulte astrologues et empoisonneurs"
+      ],
+      [
+       "Charles IX",
+       "Un roi tourmenté, hanté par le massacre"
+      ],
+      [
+       "Le duc d’Alençon",
+       "Un frère cadet jaloux et traître"
+      ],
+      [
+       "Margot",
+       "Une reine libre et courageuse"
+      ]
+     ],
+     "aide": "Cherche, pour chacun, le trait de caractère dominant.",
+     "explication": "**Catherine** calcule, **Charles IX** est hanté, **Alençon** trahit, **Margot** est libre et courageuse."
+    }
+   ]
+  },
+  {
+   "chapitre": "38309011-0b28-59be-9ba4-c96673792edb",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Violer l’Histoire, mais pas n’importe comment",
+   "competence": "argumenter",
+   "situation": "Deux élèves se demandent si Dumas « ment » en mêlant l’Histoire et la fiction. Lis leur échange et le tableau, puis tranche.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Théo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Dumas invente des amours à des gens qui ont vraiment existé : c’est de la triche."
+      },
+      {
+       "qui": "Théo",
+       "texte": "Il mêle des faits attestés et des ressorts [[r|romanesques]]. Il ne prétend pas écrire un manuel."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Et ce qu’on retient du roman, c’est quoi ?"
+      },
+      {
+       "qui": "Théo",
+       "texte": "L’image de la Saint-Barthélemy et de Catherine de Médicis : plus que les manuels."
+      }
+     ]
+    },
+    {
+     "id": "meth",
+     "type": "tableau",
+     "titre": "La méthode de Dumas",
+     "colonnes": [
+      "Dumas emprunte",
+      "À quoi"
+     ],
+     "lignes": [
+      [
+       "Des personnages réels",
+       "Margot, Henri de Navarre, Catherine de Médicis"
+      ],
+      [
+       "Des événements attestés",
+       "Le mariage de 1572 et le massacre de la Saint-Barthélemy"
+      ],
+      [
+       "Des ressorts romanesques",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui désigne ce que Dumas ajoute à l’Histoire.",
+     "aide": "Théo oppose les faits attestés à des ressorts d’un autre genre.",
+     "explication": "Dumas ajoute des ressorts **romanesques** à des faits attestés."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Les amours cachées, les secrets et les rebondissements d’un feuilleton",
+      "Les procès-verbaux exacts de chaque conseil du roi",
+      "Une copie fidèle des lettres de Catherine de Médicis",
+      "Un récit scientifique des causes des guerres de religion"
+     ],
+     "reponse": 0,
+     "aide": "Quelle partie du roman relève de l’invention ?",
+     "explication": "Dumas ajoute des **ressorts romanesques** : amours, secrets, rebondissements."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : emprunté à l’Histoire, ou ajouté par le romancier ?",
+     "categories": [
+      "Emprunté à l’Histoire",
+      "Ajouté par le romancier"
+     ],
+     "items": [
+      [
+       "Le massacre de la Saint-Barthélemy, en 1572",
+       0
+      ],
+      [
+       "Catherine de Médicis, la reine mère",
+       0
+      ],
+      [
+       "Les chapitres courts qui s’arrêtent sur un suspense",
+       1
+      ],
+      [
+       "Les rebondissements prévus pour le feuilleton",
+       1
+      ]
+     ],
+     "aide": "Un fait attesté existe hors du roman ; un ressort romanesque sert à tenir le lecteur.",
+     "explication": "Le **massacre** et **Catherine** viennent de l’Histoire ; **suspense** et **rebondissements** viennent du roman-feuilleton."
+    },
+    {
+     "type": "choix",
+     "enonce": "Selon le cours, que doit-on surtout au roman de Dumas ?",
+     "options": [
+      "L’image populaire de la Saint-Barthélemy et de Catherine de Médicis",
+      "La première édition scientifique des archives de la cour",
+      "La fin des guerres de religion et le retour de la paix civile",
+      "Le premier roman policier écrit en langue française"
+     ],
+     "reponse": 0,
+     "aide": "Théo le dit dans la dernière réplique.",
+     "explication": "Le livre a fixé, **plus que les manuels**, l’image populaire de la Saint-Barthélemy et de Catherine de Médicis."
+    }
+   ]
+  },
+  {
+   "chapitre": "134d63f1-7a3e-51c6-896e-5d62ae13ac77",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La carte d’identité d’un journal de pasteur",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur *La Symphonie pastorale* d’André Gide. Lis la carte d’identité du récit, puis repère ses personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Symphonie pastorale",
+     "sousTitre": "André Gide",
+     "emoji": "🎼",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "André Gide"
+      },
+      {
+       "texte": "Publication",
+       "valeur": "1919"
+      },
+      {
+       "texte": "Genre",
+       "valeur": "Récit"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Le journal du pasteur, en deux cahiers",
+       "id": "forme"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "?"
+      }
+     ],
+     "pied": "Un récit sous la neige",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire à la ligne « Lieu » ?",
+     "options": [
+      "Le Jura suisse, au village de La Brévine, sous la neige",
+      "Les Alpes autrichiennes, dans un monastère isolé",
+      "Les Cévennes, dans un hameau de bergers protestants",
+      "La Normandie, dans une ferme au bord de la mer"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’un pasteur suisse et de neige.",
+     "explication": "L’action se passe dans le **Jura suisse**, au village de **La Brévine**, sous la neige."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "forme"
+     ],
+     "enonce": "Touche la ligne qui dit qui écrit et sous quelle forme.",
+     "aide": "C’est la ligne qui parle de journal.",
+     "explication": "Le récit prend la forme du **journal du pasteur**, en deux cahiers : c’est lui qui raconte."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Le pasteur",
+       "Le narrateur de bonne foi, aveugle à son propre désir"
+      ],
+      [
+       "Gertrude",
+       "L’orpheline aveugle qui s’éveille au langage"
+      ],
+      [
+       "Amélie",
+       "L’épouse délaissée dont la jalousie est jugée mesquine"
+      ],
+      [
+       "Jacques",
+       "Le fils, rival de son père"
+      ]
+     ],
+     "aide": "Chaque personnage a un lien différent avec le pasteur.",
+     "explication": "Le **pasteur** écrit et se trompe, **Gertrude** s’éveille, **Amélie** est délaissée, **Jacques** est le rival de son père."
+    }
+   ]
+  },
+  {
+   "chapitre": "134d63f1-7a3e-51c6-896e-5d62ae13ac77",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du premier cahier à la rivière",
+   "competence": "analyser-document",
+   "situation": "Le journal du pasteur se retourne contre lui. Suis les grandes étapes de l’histoire, de l’éducation de Gertrude jusqu’à sa mort.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes du récit",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Il recueille Gertrude, orpheline aveugle"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Une opération rend la vue à Gertrude"
+      },
+      {
+       "id": "n4",
+       "texte": "Elle comprend qu’elle aimait Jacques"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle se jette dans la rivière"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Il l’éduque et lui décrit un monde dont le mal est retiré",
+      "Il l’abandonne dans un hospice pour reprendre sa vie",
+      "Il la confie à son fils Jacques pour qu’il l’instruise",
+      "Il la conduit à Paris pour y consulter un grand médecin"
+     ],
+     "reponse": 0,
+     "aide": "Entre l’arrivée de Gertrude et l’opération, que fait le pasteur ?",
+     "explication": "Le pasteur l’**éduque** et lui décrit un monde harmonieux dont il retire soigneusement **le mal et le péché**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape qui permet à Gertrude de voir le pasteur tel qu’il est.",
+     "aide": "Que lui rend l’opération ?",
+     "explication": "L’**opération** lui rend la vue : elle découvre le **visage réel** du pasteur et comprend ce qu’il lui cachait."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Gertrude comprend qu’elle aimait ___ et mesure la souffrance de la femme du pasteur, ___.",
+     "reponses": [
+      [
+       "Jacques"
+      ],
+      [
+       "Amélie"
+      ]
+     ],
+     "banque": [
+      "Jacques",
+      "Amélie",
+      "Gertrude",
+      "Beethoven"
+     ],
+     "aide": "Le premier prénom est celui du fils, le second celui de l’épouse.",
+     "explication": "Elle aimait **Jacques**, et elle mesure ce qu’a souffert **Amélie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "134d63f1-7a3e-51c6-896e-5d62ae13ac77",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un narrateur qui s’aveugle lui-même",
+   "competence": "analyser-texte",
+   "situation": "Lis une page de journal écrite pour l’exercice, à la manière du pasteur, puis demande-toi ce que le lecteur comprend avant celui qui écrit.",
+   "documents": [
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page du journal",
+     "blocs": [
+      "Je lui ai dit que la neige était un grand silence blanc où rien ne pouvait [[s|salir]] la terre ; elle a souri.",
+      "Amélie m’a reproché de passer mes soirées auprès de l’enfant. Sa jalousie est mesquine : je n’éprouve pour Gertrude que de la [[c|charité]], une charité toute chrétienne."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière du récit de Gide"
+    },
+    {
+     "id": "lect",
+     "type": "tableau",
+     "titre": "Ce qu’il dit, ce que le lecteur comprend",
+     "colonnes": [
+      "Ce que dit le pasteur",
+      "Ce que comprend le lecteur"
+     ],
+     "lignes": [
+      [
+       "« Je n’éprouve que de la charité. »",
+       "?"
+      ],
+      [
+       "« La jalousie d’Amélie est mesquine. »",
+       "Amélie voit juste : le pasteur est déjà épris"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot par lequel le pasteur justifie son attachement.",
+     "aide": "Il dit qu’il n’éprouve pas autre chose que ce sentiment chrétien.",
+     "explication": "Le pasteur se justifie par la **charité** : il confond charité et désir."
+    },
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le verbe qui montre qu’il retire le mal du monde qu’il décrit.",
+     "aide": "Il décrit la neige comme un lieu où rien ne peut abîmer la terre.",
+     "explication": "Le verbe **salir** dit ce qu’il écarte : le pasteur ne décrit qu’un monde sans tache, sans mal ni péché."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Il appelle charité ce qui est en réalité du désir",
+      "Il est tout à fait sincère et le lecteur le croit sur parole",
+      "Il cache volontairement ses sentiments pour tromper sa femme",
+      "Il ne parle jamais de Gertrude avec la moindre tendresse"
+     ],
+     "reponse": 0,
+     "aide": "Le second exemple du tableau t’indique le sens à prendre : le lecteur voit plus loin que le narrateur.",
+     "explication": "Le lecteur comprend que le pasteur **appelle charité ce qui est du désir** : le narrateur est de bonne foi, mais non fiable."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de Gide à son effet.",
+     "paires": [
+      [
+       "Le journal à la première personne",
+       "Le lecteur comprend avant celui qui écrit"
+      ],
+      [
+       "Le titre « Symphonie pastorale »",
+       "Il est ironique : c’est le pasteur qui ne voit rien"
+      ],
+      [
+       "La cécité de Gertrude",
+       "Elle répond à l’aveuglement moral du pasteur"
+      ],
+      [
+       "Les citations de saint Paul",
+       "Le pasteur se justifie par l’Écriture"
+      ]
+     ],
+     "aide": "Chaque procédé joue sur l’écart entre ce que dit le pasteur et ce qu’il fait.",
+     "explication": "Le **journal** laisse le lecteur comprendre avant le narrateur ; le **titre** est ironique ; la **cécité** physique répond à l’aveuglement moral ; **saint Paul** sert de justification."
+    }
+   ]
+  },
+  {
+   "chapitre": "6fef7b26-688b-51a2-9fbd-c1d494a8c309",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Belleville, un Goncourt et un pseudonyme",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur *La Vie devant soi*. Lis la fiche du livre, puis repère les personnages du roman.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "La Vie devant soi",
+     "sousTitre": "Émile Ajar",
+     "emoji": "🏙️",
+     "lignes": [
+      {
+       "texte": "Prix Goncourt",
+       "valeur": "1975",
+       "id": "g75"
+      },
+      {
+       "texte": "Vrai nom de l’auteur",
+       "valeur": "Romain Gary"
+      },
+      {
+       "texte": "Premier Goncourt de Gary",
+       "valeur": "1956, pour Les Racines du ciel"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Belleville",
+       "id": "lieu"
+      }
+     ],
+     "pied": "Un auteur, deux noms",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Quelques personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Momo",
+       "Petit garçon arabe, narrateur du roman"
+      ],
+      [
+       "Madame Rosa",
+       "?"
+      ],
+      [
+       "Monsieur Hamil",
+       "Il vieillit et récite Victor Hugo"
+      ],
+      [
+       "Le docteur Katz",
+       "Le médecin du quartier"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Madame Rosa ?",
+     "options": [
+      "Une ancienne prostituée juive, rescapée d’Auschwitz, qui garde des enfants",
+      "Une institutrice du quartier qui prépare Momo à ses examens",
+      "Une voisine arabe qui vend des tapis sur le marché",
+      "Une infirmière de nuit qui soigne les vieillards de l’immeuble"
+     ],
+     "reponse": 0,
+     "aide": "Elle garde les enfants de prostituées au sixième étage.",
+     "explication": "Madame Rosa est une **ancienne prostituée juive, rescapée d’Auschwitz**, qui garde les enfants du quartier."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui décrit celui qui récite un grand auteur.",
+     "aide": "Cherche le nom d’un écrivain du XIXe siècle dans le tableau.",
+     "explication": "**Monsieur Hamil** vieillit en récitant Victor Hugo."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent les deux prix Goncourt de Romain Gary ?",
+     "reponse": 19,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la fiche.",
+     "explication": "1975 − 1956 = **19 ans** : Gary est l’unique écrivain deux fois goncourisé."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne qui dit dans quel quartier se passe le roman.",
+     "aide": "C’est un quartier populaire de Paris.",
+     "explication": "L’histoire se passe à **Belleville**, quartier populaire et non bourgeois."
+    }
+   ]
+  },
+  {
+   "chapitre": "6fef7b26-688b-51a2-9fbd-c1d494a8c309",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le sixième sans ascenseur",
+   "competence": "analyser-texte",
+   "situation": "Momo raconte avec ses mots. Lis une page écrite pour l’exercice, à la manière de sa voix, puis suis ce que le cours dit du secret de Madame Rosa et de la fin du roman.",
+   "documents": [
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "À la manière de Momo",
+     "blocs": [
+      "Chez nous c’est au sixième sans ascenseur et Madame Rosa elle monte les marches une à une en s’arrêtant à chaque palier pour dire que c’est la dernière fois. Moi je porte le cabas.",
+      "Elle a [[p|peur]] qu’on l’emmène à l’hôpital où on la branchera à des tuyaux jusqu’à la fin des temps, alors elle m’a demandé de ne jamais la laisser partir là-bas. On est descendus au sous-sol, dans son coin à elle, et je suis resté auprès d’elle."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de La Vie devant soi"
+    },
+    {
+     "id": "secret",
+     "type": "tableau",
+     "titre": "Le secret de Madame Rosa",
+     "colonnes": [
+      "Le secret",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le retour du père",
+       "Un homme sorti d’un asile vient réclamer son fils ; Rosa prétend l’avoir élevé dans la religion juive"
+      ],
+      [
+       "La révélation",
+       "Momo apprend qu’il a quatorze ans, non dix : Rosa l’a rajeuni pour le garder"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot qui dit ce que ressent Madame Rosa devant l’hôpital.",
+     "aide": "C’est le contraire du courage.",
+     "explication": "Madame Rosa a **peur** de l’hôpital : elle redoute l’acharnement thérapeutique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien d’années Madame Rosa a-t-elle rajeuni Momo ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Compare l’âge que croyait Momo et son âge réel.",
+     "explication": "14 − 10 = **4 ans** : Rosa l’a rajeuni pour le garder auprès d’elle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Madame Rosa a-t-elle caché son âge à Momo ?",
+     "options": [
+      "Pour le garder auprès d’elle et l’empêcher d’être réclamé",
+      "Pour le protéger du service militaire qui approche",
+      "Pour obtenir plus d’argent des mères du quartier",
+      "Pour cacher qu’il est le fils de Monsieur Hamil"
+     ],
+     "reponse": 0,
+     "aide": "Le tableau l’explique dans la case « La révélation ».",
+     "explication": "Rosa **l’a rajeuni pour le garder** : plus Momo est petit, moins on peut le lui reprendre."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les derniers temps du roman.",
+     "items": [
+      "Madame Rosa s’affaiblit et perd la tête",
+      "Momo l’aide à descendre au sous-sol",
+      "Il reste auprès d’elle jusqu’à sa mort",
+      "Il reste encore trois semaines auprès d’elle, avec du parfum"
+     ],
+     "aide": "La fin suit le déclin de Madame Rosa, jusqu’après sa mort.",
+     "explication": "Rosa **s’affaiblit**, Momo l’aide à descendre au **sous-sol**, reste près d’elle **jusqu’à sa mort**, puis **trois semaines encore** avec du parfum."
+    }
+   ]
+  },
+  {
+   "chapitre": "6fef7b26-688b-51a2-9fbd-c1d494a8c309",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rire et pleurer, c’est le même métier",
+   "competence": "argumenter",
+   "situation": "Peut-on parler de choses graves avec la voix d’un enfant ? Lis un passage écrit pour l’exercice à la manière de Momo, puis un débat entre deux élèves.",
+   "documents": [
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "À la manière de Momo",
+     "blocs": [
+      "Madame Rosa m’a demandé si j’avais peur. J’ai dit que non, parce que quand on a peur on n’a pas le temps de faire la soupe. Elle a [[e|ri]] et puis elle a [[e|pleuré]], et c’était pareil. Chez les grands le rire et les larmes c’est le même métier, je crois."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de La Vie devant soi"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Un enfant ne peut pas raconter des choses graves : le roman reste léger."
+      },
+      {
+       "qui": "Malik",
+       "texte": "Au contraire : sa naïveté rend le terrible [[s|supportable]], et le rend plus fort."
+      },
+      {
+       "qui": "Zoé",
+       "texte": "Mais il parle un français fautif…"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Justement : humour et gravité se mêlent dans sa voix."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux verbes qui se mêlent chez Madame Rosa.",
+     "aide": "L’un dit la joie, l’autre la peine.",
+     "explication": "Elle a **ri** puis **pleuré**, « et c’était pareil » : humour et gravité se mêlent."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que la naïveté de l’enfant change au terrible.",
+     "aide": "Malik explique l’effet de la voix d’enfant sur ce qui est dur à entendre.",
+     "explication": "La naïveté du narrateur rend le terrible **supportable** — et le rend plus fort."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du roman à son effet.",
+     "paires": [
+      [
+       "La voix de Momo en français fautif",
+       "Humour et gravité mêlés"
+      ],
+      [
+       "Le regard d’enfant",
+       "La naïveté rend le terrible supportable"
+      ],
+      [
+       "Une Juive et un petit Arabe liés par l’amour",
+       "Une famille choisie, contre tous les clivages"
+      ],
+      [
+       "Le refus de l’hôpital",
+       "Le droit de mourir dans la dignité"
+      ]
+     ],
+     "aide": "Chaque procédé porte un thème du roman : le regard, la famille, la mort.",
+     "explication": "La **voix fautive** mêle humour et gravité ; le **regard d’enfant** rend le terrible supportable ; la **famille choisie** défie les clivages ; le **refus de l’hôpital** pose la question de la dignité."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle problématique le passage et le débat permettent-ils de défendre ?",
+     "options": [
+      "Le regard naïf d’un enfant peut dire la gravité sans la lourdeur",
+      "Un narrateur enfant empêche le roman de traiter de sujets graves",
+      "La gravité d’un récit dépend toujours de la langue soutenue",
+      "Le rire d’un enfant prouve que le drame n’est pas réel"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi la réponse de Malik à Zoé.",
+     "explication": "Le roman montre que la **naïveté d’un enfant** peut dire la gravité mieux qu’un discours : « le regard d’enfant » rend le terrible supportable et plus fort."
+    }
+   ]
+  },
+  {
+   "chapitre": "fbabada8-f891-5250-bf86-27a7050a1c82",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Cinq personnages, une pupille enfermée",
+   "competence": "analyser-document",
+   "situation": "Tu prépares la fiche de lecture du *Barbier de Séville* de Beaumarchais. Lis la carte de la pièce et le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Barbier de Séville",
+     "sousTitre": "Beaumarchais",
+     "emoji": "💈",
+     "lignes": [
+      {
+       "texte": "Création",
+       "valeur": "1775, à la Comédie-Française"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Comédie en quatre actes et en prose",
+       "id": "forme"
+      },
+      {
+       "texte": "Sous-titre",
+       "valeur": "La Précaution inutile"
+      }
+     ],
+     "pied": "Première pièce de la trilogie de Figaro",
+     "teinte": "violet"
+    },
+    {
+     "id": "pers",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Sa position"
+     ],
+     "lignes": [
+      [
+       "Le comte Almaviva",
+       "Amoureux de Rosine, il la suit à Séville"
+      ],
+      [
+       "Le docteur Bartholo",
+       "Son tuteur : il veut l’épouser pour sa dot"
+      ],
+      [
+       "Figaro",
+       "?"
+      ],
+      [
+       "Bazile",
+       "Le maître de musique, auteur de la tirade sur la calomnie"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Figaro ?",
+     "options": [
+      "Ancien valet du comte, devenu barbier et factotum de la ville",
+      "Tuteur de Rosine, médecin et propriétaire de la maison",
+      "Maître de musique de Rosine, ami fidèle de Bartholo",
+      "Notaire de Séville, appelé pour signer le contrat"
+     ],
+     "reponse": 0,
+     "aide": "Le titre de la pièce nomme son métier.",
+     "explication": "Figaro est un **ancien valet du comte**, devenu **barbier** et « factotum de la ville »."
+    },
+    {
+     "type": "zone",
+     "document": "pers",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit qui veut épouser Rosine pour sa dot.",
+     "aide": "Cherche le mot « tuteur ».",
+     "explication": "Le **docteur Bartholo**, son tuteur, veut l’épouser pour sa dot et la surveille jour et nuit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la carte de la pièce.",
+     "texte": "C’est une comédie en ___ actes et en ___ ; son sous-titre est « la Précaution inutile ».",
+     "reponses": [
+      [
+       "quatre",
+       "4"
+      ],
+      [
+       "prose"
+      ]
+     ],
+     "banque": [
+      "quatre",
+      "cinq",
+      "prose",
+      "vers"
+     ],
+     "aide": "Relis la ligne « Forme ».",
+     "explication": "La pièce est une comédie en **quatre actes** et en **prose**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fbabada8-f891-5250-bf86-27a7050a1c82",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les stratagèmes de Figaro",
+   "competence": "analyser-document",
+   "situation": "Pour atteindre Rosine, le comte et Figaro multiplient les ruses. Lis le tableau des étapes, puis range les rôles de la pièce.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Le stratagème",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le nom d’emprunt",
+       "Le comte se présente comme un étudiant pauvre, Lindor, et chante sous le balcon"
+      ],
+      [
+       "Premier déguisement",
+       "?"
+      ],
+      [
+       "Second déguisement",
+       "Maître de musique remplaçant"
+      ],
+      [
+       "La nuit",
+       "Un notaire arrive : le mariage est signé sous le nez de Bartholo"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du premier déguisement ?",
+     "options": [
+      "Un soldat ivre qui demande à être logé",
+      "Un valet de Bartholo prêt à trahir son maître",
+      "Un médecin de passage appelé pour soigner Rosine",
+      "Un moine mendiant en quête d’aumônes"
+     ],
+     "reponse": 0,
+     "aide": "Le comte se présente d’abord sous un déguisement qui fait trébucher Bartholo.",
+     "explication": "Le premier déguisement du comte est celui d’un **soldat ivre**."
+    },
+    {
+     "type": "zone",
+     "document": "etapes",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case où le mariage est enfin signé.",
+     "aide": "Cherche le notaire et Bartholo.",
+     "explication": "Le mariage est signé **la nuit**, devant un notaire, « sous le nez de Bartholo »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle dans le schéma de la comédie classique.",
+     "paires": [
+      [
+       "Bartholo",
+       "Le barbon"
+      ],
+      [
+       "Rosine",
+       "La pupille"
+      ],
+      [
+       "Le comte Almaviva",
+       "L’amoureux"
+      ],
+      [
+       "Figaro",
+       "Le valet"
+      ]
+     ],
+     "aide": "Pense au tuteur, à la jeune fille, au soupirant et à celui qui les aide.",
+     "explication": "Beaumarchais reprend le schéma classique : le **barbon**, la **pupille**, l’**amoureux**, le **valet** — renouvelé par la vitesse et l’esprit."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le cours.",
+     "texte": "Quand Bazile survient à contretemps, on le persuade qu’il a la ___ et on le renvoie se ___.",
+     "reponses": [
+      [
+       "fièvre"
+      ],
+      [
+       "coucher"
+      ]
+     ],
+     "banque": [
+      "fièvre",
+      "peur",
+      "coucher",
+      "taire"
+     ],
+     "aide": "Tous s’entendent pour le faire partir.",
+     "explication": "On persuade Bazile qu’il a **la fièvre** pour qu’il aille **se coucher**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fbabada8-f891-5250-bf86-27a7050a1c82",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rire de tout, de peur d’en pleurer",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent du rôle de Figaro dans cette pièce. Lis la réplique célèbre de Figaro, puis leur dialogue.",
+   "documents": [
+    {
+     "id": "rep",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une réplique de Figaro",
+     "blocs": [
+      "Je me presse de [[o|rire]] de tout, de peur d’être obligé d’en [[o|pleurer]]."
+     ],
+     "source": "Beaumarchais, *Le Barbier de Séville* (1775), Figaro"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Dans cette pièce, Figaro est déjà un révolutionnaire qui attaque les nobles."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Pas encore : il est l’adjuvant brillant du comte. Le Figaro politique viendra en [[m|1784]]."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Mais il est plus malin que les maîtres !"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "C’est le germe d’une critique sociale, rien de plus."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "rep",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux verbes opposés dans la phrase de Figaro.",
+     "aide": "L’un dit la gaieté, l’autre la tristesse.",
+     "explication": "Figaro oppose **rire** et **pleurer** : le rire est une défense."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche l’année où Figaro deviendra le protagoniste politique.",
+     "aide": "Hugo la donne dans sa première réplique.",
+     "explication": "Figaro ne deviendra le protagoniste politique qu’en **1784**, avec *Le Mariage de Figaro*."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie la phrase de Figaro ?",
+     "options": [
+      "Le rire est pour lui une défense contre le malheur",
+      "Il se moque des autres par pure méchanceté",
+      "Il prévient qu’il va bientôt se mettre à pleurer",
+      "Il refuse de parler sérieusement par paresse"
+     ],
+     "reponse": 0,
+     "aide": "Il rit pour éviter quoi ?",
+     "explication": "Figaro rit **pour ne pas pleurer** : le rire protège du malheur."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque caractéristique de la pièce à son effet.",
+     "paires": [
+      [
+       "Quatre actes en prose",
+       "Une intrigue resserrée qui lui a valu le triomphe"
+      ],
+      [
+       "Le rythme d’opéra",
+       "Une virtuosité verbale, un comique d’intrigue"
+      ],
+      [
+       "Figaro plus habile que les maîtres",
+       "Le germe d’une critique sociale"
+      ],
+      [
+       "Barbon, pupille, amoureux, valet",
+       "Un schéma classique renouvelé par la vitesse et l’esprit"
+      ]
+     ],
+     "aide": "Pense à ce que chaque choix d’écriture apporte à la pièce.",
+     "explication": "Les **quatre actes** ont sauvé la pièce ; le **rythme d’opéra** donne la virtuosité ; **Figaro** annonce la critique sociale ; le **schéma classique** est renouvelé."
+    }
+   ]
+  }
+ ]
+}

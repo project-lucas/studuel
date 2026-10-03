@@ -30,6 +30,34 @@ function eliser(mot: string): string[] {
   return [m[1] + m[2], ...eliser(m[3])]
 }
 
+const LETTRE_OU_CHIFFRE = /[\p{L}\p{N}]/u
+const BLANC = /\s/
+
+/**
+ * Où se referme la marque (`*` ou `**`) ouverte en `i` — ou -1 si ce n'en est
+ * pas une. Un programme écrit `capital * 1.1`, `x ** 2`, `COUNT(*)` : une marque
+ * colle au texte qu'elle encadre, ne s'ouvre pas au milieu d'un mot ou d'un
+ * calcul (`a*b`), et se referme. Sinon l'astérisque s'affiche tel quel — il
+ * disparaissait, et le reste de la ligne passait en italique.
+ */
+function fermeture(s: string, i: number, marque: '*' | '**'): number {
+  const n = marque.length
+  const apres = s[i + n]
+  if (apres === undefined || BLANC.test(apres) || apres === '*') return -1
+  if (i > 0 && LETTRE_OU_CHIFFRE.test(s[i - 1])) return -1
+  for (let j = i + n + 1; j < s.length; j++) {
+    if (s[j] !== '*') continue
+    const double = s[j + 1] === '*'
+    if (double !== (marque === '**')) {
+      if (double) j += 1
+      continue
+    }
+    if (!BLANC.test(s[j - 1])) return j
+    if (double) j += 1
+  }
+  return -1
+}
+
 /**
  * Découpe une chaîne en jetons. `depart` est le numéro du premier mot : un
  * document numérote ses mots d'un bout à l'autre, bloc après bloc.
@@ -39,6 +67,8 @@ export function decouper(s: string, depart = 0): { jetons: Jeton[]; suivant: num
   let index = depart
   let gras = false
   let italique = false
+  let finGras = -1
+  let finItalique = -1
   let sep = ''
   const pousserSep = () => {
     if (sep) jetons.push({ kind: 'sep', texte: sep, gras, italique })
@@ -47,8 +77,15 @@ export function decouper(s: string, depart = 0): { jetons: Jeton[]; suivant: num
   let i = 0
   while (i < s.length) {
     if (s.startsWith('**', i)) {
+      const fin = gras ? (i === finGras ? i : -1) : fermeture(s, i, '**')
+      if (fin < 0) {
+        sep += '**'
+        i += 2
+        continue
+      }
       pousserSep()
       gras = !gras
+      finGras = fin
       i += 2
       continue
     }
@@ -64,8 +101,15 @@ export function decouper(s: string, depart = 0): { jetons: Jeton[]; suivant: num
       }
     }
     if (s[i] === '*') {
+      const fin = italique ? (i === finItalique ? i : -1) : fermeture(s, i, '*')
+      if (fin < 0) {
+        sep += '*'
+        i += 1
+        continue
+      }
       pousserSep()
       italique = !italique
+      finItalique = fin
       i += 1
       continue
     }

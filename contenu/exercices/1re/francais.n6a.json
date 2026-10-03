@@ -1,0 +1,2192 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "66a56127-e423-5e3d-82eb-bfe45bf5c278",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois hommes pour Doña Sol",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur *Hernani*. Commence par repérer les prétendants de Doña Sol, puis place la pièce parmi les combats de Hugo.",
+   "documents": [
+    {
+     "id": "pretendants",
+     "type": "tableau",
+     "titre": "Les trois prétendants",
+     "colonnes": [
+      "Prétendant",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Don Ruy Gomez",
+       "Le vieil oncle de Doña Sol, son fiancé"
+      ],
+      [
+       "Don Carlos",
+       "?"
+      ],
+      [
+       "Hernani",
+       "Un proscrit et bandit, fils d’un noble tué par le père du roi"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Hugo, de la préface à la pièce",
+     "debut": 1825,
+     "fin": 1832,
+     "pas": 1,
+     "evenements": [
+      {
+       "id": "cro",
+       "date": 1827,
+       "nom": "Préface de Cromwell"
+      },
+      {
+       "id": "mar",
+       "date": 1829,
+       "nom": "Marion interdite"
+      },
+      {
+       "id": "her",
+       "date": 1830,
+       "nom": "Hernani"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est don Carlos, dans la case « ? » du tableau ?",
+     "options": [
+      "Le père de Doña Sol, grand d’Espagne",
+      "Un bandit de la troupe d’Hernani",
+      "Le roi d’Espagne, futur Charles Quint",
+      "Le prêtre qui doit marier les amants"
+     ],
+     "reponse": 2,
+     "aide": "Il est le troisième prétendant, et le plus puissant des trois.",
+     "explication": "Don Carlos est **le roi d’Espagne, futur Charles Quint** : Doña Sol est aimée par un vieillard, un roi et un proscrit."
+    },
+    {
+     "type": "zone",
+     "document": "pretendants",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Touche la case qui dit quel est le lien de don Ruy Gomez avec Doña Sol.",
+     "aide": "Cherche sur la ligne de don Ruy Gomez, dans la colonne de droite.",
+     "explication": "Don Ruy Gomez est **son vieil oncle et son fiancé** : l’honneur castillan et le mariage arrangé s’opposent à la passion."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mar"
+     ],
+     "enonce": "Sur la frise, touche l’événement qui pousse Hugo à faire jouer *Hernani*.",
+     "aide": "Une autre pièce de Hugo a été interdite juste avant.",
+     "explication": "*Marion de Lorme* est **interdite par la censure en 1829** : c’est donc *Hernani* qui est créé, à la Comédie-Française, en 1830."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la préface de *Cromwell* de la création d’*Hernani* ?",
+     "reponse": 3,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1830 − 1827 = **3 ans** : la pièce met en pratique le manifeste du drame romantique."
+    }
+   ]
+  },
+  {
+   "chapitre": "66a56127-e423-5e3d-82eb-bfe45bf5c278",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le soir des noces, le cor retentit",
+   "competence": "analyser-texte",
+   "situation": "Le cor retentit le soir des noces et tout bascule. Lis le résumé, puis remets dans l’ordre le chemin qui mène à la mort des amants.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le fil de la pièce",
+     "blocs": [
+      "Hernani, proscrit, a juré à don Ruy Gomez de mourir quand celui-ci sonnerait du [[c|cor]].",
+      "Devenu empereur, don Carlos [[p|pardonne]] aux amants et permet leur mariage.",
+      "Mais le soir des noces, le cor retentit : Hernani et Doña Sol s’empoisonnent, don Ruy Gomez se tue."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Les étapes de la fin",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Enlèvements, cachettes, serments"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Le soir des noces, le cor retentit"
+      },
+      {
+       "id": "n4",
+       "texte": "Trois morts"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’objet dont le son doit marquer la mort d’Hernani.",
+     "aide": "Le serment dit : « mourir quand celui-ci sonnerait du… ».",
+     "explication": "C’est **le cor** : Hernani a juré de mourir à son appel, et rien ne peut l’en délier."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le verbe qui dit ce que fait don Carlos devenu empereur.",
+     "aide": "Il ne punit pas ses rivaux.",
+     "explication": "Devenu empereur, don Carlos **pardonne** : sa clémence rend le mariage possible, mais le serment reste."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Don Carlos devient empereur et pardonne",
+      "Doña Sol épouse don Ruy Gomez",
+      "Hernani quitte l’Espagne pour toujours",
+      "Don Ruy Gomez renonce à sa vengeance"
+     ],
+     "reponse": 0,
+     "aide": "Entre les intrigues et le soir des noces, quelque chose rend le mariage possible.",
+     "explication": "L’étape manquante est **le pardon de don Carlos, devenu empereur** : il permet le mariage… juste avant que le cor ne sonne."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le chemin qui mène à la mort des amants.",
+     "items": [
+      "Hernani jure à don Ruy Gomez de mourir quand le cor sonnera",
+      "Don Carlos, devenu empereur, pardonne et permet le mariage",
+      "Le cor retentit le soir des noces",
+      "Hernani et Doña Sol s’empoisonnent"
+     ],
+     "aide": "Le serment vient avant le pardon, et la mort après le cor.",
+     "explication": "Ordre : **serment**, **pardon de l’empereur**, **cor**, **empoisonnement**. Le serment d’honneur l’emporte sur le bonheur offert."
+    }
+   ]
+  },
+  {
+   "chapitre": "66a56127-e423-5e3d-82eb-bfe45bf5c278",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un alexandrin qui déborde",
+   "competence": "analyser-texte",
+   "situation": "Dès la première réplique, la pièce défie la tragédie classique. Lis le début, écoute deux élèves, puis range les traits de la pièce.",
+   "documents": [
+    {
+     "id": "debut",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les premiers mots",
+     "blocs": [
+      "Serait-ce déjà lui ? C’est bien à l’escalier",
+      "[[r|Dérobé]]."
+     ],
+     "source": "Victor Hugo, *Hernani* (1830), acte I, scène 1"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Hugo respecte l’alexandrin : douze syllabes, rien ne change par rapport à Racine."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Regarde le vers : la phrase déborde sur le vers suivant, et un seul mot la termine."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Mais ça reste un alexandrin !"
+      },
+      {
+       "qui": "Samir",
+       "texte": "Oui, mais disloqué : le sens ne s’arrête plus avec la rime."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debut",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot rejeté seul au début du vers suivant.",
+     "aide": "C’est le mot qui termine la phrase commencée au vers précédent.",
+     "explication": "**Dérobé** est rejeté au vers suivant : c’est l’alexandrin « disloqué » de Hugo, dès les premiers mots."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a raison dans le débat, d’après le vers ?",
+     "options": [
+      "Samir : le vers reste un alexandrin, mais le sens déborde sur le suivant",
+      "Léa : l’alexandrin est respecté ici de façon tout à fait classique",
+      "Aucun des deux : Hugo abandonne le vers pour écrire en prose",
+      "Les deux : un vers disloqué reste en tout point classique"
+     ],
+     "reponse": 0,
+     "aide": "Regarde où s’arrête la phrase par rapport à la fin du vers.",
+     "explication": "Samir a raison : la phrase **déborde sur le vers suivant**. L’alexandrin est conservé, mais **disloqué**, ce qui rompt avec l’usage classique."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque trait : tragédie classique ou drame romantique ?",
+     "categories": [
+      "Tragédie classique",
+      "Drame romantique"
+     ],
+     "items": [
+      [
+       "Unités de temps et de lieu respectées",
+       0
+      ],
+      [
+       "Nobles et bandits sur la même scène",
+       1
+      ],
+      [
+       "Un seul ton, toujours noble",
+       0
+      ],
+      [
+       "Lieux et temps multiples",
+       1
+      ],
+      [
+       "Alexandrin disloqué",
+       1
+      ]
+     ],
+     "aide": "La préface de *Cromwell* demande le mélange des genres et le rejet des unités.",
+     "explication": "La pièce applique la préface de *Cromwell* : **mélange des registres**, **lieux et temps multiples**, **alexandrin disloqué**. Les unités et la noblesse du ton sont classiques."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hernani dit : « Je suis une force qui va. » Que fait cette phrase de lui ?",
+     "options": [
+      "Un héros romantique, proscrit, emporté par un destin",
+      "Un roi sûr de son pouvoir et de ses alliés",
+      "Un vieillard qui attend la mort avec sagesse",
+      "Un traître qui change de camp à chaque acte"
+     ],
+     "reponse": 0,
+     "aide": "Pense au proscrit, bandit et révolté, voué au malheur.",
+     "explication": "La formule fait d’Hernani un **héros romantique** : proscrit, révolté, emporté par une force qu’il ne maîtrise pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "d81b417f-7619-5f6b-ad71-76686a7c2e40",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux déesses, un jeune chasseur",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur la tragédie d’Euripide. Démêle d’abord qui veut quoi à Trézène, puis place la pièce dans le temps.",
+   "documents": [
+    {
+     "id": "rel",
+     "type": "chaine",
+     "titre": "Qui agit sur qui ?",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Aphrodite"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Hippolyte"
+      },
+      {
+       "id": "n4",
+       "texte": "Artémis"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "inspire une passion à"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "aime, sans le dire, son beau-fils"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "ne sert que"
+      }
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Euripide et sa pièce",
+     "debut": -500,
+     "fin": 1700,
+     "pas": 100,
+     "evenements": [
+      {
+       "id": "prix",
+       "date": -428,
+       "nom": "Premier prix"
+      },
+      {
+       "id": "rac",
+       "date": 1677,
+       "nom": "Phèdre de Racine"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Phèdre, épouse de Thésée",
+      "La nourrice de Phèdre",
+      "Ariane, sœur de Phèdre",
+      "Une femme du chœur de Trézène"
+     ],
+     "reponse": 0,
+     "aide": "Elle aime son beau-fils : c’est l’épouse de son père.",
+     "explication": "La case « ? » est **Phèdre**, épouse de Thésée, victime de la vengeance d’Aphrodite."
+    },
+    {
+     "type": "zone",
+     "document": "rel",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche la déesse chaste que sert Hippolyte.",
+     "aide": "Hippolyte est chasseur et méprise l’amour.",
+     "explication": "Hippolyte ne sert que **la chaste Artémis** : c’est ce mépris d’Aphrodite qui déclenche la vengeance."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "prix"
+     ],
+     "enonce": "Touche l’événement qui date la pièce d’Euripide.",
+     "aide": "Il s’agit d’une récompense, avant J.-C.",
+     "explication": "La pièce remporte **le premier prix en 428 av. J.-C.** au concours tragique des fêtes de Dionysos."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Aphrodite",
+       "Elle annonce sa vengeance dans le prologue"
+      ],
+      [
+       "Hippolyte",
+       "Chasseur chaste, qui méprise l’amour"
+      ],
+      [
+       "La nourrice",
+       "Elle croit aider sa maîtresse et la perd"
+      ],
+      [
+       "Thésée",
+       "Le père qui maudit son fils trop vite"
+      ]
+     ],
+     "aide": "Chacun porte un trait : la vengeance, la chasteté, la maladresse, la colère.",
+     "explication": "**Aphrodite** annonce sa vengeance, **Hippolyte** est le chasseur chaste, la **nourrice** perd sa maîtresse en voulant l’aider, **Thésée** maudit trop vite."
+    }
+   ]
+  },
+  {
+   "chapitre": "d81b417f-7619-5f6b-ad71-76686a7c2e40",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du secret à la malédiction",
+   "competence": "analyser-document",
+   "situation": "Les événements de la pièce sont donnés en désordre. Rétablis leur suite, repère l’épisode de la tablette, puis montre que la parole peut tuer.",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Les six temps de la pièce (en désordre)",
+     "colonnes": [
+      "Temps",
+      "Ce qui arrive"
+     ],
+     "lignes": [
+      [
+       "La mort",
+       "Thésée maudit son fils ; un taureau surgi de la mer épouvante les chevaux, Hippolyte est traîné et brisé"
+      ],
+      [
+       "La lutte",
+       "Phèdre se laisse mourir de faim plutôt que d’avouer"
+      ],
+      [
+       "La fin",
+       "Artémis apparaît et révèle la vérité ; père et fils se réconcilient"
+      ],
+      [
+       "La vengeance",
+       "Aphrodite inspire à Phèdre une passion pour son beau-fils"
+      ],
+      [
+       "La calomnie",
+       "Phèdre se pend en laissant une tablette qui accuse faussement Hippolyte"
+      ],
+      [
+       "La révélation",
+       "La nourrice révèle le secret à Hippolyte, qui la repousse avec horreur"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les six temps de la pièce dans l’ordre.",
+     "items": [
+      "La vengeance d’Aphrodite",
+      "La lutte de Phèdre",
+      "La révélation de la nourrice",
+      "La calomnie de la tablette",
+      "La mort d’Hippolyte",
+      "L’apparition d’Artémis"
+     ],
+     "aide": "La tablette suit la révélation ; la vérité n’éclate qu’à la toute fin.",
+     "explication": "Ordre : **vengeance**, **lutte**, **révélation**, **calomnie**, **mort**, **apparition d’Artémis**."
+    },
+    {
+     "type": "zone",
+     "document": "temps",
+     "multiple": false,
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Touche la case qui dit ce que contient la tablette laissée par Phèdre.",
+     "aide": "Cherche le temps où Phèdre se pend.",
+     "explication": "La tablette **accuse faussement Hippolyte** : le mensonge d’une morte condamne un innocent."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur la parole dans la pièce.",
+     "texte": "La nourrice ___ le secret, la tablette ___, la malédiction ___.",
+     "reponses": [
+      [
+       "révèle"
+      ],
+      [
+       "ment"
+      ],
+      [
+       "tue"
+      ]
+     ],
+     "banque": [
+      "révèle",
+      "ment",
+      "tue",
+      "chante",
+      "cache"
+     ],
+     "aide": "Un mot dit la vérité qui blesse, un autre le mensonge, un dernier la mort.",
+     "explication": "La **nourrice révèle**, la **tablette ment**, la **malédiction tue** : trois façons dont la parole détruit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui rétablit la vérité devant Thésée au dénouement ?",
+     "options": [
+      "Aphrodite, qui avoue sa vengeance",
+      "Poséidon, qui regrette son geste",
+      "Artémis, protectrice d’Hippolyte",
+      "Dionysos, dieu du concours tragique"
+     ],
+     "reponse": 2,
+     "aide": "C’est la déesse que servait Hippolyte.",
+     "explication": "**Artémis** apparaît et révèle la vérité : les dieux ouvrent et ferment l’action chez Euripide."
+    }
+   ]
+  },
+  {
+   "chapitre": "d81b417f-7619-5f6b-ad71-76686a7c2e40",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Euripide ou Racine ?",
+   "competence": "argumenter",
+   "situation": "Comparer deux versions d’un même mythe est un exercice classique. Lis le tableau, puis un prologue écrit à la manière d’Euripide.",
+   "documents": [
+    {
+     "id": "comp",
+     "type": "tableau",
+     "titre": "Deux Phèdre",
+     "colonnes": [
+      "",
+      "Euripide, 428 av. J.-C.",
+      "Racine, 1677"
+     ],
+     "lignes": [
+      [
+       "Le cadre",
+       "Les dieux ouvrent et ferment l’action",
+       "Ils sont évoqués, non présents"
+      ],
+      [
+       "Phèdre au moment de la vérité",
+       "?",
+       "Elle est vivante : c’est elle qui avoue"
+      ],
+      [
+       "L’accent",
+       "La vengeance divine",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "pro",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Un prologue à la manière d’Euripide",
+     "blocs": [
+      {
+       "personnage": "Aphrodite",
+       "replique": "Ceux qui m’honorent, je les élève ; ceux qui me méprisent, je les abats. Hippolyte, fils de Thésée, ne sert que la chaste [[a|Artémis]]."
+      },
+      {
+       "didascalie": "La déesse regarde vers le palais de Trézène."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Euripide"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Phèdre chez Euripide ?",
+     "options": [
+      "Elle est déjà morte quand la vérité éclate",
+      "Elle avoue elle-même et supplie Thésée",
+      "Elle s’enfuit de Trézène avec Hippolyte",
+      "Elle est sauvée par Artémis au dernier instant"
+     ],
+     "reponse": 0,
+     "aide": "Chez Racine elle est vivante : qu’en est-il chez Euripide ?",
+     "explication": "Chez Euripide, Phèdre est **déjà morte** quand la vérité est révélée ; chez Racine elle est vivante et avoue."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel accent met Racine, d’après la dernière ligne du tableau ?",
+     "options": [
+      "La vengeance divine",
+      "La conscience coupable",
+      "Le hasard du destin",
+      "La force de la nature"
+     ],
+     "reponse": 1,
+     "aide": "C’est ce qui change quand les dieux ne sont plus sur scène.",
+     "explication": "Chez Racine, l’accent porte sur la **conscience coupable** de Phèdre ; chez Euripide, sur la vengeance divine."
+    },
+    {
+     "type": "zone",
+     "document": "pro",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le nom de la déesse que sert Hippolyte.",
+     "aide": "Aphrodite en parle comme de sa rivale.",
+     "explication": "Hippolyte ne sert que **Artémis**, la chaste : c’est ce choix qui provoque la colère d’Aphrodite."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette comparaison sur la réécriture d’un mythe ?",
+     "options": [
+      "Reprendre un mythe, c’est en déplacer le centre, du divin vers la conscience",
+      "Racine recopie fidèlement Euripide pour respecter l’Antiquité",
+      "Un mythe ne peut être raconté que dans sa première forme",
+      "La réécriture supprime toujours les personnages d’origine"
+     ],
+     "reponse": 0,
+     "aide": "Compare ce qui compte pour chacun : les dieux ou la conscience.",
+     "explication": "Réécrire un mythe, c’est **déplacer son centre** : d’Euripide à Racine, on passe de la vengeance divine à la conscience coupable."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3a19d77-ce35-5593-95b4-25e0afbdaf9f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un enfant trouvé chez le squire",
+   "competence": "analyser-document",
+   "situation": "Tu fiches un grand roman anglais du XVIIIe siècle. Repère son identité, puis démêle qui aime qui, qui fuit qui.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Histoire de Tom Jones, enfant trouvé",
+     "sousTitre": "Henry Fielding",
+     "emoji": "📖",
+     "lignes": [
+      {
+       "id": "auteur",
+       "texte": "Auteur",
+       "valeur": "Henry Fielding (1707-1754)"
+      },
+      {
+       "id": "date",
+       "texte": "Parution",
+       "valeur": "1749"
+      },
+      {
+       "id": "livres",
+       "texte": "Nombre de livres",
+       "valeur": "Dix-huit"
+      },
+      {
+       "id": "heros",
+       "texte": "Héros",
+       "valeur": "Tom Jones, recueilli par le squire Allworthy"
+      }
+     ],
+     "pied": "Roman anglais",
+     "teinte": "violet"
+    },
+    {
+     "id": "rel",
+     "type": "chaine",
+     "titre": "Amours et fuites",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Tom Jones"
+      },
+      {
+       "id": "n2",
+       "texte": "Sophia Western"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "aime"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "fuit pour ne pas épouser"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Blifil, le neveu hypocrite d’Allworthy",
+      "Partridge, le maître d’école",
+      "Square, le précepteur philosophe",
+      "Le squire Western, le père de Sophia"
+     ],
+     "reponse": 0,
+     "aide": "Sophia s’enfuit de chez son père pour échapper à un mariage.",
+     "explication": "Sophia s’enfuit pour ne pas épouser **Blifil**, neveu vertueux en façade et calculateur en secret."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "livres"
+     ],
+     "enonce": "Touche la ligne qui dit en combien de livres le roman est divisé.",
+     "aide": "Cherche un nombre écrit en toutes lettres.",
+     "explication": "Le roman compte **dix-huit livres**, chacun ouvert par un chapitre où l’auteur discute avec le lecteur."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Le roman paraît en ___ ; son héros est un enfant ___, recueilli par le squire ___.",
+     "reponses": [
+      [
+       "1749"
+      ],
+      [
+       "trouvé"
+      ],
+      [
+       "Allworthy"
+      ]
+     ],
+     "banque": [
+      "1749",
+      "1742",
+      "trouvé",
+      "perdu",
+      "Allworthy",
+      "Western"
+     ],
+     "aide": "Tout est dans le titre et sur la fiche.",
+     "explication": "Le roman paraît en **1749** ; Tom est un enfant **trouvé**, recueilli par le squire **Allworthy**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son portrait.",
+     "paires": [
+      [
+       "Tom Jones",
+       "Impulsif, sensuel, mais bon et loyal"
+      ],
+      [
+       "Blifil",
+       "Vertueux en façade, calculateur en secret"
+      ],
+      [
+       "Sophia Western",
+       "L’héroïne, intelligente et fidèle"
+      ],
+      [
+       "Le squire Western",
+       "Son père, chasseur colérique et bruyant"
+      ]
+     ],
+     "aide": "Pense à qui trompe, qui aime, qui crie.",
+     "explication": "**Tom** est bon malgré ses fautes, **Blifil** joue la vertu, **Sophia** est fidèle, **Western** est un chasseur colérique."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3a19d77-ce35-5593-95b4-25e0afbdaf9f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La route de Londres",
+   "competence": "analyser-texte",
+   "situation": "Chassé de chez son protecteur, Tom prend la route. Lis le résumé, puis range ceux qui font semblant d’être vertueux et ceux qui ont du cœur.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le fil du roman",
+     "blocs": [
+      "Calomnié par Blifil, Tom est chassé de la maison d’Allworthy. Il prend la [[r|route]] de Londres, où l’attendent auberges, duels, rencontres et prison.",
+      "De son côté, Sophia s’est [[f|enfuie]] de chez son père pour ne pas épouser Blifil. Au dénouement, on découvre la naissance de Tom : il est le fils de la sœur d’Allworthy."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    },
+    {
+     "id": "etapes",
+     "type": "chaine",
+     "titre": "Les grandes étapes",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Blifil calomnie Tom"
+      },
+      {
+       "id": "n2",
+       "texte": "?"
+      },
+      {
+       "id": "n3",
+       "texte": "Tom prend la route de Londres"
+      },
+      {
+       "id": "n4",
+       "texte": "La naissance de Tom est révélée"
+      },
+      {
+       "id": "n5",
+       "texte": "Tom épouse Sophia"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui dit par où Tom quitte la maison d’Allworthy.",
+     "aide": "Un chemin, vers la capitale.",
+     "explication": "Tom prend **la route** de Londres : c’est le roman de voyage, avec ses méprises et ses rencontres."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le verbe qui dit ce que fait Sophia pour échapper à Blifil.",
+     "aide": "Elle quitte la maison de son père.",
+     "explication": "Sophia **s’enfuit** de chez son père : elle refuse d’épouser Blifil."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Tom est chassé de la maison d’Allworthy",
+      "Tom est reconnu fils du squire Western",
+      "Sophia retrouve Tom à Londres",
+      "Partridge révèle la naissance de Tom"
+     ],
+     "reponse": 0,
+     "aide": "Entre la calomnie et le départ sur la route, il y a une sanction.",
+     "explication": "La calomnie de Blifil mène à l’étape manquante : **Tom est chassé** de la maison d’Allworthy."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque personnage : vertu d’apparence ou bonté du cœur ?",
+     "categories": [
+      "Vertu d’apparence",
+      "Bonté du cœur"
+     ],
+     "items": [
+      [
+       "Blifil",
+       0
+      ],
+      [
+       "Thwackum",
+       0
+      ],
+      [
+       "Square",
+       0
+      ],
+      [
+       "Tom Jones",
+       1
+      ],
+      [
+       "Le squire Allworthy",
+       1
+      ],
+      [
+       "Sophia Western",
+       1
+      ]
+     ],
+     "aide": "Les deux précepteurs sont, comme Blifil, hypocrites.",
+     "explication": "**Blifil**, **Thwackum** et **Square** jouent la vertu ; **Tom**, **Allworthy** et **Sophia** ont du cœur. Pour Fielding, la vertu est la bonté du cœur."
+    }
+   ]
+  },
+  {
+   "chapitre": "a3a19d77-ce35-5593-95b4-25e0afbdaf9f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un narrateur qui sert le repas",
+   "competence": "argumenter",
+   "situation": "Chaque livre de *Tom Jones* s’ouvre par un chapitre où l’auteur parle au lecteur. Lis un pastiche, puis tranche un débat sur la vertu.",
+   "documents": [
+    {
+     "id": "pref",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un chapitre-préface à la manière de Fielding",
+     "blocs": [
+      "Que le [[l|lecteur]] ne se plaigne pas du menu : je suis, en ces pages, comme un [[a|aubergiste]] qui sert à ses hôtes le repas qu’il a lui-même préparé.",
+      "Je n’y mets que de la nature humaine, avec ses vertus mal habillées et ses vices bien tenus. Si un plat vous déplaît, n’en dégoûtez pas votre voisin."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Fielding"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Élodie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Mehdi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Élodie",
+       "texte": "Tom est impulsif et sensuel : ce n’est pas un modèle de vertu."
+      },
+      {
+       "qui": "Mehdi",
+       "texte": "Blifil est irréprochable en public : c’est lui le vrai vertueux."
+      },
+      {
+       "qui": "Élodie",
+       "texte": "Alors la vertu, ce serait l’apparence ?"
+      },
+      {
+       "qui": "Mehdi",
+       "texte": "Non : pour Fielding, la vertu est la bonté du cœur, pas la pureté sans faute."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pref",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot par lequel le narrateur s’adresse directement à son public.",
+     "aide": "Il parle à celui qui lit le livre.",
+     "explication": "Le narrateur interpelle **le lecteur** : il est « intrusif », ce qui est la marque de Fielding."
+    },
+    {
+     "type": "zone",
+     "document": "pref",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui donne l’image à laquelle le narrateur se compare.",
+     "aide": "Quelqu’un qui sert un repas à ses hôtes.",
+     "explication": "Le narrateur se compare à **un aubergiste** qui sert à ses lecteurs le repas qu’il a préparé."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture de la morale du roman le dialogue permet-il de défendre ?",
+     "options": [
+      "La vertu est la bonté du cœur, non la pureté sans faute",
+      "La vertu est l’apparence irréprochable aux yeux du monde",
+      "Le vice est toujours puni dès les premiers livres du roman",
+      "La naissance décide seule de la valeur d’un homme"
+     ],
+     "reponse": 0,
+     "aide": "Relis la dernière réplique de Mehdi.",
+     "explication": "Le roman défend l’idée que **la vertu est la bonté du cœur**, non la pureté sans faute : Tom, imparfait, vaut mieux que Blifil."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait du roman à son effet.",
+     "paires": [
+      [
+       "Narrateur omniprésent et ironique",
+       "Le lecteur est pris à témoin"
+      ],
+      [
+       "Un chapitre-préface en tête de chaque livre",
+       "L’auteur discute de l’art du roman"
+      ],
+      [
+       "Une intrigue d’horlogerie",
+       "Tout se recolle à la fin"
+      ],
+      [
+       "Blifil face à Tom",
+       "La vertu d’apparence s’oppose à la bonté imparfaite"
+      ]
+     ],
+     "aide": "Chaque procédé a une conséquence sur la lecture.",
+     "explication": "L’**ironie** prend le lecteur à témoin, les **chapitres-préfaces** parlent du roman, l’**horlogerie** recolle l’intrigue, l’**opposition** Blifil / Tom porte la morale."
+    }
+   ]
+  },
+  {
+   "chapitre": "e895e440-fb5b-5d3a-81c7-c29d66b08dec",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un souvenir de quarante ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu présentes à l’oral un livre de souvenirs sur la jeunesse romantique. Place-le dans la vie de son auteur et dans l’histoire du mouvement.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Gautier et la bataille romantique",
+     "debut": 1810,
+     "fin": 1880,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1811,
+       "nom": "Naissance"
+      },
+      {
+       "id": "her",
+       "date": 1830,
+       "nom": "Bataille d’Hernani"
+      },
+      {
+       "id": "mort",
+       "date": 1872,
+       "nom": "Mort de Gautier"
+      },
+      {
+       "id": "pub",
+       "date": 1874,
+       "nom": "Publication"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Histoire du romantisme",
+     "sousTitre": "Théophile Gautier",
+     "emoji": "🧣",
+     "lignes": [
+      {
+       "id": "nature",
+       "texte": "Nature",
+       "valeur": "Un témoignage de participant"
+      },
+      {
+       "id": "ecrit",
+       "texte": "Écrit",
+       "valeur": "Quarante ans après les faits"
+      },
+      {
+       "id": "ep",
+       "texte": "Épisode célèbre",
+       "valeur": "?"
+      }
+     ],
+     "pied": "Livre de souvenirs, inachevé",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "pub"
+     ],
+     "enonce": "Sur la frise, touche l’année où le livre paraît.",
+     "aide": "Le livre est publié après la mort de l’auteur.",
+     "explication": "Le livre paraît en **1874**, deux ans après la mort de Gautier : il est donc posthume et inachevé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la bataille d’*Hernani* de la mort de Gautier ?",
+     "reponse": 42,
+     "unite": "ans",
+     "aide": "Lis les deux dates sur la frise et soustrais.",
+     "explication": "1872 − 1830 = **42 ans** : Gautier raconte, environ quarante ans après, ce qu’il a vécu de l’intérieur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel épisode célèbre faut-il écrire dans la case « ? » de la fiche ?",
+     "options": [
+      "La première d’*Hernani* et le gilet rouge",
+      "La mort de Victor Hugo en 1885",
+      "La publication des *Fleurs du mal*",
+      "Le sacre de Napoléon III"
+     ],
+     "reponse": 0,
+     "aide": "C’est le jour où le romantisme livre bataille au théâtre, en 1830.",
+     "explication": "Gautier raconte **la première d’*Hernani* et son gilet rouge**, devenu le symbole d’une génération."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la fiche.",
+     "texte": "Le livre est un ___ de participant, écrit ___ ans après les faits.",
+     "reponses": [
+      [
+       "témoignage"
+      ],
+      [
+       "quarante",
+       "40"
+      ]
+     ],
+     "banque": [
+      "témoignage",
+      "essai",
+      "quarante",
+      "dix",
+      "vingt"
+     ],
+     "aide": "Ce n’est pas une histoire savante.",
+     "explication": "C’est un **témoignage** de participant, écrit **quarante** ans après, avec nostalgie et humour."
+    }
+   ]
+  },
+  {
+   "chapitre": "e895e440-fb5b-5d3a-81c7-c29d66b08dec",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le petit cénacle",
+   "competence": "analyser-document",
+   "situation": "Gautier fait le portrait de ses compagnons de jeunesse. Complète leur tableau, lis un résumé, puis suis la vie de l’auteur.",
+   "documents": [
+    {
+     "id": "portraits",
+     "type": "tableau",
+     "titre": "Les portraits du petit cénacle",
+     "colonnes": [
+      "Figure",
+      "Ce que Gautier en retient"
+     ],
+     "lignes": [
+      [
+       "Victor Hugo",
+       "Le chef admiré, le maître de la bataille"
+      ],
+      [
+       "Gérard de Nerval",
+       "L’ami doux et rêveur"
+      ],
+      [
+       "Pétrus Borel",
+       "?"
+      ],
+      [
+       "Célestin Nanteuil",
+       "Le peintre et graveur du groupe"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La vocation et la légende",
+     "blocs": [
+      "Gautier voulait d’abord devenir [[p|peintre]]. Le soir de la première d’*Hernani*, il arrive dans un [[g|gilet]] rouge qui n’est en réalité qu’un pourpoint de satin cerise : il corrigera lui-même la légende."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Pétrus Borel ?",
+     "options": [
+      "Le « Lycanthrope », le plus provocateur du groupe",
+      "Le doux rêveur qui voulait devenir peintre",
+      "Le maître de la bataille d’*Hernani*",
+      "L’éditeur qui publie le livre en 1874"
+     ],
+     "reponse": 0,
+     "aide": "Son surnom évoque un homme-loup.",
+     "explication": "Pétrus Borel est **le « Lycanthrope »**, le plus provocateur du groupe."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le métier dont rêvait d’abord Gautier.",
+     "aide": "Il aimait les couleurs avant les mots.",
+     "explication": "Gautier voulait être **peintre** avant de devenir poète."
+    },
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Touche le mot qui désigne le vêtement devenu un symbole.",
+     "aide": "Il est rouge dans la légende.",
+     "explication": "Le **gilet** rouge est devenu le symbole d’une génération, même si c’était en réalité un pourpoint de satin cerise."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre quatre moments de la vie de Gautier.",
+     "items": [
+      "Il se lie avec Nerval au collège",
+      "Il porte le gilet rouge à la première d’*Hernani*",
+      "Il défend l’« art pour l’art »",
+      "Son livre de souvenirs paraît après sa mort"
+     ],
+     "aide": "Le gilet rouge, c’est 1830 ; le livre est posthume.",
+     "explication": "Ordre : **collège**, **gilet rouge** (1830), **art pour l’art** (préface de *Mademoiselle de Maupin*, 1835), **livre posthume** (1874)."
+    }
+   ]
+  },
+  {
+   "chapitre": "e895e440-fb5b-5d3a-81c7-c29d66b08dec",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Gilet rouge ou pourpoint de satin cerise ?",
+   "competence": "argumenter",
+   "situation": "Le romantisme est-il d’abord une révolution littéraire ou un mouvement de jeunesse ? Lis un débat, puis la formule la plus célèbre de Gautier.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nina",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nina",
+       "texte": "Le gilet rouge de Gautier, c’est de la provocation pure."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Lui-même corrige la légende : c’était un pourpoint de satin cerise, taillé exprès pour la première."
+      },
+      {
+       "qui": "Nina",
+       "texte": "Donc il se déguisait pour choquer."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Il montre surtout que le romantisme est un mouvement de jeunesse autant qu’une révolution littéraire."
+      }
+     ]
+    },
+    {
+     "id": "formule",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une formule célèbre",
+     "blocs": [
+      "Il n’y a de vraiment [[o|beau]] que ce qui ne peut servir à rien ; tout ce qui est utile est [[o|laid]]."
+     ],
+     "source": "Théophile Gautier, préface de *Mademoiselle de Maupin* (1835)"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formule",
+     "multiple": true,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche les deux mots que Gautier oppose.",
+     "aide": "L’un décrit ce qui est inutile, l’autre ce qui sert.",
+     "explication": "Gautier oppose **beau** et **laid** : pour lui, la beauté est inutile, et l’utile est laid."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle doctrine cette phrase annonce-t-elle ?",
+     "options": [
+      "L’art engagé, au service d’une cause politique",
+      "L’art pour l’art, qui refuse toute utilité à la beauté",
+      "Le réalisme, qui copie la vie sociale de son temps",
+      "Le classicisme, qui impose les règles anciennes"
+     ],
+     "reponse": 1,
+     "aide": "Elle sépare le beau de tout usage.",
+     "explication": "La phrase défend **l’art pour l’art** et annonce le Parnasse : la beauté ne sert à rien d’autre qu’à être belle."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que prouve la réplique de Tom sur le pourpoint de satin cerise ?",
+     "options": [
+      "Que Gautier corrige lui-même la légende du gilet rouge",
+      "Que Gautier n’a jamais assisté à la première d’*Hernani*",
+      "Que le romantisme n’a jamais provoqué la moindre dispute",
+      "Que le vêtement n’avait aucune importance pour le groupe"
+     ],
+     "reponse": 0,
+     "aide": "Le gilet « rouge » est devenu une légende.",
+     "explication": "Dans ses souvenirs, Gautier **corrige lui-même la légende** : le « gilet rouge » était un pourpoint de satin cerise."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : le romantique de 1830 ou l’auteur de l’art pour l’art ?",
+     "categories": [
+      "En 1830",
+      "Plus tard"
+     ],
+     "items": [
+      [
+       "Le romantique en gilet rouge",
+       0
+      ],
+      [
+       "La bataille d’*Hernani*",
+       0
+      ],
+      [
+       "*Émaux et Camées*",
+       1
+      ],
+      [
+       "La préface de *Mademoiselle de Maupin*",
+       1
+      ],
+      [
+       "Une doctrine qui annonce le Parnasse",
+       1
+      ]
+     ],
+     "aide": "Les pièces écrites en 1830 sont des souvenirs de jeunesse.",
+     "explication": "En 1830, c’est **le romantique en gilet rouge** à la bataille d’*Hernani* ; ensuite viennent *Émaux et Camées*, la préface de *Mademoiselle de Maupin* et la doctrine qui annonce le Parnasse."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c26330a-6341-5c8f-b4b2-d4ec0e0457ab",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux cités, deux familles",
+   "competence": "analyser-document",
+   "situation": "Tu prépares un exposé sur la tragédie de Corneille. Démêle les liens entre les deux familles, puis note la fiche de l’œuvre.",
+   "documents": [
+    {
+     "id": "liens",
+     "type": "chaine",
+     "titre": "Les deux familles",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Horace"
+      },
+      {
+       "id": "n2",
+       "texte": "Sabine"
+      },
+      {
+       "id": "n3",
+       "texte": "Curiace"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2",
+       "texte": "est l’époux de"
+      },
+      {
+       "de": "n2",
+       "a": "n3",
+       "texte": "est la sœur de"
+      },
+      {
+       "de": "n3",
+       "a": "n4",
+       "texte": "est le fiancé de"
+      }
+     ]
+    },
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Horace",
+     "sousTitre": "Pierre Corneille",
+     "emoji": "⚔️",
+     "lignes": [
+      {
+       "id": "genre",
+       "texte": "Genre",
+       "valeur": "Tragédie"
+      },
+      {
+       "id": "date",
+       "texte": "Création",
+       "valeur": "1640"
+      },
+      {
+       "id": "source",
+       "texte": "Sujet emprunté à",
+       "valeur": "Tite-Live"
+      },
+      {
+       "id": "ded",
+       "texte": "Dédiée à",
+       "valeur": "Richelieu"
+      }
+     ],
+     "pied": "Rome et Albe sont en guerre",
+     "teinte": "ambre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » ?",
+     "options": [
+      "Camille, sœur d’Horace",
+      "Sabine, épouse d’Horace",
+      "Valère, chevalier romain",
+      "Tulle, roi de Rome"
+     ],
+     "reponse": 0,
+     "aide": "Elle est fiancée à Curiace mais appartient à la famille des Horaces.",
+     "explication": "Curiace est le fiancé de **Camille**, la sœur d’Horace : les deux familles sont unies par des mariages."
+    },
+    {
+     "type": "zone",
+     "document": "fiche",
+     "multiple": false,
+     "reponse": [
+      "ded"
+     ],
+     "enonce": "Touche la ligne qui dit à qui Corneille dédie sa pièce.",
+     "aide": "Le personnage est un cardinal-ministre.",
+     "explication": "Corneille dédie *Horace* à **Richelieu**, après la querelle du *Cid*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec le cours.",
+     "texte": "Rome et ___ sont en guerre ; pour éviter un massacre, chaque camp désigne ___ champions.",
+     "reponses": [
+      [
+       "Albe"
+      ],
+      [
+       "trois",
+       "3"
+      ]
+     ],
+     "banque": [
+      "Albe",
+      "Carthage",
+      "trois",
+      "douze",
+      "cent"
+     ],
+     "aide": "Les deux cités sont alliées par des mariages.",
+     "explication": "**Rome** et **Albe** désignent chacune **trois** champions pour épargner leurs armées."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de combattants s’affrontent en tout dans le combat des champions ?",
+     "reponse": 6,
+     "aide": "Trois pour Rome, trois pour Albe.",
+     "explication": "**3 Horaces + 3 Curiaces = 6** combattants."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c26330a-6341-5c8f-b4b2-d4ec0e0457ab",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La victoire qui coûte cher",
+   "competence": "analyser-texte",
+   "situation": "Horace est vainqueur, mais le retour tourne au drame. Complète le tableau des étapes, lis le cri de Camille, puis relie les personnages.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Trois étapes de l’action",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le combat",
+       "Deux Horaces meurent ; le troisième feint la fuite, sépare les Curiaces blessés et les tue l’un après l’autre"
+      ],
+      [
+       "Le retour",
+       "?"
+      ],
+      [
+       "Le jugement",
+       "Il est sauvé par le roi Tulle, au nom du service rendu à l’État"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "cri",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "L’imprécation de Camille",
+     "blocs": [
+      {
+       "personnage": "Camille",
+       "replique": "[[r|Rome]], l’unique objet de mon ressentiment !"
+      }
+     ],
+     "source": "Pierre Corneille, *Horace* (1640), acte IV, scène 5"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » ?",
+     "options": [
+      "Camille maudit Rome et Horace la tue",
+      "Sabine maudit Horace et le quitte",
+      "Le vieil Horace maudit son fils",
+      "Valère provoque Horace en duel"
+     ],
+     "reponse": 0,
+     "aide": "Elle perd son fiancé et le lui reproche.",
+     "explication": "Au retour, **Camille maudit Rome** dans une imprécation célèbre, et **Horace la tue**."
+    },
+    {
+     "type": "zone",
+     "document": "cri",
+     "multiple": false,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot qui désigne la cité que Camille maudit.",
+     "aide": "C’est la ville qui a causé la mort de son fiancé.",
+     "explication": "Camille maudit **Rome**, la cité pour qui son frère a tué son fiancé."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre quatre moments de la pièce.",
+     "items": [
+      "Rome et Albe désignent trois champions chacune",
+      "Horace feint de fuir et tue les trois Curiaces",
+      "Camille maudit Rome et Horace la tue",
+      "Le roi Tulle sauve Horace"
+     ],
+     "aide": "Le procès vient après le meurtre de Camille.",
+     "explication": "Ordre : **les champions**, **le combat**, **Camille tuée**, **le jugement du roi Tulle**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son lien avec les autres.",
+     "paires": [
+      [
+       "Camille",
+       "Sœur des Horaces, fiancée à Curiace"
+      ],
+      [
+       "Sabine",
+       "Sœur des Curiaces, épouse d’Horace"
+      ],
+      [
+       "Valère",
+       "Chevalier amoureux de Camille, il accuse Horace"
+      ],
+      [
+       "Tulle",
+       "Roi de Rome, il juge Horace"
+      ]
+     ],
+     "aide": "Deux femmes sont déchirées entre deux familles.",
+     "explication": "**Camille** est fiancée à Curiace, **Sabine** est l’épouse d’Horace, **Valère** accuse, **Tulle** juge."
+    }
+   ]
+  },
+  {
+   "chapitre": "9c26330a-6341-5c8f-b4b2-d4ec0e0457ab",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Héros ou monstre ?",
+   "competence": "argumenter",
+   "situation": "La pièce laisse la question ouverte : Horace est-il un héros ou un monstre ? Lis l’échange célèbre avec Curiace, puis fais le tri avec un débat.",
+   "documents": [
+    {
+     "id": "duo",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Deux amis face à face",
+     "blocs": [
+      {
+       "personnage": "Horace",
+       "replique": "Albe vous a [[n|nommé]], je ne vous connais plus."
+      },
+      {
+       "personnage": "Curiace",
+       "replique": "Je vous connais encore, et c’est ce qui me [[t|tue]]."
+      }
+     ],
+     "source": "Pierre Corneille, *Horace* (1640), acte II"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sacha",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Lina",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sacha",
+       "texte": "Horace est un héros : il sauve Rome."
+      },
+      {
+       "qui": "Lina",
+       "texte": "Horace est un monstre : il tue sa propre sœur."
+      },
+      {
+       "qui": "Sacha",
+       "texte": "Mais le roi Tulle le sauve au nom du service rendu à l’État."
+      },
+      {
+       "qui": "Lina",
+       "texte": "La pièce ne tranche pas : elle laisse la question ouverte."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "duo",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui dit que la cité a désigné Curiace comme champion.",
+     "aide": "Albe a fait un choix parmi ses hommes.",
+     "explication": "Albe a **nommé** Curiace : le devoir civique rompt le lien d’amitié."
+    },
+    {
+     "type": "zone",
+     "document": "duo",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le verbe qui dit la souffrance de Curiace.",
+     "aide": "Il dit qu’il reconnaît encore son ami et que cela lui fait mal.",
+     "explication": "Curiace est **tué** par cette reconnaissance : il est l’humanité déchirée, qui accepte mais souffre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Dans le débat, range chaque argument : pour Horace héros ou pour Horace monstre ?",
+     "categories": [
+      "Horace héros",
+      "Horace monstre"
+     ],
+     "items": [
+      [
+       "Il vainc seul les trois Curiaces par la ruse",
+       0
+      ],
+      [
+       "Le roi Tulle le sauve au nom de l’État",
+       0
+      ],
+      [
+       "Il tue sa sœur Camille",
+       1
+      ],
+      [
+       "Il tue les frères de sa propre épouse Sabine",
+       1
+      ]
+     ],
+     "aide": "Un héros sert la cité ; un monstre brise les liens du sang.",
+     "explication": "Pour le héros : la **ruse** et le **verdict de Tulle**. Pour le monstre : **Camille** et les **frères de Sabine**. La pièce ne tranche pas."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture la pièce permet-elle de défendre ?",
+     "options": [
+      "Elle interroge le prix de la grandeur d’État",
+      "Elle condamne Horace sans la moindre réserve",
+      "Elle célèbre la victoire de Rome sans aucun doute",
+      "Elle montre que le devoir civique n’a aucun prix"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi du conflit entre devoir civique et sentiments.",
+     "explication": "La pièce interroge **le prix de la grandeur d’État** : le devoir est poussé jusqu’à l’insoutenable."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8a9e2ef-305a-52bb-b92c-b404292015db",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois morts dans un salon",
+   "competence": "analyser-document",
+   "situation": "Tu prépares l’oral sur la pièce de Sartre. Identifie les trois morts et le jeu des regards qui les enferme.",
+   "documents": [
+    {
+     "id": "morts",
+     "type": "tableau",
+     "titre": "Les trois morts",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il a fait"
+     ],
+     "lignes": [
+      [
+       "Garcin",
+       "?"
+      ],
+      [
+       "Inès",
+       "Elle a poussé sa maîtresse au suicide"
+      ],
+      [
+       "Estelle",
+       "Elle a tué son enfant et provoqué le suicide de son amant"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "triangle",
+     "type": "chaine",
+     "titre": "Qui attend quoi de qui",
+     "disposition": "cycle",
+     "noeuds": [
+      {
+       "id": "g",
+       "texte": "Garcin"
+      },
+      {
+       "id": "i",
+       "texte": "Inès"
+      },
+      {
+       "id": "e",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "g",
+       "a": "i",
+       "texte": "veut qu’elle le croie courageux"
+      },
+      {
+       "de": "i",
+       "a": "e",
+       "texte": "désire"
+      },
+      {
+       "de": "e",
+       "a": "g",
+       "texte": "désire"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau pour Garcin ?",
+     "options": [
+      "Journaliste pacifiste, fusillé pour désertion",
+      "Employé des postes, mort de maladie",
+      "Mondain, mort dans un accident de voiture",
+      "Soldat décoré, tombé au combat en héros"
+     ],
+     "reponse": 0,
+     "aide": "Son lâche passé est au cœur de la pièce.",
+     "explication": "Garcin est un **journaliste pacifiste fusillé pour désertion**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est le personnage de la case « ? » dans le triangle ?",
+     "options": [
+      "Estelle, la mondaine",
+      "Le garçon d’étage",
+      "L’amant d’Estelle",
+      "La maîtresse d’Inès"
+     ],
+     "reponse": 0,
+     "aide": "Elle désire Garcin, et Inès la désire.",
+     "explication": "La case « ? » est **Estelle** : elle désire Garcin, qui veut le regard d’Inès, qui désire Estelle."
+    },
+    {
+     "type": "zone",
+     "document": "triangle",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le personnage dont Garcin attend un regard de confiance.",
+     "aide": "C’est elle qui doute de son courage.",
+     "explication": "Garcin attend d’**Inès** qu’elle le croie courageux : c’est elle qui ne lui donne pas ce regard."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le décor de la pièce.",
+     "texte": "Le salon n’a ni fenêtre, ni ___, ni sommeil, ni ___.",
+     "reponses": [
+      [
+       "miroir"
+      ],
+      [
+       "bourreau"
+      ]
+     ],
+     "banque": [
+      "miroir",
+      "bourreau",
+      "porte",
+      "lampe",
+      "lit"
+     ],
+     "aide": "On ne peut ni se voir ni être torturé par quelqu’un d’autre que soi-même.",
+     "explication": "Le salon n’a ni fenêtre, ni **miroir**, ni sommeil, ni **bourreau** : chacun est le bourreau des deux autres."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8a9e2ef-305a-52bb-b92c-b404292015db",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une scène à la manière de Sartre",
+   "competence": "analyser-texte",
+   "situation": "Les trois personnages comprennent vite pourquoi ils sont là. Lis un début de scène imaginé pour l’exercice, puis retrouve les idées de la pièce.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une arrivée",
+     "blocs": [
+      {
+       "didascalie": "Un salon clos, sans fenêtre ni miroir. Le garçon d’étage vient d’y conduire une jeune femme, Lise, déjà installée sur le canapé."
+      },
+      {
+       "personnage": "Lise",
+       "replique": "Où sont les [[b|bourreaux]] ? Où sont les grilles, les pinces ?"
+      },
+      {
+       "personnage": "Le garçon",
+       "replique": "Il n’y en a pas, madame. Vous resterez ensemble."
+      },
+      {
+       "personnage": "Lise",
+       "replique": "Ensemble ? Alors c’est cela, l’[[e|enfer]] ?"
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de *Huis clos* de Sartre"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Touche le mot qui désigne ceux que Lise s’attend à trouver dans un enfer ordinaire.",
+     "aide": "Ils manient les grilles et les pinces.",
+     "explication": "Lise attend des **bourreaux** : l’originalité de la pièce est qu’il n’y en a pas, chacun étant le bourreau des autres."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui nomme le lieu où elle comprend qu’elle se trouve.",
+     "aide": "C’est le contraire du paradis.",
+     "explication": "Elle comprend qu’elle est en **enfer** : un enfer sans flammes ni diables."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion de la pièce à son sens.",
+     "paires": [
+      [
+       "Le regard d’autrui",
+       "Il me fige en objet et me juge"
+      ],
+      [
+       "La mauvaise foi",
+       "Se raconter une version flatteuse de sa vie"
+      ],
+      [
+       "Pas d’essence, seulement des actes",
+       "On est la somme de ce que l’on a fait"
+      ],
+      [
+       "Le huis clos",
+       "Un lieu fermé où l’on ne peut échapper aux autres"
+      ]
+     ],
+     "aide": "Chaque notion est à la base de la pensée existentialiste de la pièce.",
+     "explication": "Le **regard** fige, la **mauvaise foi** flatte, les **actes** définissent l’homme, le **huis clos** enferme."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre le déroulement de la pièce.",
+     "items": [
+      "Les trois morts entrent l’un après l’autre",
+      "Ils comprennent qu’ils sont là pour se torturer",
+      "Le triangle de désirs se noue, sans issue",
+      "La porte s’ouvre : personne ne sort",
+      "La pièce se clôt sur « Eh bien, continuons »"
+     ],
+     "aide": "La dernière réplique relance la torture.",
+     "explication": "Ordre : **arrivées**, **prise de conscience**, **triangle sans issue**, **porte ouverte**, **« Eh bien, continuons »** : une fin sans fin."
+    }
+   ]
+  },
+  {
+   "chapitre": "b8a9e2ef-305a-52bb-b92c-b404292015db",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’enfer, c’est les autres",
+   "competence": "argumenter",
+   "situation": "La phrase la plus célèbre de Sartre est souvent mal comprise. Lis un débat, complète les thèses de la pièce, puis range ce qu’elle montre.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "« L’enfer, c’est les autres » : Sartre dit que les autres sont toujours insupportables."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Il a précisé plus tard : c’est quand nos rapports avec eux sont [[f|faussés]] qu’ils deviennent un enfer."
+      },
+      {
+       "qui": "Camille",
+       "texte": "Pourquoi ne pas les éviter, alors ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Parce qu’on a besoin d’eux pour se juger soi-même."
+      }
+     ]
+    },
+    {
+     "id": "theses",
+     "type": "tableau",
+     "titre": "Thèses de la pièce",
+     "colonnes": [
+      "Thèse",
+      "Ce qu’elle implique"
+     ],
+     "lignes": [
+      [
+       "Il n’y a pas d’essence, seulement des actes",
+       "Garcin est lâche parce qu’il a fui, non par nature"
+      ],
+      [
+       "Garcin est mort",
+       "?"
+      ],
+      [
+       "Le regard d’autrui me fige en objet",
+       "D’où la réplique la plus citée du théâtre français"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui dit dans quel cas les autres deviennent un enfer.",
+     "aide": "Sartre parle de rapports qui ne sont pas justes.",
+     "explication": "Les autres deviennent un enfer quand nos rapports avec eux sont **faussés**, et non toujours."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Il ne peut plus rien changer à ses actes",
+      "Il peut encore effacer sa lâcheté par un acte",
+      "Il peut se défaire du regard d’Inès",
+      "Il n’a plus besoin du regard d’autrui"
+     ],
+     "reponse": 0,
+     "aide": "Un mort ne peut plus agir.",
+     "explication": "Garcin est mort : **il ne peut plus rien changer** à ce qu’il a fait, donc sa lâcheté est définitive."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque idée : la pièce le montre ou elle ne le dit pas ?",
+     "categories": [
+      "La pièce le montre",
+      "La pièce ne le dit pas"
+     ],
+     "items": [
+      [
+       "Le regard d’autrui peut me figer en objet",
+       0
+      ],
+      [
+       "On est la somme de ses actes",
+       0
+      ],
+      [
+       "Les autres sont toujours un enfer",
+       1
+      ],
+      [
+       "Garcin est lâche par nature",
+       1
+      ]
+     ],
+     "aide": "Relis le débat : Sartre nuance sa phrase.",
+     "explication": "La pièce montre que **le regard fige** et qu’on est **la somme de ses actes** ; elle ne dit pas que les autres sont **toujours** un enfer, ni que Garcin est lâche **par nature**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation la pièce appuie-t-elle le mieux ?",
+     "options": [
+      "Nous avons besoin du jugement d’autrui, qui peut aussi nous enfermer",
+      "Nous devons fuir toute relation avec les autres pour être libres",
+      "Le jugement d’autrui ne compte jamais pour notre liberté",
+      "Une seule relation parfaite suffit à effacer notre passé"
+     ],
+     "reponse": 0,
+     "aide": "La dernière réplique de Yanis donne la clé.",
+     "explication": "La pièce montre qu’on a **besoin d’autrui pour se juger**, ce qui explique pourquoi il peut nous enfermer quand le rapport est faussé."
+    }
+   ]
+  }
+ ]
+}

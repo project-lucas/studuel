@@ -1,0 +1,4215 @@
+{
+ "niveau": "2de",
+ "matiere": "snt",
+ "exercices": [
+  {
+   "chapitre": "978cc21e-6553-5062-b072-04ba7fd35319",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une photo en cinq paquets",
+   "competence": "lire-tableau",
+   "situation": "Inès envoie une photo à son oncle. Le réseau la découpe en cinq paquets qui partent chacun de leur côté. Le tableau relève le chemin de chaque paquet et l’instant où il arrive.",
+   "documents": [
+    {
+     "id": "paquets",
+     "type": "tableau",
+     "titre": "Le voyage des cinq paquets",
+     "colonnes": [
+      "Paquet",
+      "Chemin emprunté",
+      "Arrivée (ms)"
+     ],
+     "lignes": [
+      [
+       "Paquet 1",
+       "via Lyon",
+       42
+      ],
+      [
+       "Paquet 2",
+       "via Francfort",
+       61
+      ],
+      [
+       "Paquet 3",
+       "via Lyon",
+       44
+      ],
+      [
+       "Paquet 4",
+       "via Francfort",
+       58
+      ],
+      [
+       "Paquet 5",
+       "via Lyon",
+       46
+      ]
+     ],
+     "source": "Relevé inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "paquets",
+     "enonce": "Touche la case du paquet qui est arrivé en dernier.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Cherche la durée la plus grande dans la colonne « Arrivée ».",
+     "explication": "Le **paquet 2** arrive à 61 ms : c’est la valeur la plus grande, donc le dernier arrivé."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chemins différents les paquets ont-ils empruntés ?",
+     "reponse": 2,
+     "aide": "Regarde la colonne « Chemin emprunté » et compte les valeurs différentes.",
+     "explication": "Les paquets passent soit **via Lyon**, soit **via Francfort** : **2 chemins**. Des paquets d’un même message n’empruntent pas forcément le même."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les paquets dans l’ordre où ils arrivent à destination.",
+     "items": [
+      "Paquet 1",
+      "Paquet 3",
+      "Paquet 5",
+      "Paquet 4",
+      "Paquet 2"
+     ],
+     "aide": "Classe les durées de la plus courte (42 ms) à la plus longue.",
+     "explication": "Du plus rapide au plus lent : 42, 44, 46, 58, 61 ms, soit les paquets **1, 3, 5, 4, 2**. Ils arrivent dans le désordre."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le protocole ___ remet les paquets dans l’ordre et redemande ceux qui manquent ; le protocole ___ les achemine grâce aux adresses.",
+     "reponses": [
+      [
+       "TCP"
+      ],
+      [
+       "IP"
+      ]
+     ],
+     "banque": [
+      "TCP",
+      "IP",
+      "DNS",
+      "UDP"
+     ],
+     "aide": "Celui qui répare les erreurs n’est pas celui qui adresse.",
+     "explication": "**TCP** vérifie, remet dans l’ordre et redemande ; **IP** achemine les paquets grâce aux adresses."
+    }
+   ]
+  },
+  {
+   "chapitre": "978cc21e-6553-5062-b072-04ba7fd35319",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le fichier de 4,5 Mo de Rayan",
+   "competence": "calculer",
+   "situation": "Rayan envoie à un ami un fichier de 4 500 000 octets. Le réseau le découpe en paquets, et quelques-uns se perdent en route.",
+   "documents": [
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Le journal du transfert",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Taille du fichier",
+       "4 500 000 octets"
+      ],
+      [
+       "Contenu d’un paquet",
+       "1 500 octets"
+      ],
+      [
+       "Paquets perdus à l’aller",
+       6
+      ]
+     ],
+     "source": "Valeurs choisies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "En combien de paquets le fichier est-il découpé ?",
+     "reponse": 3000,
+     "aide": "Divise la taille du fichier par le contenu d’un paquet.",
+     "explication": "4 500 000 ÷ 1 500 = **3 000 paquets**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "TCP redemande les paquets perdus. Combien de paquets ont été envoyés au total, renvois compris ?",
+     "reponse": 3006,
+     "aide": "Chaque paquet perdu est renvoyé une fois.",
+     "explication": "3 000 paquets + 6 renvois = **3 006 envois**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque tâche à ce qui s’en charge.",
+     "paires": [
+      [
+       "Acheminer chaque paquet grâce à son adresse",
+       "IP"
+      ],
+      [
+       "Vérifier l’arrivée et redemander les paquets manquants",
+       "TCP"
+      ],
+      [
+       "Traduire un nom de site en adresse",
+       "DNS"
+      ]
+     ],
+     "aide": "Une seule de ces trois tâches répare les pertes.",
+     "explication": "**IP** achemine, **TCP** vérifie et redemande, **DNS** traduit un nom en adresse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de la perte des 6 paquets ?",
+     "options": [
+      "Elle est réparée par TCP, le fichier arrive entier",
+      "Elle détruit définitivement le fichier de Rayan",
+      "Elle est réparée par IP, qui garantit l’arrivée",
+      "Elle oblige à renvoyer tout le fichier depuis le début"
+     ],
+     "reponse": 0,
+     "aide": "IP ne garantit pas que les paquets arrivent : qui s’en occupe alors ?",
+     "explication": "**TCP** redemande seulement les paquets manquants ; IP, lui, ne garantit rien."
+    }
+   ]
+  },
+  {
+   "chapitre": "978cc21e-6553-5062-b072-04ba7fd35319",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Quand un routeur tombe en panne",
+   "competence": "analyser-document",
+   "situation": "Léa envoie des paquets vers un serveur à travers quatre routeurs. À la seconde 2, le routeur R2 tombe en panne. Le schéma montre le réseau, le journal les paquets reçus par le serveur.",
+   "documents": [
+    {
+     "id": "reseau",
+     "type": "schema",
+     "titre": "Le réseau de Léa",
+     "largeur": 360,
+     "hauteur": 220,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        58,
+        110
+       ],
+       "a": [
+        105,
+        110
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        110
+       ],
+       "a": [
+        180,
+        55
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        110
+       ],
+       "a": [
+        180,
+        165
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        55
+       ],
+       "a": [
+        255,
+        110
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        165
+       ],
+       "a": [
+        255,
+        110
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        255,
+        110
+       ],
+       "a": [
+        300,
+        110
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 95,
+       "l": 50,
+       "h": 30,
+       "arrondi": 8,
+       "texte": "Léa",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "lea"
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 110,
+       "r": 20,
+       "texte": "R1",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "r1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 55,
+       "r": 20,
+       "texte": "R2",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "r2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 165,
+       "r": 20,
+       "texte": "R3",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "r3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 255,
+       "cy": 110,
+       "r": 20,
+       "texte": "R4",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "r4",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 300,
+       "y": 95,
+       "l": 52,
+       "h": 30,
+       "arrondi": 8,
+       "texte": "Serveur",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "srv"
+      }
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "Les paquets reçus par le serveur",
+     "colonnes": [
+      "Paquet",
+      "Envoyé à",
+      "Route suivie"
+     ],
+     "lignes": [
+      [
+       "P1",
+       "0,5 s",
+       "R1, R2, R4"
+      ],
+      [
+       "P2",
+       "1,0 s",
+       "R1, R3, R4"
+      ],
+      [
+       "P3",
+       "1,8 s",
+       "R1, R2, R4"
+      ],
+      [
+       "P4",
+       "2,4 s",
+       "R1, R3, R4"
+      ],
+      [
+       "P5",
+       "3,0 s",
+       "R1, R3, R4"
+      ],
+      [
+       "P6",
+       "3,6 s",
+       "R1, R3, R4"
+      ]
+     ],
+     "source": "Relevé inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de chemins différents relient R1 à R4 sans repasser deux fois par le même routeur ?",
+     "reponse": 2,
+     "aide": "Un chemin passe par R2, l’autre par… ?",
+     "explication": "On peut aller de R1 à R4 **par R2** ou **par R3** : **2 chemins**."
+    },
+    {
+     "type": "zone",
+     "document": "reseau",
+     "enonce": "R2 est en panne. Touche le routeur par lequel passent désormais les paquets entre R1 et R4.",
+     "reponse": [
+      "r3"
+     ],
+     "aide": "Il reste un seul chemin entre R1 et R4.",
+     "explication": "Sans R2, les paquets passent par **R3** : le réseau contourne la panne."
+    },
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le dernier paquet qui a encore traversé R2.",
+     "reponse": [
+      "r2c0"
+     ],
+     "aide": "La panne a lieu à 2 s : cherche la dernière route avec R2 envoyée avant.",
+     "explication": "Le **paquet P3** (envoyé à 1,8 s) est le dernier à passer par R2 ; ensuite, tout passe par R3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien des six paquets ont traversé R3 ?",
+     "reponse": 4,
+     "aide": "Compte les routes qui contiennent R3 : P2, puis ceux d’après la panne.",
+     "explication": "P2, P4, P5 et P6 passent par R3 : **4 paquets**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui a décidé de détourner les paquets vers R3 ?",
+     "options": [
+      "Les routeurs eux-mêmes, saut après saut, sans chef central",
+      "Une machine centrale qui dirige tout Internet",
+      "Léa, qui a choisi la route de chaque paquet",
+      "Le serveur, qui a imposé son chemin aux routeurs"
+     ],
+     "reponse": 0,
+     "aide": "Internet n’est dirigé par aucune machine centrale.",
+     "explication": "Chaque routeur choisit le **prochain saut** : aucune machine ne dirige Internet, c’est ce qui le rend robuste."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c9d248b-fa2d-5956-885f-076c440901c9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois dates pour raconter Internet",
+   "competence": "se-reperer-temps",
+   "situation": "Pour son exposé de SNT, Karim a placé trois dates sur une frise : la naissance du premier réseau, celle du langage commun, celle du Web.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "D’ARPANET au Web",
+     "debut": 1960,
+     "fin": 1990,
+     "pas": 5,
+     "source": "Dates tirées du cours",
+     "evenements": [
+      {
+       "id": "arpa",
+       "date": 1969,
+       "nom": "ARPANET"
+      },
+      {
+       "id": "tcpip",
+       "date": 1983,
+       "nom": "TCP/IP commun"
+      },
+      {
+       "id": "web",
+       "date": 1989,
+       "nom": "Le Web"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement qui donne naissance à Internet tel qu’on le connaît : tous les réseaux parlent la même langue.",
+     "reponse": [
+      "tcpip"
+     ],
+     "aide": "C’est le moment où TCP/IP devient la règle commune.",
+     "explication": "En **1983**, TCP/IP devient le protocole commun : c’est la naissance d’Internet tel qu’on le connaît."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent ARPANET de TCP/IP devenu commun ?",
+     "reponse": 14,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates.",
+     "explication": "1983 − 1969 = **14 ans**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années après TCP/IP le Web apparaît-il ?",
+     "reponse": 6,
+     "unite": "ans",
+     "aide": "Soustrais 1983 à la date du Web.",
+     "explication": "1989 − 1983 = **6 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que dit la frise sur l’ordre de ces inventions ?",
+     "options": [
+      "Internet est apparu avant le Web",
+      "Le Web est apparu avant Internet",
+      "Internet et le Web sont nés la même année",
+      "ARPANET est apparu après le Web"
+     ],
+     "reponse": 0,
+     "aide": "Compare 1969, 1983 et 1989.",
+     "explication": "Le réseau (1969, puis 1983) précède le Web (**1989**) : le Web est une application d’Internet."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c9d248b-fa2d-5956-885f-076c440901c9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le Web, c’est Internet ?",
+   "competence": "analyser-document",
+   "situation": "Sofia et Malik se demandent si Internet et le Web, c’est la même chose. Malik s’appuie sur les quatre couches du modèle TCP/IP.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "source": "Échange écrit pour l’exercice",
+     "participants": [
+      {
+       "nom": "Sofia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malik",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sofia",
+       "texte": "Ma page ne s’affiche pas. Internet est en panne ?"
+      },
+      {
+       "qui": "Malik",
+       "texte": "Pas sûr : je reçois mes courriels. Le Web n’est qu’une application d’Internet."
+      },
+      {
+       "qui": "Sofia",
+       "texte": "Donc plusieurs applications utilisent le même réseau ?"
+      }
+     ]
+    },
+    {
+     "id": "couches",
+     "type": "chaine",
+     "disposition": "colonne",
+     "titre": "Les quatre couches du modèle TCP/IP",
+     "noeuds": [
+      {
+       "id": "app",
+       "texte": "Application",
+       "emoji": "🖥️"
+      },
+      {
+       "id": "tra",
+       "texte": "Transport",
+       "emoji": "📦"
+      },
+      {
+       "id": "int",
+       "texte": "Internet",
+       "emoji": "🌍"
+      },
+      {
+       "id": "acc",
+       "texte": "Accès réseau",
+       "emoji": "📡"
+      }
+     ],
+     "liens": [
+      {
+       "de": "app",
+       "a": "tra"
+      },
+      {
+       "de": "tra",
+       "a": "int"
+      },
+      {
+       "de": "int",
+       "a": "acc"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "couches",
+     "enonce": "Touche la couche qui s’occupe de l’adressage, avec le protocole IP.",
+     "reponse": [
+      "int"
+     ],
+     "aide": "Son nom est celui du réseau tout entier.",
+     "explication": "La couche **Internet** s’occupe de l’adressage avec le protocole IP."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces usages : relèvent-ils du Web ou d’une autre application d’Internet ?",
+     "categories": [
+      "Le Web",
+      "Une autre application d’Internet"
+     ],
+     "items": [
+      [
+       "Consulter un site avec un navigateur",
+       0
+      ],
+      [
+       "Envoyer un courriel",
+       1
+      ],
+      [
+       "Discuter par messagerie instantanée",
+       1
+      ],
+      [
+       "Suivre un lien d’une page à une autre",
+       0
+      ]
+     ],
+     "aide": "Le courriel et la messagerie sont indépendants du Web.",
+     "explication": "Pages et liens relèvent du **Web** ; courriel et messagerie sont d’**autres applications** d’Internet."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque protocole ou support à sa couche.",
+     "paires": [
+      [
+       "HTTP",
+       "Application"
+      ],
+      [
+       "TCP",
+       "Transport"
+      ],
+      [
+       "IP",
+       "Internet"
+      ],
+      [
+       "Wifi ou fibre",
+       "Accès réseau"
+      ]
+     ],
+     "aide": "HTTP est ce que voit l’utilisateur ; le wifi est le support physique.",
+     "explication": "**HTTP** : Application ; **TCP** : Transport ; **IP** : Internet ; **wifi ou fibre** : Accès réseau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Les courriels de Malik arrivent. Que peut-on en déduire ?",
+     "options": [
+      "Internet marche, la panne est côté Web",
+      "Internet est en panne, donc le Web aussi",
+      "Le courriel est une partie du Web",
+      "Le Web et Internet sont une seule chose"
+     ],
+     "reponse": 0,
+     "aide": "Le courriel utilise Internet sans passer par le Web.",
+     "explication": "Le courriel passe : **Internet fonctionne**. Le problème se situe côté Web ou côté site."
+    }
+   ]
+  },
+  {
+   "chapitre": "8c9d248b-fa2d-5956-885f-076c440901c9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une page web traverse les quatre couches",
+   "competence": "analyser-document",
+   "situation": "Karim reprend son exposé : il veut montrer ce qui se passe quand son navigateur demande une page, et situer cette histoire dans le temps.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Les trois dates de l’exposé",
+     "debut": 1960,
+     "fin": 1990,
+     "pas": 5,
+     "source": "Dates tirées du cours",
+     "evenements": [
+      {
+       "id": "arpa",
+       "date": 1969,
+       "nom": "ARPANET : 4 sites"
+      },
+      {
+       "id": "tcpip",
+       "date": 1983,
+       "nom": "TCP/IP commun"
+      },
+      {
+       "id": "web",
+       "date": 1989,
+       "nom": "Le Web"
+      }
+     ]
+    },
+    {
+     "id": "couches",
+     "type": "tableau",
+     "titre": "Une demande de page, couche par couche",
+     "colonnes": [
+      "Couche",
+      "Ce qui se passe",
+      "Protocole"
+     ],
+     "lignes": [
+      [
+       "Application",
+       "Le navigateur formule la demande de page",
+       "HTTP"
+      ],
+      [
+       "Transport",
+       "La demande est découpée et numérotée",
+       "TCP"
+      ],
+      [
+       "Internet",
+       "Chaque paquet reçoit une adresse",
+       "IP"
+      ],
+      [
+       "Accès réseau",
+       "Les bits partent sur le support",
+       "Wifi ou fibre"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de sites ARPANET relie-t-il à sa naissance ?",
+     "reponse": 4,
+     "aide": "Lis le nom de l’événement sur la frise.",
+     "explication": "ARPANET relie **quatre sites** américains en 1969."
+    },
+    {
+     "type": "zone",
+     "document": "couches",
+     "enonce": "Touche le protocole qui donne une adresse à chaque paquet.",
+     "reponse": [
+      "r2c2"
+     ],
+     "aide": "Cherche la ligne où l’on parle d’adresse.",
+     "explication": "**IP**, sur la couche Internet, donne une adresse à chaque paquet."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes dans l’ordre où la demande les traverse à l’envoi.",
+     "items": [
+      "Application",
+      "Transport",
+      "Internet",
+      "Accès réseau"
+     ],
+     "aide": "La demande part de ce que voit l’utilisateur et descend vers le support physique.",
+     "explication": "La demande descend : **Application → Transport → Internet → Accès réseau**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le Web est une ___ d’Internet, inventée en ___ par Tim Berners-Lee au ___.",
+     "reponses": [
+      [
+       "application"
+      ],
+      [
+       "1989"
+      ],
+      [
+       "CERN"
+      ]
+     ],
+     "banque": [
+      "application",
+      "infrastructure",
+      "1983",
+      "1989",
+      "CERN",
+      "ARPANET"
+     ],
+     "aide": "Regarde la dernière date de la frise.",
+     "explication": "Le Web est une **application** d’Internet, inventée en **1989** par Tim Berners-Lee au **CERN**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi 1983 est-elle une date clé pour Internet ?",
+     "options": [
+      "Tous les réseaux adoptent la même langue, TCP/IP",
+      "Le Web est inventé cette année-là",
+      "ARPANET relie ses quatre premiers sites",
+      "Le courrier électronique remplace le courrier"
+     ],
+     "reponse": 0,
+     "aide": "Cette date est liée à une famille de protocoles.",
+     "explication": "En 1983, **TCP/IP** devient la règle commune : des millions de réseaux peuvent se parler."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bc27b20-cbe9-50b1-aa90-d4411955da9e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les adresses de la maison de Lina",
+   "competence": "lire-tableau",
+   "situation": "Lina regarde les adresses IP des appareils de sa maison. Sa box est connectée à Internet.",
+   "documents": [
+    {
+     "id": "adresses",
+     "type": "tableau",
+     "titre": "Les appareils de la maison",
+     "colonnes": [
+      "Appareil",
+      "Adresse IP"
+     ],
+     "lignes": [
+      [
+       "Box, côté Internet",
+       "203.0.113.42"
+      ],
+      [
+       "Box, côté maison",
+       "192.168.1.1"
+      ],
+      [
+       "Téléphone de Lina",
+       "192.168.1.12"
+      ],
+      [
+       "Ordinateur",
+       "192.168.1.15"
+      ],
+      [
+       "Télévision",
+       "192.168.1.20"
+      ]
+     ],
+     "source": "Adresses de démonstration"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "adresses",
+     "enonce": "Touche l’adresse publique de la maison, celle qui circule sur Internet.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Les adresses privées commencent par 192.168.",
+     "explication": "L’adresse **203.0.113.42** est la publique, portée par la box : les autres commencent par 192.168."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’adresses de ce tableau sont des adresses privées ?",
+     "reponse": 4,
+     "aide": "Compte celles qui commencent par 192.168.",
+     "explication": "Quatre adresses commencent par 192.168 : **4 adresses privées**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une adresse IPv4 comme 192.168.1.12 compte quatre nombres de 8 bits. Sur combien de bits s’écrit-elle ?",
+     "reponse": 32,
+     "unite": "bits",
+     "aide": "Multiplie le nombre de nombres par leur taille.",
+     "explication": "4 × 8 = **32 bits**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "La box attribue les adresses privées avec le ___ et les traduit vers l’adresse publique avec le ___.",
+     "reponses": [
+      [
+       "DHCP"
+      ],
+      [
+       "NAT"
+      ]
+     ],
+     "banque": [
+      "DHCP",
+      "NAT",
+      "DNS",
+      "TCP"
+     ],
+     "aide": "Un mécanisme attribue, l’autre traduit.",
+     "explication": "Le **DHCP** attribue automatiquement les adresses privées ; le **NAT** les traduit vers l’adresse publique."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bc27b20-cbe9-50b1-aa90-d4411955da9e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Qui est sur le même réseau que le PC de Karim ?",
+   "competence": "raisonner",
+   "situation": "Karim relie cinq machines. Le masque de sous-réseau 255.255.255.0 indique que les trois premiers nombres de l’adresse désignent le réseau, le dernier désigne la machine.",
+   "documents": [
+    {
+     "id": "param",
+     "type": "tableau",
+     "titre": "Les paramètres du PC de Karim",
+     "colonnes": [
+      "Paramètre",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Adresse IP",
+       "192.168.1.15"
+      ],
+      [
+       "Masque de sous-réseau",
+       "255.255.255.0"
+      ]
+     ],
+     "source": "Capture de démonstration"
+    },
+    {
+     "id": "machines",
+     "type": "tableau",
+     "titre": "Les machines à tester",
+     "colonnes": [
+      "Machine",
+      "Adresse IP"
+     ],
+     "lignes": [
+      [
+       "PC de Karim",
+       "192.168.1.15"
+      ],
+      [
+       "Imprimante",
+       "192.168.1.40"
+      ],
+      [
+       "Téléphone",
+       "192.168.2.15"
+      ],
+      [
+       "Télévision",
+       "192.168.1.200"
+      ],
+      [
+       "Console",
+       "10.0.0.5"
+      ]
+     ],
+     "source": "Adresses de démonstration"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "machines",
+     "enonce": "Touche les deux machines qui sont sur le même réseau que le PC de Karim.",
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "aide": "Compare les trois premiers nombres : 192.168.1.",
+     "explication": "L’**imprimante** (192.168.1.40) et la **télévision** (192.168.1.200) partagent la partie réseau 192.168.1."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec ce masque, combien de bits sont réservés à la partie hôte de l’adresse ?",
+     "reponse": 8,
+     "unite": "bits",
+     "aide": "Le dernier nombre de l’adresse tient sur combien de bits ?",
+     "explication": "Le dernier nombre est la partie hôte, un nombre de 0 à 255 codé sur **8 bits**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de valeurs différentes ce dernier nombre peut-il prendre, de 0 à 255 inclus ?",
+     "reponse": 256,
+     "aide": "Compte de 0 à 255 : 0 compte aussi.",
+     "explication": "De 0 à 255 inclus, il y a **256** valeurs."
+    },
+    {
+     "type": "association",
+     "enonce": "Dans l’adresse 192.168.1.15, associe chaque morceau à ce qu’il désigne.",
+     "paires": [
+      [
+       "192.168.1",
+       "La partie réseau, commune à tout le réseau local"
+      ],
+      [
+       "15",
+       "La partie hôte, propre à chaque machine"
+      ]
+     ],
+     "aide": "Le masque dit où passe la frontière.",
+     "explication": "Les trois premiers nombres forment la **partie réseau** ; le dernier est la **partie hôte**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bc27b20-cbe9-50b1-aa90-d4411955da9e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Du nom d’un site jusqu’à la maison de Théo",
+   "competence": "observer-schema",
+   "situation": "Le téléphone et l’ordinateur de Théo demandent la même page au site exemple.fr. Le schéma montre la maison et le serveur ; le journal du DNS donne l’adresse du site.",
+   "documents": [
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "La maison de Théo et le site",
+     "largeur": 360,
+     "hauteur": 220,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        60
+       ],
+       "a": [
+        145,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        118,
+        160
+       ],
+       "a": [
+        145,
+        120
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        215,
+        110
+       ],
+       "a": [
+        250,
+        110
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 40,
+       "l": 110,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Téléphone",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "tel",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 63,
+       "y": 95,
+       "texte": "192.168.1.12",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 8,
+       "y": 140,
+       "l": 110,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Ordinateur",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "pc",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 63,
+       "y": 195,
+       "texte": "192.168.1.15",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 145,
+       "y": 85,
+       "l": 70,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Box",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "box",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 150,
+       "texte": "203.0.113.42",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 250,
+       "y": 85,
+       "l": 100,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Serveur",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "srv",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 300,
+       "y": 150,
+       "texte": "198.51.100.7",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "dns",
+     "type": "tableau",
+     "titre": "Le journal du DNS",
+     "colonnes": [
+      "Nom demandé",
+      "Adresse IP renvoyée"
+     ],
+     "lignes": [
+      [
+       "exemple.fr",
+       "198.51.100.7"
+      ]
+     ],
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "schema",
+     "enonce": "Touche l’équipement qui traduit les adresses privées vers l’adresse publique.",
+     "reponse": [
+      "box"
+     ],
+     "aide": "C’est lui qui porte la seule adresse publique de la maison.",
+     "explication": "La **box** réalise le **NAT** : elle traduit les adresses privées vers l’unique adresse publique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’adresses publiques le serveur voit-il pour les deux appareils de Théo ?",
+     "reponse": 1,
+     "aide": "Une seule adresse publique par foyer.",
+     "explication": "Le serveur ne voit que l’adresse publique de la box : **1 seule adresse**."
+    },
+    {
+     "type": "zone",
+     "document": "dns",
+     "enonce": "Touche l’adresse à laquelle l’ordinateur enverra sa requête.",
+     "reponse": [
+      "r0c1"
+     ],
+     "aide": "Le DNS traduit le nom en adresse IP.",
+     "explication": "Le DNS répond **198.51.100.7** : c’est l’adresse du serveur."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les cinq étapes.",
+     "items": [
+      "L’ordinateur demande l’adresse du nom au DNS",
+      "Le DNS répond avec l’adresse IP du site",
+      "L’ordinateur envoie sa requête à cette adresse",
+      "La box remplace l’adresse privée par l’adresse publique",
+      "Le serveur répond à l’adresse publique de la box"
+     ],
+     "aide": "Il faut connaître l’adresse avant d’envoyer la requête, et la box traduit avant que le serveur ne reçoive.",
+     "explication": "Résolution DNS, envoi de la requête, **NAT** par la box, réponse du serveur à l’adresse publique."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f5472f3-59d3-513c-9cc9-3c8eacab1707",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Zoé ouvre la page de son club photo",
+   "competence": "observer-schema",
+   "situation": "Zoé tape l’adresse du site de son club photo dans son navigateur. Le schéma montre l’échange entre son ordinateur et le serveur du club.",
+   "documents": [
+    {
+     "id": "echange",
+     "type": "schema",
+     "titre": "Une page demandée, une page reçue",
+     "largeur": 360,
+     "hauteur": 190,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 10,
+       "y": 55,
+       "l": 110,
+       "h": 60,
+       "arrondi": 8,
+       "texte": "Navigateur",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "nav",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 65,
+       "y": 135,
+       "texte": "de Zoé",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "rect",
+       "x": 240,
+       "y": 55,
+       "l": 110,
+       "h": 60,
+       "arrondi": 8,
+       "texte": "Serveur",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "srv",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 295,
+       "y": 135,
+       "texte": "du club photo",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        124,
+        75
+       ],
+       "a": [
+        236,
+        75
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 66,
+       "texte": "1. demande",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        98
+       ],
+       "a": [
+        124,
+        98
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 116,
+       "texte": "2. page HTML",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "echange",
+     "enonce": "Touche le client : la machine qui demande la page.",
+     "reponse": [
+      "nav"
+     ],
+     "aide": "Le client, c’est celui qui commence l’échange.",
+     "explication": "Le **navigateur** est le **client** : il demande la page. Le serveur la renvoie."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les étapes dans l’ordre.",
+     "items": [
+      "Zoé tape l’adresse du site",
+      "Le navigateur envoie sa demande au serveur",
+      "Le serveur renvoie la page HTML",
+      "Le navigateur affiche la page"
+     ],
+     "aide": "Une demande précède toujours sa réponse.",
+     "explication": "Adresse tapée, demande envoyée, page renvoyée, page affichée."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chacune des trois inventions de Tim Berners-Lee à ce qu’elle apporte.",
+     "paires": [
+      [
+       "HTML",
+       "Un langage pour décrire une page"
+      ],
+      [
+       "URL",
+       "Une adresse unique pour chaque ressource"
+      ],
+      [
+       "HTTP",
+       "Un protocole pour transférer la ressource"
+      ]
+     ],
+     "aide": "HTTP est un protocole : il transporte.",
+     "explication": "**HTML** décrit, **URL** adresse, **HTTP** transfère."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Avec HTTP, le contenu de la page circule ___ ; HTTPS ajoute le ___ des échanges.",
+     "reponses": [
+      [
+       "en clair"
+      ],
+      [
+       "chiffrement"
+      ]
+     ],
+     "banque": [
+      "en clair",
+      "chiffrement",
+      "en double",
+      "compression"
+     ],
+     "aide": "Le S de HTTPS signifie sécurisé.",
+     "explication": "Sans le S, le contenu circule **en clair** et peut être lu par un intermédiaire ; **HTTPS** ajoute le **chiffrement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f5472f3-59d3-513c-9cc9-3c8eacab1707",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La page du club photo, ligne à ligne",
+   "competence": "analyser-document",
+   "situation": "Zoé modifie la page de son club photo. Elle a un fichier HTML pour le contenu et un fichier CSS pour l’apparence.",
+   "documents": [
+    {
+     "id": "html",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le fichier page.html",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "<h1>Club photo du lycée</h1>",
+      "<p>Sortie samedi à 14 h.</p>",
+      "<a href=\"inscription.html\">Inscription</a>",
+      "<img src=\"sortie.jpg\">",
+      "<a href=\"plan.html\">Plan</a>"
+     ]
+    },
+    {
+     "id": "css",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le fichier style.css",
+     "auteur": "Code écrit pour l’exercice",
+     "blocs": [
+      "h1 { color: purple; }",
+      "p { font-size: 18px; }"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de liens la page contient-elle ?",
+     "reponse": 2,
+     "aide": "Un lien s’écrit avec la balise a.",
+     "explication": "Il y a deux balises « a » : **2 liens** (Inscription et Plan)."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel attribut de la balise a contient l’adresse visée par un lien ?",
+     "reponse": [
+      "href"
+     ],
+     "placeholder": "Un attribut",
+     "aide": "Regarde ce qui précède le signe égal, dans une balise a.",
+     "explication": "L’attribut **href** contient l’adresse de la page visée."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque élément : HTML (structure) ou CSS (présentation) ?",
+     "categories": [
+      "HTML",
+      "CSS"
+     ],
+     "items": [
+      [
+       "Un titre de page",
+       0
+      ],
+      [
+       "La couleur du titre",
+       1
+      ],
+      [
+       "Un lien vers une autre page",
+       0
+      ],
+      [
+       "La taille du texte",
+       1
+      ],
+      [
+       "Une image insérée",
+       0
+      ]
+     ],
+     "aide": "Le HTML décrit ce que contient la page, le CSS comment elle se présente.",
+     "explication": "Le **HTML** décrit la structure (titre, lien, image) ; le **CSS** décrit la présentation (couleur, taille)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Zoé veut changer la couleur des titres sans toucher au contenu. Que modifie-t-elle ?",
+     "options": [
+      "Seulement le fichier CSS",
+      "Chaque titre dans le fichier HTML",
+      "L’adresse des liens du fichier HTML",
+      "Le serveur qui héberge la page"
+     ],
+     "reponse": 0,
+     "aide": "Séparer structure et présentation sert à cela.",
+     "explication": "Séparer HTML et CSS permet de changer l’apparence **sans toucher à une ligne du contenu**."
+    }
+   ]
+  },
+  {
+   "chapitre": "9f5472f3-59d3-513c-9cc9-3c8eacab1707",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi le club arrive en tête des résultats",
+   "competence": "analyser-document",
+   "situation": "Un moteur de recherche parcourt le Web et classe cinq pages. Le tableau dit qui cite qui, la chaîne résume ce que fait le moteur avant de classer.",
+   "documents": [
+    {
+     "id": "liens",
+     "type": "tableau",
+     "titre": "Qui cite qui ?",
+     "colonnes": [
+      "Page",
+      "Cite les pages"
+     ],
+     "lignes": [
+      [
+       "Blog photo",
+       "Club, Mairie"
+      ],
+      [
+       "Club",
+       "Mairie"
+      ],
+      [
+       "Mairie",
+       "Club"
+      ],
+      [
+       "Forum",
+       "Club, Mairie, Blog photo"
+      ],
+      [
+       "Boutique",
+       "Club"
+      ]
+     ],
+     "source": "Mini-Web inventé pour l’exercice"
+    },
+    {
+     "id": "moteur",
+     "type": "chaine",
+     "disposition": "ligne",
+     "titre": "Le travail d’un moteur de recherche",
+     "noeuds": [
+      {
+       "id": "crawl",
+       "texte": "Des robots parcourent le Web de lien en lien",
+       "emoji": "🤖"
+      },
+      {
+       "id": "index",
+       "texte": "?",
+       "emoji": "🗂️"
+      },
+      {
+       "id": "rang",
+       "texte": "Un algorithme ordonne les résultats",
+       "emoji": "🔢"
+      }
+     ],
+     "liens": [
+      {
+       "de": "crawl",
+       "a": "index"
+      },
+      {
+       "de": "index",
+       "a": "rang"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "liens",
+     "enonce": "Touche la page qui reçoit le plus de liens venant des autres pages.",
+     "reponse": [
+      "r1c0"
+     ],
+     "aide": "Compte, pour chaque page, combien de lignes la citent.",
+     "explication": "La page **Club** est citée par le Blog, la Mairie, le Forum et la Boutique : **4 liens entrants**, le maximum."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de liens entrants la page Mairie reçoit-elle ?",
+     "reponse": 3,
+     "aide": "Cherche le mot « Mairie » dans la colonne de droite.",
+     "explication": "Le Blog, le Club et le Forum citent la Mairie : **3 liens**."
+    },
+    {
+     "type": "texte",
+     "document": "moteur",
+     "enonce": "Quel est le nom de l’étape manquante, où le contenu est stocké et découpé en mots-clés ?",
+     "reponse": [
+      "indexation",
+      "l’indexation",
+      "indexer"
+     ],
+     "placeholder": "Un mot",
+     "aide": "Le mot est formé à partir d’« index ».",
+     "explication": "Le moteur **parcourt** (crawling), **indexe** (indexation), puis **classe**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La page Club est en tête des résultats. Que peut-on en conclure ?",
+     "options": [
+      "C’est le résultat d’un algorithme, pas un fait absolu",
+      "C’est la meilleure page du Web, sans discussion",
+      "Le classement est toujours neutre",
+      "Les autres pages n’existent pas pour le moteur"
+     ],
+     "reponse": 0,
+     "aide": "Le classement n’est jamais neutre.",
+     "explication": "Le classement est le produit d’un **algorithme** et d’un modèle économique : la première page est un choix, pas un fait."
+    }
+   ]
+  },
+  {
+   "chapitre": "6697f4c7-1143-5d65-8a31-e631929ea2f5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le petit réseau de Léa",
+   "competence": "observer-schema",
+   "situation": "Léa et ses amis forment un petit réseau social : chaque personne est un sommet, chaque amitié une arête.",
+   "documents": [
+    {
+     "id": "graphe",
+     "type": "schema",
+     "titre": "Les amitiés de six personnes",
+     "largeur": 360,
+     "hauteur": 230,
+     "source": "Réseau inventé pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        135,
+        115
+       ],
+       "a": [
+        55,
+        50
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        135,
+        115
+       ],
+       "a": [
+        55,
+        180
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        135,
+        115
+       ],
+       "a": [
+        220,
+        115
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        55,
+        50
+       ],
+       "a": [
+        55,
+        180
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        220,
+        115
+       ],
+       "a": [
+        305,
+        55
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        305,
+        55
+       ],
+       "a": [
+        305,
+        175
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 50,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Tom",
+       "id": "tom",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 180,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Inès",
+       "id": "ines",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 135,
+       "cy": 115,
+       "r": 22,
+       "teinte": "ambre",
+       "motif": "clair",
+       "texte": "Léa",
+       "id": "lea",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 220,
+       "cy": 115,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Sam",
+       "id": "sam",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 305,
+       "cy": 55,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Nour",
+       "id": "nour",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 305,
+       "cy": 175,
+       "r": 22,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Hugo",
+       "id": "hugo",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graphe",
+     "enonce": "Touche le sommet qui a le plus de relations : celui de plus grand degré.",
+     "reponse": [
+      "lea"
+     ],
+     "aide": "Compte les traits qui partent de chaque personne.",
+     "explication": "**Léa** a 3 relations (Tom, Inès, Sam) : c’est le plus grand degré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’arêtes (relations) compte ce réseau ?",
+     "reponse": 6,
+     "aide": "Compte chaque trait une seule fois.",
+     "explication": "Il y a **6 arêtes** : Léa-Tom, Léa-Inès, Léa-Sam, Tom-Inès, Sam-Nour, Nour-Hugo."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le degré de Hugo ?",
+     "reponse": 1,
+     "aide": "Le degré est le nombre de relations d’un sommet.",
+     "explication": "Hugo n’est relié qu’à Nour : **degré 1**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de relations faut-il suivre, au minimum, pour aller de Léa à Hugo ?",
+     "reponse": 3,
+     "unite": "relations",
+     "aide": "Passe par Sam puis Nour.",
+     "explication": "Léa → Sam → Nour → Hugo : **3 arêtes**, la distance minimale."
+    }
+   ]
+  },
+  {
+   "chapitre": "6697f4c7-1143-5d65-8a31-e631929ea2f5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Ce que l’appli de Maya sait d’elle",
+   "competence": "lire-tableau",
+   "situation": "Maya, 15 ans, ouvre les paramètres de confidentialité de son réseau social gratuit. Un tableau montre ce que l’appli collecte et à qui elle le transmet.",
+   "documents": [
+    {
+     "id": "donnees",
+     "type": "tableau",
+     "titre": "Les données collectées par l’appli",
+     "colonnes": [
+      "Donnée",
+      "Pourquoi elle est collectée",
+      "Partagée avec des annonceurs"
+     ],
+     "lignes": [
+      [
+       "Âge",
+       "Choisir les publicités",
+       "Oui"
+      ],
+      [
+       "Position GPS",
+       "Proposer des lieux proches",
+       "Oui"
+      ],
+      [
+       "Photos publiées",
+       "Afficher le profil",
+       "Non"
+      ],
+      [
+       "Temps passé sur l’appli",
+       "Mesurer l’intérêt",
+       "Oui"
+      ],
+      [
+       "Mot de passe",
+       "Se connecter",
+       "Non"
+      ]
+     ],
+     "source": "Paramètres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "donnees",
+     "enonce": "Touche les trois données qui sont partagées avec des annonceurs.",
+     "reponse": [
+      "r0c0",
+      "r1c0",
+      "r3c0"
+     ],
+     "multiple": true,
+     "aide": "Regarde la colonne de droite.",
+     "explication": "L’**âge**, la **position GPS** et le **temps passé** sont partagés : la dernière colonne dit « Oui »."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de données sur cinq ne sont pas partagées avec les annonceurs ?",
+     "reponse": 2,
+     "aide": "Compte les « Non ».",
+     "explication": "**2 données** : les photos publiées et le mot de passe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment ce service gratuit gagne-t-il de l’argent ?",
+     "options": [
+      "Par la publicité ciblée sur ses utilisateurs",
+      "Par l’abonnement payant de chaque utilisateur",
+      "Par la vente des photos aux journaux",
+      "Par une subvention de l’État"
+     ],
+     "reponse": 0,
+     "aide": "Plus le service connaît l’utilisateur, plus l’espace publicitaire se vend cher.",
+     "explication": "Le service vend de la **publicité ciblée** : son produit est l’attention de ses utilisateurs."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque risque au texte qui l’encadre.",
+     "paires": [
+      [
+       "Données personnelles",
+       "Le RGPD (2018)"
+      ],
+      [
+       "Modération et transparence des plateformes",
+       "Le DSA (2023)"
+      ],
+      [
+       "Cyberharcèlement",
+       "Un délit aggravé au code pénal"
+      ]
+     ],
+     "aide": "Un règlement européen de 2018 protège les données.",
+     "explication": "Le **RGPD** (2018) protège les données ; le **DSA** (2023) encadre la modération et la transparence ; le cyberharcèlement est un **délit** du code pénal."
+    }
+   ]
+  },
+  {
+   "chapitre": "6697f4c7-1143-5d65-8a31-e631929ea2f5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux groupes d’amis et un fil d’actualité",
+   "competence": "analyser-document",
+   "situation": "Huit élèves forment un réseau. Un graphique donne les réactions moyennes que recueillent quatre types de publications sur la plateforme qu’ils utilisent.",
+   "documents": [
+    {
+     "id": "graphe",
+     "type": "schema",
+     "titre": "Le réseau de huit élèves",
+     "largeur": 360,
+     "hauteur": 240,
+     "source": "Réseau inventé pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        50
+       ],
+       "a": [
+        45,
+        180
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        50
+       ],
+       "a": [
+        105,
+        115
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        45,
+        180
+       ],
+       "a": [
+        105,
+        115
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        105,
+        115
+       ],
+       "a": [
+        170,
+        115
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        170,
+        115
+       ],
+       "a": [
+        235,
+        115
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        115
+       ],
+       "a": [
+        310,
+        45
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        235,
+        115
+       ],
+       "a": [
+        310,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        310,
+        45
+       ],
+       "a": [
+        310,
+        150
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        310,
+        150
+       ],
+       "a": [
+        235,
+        205
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "cercle",
+       "cx": 45,
+       "cy": 50,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ana",
+       "id": "ana",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 45,
+       "cy": 180,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Ben",
+       "id": "ben",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 105,
+       "cy": 115,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Cléo",
+       "id": "cleo",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 170,
+       "cy": 115,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Dan",
+       "id": "dan",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 115,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Eli",
+       "id": "eli",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 310,
+       "cy": 45,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Fay",
+       "id": "fay",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 310,
+       "cy": 150,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Gus",
+       "id": "gus",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 235,
+       "cy": 205,
+       "r": 20,
+       "teinte": "violet",
+       "motif": "clair",
+       "texte": "Hao",
+       "id": "hao",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "reactions",
+     "type": "graphique",
+     "forme": "barres-h",
+     "titre": "Réactions moyennes par publication",
+     "categories": [
+      "Photo de vacances",
+      "Astuce de révision",
+      "Sketch humoristique",
+      "Débat polémique"
+     ],
+     "series": [
+      {
+       "nom": "Réactions",
+       "valeurs": [
+        120,
+        180,
+        340,
+        610
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Réactions",
+      "min": 0,
+      "max": 700,
+      "pas": 100
+     },
+     "valeurs": false,
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "graphe",
+     "enonce": "Touche les trois élèves qui ont chacun trois relations.",
+     "reponse": [
+      "cleo",
+      "eli",
+      "gus"
+     ],
+     "multiple": true,
+     "aide": "Compte les traits autour de chaque élève.",
+     "explication": "**Cléo** (Ana, Ben, Dan), **Eli** (Dan, Fay, Gus) et **Gus** (Eli, Fay, Hao) ont chacun un degré de 3."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le diamètre du graphe, c’est-à-dire la plus longue des distances minimales entre deux élèves ?",
+     "reponse": 5,
+     "unite": "relations",
+     "aide": "Cherche les deux élèves les plus éloignés : un de chaque groupe.",
+     "explication": "Ana (ou Ben) et Hao sont à **5 relations** l’un de l’autre : Ana, Cléo, Dan, Eli, Gus, Hao."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Dan supprime son compte. Combien de groupes séparés le réseau compte-t-il alors ?",
+     "reponse": 2,
+     "aide": "Dan est le seul lien entre deux ensembles d’élèves.",
+     "explication": "Sans Dan, plus aucun chemin ne relie **Ana, Ben, Cléo** à **Eli, Fay, Gus, Hao** : **2 groupes**."
+    },
+    {
+     "type": "choix",
+     "enonce": "L’algorithme de recommandation est optimisé sur l’engagement. Quelle publication sera la plus mise en avant ?",
+     "options": [
+      "Le débat polémique",
+      "La photo de vacances",
+      "L’astuce de révision",
+      "Le sketch humoristique"
+     ],
+     "reponse": 0,
+     "aide": "Cherche la barre la plus longue.",
+     "explication": "Le **débat polémique** recueille 610 réactions en moyenne : optimisé sur l’engagement, l’algorithme le met en avant."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Les algorithmes de recommandation favorisent ce qui fait ___, d’où les bulles de ___.",
+     "reponses": [
+      [
+       "réagir"
+      ],
+      [
+       "filtre"
+      ]
+     ],
+     "banque": [
+      "réagir",
+      "filtre",
+      "dormir",
+      "vérité"
+     ],
+     "aide": "On optimise l’engagement, pas la véracité.",
+     "explication": "Ils favorisent ce qui fait **réagir** ; cela produit des **bulles de filtre**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c162a9f-ddab-5e7f-b7cc-6229a458f4c0",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le routeur de Lille hésite",
+   "competence": "lire-tableau",
+   "situation": "Un routeur de Lille reçoit des paquets à destination de plusieurs villes. Il consulte sa table de routage pour savoir par quelle sortie les envoyer.",
+   "documents": [
+    {
+     "id": "table",
+     "type": "tableau",
+     "titre": "La table de routage du routeur de Lille",
+     "colonnes": [
+      "Destination",
+      "Envoyer vers"
+     ],
+     "lignes": [
+      [
+       "Paris",
+       "Sortie A"
+      ],
+      [
+       "Lyon",
+       "Sortie B"
+      ],
+      [
+       "Bordeaux",
+       "Sortie B"
+      ],
+      [
+       "Strasbourg",
+       "Sortie C"
+      ]
+     ],
+     "source": "Table inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "table",
+     "enonce": "Touche la sortie par laquelle partira un paquet à destination de Lyon.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Lyon ».",
+     "explication": "Un paquet pour Lyon part par la **sortie B**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de destinations de la table sont envoyées par la sortie B ?",
+     "reponse": 2,
+     "aide": "Compte les lignes qui disent « Sortie B ».",
+     "explication": "Lyon et Bordeaux : **2 destinations**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que connaît un routeur pour acheminer un paquet ?",
+     "options": [
+      "Seulement le prochain saut vers la destination",
+      "Le chemin complet jusqu’à la destination",
+      "La liste de tous les routeurs d’Internet",
+      "La position de l’expéditeur sur une carte"
+     ],
+     "reponse": 0,
+     "aide": "La table associe une destination à une direction.",
+     "explication": "Un routeur ne connaît que le **prochain saut** : il envoie le paquet vers la bonne direction."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque terme à son rôle.",
+     "paires": [
+      [
+       "Routeur",
+       "Choisit vers quel voisin envoyer chaque paquet"
+      ],
+      [
+       "Table de routage",
+       "Associe des destinations à des directions"
+      ],
+      [
+       "traceroute",
+       "Visualise les routeurs traversés"
+      ],
+      [
+       "BGP",
+       "Protocole de routage entre les grands opérateurs"
+      ]
+     ],
+     "aide": "La table est le carnet du routeur.",
+     "explication": "Le **routeur** décide, sa **table** associe destinations et directions, **traceroute** montre le trajet, **BGP** relie les grands opérateurs."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c162a9f-ddab-5e7f-b7cc-6229a458f4c0",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un message de Lille à Lyon passe par Francfort",
+   "competence": "analyser-document",
+   "situation": "Léo lance la commande traceroute pour suivre le trajet d’un message de Lille vers Lyon. Le résultat est étonnant.",
+   "documents": [
+    {
+     "id": "trace",
+     "type": "tableau",
+     "titre": "Le résultat de traceroute",
+     "colonnes": [
+      "Saut",
+      "Routeur traversé",
+      "Délai cumulé (ms)"
+     ],
+     "lignes": [
+      [
+       1,
+       "Box de la maison",
+       1
+      ],
+      [
+       2,
+       "Routeur de Lille",
+       4
+      ],
+      [
+       3,
+       "Routeur de Paris",
+       11
+      ],
+      [
+       4,
+       "Routeur de Francfort",
+       27
+      ],
+      [
+       5,
+       "Routeur de Lyon",
+       38
+      ]
+     ],
+     "source": "Relevé inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien de routeurs le message traverse-t-il avant d’arriver ?",
+     "reponse": 5,
+     "aide": "Compte les lignes du tableau.",
+     "explication": "Le message franchit **5 sauts**."
+    },
+    {
+     "type": "zone",
+     "document": "trace",
+     "enonce": "Touche le routeur qui est situé hors de France.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Une ville allemande apparaît dans le trajet.",
+     "explication": "Le routeur de **Francfort**, en Allemagne : le trajet Lille-Lyon passe par l’étranger."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel délai ajoute le passage par le routeur de Francfort, par rapport à celui de Paris ?",
+     "reponse": 16,
+     "unite": "ms",
+     "aide": "Soustrais le délai cumulé du saut 3 à celui du saut 4.",
+     "explication": "27 − 11 = **16 ms** : c’est le saut le plus long du trajet."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque critère de coût à ce qu’il mesure.",
+     "paires": [
+      [
+       "Nombre de sauts",
+       "Combien de routeurs sont traversés"
+      ],
+      [
+       "Débit",
+       "La capacité du lien"
+      ],
+      [
+       "Latence",
+       "Le délai"
+      ]
+     ],
+     "aide": "La latence se mesure en millisecondes.",
+     "explication": "Le **nombre de sauts** compte les routeurs, le **débit** la capacité, la **latence** le délai."
+    }
+   ]
+  },
+  {
+   "chapitre": "3c162a9f-ddab-5e7f-b7cc-6229a458f4c0",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux paquets perdus pendant un envoi",
+   "competence": "analyser-document",
+   "situation": "Nora envoie un fichier en 8 paquets. Deux d’entre eux se perdent. Elle se demande ce qui change selon que le service utilise TCP ou UDP.",
+   "documents": [
+    {
+     "id": "recu",
+     "type": "tableau",
+     "titre": "Les accusés de réception",
+     "colonnes": [
+      "Paquet",
+      "Arrivé ?"
+     ],
+     "lignes": [
+      [
+       "Paquet 1",
+       "oui"
+      ],
+      [
+       "Paquet 2",
+       "oui"
+      ],
+      [
+       "Paquet 3",
+       "oui"
+      ],
+      [
+       "Paquet 4",
+       "non"
+      ],
+      [
+       "Paquet 5",
+       "oui"
+      ],
+      [
+       "Paquet 6",
+       "non"
+      ],
+      [
+       "Paquet 7",
+       "oui"
+      ],
+      [
+       "Paquet 8",
+       "oui"
+      ]
+     ],
+     "source": "Journal inventé pour l’exercice"
+    },
+    {
+     "id": "besoins",
+     "type": "tableau",
+     "titre": "Les besoins de quatre services",
+     "colonnes": [
+      "Service",
+      "Ce qui compte"
+     ],
+     "lignes": [
+      [
+       "Appel vidéo de Nora",
+       "Voir l’image à l’instant même"
+      ],
+      [
+       "Envoi d’un devoir par courriel",
+       "Recevoir le fichier complet"
+      ],
+      [
+       "Jeu en ligne",
+       "Réagir sans retard"
+      ],
+      [
+       "Téléchargement d’un logiciel",
+       "Aucun octet ne doit manquer"
+      ]
+     ],
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recu",
+     "enonce": "Touche les deux paquets que TCP va redemander.",
+     "reponse": [
+      "r3c0",
+      "r5c0"
+     ],
+     "multiple": true,
+     "aide": "Cherche les « non ».",
+     "explication": "Les **paquets 4 et 6** ne sont pas arrivés : TCP les redemande à l’expéditeur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de paquets ont été envoyés au total une fois les deux manquants renvoyés ?",
+     "reponse": 10,
+     "aide": "8 paquets, plus les renvois.",
+     "explication": "8 + 2 renvois = **10 envois**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Quel protocole convient à chaque service ?",
+     "categories": [
+      "TCP",
+      "UDP"
+     ],
+     "items": [
+      [
+       "Appel vidéo de Nora",
+       1
+      ],
+      [
+       "Envoi d’un devoir par courriel",
+       0
+      ],
+      [
+       "Jeu en ligne",
+       1
+      ],
+      [
+       "Téléchargement d’un logiciel",
+       0
+      ]
+     ],
+     "aide": "Une image perdue vaut mieux qu’une image en retard.",
+     "explication": "**TCP** pour le courriel et le téléchargement (rien ne doit manquer) ; **UDP** pour l’appel vidéo et le jeu (le retard est pire que la perte)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi TCP numérote-t-il les paquets ?",
+     "options": [
+      "Pour pouvoir les remettre dans l’ordre",
+      "Pour choisir la route de chaque paquet",
+      "Pour traduire les noms en adresses",
+      "Pour chiffrer le contenu du fichier"
+     ],
+     "reponse": 0,
+     "aide": "Les paquets arrivent parfois dans le désordre.",
+     "explication": "Les numéros permettent de **remettre les paquets dans l’ordre** et de repérer ceux qui manquent."
+    }
+   ]
+  },
+  {
+   "chapitre": "970faf30-16a6-5f8d-a271-e2757120f527",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La bibliothèque du lycée en réseau",
+   "competence": "observer-schema",
+   "situation": "Le lycée héberge ses cours sur un serveur. Quatre élèves s’y connectent depuis leur ordinateur.",
+   "documents": [
+    {
+     "id": "etoile",
+     "type": "schema",
+     "titre": "Un serveur et quatre clients",
+     "largeur": 360,
+     "hauteur": 220,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        110
+       ],
+       "a": [
+        55,
+        45
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        110
+       ],
+       "a": [
+        305,
+        45
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        110
+       ],
+       "a": [
+        55,
+        175
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        110
+       ],
+       "a": [
+        305,
+        175
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 130,
+       "y": 90,
+       "l": 100,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Serveur",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "srv",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 45,
+       "r": 26,
+       "texte": "C1",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "c1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 305,
+       "cy": 45,
+       "r": 26,
+       "texte": "C2",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "c2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 55,
+       "cy": 175,
+       "r": 26,
+       "texte": "C3",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "c3",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 305,
+       "cy": 175,
+       "r": 26,
+       "texte": "C4",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "c4",
+       "zone": true
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "etoile",
+     "enonce": "Touche la machine qui attend les requêtes et y répond.",
+     "reponse": [
+      "srv"
+     ],
+     "aide": "Elle est au centre : tous les autres lui parlent.",
+     "explication": "Le **serveur** attend des requêtes et y répond ; les autres machines sont des clients."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de clients sont reliés au serveur ?",
+     "reponse": 4,
+     "aide": "Compte les cercles.",
+     "explication": "Les cercles C1 à C4 : **4 clients**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Le serveur tombe en panne. Que se passe-t-il pour les clients ?",
+     "options": [
+      "Aucun ne peut plus obtenir les cours",
+      "Ils s’échangent les cours entre eux",
+      "Seul C1 est privé de cours",
+      "Le serveur est remplacé par un client"
+     ],
+     "reponse": 0,
+     "aide": "Le contenu est centralisé sur le serveur.",
+     "explication": "Le serveur est un **point unique de défaillance** : sans lui, plus personne n’obtient le contenu."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque faiblesse d’un serveur à sa parade.",
+     "paires": [
+      [
+       "La panne",
+       "La réplication sur plusieurs machines"
+      ],
+      [
+       "La saturation par un flot de requêtes",
+       "Les fermes de serveurs"
+      ],
+      [
+       "L’éloignement géographique",
+       "Les réseaux de distribution de contenu"
+      ]
+     ],
+     "aide": "Répliquer, c’est copier le service sur plusieurs machines.",
+     "explication": "La **réplication** protège de la panne, les **fermes de serveurs** de la saturation, les **réseaux de distribution** de l’éloignement."
+    }
+   ]
+  },
+  {
+   "chapitre": "970faf30-16a6-5f8d-a271-e2757120f527",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Cent élèves téléchargent la même mise à jour",
+   "competence": "lire-tableau",
+   "situation": "Un éditeur diffuse une mise à jour de 600 Mo. Son serveur a un débit total de 100 Mo/s, partagé à parts égales entre les clients connectés. Le tableau compare le temps de téléchargement avec un serveur seul et avec le pair-à-pair.",
+   "documents": [
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Temps de téléchargement de 600 Mo",
+     "colonnes": [
+      "Modèle",
+      "1 client",
+      "10 clients",
+      "100 clients"
+     ],
+     "lignes": [
+      [
+       "Client-serveur",
+       "6 s",
+       "60 s",
+       "600 s"
+      ],
+      [
+       "Pair-à-pair",
+       "6 s",
+       "4 s",
+       "2 s"
+      ]
+     ],
+     "source": "Valeurs simplifiées, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Avec 100 clients connectés, quel débit chaque client reçoit-il du serveur ?",
+     "reponse": 1,
+     "unite": "Mo/s",
+     "aide": "Divise le débit du serveur par le nombre de clients.",
+     "explication": "100 Mo/s ÷ 100 clients = **1 Mo/s** par client."
+    },
+    {
+     "type": "zone",
+     "document": "temps",
+     "enonce": "Touche le temps de téléchargement en pair-à-pair avec 100 clients.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Ligne « Pair-à-pair », colonne « 100 clients ».",
+     "explication": "En pair-à-pair, avec 100 clients, le téléchargement dure **2 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Avec 100 clients, combien de fois le pair-à-pair est-il plus rapide que le client-serveur ?",
+     "reponse": 300,
+     "unite": "fois",
+     "aide": "Divise 600 s par 2 s.",
+     "explication": "600 ÷ 2 = **300 fois plus rapide**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le tableau quand le nombre de participants augmente ?",
+     "options": [
+      "Le client-serveur ralentit, le pair-à-pair accélère",
+      "Les deux modèles ralentissent de la même façon",
+      "Le client-serveur accélère, le pair-à-pair ralentit",
+      "Les deux modèles gardent le même temps"
+     ],
+     "reponse": 0,
+     "aide": "Regarde l’évolution de chaque ligne de gauche à droite.",
+     "explication": "Le serveur partage son débit et **ralentit** ; chaque pair devient aussi serveur et le réseau **accélère**."
+    }
+   ]
+  },
+  {
+   "chapitre": "970faf30-16a6-5f8d-a271-e2757120f527",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un annuaire, trois pairs et une mise à jour",
+   "competence": "analyser-document",
+   "situation": "Une plateforme de jeux distribue une mise à jour de 100 Mo avec un modèle mixte : un annuaire central sait qui possède le fichier, et les transferts se font entre joueurs.",
+   "documents": [
+    {
+     "id": "modele",
+     "type": "schema",
+     "titre": "Le modèle mixte",
+     "largeur": 360,
+     "hauteur": 230,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        60
+       ],
+       "a": [
+        60,
+        160
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        60
+       ],
+       "a": [
+        180,
+        170
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        60
+       ],
+       "a": [
+        300,
+        160
+       ],
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        160
+       ],
+       "a": [
+        180,
+        170
+       ],
+       "style": "pointilles",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        170
+       ],
+       "a": [
+        300,
+        160
+       ],
+       "style": "pointilles",
+       "teinte": "violet",
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 35,
+       "l": 120,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Annuaire",
+       "teinte": "ambre",
+       "motif": "clair",
+       "id": "annu",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 60,
+       "cy": 160,
+       "r": 30,
+       "texte": "Anaïs",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "p1",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 180,
+       "cy": 175,
+       "r": 30,
+       "texte": "Bilal",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "p2",
+       "zone": true
+      },
+      {
+       "forme": "cercle",
+       "cx": 300,
+       "cy": 160,
+       "r": 30,
+       "texte": "Chloé",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "p3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 218,
+       "texte": "Traits pleins : annuaire · pointillés : transferts",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "journal",
+     "type": "tableau",
+     "titre": "D’où viennent les 100 Mo ?",
+     "colonnes": [
+      "Source",
+      "Mo fournis"
+     ],
+     "lignes": [
+      [
+       "Anaïs",
+       45
+      ],
+      [
+       "Bilal",
+       30
+      ],
+      [
+       "Chloé",
+       25
+      ],
+      [
+       "Annuaire (serveur central)",
+       0
+      ]
+     ],
+     "source": "Journal inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "modele",
+     "enonce": "Touche l’élément qui sait quels joueurs possèdent le fichier.",
+     "reponse": [
+      "annu"
+     ],
+     "aide": "C’est le serveur central : il tient l’annuaire.",
+     "explication": "L’**annuaire**, côté serveur central, indique qui possède le fichier ; les pairs s’échangent ensuite les données."
+    },
+    {
+     "type": "zone",
+     "document": "journal",
+     "enonce": "Touche le pair qui a fourni la plus grande part de la mise à jour.",
+     "reponse": [
+      "r0c0"
+     ],
+     "aide": "Cherche le plus grand nombre de Mo.",
+     "explication": "**Anaïs** a fourni 45 Mo, plus que les autres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle part de la mise à jour (en %) a été fournie par Anaïs ?",
+     "reponse": 45,
+     "unite": "%",
+     "aide": "Le fichier fait 100 Mo.",
+     "explication": "45 Mo sur 100 Mo : **45 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi ce modèle est-il dit « mixte » ?",
+     "options": [
+      "Il combine un serveur central et des échanges entre pairs",
+      "Il utilise deux serveurs identiques en parallèle",
+      "Il fonctionne seulement sans serveur central",
+      "Il envoie les données à la fois en TCP et en UDP"
+     ],
+     "reponse": 0,
+     "aide": "Regarde ce que fait chaque élément du schéma.",
+     "explication": "Il associe un **serveur central** (annuaire) et du **pair-à-pair** pour le transfert lourd."
+    }
+   ]
+  },
+  {
+   "chapitre": "816dc421-1b2a-5de9-851d-0f8418d9aa8c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le fichier des livres du CDI",
+   "competence": "lire-tableau",
+   "situation": "La documentaliste du lycée range ses livres dans une table : une ligne par livre, une colonne par information.",
+   "documents": [
+    {
+     "id": "livres",
+     "type": "tableau",
+     "titre": "Les livres du CDI",
+     "colonnes": [
+      "Titre",
+      "Auteur",
+      "Année",
+      "Pages",
+      "Disponible"
+     ],
+     "lignes": [
+      [
+       "La nuit des lucioles",
+       "Mina Roche",
+       2019,
+       312,
+       "oui"
+      ],
+      [
+       "Mission Mars",
+       "Paul Verdier",
+       2021,
+       184,
+       "non"
+      ],
+      [
+       "Le dernier relais",
+       "Ida Morel",
+       2016,
+       256,
+       "oui"
+      ],
+      [
+       "Code rouge",
+       "Paul Verdier",
+       2022,
+       208,
+       "oui"
+      ],
+      [
+       "Cartes secrètes",
+       "Léo Garnier",
+       2018,
+       144,
+       "non"
+      ]
+     ],
+     "source": "Catalogue inventé pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Combien d’enregistrements (livres décrits) la table contient-elle ?",
+     "reponse": 5,
+     "aide": "Un enregistrement correspond à une ligne.",
+     "explication": "Chaque ligne décrit un livre : **5 enregistrements**."
+    },
+    {
+     "type": "zone",
+     "document": "livres",
+     "enonce": "Touche l’année de parution du livre « Mission Mars ».",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Repère la ligne du livre, puis la colonne « Année ».",
+     "explication": "« Mission Mars » est paru en **2021**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque attribut au type de ses valeurs.",
+     "paires": [
+      [
+       "Titre",
+       "Chaîne de caractères"
+      ],
+      [
+       "Pages",
+       "Entier"
+      ],
+      [
+       "Disponible",
+       "Booléen (oui ou non)"
+      ]
+     ],
+     "aide": "Une chaîne est du texte, un entier est un nombre sans virgule.",
+     "explication": "Le titre est une **chaîne**, le nombre de pages un **entier**, la disponibilité un **booléen**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle opération est possible sur la colonne « Pages » mais pas sur la colonne « Titre » ?",
+     "options": [
+      "Calculer une moyenne",
+      "Trier par ordre croissant",
+      "Compter les valeurs différentes",
+      "Chercher une valeur précise"
+     ],
+     "reponse": 0,
+     "aide": "On ne fait pas la moyenne d’une chaîne.",
+     "explication": "Le **type** autorise ou interdit un traitement : on peut moyenner des entiers, pas des chaînes."
+    }
+   ]
+  },
+  {
+   "chapitre": "816dc421-1b2a-5de9-851d-0f8418d9aa8c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les notes d’une classe en CSV et en JSON",
+   "competence": "analyser-document",
+   "situation": "Un professeur exporte les notes de six élèves de 2de au format CSV, puis en JSON. Il veut filtrer, trier et calculer une moyenne.",
+   "documents": [
+    {
+     "id": "csv",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Le fichier notes.csv",
+     "auteur": "Données inventées pour l’exercice",
+     "blocs": [
+      "nom,classe,note",
+      "Aya,2de3,14",
+      "Ben,2de1,9",
+      "Chloé,2de3,17",
+      "Dan,2de2,12",
+      "Eva,2de3,8",
+      "Gab,2de1,15"
+     ]
+    },
+    {
+     "id": "json",
+     "type": "texte",
+     "genre": "consigne",
+     "titre": "Les deux premiers élèves en JSON",
+     "auteur": "Données inventées pour l’exercice",
+     "blocs": [
+      "[",
+      "  {\"nom\": \"Aya\", \"classe\": \"2de3\", \"note\": 14},",
+      "  {\"nom\": \"Ben\", \"classe\": \"2de1\", \"note\": 9}",
+      "]"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "On filtre les élèves de la classe 2de3. Combien de lignes restent ?",
+     "reponse": 3,
+     "aide": "Garde seulement les lignes dont la classe est 2de3.",
+     "explication": "Aya, Chloé et Eva sont en 2de3 : **3 lignes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la moyenne des notes de la classe 2de3 ?",
+     "reponse": 13,
+     "aide": "Additionne les trois notes, puis divise par 3.",
+     "explication": "(14 + 17 + 8) ÷ 3 = 39 ÷ 3 = **13**. Agréger, c’est résumer par une moyenne."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Trie les six élèves du plus haut au plus bas selon la note.",
+     "items": [
+      "Chloé",
+      "Gab",
+      "Aya",
+      "Dan",
+      "Ben",
+      "Eva"
+     ],
+     "aide": "Les notes vont de 17 à 8.",
+     "explication": "Notes : 17, 15, 14, 12, 9, 8 : **Chloé, Gab, Aya, Dan, Ben, Eva**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le JSON que le CSV ne montre pas ?",
+     "options": [
+      "Le type de chaque valeur",
+      "Le nombre d’élèves de la classe",
+      "La moyenne de chaque élève",
+      "La date de chaque évaluation"
+     ],
+     "reponse": 0,
+     "aide": "Regarde les guillemets autour des valeurs.",
+     "explication": "JSON garde les **types** (la note n’a pas de guillemets, c’est un nombre) ; le CSV n’en garde aucun."
+    }
+   ]
+  },
+  {
+   "chapitre": "816dc421-1b2a-5de9-851d-0f8418d9aa8c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Qui fait quel sport au lycée ?",
+   "competence": "analyser-document",
+   "situation": "Le lycée tient deux tables : les élèves, et les licences sportives. Pour savoir qui fait quel sport, il faut les fusionner.",
+   "documents": [
+    {
+     "id": "eleves",
+     "type": "tableau",
+     "titre": "Table des élèves",
+     "colonnes": [
+      "id",
+      "nom",
+      "classe"
+     ],
+     "lignes": [
+      [
+       1,
+       "Aya",
+       "2de3"
+      ],
+      [
+       2,
+       "Ben",
+       "2de1"
+      ],
+      [
+       3,
+       "Chloé",
+       "2de3"
+      ],
+      [
+       4,
+       "Dan",
+       "2de2"
+      ]
+     ],
+     "source": "Table inventée pour l’exercice"
+    },
+    {
+     "id": "licences",
+     "type": "tableau",
+     "titre": "Table des licences",
+     "colonnes": [
+      "id",
+      "sport"
+     ],
+     "lignes": [
+      [
+       1,
+       "handball"
+      ],
+      [
+       3,
+       "handball"
+      ],
+      [
+       4,
+       "judo"
+      ],
+      [
+       5,
+       "tennis"
+      ]
+     ],
+     "source": "Table inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Quel attribut les deux tables ont-elles en commun pour pouvoir être fusionnées ?",
+     "reponse": [
+      "id",
+      "identifiant",
+      "l’id"
+     ],
+     "placeholder": "Un attribut",
+     "aide": "Regarde les en-têtes de colonnes des deux tables.",
+     "explication": "La **jointure** se fait sur l’attribut commun : **id**."
+    },
+    {
+     "type": "zone",
+     "document": "licences",
+     "enonce": "Touche l’identifiant de la licence qui ne correspond à aucun élève.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Cherche un numéro absent de la table des élèves.",
+     "explication": "L’identifiant **5** n’existe pas dans la table des élèves : cette ligne ne se fusionne avec rien."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de lignes la jointure produit-elle ?",
+     "reponse": 3,
+     "aide": "Garde seulement les identifiants présents dans les deux tables.",
+     "explication": "Les identifiants 1, 3 et 4 existent dans les deux tables : **3 lignes**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Après la jointure, combien d’élèves de 2de3 font du handball ?",
+     "reponse": 2,
+     "aide": "Filtre sur la classe, puis sur le sport.",
+     "explication": "Aya et Chloé : **2 élèves**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe ces énoncés : donnée, information ou connaissance ?",
+     "categories": [
+      "Donnée",
+      "Information",
+      "Connaissance"
+     ],
+     "items": [
+      [
+       "17",
+       0
+      ],
+      [
+       "Note de maths de Chloé : 17 sur 20",
+       1
+      ],
+      [
+       "Chloé maîtrise le programme de maths",
+       2
+      ]
+     ],
+     "aide": "La donnée est brute, l’information ajoute le contexte, la connaissance ajoute l’interprétation.",
+     "explication": "**17** est une donnée ; avec son contexte, c’est une **information** ; en tirer un jugement, c’est une **connaissance**."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f1b9c6f-dc13-51e4-a936-cbcf62419874",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois noms derrière le lien hypertexte",
+   "competence": "se-reperer-temps",
+   "situation": "Un journal du lycée raconte l’histoire de l’hypertexte. Trois dates, trois personnes : Vannevar Bush, Ted Nelson et Tim Berners-Lee.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De la machine imaginaire au Web",
+     "debut": 1940,
+     "fin": 1990,
+     "pas": 10,
+     "source": "Dates tirées du cours",
+     "evenements": [
+      {
+       "id": "bush",
+       "date": 1945,
+       "nom": "Memex de Bush"
+      },
+      {
+       "id": "nelson",
+       "date": 1965,
+       "nom": "Mot « hypertexte »"
+      },
+      {
+       "id": "web",
+       "date": 1989,
+       "nom": "Le Web du CERN"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "enonce": "Touche l’événement où le mot « hypertexte » est inventé.",
+     "reponse": [
+      "nelson"
+     ],
+     "aide": "Ted Nelson l’invente.",
+     "explication": "Ted Nelson invente le mot **hypertexte** en **1965**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le mot « hypertexte » du Web ?",
+     "reponse": 24,
+     "unite": "ans",
+     "aide": "Soustrais 1965 à 1989.",
+     "explication": "1989 − 1965 = **24 ans**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personne à son apport.",
+     "paires": [
+      [
+       "Vannevar Bush",
+       "Le Memex, machine reliant des documents"
+      ],
+      [
+       "Ted Nelson",
+       "Le mot « hypertexte »"
+      ],
+      [
+       "Tim Berners-Lee",
+       "Le Web, au CERN"
+      ]
+     ],
+     "aide": "Suis l’ordre des dates de la frise.",
+     "explication": "**Bush** imagine le Memex (1945), **Nelson** invente le mot (1965), **Berners-Lee** crée le Web (1989)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qu’est-ce qui distingue un lien hypertexte d’un renvoi de bas de page ?",
+     "options": [
+      "Il porte une adresse ouvrable d’un clic",
+      "Il est toujours écrit en bleu",
+      "Il ne renvoie qu’à la même page",
+      "Il ne marche qu’avec un moteur de recherche"
+     ],
+     "reponse": 0,
+     "aide": "Le lien est une adresse exécutable.",
+     "explication": "Un lien hypertexte est une **adresse exécutable** : un clic suffit pour atteindre le document visé."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f1b9c6f-dc13-51e4-a936-cbcf62419874",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Décortiquer l’adresse de la sortie photo",
+   "competence": "analyser-document",
+   "situation": "Un élève copie l’adresse d’une page du club photo : https://photo.exemple.fr/sorties/rallye.html?classe=2de3. Le panneau la découpe morceau par morceau.",
+   "documents": [
+    {
+     "id": "url",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "Adresse du club photo",
+     "sousTitre": "https://photo.exemple.fr/sorties/rallye.html?classe=2de3",
+     "emoji": "🔗",
+     "lignes": [
+      {
+       "texte": "https",
+       "id": "proto"
+      },
+      {
+       "texte": "photo",
+       "id": "sd"
+      },
+      {
+       "texte": "exemple",
+       "id": "dom"
+      },
+      {
+       "texte": "fr",
+       "id": "ext"
+      },
+      {
+       "texte": "/sorties/rallye.html",
+       "id": "chem"
+      },
+      {
+       "texte": "?classe=2de3",
+       "id": "par"
+      }
+     ],
+     "pied": "Morceaux de l’adresse, dans le désordre de la lecture",
+     "source": "Adresse inventée pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "url",
+     "enonce": "Touche le morceau qui transmet des données à la page.",
+     "reponse": [
+      "par"
+     ],
+     "aide": "Il suit un point d’interrogation.",
+     "explication": "Après le point d’interrogation viennent les **paramètres** : ici classe=2de3."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Lis le nom de domaine de droite à gauche : range ses morceaux dans l’ordre de lecture.",
+     "items": [
+      "fr",
+      "exemple",
+      "photo"
+     ],
+     "aide": "On commence par l’extension.",
+     "explication": "Un nom de domaine se lit **de droite à gauche** : extension (fr), domaine (exemple), sous-domaine (photo)."
+    },
+    {
+     "type": "texte",
+     "enonce": "Quel protocole cette adresse utilise-t-elle ?",
+     "reponse": [
+      "https"
+     ],
+     "placeholder": "Un protocole",
+     "aide": "C’est le premier morceau de l’adresse.",
+     "explication": "Le protocole est **https** : HTTP avec chiffrement."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de morceaux, séparés par des points, le nom de domaine complet contient-il ?",
+     "reponse": 3,
+     "aide": "Compte photo, exemple et fr.",
+     "explication": "photo.exemple.fr : **3 morceaux** (sous-domaine, domaine, extension)."
+    }
+   ]
+  },
+  {
+   "chapitre": "8f1b9c6f-dc13-51e4-a936-cbcf62419874",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un mini-Web de cinq pages",
+   "competence": "analyser-document",
+   "situation": "Cinq pages d’un site de révisions se citent entre elles. Le schéma montre les liens (une flèche part de la page qui cite vers la page citée) ; le tableau donne les visites de la semaine.",
+   "documents": [
+    {
+     "id": "web",
+     "type": "schema",
+     "titre": "Qui cite qui ?",
+     "largeur": 380,
+     "hauteur": 220,
+     "source": "Mini-Web inventé pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        116,
+        81
+       ],
+       "a": [
+        144,
+        94
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        81
+       ],
+       "a": [
+        70,
+        149
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        236,
+        94
+       ],
+       "a": [
+        264,
+        81
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        116,
+        149
+       ],
+       "a": [
+        144,
+        136
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        264,
+        149
+       ],
+       "a": [
+        236,
+        136
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        264,
+        60
+       ],
+       "a": [
+        116,
+        60
+       ],
+       "fleche": "fin",
+       "teinte": "gris",
+       "epaisseur": 2
+      },
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 43,
+       "l": 84,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Accueil",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "accueil",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 28,
+       "y": 153,
+       "l": 84,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Forum",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "forum",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 148,
+       "y": 98,
+       "l": 84,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Cours",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "cours",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 268,
+       "y": 43,
+       "l": 84,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Exos",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "exos",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 268,
+       "y": 153,
+       "l": 84,
+       "h": 34,
+       "arrondi": 8,
+       "texte": "Blog",
+       "teinte": "violet",
+       "motif": "clair",
+       "id": "blog",
+       "zone": true
+      }
+     ]
+    },
+    {
+     "id": "visites",
+     "type": "tableau",
+     "titre": "Les visites de la semaine",
+     "colonnes": [
+      "Page",
+      "Visites"
+     ],
+     "lignes": [
+      [
+       "Accueil",
+       40
+      ],
+      [
+       "Cours",
+       210
+      ],
+      [
+       "Exos",
+       95
+      ],
+      [
+       "Forum",
+       60
+      ],
+      [
+       "Blog",
+       8
+      ]
+     ],
+     "source": "Chiffres inventés pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "web",
+     "enonce": "Touche la page qui reçoit le plus de liens entrants.",
+     "reponse": [
+      "cours"
+     ],
+     "aide": "Compte les flèches qui arrivent sur chaque page.",
+     "explication": "**Cours** reçoit 3 flèches (Accueil, Forum, Blog) : c’est la page la plus citée."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de clics faut-il, au minimum, pour aller du Blog à l’Accueil en suivant les liens ?",
+     "reponse": 3,
+     "unite": "clics",
+     "aide": "Suis les flèches : le Blog n’a qu’une seule sortie.",
+     "explication": "Blog → Cours → Exos → Accueil : **3 clics**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel total de visites reçoivent les deux pages citées par l’Accueil ?",
+     "reponse": 270,
+     "unite": "visites",
+     "aide": "Repère les deux flèches qui partent de l’Accueil, puis cherche leurs visites.",
+     "explication": "L’Accueil cite Cours (210) et Forum (60) : 210 + 60 = **270 visites**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le Web forme un immense ___ de pages reliées ; chaque lien est une ___ que l’on peut exécuter d’un clic.",
+     "reponses": [
+      [
+       "graphe"
+      ],
+      [
+       "adresse"
+      ]
+     ],
+     "banque": [
+      "graphe",
+      "adresse",
+      "tableau",
+      "image"
+     ],
+     "aide": "Pages = sommets, liens = arêtes.",
+     "explication": "Le Web est un **graphe** de pages ; un lien est une **adresse** exécutable."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la structure en liens aide-t-elle un moteur de recherche ?",
+     "options": [
+      "Les liens entrants permettent d’estimer l’importance d’une page",
+      "Les liens sortants rendent une page plus rapide",
+      "Une page sans lien est automatiquement la meilleure",
+      "Les liens remplacent le besoin d’indexer les pages"
+     ],
+     "reponse": 0,
+     "aide": "Pense au PageRank.",
+     "explication": "Les **liens entrants** servent à mesurer la popularité d’une page : sans hypertexte, pas de PageRank."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec59583c-2859-5492-9bfa-be68f903ff7b",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Comment ton téléphone sait où il est",
+   "competence": "observer-schema",
+   "situation": "Ton téléphone affiche ta position sur une carte. Le schéma montre le récepteur GPS et les satellites dont il reçoit les signaux.",
+   "documents": [
+    {
+     "id": "gps",
+     "type": "schema",
+     "titre": "Un récepteur et trois satellites",
+     "largeur": 360,
+     "hauteur": 240,
+     "source": "Schéma écrit pour l’exercice",
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        60,
+        70
+       ],
+       "a": [
+        165,
+        165
+       ],
+       "style": "pointilles",
+       "teinte": "violet",
+       "epaisseur": 2,
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        70
+       ],
+       "a": [
+        180,
+        160
+       ],
+       "style": "pointilles",
+       "teinte": "violet",
+       "epaisseur": 2,
+       "fleche": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        300,
+        70
+       ],
+       "a": [
+        195,
+        165
+       ],
+       "style": "pointilles",
+       "teinte": "violet",
+       "epaisseur": 2,
+       "fleche": "fin"
+      },
+      {
+       "forme": "emoji",
+       "x": 60,
+       "y": 45,
+       "emoji": "🛰️",
+       "taille": 36,
+       "id": "s1",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 180,
+       "y": 45,
+       "emoji": "🛰️",
+       "taille": 36,
+       "id": "s2",
+       "zone": true
+      },
+      {
+       "forme": "emoji",
+       "x": 300,
+       "y": 45,
+       "emoji": "🛰️",
+       "taille": 36,
+       "id": "s3",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 120,
+       "y": 170,
+       "l": 120,
+       "h": 40,
+       "arrondi": 8,
+       "texte": "Récepteur",
+       "teinte": "turquoise",
+       "motif": "clair",
+       "id": "rec",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 180,
+       "y": 228,
+       "texte": "Les pointillés sont les signaux reçus",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gps",
+     "enonce": "Touche l’appareil qui calcule sa position.",
+     "reponse": [
+      "rec"
+     ],
+     "aide": "Il reçoit des signaux : il n’en envoie pas.",
+     "explication": "Le **récepteur** calcule sa position ; les satellites émettent l’heure exacte et leur position."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de satellites le schéma montre-t-il ?",
+     "reponse": 3,
+     "aide": "Compte les symboles en haut.",
+     "explication": "Le schéma montre **3 satellites**, le minimum pour déterminer une position."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de satellites faut-il au minimum pour une position GPS fiable ?",
+     "reponse": 4,
+     "aide": "Il en faut un de plus que le schéma, pour corriger l’horloge.",
+     "explication": "Trois satellites déterminent la position, le **quatrième** corrige l’horloge du récepteur : **4** au total."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase.",
+     "texte": "Le récepteur calcule sa distance à chaque satellite grâce au ___ de trajet du signal : c’est la ___.",
+     "reponses": [
+      [
+       "temps"
+      ],
+      [
+       "trilatération"
+      ]
+     ],
+     "banque": [
+      "temps",
+      "trilatération",
+      "poids",
+      "résolution"
+     ],
+     "aide": "Le signal voyage à vitesse connue.",
+     "explication": "La distance se déduit du **temps** de trajet : on appelle cela la **trilatération**."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec59583c-2859-5492-9bfa-be68f903ff7b",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Combien pèse une photo de 12 millions de pixels ?",
+   "competence": "calculer",
+   "situation": "Yanis prend une photo en 4000 × 3000 pixels. Il veut savoir combien d’octets elle occupe avant toute compression, et comment est codée la couleur d’un pixel.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "tableau",
+     "titre": "Fiche technique de la photo",
+     "colonnes": [
+      "Mesure",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Largeur",
+       "4000 pixels"
+      ],
+      [
+       "Hauteur",
+       "3000 pixels"
+      ],
+      [
+       "Codage de la couleur",
+       "RVB, 3 octets par pixel"
+      ]
+     ],
+     "source": "Valeurs choisies pour l’exercice"
+    },
+    {
+     "id": "pixels",
+     "type": "tableau",
+     "titre": "Quatre pixels de la photo",
+     "colonnes": [
+      "Pixel",
+      "Rouge",
+      "Vert",
+      "Bleu"
+     ],
+     "lignes": [
+      [
+       "A",
+       255,
+       0,
+       0
+      ],
+      [
+       "B",
+       0,
+       0,
+       0
+      ],
+      [
+       "C",
+       255,
+       255,
+       255
+      ],
+      [
+       "D",
+       0,
+       0,
+       255
+      ]
+     ],
+     "source": "Valeurs choisies pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la définition de la photo, en nombre total de pixels ?",
+     "reponse": 12000000,
+     "unite": "pixels",
+     "aide": "Multiplie la largeur par la hauteur.",
+     "explication": "4000 × 3000 = **12 000 000 pixels**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’octets la photo occupe-t-elle sans compression ?",
+     "reponse": 36000000,
+     "unite": "octets",
+     "aide": "Chaque pixel pèse 3 octets.",
+     "explication": "12 000 000 × 3 = **36 000 000 octets**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque pixel à sa couleur.",
+     "paires": [
+      [
+       "Pixel A",
+       "Rouge pur"
+      ],
+      [
+       "Pixel B",
+       "Noir"
+      ],
+      [
+       "Pixel C",
+       "Blanc"
+      ],
+      [
+       "Pixel D",
+       "Bleu pur"
+      ]
+     ],
+     "aide": "0 signifie que la composante est éteinte, 255 qu’elle est au maximum.",
+     "explication": "A : seule la première composante est à 255 ; B : tout est à 0, **noir** ; C : tout est à 255, **blanc** ; D : seule la troisième composante est à 255."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Chaque composante varie de 0 à 255, soit 256 valeurs. Combien de couleurs différentes un pixel peut-il avoir ?",
+     "reponse": 16777216,
+     "aide": "Multiplie les possibilités des trois composantes : 256 × 256 × 256.",
+     "explication": "256³ = **16 777 216** couleurs, soit environ 16,7 millions."
+    }
+   ]
+  },
+  {
+   "chapitre": "ec59583c-2859-5492-9bfa-be68f903ff7b",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une photo publiée, un lieu révélé",
+   "competence": "analyser-document",
+   "situation": "Jules publie une photo de son jardin sans retirer ses métadonnées. Le tableau montre ce qu’elles contiennent ; la carte permet de situer le lieu indiqué.",
+   "documents": [
+    {
+     "id": "exif",
+     "type": "tableau",
+     "titre": "Les métadonnées EXIF de la photo",
+     "colonnes": [
+      "Information",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Date de prise de vue",
+       "12 juillet, 15 h 42"
+      ],
+      [
+       "Modèle d’appareil",
+       "Smartphone (modèle de démonstration)"
+      ],
+      [
+       "Définition",
+       "4000 × 3000 pixels"
+      ],
+      [
+       "Position GPS",
+       "45,76° N ; 4,84° E"
+      ]
+     ],
+     "source": "Métadonnées inventées pour l’exercice"
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Cinq villes de France",
+     "fond": "france",
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "paris",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "lyon",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      },
+      {
+       "id": "c",
+       "lieu": "marseille",
+       "symbole": "lettre",
+       "lettre": "C",
+       "teinte": "violet"
+      },
+      {
+       "id": "d",
+       "lieu": "bordeaux",
+       "symbole": "lettre",
+       "lettre": "D",
+       "teinte": "violet"
+      },
+      {
+       "id": "e",
+       "lieu": "lille",
+       "symbole": "lettre",
+       "lettre": "E",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Fond de carte Natural Earth"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "exif",
+     "enonce": "Touche la valeur qui révèle l’endroit où la photo a été prise.",
+     "reponse": [
+      "r3c1"
+     ],
+     "aide": "Cherche des coordonnées.",
+     "explication": "La **position GPS** est enregistrée dans les métadonnées EXIF : publier la photo, c’est parfois publier le lieu."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "enonce": "Les coordonnées 45,76° N ; 4,84° E désignent Lyon. Touche Lyon sur la carte.",
+     "reponse": [
+      "b"
+     ],
+     "aide": "Lyon est au sud-est de Paris, sur le Rhône.",
+     "explication": "Lyon est la ville repérée par la lettre **B**, au sud-est de Paris."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Une erreur d’un millionième de seconde sur l’horloge du récepteur fausse la position de 300 mètres. De combien de mètres l’erreur serait-elle pour trois millionièmes de seconde ?",
+     "reponse": 900,
+     "unite": "m",
+     "aide": "L’erreur est proportionnelle au temps.",
+     "explication": "3 × 300 m = **900 m** : c’est pourquoi un quatrième satellite corrige l’horloge."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel réglage évite de publier le lieu de prise de vue avec la photo ?",
+     "options": [
+      "Retirer les métadonnées GPS",
+      "Réduire la définition de la photo",
+      "Choisir un autre format de couleur",
+      "Publier la photo en noir et blanc"
+     ],
+     "reponse": 0,
+     "aide": "Ce n’est pas l’image elle-même qui contient la position.",
+     "explication": "La position est dans les **métadonnées EXIF** : on peut les retirer ou désactiver la géolocalisation de l’appareil photo."
+    }
+   ]
+  }
+ ]
+}

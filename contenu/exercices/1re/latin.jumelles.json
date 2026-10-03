@@ -1,0 +1,1006 @@
+{
+ "niveau": "1re",
+ "matiere": "latin",
+ "exercices": [
+  {
+   "chapitre": "08b89126-2366-53bc-a109-88ba99945404",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Rosa, dominus, templum : cinq familles de noms",
+   "competence": "manier-langue",
+   "situation": "Hugo ouvre son manuel de latin : six noms, un par exemple de chaque déclinaison. Avant de traduire, il doit apprendre à les reconnaître à leurs formes.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Les cinq déclinaisons",
+     "colonnes": [
+      "Déclinaison",
+      "Nominatif",
+      "Génitif",
+      "Genre"
+     ],
+     "lignes": [
+      [
+       "1re",
+       "rosa",
+       "rosae",
+       "féminin"
+      ],
+      [
+       "2e",
+       "dominus",
+       "domini",
+       "masculin"
+      ],
+      [
+       "2e",
+       "templum",
+       "templi",
+       "neutre"
+      ],
+      [
+       "3e",
+       "consul",
+       "consulis",
+       "masculin"
+      ],
+      [
+       "4e",
+       "manus",
+       "manus",
+       "féminin"
+      ],
+      [
+       "5e",
+       "res",
+       "rei",
+       "féminin"
+      ]
+     ],
+     "source": "Tableau des exemples du cours"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r0c2"
+     ],
+     "enonce": "Touche le génitif de « rosa ».",
+     "aide": "Le génitif est dans la troisième colonne.",
+     "explication": "Le génitif de rosa est **rosae** : c’est la marque de la 1re déclinaison."
+    },
+    {
+     "type": "zone",
+     "document": "tab",
+     "reponse": [
+      "r3c2"
+     ],
+     "enonce": "Touche le seul génitif qui se termine par « -is ».",
+     "aide": "La 3e déclinaison se reconnaît à son génitif.",
+     "explication": "**Consulis** : le génitif en -is signale la 3e déclinaison, la plus vaste et la plus irrégulière."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque déclinaison à la finale de son génitif singulier.",
+     "paires": [
+      [
+       "1re déclinaison",
+       "-ae"
+      ],
+      [
+       "2e déclinaison",
+       "-i"
+      ],
+      [
+       "3e déclinaison",
+       "-is"
+      ],
+      [
+       "4e déclinaison",
+       "-us"
+      ],
+      [
+       "5e déclinaison",
+       "-ei"
+      ]
+     ],
+     "aide": "Les exemples sont dans le tableau.",
+     "explication": "Génitifs : **rosae** (1re), **domini** (2e), **consulis** (3e), **manus** (4e), **rei** (5e)."
+    }
+   ]
+  },
+  {
+   "chapitre": "08b89126-2366-53bc-a109-88ba99945404",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le maître, l’esclave et la rose",
+   "competence": "comprendre-langue",
+   "situation": "Hugo traduit trois phrases très courtes. Le professeur lui a interdit de les lire dans l’ordre des mots : il doit d’abord repérer les cas.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Trois phrases à analyser",
+     "auteur": "Phrases écrites pour l’exercice",
+     "blocs": [
+      "[[s|Dominus]] [[c|servum]] vocat.",
+      "Servus [[g|domini]] templum videt.",
+      "Marcus tabulam servo dat."
+     ],
+     "source": "Vocabulaire : dominus = le maître ; servus = l’esclave ; vocat = il appelle ; videt = il voit ; templum = le temple ; tabula = la tablette ; dat = il donne."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans la phrase 1, touche le sujet du verbe.",
+     "aide": "Le sujet est au nominatif.",
+     "explication": "**Dominus** est le sujet : c’est la forme du nominatif, qui s’accorde avec le verbe *vocat*."
+    },
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "g"
+     ],
+     "enonce": "Dans la phrase 2, touche le complément du nom (le génitif).",
+     "aide": "Il répond à « de qui ? ».",
+     "explication": "**Domini** est au génitif : c’est le maître à qui appartient le temple (« le temple du maître »)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque forme de la phrase 1 et de la phrase 2 à son cas.",
+     "paires": [
+      [
+       "dominus",
+       "nominatif"
+      ],
+      [
+       "servum",
+       "accusatif"
+      ],
+      [
+       "domini",
+       "génitif"
+      ]
+     ],
+     "aide": "Pense à la fonction : sujet, COD, complément du nom.",
+     "explication": "**Dominus** est le sujet (nominatif), **servum** le COD (accusatif) et **domini** un complément du nom (génitif)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de la phrase 3 ?",
+     "options": [
+      "Marcus donne la tablette à l’esclave.",
+      "Marcus donne l’esclave à la tablette.",
+      "L’esclave donne la tablette à Marcus.",
+      "Marcus donne la tablette de l’esclave."
+     ],
+     "reponse": 0,
+     "aide": "Cherche le sujet, le COD, puis le datif qui suit le verbe « donner ».",
+     "explication": "**Marcus donne la tablette à l’esclave** : Marcus est le sujet, *tabulam* le COD (accusatif) et *servo* le datif, complément d’attribution du verbe *dat*."
+    }
+   ]
+  },
+  {
+   "chapitre": "08b89126-2366-53bc-a109-88ba99945404",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Cave canem : traduire en commençant par le verbe",
+   "competence": "analyser-texte",
+   "situation": "Hugo doit traduire trois phrases latines : une inscription d’une maison de Pompéi, une formule célèbre et une phrase écrite pour s’entraîner. Il suit la méthode du cours.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Trois phrases à traduire",
+     "blocs": [
+      "[[c|Cave]] [[k|canem]].",
+      "Panem et circenses.",
+      "[[s|Consul]] portam urbis [[v|aperit]]."
+     ],
+     "source": "Phrase 1 : inscription de Pompéi. Phrase 2 : Juvénal, Satires, X. Phrase 3 : écrite pour l’exercice (aperit = il ouvre)."
+    },
+    {
+     "id": "decl",
+     "type": "tableau",
+     "titre": "La 3e déclinaison : consul, consulis",
+     "colonnes": [
+      "Cas",
+      "Singulier",
+      "Pluriel"
+     ],
+     "lignes": [
+      [
+       "Nominatif",
+       "consul",
+       "consules"
+      ],
+      [
+       "Accusatif",
+       "consulem",
+       "consules"
+      ],
+      [
+       "Génitif",
+       "consulis",
+       "consulum"
+      ],
+      [
+       "Datif",
+       "consuli",
+       "consulibus"
+      ],
+      [
+       "Ablatif",
+       "consule",
+       "consulibus"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Dans la phrase 3, touche le verbe : c’est lui qu’on repère en premier.",
+     "aide": "Il est placé en fin de phrase et se termine par -t.",
+     "explication": "**Aperit** est le verbe conjugué (« il ouvre ») : on commence toujours par lui."
+    },
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans la phrase 3, touche le sujet.",
+     "aide": "Le sujet est au nominatif et s’accorde avec le verbe.",
+     "explication": "**Consul** est le sujet : c’est le nominatif, qui s’accorde avec *aperit*."
+    },
+    {
+     "type": "zone",
+     "document": "decl",
+     "reponse": [
+      "r0c2",
+      "r1c2"
+     ],
+     "multiple": true,
+     "enonce": "Dans le tableau, touche les deux formes du pluriel qui se confondent (nominatif et accusatif).",
+     "aide": "Cherche deux cases identiques dans la colonne du pluriel.",
+     "explication": "Au pluriel, le nominatif et l’accusatif sont tous deux en **consules** : il faudra que le sens ou le verbe tranche."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans la phrase 1, quel est le cas de « canem » ?",
+     "options": [
+      "accusatif",
+      "nominatif",
+      "génitif",
+      "datif"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Compare avec la forme « consulem » du tableau.",
+     "explication": "**Canem** est à l’accusatif : sa finale -em est celle de l’accusatif singulier de la 3e déclinaison. Il est le COD de *cave*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les étapes de l’analyse de la phrase 3.",
+     "items": [
+      "Repérer le verbe : aperit",
+      "Trouver le sujet au nominatif : consul",
+      "Trouver le COD à l’accusatif : portam",
+      "Placer le complément du nom au génitif : urbis",
+      "Rédiger : le consul ouvre la porte de la ville"
+     ],
+     "aide": "Le verbe d’abord, la rédaction en dernier.",
+     "explication": "La méthode est : **verbe**, **nominatif**, **accusatif**, compléments, puis seulement la rédaction en français."
+    }
+   ]
+  },
+  {
+   "chapitre": "c4b548a6-5f6f-5513-a5ff-22ac08e37013",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Je dis que Marcus vient",
+   "competence": "manier-langue",
+   "situation": "Clara découvre une construction que le français n’a pas : après un verbe de parole ou de vue, le latin met le sujet à l’accusatif et le verbe à l’infinitif.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Trois phrases",
+     "auteur": "Phrases écrites pour l’exercice",
+     "blocs": [
+      "[[d|Dico]] [[s|Marcum]] venire.",
+      "Puella dicit servum ridere.",
+      "Video puellam ridere."
+     ],
+     "source": "Vocabulaire : dico, dicit = je dis, elle dit ; video = je vois ; venire = venir ; ridere = rire."
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Dans la phrase 1, touche le verbe de parole qui introduit la proposition infinitive.",
+     "aide": "Il signifie « je dis ».",
+     "explication": "**Dico** est le verbe de parole : après lui, le latin construit une proposition infinitive."
+    },
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Dans la phrase 1, touche le sujet de « venire ».",
+     "aide": "Dans une infinitive, le sujet est à l’accusatif.",
+     "explication": "**Marcum** est le sujet de venire : il est à l’accusatif, et il n’y a pas de COD ici."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de la phrase 1 ?",
+     "options": [
+      "Je dis que Marcus vient.",
+      "Je dis Marcus venir.",
+      "Je dis à Marcus de venir.",
+      "Marcus dit que je viens."
+     ],
+     "reponse": 0,
+     "aide": "Le latin n’emploie pas « que » : c’est l’infinitive qui joue ce rôle.",
+     "explication": "**Je dis que Marcus vient.** L’infinitive se traduit par une subordonnée en « que »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la traduction de la phrase 2.",
+     "texte": "Puella dicit servum ridere : la jeune fille ___ que l’esclave ___.",
+     "reponses": [
+      [
+       "dit"
+      ],
+      [
+       "rit"
+      ]
+     ],
+     "banque": [
+      "dit",
+      "rit",
+      "voit",
+      "rient"
+     ],
+     "aide": "Le verbe de parole est dicit ; ridere est à l’infinitif.",
+     "explication": "Elle **dit** que l’esclave **rit** : *servum* est le sujet de *ridere*, à l’accusatif."
+    }
+   ]
+  },
+  {
+   "chapitre": "c4b548a6-5f6f-5513-a5ff-22ac08e37013",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Après la prise de la ville",
+   "competence": "comprendre-langue",
+   "situation": "Clara lit deux phrases du récit d’une guerre. Chacune commence par un nom et un participe à l’ablatif : c’est un ablatif absolu, qu’il faudra traduire sans mot à mot.",
+   "documents": [
+    {
+     "id": "phrases",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Deux phrases d’un récit de guerre",
+     "auteur": "Phrases écrites pour l’exercice",
+     "blocs": [
+      "[[a|Urbe]] [[a|capta]], consul Romam rediit.",
+      "Hostibus victis, milites domum redierunt."
+     ],
+     "source": "Vocabulaire : urbs = ville ; Romam = à Rome ; rediit = il revint ; hostes = ennemis ; milites = soldats ; domum = chez eux ; redierunt = ils revinrent."
+    },
+    {
+     "id": "part",
+     "type": "tableau",
+     "titre": "Les participes",
+     "colonnes": [
+      "Participe",
+      "Finale",
+      "Exemple",
+      "Sens"
+     ],
+     "lignes": [
+      [
+       "Présent actif",
+       "-ns, -ntis",
+       "amans",
+       "aimant"
+      ],
+      [
+       "Parfait passif",
+       "-tus, -a, -um",
+       "amatus",
+       "ayant été aimé"
+      ],
+      [
+       "Futur actif",
+       "-turus",
+       "amaturus",
+       "devant aimer"
+      ],
+      [
+       "Adjectif verbal",
+       "-ndus",
+       "amandus",
+       "qui doit être aimé"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrases",
+     "reponse": [
+      "a"
+     ],
+     "multiple": true,
+     "enonce": "Dans la phrase 1, touche les deux mots de l’ablatif absolu.",
+     "aide": "L’ablatif absolu est un nom et un participe, sans lien grammatical avec la principale.",
+     "explication": "**Urbe capta** est l’ablatif absolu : « la ville ayant été prise », c’est-à-dire « après la prise de la ville »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment traduire naturellement « Hostibus victis » dans la phrase 2 ?",
+     "options": [
+      "Une fois les ennemis vaincus",
+      "Contre les ennemis vaincus",
+      "Pour vaincre les ennemis",
+      "Les ennemis vainqueurs"
+     ],
+     "reponse": 0,
+     "aide": "L’ablatif absolu devient un complément circonstanciel de temps.",
+     "explication": "**Une fois les ennemis vaincus** : le français rend l’ablatif absolu par une circonstancielle, jamais mot à mot."
+    },
+    {
+     "type": "zone",
+     "document": "part",
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Touche, dans le tableau, la forme qui signifie « devant aimer ».",
+     "aide": "Cherche la ligne du futur actif.",
+     "explication": "**Amaturus** est le participe futur actif : « devant aimer »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Voici des participes d’autres verbes. Classe-les d’après leur finale.",
+     "categories": [
+      "Présent actif",
+      "Parfait passif",
+      "Futur actif"
+     ],
+     "items": [
+      [
+       "monens",
+       0
+      ],
+      [
+       "docens",
+       0
+      ],
+      [
+       "monitus",
+       1
+      ],
+      [
+       "doctus",
+       1
+      ],
+      [
+       "moniturus",
+       2
+      ],
+      [
+       "docturus",
+       2
+      ]
+     ],
+     "aide": "Cherche -ns, -tus ou -turus.",
+     "explication": "Les finales sont les mêmes que dans le tableau : **-ns** (présent), **-tus** (parfait passif), **-turus** (futur)."
+    }
+   ]
+  },
+  {
+   "chapitre": "c4b548a6-5f6f-5513-a5ff-22ac08e37013",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Delenda est Carthago",
+   "competence": "analyser-texte",
+   "situation": "Rome, IIe siècle av. J.-C. : Caton l’Ancien terminait ses discours par une formule restée célèbre. Tu analyses ses deux versions, puis tu situes la ville visée.",
+   "documents": [
+    {
+     "id": "caton",
+     "type": "texte",
+     "genre": "source",
+     "titre": "La formule de Caton",
+     "blocs": [
+      "Carthago delenda est.",
+      "Ceterum [[v|censeo]] [[s|Carthaginem]] esse delendam."
+     ],
+     "source": "Formules attribuées à Caton l’Ancien (IIe siècle av. J.-C.). Vocabulaire : ceterum = du reste ; censeo = je pense ; esse = être."
+    },
+    {
+     "id": "carte",
+     "type": "carte",
+     "titre": "Deux villes de la Méditerranée",
+     "fond": "mediterranee",
+     "cadrage": [
+      -2,
+      31,
+      22,
+      46
+     ],
+     "lieux": [
+      {
+       "id": "a",
+       "lieu": "rome",
+       "symbole": "lettre",
+       "lettre": "A",
+       "teinte": "violet"
+      },
+      {
+       "id": "b",
+       "lieu": "carthage",
+       "symbole": "lettre",
+       "lettre": "B",
+       "teinte": "violet"
+      }
+     ],
+     "source": "Carte écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "caton",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Dans la deuxième phrase, touche le verbe d’opinion qui introduit la proposition infinitive.",
+     "aide": "Il signifie « je pense ».",
+     "explication": "**Censeo** (« je pense ») est le verbe d’opinion : après lui, le latin met une proposition infinitive."
+    },
+    {
+     "type": "zone",
+     "document": "caton",
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le sujet de la proposition infinitive « esse delendam ».",
+     "aide": "Dans une infinitive, le sujet est à l’accusatif.",
+     "explication": "**Carthaginem** est le sujet de l’infinitive : il est à l’accusatif."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la traduction de « Carthago delenda est » ?",
+     "options": [
+      "Carthage doit être détruite.",
+      "Carthage a été détruite.",
+      "Carthage détruit la ville.",
+      "Carthage va détruire Rome."
+     ],
+     "reponse": 0,
+     "aide": "L’adjectif verbal en -ndus exprime l’obligation.",
+     "explication": "**Carthage doit être détruite** : *delenda* est un adjectif verbal, qui exprime l’obligation."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la traduction de la deuxième phrase.",
+     "texte": "Du reste, je pense que Carthage ___ être ___.",
+     "reponses": [
+      [
+       "doit"
+      ],
+      [
+       "détruite"
+      ]
+     ],
+     "banque": [
+      "doit",
+      "a été",
+      "détruite",
+      "détruire",
+      "peut"
+     ],
+     "aide": "C’est la même idée d’obligation que dans la première formule.",
+     "explication": "La phrase signifie : du reste, je pense que Carthage **doit** être **détruite**."
+    },
+    {
+     "type": "zone",
+     "document": "carte",
+     "reponse": [
+      "b"
+     ],
+     "enonce": "Caton veut voir cette ville détruite. Touche sa lettre sur la carte.",
+     "aide": "Carthage se trouve en Afrique du Nord, face à la Sicile.",
+     "explication": "Carthage (B) est en Afrique du Nord, à l’emplacement de l’actuelle Tunisie ; la lettre A marque Rome."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b960b70-4b9c-564b-92f4-b4527c413d93",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Lucius veut faire carrière",
+   "competence": "se-reperer-temps",
+   "situation": "Lucius, jeune Romain ambitieux, rêve de gouverner la République. Il doit gravir un à un les échelons du cursus honorum.",
+   "documents": [
+    {
+     "id": "cursus",
+     "type": "chaine",
+     "titre": "Le cursus honorum",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "questure",
+       "texte": "Questure",
+       "emoji": "💰"
+      },
+      {
+       "id": "edilite",
+       "texte": "?",
+       "emoji": "🏟️"
+      },
+      {
+       "id": "preture",
+       "texte": "Préture",
+       "emoji": "⚖️"
+      },
+      {
+       "id": "consulat",
+       "texte": "Consulat",
+       "emoji": "🏛️"
+      }
+     ],
+     "liens": [
+      {
+       "de": "questure",
+       "a": "edilite"
+      },
+      {
+       "de": "edilite",
+       "a": "preture"
+      },
+      {
+       "de": "preture",
+       "a": "consulat"
+      }
+     ],
+     "source": "Schéma écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape se cache derrière le « ? » ?",
+     "options": [
+      "l’édilité",
+      "la censure",
+      "la dictature",
+      "l’exil"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "Elle suit la questure et précède la préture.",
+     "explication": "Le cursus honorum suit l’ordre : questure, **édilité**, préture, consulat."
+    },
+    {
+     "type": "zone",
+     "document": "cursus",
+     "reponse": [
+      "consulat"
+     ],
+     "enonce": "Touche la magistrature la plus haute du cursus honorum.",
+     "aide": "C’est la dernière étape de la carrière.",
+     "explication": "Le **consulat** est le sommet de la carrière politique romaine."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque institution romaine à son pouvoir.",
+     "paires": [
+      [
+       "Le Sénat",
+       "donne l’orientation politique"
+      ],
+      [
+       "Les comices",
+       "votent les lois et élisent"
+      ],
+      [
+       "Les tribuns de la plèbe",
+       "disposent du droit de veto"
+      ]
+     ],
+     "aide": "Le Sénat est composé d’anciens magistrats.",
+     "explication": "Le **Sénat** oriente la politique, les **comices** votent et élisent, les **tribuns de la plèbe** peuvent opposer leur veto."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b960b70-4b9c-564b-92f4-b4527c413d93",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La République, restaurée ou récupérée ?",
+   "competence": "analyser-document",
+   "situation": "Vers 20 av. J.-C., Lucius écrit à son frère. Il lui raconte ce qu’Auguste a changé à Rome, et se demande ce qui reste de la République.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Lettre de Lucius à son frère",
+     "auteur": "Lettre imaginée pour l’exercice",
+     "blocs": [
+      "Cher Marcus, les consuls sont élus comme avant, le Sénat se réunit, les comices votent. Pourtant, rien ne se décide sans Auguste. Il répète partout *res publica restituta*, « la [[r|République]] restaurée ». Je me demande s’il la restaure vraiment ou s’il n’en garde que le nom. Lucius"
+     ]
+    },
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "De César à Auguste",
+     "debut": -60,
+     "fin": -20,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "ides",
+       "date": -44,
+       "nom": "Ides de mars"
+      },
+      {
+       "id": "principat",
+       "date": -27,
+       "nom": "Principat d’Auguste"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche le mot dont Auguste affirme la restauration.",
+     "aide": "C’est le mot qui suit « restaurée » dans la formule.",
+     "explication": "Auguste dit restaurer la **République** : *res publica restituta*, formule de communication politique."
+    },
+    {
+     "type": "zone",
+     "document": "frise",
+     "reponse": [
+      "principat"
+     ],
+     "enonce": "Touche l’événement qui marque la naissance du pouvoir d’Auguste.",
+     "aide": "Le principat est fondé en 27 av. J.-C.",
+     "explication": "Le **principat** est fondé par Auguste en 27 av. J.-C."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’assassinat de César (ides de mars) de la fondation du principat ?",
+     "reponse": 17,
+     "unite": "ans",
+     "aide": "Soustrais les deux dates de la frise.",
+     "explication": "44 − 27 = **17 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que laisse entendre Lucius dans sa lettre ?",
+     "options": [
+      "Les institutions existent encore, mais le vrai pouvoir est à Auguste",
+      "La République a été entièrement rétablie et rend le pouvoir au peuple",
+      "Les consuls et le Sénat ont été supprimés par Auguste lui-même",
+      "Les comices ont obtenu un pouvoir plus grand qu’avant son arrivée"
+     ],
+     "reponse": 0,
+     "aide": "Lucius cite les institutions, puis dit « pourtant ».",
+     "explication": "L’Empire **garde les formes républicaines et en vide le contenu** : les institutions subsistent, mais le pouvoir est à Auguste."
+    }
+   ]
+  },
+  {
+   "chapitre": "9b960b70-4b9c-564b-92f4-b4527c413d93",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Patron et client : un échange de services",
+   "competence": "analyser-document",
+   "situation": "À Rome, un sénateur et un petit artisan peuvent dépendre l’un de l’autre. Tu lis le récit d’une matinée chez le sénateur Titus, puis tu repères qui a des droits et qui n’en a pas.",
+   "documents": [
+    {
+     "id": "recit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Chez le sénateur Titus",
+     "auteur": "Récit imaginé pour l’exercice",
+     "blocs": [
+      "Gaius, petit artisan et citoyen romain, se rend chaque matin chez son patron, le sénateur Titus. Titus a payé ses dettes et lui a trouvé un atelier. En échange, avant l’élection des édiles, Gaius promet de [[v|voter]] pour le fils de Titus. À la porte, l’esclave Sôsias le fait entrer. Dans la maison, la materfamilias Livia, épouse de Titus et très respectée, dirige les servantes."
+     ]
+    },
+    {
+     "id": "schema",
+     "type": "schema",
+     "titre": "Un échange entre deux hommes",
+     "largeur": 340,
+     "hauteur": 190,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 60,
+       "l": 90,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Titus",
+       "id": "titus",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "rect",
+       "x": 230,
+       "y": 60,
+       "l": 90,
+       "h": 50,
+       "arrondi": 8,
+       "texte": "Gaius",
+       "id": "gaius",
+       "zone": true,
+       "teinte": "violet",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        110,
+        78
+       ],
+       "a": [
+        230,
+        78
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 68,
+       "texte": "protection",
+       "ancre": "milieu",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        98
+       ],
+       "a": [
+        110,
+        98
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 170,
+       "y": 122,
+       "texte": "votes et soutien",
+       "ancre": "milieu",
+       "taille": "petit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "recit",
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche le service que le client promet de rendre à son patron.",
+     "aide": "Il concerne l’élection des édiles.",
+     "explication": "Gaius promet de **voter** pour le fils de Titus : c’est son soutien en échange de la protection."
+    },
+    {
+     "type": "zone",
+     "document": "schema",
+     "reponse": [
+      "gaius"
+     ],
+     "enonce": "Touche celui qui reçoit la protection de l’autre.",
+     "aide": "Suis la flèche marquée « protection ».",
+     "explication": "La flèche « protection » va de Titus vers **Gaius** : le client est protégé, et il rend en échange ses votes et son soutien."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Titus",
+       "patronus : il protège"
+      ],
+      [
+       "Gaius",
+       "cliens : il soutient"
+      ],
+      [
+       "Sôsias",
+       "servus : il n’est pas libre"
+      ],
+      [
+       "Livia",
+       "materfamilias : respectée, sans droits politiques"
+      ]
+     ],
+     "aide": "Le patronus est le plus puissant des deux.",
+     "explication": "Titus est le **patronus**, Gaius le **cliens**, Sôsias un **esclave** et Livia la **materfamilias**, respectée mais sans droits politiques."
+    },
+    {
+     "type": "categories",
+     "enonce": "Classe chaque personnage selon ses droits politiques.",
+     "categories": [
+      "Droits politiques",
+      "Aucun droit politique"
+     ],
+     "items": [
+      [
+       "Titus, sénateur",
+       0
+      ],
+      [
+       "Gaius, artisan citoyen",
+       0
+      ],
+      [
+       "Sôsias, esclave",
+       1
+      ],
+      [
+       "Livia, la materfamilias",
+       1
+      ]
+     ],
+     "aide": "Le citoyen homme vote ; l’esclave et la femme ne votent pas.",
+     "explication": "Les citoyens **Titus** et **Gaius** votent ; **Sôsias** (esclave) et **Livia** (femme) n’ont aucun droit politique."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les clients sont-ils précieux pour un sénateur qui veut faire carrière ?",
+     "options": [
+      "Ils votent pour lui et pour ses proches aux élections",
+      "Ils paient à sa place les impôts de toute la cité",
+      "Ils siègent à sa place au Sénat pendant ses absences",
+      "Ils commandent à sa place les armées de la République"
+     ],
+     "reponse": 0,
+     "aide": "Pense aux comices, qui élisent les magistrats.",
+     "explication": "Les clients forment une base de **voix** pour le patron et sa famille : c’est le clientélisme, protection contre soutien."
+    }
+   ]
+  }
+ ]
+}

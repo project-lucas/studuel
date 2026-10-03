@@ -1,0 +1,689 @@
+{
+ "niveau": "3e",
+ "matiere": "anglais",
+ "exercices": [
+  {
+   "chapitre": "80f5d97d-9236-53c0-87eb-9703a7383003",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le réveil d’Alex",
+   "competence": "comprendre-langue",
+   "situation": "Alex dort encore. Sa mère lui envoie des messages pour le sortir du lit et le préparer pour l’école.",
+   "documents": [
+    {
+     "id": "msg",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Maman et Alex",
+     "participants": [
+      {
+       "nom": "Maman",
+       "emoji": "👩",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Alex",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Maman",
+       "texte": "Wake up, Alex! Get up and put on your school clothes. [[e|Turn]] [[e|off]] the TV, please. Look for your bag."
+      },
+      {
+       "qui": "Alex",
+       "texte": "OK! Look after the dog, please!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "msg",
+     "reponse": [
+      "e"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui veulent dire « éteindre ».",
+     "aide": "Cherche le verbe lié à la télévision.",
+     "explication": "**turn off** : verbe à particule qui veut dire « éteindre »."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son sens.",
+     "paires": [
+      [
+       "wake up",
+       "Se réveiller"
+      ],
+      [
+       "put on",
+       "Mettre (un vêtement)"
+      ],
+      [
+       "look for",
+       "Chercher"
+      ],
+      [
+       "look after",
+       "S’occuper de"
+      ]
+     ],
+     "aide": "Les sens ne se devinent pas toujours mot à mot.",
+     "explication": "Ces verbes s’apprennent comme des mots entiers."
+    },
+    {
+     "type": "trous",
+     "enonce": "Il fait froid dehors.",
+     "texte": "Please ___ on your coat. It’s cold.",
+     "reponses": [
+      [
+       "put"
+      ]
+     ],
+     "banque": [
+      "put",
+      "turn",
+      "give",
+      "look"
+     ],
+     "aide": "Quel verbe va avec un vêtement ?",
+     "explication": "**put on** : mettre un vêtement."
+    }
+   ]
+  },
+  {
+   "chapitre": "80f5d97d-9236-53c0-87eb-9703a7383003",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La photocopieuse du collège",
+   "competence": "manier-langue",
+   "situation": "Nora doit utiliser la photocopieuse du CDI pour la première fois. Une affiche explique comment faire.",
+   "documents": [
+    {
+     "id": "mode",
+     "type": "fiche",
+     "modele": "panneau",
+     "entete": "How to use the photocopier",
+     "sousTitre": "Library",
+     "emoji": "🖨️",
+     "lignes": [
+      {
+       "texte": "1. Turn the machine on.",
+       "id": "allumer"
+      },
+      {
+       "texte": "2. Put the paper in."
+      },
+      {
+       "texte": "3. Don’t give up if it stops!",
+       "id": "abandon"
+      },
+      {
+       "texte": "4. Find out the price on the screen."
+      }
+     ],
+     "pied": "Please be careful.",
+     "teinte": "bleu",
+     "source": "Affiche écrite pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "mode",
+     "reponse": [
+      "abandon"
+     ],
+     "multiple": false,
+     "enonce": "Touche la consigne qui dit de **ne pas abandonner**.",
+     "aide": "Cherche le verbe *give*.",
+     "explication": "**Don’t give up** : *give up* = abandonner."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe : le complément peut-il se glisser au milieu (particule) ou non (préposition) ?",
+     "categories": [
+      "Particule (séparable)",
+      "Préposition (inséparable)"
+     ],
+     "items": [
+      [
+       "turn on",
+       0
+      ],
+      [
+       "look after",
+       1
+      ],
+      [
+       "put off",
+       0
+      ],
+      [
+       "wait for",
+       1
+      ],
+      [
+       "listen to",
+       1
+      ],
+      [
+       "give up",
+       0
+      ]
+     ],
+     "aide": "On dit *turn the light on*, mais pas *look the baby after*.",
+     "explication": "On peut dire *turn the light on* ; on ne dit pas *look the baby after*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Le complément est un pronom : *it* se place avant la particule.",
+     "texte": "The photocopier is on. Turn ___ ___.",
+     "reponses": [
+      [
+       "it"
+      ],
+      [
+       "off"
+      ]
+     ],
+     "banque": [
+      "it",
+      "off",
+      "on",
+      "up"
+     ],
+     "aide": "Le pronom se glisse entre le verbe et la particule.",
+     "explication": "**Turn it off** : avec un pronom, on ne dit jamais *turn off it*."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Elle s’occupe de son petit frère ». La phrase commence par She.",
+     "items": [
+      "She",
+      "looks",
+      "after",
+      "her",
+      "little",
+      "brother"
+     ],
+     "aide": "*Look after* reste collé.",
+     "explication": "**She looks after her little brother** : *look after* est inséparable."
+    }
+   ]
+  },
+  {
+   "chapitre": "80f5d97d-9236-53c0-87eb-9703a7383003",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une semaine au camp d’été",
+   "competence": "argumenter",
+   "situation": "Sara écrit à sa grand-mère depuis un camp au bord d’un lac. Celle-ci lui répond par message.",
+   "documents": [
+    {
+     "id": "sara",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "L’e-mail de Sara",
+     "blocs": [
+      "Dear Gran, We got up at six today. I’m looking forward to the lake trip! We ran out of bread, so Tom went to find some. Yesterday I nearly gave up because the hill was steep, but I [[c|carried]] [[c|on]]. Love, Sara"
+     ],
+     "source": "E-mail écrit pour l’exercice"
+    },
+    {
+     "id": "gran",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Gran",
+     "participants": [
+      {
+       "nom": "Gran",
+       "emoji": "👵",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Sara",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Gran",
+       "texte": "[[l|Look]] [[l|after]] your little cousin! Don’t forget to put on sun cream. What did you find out about the bears?"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sara",
+     "reponse": [
+      "c"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** qui veulent dire « continuer ».",
+     "aide": "Cherche un verbe suivi de *on*.",
+     "explication": "**carried on** : continuer."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que veut dire « We ran out of bread » ?",
+     "options": [
+      "Nous n’avions plus de pain",
+      "Nous avons couru acheter du pain",
+      "Nous avons mangé tout le pain",
+      "Nous avons jeté le pain"
+     ],
+     "reponse": 0,
+     "aide": "*Run out of* parle de quelque chose qui s’épuise.",
+     "explication": "**Nous n’avions plus de pain** : *run out of* = être à court de."
+    },
+    {
+     "type": "zone",
+     "document": "gran",
+     "reponse": [
+      "l"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux mots** du verbe qui veut dire « s’occuper de ».",
+     "aide": "C’est le premier verbe du message.",
+     "explication": "**look after** : s’occuper de."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son sens.",
+     "paires": [
+      [
+       "find out",
+       "Découvrir"
+      ],
+      [
+       "give up",
+       "Abandonner"
+      ],
+      [
+       "take off",
+       "Enlever"
+      ],
+      [
+       "grow up",
+       "Grandir"
+      ]
+     ],
+     "aide": "Pense au sens complet, pas mot à mot.",
+     "explication": "Ces verbes à particule s’apprennent comme du vocabulaire."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Éteins-le, s’il te plaît ». La phrase commence par Please.",
+     "items": [
+      "Please",
+      "turn",
+      "it",
+      "off"
+     ],
+     "aide": "Le pronom se place avant la particule.",
+     "explication": "**Please turn it off** : pronom avant la particule."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e2c5cac-a5c2-5940-9bc8-059f362dc2f9",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Dimanche au parc",
+   "competence": "comprendre-langue",
+   "situation": "Max raconte son dimanche dans son carnet. Certains verbes sont irréguliers, d’autres suivent la règle du -ed.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Max’s notebook",
+     "blocs": [
+      "Last Sunday, I [[i|got]] up late, [[i|ate]] pancakes and [[i|went]] to the park.",
+      "I played football and [[i|saw]] my cousin there. We [[i|bought]] ice cream and watched the ducks."
+     ],
+     "source": "Texte écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carnet",
+     "reponse": [
+      "i"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **cinq verbes irréguliers** au prétérit.",
+     "aide": "Les verbes réguliers se terminent par -ed.",
+     "explication": "**got, ate, went, saw, bought** sont irréguliers ; **played** et **watched** suivent la règle du -ed."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque verbe à son prétérit.",
+     "paires": [
+      [
+       "go",
+       "went"
+      ],
+      [
+       "see",
+       "saw"
+      ],
+      [
+       "buy",
+       "bought"
+      ],
+      [
+       "eat",
+       "ate"
+      ]
+     ],
+     "aide": "Pense à la deuxième colonne de la liste.",
+     "explication": "go – **went**, see – **saw**, buy – **bought**, eat – **ate**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète après *didn’t*.",
+     "texte": "I didn’t ___ pancakes yesterday.",
+     "reponses": [
+      [
+       "eat"
+      ]
+     ],
+     "banque": [
+      "eat",
+      "ate",
+      "eaten",
+      "eating"
+     ],
+     "aide": "Après *did* ou *didn’t*, on emploie la base verbale.",
+     "explication": "**eat** : après **didn’t**, on emploie la **première colonne** (base verbale)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e2c5cac-a5c2-5940-9bc8-059f362dc2f9",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le tableau des trois formes",
+   "competence": "lire-tableau",
+   "situation": "Pour réviser, Lena complète un tableau de verbes irréguliers. Il manque quelques formes.",
+   "documents": [
+    {
+     "id": "verbes",
+     "type": "tableau",
+     "titre": "Les trois formes",
+     "colonnes": [
+      "Base",
+      "Past",
+      "Past participle"
+     ],
+     "lignes": [
+      [
+       "write",
+       "wrote",
+       "?"
+      ],
+      [
+       "drink",
+       "?",
+       "drunk"
+      ],
+      [
+       "buy",
+       "bought",
+       "?"
+      ],
+      [
+       "take",
+       "?",
+       "taken"
+      ],
+      [
+       "speak",
+       "spoke",
+       "?"
+      ]
+     ],
+     "enteteLignes": false,
+     "source": "Tableau écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "texte",
+     "enonce": "Complète la case violette de la ligne **write** : le participe passé.",
+     "reponse": [
+      "written"
+     ],
+     "placeholder": "Participe passé",
+     "aide": "Pense à *I have …* devant le verbe.",
+     "explication": "**written** : write – wrote – **written**."
+    },
+    {
+     "type": "texte",
+     "enonce": "Complète la case violette de la ligne **drink** : le prétérit.",
+     "reponse": [
+      "drank"
+     ],
+     "placeholder": "Prétérit",
+     "aide": "Le prétérit est la deuxième colonne.",
+     "explication": "**drank** : drink – **drank** – drunk."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec les bonnes formes.",
+     "texte": "Lena has ___ a letter and she has ___ a glass of water.",
+     "reponses": [
+      [
+       "written"
+      ],
+      [
+       "drunk"
+      ]
+     ],
+     "banque": [
+      "written",
+      "wrote",
+      "drunk",
+      "drank"
+     ],
+     "aide": "Après *has*, on emploie la troisième colonne.",
+     "explication": "Après **has**, on emploie le **participe passé** : *has written*, *has drunk*."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe selon sa famille.",
+     "categories": [
+      "Trois formes identiques",
+      "Prétérit = participe passé",
+      "Trois formes différentes"
+     ],
+     "items": [
+      [
+       "cut",
+       0
+      ],
+      [
+       "put",
+       0
+      ],
+      [
+       "buy",
+       1
+      ],
+      [
+       "think",
+       1
+      ],
+      [
+       "take",
+       2
+      ],
+      [
+       "write",
+       2
+      ]
+     ],
+     "aide": "Compare les trois colonnes : cut – cut – cut ; buy – bought – bought ; take – took – taken.",
+     "explication": "**cut, put** : trois formes identiques ; **buy, think** : prétérit = participe passé ; **take, write** : trois formes différentes."
+    }
+   ]
+  },
+  {
+   "chapitre": "3e2c5cac-a5c2-5940-9bc8-059f362dc2f9",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une semaine en Cornouailles",
+   "competence": "argumenter",
+   "situation": "Ivy est en vacances en Cornouailles. Elle écrit à son grand-père, qui lui répond par message.",
+   "documents": [
+    {
+     "id": "lettre",
+     "type": "texte",
+     "genre": "lettre",
+     "titre": "Dear Grandpa",
+     "blocs": [
+      "Dear Grandpa, we have had a wonderful week in Cornwall. I have swum in the sea every day, and I have eaten fish and chips three times!",
+      "Yesterday we [[p|flew]] kites on the beach and Dad [[p|broke]] his sunglasses. I have written five postcards. Love, Ivy"
+     ],
+     "source": "Lettre écrite pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "titre": "Messages de Grand-père et Ivy",
+     "participants": [
+      {
+       "nom": "Grandpa",
+       "emoji": "👴",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ivy",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Grandpa",
+       "texte": "Did you buy any stamps?"
+      },
+      {
+       "qui": "Ivy",
+       "texte": "No, I didn’t [[b|buy]] any. The shop was closed."
+      },
+      {
+       "qui": "Grandpa",
+       "texte": "Have you taken any photos?"
+      },
+      {
+       "qui": "Ivy",
+       "texte": "Yes, I have taken fifty!"
+      }
+     ],
+     "source": "Messages écrits pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lettre",
+     "reponse": [
+      "p"
+     ],
+     "multiple": true,
+     "enonce": "Touche les **deux verbes au prétérit** (hier).",
+     "aide": "Ils sont à la deuxième colonne de la liste.",
+     "explication": "**flew** et **broke** sont au prétérit (colonne 2) : fly – flew – flown, break – broke – broken."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque verbe de la lettre : **prétérit** (colonne 2) ou **participe passé** (colonne 3) ?",
+     "categories": [
+      "Prétérit (colonne 2)",
+      "Participe passé (colonne 3)"
+     ],
+     "items": [
+      [
+       "flew",
+       0
+      ],
+      [
+       "broke",
+       0
+      ],
+      [
+       "swum",
+       1
+      ],
+      [
+       "eaten",
+       1
+      ],
+      [
+       "written",
+       1
+      ]
+     ],
+     "aide": "Les participes passés suivent *have* ou *has*.",
+     "explication": "**flew, broke** sont des prétérits ; **swum, eaten, written** suivent *have* : ce sont des participes passés."
+    },
+    {
+     "type": "zone",
+     "document": "sms",
+     "reponse": [
+      "b"
+     ],
+     "multiple": false,
+     "enonce": "Touche le verbe qui suit *didn’t* dans la réponse d’Ivy.",
+     "aide": "Après *didn’t*, on emploie la première colonne.",
+     "explication": "**buy** : après *didn’t*, on emploie la **base verbale**, pas *bought*."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète avec la bonne forme.",
+     "texte": "Ivy has ___ fifty photos.",
+     "reponses": [
+      [
+       "taken"
+      ]
+     ],
+     "banque": [
+      "taken",
+      "took",
+      "take",
+      "taking"
+     ],
+     "aide": "Après *has*, on emploie la troisième colonne.",
+     "explication": "**taken** : *has taken*, avec le participe passé (take – took – taken)."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets en ordre : « Je n’ai jamais vu la mer. » La phrase commence par I.",
+     "items": [
+      "I",
+      "have",
+      "never",
+      "seen",
+      "the sea"
+     ],
+     "aide": "*never* se place entre l’auxiliaire et le participe passé.",
+     "explication": "**I have never seen the sea** : *see – saw – seen*, et *never* se place entre *have* et le participe."
+    }
+   ]
+  }
+ ]
+}

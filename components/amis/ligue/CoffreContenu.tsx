@@ -16,7 +16,7 @@ export default function CoffreContenu({ points, xpMoi }: { points: number; xpMoi
   return (
     <div className="flex flex-col gap-4 pt-2">
       <div className="flex flex-col items-center gap-2 text-center">
-        <CoffreDessin className="size-24" />
+        <CoffreDessin niveau={niveau} className="size-24" />
         <h2 className="font-heading text-2xl leading-tight font-extrabold">Coffre d’équipe</h2>
         <p className="max-w-xs text-sm font-semibold text-balance text-muted-foreground">
           Toute l’XP que tes amis et toi gagnez cette semaine le remplit&nbsp;: leçons, quiz, jeux, duels. Lundi, il
@@ -36,9 +36,7 @@ export default function CoffreContenu({ points, xpMoi }: { points: number; xpMoi
             data-atteint={niveau >= n.niveau || undefined}
             data-courant={niveau === n.niveau || undefined}
           >
-            <span aria-hidden="true" className={styles.niveauJalon}>
-              {n.niveau}
-            </span>
+            <CoffreDessin niveau={n.niveau} className="size-10 shrink-0" />
             <span className="min-w-0 flex-1">
               <span className="font-heading block leading-tight font-extrabold">Niveau {n.niveau}</span>
               <span className="block text-xs font-bold text-muted-foreground">

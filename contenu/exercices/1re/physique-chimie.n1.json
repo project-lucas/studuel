@@ -1,0 +1,4103 @@
+{
+ "niveau": "1re",
+ "matiere": "physique-chimie",
+ "exercices": [
+  {
+   "chapitre": "4db5d1ee-5647-5dd3-9e48-619d3a3908f6",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Maya plonge dans le lac",
+   "competence": "lire-graphique",
+   "situation": "Maya plonge dans un lac de plaine. Son ordinateur de plongée enregistre la pression de l’eau à chaque profondeur.",
+   "documents": [
+    {
+     "id": "courbe",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Pression en fonction de la profondeur",
+     "categories": [
+      "0 m",
+      "10 m",
+      "20 m",
+      "30 m",
+      "40 m"
+     ],
+     "series": [
+      {
+       "nom": "Pression",
+       "valeurs": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Pression",
+      "unite": "bar",
+      "min": 0,
+      "max": 6,
+      "pas": 1
+     },
+     "axeX": {
+      "titre": "Profondeur"
+     },
+     "valeurs": false,
+     "source": "Eau douce, g arrondi à 10 N/kg"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "courbe",
+     "enonce": "Touche la profondeur à laquelle la pression atteint 3 bar.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Repère 3 bar sur l’axe vertical, puis lis la profondeur sous le point.",
+     "explication": "À **20 m** la courbe passe par 3 bar : la pression est celle de l’air (1 bar) plus celle de 20 m d’eau."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien de bars la pression augmente-t-elle chaque fois que Maya descend de 10 m ?",
+     "reponse": 1,
+     "unite": "bar",
+     "aide": "Compare deux points voisins de la courbe.",
+     "explication": "On passe de 1 à 2 bar, puis de 2 à 3 bar… : la pression augmente de **1 bar** tous les 10 m."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis en pascals la pression à 30 m (1 bar = 100 000 Pa).",
+     "reponse": 400000,
+     "unite": "Pa",
+     "aide": "Lis d’abord la pression en bar à 30 m.",
+     "explication": "À 30 m, p = 4 bar. 4 × 100 000 = **400 000 Pa**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À 0 m, la courbe indique 1 bar. Que représente cette valeur ?",
+     "options": [
+      "La pression de l’air au-dessus du lac",
+      "Une pression nulle, sans eau ni air",
+      "La pression de l’eau seule",
+      "La pression au fond du lac"
+     ],
+     "reponse": 0,
+     "aide": "À la surface, il n’y a pas encore d’eau au-dessus de Maya.",
+     "explication": "Au niveau de l’eau, seule l’atmosphère appuie : c’est la **pression atmosphérique**, environ 1 bar (1 013 hPa)."
+    }
+   ]
+  },
+  {
+   "chapitre": "4db5d1ee-5647-5dd3-9e48-619d3a3908f6",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Bastien enferme de l’air dans une seringue",
+   "competence": "experimenter",
+   "situation": "Bastien bouche l’embout d’une seringue de 60 mL et enfonce le piston lentement, à température constante. Il note le volume de l’air et sa pression. Un de ses relevés est faux.",
+   "documents": [
+    {
+     "id": "releves",
+     "type": "tableau",
+     "titre": "Relevés de Bastien",
+     "colonnes": [
+      "Mesure",
+      "Relevé 1",
+      "Relevé 2",
+      "Relevé 3",
+      "Relevé 4",
+      "Relevé 5"
+     ],
+     "lignes": [
+      [
+       "Volume V (mL)",
+       60,
+       40,
+       30,
+       24,
+       20
+      ],
+      [
+       "Pression p (kPa)",
+       100,
+       150,
+       220,
+       250,
+       300
+      ]
+     ],
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "releves",
+     "enonce": "Un seul relevé de pression ne respecte pas la loi de Mariotte. Touche-le.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Calcule p × V pour chaque colonne et cherche l’intrus.",
+     "explication": "Les relevés justes donnent p × V = 6 000. Pour 30 mL, 220 × 30 = 6 600 : la pression attendue est **200 kPa**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la valeur du produit p × V pour les relevés justes ?",
+     "reponse": 6000,
+     "unite": "kPa·mL",
+     "aide": "Multiplie la pression par le volume sur le premier relevé.",
+     "explication": "Loi de Mariotte : p × V = constante. 100 × 60 = 150 × 40 = **6 000 kPa·mL**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle pression Bastien obtiendrait-il en réduisant le volume à 15 mL ?",
+     "reponse": 400,
+     "unite": "kPa",
+     "aide": "p × V reste égal à la même constante.",
+     "explication": "p = constante / V = 6 000 / 15 = **400 kPa**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle condition doit rester vraie pendant toute l’expérience pour que p × V soit constant ?",
+     "options": [
+      "La température du gaz ne change pas",
+      "Le piston est enfoncé le plus vite possible",
+      "Le volume du gaz reste le même",
+      "La seringue contient de l’eau"
+     ],
+     "reponse": 0,
+     "aide": "Relis l’énoncé de la loi : « à … constante ».",
+     "explication": "La loi de Mariotte vaut pour un gaz **à température constante** : on enfonce le piston lentement pour que l’air ne s’échauffe pas."
+    }
+   ]
+  },
+  {
+   "chapitre": "4db5d1ee-5647-5dd3-9e48-619d3a3908f6",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "L’iceberg et ses neuf dixièmes",
+   "competence": "raisonner",
+   "situation": "Au large du Groenland, un navire croise un iceberg. Mélina veut comprendre pourquoi on n’en voit qu’une petite partie et ce qui se passerait dans un lac d’eau douce.",
+   "documents": [
+    {
+     "id": "masses",
+     "type": "tableau",
+     "titre": "Masses volumiques (kg/m³)",
+     "colonnes": [
+      "Matériau",
+      "ρ (kg/m³)"
+     ],
+     "lignes": [
+      [
+       "Liège",
+       240
+      ],
+      [
+       "Chêne",
+       750
+      ],
+      [
+       "Glace",
+       920
+      ],
+      [
+       "Fer",
+       7800
+      ],
+      [
+       "Eau de mer",
+       1030
+      ],
+      [
+       "Eau douce",
+       1000
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "iceberg",
+     "type": "schema",
+     "titre": "Un iceberg qui flotte",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 90,
+       "l": 300,
+       "h": 110,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         90
+        ],
+        [
+         148,
+         48
+        ],
+        [
+         172,
+         62
+        ],
+        [
+         198,
+         28
+        ],
+        [
+         232,
+         90
+        ]
+       ],
+       "teinte": "blanc",
+       "motif": "plein",
+       "id": "emerge",
+       "zone": true
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         90
+        ],
+        [
+         232,
+         90
+        ],
+        [
+         262,
+         128
+        ],
+        [
+         226,
+         176
+        ],
+        [
+         160,
+         188
+        ],
+        [
+         108,
+         150
+        ]
+       ],
+       "teinte": "ciel",
+       "motif": "plein",
+       "id": "immerge",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        20,
+        90
+       ],
+       "a": [
+        320,
+        90
+       ],
+       "style": "pointilles"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 50,
+       "texte": "Air",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 255,
+       "y": 194,
+       "texte": "Eau de mer",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Dans l’eau de mer, range chaque matériau : flotte-t-il ou coule-t-il ?",
+     "categories": [
+      "Il flotte",
+      "Il coule"
+     ],
+     "items": [
+      [
+       "Liège",
+       0
+      ],
+      [
+       "Chêne",
+       0
+      ],
+      [
+       "Glace",
+       0
+      ],
+      [
+       "Fer",
+       1
+      ]
+     ],
+     "aide": "Compare la masse volumique du matériau à celle de l’eau de mer.",
+     "explication": "Un corps flotte si sa masse volumique est inférieure à celle du fluide (1 030 kg/m³) : liège, chêne et glace flottent ; le **fer** (7 800) coule."
+    },
+    {
+     "type": "zone",
+     "document": "iceberg",
+     "enonce": "Touche la partie de l’iceberg qui est immergée.",
+     "reponse": [
+      "immerge"
+     ],
+     "aide": "La ligne pointillée représente la surface de l’eau.",
+     "explication": "La partie **sous la surface de l’eau** est la partie immergée : c’est la plus grande."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel pourcentage du volume de la glace est immergé dans l’eau de mer ? (arrondi à l’unité)",
+     "reponse": 89,
+     "unite": "%",
+     "aide": "Le corps flotte : poussée = poids, donc ρ(fluide) × V(immergé) = ρ(glace) × V(total).",
+     "explication": "V(immergé) / V = ρ(glace) / ρ(eau de mer) = 920 / 1 030 ≈ 0,89, soit **89 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le même bloc de glace flotte dans un lac d’eau douce. Quel pourcentage de son volume est immergé ?",
+     "reponse": 92,
+     "unite": "%",
+     "aide": "Même raisonnement, avec la masse volumique de l’eau douce.",
+     "explication": "V(immergé) / V = 920 / 1 000 = 0,92, soit **92 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand le fluide est moins dense, que devient la partie immergée d’un même corps qui flotte ?",
+     "options": [
+      "Elle augmente",
+      "Elle diminue",
+      "Elle ne change pas",
+      "Elle disparaît"
+     ],
+     "reponse": 0,
+     "aide": "Compare tes deux résultats : 89 % puis 92 %.",
+     "explication": "V(immergé) / V = ρ(corps) / ρ(fluide) : si ρ(fluide) diminue, la fraction immergée **augmente**."
+    }
+   ]
+  },
+  {
+   "chapitre": "255929a5-1e83-5840-8f4e-dfbbddfbbdef",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Léa lit dans le TGV",
+   "competence": "raisonner",
+   "situation": "Léa est assise dans un train. Hugo, sur le quai, la voit passer. Ils échangent des messages.",
+   "documents": [
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Je suis dans le [[r|TGV]] et je n’ai pas bougé de mon siège depuis Paris !"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Moi, sur le [[r|quai]], je te vois filer à 72 km/h au passage de la gare."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Pourtant je lis tranquillement mon livre !"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sms",
+     "enonce": "Touche les deux mots qui désignent chacun un référentiel.",
+     "reponse": [
+      "r"
+     ],
+     "multiple": true,
+     "aide": "Un référentiel est un objet auquel on rattache l’observateur : le train ou le quai.",
+     "explication": "Léa décrit le mouvement dans le référentiel du **TGV**, Hugo dans celui du **quai** (le sol)."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque référentiel à ce que l’on dit de Léa.",
+     "paires": [
+      [
+       "Dans le référentiel du train",
+       "Léa est immobile"
+      ],
+      [
+       "Dans le référentiel du quai",
+       "Léa est en mouvement"
+      ]
+     ],
+     "aide": "Léa est-elle au même endroit par rapport à son siège ? Et par rapport au quai ?",
+     "explication": "Par rapport au train, Léa ne bouge pas ; par rapport au sol, elle avance avec le train. Le mouvement **dépend du référentiel**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis la vitesse du train en m/s (divise par 3,6).",
+     "reponse": 20,
+     "unite": "m/s",
+     "aide": "1 km/h = 1 000 m par 3 600 s.",
+     "explication": "72 / 3,6 = **20 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle distance le train parcourt-il en 15 s à cette vitesse ?",
+     "reponse": 300,
+     "unite": "m",
+     "aide": "v = d / t, donc d = v × t.",
+     "explication": "d = 20 × 15 = **300 m**."
+    }
+   ]
+  },
+  {
+   "chapitre": "255929a5-1e83-5840-8f4e-dfbbddfbbdef",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Sacha freine devant le feu rouge",
+   "competence": "lire-graphique",
+   "situation": "Sacha roule à 72 km/h quand le feu passe au rouge. Il freine à fond en ligne droite. Son tableau de bord a enregistré sa vitesse chaque seconde.",
+   "documents": [
+    {
+     "id": "vitesse",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Vitesse de la voiture pendant le freinage",
+     "categories": [
+      "0 s",
+      "1 s",
+      "2 s",
+      "3 s",
+      "4 s",
+      "5 s"
+     ],
+     "series": [
+      {
+       "nom": "Vitesse",
+       "valeurs": [
+        20,
+        16,
+        12,
+        8,
+        4,
+        0
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Vitesse",
+      "unite": "m/s",
+      "min": 0,
+      "max": 24,
+      "pas": 4
+     },
+     "axeX": {
+      "titre": "Temps"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vitesse",
+     "enonce": "Touche l’instant où la voiture est à l’arrêt.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "À l’arrêt, la vitesse est nulle.",
+     "explication": "La vitesse atteint 0 m/s à **5 s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "De combien la vitesse diminue-t-elle chaque seconde ? (valeur de l’accélération, sans le signe)",
+     "reponse": 4,
+     "unite": "m/s²",
+     "aide": "a = Δv / Δt entre deux instants successifs.",
+     "explication": "a = (20 − 0) / 5 = **4 m/s²** : la vitesse varie linéairement, le mouvement est rectiligne uniformément décéléré."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La vitesse moyenne vaut 10 m/s sur ces 5 s. Quelle distance Sacha parcourt-il jusqu’à l’arrêt ?",
+     "reponse": 50,
+     "unite": "m",
+     "aide": "d = vitesse moyenne × durée.",
+     "explication": "d = 10 × 5 = **50 m** de freinage."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la direction et le sens du vecteur accélération pendant le freinage ?",
+     "options": [
+      "Même direction que la vitesse, sens opposé",
+      "Même direction et même sens que la vitesse",
+      "Perpendiculaire à la vitesse",
+      "Le vecteur accélération est nul"
+     ],
+     "reponse": 0,
+     "aide": "La vitesse diminue : l’accélération s’oppose au mouvement.",
+     "explication": "La variation du vecteur vitesse est dirigée vers l’arrière : l’accélération est **de même direction que la vitesse mais de sens opposé**."
+    }
+   ]
+  },
+  {
+   "chapitre": "255929a5-1e83-5840-8f4e-dfbbddfbbdef",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Noé lâche une balle depuis le balcon",
+   "competence": "modeliser",
+   "situation": "Noé lâche une balle du balcon et la filme. En pointant la vidéo image par image, il relève la vitesse de la balle. Son frère affirme qu’une balle lourde tombe plus vite qu’une balle légère.",
+   "documents": [
+    {
+     "id": "releve",
+     "type": "tableau",
+     "titre": "Pointage de la chute",
+     "colonnes": [
+      "Mesure",
+      "Départ",
+      "Image 1",
+      "Image 2",
+      "Image 3",
+      "Image 4"
+     ],
+     "lignes": [
+      [
+       "Temps t (s)",
+       0,
+       0.1,
+       0.2,
+       0.3,
+       0.4
+      ],
+      [
+       "Vitesse v (m/s)",
+       0,
+       0.98,
+       1.96,
+       2.94,
+       3.92
+      ]
+     ],
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Noé",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "🧒",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Yanis",
+       "texte": "Une balle de 5 kg tombe plus vite qu’une balle de tennis de 58 g, c’est évident."
+      },
+      {
+       "qui": "Noé",
+       "texte": "Alors mesurons l’accélération de la balle de tennis, sans frottements de l’air."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’accélération de la balle (a = Δv / Δt entre le départ et l’image 4) ?",
+     "reponse": 9.8,
+     "unite": "m/s²",
+     "aide": "Divise la variation de vitesse par la durée écoulée.",
+     "explication": "a = (3,92 − 0) / 0,4 = **9,8 m/s²**, c’est la valeur de g."
+    },
+    {
+     "type": "choix",
+     "enonce": "En chute libre (seule la pesanteur agit), qui a raison ?",
+     "options": [
+      "Les deux balles ont la même accélération",
+      "La balle de 5 kg accélère davantage",
+      "La balle de tennis accélère davantage",
+      "On ne peut pas le savoir"
+     ],
+     "reponse": 0,
+     "aide": "Applique la deuxième loi : Σ F = m × a, avec F = m × g.",
+     "explication": "P = m × g et P = m × a donnent **a = g**, quelle que soit la masse : la chute libre est indépendante de la masse."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Si la chute se prolonge, quelle serait la vitesse à t = 0,6 s ?",
+     "reponse": 5.88,
+     "tolerance": 0.01,
+     "unite": "m/s",
+     "aide": "L’accélération est constante : la vitesse varie linéairement avec le temps.",
+     "explication": "v = g × t = 9,8 × 0,6 = **5,88 m/s**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de temps dure la chute depuis un balcon à 4,9 m ? (h = ½ × g × t²)",
+     "reponse": 1,
+     "unite": "s",
+     "tolerance": 0.01,
+     "aide": "Isole t² : t² = 2h / g.",
+     "explication": "t² = 2 × 4,9 / 9,8 = 1, donc t = **1,0 s**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre la méthode pour étudier ce mouvement.",
+     "items": [
+      "Définir le système : la balle",
+      "Choisir le référentiel : le sol",
+      "Faire le bilan des forces : le poids seul",
+      "Appliquer la deuxième loi pour obtenir l’accélération",
+      "Intégrer pour obtenir la vitesse puis la position"
+     ],
+     "aide": "On commence par dire ce qu’on étudie, on finit par la position.",
+     "explication": "Système, référentiel, bilan des forces, deuxième loi, puis intégration : la **méthode est toujours la même**."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ed0e00f-4c44-549a-9dff-6092baa17ffe",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un astronaute sur la Lune",
+   "competence": "lire-tableau",
+   "situation": "Un astronaute de 80 kg, scaphandre compris, prépare une mission sur la Lune. Le centre de contrôle lui donne la valeur du champ de pesanteur de plusieurs astres.",
+   "documents": [
+    {
+     "id": "astres",
+     "type": "tableau",
+     "titre": "Champ de pesanteur à la surface",
+     "colonnes": [
+      "Astre",
+      "g (N/kg)"
+     ],
+     "lignes": [
+      [
+       "Terre",
+       9.8
+      ],
+      [
+       "Lune",
+       1.6
+      ],
+      [
+       "Mars",
+       3.7
+      ],
+      [
+       "Jupiter",
+       24.8
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "astres",
+     "enonce": "Touche la valeur de g à utiliser pour la Lune.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne « Lune », puis la colonne de g.",
+     "explication": "Sur la Lune, g ≈ **1,6 N/kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le poids de l’astronaute sur la Lune ?",
+     "reponse": 128,
+     "unite": "N",
+     "aide": "P = m × g.",
+     "explication": "P = 80 × 1,6 = **128 N**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les astres du poids le plus faible au poids le plus fort pour cet astronaute.",
+     "items": [
+      "Lune",
+      "Mars",
+      "Terre",
+      "Jupiter"
+     ],
+     "aide": "À masse égale, le poids est proportionnel à g.",
+     "explication": "P = m × g : plus g est grand, plus le poids est grand : **Lune, Mars, Terre, Jupiter**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la masse de l’astronaute sur la Lune ?",
+     "options": [
+      "80 kg",
+      "13 kg",
+      "128 kg",
+      "0 kg"
+     ],
+     "reponse": 0,
+     "aide": "La masse est une propriété du corps seul.",
+     "explication": "La masse est **invariable** : 80 kg partout. Seul le poids change avec l’astre."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ed0e00f-4c44-549a-9dff-6092baa17ffe",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La station spatiale et la gravité",
+   "competence": "analyser-document",
+   "situation": "Une station spatiale de 400 tonnes tourne autour de la Terre à 400 km d’altitude. Les astronautes y flottent. Louis veut savoir si la pesanteur y est vraiment absente.",
+   "documents": [
+    {
+     "id": "gh",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Champ gravitationnel de la Terre selon l’altitude",
+     "categories": [
+      "0 km",
+      "400 km",
+      "800 km",
+      "1 200 km",
+      "1 600 km"
+     ],
+     "series": [
+      {
+       "nom": "g",
+       "valeurs": [
+        9.8,
+        8.7,
+        7.7,
+        6.9,
+        6.3
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "g",
+      "unite": "N/kg",
+      "min": 0,
+      "max": 12,
+      "pas": 2
+     },
+     "axeX": {
+      "titre": "Altitude"
+     },
+     "valeurs": false,
+     "source": "Calculé avec g = G × M / (R + h)²"
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Constante de gravitation G",
+       "6,67 × 10⁻¹¹ (SI)"
+      ],
+      [
+       "Masse de la Terre M",
+       "5,97 × 10²⁴ kg"
+      ],
+      [
+       "Rayon de la Terre R",
+       "6 371 km"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gh",
+     "enonce": "Touche l’altitude où le champ gravitationnel vaut environ 7,7 N/kg.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche 7,7 sur l’axe vertical, puis descends vers l’altitude.",
+     "explication": "Le point à **800 km** est à 7,7 N/kg : g diminue quand l’altitude augmente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule g à 400 km d’altitude (d = R + h = 6 771 km). Arrondis au dixième.",
+     "reponse": 8.7,
+     "unite": "N/kg",
+     "tolerance": 0.05,
+     "aide": "g = G × M / d², avec d en mètres.",
+     "explication": "g = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ / (6,771 × 10⁶)² ≈ **8,7 N/kg**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle force la Terre exerce-t-elle sur la station de 400 t ? Réponds en MN (méganewtons), arrondi au dixième.",
+     "reponse": 3.5,
+     "unite": "MN",
+     "tolerance": 0.05,
+     "aide": "Convertis 400 t en kilogrammes, puis F = m × g.",
+     "explication": "F = 400 000 × 8,7 ≈ 3,5 × 10⁶ N, soit **3,5 MN**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les astronautes flottent-ils dans la station ?",
+     "options": [
+      "Ils tombent librement avec la station autour de la Terre",
+      "Il n’y a plus du tout de gravité à cette altitude",
+      "La gravité devient répulsive loin de la surface",
+      "Leur masse devient nulle dans l’espace"
+     ],
+     "reponse": 0,
+     "aide": "Compare avec g à 400 km : est-il nul ?",
+     "explication": "À 400 km, g vaut encore 8,7 N/kg. Les astronautes flottent parce qu’ils sont, comme la station, **en chute libre** autour de la Terre."
+    }
+   ]
+  },
+  {
+   "chapitre": "7ed0e00f-4c44-549a-9dff-6092baa17ffe",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La Terre et la Lune s’attirent",
+   "competence": "modeliser",
+   "situation": "La Lune reste en orbite autour de la Terre parce que les deux astres s’attirent. Chloé veut calculer cette force et la comparer à ce que la Terre produit à cet endroit.",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Les deux forces (pas à l’échelle)",
+     "largeur": 340,
+     "hauteur": 200,
+     "elements": [
+      {
+       "forme": "cercle",
+       "cx": 70,
+       "cy": 100,
+       "r": 42,
+       "teinte": "bleu",
+       "motif": "clair",
+       "texte": "Terre"
+      },
+      {
+       "forme": "cercle",
+       "cx": 272,
+       "cy": 100,
+       "r": 15,
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 132,
+       "texte": "Lune",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        254,
+        100
+       ],
+       "a": [
+        200,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "corail",
+       "id": "fTL",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        114,
+        100
+       ],
+       "a": [
+        168,
+        100
+       ],
+       "fleche": "fin",
+       "teinte": "corail",
+       "id": "fLT",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        70,
+        166
+       ],
+       "a": [
+        272,
+        166
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 171,
+       "y": 186,
+       "texte": "d = 384 000 km",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    },
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "G",
+       "6,67 × 10⁻¹¹ (SI)"
+      ],
+      [
+       "Masse de la Terre",
+       "5,97 × 10²⁴ kg"
+      ],
+      [
+       "Masse de la Lune",
+       "7,35 × 10²² kg"
+      ],
+      [
+       "Distance Terre–Lune d",
+       "3,84 × 10⁸ m"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche la force exercée par la Terre sur la Lune.",
+     "reponse": [
+      "fTL"
+     ],
+     "aide": "La force exercée sur la Lune est appliquée sur la Lune, vers la Terre.",
+     "explication": "La force de la Terre sur la Lune s’applique **sur la Lune** et pointe vers la Terre."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur de cette force, en 10²⁰ N, arrondie au dixième.",
+     "reponse": 2,
+     "unite": "× 10²⁰ N",
+     "tolerance": 0.05,
+     "aide": "F = G × m(Terre) × m(Lune) / d².",
+     "explication": "F = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ × 7,35 × 10²² / (3,84 × 10⁸)² ≈ **2,0 × 10²⁰ N**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que peut-on dire de la force exercée par la Lune sur la Terre ?",
+     "options": [
+      "Même valeur, sens opposé",
+      "Beaucoup plus petite, car la Lune est légère",
+      "Beaucoup plus grande, car la Lune est proche",
+      "Nulle, la Terre est immobile"
+     ],
+     "reponse": 0,
+     "aide": "Pense à la troisième loi de Newton : les deux forces portent sur deux corps.",
+     "explication": "Troisième loi : les actions réciproques ont **même valeur, même direction et sens opposés**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le champ gravitationnel de la Terre à la distance de la Lune, en 10⁻³ N/kg, arrondi au dixième.",
+     "reponse": 2.7,
+     "unite": "× 10⁻³ N/kg",
+     "tolerance": 0.05,
+     "aide": "g = G × M / d², avec la masse de la Terre.",
+     "explication": "g = 6,67 × 10⁻¹¹ × 5,97 × 10²⁴ / (3,84 × 10⁸)² ≈ **2,7 × 10⁻³ N/kg**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : on rapproche les deux astres.",
+     "texte": "Si la distance était divisée par 3, la force serait multipliée par ___.",
+     "reponses": [
+      [
+       "9",
+       "neuf"
+      ]
+     ],
+     "banque": [
+      "3",
+      "6",
+      "9",
+      "27"
+     ],
+     "aide": "La force varie en 1 / d².",
+     "explication": "F est proportionnelle à 1 / d² : 3² = **9** fois plus grande."
+    }
+   ]
+  },
+  {
+   "chapitre": "a769fb6e-3ec2-51a7-a2e8-df2686b54f21",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La règle qui attire les bouts de papier",
+   "competence": "experimenter",
+   "situation": "En classe, Inès frotte une règle en plastique avec un chiffon de laine. La règle attire alors de petits bouts de papier. Elle a étudié des billes chargées pour comprendre ce qui se passe.",
+   "documents": [
+    {
+     "id": "billes",
+     "type": "tableau",
+     "titre": "Quatre paires de billes chargées",
+     "colonnes": [
+      "Paire",
+      "Signes des charges"
+     ],
+     "lignes": [
+      [
+       "A et B",
+       "positive et positive"
+      ],
+      [
+       "C et D",
+       "positive et négative"
+      ],
+      [
+       "E et F",
+       "négative et négative"
+      ],
+      [
+       "G et H",
+       "négative et positive"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "billes",
+     "enonce": "Touche les cases des signes des deux paires de billes qui s’attirent.",
+     "reponse": [
+      "r1c1",
+      "r3c1"
+     ],
+     "multiple": true,
+     "aide": "Deux charges de signes contraires…",
+     "explication": "Des charges de **signes contraires** s’attirent : les paires C-D et G-H. Les charges de même signe se repoussent."
+    },
+    {
+     "type": "nombre",
+     "enonce": "En se frottant, la règle gagne 5,0 × 10⁹ électrons. Quelle charge porte-t-elle, en nanocoulombs (e = 1,6 × 10⁻¹⁹ C, 1 nC = 10⁻⁹ C) ?",
+     "reponse": 0.8,
+     "unite": "nC",
+     "tolerance": 0.01,
+     "aide": "q = nombre d’électrons × e (en valeur absolue), puis convertis en nC.",
+     "explication": "|q| = 5,0 × 10⁹ × 1,6 × 10⁻¹⁹ = 8,0 × 10⁻¹⁰ C = **0,8 nC**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le signe de la charge de la règle ?",
+     "options": [
+      "Négatif",
+      "Positif",
+      "Nul",
+      "Elle n’a pas de signe"
+     ],
+     "reponse": 0,
+     "aide": "La règle a gagné des électrons.",
+     "explication": "Un électron porte une charge négative : une règle qui en gagne est chargée **négativement**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a769fb6e-3ec2-51a7-a2e8-df2686b54f21",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le condensateur du flash",
+   "competence": "observer-schema",
+   "situation": "Dans un flash d’appareil photo, deux plaques parallèles sont reliées à une source de tension. Elles forment un condensateur plan. Zoé étudie ce qui arrive à un électron placé entre elles.",
+   "documents": [
+    {
+     "id": "cond",
+     "type": "schema",
+     "titre": "Un condensateur plan",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 40,
+       "l": 220,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "plaqueP",
+       "zone": true
+      },
+      {
+       "forme": "rect",
+       "x": 50,
+       "y": 172,
+       "l": 220,
+       "h": 8,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "plaqueM",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 36,
+       "y": 50,
+       "texte": "+",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 36,
+       "y": 182,
+       "texte": "−",
+       "taille": "grand",
+       "gras": true,
+       "ancre": "fin"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        80,
+        52
+       ],
+       "a": [
+        80,
+        168
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        130,
+        52
+       ],
+       "a": [
+        130,
+        168
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        180,
+        52
+       ],
+       "a": [
+        180,
+        168
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        230,
+        52
+       ],
+       "a": [
+        230,
+        168
+       ],
+       "fleche": "fin",
+       "teinte": "bleu"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        300,
+        44
+       ],
+       "a": [
+        300,
+        176
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "texte",
+       "x": 290,
+       "y": 112,
+       "texte": "d",
+       "ancre": "fin",
+       "italique": true
+      },
+      {
+       "forme": "texte",
+       "x": 160,
+       "y": 18,
+       "texte": "U = 200 V   ·   d = 5,0 mm",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur du champ électrique entre les plaques (E = U / d).",
+     "reponse": 40000,
+     "unite": "V/m",
+     "aide": "Convertis d en mètres : 5,0 mm = 5,0 × 10⁻³ m.",
+     "explication": "E = 200 / (5,0 × 10⁻³) = **40 000 V/m**."
+    },
+    {
+     "type": "zone",
+     "document": "cond",
+     "enonce": "Touche la plaque vers laquelle pointent les lignes de champ.",
+     "reponse": [
+      "plaqueM"
+     ],
+     "aide": "Regarde dans quel sens sont orientées les flèches.",
+     "explication": "Les lignes de champ vont de la plaque positive vers la plaque **négative** (celle du bas)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans quel sens l’électron est-il poussé ?",
+     "options": [
+      "Vers la plaque du haut, sens opposé au champ",
+      "Vers la plaque du bas, dans le sens du champ",
+      "Parallèlement aux plaques",
+      "Il reste immobile"
+     ],
+     "reponse": 0,
+     "aide": "F = q × E : que devient le sens de la force si q est négative ?",
+     "explication": "Pour une charge négative, la force est de **sens opposé au champ** : l’électron est attiré par la plaque positive."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la valeur de la force sur l’électron (|q| = 1,6 × 10⁻¹⁹ C), en 10⁻¹⁵ N.",
+     "reponse": 6.4,
+     "unite": "× 10⁻¹⁵ N",
+     "tolerance": 0.05,
+     "aide": "F = |q| × E, avec E calculé plus haut.",
+     "explication": "F = 1,6 × 10⁻¹⁹ × 40 000 = 6,4 × 10⁻¹⁵ N, soit **6,4 × 10⁻¹⁵ N**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a769fb6e-3ec2-51a7-a2e8-df2686b54f21",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Deux protons : électricité contre gravitation",
+   "competence": "argumenter",
+   "situation": "Camille affirme que l’attraction de la gravitation et la force de Coulomb sont comparables, puisqu’elles s’écrivent de la même façon. Jules propose de tester sur deux protons séparés de 1,0 × 10⁻¹⁰ m.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données",
+     "colonnes": [
+      "Grandeur",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Charge élémentaire e",
+       "1,60 × 10⁻¹⁹ C"
+      ],
+      [
+       "Masse d’un proton",
+       "1,67 × 10⁻²⁷ kg"
+      ],
+      [
+       "Constante de Coulomb k",
+       "9,0 × 10⁹ (SI)"
+      ],
+      [
+       "Constante de gravitation G",
+       "6,67 × 10⁻¹¹ (SI)"
+      ]
+     ]
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Camille",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Jules",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Camille",
+       "texte": "Les deux lois sont en 1/d², donc les deux forces doivent avoir à peu près la même intensité."
+      },
+      {
+       "qui": "Jules",
+       "texte": "Calculons-les pour deux protons, et comparons."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule la force électrique entre les deux protons (F = k × e² / d²), en 10⁻⁸ N.",
+     "reponse": 2.3,
+     "unite": "× 10⁻⁸ N",
+     "tolerance": 0.05,
+     "aide": "Les deux charges valent e, et d = 1,0 × 10⁻¹⁰ m.",
+     "explication": "F = 9,0 × 10⁹ × (1,60 × 10⁻¹⁹)² / (1,0 × 10⁻¹⁰)² ≈ **2,3 × 10⁻⁸ N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’attraction gravitationnelle entre les mêmes protons (F = G × m² / d²), en 10⁻⁴⁴ N.",
+     "reponse": 1.9,
+     "unite": "× 10⁻⁴⁴ N",
+     "tolerance": 0.05,
+     "aide": "Les deux masses valent 1,67 × 10⁻²⁷ kg.",
+     "explication": "F = 6,67 × 10⁻¹¹ × (1,67 × 10⁻²⁷)² / (1,0 × 10⁻¹⁰)² ≈ **1,9 × 10⁻⁴⁴ N**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le rapport entre la force électrique et la force gravitationnelle est de l’ordre de 10ⁿ. Que vaut n ?",
+     "reponse": 36,
+     "aide": "Divise 2,3 × 10⁻⁸ par 1,9 × 10⁻⁴⁴ : regarde la puissance de 10.",
+     "explication": "2,3 × 10⁻⁸ / 1,9 × 10⁻⁴⁴ ≈ 1,2 × 10³⁶ : la répulsion électrique est environ 10³⁶ fois plus grande, donc n = **36**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On double la distance entre les protons. Par combien la force électrique est-elle divisée ?",
+     "options": [
+      "4",
+      "2",
+      "8",
+      "16"
+     ],
+     "reponse": 0,
+     "ordreFixe": true,
+     "aide": "La loi de Coulomb est en 1 / d².",
+     "explication": "F ∝ 1 / d² : doubler d divise F par 2² = **4**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser de l’affirmation de Camille ?",
+     "options": [
+      "Fausse : même forme, mais intensités sans commune mesure",
+      "Vraie : les deux forces sont du même ordre de grandeur",
+      "Fausse : la loi de Coulomb n’est pas en 1/d²",
+      "Vraie : la gravitation l’emporte à l’échelle atomique"
+     ],
+     "reponse": 0,
+     "aide": "Compare tes deux résultats.",
+     "explication": "Les deux lois sont en 1/d², mais la force électrique est environ 10³⁶ fois plus grande : **Camille se trompe**."
+    }
+   ]
+  },
+  {
+   "chapitre": "53b2a3d8-eb6a-5324-9e93-684804a04677",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Mathilde compte entre l’éclair et le tonnerre",
+   "competence": "lire-tableau",
+   "situation": "Pendant un orage, Mathilde voit un éclair, puis entend le tonnerre 6 secondes plus tard. Elle consulte la célérité du son dans plusieurs milieux.",
+   "documents": [
+    {
+     "id": "celerites",
+     "type": "tableau",
+     "titre": "Célérité du son",
+     "colonnes": [
+      "Milieu",
+      "Célérité (m/s)"
+     ],
+     "lignes": [
+      [
+       "Air",
+       340
+      ],
+      [
+       "Eau",
+       1500
+      ],
+      [
+       "Acier",
+       5000
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "celerites",
+     "enonce": "Touche la célérité du son dans le milieu où il se propage le plus vite.",
+     "reponse": [
+      "r2c1"
+     ],
+     "aide": "Plus le milieu est rigide, plus l’onde va vite.",
+     "explication": "Le son va le plus vite dans l’**acier** : 5 000 m/s."
+    },
+    {
+     "type": "nombre",
+     "enonce": "À quelle distance Mathilde est-elle de l’orage ? (le son va à 340 m/s dans l’air, la lumière est quasi instantanée)",
+     "reponse": 2040,
+     "unite": "m",
+     "aide": "Le retard de 6 s est la durée du trajet du son.",
+     "explication": "d = v × τ = 340 × 6 = **2 040 m**, soit environ 2 km."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi Mathilde voit-elle l’éclair avant d’entendre le tonnerre ?",
+     "options": [
+      "La lumière se propage bien plus vite que le son",
+      "Le son part de l’orage plus tard que la lumière",
+      "La lumière est une onde mécanique",
+      "Le tonnerre est produit par l’éclair après un délai"
+     ],
+     "reponse": 0,
+     "aide": "Compare 3,00 × 10⁸ m/s et 340 m/s.",
+     "explication": "La lumière va à environ 3,00 × 10⁸ m/s, le son à 340 m/s : la **lumière arrive presque instantanément**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Le même bruit voyage dans un rail d’acier sur 2 040 m. Quelle durée met-il ? (arrondi au centième de seconde)",
+     "reponse": 0.41,
+     "unite": "s",
+     "tolerance": 0.005,
+     "aide": "τ = d / v, avec la célérité dans l’acier.",
+     "explication": "τ = 2 040 / 5 000 ≈ **0,41 s**."
+    }
+   ]
+  },
+  {
+   "chapitre": "53b2a3d8-eb6a-5324-9e93-684804a04677",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le signal d’une corde de guitare",
+   "competence": "lire-graphique",
+   "situation": "Pour étudier une note jouée sur une guitare, Elias enregistre le signal d’un microphone : il obtient une courbe qui se répète. Le son se propage dans l’air à 340 m/s.",
+   "documents": [
+    {
+     "id": "signal",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Signal du microphone",
+     "categories": [
+      "0",
+      "0,5",
+      "1",
+      "1,5",
+      "2",
+      "2,5",
+      "3",
+      "3,5",
+      "4",
+      "4,5",
+      "5",
+      "5,5",
+      "6",
+      "6,5",
+      "7"
+     ],
+     "series": [
+      {
+       "nom": "Signal",
+       "valeurs": [
+        0,
+        7,
+        10,
+        7,
+        0,
+        -7,
+        -10,
+        -7,
+        0,
+        7,
+        10,
+        7,
+        0,
+        -7,
+        -10
+       ],
+       "teinte": "turquoise"
+      }
+     ],
+     "axeY": {
+      "titre": "Signal",
+      "unite": "unités arbitraires",
+      "min": -12,
+      "max": 12,
+      "pas": 4
+     },
+     "axeX": {
+      "titre": "Temps (ms)"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "signal",
+     "enonce": "Touche l’instant où le signal atteint son premier maximum.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche le premier sommet de la courbe.",
+     "explication": "Le premier maximum est à **1 ms**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la période du signal (durée d’un motif complet) ?",
+     "reponse": 4,
+     "unite": "ms",
+     "tolerance": 0.01,
+     "aide": "Mesure la durée entre deux maximums consécutifs : 1 ms et 5 ms.",
+     "explication": "Deux maximums sont séparés par 5 − 1 = **4 ms** : c’est la période T."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence de la note (f = 1 / T).",
+     "reponse": 250,
+     "unite": "Hz",
+     "tolerance": 0.5,
+     "aide": "Convertis T en secondes : 4 ms = 0,004 s.",
+     "explication": "f = 1 / 0,004 = **250 Hz**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde de cette note dans l’air (λ = v × T).",
+     "reponse": 1.36,
+     "unite": "m",
+     "tolerance": 0.005,
+     "aide": "λ est la distance parcourue pendant une période.",
+     "explication": "λ = 340 × 0,004 = **1,36 m**."
+    },
+    {
+     "type": "choix",
+     "enonce": "De quelle nature est le son de la guitare dans l’air ?",
+     "options": [
+      "Une onde mécanique longitudinale",
+      "Une onde mécanique transversale",
+      "Une onde électromagnétique",
+      "Une onde qui transporte de la matière"
+     ],
+     "reponse": 0,
+     "aide": "L’air est comprimé et dilaté dans la direction de propagation.",
+     "explication": "Le son est une onde **mécanique** (il lui faut l’air) et **longitudinale** : la perturbation est parallèle à la propagation."
+    }
+   ]
+  },
+  {
+   "chapitre": "53b2a3d8-eb6a-5324-9e93-684804a04677",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le sondeur du bateau de pêche",
+   "competence": "modeliser",
+   "situation": "Le sondeur d’un chalutier envoie une impulsion ultrasonore vers le fond de la mer et capte son écho. Le patron veut connaître la profondeur et la longueur d’onde utilisée.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Sondeur ultrasonore",
+     "emoji": "📡",
+     "lignes": [
+      {
+       "texte": "Fréquence émise",
+       "valeur": "50 kHz",
+       "id": "freq"
+      },
+      {
+       "texte": "Retard de l’écho",
+       "valeur": "0,24 s",
+       "id": "retard"
+      },
+      {
+       "texte": "Célérité dans l’eau",
+       "valeur": "1 500 m/s",
+       "id": "celerite"
+      }
+     ]
+    },
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Le trajet de l’onde",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 20,
+       "y": 66,
+       "l": 300,
+       "h": 130,
+       "teinte": "bleu",
+       "motif": "clair"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         20,
+         196
+        ],
+        [
+         20,
+         186
+        ],
+        [
+         90,
+         182
+        ],
+        [
+         160,
+         190
+        ],
+        [
+         240,
+         180
+        ],
+        [
+         320,
+         186
+        ],
+        [
+         320,
+         196
+        ]
+       ],
+       "teinte": "brun",
+       "motif": "plein"
+      },
+      {
+       "forme": "polygone",
+       "points": [
+        [
+         120,
+         66
+        ],
+        [
+         128,
+         52
+        ],
+        [
+         214,
+         52
+        ],
+        [
+         226,
+         66
+        ]
+       ],
+       "teinte": "gris",
+       "motif": "plein"
+      },
+      {
+       "forme": "rect",
+       "x": 156,
+       "y": 36,
+       "l": 20,
+       "h": 16,
+       "teinte": "gris",
+       "motif": "clair"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        150,
+        72
+       ],
+       "a": [
+        150,
+        176
+       ],
+       "fleche": "fin",
+       "teinte": "corail",
+       "id": "aller",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        196,
+        176
+       ],
+       "a": [
+        196,
+        72
+       ],
+       "fleche": "fin",
+       "teinte": "corail",
+       "id": "retour",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 270,
+       "y": 120,
+       "texte": "Mer",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 60,
+       "y": 212,
+       "texte": "Fond marin",
+       "taille": "petit",
+       "ancre": "milieu"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche le trajet de l’écho.",
+     "reponse": [
+      "retour"
+     ],
+     "aide": "L’écho est l’onde réfléchie : dans quel sens va-t-elle ?",
+     "explication": "L’écho est l’onde **réfléchie par le fond**, qui remonte vers le bateau."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les étapes de la mesure dans l’ordre.",
+     "items": [
+      "Le sondeur émet une impulsion ultrasonore",
+      "L’onde descend jusqu’au fond",
+      "Elle se réfléchit sur le fond",
+      "L’écho remonte jusqu’au bateau",
+      "Le sondeur mesure le retard"
+     ],
+     "aide": "Suis l’onde de l’émission à la réception.",
+     "explication": "Émission, descente, réflexion, remontée, mesure du retard : le trajet est un **aller-retour**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la profondeur de l’eau ?",
+     "reponse": 180,
+     "unite": "m",
+     "aide": "Le retard correspond à l’aller ET au retour.",
+     "explication": "L’onde parcourt 2 d : d = v × τ / 2 = 1 500 × 0,24 / 2 = **180 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la longueur d’onde dans l’eau (λ = v / f), en centimètres.",
+     "reponse": 3,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Convertis 50 kHz en hertz.",
+     "explication": "λ = 1 500 / 50 000 = 0,030 m, soit **3,0 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "La fréquence de l’onde change-t-elle quand elle passe de l’air à l’eau ?",
+     "options": [
+      "Non, elle est imposée par la source",
+      "Oui, elle augmente dans l’eau",
+      "Oui, elle diminue dans l’eau",
+      "Elle devient nulle"
+     ],
+     "reponse": 0,
+     "aide": "Qui impose la fréquence : le milieu ou la source ?",
+     "explication": "La fréquence est fixée par la **source** : seules la célérité et la longueur d’onde changent avec le milieu."
+    }
+   ]
+  },
+  {
+   "chapitre": "86f87372-c27c-59c2-ad7a-e36c07617046",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les ondes qui nous entourent",
+   "competence": "lire-tableau",
+   "situation": "Dans la maison de Samir, des objets du quotidien utilisent des ondes électromagnétiques, chacune avec sa longueur d’onde. Il les range dans un tableau.",
+   "documents": [
+    {
+     "id": "usages",
+     "type": "tableau",
+     "titre": "Cinq usages, cinq longueurs d’onde",
+     "colonnes": [
+      "Usage",
+      "Longueur d’onde"
+     ],
+     "lignes": [
+      [
+       "Télécommande de la télé",
+       "940 nm"
+      ],
+      [
+       "Four à micro-ondes",
+       "12 cm"
+      ],
+      [
+       "Bronzage au soleil",
+       "300 nm"
+      ],
+      [
+       "Radiographie",
+       "0,1 nm"
+      ],
+      [
+       "Feu tricolore (lumière verte)",
+       "530 nm"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "usages",
+     "enonce": "Une seule de ces longueurs d’onde est dans le domaine visible (400 à 800 nm). Touche-la.",
+     "reponse": [
+      "r4c1"
+     ],
+     "aide": "Cherche la valeur comprise entre 400 et 800 nm.",
+     "explication": "**530 nm** est dans le visible : la lumière verte du feu."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque usage à son domaine d’ondes.",
+     "paires": [
+      [
+       "Télécommande",
+       "Infrarouge"
+      ],
+      [
+       "Four à micro-ondes",
+       "Micro-ondes"
+      ],
+      [
+       "Bronzage",
+       "Ultraviolet"
+      ],
+      [
+       "Radiographie",
+       "Rayons X"
+      ]
+     ],
+     "aide": "Compare les longueurs d’onde du tableau avec celles du cours.",
+     "explication": "940 nm : infrarouge ; 12 cm : micro-ondes ; 300 nm : ultraviolet ; 0,1 nm : rayons X."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel usage met en jeu les ondes les plus énergétiques ?",
+     "options": [
+      "La radiographie",
+      "Le four à micro-ondes",
+      "La télécommande",
+      "Le feu tricolore"
+     ],
+     "reponse": 0,
+     "aide": "Plus la longueur d’onde est petite, plus l’énergie est grande.",
+     "explication": "La longueur d’onde la plus petite est 0,1 nm : les **rayons X** sont les plus énergétiques de la liste."
+    }
+   ]
+  },
+  {
+   "chapitre": "86f87372-c27c-59c2-ad7a-e36c07617046",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Quel gaz se cache dans cette étoile ?",
+   "competence": "analyser-document",
+   "situation": "Un astronome analyse la lumière d’une étoile : sur un fond continu, il relève quatre raies noires. Il veut identifier le gaz qui les produit.",
+   "documents": [
+    {
+     "id": "raies",
+     "type": "graphique",
+     "forme": "barres",
+     "titre": "Raies noires observées dans l’étoile",
+     "categories": [
+      "410 nm",
+      "434 nm",
+      "486 nm",
+      "656 nm"
+     ],
+     "series": [
+      {
+       "nom": "Absorption",
+       "valeurs": [
+        35,
+        50,
+        70,
+        95
+       ],
+       "teinte": "encre"
+      }
+     ],
+     "axeY": {
+      "titre": "Profondeur de la raie",
+      "unite": "u.a.",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Longueur d’onde"
+     },
+     "valeurs": false,
+     "source": "Valeurs arrondies, écrites pour l’exercice"
+    },
+    {
+     "id": "catalogue",
+     "type": "tableau",
+     "titre": "Raies d’émission de trois gaz",
+     "colonnes": [
+      "Gaz",
+      "Raies d’émission (nm)"
+     ],
+     "lignes": [
+      [
+       "Hydrogène",
+       "410 · 434 · 486 · 656"
+      ],
+      [
+       "Sodium",
+       "589 · 590"
+      ],
+      [
+       "Hélium",
+       "447 · 502 · 588 · 668"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "raies",
+     "enonce": "Touche la raie la plus proche du rouge.",
+     "reponse": [
+      "k3"
+     ],
+     "aide": "Parmi les longueurs d’onde du visible, la plus grande approche 800 nm.",
+     "explication": "La raie à **656 nm** est la plus proche du rouge (le visible va jusqu’à 800 nm)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel gaz est présent dans l’atmosphère de cette étoile ?",
+     "options": [
+      "L’hydrogène",
+      "Le sodium",
+      "L’hélium",
+      "Aucun des trois"
+     ],
+     "reponse": 0,
+     "aide": "Les raies noires sont aux mêmes longueurs d’onde que les raies d’émission du gaz.",
+     "explication": "Les quatre raies noires (410, 434, 486, 656 nm) sont exactement celles de l’**hydrogène**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence de la raie à 656 nm (f = c / λ, c = 3,00 × 10⁸ m/s), en 10¹⁴ Hz, arrondie au dixième.",
+     "reponse": 4.6,
+     "unite": "× 10¹⁴ Hz",
+     "tolerance": 0.05,
+     "aide": "Convertis 656 nm en mètres : 656 × 10⁻⁹ m.",
+     "explication": "f = 3,00 × 10⁸ / 656 × 10⁻⁹ ≈ **4,6 × 10¹⁴ Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi les raies sont-elles noires et non colorées ?",
+     "options": [
+      "Le gaz froid absorbe, devant l’étoile, ces longueurs d’onde",
+      "Le gaz émet ces longueurs d’onde sur un fond noir",
+      "L’étoile n’émet rien à ces longueurs d’onde",
+      "Le gaz est trop chaud pour émettre"
+     ],
+     "reponse": 0,
+     "aide": "Pense au spectre d’absorption : lumière blanche traversant un gaz froid.",
+     "explication": "Le gaz entourant l’étoile **absorbe** exactement les longueurs d’onde qu’il émettrait : d’où les raies noires."
+    }
+   ]
+  },
+  {
+   "chapitre": "86f87372-c27c-59c2-ad7a-e36c07617046",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Trois lampes et deux étoiles",
+   "competence": "analyser-document",
+   "situation": "Pour un exposé, Lina compare trois sources de lumière puis deux étoiles de températures différentes. Elle dispose d’observations et d’une courbe.",
+   "documents": [
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Observations au spectroscope",
+     "colonnes": [
+      "Source",
+      "Ce qu’on observe"
+     ],
+     "lignes": [
+      [
+       "Filament d’une ampoule",
+       "Toutes les couleurs, sans interruption"
+      ],
+      [
+       "Lampe à sodium d’un parking",
+       "Deux raies jaunes sur fond noir"
+      ],
+      [
+       "Lumière du Soleil",
+       "Fond continu barré de fines raies noires"
+      ]
+     ],
+     "source": "Observations simplifiées"
+    },
+    {
+     "id": "etoiles",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Spectres continus de deux étoiles",
+     "categories": [
+      "300 nm",
+      "400 nm",
+      "500 nm",
+      "600 nm",
+      "700 nm",
+      "800 nm",
+      "900 nm"
+     ],
+     "series": [
+      {
+       "nom": "Étoile A",
+       "valeurs": [
+        5,
+        14,
+        30,
+        52,
+        74,
+        82,
+        70
+       ],
+       "teinte": "corail"
+      },
+      {
+       "nom": "Étoile B",
+       "valeurs": [
+        70,
+        100,
+        90,
+        70,
+        52,
+        38,
+        28
+       ],
+       "teinte": "bleu"
+      }
+     ],
+     "axeY": {
+      "titre": "Intensité",
+      "unite": "u.a.",
+      "min": 0,
+      "max": 100,
+      "pas": 20
+     },
+     "axeX": {
+      "titre": "Longueur d’onde"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Classe chaque observation selon le type de spectre.",
+     "categories": [
+      "Spectre continu",
+      "Raies d’émission",
+      "Raies d’absorption"
+     ],
+     "items": [
+      [
+       "Toutes les couleurs, sans interruption",
+       0
+      ],
+      [
+       "Deux raies jaunes sur fond noir",
+       1
+      ],
+      [
+       "Fond continu barré de raies noires",
+       2
+      ],
+      [
+       "Quelques raies colorées d’un néon sur fond noir",
+       1
+      ]
+     ],
+     "aide": "Continu : un corps chaud. Émission : un gaz excité. Absorption : un gaz froid devant un fond continu.",
+     "explication": "Un filament chaud donne un spectre **continu** ; un gaz excité donne des **raies d’émission** ; la lumière du Soleil traversant des gaz froids donne des **raies d’absorption**."
+    },
+    {
+     "type": "zone",
+     "document": "etoiles",
+     "enonce": "Touche la longueur d’onde où l’étoile A émet le plus.",
+     "reponse": [
+      "k5"
+     ],
+     "aide": "Cherche le sommet de sa courbe.",
+     "explication": "L’étoile A passe par son maximum à **800 nm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étoile est la plus chaude ?",
+     "options": [
+      "L’étoile B",
+      "L’étoile A",
+      "Elles ont la même température",
+      "On ne peut pas comparer"
+     ],
+     "reponse": 0,
+     "aide": "Quand la température augmente, le maximum du spectre continu se déplace vers…",
+     "explication": "Le maximum de B est vers 400 nm : il est décalé **vers les courtes longueurs d’onde**, donc B est plus chaude."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence correspondant au maximum de l’étoile B (400 nm), en 10¹⁴ Hz.",
+     "reponse": 7.5,
+     "unite": "× 10¹⁴ Hz",
+     "tolerance": 0.05,
+     "aide": "f = c / λ avec c = 3,00 × 10⁸ m/s.",
+     "explication": "f = 3,00 × 10⁸ / (400 × 10⁻⁹) = **7,5 × 10¹⁴ Hz**."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range ces ondes par longueur d’onde croissante.",
+     "items": [
+      "Rayons X",
+      "Ultraviolet",
+      "Lumière visible",
+      "Infrarouge",
+      "Micro-ondes"
+     ],
+     "aide": "Le visible va de 400 à 800 nm.",
+     "explication": "Des plus courtes aux plus longues : rayons X, ultraviolet, visible, infrarouge, micro-ondes."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b5e03ba-7f8c-599e-9f25-3c47a9d0533e",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le pointeur laser de la conférence",
+   "competence": "calculer",
+   "situation": "Pendant une conférence, Hugo utilise un pointeur laser. Il lit sur son boîtier la longueur d’onde de la lumière émise et veut calculer l’énergie de chaque photon (h = 6,63 × 10⁻³⁴ J·s, c = 3,00 × 10⁸ m/s, 1 eV = 1,60 × 10⁻¹⁹ J).",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Pointeur laser — classe 2",
+     "emoji": "🔦",
+     "lignes": [
+      {
+       "texte": "Longueur d’onde",
+       "valeur": "532 nm",
+       "id": "lambda"
+      },
+      {
+       "texte": "Puissance",
+       "valeur": "< 1 mW",
+       "id": "puissance"
+      },
+      {
+       "texte": "Couleur du faisceau",
+       "valeur": "verte",
+       "id": "couleur"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la ligne qui donne la longueur d’onde de la lumière.",
+     "reponse": [
+      "lambda"
+     ],
+     "aide": "La longueur d’onde se mesure en nanomètres.",
+     "explication": "La longueur d’onde est **532 nm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie d’un photon (E = h × c / λ), en 10⁻¹⁹ J, arrondie au dixième.",
+     "reponse": 3.7,
+     "unite": "× 10⁻¹⁹ J",
+     "tolerance": 0.05,
+     "aide": "Convertis 532 nm en mètres : 532 × 10⁻⁹ m.",
+     "explication": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / (532 × 10⁻⁹) ≈ **3,7 × 10⁻¹⁹ J**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Convertis cette énergie en électronvolts, arrondie au dixième.",
+     "reponse": 2.3,
+     "unite": "eV",
+     "tolerance": 0.05,
+     "aide": "Divise par 1,60 × 10⁻¹⁹ J.",
+     "explication": "3,74 × 10⁻¹⁹ / 1,60 × 10⁻¹⁹ ≈ **2,3 eV**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un laser rouge (650 nm) donne-t-il des photons plus ou moins énergétiques que ce laser ?",
+     "options": [
+      "Moins énergétiques",
+      "Plus énergétiques",
+      "Aussi énergétiques",
+      "Cela dépend de la puissance"
+     ],
+     "reponse": 0,
+     "aide": "E = h × c / λ : que se passe-t-il quand λ augmente ?",
+     "explication": "650 nm > 532 nm : E est **plus petite** pour 650 nm (photon moins énergétique)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b5e03ba-7f8c-599e-9f25-3c47a9d0533e",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "L’atome d’hydrogène absorbe ou émet",
+   "competence": "observer-schema",
+   "situation": "Dans une lampe à hydrogène, les atomes sont excités puis se désexcitent. Océane étudie le diagramme d’énergie de l’atome (h = 6,63 × 10⁻³⁴ J·s, 1 eV = 1,60 × 10⁻¹⁹ J).",
+   "documents": [
+    {
+     "id": "niv",
+     "type": "schema",
+     "titre": "Niveaux d’énergie (non à l’échelle)",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 46,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "n4",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 54,
+       "texte": "n = 4",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 54,
+       "texte": "−0,85 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 80,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "n3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 88,
+       "texte": "n = 3",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 88,
+       "texte": "−1,51 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 122,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "n2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 130,
+       "texte": "n = 2",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 130,
+       "texte": "−3,40 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 196,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "n1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 204,
+       "texte": "n = 1",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 204,
+       "texte": "−13,6 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        214
+       ],
+       "a": [
+        40,
+        20
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 34,
+       "y": 124,
+       "texte": "E",
+       "italique": true,
+       "ancre": "fin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "niv",
+     "enonce": "Touche le niveau de l’état fondamental.",
+     "reponse": [
+      "n1"
+     ],
+     "aide": "C’est le niveau d’énergie le plus bas.",
+     "explication": "L’état fondamental est le niveau le plus bas : **n = 1**, à −13,6 eV."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un atome passe du niveau n = 3 au niveau n = 2. Quelle énergie a le photon émis, en eV ?",
+     "reponse": 1.89,
+     "unite": "eV",
+     "tolerance": 0.01,
+     "aide": "E(photon) = E(haut) − E(bas).",
+     "explication": "E = −1,51 − (−3,40) = **1,89 eV**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la fréquence de ce photon (f = E / h), en 10¹⁴ Hz, arrondie au dixième.",
+     "reponse": 4.6,
+     "unite": "× 10¹⁴ Hz",
+     "tolerance": 0.05,
+     "aide": "Convertis 1,89 eV en joules avant de diviser par h.",
+     "explication": "1,89 × 1,60 × 10⁻¹⁹ = 3,02 × 10⁻¹⁹ J ; f = 3,02 × 10⁻¹⁹ / 6,63 × 10⁻³⁴ ≈ **4,6 × 10¹⁴ Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un atome d’hydrogène dans son état fondamental reçoit un photon de 5,0 eV. Que se passe-t-il ?",
+     "options": [
+      "Le photon n’est pas absorbé",
+      "Le photon est absorbé et l’atome passe en n = 2",
+      "Le photon est absorbé et l’atome passe en n = 3",
+      "Le photon est transformé en deux photons"
+     ],
+     "reponse": 0,
+     "aide": "Calcule l’écart entre n = 1 et n = 2.",
+     "explication": "L’écart n = 1 → n = 2 vaut 10,2 eV : un photon de 5,0 eV ne correspond à **aucun écart** entre niveaux, il n’est pas absorbé."
+    }
+   ]
+  },
+  {
+   "chapitre": "3b5e03ba-7f8c-599e-9f25-3c47a9d0533e",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "LED, laser et niveaux d’énergie",
+   "competence": "argumenter",
+   "situation": "Un fabricant compare trois LED, puis étudie un matériau pour un laser dont les atomes ont trois niveaux d’énergie (h = 6,63 × 10⁻³⁴ J·s, c = 3,00 × 10⁸ m/s, 1 eV = 1,60 × 10⁻¹⁹ J).",
+   "documents": [
+    {
+     "id": "led",
+     "type": "tableau",
+     "titre": "Trois LED",
+     "colonnes": [
+      "LED",
+      "Longueur d’onde"
+     ],
+     "lignes": [
+      [
+       "LED rouge",
+       "630 nm"
+      ],
+      [
+       "LED verte",
+       "520 nm"
+      ],
+      [
+       "LED bleue",
+       "450 nm"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "niv",
+     "type": "schema",
+     "titre": "Trois niveaux d’un matériau laser (non à l’échelle)",
+     "largeur": 340,
+     "hauteur": 230,
+     "elements": [
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 40,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "e3",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 48,
+       "texte": "E₃",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 48,
+       "texte": "−1,0 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 100,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "e2",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 108,
+       "texte": "E₂",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 108,
+       "texte": "−2,5 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "rect",
+       "x": 110,
+       "y": 190,
+       "l": 130,
+       "h": 6,
+       "teinte": "encre",
+       "motif": "plein",
+       "id": "e1",
+       "zone": true
+      },
+      {
+       "forme": "texte",
+       "x": 98,
+       "y": 198,
+       "texte": "E₁",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 260,
+       "y": 198,
+       "texte": "−4,0 eV",
+       "taille": "petit"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        214
+       ],
+       "a": [
+        40,
+        20
+       ],
+       "fleche": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 34,
+       "y": 124,
+       "texte": "E",
+       "italique": true,
+       "ancre": "fin"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Classe les LED par énergie de photon croissante.",
+     "items": [
+      "LED rouge (630 nm)",
+      "LED verte (520 nm)",
+      "LED bleue (450 nm)"
+     ],
+     "aide": "E = h × c / λ : plus λ est petite, plus E est grande.",
+     "explication": "E augmente quand λ diminue : rouge (630 nm) < verte (520 nm) < bleue (450 nm)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule l’énergie d’un photon de la LED bleue, en eV, arrondie au centième.",
+     "reponse": 2.76,
+     "unite": "eV",
+     "tolerance": 0.01,
+     "aide": "E = h × c / λ en joules, puis divise par 1,60 × 10⁻¹⁹.",
+     "explication": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ / (450 × 10⁻⁹) = 4,42 × 10⁻¹⁹ J, soit **2,76 eV**."
+    },
+    {
+     "type": "zone",
+     "document": "niv",
+     "enonce": "Touche le niveau d’énergie le plus élevé du matériau.",
+     "reponse": [
+      "e3"
+     ],
+     "aide": "Les énergies sont négatives : la plus haute est la plus proche de zéro.",
+     "explication": "−1,0 eV est la plus grande des trois valeurs : c’est le niveau **E₃**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Un photon est émis quand l’atome passe de E₃ à E₁. Quelle est sa fréquence, en 10¹⁴ Hz, arrondie au dixième ?",
+     "reponse": 7.2,
+     "unite": "× 10¹⁴ Hz",
+     "tolerance": 0.05,
+     "aide": "Calcule d’abord l’écart d’énergie en eV, puis en joules.",
+     "explication": "ΔE = −1,0 − (−4,0) = 3,0 eV = 4,8 × 10⁻¹⁹ J ; f = ΔE / h ≈ **7,2 × 10¹⁴ Hz**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Un photon de 1,5 eV peut être absorbé lors de quelles transitions ?",
+     "options": [
+      "Du niveau le plus bas au niveau intermédiaire",
+      "Du niveau intermédiaire au niveau le plus haut",
+      "Du niveau le plus bas au niveau le plus haut",
+      "Du niveau le plus haut au niveau le plus bas"
+     ],
+     "reponse": [
+      0,
+      1
+     ],
+     "aide": "Calcule les écarts entre niveaux : un photon n’est absorbé que s’il correspond exactement.",
+     "explication": "E₂ − E₁ = 1,5 eV et E₃ − E₂ = 1,5 eV : **du niveau le plus bas à l’intermédiaire (E₁ → E₂) et de l’intermédiaire au plus haut (E₂ → E₃)**. E₁ → E₃ demande 3,0 eV, et E₃ → E₁ est une émission."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bba2f4e-7fc7-506a-b995-aa81f24340d8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La loupe de Camille",
+   "competence": "lire-tableau",
+   "situation": "Camille collectionne les timbres. Elle lit les caractéristiques de sa loupe, une lentille mince convergente, et se demande comment les rayons la traversent.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Loupe de lecture",
+     "emoji": "🔍",
+     "lignes": [
+      {
+       "texte": "Vergence",
+       "valeur": "10 δ",
+       "id": "vergence"
+      },
+      {
+       "texte": "Diamètre",
+       "valeur": "6,0 cm",
+       "id": "diametre"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fiche",
+     "enonce": "Touche la caractéristique qui indique à quel point la lentille est convergente.",
+     "reponse": [
+      "vergence"
+     ],
+     "aide": "Elle s’exprime en dioptries (δ).",
+     "explication": "C’est la **vergence** : 10 δ. Plus elle est grande, plus la lentille est convergente."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la distance focale de la loupe, en centimètres (f’ = 1 / C).",
+     "reponse": 10,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "Calcule d’abord f’ en mètres.",
+     "explication": "f’ = 1 / 10 = 0,10 m = **10 cm**."
+    },
+    {
+     "type": "association",
+     "enonce": "Associe chaque rayon incident à son devenir après la lentille.",
+     "paires": [
+      [
+       "Passe par le centre optique O",
+       "Il n’est pas dévié"
+      ],
+      [
+       "Parallèle à l’axe optique",
+       "Il passe par le foyer image F’"
+      ],
+      [
+       "Passe par le foyer objet F",
+       "Il ressort parallèle à l’axe"
+      ]
+     ],
+     "aide": "Ce sont les trois rayons à savoir tracer.",
+     "explication": "Un rayon par O traverse tout droit ; un rayon parallèle à l’axe passe par F’ ; un rayon passant par F ressort parallèle à l’axe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Camille place un timbre entre la loupe et son foyer objet. Quelle image obtient-elle ?",
+     "options": [
+      "Virtuelle, droite et agrandie",
+      "Réelle, renversée et agrandie",
+      "Réelle, renversée et réduite",
+      "Aucune image"
+     ],
+     "reponse": 0,
+     "aide": "Pense à ce qu’on voit en regardant à travers une loupe.",
+     "explication": "Entre O et F, la lentille donne une image **virtuelle, droite et agrandie** : c’est le principe de la loupe."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bba2f4e-7fc7-506a-b995-aa81f24340d8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le projecteur de diapositives",
+   "competence": "observer-schema",
+   "situation": "Nora projette une diapositive de 6,0 cm de hauteur avec une lentille convergente de vergence 10 δ (f’ = 10 cm). L’objet est à 30 cm de la lentille. Elle a tracé le schéma suivant, à l’échelle (1 cm = 5 unités).",
+   "documents": [
+    {
+     "id": "sch",
+     "type": "schema",
+     "titre": "Construction de l’image",
+     "largeur": 340,
+     "hauteur": 220,
+     "elements": [
+      {
+       "forme": "ligne",
+       "de": [
+        10,
+        110
+       ],
+       "a": [
+        330,
+        110
+       ]
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        30
+       ],
+       "a": [
+        190,
+        190
+       ],
+       "fleche": "deux"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        110
+       ],
+       "a": [
+        40,
+        80
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "objet",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        265,
+        110
+       ],
+       "a": [
+        265,
+        125
+       ],
+       "fleche": "fin",
+       "teinte": "violet",
+       "id": "image",
+       "zone": true
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        80
+       ],
+       "a": [
+        265,
+        125
+       ],
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        40,
+        80
+       ],
+       "a": [
+        190,
+        80
+       ],
+       "teinte": "corail"
+      },
+      {
+       "forme": "ligne",
+       "de": [
+        190,
+        80
+       ],
+       "a": [
+        265,
+        125
+       ],
+       "teinte": "corail"
+      },
+      {
+       "forme": "cercle",
+       "cx": 140,
+       "cy": 110,
+       "r": 2.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "cercle",
+       "cx": 240,
+       "cy": 110,
+       "r": 2.5,
+       "teinte": "encre",
+       "motif": "plein"
+      },
+      {
+       "forme": "texte",
+       "x": 140,
+       "y": 128,
+       "texte": "F",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 240,
+       "y": 98,
+       "texte": "F’",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 198,
+       "y": 128,
+       "texte": "O",
+       "taille": "petit"
+      },
+      {
+       "forme": "texte",
+       "x": 40,
+       "y": 128,
+       "texte": "A",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 34,
+       "y": 76,
+       "texte": "B",
+       "taille": "petit",
+       "ancre": "fin"
+      },
+      {
+       "forme": "texte",
+       "x": 265,
+       "y": 100,
+       "texte": "A’",
+       "taille": "petit",
+       "ancre": "milieu"
+      },
+      {
+       "forme": "texte",
+       "x": 272,
+       "y": 138,
+       "texte": "B’",
+       "taille": "petit"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "sch",
+     "enonce": "Touche l’image A’B’ de l’objet AB.",
+     "reponse": [
+      "image"
+     ],
+     "aide": "L’image se forme là où les rayons qui sortent de la lentille se recoupent.",
+     "explication": "L’image A’B’ est la petite flèche, à l’**intersection des rayons** émergents."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la position de l’image avec la relation de conjugaison (1 / OA’ − 1 / OA = 1 / f’, OA = −30 cm), en cm.",
+     "reponse": 15,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "1 / OA’ = 1 / f’ + 1 / OA = 1 / 10 − 1 / 30.",
+     "explication": "1 / OA’ = 1 / 10 − 1 / 30 = 1 / 15, donc OA’ = **15 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la hauteur de l’image A’B’, en cm ? (γ = OA’ / OA, tu peux garder le signe de côté)",
+     "reponse": 3,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "La hauteur de l’image vaut |γ| × AB.",
+     "explication": "γ = 15 / (−30) = −0,5 : A’B’ = 0,5 × 6,0 = **3,0 cm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la nature de l’image ?",
+     "options": [
+      "Réelle, renversée et réduite",
+      "Virtuelle, droite et agrandie",
+      "Réelle, droite et réduite",
+      "Virtuelle, renversée et agrandie"
+     ],
+     "reponse": 0,
+     "aide": "γ est négatif et OA’ est positif (côté opposé à l’objet).",
+     "explication": "OA’ > 0 : image **réelle**, qu’on peut recueillir sur un écran ; γ < 0 : **renversée** ; |γ| < 1 : **réduite**."
+    }
+   ]
+  },
+  {
+   "chapitre": "0bba2f4e-7fc7-506a-b995-aa81f24340d8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une loupe, trois distances",
+   "competence": "calculer",
+   "situation": "Hugo teste une loupe de vergence 20 δ (f’ = 5,0 cm). Il place un objet à trois distances de la lentille et note où se forme l’image. La dernière ligne n’est pas encore remplie.",
+   "documents": [
+    {
+     "id": "fiche",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Loupe de bureau",
+     "emoji": "🔎",
+     "lignes": [
+      {
+       "texte": "Vergence",
+       "valeur": "20 δ"
+      },
+      {
+       "texte": "Distance focale f’",
+       "valeur": "5,0 cm"
+      }
+     ]
+    },
+    {
+     "id": "rel",
+     "type": "tableau",
+     "titre": "Les trois essais",
+     "colonnes": [
+      "Essai",
+      "OA (cm)",
+      "OA’ (cm)",
+      "γ"
+     ],
+     "lignes": [
+      [
+       "1",
+       "−15",
+       "7,5",
+       "−0,5"
+      ],
+      [
+       "2",
+       "−10",
+       "10",
+       "−1"
+      ],
+      [
+       "3",
+       "−3,0",
+       "?",
+       "?"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "nombre",
+     "enonce": "Calcule OA’ pour l’essai 3 (1 / OA’ = 1 / f’ + 1 / OA), en cm.",
+     "reponse": -7.5,
+     "unite": "cm",
+     "tolerance": 0.05,
+     "aide": "1 / OA’ = 1 / 5,0 − 1 / 3,0 : le résultat est négatif.",
+     "explication": "1 / OA’ = 1 / 5 − 1 / 3 = −2 / 15, donc OA’ = **−7,5 cm**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule le grandissement γ de l’essai 3 (γ = OA’ / OA).",
+     "reponse": 2.5,
+     "tolerance": 0.01,
+     "aide": "Divise OA’ par OA, en gardant les signes.",
+     "explication": "γ = (−7,5) / (−3,0) = **+2,5** : image droite et 2,5 fois plus grande."
+    },
+    {
+     "type": "zone",
+     "document": "rel",
+     "enonce": "Touche la valeur de γ de l’essai où l’image a la même taille que l’objet.",
+     "reponse": [
+      "r1c3"
+     ],
+     "aide": "Même taille : la valeur absolue de γ vaut 1.",
+     "explication": "À l’essai 2, γ = **−1** : même taille, mais renversée (l’objet est à 2f’)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Hugo peut-il recueillir l’image de l’essai 3 sur un écran ?",
+     "options": [
+      "Non, c’est une image virtuelle",
+      "Oui, c’est une image réelle",
+      "Oui, en reculant l’écran",
+      "Non, car l’image est trop petite"
+     ],
+     "reponse": 0,
+     "aide": "OA’ est négatif : de quel côté de la lentille est l’image ?",
+     "explication": "OA’ < 0 : l’image est du **même côté que l’objet**, c’est une image virtuelle, qu’on ne peut pas recueillir sur un écran."
+    },
+    {
+     "type": "choix",
+     "enonce": "Où l’objet doit-il être placé pour utiliser la lentille comme une loupe ?",
+     "options": [
+      "Entre le centre optique et le foyer objet",
+      "Au-delà de deux fois la distance focale",
+      "Exactement au foyer image",
+      "À l’infini"
+     ],
+     "reponse": 0,
+     "aide": "Parmi les essais, lequel donne une image droite et agrandie ?",
+     "explication": "L’essai 3 (OA = −3,0 cm, entre O et F) donne une image droite et agrandie : **entre O et F**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d037c5a-537e-5b9d-84bd-58ed6b26cafa",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Les pixels du téléphone de Karim",
+   "competence": "lire-tableau",
+   "situation": "Karim zoome sur l’écran de son téléphone : chaque pixel est formé de trois petites sources de lumière, rouge, verte et bleue. En les allumant ensemble, il obtient d’autres couleurs.",
+   "documents": [
+    {
+     "id": "pix",
+     "type": "tableau",
+     "titre": "Quelques pixels",
+     "colonnes": [
+      "Sources allumées",
+      "Couleur perçue"
+     ],
+     "lignes": [
+      [
+       "Rouge + verte",
+       "?"
+      ],
+      [
+       "Rouge + bleue",
+       "?"
+      ],
+      [
+       "Verte + bleue",
+       "?"
+      ],
+      [
+       "Rouge + verte + bleue",
+       "?"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "association",
+     "enonce": "Associe chaque combinaison à la couleur perçue.",
+     "paires": [
+      [
+       "Rouge + verte",
+       "Jaune"
+      ],
+      [
+       "Rouge + bleue",
+       "Magenta"
+      ],
+      [
+       "Verte + bleue",
+       "Cyan"
+      ],
+      [
+       "Rouge + verte + bleue",
+       "Blanc"
+      ]
+     ],
+     "aide": "Dans la synthèse additive, on ajoute des lumières.",
+     "explication": "Synthèse **additive** : R + V = jaune, R + B = magenta, V + B = cyan, R + V + B = blanc."
+    },
+    {
+     "type": "zone",
+     "document": "pix",
+     "enonce": "Touche la combinaison qui donne de la lumière blanche.",
+     "reponse": [
+      "r3c0"
+     ],
+     "aide": "Il faut allumer les trois sources.",
+     "explication": "La superposition des trois primaires, **rouge + verte + bleue**, donne du blanc."
+    },
+    {
+     "type": "choix",
+     "enonce": "Une imprimante utilise du cyan, du magenta et du jaune. De quelle synthèse s’agit-il ?",
+     "options": [
+      "Soustractive",
+      "Additive",
+      "Aucune des deux",
+      "Photoélectrique"
+     ],
+     "reponse": 0,
+     "aide": "Les encres absorbent des longueurs d’onde.",
+     "explication": "Des matières qui retranchent des longueurs d’onde relèvent de la synthèse **soustractive** : leur superposition donne du noir."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d037c5a-537e-5b9d-84bd-58ed6b26cafa",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les costumes sous les projecteurs",
+   "competence": "raisonner",
+   "situation": "Dans un théâtre, quatre costumes sont éclairés tour à tour par un projecteur vert, puis un projecteur bleu. Leur couleur en lumière blanche est indiquée ci-dessous.",
+   "documents": [
+    {
+     "id": "cost",
+     "type": "tableau",
+     "titre": "Les costumes en lumière blanche",
+     "colonnes": [
+      "Costume",
+      "Couleur"
+     ],
+     "lignes": [
+      [
+       "Pull",
+       "rouge"
+      ],
+      [
+       "Chemise",
+       "blanche"
+      ],
+      [
+       "Pantalon",
+       "jaune"
+      ],
+      [
+       "Écharpe",
+       "cyan"
+      ]
+     ],
+     "source": "Un jaune diffuse le rouge et le vert ; un cyan diffuse le vert et le bleu"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Sous le projecteur vert, que devient chaque costume ?",
+     "categories": [
+      "Il paraît noir",
+      "Il paraît vert"
+     ],
+     "items": [
+      [
+       "Pull rouge",
+       0
+      ],
+      [
+       "Chemise blanche",
+       1
+      ],
+      [
+       "Pantalon jaune",
+       1
+      ],
+      [
+       "Écharpe cyan",
+       1
+      ]
+     ],
+     "aide": "Un objet n’apparaît que s’il diffuse la lumière qu’il reçoit.",
+     "explication": "Le pull ne diffuse que la lumière rouge : il paraît **noir**. Les autres diffusent du vert."
+    },
+    {
+     "type": "zone",
+     "document": "cost",
+     "enonce": "Sous le projecteur bleu, deux costumes paraissent noirs. Touche-les.",
+     "reponse": [
+      "r0c0",
+      "r2c0"
+     ],
+     "multiple": true,
+     "aide": "Un costume paraît noir s’il ne diffuse pas de bleu.",
+     "explication": "Le **pull** (rouge) et le **pantalon** (jaune : rouge + vert) ne diffusent pas de bleu : ils paraissent noirs."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel projecteur faut-il pour que le pull rouge paraisse noir ?",
+     "options": [
+      "Un projecteur vert",
+      "Un projecteur rouge",
+      "Un projecteur blanc",
+      "Un projecteur jaune"
+     ],
+     "reponse": 0,
+     "aide": "Le pull ne diffuse que la lumière rouge : le projecteur ne doit pas en contenir.",
+     "explication": "Une lumière verte ne contient pas de rouge : le pull n’a **rien à diffuser**. Une lumière jaune, elle, en contient."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le cours.",
+     "texte": "Un objet blanc diffuse ___ les longueurs d’onde ; un objet noir les ___.",
+     "reponses": [
+      [
+       "toutes"
+      ],
+      [
+       "absorbe"
+      ]
+     ],
+     "banque": [
+      "toutes",
+      "absorbe",
+      "transmet",
+      "aucune"
+     ],
+     "aide": "Pense au blanc d’une feuille et au noir d’un tissu.",
+     "explication": "Un objet blanc **diffuse toutes** les longueurs d’onde ; un objet noir les **absorbe toutes**."
+    }
+   ]
+  },
+  {
+   "chapitre": "2d037c5a-537e-5b9d-84bd-58ed6b26cafa",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le colorant qui paraît bleu",
+   "competence": "analyser-document",
+   "situation": "Un laboratoire étudie un colorant dissous dans l’eau : la solution paraît bleue. Un spectrophotomètre mesure l’absorbance de la solution à plusieurs longueurs d’onde ; plus l’absorbance est grande, plus la lumière est absorbée.",
+   "documents": [
+    {
+     "id": "abs",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Absorbance de la solution",
+     "categories": [
+      "400 nm",
+      "450 nm",
+      "500 nm",
+      "550 nm",
+      "600 nm",
+      "650 nm",
+      "700 nm",
+      "750 nm"
+     ],
+     "series": [
+      {
+       "nom": "Absorbance",
+       "valeurs": [
+        0.05,
+        0.08,
+        0.18,
+        0.4,
+        0.95,
+        0.6,
+        0.1,
+        0.03
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Absorbance",
+      "min": 0,
+      "max": 1,
+      "pas": 0.2
+     },
+     "axeX": {
+      "titre": "Longueur d’onde"
+     },
+     "valeurs": false,
+     "source": "Valeurs écrites pour l’exercice"
+    },
+    {
+     "id": "sources",
+     "type": "tableau",
+     "titre": "Quatre diodes de couleur",
+     "colonnes": [
+      "Diode",
+      "Longueur d’onde"
+     ],
+     "lignes": [
+      [
+       "Bleue",
+       "450 nm"
+      ],
+      [
+       "Verte",
+       "550 nm"
+      ],
+      [
+       "Orange",
+       "600 nm"
+      ],
+      [
+       "Rouge",
+       "650 nm"
+      ]
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "abs",
+     "enonce": "Touche la longueur d’onde la plus absorbée par la solution.",
+     "reponse": [
+      "k4"
+     ],
+     "aide": "Cherche le sommet de la courbe.",
+     "explication": "L’absorbance est maximale à **600 nm**."
+    },
+    {
+     "type": "choix",
+     "enonce": "À quelle couleur correspond 600 nm ?",
+     "options": [
+      "Jaune-orangé",
+      "Bleu-violet",
+      "Vert-bleu",
+      "Rouge foncé"
+     ],
+     "reponse": 0,
+     "aide": "Rappelle-toi : une solution bleue absorbe dans la couleur complémentaire du bleu.",
+     "explication": "À 600 nm, la lumière est **jaune-orangé** : couleur complémentaire du bleu."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Range les diodes de celle qui est la moins absorbée à celle qui l’est le plus.",
+     "items": [
+      "Diode bleue (450 nm)",
+      "Diode verte (550 nm)",
+      "Diode rouge (650 nm)",
+      "Diode orange (600 nm)"
+     ],
+     "aide": "Lis l’absorbance sur la courbe pour chaque longueur d’onde.",
+     "explication": "Absorbances : 0,08 (bleue) < 0,40 (verte) < 0,60 (rouge) < 0,95 (orange)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi la solution paraît-elle bleue ?",
+     "options": [
+      "Elle transmet surtout le bleu et absorbe le jaune-orangé",
+      "Elle absorbe le bleu et transmet le jaune-orangé",
+      "Elle émet de la lumière bleue",
+      "Elle diffuse toutes les longueurs d’onde"
+     ],
+     "reponse": 0,
+     "aide": "La couleur d’un objet transparent est celle de la lumière qu’il transmet.",
+     "explication": "La solution est transparente : sa couleur est celle de la lumière **transmise**. Elle absorbe la lumière jaune-orangé, donc elle paraît bleue."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète.",
+     "texte": "Une solution absorbe la couleur ___ de celle qu’elle paraît avoir.",
+     "reponses": [
+      [
+       "complémentaire",
+       "complementaire"
+      ]
+     ],
+     "banque": [
+      "complémentaire",
+      "identique",
+      "primaire",
+      "voisine"
+     ],
+     "aide": "Deux couleurs qui, superposées en synthèse additive, donnent du blanc.",
+     "explication": "Une solution absorbe la couleur **complémentaire** de celle qu’elle paraît avoir."
+    }
+   ]
+  },
+  {
+   "chapitre": "33153239-730e-53db-aebc-a125ed02f01a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le skateur et sa vitesse",
+   "competence": "lire-tableau",
+   "situation": "Théo et son skate pèsent 60 kg à eux deux. Un capteur calcule l’énergie cinétique du skateur pour plusieurs vitesses.",
+   "documents": [
+    {
+     "id": "ec",
+     "type": "tableau",
+     "titre": "Énergie cinétique du skateur",
+     "colonnes": [
+      "Vitesse (m/s)",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     "lignes": [
+      [
+       "Énergie cinétique (J)",
+       120,
+       480,
+       1080,
+       "?"
+      ]
+     ],
+     "source": "Ec = ½ × m × v², avec m = 60 kg"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ec",
+     "enonce": "Touche l’énergie cinétique du skateur à 6 m/s.",
+     "reponse": [
+      "r0c3"
+     ],
+     "aide": "Repère la colonne de 6 m/s.",
+     "explication": "À 6 m/s, Ec = ½ × 60 × 6² = **1 080 J**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la case manquante : l’énergie cinétique à 8 m/s.",
+     "reponse": 1920,
+     "unite": "J",
+     "aide": "Ec = ½ × m × v².",
+     "explication": "Ec = ½ × 60 × 8² = 30 × 64 = **1 920 J**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quand la vitesse double (de 2 à 4 m/s), que devient l’énergie cinétique ?",
+     "options": [
+      "Elle est multipliée par 4",
+      "Elle est multipliée par 2",
+      "Elle reste la même",
+      "Elle est divisée par 2"
+     ],
+     "reponse": 0,
+     "aide": "Compare 120 J et 480 J.",
+     "explication": "480 / 120 = 4 : Ec dépend du **carré** de la vitesse, donc doubler v multiplie Ec par **4**."
+    }
+   ]
+  },
+  {
+   "chapitre": "33153239-730e-53db-aebc-a125ed02f01a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La descente de la rampe",
+   "competence": "lire-graphique",
+   "situation": "Au skatepark, Lola (60 kg avec sa planche) part sans vitesse du haut d’une rampe, à 2,0 m du sol. On néglige les frottements et on prend g = 10 N/kg. Un logiciel trace ses énergies selon son altitude.",
+   "documents": [
+    {
+     "id": "gr",
+     "type": "graphique",
+     "forme": "courbe",
+     "titre": "Énergies de Lola pendant la descente",
+     "categories": [
+      "2,0 m",
+      "1,5 m",
+      "1,0 m",
+      "0,5 m",
+      "0 m"
+     ],
+     "series": [
+      {
+       "nom": "Potentielle",
+       "valeurs": [
+        1200,
+        900,
+        600,
+        300,
+        0
+       ],
+       "teinte": "ambre"
+      },
+      {
+       "nom": "Cinétique",
+       "valeurs": [
+        0,
+        300,
+        600,
+        900,
+        1200
+       ],
+       "teinte": "turquoise"
+      },
+      {
+       "nom": "Mécanique",
+       "valeurs": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+       ],
+       "teinte": "violet"
+      }
+     ],
+     "axeY": {
+      "titre": "Énergie",
+      "unite": "J",
+      "min": 0,
+      "max": 1400,
+      "pas": 200
+     },
+     "axeX": {
+      "titre": "Altitude"
+     },
+     "valeurs": false,
+     "source": "Valeurs calculées avec m = 60 kg, g = 10 N/kg"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "gr",
+     "enonce": "Touche l’altitude où l’énergie cinétique est égale à l’énergie potentielle.",
+     "reponse": [
+      "k2"
+     ],
+     "aide": "Cherche où les deux courbes se croisent.",
+     "explication": "À **1,0 m**, les deux valent 600 J : la moitié de l’énergie mécanique."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’énergie mécanique de Lola ?",
+     "reponse": 1200,
+     "unite": "J",
+     "aide": "Em = Ec + Epp, à n’importe quelle altitude.",
+     "explication": "Em = 0 + m × g × z = 60 × 10 × 2,0 = **1 200 J**, et elle reste constante."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Calcule la vitesse de Lola en bas de la rampe, arrondie au dixième (Ec = ½ × m × v²).",
+     "reponse": 6.3,
+     "unite": "m/s",
+     "tolerance": 0.05,
+     "aide": "En bas, toute l’énergie mécanique est cinétique.",
+     "explication": "v = √(2 × 1 200 / 60) = √40 ≈ **6,3 m/s**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Pourquoi l’énergie mécanique reste-t-elle constante ?",
+     "options": [
+      "Seules des forces conservatives travaillent",
+      "Les frottements sont très grands",
+      "Lola fournit de l’énergie en poussant",
+      "La rampe est horizontale"
+     ],
+     "reponse": 0,
+     "aide": "L’énoncé néglige les frottements.",
+     "explication": "Sans frottements, seule la pesanteur (conservative) travaille : l’énergie mécanique **se conserve**."
+    }
+   ]
+  },
+  {
+   "chapitre": "33153239-730e-53db-aebc-a125ed02f01a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Freiner à 50 ou à 100 km/h",
+   "competence": "argumenter",
+   "situation": "Une voiture de 1 000 kg freine avec des frottements constants de 7 000 N. Amine affirme qu’à 100 km/h, au lieu de 50, la distance de freinage est seulement le double.",
+   "documents": [
+    {
+     "id": "tab",
+     "type": "tableau",
+     "titre": "Énergie cinétique de la voiture",
+     "colonnes": [
+      "Vitesse (km/h)",
+      "Ec (kJ)"
+     ],
+     "lignes": [
+      [
+       "30",
+       35
+      ],
+      [
+       "50",
+       96
+      ],
+      [
+       "70",
+       189
+      ],
+      [
+       "90",
+       312.5
+      ]
+     ],
+     "source": "Valeurs arrondies, Ec = ½ × m × v² avec m = 1 000 kg"
+    },
+    {
+     "id": "sms",
+     "type": "dialogue",
+     "modele": "sms",
+     "participants": [
+      {
+       "nom": "Amine",
+       "emoji": "🧑",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Prof",
+       "emoji": "🧑‍🏫",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Amine",
+       "texte": "À 100 au lieu de 50, je mets simplement deux fois plus de distance pour freiner."
+      },
+      {
+       "qui": "Prof",
+       "texte": "Appliquons le théorème de l’énergie cinétique pour vérifier."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "tab",
+     "enonce": "Touche l’énergie cinétique à 50 km/h.",
+     "reponse": [
+      "r1c1"
+     ],
+     "aide": "Cherche la ligne 50 km/h.",
+     "explication": "À 50 km/h, Ec ≈ **96 kJ** (96 450 J)."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance de freinage à 50 km/h ? (ΔEc = −F × d, avec F = 7 000 N et Ec = 96 450 J), arrondie au dixième.",
+     "reponse": 13.8,
+     "unite": "m",
+     "tolerance": 0.05,
+     "aide": "Le travail des frottements est −F × d : il annule l’énergie cinétique.",
+     "explication": "0 − 96 450 = −7 000 × d, donc d ≈ **13,8 m**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est la distance de freinage à 100 km/h ? (Ec = 385 800 J), arrondie au dixième.",
+     "reponse": 55.1,
+     "unite": "m",
+     "tolerance": 0.05,
+     "aide": "Même méthode, avec l’énergie cinétique à 100 km/h.",
+     "explication": "d = 385 800 / 7 000 ≈ **55,1 m**, soit quatre fois plus qu’à 50 km/h."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que penser de l’affirmation d’Amine ?",
+     "options": [
+      "Fausse : doubler la vitesse multiplie la distance par 4",
+      "Vraie : la distance double quand la vitesse double",
+      "Fausse : la distance de freinage reste la même",
+      "Vraie : la distance ne dépend que de la masse"
+     ],
+     "reponse": 0,
+     "aide": "Ec dépend du carré de v, et d = Ec / F.",
+     "explication": "Ec ∝ v², donc d ∝ v² : à vitesse double, la distance est **multipliée par 4**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie est transférée au milieu sous forme thermique pendant le freinage à 50 km/h ? (arrondie au kJ)",
+     "reponse": 96,
+     "unite": "kJ",
+     "tolerance": 0.6,
+     "aide": "L’énergie mécanique disparaît : où va-t-elle ?",
+     "explication": "ΔEm = W(frottements) = −96 kJ : cette énergie, **96 kJ**, est dissipée sous forme thermique (freins, pneus, air)."
+    }
+   ]
+  },
+  {
+   "chapitre": "47643abd-6e7a-5430-8d59-d9b584f7cc6c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La plaque du grille-pain",
+   "competence": "lire-tableau",
+   "situation": "Le grille-pain de la cuisine porte une plaque signalétique. Lina veut savoir quel courant il appelle et ce qu’il consomme en deux minutes.",
+   "documents": [
+    {
+     "id": "plaque",
+     "type": "fiche",
+     "modele": "etiquette",
+     "entete": "Grille-pain",
+     "emoji": "🍞",
+     "lignes": [
+      {
+       "texte": "Tension",
+       "valeur": "230 V",
+       "id": "tension"
+      },
+      {
+       "texte": "Puissance",
+       "valeur": "1 150 W",
+       "id": "puissance"
+      },
+      {
+       "texte": "Fréquence",
+       "valeur": "50 Hz"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plaque",
+     "enonce": "Touche la ligne qui donne la puissance du grille-pain.",
+     "reponse": [
+      "puissance"
+     ],
+     "aide": "La puissance s’exprime en watts.",
+     "explication": "La puissance est **1 150 W**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité du courant qui le traverse ? (P = U × I)",
+     "reponse": 5,
+     "unite": "A",
+     "tolerance": 0.01,
+     "aide": "I = P / U.",
+     "explication": "I = 1 150 / 230 = **5,0 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle énergie consomme-t-il en 2 minutes (E = P × Δt, Δt en secondes) ?",
+     "reponse": 138000,
+     "unite": "J",
+     "aide": "2 minutes = 120 secondes.",
+     "explication": "E = 1 150 × 120 = **138 000 J**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ici, l’effet Joule du grille-pain est…",
+     "options": [
+      "Utile : il chauffe le pain",
+      "Nuisible : il gaspille de l’énergie",
+      "Inexistant",
+      "Plus faible que dans une lampe"
+     ],
+     "reponse": 0,
+     "aide": "Le grille-pain sert à chauffer.",
+     "explication": "L’effet Joule est **utile** dans un grille-pain, un radiateur ou un fusible ; il est nuisible dans un ordinateur ou une ligne électrique."
+    }
+   ]
+  },
+  {
+   "chapitre": "47643abd-6e7a-5430-8d59-d9b584f7cc6c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Remplacer l’ampoule du salon",
+   "competence": "calculer",
+   "situation": "Mathis hésite à remplacer une ampoule à incandescence par une LED qui éclaire autant. Il compare les deux et regarde où va l’énergie.",
+   "documents": [
+    {
+     "id": "lampes",
+     "type": "tableau",
+     "titre": "Deux lampes qui éclairent autant",
+     "colonnes": [
+      "Lampe",
+      "Puissance électrique (W)",
+      "Rendement lumineux"
+     ],
+     "lignes": [
+      [
+       "Incandescence",
+       60,
+       "5 %"
+      ],
+      [
+       "LED",
+       7.5,
+       "40 %"
+      ]
+     ],
+     "source": "Valeurs arrondies"
+    },
+    {
+     "id": "chaine",
+     "type": "chaine",
+     "titre": "L’énergie dans l’ampoule à incandescence",
+     "disposition": "ligne",
+     "noeuds": [
+      {
+       "id": "elec",
+       "texte": "Énergie électrique : 60 J",
+       "emoji": "🔌"
+      },
+      {
+       "id": "lampe",
+       "texte": "Ampoule",
+       "emoji": "💡"
+      },
+      {
+       "id": "sortie",
+       "texte": "?",
+       "emoji": "❓"
+      }
+     ],
+     "liens": [
+      {
+       "de": "elec",
+       "a": "lampe",
+       "texte": "reçue"
+      },
+      {
+       "de": "lampe",
+       "a": "sortie",
+       "texte": "convertie en"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "lampes",
+     "enonce": "Touche le rendement lumineux de la LED.",
+     "reponse": [
+      "r1c2"
+     ],
+     "aide": "Lis la ligne « LED », dernière colonne.",
+     "explication": "Le rendement lumineux de la LED est de **40 %**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance lumineuse la LED fournit-elle ? (η = P utile / P reçue)",
+     "reponse": 3,
+     "unite": "W",
+     "tolerance": 0.01,
+     "aide": "P utile = η × P reçue.",
+     "explication": "P(lumineuse) = 0,40 × 7,5 = **3,0 W** : la même que l’ampoule à incandescence (0,05 × 60 = 3,0 W)."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète : sur 60 J reçus par l’ampoule à incandescence, avec un rendement de 5 %.",
+     "texte": "___ J sont convertis en lumière et ___ J en chaleur.",
+     "reponses": [
+      [
+       "3"
+      ],
+      [
+       "57"
+      ]
+     ],
+     "banque": [
+      "3",
+      "5",
+      "57",
+      "60"
+     ],
+     "aide": "Énergie fournie = énergie utile + énergie dissipée.",
+     "explication": "5 % de 60 J = **3 J** de lumière ; le reste, 60 − 3 = **57 J**, est dissipé en chaleur."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Les deux lampes brillent 1 000 heures. Avec un kWh à 0,20 €, combien Mathis économise-t-il avec la LED ?",
+     "reponse": 10.5,
+     "unite": "€",
+     "tolerance": 0.01,
+     "aide": "Calcule l’énergie de chaque lampe en kWh (P en kW × durée en h), puis la différence.",
+     "explication": "Incandescence : 0,060 × 1 000 = 60 kWh ; LED : 0,0075 × 1 000 = 7,5 kWh. Économie : 52,5 kWh × 0,20 = **10,5 €**."
+    }
+   ]
+  },
+  {
+   "chapitre": "47643abd-6e7a-5430-8d59-d9b584f7cc6c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Pourquoi les lignes à haute tension ?",
+   "competence": "modeliser",
+   "situation": "Une ville consomme 2,0 MW. L’électricité est transportée par une ligne de résistance 5,0 Ω. Karim compare le transport sous 20 kV et sous 400 kV.",
+   "documents": [
+    {
+     "id": "don",
+     "type": "tableau",
+     "titre": "Données de la ligne",
+     "colonnes": [
+      "Donnée",
+      "Valeur"
+     ],
+     "lignes": [
+      [
+       "Puissance transportée P",
+       "2,0 MW"
+      ],
+      [
+       "Résistance de la ligne R",
+       "5,0 Ω"
+      ],
+      [
+       "Tension de transport (cas 1)",
+       "20 kV"
+      ],
+      [
+       "Tension de transport (cas 2)",
+       "400 kV"
+      ]
+     ]
+    },
+    {
+     "id": "circ",
+     "type": "circuit",
+     "titre": "Le transport vers la ville",
+     "branches": [
+      {
+       "de": [
+        0,
+        4
+       ],
+       "a": [
+        0,
+        0
+       ],
+       "composant": "generateur",
+       "nom": "Centrale"
+      },
+      {
+       "de": [
+        0,
+        0
+       ],
+       "a": [
+        4,
+        0
+       ]
+      },
+      {
+       "de": [
+        4,
+        0
+       ],
+       "a": [
+        8,
+        0
+       ],
+       "composant": "resistance",
+       "nom": "R",
+       "id": "ligne"
+      },
+      {
+       "de": [
+        8,
+        0
+       ],
+       "a": [
+        8,
+        4
+       ],
+       "composant": "lampe",
+       "nom": "Ville",
+       "id": "ville",
+       "allume": true
+      },
+      {
+       "de": [
+        8,
+        4
+       ],
+       "a": [
+        0,
+        4
+       ]
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "circ",
+     "enonce": "Touche le composant qui représente la ligne de transport.",
+     "reponse": [
+      "ligne"
+     ],
+     "aide": "Les pertes par effet Joule se produisent dans une résistance.",
+     "explication": "La ligne est modélisée par la **résistance R**, où se produit l’effet Joule."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle est l’intensité dans la ligne sous 20 kV ? (P = U × I)",
+     "reponse": 100,
+     "unite": "A",
+     "aide": "Convertis P en watts : 2,0 MW = 2,0 × 10⁶ W.",
+     "explication": "I = 2,0 × 10⁶ / 20 × 10³ = **100 A**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quelle puissance est perdue par effet Joule dans la ligne sous 20 kV (P = R × I²), en kW ?",
+     "reponse": 50,
+     "unite": "kW",
+     "tolerance": 0.1,
+     "aide": "P perdue = 5,0 × 100².",
+     "explication": "P = 5,0 × 100² = 50 000 W = **50 kW**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel est le rendement du transport sous 20 kV, en pourcentage ?",
+     "reponse": 97.5,
+     "unite": "%",
+     "tolerance": 0.05,
+     "aide": "η = (P − pertes) / P.",
+     "explication": "η = (2 000 − 50) / 2 000 = 0,975, soit **97,5 %**."
+    },
+    {
+     "type": "choix",
+     "enonce": "On passe de 20 kV à 400 kV (tension multipliée par 20). Que deviennent les pertes en ligne ?",
+     "options": [
+      "Divisées par 400",
+      "Divisées par 20",
+      "Multipliées par 20",
+      "Inchangées"
+     ],
+     "reponse": 0,
+     "aide": "À puissance égale, I est divisée par 20. Les pertes varient comme I².",
+     "explication": "I est divisée par 20 ; les pertes, proportionnelles à I², sont divisées par 20² = **400** (125 W au lieu de 50 kW)."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+/* LES BOUTONS D'UNE QUÊTE (03/10/2026) — « Y aller » et « Encaisser ».
+   Animations en transform et opacité seulement, valeurs littérales (règle du
+   projet : rien d'autre ne tourne en continu). */
+
+/* --- Y aller : un rond violet, une flèche qui pousse vers la droite --------- */
+.aller {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 4px 0 color-mix(in oklch, var(--primary), black 35%);
+}
+.aller:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--primary), black 35%);
+}
+.aller:focus-visible {
+  outline: 3px solid color-mix(in oklch, var(--primary), white 40%);
+  outline-offset: 2px;
+}
+.allerFleche {
+  animation: pousse 1.8s ease-in-out infinite;
+}
+@keyframes pousse {
+  0%, 60%, 100% { transform: translateX(0); }
+  75% { transform: translateX(3px); }
+  90% { transform: translateX(-1px); }
+}
+
+/* --- Encaisser : le cristal qui saute ----------------------------------------- */
+.cristal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.cristal:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.cristal:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 2px;
+  border-radius: 9999px;
+}
+.cristalRayons {
+  position: absolute;
+  inset: -0.6rem;
+  border-radius: 9999px;
+  background: repeating-conic-gradient(
+    color-mix(in oklch, var(--highlight), white 20%) 0deg 12deg,
+    transparent 12deg 30deg
+  );
+  mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  animation: tourne 6s linear infinite;
+}
+.cristalDisque {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 9999px;
+  animation: saute 1.4s ease-in-out infinite;
+}
+.cristal:active .cristalDisque {
+  transform: scale(0.92);
+  animation: none;
+}
+.cristalEtiquette {
+  position: absolute;
+  bottom: -0.45rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  padding: 0 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  white-space: nowrap;
+}
+@keyframes tourne {
+  to { transform: rotate(360deg); }
+}
+@keyframes saute {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-4px) scale(1.05); }
+  55% { transform: translateY(0) scale(0.97, 1.03); }
+}
+
+/* --- Le bandeau « Quête accomplie » : il descend, attend, remonte ------------ */
+.annonce {
+  animation: descend 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.annonce[data-sortie] {
+  animation: remonte 0.3s ease-in both;
+}
+@keyframes descend {
+  from { transform: translateY(-140%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes remonte {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-140%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .allerFleche,
+  .cristalRayons,
+  .cristalDisque,
+  .annonce,
+  .annonce[data-sortie] {
+    animation: none;
+  }
+}

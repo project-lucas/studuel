@@ -257,7 +257,9 @@ export const DEFAULT_BANNER: (typeof BANNER_KEYS)[number] = 'uni-lavande'
 
 // L'ordre des onglets de l'éditeur suit ce tableau.
 export const AVATAR_FIELDS: readonly AvatarField[] = [
-  { key: 'portrait', label: 'Portrait', kind: 'style', options: PORTRAIT_KEYS, allowNone: true },
+  // Plus d'« avatar dessiné » (Lucas, 03/10/2026) : le portrait est obligatoire,
+  // un compte d'avant sans blason reçoit le premier au relu (normalizeAvatarConfig).
+  { key: 'portrait', label: 'Portrait', kind: 'style', options: PORTRAIT_KEYS, allowNone: false },
   { key: 'skinColor', label: 'Peau', kind: 'color', options: SKIN_COLORS, allowNone: false },
   { key: 'head', label: 'Coiffure', kind: 'style', options: HEADS, allowNone: false },
   { key: 'face', label: 'Expression', kind: 'style', options: FACES, allowNone: false },
@@ -309,7 +311,7 @@ export function applyFreeAvatarField(
 // Avatar par défaut (proposé au premier passage) — neutre et souriant, haut
 // violet et fond violet clair de la marque.
 export const DEFAULT_AVATAR: AvatarConfig = {
-  portrait: '',
+  portrait: PORTRAIT_KEYS[0],
   skinColor: 'edb98a',
   head: 'short1',
   face: 'smile',

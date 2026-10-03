@@ -2,7 +2,7 @@ import { Fragment, type ReactNode } from 'react'
 import { decouper, texteDuBloc, type Jeton } from '@/lib/exercices/mots'
 import type { DocDialogue, DocTexte } from '@/lib/exercices/types'
 import { cn } from '@/lib/utils'
-import { etatCible, Fraction, type ZonesDoc } from '../commun'
+import { etatCible, Fraction, Inline, type ZonesDoc } from '../commun'
 import s from '../manuel.module.css'
 
 /**
@@ -155,7 +155,7 @@ export function Texte({ doc, zones, portee }: { doc: DocTexte; zones?: ZonesDoc;
 }
 
 function Auteur({ auteur }: { auteur: string }) {
-  return <p className="mt-2 text-right text-[0.78rem] font-bold text-[var(--encre-douce)]">{auteur}</p>
+  return <p className="mt-2 text-right text-[0.78rem] font-bold text-[var(--encre-douce)]"><Inline texte={auteur} /></p>
 }
 
 /** Un dialogue : SMS (bulles de messagerie) ou bulles de bande dessinée. */

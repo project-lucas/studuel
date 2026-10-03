@@ -1,0 +1,2222 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "c7c59a43-d48a-5346-8caa-7f1d88f06eff",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un recueil sur le bac, quatre sections",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ta fiche sur *Mes forêts*. Lis la carte d’identité du recueil et le plan de ses quatre sections.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Mes forêts",
+     "sousTitre": "Hélène Dorion",
+     "emoji": "🌲",
+     "lignes": [
+      {
+       "texte": "Autrice",
+       "valeur": "Québécoise, née en 1958 à Québec"
+      },
+      {
+       "texte": "Parution",
+       "valeur": "2021"
+      },
+      {
+       "texte": "Sections",
+       "valeur": "Quatre"
+      },
+      {
+       "texte": "Au bac",
+       "valeur": "Première autrice vivante au programme"
+      }
+     ],
+     "pied": "Recueil de poèmes",
+     "teinte": "violet"
+    },
+    {
+     "id": "plan",
+     "type": "tableau",
+     "titre": "Les quatre sections",
+     "colonnes": [
+      "Section",
+      "Son motif"
+     ],
+     "lignes": [
+      [
+       "« L’écorce incertaine »",
+       "La forêt comme corps"
+      ],
+      [
+       "« Une chute de galets »",
+       "La fragilité, la perte"
+      ],
+      [
+       "?",
+       "Les menaces : guerres, famines, chiffres, écrans"
+      ],
+      [
+       "« Le bruissement du temps »",
+       "L’écoute, l’apaisement"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "plan",
+     "multiple": false,
+     "reponse": [
+      "r1c0"
+     ],
+     "enonce": "Touche la section qui parle de fragilité et de perte.",
+     "aide": "Pense aux galets qui tombent.",
+     "explication": "C’est « **Une chute de galets** »."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel titre de section faut-il écrire dans la case « ? » ?",
+     "options": [
+      "« L’onde du chaos »",
+      "« Le bruissement du temps »",
+      "« L’écorce incertaine »",
+      "« Une chute de galets »"
+     ],
+     "reponse": 0,
+     "aide": "Cette section fait entrer les menaces du monde.",
+     "explication": "C’est « **L’onde du chaos** »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité.",
+     "texte": "Hélène Dorion est ___ ; son recueil, paru en ___, compte ___ sections.",
+     "reponses": [
+      [
+       "québécoise"
+      ],
+      [
+       "2021"
+      ],
+      [
+       "quatre",
+       "4"
+      ]
+     ],
+     "banque": [
+      "québécoise",
+      "française",
+      "2021",
+      "1958",
+      "quatre",
+      "six"
+     ],
+     "aide": "La fiche donne les trois réponses.",
+     "explication": "Hélène Dorion est **québécoise** ; son recueil, de **2021**, compte **quatre** sections."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7c59a43-d48a-5346-8caa-7f1d88f06eff",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les mots de l’arbre",
+   "competence": "analyser-texte",
+   "situation": "Un poème écrit pour l’exercice reprend les procédés du recueil. Lis-le, puis retrouve ce que disent les mots de l’arbre.",
+   "documents": [
+    {
+     "id": "poeme",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Un poème à la manière de Dorion",
+     "blocs": [
+      "mes forêts sont des mains ouvertes",
+      "sur le temps qui passe",
+      "",
+      "un arbre tombe",
+      "la lumière entre par la brèche",
+      "",
+      "et l’enfant que j’étais",
+      "revient s’asseoir sous les [[c|cernes]]"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Hélène Dorion"
+    },
+    {
+     "id": "mots",
+     "type": "tableau",
+     "titre": "Le mot de l’arbre",
+     "colonnes": [
+      "Le mot de l’arbre",
+      "Ce qu’il dit de l’humain"
+     ],
+     "lignes": [
+      [
+       "Les racines, les cernes, l’écorce",
+       "L’origine, le temps, la blessure"
+      ],
+      [
+       "Tomber et repousser",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "ordre",
+     "enonce": "Remets les quatre sections du recueil dans leur ordre.",
+     "items": [
+      "« L’écorce incertaine »",
+      "« Une chute de galets »",
+      "« L’onde du chaos »",
+      "« Le bruissement du temps »"
+     ],
+     "aide": "On passe du corps de la forêt à l’apaisement.",
+     "explication": "Ordre du recueil : **écorce**, **galets**, **chaos**, **bruissement du temps**."
+    },
+    {
+     "type": "zone",
+     "document": "poeme",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui, dans le poème, dit le temps inscrit dans l’arbre.",
+     "aide": "Ce sont les anneaux du tronc.",
+     "explication": "Les **cernes** disent le temps."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « Tomber et repousser » ?",
+     "options": [
+      "La perte et le recommencement",
+      "La victoire sur la nature",
+      "Le silence et l’oubli définitif",
+      "Le progrès et la conquête"
+     ],
+     "reponse": 0,
+     "aide": "Un arbre qui tombe peut repousser.",
+     "explication": "Tomber et repousser disent **la perte et le recommencement**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du recueil à son effet.",
+     "paires": [
+      [
+       "Vers libres, ponctuation quasi absente",
+       "Le sens reste ouvert"
+      ],
+      [
+       "Poèmes courts, blancs typographiques",
+       "Le silence fait partie du texte"
+      ],
+      [
+       "Anaphores « mes forêts sont… »",
+       "Une pulsation d’incantation"
+      ]
+     ],
+     "aide": "Regarde le poème : il montre chacun de ces procédés.",
+     "explication": "**Vers libres** : sens ouvert ; **blancs** : le silence est dans le texte ; **anaphores** : pulsation d’incantation."
+    }
+   ]
+  },
+  {
+   "chapitre": "c7c59a43-d48a-5346-8caa-7f1d88f06eff",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une forêt qui n’est pas un décor",
+   "competence": "argumenter",
+   "situation": "Deux élèves ne lisent pas le titre du recueil de la même façon. Lis leur débat et un tableau de dissertation à compléter.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Samir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "La forêt chez Dorion, c’est un décor : de beaux paysages pour faire joli."
+      },
+      {
+       "qui": "Samir",
+       "texte": "Le possessif du titre change tout : « [[m|mes]] » forêts, c’est un paysage intérieur autant qu’extérieur."
+      }
+     ]
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La forêt est un double du sujet",
+       "Le possessif du titre : « mes » forêts",
+       "?"
+      ],
+      [
+       "La poésie répare en nommant",
+       "Les mots simples portent des images denses",
+       "Les anaphores « mes forêts sont… »"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche le mot du titre qui montre que la forêt est un paysage intime.",
+     "aide": "Il est entre guillemets.",
+     "explication": "Le possessif « **mes** » fait de la forêt un paysage intérieur."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique du cours réfute celle de Chloé ?",
+     "options": [
+      "La forêt est un double du sujet, pas un décor",
+      "La forêt est un lieu qu’il faut protéger par des lois",
+      "La forêt remplace la ville dans l’imaginaire du poète",
+      "La forêt illustre une leçon de morale écologique"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit que la forêt « n’est pas un décor ».",
+     "explication": "Le cours dit que la forêt **n’est pas un décor** : elle est un **double du sujet**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’exemple de la case « ? ».",
+     "texte": "Les racines, les cernes et l’écorce disent l’___, le ___ et la ___.",
+     "reponses": [
+      [
+       "origine"
+      ],
+      [
+       "temps"
+      ],
+      [
+       "blessure"
+      ]
+     ],
+     "banque": [
+      "origine",
+      "temps",
+      "blessure",
+      "victoire",
+      "silence"
+     ],
+     "aide": "Relis le tableau « Le mot de l’arbre » du cours.",
+     "explication": "Ils disent l’**origine**, le **temps** et la **blessure**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : la forme du recueil, ou son fond ?",
+     "categories": [
+      "La forme",
+      "Le fond"
+     ],
+     "items": [
+      [
+       "Des vers libres",
+       0
+      ],
+      [
+       "Des blancs typographiques",
+       0
+      ],
+      [
+       "Le deuil et la mémoire de l’enfance",
+       1
+      ],
+      [
+       "Une conscience écologique vécue",
+       1
+      ]
+     ],
+     "aide": "La forme, c’est ce qu’on voit sur la page.",
+     "explication": "Les **vers libres** et les **blancs** relèvent de la forme ; le **deuil** et l’**écologie vécue** du fond."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5dbe091-abc7-548a-99f0-0e4663e11839",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le grand livre des transformations",
+   "competence": "lire-tableau",
+   "situation": "Tu prépares ton oral sur les *Métamorphoses* d’Ovide. Lis la fiche de l’œuvre, puis quelques récits célèbres.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Métamorphoses",
+     "sousTitre": "Ovide",
+     "emoji": "🦋",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Poète latin de Rome, sous Auguste"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Quinze livres en hexamètres",
+       "id": "forme"
+      },
+      {
+       "texte": "Nombre de vers",
+       "valeur": "Environ douze mille"
+      },
+      {
+       "texte": "Date",
+       "valeur": "Achevé vers l’an 8"
+      }
+     ],
+     "pied": "Deux cent cinquante récits de transformations",
+     "teinte": "violet"
+    },
+    {
+     "id": "recits",
+     "type": "tableau",
+     "titre": "Trois récits célèbres",
+     "colonnes": [
+      "Récit",
+      "La métamorphose"
+     ],
+     "lignes": [
+      [
+       "Daphné",
+       "Changée en laurier pour échapper à Apollon"
+      ],
+      [
+       "Écho",
+       "?"
+      ],
+      [
+       "Pygmalion",
+       "Sa statue s’anime"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "forme"
+     ],
+     "enonce": "Touche la ligne qui donne la forme du poème.",
+     "aide": "Cherche les livres et les hexamètres.",
+     "explication": "La forme est **quinze livres en hexamètres**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « Écho » ?",
+     "options": [
+      "Réduite à une voix",
+      "Changée en fleur",
+      "Changée en araignée",
+      "Changée en laurier"
+     ],
+     "reponse": 0,
+     "aide": "Écho n’a plus de corps.",
+     "explication": "Écho est **réduite à une voix**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à sa métamorphose.",
+     "paires": [
+      [
+       "Narcisse",
+       "Changé en fleur"
+      ],
+      [
+       "Arachné",
+       "Changée en araignée"
+      ],
+      [
+       "Philémon et Baucis",
+       "Deux arbres entrelacés"
+      ],
+      [
+       "Daphné",
+       "Changée en laurier"
+      ]
+     ],
+     "aide": "Ces récits figurent dans le cours.",
+     "explication": "**Narcisse** devient fleur, **Arachné** araignée, **Philémon et Baucis** deux arbres, **Daphné** un laurier."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5dbe091-abc7-548a-99f0-0e4663e11839",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une nymphe, un laurier, un monde",
+   "competence": "analyser-texte",
+   "situation": "Lis un récit écrit pour l’exercice d’après Ovide, puis retrouve les grands thèmes des *Métamorphoses*.",
+   "documents": [
+    {
+     "id": "daphne",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Daphné et Apollon",
+     "blocs": [
+      "Le dieu Apollon poursuit la nymphe Daphné, qui ne veut pas de lui. Quand il va la rejoindre, elle est changée en [[l|laurier]]. Pour échapper au désir, elle a perdu son corps de nymphe."
+     ],
+     "source": "Récit écrit pour l’exercice, d’après Ovide"
+    },
+    {
+     "id": "themes",
+     "type": "tableau",
+     "titre": "Les thèmes du poème",
+     "colonnes": [
+      "Thème",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le désir et ses dangers",
+       "Apollon et Daphné, Narcisse"
+      ],
+      [
+       "La démesure punie",
+       "?"
+      ],
+      [
+       "La fidélité récompensée",
+       "Philémon et Baucis"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "daphne",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui dit en quoi Daphné est changée.",
+     "aide": "C’est un arbre.",
+     "explication": "Daphné est changée en **laurier**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « La démesure punie » ?",
+     "options": [
+      "Arachné défie Minerve, Icare vole trop haut",
+      "Pygmalion aime sa statue, Orphée charme les Enfers",
+      "Écho est réduite à une voix, Daphné devient laurier",
+      "Philémon et Baucis deviennent deux arbres entrelacés"
+     ],
+     "reponse": 0,
+     "aide": "Deux personnages en font trop.",
+     "explication": "La démesure punie, ce sont **Arachné** et **Icare**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre le récit de Daphné, pour le thème du désir ?",
+     "options": [
+      "Le désir est dangereux, et la métamorphose est une fuite",
+      "Le désir est récompensé par la bienveillance des dieux",
+      "Le désir mène toujours à un mariage heureux",
+      "Le désir est sans importance dans le poème"
+     ],
+     "reponse": 0,
+     "aide": "Que fait Daphné pour échapper à Apollon ?",
+     "explication": "Le désir est **dangereux** et la métamorphose est **une fuite**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le sujet du poème.",
+     "texte": "Le poème raconte l’histoire du monde, du ___ à l’___ de ___.",
+     "reponses": [
+      [
+       "chaos"
+      ],
+      [
+       "apothéose"
+      ],
+      [
+       "César"
+      ]
+     ],
+     "banque": [
+      "chaos",
+      "apothéose",
+      "César",
+      "déluge",
+      "Auguste"
+     ],
+     "aide": "Le cours dit « du chaos à… ».",
+     "explication": "Du **chaos** à l’**apothéose** de **César**."
+    }
+   ]
+  },
+  {
+   "chapitre": "e5dbe091-abc7-548a-99f0-0e4663e11839",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un seul fil : la transformation",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur l’unité du poème. Lis leur échange et une transition écrite pour l’exercice, puis argumente.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Zoé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Amir",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Zoé",
+       "texte": "Les *Métamorphoses*, c’est une collection d’histoires sans lien."
+      },
+      {
+       "qui": "Amir",
+       "texte": "Non : les récits s’enchaînent par des transitions, et toute l’œuvre dit que la transformation est la loi du monde."
+      }
+     ]
+    },
+    {
+     "id": "transition",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une transition",
+     "blocs": [
+      "Un jeune chasseur se penche sur une source et s’éprend de l’image qu’il y voit. Il se consume, et au bord de l’eau pousse une [[f|fleur]]. Une autre histoire commence déjà : celle d’un sculpteur dont la statue s’anime."
+     ],
+     "source": "Texte écrit pour l’exercice, d’après Ovide"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "transition",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui dit en quoi le jeune chasseur est changé.",
+     "aide": "C’est un végétal au bord de l’eau.",
+     "explication": "Il est changé en **fleur** : c’est Narcisse."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique du débat le cours appuie-t-il ?",
+     "options": [
+      "La transformation est la loi même du monde",
+      "Chaque récit est indépendant des autres",
+      "Les dieux n’interviennent jamais dans les récits",
+      "Le poème s’arrête avant l’histoire de Rome"
+     ],
+     "reponse": 0,
+     "aide": "Le cours donne la thèse d’Ovide.",
+     "explication": "Le cours : « **La transformation est la loi même du monde** »."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque récit : démesure punie, ou art qui donne vie ?",
+     "categories": [
+      "Démesure punie",
+      "Art qui donne vie"
+     ],
+     "items": [
+      [
+       "Arachné défie Minerve",
+       0
+      ],
+      [
+       "Icare vole trop haut",
+       0
+      ],
+      [
+       "Pygmalion et sa statue",
+       1
+      ],
+      [
+       "Orphée charme les Enfers",
+       1
+      ]
+     ],
+     "aide": "Un groupe est puni, l’autre émerveille.",
+     "explication": "**Arachné** et **Icare** illustrent la démesure ; **Pygmalion** et **Orphée** l’art qui donne vie."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle question de dissertation le mythe de Pygmalion permet-il de poser ?",
+     "options": [
+      "L’illusion de l’œuvre qui prend vie",
+      "Le pouvoir politique des empereurs",
+      "La fidélité récompensée après l’épreuve",
+      "Le déluge comme châtiment des hommes"
+     ],
+     "reponse": 0,
+     "aide": "La statue s’anime.",
+     "explication": "Pygmalion pose la question de **l’illusion de l’œuvre qui prend vie**."
+    }
+   ]
+  },
+  {
+   "chapitre": "904339e1-6a34-5984-be9e-545217ee3c32",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Deux géants, un conte de 1752",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur *Micromégas*. Place le conte dans la vie de Voltaire, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Voltaire et son conte",
+     "debut": 1690,
+     "fin": 1780,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1694,
+       "nom": "Naissance"
+      },
+      {
+       "id": "lap",
+       "date": 1736,
+       "nom": "Maupertuis"
+      },
+      {
+       "id": "mic",
+       "date": 1752,
+       "nom": "Micromégas"
+      },
+      {
+       "id": "mort",
+       "date": 1778,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Qui",
+      "Sa taille ou sa nature"
+     ],
+     "lignes": [
+      [
+       "Micromégas, de Sirius",
+       "Huit lieues de haut"
+      ],
+      [
+       "Son compagnon saturnien",
+       "Mille toises"
+      ],
+      [
+       "Les humains",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "mic"
+     ],
+     "enonce": "Touche l’année de publication du conte.",
+     "aide": "Voltaire la choisit en pleine période des Lumières.",
+     "explication": "Le conte paraît en **1752**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour les humains ?",
+     "options": [
+      "Des « atomes intelligents »",
+      "Des géants de huit lieues",
+      "Des habitants de Saturne",
+      "Des animaux sans parole"
+     ],
+     "reponse": 0,
+     "aide": "Les géants les voient à la loupe.",
+     "explication": "Les humains sont des « **atomes intelligents** »."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le sens du titre.",
+     "texte": "Le conte repose sur le changement d’___ : « micro » veut dire ___ et « mégas » ___.",
+     "reponses": [
+      [
+       "échelle"
+      ],
+      [
+       "petit"
+      ],
+      [
+       "grand"
+      ]
+     ],
+     "banque": [
+      "échelle",
+      "température",
+      "petit",
+      "grand",
+      "vite"
+     ],
+     "aide": "Pense à la taille des géants et des humains.",
+     "explication": "Changement d’**échelle** ; « micro » : **petit**, « mégas » : **grand**."
+    }
+   ]
+  },
+  {
+   "chapitre": "904339e1-6a34-5984-be9e-545217ee3c32",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Sirius à la loupe",
+   "competence": "analyser-texte",
+   "situation": "Suis le voyage de Micromégas, puis lis une scène écrite pour l’exercice, à la manière de Voltaire.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le voyage",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Banni de la cour pour un livre jugé hérétique"
+      },
+      {
+       "id": "n2",
+       "texte": "Voyage dans le système solaire avec un Saturnien"
+      },
+      {
+       "id": "n3",
+       "texte": "Sur Terre : ils la croient déserte"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il laisse aux humains un livre entièrement blanc"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une scène à la manière de Voltaire",
+     "blocs": [
+      "Les deux voyageurs se penchent sur le navire, à la loupe. « Ces atomes savent [[m|mesurer]] les astres, dit le Saturnien, mais dès qu’on leur demande ce qu’est l’[[a|âme]], les voilà qui se disputent. »"
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Voltaire"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Ils découvrent à la loupe un navire revenant du cercle polaire",
+      "Ils s’installent sur Terre et fondent une académie",
+      "Micromégas revient à Sirius pour plaider sa cause",
+      "Ils quittent la Terre sans avoir vu personne"
+     ],
+     "reponse": 0,
+     "aide": "Ils croyaient la Terre déserte.",
+     "explication": "Ils découvrent, **à la loupe**, un navire d’explorateurs revenant du **cercle polaire**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où les géants se trompent sur la Terre.",
+     "aide": "Ils pensent qu’il n’y a personne.",
+     "explication": "Ils croient la Terre **déserte**, et se trompent."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot sur lequel les humains se disputent.",
+     "aide": "Les sciences font l’accord, ce mot non.",
+     "explication": "Les humains se disputent sur l’**âme**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est ou fait.",
+     "paires": [
+      [
+       "Le disciple de Locke",
+       "Le seul philosophe approuvé"
+      ],
+      [
+       "Le disciple de saint Thomas",
+       "Il affirme que tout est fait pour l’homme"
+      ],
+      [
+       "Le Saturnien",
+       "Le secrétaire de l’Académie"
+      ],
+      [
+       "Maupertuis",
+       "Son expédition en Laponie inspire le navire"
+      ]
+     ],
+     "aide": "Chaque personnage figure dans le cours.",
+     "explication": "Le **disciple de Locke** est approuvé, celui de **saint Thomas** croit tout fait pour l’homme, le **Saturnien** est secrétaire de l’Académie, **Maupertuis** inspire le navire."
+    }
+   ]
+  },
+  {
+   "chapitre": "904339e1-6a34-5984-be9e-545217ee3c32",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Rire de soi-même",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent de la portée du conte. Lis leur échange et une page écrite pour l’exercice, puis argumente.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Lou",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Lou",
+       "texte": "*Micromégas*, c’est un conte pour enfants : des géants et des voyages, c’est tout."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Non : le changement d’échelle rend visibles l’orgueil et la petitesse humaines, sans un mot de sermon."
+      }
+     ]
+    },
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un philosophe devant le géant",
+     "blocs": [
+      "Un philosophe, haut comme un doigt, assure au géant que l’univers entier a été fait pour l’homme. Le géant éclate d’un rire inextinguible : il vient de mesurer la taille de cet [[o|orgueil]]."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Voltaire"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le mot qui nomme le défaut que ce rire moque.",
+     "aide": "C’est ce que montre la taille du philosophe.",
+     "explication": "Le conte moque l’**orgueil** humain."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle réplique du débat le cours confirme-t-il ?",
+     "options": [
+      "Le changement d’échelle rend visibles l’orgueil et la petitesse humaines",
+      "Le conte est un récit sans cible ni intention critique réelle",
+      "Le conte se moque seulement des savants venus de Saturne",
+      "Le conte défend la guerre comme un jeu entre les nations"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle de « sermon ».",
+     "explication": "Le procédé **rend visibles l’orgueil et la petitesse humaines**, sans sermon."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : cible du conte, ou ce qu’il célèbre ?",
+     "categories": [
+      "Cible",
+      "Ce qu’il célèbre"
+     ],
+     "items": [
+      [
+       "La métaphysique bavarde",
+       0
+      ],
+      [
+       "La guerre",
+       0
+      ],
+      [
+       "L’anthropocentrisme",
+       0
+      ],
+      [
+       "Newton",
+       1
+      ],
+      [
+       "Locke",
+       1
+      ]
+     ],
+     "aide": "Le conte attaque des habitudes de pensée et célèbre une méthode.",
+     "explication": "**Métaphysique**, **guerre** et **anthropocentrisme** sont visés ; **Newton** et **Locke** sont célébrés."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du conte à ce qu’il signifie.",
+     "paires": [
+      [
+       "Le changement d’échelle",
+       "Il rend visibles l’orgueil et la petitesse humaines"
+      ],
+      [
+       "Le rire inextinguible des géants",
+       "La réponse à l’idée que tout est fait pour l’homme"
+      ],
+      [
+       "Un seul disciple approuvé, celui de Locke",
+       "La science expérimentale préférée aux systèmes"
+      ]
+     ],
+     "aide": "Chaque élément a une fonction dans le conte.",
+     "explication": "Le **changement d’échelle** révèle l’orgueil, le **rire** répond à l’anthropocentrisme, le **disciple de Locke** incarne la science expérimentale."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e1a978c-7178-55a0-8eb1-b2246b0a60a2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Le surréalisme et un livre sans intrigue",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes *Nadja* parmi les dates du surréalisme. Lis la frise et la carte d’identité du livre.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "André Breton",
+     "debut": 1890,
+     "fin": 1970,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1896,
+       "nom": "Naissance"
+      },
+      {
+       "id": "man",
+       "date": 1924,
+       "nom": "Manifeste"
+      },
+      {
+       "id": "renc",
+       "date": 1926,
+       "nom": "Rencontre"
+      },
+      {
+       "id": "nadja",
+       "date": 1928,
+       "nom": "Nadja"
+      },
+      {
+       "id": "mort",
+       "date": 1966,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Nadja",
+     "sousTitre": "André Breton",
+     "emoji": "🌀",
+     "lignes": [
+      {
+       "texte": "Parution",
+       "valeur": "1928"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Récit en trois parties"
+      },
+      {
+       "texte": "Illustration",
+       "valeur": "Des photographies"
+      },
+      {
+       "texte": "Première question",
+       "valeur": "« Qui suis-je ? »"
+      }
+     ],
+     "pied": "Un livre qui refuse d’être un roman",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "renc"
+     ],
+     "enonce": "Touche l’année de la rencontre avec Nadja.",
+     "aide": "Elle a lieu en octobre, deux ans avant la parution.",
+     "explication": "Breton rencontre Nadja en octobre **1926**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le *Manifeste du surréalisme* de la parution de *Nadja* ?",
+     "reponse": 4,
+     "unite": "ans",
+     "aide": "Repère 1924 et 1928.",
+     "explication": "1928 − 1924 = **4 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité du livre.",
+     "texte": "Le livre est un récit en ___ parties, illustré de ___ qui remplacent les descriptions.",
+     "reponses": [
+      [
+       "trois",
+       "3"
+      ],
+      [
+       "photographies"
+      ]
+     ],
+     "banque": [
+      "trois",
+      "deux",
+      "photographies",
+      "dessins",
+      "cartes"
+     ],
+     "aide": "La fiche et le résumé du cours donnent les deux réponses.",
+     "explication": "Un récit en **trois** parties, illustré de **photographies**."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e1a978c-7178-55a0-8eb1-b2246b0a60a2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Dix jours dans Paris",
+   "competence": "analyser-texte",
+   "situation": "Suis la composition du livre et le sort de Nadja.",
+   "documents": [
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Les trois parties",
+     "colonnes": [
+      "Partie",
+      "Ce qu’elle contient"
+     ],
+     "lignes": [
+      [
+       "La première",
+       "Des faits de hasard objectif : rencontres et coïncidences troublantes"
+      ],
+      [
+       "La deuxième",
+       "?"
+      ],
+      [
+       "La troisième",
+       "L’éloge de la beauté convulsive et une adresse à une autre femme"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Nadja",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Breton rencontre Nadja"
+      },
+      {
+       "id": "n2",
+       "texte": "Ils errent dans Paris pendant dix jours"
+      },
+      {
+       "id": "n3",
+       "texte": "?"
+      },
+      {
+       "id": "n4",
+       "texte": "Elle sombre : internée"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle disparaît du récit"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » de la ligne « La deuxième » ?",
+     "options": [
+      "La rencontre avec Nadja, en octobre 1926",
+      "Un manifeste littéraire daté de 1924",
+      "Le récit d’une enfance de Breton",
+      "Un traité de psychanalyse sur le rêve"
+     ],
+     "reponse": 0,
+     "aide": "C’est le cœur du livre.",
+     "explication": "La deuxième partie raconte la **rencontre avec Nadja** en octobre 1926."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle voit des signes partout, dessine et prophétise",
+      "Elle quitte Paris pour une nouvelle vie en province",
+      "Elle épouse Breton et s’installe chez lui",
+      "Elle publie un recueil de dessins surréalistes"
+     ],
+     "reponse": 0,
+     "aide": "Avant de sombrer, elle voit le monde autrement.",
+     "explication": "Elle **voit des signes partout**, dessine, prophétise."
+    },
+    {
+     "type": "zone",
+     "document": "parties",
+     "multiple": false,
+     "reponse": [
+      "r2c0"
+     ],
+     "enonce": "Touche la partie qui s’adresse à une autre femme.",
+     "aide": "C’est la dernière.",
+     "explication": "La **troisième** partie s’adresse à une autre femme, « Toi »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du livre à ce qu’il désigne.",
+     "paires": [
+      [
+       "Le « hasard objectif »",
+       "Rencontres et coïncidences troublantes"
+      ],
+      [
+       "Les photographies",
+       "Elles remplacent les descriptions"
+      ],
+      [
+       "« Toi »",
+       "L’autre femme à qui s’adresse la fin"
+      ],
+      [
+       "« L’âme errante »",
+       "Comment Nadja se désigne"
+      ]
+     ],
+     "aide": "Chaque élément est dans le cours.",
+     "explication": "Le **hasard objectif**, les **photographies**, « **Toi** » et l’**âme errante** structurent le livre."
+    }
+   ]
+  },
+  {
+   "chapitre": "1e1a978c-7178-55a0-8eb1-b2246b0a60a2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un récit qui refuse d’inventer",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent du genre de *Nadja*. Lis leur échange, une page écrite pour l’exercice, et un tableau à compléter.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sam",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sam",
+       "texte": "*Nadja*, c’est un roman classique avec une intrigue construite."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Non : pas d’intrigue, des photographies à la place des descriptions et un narrateur qui refuse d’inventer."
+      }
+     ]
+    },
+    {
+     "id": "page",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une page à la manière de Breton",
+     "blocs": [
+      "Hier, dans la rue, une inconnue m’a arrêté. Elle m’a dit qu’elle voyait des [[s|signes]] partout. Je ne cherche pas à inventer : je note ce qui est arrivé, et je laisse la photographie dire le reste."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’André Breton"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "*Nadja* interroge les frontières du roman",
+       "Récit vrai, photographies, journal",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "page",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce que l’inconnue voit partout.",
+     "aide": "Elle lit le monde comme un message.",
+     "explication": "Elle voit des **signes** partout : c’est ce que fait Nadja."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle remarque du cours soutient la réplique de Léa ?",
+     "options": [
+      "Le livre refuse le roman, les descriptions et l’invention",
+      "Le livre invente une intrigue pleine de coups de théâtre",
+      "Le livre décrit chaque lieu avec de longues pages",
+      "Le livre suit un narrateur qui n’existe pas"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dresse deux colonnes : ce que le livre refuse, ce qu’il met à la place.",
+     "explication": "Le livre **refuse le roman**, les **descriptions** et l’**invention**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète l’exemple de la case « ? ».",
+     "texte": "Les ___ remplacent les ___ : le livre refuse l’invention.",
+     "reponses": [
+      [
+       "photographies"
+      ],
+      [
+       "descriptions"
+      ]
+     ],
+     "banque": [
+      "photographies",
+      "descriptions",
+      "dialogues",
+      "dessins"
+     ],
+     "aide": "Cherche ce que le cours met à la place des descriptions.",
+     "explication": "Les **photographies** remplacent les **descriptions**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : hasard objectif, ville, ou folie ?",
+     "categories": [
+      "Hasard objectif",
+      "La ville",
+      "La folie"
+     ],
+     "items": [
+      [
+       "Des coïncidences troublantes dans la première partie",
+       0
+      ],
+      [
+       "Dix jours d’errance dans Paris",
+       1
+      ],
+      [
+       "L’internement de Nadja",
+       2
+      ],
+      [
+       "La critique de l’asile par Breton",
+       2
+      ]
+     ],
+     "aide": "Un thème relève de la rencontre, un autre de l’espace, un autre de l’institution.",
+     "explication": "Les **coïncidences** relèvent du hasard objectif, l’**errance** de la ville, l’**internement** et l’**asile** de la folie."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bb7e4c2-d0a0-5f77-a738-d66d2cce0c9d",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Neuvième roman, dernières années de l’Empire",
+   "competence": "se-reperer-temps",
+   "situation": "Tu situes *Nana* dans l’œuvre de Zola. Lis la frise et la carte d’identité du roman.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Zola et son roman",
+     "debut": 1840,
+     "fin": 1910,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1840,
+       "nom": "Naissance"
+      },
+      {
+       "id": "guerre",
+       "date": 1870,
+       "nom": "Fin de l’action"
+      },
+      {
+       "id": "nana",
+       "date": 1880,
+       "nom": "Nana"
+      },
+      {
+       "id": "mort",
+       "date": 1902,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Nana",
+     "sousTitre": "Émile Zola",
+     "emoji": "🪰",
+     "lignes": [
+      {
+       "texte": "Place",
+       "valeur": "Neuvième volume des Rougon-Macquart"
+      },
+      {
+       "texte": "Héroïne",
+       "valeur": "Fille de Gervaise et Coupeau"
+      },
+      {
+       "texte": "Théâtre",
+       "valeur": "Les Variétés, La Blonde Vénus"
+      },
+      {
+       "texte": "Fin",
+       "valeur": "Elle meurt de la petite vérole"
+      }
+     ],
+     "pied": "Roman naturaliste",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "nana"
+     ],
+     "enonce": "Touche l’année de publication de *Nana*.",
+     "aide": "Dix ans après la fin de l’action.",
+     "explication": "*Nana* paraît en **1880**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent la fin de l’action (1870) de la parution du roman ?",
+     "reponse": 10,
+     "unite": "ans",
+     "aide": "Repère 1870 et 1880.",
+     "explication": "1880 − 1870 = **10 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la carte d’identité.",
+     "texte": "*Nana* est le ___ volume des *Rougon-Macquart* ; son auteur, ___, est le chef de file du ___.",
+     "reponses": [
+      [
+       "neuvième",
+       "9e"
+      ],
+      [
+       "Zola"
+      ],
+      [
+       "naturalisme"
+      ]
+     ],
+     "banque": [
+      "neuvième",
+      "premier",
+      "Zola",
+      "Hugo",
+      "naturalisme",
+      "romantisme"
+     ],
+     "aide": "Le cours donne chaque réponse.",
+     "explication": "Le **neuvième** volume ; **Zola**, chef de file du **naturalisme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bb7e4c2-d0a0-5f77-a738-d66d2cce0c9d",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "La mouche d’or",
+   "competence": "analyser-texte",
+   "situation": "Suis l’ascension et la chute de Nana, puis retrouve ce qu’elle fait de ses victimes.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le destin de Nana",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Nana débute aux Variétés dans *La Blonde Vénus*"
+      },
+      {
+       "id": "n2",
+       "texte": "Elle triomphe : presque nue, elle chante faux"
+      },
+      {
+       "id": "n3",
+       "texte": "Ses amants se ruinent, se tuent ou se brûlent"
+      },
+      {
+       "id": "n4",
+       "texte": "Journée du Grand Prix de Paris"
+      },
+      {
+       "id": "n5",
+       "texte": "?"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Elle meurt défigurée par la petite vérole",
+      "Elle épouse le comte Muffat et quitte Paris",
+      "Elle quitte le théâtre pour la campagne",
+      "Elle est condamnée pour avoir triché aux courses"
+     ],
+     "reponse": 0,
+     "aide": "La fin est brutale.",
+     "explication": "Elle meurt, **défigurée par la petite vérole**, dans un hôtel."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n4"
+     ],
+     "enonce": "Touche l’étape qui est le sommet du roman.",
+     "aide": "Une pouliche porte le même nom qu’elle.",
+     "explication": "La **journée du Grand Prix de Paris** est le sommet du roman."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son destin.",
+     "paires": [
+      [
+       "Muffat",
+       "Il se traîne à ses pieds"
+      ],
+      [
+       "Steiner",
+       "Ruiné"
+      ],
+      [
+       "Georges Hugon",
+       "Il se suicide"
+      ],
+      [
+       "Vandeuvres",
+       "Il se brûle dans son écurie"
+      ]
+     ],
+     "aide": "Chacun a un sort précis.",
+     "explication": "**Muffat** se traîne, **Steiner** est ruiné, **Georges** se suicide, **Vandeuvres** se brûle dans son écurie."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la fin du roman.",
+     "texte": "Quand Nana meurt, la foule crie « À ___ ! » : la guerre de ___ commence.",
+     "reponses": [
+      [
+       "Berlin"
+      ],
+      [
+       "1870"
+      ]
+     ],
+     "banque": [
+      "Berlin",
+      "Paris",
+      "1870",
+      "1914"
+     ],
+     "aide": "La guerre de 1870 commence.",
+     "explication": "La foule crie « À **Berlin** ! » : la guerre de **1870** commence."
+    }
+   ]
+  },
+  {
+   "chapitre": "4bb7e4c2-d0a0-5f77-a738-d66d2cce0c9d",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un corps qui pourrit une société",
+   "competence": "argumenter",
+   "situation": "Deux élèves interprètent Nana différemment. Lis leur débat, une scène écrite pour l’exercice, puis un tableau de dissertation.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Eva",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Tom",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Eva",
+       "texte": "Nana est une femme fatale qui ruine des hommes par méchanceté."
+      },
+      {
+       "qui": "Tom",
+       "texte": "Zola en fait une allégorie : la « mouche d’or », née du ruisseau, pourrit une société qui court à sa perte."
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Aux Variétés",
+     "blocs": [
+      "Elle entre en scène presque [[n|nue]]. La salle, pleine d’hommes en habit, se tait. Elle chante faux, mais personne n’écoute sa voix."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière d’Émile Zola"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Nana est un personnage-symbole",
+       "La mouche d’or venge les faubourgs sur les riches",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui explique pourquoi elle triomphe malgré sa voix.",
+     "aide": "Elle n’a pas besoin de chanter juste.",
+     "explication": "C’est parce qu’elle paraît presque **nue** qu’elle triomphe."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle remarque du cours appuie la réplique de Tom ?",
+     "options": [
+      "Nana est une allégorie : une société qui court à sa perte",
+      "Nana est un simple portrait de courtisane sans intention",
+      "Nana est un récit réaliste sans portée symbolique",
+      "Nana est une comédie légère sur le monde du théâtre"
+     ],
+     "reponse": 0,
+     "aide": "Le cours parle d’une mouche d’or.",
+     "explication": "Le cours en fait une **allégorie** d’une société qui court à sa perte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Muffat, Steiner, Georges et Vandeuvres sont ruinés ou détruits",
+      "Gervaise reste blanchisseuse toute sa vie",
+      "Nana quitte Paris et élève un enfant à la campagne",
+      "Le théâtre des Variétés ferme ses portes pour toujours"
+     ],
+     "reponse": 0,
+     "aide": "Que devient celui qui côtoie Nana ?",
+     "explication": "Ses amants sont **ruinés ou détruits** : c’est la mouche d’or à l’œuvre."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : méthode naturaliste, ou symbole ?",
+     "categories": [
+      "Méthode naturaliste",
+      "Symbole"
+     ],
+     "items": [
+      [
+       "La documentation sur le théâtre, les courses, le demi-monde",
+       0
+      ],
+      [
+       "La mort décrite avec une précision clinique",
+       0
+      ],
+      [
+       "L’alcoolisme hérité de ses parents",
+       0
+      ],
+      [
+       "La « mouche d’or »",
+       1
+      ],
+      [
+       "La foule qui crie « À Berlin ! »",
+       1
+      ]
+     ],
+     "aide": "La méthode relève de la documentation, du corps, de l’hérédité.",
+     "explication": "**Documentation**, **précision clinique** et **hérédité** sont naturalistes ; la **mouche d’or** et la **foule** sont des symboles."
+    }
+   ]
+  },
+  {
+   "chapitre": "326320ed-8d6f-5999-b7a5-a0766f778200",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Paris, 1482 : le roman de Hugo",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur *Notre-Dame de Paris*. Place le roman dans le temps, puis retrouve les personnages.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Le roman et son temps",
+     "debut": 1480,
+     "fin": 1890,
+     "pas": 50,
+     "evenements": [
+      {
+       "id": "action",
+       "date": 1482,
+       "nom": "Action du roman"
+      },
+      {
+       "id": "hugo",
+       "date": 1802,
+       "nom": "Naissance de Hugo"
+      },
+      {
+       "id": "pub",
+       "date": 1831,
+       "nom": "Publication"
+      },
+      {
+       "id": "mort",
+       "date": 1885,
+       "nom": "Mort de Hugo"
+      }
+     ]
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Qui il est"
+     ],
+     "lignes": [
+      [
+       "Quasimodo",
+       "Sonneur bossu, sourd et difforme, recueilli enfant par l’archidiacre"
+      ],
+      [
+       "Claude Frollo",
+       "?"
+      ],
+      [
+       "Esmeralda",
+       "Jeune bohémienne qui danse sur le parvis avec sa chèvre Djali"
+      ],
+      [
+       "Phœbus",
+       "Le capitaine qu’elle aime"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "action"
+     ],
+     "enonce": "Touche l’année où se déroule l’action du roman.",
+     "aide": "Le roman est publié bien plus tard.",
+     "explication": "L’action se déroule en **1482**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent l’action du roman de sa publication ?",
+     "reponse": 349,
+     "unite": "ans",
+     "aide": "Repère 1482 et 1831.",
+     "explication": "1831 − 1482 = **349 ans**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que faut-il écrire dans la case « ? » pour Claude Frollo ?",
+     "options": [
+      "L’archidiacre, dévoré par un désir qu’il juge criminel",
+      "Le capitaine de la garde, amoureux de la bohémienne",
+      "Un poète qui préfère sauver la chèvre",
+      "Le bourreau chargé de la condamnation"
+     ],
+     "reponse": 0,
+     "aide": "Il a recueilli Quasimodo.",
+     "explication": "Claude Frollo est **l’archidiacre**, dévoré par un désir qu’il juge criminel."
+    }
+   ]
+  },
+  {
+   "chapitre": "326320ed-8d6f-5999-b7a5-a0766f778200",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De l’asile aux tours",
+   "competence": "analyser-texte",
+   "situation": "Suis les étapes de l’intrigue, d’Esmeralda sauvée au dénouement.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "L’intrigue",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Frollo fait enlever Esmeralda"
+      },
+      {
+       "id": "n2",
+       "texte": "Il poignarde Phœbus ; Esmeralda est accusée"
+      },
+      {
+       "id": "n3",
+       "texte": "Quasimodo la sauve : asile dans la cathédrale"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Frollo la livre ; Quasimodo le précipite"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "La Cour des miracles vient la délivrer : massacre",
+      "Le roi Louis XI gracie Esmeralda",
+      "Phœbus revient et l’épouse",
+      "Frollo se repent et rend la liberté à Esmeralda"
+     ],
+     "reponse": 0,
+     "aide": "Les gueux assiègent la cathédrale.",
+     "explication": "La **Cour des miracles** vient la délivrer : c’est le **massacre**."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où la cathédrale devient un asile.",
+     "aide": "Quasimodo y emmène Esmeralda.",
+     "explication": "La cathédrale est un **asile inviolable** pour Esmeralda."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque lieu à son rôle dans le roman.",
+     "paires": [
+      [
+       "La cathédrale",
+       "Un asile inviolable pour Esmeralda"
+      ],
+      [
+       "La Cour des miracles",
+       "Les gueux viennent délivrer Esmeralda"
+      ],
+      [
+       "Le gibet de Montfaucon",
+       "Quasimodo y va mourir près du corps"
+      ],
+      [
+       "Le parvis",
+       "Esmeralda y danse avec sa chèvre"
+      ]
+     ],
+     "aide": "Chaque lieu figure dans le résumé.",
+     "explication": "La **cathédrale** protège, la **Cour des miracles** attaque, **Montfaucon** est la fin de Quasimodo, le **parvis** la danse."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le crime de Frollo.",
+     "texte": "Frollo poignarde Phœbus et laisse Esmeralda être ___.",
+     "reponses": [
+      [
+       "accusée"
+      ]
+     ],
+     "banque": [
+      "accusée",
+      "sauvée",
+      "adoptée",
+      "épousée"
+     ],
+     "aide": "Relis la deuxième étape de la chaîne.",
+     "explication": "Esmeralda est **accusée** à sa place."
+    }
+   ]
+  },
+  {
+   "chapitre": "326320ed-8d6f-5999-b7a5-a0766f778200",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Ceci tuera cela",
+   "competence": "argumenter",
+   "situation": "Deux élèves débattent de Quasimodo. Lis leur échange, une formule du roman et un tableau, puis argumente.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Nora",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Elias",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Nora",
+       "texte": "Quasimodo est un monstre : il n’y a rien de sublime en lui."
+      },
+      {
+       "qui": "Elias",
+       "texte": "Hugo l’écrit pour unir le grotesque et le sublime, comme dans la Préface de *Cromwell*."
+      }
+     ]
+    },
+    {
+     "id": "formule",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une formule célèbre",
+     "blocs": [
+      "« [[a|Ceci]] tuera cela. »"
+     ],
+     "source": "Victor Hugo, *Notre-Dame de Paris* (1831), livre V, chapitre 2"
+    },
+    {
+     "id": "aimer",
+     "type": "tableau",
+     "titre": "Aimer Esmeralda",
+     "colonnes": [
+      "Personnage",
+      "Sa manière d’aimer"
+     ],
+     "lignes": [
+      [
+       "Claude Frollo",
+       "Par possession"
+      ],
+      [
+       "Phœbus",
+       "Par légèreté"
+      ],
+      [
+       "Quasimodo",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "formule",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui désigne le livre imprimé.",
+     "aide": "« Ceci » est ce que Frollo montre en premier.",
+     "explication": "« **Ceci** » désigne le livre imprimé, qui doit tuer la cathédrale (« cela »)."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle remarque du cours appuie la réplique d’Elias ?",
+     "options": [
+      "Quasimodo incarne l’union du grotesque et du sublime",
+      "Quasimodo n’est qu’un personnage comique",
+      "Quasimodo est le véritable ennemi d’Esmeralda",
+      "Quasimodo est un simple décor du Paris médiéval"
+     ],
+     "reponse": 0,
+     "aide": "Elias cite la Préface de Cromwell.",
+     "explication": "Le cours dit que **Quasimodo unit le grotesque et le sublime**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la ligne de Quasimodo.",
+     "texte": "Quasimodo aime Esmeralda par ___.",
+     "reponses": [
+      [
+       "dévouement"
+      ]
+     ],
+     "banque": [
+      "dévouement",
+      "possession",
+      "légèreté",
+      "ambition"
+     ],
+     "aide": "Frollo : possession ; Phœbus : légèreté.",
+     "explication": "Quasimodo aime par **dévouement**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à sa signification.",
+     "paires": [
+      [
+       "Anankè",
+       "La fatalité, mot grec gravé sur un mur de la cathédrale"
+      ],
+      [
+       "« Ceci tuera cela »",
+       "Le livre imprimé remplace la cathédrale comme livre du peuple"
+      ],
+      [
+       "Le succès du roman",
+       "La restauration de Notre-Dame"
+      ],
+      [
+       "Quasimodo",
+       "L’union du grotesque et du sublime"
+      ]
+     ],
+     "aide": "Chaque élément est dans le cours.",
+     "explication": "**Anankè** : la fatalité ; **Ceci tuera cela** : le livre remplace la cathédrale ; le **succès** a sauvé Notre-Dame ; **Quasimodo** unit grotesque et sublime."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1947 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "99322c2e-8bb5-5b9b-8820-f4bcf9cc79b8",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois amis, un tableau blanc",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ton oral sur « Art ». Avant de parler de la dispute, tu veux savoir qui est qui : lis le tableau des trois amis, puis la carte d’identité de la pièce.",
+   "documents": [
+    {
+     "id": "amis",
+     "type": "tableau",
+     "titre": "Les trois amis",
+     "colonnes": [
+      "Personnage",
+      "Métier",
+      "Dans la dispute"
+     ],
+     "lignes": [
+      [
+       "Serge",
+       "Dermatologue",
+       "Il a acheté le tableau blanc"
+      ],
+      [
+       "Marc",
+       "?",
+       "Il le trouve ridicule, et le dit"
+      ],
+      [
+       "Yvan",
+       "Papetier",
+       "Il tente de ménager tout le monde"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "« Art »",
+     "sousTitre": "Comédie de Yasmina Reza",
+     "emoji": "🖼️",
+     "lignes": [
+      {
+       "texte": "Créée à Paris",
+       "valeur": "Octobre 1994",
+       "id": "date"
+      },
+      {
+       "texte": "Personnages",
+       "valeur": "Trois",
+       "id": "nb"
+      },
+      {
+       "texte": "Durée",
+       "valeur": "1 h 30",
+       "id": "duree"
+      },
+      {
+       "texte": "Succès",
+       "valeur": "Molières 1995 · Tony Award 1998",
+       "id": "prix"
+      }
+     ],
+     "pied": "Comédie des Champs-Élysées",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Marc est celui qui trouve le tableau ridicule. Quel est son métier (la case « ? ») ?",
+     "options": [
+      "Ingénieur",
+      "Notaire",
+      "Professeur",
+      "Avocat"
+     ],
+     "reponse": 0,
+     "aide": "Le cours le décrit comme un rationaliste, plutôt un homme de sciences.",
+     "explication": "Marc est **ingénieur** : un rationaliste que le tableau blanc exaspère, et que la pièce montre aussi blessé."
+    },
+    {
+     "type": "zone",
+     "document": "amis",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Dans le tableau, touche la case qui dit ce que fait Yvan dans la dispute.",
+     "aide": "Cherche la ligne d’Yvan, puis la colonne « Dans la dispute ».",
+     "explication": "Yvan **tente de ménager tout le monde** : c’est lui qui, plus loin, craque au milieu de la pièce."
+    },
+    {
+     "type": "nombre",
+     "enonce": "La pièce est créée en 1994 et reçoit son Tony Award à Broadway en 1998. Combien d’années séparent ces deux dates ?",
+     "reponse": 4,
+     "aide": "Soustrais les deux années : seule l’année compte ici.",
+     "explication": "1998 − 1994 = **4 ans** : la pièce a fait le tour du monde avant d’être couronnée à New York.",
+     "unite": "ans"
+    }
+   ]
+  },
+  {
+   "chapitre": "99322c2e-8bb5-5b9b-8820-f4bcf9cc79b8",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du tableau au feutre",
+   "competence": "analyser-document",
+   "situation": "Le tableau de Serge déclenche une dispute qui dure une heure et demie. Suis le fil de la pièce, puis dis ce que la dispute cache vraiment.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil de la pièce",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Serge achète un tableau blanc"
+      },
+      {
+       "id": "n2",
+       "texte": "Marc le trouve ridicule"
+      },
+      {
+       "id": "n3",
+       "texte": "La discussion devient un règlement de comptes"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Le feutre était lavable"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Serge tend un feutre à Marc, qui dessine un skieur sur la toile",
+      "Marc rachète le tableau à Serge pour le détruire devant tous",
+      "Yvan emporte la toile chez lui pour la nettoyer au solvant",
+      "Serge se fait rembourser et rend le tableau à la galerie"
+     ],
+     "reponse": 0,
+     "aide": "L’étape qui précède la révélation du feutre : c’est un geste de Marc sur la toile.",
+     "explication": "Serge **tend un feutre à Marc, qui dessine un skieur** sur la toile : c’est la preuve que l’amitié compte plus que l’objet."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n5"
+     ],
+     "enonce": "Serge savait quelque chose depuis le début et ne l’a pas dit à Marc. Touche l’étape qui le révèle.",
+     "aide": "Qu’est-ce que Serge savait du feutre ?",
+     "explication": "Le feutre était **lavable** : Serge le savait et s’est tu, l’amitié repart sur un petit mensonge."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il reproche, ou à ce qui lui arrive, dans la dispute.",
+     "paires": [
+      [
+       "Marc",
+       "S’être inventé un goût pour se distinguer"
+      ],
+      [
+       "Serge",
+       "Vouloir rester son maître à penser"
+      ],
+      [
+       "Yvan",
+       "Tenter de ménager tout le monde, puis craquer"
+      ]
+     ],
+     "aide": "Marc parle du goût de Serge ; Serge répond sur le rôle que Marc s’attribue.",
+     "explication": "Marc reproche à Serge de **s’être inventé un goût**, Serge à Marc de vouloir rester son **maître à penser**, et Yvan **craque** à force de ménager chacun."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : sujet apparent de la pièce ou vrai sujet ?",
+     "categories": [
+      "Sujet apparent",
+      "Vrai sujet"
+     ],
+     "items": [
+      [
+       "Le tableau blanc d’Antrios",
+       0
+      ],
+      [
+       "L’art contemporain",
+       0
+      ],
+      [
+       "L’amitié masculine",
+       1
+      ],
+      [
+       "La peur d’être exclu",
+       1
+      ],
+      [
+       "Le besoin d’être admiré",
+       1
+      ]
+     ],
+     "aide": "Le tableau est ce dont on parle ; l’amitié est ce qui se joue.",
+     "explication": "Le **tableau** et l’**art contemporain** sont le prétexte ; le vrai sujet est l’**amitié**, avec la peur d’être exclu et le besoin d’être admiré."
+    }
+   ]
+  },
+  {
+   "chapitre": "99322c2e-8bb5-5b9b-8820-f4bcf9cc79b8",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Une dispute sur un vélo",
+   "competence": "argumenter",
+   "situation": "Pour t’entraîner à l’oral, tu lis une courte scène écrite à la manière de Reza, puis tu t’en sers pour construire un petit argumentaire sur la pièce.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "Une scène à la manière de « Art »",
+     "blocs": [
+      {
+       "didascalie": "Alex vient d’acheter un vélo de course très cher. Samir en fait le tour, sans rien dire."
+      },
+      {
+       "personnage": "Alex",
+       "replique": "Dis-le. Tu trouves ça ridicule."
+      },
+      {
+       "personnage": "Samir",
+       "replique": "Deux mille euros, pour rouler sur la même route que moi, avec mon vieux vélo ? Je n’ai rien dit."
+      },
+      {
+       "personnage": "Alex",
+       "replique": "Justement. Avant, tu me donnais ton [[v|avis]] sur tout."
+      },
+      {
+       "didascalie": "Samir, au public."
+      },
+      {
+       "personnage": "Samir",
+       "replique": "Ce n’est pas le vélo. C’est qu’il n’a plus [[v|besoin]] de moi."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de « Art » de Yasmina Reza"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un petit argumentaire",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le tableau n’est qu’un prétexte",
+       "Les amis se disputent sur eux-mêmes, non sur la toile",
+       "Marc reproche à Serge de s’être inventé un goût"
+      ],
+      [
+       "Le rire touche au grave",
+       "?",
+       "Yvan craque au milieu de la pièce"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Dans la scène, touche les deux mots qui montrent que le vrai sujet n’est pas le vélo.",
+     "aide": "Cherche ce qu’Alex regrette, et ce que Samir craint de perdre.",
+     "explication": "Les mots **avis** et **besoin** disent ce qui est en jeu : le rôle que chacun tient dans l’amitié, comme chez Reza."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément de la scène : il fait sourire, ou il touche au grave ?",
+     "categories": [
+      "Il fait sourire",
+      "Il touche au grave"
+     ],
+     "items": [
+      [
+       "Deux mille euros pour rouler sur la même route",
+       0
+      ],
+      [
+       "« Je n’ai rien dit. » — « Justement. »",
+       0
+      ],
+      [
+       "La peur de ne plus être utile à son ami",
+       1
+      ],
+      [
+       "Un aveu fait au public, loin de l’autre",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : qu’est-ce qu’on peut dire à voix haute, qu’est-ce qu’on confie au public ?",
+     "explication": "Le prix du vélo et le quiproquo **font sourire** ; la peur d’être abandonné et l’aveu au public **touchent au grave** : c’est le mélange de « Art »."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de la scène à son effet.",
+     "paires": [
+      [
+       "Des répliques très brèves",
+       "Le rythme d’une dispute qui s’emballe"
+      ],
+      [
+       "Une adresse au public",
+       "Le personnage confie ce qu’il n’ose pas dire à l’autre"
+      ],
+      [
+       "Un objet banal (un vélo)",
+       "Un prétexte qui laisse voir le vrai sujet"
+      ]
+     ],
+     "aide": "Pense à ce que le public entend et que l’autre personnage n’entend pas.",
+     "explication": "Les répliques brèves donnent du **rythme**, l’adresse au public **confie** l’indicible, l’objet banal est un **prétexte** : trois procédés de Reza."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle phrase complète la case « ? » du tableau (le rire touche au grave) ?",
+     "options": [
+      "Derrière le comique, on entend la solitude de chacun",
+      "Les répliques sont brèves, donc la pièce reste légère",
+      "Le décor unique fait oublier les personnages",
+      "Le public rit, donc il n’y a rien de sérieux"
+     ],
+     "reponse": 0,
+     "aide": "Relis ce que le cours dit du rire dans cette comédie.",
+     "explication": "Le rire y **fait entendre la solitude de chacun** : c’est ce qui fait de « Art » une comédie qui touche au grave."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ab11489-ba23-5635-9955-6f95473aa7d5",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète de seize ans",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur « Le Bateau ivre ». Place le poème dans la vie de Rimbaud, puis relève ses caractéristiques.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Rimbaud et son poème",
+     "debut": 1850,
+     "fin": 1895,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1854,
+       "nom": "Naissance"
+      },
+      {
+       "id": "bi",
+       "date": 1871,
+       "nom": "Le Bateau ivre"
+      },
+      {
+       "id": "pub",
+       "date": 1883,
+       "nom": "Publication"
+      },
+      {
+       "id": "mort",
+       "date": 1891,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Le Bateau ivre",
+     "sousTitre": "Arthur Rimbaud",
+     "emoji": "⛵",
+     "lignes": [
+      {
+       "texte": "Forme",
+       "valeur": "25 quatrains d’alexandrins"
+      },
+      {
+       "texte": "Âge de l’auteur",
+       "valeur": "Seize ans"
+      },
+      {
+       "texte": "Le « je »",
+       "valeur": "Un bateau"
+      },
+      {
+       "texte": "Envoyé à",
+       "valeur": "Verlaine"
+      }
+     ],
+     "pied": "Poème composé à l’été 1871",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "bi"
+     ],
+     "enonce": "Sur la frise, touche l’année où Rimbaud compose « Le Bateau ivre ».",
+     "aide": "Le poème est composé quand Rimbaud a seize ans, à l’été.",
+     "explication": "Le poème est composé en **1871**, bien avant la mort de Rimbaud, qui écrit toute son œuvre avant vingt ans."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la composition du poème et sa publication ?",
+     "reponse": 12,
+     "aide": "Repère les deux dates sur la frise et soustrais.",
+     "explication": "1883 − 1871 = **12 ans** : le poème ne paraît qu’en 1883, grâce à Verlaine, dans *Les Poètes maudits*.",
+     "unite": "ans"
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité du poème.",
+     "texte": "Le poème compte ___ quatrains d’___ ; son « je » est celui d’un ___.",
+     "reponses": [
+      [
+       "vingt-cinq",
+       "25"
+      ],
+      [
+       "alexandrins"
+      ],
+      [
+       "bateau"
+      ]
+     ],
+     "banque": [
+      "vingt-cinq",
+      "douze",
+      "alexandrins",
+      "octosyllabes",
+      "bateau",
+      "poète"
+     ],
+     "aide": "Tout est dans la fiche « Le Bateau ivre ».",
+     "explication": "Le poème compte **vingt-cinq** quatrains d’**alexandrins**, et son « je » est celui d’un **bateau**."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ab11489-ba23-5635-9955-6f95473aa7d5",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du fleuve à la flaque",
+   "competence": "analyser-texte",
+   "situation": "Le bateau descend un fleuve, se perd en mer, puis rêve de retour. Lis les deux premiers vers, puis remets en ordre les trois temps du poème.",
+   "documents": [
+    {
+     "id": "debut",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le début du poème",
+     "blocs": [
+      "Comme je descendais des Fleuves impassibles,",
+      "Je ne me sentis plus guidé par les [[h|haleurs]] :"
+     ],
+     "source": "Arthur Rimbaud, *Le Bateau ivre* (1871), vers 1 et 2"
+    },
+    {
+     "id": "temps",
+     "type": "tableau",
+     "titre": "Les trois temps du poème (en désordre)",
+     "colonnes": [
+      "Temps",
+      "Ce qui s’y passe"
+     ],
+     "lignes": [
+      [
+       "La fatigue",
+       "Le désir de retour : une « flache noire et froide » d’Europe"
+      ],
+      [
+       "La libération",
+       "Plus d’équipage, plus de gouvernail"
+      ],
+      [
+       "?",
+       "« Poème de la mer », soleils, aurores, cataractes, monstres"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debut",
+     "multiple": false,
+     "reponse": [
+      "h"
+     ],
+     "enonce": "Touche le mot qui désigne ceux qui tiraient le bateau le long du fleuve.",
+     "aide": "Ce sont des hommes qui marchaient sur la berge.",
+     "explication": "Les **haleurs** guidaient le bateau ; leur disparition ouvre le poème."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que signifie, dès le début, la fin des haleurs ?",
+     "options": [
+      "Le bateau n’est plus guidé : il se libère de toute contrainte",
+      "Le bateau est abandonné par des marins qui ont peur",
+      "Le fleuve devient trop étroit pour être halé",
+      "Le poète renonce au voyage et rentre chez lui"
+     ],
+     "reponse": 0,
+     "aide": "Qui conduisait le bateau avant, et que devient-il ensuite ?",
+     "explication": "Sans haleurs, ni équipage, ni gouvernail, le bateau est **libre** : c’est le premier temps du poème, la libération."
+    },
+    {
+     "type": "trous",
+     "enonce": "Trouve le nom du temps manquant (la case « ? »).",
+     "texte": "Entre la libération et la fatigue vient l’___ de la ___.",
+     "reponses": [
+      [
+       "ivresse"
+      ],
+      [
+       "vision"
+      ]
+     ],
+     "banque": [
+      "ivresse",
+      "vision",
+      "prière",
+      "mer",
+      "fatigue"
+     ],
+     "aide": "Soleils, aurores, monstres : le bateau voit des choses inouïes.",
+     "explication": "Le temps du milieu est **l’ivresse de la vision** : le bateau voit ce que l’homme a cru voir, et même plus."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets les trois temps du poème dans l’ordre où on les lit.",
+     "items": [
+      "La libération",
+      "L’ivresse de la vision",
+      "La fatigue"
+     ],
+     "aide": "On part d’un bateau libre pour finir par le désir du retour.",
+     "explication": "Ordre du poème : **libération**, **ivresse de la vision**, **fatigue** (le désir d’une flaque d’Europe)."
+    }
+   ]
+  },
+  {
+   "chapitre": "3ab11489-ba23-5635-9955-6f95473aa7d5",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Un voyage que Rimbaud n’a jamais fait",
+   "competence": "argumenter",
+   "situation": "Deux élèves se disputent sur ce poème : un vrai voyage en mer, ou autre chose ? Tranche avec le dialogue et les derniers vers.",
+   "documents": [
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Elsa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Elsa",
+       "texte": "Rimbaud a forcément traversé l’océan : tout est trop précis pour être inventé."
+      },
+      {
+       "qui": "Karim",
+       "texte": "Il a seize ans et n’a jamais vu la mer. Ses images viennent de ses [[l|lectures]]."
+      },
+      {
+       "qui": "Elsa",
+       "texte": "Alors le poème ne serait qu’un exercice de style ?"
+      },
+      {
+       "qui": "Karim",
+       "texte": "Non : c’est le programme de la lettre du Voyant, mis en images."
+      }
+     ]
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les derniers vers",
+     "blocs": [
+      "Ni [[r|traverser]] l’orgueil des drapeaux et des flammes,",
+      "Ni [[r|nager]] sous les yeux horribles des pontons."
+     ],
+     "source": "Arthur Rimbaud, *Le Bateau ivre* (1871), derniers vers"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le mot qui dit d’où viennent les images exotiques du poème.",
+     "aide": "Karim répond à Elsa : il rappelle ce que Rimbaud a lu, pas ce qu’il a vu.",
+     "explication": "L’exotisme est **livresque** : ces images viennent des **lectures** d’enfance, pas d’un voyage réel."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux verbes qui disent ce que le bateau refuse de faire.",
+     "aide": "Les deux vers commencent par « Ni » : cherche le verbe qui suit.",
+     "explication": "Le bateau refuse de **traverser** l’orgueil des drapeaux et de **nager** sous les yeux des pontons, ces navires-prisons."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé du poème à son effet.",
+     "paires": [
+      [
+       "Vingt-cinq quatrains d’alexandrins",
+       "Une forme régulière qui contraste avec le déferlement des images"
+      ],
+      [
+       "Allitérations, néologismes, rythme",
+       "Le vers bouge comme l’eau"
+      ],
+      [
+       "Le « je » d’un bateau libre",
+       "Le poète se projette dans un objet qui s’abandonne à l’inconnu"
+      ]
+     ],
+     "aide": "Pense à ce que le vers imite, et à ce que l’on gagne à parler par la voix d’un bateau.",
+     "explication": "La **forme régulière** contraste avec le déferlement ; le **rythme** fait bouger le vers comme l’eau ; le **bateau** est le masque du poète voyant."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ce poème permet-il le mieux d’appuyer ?",
+     "options": [
+      "La poésie peut être une exploration de l’inconnu plutôt qu’une description du réel",
+      "La poésie doit décrire fidèlement les voyages réels que le poète a vécus",
+      "La poésie perd sa valeur dès qu’elle emploie des vers réguliers et rimés",
+      "La poésie est d’abord un récit d’aventures maritimes destiné à la jeunesse"
+     ],
+     "reponse": 0,
+     "aide": "Un poète qui n’a jamais vu la mer écrit le « Poème de la mer ».",
+     "explication": "Le poème montre que la poésie peut être une **exploration de l’inconnu** : c’est le poète voyant de la lettre du Voyant."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa2fb3c9-259c-5177-9ad4-85f2bb0c456f",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Trois femmes, une seule quête",
+   "competence": "analyser-document",
+   "situation": "Dans « Sylvie », le narrateur aime trois femmes qui n’en font peut-être qu’une. Repère-les dans le tableau avant de les comprendre.",
+   "documents": [
+    {
+     "id": "femmes",
+     "type": "tableau",
+     "titre": "Les trois femmes du récit",
+     "colonnes": [
+      "Femme",
+      "Où et quand"
+     ],
+     "lignes": [
+      [
+       "Sylvie",
+       "Le Valois, à l’adolescence"
+      ],
+      [
+       "Adrienne",
+       "Un souvenir lointain : aperçue une fois, chantant dans une ronde"
+      ],
+      [
+       "Aurélie",
+       "Paris, au théâtre"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "femmes",
+     "multiple": false,
+     "reponse": [
+      "r1c1"
+     ],
+     "enonce": "Touche la case qui dit où et comment le narrateur a vu Adrienne.",
+     "aide": "Cherche la femme qu’il n’a aperçue qu’une seule fois.",
+     "explication": "Adrienne est **un souvenir lointain**, aperçue une seule fois chantant dans une ronde : elle reste une figure inaccessible."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque femme à ce qu’elle représente.",
+     "paires": [
+      [
+       "Sylvie",
+       "Le réel, la tendresse, la vie qui continue"
+      ],
+      [
+       "Adrienne",
+       "L’idéal, la figure inaccessible"
+      ],
+      [
+       "Aurélie",
+       "L’illusion, l’image de théâtre"
+      ]
+     ],
+     "aide": "Sylvie est la plus proche de la vie quotidienne ; Aurélie est une actrice.",
+     "explication": "Sylvie est le **réel**, Adrienne l’**idéal**, Aurélie l’**illusion** : le narrateur court après une femme faite de trois."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui Sylvie épouse-t-elle à la fin ?",
+     "options": [
+      "« Le grand frisé », devenu pâtissier",
+      "Le narrateur, revenu au Valois",
+      "Un jeune acteur rencontré à Paris",
+      "Un riche propriétaire du Valois"
+     ],
+     "reponse": 0,
+     "aide": "C’est un camarade d’enfance du narrateur.",
+     "explication": "Sylvie épouse **« le grand frisé »**, son camarade d’enfance devenu pâtissier : le narrateur n’a pas su choisir."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa2fb3c9-259c-5177-9ad4-85f2bb0c456f",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Une fête au Valois",
+   "competence": "se-reperer-temps",
+   "situation": "Un simple journal suffit à faire partir le narrateur de Paris. Lis ce résumé, puis démêle les époques qui s’y superposent.",
+   "documents": [
+    {
+     "id": "resume",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le départ pour le Valois",
+     "blocs": [
+      "Un soir, à Paris, le narrateur lit un [[e|entrefilet]] : une fête a lieu cette nuit-là au Valois, le pays de son enfance. Il part aussitôt, et son voyage de nuit réveille ses souvenirs.",
+      "Il revoit d’abord l’adolescence : Sylvie, la paysanne, et les promenades d’autrefois. Plus loin encore, il se rappelle Adrienne, aperçue une seule fois, chantant dans une ronde.",
+      "Le récit passe d’une époque à l’autre en une phrase, sans prévenir le lecteur."
+     ],
+     "source": "Résumé écrit pour l’exercice"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "resume",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot qui déclenche le départ du narrateur.",
+     "aide": "C’est un petit texte de journal.",
+     "explication": "Un **entrefilet** annonce la fête : c’est lui qui lance le voyage et, avec lui, le va-et-vient entre les époques."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément dans l’époque du récit à laquelle il appartient.",
+     "categories": [
+      "Aujourd’hui",
+      "L’adolescence",
+      "Le souvenir lointain"
+     ],
+     "items": [
+      [
+       "La fête annoncée au Valois",
+       0
+      ],
+      [
+       "Le voyage de nuit",
+       0
+      ],
+      [
+       "Sylvie, la paysanne",
+       1
+      ],
+      [
+       "Adrienne chantant dans une ronde",
+       2
+      ]
+     ],
+     "aide": "Le résumé dit quel souvenir vient « d’abord » et lequel vient « plus loin encore ».",
+     "explication": "**Aujourd’hui** : la fête et le voyage de nuit ; **l’adolescence** : Sylvie ; **le souvenir lointain** : Adrienne."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les grands moments du récit, du début à la fin.",
+     "items": [
+      "Il passe ses soirées au théâtre, pour Aurélie",
+      "Un entrefilet lui apprend qu’une fête a lieu au Valois",
+      "Il part vers le pays de son enfance",
+      "Sylvie a épousé « le grand frisé »",
+      "« Dernier feuillet » : le récit tire la leçon de ses illusions"
+     ],
+     "aide": "Le récit commence à Paris et finit sur une leçon.",
+     "explication": "Du **théâtre** à Paris, à l’**entrefilet**, au **départ**, à **Sylvie mariée** à un autre, puis au « Dernier feuillet » qui tire la leçon."
+    }
+   ]
+  },
+  {
+   "chapitre": "aa2fb3c9-259c-5177-9ad4-85f2bb0c456f",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Les chimères du narrateur",
+   "competence": "analyser-texte",
+   "situation": "Deux élèves ne s’accordent pas sur la fin du récit. Appuie-toi sur le dialogue et sur la phrase de conclusion de Nerval.",
+   "documents": [
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La leçon du récit",
+     "blocs": [
+      "« Telles sont les [[c|chimères]] qui [[a|charment]] et [[a|égarent]] au matin de la vie. »"
+     ],
+     "source": "Gérard de Nerval, *Sylvie* (1853)"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Après la lecture",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léo",
+       "emoji": "👦",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léo",
+       "texte": "À la fin, le narrateur [[e|épouse]] enfin Sylvie : c’est un récit d’amour heureux."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Pas du tout : Sylvie a épousé « le grand frisé », un pâtissier."
+      },
+      {
+       "qui": "Léo",
+       "texte": "Alors il a choisi Adrienne, l’idéal ?"
+      },
+      {
+       "qui": "Inès",
+       "texte": "Non plus. Il ne choisit jamais : il court après une femme faite de trois."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": true,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche les deux verbes qui disent le double effet des chimères.",
+     "aide": "Elles font deux choses à la fois, l’une agréable, l’autre dangereuse.",
+     "explication": "Les chimères **charment** (elles séduisent) et **égarent** (elles font perdre le chemin) : toute la leçon de Nerval tient dans ces deux verbes."
+    },
+    {
+     "type": "zone",
+     "document": "deb",
+     "multiple": false,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche le mot de Léo que le récit dément.",
+     "aide": "Relis ce qui arrive à Sylvie.",
+     "explication": "Léo se trompe sur **épouse** : Sylvie épouse un autre, et le narrateur ne choisit aucune des trois femmes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque particularité du récit à son effet.",
+     "paires": [
+      [
+       "Les époques se superposent sans transition",
+       "Le souvenir remplace l’ordre chronologique"
+      ],
+      [
+       "Le Valois d’enfance, avec ses fêtes et ses chansons",
+       "Un pays idéalisé où le narrateur se réfugie"
+      ],
+      [
+       "Trois femmes pour une seule quête",
+       "Le narrateur préfère l’image à la femme vivante"
+      ]
+     ],
+     "aide": "Pense au temps, au lieu et aux personnages du récit.",
+     "explication": "Le **temps** devient celui du souvenir, le **Valois** un refuge idéalisé, et les **trois femmes** une même image : le rêve l’emporte sur le réel."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle lecture l’ensemble des documents permet-il de défendre ?",
+     "options": [
+      "Un récit de la mémoire où l’illusion remplace le choix",
+      "Un récit d’amour qui finit par un mariage heureux",
+      "Un récit d’aventures dont Sylvie est l’unique héroïne",
+      "Une satire des paysans du Valois contre la ville"
+     ],
+     "reponse": 0,
+     "aide": "Sylvie se marie avec un autre, et la phrase de conclusion parle de chimères.",
+     "explication": "« Sylvie » est un récit du **temps** et de la **mémoire** : les chimères égarent, et le narrateur ne choisit jamais."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c27f638-db95-5285-916c-fc2769043523",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Une vie de pertes",
+   "competence": "analyser-document",
+   "situation": "Pendant un demi-siècle, Félicité sert la même famille à Pont-l’Évêque. Dresse avec ce tableau la liste de ce qu’elle perd.",
+   "documents": [
+    {
+     "id": "pertes",
+     "type": "tableau",
+     "titre": "Ce que Félicité perd",
+     "colonnes": [
+      "Ce qu’elle perd",
+      "Comment"
+     ],
+     "lignes": [
+      [
+       "Théodore, son fiancé",
+       "Il l’abandonne"
+      ],
+      [
+       "Virginie, la fille de Madame Aubain",
+       "?"
+      ],
+      [
+       "Victor, son neveu",
+       "Il meurt de la fièvre, à La Havane"
+      ],
+      [
+       "Madame Aubain",
+       "Elle meurt à son tour"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pertes",
+     "multiple": false,
+     "reponse": [
+      "r2c1"
+     ],
+     "enonce": "Touche la case qui dit où et de quoi meurt Victor.",
+     "aide": "Victor est le neveu de Félicité.",
+     "explication": "Victor meurt de la fièvre **à La Havane**, une ville que Félicité imagine pleine de cigares, mais qu’elle ne verra jamais."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment Félicité perd-elle Virginie (la case « ? ») ?",
+     "options": [
+      "Elle meurt jeune",
+      "Elle part vivre à La Havane",
+      "Elle épouse Théodore",
+      "Elle quitte Pont-l’Évêque pour Paris"
+     ],
+     "reponse": 0,
+     "aide": "Félicité l’aimait comme sa propre fille.",
+     "explication": "Virginie **meurt jeune** : c’est une des grandes pertes de Félicité, qui l’avait aimée comme la sienne."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à ce qu’il est dans le conte.",
+     "paires": [
+      [
+       "Félicité",
+       "Une servante illettrée, d’une bonté sans mesure"
+      ],
+      [
+       "Madame Aubain",
+       "Une maîtresse froide et digne"
+      ],
+      [
+       "Loulou",
+       "Un perroquet qu’elle fait empailler"
+      ],
+      [
+       "Théodore",
+       "Le fiancé qui l’abandonne"
+      ]
+     ],
+     "aide": "Chaque personnage a un trait que le cours résume en quelques mots.",
+     "explication": "**Félicité** est la servante, **Madame Aubain** la maîtresse, **Loulou** le perroquet, **Théodore** le fiancé infidèle."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c27f638-db95-5285-916c-fc2769043523",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Du perroquet à l’Esprit saint",
+   "competence": "se-reperer-temps",
+   "situation": "Il reste un perroquet à Félicité. Suis son destin, puis relie quelques épisodes célèbres à ce qu’ils montrent.",
+   "documents": [
+    {
+     "id": "loulou",
+     "type": "chaine",
+     "titre": "Le destin de Loulou",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Loulou, le perroquet de Félicité"
+      },
+      {
+       "id": "n2",
+       "texte": "Félicité le fait empailler"
+      },
+      {
+       "id": "n3",
+       "texte": "Elle le confond avec le Saint-Esprit"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Elle meurt en croyant le voir dans les cieux"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "episodes",
+     "type": "tableau",
+     "titre": "Trois épisodes à connaître",
+     "colonnes": [
+      "Épisode",
+      "Ce qu’il montre"
+     ],
+     "lignes": [
+      [
+       "Félicité arrête un taureau en lui jetant des mottes de terre",
+       "?"
+      ],
+      [
+       "Victor meurt à La Havane, que Félicité imagine pleine de cigares",
+       "?"
+      ],
+      [
+       "Loulou est posé sur le reposoir de la Fête-Dieu",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Loulou est posé sur le reposoir de la Fête-Dieu",
+      "Loulou s’envole par la fenêtre de la cuisine",
+      "Madame Aubain offre Loulou au curé",
+      "Félicité enterre Loulou dans le jardin"
+     ],
+     "reponse": 0,
+     "aide": "C’est la scène qui précède la mort de Félicité, un jour de procession.",
+     "explication": "Pour la **Fête-Dieu**, Loulou est posé sur le reposoir : c’est la scène qui prépare la vision finale."
+    },
+    {
+     "type": "zone",
+     "document": "loulou",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où l’oiseau change de nature aux yeux de Félicité.",
+     "aide": "Un perroquet empaillé devient autre chose pour elle.",
+     "explication": "Félicité **confond Loulou avec le Saint-Esprit** : c’est la « confusion sublime » prise absolument au sérieux par Flaubert."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque épisode à ce qu’il montre de Félicité.",
+     "paires": [
+      [
+       "Elle arrête un taureau avec des mottes de terre",
+       "Un courage qui ne se sait pas"
+      ],
+      [
+       "Elle imagine La Havane pleine de cigares",
+       "Un monde trop grand pour elle"
+      ],
+      [
+       "Loulou posé sur le reposoir",
+       "La scène finale"
+      ]
+     ],
+     "aide": "Pense à ce que chaque épisode révèle d’elle ou de son monde.",
+     "explication": "Le **taureau** montre un courage qui s’ignore, **La Havane** un monde trop grand pour elle, le **reposoir** prépare la scène finale."
+    }
+   ]
+  },
+  {
+   "chapitre": "2c27f638-db95-5285-916c-fc2769043523",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La dernière phrase",
+   "competence": "analyser-texte",
+   "situation": "Flaubert écrit ce conte pour George Sand, qui lui reprochait d’être sans cœur. Lis la dernière phrase et dis comment il lui répond.",
+   "documents": [
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La mort de Félicité",
+     "blocs": [
+      "… et, quand elle exhala son dernier souffle, elle [[v|crut]] [[v|voir]], dans les cieux entr’ouverts, un perroquet gigantesque, planant au-dessus de sa tête."
+     ],
+     "source": "Gustave Flaubert, *Un cœur simple* (1877), dernière phrase"
+    },
+    {
+     "id": "style",
+     "type": "tableau",
+     "titre": "Ce que le style refuse",
+     "colonnes": [
+      "Ce que le style refuse",
+      "Ce qu’il obtient"
+     ],
+     "lignes": [
+      [
+       "Toute ironie envers Félicité",
+       "?"
+      ],
+      [
+       "Tout pathos",
+       "Une émotion d’autant plus forte"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": true,
+     "reponse": [
+      "v"
+     ],
+     "enonce": "Touche les deux mots qui montrent que ce que voit Félicité est une vision, et non un fait.",
+     "aide": "Cherche le verbe qui dit qu’elle imagine et celui qui dit ce qu’elle imagine.",
+     "explication": "**Crut voir** : le narrateur ne dit pas que le perroquet est là, il dit ce que Félicité croit voir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que met-on dans la case « ? » : ce qu’obtient un style qui refuse l’ironie envers Félicité ?",
+     "options": [
+      "Une sobriété absolue",
+      "Une moquerie légère",
+      "Un lyrisme appuyé",
+      "Un récit de miracle"
+     ],
+     "reponse": 0,
+     "aide": "Le style est dépouillé, sans commentaire.",
+     "explication": "Flaubert obtient une **sobriété absolue** : ni ironie, ni pathos, et l’émotion n’en est que plus forte."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque choix de Flaubert à son effet.",
+     "paires": [
+      [
+       "Pas de pathos",
+       "Une émotion d’autant plus forte"
+      ],
+      [
+       "Une confusion prise absolument au sérieux",
+       "La grandeur d’une vie de sainte donnée à une vie minuscule"
+      ],
+      [
+       "Un oiseau empaillé",
+       "Un objet dérisoire qui reçoit tout l’amour de Félicité"
+      ]
+     ],
+     "aide": "Pense à ce que le conte donne à une servante illettrée.",
+     "explication": "La **sobriété** émeut, le **sérieux** de la confusion grandit Félicité, et le perroquet empaillé reçoit un amour **qui n’a plus où se poser**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète pour montrer comment Flaubert répond à George Sand.",
+     "texte": "Flaubert écrit pour George Sand, qui lui reprochait d’être ___ ; il lui répond par une prose ___, sans ___ envers Félicité.",
+     "reponses": [
+      [
+       "sans cœur"
+      ],
+      [
+       "sobre"
+      ],
+      [
+       "ironie",
+       "pathos"
+      ]
+     ],
+     "banque": [
+      "sans cœur",
+      "sobre",
+      "ironie",
+      "pathos",
+      "bavard",
+      "lyrique"
+     ],
+     "aide": "Le reproche est dans sa lettre ; la réponse, dans le style.",
+     "explication": "Il lui reprochait d’être **sans cœur** ; Flaubert répond par une prose **sobre**, sans **ironie** ni pathos envers Félicité."
+    }
+   ]
+  },
+  {
+   "chapitre": "942120a6-b499-5b9d-9ee3-6001b3255ab2",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Winston, du journal à Big Brother",
+   "competence": "se-reperer-temps",
+   "situation": "Winston Smith travaille au ministère de la Vérité. Suis les grandes étapes de sa révolte, jusqu’au bout.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le parcours de Winston",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Winston commence un journal interdit"
+      },
+      {
+       "id": "n2",
+       "texte": "Il aime Julia"
+      },
+      {
+       "id": "n3",
+       "texte": "Il croit trouver un allié en O’Brien"
+      },
+      {
+       "id": "n4",
+       "texte": "?"
+      },
+      {
+       "id": "n5",
+       "texte": "Il finit par aimer Big Brother"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Quelle étape manque dans la chaîne (la case « ? ») ?",
+     "options": [
+      "Dans la chambre 101, il trahit Julia",
+      "Il s’enfuit avec Julia hors d’Océania",
+      "Il détruit le télécran du ministère",
+      "Il devient chef de la Police de la Pensée"
+     ],
+     "reponse": 0,
+     "aide": "Torturé, Winston est confronté à ce qu’il redoute le plus.",
+     "explication": "Dans la **chambre 101**, face à ce qu’il redoute le plus, Winston **trahit Julia** : c’est le tournant avant la fin."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Winston se trompe d’allié.",
+     "aide": "O’Brien n’est pas ce qu’il prétend être.",
+     "explication": "O’Brien est un **agent de la Police de la Pensée** : Winston croit trouver un allié, il tombe dans un piège."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque personnage à son rôle.",
+     "paires": [
+      [
+       "Winston Smith",
+       "Le fonctionnaire qui doute et tient un journal"
+      ],
+      [
+       "Julia",
+       "Sa maîtresse, révoltée par goût de la vie"
+      ],
+      [
+       "O’Brien",
+       "Le membre du Parti intérieur qui le piège"
+      ],
+      [
+       "Emmanuel Goldstein",
+       "L’ennemi officiel, haï pendant les Deux Minutes de la Haine"
+      ]
+     ],
+     "aide": "Goldstein est un personnage dont on parle bien plus qu’on ne le voit.",
+     "explication": "**Winston** doute, **Julia** aime la vie, **O’Brien** piège, **Goldstein** sert de cible à la haine collective."
+    }
+   ]
+  },
+  {
+   "chapitre": "942120a6-b499-5b9d-9ee3-6001b3255ab2",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Au bureau des archives",
+   "competence": "analyser-texte",
+   "situation": "Pour comprendre le métier de Winston, lis une courte scène écrite pour l’exercice, puis relie les notions du roman à ce qu’elles font.",
+   "documents": [
+    {
+     "id": "scene",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Une journée au ministère de la Vérité",
+     "blocs": [
+      "Dans le bureau des [[r|archives]] d’Océania, un employé reçoit une vieille page de journal. Une prévision du Parti s’y est révélée fausse.",
+      "Il la [[r|réécrit]] pour que le Parti ait toujours eu raison, puis détruit l’ancienne page. Au mur, le [[t|télécran]] ne le quitte pas des yeux."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de *1984* d’Orwell"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": true,
+     "reponse": [
+      "r"
+     ],
+     "enonce": "Touche les deux mots qui décrivent le travail de cet employé, le même que celui de Winston.",
+     "aide": "Que fait-il subir au passé ?",
+     "explication": "Il travaille aux **archives** et les **réécrit** : comme Winston, il fait donner raison au Parti par le passé."
+    },
+    {
+     "type": "zone",
+     "document": "scene",
+     "multiple": false,
+     "reponse": [
+      "t"
+     ],
+     "enonce": "Touche le mot qui désigne la surveillance permanente.",
+     "aide": "C’est un appareil accroché au mur.",
+     "explication": "Le **télécran** surveille en permanence : l’employé n’est jamais seul."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque notion du roman à ce qu’elle fait.",
+     "paires": [
+      [
+       "Le novlangue",
+       "Il appauvrit la langue et rend la révolte impensable"
+      ],
+      [
+       "La double-pensée",
+       "Elle permet de croire deux choses contradictoires à la fois"
+      ],
+      [
+       "Les télécrans",
+       "Ils assurent la surveillance permanente"
+      ],
+      [
+       "Les Deux Minutes de la Haine",
+       "Elles détournent la colère sur Goldstein"
+      ]
+     ],
+     "aide": "Chaque notion décrit un moyen du Parti de contrôler les esprits ou les corps.",
+     "explication": "Le **novlangue** appauvrit, la **double-pensée** accepte la contradiction, les **télécrans** surveillent, les **Deux Minutes** détournent la haine."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre cette scène du pouvoir d’Océania ?",
+     "options": [
+      "Il s’attaque d’abord à la mémoire et au langage",
+      "Il se contente de punir ceux qui désobéissent",
+      "Il laisse chacun libre de lire ses archives",
+      "Il ne surveille que les chefs du Parti"
+     ],
+     "reponse": 0,
+     "aide": "Qui contrôle le passé contrôle l’avenir.",
+     "explication": "Le pouvoir total s’en prend **d’abord à la mémoire et au langage** : il réécrit le passé pour verrouiller l’avenir."
+    }
+   ]
+  },
+  {
+   "chapitre": "942120a6-b499-5b9d-9ee3-6001b3255ab2",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Des mots pour ne plus penser",
+   "competence": "argumenter",
+   "situation": "Une dictature peut-elle tuer une idée en tuant le mot ? Lis un échange écrit à la manière du roman, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "canti",
+     "type": "texte",
+     "genre": "theatre",
+     "titre": "À la cantine du ministère",
+     "blocs": [
+      {
+       "didascalie": "Deux collègues parlent du dictionnaire de la nouvelle langue."
+      },
+      {
+       "personnage": "Marek",
+       "replique": "Chaque année, nous [[l|supprimons]] des mots. Quand « révolte » aura disparu, personne ne pourra plus la [[l|penser]]."
+      },
+      {
+       "personnage": "Dora",
+       "replique": "Et ceux qui la pensent déjà ?"
+      },
+      {
+       "personnage": "Marek",
+       "replique": "Ils n’auront plus personne à qui la dire."
+      }
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de *1984* d’Orwell"
+    },
+    {
+     "id": "these",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Un pouvoir total s’attaque d’abord au langage",
+       "Sans mots pour la penser, la révolte devient impossible",
+       "?"
+      ],
+      [
+       "… et à la mémoire",
+       "Qui contrôle le passé contrôle l’avenir",
+       "Winston réécrit les archives"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "canti",
+     "multiple": true,
+     "reponse": [
+      "l"
+     ],
+     "enonce": "Touche le verbe qui dit ce que le Parti fait aux mots, puis celui qui dit ce que les gens ne pourront plus faire.",
+     "aide": "Un verbe pour le Parti, un verbe pour les gens ordinaires.",
+     "explication": "Le Parti **supprime** des mots, et personne ne pourra plus **penser** la révolte : le langage borne la pensée."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple du roman faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Le novlangue",
+      "La chambre 101",
+      "Les Deux Minutes de la Haine",
+      "Le journal de Winston"
+     ],
+     "reponse": 0,
+     "aide": "C’est la langue appauvrie qui rend la révolte impensable.",
+     "explication": "Le **novlangue** illustre la thèse : une langue appauvrie qui rend la révolte **impensable**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque dispositif : il sert à surveiller et punir, ou à façonner la pensée ?",
+     "categories": [
+      "Surveiller et punir",
+      "Façonner la pensée"
+     ],
+     "items": [
+      [
+       "Les télécrans",
+       0
+      ],
+      [
+       "La chambre 101",
+       0
+      ],
+      [
+       "Le novlangue",
+       1
+      ],
+      [
+       "La double-pensée",
+       1
+      ],
+      [
+       "La réécriture des archives",
+       1
+      ]
+     ],
+     "aide": "Demande-toi : agit-il sur les corps, ou sur ce que l’on peut penser et se rappeler ?",
+     "explication": "Les **télécrans** et la **chambre 101** contraignent ; le **novlangue**, la **double-pensée** et la **réécriture des archives** modèlent l’esprit."
+    },
+    {
+     "type": "choix",
+     "enonce": "Comment le cours définit-il le genre du roman ?",
+     "options": [
+      "Une contre-utopie, qui imagine le pire pour en avertir",
+      "Une utopie, qui décrit une société idéale et heureuse",
+      "Un reportage sur la guerre d’Espagne et ses milices",
+      "Un conte pour enfants sur des animaux de la ferme"
+     ],
+     "reponse": 0,
+     "aide": "Le mot préfixé « contre- » indique le renversement d’un rêve de société parfaite.",
+     "explication": "C’est une **contre-utopie** : elle imagine le pire pour en avertir."
+    }
+   ]
+  },
+  {
+   "chapitre": "44b29d11-96e4-5d77-97f8-17949ff4ff53",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un Goncourt qui fait scandale",
+   "competence": "se-reperer-temps",
+   "situation": "Le deuxième volume de la « Recherche » paraît au sortir de la guerre. Place-le sur une frise, puis repère ses deux parties.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Proust après la guerre",
+     "debut": 1912,
+     "fin": 1924,
+     "pas": 1,
+     "periodes": [
+      {
+       "id": "guerre",
+       "debut": 1914,
+       "fin": 1918,
+       "nom": "Guerre",
+       "teinte": "gris"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "gon",
+       "date": 1919,
+       "nom": "Prix Goncourt"
+      },
+      {
+       "id": "mort",
+       "date": 1922,
+       "nom": "Mort de Proust"
+      }
+     ]
+    },
+    {
+     "id": "parties",
+     "type": "tableau",
+     "titre": "Les deux parties du volume",
+     "colonnes": [
+      "Partie",
+      "Lieu",
+      "Ce qui s’y passe"
+     ],
+     "lignes": [
+      [
+       "« Autour de Madame Swann »",
+       "Paris",
+       "?"
+      ],
+      [
+       "« Noms de pays : le pays »",
+       "Balbec",
+       "Le séjour avec sa grand-mère"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "gon"
+     ],
+     "enonce": "Sur la frise, touche l’année où le volume reçoit le prix Goncourt.",
+     "aide": "Le prix est décerné au lendemain de la guerre.",
+     "explication": "Le volume reçoit le prix Goncourt en **1919**, au lendemain de la guerre : un choix qui fait scandale."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années séparent le prix Goncourt de la mort de Proust ?",
+     "reponse": 3,
+     "aide": "Repère les deux dates sur la frise.",
+     "explication": "1922 − 1919 = **3 ans** : Proust meurt peu après avoir été couronné.",
+     "unite": "ans"
+    },
+    {
+     "type": "choix",
+     "enonce": "Que raconte la première partie (la case « ? ») ?",
+     "options": [
+      "Il fréquente les Swann et voit se défaire son amour pour Gilberte",
+      "Il part pour la guerre et rencontre le peintre Elstir au front",
+      "Il épouse Albertine après une brève rencontre sur la plage",
+      "Il écrit à Bergotte pour lui demander conseil sur son livre"
+     ],
+     "reponse": 0,
+     "aide": "La première partie se passe à Paris, chez les Swann.",
+     "explication": "À Paris, le narrateur **fréquente les Swann** et voit **se défaire** son amour d’enfance pour **Gilberte**."
+    }
+   ]
+  },
+  {
+   "chapitre": "44b29d11-96e4-5d77-97f8-17949ff4ff53",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "À Balbec, apprendre à voir",
+   "competence": "analyser-document",
+   "situation": "À Balbec, le narrateur ne cherche pas l’aventure : il apprend à regarder. Reprends les noms de son carnet de lecture et classe-les.",
+   "documents": [
+    {
+     "id": "carnet",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Carnet de lecture",
+     "sousTitre": "Au fil du volume (écrit pour l’exercice)",
+     "emoji": "📓",
+     "lignes": [
+      {
+       "texte": "L’église de Balbec",
+       "id": "eglise"
+      },
+      {
+       "texte": "L’actrice la Berma",
+       "id": "berma"
+      },
+      {
+       "texte": "Les salons des Swann",
+       "id": "swann"
+      },
+      {
+       "texte": "La « petite bande »",
+       "id": "bande"
+      },
+      {
+       "texte": "Le peintre Elstir",
+       "id": "elstir"
+      },
+      {
+       "texte": "Robert de Saint-Loup",
+       "id": "saint"
+      }
+     ],
+     "pied": "Notes de classe",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément selon le motif proustien qu’il illustre.",
+     "categories": [
+      "La déception",
+      "Le snobisme",
+      "Le désir",
+      "L’art"
+     ],
+     "items": [
+      [
+       "L’église de Balbec, moins belle que dans le rêve",
+       0
+      ],
+      [
+       "L’actrice la Berma, qui déçoit",
+       0
+      ],
+      [
+       "Les salons où l’on cherche à briller",
+       1
+      ],
+      [
+       "Les jeunes filles de la petite bande",
+       2
+      ],
+      [
+       "Le peintre Elstir et ses toiles",
+       3
+      ]
+     ],
+     "aide": "Chaque motif est illustré par un lieu ou un personnage du carnet.",
+     "explication": "**Déception** : l’église et la Berma ; **snobisme** : les salons ; **désir** : la petite bande ; **art** : Elstir."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque rencontre de Balbec à ce qu’elle apporte.",
+     "paires": [
+      [
+       "Robert de Saint-Loup",
+       "L’amitié aristocratique"
+      ],
+      [
+       "Le baron de Charlus",
+       "Une énigme qui traversera l’œuvre"
+      ],
+      [
+       "Le peintre Elstir",
+       "Il apprend au narrateur à voir"
+      ],
+      [
+       "La « petite bande »",
+       "Le désir"
+      ]
+     ],
+     "aide": "Elstir est peintre ; Saint-Loup est un aristocrate.",
+     "explication": "**Saint-Loup** apporte l’amitié, **Charlus** une énigme, **Elstir** un regard neuf, la **petite bande** le désir."
+    },
+    {
+     "type": "zone",
+     "document": "carnet",
+     "multiple": false,
+     "reponse": [
+      "elstir"
+     ],
+     "enonce": "Touche le personnage qui montre que l’art peut changer la manière de regarder le monde.",
+     "aide": "C’est un artiste.",
+     "explication": "**Elstir**, le peintre, « apprend au narrateur à voir » : l’art devient une manière nouvelle de regarder."
+    }
+   ]
+  },
+  {
+   "chapitre": "44b29d11-96e4-5d77-97f8-17949ff4ff53",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Valmer, un nom trop rêvé",
+   "competence": "analyser-texte",
+   "situation": "Proust aime montrer l’écart entre un nom rêvé et la chose vue. Lis ce pastiche écrit pour l’exercice, puis tranche un petit débat.",
+   "documents": [
+    {
+     "id": "pastiche",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un pastiche",
+     "blocs": [
+      "Tout l’hiver, Valmer n’avait été pour moi qu’un [[n|nom]], si doré, si lointain, que je le croyais gros de toutes les tempêtes et de toutes les églises de la terre ; aussi, le soir où le train me déposa devant une gare semblable à toutes les gares, la ville que je découvris, [[d|banale]] et sans mystère, me causa-t-elle la [[d|déception]] de ceux qui ont trop longtemps rêvé."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Marcel Proust"
+    },
+    {
+     "id": "deb",
+     "type": "dialogue",
+     "titre": "Un débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Mia",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Ravi",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Mia",
+       "texte": "On lit Proust pour savoir ce qui arrive à Albertine : c’est l’intrigue qui compte."
+      },
+      {
+       "qui": "Ravi",
+       "texte": "Pas dans ce volume : presque rien n’arrive. On suit plutôt un regard qui apprend à voir."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pastiche",
+     "multiple": false,
+     "reponse": [
+      "n"
+     ],
+     "enonce": "Touche le mot qui dit ce qu’était Valmer avant d’être vue.",
+     "aide": "La ville n’existait encore que par un mot.",
+     "explication": "Valmer n’était qu’un **nom** : c’est l’écart entre le nom rêvé et la chose vue qui produit la déception."
+    },
+    {
+     "type": "zone",
+     "document": "pastiche",
+     "multiple": true,
+     "reponse": [
+      "d"
+     ],
+     "enonce": "Touche les deux mots qui disent ce que le narrateur éprouve devant la réalité.",
+     "aide": "Un adjectif pour la ville, un nom pour le sentiment.",
+     "explication": "La ville est **banale**, et le narrateur éprouve de la **déception** : le motif revient avec l’église de Balbec et la Berma."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait de l’écriture de Proust à son effet.",
+     "paires": [
+      [
+       "Une phrase longue, ramifiée, à incises",
+       "Elle épouse le mouvement d’une conscience"
+      ],
+      [
+       "Un nom rêvé face à la chose vue",
+       "La déception"
+      ],
+      [
+       "Elstir qui apprend à voir",
+       "Un regard nouveau sur le monde par l’art"
+      ]
+     ],
+     "aide": "Pense à la phrase, au nom et au peintre.",
+     "explication": "La **phrase** suit la conscience, le **nom rêvé** mène à la déception, et **Elstir** ouvre un regard nouveau."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle position le cours soutient-il dans le débat ?",
+     "options": [
+      "Ravi : le livre est l’apprentissage d’un regard, pas un roman d’action",
+      "Mia : le livre vaut par la suite de ses péripéties",
+      "Mia : Albertine est l’héroïne d’une grande intrigue amoureuse",
+      "Ravi : le livre raconte la guerre de 1914-1918"
+     ],
+     "reponse": 0,
+     "aide": "Le cours dit : ce n’est pas un roman d’action.",
+     "explication": "On ne lit pas Proust pour savoir ce qui arrive : c’est l’**apprentissage d’un regard**, comme le dit Ravi."
+    }
+   ]
+  }
+ ]
+}

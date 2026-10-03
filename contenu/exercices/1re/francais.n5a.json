@@ -1,0 +1,2179 @@
+{
+ "niveau": "1re",
+ "matiere": "francais",
+ "exercices": [
+  {
+   "chapitre": "66b6dc4a-494c-5cad-a8a3-48c961eb9837",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poème pour Auguste",
+   "competence": "analyser-document",
+   "situation": "Tu prépares une fiche sur l’*Énéide* pour l’oral. Lis la carte d’identité du poème et le tableau des personnages, puis réponds.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Énéide",
+     "sousTitre": "Virgile, entre 29 et 19 av. J.-C.",
+     "emoji": "🏛️",
+     "lignes": [
+      {
+       "texte": "Commande",
+       "valeur": "Auguste, par l’intermédiaire de Mécène"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Douze chants en hexamètres",
+       "id": "forme"
+      },
+      {
+       "texte": "Héros",
+       "valeur": "Énée, prince troyen"
+      },
+      {
+       "texte": "Destination",
+       "valeur": "L’Italie, où naîtra Rome"
+      },
+      {
+       "texte": "État du texte",
+       "valeur": "Inachevé à la mort de Virgile"
+      }
+     ],
+     "pied": "Épopée nationale et politique",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Son rôle"
+     ],
+     "lignes": [
+      [
+       "Junon",
+       "La déesse hostile aux Troyens"
+      ],
+      [
+       "Vénus",
+       "?"
+      ],
+      [
+       "Achate",
+       "Le compagnon fidèle"
+      ],
+      [
+       "Pallas",
+       "Le jeune allié tué par Turnus"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "forme"
+     ],
+     "enonce": "Sur la carte d’identité, touche la ligne qui dit comment le poème est construit.",
+     "aide": "Cherche le mot « chants » et le mot « hexamètres ».",
+     "explication": "La ligne **Forme** donne la construction : **douze chants** en hexamètres."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de chants compte l’*Énéide* ?",
+     "reponse": 12,
+     "unite": "chants",
+     "aide": "La réponse est écrite sur la carte, dans la ligne qui parle de la forme.",
+     "explication": "Le poème compte **12 chants**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel est le rôle de Vénus, dont la case porte un « ? » ?",
+     "options": [
+      "Elle est la mère d’Énée et elle le protège",
+      "Elle est la reine de Carthage, qui aime Énée",
+      "Elle est la fille du roi Latinus, promise à Énée",
+      "Elle est la déesse qui poursuit les Troyens"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, Junon est l’ennemie des Troyens : Vénus est, au contraire, de leur côté.",
+     "explication": "Vénus est la **mère d’Énée** : elle le protège, tandis que Junon multiplie les obstacles."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité du poème.",
+     "texte": "Virgile écrit pour ___ un poème qui donne à Rome une origine ___.",
+     "reponses": [
+      [
+       "Auguste"
+      ],
+      [
+       "troyenne"
+      ]
+     ],
+     "banque": [
+      "Auguste",
+      "Homère",
+      "Dante",
+      "troyenne",
+      "grecque",
+      "gauloise"
+     ],
+     "aide": "Relis la ligne « Commande » et la ligne « Destination ».",
+     "explication": "Le poème est commandé par **Auguste** et donne à Rome une origine **troyenne** : Énée est un prince de Troie."
+    }
+   ]
+  },
+  {
+   "chapitre": "66b6dc4a-494c-5cad-a8a3-48c961eb9837",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De Troie en flammes au duel final",
+   "competence": "se-reperer-temps",
+   "situation": "Une amie te demande de lui raconter l’*Énéide* en cinq étapes. Remets le fil du récit en ordre, puis revois la nuit où Troie est tombée.",
+   "documents": [
+    {
+     "id": "fil",
+     "type": "chaine",
+     "titre": "Le fil du poème, chant par chant",
+     "disposition": "colonne",
+     "noeuds": [
+      {
+       "id": "n1",
+       "texte": "Chants I-III : Carthage et la chute de Troie"
+      },
+      {
+       "id": "n2",
+       "texte": "Chant IV : ?"
+      },
+      {
+       "id": "n3",
+       "texte": "Chant VI : les Enfers et les âmes des Romains"
+      },
+      {
+       "id": "n4",
+       "texte": "Chants VII-XII : la guerre contre Turnus"
+      },
+      {
+       "id": "n5",
+       "texte": "Fin : le duel où Énée tue Turnus"
+      }
+     ],
+     "liens": [
+      {
+       "de": "n1",
+       "a": "n2"
+      },
+      {
+       "de": "n2",
+       "a": "n3"
+      },
+      {
+       "de": "n3",
+       "a": "n4"
+      },
+      {
+       "de": "n4",
+       "a": "n5"
+      }
+     ]
+    },
+    {
+     "id": "nuit",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La nuit de Troie, racontée à Didon",
+     "blocs": [
+      "Énée raconte à la reine Didon la nuit où Troie est tombée. Les Grecs avaient laissé devant les murs un [[c|cheval]] de bois ; une fois dans la ville, il a livré passage à leurs soldats.",
+      "Priam a été tué. Alors Énée a pris sur ses épaules son père [[a|Anchise]], il a emmené son fils Ascagne, et il a fui la ville en flammes."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le chant II de l’Énéide"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que se passe-t-il au chant IV, là où la chaîne porte un « ? » ?",
+     "options": [
+      "Didon aime Énée, puis se tue quand il repart",
+      "Énée fonde Rome et épouse la fille du roi Latinus",
+      "Énée tue Turnus en voyant le baudrier de Pallas",
+      "Énée fuit Troie en portant son père sur ses épaules"
+     ],
+     "reponse": 0,
+     "aide": "Le chant IV se passe à Carthage, auprès de la reine.",
+     "explication": "Le chant IV est celui de **Didon** : son amour pour Énée, puis son **suicide** quand il repart sur l’ordre des dieux."
+    },
+    {
+     "type": "zone",
+     "document": "fil",
+     "multiple": false,
+     "reponse": [
+      "n3"
+     ],
+     "enonce": "Touche l’étape où Énée voit les âmes des futurs Romains.",
+     "aide": "Cherche le mot « Enfers » dans la chaîne.",
+     "explication": "C’est le **chant VI** : aux Enfers, Anchise montre à son fils les âmes des Romains à venir."
+    },
+    {
+     "type": "zone",
+     "document": "nuit",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Dans le récit, touche le nom de celui qu’Énée porte sur ses épaules pour fuir.",
+     "aide": "C’est le père d’Énée.",
+     "explication": "Énée porte son père **Anchise** : la scène est devenue un symbole de la *pietas*, le devoir envers la famille."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois temps de la nuit de Troie racontée par Énée.",
+     "items": [
+      "Les Grecs laissent un cheval de bois devant les murs",
+      "Priam est tué",
+      "Énée fuit en portant son père et en emmenant son fils"
+     ],
+     "aide": "Le cheval entre dans la ville avant que le roi meure ; la fuite vient en dernier.",
+     "explication": "Ordre du récit : le **cheval**, la **mort de Priam**, puis la **fuite** d’Énée avec Anchise et Ascagne."
+    }
+   ]
+  },
+  {
+   "chapitre": "66b6dc4a-494c-5cad-a8a3-48c961eb9837",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Le héros qui obéit aux dieux",
+   "competence": "argumenter",
+   "situation": "Pour la dissertation, tu dois répondre : le héros d’une épopée cherche-t-il toujours la gloire ? Lis une scène écrite à la manière de Virgile, puis écoute deux élèves.",
+   "documents": [
+    {
+     "id": "depart",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Le départ de la plage",
+     "blocs": [
+      "Les dieux ont parlé. Le messager est reparti dans la nuit et la flotte attend sur la plage. Énée voit la reine qui l’implore ; son cœur se fend, et il [[o|obéit]] pourtant : l’avenir de son [[f|fils]] et de son [[f|peuple]] n’est pas à lui.",
+      "Il détourne les yeux, il fait lever l’ancre, et il emporte avec lui sa peine."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de l’Énéide de Virgile (aucune citation)"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Léa",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Hugo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Léa",
+       "texte": "Énée abandonne Didon : pour moi, ce n’est pas un héros, c’est un lâche."
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Virgile le montre fidèle à sa mission : il obéit aux dieux et pense à l’avenir de Rome."
+      },
+      {
+       "qui": "Léa",
+       "texte": "Donc ce n’est pas la gloire personnelle qui le guide ?"
+      },
+      {
+       "qui": "Hugo",
+       "texte": "Non. Ce qui le définit, c’est la [[p|pietas]] : le devoir envers les dieux, la patrie et la famille."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "depart",
+     "multiple": false,
+     "reponse": [
+      "o"
+     ],
+     "enonce": "Touche le verbe qui montre qu’Énée met le devoir avant son désir.",
+     "aide": "Qu’est-ce qu’il fait, malgré son cœur qui se fend ?",
+     "explication": "Énée **obéit** : malgré sa peine, il place l’ordre des dieux et l’avenir des siens au-dessus de lui."
+    },
+    {
+     "type": "zone",
+     "document": "depart",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux mots qui disent au nom de qui Énée se sacrifie : sa famille et son peuple.",
+     "aide": "Cherche ce qui « n’est pas à lui ».",
+     "explication": "Énée se sacrifie pour son **fils** (la famille) et son **peuple** (la patrie) : ce sont les deux cibles de la *pietas*."
+    },
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche le mot latin qu’emploie Hugo pour nommer la vertu du héros virgilien.",
+     "aide": "C’est le mot qui est suivi de « le devoir envers les dieux, la patrie et la famille ».",
+     "explication": "La vertu du héros est la ***pietas*** : le devoir envers les dieux, la patrie et la famille, et non la gloire personnelle."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque trait de l’*Énéide* à ce qu’il montre.",
+     "paires": [
+      [
+       "Une épopée nationale et politique",
+       "Elle donne à Rome une origine troyenne"
+      ],
+      [
+       "Le pouvoir d’Auguste",
+       "Il se trouve légitimé par cette origine"
+      ],
+      [
+       "Un modèle absolu",
+       "Dante en fait son guide"
+      ],
+      [
+       "Didon et Énée",
+       "Ils inspirent la tragédie, l’opéra, la peinture"
+      ]
+     ],
+     "aide": "Pense à ce que le poème apporte à Rome, puis à ce qu’il apporte aux artistes qui suivent.",
+     "explication": "L’épopée est **nationale et politique** : elle donne à Rome une origine troyenne et légitime le pouvoir d’Auguste ; elle devient un **modèle** (Dante) et nourrit les **réécritures**."
+    }
+   ]
+  },
+  {
+   "chapitre": "a43e40cf-f35e-5b7a-b657-7fbe76a34874",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un philosophe, une marquise, un parc",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Fontenelle. Place les *Entretiens* dans sa vie, puis relève la carte d’identité de l’ouvrage.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "Fontenelle et les Entretiens",
+     "debut": 1650,
+     "fin": 1760,
+     "pas": 10,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1657,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ent",
+       "date": 1686,
+       "nom": "Les Entretiens"
+      },
+      {
+       "id": "sec",
+       "date": 1697,
+       "nom": "Secrétaire perpétuel"
+      },
+      {
+       "id": "mort",
+       "date": 1757,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Entretiens sur la pluralité des mondes",
+     "sousTitre": "Fontenelle, 1686",
+     "emoji": "🔭",
+     "lignes": [
+      {
+       "texte": "Auteur",
+       "valeur": "Fontenelle, neveu de Corneille"
+      },
+      {
+       "texte": "Forme",
+       "valeur": "Un dialogue en soirées",
+       "id": "forme"
+      },
+      {
+       "texte": "Lieu",
+       "valeur": "Le parc d’un château"
+      },
+      {
+       "texte": "Interlocutrice",
+       "valeur": "Une marquise"
+      },
+      {
+       "texte": "Sujet",
+       "valeur": "Les mondes qui peuplent le ciel"
+      }
+     ],
+     "pied": "Un des premiers grands textes de vulgarisation scientifique",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ent"
+     ],
+     "enonce": "Sur la frise, touche l’année où paraissent les *Entretiens*.",
+     "aide": "C’est la date qui est dans le titre de la carte d’identité.",
+     "explication": "Les *Entretiens* paraissent en **1686**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien d’années s’écoulent entre la parution des *Entretiens* et la nomination de Fontenelle comme secrétaire perpétuel de l’Académie des sciences ?",
+     "reponse": 11,
+     "unite": "ans",
+     "aide": "Repère les deux dates sur la frise, puis soustrais.",
+     "explication": "1697 − 1686 = **11 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète le résumé du dispositif.",
+     "texte": "Un ___ s’entretient chaque soir avec une ___ en regardant le ___.",
+     "reponses": [
+      [
+       "philosophe"
+      ],
+      [
+       "marquise"
+      ],
+      [
+       "ciel"
+      ]
+     ],
+     "banque": [
+      "philosophe",
+      "marquise",
+      "ciel",
+      "savant",
+      "reine",
+      "jardin"
+     ],
+     "aide": "Tout se trouve dans la carte d’identité : la forme, le lieu et le sujet.",
+     "explication": "Un **philosophe** et une **marquise** regardent le **ciel** : l’ouvrage est un dialogue en soirées."
+    }
+   ]
+  },
+  {
+   "chapitre": "a43e40cf-f35e-5b7a-b657-7fbe76a34874",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Les soleils de la marquise",
+   "competence": "analyser-texte",
+   "situation": "Ce soir-là, le philosophe a une idée à faire passer. Lis le résumé de la scène, puis le tableau qui dit ce que le livre bouscule.",
+   "documents": [
+    {
+     "id": "soir",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Un soir dans le parc",
+     "blocs": [
+      "Ce soir-là, le philosophe montre à la marquise une étoile et lui affirme qu’elle est un [[s|soleil]], comme le nôtre, entouré peut-être de ses propres mondes.",
+      "Pour l’aider à comprendre, il compare l’univers à un opéra : le spectateur voit le spectacle, mais le philosophe cherche les machines cachées derrière le décor.",
+      "La marquise objecte, s’étonne, puis tire elle-même une conclusion : l’univers est bien plus grand qu’elle ne le pensait."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après les Entretiens de Fontenelle"
+    },
+    {
+     "id": "notions",
+     "type": "tableau",
+     "titre": "Ce que le livre bouscule",
+     "colonnes": [
+      "Notion",
+      "Ce qu’elle bouscule"
+     ],
+     "lignes": [
+      [
+       "Le système de Copernic",
+       "La Terre tourne autour du Soleil"
+      ],
+      [
+       "La taille de l’univers",
+       "Elle dépasse l’imagination"
+      ],
+      [
+       "La nature des planètes",
+       "Des mondes, non des points"
+      ],
+      [
+       "Les étoiles fixes",
+       "Autant de soleils"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "soir",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot qui dit ce qu’est une étoile fixe, selon le philosophe.",
+     "aide": "Il la compare à notre propre astre.",
+     "explication": "Pour le philosophe, chaque étoile fixe est un **soleil**, comme le nôtre."
+    },
+    {
+     "type": "choix",
+     "enonce": "Dans l’image de l’opéra, que représentent les « machines cachées » derrière le décor ?",
+     "options": [
+      "Les causes cachées des phénomènes que l’on observe",
+      "Les instruments que l’astronome pose sur le sol",
+      "Les acteurs qui jouent devant la marquise",
+      "Les spectateurs qui n’ont jamais vu le ciel"
+     ],
+     "reponse": 0,
+     "aide": "Le spectateur voit les effets ; que cherche le philosophe, lui ?",
+     "explication": "Le spectateur ne voit que les **effets** ; le philosophe cherche les **causes cachées**, comme les machines qui manœuvrent derrière le décor."
+    },
+    {
+     "type": "zone",
+     "document": "notions",
+     "multiple": false,
+     "reponse": [
+      "r0c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui dit ce que bouscule le système de Copernic.",
+     "aide": "Cherche la première ligne du tableau.",
+     "explication": "Le système de Copernic bouscule l’idée que le Soleil tourne autour de nous : c’est **la Terre qui tourne autour du Soleil**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète ce que le dialogue permet.",
+     "texte": "Le dialogue fait place aux ___ et aux images ; la ___ n’est pas une simple élève.",
+     "reponses": [
+      [
+       "objections"
+      ],
+      [
+       "marquise"
+      ]
+     ],
+     "banque": [
+      "objections",
+      "marquise",
+      "sermons",
+      "savants",
+      "dogmes"
+     ],
+     "aide": "Relis le résumé : la marquise objecte, s’étonne, conclut.",
+     "explication": "Le dialogue permet les **objections** et les images ; la **marquise** pose les bonnes questions et tire parfois les conclusions avant le philosophe."
+    }
+   ]
+  },
+  {
+   "chapitre": "a43e40cf-f35e-5b7a-b657-7fbe76a34874",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Galanterie ou science ?",
+   "competence": "argumenter",
+   "situation": "Un ton galant peut-il porter un savoir sérieux ? Écoute le débat de deux élèves, relis une phrase célèbre de l’ouvrage, puis construis ton argument.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Inès",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Malo",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Inès",
+       "texte": "Ce ton de salon, c’est léger : ça nuit forcément à la rigueur de la science."
+      },
+      {
+       "qui": "Malo",
+       "texte": "Au contraire. La galanterie est une [[s|stratégie]] : elle ouvre la science à ceux qui n’ont pas le latin."
+      },
+      {
+       "qui": "Inès",
+       "texte": "Alors la marquise est juste un prétexte ?"
+      },
+      {
+       "qui": "Malo",
+       "texte": "Non, elle pose les bonnes questions, et le lecteur avance avec elle."
+      }
+     ]
+    },
+    {
+     "id": "citation",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase de l’ouvrage",
+     "blocs": [
+      "Toute la philosophie n’est fondée que sur deux choses, sur ce qu’on a l’esprit [[q|curieux]] et les yeux [[q|mauvais]]."
+     ],
+     "source": "Fontenelle, Entretiens sur la pluralité des mondes (1686)"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "La galanterie est une stratégie de diffusion",
+       "La science n’appartient pas aux seuls savants",
+       "?"
+      ],
+      [
+       "Chaque notion se traduit en image",
+       "L’analogie vient du monde de l’interlocutrice",
+       "L’univers comparé à un opéra"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "s"
+     ],
+     "enonce": "Touche le mot par lequel Malo définit la galanterie du ton.",
+     "aide": "Il répond à Inès qui parle de « ton léger ».",
+     "explication": "La galanterie est une **stratégie** de diffusion : elle sert à toucher un public mondain, exclu du latin."
+    },
+    {
+     "type": "zone",
+     "document": "citation",
+     "multiple": true,
+     "reponse": [
+      "q"
+     ],
+     "enonce": "Touche les deux qualités qui, selon la phrase, fondent toute philosophie.",
+     "aide": "L’une est de l’esprit, l’autre des yeux.",
+     "explication": "La philosophie repose sur un esprit **curieux** et des yeux **mauvais** : on doute de ce qu’on voit et l’on cherche à savoir."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "Une marquise, loin du latin et des académies, suit les leçons",
+      "Un savant s’adresse à d’autres savants en latin",
+      "Un professeur donne un cours à l’Académie des sciences",
+      "Un marchand vend des instruments pour regarder le ciel"
+     ],
+     "reponse": 0,
+     "aide": "L’exemple doit montrer la science ouverte à ceux qui n’en sont pas.",
+     "explication": "La **marquise** incarne ce public : elle n’a ni latin ni académie, et suit pourtant la science."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque procédé de l’ouvrage à son effet.",
+     "paires": [
+      [
+       "Le dialogue en soirées",
+       "Le lecteur avance avec la marquise"
+      ],
+      [
+       "Les images prises au monde mondain",
+       "Une notion difficile devient accessible"
+      ],
+      [
+       "Le ton galant",
+       "Il touche un public mondain, largement féminin"
+      ],
+      [
+       "La conjecture raisonnable",
+       "Rien n’est présenté comme dogme"
+      ]
+     ],
+     "aide": "Pense à ce que chaque outil fait pour le lecteur.",
+     "explication": "Le **dialogue** guide, les **images** traduisent, le **ton galant** élargit le public et la **conjecture** évite le dogme."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion l’ouvrage permet-il le mieux d’appuyer en dissertation ?",
+     "options": [
+      "Le ton galant peut servir à diffuser la science auprès de tous",
+      "La rigueur scientifique interdit tout ton léger et toute image",
+      "La science se transmet seulement en latin devant des académies",
+      "Les femmes sont incapables de comprendre l’astronomie"
+     ],
+     "reponse": 0,
+     "aide": "Reviens à la thèse du tableau et à ce que dit Malo.",
+     "explication": "La galanterie est une **stratégie de diffusion** : l’ouvrage annonce les Lumières en ouvrant la science à tous."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa754f80-2179-5b8a-9128-315aa8cb489a",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un magistrat s’enferme dans sa tour",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares ta fiche sur Montaigne. Place sa retraite dans sa vie, puis lis la carte d’identité des *Essais*.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Montaigne",
+     "debut": 1530,
+     "fin": 1595,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1533,
+       "nom": "Naissance"
+      },
+      {
+       "id": "tour",
+       "date": 1571,
+       "nom": "La tour"
+      },
+      {
+       "id": "ess",
+       "date": 1580,
+       "nom": "Premiers Essais"
+      },
+      {
+       "id": "mort",
+       "date": 1592,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Essais",
+     "sousTitre": "Michel de Montaigne",
+     "emoji": "📚",
+     "lignes": [
+      {
+       "texte": "Livres",
+       "valeur": "Trois"
+      },
+      {
+       "texte": "Première parution",
+       "valeur": "1580"
+      },
+      {
+       "texte": "Édition posthume",
+       "valeur": "1595, par Marie de Gournay"
+      },
+      {
+       "texte": "Le mot « essai »",
+       "valeur": "Une tentative, une pesée",
+       "id": "mot"
+      }
+     ],
+     "pied": "Augmentés jusqu’à la mort de l’auteur",
+     "teinte": "violet"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "tour"
+     ],
+     "enonce": "Sur la frise, touche la date où Montaigne se retire dans sa tour.",
+     "aide": "Il quitte la magistrature pour sa bibliothèque.",
+     "explication": "Montaigne se retire dans sa tour en **1571**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Quel âge Montaigne a-t-il quand il se retire dans sa tour ? (Compte avec les années de la frise.)",
+     "reponse": 38,
+     "unite": "ans",
+     "aide": "Soustrais la date de naissance à la date de la retraite.",
+     "explication": "1571 − 1533 = **38 ans**."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase sur le titre de l’ouvrage.",
+     "texte": "Un « essai » est une ___, une pesée : Montaigne ne ___ pas, il examine.",
+     "reponses": [
+      [
+       "tentative"
+      ],
+      [
+       "démontre"
+      ]
+     ],
+     "banque": [
+      "tentative",
+      "démontre",
+      "victoire",
+      "conclut",
+      "décide"
+     ],
+     "aide": "Regarde la ligne « Le mot essai » de la carte d’identité.",
+     "explication": "Un essai est une **tentative** : Montaigne ne **démontre** pas, il examine, se contredit, revient."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa754f80-2179-5b8a-9128-315aa8cb489a",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Je ne peins pas l’être, je peins le passage",
+   "competence": "analyser-texte",
+   "situation": "Pour comprendre la manière de Montaigne, lis un texte écrit à sa façon, puis le tableau des chapitres célèbres.",
+   "documents": [
+    {
+     "id": "manie",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "À la manière de Montaigne",
+     "blocs": [
+      "Je voulais parler de la mémoire, et me voici à parler de mon chien. Qu’importe : ma pensée va où elle veut. J’ai [[e|essayé]] hier une opinion, je la [[e|corrige]] aujourd’hui ; je ne tiens rien pour sûr, et si l’on me presse, je réponds par ma devise."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière des Essais (aucune citation)"
+    },
+    {
+     "id": "chap",
+     "type": "tableau",
+     "titre": "Les chapitres à connaître",
+     "colonnes": [
+      "Chapitre",
+      "Ce qu’il énonce"
+     ],
+     "lignes": [
+      [
+       "De l’institution des enfants",
+       "Une éducation qui forme le jugement plutôt que la mémoire"
+      ],
+      [
+       "De l’amitié",
+       "?"
+      ],
+      [
+       "Des Cannibales",
+       "La barbarie est ce qui n’est pas de son usage"
+      ],
+      [
+       "Des Coches",
+       "La destruction du Nouveau Monde"
+      ],
+      [
+       "De l’expérience",
+       "Le corps, la vieillesse, la mesure"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que dit le chapitre « De l’amitié », dont la case porte un « ? » ?",
+     "options": [
+      "L’amitié avec La Boétie s’explique par elle-même, sans raison",
+      "Les amis doivent d’abord partager les mêmes opinions",
+      "Un ami est utile quand il rend des services au magistrat",
+      "L’amitié s’apprend dans les livres des Anciens"
+     ],
+     "reponse": 0,
+     "aide": "Souviens-toi de la formule « parce que c’était lui, parce que c’était moi ».",
+     "explication": "Montaigne explique son amitié avec La Boétie par la seule formule : « **parce que c’était lui, parce que c’était moi** »."
+    },
+    {
+     "type": "zone",
+     "document": "chap",
+     "multiple": false,
+     "reponse": [
+      "r3c1"
+     ],
+     "enonce": "Touche la case qui dit ce que raconte le chapitre « Des Coches ».",
+     "aide": "Cherche la ligne « Des Coches ».",
+     "explication": "« Des Coches » évoque la **destruction du Nouveau Monde**."
+    },
+    {
+     "type": "zone",
+     "document": "manie",
+     "multiple": true,
+     "reponse": [
+      "e"
+     ],
+     "enonce": "Touche les deux verbes qui montrent que l’auteur revient sur sa propre pensée.",
+     "aide": "Il essaie une opinion un jour, puis la change.",
+     "explication": "Il a **essayé** une opinion et la **corrige** : c’est le mouvement même de l’essai, qui examine et revient."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque geste : est-ce ce que fait Montaigne, ou ce qu’il ne fait pas ?",
+     "categories": [
+      "Ce qu’il fait",
+      "Ce qu’il ne fait pas"
+     ],
+     "items": [
+      [
+       "Passer d’un sujet à un autre par digressions",
+       0
+      ],
+      [
+       "Ajouter des « allongeails » d’une édition à l’autre",
+       0
+      ],
+      [
+       "Écrire un traité systématique et ordonné",
+       1
+      ],
+      [
+       "Imposer une conclusion unique au lecteur",
+       1
+      ],
+      [
+       "Utiliser les citations antiques comme un matériau",
+       0
+      ]
+     ],
+     "aide": "Pense à la méthode : refus des systèmes, doute, digressions.",
+     "explication": "Montaigne **digresse**, **ajoute** des allongeails et se sert des Anciens comme d’un **matériau** ; il ne construit ni **traité** ni **conclusion imposée**."
+    }
+   ]
+  },
+  {
+   "chapitre": "fa754f80-2179-5b8a-9128-315aa8cb489a",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Barbare, vraiment ?",
+   "competence": "argumenter",
+   "situation": "Un sujet de dissertation : comment Montaigne regarde-t-il les autres peuples ? Écoute deux élèves, relis la phrase du chapitre « Des Cannibales », puis construis ton argument.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Sarah",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Yanis",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Sarah",
+       "texte": "Montaigne parle de « barbares » : il juge donc ces peuples inférieurs."
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Au contraire : il retourne l’accusation de barbarie contre les [[e|Européens]]."
+      },
+      {
+       "qui": "Sarah",
+       "texte": "Alors le mot « barbarie » ne décrit pas une réalité ?"
+      },
+      {
+       "qui": "Yanis",
+       "texte": "Il dit surtout ce qu’on ne connaît pas."
+      }
+     ]
+    },
+    {
+     "id": "phrase",
+     "type": "texte",
+     "genre": "source",
+     "titre": "Une phrase célèbre",
+     "blocs": [
+      "Chacun appelle [[b|barbarie]] ce qui n’est pas de son [[u|usage]]."
+     ],
+     "source": "Montaigne, Essais, « Des Cannibales » (orthographe modernisée)"
+    },
+    {
+     "id": "arg",
+     "type": "tableau",
+     "titre": "Un argument à compléter",
+     "colonnes": [
+      "Thèse",
+      "Argument",
+      "Exemple"
+     ],
+     "lignes": [
+      [
+       "Le jugement sur l’autre dépend de la coutume",
+       "On appelle barbarie ce qui n’est pas de son usage",
+       "?"
+      ],
+      [
+       "Les Anciens sont un matériau, non une autorité",
+       "Montaigne cite pour réfléchir, pas pour obéir",
+       "Les citations antiques des Essais"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "phrase",
+     "multiple": false,
+     "reponse": [
+      "u"
+     ],
+     "enonce": "Touche le mot qui nomme le critère réel de ce qu’on appelle « barbarie ».",
+     "aide": "On juge barbare ce qui n’est pas de... quoi ?",
+     "explication": "Ce qu’on appelle barbarie, c’est ce qui n’est pas de son **usage** : le mot dit la coutume, pas la nature des gens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui des deux élèves lit correctement la phrase de Montaigne ?",
+     "options": [
+      "Yanis : la barbarie est relative, elle dépend de ce qui nous est familier",
+      "Sarah : les peuples du Nouveau Monde sont vraiment inférieurs",
+      "Aucun : la phrase ne parle ni de coutume ni de jugement",
+      "Sarah : Montaigne approuve le jugement des Européens"
+     ],
+     "reponse": 0,
+     "aide": "Relis la phrase : de quoi dépend le mot « barbarie » ?",
+     "explication": "**Yanis** a raison : en disant que chacun appelle barbarie ce qui n’est pas de son usage, Montaigne **relativise** le mot et retourne l’accusation contre les Européens."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel exemple faut-il écrire dans la case « ? » du tableau ?",
+     "options": [
+      "« Des Cannibales » : la barbarie retournée aux Européens",
+      "« De l’amitié » : l’entente avec La Boétie",
+      "« Des Coches » : les carrosses des rois",
+      "« De l’expérience » : le corps et la vieillesse"
+     ],
+     "reponse": 0,
+     "aide": "Cherche le chapitre où paraît la phrase du second document.",
+     "explication": "Le chapitre **« Des Cannibales »** illustre la thèse : la barbarie dépend de l’usage, et Montaigne la retourne contre les Européens."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque outil de Montaigne à son effet.",
+     "paires": [
+      [
+       "Le doute (« Que sais-je ? »)",
+       "Aucune conclusion n’est imposée"
+      ],
+      [
+       "La citation antique",
+       "Un matériau, non une autorité"
+      ],
+      [
+       "L’attention au corps",
+       "La pensée part du concret"
+      ],
+      [
+       "Les « allongeails »",
+       "Le livre s’augmente d’édition en édition"
+      ]
+     ],
+     "aide": "Pense à la méthode des *Essais* : douter, citer, observer, ajouter.",
+     "explication": "Le **doute** refuse les systèmes, la **citation** sert de matériau, le **corps** ancre la pensée, les **allongeails** enrichissent le texte."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation l’ensemble appuie-t-il le mieux ?",
+     "options": [
+      "Un humanisme mesuré, critique, qui relativise les cultures",
+      "L’humanisme refuse tout regard critique sur les Anciens",
+      "L’humanisme croit qu’une seule culture détient la civilisation",
+      "L’humanisme interdit de douter de ce qu’on a appris"
+     ],
+     "reponse": 0,
+     "aide": "Reprends les trois idées : doute, lecture critique des Anciens, relativisme.",
+     "explication": "Les *Essais* définissent un **humanisme tardif** : confiance mesurée dans l’homme, lecture critique des Anciens, **relativisme**."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3c38c23-8ae9-5d5e-a24f-0b5f38c25d83",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Un poète devenu président",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur Senghor. Place *Éthiopiques* dans sa vie, puis compare-le à son compagnon de la négritude.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La vie de Senghor",
+     "debut": 1900,
+     "fin": 2010,
+     "pas": 10,
+     "periodes": [
+      {
+       "id": "pres",
+       "debut": 1960,
+       "fin": 1980,
+       "nom": "Président du Sénégal",
+       "teinte": "ambre"
+      }
+     ],
+     "evenements": [
+      {
+       "id": "nais",
+       "date": 1906,
+       "nom": "Naissance"
+      },
+      {
+       "id": "ethio",
+       "date": 1956,
+       "nom": "Éthiopiques"
+      },
+      {
+       "id": "mort",
+       "date": 2001,
+       "nom": "Mort"
+      }
+     ]
+    },
+    {
+     "id": "duo",
+     "type": "tableau",
+     "titre": "Deux voix de la négritude",
+     "colonnes": [
+      "Poète",
+      "Sa manière"
+     ],
+     "lignes": [
+      [
+       "Aimé Césaire",
+       "Plus révolté"
+      ],
+      [
+       "Léopold Sédar Senghor",
+       "?"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "ethio"
+     ],
+     "enonce": "Sur la frise, touche l’année de publication du recueil *Éthiopiques*.",
+     "aide": "C’est l’événement qui porte le titre du recueil.",
+     "explication": "*Éthiopiques* paraît en **1956**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Pendant combien d’années Senghor a-t-il été président du Sénégal ?",
+     "reponse": 20,
+     "unite": "ans",
+     "aide": "Lis les deux dates qui encadrent la période colorée.",
+     "explication": "1980 − 1960 = **20 ans** de présidence."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle est la manière de Senghor, dont la case porte un « ? » ?",
+     "options": [
+      "Plus lyrique et conciliateur",
+      "Plus violent et destructeur",
+      "Plus ironique et désabusé",
+      "Plus savant et sans émotion"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, Césaire est le « révolté » : Senghor est son contraire.",
+     "explication": "Senghor est **plus lyrique et conciliateur**, là où Césaire est plus révolté : tous deux forgent pourtant la négritude."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la définition de la négritude.",
+     "texte": "La négritude, forgée avec Césaire et ___, revendique une ___ noire.",
+     "reponses": [
+      [
+       "Damas"
+      ],
+      [
+       "identité"
+      ]
+     ],
+     "banque": [
+      "Damas",
+      "Sartre",
+      "Claudel",
+      "identité",
+      "frontière",
+      "monarchie"
+     ],
+     "aide": "Souviens-toi du trio des années 1930 et de ce que la notion revendique.",
+     "explication": "La négritude, forgée avec Césaire et **Damas**, revendique une **identité** et une culture noires, contre l’assimilation coloniale."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3c38c23-8ae9-5d5e-a24f-0b5f38c25d83",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Un poème pour la kôra",
+   "competence": "analyser-texte",
+   "situation": "Lis un poème écrit à la manière de Senghor, puis associe quelques poèmes du recueil à ce qu’ils célèbrent.",
+   "documents": [
+    {
+     "id": "pome",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "À la manière d’Éthiopiques",
+     "blocs": [
+      "(Pour [[k|kôra]])",
+      "Je te salue, fleuve large comme une mère, toi qui portes nos ancêtres jusqu’à la mer ;",
+      "Je te salue, femme couleur de glaise, toi qui es [[f|terre]] et [[f|promesse]] à la fois.",
+      "Que le griot t’accompagne, que le tambour te réponde, et que la voix te dise."
+     ],
+     "source": "Texte écrit pour l’exercice, à la manière de Senghor (aucune citation du poète)"
+    },
+    {
+     "id": "themes",
+     "type": "tableau",
+     "titre": "Les thèmes du recueil",
+     "colonnes": [
+      "Thème",
+      "Ce qu’il porte"
+     ],
+     "lignes": [
+      [
+       "L’Afrique",
+       "Paysages, ancêtres, royaumes anciens, masques"
+      ],
+      [
+       "La femme noire",
+       "?"
+      ],
+      [
+       "L’exil en France",
+       "Le déchirement entre deux cultures"
+      ],
+      [
+       "La réconciliation",
+       "Annoncée entre l’Afrique et l’Europe"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "pome",
+     "multiple": false,
+     "reponse": [
+      "k"
+     ],
+     "enonce": "Touche le nom de l’instrument africain qui accompagne le poème, noté en tête.",
+     "aide": "Il est entre parenthèses, avant le premier vers.",
+     "explication": "L’indication « pour **kôra** » est un trait du recueil : le poème est fait pour être dit et accompagné."
+    },
+    {
+     "type": "zone",
+     "document": "pome",
+     "multiple": true,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche les deux mots qui disent ce qu’est la femme dans ce poème.",
+     "aide": "Un mot du sol, un mot d’avenir.",
+     "explication": "La femme noire est célébrée comme **terre** et comme **promesse**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que porte le thème de la femme noire, dont la case est un « ? » ?",
+     "options": [
+      "Elle est célébrée comme terre et comme promesse",
+      "Elle est présentée comme une ennemie à fuir",
+      "Elle est le symbole de la ville d’acier",
+      "Elle est le témoin muet d’une défaite militaire"
+     ],
+     "reponse": 0,
+     "aide": "Relis le poème que tu viens de lire : comment la femme y est-elle nommée ?",
+     "explication": "La femme noire est **célébrée comme terre et comme promesse**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque titre à ce qu’il est ou à ce qu’il célèbre.",
+     "paires": [
+      [
+       "Chaka",
+       "Un long poème dramatique sur le roi zoulou"
+      ],
+      [
+       "À New York",
+       "Un poème pour orchestre de jazz qui oppose la ville d’acier à Harlem"
+      ],
+      [
+       "Congo",
+       "Le fleuve célébré comme une femme et une mère"
+      ],
+      [
+       "Comme les lamantins vont boire à la source",
+       "La postface où Senghor s’explique sur sa poétique"
+      ]
+     ],
+     "aide": "Chaque titre renvoie à un lieu, à un personnage ou à une postface.",
+     "explication": "**Chaka** est le sommet du recueil, **À New York** oppose la ville à Harlem, **Congo** célèbre un fleuve-mère, la **postface** explique la poétique."
+    }
+   ]
+  },
+  {
+   "chapitre": "d3c38c23-8ae9-5d5e-a24f-0b5f38c25d83",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "Faut-il lire Senghor à voix haute ?",
+   "competence": "argumenter",
+   "situation": "Deux élèves ne s’accordent pas sur la façon de lire un poème de Senghor. Départage-les avec le dialogue, puis range les traits du recueil.",
+   "documents": [
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Chloé",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Adam",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Chloé",
+       "texte": "Ces versets sont trop longs : je les lis en silence, sinon ça n’a pas de sens."
+      },
+      {
+       "qui": "Adam",
+       "texte": "Mais Senghor note en tête de ses poèmes le nom d’un [[i|instrument]] comme la kôra."
+      },
+      {
+       "qui": "Chloé",
+       "texte": "Et alors ?"
+      },
+      {
+       "qui": "Adam",
+       "texte": "La poésie est faite pour être dite et accompagnée, comme la parole du griot."
+      }
+     ]
+    },
+    {
+     "id": "modele",
+     "type": "tableau",
+     "titre": "Les traits du recueil",
+     "colonnes": [
+      "Trait",
+      "Son modèle ou son effet"
+     ],
+     "lignes": [
+      [
+       "Vers libres amples, versets longs",
+       "Inspirés de Claudel et de Saint-John Perse"
+      ],
+      [
+       "Indications d’instruments africains",
+       "Le poème est dit et accompagné"
+      ],
+      [
+       "Le mot « négritude »",
+       "Une identité noire assumée contre l’assimilation coloniale"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "debat",
+     "multiple": false,
+     "reponse": [
+      "i"
+     ],
+     "enonce": "Touche le mot qui montre que le poème est pensé pour la voix et la musique.",
+     "aide": "C’est ce que Senghor note en tête des poèmes.",
+     "explication": "Les **instruments** africains notés en tête (kôra, balafong) signalent un poème fait pour être **dit et accompagné**."
+    },
+    {
+     "type": "categories",
+     "enonce": "Range chaque élément : relève-t-il de la forme du recueil ou de ses thèmes ?",
+     "categories": [
+      "La forme",
+      "Les thèmes"
+     ],
+     "items": [
+      [
+       "Les versets amples",
+       0
+      ],
+      [
+       "Les indications d’instruments africains",
+       0
+      ],
+      [
+       "L’exil en France",
+       1
+      ],
+      [
+       "La femme noire célébrée",
+       1
+      ],
+      [
+       "Les vers libres",
+       0
+      ],
+      [
+       "L’Afrique des ancêtres",
+       1
+      ]
+     ],
+     "aide": "La forme dit comment c’est écrit ; le thème dit de quoi on parle.",
+     "explication": "Les **versets amples**, les **vers libres** et les **instruments** relèvent de la forme ; l’**exil**, la **femme noire** et l’**Afrique des ancêtres** sont des thèmes."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément à son rôle.",
+     "paires": [
+      [
+       "Claudel et Saint-John Perse",
+       "Modèles des versets amples"
+      ],
+      [
+       "La négritude",
+       "Revendiquer une identité noire contre l’assimilation"
+      ],
+      [
+       "Le griot",
+       "Une parole dite et accompagnée"
+      ],
+      [
+       "Chaka",
+       "Le sommet du recueil, un long poème dramatique"
+      ]
+     ],
+     "aide": "Chaque nom ou notion renvoie à une ligne du tableau ou du cours.",
+     "explication": "**Claudel** et **Saint-John Perse** inspirent les versets ; la **négritude** est un combat d’identité ; le **griot** est le modèle de la voix ; **Chaka** est le sommet."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation ce recueil permet-il le mieux d’appuyer ?",
+     "options": [
+      "La poésie peut être engagée et lyrique, rythmée pour la voix",
+      "La poésie doit rester neutre et se lire en silence",
+      "La poésie est incompatible avec un engagement politique",
+      "La poésie moderne a rompu avec la musique et la parole"
+     ],
+     "reponse": 0,
+     "aide": "Relie l’engagement (la négritude) et le rythme (la voix).",
+     "explication": "Le recueil est un exemple de poésie **engagée et lyrique à la fois**, où le rythme est **pensé pour la voix**."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f434987-5d28-55c3-8891-6b2b40bfed8c",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "La maison glacée de Saumur",
+   "competence": "analyser-document",
+   "situation": "Tu prépares ta fiche sur *Eugénie Grandet*. Lis la carte d’identité du roman, puis le tableau des personnages.",
+   "documents": [
+    {
+     "id": "carte",
+     "type": "fiche",
+     "modele": "affiche",
+     "entete": "Eugénie Grandet",
+     "sousTitre": "Honoré de Balzac, 1833",
+     "emoji": "🏚️",
+     "lignes": [
+      {
+       "texte": "Lieu",
+       "valeur": "Saumur",
+       "id": "lieu"
+      },
+      {
+       "texte": "Époque",
+       "valeur": "La Restauration"
+      },
+      {
+       "texte": "Source de la fortune",
+       "valeur": "Les biens nationaux achetés sous la Révolution"
+      },
+      {
+       "texte": "Ensemble",
+       "valeur": "La Comédie humaine"
+      },
+      {
+       "texte": "Section",
+       "valeur": "Scènes de la vie de province"
+      }
+     ],
+     "pied": "Un roman où l’argent est un personnage",
+     "teinte": "violet"
+    },
+    {
+     "id": "persos",
+     "type": "tableau",
+     "titre": "Les personnages",
+     "colonnes": [
+      "Personnage",
+      "Ce qu’il est"
+     ],
+     "lignes": [
+      [
+       "Félix Grandet",
+       "L’avare absolu, qui rationne tout"
+      ],
+      [
+       "Madame Grandet",
+       "?"
+      ],
+      [
+       "Eugénie",
+       "L’héroïne : elle découvre l’amour et le sacrifice"
+      ],
+      [
+       "Charles Grandet",
+       "Le cousin parisien, élégant, que l’argent va durcir"
+      ],
+      [
+       "La grande Nanon",
+       "La servante fidèle"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "carte",
+     "multiple": false,
+     "reponse": [
+      "lieu"
+     ],
+     "enonce": "Touche la ligne qui dit dans quelle ville se déroule le roman.",
+     "aide": "Cherche le nom de la ville.",
+     "explication": "Le roman se déroule à **Saumur**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Qui est Madame Grandet, dont la case porte un « ? » ?",
+     "options": [
+      "Une épouse douce, écrasée par son mari",
+      "Une servante fidèle, dévouée à la famille",
+      "Une aristocrate parisienne que Charles épouse",
+      "Une prétendante des Cruchot qui courtise Eugénie"
+     ],
+     "reponse": 0,
+     "aide": "Dans le tableau, Nanon est déjà la servante : cherche l’épouse de Félix.",
+     "explication": "Madame Grandet est une **épouse douce, écrasée par son mari**, qui meurt après la punition d’Eugénie."
+    },
+    {
+     "type": "zone",
+     "document": "persos",
+     "multiple": false,
+     "reponse": [
+      "r4c1"
+     ],
+     "enonce": "Dans le tableau, touche la case qui décrit la servante fidèle.",
+     "aide": "Cherche le nom « Nanon ».",
+     "explication": "La **grande Nanon** est la servante fidèle, dévouée à la famille jusqu’au bout."
+    },
+    {
+     "type": "trous",
+     "enonce": "Complète la phrase avec la carte d’identité.",
+     "texte": "Le roman se passe à ___ ; il appartient aux *Scènes de la vie de ___*.",
+     "reponses": [
+      [
+       "Saumur"
+      ],
+      [
+       "province"
+      ]
+     ],
+     "banque": [
+      "Saumur",
+      "Paris",
+      "province",
+      "campagne",
+      "Bretagne"
+     ],
+     "aide": "Regarde les lignes « Lieu » et « Section » de la carte.",
+     "explication": "Le roman se passe à **Saumur** et appartient aux *Scènes de la vie de **province***."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f434987-5d28-55c3-8891-6b2b40bfed8c",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "De l’or donné au crucifix convoité",
+   "competence": "se-reperer-temps",
+   "situation": "Pour ton oral, tu dois raconter l’histoire d’Eugénie en quatre étapes. Remets-les en ordre, puis relis la mort de Grandet.",
+   "documents": [
+    {
+     "id": "etapes",
+     "type": "tableau",
+     "titre": "Les étapes du roman (en désordre)",
+     "colonnes": [
+      "Étape",
+      "Ce qui se passe"
+     ],
+     "lignes": [
+      [
+       "Le retour",
+       "Sept ans plus tard, Charles revient riche, épouse une aristocrate et rompt par lettre"
+      ],
+      [
+       "La fin",
+       "?"
+      ],
+      [
+       "Le don",
+       "Eugénie donne en secret son or à Charles, qui part aux Indes"
+      ],
+      [
+       "La punition",
+       "Grandet séquestre sa fille au pain et à l’eau : sa femme en meurt"
+      ]
+     ],
+     "enteteLignes": true
+    },
+    {
+     "id": "mort",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "Sur le lit de mort",
+     "blocs": [
+      "Grandet est mourant. Le prêtre lui tend un [[c|crucifix]] de vermeil. Au lieu de prier, le vieil avare fait un geste terrible : il cherche à le saisir."
+     ],
+     "source": "Résumé écrit pour l’exercice, d’après le roman de Balzac"
+    }
+   ],
+   "questions": [
+    {
+     "type": "choix",
+     "enonce": "Que devient Eugénie à la fin, case « ? » du tableau ?",
+     "options": [
+      "Elle épouse sans amour le président de Bonfons",
+      "Elle épouse Charles et part avec lui aux Indes",
+      "Elle quitte Saumur et fonde un couvent à Paris",
+      "Elle perd sa fortune et sert chez les Cruchot"
+     ],
+     "reponse": 0,
+     "aide": "Eugénie vit sans amour et se retrouve seule.",
+     "explication": "Eugénie paie les dettes, épouse **sans amour** le président de Bonfons et se retrouve **veuve**, riche et seule."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les quatre étapes du roman.",
+     "items": [
+      "Le don",
+      "La punition",
+      "Le retour",
+      "La fin"
+     ],
+     "aide": "Le don vient avant la punition qui le suit.",
+     "explication": "Ordre : **le don**, **la punition**, **le retour** de Charles, **la fin** d’Eugénie."
+    },
+    {
+     "type": "zone",
+     "document": "mort",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche l’objet que Grandet tente de saisir sur son lit de mort.",
+     "aide": "C’est ce que le prêtre lui tend.",
+     "explication": "Grandet cherche à saisir le **crucifix** de vermeil : l’avare meurt comme il a vécu."
+    },
+    {
+     "type": "choix",
+     "enonce": "Que montre ce geste du vieillard mourant ?",
+     "options": [
+      "Que l’avarice le possède jusqu’à la mort",
+      "Que Grandet se convertit sincèrement",
+      "Que Grandet veut rendre son or à sa fille",
+      "Que Grandet rêve de partir aux Indes"
+     ],
+     "reponse": 0,
+     "aide": "Il a devant lui un objet de vermeil, qui brille.",
+     "explication": "Grandet **meurt comme il a vécu** : même devant le prêtre, c’est l’objet précieux qui l’attire."
+    }
+   ]
+  },
+  {
+   "chapitre": "5f434987-5d28-55c3-8891-6b2b40bfed8c",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La victime qui ressemble à son bourreau",
+   "competence": "analyser-texte",
+   "situation": "Pour la dissertation, tu veux montrer comment Balzac ouvre et ferme son roman. Lis deux phrases célèbres, relie des procédés à leurs effets, puis conclus.",
+   "documents": [
+    {
+     "id": "ouverture",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "L’ouverture",
+     "blocs": [
+      "Certaines maisons de province inspirent « une mélancolie égale à celle que provoquent les [[c|cloîtres]] les plus sombres »."
+     ],
+     "source": "Phrase de l’incipit : entre guillemets, Balzac, Eugénie Grandet (1833) ; le reste est résumé"
+    },
+    {
+     "id": "fin",
+     "type": "texte",
+     "genre": "recit",
+     "titre": "La dernière page",
+     "blocs": [
+      "Telle est l’histoire de cette femme, qui n’est pas du monde au milieu du monde ; qui, faite pour être magnifiquement épouse et mère, n’a ni [[m|mari]], ni [[m|enfants]], ni [[m|famille]]."
+     ],
+     "source": "Balzac, Eugénie Grandet (1833), dernière page"
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "ouverture",
+     "multiple": false,
+     "reponse": [
+      "c"
+     ],
+     "enonce": "Touche le mot qui compare les maisons de province à des lieux de retrait du monde.",
+     "aide": "Pense à un lieu religieux, sombre et clos.",
+     "explication": "Les maisons sont comparées à des **cloîtres** : le décor annonce l’enfermement d’Eugénie."
+    },
+    {
+     "type": "zone",
+     "document": "fin",
+     "multiple": true,
+     "reponse": [
+      "m"
+     ],
+     "enonce": "Touche les trois mots qui disent ce qu’Eugénie n’a pas.",
+     "aide": "Une liste de trois termes après « ni ».",
+     "explication": "Eugénie, faite pour être épouse et mère, n’a ni **mari**, ni **enfants**, ni **famille**."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque élément du roman à ce qu’il montre.",
+     "paires": [
+      [
+       "L’argent",
+       "Un personnage qui structure la maison, la ville, le mariage, la piété"
+      ],
+      [
+       "Les pièces d’or et le morceau de sucre",
+       "Une tragédie domestique bâtie à partir de presque rien"
+      ],
+      [
+       "La fin du roman",
+       "La victime finit par ressembler à son bourreau"
+      ],
+      [
+       "Les biens nationaux",
+       "L’origine révolutionnaire de la fortune de Grandet"
+      ]
+     ],
+     "aide": "Chaque élément renvoie à une idée de la fiche : argent, tragédie, destin, histoire.",
+     "explication": "L’**argent** est un personnage ; les **pièces d’or** et le **sucre** montrent une tragédie bâtie sur rien ; **la fin** boucle le destin ; les **biens nationaux** expliquent la fortune."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion appuie le mieux les deux phrases lues ?",
+     "options": [
+      "Eugénie finit comme son père, riche et seule",
+      "Eugénie finit heureuse, entourée de sa famille",
+      "Eugénie quitte Saumur pour retrouver Charles",
+      "Eugénie se révolte et fait détruire la maison"
+     ],
+     "reponse": 0,
+     "aide": "Compare le début (maisons-cloîtres) et la fin (ni mari, ni enfants).",
+     "explication": "L’ouverture annonce l’**enfermement** ; la fin le confirme : la victime finit par **ressembler à son bourreau**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07ee1f70-87ea-558d-826c-e14e0a8c0475",
+   "position": 1,
+   "etoiles": 1,
+   "titre": "Douze livres en trois recueils",
+   "competence": "se-reperer-temps",
+   "situation": "Tu prépares une fiche sur les *Fables*. Place les recueils dans le temps, puis lis le tableau de leur composition.",
+   "documents": [
+    {
+     "id": "frise",
+     "type": "frise",
+     "titre": "La Fontaine et ses recueils",
+     "debut": 1655,
+     "fin": 1700,
+     "pas": 5,
+     "evenements": [
+      {
+       "id": "fou",
+       "date": 1661,
+       "nom": "Fouquet arrêté"
+      },
+      {
+       "id": "r1",
+       "date": 1668,
+       "nom": "Premier recueil"
+      },
+      {
+       "id": "r2",
+       "date": 1678,
+       "nom": "Deuxième recueil"
+      },
+      {
+       "id": "r3",
+       "date": 1694,
+       "nom": "Troisième recueil"
+      }
+     ]
+    },
+    {
+     "id": "rec",
+     "type": "tableau",
+     "titre": "Les trois recueils",
+     "colonnes": [
+      "Recueil",
+      "Ses livres",
+      "Sa date"
+     ],
+     "lignes": [
+      [
+       "Premier",
+       "I-VI",
+       "1668"
+      ],
+      [
+       "Deuxième",
+       "VII-XI",
+       "1678-1679"
+      ],
+      [
+       "Troisième",
+       "XII",
+       "1694"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "frise",
+     "multiple": false,
+     "reponse": [
+      "r1"
+     ],
+     "enonce": "Sur la frise, touche la date du premier recueil de *Fables*.",
+     "aide": "C’est le premier des trois recueils.",
+     "explication": "Le premier recueil paraît en **1668**."
+    },
+    {
+     "type": "nombre",
+     "enonce": "Combien de livres comptent ensemble les deux premiers recueils ?",
+     "reponse": 11,
+     "unite": "livres",
+     "aide": "Le premier va du livre I au livre VI, le deuxième du VII au XI : compte chacun.",
+     "explication": "Les livres **I à VI** font 6, les livres **VII à XI** font 5 : **11 livres**."
+    },
+    {
+     "type": "zone",
+     "document": "rec",
+     "multiple": false,
+     "reponse": [
+      "r2c2"
+     ],
+     "enonce": "Dans le tableau, touche la case qui donne la date du troisième recueil.",
+     "aide": "C’est la dernière ligne du tableau, dernière colonne.",
+     "explication": "Le troisième recueil (livre XII) date de **1694**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07ee1f70-87ea-558d-826c-e14e0a8c0475",
+   "position": 2,
+   "etoiles": 2,
+   "titre": "Le corbeau, le renard et le fromage",
+   "competence": "analyser-texte",
+   "situation": "Pour ton oral, tu veux commenter le début de « Le Corbeau et le Renard ». Lis les vers, puis le tableau des types d’animaux.",
+   "documents": [
+    {
+     "id": "vers",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le début de la fable",
+     "blocs": [
+      "Maître Corbeau, sur un arbre perché,",
+      "Tenait en son bec un fromage.",
+      "Maître Renard, par l’odeur [[a|alléché]],",
+      "Lui tint à peu près ce langage :",
+      "Et bonjour, Monsieur du Corbeau."
+     ],
+     "source": "La Fontaine, Fables, I, 2, « Le Corbeau et le Renard » (1668)"
+    },
+    {
+     "id": "types",
+     "type": "tableau",
+     "titre": "Des types humains",
+     "colonnes": [
+      "Animal",
+      "Ce qu’il représente souvent"
+     ],
+     "lignes": [
+      [
+       "Le lion",
+       "Le roi, sa puissance et son arbitraire"
+      ],
+      [
+       "Le renard",
+       "?"
+      ],
+      [
+       "Le loup",
+       "La force brutale"
+      ],
+      [
+       "L’agneau",
+       "La victime, le faible qu’on accable"
+      ]
+     ],
+     "enteteLignes": true
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "vers",
+     "multiple": false,
+     "reponse": [
+      "a"
+     ],
+     "enonce": "Touche le mot qui dit ce qui attire le renard vers le corbeau.",
+     "aide": "Le renard est sensible à une odeur.",
+     "explication": "Le renard est **alléché** par l’odeur du fromage : c’est ce qui l’amène à parler."
+    },
+    {
+     "type": "choix",
+     "enonce": "Ce que représente le renard, dont la case porte un « ? » ?",
+     "options": [
+      "Le courtisan rusé et flatteur",
+      "Le roi et son arbitraire",
+      "La victime que l’on accable",
+      "La force brutale qui écrase"
+     ],
+     "reponse": 0,
+     "aide": "Dans les vers, que fait le renard pour obtenir le fromage ?",
+     "explication": "Le renard est le **courtisan rusé et flatteur** : il commence par un compliment pour tromper le corbeau."
+    },
+    {
+     "type": "ordre",
+     "enonce": "Remets dans l’ordre les trois moments de la scène.",
+     "items": [
+      "Le corbeau tient un fromage dans son bec",
+      "Le renard, attiré par l’odeur, s’approche",
+      "Le renard adresse la parole au corbeau"
+     ],
+     "aide": "Le renard n’agit qu’après avoir vu et senti le fromage.",
+     "explication": "Le **corbeau** tient le fromage, le **renard** s’en approche alléché, puis il **lui parle**."
+    }
+   ]
+  },
+  {
+   "chapitre": "07ee1f70-87ea-558d-826c-e14e0a8c0475",
+   "position": 3,
+   "etoiles": 3,
+   "titre": "La raison du plus fort",
+   "competence": "argumenter",
+   "situation": "Deux élèves disent que les fables sont « pour les petits ». Lis deux textes de La Fontaine et réponds avec eux.",
+   "documents": [
+    {
+     "id": "loup",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Le Loup et l’Agneau",
+     "blocs": [
+      "La raison du plus [[f|fort]] est toujours la meilleure :",
+      "Nous l’allons montrer tout à l’heure."
+     ],
+     "source": "La Fontaine, Fables, I, 10, « Le Loup et l’Agneau » (1668), vers 1-2"
+    },
+    {
+     "id": "peste",
+     "type": "texte",
+     "genre": "poeme",
+     "titre": "Les Animaux malades de la peste",
+     "blocs": [
+      "Selon que vous serez [[p|puissant]] ou [[p|misérable]],",
+      "Les jugements de cour vous rendront blanc ou noir."
+     ],
+     "source": "La Fontaine, Fables, VII, 1, « Les Animaux malades de la peste » (1678), derniers vers"
+    },
+    {
+     "id": "debat",
+     "type": "dialogue",
+     "titre": "Le débat",
+     "modele": "bulles",
+     "participants": [
+      {
+       "nom": "Julie",
+       "emoji": "👧",
+       "cote": "gauche"
+      },
+      {
+       "nom": "Karim",
+       "emoji": "👦",
+       "cote": "droite"
+      }
+     ],
+     "repliques": [
+      {
+       "qui": "Julie",
+       "texte": "Les Fables, c’est pour les enfants : des animaux qui parlent, rien de plus."
+      },
+      {
+       "qui": "Karim",
+       "texte": "La Fontaine écrit pourtant : « Je me sers d’animaux pour instruire les hommes. »"
+      },
+      {
+       "qui": "Julie",
+       "texte": "Instruire les hommes sur quoi ?"
+      },
+      {
+       "qui": "Karim",
+       "texte": "Sur la cour, sur le pouvoir, sur la justice du plus fort."
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "type": "zone",
+     "document": "loup",
+     "multiple": false,
+     "reponse": [
+      "f"
+     ],
+     "enonce": "Touche le mot qui dit qui, selon la fable, a toujours raison.",
+     "aide": "Qui l’emporte dans « la raison du plus... » ?",
+     "explication": "C’est le plus **fort** qui a raison : la force fait la loi, avant toute justice."
+    },
+    {
+     "type": "zone",
+     "document": "peste",
+     "multiple": true,
+     "reponse": [
+      "p"
+     ],
+     "enonce": "Touche les deux adjectifs qui s’opposent dans ces vers.",
+     "aide": "L’un dit le pouvoir, l’autre dit la faiblesse.",
+     "explication": "Les jugements de cour dépendent du rang : **puissant** ou **misérable**."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quel lien unit ces deux extraits ?",
+     "options": [
+      "Dans les deux, la force ou le rang l’emporte sur la justice",
+      "Dans les deux, le plus faible finit par triompher",
+      "Dans les deux, la morale est absente du texte",
+      "Dans les deux, l’auteur fait l’éloge de la cour"
+     ],
+     "reponse": 0,
+     "aide": "Dans chaque extrait, de quoi dépend le verdict : de la vérité ou du pouvoir ?",
+     "explication": "Dans les deux textes, la **justice du plus fort** l’emporte : le jugement dépend du rang, non de la vérité."
+    },
+    {
+     "type": "association",
+     "enonce": "Relie chaque animal au type humain qu’il représente.",
+     "paires": [
+      [
+       "Le lion",
+       "Le roi, sa puissance et son arbitraire"
+      ],
+      [
+       "Le renard",
+       "Le courtisan rusé et flatteur"
+      ],
+      [
+       "Le loup",
+       "La force brutale"
+      ],
+      [
+       "L’agneau",
+       "La victime que l’on accable"
+      ]
+     ],
+     "aide": "Rappelle-toi que les animaux sont des types humains.",
+     "explication": "Le **lion** est le roi, le **renard** le courtisan, le **loup** la force brutale, l’**agneau** la victime."
+    },
+    {
+     "type": "choix",
+     "enonce": "Quelle conclusion de dissertation appuie le mieux ce dossier ?",
+     "options": [
+      "Les Fables, sous leur apparence enfantine, satirisent la cour",
+      "Les Fables ne s’adressent qu’aux enfants et n’ont aucune portée",
+      "Les Fables ont pour seul but de décrire des animaux",
+      "Les Fables font l’éloge de la justice du plus fort"
+     ],
+     "reponse": 0,
+     "aide": "Reprends la phrase de Karim : instruire les hommes sur quoi ?",
+     "explication": "Sous l’apparence **enfantine**, les *Fables* sont une **satire de la cour** et une réflexion sur le pouvoir."
+    }
+   ]
+  }
+ ]
+}
